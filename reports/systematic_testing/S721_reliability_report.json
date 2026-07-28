@@ -1,0 +1,1792 @@
+{
+  "total_items": 250,
+  "valid_items": 250,
+  "overall": {
+    "cl_agreement_rate": "28.4%",
+    "ds_agreement_rate": "22.0%",
+    "cl_agree_count": 71,
+    "cl_total": 250,
+    "ds_agree_count": 55,
+    "ds_total": 250
+  },
+  "by_cl": {
+    "Remember": {
+      "total": 50,
+      "agree": 0,
+      "rate": "0.0%",
+      "reclassified": {
+        "Understand": 50
+      }
+    },
+    "Understand": {
+      "total": 50,
+      "agree": 50,
+      "rate": "100.0%",
+      "reclassified": {}
+    },
+    "Apply": {
+      "total": 50,
+      "agree": 21,
+      "rate": "42.0%",
+      "reclassified": {
+        "Understand": 29
+      }
+    },
+    "Analyze": {
+      "total": 50,
+      "agree": 0,
+      "rate": "0.0%",
+      "reclassified": {
+        "Understand": 49,
+        "Apply": 1
+      }
+    },
+    "Evaluate": {
+      "total": 50,
+      "agree": 0,
+      "rate": "0.0%",
+      "reclassified": {
+        "Apply": 1,
+        "Understand": 49
+      }
+    }
+  },
+  "by_ds": {
+    "Remember": {
+      "total": 50,
+      "agree": 15,
+      "rate": "30.0%"
+    },
+    "Understand": {
+      "total": 50,
+      "agree": 16,
+      "rate": "32.0%"
+    },
+    "Apply": {
+      "total": 50,
+      "agree": 14,
+      "rate": "28.0%"
+    },
+    "Analyze": {
+      "total": 50,
+      "agree": 7,
+      "rate": "14.0%"
+    },
+    "Evaluate": {
+      "total": 50,
+      "agree": 3,
+      "rate": "6.0%"
+    }
+  },
+  "confidence_distribution": {
+    "Remember": {
+      "mean": "63.0",
+      "min": 60,
+      "max": 75,
+      "count": 50
+    },
+    "Understand": {
+      "mean": "62.7",
+      "min": 60,
+      "max": 75,
+      "count": 50
+    },
+    "Apply": {
+      "mean": "72.2",
+      "min": 60,
+      "max": 90,
+      "count": 50
+    },
+    "Analyze": {
+      "mean": "60.8",
+      "min": 60,
+      "max": 85,
+      "count": 50
+    },
+    "Evaluate": {
+      "mean": "60.8",
+      "min": 60,
+      "max": 85,
+      "count": 50
+    }
+  },
+  "systematic_errors": [
+    {
+      "pattern": "Remember→Understand",
+      "count": 50,
+      "example_qids": [
+        "P1-F-021",
+        "P1-C-036",
+        "P1-A-001",
+        "P1B-C-163",
+        "P1B-C-170"
+      ]
+    },
+    {
+      "pattern": "Analyze→Understand",
+      "count": 49,
+      "example_qids": [
+        "P1-F-013",
+        "P1-F-026",
+        "P1B-F-102",
+        "P1B-F-107",
+        "P1B-E-117"
+      ]
+    },
+    {
+      "pattern": "Evaluate→Understand",
+      "count": 49,
+      "example_qids": [
+        "P1B-F-140",
+        "P1B-C-153",
+        "P1B-C-145",
+        "P1B-C-126",
+        "P1B-F-145"
+      ]
+    },
+    {
+      "pattern": "Apply→Understand",
+      "count": 29,
+      "example_qids": [
+        "P1-B-076",
+        "P1-F-017",
+        "P1B-B-127",
+        "P1B-E-145",
+        "P1B-F-150"
+      ]
+    },
+    {
+      "pattern": "Analyze→Apply",
+      "count": 1,
+      "example_qids": [
+        "P1B-C-175"
+      ]
+    },
+    {
+      "pattern": "Evaluate→Apply",
+      "count": 1,
+      "example_qids": [
+        "P1-C-034"
+      ]
+    }
+  ],
+  "disagreements": [
+    {
+      "qid": "P1-F-021",
+      "pack": "pack_a",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Quartz is building a model to label transactions as high-risk or low-risk based "
+    },
+    {
+      "qid": "P1-C-036",
+      "pack": "pack_a",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "A company tracks 'employee training hours' and 'employee retention rate' as key "
+    },
+    {
+      "qid": "P1-A-001",
+      "pack": "pack_a",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Quartz is preparing a classified balance sheet for a supplier financing arrangem"
+    },
+    {
+      "qid": "P1B-C-163",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Which of the following is a primary advantage of implementing a balanced scoreca"
+    },
+    {
+      "qid": "P1B-C-170",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Which of the following is a limitation of segment performance reporting?"
+    },
+    {
+      "qid": "P1B-A-096",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under the matching principle, when are expenses recognized?"
+    },
+    {
+      "qid": "P1B-B-196",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "A standard cost card typically includes:"
+    },
+    {
+      "qid": "P1B-E-095",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Silverline Inc. has established an audit committee as part of its board of direc"
+    },
+    {
+      "qid": "P1B-B-132",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Kaizen budgeting incorporates:"
+    },
+    {
+      "qid": "P1B-B-139",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Probability-based budgeting is advantageous because it:"
+    },
+    {
+      "qid": "P1B-B-131",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Zero-based budgeting requires managers to:"
+    },
+    {
+      "qid": "P1B-B-149",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Management by exception means managers:"
+    },
+    {
+      "qid": "P1B-B-116",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "In regression analysis, R-squared measures:"
+    },
+    {
+      "qid": "P1B-C-142",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Which of the following is a disadvantage of using ROI as the sole performance me"
+    },
+    {
+      "qid": "P1B-B-129",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "An advantage of top-down budgeting (imposed budgeting) is:"
+    },
+    {
+      "qid": "P1B-B-128",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "An advantage of participative (bottom-up) budgeting is:"
+    },
+    {
+      "qid": "P1B-B-194",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "A budget that is perceived as unattainable may lead to:"
+    },
+    {
+      "qid": "P1B-B-115",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "A rolling forecast is best described as:"
+    },
+    {
+      "qid": "P1B-A-105",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under GAAP, how are dividends received and interest paid classified on the cash "
+    },
+    {
+      "qid": "P1B-A-134",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under ASC 280, which condition permits aggregation of two operating segments?"
+    },
+    {
+      "qid": "P1B-B-175",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Scenario analysis involves:"
+    },
+    {
+      "qid": "P1B-B-126",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "The manager of an investment center is evaluated based on:"
+    },
+    {
+      "qid": "P1B-A-108",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under ASC 842 for an operating lease, how is total lease expense recognized over"
+    },
+    {
+      "qid": "P1B-B-102",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Which is an operating budget?"
+    },
+    {
+      "qid": "P1B-A-119",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Which transaction would require related party disclosure?"
+    },
+    {
+      "qid": "P1B-C-165",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Which of the following is the correct first step in the benchmarking process?"
+    },
+    {
+      "qid": "P1B-A-118",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under ASC 280, which quantitative threshold requires an operating segment to be "
+    },
+    {
+      "qid": "P1B-A-109",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under ASC 842, if a lease meets any finance lease criterion and both lessor crit"
+    },
+    {
+      "qid": "P1B-B-167",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Non-monetary factors in the budgeting process include:"
+    },
+    {
+      "qid": "P1B-B-123",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Sensitivity analysis is used to:"
+    },
+    {
+      "qid": "P1B-A-106",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under ASC 842, which criterion classifies a lease as a finance lease for the les"
+    },
+    {
+      "qid": "P1B-D-140",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Which of the following is an underlying assumption of cost-volume-profit (CVP) a"
+    },
+    {
+      "qid": "P1B-B-157",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Benchmarking in the budgeting process involves:"
+    },
+    {
+      "qid": "P1B-B-161",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Incremental budgeting bases the current budget on:"
+    },
+    {
+      "qid": "P1B-B-133",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Continuous budgeting means:"
+    },
+    {
+      "qid": "P1B-B-195",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Monte Carlo simulation is useful in budgeting because it:"
+    },
+    {
+      "qid": "P1B-A-142",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under GAAP, how are research and development costs generally treated?"
+    },
+    {
+      "qid": "P1B-D-106",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Which of the following is a limitation of activity-based costing?"
+    },
+    {
+      "qid": "P1B-C-189",
+      "pack": "pack_b",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Which of the following is an advantage of standard costing over actual costing?"
+    },
+    {
+      "qid": "P1-AC-010",
+      "pack": "pack_c",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Junction intends and has the ability to hold a debt security until it matures. H"
+    },
+    {
+      "qid": "P1-AC-009",
+      "pack": "pack_c",
+      "storedCL": "Remember",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ironvale intends and has the ability to hold a debt security until it matures. H"
+    },
+    {
+      "qid": "P1-AC-007",
+      "pack": "pack_c",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Gladstone intends and has the ability to hold a debt security until it matures. "
+    },
+    {
+      "qid": "P1-AC-006",
+      "pack": "pack_c",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Fairhaven intends and has the ability to hold a debt security until it matures. "
+    },
+    {
+      "qid": "P1-FD-046",
+      "pack": "pack_d",
+      "storedCL": "Remember",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": ""
+    },
+    {
+      "qid": "P1E-E-049",
+      "pack": "pack_e",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "COSO ERM has how many components?"
+    },
+    {
+      "qid": "P1E-A-074",
+      "pack": "pack_e",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "ASC 820 establishes a fair value hierarchy with how many levels?"
+    },
+    {
+      "qid": "P1E-B-033",
+      "pack": "pack_e",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Segment margin equals:"
+    },
+    {
+      "qid": "P1E-E-031",
+      "pack": "pack_e",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "COSO principle 7 states the organization identifies risks to:"
+    },
+    {
+      "qid": "P1E-E-001",
+      "pack": "pack_e",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "The COSO internal control framework has how many components?"
+    },
+    {
+      "qid": "P1E-B-032",
+      "pack": "pack_e",
+      "storedCL": "Remember",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Controllable costs are:"
+    },
+    {
+      "qid": "P1-B-076",
+      "pack": "pack_a",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Stonebridge's single supplier for a critical component unexpectedly announces a "
+    },
+    {
+      "qid": "P1-F-017",
+      "pack": "pack_a",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Meridian asks finance to show last quarter sales by region, product line, and cu"
+    },
+    {
+      "qid": "P1B-B-127",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Budget slack occurs when managers:"
+    },
+    {
+      "qid": "P1B-E-145",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Section 201 of the Sarbanes-Oxley Act addresses auditor independence by listing "
+    },
+    {
+      "qid": "P1B-F-150",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "A company's analytics capability has evolved from basic reporting (what happened"
+    },
+    {
+      "qid": "P1B-E-136",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Summit Energy's management was found to have intentionally overstated revenue by"
+    },
+    {
+      "qid": "P1B-E-116",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Silverline Corp's management is conducting its annual assessment of internal con"
+    },
+    {
+      "qid": "P1B-D-105",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "All distractors from same narrow domain — requires conceptual comprehension",
+      "stem": "Archer Industries currently uses a plantwide overhead rate based on direct labor"
+    },
+    {
+      "qid": "P1B-E-087",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Redwood Logistics is restructuring its accounting department. Management wants t"
+    },
+    {
+      "qid": "P1B-E-093",
+      "pack": "pack_b",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Emerald Biotech's internal audit department reports to the controller rather tha"
+    },
+    {
+      "qid": "P1-BC-033",
+      "pack": "pack_c",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Hollowell begins its annual master budget process. Which budget is typically pre"
+    },
+    {
+      "qid": "P1-FC-043",
+      "pack": "pack_c",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ridgeline evaluates blockchain technology to create a shared, tamper-resistant r"
+    },
+    {
+      "qid": "P1-BC-098",
+      "pack": "pack_c",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Westbrook's controller notices a department consistently beats its budget by a w"
+    },
+    {
+      "qid": "P1-DC-001",
+      "pack": "pack_c",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ashford uses job order costing and applies overhead based on a predetermined rat"
+    },
+    {
+      "qid": "P1-AC-073",
+      "pack": "pack_c",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ashenford acquires a patent with a finite useful life. How should the patent be "
+    },
+    {
+      "qid": "P1-AC-004",
+      "pack": "pack_c",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Driftwood issued bonds at a premium and uses the effective interest method. How "
+    },
+    {
+      "qid": "P1-BC-037",
+      "pack": "pack_c",
+      "storedCL": "Apply",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Larkwood projects a cash shortfall in the upcoming quarter based on its cash bud"
+    },
+    {
+      "qid": "P1-BD-067",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ravenscroft prepares a budget for fixed and variable selling and administrative "
+    },
+    {
+      "qid": "P1-AD-045",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Turnstone wants to present net income and other comprehensive income items. What"
+    },
+    {
+      "qid": "P1-ED-064",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Oakvale restricts the ability to add or modify vendor records to a small group o"
+    },
+    {
+      "qid": "P1-ED-027",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Bellcourt's management periodically reviews exception reports and reconciliation"
+    },
+    {
+      "qid": "P1-BD-085",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Kelso experiences a significant unexpected change in raw material prices mid-yea"
+    },
+    {
+      "qid": "P1-ED-062",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Marlowe restricts the ability to add or modify vendor records to a small group o"
+    },
+    {
+      "qid": "P1-BD-011",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Kelso builds its annual budget by adjusting last year's actual results by an inf"
+    },
+    {
+      "qid": "P1-BD-009",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Inglewood builds its annual budget by adjusting last year's actual results by an"
+    },
+    {
+      "qid": "P1-BD-018",
+      "pack": "pack_d",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Redcliff prepares a capital expenditure budget covering planned equipment purcha"
+    },
+    {
+      "qid": "P1E-C-006",
+      "pack": "pack_e",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Variable overhead spending variance =:"
+    },
+    {
+      "qid": "P1E-B-002",
+      "pack": "pack_e",
+      "storedCL": "Apply",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "A flexible budget adjusts for:"
+    },
+    {
+      "qid": "P1E-C-037",
+      "pack": "pack_e",
+      "storedCL": "Apply",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Sales volume variance =:"
+    },
+    {
+      "qid": "P1-F-013",
+      "pack": "pack_a",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "Iris wants finance users to analyze multi-year sales, inventory, and margin tren"
+    },
+    {
+      "qid": "P1-F-026",
+      "pack": "pack_a",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Vantage finds that advertising spend and revenue increased during the same month"
+    },
+    {
+      "qid": "P1B-C-175",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 4,
+      "dcsDS": 3,
+      "rationale": "Operative numerical data requires procedure execution",
+      "stem": "Liberty Manufacturing uses activity-based costing. Product A requires 2 machine "
+    },
+    {
+      "qid": "P1B-F-102",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "During an audit of accounts payable, the internal audit team at Orion Corp uses "
+    },
+    {
+      "qid": "P1B-F-107",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Emerald Corp uses an AI system that can read and interpret the text in supplier "
+    },
+    {
+      "qid": "P1B-E-117",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "During the ICFR assessment at Nexus Manufacturing, management needs to determine"
+    },
+    {
+      "qid": "P1B-B-142",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "A cost that changes in total in proportion to changes in activity level is a:"
+    },
+    {
+      "qid": "P1B-E-115",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Under Section 906 of the Sarbanes-Oxley Act, willful certification of a financia"
+    },
+    {
+      "qid": "P1B-F-085",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Orion Retail uses software to analyze customer purchase data and automatically i"
+    },
+    {
+      "qid": "P1B-E-146",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Orion Corp uses a combination of ongoing monitoring activities (such as regular "
+    },
+    {
+      "qid": "P1B-E-085",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Orion Medical is using the COSO ERM 2017 framework. Management is reviewing the "
+    },
+    {
+      "qid": "P1B-E-141",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Quantum Systems has an ERP environment where the same database administrator can"
+    },
+    {
+      "qid": "P1B-E-133",
+      "pack": "pack_b",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "During the ICFR assessment at Orion Corp, the internal auditors found that the C"
+    },
+    {
+      "qid": "P1-CC-014",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Nightingale wants to analyze ROI by breaking it into profit margin and asset tur"
+    },
+    {
+      "qid": "P1-FC-040",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Oleander analyzes large transaction datasets to uncover previously unknown purch"
+    },
+    {
+      "qid": "P1-DC-019",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Silverton produces two joint products from a common process and wants to allocat"
+    },
+    {
+      "qid": "P1-CC-011",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Kestrel wants to analyze ROI by breaking it into profit margin and asset turnove"
+    },
+    {
+      "qid": "P1-EC-065",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Poplarwood's auditor assesses the susceptibility of an account to material misst"
+    },
+    {
+      "qid": "P1-CC-010",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Junction wants to analyze ROI by breaking it into profit margin and asset turnov"
+    },
+    {
+      "qid": "P1-CC-008",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Hearthstone wants to analyze ROI by breaking it into profit margin and asset tur"
+    },
+    {
+      "qid": "P1-EC-061",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Lanternwood's auditor assesses the susceptibility of an account to material miss"
+    },
+    {
+      "qid": "P1-DC-017",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Quillfeather produces two joint products from a common process and wants to allo"
+    },
+    {
+      "qid": "P1-EC-062",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Mossbrook's auditor assesses the susceptibility of an account to material missta"
+    },
+    {
+      "qid": "P1-FC-038",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Millbrook analyzes large transaction datasets to uncover previously unknown purc"
+    },
+    {
+      "qid": "P1-CC-013",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Meridian Peak wants to analyze ROI by breaking it into profit margin and asset t"
+    },
+    {
+      "qid": "P1-EC-063",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Nettlefield's auditor assesses the susceptibility of an account to material miss"
+    },
+    {
+      "qid": "P1-CC-009",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ironvale wants to analyze ROI by breaking it into profit margin and asset turnov"
+    },
+    {
+      "qid": "P1-FC-036",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Kingfisher analyzes large transaction datasets to uncover previously unknown pur"
+    },
+    {
+      "qid": "P1-CC-012",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Larkspur wants to analyze ROI by breaking it into profit margin and asset turnov"
+    },
+    {
+      "qid": "P1-FC-039",
+      "pack": "pack_c",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Northgate analyzes large transaction datasets to uncover previously unknown purc"
+    },
+    {
+      "qid": "P1-BD-049",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Yorkhaven analyzes historical sales data and identifies a recurring pattern that"
+    },
+    {
+      "qid": "P1-BD-044",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Sandpiper analyzes historical sales data and identifies a recurring pattern that"
+    },
+    {
+      "qid": "P1-CD-063",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Netherfield expresses each income statement line item as a percentage of total r"
+    },
+    {
+      "qid": "P1-CD-061",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Longmeadow expresses each income statement line item as a percentage of total re"
+    },
+    {
+      "qid": "P1-CD-043",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ridgewell analyzes profitability by individual customer account rather than by p"
+    },
+    {
+      "qid": "P1-CD-062",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Marlowe expresses each income statement line item as a percentage of total reven"
+    },
+    {
+      "qid": "P1-BD-046",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Umberglen analyzes historical sales data and identifies a recurring pattern that"
+    },
+    {
+      "qid": "P1-BD-045",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Turnstone analyzes historical sales data and identifies a recurring pattern that"
+    },
+    {
+      "qid": "P1-BD-048",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Westhollow analyzes historical sales data and identifies a recurring pattern tha"
+    },
+    {
+      "qid": "P1-CD-044",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Sandpiper analyzes profitability by individual customer account rather than by p"
+    },
+    {
+      "qid": "P1-CD-017",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Quintwood wants to explain why contribution margin changed even though total uni"
+    },
+    {
+      "qid": "P1-CD-057",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Harrowgate expresses each income statement line item as a percentage of total re"
+    },
+    {
+      "qid": "P1-CD-045",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Turnstone analyzes profitability by individual customer account rather than by p"
+    },
+    {
+      "qid": "P1-CD-046",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Umberglen analyzes profitability by individual customer account rather than by p"
+    },
+    {
+      "qid": "P1-CD-049",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Yorkhaven analyzes profitability by individual customer account rather than by p"
+    },
+    {
+      "qid": "P1-CD-059",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Jubilee expresses each income statement line item as a percentage of total reven"
+    },
+    {
+      "qid": "P1-BD-047",
+      "pack": "pack_d",
+      "storedCL": "Analyze",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Vaultbrook analyzes historical sales data and identifies a recurring pattern tha"
+    },
+    {
+      "qid": "P1E-B-061",
+      "pack": "pack_e",
+      "storedCL": "Analyze",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Trend analysis identifies:"
+    },
+    {
+      "qid": "P1E-B-045",
+      "pack": "pack_e",
+      "storedCL": "Analyze",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Five months of sales: 100, 110, 120, 130, 140. Trend line slope is:"
+    },
+    {
+      "qid": "P1E-B-097",
+      "pack": "pack_e",
+      "storedCL": "Analyze",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "An unfavorable material usage variance could indicate:"
+    },
+    {
+      "qid": "P1-C-034",
+      "pack": "pack_a",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 3,
+      "rationale": "Operative numerical data requires procedure execution",
+      "stem": "Juniper uses residual income to evaluate whether a division earned more than its"
+    },
+    {
+      "qid": "P1B-F-140",
+      "pack": "pack_b",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Nexus Corp collects customer data for credit analysis purposes. Management wants"
+    },
+    {
+      "qid": "P1B-C-153",
+      "pack": "pack_b",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "When a manager of a profit center is evaluated based on divisional profit, which"
+    },
+    {
+      "qid": "P1B-C-145",
+      "pack": "pack_b",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ridgeway Division uses ROI to evaluate managers. Division assets are significant"
+    },
+    {
+      "qid": "P1B-C-126",
+      "pack": "pack_b",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Concept comprehension — requires distinguishing same-domain alternatives",
+      "stem": "The maintenance department of Harbor Manufacturing is evaluated solely on its ab"
+    },
+    {
+      "qid": "P1B-F-145",
+      "pack": "pack_b",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Apex Corp is implementing a new general ledger system. Management decides to pha"
+    },
+    {
+      "qid": "P1B-B-125",
+      "pack": "pack_b",
+      "storedCL": "Evaluate",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "In a responsibility accounting system, a manager who is evaluated only on revenu"
+    },
+    {
+      "qid": "P1-EC-057",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Hartwell's board and senior executives consistently emphasize integrity and ethi"
+    },
+    {
+      "qid": "P1-EC-056",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Glenmoor's board and senior executives consistently emphasize integrity and ethi"
+    },
+    {
+      "qid": "P1-CC-034",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ivywood's production supervisor is evaluated only on the costs incurred in the d"
+    },
+    {
+      "qid": "P1-CC-033",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Hollowell's production supervisor is evaluated only on the costs incurred in the"
+    },
+    {
+      "qid": "P1-EC-046",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Umberfield establishes an anonymous reporting channel for employees to report su"
+    },
+    {
+      "qid": "P1-CC-029",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Dovetail's production supervisor is evaluated only on the costs incurred in the "
+    },
+    {
+      "qid": "P1-CC-032",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Graystone's production supervisor is evaluated only on the costs incurred in the"
+    },
+    {
+      "qid": "P1-CC-031",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Foxglove's production supervisor is evaluated only on the costs incurred in the "
+    },
+    {
+      "qid": "P1-EC-006",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Fairhaven evaluates its internal control system using a widely recognized framew"
+    },
+    {
+      "qid": "P1-EC-009",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ironvale evaluates its internal control system using a widely recognized framewo"
+    },
+    {
+      "qid": "P1-EC-058",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ivorygate's board and senior executives consistently emphasize integrity and eth"
+    },
+    {
+      "qid": "P1-EC-047",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Violethill establishes an anonymous reporting channel for employees to report su"
+    },
+    {
+      "qid": "P1-EC-060",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Knollwood's board and senior executives consistently emphasize integrity and eth"
+    },
+    {
+      "qid": "P1-EC-008",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Hearthstone evaluates its internal control system using a widely recognized fram"
+    },
+    {
+      "qid": "P1-EC-059",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Juniper Hollow's board and senior executives consistently emphasize integrity an"
+    },
+    {
+      "qid": "P1-EC-010",
+      "pack": "pack_c",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Junction evaluates its internal control system using a widely recognized framewo"
+    },
+    {
+      "qid": "P1-FD-031",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "A compliance analyst at Frostvale notices unusual outbound network activity sugg"
+    },
+    {
+      "qid": "P1-FD-066",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Quillwood evaluates whether to invest in a new automation tool by comparing expe"
+    },
+    {
+      "qid": "P1-ED-057",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Harrowgate's management decides not to implement an extremely costly control bec"
+    },
+    {
+      "qid": "P1-FD-069",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Thistlewood evaluates whether to invest in a new automation tool by comparing ex"
+    },
+    {
+      "qid": "P1-DD-021",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Underhill sets up an activity-based costing pool for order processing costs. Wha"
+    },
+    {
+      "qid": "P1-ED-056",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Glenmore's management decides not to implement an extremely costly control becau"
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Palisade decides to purchase insurance to address a significant identified risk "
+    },
+    {
+      "qid": "P1-ED-049",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Yorkhaven requires all employees to complete annual ethics training and sign an "
+    },
+    {
+      "qid": "P1-BD-071",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Vantage Ridge evaluates its sales forecasting model by comparing forecasted valu"
+    },
+    {
+      "qid": "P1-BD-072",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Whitfield evaluates its sales forecasting model by comparing forecasted values t"
+    },
+    {
+      "qid": "P1-BD-075",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Alderway evaluates its sales forecasting model by comparing forecasted values to"
+    },
+    {
+      "qid": "P1-FD-067",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ravenscroft evaluates whether to invest in a new automation tool by comparing ex"
+    },
+    {
+      "qid": "P1-ED-047",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Vaultbrook requires all employees to complete annual ethics training and sign an"
+    },
+    {
+      "qid": "P1-ED-043",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ridgewell's risk management team scores identified risks based on their likeliho"
+    },
+    {
+      "qid": "P1-ED-059",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Jubilee's management decides not to implement an extremely costly control becaus"
+    },
+    {
+      "qid": "P1-BD-073",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ashvale evaluates its sales forecasting model by comparing forecasted values to "
+    },
+    {
+      "qid": "P1-FD-068",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Somerdale evaluates whether to invest in a new automation tool by comparing expe"
+    },
+    {
+      "qid": "P1-DD-025",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Zionsgate sets up an activity-based costing pool for order processing costs. Wha"
+    },
+    {
+      "qid": "P1-ED-044",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Sandpiper's risk management team scores identified risks based on their likeliho"
+    },
+    {
+      "qid": "P1-ED-019",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 1,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Stonewell decides to purchase insurance to address a significant identified risk"
+    },
+    {
+      "qid": "P1-ED-041",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Pinemount's risk management team scores identified risks based on their likeliho"
+    },
+    {
+      "qid": "P1-BD-074",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Brookline evaluates its sales forecasting model by comparing forecasted values t"
+    },
+    {
+      "qid": "P1-ED-058",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 4,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Ivorycrest's management decides not to implement an extremely costly control bec"
+    },
+    {
+      "qid": "P1-ED-020",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Thornbury decides to purchase insurance to address a significant identified risk"
+    },
+    {
+      "qid": "P1-ED-045",
+      "pack": "pack_d",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Turnstone's risk management team scores identified risks based on their likeliho"
+    },
+    {
+      "qid": "P1E-C-088",
+      "pack": "pack_e",
+      "storedCL": "Evaluate",
+      "storedDS": 2,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "Target costing is most effective when applied:"
+    },
+    {
+      "qid": "P1E-C-017",
+      "pack": "pack_e",
+      "storedCL": "Evaluate",
+      "storedDS": 3,
+      "dcsDS": 2,
+      "rationale": "Likely Understand — same-domain discrimination required",
+      "stem": "A project with ROI above required rate but below current division ROI would be a"
+    }
+  ],
+  "s720_comparison": {
+    "s720_rate": "73.7%",
+    "s721_rate": "28.4%",
+    "difference": "-45.3pp",
+    "note": "LOWER — DCS v1.1 classifies MORE strictly than stored labels"
+  }
+}

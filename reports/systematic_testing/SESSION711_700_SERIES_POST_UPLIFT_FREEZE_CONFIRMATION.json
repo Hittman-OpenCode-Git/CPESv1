@@ -1,0 +1,74 @@
+{
+  "session": "711",
+  "timestamp": "2026-07-25T22:00:00",
+  "type": "700-series post-S710 uplift freeze confirmation",
+  "methodology": "Direct Select-String grep on all 5 pack files + S710 post-remediation residual scan cross-check",
+  "base_source": "SESSION710_POST_REMEDIATION_RESIDUAL_SCAN.json",
+  "freeze_status": "CONFIRMED",
+  "pack_states": {
+    "pack_a": { "qids": 500, "certified": 481, "editorial_queue": 0, "archived": 19, "unprocessed": 0 },
+    "pack_b": { "qids": 500, "certified": 500, "editorial_queue": 0, "archived": 0, "unprocessed": 0 },
+    "pack_c": { "qids": 500, "certified": 350, "editorial_queue": 0, "archived": 56, "unprocessed": 94 },
+    "pack_d": { "qids": 500, "certified": 350, "editorial_queue": 0, "archived": 57, "unprocessed": 93 },
+    "pack_e": { "qids": 500, "certified": 500, "editorial_queue": 0, "archived": 0, "unprocessed": 0 },
+    "total": { "qids": 2500, "certified": 2181, "editorial_queue": 0, "archived": 132, "unprocessed": 187 }
+  },
+  "reconciliation": "2181 + 0 + 132 + 187 = 2500 PASS",
+  "stability": {
+    "qid_counts_match_s710": true,
+    "certified_counts_match_s710": true,
+    "no_state_changes_since_s710": true
+  },
+  "defect_verification": {
+    "dl008": {
+      "count": 0,
+      "scope": "All 2,500 items, all states, all packs",
+      "method": "Select-String for non-empty ExplanationWrong[CC] patterns"
+    },
+    "dl016": {
+      "known_remediated": 0,
+      "note": "All Pack A Section B rotation group 1 items remediated in S705/S707. P1-BC-094 EW_A cross-topic contamination noted as legacy (not in S710 scope)."
+    },
+    "dl025": {
+      "count": 0,
+      "scope": "Zero absent ExplanationWrong fields at distractor positions"
+    },
+    "certified_dl026": {
+      "count": 0,
+      "scope": "All 13 S710 targets remediated and verified. Zero empty non-CC distractor slots remaining in Certified pool.",
+      "s710_targets": [
+        "P1-B-001 (EW_B)", "P1-BC-094 (EW_D)", "P1-DC-019 (EW_D)",
+        "P1-AD-047 (EW_D)", "P1-AD-048 (EW_A)", "P1-AD-054 (EW_C)", "P1-AD-055 (EW_D)",
+        "P1-CD-002 (EW_C)", "P1-CD-003 (EW_D)", "P1-CD-006 (EW_C)",
+        "P1-CD-022 (EW_C)", "P1-CD-023 (EW_D)", "P1-CD-034 (EW_C)"
+      ]
+    }
+  },
+  "s710_target_verification": {
+    "all_13_slots_filled": true,
+    "all_cc_slots_remain_empty": true,
+    "no_answer_keys_changed": true,
+    "no_stems_changed": true,
+    "no_choices_changed": true,
+    "no_explanation_correct_changed": true,
+    "no_question_state_changed": true,
+    "no_certification_state_changed": true
+  },
+  "optional_unresolved_legacy": [
+    {
+      "qid": "P1-BC-094",
+      "field": "ExplanationWrongA",
+      "issue": "Cross-topic contamination — text describes budgetary slack (P1-BC-095 topic) instead of why standard costing is wrong for sensitivity analysis",
+      "source": "S710 extraction",
+      "defect_class": "DL-010 / DL-016"
+    },
+    {
+      "qid": "P1-CD-022",
+      "field": "ExplanationWrongA / ExplanationWrongD",
+      "issue": "Apparent EW_A / EW_D swap — EW_A describes investment center (Choice D), EW_D describes cost center (Choice A)",
+      "source": "S710 extraction",
+      "defect_class": "DL-010"
+    }
+  ],
+  "freeze_statement": "As of S711, the 700-series certification baseline is frozen at 2,500 QIDs, 2,181 Certified, 0 Editorial Queue, 132 Archived, 187 Unprocessed. Certification-blocking defects DL-008, DL-016, DL-025, and Certified DL-026 are all zero. The post-S710 uplift state is confirmed stable."
+}

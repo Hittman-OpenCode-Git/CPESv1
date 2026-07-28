@@ -1,0 +1,65 @@
+{
+  "session": "712",
+  "timestamp": "2026-07-25T23:00:00",
+  "type": "Pre-flight concurrency and target audit",
+  "pre_flight_test_result": {
+    "governance_guard": "20/0 PASS",
+    "session_recovery": "12/0 PASS",
+    "readiness": "37/0 PASS",
+    "calibration": "18/0 PASS",
+    "tutoring_safety": "74/0 PASS",
+    "may_renderer": "60/2 PASS (2 pre-existing failures — Chloe May intro, identical pre/post)",
+    "may_regression_r2": "38/4 PASS (4 pre-existing failures — Chloe May + handoff, identical pre/post)",
+    "may_stage_c": "FAIL (pre-existing DOM environment dependency, not S712-caused)",
+    "core_total": "161/0 PASS",
+    "may_total": "98/6 PASS (pre-existing)"
+  },
+  "concurrency_guard": {
+    "100_series_may_files_checked": true,
+    "500_series_case_bank_files_checked": true,
+    "no_100_series_files_modified": true,
+    "no_500_series_files_modified": true,
+    "no_scored_cases_modified": true,
+    "no_runtime_scoring_files_modified": true,
+    "no_pack_a_modified": true,
+    "no_pack_b_modified": true,
+    "no_pack_e_modified": true,
+    "authorized_production_files": ["pack_c_corrected.js", "pack_d_corrected.js", "knowledge/REVISION_HISTORY.md"],
+    "no_conflict_attestation": true
+  },
+  "target_audit": {
+    "P1-BC-094": {
+      "pack": "C",
+      "line": 8477,
+      "exists_once": true,
+      "parses_via_function_constructor": true,
+      "question_state": "Certified",
+      "correct_choice": "B",
+      "defect_confirmed": "ExplanationWrongA contains cross-topic contamination (budgetary slack text from P1-BC-095 instead of explaining why standard costing is wrong for sensitivity analysis)"
+    },
+    "P1-CD-022": {
+      "pack": "D",
+      "line": 9848,
+      "exists_once": true,
+      "parses_via_function_constructor": true,
+      "question_state": "Certified",
+      "correct_choice": "B",
+      "defect_confirmed": "ExplanationWrongA / ExplanationWrongD swap: EW_A describes Choice D (investment center), EW_D describes Choice A (cost center)"
+    }
+  },
+  "pack_states_pre_flight": {
+    "pack_c": { "qids": 500, "certified": 350 },
+    "pack_d": { "qids": 500, "certified": 350 }
+  },
+  "residual_defects_pre_flight": {
+    "dl008_pack_c": 0,
+    "dl008_pack_d": 0,
+    "certified_dl026": 0,
+    "dl025": 0,
+    "dl016_known": 0
+  },
+  "backups_created": [
+    "backups/pack_c_corrected.js.bak-20260725S712 (1,722,489 bytes)",
+    "backups/pack_d_corrected.js.bak-20260725S712 (1,744,779 bytes)"
+  ]
+}

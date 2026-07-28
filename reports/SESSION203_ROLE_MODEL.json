@@ -1,0 +1,69 @@
+{
+  "document": "SESSION203_ROLE_MODEL",
+  "session": "S203",
+  "title": "Role Model — May Administration Portal",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "authority": "S202 Addendum A-05",
+  "purpose": "Defines the complete role-based access control model for the May Administration Portal. Maps each role to its permissions, accessible modules, and data scope.",
+
+  "role_hierarchy": {
+    "description": "Roles are hierarchical — higher access levels inherit all lower-role permissions. Level 1 (Student) is the base. Level 5 (System Administrator) has unrestricted access.",
+    "levels": [
+      {"level": 1, "role": "Student", "inherits": []},
+      {"level": 2, "role": "Content Administrator", "inherits": ["Student"]},
+      {"level": 3, "role": "Certification Reviewer", "inherits": ["Content Administrator", "Student"]},
+      {"level": 4, "role": "Governance Administrator", "inherits": ["Certification Reviewer", "Content Administrator", "Student"]},
+      {"level": 5, "role": "System Administrator", "inherits": ["Governance Administrator", "Certification Reviewer", "Content Administrator", "Student"]}
+    ]
+  },
+
+  "permission_catalog": {
+    "question_inventory": {
+      "view": {"roles": [2,3,4,5], "description": "View question inventory, search by all criteria"},
+      "view_detail": {"roles": [2,3,4,5], "description": "View full question detail: Stem, Choices, CC, EC, EW[A-D], metadata, governance state"},
+      "edit_unprocessed": {"roles": [2,3,4,5], "description": "Edit question content for items with question_state: 'Unprocessed'"}
+    },
+    "certification": {
+      "view_queues": {"roles": [3,4,5], "description": "View READY, MINOR_FIX, REMEDIATE, BLOCKED, CERTIFIED queues"},
+      "review_items": {"roles": [3,4,5], "description": "Perform CAQS 10-dimension review on READY items"},
+      "certify": {"roles": [3,4,5], "description": "Certify items (question_state → 'Certified')"},
+      "hold": {"roles": [3,4,5], "description": "Place items on HOLD"},
+      "escalate": {"roles": [3,4,5], "description": "Escalate items to governance"}
+    },
+    "recommendations": {
+      "view": {"roles": [1,2,3,4,5], "description": "View recommendations (students see only own study recommendations)"},
+      "create": {"roles": [2,3,4,5], "description": "Create new recommendations from findings"},
+      "assign": {"roles": [3,4,5], "description": "Assign recommendation to target session"},
+      "update_status": {"roles": [3,4,5], "description": "Update recommendation lifecycle status"},
+      "close": {"roles": [4,5], "description": "Close recommendation with evidence"}
+    },
+    "sessions": {
+      "view": {"roles": [2,3,4,5], "description": "View session registry and details"},
+      "view_findings": {"roles": [2,3,4,5], "description": "View session findings and deliverables"}
+    },
+    "governance": {
+      "view_guard": {"roles": [4,5], "description": "View governance guard rules and test results"},
+      "view_audit": {"roles": [4,5], "description": "View audit reports and governance events"},
+      "verify_registry": {"roles": [4,5], "description": "Run registry integrity verification"},
+      "authorize_transitions": {"roles": [4,5], "description": "Authorize state transitions requiring governance approval"}
+    },
+    "system": {
+      "manage_users": {"roles": [5], "description": "CRUD users and role assignments"},
+      "manage_roles": {"roles": [5], "description": "Define and modify role permissions"},
+      "system_config": {"roles": [5], "description": "System configuration and maintenance"},
+      "data_export": {"roles": [5], "description": "Export registry, ledger, and recommendation data"}
+    }
+  },
+
+  "module_access_matrix": {
+    "Student_Management": {"view": [2,3,4,5], "manage": [5]},
+    "Test_Results": {"view_own": [1], "view_all": [2,3,4,5], "analytics": [3,4,5]},
+    "Question_Management": {"search": [2,3,4,5], "view_detail": [2,3,4,5], "edit": [2,3,4,5]},
+    "Recommendation_Registry": {"view": [1,2,3,4,5], "create": [2,3,4,5], "manage": [3,4,5], "close": [4,5]},
+    "Session_Registry": {"view": [2,3,4,5]},
+    "Certification_Ops": {"view_queues": [3,4,5], "review": [3,4,5], "certify": [3,4,5], "hold": [3,4,5], "escalate": [3,4,5]},
+    "Modernization_Dashboard": {"view": [2,3,4,5]}
+  }
+}

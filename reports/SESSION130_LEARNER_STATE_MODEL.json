@@ -1,0 +1,626 @@
+{
+  "session": "S130",
+  "title": "May Learner State — Complete Schema Catalog, Issues, and Unified Model Design",
+  "generatedAt": "2026-07-27T00:00:00.000Z",
+  "sourceFile": "may-learner-state.js",
+  "sourceLines": 1501,
+
+  "currentSchema": {
+    "modelDescription": "The learner state is a single JSON object persisted in localStorage under key 'cmaMayLearnerState'. It is loaded/returned by MayLearnerState._default() for new learners and mutated in place by every method. The MayLearnerState object itself holds additional in-memory (non-persisted) fields for calibration infrastructure.",
+
+    "topLevelFields": [
+      { "field": "learnerId", "type": "string", "addedBy": "baseline", "description": "Unique learner identifier, generated as 'learner-' + Date.now().toString(36) on first load" },
+      { "field": "userName", "type": "string|null", "addedBy": "baseline", "description": "Display name set via setUserName()" },
+      { "field": "firstVisit", "type": "ISO8601 string|null", "addedBy": "baseline", "description": "Timestamp of first visit, set on setUserName() if not already present" },
+      { "field": "sessions", "type": "Array<Session>", "addedBy": "baseline", "description": "All practice sessions. Capped at 50 entries; save() falls back to last 20 if storage quota exceeded. Each entry holds attempts[], summary stats, and case patterns." },
+      { "field": "topicPerformance", "type": "Object<topicName, TopicAggregate>", "addedBy": "baseline", "description": "Per-topic aggregated performance. Keyed by normalized topic name. Updated on every recordAttempt()." },
+      { "field": "subtopicPerformance", "type": "Object<subtopicName, TopicAggregate>", "addedBy": "baseline", "description": "Per-subtopic aggregated performance. Same schema as topicPerformance. Updated conditionally when question has a MicroTopic/Subtopic." },
+      { "field": "misconceptionPatterns", "type": "Array<MisconceptionPattern>", "addedBy": "baseline", "description": "Heuristic misconception tracking. Patterns inferred from topic name keywords when a wrong answer is given. load() migrates legacy 'topics' field to '_topics'." },
+      { "field": "recommendationLog", "type": "Array<RecommendationLogEntry>", "addedBy": "baseline", "description": "Detailed recommendation event log from logRecommendation(). Tracks question-selection logic: source topic/domain, reason type, QID pools, exclusions. Capped at 200 entries." },
+      { "field": "recommendationOutcomes", "type": "Array<RecommendationOutcome>", "addedBy": "S129", "description": "Closed-loop recommendation outcome tracking. Records delivery, status changes, and outcome classification (positive/neutral/insufficient/contradictory). Capped at 200 entries." },
+      { "field": "sessionSummaries", "type": "Array<SessionSummary>", "addedBy": "baseline", "description": "End-of-session snapshots written by recordSessionSummary(). Capped at 30 entries. Partially duplicates data on sessions[] entries." },
+      { "field": "lastUpdated", "type": "ISO8601 string|null", "addedBy": "baseline", "description": "Auto-set on every save(). Reflects last mutation timestamp." },
+      { "field": "examPlan", "type": "any|null", "addedBy": "S117", "description": "Exam plan object persisted via setExamPlan(). Schema is untyped — can be any JSON-serializable value." },
+      { "field": "challengedQids", "type": "Array<ChallengedQid>|undefined", "addedBy": "baseline (dynamically)", "description": "List of student-contested questions. Added dynamically by flagChallengedQID() — NOT present in _default(). Capped at 100 entries." }
+    ],
+
+    "nestedObjects": [
+      {
+        "object": "Session (sessions[] entry)",
+        "fields": [
+          { "field": "sessionId", "type": "string", "description": "Unique session identifier" },
+          { "field": "date", "type": "ISO8601 string", "description": "Session creation timestamp" },
+          { "field": "mode", "type": "string", "description": "Session mode, initially 'unknown', set by recordSessionSummary()" },
+          { "field": "totalQuestions", "type": "number", "description": "Count of attempts in this session" },
+          { "field": "correctCount", "type": "number", "description": "Count of correct attempts in this session" },
+          { "field": "attempts", "type": "Array<Attempt>", "description": "All question attempts in this session" },
+          { "field": "scaledScore", "type": "number|null", "description": "Set by recordSessionSummary()" },
+          { "field": "mcqPct", "type": "number|null", "description": "MCQ percentage from session summary" },
+          { "field": "casePct", "type": "number|null", "description": "Case percentage from session summary" },
+          { "field": "grade", "type": "string|null", "description": "Grade label from session summary" },
+          { "field": "passed", "type": "boolean|null", "description": "Pass/fail from session summary" },
+          { "field": "topicSnapshot", "type": "object", "description": "Topic-level snapshot from session summary" },
+          { "field": "casePatterns", "type": "object", "description": "Case miss pattern counts (evidenceLocation, calculationSetup, etc.) from session summary" }
+        ]
+      },
+      {
+        "object": "Attempt (sessions[].attempts[] entry)",
+        "fields": [
+          { "field": "questionId", "type": "string", "description": "QID from QuestionID or ItemID" },
+          { "field": "section", "type": "string", "description": "Section tag (A–F)" },
+          { "field": "topic", "type": "string", "description": "Normalized topic name" },
+          { "field": "subtopic", "type": "string|null", "description": "MicroTopic or Subtopic" },
+          { "field": "difficulty", "type": "string", "description": "Difficulty label (Easy, Moderate, Difficult, etc.)" },
+          { "field": "difficultyScore", "type": "number", "description": "Numeric difficulty (default 3)" },
+          { "field": "itemType", "type": "string", "description": "MCQ, Case, etc." },
+          { "field": "cognitiveLevel", "type": "string", "description": "Bloom's level (Remember, Understand, Apply, Evaluate)" },
+          { "field": "questionState", "type": "string", "description": "question_state from the question object" },
+          { "field": "correct", "type": "boolean", "description": "Whether the answer was correct" },
+          { "field": "hintsUsed", "type": "number", "description": "Number of hints consumed" },
+          { "field": "explanationRequested", "type": "boolean", "description": "Whether explanation was viewed" },
+          { "field": "elapsedMs", "type": "number", "description": "Time spent on this attempt in milliseconds" },
+          { "field": "selectedChoice", "type": "string|null", "description": "The answer the learner selected" },
+          { "field": "confidence", "type": "number|null", "description": "Self-reported confidence (likely 1–5 scale)" },
+          { "field": "timestamp", "type": "ISO8601 string", "description": "When the attempt was recorded" }
+        ]
+      },
+      {
+        "object": "TopicAggregate (topicPerformance[topic] / subtopicPerformance[topic])",
+        "fields": [
+          { "field": "totalAttempts", "type": "number", "description": "Total attempts on this topic" },
+          { "field": "correctCount", "type": "number", "description": "Number of correct attempts" },
+          { "field": "hintCount", "type": "number", "description": "Total hints used on this topic" },
+          { "field": "recentAttempts", "type": "Array<{correct,hints,difficulty,timestamp}>", "description": "Rolling window of last 15 attempts" },
+          { "field": "firstSeen", "type": "ISO8601 string", "description": "First time this topic was attempted" },
+          { "field": "lastSeen", "type": "ISO8601 string", "description": "Most recent attempt on this topic" },
+          { "field": "sectionsSeen", "type": "Array<string>", "description": "Section tags where this topic appeared" },
+          { "field": "difficultyDistribution", "type": "Object<difficultyLabel, count>", "description": "Count of attempts at each difficulty level" },
+          { "field": "difficultyWeights", "type": "{total: number, sum: number}", "description": "Running total and sum of difficulty scores for averaging" }
+        ]
+      },
+      {
+        "object": "MisconceptionPattern (misconceptionPatterns[] entry)",
+        "fields": [
+          { "field": "pattern", "type": "string (enum)", "description": "Pattern key: misclassification, variance_sign_confusion, budget_component_error, cost_method_confusion, depreciation_method_error, cash_flow_classification, ratio_misapplication, control_framework_error, general_error" },
+          { "field": "count", "type": "number", "description": "Number of times this pattern was detected" },
+          { "field": "questionIds", "type": "Array<string>", "description": "QIDs where this pattern was observed" },
+          { "field": "_topics", "type": "Array<string>", "description": "Topics where this pattern occurred (underscore-prefixed due to legacy migration from 'topics')" },
+          { "field": "firstSeen", "type": "ISO8601 string", "description": "First occurrence" },
+          { "field": "lastSeen", "type": "ISO8601 string", "description": "Most recent occurrence" }
+        ]
+      },
+      {
+        "object": "RecommendationLogEntry (recommendationLog[] entry)",
+        "fields": [
+          { "field": "timestamp", "type": "ISO8601 string" },
+          { "field": "sourceTopic", "type": "string|null" },
+          { "field": "sourceDomain", "type": "string|null" },
+          { "field": "reasonType", "type": "string" },
+          { "field": "recommendedQids", "type": "Array<string>" },
+          { "field": "packPool", "type": "Array<string>" },
+          { "field": "excludedByDefect", "type": "Array<string>" },
+          { "field": "excludedByContested", "type": "Array<string>" },
+          { "field": "excludedByState", "type": "Array<string>" },
+          { "field": "activeSessionId", "type": "string|null" },
+          { "field": "activeExamMode", "type": "boolean" }
+        ]
+      },
+      {
+        "object": "RecommendationOutcome (recommendationOutcomes[] entry) [S129]",
+        "fields": [
+          { "field": "recommendationId", "type": "string", "description": "Unique ID: 'rec-' + timestamp + '-' + existingCount" },
+          { "field": "deliveredAt", "type": "ISO8601 string" },
+          { "field": "type", "type": "string (enum)", "description": "next_best_step | focus_area | weekly_digest | study_strategy" },
+          { "field": "subType", "type": "string|null", "description": "e.g. targeted_practice, high, weekly_focus" },
+          { "field": "topic", "type": "string|null" },
+          { "field": "section", "type": "string|null" },
+          { "field": "recommendationText", "type": "string", "description": "Truncated to 500 chars" },
+          { "field": "sourceSessionId", "type": "string|null" },
+          { "field": "evidenceAtDelivery", "type": "object", "description": "Snapshot of evidence when recommendation was made, e.g. {accuracy: 42, attempts: 5}" },
+          { "field": "status", "type": "string (enum)", "description": "delivered | acted_on | ignored | superseded" },
+          { "field": "outcome", "type": "string|null (enum)", "description": "positive | neutral | insufficient | contradictory | null (unclassified)" },
+          { "field": "outcomeEvidence", "type": "object|null", "description": "Evidence supporting the outcome classification" },
+          { "field": "outcomeClassifiedAt", "type": "ISO8601 string|null" }
+        ]
+      },
+      {
+        "object": "SessionSummary (sessionSummaries[] entry)",
+        "fields": [
+          { "field": "sessionId", "type": "string" },
+          { "field": "date", "type": "ISO8601 string" },
+          { "field": "mode", "type": "string" },
+          { "field": "scaledScore", "type": "number" },
+          { "field": "mcqPct", "type": "number" },
+          { "field": "casePct", "type": "number" },
+          { "field": "grade", "type": "string" },
+          { "field": "passed", "type": "boolean" },
+          { "field": "topicSnapshot", "type": "object" },
+          { "field": "casePatterns", "type": "object" }
+        ]
+      },
+      {
+        "object": "ChallengedQid (challengedQids[] entry)",
+        "fields": [
+          { "field": "qid", "type": "string" },
+          { "field": "firstChallenged", "type": "ISO8601 string" },
+          { "field": "lastChallenged", "type": "ISO8601 string" },
+          { "field": "count", "type": "number" },
+          { "field": "status", "type": "string", "description": "contested | resolved" },
+          { "field": "lastText", "type": "string", "description": "Student's challenge text, truncated to 200 chars" },
+          { "field": "resolvedAt", "type": "ISO8601 string|undefined", "description": "Set by resolveChallenge()" }
+        ]
+      },
+      {
+        "object": "examPlan (top-level field, S117)",
+        "fields": [
+          { "field": "(any)", "type": "any", "description": "Untyped — can be any JSON-serializable value, schema depends on producer" }
+        ]
+      }
+    ],
+
+    "inMemoryFields": [
+      { "field": "_liveCalibrationEnabled", "type": "boolean", "addedBy": "S109", "description": "Toggle for automatic readiness snapshots during real sessions. Default false." },
+      { "field": "_lastCalibrationSnapshot", "type": "number (epoch ms)", "addedBy": "S109", "description": "Timestamp of last auto-snapshot for throttling" },
+      { "field": "_attemptsSinceSnapshot", "type": "number", "addedBy": "S109", "description": "Attempt counter since last snapshot for throttling" },
+      { "field": "_liveCalibrationSessions", "type": "Array", "addedBy": "S109", "description": "Accumulated live calibration snapshots, capped at 500. NOT persisted." },
+      { "field": "_calibrationThrottleMs", "type": "number", "addedBy": "S109", "description": "300000 (5 minutes) between auto-snapshots" },
+      { "field": "_calibrationThrottleAttempts", "type": "number", "addedBy": "S109", "description": "20 attempts between auto-snapshots" },
+      { "field": "_calibrationMetrics", "type": "Array", "addedBy": "S107", "description": "Accumulated readiness metrics from logReadinessMetrics(). Capped at 100. NOT persisted." }
+    ],
+
+    "arrays": [
+      { "field": "sessions", "maxLength": 50, "fallbackMax": 20, "description": "Practice session records" },
+      { "field": "sessions[].attempts", "maxLength": "unbounded", "description": "Attempt records within each session" },
+      { "field": "misconceptionPatterns", "maxLength": "unbounded", "description": "Aggregated misconception patterns" },
+      { "field": "recommendationLog", "maxLength": 200, "description": "Recommendation event log" },
+      { "field": "recommendationOutcomes", "maxLength": 200, "description": "S129 recommendation outcome tracking" },
+      { "field": "sessionSummaries", "maxLength": 30, "description": "End-of-session summary snapshots" },
+      { "field": "challengedQids", "maxLength": 100, "description": "Contested question records" }
+    ],
+
+    "sessionAdditionsTimeline": {
+      "baseline": "learnerId, userName, firstVisit, sessions, topicPerformance, subtopicPerformance, misconceptionPatterns, recommendationLog, sessionSummaries, lastUpdated, challengedQids (dynamic)",
+      "S94": "classifyCaseMissPattern() — heuristic case miss classification (not a field, a method)",
+      "S98": "getCasePatternSummary(), getCasePatternTrends(), casePatternLabel(), casePatternCoachingNote() — case miss analytics (methods, not fields)",
+      "S99": "getCasePatternPracticeGuidance() — pattern-to-practice mapping (method)",
+      "S100": "getAdaptivePracticeMix() — practice mode optimizer (method)",
+      "S102": "getReadinessSummary() — per-topic and overall readiness (method, adds _provenance field on output)",
+      "S103": "getSectionReadinessSummary() — section-level rollup; S103 also tuned readiness thresholds (minAttemptsReady 5→6), added case-burden degradation, _provenance field",
+      "S104": "Added minAttemptsApproaching=4, bumped modelVersion to S104-1.0",
+      "S105": "Calibration hooks & known limitations documentation (comments only, no new fields)",
+      "S107": "_calibrationMetrics (in-memory), logReadinessMetrics(), _countThresholdBoundaries(), getCalibrationMetrics(), clearCalibrationMetrics(), getThresholdSnapshot(), exportCalibrationData()",
+      "S109": "_liveCalibrationEnabled, _lastCalibrationSnapshot, _attemptsSinceSnapshot, _liveCalibrationSessions, _calibrationThrottleMs, _calibrationThrottleAttempts (all in-memory); _commitCalibrationSnapshot(), enableLiveCalibration(), disableLiveCalibration(), getLiveCalibrationData(), clearLiveCalibration(); modelVersion became S111-1.0",
+      "S111": "modelVersion in _provenance and getSectionReadinessSummary updated to S111-1.0",
+      "S115": "getStudentRoll(), saveStudentRoll(), updateStudentInRoll() — synthetic student roll (separate localStorage key: cmaMayStudentRoll)",
+      "S117": "examPlan field, getExamPlan(), setExamPlan(), seedStudentHistory()",
+      "S129": "recommendationOutcomes field, recordRecommendationDelivery(), classifyPendingOutcomes(), getOutcomeSummary(), getRecommendationRecurrence(), getLongitudinalAnalytics()"
+    }
+  },
+
+  "schemaIssues": [
+    {
+      "issue": "sessionSummaries[] duplicates data already stored on sessions[] entries",
+      "fields": ["sessionSummaries", "sessions"],
+      "severity": "HIGH",
+      "detail": "recordSessionSummary() both mutates the matching session entry (setting scaledScore, mcqPct, casePct, grade, passed, topicSnapshot, casePatterns) AND pushes a separate snapshot into sessionSummaries[]. The session entry already holds the summary data, making sessionSummaries redundant for most use cases. The only incremental value of sessionSummaries is its independent date field and the ...summary spread, but the data is fully derivable from the mutated session entries."
+    },
+    {
+      "issue": "recommendationLog and recommendationOutcomes overlap in purpose but have incompatible schemas",
+      "fields": ["recommendationLog", "recommendationOutcomes"],
+      "severity": "HIGH",
+      "detail": "recommendationLog (from logRecommendation()) tracks question-selection mechanics (QID pools, exclusions, pack pools). recommendationOutcomes (S129, from recordRecommendationDelivery()) tracks delivery and outcome classification. Both are 'recommendation history' but neither references the other. There is no cross-reference field (e.g., recommendationId in recommendationLog, or logId in recommendationOutcomes). The types differ: recommendationLog has reasonType as freeform string; recommendationOutcomes has type as an enum. A unified recommendation record should hold both selection details and outcome data."
+    },
+    {
+      "issue": "challengedQids is not initialized in _default() — added dynamically",
+      "fields": ["challengedQids"],
+      "severity": "MEDIUM",
+      "detail": "flagChallengedQID() does `if (!data.challengedQids) data.challengedQids = []` because _default() does not include this field. This means a brand-new learner state serialized before any challenge will lack the field. While functional (the guard handles it), it means the schema shape depends on whether a challenge has ever been recorded — a schema stability concern."
+    },
+    {
+      "issue": "topicPerformance and subtopicPerformance are structurally identical but held in separate keys",
+      "fields": ["topicPerformance", "subtopicPerformance"],
+      "severity": "MEDIUM",
+      "detail": "Both use the same TopicAggregate schema and the same _updateTopicAggregate() function. The only difference is the granularity of the key. They could be unified into a single `performanceByConcept` map with a `level` discriminator (topic/subtopic) or into a nested structure where subtopics live under their parent topic."
+    },
+    {
+      "issue": "recentAttempts in TopicAggregate denormalizes data already in sessions[].attempts[]",
+      "fields": ["topicPerformance[topic].recentAttempts", "sessions[].attempts[]"],
+      "severity": "LOW",
+      "detail": "The recentAttempts rolling window (last 15) on each TopicAggregate is a performance cache of data that already exists in sessions. It adds storage overhead and a consistency risk: if sessions[] is pruned (max 50, fallback 20), the recentAttempts window may reference attempts that no longer exist in sessions. However, the truncation window (15 < 20*typical attempts per session) means this is rarely a problem in practice."
+    },
+    {
+      "issue": "sectionsSeen in TopicAggregate is fully derivable from sessions[].attempts[].section",
+      "fields": ["topicPerformance[topic].sectionsSeen", "sessions[].attempts[].section"],
+      "severity": "LOW",
+      "detail": "The set of sections where a topic appeared can always be derived by scanning all attempts for that topic. Storing it is a cache, not source-of-truth."
+    },
+    {
+      "issue": "misconceptionPatterns uses underscore-prefixed field name _topics",
+      "fields": ["misconceptionPatterns[]._topics"],
+      "severity": "LOW",
+      "detail": "The load() function migrates a legacy 'topics' field to '_topics' and deletes the original. The underscore prefix suggests it was a workaround to avoid collision, but it's now the canonical field name. It should simply be 'topics'. The migration should have been a one-time fix, not a permanent rename to an underscore-prefixed name."
+    },
+    {
+      "issue": "examPlan has no defined schema — completely untyped",
+      "fields": ["examPlan"],
+      "severity": "MEDIUM",
+      "detail": "setExamPlan(plan) accepts `plan || null` with no validation. The field can hold anything. There's no documentation of what keys or structure a valid exam plan has. This is a black box in the learner state."
+    },
+    {
+      "issue": "No schema version field in the persisted learner state",
+      "fields": ["(none)"],
+      "severity": "MEDIUM",
+      "detail": "The learner state JSON has no `schemaVersion` or `modelVersion` field. Without it, migrating learner data between schema versions requires brittle heuristics (e.g., checking for the presence/absence of fields). The _provenance.modelVersion in getReadinessSummary() output is per-invocation, not persisted."
+    },
+    {
+      "issue": "Calibration data (_calibrationMetrics, _liveCalibrationSessions) lives in-memory only — lost on page reload",
+      "fields": ["_calibrationMetrics", "_liveCalibrationSessions"],
+      "severity": "MEDIUM",
+      "detail": "These arrays are properties on the MayLearnerState object, not inside the persisted learner state. They survive for the duration of the JS runtime but are lost on page refresh. For calibration to be useful across sessions, they need persistence or an explicit export step."
+    },
+    {
+      "issue": "Student roll data stored in a separate localStorage key, not within the learner state",
+      "fields": ["cmaMayStudentRoll (separate key)"],
+      "severity": "LOW",
+      "detail": "getStudentRoll()/saveStudentRoll() use localStorage key 'cmaMayStudentRoll' which is completely separate from 'cmaMayLearnerState'. This is defensible (student roll is synthetic/test data, not a real learner concern), but means there's no single export that captures the full learner picture."
+    },
+    {
+      "issue": "session.mode defaults to 'unknown' and may never be updated",
+      "fields": ["sessions[].mode"],
+      "severity": "LOW",
+      "detail": "recordAttempt() creates session with mode: 'unknown'. recordSessionSummary() updates it. If a session ends without calling recordSessionSummary(), the mode stays 'unknown' forever. This is a data-quality gap."
+    },
+    {
+      "issue": "No explicit strengths tracking — strengths are computed on-the-fly, not persisted",
+      "fields": ["(none)"],
+      "severity": "HIGH",
+      "detail": "The current state is entirely oriented around weaknesses: misconceptionPatterns tracks errors, getWeaknessClusters() categorizes problem areas, topicPerformance stores raw aggregates. 'Strengths' only exist as transient computations inside getReadinessSummary() (band: 'Ready for focused review'). There is no persistent record of what the learner has demonstrated mastery of. A unified model needs explicit, evidence-backed strength records."
+    },
+    {
+      "issue": "No cross-session trend persistence — trends are always recomputed",
+      "fields": ["(none)"],
+      "severity": "MEDIUM",
+      "detail": "getTrends() recomputes direction, stability, hintTrend, and delta from topicPerformance on every call. There's no stored 'snapshot at time T' to compare against. This means longitudinal analysis (getLongitudinalAnalytics, S129) can only use absolute timestamps on raw attempts, not stored trend states."
+    },
+    {
+      "issue": "recommendationOutcomes.status never transitions to 'ignored' or 'superseded'",
+      "fields": ["recommendationOutcomes[].status"],
+      "severity": "LOW",
+      "detail": "The status enum includes 'ignored' and 'superseded' but classifyPendingOutcomes() only ever sets 'delivered' or 'acted_on'. There is no code path that sets status to 'ignored' or 'superseded'. These are dead enum values."
+    }
+  ],
+
+  "unifiedStateDesign": {
+    "designPrinciples": [
+      "Backward-looking only: every field is evidence-backed from actual attempts, sessions, or explicit learner actions. No predictions, no readiness scores, no projected exam outcomes.",
+      "Single source of truth: data is stored once; derived views are computed, not persisted redundantly.",
+      "Explicit provenance: every claim cites its source (which sessions, which attempts, which timestamps).",
+      "Schema-versioned: all persisted state includes a schemaVersion for safe migration.",
+      "Unified recommendation model: one recommendation record type covering selection, delivery, and outcomes.",
+      "Strengths are first-class: strengths are recorded when evidence crosses a persistence threshold, not just computed transiently."
+    ],
+
+    "strengths": {
+      "description": "Topic-level strengths supported by concrete evidence. A strength is recorded when a topic consistently demonstrates accuracy above a threshold over a minimum number of attempts, and the evidence window is stable (low variance). Strengths are NOT predictions — they state what HAS happened.",
+      "schema": {
+        "strengths": {
+          "type": "Object<topicName, StrengthRecord>",
+          "description": "Map from normalized topic name to strength evidence"
+        },
+        "StrengthRecord": {
+          "topic": "string — normalized topic name",
+          "establishedAt": "ISO8601 — when this strength was first recognized",
+          "lastReinforcedAt": "ISO8601 — most recent attempt that reinforced this strength",
+          "evidenceWindow": {
+            "totalAttempts": "number — total attempts on this topic",
+            "correctCount": "number — correct attempts",
+            "accuracy": "number (0–100) — overall accuracy",
+            "recentAttempts": "number — count in the trailing window used for confirmation",
+            "recentAccuracy": "number (0–100) — accuracy in the trailing window",
+            "stability": "number (0–100) — consistency score (fewer runs = more stable)"
+          },
+          "confirmingSessions": "Array<string> — sessionIds that contributed evidence",
+          "sectionsSeen": "Array<string> — section tags where strength was demonstrated",
+          "difficultyRange": "{min: number, max: number, avg: number} — difficulty scores attempted"
+        }
+      },
+      "evidenceRequirements": {
+        "minimumAttempts": 6,
+        "minimumAccuracy": 80,
+        "minimumRecentAccuracy": 80,
+        "minimumStability": 75,
+        "noDecliningTrend": true,
+        "confirmationWindow": "last 10 attempts or all attempts if < 10"
+      }
+    },
+
+    "weaknesses": {
+      "description": "Active weaknesses — topics where the learner has consistently struggled. A weakness is recorded based on low accuracy, declining trend, or high instability. Weaknesses can be 'resolved' when sufficient counter-evidence accumulates; resolved weaknesses move to a historical log rather than being deleted.",
+      "schema": {
+        "weaknesses": {
+          "type": "Object<topicName, WeaknessRecord>",
+          "description": "Map from normalized topic name to weakness evidence"
+        },
+        "WeaknessRecord": {
+          "topic": "string",
+          "identifiedAt": "ISO8601 — when the weakness was first recognized",
+          "lastObservedAt": "ISO8601 — most recent attempt showing weakness",
+          "status": "'active' | 'resolved' | 'monitoring'",
+          "resolvedAt": "ISO8601 | null — when resolved (if applicable)",
+          "resolutionEvidence": "object | null — evidence that resolved it",
+          "evidence": {
+            "totalAttempts": "number",
+            "accuracy": "number (0–100)",
+            "recentAccuracy": "number (0–100)",
+            "trend": "'declining' | 'slightly_declining' | 'stable' | 'slightly_improving' | 'improving'",
+            "stability": "number (0–100)",
+            "hintDependence": "boolean — whether accuracy depends on hints",
+            "difficultySensitivity": "{lowAccuracy: number, highAccuracy: number, gap: number} | null"
+          },
+          "contributingSessions": "Array<string>",
+          "misconceptionLinks": "Array<string> — references to misconception pattern keys contributing to this weakness"
+        }
+      },
+      "evidenceRequirements": {
+        "minimumAttempts": 5,
+        "triggers": [
+          "accuracy < 60% AND totalAttempts >= 5",
+          "trend === 'declining' OR trend === 'slightly_declining'",
+          "stability < 50 AND totalAttempts >= 4",
+          "hintDependence when accuracy >= 70 AND hintTrend is increasing"
+        ],
+        "resolutionCriteria": [
+          "accuracy >= 75% AND recentAccuracy >= 75% AND stability >= 60 AND trend is not declining",
+          "requires at least 4 attempts since weakness was identified"
+        ]
+      }
+    },
+
+    "misconceptions": {
+      "description": "Recurring misconception patterns — heuristic classifications of wrong-answer patterns. Each entry links a misconception type to the topics where it appears and the frequency of occurrence. These are purely descriptive, not predictive.",
+      "schema": {
+        "misconceptions": {
+          "type": "Array<MisconceptionRecord>"
+        },
+        "MisconceptionRecord": {
+          "pattern": "string — standardized misconception key (see patternEnum below)",
+          "topics": "Array<string> — normalized topic names where this pattern occurs",
+          "occurrenceCount": "number — total times observed",
+          "questionIds": "Array<string> — QIDs involved",
+          "firstSeen": "ISO8601",
+          "lastSeen": "ISO8601",
+          "lastWrongAnswer": "string | null — the most recent wrong choice text (truncated to 200 chars)",
+          "trend": "'increasing' | 'stable' | 'decreasing' — based on recent frequency",
+          "linkedWeaknesses": "Array<string> — topic names from weaknesses that share these misconception patterns"
+        },
+        "patternEnum": [
+          "misclassification",
+          "variance_sign_confusion",
+          "budget_component_error",
+          "cost_method_confusion",
+          "depreciation_method_error",
+          "cash_flow_classification",
+          "ratio_misapplication",
+          "control_framework_error",
+          "general_error"
+        ],
+        "patternDetectionRules": {
+          "description": "Patterns are detected heuristically from topic name keywords and wrong-answer context. These rules inherit from _trackMisconception() — no changes to detection logic, only the storage format.",
+          "rules": [
+            { "pattern": "misclassification", "trigger": "topic includes 'classification' or 'current'" },
+            { "pattern": "variance_sign_confusion", "trigger": "topic includes 'variance'" },
+            { "pattern": "budget_component_error", "trigger": "topic includes 'budget' or 'forecast'" },
+            { "pattern": "cost_method_confusion", "trigger": "topic includes 'cost' and 'standard'" },
+            { "pattern": "depreciation_method_error", "trigger": "topic includes 'depreciation'" },
+            { "pattern": "cash_flow_classification", "trigger": "topic includes 'cash' and 'flow'" },
+            { "pattern": "ratio_misapplication", "trigger": "topic includes 'ratio' or 'analysis'" },
+            { "pattern": "control_framework_error", "trigger": "topic includes 'control' or 'coso'" },
+            { "pattern": "general_error", "trigger": "fallback — no keyword match" }
+          ]
+        }
+      }
+    },
+
+    "improvements": {
+      "description": "Recent improvements — topics showing positive trajectory with sufficient evidence. Improvements are evidence-backed observations of change direction and magnitude over a defined time window.",
+      "schema": {
+        "improvements": {
+          "type": "Array<ImprovementRecord>"
+        },
+        "ImprovementRecord": {
+          "topic": "string",
+          "detectedAt": "ISO8601 — when the improvement was first observed",
+          "lastConfirmedAt": "ISO8601 — most recent data point confirming the trend",
+          "evidenceWindow": "'7d' | '14d' | 'all' — the comparison window",
+          "baseline": {
+            "accuracy": "number — accuracy before the window",
+            "attemptCount": "number — attempts in baseline period",
+            "periodStart": "ISO8601",
+            "periodEnd": "ISO8601"
+          },
+          "current": {
+            "accuracy": "number — accuracy in the window",
+            "attemptCount": "number — attempts in the window",
+            "periodStart": "ISO8601",
+            "periodEnd": "ISO8601"
+          },
+          "delta": "number — percentage point change (current - baseline)",
+          "direction": "'improving' | 'slightly_improving'",
+          "stability": "number (0–100) — consistency in the current window",
+          "hintTrend": "'decreasing' | 'stable' | 'increasing' — hint usage trend",
+          "confidence": "'high' | 'moderate' | 'low' — based on attempt count and delta magnitude"
+        }
+      },
+      "evidenceRequirements": {
+        "minimumAttemptsTotal": 5,
+        "minimumDelta": 5,
+        "windowOptions": ["7-day", "14-day", "all-time"],
+        "confidenceRules": {
+          "high": "delta >= 15 AND attemptCount >= 8 AND stability >= 70",
+          "moderate": "delta >= 10 OR (delta >= 5 AND attemptCount >= 5)",
+          "low": "delta < 10 AND attemptCount < 8"
+        }
+      }
+    },
+
+    "recommendationHistory": {
+      "description": "Unified recommendation records — every recommendation generated, with its type, topic, evidence at time of delivery, and the underlying question-selection details. This merges recommendationLog and recommendationOutcomes into a single coherent model.",
+      "schema": {
+        "recommendationHistory": {
+          "type": "Array<UnifiedRecommendation>",
+          "maxLength": 300
+        },
+        "UnifiedRecommendation": {
+          "recommendationId": "string — unique ID",
+          "generatedAt": "ISO8601",
+          "type": "'next_best_step' | 'focus_area' | 'weekly_digest' | 'study_strategy'",
+          "subType": "string | null",
+          "topic": "string | null — target topic",
+          "section": "string | null — target section (A–F)",
+          "text": "string — the recommendation text delivered to the learner (max 500 chars)",
+          "sourceSessionId": "string | null — session during which recommendation was generated",
+          "evidenceAtGeneration": {
+            "topicAccuracy": "number | null",
+            "topicAttempts": "number | null",
+            "trendDirection": "string | null",
+            "weaknessCluster": "string | null — persistentWeak, declining, unstable, etc.",
+            "casePatternSummary": "object | null"
+          },
+          "selectionDetail": {
+            "reasonType": "string — why this recommendation was chosen",
+            "recommendedQids": "Array<string> — QIDs recommended",
+            "packPool": "Array<string> — pack pool considered",
+            "excludedByDefect": "Array<string>",
+            "excludedByContested": "Array<string>",
+            "excludedByState": "Array<string>",
+            "activeExamMode": "boolean"
+          },
+          "outcome": {
+            "status": "'delivered' | 'acted_on' | 'ignored' | 'superseded'",
+            "classification": "'positive' | 'neutral' | 'insufficient' | 'contradictory' | null",
+            "classifiedAt": "ISO8601 | null",
+            "evidence": {
+              "topic": "string | null",
+              "currentAccuracy": "number | null",
+              "trend": "string | null",
+              "delta": "number | null",
+              "attempts": "number | null",
+              "window": "string | null",
+              "note": "string | null"
+            }
+          }
+        }
+      }
+    },
+
+    "recommendationOutcomes": {
+      "description": "Aggregate outcome analytics — derived from recommendationHistory, providing summary views by type, topic, and outcome classification.",
+      "schema": {
+        "outcomeSummary": {
+          "totalRecommendations": "number",
+          "byType": "Object<type, {total, positive, neutral, insufficient, contradictory, unclassified}>",
+          "byOutcome": "{positive: number, neutral: number, insufficient: number, contradictory: number, unclassified: number}",
+          "byTopic": "Object<topic, {count, types, lastOutcome, recurrenceAdjustment}>",
+          "hasData": "boolean"
+        }
+      },
+      "note": "This is a derived view from recommendationHistory, computed on demand rather than stored redundantly. getOutcomeSummary() and getRecommendationRecurrence() produce these views."
+    },
+
+    "supportingData": {
+      "description": "Data that supports the above models without being part of the analysis layer itself.",
+      "sections": {
+        "learnerProfile": {
+          "learnerId": "string",
+          "userName": "string | null",
+          "firstVisit": "ISO8601 | null",
+          "schemaVersion": "number — for migration safety"
+        },
+        "sessions": {
+          "type": "Array<Session>",
+          "maxLength": 50,
+          "description": "Raw session and attempt data — the primary evidence source for all derived models"
+        },
+        "challengedQids": {
+          "type": "Array<ChallengedQid>",
+          "maxLength": 100,
+          "description": "Contested questions with resolution status"
+        },
+        "examPlan": {
+          "type": "object | null",
+          "description": "Persisted exam plan; schema should be defined when the plan format stabilizes"
+        }
+      }
+    },
+
+    "unifiedTopLevelSchema": {
+      "schemaVersion": 1,
+      "learnerProfile": {
+        "learnerId": "string",
+        "userName": "string|null",
+        "firstVisit": "ISO8601|null",
+        "lastUpdated": "ISO8601|null"
+      },
+      "sessions": "Array<Session> — maximum 50",
+      "strengths": "Object<topicName, StrengthRecord>",
+      "weaknesses": "Object<topicName, WeaknessRecord>",
+      "misconceptions": "Array<MisconceptionRecord>",
+      "improvements": "Array<ImprovementRecord>",
+      "recommendationHistory": "Array<UnifiedRecommendation> — maximum 300",
+      "challengedQids": "Array<ChallengedQid> — maximum 100",
+      "examPlan": "object|null",
+      "performanceAggregates": {
+        "byTopic": "Object<topicName, TopicAggregate>",
+        "bySubtopic": "Object<subtopicName, TopicAggregate>"
+      },
+      "calibrationLog": {
+        "type": "Array<CalibrationSnapshot>",
+        "maxLength": 100,
+        "description": "Persisted calibration snapshots (moved from in-memory to persisted)"
+      }
+    }
+  },
+
+  "migrationMap": {
+    "learnerId": "learnerProfile.learnerId",
+    "userName": "learnerProfile.userName",
+    "firstVisit": "learnerProfile.firstVisit",
+    "lastUpdated": "learnerProfile.lastUpdated",
+    "sessions": "sessions (unchanged structure)",
+    "topicPerformance": "performanceAggregates.byTopic (unchanged structure; renamed for clarity)",
+    "subtopicPerformance": "performanceAggregates.bySubtopic (unchanged structure; renamed for clarity)",
+    "misconceptionPatterns": "misconceptions (renamed; _topics → topics; add trend field; add linkedWeaknesses)",
+    "recommendationLog": "recommendationHistory[].selectionDetail (merged into unified record)",
+    "recommendationOutcomes": "recommendationHistory[].outcome (merged into unified record; each entry matched by timestamp ± topic correlation)",
+    "sessionSummaries": "DELETED — redundant with sessions[] entries that already hold summary data via recordSessionSummary()",
+    "examPlan": "examPlan (unchanged)",
+    "challengedQids": "challengedQids (unchanged; now always initialized in default state)",
+    "(new)": "schemaVersion — added for migration safety",
+    "(new)": "strengths — computed from topicPerformance where accuracy >= 80%, stability >= 75, attempts >= 6, no declining trend",
+    "(new)": "weaknesses — computed from topicPerformance where accuracy < 60% OR trend declining OR stability < 50",
+    "(new)": "improvements — computed from getTrends() where delta >= 15 and direction is improving",
+    "_liveCalibrationSessions": "calibrationLog (moved from in-memory MayLearnerState property to persisted state)",
+    "_calibrationMetrics": "calibrationLog (merged with _liveCalibrationSessions; both are readiness snapshots)",
+    "_calibrationThrottleMs": "DELETED from state — configuration constant, not learner data",
+    "_calibrationThrottleAttempts": "DELETED from state — configuration constant, not learner data",
+    "_liveCalibrationEnabled": "DELETED from state — runtime flag, not learner data",
+    "_lastCalibrationSnapshot": "DELETED from state — runtime throttle tracker, not learner data",
+    "_attemptsSinceSnapshot": "DELETED from state — runtime throttle tracker, not learner data"
+  },
+
+  "migrationImplementationNotes": {
+    "strengthsPopulation": "Run getTopicProgress(), filter topics where accuracy >= 80%, recentPct >= 80%, stability >= 75, attempts >= 6, direction is not declining. For each, create a StrengthRecord with confirmingSessions derived from sessions where that topic appeared with correct answers.",
+    "weaknessesPopulation": "Run getWeaknessClusters(). persistentWeak, declining, and unstable clusters become active weaknesses. hintDependent and difficultySensitive become weaknesses with appropriate subtype flags. Set status to 'active'.",
+    "misconceptionsMigration": "Rename misconceptionPatterns to misconceptions. Rename _topics to topics. Add trend field computed from firstSeen/lastSeen recency. Add linkedWeaknesses by cross-referencing with weaknesses.",
+    "recommendationMerge": "For each entry in recommendationOutcomes, find the closest recommendationLog entry by timestamp proximity (±60s) and topic match. Merge into a UnifiedRecommendation. Unmatched entries become standalone records with empty selectionDetail. If counts differ significantly (>20% mismatch), flag for manual review.",
+    "sessionSummariesDeletion": "All data in sessionSummaries is already present on the corresponding sessions[] entries (set by recordSessionSummary). Migration reads sessionSummaries for any sessions that lack summary data, applies it to the session entry, then drops the array.",
+    "calibrationLogPersistence": "Merge _calibrationMetrics and _liveCalibrationSessions (both are arrays of readiness snapshots) into a single calibrationLog array in persisted state. Deduplicate by timestamp.",
+    "schemaVersion": "Set to 1. Future migrations increment and add transformation logic."
+  },
+
+  "noPredictionGuarantee": "verified — no prediction/readiness fields in unified design. The unified model contains only: (a) strengths — what HAS been demonstrated, (b) weaknesses — where struggles HAVE occurred, (c) misconceptions — what error patterns HAVE been observed, (d) improvements — what positive trends HAVE been measured, (e) recommendationHistory — what recommendations WERE generated and what outcomes WERE classified. There are no 'predictedScore', 'readiness', 'examReady', 'forecast', or similar forward-looking fields. The getReadinessSummary() method continues to exist as a computation layer over this data, but the persisted state itself is purely evidentiary.",
+
+  "implementationComplexity": "MEDIUM",
+
+  "complexityRationale": "The unified design introduces 3 new persisted top-level keys (strengths, weaknesses, improvements), merges 2 existing arrays into 1 (recommendationLog + recommendationOutcomes → recommendationHistory), renames 3 keys for clarity (topicPerformance → performanceAggregates.byTopic, subtopicPerformance → performanceAggregates.bySubtopic, misconceptionPatterns → misconceptions), deletes 1 redundant array (sessionSummaries), moves calibration data from in-memory to persisted (calibrationLog), and adds 1 migration-support field (schemaVersion). The core data structures (Session, Attempt, TopicAggregate) are unchanged. All new fields are computable from existing data — no data loss. The main implementation work is: (1) writing the migration function, (2) updating all read paths to use new key names, (3) updating recordAttempt() to also maintain strengths/weaknesses/improvements incrementally, (4) merging the recommendation arrays with timestamp-based correlation, (5) updating tests. Estimated effort: 1–2 full sessions."
+}

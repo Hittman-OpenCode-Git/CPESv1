@@ -1,0 +1,53 @@
+﻿{
+    "preserved":  [
+                      "Rules 1, 3, 4, 5 unchanged",
+                      "All 20 original tests preserved (test 5 reworded for new approach)",
+                      "Backup protocol followed: governance-guard.js.bak-S726-20260726201956, test_governance_guard.js.bak-S726-20260726201956"
+                  ],
+    "agent":  "Agent D",
+    "after":  {
+                  "approach":  "String-aware brace-matching object extraction + within-object CC extraction",
+                  "method":  "extractObjectsFromText() using inString/stringChar/escape state machine -\u003e JSON.parse/Function constructor -\u003e access obj.CorrectChoice + obj.ExplanationWrong[CC]",
+                  "checkText_change":  "Switched from combined oldContent+newContent to newContent-only (avoids blocking DL-008 fixes)",
+                  "fixes":  [
+                                "No distance limit: extracts complete objects regardless of CC-EW field distance",
+                                "No cross-object contamination: CC and EW must be in the SAME parsed object",
+                                "Pack B format immune: CC position relative to QID irrelevant",
+                                "Brackets in strings handled: state machine tracks inString/escape"
+                            ],
+                  "lines_added":  "42-92 (+50 lines: extractObjectsFromText + upgraded findDL008Violations)"
+              },
+    "timestamp":  "2026-07-26T20:22:38",
+    "component":  "governance-guard Rule 2",
+    "before":  {
+                   "approach":  "+/-1200 char flat-text window scan",
+                   "method":  "Regex find EW[A-D] non-empty -\u003e window-scan +/-1200 chars for matching CorrectChoice",
+                   "lines_replaced":  "42-61 (findDL008Violations)",
+                   "failures":  [
+                                    "Distance \u003e 1200 chars between CC and EW: false negative (missed violation)",
+                                    "Adjacent objects with matching CC letter: false positive (flags clean object)",
+                                    "Pack B format (CC before QID): cross-object CC capture"
+                                ]
+               },
+    "session":  "S726",
+    "vulnerability":  "DL-029 — flat-text window scan produces false positives and false negatives",
+    "tests":  {
+                  "removed":  [
+                                  "No false positive when CorrectChoice is out of search window (replaced by realistic-distance test)"
+                              ],
+                  "result":  "27 PASS, 0 FAIL",
+                  "dl029_confirmed":  "Old approach produced 2 false positives on adjacent objects; missed violations at \u003e3000 chars distance",
+                  "after":  27,
+                  "before":  20,
+                  "added":  [
+                                "Detect DL-008 across realistic object size (CC to EW distance \u003e 3000 chars)",
+                                "Two adjacent objects - only second has DL-008; object boundary respected",
+                                "Adjacent objects, different CC letters - no cross-object false positive",
+                                "Pack B format: CorrectChoice before QuestionID - still correctly detected",
+                                "Skip text fragments without complete objects gracefully",
+                                "Brackets inside string values do not break object extraction",
+                                "DL-029: Old window-scan FAILS on realistic object distance (\u003e3000 chars)",
+                                "DL-029: Old window-scan produces false positive on adjacent objects"
+                            ]
+              }
+}

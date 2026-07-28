@@ -1,0 +1,91 @@
+{
+  "session": "S709",
+  "title": "Optional Follow-On Decision Matrix",
+  "date": "2026-07-25",
+  "agent": "Agent D",
+  "options": [
+    {
+      "id": "S710",
+      "name": "Certified DL-026 Pedagogical Uplift",
+      "lane": "700-series",
+      "scope": {
+        "items": 13,
+        "packs": ["A", "C", "D"],
+        "qids_pack_a": ["P1-B-001"],
+        "qids_pack_c": ["P1-AC-001", "P1-AC-002"],
+        "qids_pack_d": ["P1-AD-047", "P1-AD-048", "P1-AD-054", "P1-AD-055", "P1-CD-002", "P1-CD-003", "P1-CD-006", "P1-CD-022", "P1-CD-023", "P1-CD-034"]
+      },
+      "description": "Add one choice-specific distractor explanation per affected Certified item. Each item has exactly one empty ExplanationWrong slot at a non-CorrectChoice position. No answer keys, stems, choices, or certification states change.",
+      "evidence_required": "Per-item distractor analysis — what misconception does the empty slot's distractor target?",
+      "evidence_found": "Each item's empty slot maps to a specific distractor choice text. The distractor content is present in the pack file — only the ExplanationWrong field is empty.",
+      "risk_level": "Low",
+      "risk_detail": "Write operations on 3 pack files (A, C, D). Backup-before-write required (BACKUP_PROTOCOL.md). Governance guard Rule 5: ≤28 items per batch. 13 items = 1 batch. No DL-008 regression risk (all CC slots already empty).",
+      "estimated_effort": "~30 minutes. 13 distractor explanations to author. 3 pack file backups. Post-write scan for DL-008/DL-026 regression.",
+      "lane_conflict_100_series": "None — 700-series pack file writes don't intersect May files.",
+      "lane_conflict_500_series": "None — 700-series pack file writes don't intersect case-bank files.",
+      "expected_deliverables": "Updated pack_a/c/d_corrected.js with 13 new ExplanationWrong fields. REVISION_HISTORY.md entry. Post-remediation DL-026 scan confirming count reduced from 13 to 0.",
+      "recommended_priority": 1,
+      "recommendation": "RECOMMENDED if user wants to keep 700-series lane active. Quickest win — closes the last open Certified defect category."
+    },
+    {
+      "id": "S711",
+      "name": "DL-031 / DL-032 Difficulty Recalibration",
+      "lane": "700-series",
+      "scope": {
+        "dl031_items": "~500 MCQ items (definition-match pattern labeled Moderate, should be Easy)",
+        "dl032_items": "420 case items (all labeled Moderate, zero variance)"
+      },
+      "description": "Recalibrate difficulty metadata. DL-031: definition-match MCQs whose stems are textbook definitions with high lexical overlap to the correct answer. DL-032: case-bank items with uniform 'Moderate' labels.",
+      "evidence_required": "Per-item cognitive level assessment. Comparison of stem-CorrectChoice lexical overlap. Bloom's level vs. difficulty label mapping.",
+      "evidence_found": "Session 700 Layer 2 Difficulty Specialist confirmed systematic inflation. 6 of 7 sampled Moderate items were actually Easy. CAQS §6.1 target distribution vs. actual: significant gap.",
+      "risk_level": "Medium",
+      "risk_detail": "Metadata-only changes (Difficulty, DifficultyScore). No answer keys, stems, choices, or explanations change. DL-032 touches scored_cases files — potential 500-series lane conflict if case-bank session is active.",
+      "estimated_effort": "~4-6 hours. ~500 MCQ items + 420 case items. Per-item verification recommended (not all Moderate items are inflated).",
+      "lane_conflict_100_series": "None.",
+      "lane_conflict_500_series": "HIGH if DL-032 targets scored_cases files concurrently with active case-bank repair session. Recommend DL-031 only (MCQ packs) or coordinate DL-032 timing with 500-series lane.",
+      "expected_deliverables": "Updated Difficulty/DifficultyScore fields across ~920 items. Difficulty distribution report vs. CAQS §6.1 targets. REVISION_HISTORY.md entry.",
+      "recommended_priority": 2,
+      "recommendation": "Defer. High effort, medium risk. Split into DL-031-only (MCQ packs) to avoid 500-series conflict. Full DL-032 should wait for 500-series lane to complete."
+    },
+    {
+      "id": "S712",
+      "name": "Non-Certified DL-026 Preparation",
+      "lane": "700-series",
+      "scope": {
+        "items": 299,
+        "packs": ["C", "D"],
+        "states": ["Unprocessed", "Archived"]
+      },
+      "description": "Add missing distractor explanations to non-Certified DL-026 items. These items are outside the learner pool and must be fixed before future certification.",
+      "evidence_required": "Per-item distractor analysis. Priority ordering: which sections are closest to certification readiness?",
+      "evidence_found": "299 non-Certified items across Packs C/D Sections E and F. All Unprocessed — no certification urgency. Relevant only once these sections enter the certification pipeline.",
+      "risk_level": "Low",
+      "risk_detail": "Write operations on 2 pack files. No learner-pool impact — all items are Unprocessed/Archived. Batch protocol required.",
+      "estimated_effort": "~10-15 hours. 299 items × 1-2 empty slots each. Could be phased across multiple sessions.",
+      "lane_conflict_100_series": "None.",
+      "lane_conflict_500_series": "None.",
+      "expected_deliverables": "Updated pack_c/c_d_corrected.js with distractor explanations. DL-026 scan confirming non-Certified count reduced.",
+      "recommended_priority": 4,
+      "recommendation": "Lowest priority. No learner-pool impact. Only needed before certification of Pack C/D Sections E and F. Defer indefinitely."
+    },
+    {
+      "id": "PAUSE",
+      "name": "Pause 700-Series Lane — Prioritize 100-Series or 500-Series",
+      "lane": "None (pause)",
+      "scope": { "items": 0, "packs": [] },
+      "description": "Freeze 700-series work. Direct effort to active 100-series May lane (calibration, tutoring, onboarding) or 500-series case-bank lane (repair, uplift, certification).",
+      "evidence_required": "None — this is a prioritization decision.",
+      "evidence_found": "700-series certification state is stable. 2,181 Certified items are learner-ready. 13 Certified DL-026 items are a minor quality gap. 100-series and 500-series lanes have active work.",
+      "risk_level": "None",
+      "risk_detail": "No 700-series risk from pausing. 13 DL-026 items remain as minor quality gap — no regression occurs from inaction.",
+      "estimated_effort": "0 hours (pause).",
+      "lane_conflict_100_series": "N/A — frees resources for 100-series.",
+      "lane_conflict_500_series": "N/A — frees resources for 500-series.",
+      "expected_deliverables": "None.",
+      "recommended_priority": 3,
+      "recommendation": "REASONABLE. The 700-series certification state is frozen and stable. Pausing allows focus on active 100-series May calibration/tutoring or 500-series case-bank repair."
+    }
+  ],
+  "recommended_next_700_series_action": "S710 (Certified DL-026 Uplift) if user wants to close the last Certified defect gap. Otherwise, PAUSE 700-series and prioritize 100-series May or 500-series case-bank lanes.",
+  "alternate_recommendation": "If user wants a quick S710 followed by lane pause: run S710 (~30 min) to close the 13-item gap, then freeze 700-series indefinitely."
+}

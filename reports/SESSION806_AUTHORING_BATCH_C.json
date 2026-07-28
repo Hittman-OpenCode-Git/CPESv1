@@ -1,0 +1,185 @@
+{
+  "title": "SESSION806_AUTHORING_BATCH_C",
+  "session": "806",
+  "generated": "2026-07-26",
+  "batch": "C",
+  "itemsAuthored": 3,
+  "agent": "F",
+  "qualityGateValidation": {
+    "gate1_draft": {
+      "status": "COMPLETE",
+      "note": "All 3 items have stem, 4 choices, CorrectChoice, EC, EW[A-D], metadata"
+    },
+    "gate2_technical": {
+      "status": "PENDING",
+      "note": "Requires DL-008/DL-026/DL-013/DL-010/field completeness scan"
+    },
+    "gate3_blueprint": {
+      "status": "PENDING",
+      "note": "Requires topic/LO/CL/difficulty accuracy verification against CSO"
+    },
+    "gate4_qa": {
+      "status": "PENDING",
+      "note": "Requires stem clarity, distractor plausibility, EC quality, EW specificity review"
+    }
+  },
+  "ewCompliance": {
+    "dl008": "VERIFIED — all 3 items have empty EW[CorrectChoice] (field at CC index is '')",
+    "dl026": "VERIFIED — all non-CC EW fields have content >= 100 chars",
+    "dl013": "VERIFIED — no template boilerplate detected in any EC or EW field",
+    "dl010": "PENDING — cross-contamination check requires human review"
+  },
+  "items": [
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R30 logical access controls — authentication authorization review",
+      "MicroTopic": "logical access controls authentication authorization review",
+      "UniqueConceptKey": "E-R30-logical-access-controls",
+      "LOSTag": "E.1.j Systems Controls & IT Governance — logical access controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Summit Health System maintains electronic health records subject to HIPAA privacy regulations. The IT security team has implemented the following controls: (1) each user must enter a unique username and password plus a one-time code sent to their registered mobile device before accessing patient records, (2) physicians can view and edit records for their own patients but can only view (not edit) records for patients under another physician's care, and (3) the security administrator receives a quarterly report listing all users with elevated access privileges and must certify that each user's access remains appropriate for their current role. Under the logical access control framework, which of the following correctly classifies these three controls?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Logical access controls protect information systems from unauthorized access and are typically classified into three categories: (1) authentication controls verify the identity of users attempting to access the system — they answer the question 'Are you who you claim to be?' through mechanisms such as passwords, biometrics, security tokens, and multi-factor authentication; (2) authorization controls determine what an authenticated user is permitted to do within the system — they answer the question 'What are you allowed to access?' through access rights, privilege levels, and role-based permissions; (3) access review and monitoring controls provide ongoing assurance that access rights remain appropriate over time — they answer the question 'Are the access rights still correct?' through periodic reviews, recertification, and audit logging. In this scenario, control (1) — username/password plus one-time mobile code — is multi-factor authentication (something you know plus something you have), which verifies user identity. Control (2) — role-based viewing and editing permissions (own patients: full access; others' patients: view-only) — is authorization, which limits what authenticated users can do based on their role and relationship to the data. Control (3) — quarterly review and certification of elevated access privileges — is access review, which provides ongoing verification that previously granted access remains appropriate as roles change. Access reviews are particularly important for privileged accounts (system administrators, database administrators) because these accounts have broad access that could be misused if not regularly validated.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces clone group for access controls.",
+      "QuestionID": "P1-E-R30",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the three categories of logical access controls: authentication (verify identity), authorization (limit access), and access review (periodic validation).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Control (1) is authorization — because it determines who can access the system; control (2) is authentication; control (3) is access review",
+        "B": "Control (1) is authentication — because it verifies user identity; control (2) is authorization — because it limits what users can do; control (3) is access review",
+        "C": "Control (1) is preventive — because it stops unauthorized access; control (2) is detective; control (3) is corrective",
+        "D": "Control (1) and (2) are both authentication controls — because both determine whether a user is permitted to interact with patient data; control (3) is an IT general control"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework (Technology Controls)",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls — logical access controls (authentication, authorization, access review)",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template",
+        "Distractors test common misclassifications of access control types"
+      ],
+      "ExplanationWrongA": "Control (1) — multi-factor authentication (username/password + one-time code) — verifies the user's identity; it is authentication, not authorization. Authorization occurs after authentication and determines what the authenticated user can do. Control (2) — role-based permissions limiting editing to own patients — is authorization, not authentication. A candidate selecting this option may have the sequence reversed: authentication must occur before authorization. You cannot limit what a user can do (authorization) without first verifying who they are (authentication).",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "While control (1) is preventive in nature, the question asks for classification under the logical access control framework (authentication, authorization, access review), not under the preventive/detective/corrective control framework. The preventive/detective/corrective classification applies broadly to all internal controls, but the logical access control framework uses authentication, authorization, and access review as its categories. Additionally, control (2) — role-based permissions — could be classified as both preventive and detective depending on context, making this classification framework less precise for this specific scenario.",
+      "ExplanationWrongD": "Control (1) is authentication (verifying identity) but control (2) is authorization (limiting what authenticated users can access), not authentication. The two controls serve different functions in the access control sequence. Access review (control 3) is a logical access control category, not an IT general control. While access reviews support IT governance broadly, the specific activity of reviewing and recertifying user access rights is a logical access control activity, not an ITGC. A candidate selecting this option may be applying the ITGC/application-control classification framework rather than the authentication/authorization/access-review framework specific to logical access."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R31 disaster recovery — business continuity RTO RPO",
+      "MicroTopic": "disaster recovery business continuity RTO RPO",
+      "UniqueConceptKey": "E-R31-disaster-recovery-rto-rpo",
+      "LOSTag": "E.1.j Systems Controls & IT Governance — disaster recovery and business continuity",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "An e-commerce company processes an average of 50,000 customer transactions per day through its order management system. The IT disaster recovery plan specifies that in the event of a primary data center failure, the order management system must be restored and operational within four hours, and the company can tolerate losing no more than the last 15 minutes of transaction data. Which of the following correctly identifies the two recovery objectives described?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Disaster recovery and business continuity planning use two key metrics to define recovery objectives: (1) Recovery Time Objective (RTO) is the maximum acceptable amount of time that a system, application, or business process can be unavailable after a disaster or disruption before the organization experiences unacceptable consequences. RTO answers the question 'How quickly must we be back up and running?' In this scenario, the four-hour maximum system outage is the RTO — the company has determined that being down for more than four hours would cause unacceptable damage (lost sales, customer dissatisfaction, reputational harm). (2) Recovery Point Objective (RPO) is the maximum acceptable amount of data loss measured in time — it defines the point in time to which data must be recovered. RPO answers the question 'How much data can we afford to lose?' In this scenario, the maximum tolerable data loss of 15 minutes is the RPO — the company can accept that the last 15 minutes of transactions before the failure might be lost, and they will design backup and replication systems to ensure that no more than 15 minutes of data is at risk. A shorter RPO requires more frequent backups or continuous data replication, which is more expensive. An RPO of 15 minutes requires near-real-time data replication, while an RPO of 24 hours could be supported by daily backups. The distinction between RTO (time to recover operations) and RPO (tolerable data loss) is essential for designing cost-effective disaster recovery solutions.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces clone group for IT continuity controls.",
+      "QuestionID": "P1-E-R31",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review RTO (Recovery Time Objective — how fast to restore) and RPO (Recovery Point Objective — how much data loss is acceptable), and understand how they drive disaster recovery design and cost.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "RTO is 15 minutes (the transaction data recovery point); RPO is 4 hours (the system restoration time)",
+        "B": "RTO is the maximum number of transactions lost; RPO is the minimum time to restore the system to full operational capacity",
+        "C": "Both objectives are RTO — one specifies the data recovery time and the other specifies the system recovery time",
+        "D": "RTO is 4 hours (the maximum acceptable system downtime); RPO is 15 minutes (the maximum acceptable data loss measured in time)"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "NIST SP 800-34: Contingency Planning Guide for Information Technology Systems",
+          "url": "https://csrc.nist.gov/publications/detail/sp/800-34/rev-1/final"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls — disaster recovery and business continuity (RTO/RPO)",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template",
+        "Distractors test common reversals of RTO and RPO in scenario-based questions"
+      ],
+      "ExplanationWrongA": "This reverses the definitions. RTO (Recovery Time Objective) refers to the maximum acceptable system downtime — in this scenario, four hours. RPO (Recovery Point Objective) refers to the maximum acceptable data loss — in this scenario, 15 minutes. A candidate selecting this option may be confusing the two terms because both use the word 'recovery.' The memory aid is: RTO contains 'Time' — how much TIME can elapse before you are back up; RPO contains 'Point' — what POINT in time do you recover your data to.",
+      "ExplanationWrongB": "Neither definition is correct. RTO is measured in time (how long the system can be unavailable), not in transaction volume. While the company processes 50,000 transactions per day and a 15-minute RPO corresponds to approximately 520 transactions, RPO is measured in units of time, not in a count of transactions lost. RTO is the maximum downtime, not a 'minimum time to restore.' The target is a maximum — the company must restore operations within 4 hours, not 'at least 4 hours.' A candidate selecting this option may be confusing the unit of measurement (time vs. transaction count) for both metrics.",
+      "ExplanationWrongC": "RTO and RPO are distinct metrics, not both RTO. RTO addresses system availability (how long can we be down?) while RPO addresses data integrity (how much data can we lose?). They drive different recovery solution design decisions: RTO drives decisions about redundant hardware, failover systems, and alternate processing sites (hot site, warm site, cold site); RPO drives decisions about backup frequency, data replication technology, and journaling. Treating both as RTO would conflate availability requirements with data integrity requirements and lead to suboptimal disaster recovery architecture.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R32 vendor third-party risk assessment",
+      "MicroTopic": "vendor third-party risk assessment due diligence",
+      "UniqueConceptKey": "E-R32-vendor-third-party-risk-assessment",
+      "LOSTag": "E.1.d Risk Assessment — third-party and vendor risk management",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Apex Manufacturing outsources its payroll processing to an external service provider, PayServe Inc., which maintains employee banking information, salary data, and tax withholding records. Apex retains responsibility for internal control over financial reporting. Under COSO and regulatory expectations for third-party risk management, which of the following best describes Apex's responsibility regarding the internal controls at PayServe?",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "When an entity outsources a business function to a third-party service provider, it does not outsource its responsibility for internal control over financial reporting. Under COSO Principle 9 (identify and analyze significant changes), the use of service organizations is specifically identified as a change that requires risk assessment. The entity must evaluate the design and operating effectiveness of the service provider's controls that are relevant to the entity's internal control. This is typically accomplished through a SOC 1 (Service Organization Control) report issued by an independent auditor under the AICPA's attestation standards (SSAE 18 / AT-C Section 320). A SOC 1 Type 2 report provides assurance on both the design (Type 1) and operating effectiveness (Type 2) of the service organization's controls over a period of time. However, obtaining a SOC 1 report does not eliminate the entity's responsibility — management must also: (1) understand the service organization's controls and how they affect the entity's internal control; (2) evaluate complementary user entity controls — controls at Apex that are necessary for the service organization's controls to function effectively (for example, Apex must review and approve payroll data submitted to PayServe, review exception reports, and reconcile payroll output to source data); (3) monitor the service organization's controls on an ongoing basis; and (4) respond to any identified deficiencies. The entity cannot simply delegate responsibility for internal control to the service provider — the controls at the service organization are an extension of the entity's own internal control system, and management retains accountability.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Provides new coverage for E.1.d Risk Assessment — third-party/vendor risk management.",
+      "QuestionID": "P1-E-R32",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review third-party risk management under COSO, the use of SOC 1 reports to evaluate service organization controls, and the concept of complementary user entity controls.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Apex may rely entirely on PayServe's internal controls because the payroll processing function has been transferred to an independent third party with its own control environment",
+        "B": "Apex must perform a full audit of PayServe's internal controls each year, equivalent in scope to the external audit of Apex's own financial statements",
+        "C": "Apex retains responsibility for internal control over financial reporting and must evaluate the design and operating effectiveness of PayServe's relevant controls, typically through review of a SOC 1 report and complementary user entity controls",
+        "D": "Apex's responsibility for internal control is limited to ensuring that the contract with PayServe includes an indemnification clause that transfers liability for control failures to the service provider"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework (Risk Assessment, Principle 9)",
+          "url": "https://www.coso.org/guidance-on-ic"
+        },
+        {
+          "label": "AICPA: SOC 1 Reports on Controls at a Service Organization",
+          "url": "https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/soc-for-service-organizations.html"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — third-party and vendor risk management",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — provides new coverage for E.1.d vendor risk assessment",
+        "Distractors test common misconceptions about outsourcing and responsibility for internal control"
+      ],
+      "ExplanationWrongA": "Outsourcing a business function does not outsource management's responsibility for internal control over financial reporting. Under COSO, management retains accountability for controls relevant to the entity's financial reporting regardless of whether those controls are performed by the entity's employees or by a service organization. While PayServe has its own control environment, Apex must understand, evaluate, and monitor those controls as they relate to Apex's financial reporting. A candidate selecting this option may be confusing operational outsourcing (delegating the task) with control responsibility (which remains with management).",
+      "ExplanationWrongB": "Apex is not required to perform its own full audit of PayServe's internal controls. The standard mechanism for evaluating service organization controls is the SOC 1 report, which is an independent auditor's examination of the service organization's controls performed under AICPA attestation standards. Apex's auditors can rely on the SOC 1 report as audit evidence regarding the service organization's controls, supplementing it with their own testing of complementary user entity controls at Apex. Requiring Apex to perform a separate full audit would be duplicative and inconsistent with the purpose of the SOC reporting framework.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "An indemnification clause in a contract transfers financial liability — it does not transfer responsibility for internal control over financial reporting. Under SOX and COSO, management's responsibility for ICFR is a statutory obligation that cannot be delegated or indemnified away. Even if the contract includes an indemnification provision, Apex's management is still responsible for designing, implementing, and evaluating internal controls over payroll-related financial reporting, including controls at the service organization. A candidate selecting this option may be thinking from a legal risk-transfer perspective rather than from an internal control and financial reporting perspective."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "session": "S864",
+  "title": "Expansion Threshold Board — Cohort C Program Decision",
+  "date": "2026-07-27",
+  "program": "800-Series Content Maturity Acceleration",
+  "trajectory": {
+    "S838": 54,
+    "S843": 60,
+    "S848": 65,
+    "S856": "72 → AUTHORIZE COHORT C",
+    "S864_updated": 75
+  },
+  "s861_results": {
+    "analyze_items_edited": 15,
+    "net_new_analyze_pool": 25,
+    "pool_analyze_coverage": "0.98% → 1.97% (+100%)",
+    "dl013_fixes": 4,
+    "governance": "32/32 PASS",
+    "defects_introduced": 0
+  },
+  "s862_results": {
+    "evaluate_items_edited": 1,
+    "evaluate_candidates_identified": 5,
+    "evaluate_framework_established": true,
+    "pool_evaluate_coverage": "0% → 0.04%",
+    "governance": "32/32 PASS",
+    "defects_introduced": 0
+  },
+  "s863_results": {
+    "misalignments_identified": 21,
+    "critical_false_analyze": 1,
+    "systematic_definition_inflation": 20,
+    "difficulty_progression_coherent": true,
+    "calibration_recommendations": 5
+  },
+  "stop_condition_checks": {
+    "governance_guard_pass": true,
+    "identity_gte_99": true,
+    "certification_drift_zero": true,
+    "dl008_introduced": false,
+    "dl026_introduced": false,
+    "answer_key_contradiction": false,
+    "evaluate_misclassification_above_threshold": false,
+    "explanation_stem_contradiction": false
+  },
+  "quality_signals": {
+    "defect_prevention": "STRONG — 0 defects introduced across 16 content edits",
+    "governance_scaling": "CONFIRMED — 32/32 tests pass with Rule 6 (DL-026) active",
+    "content_throughput": "MODERATE — 16 items/wave vs. target of 20-30",
+    "certification_integrity": "MAINTAINED — 0 drift, 0 answer-key changes",
+    "cognitive_progression": "VALID — Analyze upgrades show coherent difficulty gradient",
+    "dl013_remediation": "DEFERRED RISK ADDRESSED — 4 Certified learner-pool defects fixed"
+  },
+  "gaps": {
+    "analyze_volume": "15 edited vs 20-30 target. Fell short due to session time constraints.",
+    "evaluate_volume": "1 edited vs 10-15 target. Evaluate authoring is fundamentally more complex than Analyze.",
+    "definition_match_cleanup": "20 items in Sections C+D are definition-match labeled as Understand/Apply. Must be downgraded to Remember.",
+    "phase2_identified": "5 Evaluate + 5-10 Analyze candidates identified for next wave."
+  },
+  "expansion_readiness": {
+    "analyze_momentum": "PROVEN — 25 net-new pool items in single wave validates Cohort C approach",
+    "evaluate_momentum": "ESTABLISHING — Framework proven (CC-065), but throughput not yet demonstrated",
+    "quality_first_validated": "YES — 0 defects introduced confirms quality-first approach works at scale",
+    "governance_scales": "YES — Same governance rules handled 16 edits with zero regressions",
+    "bottleneck_identified": "Content authoring throughput, not architecture or governance"
+  },
+  "decision": "CONTINUE COHORT C",
+  "decision_rationale": [
+    "Analyze momentum is proven — 25 net-new items validates the approach",
+    "Evaluate framework is established but throughput needs demonstration",
+    "Quality-first approach confirmed at scale — 0 defects across 16 edits",
+    "Governance scales — no new rules needed for Cohort C work",
+    "Not yet ready for Cohort D (need Evaluate throughput proof)",
+    "Not yet ready for Expansion Program (need sustained multi-wave throughput)",
+    "20 definition-match items need remediation before next wave (data quality prerequisite)"
+  ],
+  "next_wave_targets": {
+    "s861_phase2": "10-15 additional Analyze upgrades (target DC-050 through DC-070, CC-030 through CC-045)",
+    "s862_phase2": "5-10 Evaluate upgrades (target the 5 identified candidates)",
+    "s863_phase2": "DL-031 remediation — downgrade 20 false Analyze/Understand items to Remember",
+    "difficulty_audit": "Full-pool Pack C Sections C+D difficulty calibration"
+  },
+  "strategic_assessment": "Cohort C has demonstrated that quality-first, governance-gated authoring produces zero-defect cognitive-level upgrades at moderate throughput. The program is on trajectory to 80+ readiness. The primary constraint is session time for content authoring, not methodology or architecture. AUTHORIZE COHORT C CONTINUATION — target 80+ readiness within 2-3 waves."
+}

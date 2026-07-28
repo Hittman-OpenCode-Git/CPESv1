@@ -1,0 +1,42 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Duplicate Distractor Analysis",
+  "summary": {
+    "total_duplicate_groups": 706,
+    "intra_pack_duplicates": 650,
+    "cross_pack_duplicates": 56,
+    "identical_text_occurrences": "2-7 occurrences per group",
+    "clone_groups_dl012": 2
+  },
+  "severity_thresholds": {
+    "critical": "100% identical text across >= 3 items (certification-blocking per D4 < 2)",
+    "high": "Jaccard similarity > 90% across >= 2 items",
+    "medium": "Jaccard similarity 70-90%",
+    "low": "Same template structure, different details"
+  },
+  "critical_findings": [
+    {
+      "group": "DL-012 Clone Group — Pack C Section C items CC-021 through CC-027",
+      "count": 7,
+      "text": "it guarantees goal congruence in all cases",
+      "severity": "Critical",
+      "items": "All Unprocessed — not yet in learner pool but blocks certification",
+      "remediation": "Each item needs a distinct, choice-specific replacement. S90 rewrites already proposed for 6 of 7."
+    },
+    {
+      "group": "DL-012 Clone Group — Pack C/D Section E clone-archived items",
+      "count": 56,
+      "text": "Various — 28 groups × 2-5 items with rotation artifacts",
+      "severity": "High",
+      "items": "Archived — not in learner pool. DL-012 remediation plan documented.",
+      "remediation": "Per-group audit required. Clone groups share stem structure but have different correct answers."
+    }
+  ],
+  "cross_pack_similarity": {
+    "finding": "56 cross-pack duplicate groups detected. Most are legitimate — same concept tested with same distractors across packs for consistency. However, when one pack has strong ExplanationWrong and another has boilerplate for the SAME distractor text, this is asymmetric quality.",
+    "flagged_cases": 12,
+    "example": "Same distractor text appears in Pack A Section A (with choice-specific EW) and Pack C Section D (with DL-013 boilerplate EW) — Candidate B gets better feedback than Candidate A for the same wrong answer."
+  },
+  "pack_most_affected": "Pack D — 91 boilerplate EW fields. Highest concentration of DL-013 'represents a plausible misconception' template text in non-Certified sections (E and F)."
+}

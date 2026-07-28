@@ -1,0 +1,67 @@
+{
+  "session": "517",
+  "agent": "B",
+  "timestamp": "2026-07-26T02:00:00Z",
+  "lane": "500-series case bank",
+  "status": "WIND-DOWN",
+  "arrays": {
+    "MIGRATED_CASE_BASE_A": {
+      "file": "scored_cases.js",
+      "cases": 15, "items": 120,
+      "certified": "120/120 (100%)",
+      "notes": "Fully certified. Legacy 0-exhibit format. No open holdbacks.",
+      "next_optional": "Difficulty calibration (all Moderate/3). Citation uplift if desired."
+    },
+    "MIGRATED_CASE_BASE_B": {
+      "file": "scored_cases2.js",
+      "cases": 15, "items": 75,
+      "certified": "75/75 (100%)",
+      "notes": "Fully certified via S509-S513 pipeline. 0-exhibit format. S512 D3/D4 holdbacks resolved in S513.",
+      "next_optional": "Citation uplift G5.5 (34/75 cited, target 50%+). ProductionStatus alignment (Draft→Production). Difficulty calibration."
+    },
+    "MIGRATED_CASE_BASE_C": {
+      "file": "scored_cases3.js",
+      "cases": 15, "items": 75,
+      "certified": "75/75 (100%)",
+      "notes": "Fully certified via S515+S516. CASE-C1-Q4 remediated (ASC 606 choice text fix). Full quality uplift: CognitiveLevel 75/75, citations 75/75, distractor rationale 37/37 select items.",
+      "remaining_gaps": [
+        "30 Q4/Q5 items structurally generic (design pattern)",
+        "Case-level metadata deferred (convention unclear)",
+        "Difficulty calibration DL-032 (all Moderate/3)"
+      ],
+      "next_optional": "Q4/Q5 case grounding. Difficulty calibration. Case-level metadata."
+    },
+    "MIGRATED_CASE_BASE_D": {
+      "file": "scored_cases4.js",
+      "cases": 15, "items": 75,
+      "certified": "0/75 (0%)",
+      "notes": "Unprocessed. 0-exhibit format. Structurally clean. 11 numeric items (more than Base_C's 8).",
+      "next_optional": "First CAQS §1.6 certification wave (S515 pattern). Estimated 1-2 sessions."
+    },
+    "ENHANCED_CASE_BASE2": {
+      "notes": "73/78 Certified. 5 Unprocessed items in CBQ2-A3. Thin single-line explanations.",
+      "holdback_CBQ2_A3": {
+        "items": 5, "state": "Unprocessed",
+        "reason": "Explanations are single-line/fragmentary with no citations, no distractor rationale, no per-item Difficulty.",
+        "items_detail": [
+          {"ItemID":"CBQ2-A3-Q1","type":"numeric","CL":"Apply"},
+          {"ItemID":"CBQ2-A3-Q2","type":"numeric","CL":"Apply"},
+          {"ItemID":"CBQ2-A3-Q3","type":"multi","CL":"Evaluate"},
+          {"ItemID":"CBQ2-A3-Q4","type":"select","CL":"Analyze"},
+          {"ItemID":"CBQ2-A3-Q5","type":"fill","CL":"Understand"}
+        ],
+        "recommended_session": "S518 — CBQ2-A3 explanation uplift (citations, rationale, CognitiveLevel already present, per-item Difficulty needed)"
+      }
+    }
+  },
+  "summary": {
+    "total_migrated_arrays": 5,
+    "fully_certified": 3,
+    "uncertified": 2,
+    "total_certified_migrated_items": 270,
+    "total_migrated_items": 420,
+    "certification_coverage": "64.3%",
+    "next_recommended_action": "CBQ2-A3 uplift (1 session, 5 items) or MIGRATED_CASE_BASE_D CAQS review (1-2 sessions, 75 items)",
+    "deferred_enhancements": ["Difficulty calibration (DL-032, all MIGRATED arrays)", "Citation uplift for Base_A/B", "ProductionStatus alignment", "Q4/Q5 case grounding"]
+  }
+}

@@ -1,0 +1,578 @@
+[
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.001 Control deficiency severity classification",
+    "MicroTopic": "deficiency severity classification",
+    "UniqueConceptKey": "E-001-deficiency-severity",
+    "LOSTag": "E.1 Internal control framework",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "During the annual internal control assessment at Pacific Rim Distribution, the internal audit team identified that the company's credit approval process lacks a documented policy requiring supervisory review for sales orders exceeding $50,000. The controller estimates that unauthorized credit extensions resulted in approximately $180,000 in bad debt write-offs over the past two fiscal years, representing 0.8% of total annual credit sales of $22.5 million. The external auditors have not identified any material misstatements in the financial statements attributable to this control gap. Senior management has been made aware of the finding and has not yet responded. Based on the COSO framework and professional auditing standards, how should Internal Audit classify this control deficiency in its report to the audit committee?",
+    "Choices": {
+      "A": "A material weakness, because the deficiency has resulted in financial losses exceeding $100,000 and management has not yet committed to remediation.",
+      "B": "A significant deficiency, because the deficiency is less severe than a material weakness but warrants the attention of those charged with governance given the combination of financial impact and management inaction.",
+      "C": "A control deficiency only, because the financial impact represents less than 1% of total credit sales and the external auditors identified no material misstatements.",
+      "D": "A material weakness, because any control deficiency that results in actual financial loss automatically meets the material weakness threshold regardless of quantitative materiality analysis."
+    },
+  "CorrectChoice": "B",
+  "ExplanationCorrect": "Under the COSO Internal Control — Integrated Framework and PCAOB AS 2201 / AICPA AU-C 265, control deficiencies are classified into three tiers based on the likelihood and magnitude of potential misstatement. A significant deficiency is a deficiency, or combination of deficiencies, in internal control that is less severe than a material weakness yet important enough to merit attention by those charged with governance. The analysis here requires evaluating both quantitative materiality (0.8% of credit sales is below typical materiality benchmarks of 1–5% of pre-tax income or revenue) and qualitative factors. The $180,000 loss is not quantitatively material relative to $22.5 million in credit sales. However, the absence of documented policy, combined with management's lack of response after being notified, constitutes a qualitative factor that elevates this beyond a mere control deficiency. A material weakness requires a reasonable possibility that a material misstatement will not be prevented or detected — the external auditors' clean opinion and the sub-1% loss rate suggest this threshold has not been crossed. The appropriate classification is therefore a significant deficiency: the control gap warrants governance attention but does not rise to the level of a material weakness. A common exam trap is to assume that any dollar loss — or any management inaction — automatically triggers a material weakness classification, when the standard requires analysis of both likelihood and magnitude together.",
+  "StudyLinks": [
+    {
+      "label": "COSO Internal Control Framework",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-E-CA-001",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "Option A incorrectly conflates the presence of a financial loss with the material weakness threshold without performing the required magnitude analysis. Under PCAOB AS 2201, a material weakness requires a reasonable possibility that a material misstatement would not be prevented or detected. The $180,000 loss on a base of $22.5 million in credit sales (0.8%) would not be considered quantitatively material under typical financial statement materiality benchmarks of 1–5% of pre-tax income. The candidate selecting this option fails to distinguish between the significance threshold for a significant deficiency and the higher materiality threshold required for a material weakness classification.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Option C incorrectly treats the quantitative materiality assessment as dispositive while ignoring the qualitative factors that elevate the deficiency beyond a mere control deficiency. The statement that the deficiency is merely a control deficiency overlooks that management has been notified and has not responded — a qualitative indicator that warrants governance-level attention. Under AU-C 265, significant deficiencies are identified not solely by quantitative thresholds but by considering qualitative factors such as the nature of the deficiency, management's response, and the potential for other control failures to compound. The 0.8% loss rate is one factor in the overall assessment; it does not independently determine the classification.",
+  "ExplanationWrongD": "Option D states that any deficiency resulting in actual financial loss automatically meets the material weakness threshold, which misrepresents the professional standards' classification framework. Neither COSO nor PCAOB AS 2201 establishes an automatic trigger based on the mere presence of a loss. The classification requires a forward-looking assessment of the reasonable possibility that the control deficiency could result in a material misstatement of the financial statements. An immaterial loss that has already occurred does not, by itself, demonstrate that future losses would be material. The candidate selecting this option confuses the existence of a control failure with the severity classification criteria, which require consideration of both likelihood and magnitude — not a binary loss-based test.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "E",
+  "SectionName": "Internal Controls",
+  "Topic": "E.002 COSO component gap analysis",
+  "MicroTopic": "COSO component deficiency identification",
+  "UniqueConceptKey": "E-002-coso-component-gap",
+  "LOSTag": "E.1 Internal control framework",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Apex Manufacturing recently completed a COSO-based internal control assessment across its three regional plants. The assessment revealed the following findings: (1) The board of directors has not established an audit committee despite an annual revenue of $480 million and 2,400 employees, (2) documented accounting policies exist for all material transaction cycles and are regularly updated, (3) the company deploys automated three-way match for all purchase-to-pay transactions with zero override exceptions, (4) the CFO receives daily cash position reports and weekly variance analyses, (5) plant controllers report functionally to the plant managers with only a dotted-line reporting relationship to the corporate controller, and (6) no formal process exists for employees to report concerns about unethical behavior without fear of retaliation. Based on the COSO Internal Control — Integrated Framework, which component exhibits the most significant deficiency across these findings?",
+    "Choices": {
+      "A": "Risk Assessment, because the absence of an audit committee prevents systematic identification and analysis of risks to the achievement of the entity's objectives.",
+      "B": "Information and Communication, because the lack of a whistleblower mechanism prevents the organization from capturing and communicating relevant internal control information across all levels.",
+      "C": "Control Environment, because the combination of an absent audit committee, lack of whistleblower protections, and weak financial reporting structure indicates fundamental weaknesses in the tone at the top, organizational structure, and commitment to integrity and ethical values.",
+      "D": "Monitoring Activities, because without an audit committee and formal whistleblower process, the organization lacks the ongoing and separate evaluations needed to ascertain whether internal controls are present and functioning."
+    },
+  "CorrectChoice": "C",
+  "ExplanationCorrect": "The Control Environment is the foundation of the COSO Internal Control — Integrated Framework and sets the tone for the entire organization. Analysis of the six findings reveals that three of them — the absence of an audit committee, the lack of a whistleblower mechanism, and the plant controllers' functional reporting to plant managers rather than the corporate controller — are all Control Environment deficiencies as defined by COSO Principle 1 (commitment to integrity and ethical values), Principle 2 (board independence and oversight), and Principle 3 (establishment of appropriate organizational structure and reporting lines). The Control Environment component encompasses the governance and oversight functions, the organizational structure, assignment of authority and responsibility, and the commitment to competence and ethical values. A manufacturing entity of Apex's size ($480 million revenue, 2,400 employees) would be expected to have board-level oversight of financial reporting and a formal mechanism for reporting concerns. The dotted-line reporting relationship further undermines the objectivity of the plant controllers, who should report independently to the corporate controller to ensure unbiased financial reporting. While the other components show specific gaps, the Control Environment deficiencies are foundational — without a strong control environment, the other four components cannot function effectively regardless of how well-designed their individual controls may be. A common exam trap is to attribute board-related deficiencies to Monitoring Activities rather than recognizing that governance structure is a Control Environment element.",
+  "StudyLinks": [
+    {
+      "label": "COSO Internal Control Framework",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-E-CA-002",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "Option A attributes the primary deficiency to Risk Assessment, but the findings do not indicate that Apex Manufacturing fails to identify or analyze risks in a systematic manner. The absence of an audit committee is fundamentally a governance and oversight deficiency that falls under the Control Environment component (COSO Principle 2: board independence and oversight), not Risk Assessment (Principles 6–9). The scenario provides no evidence that Apex lacks risk identification, analysis, or response processes. A candidate selecting this option confuses governance oversight functions — which establish the foundation for risk management — with the risk assessment process itself, which evaluates specific risks to objective achievement.",
+  "ExplanationWrongB": "Option B identifies the whistleblower gap as the primary deficiency and classifies it under Information and Communication. While the absence of a whistleblower mechanism does affect the communication of relevant information (COSO Principle 14), this option fails to recognize that the whistleblower deficiency is just one of three Control Environment failures present in the scenario. The Information and Communication component is primarily concerned with the flow of relevant, quality information throughout the organization. The scenario does demonstrate functional information flows (CFO receives daily reports, documented policies exist, automated controls operate), suggesting that the broader Information and Communication component is not the most significantly deficient area. The candidate focuses on a single finding rather than analyzing the pattern across all findings.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Option D attributes the deficiencies to Monitoring Activities, misunderstanding the distinction between governance structure and monitoring processes. While COSO Principle 16 addresses ongoing and separate evaluations, the findings in the scenario — particularly the absent audit committee, organizational reporting structure issues, and lack of whistleblower protections — are Control Environment deficiencies under Principles 1, 2, and 3. Monitoring Activities evaluates whether controls are operating as intended; it does not encompass the establishment of governance structures themselves. A candidate selecting this option incorrectly categorizes board-level governance as a monitoring function rather than a control environment element, which is a common exam trap on COSO component classification questions.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "E",
+  "SectionName": "Internal Controls",
+  "Topic": "E.003 Segregation of duties conflict identification",
+  "MicroTopic": "segregation of duties in transaction cycles",
+  "UniqueConceptKey": "E-003-sod-conflict",
+  "LOSTag": "E.2 Segregation of duties",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Meridian Healthcare Supplies is implementing a new procure-to-pay system. The controller is reviewing the proposed assignment of system roles for the purchasing department, which has five staff members: (1) Mark creates purchase orders and maintains the approved vendor master file, (2) Lisa receives goods into inventory and records the corresponding journal entries in the general ledger, (3) David authorizes purchase requisitions above $5,000 and reconciles the accounts payable subledger to the general ledger control account, (4) Sarah approves vendor invoices for payment and performs the monthly bank reconciliation, and (5) Thomas maintains custody of physical inventory and performs the annual physical inventory count. The controller must identify any segregation of duties violations before the system goes live. Which role assignment creates a segregation of duties conflict that most directly threatens the completeness and accuracy of financial reporting?",
+    "Choices": {
+      "A": "Mark's role combining purchase order creation with vendor master file maintenance, because this creates a risk that fictitious vendors could be added to the system and fraudulent purchase orders generated without detection.",
+      "B": "Lisa's role combining goods receipt with general ledger recording, because this allows an individual to both execute the receiving transaction and determine how that transaction is reflected in the financial statements.",
+      "C": "David's role combining purchase requisition authorization with accounts payable subledger reconciliation, because the person authorizing expenditures should not also verify the accuracy of recorded liabilities.",
+      "D": "Sarah's role combining vendor invoice approval with bank reconciliation, because the person approving payments should not also verify the cash disbursement record."
+    },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "Mark's role assignment creates the most significant segregation of duties violation because it combines custody/authorization of the vendor master file with the transaction initiation function of purchase order creation. Under the COSO framework, the vendor master file is a critical control point in the procure-to-pay cycle: unauthorized additions to this file can enable fraudulent disbursements by creating fictitious vendors and initiating purchases to them. When the same individual can both add a vendor to the system and create purchase orders payable to that vendor, there is no independent check on whether the vendor is legitimate. This combination violates the fundamental SoD principle that the individual who initiates transactions should be separate from the individual who controls the standing data that governs those transactions. In a healthcare supplies company handling thousands of vendor relationships, this control gap could enable a fraud where a fictitious medical supply vendor is added and purchase orders are generated to that vendor without any second-person review. The completeness of financial reporting is threatened because fictitious liabilities would be recorded, and the accuracy is threatened because the transactions would reflect amounts payable to non-existent suppliers. The other role assignments, while presenting some control concerns, involve functions that either have compensating controls available or represent a lower-risk combination than the initiation-plus-standing-data combination present in Mark's role.",
+  "StudyLinks": [
+    {
+      "label": "COSO Internal Control Framework — Control Activities",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-E-CA-003",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "Option B identifies Lisa's combination of goods receipt and general ledger recording as an SoD violation, but this is not the most critical conflict in the given set of role assignments. While the combination of custody (receiving goods) and recording (journal entries) does represent a theoretical SoD concern, the more immediate and higher-risk violation is Mark's combined control over vendor master data and purchase order creation. Goods receipt is an operational function that is typically verified against the purchase order during a three-way match process, providing a compensating detective control. The candidate selecting this option correctly identifies a combination that should be segregated but fails to prioritize the risk: vendor master file compromise enables systemic fraud, while goods receipt manipulation is typically limited to individual transactions and is more readily detected through inventory reconciliation procedures.",
+  "ExplanationWrongC": "Option C identifies David's combination of purchase requisition authorization and AP subledger reconciliation as the primary SoD conflict. However, purchase requisition authorization is an operational approval within the purchasing department, not an accounting authorization function. In many organizations, the individual who authorizes purchase requisitions is not necessarily prohibited from performing reconciliation activities, provided the reconciliation is reviewed by an independent party. The more significant risk in a procure-to-pay cycle is the combination of standing data control with transaction processing, which David's role does not involve. The candidate misidentifies an operational authorization function as an incompatible duty with reconciliation, when the standard SoD framework is most concerned with separating custody of assets, authorization of transactions, recording of transactions, and periodic reconciliation.",
+  "ExplanationWrongD": "Option D identifies Sarah's combination of vendor invoice approval and bank reconciliation as the primary SoD conflict. While approving vendor invoices and performing bank reconciliations does combine two control activities, this combination is not inherently an SoD violation in the classic sense. Bank reconciliation serves as an independent verification of cash transactions; when combined with invoice approval, the concern is self-review rather than the traditional incompatible duties of custody, authorization, recording, and reconciliation. More critically, this combination does not create the same magnitude of fraud risk as Mark's vendor master file and purchase order creation access, which enables the entire disbursement fraud cycle from vendor setup through payment initiation. The candidate focuses on a lower-risk control activity combination while overlooking the standing data control deficiency.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "E",
+  "SectionName": "Internal Controls",
+  "Topic": "E.004 Fraud risk factor assessment",
+  "MicroTopic": "fraud triangle element analysis",
+  "UniqueConceptKey": "E-004-fraud-triangle",
+  "LOSTag": "E.3 Fraud risk management",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Northstar Financial Services is conducting its annual fraud risk assessment. The compliance team has documented the following observations about the accounts receivable department: (1) the AR manager, Janet, has worked in the same role for 14 years without a promotion and recently filed for personal bankruptcy following a divorce, (2) the company's bonus structure for the collections team is based entirely on the dollar value of aged receivables collected, (3) Janet is the only employee with access to both the customer payment application system and the write-off authorization module, (4) the CFO publicly stated at the quarterly town hall that 'any revenue shortfall this year will result in significant headcount reductions,' (5) Janet routinely works late and on weekends when no other staff are in the office, and (6) the company eliminated the mandatory two-week July shutdown this year due to a system implementation project. Applying the fraud triangle framework, which element is most significantly indicated by the combination of Janet's personal circumstances, the department's incentive structure, and the CFO's public statements?",
+    "Choices": {
+      "A": "Opportunity, because Janet's sole access to payment application and write-off systems provides her with the technical means to conceal misappropriation of customer payments, and the eliminated vacation shutdown removes a key detective control.",
+      "B": "Rationalization, because Janet's 14-year tenure without promotion gives her a perceived sense of entitlement that could justify fraudulent behavior as compensation for years of being undervalued by the organization.",
+      "C": "Capability, because Janet's deep knowledge of the AR systems gained over 14 years and her pattern of working unsupervised after hours provide her with both the technical skill and the practical circumstances to execute and sustain a fraud scheme.",
+      "D": "Pressure, because Janet's personal bankruptcy and divorce create financial pressure, the CFO's headcount threat creates employment pressure, and the collections-based bonus structure creates incentive pressure — together forming an unusually concentrated pressure environment."
+    },
+  "CorrectChoice": "D",
+  "ExplanationCorrect": "The fraud triangle, as articulated in AU-C 240 (Consideration of Fraud in a Financial Statement Audit) and incorporated into the COSO Internal Control Framework, identifies three elements that are typically present when fraud occurs: Pressure (or incentive), Opportunity, and Rationalization. Analysis of the six observations reveals that three distinct observations — Janet's personal bankruptcy filing (observation 1), the CFO's threat of headcount reductions (observation 4), and the entirely volume-based bonus structure (observation 2) — all converge on the Pressure element of the fraud triangle. Personal financial pressure creates a direct incentive to misappropriate assets. The CFO's statement creates organizational pressure by signaling that underperformance threatens job security, which may motivate manipulation of collection metrics to preserve employment. The bonus structure creates financial incentive pressure by directly linking compensation to collection performance, which could motivate premature revenue recognition or concealment of uncollectible accounts. While all three fraud triangle elements may be present to some degree in this scenario, the question asks which element is most significantly indicated — and the convergence of three separate pressure indicators across personal, organizational, and incentive dimensions makes Pressure the predominant element. A common exam trap is to confuse the element being asked about: Opportunity relates to the means to commit fraud (observations 3, 5, and 6), while Pressure relates to the motivation. The question specifically asks about the combination of personal circumstances, incentive structure, and CFO statements — all of which are pressure indicators.",
+  "StudyLinks": [
+    {
+      "label": "COSO Internal Control Framework — Fraud Risk",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-E-CA-004",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "Option A attributes the primary fraud risk to Opportunity by focusing on Janet's sole access to payment and write-off systems and the eliminated vacation shutdown. While these observations (3 and 6) do represent Opportunity factors — the means to commit and conceal fraud — the question specifically directs the candidate to analyze the combination of Janet's personal circumstances, the department's incentive structure, and the CFO's statements. All three of these specified observations map to Pressure, not Opportunity. The candidate selecting this option misreads which observations the question is instructing them to analyze together and incorrectly maps personal financial stress and employment threats to the Opportunity element rather than recognizing these as classic Pressure indicators under AU-C 240.",
+  "ExplanationWrongB": "Option B identifies Rationalization as the primary element by citing Janet's 14-year tenure and lack of promotion as creating a sense of entitlement. While prolonged service without advancement can contribute to rationalization of fraudulent behavior, this is a single, speculative observation that does not represent the strongest or most clearly evidenced fraud triangle element. The scenario provides three concrete, well-documented Pressure indicators (bankruptcy, job threat, bonus structure) versus one inference-based Rationalization indicator. The candidate selects this option by overvaluing a single qualitative observation while undervaluing the three converging pressure indicators, which represent the most common fraud trigger according to the ACFE Report to the Nations.",
+  "ExplanationWrongC": "Option C identifies Capability as the primary element by referencing Janet's system knowledge and after-hours work pattern. The fraud diamond framework (Wolfe and Hermanson) adds Capability as a fourth element, but the question specifically references the fraud triangle framework, which includes only Pressure, Opportunity, and Rationalization. Even accepting a broader interpretation, Janet's system knowledge and work patterns describe the means to execute fraud (Opportunity), not a distinct Capability element separable from Opportunity. The candidate confuses the fraud triangle with the fraud diamond framework and misattributes Opportunity factors to a nonexistent Capability category within the traditional three-element model.",
+  "ExplanationWrongD": "",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "E",
+  "SectionName": "Internal Controls",
+  "Topic": "E.005 Control activity effectiveness evaluation",
+  "MicroTopic": "preventive vs detective control gap identification",
+  "UniqueConceptKey": "E-005-control-activity-gap",
+  "LOSTag": "E.4 Control activities",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Summit Pharmaceuticals is reviewing its control environment following a near-miss incident in which a $340,000 wire transfer was nearly sent to a fraudulent vendor account before a bank callback verification caught the discrepancy. The internal audit director has mapped the company's wire transfer controls: (1) all wire requests must be submitted on a standardized form with supporting invoice documentation, (2) two authorized signatories must approve wire transfers exceeding $100,000, (3) approved wires are entered into the banking portal by the treasury analyst, (4) a daily report of all wires processed is reviewed by the treasurer the following morning, (5) monthly bank reconciliations are performed by a staff accountant independent of the treasury function, and (6) the banking portal does not enforce dual authorization at the point of release — once the treasury analyst enters the wire, the system processes it immediately. The bank callback that caught the near-miss was an ad hoc action by an alert staff member, not a standard operating procedure. Based on a COSO control activities analysis, which type of control is most critically absent from Summit's wire transfer process?",
+    "Choices": {
+      "A": "A complementary detective control, because the existing controls adequately prevent unauthorized wires and the near-miss demonstrates that the detective review process successfully identified the discrepancy before funds were lost.",
+      "B": "A preventive control at the point of transaction execution, because the absence of mandatory dual authorization in the banking portal means the treasury analyst can unilaterally release payments without independent verification, and the existing detective controls operate only after funds have been transferred.",
+      "C": "A detective control that compares wire beneficiaries against the approved vendor master file, because the near-miss occurred due to a fraudulent vendor name that should have been flagged before the wire was ever initiated.",
+      "D": "An IT general control restricting banking portal access, because the root cause of the near-miss was that the treasury analyst had excessive system privileges that allowed them to process wires without any automated security constraint."
+    },
+  "CorrectChoice": "B",
+  "ExplanationCorrect": "Under COSO Principle 10 (selects and develops control activities), organizations should deploy a mix of preventive and detective controls. Preventive controls are designed to deter errors or fraud from occurring, while detective controls identify errors or fraud after they occur. Analysis of Summit's six existing controls reveals that controls 1 through 3 are all preventive in nature but operate at the initiation and approval stages only — none operates at the point of transaction execution within the banking portal. Control 4 (next-day review by treasurer) and Control 5 (monthly reconciliation) are detective controls that identify issues after funds have left the company's account. The critical gap is the absence of a preventive control at the point of release: the banking portal does not require a second individual to independently verify and release the wire after entry (control 6). This means the treasury analyst can both prepare and release a wire unilaterally, defeating the segregation of duties established by requiring two signatory approvals at the form stage. The dual-signature approval (control 2) is a preventive control at the authorization stage, but it is ineffective if the same individual who benefits from that approval can independently release the transfer in the banking system. The bank callback that caught the near-miss was an ad hoc action, not a systematic control, reinforcing that the control environment lacks a reliable preventive gate at the point of execution. A common exam trap is to assume that approval controls at the form stage are sufficient when the system allows unilateral release, failing to recognize that the control must operate at the point where the transaction becomes irreversible.",
+  "StudyLinks": [
+    {
+      "label": "COSO Internal Control Framework — Control Activities",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-E-CA-005",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "Option A incorrectly concludes that existing controls are adequate because the near-miss was caught. This reasoning confuses a fortunate outcome with an effective control environment. The wire was nearly sent — the bank callback that prevented the loss was an ad hoc action, not a systematic control, and relying on informal, undocumented interventions is fundamentally inconsistent with COSO Principle 10's requirement for control activities to be deployed through formal policies and procedures. Furthermore, the statement that 'existing controls adequately prevent unauthorized wires' is contradicted by the fact that the wire reached the banking portal release stage without detection. The candidate selecting this option makes the error of evaluating control effectiveness by outcome rather than by design, which is a common exam trap when questions describe a near-miss that was caught by an unrepeatable, non-systematic action.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Option C proposes a detective control that matches wire beneficiaries against the approved vendor master file. While vendor master file validation is a legitimate control, this option misidentifies the missing control type and the point of failure. The near-miss did not occur because the vendor name was unknown to Summit's systems — the fraudulent vendor was presumably added or spoofed. More critically, this option recommends a detective control when the analysis should identify the need for a preventive control at the point of transaction release. Additionally, the question describes controls 1 and 2 operating at the initiation stage with supporting documentation and signatory approval, which suggests the fraudulent vendor already passed these gates. The candidate confuses the control point (initiation validation vs. release authorization) and the control type (detective vs. preventive) that is needed.",
+  "ExplanationWrongD": "Option D identifies the need for an IT general control restricting banking portal access. While IT general controls are important components of the overall control environment, this option misdiagnoses the root cause. The treasury analyst's ability to enter wires is a legitimate job function; the control gap is not that the analyst has access to the portal, but rather that the portal does not require a second individual to independently verify and release transactions after entry. Restricting portal access would not solve the problem — the treasury function needs someone to enter wire instructions. The missing control is an application control (dual release authorization) at the point of execution, not an access restriction at the system boundary. The candidate incorrectly attributes the control deficiency to access management rather than to the absence of an application-level preventive control.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "E",
+  "SectionName": "Internal Controls",
+  "Topic": "E.006 COSO ERM risk response strategy analysis",
+  "MicroTopic": "risk response strategy selection",
+  "UniqueConceptKey": "E-006-erm-risk-response",
+  "LOSTag": "E.5 Enterprise risk management",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Cascade Foods operates a single poultry processing facility in a region designated by FEMA as a high-risk flood zone. The facility accounts for 100% of the company's production capacity and $92 million in annual revenue. Cascade's risk management committee has evaluated four alternatives: (1) constructing flood barriers and relocating critical electrical equipment to elevated platforms at an estimated cost of $2.8 million, (2) purchasing comprehensive flood insurance with a $500,000 annual premium that covers business interruption and property damage up to $85 million, (3) purchasing a smaller secondary processing facility in a non-flood zone for $14 million that would provide 40% backup capacity, or (4) entering into a mutual aid agreement with a competitor in a different region to provide emergency processing capacity at cost-plus-15% pricing during a disruption. The committee must present its recommendation to the board. Applying the COSO ERM framework's risk response taxonomy, which strategy represents a risk reduction response?",
+    "Choices": {
+      "A": "The mutual aid agreement with a competitor, because the cost-plus-15% pricing transfers the financial impact of a disruption to the competitor while Cascade retains operational continuity during a flood event.",
+      "B": "The comprehensive flood insurance policy, because the $500,000 annual premium represents an explicit transfer of the financial consequences of flood-related losses from Cascade's balance sheet to the insurance carrier's risk pool.",
+      "C": "Construction of flood barriers and elevation of critical electrical equipment, because this approach directly modifies the probability and severity of flood damage by physically protecting the facility's production capacity, thereby reducing the inherent risk without transferring or avoiding it.",
+      "D": "Acquisition of the secondary processing facility, because purchasing a backup facility in a non-flood zone completely eliminates Cascade's single-point-of-failure dependency on the flood-zone facility."
+    },
+  "CorrectChoice": "C",
+  "ExplanationCorrect": "Under the COSO Enterprise Risk Management — Integrating with Strategy and Performance framework, risk responses are categorized into four strategies: Avoid (exit the activities giving rise to risk), Reduce (take action to reduce risk likelihood or impact), Share (transfer or share a portion of the risk), and Accept (take no action to change the risk level). The flood barrier construction and equipment elevation alternative is a textbook risk reduction strategy because it directly modifies the inherent risk by reducing both the probability that a flood will damage critical infrastructure (likelihood reduction through physical barriers) and the potential severity of damage if flooding occurs (impact reduction through equipment elevation). The organization retains the underlying activity — operating a poultry processing facility in a flood zone — but takes deliberate action to lower the risk to an acceptable residual level. This is distinct from risk sharing, which transfers the financial consequences to another party without changing the underlying risk profile, and from risk avoidance, which eliminates the risk by discontinuing the risky activity. A common exam trap is to confuse risk reduction (modifying inherent risk through controls or process changes) with risk sharing (transferring financial consequences through insurance or contractual arrangements). The key distinction is whether the action changes the probability or impact of the adverse event itself (reduction) or merely changes who bears the financial consequences (sharing).",
+  "StudyLinks": [
+    {
+      "label": "COSO ERM Framework",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-E-CA-006",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "Option A incorrectly classifies the mutual aid agreement as a risk reduction strategy. The mutual aid agreement provides emergency processing capacity at cost-plus-15% pricing, but it does not modify the probability or severity of a flood occurring at Cascade's facility. This arrangement is a risk sharing strategy — it transfers a portion of the operational impact (production capacity loss) to a third party through a contractual arrangement. Cascade still bears the risk of flood damage to its own facility; the agreement merely provides a contingent operational response. The candidate selecting this option confuses risk sharing through contractual arrangements with risk reduction through physical mitigation measures. A mutual aid agreement does not reduce the likelihood or impact of the flood event itself; it addresses the business continuity consequence of the event, which is a risk sharing characteristic under COSO ERM.",
+  "ExplanationWrongB": "Option B classifies the flood insurance policy as a risk reduction strategy, but insurance is the most classic example of risk sharing (also termed risk transfer). Insurance does not reduce the probability that a flood will occur, nor does it reduce the physical damage to Cascade's facility. It transfers the financial consequences of the loss from Cascade to the insurance carrier. Under the COSO ERM framework's risk response taxonomy, insurance is explicitly categorized as a risk sharing strategy because the organization pays a premium (the $500,000 annual cost) in exchange for another party assuming the financial impact of a specified loss event. The candidate confuses the financial protection provided by insurance with an actual reduction in the underlying risk exposure.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Option D classifies the secondary facility acquisition as a risk reduction strategy but mischaracterizes its effect. Purchasing a facility that provides 40% backup capacity does not 'completely eliminate' Cascade's single-point-of-failure dependency — it reduces it by providing partial redundancy, but 60% of production capacity remains concentrated at the flood-zone facility. Moreover, this alternative is more accurately characterized as a combination of risk reduction and risk avoidance: it reduces the concentration risk at the primary facility while partially avoiding risk by establishing operations outside the flood zone. The candidate incorrectly asserts that the secondary facility completely eliminates the dependency and misses the distinction between partial risk reduction and the mixed strategy this alternative represents.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "E",
+  "SectionName": "Internal Controls",
+  "Topic": "E.007 Monitoring activity effectiveness analysis",
+  "MicroTopic": "ongoing vs separate evaluation",
+  "UniqueConceptKey": "E-007-monitoring-effectiveness",
+  "LOSTag": "E.6 Monitoring activities",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Titan Construction operates 12 regional project offices, each with its own accounting staff. The corporate internal audit function consists of only three auditors who visit each regional office once every 18 months for a formal control assessment. During a recent separate evaluation at the Southwest regional office, the audit team discovered that project cost overruns averaging 14% had gone unreported for seven consecutive months because the project managers were manually overriding the ERP system's budget-to-actual variance alerts to avoid triggering management escalation. The regional controller was unaware of the overrides because the ERP system did not maintain an audit log of alert configuration changes. The CFO has asked the chief audit executive to recommend a monitoring enhancement that would detect similar control bypasses across all 12 regions without waiting for the next scheduled separate evaluation. Based on COSO Principle 16 (ongoing and separate evaluations), which recommendation most effectively strengthens the monitoring component?",
+    "Choices": {
+      "A": "Increase the frequency of separate evaluations from every 18 months to every 12 months across all 12 regional offices, supplemented by a formal self-assessment questionnaire completed by each regional controller quarterly.",
+      "B": "Expand the internal audit department from three to six full-time auditors to enable continuous coverage of all 12 regions, with each auditor responsible for two regions on a rotating basis.",
+      "C": "Deploy an automated continuous monitoring system that captures all ERP alert configuration changes in an immutable audit log, generates real-time exception reports when alerts are modified or suppressed, and automatically notifies corporate finance of any project exceeding 10% cost variance.",
+      "D": "Implement a continuous monitoring program that embeds automated control tests within the ERP system to detect alert configuration changes, combined with a centralized exception dashboard reviewed weekly by corporate finance, and retain the 18-month separate evaluation cycle for broader control environment assessment."
+    },
+  "CorrectChoice": "D",
+  "ExplanationCorrect": "COSO Principle 16 states that organizations should conduct ongoing evaluations, separate evaluations, or a combination of the two to ascertain whether the five components of internal control are present and functioning. Ongoing evaluations are built into business processes at different levels of the entity and provide timely information. Separate evaluations are conducted periodically and vary in scope and frequency. The optimal recommendation for Titan Construction is Option D, which deploys continuous monitoring (an ongoing evaluation mechanism) to address the specific control failure — alert configuration overrides — while preserving the 18-month separate evaluation cycle for broader control environment assessment. This represents the most proportionate and resource-efficient enhancement because it directly targets the root cause (lack of visibility into alert configuration changes) through automated, real-time monitoring rather than simply increasing the frequency or staffing of periodic manual reviews. The weekly dashboard review by corporate finance provides a human oversight layer on top of the automated detection, ensuring that exceptions are not only detected but acted upon. This combination of ongoing evaluation (automated monitoring) and separate evaluation (retained 18-month cycle) aligns with COSO's guidance that the two approaches are complementary. A common exam trap is to recommend increasing the frequency of separate evaluations as the primary response to a monitoring failure, when the more effective approach is to build ongoing evaluation mechanisms into the affected business processes themselves. The monitoring component is most effective when it operates in real time at the transaction level, not when it relies solely on periodic retrospective reviews.",
+  "StudyLinks": [
+    {
+      "label": "COSO Internal Control Framework — Monitoring Activities",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-E-CA-007",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "Option A recommends increasing separate evaluation frequency and adding quarterly self-assessments, but this approach misdiagnoses the monitoring deficiency. The root cause of the seven-month reporting gap was not the interval between audits but the complete absence of real-time visibility into alert configuration changes. A quarterly self-assessment questionnaire would not have detected the project managers' manual overrides because the regional controller was unaware of the overrides — a self-assessment can only report what the respondent knows. Increasing audit frequency from 18 to 12 months would still leave gaps of up to 12 months between reviews, during which similar override activity could continue undetected. The candidate confuses increased frequency of periodic evaluations with the fundamentally different capability that continuous, automated monitoring provides, and incorrectly assumes that self-assessments can detect control bypasses that are designed to avoid detection.",
+  "ExplanationWrongB": "Option B proposes expanding the internal audit department from three to six auditors for continuous coverage. While increasing audit resources addresses capacity constraints, it does not change the fundamental limitation of manual, periodic evaluations. Even with six auditors covering 12 regions, each region would receive a separate evaluation approximately every 12 months — reducing but not eliminating the detection gap. Furthermore, manual audits cannot continuously monitor alert configuration changes across all 12 ERP instances. This option represents a resource-intensive solution that scales the existing approach rather than redesigning it to address the root cause. The candidate focuses on audit department capacity as the problem when the actual deficiency is the monitoring methodology itself. COSO Principle 16 emphasizes that ongoing evaluations, built into business processes, are generally more effective than relying solely on separate evaluations.",
+  "ExplanationWrongC": "Option C deploys an automated continuous monitoring system but then real-time exception reports to corporate finance for every project exceeding 10% cost variance. While the automated audit log and alert monitoring are appropriate, the real-time notification of all cost variances conflates the monitoring of control effectiveness (tracking alert configuration changes) with the monitoring of operational performance (cost variance tracking). This option also eliminates the separate evaluation cycle entirely, which COSO explicitly advises against — ongoing and separate evaluations should be complementary. The candidate correctly identifies the need for automation but fails to maintain the appropriate scope distinction between monitoring the effectiveness of controls and monitoring business performance, and unnecessarily abandons the separate evaluation cycle that provides broader control environment assurance.",
+  "ExplanationWrongD": "",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "F",
+  "SectionName": "Technology and Analytics",
+  "Topic": "F.001 Data visualization effectiveness analysis",
+  "MicroTopic": "visualization method selection for pattern identification",
+  "UniqueConceptKey": "F-001-visualization-effectiveness",
+  "LOSTag": "F.1 Data analytics and visualization",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Harborview Regional Health System operates five hospitals across three counties. The chief financial officer has asked the data analytics team to analyze readmission patterns to identify whether certain discharge days of the week correlate with higher 30-day readmission rates, and whether this pattern varies across the five facilities. The team has three years of discharge data containing 78,000 patient records with fields for discharge date, discharge day of week, readmission flag (yes/no within 30 days), facility identifier, primary diagnosis code, and attending physician. The analytics director must select the visualization approach that most effectively reveals the pattern the CFO is seeking. Which visualization strategy should the team employ?",
+    "Choices": {
+      "A": "A faceted or small-multiple bar chart displaying the 30-day readmission rate for each day of the week, separated into individual panels for each of the five hospital facilities, enabling side-by-side comparison of both the day-of-week pattern and the inter-facility variation in a single coherent view.",
+      "B": "A single stacked bar chart with each day of the week represented as a bar, stacked by hospital facility, showing the absolute count of readmissions, which allows the CFO to compare readmission volumes across days and facilities simultaneously.",
+      "C": "A heat map with hospital facilities on one axis, days of the week on the other, and readmission rate represented by color intensity, which condenses the entire data set into a compact visualization that the CFO can scan quickly for patterns.",
+      "D": "Five separate pie charts, one for each hospital facility, with each pie showing the proportion of total readmissions occurring on each day of the week, because pie charts are the most intuitive format for presenting proportional data to executive stakeholders."
+    },
+  "CorrectChoice": "A",
+  "ExplanationCorrect": "The CFO's analytical question has two dimensions: (1) whether readmission rates vary by day of the week within each facility, and (2) whether that day-of-week pattern differs across the five hospital facilities. The faceted bar chart (small multiples) strategy directly addresses both dimensions. A bar chart of readmission rate by day of the week is the most effective format for comparing categorical data (day of week) with a quantitative measure (readmission rate) because the human visual system is highly accurate at comparing the lengths of aligned bars. The faceting technique creates a separate panel for each hospital facility while maintaining identical axis scales across all panels, which enables the CFO to simultaneously analyze the within-facility day-of-week pattern and the between-facility variation. This approach follows Edward Tufte's principle of small multiples as a powerful method for revealing patterns across multiple dimensions of data. The consistent scale across panels is critical — if the scales varied by facility, legitimate inter-facility differences in readmission rates could be visually distorted. Under IMA's data analytics competency framework, selecting the appropriate visualization involves matching the visual encoding to the analytical task. For comparing rates across categories (day of week) and across groups (hospital facilities), aligned bar charts in a faceted layout provide the highest perceptual accuracy. A common exam trap is to select visually elaborate chart types (heat maps, stacked bars) that may obscure rather than reveal the specific pattern being investigated.",
+  "StudyLinks": [
+    {
+      "label": "IMA Data Analytics and Visualization Framework",
+      "url": "https://www.imanet.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-F-CA-001",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references authoritative data visualization principles"
+  ],
+  "ExplanationWrongA": "",
+  "ExplanationWrongB": "Option B proposes a single stacked bar chart showing absolute readmission counts. While this format displays readmission volumes, it obscures the critical metric of readmission rate (readmissions as a percentage of total discharges). The five hospital facilities have different patient volumes, so absolute counts would be misleading — a larger hospital would naturally show higher readmission counts that might mask a lower readmission rate. Furthermore, stacked bar charts make it difficult to compare the non-bottom segments across bars because each segment starts at a different vertical position. The candidate selecting this option fails to recognize that the CFO is asking about readmission rates (a normalized metric) not raw counts, and that stacked bar charts are generally poor choices for comparing individual category values across groups due to the lack of a common baseline.",
+  "ExplanationWrongC": "Option C proposes a heat map with color intensity representing readmission rates. While heat maps can be effective for identifying patterns in large matrices, they are less precise than bar charts for quantitative comparison because the human visual system is less accurate at comparing color intensity than at comparing the lengths of aligned objects. Additionally, heat maps do not easily convey the magnitude of differences — a viewer cannot readily determine whether the readmission rate difference between Monday and Friday is 2 percentage points or 10 percentage points. The candidate selects a visualization technique that prioritizes compactness over analytical precision for the specific comparison task the CFO identified. For an executive audience needing to understand pattern direction and magnitude, a bar chart provides more interpretable quantitative information than a heat map.",
+  "ExplanationWrongD": "Option D proposes five separate pie charts, one per hospital facility. Pie charts are widely recognized in the data visualization literature as ineffective for comparing values across categories because the human visual system is poor at comparing the areas and angles of pie slices. Comparing readmission rates across five separate pie charts requires the viewer to mentally compare slices across five different circular displays, each with its own reference frame. Furthermore, pie charts do not convey the absolute rate level — the reader cannot determine whether the total readmission rate for one hospital is higher or lower than another's. The candidate selecting this option incorrectly assumes that pie charts are the most intuitive format for executive stakeholders, when research consistently shows that bar charts outperform pie charts for quantitative comparison tasks. This is a common misconception in business analytics.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "F",
+  "SectionName": "Technology and Analytics",
+  "Topic": "F.002 ERP control weakness identification",
+  "MicroTopic": "ERP system access and segregation of duties",
+  "UniqueConceptKey": "F-002-erp-control-weakness",
+  "LOSTag": "F.2 Information systems controls",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Westlake Manufacturing implemented a new ERP system six months ago. During a post-implementation review, the IT audit team extracted the following user access profile for the accounts payable department: the AP supervisor has role assignments that include AP_INVOICE_ENTRY, AP_PAYMENT_RUN, VENDOR_MASTER_MAINTAIN, and GL_JOURNAL_POST. The two AP clerks each have AP_INVOICE_ENTRY and AP_PAYMENT_RUN access. The AP manager has VENDOR_MASTER_MAINTAIN and GL_JOURNAL_POST access but no transactional processing roles. The ERP system's role-based access control configuration allows any user with the AP_PAYMENT_RUN role to both generate and release the payment batch without requiring a second approver. The segregation of duties conflict matrix provided by the ERP vendor identifies AP_PAYMENT_RUN plus VENDOR_MASTER_MAINTAIN, and AP_INVOICE_ENTRY plus GL_JOURNAL_POST, as incompatible role combinations. The controller has asked the IT audit director to identify the most critical ERP access control weakness. Which user's access profile presents the highest segregation of duties risk?",
+    "Choices": {
+      "A": "The AP manager, because combining VENDOR_MASTER_MAINTAIN with GL_JOURNAL_POST access enables this individual to create fictitious vendors and then record the related journal entries without independent review of either action.",
+      "B": "The AP clerks, because both clerks have identical AP_INVOICE_ENTRY and AP_PAYMENT_RUN access, which allows either clerk to process an invoice and release payment for it without requiring a different individual to verify the transaction.",
+      "C": "The AP supervisor, because this single user holds all four critical AP roles — AP_INVOICE_ENTRY, AP_PAYMENT_RUN, VENDOR_MASTER_MAINTAIN, and GL_JOURNAL_POST — creating a concentration of incompatible duties that enables an end-to-end disbursement fraud without any independent control point.",
+      "D": "The AP manager, because VENDOR_MASTER_MAINTAIN combined with oversight of the AP department creates an environment where a manager could direct subordinates to process payments to fraudulent vendors without independent detection."
+    },
+  "CorrectChoice": "C",
+  "ExplanationCorrect": "The AP supervisor's access profile represents the most critical ERP segregation of duties risk because it concentrates all four critical functions of the procure-to-pay cycle in a single user. Under COSO Principle 10 (selects and develops control activities) and the supporting guidance on segregation of duties, incompatible duties are those where a single individual can both perpetrate and conceal errors or fraud. The AP supervisor's accumulated role assignments enable the complete disbursement fraud cycle: (1) VENDOR_MASTER_MAINTAIN allows creating or modifying vendor records, including the ability to add fictitious vendors or change payment routing information, (2) AP_INVOICE_ENTRY allows entering invoices payable to any vendor, including those the supervisor created, (3) AP_PAYMENT_RUN allows both generating and releasing payment batches without a second approver, and (4) GL_JOURNAL_POST allows recording the resulting journal entries, which could be used to conceal the fraudulent disbursements through misclassification. The vendor's own SoD conflict matrix identifies AP_PAYMENT_RUN plus VENDOR_MASTER_MAINTAIN as an incompatible combination, and AP_INVOICE_ENTRY plus GL_JOURNAL_POST as another. The AP supervisor holds both incompatible pairs simultaneously, creating what auditors call a toxic combination — two or more separately reportable SoD conflicts that compound when held by the same individual. While the AP manager also holds two roles, those roles do not include transaction processing capabilities, making the fraud scenario more difficult to execute. The AP clerks have identical access but lack vendor master control, which limits their ability to direct payments to fraudulent parties. A common exam trap is to identify any incompatible role combination as equally severe without analyzing whether the combination enables a complete fraud cycle.",
+  "StudyLinks": [
+    {
+      "label": "COSO Internal Control Framework — Control Activities",
+      "url": "https://www.coso.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-F-CA-002",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references COSO framework or authoritative standards"
+  ],
+  "ExplanationWrongA": "Option A identifies the AP manager's combined VENDOR_MASTER_MAINTAIN and GL_JOURNAL_POST access as the highest risk. While this is indeed an incompatible role combination (as identified by the vendor's SoD conflict matrix), the AP manager lacks the transactional processing roles (AP_INVOICE_ENTRY and AP_PAYMENT_RUN) needed to convert vendor master manipulation into an actual disbursement. To perpetrate fraud, the AP manager would need to direct a subordinate to enter invoices and process payments — introducing a second individual into the scheme. The AP supervisor's profile is more dangerous because it enables a single individual to execute the entire fraud cycle without involving anyone else. The candidate identifies a real SoD conflict but fails to compare its severity against the more comprehensive conflict present in another user's profile.",
+  "ExplanationWrongB": "Option B identifies the AP clerks as the highest risk because both have identical AP_INVOICE_ENTRY and AP_PAYMENT_RUN access. While this does represent an SoD concern — one clerk could both enter an invoice and release payment for it — the risk is limited because neither clerk has access to the vendor master file. Without VENDOR_MASTER_MAINTAIN, a clerk cannot create a fictitious vendor or alter an existing vendor's payment details to redirect funds. The fraud would be limited to processing payments to existing, legitimate vendors, which is more readily detected through vendor statement reconciliations and other compensating controls. The candidate overvalues the invoice-to-payment SoD conflict while undervaluing the vendor master file control, which is the single most critical control point in the procure-to-pay cycle.",
+  "ExplanationWrongC": "",
+  "ExplanationWrongD": "Option D identifies the AP manager's combination of VENDOR_MASTER_MAINTAIN with department oversight as the highest risk, reasoning that the manager could direct subordinates to process fraudulent payments. This confuses management override risk — which is a Control Environment concern under COSO Principle 1 — with segregation of duties within the ERP system. Management override of controls is a separate risk category that exists regardless of system access configurations. More importantly, this option fails to recognize that the AP supervisor's ERP access profile presents an objectively more severe SoD conflict because it both creates the fraud opportunity and eliminates the detection mechanism, all within the control of a single individual acting without any collusion or subordinate direction. The candidate misclassifies a management override risk as a system access SoD conflict.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "F",
+  "SectionName": "Technology and Analytics",
+  "Topic": "F.003 Data quality root cause analysis",
+  "MicroTopic": "data integrity problem diagnosis",
+  "UniqueConceptKey": "F-003-data-quality-root-cause",
+  "LOSTag": "F.3 Data governance and quality",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Pinnacle Insurance Group migrated its policy administration system to a cloud-based platform eight months ago. The actuarial department recently discovered that the quarterly loss ratio report shows a sudden 4.7 percentage point improvement in the commercial auto line compared to the same quarter last year, despite no changes in underwriting guidelines or pricing. The data analytics team's investigation revealed the following: (1) the data migration mapping document shows that the 'policy effective date' field from the legacy system was mapped to the 'transaction date' field in the new system for policies active at the migration cutover, (2) approximately 3,400 commercial auto policies that renewed during the migration quarter had their earned premium incorrectly allocated to the prior quarter in the new system's reporting module, (3) the legacy system used a calendar-quarter convention for premium earning while the new system uses a daily pro-rata method, (4) the claims system was not migrated and continues to record claims by accident date without any field mapping changes, and (5) the data warehouse ETL process has been running successfully with no failure alerts for the past eight months. What is the most likely root cause of the spurious loss ratio improvement?",
+    "Choices": {
+      "A": "The ETL process is silently dropping records during the data warehouse loading, causing earned premium figures to be understated in the quarterly reports while claims data arrives through a separate integration that is not affected by the same data pipeline failure.",
+      "B": "The field mapping error at migration caused earned premium for renewed policies to be allocated to the wrong reporting period, understating the denominator of the loss ratio calculation while the numerator (claims based on accident date) was not affected by the same mapping issue.",
+      "C": "The change in earning convention from calendar-quarter to daily pro-rata method has systematically reduced the earned premium recognized in each quarter for policies written mid-quarter, creating a structural understatement of premium that grows each quarter.",
+      "D": "The claims system not being migrated created a temporal mismatch where claims are recorded using the legacy system's date conventions while premiums are recorded using the new system's conventions, causing premiums to be systematically understated relative to claims."
+    },
+  "CorrectChoice": "B",
+  "ExplanationCorrect": "The loss ratio is calculated as incurred losses divided by earned premium. A sudden improvement means either the numerator decreased (fewer losses), the denominator increased (more premium), or a measurement artifact distorted one of the components. Analysis of the five investigation findings points directly to the field mapping error (finding 2) as the root cause. When 3,400 commercial auto policies that renewed during the migration quarter had their earned premium incorrectly allocated to the prior quarter, the denominator of the current quarter's loss ratio was understated. Meanwhile, claims are recorded by accident date (finding 4), meaning accidents occurring in the current quarter continued to be recorded in the current quarter regardless of the migration. The result is a loss ratio with normally stated claims (numerator) divided by understated earned premium (denominator), producing a falsely improved ratio. The other findings either describe issues that would not create this specific pattern — the ETL has been running without failure alerts (finding 5), the calendar-quarter to daily pro-rata change would affect recognition timing but would affect both periods symmetrically over time (finding 3), and the premium allocation error is specific to migration-cutover policies, not systematic (finding 1). This is a classic data quality root cause analysis scenario where the field mapping error at a system boundary (legacy to cloud) creates a reporting anomaly that appears as a business performance change. A common exam trap is to attribute data quality issues to technical infrastructure failures (ETL, system performance) when the actual root cause is a data transformation logic error introduced during migration.",
+  "StudyLinks": [
+    {
+      "label": "IMA Data Governance and Quality Framework",
+      "url": "https://www.imanet.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-F-CA-003",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references data quality and governance standards"
+  ],
+  "ExplanationWrongA": "Option A attributes the loss ratio anomaly to an ETL process silently dropping records, understating earned premium. However, finding 5 explicitly states that the ETL process has been running successfully with no failure alerts for eight months. While silent ETL failures (where records are dropped without triggering error thresholds) are a legitimate data quality concern, the scenario provides no evidence of such a failure. Moreover, an ETL failure would likely affect both premium and claims data loading, not create the asymmetric pattern described. The candidate selects this option by speculating about a technical failure that is not supported by the investigation findings, while overlooking the documented field mapping error that directly explains the observed pattern. This reflects a common bias in data quality diagnosis toward suspecting infrastructure failures rather than transformation logic errors.",
+  "ExplanationWrongB": "",
+  "ExplanationWrongC": "Option C attributes the anomaly to the change in premium earning convention from calendar-quarter to daily pro-rata. While this methodological change does affect premium recognition timing, it would not produce a sudden 4.7 percentage point improvement appearing in a single quarter. The daily pro-rata method provides more precise premium earning — it would affect the timing of recognition within a quarter for mid-quarter policies but would not systematically exclude an entire cohort of policies from a quarter, as the field mapping error did. Over a full year, both earning conventions would recognize the same total premium; only the intra-period allocation differs. The candidate confuses a methodological refinement (which changes recognition granularity) with a data transformation error (which materially moves premium between reporting periods), and fails to recognize the asymmetry between premium and claims data in the described pattern.",
+  "ExplanationWrongD": "Option D attributes the anomaly to a temporal mismatch between the claims system and the premium system caused by the claims system not being migrated. However, finding 4 states that the claims system continues to record claims by accident date without any field mapping changes — meaning claims dating was not affected by the migration. A temporal mismatch would require both systems to use different date reference points for the same reporting period, but the scenario indicates that claims dating was unchanged. The field mapping issue affected premium allocation to reporting periods, not the date reference convention itself. The candidate incorrectly generalizes a system migration boundary issue to the entire reporting infrastructure when the evidence points to a specific field-level mapping error affecting only one data element.",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "F",
+  "SectionName": "Technology and Analytics",
+  "Topic": "F.004 Cybersecurity control framework analysis",
+  "MicroTopic": "control gap identification from security incident",
+  "UniqueConceptKey": "F-004-cybersecurity-control-gap",
+  "LOSTag": "F.4 Cybersecurity and information security",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Bridgewater Credit Union experienced a security incident last month in which an attacker gained unauthorized access to the loan processing system and exported 12,400 loan applications containing personally identifiable information including Social Security numbers and income data. The post-incident investigation by an external cybersecurity firm revealed the following: (1) the attacker obtained valid user credentials through a phishing email that targeted a loan officer who had not completed the required annual security awareness training, (2) the loan processing system was accessible via a web portal that did not require multi-factor authentication for remote access, (3) the credit union's network was segmented, and the attacker could not move laterally from the loan processing server to the core banking system, (4) the data loss prevention (DLP) tool detected the large outbound data transfer and generated an alert, but the security operations center had a 72-hour backlog in alert triage, (5) the loan processing system's database was encrypted at rest, so the exported data was in plaintext because the attacker accessed it through the application layer, and (6) the credit union had purchased a cyber insurance policy with a $50,000 deductible and $2 million coverage limit. Applying NIST Cybersecurity Framework principles, which function exhibited the most critical control gap?",
+    "Choices": {
+      "A": "Identify, because the credit union failed to maintain an accurate asset inventory that would have classified the loan processing system as containing sensitive PII requiring elevated protection above standard information systems.",
+      "B": "Respond, because the 72-hour alert triage backlog in the security operations center meant that the organization was unable to contain the data exfiltration in a timely manner after the DLP tool had successfully detected the anomalous activity.",
+      "C": "Protect, because the absence of multi-factor authentication for remote access to a system containing sensitive PII represents a fundamental failure to implement appropriate access control safeguards that could have prevented the attacker from accessing the system even with compromised credentials, and the workforce lacked adequate security awareness training.",
+      "D": "Detect, because the organization relied solely on a single DLP tool for anomaly detection and failed to deploy complementary detection mechanisms such as user behavior analytics that could have identified the anomalous access pattern when the attacker's login occurred from an unfamiliar geographic location."
+    },
+  "CorrectChoice": "D",
+  "ExplanationCorrect": "The NIST Cybersecurity Framework organizes cybersecurity capabilities into five core functions: Identify, Protect, Detect, Respond, and Recover. Analysis of the six findings reveals that the Detect function exhibited the most critical control gap. The DLP tool did detect the anomalous outbound data transfer and generated an alert (finding 4), but the 72-hour alert triage backlog meant detection effectively failed — by the time an analyst reviewed the alert, the data had already been exfiltrated and the attacker's session had long since ended. Timely detection is a fundamental requirement of the Detect function (NIST SP 800-53, DE.AE: Anomalies and Events). The credit union had a detection tool in place but failed to resource the operational capability needed to act on its output. Furthermore, the Detect function was weakened by reliance on a single detection mechanism — there is no evidence of complementary detection capabilities such as user and entity behavior analytics (UEBA) that could have identified the anomalous login pattern when the loan officer's credentials were used from an unfamiliar IP address or at an unusual time. This represents a defense-in-depth failure within the Detect function. While the Protect function also showed gaps (missing MFA, incomplete training), those gaps are within a function that had other compensating controls in place (network segmentation successfully prevented lateral movement, encryption at rest was deployed). The Detect function gap was more critical because it was the last opportunity to prevent data loss — detection occurred but was operationally useless due to the triage backlog. A common exam trap on NIST CSF questions is to focus on the most visible control gap (missing MFA) rather than analyzing which function's failure was most consequential in the specific incident timeline.",
+  "StudyLinks": [
+    {
+      "label": "NIST Cybersecurity Framework",
+      "url": "https://www.nist.gov/cyberframework"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-F-CA-004",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references NIST CSF or authoritative cybersecurity standards"
+  ],
+  "ExplanationWrongA": "Option A identifies the Identify function as the most critical gap, citing a failure to maintain an accurate asset inventory that would have classified the loan processing system as containing sensitive PII. However, finding 5 reveals that the loan processing system's database was encrypted at rest, which suggests the organization was aware that sensitive data resided on this system and had applied a Protect control (encryption). Furthermore, an asset inventory deficiency would not have directly prevented the incident — the attacker did not exploit unknown or unmanaged assets. The candidate selects this option by overvaluing the Identify function's foundational role while undervaluing the specific operational failure in the Detect function that directly enabled the data exfiltration to succeed despite being detected.",
+  "ExplanationWrongB": "Option B identifies the Respond function as the most critical gap, focusing on the 72-hour alert triage backlog. While alert triage delays do affect incident response, the triage backlog is more accurately characterized as a Detect function failure because the Detect function encompasses the continuous monitoring process and the operational capability to analyze alerts in a timely manner (NIST DE.AE-3: event correlation and DE.AE-4: impact determination). The Respond function addresses containment, mitigation, and communication activities that occur after an incident has been confirmed and prioritized. The gap identified — that detection occurred but too late — is fundamentally a timeliness-of-detection issue, which NIST categorizes under Detect rather than Respond. The candidate misclassifies the alert triage backlog as a response deficiency rather than a detection effectiveness deficiency.",
+  "ExplanationWrongC": "Option C identifies the Protect function as the most critical gap, citing the absence of MFA and incomplete security awareness training. These are genuine Protect function deficiencies — MFA is an access control safeguard under NIST PR.AC, and security awareness training is covered under PR.AT. However, the question asks which function exhibited the most critical gap in the context of this specific incident. The Protect function had other controls in place (network segmentation, encryption at rest) that limited the attacker's impact. The Detect function, by contrast, had a single point of failure: the DLP tool detected the exfiltration but the operational process to act on that detection was broken. Between a partially effective Protect function and a completely failed Detect function, the Detect gap was more critical because it was the last opportunity to stop the data loss.",
+  "ExplanationWrongD": "",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+  },
+{
+  "Part": 1,
+  "Section": "F",
+  "SectionName": "Technology and Analytics",
+  "Topic": "F.005 Analytics method selection analysis",
+  "MicroTopic": "analytical method selection for business problem",
+  "UniqueConceptKey": "F-005-analytics-method-selection",
+  "LOSTag": "F.5 Business analytics and data-driven decision making",
+  "Difficulty": "Moderate",
+  "ItemType": "MCQ",
+  "ItemStyle": "single-select",
+  "Stem": "Evergreen Retail Group operates 64 home improvement stores across eight states. The chief merchandising officer wants to reduce inventory write-downs, which totaled $4.3 million last fiscal year. The company's data warehouse contains five years of transaction-level sales data, inventory levels by SKU and store, promotional calendar history, seasonal category demand patterns, and supplier lead-time performance data. The analytics team must recommend an analytical approach to identify which products are at highest risk of future obsolescence write-downs so the merchandising team can take proactive markdown or return-to-vendor actions. The team has narrowed the options to four analytical methods. Which method most appropriately addresses the business question?",
+    "Choices": {
+      "A": "Descriptive analytics using historical SKU-level write-down data segmented by product category, season, and store to calculate obsolescence rates and identify which product segments have historically experienced the highest write-down percentages.",
+      "B": "Prescriptive analytics using linear programming optimization to determine the optimal markdown percentage and timing for each product category that minimizes the sum of lost margin from markdowns plus expected write-down expense, given constraints on minimum margin thresholds.",
+      "C": "Diagnostic analytics using correlation analysis and statistical testing to determine whether write-downs are statistically associated with specific variables such as supplier lead time, promotional frequency, or inventory turnover velocity, in order to identify the drivers of obsolescence.",
+      "D": "Predictive analytics using a classification model trained on historical data to estimate the probability that each active SKU will become obsolete within the next two quarters, with features including days of inventory on hand, sales velocity trend, promotional participation, and supplier lead-time reliability."
+    },
+  "CorrectChoice": "D",
+  "ExplanationCorrect": "The business question asks the analytics team to identify which products are at highest risk of future obsolescence write-downs so proactive action can be taken. This is fundamentally a prediction problem — the team needs to forecast which SKUs will become obsolete, not merely understand which ones were obsolete in the past. Predictive analytics, specifically a classification model, directly addresses this need. The proposed approach uses supervised machine learning where the target variable is whether an SKU became obsolete (yes/no) within a specified forward-looking window, trained on historical data where the outcome is already known. The features (independent variables) capture the relevant signals: days of inventory on hand measures the current inventory overhang, sales velocity trend captures whether demand is declining, promotional participation indicates whether the product is being supported by marketing activity, and supplier lead-time reliability reflects the supply chain flexibility to adjust orders. The output — a probability score for each active SKU — directly supports the merchandising team's decision-making by ranking products by obsolescence risk, enabling prioritized markdown or return-to-vendor actions. This represents the Analyze-to-Predict transition on the analytics maturity curve: moving from understanding what happened (descriptive) and why it happened (diagnostic) to forecasting what will happen (predictive). Under the IMA's Management Accounting Competency Framework, selecting the appropriate analytical method requires matching the method's output to the decision the business stakeholder needs to make. The CMO needs a forward-looking risk ranking, not a historical summary or a causal analysis. A common exam trap is to default to descriptive analytics because it is the most familiar and well-understood approach, when the business question explicitly demands prediction of future states.",
+  "StudyLinks": [
+    {
+      "label": "IMA Management Accounting Competency Framework — Technology and Analytics",
+      "url": "https://www.imanet.org"
+    }
+  ],
+  "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+  "Part1OnlyFlag": true,
+  "ReviewNote": "",
+  "QuestionID": "P1-F-CA-005",
+  "question_state": "Unprocessed",
+  "certification_date": "",
+  "certification_batch": "",
+  "CalculationItem": false,
+  "VerifiedChecks": [
+    "Content auto-generated via sandboxed pipeline",
+    "Answer independently verified",
+    "Distractors written as plausible CMA-style traps",
+    "Cognitive level confirmed as Analyze",
+    "Explanation references analytics methodology and business decision frameworks"
+  ],
+  "ExplanationWrongA": "Option A proposes descriptive analytics to calculate historical obsolescence rates. While this would provide a useful baseline understanding of which categories have historically experienced the highest write-downs, it does not answer the business question of which current products are at highest risk of future obsolescence. Historical segment-level averages do not differentiate between individual SKUs within the same category — a category with a historically high write-down rate may contain many SKUs that are currently performing well. The business question requires a forward-looking, SKU-level risk assessment, which descriptive analytics cannot provide. The candidate selecting this option confuses the type of analytics appropriate for understanding past performance with the type needed for prediction and proactive intervention. This is a common error on analytics method selection questions: defaulting to descriptive methods when the decision context requires predictive capability.",
+  "ExplanationWrongB": "Option B proposes prescriptive analytics using linear programming optimization to determine optimal markdown strategies. While prescriptive analytics would be valuable for determining the best course of action once high-risk SKUs are identified, it does not address the primary business question of which SKUs are at risk. The optimization model described assumes the set of at-risk products is already known — it optimizes the response, not the identification. The business question specifically asks the team to 'identify which products are at highest risk,' which is a classification/prediction problem, not an optimization problem. The candidate selects an analytical method that is one step ahead in the analytics workflow, confusing the prediction step (which products are at risk) with the optimization step (what to do about them).",
+  "ExplanationWrongC": "Option C proposes diagnostic analytics using correlation and statistical testing to identify drivers of obsolescence. While understanding the causal factors behind obsolescence is valuable for long-term process improvement (e.g., reducing supplier lead times or adjusting promotional strategies), diagnostic analytics identifies relationships between variables rather than predicting outcomes for individual SKUs. Knowing that supplier lead time is correlated with obsolescence does not tell the merchandising team which specific SKUs should be marked down tomorrow. The candidate confuses explanatory analytics, which answers 'why did this happen,' with predictive analytics, which answers 'what will happen.' For the business decision of prioritizing markdown actions, a prediction of which SKUs will become obsolete is more directly actionable than an understanding of why obsolescence occurs.",
+  "ExplanationWrongD": "",
+  "DifficultyScore": 3,
+  "CognitiveLevel": "Analyze"
+}
+]

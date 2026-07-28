@@ -1,0 +1,96 @@
+{
+  "title": "SESSION808_CONDITIONAL_VERIFICATION",
+  "session": "808",
+  "date": "2026-07-26",
+  "verification_type": "Pre-insertion conditional verification — Wave 2b (10 items)",
+  "scope": [
+    "P1-E-R12", "P1-E-R13", "P1-E-R18", "P1-E-R21", "P1-E-R22",
+    "P1-E-R23", "P1-E-R24", "P1-E-R25", "P1-E-R28", "P1-E-R33"
+  ],
+  "verdict": "ALL 4 DIMENSIONS PASS — 10/10 items cleared for insertion",
+  "dimensions": {
+    "DL_008": {
+      "description": "ExplanationWrong[CorrectChoice] is empty for all 10 items",
+      "methodology": "Per-item CC extraction + EW[CC] verification",
+      "findings": 0,
+      "total_checked": 10,
+      "status": "PASS",
+      "detail": {
+        "P1-E-R12": {"cc": "B", "ew_b": "", "status": "CLEAN"},
+        "P1-E-R13": {"cc": "B", "ew_b": "", "status": "CLEAN"},
+        "P1-E-R18": {"cc": "C", "ew_c": "", "status": "CLEAN"},
+        "P1-E-R21": {"cc": "D", "ew_d": "", "status": "CLEAN"},
+        "P1-E-R22": {"cc": "D", "ew_d": "", "status": "CLEAN"},
+        "P1-E-R23": {"cc": "C", "ew_c": "", "status": "CLEAN"},
+        "P1-E-R24": {"cc": "A", "ew_a": "", "status": "CLEAN"},
+        "P1-E-R25": {"cc": "D", "ew_d": "", "status": "CLEAN"},
+        "P1-E-R28": {"cc": "B", "ew_b": "", "status": "CLEAN"},
+        "P1-E-R33": {"cc": "D", "ew_d": "", "status": "CLEAN"}
+      }
+    },
+    "DL_026": {
+      "description": "No empty non-CorrectChoice ExplanationWrong slots",
+      "methodology": "Verify all 3 non-CC EW slots per item are non-empty (≥100 chars)",
+      "findings": 0,
+      "total_checked": 30,
+      "status": "PASS",
+      "detail": {
+        "non_cc_slots_checked": 30,
+        "all_non_empty": true,
+        "verified_per_item": {
+          "P1-E-R12": {"non_empty_slots": ["EW_A", "EW_C", "EW_D"], "status": "PASS"},
+          "P1-E-R13": {"non_empty_slots": ["EW_A", "EW_C", "EW_D"], "status": "PASS"},
+          "P1-E-R18": {"non_empty_slots": ["EW_A", "EW_B", "EW_D"], "status": "PASS"},
+          "P1-E-R21": {"non_empty_slots": ["EW_A", "EW_B", "EW_C"], "status": "PASS"},
+          "P1-E-R22": {"non_empty_slots": ["EW_A", "EW_B", "EW_C"], "status": "PASS"},
+          "P1-E-R23": {"non_empty_slots": ["EW_A", "EW_B", "EW_D"], "status": "PASS"},
+          "P1-E-R24": {"non_empty_slots": ["EW_B", "EW_C", "EW_D"], "status": "PASS"},
+          "P1-E-R25": {"non_empty_slots": ["EW_A", "EW_B", "EW_C"], "status": "PASS"},
+          "P1-E-R28": {"non_empty_slots": ["EW_A", "EW_C", "EW_D"], "status": "PASS"},
+          "P1-E-R33": {"non_empty_slots": ["EW_A", "EW_B", "EW_C"], "status": "PASS"}
+        }
+      }
+    },
+    "DL_013": {
+      "description": "No template boilerplate in any ExplanationWrong field",
+      "methodology": "Scan all EW fields for 'represents a plausible misconception', 'A candidate may select this option by misapplying', 'does not align with'",
+      "findings": 0,
+      "total_checked": 40,
+      "status": "PASS",
+      "detail": {
+        "boilerplate_patterns_scanned": [
+          "represents a plausible misconception",
+          "A candidate may select this option by misapplying",
+          "does not align with CAQS",
+          "The correct approach involves"
+        ],
+        "all_fields_clean": true,
+        "note": "All 10 items were re-authored in S808 with original, choice-specific distractor language. Zero template carry-over from prior clone rotation groups."
+      }
+    },
+    "DL_010": {
+      "description": "Explanation text matches the choice it describes (no semantic misassignment)",
+      "methodology": "Per-item semantic verification: each EW[X] text describes Choice X's specific error",
+      "findings": 0,
+      "total_checked": 40,
+      "status": "PASS",
+      "detail": {
+        "verification_per_slot": 40,
+        "all_correctly_assigned": true,
+        "note": "Independent semantic review confirms each EW slot describes the correct distractor choice. No cross-item contamination or +1-offset rotation artifacts detected."
+      }
+    }
+  },
+  "aggregate": {
+    "total_items": 10,
+    "total_dimensions": 4,
+    "total_checks": 120,
+    "failures": 0,
+    "status": "ALL PASS"
+  },
+  "governance_guard_rule2": {
+    "status": "PASS",
+    "non_empty_ew_cc_slots": 0,
+    "insertion_blocked": false
+  }
+}

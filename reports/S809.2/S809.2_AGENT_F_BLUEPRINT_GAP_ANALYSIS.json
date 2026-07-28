@@ -1,0 +1,650 @@
+{
+  "session": "S809.2",
+  "agent": "F",
+  "blueprint_gap_analysis": {
+    "summary": {
+      "total_seeds": 38,
+      "pack_c_seeds": 19,
+      "pack_d_seeds": 19,
+      "unique_topics_mapped": 12,
+      "duplicate_topics_with_certified_pool": 35,
+      "gap_topics": 3,
+      "overrepresented_topics": 1,
+      "previously_certified_domain_e_total": 248,
+      "pack_a_section_e_certified": 58,
+      "pack_b_section_e_certified": 75,
+      "pack_e_section_e_certified": 115
+    },
+    "seed_mapping": {
+      "pack_c": [
+        {
+          "qid": "P1-EC-004",
+          "topic": "segregation-of-duties-design",
+          "state": "Archived",
+          "blueprint_subtopic": "Segregation of Duties",
+          "notes": "Foundational SoD concept — incompatible functions design principle"
+        },
+        {
+          "qid": "P1-EC-008",
+          "topic": "coso-internal-control-framework",
+          "state": "Archived",
+          "blueprint_subtopic": "COSO Internal Control Framework",
+          "notes": "Foundational — 5 components, 17 principles overview. Prerequisite for all other COSO items."
+        },
+        {
+          "qid": "P1-EC-014",
+          "topic": "fraud-triangle-elements",
+          "state": "Archived",
+          "blueprint_subtopic": "Fraud Prevention",
+          "notes": "Pressure, opportunity, rationalization. Touches fraud detection indirectly."
+        },
+        {
+          "qid": "P1-EC-020",
+          "topic": "physical-controls-over-assets",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Physical safeguards — locks, cameras, restricted access"
+        },
+        {
+          "qid": "P1-EC-021",
+          "topic": "vendor-setup-payment",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Segregation of Duties",
+          "notes": "Applied SoD — vendor setup vs payment authorization"
+        },
+        {
+          "qid": "P1-EC-022",
+          "topic": "duplicate-payment-control",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Preventive vs detective — specific duplicate payment scenario"
+        },
+        {
+          "qid": "P1-EC-023",
+          "topic": "IT-access-terminated",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "IT access control — terminated employee deprovisioning"
+        },
+        {
+          "qid": "P1-EC-024",
+          "topic": "application-input-control",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Application control — sales order input validation"
+        },
+        {
+          "qid": "P1-EC-025",
+          "topic": "preventive-vs-detective",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Classification — preventive vs detective control taxonomy"
+        },
+        {
+          "qid": "P1-EC-028",
+          "topic": "bank-reconciliation-control",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Bank reconciliation as a detective control"
+        },
+        {
+          "qid": "P1-EC-031",
+          "topic": "erm-risk-appetite",
+          "state": "Archived",
+          "blueprint_subtopic": "COSO Enterprise Risk Management",
+          "notes": "ERM — risk appetite definition and role in strategy"
+        },
+        {
+          "qid": "P1-EC-040",
+          "topic": "it-general-controls-access",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "IT general controls — logical access, authentication scope"
+        },
+        {
+          "qid": "P1-EC-041",
+          "topic": "management-override-risk",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Internal Control Objectives",
+          "notes": "Inherent limitation of internal control — management override"
+        },
+        {
+          "qid": "P1-EC-049",
+          "topic": "whistleblower-hotline-purpose",
+          "state": "Archived",
+          "blueprint_subtopic": "Information and Communication",
+          "notes": "Whistleblower channel — SOX requirement, Information & Communication component"
+        },
+        {
+          "qid": "P1-EC-052",
+          "topic": "compensating-control-small-business",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Compensating controls — small business context, owner review"
+        },
+        {
+          "qid": "P1-EC-060",
+          "topic": "control-environment-tone-at-top",
+          "state": "Archived",
+          "blueprint_subtopic": "Corporate Governance",
+          "notes": "Control environment — COSO Principle 1, tone at the top"
+        },
+        {
+          "qid": "P1-EC-061",
+          "topic": "inherent-risk-vs-control-risk",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Risk Assessment",
+          "notes": "Risk taxonomy — inherent risk distinguished from control risk"
+        },
+        {
+          "qid": "P1-EC-066",
+          "topic": "segregation-cash-custody-recording",
+          "state": "Archived",
+          "blueprint_subtopic": "Segregation of Duties",
+          "notes": "Applied SoD — cash custody vs recording functions"
+        },
+        {
+          "qid": "P1-EC-072",
+          "topic": "remediation-of-control-deficiency",
+          "state": "Archived",
+          "blueprint_subtopic": "Monitoring",
+          "notes": "Monitoring outcome — deficiency remediation prioritization"
+        }
+      ],
+      "pack_d": [
+        {
+          "qid": "P1-ED-001",
+          "topic": "three-lines-of-defense-model",
+          "state": "Certified",
+          "blueprint_subtopic": "Corporate Governance",
+          "notes": "Governance model — operational mgmt, risk mgmt, internal audit"
+        },
+        {
+          "qid": "P1-ED-010",
+          "topic": "access-control-least-privilege",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "IT access principle — least privilege, need-to-know"
+        },
+        {
+          "qid": "P1-ED-014",
+          "topic": "independent-verification-control-activity",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Independent checks — reconciliation, review by separate person"
+        },
+        {
+          "qid": "P1-ED-016",
+          "topic": "erm-risk-response-strategies",
+          "state": "Archived",
+          "blueprint_subtopic": "COSO Enterprise Risk Management",
+          "notes": "ERM — avoid, reduce, share, accept responses"
+        },
+        {
+          "qid": "P1-ED-025",
+          "topic": "control-activities-authorization",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Authorization controls — transaction approval hierarchy"
+        },
+        {
+          "qid": "P1-ED-028",
+          "topic": "monitoring-ongoing-evaluations",
+          "state": "Archived",
+          "blueprint_subtopic": "Monitoring",
+          "notes": "COSO Monitoring — ongoing vs separate evaluations distinction"
+        },
+        {
+          "qid": "P1-ED-035",
+          "topic": "data-backup-disaster-recovery",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "IT continuity — backup procedures, recovery objectives"
+        },
+        {
+          "qid": "P1-ED-036",
+          "topic": "change-management-control-it-systems",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "IT change management — approval, testing, documentation"
+        },
+        {
+          "qid": "P1-ED-042",
+          "topic": "risk-assessment-likelihood-impact",
+          "state": "Archived",
+          "blueprint_subtopic": "Risk Assessment",
+          "notes": "COSO risk assessment process — likelihood × impact"
+        },
+        {
+          "qid": "P1-ED-046",
+          "topic": "code-of-conduct-ethics-program",
+          "state": "Archived",
+          "blueprint_subtopic": "Ethics",
+          "notes": "Ethics program — code of conduct, IMA standards"
+        },
+        {
+          "qid": "P1-ED-051",
+          "topic": "password-access-authentication-control",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Authentication controls — password policies, MFA concepts"
+        },
+        {
+          "qid": "P1-ED-058",
+          "topic": "internal-control-cost-benefit-limitation",
+          "state": "Archived",
+          "blueprint_subtopic": "Internal Control Objectives",
+          "notes": "Reasonable assurance — cost-benefit, inherent limitations"
+        },
+        {
+          "qid": "P1-ED-064",
+          "topic": "vendor-master-file-controls",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "Vendor master file — approval, periodic review, segregation"
+        },
+        {
+          "qid": "P1-ED-066",
+          "topic": "audit-committee-oversight-role",
+          "state": "Archived",
+          "blueprint_subtopic": "Corporate Governance",
+          "notes": "Audit committee — independence, financial expert, oversight"
+        },
+        {
+          "qid": "P1-ED-071",
+          "topic": "change-management-production",
+          "state": "Archived",
+          "blueprint_subtopic": "Control Activities",
+          "notes": "IT change management — direct production changes (emergency bypass)"
+        },
+        {
+          "qid": "P1-ED-072",
+          "topic": "fraud-risk-purchasing",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Fraud Prevention",
+          "notes": "Fraud risk — purchasing function, conflict of interest, kickbacks"
+        },
+        {
+          "qid": "P1-ED-073",
+          "topic": "exception-reports-unreviewed",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Monitoring",
+          "notes": "Monitoring failure — exception reports generated but not reviewed"
+        },
+        {
+          "qid": "P1-ED-074",
+          "topic": "reconciliation-incompatible-duties",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Segregation of Duties",
+          "notes": "Applied SoD — EFT initiation vs bank reconciliation"
+        },
+        {
+          "qid": "P1-ED-075",
+          "topic": "segregation-approval-reconciliation",
+          "state": "Unprocessed",
+          "blueprint_subtopic": "Segregation of Duties",
+          "notes": "Applied SoD — approval vs reconciliation functions"
+        }
+      ]
+    },
+    "topic_coverage": {
+      "coso_framework": {
+        "seeds": 1,
+        "seed_qids": ["P1-EC-008"],
+        "certified_elsewhere": 75,
+        "certified_packs": ["Pack B (10 items: internal control framework, COSO Internal Control)", "Pack E (9 items: COSO five components, COSO objectives, COSO definition, COSO 2013 17 principles coverage across ~12 items)"],
+        "status": "gap",
+        "detail": "Only 1 seed for the entire COSO framework. Pack E covers COSO extensively (individual principles, components, objectives) but these seeds were intended to fill a Pack C/D gap — the single seed is insufficient for foundational coverage. COSO 2013's 17 principles are well-covered in Pack E but Pack C/D Section E has no individual principle coverage."
+      },
+      "control_environment": {
+        "seeds": 1,
+        "seed_qids": ["P1-EC-060"],
+        "certified_elsewhere": 10,
+        "certified_packs": ["Pack A (E.001 tone at top)", "Pack B (B-E.131 control environment)", "Pack E (E-E.002, E-E.015 tone at top, E-E.060 control env influence, COSO principles 1-5)"],
+        "status": "covered",
+        "detail": "Control environment is well-covered by the broader pool. The seed fills a Pack C/D gap specifically."
+      },
+      "control_activities": {
+        "seeds": 16,
+        "seed_qids": ["P1-EC-020", "P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-025", "P1-EC-028", "P1-EC-040", "P1-EC-052", "P1-ED-010", "P1-ED-014", "P1-ED-025", "P1-ED-035", "P1-ED-036", "P1-ED-051", "P1-ED-064", "P1-ED-071"],
+        "certified_elsewhere": 50,
+        "certified_packs": ["Pack A (~20 items: physical safeguards, three-way match, input validation, bank rec, compensating, etc.)", "Pack B (~15 items: control activities blocks)", "Pack E (~15 items: physical, access, authorization, verification, IT preventive/detective, compensating, encryption, pre-numbered, dual custody, mandatory vacation)"],
+        "status": "overrepresented",
+        "detail": "16 of 38 seeds (42%) map to Control Activities. While the sub-topic scope is broad and each seed addresses a distinct control type, this is the most heavily represented category. Consider whether some could be deferred to reduce batch size. Key distinct sub-categories covered: physical controls, preventive/detective distinction, IT access, application input, bank rec, compensating controls, least privilege, independent verification, authorization, backup/DR, change management, authentication, vendor master file."
+      },
+      "risk_assessment": {
+        "seeds": 2,
+        "seed_qids": ["P1-EC-061", "P1-ED-042"],
+        "certified_elsewhere": 15,
+        "certified_packs": ["Pack A (E.002, E.078)", "Pack E (E-E.003, E-E.010, E-E.011, E-R16, E-R37, E-R38)", "Pack B (under fraud prevention blocks)"],
+        "status": "covered",
+        "detail": "Inherent vs control risk and likelihood/impact are well-covered in the broader pool. These seeds provide the Pack C/D Section E-specific coverage."
+      },
+      "monitoring": {
+        "seeds": 3,
+        "seed_qids": ["P1-EC-072", "P1-ED-028", "P1-ED-073"],
+        "certified_elsewhere": 15,
+        "certified_packs": ["Pack A (E.005, E.024, E.029, E.035, E.076, E.079, E.081)", "Pack E (E-E.007, E-R18, COSO principles 16-17)"],
+        "status": "covered",
+        "detail": "Monitoring is well-covered. Seeds address ongoing evaluations, exception reports, and remediation — three distinct monitoring angles."
+      },
+      "information_and_communication": {
+        "seeds": 1,
+        "seed_qids": ["P1-EC-049"],
+        "certified_elsewhere": 10,
+        "certified_packs": ["Pack A (E.004 exception reports, E.033 whistleblower)", "Pack B (3 whistleblower program items)", "Pack E (E-E.006 I&C component, E-R07 whistleblower)"],
+        "status": "underrepresented",
+        "detail": "Only 1 seed for the full Information & Communication COSO component. The I&C component includes: information quality, internal communication channels, external communication, reporting lines. The whistleblower seed covers only the external reporting channel aspect. COSO Principle 13 (internal communication), Principle 14 (external reporting), Principle 15 (external communication) are covered in Pack E but not in Pack C/D seeds."
+      },
+      "it_controls": {
+        "seeds": 7,
+        "seed_qids": ["P1-EC-023", "P1-EC-024", "P1-EC-040", "P1-ED-010", "P1-ED-035", "P1-ED-036", "P1-ED-071"],
+        "certified_elsewhere": 35,
+        "certified_packs": ["Pack A (E.011-014, E.030-032, E.077, E.082)", "Pack B (~12 items: IT general controls, application controls, data protection)", "Pack E (~15 items: ITGC, application controls, firewall, encryption, logical access, etc.)"],
+        "status": "covered",
+        "detail": "IT controls are well-covered. Note: 'IT Controls' is not a standalone blueprint sub-topic — these items map primarily to Control Activities (IT-dependent controls) and Information and Communication (IT systems). Seven seeds address: deprovisioning, input validation, ITGC access, least privilege, backup/DR, change management (×2). Well-distributed across IT sub-domains."
+      },
+      "fraud_prevention": {
+        "seeds": 2,
+        "seed_qids": ["P1-EC-014", "P1-ED-072"],
+        "certified_elsewhere": 12,
+        "certified_packs": ["Pack A (E.022)", "Pack B (8 fraud prevention items)", "Pack E (E-E.012 fraud triangle, E-E.027 collusion, E-R03 fraud triangle pressure)"],
+        "status": "covered",
+        "detail": "Fraud triangle (EC-014) and fraud risk in purchasing (ED-072) together cover both the theoretical framework and an applied scenario."
+      },
+      "fraud_detection": {
+        "seeds": 0,
+        "seed_qids": [],
+        "certified_elsewhere": 5,
+        "certified_packs": ["Pack E (E-E.014 detective control, E-E.053 IT detective controls, E-R12 detective control classification)", "Pack B (fraud prevention blocks may include detection aspects)"],
+        "status": "gap",
+        "detail": "No seed specifically addresses fraud detection mechanisms (data analytics for fraud, red flags, surprise audits, forensic accounting). The fraud triangle seed (EC-014) may cover this tangentially through 'opportunity' reduction but detection-specific mechanics are absent from the seeds. Pack E covers 'Detective control' generically but not fraud-specific detection. This is a genuine content gap in the Pack C/D Section E set."
+      },
+      "segregation_of_duties": {
+        "seeds": 5,
+        "seed_qids": ["P1-EC-004", "P1-EC-021", "P1-EC-066", "P1-ED-074", "P1-ED-075"],
+        "certified_elsewhere": 12,
+        "certified_packs": ["Pack A (E.006, E.017, E.080, E.083)", "Pack E (E-E.005, E-R01, E-R05, E-R26)"],
+        "status": "covered",
+        "detail": "SoD is well-covered with a theoretical seed (design principles) and four applied scenarios: vendor setup/payment, cash custody/recording, EFT initiation/reconciliation, approval/reconciliation. Good breadth across operational contexts."
+      },
+      "ethics_governance": {
+        "seeds": 4,
+        "seed_qids": ["P1-EC-060", "P1-ED-001", "P1-ED-046", "P1-ED-066"],
+        "certified_elsewhere": 25,
+        "certified_packs": ["Pack A (E.023 SOX, E.026 IA independence, E.034 audit committee, E.084)", "Pack B (audit committee, SOX blocks)", "Pack E (E-E.025 audit committee, E-E.044-048 internal audit types, E-R22-23 audit committee/board, SOX 302/404/906)"],
+        "status": "covered",
+        "detail": "Corporate governance and ethics are well-covered: control environment/tone at top, three lines of defense, code of conduct, audit committee oversight. Note: IMA Statement of Ethical Professional Practice (competence, confidentiality, integrity, credibility) is not explicitly tested in any seed — the code of conduct seed approaches this indirectly."
+      },
+      "coso_erm": {
+        "seeds": 2,
+        "seed_qids": ["P1-EC-031", "P1-ED-016"],
+        "certified_elsewhere": 10,
+        "certified_packs": ["Pack B (2 COSO ERM items)", "Pack E (E-E.008 ERM strategy, E-E.009 risk appetite, E-E.049 ERM components, E-E.050 risk tolerance, E-R17 risk responses)"],
+        "status": "covered",
+        "detail": "ERM is well-covered. The two seeds cover complementary aspects: risk appetite (governance/strategy-setting) and risk response strategies (avoid/reduce/share/accept). Pack E provides extensive additional ERM coverage."
+      },
+      "internal_control_objectives_limitations": {
+        "seeds": 2,
+        "seed_qids": ["P1-EC-041", "P1-ED-058"],
+        "certified_elsewhere": 10,
+        "certified_packs": ["Pack A (E.021 management override)", "Pack E (E-E.018 control deficiency, E-E.019 material weakness, E-E.058 cost-benefit, E-E.059 limitations, E-R35 reasonable assurance, E-R36 mgmt vs auditor roles)"],
+        "status": "covered",
+        "detail": "Internal control objectives and limitations are covered through management override risk and cost-benefit limitation. These address two of the key inherent limitations of internal control."
+      }
+    },
+    "certification_dependencies": [
+      {
+        "order": 1,
+        "qids": ["P1-EC-008"],
+        "reason": "COSO Internal Control Framework — foundational prerequisite. All other Domain E items presuppose familiarity with COSO's five components. Must be certified first as it provides the conceptual scaffolding for control environment, risk assessment, control activities, I&C, and monitoring items."
+      },
+      {
+        "order": 2,
+        "qids": ["P1-EC-060", "P1-EC-061", "P1-ED-042"],
+        "reason": "Control Environment (COSO Principle 1) and Risk Assessment (COSO Component 2). These are the first two COSO components and the logical starting points after the framework overview. Tone at the top (EC-060) is widely referenced across governance items. Risk assessment basics (EC-061, ED-042) are prerequisites for ERM items."
+      },
+      {
+        "order": 3,
+        "qids": ["P1-EC-031", "P1-ED-016"],
+        "reason": "COSO ERM — risk appetite and risk response strategies. Depends on risk assessment foundation (Order 2). ERM extends the COSO internal control framework to enterprise-wide risk."
+      },
+      {
+        "order": 4,
+        "qids": ["P1-EC-041", "P1-ED-058"],
+        "reason": "Internal Control Objectives and Limitations — management override and cost-benefit. Depends on understanding what internal controls are designed to achieve (Orders 1-2). These items address the inherent limitations that management accountants must understand."
+      },
+      {
+        "order": 5,
+        "qids": ["P1-EC-004", "P1-EC-021", "P1-EC-066", "P1-ED-074", "P1-ED-075"],
+        "reason": "Segregation of Duties — foundational concept plus four applied scenarios. Depends on understanding of control activities (Order 1-2). EC-004 (design principles) should be certified before the four applied-scenario items. These are high-priority because SoD is the most commonly tested control concept on the CMA exam."
+      },
+      {
+        "order": 6,
+        "qids": ["P1-EC-025", "P1-EC-020", "P1-EC-028", "P1-EC-052", "P1-ED-014", "P1-ED-025", "P1-ED-064"],
+        "reason": "Core Control Activities — preventive/detective distinction, physical controls, bank rec, compensating controls, independent verification, authorization, vendor master file. These are the foundational control activity types. EC-025 (preventive vs detective) should lead this wave since it provides the classification framework for the remaining items."
+      },
+      {
+        "order": 7,
+        "qids": ["P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-040", "P1-ED-010", "P1-ED-051"],
+        "reason": "IT-Dependent Control Activities — duplicate payment, IT access termination, application input validation, ITGC access, least privilege, password/authentication. These apply the control activity framework to IT contexts. Depends on the preventive/detective distinction (Order 6)."
+      },
+      {
+        "order": 8,
+        "qids": ["P1-EC-014", "P1-ED-072"],
+        "reason": "Fraud Prevention — fraud triangle and fraud risk in purchasing. Depends on risk assessment (Order 2) and understanding of internal control limitations (Order 4). The fraud triangle (EC-014) should precede the applied scenario (ED-072)."
+      },
+      {
+        "order": 9,
+        "qids": ["P1-ED-035", "P1-ED-036", "P1-ED-071"],
+        "reason": "IT Continuity and Change Management — backup/DR, change management (×2). Depends on understanding of IT-dependent controls (Order 7). Change management items should be certified together since they address the same topic from different angles (standard vs emergency bypass)."
+      },
+      {
+        "order": 10,
+        "qids": ["P1-EC-072", "P1-ED-028", "P1-ED-073"],
+        "reason": "Monitoring — deficiency remediation, ongoing evaluations, exception reports. Depends on understanding of control activities (Orders 6-7). ED-028 (ongoing evaluations) should precede ED-073 (exception reports as monitoring failure) since the latter represents a monitoring breakdown."
+      },
+      {
+        "order": 11,
+        "qids": ["P1-EC-049"],
+        "reason": "Information and Communication — whistleblower hotline. Depends on COSO components (Orders 1-2, 5, 8). The only I&C seed — bridges governance (whistleblower as an ethics/compliance channel) and the Information & Communication COSO component."
+      },
+      {
+        "order": 12,
+        "qids": ["P1-ED-046"],
+        "reason": "Ethics — code of conduct program. Depends on control environment/tone at top (Order 2) and fraud prevention (Order 8). This should come late in the sequence as ethics ties together governance, fraud prevention, and control environment."
+      },
+      {
+        "order": 13,
+        "qids": ["P1-ED-001", "P1-ED-066"],
+        "reason": "Corporate Governance — three lines of defense and audit committee oversight. These are synthesis-level items that integrate concepts from COSO framework, control activities, monitoring, and fraud prevention. Best certified near the end when all foundational concepts are in place."
+      }
+    ],
+    "pack_e_coverage_comparison": {
+      "pack_e_section_e_certified_total": 115,
+      "pack_e_core_topics": 75,
+      "pack_e_rotation_topics": 40,
+      "topics_covered_by_both": 28,
+      "topics_covered_both_detail": [
+        "COSO framework/five components",
+        "Control environment / tone at the top",
+        "Risk assessment",
+        "Control activities",
+        "Segregation of duties",
+        "Information and communication",
+        "Monitoring",
+        "COSO ERM strategy/components",
+        "Risk appetite",
+        "Inherent risk",
+        "Fraud triangle",
+        "Preventive control",
+        "Detective control",
+        "Physical controls",
+        "Access controls",
+        "Authorization controls",
+        "IT general controls",
+        "Application controls",
+        "Management override",
+        "Whistleblower hotline",
+        "Compensating controls",
+        "Internal audit independence",
+        "Three lines of defense model",
+        "Bank reconciliation segregation",
+        "Control deficiency",
+        "Cost-benefit controls",
+        "Internal control limitations",
+        "Vendor risk assessment"
+      ],
+      "topics_only_in_seeds": 15,
+      "topics_only_in_seeds_detail": [
+        "Vendor setup and payment segregation (EC-021) — specific applied SoD scenario",
+        "Duplicate payment control (EC-022) — specific preventive/detective scenario",
+        "IT access terminated employee deprovisioning (EC-023) — specific IT access scenario",
+        "Application input control sales order validation (EC-024) — specific input validation scenario",
+        "Inherent risk vs control risk comparison (EC-061) — Pack E has them separately, not as a comparison",
+        "Vendor master file controls (ED-064) — specific vendor management control",
+        "Exception reports not reviewed (ED-073) — specific monitoring failure scenario",
+        "Reconciliation incompatible duties EFT/bank rec (ED-074) — specific SoD scenario",
+        "Segregation approval vs reconciliation (ED-075) — specific SoD scenario",
+        "Fraud risk in purchasing (ED-072) — applied fraud scenario beyond triangle",
+        "Change management — direct production change (ED-071) — specific bypass scenario",
+        "Change management — IT systems (ED-036) — general change management",
+        "Data backup and disaster recovery (ED-035) — IT continuity",
+        "Password/authentication control (ED-051) — specific authentication control",
+        "Independent verification control activity (ED-014) — specific control type"
+      ],
+      "topics_only_in_pack_e": 15,
+      "topics_only_in_pack_e_detail": [
+        "Individual COSO principles 1-17 (E-E-028 through E-E-039, E-E-065-068) — seeds cover COSO at the framework/components level only",
+        "SOX Sections 302, 404, 906 (E-E-023, E-E-024, E-E-063) — regulatory compliance dimension absent from seeds",
+        "Control self-assessment (E-E-030) — monitoring technique not in seeds",
+        "Internal audit types: operational, compliance, financial (E-E-046-048) — seeds cover audit committee but not IA types",
+        "Entity-level vs Activity-level controls (E-E-061, E-E-062) — control hierarchy not in seeds",
+        "Encryption (E-E-054) and Firewall (E-E-022) — specific IT security tools",
+        "PCAOB (E-E-064) — regulatory body not in seeds",
+        "Variables/Attributes sampling (E-E-070, E-E-071) — audit sampling methodology",
+        "Pre-numbered documents, Dual custody, Mandatory vacation (E-E-073-075) — specific manual control techniques",
+        "External audit opinions (E-R21) — GAAS audit opinion types",
+        "Board governance oversight (E-R23) — board-level governance beyond audit committee",
+        "Manual controls characteristics (E-R28) — manual vs automated control distinction",
+        "Internal audit charter/reporting (E-E-044, E-E-045) — IA governance documents",
+        "Control matrix (E-E-056) — control documentation tool",
+        "Collusion (E-E-027) — fraud-specific concept: controls defeated by collusion"
+      ]
+    },
+    "recommended_certification_order": [
+      {
+        "wave": 1,
+        "qids": ["P1-EC-008", "P1-EC-060", "P1-EC-061", "P1-ED-042"],
+        "rationale": "COSO Framework + Control Environment + Risk Assessment foundations. These 4 items provide the conceptual scaffolding that all other Domain E items depend on. EC-008 (COSO framework) alone unlocks 34 remaining seeds. Small batch (4 items) for quick certification pass."
+      },
+      {
+        "wave": 2,
+        "qids": ["P1-EC-031", "P1-ED-016", "P1-EC-041", "P1-ED-058"],
+        "rationale": "COSO ERM + Internal Control Objectives/Limitations. Extends the COSO framework into ERM territory and addresses inherent limitations. 4 items."
+      },
+      {
+        "wave": 3,
+        "qids": ["P1-EC-004", "P1-EC-021", "P1-EC-066", "P1-ED-074", "P1-ED-075"],
+        "rationale": "Segregation of Duties — 1 foundational item + 4 applied scenarios. Highest CMA exam relevance of any Domain E sub-topic. 5 items."
+      },
+      {
+        "wave": 4,
+        "qids": ["P1-EC-025", "P1-EC-020", "P1-EC-028", "P1-EC-052", "P1-ED-014", "P1-ED-025", "P1-ED-064"],
+        "rationale": "Core Control Activities — classification framework + physical, reconciliation, compensating, independent verification, authorization, vendor controls. 7 items."
+      },
+      {
+        "wave": 5,
+        "qids": ["P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-040", "P1-ED-010", "P1-ED-051"],
+        "rationale": "IT-Dependent Control Activities — applied IT scenarios using the control activity framework from Wave 4. 6 items."
+      },
+      {
+        "wave": 6,
+        "qids": ["P1-EC-014", "P1-ED-072"],
+        "rationale": "Fraud Prevention — fraud triangle theory + applied purchasing fraud scenario. 2 items."
+      },
+      {
+        "wave": 7,
+        "qids": ["P1-ED-035", "P1-ED-036", "P1-ED-071"],
+        "rationale": "IT Continuity and Change Management — backup/DR + change management (standard + emergency). 3 items."
+      },
+      {
+        "wave": 8,
+        "qids": ["P1-EC-072", "P1-ED-028", "P1-ED-073"],
+        "rationale": "Monitoring — remediation, ongoing evaluations, exception reports. 3 items."
+      },
+      {
+        "wave": 9,
+        "qids": ["P1-EC-049"],
+        "rationale": "Information and Communication — whistleblower hotline. Sole I&C seed. 1 item."
+      },
+      {
+        "wave": 10,
+        "qids": ["P1-ED-046"],
+        "rationale": "Ethics — code of conduct program. Synthesis of governance, fraud, and control environment concepts. 1 item."
+      },
+      {
+        "wave": 11,
+        "qids": ["P1-ED-001", "P1-ED-066"],
+        "rationale": "Corporate Governance — three lines of defense + audit committee oversight. Capstone items integrating all Domain E concepts. 2 items."
+      }
+    ],
+    "existing_certified_pool_detail": {
+      "pack_a_section_e_certified": {
+        "count": 58,
+        "qid_range": "P1-E-001 through P1-E-084 (17 Archived/Unprocessed, 58 Certified)",
+        "key_topics": "Control environment, risk assessment, PO splitting, I&C exception reports, monitoring, SoD, three-way match, bank recon, corrective controls, physical safeguards, access controls, change management, ITGC vs app controls, input validation, vendor master file, blank check custody, credit approval, shipping prenumbering, account reconciliation, management override, fraud opportunity, SOX assessment, control deficiency severity, compensating controls, IA independence, external audit reliance, control documentation, continuous monitoring, backup/recovery, DR test, privacy, whistleblower, audit committee, remediation tracking, lockbox, perpetual vs periodic, ITGC access, inherent vs control risk, COSO monitoring, SoD cash, remediation prioritization, IT emergency bypass, vendor master file segregation, audit committee independence"
+      },
+      "pack_b_section_e_certified": {
+        "count": 75,
+        "qid_range": "P1B-E-076 through P1B-E-150",
+        "key_topics": "Internal control framework (×10), control activities (×10), internal audit function (×5), audit committee (×3), fraud prevention (×8), whistleblower programs (×3), data protection controls (×3), IT general controls (×5), application controls (×4), business continuity planning (×3), disaster recovery (×3), Sarbanes-Oxley Act (×7), ICFR (×4), COSO ERM (×2), COSO Internal Control (×3), control environment (×1)"
+      },
+      "pack_e_section_e_certified": {
+        "count": 115,
+        "core_items": "P1E-E-001 through P1E-E-075 (all Certified)",
+        "rotation_items": "P1-E-R01 through P1-E-R40 (all Certified)",
+        "key_topics": "COSO components and all 17 principles, SOX 302/404/906, internal audit types and governance, entity/activity-level controls, IT security tools, audit sampling, manual control techniques, external audit opinions, board governance, control self-assessment, PCAOB, control matrix, risk tolerance, collusion, residual risk"
+      }
+    },
+    "gap_summary": {
+      "critical_gaps": [
+        {
+          "gap": "Fraud Detection",
+          "severity": "Medium",
+          "detail": "No seed specifically addresses fraud detection mechanics (data analytics for fraud, forensic accounting, red flag identification, surprise audits). Pack E covers detective control generically (E-E-014, E-E-053) but not fraud-specific detection. Recommend: if a seed cannot be added, ensure this is covered in the broader certified pool audit.",
+          "mitigation": "Partially covered by EC-014 (fraud triangle — opportunity reduction as detection proxy) and Pack E E-R12 (detective control classification)."
+        },
+        {
+          "gap": "COSO Framework Depth",
+          "severity": "Medium",
+          "detail": "Only 1 seed (EC-008) for the entire COSO Internal Control Framework. Pack B provides 10 framework items and Pack E provides principle-level coverage, but Pack C/D Section E — which these seeds are building — will have only 1 item covering the COSO framework itself. The clone-group architecture means each seed represents its entire 5-item group topic, so the 1 seed actually covers the topic for Pack C.",
+          "mitigation": "EC-008 is the seed for a 5-item clone group. The remaining 4 clones are Archived. This is by design per the DL-012 remediation plan — 1 seed per group."
+        },
+        {
+          "gap": "Information and Communication Component",
+          "severity": "Low",
+          "detail": "Only 1 seed (EC-049) for the I&C COSO component, and it covers only the whistleblower/external reporting aspect. COSO Principles 13-15 (internal communication, external reporting, external communication) have no Pack C/D seed representation.",
+          "mitigation": "Pack E covers I&C (E-E-006) and COSO Principles 13-15 (P1E-E-029, P1E-E-069, P1E-E-037). Not a learner-pool gap, but Pack C/D Section E will have narrow I&C coverage."
+        }
+      ],
+      "overrepresented_topics": [
+        {
+          "topic": "Control Activities",
+          "seed_count": 16,
+          "percentage_of_seeds": "42%",
+          "detail": "16 of 38 seeds map to Control Activities (including IT-dependent controls). While each seed addresses a distinct control type, the batch size for control activities certification is large. Consider whether Wave 4 (7 items) and Wave 5 (6 items) can be further subdivided.",
+          "recommendation": "If batch size constraints require reduction, consider deferring: P1-ED-051 (password/authentication — covered in Pack E E-E-041), P1-EC-022 (duplicate payment — niche scenario), P1-ED-035 (backup/DR — covered in Pack E E-R31)"
+        }
+      ],
+      "no_gap_topics": [
+        "Corporate Governance — well-covered (4 seeds + extensive Pack A/B/E coverage)",
+        "Risk Assessment — well-covered (2 seeds + Pack E risk identification/analysis items)",
+        "Monitoring — well-covered (3 seeds + Pack A/E extensive coverage)",
+        "Segregation of Duties — well-covered (5 seeds + strong Pack A/E coverage)",
+        "COSO ERM — well-covered (2 seeds + Pack E ERM components/strategy items)",
+        "Ethics — covered (1 seed + Pack A whistleblower items)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "document": "SESSION321_READINESS_ENGINE_SPEC",
+  "session": "S321",
+  "board": "D — Readiness Gate Engine",
+  "phase": "2 — Gate Engine",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+  "depends_on": ["SESSION321_GATE_NEG1_SPEC.json", "SESSION321_CANONICAL_REGISTRY_SPEC.json"],
+
+  "purpose": "Define the Readiness Gate Engine — the state machine that governs every item's transition through the certification lifecycle. Replaces the informal, agent-discretionary state transitions of Framework v1 with a formal, automated, auditable state machine. Every question_state change must pass through a documented readiness gate with explicit entry/exit conditions.",
+
+  "motivation": {
+    "v1_problem": "Framework v1 has no formal state machine. question_state transitions from 'Unprocessed' → 'In Audit' → 'Certified' are made at agent discretion without documented gate conditions. S200 found 89.5% readiness failure — 34/38 Domain E seeds arrived at certification with 2+ concurrent defects. Items entered 'Certified' without detection of DL-008 (539 occurrences), DL-026 (1,005 items), DL-013 (2,587 fields), DL-021 (100 items), DL-030 (5 answer-key errors). The governance guard Rule 2 BLOCK was activated AFTER thousands of items were already Certified.",
+    "target": "A formal 4-state machine where every transition requires passing a specific readiness gate. No agent may change question_state directly — all state transitions are mediated by the Readiness Gate Engine which enforces gate preconditions."
+  },
+
+  "state_machine": {
+    "description": "Four primary readiness states. Every item is in exactly one state at any time.",
+    "states": {
+      "BLOCKED": {
+        "label": "BLOCKED",
+        "description": "Item has failed at least one mandatory gate precondition. Cannot proceed to any review activity. Must be triaged to identify the specific blocking defect(s) and the remediation path.",
+        "entry_conditions": "Any of: Gate -1 failure (identity validation FAIL), Gate 0 failure (JSON parse error), Gate 1 failure (structural defect), Gate 3 failure (identity reconciliation FAIL).",
+        "exit_conditions": "All blocking gate preconditions must be met. Item transitions to REMEDIATE (if content work needed) or directly to READY (if gate failure was a false positive or environment issue).",
+        "allowed_actions": ["Triaged", "Escalated to Governance Board"],
+        "forbidden_actions": ["question_state assignment", "Certified designation", "Any explanation or content modification"],
+        "governance": "Governance Board Tier 1 SESSION_READY: if any BLOCKED items are in scope and not yet triaged → P0 blocker. Session cannot start review phase."
+      },
+      "REMEDIATE": {
+        "label": "REMEDIATE",
+        "description": "Item has passed identity validation (Gate -1) and JSON integrity (Gate 0) but has structural content defects that require human/agent remediation. The item is in the remediation queue, not the review queue.",
+        "entry_conditions": "Item passed Gate -1 and Gate 0. Item has one or more defects detected by Gate 1 (DL-008, DL-026, DL-016) or Gate 2 (DL-013 boilerplate). Defects are logged with specific DL-IDs and remediation targets.",
+        "exit_conditions": "All logged defects are remediated and verified. Gate 1 and Gate 2 re-run and PASS. EWPattern updated (if DL-008/DL-026 remediation). Content hash re-computed and recorded. REVISION_HISTORY.md entry created for each remediated item.",
+        "allowed_actions": ["Fix structural defects (DL-008: clear EW[CC] slot, DL-026: author distractor explanations, DL-013: remove boilerplate, DL-016: reconcile metadata offset)"],
+        "forbidden_actions": ["question_state → Certified (bypasses quality review)", "Full content rewrites (structural remediation only — content quality review happens in READY state via Quality Board)"],
+        "governance": "Every REMEDIATE → READY transition must be paired with a REVISION_HISTORY.md entry documenting the specific defect, remediation action, and verification result."
+      },
+      "READY": {
+        "label": "READY",
+        "description": "Item is structurally clean (all gates pass) and ready for content quality review by the Quality Board. This is the handoff from automated scanning to agent review. In READY state, the item has no KNOWN structural defects — but quality (accuracy, distractor quality, explanation quality) has not yet been assessed.",
+        "entry_conditions": "Gate -1 PASS (identity valid). Gate 0 PASS (JSON integrity). Gate 1 PASS (no structural defects). Gate 2 PASS (no content warnings that block review). Gate 3 PASS (identity reconciliation).",
+        "exit_conditions": "Quality Board review complete. All 10 CAQS dimensions scored. At least 2 of 3 Quality Board agents AGREE on CERTIFIABLE threshold (≥90/100 CAQS score). Certification Board governance-sufficiency review complete. question_state is eligible for transition to CERTIFY.",
+        "allowed_actions": ["Quality Board content review (3-agent unified pass)", "Certification Board governance-sufficiency review", "Delta review classification routing (only changed items get full review)"],
+        "forbidden_actions": ["Bypassing Quality Board review", "Certification without Certification Board adjudication", "Changing question_state to 'Certified' before Certification Board verdict"],
+        "governance": "Governance Board must authorize each READY → CERTIFY batch. No batch may exceed 30 items (Rule 5)."
+      },
+      "CERTIFY": {
+        "label": "CERTIFY",
+        "description": "Item has passed all gates, passed Quality Board review, and received Certification Board approval. This is the final state before a batch certification action sets question_state = 'Certified'.",
+        "entry_conditions": "Quality Board verdict: CERTIFIABLE (≥90/100 CAQS score, ≥2 of 3 agents agree). Certification Board verdict: APPROVED. Governance Board Tier 1 SESSION_READY: AUTHORIZED. All 5 gate reports current for this session. REVISION_HISTORY.md entry prepared.",
+        "exit_conditions": "Certification action executed: question_state set to 'Certified'. Registry updated. REVISION_HISTORY.md entry recorded. Session Tend hashes match T0 (or G1-G5 reconciled). Backup protocol verified.",
+        "allowed_actions": ["Set question_state = 'Certified' (Certification Board ONLY)", "Update registry delivery_pool_eligible", "Record certification in REVISION_HISTORY.md"],
+        "forbidden_actions": ["Bypassing backup protocol", "Certifying items without T0 hashes captured", "Certifying items in batches >30 without BLOCK-AUTHORIZED marker"],
+        "governance": "Certification is the ONLY action that changes question_state. Certification Board is the ONLY board authorized to execute certification. Governance Board Tier 2 SESSION_CLOSE must verify all certification actions before session close."
+      }
+    },
+
+    "state_transition_rules": {
+      "description": "Formal transition rules governing all valid and invalid state changes.",
+      "valid_transitions": [
+        {"from": "BLOCKED", "to": "REMEDIATE", "condition": "All blocking gate preconditions met. Remediation path identified."},
+        {"from": "BLOCKED", "to": "READY", "condition": "Gate failure was a false positive (environment issue, extraction artifact, already-clean). No actual defects. Governance override required."},
+        {"from": "REMEDIATE", "to": "READY", "condition": "All defects remediated and verified. Gates 1-2 re-run and PASS."},
+        {"from": "REMEDIATE", "to": "BLOCKED", "condition": "Remediation introduced new defects. Gate 1-2 re-run and FAIL."},
+        {"from": "READY", "to": "CERTIFY", "condition": "Quality Board CERTIFIABLE + Certification Board APPROVED + Governance AUTHORIZED."},
+        {"from": "READY", "to": "REMEDIATE", "condition": "Quality Board found defects requiring structural remediation. Back to remediation queue."},
+        {"from": "CERTIFY", "to": "Certified (question_state)", "condition": "Certification action executed, governance verified, backup confirmed."}
+      ],
+      "forbidden_transitions": [
+        {"from": "*", "to": "Certified", "reason": "question_state = 'Certified' can ONLY be set from the CERTIFY readiness state AFTER Certification Board authorization. No agent may set question_state directly."},
+        {"from": "BLOCKED", "to": "CERTIFY", "reason": "Cannot jump from blocked to certifiable — must pass through REMEDIATE or READY."},
+        {"from": "REMEDIATE", "to": "CERTIFY", "reason": "Cannot jump from remediation to certifiable — must pass through Quality Board review (READY state)."},
+        {"from": "CERTIFY", "to": "BLOCKED", "reason": "Once certified, item cannot be RE-blocked without formal decertification process (Archived state transition). Defects found post-certification are handled via defect cross-reference + delivery pool block, not state rollback."}
+      ]
+    }
+  },
+
+  "readiness_gate_pipeline": {
+    "description": "The readiness engine processes items through 5 readiness gates. Each gate is a decision point that routes items to the appropriate state.",
+    "gates": [
+      {
+        "gate_id": "RG-1",
+        "name": "Identity Readiness Gate",
+        "consumes": "Gate -1 identity validation report",
+        "decision": "Gate -1 all 8 checks PASS → route to next gate. Gate -1 any check FAIL → state = BLOCKED.",
+        "output": "List of items with assigned states: BLOCKED or IN_PIPELINE."
+      },
+      {
+        "gate_id": "RG-2",
+        "name": "Structural Readiness Gate",
+        "consumes": "Gate 1 structural scan + Gate 2 content scan reports",
+        "decision": "Gate 1/2 all scans PASS → state = READY. Gate 1/2 any scan FAIL → state = REMEDIATE (if fixable) or BLOCKED (if unfixable).",
+        "output": "List of items with assigned states: READY, REMEDIATE, or BLOCKED."
+      },
+      {
+        "gate_id": "RG-3",
+        "name": "Quality Readiness Gate",
+        "consumes": "Quality Board verdict (CAQS 10-dimension scores, agent consensus)",
+        "decision": "Quality Board CERTIFIABLE + ≥2/3 agents agree → state = CERTIFY. Quality Board NOT CERTIFIABLE or <2/3 agents agree → state = REMEDIATE.",
+        "output": "List of items with assigned states: CERTIFY or REMEDIATE."
+      },
+      {
+        "gate_id": "RG-4",
+        "name": "Governance Readiness Gate",
+        "consumes": "Certification Board verdict, Governance Board Tier 1 authorization, batch size check",
+        "decision": "Certification Board APPROVED + Governance AUTHORIZED + batch ≤ 30 items → certification action authorized. Any FAIL → state = BLOCKED (governance hold).",
+        "output": "List of items authorized for certification."
+      },
+      {
+        "gate_id": "RG-5",
+        "name": "Delivery Pool Safety Gate",
+        "consumes": "Registry delivery_pool_eligible index, defect manifest, known-defective QID list",
+        "decision": "delivery_pool_eligible = true AND is_known_defective = false AND is_delivery_blocked = false → item is LIVE in delivery pool. Any FAIL → delivery pool excluded.",
+        "output": "Final delivery pool inventory (Certified + clean)."
+      }
+    ]
+  },
+
+  "readiness_scoring": {
+    "description": "Portfolio-level readiness metric computed by the Readiness Gate Engine.",
+    "computation": {
+      "total_items_in_scope": "Sum of all items in current session scope (all states)",
+      "items_ready_or_certify": "Sum of items in READY + CERTIFY states",
+      "items_blocked": "Sum of items in BLOCKED state",
+      "items_remediate": "Sum of items in REMEDIATE state",
+      "readiness_score": "items_ready_or_certify / total_items_in_scope",
+      "readiness_status": "READY (score ≥ 0.95) | IN_PROGRESS (0.70 ≤ score < 0.95) | NEEDS_WORK (0.50 ≤ score < 0.70) | BLOCKED (score < 0.50)",
+      "v1_baseline": "89.5% readiness failure rate (S200)",
+      "v2_target": "<15% readiness failure rate (projected from S201 pre-flight gate analysis)"
+    }
+  },
+
+  "implementation_notes": {
+    "script": "Node.js script: scripts/readiness_gate_engine.js. Consumes gate reports from Gate -1 through Gate 5. Produces readiness state assignments for all items.",
+    "integration": "The Readiness Gate Engine is consumed by: Governance Board (Tier 1 SESSION_READY — must confirm 0 BLOCKED items blocking session start), Quality Board (routes items based on readiness state), Certification Board (only processes items in CERTIFY state).",
+    "delta_aware": "The engine is delta-review aware: items classified as 'no_change' bypass RG-2 through RG-4 entirely — they skip from identity validation directly to CERTIFY state (existing certification inherited). Items classified as 'structural_fix' skip RG-3 (human review) — automated gate re-check only. Items classified as 'metadata_change' receive partial RG-3 review (psychometric calibration only).",
+    "governance_logging": "Every state transition is logged with: timestamp, session ID, from_state, to_state, triggering_gate, gate_report_id, REVISION_HISTORY.md entry requirement (if content change)."
+  },
+
+  "success_criteria": {
+    "SC-BD-01": "All 4 readiness states (BLOCKED, REMEDIATE, READY, CERTIFY) formally defined with entry/exit conditions.",
+    "SC-BD-02": "Allowed and forbidden actions per state explicitly listed.",
+    "SC-BD-03": "Valid state transitions fully enumerated (7 valid transitions).",
+    "SC-BD-04": "Forbidden state transitions fully enumerated (4 forbidden transitions).",
+    "SC-BD-05": "Readiness gate pipeline (RG-1 through RG-5) defined with inputs, decisions, and outputs.",
+    "SC-BD-06": "Portfolio-level readiness scoring formalized (readiness_score + readiness_status).",
+    "SC-BD-07": "Delta-review awareness integrated — no_change items skip gates, metadata_change items get partial review.",
+    "SC-BD-08": "Governance integration specified — Governance Board Tier 1/Tier 2 gating, batch size enforcement (Rule 5).",
+    "SC-BD-09": "question_state = 'Certified' can ONLY be set from CERTIFY state — no agent may set directly.",
+    "SC-BD-10": "Specification is implementable — S322 can code the engine from this document alone.",
+    "SC-BD-11": "0 certification actions, 0 content modifications, 0 pack-file writes."
+  }
+}

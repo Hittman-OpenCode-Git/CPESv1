@@ -1,0 +1,140 @@
+{
+  "session": "S867",
+  "date": "2026-07-28",
+  "purpose": "Local object quality calibration for Cohort C staging payloads",
+  "files": {
+    "analyze": {
+      "exists": true,
+      "parseable": true,
+      "total_items": 50,
+      "expected_count": 50,
+      "count_match": true,
+      "unique_qids": 50,
+      "qid_duplicates": 0,
+      "cognitive_level": {
+        "Analyze": 50
+      },
+      "difficulty": {
+        "Moderate": 46,
+        "Difficult": 4
+      },
+      "difficulty_score": {
+        "3": 46,
+        "4": 4
+      },
+      "section_distribution": {
+        "A": 10,
+        "B": 8,
+        "C": 10,
+        "D": 10,
+        "E": 7,
+        "F": 5
+      },
+      "correct_choice_distribution": {
+        "D": 12,
+        "B": 21,
+        "C": 10,
+        "A": 7
+      },
+      "dl008_violations": [],
+      "dl026_violations": [],
+      "dl013_violations": [],
+      "missing_fields": [],
+      "empty_stems": [],
+      "short_explanations": [],
+      "boilerplate_hits": [],
+      "ew_field_stats": {
+        "total_non_cc_slots": 150,
+        "non_cc_avg_length": 690,
+        "non_cc_min": 433,
+        "non_cc_max": 997,
+        "ec_avg_length": 1418,
+        "ec_min": 937
+      },
+      "ec_min_length": 937,
+      "ew_non_cc_min_length": 433,
+      "ew_non_cc_max_length": 997,
+      "ew_non_cc_total_chars": 103535,
+      "ec_total_chars": 70900,
+      "passed": true,
+      "calibration": {
+        "cognitive_level_conforms": true,
+        "difficulty_range_valid": true,
+        "cc_balance_ok": true,
+        "ec_quality": true
+      }
+    },
+    "evaluate": {
+      "exists": true,
+      "parseable": true,
+      "total_items": 25,
+      "expected_count": 25,
+      "count_match": true,
+      "unique_qids": 25,
+      "qid_duplicates": 0,
+      "cognitive_level": {
+        "Evaluate": 25
+      },
+      "difficulty": {
+        "Difficult": 25
+      },
+      "difficulty_score": {
+        "4": 25
+      },
+      "section_distribution": {
+        "A": 4,
+        "B": 4,
+        "C": 5,
+        "D": 5,
+        "E": 4,
+        "F": 3
+      },
+      "correct_choice_distribution": {
+        "B": 11,
+        "C": 6,
+        "A": 5,
+        "D": 3
+      },
+      "dl008_violations": [],
+      "dl026_violations": [],
+      "dl013_violations": [],
+      "missing_fields": [],
+      "empty_stems": [],
+      "short_explanations": [],
+      "boilerplate_hits": [],
+      "ew_field_stats": {
+        "total_non_cc_slots": 75,
+        "non_cc_avg_length": 1338,
+        "non_cc_min": 808,
+        "non_cc_max": 2105,
+        "ec_avg_length": 2414,
+        "ec_min": 1553
+      },
+      "ec_min_length": 1553,
+      "ew_non_cc_min_length": 808,
+      "ew_non_cc_max_length": 2105,
+      "ew_non_cc_total_chars": 100386,
+      "ec_total_chars": 60347,
+      "passed": true,
+      "calibration": {
+        "cognitive_level_conforms": true,
+        "difficulty_range_valid": true,
+        "cc_balance_ok": true,
+        "ec_quality": true
+      }
+    }
+  },
+  "summary": {
+    "total_items_staged": 75,
+    "analyze_items": 50,
+    "evaluate_items": 25,
+    "dl008_exposure": 0,
+    "dl026_exposure": 0,
+    "boilerplate_instances": 0,
+    "all_files_pass": true,
+    "calibration_confidence": 1,
+    "halt_conditions_triggered": [],
+    "all_checks_pass": true,
+    "status": "READY_FOR_STAGING"
+  }
+}

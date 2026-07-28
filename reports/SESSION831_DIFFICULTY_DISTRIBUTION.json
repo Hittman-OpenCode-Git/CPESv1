@@ -1,0 +1,89 @@
+{
+  "session": "S831",
+  "title": "Difficulty Calibration Audit — Distribution Analysis",
+  "generated": "2026-07-27",
+  "agents_contributing": ["A", "B", "C", "D", "E", "F", "G", "H"],
+  "status": "COMPLETE",
+  
+  "current_state": {
+    "total_mcq_items": 2540,
+    "total_certified": 2298,
+    "certified_pct": 90.5,
+    "difficulty_global": {
+      "Easy_1": {"count": 536, "pct": 21.1, "target_pct": 15.0, "delta_pp": 6.1, "status": "OVER"},
+      "Moderate_Easy_2": {"count": 693, "pct": 27.3, "target_pct": 20.0, "delta_pp": 7.3, "status": "OVER"},
+      "Moderate_3": {"count": 1226, "pct": 48.3, "target_pct": 30.0, "delta_pp": 18.3, "status": "CRITICAL_OVER"},
+      "Difficult_4": {"count": 85, "pct": 3.3, "target_pct": 25.0, "delta_pp": -21.7, "status": "CRITICAL_UNDER"},
+      "Very_Difficult_5": {"count": 0, "pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "status": "CRITICAL_UNDER"}
+    },
+    "blooms_global": {
+      "Remember": {"count": 10, "pct": 0.4, "target_pct": 5.0, "delta_pp": -4.6},
+      "Understand": {"count": 1276, "pct": 50.2, "target_pct": 15.0, "delta_pp": 35.2},
+      "Apply": {"count": 1182, "pct": 46.5, "target_pct": 40.0, "delta_pp": 6.5},
+      "Analyze": {"count": 10, "pct": 0.4, "target_pct": 25.0, "delta_pp": -24.6},
+      "Evaluate": {"count": 0, "pct": 0.0, "target_pct": 15.0, "delta_pp": -15.0}
+    }
+  },
+
+  "per_pack_difficulty": {
+    "A": {"total": 500, "certified": 481, "Easy": 98, "ModEasy": 219, "Moderate": 183, "Difficult": 0, "VDiff": 0},
+    "B": {"total": 500, "certified": 500, "Easy": 132, "ModEasy": 93, "Moderate": 246, "Difficult": 29, "VDiff": 0},
+    "C": {"total": 500, "certified": 388, "Easy": 99, "ModEasy": 108, "Moderate": 279, "Difficult": 14, "VDiff": 0},
+    "D": {"total": 500, "certified": 389, "Easy": 98, "ModEasy": 98, "Moderate": 284, "Difficult": 20, "VDiff": 0},
+    "E": {"total": 540, "certified": 540, "Easy": 109, "ModEasy": 175, "Moderate": 234, "Difficult": 22, "VDiff": 0}
+  },
+
+  "per_pack_blooms": {
+    "A": {"Remember": 3, "Understand": 215, "Apply": 281, "Analyze": 1, "Evaluate": 0},
+    "B": {"Remember": 41, "Understand": 130, "Apply": 326, "Analyze": 3, "Evaluate": 0},
+    "C": {"Remember": 11, "Understand": 255, "Apply": 231, "Analyze": 3, "Evaluate": 0},
+    "D": {"Remember": 7, "Understand": 260, "Apply": 230, "Analyze": 3, "Evaluate": 0},
+    "E": {"Remember": 10, "Understand": 416, "Apply": 114, "Analyze": 0, "Evaluate": 0}
+  },
+
+  "case_study_difficulty": {
+    "total_items": 745,
+    "Easy": 7, "ModEasy": 164, "Moderate": 308, "Difficult": 266, "VDiff": 0,
+    "note": "Case studies have 35.7% Difficult (vs 3.3% MCQ) — much better calibrated. Zero VDiff same as MCQ."
+  },
+
+  "root_cause": {
+    "primary": "Template-rotation authoring pipeline assigned difficulty and Bloom's labels by rotation position, not cognitive assessment",
+    "secondary": "No Analyze/Evaluate items were ever authored. 96.7% Understand+Apply creates a bimodal pool incapable of reaching the upper difficulty tiers.",
+    "structural": "DL-031 (definition-match items labeled Moderate) inflates the Moderate band by ~800-1,000 items, masking the true difficulty profile."
+  },
+
+  "phase_1_recalibration_plan": {
+    "approach": "Coordinated sweep: ~807 items recalibrated across all 5 packs to reach Phase 1 intermediate targets",
+    "moderate_to_difficult": 423,
+    "moderate_to_very_difficult": 127,
+    "other_moves": 257,
+    "post_phase1_distribution": {
+      "Easy": "~20%", "ModEasy": "~20%", "Moderate": "~35%", "Difficult": "~20%", "VDiff": "~5%"
+    },
+    "execution_order": "C → D → B → A → E (simplest to most complex)",
+    "packs_requiring_2_sweeps": ["A (48.8%)", "E (33.7%)"],
+    "packs_in_1_sweep": ["B (30.6%)", "C (23.8%)", "D (21.8%)"],
+    "note": "Very Difficult bridge limited to 22 feasible recalibrations (0.87%) — Phase 2 content creation needed for full 10%"
+  },
+
+  "critical_findings": [
+    "F-01: ZERO Very Difficult items (0/2,540) — no learner practice at the hardest exam tier",
+    "F-02: Only 85 Difficult items (3.3%) — CMA exam has ~25% Difficult items",
+    "F-03: Moderate inflated by 18.3pp (48.3% vs 30% target) — 464 items surplus",
+    "F-04: ZERO Evaluate items (0/2,540) — no professional judgment testing",
+    "F-05: Analyze+Evaluate combined = 0.4% vs 40% target — 39.6pp gap",
+    "F-06: Understand+Apply = 96.7% — the pool cannot simulate actual CMA cognitive demands",
+    "F-07: DL-031 affects 800-1,000 items — definition-match items labeled Moderate",
+    "F-08: Pack A has zero Difficult items despite 96.2% certification — worst calibration",
+    "F-09: Pack E is 77% Understand — functions as a terminology quiz, not an exam section",
+    "F-10: Bloom's and Difficulty gaps are causally linked — requiring content expansion, not just relabeling"
+  ],
+
+  "governance_check": {
+    "governance_guard": "27/27 PASS (S811 T0)",
+    "certified_dl008": "0 verified (CURRENT_BASELINES.md)",
+    "certified_dl026": "MINIMAL — no learner-pool exposure",
+    "identity_integrity": "2,298/2,540 Certified confirmed by direct grep"
+  }
+}

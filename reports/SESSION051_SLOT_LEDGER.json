@@ -1,0 +1,43 @@
+{
+  "session": "SESSION051",
+  "phase": 3,
+  "date": "2026-07-28",
+  "tracking": {
+    "phase_1_completed": "S899 (20 items)",
+    "phase_2_completed": "SESSION050 (20 items)",
+    "phase_3_completed": "SESSION051 (20 items)",
+    "cumulative_replaced": 60,
+    "remaining_archived": 72,
+    "total_archived_original": 132
+  },
+  "slots_replaced": [
+    {"index": 41, "qid": "P1-EC-002", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 6 — risk identification — third-party vendor concentration"},
+    {"index": 42, "qid": "P1-EC-006", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 4 — board expertise — audit committee composition"},
+    {"index": 43, "qid": "P1-EC-007", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO ERM — risk culture — tone at the top and whistleblower retaliation"},
+    {"index": 44, "qid": "P1-EC-011", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 7 — risk severity — inherent vs. residual risk after control failure"},
+    {"index": 45, "qid": "P1-EC-012", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 3 — organizational structure — decentralized control consistency"},
+    {"index": 46, "qid": "P1-EC-013", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 17 — monitoring — continuous vs. periodic evaluation after ERP migration"},
+    {"index": 47, "qid": "P1-EC-015", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 14 — internal communication — control deficiency escalation to board"},
+    {"index": 48, "qid": "P1-EC-016", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 13 — information quality — data integrity after system integration"},
+    {"index": 49, "qid": "P1-EC-017", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO ERM — risk response — evaluating accept vs. transfer for cyber insurance gap"},
+    {"index": 50, "qid": "P1-EC-018", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 9 — fraud risk — override of controls by senior management"},
+    {"index": 51, "qid": "P1-ED-003", "pack": "D", "section": "E", "status": "replaced", "new_topic": "Three Lines of Defense — fourth-line external assurance reliance gaps"},
+    {"index": 52, "qid": "P1-ED-004", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 5 — accountability — performance measure alignment with controls"},
+    {"index": 53, "qid": "P1-ED-006", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 16 — monitoring — evaluating monitoring frequency against risk velocity"},
+    {"index": 54, "qid": "P1-ED-007", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO ERM — strategy and objective-setting — evaluating risk to M&A integration"},
+    {"index": 55, "qid": "P1-ED-008", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 10 — control activities — evaluating compensating controls after workforce reduction"},
+    {"index": 56, "qid": "P1-ED-011", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 1 — integrity and ethics — evaluating code of conduct enforcement gaps"},
+    {"index": 57, "qid": "P1-ED-012", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 15 — external communication — evaluating SOC 2 Type II scope adequacy"},
+    {"index": 58, "qid": "P1-ED-013", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 12 — control activities — evaluating IT-dependent manual control reliability"},
+    {"index": 59, "qid": "P1-ED-017", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 8 — fraud risk — pressure/incentive assessment in sales commission structure"},
+    {"index": 60, "qid": "P1-ED-018", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 2 — board independence — assessing audit committee financial expert qualification"}
+  ],
+  "remaining_by_section": {
+    "EC": 36,
+    "FC": 0,
+    "ED": 36,
+    "FD": 0
+  },
+  "hc1_note": "FC and FD sections have 0 archived items (all MISSING state — no question_state). Prior slot ledger counts of 51(EC), 52(FC), 51(ED), 49(FD) were incorrect. Actual archived inventory is 92 total (46 EC + 46 ED). 60 replaced across 3 sessions, 72 remaining.",
+  "next_session": "SESSION052 — Phase 4 (additional archived clone replacements, EC/ED sections, scope TBD based on remaining inventory)"
+}

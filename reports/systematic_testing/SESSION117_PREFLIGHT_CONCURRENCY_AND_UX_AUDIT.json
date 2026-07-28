@@ -1,0 +1,45 @@
+{
+  "session": "S117",
+  "type": "PreflightConcurrencyAndUXAudit",
+  "timestamp": "2026-07-25T21:00:00.000Z",
+  "preflight": {
+    "testResults": {
+      "readiness": "37/37 PASS",
+      "calibration": "18/18 PASS",
+      "tutoringSafety": "74/74 PASS",
+      "stageC_pre": "89/89 PASS (S115 baseline)"
+    },
+    "totalPreflight": "218/218 PASS",
+    "modelVersion": "S111-1.0",
+    "thresholdsAllUnchanged": true,
+    "stabilityHighConfirmed": 75,
+    "accuracyGoodConfirmed": 75
+  },
+  "concurrencyGuard": {
+    "packFileHashes": {
+      "pack_a": "0FAD86A408BCC1FA6931858A39A26F02",
+      "pack_b": "2DAB932DA55A11B50BE1F2AFD29ED7C9",
+      "pack_c": "D758BDF656CF56CAAB2689A16D771C16",
+      "pack_d": "9F9DBF7A2889762A28133D005E522FA5",
+      "pack_e": "3B06740FA8DAB814E9AE9C219A60B5D8"
+    },
+    "caseFileHashes": {
+      "scored_cases": "B8277120A65D7DD820D642D5267A17A8",
+      "scored_cases2": "CD8C4E53BD85FFBC095CF72426DB1617",
+      "scored_cases3": "ACC1C22E4AC80BF71E281B6A604FAF1C",
+      "scored_cases4": "B1424FA18842234276A7DA862D5685F3",
+      "scored_cases5": "6868ED05D2FDDE67E9EEEA1AB5E7031F"
+    },
+    "no500SeriesChanges": true,
+    "no700SeriesChanges": true,
+    "workingDiffClean": true
+  },
+  "uxInventory": {
+    "greetingStateMachine": "Located — ASK_RETURNING → SHOW_STUDENT_ROLL / CREATE_NEW_STUDENT → READY_TO_TUTOR",
+    "studentRollRendering": "Located — renderView() at line ~2195, SHOW_STUDENT_ROLL branch",
+    "selectStudentFromRoll": "Located — line ~220, loads _learnerState via MayLearnerState.save()",
+    "existingOnboardingCopy": "Replaced — was 'Welcome back — have we met before?' / 'Yes — I've been here before' / 'No — I'm new here'",
+    "existingWelcomeLines": "Replaced — was static profile summary + weak areas + progress signals",
+    "writableScope": ["may-core.js", "may-learner-state.js", "scripts/test_may_stagec.js"]
+  }
+}

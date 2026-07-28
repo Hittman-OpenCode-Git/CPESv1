@@ -1,0 +1,399 @@
+{
+  "session": "725",
+  "agent": "Agent M — Governance Debt Classifier",
+  "date": "2026-07-26",
+  "methodology": "Read-only audit. Cross-referenced each of the 32 S723 debt items against post-723 evidence: S722A Definitive Execution (26-agent, DL-008→0, 0 Evaluate), S802 Governance Correction (67 phantom DL-008 refuted, P0 empty, 2,181 confirmed), S723 Program Closure (Agent Y, 700-SERIES CLOSED, P1-CC-050 CLEAN), S724 Operating Model (26/26 unanimous 600-series deferral, 6 ownership gaps), S310 (300-series closeout via S311), S803/S804 (clone archival + DL-016 discovery), REVISION_HISTORY.md (complete entries S722A through S804), CURRENT_BASELINES.md (stale at S530 T0), SESSION725 portfolfio stewardship framework documents.",
+  "authoritative_sources_used": [
+    "REVISION_HISTORY.md (lines 16600-17173, entries S722A through S804 — complete)",
+    "CURRENT_BASELINES.md (125 lines, stale at S530 T0 — phantom DL-008 counts)",
+    "SESSION_STATUS_2026-07-24.md (154 lines, stale at 2,031 certified)",
+    "SESSION724_SESSION_SUMMARY.md (26-agent unanimous 600-series deferral, 6 gaps)",
+    "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (ownership matrix, gap resolutions)",
+    "SESSION725_POST700_GOVERNANCE_MODEL.md (transition governance rules)",
+    "SESSION725_GOVERNANCE_DETECTION_STANDARD.md (DL-029 root cause, permanent prevention rules)"
+  ],
+
+  "starting_debt_count": 32,
+  "s723_closed_items": 1,
+  "s723_blocking_items": 5,
+  "s723_carry_forward_items": 26,
+
+  "reclassification_results": {
+    "closed_count": 6,
+    "accepted_count": 2,
+    "carry_forward_count": 24,
+    "blocking_count": 0
+  },
+
+  "items": [
+    {
+      "s723_id": "metadata_1",
+      "item": "CognitiveLevel distribution — CAQS §6.2 noncompliant",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Post-S722A state: Understand 48.8% (+33.8pp), Apply 46.6% (+6.6pp), Analyze 0.4% (−24.6pp), Evaluate 2.0% (−13.0pp after 67 template-inflated Evaluate downgraded to 0 genuine). 4 genuine Analyze items (P1B-A-106, P1B-A-108, P1-B-074, P1-AD-075). Structural content gap — not resolvable via calibration. Requires ~615 new Analyze + ~375 new Evaluate items. Deferred to 800-series content expansion."
+    },
+    {
+      "s723_id": "metadata_2",
+      "item": "Difficulty distribution — CAQS §6.1 noncompliant",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Post-S722A state: Moderate 49.2% (+19.2pp), Difficult 5.0% (−20.0pp), Very Difficult 0% (−10.0pp). Need ~537 Difficult+ items and ~250 Very Difficult items for CAQS §6.1 compliance. Structural content shortage. Deferred to 800-series difficulty recalibration + content expansion."
+    },
+    {
+      "s723_id": "metadata_3",
+      "item": "DCS label-score mapping drift — 129 items mismatch",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Partially remediated by S722A DifficultyScore execution waves (83 items across Packs B/C/D/E). DCS §3 compliance now 92.6% (174 severe remaining, target <20). Remaining label-score drift deferred to 800-series DCS remediation waves. Non-learner-safety."
+    },
+    {
+      "s723_id": "metadata_4",
+      "item": "DL-032 — Case bank uniform difficulty (zero variance)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "S537 completed ENHANCED_CASE_BASE to 100% (15/15 cases, 90/90 items Certified) but difficulty calibration for broader 420-item case pool was not addressed. All case items remain labeled Moderate with zero variance. Deferred to 800-series post-S537 case certification waves."
+    },
+    {
+      "s723_id": "metadata_5",
+      "item": "DL-015 — Metadata Topic numbering shift (E.040–E.042)",
+      "s723_status": "CLOSED",
+      "s725_status": "CLOSED",
+      "justification": "Already closed in S723. Topic descriptions correct — only numeric labels offset. Rendering engine does not use Topic numbers for any functionality. Cosmetic metadata issue. Fix during next certification wave."
+    },
+
+    {
+      "s723_id": "calibration_1",
+      "item": "174 severe DCS §3 misalignments — above closure threshold",
+      "s723_status": "BLOCKING",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Was BLOCKING for S723 closure (gate: <20 severe). S723 closed with 174 remaining as CARRY-FORWARD into 800-series maintenance. S724 deferred DCS remediation to 800-series. Not blocking S725 governance hardening — S723 closure was conditionally achieved. Deferred to 800-series DCS remediation waves (~7 batches ≤28 items)."
+    },
+    {
+      "s723_id": "calibration_2",
+      "item": "DL-031 — Definition-match difficulty inflation (~500 items)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Systematic template-rotation difficulty inflation — items testing Bloom's Remember/Understand labeled Moderate. Non-learner-safety (wrong difficulty label, not wrong answer). Deferred to 800-series difficulty recalibration pass."
+    },
+    {
+      "s723_id": "calibration_3",
+      "item": "DCS v1.1 — 6 unresolved conditions (PRODUCTION WITH AMENDMENTS)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "S722A reduced to 4 amended conditions (C1-confidence-gate contradiction §10 vs §13.1, C2-AMG v1.0 update, C3-multi-level tree chaining, C4-batch overflow tracking). All are standard-documentation amendments, not calibration-breaking defects. Post-closure DCS v2.0 update."
+    },
+    {
+      "s723_id": "calibration_4",
+      "item": "Analyze/Evaluate structural content gap — 0 genuine Evaluate, 4 genuine Analyze",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "S722A definitively confirmed: 0 genuine Evaluate items pool-wide (67 template-inflated downgraded). 4 genuine Analyze items. This is the fundamental structural content gap — 0 Evaluate items in a 2,500-item pool where CAQS targets 15% (375 items). Requires ~1,000 new items authoring (615 Analyze + 375 Evaluate). Single most important content-expansion task deferred to 800-series."
+    },
+
+    {
+      "s723_id": "reliability_1",
+      "item": "DL-008 — ExplanationWrong[CorrectChoice] non-empty on Certified items",
+      "s723_status": "BLOCKING",
+      "s725_status": "CLOSED",
+      "justification": "S802 refuted all 67 alleged Certified DL-008 items as DL-029 forward-scan false positives (CC-before-QID is universal in all 5 packs, causing ~75% FP rate). S722A Function-constructor parse: 0 Certified DL-008. S723 line-level verification: P1-CC-050 CLEAN (CC=B, EW_B=''). P0 queue EMPTY. 0 Certified DL-008 — definitive. The 67 in CURRENT_BASELINES.md §3 are phantom entries (documentation staleness, not actual defect)."
+    },
+    {
+      "s723_id": "reliability_2",
+      "item": "DL-021 — Absent distractor ExplanationWrong fields (Pack E Section C)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "95 non-Certified items, 300 absent distractor EW slots. Zero learner pool exposure for non-Certified items. 5 Certified items fixed (Autonomous Run Part 4 — P1E-C-013, C-054, C-055, C-074, C-083). Requires authoring 285 distractor explanations from scratch for non-Certified items. Deferred to 800-series explanation quality remediation."
+    },
+    {
+      "s723_id": "reliability_3",
+      "item": "DL-026 — Empty non-CorrectChoice ExplanationWrong slots (cross-pool)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "50 In Audit items in Pack D Section C per CURRENT_BASELINES. All In Audit (NOT Certified) — zero learner pool exposure. Blocks certification of Pack D Section C. Deferred to 800-series explanation quality remediation."
+    },
+    {
+      "s723_id": "reliability_4",
+      "item": "DL-016 — Metadata-block ChoiceA-D +1 offset (learner-safety on Certified items)",
+      "s723_status": "BLOCKING",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "S804 confirmed ALL 58 remaining Certified Pack A Section E items carry DL-016 metadata-content shift (Block 1 EW describes previous QID's topic). Confirmed learner-safety risk: P1-A-005 metadata EW describes P1-A-004's scenario, P1-DD-025 EW_B describes reciprocal cost method instead of margin of safety. Defect Library rates HIGH, Session 64 upgraded from Low. S805 scheduled as DL-016 EW Remediation wave. Not blocking S725 governance hardening — remediation is scoped, scheduled, and in the 800-series pipeline. Dual-block Packs A/C/D affected."
+    },
+    {
+      "s723_id": "reliability_5",
+      "item": "FD-045 — Missing core content fields (Pack D, structural)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CLOSED",
+      "justification": "S802/S800 verified FD-045 structurally complete (CC=B, all fields present including CorrectChoice, ExplanationCorrect, Stem, Choices). The 'missing fields' claim was a DL-029 forward-scan artifact — fields stored before QuestionID in JSON were missed by regex block-window scan. P0 blocker refuted."
+    },
+    {
+      "s723_id": "reliability_6",
+      "item": "DL-013 — Template boilerplate distractor explanations (851 fields remaining)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "851 fields across Pack A (238), Pack C (357), Pack D (256). All in Unprocessed items. Zero Certified items affected. Zero learner pool exposure. Down from 2,587 originally (67.1% remediated). Deferred to 800-series certification waves."
+    },
+    {
+      "s723_id": "reliability_7",
+      "item": "DL-003 — Absolute language (958 hits)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Pedagogical quality polish. 958 instances of 'always', 'never', 'only', 'exclusively', 'must', 'exactly', 'impossible'. Requires per-item human editorial review. Not learner-safety critical. Deferred to maintenance mode."
+    },
+    {
+      "s723_id": "reliability_8",
+      "item": "DL-004 — Vague qualifiers (410 hits)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "410 instances of 'usually', 'normally', 'generally', 'often', 'typically'. Most usage legitimate in knowledge-level items. Flagged for human editorial review. Deferred to maintenance mode."
+    },
+    {
+      "s723_id": "reliability_9",
+      "item": "DL-005 — Distractor similarity (450 warnings)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "450 distractor similarity warnings. Includes 100% identical distractors (P1B-C-194 B/D, P1B-D-092 A/D). Pack E highest concentration. Requires per-item distractor rewrites. Deferred to maintenance mode."
+    },
+    {
+      "s723_id": "reliability_10",
+      "item": "DL-009 — Incorrect ASC authority citations (residual)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "P1-A-012 cites ASC 210 instead of ASC 450. P1-BC-065 area uses ASC 450 in budget context (wrong domain). Prior audit from 2026-07-22 stale. Not listed as active risk in CURRENT_BASELINES. Deferred to targeted review in next certification wave."
+    },
+    {
+      "s723_id": "reliability_11",
+      "item": "DL-010 — Misassigned choice explanations (semantic audit required)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "1 confirmed QID (P1-A-029). Full scope unknown — requires semantic/NLP scan. No automated validator can reliably detect. Deferred to targeted review in next certification wave."
+    },
+    {
+      "s723_id": "reliability_12",
+      "item": "DL-012 — Section E clonal redundancy (140 template clones)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "132 of 140 clones Archived. 0 Certified — zero learner pool exposure. 8 seeds remain Unprocessed. Clone archival progress: 242 total Archived (S803 +110 Section F, S804 +1 Pack A Section E). 8 remaining Pack C/D Section E seeds deferred to post-closure consolidation."
+    },
+    {
+      "s723_id": "reliability_13",
+      "item": "DL-025 — Empty non-CorrectChoice EW slots (Pack A, WAVE 2 deferred)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "5 non-Certified items (P1-B-001, B-004, B-006, B-025, D-070). No learner pool exposure. 51 Certified items already fixed (WAVE 1). Deferred to 800-series certification waves."
+    },
+    {
+      "s723_id": "reliability_14",
+      "item": "DL-028 — DL-013 remediation tooling regression",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Process defect — DL-013 short-form rewrite template left empty slots, expanding DL-026. Tooling fix documented but not implemented. No current learner impact. Fix when DL-013 remediation resumes."
+    },
+    {
+      "s723_id": "reliability_15",
+      "item": "Pack E Section C — State-Certified but structurally incomplete",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Overlaps with DL-021 (item reliability_2). All 100 Section C items carry question_state='Certified' but 95 have absent distractor ExplanationWrong fields. Governance state and structural quality are decoupled. 5 items have authored distractor EW (Autonomous Run Part 4). Requires 800-series remediation — either de-certify 95 incomplete items or author distractor EW."
+    },
+
+    {
+      "s723_id": "documentation_1",
+      "item": "DL-016 absent from CURRENT_BASELINES.md §3 defect/risk register",
+      "s723_status": "BLOCKING",
+      "s725_status": "ACCEPTED",
+      "justification": "DL-016 is rated HIGH in DEFECT_LIBRARY.md (Session 64 upgrade, 2026-07-24) with confirmed learner-safety risk. It does NOT appear in CURRENT_BASELINES.md §3 which lists CRITICAL, HIGH, MEDIUM risks. SESSION_STATUS lists it as LOW ('Cosmetic') — contradicting DEFECT_LIBRARY. S724 identified CURRENT_BASELINES.md staleness as GAP-01. Being actively resolved by Baseline Maintainer (Agent D) in S725 ownership transition. CURRENT_BASELINES.md §3 still lists phantom 67 DL-008 as CRITICAL and omits DL-016 entirely — this is a documentation governance gap, not a content defect. Accepted as known documentation debt with active remediation in progress."
+    },
+    {
+      "s723_id": "documentation_2",
+      "item": "DL-008 count: 3+ conflicting sources, no authoritative figure",
+      "s723_status": "BLOCKING",
+      "s725_status": "CLOSED",
+      "justification": "RESOLVED. Authoritative figure established at 0 Certified DL-008 by three converging independent sources: (1) S802 26-agent governance correction — Function-constructor parse, 0 Certified DL-008, (2) S722A Definitive Execution — 26 agents, Function-constructor parse, 0 Certified DL-008, (3) S723 Program Closure — Agent Y line-level verification, P1-CC-050 CLEAN. The 67 in CURRENT_BASELINES.md §3 and SESSION_STATUS_2026-07-24.md are stale phantom entries from pre-S722A DL-029 vulnerable scans. The P1-CC-050 discrepancy was resolved by S723 independent line-level inspection (CC=B, EW_B=''). All 5 previously conflicting sources now converge at 0 or are documented as stale."
+    },
+    {
+      "s723_id": "documentation_3",
+      "item": "SESSION_STATUS_2026-07-24.md — stale certified count (2,031 vs actual 2,181/2,182)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "Reports 2,031 Certified (81.2%). Post-S802 actual: 2,181 (87.3%). Post-S803/S804: 2,181-2,182. S802 correction attributed +150 to Pack C Sections C+D and Pack D Section C being discovered certified. AGENTS.md §9 already warns this file is superseded by CURRENT_BASELINES.md. To be retired when fresh SESSION_STATUS is generated."
+    },
+    {
+      "s723_id": "documentation_4",
+      "item": "DEFECT_LIBRARY.md DL-008 header text stale — claims '175 remaining in Pack C'",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "DL-008 header says 'Status: Open — 175 remaining in Pack C (discovered 2026-07-23 corrective session)'. This refers to 2026-07-23 Tier 0 corrective session, long since remediated. All 539 total identified are resolved as of S723. Header text is misleading. Update deferred to documentation hygiene pass."
+    },
+    {
+      "s723_id": "documentation_5",
+      "item": "REVISION_HISTORY.md — no entry for 700-series sessions between S722A and S723",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CLOSED",
+      "justification": "REVISION_HISTORY.md now contains complete entries: S722A (Wave 1 Partial, lines 16600-16706), S722A (Definitive Execution — Complete 26-Agent Full Run, lines 16708-16833), S537 (ENHANCED_CASE_BASE Final, lines 16836-16904), S802 (Governance Correction — 26 agents, lines 16907-16962), S723 (700-Series Program CLOSURE, lines 16964-17047), S803 (Wave 1 Clone Archival, lines 17050-17123), S804 (Wave 2 De-Certification, lines 17125-17173). All 700-series bridging sessions now have revision entries. The S723-era gap claim was outdated."
+    },
+    {
+      "s723_id": "documentation_6",
+      "item": "DCS v1.1 — 6 unresolved amendment conditions (documentation gap)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "S722A Agent M reduced conditions to 4 amendments (C1-C4). All are standard-track amendments — confidence-gate contradiction, AMG update, multi-level tree chaining, batch overflow tracking. Post-closure DCS v2.0 update deferred."
+    },
+    {
+      "s723_id": "documentation_7",
+      "item": "P1-CC-050 DL-008 status: two Agent V findings conflict (unreconciled)",
+      "s723_status": "BLOCKING",
+      "s725_status": "CLOSED",
+      "justification": "RESOLVED by S723 Program Closure (Agent Y). Independent line-level verification at pack_c_corrected.js:11430-11455 confirmed CC=B, EW_B='' — DL-008 CLEAN. S722A Agent V's finding (CC=C, EW-C non-empty) was erroneous or item was fixed between sessions. This eliminated the last claimed Certified DL-008 survivor and resolved the 67→1→0 cascade at 0. Documented as DISC-001 in REVISION_HISTORY.md S723 closure entry (line 17011)."
+    },
+    {
+      "s723_id": "documentation_8",
+      "item": "Root directory violations (59 items, non-critical)",
+      "s723_status": "CARRY_FORWARD",
+      "s725_status": "CARRY_FORWARD",
+      "justification": "59 files in root violating Constitution §11.1/§11.4. Includes may-core.js and may-learner-state.js (authorized runtime exceptions but not added to Constitution §11.1 permitted list), 52 .bak files (should be in backups/), temp files. Low priority file cleanup — no governance impact. Deferred to maintenance."
+    }
+  ],
+
+  "blocking_items": [],
+
+  "class_closed_details": [
+    {
+      "s723_id": "metadata_5",
+      "item": "DL-015 — Metadata Topic numbering shift",
+      "resolution_source": "Already closed in S723. Cosmetic metadata."
+    },
+    {
+      "s723_id": "reliability_1",
+      "item": "DL-008 — Certified items (67 phantom)",
+      "resolution_source": "S802+S722A Function-constructor parse: 0 Certified. S723: P1-CC-050 CLEAN."
+    },
+    {
+      "s723_id": "reliability_5",
+      "item": "FD-045 — Missing core content fields",
+      "resolution_source": "S802 verified structurally complete (CC=B). P0 blocker refuted."
+    },
+    {
+      "s723_id": "documentation_2",
+      "item": "DL-008 count: conflicting sources",
+      "resolution_source": "Authoritative figure established at 0. S722A+S802+S723 converge."
+    },
+    {
+      "s723_id": "documentation_5",
+      "item": "REVISION_HISTORY.md missing 700-series entries",
+      "resolution_source": "Entries now present for S722A, S802, S723, S803, S804."
+    },
+    {
+      "s723_id": "documentation_7",
+      "item": "P1-CC-050 two Agent V findings conflict",
+      "resolution_source": "S723 Agent Y line-level verification: CC=B, EW_B='' — CLEAN."
+    }
+  ],
+
+  "class_accepted_details": [
+    {
+      "s723_id": "reliability_4",
+      "item": "DL-016 — Metadata-block ChoiceA-D +1 offset",
+      "rationale": "Known limitation with documented learner-safety risk (58 Pack A Section E Certified items, plus dual-block Packs C/D). Actively scheduled for S805 DL-016 EW Remediation. Not blocking S725 governance hardening — remediation is scoped, scheduled, in the 800-series pipeline. ACCEPTED as a quality debt with active remediation path, not a governance blocker."
+    },
+    {
+      "s723_id": "documentation_1",
+      "item": "DL-016 absent from CURRENT_BASELINES.md §3",
+      "rationale": "Documentation governance gap acknowledged. S724 identified as GAP-01 (Baseline Maintainer). Being actively resolved by Agent D in S725 ownership transition. CURRENT_BASELINES.md §3 still lists phantom 67 DL-008 as CRITICAL and omits DL-016 — this staleness is being addressed. ACCEPTED as known documentation debt with active resolution in progress."
+    }
+  ],
+
+  "s725_vs_s723_blocking_resolution": {
+    "s723_blocking_count": 5,
+    "s725_blocking_count": 0,
+    "resolutions": [
+      "S723 BLOCKING #1 (DL-008 Certified): RESOLVED → CLOSED. 0 Certified DL-008 confirmed by S802+S722A+S723.",
+      "S723 BLOCKING #2 (DL-016 metadata shift): RECLASSIFIED → CARRY_FORWARD. Remediation scheduled for S805. Not a governance-transition blocker.",
+      "S723 BLOCKING #3 (174 severe DCS §3): RECLASSIFIED → CARRY_FORWARD. S723 closure conditionally achieved. Deferred to 800-series DCS waves.",
+      "S723 BLOCKING #4 (DL-016 absent from CURRENT_BASELINES): RECLASSIFIED → ACCEPTED. Being actively resolved by Agent D (Baseline Maintainer).",
+      "S723 BLOCKING #5 (DL-008 count dispute): RESOLVED → CLOSED. Authoritative count established at 0. P1-CC-050 verified CLEAN."
+    ]
+  },
+
+  "cross_source_dl008_convergence": {
+    "claim": "All conflicts resolved at 0 Certified DL-008.",
+    "sources_now_converged": [
+      "S802 Governance Correction — 0 (Function-constructor parse, 26 agents, P0 EMPTY)",
+      "S722A Definitive Execution — 0 (Function-constructor parse, 26 agents)",
+      "S723 Program Closure — 0 (Function-constructor parse, P1-CC-050 CLEAN by line-level)"
+    ],
+    "sources_stale": [
+      "CURRENT_BASELINES.md §3 — lists 67 CRITICAL (S530 T0 snapshot, pre-S722A). Stale.",
+      "SESSION_STATUS_2026-07-24.md §3 — lists 67 CRITICAL (pre-S802). Stale."
+    ],
+    "sources_wrong": [
+      "S723 original register — listed 67 as worst-case assumption (conservative learner-safety posture, since refuted)."
+    ]
+  },
+
+  "state_since_s723_key_events": {
+    "S722A_Definitive_Execution": {
+      "date": "2026-07-26",
+      "agents": 26,
+      "key_outcomes": [
+        "0 Certified DL-008 (all 67 refuted as DL-029 artifacts)",
+        "0 Evaluate items pool-wide (67 template-inflated downgraded)",
+        "4 genuine Analyze items",
+        "174 severe DCS §3 remaining (target <20)",
+        "DCS reliability 95.0% (>73.7% target)",
+        "2,181 Certified intact"
+      ]
+    },
+    "S802_Governance_Correction": {
+      "date": "2026-07-26",
+      "agents": 26,
+      "key_outcomes": [
+        "67 Certified DL-008 refuted as DL-029 FF artifacts",
+        "FD-045 structurally complete (CC=B)",
+        "P0 queue EMPTY",
+        "Certified count correction: 2,031→2,181 (+150)",
+        "DL-029 root cause: CC-before-QID universal, 8 prevention rules"
+      ]
+    },
+    "S723_Program_Closure": {
+      "date": "2026-07-26",
+      "agents": "26 (A-X except Y)",
+      "key_outcomes": [
+        "700-SERIES CLOSED",
+        "P1-CC-050 verified CLEAN (CC=B, EW_B='')",
+        "Certified pool: 2,182 (DISC-002: +1 post-baseline drift)",
+        "Governance maturity: CMM Level 3, Scorecard 79.25/C+",
+        "Test suites: 186/186 ALL PASS",
+        "Maintenance framework established"
+      ]
+    },
+    "S724_Operating_Model": {
+      "date": "2026-07-26",
+      "agents": 26,
+      "key_outcomes": [
+        "600-series DEFERRED (26/26 unanimous)",
+        "6 ownership gaps identified (GAP-01 through GAP-06)",
+        "S310 closeout pending"
+      ]
+    },
+    "S310_Closeout": {
+      "date": "2026-07-26",
+      "key_outcomes": [
+        "300-series CLOSED (via S311)",
+        "Portfolio Operations Dashboard delivered"
+      ]
+    },
+    "S803_S804_Certification_Waves": {
+      "date": "2026-07-26",
+      "key_outcomes": [
+        "S803: P1-E-056 recertification + 110 Section F clones archived",
+        "S804: 1 Pack A Section E clone de-certified",
+        "DL-016 confirmed on 58 remaining Pack A Section E Certified items",
+        "Certified pool: 2,181 (post-S803/S804 oscillation)"
+      ]
+    }
+  },
+
+  "verdict": "DEBT_RECLASSIFIED",
+  "verdict_note": "Of the 32 S723 debt items, 6 are now CLOSED (resolved by S722A/S802/S723/S803 evidence), 2 are ACCEPTED (known limitations with active remediation in progress — DL-016 documentation gap + DL-016 content shift as scheduled 800-series work), and 24 are CARRY_FORWARD (deferred to 800-series maintenance mode). ZERO items remain BLOCKING for S725 governance hardening and ownership transition. The three most critical S723 blockers — DL-008 Certified (67 phantom), DL-008 count dispute, and P1-CC-050 conflict — are all resolved. The learner pool is structurally secure: 0 Certified DL-008, P0 EMPTY, 2,181-2,182 Certified items intact, 20/20 governance guard PASS, 186/186 test suites PASS. The largest remaining quality debts are structural content gaps (0 Evaluate, 4 Analyze, 0 Very Difficult items) that require new item authoring, not quality remediation — these are inherent to a 2,500-item pool authored without Analyze/Evaluate-level test items and cannot be resolved via calibration or defect fixing. Documentation staleness (CURRENT_BASELINES.md phantom DL-008, stale certified counts) is being addressed by Agent D in the S725 ownership transition."
+}

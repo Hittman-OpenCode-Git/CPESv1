@@ -1,0 +1,55 @@
+{
+  "session": "S206",
+  "board": "C",
+  "title": "First Production Scan Artifact — Framework v2 Hybrid Mode",
+  "artifacts": {
+    "primary": {
+      "id": "CSA-S322-2026-07-27T05-45-08-670Z",
+      "runtime": "0.7s",
+      "itemsScanned": 2540,
+      "itemsPassed": 2539,
+      "itemsBlocked": 1
+    },
+    "identity": {
+      "id": "identity-2026-07-27T06-16-12-853Z",
+      "totalItems": 2540,
+      "passed": 2539,
+      "blocked": 1
+    }
+  },
+  "pipelineRuntime": {
+    "gate_neg1": "0.2s",
+    "gate_0": "0.2s",
+    "gate_1": "0.1s",
+    "gate_2": "0.1s",
+    "gate_3": "0.1s",
+    "gate_4": "0.1s",
+    "total": "0.7s"
+  },
+  "defectDistribution": {
+    "DL-008": 3,
+    "DL-026": 274,
+    "DL-013": 31,
+    "EV3": 2074,
+    "DL-016": 0,
+    "DL-018": 0,
+    "DL-010": 0
+  },
+  "byGate": {
+    "gate_neg1": {
+      "passed": 2539,
+      "blocked": 1
+    },
+    "gate_1": {
+      "passed": 2266,
+      "blocked": 274
+    },
+    "gate_2": {
+      "passed": 465,
+      "warned": 2075
+    }
+  },
+  "artifactSize": "42,661 lines (~1.5 MB JSON)",
+  "boardConsumptionReadiness": "READY — All 10 S322 scripts consume from this artifact",
+  "verdict": "OPERATIONAL — First production scan artifact generated under Framework v2 Hybrid Mode"
+}

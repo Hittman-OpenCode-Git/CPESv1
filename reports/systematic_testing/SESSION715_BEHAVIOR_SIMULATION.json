@@ -1,0 +1,85 @@
+{
+  "session": "715",
+  "timestamp": "2026-07-26T03:00:00",
+  "type": "Behavior simulation — sampled recalibrated items",
+  "sample_size": 8,
+  "items": [
+    {
+      "qid": "P1-A-033",
+      "pattern": "SCENARIO-CALC",
+      "stem": "Iris recorded gross sales of $244,000, sales returns of $10,600, and sales allowances of $4,300. What amount should Iris report as net sales?",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Read 3-number scenario (gross, returns, allowances). Apply net sales formula: $244,000 - $10,600 - $4,300 = $229,100. Distractors test different subtraction combinations. Reading + calculation combined warrant Moderate-Easy.",
+      "blooms": "Apply"
+    },
+    {
+      "qid": "P1-A-049",
+      "pattern": "SCENARIO-CALC",
+      "stem": "Zephyr bought equipment for $156,800, salvage $12,000, 5-year life. What is annual straight-line depreciation?",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Extract cost, salvage, life from narrative. Apply SL formula: ($156,800 - $12,000) / 5 = $28,960. Distractors test common errors (forgetting salvage, using wrong denominator). Moderate-Easy recognizes the formula-application demand.",
+      "blooms": "Apply"
+    },
+    {
+      "qid": "P1B-D-131",
+      "pattern": "SCENARIO-CALC",
+      "stem": "Xavier uses throughput costing. Per-unit costs: materials $20, labor $15, variable OH $10, fixed OH $8. What is the throughput cost per unit?",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Candidate must know throughput costing only includes direct materials ($20). Must resist including labor, variable OH, or fixed OH. Concept discrimination + calculation warrant Moderate-Easy.",
+      "blooms": "Apply"
+    },
+    {
+      "qid": "P1B-D-084",
+      "pattern": "SCENARIO-CALC",
+      "stem": "Hampton sells a product for $120 with variable costs of $45. Fixed costs are $300,000. What is the contribution margin per unit?",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Extract price and VC from scenario. CM = $120 - $45 = $75. Candidate must NOT subtract fixed costs from per-unit CM. Discriminator: fixed vs variable cost handling.",
+      "blooms": "Apply"
+    },
+    {
+      "qid": "P1B-A-076",
+      "pattern": "SCENARIO-CALC",
+      "stem": "Long scenario (~337 chars) with multiple conditions about asset impairment testing.",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Long scenario requiring substantial reading comprehension. Multiple data points to extract. Easy/1 understates the semantic parsing demand.",
+      "blooms": "Apply"
+    },
+    {
+      "qid": "P1B-B-135",
+      "pattern": "DEFINITIONAL",
+      "stem": "Which of the following is considered a financial budget?",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Must distinguish financial budgets (cash, capital expenditure, balance sheet) from operating budgets (sales, production, materials). All 4 options are plausible budget types within the same domain. Moderate-Easy recognizes the discriminator challenge.",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1B-C-189",
+      "pattern": "DEFINITIONAL",
+      "stem": "Which of the following is an advantage of standard costing over actual costing?",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Candidate must evaluate 4 plausible advantages and identify the correct one. All options sound beneficial — requires genuine understanding of standard costing benefits vs actual costing. Moderate-Easy accounts for the comparative-analysis demand.",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1-AC-011",
+      "pattern": "SCENARIO-CALC",
+      "stem": "Kestrel owns 30% of voting stock of an investee and can exercise significant influence. Investee reports net income of $120,000 and pays dividends of $40,000. What amount should Kestrel report as investment income?",
+      "old_diff": "Easy/1",
+      "new_diff": "Moderate-Easy/2",
+      "candidate_workload": "Equity method: recognize proportionate share of investee net income (30% × $120,000 = $36,000), not dividends. Candidate must know equity method rules and resist dividend-based distractors. Two-step concept application warrants Moderate-Easy.",
+      "blooms": "Apply"
+    }
+  ],
+  "summary": "All 8 sampled items show clear evidence of under-labeling at Easy/1. Each requires scenario parsing, formula application, or concept discrimination that exceeds pure recall. Moderate-Easy/2 appropriately reflects the combined reading + computation + discrimination demand.",
+  "retained_vs_recalibrated": {
+    "retained_easy": "600 items — correctly labeled at Easy/1 (84% of original 823)",
+    "recalibrated": "124 items — upgraded to Moderate-Easy/2 (16%)"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "document": "SESSION354_TRACEABILITY_ADOPTION_REVIEW",
+  "session": "S354",
+  "title": "Traceability & Investigation Readiness — Question History, Challenge Registry, Recommendation Registry, Session Registry Assessment",
+  "board": "G — Traceability & Investigation Readiness",
+  "series": "350-Series — Framework v2 Measurement Authority (Adoption Certification)",
+  "date": "2026-07-27",
+  "type": "Read-Only Adoption Certification — No Content Modifications",
+  "authority": [
+    "S207 Traceability Certification (5 chains certified, 0 broken links)",
+    "S322 session_linker.js (bidirectional indexes)",
+    "S322 registry_search.js (CLI query tool)",
+    "S750 Investigation Governance model",
+    "S204 Investigation Workbench Spec",
+    "scripts/output/ registries (live state)"
+  ],
+  "depends_on": ["S207 Board E", "S322", "S750 Board G", "S204 Board G"],
+
+  "traceability_infrastructure": {
+    "question_history": {
+      "component": "Question History Index (question_to_session_index.json + session_to_question_index.json)",
+      "implementation": "S322 session_linker.js — bidirectional indexing",
+      "coverage": {
+        "questions_linked": "564+ links across 98+ sessions",
+        "sessions_indexed": 98,
+        "linking_method": "QID-based bidirectional: Question→Session + Session→Question"
+      },
+      "readiness": "OPERATIONAL — bidirectional indexes built and validated. CLI search via registry_search.js.",
+      "gaps": [
+        "Index built from REVISION_HISTORY.md parsing — questions only linked if explicitly mentioned in session entries",
+        "Not all 2,540 items have session history — only items referenced in REVISION_HISTORY.md entries",
+        "Certification history per question (timeline of certification events) is present for items in certified pool but not comprehensive for archive/uncertified items"
+      ]
+    },
+
+    "challenge_registry": {
+      "component": "Challenge Registry (challenge_registry.json + cross-reference files)",
+      "implementation": "S206 challenge_to_question.json, challenge_to_session.json, challenge_to_recommendation.json",
+      "coverage": {
+        "challenges_count": 35,
+        "challenge_types": 6,
+        "cross_links": {
+          "challenge_to_question": "35/35 linked",
+          "challenge_to_session": "19 sessions linked",
+          "challenge_to_recommendation": "2 REC-IDs linked"
+        },
+        "lifecycle": "7-state lifecycle defined (S204). Current: all challenges OPEN or in investigation workflow."
+      },
+      "readiness": "OPERATIONAL — 35 challenges with full 3-way cross-linking. Investigation workflow back-end ready.",
+      "gaps": [
+        "Challenge closure lifecycle: 5 escalation paths specified but require Admin Portal UI (S204 Board H)",
+        "Student→Challenge→Question linking: Student data feed not yet operational (requires May Administration Portal)",
+        "Investigation Workbench UI: specified (S204 Board G) but not built"
+      ]
+    },
+
+    "recommendation_registry": {
+      "component": "Recommendation Registry (recommendation_registry.json + routing)",
+      "implementation": "S322 recommendation_registry.js, S250.2 recommendation_auto_router.js",
+      "coverage": {
+        "rec_ids_active": 4,
+        "qids_linked": "2,105+",
+        "lifecycle_state": "All OPEN (0 assigned, 0 in progress, 0 closed)",
+        "routing_entries": 24,
+        "recommendation_types": {
+          "CRITICAL_DL008": 1,
+          "HIGH_DL026": 1,
+          "MEDIUM_DL013": 1,
+          "LOW_EV3": 1
+        }
+      },
+      "readiness": "OPERATIONAL — 4 REC-IDs with QID linking and auto-routing. Pipeline velocity zero (no assignments).",
+      "gaps": [
+        "Recommendation closure velocity: 0 closures (all REC-IDs Open). Requires execution sessions to demonstrate.",
+        "Auto-dispatch from defect manifest: not connected (S813 C5 condition)",
+        "Closure evidence tracking: architecture defined but not exercised"
+      ]
+    },
+
+    "session_registry": {
+      "component": "Session Registry (session_registry.json)",
+      "implementation": "S322 session_registry_gen.js",
+      "coverage": {
+        "sessions_cataloged": 98,
+        "series_tracked": "6 (200-Series, 250-Series, 300-Series, 350-Series, 750-Series, 800-Series)",
+        "per_series_session_count": "Comprehensive"
+      },
+      "readiness": "OPERATIONAL — 98 sessions indexed with metadata. Generated from REVISION_HISTORY.md.",
+      "gaps": [
+        "Session deliverable cross-linking: sessions list deliverables but don't link to deliverable filesystem paths",
+        "Session dependency tracking: session chain ordering exists in REVISION_HISTORY.md but not as structured dependency graph"
+      ]
+    }
+  },
+
+  "cross_registry_integration": {
+    "description": "Five traceability chains defined and validated in S207 Board E",
+    "chains": [
+      {
+        "chain": "Question ↔ Session",
+        "links": "564+ bidirectional links",
+        "integrity": "VERIFIED — S207 + S322, 0 broken links",
+        "access_method": "registry_search.js --qid <QID> or --session <SID>"
+      },
+      {
+        "chain": "Question ↔ Recommendation",
+        "links": "2,105+ QIDs linked to 4 REC-IDs",
+        "integrity": "VERIFIED — compound-key resolution prevents QID-only ambiguity",
+        "access_method": "registry_search.js --rec-id <REC-ID>"
+      },
+      {
+        "chain": "Question ↔ Challenge",
+        "links": "35 challenges, 35/35 linked to questions",
+        "integrity": "VERIFIED",
+        "access_method": "challenge_to_question.json"
+      },
+      {
+        "chain": "Question ↔ Certification",
+        "links": "2,298 Certified items tracked. Certification events logged in REVISION_HISTORY.md.",
+        "integrity": "VERIFIED — certification sessions (S853, S808, etc.) have per-QID lists",
+        "access_method": "Question state in pack files + REVISION_HISTORY.md session entries"
+      },
+      {
+        "chain": "Recommendation ↔ Challenge",
+        "links": "2 REC-IDs linked to challenges",
+        "integrity": "VERIFIED",
+        "access_method": "challenge_to_recommendation.json"
+      }
+    ],
+    "zero_broken_links": true,
+    "five_chain_integrity": "ALL 5 CHAINS VERIFIED — S207 Board E certification confirmed"
+  },
+
+  "admin_portal_readiness": {
+    "target": "May Administration Portal (S204 Board H specification)",
+    "backend_readiness": {
+      "registries": "All 4 registries operational and queryable (CLI only)",
+      "cross_linking": "All 5 traceability chains operational",
+      "identity_resolution": "Compound-key identity resolution operational at 99.96%",
+      "authentication_rbac": "5-role RBAC model specified (S204 Board H), 16 enforcement points defined. Not yet implemented.",
+      "backend_assessment": "READY — all registries, cross-links, and query infrastructure operational"
+    },
+    "frontend_readiness": {
+      "implementation_status": "NOT STARTED — S204 Board H delivered specification only",
+      "modules_specified": 7,
+      "modules_implemented": 0,
+      "p0_modules": ["Question Management", "Recommendation Registry", "Session Registry", "Certification Operations Console", "Admin Auth"],
+      "p1_modules": ["Student Management", "Test Results", "Modernization Dashboard"],
+      "p2_modules": ["Workflow Automation"]
+    },
+    "blockers": [
+      "No web UI exists — all registry access is CLI-only",
+      "No authentication system implemented (RBAC model is specification only)",
+      "Student data feed not operational (blocks Student→Challenge→Question chain)"
+    ],
+    "assessment": "BACKEND_READY_FRONTEND_NOT_STARTED — The traceability backend (registries, cross-links, query infrastructure) is operational and ready for Admin Portal consumption. The frontend UI and authentication layer are specified but not implemented. This is the expected state — Admin Portal was designed as a P1/P2 deliverable (S830+)."
+  },
+
+  "investigation_workbench_gaps": {
+    "current_state": "Maturity Level 2 (Structured Index) — per S352 Board H",
+    "distance_to_level_3": "Query Layer — programmatic query access (registry_search.js exists, but CLI-only). 1 session to Level 3.",
+    "distance_to_level_5": "Full Investigation Workbench — 3 levels. Requires Admin Portal UI + Student data feed + Automated investigation workflows.",
+    "gaps_detail": [
+      "No programmatic query API (registry_search.js is CLI, not API)",
+      "No student data feed for investigation workflows",
+      "No investigation workflow UI (challenge lifecycle, evidence collection, resolution tracking)",
+      "No automated notification/escalation (all workflows are manual review)"
+    ]
+  },
+
+  "verdict": "TRACEABILITY_READY_FOR_ADMIN_PORTAL_CONSUMPTION — All 5 traceability chains are verified with zero broken links. All 4 registries are operational and queryable. The backend infrastructure is ready for May Administration Portal implementation. The single structural gap is that access is CLI-only — the registries need a programmatic API layer and web UI. This is a Phased deliverable (P0/P1/P2 at S830/S900/S910) and does not block Framework v2 permanent adoption.",
+  "confidence": "HIGH"
+
+}

@@ -1,0 +1,46 @@
+{
+  "session": "S801",
+  "date": "2026-07-26",
+  "title": "FD-075 Complete Review — Structurally Complete; S800 'Missing Content' Claim Refuted",
+  "qid": "P1-FD-075",
+  "pack": "D",
+  "section": "F",
+  "file": "pack_d_corrected.js",
+  "line": 25164,
+  "architecture": "Single merged block (content + metadata in one JSON object)",
+  "question_state": "Unprocessed",
+  "structural_status": "STRUCTURALLY COMPLETE",
+  "field_inventory": {
+    "QuestionID": {"present": true, "value": "P1-FD-075"},
+    "Part": {"present": true, "value": 1},
+    "Section": {"present": true, "value": "F"},
+    "Topic": {"present": true, "value": "F.075 data retention policy compliance"},
+    "Stem": {"present": true, "value": "Alderway establishes a policy defining how long different categories of financial and customer data must be retained..."},
+    "Choices": {"present": true, "value": {"A": "keep permanently", "B": "eliminate governance", "C": "comply with legal/regulatory requirements", "D": "replace cybersecurity"}},
+    "CorrectChoice": {"present": true, "value": "C"},
+    "ExplanationCorrect": {"present": true, "value": "Data retention policies balance legal and regulatory compliance..."},
+    "ExplanationWrongA": {"present": true, "value": "empty", "note": "DL-026 — empty non-CC slot"},
+    "ExplanationWrongB": {"present": true, "value": "Choice-specific text about data retention as governance component"},
+    "ExplanationWrongC": {"present": true, "value": "empty", "note": "correct — CC slot per EV8"},
+    "ExplanationWrongD": {"present": true, "value": "Choice-specific text about cybersecurity vs. data lifecycle"},
+    "StudyLinks": {"present": true},
+    "DifficultyScore": {"present": true, "value": 3},
+    "CognitiveLevel": {"present": true, "value": "Understand"}
+  },
+  "s702_claim_verification": {
+    "claim": "FD-075 is structurally complete with CorrectChoice=C",
+    "verified": true,
+    "detail": "Line 25149: CorrectChoice=C is present and valid. EW_B and EW_D are topic-matched."
+  },
+  "defects": [
+    {"defect": "DL-026", "detail": "ExplanationWrongA is empty (non-CorrectChoice slot)", "severity": "Low"}
+  ],
+  "fd046_sibling": {
+    "qid": "P1-FD-046",
+    "line": 23710,
+    "status": "Metadata-only shell (no Stem, Choices, CorrectChoice, ExplanationCorrect)",
+    "question_state": "Archived",
+    "note": "FD-046 is the ACTUAL 'missing content block' gap in Pack D Section F — not FD-045 or FD-075. FD-046 is a DL-012 clone artifact, already Archived, correctly excluded from learner pool."
+  },
+  "recommendation": "AUTHOR ExplanationWrongA text (DL-026). Everything else is structurally complete and topic-matched."
+}

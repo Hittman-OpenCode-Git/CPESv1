@@ -1,0 +1,37 @@
+{
+  "session": "513",
+  "agent": "B",
+  "type": "target_holdback_object_bounded_audit",
+  "timestamp": "2026-07-25",
+  "items": [
+    {
+      "item_id": "CASE-B13-Q3",
+      "case_id": "CASE-B13",
+      "prompt": "Bridgeport Industries has beginning cash of $34,000, expects cash receipts of $412,000 and disbursements of $398,000. Minimum ending cash is $30,000. Borrowings are in $1,000 increments. What is the ending cash balance after any necessary borrowing?",
+      "choices": ["$18,000", "$30,000", "$48,000", "$78,000"],
+      "correct": "$48,000",
+      "correct_choice_index": 2,
+      "explanation_pre_remediation_length": 463,
+      "defect": "Missing distractor rationale for Option B ($30,000 minimum cash). Explanation redundantly stated 'Option C is correct' within distractor descriptions.",
+      "answer_key_valid": true,
+      "no_prompt_exhibit_choice_issue": true,
+      "no_other_g53_g54_issue": true,
+      "pre_state": "Unprocessed"
+    },
+    {
+      "item_id": "CASE-B18-Q4",
+      "case_id": "CASE-B18",
+      "prompt": "Gateway Logistics has $2,400,000 in current assets, $1,100,000 in current liabilities, and $600,000 in inventory. What is the quick ratio?",
+      "choices": ["1.64", "2.18", "1.18", "0.55"],
+      "correct": "1.64",
+      "correct_choice_index": 0,
+      "explanation_pre_remediation_length": 458,
+      "defect": "Missing distractor rationale for Option C (1.18 quick ratio). Only Options A (2.18) and D (0.55) explained. Learner selecting 1.18 receives no educational feedback.",
+      "answer_key_valid": true,
+      "no_prompt_exhibit_choice_issue": true,
+      "no_other_g53_g54_issue": true,
+      "pre_state": "Unprocessed"
+    }
+  ],
+  "verdict": "Both items have valid answer keys. Only the named distractor rationales are missing. No prompt, exhibit, choice, or answer-key changes required."
+}

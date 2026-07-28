@@ -1,0 +1,28 @@
+{
+  "session": "519",
+  "timestamp": "2026-07-26T01:00:00",
+  "type": "Focused CAQS validation — verification only",
+  "finding": "Both targets already pass all 6 CAQS dimensions. No items promoted (already Certified).",
+  "cbq3_a1_validation": {
+    "d1_answer_key_accuracy": "5/5 PASS (numeric items independently recomputed: Q1=$231,660, Q4=$190,560)",
+    "d2_explanation_sufficiency": "5/5 PASS (avg 586 chars, all >400)",
+    "d3_distractor_rationale": "5/5 PASS (Q2 select, Q5 multi both have choice-specific wrong-choice explanations)",
+    "d4_reference_alignment": "5/5 PASS (ASC 842 cited in all items)",
+    "d5_case_realism_exhibit_use": "5/5 PASS (items reference case facts and PV table exhibit)",
+    "d6_metadata_readiness": "5/5 PASS (all have Difficulty, DifficultyScore, CognitiveLevel, ProductionStatus)"
+  },
+  "case_c1_validation": {
+    "d1_d6_all_dimensions": "5/5 PASS (confirmed correct ASC 606 text, full explanations, differences present)"
+  },
+  "certification_changes": {
+    "items_promoted": 0,
+    "items_demoted": 0,
+    "cases_promoted": 0,
+    "cases_demoted": 0,
+    "reason": "All 10 items + 2 cases already Certified"
+  },
+  "final_state": {
+    "ENHANCED_CASE_BASE3": "15/15 cases Certified, 79/79 items Certified (100%)",
+    "MIGRATED_CASE_BASE_C": "15/15 cases Certified, 75/75 items Certified (100%)"
+  }
+}

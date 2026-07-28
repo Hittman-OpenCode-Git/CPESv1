@@ -1,0 +1,36 @@
+{
+  "agent": "G",
+  "session": "S301",
+  "phase": 2,
+  "domain": "Blueprint & Metadata",
+  "findings": {
+    "LOSTag_completeness": {
+      "status": "Present on all items in MASTER_QUESTION_REGISTRY.md",
+      "gaps": "Pack A items have DL-016 offset — metadata-block LOSTags may be off by +1 vs content-block",
+      "pack_e_items": "Some items have generic LOSTags (e.g., 'A.1 Financial statements') rather than specific LOS codes"
+    },
+    "CognitiveLevel_assignment": {
+      "status": "All items have CognitiveLevel field",
+      "distribution": "Remember, Understand, Apply — no items above Apply level flagged",
+      "concern": "DL-016 may cause CognitiveLevel to be from a different item's metadata block"
+    },
+    "DifficultyScore_presence": {
+      "status": "Added to all 2,500 items in Session 63",
+      "five_tier_reclassification": "Deferred — app.js supports 5-tier but items use 3-tier labels. Non-blocking."
+    },
+    "BlueprintDomain_accuracy": {
+      "status": "Verified in MASTER_QUESTION_REGISTRY.md",
+      "pack_a_concern": "DL-016 offset may affect BlueprintDomain in metadata block"
+    },
+    "BlueprintCoverageMatrix.csv": {
+      "location": "reports/BlueprintCoverageMatrix.csv",
+      "format": "CSV — sections A-F with topic mapping",
+      "gaps": "None identified — all 6 CMA Part 1 sections covered"
+    }
+  },
+  "metadata_inconsistencies": [
+    { "type": "DL-016 content-metadata offset", "pack": "A", "impact": "Metadata block describes previous item's content — EW fields, Section, Topic, CognitiveLevel unreliable for D5 scoring" },
+    { "type": "Difficulty label vs score mismatch", "scope": "Some items show Difficulty=Moderate but DifficultyScore=4 (Difficult-equivalent)" },
+    { "type": "Missing certification_date", "scope": "Some Pack A Section D items — metadata incomplete for pre-S63 certified items" }
+  ]
+}

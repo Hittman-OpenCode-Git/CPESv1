@@ -1,0 +1,579 @@
+{
+  "audit_metadata": {
+    "date": "2026-07-28",
+    "phase": 3,
+    "total_root_files": 111,
+    "total_root_directories_noted": 1,
+    "note": "Backup file count is 83 (not 77 as in pre-verified analysis — may-core.js.bak (3) and may-learner-state.js.bak (3) were missed). All counts verified against raw filesystem listing."
+  },
+  "classifications": [
+    {
+      "filename": "index_updated.html",
+      "risk_level": "CRITICAL",
+      "rationale": "ENTRY POINT — loaded by browser; moving breaks entire application. All other runtime files are loaded through this HTML entry point.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "browser", "exam_simulator"],
+      "move_blockers": ["Is the browser entry point; all script/css references resolve relative to root"]
+    },
+    {
+      "filename": "app.js",
+      "risk_level": "CRITICAL",
+      "rationale": "MAIN ENGINE — loaded by index_updated.html; contains all exam session logic, scoring, rendering, and navigation. Moving breaks the entire application.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "exam_simulator", "scoring", "navigation"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "styles.css",
+      "risk_level": "CRITICAL",
+      "rationale": "STYLING — loaded by index_updated.html and admin.html. Moving breaks all UI styling.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "browser", "admin_dashboard"],
+      "move_blockers": ["Referenced by index_updated.html and admin.html via relative link path"]
+    },
+    {
+      "filename": "pack_a_corrected.js",
+      "risk_level": "CRITICAL",
+      "rationale": "QUESTION BANK (Pack A, 500 items) — loaded by index_updated.html; contains 500 MCQ items. Moving breaks question delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "question_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "pack_b_corrected.js",
+      "risk_level": "CRITICAL",
+      "rationale": "QUESTION BANK (Pack B, 500 items) — loaded by index_updated.html; contains 500 MCQ items. Moving breaks question delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "question_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "pack_c_corrected.js",
+      "risk_level": "CRITICAL",
+      "rationale": "QUESTION BANK (Pack C, 500 items) — loaded by index_updated.html; contains 500 MCQ items. Moving breaks question delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "question_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "pack_d_corrected.js",
+      "risk_level": "CRITICAL",
+      "rationale": "QUESTION BANK (Pack D, 500 items) — loaded by index_updated.html; contains 500 MCQ items. Moving breaks question delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "question_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "pack_e_corrected.js",
+      "risk_level": "CRITICAL",
+      "rationale": "QUESTION BANK (Pack E, 540 items) — loaded by index_updated.html; contains 540 MCQ items. Moving breaks question delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "question_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "scored_cases.js",
+      "risk_level": "CRITICAL",
+      "rationale": "CASE BANK 1 (15 cases) — loaded by index_updated.html. Moving breaks case delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "case_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "scored_cases2.js",
+      "risk_level": "CRITICAL",
+      "rationale": "CASE BANK 2 (15 cases) — loaded by index_updated.html. Moving breaks case delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "case_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "scored_cases3.js",
+      "risk_level": "CRITICAL",
+      "rationale": "CASE BANK 3 (15 cases) — loaded by index_updated.html. Moving breaks case delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "case_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "scored_cases4.js",
+      "risk_level": "CRITICAL",
+      "rationale": "CASE BANK 4 (15 cases) — loaded by index_updated.html. Moving breaks case delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "case_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "scored_cases5.js",
+      "risk_level": "CRITICAL",
+      "rationale": "CASE BANK 5 (15 cases) — loaded by index_updated.html. Moving breaks case delivery.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "case_delivery", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path"]
+    },
+    {
+      "filename": "may-core.js",
+      "risk_level": "CRITICAL",
+      "rationale": "APPLICATION FRAMEWORK — loaded by index_updated.html; provides core API consumed by app.js. Moving breaks the application layer.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "application_framework", "exam_simulator"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path; API consumed by app.js"]
+    },
+    {
+      "filename": "may-learner-state.js",
+      "risk_level": "CRITICAL",
+      "rationale": "STATE MANAGEMENT — loaded by index_updated.html; provides learner state API consumed by app.js. Moving breaks session persistence.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["runtime", "state_management", "session_persistence"],
+      "move_blockers": ["Referenced by index_updated.html via relative script path; API consumed by app.js"]
+    },
+    {
+      "filename": "package.json",
+      "risk_level": "HIGH_RISK",
+      "rationale": "NPM configuration — defines project metadata, scripts, dependencies. Referenced by Node.js tooling and references VERSION via name field. Required for npm install, scripts, and governance tooling.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["build", "npm", "node_tooling", "governance_scripts"],
+      "move_blockers": ["Must be at project root for npm to function; moving would require npm init in new location"]
+    },
+    {
+      "filename": "package-lock.json",
+      "risk_level": "HIGH_RISK",
+      "rationale": "NPM lock file — generated artifact, ensures reproducible dependency installs. References VERSION via name field. Required for deterministic npm ci.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["build", "npm", "dependency_management"],
+      "move_blockers": ["Must be at project root alongside package.json for npm to use it"]
+    },
+    {
+      "filename": "opencode.json",
+      "risk_level": "HIGH_RISK",
+      "rationale": "OpenCode tooling configuration — required for AI governance plugin (governance-guard.js) and project-level tooling. Referenced by opencode runtime.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["ai_tooling", "governance", "opencode"],
+      "move_blockers": ["OpenCode expects this file at project root; moving would require reconfiguration"]
+    },
+    {
+      "filename": "VERSION",
+      "risk_level": "HIGH_RISK",
+      "rationale": "Version identifier — referenced by package.json and package-lock.json (name field includes version). Moving breaks NPM metadata consistency.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["npm", "versioning", "release"],
+      "move_blockers": ["Referenced by package.json name field; moving would require package.json update"]
+    },
+    {
+      "filename": "admin.html",
+      "risk_level": "REVIEW",
+      "rationale": "Standalone admin dashboard. NOT loaded by index_updated.html, NOT referenced by app.js. Has 0 inbound references from the main application. Uses styles.css and scripts/output/admin_dashboard_data.js (relative path already correct). Legitimate application file but NOT in Constitution §11.1 permitted root-level file list.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["admin_dashboard"],
+      "move_blockers": [
+        "Would need to update styles.css path reference if moved",
+        "Not in Constitution permitted root list — may require governance decision on whether to keep at root or relocate",
+        "scripts/output/admin_dashboard_data.js path is relative and would work from a subfolder"
+      ]
+    },
+    {
+      "filename": "AGENTS.md",
+      "risk_level": "REVIEW",
+      "rationale": "AI governance instruction file. Read by AI tooling via opencode.json plugin configuration. NOT loaded at runtime. Legitimate governance file but NOT in Constitution §11.1 permitted root-level file list. Could be relocated to knowledge/ or .opencode/ but would require opencode.json path update.",
+      "can_move": false,
+      "can_delete": false,
+      "requires_human_review": true,
+      "affected_systems": ["ai_tooling", "governance", "opencode"],
+      "move_blockers": [
+        "opencode.json references AGENTS.md at root — moving would break AI governance instructions",
+        "Not in Constitution permitted root list — may require governance decision"
+      ]
+    },
+    {
+      "filename_group": "pack_a_corrected.js.bak-* (10 files)",
+      "individual_files": [
+        "pack_a_corrected.js.bak-20260726180816",
+        "pack_a_corrected.js.bak-20260726S718",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1857",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1900",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1903",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092643236",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092649084",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092655033",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092655733",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092661402",
+        "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092662052"
+      ],
+      "note": "Counted 10 files, not 12 as in pre-verified analysis",
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of pack_a_corrected.js. Zero application references. Can be relocated to backups/ directory (which already exists with 436 files) with no path rewrites needed. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "pack_b_corrected.js.bak-* (4 files)",
+      "individual_files": [
+        "pack_b_corrected.js.bak-20260726175459",
+        "pack_b_corrected.js.bak-20260726180809",
+        "pack_b_corrected.js.bak-20260726S718",
+        "pack_b_corrected.js.bak-20260727151912"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of pack_b_corrected.js. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "pack_c_corrected.js.bak-* (17 files)",
+      "individual_files": [
+        "pack_c_corrected.js.bak-20260726175459",
+        "pack_c_corrected.js.bak-20260726180816",
+        "pack_c_corrected.js.bak-20260726232212",
+        "pack_c_corrected.js.bak-20260726S718",
+        "pack_c_corrected.js.bak-20260727114221",
+        "pack_c_corrected.js.bak-20260727121004",
+        "pack_c_corrected.js.bak-20260727130223",
+        "pack_c_corrected.js.bak-20260727135518",
+        "pack_c_corrected.js.bak-20260727174450",
+        "pack_c_corrected.js.bak-20260727175906",
+        "pack_c_corrected.js.bak-20260727200252",
+        "pack_c_corrected.js.bak-20260727201905",
+        "pack_c_corrected.js.bak-20260727203117",
+        "pack_c_corrected.js.bak-20260727S364",
+        "pack_c_corrected.js.bak-20260727S829",
+        "pack_c_corrected.js.bak-s357-20260727115517",
+        "pack_c_corrected.js.bak-s853-2026-07-27-14-1"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of pack_c_corrected.js. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "pack_d_corrected.js.bak-* (11 files)",
+      "individual_files": [
+        "pack_d_corrected.js.bak-20260726175741",
+        "pack_d_corrected.js.bak-20260726180826",
+        "pack_d_corrected.js.bak-20260726225550",
+        "pack_d_corrected.js.bak-20260726231242",
+        "pack_d_corrected.js.bak-20260726231432",
+        "pack_d_corrected.js.bak-20260726S718",
+        "pack_d_corrected.js.bak-20260727114219",
+        "pack_d_corrected.js.bak-20260727121029",
+        "pack_d_corrected.js.bak-20260727123551",
+        "pack_d_corrected.js.bak-20260727S364",
+        "pack_d_corrected.js.bak-s853-2026-07-27-14-1"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of pack_d_corrected.js. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "pack_e_corrected.js.bak-* (22 files)",
+      "individual_files": [
+        "pack_e_corrected.js.bak-20260726175459",
+        "pack_e_corrected.js.bak-20260726175741",
+        "pack_e_corrected.js.bak-20260726180816",
+        "pack_e_corrected.js.bak-20260726203321",
+        "pack_e_corrected.js.bak-20260726205416",
+        "pack_e_corrected.js.bak-20260726205554",
+        "pack_e_corrected.js.bak-20260726213630",
+        "pack_e_corrected.js.bak-20260726S718",
+        "pack_e_corrected.js.bak-20260727151913",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092690553",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092696249",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092696853",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092765951",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092766526",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092767113",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092767955",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092773752",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092774361",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092775336",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092776037",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092781954",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092782603",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092783328",
+        "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092783820"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of pack_e_corrected.js. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "scored_cases.js.bak-* (4 files)",
+      "individual_files": [
+        "scored_cases.js.bak-20260726161314",
+        "scored_cases.js.bak-20260726161701",
+        "scored_cases.js.bak-20260726172400",
+        "scored_cases.js.bak-20260726180922"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of scored_cases.js. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "scored_cases4.js.bak-* (2 files)",
+      "individual_files": [
+        "scored_cases4.js.bak-20260726135005",
+        "scored_cases4.js.bak-20260726140450"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of scored_cases4.js. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename": "app.js.bak-20260725221322",
+      "risk_level": "SAFE",
+      "rationale": "Backup copy of app.js. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename": "index_updated.html.bak-20260725221322",
+      "risk_level": "SAFE",
+      "rationale": "Backup copy of index_updated.html. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename": "styles.css.bak-20260725221322",
+      "risk_level": "SAFE",
+      "rationale": "Backup copy of styles.css. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename": "AGENTS.md.bak-20260727174341",
+      "risk_level": "SAFE",
+      "rationale": "Backup copy of AGENTS.md. Zero application references. Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "may-core.js.bak-* (3 files) — MISSED IN PRE-VERIFIED ANALYSIS",
+      "individual_files": [
+        "may-core.js.bak-20260725221322",
+        "may-core.js.bak-20260726153313",
+        "may-core.js.bak-20260726160050"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of may-core.js. Zero application references. NOT in pre-verified analysis (missed 3 files). Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename_group": "may-learner-state.js.bak-* (3 files) — MISSED IN PRE-VERIFIED ANALYSIS",
+      "individual_files": [
+        "may-learner-state.js.bak-20260726153313",
+        "may-learner-state.js.bak-20260726161132",
+        "may-learner-state.js.bak-20260726161712"
+      ],
+      "risk_level": "SAFE",
+      "rationale": "Backup copies of may-learner-state.js. Zero application references. NOT in pre-verified analysis (missed 3 files). Per Constitution §11.4, .bak files are prohibited in root.",
+      "can_move": true,
+      "can_delete": false,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": [],
+      "move_target": "backups/"
+    },
+    {
+      "filename": "$null",
+      "risk_level": "GARBAGE",
+      "rationale": "PowerShell artifact (94 bytes). Zero references. Should be deleted, not moved.",
+      "can_move": false,
+      "can_delete": true,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": ["Garbage — delete, do not relocate"]
+    },
+    {
+      "filename": "({idx",
+      "risk_level": "GARBAGE",
+      "rationale": "Command artifact (0 bytes). Zero references. Should be deleted, not moved.",
+      "can_move": false,
+      "can_delete": true,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": ["Garbage — delete, do not relocate"]
+    },
+    {
+      "filename": "a+b",
+      "risk_level": "GARBAGE",
+      "rationale": "Command artifact (0 bytes). Zero references. Should be deleted, not moved.",
+      "can_move": false,
+      "can_delete": true,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": ["Garbage — delete, do not relocate"]
+    },
+    {
+      "filename": "null",
+      "risk_level": "GARBAGE",
+      "rationale": "Command output artifact (1760 bytes). Zero references. Should be deleted, not moved.",
+      "can_move": false,
+      "can_delete": true,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": ["Garbage — delete, do not relocate"]
+    },
+    {
+      "filename": "temp_qid_sample.json",
+      "risk_level": "GARBAGE",
+      "rationale": "Empty temporary file (2 bytes). Zero references. Should be deleted, not moved.",
+      "can_move": false,
+      "can_delete": true,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": ["Garbage — delete, do not relocate"]
+    },
+    {
+      "filename": "may-core(1).js",
+      "risk_level": "GARBAGE",
+      "rationale": "Windows copy duplicate of may-core.js (155809 bytes). Zero references. Should be deleted, not moved. The real may-core.js (344883 bytes) is at root and is CRITICAL.",
+      "can_move": false,
+      "can_delete": true,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": ["Garbage — delete, do not relocate"]
+    },
+    {
+      "filename": "may-learner-state(1).js",
+      "risk_level": "GARBAGE",
+      "rationale": "Windows copy duplicate of may-learner-state.js (57889 bytes). Zero references. Should be deleted, not moved. The real may-learner-state.js (110240 bytes) is at root and is CRITICAL.",
+      "can_move": false,
+      "can_delete": true,
+      "requires_human_review": false,
+      "affected_systems": [],
+      "move_blockers": ["Garbage — delete, do not relocate"]
+    }
+  ],
+  "summary": {
+    "critical": 15,
+    "critical_note": "15 runtime-critical files (not 24 as in pre-verified heading — the heading included governance/delivery_blocklist.js which is a subdirectory file, not root)",
+    "high_risk": 4,
+    "review": 2,
+    "safe": 83,
+    "safe_note": "83 backup files (not 77 as in pre-verified analysis — 6 files missed: may-core.js.bak × 3 + may-learner-state.js.bak × 3)",
+    "garbage": 7,
+    "total": 111,
+    "can_move_without_risk": 83,
+    "can_delete": 7,
+    "require_human_review": 21,
+    "require_human_review_note": "15 CRITICAL + 4 HIGH_RISK + 2 REVIEW = 21 files require human review before any action. SAFE and GARBAGE categories can be actioned without human review per governance rules."
+  },
+  "staging_dir_note": "STAGING_DIR (directory, not a file) at root level with 6 files (~1.25MB) contains S853/S867 session artifacts. SAFE to relocate to archive/ or delete after confirming sessions are complete. Not classified as a file — noted separately for completeness.",
+  "pre_verified_analysis_discrepancies": {
+    "backup_file_count": {
+      "pre_verified": 77,
+      "actual": 83,
+      "delta": 6,
+      "missing_files": [
+        "may-core.js.bak-20260725221322",
+        "may-core.js.bak-20260726153313",
+        "may-core.js.bak-20260726160050",
+        "may-learner-state.js.bak-20260726153313",
+        "may-learner-state.js.bak-20260726161132",
+        "may-learner-state.js.bak-20260726161712"
+      ]
+    },
+    "critical_heading_label": {
+      "pre_verified_heading": "24 files",
+      "actual_root_critical": 15,
+      "explanation": "The heading count of 24 appears to have been for a broader scope. Actual root-level CRITICAL files total 15. governance/delivery_blocklist.js is a subdirectory file and is explicitly excluded from root classification."
+    },
+    "pack_a_bak_count": {
+      "pre_verified": 12,
+      "actual": 10,
+      "delta": -2
+    }
+  }
+}

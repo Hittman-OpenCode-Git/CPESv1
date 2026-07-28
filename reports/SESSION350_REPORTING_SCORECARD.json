@@ -1,0 +1,220 @@
+{
+  "document": "SESSION350_REPORTING_SCORECARD",
+  "session": "S350",
+  "title": "Reporting Utilization Scorecard — v1 Burden vs. v2 Minimalist Model",
+  "board": "H — Reporting Utilization Metrics",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Scorecard — Reporting Utilization Tracking",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION201_REPORTING_BURDEN.json; SESSION202_REPORTING_MINIMALIST_MODEL.json; SESSION203_REPORTING_IMPLEMENTATION.json",
+  "purpose": "Measure the effectiveness of Framework v2's 4-report model. Framework v1 generated 1,227 files with 65% unconsumed. Framework v2 targets exactly 4 reports per session with >90% consumption. This scorecard tracks reduction progress and reporting compliance.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "v1_reporting_burden": {
+    "authority": "SESSION201_REPORTING_BURDEN.json",
+    "total_files": 1227,
+    "by_type": {
+      "json": 843,
+      "markdown": 372,
+      "csv": 4,
+      "txt": 6,
+      "bak": 2
+    },
+    "total_size_kb": 39724.83,
+    "consumption_rate": "35.0% (432 of 1,229 cross-referenced from governance documents)",
+    "never_referenced": "492 files (40.1%)",
+    "broadly_mentioned": "725 files (59.6% — mentioned in REVISION_HISTORY.md but not necessarily consumed as source material)",
+    "per_session_average": {
+      "all_sessions": 6.9,
+      "post_s300_sessions": 11.2,
+      "by_series": {
+        "100-series": 2.7,
+        "300-series": 13.2,
+        "500-series": 3.7,
+        "600-series": 10.4,
+        "700-series": 9.9,
+        "800-series": 11.7
+      },
+      "trend": "INCREASING from ~3 to ~12 files/session over project lifetime"
+    },
+    "peak_session": {
+      "session": "S726",
+      "files": 29,
+      "note": "S726 Phantom Baseline Remediation — highest single-session file output"
+    },
+    "duplication_analysis": {
+      "certified_count": "Appears in ~8 files per reporting session (~450 total appearances). Copied into DASHBOARD.json, SESSION_SUMMARY.md, PORTFOLIO_IMPACT_ANALYSIS.json, CERTIFICATION_RESULTS.json, FORECAST.json, GOVERNANCE_PRESERVATION_AUDIT.json, RISK_REGISTER.json, EXECUTIVE_SUMMARY.md.",
+      "governance_guard_result": "Appears in 3 files (~120 total appearances)",
+      "total_item_count": "Appears in 6 files (~300 appearances)",
+      "core_15_metrics": "Spread across average 5.3 files each"
+    },
+    "consumption_classification": {
+      "consumed_as_source": "432 files (35.5%) — directly referenced as data source by later sessions",
+      "session_only": "380 files (31.2%) — referenced within their session only, no downstream use",
+      "orphaned": "492 files (40.1%) — never referenced in any governance document",
+      "retirement_candidates": "~800 files (65%) classified as one-off or orphaned"
+    }
+  },
+
+  "v2_reporting_model": {
+    "authority": "SESSION203_REPORTING_IMPLEMENTATION.json",
+    "target": "4 reports per session (hard cap at S910, soft cap ≤8 at S830)",
+    "reports": [
+      {
+        "id": "REPORT-1",
+        "name": "Readiness Report",
+        "file_pattern": "reports/{SESSION_ID}_READINESS_REPORT.json",
+        "content": "Session gate status, portfolio snapshot, session plan, mid-session drift check",
+        "consumer": "Session Arbiter, all boards",
+        "generation_trigger": "Session T0 — after pre-flight scan pipeline completes",
+        "consumption_latency": "3 minutes",
+        "replaces_v1": [
+          "Pre-flight scan result files (replaced by embedded scan data)",
+          "Portfolio snapshot files (merged from DASHBOARD.json + PORTFOLIO_IMPACT_ANALYSIS.json)",
+          "Session plan files (replaced by embedded prioritization)"
+        ]
+      },
+      {
+        "id": "REPORT-2",
+        "name": "Quality Report",
+        "file_pattern": "reports/{SESSION_ID}_QUALITY_REPORT.json",
+        "content": "Structural defect inventory, content quality assessment, EW integrity, per-item CAQS scores, difficulty distribution",
+        "consumer": "Quality Board, Certification Board",
+        "generation_trigger": "After Quality Board completes review pass",
+        "consumption_latency": "5 minutes",
+        "replaces_v1": [
+          "EQS report files",
+          "DQS report files",
+          "UIQS report files",
+          "Learner Safety report files",
+          "Per-agent quality output files (merged into consolidated verdicts)",
+          "Difficulty distribution reports"
+        ]
+      },
+      {
+        "id": "REPORT-3",
+        "name": "Certification Report",
+        "file_pattern": "reports/{SESSION_ID}_CERTIFICATION_REPORT.json",
+        "content": "Per-item CERTIFY/HOLD/ESCALATE decisions, state transitions, evidence references, REVISION_HISTORY.md entry data",
+        "consumer": "Certification Board, Governance Board",
+        "generation_trigger": "After Certification Board completes adjudication",
+        "consumption_latency": "2 minutes",
+        "replaces_v1": [
+          "CERTIFICATION_RESULTS.json",
+          "Per-batch certification artifacts",
+          "State transition logs",
+          "Evidence package files"
+        ]
+      },
+      {
+        "id": "REPORT-4",
+        "name": "Governance Report",
+        "file_pattern": "reports/{SESSION_ID}_GOVERNANCE_REPORT.md",
+        "content": "Session close authorization, portfolio safety, governance events, defect library updates, reporting compliance",
+        "consumer": "All boards, next session",
+        "generation_trigger": "Session Tend — before REVISION_HISTORY.md write",
+        "consumption_latency": "3 minutes",
+        "replaces_v1": [
+          "GOVERNANCE_PRESERVATION_AUDIT.json",
+          "RISK_REGISTER.json",
+          "SESSION_SUMMARY.md (partially — governance events)",
+          "EXECUTIVE_SUMMARY.md (partially — portfolio safety)"
+        ]
+      }
+    ],
+    "consumption_target": ">90% (every v2 report has a defined downstream consumer — zero orphaned files)"
+  },
+
+  "retirement_plan": {
+    "authority": "SESSION203_REPORTING_IMPLEMENTATION.json §retirement_plan",
+    "legacy_count": "~800 of ~1,227 files",
+    "retirement_categories": [
+      "Individual agent outputs — ~120+ files (findings embedded into consolidated board verdicts)",
+      "Meta-reporting packages — reports about reports, zero downstream value",
+      "100-series incremental status logs — ~170 files, zero downstream reference",
+      "Pilot dry-run exports — 17 synthetic student files",
+      "Per-session non-milestone dashboards — consumed within session, then forgotten",
+      "One-off snapshot audits — consumed within session only",
+      "Legacy naming variants — inconsistent naming, zero traceability",
+      "Forecast duplicates — FORECAST + COMPLETION_FORECAST per session merged to single file"
+    ],
+    "retention_types": [
+      "Session summaries (*_SESSION_SUMMARY.md) — primary cross-session handoff",
+      "Portfolio-level dashboards (*_DASHBOARD.json from milestone sessions only)",
+      "Risk registers (*_RISK_REGISTER.json)",
+      "Completion forecasts (*_COMPLETION_FORECAST.json)",
+      "Certification results (*_CERTIFICATION_RESULTS.json)",
+      "Defect sweep reports (defect_sweeps/*.md)",
+      "Governance attestations (*_GOVERNANCE_ATTESTATION.md)",
+      "Session status files (session_status/SESSION_STATUS_*.md)"
+    ],
+    "implementation_schedule": {
+      "S830": "Soft cap 8 enforced. Legacy files identified and moved to reports/legacy/. Reporting compliance first measured.",
+      "S900": "Tightened to ≤6. Agent outputs no longer persisted as standalone files.",
+      "S910": "Hard cap ≤4. All BF metrics at v2 targets. Retirement complete."
+    }
+  },
+
+  "reporting_metrics": {
+    "RP-001_reports_generated": {
+      "metric": "Reports Generated per Session",
+      "formula": "reports_generated = count of new report files created during session",
+      "v1_baseline": "9 average (7-17 range, 29 peak S726)",
+      "v2_target_p1": "≤6 (soft cap)",
+      "v2_target_p2": "≤5",
+      "v2_target_p3": "≤4 (hard cap)"
+    },
+    "RP-002_reports_consumed": {
+      "metric": "Reports Actively Consumed by Downstream Sessions",
+      "formula": "reports_consumed = count of this session's reports referenced as data source by any subsequent session",
+      "v1_baseline": "35% (432 of 1,229)",
+      "v2_target": ">90% (every v2 report has a defined consumer)"
+    },
+    "RP-003_reports_referenced": {
+      "metric": "Reports Referenced (Broad Consumption)",
+      "formula": "reports_referenced = count of reports mentioned at least once in REVISION_HISTORY.md or downstream governance documents",
+      "v1_baseline": "59.6% (725 of 1,217 unique basenames)",
+      "v2_target": "100% (every v2 report is referenced — zero invisible files)"
+    },
+    "RP-004_reports_retired": {
+      "metric": "Reports Retired to Legacy Archive",
+      "formula": "reports_retired = count of legacy files moved to reports/legacy/",
+      "v2_target": "~800 files by S910",
+      "retirement_progress": {
+        "S350": "0 retired (retirement not yet begun)",
+        "S830": "All identified legacy files catalogued and tagged for retirement",
+        "S910": "All ~800 legacy files moved to reports/legacy/"
+      }
+    },
+    "RP-005_reporting_compliance": {
+      "metric": "Reporting Compliance Rate",
+      "formula": "compliance_rate = sessions_under_report_cap / total_sessions × 100",
+      "v2_target": "100% of sessions under the current phase cap (≤8 at S830, ≤6 at S900, ≤4 at S910)"
+    }
+  },
+
+  "trend_tracking": {
+    "label": "Reporting Utilization Trend",
+    "measurements": [
+      {"session": "S201", "phase": "Pre-v2", "total_files": 1227, "consumption": "35.0%", "reports_per_session": "6.9 avg, 11.2 post-S300", "notes": "v1 reporting burden baseline established."},
+      {"session": "S350", "phase": "P0", "total_files": "Not yet recounted", "consumption": "35.0% (unchanged from S201 baseline)", "reports_per_session": "~9 (v1 operations continue)", "notes": "Reporting measurement baseline established. Retirement not yet begun."},
+      {"session": "S830", "phase": "P1 Exit", "target_reports_per_session": "≤6 (soft cap ≤8)", "target_consumption": ">50%", "notes": "First measurement of v2 reporting reduction."},
+      {"session": "S900", "phase": "P2 Exit", "target_reports_per_session": "≤5", "target_consumption": ">80%", "notes": "Consumption rate must significantly improve."},
+      {"session": "S910", "phase": "P3 Exit", "target_reports_per_session": "≤4 (hard cap)", "target_consumption": ">90%", "target_retired": "~800 legacy files", "notes": "Full v2 reporting model. HARD_BLOCK if >4 reports/session."}
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_BOARD_EFFICIENCY_MODEL.json",
+      "reports/SESSION350_RECOMMENDATION_ANALYTICS.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/SESSION201_REPORTING_BURDEN.json",
+      "reports/SESSION202_REPORTING_MINIMALIST_MODEL.json",
+      "reports/SESSION203_REPORTING_IMPLEMENTATION.json"
+    ]
+  }
+}

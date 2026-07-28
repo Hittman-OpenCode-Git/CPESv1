@@ -1,0 +1,75 @@
+{
+  "title": "SESSION315_DASHBOARD",
+  "session": "315",
+  "generated": "2026-07-27",
+  "certificationDashboard": {
+    "itemsReviewed": 10,
+    "itemsCertified": 10,
+    "itemsHeld": 0,
+    "itemsEscalated": 0,
+    "overallResult": "FULL_CERTIFICATION"
+  },
+  "domainEDashboard": {
+    "certifiedBeforeS315": 218,
+    "certifiedAfterS315": 218,
+    "projectedAfterS316": 228,
+    "domainERate": "81.7%",
+    "cloneGroupsCleared": "10/33 → 20/33",
+    "wave2LOsCertified": {
+      "E.1.d Risk Assessment": [
+        "P1-E-R16",
+        "P1-E-R17",
+        "P1-E-R32"
+      ],
+      "E.1.h Sarbanes-Oxley Act (SOX)": [
+        "P1-E-R19",
+        "P1-E-R20"
+      ],
+      "E.1.j Systems Controls": [
+        "P1-E-R14",
+        "P1-E-R15",
+        "P1-E-R30",
+        "P1-E-R31"
+      ],
+      "E.1.e Control Activities": [
+        "P1-E-R11"
+      ]
+    }
+  },
+  "qualityDashboard": {
+    "dl008": "10/10 CLEAN",
+    "dl026": "10/10 CLEAN",
+    "dl013": "10/10 CLEAN",
+    "avgECChars": 1271,
+    "avgEWChars": 570,
+    "uiqsOverall": "91 (A)",
+    "allGatesPass": true
+  },
+  "governanceDashboard": {
+    "governanceGuard": "27/27 PASS",
+    "duplicatePrevention": "PASS",
+    "ewIntegrity": "100%",
+    "noAnswerKeyChanges": true,
+    "noScoringChanges": true,
+    "unchangedFiles": [
+      "pack_a_corrected.js",
+      "pack_b_corrected.js",
+      "pack_c_corrected.js",
+      "pack_d_corrected.js",
+      "scored_cases.js",
+      "scored_cases2-5.js",
+      "app.js",
+      "may-core.js",
+      "may-learner-state.js",
+      "index_updated.html",
+      "styles.css"
+    ]
+  },
+  "modernizationDashboard": {
+    "program": "800-Series — MCQ Certification & Quality Modernization",
+    "wavesCompleted": "Wave 1 (10 items, S313-S314) + Wave 2 (10 items, S314-S315)",
+    "totalCertified": 2201,
+    "domainECertified": 228,
+    "nextWave": "Wave 3 — S317 Authoring, S318 Certification Review"
+  }
+}

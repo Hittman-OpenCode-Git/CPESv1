@@ -1,0 +1,101 @@
+{
+  "session": "310",
+  "title": "EW Coverage Dashboard — Distractor Explanation Gap Tracking",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "summary": {
+    "totalEWSlots": 9847,
+    "emptyEWSlots": 2403,
+    "ewFillRateOverall": "75.6%",
+    "mcqEWFill": "71.5%",
+    "caseEWFill": "3.9%",
+    "targetFillRate": "88%",
+    "remainingToTarget": 1221
+  },
+  "byDomain": {
+    "A": {
+      "totalSlots": 1752,
+      "empty": 218,
+      "fillRate": "87.4%",
+      "status": "NEAR_TARGET"
+    },
+    "B": {
+      "totalSlots": 2272,
+      "empty": 263,
+      "fillRate": "88.4%",
+      "status": "AT_TARGET"
+    },
+    "C": {
+      "totalSlots": 2472,
+      "empty": 265,
+      "fillRate": "89.3%",
+      "status": "AT_TARGET",
+      "note": "Case bank drags down overall"
+    },
+    "D": {
+      "totalSlots": 1808,
+      "empty": 287,
+      "fillRate": "84.1%",
+      "status": "NEAR_TARGET"
+    },
+    "E": {
+      "totalSlots": 1772,
+      "empty": 254,
+      "fillRate": "85.7%",
+      "status": "NEAR_TARGET"
+    },
+    "F": {
+      "totalSlots": 1720,
+      "empty": 217,
+      "fillRate": "87.4%",
+      "status": "NEAR_TARGET"
+    }
+  },
+  "caseBankGap": {
+    "emptySlots": 2403,
+    "byFile": {
+      "scored_cases": {
+        "total": 360,
+        "present": 97,
+        "fillRate": "26.9%"
+      },
+      "scored_cases2": {
+        "total": 612,
+        "present": 0,
+        "fillRate": "0.0%"
+      },
+      "scored_cases3": {
+        "total": 616,
+        "present": 0,
+        "fillRate": "0.0%"
+      },
+      "scored_cases4": {
+        "total": 612,
+        "present": 0,
+        "fillRate": "0.0%"
+      },
+      "scored_cases5": {
+        "total": 300,
+        "present": 0,
+        "fillRate": "0.0%"
+      }
+    }
+  },
+  "forecast": {
+    "scenarioOptimistic": {
+      "sessions": 4,
+      "fillRate": "85%",
+      "output": "Case-bank EW factory at full throughput"
+    },
+    "scenarioExpected": {
+      "sessions": 6,
+      "fillRate": "80%",
+      "output": "Mixed factory + ad-hoc authoring"
+    },
+    "scenarioConservative": {
+      "sessions": 8,
+      "fillRate": "72%",
+      "output": "Ad-hoc authoring with review cycles"
+    }
+  }
+}

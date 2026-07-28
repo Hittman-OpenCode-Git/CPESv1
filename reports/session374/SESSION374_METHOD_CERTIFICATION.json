@@ -1,0 +1,284 @@
+{
+  "session": "S374",
+  "title": "Methodology Certification Board — Trust Assurance Program",
+  "date": "2026-07-27",
+  "authority": "PROJECT_CONSTITUTION.md, Framework v2 FULLY ADOPTED (RESTORED per S373)",
+  "type": "READ-ONLY — Classification, certification, and retirement. No content modifications.",
+  "program": "800-Series Content Excellence & Trust Preservation",
+
+  "pre_flight": {
+    "certified_pool": 2298,
+    "governance_guard": "32/32 PASS",
+    "certified_dl008": 0,
+    "certified_dl026": 0,
+    "identity_resolution": "99.96% (2,539/2,540)",
+    "baseline_status": "All 15 files stable — Packs C+D re-baselined Phase 0"
+  },
+
+  "methodology_inventory": {
+    "total_scripts_surveyed": 170,
+    "methodology_types_detected": 7,
+    "classifications": {
+
+      "APPROVED": {
+        "description": "Methodologies that are immune to DL-029-class defects and have proven accuracy across multiple independent verification sessions.",
+        "methods": [
+          {
+            "id": "APPROVED-001",
+            "name": "Raw-File Line Inspection",
+            "mechanism": "read_file with offset/limit — direct line-level read from pack source files",
+            "defect_classes_prevented": ["DL-029 (window-scan cross-object)", "DL-020 (brace-matcher)", "DL-028 (regex false positives)"],
+            "trust_evidence": [
+              "S369: 34 of 37 S821 DL-026 claims disproved via raw-line inspection of P1-FD-043",
+              "S361: 7 of 8 DL-008 claims disproved via raw-line inspection of Pack D Domain F items",
+              "S852: 301 false DL-008 positives identified by comparing raw-line vs. window-scan results"
+            ],
+            "scripts_using": ["governance_guard.js (Rule 2 DL-008 detection)", "All S369-S371 verification agents"],
+            "risk_level": "LOWEST",
+            "false_positive_rate": "0.0% across 3 independent verification sessions"
+          },
+          {
+            "id": "APPROVED-002",
+            "name": "Function Constructor Parse",
+            "mechanism": "Extract object boundaries via brace-aware parser, then eval via Function constructor to get structured item objects",
+            "defect_classes_prevented": ["DL-029 (window-scan cross-object)", "DL-020 (brace-matcher)", "DL-008 false positives"],
+            "trust_evidence": [
+              "S852 manifest regeneration: 301→3 DL-008 entries (298 false positives eliminated)",
+              "S722A + S802 + S726: triple confirmation of 0 Certified DL-008",
+              "Governance guard Rule 2: 32/32 PASS, 0 false positives in 3,300 test objects"
+            ],
+            "scripts_using": ["scripts/engine/pack_reader.js", "scripts/scan_orchestrator.js", "scripts/governance_guard_engine.js", ".opencode/plugins/governance-guard.js"],
+            "risk_level": "LOWEST",
+            "false_positive_rate": "0.0% across all governance guard test scenarios"
+          },
+          {
+            "id": "APPROVED-003",
+            "name": "Object-Level Parse (JSON.parse / Object extraction)",
+            "mechanism": "Extract JSON objects within brace-delimited boundaries, then parse as structured data",
+            "defect_classes_prevented": ["DL-029 (cross-object contamination)", "DL-020 (mid-string brace false match)"],
+            "trust_evidence": [
+              "S853 certification wave: 77 items certified with 0 DL-008/DL-026 introduced",
+              "Candidate Engine: 100% preparatory check accuracy on Domain E+F items"
+            ],
+            "scripts_using": ["scripts/certification_candidate_engine.js", "scripts/readiness_scorer.js", "scripts/s853_certify_wave_a.js"],
+            "risk_level": "LOW",
+            "false_positive_rate": "0.0% when object boundaries are correctly extracted"
+          },
+          {
+            "id": "APPROVED-004",
+            "name": "Registry Query (Indexed Lookup)",
+            "mechanism": "Pre-built hash-map indexes (by QID, identity_key, template_family) for O(1) lookup",
+            "defect_classes_prevented": ["Redundant re-scanning", "Cross-session scan inconsistency"],
+            "trust_evidence": [
+              "CANONICAL_REGISTRY.json: 2,540 items indexed, 0 identity_key collisions",
+              "S332: 6-field compound key proved globally unique across all 5 packs",
+              "S204: Registry queries 55,000× faster than per-item raw scan"
+            ],
+            "scripts_using": ["scripts/identity_validator.js", "scripts/registry_search.js", "scripts/session_linker.js"],
+            "risk_level": "LOW",
+            "false_positive_rate": "0.0% (hash-map lookup is deterministic)"
+          },
+          {
+            "id": "APPROVED-005",
+            "name": "SHA-256 Content Hashing",
+            "mechanism": "Deterministic SHA-256 over 11-field canonical content + 6-field metadata + compound identity key",
+            "defect_classes_prevented": ["Undetected content drift", "Cross-session inconsistency", "Unauthorized modification"],
+            "trust_evidence": [
+              "S372: All 2,540 items hashed; 100% determinism across independent builds",
+              "Delta Ledger: 0 false positives over 5 verification sessions",
+              "CURRENT_BASELINES.md: 15 runtime files tracked with SHA-256"
+            ],
+            "scripts_using": ["scripts/engine/hash_engine.js", "scripts/delta_ledger_builder.js", "scripts/build_delta_ledger.js"],
+            "risk_level": "LOWEST",
+            "false_positive_rate": "0.0% (cryptographic hash, deterministic)"
+          },
+          {
+            "id": "APPROVED-006",
+            "name": "grep / Select-String with Object-Boundary Verification",
+            "mechanism": "Pattern matching across raw files, with mandatory object-boundary cross-check before any classification decision",
+            "defect_classes_prevented": ["DL-029 (when paired with boundary verification)"],
+            "trust_evidence": [
+              "S369: Certified count verification (2,298 stable across 2 independent grep scans)",
+              "S853: Post-certification grep for question_state changes",
+              "All T0/Tmid/Tend checkpoints: certified count verified via grep"
+            ],
+            "scripts_using": ["All session startup checkpoints", "All certified count verifications"],
+            "risk_level": "LOW",
+            "false_positive_rate": "0.0% for count operations; requires boundary verification for per-item operations"
+          }
+        ]
+      },
+
+      "CONDITIONAL": {
+        "description": "Methodologies that require specific constraints or cross-verification to achieve trusted results. May produce valid output when bounded correctly but have known failure modes without those bounds.",
+        "methods": [
+          {
+            "id": "COND-001",
+            "name": "Regex with Object-Boundary Delimiters",
+            "mechanism": "Regular expression matching constrained to known object boundaries (e.g., /{QuestionID[\s\S]{0,5000}CorrectChoice/ within a single object's brace scope)",
+            "conditions": [
+              "Must operate within a brace-delimited object extracted by APPROVED-002 or APPROVED-003",
+              "Must not span object boundaries",
+              "Must be verified by APPROVED-001 (raw-line inspection) on a sample of matches",
+              "Must not be used for CorrectChoice extraction when CC-before-QID layout exists (Pack B/D)"
+            ],
+            "defect_classes_enabled_without_conditions": ["DL-029 (when object boundaries not enforced)"],
+            "scripts_using": ["Various S320-series remediation scripts (originally unconditional; now retired or conditional-bound)"],
+            "risk_level": "MEDIUM (LOW when conditions met)"
+          },
+          {
+            "id": "COND-002",
+            "name": "Manifest Consumption for Routing",
+            "mechanism": "Reading a pre-built manifest (JSON) to determine routing decisions, without re-verifying against raw file",
+            "conditions": [
+              "Manifest must have been built by APPROVED-002 (Function constructor parse) or APPROVED-003 (Object-level parse)",
+              "Manifest must carry verificationMethod field",
+              "Manifest age must be < 1 session from current source file state",
+              "Any routing decision that leads to content modification must re-verify against raw file before write"
+            ],
+            "defect_classes_enabled_without_conditions": ["DL-029 (if manifest was built with window-scan)", "DL-036 (if manifest is stale)"],
+            "scripts_using": ["scripts/recommendation_auto_router.js", "scripts/work_queue_manager.js", "scripts/session_generator.js"],
+            "risk_level": "MEDIUM (LOW when manifest is verified and fresh)"
+          }
+        ]
+      },
+
+      "PROHIBITED": {
+        "description": "Methodologies with proven false-positive rates that contaminated governance conclusions. Retired with documented substitution paths.",
+        "methods": [
+          {
+            "id": "PROHIB-001",
+            "name": "Forward-Scan Regex Without Object Boundaries",
+            "mechanism": "Scanning forward from a known token (e.g., 'QuestionID') to find another token (e.g., 'CorrectChoice') without respecting JSON object brace boundaries",
+            "retirement_date": "2026-07-27 (S852 regeneration)",
+            "defect_classes_produced": ["DL-029 — DL-008 false positives (301 of 301 in old manifest)", "DL-029 — DL-026 false positives (S821: 34 of 37)"],
+            "incident_history": [
+              "S852 Defect Manifest: 301 DL-008 entries — all false positives from forward-scan crossing object boundaries",
+              "S821 Remediation Queue: 37 items claimed — 34 disproven by raw-line inspection (92% false positive rate)",
+              "S361 Readiness Board: 8 DL-008 claimed — 7 disproven by raw-line inspection",
+              "Pack D: CC-before-QID object layout caused forward-scan to pick up adjacent item's CC (~75% FP rate)"
+            ],
+            "why_prohibited": "When CorrectChoice appears BEFORE QuestionID in the JSON object (Pack B/D format), the scanner matches the NEXT item's CorrectChoice. This produces false positives on items that are structurally clean. The defect persisted across 3 separate scan instances (S852 original, S821, S361) because the pattern seemed 'obvious' — scan forward from QID to find CC.",
+            "substitution_path": "Use APPROVED-002 (Function Constructor Parse) to extract the complete object, then read CorrectChoice from WITHIN that object. Governance guard Rule 2 has been using this correct approach since S814.",
+            "retired_scripts": "Original S852 manifest generator (replaced by s852_regenerate_manifest.js v2 using Function constructor parse)"
+          },
+          {
+            "id": "PROHIB-002",
+            "name": "Window-Scan with Context-Window Overlap",
+            "mechanism": "Capturing a sliding window of N characters (typically 2000-3000) around each QuestionID match, then searching within that window for CorrectChoice. Window overlap causes adjacent-item contamination.",
+            "retirement_date": "2026-07-27 (S369 ground truth audit)",
+            "defect_classes_produced": ["DL-029 — Cross-object contamination in DL-008 scans", "DL-029 — DL-026 false positives when window captures adjacent item's EW fields"],
+            "incident_history": [
+              "S852 Defect Manifest (original): 301 false DL-008 entries; window size captured CC from adjacent items",
+              "S821 Remediation Queue: Window-scan with 2000-char context captured adjacent-item ExplanationWrong fields",
+              "Governance guard test 26-27: Confirmed old window-scan FAILS on realistic object distances (>3000 chars between QID and CC)"
+            ],
+            "why_prohibited": "The window approach fails when objects are larger than the window (realistic: Pack D items are ~3000+ chars). It also captures adjacent object fields when the window boundary falls mid-object. The governance guard test suite explicitly demonstrates this: test 26 proves >3000 chars causes failure; test 27 proves adjacent objects produce false positives (DL-029 CONFIRMED).",
+            "substitution_path": "Use APPROVED-002 (Function Constructor Parse) to extract complete objects without window-size constraints. No window — extract from opening { to closing } brace via brace matching.",
+            "retired_scripts": "Original DEFECT_MANIFEST_DL008_DL026.json generator; S821 scan methodology; S361 RB scan methodology. All replaced by direct-object parse."
+          },
+          {
+            "id": "PROHIB-003",
+            "name": "Manifest Consumption Without Raw-File Verification (for content-modifying decisions)",
+            "mechanism": "Using a pre-built manifest as the sole source of truth for decisions that result in pack file edits — without cross-checking each item against raw file/line evidence",
+            "retirement_date": "2026-07-27 (S368 stop condition checklist)",
+            "defect_classes_produced": ["DL-036 (routing divergence) — Candidate Engine made independent re-scan with stale regex", "S822 blocker: S821 remediation queue consumed without raw-file cross-check"],
+            "incident_history": [
+              "S821 Remediation Queue was built from a DL-029-contaminated scan; if remediation had been executed without S369 ground-truth audit, 34 items would have been falsely modified",
+              "S822 claimed 77 items needed remediation; actual verified scope was 3 items",
+              "S815 audit: 4 pipeline artifacts consume manifests but 0 perform raw-file cross-check before downstream routing"
+            ],
+            "why_prohibited": "Manifests are snapshots; source files evolve. DL-029 proved that manifests can be systematically contaminated. Any decision that modifies pack files must verify against live raw-file evidence at the moment before write.",
+            "substitution_path": "For content-modifying decisions: verify each target item via APPROVED-001 (raw-file line inspection) or APPROVED-002 (Function constructor parse) immediately before write. Manifest provides a candidate list, not authority.",
+            "retired_scripts": "None explicitly retired; S369-S373 established the correct pattern: verify every claimed item against raw file before any remediation execution."
+          }
+        ]
+      }
+    }
+  },
+
+  "trust_hierarchy": {
+    "description": "Ordered from most trusted (direct source evidence) to least trusted (derived from contaminated methodology). Higher tiers are immune to DL-029; lower tiers are proven producers of false positives.",
+    "tiers": [
+      {
+        "tier": 1,
+        "label": "DIRECT SOURCE EVIDENCE",
+        "methods": ["APPROVED-001 (Raw-File Line Inspection)", "APPROVED-002 (Function Constructor Parse)"],
+        "immunity": "DL-029 immune, DL-020 immune, DL-028 immune",
+        "use_when": "Verifying any claim that would change a governance conclusion, defect count, or pack file content",
+        "evidence_chain": "The source file IS the evidence. No transformation, no windowing, no scan."
+      },
+      {
+        "tier": 2,
+        "label": "STRUCTURED EXTRACTION",
+        "methods": ["APPROVED-003 (Object-Level Parse)", "APPROVED-005 (SHA-256 Content Hashing)", "APPROVED-004 (Registry Query)"],
+        "immunity": "DL-029 immune (when built from Tier 1 extraction)",
+        "use_when": "Automated pipelines, batch operations, index lookups. Must be traceable to a Tier 1 extraction for authority.",
+        "evidence_chain": "Tier 1 extraction → structured artifact → downstream consumption. Artifact must carry sourceFileHashes and verificationMethod."
+      },
+      {
+        "tier": 3,
+        "label": "PATTERN MATCHING WITH BOUNDARIES",
+        "methods": ["APPROVED-006 (grep with boundary verification)", "COND-001 (Regex with object boundaries)"],
+        "immunity": "DL-029 immune when boundary conditions met; vulnerable without",
+        "use_when": "Quick counts, initial surveys, candidate identification. Results must be verified by Tier 1 before action.",
+        "evidence_chain": "Pattern match → Tier 1 cross-verification on sample → confirmed count/classification."
+      },
+      {
+        "tier": 4,
+        "label": "DERIVED ARTIFACTS (READ-ONLY)",
+        "methods": ["COND-002 (Manifest consumption for routing)"],
+        "immunity": "DL-029 vulnerable if manifest was Tier 5-built; immune if manifest carries Tier 1 origin",
+        "use_when": "Routing decisions, queue management, planning. Never for content modification without Tier 1 re-verification.",
+        "evidence_chain": "Manifest (must carry Tier 1 origin metadata) → routing decision → Tier 1 re-verification before any write."
+      },
+      {
+        "tier": 5,
+        "label": "PROHIBITED — DO NOT USE",
+        "methods": ["PROHIB-001 (Forward-scan regex)", "PROHIB-002 (Window-scan)", "PROHIB-003 (Manifest-only content decisions)"],
+        "immunity": "None. Proven DL-029 contamination. 92%+ false-positive rates.",
+        "use_when": "NEVER. These methodologies have been formally retired with documented substitution paths.",
+        "evidence_chain": "Any finding from these methodologies is presumed contaminated until independently verified by Tier 1."
+      }
+    ]
+  },
+
+  "retirement_protocol": {
+    "description": "When a methodology is classified PROHIBITED, the following steps must be completed:",
+    "steps": [
+      "1. Document the methodology, its defect class(es), and incident history in this certification",
+      "2. Identify all scripts using the prohibited methodology",
+      "3. Provide a specific substitution path referencing an APPROVED methodology",
+      "4. Mark the original script as deprecated (or rewrite it using the APPROVED methodology)",
+      "5. Add a governance guard test case validating that the prohibited methodology produces false positives",
+      "6. Update DEFECT_LIBRARY.md with the methodology defect entry (e.g., DL-029)",
+      "7. Verify no CURRENT_BASELINES.md or governance code depends on the prohibited methodology"
+    ],
+    "completed_retirements": [
+      "PROHIB-001 (Forward-scan regex): Retired S852. Script rewritten (s852_regenerate_manifest.js v2). Governance guard tests 26-27 prove false-positive rate.",
+      "PROHIB-002 (Window-scan): Retired S369. All DL-029-contaminated artifacts identified and superseded. Governance guard tests 26-27.",
+      "PROHIB-003 (Manifest-only): Retired S368. S369-S373 established raw-file-verification-before-write pattern."
+    ]
+  },
+
+  "DL029_impact_assessment": {
+    "description": "DL-029 (methodology defect — scan false positives from cross-object contamination) was the single most impactful defect in the project's governance history.",
+    "contaminated_artifacts": [
+      {"artifact": "S852 Defect Manifest (original)", "impact": "301 false DL-008 entries → all Certified items falsely blocked", "resolution": "Regenerated via Function constructor parse (301→3)"},
+      {"artifact": "S821 Remediation Queue", "impact": "37 items claimed DL-026 → 34 disproven (92% FP)", "resolution": "S369 ground truth audit → verified 3 items"},
+      {"artifact": "S361 Readiness Board DL-008 claim", "impact": "8 items claimed → 7 disproven", "resolution": "Raw-line inspection → 1 genuine, 7 FP"},
+      {"artifact": "SESSION_STATUS_2026-07-24.md §8", "impact": "Recommended DL-008 remediation of 67 items → all false positives", "resolution": "Superseded by CURRENT_BASELINES.md §3 (0 DL-008)"},
+      {"artifact": "S822 Full Adoption Review", "impact": "77-item DL-026 claim blocked promotion → 3 items genuine", "resolution": "S373 restored FULLY ADOPTED"}
+    ],
+    "lesson": "Methodology quality > defect volume. A single methodology defect (DL-029) produced more governance impact than any content defect. Every session since S369 begins with methodology verification before content analysis."
+  },
+
+  "governance": {
+    "certified_count": 2298,
+    "governance_guard": "32/32 PASS",
+    "methodology_certification_complete": true,
+    "all_prohibited_methods_documented": true,
+    "all_substitution_paths_defined": true,
+    "no_pack_file_modifications": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "agent": "F",
+  "role": "Conflict Simulation",
+  "session": "601",
+  "generated": "2026-07-26",
+  "methodology": "READ-ONLY. Cross-referenced S600 Charter v1.0 (§2.2 IS NOT prohibitions), governance-guard.js (5 rules, 247 lines), S711 Pre-Flight Audit (384/0 PASS), S725 Governance Detection Standard v1.0, S726 Closure Gate specification, S723 Governance Closure Program evidence, and DEFECT_LIBRARY.md (DL-001 through DL-033). Assessed each scenario against the full governance stack: charter-level prohibitions → governance guard mechanical blocks → session-idle warnings → cross-lane audit detection → ownership-matrix attestation.",
+
+  "scenarios": {
+    "scenario_1_analytics": {
+      "description": "A 600-series agent generates a DQS-style distractor quality score, produces a bottleneck forecast, or creates a portfolio prioritization dashboard — all work owned by the 300-series per S600 Charter §2.2.",
+      "charter_prohibition": "§2.2 — analytics owned by 300-series (DQS, EQS, BQS, ExQS, UIQS, risk models, forecasts, portfolio prioritization). 600 MAY consume 300 outputs but MAY NOT produce independent analytics (§3.1).",
+      "detection_mechanisms": [
+        "S600 Charter §2.2: explicit textual prohibition — but procedural only, not mechanically enforced",
+        "S600 Charter §3.1: 600 MAY NOT 'produce independent analytics that compete with or duplicate 300-series outputs'",
+        "S711 Pre-Flight Audit: would catch unauthorized analytics files in reports/ if they landed on disk (384/0 test gate)",
+        "300-series Lead: would notice if a competing DQS/EQS/BQS model appeared in reports/ or was cited by downstream agents",
+        "S725 Scan Methodology Standard: prohibits unauthorized agents from producing quality-scoring artifacts (§4.3)",
+        "governance-guard.js: NO MECHANICAL DETECTION — Rules 2/3/5 apply to pack-file content; Rule 1/4 apply to question_state/answer-key changes. None of the 5 rules block analytics generation. The guard scans tool.execute.before on edit/write operations against pack files and MASTER_QUESTION_REGISTRY.md only — it does not inspect reports/* being written."
+      ],
+      "would_be_prevented": false,
+      "would_be_detected": true,
+      "detection_lag": "1 session",
+      "detection_lag_rationale": "S711 Pre-Flight runs at session boundaries. A 700-series Rapid Pulse audit (next session boundary) would flag unauthorized analytics artifacts in the reports/ directory. The 300-series Lead would notice competing metrics on the next portfolio review. However, no mechanical block prevents the operation at tool-execute time — the governance guard only inspects pack-file edit/write operations.",
+      "residual_risk": "medium",
+      "residual_risk_rationale": "The S600 Charter is a DEFERRED reserve charter (no active lane, no agents deployed). A rogue 600-series agent would need to be activated first — a governance board vote is required (§5.2). However, if activation occurs without the charter prohibitions being operationalized as code-level guards, the analytics prohibition is purely procedural. The governance guard has zero visibility into the reports/ directory or into what non-pack files an agent writes. Risk is medium (not high) because the multi-layer detection (S711 pre-flight + 300-series lead + cross-lane audit) would catch it quickly, and the charter's standalone prohibition text serves as a strong normative barrier even without mechanical enforcement.",
+      "root_cause": "Governance guard tool.execute.before hook only inspects pack_*_corrected.js, scored_cases*.js, and MASTER_QUESTION_REGISTRY.md. Non-pack-file writes (analytics outputs in reports/, knowledge/*.md) are unguarded. The S600 Charter prohibitions have not been operationalized as governance guard rules."
+    },
+
+    "scenario_2_certification": {
+      "description": "A 600-series agent changes question_state to 'Certified', modifies a CorrectChoice value, or promotes content to production — work owned by the 800-series per S600 Charter §2.2.",
+      "charter_prohibition": "§2.2 — certification decisions owned by 800-series (state transitions, certification audits, question_state promotion, production deployment). 600 MAY prepare materials but MAY NOT make certification decisions (§3.3).",
+      "detection_mechanisms": [
+        "S600 Charter §2.2: explicit textual prohibition — certification decisions are the most tightly gated of all prohibitions",
+        "S600 Charter §3.3: 600 MAY NOT 'change question_state on any item', 'promote content to production', 'verify or modify answer keys', or 'approve content for learner delivery'",
+        "governance-guard.js Rule 1 (WARN — session idle): catches any 'question_state' write at tool-execute time, tracks count, flags at session idle if REVISION_HISTORY.md not updated. Detection is IMMEDIATE at session-idle.",
+        "governance-guard.js Rule 4 (WARN — session idle): catches any 'CorrectChoice'/'CorrectAnswer' modification, tracks file set, flags at session idle if no 'recomputed'/'independently verified' note is found.",
+        "governance-guard.js Rule 2 (BLOCK — pre-write): BLOCKs any write where ExplanationWrong[CorrectChoice] is non-empty. Prevents DL-008 re-contamination, which is the most common side-effect of certification errors.",
+        "governance-guard.js Rule 5 (BLOCK — pre-write): BLOCKs writes touching >30 question objects without BLOCK-AUTHORIZED marker. Certification waves typically touch 50+ items — Rule 5 would mechanically block them.",
+        "S725 Governance Detection Standard §3: mandates that ALL scan tools use Function Constructor Parse for CorrectChoice extraction, removing DL-029 false positives that masked prior certification defects.",
+        "S726 Closure Gate §2: TRANSFER → ACCEPTANCE → APPROVAL → CLOSE chain. Any state transition must be accepted by the receiving owner (800-series). An unauthorized 600-series certification would fail ACCEPTANCE.",
+        "S711 Pre-Flight cross-lane audit: would detect unauthorized question_state changes across packs (compares certified counts against baseline).",
+        "800-series Certification Lead: would immediately notice unauthorized Certified items in MASTER_QUESTION_REGISTRY.md or during a CAQS §1.6 audit pass."
+      ],
+      "would_be_prevented": true,
+      "would_be_detected": true,
+      "detection_lag": "immediate",
+      "detection_lag_rationale": "Four independent mechanical/semi-mechanical detection layers fire: (1) Rule 1 catches question_state writes at session-idle with a WARN — lag is within the same session. (2) Rule 4 catches CorrectChoice changes at session-idle with a WARN — same-session detection. (3) Rule 5 mechanically BLOCKs batch certification writes (>30 items) at tool-execute time unless a BLOCK-AUTHORIZED marker is present — this is an IMMEDIATE HARD STOP. (4) Rule 2 mechanically BLOCKs any write introducing new DL-008 — also IMMEDIATE. Even if the 600-series agent attempted a single-item certification (evading Rule 5), Rules 1+4 would fire warnings at session-idle, and Rule 2 would catch structural defects. The S725 Detection Standard's Function Constructor Parse mandate prevents DL-029 false negatives that historically masked defective certifications.",
+      "residual_risk": "low",
+      "residual_risk_rationale": "Certification is the most heavily guarded lane boundary in the entire governance stack. Six independent detection mechanisms converge: charter prohibition (§2.2), two session-idle warnings (Rules 1+4), two pre-write blocks (Rules 2+5), and S725 scan methodology standardization. The historical record proves these mechanisms work: DL-030 (5 incorrect answer keys) was caught by Phase 0B audit; DL-008 re-contamination (539 occurrences) was caught by governance guard Rule 2. The single residual risk is a single-item stealth certification with no BLOCK-AUTHORIZED needed (1 item < 30), with a faked REVISION_HISTORY.md entry to satisfy Rule 1, and a faked 'recomputed' note to satisfy Rule 4. This would require the 600-series agent to deliberately bypass 3 separate governance mechanisms while also evading S725 multi-block extraction methodology — a sophisticated, multi-vector attack that would be caught by the next S711 Pre-Flight cross-lane audit comparing certified counts against baseline.",
+      "root_cause": "If all 5 governance guard rules + S725 Detection Standard failed, the last-resort gate is the S726 Closure Gate's ACCEPTANCE requirement — a state transition must be accepted by the receiving owner. An unauthorized 600-certified item would have no 800-series acceptance record."
+    },
+
+    "scenario_3_governance": {
+      "description": "A 600-series agent alters batch caps from 30 to 100, changes verification protocols (e.g., removes the backup requirement), or overrides a governance standard (e.g., redefines DCS severity thresholds) — work owned by the 700-series per S600 Charter §2.2.",
+      "charter_prohibition": "§2.2 — governance owned by 700-series (DCS, governance standards, closure controls, enforcement rules, T0 protocol, hash verification). 600 MAY follow 700 governance standards but MAY NOT alter them (§3.2).",
+      "detection_mechanisms": [
+        "S600 Charter §2.2: explicit textual prohibition — governance is the 700-series' core constitutional mandate",
+        "S600 Charter §3.2: 600 MAY NOT 'alter, extend, or override any governance standard', 'modify closure controls or enforcement rules', 'change batch caps, verification protocols, or any enforcement mechanism', 'bypass governance guard rules'",
+        "governance-guard.js: NO MECHANICAL DETECTION for governance config changes. The guard's tool.execute.before hook inspects edits/writes to pack files and MASTER_QUESTION_REGISTRY.md. A write to governance-guard.js itself, to an AGENTS.md rule, or to a batch-cap constant is NOT intercepted. The guard does not protect itself or any governance artifact.",
+        "governance-guard.js self-test suite (27/27 as of S726): would detect guard code changes at next test run — NOT at write time. Lag depends on when tests are next executed.",
+        "S725 Governance Detection Standard: mandates specific scan methodologies — but enforcement is procedural (agent-compliance), not mechanical. There is no guard rule that blocks writes to governance config files.",
+        "S711 Pre-Flight Audit: compares governance guard test results (27/27 PASS baseline) against current state. A modified guard that breaks tests would be detected at the next pre-flight.",
+        "S726 Closure Gate: requires ACCEPTANCE of ownership transfers. Unauthorized governance changes would fail the ACCEPTANCE gate — but this runs at closure time, not at write time.",
+        "700-series Governance Auditor: would detect unauthorized governance changes during the next audit session by comparing CURRENT_BASELINES.md hashes against runtime hashes.",
+        "CURRENT_BASELINES.md hash verification: all 13 runtime-critical file hashes are recorded. An unauthorized change to governance-guard.js would produce a hash mismatch — detected at the next T0 or Tmid checkpoint per AGENTS.md §13.1."
+      ],
+      "would_be_prevented": false,
+      "would_be_detected": true,
+      "detection_lag": "1 session",
+      "detection_lag_rationale": "The governance guard does not protect itself. Its tool.execute.before hook only inspects operations on pack_*_corrected.js, scored_cases*.js, and MASTER_QUESTION_REGISTRY.md. A write to governance-guard.js, AGENTS.md, knowledge/*.md (governance standards), or CURRENT_BASELINES.md is mechanically unblocked. Detection would occur at the next T0/Tmid checkpoint (hash mismatch in CURRENT_BASELINES.md), at the next governance guard test suite run (tests would fail if guard code was altered), or at the next 700-series audit session. The lag is approximately 1 session — the time between the unauthorized write and the next governance checkpoint. This is the weakest control in the entire governance stack.",
+      "residual_risk": "high",
+      "residual_risk_rationale": "This is the most dangerous of the three scenarios. The governance guard is the primary mechanical enforcement mechanism for all pack-file operations, but it has NO self-protection. The batch-cap constant (MAX_QUESTIONS = 30, line 19 of governance-guard.js) is a simple JavaScript variable — changing it to 300 would silently disable Rule 5. The prohibition list in §2.2 is an .md document with no code-level enforcement. The detection mechanisms are all post-hoc (hash comparison, test suite run, audit session) — none are pre-write. Compare with Scenario 2 where the guard has 4 active detection layers (Rules 1, 2, 4, 5) — here, the guard has zero. The S600 Charter notes 'the binding constraint is AUTHOR CAPACITY' (§1.2), meaning the human-authored governance standards (CAQS, DCS, batch caps) are the final quality control — a 600-series agent that overrides these removes the project's core quality guarantee. The only saving grace is that no 600-series agent is active (charter is DEFERRED), and activation requires a unanimous governance board vote (§5.2).",
+      "root_cause": "Governance guard tool.execute.before hook only inspects pack-file and registry writes. It does not guard: (1) governance-guard.js itself, (2) AGENTS.md governance rules, (3) knowledge/* governance standards, (4) CURRENT_BASELINES.md, (5) batch-cap constants embedded in the guard. The guard's self-protection gap is a known vulnerability — COND-S726-004 ('Rule 6 — Closure Gate — not yet implemented in governance-guard.js') confirms this has not been addressed. No code-level 'tamper detection' exists for the guard or its configuration."
+    }
+  },
+
+  "all_scenarios_rejected": false,
+  "all_scenarios_rejected_rationale": "Scenario 3 (governance override) has HIGH residual risk because the governance guard has no self-protection mechanism. Scenarios 1 and 2 would be DETECTED but are not mechanically PREVENTED at write time. The combined system catches violations at detection time (session-idle, pre-flight, audit) but does not mechanically PREVENT them at execution time for non-pack-file operations.",
+
+  "weakest_control": "governance-guard.js self-protection gap (COND-S726-004). The governance guard has zero code-level detection for writes to: governance-guard.js itself, AGENTS.md, knowledge/* governance standards, CURRENT_BASELINES.md, or the MAX_QUESTIONS batch-cap constant (line 19). Its tool.execute.before hook exclusively inspects pack_*_corrected.js, scored_cases*.js, and MASTER_QUESTION_REGISTRY.md. A write to any governance artifact is mechanically unblocked. The guard does not check whether its own source code, its configuration, or the standards it enforces have been tampered with. The batch-cap constant is a plain JavaScript variable with no integrity check. This is the single most consequential vulnerability because the guard is the primary mechanical enforcement across all pack-file operations.",
+
+  "strongest_control": "governance-guard.js Rule 2 (DL-008 BLOCK) + Rule 5 (batch-cap BLOCK). Rule 2 is the only rule in the guard that provides IMMEDIATE, PRE-WRITE, MECHANICAL BLOCKING of a content defect — the tool.execute.before hook scans new content for non-empty ExplanationWrong[CorrectChoice] using object-boundary extraction and throws an Error before the write completes. Rule 5 similarly blocks batch operations exceeding 30 items at write time. These two rules are the only pre-write (not post-hoc) mechanical enforcement mechanisms in the entire governance stack. The historical record proves their effectiveness: DL-008 re-contamination has been blocked 100% since the guard was activated (S718), and no batch-cap violations have occurred across all 700/800-series operations. The S726 upgrade (AM-1 Function Constructor Parse) further hardened Rule 2 against DL-029 false positives. All other controls (charter prohibitions, session-idle warnings, pre-flight audits, hash verification, closure gates, ownership matrices) operate on post-hoc detection — only Rules 2 and 5 provide pre-write prevention.",
+
+  "recommendation": "COND-S726-004 must be resolved before the 600-series is activated: implement a Rule 6 (Self-Protection) in governance-guard.js that (1) checks filePath against a whitelist of governance artifacts (governance-guard.js, AGENTS.md, CURRENT_BASELINES.md, knowledge/CURRENT_BASELINES.md, knowledge/CAQS_v1.0.md, DEFECT_LIBRARY.md), (2) BLOCKs any write to these files unless the session carries a GOVERNANCE-AUTHORIZED marker, and (3) verifies the MAX_QUESTIONS constant integrity at guard startup via a known-hash comparison. Additionally, the S600 Charter §2.2 prohibitions should be operationalized as validation checks: before any 600-series agent executes, confirm the agent's task does not match any prohibited domain. The charter is currently a DEFERRED document — should it ever be activated, these gaps must be closed before the first 600-series agent executes."
+
+}

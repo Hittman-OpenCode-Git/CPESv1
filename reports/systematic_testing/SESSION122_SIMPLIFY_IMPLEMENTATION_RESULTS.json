@@ -1,0 +1,49 @@
+{
+  "session": 122,
+  "title": "S122 Simplify Implementation Results",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "scope": "100-series May lane only",
+  "implementation": {
+    "newFunctions": [
+      { "name": "_buildSimplifyCoaching(question, context)", "file": "may-core.js", "lines": "1766-1806", "purpose": "Builds a 4-section simplified coaching breakdown: What this means, Why it matters, How to recognize, Quick rule" },
+      { "name": "_plainLanguageTranslation(explanation, topic, isCalculation)", "file": "may-core.js", "lines": "1808-1845", "purpose": "Translates technical ExplanationCorrect text into plain-language, extracting key reasoning sentences and adding interpretation" },
+      { "name": "_simplifyAccountingLanguage(text, topic)", "file": "may-core.js", "lines": "1847-1968", "purpose": "Replaces accounting jargon with parenthetical plain-language equivalents: 35+ term replacement patterns covering revenue recognition, expense/cost, classification, valuation, controls, budget, performance, cost management, and technology terms" },
+      { "name": "_inferWhyItMatters(topic, section, isCalculation)", "file": "may-core.js", "lines": "1970-1990", "purpose": "Explains the real-world significance of the tested concept, section-aligned" },
+      { "name": "_inferHowToRecognize(topic, section, isCalculation, stem)", "file": "may-core.js", "lines": "1992-2018", "purpose": "Practical exam-day recognition advice by section and question type" },
+      { "name": "_inferQuickRuleToRemember(q, topic, section, isCalculation)", "file": "may-core.js", "lines": "2020-2060", "purpose": "Memory-anchoring quick rule, section-aligned, with formula detection for calculations" }
+    ],
+    "modifiedFunctions": [
+      {
+        "name": "_simplifyExplanation()",
+        "file": "may-core.js",
+        "lines": "2062-2150",
+        "changes": [
+          "Added answer-gating: active unanswered → concept-only coaching (no answer reveal)",
+          "Added selected-answer / review-mode detection via state.session",
+          "Added 4-section coaching output via _buildSimplifyCoaching",
+          "Added plain-language translation pipeline",
+          "Added wrong-answer awareness (if learner chose wrong, offers 'Want me to break down why X is wrong? Tap Wrong choices' referral)",
+          "Added review-mode framing and Explain referral",
+          "Preserved _guardedSpeak integration"
+        ]
+      }
+    ]
+  },
+  "outputStructure": {
+    "unansweredGate": ["What this concept is about (concept-only)", "Why this matters", "How to recognize on exam day", "Quick rule", "No answer reveal"],
+    "postAnswer": ["What this means (plain language + translation)", "Why it matters", "How to recognize on exam day", "Quick rule", "Correct answer revealed", "If wrong: gentle referral to Wrong Choices"],
+    "reviewMode": ["Let's break this down in plain language...", "What this means (full translation)", "Why it matters", "How to recognize on exam day", "Quick rule", "Correct answer confirmed", "Referral to Explain answer for full detail"]
+  },
+  "termReplacements": {
+    "totalPatterns": 36,
+    "categories": ["Revenue/recognition (6)", "Expense/cost (3)", "Classification (3)", "Valuation/measurement (4)", "Controls (4)", "Budget/planning (3)", "Performance (3)", "Cost management (7)", "Standard costing/variance (3)", "Technology (3)"],
+    "designPrinciple": "Parenthetical replacement — keeps original term alongside plain equivalent, never replaces meaning"
+  },
+  "safetyPreserved": {
+    "_guardedSpeak": "Still wraps simplify output in pilot mode",
+    "antiFabrication": "No ASC/FASB/COSO citations on thin explanations; plain-language translation grounded in text",
+    "answerLeakage": "NEW gate: unanswered active question → concept-only, no correct answer revealed",
+    "predictionLanguage": "No exam-ready/pass language in any coaching output",
+    "meaningPreservation": "All term replacements use parenthetical form (original + plain equivalent), never drop original meaning"
+  }
+}

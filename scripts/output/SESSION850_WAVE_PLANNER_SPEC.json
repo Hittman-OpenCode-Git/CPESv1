@@ -1,0 +1,94 @@
+{
+  "specId": "SESSION850_WAVE_PLANNER_SPEC",
+  "board": "C",
+  "title": "Wave Planner",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Automatically build certification waves (A, B, C tiers) using workload, complexity, readiness, and blueprint balance. Replaces manual wave planning with automated domain-balanced scheduling.",
+  "scriptFile": "scripts/wave_planner.js",
+  "outputFile": "scripts/output/certification_waves.json",
+  "inputs": {
+    "candidateEngineOutput": "scripts/output/certification_candidates.json",
+    "remediationQueueOutput": "scripts/output/remediation_queue.json",
+    "domainProgressOutput": "scripts/output/domain_progress.json"
+  },
+  "waveDefinitions": {
+    "WAVE_A": {
+      "label": "Wave A — Priority Certification",
+      "criteria": "READY items in domains where certified coverage < 85%",
+      "maxItemsPerWave": 150,
+      "maxItemsPerDomain": 75,
+      "strategy": "Domain-balance-first"
+    },
+    "WAVE_B": {
+      "label": "Wave B — Expansion Certification",
+      "criteria": "READY items after Wave A completes, plus REMEDIATE items with minor fixes",
+      "maxItemsPerWave": 200,
+      "maxItemsPerDomain": 100,
+      "strategy": "Fill-domain-gaps"
+    },
+    "WAVE_C": {
+      "label": "Wave C — Completion Certification",
+      "criteria": "Remaining READY items, low-priority domains, quality improvements",
+      "maxItemsPerWave": 250,
+      "maxItemsPerDomain": 125,
+      "strategy": "Maximum-throughput"
+    }
+  },
+  "planningFactors": {
+    "workload": {
+      "weight": 0.25,
+      "description": "Number of items per wave — balance to avoid writer fatigue"
+    },
+    "complexity": {
+      "weight": 0.25,
+      "description": "Mix of simple and complex items per wave"
+    },
+    "readiness": {
+      "weight": 0.30,
+      "description": "Prioritize highest-readiness-score items"
+    },
+    "blueprintBalance": {
+      "weight": 0.20,
+      "description": "Ensure all 6 domains get proportional certification coverage"
+    }
+  },
+  "output": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "summary": {
+        "totalWaves": "integer",
+        "totalItemsPlanned": "integer",
+        "wavesByTier": { "WAVE_A": "integer", "WAVE_B": "integer", "WAVE_C": "integer" }
+      },
+      "waves": [
+        {
+          "waveId": "string",
+          "waveTier": "WAVE_A | WAVE_B | WAVE_C",
+          "label": "string",
+          "sequence": "integer",
+          "itemCount": "integer",
+          "estimatedHours": "integer",
+          "domainDistribution": { "A": "integer", "B": "integer" },
+          "readinessScoreAvg": "float",
+          "items": ["qid strings"],
+          "remediationPrerequisites": ["queueId strings"],
+          "notes": "string"
+        }
+      ],
+      "domainCoverage": {
+        "before": { "A": { "certified": "integer", "total": "integer", "pct": "float" } },
+        "after": { "A": { "certified": "integer", "total": "integer", "pct": "float" } }
+      }
+    }
+  },
+  "usage": "node scripts/wave_planner.js",
+  "dependencies": {
+    "engine": ["scripts/engine/pack_reader.js"],
+    "required": ["scripts/output/certification_candidates.json"]
+  }
+}

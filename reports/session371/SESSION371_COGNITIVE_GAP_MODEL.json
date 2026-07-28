@@ -1,0 +1,84 @@
+{
+  "session": "S371",
+  "type": "cognitive_gap_model",
+  "timestamp": "2026-07-28T12:00:00",
+  "current_state": {
+    "total_pool": 2540,
+    "certified": 2298,
+    "analyze_evaluate_pct": 1.97,
+    "analyze_evaluate_count": 50,
+    "target_pct": 40,
+    "target_count": 1016,
+    "gap_count": 966,
+    "gap_pct": 38.03
+  },
+  "pathways": {
+    "A_stem_rewrite": {
+      "items_per_wave": 25,
+      "hours_per_wave": 5,
+      "items_per_hour": 5.0,
+      "items_per_hour_direct": 3.0,
+      "quality_risk": "Medium",
+      "notes": "S861 demonstrated: 15 direct stem/explanation edits per wave, ~10 cascade items inherit upgraded labels through rotation-group clones. Cascade benefit (~67% lift) depends on intact rotation groups; remediation waves may have broken some groups."
+    },
+    "B_net_new": {
+      "items_per_phase": 20,
+      "hours_per_phase": 8,
+      "items_per_hour": 2.5,
+      "quality_risk": "High",
+      "notes": "S899 Phase 1: 13 Analyze + 7 Evaluate. Each item requires concept design, business scenario, stem, 4 choices, all 4 EW fields, EC, and full metadata. Evaluate items (~1/hr) are the binding constraint."
+    },
+    "C_relabel": {
+      "status": "PROHIBITED",
+      "reason": "S862 anti-inflation safeguards forbid label-only upgrades without content change. Classification correction (items already at Analyze/Evaluate but mislabeled) is permitted — see Bucket 1."
+    }
+  },
+  "gap_classification": {
+    "bucket1_relabel": {
+      "count": 100,
+      "pct_of_gap": 10.4,
+      "effort_hours": 20,
+      "method": "Classification correction: verify cognitive demand is genuinely Analyze/Evaluate, update CognitiveLevel metadata only."
+    },
+    "bucket2_upgradable": {
+      "count": 350,
+      "pct_of_gap": 36.2,
+      "effort_hours": 70,
+      "method": "Stem rewrite (Pathway A): convert calculation stems to diagnosis stems. Cascade benefit partial."
+    },
+    "bucket3_replacement": {
+      "count": 516,
+      "pct_of_gap": 53.4,
+      "effort_hours": 206,
+      "method": "Net-new authoring (Pathway B): replace definition-match items (DL-031 pattern) with new Analyze/Evaluate items."
+    }
+  },
+  "total_closure_effort": {
+    "total_hours": 296,
+    "total_waves": 41,
+    "breakdown": {
+      "bucket1": { "hours": 20, "waves": 2 },
+      "bucket2": { "hours": 70, "waves": 14 },
+      "bucket3": { "hours": 206, "waves": 25 }
+    }
+  },
+  "two_tier_impact": {
+    "model": "S367A Production-vs-Gold certification",
+    "analyze_effort_reduction": "15-20%",
+    "evaluate_effort_reduction": "0%",
+    "net_effort_reduction": "~12%",
+    "adjusted_total_hours": 260
+  },
+  "verdict": {
+    "closable_without_throughput_increase": false,
+    "minimum_throughput_increase_required": "2-3x wave frequency (1→3 waves/week) OR 30% increase in items-per-wave",
+    "time_to_close_at_current_velocity": "~41 weeks (~10 months)",
+    "time_to_80_readiness": "~33 weeks",
+    "alternative_acceleration_levers": [
+      "S370 automation savings (10h → 48→55 readiness)",
+      "Parallelize Bucket 1+2 (different skill requirements)",
+      "Prioritize Analyze over Evaluate (close 60% of gap in ~15 waves)",
+      "Two-tier certification (~12% effort reduction)"
+    ]
+  }
+}

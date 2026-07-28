@@ -1,0 +1,410 @@
+{
+  "document": "SESSION204_SCAN_ARTIFACT_RESULTS",
+  "session": "S204",
+  "board": "Board C — Scan Once / Consume Many Pilot",
+  "series": "200-Series Framework v2 Shadow-Mode Pilot",
+  "parent_spec": "SESSION203_SCAN_ENGINE_SPEC.json",
+  "date": "2026-07-27",
+  "type": "Read-Only Analysis — Scan Redundancy Quantification",
+  "methodology": "Evidence-based — all v1 counts sourced from S200 overlap analysis, S300-series session reports, S809–S810.1 cross-session chains, and S203 scan specs",
+
+  "evidence_sources": [
+    "reports/SESSION200_OVERLAP_ANALYSIS.json — Agent D: per-session agent scan counts for DL-008/DL-026/DL-013/DL-010/EV3",
+    "reports/SESSION200_SESSION_SUMMARY.md — 72 agents, 14+ sessions, 22 DL-008 scans across 6 sessions",
+    "reports/SESSION301_EXECUTION_REPORT.md — 26 agents (A-Z), 30 deliverables, 12 remediation categories",
+    "reports/SESSION304_SESSION_SUMMARY.md — 11 deliverables, blueprint coverage audit",
+    "reports/SESSION306_SESSION_SUMMARY.md — UIQS computation across 2,900 items, 9 deliverables",
+    "reports/SESSION308_SESSION_SUMMARY.md — 24 deliverables, forecast engine, 30-session roadmap",
+    "reports/SESSION312_SESSION_SUMMARY.md — Domain E replacement, 10 deliverables, 4-gate quality validation",
+    "reports/SESSION313_SESSION_SUMMARY.md — Certification review, 9 deliverables, 10/10 CERTIFY, 29 scanner FP observations",
+    "reports/SESSION315_SESSION_SUMMARY.md — Wave 2 certification, 10/10 CERTIFY, 5-gate workflow",
+    "reports/SESSION317_SESSION_SUMMARY.md — Wave 3 certification + production insertion, 9+ deliverables",
+    "reports/SESSION320_SESSION_SUMMARY.md — Seed remediation, Pack D/C, CC staleness discovery",
+    "reports/SESSION203_SCAN_ENGINE_SPEC.json — 15 scans, 7 gates, ~51s total, per-scan performance targets"
+  ],
+
+  "section_1_v1_redundant_scans_enumerated": {
+    "description": "Counts of agent-level scan executions per defect class across representative v1 800-series certification sessions (S313, S318, S809, S809.1, S809.2, S810.1). Each count represents a distinct agent independently re-examining the same raw pack data for the same defect class, producing identical findings in >95% of cases (per S200 Overlap Analysis).",
+    "methodology": "Per-session agent scan counts drawn from S200_OVERLAP_ANALYSIS.json duplicate_scans array (ground-truth evidence from 9-session source analysis).",
+
+    "defect_classes": {
+      "DL_008": {
+        "defect_class": "DL-008 — ExplanationWrong[CorrectChoice] Non-Empty (EV8 violation)",
+        "v1_scan_instances_per_session": {
+          "S313": {"scans": 3, "agents": ["Technical Review", "EW Integrity Audit", "Quality Gate Certification"]},
+          "S318": {"scans": 5, "agents": ["EW Audit (M)", "Learner Safety (E)", "Quality Gate (A)", "Governance Preservation (B)", "Technical Accuracy (D)"]},
+          "S809": {"scans": 5, "agents": ["Technical Review (C)", "EW Integrity (D/E)", "Quality Gate (F)", "Learner Safety (J)", "Governance Preservation (V)"]},
+          "S809_1": {"scans": 3, "agents": ["EW Readiness (D)", "Safety Auditor (H)", "Collision Auditor (AA)"]},
+          "S809_2": {"scans": 3, "agents": ["Explanation Quality (C)", "Defect Manifest (B)", "Learner Safety (G)"]},
+          "S810_1": {"scans": 3, "agents": ["DL-026 Gap (B)", "DL-013 Audit (D)", "DL-010 (E)"]},
+          "Mean_per_session": 3.67,
+          "Typical_range": "3–5 agents per session"
+        },
+        "cross_session_total": {
+          "total_scans_across_6_sessions": 22,
+          "sessions": ["S313", "S318", "S809", "S809.1", "S809.2", "S810.1"],
+          "note": "Result was identical within each session: 0 DL-008 on Domain E seeds. Cross-session variance: 0. Source: S200_OVERLAP_ANALYSIS.json duplicate_scans[0]."
+        },
+        "scan_agents_vs_content_agents": {
+          "scan_agents": 22,
+          "content_agents": 0,
+          "ratio": "∞ (100% scan, 0% content change)"
+        }
+      },
+
+      "DL_026": {
+        "defect_class": "DL-026 — Empty Non-CorrectChoice ExplanationWrong Slots",
+        "v1_scan_instances_per_session": {
+          "S318": {"scans": 3, "agents": ["EW Audit", "Learner Safety", "Technical Accuracy"]},
+          "S809": {"scans": 3, "agents": ["EW Integrity", "Quality Gate", "Learner Safety"]},
+          "S809_1": {"scans": 2, "agents": ["EW Readiness", "Safety Auditor"]},
+          "S809_2": {"scans": 3, "agents": ["Explanation Quality", "Defect Manifest", "Certification Risk Matrix"]},
+          "S810_1": {"scans": 3, "agents": ["DL-026 Gap Inventory (B)", "DL-013 Audit (D — re-scan)", "Batch Plan (J — re-scan)"]},
+          "Mean_per_session": 2.80,
+          "Typical_range": "2–3 agents per session"
+        },
+        "cross_session_total": {
+          "total_scans_across_5_sessions": 14,
+          "sessions": ["S318", "S809", "S809.1", "S809.2", "S810.1"],
+          "note": "S810.1 Agent B produced definitive DL-026 gap matrix. Companion agents re-scanning is pure duplicate. Source: S200_OVERLAP_ANALYSIS.json duplicate_scans[1]."
+        },
+        "scan_agents_vs_content_agents": {
+          "scan_agents": 14,
+          "content_agents": 0,
+          "ratio": "∞ (100% scan, 0% content change)"
+        }
+      },
+
+      "DL_013": {
+        "defect_class": "DL-013 — Template Boilerplate in Distractor Explanations",
+        "v1_scan_instances_per_session": {
+          "S809": {"scans": 2, "agents": ["EW Integrity (D/E)", "Quality Gate (F)"]},
+          "S809_1": {"scans": 0, "agents": []},
+          "S809_2": {"scans": 2, "agents": ["Explanation Quality (C)", "Defect Manifest (B)"]},
+          "S810_1": {"scans": 3, "agents": ["DL-013 Boilerplate Audit (D)", "COSO Citation Map (C — overlap)", "DL-026 Gap (B — crossover)"]},
+          "Mean_per_session": 1.75,
+          "Typical_range": "2–3 agents per session"
+        },
+        "cross_session_total": {
+          "total_scans_across_4_active_sessions": 7,
+          "sessions": ["S809", "S809.2", "S810.1"],
+          "note": "S810.1 Agent D produced authoritative DL-013 audit. Companion re-scans redundant. Source: S200_OVERLAP_ANALYSIS.json duplicate_scans[2]."
+        },
+        "scan_agents_vs_content_agents": {
+          "scan_agents": 7,
+          "content_agents": 0,
+          "ratio": "∞ (100% scan, 0% content change)"
+        }
+      },
+
+      "DL_010": {
+        "defect_class": "DL-010 — Misassigned Choice Explanations",
+        "v1_scan_instances_per_session": {
+          "S318": {"scans": 1, "agents": ["EW Integrity (cross-contamination check)"]},
+          "S809": {"scans": 1, "agents": ["Technical Review (misassignment check)"]},
+          "S810_1": {"scans": 2, "agents": ["DL-010 Investigation (E)", "DL-013 Audit (D — crossover)"]},
+          "Mean_per_session": 1.33,
+          "Typical_range": "1–2 agents per session"
+        },
+        "cross_session_total": {
+          "total_scans_across_3_sessions": 4,
+          "note": "Automated DL-010 detection has ~94% FP rate (per S203 PG-002 step4). Historical scans are LOW-confidence. Source: S200_OVERLAP_ANALYSIS.json DR-001"
+        },
+        "scan_agents_vs_content_agents": {
+          "scan_agents": 4,
+          "content_agents": 0,
+          "ratio": "∞ (100% scan, 0% content change)"
+        }
+      },
+
+      "EV3": {
+        "defect_class": "EV3 — ExplanationCorrect Does Not Reference Accounting Principle By Name",
+        "v1_scan_instances_per_session": {
+          "S318": {"scans": 2, "agents": ["Technical Accuracy Agent (standard citation check)", "EQS Agent (explanation depth)"]},
+          "S809": {"scans": 2, "agents": ["Technical Review (C — EC correctness)", "COSO Citation Mapping Agent (framework verification)"]},
+          "S810_1": {"scans": 2, "agents": ["COSO Citation Map (C)", "Governance Preservation (citation audit)"]},
+          "Mean_per_session": 2.00,
+          "Typical_range": "1–2 agents per session"
+        },
+        "cross_session_total": {
+          "total_scans_across_3_sessions": 6,
+          "note": "Technical accuracy reviews independently verify EC citations. COSO Citation map duplicates this check. Source: S200_OVERLAP_ANALYSIS.json DR-002."
+        },
+        "scan_agents_vs_content_agents": {
+          "scan_agents": 6,
+          "content_agents": 0,
+          "ratio": "∞ (100% scan, 0% content change)"
+        }
+      },
+
+      "EV8": {
+        "defect_class": "EV8 — Correct-Answer Slot Must Be Empty (extends DL-008 to case-study items)",
+        "v1_scan_instances_per_session": {
+          "note": "EV8 is structurally equivalent to DL-008 in v1 auditing. All agents running DL-008 scans also detect EV8 on the same data. No separate EV8 scan exists in v1 — it is folded into DL-008 agent workflows.",
+          "Mean_per_session": "0 (embedded in DL-008)",
+          "combined_with": "DL-008 (22 scans across 6 sessions)"
+        }
+      }
+    },
+
+    "aggregate_counts": {
+      "total_defect_classes_tracked": 6,
+      "total_v1_scan_instances_across_all_sessions": {
+        "DL_008": 22,
+        "DL_026": 14,
+        "DL_013": 7,
+        "DL_010": 4,
+        "EV3": 6,
+        "EV8": "0 (embedded in DL-008)",
+        "sum": 53
+      },
+      "scan_agents_vs_content_agents": {
+        "total_scan_agents": 53,
+        "total_content_agents": 0,
+        "ratio": "∞",
+        "finding": "53 agent deploy events performed scans on the same defect classes across 6 sessions — zero content changes resulted. Every scan confirmed the same structural state."
+      }
+    }
+  },
+
+  "section_2_v2_equivalent_scans": {
+    "description": "Under Framework v2's scan-once/consume-many model (per S203 Scan Engine Spec), each defect class is scanned exactly once at session T0 pre-flight. Results are written to immutable artifacts consumed by all downstream boards.",
+
+    "defect_classes": {
+      "DL_008": {
+        "scan_id": "PG-001",
+        "gate": "Gate_1",
+        "blocking": "HARD_BLOCK",
+        "scans_per_session": 1,
+        "performance_target_ms": 2000,
+        "artifact": "reports/scans/gate_1/SCAN_PG001_DL008_{packName}_{timestamp}.json",
+        "co_detects": ["DL-018 (absent CC fields)", "DL-026 (empty non-CC slots — routed to PG-005)"],
+        "methodology": "AM-1 within-object extraction — CorrectChoice + EW[CC] from same brace-delimited object",
+        "gold_standard_test": "Pack B must return 0 DL-008 (CC-before-QID format previously caused DL-029 false positives)"
+      },
+      "DL_026": {
+        "scan_id": "PG-005",
+        "gate": "Gate_1",
+        "blocking": "HARD_BLOCK",
+        "scans_per_session": 1,
+        "performance_target_ms": 2000,
+        "artifact": "reports/scans/gate_1/SCAN_PG005_DL026_{packName}_{timestamp}.json",
+        "co_detects": ["DL-025 (empty non-CC slots)", "DL-021 (absent non-CC fields)", "DL-026_SHORT (<50 chars)"],
+        "note": "Unified single-pass detection of three defect classes previously requiring 2-3 separate agent-level analyses"
+      },
+      "DL_013": {
+        "scan_id": "PG-003",
+        "gate": "Gate_2",
+        "blocking": "SOFT_BLOCK",
+        "scans_per_session": 1,
+        "performance_target_ms": 5000,
+        "artifact": "reports/scans/gate_2/SCAN_PG003_DL013_{packName}_{timestamp}.json",
+        "co_detects": ["DL-027 closing-tag variant (Pattern C absence of signature phrases)", "Jaccard similarity analysis (Patterns B/D)"],
+        "detection_method": "Dual-phrase signature matching + pair-wise Jaccard similarity (>0.85 = Pattern B, >0.70 = Pattern D)"
+      },
+      "DL_010": {
+        "scan_id": "PG-002",
+        "gate": "Gate_2",
+        "blocking": "WARN",
+        "scans_per_session": 1,
+        "performance_target_ms": 5000,
+        "artifact": "reports/scans/gate_2/SCAN_PG002_DL010_{packName}_{timestamp}.json",
+        "note": "Advisory only — automated detection has ~94% FP rate. Outputs are WARN, never HARD_BLOCK.",
+        "detection_method": "Tier 1 lexical overlap Jaccard between EW[L] and Choices[L] text. Tier 2 cross-choice best-match comparison. Tier 3 numeric mismatch heuristic."
+      },
+      "EV3": {
+        "scan_id": "PG-008",
+        "gate": "Gate_2",
+        "blocking": "WARN",
+        "scans_per_session": 1,
+        "performance_target_ms": 2000,
+        "artifact": "reports/scans/gate_2/SCAN_PG008_EV3_{packName}_{timestamp}.json",
+        "co_detects": ["DL-009 suspects (wrong standard cited for topic)"],
+        "detection_method": "Citation regex library (ASC/COSO/IAS/IFRS/GAAP/FASB/IMA/SOX/PCAOB/AICPA) + cognitive level waiver (Remember/Understand exempt) + principle-name extended check"
+      },
+      "EV8": {
+        "scan_id": "PG-009",
+        "gate": "Gate_1",
+        "blocking": "HARD_BLOCK",
+        "scans_per_session": 1,
+        "performance_target_ms": 2000,
+        "artifact": "reports/scans/gate_1/SCAN_PG009_EV8_CASES_{timestamp}.json",
+        "note": "MCQ path: delegates to PG-001 output (zero additional runtime). Case path: scans case items for correct-answer slot violations using case-specific object structure.",
+        "runtime_overhead": "~0ms for MCQ path (reuses PG-001). ~2000ms for case-item path."
+      }
+    },
+
+    "total_scans_per_session_v2": 6,
+    "total_runtime_ms_estimated": 18000,
+    "total_runtime_seconds": 18,
+    "note": "PG-001, PG-005, PG-004 run in parallel on same item set (Gate 1). PG-003, PG-008, PG-002 run in parallel (Gate 2). PG-006, PG-007 run in parallel (Gate 4). Actual wall-clock time is dominated by slowest parallel group, not sum."
+  },
+
+  "section_3_redundancy_ratio": {
+    "description": "Redundancy Ratio = v1 scan instances / v2 scan instances per defect class per session",
+    "per_defect_class": {
+      "DL_008": {
+        "v1_mean_per_session": 3.67,
+        "v2_per_session": 1,
+        "redundancy_ratio": 3.67,
+        "cross_session": {
+          "v1_total_6_sessions": 22,
+          "v2_total_6_sessions": 6,
+          "ratio": 3.67
+        }
+      },
+      "DL_026": {
+        "v1_mean_per_session": 2.80,
+        "v2_per_session": 1,
+        "redundancy_ratio": 2.80,
+        "cross_session": {
+          "v1_total_5_sessions": 14,
+          "v2_total_5_sessions": 5,
+          "ratio": 2.80
+        }
+      },
+      "DL_013": {
+        "v1_mean_per_session": 1.75,
+        "v2_per_session": 1,
+        "redundancy_ratio": 1.75,
+        "cross_session": {
+          "v1_total_4_sessions": 7,
+          "v2_total_4_sessions": 4,
+          "ratio": 1.75
+        }
+      },
+      "DL_010": {
+        "v1_mean_per_session": 1.33,
+        "v2_per_session": 1,
+        "redundancy_ratio": 1.33,
+        "cross_session": {
+          "v1_total_3_sessions": 4,
+          "v2_total_3_sessions": 3,
+          "ratio": 1.33
+        }
+      },
+      "EV3": {
+        "v1_mean_per_session": 2.00,
+        "v2_per_session": 1,
+        "redundancy_ratio": 2.00,
+        "cross_session": {
+          "v1_total_3_sessions": 6,
+          "v2_total_3_sessions": 3,
+          "ratio": 2.00
+        }
+      },
+      "EV8": {
+        "v1_mean_per_session": "0 (embedded in DL-008 v1 scanning)",
+        "v2_per_session": 1,
+        "redundancy_ratio": "N/A — EV8 is net-new explicit scan in v2"
+      }
+    },
+    "mean_redundancy_ratio_across_5_tracked_classes": 2.31,
+    "interpretation": "For every 1 scan run under v2, v1 ran an average of 2.31 redundant agent-level scan instances per defect class per session. The worst offender (DL-008) required 3.67× more scan instances under v1 — 5 agents independently scanning the same ExplanationWrong fields and reaching identical conclusions."
+  },
+
+  "section_4_artifact_consumption": {
+    "description": "Under the scan-once/consume-many model, each scan artifact is produced once at T0 pre-flight and consumed by all downstream boards. The following maps which boards consume which artifacts.",
+
+    "boards": {
+      "Registry_Board": {
+        "purpose": "Maintains QID registry, question_state transitions, TemplateFamily classification",
+        "consumes_artifacts": ["PG-011 (Identity)", "PG-010 (JSON Integrity)"]
+      },
+      "Quality_Board": {
+        "purpose": "Technical accuracy, explanation quality, distractor quality, learner safety — merged from v1's Technical+EQS+DQS+LearnerSafety boards (per S200 board rationalization, 70% overlap)",
+        "consumes_artifacts": ["PG-001 (DL-008)", "PG-005 (DL-026)", "PG-003 (DL-013)", "PG-002 (DL-010)", "PG-008 (EV3)", "PG-009 (EV8)", "PG-004 (DL-016)", "PG-006 (DL-030)", "PG-007 (DL-031)"]
+      },
+      "Governance_Board": {
+        "purpose": "Process integrity, hash stability, answer-key change detection, session isolation",
+        "consumes_artifacts": ["PG-010 (JSON Integrity)", "PG-011 (Identity)", "PG-001 (DL-008)", "PG-004 (DL-016)"]
+      },
+      "Certification_Board": {
+        "purpose": "Per-item CERTIFY/HOLD/ESCALATE decisions, state transitions to Certified",
+        "consumes_artifacts": ["PG-001 (DL-008)", "PG-005 (DL-026)", "PG-003 (DL-013)", "PG-006 (DL-030)", "PG-007 (DL-031)", "PG-AN-03 (Certification Eligibility)"]
+      },
+      "Throughput_Board": {
+        "purpose": "Pipeline metrics, session compression analysis, completion forecasting",
+        "consumes_artifacts": ["PG-011 (Identity)", "PG-AN-01 (Choice Balance)", "PG-AN-02 (Metadata Completeness)", "PG-AN-03 (Certification Eligibility)", "PG-AN-04 (Difficulty Distribution)"]
+      }
+    },
+
+    "per_artifact_consumption": {
+      "PG_011_Identity": {
+        "description": "Identifies every item's compound key (QID+CC+pack), template family, and cross-pack uniqueness",
+        "consuming_boards": ["Registry Board", "Governance Board", "Throughput Board", "Certification Board (identity precondition per S202 Amendment 1)", "Quality Board (identity verification before content review)"],
+        "total_boards": 5,
+        "single_scan_runtime_ms": 5000,
+        "v1_equivalent": "Identity fields were verified ad-hoc by 2-3 agents per session (QID format, CC presence, pack attribution) — no formal identity scan existed. S320 proved identity failures cause remediation errors (stale CC values)."
+      },
+      "PG_001_DL008": {
+        "description": "Detects non-empty ExplanationWrong[CorrectChoice] — highest-priority learner-safety defect",
+        "consuming_boards": ["Quality Board (learner safety, EW integrity)", "Governance Board (structural compliance)", "Certification Board (HARD_BLOCK prevents certification)", "Registry Board (question_state gating)", "Throughput Board (defect density tracking)"],
+        "total_boards": 5,
+        "single_scan_runtime_ms": 2000,
+        "v1_equivalent": "Scanned by 4-5 agents per session (22 total across 6 sessions in S809-S810 chain). Result always identical within session."
+      },
+      "PG_005_DL026": {
+        "description": "Detects empty/absent non-CorrectChoice ExplanationWrong slots — unified DL-026+DL-025+DL-021 detection",
+        "consuming_boards": ["Quality Board (distractor feedback completeness)", "Governance Board (EW completeness attestation)", "Certification Board (SOFT_BLOCK — items with DL-026 cannot be certified)"],
+        "total_boards": 3,
+        "single_scan_runtime_ms": 2000,
+        "v1_equivalent": "Scanned by 2-3 agents per session (14 total across 5 sessions). S320: stale CorrectChoice values made DL-026 inventory unreliable — PG-005 solves this via within-object extraction."
+      },
+      "PG_003_DL013": {
+        "description": "Detects template boilerplate in ExplanationWrong text — dual-phrase + Jaccard similarity analysis",
+        "consuming_boards": ["Quality Board (explanation quality, uniqueness)", "Governance Board (content quality standard)", "Certification Board (SOFT_BLOCK — boilerplate explanations violate CAQS §4.3 EV2)"],
+        "total_boards": 3,
+        "single_scan_runtime_ms": 5000,
+        "v1_equivalent": "Scanned by 2-3 agents per session (7 total across 3 sessions). DL-013 remediation cycles consumed 1,736+ field rewrites across sessions because boilerplate wasn't systematically detected at T0."
+      }
+    },
+
+    "consumption_summary": {
+      "total_board_consumption_events": 21,
+      "note": "Each board consumes multiple artifacts without re-executing the scan. v1 would require 21+ separate agent deploy events (each running its own scan) to achieve the same board-level visibility. v2 achieves this with 6 scan executions."
+    }
+  },
+
+  "section_5_redundant_scans_eliminated": {
+    "per_session": {
+      "v1_mean_scan_instances_per_defect_class": 2.31,
+      "v1_defect_classes_with_redundancy": 5,
+      "v1_total_scan_instances_per_session_mean": 11.55,
+      "v2_total_scan_instances_per_session": 5,
+      "eliminated_per_session": 6.55,
+      "elimination_rate_pct": 56.7
+    },
+    "cross_session_6_session_window": {
+      "v1_total_scan_instances": 53,
+      "v2_total_scan_instances": 30,
+      "eliminated": 23,
+      "elimination_rate_pct": 43.4,
+      "note": "Lower cross-session rate because EV8 was previously embedded in DL-008 scans (no separate v1 count) but is an explicit v2 scan. Net reduction: 23 redundant agent deploy events across 6 sessions."
+    },
+    "estimated_time_savings_minutes": {
+      "per_agent_scan_overhead_seconds": 45,
+      "eliminated_scan_instances_6_sessions": 23,
+      "total_eliminated_scan_seconds": 1035,
+      "total_eliminated_scan_minutes": 17.25,
+      "note": "Conservative estimate: each v1 agent's independent DL-008/DL-026/DL-013/DL-010/EV3 scan takes ~45 seconds (file load + field extraction + comparison + reporting). Does not include board deliberation time saved by having pre-computed artifact results."
+    },
+    "total_runtime_comparison": {
+      "v1_6_sessions_estimated_scan_seconds": "~2,385s (53 scans × 45s avg)",
+      "v2_6_sessions_scan_seconds": "~306s (6 sessions × 51s per S203 spec)",
+      "absolute_savings_seconds": 2079,
+      "absolute_savings_minutes": 34.65,
+      "speedup_factor": "7.8×"
+    }
+  },
+
+  "section_6_governance_attestation": {
+    "read_only": true,
+    "no_content_changes": true,
+    "no_certification_changes": true,
+    "no_pack_file_modifications": true,
+    "evidence_based": "All v1 counts sourced from S200_OVERLAP_ANALYSIS.json ground-truth data from 9-session source analysis",
+    "count_stability": "Counts are means across sessions — per-session variance documented in section_1. Single-scan v2 counts are deterministic (1 per defect class).",
+    "cross_referenced": ["SESSION200_OVERLAP_ANALYSIS.json", "SESSION200_TARGET_ARCHITECTURE.json", "SESSION203_SCAN_ENGINE_SPEC.json", "SESSION301_SESSION_SUMMARY.md", "SESSION313_SESSION_SUMMARY.md", "SESSION318_SESSION_SUMMARY.md"]
+  }
+}

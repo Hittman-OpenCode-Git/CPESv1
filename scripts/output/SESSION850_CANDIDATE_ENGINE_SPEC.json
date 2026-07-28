@@ -1,0 +1,117 @@
+{
+  "specId": "SESSION850_CANDIDATE_ENGINE_SPEC",
+  "board": "A",
+  "title": "Certification Candidate Engine",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Automatically identify READY inventory for certification waves by running structural readiness checks, identity validation, and governance compliance across all pack files.",
+  "scriptFile": "scripts/certification_candidate_engine.js",
+  "outputFile": "scripts/output/certification_candidates.json",
+  "inputs": {
+    "packFiles": [
+      "pack_a_corrected.js",
+      "pack_b_corrected.js",
+      "pack_c_corrected.js",
+      "pack_d_corrected.js",
+      "pack_e_corrected.js"
+    ],
+    "caseFiles": [
+      "scored_cases.js",
+      "scored_cases2.js",
+      "scored_cases3.js",
+      "scored_cases4.js",
+      "scored_cases5.js"
+    ],
+    "defectLibrary": "knowledge/DEFECT_LIBRARY.md",
+    "defectManifest": "governance/DEFECT_MANIFEST_DL008_DL026.json"
+  },
+  "readinessCriteria": {
+    "structural": {
+      "DL008_clean": "ExplanationWrong[CorrectChoice] must be empty per EV8",
+      "DL026_clean": "No empty ExplanationWrong fields at non-CorrectChoice positions",
+      "DL018_clean": "ExplanationWrong[CorrectChoice] field must exist",
+      "DL021_clean": "Distractor ExplanationWrong fields must be present",
+      "DL025_clean": "No empty non-CorrectChoice ExplanationWrong slots",
+      "correctChoice_present": "CorrectChoice field must exist and be one of A/B/C/D",
+      "stem_present": "Stem must be non-empty",
+      "explanation_present": "ExplanationCorrect must be non-empty and >= 50 chars",
+      "choices_complete": "All 4 choices (A/B/C/D) must be present and non-empty",
+      "questionId_valid": "QuestionID must match expected pattern"
+    },
+    "identity": {
+      "gate_neg1_pass": "Gate -1 identity validation must pass (no CC/Stem/EC missing)",
+      "question_state_valid": "question_state must be one of: Unprocessed, In Audit, Editorial Queue",
+      "not_already_certified": "Must not already be question_state: Certified",
+      "not_archived": "Must not be question_state: Archived"
+    },
+    "governance": {
+      "rule2_compliant": "No non-empty ExplanationWrong[CorrectChoice] per governance-guard Rule 2",
+      "rule5_respected": "Item not in a blocked batch (>30 items without BLOCK-AUTHORIZED)",
+      "defect_manifest_clear": "Not listed in DEFECT_MANIFEST_DL008_DL026.json as blocked"
+    }
+  },
+  "states": {
+    "BLOCKED": "Failed identity validation or has critical structural defects",
+    "REMEDIATE": "Has known defects requiring fix before certification",
+    "READY": "All gates pass — eligible for certification wave",
+    "CERTIFY": "Quality Board approved — ready for certification action"
+  },
+  "output": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "summary": {
+        "totalScanned": "integer",
+        "totalReady": "integer",
+        "totalRemediate": "integer",
+        "totalBlocked": "integer",
+        "totalAlreadyCertified": "integer",
+        "totalArchived": "integer"
+      },
+      "byDomain": {
+        "A": { "ready": "integer", "remediate": "integer", "blocked": "integer" },
+        "B": "...",
+        "C": "...",
+        "D": "...",
+        "E": "...",
+        "F": "..."
+      },
+      "byPack": {
+        "pack_a": { "ready": "integer", "total": "integer", "pct": "float" },
+        "pack_b": "...",
+        "pack_c": "...",
+        "pack_d": "...",
+        "pack_e": "..."
+      },
+      "candidates": [
+        {
+          "qid": "string",
+          "pack": "string",
+          "section": "string",
+          "domain": "string",
+          "state": "READY | REMEDIATE | BLOCKED",
+          "currentQuestionState": "string",
+          "topic": "string",
+          "correctChoice": "string",
+          "defectFlags": ["string"],
+          "blockReason": "string",
+          "readinessScore": "integer (0-100)"
+        }
+      ],
+      "blockedItems": ["...same schema as candidates + blockReasonDetail"],
+      "remediationItems": ["...same schema as candidates + defectFlagsDetailed"]
+    }
+  },
+  "usage": "node scripts/certification_candidate_engine.js",
+  "dependencies": {
+    "engine": [
+      "scripts/engine/pack_reader.js"
+    ],
+    "external": [
+      "governance/DEFECT_MANIFEST_DL008_DL026.json"
+    ]
+  }
+}

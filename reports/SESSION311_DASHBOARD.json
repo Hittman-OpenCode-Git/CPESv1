@@ -1,0 +1,114 @@
+{
+  "session": "311",
+  "agent": "S",
+  "title": "800-Series Dashboards — Domain E, Domain F, Modernization",
+  "generated": "2026-07-26",
+
+  "domainEDashboard": {
+    "label": "Domain E — Internal Controls",
+    "totalItems": 375,
+    "certified": 208,
+    "certifiedPct": "55.5%",
+    "archived": 129,
+    "archivedPct": "34.4%",
+    "unprocessed": 38,
+    "unprocessedPct": "10.1%",
+    "uiqs": 62.5,
+    "uiqsGrade": "C",
+    "gap": 167,
+    "replacementTarget": 43,
+    "certificationTarget": 38,
+    "postCompletionCertified": 289,
+    "postCompletionPct": "77.1%",
+    "postCompletionUIQS": 79.0,
+    "postCompletionGrade": "B",
+    "sessionsAllocated": 3,
+    "phase": "Phase 2 (S805-S807)",
+    "qualityBenchmark": "Pack B Section E (75 certified, gold standard)",
+    "keyRisks": [
+      "Pack A Section E: 37 Certified clone items in learner pool — highest learner-safety priority",
+      "Pack E Section E: 75 certified but educationally thin (EC mean ~108 chars)",
+      "Clone group consolidation must preserve topic coverage"
+    ]
+  },
+
+  "domainFDashboard": {
+    "label": "Domain F — Technology & Analytics",
+    "totalItems": 374,
+    "certified": 225,
+    "certifiedPct": "60.2%",
+    "archived": 110,
+    "archivedPct": "29.4%",
+    "unprocessed": 39,
+    "unprocessedPct": "10.4%",
+    "uiqs": 62.4,
+    "uiqsGrade": "C",
+    "gap": 149,
+    "replacementTarget": 37,
+    "certificationTarget": 39,
+    "postCompletionCertified": 301,
+    "postCompletionPct": "80.5%",
+    "postCompletionUIQS": 77.9,
+    "postCompletionGrade": "B",
+    "sessionsAllocated": 3,
+    "phase": "Phase 3 (S808-S810)",
+    "qualityBenchmark": "Pack B Section F (75 certified, gold standard)",
+    "keyRisks": [
+      "GC-803-002: 1 escaped Pack D Section F clone — verify in S804",
+      "P1-FC-010 escalated (EW_D cross-contamination — DL-010 pattern) — fix before certifying",
+      "Domain F is greenfield authoring — quality depends entirely on 5-gate workflow adherence"
+    ]
+  },
+
+  "modernizationDashboard": {
+    "label": "Deferred Modernization",
+    "status": "DEFERRED per S310 decision",
+    "debtItems": {
+      "dl013": {
+        "fields": 851,
+        "itemsAffected": 0,
+        "packs": ["Pack A (238 fields)", "Pack C (357 fields)", "Pack D (256 fields)"],
+        "blocking": false,
+        "notes": "0 Certified items affected. Cosmetic — template boilerplate removal."
+      },
+      "dl031": {
+        "items": "~500",
+        "status": "Partially remediated for ENHANCED_CASE_BASE (38 difficulty downgrades in S530)",
+        "blocking": false,
+        "notes": "Difficulty inflation across MCQ and case items. Definition-recall items labeled Moderate."
+      },
+      "dl032": {
+        "items": "~420",
+        "status": "Partially remediated for ENHANCED_CASE_BASE",
+        "blocking": false,
+        "notes": "Uniform difficulty on case items. All case items rated same difficulty regardless of actual cognitive demand."
+      }
+    },
+    "trigger": "Post-800-series completion (after S812)",
+    "estimatedSessions": "4-6",
+    "phiImpact": "+2.1 PHI points",
+    "notes": "Modernization is non-blocking for learner pool. DL-013 affects 0 Certified items. DL-031/DL-032 partially remediated. Full sweep is a nice-to-have, not a must-have."
+  },
+
+  "crossDomainComparison": {
+    "eVsF": {
+      "size": "Domain E: 375 items vs Domain F: 374 items (essentially equal)",
+      "gap": "Domain E: 167 gap vs Domain F: 149 gap (similar scale)",
+      "replacementBurden": "Domain E: 43 replacements vs Domain F: 37 replacements (E has 16% more)",
+      "certificationBurden": "Domain E: 38 certs vs Domain F: 39 certs (essentially equal)",
+      "qualityBaseline": "Both are C-grade domains (UIQS ~62-63). Both target B-grade post-800-series (~78-79)",
+      "complexity": "Domain E (Internal Controls) is more theoretical — harder to author distractors. Domain F (T&A) is more concrete — easier to create realistic scenarios but requires current tech knowledge."
+    }
+  },
+
+  "portfolioPost800Projection": {
+    "totalCertified": 2490,
+    "totalItems": 2500,
+    "certifiedPct": "99.6%",
+    "remainingGap": 10,
+    "phiTarget": 82.5,
+    "phiGrade": "B+",
+    "uiqsTarget": 82.5,
+    "note": "Domain E/F completion brings portfolio to near-complete certification (2,490/2,500). Remaining 10 items are DL-008/DL-026 blocked items in Pack A/D."
+  }
+}

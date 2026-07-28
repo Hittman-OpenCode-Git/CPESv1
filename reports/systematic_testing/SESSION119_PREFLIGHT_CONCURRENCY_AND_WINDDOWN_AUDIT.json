@@ -1,0 +1,102 @@
+{
+  "session": "S119",
+  "timestamp": "2026-07-26T17:30:00Z",
+  "preflightTests": {
+    "test_may_stagec": { "passed": 119, "failed": 0 },
+    "test_tutoring_safety": { "passed": 74, "failed": 0 },
+    "test_readiness": { "passed": 37, "failed": 0 },
+    "test_calibration": { "passed": 18, "failed": 0 },
+    "total": { "passed": 248, "failed": 0 }
+  },
+  "postflightTests": {
+    "test_may_stagec": { "passed": 119, "failed": 0 },
+    "test_tutoring_safety": { "passed": 74, "failed": 0 },
+    "test_readiness": { "passed": 37, "failed": 0 },
+    "test_calibration": { "passed": 18, "failed": 0 },
+    "total": { "passed": 248, "failed": 0 }
+  },
+  "concurrencyGuard": {
+    "pack_a_corrected.js": { "expected": "3A092453E32E7C1D4DAAB6B85D1D9E4E", "actual": "3A092453E32E7C1D4DAAB6B85D1D9E4E", "match": true },
+    "pack_b_corrected.js": { "expected": "2DAB932DA55A11B50BE1F2AFD29ED7C9", "actual": "2DAB932DA55A11B50BE1F2AFD29ED7C9", "match": true },
+    "pack_c_corrected.js": { "expected": "ADC846FB01F11211850DE2741B23CD88", "actual": "ADC846FB01F11211850DE2741B23CD88", "match": true },
+    "pack_d_corrected.js": { "expected": "22CB6C9FB347B0D0F6E9AF295ACD6894", "actual": "22CB6C9FB347B0D0F6E9AF295ACD6894", "match": true },
+    "pack_e_corrected.js": { "expected": "934B6FE817C2C8AA2F63E0C7A6F2E88A", "actual": "934B6FE817C2C8AA2F63E0C7A6F2E88A", "match": true },
+    "scored_cases.js": { "expected": "B8277120A65D7DD820D642D5267A17A8", "actual": "B8277120A65D7DD820D642D5267A17A8", "match": true },
+    "scored_cases2.js": { "expected": "963595E90996F4710410D8A0E3687778", "actual": "963595E90996F4710410D8A0E3687778", "match": true },
+    "scored_cases3.js": { "expected": "45A2B090136804B8074C9F781733327A", "actual": "45A2B090136804B8074C9F781733327A", "match": true },
+    "scored_cases4.js": { "expected": "B1424FA18842234276A7DA862D5685F3", "actual": "B1424FA18842234276A7DA862D5685F3", "match": true },
+    "scored_cases5.js": { "expected": "6868ED05D2FDDE67E9EEEA1AB5E7031F", "actual": "6868ED05D2FDDE67E9EEEA1AB5E7031F", "match": true },
+    "app.js": { "expected": "4F96A4A8E099062A97C0526D98DE3FB8", "actual": "4F96A4A8E099062A97C0526D98DE3FB8", "match": true },
+    "index_updated.html": { "expected": "E69C36C00A8BD14AA49570D3DD541656", "actual": "E69C36C00A8BD14AA49570D3DD541656", "match": true },
+    "allMatch": true
+  },
+  "mayReadinessState": {
+    "s118Baseline": "248/248 PASS",
+    "thresholds": {
+      "stabilityHigh": 75,
+      "accuracyGood": 75,
+      "accuracyHigh": 80,
+      "accuracyLow": 60,
+      "stabilityGood": 60,
+      "stabilityLow": 50,
+      "recentPctHigh": 80,
+      "recentPctGood": 70,
+      "minAttemptsReady": 6,
+      "minAttemptsApproaching": 4,
+      "minAttemptsTopic": 3,
+      "caseBurdenDegradeMisses": 4
+    },
+    "modelVersion": "S111-1.0",
+    "posture": "PILOT-ONLY",
+    "knownPolishItem": "keyboard-navigation on student-row divs (tabIndex)",
+    "s118TelemetryConfirmed": {
+      "recommendationGateEvents": 8,
+      "gatePasses": 8,
+      "gateBlocks": 0,
+      "evidenceValidatorsExercised": "all 7 types",
+      "safetyBlocks": 24,
+      "exportPayloads": 8,
+      "examPredictionLanguage": 0
+    }
+  },
+  "laneInventory": {
+    "100_series_may": {
+      "lastSession": "S118",
+      "lastSessionDate": "2026-07-25",
+      "lastTestBaseline": "248/248",
+      "status": "PILOT-ONLY — ready for S119 single-user readiness review",
+      "syntheticStudents": 8,
+      "allSeededWithHistory": true,
+      "recommendationGatesPopulated": true
+    },
+    "500_series_caseBank": {
+      "lastSession": "S513",
+      "lastSessionDate": "2026-07-25",
+      "lastActivity": "MIGRATED_CASE_BASE_B: 75/75 items Certified, 15/15 cases Certified (100%)",
+      "status": "COMPLETE — next optional: S514 extend to next case bank",
+      "testBaseline": "32/32 PASS"
+    },
+    "700_series_mcq": {
+      "lastSession": "S710 / S710R",
+      "lastSessionDate": "2026-07-25",
+      "lastActivity": "Certified DL-026 queue (13 items) fully remediated. Residual DL-008=0, DL-026=0.",
+      "status": "PAUSED — next optional: S711 post-uplift certification freeze confirmation",
+      "testBaseline": "384/0 PASS",
+      "certifiedPool": 2181
+    }
+  },
+  "noConflictAttestation": true,
+  "no500seriesDiff": true,
+  "no700seriesDiff": true,
+  "noSourceFileChanges": true,
+  "thresholdConfirmation": {
+    "stabilityHigh": { "value": 75, "unchanged": true },
+    "accuracyGood": { "value": 75, "unchanged": true },
+    "all12ThresholdsUnchanged": true
+  },
+  "modelVersionConfirmation": {
+    "value": "S111-1.0",
+    "stable": true
+  },
+  "agent": "A"
+}

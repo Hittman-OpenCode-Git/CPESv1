@@ -1,0 +1,590 @@
+{
+  "packA": {
+    "defectID": "S3-BLK-01",
+    "file": "pack_a_corrected.js",
+    "line": 9602,
+    "searchPattern": ",,",
+    "replacePattern": ",",
+    "nearestQID": "from scan above",
+    "note": "Remove exactly one comma from double-comma token"
+  },
+  "packC": {
+    "defectID": "S3-BLK-02",
+    "file": "pack_c_corrected.js",
+    "totalMissingCommas": 44,
+    "objectCount": 34,
+    "manifest": [
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-074",
+        "objectStartPos": 557536,
+        "objectLength": 4271,
+        "missingCommas": [
+          {
+            "line": 7957,
+            "position": 560940,
+            "preceding": "ExplanationWrongB\": \"Capital budgeting evaluates long-term i",
+            "following": "\"ChoiceC\": \"Capital budgeting,"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-075",
+        "objectStartPos": 561812,
+        "objectLength": 4256,
+        "missingCommas": [
+          {
+            "line": 8011,
+            "position": 565584,
+            "preceding": "ExplanationWrongC\": \"External financial reporting produces f",
+            "following": "\"ChoiceD\": \"External financial"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-076",
+        "objectStartPos": 566073,
+        "objectLength": 4189,
+        "missingCommas": [
+          {
+            "line": 8065,
+            "position": 570228,
+            "preceding": "ExplanationWrongD\": \"Incremental budgeting adjusts the prior",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-078",
+        "objectStartPos": 573840,
+        "objectLength": 3875,
+        "missingCommas": [
+          {
+            "line": 8165,
+            "position": 577095,
+            "preceding": "ExplanationWrongB\": \"Incremental budgeting adjusts the prior",
+            "following": "\"ChoiceC\": \"Activity-based bud"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-080",
+        "objectStartPos": 581773,
+        "objectLength": 3750,
+        "missingCommas": [
+          {
+            "line": 8273,
+            "position": 585489,
+            "preceding": "ExplanationWrongD\": \"Incremental budgeting adjusts prior-per",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-084",
+        "objectStartPos": 598183,
+        "objectLength": 4355,
+        "missingCommas": [
+          {
+            "line": 8482,
+            "position": 602504,
+            "preceding": "ExplanationWrongD\": \"A moving average requires a window of h",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-085",
+        "objectStartPos": 602543,
+        "objectLength": 3827,
+        "missingCommas": [
+          {
+            "line": 8530,
+            "position": 605555,
+            "preceding": "ExplanationWrongB\": \"A moving average does not predict seaso",
+            "following": "\"ChoiceC\": \"It eliminates the "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-086",
+        "objectStartPos": 606375,
+        "objectLength": 4019,
+        "missingCommas": [
+          {
+            "line": 8584,
+            "position": 609979,
+            "preceding": "ExplanationWrongC\": \"A moving average does not predict seaso",
+            "following": "\"ChoiceD\": \"It requires no his"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-087",
+        "objectStartPos": 610399,
+        "objectLength": 4005,
+        "missingCommas": [
+          {
+            "line": 8632,
+            "position": 613317,
+            "preceding": "ExplanationWrongA\": \"No forecasting method eliminates the ne",
+            "following": "\"ChoiceB\": \"It perfectly predi"
+          },
+          {
+            "line": 8638,
+            "position": 614370,
+            "preceding": "ExplanationWrongD\": \"A moving average requires a window of h",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-088",
+        "objectStartPos": 614409,
+        "objectLength": 4530,
+        "missingCommas": [
+          {
+            "line": 8690,
+            "position": 618905,
+            "preceding": "ExplanationWrongD\": \"Responsibility accounting assigns reven",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-089",
+        "objectStartPos": 618944,
+        "objectLength": 3846,
+        "missingCommas": [
+          {
+            "line": 8738,
+            "position": 622062,
+            "preceding": "ExplanationWrongB\": \"Standard costing establishes a single p",
+            "following": "\"ChoiceC\": \"Zero-based budgeti"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-090",
+        "objectStartPos": 622795,
+        "objectLength": 4039,
+        "missingCommas": [
+          {
+            "line": 8792,
+            "position": 626519,
+            "preceding": "ExplanationWrongC\": \"Standard costing establishes a single p",
+            "following": "\"ChoiceD\": \"Zero-based budgeti"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-091",
+        "objectStartPos": 626839,
+        "objectLength": 4151,
+        "missingCommas": [
+          {
+            "line": 8840,
+            "position": 629790,
+            "preceding": "ExplanationWrongA\": \"Responsibility accounting assigns reven",
+            "following": "\"ChoiceB\": \"Standard costing, "
+          },
+          {
+            "line": 8846,
+            "position": 630956,
+            "preceding": "ExplanationWrongD\": \"Zero-based budgeting requires every exp",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-093",
+        "objectStartPos": 634833,
+        "objectLength": 3854,
+        "missingCommas": [
+          {
+            "line": 8946,
+            "position": 637964,
+            "preceding": "ExplanationWrongB\": \"Responsibility accounting assigns reven",
+            "following": "\"ChoiceC\": \"Standard costing, "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-096",
+        "objectStartPos": 647355,
+        "objectLength": 4472,
+        "missingCommas": [
+          {
+            "line": 9097,
+            "position": 651793,
+            "preceding": "ExplanationWrongD\": \"The pattern of consistently exceeding b",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-BC-100",
+        "objectStartPos": 665722,
+        "objectLength": 4612,
+        "missingCommas": [
+          {
+            "line": 9305,
+            "position": 670300,
+            "preceding": "ExplanationWrongD\": \"A single-metric ROI dashboard captures ",
+            "following": "\"question_state\": \"Certified\"\r"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-053",
+        "objectStartPos": 1600190,
+        "objectLength": 3329,
+        "missingCommas": [
+          {
+            "line": 24832,
+            "position": 1603142,
+            "preceding": "ExplanationWrongC\": \"Data visualization displays existing re",
+            "following": "\"ChoiceD\": \"Robotic process au"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-054",
+        "objectStartPos": 1603524,
+        "objectLength": 3050,
+        "missingCommas": [
+          {
+            "line": 24883,
+            "position": 1606197,
+            "preceding": "ExplanationWrongC\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceD\": \"Robotic process au"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-055",
+        "objectStartPos": 1606579,
+        "objectLength": 3049,
+        "missingCommas": [
+          {
+            "line": 24932,
+            "position": 1609426,
+            "preceding": "ExplanationWrongB\": \"Robotic process automation executes pre",
+            "following": "\"ChoiceC\": \"Machine learning, "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-057",
+        "objectStartPos": 1612539,
+        "objectLength": 3088,
+        "missingCommas": [
+          {
+            "line": 25034,
+            "position": 1614972,
+            "preceding": "ExplanationWrongB\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceC\": \"A distributed deni"
+          },
+          {
+            "line": 25036,
+            "position": 1615290,
+            "preceding": "ExplanationWrongC\": \"A distributed denial-of-service attack ",
+            "following": "\"ChoiceD\": \"A physical access "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-058",
+        "objectStartPos": 1615632,
+        "objectLength": 2823,
+        "missingCommas": [
+          {
+            "line": 25087,
+            "position": 1618150,
+            "preceding": "ExplanationWrongC\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceD\": \"A physical access "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-060",
+        "objectStartPos": 1621476,
+        "objectLength": 3070,
+        "missingCommas": [
+          {
+            "line": 25187,
+            "position": 1624139,
+            "preceding": "ExplanationWrongB\": \"A distributed denial-of-service attack ",
+            "following": "\"ChoiceC\": \"A data governance "
+          },
+          {
+            "line": 25189,
+            "position": 1624453,
+            "preceding": "ExplanationWrongC\": \"A data governance policy gap relates to",
+            "following": "\"ChoiceD\": \"Phishing, a form o"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-062",
+        "objectStartPos": 1627654,
+        "objectLength": 3042,
+        "missingCommas": [
+          {
+            "line": 25291,
+            "position": 1630338,
+            "preceding": "ExplanationWrongC\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceD\": \"Elimination of the"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-063",
+        "objectStartPos": 1630701,
+        "objectLength": 3044,
+        "missingCommas": [
+          {
+            "line": 25340,
+            "position": 1633522,
+            "preceding": "ExplanationWrongB\": \"An ERP system may enable cost efficienc",
+            "following": "\"ChoiceC\": \"Improved data cons"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-064",
+        "objectStartPos": 1633750,
+        "objectLength": 3189,
+        "missingCommas": [
+          {
+            "line": 25391,
+            "position": 1636512,
+            "preceding": "ExplanationWrongB\": \"An ERP system does not guarantee automa",
+            "following": "\"ChoiceC\": \"Elimination of the"
+          },
+          {
+            "line": 25393,
+            "position": 1636815,
+            "preceding": "ExplanationWrongC\": \"ERP systems enhance internal controls t",
+            "following": "\"ChoiceD\": \"Improved data cons"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-065",
+        "objectStartPos": 1636944,
+        "objectLength": 3198,
+        "missingCommas": [
+          {
+            "line": 25442,
+            "position": 1639539,
+            "preceding": "ExplanationWrongB\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceC\": \"Automatic complian"
+          },
+          {
+            "line": 25444,
+            "position": 1639842,
+            "preceding": "ExplanationWrongC\": \"An ERP system does not guarantee automa",
+            "following": "\"ChoiceD\": \"Guaranteed reducti"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-067",
+        "objectStartPos": 1643027,
+        "objectLength": 2958,
+        "missingCommas": [
+          {
+            "line": 25544,
+            "position": 1645814,
+            "preceding": "ExplanationWrongB\": \"A data warehouse requires a predefined ",
+            "following": "\"ChoiceC\": \"A data lake\",\r\n   "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-068",
+        "objectStartPos": 1645990,
+        "objectLength": 3148,
+        "missingCommas": [
+          {
+            "line": 25595,
+            "position": 1648781,
+            "preceding": "ExplanationWrongB\": \"A data warehouse requires a predefined ",
+            "following": "\"ChoiceC\": \"A relational datab"
+          },
+          {
+            "line": 25597,
+            "position": 1649079,
+            "preceding": "ExplanationWrongC\": \"A relational database is designed for s",
+            "following": "\"ChoiceD\": \"A data lake\",\r\n   "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-069",
+        "objectStartPos": 1649143,
+        "objectLength": 3153,
+        "missingCommas": [
+          {
+            "line": 25646,
+            "position": 1651659,
+            "preceding": "ExplanationWrongB\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceC\": \"A data warehouse, "
+          },
+          {
+            "line": 25648,
+            "position": 1651969,
+            "preceding": "ExplanationWrongC\": \"A data warehouse requires a predefined ",
+            "following": "\"ChoiceD\": \"A relational datab"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-070",
+        "objectStartPos": 1652301,
+        "objectLength": 2958,
+        "missingCommas": [
+          {
+            "line": 25699,
+            "position": 1654928,
+            "preceding": "ExplanationWrongC\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceD\": \"A data warehouse, "
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-071",
+        "objectStartPos": 1655264,
+        "objectLength": 3049,
+        "missingCommas": [
+          {
+            "line": 25748,
+            "position": 1658076,
+            "preceding": "ExplanationWrongB\": \"Sales forecasting projects future reven",
+            "following": "\"ChoiceC\": \"Continuous auditin"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-072",
+        "objectStartPos": 1658318,
+        "objectLength": 3254,
+        "missingCommas": [
+          {
+            "line": 25799,
+            "position": 1661137,
+            "preceding": "ExplanationWrongB\": \"Standard costing sets predetermined cos",
+            "following": "\"ChoiceC\": \"Zero-based budgeti"
+          },
+          {
+            "line": 25801,
+            "position": 1661443,
+            "preceding": "ExplanationWrongC\": \"Zero-based budgeting is a budgeting tec",
+            "following": "\"ChoiceD\": \"Continuous auditin"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-073",
+        "objectStartPos": 1661577,
+        "objectLength": 3231,
+        "missingCommas": [
+          {
+            "line": 25850,
+            "position": 1664203,
+            "preceding": "ExplanationWrongB\": \"\"\r\\n    \"Ch",
+            "following": "\"ChoiceC\": \"Standard costing, "
+          },
+          {
+            "line": 25852,
+            "position": 1664517,
+            "preceding": "ExplanationWrongC\": \"Standard costing sets predetermined cos",
+            "following": "\"ChoiceD\": \"Zero-based budgeti"
+          }
+        ]
+      },
+      {
+        "defectID": "S3-BLK-02",
+        "file": "pack_c_corrected.js",
+        "QID": "P1-FC-075",
+        "objectStartPos": 1667820,
+        "objectLength": 3286,
+        "missingCommas": [
+          {
+            "line": 25952,
+            "position": 1670640,
+            "preceding": "ExplanationWrongB\": \"Zero-based budgeting requires all expen",
+            "following": "\"ChoiceC\": \"Continuous auditin"
+          }
+        ]
+      }
+    ]
+  },
+  "timestamp": "2026-07-24T15:19:03.582Z"
+}

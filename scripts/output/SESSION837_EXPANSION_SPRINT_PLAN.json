@@ -1,0 +1,285 @@
+{
+  "session": "S837",
+  "title": "Expansion Sprint Plan — 740-Item Backlog to Executable Content Programs",
+  "date": "2026-07-27",
+  "source": "S833 740-item backlog",
+  "pipeline": "S836 Quality-First Authoring Pipeline",
+
+  "backlog_classification": {
+    "total_items": 740,
+    "immediate": {
+      "count": 210,
+      "description": "High-priority, foundation-building items that unlock subsequent work",
+      "categories": [
+        "Pilot cohort (50 items) — pipeline validation across all 6 domains",
+        "Analyze items for high-gap domains: Section C (60), Section D (50), Section A (50)"
+      ]
+    },
+    "near_term": {
+      "count": 230,
+      "description": "Scale-up items once pipeline is validated and velocity is established",
+      "categories": [
+        "Evaluate items across all 6 domains (100 items)",
+        "Difficult/Very Difficult Case items (50 items)",
+        "Analyze items for remaining domains: Section B (40), Section E (25), Section F (15)"
+      ]
+    },
+    "future": {
+      "count": 300,
+      "description": "Part 2 expansion + advanced integrated content",
+      "categories": [
+        "Part 2 Financial Decision Making items (150 items)",
+        "Part 2 Professional Ethics items (50 items)",
+        "Advanced multi-domain case studies (50 items)",
+        "Very Difficult standalone MCQ items (50 items)"
+      ]
+    }
+  },
+
+  "sprint_packages": {
+    "sprint_1": {
+      "name": "Foundation & Pipeline Validation",
+      "duration_weeks": 2,
+      "item_count": 50,
+      "priority": "IMMEDIATE",
+      "description": "Execute S836 50-item pilot cohort. Validate quality-first pipeline end-to-end. Establish velocity baselines.",
+
+      "composition": {
+        "by_domain": { "A": 10, "B": 8, "C": 10, "D": 10, "E": 7, "F": 5 },
+        "by_cognitive_level": { "Remember": 2, "Understand": 5, "Apply": 15, "Analyze": 18, "Evaluate": 10 },
+        "by_difficulty": { "Moderate": 20, "Difficult": 20, "Very_Difficult": 10 }
+      },
+
+      "batches": [
+        { "batch": 1, "items": 25, "focus": "Apply + Analyze across all domains", "est_hours": 6 },
+        { "batch": 2, "items": 25, "focus": "Analyze + Evaluate + foundational levels", "est_hours": 8 }
+      ],
+
+      "deliverables": [
+        "50 Certified items with zero defect-class violations",
+        "Pipeline velocity metrics (time per item, rejection rate, certification rate)",
+        "Updated S836 pipeline spec with lessons learned",
+        "Proof that quality-first approach produces zero DL-008/DL-026/DL-013 on first pass"
+      ],
+
+      "risks": [
+        "Pipeline may reveal unforeseen authoring bottlenecks",
+        "Evaluate items may require multiple revision passes",
+        "Very Difficult items may exceed time estimates"
+      ],
+      "mitigation": "Start with Apply/Analyze items first; defer Evaluate to batch 2 after pipeline is proven on mid-tier items"
+    },
+
+    "sprint_2": {
+      "name": "Analyze Scale-Up",
+      "duration_weeks": 3,
+      "item_count": 160,
+      "priority": "IMMEDIATE",
+      "description": "Scale the validated pipeline. Target the largest cognitive gap: 160 net-new Analyze items across all 6 domains.",
+
+      "composition": {
+        "by_domain": { "A": 35, "B": 25, "C": 40, "D": 35, "E": 15, "F": 10 },
+        "by_cognitive_level": { "Analyze": 140, "Evaluate": 20 },
+        "by_difficulty": { "Moderate": 60, "Difficult": 80, "Very_Difficult": 20 }
+      },
+
+      "batches": [
+        { "batch": 1, "items": 28, "focus": "Section C: Variance + Performance Analysis", "est_hours": 10 },
+        { "batch": 2, "items": 28, "focus": "Section D: Cost Analysis + Decision Making", "est_hours": 10 },
+        { "batch": 3, "items": 28, "focus": "Section A: Financial Statement Analysis", "est_hours": 10 },
+        { "batch": 4, "items": 28, "focus": "Section B: Budget Analysis + Forecasting", "est_hours": 8 },
+        { "batch": 5, "items": 28, "focus": "Sections E+F: Control Assessment + Analytics", "est_hours": 8 },
+        { "batch": 6, "items": 20, "focus": "Cross-domain Evaluate items", "est_hours": 10 }
+      ],
+
+      "deliverables": [
+        "160 Certified items, all passing quality-first pipeline gates",
+        "Analyze inventory grows from 10 to 150 items (0.4% → 5.9% of pool)",
+        "First Evaluate inventory established: 20 items (0.8% of pool)",
+        "Domain coverage: Analyze items distributed across all 6 sections"
+      ],
+
+      "risks": [
+        "Volume pressure may erode quality discipline",
+        "Distractor engineering for 160 items is labor-intensive"
+      ],
+      "mitigation": "Gate-based: any item failing Stage 5 Evidence Review is rejected, not patched. Velocity takes priority over throughput."
+    },
+
+    "sprint_3": {
+      "name": "Evaluate & Advanced Content",
+      "duration_weeks": 3,
+      "item_count": 230,
+      "priority": "NEAR-TERM",
+      "description": "First dedicated Evaluate sprint. Also includes advanced case-based items and Very Difficult standalone items.",
+
+      "composition": {
+        "by_cognitive_level": { "Analyze": 80, "Evaluate": 100, "Apply": 50 },
+        "by_type": { "MCQ": 180, "Case_item": 50 },
+        "by_difficulty": { "Difficult": 100, "Very_Difficult": 80, "Moderate": 50 }
+      },
+
+      "batches": [
+        { "batch": 1, "items": 28, "focus": "Evaluate: Financial Reporting judgment (Section A)", "est_hours": 14 },
+        { "batch": 2, "items": 28, "focus": "Evaluate: Performance evaluation (Section C)", "est_hours": 14 },
+        { "batch": 3, "items": 28, "focus": "Evaluate: Cost management decisions (Section D)", "est_hours": 14 },
+        { "batch": 4, "items": 28, "focus": "Evaluate: Control + Ethics + Technology (Sections E+F)", "est_hours": 12 },
+        { "batch": 5, "items": 28, "focus": "Advanced case-based Analyze items (Sections A-D)", "est_hours": 14 },
+        { "batch": 6, "items": 28, "focus": "Case-based Evaluate items (Sections A-F)", "est_hours": 16 },
+        { "batch": 7, "items": 28, "focus": "Very Difficult standalone MCQs (all sections)", "est_hours": 14 },
+        { "batch": 8, "items": 28, "focus": "Mixed: remaining Analyze + Apply items", "est_hours": 10 },
+        { "batch": 9, "items": 6, "focus": "Cross-domain integrated items", "est_hours": 4 }
+      ],
+
+      "deliverables": [
+        "230 Certified items",
+        "Evaluate inventory: 0 → 100 items (0% → 3.9% of pool)",
+        "Very Difficult inventory: 0 → 80 items (0% → 3.1% of pool)",
+        "Case-based item pipeline validated"
+      ],
+
+      "risks": [
+        "Evaluate item authoring is cognitively demanding — higher rejection rate expected",
+        "Case-based items require exhibit creation which adds complexity"
+      ],
+      "mitigation": "Allow 50% higher time budget for Evaluate items. Pilot case-based items in small batches before scaling."
+    },
+
+    "sprint_4": {
+      "name": "Part 2 Expansion Launch",
+      "duration_weeks": 4,
+      "item_count": 300,
+      "priority": "FUTURE",
+      "description": "First Part 2 content sprint. Builds Part 2 Foundation, blended with remaining Part 1 higher-order items.",
+
+      "composition": {
+        "part_1_items": 100,
+        "part_2_items": 200,
+        "by_part_2_domain": {
+          "Financial_Statement_Analysis": 40,
+          "Corporate_Finance": 40,
+          "Decision_Analysis": 40,
+          "Risk_Management": 40,
+          "Investment_Decisions": 20,
+          "Professional_Ethics": 20
+        }
+      },
+
+      "batches": [
+        { "batch": 1, "items": 28, "focus": "Part 2: Financial Statement Analysis", "est_hours": 14 },
+        { "batch": 2, "items": 28, "focus": "Part 2: Corporate Finance", "est_hours": 14 },
+        { "batch": 3, "items": 28, "focus": "Part 2: Decision Analysis", "est_hours": 14 },
+        { "batch": 4, "items": 28, "focus": "Part 2: Risk Management", "est_hours": 14 },
+        { "batch": 5, "items": 28, "focus": "Part 2: Investment Decisions", "est_hours": 12 },
+        { "batch": 6, "items": 28, "focus": "Part 2: Professional Ethics", "est_hours": 10 },
+        { "batch": 7, "items": 28, "focus": "Part 1: Remaining Analyze items", "est_hours": 10 },
+        { "batch": 8, "items": 28, "focus": "Part 1: Remaining Evaluate items", "est_hours": 14 },
+        { "batch": 9, "items": 28, "focus": "Cross-Part integrated items (Part 1+2)", "est_hours": 14 },
+        { "batch": 10, "items": 28, "focus": "Part 2 advanced scenario items", "est_hours": 14 },
+        { "batch": 11, "items": 20, "focus": "Remaining Very Difficult items", "est_hours": 10 }
+      ],
+
+      "deliverables": [
+        "300 Certified items (100 Part 1 + 200 Part 2)",
+        "Part 2 content pipeline validated",
+        "Cross-Part integrated items established",
+        "1,080 total new items across all 4 sprints"
+      ],
+
+      "risks": [
+        "Part 2 blueprint requires new domain expertise",
+        "Cross-Part items require dual-domain verification",
+        "Volume + novelty = highest defect risk"
+      ],
+      "mitigation": "Apply all S836 pipeline gates without exception. Each Part 2 item must pass same 6-stage pipeline as Part 1 items."
+    }
+  },
+
+  "resource_model": {
+    "total_items": 740,
+    "total_sprints": 4,
+    "total_weeks": 12,
+    "total_estimated_hours": 400,
+
+    "time_per_item_estimates": {
+      "Apply": { "mean_minutes": 15, "range": "10-20" },
+      "Analyze": { "mean_minutes": 25, "range": "15-35" },
+      "Evaluate": { "mean_minutes": 35, "range": "25-50" },
+      "Case_item": { "mean_minutes": 45, "range": "30-60" },
+      "Very_Difficult": { "mean_minutes": 35, "range": "25-50" }
+    },
+
+    "sprint_hours": {
+      "sprint_1": { "items": 50, "est_hours": 14, "batch_count": 2 },
+      "sprint_2": { "items": 160, "est_hours": 56, "batch_count": 6 },
+      "sprint_3": { "items": 230, "est_hours": 112, "batch_count": 9 },
+      "sprint_4": { "items": 300, "est_hours": 140, "batch_count": 11 }
+    },
+
+    "yield_projection": {
+      "certified_yield": { "estimate_pct": 85, "description": "~15% Stage 5 rejection rate; rejected items recycled in next sprint" },
+      "defect_rate_target": { "per_item": 0, "description": "Pipeline designed for zero defect-class violations per item; any violation = rejected" },
+      "remediation_load": { "description": "Near-zero expected — quality-first pipeline eliminates template-origin defects; only author errors remain" }
+    },
+
+    "risk_factors": {
+      "pipeline_velocity": "LOW — pipeline is new, actual times may exceed estimates by 30-50%",
+      "evaluate_complexity": "MEDIUM — Evaluate items require novel distractor engineering (trade-off distractors vs single-error distractors)",
+      "part_2_expertise": "MEDIUM — Part 2 content may require additional blueprint study before authoring",
+      "cognitive_fatigue": "MEDIUM — Long authoring sessions risk quality erosion at higher cognitive levels",
+      "governance_compliance": "LOW — Pipeline gates + governance guard provide redundant safety net"
+    }
+  },
+
+  "cumulative_impact": {
+    "pre_sprints": {
+      "analyze_items": 10,
+      "evaluate_items": 0,
+      "difficult_items": 113,
+      "very_difficult_items": 0,
+      "total_pool": 2540,
+      "certified_pool": 2298
+    },
+    "post_sprint_1": {
+      "analyze_items": 28,
+      "evaluate_items": 10,
+      "difficult_items": 133,
+      "very_difficult_items": 10,
+      "total_pool": 2590,
+      "notes": "Foundation established; pipeline validated"
+    },
+    "post_sprint_2": {
+      "analyze_items": 168,
+      "evaluate_items": 30,
+      "difficult_items": 213,
+      "very_difficult_items": 30,
+      "total_pool": 2750,
+      "notes": "Analyze items near 6.1% of pool; first substantial higher-order inventory"
+    },
+    "post_sprint_3": {
+      "analyze_items": 248,
+      "evaluate_items": 130,
+      "difficult_items": 313,
+      "very_difficult_items": 110,
+      "total_pool": 2980,
+      "notes": "Evaluate reaches 4.4% of pool; Very Difficult reaches 3.7%"
+    },
+    "post_sprint_4": {
+      "analyze_items": 348,
+      "evaluate_items": 230,
+      "difficult_items": 413,
+      "very_difficult_items": 190,
+      "total_pool": 3280,
+      "part_2_items": 200,
+      "notes": "Part 2 pilot established; higher-order items now 26% of pool (vs. 4.8% at start)"
+    }
+  },
+
+  "governance": {
+    "batch_cap": "30 items per write-set (Rule 5)",
+    "backup_before_write": "Mandatory per BACKUP_PROTOCOL.md",
+    "independent_verification": "Required after each batch",
+    "revision_history": "Entry required per batch",
+    "defect_tracking": "Any new defect discovered during authoring must be logged to DEFECT_LIBRARY.md per AGENTS.md §12"
+  }
+}

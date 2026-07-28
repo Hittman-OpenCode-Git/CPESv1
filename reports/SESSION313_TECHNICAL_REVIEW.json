@@ -1,0 +1,128 @@
+{
+  "title": "SESSION313_TECHNICAL_REVIEW",
+  "session": "313",
+  "generated": "2026-07-27",
+  "methodology": "Per-item technical accuracy review covering: CMA Part 1 CSO alignment, internal controls terminology, conceptual correctness, COSO/SOX/IIA framework fidelity. Independent reviewer (Agent C) verifying all content claims against authoritative sources.",
+  "items_reviewed": 10,
+  "results": [
+    {
+      "QuestionID": "P1-E-R01",
+      "decision": "PASS",
+      "topic": "Segregation of duties — incompatible functions",
+      "correct_answer_verified": true,
+      "correct_choice": "B",
+      "technical_notes": "Accurate. Four incompatible functions identified: custody (mail opening, deposits), record-keeping (ledger), reconciliation. COSO Control Activities principle correctly applied. Distinction between custody and record-keeping is the core weakness — correct.",
+      "terminology_check": "COSO terminology correct. 'Incompatible duties,' 'custody of assets,' 'record-keeping authority' all standard.",
+      "cma_alignment": "Aligned with CSO E.1.e Control Activities — segregation of duties. Tests application of COSO principle to a scenario.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R02",
+      "decision": "PASS",
+      "topic": "COSO 2013 — three categories of objectives",
+      "correct_answer_verified": true,
+      "correct_choice": "D",
+      "technical_notes": "Accurate. Operations, reporting, compliance — the canonical three COSO objective categories. Correctly distinguishes strategic objectives (ERM domain), governance (component, not category), and sustainability (subset of reporting).",
+      "terminology_check": "COSO 2013 terminology correct. 'Operations, reporting, and compliance objectives' is the exact framework language.",
+      "cma_alignment": "Aligned with CSO E.1.b Internal Control Framework (COSO 2013). Tests understanding of framework architecture.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R03",
+      "decision": "PASS",
+      "topic": "Fraud triangle — pressure element",
+      "correct_answer_verified": true,
+      "correct_choice": "A",
+      "technical_notes": "Accurate. Cressey's fraud triangle: pressure (financial strain), opportunity (override access), rationalization (not described). Correctly identifies the element 'most directly increased' by financial situation as pressure. Collusion correctly identified as not a fraud triangle element.",
+      "terminology_check": "Fraud triangle terminology correct. 'Pressure,' 'opportunity,' 'rationalization' all standard. Cressey citation accurate.",
+      "cma_alignment": "Aligned with CSO E.1.c Control Environment — fraud risk and the fraud triangle.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R04",
+      "decision": "PASS",
+      "topic": "Preventive vs detective physical controls",
+      "correct_answer_verified": true,
+      "correct_choice": "C",
+      "technical_notes": "Accurate. Badge access = preventive (deters entry). Cameras = dual (deterrent + recording). Inventory count = detective (discovers discrepancies after occurrence). Classification is standard in internal control literature.",
+      "terminology_check": "Preventive/detective classification correct. Distinction based on timing (before vs after error/irregularity).",
+      "cma_alignment": "Aligned with CSO E.1.e Control Activities — preventive vs detective controls.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R05",
+      "decision": "PASS",
+      "topic": "Bank reconciliation — segregation of duties",
+      "correct_answer_verified": true,
+      "correct_choice": "A",
+      "technical_notes": "Accurate. AR clerk performing bank rec creates incompatible function pairing: recording (cash receipts) and verification (reconciliation). The direct risk is undetected errors/irregularities — correct. Distinguishes direct risk from downstream auditor consequences.",
+      "terminology_check": "Segregation of duties terminology correct. 'Incompatible functions,' 'independent verification' are standard.",
+      "cma_alignment": "Aligned with CSO E.1.e Control Activities — bank reconciliation and segregation of duties.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R06",
+      "decision": "PASS",
+      "topic": "Management override — inherent limitation",
+      "correct_answer_verified": true,
+      "correct_choice": "B",
+      "technical_notes": "Accurate. COSO explicitly identifies management override as inherent limitation, not deficiency. Key distinction: inherent limitations exist regardless of control design quality; deficiencies are correctable design/operation flaws. EC correctly lists all four COSO inherent limitations.",
+      "terminology_check": "COSO terminology correct. 'Inherent limitation' vs 'control deficiency' distinction properly articulated.",
+      "cma_alignment": "Aligned with CSO E.1.c Control Environment — inherent limitations of internal control.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R07",
+      "decision": "PASS",
+      "topic": "Whistleblower hotline — SOX Section 301",
+      "correct_answer_verified": true,
+      "correct_choice": "D",
+      "technical_notes": "Accurate. SOX Section 301 requires audit committee to establish procedures for receipt/retention/treatment of complaints regarding accounting, internal controls, or auditing matters. Includes confidential/anonymous submission mechanism. CEO review (A), written-only requirement (B), and external auditor responsibility (C) all correctly rejected.",
+      "terminology_check": "SOX Section 301 terminology correct. 'Confidential, anonymous submission' is statutory language.",
+      "cma_alignment": "Aligned with CSO E.1.f Information & Communication — whistleblower mechanisms under SOX.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R08",
+      "decision": "PASS",
+      "topic": "Control environment — tone at the top",
+      "correct_answer_verified": true,
+      "correct_choice": "A",
+      "technical_notes": "Accurate. COSO control environment is the foundation. CEO 'results justify the approach' message + reward system that ignores compliance = weakened control environment. Correctly distinguishes from risk assessment, control activities, and monitoring — all downstream symptoms.",
+      "terminology_check": "COSO terminology correct. 'Tone at the top,' 'control environment,' 'ethical climate' all standard. Five-component architecture correctly referenced.",
+      "cma_alignment": "Aligned with CSO E.1.c Control Environment — tone at the top and ethical values.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R09",
+      "decision": "PASS",
+      "topic": "Three Lines of Defense model",
+      "correct_answer_verified": true,
+      "correct_choice": "C",
+      "technical_notes": "Accurate. IIA Three Lines: 1st = operational management, 2nd = risk management/compliance (oversight, not independent), 3rd = internal audit (independent assurance). Risk management function is 2nd line — correct. Correctly distinguishes from 1st (operations), 3rd (internal audit), and 'doesn't fit' (incorrect).",
+      "terminology_check": "IIA Three Lines of Defense terminology correct. Distinction between management function (2nd line) and independent assurance (3rd line) is precise.",
+      "cma_alignment": "Aligned with CSO E.1.g Monitoring — three lines of defense governance model.",
+      "issues": []
+    },
+    {
+      "QuestionID": "P1-E-R10",
+      "decision": "PASS",
+      "topic": "Compensating controls — small business owner review",
+      "correct_answer_verified": true,
+      "correct_choice": "B",
+      "technical_notes": "Accurate. COSO recognizes compensating controls for limited personnel. Owner's review of reconciliations, approval of disbursements, and budget variance analysis are compensating controls mitigating segregation gaps. Correctly distinguishes from inherent limitation (A), material weakness (C), and management override (D).",
+      "terminology_check": "COSO terminology correct. 'Compensating controls,' 'inherent limitation,' 'control deficiency,' 'management override' all properly distinguished.",
+      "cma_alignment": "Aligned with CSO E.1.e Control Activities — compensating controls in smaller entities.",
+      "issues": []
+    }
+  ],
+  "summary": {
+    "pass": 10,
+    "hold": 0,
+    "escalate": 0,
+    "technical_accuracy_rate": "100%",
+    "conceptual_errors": 0,
+    "terminology_errors": 0,
+    "cma_misalignment": 0
+  }
+}

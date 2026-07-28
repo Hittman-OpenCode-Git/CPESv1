@@ -1,0 +1,711 @@
+{
+  "session": "S116",
+  "type": "SimulatedStudentRunResults",
+  "timestamp": "2026-07-25T20:16:07.740Z",
+  "summary": {
+    "totalSimulated": 9,
+    "returningStudents": 8,
+    "newStudents": 1,
+    "successfulSelections": 8,
+    "exportPayloadsGenerated": 9
+  },
+  "studentResults": [
+    {
+      "studentIndex": 1,
+      "learnerId": "synth-avery",
+      "displayName": "Avery Pilot",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-avery",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13090,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 2,
+      "learnerId": "synth-jordan",
+      "displayName": "Jordan Sample",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-jordan",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13098,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 3,
+      "learnerId": "synth-morgan",
+      "displayName": "Morgan Demo",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-morgan",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13094,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 4,
+      "learnerId": "synth-riley",
+      "displayName": "Riley Practice",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-riley",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13096,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 5,
+      "learnerId": "synth-taylor",
+      "displayName": "Taylor Sandbox",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-taylor",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13100,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 6,
+      "learnerId": "synth-casey",
+      "displayName": "Casey Trial",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-casey",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13090,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 7,
+      "learnerId": "synth-quinn",
+      "displayName": "Quinn Sim",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-quinn",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13086,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 8,
+      "learnerId": "synth-parker",
+      "displayName": "Parker Test",
+      "greetingEntered": true,
+      "rollShown": true,
+      "studentSelected": true,
+      "storedLearnerId": "synth-parker",
+      "behaviorsExercised": 10,
+      "behaviorErrors": 0,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 13094,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    },
+    {
+      "studentIndex": 9,
+      "learnerId": "learner-ms0t7cxc",
+      "displayName": "Jamie Dryrun",
+      "isNewStudent": true,
+      "greetingEntered": true,
+      "profileCreated": true,
+      "syntheticFlag": true,
+      "preProductionFlag": true,
+      "selectedLearnerId": "learner-ms0t7cxc",
+      "relaunchSkipsHandshake": true,
+      "behaviorsExercised": 10,
+      "behaviorDetails": [
+        {
+          "behavior": "explain",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "hint",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "wrong-choices",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "simplify",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "similar",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "next",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "recovery",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "progress",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "weakness",
+          "status": "exercised",
+          "error": null
+        },
+        {
+          "behavior": "summary",
+          "status": "exercised",
+          "error": null
+        }
+      ],
+      "exportPayloadSize": 5209,
+      "exportSectionsPresent": {
+        "generatedAt": true,
+        "studentRoll": true,
+        "pilotUsageLog": true,
+        "safetyLog": true,
+        "gateLog": true,
+        "sessionTelemetry": true,
+        "calibrationExport": true,
+        "thresholdSnapshot": true,
+        "modelVersion": true,
+        "learnerState": true
+      }
+    }
+  ],
+  "exportFiles": [
+    "s116_pilot_synth-avery.json",
+    "s116_pilot_synth-jordan.json",
+    "s116_pilot_synth-morgan.json",
+    "s116_pilot_synth-riley.json",
+    "s116_pilot_synth-taylor.json",
+    "s116_pilot_synth-casey.json",
+    "s116_pilot_synth-quinn.json",
+    "s116_pilot_synth-parker.json",
+    "s116_pilot_new_student_jamie_dryrun.json"
+  ]
+}

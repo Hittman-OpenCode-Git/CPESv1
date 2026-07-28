@@ -1,0 +1,996 @@
+{
+  "timestamp": "2026-07-28T18:38:03.135Z",
+  "total_certified": 2390,
+  "safe_certified": 2314,
+  "unsafe_certified": 76,
+  "per_pack": {
+    "Pack A": {
+      "file": "pack_a_corrected.js",
+      "certified": 500,
+      "safe": 500,
+      "unsafe": 0
+    },
+    "Pack B": {
+      "file": "pack_b_corrected.js",
+      "certified": 500,
+      "safe": 500,
+      "unsafe": 0
+    },
+    "Pack C": {
+      "file": "pack_c_corrected.js",
+      "certified": 426,
+      "safe": 393,
+      "unsafe": 33
+    },
+    "Pack D": {
+      "file": "pack_d_corrected.js",
+      "certified": 424,
+      "safe": 381,
+      "unsafe": 43
+    },
+    "Pack E": {
+      "file": "pack_e_corrected.js",
+      "certified": 540,
+      "safe": 540,
+      "unsafe": 0
+    }
+  },
+  "unsafe_items": [
+    {
+      "qid": "P1-CC-011",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-012",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-014",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-030",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-031",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-032",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-034",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-040",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-042",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-043",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-044",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-050",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-051",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-052",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CC-071",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Control risk is the risk that a misstatement will not be prevented or detected by internal controls.\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-001",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA is non-empty: \"Choice A is incorrect because data visualization is the practice of presenting information through c\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-006",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Choice D is incorrect because prescriptive analytics goes beyond prediction to recommend specific ac\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-007",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC is non-empty: \"Choice C is incorrect because predictive analytics uses historical data and statistical models to fo\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-010",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB is non-empty: \"Choice B is incorrect because blockchain is a decentralized, distributed ledger technology designed \""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-015",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC is non-empty: \"Choice C is incorrect because Software as a Service (SaaS) delivers complete, fully managed applicat\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-020",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Choice D is incorrect because effective dashboard design prioritizes clarity, relevance, and decisio\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-025",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA is non-empty: \"Choice A is incorrect because integrity protects against unauthorized modification or destruction of\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-026",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB is non-empty: \"Choice B is incorrect because the fraud triangle is a framework developed by criminologist Donald Cr\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-031",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC is non-empty: \"Choice C is incorrect because accuracy is a data quality dimension, not a defining characteristic of\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-036",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Choice D is incorrect because standard costing is a cost accounting methodology that establishes pre\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-043",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC is non-empty: \"Choice C is incorrect because a single centralized database controlled by one party is fundamentally\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-048",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Choice D is incorrect because network bandwidth measures data transmission speed and throughput capa\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-053",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA is non-empty: \"Choice A is incorrect because blockchain is a distributed ledger technology designed to maintain an \""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FC-068",
+      "pack": "Pack C",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Choice D is incorrect because a relational database optimized for transaction processing (OLTP) is d\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-015",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-017",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-018",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-043",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-044",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-048",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-051",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-057",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-058",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-061",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-064",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-067",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-068",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-071",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-074",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-090",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-092",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-CD-093",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-002",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-003",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-021",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-037",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-040",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-042",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-043",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-044",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-046",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-049",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-050",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-051",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-052",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-062",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-DD-063",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB is non-empty: \"Risk avoidance eliminates the risk entirely by discontinuing the activity that creates the exposure.\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-ED-051",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"No single control eliminates the need for all others. Multi-factor authentication strengthens access\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-001",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-011",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Choice D is incorrect because data governance establishes policies, standards, and accountability fo\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-021",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD is non-empty: \"Choice D is incorrect because data visualization involves the graphical presentation of information \""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-033",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA is non-empty: \"Choice A is incorrect because implementing process changes before verifying whether the data is accu\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-034",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB is non-empty: \"Choice B is incorrect because no incident response plan — or any control framework — can eliminate t\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-043",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC is non-empty: \"Choice C is incorrect because a digital signature cannot determine whether the accounting content of\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongD - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-049",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongA is non-empty: \"Choice A is incorrect because predictive analytics is a forward-looking analytical discipline that u\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB - DL-026: empty field"
+        }
+      ]
+    },
+    {
+      "qid": "P1-FD-054",
+      "pack": "Pack D",
+      "failures": [
+        {
+          "defect": "DL-008",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongB is non-empty: \"Choice B is incorrect because while revoking the excessive create-vendor privilege is a necessary im\""
+        },
+        {
+          "defect": "DL-026",
+          "severity": "HIGH",
+          "detail": "ExplanationWrongC - DL-026: empty field"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "session": "704",
+  "timestamp": "2026-07-25T16:35:00",
+  "preflight": {
+    "governance_guard": "20/20 PASS",
+    "session_recovery": "12/12 PASS",
+    "validator_errors": 87,
+    "validator_warnings": 1695,
+    "validator_failed_modules": 3,
+    "pack_d_qid_count": 500,
+    "pack_d_certified": 350,
+    "pack_d_archived": 56,
+    "pack_d_unprocessed": 94,
+    "pack_d_editorial_queue": 0,
+    "backup_file": "pack_d_corrected.js.bak-20260725160121 (1,746,213 bytes)",
+    "bd095_parse": "Comma present in working file; missing in backup"
+  },
+  "postflight": {
+    "governance_guard": "20/20 PASS",
+    "session_recovery": "12/12 PASS",
+    "validator_errors": 107,
+    "validator_warnings": 1929,
+    "validator_failed_modules": 3,
+    "pack_d_qid_count": 500,
+    "pack_d_certified": 350,
+    "pack_d_archived": 56,
+    "pack_d_unprocessed": 94,
+    "pack_d_editorial_queue": 0,
+    "pack_d_dl008_residual": 0,
+    "parse_status": "500 items OK (Function constructor)"
+  },
+  "changes_applied": {
+    "bd095_comma_fix": true,
+    "dl008_clears": 20,
+    "answer_keys_changed": 0,
+    "stems_changed": 0,
+    "choices_changed": 0,
+    "explanationCorrect_changed": 0,
+    "certification_states_changed": 0,
+    "non_target_explanationWrong_changed": 0,
+    "fd046_edits": 0,
+    "fd045_edits": 0,
+    "fd075_edits": 0
+  },
+  "correctChoice_verification": {
+    "all_20_verified": true,
+    "all_match_s702": true,
+    "methodology": "G-NEW-3 within-object extraction from Function constructor parse"
+  },
+  "dl008_residual_scan": {
+    "method": "Function constructor parse + ExplanationWrong[CorrectChoice] === '' check",
+    "items_scanned": 500,
+    "dl008_found": 0,
+    "false_positives": 0
+  },
+  "fd045_fd075_status": {
+    "fd045": "UNCHANGED — structurally complete (CC=B, EW_B=empty)",
+    "fd075": "UNCHANGED — structurally complete (CC=C, EW_C=empty)"
+  },
+  "cross_pack_integrity": {
+    "pack_a": "NOT MODIFIED",
+    "pack_b": "NOT MODIFIED",
+    "pack_c": "NOT MODIFIED",
+    "pack_e": "NOT MODIFIED",
+    "scored_cases": "NOT MODIFIED",
+    "app_js": "NOT MODIFIED",
+    "may_files": "NOT MODIFIED"
+  },
+  "deltas": {
+    "validator_errors": "+20",
+    "validator_warnings": "+234",
+    "validator_error_explanation": "The +20 error increase is from ExplanationValidator now correctly detecting the 20 cleared EW[CC] slots as empty-at-CorrectChoice (EV8 compliant). The +234 warning delta reflects non-deterministic validator variability between runs on unchanged case-bank files.",
+    "pack_d_file_size_delta": "+1 byte (1 comma addition)"
+  }
+}

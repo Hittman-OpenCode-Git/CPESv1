@@ -1,0 +1,29 @@
+{
+  "session": "S320",
+  "type": "COSO Citation Audit",
+  "before_missing": 17,
+  "added": 4,
+  "remaining_missing": 13,
+  "details": [
+    {
+      "qid": "P1-ED-028",
+      "cc": "A",
+      "topic": "Domain E seed"
+    },
+    {
+      "qid": "P1-ED-042",
+      "cc": "C",
+      "topic": "Domain E seed"
+    },
+    {
+      "qid": "P1-ED-046",
+      "cc": "C",
+      "topic": "Domain E seed"
+    },
+    {
+      "qid": "P1-ED-051",
+      "cc": "D",
+      "topic": "Domain E seed"
+    }
+  ]
+}

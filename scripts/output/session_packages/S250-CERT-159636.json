@@ -1,0 +1,291 @@
+{
+  "sessionId": "S250-CERT-159636",
+  "sessionType": "CERTIFICATION_SESSION",
+  "generatedTimestamp": "2026-07-27T15:58:10.926Z",
+  "status": "PENDING",
+  "pack": "pack_c",
+  "domains": [
+    "A"
+  ],
+  "qids": [
+    "P1-AC-001",
+    "P1-AC-002",
+    "P1-AC-003",
+    "P1-AC-004",
+    "P1-AC-005",
+    "P1-AC-006",
+    "P1-AC-007",
+    "P1-AC-008",
+    "P1-AC-009",
+    "P1-AC-010",
+    "P1-AC-011",
+    "P1-AC-012",
+    "P1-AC-013",
+    "P1-AC-014",
+    "P1-AC-015",
+    "P1-AC-016",
+    "P1-AC-017",
+    "P1-AC-018",
+    "P1-AC-019",
+    "P1-AC-020",
+    "P1-AC-021",
+    "P1-AC-022",
+    "P1-AC-023",
+    "P1-AC-024",
+    "P1-AC-025",
+    "P1-AC-026",
+    "P1-AC-027",
+    "P1-AC-028"
+  ],
+  "itemCount": 28,
+  "preExecutionChecks": [
+    {
+      "step": "GOVERNANCE_GUARD_RULE_2",
+      "description": "Confirm zero DL-008 on all items",
+      "required": true
+    },
+    {
+      "step": "DL_008_SCAN",
+      "description": "Run ExplanationValidator on target items",
+      "required": true
+    },
+    {
+      "step": "IDENTITY_VALIDATOR",
+      "description": "Run identity_validator.js on target pack",
+      "required": true
+    },
+    {
+      "step": "DL_013_CHECK",
+      "description": "Confirm no DL-013 boilerplate on items",
+      "required": true
+    }
+  ],
+  "verificationDimensions": [
+    {
+      "dimension": 1,
+      "name": "Correctness",
+      "description": "Against GAAP / IFRS / ICMA CSO",
+      "required": true
+    },
+    {
+      "dimension": 2,
+      "name": "Precision",
+      "description": "Internal consistency, unambiguous fact pattern",
+      "required": true
+    },
+    {
+      "dimension": 3,
+      "name": "Difficulty Calibration",
+      "description": "Matches stated tier and LOS depth",
+      "required": true
+    },
+    {
+      "dimension": 4,
+      "name": "Distractor Engineering",
+      "description": "Each distractor maps to real misconception",
+      "required": true
+    },
+    {
+      "dimension": 5,
+      "name": "Blueprint Alignment",
+      "description": "Maps to specific Part 1 CSO LOS",
+      "required": true
+    },
+    {
+      "dimension": 6,
+      "name": "CMA Part 1 Relevance",
+      "description": "In scope, not accidentally Part 2",
+      "required": true
+    }
+  ],
+  "postExecutionChecks": [
+    {
+      "step": "CERTIFIED_POOL_RECOUNT",
+      "description": "Re-count certified items via grep",
+      "required": true
+    },
+    {
+      "step": "REVISION_HISTORY",
+      "description": "Write certification batch entry with before/after counts",
+      "required": true
+    },
+    {
+      "step": "REGISTRY_UPDATE",
+      "description": "Update MASTER_QUESTION_REGISTRY.md if certified count changed",
+      "required": false
+    }
+  ],
+  "itemDetails": [
+    {
+      "qid": "P1-AC-001",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-002",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-003",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-004",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-005",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-006",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-007",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-008",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-009",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-010",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-011",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-012",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-013",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-014",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-015",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-016",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-017",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-018",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-019",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-020",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-021",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-022",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-023",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-024",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-025",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-026",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-027",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1-AC-028",
+      "domain": "A",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    }
+  ],
+  "batchIndex": 1,
+  "totalBatches": 13,
+  "sourceLane": "CERTIFY"
+}

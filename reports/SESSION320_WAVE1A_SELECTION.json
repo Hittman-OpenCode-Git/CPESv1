@@ -1,0 +1,15 @@
+{
+  "session": "S320",
+  "type": "Wave 1A Seed Selection (Recalibrated)",
+  "timestamp": "2026-07-27T03:26:39.237Z",
+  "discovery": "S319 inventory CC values stale — live file has rotated CorrectChoice values. 38 seeds confirmed; 19 Pack C + 19 Pack D. All 38 have 1 empty non-CC EW slot. S320 focused on Pack D remediation (10 EW fills + 8 COSO).",
+  "total_seeds": 38,
+  "pack_c_seeds": 19,
+  "pack_d_seeds": 19,
+  "pack_c_ew_fills": 0,
+  "pack_d_ew_fills": 10,
+  "pack_c_coso_adds": 0,
+  "pack_d_coso_adds": 8,
+  "total_remaining_ew": 28,
+  "total_remaining_coso": 20
+}

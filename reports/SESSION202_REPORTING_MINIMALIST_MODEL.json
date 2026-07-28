@@ -1,0 +1,550 @@
+{
+  "session": "S202",
+  "title": "Reporting Minimalism Model — v2 Target Architecture",
+  "design_authority": "S200 Agent G + S201 Agent G (Board 5 — Reporting Burden Analysis)",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — Architecture Design",
+  "sources": [
+    "reports/SESSION200_REPORTING_ANALYSIS.json (1,212 files, 65% one-off, 9x duplication)",
+    "reports/SESSION201_REPORTING_BURDEN.json (1,227 files, 35% consumed, 3.5:1 metric duplication)",
+    "reports/SESSION201_DUPLICATION_MATRIX.json (CO-006: Single report per session)",
+    "reports/SESSION201_EXECUTIVE_FINDINGS.md (4 report target, D-05 approved)",
+    "reports/SESSION201_CONSOLIDATION_MODEL.json (4-board consolidation)",
+    "S311-S320 session output inventory (83 distinct report types classified)"
+  ],
+  "principles": [
+    "Every report must have a single consumer board",
+    "No metric appears in more than 2 reports",
+    "Each report is consumable by its audience within 5 minutes",
+    "Reports are facts + decisions, not process narratives",
+    "One file per board — agent findings embedded, not persisted separately"
+  ],
+
+  "four_report_model": {
+    "report_1": {
+      "name": "Readiness Report",
+      "file_name": "SESSIONNNN_READINESS_REPORT.json",
+      "purpose": "Pre-session and mid-session operational state. Answers: Is the session safe to start? Have all prerequisites been met? What is the current portfolio state? Is the session on track to complete?",
+      "audience": "Operations / Session Arbiter (Governance Board, Tier 1)",
+      "when_generated": [
+        { "timing": "pre_session", "description": "Generated at T0 before any write operations. Confirms all prerequisites are met." },
+        { "timing": "mid_session", "description": "Generated at Tmid (~30 min mark). Confirms session is on track, no drift detected." }
+      ],
+      "content_specification": {
+        "sections": [
+          {
+            "id": "R1_SESSION_GATE",
+            "title": "Session Gate Status",
+            "fields": [
+              { "name": "gate_status", "type": "string", "description": "SESSION_READY | SESSION_BLOCKED", "source": "Governance Board Tier 1 decision" },
+              { "name": "blocking_conditions", "type": "array", "description": "List of conditions preventing SESSION_READY if blocked", "source": "Governance Board" },
+              { "name": "governance_guard_status", "type": "object", "description": "Rules 1-8 status, N/N PASS summary", "source": "Governance guard test suite" },
+              { "name": "t0_hash_verification", "type": "object", "description": "13 runtime hashes vs CURRENT_BASELINES.md", "source": "Baseline hash checker" }
+            ]
+          },
+          {
+            "id": "R1_PORTFOLIO_SNAPSHOT",
+            "title": "Portfolio State Snapshot",
+            "fields": [
+              { "name": "certified_count", "type": "integer", "description": "Total Certified items (direct grep, dual-verified per AGENTS.md §5)", "source": "Select-String + Function constructor parse" },
+              { "name": "total_items", "type": "integer", "description": "2,500 MCQ + 400 case items = 2,900", "source": "Registry Board" },
+              { "name": "certified_percentage", "type": "number", "description": "Certified / total items × 100", "source": "Computed" },
+              { "name": "domain_distribution", "type": "object", "description": "Certified count per Section A-F, per pack", "source": "Registry Board per-pack enumeration" },
+              { "name": "question_state_counts", "type": "object", "description": "Count by state (Unprocessed/In Audit/Editorial Queue/Certified/Archived)", "source": "Registry Board" }
+            ]
+          },
+          {
+            "id": "R1_SESSION_PLAN",
+            "title": "Session Plan & Scope",
+            "fields": [
+              { "name": "session_type", "type": "string", "description": "READ_ONLY_AUDIT | CERTIFICATION_WAVE | REMEDIATION | GOVERNANCE | HYBRID", "source": "Session Arbiter" },
+              { "name": "target_qids", "type": "array", "description": "QIDs in scope for this session", "source": "Registry Board + Session Arbiter" },
+              { "name": "estimated_operations", "type": "integer", "description": "Planned write operations (0 for read-only)", "source": "Session Arbiter" },
+              { "name": "delta_from_last_session", "type": "object", "description": "What changed since last session: new certified items, defect counts delta, registry changes", "source": "Delta ledger comparison" },
+              { "name": "domain_e_f_readiness", "type": "object", "description": "Specialist: Domain E/F modernization status, seed inventory, batch plan", "source": "Registry Board specialist analysis" }
+            ]
+          },
+          {
+            "id": "R1_MID_SESSION",
+            "title": "Mid-Session Drift Check (Tmid only)",
+            "fields": [
+              { "name": "certified_count_stable", "type": "boolean", "description": "Certified count has not changed since T0", "source": "Direct grep comparison" },
+              { "name": "appjs_hash_match", "type": "boolean", "description": "app.js hash unchanged from baseline", "source": "Hash comparator" },
+              { "name": "pack_parse_counts", "type": "object", "description": "Each pack item count unchanged (500 per pack)", "source": "Function constructor parse" },
+              { "name": "write_count_tracker", "type": "object", "description": "Writes executed / writes planned, by pack", "source": "Governance Board" },
+              { "name": "agent_deployment_summary", "type": "object", "description": "Agents spawned, agents completed, anomalies", "source": "Governance Board" }
+            ]
+          }
+        ],
+        "excluded_metrics": [
+          "ExplanationWrong field-level detail (→ Report 2)",
+          "Per-item quality scores (→ Report 2)",
+          "Certification decisions per QID (→ Report 3)",
+          "Defect library updates (→ Report 4)",
+          "REVISION_HISTORY.md entries (→ Report 4)"
+        ]
+      },
+      "producer": "Governance Board — Agent: Session Arbiter",
+      "consumers": ["Session Arbiter", "Quality Board (pre-read)", "Certification Board (pre-read)"],
+      "format": "JSON",
+      "retention_policy": "permanent",
+      "estimated_size_kb": "4-8 KB",
+      "consumption_time_minutes": 3
+    },
+
+    "report_2": {
+      "name": "Quality Report",
+      "file_name": "SESSIONNNN_QUALITY_REPORT.json",
+      "purpose": "Per-item and aggregate quality assessment. Answers: What is the quality state of all items examined this session? Which items pass all CAQS dimensions? Which items have structural defects? What is the EW integrity state?",
+      "audience": "Quality Board (consolidated Technical + Psychometric + Structural)",
+      "when_generated": [
+        { "timing": "per_batch", "description": "Generated after each batch of items completes Quality Board review. Accumulates." },
+        { "timing": "post_session", "description": "Final aggregate with all batches consolidated." }
+      ],
+      "content_specification": {
+        "sections": [
+          {
+            "id": "R2_STRUCTURAL_STATE",
+            "title": "Structural Defect Inventory",
+            "fields": [
+              { "name": "dl008_count", "type": "integer", "description": "Items with non-empty ExplanationWrong[CorrectChoice]. Per-CC extraction.", "source": "AM-1 Function Constructor Parse (within-object)" },
+              { "name": "dl008_qids", "type": "array", "description": "QID + CorrectChoice + EW_Pattern for each DL-008 item", "source": "AM-1 within-object parse" },
+              { "name": "dl026_count", "type": "integer", "description": "Items with empty non-CC EW slots", "source": "AM-1 within-object parse" },
+              { "name": "dl026_qids", "type": "array", "description": "QID + specific empty slots per item", "source": "AM-1 within-object parse" },
+              { "name": "dl018_count", "type": "integer", "description": "Items with structurally absent EW[CC] field", "source": "AM-1 within-object parse" },
+              { "name": "dl021_count", "type": "integer", "description": "Items with structurally absent distractor EW fields", "source": "AM-1 within-object parse" },
+              { "name": "dl013_count", "type": "integer", "description": "Items with template boilerplate in any EW field", "source": "Regex pattern match" }
+            ]
+          },
+          {
+            "id": "R2_CONTENT_QUALITY",
+            "title": "Content Quality Assessment",
+            "fields": [
+              { "name": "technical_accuracy_pct", "type": "number", "description": "Percentage of items passing CAQS Dimension 3 (accounting correctness)", "source": "Quality Board Agent 1" },
+              { "name": "items_failing_technical", "type": "array", "description": "QIDs failing technical review with specific errors", "source": "Quality Board Agent 1" },
+              { "name": "distractor_quality_score", "type": "number", "description": "Mean CAQS Dimension 4 score across reviewed items", "source": "Quality Board Agent 2" },
+              { "name": "explanation_quality_score", "type": "number", "description": "Mean CAQS Dimension 7 score across reviewed items", "source": "Quality Board Agent 2" },
+              { "name": "ev_compliance_breakdown", "type": "object", "description": "EV1-EV8 per-rule pass/fail counts", "source": "ExplanationValidator" },
+              { "name": "coso_citation_audit", "type": "object", "description": "Count of items missing COSO/framework citations in EC", "source": "Quality Board Agent 1" },
+              { "name": "dl031_detected", "type": "array", "description": "QIDs flagged for definition-match difficulty inflation", "source": "Quality Board Agent 2" },
+              { "name": "dl010_detected", "type": "array", "description": "QIDs with suspected misassigned EW text", "source": "Quality Board Agent 3" },
+              { "name": "dl016_detected", "type": "array", "description": "QIDs with metadata-content Choice divergence", "source": "Quality Board Agent 3" }
+            ]
+          },
+          {
+            "id": "R2_EW_INTEGRITY",
+            "title": "Explanation Wrong Integrity",
+            "fields": [
+              { "name": "ew_fill_rate", "type": "number", "description": "Percentage of non-CC EW slots that are non-empty across reviewed items", "source": "Computed from structural scan" },
+              { "name": "ew_boilerplate_rate", "type": "number", "description": "Percentage of EW slots containing DL-013 template text", "source": "Regex pattern match" },
+              { "name": "ew_choice_specificity_rate", "type": "number", "description": "Percentage of EW slots that are choice-specific (not generic/identical)", "source": "Quality Board Agent 2" },
+              { "name": "correctchoice_accuracy", "type": "number", "description": "Percentage of CC values independently verified as correct", "source": "Quality Board Agent 1" },
+              { "name": "dl030_detected", "type": "array", "description": "QIDs with CC independently derived ≠ stored CC (answer-key errors)", "source": "Quality Board Agent 1" }
+            ]
+          },
+          {
+            "id": "R2_PER_ITEM_VERDICT",
+            "title": "Per-Item Quality Verdicts",
+            "fields": [
+              { "name": "items_reviewed", "type": "integer", "description": "Total items reviewed this session", "source": "Quality Board" },
+              { "name": "items_certifiable", "type": "integer", "description": "Items passing all 10 CAQS dimensions at ≥90 CAQS score", "source": "Quality Board consensus" },
+              { "name": "items_needs_revision", "type": "integer", "description": "Items requiring remediation before certification", "source": "Quality Board consensus" },
+              { "name": "items_rejected", "type": "integer", "description": "Items with accounting errors (auto-fail)", "source": "Quality Board Agent 1" },
+              { "name": "per_item_caqs_scores", "type": "object", "description": "QID → 10-dimension rubric scores + overall + quality tier", "source": "Quality Board ALL_AGREE consensus" }
+            ]
+          },
+          {
+            "id": "R2_DIFFICULTY_DISTRIBUTION",
+            "title": "Difficulty & Taxonomy Distribution (reviewed items)",
+            "fields": [
+              { "name": "difficulty_distribution", "type": "object", "description": "Easy/Moderate/Difficult/Very Difficult count distribution", "source": "Quality Board Agent 2" },
+              { "name": "blooms_distribution", "type": "object", "description": "Remember/Understand/Apply/Analyze/Evaluate count distribution", "source": "Quality Board Agent 2" },
+              { "name": "dl031_recalibrations", "type": "integer", "description": "Items recalibrated from Moderate→Easy this session", "source": "Quality Board Agent 2" }
+            ]
+          }
+        ],
+        "excluded_metrics": [
+          "Portfolio-level certified count (→ Report 1)",
+          "Session gate decisions (→ Report 1)",
+          "Certification state-change decisions (→ Report 3)",
+          "Governance guard status (→ Report 1)",
+          "Defect library updates (→ Report 4)",
+          "REVISION_HISTORY.md entries (→ Report 4)"
+        ]
+      },
+      "producer": "Quality Board — Agents 1 (Technical), 2 (Psychometric/Instructional), 3 (Structural/Safety)",
+      "consumers": ["Quality Board (self-consume)", "Certification Board (evidence package)", "Governance Board (safety assessment)"],
+      "format": "JSON",
+      "retention_policy": "permanent",
+      "estimated_size_kb": "12-30 KB (depends on batch size; per-item section is the largest)",
+      "consumption_time_minutes": 5
+    },
+
+    "report_3": {
+      "name": "Certification Decision Report",
+      "file_name": "SESSIONNNN_CERTIFICATION_REPORT.json",
+      "purpose": "Per-item certification decisions with evidence trail. Answers: Which items achieved Certified state? Which were held, and why? What question_state transitions occurred? What is the before/after certified count?",
+      "audience": "Certification Board",
+      "when_generated": [
+        { "timing": "post_session", "description": "Generated after all batches complete Quality Board review and Certification Board adjudication." }
+      ],
+      "content_specification": {
+        "sections": [
+          {
+            "id": "R3_CERTIFICATION_DECISIONS",
+            "title": "Per-Item Certification Decisions",
+            "fields": [
+              { "name": "certification_round", "type": "string", "description": "Certification wave identifier (e.g., 'Domain E Wave 3')", "source": "Certification Board" },
+              { "name": "items_certified", "type": "integer", "description": "Count promoted to Certified this session", "source": "Certification Board" },
+              { "name": "items_held", "type": "integer", "description": "Count held with specific conditions", "source": "Certification Board" },
+              { "name": "items_escalated", "type": "integer", "description": "Count escalated to human steward", "source": "Certification Board" },
+              { "name": "per_item_decisions", "type": "array", "description": "Array of {QID, compound_key, decision: CERTIFY|HOLD|ESCALATE, caqs_score, evidence_dimensions, distractor_tier_map, conditions_if_held}", "source": "Certification Board" }
+            ]
+          },
+          {
+            "id": "R3_STATE_TRANSITIONS",
+            "title": "State Transitions Applied",
+            "fields": [
+              { "name": "pre_session_state_counts", "type": "object", "description": "Unprocessed/In Audit/Editorial Queue/Certified/Archived counts before session", "source": "Registry Board" },
+              { "name": "post_session_state_counts", "type": "object", "description": "Same distribution after session", "source": "Registry Board" },
+              { "name": "transitions_applied", "type": "array", "description": "List of {QID, from_state, to_state, justification}", "source": "Certification Board" },
+              { "name": "certified_count_before", "type": "integer", "description": "Certified count before session (dual-verified)", "source": "Registry Board" },
+              { "name": "certified_count_after", "type": "integer", "description": "Certified count after session (dual-verified)", "source": "Registry Board" },
+              { "name": "certified_net_change", "type": "integer", "description": "After minus before", "source": "Computed" }
+            ]
+          },
+          {
+            "id": "R3_EVIDENCE_PACKAGE",
+            "title": "Evidence Package Reference",
+            "fields": [
+              { "name": "quality_report_ref", "type": "string", "description": "Session filename of Quality Report (Report 2) providing evidence", "source": "File system" },
+              { "name": "readiness_report_ref", "type": "string", "description": "Session filename of Readiness Report (Report 1) proving prerequisites", "source": "File system" },
+              { "name": "registry_ref", "type": "string", "description": "MASTER_QUESTION_REGISTRY.md timestamp used", "source": "File system" },
+              { "name": "new_rules_enforced", "type": "array", "description": "G-NEW rules verified this certification round", "source": "Certification Board" }
+            ]
+          },
+          {
+            "id": "R3_REVISION_HISTORY_DATA",
+            "title": "REVISION_HISTORY.md Entry Data",
+            "fields": [
+              { "name": "revision_entry_prepared", "type": "string", "description": "Complete REVISION_HISTORY.md entry text (QuestionIDs, before/after counts, verification results, distractor tier map)", "source": "Certification Board" },
+              { "name": "entry_validated", "type": "boolean", "description": "Entry passes revision_entry_validator.js", "source": "Governance Board" }
+            ]
+          }
+        ],
+        "excluded_metrics": [
+          "Per-item quality dimension breakdown (→ Report 2)",
+          "Structural defect inventory (→ Report 2)",
+          "Portfolio snapshot (→ Report 1)",
+          "Governance guard status (→ Report 1)",
+          "Agent deployment summary (→ Report 1)"
+        ]
+      },
+      "producer": "Certification Board",
+      "consumers": ["Certification Board (self-consume)", "Governance Board (Tier 2 SESSION_CLOSE)", "Registry Board (trigger regeneration)"],
+      "format": "JSON",
+      "retention_policy": "permanent",
+      "estimated_size_kb": "6-15 KB (depends on batch size; per_item_decisions is the largest)",
+      "consumption_time_minutes": 4
+    },
+
+    "report_4": {
+      "name": "Governance & Audit Report",
+      "file_name": "SESSIONNNN_GOVERNANCE_REPORT.md",
+      "purpose": "Session governance attestation, portfolio authorization, and audit trail. Answers: Is the session authorized to close? Is the portfolio safe for learner delivery? What governance events occurred? What defects were discovered? How does this session interface with REVISION_HISTORY.md and DEFECT_LIBRARY.md?",
+      "audience": "Governance Board (Tier 2 SESSION_CLOSE + Tier 3 PORTFOLIO_READY)",
+      "when_generated": [
+        { "timing": "post_session", "description": "Generated at Tend after all writes complete, as the session's closing governance document." }
+      ],
+      "content_specification": {
+        "sections": [
+          {
+            "id": "R4_SESSION_CLOSE",
+            "title": "Session Close Authorization",
+            "fields": [
+              { "name": "close_decision", "type": "string", "description": "SESSION_CLOSE_AUTHORIZED | SESSION_CLOSE_BLOCKED", "source": "Governance Board Tier 2" },
+              { "name": "tend_hash_verification", "type": "object", "description": "All 13 hashes match T0 (or G1-G5 reconciliation summary if drift detected)", "source": "Baseline hash checker" },
+              { "name": "backup_protocol_verified", "type": "boolean", "description": "All modified files have timestamped .bak copies with non-zero size", "source": "Backup verifier" },
+              { "name": "revision_history_entry_written", "type": "boolean", "description": "REVISION_HISTORY.md updated with session entry", "source": "Revision entry validator" },
+              { "name": "no_staged_findings", "type": "boolean", "description": "Per AGENTS.md §12: any new defect discovered logged to DEFECT_LIBRARY.md before close", "source": "Governance Board" },
+              { "name": "governance_guard_final_result", "type": "object", "description": "Post-session guard test: all rules, PASS/FAIL, violations", "source": "Governance guard test suite" }
+            ]
+          },
+          {
+            "id": "R4_PORTFOLIO_GATE",
+            "title": "Portfolio Authorization (Tier 3)",
+            "fields": [
+              { "name": "portfolio_decision", "type": "string", "description": "PORTFOLIO_READY | PORTFOLIO_QUARANTINED", "source": "Governance Board Tier 3" },
+              { "name": "delivery_pool_safety", "type": "object", "description": "Certified QIDs ∩ known-defective QID list (must be empty)", "source": "Pre-delivery safety checker" },
+              { "name": "pre_delivery_safety_check_pass", "type": "boolean", "description": "Per AGENTS.md §7: 0 known-defective QIDs in delivery pool", "source": ".opencode/skills/pre-delivery-safety-check" },
+              { "name": "portfolio_health_index", "type": "number", "description": "Composite health score: certification % + defect status + structural integrity", "source": "Portfolio health calculator" },
+              { "name": "portfolio_risk_register", "type": "object", "description": "Active risks: count by severity (Critical/High/Medium/Low), top 5 risks found as blocker candidates", "source": "Governance Board" }
+            ]
+          },
+          {
+            "id": "R4_GOVERNANCE_EVENTS",
+            "title": "Session Governance Events",
+            "fields": [
+              { "name": "critical_incidents", "type": "array", "description": "Any CRITICAL or HIGH drift signals detected (per AGENTS.md §13.5)", "source": "Governance Board" },
+              { "name": "concurrent_write_events", "type": "array", "description": "Any DL-019 class concurrent-write overwrites detected", "source": "File-lock protocol + hash reconciliation" },
+              { "name": "p0_blockers_encountered", "type": "array", "description": "Any P0 blockers (file corruption, missing state fields, parse failures)", "source": "Governance Board" },
+              { "name": "scan_discrepancies", "type": "array", "description": "Any count discrepancies between independent verification passes", "source": "Dual-verification comparison" },
+              { "name": "agent_anomalies", "type": "array", "description": "Agent failures, silent completions, conflicting outputs", "source": "Governance Board" },
+              { "name": "governance_guard_actions", "type": "object", "description": "Which rules fired (BLOCK/WARN), which violations occurred", "source": "Governance guard log" }
+            ]
+          },
+          {
+            "id": "R4_DEFECT_UPDATES",
+            "title": "Defect Library Updates",
+            "fields": [
+              { "name": "new_defects_discovered", "type": "array", "description": "New DL-IDs assigned this session with classification (Class, Domain, Severity)", "source": "Governance Board → DEFECT_LIBRARY.md" },
+              { "name": "existing_defects_resolved", "type": "array", "description": "DL-IDs marked Resolved this session", "source": "Governance Board → DEFECT_LIBRARY.md" },
+              { "name": "defect_status_changes", "type": "array", "description": "DL-IDs with status changes (Open→Resolved, severity upgrades, scope expansions)", "source": "DEFECT_LIBRARY.md diff" }
+            ]
+          },
+          {
+            "id": "R4_REVISION_APPENDIX",
+            "title": "REVISION_HISTORY.md Governance Appendix",
+            "fields": [
+              { "name": "entry_prepared", "type": "boolean", "description": "Complete REVISION_HISTORY.md entry exists", "source": "Governance Board" },
+              { "name": "entry_fields", "type": "object", "description": "Session ID, date, author, type (read-only/certification/remediation), content changes count, certification changes count, governance changes count", "source": "Extracted from Report 3 + governance log" },
+              { "name": "entry_validated_by", "type": "string", "description": "Agent or human who validated the entry", "source": "Governance Board" }
+            ]
+          },
+          {
+            "id": "R4_REPORTING_COMPLIANCE",
+            "title": "Reporting Compliance Self-Check",
+            "fields": [
+              { "name": "reports_produced_this_session", "type": "integer", "description": "Must be ≤ 8 (soft cap) or have BLOCK-AUTHORIZED marker", "source": "File count" },
+              { "name": "reports_under_soft_cap", "type": "boolean", "description": "True if ≤ 8 reports produced", "source": "Self-check" },
+              { "name": "reports_produced_list", "type": "array", "description": "List of report filenames produced this session", "source": "File inventory" },
+              { "name": "excess_report_justification", "type": "string", "description": "If > 8 files, BLOCK-AUTHORIZED justification text", "source": "Governance Board" }
+            ]
+          }
+        ],
+        "excluded_metrics": [
+          "Per-item quality scores (→ Report 2)",
+          "Certification decisions per QID (→ Report 3)",
+          "Agent deployment plan (→ Report 1)",
+          "Domain distribution detail (→ Report 1)"
+        ]
+      },
+      "producer": "Governance Board",
+      "consumers": ["Governance Board (self-consume)", "Registry Board (archive)", "Session Arbiter (next-session pre-read)"],
+      "format": "MD",
+      "retention_policy": "permanent",
+      "estimated_size_kb": "8-15 KB",
+      "consumption_time_minutes": 5
+    }
+  },
+
+  "report_consolidation_map": {
+    "description": "How current report categories from S311-S320 map to the 4-report v2 model",
+    "merges": {
+      "to_readiness_report": [
+        { "current_category": "SESSION DASHBOARD", "pattern": "SESSIONNNN_DASHBOARD.json", "frequency": "Every session S311+", "consolidation_action": "Portfolio state section (R1_PORTFOLIO_SNAPSHOT). Session plan section (R1_SESSION_PLAN). All 10-15 metrics reduced to the 12 fields in R1 sections.", "metrics_mapped": ["certified_count", "total_items", "certified_percentage", "domain_distribution", "question_state_counts", "governance_guard_status"] },
+        { "current_category": "COMPLETION FORECAST", "pattern": "SESSIONNNN_COMPLETION_FORECAST.json", "frequency": "Sessions S318-S320", "consolidation_action": "Domain E/F readiness in R1_SESSION_PLAN. Forecast data reduces to 'estimated_operations' + 'delta_from_last_session' fields.", "metrics_mapped": ["domain_e_f_readiness", "delta_from_last_session"] },
+        { "current_category": "READINESS SCORING / BOARD", "pattern": "SESSIONNNN_READINESS_SCORING.json, SESSIONNNN_READINESS_BOARD.json", "frequency": "S320 only (prototype)", "consolidation_action": "Session gate status section (R1_SESSION_GATE). Go/No-Go decision + blocking conditions.", "metrics_mapped": ["gate_status", "blocking_conditions"] },
+        { "current_category": "REGISTRY SYNC / UPDATE", "pattern": "SESSIONNNN_REGISTRY_SYNC.json, SESSIONNNN_REGISTRY_UPDATE.json", "frequency": "S314, S318", "consolidation_action": "Portfolio snapshot (R1_PORTFOLIO_SNAPSHOT) + delta from last session (R1_SESSION_PLAN).", "metrics_mapped": ["question_state_counts", "delta_from_last_session"] },
+        { "current_category": "SEED INVENTORY / PRIORITIZATION", "pattern": "SESSIONNNN_SEED_INVENTORY.json, SESSIONNNN_SEED_PRIORITIZATION.json, SESSIONNNN_SEED_MASTER_INVENTORY.json", "frequency": "S318-S319", "consolidation_action": "Target QIDs in scope (R1_SESSION_PLAN.target_qids). Domain E/F readiness includes seed enumeration.", "metrics_mapped": ["target_qids", "domain_e_f_readiness"] },
+        { "current_category": "CANDIDATE INVENTORY", "pattern": "SESSIONNNN_CANDIDATE_INVENTORY.json", "frequency": "S313, S315, S317", "consolidation_action": "Target QIDs in scope (R1_SESSION_PLAN) for certification waves. REMAINING_INVENTORY_UPDATE merges into delta.", "metrics_mapped": ["target_qids"] },
+        { "current_category": "DOMAIN INVENTORY / READINESS", "pattern": "SESSIONNNN_DOMAIN_*_INVENTORY.json, SESSIONNNN_DOMAIN_*_READINESS.json", "frequency": "S311-S312, S318", "consolidation_action": "Domain-specific data compressed into R1_SESSION_PLAN.domain_e_f_readiness. No standalone domain report.", "metrics_mapped": ["domain_e_f_readiness"] },
+        { "current_category": "PORTFOLIO IMPACT ANALYSIS", "pattern": "SESSIONNNN_PORTFOLIO_IMPACT_ANALYSIS.json", "frequency": "Every session S312+", "consolidation_action": "SPLIT: portfolio-level certified counts → R1_PORTFOLIO_SNAPSHOT. Item-level impact → R2 per-item scores. But the standalone PORTFOLIO_IMPACT_ANALYSIS.json is retired — its content is distributed to R1 and R2.", "metrics_mapped": ["certified_count → R1", "per_item_impact → R2"] }
+      ],
+      "to_quality_report": [
+        { "current_category": "EW INTEGRITY AUDIT / EW AUDIT / EW COVERAGE AUDIT", "pattern": "SESSIONNNN_EW_INTEGRITY_AUDIT.json, SESSIONNNN_EW_AUDIT.json, SESSIONNNN_EW_COVERAGE_AUDIT.json", "frequency": "S312-S313, S315-S318, S320", "consolidation_action": "Merged into R2_EW_INTEGRITY section. Structural defect inventory consolidated there instead of 3 separate files per session.", "metrics_mapped": ["ew_fill_rate", "ew_boilerplate_rate", "ew_choice_specificity_rate", "dl008_count", "dl026_count", "dl013_count"] },
+        { "current_category": "TECHNICAL REVIEW / TECHNICAL ACCURACY AUDIT", "pattern": "SESSIONNNN_TECHNICAL_REVIEW.json, SESSIONNNN_TECHNICAL_ACCURACY_AUDIT.json", "frequency": "S313, S315, S317-S318", "consolidation_action": "Merged into R2_CONTENT_QUALITY (technical_accuracy_pct, items_failing_technical). No standalone technical review file.", "metrics_mapped": ["technical_accuracy_pct", "items_failing_technical", "coso_citation_audit", "correctchoice_accuracy", "dl030_detected"] },
+        { "current_category": "QUALITY GATE RESULTS / AUDIT / CERTIFICATION / VERIFICATION", "pattern": "SESSIONNNN_QUALITY_GATE_*.json", "frequency": "S312-S313, S315-S318", "consolidation_action": "Content merged into appropriate R2 sections. EV compliance → R2_CONTENT_QUALITY.ev_compliance_breakdown. Structural findings → R2_STRUCTURAL_STATE. Per-item → R2_PER_ITEM_VERDICT.", "metrics_mapped": ["ev_compliance_breakdown", "structural defect counts", "per_item_caqs_scores"] },
+        { "current_category": "LEARNER SAFETY ASSESSMENT / AUDIT", "pattern": "SESSIONNNN_LEARNER_SAFETY_*.json", "frequency": "S312, S318", "consolidation_action": "SPLIT: structural defect inventory (DL-008/026/016) → R2_STRUCTURAL_STATE. Delivery pool exclusion → Report 4 (R4_PORTFOLIO_GATE). Content safety (DL-030) → R2_CONTENT_QUALITY.", "metrics_mapped": ["dl008_count → R2", "dl026_count → R2", "dl030_detected → R2", "delivery_pool_safety → R4"] },
+        { "current_category": "UIQS VALIDATION", "pattern": "SESSIONNNN_UIQS_VALIDATION.json", "frequency": "S313, S315, S317, S319", "consolidation_action": "Merged into a note field in R2_PER_ITEM_VERDICT (per-item rendering compliance flag). UIQS Validation was 95% unique scope — retained as sub-score, not standalone report.", "metrics_mapped": ["Per-item rendering compliance flag"] },
+        { "current_category": "COSO AUDIT / COSO CITATION AUDIT", "pattern": "SESSIONNNN_COSO_AUDIT.json, SESSIONNNN_COSO_CITATION_AUDIT.json", "frequency": "S319-S320", "consolidation_action": "Merged into R2_CONTENT_QUALITY.coso_citation_audit. Single field, not a standalone report.", "metrics_mapped": ["coso_citation_audit"] },
+        { "current_category": "DEFECT CLOSURE AUDIT", "pattern": "SESSIONNNN_DEFECT_CLOSURE_AUDIT.json", "frequency": "S319", "consolidation_action": "SPLIT: defect counts → R2_STRUCTURAL_STATE. Defect library updates → Report 4 (R4_DEFECT_UPDATES).", "metrics_mapped": ["dl008_count → R2", "new_defects_discovered → R4", "existing_defects_resolved → R4"] },
+        { "current_category": "CLONE GROUP CLOSURE / CROSS PACK AUDIT", "pattern": "SESSIONNNN_CLONE_GROUP_CLOSURE_AUDIT.json, SESSIONNNN_CROSS_PACK_AUDIT.json", "frequency": "S318", "consolidation_action": "Clone group status → R2_STRUCTURAL_STATE (as a note on rotation-group items). Cross-pack consistency → R2_CONTENT_QUALITY (as a cross-reference integrity check).", "metrics_mapped": ["clone group structural status"] }
+      ],
+      "to_certification_report": [
+        { "current_category": "CERTIFICATION RESULTS / CERTIFICATION BOARD RESULTS", "pattern": "SESSIONNNN_CERTIFICATION_RESULTS.json, SESSIONNNN_CERTIFICATION_BOARD_RESULTS.json", "frequency": "S313, S315, S317-S319", "consolidation_action": "Merged entirely into R3_CERTIFICATION_DECISIONS + R3_STATE_TRANSITIONS. This is the most natural merge — Certification Results is already the target report content.", "metrics_mapped": ["items_certified", "items_held", "per_item_decisions", "state_transitions", "certified_count_before/after"] },
+        { "current_category": "DUPLICATE PREVENTION CERTIFICATION / RECERTIFICATION", "pattern": "SESSIONNNN_DUPLICATE_PREVENTION_*.json", "frequency": "S315-S319", "consolidation_action": "Duplicate prevention verification → R3_EVIDENCE_PACKAGE (as one of the new_rules_enforced). No standalone file needed.", "metrics_mapped": ["new_rules_enforced"] },
+        { "current_category": "PRODUCTION PROMOTION / INSERTION PACKAGE", "pattern": "SESSIONNNN_PRODUCTION_PROMOTION_RESULTS.json, SESSIONNNN_PRODUCTION_INSERTION_PACKAGE.json", "frequency": "S314, S316, S318", "consolidation_action": "Promotion results → R3_STATE_TRANSITIONS (from In Audit → Certified). Insertion package → R3_EVIDENCE_PACKAGE.", "metrics_mapped": ["state_transitions"] }
+      ],
+      "to_governance_report": [
+        { "current_category": "GOVERNANCE PRESERVATION AUDIT", "pattern": "SESSIONNNN_GOVERNANCE_PRESERVATION_AUDIT.json", "frequency": "S312, S318", "consolidation_action": "Merged into R4_SESSION_CLOSE (hash verification, backup protocol, no unexpected drift). Also R4_GOVERNANCE_EVENTS (critical incidents).", "metrics_mapped": ["tend_hash_verification", "backup_protocol_verified", "critical_incidents", "p0_blockers_encountered"] },
+        { "current_category": "SESSION SUMMARY (MD)", "pattern": "SESSIONNNN_SESSION_SUMMARY.md", "frequency": "Every session", "consolidation_action": "REPLACED by Report 4 (Governance & Audit Report). The MD narrative format is retained; Report 4 is the session summary. Report 4 adds structured governance fields while preserving the executive narrative. The old SESSION_SUMMARY.md is retired — Report 4 IS the session summary.", "metrics_mapped": ["All session-level narrative + governance attestation"] },
+        { "current_category": "RISK REGISTER", "pattern": "SESSIONNNN_RISK_REGISTER.json", "frequency": "Milestone sessions only", "consolidation_action": "Portfolio risk register → R4_PORTFOLIO_GATE.portfolio_risk_register. Not a standalone report.", "metrics_mapped": ["portfolio_risk_register"] },
+        { "current_category": "LEDGER SYNC AUDIT", "pattern": "SESSIONNNN_LEDGER_SYNC_AUDIT.json", "frequency": "S320", "consolidation_action": "Merged into R4_SESSION_CLOSE (tend hash verification, backup protocol). Ledger sync is covered by Registry cross-reference in R4.", "metrics_mapped": ["Scan discrepancies, registry sync status"] }
+      ]
+    },
+    "retires": [
+      { "current_category": "AUTHORING BATCH, AUTHORING QUALITY GATE, AUTHORING SPEC", "pattern": "SESSIONNNN_AUTHORING_*.json", "frequency": "S311-S312, S314, S316", "rationale": "One-off batch authoring plans. Content: item specifications and batch manifests. Retire because: consumed only within authoring session, content embedded in REVISION_HISTORY.md entry for traceability, authoring plan parameters subset of Report 1 SESSION_PLAN." },
+      { "current_category": "DOMAIN REPLACEMENT SPEC / AUTHORING SPEC", "pattern": "SESSIONNNN_DOMAIN_*_REPLACEMENT_SPEC.json, SESSIONNNN_DOMAIN_*_AUTHORING_SPEC.json", "frequency": "S311-S312", "rationale": "One-off domain design documents. Retire because: consumed only within design session. Domain scope parameters captured in S311 EW Factory standard for reusability. Individual session specs are too granular for permanent retention." },
+      { "current_category": "BLUEPRINT COVERAGE MATRIX", "pattern": "SESSIONNNN_BLUEPRINT_COVERAGE_MATRIX.json", "frequency": "S312", "rationale": "One-off coverage analysis. Retire because: domain distribution covered by Report 1 (R1_PORTFOLIO_SNAPSHOT). Re-runnable as an automated scan from Registry data." },
+      { "current_category": "EXECUTION ROADMAP / PRIORITY UPDATE / CAPACITY ANALYSIS / PLANNING PACKAGE", "pattern": "SESSIONNNN_EXECUTION_ROADMAP.json, SESSIONNNN_PRIORITY_UPDATE.json, SESSIONNNN_CAPACITY_ANALYSIS.json, SESSIONNNN_PLANNING_PACKAGE.json", "frequency": "S311, S319", "rationale": "One-off planning artifacts. Retire because: consumed only within planning session. Session plan now lives in Report 1. Roadmap decisions documented in REVISION_HISTORY.md." },
+      { "current_category": "SIMULATION RESULTS / VALIDATION REPORT", "pattern": "SESSIONNNN_SIMULATION_RESULTS.json, SESSIONNNN_VALIDATION_REPORT.json", "frequency": "S318", "rationale": "One-off simulation and validation outputs. Retire because: re-runnable from automated scan. Structural scan results now in Report 2." },
+      { "current_category": "DL026 REMEDIATION / EC ENRICHMENT REPORT", "pattern": "SESSIONNNN_DL026_REMEDIATION.json, SESSIONNNN_EC_ENRICHMENT_REPORT.json", "frequency": "S320", "rationale": "One-off remediation tracking files. Retire because: remediation progress tracked per-item in Report 2 (R2_PER_ITEM_VERDICT). Before/after enrichment documentation in REVISION_HISTORY.md." },
+      { "current_category": "WAVE-SPECIFIC INVENTORY / QUALITY AUDIT / EXTRACTION", "pattern": "SESSIONNNN_WAVE3_*.json, SESSIONNNN_WAVE1A_*.json", "frequency": "S316, S320", "rationale": "Batch-specific artifacts. Retire because: wave scope is Report 1 target_qids. Wave quality audit is Report 2. Wave extraction baselines are one-off batch artifacts — retire after batch close." },
+      { "current_category": "REMAINING INVENTORY UPDATE", "pattern": "SESSIONNNN_REMAINING_INVENTORY_UPDATE.json", "frequency": "S313", "rationale": "One-off delta report. Retire because: remaining inventory is a Registry Board computation, captured in Report 1 delta_from_last_session." }
+    ]
+  },
+
+  "metric_deduplication": {
+    "description": "In v1, the core 15 metrics appeared across an average of 5.3 files per session. The certified count alone appeared in 7-8 files per session. Below is the v2 assignment: each metric appears in at most 2 reports.",
+    "authoritative_assignments": {
+      "certified_item_count": {
+        "primary_report": "Report 1 (Readiness)",
+        "secondary_report": "Report 3 (Certification — before/after delta only)",
+        "v1_redundancy": "7-8 files per session (~450 total appearances)",
+        "v2_files": 2,
+        "rationale": "Report 1 owns the authoritative snapshot. Report 3 reports certification delta. No other report stores certified count."
+      },
+      "ew_integrity_metrics": {
+        "primary_report": "Report 2 (Quality — R2_EW_INTEGRITY)",
+        "secondary_report": "Report 4 (Governance — as portfolio health component)",
+        "v1_redundancy": "6 files per session (~90 total appearances)",
+        "v2_files": 2,
+        "rationale": "Report 2 owns EW fill rate, boilerplate rate, choice specificity. Report 4 references aggregate health, not per-slot detail."
+      },
+      "defect_counts_by_class": {
+        "primary_report": "Report 2 (Quality — R2_STRUCTURAL_STATE)",
+        "secondary_report": "Report 4 (Governance — R4_DEFECT_UPDATES for new/resolved only)",
+        "v1_redundancy": "5 files per session",
+        "v2_files": 2,
+        "rationale": "Report 2 owns the live structural defect inventory. Report 4 tracks changes to DEFECT_LIBRARY.md (new discoveries, resolutions)."
+      },
+      "domain_distribution": {
+        "primary_report": "Report 1 (Readiness — R1_PORTFOLIO_SNAPSHOT)",
+        "secondary_report": null,
+        "v1_redundancy": "5 files per session",
+        "v2_files": 1,
+        "rationale": "Domain certification distribution is a Readiness concern. Quality and Certification consume it from Report 1."
+      },
+      "session_duration_agent_utilization": {
+        "primary_report": "Report 1 (Readiness — R1_MID_SESSION at Tmid; final in R4_SESSION_CLOSE)",
+        "secondary_report": "Report 4 (Governance — final count in R4_SESSION_CLOSE)",
+        "v1_redundancy": "3 files per session",
+        "v2_files": 2,
+        "rationale": "Agent deployment is tracked during session in Report 1 and finalized in Report 4."
+      },
+      "governance_guard_status": {
+        "primary_report": "Report 1 (Readiness — R1_SESSION_GATE)",
+        "secondary_report": "Report 4 (Governance — R4_SESSION_CLOSE post-session final)",
+        "v1_redundancy": "4 files per session (~120 appearances)",
+        "v2_files": 2,
+        "rationale": "Guard status is a pre-session gate check (Report 1) with a post-session attestation (Report 4)."
+      },
+      "portfolio_health_index": {
+        "primary_report": "Report 4 (Governance — R4_PORTFOLIO_GATE)",
+        "secondary_report": null,
+        "v1_redundancy": "3 files per session (~80 appearances)",
+        "v2_files": 1,
+        "rationale": "Portfolio health is a governance concern. Report 4 owns it. Readiness references it but does not duplicate."
+      },
+      "certification_results_per_qid": {
+        "primary_report": "Report 3 (Certification — R3_CERTIFICATION_DECISIONS)",
+        "secondary_report": null,
+        "v1_redundancy": "3 files per session",
+        "v2_files": 1,
+        "rationale": "Certification decisions per QID belong exclusively in Report 3."
+      },
+      "total_item_count": {
+        "primary_report": "Report 1 (Readiness — R1_PORTFOLIO_SNAPSHOT)",
+        "secondary_report": null,
+        "v1_redundancy": "4 files per session (~200 appearances)",
+        "v2_files": 1,
+        "rationale": "2,900 is a constant. It changes only when QIDs are added or removed (extremely rare). Report 1 stores it."
+      },
+      "revision_history_entry_data": {
+        "primary_report": "Report 3 (Certification — R3_REVISION_HISTORY_DATA prepares the entry)",
+        "secondary_report": "Report 4 (Governance — R4_REVISION_APPENDIX validates and confirms write)",
+        "v1_redundancy": "Written independently by Certification and Governance agents",
+        "v2_files": 2,
+        "rationale": "Certification prepares the entry content. Governance validates it and confirms the write to REVISION_HISTORY.md."
+      },
+      "section_certification_percentage": {
+        "primary_report": "Report 1 (Readiness — R1_PORTFOLIO_SNAPSHOT.domain_distribution)",
+        "secondary_report": null,
+        "v1_redundancy": "4 files per session (~150 appearances)",
+        "v2_files": 1,
+        "rationale": "Section-level certification is a derivative of domain distribution. Computed from Report 1 data."
+      },
+      "delta_ledger_differences": {
+        "primary_report": "Report 1 (Readiness — R1_SESSION_PLAN.delta_from_last_session)",
+        "secondary_report": null,
+        "v1_redundancy": "2-3 files per session",
+        "v2_files": 1,
+        "rationale": "What changed since last session is a readiness concern. Consumed by all boards from Report 1."
+      },
+      "difficulty_and_blooms_distribution": {
+        "primary_report": "Report 2 (Quality — R2_DIFFICULTY_DISTRIBUTION)",
+        "secondary_report": null,
+        "v1_redundancy": "2-3 files per session",
+        "v2_files": 1,
+        "rationale": "Difficulty calibration and Bloom's distribution are quality metrics. Report 2 owns them."
+      },
+      "risk_register": {
+        "primary_report": "Report 4 (Governance — R4_PORTFOLIO_GATE.portfolio_risk_register)",
+        "secondary_report": null,
+        "v1_redundancy": "2-3 files per session",
+        "v2_files": 1,
+        "rationale": "Risk tracking is a governance function. Report 4 owns the live risk register snapshot."
+      }
+    }
+  },
+
+  "soft_cap_enforcement": {
+    "target_files_per_session": 4,
+    "soft_cap": 8,
+    "soft_cap_rule": "Sessions producing > 8 files in the reports/ directory require a BLOCK-AUTHORIZED marker in the session's Report 4 (R4_REPORTING_COMPLIANCE) with explicit justification.",
+    "phase_down_schedule": [
+      { "by_session": "S830", "target": "Soft cap active at 8. Current average: 11.7. Phase 1 infrastructure may produce extra files (registry snapshots, delta ledger bootstrap)." },
+      { "by_session": "S900", "target": "Soft cap enforced at 8. Phase 2 board consolidation reduces natural file count. Expect average 5-7." },
+      { "by_session": "S910", "target": "Hard cap at 4. Only the 4 reports + potentially 1-2 emergency/edge-case files with BLOCK-AUTHORIZED." }
+    ],
+    "files_exempt_from_cap": [
+      "Backup files (pack_*.js.bak-*) — protocol files, not reports",
+      "MASTER_QUESTION_REGISTRY.md — auto-generated per Rule 3, in knowledge/ not reports/",
+      "REVISION_HISTORY.md — in knowledge/ not reports/",
+      "DEFECT_LIBRARY.md — in knowledge/ not reports/",
+      "CURRENT_BASELINES.md — in knowledge/ not reports/",
+      "Validator output files — in scripts/ not reports/",
+      "Test suite output — in scripts/ not reports/",
+      "Agent debug logs — temporary files in Temp/ not reports/"
+    ],
+    "cap_scope": "Only files written to reports/ directory count toward the cap."
+  },
+
+  "retirement_plan": {
+    "description": "How legacy reports are retired without deletion. Per AGENTS.md: no data loss, archive-only.",
+    "archival_strategy": {
+      "method": "Move, not delete. Legacy files moved to reports/legacy/ subdirectory organized by session series.",
+      "directory_structure": {
+        "reports/legacy/100_series/": "62 sessions, 170 files — zero downstream consumption",
+        "reports/legacy/300_series/": "20 sessions, 263 files — agent output artifacts",
+        "reports/legacy/500_series/": "32 sessions, 118 files — case bank remediation",
+        "reports/legacy/600_series/": "5 sessions, 52 files — governance activation",
+        "reports/legacy/700_series/": "24 sessions, 238 files — governance closure",
+        "reports/legacy/800_series_pre_S830/": "Pre-consolidation 800-series sessions"
+      },
+      "index": "reports/legacy/LEGACY_INDEX.md — maps legacy file names to session, content summary, date. Auto-generated from file metadata."
+    },
+    "classification_summary": {
+      "total_legacy_files_to_archive": "~1,100 (pre-S830 sessions)",
+      "keep_active": [
+        "All 4-report outputs from sessions S830+",
+        "PORTFOLIO_RISK_REGISTER.json (active governance document, cross-session)",
+        "GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md (active governance document)",
+        "DEFINITIVE_PARSER_VALIDATION_2026-07-23.md (methodology standard reference)",
+        "Session 31/52/53 governance execution reports (cross-session references)",
+        "MAY_*.md and FD045_CROSS_SESSION_REFERENCE.md (active operational documents)"
+      ],
+      "retire_to_legacy": [
+        "All SESSION-prefixed files from sessions pre-S830 that are NOT in the keep_active list",
+        "All systematic_testing/ session export files (pilot data, 17 synthetic student files)",
+        "All agent-specific output files (SESSION301_AGENT_*.json through SESSION809_AGENT_*.json)",
+        "All REPORTING_PACKAGE meta-reports",
+        "All duplicate dashboard variants (domain-specific dashboards from S310)",
+        "All WAVE*-specific and BATCH*-specific files after wave close",
+        "All individual execution/validation report pairs (S17-*_EXECUTION.md + S17-*_VALIDATION.md)"
+      ]
+    },
+    "timing": "Archival executes at S830 Phase 1 activation. Pre-S830 reports are moved to legacy/ in a single governed batch operation with BEFORE/AFTER file counts documented in REVISION_HISTORY.md."
+  }
+}

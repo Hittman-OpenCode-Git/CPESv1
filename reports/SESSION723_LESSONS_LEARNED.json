@@ -1,0 +1,310 @@
+{
+  "title": "S723 Lessons Learned Audit",
+  "date": "2026-07-26",
+  "agent": "Agent R — S723 Governance Closure Program",
+  "method": "Read-only audit across REVISION_HISTORY.md (16,696+ lines), DEFECT_LIBRARY.md (33 defect entries), SESSION723_HISTORICAL_TRENDS.json (356 lines), and 87 cross-references to hash-drift, forward-scan, and concurrent-write events.",
+
+  "failures": [
+    {
+      "id": "F-01",
+      "name": "Concurrent-Write Data Loss (DL-019)",
+      "severity": "High — 432 items across Pack C (243) and Pack D (189) silently overwritten",
+      "what_happened": "Two concurrent sessions operated on the same pack files without write-lock coordination. The DL-013/certification-wave session wrote to Pack C and Pack D from a disk snapshot that predated the DL-008 remediation session, causing 432 cleared ExplanationWrong[CorrectChoice] fields to be restored to their pre-fix state.",
+      "root_cause": "No file-lock or session-coordination mechanism existed. Multiple sessions ran in parallel on the same files. Write-then-scan-wrong methodology: scans verified fixes immediately post-remediation but no post-overwrite re-verification occurred.",
+      "detection": "Cross-session DL-008 re-verification scan found violations restored. A count that regressed 0→432 indicated concurrent-write overwrite.",
+      "lesson": "Every write session must be preceded by a backup and followed by independent post-write re-verification. No two write sessions may operate on the same pack file concurrently.",
+      "prevented_in_future": true,
+      "prevention": "BACKUP_PROTOCOL.md mandated (AGENTS.md §3). Session isolation enforced — 700-series explicitly tracked which packs each session modified. 800-series governance correction lane separately documented. Still no formal .lock file protocol (deferred).",
+      "evidence_refs": [
+        "DEFECT_LIBRARY.md DL-019 entry (lines 1360–1395)",
+        "REVISION_HISTORY.md lines 7008–7054 (5-agent governance consolidation)"
+      ]
+    },
+    {
+      "id": "F-02",
+      "name": "Brace-Matcher Undercount (DL-020)",
+      "severity": "High — caused false negatives on DL-008 detection (336 items missed), phantom DL-026 counts on clean files (75/63/47 discrepancy), and false TIER 1 classification of P1-AD-075 as 'missing content block'",
+      "what_happened": "The ExplanationValidator.extractQuestions() method used a naive bracket counter (depth increment/decrement on {/}) without tracking whether the parser was inside a JSON string value. Brackets inside string values caused the counter to misidentify array boundaries, producing truncated/corrupted question objects and silent false negatives.",
+      "root_cause": "No string-awareness in the parser (no inString/stringChar/escape state machine). The do...while loop tracked only { and } with no awareness of JSON string literals. Nested braces inside Choices.{A,B,C,D} objects were misinterpreted as object boundaries.",
+      "detection": "197-vs-336 counting discrepancy on DL-008 scan — the validator's brace-matcher dropped corrupted objects. 75/63/47 discrepancy on Pack D Section D — three different runs of the same broken tool produced three different counts on a file that was already clean.",
+      "lesson": "Any parser operating on JSON source files must be string-aware. Compare parser-reported item counts against grep -c '\"QuestionID\"' as a standing sanity check. Never accept totals-only reports without QID lists.",
+      "prevented_in_future": true,
+      "prevention": "String-aware parser applied to extractQuestions() and extractCases(). DL-029 8 Permanent Prevention Rules mandate Function-constructor parse ONLY for all defect scans, string-aware brace-matchers for all parsers, and two independent scans must converge on identical count before any remediation.",
+      "evidence_refs": [
+        "DEFECT_LIBRARY.md DL-020 entry (lines 1408–1439)",
+        "REVISION_HISTORY.md lines 8027–8091 (75/63/47 phantom count root cause)",
+        "REVISION_HISTORY.md lines 8929–8953 (AD-075 false TIER 1 root cause)"
+      ]
+    },
+    {
+      "id": "F-03",
+      "name": "Regex Block-Scan DL-008 False Positives (DL-029)",
+      "severity": "Critical — caused prior sessions to report 885+ Certified DL-008 where actual count was near-zero. S800's three P0 blockers (67 Certified DL-008, FD-045 missing, FD-075 missing) were all DL-029 artifacts. Nearly launched S801 as a massive false-alarm DL-008 remediation that would have modified hundreds of clean items.",
+      "what_happened": "CorrectChoice appears BEFORE QuestionID in all 5 pack file JSON objects (universal, not Pack-B-only). Regex block-window scanners that search forward from QuestionID systematically capture the NEXT item's CorrectChoice, producing a ~75% false-positive rate. Session 700 reported 341 Pack D DL-008; actual was ~20. Session 800 reported 67 Certified DL-008; actual was 0. SESSION_STATUS_2026-07-24 reported 10; actual was 20.",
+      "root_cause": "Scan methodology assumed CorrectChoice follows QuestionID (as in most JSON conventions). All 5 packs use CC-before-QID ordering. Forward-scan never verified CC position in source file before running. Totals-only reports accepted without QID-list verification per AGENTS.md §5.",
+      "detection": "S802 governance correction compared Function-constructor parse results (within-object CC extraction) against prior forward-scan reports. All 67 Certified DL-008 claims refuted. FD-045 and FD-075 structurally verified as complete.",
+      "lesson": "Never forward-scan for CorrectChoice from QuestionID. Verify CC position in source file before any scan. Function-constructor parse ONLY for all defect scans (within-object CC extraction). Two independent methods must converge. Reject totals-only reports without QID lists.",
+      "prevented_in_future": true,
+      "prevention": "DL-029 8 Permanent Prevention Rules codified: (1) Function-constructor parse ONLY, (2) never forward-scan CC from QID, (3) verify CC position first, (4) self-verify every scan against two methods, (5) all scan scripts must be CC-position-aware, (6) reject totals-only reports, (7) string-aware brace-matchers required, (8) two independent scans must converge.",
+      "evidence_refs": [
+        "DEFECT_LIBRARY.md DL-029 entry (lines 2272–2321)",
+        "REVISION_HISTORY.md S802 entry (lines 16647–16668, 8 Permanent Prevention Rules)",
+        "REVISION_HISTORY.md lines 16145 (S801 false alarm root cause)",
+        "SESSION723_HISTORICAL_TRENDS.json lines 279–280 (DL-008 trajectory: 67 claimed → 0 actual)"
+      ]
+    },
+    {
+      "id": "F-04",
+      "name": "Hash Drift & Governance Alarm Fatigue",
+      "severity": "Medium — false alarms consumed agent resources. Hash drift from authorized metadata changes (CognitiveLevel/DifficultyScore field additions) triggered hash-mismatch alerts across S719, S720, S722. May file hash drift observed in S707/S514 (not caused by session changes). scored_cases.js hash drift in S307, S501, S537 from line-ending conversion.",
+      "what_happened": "S63 baselines captured pre-700 pack file hashes. All 700-series sessions modified only CognitiveLevel and DifficultyScore fields (metadata-only). These legitimate changes triggered hash-mismatch blockers at session startup. Governance gates confused authorized metadata drift with unauthorized content contamination. May files (may-core.js, may-learner-state.js) showed hash drift from external modifications. scored_cases.js showed hash drift from line-ending conversion — binary content was identical.",
+      "root_cause": "Hash-based integrity checks treat all changes as equivalent — no distinction between authorized metadata edits and unauthorized content changes. Pre-700 baselines became stale as the 700-series program executed its design (metadata-only field additions). May files were modified outside the session governance framework.",
+      "lesson": "Hash checks must distinguish authorized metadata-only drift from unauthorized content drift. T0 baselines must be refreshed at the start of each governance program, not carried forward from pre-program snapshots. May files should be explicitly excluded from pack-level hash verification.",
+      "prevented_in_future": true,
+      "prevention": "CURRENT_BASELINES.md updated at S530 T0 snapshot capturing post-700 state. 700-series pre-flight protocol now verifies hashes against CURRENT_BASELINES.md (not S63). Pack file hash drift is pre-authorized for metadata-only sessions. Content/answer-key/scoring drift is separately verified via grep on CorrectChoice values, grep on question_state, and app.js hash (5A4338C6... stable across all 700-series).",
+      "evidence_refs": [
+        "REVISION_HISTORY.md S802 entry (hashes section)",
+        "SESSION723_HISTORICAL_TRENDS.json lines 268–274 (hash stability metrics)",
+        "REVISION_HISTORY.md lines 9527 (index_updated.html hash drift attributed to external modification)",
+        "REVISION_HISTORY.md line 16623 (scored_cases.js hash drift from line-ending conversion)"
+      ]
+    }
+  ],
+
+  "successes": [
+    {
+      "id": "S-01",
+      "name": "Governance Guard Enforcement",
+      "what_worked": "5-rule automated enforcement active as .opencode/plugins/governance-guard.js. Rule 2 (BLOCK) prevented certification of any item with non-empty ExplanationWrong[CorrectChoice]. Rule 3 (BLOCK) prevented hand-editing of MASTER_QUESTION_REGISTRY.md. Rule 5 (BLOCK) capped write batches at 30 items. Rule 1 (WARN) flagged question_state changes without REVISION_HISTORY.md updates. Rule 4 (WARN) flagged answer-key changes without recomputed/verified note.",
+      "impact": "Zero items certified with DL-008 after guard activation. 20/20 PASS across all 700-series sessions (S718–S723). Guard test suite: 20 tests, 0 fails. No batch-size violations across all 700-series write operations. Enabled the entire 700-series program to operate with confidence that structural governance was continuously enforced — not a one-time gate.",
+      "reusable": true,
+      "evidence_refs": [
+        "AGENTS.md §1 (plugin registration)",
+        "REVISION_HISTORY.md S718–S723 governance attestation entries (all show 20/20 PASS)"
+      ]
+    },
+    {
+      "id": "S-02",
+      "name": "Boundary-Aware Object Parsing (Function Constructor)",
+      "what_worked": "Function constructor parse replaced regex block-window scanning for all defect detection. CorrectChoice extracted from the same enclosing JSON object as ExplanationWrong fields — eliminating the forward-scan CC-offset that caused DL-029 false positives. String-aware brace-matcher replaced naive counter. QuestionID-to-next-QuestionID boundary windowing replaced fixed-window regex.",
+      "impact": "100% accurate QID extraction. Zero DL-029 artifacts. All 2,500 items parseable across all 5 packs. Within-object verification became the authoritative methodology for S506–S708 certification audits. Enabled the S802 governance correction that refuted 67 Certified DL-008 as DL-029 artifacts.",
+      "reusable": true,
+      "evidence_refs": [
+        "DEFECT_LIBRARY.md DL-029 entry lines 2316–2321 (CC-position-aware methodology)",
+        "REVISION_HISTORY.md S802 entry lines 16667–16668 (8 Permanent Prevention Rules)"
+      ]
+    },
+    {
+      "id": "S-03",
+      "name": "Multi-Agent Orchestration for Structural Remediation",
+      "what_worked": "6-agent DL-008/DL-013 remediation (2026-07-23): 539 DL-008 occurrences cleared, 1,736 DL-013 boilerplate fields rewritten, DL-017 backtick corruption fixed, DL-021 5 Certified items remediated, all within 30-item batch caps. 26-agent S722A definitive run (2026-07-26): 83 items modified across 5 packs, 0 content/answer/scoring/certification drift. 26-agent S537 ENHANCED_CASE_BASE closure: 42 explanations expanded, 49 state transitions, 6 metadata defects fixed.",
+      "impact": "Complex governance programs executed without content contamination. Agent maturity grew: 14(S719)→16(S720)→13(S721, read-only)→17(S722)→26(S722A definitive). Proven pattern: census agent → classification agent → execution agent → adjudication board → verification agent → post-flight governance agent.",
+      "reusable": true,
+      "evidence_refs": [
+        "REVISION_HISTORY.md S722A entry (26-agent summary table)",
+        "DEFECT_LIBRARY.md DL-008 entry resolution timeline",
+        "SESSION723_HISTORICAL_TRENDS.json line 299 (agent maturity trajectory)"
+      ]
+    },
+    {
+      "id": "S-04",
+      "name": "DCS v1.1 Adoption & Calibration Governance",
+      "what_worked": "DIFFICULTY_CALIBRATION_STANDARD.md v1.1 adopted as authoritative 677-line standard with 4 boundary decision trees, forbidden trigger catalog, and reviewer protocols. 6 Validation Board findings resolved before adoption. S721A proof-of-execution pilot validated batch calibration at section scale. S722 reliability certification at 95.0% DCS-S722A agreement. S721 identified TEMPLATE_POSITION as root cause of 46.5% of all misalignments.",
+      "impact": "67 template-inflated Evaluate items eliminated (0 genuine Evaluate pool-wide). Difficulty×CognitiveLevel alignment improved from 71% reliability (S718 baseline) to 95.0% (S722A). DCS §3 compliance improved from 89.3% → 92.6%. Structural content gaps quantified — Analyze 0.4% vs 25% target, Difficult 3.5% vs 25% target — enabling informed maintenance-mode planning.",
+      "reusable": true,
+      "evidence_refs": [
+        "SESSION723_HISTORICAL_TRENDS.json lines 315–324 (DCS adoption timeline)",
+        "REVISION_HISTORY.md S721 entry (DCS v1.1 ADOPTED)",
+        "REVISION_HISTORY.md S722A entry (95.0% reliability)"
+      ]
+    },
+    {
+      "id": "S-05",
+      "name": "800-Series Governance Correction Lane",
+      "what_worked": "Read-only governance correction lane that refuted 3 P0 S800 blockers (67 Certified DL-008, FD-045 missing, FD-075 missing) as DL-029 forward-scan artifacts before any write operation was attempted. Saved 4 remediation sessions (S801, S801b, S811, S812) and 3 certification verification sessions (S804–S807). Compressed 19-session roadmap to 12 sessions.",
+      "impact": "Prevented false-alarm DL-008 remediation on hundreds of clean items. Corrected certified count from 2,031 → 2,181 (+150 Pack C/D undercount). Established 8 Permanent Prevention Rules for all future scans. S803 cleared for launch — 112 items, 9 batches, net +1 Certified.",
+      "reusable": true,
+      "evidence_refs": [
+        "REVISION_HISTORY.md S802 entry lines 16647–16668",
+        "SESSION723_HISTORICAL_TRENDS.json lines 256–257 (2,031→2,181 governance correction)"
+      ]
+    }
+  ],
+
+  "methodology_improvements": [
+    {
+      "id": "M-01",
+      "name": "T0 → Tmid → Tend Checkpoint Sequence",
+      "before": "Sessions verified state at start only. No mid-session drift detection. No post-flight reconciliation. Hash mismatches caught only at session close.",
+      "after": "Three-stage checkpoint: T0 (session start — all 13 runtime hashes verified), Tmid (~30 min or after 2+ agents — Pack D CAPA checks, app.js hash), Tend (session close — all 13 hashes vs T0, G1–G5 reconciliation if drift detected).",
+      "reliability_gain": "Drift detected immediately at Tmid rather than at session close. Enabled concurrent-lane protection: S707 May file drift detected mid-session, attributed to external modification, not session-caused.",
+      "evidence_refs": [
+        "AGENTS.md §13.1 (T0→Tmid→Tend sequence)",
+        "REVISION_HISTORY.md S722A pre-flight/post-flight entries",
+        "SESSION723_HISTORICAL_TRENDS.json line 222 (T0 verified)"
+      ]
+    },
+    {
+      "id": "M-02",
+      "name": "Backup-Before-Write Protocol",
+      "before": "Some sessions wrote to pack files without backups. Concurrent-write data loss (DL-019) was the direct consequence — 432 overwritten items could not be restored from pre-write snapshot.",
+      "after": "AGENTS.md §3: Hard rule. Before any edit/write against any pack file, copy to timestamped backup, confirm exists and non-zero, then proceed. Scored case files also covered.",
+      "reliability_gain": "Zero unrecoverable writes since protocol adoption. S722A created 8 backups. S537 created 1 backup. All verified non-zero. Every 700-series write operation has a rollback path.",
+      "evidence_refs": [
+        "AGENTS.md §3 (Backup Protocol)",
+        "DEFECT_LIBRARY.md DL-019 entry (lesson: every write must be preceded by backup)"
+      ]
+    },
+    {
+      "id": "M-03",
+      "name": "Object-Bounded Verification (Within-Object CC Extraction)",
+      "before": "Regex block-window scanning: extract QuestionID, search forward for CorrectChoice, evaluate EW[CC]. Produced ~75% false-positive rate because CC appears before QID in all 5 pack files (DL-029). Relied on brace-counter without string-awareness (DL-020).",
+      "after": "Function constructor parse extracts complete question object. CorrectChoice read from the same enclosing JSON object as ExplanationWrong fields. Within-object methodology eliminates all cross-object contamination. G-NEW-3 enforcement: any scan tool must extract CC from the same enclosing object as the EW fields being evaluated.",
+      "reliability_gain": "100% accurate DL-008 detection. Zero cross-object false positives. Enabled S802 refutation of 67 Certified DL-008 claims. Enabled S701 verification that Pack D DL-008 was 20 (not 342).",
+      "evidence_refs": [
+        "DEFECT_LIBRARY.md DL-029 entry (8 Permanent Prevention Rules)",
+        "REVISION_HISTORY.md S802 entry lines 16667–16668",
+        "QUESTION_METADATA_STANDARD.md §9.4.2 (G-NEW-3 within-object rule)"
+      ]
+    },
+    {
+      "id": "M-04",
+      "name": "Cross-Verification of Self-Reported Claims (AGENTS.md §5)",
+      "before": "Agent self-reports accepted at face value. '0 remaining DL-008' claimed by 6-agent orchestration — but 175 items escaped in Pack C (DL-019). '197 cleared Pack C' claimed but 336 remained (DL-020 undercount). '75/63/47 DL-026' — three different counts from same broken tool accepted. '67 Certified DL-008' — DL-029 artifact accepted as P0 blocker.",
+      "after": "AGENTS.md §5: Never accept summary reports at face value. Every self-reported claim must be cross-checked against raw file/line evidence. Specific cross-checks defined for certification complete, DL-008 violations, X items processed, validator pass, and zero errors. Totals-only reports without QID lists rejected. Two independent scans must converge before any remediation.",
+      "reliability_gain": "S802 governance correction caught all 3 P0 S800 blockers as DL-029 artifacts by verifying against raw file evidence. Post-S722A verification: all 67 Certified DL-008 individually verified CLEAN via Function constructor parse. 2,181 Certified confirmed by 7 independent sources + raw grep — zero variance.",
+      "evidence_refs": [
+        "AGENTS.md §5 (Dual Verification — Cross-Check All Self-Reported Claims)",
+        "AGENTS.md §6 (Item-Count Volatility — Hard Stop)",
+        "REVISION_HISTORY.md S802 post-flight verification entries"
+      ]
+    },
+    {
+      "id": "M-05",
+      "name": "CC-Position-Aware Scan Scripts (DL-029 Prevention Rule 3)",
+      "before": "All scan scripts assumed CorrectChoice follows QuestionID in JSON object ordering. Zero scripts verified CC position in source file before running. Scripts were pack-agnostic — same tool used identically across all 5 packs despite different field orders.",
+      "after": "Before any scan, verify CC position in source file for the specific pack being scanned. If CC precedes QID, forward-scan is forbidden. Function constructor parse is the universal fallback. S701 Pack D verification confirmed CC-before-QID positioning and switched to within-object extraction.",
+      "reliability_gain": "Zero false positives from CC-offset in all post-S701 sessions. S802 confirmed CC-before-QID is universal across all 5 packs. 8 Permanent Prevention Rules codified.",
+      "evidence_refs": [
+        "DEFECT_LIBRARY.md DL-029 entry (detection rule)",
+        "REVISION_HISTORY.md S802 entry line 16668 (Prevention Rule 3)"
+      ]
+    },
+    {
+      "id": "M-06",
+      "name": "Concurrent-Lane Protection Documentation",
+      "before": "No tracking of which packs each session modified. Sessions operated in parallel on the same files with no coordination. DL-019 was the direct result.",
+      "after": "Every session's REVISION_HISTORY.md entry explicitly lists Files Changed and Files NOT Changed. 700-series entries track which packs were modified by which agent and wave. S537 and S722A entries show all packs' protection status. This enables cross-session reconciliation and prevents concurrent writes by making modification scope transparent.",
+      "reliability_gain": "Zero concurrent-write incidents in 700-series. Concurrent-lane protection verified at S722A post-flight: Pack B/C/D/E/app.js hashes all unchanged. May file hash drift attributed to external modification, not session-caused.",
+      "evidence_refs": [
+        "REVISION_HISTORY.md S722A entry (Files NOT Changed section)",
+        "REVISION_HISTORY.md S537 entry (Files NOT Changed section)"
+      ]
+    }
+  ],
+
+  "key_decisions": [
+    {
+      "id": "KD-01",
+      "decision": "Read-Only by Default (AGENTS.md §2)",
+      "when": "2026-07-22 — Codified in AGENTS.md v1.0",
+      "rationale": "Prevents unauthorized writes in audit sessions. All exploratory and audit tasks operate read-only unless user explicitly authorizes writes with 'apply the fix,' 'make the change,' 'execute the write' or equivalent.",
+      "outcome": "Successful — no audit-session write accidents across S718–S723 (read-only governance audits) and S800–S802 (governance correction lane). Enabled the 800-series correction lane that refuted 3 P0 blockers without modifying a single pack file.",
+      "evidence_refs": [
+        "AGENTS.md §2 (Read-Only by Default)"
+      ]
+    },
+    {
+      "id": "KD-02",
+      "decision": "30-Item Batch Cap (governance-guard Rule 5 BLOCK)",
+      "when": "2026-07-22 — Activated with governance guard plugin",
+      "rationale": "Prevented bulk write accidents. Any change-set exceeding 30 question objects requires BLOCK-AUTHORIZED marker. This forces batch-level verification (backup, write, verify, confirm) rather than massive-blind-bulk operations.",
+      "outcome": "Successful — S722A executed 83 items across 7 batches (all ≤28). S537 executed 49 state transitions in batches. DL-008 remediation executed in batches of ≤30 across all sessions. Zero batch-size violations. Enabled granular verification at batch boundaries.",
+      "evidence_refs": [
+        "AGENTS.md §1 (Rule 5: Max 30 question objects per change-set)",
+        "REVISION_HISTORY.md S722A governance attestation (batch cap ≤28 respected)"
+      ]
+    },
+    {
+      "id": "KD-03",
+      "decision": "Certified-Only Delivery Pool (CAQS v1.0 §1.7.1)",
+      "when": "2026-07-22 — Codified in CAQS v1.0",
+      "rationale": "Runtime delivery only pulls from strictly 'Certified' items. All other states (Unprocessed, In Audit, Editorial Queue, Archived) excluded. This gates learner safety on the HIGH-confidence AI verification + user approval certification process.",
+      "outcome": "Successful — 2,181 Certified items in learner pool (87.2% of 2,500). Enables confident assertion that learner pool is free of known-defective items. All DL-008/DL-013/DL-026 defects are in non-Certified items or remediated before certification. DL-030 answer-key errors (5 items) were all pre-700 and fixed before 700-series.",
+      "evidence_refs": [
+        "CAQS_v1.0.md §1.7.1 (Certification State Governance)",
+        "AGENTS.md §7 (Live-Simulation Delivery Pool)",
+        "SESSION723_HISTORICAL_TRENDS.json lines 260 (2,181 stable, zero drift)"
+      ]
+    },
+    {
+      "id": "KD-04",
+      "decision": "DCS v1.1 Over Ad-Hoc Difficulty Calibration",
+      "when": "2026-07-26 — S721 ADOPTED; S722A PRODUCTION WITH AMENDMENTS",
+      "rationale": "Replacement of template-based difficulty labels (DL-031 systematic inflation, DL-032 uniform Moderate in case bank) with a 677-line rule-based standard. 4 boundary decision trees replace position-in-rotation-group assignment. Forbidden trigger catalog identifies 'most appropriate'/'best describes' as template artifacts. TEMPLATE_POSITION identified as 46.5% root cause of all misalignments.",
+      "outcome": "Successful — 95.0% DCS-S722A agreement (exceeds 73.7% target). 67 template-inflated Evaluate items eliminated (0 genuine). Difficulty×CognitiveLevel alignment governed by objective rules rather than authoring-pipeline position. Enabled quantitative identification of structural content gaps (Analyze 0.4% vs 25% target, Evaluate 0% vs 15% target).",
+      "evidence_refs": [
+        "SESSION723_HISTORICAL_TRENDS.json lines 315–324 (DCS adoption timeline)",
+        "DEFECT_LIBRARY.md DL-031 (systematic difficulty inflation)",
+        "DEFECT_LIBRARY.md DL-032 (uniform Moderate in case bank)"
+      ]
+    },
+    {
+      "id": "KD-05",
+      "decision": "700-Series Metadata-Only Design",
+      "when": "2026-07-26 — S718 inception",
+      "rationale": "All 700-series work (CognitiveLevel field addition, Difficulty×CognitiveLevel recalibration, DCS v1.1 adoption) was designed to modify only metadata fields — no stems, choices, prompts, exhibits, CorrectChoice values, question_state transitions, or scoring logic. This by-design constraint eliminated the risk of content contamination during calibration.",
+      "outcome": "Successful — 2,425 CognitiveLevel fields added (S718) with zero content/answer/scoring/certification drift. 542 CL/DS adjustments (S719) preserved all content. 83 items in S722A definitive run — metadata-only, 0 drift. Certified pool frozen at 2,181 across all 700-series sessions. 0 question_state changes.",
+      "evidence_refs": [
+        "SESSION723_HISTORICAL_TRANS.json lines 259–270 (certified pool stable, 0 state drift)",
+        "REVISION_HISTORY.md S722A governance attestation (metadata-only, 0 content/answer/scoring/certification drift)"
+      ]
+    },
+    {
+      "id": "KD-06",
+      "decision": "AGENTS.md §12 — No Staged Findings (Log Before Session Close)",
+      "when": "2026-07-23 — Codified after DL-019 discovery",
+      "rationale": "DL-019 (concurrent-write data loss) and DL-020 (validator brace-matcher undercount) were discovered but stored only in session reports — the defect library had no entries until a later session wrote them. The staged-findings pattern meant defects discovered in one session were invisible to the next.",
+      "outcome": "Successful — Every session now produces minimum a REVISION_HISTORY.md entry as closing action. New defects logged to DEFECT_LIBRARY.md with next available DL-ID. Tracked notes enable cross-session tracking of partial states (e.g., 'Pack B Sections A/D certification-ready once metadata is fixed'). Zero 'lost discovery' incidents in 700-series.",
+      "evidence_refs": [
+        "AGENTS.md §12 (No Staged Findings)",
+        "DEFECT_LIBRARY.md DL-019 entry (motivating example)"
+      ]
+    },
+    {
+      "id": "KD-07",
+      "decision": "800-Series Governance Correction Lane (Read-Only)",
+      "when": "2026-07-26 — S800 refutation, S801 re-scoped, S802 consolidated",
+      "rationale": "S800 identified three mandatory pre-S801 prerequisites (67 Certified DL-008, FD-045, FD-075). Rather than launching S801 as a massive write-heavy DL-008 remediation, a read-only governance correction lane was established to verify the claims before any writes. This single decision saved 7 sessions (4 remediation + 3 verification).",
+      "outcome": "Successful — All three P0 blockers refuted as DL-029 forward-scan artifacts. Certified count corrected from 2,031→2,181. 8 Permanent Prevention Rules codified. Roadmap compressed from 19→12 sessions. S803 cleared for execution with verified prerequisites.",
+      "evidence_refs": [
+        "REVISION_HISTORY.md S802 entry (roadmap compression)",
+        "SESSION723_HISTORICAL_TRANS.json lines 279–280 (DL-008 trajectory)"
+      ]
+    }
+  ],
+
+  "pattern_analysis": {
+    "recurring_root_causes": [
+      "Template-based bulk authoring (5-item rotation groups) — produced DL-012 clones, DL-013 boilerplate, DL-015/016 metadata shifts, DL-025/026 empty distractor slots, DL-031 difficulty inflation, DL-032 uniform labeling. Single pipeline produced 10+ defect classes.",
+      "Scan methodology defects — without string-awareness, CC-position-awareness, or within-object verification, scans produced false positives (DL-029 ~75% FP rate), false negatives (DL-020 undercount), phantom counts (75/63/47 on clean file), and false TIER 1 classifications (AD-075).",
+      "Absence of coordination mechanisms — concurrent-write data loss (DL-019), no file-lock protocol, no session registry, no formal session-isolation enforcement.",
+      "Totals-only reporting — accepted without QID lists, making cross-verification impossible and enabling counting discrepancies to persist across sessions."
+    ],
+    "most_expensive_mistakes": [
+      "DL-029 forward-scan false positives were the single most expensive error pattern — caused S800's 3 P0 blockers, triggered a near-miss massive false-alarm DL-008 remediation, consumed 26 agents across S800-S802 to refute, and delayed S803 by multiple sessions.",
+      "DL-019 concurrent-write data loss necessitated full re-remediation of 432 items (16 batches) that had already been correctly fixed.",
+      "Template-based bulk authoring created structural defects (DL-012, DL-013, DL-025, DL-026) whose remediation has consumed the largest share of agent-hours across all governance programs."
+    ],
+    "design_decisions_that_prevented_catastrophe": [
+      "Read-only by default — prevented audit-session writes during the 800-series governance correction lane.",
+      "30-item batch cap — forced granular verification; a 500-item blind bulk write under DL-029 false positives would have corrupted hundreds of clean items.",
+      "Certified-only delivery pool — ensured that despite massive undercertification in Packs C/D and numerous open defects, zero defective items reached learners.",
+      "Governance guard automated enforcement — running continuously across all sessions rather than as a manual pre-release gate."
+    ]
+  },
+
+  "verdict": "LESSONS_CAPTURED",
+  "archival_note": "This audit covers the full governance program lifecycle from pre-700 baseline (2026-07-23, 1,080 Certified) through S723 governance closure (2026-07-26, 2,181 Certified, DCS v1.1 production-ready). All findings are cross-referenced to source evidence per AGENTS.md §5. This document should be read by any future governance program as a post-mortem on the 700-series calibration methodology.",
+  "signed": "Agent R — S723 Governance Closure Program, 2026-07-26"
+}

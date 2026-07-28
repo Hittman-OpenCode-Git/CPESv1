@@ -1,0 +1,53 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "domain": "F — Technology & Analytics",
+  "baseline": {
+    "items": 431,
+    "certified": 281,
+    "uncertified": 150,
+    "p0Count": 8,
+    "avgUiqs": 62.4,
+    "ewDebtCount": 130
+  },
+  "forecast": {
+    "totalSessions": 9,
+    "phases": [
+      {
+        "name": "Phase 1: Bulk certification + EW",
+        "sessions": 7,
+        "items": 150,
+        "uiqsGain": "+12.0",
+        "certGain": "+150"
+      },
+      {
+        "name": "Phase 2: EW gap closure (certified)",
+        "sessions": 2,
+        "items": 60,
+        "uiqsGain": "+2.5"
+      },
+      {
+        "name": "Phase 3: Quality sweep",
+        "sessions": 1,
+        "items": 281,
+        "uiqsGain": "+1.0"
+      }
+    ],
+    "cumulativeImpact": {
+      "after7Sessions": {
+        "certified": 390,
+        "uiqs": "~72",
+        "ewComplete": "~140 items"
+      },
+      "after9Sessions": {
+        "certified": 431,
+        "uiqs": "~77.9 (B+)",
+        "ewComplete": "~200 items",
+        "p0Resolved": 8
+      }
+    }
+  },
+  "dependencies": [
+    "Domain E certification (sequential — E precedes F)",
+    "800-series methodology"
+  ]
+}

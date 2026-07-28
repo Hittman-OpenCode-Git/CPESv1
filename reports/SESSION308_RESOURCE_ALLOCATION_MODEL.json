@@ -1,0 +1,99 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "tracks": {
+    "300-series": {
+      "remaining": 3,
+      "allocationPct": 5,
+      "priority": "IMMEDIATE — closing sessions",
+      "note": "S308-S310 close the analytics program"
+    },
+    "500-series": {
+      "remaining": 7,
+      "allocationPct": 15,
+      "priority": "MEDIUM — case certification",
+      "note": "ENHANCED_CASE_BASE remaining + MIGRATED_BASE_D"
+    },
+    "700-series": {
+      "remaining": 2,
+      "allocationPct": 3,
+      "priority": "LOW — governance closure only",
+      "note": "Blocked on DL-008. Runs late in the program."
+    },
+    "800-series": {
+      "remaining": 19,
+      "allocationPct": 45,
+      "priority": "HIGHEST — certification + EW",
+      "note": "Waves 1-5 cover DL-008, structural, certification, modernization"
+    },
+    "EW standalone": {
+      "remaining": 14,
+      "allocationPct": 25,
+      "priority": "HIGH — instructional",
+      "note": "Case-bank EW + MCQ EW gap closure"
+    },
+    "Governance": {
+      "remaining": 3,
+      "allocationPct": 7,
+      "priority": "MANDATORY",
+      "note": "Attestation, REVISION_HISTORY, baselines"
+    }
+  },
+  "optimizedAllocation": {
+    "phase1_Solo": {
+      "tracks": [
+        "300-series (S308-S310)"
+      ],
+      "sessions": 3,
+      "note": "Close analytics. No file conflicts."
+    },
+    "phase2_Solo": {
+      "tracks": [
+        "800-series Wave 1 (DL-008)"
+      ],
+      "sessions": 3,
+      "note": "Highest-priority work. Solo to avoid concurrent pack writes."
+    },
+    "phase3_Parallel": {
+      "tracks": [
+        "800-series Wave 2",
+        "500-series ENHANCED cases"
+      ],
+      "sessions": 5,
+      "note": "Disjoint file scopes: pack_*.js vs scored_cases.js"
+    },
+    "phase4_Parallel": {
+      "tracks": [
+        "800-series Wave 3 (E/F cert)",
+        "EW Phase 1 (case-bank)"
+      ],
+      "sessions": 8,
+      "note": "E/F cert touches pack files; case-bank EW touches scored_cases*"
+    },
+    "phase5_Parallel": {
+      "tracks": [
+        "800-series Wave 4 (Pack A)",
+        "EW Phase 2 (MCQ)"
+      ],
+      "sessions": 3,
+      "note": "Pack A only + remaining MCQ EW"
+    },
+    "phase6_Parallel": {
+      "tracks": [
+        "800-series Wave 5 (calibration)",
+        "500-series MIGRATED_BASE_D",
+        "EW Phase 3"
+      ],
+      "sessions": 5,
+      "note": "Final sweep — all tracks can close"
+    },
+    "phase7_Closeout": {
+      "tracks": [
+        "700-series closure",
+        "Governance attestation"
+      ],
+      "sessions": 3,
+      "note": "Final governance"
+    }
+  },
+  "totalOptimizedSessions": 30
+}

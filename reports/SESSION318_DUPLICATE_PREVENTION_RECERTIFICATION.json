@@ -1,0 +1,90 @@
+{
+  "title": "SESSION318 — DUPLICATE PREVENTION RE-CERTIFICATION (Gate 0)",
+  "session": "S318",
+  "agent": "AA",
+  "generated": "2026-07-27",
+  "supersedes": "registry/DUPLICATE_PREVENTION_REPORT.json (S314)",
+  "methodology": "Cross-referenced all 30 inserted replacement QIDs against the full MASTER_QUESTION_REGISTRY.md (2995 entries), domain_e_registry.md (410 entries), and all five pack source files (pack_a through pack_e). Verified that the P1-E-Rxx QID namespace does not collide with any existing P1-E-nnn, P1-EC-nnn, P1-ED-nnn, P1E-E-nnn, P1B-E-nnn, or case-bank QIDs.",
+
+  "certification": {
+    "gate0Status": "PASS — RECERTIFIED",
+    "scope": "All 30 inserted replacement QIDs verified collision-free against the full 2995-entry question corpus",
+    "effectiveDate": "2026-07-27",
+    "validThrough": "Until next insertion (S319 Wave 2b)"
+  },
+
+  "insertedReplacementQIDs": {
+    "totalInserted": 30,
+    "wave1": {
+      "count": 10,
+      "qids": [
+        "P1-E-R01", "P1-E-R02", "P1-E-R03", "P1-E-R04", "P1-E-R05",
+        "P1-E-R06", "P1-E-R07", "P1-E-R08", "P1-E-R09", "P1-E-R10"
+      ],
+      "status": "INSERTED — pack_e_corrected.js (Wave 1, S314)",
+      "collisionCheck": "CLEAN — previously certified S314, re-verified S318"
+    },
+    "wave2": {
+      "count": 10,
+      "qids": [
+        "P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R16", "P1-E-R17",
+        "P1-E-R19", "P1-E-R20", "P1-E-R30", "P1-E-R31", "P1-E-R32"
+      ],
+      "status": "INSERTED — pack_e_corrected.js (Wave 2, S316)",
+      "collisionCheck": "CLEAN — previously certified S314 (as wave2Targets), re-verified S318"
+    },
+    "wave3": {
+      "count": 10,
+      "qids": [
+        "P1-E-R26", "P1-E-R27", "P1-E-R29",
+        "P1-E-R34", "P1-E-R35", "P1-E-R36", "P1-E-R37", "P1-E-R38", "P1-E-R39", "P1-E-R40"
+      ],
+      "status": "INSERTED — pack_e_corrected.js (Wave 3, S317)",
+      "collisionCheck": "CLEAN — first-time certified S318. Confirmed no collision against any existing QID in packs A–E or case banks."
+    }
+  },
+
+  "pendingReplacementQIDs": {
+    "totalPending": 10,
+    "wave2b": {
+      "count": 10,
+      "qids": [
+        "P1-E-R12", "P1-E-R13", "P1-E-R18",
+        "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25",
+        "P1-E-R28", "P1-E-R33"
+      ],
+      "status": "NOT YET INSERTED — deferred to S319",
+      "note": "These QIDs are present in pack_e_corrected.js but their content may be placeholder/stub. They will be re-certified at S319 insertion time."
+    }
+  },
+
+  "collisionVerificationDetail": {
+    "namespaceAnalysis": "All replacement QIDs use the P1-E-Rxx format. This namespace is distinct from:",
+    "nonCollidingNamespaces": [
+      "P1-E-nnn (001–084) — original Domain E pack_a items",
+      "P1-EC-nnn (001–075) — Domain E pack_c clone groups",
+      "P1-ED-nnn (001–075) — Domain E pack_d clone groups",
+      "P1E-E-nnn (001–075) — Domain E pack_e original items",
+      "P1B-E-nnn (076–150) — Domain E pack_b items",
+      "CBQ-E1-Qn, CBQ-E2-Qn, CBQ2-E1-Qn, CBQ2-E2-Qn, CBQ3-E1-Qn, CBQ3-E2-Qn, CBQ4-E1-Qn, CBQ4-E2-Qn, CBQ4-E3-Qn, CBQ5-E1-Qn, CBQ5-E2-Qn, CBQ5-E3-Qn — case bank QIDs",
+      "P1-A-nnn through P1-F-nnn — all other pack sections"
+    ],
+    "noCollisionConfirmed": true,
+    "scanDepth": "Full scan of MASTER_QUESTION_REGISTRY.md (2995 rows), all domain sub-registries, all pack sub-registries, and all five pack source files"
+  },
+
+  "topicOverlapAssessment": {
+    "note": "Topic overlap is expected and intentional — replacement items ARE designed to cover the same topics as the clone groups they replace. The duplicate prevention gate only concerns QID namespace collision, not topic overlap.",
+    "existingDomainEItems": 443,
+    "insertedReplacements": 30,
+    "pendingReplacements": 10,
+    "projectedTotalDomainE": "483 (after all 40 replacements registered)"
+  },
+
+  "workflowChain": {
+    "gate0": "DUPLICATE_PREVENTION_RECERTIFICATION → PASS",
+    "gate1": "Draft authoring — completed for Wave 1+2+3 (30 items)",
+    "gate2": "Pending — S319 registry rebuild",
+    "nextAction": "S319: Insert remaining 10 Wave 2b items, then run full atomic registry rebuild"
+  }
+}

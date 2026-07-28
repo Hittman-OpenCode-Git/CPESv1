@@ -1,0 +1,326 @@
+{
+  "simulation_metadata": {
+    "simulation_id": "SIM-OWNERSHIP-LOSS-001",
+    "simulation_type": "ownership_loss",
+    "scenario": "Responsibility assigned but never accepted under 4-step closure chain",
+    "gap_tested": "GAP-6 — CURRENT_BASELINES.md maintenance",
+    "assigned_to": "Baseline Maintainer (700-series Maintenance Mode)",
+    "session_executed": "S726",
+    "date": "2026-07-26",
+    "agent": "Agent L — Governance Simulation B",
+    "status": "READ-ONLY SIMULATION — NO WRITES TO PACK FILES OR GOVERNANCE DOCUMENTS",
+    "sources": [
+      "reports/SESSION726_SERIES_CLOSURE_GATE.md (Agent H — Closure Gate v1.0)",
+      "reports/SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json (Agent I — Ownership Acceptance Registry v1.0)",
+      "reports/SESSION725_POST700_GOVERNANCE_MODEL.md (Agent E — Post-700 Governance Model v1.0)",
+      "reports/SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (Agent O — Portfolio Stewardship Framework v1.0)"
+    ]
+  },
+
+  "scenario_walkthrough": {
+    "description": "GAP-6: CURRENT_BASELINES.md maintenance assigned to 'Baseline Maintainer (700-series)' during S725 governance hardening. The role-holder never explicitly accepts. A new session starts without awareness of the ownership gap. CURRENT_BASELINES.md goes stale over 3 sessions.",
+
+    "T0_assignment": {
+      "timepoint": "T0 — Responsibility Assigned",
+      "session_context": "S725 (Governance Hardening & Post-700 Ownership Transition)",
+      "event": "Agent D's Ownership Matrix v2.0 (row 1) assigns CURRENT_BASELINES.md maintenance to 'Baseline Maintainer (700-series Maintenance Mode)'. Agent O's Stewardship Framework §4.7 documents: (1) Baseline Maintainer acknowledges ownership, (2) CURRENT_BASELINES.md §3 phantom DL-008 entries removed, (3) all 13 SHA-256 hashes re-verified, (4) hash recapture automated, (5) baseline refresh cadence enforced after any ≥3-file write session. Agent E's Post-700 Governance Model §5.3 lists retroactive acceptance required from 'Baseline Maintainer (700-series maintenance mode)'. Agent I's Ownership Acceptance Registry records GAP-6 as: acceptance_status = 'PENDING', accepted_by = null, accepted_date = null, acceptance_evidence = null, blocking = true, deadline = 'S726 T0'.",
+      "control_status": {
+        "transfer_complete": true,
+        "acceptance_complete": false,
+        "approval_complete": false,
+        "close_complete": false
+      }
+    },
+
+    "T1_silent_role": {
+      "timepoint": "T1 — Role Silent, No Acceptance Recorded",
+      "session_context": "Late S725 / early S726",
+      "event": "The 'Baseline Maintainer' role exists only as a designation in S725 artifacts. No agent has stepped forward with an explicit 'I accept responsibility for CURRENT_BASELINES.md maintenance' statement. Agent I's Ownership Acceptance Registry confirms: acceptance_log = [], acceptance_summary.accepted = 0, acceptance_summary.pending = 6, all 6 gaps past S726 T0 deadline. The responsibility is 'assigned' but not 'accepted' — per Agent E §4.1, assignment alone is insufficient for closure. Per Agent O Stewardship Principle 2, unilateral assignment without acceptance is invalid — original owner retains ownership until acceptance confirmed. Per Agent I's registry governance_rule: TRANSFER → ACCEPTANCE → APPROVAL → CLOSE. No step may be skipped. ASSIGNED ≠ ACCEPTED.",
+      "control_status": {
+        "acceptance_recorded": false,
+        "agent_explicitly_accepted": false,
+        "governance_board_escalation_triggered": false,
+        "acceptance_log_entries": 0
+      }
+    },
+
+    "T2_new_session": {
+      "timepoint": "T2 — New Session Begins Without Awareness",
+      "session_context": "S726 or later session with new agents",
+      "event": "A new session begins. The governance agents present may not be the same as S725's agents. They execute the standard Session Startup Protocol (AGENTS.md §9) which includes: (1) read SESSION_STATUS, (2) read REVISION_HISTORY.md, (3) run Certified count grep, (4) cross-check open remediation proposals. The ownership gap is not part of any startup checklist. The agents run T0 hash verification against CURRENT_BASELINES.md and find that hashes match (the file hasn't been written to yet, so it's not yet stale). No one checks whether the CURRENT_BASELINES.md maintainer role has been accepted. No one knows that GAP-6 exists because the knowledge that CURRENT_BASELINES.md needs active maintenance is embedded only in S725 artifacts — not in any active agent's mandate or in the session startup checklist.",
+      "control_status": {
+        "session_startup_executed": true,
+        "ownership_gap_visible": false,
+        "baselines_document_stale": false,
+        "gap_in_startup_checklist": false,
+        "maintenance_trigger_check": false
+      }
+    },
+
+    "T3_stale_baselines": {
+      "timepoint": "T3 — CURRENT_BASELINES.md Goes Stale",
+      "session_context": "1-2 sessions after T2 (e.g., S727-S728)",
+      "event": "Pack files are written during subsequent sessions (certification waves, remediation batches, etc.). Five pack-file hashes drift from the S530 T0 baseline. The M5_BASELINE_REFRESH trigger fires — after any ≥3-file write session, CURRENT_BASELINES.md should be refreshed. But no one owns this responsibility. The Baseline Maintainer role was never accepted. No agent executes the refresh. §3's 67 phantom DL-008 entries remain (DL-029 forward-scan artifacts that S802 confirmed are 0 actual). The Certified pool snapshot in CURRENT_BASELINES.md drifts from reality. The governance guard status section rots. The document becomes increasingly unreliable with each passing session that writes to pack files without updating baselines.",
+      "control_status": {
+        "pack_files_written": true,
+        "m5_baseline_refresh_trigger_fired": true,
+        "m5_baseline_refresh_executed": false,
+        "phantom_dl008_entries": 67,
+        "stale_hash_count": 5,
+        "document_trust_eroded": true
+      }
+    },
+
+    "T4_auditor_discovery": {
+      "timepoint": "T4 — 3 Sessions Later, Auditor Finds Gap",
+      "session_context": "~S730",
+      "event": "A new auditor (Governance Auditor replacement or Rapid Pulse trigger) runs full T0 hash verification and finds 5 of 13 hashes don't match CURRENT_BASELINES.md. The auditor cross-references §3's 67 phantom DL-008 entries against a Function constructor parse and confirms 0 actual. The auditor investigates root cause: (1) CURRENT_BASELINES.md was not updated after ≥3-file write sessions, (2) the Baseline Maintainer role was never accepted, (3) the ownership gap propagated undetected across 3 sessions because no startup protocol checks ownership registry status. The auditor now must: (a) determine which hash mismatches are authorized vs. unauthorized, (b) remove 67 phantom DL-008 entries, (c) re-verify all 15 SHA-256 hashes against current disk files, (d) find or create a Baseline Maintainer to accept ownership, (e) log an ownership gap recurrence report. Estimated cost: 1 full governance session + retroactive acceptance + trust recalibration.",
+      "control_status": {
+        "gap_discovered": true,
+        "sessions_to_discovery": 3,
+        "unauthorized_hash_drift": 5,
+        "phantom_dl008_confirmed": 67,
+        "retroactive_remediation_required": true,
+        "estimated_remediation_sessions": 1,
+        "governance_trust_impact": "MODERATE — same class of gap as S723→S724, suggesting controls not yet effective"
+      }
+    }
+  },
+
+  "pre_s726_trajectory": {
+    "description": "What actually happened at S723→S724 with the 6 ownership gaps. This is the historical baseline against which S726 controls are measured.",
+    "root_cause": "S723 declared the 700-series Governance & Calibration Maturity Program CLOSED after completing TRANSFER (responsibilities catalogued) but skipped ACCEPTANCE and APPROVAL for all 26 transferred responsibilities.",
+    "workflow_skipped": "CLOSE → TRANSFER (creates ownership gaps) — prohibited per Agent E §2.3",
+    "events": [
+      {
+        "session": "S723",
+        "action": "Declared 700-series CLOSED. Produced Program Closure Report, Maintenance Framework v1.0, Portfolio Handoff. Catalogued 26 responsibilities. Did NOT produce Ownership Matrix, Acceptance Records, Approval Certificate, or Closure Attestation.",
+        "gap_count_at_close": 6,
+        "gaps_surface_immediately": false
+      },
+      {
+        "session": "S724",
+        "action": "Executed 26-agent (A-Z) governance maintenance activation. Discovered 6 ownership gaps: GAP-1 (May coaching layer), GAP-2 (300-series closeout trigger), GAP-3 (600-series deferral), GAP-4 (G-NEW enforcement), GAP-5 (DL-029 scan in governance guard), GAP-6 (CURRENT_BASELINES.md maintenance).",
+        "cost": "1 full discovery session (26 agents)"
+      },
+      {
+        "session": "S725",
+        "action": "Governance hardening: Agent E designed Post-700 Governance Model (acceptance protocol), Agent D produced Ownership Matrix v2.0, Agent O designed Portfolio Stewardship Framework (5 principles, 19-row Ownership Matrix, lane succession plans). 6 gap resolutions documented at design level. 0 acceptances completed.",
+        "cost": "1 full governance hardening session (5+ agents). 12 acceptance confirmations pending as of S725 Agent D's Ownership Matrix v2.0."
+      }
+    ],
+    "total_cost": {
+      "sessions": 2,
+      "agents_consumed": 31,
+      "trust_erosion": "Future series closures carry implicit assumption that CLOSE does not mean complete",
+      "deadline_pressure": "All 6 gaps had S726 T0 deadline — none met"
+    }
+  },
+
+  "post_s726_trajectory": {
+    "description": "How the ownership loss scenario would play out with S726 controls active: Closure Gate (Agent H), Ownership Acceptance Registry (Agent I), Maintenance Cadence triggers (Agent O/E), and governance guard RULE 6 extension.",
+
+    "T0_with_controls": {
+      "timepoint": "T0 — Responsibility Assigned (S725)",
+      "apply_closure_gate": false,
+      "apply_ownership_registry": true,
+      "apply_maintenance_triggers": false,
+      "events": "Same as pre-S726 — S725 documents the assignment. Agent I's Ownership Acceptance Registry records GAP-6 with status PENDING, accepted_by = null, deadline = S726 T0. The registry itself is a new control artifact — it tracks acceptance status in a single structured file rather than across multiple S725 documents.",
+      "control_effect": "PARTIAL — The registry makes the acceptance gap visible and queryable. But it is a passive artifact: it helps only if someone reads it. The registry acceptance_summary field clearly states: 'ALL 6 gaps have passed their S726 T0 deadline without acceptance. Governance Auditor must escalate.'"
+    },
+
+    "T1_with_controls": {
+      "timepoint": "T1 — Role Silent (Late S725 / Early S726)",
+      "apply_closure_gate": true,
+      "apply_ownership_registry": true,
+      "apply_maintenance_triggers": false,
+      "events": "The Baseline Maintainer role remains silent. Critically, the Closure Gate (Agent H §2.2) defines ACCEPTANCE as a binding gate: every proposed receiving owner must explicitly accept before the series can advance to APPROVAL. The registry's acceptance_summary.deadline_passed = 6 triggers the next_action: 'Governance Auditor must escalate all 6 unaccepted gaps to Governance Board at S726 T0.' The Ownership Registry, unlike the old approach of scattered S725 documents, centralizes the escalation trigger in a machine-readable, single-source-of-truth file.",
+      "control_effect": "MODERATE — The registry's next_action field creates a documented obligation. But the escalation itself requires an agent to read the registry and act on it. The registry does not auto-escalate. The gap is more visible than pre-S726 but still requires human action."
+    },
+
+    "T2_with_controls": {
+      "timepoint": "T2 — New Session Begins (S726 or later)",
+      "apply_closure_gate": true,
+      "apply_ownership_registry": true,
+      "apply_maintenance_triggers": true,
+      "events": "Three controls intersect: (1) Ownership Registry: If the Governance Auditor reads the registry at session startup, they see 6 PENDING gaps, 0 accepted, deadline passed, escalation triggered. (2) Maintenance Cadence: Agent O's Ownership Matrix row 1 lists CURRENT_BASELINES.md maintenance with cadence 'After any write to any pack file, app.js, or governance file.' But the cadence only activates if a Baseline Maintainer has accepted — without acceptance, the cadence is a design artifact, not an operational trigger. (3) Closure Gate: The 700-series attempted closure (S723) would have been rejected at checklist item A-1 (Acceptance Records — FAIL — zero accepted). Under the retroactive attestation requirement (Agent H §10.3), S723's closure would be marked 'provisionally rejected pending acceptance.' This alone would have prevented the gap from being 'closed over.' The series would remain ACTIVE, and no agent could declare it CLOSED with the gap still open.",
+      "control_effect": "STRONG on closure gate. WEAK on runtime detection. The closure gate prevents false closure — the gap cannot be closed over. But once the series IS in maintenance mode, no startup protocol automatically checks the ownership registry for unaccepted responsibilities."
+    },
+
+    "T3_with_controls": {
+      "timepoint": "T3 — CURRENT_BASELINES.md Goes Stale",
+      "apply_closure_gate": false,
+      "apply_ownership_registry": true,
+      "apply_maintenance_triggers": true,
+      "events": "Pack files are written. The M5_BASELINE_REFRESH trigger fires (≥3-file write session). Under S726 controls, the Ownership Matrix documents this cadence. But the cadence requires a named owner who has accepted — without acceptance, the trigger fires in the abstract but no one is bound to respond. The registry shows PENDING status for GAP-6 — a diligent Governance Auditor reading the registry at session startup would flag the unaccepted maintenance responsibility and refuse to close the session until the Baseline Maintainer role is filled. A less diligent session might proceed without checking the registry — the detection gap persists.",
+      "control_effect": "PARTIAL — The maintenance cadence is documented and the registry makes the missing owner visible. But detection still depends on someone reading the registry. No automated trigger fires on stale CURRENT_BASELINES.md hashes at session startup (M5_BASELINE_REFRESH is a manual cadence, not an automated check)."
+    },
+
+    "T4_with_controls": {
+      "timepoint": "T4 — Auditor Discovery (3 sessions later)",
+      "apply_closure_gate": false,
+      "apply_ownership_registry": true,
+      "apply_maintenance_triggers": true,
+      "events": "The scenario that played out at S723→S724 would STILL occur, but the discovery cost would be lower. The auditor finds the hash drift. Under S726 controls, they immediately check the Ownership Acceptance Registry and find GAP-6 = PENDING, deadline passed, no acceptance. The root cause is immediately traceable — the gap was documented, not hidden. The auditor can escalate with reference to Agent I registry entry GAP-6 rather than needing to reconstruct the ownership chain from scratch. The retroactive acceptance protocol (Agent E §5.3) provides a template for what acceptance looks like. The closure gate's governance debt item lifecycle (Agent H §9.2) provides a remediation tracking mechanism.",
+      "control_effect": "MODERATE — Discovery cost reduced from 2 sessions to ~0.5 sessions. Gap diagnosis is immediate (registry lookup) rather than requiring a full 26-agent audit. Remediation path is predefined (Agent E §5.3 retroactive acceptance + Agent H §9 governance debt item)."
+    }
+  },
+
+  "control_effectiveness_assessment": {
+    "assessed_controls": [
+      {
+        "control": "Series Closure Gate (Agent H — SESSION726_SERIES_CLOSURE_GATE.md)",
+        "mechanism": "4-step closure chain (TRANSFER → ACCEPTANCE → APPROVAL → CLOSE). 11-item Pre-Closure Checklist. Mandatory Closure Attestation with 3 signatures. RULE 6 WARN extension to governance-guard.js.",
+        "effectiveness_rating": "HIGH for preventing false closure",
+        "strengths": [
+          "Would have REJECTED S723's closure declaration at 12 of 12 checklist items",
+          "Checklist item A-1 (Acceptance Records) alone blocks any closure with unaccepted responsibilities",
+          "Attestation format forces explicit enumeration of every acceptance record",
+          "RULE 6 WARN catches unattested closures at the plugin level",
+          "Governance Debt Item lifecycle prevents indefinite deferral of failed closures",
+          "Historical compliance check (§6) proves the gate would have caught S723"
+        ],
+        "weaknesses": [
+          "RULE 6 is specification-only (placeholder) — not yet implemented in governance-guard.js",
+          "Procedural enforcement depends on a Governance Auditor being present and diligent",
+          "The gate only applies at CLOSURE — it does not detect ownership gaps that emerge during steady-state maintenance mode",
+          "If a closure attestation is maliciously or carelessly completed with false PASS entries, Tier 1 detection (procedural) fails; Tier 2 (plugin) may not catch falsified attestations; Tier 3 (Governance Board) catches only disputed closures"
+        ],
+        "would_prevent_s723_gap_recurrence": true,
+        "rationale": "S723's closure would have been blocked at checklist items T-1 (no Ownership Matrix), A-1 (zero acceptance records), and all subsequent items. The series would have remained ACTIVE until all 26 responsibilities were accepted. The 6 ownership gaps would have been surfaced at the closure gate itself, not 2 sessions later."
+      },
+      {
+        "control": "Ownership Acceptance Registry (Agent I — SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json)",
+        "mechanism": "Single structured JSON file tracking all ownership gaps with: gap_id, responsibility, primary/secondary/escalation owner, acceptance_status (PENDING/ACCEPTED), accepted_by, accepted_date, acceptance_evidence, blocking flag, deadline, notes. acceptance_log array. acceptance_summary with aggregate counts and next_action.",
+        "effectiveness_rating": "MEDIUM for gap visibility; LOW for automated enforcement",
+        "strengths": [
+          "Centralizes all ownership gap tracking in one machine-readable file",
+          "Explicit PENDING vs. ACCEPTED vs. ASSIGNED distinction per Agent E §4.1",
+          "Acceptance evidence standards (Agent I §acceptance_evidence_standards) define valid vs. invalid forms",
+          "acceptance_summary.next_action provides clear escalation instructions when deadlines pass",
+          "Structured format enables automated scanning (JSON parse → check acceptance_status)",
+          "Embedded stewardship principles for reference"
+        ],
+        "weaknesses": [
+          "Passive artifact — helps only if someone reads it",
+          "No automated enforcement: the registry does not auto-escalate on deadline miss",
+          "No integration with Session Startup Protocol (AGENTS.md §9 does not reference the registry)",
+          "acceptance_log is empty — the registry tracks gaps but cannot compel acceptance",
+          "Deadline enforcement is manual: 'Governance Auditor must escalate' but no mechanism ensures the Governance Auditor reads the registry",
+          "If no Governance Auditor is present in a session, the registry sits unread"
+        ],
+        "would_prevent_s723_gap_recurrence": false,
+        "rationale": "The registry would document the gap but would not prevent it. At S723, the gap would have been recorded as PENDING. Without someone reading the registry, the gap propagates identically to the pre-S726 scenario. The registry reduces discovery cost (T4: immediate root cause identification) but does not prevent the gap from forming."
+      },
+      {
+        "control": "Maintenance Cadence Triggers (Agent O — Stewardship Framework §1, §2 + Agent E — Post-700 Governance Model §6)",
+        "mechanism": "Ownership Matrix defines cadences for 19 responsibilities. For CURRENT_BASELINES.md maintenance: cadence = 'After any write to any pack file, app.js, or governance file' (row 1). M5_BASELINE_REFRESH trigger. Trigger thresholds in Maintenance Mode Governance §6.2: unexpected hash change = CRITICAL, Certified count delta ≥5 = HIGH, etc.",
+        "effectiveness_rating": "LOW for preventing ownership loss; MEDIUM for detecting staleness",
+        "strengths": [
+          "Trigger thresholds are well-defined with severity levels and response protocols",
+          "Escalation path is documented: primary → secondary → Governance Board",
+          "Hash verification at T0 would detect stale baselines (post-hoc, not preventive)",
+          "CRITICAL triggers halt all writes — prevents propagation of drift"
+        ],
+        "weaknesses": [
+          "Cadences require an ACCEPTED owner to execute — if no one accepts, the cadence is a design artifact with no operational force",
+          "M5_BASELINE_REFRESH is manual — no automated script checks 'has CURRENT_BASELINES.md been updated since last ≥3-file write session?'",
+          "T0 hash verification detects the symptom (stale hashes) but only after the document has already gone stale",
+          "Trigger thresholds detect drift but do not detect the root cause (unaccepted ownership)",
+          "No cadence exists for 'verify all ownership registry entries are accepted'"
+        ],
+        "would_prevent_s723_gap_recurrence": false,
+        "rationale": "The cadences detect staleness after it occurs (T3→T4), not before. At T3, the M5_BASELINE_REFRESH trigger fires in the abstract but with no accepted owner, no one responds. At T4, the T0 hash verification catches the drift — the auditor discovers the gap earlier than pre-S726 (~0.5 sessions vs. 2 sessions) but the gap still forms and propagates."
+      },
+      {
+        "control": "Governance Guard RULE 6 Extension (Agent H §7 — specification only)",
+        "mechanism": "session.idle hook scans new content for closure declarations without completed attestation. If detected → WARNING emitted. State tracking: closureDeclared, attestationProduced, attestationFailed.",
+        "effectiveness_rating": "SPECIFICATION ONLY — NOT YET IMPLEMENTED",
+        "strengths": [
+          "Would catch unattested closures at the plugin level (safety net beyond procedural Tier 1)",
+          "WARN level is appropriate — flexible (doesn't block valid work) but visible (flagged at session idle)",
+          "Attestation FAIL detection would catch checklist items marked FAIL in attestation text"
+        ],
+        "weaknesses": [
+          "Placeholder code (§7.1) is not integrated into governance-guard.js",
+          "Regex-based detection may have false positives/false negatives on closure language",
+          "Does not prevent non-closure ownership gaps (e.g., an individual responsibility being abandoned without a series closure)"
+        ],
+        "would_prevent_s723_gap_recurrence": "NOT APPLICABLE — control not yet active"
+      }
+    ],
+
+    "overall_prevention_assessment": {
+      "closure_gap_prevented": true,
+      "prevention_mechanism": "Closure Gate checklist item A-1 (Acceptance Records) blocks S723 from declaring CLOSE without acceptance records for all 26 transferred responsibilities",
+      "runtime_gap_prevented": false,
+      "runtime_gap_rationale": "Once a series is in MAINTENANCE MODE (not CLOSED), the Closure Gate does not apply. If a maintenance-mode responsibility is abandoned (owner silently disappears), no S726 control detects the abandonment in real time. The gap propagates until T0 hash verification catches the staleness symptom.",
+      "discovery_cost_reduction": "SIGNIFICANT — from 2 full sessions to ~0.5 sessions",
+      "discovery_cost_rationale": "Ownership Acceptance Registry provides immediate root cause identification. Retroactive acceptance protocol (Agent E §5.3) provides predefined remediation template. Governance Debt Item lifecycle (Agent H §9) provides tracking mechanism."
+    }
+  },
+
+  "remaining_gaps": {
+    "description": "What could still go wrong after S726 controls are implemented. These are vulnerabilities that the current S726 specifications do not address.",
+
+    "RG_1_passive_registry": {
+      "gap": "Ownership Acceptance Registry is a passive artifact",
+      "severity": "HIGH",
+      "scenario": "The registry records PENDING status and deadline violations. But if no agent reads it, the registry generates no alert, no escalation, and no warning. A session can start, operate, and close without ever parsing SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json. The registry's next_action field says 'Governance Auditor must escalate' — but nothing ensures a Governance Auditor reads it.",
+      "proposed_fix": "Integrate registry check into AGENTS.md §9 Session Startup Protocol: at T0, parse registry, if acceptance_summary.deadline_passed > 0, emit WARNING. Or: extend governance-guard.js with a new rule that scans the registry at session.idle and warns if unresolved ownership gaps exist."
+    },
+
+    "RG_2_no_acceptance_compulsion": {
+      "gap": "No mechanism compels an agent to accept a transferred responsibility",
+      "severity": "MEDIUM",
+      "scenario": "The closure gate blocks CLOSE until all responsibilities are accepted. But it cannot FORCE an agent to say 'I accept.' If the proposed receiving owner (e.g., Baseline Maintainer) is unavailable, unresponsive, or never spawned, the gap sits in PENDING indefinitely. The gate creates a blocking condition but not a resolution mechanism.",
+      "proposed_fix": "When a responsibility remains PENDING past deadline, the escalation path activates: secondary owner is offered the role. If secondary declines → Governance Board assigns. The Ownership Matrix escalation path (Agent O §2) is defined, but the automated activation is missing. A deadline-enforcement script or governance-guard rule could check: 'If PENDING + deadline_passed + primary_owner no session activity > N → auto-escalate to secondary.'"
+    },
+
+    "RG_3_no_runtime_abandonment_detection": {
+      "gap": "No control detects when an accepted maintenance-mode owner silently disappears",
+      "severity": "HIGH",
+      "scenario": "Baseline Maintainer accepts ownership (S726). For 5 sessions, they fulfill the maintenance cadence. Then they stop appearing. No session startup protocol checks 'has Baseline Maintainer been active in the last N sessions?' The M5_BASELINE_REFRESH trigger fires but no one responds. CURRENT_BASELINES.md goes stale over multiple sessions. The T0 hash verification catches the drift eventually, but only after the damage is done. This is a subtler form of the same ownership loss: acceptance happened, then was abandoned.",
+      "proposed_fix": "Add to T0 protocol: verify that every primary owner in the Ownership Matrix who has a cadence ≤ 'every session' has been active in the last 2 sessions. If inactive, activate succession plan. The Ownership Matrix §2 escalation path defines the protocol — the automated check is what's missing."
+    },
+
+    "RG_4_startup_protocol_gap": {
+      "gap": "AGENTS.md §9 Session Startup Protocol does not reference the Ownership Acceptance Registry or Ownership Matrix",
+      "severity": "MEDIUM",
+      "scenario": "AGENTS.md §9 lists six startup steps: read SESSION_STATUS, read REVISION_HISTORY.md, Certified count grep, cross-check remediation proposals, don't skip past stop conditions, prefer task agents. No step says 'read SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json' or 'verify Ownership Matrix row assignments are current.' A session can fully comply with AGENTS.md §9 and still operate with no awareness of ownership gaps.",
+      "proposed_fix": "Add §9.7: 'Query Ownership Acceptance Registry: parse SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json; if acceptance_summary.pending > 0, flag gaps to session lead before any writes.'"
+    },
+
+    "RG_5_cadence_without_enforcement": {
+      "gap": "Maintenance cadences are documented but not automatically enforced",
+      "severity": "MEDIUM",
+      "scenario": "The Ownership Matrix row 1 says CURRENT_BASELINES.md maintenance cadence is 'After any write to any pack file, app.js, or governance file.' But nothing programmatically checks 'did a pack-file write happen? has CURRENT_BASELINES.md been updated since then?' The M5_BASELINE_REFRESH trigger is a conceptual event, not a code hook. A session that writes to 5 pack files and closes without refreshing CURRENT_BASELINES.md faces no automated barrier.",
+      "proposed_fix": "Governance guard extension: session.idle hook checks whether any pack file, app.js, or governance file was written in the session. If yes, check whether CURRENT_BASELINES.md was also updated. If not, emit WARNING: 'M5_BASELINE_REFRESH: pack files written but CURRENT_BASELINES.md not refreshed.' Or: script at `scripts/t0_baseline_verify.js` that compares file modification timestamps and flags stale baselines."
+    },
+
+    "RG_6_rule_6_not_implemented": {
+      "gap": "Governance guard RULE 6 (closure attestation verification) is specification-only",
+      "severity": "LOW (temporary — can be implemented)",
+      "scenario": "Agent H's §7.1 provides placeholder JavaScript code for RULE 6. The governance-guard.js plugin has not been extended. A closure declaration without attestation would be caught only at Tier 1 (procedural — if a Governance Auditor is present) or Tier 3 (Governance Board — if escalated). Tier 2 (plugin safety net) is offline.",
+      "proposed_fix": "Implement RULE 6 in governance-guard.js per Agent H §7.1 placeholder. Add state extensions (closureDeclared, attestationProduced, attestationFailed) to getState(). Integrate into session.idle hook after existing RULE 1/4 checks."
+    }
+  },
+
+  "verdict": {
+    "question": "Would the S723→S724 ownership gap recur under S726 controls?",
+    "answer_for_closure_scenario": "NO — the closure gate would have blocked S723 from declaring CLOSE without acceptance records. Checklist item A-1 alone is sufficient: with zero acceptance records, APPROVAL cannot be granted and CLOSE cannot be declared. The 700-series would have remained ACTIVE. The 6 ownership gaps would have been surfaced at the closure gate itself, not 2 sessions later. The governance debt item lifecycle ensures the gap is tracked until resolved.",
+    "answer_for_steady_state_scenario": "YES — the gap could still occur during MAINTENANCE MODE steady-state. If a maintenance-mode responsibility owner silently disappears after accepting, no S726 control detects the abandonment in real time. The current_baselines staleness would be detected at T0 hash verification (~0.5 sessions later vs. 2 sessions pre-S726), reducing but not eliminating the cost.",
+    "answer_for_no_governance_auditor_scenario": "YES — if no Governance Auditor or governance-conscious agent is present in a session, the Ownership Acceptance Registry sits unread, the Closure Attestation is never checked, and ownership gaps propagate undetected until a governance-aware agent arrives.",
+    "confidence": "HIGH for closure-scenario prevention. MEDIUM for steady-state prevention. LOW for unattended-session prevention.",
+    "overall_assessment": "S726 controls are a major improvement over the S723 baseline. The closure gate alone would have prevented the specific S723→S724 failure mode. But the controls remain predominantly procedural (Tier 1) and passive (requires a human reader). The remaining gaps (RG-1 through RG-6) reveal that S726 shifts the problem from 'gaps are invisible' to 'gaps are visible but not automatically enforced.' The next governance hardening session should focus on automated enforcement: registry checks at session startup, cadence verification at session idle, and ownership activity monitoring."
+  },
+
+  "cross_references": {
+    "simulated_closure_gate": "reports/SESSION726_SERIES_CLOSURE_GATE.md §2 (4-step closure chain), §3 (Pre-Closure Checklist), §4 (Closure Attestation), §5 (Enforcement), §6 (Historical S723 compliance check)",
+    "simulated_ownership_registry": "reports/SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json §gaps (6 gap entries), §acceptance_summary (0 accepted, 6 deadline passed), §acceptance_evidence_standards",
+    "simulated_gap_resolution": "reports/SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md §4.7 (GAP-6 CURRENT_BASELINES.md), §2 (Ownership Matrix row 1), §3 (Stewardship Principle 2)",
+    "simulated_acceptance_requirement": "reports/SESSION725_POST700_GOVERNANCE_MODEL.md §4.1 (ASSIGNED ≠ ACCEPTED), §5.1 (GAP-6 enumeration), §5.3 (retroactive acceptance required actions)",
+    "historical_gap_cost": "reports/SESSION724_SESSION_SUMMARY.md (6 ownership gaps, 26-agent discovery)",
+    "governance_debt_lifecycle": "reports/SESSION726_SERIES_CLOSURE_GATE.md §9 (Governance Debt Items)"
+  }
+}

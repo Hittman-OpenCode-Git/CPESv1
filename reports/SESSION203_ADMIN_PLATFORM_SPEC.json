@@ -1,0 +1,153 @@
+{
+  "document": "SESSION203_ADMIN_PLATFORM_SPEC",
+  "session": "S203",
+  "title": "May Administration Portal — Implementation Specification",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "authority": "S202 Addendum A-05, A-06",
+  "purpose": "Defines the May Administration Portal — a role-based administrative experience for managing students, test results, content inventory, certification workflow, recommendation tracking, and modernization activities. Accessible via the May Administration Portal as a distinct frontend layer.",
+  "constraints": ["No content changes", "No certification activity", "No governance changes", "No deployment"],
+  "target_implementation": "S830 (Phase 1 gate — P0 features operational)",
+
+  "authentication": {
+    "layers": ["Student", "Content Administrator", "Certification Reviewer", "Governance Administrator", "System Administrator"],
+    "mechanism": "Role-based access control (RBAC). Each role has defined access permissions. Higher roles inherit lower-role permissions.",
+    "implementation_file": "scripts/engine/admin/auth_engine.js"
+  },
+
+  "roles": {
+    "Student": {
+      "access_level": 1,
+      "permissions": ["view_tests", "take_tests", "view_own_results", "view_own_reviews", "view_own_recommendations"],
+      "description": "Default role for learners. Can take exams, review results, and see personalized study recommendations."
+    },
+    "Content_Administrator": {
+      "access_level": 2,
+      "permissions": ["all_student_permissions", "view_question_inventory", "search_registry", "view_recommendations", "view_remediation_queues", "edit_unprocessed_content"],
+      "description": "Manages content inventory. Can view all questions, search the registry, manage remediation queues, and edit unprocessed content."
+    },
+    "Certification_Reviewer": {
+      "access_level": 3,
+      "permissions": ["all_content_admin_permissions", "view_certification_queues", "review_READY_items", "hold_items", "escalate_items", "certify_items", "view_quality_scores"],
+      "description": "Reviews and certifies content. Accesses certification board queues (READY, HOLD, ESCALATE, CERTIFIED). Performs CAQS 10-dimension review."
+    },
+    "Governance_Administrator": {
+      "access_level": 4,
+      "permissions": ["all_certification_permissions", "view_governance_guard", "manage_audit_reports", "verify_registry_integrity", "manage_framework_controls", "authorize_state_transitions"],
+      "description": "Oversees governance operations. Manages governance guard rules, audit reports, registry integrity, and framework controls."
+    },
+    "System_Administrator": {
+      "access_level": 5,
+      "permissions": ["all_permissions", "manage_users", "manage_roles", "system_configuration", "data_export", "platform_maintenance"],
+      "description": "Full platform administration. Manages users, roles, system configuration, and platform maintenance."
+    }
+  },
+
+  "modules": {
+    "student_management": {
+      "priority": "P1",
+      "description": "Manage students, enrollments, permissions, and progress tracking.",
+      "features": ["Student CRUD", "Enrollment management", "Permission assignment", "Progress tracking dashboard", "Study plan generation"],
+      "data_source": "Student database (future feature)"
+    },
+    "test_results_management": {
+      "priority": "P1",
+      "description": "Search and analyze test results.",
+      "features": ["Search by student", "Search by date", "Search by exam", "Search by question", "Score distribution analytics", "Per-question performance stats"],
+      "data_source": "app.js localStorage / future server-side storage"
+    },
+    "question_management": {
+      "priority": "P0",
+      "description": "Search and manage the question inventory.",
+      "features": [
+        "Search by QuestionID (compound-key resolved)",
+        "Search by identity key",
+        "Search by blueprint domain (A-F)",
+        "Search by pack (A-E)",
+        "Search by section",
+        "Search by certification status (Unprocessed/In Audit/Certified/Archived)",
+        "Search by defect class (DL-008, DL-026, etc.)",
+        "View question detail (Stem, Choices, CC, EC, EW, metadata)",
+        "View certification history",
+        "View linked sessions",
+        "View linked recommendations"
+      ],
+      "data_source": "CANONICAL_REGISTRY.json + pack files via AM-1 extraction"
+    },
+    "recommendation_registry_module": {
+      "priority": "P0",
+      "description": "Manage the recommendation lifecycle.",
+      "features": [
+        "View OPEN recommendations",
+        "View ASSIGNED recommendations",
+        "View IN_PROGRESS recommendations",
+        "View CLOSED recommendations",
+        "Assign recommendation to session",
+        "Update recommendation status",
+        "View linked questions",
+        "View closure evidence",
+        "Create new recommendation from finding"
+      ],
+      "data_source": "RECOMMENDATION_REGISTRY.json"
+    },
+    "session_registry": {
+      "priority": "P0",
+      "description": "Search and view sessions in the certification history.",
+      "features": [
+        "Search by session ID (S200, S201, S809, S810, etc.)",
+        "View session type and status",
+        "View session findings",
+        "View session deliverables",
+        "View linked questions",
+        "View linked recommendations",
+        "View produced reports"
+      ],
+      "data_source": "NAVIGATION_REGISTRY.json + session report files"
+    },
+    "certification_operations_console": {
+      "priority": "P0",
+      "description": "The certification board interface — displays Framework v2 readiness queues.",
+      "features": [
+        "READY queue: items that passed all pre-flight gates",
+        "MINOR_FIX queue: items with SOFT_BLOCK warnings",
+        "REMEDIATE queue: items requiring defect remediation",
+        "BLOCKED queue: items with structural impairments",
+        "CERTIFIED queue: items in the learner delivery pool",
+        "Per-item review interface (10-dimension CAQS scoring)",
+        "Batch operations (certify, hold, escalate)",
+        "Queue filtering by pack, section, defect class, priority"
+      ],
+      "data_source": "CANONICAL_REGISTRY.json + readiness classification from Readiness Engine"
+    },
+    "modernization_dashboard": {
+      "priority": "P1",
+      "description": "Track Framework v2 modernization progress.",
+      "features": [
+        "Domain E modernization progress",
+        "Domain F modernization progress",
+        "Seed inventory status",
+        "Clone archival progress",
+        "Replacement progress tracking",
+        "Certification progress by section",
+        "Defect escape rate trending",
+        "Throughput metrics (BF-001 through BF-010)",
+        "Phase gate status (S830, S900, S910 readiness)"
+      ],
+      "data_source": "CANONICAL_REGISTRY.json + DELTA_LEDGER.json + scan artifacts + throughput metrics"
+    }
+  },
+
+  "implementation_roadmap": {
+    "P0_features_target_S830": ["Question Management", "Recommendation Registry", "Session Registry", "Certification Operations Console", "Admin Authentication (all roles)"],
+    "P1_features_target_S900": ["Student Management", "Test Results Administration", "Modernization Dashboard"],
+    "P2_features_target_S910": ["Workflow Automation", "Recommendation Auto-Assignment", "Session Auto-Generation"]
+  },
+
+  "architecture_notes": {
+    "frontend": "The May Administration Portal is a separate frontend layer (admin.html) served alongside the student-facing index_updated.html. Shares the same data layer (pack files, registry files).",
+    "data_layer": "All admin modules query CANONICAL_REGISTRY.json, RECOMMENDATION_REGISTRY.json, NAVIGATION_REGISTRY.json, and DELTA_LEDGER.json. These are generated at session T0 by the respective engines.",
+    "authentication_integration": "Authentication is role-based with separate login for admin vs. student. Access tokens managed via app.js session mechanism.",
+    "governance_hooks": "Certification Operations Console writes to REVISION_HISTORY.md on state transitions. Governance guard Rules 1-10 are enforced at write time."
+  }
+}

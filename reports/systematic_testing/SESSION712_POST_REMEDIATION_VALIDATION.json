@@ -1,0 +1,77 @@
+{
+  "session": "712",
+  "timestamp": "2026-07-25T23:00:00",
+  "type": "Post-remediation validation scan",
+  "pack_states": {
+    "pack_c": { "qids": 500, "certified": 350, "unchanged_from_pre_flight": true },
+    "pack_d": { "qids": 500, "certified": 350, "unchanged_from_pre_flight": true }
+  },
+  "target_items_post_remediation": {
+    "P1-BC-094": {
+      "question_state": "Certified",
+      "correct_choice": "B",
+      "ew_a_topic_correct": true,
+      "ew_b_empty": true,
+      "ew_c_unchanged": true,
+      "ew_d_unchanged": true,
+      "explanation_correct_unchanged": true
+    },
+    "P1-CD-022": {
+      "question_state": "Certified",
+      "correct_choice": "B",
+      "ew_a_now_describes_choice_a": true,
+      "ew_b_empty": true,
+      "ew_c_unchanged": true,
+      "ew_d_now_describes_choice_d": true,
+      "explanation_correct_unchanged": true,
+      "swap_verified": true
+    }
+  },
+  "residual_defect_scan": {
+    "dl008_pack_c": 0,
+    "dl008_pack_d": 0,
+    "certified_dl026": 0,
+    "dl025": 0,
+    "dl016_known": 0,
+    "no_new_dl010_dl016_introduced": true
+  },
+  "unauthorized_drift_check": {
+    "no_answer_keys_changed": true,
+    "no_stems_changed": true,
+    "no_choices_changed": true,
+    "no_explanation_correct_changed": true,
+    "no_question_state_changed": true,
+    "no_certification_state_changed": true,
+    "no_non_target_items_changed": true,
+    "no_pack_a_modified": true,
+    "no_pack_b_modified": true,
+    "no_pack_e_modified": true,
+    "no_case_bank_files_modified": true,
+    "no_100_series_may_files_modified": true,
+    "no_scoring_runtime_files_modified": true,
+    "only_authorized_ew_fields_changed": true
+  },
+  "post_flight_test_results": {
+    "governance_guard": "20/0 PASS",
+    "session_recovery": "12/0 PASS",
+    "readiness": "37/0 PASS",
+    "calibration": "18/0 PASS",
+    "tutoring_safety": "74/0 PASS",
+    "may_renderer": "60/2 PASS (pre-existing, identical to pre-flight)",
+    "may_regression_r2": "38/4 PASS (pre-existing, identical to pre-flight)",
+    "core_total": "161/0 PASS"
+  },
+  "files_changed": [
+    "pack_c_corrected.js — P1-BC-094 EW_A rewritten",
+    "pack_d_corrected.js — P1-CD-022 EW_A/EW_D swapped",
+    "knowledge/REVISION_HISTORY.md — S712 entry appended"
+  ],
+  "governance_attestation": {
+    "full_pre_flight_suite_run": true,
+    "full_post_flight_suite_run": true,
+    "g_new_3_object_bounded_verification_used": true,
+    "no_forward_scan_methodology_used": true,
+    "concurrent_lane_conflict_guard_completed": true,
+    "backups_confirmed_before_edits": true
+  }
+}

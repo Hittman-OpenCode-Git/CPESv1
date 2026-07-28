@@ -1,0 +1,26 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Distractor Plausibility Audit",
+  "classification_rubric": {
+    "strong": "Targets specific misconception documented in CMA exam-trap literature. Requires genuine content knowledge to eliminate. Would fool a candidate who holds that misconception.",
+    "acceptable": "Plausible but surface-level. Test-taking strategies could help eliminate this distractor. Covers a real but shallow misconception.",
+    "weak": "Eliminable by test-taking tricks alone (length cueing, grammatical mismatch, absolute language). Does not require content knowledge to dismiss.",
+    "rewrite_needed": "Obviously wrong (absurd number, nonsensical concept, contradicts scenario facts). Or nonsensical text. Or 100% duplicate of another distractor in same item."
+  },
+  "distribution": {
+    "strong": { "estimated_count": 4520, "estimated_pct": 57.2, "profile": "Pack B and Pack E dominate. Independent authoring produces genuinely choice-specific, misconception-targeting distractors." },
+    "acceptable": { "estimated_count": 2180, "estimated_pct": 27.6, "profile": "Pack A/C/D certified sections. Distractors are plausible but some lack authoritative-standard anchoring in EW text." },
+    "weak": { "estimated_count": 920, "estimated_pct": 11.6, "profile": "DL-003 absolute-language distractors (228 hits). DL-005 high-similarity distractors. Early-rotation template distractors in unprocessed sections." },
+    "rewrite_needed": { "estimated_count": 278, "estimated_pct": 3.5, "profile": "DL-005 100%-identical distractors. DL-013 boilerplate EW text (184). Absolutist giveaways ('in all cases', 'guarantees in every case'). 7-item 'it guarantees goal congruence in all cases' clone group." }
+  },
+  "plausibility_by_domain": {
+    "A_External_Financial_Reporting": { "strong_pct": 58, "weak_pct": 10, "notes": "Good distractor discrimination in calculation-heavy items. Numerical distractors map well to common errors." },
+    "B_Planning_Budgeting_Forecasting": { "strong_pct": 55, "weak_pct": 12, "notes": "Conceptual items have more weak distractors. Budgeting framework choices sometimes too similar." },
+    "C_Performance_Management": { "strong_pct": 54, "weak_pct": 14, "notes": "Variance analysis distractors are calculation-based and strong. Responsibility-center conceptual distractors weaker." },
+    "D_Cost_Management": { "strong_pct": 60, "weak_pct": 9, "notes": "Best domain for distractor quality. Overhead allocation and joint-cost distractors consistently strong." },
+    "E_Internal_Controls": { "strong_pct": 57, "weak_pct": 11, "notes": "COSO/ITGC distractors benefit from distinct framework components as natural alternatives." },
+    "F_Technology_Analytics": { "strong_pct": 62, "weak_pct": 7, "notes": "Emerging topic — distractors written with current technology trends as plausible alternatives. Highest strong%." }
+  },
+  "critical_finding": "The 'it guarantees goal congruence in all cases' absolutist distractor appears in 7 consecutive items (P1-CC-021 through P1-CC-027) — a DL-012 clone-rotation artifact. All 7 items in Pack C Section C are Unprocessed, making this the single largest concentrated rewrite target."
+}

@@ -1,0 +1,233 @@
+{
+  "document": "SESSION2021_READINESS_OBJECT",
+  "session": "S202.1",
+  "title": "Readiness Object — Normalized States, Transition Rules, and Board Visibility",
+  "series": "200-Series — Framework v2 Architecture Addendum",
+  "date": "2026-07-27",
+  "type": "Standardization Specification — Read-Only",
+  "parent": "SESSION202_READINESS_GATE_ENGINEERING.json + SESSION203_GATE_STATE_MACHINE.json + SESSION203_READINESS_ENGINE_SPEC.json",
+  "purpose": "Normalizes the five readiness classifications (BLOCKED, REMEDIATE, MINOR_FIX, READY, CERTIFIED) as the canonical state model consumed by all boards. Defines transition rules, auto-fail conditions, board visibility, and the relationship between readiness classification and certification state. This is the contract that every board's visibility filter and every session's Go/No-Go decision depends on.",
+  "constraints": ["No content changes", "No certification actions", "No governance changes", "Read-only specification"],
+
+  "readiness_model_version": "1.0.0",
+
+  "states": {
+    "BLOCKED": {
+      "label": "Structurally Impaired — Cannot Enter Pipeline",
+      "description": "Item has identity, JSON integrity, or severe structural defects that make it unprocessable. Cannot be certified, cannot be reviewed, cannot be delivered to learners.",
+      "numericScore": 0,
+      "color": "RED",
+      "triggers": [
+        "Gate -1 IDENTITY_BLOCKED: QID missing, CorrectChoice missing, pack attribution failed, TemplateFamily unconstructible",
+        "Gate 0 JSON_FAIL: file unparseable, DL-017 corruption artifact, QuestionID count mismatch",
+        "Gate 0 FIELD_ABSENT: missing required structural fields (Stem, ExplanationCorrect)",
+        "Gate 3 HARD_FAIL combined with Gate -1 BLOCKED: identity unresolvable even after attempt"
+      ],
+      "examples": ["P1-E-R33 (missing CorrectChoice, Stem, ExplanationCorrect)", "Any item with DL-017 backtick-newline corruption"],
+      "actions": "Route to EditorialQueue with BLOCK_REASON. Must be manually repaired before re-entering pipeline. Cannot auto-remediate.",
+      "hiddenFrom": ["Quality Board", "Certification Board"],
+      "visibleTo": ["Registry Board", "Governance Board"]
+    },
+    "REMEDIATE": {
+      "label": "Remediation Required — Structural or Content Defect",
+      "description": "Item has structural or content defects that block certification but are automatically receivable (clear EW[CC], fill empty EW slots, align metadata blocks). Cannot be certified in current state.",
+      "numericScore": "40-69",
+      "color": "ORANGE",
+      "triggers": [
+        "Gate 1 HARD_FAIL: DL-008 present, DL-026 present, DL-016 SEVERE, DL-021 present",
+        "Gate 3 HARD_FAIL: compound-key collision, identity reconciliation failure",
+        "Gate 4 DL-030 CONFIRMED: wrong answer key (CRITICAL severity)"
+      ],
+      "severityEscalation": {
+        "CRITICAL": "DL-030 CONFIRMED + Certified → P0 immediate governance alert. Learner pool exposure.",
+        "HIGH": "DL-008 + Certified → P1 urgent. Learner sees wrong explanation text."
+      },
+      "actions": "Can be remediated by authorized remediation script (batch ≤30 per Rule 5) or editorial session. Post-remediation: re-enter Gate 1 for re-scan.",
+      "hiddenFrom": ["Quality Board", "Certification Board"],
+      "visibleTo": ["Registry Board", "Governance Board"]
+    },
+    "MINOR_FIX": {
+      "label": "Minor Fixes Recommended — Certifiable with Warnings",
+      "description": "Item has content-quality issues that degrade educational value but do not affect answer correctness or create learner-safety risk. Can be certified WITH WARNINGS acknowledged by Certification Board.",
+      "numericScore": "70-89",
+      "color": "YELLOW",
+      "triggers": [
+        "Gate 2 SOFT_FAIL: DL-013 boilerplate, DL-010 suspected (unconfirmed)",
+        "Gate 2 WARN: EV3 citation missing on Apply+ items",
+        "Gate 4 WARN: DL-031 difficulty inflation",
+        "Gate 4 SOFT_FAIL: DL-030 SUSPECT (confidence < 90%)"
+      ],
+      "actions": "Can be certified WITH WARNINGS. Warnings must be acknowledged by Certification Board. Can be remediated in editorial pass during or after certification.",
+      "hiddenFrom": [],
+      "visibleTo": ["Registry Board", "Quality Board", "Governance Board", "Certification Board"],
+      "displayAs": "Quality Board: shows with warning badges. Certification Board: shows with DEFERRED flag — certifiable but warnings must be acknowledged."
+    },
+    "READY": {
+      "label": "Ready for Certification — All Gates Clean",
+      "description": "Item has passed all pre-flight gates. Zero HARD_FAIL, zero SOFT_FAIL, zero WARN. Immediately eligible for Quality Board and Certification Board review. This is the ideal pipeline state.",
+      "numericScore": "90-100",
+      "color": "GREEN",
+      "triggers": [
+        "All gates PASS: Gate -1 PASS (identity valid), Gate 0 PASS (JSON clean), Gate 1 PASS (no structural defects), Gate 2 PASS (no content defects), Gate 3 PASS (identity reconciled), Gate 4 PASS (no calculation errors)"
+      ],
+      "actions": "Immediately eligible for CAQS §1.6 six-dimension verification by Quality Board + Certification Board adjudication.",
+      "hiddenFrom": [],
+      "visibleTo": ["Registry Board", "Quality Board", "Governance Board", "Certification Board"],
+      "displayAs": "Quality Board: shows with CERTIFIABLE flag. Certification Board: shows with full detail for adjudication."
+    },
+    "CERTIFIED": {
+      "label": "Certified — Learner-Pool Eligible (Not a Readiness State)",
+      "description": "Item is in the active learner delivery pool. CERTIFIED is a question_state value, not a readiness classification. It appears in readiness reports as the inventory count of Certified items; readiness classification is still computed (Certified items can have defects — those that do route to REMEDIATE with escalated severity).",
+      "numericScore": "N/A (certification state, not readiness state)",
+      "color": "BLUE",
+      "preConditions": ["Readiness classification must be READY or MINOR_FIX", "All HARD_BLOCK defects resolved", "Quality Board review complete with CERTIFY verdict", "REVISION_HISTORY.md entry recorded", "Governance guard Rules 6-8 checks PASS"],
+      "deltaVariant": "CERTIFIED_DELTA: item was previously Certified. Content hash unchanged. Prior certification decision inherited without re-review. Still requires pre-flight gate passage on current pack file state."
+    }
+  },
+
+  "transition_rules": {
+    "description": "All valid transitions between readiness states. Transitions are guarded by gate results and (for some) require authorization. Forbidden transitions are listed separately.",
+    "transitions": [
+      {"from": "Any (pre-scan)", "to": "BLOCKED", "trigger": "Gate -1 IDENTITY_BLOCKED or Gate 0 FAIL", "auto": true, "authorizationRequired": false},
+      {"from": "Any (pre-scan)", "to": "REMEDIATE", "trigger": "Gate 1 HARD_FAIL or Gate 3 HARD_FAIL or Gate 4 DL-030 CONFIRMED", "auto": true, "authorizationRequired": false},
+      {"from": "Any (pre-scan)", "to": "MINOR_FIX", "trigger": "Gate 2 SOFT_FAIL or Gate 4 SOFT_FAIL/WARN (excluding DL-030 CONFIRMED)", "auto": true, "authorizationRequired": false},
+      {"from": "Any (pre-scan)", "to": "READY", "trigger": "All gates PASS. Zero defects. Zero warnings.", "auto": true, "authorizationRequired": false},
+      {"from": "REMEDIATE", "to": "READY", "trigger": "Defect remediated → re-scan all applicable gates → all PASS", "auto": false, "authorizationRequired": true, "authorizationRequiredReason": "Remediation must be independently verified."},
+      {"from": "REMEDIATE", "to": "MINOR_FIX", "trigger": "HARD_BLOCK defects cleared → re-scan → only SOFT_BLOCK/WARN remain", "auto": false, "authorizationRequired": true},
+      {"from": "MINOR_FIX", "to": "READY", "trigger": "Warnings addressed → re-scan Gate 2+4 → all PASS", "auto": false, "authorizationRequired": true},
+      {"from": "READY", "to": "CERTIFIED", "trigger": "Quality Board + Certification Board CERTIFY verdict", "auto": false, "authorizationRequired": true, "authorizationRequiredReason": "Certification requires human (user) approval."},
+      {"from": "CERTIFIED", "to": "REMEDIATE", "trigger": "New scan finds HARD_BLOCK defect on Certified item", "auto": true, "authorizationRequired": false, "severityEscalation": "CRITICAL — learner pool exposure. Auto-triggers governance event."}
+    ],
+    "forbidden_transitions": [
+      "CERTIFIED → READY (Certified items can only be downgraded to REMEDIATE upon defect discovery, or to In Audit for re-verification)",
+      "CERTIFIED → BLOCKED (Certified items were already parseable/identifiable — structural block should not be possible unless file corruption occurs)",
+      "BLOCKED → READY (must first become REMEDIATE or MINOR_FIX, then progress)",
+      "Any state → CERTIFIED without Quality + Certification Board review",
+      "REMEDIATE → CERTIFIED (must first become READY or MINOR_FIX, then pass board review)"
+    ]
+  },
+
+  "auto_fail_conditions": {
+    "description": "Conditions that automatically route an item regardless of other gate results. Checked in priority order — first matching condition wins.",
+    "conditions": [
+      {"priority": 1, "condition": "QID is null, undefined, or empty string", "action": "BLOCKED", "reason": "No identity possible. Item is structurally nonexistent."},
+      {"priority": 2, "condition": "CorrectChoice is null, undefined, empty, or not A-D", "action": "BLOCKED", "reason": "No answer key. Item cannot present a valid question."},
+      {"priority": 3, "condition": "Stem is null, undefined, or empty string", "action": "BLOCKED", "reason": "No question text. Item is unrenderable (DL-034 pattern)."},
+      {"priority": 4, "condition": "ExplanationCorrect is null, undefined, or empty string", "action": "BLOCKED", "reason": "No correct-answer explanation. Cannot verify correctness."},
+      {"priority": 5, "condition": "Pack file unparseable via AM-1 and AM-2", "action": "BLOCKED", "reason": "All items in pack blocked until file repaired."},
+      {"priority": 6, "condition": "DL-017 corruption artifact detected", "action": "BLOCKED", "reason": "File corruption must be repaired."},
+      {"priority": 7, "condition": "DL-030 CONFIRMED (wrong answer key, confidence > 90%)", "action": "REMEDIATE (CRITICAL)", "reason": "Wrong answer in pool — emergency governance event if Certified."},
+      {"priority": 8, "condition": "DL-008 on Certified item (EW[CC] non-empty)", "action": "REMEDIATE (CRITICAL)", "reason": "Learner pool exposure — wrong text in correct-answer slot."},
+      {"priority": 9, "condition": "DL-016 SEVERE on Certified item (EW text topically unrelated)", "action": "REMEDIATE", "reason": "Learner sees wrong-topic feedback."}
+    ]
+  },
+
+  "board_visibility_matrix": {
+    "description": "Which readiness states are visible to which boards. This is the 'Scan Once, Consume Many' enforcement mechanism — defective items are invisible to certification boards.",
+    "quality_board": {
+      "visibleStates": ["READY", "MINOR_FIX"],
+      "hiddenStates": ["BLOCKED", "REMEDIATE"],
+      "rationale": "Quality Board performs 10-dimension CAQS review on structurally-clean items only. Items with HARD_BLOCK defects cannot be quality-reviewed because their content may be incorrect or incomplete."
+    },
+    "certification_board": {
+      "visibleStates": ["READY", "MINOR_FIX"],
+      "hiddenStates": ["BLOCKED", "REMEDIATE"],
+      "rationale": "Certification Board adjudicates CERTIFY/HOLD/ESCALATE decisions on reviewable items. BLOCKED and REMEDIATE items must be resolved before certification can proceed."
+    },
+    "governance_board": {
+      "visibleStates": ["BLOCKED", "REMEDIATE", "MINOR_FIX", "READY"],
+      "rationale": "Governance Board has full inventory visibility for portfolio safety assessment, learner-pool exposure detection, and session authorization."
+    },
+    "registry_board": {
+      "visibleStates": ["BLOCKED", "REMEDIATE", "MINOR_FIX", "READY"],
+      "rationale": "Registry Board tracks all items regardless of readiness — identity is assigned at Gate -1, before readiness classification. Registry is the canonical inventory."
+    },
+    "throughput_board": {
+      "visibleStates": ["BLOCKED", "REMEDIATE", "MINOR_FIX", "READY"],
+      "rationale": "Throughput Board measures BF metrics across the entire item pool. Blocking/remediation rates are key throughput indicators."
+    }
+  },
+
+  "board_queue_sorting": {
+    "description": "When a board receives items, they are sorted by priority score. This ensures the most urgent work is processed first.",
+    "quality_board_sort": [
+      {"priority": 1, "condition": "Certified item flagged MINOR_FIX (DL-013 on learner-pool item)", "label": "P0 — current learner-pool quality degradation"},
+      {"priority": 2, "condition": "READY item with highest readiness score", "label": "P1 — ideal certification candidates"},
+      {"priority": 3, "condition": "MINOR_FIX item with fewest warnings", "label": "P2 — near-ready items"}
+    ],
+    "certification_board_sort": [
+      {"priority": 1, "condition": "READY items within the session's assigned wave/domain", "label": "In-scope certification candidates"},
+      {"priority": 2, "condition": "MINOR_FIX items within the session's assigned wave/domain", "label": "Certifiable with warnings acknowledged"},
+      {"priority": 3, "condition": "READY items outside the session's assigned wave", "label": "Deferred"}
+    ],
+    "governance_board_sort": [
+      {"priority": 1, "condition": "Certified items with CRITICAL severity defects (DL-030 CONFIRMED, DL-008 + Certified)", "label": "P0 — immediate learner-safety alert"},
+      {"priority": 2, "condition": "Certified items with HIGH severity defects (DL-026 + Certified)", "label": "P1 — urgent learner-pool quality"},
+      {"priority": 3, "condition": "All other items by readiness score descending", "label": "P2 — portfolio-level monitoring"}
+    ]
+  },
+
+  "relationship_to_question_state": {
+    "description": "Readiness classification and question_state are related but distinct. Readiness is computed at scan time from gate results. question_state is a persistent governance field in the pack file / registry. The relationship is: readiness classification determines whether an item CAN be certified; question_state records whether it HAS been certified.",
+    "mappings": [
+      {"readinessClass": "BLOCKED", "valid_question_states": ["Unprocessed", "Editorial Queue", "Archived"], "invalid_question_states": ["Certified"], "note": "BLOCKED items should never be Certified. If a Certified item becomes BLOCKED (e.g., file corruption discovered), immediate escalation."},
+      {"readinessClass": "REMEDIATE", "valid_question_states": ["Unprocessed", "Editorial Queue", "In Audit"], "invalid_question_states": ["Certified"], "note": "REMEDIATE items cannot be Certified. If a Certified item has REMEDIATE-level defects, it is flagged in learner_pool_exposure."},
+      {"readinessClass": "MINOR_FIX", "valid_question_states": ["Unprocessed", "In Audit", "Certified"], "invalid_question_states": [], "note": "MINOR_FIX items CAN be Certified WITH WARNINGS. Existing Certified items with MINOR_FIX warnings are quality-degraded but not a safety risk."},
+      {"readinessClass": "READY", "valid_question_states": ["Unprocessed", "In Audit"], "invalid_question_states": [], "note": "READY items are certification candidates. They may be Unprocessed (first-time certification) or In Audit (re-certification after remediation). READY items that were previously Certified may skip review via delta (CERTIFIED_DELTA)."}
+    ]
+  },
+
+  "session_go_nogo_decision": {
+    "description": "The Governance Board uses the readiness report to make a Go/No-Go decision before any certification work begins. This decision gates the entire session.",
+    "go_conditions": "All of: (a) zero CRITICAL learner-pool exposures unknown to the session plan, (b) pack file hashes match T0 baselines, (c) identity reconciliation complete (Gate 3 PASS for all items), (d) count stability confirmed (2 independent AM-1 parses match).",
+    "no_go_triggers": [
+      "CRITICAL learner-pool exposure not covered by session plan → NO-GO until acknowledged in governance register",
+      "Pack file hash mismatch → NO-GO until Sync Anomaly Playbook executed",
+      "Identity ambiguity detected (compound-key collision, phantom items) → NO-GO until resolved",
+      "Count instability (parse count != expected across 2 independent runs) → NO-GO until reconciled",
+      "governance-guard Rule block triggered → NO-GO until block resolved"
+    ],
+    "soft_go_triggers": [
+      "HIGH learner-pool exposure (DL-026 + Certified) → GO with P1 priority, acknowledge in governance report",
+      "EV3 warning rate > 80% → GO with documentation that citation remediation is pending",
+      "Gate 2 SOFT_FAIL items → GO with acknowledgment that MINOR_FIX items will carry warnings"
+    ]
+  },
+
+  "drift_detection": {
+    "description": "At session Tmid (~30 minutes), readiness classifications are re-checked against current pack-file state. Any item whose readiness changed since T0 triggers drift investigation.",
+    "triggers": [
+      "Item gained a HARD_BLOCK defect since T0 → possible concurrent-write overwrite (DL-019 pattern)",
+      "Item's EW_Pattern changed since T0 → possible unauthorized write or cert wave interference",
+      "Item's question_state changed without corresponding REVISION_HISTORY.md entry → UNAUTHORIZED_STATE_CHANGE",
+      "Certified item newly flagged with DL-008 → CRITICAL — learner pool exposure introduced mid-session"
+    ],
+    "on_drift": "HALT all write agents. Spawn governance agent. Run G1-G5 reconciliation (per Session 31 runbook). Resolve before proceeding."
+  },
+
+  "phase_gate_thresholds": {
+    "description": "At Framework v2 phase authorization gates (S830, S900, S910), readiness metrics are verified against targets. Failure to meet a threshold blocks phase progression.",
+    "s830": {
+      "bf004_readiness_failure_rate": "≤ 44.7% (≥ 50% improvement from 89.5% v1 baseline)",
+      "bf007_identity_ambiguity": "ELIMINATED (0 compound-key collisions, 0 phantom items)",
+      "bf005_duplicate_review_rate": "≤ 1.25:1 (≥ 50% improvement from 2.5:1 v1 baseline)",
+      "bf003_reports_per_session": "≤ 4.5 (≥ 50% improvement from 9 v1 baseline)"
+    },
+    "s900": {
+      "bf004_readiness_failure_rate": "≤ 10%",
+      "bf005_duplicate_review_rate": "≤ 1.3:1",
+      "bf006_re_review_rate": "≤ 25%",
+      "bf008_sessions_per_wave": "≤ 2"
+    },
+    "s910": {
+      "bf003_reports_per_session": "≤ 4 (hard cap)",
+      "bf010_consumption_rate": "≥ 80%"
+    }
+  },
+
+  "implementation_reference": {
+    "readiness_engine": "scripts/engine/readiness/readiness_engine.js — exports classifyReadiness(), computeReadinessScore(), isBoardVisible(), generateReadinessReport()",
+    "gate_state_machine": "scripts/engine/readiness/gate_state_machine.js — exports isValidTransition(), executeTransition(), getAvailableTransitions()",
+    "artifact_reader": "scripts/engine/scan/artifact_reader.js — consumes certification_scan_artifact.json → produces readiness report"
+  }
+}

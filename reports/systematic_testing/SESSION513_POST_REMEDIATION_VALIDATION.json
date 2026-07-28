@@ -1,0 +1,50 @@
+{
+  "session": "513",
+  "agent": "E",
+  "type": "post_remediation_validation",
+  "timestamp": "2026-07-25",
+  "postflight_test_result": {
+    "governance_guard": "20/20 PASS",
+    "session_recovery": "12/12 PASS",
+    "total": "32/32 PASS"
+  },
+  "structural_integrity": {
+    "cases": 15,
+    "items": 75,
+    "items_certified": 75,
+    "cases_certified": 15,
+    "items_unprocessed": 0,
+    "cases_unprocessed": 0,
+    "certification_rate": "100%"
+  },
+  "invariants_preserved": {
+    "no_prompts_changed": true,
+    "no_exhibits_changed": true,
+    "no_choices_changed": true,
+    "no_answer_keys_changed": true,
+    "only_target_explanations_changed": true,
+    "only_authorized_state_fields_changed": true,
+    "no_pack_files_changed": true,
+    "no_may_files_changed": true,
+    "no_scoring_runtime_files_changed": true,
+    "no_700_series_files_changed": true,
+    "case_count_unchanged": true,
+    "item_count_unchanged": true
+  },
+  "diff_summary": {
+    "scored_cases2_js": "2 explanation remediations + 2 item state + 2 case state changes",
+    "files_modified": ["scored_cases2.js", "knowledge/REVISION_HISTORY.md"],
+    "reports_created": 7
+  },
+  "concurrency_final": {
+    "may_core_js": "clean",
+    "may_learner_state_js": "clean",
+    "pack_a_corrected_js": "clean",
+    "pack_b_corrected_js": "clean",
+    "pack_c_corrected_js": "clean",
+    "pack_d_corrected_js": "clean",
+    "pack_e_corrected_js": "clean",
+    "app_js": "clean",
+    "scoring_runtime": "clean"
+  }
+}

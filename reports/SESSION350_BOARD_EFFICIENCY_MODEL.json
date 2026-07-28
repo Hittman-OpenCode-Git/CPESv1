@@ -1,0 +1,260 @@
+{
+  "document": "SESSION350_BOARD_EFFICIENCY_MODEL",
+  "session": "S350",
+  "title": "Board Efficiency Model — Framework v1 (8 Boards) vs. Framework v2 (5 Boards)",
+  "board": "G — Board Efficiency Metrics",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Model — Board Efficiency Comparison",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION201_CONSOLIDATION_MODEL.json; SESSION202_FRAMEWORK_V2_ARCHITECTURE.json; SESSION203_ROLE_MODEL.json",
+  "purpose": "Compare Framework v1's 8-board model against Framework v2's 5-board consolidated model. Measure decision latency, duplicate decisions, and escalation rates to validate that the consolidation delivers the promised efficiency improvements.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "framework_v1_boards": {
+    "label": "Framework v1 — 8 Board Model",
+    "board_count": 8,
+    "composition": "6 content boards + 2 meta boards",
+    "source": "SESSION201_FRAMEWORK_V2_VISION.json §architecture; SESSION202_THROUGHPUT_MODEL.json §sec1",
+    "boards": [
+      {
+        "name": "Technical Review Board",
+        "type": "content",
+        "unique_scope_pct": 80,
+        "top_overlap_with": "EQS (55%)",
+        "function": "Technical accuracy verification — accounting calculations, concept application",
+        "v1_decision_latency": "1-2 sessions (review → verdict)",
+        "duplicate_scope": "55% overlap with EQS on explanation quality, 40% with DQS on distractor logic"
+      },
+      {
+        "name": "DQS — Distractor Quality Score",
+        "type": "content",
+        "unique_scope_pct": 55,
+        "top_overlap_with": "EQS (70%)",
+        "function": "Distractor plausibility, choice quality, wrong-answer educational value",
+        "v1_decision_latency": "1-2 sessions",
+        "duplicate_scope": "70% overlap with EQS — distractor explanations are the same artifact"
+      },
+      {
+        "name": "EQS — Explanation Quality Score",
+        "type": "content",
+        "unique_scope_pct": 45,
+        "top_overlap_with": "DQS (70%), Technical (60%)",
+        "function": "Explanation clarity, completeness, pedagogical value, citation standards",
+        "v1_decision_latency": "1-2 sessions",
+        "duplicate_scope": "70% overlap with DQS, 60% with Technical — EW fields examined 4-7× per session"
+      },
+      {
+        "name": "UIQS — User Interface Quality Score",
+        "type": "content",
+        "unique_scope_pct": 95,
+        "top_overlap_with": "QA Board (15%)",
+        "function": "UI rendering, cross-browser display, question layout",
+        "v1_decision_latency": "1 session",
+        "duplicate_scope": "15% overlap with QA Board — lowest overlap board"
+      },
+      {
+        "name": "Learner Safety Review",
+        "type": "content",
+        "unique_scope_pct": 20,
+        "top_overlap_with": "QA Board (70%)",
+        "function": "Learner-pool protection: wrong answers, misleading content, safety violations",
+        "v1_decision_latency": "1 session",
+        "duplicate_scope": "70% overlap with QA Board — heavily redundant"
+      },
+      {
+        "name": "QA Review Board",
+        "type": "content",
+        "unique_scope_pct": 75,
+        "top_overlap_with": "Learner Safety (70%)",
+        "function": "General quality assurance, cross-board consistency",
+        "v1_decision_latency": "1 session",
+        "duplicate_scope": "70% overlap with Learner Safety"
+      },
+      {
+        "name": "Certification Board",
+        "type": "content",
+        "unique_scope_pct": 85,
+        "top_overlap_with": "All boards (hierarchical)",
+        "function": "Final certification adjudication — signs off on all other board verdicts",
+        "v1_decision_latency": "1 session (after all other boards complete)",
+        "duplicate_scope": "Hierarchical — receives and re-reviews all other board verdicts"
+      },
+      {
+        "name": "Readiness Review Board",
+        "type": "meta",
+        "unique_scope_pct": 90,
+        "top_overlap_with": "Launch Board (60%)",
+        "function": "Session readiness assessment, governance compliance, phase-gate authorization",
+        "v1_decision_latency": "1 session (pre- and post-session)",
+        "duplicate_scope": "60% overlap with Launch Board on governance checks"
+      }
+    ],
+    "meta_boards": [
+      {
+        "name": "Launch Board",
+        "type": "meta",
+        "function": "Session initialization, board coordination, task assignment"
+      },
+      {
+        "name": "Archival Board",
+        "type": "meta",
+        "function": "Artifact archival, backup verification, legacy file management"
+      }
+    ],
+    "v1_inefficiencies": {
+      "cross_board_overlap": "DQS↔EQS overlap = 70%. Learner Safety↔QA overlap = 70%. Technical↔EQS overlap = 60%. The EW fields were the most duplicated review target.",
+      "decision_duplication": "Per-wave: ~500 items × 8 boards = ~4,000 board-level reviews. But distinctive review actions: ~500 items × (1.0 technical + 1.0 quality + 0.5 learner safety) = ~1,250 genuinely distinct. Duplication ratio: ~3.2:1 at board level.",
+      "escalation_pattern": "Items escalated from one content board to another 2-3 times before reaching Certification Board. No consolidated escalation path."
+    }
+  },
+
+  "framework_v2_boards": {
+    "label": "Framework v2 — 5 Board Model",
+    "board_count": 5,
+    "composition": "3 operational boards + 1 meta board + 1 measurement board",
+    "source": "SESSION202_FRAMEWORK_V2_ARCHITECTURE.json; SESSION203_ROLE_MODEL.json",
+    "boards": [
+      {
+        "name": "Registry Board",
+        "type": "operational",
+        "consolidates_from_v1": ["Technical Review Board (identity portion)", "DQS structural checks", "EQS structural checks"],
+        "function": "Identity resolution, canonical registry maintenance, compound-key management, delta ledger maintenance",
+        "unique_scope": "Identity management — no board overlap. Gate -1 and Gate 3 produce identity artifacts consumed by all other boards.",
+        "v2_target_decision_latency": "<0.1 sessions (automated — Gate -1 runs at T0)",
+        "v2_target_duplication": "0% — identity resolved once, consumed by all"
+      },
+      {
+        "name": "Quality Board",
+        "type": "operational",
+        "consolidates_from_v1": ["Technical Review Board", "DQS", "EQS", "UIQS", "Learner Safety Review", "QA Review Board"],
+        "function": "Unified quality review — 3-agent pass covering all 6 v1 content board scopes in a single review. All CAQS dimensions assessed by one board.",
+        "unique_scope": "Single board pass replaces 6 v1 boards. No cross-board overlap.",
+        "agents": ["Quality Agent A (Technical Accuracy + DQS)", "Quality Agent B (EQS + UIQS)", "Quality Agent C (Learner Safety + QA)"],
+        "v2_target_decision_latency": "<0.5 sessions (pre-flight catches structural issues; Quality Board only reviews READY items)",
+        "v2_target_duplication": "<5% (only necessary confirmatory checks between agents A/B/C)"
+      },
+      {
+        "name": "Governance Board",
+        "type": "operational",
+        "consolidates_from_v1": ["Readiness Review Board", "Launch Board"],
+        "function": "Session authorization, phase-gate enforcement, governance compliance, portfolio safety, escalation management",
+        "unique_scope": "Governance oversight — no content review function. Consumes scan artifacts and readiness classifications.",
+        "v2_target_decision_latency": "<0.25 sessions (automated governance guard checks + session arbiter)",
+        "v2_target_duplication": "0% — single governance authority"
+      },
+      {
+        "name": "Certification Board",
+        "type": "operational",
+        "consolidates_from_v1": ["Certification Board (v1)"],
+        "function": "Final certification adjudication. Reviews Quality Board verdicts and authorizes question_state transitions. No longer re-reviews all other board outputs — trusts Quality Board with spot-check verification.",
+        "unique_scope": "Go/No-Go on certification batches. 2-agent consensus (Certification Agent A + Certification Agent B).",
+        "v2_target_decision_latency": "<0.2 sessions",
+        "v2_target_duplication": "<10% (spot-check verification, not full re-review)"
+      },
+      {
+        "name": "Throughput Board",
+        "type": "measurement",
+        "consolidates_from_v1": ["NONE — new board type"],
+        "function": "Pure measurement — tracks all BF metrics, throughput, efficiency, and cost. No content review authority. No certification authority. Measurement only.",
+        "unique_scope": "Measurement-only accountability. Added by S202 Amendment 2 to ensure throughput targets are independently tracked."
+      }
+    ],
+    "v2_efficiency_gains": {
+      "board_count_reduction": "8 → 5 (-38%)",
+      "content_board_reduction": "6 → 1 (Quality Board replaces all 6 content boards)",
+      "cross_board_overlap_eliminated": "DQS↔EQS 70% overlap eliminated. Learner Safety↔QA 70% overlap eliminated. Technical↔EQS 60% overlap eliminated. Quality Board performs single unified pass.",
+      "decision_latency_reduction": "v1: 4-5 sessions per wave. v2 target: 1-2 sessions. -67%.",
+      "duplicate_decision_elimination": "v1: ~3.2:1 board-level duplication ratio. v2 target: <1.2:1."
+    }
+  },
+
+  "board_comparison_matrix": {
+    "metric": "boards_per_session",
+    "v1_value": "8.5 (range 8-9: all 8 boards operate most sessions; Launch and Readiness operate every session)",
+    "v2_target": "4.5 (range 4-5: not all boards convene every session. Registry runs every T0. Quality/Governance/Certification run per session. Throughput may not convene separately — metrics integrated into Governance report.)",
+    "reduction_pct": "-47%"
+  },
+
+  "board_efficiency_metrics": {
+    "BE-001_decision_latency": {
+      "metric": "Decision Latency per Board",
+      "description": "Time from item entering board queue to board issuing a verdict. Measured in session-equivalents.",
+      "formula": "decision_latency = sessions_elapsed between item_queued and board_verdict_issued",
+      "v1_baseline": {
+        "Technical Review Board": "1-2 sessions",
+        "DQS": "1-2 sessions",
+        "EQS": "1-2 sessions",
+        "Learner Safety": "1 session",
+        "QA Board": "1 session",
+        "Certification Board": "1 session (after all others)",
+        "Readiness Board": "1 session (pre/post)"
+      },
+      "v2_target": {
+        "Registry Board": "<0.1 sessions (automated T0)",
+        "Quality Board": "<0.5 sessions",
+        "Governance Board": "<0.25 sessions",
+        "Certification Board": "<0.2 sessions"
+      }
+    },
+    "BE-002_duplicate_decisions": {
+      "metric": "Duplicate Decision Rate",
+      "description": "Rate at which multiple boards issue the same verdict on the same item. In v1, DQS and EQS frequently agreed (95%+ of the time on EW assessments) but both issued independent verdicts.",
+      "formula": "duplicate_rate = duplicate_verdicts / total_board_verdicts",
+      "v1_baseline": "~55% of board verdicts are duplicates (same item, same finding, different board)",
+      "v2_target": "<5% (Quality Board single-pass eliminates nearly all cross-board duplication)"
+    },
+    "BE-003_escalation_rate": {
+      "metric": "Escalation Rate",
+      "description": "Rate at which items are escalated from one board to another for deeper review. High escalation indicates the pre-flight isn't catching issues before board review.",
+      "formula": "escalation_rate = items_escalated / items_processed × 100",
+      "v1_baseline": "~15-20% (items frequently escalated between Technical→EQS→DQS→Learner Safety before reaching Certification)",
+      "v2_target": "<5% (pre-flight catches issues before board review. Quality Board handles most concerns internally without escalation.)"
+    },
+    "BE-004_board_workload_balance": {
+      "metric": "Board Workload Balance",
+      "description": "Distribution of review work across boards. v1 had uneven workload — Technical Review Board handled 100% of items while Readiness Board handled ~20% (only escalated items).",
+      "formula": "imbalance_index = standard_deviation(items_per_board) / mean(items_per_board)",
+      "v1_baseline": "High imbalance — Technical and Certification boards touch every item; Readiness touches 20%; UIQS touches ~30%",
+      "v2_target": "Low imbalance — Registry/Governance touch every item (automated). Quality touches all READY items. Certification touches all CERTIFIABLE items. Imbalance is acceptable because boards have different scope depth."
+    }
+  },
+
+  "escalation_path_comparison": {
+    "v1_escalation": {
+      "description": "Ad-hoc escalation: any agent could escalate to any board. Items routinely bounced between 3-4 boards before certification.",
+      "typical_path": "Technical Review → DQS → EQS → Learner Safety → QA → Certification (6 stages, 3-4 of which duplicated work)",
+      "problem": "No formal escalation criteria. Agents escalated based on individual judgment, not documented gates."
+    },
+    "v2_escalation": {
+      "description": "Formal 3-tier escalation with gate conditions (per S203 Gate State Machine).",
+      "tiers": [
+        {"tier": 1, "name": "Quality Board Internal", "trigger": "Agent disagreement within Quality Board (2 agents CERTIFY, 1 HOLD)", "resolution": "Quality Board Lead adjudicates. No external escalation."},
+        {"tier": 2, "name": "Governance Board Escalation", "trigger": "DL-030 CONFIRMED or DL-008 on Certified item or readiness leakage event", "resolution": "Governance Board reviews and issues binding directive. Item may revert to REMEDIATE."},
+        {"tier": 3, "name": "Structural Repair", "trigger": "Identity failure, compound-key collision, JSON corruption", "resolution": "Manual structural repair required. Item enters EditorialQueue. Cannot be certified until repaired."}
+      ],
+      "forbidden_escalations": ["Quality Board → Technical Review (doesn't exist in v2)", "Certification Board → DQS/EQS (consolidated into Quality Board)", "Any board → Readiness Board (consolidated into Governance Board)"]
+    }
+  },
+
+  "trend_tracking": {
+    "label": "Board Efficiency Trend",
+    "measurements": [
+      {"session": "S350", "phase": "P0", "boards_operational": "8 v1 boards still active. V2 boards not yet operational.", "notes": "Measurement baseline established. V2 board efficiency tracking begins at S830."},
+      {"session": "S830", "phase": "P1 Exit", "target": "Boards/session ≤6, decision latency improved ≥50%", "notes": "First measurement of v2 board consolidation effectiveness."}
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_THROUGHPUT_METRICS.json",
+      "reports/SESSION350_REPORTING_SCORECARD.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/SESSION201_CONSOLIDATION_MODEL.json",
+      "reports/SESSION202_FRAMEWORK_V2_ARCHITECTURE.json",
+      "reports/SESSION203_ROLE_MODEL.json"
+    ]
+  }
+}

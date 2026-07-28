@@ -1,0 +1,368 @@
+{
+  "title": "S723 Governance Debt Register",
+  "date": "2026-07-26",
+  "agent": "Agent J — Governance Debt Auditor (S723 Closure Program)",
+  "methodology": "Cross-referenced DEFECT_LIBRARY.md (all DL entries, 35 total), SESSION_STATUS_2026-07-24.md (§3-7), CURRENT_BASELINES.md (§3 Defect & Risk), all 8 S723 sibling audit JSON reports, REVISION_HISTORY.md (16,696 lines). Key constraint: DEFECT_LIBRARY.md last updated 2026-07-25; CURRENT_BASELINES.md updated 2026-07-26 (S536/S537). Where dates diverge, CURRENT_BASELINES takes authority per AGENTS.md §9 ('2026-07-23 version is superseded').",
+
+  "metadata_debt": [
+    {
+      "item": "CognitiveLevel distribution — CAQS §6.2 noncompliant",
+      "scope": "2,500 MCQ items pool-wide",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Understand 50.76% (target 15%, +33.8pp over), Apply 46.56% (target 40%, +6.6pp), Analyze 0.40% (target 25%, −24.6pp), Evaluate 0.00% (target 15%, −15pp), Remember 2.28% (target 5%, −2.7pp). 0 Evaluate items confirmed genuine — all template-inflated. 10 Analyze items (4 genuine per DCS §2.3), rest DL-012 clones. Structural content gap: ~615 new Analyze items and ~375 new Evaluate items would be needed for CAQS compliance. Post-closure authoring task.",
+      "source": "SESSION723_COGNITIVELEVEL_AUDIT.json"
+    },
+    {
+      "item": "Difficulty distribution — CAQS §6.1 noncompliant",
+      "scope": "2,500 MCQ items pool-wide",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Moderate 48.36% (target 30%, +18.4pp), Difficult 3.52% (target 25%, −21.5pp), Very Difficult 0.00% (target 10%, −10pp). 0 Very Difficult items in a 2,500-item pool — psychometric gap. Structural content shortage: need ~537 Difficult+ items and ~250 Very Difficult items for CAQS compliance. Post-closure authoring task.",
+      "source": "SESSION723_DIFFICULTY_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "item": "DCS label-score mapping drift — 129 items mismatch",
+      "scope": "129 items across all 5 packs",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Difficulty label count (2,512 hits) exceeds DifficultyScore count (2,500) by 12. ~20 Easy items with wrong DifficultyScore, ~71 Score-2 items with wrong Difficulty label, ~25 Moderate items with wrong score, ~38 Difficult items with wrong score. Root cause: non-metadata text hits in stems/explanations (Pack A +3, Pack E +10). Also Pack D missing 1 Difficulty field (499 vs 500). Not learner-safety critical; metadata integrity fix deferred.",
+      "source": "SESSION723_DIFFICULTY_GOVERNANCE_AUDIT.json §dcs_label_score_mapping_drift"
+    },
+    {
+      "item": "DL-032 — Case bank uniform difficulty (zero variance)",
+      "scope": "420 case items across all 5 scored_cases files, 75 cases",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Every single case item labeled Moderate (DifficultyScore 3) with zero variance. Statistically implausible for a 420-item pool spanning 6 blueprint domains. ENHANCED_CASE_BASE partially remediated S530 (38 difficulty downgrades) but the broader 420-item pool has no calibration. 0 Certified items affected by miscalibration (label is present, just uniform). Non-blocking for learner pool but psychometric quality issue.",
+      "source": "DEFECT_LIBRARY.md DL-032; SESSION723_DIFFICULTY_GOVERNANCE_AUDIT.json"
+    },
+    {
+      "item": "DL-015 — Metadata Topic numbering shift (E.040–E.042)",
+      "scope": "3 items (P1-E-040, P1-E-041, P1-E-042)",
+      "severity": "Low",
+      "status": "CLOSED",
+      "detail": "Topic number labels shifted by +1 position relative to content. Topic descriptions are correct — only numeric labels are offset. Rendering engine does not use Topic numbers for any functionality. Cosmetic metadata issue. Fix in next certification wave.",
+      "source": "DEFECT_LIBRARY.md DL-015; SESSION723_RESIDUAL_MISALIGNMENT.json"
+    }
+  ],
+
+  "calibration_debt": [
+    {
+      "item": "174 severe DCS §3 misalignments — above closure threshold",
+      "scope": "174 items pool-wide, 171 Apply@Easy CL downgrades + 4 Analyze@DS1",
+      "severity": "Critical",
+      "status": "BLOCKING",
+      "detail": "S722A target: <20 severe misalignments. Current: 174. The 171 Apply@Easy items (73% should be Understand) are cosmetic wrappers where 'most appropriate' template language inflated CL. The 4 Analyze@DS1 items are DL-012 clone residue. S802 estimates ~7 batches ≤28 items to execute. DCS v1.1 compliance currently 92.6%. This is the dominant remaining calibration gate for S723 closure.",
+      "source": "SESSION723_CLOSURE_BASELINE.json §s723_closure_prerequisites_from_s722a; SESSION723_HISTORICAL_TRENDS.json §closing_assessment.gating_for_closure"
+    },
+    {
+      "item": "DL-031 — Definition-match difficulty inflation (~500 items)",
+      "scope": "~500 items across all 5 packs",
+      "severity": "High",
+      "status": "CARRY_FORWARD",
+      "detail": "Items where stem is a textbook definition and the correct answer is the term being defined are systematically labeled Moderate (3) when they should be Easy (1). Tests Bloom's Remember/Understand only. Six of seven sampled difficulty miscalibrations follow this pattern. Root cause: template-rotation pipeline assigned difficulty by position, not cognitive demand. No learner-safety impact (wrong difficulty label, not wrong answer). Deferred to post-700-series difficulty recalibration pass.",
+      "source": "DEFECT_LIBRARY.md DL-031; SESSION723_DIFFICULTY_GOVERNANCE_AUDIT.json §open_defects"
+    },
+    {
+      "item": "DCS v1.1 — 6 unresolved conditions (PRODUCTION WITH AMENDMENTS)",
+      "scope": "DCS v1.1 governing standard (677 lines)",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "S722A Agent M ratified DCS v1.1 as PRODUCTION WITH AMENDMENTS with 6 conditions: C1 (High, §10 vs §13.1 confidence-gate contradiction), C2 (High, AMG v1.0 update), C3 (Medium, multi-level tree chaining), C4 (Medium, case-bank position-CL triggers), C5 (Medium, human-tiebreak escalation path), C6 (Low, expand §15 to case studies). All 6 conditions are standard-documentation amendments, not calibration-breaking defects. Post-closure DCS v1.2 update.",
+      "source": "SESSION723_CLOSURE_BASELINE.json §dcs_calibration.dcs_v11_conditions"
+    },
+    {
+      "item": "Analyze/Evaluate structural content gap — 0 genuine Evaluate, 4 genuine Analyze",
+      "scope": "2,500-item pool (target: 25% Analyze = 625, 15% Evaluate = 375)",
+      "severity": "Informational",
+      "status": "CARRY_FORWARD",
+      "detail": "Confirmed by S722A definitive: 0 genuine Evaluate items exist. 4 genuine Analyze items confirmed (P1B-A-106, P1B-A-108, P1-B-074, P1-AD-075). All other Analyze/Evaluate labels were template-inflated and since downgraded. This is a content-authoring gap, not a calibration defect — the question bank simply was not authored to test Analyze or Evaluate at the CAQS target proportions. Requires new question authoring during post-closure maintenance.",
+      "source": "SESSION723_HISTORICAL_TRENDS.json §structural_gaps; SESSION723_COGNITIVELEVEL_AUDIT.json §gaps"
+    }
+  ],
+
+  "reliability_debt": [
+    {
+      "item": "DL-008 — ExplanationWrong[CorrectChoice] non-empty on Certified items",
+      "scope": "67 Certified items per CURRENT_BASELINES.md (55 Pack C Sections A+B + 10 Pack D + 2 Pack A: P1-B-001, P1-B-025). S722A refuted all 67 as DL-029 scan artifacts and found 1 genuine survivor: P1-CC-050. CURRENT_BASELINES not updated post-S801/S802. Status DISPUTED across sources.",
+      "severity": "Critical",
+      "status": "BLOCKING",
+      "detail": "Three sources disagree: (a) CURRENT_BASELINES.md (2026-07-26): 67 Certified DL-008 items. (b) S722A definitive execution (2026-07-26): 0 Certified DL-008 except P1-CC-050 (Pack C Section C, CC=C, EW-C non-empty with variance analysis text — escaped all sweeps via DL-016 dual-block architecture). (c) S723 Governance Preservation Audit (Agent V, 2026-07-26): P1-CC-050 checked and found 'DL-008 CLEAN' (CC=B, EW_B EMPTY) — conflicting with S722A which found CC=C, EW_C non-empty. (d) S802 (2026-07-26): claims '0 Certified DL-008' and 'P0 queue: EMPTY'. The DISCREPANCY on P1-CC-050 between Agent V's two findings (S722A finding vs. S723 spot-check) suggests either an undocumented between-session fix, or a DL-016 block read error in one of the two checks. ALSO: Pack C Section B has at minimum 2 confirmed non-Certified DL-008 items (BC-001, BC-010) per 2026-07-23 autonomous run. The REVISION_HISTORY.md 2026-07-23 autonomous run also reported '52 Certified items carry DL-008' in Pack C Sections A+B — this was from before S722A refutation. REQUIRES: independent per-item verification of all 2,500 items using Function-constructor parse (not regex forward-scan). None of the 3 conflicting sources can be trusted at face value per AGENTS.md §5 dual-verification rule.",
+      "source": "CURRENT_BASELINES.md §3; SESSION_STATUS_2026-07-24.md §3; SESSION723_CLOSURE_BASELINE.json; SESSION723_GOVERNANCE_PRESERVATION_AUDIT.json; REVISION_HISTORY.md (lines 16486-16501)"
+    },
+    {
+      "item": "DL-021 — Absent distractor ExplanationWrong fields (Pack E Section C)",
+      "scope": "95 non-Certified items (300 absent distractor EW slots). 5 Certified items fixed (Autonomous Run Part 4).",
+      "severity": "High",
+      "status": "CARRY_FORWARD",
+      "detail": "Pack E Section C template pipeline suppressed all distractor ExplanationWrong generation. 5 of 100 items are Certified with distractor explanations authored (P1E-C-013, C-054, C-055, C-074, C-083). 95 non-Certified items have no distractor feedback. When a learner selects a wrong answer on a Certified Section C item, no educational feedback is shown. No learner pool exposure for non-Certified items. Requires authoring 285 distractor explanations from scratch. Content-authoring task for a future certification wave.",
+      "source": "DEFECT_LIBRARY.md DL-021; CURRENT_BASELINES.md §3"
+    },
+    {
+      "item": "DL-026 — Empty non-CorrectChoice ExplanationWrong slots (cross-pool)",
+      "scope": "50 In Audit items in Pack D Section C per CURRENT_BASELINES. Extensive history: 1,005 items originally → massive autonomous-run remediation → ~6 Certified items remaining. CURRENT_BASELINES reports 50 In Audit.",
+      "severity": "High",
+      "status": "CARRY_FORWARD",
+      "detail": "All 50 remaining items are In Audit (NOT Certified). Zero learner pool exposure. Blocks certification of Pack D Section C. The autonomous-run remediation history spans multiple correction entries in DEFECT_LIBRARY.md with conflicting counts across sessions (DL-016 scan artifacts). Requires authoring distractor explanations for remaining empty slots. Defer to next certification wave.",
+      "source": "CURRENT_BASELINES.md §3; DEFECT_LIBRARY.md DL-026"
+    },
+    {
+      "item": "DL-016 — Metadata-block ChoiceA-D +1 offset (learner-safety on Certified items)",
+      "scope": "ALL Pack A sections (A–F), likely Packs C and D dual-block sections. Affects Certified items where ExplanationWrong fields describe wrong item's choices.",
+      "severity": "High",
+      "status": "BLOCKING",
+      "detail": "Defect Library severity upgraded from Low→High (Session 64, 2026-07-24). Confirmed learner-safety risk: P1-A-005 metadata EW describes P1-A-004's topic; P1-A-030 metadata EW describes cash-flow question, not retained earnings; P1-D-030 metadata EW describes JIT, not overhead allocation; P1-DD-025 metadata EW_B describes reciprocal cost method, not margin of safety. The metadata block's ExplanationWrong fields describe a DIFFERENT item's choices — learner sees feedback about a completely unrelated topic. Rule G-NEW-1, G-NEW-3 block certification in dual-block packs until reconciled. CRITICAL absence from CURRENT_BASELINES.md §3: this HIGH-severity defect does not appear in the defect/risk tracking section at all. SESSION_STATUS lists it as LOW ('DL-015/016 metadata numbering shifts — Cosmetic'), contradicting the defect library's HIGH rating. This is a governance documentation gap AND a learner-safety reliability gap.",
+      "source": "DEFECT_LIBRARY.md DL-016; NOT present in CURRENT_BASELINES.md §3 defect register"
+    },
+    {
+      "item": "FD-045 — Missing core content fields (Pack D, structural)",
+      "scope": "1 item (P1-FD-045), Unprocessed",
+      "severity": "High",
+      "status": "CARRY_FORWARD",
+      "detail": "Missing CorrectChoice, ExplanationCorrect, Stem, Choices fields. Has question_state='Unprocessed', VerifiedChecks, and ExplanationWrongA/B/C/D but no learner-facing content. Cannot be rendered in exam sessions. Blocks certification. Tracked in AGENTS.md §13.2 and CURRENT_BASELINES.md §6. No learner pool exposure (Unprocessed). Post-closure structural repair.",
+      "source": "SESSION723_CROSSPACK_CONSISTENCY.json §per_pack.D.structural_anomalies; CURRENT_BASELINES.md §6"
+    },
+    {
+      "item": "DL-013 — Template boilerplate distractor explanations (851 fields remaining)",
+      "scope": "851 fields across Pack A (238), Pack C (357), Pack D (256). All in Unprocessed items. Down from 2,587 originally (67.1% remediated).",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Zero Certified items affected. Zero learner pool exposure. Blocks certification of affected items only. Deferred to next certification waves. Per-REVISION_HISTORY: extensive remediation completed in pre-700 certification waves.",
+      "source": "CURRENT_BASELINES.md §3; SESSION_STATUS_2026-07-24.md §3"
+    },
+    {
+      "item": "DL-003 — Absolute language (958 hits)",
+      "scope": "958 instances of 'always', 'never', 'only', 'exclusively', 'must', 'exactly', 'impossible' across 2,500 questions",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Pedagogical quality. 'Always' and 'never' are almost never justified in CMA choices — flag as errors. 'Only' may be justified in narrow technical contexts. Requires human editorial review per item, infeasible for closure timeline. Not learner-safety critical. Defer to maintenance mode.",
+      "source": "DEFECT_LIBRARY.md DL-003"
+    },
+    {
+      "item": "DL-004 — Vague qualifiers (410 hits)",
+      "scope": "410 instances of 'usually', 'normally', 'generally', 'often', 'typically'",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Vague qualifiers reduce item discrimination. Most usage is legitimate ('Costs are generally classified as...' in knowledge-level items). Flagged for human review. Defer to maintenance mode.",
+      "source": "DEFECT_LIBRARY.md DL-004"
+    },
+    {
+      "item": "DL-005 — Distractor similarity (450 warnings)",
+      "scope": "450 warnings across 2,500 MCQ questions. Includes 100% identical distractors. Pack E has highest concentration.",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Distractor engineering quality. 100% identical distractors found (e.g., P1B-C-194 B/D, P1B-D-092 A/D). Psychometric underperformance risk. Defer to maintenance mode — requires per-item distractor rewrites.",
+      "source": "DEFECT_LIBRARY.md DL-005"
+    },
+    {
+      "item": "DL-009 — Incorrect ASC authority citations (residual)",
+      "scope": "10 Pack C items fixed. ~473 remaining ASC citations verified correct in prior scan (stale).",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "P1-A-012 cites ASC 210 instead of ASC 450 (loss contingencies). P1-BC-065 area uses ASC 450 in budget context (wrong domain). Defect Library Resolved section claims broader citation audit completed with ~473 verified correct — but audit scope is stale from 2026-07-22. Not listed as active risk in CURRENT_BASELINES. Likely residual is small but unverified.",
+      "source": "DEFECT_LIBRARY.md DL-009"
+    },
+    {
+      "item": "DL-010 — Misassigned choice explanations (semantic audit required)",
+      "scope": "1 confirmed QID (P1-A-029). Full scope unknown — requires semantic/NLP scan.",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "ExplanationWrong[X] describes a different choice's error. P1-A-029 prototype: EW-A described correct answer, EW-B described different distractor. No automated validator can reliably detect this — requires semantic analysis. Only 1 QID confirmed. Defer to targeted review in next certification wave.",
+      "source": "DEFECT_LIBRARY.md DL-010"
+    },
+    {
+      "item": "DL-012 — Section E clonal redundancy (140 template clones)",
+      "scope": "140 clone items across Pack C/D Section E (28 groups × 5 items). 132 Archived, 0 Certified.",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Template-generated clones — stem varies only by company name, answer letters positionally rotated, distractor explanations verbatim identical within group. 132 of 140 archived. 0 in learner pool. 8 seeds remain Unprocessed. Remediation plan documented (archive clones, re-key seeds). All items Unprocessed — no learner pool exposure. Defer to post-closure consolidation.",
+      "source": "DEFECT_LIBRARY.md DL-012; CURRENT_BASELINES.md §3"
+    },
+    {
+      "item": "DL-025 — Empty non-CorrectChoice EW slots (Pack A, WAVE 2 deferred)",
+      "scope": "5 non-Certified items (P1-B-001, B-004, B-006, B-025, D-070)",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "51 Certified items fixed (WAVE 1 autonomous run). 5 non-Certified remaining. No learner pool exposure. Template rotation artifact. Requires authoring 5+ distractor explanations.",
+      "source": "DEFECT_LIBRARY.md DL-025"
+    },
+    {
+      "item": "DL-028 — DL-013 remediation tooling regression",
+      "scope": "Process defect — affects future DL-013 sweeps",
+      "severity": "Low",
+      "status": "CARRY_FORWARD",
+      "detail": "DL-013 short-form rewrite template left empty slots, inadvertently expanding DL-026. Tooling fix documented but not implemented. No current learner impact. Fix when DL-013 remediation resumes.",
+      "source": "DEFECT_LIBRARY.md DL-028"
+    },
+    {
+      "item": "Pack E Section C — State-Certified but structurally incomplete",
+      "scope": "95 Certified items with DL-021 (absent distractor EW)",
+      "severity": "High",
+      "status": "CARRY_FORWARD",
+      "detail": "All 100 Section C items carry question_state='Certified' but 95 have absent distractor ExplanationWrong fields. Governance state and structural quality are decoupled. 5 items have authored distractor EW. Learners selecting wrong answers on the 95 items see no feedback. Certified items should not have missing distractor explanations per CAQS §4.1.",
+      "source": "SESSION723_CROSSPACK_CONSISTENCY.json §per_pack.E.notes"
+    }
+  ],
+
+  "documentation_debt": [
+    {
+      "item": "DL-016 absent from CURRENT_BASELINES.md §3 defect/risk register",
+      "scope": "1 document (CURRENT_BASELINES.md), 1 HIGH-severity defect unregistered",
+      "severity": "High",
+      "status": "BLOCKING",
+      "detail": "DL-016 is rated HIGH in DEFECT_LIBRARY.md (upgraded Session 64, 2026-07-24) with confirmed learner-safety risk (Wrong-topic ExplanationWrong text visible to learners on Certified items). It does NOT appear anywhere in CURRENT_BASELINES.md §3 (Defect & Risk Status) which lists CRITICAL, HIGH, MEDIUM, and LOW risks. SESSION_STATUS_2026-07-24.md §6 lists it as LOW ('DL-015/016 metadata numbering shifts — Cosmetic'), contradicting DEFECT_LIBRARY's HIGH rating. The DCS v1.1 §8.5, QUESTION_METADATA_STANDARD.md §9.4, and ALIGNMENT_MAINTENANCE_GUIDE.md all treat DL-016 as a certification-blocking condition. CURRENT_BASELINES.md is the authoritative baseline document — it MUST register this defect or document its resolution.",
+      "source": "DEFECT_LIBRARY.md DL-016 (HIGH, Open); CURRENT_BASELINES.md §3 (DL-016 absent); SESSION_STATUS_2026-07-24.md §6 (listed as 'Low — Cosmetic')"
+    },
+    {
+      "item": "DL-008 count: 3 conflicting sources, no authoritative figure",
+      "scope": "CURRENT_BASELINES (67 Certified), S722A (1 survivor: P1-CC-050), S723 Agent V (P1-CC-050 CLEAN), S802 (0 Certified).",
+      "severity": "Critical",
+      "status": "BLOCKING",
+      "detail": "CURRENT_BASELINES.md §3 reports 67 Certified DL-008 items (55 Pack C + 10 Pack D + 2 Pack A). S722A definitive execution (26-agent) reported independently verifying all 67 as DL-029 false positives and finding 1 genuine survivor: P1-CC-050 (CC=C, EW-C non-empty). S723 Governance Preservation Audit (Agent V) checked P1-CC-050 and found CC=B, EW_B EMPTY — status 'DL-008 CLEAN'. S802 (governance correction session) claims '0 Certified DL-008, P0 queue EMPTY'. Four sources, four different answers. Per AGENTS.md §5, every self-reported claim must be cross-checked against raw file/line evidence. REQUIRED: independent third-agent verification of P1-CC-050 using Function-constructor parse + full-scan of all 2,500 items. This is the single most critical documentation gap blocking closure confidence.",
+      "source": "CURRENT_BASELINES.md §3; SESSION723_GOVERNANCE_PRESERVATION_AUDIT.json §spot_check_dl008_resolved; SESSION723_CLOSURE_BASELINE.json §dl008_survivor_qid; REVISION_HISTORY.md lines 16486-16501"
+    },
+    {
+      "item": "SESSION_STATUS_2026-07-24.md — stale certified count (2,031 vs actual 2,181)",
+      "scope": "1 document, +150 undercount",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "Reports 2,031 Certified (81.2%). Actual is 2,181 (87.2%) per CURRENT_BASELINES.md and 7 independent verification sources. S802 correction attributed +150 items to Pack C Sections C+D (+100) and Pack D Section C (+50) being discovered certified. The SESSION_STATUS file is superseded by CURRENT_BASELINES but serves as a historical reference. Its §8 (next session sequence) is stale. Recommend fresh SESSION_STATUS generation or mark with SUPERSEDED header.",
+      "source": "SESSION_STATUS_2026-07-24.md §1; CURRENT_BASELINES.md §2"
+    },
+    {
+      "item": "DEFECT_LIBRARY.md DL-008 header text stale — claims '175 remaining in Pack C'",
+      "scope": "1 defect entry header (DL-008), 1 line of stale text",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "DL-008 header text says: 'Status: Open — 175 remaining in Pack C (discovered 2026-07-23 corrective session)'. This refers to the 2026-07-23 Tier 0 corrective session finding, which was long since remediated in subsequent autonomous runs and the 6-agent orchestration. The detailed correction entries in the same defect entry show all 539 total identified as resolved, with the current state disputed (see documentation debt item for DL-008 count discrepancy). The stale header text is misleading and should be updated to reflect post-S722A status.",
+      "source": "DEFECT_LIBRARY.md DL-008 §Status field"
+    },
+    {
+      "item": "REVISION_HISTORY.md — no entry for 700-series between S722A and S723",
+      "scope": "Multiple 700-series sessions missing revision entries (S801, S802, S803 pre-flight)",
+      "severity": "Low",
+      "status": "CARRY_FORWARD",
+      "detail": "S802 (Governance Correction — Read-Only) and any bridging sessions between S722A and S723 do not have REVISION_HISTORY.md entries. Per AGENTS.md §4, every session must produce at minimum a REVISION_HISTORY.md entry as its closing action. The 700-series sessions that performed metadata-only operations should each have an entry documenting items modified and certification state preserved.",
+      "source": "AGENTS.md §4; REVISION_HISTORY.md (last entry: S722A, line ~16500)"
+    },
+    {
+      "item": "DCS v1.1 — 6 unresolved amendment conditions (documentation gap)",
+      "scope": "1 governing standard document, 6 conditions",
+      "severity": "Medium",
+      "status": "CARRY_FORWARD",
+      "detail": "S722A Agent M granted 'PRODUCTION WITH AMENDMENTS' with 6 conditions for DCS v1.1. The conditions are standard-track amendments (not operational blocks) but represent incomplete governance documentation. C1 (confidence-gate contradiction between §10 and §13.1) and C2 (AMG v1.0 update) are HIGH priority documentation fixes. Post-closure DCS v1.2 update should resolve all 6.",
+      "source": "SESSION723_CLOSURE_BASELINE.json §dcs_calibration.dcs_v11_conditions"
+    },
+    {
+      "item": "P1-CC-050 DL-008 status: two Agent V findings conflict (unreconciled)",
+      "scope": "1 QID, 2 conflicting spot check results from same agent persona",
+      "severity": "Critical",
+      "status": "BLOCKING",
+      "detail": "S722A Agent V (regression & post-flight): found P1-CC-050 with CC=C, EW-C non-empty (variance analysis text). S723 Agent V (governance preservation audit): found P1-CC-050 with CC=B, EW_B empty, status 'DL-008 CLEAN'. Same QID, same agent persona (V), different sessions, different findings. Possible explanations: (a) P1-CC-050 was silently fixed between S722A and S723 without revision entry (violates AGENTS.md §4), (b) one of the two reads from the wrong block due to DL-016 dual-block architecture, (c) one of the two reads a different QID due to line-position drift. This cannot be resolved without raw file/line inspection by a third independent agent.",
+      "source": "SESSION723_GOVERNANCE_PRESERVATION_AUDIT.json §spot_check_dl008_resolved.P1-CC-050; SESSION723_CLOSURE_BASELINE.json §defect_inventory.open.critical"
+    },
+    {
+      "item": "Root directory violations (59 items, non-critical)",
+      "scope": "59 files in root violating Constitution §11.1/§11.4",
+      "severity": "Low",
+      "status": "CARRY_FORWARD",
+      "detail": "may-core.js and may-learner-state.js (authorized runtime exceptions per CURRENT_BASELINES, but not added to Constitution §11.1 permitted list). 52 .bak files in root (should be in backups/). temp_qid_sample.json, $null, a+b artifacts. Root directory directory structure is clean (12 permitted directories). File cleanup task — no governance impact.",
+      "source": "SESSION723_GOVERNANCE_PRESERVATION_AUDIT.json §root_directory_compliance"
+    }
+  ],
+
+  "dl016_status_check": {
+    "status": "Open — rated HIGH in DEFECT_LIBRARY.md but UNREGISTERED in CURRENT_BASELINES.md",
+    "severity_in_defect_library": "HIGH (upgraded from Low by Session 64, 2026-07-24)",
+    "in_current_baselines_risk_section": false,
+    "in_session_status": true,
+    "session_status_severity": "Low (listed as 'DL-015/016 metadata numbering shifts — Cosmetic')",
+    "resolution": "NOT RESOLVED. Defect Library entry last updated 2026-07-25 and still shows Status: 'Open — SCOPE EXPANDED'. The gap between DEFECT_LIBRARY (HIGH) and CURRENT_BASELINES (unregistered) / SESSION_STATUS (Low) represents a governance documentation failure. The defect is learner-safety relevant: on Certified items in Packs A/C/D with dual-block architecture, the ExplanationWrong fields in the metadata block describe a DIFFERENT item's distractors than what the learner sees. A learner reviewing wrong answers would see feedback about a completely unrelated topic.",
+    "confirmed_impact": "P1-A-005 metadata EW describes P1-A-004's ASC 606 scenario. P1-A-030 metadata EW describes cash-flow, not retained earnings. P1-D-030 metadata EW describes JIT, not overhead allocation. P1-DD-025 metadata EW_B describes reciprocal cost method, not margin of safety.",
+    "recommendation": "Either (a) repair DL-016 across Packs A/C/D to align metadata-block ChoiceA-D with content-block Choices.A-D, or (b) if the rendering engine reads from content-block choices only and metadata-block EW fields are never rendered (needs code-path verification), downgrade to Informational and document the rendering-path finding in DEFECT_LIBRARY.md. CURRENT_BASELINES.md MUST register this defect at its actual severity."
+  },
+
+  "cross_report_dl008_status_analysis": {
+    "description": "Five S723-era sources give conflicting DL-008 Certified counts. This table documents each source's claim and its reliability rating.",
+    "sources": [
+      {
+        "source": "CURRENT_BASELINES.md §3 (2026-07-26)",
+        "claim": "67 Certified DL-008 (55 Pack C + 10 Pack D + 2 Pack A)",
+        "reliability": "Stale — not updated since pre-S801. Reflects Session 86-87 data before S722A refutation.",
+        "methodology": "Unknown (likely pre-S722A scan)"
+      },
+      {
+        "source": "SESSION_STATUS_2026-07-24.md §3 (2026-07-24)",
+        "claim": "67 Certified DL-008 (same breakdown)",
+        "reliability": "Stale — same era as CURRENT_BASELINES. Pre-dates all 700-series sessions.",
+        "methodology": "Unknown"
+      },
+      {
+        "source": "S722A Definitive Execution — Agent M/V (2026-07-26)",
+        "claim": "0 Certified DL-008 except P1-CC-050 (1 survivor)",
+        "reliability": "Medium — 26-agent deployment. All 67 individually verified via Function constructor parse. But P1-CC-050 finding conflicts with S723 Agent V's check.",
+        "methodology": "Function constructor parse, per-item CC extraction"
+      },
+      {
+        "source": "S723 Governance Preservation Audit — Agent V (2026-07-26)",
+        "claim": "P1-CC-050 is DL-008 CLEAN (CC=B, EW_B EMPTY)",
+        "reliability": "Medium — spot-check of 1 item only. Conflicts with S722A Agent V's finding on same QID.",
+        "methodology": "Direct file grep + field extraction (possibly DL-016-affected)"
+      },
+      {
+        "source": "S802 Governance Correction Session (2026-07-26)",
+        "claim": "0 Certified DL-008. P0 queue: EMPTY.",
+        "reliability": "Unknown — read-only session, no raw-file evidence provided (per SESSION723_CLOSURE_BASELINE.json).",
+        "methodology": "Unknown (not documented)"
+      },
+      {
+        "source": "S723 Closure Baseline — Agent B (2026-07-26)",
+        "claim": "1 confirmed survivor (P1-CC-050). DISCREPANCY noted.",
+        "reliability": "High — acknowledges the conflict between sources rather than claiming one is correct.",
+        "methodology": "Cross-referenced all available sources"
+      }
+    ],
+    "verdict": "UNABLE TO AUTHORITATIVELY DETERMINE DL-008 CERTIFIED COUNT. Required: independent third-agent full-pool parse with Function constructor, per-item CC + EW[CC] extraction, zero dependency on prior scan results. Until this is done, assume the worst case (67 Certified per CURRENT_BASELINES) per conservative learner-safety principle."
+  },
+
+  "summary": {
+    "total_debt_items": 32,
+    "blocking_count": 5,
+    "carry_forward_count": 23,
+    "closed_count": 1,
+    "blocking_items": [
+      "DL-008 ExplanationWrong[CorrectChoice] — 67 Certified items (disputed count, worst case assumed)",
+      "DL-016 metadata-block Choice shift — HIGH, absent from CURRENT_BASELINES",
+      "174 severe DCS §3 misalignments — above <20 closure threshold",
+      "DL-016 absent from CURRENT_BASELINES.md §3 (documentation gap for HIGH-severity defect)",
+      "DL-008 count: 4 conflicting sources, no authoritative figure (documentation gap)"
+    ],
+    "blocking_detail": "Of the 5 blocking items, 2 are documentation gaps (DL-016 unregistered, DL-008 count disputed). The other 3 are learner-safety or calibration issues. Resolution of the documentation gaps requires: (1) register DL-016 in CURRENT_BASELINES at HIGH severity, (2) perform independent full-pool DL-008 scan to establish ground truth, (3) resolve the S722A-vs-S723 P1-CC-050 discrepancy. The calibration gap (174 severe DCS §3) is execution-estimable at ~7 batches ≤28 items."
+  },
+
+  "key_risks_not_tracked_in_current_baselines": [
+    {
+      "risk": "DL-016 — Metadata-block ChoiceA-D +1 offset (High severity, learner-safety)",
+      "present_in_defect_library": true,
+      "present_in_current_baselines_risk_section": false,
+      "present_in_session_status": true,
+      "session_status_severity_rating": "Low (understated by 2 levels)"
+    },
+    {
+      "risk": "Pack E Section C — 95 Certified items with absent distractor EW (DL-021)",
+      "present_in_defect_library": true,
+      "present_in_current_baselines_risk_section": true,
+      "current_baselines_rating": "HIGH",
+      "note": "CURRENT_BASELINES says '95 non-Certified items' — but S723 Cross-Pack audit found Pack E Section C items carry question_state='Certified'. This is another discrepancy."
+    },
+    {
+      "risk": "Pack D Section C DL-026 — 50 In Audit items, empty distractor slots",
+      "present_in_current_baselines": true,
+      "current_baselines_rating": "HIGH"
+    }
+  ],
+
+  "verdict": "DEBT_REGISTER_COMPLETE",
+  "verdict_note": "32 items of governance debt identified across metadata (5), calibration (4), reliability (15), and documentation (8) dimensions. 5 items are BLOCKING — cannot close S723 governance program without resolving them. 23 items accepted as CARRY-FORWARD (post-closure maintenance). 1 item CLOSED (DL-015, cosmetic). The two most critical unresolved issues are: (1) DL-008 Certified count ground truth — 4 sources give incompatible answers; (2) DL-016 not registered in CURRENT_BASELINES.md despite HIGH severity with confirmed learner-safety impact. Both are documentation-governance failures that undermine closure confidence. Independent full-pool verification required before any S723 closure declaration."
+}

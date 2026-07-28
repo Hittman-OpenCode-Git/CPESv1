@@ -1,0 +1,222 @@
+{
+  "session": "802",
+  "agent": "T",
+  "title": "Simulation Program — Portfolio Readiness via 3 Candidate Profiles",
+  "date": "2026-07-26",
+  "methodology": {
+    "pool": "2,181 Certified MCQ items across Packs A-E",
+    "draw_size": 100,
+    "profiles": [
+      "Strong candidate: scores >85%, tests gold-standard challenge adequacy",
+      "Average candidate: scores ~70%, tests silver-tier educational value",
+      "Misconception-prone candidate: selects plausible wrong answers, tests distractor feedback adequacy"
+    ],
+    "sampling": "Random draw weighted by pack size: A=22%, B=23%, C=16%, D=16%, E=23%",
+    "verification": "Raw ExplanationCorrect/ExplanationWrong field extraction via PowerShell regex on all 5 pack files"
+  },
+  "delivery_pool": {
+    "total_certified": 2181,
+    "pack_breakdown": {
+      "A": { "certified": 481, "tier": "Silver", "dqs_grade": "B (72/100)", "ec_avg_chars": 345, "ew_fill_pct": 100 },
+      "B": { "certified": 500, "tier": "Gold", "dqs_grade": "A (85/100)", "ec_avg_chars": 250, "ew_fill_pct": 100 },
+      "C": { "certified": 350, "tier": "Bronze", "dqs_grade": "C (65/100)", "ec_avg_chars": 179, "ew_fill_pct": 85 },
+      "D": { "certified": 350, "tier": "Bronze", "dqs_grade": "C- (63/100)", "ec_avg_chars": 182, "ew_fill_pct": 85 },
+      "E": { "certified": 500, "tier": "Silver", "dqs_grade": "B+ (78/100)", "ec_avg_chars": 108, "ew_fill_pct": 100 }
+    },
+    "clone_free_unique_concepts": "~1,510 (A≈400 + B≈500 + C≈75 + D≈35 + E≈500)",
+    "clone_collision_probability_100_draw": "98.4%",
+    "clone_zones": {
+      "C_draw_16_of_350": { "unique_concepts": "~75 among Certified", "collision_prob": "80.0%", "redundancy_factor": "~4.7 items per concept" },
+      "D_draw_16_of_350": { "unique_concepts": "~35 among Certified", "collision_prob": "96.8%", "redundancy_factor": "~10.0 items per concept" }
+    },
+    "explanation_quality_profile": {
+      "ec_length_mean_by_pack": { "A": 345, "B": 250, "C": 179, "D": 182, "E": 108 },
+      "ec_length_pack_E_percentiles": { "p10": 53, "p25": 59, "p50": 67, "p75": 76, "p90": 95 },
+      "pack_E_ec_below_50_chars": "24 of 500 (4.8%)",
+      "pack_E_ec_below_100_chars": "453 of 500 (90.6%)",
+      "pack_E_zero_authoritative_citations": "461 of 500 (92.2%) — no ASC/COSO/GAAP/IFRS/FASB references",
+      "items_meeting_caqs_41_standard": "~37% pool-wide (S800 estimate)"
+    },
+    "distractor_feedback_availability": {
+      "explanationwrong_fill_rates": {
+        "A_B_E": "100% of distractor slots filled across all 1,500 Certified items",
+        "C_D": "~93% distractor fill among Certified items (empties concentrated in non-Certified sections C-F)"
+      },
+      "boilerplate_risk": {
+        "DL013_active_fields": "~184 boilerplate slots in Pack C/D non-Certified sections (0 in delivery pool)",
+        "DL013_resolved_for_certified": "All DL-013 boilerplate in Certified items rewritten during S700-series remediation"
+      }
+    }
+  },
+  "simulation_results": {
+    "strong_candidate": {
+      "profile": "Scores >85% on all items. Tests gold-standard challenge adequacy.",
+      "expected_score": "~90-95%",
+      "draw_composition": {
+        "pack_A": "~22 items (EC avg 345 chars, good explanations)",
+        "pack_B": "~23 items (EC avg 250 chars, gold standard — ASC/COSO citations, deep distractor analysis)",
+        "pack_C": "~16 items (EC avg 179 chars, moderate depth, ~1.5 clone siblings in draw)",
+        "pack_D": "~16 items (EC avg 182 chars, moderate depth, ~3 clone siblings in draw)",
+        "pack_E": "~23 items (EC avg 108 chars, median 67 chars, 92% no authoritative citation)"
+      },
+      "educational_feedback_adequacy": "PASS",
+      "feedback_detail": {
+        "correct_answers": "~90-95 items correct. ExplanationCorrect quality is adequate for review: Pack B gold-standard explanations (avg 250 chars, ASC/COSO citations), Pack A strong (avg 345 chars). Weak point: Pack E correct-answer explanations average 108 chars, median 67 — a strong candidate reviewing Pack E correct answers gets only a single sentence with no standard reference.",
+        "wrong_answers": "~5-10 items wrong. On wrong answers: Pack A/B/E have 100% distractor fill => all wrong answers receive distractor feedback. Pack C/D have ~93% fill => at most 1 wrong answer gets no distractor explanation. Overall: ~95%+ of wrong answers receive feedback."
+      },
+      "challenge_adequacy": "PASS — with reservations",
+      "challenge_detail": {
+        "pack_B_ceiling": "Pack B (23% of draw) provides genuine challenge — items test Apply/Analyze with well-engineered distractors. This is the true differentiator.",
+        "pack_E_floor": "83.6% of Pack E items are definition-match (Bloom's Remember/Understand). A strong candidate answers these trivially. Pack E contributes ~23 items to the draw but effectively tests nothing for this profile.",
+        "clone_dilution": "98.4% probability of clone collision. The strong candidate sees 2-4 sibling items from the same Pack C/D clone group — identical stems with only company-name substitution and CC rotation. This wastes ~5% of the effective test length.",
+        "dl031_issue": "~500 items pool-wide have inflated difficulty labels (Moderate for definition-match). A strong candidate at the ceiling sees these as free points, reducing the effective difficulty span."
+      },
+      "notes": "The strong candidate's experience is anchored by Pack B (gold) quality and dragged down by Pack E (silver-thin). Clone collision wastes test length but doesn't cause a false score — it inflates the effective score by ~2-3 points since duplicate concepts are already mastered. Recommendation: deliver Pack B items preferentially to strong candidates via adaptive routing."
+    },
+    "average_candidate": {
+      "profile": "Scores ~70%. Tests whether silver-tier content provides adequate learning value.",
+      "expected_score": "~68-72%",
+      "draw_composition": {
+        "pack_A": "~22 items (strong explanations, good distractor feedback)",
+        "pack_B": "~23 items (gold standard, best learning value)",
+        "pack_C": "~16 items (moderate explanations, ~85% distractor fill, some clone duplication)",
+        "pack_D": "~16 items (moderate explanations, ~85% distractor fill, high clone redundancy)",
+        "pack_E": "~23 items (thin explanations: median 67 chars, 92% no citations)"
+      },
+      "educational_feedback_adequacy": "PASS — but fragile",
+      "feedback_detail": {
+        "wrong_answers_total": "~30 wrong answers out of 100",
+        "wrong_from_AB": "~14 wrong from Packs A+B. 100% distractor fill. Both packs provide substantive, choice-specific distractor explanations with ASC/COSO citations. High educational value.",
+        "wrong_from_E": "~7 wrong from Pack E. 100% distractor fill BUT the explanations are one-sentence definition-level text (median 67 chars). Example: a wrong answer on standard costing gets 'Option C is incorrect. Standard costs are predetermined target costs used for planning and control purposes.' — no explanation of WHY the specific choice is wrong, no misconception identification, no contrast with correct approach. Educational value: LOW.",
+        "wrong_from_CD": "~9 wrong from Packs C+D. ~8 receive distractor feedback (~93% fill); ~1 gets no feedback at all. Feedback quality varies: Certified sections A-D have rewritten explanations (S705-S710); residual DL-013 boilerplate exists only in non-certified sections and won't appear. Educational value: MODERATE-GOOD.",
+        "overall_wrong_answer_coverage": "~28 of 30 wrong answers (93%) receive some distractor feedback; ~2 (7%) receive no feedback. Of the 28 that receive feedback, ~7 (25% of total wrong) receive Pack E thin-text with no pedagogical value beyond definition restatement."
+      },
+      "clone_impact": "The average candidate scores ~70% — they're borderline. Clone collision means ~2 concepts appear twice in their draw. If they got the first instance wrong, the second instance is a second chance (positive). If they got it right, it's a wasted slot (negative). Net impact: neutral to slightly positive for borderline candidates.",
+      "notes": "The average candidate benefits most from Pack A+B content. Pack E drags down the learning experience — 23% of their draw provides structurally clean but educationally impoverished feedback. The average candidate can't self-diagnose WHY their Pack E wrong answer was wrong because the distractor explanation doesn't identify the misconception. For this profile to receive adequate educational value, Pack E needs explanation expansion (per S818 plan: targeted enhancement of ~250 items)."
+    },
+    "misconception_candidate": {
+      "profile": "Selects plausible wrong answers. Scores ~50%. Tests distractor feedback adequacy — the stress case.",
+      "expected_score": "~48-52%",
+      "draw_composition": {
+        "pack_A": "~22 items (good distractor feedback, but candidate selects wrong answers)",
+        "pack_B": "~23 items (gold distractor feedback, best diagnostic value)",
+        "pack_C": "~16 items (moderate feedback, some gaps)",
+        "pack_D": "~16 items (moderate feedback, highest clone redundancy)",
+        "pack_E": "~23 items (THIN feedback — critical gap for this profile)"
+      },
+      "educational_feedback_adequacy": "FAIL — needs work",
+      "feedback_detail": {
+        "wrong_answers_total": "~50 wrong answers out of 100",
+        "wrong_from_AB": "~23 wrong from Packs A+B. All receive substantive, choice-specific distractor explanations with ASC/COSO citations. These identify the specific misconception, explain why the choice is wrong, and contrast with the correct approach. Educational value: HIGH. These are the only answers where the candidate learns from their mistakes.",
+        "wrong_from_CD": "~16 wrong from Packs C+D. ~15 receive distractor feedback (~93% fill); ~1 gets nothing. Feedback quality is adequate for Certified sections (S705-S710 rewrites). However, clone collision means the candidate may see the same wrong-answer feedback twice for sibling items — not harmful but not additive. Educational value: MODERATE.",
+        "wrong_from_E": "~11 wrong from Pack E. ALL receive "feedback" — but it's one-sentence definition restatement. The candidate selects 'Option A: actual costs adjusted for efficiency' on a standard costing question and sees 'Option A is incorrect. Standard costs are predetermined target costs.' This tells them NOTHING about why their specific misconception (confusing standard with actual) is wrong, what the correct framework is, or how to avoid the error in the future. Educational value: NEGLIGIBLE.",
+        "distractor_gap_impact": "Of 50 wrong answers: ~1 (2%) gets NO feedback (C/D gap); ~11 (22%) get THIN/negligible feedback (Pack E); ~38 (76%) get adequate-to-good feedback. This means 24% of the candidate's learning opportunities are wasted — they're told their answer is wrong but not WHY, which is the core pedagogical purpose of distractor explanations per CAQS §4.1."
+      },
+      "clone_impact": "CRITICAL for this profile. With 98.4% clone collision probability, the misconception candidate sees 2-5 duplicate concepts per draw. If they selected wrong answer on the first instance and get thin Pack E feedback, the second instance tests the same misconception with no intervening learning. The candidate repeats the same error, gets the same thin explanation, and makes no progress. Clone waste converts potentially diagnostic repetitions into unproductive loops.",
+      "caqs_violations": {
+        "ev3_citation_requirement": "CAQS §4.3 Rule EV3: ExplanationCorrect must reference the governing accounting principle by name. 92.2% of Pack E items violate this rule. A misconception-prone learner never sees which ASC/COSO/IAS standard governs the topic.",
+        "ev4_distractor_specificity": "CAQS §4.3 Rule EV4: Distractor explanations must be choice-specific. Pack E distractor explanations are generic — they restate the correct concept but don't address the specific wrong choice. A learner who selects 'labor efficiency variance' on an overhead variance question is told about standard costs in general, not about the difference between labor and overhead variance analysis.",
+        "ls2_error_correction": "CAQS §11.2 Rule LS2: Distractor explanations must identify the specific misconception. Pack E explanations fail this for 92%+ of items. The candidate knows only that they are wrong — not what they misunderstood."
+      },
+      "notes": "This is the profile where portfolio gaps become learner-safety issues. The misconception-prone candidate is the one who most needs rich distractor feedback — and the one who least receives it from Pack E (23% of their draw). The gold-standard Pack B items demonstrate what's possible (diagnostic distractor explanations that teach the concept), but they're diluted by Pack E's information-free feedback. Recommendation: for misconception-prone candidates, route heavily toward Pack B content and away from Pack E until enhancement is complete. In the current delivery pool, this candidate would likely underperform relative to their true capability due to feedback gaps."
+    }
+  },
+  "portfolio_readiness": {
+    "overall": "READY — with asterisk for misconception-prone learners",
+    "verdict_detail": {
+      "governance_clean": "0 Certified DL-008 violations (S801 refuted all 67 S800-reported items). All 5 packs structurally compliant.",
+      "gold_tier_ready": "Pack B (500 items, 100% Certified) is launch-ready. Gold standard explanations, zero defects, excellent distractor quality. This is the anchor that makes the portfolio viable.",
+      "silver_tier_ready_a": "Pack A (481 Certified, 96.2%) is ready. Strong explanations (avg 345 chars). Minor residual: 2 items in Editorial Queue (B-001, B-025), 19 Archived.",
+      "silver_tier_weak_e": "Pack E (500 Certified, 100%) is structurally ready but educationally thin. This is the single biggest learner-experience risk. The median correct-answer explanation is 67 characters with zero authoritative citations. It passes structural validation but fails pedagogical quality standards per CAQS §4.1 and §11.2.",
+      "bronze_tier_ready_cd": "Packs C+D (700 Certified combined) are operationally ready post-S700 remediation. Clone dilution (98.4% collision in 100-item draw) reduces effective pool diversity. Distractor feedback is adequate for Certified sections but pool-wide fill is 85%.",
+      "case_study_pool": "Out of scope for this simulation (420 items, ~400 with Certified entries, 0% distractor explanation fill rate per S800 §5.2). Case distractor gap is the single largest learner-experience deficit in the platform but is delivered separately from MCQs."
+    },
+    "blockers": [
+      {
+        "id": "B1",
+        "severity": "HIGH",
+        "status": "ACTIVE",
+        "title": "Pack E educational thinness (92.2% zero ASC/COSO citations)",
+        "description": "500 Certified items deliver structurally clean but educationally impoverished feedback. Median EC = 67 chars. 90.6% of EC fields < 100 chars. No authoritative citations for 92.2% of items. This violates CAQS §4.3 EV3 (citation requirement) and §11.2 LS2 (error correction requirement). For strong candidates this is an irritation; for misconception-prone candidates it is a learning failure.",
+        "mitigation": "S818 targeted enhancement of ~250 highest-impact Pack E items. Use Pack B as the template standard.",
+        "would_block_launch": "No — but requires prominent notice to learners that Pack E explanations are minimal. Recommended: display an 'Enhanced Explanation' badge on Pack B items and a 'Basic Explanation' notice on Pack E items."
+      },
+      {
+        "id": "B2",
+        "severity": "MEDIUM",
+        "status": "ACTIVE",
+        "title": "Pack C/D clone waste (98.4% collision probability in 100-item draw)",
+        "description": "Pack D has ~10 items per unique concept; Pack C has ~4.7. This means ~5% of items in a 100-item draw are pedagogically redundant — the learner sees the same concept twice with only superficial variation. Effective test length is reduced from 100 to ~95 unique concepts.",
+        "mitigation": "S808-S809: clone seed certification. Long-term: archive 128+ clones and replace with fresh-authored items. Adaptive routing can also detect and skip sibling items within a session.",
+        "would_block_launch": "No — clone waste degrades but does not break the learning experience. The candidate still sees correct answers and explanations."
+      },
+      {
+        "id": "B3",
+        "severity": "LOW",
+        "status": "ACTIVE",
+        "title": "DL-031 difficulty inflation (~500 items)",
+        "description": "~500 items labeled Moderate (3) that test only Remember/Understand — these inflate candidate confidence and reduce score discrimination. Strong candidates get free points; average candidates aren't properly differentiated.",
+        "mitigation": "S713-S721A recalibration in progress. DCS v1.1 adopted. ~266 CL-review items remaining for S722 Phase 1.",
+        "would_block_launch": "No — difficulty labels affect analytics and adaptive routing, not answer correctness. Learners still get correct scores."
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "P0 — Before Launch",
+        "action": "Add learner-facing notice for Pack E content",
+        "detail": "Display 'Basic Explanation' indicator when a question is drawn from Pack E. This manages learner expectations and signals that these items provide correct answers but minimal educational depth."
+      },
+      {
+        "priority": "P0 — Before Launch",
+        "action": "Enable adaptive routing by tier",
+        "detail": "Tier-1 (misconception-prone) learners should draw preferentially from Pack B (gold) and Pack A (silver-strong). This ensures learners who need the most feedback receive the highest-quality feedback. Implement as a weighted random draw: B×3, A×2, E×0.5, C×1, D×1."
+      },
+      {
+        "priority": "P1 — Within 2 weeks",
+        "action": "Pack E targeted enhancement (S818)",
+        "detail": "Expand explanations for the 250 most frequently drawn Pack E items. Target: EC ≥ 200 chars, ≥ 1 ASC/COSO citation per item, choice-specific distractor explanations per CAQS §4.3 EV4. The 500 items have a median EC of 67 — this is a 3× expansion requirement."
+      },
+      {
+        "priority": "P1 — Within 2 weeks",
+        "action": "Clone archival for Pack C/D Sections E/F (S808-S809)",
+        "detail": "Archive 112 known DL-012 clones in Pack C/D Section E. Certify the 28 seed items. This reduces clone collision probability from 98.4% to ~90% and recovers 112 delivery-pool slots for fresh content."
+      },
+      {
+        "priority": "P2 — Within 4 weeks",
+        "action": "Pack A closeout (S802-S803)",
+        "detail": "Resolve 19 Archived items and 2 Editorial Queue items (B-001, B-025). Bring Pack A to 500/500 Certified — the third 100% certified pack alongside B and E."
+      },
+      {
+        "priority": "P2 — Within 4 weeks",
+        "action": "DL-031 difficulty recalibration completion (S722)",
+        "detail": "Finish recalibration of ~266 Pack D items requiring CognitiveLevel review. Post-recalibration target: DCS §3 compliance ≥ 95% pool-wide."
+      },
+      {
+        "priority": "P3 — Ongoing",
+        "action": "Pack C/D Sections C-F certification (S804-S810)",
+        "detail": "Bring remaining 300 non-certified items through CAQS §1.6 six-dimension verification. Target: 2,500/2,500 Certified across all 5 packs."
+      }
+    ],
+    "simulation_stress_test_verdict": {
+      "strong_candidate": "PASS — Gold-tier content (Pack B) provides adequate challenge and excellent feedback. Clone waste marginally reduces test efficiency.",
+      "average_candidate": "CONDITIONAL PASS — Silver-tier content (Packs A+E) provides adequate feedback for Packs A+B but Pack E is educationally weak. The average candidate loses ~23% of their learning opportunities to thin Pack E explanations.",
+      "misconception_candidate": "FAIL — 24% of wrong-answer feedback is ineffective (thin Pack E text + C/D distractor gaps). This profile is the canary: when the candidate most needs to learn from mistakes, the platform fails to teach. The gold-standard Pack B distractor diagnostics prove the platform CAN deliver excellent feedback — but Pack E's thinness prevents it from doing so consistently."
+    }
+  },
+  "data_sources": {
+    "certified_count": "Direct grep: Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' — 2,181 verified 2026-07-26",
+    "ec_lengths": "PowerShell regex: '\"ExplanationCorrect\":\\s*\"([^\"]*)\"' — all 5 packs (2,499 total matches)",
+    "ew_fill_rates": "PowerShell regex: '\"ExplanationWrong([ABCD])\":\\s*\"([^\"]*)\"' — all 5 packs (10,000 total slots)",
+    "pack_e_citation_audit": "PowerShell: 461 of 500 EC fields contain zero ASC/COSO/GAAP/IFRS/FASB references",
+    "clone_analysis": "S801 Agents J + K: Pack C=107 unique/500, Pack D=47 unique/500. Collision probability computed via birthday-paradox approximation.",
+    "quality_assessment": "S800 §5 (Quality Assessment): DQS model, EC sufficiency rates, S700 Layer 2 pedagogical value ratings",
+    "governance_status": "S801 §8: VETO LIFTED. 0 Certified DL-008. All 3 S800 P0 blockers refuted.",
+    "dl008_status": "0 Certified DL-008 across all 5 packs (S801 Agent B: Function-constructor parse, 100% confidence)"
+  },
+  "disclaimers": [
+    "This simulation uses random-sampling estimates based on pack proportions. Actual learner draws depend on the exam engine's selection algorithm and any adaptive-routing logic.",
+    "Case study items (420 across 75 cases) were excluded from this simulation. The case bank has a 0% distractor explanation fill rate — a separate and more severe learner-experience gap.",
+    "Clone collision probability assumes random selection without replacement but treats each QID as independent. In practice, the exam engine may have anti-clone logic that avoids drawing sibling QIDs within a session.",
+    "Pack E 'explanation' verbiage is structurally present but educationally minimal — we classify these as 'feedback present' for fill-rate metrics but 'pedagogically inadequate' for learning-outcome metrics."
+  ]
+}

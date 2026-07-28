@@ -1,0 +1,119 @@
+{
+  "generated": "2026-07-26T21:42:16.555Z",
+  "session": "S304",
+  "portfolioAvgECLength": 321,
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "total": 433,
+      "avgECLength": 291,
+      "medianECLength": 151,
+      "ecPresent": 433,
+      "ecMissing": 0,
+      "ecFillRate": "100.0%",
+      "gradeDistribution": {
+        "A": 70,
+        "B": 14,
+        "C": 137,
+        "D": 208,
+        "F": 4
+      },
+      "instructionalQuality": "PARTIAL"
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "total": 568,
+      "avgECLength": 229,
+      "medianECLength": 154,
+      "ecPresent": 568,
+      "ecMissing": 0,
+      "ecFillRate": "100.0%",
+      "gradeDistribution": {
+        "A": 12,
+        "B": 47,
+        "C": 262,
+        "D": 243,
+        "F": 4
+      },
+      "instructionalQuality": "PARTIAL"
+    },
+    "C - Performance Management": {
+      "total": 798,
+      "avgECLength": 431,
+      "medianECLength": 234,
+      "ecPresent": 798,
+      "ecMissing": 0,
+      "ecFillRate": "100.0%",
+      "gradeDistribution": {
+        "A": 201,
+        "B": 123,
+        "C": 286,
+        "D": 178,
+        "F": 10
+      },
+      "instructionalQuality": "ADEQUATE"
+    },
+    "D - Cost Management": {
+      "total": 452,
+      "avgECLength": 243,
+      "medianECLength": 181,
+      "ecPresent": 452,
+      "ecMissing": 0,
+      "ecFillRate": "100.0%",
+      "gradeDistribution": {
+        "A": 31,
+        "B": 41,
+        "C": 252,
+        "D": 124,
+        "F": 4
+      },
+      "instructionalQuality": "PARTIAL"
+    },
+    "E - Internal Controls": {
+      "total": 443,
+      "avgECLength": 393,
+      "medianECLength": 215,
+      "ecPresent": 443,
+      "ecMissing": 0,
+      "ecFillRate": "100.0%",
+      "gradeDistribution": {
+        "A": 88,
+        "B": 90,
+        "C": 139,
+        "D": 121,
+        "F": 5
+      },
+      "instructionalQuality": "ADEQUATE"
+    },
+    "F - Technology & Analytics": {
+      "total": 430,
+      "avgECLength": 276,
+      "medianECLength": 229,
+      "ecPresent": 430,
+      "ecMissing": 0,
+      "ecFillRate": "100.0%",
+      "gradeDistribution": {
+        "A": 30,
+        "B": 91,
+        "C": 209,
+        "D": 87,
+        "F": 13
+      },
+      "instructionalQuality": "PARTIAL"
+    },
+    "Unknown": {
+      "total": 1,
+      "avgECLength": 0,
+      "medianECLength": 0,
+      "ecPresent": 0,
+      "ecMissing": 1,
+      "ecFillRate": "0.0%",
+      "gradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "F": 1
+      },
+      "instructionalQuality": "LOW"
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "session": "S131",
+  "title": "Unified Evidence Graph Schema",
+  "timestamp": "2026-07-26T15:33:00.000Z",
+  "source": "may-learner-state.js",
+  "sourceLines": "1445-1730",
+
+  "topLevelReturn": {
+    "description": "computeEvidenceGraph() returns a materialized evidence snapshot consumed by all coaching subsystems.",
+    "shape": {
+      "evidence": "{ [topic: string]: L1EvidenceNode } — per-topic derived evidence keyed by topic name",
+      "observations": "L2Observations — threshold-gated factual observations across 7 categories",
+      "patterns": "L3Pattern[] — multi-observation cross-topic patterns",
+      "clusters": "WeaknessClusters — pre-computed trend clusters (passthrough from getWeaknessClusters())",
+      "metadata": "EvidenceGraphMetadata — computation context"
+    }
+  },
+
+  "layers": {
+    "L1_evidence": {
+      "description": "Per-topic derived evidence nodes. One node per topic from getTopicProgress(), merged with getTrends() data and the S131 EWMA time-weighted accuracy.",
+      "sourceFunctions": ["getTopicProgress()", "getTrends()", "_computeTimeWeightedAccuracy()"],
+      "fields": [
+        { "field": "totalAttempts", "type": "number", "description": "Cumulative number of MCQ attempts for this topic across all sessions. Source: topicPerformance[topic].totalAttempts." },
+        { "field": "correctCount", "type": "number", "description": "Cumulative number of correct MCQ answers for this topic. Source: topicPerformance[topic].correctCount." },
+        { "field": "accuracy", "type": "number|null", "description": "Overall accuracy percentage: Math.round(correctCount / totalAttempts * 100). null if totalAttempts is 0." },
+        { "field": "recentAccuracy", "type": "number|null", "description": "Accuracy over the last 5 recent attempts (recentPct). null if no recent attempts. Source: topicPerformance[topic].recentPct." },
+        { "field": "timeWeightedAccuracy", "type": "number|null", "description": "EWMA accuracy with 14-day half-life. Weights each attempt by exp(-lambda * ageMs) where lambda = ln(2)/(14*24*3600*1000). null if no attempts exist. Rounded to integer 0-100." },
+        { "field": "hintRate", "type": "number", "description": "Percentage of attempts where hints were used: Math.round(hintCount / totalAttempts * 100). Defaults to 0 if no attempts." },
+        { "field": "avgDifficulty", "type": "number|null", "description": "Weighted-average difficulty across all attempts: difficultyWeights.sum / difficultyWeights.total, rounded to 1 decimal place. null if no difficulty data." },
+        { "field": "firstSeen", "type": "string|undefined", "description": "ISO-8601 timestamp of the first encounter with this topic. Source: topicPerformance[topic].firstSeen." },
+        { "field": "lastSeen", "type": "string|undefined", "description": "ISO-8601 timestamp of the most recent encounter with this topic. Source: topicPerformance[topic].lastSeen. Used by getEvidenceWindows() for recency categorization." },
+        { "field": "stability", "type": "number|null", "description": "Run-based stability score (0-100). Computed as (1 - (runs-1)/(recentCorrects.length-1)) * 100 where runs counts transitions between correct/incorrect in recent attempts. Requires >=4 recent attempts. null otherwise. Source: getTrends()." },
+        { "field": "delta", "type": "number|null", "description": "Difference between recent accuracy and overall accuracy (recentPct - accuracy). Positive means improving. null if fewer than 2 total attempts. Source: getTrends()." },
+        { "field": "direction", "type": "string", "description": "Trend direction derived from delta. One of: 'improving' (delta >= 15), 'declining' (delta <= -15), 'slightly_improving' (delta > 5), 'slightly_declining' (delta < -5), or 'stable' (otherwise / default). Source: getTrends()." },
+        { "field": "hintTrend", "type": "string", "description": "Direction of hint usage trend comparing last 5 vs older recent attempts. One of: 'decreasing', 'increasing', 'stable'. Source: getTrends()." },
+        { "field": "sectionsSeen", "type": "string[]", "description": "Array of CMA Part 1 section letters (A-F) where this topic has been encountered. Empty array if unknown. Source: topicPerformance[topic].sectionsSeen." },
+        { "field": "difficultyDistribution", "type": "object", "description": "Count of attempts per difficulty label. Keys are difficulty strings ('Easy', 'Moderate-Easy', 'Moderate', 'Difficult', 'Very Difficult'). Values are integer counts. Empty object if no data. Source: topicPerformance[topic].difficultyDistribution." }
+      ]
+    },
+
+    "L2_observations": {
+      "description": "Threshold-gated factual observations derived from L1 evidence. Single source of truth for all learner classifications — no subsystem independently re-classifies data. Seven categories, two of which (calculationPatterns, terminologyPatterns) are initialized empty and reserved for future use.",
+      "sourceFunctions": ["_deriveObservations()"],
+      "categories": {
+        "strengths": {
+          "threshold": ">=3 totalAttempts, >=85% accuracy, direction is NOT 'declining' and NOT 'slightly_declining'",
+          "fields": [
+            { "field": "topic", "type": "string", "description": "Topic name." },
+            { "field": "accuracy", "type": "number|null", "description": "Overall accuracy percentage." },
+            { "field": "recentAccuracy", "type": "number|null", "description": "Recent accuracy over last 5 attempts." },
+            { "field": "timeWeightedAccuracy", "type": "number|null", "description": "EWMA time-weighted accuracy (14-day half-life)." },
+            { "field": "totalAttempts", "type": "number", "description": "Total attempts for this topic." },
+            { "field": "stability", "type": "number|null", "description": "Run-based stability score (0-100)." },
+            { "field": "evidence", "type": "object", "description": "Canonical evidence tuple: { topic, accuracy, attempts, direction }." }
+          ]
+        },
+        "weaknesses": {
+          "threshold": ">=5 totalAttempts, <60% accuracy",
+          "fields": [
+            { "field": "topic", "type": "string", "description": "Topic name." },
+            { "field": "accuracy", "type": "number|null", "description": "Overall accuracy percentage." },
+            { "field": "recentAccuracy", "type": "number|null", "description": "Recent accuracy over last 5 attempts." },
+            { "field": "timeWeightedAccuracy", "type": "number|null", "description": "EWMA time-weighted accuracy (14-day half-life)." },
+            { "field": "totalAttempts", "type": "number", "description": "Total attempts for this topic." },
+            { "field": "evidence", "type": "object", "description": "Canonical evidence tuple: { topic, accuracy, attempts }." }
+          ]
+        },
+        "misconceptions": {
+          "threshold": ">=2 occurrences of the same misconception pattern (p.count >= 2)",
+          "fields": [
+            { "field": "pattern", "type": "string", "description": "Misconception pattern key. One of: 'misclassification', 'variance_sign_confusion', 'budget_component_error', 'cost_method_confusion', 'depreciation_method_error', 'cash_flow_classification', 'ratio_misapplication', 'control_framework_error', 'general_error'." },
+            { "field": "count", "type": "number", "description": "Number of occurrences of this misconception pattern." },
+            { "field": "topics", "type": "string[]", "description": "Topics where this misconception has been observed (from _topics array in stored pattern)." },
+            { "field": "lastSeen", "type": "string", "description": "ISO-8601 timestamp of the most recent occurrence." },
+            { "field": "evidence", "type": "object", "description": "Canonical evidence tuple: { pattern, count, lastSeen }." }
+          ]
+        },
+        "topicTrends": {
+          "threshold": ">=4 totalAttempts, delta is not null, |delta| >= 10 (improving if delta >= 10, declining if delta <= -10)",
+          "fields": [
+            { "field": "topic", "type": "string", "description": "Topic name." },
+            { "field": "direction", "type": "string", "description": "Either 'improving' (delta >= 10) or 'declining' (delta <= -10)." },
+            { "field": "delta", "type": "number", "description": "Accuracy delta (recentPct - accuracy)." },
+            { "field": "accuracy", "type": "number|null", "description": "Overall accuracy percentage." },
+            { "field": "recentAccuracy", "type": "number|null", "description": "Recent accuracy over last 5 attempts." },
+            { "field": "evidence", "type": "object", "description": "Canonical evidence tuple: { topic, delta, attempts }." }
+          ]
+        },
+        "calculationPatterns": {
+          "threshold": "N/A — reserved, always empty array",
+          "description": "Initialized as empty array []. Not populated by _deriveObservations(). Reserved for future calculation-error pattern detection.",
+          "fields": []
+        },
+        "terminologyPatterns": {
+          "threshold": "N/A — reserved, always empty array",
+          "description": "Initialized as empty array []. Not populated by _deriveObservations(). Reserved for future terminology-confusion pattern detection.",
+          "fields": []
+        },
+        "behaviorTrends": {
+          "threshold": ">=2 sessions. Populated from weakness clusters (getWeaknessClusters()).",
+          "fields": [
+            { "field": "trend", "type": "string", "description": "Behavior trend label. One of: 'improving_topics', 'declining_topics', 'hint_dependent', 'difficulty_sensitive'." },
+            { "field": "count", "type": "number", "description": "Number of topics exhibiting this behavior trend." },
+            { "field": "topics", "type": "string[]", "description": "List of topic names exhibiting this trend (mapped from cluster array)." }
+          ]
+        }
+      }
+    },
+
+    "L3_patterns": {
+      "description": "Multi-observation patterns that span topics or reveal higher-order structure. Derived from L2 observations and raw topic progress data.",
+      "sourceFunctions": ["_derivePatterns()"],
+      "types": [
+        {
+          "type": "cross_topic_misconception",
+          "threshold": "Same misconception pattern appears across >=2 distinct topics",
+          "fields": [
+            { "field": "type", "type": "string", "description": "Always 'cross_topic_misconception'." },
+            { "field": "pattern", "type": "string", "description": "The misconception pattern key shared across topics." },
+            { "field": "topics", "type": "string[]", "description": "De-duplicated list of topic names where this pattern has been observed." },
+            { "field": "totalCount", "type": "number", "description": "Sum of all occurrence counts across all topics for this pattern." },
+            { "field": "evidence", "type": "object", "description": "Reference to the merged misconception object: { pattern, topics, totalCount }." }
+          ]
+        },
+        {
+          "type": "difficulty_amplification",
+          "threshold": ">=3 sessions, >=5 totalAttempts, >=3 easy (Easy+Moderate-Easy) and >=2 hard (Difficult+Very Difficult) attempts in difficultyDistribution",
+          "fields": [
+            { "field": "type", "type": "string", "description": "Always 'difficulty_amplification'." },
+            { "field": "topic", "type": "string", "description": "Topic name exhibiting difficulty sensitivity." },
+            { "field": "easyCount", "type": "number", "description": "Sum of 'Easy' + 'Moderate-Easy' counts from difficultyDistribution." },
+            { "field": "hardCount", "type": "number", "description": "Sum of 'Difficult' + 'Very Difficult' counts from difficultyDistribution." },
+            { "field": "evidence", "type": "object", "description": "Canonical evidence tuple: { topic, easy, hard }." }
+          ]
+        }
+      ]
+    },
+
+    "L4_windows": {
+      "description": "Evidence aging categorization via getEvidenceWindows(). Partitions L1 evidence nodes by recency of lastSeen. Each window is { [topic: string]: L1EvidenceNode }.",
+      "sourceFunctions": ["getEvidenceWindows()"],
+      "windows": {
+        "recent": {
+          "range": "lastSeen within the last 7 days",
+          "cutoff": "now - 7 * 24 * 3600 * 1000 ms",
+          "value": "{ [topic: string]: L1EvidenceNode }"
+        },
+        "active": {
+          "range": "lastSeen between 8 and 14 days ago",
+          "cutoff": "now - 14 * 24 * 3600 * 1000 ms",
+          "value": "{ [topic: string]: L1EvidenceNode }"
+        },
+        "historical": {
+          "range": "lastSeen between 15 and 28 days ago",
+          "cutoff": "now - 28 * 24 * 3600 * 1000 ms",
+          "value": "{ [topic: string]: L1EvidenceNode }"
+        },
+        "archived": {
+          "range": "lastSeen more than 28 days ago, or never seen",
+          "cutoff": "remaining topics (lastSeen < historicalCutoff or lastSeen is falsy)",
+          "value": "{ [topic: string]: L1EvidenceNode }"
+        }
+      }
+    }
+  },
+
+  "auxiliaryFunctions": {
+    "getFreshObservations": {
+      "description": "Filters L2 observations to only those whose evidence has not gone stale. Default max age is 28 days.",
+      "signature": "getFreshObservations(maxAgeDays?: number): FreshObservations",
+      "returnShape": {
+        "strengths": "L2Strength[] — strengths whose topic lastSeen >= cutoff",
+        "weaknesses": "L2Weakness[] — weaknesses whose topic lastSeen >= cutoff",
+        "misconceptions": "L2Misconception[] — misconceptions whose lastSeen >= cutoff",
+        "topicTrends": "L2TopicTrend[] — topic trends whose topic lastSeen >= cutoff",
+        "behaviorTrends": "L2BehaviorTrend[] — always included unfiltered (not topic-based)"
+      }
+    },
+    "verifyClassificationConsistency": {
+      "description": "Audits that L2 observations align with L1 evidence thresholds. Any mismatch is reported as a conflict.",
+      "signature": "verifyClassificationConsistency(): ConsistencyResult",
+      "returnShape": {
+        "consistent": "boolean — true if zero conflicts",
+        "conflicts": "Conflict[] — array of { topic: string, type: 'weak_classification'|'strong_classification'|'improving_classification', evidence: boolean, observation: boolean }"
+      }
+    }
+  },
+
+  "clusters": {
+    "description": "Pre-computed weakness clusters from getWeaknessClusters(). Passed through as-is in the top-level return. Used internally by _deriveObservations() for behaviorTrends and by coaching mode selection.",
+    "sourceFunctions": ["getWeaknessClusters()"],
+    "shape": {
+      "persistentWeak": "Trend[] — topics with accuracy<60 and totalAttempts>=5",
+      "improving": "Trend[] — topics with delta>=15",
+      "declining": "Trend[] — topics with delta<=-15",
+      "unstable": "Trend[] — topics with stability<50 and totalAttempts>=4",
+      "hintDependent": "Trend[] — topics with accuracy>=70, hintTrend='increasing', totalAttempts>=4",
+      "difficultySensitive": "Trend[] — topics where lowPct-highPct>=0.3 (30pp gap), lowDiff>=2, highDiff>=2. Extended with lowPct and highPct fields."
+    },
+    "trendObjectShape": {
+      "topic": "string",
+      "accuracy": "number|null",
+      "recentPct": "number|null",
+      "delta": "number|null",
+      "direction": "'stable'|'improving'|'declining'|'slightly_improving'|'slightly_declining'",
+      "stability": "number|null",
+      "hintTrend": "'stable'|'increasing'|'decreasing'",
+      "totalAttempts": "number",
+      "avgDifficulty": "number|null"
+    }
+  },
+
+  "metadata": {
+    "modelVersion": "S111-1.0",
+    "totalFunctions": 7,
+    "functionList": [
+      "computeEvidenceGraph()",
+      "_computeTimeWeightedAccuracy()",
+      "_deriveObservations()",
+      "_derivePatterns()",
+      "getEvidenceWindows()",
+      "getFreshObservations()",
+      "verifyClassificationConsistency()"
+    ],
+    "totalLinesAdded": "~290",
+    "storageKey": "cmaMayLearnerState",
+    "misconceptionPatternKeys": [
+      "misclassification",
+      "variance_sign_confusion",
+      "budget_component_error",
+      "cost_method_confusion",
+      "depreciation_method_error",
+      "cash_flow_classification",
+      "ratio_misapplication",
+      "control_framework_error",
+      "general_error"
+    ]
+  },
+
+  "consumers": ["S120", "S121", "S122", "S123", "S124", "S125", "S126", "S127", "S128", "S129"]
+}

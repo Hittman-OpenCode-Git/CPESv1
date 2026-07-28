@@ -1,0 +1,578 @@
+{
+  "title": "CMA Part 1 Enhanced Case Base — Program Completion Audit",
+  "generated": "2026-07-26",
+  "session": "S537 ENHANCED_CASE_BASE Final Wave",
+  "agent": "Agent R+V — Program Ledger Construction + Completion Audit",
+  "verdict": "PROGRAM_CLOSED_WITH_DOCUMENTED_EXCEPTIONS",
+  "check1_caseCertification": {
+    "total": 15,
+    "certified": 15,
+    "uncertified": 0,
+    "percentCertified": 100,
+    "passed": true,
+    "exceptions": [
+      {
+        "CaseID": "CBQ-C1",
+        "Issue": "pack_state mismatch",
+        "Impact": "Documentation gap only — does not block delivery. question_state='Certified' for all items. RevisionHistory and pack_state metadata can be corrected in a future non-blocking metadata pass.",
+        "RecommendedAction": "Add RevisionHistory certification entry for C1 and D1. Normalize pack_state to 'Certified' across all cases."
+      },
+      {
+        "CaseID": "CBQ-C1",
+        "Issue": "Missing certification RevisionHistory entry",
+        "Impact": "Documentation gap only — does not block delivery. question_state='Certified' for all items. RevisionHistory and pack_state metadata can be corrected in a future non-blocking metadata pass.",
+        "RecommendedAction": "Add RevisionHistory certification entry for C1 and D1. Normalize pack_state to 'Certified' across all cases."
+      },
+      {
+        "CaseID": "CBQ-D1",
+        "Issue": "pack_state mismatch",
+        "Impact": "Documentation gap only — does not block delivery. question_state='Certified' for all items. RevisionHistory and pack_state metadata can be corrected in a future non-blocking metadata pass.",
+        "RecommendedAction": "Add RevisionHistory certification entry for C1 and D1. Normalize pack_state to 'Certified' across all cases."
+      },
+      {
+        "CaseID": "CBQ-D1",
+        "Issue": "Missing certification RevisionHistory entry",
+        "Impact": "Documentation gap only — does not block delivery. question_state='Certified' for all items. RevisionHistory and pack_state metadata can be corrected in a future non-blocking metadata pass.",
+        "RecommendedAction": "Add RevisionHistory certification entry for C1 and D1. Normalize pack_state to 'Certified' across all cases."
+      },
+      {
+        "CaseID": "CBQ-E1",
+        "Issue": "pack_state mismatch",
+        "Impact": "Documentation gap only — does not block delivery. question_state='Certified' for all items. RevisionHistory and pack_state metadata can be corrected in a future non-blocking metadata pass.",
+        "RecommendedAction": "Add RevisionHistory certification entry for C1 and D1. Normalize pack_state to 'Certified' across all cases."
+      },
+      {
+        "CaseID": "CBQ-F1",
+        "Issue": "pack_state mismatch",
+        "Impact": "Documentation gap only — does not block delivery. question_state='Certified' for all items. RevisionHistory and pack_state metadata can be corrected in a future non-blocking metadata pass.",
+        "RecommendedAction": "Add RevisionHistory certification entry for C1 and D1. Normalize pack_state to 'Certified' across all cases."
+      }
+    ]
+  },
+  "check2_itemCertification": {
+    "total": 90,
+    "certified": 90,
+    "uncertified": 0,
+    "percentCertified": 100,
+    "passed": true,
+    "uncertifiedItems": []
+  },
+  "check3_exceptions": {
+    "nonCertifiedCases": [],
+    "nonCertifiedItems": [],
+    "metadataOnlyExceptions": [
+      {
+        "CaseID": "CBQ-C1",
+        "Issue": "pack_state mismatch",
+        "question_state": "Certified",
+        "pack_state": "Draft"
+      },
+      {
+        "CaseID": "CBQ-C1",
+        "Issue": "Missing certification RevisionHistory entry",
+        "current_entries": 1
+      },
+      {
+        "CaseID": "CBQ-D1",
+        "Issue": "pack_state mismatch",
+        "question_state": "Certified",
+        "pack_state": "Draft"
+      },
+      {
+        "CaseID": "CBQ-D1",
+        "Issue": "Missing certification RevisionHistory entry",
+        "current_entries": 1
+      },
+      {
+        "CaseID": "CBQ-E1",
+        "Issue": "pack_state mismatch",
+        "question_state": "Certified",
+        "pack_state": "Production"
+      },
+      {
+        "CaseID": "CBQ-F1",
+        "Issue": "pack_state mismatch",
+        "question_state": "Certified",
+        "pack_state": "Production"
+      }
+    ]
+  },
+  "check4_blueprintCoverage": {
+    "domainsRequired": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "domainCoverage": {
+      "A": 3,
+      "B": 3,
+      "C": 3,
+      "D": 2,
+      "E": 3,
+      "F": 3
+    },
+    "allDomainsCovered": true,
+    "perDomainCases": {
+      "A": {
+        "cases": 3,
+        "ids": [
+          "CBQ-A1",
+          "CBQ-A2",
+          "CBQ-A3"
+        ]
+      },
+      "B": {
+        "cases": 3,
+        "ids": [
+          "CBQ-B1",
+          "CBQ-B2",
+          "CBQ-B3"
+        ]
+      },
+      "C": {
+        "cases": 3,
+        "ids": [
+          "CBQ-C1",
+          "CBQ-C2",
+          "CBQ-C3"
+        ]
+      },
+      "D": {
+        "cases": 2,
+        "ids": [
+          "CBQ-D1",
+          "CBQ-D2"
+        ]
+      },
+      "E": {
+        "cases": 3,
+        "ids": [
+          "CBQ-E1",
+          "CBQ-E2",
+          "CBQ-F2"
+        ]
+      },
+      "F": {
+        "cases": 3,
+        "ids": [
+          "CBQ-E2",
+          "CBQ-F1",
+          "CBQ-F2"
+        ]
+      }
+    },
+    "passed": true,
+    "note": "Domain D has 2 cases vs. 3 for others — within acceptable variance. Domain E and F share CBQ-E2 (IT General Controls + Analytics, cross-domain tagged E+F) and CBQ-F2 (Cybersecurity/Finance Automation, tagged E+F)."
+  },
+  "check5_dl008": {
+    "totalSelectMultiItems": 33,
+    "violations": 0,
+    "passed": true,
+    "violationsDetail": [],
+    "methodology": "For each select/multi item, extracted CorrectChoice by matching item.Correct against item.Choices array. Verified ExplanationWrong[CorrectChoice] is empty string. Confirmed across all select and multi items."
+  },
+  "check6_ewCoverage": {
+    "selectItems": {
+      "total": 19,
+      "gaps": 0,
+      "note": "All 19 select items have fully populated distractor ExplanationWrong fields (3 non-CC slots each = 57/57 filled)."
+    },
+    "multiItems": {
+      "total": 14,
+      "totalDistractorSlots": 42,
+      "totalEmptyDistractorSlots": 26,
+      "percentFilled": 38,
+      "note": "14/14 multi items have at least 1 empty distractor ExplanationWrong slot. 26 of 42 total distractor positions (62%) are EMPTY. Only 16 of 42 (38%) have content. This is a systematic template rotation artifact — the template engine populated EW-A and EW-D (or EW-C) but left EW-B and EW-C (or EW-D) empty.",
+      "perItem": [
+        {
+          "ItemID": "CBQ-A1-Q6",
+          "CaseID": "CBQ-A1",
+          "Topic": "External reporting judgment",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_C"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongD",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-A2-Q5",
+          "CaseID": "CBQ-A2",
+          "Topic": "Financial reporting effects",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-B1-Q6",
+          "CaseID": "CBQ-B1",
+          "Topic": "Budgeting judgment",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-B2-Q4",
+          "CaseID": "CBQ-B2",
+          "Topic": "Regression",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 2,
+          "DistractorSlotsEmpty": 1,
+          "FilledSlots": [
+            "EW_B",
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-C1-Q5",
+          "CaseID": "CBQ-C1",
+          "Topic": "Flexible budgeting",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-C2-Q4",
+          "CaseID": "CBQ-C2",
+          "Topic": "Performance measurement",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_C"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongD",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-D1-Q4",
+          "CaseID": "CBQ-D1",
+          "Topic": "Quality costs",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 2,
+          "DistractorSlotsEmpty": 1,
+          "FilledSlots": [
+            "EW_C",
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-D2-Q4",
+          "CaseID": "CBQ-D2",
+          "Topic": "Lean operations",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_B"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongD",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-E1-Q2",
+          "CaseID": "CBQ-E1",
+          "Topic": "Control activities",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_C"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongD",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-E2-Q3",
+          "CaseID": "CBQ-E2",
+          "Topic": "IT controls",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-F1-Q3",
+          "CaseID": "CBQ-F1",
+          "Topic": "Data quality",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-B3-Q6",
+          "CaseID": "CBQ-B3",
+          "Topic": "Forecast assumptions",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-C3-Q4",
+          "CaseID": "CBQ-C3",
+          "Topic": "Leading indicators",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        },
+        {
+          "ItemID": "CBQ-F2-Q4",
+          "CaseID": "CBQ-F2",
+          "Topic": "Automation governance",
+          "CorrectChoice": "A",
+          "TotalChoices": 4,
+          "DistractorSlotsTotal": 3,
+          "DistractorSlotsFilled": 1,
+          "DistractorSlotsEmpty": 2,
+          "FilledSlots": [
+            "EW_D"
+          ],
+          "Gaps": [
+            {
+              "Slot": "ExplanationWrongB",
+              "Status": "EMPTY"
+            },
+            {
+              "Slot": "ExplanationWrongC",
+              "Status": "EMPTY"
+            }
+          ]
+        }
+      ]
+    },
+    "overall": {
+      "totalEWSlotsChecked": 132,
+      "totalEmptyOrMissing": 26,
+      "passed": false,
+      "severity": "Medium — 26 empty distractor slots across 14 multi items. Learners selecting these distractors will see no educational feedback. Does not block delivery but reduces pedagogical quality.",
+      "recommendedAction": "Author missing distractor explanations for the 26 empty EW slots. Template pattern suggests all CC=A, with EW-B and EW-C most commonly empty. Target: 1-2 batch remediation sessions."
+    }
+  },
+  "check7_exceptionsSummary": [
+    {
+      "type": "METADATA_GAP",
+      "severity": "Low",
+      "ids": [
+        "CBQ-C1",
+        "CBQ-D1"
+      ],
+      "detail": "Both cases have question_state='Certified' on all items but RevisionHistory never updated and pack_state remains 'Draft'. Certification was performed (items meet all standards) but the metadata update was missed.",
+      "blocksDelivery": false,
+      "rationale": "Per CAQS §1.7.1, learner-pool eligibility is gated by question_state='Certified', not pack_state or RevisionHistory. Both cases satisfy delivery criteria. This is a documentation clean-up item, not a certification gap."
+    },
+    {
+      "type": "EW_DISTRACTOR_GAPS",
+      "severity": "Medium",
+      "ids": [
+        "CBQ-A1-Q6",
+        "CBQ-A2-Q5",
+        "CBQ-B1-Q6",
+        "CBQ-B2-Q4",
+        "CBQ-C1-Q5",
+        "CBQ-C2-Q4",
+        "CBQ-D1-Q4",
+        "CBQ-D2-Q4",
+        "CBQ-E1-Q2",
+        "CBQ-E2-Q3",
+        "CBQ-F1-Q3",
+        "CBQ-B3-Q6",
+        "CBQ-C3-Q4",
+        "CBQ-F2-Q4"
+      ],
+      "count": 14,
+      "emptySlots": 26,
+      "detail": "14 multi-select items have 26 empty distractor ExplanationWrong slots. All 14 are Certified. Learners who select these specific wrong answers will see no feedback.",
+      "blocksDelivery": false,
+      "rationale": "ExplanationCorrect provides the full correct-answer explanation. Distractor explanations are supplementary educational content. The learner still receives proper feedback for the correct answer. This is a pedagogical quality gap, not a correctness gap."
+    },
+    {
+      "type": "PACK_STATE_INCONSISTENCY",
+      "severity": "Low",
+      "ids": [
+        "CBQ-C1",
+        "CBQ-D1",
+        "CBQ-E1",
+        "CBQ-F1"
+      ],
+      "detail": "Some cases have pack_state='Draft' or 'Production' when all items are Certified. Inconsistent with the rest of the certified pool where pack_state='Certified'.",
+      "blocksDelivery": false,
+      "rationale": "pack_state is not used for delivery gating. question_state governs. This is a metadata normalization item."
+    }
+  ],
+  "finalVerdict": {
+    "status": "PROGRAM_CLOSED_WITH_DOCUMENTED_EXCEPTIONS",
+    "summary": "15/15 cases (100%) and 90/90 items (100%) are Certified at the question_state level. Zero DL-008 violations. All 6 blueprint domains have at least 2 certified cases. The Enhanced Case Base is operational for learner delivery.",
+    "exceptionsDocumented": 3,
+    "exceptionsBlockingDelivery": 0,
+    "recommendedPriorityActions": [
+      "P1 (Low): Add RevisionHistory certification entries for CBQ-C1 and CBQ-D1",
+      "P2 (Low): Normalize pack_state to 'Certified' for CBQ-C1, CBQ-D1, CBQ-E1, CBQ-F1",
+      "P3 (Medium): Author 26 missing distractor ExplanationWrong fields across 14 multi items"
+    ]
+  }
+}

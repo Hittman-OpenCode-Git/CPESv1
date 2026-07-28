@@ -1,0 +1,126 @@
+{
+  "session": "S603",
+  "agent": "H",
+  "role": "Agent AA Boundary Review",
+  "generated": "2026-07-26",
+  "reference": "reports/SESSION602_AGENT_AA_REGISTRY_RESPONSIBILITY_REVIEW.json",
+  "s602_finding": "Agent AA ≠ 600 activation",
+  "independent_verification": "CONFIRMED",
+  "agent_aa_current_scope": {
+    "identity": "Agent AA is a functional designation, not a previously named agent in the governance framework. Best interpreted as the registry-operations function — the role that maintains registry scripts, verifies registry artifacts, and manages QID inventory cross-checks.",
+    "responsible_for": "Registry script maintenance (build_master_registry.js, generate_registry.js), QID inventory cross-check against MASTER_QUESTION_REGISTRY.md, registry artifact integrity monitoring (registry/ directory), and build-script operational reliability.",
+    "belongs_to": "700-series Governance / Portfolio Infrastructure",
+    "authority_source": "S725 Row 17 (Governance Auditor — QID inventory cross-check). Registry artifacts created under S314/S315 700/800-series authority. MASTER_QUESTION_REGISTRY.md governed by AGENTS.md Rule 3 BLOCK — auto-generated only.",
+    "key_activities": [
+      "Maintain build_master_registry.js and generate_registry.js as operational tooling",
+      "Verify QID inventory counts against MASTER_QUESTION_REGISTRY.md (T0 protocol item)",
+      "Monitor registry/ directory artifact integrity",
+      "Cross-check parse-counts (500 per pack) against registry entries",
+      "Report QID inventory discrepancies to governance"
+    ]
+  },
+  "s600_agent_a_scope": {
+    "identity": "Agent A — Registry Operations as defined in S600 Charter §4.1. Would be the canonical maintainer of content registries if the 600-series were activated.",
+    "responsible_for": "Maintaining QUESTION_REGISTRY_INDEX.md, maintaining QUESTION_SIMILARITY_LEDGER.json, running similarity scans, flagging duplicates for 700 review, reporting registry statistics to 300-series.",
+    "belongs_to": "600-series Content Operations (DEFERRED — not activated, S724 unanimous 26/26 vote)",
+    "authority_source": "S600 Charter §4.1 — reserve authority, not active. Would require: (a) all four S600 §5 activation gates (Economic, Board, Ownership, Baseline) to pass, (b) a new Executive Board vote, (c) a REVISION_HISTORY.md activation entry.",
+    "key_activities": [
+      "Maintain QUESTION_SIMILARITY_LEDGER.json as an authoring-support artifact for duplicate detection",
+      "Run cross-question similarity scans (distinct from existing within-question DistractorSimilarityValidator)",
+      "Maintain QUESTION_REGISTRY_INDEX.md as a 600-maintained artifact",
+      "Report registry statistics upstream to 300-series analytics",
+      "Flag potential duplicates for 700/800 review",
+      "NOT: generate registry from source code (§4.1 prohibition), NOT: delete/archive entries, NOT: modify question content"
+    ],
+    "artifacts_to_create": [
+      "QUESTION_SIMILARITY_LEDGER.json (does not exist — S601 Agent C confirmed)",
+      "Automated similarity scanning scripts (no dedicated cross-question duplicate detection exists)",
+      "Registry statistics reporting pipeline (to fulfill §4.1 300-reporting requirement)",
+      "EW template libraries (COSO/SOX/Control Activities catalogs — none exist)",
+      "Standards libraries (explanation/distractor/feedback templates — none exist)",
+      "Authoring/research/blueprint packets staging directories"
+    ]
+  },
+  "overlap_analysis": {
+    "shared_territory": "Both roles touch registry artifacts. Both can perform QID inventory operations. Both may create new registry artifacts (similarity ledgers, registry indices). Both interact with the existing registry/ directory and build scripts.",
+    "distinct_territory": {
+      "700_series_agent_aa": "Verification of existing artifacts for governance compliance (count cross-checks, hash verification, integrity monitoring, T0 protocol execution). Operational: 'Is the registry correct?' The audience is the Governance Board.",
+      "600_series_agent_a": "Creation and maintenance of registry artifacts as authoring-support infrastructure (similarity detection for duplicate prevention, template libraries, draft staging). Operational: 'What content operations does the registry enable?' The audience is 800-series certification authors.",
+      "boundary_rule": "The same QID inventory query has different purposes: 700 queries to verify integrity ('are we missing any?'); 600 queries to support drafting ('what exists already that a new item might duplicate?'). The GOVERNANCE function (verifying, monitoring) is 700-series. The CONTENT-OPERATIONS function (enabling authoring, preventing duplicates at drafting time) is 600-series."
+    },
+    "boundary_clarity": "CLEAR",
+    "boundary_clarity_detail": "The S600 Charter's own prohibitions in §4.1 establish the boundary. 600 Agent A is prohibited from 'generating the registry from source code' — which is exactly what Agent AA does (via build_master_registry.js and generate_registry.js). 600 Agent A is prohibited from 'deleting or archiving entries' — which 700-series owns. 600 Agent A is prohibited from 'modifying question content' — which 800-series owns. These three prohibitions create a clean natural boundary between Agent AA's current 700-series scope and what 600 Agent A would do if activated.",
+    "s725_row_17_alignment": "S725 Row 17 assigns QID inventory cross-check against MASTER_QUESTION_REGISTRY.md to Governance Auditor (700-series). This is verification, not maintenance. S601 Agent B confirmed this is a complementary pattern — maintenance (600) vs. verification (700) — not a conflict. The current state has both functions operating under 700-series, which is a governance consolidation, not a boundary violation.",
+    "s601_agent_b_confirm": "S601 Ownership Boundary Audit scored 95/100 with a procedural note on MASTER_QUESTION_REGISTRY.md tension between S600 §2.1 (600 maintains) and AGENTS.md Rule 3 (generated — never hand-edit). Resolution: either transfer build-script ownership to 600 or restrict 600 to similarity ledger/registry index artifacts.",
+    "s601_agent_c_confirm": "S601 Agent C confirmed similarity_ledger_exists = false, registry scripts predate 600 concept (created under 700/800 authority), and registry bleeds into both analytics (300) and certification (800) — mandatory cross-lane dependencies that make standalone 600 registry operations impractical without full lane activation."
+  },
+  "activation_triggers": {
+    "what_constitutes_activation": [
+      "Creating all four 600-series agent-domain artifacts simultaneously (registry ledgers, EW template libraries, draft-preparation infrastructure, standards libraries) — not just one",
+      "Executing a session explicitly attributed to 600-series (e.g., 'SESSION604_600_SERIES_REGISTRY_SETUP')",
+      "Changing question_state on any item by 600-authority",
+      "Producing draft packets that are consumed by 800-series certification waves",
+      "A documented Executive Board vote authorizing 600-series activation (new vote — S724 26/26 deferral does not carry forward)",
+      "A REVISION_HISTORY.md entry explicitly recording 600-series activation with binding constraint evidence, updated forecast, vote record, and T0 baseline snapshot (per S600 §5.4)"
+    ],
+    "safe_harbor_activities": [
+      "Maintaining build_master_registry.js and generate_registry.js as operational tooling (these scripts predate 600, were created under 700/800 authority)",
+      "Verifying QID inventory against MASTER_QUESTION_REGISTRY.md as a T0 protocol item (S725 Row 17 — Governance Auditor function)",
+      "Cross-checking parse-counts (500 per pack) against registry entries (structural integrity, S725 Row 17)",
+      "Monitoring registry/ directory artifact integrity (governance function, not content operations)",
+      "Creating QUESTION_SIMILARITY_LEDGER.json under STRICTLY 700-series authority as an operational tool consumed by governance and certification — IF and ONLY IF the creating session explicitly attributes the artifact to 700-series, not 600-series (per S602 Agent F's conditional authorization)",
+      "Reporting QID inventory discrepancies to the Governance Board"
+    ],
+    "prohibited_unless_activated": [
+      "Creating content-authoring registry artifacts (EW template libraries, COSO/SOX misconception catalogs, Control Activities catalogs, distractor pattern libraries — S600 §4.2 Agent B domain)",
+      "Creating draft-preparation infrastructure (authoring packets, research packets, blueprint packets, staging directories, queue management — S600 §4.3 Agent C domain)",
+      "Creating standards libraries (explanation templates, distractor templates, feedback templates — S600 §4.4 Agent D domain)",
+      "Running similarity scans as a drafting-time duplicate-prevention service (vs. governance audit verification)",
+      "Reporting registry statistics to 300-series as a dedicated 600 pipeline (S600 §4.1 requires this flow)",
+      "Operating any 600-attributed session or producing 600-attributed artifacts",
+      "Modifying pack files, changing question_state, or making certification decisions by 600-authority"
+    ]
+  },
+  "s602_finding_verification": {
+    "s602_agent_f_verdict": "Agent AA registry operations do NOT constitute 600-series activation. TRUE.",
+    "s602_evidence_validated": {
+      "definitional": "CONFIRMED. S600 §5 requires ALL 4 mandatory gates. No gate has been triggered. S600 §0: 'not an execution lane.'",
+      "scope": "CONFIRMED. S600 §2.1 defines 6 600-series domains. Registry operations is ONE domain. Lane activation requires all 4 agents (A-D) to be operational — not just one. S600 §4 defines 4 agents collectively.",
+      "precedent": "CONFIRMED. Registry artifacts (registry/ directory) predate 600. S601 Agent C confirmed: created under S314/S315 700/800 authority. Build scripts created under 700-series governance.",
+      "governance": "CONFIRMED. S600 §5.2 requires a new Executive Board vote (300 + 700 + 800 leads). S602 Agent F correctly notes: no vote = no activation."
+    },
+    "no_constitutional_fault": true,
+    "verification_confidence": "HIGH — all 4 S602 evidence pillars independently confirmed against S600 Charter, S601 B&C findings, S725 Stewardship Framework, and AGENTS.md Rule 3."
+  },
+  "borderline_scenarios": {
+    "scenario_1_similarity_ledger_creation": {
+      "question": "If Agent AA creates QUESTION_SIMILARITY_LEDGER.json, does that activate 600?",
+      "answer": "NO — IF created under 700-series authority as an operational governance tool (consumed by certification and governance for duplicate detection). YES — IF created as a 600-attributed artifact for content-operations authoring support.",
+      "governing_factor": "Attribution. The same JSON file is 700-series if the creating session says 'SESSION603_GOVERNANCE_SIMILARITY_LEDGER' and documents it under 700-series in REVISION_HISTORY.md. It becomes 600-series if attributed to Agent A of S600 Charter §4.1.",
+      "recommendation": "If ever created, the creating session must explicitly state: 'This artifact is created under 700-series governance authority, not 600-series content operations. It is not a 600-series activation event.'"
+    },
+    "scenario_2_registry_index_maintenance": {
+      "question": "If Agent AA maintains QUESTION_REGISTRY_INDEX.md (existing in registry/), does that activate 600?",
+      "answer": "NO. QUESTION_REGISTRY_INDEX.md already exists in registry/ — created under S314/S315 700/800 authority. Maintaining an existing governance artifact is governance, not lane activation. 600 Agent A would maintain a DEDICATED, 600-owned QUESTION_REGISTRY_INDEX.md as an authoring-support artifact — distinct from the existing governance artifact.",
+      "governing_factor": "Ownership. The existing artifact is 700/800-owned. 600 would need its own instance or explicit transfer."
+    },
+    "scenario_3_build_script_ownership_transfer": {
+      "question": "If build_master_registry.js ownership is transferred to 600-series, does that activate 600?",
+      "answer": "NO — this alone does not activate the lane. But it WOULD be one of several pre-activation steps required by S600 §5.3 (No Ownership Conflict check).",
+      "governing_factor": "S601 Agent B identified this as a procedural note (score -3). Resolution is required BEFORE activation, but a script-ownership transfer is NOT activation itself."
+    },
+    "scenario_4_similarity_scan_for_governance": {
+      "question": "If Agent AA runs a cross-question similarity scan and flags potential duplicates to 700, does that activate 600?",
+      "answer": "NO. This is a governance audit function — finding structural defects (duplicates) is 700-series territory. The distinction: governance scans produce FINDINGS (QID X and QID Y are 97% similar → flag for review). 600 scans produce AUTHORING SUPPORT (new item N is similar to existing items X, Y → warn the author).",
+      "governing_factor": "Output destination. Governance findings → DEFECT_LIBRARY.md or governance reports. Content-operations output → draft-author workflow integration."
+    }
+  },
+  "governance_guard_relevance": {
+    "rule_2_explanation_wrong": "Not relevant to Agent AA boundary. Non-empty EW[CC] is DL-008 — independent defect class.",
+    "rule_3_registry_hand_edit": "CRITICAL safeguard. MASTER_QUESTION_REGISTRY.md is auto-generated — governance-guard Rule 3 mechanically BLOCKS any hand-edit. This means even if Agent AA were to attempt a 600-series registry operation by editing MASTER_QUESTION_REGISTRY.md directly, the governance guard would block it. The registry is RO for Agent AA.",
+    "rule_5_batch_cap": "Not directly relevant. 30-item change-set cap applies to pack-file edits, not registry operations.",
+    "implication": "Rule 3 serves as an architectural firewall. The MASTER_QUESTION_REGISTRY.md is the most significant registry artifact (the one S600 Agent A is defined to maintain), and it cannot be edited — only generated. This means the 600 Agent A function of 'maintaining' the master registry is structurally impossible without first transferring build-script ownership. The existing prohibition reinforces the boundary."
+  },
+  "conclusion": "Agent AA remains Portfolio Infrastructure (700-series Governance), not 600-Series Content Operations activity. Boundary is CLEAR. The four evidence pillars from S602 Agent F are independently verified against all available source documents. The boundary is defined by (a) purpose of operation (governance verification vs. content-operations support), (b) audience of outputs (Governance Board vs. 800-series authors), and (c) attribution of artifacts (700-series vs. 600-series). Agent AA's current scope — maintaining build scripts, verifying QID inventory, monitoring registry integrity — falls entirely within 700-series governance. No 600 activation trigger has been pulled. The S600 Charter remains DEFERRED per S724 unanimous 26/26 vote.",
+  "version": "1.0"
+}

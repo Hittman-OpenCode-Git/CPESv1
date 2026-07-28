@@ -1,0 +1,284 @@
+{
+  "document": "SESSION2021_BOARD_CONSUMPTION_MATRIX",
+  "session": "S202.1",
+  "title": "Board Consumption Matrix — Which Board Consumes Which Artifact Sections",
+  "series": "200-Series — Framework v2 Architecture Addendum",
+  "date": "2026-07-27",
+  "type": "Standardization Specification — Read-Only",
+  "parent": "SESSION2021_SCAN_ARTIFACT_SCHEMA.json (Board A) + SESSION2021_READINESS_OBJECT.json (Board C)",
+  "purpose": "Defines the precise artifact section consumption contract for every Framework v2 board. Each board declares which artifact sections it requires, which fields within each section, whether the section is mandatory or optional for that board, and the board's minimum artifact schema version. This is the contract that operationalizes 'Scan Once, Consume Many' — each board reads exactly what it needs and nothing more.",
+  "constraints": ["No content changes", "No certification actions", "No governance changes", "Read-only specification"],
+
+  "consumption_model_version": "1.0.0",
+
+  "artifact_version_dependency": {
+    "description": "Each board declares the minimum artifact schema version it requires. Boards refuse to consume artifacts below their minimum version.",
+    "minimum_across_all_boards": "1.0.0",
+    "boards": [
+      {"board": "Registry Board", "minimumVersion": "1.0.0"},
+      {"board": "Quality Board", "minimumVersion": "1.0.0"},
+      {"board": "Governance Board", "minimumVersion": "1.0.0"},
+      {"board": "Certification Board", "minimumVersion": "1.0.0"},
+      {"board": "Throughput Board", "minimumVersion": "1.0.0"}
+    ]
+  },
+
+  "registry_board": {
+    "description": "Maintains the canonical item inventory. Registers identity, tracks lineage, verifies cross-pack integrity.",
+    "responsibleFor": [
+      "CANONICAL_REGISTRY.json — primary data store maintained by Registry Board",
+      "Identity key assignment and uniqueness verification",
+      "Template family classification and cross-pack collision detection",
+      "Version chain integrity (DELTA_LEDGER.json consistency)"
+    ],
+    "consumes": {
+      "section_1_scanContext": {
+        "mandatory": true,
+        "fields": ["packsScanned", "extractionMethod", "configuration"],
+        "usage": "Verifies that all packs were scanned with the correct extraction method. Logs scan environment for lineage."
+      },
+      "section_2_packFileHashes": {
+        "mandatory": true,
+        "fields": ["all"],
+        "usage": "Cross-references with T0 baseline in CURRENT_BASELINES.md. Any mismatch triggers Sync Anomaly Playbook."
+      },
+      "section_4_perItemResults": {
+        "mandatory": true,
+        "fields": ["qid", "compoundKey", "identityKey", "pack", "section", "questionState"],
+        "usage": "Registers every item with its compound key. Populates CANONICAL_REGISTRY.json entries. Verifies identityKey uniqueness across the pool."
+      },
+      "section_7_lineage": {
+        "mandatory": true,
+        "fields": ["packFileBaseSnapshots", "priorArtifacts"],
+        "usage": "Records artifact provenance. Links this artifact to prior artifacts for version chain integrity."
+      },
+      "section_9_consumerDigest": {
+        "mandatory": true,
+        "fields": ["hashOfArtifact"],
+        "usage": "Artifact-level integrity verification. Logged alongside registry entry timestamps."
+      }
+    },
+    "doesNotConsume": ["section_3_aggregateStatistics", "section_5_defectInventory", "section_6_readiness"],
+    "produces": ["knowledge/CANONICAL_REGISTRY.json", "knowledge/DELTA_LEDGER.json"],
+    "o1_lookups": ["by_identity_key", "by_qid_filepath", "by_template_family"]
+  },
+
+  "quality_board": {
+    "description": "Performs 10-dimension CAQS review on structurally-clean items. 3-4 agents covering all quality dimensions in a single parallel pass. Replaces Technical Review, DQS, EQS, Learner Safety, and QA Review from v1.",
+    "responsibleFor": [
+      "10-dimension CAQS scoring (D1_Blueprint through D10_Metadata)",
+      "Distractor quality assessment (DL-013, DL-010, DL-025)",
+      "Explanation quality assessment (EV3, DL-007 patterns)",
+      "Educational value verification",
+      "Accessibility and clarity review"
+    ],
+    "consumes": {
+      "section_3_aggregateStatistics": {
+        "mandatory": true,
+        "fields": ["byDefectClass", "byDomain", "byReadinessClass"],
+        "usage": "Session-level quality context. Defect density by domain informs agent assignment. Domain readiness scores prioritize review order."
+      },
+      "section_4_perItemResults": {
+        "mandatory": true,
+        "fields": ["qid", "compoundKey", "gateResults", "gateDetails", "defectFlags", "readinessClass", "readinessScore", "lastKnownDefects"],
+        "usage": "Per-item quality review. Quality agents use gateDetails.gate_2 (content scan findings) and defectFlags to understand what the scanner found. They then perform their own 10-dimension review, confirming or challenging scanner findings.",
+        "visited_states": ["READY", "MINOR_FIX"],
+        "hidden_states": ["BLOCKED", "REMEDIATE"]
+      },
+      "section_5_defectInventory": {
+        "mandatory": true,
+        "fields": ["byDefect", "certifiedExposure"],
+        "usage": "Understands the defect landscape before review begins. Certified exposure items are flagged for reviewer awareness."
+      },
+      "section_6_readiness": {
+        "mandatory": false,
+        "fields": ["sessionPlan"],
+        "usage": "Optional — session plan provides prioritized queue. Quality Board may reorder based on domain expertise."
+      }
+    },
+    "doesNotConsume": ["section_1_scanContext", "section_2_packFileHashes", "section_7_lineage"],
+    "produces": ["reports/_{SESSION_ID}_QUALITY_REPORT.json"],
+    "agent_assignments": {
+      "Agent_1": "CAQS dimensions D1-D4 (Blueprint, Cognitive, Technical, Distractors) — the accounting-review-dominant dimensions",
+      "Agent_2": "CAQS dimensions D5-D8 (Realism, Numerical, Explanation, Clarity) — the editorial-review-dominant dimensions",
+      "Agent_3": "CAQS dimensions D9-D10 (Accessibility, Metadata) + learner-safety cross-check — the psychometric-review-dominant dimensions",
+      "Agent_4_optional": "Per-pack UIQS if needed (recoverable as standalone per S202)"
+    },
+    "dependencies": ["Registry Board (compound-key identity resolved before review)", "Delta Review Engine (content_hash comparison avoids re-review of unchanged items)"]
+  },
+
+  "governance_board": {
+    "description": "Authorizes sessions, monitors learner-pool safety, enforces governance guard rules, detects drift, and produces session close authorization. Full inventory visibility — the only board that sees BLOCKED and REMEDIATE items.",
+    "responsibleFor": [
+      "Session Go/No-Go decision (T0)",
+      "Mid-session drift detection (Tmid)",
+      "Session close authorization (Tend)",
+      "Learner-pool safety monitoring (P0/P1 alerting)",
+      "Governance guard rule compliance verification",
+      "REVISION_HISTORY.md and DEFECT_LIBRARY.md update coordination"
+    ],
+    "consumes": {
+      "section_1_scanContext": {
+        "mandatory": true,
+        "fields": ["preFlightGates", "extractionMethod", "configuration"],
+        "usage": "Verifies scan pipeline completed all gates. Confirms AM-1 extraction was used. Flags any skipped or failed gates."
+      },
+      "section_2_packFileHashes": {
+        "mandatory": true,
+        "fields": ["all"],
+        "usage": "T0 baseline check. Tmid drift check. Tend reconciliation. Any hash change triggers escalation."
+      },
+      "section_3_aggregateStatistics": {
+        "mandatory": true,
+        "fields": ["totalScanned", "totalBlocked", "byGate", "byDefectClass", "byReadinessClass", "learnerPoolExposure"],
+        "usage": "Portfolio-level safety assessment. learner_pool_exposure.critical triggers immediate P0 alert. byGate stats verify pipeline completeness."
+      },
+      "section_4_perItemResults": {
+        "mandatory": true,
+        "fields": ["qid", "compoundKey", "questionState", "readinessClass", "defectFlags", "overallVerdict"],
+        "usage": "Full inventory visibility. BLOCKED and REMEDIATE items visible for safety monitoring. Certified items with defects flagged for exposure assessment.",
+        "visited_states": ["BLOCKED", "REMEDIATE", "MINOR_FIX", "READY"]
+      },
+      "section_5_defectInventory": {
+        "mandatory": true,
+        "fields": ["byDefect", "blockingSummary", "certifiedExposure"],
+        "usage": "Certified exposure assessment. Each certifiedExposure entry with P0 escalation triggers immediate governance event."
+      },
+      "section_6_readiness": {
+        "mandatory": true,
+        "fields": ["portfolioReadinessScore", "sessionPlan", "byDomain"],
+        "usage": "Session authorization: Go/No-Go based on readiness state. Session plan adopted as authorization scope."
+      },
+      "section_7_lineage": {
+        "mandatory": true,
+        "fields": ["artifactVersionChain", "priorArtifacts"],
+        "usage": "Audit trail verification. Confirms artifact lineage is intact. Detects supersession gaps."
+      },
+      "section_8_governanceAttestation": {
+        "mandatory": true,
+        "fields": ["all"],
+        "usage": "Governance guard rule compliance verification. blockCount must be 0 at session authorization. warnCount must be acknowledged."
+      }
+    },
+    "doesNotConsume": [],
+    "produces": ["reports/_{SESSION_ID}_GOVERNANCE_REPORT.md", "knowledge/REVISION_HISTORY.md (append)", "knowledge/DEFECT_LIBRARY.md (new entries)"],
+    "dependencies": ["Registry Board (identity resolution)", "Scan Orchestrator (artifact integrity)", "Governance Guard (rule enforcement)"]
+  },
+
+  "certification_board": {
+    "description": "Final adjudication board. Reviews Quality Board findings and makes CERTIFY/HOLD/ESCALATE decisions. Has question_state mutation authority (the only board that can write 'Certified' to question_state). Refocused from re-verification (v1) to governance-sufficiency review (v2).",
+    "responsibleFor": [
+      "CERTIFY/HOLD/ESCALATE adjudication",
+      "question_state mutation to 'Certified'",
+      "REVISION_HISTORY.md certification batch entries",
+      "Certification quality gate verification",
+      "Delta review adoption decisions (CERTIFIED_DELTA vs. re-audit)"
+    ],
+    "consumes": {
+      "section_3_aggregateStatistics": {
+        "mandatory": true,
+        "fields": ["byReadinessClass", "byDomain", "byPack"],
+        "usage": "Session-level context: how many items are ready, which domains, which packs. Used for certification wave scoping."
+      },
+      "section_4_perItemResults": {
+        "mandatory": true,
+        "fields": ["qid", "compoundKey", "questionState", "gateResults", "readinessClass", "readinessScore", "deltaClassification", "contentHash", "lastKnownDefects"],
+        "usage": "Per-item certification adjudication. READY items: review Quality Board scores → CERTIFY. MINOR_FIX items: review warnings → CERTIFY with acknowledged warnings. Delta classification determines whether item inherits prior certification or requires fresh review.",
+        "visited_states": ["READY", "MINOR_FIX"],
+        "hidden_states": ["BLOCKED", "REMEDIATE"]
+      },
+      "section_5_defectInventory": {
+        "mandatory": true,
+        "fields": ["byDefect", "blockingSummary"],
+        "usage": "Confirms no HARD_BLOCK defects remain on candidate items. blockingSummary.hardBlockCount must be 0 for all certification candidates."
+      },
+      "section_6_readiness": {
+        "mandatory": true,
+        "fields": ["sessionPlan"],
+        "usage": "Adopts session plan as certification scope. May adjust based on Quality Board findings."
+      },
+      "section_7_lineage": {
+        "mandatory": true,
+        "fields": ["artifactVersionChain"],
+        "usage": "Records which artifact was used for this certification batch. Cited in REVISION_HISTORY.md certification entries."
+      }
+    },
+    "doesNotConsume": ["section_1_scanContext", "section_2_packFileHashes"],
+    "produces": ["reports/_{SESSION_ID}_CERTIFICATION_REPORT.json", "question_state: 'Certified' on adjudicated items"],
+    "dependencies": ["Quality Board (CAQS scores prerequisite)", "Governance Board (session authorization)", "Registry Board (identity resolved)"],
+    "certification_rules": [
+      "READY items: Quality Board CAQS scores must be ≥ 70 on all dimensions. If any dimension < 70 → HOLD or ESCALATE.",
+      "MINOR_FIX items: Warnings must be explicitly acknowledged in certification report. No HARD_BLOCK defects present.",
+      "CERTIFIED_DELTA: content_hash matches DELTA_LEDGER baseline. All pre-flight gates PASS on current pack state. Prior quality_verdict was CERTIFY.",
+      "Governance guard Rules 6-8 must PASS before any state transition."
+    ]
+  },
+
+  "throughput_board": {
+    "description": "Measurement-only accountability board. Tracks all 10 BF metrics. No content authority — purely observational. Produces throughput reports consumed by phase gate verification.",
+    "responsibleFor": [
+      "BF-001 through BF-010 metric tracking",
+      "Phase gate threshold verification (S830, S900, S910)",
+      "v1 baseline → v2 improvement tracking",
+      "Break-even analysis"
+    ],
+    "consumes": {
+      "section_1_scanContext": {
+        "mandatory": true,
+        "fields": ["pipelineRuntime", "preFlightGates"],
+        "usage": "BF-001 (scan runtime), BF-002 (gate parallelism efficiency)."
+      },
+      "section_3_aggregateStatistics": {
+        "mandatory": true,
+        "fields": ["totalScanned", "totalPassed", "totalBlocked", "byGate", "byDefectClass", "byReadinessClass", "learnerPoolExposure"],
+        "usage": "BF-004 (readiness failure rate), BF-005 (duplicate review rate), BF-009 (domain scores)."
+      },
+      "section_4_perItemResults": {
+        "mandatory": true,
+        "fields": ["qid", "readinessClass", "deltaClassification"],
+        "usage": "BF-006 (re-review rate), BF-010 (board consumption rate)."
+      },
+      "section_6_readiness": {
+        "mandatory": true,
+        "fields": ["portfolioReadinessScore"],
+        "usage": "BF-004 aggregate computation."
+      }
+    },
+    "doesNotConsume": ["section_2_packFileHashes", "section_5_defectInventory", "section_7_lineage", "section_8_governanceAttestation", "section_9_consumerDigest"],
+    "produces": ["reports/_{SESSION_ID}_THROUGHPUT_REPORT.json"],
+    "dependencies": ["All other boards (observes, does not depend on)"],
+    "bf_metrics_tracked": {
+      "BF-001": {"metric": "Pre-flight scan runtime", "source": "scanContext.preFlightGates[].runtimeSeconds", "unit": "seconds"},
+      "BF-002": {"metric": "Gate parallelism throughput", "source": "scanContext.configuration.parallelism", "unit": "strategy"},
+      "BF-003": {"metric": "Reports per session", "source": "Count of report files produced by session", "unit": "files"},
+      "BF-004": {"metric": "Readiness failure rate", "source": "(BLOCKED + REMEDIATE) / totalScanned", "unit": "%"},
+      "BF-005": {"metric": "Duplicate review ratio", "source": "Count of agent examinations per EW field", "unit": "ratio"},
+      "BF-006": {"metric": "Re-review rate", "source": "Percentage of items with deltaClassification == UNCHANGED", "unit": "%"},
+      "BF-007": {"metric": "Identity ambiguity count", "source": "Compound-key collision count from Gate 3", "unit": "count"},
+      "BF-008": {"metric": "Sessions per certification wave", "source": "Counted from session_registry.json", "unit": "count"},
+      "BF-009": {"metric": "Domain readiness scores", "source": "aggregateStatistics.byDomain", "unit": "score"},
+      "BF-010": {"metric": "Board consumption rate", "source": "consumerDigest.sectionsPresent / total sections", "unit": "%"}
+    }
+  },
+
+  "cross_board_data_flow": {
+    "description": "The artifact flows through boards in a specific order. Each board's outputs become inputs for subsequent boards. This is the canonical consumption chain.",
+    "flow": [
+      {"step": 0, "board": "Scan Orchestrator", "action": "Produces certification_scan_artifact.json at session T0. Artifact is immutable for the session.", "output": "CERTIFICATION_SCAN_ARTIFACT"},
+      {"step": 1, "board": "Registry Board", "action": "Consumes artifact → populates CANONICAL_REGISTRY.json with identity entries. Verifies compound-key uniqueness. Records lineage.", "output": "CANONICAL_REGISTRY.json + DELTA_LEDGER.json", "dependsOn": ["Step 0"]},
+      {"step": 2, "board": "Governance Board", "action": "Consumes artifact + Registry outputs → makes Go/No-Go decision. Authorizes session scope. Monitors learner-pool exposure.", "output": "SESSION AUTHORIZATION", "dependsOn": ["Step 1"]},
+      {"step": 3, "board": "Quality Board", "action": "Consumes artifact → reviews READY and MINOR_FIX items across 10 CAQS dimensions. Produces per-item quality scores.", "output": "QUALITY_REPORT.json", "dependsOn": ["Step 2 (Go only)"]},
+      {"step": 4, "board": "Certification Board", "action": "Consumes artifact + Quality Report → adjudicates CERTIFY/HOLD/ESCALATE. Mutates question_state.", "output": "CERTIFICATION_REPORT.json + question_state changes", "dependsOn": ["Step 3"]},
+      {"step": 5, "board": "Governance Board (close)", "action": "Consumes artifact + all reports → session close authorization. Updates REVISION_HISTORY.md and DEFECT_LIBRARY.md.", "output": "GOVERNANCE_REPORT.md + REVISION_HISTORY.md update", "dependsOn": ["Steps 2-4"]},
+      {"step": "parallel", "board": "Throughput Board", "action": "Observes all steps → measures BF metrics. Phase gate verification at session close.", "output": "THROUGHPUT_REPORT.json", "dependsOn": ["Step 0"]}
+    ]
+  },
+
+  "consumption_validation_rules": [
+    "CONS-001: Every board must declare all mandatory artifact sections it requires. Missing section → board refuses artifact.",
+    "CONS-002: No board may consume a section it has not declared. Undocumented consumption → governance flag.",
+    "CONS-003: Quality and Certification boards must enforce hidden-state rules. BLOCKED or REMEDIATE items appearing in their queues → pipeline error.",
+    "CONS-004: Governance Board must verify consumerDigest.sectionsPresent matches all boards' declared mandatory sections before session authorization.",
+    "CONS-005: Throughput Board must verify BF-010 (consumption rate) at session close. Rate < 80% at S910 → phase gate failure."
+  ]
+}

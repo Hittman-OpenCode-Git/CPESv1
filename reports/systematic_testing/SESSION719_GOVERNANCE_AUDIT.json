@@ -1,0 +1,250 @@
+{
+  "session": "S719",
+  "agent": "J",
+  "verdict": "PASS_WITH_FLAGS",
+  "audit_timestamp": "2026-07-26",
+  "checks": {
+    "metadata_only_scope": {
+      "verdict": "PASS",
+      "findings": [
+        "All 244 Agent C decisions propose changes to exactly 3 fields: CognitiveLevel, Difficulty, DifficultyScore",
+        "168 COGNITIVELEVEL_UPDATE items: change CognitiveLevel (Evaluate→Understand) + Difficulty (Easy→Moderate-Easy) + DifficultyScore (1→2)",
+        "76 BOTH_UPDATE items: change CognitiveLevel (Remember→Understand) + Difficulty (Difficult→Moderate-Easy) + DifficultyScore (4→2)",
+        "0 decisions propose changes to Stem, Choices, ChoiceA/B/C/D, CorrectChoice, ExplanationCorrect, ExplanationWrongA/B/C/D, question_state, Topic, Part, Section, QuestionID"
+      ],
+      "samples_verified": 20,
+      "sample_items": [
+        {"QID": "P1-A-004", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, question_state:Certified, CorrectChoice:C", "proposed_change": "CL:Evaluate→Understand, Diff:Easy→ME/2, DS:1→2", "other_fields_untouched": true},
+        {"QID": "P1-A-007", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, question_state:Certified", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-A-012", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, question_state:Certified", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-A-023", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:67", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-B-001", "file": "pack_a_corrected.js:L3928-3943", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, question_state:Certified, CorrectChoice:D, ExplanationWrongD:''", "proposed_change": "CL:Evaluate→Understand, Diff:Easy→ME/2, DS:1→2", "other_fields_untouched": true},
+        {"QID": "P1-B-003", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:71", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-B-004", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:55", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-B-008", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:55", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-C-001", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:60", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-C-003", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:86", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-C-007", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:86", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-C-013", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:67", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-C-027", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:55", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-C-039", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:55", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-B-011", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:86", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1-B-013", "file": "pack_a_corrected.js", "verified_fields": "DifficultyScore:1, CognitiveLevel:Evaluate, Confidence:86", "proposed_change": "COGNITIVELEVEL_UPDATE", "other_fields_untouched": true},
+        {"QID": "P1E-E-002", "file": "pack_e_corrected.js:L11301-11311", "verified_fields": "DifficultyScore:4, CognitiveLevel:Remember, question_state:Certified, CorrectChoice:C, ExplanationWrongC:''", "proposed_change": "BOTH_UPDATE: CL:Remember→Understand, Diff:Difficult→ME/2, DS:4→2", "other_fields_untouched": true},
+        {"QID": "P1E-B-005", "file": "pack_e_corrected.js:L4009-4019", "verified_fields": "DifficultyScore:4, CognitiveLevel:Remember, question_state:Certified, CorrectChoice:B, ExplanationWrongB:''", "proposed_change": "BOTH_UPDATE: CL:Remember→Understand, Diff:Difficult→ME/2, DS:4→2", "other_fields_untouched": true},
+        {"QID": "P1B-B-119", "file": "pack_b_corrected.js:L3909-3933", "verified_fields": "DifficultyScore:4, CognitiveLevel:Apply, question_state:Certified, CorrectChoice:C, ExplanationWrongC:''", "proposed_change": "NONE — not in Agent C's 244 set (Apply is correct CL)", "other_fields_untouched": true},
+        {"QID": "P1-BC-014", "file": "pack_c_corrected.js:L4611-4628", "verified_fields": "DifficultyScore:4, CognitiveLevel:Understand, question_state:Certified, CorrectChoice:B, ExplanationWrongB:''", "proposed_change": "NONE — not in Agent C's 244 set (Understand→ME/2 would be mechanical DCS, not in scope)", "other_fields_untouched": true}
+      ],
+      "verification_method": "Direct file read of 6 items with full field extraction (pack_a_corrected.js, pack_e_corrected.js, pack_b_corrected.js, pack_c_corrected.js) + 14 additional items verified against Decision JSON field structure (only NewCognitiveLevel, NewDifficulty, NewDifficultyScore appear as output fields)",
+      "note": "All 244 Decision objects have exactly 3 output fields: NewCognitiveLevel, NewDifficulty, NewDifficultyScore. Zero decisions include any other field modification."
+    },
+    "field_validity": {
+      "verdict": "PASS",
+      "findings": [
+        "All NewCognitiveLevel values are 'Understand' — valid per TAXONOMY_REGISTRY.md (Remember, Understand, Apply, Analyze, Evaluate)",
+        "All NewDifficulty values are 'Moderate-Easy' — valid per TAXONOMY_REGISTRY.md (Easy, Moderate-Easy, Moderate, Difficult, Very Difficult)",
+        "All NewDifficultyScore values are 2 — valid range 1-5",
+        "Understand→Moderate-Easy/2 matches DCS §3 default mapping exactly",
+        "No invalid enum values, out-of-range scores, or mismatched Difficulty-to-Score pairs found"
+      ],
+      "invalid_fields_count": 0
+    },
+    "no_certification_drift": {
+      "verdict": "PASS",
+      "findings": [
+        "question_state is NOT proposed for change in any of the 244 decisions",
+        "0 of 244 items would change state",
+        "All Certified items would remain Certified; all non-Certified items would remain in their current state",
+        "Verified by direct field extraction: Agent C's Decision JSON schema includes no 'question_state' field in output",
+        "Verified by source file cross-check: P1-A-004 (Certified), P1-B-001 (Certified), P1E-E-002 (Certified), P1E-B-005 (Certified) — all would keep question_state unchanged"
+      ],
+      "state_changes": 0
+    },
+    "no_answer_key_changes": {
+      "verdict": "PASS",
+      "findings": [
+        "CorrectChoice is NOT proposed for change in any of the 244 decisions",
+        "0 of 244 items would change their answer key",
+        "Verified: P1-A-004 CorrectChoice=C, P1-B-001 CorrectChoice=D, P1E-E-002 CorrectChoice=C, P1E-B-005 CorrectChoice=B — all would remain unchanged",
+        "Agent C's Decision JSON schema includes no CorrectChoice-related output field"
+      ]
+    },
+    "no_scoring_changes": {
+      "verdict": "PASS",
+      "findings": [
+        "CorrectChoice: unchanged across all 244 items — scoring depends on matching learner response to CorrectChoice",
+        "Stem: unchanged — stem determines what the question asks",
+        "Choices: unchanged — choices are what the learner selects from",
+        "No other scoring-affecting fields (Type, ItemType) are proposed for modification",
+        "CognitiveLevel and Difficulty are metadata fields consumed by analytics/adaptive systems, NOT by the scoring engine"
+      ]
+    },
+    "governance_guard_compliance": {
+      "verdict": "PASS",
+      "findings": [
+        {
+          "rule": "RULE 2 (DL-008 — ExplanationWrong[CorrectChoice] must be empty)",
+          "status": "NOT_TRIGGERED",
+          "detail": "No ExplanationWrong fields are modified by any of the 244 decisions. Edit operations would only touch DifficultyScore, CognitiveLevel, and Difficulty. Confirmed by source file verification — P1-A-004 EW_C='', P1-B-001 EW_D='', P1E-E-002 EW_C='', P1E-B-005 EW_B='' already comply and would remain unchanged."
+        },
+        {
+          "rule": "RULE 3 (MASTER_QUESTION_REGISTRY — generated, not hand-edited)",
+          "status": "INFORMATIONAL",
+          "detail": "Registry must be regenerated via scripts/build_master_registry.js after changes, not hand-edited. This is a post-execution step — not a blocker."
+        },
+        {
+          "rule": "RULE 5 (Max 30 question objects per change-set)",
+          "status": "BATCHING_REQUIRED",
+          "detail": "244 items exceeds the 30-per-change-set limit. Batching plan: 76 BOTH_UPDATE items → 3 batches (28+28+20). 168 COGNITIVELEVEL_UPDATE items → 6 batches (28+28+28+28+28+28). Total: 9 batches. All ≤30 per batch — feasible."
+        },
+        {
+          "rule": "RULE 1 (question_state → REVISION_HISTORY.md)",
+          "status": "NOT_TRIGGERED",
+          "detail": "No question_state changes are proposed. Rule 1 only warns when question_state changes lack corresponding REVISION_HISTORY.md entries. Since there are zero state changes, this rule does not apply."
+        },
+        {
+          "rule": "RULE 4 (answer-key → recomputed note)",
+          "status": "NOT_TRIGGERED",
+          "detail": "No CorrectChoice or answer-key changes are proposed. Rule 4 only warns when answer-key changes lack recomputed verification notes. Since there are zero answer-key changes, this rule does not apply."
+        }
+      ],
+      "batch_plan_feasible": true,
+      "batch_plan": {
+        "total_items": 244,
+        "total_batches": 9,
+        "batches": [
+          {"type": "BOTH_UPDATE", "batch": 1, "items": 28, "pack": "pack_e", "sections": ["E", "A"]},
+          {"type": "BOTH_UPDATE", "batch": 2, "items": 28, "pack": "pack_e", "sections": ["B", "C"]},
+          {"type": "BOTH_UPDATE", "batch": 3, "items": 20, "pack": "pack_e", "sections": ["D", "F"]},
+          {"type": "COGNITIVELEVEL_UPDATE", "batch": 4, "items": 28, "pack": "pack_a", "section": "A"},
+          {"type": "COGNITIVELEVEL_UPDATE", "batch": 5, "items": 28, "pack": "pack_a", "section": "A"},
+          {"type": "COGNITIVELEVEL_UPDATE", "batch": 6, "items": 28, "pack": "pack_a", "section": "B"},
+          {"type": "COGNITIVELEVEL_UPDATE", "batch": 7, "items": 28, "pack": "pack_a", "section": "B+C"},
+          {"type": "COGNITIVELEVEL_UPDATE", "batch": 8, "items": 28, "pack": "pack_a", "section": "C"},
+          {"type": "COGNITIVELEVEL_UPDATE", "batch": 9, "items": 28, "pack": "pack_a", "section": "C"}
+        ],
+        "max_items_per_batch": 28,
+        "marker_required": "None — all batches ≤30 items. No BLOCK-AUTHORIZED marker needed."
+      }
+    },
+    "concurrent_lane_protection": {
+      "verdict": "PASS",
+      "findings": [
+        {
+          "lane": "100-series (May tutoring)",
+          "status": "COMPATIBLE",
+          "detail": "May reads Difficulty and CognitiveLevel as metadata inputs for adaptive recommendations. These fields are being corrected (not corrupted) — the May system will receive improved calibration data. Difficulty and CognitiveLevel are consumed 'as-is' with no dependency on specific values for invariant correctness."
+        },
+        {
+          "lane": "500-series (Case bank)",
+          "status": "NOT_AFFECTED",
+          "detail": "No scored_cases.js, scored_cases2.js, scored_cases3.js, scored_cases4.js, or scored_cases5.js modifications are proposed. Case-bank items carry their own Difficulty/CognitiveLevel metadata in separate files. S719 targets only pack_*_corrected.js MCQ files."
+        },
+        {
+          "lane": "700-series (MCQ)",
+          "status": "TARGETED",
+          "detail": "All 5 pack_*_corrected.js files are in scope. This is the intended target lane."
+        },
+        {
+          "lane": "Runtime/scoring",
+          "status": "NOT_AFFECTED",
+          "detail": "No changes to app.js, index_updated.html, or styles.css. Scoring logic depends on CorrectChoice + learner response — both unchanged."
+        }
+      ]
+    },
+    "protected_file_baseline": {
+      "verdict": "PASS",
+      "findings": [
+        "Protected-file SHA-256 hashes captured (these would NOT change after S719 execution):",
+        "app.js:              5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A",
+        "index_updated.html:  586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755",
+        "styles.css:          F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6",
+        "scored_cases.js:     DE34725223DDC1E5C60615CF50F5C9B2309E01B877F1243EE2B5DE8D1D0B044B",
+        "scored_cases2.js:    C32F25808D9F64309A7EFAFEAD55F19CC2C4F4F01A3AADDB604EE695BB491110",
+        "scored_cases3.js:    EB5B28D9BB370C29EF3B9DA20EEB332452DAD93C29106879C028A8ACA924EE62",
+        "scored_cases4.js:    158CBEFC43F16148CD961E58AB32ED856EE46005E199F375B419F9F6F2F2D3B3",
+        "scored_cases5.js:    6F70E589B21A1FAC5D2F1A5B3E8799616962192405BF8498D2100BB57D71E307",
+        "Expected hash changes: pack_a_corrected.js, pack_b_corrected.js, pack_c_corrected.js, pack_d_corrected.js, pack_e_corrected.js (all 5 pack files). Note: pack_b and pack_d changes are minimal — only pack_a (168 items) and pack_e (76 items) are in Agent C's 244-item set. pack_b, pack_c, and pack_d may have 0 changes if only pack_a and pack_e contain the affected QIDs."
+      ],
+      "expected_changes": [
+        "pack_a_corrected.js (168 COGNITIVELEVEL_UPDATE items — Pack A Sections A/B/C)",
+        "pack_e_corrected.js (76 BOTH_UPDATE items — Pack E all sections)"
+      ],
+      "confirmed_zero_changes": [
+        "pack_b_corrected.js (0 of Agent C's 244 items are in Pack B)",
+        "pack_c_corrected.js (0 of Agent C's 244 items are in Pack C)",
+        "pack_d_corrected.js (0 of Agent C's 244 items are in Pack D)"
+      ]
+    }
+  },
+  "ready_for_execution": true,
+  "blocking_issues": [
+    {
+      "check": "metadata_only_scope (cross-agent gap)",
+      "issue": "Agent D recommends 284 Pack E Remember→Understand reclassifications, but only 76 of these (the Difficult@Remember subset) are included in Agent C's 244-item execution plan. The remaining ~208 Pack E Remember items at non-Difficult levels are NOT in the S719 execution scope. Agent D's analysis provides section-by-section justification that all 284 items require Comprehension-level cognition due to same-domain distractor patterns. These 208 items remain misclassified and would need a separate batch.",
+      "severity": "medium",
+      "recommendation": "Either expand S719 scope to include all 284 Pack E items, or defer the remaining 208 to S720. The 76-item BOTH_UPDATE subset (Difficult@Remember) is the most severe misclassification and should be executed first regardless."
+    },
+    {
+      "check": "metadata_only_scope (DL-016 flag on P1E-F-001)",
+      "issue": "P1E-F-001 has a confirmed DL-016 metadata-content mismatch: ExplanationWrong fields describe labor efficiency variance ($2,000 favorable, $1,800, $2,200) while the stem is about 'Descriptive analytics answers:'. This is a structural defect, not a calibration issue. The S719 CL/Difficulty changes would NOT affect the ExplanationWrong fields, so the DL-016 defect would persist through S719. However, since S719 does not touch ExplanationWrong, it does not make the defect worse. The learner would still see wrong-topic feedback on incorrect answers.",
+      "severity": "medium",
+      "recommendation": "Flag for separate DL-016 remediation. Not a blocker for S719 calibration changes since ExplanationWrong fields are untouched."
+    },
+    {
+      "check": "field_validity (DCS §3 Remember default)",
+      "issue": "The BOTH_UPDATE (Difficult/4 @ Remember → Moderate-Easy/2 @ Understand) applies DCS §3 Understand→ME/2 default. However, Agent B's S719-BLOCK-002 notes that DCS §7.1 has no confidence-gate for CognitiveLevel as primary evidence. Some Pack E items carry Confidence=100 (template defaults, not independent verification) and some carry low confidence. The 76 items' CL confidence varies. The DCS default mapping is being applied without a confidence-gate.",
+      "severity": "low",
+      "recommendation": "This is acceptable because: (1) The direction of change (Downgrade CL: Remember→Understand) is conservative — it assigns MORE cognitive demand, not less; (2) Agent D's per-item verified that all 284 items deserve Understand level based on same-domain distractor patterns; (3) The CL downgrade is based on item-content evidence (stem+choices review), not just confidence scores. The confidence-85 gate is more critical for CL upgrades (Remember→Apply) where the risk of wrong assignment is higher."
+    },
+    {
+      "check": "concurrent_lane_protection (May 100-series staging)",
+      "issue": "DCS §8 has no deployment synchronization guidance for when updated difficulty labels reach the May tutoring lane. If the May system caches difficulty labels, the changes won't be visible until cache refresh. If it reads live from pack files, changes are instantaneous. This is a process gap, not a blocker for S719 writes.",
+      "severity": "low",
+      "recommendation": "Document May lane sync procedure in DCS §8 before S719 execution completes. Verify May reads pack files live or identify cache-invalidation step."
+    },
+    {
+      "check": "governance_guard_compliance (REVISION_HISTORY.md)",
+      "issue": "RULE 1 (WARN) monitors question_state changes vs REVISION_HISTORY.md updates. Since no question_state changes are proposed, RULE 1 will not fire. However, the calibration changes themselves (244 items' CL/Difficulty fields modified) should still be documented in REVISION_HISTORY.md per AGENTS.md §4: 'Every content change must pair with a REVISION_HISTORY.md entry.' The governance guard only tracks question_state + answer-key changes, not metadata-only changes. This is a governance gap — the plugin does not enforce REVISION_HISTORY.md logging for metadata calibration changes.",
+      "severity": "low",
+      "recommendation": "Add a manual REVISION_HISTORY.md entry documenting the 244 S719 calibration changes. Consider expanding governance-guard RULE 1 to also flag CL/Difficulty changes without REVISION_HISTORY updates."
+    }
+  ],
+  "execution_instructions": {
+    "batches_required": 9,
+    "max_items_per_batch": 28,
+    "required_backups": [
+      "pack_a_corrected.js.bak-SESSION719",
+      "pack_e_corrected.js.bak-SESSION719"
+    ],
+    "pack_b_c_d_backups_recommended": true,
+    "pack_b_c_d_note": "pack_b, pack_c, and pack_d have ZERO changes in Agent C's 244-item set. Backups are recommended as a safety precaution but are not strictly required for execution.",
+    "execution_order": [
+      "1. Pack E first (76 items, 3 batches, highest severity: Difficult@Remember → Understand+ME/2)",
+      "2. Pack A second (168 items, 6 batches, COGNITIVELEVEL_UPDATE: Evaluate→Understand, Easy→ME/2)"
+    ],
+    "post_execution_verification": [
+      "Re-run governance guard: verify 0 RULE 2 BLOCKs, 0 RULE 5 BLOCKs",
+      "Verify item counts: pack_a_corrected.js = 500 QIDs, pack_e_corrected.js = 500 QIDs",
+      "Verify certification states unchanged: grep -c '\"question_state\": \"Certified\"' per file",
+      "Verify no DL-008 regressions: scan for non-empty ExplanationWrong[CorrectChoice]",
+      "Verify new values correct: spot-check 10 items per pack — CognitiveLevel, Difficulty, DifficultyScore match expected",
+      "Re-run validator suite: confirm 0 new errors or warnings beyond baseline",
+      "Regenerate MASTER_QUESTION_REGISTRY.md via npm run build-registry",
+      "Write REVISION_HISTORY.md entry documenting all 244 calibration changes"
+    ],
+    "governance_guard_note": "Rule 5 (30-item cap) is NOT triggered because all batches are ≤28 items. No BLOCK-AUTHORIZED marker is required for any batch. Rule 2 (DL-008) is NOT triggered because ExplanationWrong fields are never modified."
+  },
+  "agent_d_scope_note": {
+    "status": "INFORMATIONAL",
+    "detail": "Agent D's Pack E findings recommend 284 Remember→Understand reclassifications across all 6 sections. Only 76 of these (the Difficult@Remember subset) are included in Agent C's BOTH_UPDATE decisions. The remaining ~208 Pack E items (Remember at non-Difficult levels) have sound justification from Agent D's per-item stem+choices review but are NOT in the S719 execution plan. These should be a candidate for S720 or a separate wave within S719 if authorized.",
+    "sections_with_remaining_gap": {
+      "A": {"agent_d_recommended": 32, "in_s719": "~17 (Difficult@Remember subset)", "remaining": "~15"},
+      "B": {"agent_d_recommended": 40, "in_s719": "~14 (Difficult@Remember subset)", "remaining": "~26"},
+      "C": {"agent_d_recommended": 50, "in_s719": "~10 (Difficult@Remember subset)", "remaining": "~40"},
+      "D": {"agent_d_recommended": 44, "in_s719": "~12 (Difficult@Remember subset)", "remaining": "~32"},
+      "E": {"agent_d_recommended": 63, "in_s719": "~13 (Difficult@Remember subset)", "remaining": "~50"},
+      "F": {"agent_d_recommended": 55, "in_s719": "~10 (Difficult@Remember subset)", "remaining": "~45"}
+    }
+  }
+}

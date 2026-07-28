@@ -1,0 +1,358 @@
+{
+  "report_metadata": {
+    "title": "Session 726 — Historical Incident Validation",
+    "agent": "Agent N — Historical Incident Validation",
+    "session": "S726",
+    "date": "2026-07-26",
+    "status": "COMPLETE",
+    "purpose": "Replay three historical governance incidents (DL-012 clonal redundancy, DL-029 forward-scan false positives, S723→S724 ownership gap) against S726 controls to verify the new governance framework would have caught them.",
+    "methodology": "Read-only analysis. Reviewed DEFECT_LIBRARY.md, REVISION_HISTORY.md, SESSION726_SERIES_CLOSURE_GATE.md, SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json, governance-guard.js (current + upgraded spec), SESSION726_RULE2_PARSE_SPEC.md. Cross-referenced agent reports spanning S86 through S726."
+  },
+  "dl012": {
+    "incident_id": "DL-012",
+    "title": "Section E Clonal Redundancy (Pack C/D)",
+    "incident_summary": "150 Pack C/D Section E items were produced by a template-based bulk-authoring pipeline. 28 clone groups × 5 items each, where each group varied only the fictional company name and answer-letter position. 140 of 150 items were near-identical duplicates providing zero additional pedagogical value beyond the 28 seed items. Stems, answer choices (rotated), and ExplanationCorrect text were identical within each group. Distractor explanations were verbatim clones. Only the fictional company name and CorrectChoice position differed.",
+    "timeline": {
+      "root_cause": "Residual duplication from the historical Pack C/Pack D bulk-authoring aliasing issue. The same authoring template was used to generate variant packs (A→C→D→B→E), producing 5-item groups where only the company name and answer-letter position varied.",
+      "first_detected": "2026-07-22 — Manual Section E population scan",
+      "detection_agent": "Build-Time AI Verification (Section E population scan)",
+      "count_instability": "Three scans were run before the count stabilized at 140 clones. Original finding report (128) had arithmetic error (56+56≠128) and undercount. First background agent (138) miscounted Groups 1 and 15. Definitive scan confirmed 150 items / 140 clones.",
+      "initial_severity": "Medium",
+      "defect_library_entry": "knowledge/DEFECT_LIBRARY.md DL-012 (filed 2026-07-22)",
+      "remediation_start": "2026-07-23 — DL-012 Archival Execution, Batch 1 of 4",
+      "remediation_complete": "2026-07-23 — All 112 clones archived across 4 batches (≤28 items each per governance-guard Rule 5). 28 seed items retained as active with content-quality heuristic selection. 10 standalone unique items preserved.",
+      "remediation_sessions_consumed": "5+ sessions (discovery, scoping, re-verification, 4 batch archival, seed-swap content-quality optimization, DL-033 naming discrepancy resolution)"
+    },
+    "impact": {
+      "pedagogical_waste": "140 clone items (93.3% of 150 Pack C/D Section E inventory) provided zero additional pedagogical value beyond 28 seed items. Learners encountering different clones from the same group would see the same question with a different company name.",
+      "metric_dilution": "Clone waste diluted Section E population metrics, distorted blueprint coverage reporting, and inflated certification counts — 112 items certified as distinct that were not meaningfully distinct.",
+      "remediation_cost": "~5 sessions to archive 112 items, verify 28 seeds, and complete content-quality optimization.",
+      "learner_pool_exposure": "0 — all items were Unprocessed or legacy (no question_state). No clones ever reached the Certified learner delivery pool."
+    },
+    "applicable_s726_controls": [
+      {
+        "control": "governance-guard.js RULE 5 (BLOCK — max 30 question objects per changeset)",
+        "reference": "governance-guard.js lines 162-174",
+        "description": "Blocks any write or edit that touches >30 question objects without a BLOCK-AUTHORIZED marker.",
+        "applicability": "Direct. The original bulk-authoring pipeline inserted all 150 Section E items (across Pack C and D) in a single changeset. Under Rule 5, this would have been BLOCKED immediately."
+      },
+      {
+        "control": "AGENTS.md §5 — Dual Verification (cross-check all self-reported claims)",
+        "reference": "AGENTS.md lines 79-87",
+        "description": "Any self-reported claim of 'items added' must be cross-checked against raw file/line evidence before acceptance.",
+        "applicability": "Direct. The authoring pipeline's claim of '150 new items' would need to be verified by independent inspection, which would reveal the clone pattern."
+      },
+      {
+        "control": "AGENTS.md §6 — Item-Count Volatility (hard stop on unstable counts)",
+        "reference": "AGENTS.md lines 89-93",
+        "description": "If reconciliation numbers change between reports, require the count to stabilize before any action is taken.",
+        "applicability": "Partial. The 128→138→150 count instability was exactly the pattern §6 targets. This rule would have halted the remediation execution until count stabilized."
+      }
+    ],
+    "interception_path": {
+      "at_authoring_time": {
+        "trigger": "Template pipeline attempts to write 150 Section E items in a single changeset to pack_c_corrected.js and pack_d_corrected.js.",
+        "control_fire": "governance-guard.js Rule 5 BLOCK fires because countQuestions(scopeContent) > 30.",
+        "error_message": "\"GOVERNANCE RULE 5 — BLOCKED. Change-set touches 150 question objects (limit: 30). Add BLOCK-AUTHORIZED marker or split into smaller change-sets.\"",
+        "outcome": "Author is forced to either: (a) split the 150-item insertion into 5 batches of 28 (Rule 5 compliant), making the 5-item clone group pattern immediately visible across batches; or (b) use BLOCK-AUTHORIZED marker, which itself serves as a governance signal requiring explicit authorization and explaining the batch scope."
+      },
+      "at_certification_time": {
+        "trigger": "An agent proposes to certify 75 Section E items per pack.",
+        "control_fire": "AGENTS.md §5 — dual verification requires raw-evidence cross-check. The certifying agent must independently inspect each item or a statistically valid sample.",
+        "outcome": "The clone pattern (identical stems with company-name substitution, rotated answer choices, identical ExplanationCorrect text) would be discovered during the walkthrough of any clone group, blocking certification of the 140 clones."
+      }
+    },
+    "would_have_been_prevented": true,
+    "would_have_been_prevented_detail": "Rule 5 would have BLOCKED the original 150-item bulk insertion at authoring time, forcing batch-level scrutiny. Combined with AGENTS.md §5 dual verification at certification time, the 5-item clone group pattern would have been discovered and the 140 clones would never have entered the question bank as distinct items.",
+    "edge_cases_remaining": [
+      {
+        "edge_case": "Batch-splitting masks but doesn't eliminate clones",
+        "detail": "An author could split 140 clones into 5 batches of 28 items each (compliant with Rule 5). Each batch would pass the 30-item limit. The clone pattern across batches would only be visible if a reviewer compares items across batches, which requires cross-batch awareness that Rule 5 alone does not enforce.",
+        "mitigation": "AGENTS.md §5 mandates cross-checking all self-reported claims against source files. A claim of '28 new items in batch N' would need evidence of distinctiveness, not just count. Additionally, CAQS v1.0 §1.6's six-dimension verification requires distractor engineering and blueprint alignment checks that catch identical stems."
+      },
+      {
+        "edge_case": "BLOCK-AUTHORIZED marker abuse",
+        "detail": "An author could use the BLOCK-AUTHORIZED marker to insert all 150 clones in a single changeset, bypassing Rule 5. If the governance agent approving the marker does not inspect the items for distinctiveness, the clones would still enter the bank.",
+        "mitigation": "The BLOCK-AUTHORIZED marker is not a free pass — it requires explicit justification ('sub-batch 2A wave 3 — certified batch'). AGENTS.md §5 dual verification would require cross-checking the marker's justification against the actual items. The marker's purpose is to flag large authorized batches, not to bypass scrutiny."
+      },
+      {
+        "edge_case": "Pack C and Pack D are different files",
+        "detail": "Rule 5 applies per changeset (per edit/write tool invocation). An author could write 75 items to pack_c_corrected.js and 75 items to pack_d_corrected.js in separate tool calls. Each write is ≤75 items, both blocked independently. But per changeset vs. per session: if the write to Pack D is a separate tool invocation in the same session, the per-session count accumulator could flag the total.",
+        "mitigation": "The current governance guard counts QuestionIDs within scopeContent (the new content for writes, old+new for edits). Different file writes are separate invocations and are not aggregated. However, CAQS §1.6 six-dimension verification applied per-pack would catch clone patterns within each pack's Section E."
+      }
+    ],
+    "verdict": "WOULD HAVE BEEN PREVENTED. Rule 5's 30-item cap at authoring time would have BLOCKED the bulk insertion of 150 clones. AGENTS.md §5 dual verification at certification time would have revealed the clone pattern. The original 140-clone insertion would have required at least 5 batches (140÷28=5), each requiring BLOCK-AUTHORIZED justification — making the template-generation pattern inescapably visible. The edge case of batch-splitting masking clones is real but is covered by the combination of AGENTS.md §5 (cross-reference claims against source) and CAQS §1.6 (six-dimension verification requiring distractor distinctiveness)."
+  },
+  "dl029": {
+    "incident_id": "DL-029",
+    "title": "Forward-Scan False Positives — 67 Phantom DL-008 Items",
+    "incident_summary": "A regex block-window scanning methodology for DL-008 detection systematically produced false positives because all 5 pack files store CorrectChoice BEFORE QuestionID in their JSON objects. The scanner would find a QuestionID, search forward in a ±1200 character window for CorrectChoice, and capture the NEXT item's CorrectChoice (~75% false-positive rate). This resulted in 67 phantom DL-008 items being recorded in CURRENT_BASELINES.md as CRITICAL, which persisted for 4+ sessions (S86→S802) and drove multiple unnecessary remediation sessions before S722A's Function constructor parse confirmed 0 actual DL-008.",
+    "timeline": {
+      "root_cause": "All 5 pack files store CorrectChoice before QuestionID in their JSON object structure. Any scanner that searches forward from QuestionID for CorrectChoice systematically reads the NEXT item's answer letter. With 4 possible CC values (A/B/C/D), the chance of a false positive is ~75% per item. Additionally, the ±1200 char window in governance-guard.js was physically too small — real CC→EW[CC] distances range from 1,284 to 2,367 characters, beyond the window's 1200-char reach.",
+      "first_observed": "S86 (2026-07-23) — 67 DL-008 items reported",
+      "persistence": "4+ sessions (S86 → S92 → S500+ → S801/S802)",
+      "peak_false_count": "67 phantom DL-008 items in CURRENT_BASELINES.md §3 (55 Pack C + 10 Pack D + 2 Pack A)",
+      "s92_rescan": "S92 scan found 672 — a 10x undercount from S86, further evidence of methodology instability",
+      "s500_artifact": "S500 forward-scan produced 39 false-positive rotation artifact flags on In Audit items by reading CC from the NEXT item's content block",
+      "corrected_by": "S722A (S802) — Function constructor parse confirmed 0 actual DL-008 across all 2,500 items. All 67 were DL-029 false positives. Independent line-level verification confirmed each",
+      "s723_confirmation": "Agent Y Closure Board verified DISC-003: DL-008 documentation cascade (67→1→0). Root cause: DL-029 forward-scan false positives.",
+      "defect_library_entry": "knowledge/DEFECT_LIBRARY.md DL-029 (filed 2026-07-23)",
+      "full_explanation_established": "S801 Root Cause Analysis: DL-029 forward-scan CC-before-QID artifact documented. 8 permanent prevention rules codified."
+    },
+    "impact": {
+      "false_emergency_signals": "67 phantom DL-008 items appeared in CURRENT_BASELINES.md as CRITICAL, creating the appearance of a learner-safety emergency.",
+      "wasted_remediation_cycles": "Multiple sessions attempted to remediate phantom DL-008 items that never existed. The appearance of 67 'remaining' items after each wave masked actual remediation progress.",
+      "governance_trust_erosion": "DL-008 counts of 67→1→0, then new counts of 672, then back to 0, created the perception that counts were unreliable and governance data was untrustworthy.",
+      "blocked_certification_pipeline": "The perception of widespread DL-008 in the Certified pool forced S723 to verify '0 Certified DL-008' as a closure prerequisite, consuming closure bandwidth on a non-existent problem.",
+      "methodology_trust_broken": "AGENTS.md §6 (Item-Count Volatility) and §5 (Dual Verification) were strengthened in direct response to the DL-029 experience."
+    },
+    "applicable_s726_controls": [
+      {
+        "control": "Upgraded governance-guard.js RULE 2 — AM-1 Function Constructor Parse",
+        "reference": "reports/SESSION726_RULE2_PARSE_SPEC.md",
+        "description": "Replaces the ±1200 char window scan (FM-001) with Function Constructor parse (AM-1). Extracts CorrectChoice and ExplanationWrong[CC] from the same parsed object via direct property access. Eliminates forward-scan, CC-before-QID field-ordering dependency, and window-size limitations.",
+        "applicability": "Direct. The AM-1 parse extracts CC from obj.CorrectChoice within the same parsed object — eliminating the cross-object CC contamination that caused the ~75% false-positive rate."
+      },
+      {
+        "control": "AGENTS.md §5 — Dual Verification (never accept totals-only reports)",
+        "reference": "AGENTS.md lines 79-87",
+        "description": "Requires cross-checking every self-reported count against raw file/line evidence. Reject totals-only summaries.",
+        "applicability": "Direct. The 67-count report would need to be verified against Function constructor parse or direct line-level inspection, which would immediately reveal 0 actual violations."
+      },
+      {
+        "control": "AGENTS.md §6 — Item-Count Volatility (hard stop on unstable counts)",
+        "reference": "AGENTS.md lines 89-93",
+        "description": "If reconciliation numbers change between reports (e.g., 67→1→0→672), require the count to stabilize before any action is taken. Run the count a third time.",
+        "applicability": "Direct. The 67→672→0 cascade would have triggered an immediate hard stop, preventing any remediation from being executed until the count was stable across two independent scans."
+      },
+      {
+        "control": "SESSION726_RULE2_PARSE_SPEC.md §2.2 — VM-002 (Pack B CC-before-QID)",
+        "reference": "SESSION726_RULE2_PARSE_SPEC.md lines 91-110",
+        "description": "Documents that CorrectChoice appears before QuestionID in Pack B (and all other packs). Any forward-scan from QID positions captures the NEXT item's CC. The AM-1 upgrade is immune because property access is position-independent.",
+        "applicability": "Direct. This vulnerability is the root cause of DL-029. The AM-1 upgrade eliminates it by design."
+      },
+      {
+        "control": "SESSION726_RULE2_PARSE_SPEC.md §2.2 — VM-001 (Fixed Window Size)",
+        "reference": "SESSION726_RULE2_PARSE_SPEC.md lines 77-89",
+        "description": "The ±1200 char window is physically too small for real pack files (CC→EW[CC] distances: 1,284–2,367 chars). The test suite confirmed this failure. AM-1 eliminates window-size constraints entirely.",
+        "applicability": "Direct. The window was provably too small for all 5 packs."
+      }
+    ],
+    "interception_path": {
+      "s86_initial_scan": {
+        "trigger": "Agent runs a regex forward-scan producing 67 phantom DL-008 items and reports them to CURRENT_BASELINES.md.",
+        "control_fire_1": "AGENTS.md §5 — dual verification requires cross-checking the 67-count claim against raw evidence. A verification agent runs Function constructor parse and finds 0 actual. The 67-count report is rejected.",
+        "control_fire_2": "If the 67 count is accepted, AGENTS.md §6 — item-count volatility would fire when the next scan produces a different count (672 or 0). The count instability (67→different→different) triggers a hard stop before remediation is committed.",
+        "outcome": "The phantom 67 items are never recorded in CURRENT_BASELINES.md. No emergency remediation sessions are launched against non-existent violations."
+      },
+      "s723_closure_board": {
+        "trigger": "Agent Y reviews CURRENT_BASELINES.md §3 reporting 67 DL-008 items as CRITICAL.",
+        "control_fire": "S723 would have used AM-1 Function constructor parse (had it been available) or AGENTS.md §5 dual verification would have flagged the discrepancy. The closure board would verify 0 actual DL-008 before proceeding, eliminating DISC-003 from the closure agenda.",
+        "outcome": "The closure board does not need to spend verification bandwidth disproving a phantom count. The DL-008 documentation cascade (67→1→0) never occurs."
+      }
+    },
+    "would_have_been_prevented": true,
+    "would_have_been_prevented_detail": "YES. The AM-1 Function Constructor Parse upgrade to Rule 2 eliminates the forward-scan methodology that caused DL-029. By extracting CorrectChoice and ExplanationWrong[CC] from the same parsed JavaScript object via direct property access, the upgraded Rule 2 is immune to: (1) CC-before-QID field ordering, (2) window-size limitations, (3) cross-object CC contamination, (4) the ~75% false-positive rate inherent in forward-scanning. Combined with AGENTS.md §5 (reject totals-only reports) and §6 (hard stop on unstable counts), all three layers of the DL-029 failure would have been intercepted before any phantom count reached CURRENT_BASELINES.md.",
+    "edge_cases_remaining": [
+      {
+        "edge_case": "Function constructor parse failure on corrupted files",
+        "detail": "The AM-1 upgrade relies on `new Function(fileContent + '; return VAR_NAME;')` succeeding. If a pack file is corrupted (e.g., residual DL-017 backtick-newline artifacts), the parse fails. The spec handles this by returning { error: 'PARSE_FAILED' } and NOT blocking — but a parse failure means DL-008 validation is skipped entirely.",
+        "mitigation": "The governance guard's escape hatch (skip if parse fails) prevents blocking legitimate writes on corrupted files. The validator suite (ExplanationValidator) runs separately and would catch DL-008 on corrupted files. The spec also requires parse errors to be logged as warnings."
+      },
+      {
+        "edge_case": "Dual-block architecture (DL-016 item divergence)",
+        "detail": "Some legacy Pack C/D items have both metadata-block ChoiceA-D fields and content-block Choices.{A,B,C,D} fields. The metadata-block fields may carry DL-016 +1 offset template residue. The AM-1 parse produces objects containing BOTH sets. The spec requires using only CorrectChoice (not ChoiceA-D) and indexing ExplanationWrong[CC] from the same object — which is correct for DL-008. But if metadata-block EW fields diverge from content-block choices, the parse may flag EW text that describes a different item's distractors.",
+        "mitigation": "The governance guard detects DL-008 (structural: non-empty EW[CC] slot), not DL-016 (content: wrong-topic EW text). DL-016 requires separate certification-time verification per QUESTION_METADATA_STANDARD.md §9.4.2."
+      },
+      {
+        "edge_case": "Edit operations — checkText scope",
+        "detail": "For edit operations, the upgraded spec proposes reading the full file from disk and simulating the edit in memory before parsing. This adds ~100ms latency per edit but avoids the current vulnerability where edit-fragment-only checks miss violations in other parts of the file.",
+        "mitigation": "Full-file parse implemented per spec §6.1 (edit: read current file + simulate edit + parse). The ~100ms overhead is negligible relative to the edit operation itself."
+      },
+      {
+        "edge_case": "Time: AM-1 is not yet implemented (S726 spec only)",
+        "detail": "As of S726, the governance guard still uses extractObjectsFromText (string-aware brace-matching + JSON.parse/new Function) for the current implementation, though the window-scan approach described in the spec is what was historically in place. The spec outlines Phase 1 (S727 — module extraction), Phase 2 (S727 — governance guard upgrade), and Phase 3 (S728 — verification). Until Phases 1-3 are complete, the window-scan vulnerability (if still present) remains.",
+        "mitigation": "The phased implementation plan is documented. The current governance guard already uses object-bounded extraction (extractObjectsFromText), which is an improvement over the pure window scan. The spec's full AM-1 upgrade provides stronger guarantees. S727 execution is the gate to full DL-029 immunity."
+      }
+    ],
+    "verdict": "WOULD HAVE BEEN PREVENTED. The AM-1 Function Constructor Parse upgrade to Rule 2 eliminates all three root causes of DL-029: (1) cross-object CC contamination via CC-before-QID field ordering — solved by within-object property access; (2) insufficient window size — solved by parsing the complete object, not a character window; (3) edit-fragment-only verification gap — solved by full-file parse on every edit/write. Combined with AGENTS.md §5 (reject totals-only reports) and §6 (hard stop on unstable counts), no phantom count could persist across two independent verification methods. The 67→1→0 documentation cascade would have been caught at the first discrepancy: S86's 67 count vs. Function constructor parse's 0 count — triggering AGENTS.md §5 cross-verification and preventing the phantom 67 from entering CURRENT_BASELINES.md."
+  },
+  "s723s724_ownership_gap": {
+    "incident_id": "S723→S724 Ownership Gap",
+    "title": "700-Series Closure Without Ownership Acceptance",
+    "incident_summary": "Session 723 declared the 700-series Governance & Calibration Maturity Program formally CLOSED. The closure declaration was based on verified technical metrics (2,182 Certified, 0 DL-008, 20/20 governance guard, 186/186 tests PASS, 95.0% DCS reliability). However, S723 skipped the critical ACCEPTANCE step: 26 ownership responsibilities were catalogued in a TRANSFER step but zero receiving owners explicitly accepted. The 4-step chain (TRANSFER → ACCEPTANCE → APPROVAL → CLOSE) was collapsed to TRANSFER → CLOSE. This was discovered by Session 724's 26-agent operational audit, which surfaced 6 ownership gaps. The gaps required 1 discovery session (S724), 1 governance hardening session (S725, 5+ agents), and the creation of a formal acceptance protocol and ownership registry (S726) to resolve.",
+    "timeline": {
+      "s723_closure": "2026-07-26 — Agent Y (Closure Board) declares 700-series CLOSED. Verified: 2,182 Certified, 0 DL-008, 20/20 governance guard, 186/186 tests PASS. Produced Program Closure Report, Maintenance Framework v1.0, and Portfolio Handoff.",
+      "s723_what_was_skipped": "ACCEPTANCE (Step 2): No receiving owner explicitly accepted any transferred responsibility. APPROVAL (Step 3): No governance authority verified or approved the transition. The 4-step chain was collapsed to TRANSFER → CLOSE.",
+      "s724_discovery": "2026-07-26 — 26-agent (A-Z) governance maintenance activation discovers 6 post-700 ownership gaps. The gaps were found during read-only review of S723 closure reports, Operating Model definition, and 600-series feasibility analysis.",
+      "s724_gap_enumeration": [
+        {
+          "gap_id": "GAP-1",
+          "description": "May coaching layer ownership unassigned (HIGH severity)",
+          "details": "may-core.js (344,883 bytes) and may-learner-state.js (110,240 bytes) — runtime dependencies integrated with app.js. No receiving owner designated before close."
+        },
+        {
+          "gap_id": "GAP-2",
+          "description": "300-series S310 closeout trigger missing (HIGH severity)",
+          "details": "300→Maintenance model consumption path: who acts on the analytics? No mechanism or trigger to enforce the recommended S310 closeout session."
+        },
+        {
+          "gap_id": "GAP-3",
+          "description": "600-series deferral not owned (MEDIUM severity)",
+          "details": "Deferred decision had no re-evaluation owner or trigger."
+        },
+        {
+          "gap_id": "GAP-4",
+          "description": "G-NEW-1 through G-NEW-5 enforcement not in certification pipeline (CRITICAL severity)",
+          "details": "Certification-blocking conditions defined in QUESTION_METADATA_STANDARD.md §9.4 existed but had no owner enforcing them in the 800-series certification pipeline."
+        },
+        {
+          "gap_id": "GAP-5",
+          "description": "Governance guard DL-008 detection uses DL-029-vulnerable window scan (CRITICAL severity)",
+          "details": "Known methodology defect was catalogued in the TRANSFER step but not transferred to a named maintenance owner."
+        },
+        {
+          "gap_id": "GAP-6",
+          "description": "CURRENT_BASELINES.md §3 stale with 67 phantom DL-008 items (HIGH severity)",
+          "details": "Baseline maintenance was not transferred to a named maintainer. The phantom entries persisted from Session 20 through Session 723."
+        }
+      ],
+      "s725_hardening": "2026-07-26 — 26-agent (A-Z) governance hardening session. Created 6 governance standards codifying detection, scanning, ownership, transitions, triggers, and stewardship. Resolved 6 gaps at design level (0 accepted). Agent E Post-700 Governance Model established TRANSFER → ACCEPTANCE → APPROVAL → CLOSE chain. Agent O Portfolio Stewardship Framework established Ownership Matrix with 5 stewardship principles. Agent D produced Ownership Matrix v2.0 with 25 rows mapping every responsibility to primary/secondary/escalation owners.",
+      "s726_closure_gate": "2026-07-26 — Agent H formalizes the Series Closure Gate v1.0. 11-item Pre-Closure Checklist. Closure Attestation format with 3 signatures. 3-tier enforcement (procedural, plugin, board). Historical compliance check: S723 would have failed 12 of 12 checklist items.",
+      "s726_ownership_registry": "2026-07-26 — Agent I formalizes Ownership Acceptance Registry. All 6 gaps documented with full owner chains. Acceptance evidence standards defined. Status: 0 of 6 accepted, all past S726 T0 deadline."
+    },
+    "impact": {
+      "sessions_consumed": "1 discovery session (S724, 26 agents) + 1 governance hardening session (S725, 5+ agents) + 1 closure gate design session (S726, Agent H) + 1 ownership registry session (S726, Agent I) = 4 sessions to fix what should have been handled at S723 closure time.",
+      "governance_trust_erosion": "Future series closures would carry the implicit assumption that 'CLOSE' does not mean 'complete' — eroded trust in closure declarations.",
+      "orphaned_responsibilities": "6 critical governance responsibilities had no named owner for the period between S723 CLOSE declaration and S724 discovery (~1 session interval). While no pack content was compromised, any governance need in that window (e.g., baseline refresh, defect manifest update) would have had no owner.",
+      "deadline_pressure_created": "S725 set a deadline ('before S726 T0') for all 6 acceptances. As of S726 T0, 0 of 6 are accepted — all past deadline, triggering Governance Board escalation.",
+      "aggravated_dl029_persistence": "GAP-6 (CURRENT_BASELINES.md with 67 phantoms) was a DL-029 downstream artifact. Because no one owned baseline maintenance after S723, the phantom entries persisted without a named maintainer to correct them."
+    },
+    "applicable_s726_controls": [
+      {
+        "control": "Series Closure Gate — 4-Step Closure Chain (TRANSFER → ACCEPTANCE → APPROVAL → CLOSE)",
+        "reference": "SESSION726_SERIES_CLOSURE_GATE.md §2",
+        "description": "Every portfolio series transitioning to CLOSED or MAINTENANCE MODE must complete four sequential steps. Each step produces documented evidence before the next can begin. ACCEPTANCE (Step 2) is explicitly defined: every proposed receiving owner must provide explicit acceptance with documented evidence.",
+        "applicability": "Direct. S723 completed TRANSFER (responsibilities catalogued in Maintenance Framework and Portfolio Handoff) but skipped ACCEPTANCE entirely. Under the gate, CLOSE cannot be reached without ACCEPTANCE."
+      },
+      {
+        "control": "Pre-Closure Checklist — 11 items (T-1/2/3, A-1/2/3/4, P-1/2/3/4/5)",
+        "reference": "SESSION726_SERIES_CLOSURE_GATE.md §3",
+        "description": "Every closure must pass all 11 checklist items with documented evidence. The checklist covers: TRANSFER completeness (T-1/2/3), ACCEPTANCE evidence (A-1/2/3/4), and APPROVAL verification (P-1/2/3/4/5).",
+        "applicability": "Direct. Under historical compliance check (§6), S723 would have failed 12 of 12 checklist items: T-1 (Ownership Matrix — not produced), T-2 (Open Items Register — partial), T-3 (Named Roles — not produced), A-1 (Acceptance Records — none), A-2 (No Non-Qualifying Language — N/A), A-3 (ACCEPT AS DEBT Triggers — none), A-4 (CLOSE Resolution — partial), P-1 (Escalation Path — not confirmed), P-2 (Maintenance Cadence — partial), P-3 (Transition Period — not defined), P-4 (Documents Updated — partial), P-5 (Attestation Signed — not produced)."
+      },
+      {
+        "control": "Closure Attestation Format — formal governance record",
+        "reference": "SESSION726_SERIES_CLOSURE_GATE.md §4",
+        "description": "Every closure declaration must be accompanied by a completed Closure Attestation with all fields populated, all checklist items PASS, and 3 signatures (Governance Auditor, Closing Series Lead, Witness).",
+        "applicability": "Direct. S723's closure declaration lacked any Closure Attestation. Under §4.2 (Attestation Validity Rules), a closure without a completed attestation is 'provisionally rejected.' Under §4.3, a rejected closure logs a Governance Debt Item in REVISION_HISTORY.md."
+      },
+      {
+        "control": "Governance Guard RULE 6 (WARN) — closure → attestation detection",
+        "reference": "SESSION726_SERIES_CLOSURE_GATE.md §7.1",
+        "description": "At session idle, scans session output for closure declarations without completed attestation. If detected, emits WARNING. Proposed extension to governance-guard.js adding ~40 lines at session.idle hook.",
+        "applicability": "Supporting. S723 would have triggered Rule 6 at session idle because the closure declaration ('700-SERIES CLOSED') lacked a corresponding 'SERIES CLOSURE ATTESTATION' block. The WARNING would have flagged the unattested closure before any downstream session consumed the CLOSED status."
+      },
+      {
+        "control": "Ownership Acceptance Registry — structured gap tracking",
+        "reference": "SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json",
+        "description": "Formal registry tracking every transferred responsibility with: gap_id, responsibility description, primary/secondary/escalation owner, acceptance_status (PENDING/ACCEPTED), acceptance_evidence, deadline, and blocking flag.",
+        "applicability": "Direct. If this registry had existed at S723, its acceptance_summary would have shown: 26 responsibilities proposed for transfer, 0 accepted, 26 pending — an immediate visual indicator that CLOSE was premature. The registry's governance_rule ('No step may be skipped. ASSIGNED ≠ ACCEPTED.') encodes the principle that S723 violated."
+      },
+      {
+        "control": "Acceptance Evidence Standards — what qualifies vs. what does not",
+        "reference": "SESSION726_SERIES_CLOSURE_GATE.md §2.2, SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json acceptance_evidence_standards",
+        "description": "Explicitly defines what counts as valid acceptance (Agent acceptance statement, Board resolution, Governance record entry, Handoff session) and what does NOT (Assignment without acknowledgment, Silence after transfer, 'TBD'/'pending', Generic lane-level assignment, Implied acceptance by proximity, 'Recommended'/'proposed' language).",
+        "applicability": "Direct. All 6 S723 gaps would have been caught by the non-qualifying acceptance rules: the Portfolio Handoff used 'recommended assignment' language (GAP-1), generic lane-level assignments like '100-series' without specific role (GAP-1), and implied acceptance by governance continuity assessment (GAP-2, GAP-3, GAP-4). None of these qualify as valid acceptance."
+      }
+    ],
+    "interception_path": {
+      "s723_closure_preparation": {
+        "trigger": "Agent Y (Closure Board) begins preparing the 700-series closure declaration.",
+        "step_1_transfer": "TRANSFER step completed: responsibilities catalogued in Maintenance Framework and Portfolio Handoff. All 26 responsibilities documented with proposed receiving owners. T-1 and T-2 PASS (with partial qualifications). T-3 would require converting generic lane-level assignments (e.g., '100-series') to specific role designations (e.g., '100-series Lead (Platform Maintainer)').",
+        "step_2_failure": "Closure Board attempts to proceed to ACCEPTANCE. The Pre-Closure Checklist item A-1 requires explicit acceptance records for EVERY proposed receiving owner. With 0 of 26 owners having accepted, A-1 returns FAIL.",
+        "checklist_execution": "Per §3.3 (Checklist Execution Protocol): 'Any item that fails blocks the checklist — remaining items are not evaluated until the failed item is remediated.' A-1 FAIL blocks evaluation of A-2 through P-5, halting the checklist.",
+        "closure_rejection": "Per §4.3: CLOSE is rejected. Series remains ACTIVE (not CLOSED). A Governance Debt Item is recorded in REVISION_HISTORY.md with: failed checklist items (A-1), required remediation (obtain acceptance from all 26 proposed receiving owners), resolution deadline (5 sessions or 1 calendar week).",
+        "remediation_path": "Agent Y would need to: (1) contact each proposed receiving owner, (2) obtain explicit acceptance per §2.2 evidence standards, (3) record acceptance in Ownership Acceptance Registry, (4) re-submit Closure Attestation with A-1 revised to PASS. This is exactly the path S724/S725/S726 executed — but it would have happened at S723, not across 3 discovery sessions."
+      },
+      "s723_closure_declaration_attempt": {
+        "trigger": "Agent Y issues '700-SERIES CLOSED' declaration in REVISION_HISTORY.md.",
+        "plugin_warning": "Governance guard RULE 6 (WARN) at session idle detects closure declaration language ('Program Closure', 'CLOSED', 'closure report') without a completed Closure Attestation. Emits: 'RULE 6 (closure → attestation): Series closure declared without completed Closure Attestation. Per SESSION726_SERIES_CLOSURE_GATE.md §4.'",
+        "outcome": "The WARNING flags the unattested closure for governance review. Even if the procedural gate (§5.1) was bypassed, the plugin warning at session idle alerts the Governance Board that a series was declared CLOSED without attestation."
+      }
+    },
+    "would_have_been_prevented": true,
+    "would_have_been_prevented_detail": "YES. S723's closure would have been definitively REJECTED at the Approval step (Step 3) because the Pre-Closure Checklist would have returned FAIL on items A-1 through A-4 — every acceptance-related item. The 4-step chain's sequential nature means CLOSE cannot be reached without PASS on all 11 checklist items. Specifically: (1) A-1 would fail because zero proposed receiving owners had acceptance records; (2) A-2 would fail because the Portfolio Handoff used 'recommended assignment' language — explicitly non-qualifying per §2.2; (3) A-3 would fail because no ACCEPT-AS-DEBT items had review triggers; (4) A-4 would fail because CLOSE items lacked resolution evidence references. The closure would have been rejected with a Governance Debt Item requiring retroactive acceptance — exactly the outcome the gate exists to produce. The 4 sessions consumed by S724/S725/S726 would have been compressed to a single remediation step at S723 closure time.",
+    "edge_cases_remaining": [
+      {
+        "edge_case": "RULE 6 is WARN-level, not BLOCK-level",
+        "detail": "The proposed governance guard RULE 6 is a WARNING, not a BLOCK. A determined agent could ignore the warning and declare CLOSE anyway. The primary enforcement is procedural (checklist + attestation), not automated.",
+        "mitigation": "The procedural tier (§5.1) is primary: the Governance Auditor refuses approval without completed attestation. The plugin warning is a safety net, not the primary defense. Three tiers (procedural + plugin + board) provide defense in depth. Additionally, the closure attestation requires 3 signatures — defeating any single-agent bypass attempt."
+      },
+      {
+        "edge_case": "Receiving owner unavailability",
+        "detail": "What if a proposed receiving owner is unavailable or declines? The closure chain requires every proposed owner to accept. If an owner is unavailable, the series cannot close until a new receiving owner is proposed and accepts.",
+        "mitigation": "§2.2 (Verification Method): 'If a proposed receiving owner declines or is unavailable, the closing series must propose a new receiving owner and restart Step 2 for that responsibility.' The escalation path (§8) allows the Governance Board to approve an alternative owner. The Ownership Matrix's escalation-owner field provides a fallback chain (primary → secondary → escalation)."
+      },
+      {
+        "edge_case": "All 6 gaps are PENDING as of S726 T0",
+        "detail": "The S725 deadline ('before S726 T0') has passed for all 6 gaps. The closure gate was designed after the gap was discovered, not before. The retroactive S723 attestation (§10.3) is still pending.",
+        "mitigation": "The gate specifies that past-deadline gaps escalate to the Governance Board (§9.3: maximum debt age 5 sessions or 1 calendar week). The Board must approve a remediation plan with deadline, waive the requirement with documented rationale, or re-assign ownership."
+      },
+      {
+        "edge_case": "RULE 6 is specification-only, not implemented",
+        "detail": "As of S726, RULE 6 exists only as a specification (§7.1). The governance-guard.js has not been extended with the closure → attestation detection. The plugin enforcement tier is not operational.",
+        "mitigation": "The phased implementation plan (§7.1) documents the integration point and provides placeholder code. The procedural tier (checklist + attestation) is the primary enforcement mechanism and is enforceable without RULE 6. The plugin is a safety net for bypass attempts, not the sole enforcement."
+      }
+    ],
+    "verdict": "WOULD HAVE BEEN PREVENTED. The Series Closure Gate's 4-step chain (TRANSFER → ACCEPTANCE → APPROVAL → CLOSE) would have intercepted S723 at Step 2 (ACCEPTANCE). The Pre-Closure Checklist would have returned FAIL on all 4 acceptance items (A-1 through A-4), blocking the checklist under the sequential execution protocol (§3.3). The closure declaration would have been rejected with a Governance Debt Item. S723's substantive technical work (26-agent audit, verified 0 DL-008, 186/186 tests PASS, 95.0% DCS reliability) was correct — the gate does not challenge work quality, only transition completeness. The 4 sessions consumed by S724/S725/S726 (discovery, hardening, gate design, registry creation) would have been compressed to a single 'obtain acceptance records' remediation step within S723. The edge case of bypassing the procedural gate via ignoring warnings is addressed by the 3-tier enforcement model and the 3-signature attestation requirement."
+  },
+  "cross_incident_analysis": {
+    "common_root_causes": [
+      "Absence of automated structural validation at the point of action — bulk authoring without batch limits (DL-012), scans without same-object field extraction (DL-029), closures without acceptance verification (S723→S724).",
+      "Totals-only reporting without QID-level evidence — the 140/150 clone count was unstable across 3 scans (DL-012), the 67 phantom count persisted across 4+ sessions (DL-029), the '26 responsibilities transferred' claim masked 0 acceptances (S723→S724).",
+      "Governance checkpoints were advisory, not binding — authors could insert 150 items (DL-012), scanners could report phantom violations (DL-029), and closure boards could skip acceptance (S723→S724) without a BLOCK-level enforcement mechanism.",
+      "Verification was assumed, not executed — 'the items are distinct' (DL-012), 'the counts are correct' (DL-029), 'the responsibilities are transferred' (S723→S724) — all assumed without independent verification."
+    ],
+    "s726_controls_mapped_to_causes": {
+      "Absence of automated validation at point of action": "governance-guard.js RULE 5 (30-item BLOCK) + upgraded RULE 2 (AM-1 parse BLOCK) + Series Closure Gate (checklist BLOCK before CLOSE)",
+      "Totals-only reporting without QID-level evidence": "AGENTS.md §5 (reject totals-only reports) — enforced by all three controls",
+      "Governance checkpoints advisory, not binding": "RULE 5 (BLOCK), upgraded RULE 2 (BLOCK), Series Closure Gate (3-tier: procedural + plugin + board) — all bind at tool-execution time",
+      "Verification assumed, not executed": "AGENTS.md §5 (dual verification) + CAQS §1.6 (six-dimension verification) + Closure Gate §2.2 (acceptance evidence standards) — all require documented verification before action"
+    },
+    "unresolved_governance_gaps": [
+      {
+        "gap": "Clone detection at authoring time is still manual",
+        "detail": "Rule 5 prevents bulk insertion of >30 items but does not detect that 28 items in a batch (≤30) are clones of each other. Stem-similarity comparison (Jaccard) would need to be added as a separate check.",
+        "future_session": "Candidate for RULE 7 or CAQS verification tooling upgrade."
+      },
+      {
+        "gap": "RULE 6 (closure attestation) is specification-only as of S726",
+        "detail": "The governance guard plugin is not yet extended with the closure attestation detection. The procedural tier is the sole enforcement until plugin integration (S727+).",
+        "future_session": "S727 governance guard upgrade (Phase 2 of RULE2_PARSE_SPEC.md migration plan)."
+      },
+      {
+        "gap": "Acceptance records are PENDING for all 6 S725 gaps",
+        "detail": "The Ownership Acceptance Registry shows 0 of 6 gaps accepted, all past S726 T0 deadline. The closure gate prevents future gaps but does not retroactively fix this one.",
+        "future_session": "Governance Board escalation at S726 T0 per registry acceptance_summary."
+      }
+    ]
+  },
+  "verification": {
+    "validation_method": "Read-only analysis. All source documents verified by direct file read. Cross-references validated between DEFECT_LIBRARY.md, REVISION_HISTORY.md, SESSION726 files, and governance-guard.js.",
+    "sources_consulted": [
+      "knowledge/DEFECT_LIBRARY.md — DL-012 (lines 606-660), DL-029 (lines 2264-2598)",
+      "knowledge/REVISION_HISTORY.md — S723 closure (lines 17151-17237), S724 discovery (lines 248-300), S725 hardening (lines 90-148), S726 closure gate (lines 1-50)",
+      "reports/SESSION726_SERIES_CLOSURE_GATE.md — full specification (773 lines)",
+      "reports/SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json — full registry (231 lines)",
+      ".opencode/plugins/governance-guard.js — current implementation (247 lines)",
+      "reports/SESSION726_RULE2_PARSE_SPEC.md — full specification (721 lines)",
+      "AGENTS.md — §5 Dual Verification, §6 Item-Count Volatility"
+    ],
+    "consistency_checks": [
+      "DL-012 clone count verified across 3 sources: DEFECT_LIBRARY.md (140 clones), REVISION_HISTORY.md (112 archived), S726 RULE2_PARSE_SPEC (no reference — S726 controls focus on DL-008, not clone detection)",
+      "DL-029 phantom count verified: 67 in CURRENT_BASELINES.md, confirmed 0 by S722A/S802/S723 via Function constructor parse",
+      "S723→S724 gap count verified: 6 gaps consistent across all sources (S723 closure report, S724 session summary, S725 governance model, S726 closure gate, S726 ownership registry)"
+    ]
+  }
+}

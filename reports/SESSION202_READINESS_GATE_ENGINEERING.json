@@ -1,0 +1,701 @@
+{
+  "document": "SESSION202_READINESS_GATE_ENGINEERING",
+  "title": "Readiness Gate & Pre-Flight Pipeline Engineering Specification",
+  "session": "S202",
+  "type": "Read-Only Architecture Design",
+  "date": "2026-07-27",
+  "version": "1.0",
+  "authority": "Derived from S200/S201 findings. Implements Framework v2 §PREFLIGHT_GATE and §READINESS_GATING.",
+  "parent_findings": [
+    "S200: 89.5% readiness failure rate — items reach certification boards with 3-5 concurrent defects",
+    "S200: 100% failure on Domain E — 38 seeds at S809 board, zero pre-board structural scans",
+    "S201: Pre-flight gate model defines 10 scans (PG-001 through PG-011) across 6 sequential gates",
+    "S201: Identity validation (Gate -1) added via S202 Amendment 1 — no downstream scan result admissible until IDENTITY_VALID",
+    "S201: 89.5% → 12-15% projected readiness failure rate reduction with full gate implementation",
+    "S200: 49 agent-deployments across 4 sessions to process 38 items due to defect-discovery-at-board pattern",
+    "S200: Readiness board is advisory only — no machine-enforceable blocked/cleared flag"
+  ],
+  "design_principles": [
+    "Every gate produces a PASS/SOFT_FAIL/HARD_FAIL verdict. HARD_FAIL = certification blocked for that item. SOFT_FAIL = deferred until remediated but does not block pipeline for other items.",
+    "Within-object extraction (Function constructor parse) is the ONLY approved methodology. No forward-scan. No regex-window. No flat-field matching.",
+    "Compound key identity (QID + CorrectChoice + EW_Pattern + Template_Family + File_Path) governs Gate -1 and Gate 3.",
+    "Gate order is mandatory: Identity must be validated before any structural or content scan result is admissible (S202 Amendment 1).",
+    "Zero tolerance for HARD_BLOCK failures — items cannot enter 'In Audit' with any HARD_BLOCK violation.",
+    "Every item must finish pre-flight with a readiness classification: READY, MINOR_FIX, REMEDIATE, or BLOCKED.",
+    "Boards may only see READY inventory. MINOR_FIX items shown with warnings. REMEDIATE and BLOCKED are invisible to boards.",
+    "The readiness score is a per-item numeric score (0-100) computed from gate results, consumable by the Session Arbiter for prioritization."
+  ],
+
+  "gate_pipeline": [
+    {
+      "gate_id": "Gate_-1",
+      "gate_name": "Identity Validation",
+      "order": -1,
+      "description": "Verify every item has a constructible compound-key identity before any downstream scan runs. This is the mandatory pre-condition gate (S202 Amendment 1). No downstream scan result is admissible until IDENTITY_VALID. S320 lesson: wrong target + perfect scan = wrong result. DL-016 +1 metadata-content shift and DL-029 forward-scan CC offset mean structural scans can produce correct outputs against the wrong item.",
+      "scans": [
+        "PG-011: QID Presence & Format, CorrectChoice Presence, Pack Attribution, TemplateFamily Constructibility"
+      ],
+      "input": {
+        "artifacts_required": [
+          "Raw pack file content for all 5 packs (pack_a through pack_e_corrected.js)",
+          "Function constructor parse capability",
+          "Per-pack QID format rules: Pack A (P1-{Section}-{NNN}), Pack B (P1B-{Section}-{NNN}), Pack C (P1-{Section}C-{NNN} or P1-{Section}-{NNN}), Pack D (P1-{Section}D-{NNN}), Pack E (P1E-{Section}-{NNN})",
+          "Per-pack QID prefix space maps (to detect cross-pack collisions)"
+        ],
+        "data_required": [
+          "QuestionID field per item",
+          "CorrectChoice field per item",
+          "File path per item",
+          "Stem text (normalized, proper-noun-removed for TemplateFamily Jaccard clustering)"
+        ]
+      },
+      "output": {
+        "verdict": "IDENTITY_VALID | IDENTITY_BLOCKED (per item)",
+        "artifacts_produced": [
+          "Per-item QID format validation report",
+          "Cross-pack QID collision report (flagging duplicate QID prefix spaces)",
+          "TemplateFamily map: per-section rotation group classification (stem Jaccard >90% after proper-noun removal → same family；<70% → standalone)",
+          "Per-item compound key: { QID, CorrectChoice, EW_Pattern, Template_Family, File_Path }",
+          "IDENTITY_BLOCKED item list with specific failure reason per item"
+        ]
+      },
+      "pass_condition": "ALL items in all 5 packs: QID present and matches expected pack format, CorrectChoice present and is single letter A-D, pack file matches item's configured path, TemplateFamily classifiable for all items (either in a rotation group or confirmed standalone).",
+      "soft_fail_condition": "N/A — Identity is binary: valid or blocked. Items at TemplateFamily boundary thresholds (70-90% stem similarity) get IDENTITY_WARN annotation but proceed as IDENTITY_VALID with a note for Gate 3 reconciliation.",
+      "hard_fail_condition": "Any item missing QID → HARD_FAIL. Any item missing CorrectChoice → HARD_FAIL. Any item with unidentifiable pack attribution → HARD_FAIL. Any item with unclassifiable TemplateFamily (stem similarity 90-100% to multiple families OR zero items meet similarity threshold) → HARD_FAIL.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "Per S202 Amendment 1: DL-008, DL-026, DL-013, and DL-016 scans can all produce usable results against the wrong item when identity is broken. S320 proved that remediation targeting by QID alone in a rotation-group file hits wrong variants. DL-029 proved that forward-scan CC extraction from wrong objects produces ~75% false-positive rates. Identity must be confirmed before any structural or content scan output is trusted.",
+      "on_pass": "Set IDENTITY_VALID flag. Proceed to Gate 0 with identity-confirmed item list + compound key registry. All downstream scan results are now admissible.",
+      "on_fail": "IDENTITY_BLOCKED items are excluded from all downstream gates. Pipeline proceeds for IDENTITY_VALID items only. Generate identity gap report. BLOCKED items route to EditorialQueue with identity repair required.",
+      "runtime_estimate": "~5 seconds per pack (QID/Credential validation: 0.5s + CorrectChoice field check: 0.5s + pack attribution: 0.5s + TemplateFamily Jaccard clustering: 3.5s). ~25s for all 5 packs (serial) or ~5s (parallelized)."
+    },
+
+    {
+      "gate_id": "Gate_0",
+      "gate_name": "JSON Integrity",
+      "order": 0,
+      "description": "Verify all pack and case files are parseable, structurally complete, and free of known corruption patterns. This gate must pass before any downstream structural or content scan can operate — unparseable files block the entire pipeline for all items in that pack.",
+      "scans": [
+        "PG-010: Function constructor parse, required field presence, type consistency, corruption artifact detection, QuestionID count verification"
+      ],
+      "input": {
+        "artifacts_required": [
+          "Raw pack file content for all 5 packs",
+          "Raw scored_cases content for all 5 case files",
+          "Function constructor parse capability",
+          "Expected QuestionID counts per pack (Pack A: 500, Pack B: 500, Pack C: 500, Pack D: 500, Pack E: 500)",
+          "Known corruption pattern catalog (DL-017: backtick-newline artifact `n; NNN: true, artifact)",
+          "Required fields list per item: QuestionID, Stem, Choices (or Choices.A-D), CorrectChoice, ExplanationCorrect, ExplanationWrongA, ExplanationWrongB, ExplanationWrongC, ExplanationWrongD"
+        ],
+        "data_required": [
+          "Parsed question object arrays (output of Function constructor parse)",
+          "Per-object required field presence boolean matrix",
+          "Per-field type consistency check matrix"
+        ]
+      },
+      "output": {
+        "verdict": "PASS | FAIL (per pack, per item)",
+        "artifacts_produced": [
+          "Per-pack parse validation report (parse success/failure, line number of failure if applicable)",
+          "Missing-required-fields report per item",
+          "Type consistency violation report (e.g., CorrectChoice is numeric, ExplanationWrong is object, Choices missing)",
+          "Corruption artifact detection report (DL-017 pattern matches with line numbers)",
+          "QuestionID count verification (expected vs. actual per pack)"
+        ]
+      },
+      "pass_condition": "All 5 packs parse cleanly via Function constructor. All 5 scored_cases files parse cleanly. All 2,500 MCQs + 420 case items have all required fields present. Zero corruption artifacts detected. QuestionID counts match expected values per pack.",
+      "soft_fail_condition": "N/A — JSON integrity is a structural prerequisite. Partial failures cascade to Gate 0 FAIL.",
+      "hard_fail_condition": "Any file fails to parse → HARD_FAIL for ALL items in that pack. Any item missing required fields → HARD_FAIL for that item. Corruption artifact detected → HARD_FAIL for all affected items. QuestionID count mismatch → HARD_FAIL for entire pack (pipeline halts until count reconciled).",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "If the file cannot be parsed, no downstream gate can operate. If required fields are missing, structural and content scans will crash or produce unreliable results. The entire certification pipeline stops for unparseable files.",
+      "on_pass": "Proceed to Gate 1 with parsed object arrays (only items that passed Gate 0).",
+      "on_fail": "Halt pipeline for failing packs. Generate error report with file, line range, and failure reason. File must be repaired and Gate 0 re-run before any items in that pack can proceed.",
+      "runtime_estimate": "~5 seconds per pack (Function constructor parse: 1s + field-presence check: 2s + type consistency: 1s + corruption scan: 0.5s + count verification: 0.5s). ~25s for all 5 packs."
+    },
+
+    {
+      "gate_id": "Gate_1",
+      "gate_name": "Structural Scan",
+      "order": 1,
+      "description": "Detect field-level structural defects that create learner-safety risks or block certification per CAQS §4.4 and governance-guard rules. All scans use within-object extraction from IDENTITY_VALID items only.",
+      "scans": [
+        "PG-001 (DL-008): ExplanationWrong[CorrectChoice] Non-Empty — must be empty string per EV8",
+        "PG-009 (EV8): Correct-answer slot in distractor explanations must be empty — combined with PG-001 in single pass",
+        "PG-005 (DL-026): Empty Non-CorrectChoice ExplanationWrong Slots — all non-CC EW slots must have >= 50 chars",
+        "PG-004 (DL-016): Metadata-Block vs Content-Block ChoiceDivergence — ChoiceA-D must match Choices.A-D (dual-block packs A/C/D only; single-block packs B/E skip)"
+      ],
+      "input": {
+        "artifacts_required": [
+          "Parsed question objects from Gate 0 (IDENTITY_VALID items only)",
+          "Per-item CorrectChoice extract (from same object boundary)",
+          "Per-item ExplanationWrong[A-D] field values (from same object boundary)",
+          "For PG-004 (DL-016): both flat ChoiceA-D AND nested Choices.{A-D} extracted from same object",
+          "Per-pack architecture classification: dual-block (A/C/D) vs single-block (B/E)"
+        ],
+        "data_required": [
+          "Within-object CorrectChoice value per item",
+          "Within-object ExplanationWrong field values per item",
+          "Per-field string length for non-CC EW slots",
+          "Pairwise string comparison matrix (ChoiceA vs Choices.A, etc.) for dual-block packs"
+        ]
+      },
+      "output": {
+        "verdict": "PASS | HARD_FAIL | DL018_HOLD (per item, per scan)",
+        "artifacts_produced": [
+          "Per-item DL-008 violation report: QID, CorrectChoice, non-empty field name, violation text snippet",
+          "Per-item DL-026/DL-025 violation report: QID, empty slot letter, expected topic context",
+          "Per-item DL-016 divergence report: QID, divergent field pairs (ChoiceA vs Choices.A, etc.), delta text",
+          "Per-item DL-018 report: items where ExplanationWrong[CC] is absent (undefined) — automatable fix",
+          "Aggregate pass/fail counts per defect class per pack"
+        ]
+      },
+      "pass_condition": "PG-001: ExplanationWrong[CorrectChoice] is present and === '' for all scanned items. PG-005: all non-CorrectChoice ExplanationWrong slots have >= 50 chars of text. PG-004: metadata ChoiceA-D matches content Choices.A-D for all dual-block items, OR pack is single-block architecture.",
+      "soft_fail_condition": "N/A — all Gate 1 defects are HARD_BLOCK.",
+      "hard_fail_condition": "PG-001 HARD_FAIL: ExplanationWrong[CorrectChoice] is non-empty (truthy, length > 0). PG-005 HARD_FAIL: any non-CorrectChoice ExplanationWrong slot is '' (empty) or absent. PG-004 HARD_FAIL: metadata ChoiceA-D differs from content Choices.A-D (confirmed DL-016).",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "DL-008: items display wrong-answer text in the correct-answer review slot — learner-safety risk. DL-026: learners see zero educational feedback when selecting certain wrong answers — certification-blocking per CAQS §4.3. DL-016: learners see feedback about a completely different topic — learner-safety risk per G-NEW-1/G-NEW-2.",
+      "on_pass": "All items pass structural integrity checks. Proceed to Gate 2.",
+      "on_fail": "HARD_FAIL items excluded from Gate 2+ processing. Route to EditorialQueue with specific defect class and field location. Non-failing items proceed normally.",
+      "runtime_estimate": "~10 seconds per pack (PG-001: 2s + PG-009: combined + PG-005: 2s + PG-004: 3s + overhead: 3s). ~50s for all 5 packs (serial) or ~10s (parallelized).",
+      "dependency": "Requires Gate 0 parsed objects + Gate -1 IDENTITY_VALID flag as input."
+    },
+
+    {
+      "gate_id": "Gate_2",
+      "gate_name": "Content Quality Scan",
+      "order": 2,
+      "description": "Detect content-quality defects in explanation text: boilerplate patterns, missing principle references. These defects degrade educational quality but are not learner-safety risks — the answer key is still correct.",
+      "scans": [
+        "PG-003 (DL-013): Template Boilerplate in ExplanationWrong Fields — dual-phrase regex detection + Jaccard similarity between EW slot pairs",
+        "PG-008 (EV3): ExplanationCorrect References Accounting Principle By Name — regex for ASC/COSO/IAS/IFRS/GAAP patterns",
+        "PG-002 (DL-010): Misassigned Choice Explanations — Tier 1 lexical overlap between EW text and choice text; Tier 2 numeric mismatch heuristic"
+      ],
+      "input": {
+        "artifacts_required": [
+          "Parsed question objects from Gate 1 (HARD_FAIL items excluded)",
+          "Per-item ExplanationWrong[A-D] field values",
+          "Per-item ExplanationCorrect field value",
+          "Per-item Choices.{A,B,C,D} text (for DL-010 lexical overlap computation)",
+          "Accounting principle citation regex library (ASC \\d{3}, IAS \\d{1,2}, IFRS \\d{1,2}, COSO, GAAP, FASB, IMA Statement, Sarbanes-Oxley, SEC, PCAOB, AICPA)"
+        ],
+        "data_required": [
+          "Per-EW-field regex match results for DL-013 boilerplate patterns",
+          "Per-item EW slot-pair Jaccard similarity matrix (6 comparisons per item)",
+          "Per-ExplanationCorrect regex match results for standard citations",
+          "Per-slot EW-to-choice lexical overlap (Jaccard similarity)"
+        ]
+      },
+      "output": {
+        "verdict": "PASS | SOFT_FAIL (per item, per scan)",
+        "artifacts_produced": [
+          "Per-item DL-013 boilerplate report: QID, affected EW slots, boilerplate type (Pattern A: dual-phrase; Pattern B: high Jaccard; DL-027: closing-tag)",
+          "Per-item EV3 citation gap report: QID, missing citation, cognitive level, topic",
+          "Per-item DL-010 suspected report: QID, low-overlap slot(s), overlap percentage, recommendation for human review",
+          "DL-009 cross-detection: items where EC cites a standard that appears wrong for the topic (e.g., ASC 210 for loss contingency)"
+        ]
+      },
+      "pass_condition": "PG-003: zero EW fields contain DL-013 dual-phrase boilerplate ('represents a plausible misconception' AND 'A candidate may select this option by misapplying'). PG-008: ExplanationCorrect contains a recognizable standard citation OR item cognitive level is Remember/Understand (EV3 waived for definition-level items). Zero DL-013 closing-tag-only (DL-027) remaining — resolved by WAVE 3 autonomous run; re-verify via PG-003 regex.",
+      "soft_fail_condition": "PG-003 SOFT_FAIL: DL-013 dual-phrase boilerplate detected — certification deferred until remediated but existing Certified status not revoked (zero currently affected in Certified pool). PG-008 WARN: principle citation missing (flagged for editorial enhancement, does not block certification). PG-002 WARN: DL-010 suspected via low lexical overlap (flagged for human editorial review; cannot auto-confirm due to high FP risk).",
+      "hard_fail_condition": "N/A — no Gate 2 defect is HARD_BLOCK. DL-013/EQ3/DL-010 are SOFT_BLOCK or WARN.",
+      "blocking_level": "SOFT_BLOCK",
+      "blocking_rationale": "DL-013 boilerplate fails CAQS §4.3 'Choice-specific' rule but is not learner-safety critical. EV3 citation missing degrades educational quality but answer is still correct. DL-010 misassignment is HIGH severity if confirmed but has ~94% false-positive rate on automated detection — cannot HARD_BLOCK on automated scan alone.",
+      "on_pass": "Content quality verified. Proceed to Gate 3.",
+      "on_fail": "SOFT_FAIL items deferred for remediation (DL-013 boilerplate rewrite, EV3 citation addition). WARN items flagged for board review. Pipeline proceeds for clean items.",
+      "runtime_estimate": "~12 seconds per pack (PG-003: 3s + PG-008: 1s + PG-002: 8s). ~60s for all 5 packs (serial) or ~12s (parallelized). PG-002 dominates due to per-slot lexical overlap computation.",
+      "dependency": "Requires Gate 1 structural scan output (items must be structurally clean before content evaluation — avoids DL-016 scan artifacts contaminating content checks)."
+    },
+
+    {
+      "gate_id": "Gate_3",
+      "gate_name": "Compound-Key Reconciliation",
+      "order": 3,
+      "description": "Verify compound-key identity integrity across all packs. Prevent cross-item contamination (DL-016), clone duplication (DL-012), and rotation-artifact misidentification. Confirm that every QID maps to a unique, unambiguous item instance with consistent metadata and content alignment.",
+      "scans": [],
+      "input": {
+        "artifacts_required": [
+          "Compound key registry from Gate -1 (all IDENTITY_VALID items)",
+          "Template family map from Gate -1",
+          "Canonical seed viability criteria: question_state='Unprocessed', EC >= 200 chars, EC contains ASC/COSO citation, all EW slots substantive, EW[CC] empty, exactly 3 non-CC EW slots non-empty",
+          "Per-pack QID prefix space maps",
+          "Cross-pack QID collision detection"
+        ],
+        "data_required": [
+          "Per-item compound key: { QID, CorrectChoice, EW_Pattern, Template_Family, File_Path }",
+          "Per-template-family canonical seed assessment scores",
+          "Cross-pack duplicate compound key flags"
+        ]
+      },
+      "output": {
+        "verdict": "PASS | HARD_FAIL (per item, per check)",
+        "artifacts_produced": [
+          "Compound key uniqueness report: duplicate keys flagged with both QID locations",
+          "Template family viability report: families where zero items meet canonical seed criteria → flagged for re-authoring",
+          "Cross-pack QID collision report: items with same QID prefix space in multiple packs",
+          "Per-pack identity integrity score (0-100): % of items with unique compound keys + clean template family classification"
+        ]
+      },
+      "pass_condition": "All 2,500 items have unique compound keys. All template families have at least one viable canonical seed (meets all 6 criteria). Zero cross-pack QID collisions on items with identical stems. All QIDs match expected format patterns per pack.",
+      "soft_fail_condition": "N/A — compound key integrity is binary. Ambiguous families get Gate 3 WARN annotation but items within proceed to Gate 4 with caveat flag.",
+      "hard_fail_condition": "Duplicate compound keys detected (same QID+CC+EW_Pattern across two packs) → HARD_FAIL for all items in collision. Template family with zero canonical seed candidates → HARD_FAIL for all items in that family (requires re-authoring). QID format violation (doesn't match any expected pattern) → HARD_FAIL for that item.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "Compound key collisions mean two physically different items share the same identity — remediation targeting is impossible. Template families with no viable seed mean the entire rotation group is defective — no item can serve as the authoritative reference. S320 demonstrated that operating on items with broken identity produces zero effective writes.",
+      "on_pass": "All items have confirmed unique, unambiguous compound-key identities. Proceed to Gate 4.",
+      "on_fail": "HARD_FAIL items (collisions, non-viable families, format violations) routed to EditorialQueue. Requires structural or identity repair before re-entering Gate -1.",
+      "runtime_estimate": "~20 seconds per pack (compound key extraction: 2s + template family Jaccard clustering: 10s + cross-pack duplicate detection: 5s + canonical seed evaluation: 3s). ~100s for all 5 packs (serial; cross-pack check requires all packs loaded simultaneously).",
+      "dependency": "Requires Gate 2 output (clean, identified items). Operates cross-pack — all 5 packs must be loaded simultaneously."
+    },
+
+    {
+      "gate_id": "Gate_4",
+      "gate_name": "Calculation Validation",
+      "order": 4,
+      "description": "Verify answer-key correctness (DL-030) and difficulty calibration (DL-031). This is the most computationally intensive gate — it requires build-time AI reasoning for conceptual items and is the last gate in the pipeline (all structural and content defects cleared first, minimizing wasted computation on defective items).",
+      "scans": [
+        "PG-006 (DL-030): CorrectChoice Answer-Key Errors — three-tier detection: Tier 1 numeric formula verification, Tier 2 conceptual AI derivation, Tier 3 EC-CC consistency cross-check",
+        "PG-007 (DL-031): Definition-Match Difficulty Inflation — Jaccard stem-CC overlap + distractor discernment check"
+      ],
+      "input": {
+        "artifacts_required": [
+          "Parsed question objects from Gate 3 (identity-confirmed items only)",
+          "Stem text + Choices.{A,B,C,D} + CorrectChoice + ExplanationCorrect per item",
+          "FORMULA_MASTER.md canonical formula library (34 formulas) for Tier 1 numeric matching",
+          "Build-time AI verification capability for Tier 2 conceptual derivation",
+          "Per-item DifficultyScore and CognitiveLevel for DL-031 check"
+        ],
+        "data_required": [
+          "Numeric values extracted from Stem + Choices (for Tier 1 formula matching)",
+          "AI-derived correct answer vs. stored CorrectChoice comparison matrix",
+          "EC text vs. CC semantic consistency score (for Tier 3 cross-check)",
+          "Stem-CorrectChoice Jaccard lexical overlap (for DL-031)",
+          "Per-distractor discernment score (for DL-031 secondary check)"
+        ]
+      },
+      "output": {
+        "verdict": "PASS | SOFT_FAIL | HUMAN_REVIEW (per item, per scan)",
+        "artifacts_produced": [
+          "Per-item CC_Verdict report: ALL_AGREE (stored CC matches derived answer) | REQUIRES_HUMAN_REVIEW (AI confidence < 90% or CC mismatch detected) | SUSPECT (EC describes different answer than CC — Tier 3 flag)",
+          "Per-item DL-030 evidence: derived answer, derivation steps, confidence score, EC-CC consistency score",
+          "Per-item DL-031 report: stem-CC overlap percentage, difficulty label, cognitive level, recommended recalibration",
+          "Aggregate difficulty distribution vs. CAQS §6.1 targets (Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10%)"
+        ]
+      },
+      "pass_condition": "PG-006: zero DL-030 SUSPECT items. PG-007: difficulty distribution within 5% tolerance of CAQS §6.1 targets.",
+      "soft_fail_condition": "PG-006 SOFT_FAIL: item flagged REQUIRES_HUMAN_REVIEW — AI-derived answer differs from stored CC but confidence < 90%. Item is SOFT_BLOCKED from certification until human expert confirms or refutes. PG-007 WARN: definition-match inflation detected — flagged for difficulty recalibration during board review.",
+      "hard_fail_condition": "N/A — PG-006 produces SOFT_FAIL (cannot auto-change answer key) and PG-007 produces WARN (cannot auto-recalibrate difficulty). Both require human judgment for final determination.",
+      "blocking_level": "SOFT_BLOCK",
+      "blocking_rationale": "Cannot HARD_BLOCK certification on automated CC verification — the AI may be wrong about the correct answer. SOFT_BLOCK = item flagged for mandatory human expert review before certification. Difficulty miscalibration does not create learner-safety risk — WARN only.",
+      "on_pass": "All items have ALL_AGREE CC verdicts. Difficulty distribution meets targets. Items ready for Gate 5 (certification eligibility).",
+      "on_fail": "SOFT_FAIL items routed to human expert review queue. WARN items flagged for difficulty recalibration. Pipeline proceeds for PASS items.",
+      "runtime_estimate": "~50 seconds per pack (PG-006: 45s — dominated by AI-assisted Tier 2 conceptual verification; + PG-007: 5s for Jaccard computation). ~250s for all 5 packs (serial) or ~50s (parallelized). PG-006 is the pipeline bottleneck.",
+      "dependency": "Requires Gate 3 output (identity-confirmed items with unique compound keys — ensures CC verification targets the correct item variant)."
+    },
+
+    {
+      "gate_id": "Gate_5",
+      "gate_name": "Certification Eligibility",
+      "order": 5,
+      "description": "Final readiness classification. Synthesizes all gate verdicts (Gates -1 through 4) into a per-item readiness classification. Produces the Pre-Flight Report for board consumption. This gate does not run additional scans — it is a synthesis/evaluation gate.",
+      "scans": [],
+      "input": {
+        "artifacts_required": [
+          "Per-item gate verdicts from Gates -1 through 4 (PASS, SOFT_FAIL, HARD_FAIL, WARN per scan)",
+          "Per-item compound key from Gate -1",
+          "Per-item content hash (for delta comparison — see SESSION202_DELTA_REVIEW_ENGINEERING.json)",
+          "CERTIFICATION_LEDGER.json lookup per item (prior certification state, last certified hash)"
+        ],
+        "data_required": [
+          "Per-item verdict matrix: 11 scan IDs × PASS/SOFT_FAIL/HARD_FAIL/WARN",
+          "Per-item scan violation details: defect class, field location, violation text snippet",
+          "Per-item content hash vs. ledger hash delta status (UNCHANGED / CONTENT_CHANGED / METADATA_CHANGED / NEW_ITEM)"
+        ]
+      },
+      "output": {
+        "verdict": "READY | MINOR_FIX | REMEDIATE | BLOCKED (per item)",
+        "artifacts_produced": [
+          "Session Pre-Flight Report (primary board consumption artifact): per-item readiness classification, QID lists by classification, per-defect-class violation counts, delta comparison summary, readiness pass rate",
+          "Board-filtered inventory: READY items only (with dimension scores and scan evidence)",
+          "MINOR_FIX item list with WARN annotations for board review",
+          "REMEDIATE item list routed to EditorialQueue with specific remediation requirements per defect class",
+          "BLOCKED item list with HARD_FAIL reasons (identity broken, JSON corrupt, structural integrity failed)"
+        ]
+      },
+      "pass_condition": "Readiness classification assigned to every item that passed Gate -1 identity validation.",
+      "blocking_level": "N/A — synthesis gate. Does not block; it classifies.",
+      "on_pass": "Generate Pre-Flight Report. Route READY items to BoardReview queue. Route MINOR_FIX items to board with warnings. Route REMEDIATE items to EditorialQueue. Route BLOCKED items to identity/structure repair queue.",
+      "runtime_estimate": "~2 seconds per pack (synthesis logic only — no new scans). All upstream scan data already computed.",
+
+      "readiness_classification_algorithm": {
+        "description": "Per-item classification based on gate verdict aggregation. The algorithm evaluates the most severe violation across all gates and classifies accordingly.",
+        "rules": [
+          {
+            "classification": "READY",
+            "conditions": [
+              "Gate -1: IDENTITY_VALID (or IDENTITY_VALID with IDENTITY_WARN annotation for boundary items)",
+              "Gate 0: PASS (all fields present, JSON parseable, count verified)",
+              "Gate 1: PASS (zero HARD_FAIL on PG-001/PG-005/PG-004)",
+              "Gate 2: PASS or WARN only (PG-003 clean, PG-008 may have WARN for missing citation, PG-002 may have WARN for suspected DL-010)",
+              "Gate 3: PASS (unique compound key, viable template family)",
+              "Gate 4: PASS or WARN only (PG-006 ALL_AGREE, PG-007 may have WARN for difficulty inflation)"
+            ],
+            "description": "Item has passed all HARD_BLOCK gates and has no SOFT_BLOCK violations. WARN-level annotations present but do not block certification. Item is eligible for certification board review.",
+            "board_visible": true,
+            "board_presentation": "Full item with dimension scores, scan evidence, and WARN annotations. Board may certify, defer, or return with notes."
+          },
+          {
+            "classification": "MINOR_FIX",
+            "conditions": [
+              "All HARD_BLOCK gates (Gate -1, Gate 0, Gate 1, Gate 3): PASS",
+              "Gate 2 or Gate 4: has SOFT_BLOCK violations that are editorial in nature (DL-013 boilerplate, EV3 citation gap not requiring re-derivation)",
+              "OR Gate 4: PG-006 verdict REQUIRES_HUMAN_REVIEW with AI confidence >= 90% (CC appears wrong but AI is confident — needs human expert to confirm or refute)",
+              "OR item has 3+ WARN annotations across multiple dimensions"
+            ],
+            "description": "Item passes structural integrity checks but has minor content quality issues that do not affect answer-key correctness. Can proceed to board with specific remediation notes. Board sees warnings but can make certification decision.",
+            "board_visible": true,
+            "board_presentation": "Item shown with WARN annotations highlighted. Board members are instructed to review the flagged dimensions with heightened scrutiny. Board may certify if WARN items are deemed acceptable or defer for remediation."
+          },
+          {
+            "classification": "REMEDIATE",
+            "conditions": [
+              "Gate 2: SOFT_FAIL on PG-003 (DL-013 dual-phrase boilerplate detected)",
+              "OR Gate 4: SOFT_FAIL on PG-006 (REQUIRES_HUMAN_REVIEW with AI confidence < 90%)",
+              "OR Gate 4: PG-006 verdict SUSPECT (EC-CC consistency check flagged)"
+            ],
+            "description": "Item has SOFT_BLOCK violations that require author intervention before board review. Cannot be certified in current state. Must be remediated and re-submitted to pre-flight.",
+            "board_visible": false,
+            "routing": "EditorialQueue with specific remediation requirements per defect class. After remediation, re-enters pipeline at Gate -1."
+          },
+          {
+            "classification": "BLOCKED",
+            "conditions": [
+              "Gate -1: IDENTITY_BLOCKED (missing QID, missing CC, unidentifiable pack attribution, unclassifiable TemplateFamily)",
+              "OR Gate 0: HARD_FAIL (JSON parse failure, missing required fields, corruption artifact, count mismatch)",
+              "OR Gate 1: HARD_FAIL on PG-001 (DL-008 non-empty EW[CC]), PG-005 (DL-026 empty non-CC EW slot), or PG-004 (DL-016 confirmed divergence)",
+              "OR Gate 3: HARD_FAIL (duplicate compound key, non-viable template family, QID format violation)"
+            ],
+            "description": "Item has HARD_BLOCK violations that make it structurally unsafe for certification. Item identity may be broken, JSON may be corrupt, or structural integrity failed. Must be repaired at the structural/identity level before re-entering pre-flight pipeline.",
+            "board_visible": false,
+            "routing": "Identity/structure repair queue → EditorialQueue with specific repair instructions. After repair, re-enters pipeline at Gate -1."
+          }
+        ]
+      },
+
+      "readiness_score_computation": {
+        "description": "Per-item numeric score (0-100) based on gate results. Computed after all gates complete. Score represents readiness for board review — higher = fewer outstanding issues. Used by Session Arbiter for batch prioritization and board allocation.",
+        "base_score": 100,
+        "deductions": [
+          {
+            "violation_type": "HARD_FAIL on any gate (Gate -1, 0, 1, 3)",
+            "deduction": -100,
+            "description": "Any HARD_FAIL automatically sets score to 0. Item is BLOCKED."
+          },
+          {
+            "violation_type": "SOFT_FAIL on PG-003 (DL-013 boilerplate)",
+            "deduction": -30,
+            "description": "Each affected EW slot with dual-phrase boilerplate. Capped at -60 total (2+ slots)."
+          },
+          {
+            "violation_type": "SOFT_FAIL on PG-006 (DL-030 REQUIRES_HUMAN_REVIEW)",
+            "deduction": -40,
+            "description": "Answer-key verification flagged — highest-risk SOFT_FAIL. Single deduction regardless of AI confidence level."
+          },
+          {
+            "violation_type": "SOFT_FAIL on PG-006 (DL-030 SUSPECT — EC-CC inconsistency)",
+            "deduction": -25,
+            "description": "Explanation text describes different answer than stored CorrectChoice."
+          },
+          {
+            "violation_type": "WARN on PG-008 (EV3 citation missing) — per slot",
+            "deduction": -5,
+            "description": "Each ExplanationCorrect missing principle citation, capped at -10."
+          },
+          {
+            "violation_type": "WARN on PG-002 (DL-010 suspected)",
+            "deduction": -10,
+            "description": "Each EW slot flagged with low lexical overlap. Capped at -30 total."
+          },
+          {
+            "violation_type": "WARN on PG-007 (DL-031 difficulty inflation)",
+            "deduction": -5,
+            "description": "Definition-match difficulty inflation detected."
+          },
+          {
+            "violation_type": "DL-018 WARN on PG-001 (EW[CC] absent, not empty)",
+            "deduction": -5,
+            "description": "Field structurally absent — minor normalization issue, automatable fix."
+          },
+          {
+            "violation_type": "IDENTITY_WARN (TemplateFamily boundary threshold 70-90%)",
+            "deduction": -5,
+            "description": "Item is at classification boundary — may be standalone or part of a rotation group."
+          },
+          {
+            "violation_type": "PG-005 WARN (non-CC EW slot >= 1 char but < 50 chars)",
+            "deduction": -10,
+            "description": "Slot has text but insufficient for educational value. Per slot, capped at -30."
+          }
+        ],
+        "minimum_score": 0,
+        "score_tiers": [
+          { "range": "90-100", "label": "Excellent — Board-ready", "severity": "No significant issues. Minor WARNs only." },
+          { "range": "75-89", "label": "Good — Board-ready with notes", "severity": "Several WARNs or one SOFT_FAIL editorial issue." },
+          { "range": "50-74", "label": "Fair — REMEDIATE", "severity": "Multiple SOFT_FAILs or significant editorial gaps. Requires author intervention." },
+          { "range": "0-49", "label": "Poor — BLOCKED", "severity": "At least one HARD_FAIL or severe combination of SOFT_FAILs. Not certifiable." }
+        ]
+      },
+
+      "board_filtering_rule": {
+        "description": "The certification board sees only items classified as READY. MINOR_FIX items are shown with WARN annotations but are eligible for board review. REMEDIATE and BLOCKED items are invisible to the board — they do not appear in the board's item allocation list.",
+        "rules": [
+          {
+            "classification": "READY",
+            "board_visible": true,
+            "presentation": "Full item with all gate evidence, dimension scores, WARN annotations (if any). Board Chair allocates to board members for CAQS §1.6 six-dimension verification."
+          },
+          {
+            "classification": "MINOR_FIX",
+            "board_visible": true,
+            "presentation": "Item shown with MINOR_FIX flag prominently displayed. Specific WARN annotations listed. Board members review flagged dimensions with heightened scrutiny. Board Chair must explicitly confirm that MINOR_FIX items are acceptable before certification. Items can still be certified if board determines WARNs are non-material."
+          },
+          {
+            "classification": "REMEDIATE",
+            "board_visible": false,
+            "routing": "EditorialQueue — item does not appear in board item allocation. Requires author remediation before re-entering pre-flight pipeline."
+          },
+          {
+            "classification": "BLOCKED",
+            "board_visible": false,
+            "routing": "Identity/structure repair queue — item does not appear in board item allocation. Requires structural or identity repair before re-entering pre-flight pipeline."
+          }
+        ],
+        "board_dashboard_metrics": [
+          "Total items in board scope: READY + MINOR_FIX count",
+          "Breakdown: READY count, MINOR_FIX count, REMEDIATE count (for context), BLOCKED count (for context)",
+          "Pre-flight pass rate: (READY + MINOR_FIX) / total items entering pre-flight",
+          "Readiness score distribution across board items (mean, median, min, max)",
+          "Per-defect-class heat map: which defect classes affect how many board items"
+        ]
+      },
+
+      "preflight_report_schema": {
+        "description": "The Pre-Flight Report is the primary artifact produced by the Pre-Flight Scanner and consumed by the Quality & Certification Board. It replaces the ad-hoc 5-7 session pre-read chain (S809→S810.1 pattern) with a single structured report.",
+        "sections": [
+          {
+            "section": "executive_summary",
+            "fields": [
+              "session_id",
+              "generated_timestamp",
+              "total_items_scanned",
+              "readiness_distribution: { READY: N, MINOR_FIX: N, REMEDIATE: N, BLOCKED: N }",
+              "pre_flight_pass_rate_pct",
+              "delta_status_summary: { UNCHANGED: N, CONTENT_CHANGED: N, METADATA_CHANGED: N, NEW_ITEM: N }",
+              "inherited_items_count (CertifiedDelta auto-inherited)",
+              "pipeline_runtime_seconds",
+              "gate_summary: per-gate pass/fail counts"
+            ]
+          },
+          {
+            "section": "per_item_verdicts",
+            "description": "One entry per item that passed Gate -1 identity validation.",
+            "fields_per_item": [
+              "QuestionID",
+              "compound_key",
+              "readiness_classification",
+              "readiness_score",
+              "delta_status",
+              "per_gate_verdict: { Gate_-1: verdict, Gate_0: verdict, Gate_1: { PG-001, PG-009, PG-005, PG-004 }, Gate_2: { PG-003, PG-008, PG-002 }, Gate_3: verdict, Gate_4: { PG-006, PG-007 } }",
+              "violations: [ { scan_id, defect_class, field_name, violation_text_snippet, severity } ]",
+              "warn_annotations: [ { scan_id, description } ]",
+              "content_hash",
+              "metadata_hash",
+              "ledger_hash (if prior certification exists, else null)"
+            ]
+          },
+          {
+            "section": "violation_summary",
+            "description": "Aggregated violation counts by defect class.",
+            "fields": [
+              "per_defect_class: { DL-008_count, DL-026_count, DL-025_count, DL-016_count, DL-013_count, DL-010_suspected_count, DL-030_suspected_count, DL-031_suspected_count, EV3_missing_count, EV8_violation_count }",
+              "per_defect_class_qid_lists: { DL-008: [QIDs], DL-026: [QIDs], ... }",
+              "per_severity_summary: { CRITICAL: N, HIGH: N, MEDIUM: N, LOW: N }",
+              "certified_pool_impact: { certified_items_flagged: N, certified_items_blocked: N }"
+            ]
+          },
+          {
+            "section": "delta_comparison",
+            "description": "Delta review results — which items changed since last certification and need re-review.",
+            "fields": [
+              "unchanged_items: [ { QID, content_hash, prior_board_session, inherited_status } ]",
+              "content_changed_items: [ { QID, prior_hash, current_hash, changed_fields: [field_names] } ]",
+              "metadata_changed_items: [ { QID, prior_metadata_hash, current_metadata_hash } ]",
+              "new_items: [ { QID, delta_status: 'NEW_ITEM' } ]",
+              "inheritance_applied_count (IR-001 hash-match auto-inherit)"
+            ]
+          },
+          {
+            "section": "board_recommendations",
+            "description": "Session Arbiter recommendations based on pre-flight results.",
+            "fields": [
+              "suggested_board_agent_allocation: { board_member_a_items: N, board_member_b_items: N, estimated_board_duration_minutes: N }",
+              "remediate_before_board_items: [ QIDs that should be remediated before board review — REMEDIATE classification ]",
+              "deferred_sections: [ section_ids where READY count is too low for efficient board review — recommend deferring to next session ]",
+              "certified_delta_auto_inherit: [ QID count that auto-inherited ]",
+              "critical_flags: [ any CRITICAL severity violations requiring immediate attention ]"
+            ]
+          },
+          {
+            "section": "governance_attestation",
+            "description": "Pre-flight Scanner governance attestation — signed confirmation of scan methodology and results.",
+            "fields": [
+              "scan_methodology: 'Within-object Function constructor parse — all scans use AM-1 authoritative parser'",
+              "scan_methodology_version: 'AM-1 (string-aware brace-matched, DL-020 fix applied)'",
+              "identity_validation_status: 'All items IDENTITY_VALID verified — 0 IDENTITY_BLOCKED items carried forward'",
+              "governance_guard_pre_check: { rule_2_pass: bool, rule_5_pass: bool, rule_6_pass: bool, rule_7_pass: bool }",
+              "pre_flight_scanner_signature: agent_id + timestamp",
+              "independent_verification_note: 'Pre-Flight Report cross-checked against raw file evidence per AGENTS.md §5'"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+
+  "pipeline_execution_summary": {
+    "total_gates": 7,
+    "total_scans": 11,
+    "scan_id_mapping": {
+      "PG-011": { "gate": "Gate_-1", "defect": "IDENTITY", "severity": "CRITICAL", "blocking": "HARD_BLOCK" },
+      "PG-010": { "gate": "Gate_0", "defect": "JSON_Integrity", "severity": "CRITICAL", "blocking": "HARD_BLOCK" },
+      "PG-001": { "gate": "Gate_1", "defect": "DL-008", "severity": "HIGH", "blocking": "HARD_BLOCK" },
+      "PG-009": { "gate": "Gate_1", "defect": "EV8", "severity": "HIGH", "blocking": "HARD_BLOCK" },
+      "PG-005": { "gate": "Gate_1", "defect": "DL-026", "severity": "HIGH", "blocking": "HARD_BLOCK" },
+      "PG-004": { "gate": "Gate_1", "defect": "DL-016", "severity": "HIGH", "blocking": "HARD_BLOCK" },
+      "PG-003": { "gate": "Gate_2", "defect": "DL-013", "severity": "HIGH", "blocking": "SOFT_BLOCK" },
+      "PG-008": { "gate": "Gate_2", "defect": "EV3", "severity": "MEDIUM", "blocking": "WARN" },
+      "PG-002": { "gate": "Gate_2", "defect": "DL-010", "severity": "HIGH", "blocking": "WARN" },
+      "PG-006": { "gate": "Gate_4", "defect": "DL-030", "severity": "CRITICAL", "blocking": "SOFT_BLOCK" },
+      "PG-007": { "gate": "Gate_4", "defect": "DL-031", "severity": "HIGH", "blocking": "WARN" }
+    },
+    "total_runtime_per_pack_seconds": 104,
+    "total_runtime_all_5_packs_serial_seconds": 520,
+    "total_runtime_all_5_packs_minutes": 8.67,
+    "parallelizable_reduction": "Gates -1, 1, and 2 can be parallelized across packs. Gate 3 requires cross-pack loading. Gate 4 AI Tier 2 is the dominant bottleneck. With 3 parallel workers, estimated total pipeline time ≈ 60-90 seconds for all 5 packs.",
+    "pipeline_critical_path": "Gate -1 (5s) → Gate 0 (5s) → Gate 1 (10s) → Gate 2 (12s) → Gate 3 (20s) → Gate 4 (50s) → Gate 5 (2s) = ~104s sequential per pack. Gate 4 dominates due to AI-assisted conceptual CC verification.",
+    "pipeline_triggers": {
+      "session_startup": "Run on Session Arbiter's target items before board scheduling. Part of T0 checkpoint per AGENTS.md §13.1.",
+      "post_remediation": "Re-run on items after EditorialQueue remediation before board entry.",
+      "governance_standard_bump": "Re-run on all Certified items when CAQS or governance guard rules change (IR-004 trigger)."
+    }
+  },
+
+  "governance_integration": {
+    "governance_guard_rule_extensions": [
+      {
+        "rule": "RULE 6",
+        "level": "HARD_BLOCK",
+        "description": "Pre-Flight Gate Passage Required. No item may transition to 'In Audit' or 'Certified' state without a current (same-session) pre-flight gate PASS report for its parent pack. The gate report timestamp must be within the current session window.",
+        "enforcement": "governance-guard.js: add RULE 6 check to any write that modifies question_state field."
+      },
+      {
+        "rule": "RULE 7",
+        "level": "HARD_BLOCK",
+        "description": "ExplanationWrong Distractor Completeness. All non-CorrectChoice ExplanationWrong slots must be present and non-empty (minimum 50 characters). Extends Rule 2 (DL-008 CC-slot check) to cover DL-026, DL-021, and DL-025.",
+        "enforcement": "governance-guard.js: add RULE 7 check alongside existing RULE 2 check. Rename findDL008Violations → findExplanationWrongViolations."
+      },
+      {
+        "rule": "RULE 8",
+        "level": "WARN",
+        "description": "Template Boilerplate Prohibition. No ExplanationWrong field may contain boilerplate patterns ('represents a plausible misconception', 'does not align with the correct accounting treatment', 'A candidate selecting this option may misunderstand').",
+        "enforcement": "governance-guard.js: add RULE 8 pattern check to edit/write handlers."
+      }
+    ]
+  },
+
+  "readiness_failure_reduction_estimate": {
+    "baseline": "89.5% readiness failure rate (S200: 34 of 38 Domain E seeds had 2+ concurrent defects at certification boards)",
+    "projected_post_gate": "12-15% readiness failure rate",
+    "projection_methodology": "Compound defect exhaustion model: starting mean defect count 3.5 per item, cumulative catch rate ~80% across 5 gates, post-gate mean ~0.70 defects per item, P(2+ defects) ≈ 15.5%.",
+    "reduction": "89.5% → 13.5% = ~6.6× reduction in defective items reaching certification boards",
+    "uncatchable_residual": [
+      "DL-010 semantic misassignment — no fully automated detection method (requires NLP/human review)",
+      "Novel/unclassified defect classes not matching known patterns",
+      "Scan methodology edge cases (per-pack field ordering variations)",
+      "Concurrent-write overwrites (DL-019) — gate is snapshot-time check, cannot prevent post-gate overwrites",
+      "New template boilerplate variants that escape PG-003 regex",
+      "S202 Amendment 1 mitigation: identity-confusion defects (DL-016 +1 shift, DL-029 CC-offset) now caught by Gate -1 — previously uncatchable, now HARD_BLOCKED"
+    ]
+  },
+
+  "implementation_roadmap": {
+    "phase_1_critical": {
+      "timeline": "S202-S205",
+      "description": "Implement Gate -1 (Identity Validation) + Gates 0 (JSON Integrity) and 1 (Structural Scan). Highest-impact, lowest-complexity gates that stop learner-safety defects at the certification boundary.",
+      "tasks": [
+        "S202: Implement within-object extraction in all scan scripts (replace regex/forward-scan)",
+        "S202: Implement Gate -1 Identity Validation (PG-011): QID, CC, pack attribution, TemplateFamily",
+        "S203: Implement Gate 0 JSON Integrity validator with all 5 steps",
+        "S204: Implement Gate 1 DL-008 + DL-026 + DL-016 structural scans (IDENTITY_VALID items only)",
+        "S205: Add governance-guard RULE 6 (Pre-Flight Gate Passage) and RULE 7 (Distractor Completeness)"
+      ]
+    },
+    "phase_2_high": {
+      "timeline": "S206-S209",
+      "description": "Implement Gates 2 (Content Scan) and 3 (Identity Reconciliation).",
+      "tasks": [
+        "S206: Implement DL-013 boilerplate detection + EV3 principle citation check",
+        "S207: Build template family map for all 2,500 items (stem clustering)",
+        "S208: Implement Gate 3 compound key identity registry",
+        "S209: Add governance-guard RULE 8 (Template Boilerplate Prohibition)"
+      ]
+    },
+    "phase_3_medium": {
+      "timeline": "S210-S213",
+      "description": "Implement Gate 4 (Calculation Validation) — most complex gate, requiring AI-assisted verification.",
+      "tasks": [
+        "S210: Implement DL-031 Jaccard-based difficulty inflation detection",
+        "S211: Implement DL-030 Tier 3 (EC-CC consistency check — catches 3 of 5 known errors)",
+        "S212: Implement DL-030 Tier 1 (numeric formula verification with FORMULA_MASTER.md)",
+        "S213: Implement DL-030 Tier 2 (build-time AI conceptual CC verification)"
+      ]
+    },
+    "phase_4_continuous": {
+      "timeline": "S214+",
+      "description": "Continuous improvement: pattern updates, difficulty calibration extension, count reconciliation automation, session-level file-lock protocol.",
+      "tasks": [
+        "Regular pattern-update cycle for new boilerplate variants and detection heuristics",
+        "Difficulty calibration validator extension (DL-032 for case banks)",
+        "Pre-gate + post-gate count reconciliation automation (AGENTS.md §6 enforcement)",
+        "Session-level file-lock protocol implementation (prevents DL-019 concurrent-write overwrites)"
+      ]
+    }
+  },
+
+  "cross_references": {
+    "governing_documents": [
+      "CAQS_v1.0.md §1.6 (Build-Time AI Verification Standard)",
+      "CAQS_v1.0.md §1.7 (Certification Standard)",
+      "CAQS_v1.0.md §4.4 (Explanation Validation Rules EV1-EV8)",
+      "QUESTION_METADATA_STANDARD.md §9 (Governance State Fields)",
+      "QUESTION_METADATA_STANDARD.md §9.4 (Certification-Blocking Conditions G-NEW-1 through G-NEW-5)",
+      "AGENTS.md §5 (Dual Verification — cross-check all self-reported claims)",
+      "AGENTS.md §6 (Item-Count Volatility — hard stop if counts unstable)",
+      "AGENTS.md §13 (Runtime Governance — T0→Tmid→Tend checkpoints)"
+    ],
+    "defect_library_entries": [
+      "DL-008 (EW[CC] non-empty — PG-001/PG-009 detection)",
+      "DL-010 (Misassigned EW — PG-002 detection)",
+      "DL-013 (Boilerplate EW — PG-003 detection)",
+      "DL-016 (Metadata-content divergence — PG-004 detection)",
+      "DL-026 (Empty non-CC EW slots — PG-005 detection)",
+      "DL-030 (CC answer-key errors — PG-006 detection)",
+      "DL-031 (Difficulty inflation — PG-007 detection)",
+      "DL-017 (JSON corruption — PG-010 detection)",
+      "DL-029 (Scan false positives — Gate -1 prevents via within-object extraction)"
+    ],
+    "companion_documents": [
+      "SESSION202_DELTA_REVIEW_ENGINEERING.json — Delta review architecture (content hashing, change classification, inheritance rules)",
+      "SESSION201_PREFLIGHT_GATE_MODEL.json — Detailed scan specifications (PG-001 through PG-011)",
+      "SESSION201_IDENTITY_ARCHITECTURE.json — Compound key model and template family identification",
+      "SESSION201_READINESS_LEAKAGE.json — Leakage analysis (43 events, 91.5% preventable)",
+      "SESSION200_TARGET_ARCHITECTURE.json — Framework v2 state machine and board structure"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "generated": "2026-07-26T21:49:14.760Z",
+  "session": "S305",
+  "totalCases": 120,
+  "totalExhibits": 117,
+  "totalItems": 625,
+  "byFile": {
+    "scored_cases.js": 28,
+    "scored_cases2.js": 18,
+    "scored_cases3.js": 23,
+    "scored_cases4.js": 24,
+    "scored_cases5.js": 24
+  },
+  "byType": {
+    "table": 99,
+    "text": 18
+  },
+  "byDomain": {
+    "A - External Financial Reporting": 15,
+    "B - Planning, Budgeting & Forecasting": 20,
+    "C - Performance Management": 19,
+    "D - Cost Management": 24,
+    "E - Internal Controls": 20,
+    "F - Technology & Analytics": 19,
+    "Unknown": 0
+  },
+  "withReferencedBy": 41
+}

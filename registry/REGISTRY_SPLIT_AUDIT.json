@@ -1,0 +1,98 @@
+{
+  "title": "REGISTRY_SPLIT_AUDIT",
+  "session": "S314",
+  "agent": "AA",
+  "generated": "2026-07-27",
+  "sourceFile": "knowledge/MASTER_QUESTION_REGISTRY.md",
+  "sourceCount": 2884,
+  "outputFiles": [
+    {
+      "path": "registry/packs/pack_a_corrected_registry.md",
+      "items": 500
+    },
+    {
+      "path": "registry/packs/pack_b_corrected_registry.md",
+      "items": 500
+    },
+    {
+      "path": "registry/packs/pack_c_corrected_registry.md",
+      "items": 500
+    },
+    {
+      "path": "registry/packs/pack_d_corrected_registry.md",
+      "items": 500
+    },
+    {
+      "path": "registry/packs/pack_e_corrected_registry.md",
+      "items": 510
+    },
+    {
+      "path": "registry/cases/scored_cases_registry.md",
+      "items": 84
+    },
+    {
+      "path": "registry/cases/scored_cases2_registry.md",
+      "items": 73
+    },
+    {
+      "path": "registry/cases/scored_cases3_registry.md",
+      "items": 74
+    },
+    {
+      "path": "registry/cases/scored_cases4_registry.md",
+      "items": 73
+    },
+    {
+      "path": "registry/cases/scored_cases5_registry.md",
+      "items": 70
+    },
+    {
+      "path": "registry/domains/domain_a_registry.md",
+      "items": 75
+    },
+    {
+      "path": "registry/domains/domain_b_registry.md",
+      "items": 600
+    },
+    {
+      "path": "registry/domains/domain_c_registry.md",
+      "items": 318
+    },
+    {
+      "path": "registry/domains/domain_d_registry.md",
+      "items": 75
+    },
+    {
+      "path": "registry/domains/domain_e_registry.md",
+      "items": 410
+    },
+    {
+      "path": "registry/domains/domain_f_registry.md",
+      "items": 206
+    },
+    {
+      "path": "registry/domains/domain_u_registry.md",
+      "items": 1200
+    },
+    {
+      "path": "registry/QUESTION_REGISTRY_INDEX.md",
+      "items": 2884,
+      "note": "Master index with search keys"
+    },
+    {
+      "path": "registry/QUESTION_SIMILARITY_LEDGER.json",
+      "items": 20,
+      "note": "Similarity tracking ledger"
+    },
+    {
+      "path": "registry/DUPLICATE_PREVENTION_REPORT.json",
+      "items": 1,
+      "note": "Pre-authoring gate report"
+    }
+  ],
+  "governance": {
+    "gate0": "DUPLICATE_PREVENTION_PASS required before any new item enters Draft status",
+    "rule3": "Registry is generated — MASTER_QUESTION_REGISTRY.md updated by script only",
+    "mandatoryAgent": "Agent AA runs at T0 of every 800-Series authoring session"
+  }
+}

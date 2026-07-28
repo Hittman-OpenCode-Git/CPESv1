@@ -1,0 +1,172 @@
+{
+  "session": "S215",
+  "title": "Technical Debt Closure Review",
+  "date": "2026-07-27",
+  "orchestrator": "stewardship-orchestrator",
+  "status": "HALTED",
+  "stop_condition": "Governance Guard != PASS + Principle violation + Broken traceability",
+  "stop_conditions_fired": [
+    {
+      "condition": "Broken traceability",
+      "detected_in": "Governance validator: Stop Condition Compliance rated FAIL — 4 of 6 stop conditions unmet",
+      "severity": "HIGH"
+    },
+    {
+      "condition": "Governance Guard != PASS",
+      "detected_in": "Governance validator: Rules 1 and 4 are WARN-only (not BLOCK), Rule 1 untested in test suite",
+      "severity": "MEDIUM"
+    },
+    {
+      "condition": "Principle violation",
+      "detected_in": "Governance validator: question_state changes can proceed without REVISION_HISTORY entry (Rule 1 WARN only)",
+      "severity": "MEDIUM"
+    }
+  ],
+  "technical_debt_items": {
+    "source": "stewardship-inspector (cross-referenced with DEFECT_LIBRARY.md)",
+    "items": [
+      {
+        "td_item": "DL-008",
+        "description": "Non-empty ExplanationWrong[CorrectChoice] — learner-safety structural defect",
+        "status": "RESOLVED (with residue)",
+        "certified_affected": 0,
+        "open_items": 3,
+        "all_archived": true,
+        "learner_safety_impact": "NONE",
+        "notes": "DEFECT_MANIFEST_DL008_DL026.json confirms 0 Certified. 3 Archived items remain."
+      },
+      {
+        "td_item": "DL-026",
+        "description": "Empty non-CorrectChoice ExplanationWrong slots — distractor feedback gap",
+        "status": "PARTIALLY RESOLVED",
+        "certified_affected": 0,
+        "open_items": 261,
+        "all_archived_or_unprocessed": true,
+        "learner_safety_impact": "NONE",
+        "notes": "261 items (222 Archived + 39 Unprocessed). 0 Certified. Learner pool clean."
+      },
+      {
+        "td_item": "DL-016",
+        "description": "Metadata-block topic-numbering shift — ExplanationWrong describes wrong item's choices",
+        "status": "OPEN",
+        "certified_affected": 58,
+        "learner_safety_impact": "HIGH",
+        "notes": "58 Certified Pack A items. Learner sees distractor explanations about different topic."
+      },
+      {
+        "td_item": "DL-021",
+        "description": "Missing distractor ExplanationWrong fields — Pack E Section C",
+        "status": "RESOLVED",
+        "certified_affected": 0,
+        "learner_safety_impact": "NONE",
+        "notes": "S71/S828 confirmed 0 remaining. All 100 Section C items Certified with full EW fields."
+      },
+      {
+        "td_item": "DL-031",
+        "description": "Definition-match difficulty inflation — ~500 items labeled Moderate that are Easy",
+        "status": "OPEN",
+        "certified_affected": "~200 (estimated)",
+        "learner_safety_impact": "LOW",
+        "notes": "Systematic over-labeling. No correctness risk. Affects adaptive testing quality."
+      },
+      {
+        "td_item": "DL-032",
+        "description": "Case bank uniform difficulty — all 420 case items labeled Moderate",
+        "status": "OPEN",
+        "certified_affected": "~0 (case bank not certified)",
+        "learner_safety_impact": "NONE",
+        "notes": "Template-based labeling without cognitive calibration."
+      },
+      {
+        "td_item": "DL-035",
+        "description": "Governance guard DL-026 coverage gap — 39 Certified Domain F items with empty EW slots",
+        "status": "OPEN",
+        "certified_affected": 39,
+        "learner_safety_impact": "MEDIUM",
+        "notes": "Rule 6 deployed (S814) blocks new certifications. Content remediation pending S816-S818."
+      },
+      {
+        "td_item": "DL-036",
+        "description": "Pipeline artifact reuse gap — 40-item readiness routing divergence",
+        "status": "OPEN",
+        "certified_affected": 0,
+        "learner_safety_impact": "NONE",
+        "notes": "40 R-series items correctly Certified. Divergence is tool-level, not content-level."
+      }
+    ],
+    "summary": {
+      "total_items": 8,
+      "resolved": 2,
+      "partially_resolved": 1,
+      "open": 5,
+      "highest_learner_safety_risk": "HIGH (DL-016: 58 Certified items)"
+    }
+  },
+  "governance_validator_assessment": {
+    "source": "governance-validator",
+    "dimensions": [
+      {
+        "dimension": "MITIGATION EFFECTIVENESS",
+        "verdict": "CONCERN",
+        "evidence": [
+          "Governance guard 6 rules active, 32/32 tests PASS — core enforcement is solid",
+          "DEFECT_MANIFEST confirms 0 Certified DL-008 and 0 Certified DL-026",
+          "Rules 1 and 4 are WARN-only — not stops",
+          "Rule 6 not documented in CURRENT_BASELINES.md §4",
+          "BACKUP_PROTOCOL references missing scripts/safe_rebuild.js",
+          "No BLOCK-level rules for DL-016 or DL-021",
+          "SESSION_STATUS_2026-07-24.md stale but still referenced by AGENTS.md §9"
+        ]
+      },
+      {
+        "dimension": "SCALABILITY",
+        "verdict": "CONCERN",
+        "evidence": [
+          "Per-write guard parsing scales independently of total pool size",
+          "30-item batch cap adds session overhead at scale (~4x for bulk remediation)",
+          "admin_dashboard_data.js at 1,260KB — would reach ~2.5MB for 5,000+ QIDs",
+          "SOURCE_FILE_RE hardcoded to Part 1 naming only — Part 2 files would bypass all 6 rules",
+          "CURRENT_BASELINES covers Part 1 only — no Part 2 baseline schema",
+          "No documented Part 2 expansion checklist or scaling plan"
+        ]
+      },
+      {
+        "dimension": "SUSTAINABILITY",
+        "verdict": "CONCERN",
+        "evidence": [
+          "Governance guard (284 lines) is sole runtime enforcement — single point of failure",
+          "AGENTS.md 13 sections with no condensed quick-reference",
+          "REVISION_HISTORY.md: 23,364 lines with no TOC",
+          "DEFECT_LIBRARY.md: entries with nested multi-page CORRECTION blocks",
+          "BACKUP_PROTOCOL documented but NOT ENFORCED",
+          "REVISION_HISTORY entry creation is unenforced (Rule 1 WARN only)",
+          "scripts/safe_rebuild.js referenced but MISSING"
+        ]
+      },
+      {
+        "dimension": "OPERATIONAL RESILIENCE",
+        "verdict": "CONCERN",
+        "evidence": [
+          "DL-019 concurrent-write vulnerability UNRESOLVED — no file-lock mechanism",
+          "Bash-based file modifications bypass governance guard entirely",
+          "Admin platform adds 11 new files — zero baseline entries",
+          "SESSION_STATUS_2026-07-24.md stale but referenced as startup protocol",
+          "What breaks first under concurrent load: (1) concurrent pack writes → corruption, (2) stale docs → incorrect threat assessment, (3) bash bypasses → unguarded modifications"
+        ]
+      },
+      {
+        "dimension": "STOP CONDITION COMPLIANCE",
+        "verdict": "FAIL",
+        "evidence": [
+          "1. PRINCIPLE VIOLATION DETECTION: PARTIAL — Rules 1 and 4 WARN only, not BLOCK",
+          "2. REGISTRY AUTHORITY CONFLICT DETECTION: FAIL — No detection mechanism exists",
+          "3. BROKEN TRACEABILITY DETECTION: FAIL — No detection mechanism exists",
+          "4. DUPLICATE REGISTRY CREATION DETECTION: FAIL — No detection mechanism exists",
+          "5. GOVERNANCE GUARD != PASS DETECTION: CONDITIONAL PASS — 32/32 tests, but Rule 1 untested",
+          "6. IDENTITY < 99% DETECTION: FAIL — No identity validation rule exists",
+          "Summary: 1 of 6 conditions fully met, 1 partially met, 4 fully unmet"
+        ]
+      }
+    ]
+  }
+}

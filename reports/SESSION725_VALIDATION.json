@@ -1,0 +1,61 @@
+{
+  "session": "725",
+  "agent": "W",
+  "timestamp": "2026-07-26T00:00:00Z",
+  "pre_flight": {
+    "governance_guard": "20/20 PASS",
+    "certified_count": 2181,
+    "pack_a_qids": 500,
+    "pack_b_qids": 500,
+    "pack_c_qids": 500,
+    "pack_d_qids": 500,
+    "pack_e_qids": 500,
+    "case_bank_itemids": 625
+  },
+  "post_flight": {
+    "governance_guard": "20/20 PASS",
+    "certified_count": 2181,
+    "pack_a_qids": 500,
+    "pack_b_qids": 500,
+    "pack_c_qids": 500,
+    "pack_d_qids": 500,
+    "pack_e_qids": 500,
+    "pack_count_stable": true
+  },
+  "drift_detected": false,
+  "deliverables_check": {
+    "required_count": 10,
+    "created_count": 8,
+    "found": [
+      "SESSION725_GOVERNANCE_DETECTION_STANDARD.md",
+      "SESSION725_PHANTOM_REFERENCE_REMEDIATION_LEDGER.json",
+      "SESSION725_OWNERSHIP_MATRIX.json",
+      "SESSION725_POST700_GOVERNANCE_MODEL.md",
+      "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json",
+      "SESSION725_SCAN_METHODOLOGY_STANDARD.md",
+      "SESSION725_FALSE_POSITIVE_REGRESSION_AUDIT.json",
+      "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md"
+    ],
+    "missing": [
+      "SESSION725_DASHBOARD.json",
+      "SESSION725_SESSION_SUMMARY.md (pending — Agent X per charter)"
+    ]
+  },
+  "document_count": {
+    "total_s725_files": 15,
+    "json_files": 11,
+    "md_files": 4,
+    "all_json_nonzero": true,
+    "all_md_nonzero": true
+  },
+  "additional_files": [
+    "SESSION725_HISTORICAL_GOVERNANCE_RCA.json",
+    "SESSION725_GOVERNANCE_TOOLING_REVIEW.json",
+    "SESSION725_GOVERNANCE_DEBT_CLASSIFICATION.json",
+    "SESSION725_CERTIFICATION_PROTECTION_AUDIT.json",
+    "SESSION725_MAINTENANCE_VALIDATION.json",
+    "SESSION725_KB_UPDATE_PLAN.json",
+    "SESSION725_SERIES_BOUNDARY_AUDIT.json"
+  ],
+  "verdict": "VALIDATED — no drift. 2 of 10 required deliverables not yet present (DASHBOARD.json, SESSION_SUMMARY.md). All pack files stable at 500 QIDs each. Certified count stable at 2181. Governance guard 20/20 PASS. All 15 SESSION725 files have non-zero size."
+}

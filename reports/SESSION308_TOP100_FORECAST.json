@@ -1,0 +1,45 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "top100Profile": {
+    "p0Count": 38,
+    "p1Count": 62,
+    "avgUiqs": "34.7",
+    "domainSpread": {
+      "?": 1,
+      "D": 6,
+      "A": 4,
+      "E": 54,
+      "C": 5,
+      "F": 30
+    },
+    "typeSpread": {
+      "MCQ": 76,
+      "Case": 24
+    },
+    "sourceSpread": {
+      "Pack D": 36,
+      "Case Bank 1": 24,
+      "Pack C": 40
+    }
+  },
+  "remediationForecast": {
+    "byPhase": {
+      "phase2_EF_cert": {
+        "items": "~37 P0 in E/F uncertified blocks",
+        "sessions": "Covered in Wave 3",
+        "method": "Certification inherently addresses"
+      },
+      "phase4_caseEW": {
+        "items": "~9 P0 in case-bank",
+        "sessions": "Covered in EW Phase 1",
+        "method": "EW authoring"
+      },
+      "phase5_modernization": {
+        "items": "Remaining ~54 (P1)",
+        "sessions": "Distributed across Waves 2-5",
+        "method": "EW authoring + EC enrichment"
+      }
+    },
+    "portfolioImpact": "Resolving Top 100 alone (46 P0 + 54 P1) = UIQS +4.2 portfolio-wide. Combined with bulk certification = +13.7."
+  }
+}

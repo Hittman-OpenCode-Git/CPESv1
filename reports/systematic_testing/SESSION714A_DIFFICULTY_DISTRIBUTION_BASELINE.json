@@ -1,0 +1,61 @@
+{
+  "total_easy": 823,
+  "bySection": {
+    "A": 137,
+    "B": 109,
+    "C": 136,
+    "D": 105,
+    "E": 113,
+    "F": 146
+  },
+  "byBloom": {
+    "Not set": 706,
+    "Understand": 23,
+    "Analyze": 2,
+    "Apply": 14,
+    "Remember": 1
+  },
+  "byItemType": {
+    "MCQ": 746
+  },
+  "byCalculationItem": {
+    "non-calc": 674,
+    "calc": 72
+  },
+  "byPackSection": {
+    "A-A": 65,
+    "A-B": 36,
+    "A-C": 38,
+    "A-D": 27,
+    "A-E": 55,
+    "A-F": 75,
+    "B-A": 22,
+    "B-B": 14,
+    "B-C": 40,
+    "B-D": 28,
+    "B-E": 40,
+    "B-F": 46,
+    "C-A": 24,
+    "C-B": 24,
+    "C-C": 19,
+    "C-D": 16,
+    "D-A": 19,
+    "D-B": 20,
+    "D-C": 17,
+    "D-D": 21,
+    "E-A": 7,
+    "E-B": 15,
+    "E-C": 22,
+    "E-D": 13,
+    "E-E": 18,
+    "E-F": 25
+  },
+  "topTopics": {
+    "B": 270,
+    "E": 155,
+    "A": 108,
+    "F": 75,
+    "C": 74,
+    "D": 64
+  }
+}

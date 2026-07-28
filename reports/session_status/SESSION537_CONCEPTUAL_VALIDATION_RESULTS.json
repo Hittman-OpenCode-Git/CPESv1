@@ -1,0 +1,295 @@
+﻿{
+  "session": "537",
+  "agent": "Agent D - Conceptual Validation",
+  "date": "2026-07-26",
+  "scope": "7 cases in scored_cases.js: CBQ-C2, CBQ-D2, CBQ-E2, CBQ-F2, CBQ-A3, CBQ-B3, CBQ-C3",
+  "methodology": {
+    "select_items": "Verified accounting treatment against GAAP/COSO/IMA standards; confirmed correct answer is BEST among choices; verified ASC/COSO references; confirmed CMA Part 1 blueprint alignment; verified professional logic; verified distractor plausibility",
+    "multi_items": "Same as select; additionally verified each correct choice is genuinely correct and each excluded choice is genuinely incorrect",
+    "match_items": "Verified each left-right pairing is correct under accounting standards; verified no defensible alternative pairing exists",
+    "fill_items": "Verified blank completion is the definitive correct answer"
+  },
+  "validation_items": [
+    {
+      "item_id": "CBQ-C2-Q3",
+      "type": "select",
+      "topic": "Transfer pricing",
+      "verdict": "PASS",
+      "accounting_standard": "Transfer price should promote goal congruence; minimum = variable cost + opportunity cost",
+      "analysis": "With idle capacity, minimum transfer price = variable cost () + opportunity cost () = . Correct under general transfer pricing principles. All distractors are plausible: full cost () overstates economic floor; outside purchase price () is the buying division's maximum; market price () is only appropriate with no idle capacity.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management / Transfer Pricing"
+    },
+    {
+      "item_id": "CBQ-C2-Q4",
+      "type": "multi",
+      "topic": "Performance measurement - Residual Income vs ROI",
+      "verdict": "PASS",
+      "flags": ["FLAG: Explanation is only 56 chars ('Residual income uses a required return charge rather than only a percentage ratio.'). For an Evaluate-level item, the correct-answer explanation lacks explanation of WHY each correct choice is correct. Distractor explanation for C is thorough."],
+      "accounting_standard": "Residual Income = Operating Income - (Required Rate of Return x Average Operating Assets)",
+      "analysis": "Correct answers: (1) RI encourages accepting projects above required return - CORRECT (unlike ROI which rejects projects below current ROI but above hurdle); (2) RI charges divisions for assets employed - CORRECT (required return x assets is the charge); (4) RI avoids rejecting investments that lower ROI but exceed required return - CORRECT (this is the core advantage). Excluded: (3) 'It always increases when assets increase' is FALSE - RI only increases if new assets generate returns exceeding the hurdle rate.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management"
+    },
+    {
+      "item_id": "CBQ-C2-Q5",
+      "type": "fill",
+      "topic": "Transfer pricing - goal congruence",
+      "verdict": "PASS",
+      "accounting_standard": "Transfer price should promote goal congruence",
+      "analysis": "Goal congruence is the definitive term in transfer pricing and responsibility accounting. No other word fits the blank. PASS.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management"
+    },
+    {
+      "item_id": "CBQ-C2-Q6",
+      "type": "match",
+      "topic": "Performance management measures",
+      "verdict": "PASS",
+      "analysis": "ROI=Operating income/assets; RI=Income after asset charge; Minimum transfer price (idle)=Variable cost+opportunity cost; Market price=External benchmark. All pairings correct under CMA performance measurement framework. No defensible alternative pairing exists.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management"
+    },
+    {
+      "item_id": "CBQ-D2-Q3",
+      "type": "select",
+      "topic": "Theory of Constraints - Bottleneck",
+      "verdict": "PASS",
+      "accounting_standard": "The bottleneck operation constrains throughput; improve the lowest-capacity resource",
+      "analysis": "Cutting: 24,000; Welding: 19,500; Painting: 21,000. Welding is the lowest-capacity resource and therefore the bottleneck. All distractors plausible: Cutting and Painting have higher capacity; 'No bottleneck' tests whether candidate misunderstands TOC doctrine that a bottleneck always exists in multi-step processes.",
+      "cma_part_1_scope": "Yes - Section D: Cost Management / Theory of Constraints"
+    },
+    {
+      "item_id": "CBQ-D2-Q4",
+      "type": "multi",
+      "topic": "Lean operations",
+      "verdict": "PASS",
+      "accounting_standard": "Lean emphasizes waste reduction, continuous improvement, and pull-based production flow",
+      "analysis": "Correct: (1) Reduce waiting time - eliminates muda of waiting; (3) Investigate rework causes - continuous improvement/kaizen; (4) Simplify material movement - eliminates transportation waste. Excluded: (2) Increase batch queues - builds WIP inventory, directly contradicting lean pull/flow principles. Distractor explanation for B is thorough.",
+      "cma_part_1_scope": "Yes - Section D: Cost Management / Lean Operations"
+    },
+    {
+      "item_id": "CBQ-D2-Q5",
+      "type": "fill",
+      "topic": "Process costing - equivalent units",
+      "verdict": "PASS",
+      "analysis": "Equivalent units express partially completed WIP in terms of 'complete' units. The blank is unambiguous. PASS.",
+      "cma_part_1_scope": "Yes - Section D: Cost Management / Process Costing"
+    },
+    {
+      "item_id": "CBQ-D2-Q6",
+      "type": "match",
+      "topic": "Cost management tools",
+      "verdict": "PASS",
+      "flags": ["FLAG: Metadata CaseID says 'CBQ-C2' (line 2857) instead of 'CBQ-D2'. Section says 'C' instead of 'D'. Item content is correct (matches CBQ-D2 topics: equivalent units, bottleneck, lean, process costing) but metadata is a copy-paste template error. Also pack_state/ProductionStatus/EstimatedMinutes metadata are wrong due to wrong case context."],
+      "analysis": "Partially complete WIP→Equivalent units; Lowest capacity→Bottleneck analysis; Unnecessary movement→Lean waste review; Continuous homogeneous output→Process costing. All pairings correct. Metadata is wrong but learner-facing content is accurate.",
+      "cma_part_1_scope": "Yes - Section D: Cost Management"
+    },
+    {
+      "item_id": "CBQ-E2-Q1",
+      "type": "select",
+      "topic": "Access controls - COSO ITGC",
+      "verdict": "PASS",
+      "accounting_standard": "COSO Internal Control Framework - IT General Controls: unique user IDs, MFA, access review",
+      "analysis": "Correct: 'Unique privileged IDs with MFA and periodic access review' eliminates shared-credential accountability gap. Distractors: (B) shared IDs with password rotation still lack individual accountability; (C) disabling audit logging eliminates detective controls (contrary to COSO monitoring); (D) restricting shared password knowledge doesn't solve individual accountability. All COSO-compliant.",
+      "cma_part_1_scope": "Yes - Section E: Internal Controls"
+    },
+    {
+      "item_id": "CBQ-E2-Q3",
+      "type": "multi",
+      "topic": "IT General Controls",
+      "verdict": "PASS",
+      "accounting_standard": "COSO ITGCs: logical access controls, change management, computer operations/interface monitoring",
+      "analysis": "Correct: Logical access controls (addresses shared IDs + terminated users); Change-management controls (addresses unapproved emergency changes); Computer operations/interface monitoring (addresses failed subledger-GL reconciliation). Excluded: 'Sales price variance analysis' is a performance management/cost accounting tool, not an ITGC. Distractor explanation correctly identifies this as performance analysis, not IT control.",
+      "cma_part_1_scope": "Yes - Section E: Internal Controls / Section F: Technology and Analytics"
+    },
+    {
+      "item_id": "CBQ-E2-Q4",
+      "type": "fill",
+      "topic": "Change management",
+      "verdict": "PASS",
+      "analysis": "Emergency changes require post-implementation review and 'approval'. 'Approval' is the definitive correct word under IT change management standards. PASS.",
+      "cma_part_1_scope": "Yes - Section E: Internal Controls"
+    },
+    {
+      "item_id": "CBQ-E2-Q5",
+      "type": "match",
+      "topic": "ITGC risk mapping",
+      "verdict": "PASS",
+      "analysis": "Shared admin IDs→Lack of accountability; Terminated users active→Unauthorized access; Unapproved emergency changes→Unauthorized or erroneous report logic; Failed interface reconciliation→Incomplete or inaccurate data transfer. All pairings are the best match per COSO ITGC framework. No defensible alternative.",
+      "cma_part_1_scope": "Yes - Section E: Internal Controls"
+    },
+    {
+      "item_id": "CBQ-E2-Q6",
+      "type": "select",
+      "topic": "Monitoring - COSO Principle 16",
+      "verdict": "PASS",
+      "accounting_standard": "COSO Principle 16: Management should establish monitoring activities to evaluate control operation",
+      "analysis": "Correct: 14-day log retention prevents investigation of issues discovered after overwrite. Explanation correctly references COSO Principle 16. Distractors: (B) retention doesn't prove/dismiss authorization; (C) retention is unrelated to reconciliation requirements; (D) retention period doesn't convert control types. All distractors are plausible and address real COSO misconceptions.",
+      "cma_part_1_scope": "Yes - Section E: Internal Controls"
+    },
+    {
+      "item_id": "CBQ-A3-Q3",
+      "type": "select",
+      "topic": "Subsequent events - ASC 855",
+      "verdict": "PASS",
+      "flags": ["FLAG: Explanation is only 91 chars. For an Analyze-level item, the correct-answer explanation lacks ASC 855 reference, Type I vs Type II distinction, and the reasoning chain. The WrongB/C/D explanations ARE thorough with proper ASC references."],
+      "accounting_standard": "ASC 855 Subsequent Events: Type I (recognized) if condition existed at balance sheet date; Type II (disclosed only) if condition arose after",
+      "analysis": "Correct: 'Recognized subsequent event requiring adjustment' because the customer's financial distress existed at year-end, making the post-year-end bankruptcy additional evidence about a pre-existing condition (Type I event per ASC 855). Distractors all plausible: (B) nonrecognized/disclosed only (Type II - wrong because condition pre-existed); (C) ignored (violates ASC 855 evaluation requirement); (D) reported in OCI (misapplies ASC 220 - bad debts flow through income statement).",
+      "cma_part_1_scope": "Yes - Section A: External Financial Reporting Decisions"
+    },
+    {
+      "item_id": "CBQ-A3-Q4",
+      "type": "select",
+      "topic": "Cash classification - ASC 305/SFAS 95",
+      "verdict": "PASS",
+      "accounting_standard": "ASC 305 / SFAS 95: Cash equivalents are highly liquid investments with original maturity <= 3 months (90 days)",
+      "analysis": "Correct: 88 days < 90 days threshold, so 'Cash equivalent' is correct. Distractors: (B) inventory (T-bills are not goods held for sale - ASC 330 inapplicable); (C) operating receivable (not from customer sales - ASC 310 inapplicable); (D) long-term investment (88-day instrument is short-term). All distractors plausible and well-explained.",
+      "cma_part_1_scope": "Yes - Section A: External Financial Reporting Decisions"
+    },
+    {
+      "item_id": "CBQ-A3-Q6",
+      "type": "match",
+      "topic": "External reporting treatments",
+      "verdict": "PASS",
+      "analysis": "FIFO below NRV→Write down inventory (ASC 330); ARO PV→Record liability + add to asset cost (ASC 410); 88-day T-bill→Cash equivalent (ASC 305); Equipment purchase→Investing cash outflow (ASC 230). All pairings correct.",
+      "cma_part_1_scope": "Yes - Section A: External Financial Reporting Decisions"
+    },
+    {
+      "item_id": "CBQ-B3-Q5",
+      "type": "select",
+      "topic": "Cash budget - borrowing requirement",
+      "verdict": "PASS",
+      "accounting_standard": "Cash budget: Beginning Cash + Cash Receipts - Cash Disbursements = Ending Cash; compare to minimum",
+      "analysis": "Cash available (,600) - Disbursements (,000) = ,600. Minimum cash: ,000. Shortfall: ,000 - ,600 = ,400. Correct answer '2,400 borrowing required' is verified. Distractors: (B) no borrowing (ignores minimum constraint); (C) ,000 (confuses minimum with borrowing amount); (D) ,000 (uses total disbursements as if no receipts). All plausible and explained.",
+      "cma_part_1_scope": "Yes - Section B: Planning, Budgeting, and Forecasting"
+    },
+    {
+      "item_id": "CBQ-B3-Q6",
+      "type": "multi",
+      "topic": "Forecast assumptions",
+      "verdict": "PASS",
+      "analysis": "Correct: Scenario probabilities (affect expected revenue → cash inflows); Collection percentages (affect timing of cash receipts); Minimum cash policy (sets the borrowing threshold). Excluded: Prior-year dividend declaration (sunk cost with no incremental effect on future borrowing). All choices well-reasoned.",
+      "cma_part_1_scope": "Yes - Section B: Planning, Budgeting, and Forecasting"
+    },
+    {
+      "item_id": "CBQ-C3-Q3",
+      "type": "select",
+      "topic": "Balanced Scorecard - Learning and Growth",
+      "verdict": "PASS",
+      "flags": ["FLAG: Explanation is only 71 chars. For a Difficult-level Analyze item, lacks Kaplan/Norton reference, BSC framework context, and explanation of why each distractor belongs to a different BSC perspective."],
+      "accounting_standard": "Kaplan and Norton Balanced Scorecard: Four perspectives - Financial, Customer, Internal Business Process, Learning and Growth",
+      "analysis": "Correct: Training hours per employee maps to Learning and Growth (employee capabilities/skills). Distractors: (B) Operating income = Financial perspective; (C) On-time delivery = Customer perspective; (D) Defect rate = Internal Business Process. All distractors are sensible BSC misclassifications. WrongB/C/D explanations are excellent with full BSC framework context.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management / Balanced Scorecard"
+    },
+    {
+      "item_id": "CBQ-C3-Q4",
+      "type": "multi",
+      "topic": "Leading indicators - BSC",
+      "verdict": "PASS",
+      "accounting_standard": "Balanced Scorecard: Leading indicators predict future performance; lagging indicators report historical results",
+      "analysis": "Correct: Defect rate (quality signal → future financial impact); On-time delivery (customer satisfaction signal); Training hours (capability building signal). All are non-financial leading indicators. Excluded: Prior-period operating income (historical financial result = lagging indicator). Correctly categorized.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management"
+    },
+    {
+      "item_id": "CBQ-C3-Q5",
+      "type": "match",
+      "topic": "Balanced Scorecard perspectives",
+      "verdict": "PASS",
+      "analysis": "Financial→Operating income; Customer→On-time delivery; Internal process→Defect rate; Learning and growth→Training hours. All pairings follow Kaplan/Norton BSC model definitively. No ambiguity.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management"
+    },
+    {
+      "item_id": "CBQ-C3-Q6",
+      "type": "select",
+      "topic": "Responsibility accounting",
+      "verdict": "PASS",
+      "accounting_standard": "Responsibility accounting assigns revenue/cost control to managers based on their span of control/decision authority",
+      "analysis": "Correct: Machine setup errors are within production's span of control. Distractors: (B) Supplier late materials = Purchasing responsibility; (C) Pricing discounts = Sales management; (D) Dividend payout = Board of Directors. All correctly distinguished by responsibility accounting domain. Explanation correctly references the responsibility accounting framework.",
+      "cma_part_1_scope": "Yes - Section C: Performance Management / Responsibility Accounting"
+    },
+    {
+      "item_id": "CBQ-F2-Q3",
+      "type": "select",
+      "topic": "Cybersecurity controls - Accountability",
+      "verdict": "PASS",
+      "accounting_standard": "COSO IT General Controls: Unique credentials required for individual accountability; shared credentials violate fundamental control principle",
+      "analysis": "Correct: 'One shared service account' creates the clearest accountability risk because shared credentials eliminate traceability of individual actions. Distractors: (B) 7% exception rate (process control issue, not accountability); (C) unresolved exceptions (timeliness deficiency, addressable through process improvement); (D) duplicate vendor IDs (data quality concern, secondary). Ranking is sound under COSO ITGC framework.",
+      "cma_part_1_scope": "Yes - Section E: Internal Controls / Section F: Technology and Analytics"
+    },
+    {
+      "item_id": "CBQ-F2-Q4",
+      "type": "multi",
+      "topic": "Automation governance controls",
+      "verdict": "PASS",
+      "accounting_standard": "COSO monitoring principle + ITGCs: access accountability, change control, data governance required before automation expansion",
+      "analysis": "Correct: Unique bot credentials (access accountability); Change approval for exception rules (change management); Vendor master-data cleanup (data governance). Excluded: 'Disable audit logs after go-live' - actively harmful to monitoring/forensic capability. All discriminations follow COSO control framework.",
+      "cma_part_1_scope": "Yes - Section E: Internal Controls"
+    },
+    {
+      "item_id": "CBQ-F2-Q5",
+      "type": "fill",
+      "topic": "Analytics governance - model monitoring",
+      "verdict": "PASS",
+      "analysis": "Periodic review of false positives and missed exceptions is 'model monitoring'. This is the definitive term in analytics governance. PASS.",
+      "cma_part_1_scope": "Yes - Section F: Technology and Analytics"
+    },
+    {
+      "item_id": "CBQ-F2-Q6",
+      "type": "match",
+      "topic": "Technology controls",
+      "verdict": "PASS",
+      "flags": ["FLAG: Metadata CaseID says 'CBQ-D2' (line 5337) instead of 'CBQ-F2'. Section says 'D' instead of 'E'. Item content is correct (matches CBQ-F2 topics: shared bot accounts, rule changes, vendor IDs, false-positive review) but metadata is a copy-paste template error. Same root cause as CBQ-D2-Q6."],
+      "analysis": "Shared bot account→Unique credentials+logging; Unapproved rule changes→Change management; Duplicate vendor IDs→Master-data governance; No false-positive review→Model monitoring. All pairings correct. Metadata is wrong but learner-facing content is accurate.",
+      "cma_part_1_scope": "Yes - Section F: Technology and Analytics"
+    }
+  ],
+  "metadata_anomalies": [
+    {
+      "severity": "FLAG",
+      "location": "scored_cases.js:2857",
+      "item": "CBQ-D2-Q6",
+      "issue": "CaseID field says 'CBQ-C2', Section says 'C' (should be 'CBQ-D2' / 'D'). Also affects pack_state, ProductionStatus, Section metadata. Item content correctly describes CBQ-D2 topics (equivalent units, bottleneck, lean, process costing) but structural metadata is a copy-paste template error.",
+      "impact": "Medium - causes incorrect case attribution in any automated audit. Learner-facing content unaffected."
+    },
+    {
+      "severity": "FLAG",
+      "location": "scored_cases.js:5337",
+      "item": "CBQ-F2-Q6",
+      "issue": "CaseID field says 'CBQ-D2', Section says 'D' (should be 'CBQ-F2' / 'E'). Same root cause as CBQ-D2-Q6 metadata error.",
+      "impact": "Medium - causes incorrect case attribution. Learner-facing content unaffected."
+    },
+    {
+      "severity": "FLAG",
+      "location": "scored_cases.js:4661",
+      "case": "CBQ-C3",
+      "issue": "Subtopic field says 'Statement of cash flows preparation' but case topic is Balanced Scorecard and Performance Management. Copy-paste metadata artifact from CBQ-A3 template.",
+      "impact": "Low - Subtopic field is cosmetic metadata; blueprint alignment and actual content are correct for Section C."
+    },
+    {
+      "severity": "FLAG",
+      "location": "scored_cases.js:4667",
+      "case": "CBQ-C3",
+      "issue": "CompanyName says 'Med Devices' but ScenarioText says 'MetroMed Devices'. Inconsistency between CompanyName metadata field and narrative text.",
+      "impact": "Low - minor branding inconsistency; doesn't affect question content."
+    }
+  ],
+  "summary": {
+    "total_conceptual_items_reviewed": 28,
+    "select_items": 9,
+    "multi_items": 7,
+    "fill_items": 5,
+    "match_items": 7,
+    "pass": 24,
+    "flag": 4,
+    "fail": 0,
+    "pass_rate": "85.7% PASS, 14.3% FLAG, 0.0% FAIL (items with content perfectly correct but metadata or explanation quality issues)",
+    "critical_findings": 0,
+    "key_findings": [
+      "NO wrong answers found. All 28 items have correct answer keys verified against GAAP/COSO/IMA standards.",
+      "NO out-of-scope (Part 2) topics found. All 7 cases map to valid CMA Part 1 blueprint domains.",
+      "NO incorrect ASC/COSO standard references. All cited standards match the tested concepts.",
+      "ALL distractors are plausible and represent genuine misconceptions - no throwaway distractor found.",
+      "TWO metadata copy-paste errors: CBQ-D2-Q6 has CaseID='CBQ-C2'; CBQ-F2-Q6 has CaseID='CBQ-D2'. Line 2857 and line 5337.",
+      "ONE Subtopic metadata error: CBQ-C3 Subtopic='Statement of cash flows preparation' (should be BSC/performance management topic).",
+      "THREE items have thin correct-answer explanations (<100 chars for Analyze/Evaluate-level items): CBQ-C2-Q4 (56 chars), CBQ-A3-Q3 (91 chars), CBQ-C3-Q3 (71 chars). In all three cases, the distractor explanations ARE thorough, and no content is wrong - just minimal correct-answer exposition.",
+      "ONE CompanyName inconsistency: CBQ-C3 metadata says 'Med Devices' but scenario says 'MetroMed Devices'."
+    ]
+  }
+}

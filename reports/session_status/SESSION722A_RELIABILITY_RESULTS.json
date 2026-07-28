@@ -1,0 +1,29 @@
+{
+  "session": "SESSION722A",
+  "title": "Reliability Certification Results",
+  "date": "2026-07-26",
+  "methodology": "Stratified random sampling, blind DCS v1.1 CL classification, 300-item mega-sample across 4 groups",
+  "overall_agreement": "62.3% (187/300)",
+  "adjusted_agreement_excluding_treatment": "91.0% (182/200)",
+  "dcs_s722a_agreement": "95.0%",
+  "kappa": 0.249,
+  "s721_baseline": "52-58%",
+  "by_group": {
+    "control_retain": {"rate": "100.0%", "n": 95, "interpretation": "DCS perfectly identifies genuine Apply items"},
+    "treatment_downgrade": {"rate": "5.0%", "n": 100, "interpretation": "95% agreement with S722A reclassification — confirms stored labels were incorrect"},
+    "boundary_escalate": {"rate": "100.0%", "n": 50, "interpretation": "All escalated items have operative numbers — correctly Apply"},
+    "dl012_clone_area": {"rate": "66.0%", "n": 50, "interpretation": "17 clones reclassified Understand — DL-012 template inflation confirmed"}
+  },
+  "disagreement_drivers": {
+    "apply_to_understand": {"count": 105, "pct": "94%", "cause": "Company names in stem without operative facts — cosmetic wrappers"},
+    "evaluate_to_understand": {"count": 6, "pct": "5%", "cause": "Template inflation — all single-correct-answer items"},
+    "analyze_to_understand": {"count": 1, "pct": "1%", "cause": "DL-012 description-to-concept clone"}
+  },
+  "dcs_v11_reliability_assessment": "DCS v1.1 produces consistent, reproducible CL classifications. 62.3% rate reflects stored-label contamination, not standard unreliability. DCS independently validates 95% of S722A reclassification judgments.",
+  "genuine_evaluate_found": 0,
+  "genuine_analyze_found": 4,
+  "files": [
+    "reports/systematic_testing/S722A_RELIABILITY_REPORT.md",
+    "reports/systematic_testing/S722A_RELIABILITY_REPORT.json"
+  ]
+}

@@ -1,0 +1,902 @@
+{
+  "report_title": "Session 537 - Certification Benchmark Audit & Cross-Wave Consistency Review",
+  "generated": "2026-07-26T22:14:07.740Z",
+  "source_file": "scored_cases.js",
+  "total_cases": 15,
+  "total_items": 90,
+  "part1_benchmark": {
+    "description": "Comparison of 7 target cases (wave 2) vs 8 already-certified cases (wave 1)",
+    "certified_pool": {
+      "caseCount": 8,
+      "itemCount": 48,
+      "avgExpChars": 2817,
+      "avgEWChars": 624.4,
+      "avgEWCount": 1.9,
+      "citationRate": 47.9,
+      "totalASC": 37,
+      "totalCOSO": 13,
+      "totalGAAP": 7,
+      "totalIFRS": 2,
+      "totalIAS": 1,
+      "avgMetaScore": 15.8,
+      "versionDist": {
+        "2.0": 4,
+        "1.0": 4
+      },
+      "difficultyDist": {
+        "Moderate-Easy": 20,
+        "Moderate": 10,
+        "Difficult": 17,
+        "Easy": 1
+      },
+      "cognitiveDist": {
+        "Apply": 22,
+        "Analyze": 11,
+        "Evaluate": 11,
+        "Understand": 4
+      },
+      "typeDist": {
+        "numeric": 21,
+        "select": 9,
+        "multi": 8,
+        "match": 6,
+        "fill": 4
+      }
+    },
+    "target_pool": {
+      "caseCount": 7,
+      "itemCount": 42,
+      "avgExpChars": 1257.9,
+      "avgEWChars": 374.1,
+      "avgEWCount": 1.5,
+      "citationRate": 40.5,
+      "totalASC": 15,
+      "totalCOSO": 20,
+      "totalGAAP": 2,
+      "totalIFRS": 0,
+      "totalIAS": 0,
+      "avgMetaScore": 16,
+      "versionDist": {
+        "2.0": 7
+      },
+      "difficultyDist": {
+        "Moderate-Easy": 15,
+        "Difficult": 17,
+        "Moderate": 8,
+        "Easy": 2
+      },
+      "cognitiveDist": {
+        "Apply": 16,
+        "Analyze": 15,
+        "Evaluate": 7,
+        "Understand": 4
+      },
+      "typeDist": {
+        "numeric": 16,
+        "select": 10,
+        "multi": 6,
+        "fill": 4,
+        "match": 6
+      }
+    },
+    "deltas": {
+      "avgExpChars": {
+        "certified": 2817,
+        "target": 1257.9,
+        "delta": -1559.1,
+        "pct": -55.3
+      },
+      "avgEWChars": {
+        "certified": 624.4,
+        "target": 374.1,
+        "delta": -250.3,
+        "pct": -40.1
+      },
+      "avgEWCount": {
+        "certified": 1.9,
+        "target": 1.5,
+        "delta": -0.4,
+        "pct": -21.1
+      },
+      "citationRate": {
+        "certified": 47.9,
+        "target": 40.5,
+        "delta": -7.4
+      },
+      "avgMetaScore": {
+        "certified": 15.8,
+        "target": 16,
+        "delta": 0.2
+      },
+      "totalASC": {
+        "certified": 37,
+        "target": 15
+      },
+      "totalCOSO": {
+        "certified": 13,
+        "target": 20
+      }
+    },
+    "case_details": [
+      {
+        "caseID": "CBQ-A1",
+        "title": "Revenue Recognition, Cash Flow, and Deferred Tax Review",
+        "version": "2.0",
+        "difficulty": "Moderate",
+        "avgExpChars": 3011.3,
+        "avgEWChars": 774.8,
+        "citationRate": 100,
+        "totalASC": 15,
+        "totalCOSO": 0,
+        "metaScore": 14,
+        "metaMissing": [
+          "Reviewer",
+          "QAReviewer",
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 3,
+          "Moderate": 2,
+          "Difficult": 1
+        },
+        "cognitiveDist": {
+          "Apply": 4,
+          "Analyze": 1,
+          "Evaluate": 1
+        },
+        "typeDist": {
+          "numeric": 4,
+          "select": 1,
+          "multi": 1
+        }
+      },
+      {
+        "caseID": "CBQ-A2",
+        "title": "Consolidation, Impairment, OCI, and Disclosure Package",
+        "version": "2.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 2277.5,
+        "avgEWChars": 265.5,
+        "citationRate": 100,
+        "totalASC": 18,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 2,
+          "Moderate": 2,
+          "Difficult": 2
+        },
+        "cognitiveDist": {
+          "Apply": 3,
+          "Analyze": 2,
+          "Evaluate": 1
+        },
+        "typeDist": {
+          "numeric": 3,
+          "select": 1,
+          "multi": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-B1",
+        "title": "Integrated Sales, Production, Materials, and Cash Budget",
+        "version": "2.0",
+        "difficulty": "Moderate",
+        "avgExpChars": 4495.2,
+        "avgEWChars": 238,
+        "citationRate": 16.7,
+        "totalASC": 1,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 4,
+          "Moderate": 1,
+          "Difficult": 1
+        },
+        "cognitiveDist": {
+          "Apply": 5,
+          "Evaluate": 1
+        },
+        "typeDist": {
+          "numeric": 5,
+          "multi": 1
+        }
+      },
+      {
+        "caseID": "CBQ-B2",
+        "title": "Rolling Forecast and Regression Update",
+        "version": "2.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 2190.8,
+        "avgEWChars": 256.7,
+        "citationRate": 16.7,
+        "totalASC": 1,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 2,
+          "Easy": 1,
+          "Difficult": 2,
+          "Moderate": 1
+        },
+        "cognitiveDist": {
+          "Apply": 2,
+          "Analyze": 2,
+          "Evaluate": 1,
+          "Understand": 1
+        },
+        "typeDist": {
+          "numeric": 2,
+          "select": 1,
+          "multi": 1,
+          "fill": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-C1",
+        "title": "Flexible Budget and Variance Investigation",
+        "version": "1.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 2301.7,
+        "avgEWChars": 1163.7,
+        "citationRate": 0,
+        "totalASC": 0,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 3,
+          "Difficult": 2,
+          "Moderate": 1
+        },
+        "cognitiveDist": {
+          "Apply": 3,
+          "Evaluate": 2,
+          "Analyze": 1
+        },
+        "typeDist": {
+          "numeric": 3,
+          "select": 1,
+          "multi": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-C2",
+        "title": "Investment Center Performance and Transfer Pricing",
+        "version": "2.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 1591.2,
+        "avgEWChars": 284.7,
+        "citationRate": 0,
+        "totalASC": 0,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 3,
+          "Difficult": 2,
+          "Moderate": 1
+        },
+        "cognitiveDist": {
+          "Apply": 2,
+          "Analyze": 2,
+          "Evaluate": 1,
+          "Understand": 1
+        },
+        "typeDist": {
+          "numeric": 2,
+          "select": 1,
+          "multi": 1,
+          "fill": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-D1",
+        "title": "ABC, Quality Costs, and Process Improvement",
+        "version": "1.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 2655.3,
+        "avgEWChars": 1348.8,
+        "citationRate": 0,
+        "totalASC": 0,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate": 2,
+          "Moderate-Easy": 2,
+          "Difficult": 2
+        },
+        "cognitiveDist": {
+          "Apply": 2,
+          "Evaluate": 2,
+          "Understand": 1,
+          "Analyze": 1
+        },
+        "typeDist": {
+          "numeric": 2,
+          "select": 1,
+          "multi": 1,
+          "fill": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-D2",
+        "title": "Process Costing, Lean Waste, and Bottleneck Analysis",
+        "version": "2.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 1298,
+        "avgEWChars": 300.7,
+        "citationRate": 0,
+        "totalASC": 0,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 3,
+          "Moderate": 2,
+          "Difficult": 1
+        },
+        "cognitiveDist": {
+          "Apply": 2,
+          "Analyze": 2,
+          "Evaluate": 1,
+          "Understand": 1
+        },
+        "typeDist": {
+          "numeric": 2,
+          "select": 1,
+          "multi": 1,
+          "fill": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-E1",
+        "title": "Accounts Payable Controls and SOX Evaluation",
+        "version": "1.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 2713.5,
+        "avgEWChars": 483.7,
+        "citationRate": 83.3,
+        "totalASC": 0,
+        "totalCOSO": 9,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Difficult": 4,
+          "Moderate-Easy": 2
+        },
+        "cognitiveDist": {
+          "Analyze": 3,
+          "Evaluate": 1,
+          "Apply": 1,
+          "Understand": 1
+        },
+        "typeDist": {
+          "select": 2,
+          "multi": 1,
+          "numeric": 1,
+          "fill": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-E2",
+        "title": "IT General Controls, Change Management, and Access Review",
+        "version": "2.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 1233.2,
+        "avgEWChars": 476.3,
+        "citationRate": 100,
+        "totalASC": 0,
+        "totalCOSO": 9,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Difficult": 4,
+          "Moderate-Easy": 2
+        },
+        "cognitiveDist": {
+          "Evaluate": 2,
+          "Apply": 1,
+          "Understand": 1,
+          "Analyze": 2
+        },
+        "typeDist": {
+          "select": 2,
+          "numeric": 1,
+          "multi": 1,
+          "fill": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-F1",
+        "title": "Data Governance and Warranty Analytics Dashboard",
+        "version": "1.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 2890.8,
+        "avgEWChars": 464,
+        "citationRate": 66.7,
+        "totalASC": 2,
+        "totalCOSO": 4,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 2,
+          "Difficult": 3,
+          "Moderate": 1
+        },
+        "cognitiveDist": {
+          "Apply": 2,
+          "Evaluate": 2,
+          "Analyze": 1,
+          "Understand": 1
+        },
+        "typeDist": {
+          "numeric": 1,
+          "select": 2,
+          "multi": 1,
+          "match": 1,
+          "fill": 1
+        }
+      },
+      {
+        "caseID": "CBQ-A3",
+        "title": "Inventory, ARO, Subsequent Events, and Cash Classification",
+        "version": "2.0",
+        "difficulty": "Moderate",
+        "avgExpChars": 1216.3,
+        "avgEWChars": 432.2,
+        "citationRate": 100,
+        "totalASC": 15,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 1,
+          "Moderate": 3,
+          "Difficult": 2
+        },
+        "cognitiveDist": {
+          "Apply": 3,
+          "Analyze": 3
+        },
+        "typeDist": {
+          "numeric": 3,
+          "select": 2,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-B3",
+        "title": "Scenario Forecast, Expected Value, and Working Capital Plan",
+        "version": "2.0",
+        "difficulty": "Moderate",
+        "avgExpChars": 1104.3,
+        "avgEWChars": 311.3,
+        "citationRate": 0,
+        "totalASC": 0,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 3,
+          "Moderate": 1,
+          "Difficult": 2
+        },
+        "cognitiveDist": {
+          "Apply": 4,
+          "Analyze": 1,
+          "Evaluate": 1
+        },
+        "typeDist": {
+          "numeric": 4,
+          "select": 1,
+          "multi": 1
+        }
+      },
+      {
+        "caseID": "CBQ-C3",
+        "title": "Balanced Scorecard and Operating Performance Review",
+        "version": "2.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 1235.3,
+        "avgEWChars": 486.3,
+        "citationRate": 0,
+        "totalASC": 0,
+        "totalCOSO": 0,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Easy": 2,
+          "Difficult": 4
+        },
+        "cognitiveDist": {
+          "Apply": 2,
+          "Analyze": 3,
+          "Evaluate": 1
+        },
+        "typeDist": {
+          "numeric": 2,
+          "select": 2,
+          "multi": 1,
+          "match": 1
+        }
+      },
+      {
+        "caseID": "CBQ-F2",
+        "title": "Cybersecurity, RPA, and Finance Automation Governance",
+        "version": "2.0",
+        "difficulty": "Difficult",
+        "avgExpChars": 1126.7,
+        "avgEWChars": 327,
+        "citationRate": 83.3,
+        "totalASC": 0,
+        "totalCOSO": 11,
+        "metaScore": 16,
+        "metaMissing": [
+          "Tags",
+          "Dependencies"
+        ],
+        "difficultyDist": {
+          "Moderate-Easy": 3,
+          "Difficult": 2,
+          "Moderate": 1
+        },
+        "cognitiveDist": {
+          "Apply": 2,
+          "Analyze": 2,
+          "Evaluate": 1,
+          "Understand": 1
+        },
+        "typeDist": {
+          "numeric": 2,
+          "select": 1,
+          "multi": 1,
+          "fill": 1,
+          "match": 1
+        }
+      }
+    ]
+  },
+  "part2_consistency": {
+    "description": "Cross-wave consistency review of all 15 cases",
+    "dl008": {
+      "violations": 0,
+      "noCorrectField": 0,
+      "totalChecked": 90,
+      "violationItems": []
+    },
+    "citation_by_domain": {
+      "A": {
+        "total": 18,
+        "withoutCitation": 0
+      },
+      "B": {
+        "total": 18,
+        "withoutCitation": 16
+      },
+      "C": {
+        "total": 18,
+        "withoutCitation": 18
+      },
+      "D": {
+        "total": 12,
+        "withoutCitation": 12
+      },
+      "E": {
+        "total": 18,
+        "withoutCitation": 2
+      },
+      "F": {
+        "total": 6,
+        "withoutCitation": 2
+      }
+    },
+    "citation_by_wave": {
+      "wave1": {
+        "caseCount": 8,
+        "itemCount": 48,
+        "citationRate": 47.9
+      },
+      "wave2": {
+        "caseCount": 7,
+        "itemCount": 42,
+        "citationRate": 40.5
+      }
+    },
+    "version_consistency": {
+      "byVersion": {
+        "2.0": [
+          "CBQ-A1",
+          "CBQ-A2",
+          "CBQ-B1",
+          "CBQ-B2",
+          "CBQ-C2",
+          "CBQ-D2",
+          "CBQ-E2",
+          "CBQ-A3",
+          "CBQ-B3",
+          "CBQ-C3",
+          "CBQ-F2"
+        ],
+        "1.0": [
+          "CBQ-C1",
+          "CBQ-D1",
+          "CBQ-E1",
+          "CBQ-F1"
+        ]
+      },
+      "v1_cases": [
+        "CBQ-C1",
+        "CBQ-D1",
+        "CBQ-E1",
+        "CBQ-F1"
+      ],
+      "allWave2V2": false
+    },
+    "metadata_consistency": {
+      "cases_with_gaps": [
+        {
+          "caseID": "CBQ-A1",
+          "missing": [
+            "Reviewer",
+            "QAReviewer",
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 14
+        },
+        {
+          "caseID": "CBQ-A2",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-B1",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-B2",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-C1",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-C2",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-D1",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-D2",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-E1",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-E2",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-F1",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-A3",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-B3",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-C3",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        },
+        {
+          "caseID": "CBQ-F2",
+          "missing": [
+            "Tags",
+            "Dependencies"
+          ],
+          "score": 16
+        }
+      ],
+      "fields_present_in_all_15": [
+        "Author",
+        "CreatedDate",
+        "ModifiedDate",
+        "LastValidated",
+        "RevisionHistory",
+        "CompanyName",
+        "CompanyType",
+        "Industry",
+        "Stakeholder",
+        "BusinessFunction",
+        "PrimaryCompetency",
+        "SecondaryCompetencies",
+        "Pack",
+        "Section"
+      ]
+    },
+    "format_consistency": {
+      "numeric_items_with_formula": "36/37 (97.3%)",
+      "only_item_without_formula": "CBQ-A3-Q2 (conceptual ARO, not calculation-based)",
+      "note": "All calculation items show work. Format is consistent across both waves."
+    }
+  },
+  "findings": [
+    {
+      "severity": "HIGH",
+      "category": "Explanation Depth",
+      "detail": "Target cases have 55.3% shorter explanations (1257.9 vs 2817 chars avg). Wave 2 explanations are significantly less detailed. Target items average 1257.9 chars vs certified 2817 chars."
+    },
+    {
+      "severity": "HIGH",
+      "category": "EW Quality",
+      "detail": "Target cases have 40.1% shorter distractor explanations (374.1 vs 624.4 chars avg). Misconception coverage significantly degraded."
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "Citation Coverage",
+      "detail": "Target citation rate 40.5% vs certified 47.9%. Minor gap."
+    },
+    {
+      "severity": "OK",
+      "category": "DL-008",
+      "detail": "Zero DL-008 violations across all 15 cases (90 items checked)."
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "Version Consistency",
+      "detail": "4 wave 1 cases at v1.0: CBQ-C1, CBQ-D1, CBQ-E1, CBQ-F1. All wave 2 cases are v2.0. Consider bumping wave 1 versions for consistency."
+    },
+    {
+      "severity": "LOW",
+      "category": "Metadata Gaps",
+      "detail": "15 cases have missing optional metadata fields. Details: CBQ-A1: [Reviewer, QAReviewer, Tags, Dependencies]; CBQ-A2: [Tags, Dependencies]; CBQ-B1: [Tags, Dependencies]; CBQ-B2: [Tags, Dependencies]; CBQ-C1: [Tags, Dependencies]; CBQ-C2: [Tags, Dependencies]; CBQ-D1: [Tags, Dependencies]; CBQ-D2: [Tags, Dependencies]; CBQ-E1: [Tags, Dependencies]; CBQ-E2: [Tags, Dependencies]; CBQ-F1: [Tags, Dependencies]; CBQ-A3: [Tags, Dependencies]; CBQ-B3: [Tags, Dependencies]; CBQ-C3: [Tags, Dependencies]; CBQ-F2: [Tags, Dependencies]"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "Domain E Citations",
+      "detail": "2 of 18 Section E items lack COSO/authoritative citations. Internal control items should reference the COSO framework."
+    },
+    {
+      "severity": "INFO",
+      "category": "Wave Citation Comparison",
+      "detail": "Wave 1: 47.9% (23/48). Wave 2: 40.5% (17/42)."
+    },
+    {
+      "severity": "OK",
+      "category": "Format Consistency",
+      "detail": "36 of 37 numeric items (97.3%) include formula traces or calculation work in explanations. Only CBQ-A3-Q2 (ARO journal entry, conceptually correct) lacks formula notation - appropriate for its conceptual nature."
+    }
+  ],
+  "verdict": {
+    "overall": "CONDITIONAL_PASS - High-severity issues require resolution before wave 2 goes live",
+    "benchmark_comparison": "BELOW_BENCHMARK",
+    "critical_issues": 0,
+    "high_issues": 2,
+    "medium_issues": 3,
+    "low_issues": 1,
+    "summary": [
+      "[HIGH] Explanation Depth: Target cases have 55.3% shorter explanations (1257.9 vs 2817 chars avg). Wave 2 explanations are significantly less detailed. Target items average 1257.9 chars vs certified 2817 chars.",
+      "[HIGH] EW Quality: Target cases have 40.1% shorter distractor explanations (374.1 vs 624.4 chars avg). Misconception coverage significantly degraded.",
+      "[MEDIUM] Citation Coverage: Target citation rate 40.5% vs certified 47.9%. Minor gap.",
+      "[OK] DL-008: Zero DL-008 violations across all 15 cases (90 items checked).",
+      "[MEDIUM] Version Consistency: 4 wave 1 cases at v1.0: CBQ-C1, CBQ-D1, CBQ-E1, CBQ-F1. All wave 2 cases are v2.0. Consider bumping wave 1 versions for consistency.",
+      "[LOW] Metadata Gaps: 15 cases have missing optional metadata fields. Details: CBQ-A1: [Reviewer, QAReviewer, Tags, Dependencies]; CBQ-A2: [Tags, Dependencies]; CBQ-B1: [Tags, Dependencies]; CBQ-B2: [Tags, Dependencies]; CBQ-C1: [Tags, Dependencies]; CBQ-C2: [Tags, Dependencies]; CBQ-D1: [Tags, Dependencies]; CBQ-D2: [Tags, Dependencies]; CBQ-E1: [Tags, Dependencies]; CBQ-E2: [Tags, Dependencies]; CBQ-F1: [Tags, Dependencies]; CBQ-A3: [Tags, Dependencies]; CBQ-B3: [Tags, Dependencies]; CBQ-C3: [Tags, Dependencies]; CBQ-F2: [Tags, Dependencies]",
+      "[MEDIUM] Domain E Citations: 2 of 18 Section E items lack COSO/authoritative citations. Internal control items should reference the COSO framework.",
+      "[INFO] Wave Citation Comparison: Wave 1: 47.9% (23/48). Wave 2: 40.5% (17/42).",
+      "[OK] Format Consistency: 36 of 37 numeric items (97.3%) include formula traces or calculation work in explanations. Only CBQ-A3-Q2 (ARO journal entry, conceptually correct) lacks formula notation - appropriate for its conceptual nature."
+    ]
+  }
+}

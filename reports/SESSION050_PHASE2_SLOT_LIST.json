@@ -1,0 +1,162 @@
+{
+  "session": "SESSION050",
+  "phase": 2,
+  "description": "Phase 2 Item Authoring — Packs C+D Sections E+F (20-Item Batch 2)",
+  "total_slots": 20,
+  "packs_affected": ["pack_c_corrected.js", "pack_d_corrected.js"],
+  "sections_affected": ["E", "F"],
+  "domains_covered": ["COSO Internal Controls", "Technology and Analytics"],
+  "bloom_target": {"Analyze": 13, "Evaluate": 7},
+  "difficulty_target": {"Difficult": 14, "Very_Difficult": 6},
+  "question_state": "Certified",
+  "prerequisite": "S899 Phase 1 (20 items replaced)",
+  "remaining_after_phase2": 183,
+  "slots": [
+    {
+      "index": 21, "qid": "P1-EC-003", "pack": "C", "section": "E", "domain": "COSO",
+      "archived_topic": "segregation of duties design",
+      "new_topic": "COSO Principle 10 — control activities — preventive vs. detective control design and cost-benefit analysis",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 22, "qid": "P1-EC-009", "pack": "C", "section": "E", "domain": "COSO",
+      "archived_topic": "COSO internal control framework",
+      "new_topic": "COSO Principle 15 — communicates externally — evaluating SOC report deficiencies at a third-party service provider",
+      "bloom_level": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 23, "qid": "P1-EC-035", "pack": "C", "section": "E", "domain": "COSO",
+      "archived_topic": "ERM risk appetite",
+      "new_topic": "COSO ERM — risk appetite statement interpretation and strategic alignment evaluation after a merger",
+      "bloom_level": "Evaluate", "difficulty": "Very Difficult", "difficulty_score": 5
+    },
+    {
+      "index": 24, "qid": "P1-EC-038", "pack": "C", "section": "E", "domain": "COSO",
+      "archived_topic": "IT general controls access",
+      "new_topic": "COSO Principle 11 — IT general controls — evaluating logical access control weaknesses after a system migration",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 25, "qid": "P1-EC-069", "pack": "C", "section": "E", "domain": "COSO",
+      "archived_topic": "segregation of cash custody recording",
+      "new_topic": "COSO Principle 10 — segregation of duties — incompatible function analysis at a small entity with staffing constraints",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 26, "qid": "P1-FC-012", "pack": "C", "section": "F", "domain": "Technology",
+      "archived_topic": "robotic process automation use case",
+      "new_topic": "RPA governance — evaluating bot failure risks and control gaps at a financial services shared service center",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 27, "qid": "P1-FC-029", "pack": "C", "section": "F", "domain": "Technology",
+      "archived_topic": "cybersecurity confidentiality integrity availability",
+      "new_topic": "Cybersecurity — CIA triad application — evaluating a ransomware incident's impact on confidentiality, integrity, and availability",
+      "bloom_level": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 28, "qid": "P1-FC-034", "pack": "C", "section": "F", "domain": "Technology",
+      "archived_topic": "big data characteristics volume velocity variety",
+      "new_topic": "Big data analytics — evaluating whether a business problem requires volume, velocity, or variety capability investment",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 29, "qid": "P1-FC-055", "pack": "C", "section": "F", "domain": "Technology",
+      "archived_topic": "artificial intelligence machine learning",
+      "new_topic": "AI/ML governance — evaluating model bias and fairness in a loan approval prediction system",
+      "bloom_level": "Evaluate", "difficulty": "Very Difficult", "difficulty_score": 5
+    },
+    {
+      "index": 30, "qid": "P1-FC-067", "pack": "C", "section": "F", "domain": "Technology",
+      "archived_topic": "data lake vs data warehouse",
+      "new_topic": "Data architecture — data lake vs. data warehouse selection for an analytics modernization initiative",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 31, "qid": "P1-ED-005", "pack": "D", "section": "E", "domain": "COSO",
+      "archived_topic": "three lines of defense model",
+      "new_topic": "Three Lines of Defense — identifying operational gaps when the second line has dual reporting to operations and risk",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 32, "qid": "P1-ED-009", "pack": "D", "section": "E", "domain": "COSO",
+      "archived_topic": "access control least privilege",
+      "new_topic": "COSO Principle 12 — control activities — evaluating access control exceptions after an ERP implementation",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 33, "qid": "P1-ED-023", "pack": "D", "section": "E", "domain": "COSO",
+      "archived_topic": "control activities authorization",
+      "new_topic": "COSO Principle 12 — authorization controls — evaluating purchase order approval weaknesses after a fraud incident",
+      "bloom_level": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 34, "qid": "P1-ED-033", "pack": "D", "section": "E", "domain": "COSO",
+      "archived_topic": "data backup disaster recovery",
+      "new_topic": "COSO Principle 11 — business continuity — evaluating recovery time objective (RTO) and recovery point objective (RPO) adequacy",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 35, "qid": "P1-ED-069", "pack": "D", "section": "E", "domain": "COSO",
+      "archived_topic": "audit committee oversight role",
+      "new_topic": "COSO Principle 2 — board oversight — evaluating audit committee independence after a related-party transaction disclosure",
+      "bloom_level": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 36, "qid": "P1-FD-005", "pack": "D", "section": "F", "domain": "Technology",
+      "archived_topic": "API integration systems",
+      "new_topic": "System integration — evaluating API vs. ESB vs. point-to-point integration architecture at a growing enterprise",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 37, "qid": "P1-FD-015", "pack": "D", "section": "F", "domain": "Technology",
+      "archived_topic": "data encryption at rest and in transit",
+      "new_topic": "Cybersecurity — data protection — evaluating encryption strategy gaps after a cloud migration",
+      "bloom_level": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 38, "qid": "P1-FD-018", "pack": "D", "section": "F", "domain": "Technology",
+      "archived_topic": "cloud SaaS subscription model",
+      "new_topic": "Cloud computing — evaluating SaaS vs. on-premise deployment for a regulated industry's financial reporting system",
+      "bloom_level": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 39, "qid": "P1-FD-025", "pack": "D", "section": "F", "domain": "Technology",
+      "archived_topic": "predictive model overfitting risk",
+      "new_topic": "AI/ML governance — evaluating model validation results (overfitting, data leakage, concept drift) at a predictive maintenance deployment",
+      "bloom_level": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 40, "qid": "P1-FD-055", "pack": "D", "section": "F", "domain": "Technology",
+      "archived_topic": "automation bot governance oversight",
+      "new_topic": "Automation governance — evaluating RPA bot lifecycle management and access credential controls after an unauthorized transaction",
+      "bloom_level": "Evaluate", "difficulty": "Very Difficult", "difficulty_score": 5
+    }
+  ],
+  "batch_plan": [
+    {
+      "batch": 1, "slots": [21, 22, 23, 24, 25],
+      "description": "Pack C Section E — COSO (3 Analyze + 2 Evaluate)",
+      "qids": ["P1-EC-003", "P1-EC-009", "P1-EC-035", "P1-EC-038", "P1-EC-069"]
+    },
+    {
+      "batch": 2, "slots": [26, 27, 28, 29, 30],
+      "description": "Pack C Section F — Technology (3 Analyze + 2 Evaluate)",
+      "qids": ["P1-FC-012", "P1-FC-029", "P1-FC-034", "P1-FC-055", "P1-FC-067"]
+    },
+    {
+      "batch": 3, "slots": [31, 32, 33, 34, 35],
+      "description": "Pack D Section E — COSO (3 Analyze + 2 Evaluate)",
+      "qids": ["P1-ED-005", "P1-ED-009", "P1-ED-023", "P1-ED-033", "P1-ED-069"]
+    },
+    {
+      "batch": 4, "slots": [36, 37, 38, 39, 40],
+      "description": "Pack D Section F — Technology (3 Analyze + 2 Evaluate)",
+      "qids": ["P1-FD-005", "P1-FD-015", "P1-FD-018", "P1-FD-025", "P1-FD-055"]
+    }
+  ],
+  "bloom_distribution": {"Analyze": 13, "Evaluate": 7},
+  "difficulty_distribution": {"Difficult": 17, "Very_Difficult": 3},
+  "created": "2026-07-28",
+  "session": "SESSION050"
+}

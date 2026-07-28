@@ -1,0 +1,100 @@
+{
+  "board": "SESSION804_LAUNCH_BOARD",
+  "session": "804 — Agent Y Launch Board",
+  "date": "2026-07-26",
+
+  "verdict": "READY FOR S805 — PRIORITY SHIFT",
+
+  "s805_scope": "DL-016 ExplanationWrong remediation on 58 Pack A Section E Certified items",
+
+  "rationale": "S804 clone rationalization is 100% complete (17/17 Section E clone items Archived, up from 16 at S804 start — P1-E-051 was the 17th, Archived during S804 per Agent F seed selection). However, DL-016 metadata-block ExplanationWrong shift persists on ALL 58 remaining Certified Section E items. Every wrong-answer distractor explanation in Section E describes the PREVIOUS QID's topic, not the item the learner actually answered. This is a HIGH learner-safety risk that clone archival alone does not address. The correct approach: fix the metadata-content misalignment so learners receive topic-correct distractor feedback.",
+
+  "priority": "P0 — learner-safety CRITICAL",
+
+  "s804_findings_summary": {
+    "clone_rationalization": {
+      "status": "100% complete",
+      "archived": 17,
+      "certified_remaining": 58,
+      "qids_archived": ["P1-E-046", "P1-E-047", "P1-E-049", "P1-E-050", "P1-E-051", "P1-E-054", "P1-E-055", "P1-E-057", "P1-E-058", "P1-E-062", "P1-E-063", "P1-E-065", "P1-E-066", "P1-E-070", "P1-E-071", "P1-E-073", "P1-E-074"],
+      "seeds_retained": ["P1-E-038 (G1 AP duplicate)", "P1-E-039 (G2 payroll terminated)", "P1-E-041 (G3 user access)", "P1-E-042 (G4 control exception)", "P1-E-043 (G5 control evidence)"]
+    },
+    "dl_016_confirmation": {
+      "status": "CONFIRMED — 100% of Section E Certified items affected",
+      "affected_certified_items": 58,
+      "pattern": "+1 offset: metadata-block ExplanationWrongA-D fields describe the previous QID's Choices, not the item's own Choices",
+      "evidence": "Raw-source inspection of P1-E-036/P1-E-037: P1-E-036 metadata EW fields describe cash-receipts custody controls (P1-E-035 topic). P1-E-036 content-block stem = 'Granite notices managers split purchases' (purchase authorization topic). Confirmed +1 offset.",
+      "caqs_violations": [
+        "CAQS §4.3 EV4: Distractor explanations must be choice-specific",
+        "CAQS §4.2: Explanations must identify the specific misconception",
+        "CAQS §11.2 LS2: Error correction — identify the specific misconception"
+      ],
+      "learner_impact": "When a learner selects a wrong answer on ANY of the 58 Section E Certified items, the distractor explanation displayed describes a COMPLETELY DIFFERENT concept. Example: learner answers wrong on duplicate payment control → sees feedback about purchase authorization thresholds. The learner cannot self-correct because the feedback addresses the wrong concept entirely.",
+      "cross_reference": "DEFECT_LIBRARY.md DL-016 — Session 64 pilot confirmed +1 shift spans ALL Pack A sections"
+    },
+    "agent_reports": {
+      "agent_b_inventory": "75 total Section E items, 5 clone groups, 9 Certified clones, 66 unique items. Current: 58 Certified, 17 Archived.",
+      "agent_d_learner_safety": "14% clone collision in 100-item session. DL-016 confirmed: 100% of Section E items carry metadata-block EW shift. Selective archive recommended: keep 8 seeds, archive 29 siblings. DL-016 on retained seeds is the blocker.",
+      "agent_f_seed_selection": "5 seeds recommended: P1-E-038/039/041/042/043. All strong (EC 888-1105 chars, COSO citations), DL-008/DL-026 clean. P1-E-051 archived (17th).",
+      "agent_l_de_cert_governance": "Certified→Archived directly permitted (§9.2). Batch cap 28. User authorization required. VERDICT: PROCEED — REQUIRES USER AUTHORIZATION. Archival now complete.",
+      "agent_e_certification_audit": "Domain E: 208→171 Certified (45.6%). Zero LOS coverage loss — seeds preserved, Pack B (75) + Pack E (75) backstop. SAFE_TO_PROCEED."
+    }
+  },
+
+  "why_clone_archival_alone_is_insufficient": {
+    "clone_item_impact": "Archiving 17 clone siblings removed learner-pool redundancy (9→0 direct clone duplicates in delivery pool). But clones were only 17 of 75 Section E items.",
+    "remaining_surface": "58 Certified items remain. 100% carry DL-016. That's 58 × 3 = 174 distractor explanation slots, all describing the WRONG item's choices.",
+    "severity_hierarchy": "DL-016 (wrong-topic explanations) > clone redundancy (duplicate stems) in learner-safety terms. A duplicate stem is wasteful but not misleading. Wrong-topic feedback is educationally damaging — it teaches the wrong concept."
+  },
+
+  "batch_estimate": "58 items in 3 batches (28+28+2)",
+
+  "remediation_approach": {
+    "root_cause": "Pack A dual-block architecture. Block 1 (metadata) stores ExplanationWrongA-D + ChoiceA-D. Block 2 (content) stores Stem + Choices.A-D + CorrectChoice + ExplanationCorrect. Due to +1 offset from template rotation, Block 1 EW fields describe the previous QID's choices.",
+    "fix_strategy": "For each of the 58 Certified Section E items, align the metadata-block ExplanationWrongA-D text to match the content-block Choices.A-D. This requires per-item authoring: extract the item's actual distractors from Block 2, verify against the item's topic, and write choice-specific EW text for each of the 3 non-CorrectChoice slots.",
+    "constraints": [
+      "Do NOT alter CorrectChoice — answer keys are correct in the content block",
+      "Do NOT alter Block 2 content (Stem, Choices, ExplanationCorrect) — these are correct",
+      "Only modify Block 1 ExplanationWrongA-D fields",
+      "Ensure each EW field describes WHY that specific distractor is wrong for THIS item's topic",
+      "Clear EW[CorrectChoice] slot (DL-008 compliance)",
+      "Backup mandatory per BACKUP_PROTOCOL.md before each batch",
+      "Verify topic alignment per-item after each batch"
+    ]
+  },
+
+  "conditions": [
+    "User authorization for EW field writes (AGENTS.md §2)",
+    "Backup protocol: pack_a_corrected.js.bak-YYYYMMDDHHMMSS before first edit",
+    "Per-batch backup before each of the 3 batches",
+    "Per-item verification of topic alignment (EW text must match the item's own Choices, not the previous QID's)",
+    "Post-remediation DL-016 scan: confirm 0 items with +1 offset in Section E",
+    "REVISION_HISTORY.md entry per governance-guard Rule 1",
+    "Batch cap: ≤28 items per governance-guard Rule 5 (batches: 28, 28, 2)",
+    "0 DL-008 regressions (all EW[CC] slots must remain empty)"
+  ],
+
+  "cross_references": {
+    "defect_library": "DEFECT_LIBRARY.md DL-016 — Metadata-Block Topic-Numbering Shift",
+    "session_64_pilot": "Session 64 pilot certification confirmed DL-016 spans ALL Pack A sections, not just Section E",
+    "caqs": "CAQS_v1.0.md §4.3 EV4, §4.2, §11.2 LS2",
+    "governance": "governance-guard.js Rule 2 (DL-008 BLOCK), Rule 5 (≤30 batch cap)",
+    "backup_protocol": "knowledge/BACKUP_PROTOCOL.md",
+    "s804_reports": [
+      "reports/SESSION804_SECTION_E_INVENTORY.json",
+      "reports/SESSION804_LEARNER_SAFETY_ASSESSMENT.json",
+      "reports/SESSION804_SEED_SELECTION.json",
+      "reports/SESSION804_DECERTIFICATION_GOVERNANCE_REVIEW.json",
+      "reports/SESSION804_CERTIFICATION_PRESERVATION_AUDIT.json"
+    ]
+  },
+
+  "delivery_pool_post_s804": {
+    "section_e_certified": 58,
+    "section_e_archived": 17,
+    "dl_016_exposure": "ALL 58 Certified items deliver wrong-topic distractor feedback",
+    "domain_e_certified_pct": "~45.6% (171/375 across all packs) — weakest domain"
+  },
+
+  "strategic_note": "Domain E is at 45.6% certified — the weakest across all 6 blueprint domains. Pack C/D Section E contains 152 more items (38 seeds + 112 archived clones) that are certification-ready once structural remediation is done. Fixing DL-016 on Pack A Section E secures the existing learner pool while preparing the Domain E certification pipeline for S806-S809 (Pack C/D Section E seed certification)."
+}

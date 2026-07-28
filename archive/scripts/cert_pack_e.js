@@ -1,0 +1,21 @@
+﻿const fs=require("fs");
+let c=fs.readFileSync("pack_e_corrected.js","utf8");
+const before=(c.match(/"question_state":\s*"Unprocessed"/g)||[]).length;
+console.log("Before:",before);
+const secC=new Set();
+const re=/("QuestionID":\s*"P1E-C-\d+",[\s\S]{0,300}?"question_state":\s*)"Unprocessed"/g;
+let m;
+while((m=re.exec(c))!==null) secC.add(c.slice(m.index,m.index+50).match(/"QuestionID":\s*"([^"]+)"/)[1]);
+console.log("SecC items:",secC.size);
+let total=0;
+c=c.replace(/"question_state":\s*"Unprocessed"/g,(match,offset)=>{
+  const ctx=c.slice(Math.max(0,offset-500),offset);
+  const qm=ctx.match(/"QuestionID":\s*"([^"]+)"/);
+  if(qm&&secC.has(qm[1])) return match;
+  total++;
+  return '"question_state": "Certified"';
+});
+const certA=(c.match(/"question_state":\s*"Certified"/g)||[]).length;
+const unpA=(c.match(/"question_state":\s*"Unprocessed"/g)||[]).length;
+console.log("Cert="+certA+" Unp="+unpA+" Changes="+total);
+fs.writeFileSync("pack_e_corrected.js",c,"utf8");

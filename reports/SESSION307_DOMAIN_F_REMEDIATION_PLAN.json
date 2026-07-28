@@ -1,0 +1,53 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "domain": "F — Technology & Analytics",
+  "currentState": {
+    "items": 431,
+    "certified": 281,
+    "uncertified": 150,
+    "p0Count": 8,
+    "avgUiqs": 62.4,
+    "ewDebtCount": 130
+  },
+  "remediationPhases": [
+    {
+      "phase": 1,
+      "name": "Bulk certification with EW authoring",
+      "items": 150,
+      "sessions": "5-7",
+      "description": "Certify all uncertified Domain F items per CAQS §1.6. Each item requires: explanation expansion, EW authoring, metadata compliance.",
+      "effort": "HIGH — 150 items requiring full certification pipeline",
+      "roi": "HIGH — addresses 8 P0 items, closes second-largest certification gap"
+    },
+    {
+      "phase": 2,
+      "name": "EW gap closure for already-certified items",
+      "items": 60,
+      "sessions": "2-3",
+      "description": "Certified Domain F items with EW <30% fill.",
+      "effort": "MEDIUM",
+      "roi": "HIGH — completes EW coverage for Domain F"
+    },
+    {
+      "phase": 3,
+      "name": "Quality sweep",
+      "items": 281,
+      "sessions": "1",
+      "description": "Post-certification quality review.",
+      "effort": "LOW",
+      "roi": "MEDIUM"
+    }
+  ],
+  "totalEstimatedSessions": 9,
+  "totalEffort": "~12 hours",
+  "dependencies": [
+    "Domain E certification (sequential — E first, then F)",
+    "CAQS §1.6",
+    "800-series methodology"
+  ],
+  "deliverables": [
+    "Domain F fully certified",
+    "All 150 items EW-complete",
+    "8 P0 items resolved"
+  ]
+}

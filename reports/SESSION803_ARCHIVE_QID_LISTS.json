@@ -1,0 +1,181 @@
+{
+  "session": "803",
+  "title": "Archive QID Lists — Pack C & D Section F Clone Archival",
+  "_verified": "2026-07-26. stem-based clone group identification. 0 Certified items in both sections (confirmed via direct scan). FD-046 confirmed Archived.",
+  "pack_c": {
+    "section": "F",
+    "total_items": 75,
+    "seeds": [
+      "P1-FC-001", "P1-FC-005", "P1-FC-015", "P1-FC-020",
+      "P1-FC-026", "P1-FC-030", "P1-FC-035", "P1-FC-040",
+      "P1-FC-045", "P1-FC-050", "P1-FC-055", "P1-FC-060",
+      "P1-FC-065", "P1-FC-070"
+    ],
+    "clones_to_archive": [
+      "P1-FC-002", "P1-FC-003", "P1-FC-004",
+      "P1-FC-006", "P1-FC-008", "P1-FC-009",
+      "P1-FC-011", "P1-FC-012", "P1-FC-013", "P1-FC-014",
+      "P1-FC-016", "P1-FC-017", "P1-FC-018", "P1-FC-019",
+      "P1-FC-021", "P1-FC-022", "P1-FC-023", "P1-FC-024",
+      "P1-FC-027", "P1-FC-028", "P1-FC-029",
+      "P1-FC-031", "P1-FC-032", "P1-FC-033", "P1-FC-034",
+      "P1-FC-036", "P1-FC-037", "P1-FC-038", "P1-FC-039",
+      "P1-FC-041", "P1-FC-042", "P1-FC-043", "P1-FC-044",
+      "P1-FC-046", "P1-FC-047", "P1-FC-048", "P1-FC-049",
+      "P1-FC-051", "P1-FC-052", "P1-FC-053", "P1-FC-054",
+      "P1-FC-056", "P1-FC-057", "P1-FC-058", "P1-FC-059",
+      "P1-FC-061", "P1-FC-062", "P1-FC-063", "P1-FC-064",
+      "P1-FC-066", "P1-FC-067", "P1-FC-068", "P1-FC-069",
+      "P1-FC-071", "P1-FC-072", "P1-FC-073"
+    ],
+    "unique_retain": [
+      "P1-FC-007", "P1-FC-025"
+    ],
+    "escalate": [
+      "P1-FC-010"
+    ],
+    "special_retain": [
+      "P1-FC-074", "P1-FC-075"
+    ],
+    "_special_notes": {
+      "FC-010": "Escalated per Agent C — seed of RPA/automation group (FC-010-014). Not to be archived.",
+      "FC-074": "Part of continuous monitoring group (FC-070-074) but has ExplanationWrongA='' and ExplanationWrongB='' — DL-026. Retain for remediation.",
+      "FC-075": "Standalone item — ExplanationWrongB text discusses zero-based budgeting, not continuous monitoring like FC-070-074. Cross-contaminated item."
+    },
+    "excluded_from_archive": [
+      "P1-FC-001", "P1-FC-005", "P1-FC-007", "P1-FC-010",
+      "P1-FC-015", "P1-FC-020", "P1-FC-025", "P1-FC-026",
+      "P1-FC-030", "P1-FC-035", "P1-FC-040", "P1-FC-045",
+      "P1-FC-050", "P1-FC-055", "P1-FC-060", "P1-FC-065",
+      "P1-FC-070", "P1-FC-074", "P1-FC-075"
+    ],
+    "retain_count": 19,
+    "archive_count": 56
+  },
+  "pack_d": {
+    "section": "F",
+    "total_items": 75,
+    "seeds": [
+      "P1-FD-001", "P1-FD-005", "P1-FD-010", "P1-FD-015",
+      "P1-FD-020", "P1-FD-025", "P1-FD-035", "P1-FD-040",
+      "P1-FD-044", "P1-FD-050", "P1-FD-055", "P1-FD-060",
+      "P1-FD-065", "P1-FD-070"
+    ],
+    "clones_to_archive": [
+      "P1-FD-002", "P1-FD-003", "P1-FD-004",
+      "P1-FD-006", "P1-FD-007", "P1-FD-008", "P1-FD-009",
+      "P1-FD-011", "P1-FD-012", "P1-FD-013", "P1-FD-014",
+      "P1-FD-016", "P1-FD-017", "P1-FD-018", "P1-FD-019",
+      "P1-FD-021", "P1-FD-022", "P1-FD-023", "P1-FD-024",
+      "P1-FD-026", "P1-FD-027", "P1-FD-028", "P1-FD-029",
+      "P1-FD-032",
+      "P1-FD-036", "P1-FD-037", "P1-FD-038", "P1-FD-039",
+      "P1-FD-041", "P1-FD-042", "P1-FD-043",
+      "P1-FD-045", "P1-FD-047", "P1-FD-048", "P1-FD-049",
+      "P1-FD-051", "P1-FD-052", "P1-FD-053", "P1-FD-054",
+      "P1-FD-056", "P1-FD-057", "P1-FD-058", "P1-FD-059",
+      "P1-FD-061", "P1-FD-062", "P1-FD-063", "P1-FD-064",
+      "P1-FD-066", "P1-FD-067", "P1-FD-068", "P1-FD-069",
+      "P1-FD-071", "P1-FD-072", "P1-FD-073", "P1-FD-074"
+    ],
+    "unique_retain": [
+      "P1-FD-031", "P1-FD-034"
+    ],
+    "already_archived": [
+      "P1-FD-046"
+    ],
+    "special_retain": [
+      "P1-FD-030", "P1-FD-033", "P1-FD-075"
+    ],
+    "_special_notes": {
+      "FD-030": "Standalone stem — compliance analyst/PII exfiltration. Not part of any clone group.",
+      "FD-031": "Unique retain per Agent C (incident response plan).",
+      "FD-032": "Clone of FD-031/034 (identical stem). Retained as lone clone since FD-031 and FD-034 are retained as unique.",
+      "FD-033": "Standalone stem — dashboard/customer satisfaction. Not part of any clone group.",
+      "FD-034": "Unique retain per Agent C (incident response plan).",
+      "FD-046": "Already Archived — Vaultbrook master data management, same stem as FD-045.",
+      "FD-075": "No Stem match — empty/defective item."
+    },
+    "excluded_from_archive": [
+      "P1-FD-001", "P1-FD-005", "P1-FD-010", "P1-FD-015",
+      "P1-FD-020", "P1-FD-025", "P1-FD-030", "P1-FD-031",
+      "P1-FD-033", "P1-FD-034", "P1-FD-035", "P1-FD-040",
+      "P1-FD-044", "P1-FD-046", "P1-FD-050", "P1-FD-055",
+      "P1-FD-060", "P1-FD-065", "P1-FD-070", "P1-FD-075"
+    ],
+    "retain_count": 20,
+    "archive_count": 55
+  },
+  "total_archive": 111,
+  "certified_check": {
+    "pack_c_section_f_certified": 0,
+    "pack_d_section_f_certified": 0,
+    "_note": "Direct scan for question_state: 'Certified' across P1-FC/FD ranges returned 0 matches."
+  },
+  "batch_plan": [
+    {
+      "batch": 1,
+      "file": "pack_c_corrected.js",
+      "description": "Pack C Section F clones — batch 1/2",
+      "qids": [
+        "P1-FC-002", "P1-FC-003", "P1-FC-004",
+        "P1-FC-006", "P1-FC-008", "P1-FC-009",
+        "P1-FC-011", "P1-FC-012", "P1-FC-013", "P1-FC-014",
+        "P1-FC-016", "P1-FC-017", "P1-FC-018", "P1-FC-019",
+        "P1-FC-021", "P1-FC-022", "P1-FC-023", "P1-FC-024",
+        "P1-FC-027", "P1-FC-028", "P1-FC-029",
+        "P1-FC-031", "P1-FC-032", "P1-FC-033", "P1-FC-034",
+        "P1-FC-036", "P1-FC-037", "P1-FC-038"
+      ],
+      "count": 28
+    },
+    {
+      "batch": 2,
+      "file": "pack_c_corrected.js",
+      "description": "Pack C Section F clones — batch 2/2",
+      "qids": [
+        "P1-FC-039",
+        "P1-FC-041", "P1-FC-042", "P1-FC-043", "P1-FC-044",
+        "P1-FC-046", "P1-FC-047", "P1-FC-048", "P1-FC-049",
+        "P1-FC-051", "P1-FC-052", "P1-FC-053", "P1-FC-054",
+        "P1-FC-056", "P1-FC-057", "P1-FC-058", "P1-FC-059",
+        "P1-FC-061", "P1-FC-062", "P1-FC-063", "P1-FC-064",
+        "P1-FC-066", "P1-FC-067", "P1-FC-068", "P1-FC-069",
+        "P1-FC-071", "P1-FC-072", "P1-FC-073"
+      ],
+      "count": 28
+    },
+    {
+      "batch": 3,
+      "file": "pack_d_corrected.js",
+      "description": "Pack D Section F clones — batch 1/2",
+      "qids": [
+        "P1-FD-002", "P1-FD-003", "P1-FD-004",
+        "P1-FD-006", "P1-FD-007", "P1-FD-008", "P1-FD-009",
+        "P1-FD-011", "P1-FD-012", "P1-FD-013", "P1-FD-014",
+        "P1-FD-016", "P1-FD-017", "P1-FD-018", "P1-FD-019",
+        "P1-FD-021", "P1-FD-022", "P1-FD-023", "P1-FD-024",
+        "P1-FD-026", "P1-FD-027", "P1-FD-028", "P1-FD-029",
+        "P1-FD-032",
+        "P1-FD-036", "P1-FD-037", "P1-FD-038"
+      ],
+      "count": 28
+    },
+    {
+      "batch": 4,
+      "file": "pack_d_corrected.js",
+      "description": "Pack D Section F clones — batch 2/2",
+      "qids": [
+        "P1-FD-039",
+        "P1-FD-041", "P1-FD-042", "P1-FD-043",
+        "P1-FD-045", "P1-FD-047", "P1-FD-048", "P1-FD-049",
+        "P1-FD-051", "P1-FD-052", "P1-FD-053", "P1-FD-054",
+        "P1-FD-056", "P1-FD-057", "P1-FD-058", "P1-FD-059",
+        "P1-FD-061", "P1-FD-062", "P1-FD-063", "P1-FD-064",
+        "P1-FD-066", "P1-FD-067", "P1-FD-068", "P1-FD-069",
+        "P1-FD-071", "P1-FD-072", "P1-FD-073"
+      ],
+      "count": 27
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "session": "S835",
+  "title": "Analyze/Evaluate Recovery Program — Gap Analysis",
+  "date": "2026-07-27",
+  "scope": "All 5 packs (2,540 items)",
+  "authority": "800-Series Content Maturity Transformation Program",
+
+  "cognitive_level_distribution": {
+    "total_items": 2540,
+    "by_level": {
+      "Analyze": { "count": 10, "pct": 0.4 },
+      "Apply": { "count": 1182, "pct": 46.5 },
+      "Evaluate": { "count": 0, "pct": 0.0 },
+      "Remember": { "count": 72, "pct": 2.8 },
+      "Understand": { "count": 1276, "pct": 50.2 }
+    },
+    "by_pack": {
+      "Pack_A": { "Analyze": 1, "Apply": 281, "Evaluate": 0, "Remember": 3, "Understand": 215 },
+      "Pack_B": { "Analyze": 3, "Apply": 326, "Evaluate": 0, "Remember": 41, "Understand": 130 },
+      "Pack_C": { "Analyze": 3, "Apply": 231, "Evaluate": 0, "Remember": 11, "Understand": 255 },
+      "Pack_D": { "Analyze": 3, "Apply": 230, "Evaluate": 0, "Remember": 7, "Understand": 260 },
+      "Pack_E": { "Analyze": 0, "Apply": 114, "Evaluate": 0, "Remember": 10, "Understand": 416 }
+    }
+  },
+
+  "cognitive_vs_target": {
+    "target_source": "CAQS v1.0 §6.2",
+    "targets": {
+      "Remember": { "target_pct": 5, "actual_pct": 2.8, "gap_pct": -2.2, "gap_items": -56, "status": "DEFICIT — need +56 items" },
+      "Understand": { "target_pct": 15, "actual_pct": 50.2, "gap_pct": 35.2, "gap_items": 894, "status": "SURPLUS — ~894 items overstated" },
+      "Apply": { "target_pct": 40, "actual_pct": 46.5, "gap_pct": 6.5, "gap_items": 165, "status": "ENVELOPE — ~165 items near target" },
+      "Analyze": { "target_pct": 25, "actual_pct": 0.4, "gap_pct": -24.6, "gap_items": -625, "status": "CRITICAL DEFICIT — need +625 items" },
+      "Evaluate": { "target_pct": 15, "actual_pct": 0.0, "gap_pct": -15.0, "gap_items": -381, "status": "CRITICAL DEFICIT — need +381 items" }
+    }
+  },
+
+  "difficulty_distribution": {
+    "total_items": 2540,
+    "by_level": {
+      "Easy": { "count": 569, "pct": 22.4 },
+      "Moderate-Easy": { "count": 639, "pct": 25.2 },
+      "Moderate": { "count": 1228, "pct": 48.3 },
+      "Difficult": { "count": 113, "pct": 4.4 },
+      "Very_Difficult": { "count": 0, "pct": 0.0 }
+    },
+    "by_pack": {
+      "Pack_A": { "Easy": 102, "Moderate-Easy": 215, "Moderate": 183, "Difficult": 0, "Very_Difficult": 0 },
+      "Pack_B": { "Easy": 140, "Moderate-Easy": 84, "Moderate": 248, "Difficult": 28, "Very_Difficult": 0 },
+      "Pack_C": { "Easy": 106, "Moderate-Easy": 90, "Moderate": 288, "Difficult": 16, "Very_Difficult": 0 },
+      "Pack_D": { "Easy": 101, "Moderate-Easy": 82, "Moderate": 272, "Difficult": 44, "Very_Difficult": 0 },
+      "Pack_E": { "Easy": 120, "Moderate-Easy": 168, "Moderate": 237, "Difficult": 25, "Very_Difficult": 0 }
+    }
+  },
+
+  "difficulty_vs_target": {
+    "target_source": "CAQS v1.0 §6.1",
+    "targets": {
+      "Easy": { "target_pct": 15, "actual_pct": 22.4, "gap_pct": 7.4, "status": "SURPLUS" },
+      "Moderate-Easy": { "target_pct": 20, "actual_pct": 25.2, "gap_pct": 5.2, "status": "SURPLUS" },
+      "Moderate": { "target_pct": 30, "actual_pct": 48.3, "gap_pct": 18.3, "status": "MAJOR SURPLUS — 465 items need upgrading" },
+      "Difficult": { "target_pct": 25, "actual_pct": 4.4, "gap_pct": -20.6, "gap_items": -523, "status": "CRITICAL DEFICIT" },
+      "Very_Difficult": { "target_pct": 10, "actual_pct": 0.0, "gap_pct": -10.0, "gap_items": -254, "status": "CRITICAL DEFICIT" }
+    }
+  },
+
+  "analyze_items_inventory": [
+    { "QID": "P1-A-001", "Pack": "A", "Section": "A", "Topic": "Discontinued operation presentation", "State": "Certified", "Difficulty": "Easy", "Issue": "Labeled Analyze but Easy difficulty — possible miscategorization" },
+    { "QID": "P1B-A-076", "Pack": "B", "Section": "A", "Topic": "Transaction price allocation", "State": "Certified", "Difficulty": "Moderate" },
+    { "QID": "P1B-C-175", "Pack": "B", "Section": "C", "Topic": "Product profitability analysis", "State": "Certified", "Difficulty": "Moderate" },
+    { "QID": "P1B-C-176", "Pack": "B", "Section": "C", "Topic": "Customer profitability analysis", "State": "Certified", "Difficulty": "Moderate" },
+    { "QID": "P1-AC-001", "Pack": "C", "Section": "A", "Topic": "Bond premium amortization", "State": "Certified", "Difficulty": "Easy", "Issue": "Labeled Analyze but Easy difficulty — possible miscategorization" },
+    { "QID": "P1-CC-015", "Pack": "C", "Section": "C", "Topic": "Residual income calculation", "State": "Certified", "Difficulty": "Moderate" },
+    { "QID": "P1-DC-021", "Pack": "C", "Section": "D", "Topic": "Variable costing vs absorption costing", "State": "Certified", "Difficulty": "Moderate" },
+    { "QID": "P1-AD-001", "Pack": "D", "Section": "A", "Topic": "Accounts receivable factoring", "State": "Certified", "Difficulty": "Easy", "Issue": "Labeled Analyze but Easy difficulty — possible miscategorization" },
+    { "QID": "P1-BD-050", "Pack": "D", "Section": "B", "Topic": "Direct materials purchases budget", "State": "Certified", "Difficulty": "Moderate-Easy" },
+    { "QID": "P1-CD-018", "Pack": "D", "Section": "C", "Topic": "Sales mix variance calculation", "State": "Certified", "Difficulty": "Moderate" }
+  ],
+
+  "key_findings": [
+    "ZERO Evaluate items across all 2,540 items — the highest Bloom's level is completely absent",
+    "Only 10 Analyze items (0.4%) vs target of 635 (25%) — a 625-item deficit",
+    "96.8% of all items are at Apply or Understand level — massive mid-tier concentration",
+    "Zero Very Difficult items — no item requires extended multi-step judgment",
+    "Only 113 Difficult items (4.4%) vs target 635 (25%) — a 522-item deficit",
+    "Pack E has the weakest higher-order profile: 0 Analyze, 77% Understand, only 114 Apply",
+    "3 of 10 Analyze items are labeled Easy — likely miscategorized (template artifact like DL-031)",
+    "Moderate-labeled items (1,228, 48.3%) are the primary upgrade source pool for Analyze/Evaluate conversion"
+  ],
+
+  "recovery_recommendations": {
+    "phase_1_immediate": {
+      "description": "Create net-new Analyze and Evaluate items from scratch using quality-first pipeline (S836)",
+      "target_count": "100 Analyze + 50 Evaluate",
+      "approach": "Use S836 pipeline: Blueprint → Stem → Correct Reasoning → Distractor Logic → Evidence Review → Certification"
+    },
+    "phase_2_upgrade": {
+      "description": "Upgrade existing Moderate/Difficult Apply items with multi-step reasoning into Analyze",
+      "target_count": "200 upgrade candidates",
+      "approach": "Identify Apply+Difficult items that already require multiple cognitive steps; re-label and enhance explanations"
+    },
+    "phase_3_recalibration": {
+      "description": "Recalibrate existing items: downgrade mislabeled items, upgrade qualified candidates",
+      "target_count": "~300 recalibrations",
+      "approach": "DL-031 systematic difficulty inflation needs correction; concurrently adjust Bloom's levels"
+    },
+    "phase_4_very_difficult": {
+      "description": "Author very difficult items testing Evaluate-level judgment",
+      "target_count": "254 Very Difficult items (target 10%)",
+      "approach": "Case-based judgment items, multi-framework decision items, ambiguous-scenario items"
+    }
+  },
+
+  "certified_pool_impact": {
+    "certified_items": 2298,
+    "certified_analyze": 10,
+    "certified_evaluate": 0,
+    "certified_difficult": 113,
+    "certified_very_difficult": 0,
+    "note": "The 2,298-item certified learner pool has near-zero higher-order content. Learners cannot practice Analyze or Evaluate skills."
+  },
+
+  "governance_check": {
+    "governance_guard_tests": "32/32 PASS",
+    "certified_count_verified": "2,298 (matches CURRENT_BASELINES.md §2)",
+    "hash_drift": "Pack C and D hashes drifted from S811 baseline (expected post-S853 certification wave)",
+    "no_write_operations": true
+  }
+}

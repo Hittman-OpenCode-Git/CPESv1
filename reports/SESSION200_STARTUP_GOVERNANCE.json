@@ -1,0 +1,98 @@
+{
+  "session": "S200",
+  "agent": "A",
+  "title": "Startup Governance Baseline",
+  "timestamp": "2026-07-26T23:59:59Z",
+  "baseline": {
+    "certified_count": 2221,
+    "total_questionids_mcq": 2540,
+    "total_original_pool": 2500,
+    "certification_pct_original": 88.8,
+    "certification_pct_expanded": 87.4,
+    "total_case_items": 420,
+    "governance_guard_tests": 12,
+    "governance_guard_session_checks": 27,
+    "governance_guard_status": "PASS",
+    "open_defects_blocking_certification": {
+      "DL008_Certified_remaining": "0 — S310 declared CLOSED (all 67 were DL-029 scan artifacts); S723 confirmed 0 via Function constructor parse. Stale governance register still lists 174 but superseded.",
+      "DL026_Certified_remaining": "~0 — S710/S710R authored 175 slots; S800 confirms Certified DL-026 resolved. ~300 non-certified slots remain (Pack C/D Sections C-F).",
+      "DL013_remaining_fields": "~163 fields across Packs A/C/D, all non-Certified. Zero learner-pool exposure."
+    },
+    "pack_status": {
+      "pack_a_certified": 481,
+      "pack_a_total": 500,
+      "pack_b_certified": 500,
+      "pack_b_total": 500,
+      "pack_c_certified": 350,
+      "pack_c_total": 500,
+      "pack_d_certified": 350,
+      "pack_d_total": 500,
+      "pack_e_certified": 540,
+      "pack_e_total": 540,
+      "pack_e_note": "500 original + 40 Domain E replacement items (R01-R40 from Waves 1-3 + Wave 2b/S808)"
+    },
+    "governance_guard_rules": [
+      {"rule": 1, "level": "WARN", "description": "question_state changes must pair with knowledge/REVISION_HISTORY.md updates — flagged at session idle"},
+      {"rule": 2, "level": "BLOCK", "description": "ExplanationWrong[CorrectChoice] must be empty string (DL-008 enforcement, per EV8 / CAQS_v1.0.md §4.4)"},
+      {"rule": 3, "level": "BLOCK", "description": "MASTER_QUESTION_REGISTRY.md is generated — never hand-edit"},
+      {"rule": 4, "level": "WARN", "description": "answer-key changes must include a 'recomputed' / 'independently verified' note — flagged at session idle"},
+      {"rule": 5, "level": "BLOCK", "description": "Max 30 question objects per change-set without BLOCK-AUTHORIZED marker"}
+    ],
+    "active_boards": [
+      {"name": "TIER 0 — Learner-Safety Critical", "purpose": "Governance/LOS-required defects with direct learner exposure. Currently tracks P1E-E-048 (stem-choice mismatch) and Pack C DL-008 (resolved per S310/S723).", "session_origin": "S20 (Governance Register)"},
+      {"name": "TIER 1 — Structural Defects Awaiting Repair", "purpose": "Non-certified DL-008, DL-026 residual, DL-021 (Pack E Section C), Pack B Sections A/D certification readiness.", "session_origin": "S20 (Governance Register)"},
+      {"name": "TIER 2 — Editorial / CAQS Tasks (Non-Blocking)", "purpose": "DL-013 boilerplate, DL-012 clones, DL-009 incorrect citations, DL-015/016 metadata offsets, DL-028 tooling regression, DL-029 scan methodology. Zero learner-pool exposure.", "session_origin": "S20 (Governance Register)"},
+      {"name": "800-Series Execution Board", "purpose": "Domain E modernization: clone replacement (33/33 complete) + seed certification (38 seeds, remediated S810, awaiting S811 certification). Domain F authoring pending.", "session_origin": "S311 (Portfolio Transition Planning)"},
+      {"name": "Post-700 Governance Framework", "purpose": "Detection layer (AM-2 safe), enforcement layer (G-NEW rules G-NEW-1 through G-NEW-5), workflow-layer ownership pending. Four P0 activation gates: P0-1 (ownership), P0-2 (AM-1), P0-3 (G-NEW), P0-4 (Rule 6).", "session_origin": "S727 (Governance Operationalization)"}
+    ],
+    "known_bottlenecks": [
+      "Pack C/D Sections C-F: ~400 items uncertified, highest defect density, require CAQS §1.6 six-dimension verification",
+      "Pack E Section C: 95 items need 285 distractor explanations authored from scratch (DL-021) — deferred",
+      "DL-031 difficulty inflation: ~500 items pool-wide with systematic definition-match Moderate→Easy over-labeling",
+      "DL-032 case uniform difficulty: 420 case items all labeled 'Moderate' — statistically implausible",
+      "Case bank distractor gap: 0% distractor explanations filled (390 fields needed), 500-series continuation pending",
+      "Pack E educational thinness: 500 items structurally clean but median EC = 67 chars, 0 ASC/COSO citations",
+      "DL-016 metadata-content offset: residual in non-certified Pack A/C/D sections; causes scan false positives",
+      "Registry gaps: 20 entries missing across MQR/QSL/DPR — atomic rebuild deferred to S319",
+      "Concurrent-write risk (DL-019): file-lock protocol documented but not implemented",
+      "CURRENT_BASELINES.md stale: pack file hashes drifted from S726 baseline (authorized by S803)"
+    ]
+  },
+  "key_findings": [
+    "Certified count is 2,221 (verified by direct grep) — stable across S318, S809, S810, S810.1. Pack E: 540 (500 original + 40 replacement items). Pack A: 481, B: 500, C: 350, D: 350.",
+    "DL-008 is CLOSED at 0 actual violations. The 67 tracked items in stale reports were confirmed as DL-029 scan artifacts by S310. S723 confirmed 0 across all 2,500 items via Function constructor parse.",
+    "Domain E modernization: 33/33 clone groups cleared (100%). 40 replacement items (R01-R40) are all Certified and in production in pack_e_corrected.js. 38 seed items remediated in S810, awaiting S811 certification.",
+    "Governance guard: 5 rules active (2 WARN, 3 BLOCK). 27/27 session-level governance checks pass across S318, S809, S810. Base test suite: 12 tests.",
+    "700-series Governance & Calibration Maturity Program CLOSED (S723). 800-series execution is ACTIVE (S311 roadmap). Three pipelines stratified: Gold (Pack B, 0 defects), Silver (Packs A/E, minimal defects), Bronze (Packs C/D, rotation artifacts).",
+    "The three-tier quality stratification reflects three different authoring pipelines: Pack B (independent authoring, 0 defects, gold standard), Pack A/E (structurally clean but educationally thin), Pack C/D (template-rotation engine, DL-008/DL-013/DL-012 clone artifacts).",
+    "DCS v1.1 (Difficulty-Calibration Standard) is codified and governs all future difficulty labeling. S721A Pack D Section FD proof-of-execution: 15/15 items recalibrated, 0 content drift.",
+    "300-series Analytics Program (S301-S310) closed cleanly. S310 delivered the permanent Portfolio Operations Dashboard. PHI = 67.7 (Grade C).",
+    "800-series path to completion: S804-S812 for Domain E (9 sessions, ~81 items) + Domain F (10-15 sessions deferred, blocked by Domain E closure at ~S327). Post-800: EW fill, DL-031/032 recalibration, governance closure.",
+    "The operating model is STABLE with clear ownership boundaries. AGENTS.md §13 (Runtime Governance) applies to all long-running sessions (>30 min or >3 agents) with T0→Tmid→Tend checkpoint sequence."
+  ],
+  "source_files_consulted": [
+    "reports/SESSION311_SESSION_SUMMARY.md",
+    "reports/SESSION318_SESSION_SUMMARY.md",
+    "reports/SESSION320_SESSION_SUMMARY.md",
+    "reports/SESSION723_PROGRAM_CLOSURE_REPORT.md",
+    "reports/SESSION727_SESSION_SUMMARY.md",
+    "reports/SESSION800_SESSION_SUMMARY.md",
+    "reports/SESSION805_DL016_INVENTORY.json",
+    "reports/SESSION809_SESSION_SUMMARY.md",
+    "reports/S810.1/SESSION8101_SESSION_SUMMARY.md",
+    "reports/SESSION310_EXECUTIVE_SUMMARY.md",
+    "reports/GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md",
+    "knowledge/REVISION_HISTORY.md (tail 100 lines)",
+    "pack_*_corrected.js (direct grep for certified counts)"
+  ],
+  "verification": {
+    "certified_grep_result": 2221,
+    "pack_a_questionids": 500,
+    "pack_b_questionids": 500,
+    "pack_c_questionids": 500,
+    "pack_d_questionids": 500,
+    "pack_e_questionids": 540,
+    "method": "Select-String -Pattern '\"question_state\": \"Certified\"' | Measure-Object",
+    "stability": "Count verified against S318, S809, S810, S810.1 — all report 2,221"
+  }
+}

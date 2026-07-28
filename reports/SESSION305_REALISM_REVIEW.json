@@ -1,0 +1,68 @@
+{
+  "generated": "2026-07-26T21:49:14.791Z",
+  "session": "S305",
+  "totalExhibits": 117,
+  "strong": 86,
+  "acceptable": 13,
+  "weak": 9,
+  "rewriteNeeded": 9,
+  "avgRealismScore": 75,
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "total": 15,
+      "strong": 6,
+      "acceptable": 4,
+      "weak": 1,
+      "rewriteNeeded": 4,
+      "avgScore": 57
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "total": 20,
+      "strong": 16,
+      "acceptable": 3,
+      "weak": 0,
+      "rewriteNeeded": 1,
+      "avgScore": 76
+    },
+    "C - Performance Management": {
+      "total": 19,
+      "strong": 15,
+      "acceptable": 1,
+      "weak": 0,
+      "rewriteNeeded": 3,
+      "avgScore": 76
+    },
+    "D - Cost Management": {
+      "total": 24,
+      "strong": 20,
+      "acceptable": 2,
+      "weak": 1,
+      "rewriteNeeded": 1,
+      "avgScore": 80
+    },
+    "E - Internal Controls": {
+      "total": 20,
+      "strong": 16,
+      "acceptable": 2,
+      "weak": 2,
+      "rewriteNeeded": 0,
+      "avgScore": 83
+    },
+    "F - Technology & Analytics": {
+      "total": 19,
+      "strong": 13,
+      "acceptable": 1,
+      "weak": 5,
+      "rewriteNeeded": 0,
+      "avgScore": 73
+    },
+    "Unknown": {
+      "total": 0,
+      "strong": 0,
+      "acceptable": 0,
+      "weak": 0,
+      "rewriteNeeded": 0,
+      "avgScore": 0
+    }
+  }
+}

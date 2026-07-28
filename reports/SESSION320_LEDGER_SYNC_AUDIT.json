@@ -1,0 +1,32 @@
+{
+  "session": "S320",
+  "type": "Similarity Ledger Audit",
+  "timestamp": "2026-07-27T03:26:39.237Z",
+  "current_entries": 20,
+  "existing_r_entries": 20,
+  "total_r_items": 40,
+  "missing_entries": 20,
+  "missing_qids": [
+    "P1-E-R12",
+    "P1-E-R13",
+    "P1-E-R18",
+    "P1-E-R21",
+    "P1-E-R22",
+    "P1-E-R23",
+    "P1-E-R24",
+    "P1-E-R25",
+    "P1-E-R26",
+    "P1-E-R27",
+    "P1-E-R28",
+    "P1-E-R29",
+    "P1-E-R33",
+    "P1-E-R34",
+    "P1-E-R35",
+    "P1-E-R36",
+    "P1-E-R37",
+    "P1-E-R38",
+    "P1-E-R39",
+    "P1-E-R40"
+  ],
+  "recommendation": "Add 20 missing R12-R40 entries to QUESTION_SIMILARITY_LEDGER.json. Deferred to S321 for post-remediation accuracy."
+}

@@ -1,0 +1,784 @@
+{
+  "session": "S719",
+  "agent": "I",
+  "pre_s719": {
+    "difficulty": {
+      "Easy": 699,
+      "Moderate-Easy": 339,
+      "Moderate": 1253,
+      "Difficult": 208,
+      "Very Difficult": 0,
+      "": 1
+    },
+    "cognitive_level": {
+      "Remember": 436,
+      "Understand": 614,
+      "Apply": 1161,
+      "Analyze": 66,
+      "Evaluate": 223
+    },
+    "matrix": [
+      [
+        102,
+        225,
+        184,
+        20,
+        168
+      ],
+      [
+        86,
+        52,
+        189,
+        9,
+        3
+      ],
+      [
+        171,
+        300,
+        703,
+        30,
+        49
+      ],
+      [
+        76,
+        37,
+        85,
+        7,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "by_pack": {
+      "pack_a": {
+        "diff": {
+          "Easy": 261,
+          "Moderate-Easy": 57,
+          "Moderate": 182,
+          "Difficult": 0,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 3,
+          "Understand": 59,
+          "Apply": 278,
+          "Analyze": 2,
+          "Evaluate": 158
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 3,
+            "Understand": 49,
+            "Apply": 51,
+            "Analyze": 2,
+            "Evaluate": 156
+          },
+          "Moderate-Easy": {
+            "Remember": 0,
+            "Understand": 5,
+            "Apply": 51,
+            "Analyze": 0,
+            "Evaluate": 1
+          },
+          "Moderate": {
+            "Remember": 0,
+            "Understand": 5,
+            "Apply": 176,
+            "Analyze": 0,
+            "Evaluate": 1
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      },
+      "pack_b": {
+        "diff": {
+          "Easy": 140,
+          "Moderate-Easy": 84,
+          "Moderate": 248,
+          "Difficult": 28,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 41,
+          "Understand": 111,
+          "Apply": 325,
+          "Analyze": 15,
+          "Evaluate": 8
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 14,
+            "Understand": 66,
+            "Apply": 54,
+            "Analyze": 3,
+            "Evaluate": 3
+          },
+          "Moderate-Easy": {
+            "Remember": 15,
+            "Understand": 12,
+            "Apply": 52,
+            "Analyze": 4,
+            "Evaluate": 1
+          },
+          "Moderate": {
+            "Remember": 12,
+            "Understand": 33,
+            "Apply": 192,
+            "Analyze": 7,
+            "Evaluate": 4
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 27,
+            "Analyze": 1,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      },
+      "pack_c": {
+        "diff": {
+          "Easy": 99,
+          "Moderate-Easy": 79,
+          "Moderate": 303,
+          "Difficult": 19,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 5,
+          "Understand": 221,
+          "Apply": 230,
+          "Analyze": 23,
+          "Evaluate": 21
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 2,
+            "Understand": 54,
+            "Apply": 30,
+            "Analyze": 7,
+            "Evaluate": 6
+          },
+          "Moderate-Easy": {
+            "Remember": 3,
+            "Understand": 24,
+            "Apply": 47,
+            "Analyze": 5,
+            "Evaluate": 0
+          },
+          "Moderate": {
+            "Remember": 0,
+            "Understand": 136,
+            "Apply": 141,
+            "Analyze": 11,
+            "Evaluate": 15
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 7,
+            "Apply": 12,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      },
+      "pack_d": {
+        "diff": {
+          "Easy": 99,
+          "Moderate-Easy": 28,
+          "Moderate": 313,
+          "Difficult": 59,
+          "Very Difficult": 0,
+          "": 1
+        },
+        "cl": {
+          "Remember": 1,
+          "Understand": 209,
+          "Apply": 233,
+          "Analyze": 23,
+          "Evaluate": 34
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 0,
+            "Understand": 53,
+            "Apply": 35,
+            "Analyze": 8,
+            "Evaluate": 3
+          },
+          "Moderate-Easy": {
+            "Remember": 0,
+            "Understand": 4,
+            "Apply": 24,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Moderate": {
+            "Remember": 0,
+            "Understand": 123,
+            "Apply": 151,
+            "Analyze": 11,
+            "Evaluate": 28
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 29,
+            "Apply": 23,
+            "Analyze": 4,
+            "Evaluate": 3
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "": {
+            "Remember": 1
+          }
+        }
+      },
+      "pack_e": {
+        "diff": {
+          "Easy": 100,
+          "Moderate-Easy": 91,
+          "Moderate": 207,
+          "Difficult": 102,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 386,
+          "Understand": 14,
+          "Apply": 95,
+          "Analyze": 3,
+          "Evaluate": 2
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 83,
+            "Understand": 3,
+            "Apply": 14,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Moderate-Easy": {
+            "Remember": 68,
+            "Understand": 7,
+            "Apply": 15,
+            "Analyze": 0,
+            "Evaluate": 1
+          },
+          "Moderate": {
+            "Remember": 159,
+            "Understand": 3,
+            "Apply": 43,
+            "Analyze": 1,
+            "Evaluate": 1
+          },
+          "Difficult": {
+            "Remember": 76,
+            "Understand": 1,
+            "Apply": 23,
+            "Analyze": 2,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      }
+    },
+    "total_items": 2500,
+    "vfinal_items": 2425,
+    "pack_b_section_e_added": 75
+  },
+  "post_s719": {
+    "difficulty": {
+      "Easy": 531,
+      "Moderate-Easy": 583,
+      "Moderate": 1253,
+      "Difficult": 132,
+      "Very Difficult": 0,
+      "": 1
+    },
+    "cognitive_level": {
+      "Remember": 152,
+      "Understand": 1066,
+      "Apply": 1161,
+      "Analyze": 66,
+      "Evaluate": 55
+    },
+    "matrix": [
+      [
+        102,
+        225,
+        184,
+        20,
+        0
+      ],
+      [
+        86,
+        296,
+        189,
+        9,
+        3
+      ],
+      [
+        171,
+        300,
+        703,
+        30,
+        49
+      ],
+      [
+        0,
+        37,
+        85,
+        7,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "by_pack": {
+      "pack_a": {
+        "diff": {
+          "Easy": 105,
+          "Moderate-Easy": 213,
+          "Moderate": 182,
+          "Difficult": 0,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 3,
+          "Understand": 215,
+          "Apply": 278,
+          "Analyze": 2,
+          "Evaluate": 2
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 3,
+            "Understand": 49,
+            "Apply": 51,
+            "Analyze": 2,
+            "Evaluate": 156
+          },
+          "Moderate-Easy": {
+            "Remember": 0,
+            "Understand": 5,
+            "Apply": 51,
+            "Analyze": 0,
+            "Evaluate": 1
+          },
+          "Moderate": {
+            "Remember": 0,
+            "Understand": 5,
+            "Apply": 176,
+            "Analyze": 0,
+            "Evaluate": 1
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      },
+      "pack_b": {
+        "diff": {
+          "Easy": 137,
+          "Moderate-Easy": 87,
+          "Moderate": 248,
+          "Difficult": 28,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 41,
+          "Understand": 114,
+          "Apply": 325,
+          "Analyze": 15,
+          "Evaluate": 5
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 14,
+            "Understand": 66,
+            "Apply": 54,
+            "Analyze": 3,
+            "Evaluate": 3
+          },
+          "Moderate-Easy": {
+            "Remember": 15,
+            "Understand": 12,
+            "Apply": 52,
+            "Analyze": 4,
+            "Evaluate": 1
+          },
+          "Moderate": {
+            "Remember": 12,
+            "Understand": 33,
+            "Apply": 192,
+            "Analyze": 7,
+            "Evaluate": 4
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 27,
+            "Analyze": 1,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      },
+      "pack_c": {
+        "diff": {
+          "Easy": 93,
+          "Moderate-Easy": 85,
+          "Moderate": 303,
+          "Difficult": 19,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 5,
+          "Understand": 227,
+          "Apply": 230,
+          "Analyze": 23,
+          "Evaluate": 15
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 2,
+            "Understand": 54,
+            "Apply": 30,
+            "Analyze": 7,
+            "Evaluate": 6
+          },
+          "Moderate-Easy": {
+            "Remember": 3,
+            "Understand": 24,
+            "Apply": 47,
+            "Analyze": 5,
+            "Evaluate": 0
+          },
+          "Moderate": {
+            "Remember": 0,
+            "Understand": 136,
+            "Apply": 141,
+            "Analyze": 11,
+            "Evaluate": 15
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 7,
+            "Apply": 12,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      },
+      "pack_d": {
+        "diff": {
+          "Easy": 96,
+          "Moderate-Easy": 31,
+          "Moderate": 313,
+          "Difficult": 59,
+          "Very Difficult": 0,
+          "": 1
+        },
+        "cl": {
+          "Remember": 1,
+          "Understand": 212,
+          "Apply": 233,
+          "Analyze": 23,
+          "Evaluate": 31
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 0,
+            "Understand": 53,
+            "Apply": 35,
+            "Analyze": 8,
+            "Evaluate": 3
+          },
+          "Moderate-Easy": {
+            "Remember": 0,
+            "Understand": 4,
+            "Apply": 24,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Moderate": {
+            "Remember": 0,
+            "Understand": 123,
+            "Apply": 151,
+            "Analyze": 11,
+            "Evaluate": 28
+          },
+          "Difficult": {
+            "Remember": 0,
+            "Understand": 29,
+            "Apply": 23,
+            "Analyze": 4,
+            "Evaluate": 3
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "": {
+            "Remember": 1
+          }
+        }
+      },
+      "pack_e": {
+        "diff": {
+          "Easy": 100,
+          "Moderate-Easy": 167,
+          "Moderate": 207,
+          "Difficult": 26,
+          "Very Difficult": 0
+        },
+        "cl": {
+          "Remember": 102,
+          "Understand": 298,
+          "Apply": 95,
+          "Analyze": 3,
+          "Evaluate": 2
+        },
+        "matrix": {
+          "Easy": {
+            "Remember": 83,
+            "Understand": 3,
+            "Apply": 14,
+            "Analyze": 0,
+            "Evaluate": 0
+          },
+          "Moderate-Easy": {
+            "Remember": 68,
+            "Understand": 7,
+            "Apply": 15,
+            "Analyze": 0,
+            "Evaluate": 1
+          },
+          "Moderate": {
+            "Remember": 159,
+            "Understand": 3,
+            "Apply": 43,
+            "Analyze": 1,
+            "Evaluate": 1
+          },
+          "Difficult": {
+            "Remember": 76,
+            "Understand": 1,
+            "Apply": 23,
+            "Analyze": 2,
+            "Evaluate": 0
+          },
+          "Very Difficult": {
+            "Remember": 0,
+            "Understand": 0,
+            "Apply": 0,
+            "Analyze": 0,
+            "Evaluate": 0
+          }
+        }
+      }
+    },
+    "total_items": 2500,
+    "pack_e_section_projection": {
+      "A": {
+        "Remember": 24,
+        "Understand": 40,
+        "Apply": 11,
+        "Analyze": 0,
+        "Evaluate": 0
+      },
+      "B": {
+        "Remember": 19,
+        "Understand": 41,
+        "Apply": 37,
+        "Analyze": 3,
+        "Evaluate": 0
+      },
+      "C": {
+        "Remember": 14,
+        "Understand": 52,
+        "Apply": 32,
+        "Analyze": 0,
+        "Evaluate": 2
+      },
+      "D": {
+        "Remember": 16,
+        "Understand": 45,
+        "Apply": 14,
+        "Analyze": 0,
+        "Evaluate": 0
+      },
+      "E": {
+        "Remember": 9,
+        "Understand": 65,
+        "Apply": 1,
+        "Analyze": 0,
+        "Evaluate": 0
+      },
+      "F": {
+        "Remember": 20,
+        "Understand": 55,
+        "Apply": 0,
+        "Analyze": 0,
+        "Evaluate": 0
+      }
+    }
+  },
+  "deltas": {
+    "difficulty": {
+      "Easy": -168,
+      "Moderate-Easy": 244,
+      "Moderate": 0,
+      "Difficult": -76,
+      "Very Difficult": 0
+    },
+    "cognitive_level": {
+      "Remember": -284,
+      "Understand": 452,
+      "Apply": 0,
+      "Analyze": 0,
+      "Evaluate": -168
+    }
+  },
+  "target_alignment": {
+    "difficulty_target_gap": {
+      "Easy": "+6.2pp off target (15%)",
+      "Moderate-Easy": "+3.3pp off target (20%)",
+      "Moderate": "+20.1pp off target (30%)",
+      "Difficult": "-19.7pp off target (25%)",
+      "Very Difficult": "-10.0pp off target (10%)"
+    },
+    "cognitive_level_target_gap": {
+      "Remember": "+1.1pp off target (5%)",
+      "Understand": "+27.6pp off target (15%)",
+      "Apply": "+6.4pp off target (40%)",
+      "Analyze": "-22.4pp off target (25%)",
+      "Evaluate": "-12.8pp off target (15%)"
+    },
+    "dcs_targets": {
+      "Easy": 15,
+      "Moderate-Easy": 20,
+      "Moderate": 30,
+      "Difficult": 25,
+      "Very Difficult": 10
+    },
+    "caqs_targets": {
+      "Remember": 5,
+      "Understand": 15,
+      "Apply": 40,
+      "Analyze": 25,
+      "Evaluate": 15
+    }
+  },
+  "evidence_vs_quota_assessment": "OVERALL: 528 total changes (Agent C: 244 + Agent D: 284). All changes fall into exactly two patterns — both concentrated template artifacts, not evenly distributed to meet targets.\n\nPATTERN 1 — Evaluate@Easy Template Artifact (Agent C, 168 items):\n  All 168 items share the same \"which response is most appropriate?\" template framing that tests single-standard comprehension, not evaluative judgment. The Evaluate CL was assigned by the bulk-authoring template based on the phrase \"most appropriate\" in the stem, which is a wording artifact, not a cognitive demand signal per DCS §3. Stems do not present competing frameworks, trade-off scenarios, or multi-criteria judgment. Every sampled stem confirmed: single GAAP/COSO/standard rule comprehension.\n  Decision: Evaluate→Understand, Easy→Moderate-Easy. This is EVIDENCE-DRIVEN — based on stem content review against DCS CL definitions.\n\nPATTERN 2 — Pack E Difficult@Remember Template Inflation (Agent C, 76 items):\n  All 76 items are definition-recall questions labeled Difficult/4 by the Pack E template engine. Items ask \"X is defined as:\" or \"X focuses on:\" with the correct answer being the term matching the definition. The template assigned Difficult/4 by position in the rotation group, not by cognitive demand.\n  Decision: Remember→Understand, Difficult→Moderate-Easy. This is EVIDENCE-DRIVEN — per DCS §3, Remember defaults to ME/2, not Difficult/4.\n\nPATTERN 3 — Pack E Definition-Match with Same-Domain Distractors (Agent D, 284 items):\n  All 284 items follow the same pattern: stem presents a definition, ALL 4 choices are plausible alternatives within the same domain (e.g., COSO framework components, BSC perspectives, quality cost categories, GAAP treatment options). Per CAQS v1.0 §4.4 and DCS §2, when ALL distractors require discrimination between closely related concepts, the item tests Understand-level comprehension, not simple Recall.\n  Agent D verified this pattern across all 6 Pack E sections with per-item distractor analysis. The 100% Remember labeling in Sections E and F was a template artifact — the template assigned Remember based on the definition-match stem format while ignoring the distractor structure.\n  Decision: Remember→Understand (CL only). This is EVIDENCE-DRIVEN — distractor analysis, not quota-chasing.\n\nNO QUOTA-BASED ADJUSTMENT DETECTED:\n  - Changes are concentrated in 2 specific CL transition paths (Evaluate→Understand, Remember→Understand), not spread across all levels\n  - Zero items were shifted from Apply, Analyze, or other CLs to meet targets\n  - Difficulty changes are collateral — driven by DCS §3 CL→Diff mapping, not independent difficulty targeting\n  - Pack E accounts for ~76% of all changes, reflecting the known DL-031 template miscalibration concentrated in that pack\n  - ~18% of the entire 2,500-item bank is affected, concentrated almost entirely in Pack E (57% of Pack E)\n\nPACK CONCENTRATION ANALYSIS:\n  - Pack E: 284 changes (63% of all changes)\n  - Pack A: 156 changes (mostly Section A/B Evaluate→Understand)\n  - Pack B: 3 changes\n  - Pack C: 6 changes\n  - Pack D: 3 changes\n\nThe heavy Pack E concentration is expected — Pack E had the most severe template miscalibration (386/500 items = 77.2% Remember, vs. DCS/CAQS target of 5-15%). This is not arbitrary targeting; it reflects the actual defect density distribution.\n\nDISTRIBUTION ANOMALIES CHECK:\n  - Pack E Section F post-projection: 20 Remember, 55 Understand, 0 Analyze, 0 Evaluate. This leaves Section F with the lowest Apply/Analyze/Evaluate density. Per Agent D, this reflects the section's actual content — all 75 items are definition-match format. A content authoring gap exists (no scenario-based or analysis items in Section F), but this is not a calibration defect.\n  - Pack E Section C post-projection: 14 Remember, 52 Understand, 32 Apply, 2 Evaluate. This preserves the existing Apply items (performance management calculations) while reclassifying the definition-match items.\n  - No pack shows a dramatic over/under representation relative to its content profile after changes.",
+  "certified_items_affected": 430,
+  "unprocessed_items_affected": 1,
+  "change_composition": {
+    "agent_c": {
+      "total": 244,
+      "evaluate_to_understand": 168,
+      "remember_to_understand": 76,
+      "by_pack": {
+        "pack_a": 156,
+        "pack_b": 3,
+        "pack_c": 6,
+        "pack_d": 3,
+        "pack_e": 76
+      }
+    },
+    "agent_d": {
+      "total": 208,
+      "by_section": {
+        "A": 29,
+        "B": 24,
+        "C": 40,
+        "D": 30,
+        "E": 48,
+        "F": 37
+      },
+      "recommended_remember_by_section": {
+        "A": 24,
+        "B": 19,
+        "C": 14,
+        "D": 16,
+        "E": 9,
+        "F": 20
+      }
+    }
+  }
+}

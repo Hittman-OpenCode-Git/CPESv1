@@ -1,0 +1,192 @@
+{
+  "document": "SESSION208_REGISTRY_AUTHORITY",
+  "session": "S208",
+  "series": "200-Series Architecture Stewardship",
+  "board": "F",
+  "title": "Registry Authority Model — Authoritative Sources and Conflict Resolution",
+  "status": "ACTIVE",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "authority": "PROJECT_CONSTITUTION.md; S208 Board A Frozen Principles (P2, P6); governance-guard.js Rule 3",
+  "depends_on": ["SESSION208_ARCHITECTURAL_PRINCIPLES.json (Board A)"],
+
+  "sources_consumed": [
+    "knowledge/MASTER_QUESTION_REGISTRY.md — auto-generated question inventory",
+    ".opencode/plugins/governance-guard.js — Rule 3 (MASTER_QUESTION_REGISTRY auto-generation BLOCK)",
+    "knowledge/CURRENT_BASELINES.md — certified pool at 2,298",
+    "reports/SESSION254_CROSS_ENGINE_CONSISTENCY.json — 7 registries validated, 1 anomaly",
+    "reports/SESSION256_WORKBENCH_VALIDATION.json — 8/8 investigation chains verified",
+    "knowledge/REVISION_HISTORY.md — certification and change records",
+    "reports/SESSION202_IDENTITY_MODEL_V2.json — compound-key identity architecture"
+  ],
+
+  "governing_principle": "P6 Traceability Everywhere: Every entity shall have exactly one authoritative source. No entity may have two registries claiming authority. When a conflict exists between a generated registry and a raw source file, the raw source file is the ultimate authority.",
+
+  "registries": {
+
+    "questions": {
+      "entity": "Question items (MCQ and Case Study)",
+      "raw_source": {
+        "files": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js", "scored_cases.js", "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+        "format": "JavaScript array of question objects with question_state, CorrectChoice, ExplanationWrong fields",
+        "authoritative": true,
+        "note": "Raw source files are the ultimate authority for question data. All registries, engines, and delivery mechanisms derive from these files."
+      },
+      "generated_registry": {
+        "file": "knowledge/MASTER_QUESTION_REGISTRY.md",
+        "generator": "scripts/build_master_registry.js",
+        "format": "Markdown table — auto-generated, never hand-edited (governance guard Rule 3 BLOCK)",
+        "authoritative": false,
+        "derived_from": "Raw pack files",
+        "note": "This registry is a DERIVED view. Any discrepancy between the registry and raw files is resolved by re-running the generator from raw files."
+      },
+      "other_representations": [
+        {
+          "file": "reports/MasterQuestionRegistry.csv",
+          "generator": "scripts/build_master_registry.js (same generator, CSV output)",
+          "note": "Same content as MASTER_QUESTION_REGISTRY.md in CSV format. Not independently authoritative."
+        }
+      ],
+      "consumers": [
+        "May Admin Question Lookup (question_lookup.js)",
+        "Investigation API (investigation_api.js)",
+        "Question Health Engine (question_health.js)",
+        "Certification Pipeline (readiness_scorer → certification_candidate_engine)",
+        "Delivery Mechanism (app.js — reads raw pack files directly for rendering)"
+      ],
+      "conflict_resolution": {
+        "rule": "Raw pack files are the ultimate authority. Generated registry discrepancies are resolved by re-running scripts/build_master_registry.js.",
+        "example": "P1-EC-004: Registry reported 'Unprocessed' but REVISION_HISTORY.md recorded certification in S853. Resolution: raw file question_state wins. Generator re-run confirms. This is a registry staleness issue, not a content issue."
+      }
+    },
+
+    "sessions": {
+      "entity": "Learner practice/exam sessions",
+      "authoritative_source": {
+        "type": "Runtime registry (JSON)",
+        "location": "Session registry — created and updated by app.js session management hooks",
+        "note": "Sessions are runtime entities. They exist only when the application is active. The session registry is the canonical record of all sessions.",
+        "fields": ["session_id", "mode", "started_at", "completed_at", "question_exposures", "results"]
+      },
+      "consumers": [
+        "May Admin Session Intelligence (session_intelligence.js)",
+        "Student Exposure Index (student_exposure_index.js — currently no operational data)",
+        "Investigation Workbench (links sessions to investigations)"
+      ],
+      "validation": "S254: 40 sessions, 535 unique QIDs linked, 0 duplicate/phantom/orphan references post-S253 deep-link repair",
+      "conflict_resolution": "Session registry is authoritative. If localStorage contains a session not in the registry, it's orphaned and should be migrated or discarded."
+    },
+
+    "recommendations": {
+      "entity": "Defect-linked recommendations for remediation",
+      "authoritative_source": {
+        "type": "Recommendation registry (JSON)",
+        "location": "Generated by recommendation pipeline during defect analysis",
+        "note": "Recommendations link defects to remediation targets. Each REC-ID maps to specific QIDs and defect classes.",
+        "fields": ["REC-ID", "defect_class", "qids_affected", "priority", "status", "created_session", "resolved_session"]
+      },
+      "consumers": [
+        "May Admin Investigation Dashboard",
+        "Challenge Workbench (displays recommendation context)",
+        "Remediation Queue (auto-dispatches ≤30 items per batch)"
+      ],
+      "validation": "S254 cross-engine: recommendations linked to 2,382 QIDs across defect classes",
+      "conflict_resolution": "Recommendation registry is authoritative. If a recommendation references a QID not in MASTER_QUESTION_REGISTRY.md, the recommendation is stale."
+    },
+
+    "challenges": {
+      "entity": "User-raised challenges to question content",
+      "authoritative_source": {
+        "type": "Challenge registry (JSON)",
+        "location": "Challenge registry — populated by user challenge submission workflow",
+        "note": "Challenges are user-initiated. Each challenge targets a specific QID and may spawn investigations.",
+        "fields": ["challenge_id", "qid", "issue_type", "user_claim", "status", "created_at", "linked_investigation_id"]
+      },
+      "consumers": [
+        "May Admin Challenge Triage (challenge_triage.js)",
+        "Investigation Platform (spawns investigations from challenges)",
+        "Challenge Workbench (displays challenge context during investigations)"
+      ],
+      "validation": "S254: 35 challenges, 12 triaged (34% — gap), all follow valid state transitions",
+      "conflict_resolution": "Challenge registry is authoritative. Current gap: triage at 34% — 23 challenges unattended."
+    },
+
+    "investigations": {
+      "entity": "Formal investigations into identified defects or challenges",
+      "authoritative_source": {
+        "type": "Investigation registry (JSON)",
+        "location": "Investigation registry — populated by investigation lifecycle hooks",
+        "note": "Investigations follow a state machine: OPEN → IN_PROGRESS → RESOLVED/CLOSED. Each investigation links to a challenge, recommendation, session, and certification event.",
+        "fields": ["investigation_id", "linked_challenge_id", "linked_recommendation_id", "linked_session_id", "defect_class", "qids_investigated", "status", "findings", "resolution"]
+      },
+      "consumers": [
+        "May Admin Investigation Dashboard",
+        "Investigation Workbench",
+        "Executive Architecture Review (Board I)"
+      ],
+      "validation": "S254: 19 investigations, all follow valid state transitions, 0 orphaned references. S256: 8/8 end-to-end investigation chains PASS.",
+      "conflict_resolution": "Investigation registry is authoritative. Investigation chains (challenge→defect→recommendation→session→certification) must remain intact."
+    },
+
+    "certification_events": {
+      "entity": "Certification actions — items transitioning to Certified state",
+      "authoritative_source": {
+        "primary": "Raw pack files — question_state field",
+        "note": "The question_state field in raw pack files is the ultimate authority for certification status. All registries and reports must derive from this field."
+      },
+      "secondary_sources": [
+        {
+          "file": "knowledge/REVISION_HISTORY.md",
+          "note": "Records the context of certification decisions — who, when, why. Must be updated with every question_state change (Rule 1 WARN). Does not independently determine certification status."
+        },
+        {
+          "file": "reports/session_status/SESSION_STATUS_*.md",
+          "note": "Session-level snapshots of certification state. Derived from raw files, not independently authoritative."
+        }
+      ],
+      "consumers": [
+        "Certification Pipeline (reads question_state to determine readiness)",
+        "Delivery Mechanism (app.js — ensures only Certified items enter learner pool)",
+        "Executive Architecture Review (tracks certification progress)",
+        "Blueprint Coverage Matrix (counts Certified by domain)"
+      ],
+      "validation": "Certified count must be verified by direct raw-file grep, not by report consumption (AGENTS.md §5). Cross-reference: P1-EC-004 anomaly confirmed registry-vs-raw discrepancy.",
+      "conflict_resolution": {
+        "rule": "Raw file question_state is the ultimate authority. REVISION_HISTORY.md is the authoritative record of the certification decision context. If a generated report disagrees with the raw file, the raw file wins.",
+        "verification_method": "Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' | Measure-Object"
+      }
+    }
+  },
+
+  "authority_chain": {
+    "description": "When multiple sources claim information about the same entity, this chain resolves conflicts",
+    "chain": [
+      {"priority": 1, "source": "Raw pack files (pack_*_corrected.js, scored_cases*.js)", "applies_to": "Questions, question_state, CorrectChoice, ExplanationWrong fields"},
+      {"priority": 2, "source": "Runtime registries (session, challenge, investigation, recommendation)", "applies_to": "Runtime entities created by application operations"},
+      {"priority": 3, "source": "Generated registries (MASTER_QUESTION_REGISTRY.md, BlueprintCoverageMatrix.csv)", "applies_to": "Derived views — always reconcilable to priority 1 and 2 sources"},
+      {"priority": 4, "source": "Session reports and status snapshots", "applies_to": "Historical records — informative, not authoritative"}
+    ]
+  },
+
+  "conflict_detection_regime": {
+    "automated_check": {
+      "name": "Cross-Engine Consistency Scan",
+      "pattern": "S254 cross-engine consistency audit (95/100)",
+      "description": "For each entity type, verify registry claims against raw source files. Flag any divergence.",
+      "frequency": "Per certification wave or per session with >3 agent operations",
+      "implementation": "Cross-reference: (1) MASTER_QUESTION_REGISTRY question_state vs raw file question_state, (2) session registry QID references vs MASTER_QUESTION_REGISTRY, (3) recommendation registry QID references vs MASTER_QUESTION_REGISTRY, (4) challenge registry QID references vs MASTER_QUESTION_REGISTRY"
+    },
+    "manual_verification": {
+      "description": "When automated check finds a conflict, direct raw-file line-level inspection resolves it (per AGENTS.md §5). Never trust a report over raw file evidence.",
+      "known_anomalies": [
+        {"entity": "P1-EC-004", "discrepancy": "Registry says 'Unprocessed', REVISION_HISTORY says 'Certified' in S853", "resolution": "Raw file question_state is authoritative. Flagged in S254 — pending reconciliation."}
+      ]
+    }
+  },
+
+  "governance_guard_integration": {
+    "rule3": "MASTER_QUESTION_REGISTRY.md is auto-generated from raw pack files. Any attempt to hand-edit it is BLOCKED. This ensures the registry cannot diverge from raw files through human error.",
+    "rule1_warn": "REVISION_HISTORY.md must be updated with every question_state change. This ensures certification event traceability is maintained.",
+    "enforcement": "All 6 governance guard rules apply to write operations on all authoritative sources. Registry authority does not exempt any file from governance guard enforcement."
+  }
+}

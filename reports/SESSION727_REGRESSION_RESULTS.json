@@ -1,0 +1,43 @@
+{
+  "report_metadata": {
+    "session": "S727",
+    "date": "2026-07-26",
+    "agent": "Agent J — Historical Regression Testing",
+    "source_validations": "SESSION726_HISTORICAL_INCIDENT_VALIDATION.json, SESSION726_GOVERNANCE_SIMULATION_RESULTS.json"
+  },
+  "incidents": [
+    {
+      "incident_id": "DL-012",
+      "title": "Section E Clonal Redundancy (Pack C/D, 140 clones)",
+      "controls_tested": ["Rule 5 30-item BLOCK", "AGENTS.md §5 Dual Verification", "AGENTS.md §6 Count Volatility"],
+      "verdict": "WOULD HAVE BEEN PREVENTED",
+      "confidence": "HIGH",
+      "mechanism": "Rule 5 BLOCK at authoring forces ≤28-item batches, making 5-item clone pattern visible. AGENTS.md §5 cross-verification detects clone patterns at certification."
+    },
+    {
+      "incident_id": "DL-029",
+      "title": "67 Phantom DL-008 from Forward-Scan False Positives",
+      "controls_tested": ["AM-2 within-object CC extraction", "Pack B Gold Standard Test", "Hard Gate count divergence", "AGENTS.md §5 Dual Verification"],
+      "verdict": "WOULD HAVE BEEN PREVENTED",
+      "confidence": "95%",
+      "mechanism": "AM-1/AM-2 returns 0 on first scan. Pack B Gold Standard invalidates any tool reporting >0. Hard Gate AUTO-ESCALATES before remediation committed."
+    },
+    {
+      "incident_id": "S723 Ownership Gap",
+      "title": "700-series CLOSED without verifying receiving owner acceptance",
+      "controls_tested": ["Series Closure Gate 4-step chain", "Pre-Closure Checklist (11 items)", "Ownership Acceptance Registry"],
+      "verdict": "WOULD HAVE BEEN BLOCKED",
+      "confidence": "95%",
+      "mechanism": "S723 would have failed 12/12 checklist items: A-1 (0 acceptance records), A-2 (non-qualifying language), A-3 (no ACCEPT-AS-DEBT), A-4 (CLOSE without resolution)."
+    }
+  ],
+  "simulation_results": {
+    "simulation_a_dl029": "PASS — 2/2 DL-008 detected, 0 false positives, 0 false negatives (Agent K, 95% confidence)",
+    "simulation_b_ownership_loss": "PASS — gap discovered at auditor within 3 sessions (Agent L, 90% confidence)",
+    "simulation_c_series_sunset": "PASS — gate blocks closure at checklist A-1 (Agent M, 95% confidence)",
+    "simulation_d_dl012_count_volatility": "PASS — Hard Gate catches 128→112→138 instability (HIGH confidence)",
+    "simulation_e_dl029_phantom67": "PASS — AM-1 returns 0 actual, invalidates FM-001 results (HIGH confidence)",
+    "simulation_f_s723_ownership": "PASS — 12/12 checklist items FAIL, closure blocked (HIGH confidence)"
+  },
+  "verdict": "All 3 historical incidents (DL-012, DL-029, S723 ownership gap) WOULD HAVE BEEN PREVENTED by the S726/S727 governance controls. All 6 simulations validate at 90-95% confidence. Residual risk: Rule 6 mechanical enforcement not yet deployed (procedural gate only)."
+}

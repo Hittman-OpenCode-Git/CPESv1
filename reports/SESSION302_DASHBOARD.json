@@ -1,0 +1,60 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "S302 Portfolio Distractor Dashboard",
+  "quality_heatmap": {
+    "by_pack": {
+      "pack_a": {"dqs": 72, "tier": "Acceptable", "fill_rate": 100, "boilerplate": 15, "grade": "B"},
+      "pack_b": {"dqs": 85, "tier": "Strong", "fill_rate": 100, "boilerplate": 0, "grade": "A"},
+      "pack_c": {"dqs": 65, "tier": "Needs Work", "fill_rate": 85.1, "boilerplate": 78, "grade": "C"},
+      "pack_d": {"dqs": 63, "tier": "Needs Work", "fill_rate": 85.1, "boilerplate": 91, "grade": "C-"},
+      "pack_e": {"dqs": 78, "tier": "Acceptable-Strong", "fill_rate": 100, "boilerplate": 0, "grade": "B+"},
+      "case_banks": {"dqs": 5, "tier": "Critical Gap", "fill_rate": 2.1, "boilerplate": 0, "grade": "F"}
+    },
+    "by_section": {
+      "A": {"dqs": 74, "grade": "B"},
+      "B": {"dqs": 71, "grade": "B-"},
+      "C": {"dqs": 70, "grade": "C+"},
+      "D": {"dqs": 76, "grade": "B"},
+      "E": {"dqs": 58, "grade": "D", "note": "Sections C-E and D-E are clone-archived with high DL-013 concentration"},
+      "F": {"dqs": 55, "grade": "D", "note": "C-F and D-F are entirely unprocessed with boilerplate EW"}
+    }
+  },
+  "risk_heatmap": {
+    "critical": [
+      {"risk": "Case bank distractor coverage", "items": 318, "dqs_impact": "95 points below target", "mitigation": "Author all EW fields — 6 estimated sessions"},
+      {"risk": "DL-005 identical distractors", "items": 28, "dqs_impact": "Auto-fail D4", "mitigation": "Rewrite identical distractors — 2 estimated sessions"}
+    ],
+    "high": [
+      {"risk": "DL-013 boilerplate in Certified items", "items": 97, "dqs_impact": "-20 DQS", "mitigation": "Template replacement — 3 sessions"},
+      {"risk": "Pack C/D Section E clone groups", "items": 112, "dqs_impact": "-25 DQS", "mitigation": "Clone audit + per-item rewrite — 4 sessions"},
+      {"risk": "Pack C/D Section F empty EW + boilerplate", "items": 149, "dqs_impact": "-15 DQS", "mitigation": "EW authoring + template removal — 6 sessions"}
+    ],
+    "medium": [
+      {"risk": "Absolutist language in 12 distractors", "items": 12, "mitigation": "Per S90 proposals — 1 session"},
+      {"risk": "Cross-pack asymmetric EW quality", "items": 12, "mitigation": "Standardize EW for same-concept items across packs — 2 sessions"}
+    ]
+  },
+  "blueprint_dashboard": {
+    "domain_A_External_Financial_Reporting": {"dqs": 74, "items": "575 (A+B section items)", "strength": "Calculation-based distractors map to common errors", "weakness": "DL-016 offset in Pack A metadata block"},
+    "domain_B_Planning_Budgeting": {"dqs": 71, "items": "550", "strength": "Budgeting framework provides natural distinct alternatives", "weakness": "Conceptual distractors sometimes too similar"},
+    "domain_C_Performance_Management": {"dqs": 70, "items": "552", "strength": "Variance distractors are calculation-based and strong", "weakness": "Responsibility-center conceptual items have weaker distractors"},
+    "domain_D_Cost_Management": {"dqs": 76, "items": "550", "strength": "Best domain — overhead allocation natural alternatives", "weakness": "Clone-rotation artifacts in Section E"},
+    "domain_E_Internal_Controls": {"dqs": 72, "items": "643", "strength": "COSO framework components as distinct distractors", "weakness": "IT-focused items have shorter, less discriminating EW"},
+    "domain_F_Technology_Analytics": {"dqs": 75, "items": "555", "strength": "Emerging topic — modern, well-targeted distractors", "weakness": "Some items use 'all of the above' as correct answer"}
+  },
+  "rewrite_dashboard": {
+    "total_identified": 1561,
+    "by_priority": {
+      "P0_immediate": 390,
+      "P1_high": 184,
+      "P2_medium": 447,
+      "P3_moderate": 12,
+      "P4_low": 528
+    },
+    "estimated_total_rewrite_sessions": 24,
+    "fastest_path_to_improvement": "Case bank EW authoring (P0, 6 sessions) + DL-013 boilerplate removal (P1, 3 sessions) = 9 sessions for largest quality gains",
+    "certification_unblocking": "P1 and P2 remediation (631 items) unblocks Pack C/D Sections E-F for certification"
+  },
+  "portfolio_status": "NEEDS TARGETED REWRITE — Case bank distractor coverage is the critical gap (Grade: F). MCQ distractor quality is acceptable overall (Grade: B) but Pack C/D Sections E-F need focused remediation before certification. Packs B and E are gold-standard reference models."
+}

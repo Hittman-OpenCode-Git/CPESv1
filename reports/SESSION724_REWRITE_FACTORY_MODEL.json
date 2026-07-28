@@ -1,0 +1,62 @@
+{
+  "session": "724",
+  "title": "Rewrite Factory Model v1.0 — Design Reference (Not Activated)",
+  "generated": "2026-07-26",
+  "agents": ["G", "L", "O"],
+  "status": "DESIGN REFERENCE — Not activated per S724 DEFER decision",
+
+  "rewrite_inventory": {
+    "label_edits_no_rewrite": {
+      "count": "~920 items",
+      "description": "DL-031 difficulty label corrections (Moderate→Easy), DL-032 case uniform difficulty changes. These are field-value changes, not content rewrites.",
+      "effort": "~2 sessions (batch operations)",
+      "priority": "LOW — cosmetic, non-blocking"
+    },
+    "genuine_rewrites": {
+      "count": "~330 items",
+      "description": "DL-013 boilerplate replacement (851 fields across ~280 items), EC expansion (short ECs, missing principle references), DL-012 clone seed remediation (28 seeds need original distractor explanations)",
+      "effort": "~8 sessions",
+      "priority": "MEDIUM — affects learner experience but not safety"
+    }
+  },
+
+  "rewrite_types": {
+    "boilerplate_replacement": {
+      "description": "Replace 'represents a plausible misconception' template text with choice-specific distractor explanations",
+      "batch_cap": 28,
+      "time_per_field": "~5-7 minutes",
+      "total_fields": 851
+    },
+    "ec_expansion": {
+      "description": "Expand ExplanationCorrect from ~213 chars to 500+ chars with principle reference, formula trace, business interpretation",
+      "time_per_item": "~10-15 minutes",
+      "target_items": "~500 items with EC < 150 chars"
+    },
+    "clone_seed_remediation": {
+      "description": "Author original distractor explanations for archived DL-012 clone seeds",
+      "time_per_item": "~20-30 minutes (full CAQS §1.6 informal review)",
+      "target_items": 28
+    }
+  },
+
+  "operating_model": {
+    "recommendation": "Embed rewrite work in existing 800-series certification waves. Do not create a separate rewrite lane.",
+    "rationale": "EC expansion depends on stable CorrectChoice — must follow certification, not precede it. A separate Rewrite Factory adds a second certification pass, increasing total sessions. The 800-series HYBRID certification pipeline already addresses genuine rewrite needs during the certification audit.",
+    "ec_expansion_sequence": "Certify item → EC validated against certified CC → Expand EC → Re-verify against CAQS §4. This must happen post-certification."
+  },
+
+  "standards_library_assessment": {
+    "ew_templates": {
+      "value": "High — 3-4 templates by question type (calculation error, conceptual error, misapplication) would accelerate authoring velocity ~20-30% at 0.5 session cost",
+      "recommendation": "Build the seed (1 session), not the full library"
+    },
+    "misconception_library": {
+      "value": "Medium — useful as authoring reference but high maintenance cost. Start with top 20 concepts.",
+      "recommendation": "Lightweight seed only"
+    },
+    "distractor_library": {
+      "value": "Low — distractor patterns are topic-specific and don't transfer well between domains. Overhead exceeds benefit.",
+      "recommendation": "Skip"
+    }
+  }
+}

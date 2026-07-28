@@ -1,0 +1,144 @@
+{
+  "session": "S809.2",
+  "agent": "B",
+  "role": "Defect Manifest Compiler",
+  "compiled_by": "Agent J (from Agent C EW assessment + Agent D risk matrix cross-reference)",
+  "defect_manifest": {
+    "scope": {
+      "total_seeds": 38,
+      "pack_c": 19,
+      "pack_d": 19,
+      "seeds_with_zero_defects": 0
+    },
+    "by_defect_class": {
+      "DL-008": {
+        "status": "CLEAN",
+        "affected_seeds": 0,
+        "detail": "All 38 seeds confirmed DL-008 compliant. CorrectChoice ExplanationWrong slots are correctly empty across all items.",
+        "verified_by": "Agent D (methodology: within-object CC extraction)"
+      },
+      "DL-010": {
+        "status": "REMEDIATE",
+        "affected_seeds": 3,
+        "confirmed_qids": [
+          {
+            "qid": "P1-EC-020",
+            "severity": "HIGH",
+            "affected_slots": ["EWB", "EWC"],
+            "detail": "EWB describes physical access controls but distractor B is about monthly bank reconciliation. EWC describes compensating control/physical access but distractor C is about quarterly audit review. Both EW texts are from an entirely different question. EWD is also empty. All 3 distractor slots are broken — zero usable distractor feedback.",
+            "remediation": "Full re-authoring of all 3 distractor EW slots required."
+          },
+          {
+            "qid": "P1-ED-010",
+            "severity": "MEDIUM",
+            "affected_slots": ["EWD"],
+            "detail": "EWD text: 'Management override is bypassing controls, not a principle for limiting user access.' The phrase 'limiting user access' is unrelated to the question about independent verification / preventive controls. Possible cross-item contamination from a different rotation-group item.",
+            "remediation": "Replace EWD with choice-specific text describing why distractor D is wrong for this question's concept."
+          },
+          {
+            "qid": "P1-ED-051",
+            "severity": "MEDIUM",
+            "affected_slots": ["EWB"],
+            "detail": "EWB is DL-013 template boilerplate that references 'balanced scorecard metrics' but is assigned to slot B which describes 'replace segregation of duties.' The boilerplate text describes choice A rather than choice B — text-to-slot mismatch within the template. Learner would see wrong-topic feedback.",
+            "remediation": "Replace EWB with choice-specific text describing why 'replace segregation of duties' is not a correct purpose of MFA."
+          }
+        ],
+        "flagged_for_cc_audit": 4,
+        "cc_audit_qids": ["P1-EC-072", "P1-ED-014", "P1-ED-042", "P1-ED-058"],
+        "cc_audit_note": "These items show empty/non-empty patterns consistent with Agent C/D CC disagreement. If CC values differ between agents, the EW slots needing DL-010 review may differ from this list."
+      },
+      "DL-013": {
+        "status": "REMEDIATE",
+        "affected_seeds": 5,
+        "affected_slots": 9,
+        "all_pack_d": true,
+        "confirmed_qids": [
+          {
+            "qid": "P1-ED-016",
+            "affected_slots": ["EWB", "EWC"],
+            "pattern": "Classic DL-013 template: 'This option reflects a misunderstanding of... Review the applicable costing standard or framework...'",
+            "detail": "Both distractor slots use identical generic template text. Zero choice-specific feedback. ERM risk response is a nuanced topic requiring genuine distractor explanations."
+          },
+          {
+            "qid": "P1-ED-036",
+            "affected_slots": ["EWB", "EWC"],
+            "detail": "Both EW slots are DL-013 template boilerplate. IT change management is a moderately complex topic requiring genuine explanations."
+          },
+          {
+            "qid": "P1-ED-046",
+            "affected_slots": ["EWD"],
+            "detail": "EWD is DL-013 template boilerplate with truncated text mid-word: 'effectiven'. EW_A and EW_B are empty. Zero choice-specific distractor explanations. Code of conduct/ethics is straightforward but EW quality is severely degraded."
+          },
+          {
+            "qid": "P1-ED-051",
+            "affected_slots": ["EWB"],
+            "detail": "EWB is DL-013 template boilerplate. Additionally text-to-slot mismatch — template text references 'balanced scorecard metrics' (choice A) but assigned to slot B. See also DL-010 entry."
+          },
+          {
+            "qid": "P1-ED-075",
+            "affected_slots": ["EWB", "EWD"],
+            "detail": "Both EW slots are DL-013 template boilerplate. EW_A is empty. Zero choice-specific distractor explanations across all 3 distractor slots."
+          }
+        ]
+      },
+      "DL-025_DL-026": {
+        "status": "REMEDIATE",
+        "affected_seeds": 38,
+        "empty_non_cc_slots": 53,
+        "summary": "Every single one of the 38 seeds has at least 1 empty non-CorrectChoice ExplanationWrong slot. Total: 53 of 114 non-CC slots (46.5%) are empty (MISSING). Zero seeds achieve full 3-distractor coverage.",
+        "by_slot_count": {
+          "seeds_with_1_empty_non_cc_slot": 23,
+          "seeds_with_2_empty_non_cc_slots": 12,
+          "seeds_with_3_empty_non_cc_slots": 3
+        },
+        "three_empty_slots_seeds": ["P1-EC-014", "P1-EC-022", "P1-EC-066"],
+        "two_empty_slots_seeds": ["P1-EC-023", "P1-EC-031", "P1-EC-072", "P1-ED-010", "P1-ED-014", "P1-ED-016", "P1-ED-035", "P1-ED-042", "P1-ED-046", "P1-ED-058", "P1-ED-066", "P1-ED-074"],
+        "note": "CC discrepancies between Agents C and D mean the exact empty-slot-per-item count may shift on 5 seeds. The 53 total MISSING count is based on Agent C's authoritative per-slot scan, which is slot-letter-aware. The slot LETTER that is empty is stable regardless of which slot is the CC slot."
+      },
+      "DL-031": {
+        "status": "REVIEW",
+        "affected_seeds": 6,
+        "confirmed_qids": [
+          {"qid": "P1-ED-001", "stored_difficulty": 2, "stored_label": "Difficult", "actual_cognitive_level": "Understand", "should_be": 1, "topic": "Three lines of defense model"},
+          {"qid": "P1-ED-014", "stored_difficulty": 2, "stored_label": "Difficult", "actual_cognitive_level": "Understand", "should_be": 1, "topic": "Independent verification"},
+          {"qid": "P1-ED-025", "stored_difficulty": 2, "stored_label": "Difficult", "actual_cognitive_level": "Understand", "should_be": 1, "topic": "Authorization controls"},
+          {"qid": "P1-EC-008", "stored_difficulty": 2, "stored_label": "Moderate", "actual_cognitive_level": "Remember", "should_be": 1, "topic": "COSO framework name-recognition"},
+          {"qid": "P1-EC-066", "stored_difficulty": 1, "stored_label": "Easy", "actual_cognitive_level": "Remember", "should_be": 1, "topic": "SoD cash custody — correctly calibrated"},
+          {"qid": "SYSTEMIC", "stored_difficulty": "~3 avg", "note": "~30 seeds have template-assigned Moderate difficulty for definition-level COSO concepts. Per-item review by Difficulty Specialist recommended."}
+        ]
+      },
+      "DL-018": {
+        "status": "NOT_PRESENT",
+        "affected_seeds": 0,
+        "detail": "All ExplanationWrong fields exist (not absent). Empty slots have '' (empty string), not undefined."
+      },
+      "DL-021": {
+        "status": "NOT_PRESENT",
+        "affected_seeds": 0,
+        "detail": "All ExplanationWrong fields structurally present. Slots are empty but exist. Distinct from Pack E Section C DL-021 where fields are absent."
+      }
+    },
+    "cross_agent_discrepancy": {
+      "type": "CorrectChoice Mismatch (Agents C vs. D)",
+      "severity": "CRITICAL",
+      "affected_seeds": 5,
+      "discrepant_qids": {
+        "P1-EC-008": { "agent_c_cc": "A", "agent_d_cc": "D" },
+        "P1-EC-014": { "agent_c_cc": "C", "agent_d_cc": "B" },
+        "P1-EC-066": { "agent_c_cc": "B", "agent_d_cc": "A" },
+        "P1-EC-031": { "agent_c_cc": "D", "agent_d_cc": "C" },
+        "P1-EC-072": { "agent_c_cc": "D", "agent_d_cc": "C" }
+      },
+      "impact": "EW slot remediation assignments depend on which slot is CorrectChoice. The 5 discrepant seeds have different EW-gap profiles depending on which CC value is authoritative. DL-010/DL-026 counts on these 5 items may shift after CC resolution.",
+      "recommendation": "Independent third-agent CC audit using boundary-aware object extraction before any EW authoring."
+    }
+  },
+  "total_remediation_effort": {
+    "ew_slots_to_author": 53,
+    "ew_slots_to_replace_boilerplate": 9,
+    "ec_fields_to_enhance": 17,
+    "difficulty_labels_to_recalibrate": "~30",
+    "cc_values_to_verify": 5
+  },
+  "notes": "Defect manifest compiled from Agent C (per-slot EW assessment) and Agent D (per-QID risk analysis). Cross-agent CC discrepancies flagged as CRITICAL — see cross_agent_discrepancy section. All counts assume Agent C's CC values as provisional baseline pending third-agent audit."
+}

@@ -1,0 +1,1314 @@
+{
+  "audit_metadata": {
+    "date": "2026-07-28",
+    "phase": 2,
+    "description": "Root-level file dependency reference analysis. Phase 2 of root folder cleanup audit."
+  },
+  "files": [
+    {
+      "filename": "index_updated.html",
+      "category": "application",
+      "inbound_references": [],
+      "outbound_references": [
+        "styles.css",
+        "pack_a_corrected.js",
+        "pack_b_corrected.js",
+        "pack_c_corrected.js",
+        "pack_d_corrected.js",
+        "pack_e_corrected.js",
+        "scored_cases.js",
+        "scored_cases2.js",
+        "scored_cases3.js",
+        "scored_cases4.js",
+        "scored_cases5.js",
+        "may-learner-state.js",
+        "governance/delivery_blocklist.js",
+        "may-core.js",
+        "app.js"
+      ],
+      "runtime_dependency": true,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "ENTRY POINT. Loads all application assets via script and link tags. No file requires it -- it is the root of the dependency tree."
+    },
+    {
+      "filename": "app.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [
+        "pack_a_corrected.js",
+        "pack_b_corrected.js",
+        "pack_c_corrected.js",
+        "pack_d_corrected.js",
+        "pack_e_corrected.js",
+        "scored_cases.js",
+        "scored_cases2.js",
+        "scored_cases3.js",
+        "scored_cases4.js",
+        "scored_cases5.js",
+        "may-core.js",
+        "may-learner-state.js"
+      ],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Main examination engine. Consumes all pack and scored_cases files via global namespace (loaded by script tags before execution). Uses may-core.js and may-learner-state.js global APIs. Loaded by index_updated.html."
+    },
+    {
+      "filename": "styles.css",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html",
+        "admin.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Application styling. Loaded by index_updated.html via link tag. Also referenced by admin.html. No outbound dependencies."
+    },
+    {
+      "filename": "pack_a_corrected.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Question bank (Pack A, 500 items). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "pack_b_corrected.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Question bank (Pack B, 500 items). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "pack_c_corrected.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Question bank (Pack C, 500 items). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "pack_d_corrected.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Question bank (Pack D, 500 items). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "pack_e_corrected.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Question bank (Pack E, 540 items including R-series). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "scored_cases.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Case study bank (15 cases). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "scored_cases2.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Case study bank (15 cases). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "scored_cases3.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Case study bank (15 cases). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "scored_cases4.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Case study bank (15 cases). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "scored_cases5.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Case study bank (15 cases). Pure data file -- no outbound references. Loaded by index_updated.html as script tag. Consumed by app.js via global namespace."
+    },
+    {
+      "filename": "may-core.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Core framework library. Exposes global API consumed by app.js. No outbound references. Loaded by index_updated.html as script tag before app.js."
+    },
+    {
+      "filename": "may-learner-state.js",
+      "category": "application",
+      "inbound_references": [
+        "index_updated.html"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": true,
+      "is_loaded_by_html": true,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "State management library. Exposes global API consumed by app.js. No outbound references. Loaded by index_updated.html as script tag before app.js."
+    },
+    {
+      "filename": "admin.html",
+      "category": "application",
+      "inbound_references": [],
+      "outbound_references": [
+        "styles.css",
+        "scripts/output/admin_dashboard_data.js"
+      ],
+      "runtime_dependency": true,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Standalone admin dashboard. Loads styles.css and admin_dashboard_data.js. Not referenced by index_updated.html or app.js -- accessed independently via direct URL. Not part of the main examination delivery pipeline."
+    },
+    {
+      "filename": "package.json",
+      "category": "configuration",
+      "inbound_references": [],
+      "outbound_references": [
+        "VERSION"
+      ],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "NPM package configuration. References VERSION file (line 3 version field). Defines project dependencies. Referenced by package-lock.json. Not loaded at runtime."
+    },
+    {
+      "filename": "package-lock.json",
+      "category": "configuration",
+      "inbound_references": [],
+      "outbound_references": [
+        "VERSION"
+      ],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "NPM lock file. References VERSION name string. Auto-generated artifact -- not directly consumed. Not loaded at runtime."
+    },
+    {
+      "filename": "opencode.json",
+      "category": "configuration",
+      "inbound_references": [],
+      "outbound_references": [
+        ".opencode/plugins/governance-guard.js",
+        "AGENTS.md"
+      ],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "OpenCode CLI tooling configuration. References plugin directory and indirectly references AGENTS.md. Consumed by OpenCode CLI only -- not loaded at runtime."
+    },
+    {
+      "filename": "VERSION",
+      "category": "configuration",
+      "inbound_references": [
+        "package.json",
+        "package-lock.json"
+      ],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Version metadata file. Referenced by package.json (line 3) and package-lock.json (multiple lines). No outbound dependencies. Not loaded at runtime."
+    },
+    {
+      "filename": "AGENTS.md",
+      "category": "governance",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "AI session standing instructions. Read by AI tooling per opencode.json plugin configuration. Not loaded at application runtime. Zero inbound references from application code."
+    },
+    {
+      "filename": "$null",
+      "category": "garbage",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Garbage file (94 bytes). PowerShell output redirection artifact. Zero application references. Safe to remove."
+    },
+    {
+      "filename": "({idx",
+      "category": "garbage",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Garbage file (0 bytes). Empty artifact. Zero application references. Safe to remove."
+    },
+    {
+      "filename": "a+b",
+      "category": "garbage",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Garbage file (0 bytes). Empty artifact. Zero application references. Safe to remove."
+    },
+    {
+      "filename": "null",
+      "category": "garbage",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Garbage file (1,760 bytes). Command output redirection artifact. Zero application references. Safe to remove."
+    },
+    {
+      "filename": "temp_qid_sample.json",
+      "category": "temporary",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Temporary file (2 bytes, near-empty). Zero application references. Safe to remove."
+    },
+    {
+      "filename": "may-core(1).js",
+      "category": "garbage",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Windows copy duplicate of may-core.js (155,809 bytes). Created by Windows file copy operation with (1) suffix. Not loaded by any HTML file. Zero application references. Safe to remove."
+    },
+    {
+      "filename": "may-learner-state(1).js",
+      "category": "garbage",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Windows copy duplicate of may-learner-state.js (57,889 bytes). Created by Windows file copy operation with (1) suffix. Not loaded by any HTML file. Zero application references. Safe to remove."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-20260726180816",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-20260726S718",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1857",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1900",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1903",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092643236",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092649084",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092655033",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092655733",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092661402",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092662052",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_b_corrected.js.bak-20260726175459",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_b_corrected.js.bak-20260726180809",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_b_corrected.js.bak-20260726S718",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_b_corrected.js.bak-20260727151912",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260726175459",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260726180816",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260726232212",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260726S718",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727114221",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727121004",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727130223",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727135518",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727174450",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727175906",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727200252",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727201905",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727203117",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727S364",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-20260727S829",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-s357-20260727115517",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_c_corrected.js.bak-s853-2026-07-27-14-1",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260726175741",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260726180826",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260726225550",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260726231242",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260726231432",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260726S718",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260727114219",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260727121029",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260727123551",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-20260727S364",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_d_corrected.js.bak-s853-2026-07-27-14-1",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726175459",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726175741",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726180816",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726203321",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726205416",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726205554",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726213630",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260726S718",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-20260727151913",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092690553",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092696249",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092696853",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092765951",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092766526",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092767113",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092767955",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092773752",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092774361",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092775336",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092776037",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092781954",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092782603",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092783328",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092783820",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "scored_cases.js.bak-20260726161314",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "scored_cases.js.bak-20260726161701",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "scored_cases.js.bak-20260726172400",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "scored_cases.js.bak-20260726180922",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "scored_cases4.js.bak-20260726135005",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "scored_cases4.js.bak-20260726140450",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "app.js.bak-20260725221322",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "index_updated.html.bak-20260725221322",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "styles.css.bak-20260725221322",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "AGENTS.md.bak-20260727174341",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "may-core.js.bak-20260725221322",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "may-core.js.bak-20260726153313",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "may-core.js.bak-20260726160050",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "may-learner-state.js.bak-20260726153313",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "may-learner-state.js.bak-20260726161132",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    },
+    {
+      "filename": "may-learner-state.js.bak-20260726161712",
+      "category": "backup",
+      "inbound_references": [],
+      "outbound_references": [],
+      "runtime_dependency": false,
+      "is_loaded_by_html": false,
+      "import_count": 0,
+      "require_count": 0,
+      "reference_details": "Backup snapshot. Zero application references. Prohibited from root per Constitution section 11.4."
+    }
+  ],
+  "summary": {
+    "total_files_analyzed": 111,
+    "active_files": 28,
+    "backup_files": 83,
+    "files_with_no_references": 91,
+    "files_with_runtime_dependencies": 16,
+    "files_with_build_dependencies": 4,
+    "garbage_files": 6,
+    "temporary_files": 1,
+    "governance_files": 1,
+    "application_files": 16,
+    "configuration_files": 4
+  }
+}

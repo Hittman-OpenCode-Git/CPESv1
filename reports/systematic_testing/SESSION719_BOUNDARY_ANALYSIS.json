@@ -1,0 +1,278 @@
+{
+  "session": "S719",
+  "agent": "E",
+  "timestamp": "2026-07-26T00:00:00Z",
+  "methodology": {
+    "stemSampleCount": 85,
+    "packsSampled": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+    "samplingStrategy": "Stratified by CognitiveLevel × Section × Pack, with oversampling at boundary zones. Each item's Stem, Choices, CorrectChoice, and CognitiveLevel extracted from the content block (authoritative source) of the pack file.",
+    "classificationSource": "Content-block CognitiveLevel field (not metadata-block; dual-block divergence noted for DL-016 items)"
+  },
+  "poolOvervie": {
+    "totalItems": 2425,
+    "clDistribution": {
+      "Remember": 435,
+      "Understand": 587,
+      "Apply": 1122,
+      "Analyze": 58,
+      "Evaluate": 223
+    },
+    "keyImbalances": [
+      "Analyze:Apply ratio is 1:19.3. Only 58 Analyze items vs 1122 Apply items. Even allowing for exam content profile, this is an order-of-magnitude underassignment.",
+      "Evaluate:Analyze ratio is 3.8:1. Normally Analyze > Evaluate (you must analyze before you can evaluate). The inversion suggests Evaluate is being used as a catch-all for 'which response is most appropriate' phrasing.",
+      "168 of 223 Evaluate items (75.3%) are Difficulty=Easy — a flat contradiction: the highest Bloom's level assigned to the lowest difficulty items.",
+      "154 of 223 Evaluate items (69.1%) contain 'Which response is most appropriate?' in stem — strong evidence of a template-phrasing trigger.",
+      "Pack E has 386 Remember (77.2% of section) vs 14 Understand (2.8%) — an impossible ratio for 6-domain content requiring comprehension."
+    ]
+  },
+  "zones": {
+    "remember_understand": {
+      "systemic_drift": "Remember inflated; Understand underassigned. Magnitude: ~330 items misclassified (primarily Pack E: 284, plus scattered Pack B ~40, Pack A ~5). Direction: Remember → Understand.",
+      "pattern": "Template-based Remember assignment where all four distractors belong to the same narrow domain as the correct answer, making the item a comprehension/discrimination task rather than pure recognition. Three sub-patterns identified:",
+      "subPatterns": [
+        {
+          "name": "COSO component same-domain distractors",
+          "description": "Stems ask 'X reflects/includes/involves:' where ALL distractors are other specific COSO framework components or sub-concepts (e.g., Control activities vs. Control environment vs. Risk assessment vs. Monitoring). Candidate must understand the COSO taxonomy to discriminate — cannot rely on domain-disjoint elimination.",
+          "dominantPack": "E (Sections E, F)",
+          "example": "P1E-E-002: 'The control environment reflects:' with choices A=Financial reporting, B=Physical controls (control activity sub-type), C=Organizational ethical values (correct), D=Monitoring activities. ALL are COSO concepts. Must understand component-subconcept mapping.",
+          "frequency": "~63 of 72 Pack E Section E items"
+        },
+        {
+          "name": "Definition-match with same-domain confusors",
+          "description": "Stems give a textbook definition or description; ALL answer choices are valid terms within the same accounting subdomain. Candidate must discriminate between closely related concepts (e.g., correlation coefficient vs. standard error vs. slope; all 4 budget types; all 4 analytics maturity levels).",
+          "dominantPack": "E (Sections B, C, D, F), B (scattered)",
+          "example": "P1E-F-002: 'Predictive analytics uses:' with choices A=Prescriptive rules, B=Historical data description, C=Optimization models, D=Statistical models. ALL are analytics maturity model categories. Must understand what predictive means vs. other analytics types.",
+          "frequency": "55 of 75 Pack E Section F; ~40 of ~60 Pack E Section B"
+        },
+        {
+          "name": "GAAP rule selection with same-standard distractors",
+          "description": "Stems ask 'Under ASC XXX, Y is/requires:' where ALL distractors are plausible alternative treatments under the same ASC standard or related measurement bases. Candidate must KNOW the correct rule — not recognize a term.",
+          "dominantPack": "E (Section A)",
+          "example": "P1E-A-001: 'What is the primary purpose of the balance sheet?' All 4 choices are purposes of financial statements (cash flows, financial position, equity changes, profitability). Must know which statement serves which purpose.",
+          "frequency": "32 of 56 Pack E Section A"
+        }
+      ],
+      "decision_rule": "REMEMBER if: (a) stem is a term-definition flashcard — 'X is defined as:' or 'What term describes Y?', AND (b) at least TWO distractors are from ENTIRELY DIFFERENT domains than the correct answer (e.g., correct=BSC term but one distractor is a tax rule and another is a cost concept). UNDERSTAND if: ALL distractors are plausible alternatives from the SAME narrow domain as the correct answer — the candidate must comprehend the concept to discriminate between them, not just recognize a term. Operator test: 'Can a candidate who memorized the glossary definition but does not understand the conceptual relationship eliminate this distractor?' If yes → Remember. If they must understand the concept's place within its taxonomy → Understand.",
+      "estimated_misclassified": 330,
+      "estimated_by_pack": {
+        "pack_e": 284,
+        "pack_b": 40,
+        "pack_a": 5,
+        "pack_c": 1,
+        "pack_d": 0
+      },
+      "sample_analysis": [
+        {"qid": "P1E-E-004", "current": "Remember", "recommended": "Understand", "rationale": "Control activities include: Segregation of duties (correct) vs Board oversight, Code of conduct, External audit. ALL are COSO framework elements. Candidate must understand which sub-concept belongs to which component."},
+        {"qid": "P1E-E-003", "current": "Remember", "recommended": "Understand", "rationale": "Risk assessment involves: Identifying/analyzing risks (correct) vs Insuring, Transferring, Eliminating all risks. ALL are risk management activities; candidate must distinguish risk ASSESSMENT from risk RESPONSE."},
+        {"qid": "P1E-F-002", "current": "Remember", "recommended": "Understand", "rationale": "Predictive analytics uses: Statistical models to forecast (correct) vs Prescriptive rules, Historical description, Optimization. ALL are analytics types; candidate must understand what predictive means."},
+        {"qid": "P1E-F-008", "current": "Remember", "recommended": "Understand", "rationale": "Structured data is: Organized in tables (correct) vs Free-form text, Images/video, Social media posts. Must understand data taxonomy."},
+        {"qid": "P1E-C-001", "current": "Apply", "recommended": "Understand", "rationale": "Standard costs are: Budgeted costs for a single unit. This is a definition match, not application. Choices include actual, historical, average costs — all plausible cost bases but concept recognition only."},
+        {"qid": "P1E-B-004", "current": "Remember", "recommended": "Understand", "rationale": "Fixed cost per unit: Decreases as activity increases (correct) vs always zero, remains constant, increases. Must comprehend per-unit vs total cost behavior distinction — a core accounting concept trap."},
+        {"qid": "P1B-B-116", "current": "Remember", "recommended": "Remember", "rationale": "R-squared measures: Proportion of variation explained (correct) vs correlation coefficient, standard error, slope. All are regression terms. Borderline — candidate can match definition from text. Keep Remember because distractors are clearly distinguishable concepts."},
+        {"qid": "P1B-B-131", "current": "Understand", "recommended": "Understand", "rationale": "ZBB requires: Justify all expenses from zero base. Distractors: incremental adjustment, zero defects, ABC. Must comprehend ZBB philosophy distinct from other methods. Correctly assigned."},
+        {"qid": "P1E-D-003", "current": "Apply", "recommended": "Understand", "rationale": "Equivalent units measure: Work done in completed unit equivalents. This is a concept definition — no scenario, no numbers to compute. Should be Understand."},
+        {"qid": "P1E-F-014", "current": "Remember", "recommended": "Understand", "rationale": "Blockchain provides: Distributed immutable records (correct) vs Paper verification, Manual reconciliation, Centralized storage (OPPOSITE concept). Must understand blockchain's defining characteristic of decentralization."}
+      ]
+    },
+    "understand_apply": {
+      "systemic_drift": "Bidirectional misclassification: ~150 items classified Understand that should be Apply (GAAP rule applied to specific scenario), and ~70 items classified Apply that should be Understand (conceptual recognition without application). Net drift: Understand→Apply direction dominates.",
+      "pattern": "Two competing template errors: (1) The 'which response is most appropriate?' phrase paired with a GAAP scenario triggers a template to assign Understand when the item requires APPLYING a standard to a specific fact pattern (scenario has company name + transaction details that must be parsed). (2) The same phrase in items WITHOUT scenario-specific facts (generic description of a method/concept) triggers Apply when the item only requires recognition. The template conflates scenario presence with cognitive level.",
+      "subPatterns": [
+        {
+          "name": "GAAP scenario → Understand (should be Apply)",
+          "description": "Stem presents a company name + specific transaction/legal details and asks which treatment is correct under an ASC standard. The candidate must APPLY the standard to the specific fact pattern — not just recall the rule. Key indicator: the scenario contains at least one operative fact (not just company name) that must be processed to select the correct answer.",
+          "example": "P1-A-005: Umbra sells equipment with a separately priced installation service that is distinct from the equipment. → Must apply ASC 606 5-step model: identify 2 performance obligations, allocate transaction price, recognize as satisfied. CL=Understand, should be Apply.",
+          "frequency": "Section A items with scenario + ASC rule selection"
+        },
+        {
+          "name": "Concept recognition → Apply (should be Understand)",
+          "description": "Stem describes a method, advantage, or characteristic and asks which concept it represents. No company-specific facts, no numbers, no transaction to parse. Candidate matches description to term. The 'Which response is most appropriate?' phrasing triggers the template to assign Apply, but the task is recognition/comprehension.",
+          "example": "P1-B-071: Vantage requires every department to justify its entire budget from a base of zero each year... What is the main advantage of this zero-based budgeting approach? → CC=C 'Forces justification of all costs.' This is conceptual understanding of an advantage. No calculation or specific scenario parsing required. CL=Apply, should be Understand.",
+          "frequency": "Section B budgeting concept items"
+        },
+        {
+          "name": "System/technology identification → Apply (should be Understand)",
+          "description": "Stem describes a system capability or feature (e.g., what EPM does, what master data governance is) and asks which option best describes it. This is concept understanding, not application. No scenario-specific trade-off or calculation required.",
+          "example": "P1-F-002: Willow is selecting a system to support rolling forecasts, management reporting, and consolidated planning packages. Which capability best describes an EPM system? → Must recognize EPM features from description. CL=Apply, should be Understand.",
+          "frequency": "Section F technology items"
+        },
+        {
+          "name": "Scenario-required calculation → Understand (should be Apply)",
+          "description": "P1-A-009 and similar items have a company + specific numbers but are classified as Understand. The candidate must apply a formula to specific numbers to get the answer.",
+          "example": "P1-A-009: 'A company purchases equipment for $96,000 on July 1. It has an estimated salvage value of $12,000 and a useful life of 7 years. Using straight-line depreciation, what is the depreciation expense for the first calendar year?' This requires (96000-12000)/7 × 6/12 calculation. CL=Understand, should be Apply.",
+          "frequency": "Section A calculation items"
+        }
+      ],
+      "decision_rule": "UNDERSTAND if: The item tests whether the candidate COMPREHENDS a concept and can distinguish it from related concepts. The answer is a concept/term/method name. Removing the company name leaves an equivalent question. APPLY if: The item requires EXECUTING a rule, standard, or procedure to a concrete scenario. The scenario contains operative facts (numbers, transaction details, legal conditions) that the candidate must PROCESS to arrive at the answer. Operator tests: (1) 'If the company name were removed, could the question still be answered?' If yes → likely Understand. (2) 'Is there any independent calculation or fact-parsing required beyond concept recognition?' If yes → Apply. (3) 'Does the stem contain a specific number, date, or transaction condition that drives the answer?' If yes → Apply.",
+      "estimated_misclassified": 220,
+      "estimated_by_direction": {
+        "Understand_to_Apply": 150,
+        "Apply_to_Understand": 70
+      },
+      "sample_analysis": [
+        {"qid": "P1-A-005", "current": "Understand", "recommended": "Apply", "rationale": "Umbra sells equipment with separate installation. Must apply ASC 606 performance obligations framework to determine 2 POs, allocate price, recognize. Specific transaction fact pattern requires application."},
+        {"qid": "P1-A-008", "current": "Understand", "recommended": "Apply", "rationale": "Yukon has FIFO inventory whose replacement value fell. Must apply lower of cost/NRV rule to specific FIFO scenario with specific valuation facts."},
+        {"qid": "P1-A-009", "current": "Understand", "recommended": "Apply", "rationale": "$96,000 purchase, $12,000 salvage, 7-year life, July 1. Must compute: (96000-12000)/7 × 6/12. Independent calculation required."},
+        {"qid": "P1-C-025", "current": "Understand", "recommended": "Apply", "rationale": "Riverview has idle capacity, no external market. Must apply transfer pricing principle: idle capacity → variable cost transfer price. Specific capacity condition drives the answer."},
+        {"qid": "P1-B-071", "current": "Apply", "recommended": "Understand", "rationale": "What is the main advantage of ZBB? This is conceptual knowledge of a method's advantage. No scenario-specific numbers or transaction facts to process."},
+        {"qid": "P1-B-095", "current": "Apply", "recommended": "Understand", "rationale": "What is the primary risk of top-down budgeting? Conceptual understanding of a method's risk. Answer is concept recognition, not application."},
+        {"qid": "P1-D-003", "current": "Evaluate", "recommended": "Apply", "rationale": "Vantage wants timely reports before actual overhead is known. Must apply normal costing concept: use predetermined OH rate. Specific reporting need drives the answer."},
+        {"qid": "P1-F-002", "current": "Apply", "recommended": "Understand", "rationale": "Which capability best describes an EPM system? Concept recognition from description. Must understand what EPM does, but no specific scenario to process."},
+        {"qid": "P1-F-004", "current": "Apply", "recommended": "Understand", "rationale": "Which practice best reflects master data governance? Identifying governance concepts from options. Concept recognition, not application to data."},
+        {"qid": "P1-B-050", "current": "Understand", "recommended": "Understand", "rationale": "Effect of high alpha on exponential smoothing forecast. Comprehension of parameter-meaning relationship. Correctly assigned — no scenario-specific facts or numbers."}
+      ]
+    },
+    "apply_analyze": {
+      "systemic_drift": "Analyze massively underassigned (only 58 items = 2.4% of pool). Of these 58, approximately 30 are misclassified (should be Apply/Understand/Remember). Net effect: true Analyze items are ~25-30, but only ~15% of labeled Analyze items are legitimate. The 5-item rotation clone groups dominate — 48 of 58 Analyze items (83%) are 5-item template clones (8-10 clone groups × ~5 items).",
+      "pattern": "Three defects converge: (1) Definition-matching items labeled Analyze because the template assigns CL by rotation position, not by content. (2) Simple single-step calculations labeled Analyze. (3) Concept-recognition items labeled Analyze because the name of the technique sounds sophisticated. True Analyze items require the candidate to identify WHICH method/concept applies to a scenario, not execute a given method.",
+      "analyzeCloneGroups": [
+        {"group": "DuPont decomposition (CC-008–CC-014)", "items": 7, "actualCL": "Understand", "rationale": "'What approach is being used?' when stem describes breaking ROI into margin × turnover. Candidate matches description to concept name. All 7 clones differ only by company name."},
+        {"group": "Time-series component identification (BD-043–BD-049)", "items": 7, "actualCL": "Understand", "rationale": "'Recurring pattern repeating every four quarters. What time series component?' Candidate identifies seasonal pattern from description. Single-fact identification from description."},
+        {"group": "Customer profitability analysis (CD-043–CD-049)", "items": 7, "actualCL": "Analyze", "rationale": "'Analyzes profitability by individual customer account... discovers large customers are unprofitable.' Must analyze to determine WHY. Legitimate Analyze clone group."},
+        {"group": "Common-size analysis (CD-057–CD-063)", "items": 7, "actualCL": "Understand", "rationale": "'Expresses each line item as % of revenue... What analytical technique?' Matches description to concept name. Not analysis — recognition."},
+        {"group": "Inherent risk vs control risk (EC-061–EC-065)", "items": 5, "actualCL": "Understand", "rationale": "'Assesses susceptibility before considering controls. What type of risk?' Matches audit risk model concept to description. Not analysis — concept recognition."},
+        {"group": "Data mining pattern discovery (FC-036–FC-040)", "items": 5, "actualCL": "Understand", "rationale": "'Analyzes large datasets to uncover unknown purchasing patterns. What technique?' Description-to-concept matching. The SCENARIO describes analysis, but the ITEM asks for identification."},
+        {"group": "Joint cost allocation method (DC-016–DC-020)", "items": 5, "actualCL": "Apply", "rationale": "'Wants to allocate joint costs based on relative sales value at split-off. What method?' Direct concept-to-description match. No numbers, no allocation computation."}
+      ],
+      "decision_rule": "APPLY if: The candidate must EXECUTE a known procedure, formula, or standard to derive a result. The method is either given in the stem or obvious from context. 'Given X, compute Y using Z.' Single-step or multi-step calculation with known method. ANALYZE if: The candidate must DETERMINE WHICH method, concept, or cause applies to a scenario from among multiple valid alternatives. The method is NOT given — the candidate must select the right analytical approach. 'Why did Y happen?' or 'Which tool should be used to investigate [scenario]?' The scenario drives the method selection. Operator test: If the stem tells you what to do and you just do it → Apply. If the stem describes a situation and you must decide what to do → Analyze.",
+      "estimated_misclassified": 40,
+      "estimated_by_direction": {
+        "Analyze_to_Understand": 25,
+        "Analyze_to_Apply": 10,
+        "Analyze_to_Remember": 1,
+        "Apply_to_Analyze": 4
+      },
+      "sample_analysis": [
+        {"qid": "P1B-B-142", "current": "Analyze", "recommended": "Remember", "rationale": "'A cost that changes in total in proportion to changes in activity level is a:' CC=D Variable cost. Pure definition-recall. Vocabulary flashcard. Should be Remember or at most Understand."},
+        {"qid": "P1B-C-175", "current": "Analyze", "recommended": "Apply", "rationale": "ABC overhead cost per unit with given numbers: (2×4000 + 5×500)/100 = $105. This is formula execution — the method (ABC) is given, the numbers are given. Apply, not Analyze."},
+        {"qid": "P1E-B-045", "current": "Analyze", "recommended": "Apply", "rationale": "Five months: 100, 110, 120, 130, 140. Trend line slope = (140-100)/(5-1) = 10. Single-step arithmetic. Apply."},
+        {"qid": "P1-CC-008", "current": "Analyze", "recommended": "Understand", "rationale": "'Wants to analyze ROI by breaking it into margin and turnover. What approach is being used?' DuPont method. Description-to-concept match. Understand."},
+        {"qid": "P1-DC-016", "current": "Analyze", "recommended": "Apply", "rationale": "'Wants to allocate joint costs based on relative sales value at split-off. What method?' Sales value at split-off method. Concept identification from description. Not Analyze."},
+        {"qid": "P1-EC-061", "current": "Analyze", "recommended": "Understand", "rationale": "'Assesses susceptibility before considering controls. What type of risk?' Inherent risk. Audit risk model recognition. Understand."},
+        {"qid": "P1-CD-057", "current": "Analyze", "recommended": "Understand", "rationale": "'Expresses each line item as % of revenue. What technique?' Common-size analysis. Description-to-concept match. Understand."},
+        {"qid": "P1-DD-031", "current": "Analyze", "recommended": "Analyze", "rationale": "Must analyze HOW automation that increases fixed costs and reduces variable costs affects DOL. Requires conceptual reasoning about cost structure → operating leverage sensitivity. Legitimate Analyze — no direct formula application, must trace causal chain."},
+        {"qid": "P1-CD-017", "current": "Analyze", "recommended": "Analyze", "rationale": "'Why contribution margin changed even though total unit volume matched budget? Actual sales had more Product A and less Product B.' Must identify the RELEVANT variance type (sales mix) from the scenario description. Method not given — candidate must select analytical lens. Legitimate Analyze."},
+        {"qid": "P1-F-013", "current": "Analyze", "recommended": "Analyze", "rationale": "'Needs multi-year trend analysis from ERP+CRM+warehouse. Which architecture fits?' Must match analytical requirement (integrated historical reporting) to architecture type (data warehouse). Requires analysis of technical requirements vs system capabilities."},
+        {"qid": "P1-F-026", "current": "Analyze", "recommended": "Analyze", "rationale": "'Advertising and revenue both increased. Management wants to conclude advertising caused it.' Must identify the correct statistical caution: correlation ≠ causation. The candidate must ANALYZE the validity of the management's inference. Legitimate Analyze."},
+        {"qid": "P1B-C-174", "current": "Apply", "recommended": "Analyze", "rationale": "'Customer A small frequent orders, special packaging, fast delivery. Customer B large scheduled orders, standard.' Must analyze which has higher cost-to-serve by evaluating activity drivers. Not pure formula application — requires comparative analysis. Should be Analyze."},
+        {"qid": "P1B-C-109", "current": "Apply", "recommended": "Apply", "rationale": "Four-way overhead variance with specific numbers. Multi-step calculation with given method and data. Correctly Apply — multi-step computation is still Apply, not Analyze."}
+      ]
+    },
+    "analyze_evaluate": {
+      "systemic_drift": "Evaluate massively inflated; Analyze underassigned. Magnitude: ~190 of 223 Evaluate items (85%) are overclassified. The template-engine trigger was 'Which response is most appropriate?' — ANY stem ending with this phrase was assigned CognitiveLevel=Evaluate regardless of actual cognitive demand. The DCS §3 default maps Evaluate → Difficult/4, but 168 of 223 Evaluate items are Difficulty=Easy/1, confirming the cognitive dissonance.",
+      "pattern": "Three converging template errors: (1) The authoring template uses the phrase 'Which response is most appropriate?' as a universal test of 'evaluation' — conflating 'evaluation' (Bloom's: make judgments based on criteria) with 'selecting the correct answer from a multiple-choice list.' (2) All 168 Evaluate+Easy items test UNDERSTAND or APPLY: the candidate identifies the correct GAAP/COSO treatment or accounting practice — there is a SINGLE objectively correct answer with zero professional judgment. (3) The difficulty score accurately reflects the cognitive demand (Easy/1 is correct for 'pick the right ASC rule') but the CL label was not calibrated — the template assigned CL mechanically. The DIFFICULTY is correctly underpredicting the CL inflation, not vice versa.",
+      "trueEvaluateCharacteristics": "A true Evaluate item must have one of: (a) Multiple defensible answers where the candidate must select the best among alternatives with genuine trade-offs. (b) A recommendation requiring professional judgment about which approach to use when standards allow discretion. (c) An ethical dilemma requiring application of the IMA Statement of Ethical Professional Practice to determine the correct course of action where multiple principles may conflict. (d) Assessment of the quality or appropriateness of a course of action given multiple valid frameworks. None of the 168 Evaluate+Easy items meet these criteria — they all have exactly one GAAP-correct answer.",
+      "decision_rule": "ANALYZE if: The candidate must examine data/context to determine which pattern, category, or causal mechanism applies. 'What type of variance is this?' or 'What caused the profit decline?' The answer is objectively determinable from the information given. EVALUATE if: The candidate must make a PROFESSIONAL JUDGMENT where: (a) multiple answers could be reasonably defended, (b) the correct answer depends on weighing trade-offs between competing objectives or frameworks, or (c) the IMA ethical standard requires prioritizing between conflicting principles. 'Which recommendation should the controller present to the board?' when cost, quality, and strategy factors pull in different directions. Operator tests: (1) 'Is there exactly one correct answer under GAAP/COSO/the standard?' If yes → NOT Evaluate. (2) 'Could a well-prepared candidate reasonably defend a different answer?' If yes → Evaluate. (3) 'Does the stem phrase 'Which response is most appropriate?' when the question is really 'Which treatment is correct under GAAP?' → NOT Evaluate — this is the template inflation pattern.",
+      "estimated_misclassified": 190,
+      "estimated_by_direction": {
+        "Evaluate_to_Understand": 135,
+        "Evaluate_to_Apply": 40,
+        "Evaluate_to_Analyze": 15,
+        "Analyze_to_Evaluate": 5
+      },
+      "estimated_postCorrection": {
+        "Evaluate": 38,
+        "Analyze": 53,
+        "Apply": 50,
+        "Understand": 135
+      },
+      "sample_analysis": [
+        {"qid": "P1-A-004", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "Titan repurchased shares. Must apply treasury stock accounting: reduce equity, not asset/expense/liability. Single correct GAAP treatment. 'Which response is most appropriate?' = template phrasing, not evaluation."},
+        {"qid": "P1-A-006", "current": "Evaluate", "difficulty": "Moderate-Easy", "recommended": "Apply", "rationale": "Vantage received advance fees. Must apply ASC 606: record contract liability. Single correct treatment. No professional judgment required."},
+        {"qid": "P1-A-007", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "Willow estimates uncollectibles. Must apply allowance method: bad debt expense + allowance. Single correct accounting treatment. No judgment."},
+        {"qid": "P1-A-011", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "Beacon observes impairment indicator. Must apply impairment testing rule: test when indicators present. Single correct response under GAAP."},
+        {"qid": "P1-A-012", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "Crescent faces probable estimable litigation loss. Must apply ASC 450: accrue + disclose. Single correct treatment. The difficulty=Easy is CORRECT; the CL=Evaluate is wrong."},
+        {"qid": "P1-A-013", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "Delta learns of customer bankruptcy at year-end. Must apply subsequent event rule: adjust if conditions existed at B/S date. Single correct treatment."},
+        {"qid": "P1-A-014", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "Evergreen enters operating lease. Must apply ASC 842: recognize ROU asset + lease liability. Single correct treatment under standard."},
+        {"qid": "P1-A-021", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "Lumen deciding on disclosure. Must know: disclose significant accounting policies. This is a knowledge-of-requirement item. Understand, not Apply."},
+        {"qid": "P1-B-001", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Riverview is translating a five-year strategy into next-quarter departmental plans.' Must recognize: align tactical plans with strategic objectives. This is comprehension of the strategy-to-tactics linkage concept."},
+        {"qid": "P1-B-002", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Summit uses executive-imposed targets with little manager input.' Must recognize: top-down can reduce buy-in. Advantage/disadvantage identification. Concept comprehension."},
+        {"qid": "P1-B-003", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Titan asks department managers to propose their own budget targets.' Must recognize participative budgeting benefit: use review/incentives to reduce slack. Concept comprehension."},
+        {"qid": "P1-B-004", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Umbra wants to maintain a constant 12-month planning horizon.' Must recognize rolling budget feature: add new period as current ends. Concept comprehension — definition match."},
+        {"qid": "P1-B-005", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Vantage requires managers to justify activities from a zero base.' Must recognize ZBB: evaluate each activity, not carry forward prior spending. Concept comprehension."},
+        {"qid": "P1-B-006", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Willow wants budgeted resource needs tied to expected activities.' Must recognize ABB: budget costs by estimating activity demand. Concept comprehension — match concept to description."},
+        {"qid": "P1-B-007", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Yukon wants to evaluate cost control when actual volume differs from planned.' Must recognize flexible budget purpose: compare actual to flexed budget. Concept comprehension."},
+        {"qid": "P1-B-008", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Zephyr is building the annual profit plan.' Must recognize: sales budget drives all other budgets. Concept comprehension of budget sequencing."},
+        {"qid": "P1-B-009", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Apex anticipates a temporary cash shortfall during a seasonal build.' Must recognize cash budget purpose: plan borrowing while maintaining minimum cash. Concept comprehension."},
+        {"qid": "P1-B-010", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "'Beacon believes sales depend on advertising spend and housing starts.' Must identify causal forecasting/regression approach. Applying forecasting method selection to a specific relationship."},
+        {"qid": "P1-B-011", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Crescent observes a consistent upward pattern in monthly demand.' Must recognize: use time-series technique with trend. Concept comprehension of forecasting method selection."},
+        {"qid": "P1-B-012", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Delta has several demand scenarios with probabilities.' Must recognize expected value: compute probability-weighted average. Concept comprehension."},
+        {"qid": "P1-B-013", "current": "Evaluate", "difficulty": "Easy", "recommended": "Apply", "rationale": "'Evergreen expects labor time per unit to fall as cumulative production doubles.' Must recognize learning curve effect: incorporate into standards and budgets. Applies the learning curve concept to a specific planning context."},
+        {"qid": "P1-C-001", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Summit is implementing standards for DM, DL, OH.' Must recognize purpose of standard costs: planning, control, inventory costing, variance analysis. Concept comprehension."},
+        {"qid": "P1-C-002", "current": "Evaluate", "difficulty": "Easy", "recommended": "Understand", "rationale": "'Titan has hundreds of monthly variances across plants.' Must recognize management by exception: focus on significant, controllable, unusual variances. Concept comprehension."},
+        {"qid": "P1-A-004_extract", "current": "Apply", "difficulty": "Easy", "recommended": "Apply", "rationale": "NOTE: Content block has CL=Apply for P1-A-004 (pack_a_corrected.js line 208 has CL=Evaluate in metadata block but content block extracted as Apply). This is the DL-016 dual-block divergence. The content-block CL=Apply is CORRECT for this item. The metadata block CL=Evaluate is the stale template value. This confirms the systemic pattern: the template assigned Evaluate, but content authors sometimes corrected it in the content block."}
+      ]
+    }
+  },
+  "rubric_ambiguities": [
+    {
+      "zone": "remember_understand",
+      "ambiguity": "DCS v1.0 §3 maps Remember → Moderate-Easy/2 with possible upgrade to Easy/1 if 'distractors are entirely different domain' and upgrade to Moderate/3 if 'subtle discrimination required.' But DCS does NOT address the CL assignment itself. The ambiguity is in CL assignment: when ALL distractors are from the same narrow domain as the correct answer, is the item Remember (definition recognition within a domain) or Understand (comprehension-based discrimination)?",
+      "resolution_recommendation": "Add a CL boundary decision rule to DCS v1.1: For items where ALL distractors are from the same domain, the default CL is Understand, not Remember. Remember is reserved for items where at least 2 of 4 distractors are from ENTIRELY DIFFERENT domains, making elimination possible without conceptual understanding."
+    },
+    {
+      "zone": "understand_apply",
+      "ambiguity": "DCS v1.0 §3 maps Understand → Moderate-Easy/2 with possible upgrade to Moderate/3 if 'scenario parsing or interpretation is required.' This confuses DIFFICULTY adjustment with COGNITIVE LEVEL. Scenario parsing does not automatically make an Understand item into Apply — it makes it a more difficult Understand item. The critical distinction is whether the scenario requires RULE APPLICATION or merely contextualizes the concept.",
+      "resolution_recommendation": "Add a scenario-parsing rule: A scenario (company name + specific facts) alone does NOT upgrade CL. The test is whether the candidate must USE the specific scenario facts to derive the answer (Apply) or merely LOOK through them to recognize the underlying concept (Understand). Items where the candidate must execute a known procedure with scenario-specific numbers → Apply. Items where the scenario is cosmetic context → remain Understand."
+    },
+    {
+      "zone": "apply_analyze",
+      "ambiguity": "DCS v1.0 has no explicit guidance on what differentiates Apply from Analyze. §3 maps both to Moderate/3 and Difficult/4 ranges. The phrase 'multiple cognitive operations' is used for Moderate/3 (Apply) without clarifying whether 'deciding which formula to use' (Analyze) counts as a 'cognitive operation' distinct from 'using the formula' (Apply).",
+      "resolution_recommendation": "Add §X: Apply = executing a given procedure; Analyze = selecting which procedure to apply from alternatives. 'Determine which cost behavior analysis method to use' → Analyze. 'Use the high-low method to compute variable cost per unit' → Apply. Multi-step calculations with a given method remain Apply; the number of calculation steps does NOT upgrade CL."
+    },
+    {
+      "zone": "analyze_evaluate",
+      "ambiguity": "DCS v1.0 §3 says Evaluate → Difficult/4. But the DCS does NOT define what Evaluate means in a CMA MCQ context. The result is that template-based authoring conflates 'pick the correct GAAP answer' with 'evaluate alternatives.' The critical missing definition: Evaluation (Bloom's) requires genuine PROFESSIONAL JUDGMENT where multiple answers could be reasonably defended by competent practitioners.",
+      "resolution_recommendation": "Add §X defining CMA Evaluate: An item is Evaluate ONLY if: (a) at least two answer choices represent defensible accounting/business positions under existing standards, OR (b) the candidate must weigh trade-offs between competing business objectives using a professional framework (IMA ethics, COSO, strategic priorities). Items with a single GAAP-correct answer are NOT Evaluate, regardless of 'which response is most appropriate?' phrasing."
+    },
+    {
+      "zone": "all",
+      "ambiguity": "DCS v1.0 §3 modifiers provide ±1 difficulty adjustments based on secondary factors (multi-exhibit, calculation chain, distractor count, formula provided). These are DIFFICULTY modifiers, but the S718 VFINAL process used them as CL classification inputs by the S718 LLM classifier. This conflates two distinct axes: CL is about cognitive process type, not cognitive load/difficulty.",
+      "resolution_recommendation": "DCS v1.1 must explicitly separate the CL determination step (step 1: what cognitive process is required? → assign CL) from the difficulty calibration step (step 2: given the CL, what difficulty modifiers apply? → adjust DifficultyScore). The two axes must not be conflated. Specifically: multi-step calculations increase DIFFICULTY, not CL. Formula provision reduces DIFFICULTY, not CL."
+    }
+  ],
+  "recommended_DCS_v1_1_additions": [
+    "§3a CL Boundary Decision Tree (zone 1): Remember vs Understand — 'Same-domain distractor test: If all 4 answer choices belong to the same narrow accounting domain, default CL=Understand. Remember requires at least 2 distractors from entirely different domains, enabling elimination without comprehension.'",
+    "§3b CL Boundary Decision Tree (zone 2): Understand vs Apply — 'Scenario operativity test: A scenario with company name alone does not create Apply. Apply requires the candidate to EXECUTE a procedure on scenario-specific data. If removing the scenario leaves the same cognitive demand, the item is Understand.'",
+    "§3c CL Boundary Decision Tree (zone 3): Apply vs Analyze — 'Method-selection test: If the stem tells you WHICH method/standard to use (explicitly or by strong implication), it is Apply. If the candidate must determine WHICH method among alternatives is appropriate for the described situation, it is Analyze.'",
+    "§3d CL Boundary Decision Tree (zone 4): Analyze vs Evaluate — 'Judgment test: An item is Evaluate only if multiple answers could be reasonably defended under existing standards OR the candidate must weigh trade-offs between competing objectives. 'Which response is most appropriate?' with a single GAAP-correct answer → NOT Evaluate. Evaluate requires genuine professional judgment where competent practitioners could disagree.'",
+    "§3e CL Determination Protocol: Step 1: Classify the cognitive PROCESS (Remember/Understand/Apply/Analyze/Evaluate) using §3a-§3d decision trees. Step 2: Calibrate the difficulty score using §3 CL→Difficulty mapping. Step 3: Apply secondary modifiers (§4) to difficulty only, not to CL. The two axes (CL and Difficulty) are determined sequentially and independently.",
+    "§3f Forbidden CL Triggers: The following shall NOT be used as CL classification triggers: (a) 'Which response is most appropriate?' phrasing → does NOT imply Evaluate; (b) presence of a company name → does NOT imply Apply; (c) calculation with ≥3 steps → does NOT imply Analyze; (d) item position within a rotation group → does NOT dictate any CL; (e) the term 'analyze' in the stem → does NOT imply Analyze (if the candidate is matching technique name to description).",
+    "§X Template CL Assignment Audit Rule: Any item generated via template authoring where CognitiveLevel is assigned by position in a 5-item rotation rather than by content analysis must be flagged. Template-position CL assignment is the root cause of all four zone boundary errors."
+  ],
+  "crossZoneFindings": [
+    {
+      "finding": "Dual-block (DL-016) metadata/content CL divergence",
+      "evidence": "P1-A-004 metadata block: CL=Evaluate, content block: CL=Apply. P1B-B-142: VFINAL reports CL=Analyze, but content-block extraction shows CL=Apply (the VFINAL may have read the metadata block). Multiple Pack A Section A items show metadata-block CL values that differ from content-block CL values.",
+      "impact": "Any CL audit that reads from the metadata block (first JSON object per QID in Pack A/C/D files) will report different CL assignments than the content block (what the learner sees). The VFINAL.json used for S718 may systematically overcount Evaluate and undercount Apply/Understand if it read from the metadata blocks for dual-block packs.",
+      "recommendation": "The authoritative CL source is the content block (the object containing Stem, Choices, CorrectChoice, ExplanationCorrect). Any CL recalibration must write to BOTH blocks to eliminate the divergence (structural defect DL-016)."
+    },
+    {
+      "finding": "Easy+Evaluate is a reliable proxy for CL inflation",
+      "evidence": "168 of 223 Evaluate items are Easy. 23 of 25 sampled Evaluate+Easy items are confirmed Understand or Apply by stem-content analysis. Rate: 23/25 = 92% confirmed misclassification.",
+      "impact": "The Evaluate+Easy intersection can be used as a high-precision filter for locating CL-inflated items. Recommend targeting all 168 Evaluate+Easy items for priority CL recalibration.",
+      "recommendation": "Batch 1 of CL recalibration: reclassify all 168 Evaluate+Easy items by applying the Zone 4 decision rule. Expected outcome: ~135 → Understand, ~25 → Apply, ~8 → Analyze."
+    },
+    {
+      "finding": "Pack E Remember→Understand is the single largest structural error",
+      "evidence": "386 Remember items in Pack E, only 14 Understand. Agent D's sample found 284 should be Understand. My boundary analysis confirms the same-domain distractor pattern is the root cause.",
+      "impact": "Correcting Pack E CL would shift the pool-wide CL distribution from Remember=18% to Remember≈6% and Understand from 24% to ≈36%. This is a more accurate reflection of a 6-domain CMA exam where comprehension/discrimination is the minimum bar.",
+      "recommendation": "Batch 2: reclassify Pack E Remember→Understand applying the same-domain distractor test (decision rule Zone 1). Target: 284 items."
+    },
+    {
+      "finding": "True Analyze count is approximately 25-30 items",
+      "evidence": "Of 58 labeled Analyze items, 12 are legitimate by the method-selection test. The remaining 46 are definition-matches, single-step calculations, concept-recognition, or template clones.",
+      "impact": "The pool's effective Analyze count is 25-30, which at ~1.1% of pool is severely below any reasonable CMA exam distribution. Content authors would need to create Analyze items deliberately — the template pipeline cannot produce them automatically.",
+      "recommendation": "Do not attempt to find Analyze items to 'fill a quota.' The current ~25 legitimate Analyze items should be preserved with their classification intact. Future content authoring should include explicit Analyze design in the specification (method-selection, cause-analysis, diagnostic reasoning)."
+    }
+  ],
+  "summaryTable": {
+    "headers": ["Zone", "Current CL", "Items in pool", "Est. misclassified", "Correct CL distribution", "Root cause"],
+    "rows": [
+      ["Remember↔Understand", "Remember", "435", "~330 → Understand", "R:105, U:917", "Same-domain distractor template (Pack E)"],
+      ["Understand↔Apply", "Understand", "587", "~150 → Apply", "U:657, A:1272", "GAAP scenario→Understand; concept→Apply template errors"],
+      ["Apply↔Analyze", "Analyze", "58", "~40 → Understand/Apply", "An:25, Ap:1155", "5-item rotation clone groups labeled Analyze"],
+      ["Analyze↔Evaluate", "Evaluate", "223", "~190 → Understand/Apply", "Ev:38, An:53, Ap:50, U:135", "'Which response is most appropriate?' template trigger"]
+    ]
+  }
+}

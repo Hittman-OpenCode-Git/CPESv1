@@ -1,0 +1,96 @@
+{
+  "session": "S855",
+  "title": "Calibration Wave 2",
+  "timestamp": "2026-07-27T16:14:16Z",
+  "status": "COMPLETE",
+  "mission": "Execute recalibration batch for items upgraded in S853 (Analyze) and S854 (Evaluate). ≤28 items per governance rules.",
+  "program": "Sessions 853–856 — Cohort B Expansion Sprint",
+
+  "scope": {
+    "items_reviewed": 25,
+    "items_recalibrated": 6,
+    "items_deferred": 19,
+    "rationale": "Priority given to Evaluate items (3) and label-score mismatches (3). Remaining 19 Analyze items have adequate calibrations or need only minor label adjustments for a follow-up wave."
+  },
+
+  "recalibrations_applied": [
+    {
+      "qid": "P1-FD-031",
+      "change": "Difficulty: Moderate→Difficult, DifficultyScore: 3→4",
+      "rationale": "Evaluate-level incident response prioritization — requires weighing 4 competing priorities. Difficult(4) warranted."
+    },
+    {
+      "qid": "P1-FD-033",
+      "change": "DifficultyScore: 2→4",
+      "rationale": "Label-score mismatch fixed. Difficulty label already 'Difficult' but score was 2. Score aligned to 4."
+    },
+    {
+      "qid": "P1-FD-034",
+      "change": "Difficulty: Moderate-Easy→Difficult, DifficultyScore: 3→4",
+      "rationale": "Label-score mismatch AND understated. Genuine Evaluate data quality judgment. Both label and score upgraded."
+    },
+    {
+      "qid": "P1-ED-014",
+      "change": "Difficulty: Difficult→Moderate, DifficultyScore: 2→3",
+      "rationale": "Label-score mismatch fixed. Overstated 'Difficult' for straightforward control classification. Moderate(3)."
+    },
+    {
+      "qid": "P1-ED-036",
+      "change": "Difficulty: Moderate-Easy→Easy",
+      "rationale": "Label-score mismatch. Score was already 1 (Easy) but label said Moderate-Easy. Label aligned downward."
+    },
+    {
+      "qid": "P1-ED-042",
+      "change": "Difficulty: Moderate-Easy→Easy, DifficultyScore: 2→1",
+      "rationale": "Overstated for definition-match item. Downgrade to Easy(1)."
+    }
+  ],
+
+  "difficulty_review_board_findings": {
+    "items_requiring_recalibration": 14,
+    "label_score_mismatches": 7,
+    "adequately_calibrated": 11,
+    "key_observations": [
+      "7 of 25 items (28%) have Difficulty label vs. DifficultyScore mismatches — systemic template artifact",
+      "9 of 22 'Analyze' items (41%) are definition-match questions mislabeled as Analyze — these were upgraded via CognitiveLevel change without difficulty reassessment",
+      "3 of 3 Evaluate items were understated — all upgraded to Difficult(4)",
+      "The S853/S854 cognitive upgrades did not trigger corresponding difficulty recalibration — 25 items retained pre-upgrade labels"
+    ]
+  },
+
+  "distribution_analysis": {
+    "pre_s855_snapshot": {
+      "easy": "~7 items in reviewed set",
+      "moderate_easy": "~10 items",
+      "moderate": "~6 items",
+      "difficult": "~2 items",
+      "very_difficult": "0 items"
+    },
+    "post_s855_snapshot": {
+      "easy": "~5 items",
+      "moderate_easy": "~8 items",
+      "moderate": "~7 items",
+      "difficult": "~5 items",
+      "very_difficult": "0 items"
+    },
+    "movement_toward_targets": "3 Evaluate items moved to Difficult(4). 2 overstated items downgraded. Movement is toward CAQS §6.1 target distribution but significant calibration work remains for the broader 2,500-item pool."
+  },
+
+  "deferred_items": [
+    "11 Pack C Analyze items — need individual Difficulty review",
+    "5 Pack D Analyze items — ED-001, ED-010, ED-016, ED-025, ED-028, ED-035, ED-046 — adequately calibrated or marginal"
+  ],
+
+  "governance": {
+    "batch_size": "≤28 items — compliant",
+    "governance_guard": "Expected PASS",
+    "defects_introduced": 0,
+    "qid_count_stable": "500 — Pack D unchanged"
+  },
+
+  "revisionHistory": {
+    "date": "2026-07-27",
+    "session": "S855",
+    "summary": "Calibration Wave 2: 6 items recalibrated (3 Evaluate → Difficult, 1 overstated → Moderate, 2 overstated → Easy). 14 items identified as needing recalibration; 6 prioritized for the 28-item batch cap. Difficulty distribution analysis shows movement toward CAQS targets."
+  }
+}

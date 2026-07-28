@@ -1,0 +1,208 @@
+{
+  "document": "SESSION2021_INVESTIGATION_LINKAGE",
+  "session": "S202.1",
+  "title": "Student Challenge Integration — Question Investigation Workbench Linkage",
+  "series": "200-Series — Framework v2 Architecture Addendum",
+  "date": "2026-07-27",
+  "type": "Integration Specification — Read-Only",
+  "parent": "SESSION203_NAVIGATION_MODEL.json + SESSION2021_SCAN_ARTIFACT_SCHEMA.json (Board A)",
+  "purpose": "Defines the linkage model that enables the future Question Investigation Workbench — a May Administration feature where a student's challenge of a question answer can be traced through the full chain: Student → Attempt → Question → Certification Scan Artifact → Certification History. This specification ensures that when a student reports a potential answer-key error, the investigation agent can reconstruct the question's complete certification and defect history from a single artifact reference.",
+  "constraints": ["No content changes", "No certification actions", "No governance changes", "Read-only specification"],
+
+  "linkage_model_version": "1.0.0",
+
+  "investigation_chain": {
+    "description": "The end-to-end trace from a student's answer challenge to the question's certification provenance. Six linked entities, each with a resolvable identifier.",
+    "stages": [
+      {
+        "stage": 1,
+        "entity": "Student",
+        "identifier": "studentId (future — not yet implemented)",
+        "description": "The learner who challenged a question answer. A student may challenge one or more answers during or after a practice session.",
+        "data": "studentId, sessionId (practice session), timestamp of challenge"
+      },
+      {
+        "stage": 2,
+        "entity": "Attempt",
+        "identifier": "practice session ID + question index within session",
+        "description": "The specific attempt instance: which question, what answer the student selected, when, and in what practice session context.",
+        "data": "sessionId, qid, studentAnswer, correctAnswer (as rendered), timestamp, sessionMode (practice/review/exam)"
+      },
+      {
+        "stage": 3,
+        "entity": "Question",
+        "identifier": "compoundKey (QID::CC::EW_Pattern::Template_Family::File_Path::VersionID)",
+        "description": "The exact variant of the question as rendered to the student. Resolved via compound-key identity to disambiguate template-rotation variants (S320 lesson).",
+        "data": "compoundKey, identityKey, pack, section, questionState at time of attempt"
+      },
+      {
+        "stage": 4,
+        "entity": "Artifact",
+        "identifier": "artifact_id (CSA-{Session}-{Timestamp})",
+        "description": "The Certification Scan Artifact that contains the question's scan results from the most recent certification pipeline run.",
+        "data": "artifactId, timestamp, gateResults for this qid, defectFlags at scan time, readinessClass"
+      },
+      {
+        "stage": 5,
+        "entity": "Certification History",
+        "identifier": "identityKey → DELTA_LEDGER.json entries + CANONICAL_REGISTRY.json entry",
+        "description": "The complete certification provenance: when it was certified, by which session, with what quality scores, and any defect history.",
+        "data": "certificationDate, certificationBatch, qualityVerdict, dimensionScores, defectFlags history, version chain"
+      }
+    ]
+  },
+
+  "investigation_workbench_queries": {
+    "description": "The key questions an investigation agent must be able to answer from the artifact + registry. These queries form the contract for the future Question Investigation Workbench.",
+    "queries": [
+      {
+        "id": "IQ-001",
+        "question": "Is the student's challenged answer correct according to the stored answer key?",
+        "dataSource": "CANONICAL_REGISTRY.json entry → components.CC vs. student's selected answer",
+        "resolution": "If match → student answered correctly but challenged anyway (possible explanation issue). If mismatch → investigate further."
+      },
+      {
+        "id": "IQ-002",
+        "question": "Has this question ever had a confirmed answer-key error (DL-030)?",
+        "dataSource": "CANONICAL_REGISTRY.json entry → defectFlags (DL-030 with status Resolved) + DELTA_LEDGER.json entries (changeType RECERTIFY)",
+        "resolution": "If yes → the student's challenge may be a residual effect of a previously corrected error. Check if the correction post-dates the student's attempt."
+      },
+      {
+        "id": "IQ-003",
+        "question": "What defects are currently present on this question?",
+        "dataSource": "Most recent Certification Scan Artifact → perItemResults[this_qid].defectFlags",
+        "resolution": "Present defects explain degraded experience. Structural defects (DL-008, DL-026) on Certified items → legitimate student complaint."
+      },
+      {
+        "id": "IQ-004",
+        "question": "What was the question's state when the student took the exam?",
+        "dataSource": "CANONICAL_REGISTRY.json entry → question_state + DELTA_LEDGER.json entries filtered by timestamp ≤ student attempt time",
+        "resolution": "If question_state was NOT Certified at attempt time → the question should not have been in the delivery pool (pre-delivery safety check failure). If Certified but with defects → learner-safety issue."
+      },
+      {
+        "id": "IQ-005",
+        "question": "Has this question been modified since the student's attempt?",
+        "dataSource": "DELTA_LEDGER.json entries filtered by timestamp > student attempt time. Compare content_hash at attempt time vs. current.",
+        "resolution": "If modified → the question the student saw may differ from the current version. Explain changes to the student."
+      },
+      {
+        "id": "IQ-006",
+        "question": "Are there open recommendations targeting this question?",
+        "dataSource": "RECOMMENDATION_REGISTRY.json → getByQuestion(qid). Filter Status != CLOSED.",
+        "resolution": "If yes → the student's challenge aligns with known defects being actively remediated. Link student's challenge to the recommendation."
+      },
+      {
+        "id": "IQ-007",
+        "question": "Is this question part of a template rotation group with known variant issues?",
+        "dataSource": "CANONICAL_REGISTRY.json entry → components.Template_Family → by_template_family index → all sibling items' defectFlags",
+        "resolution": "If template family siblings have DL-030 or DL-016 → the student's challenge may indicate a systemic issue across the rotation group."
+      }
+    ]
+  },
+
+  "investigation_escalation_paths": {
+    "description": "When an investigation reveals a genuine defect impacting the learner, it escalates through defined paths to remediation.",
+    "paths": [
+      {
+        "trigger": "Student challenge → IQ-001 mismatch (student's answer is actually correct according to independent re-derivation)",
+        "action": "Escalate as potential DL-030 (answer-key error). Create P0 recommendation. Independent accounting re-verification required. If confirmed → correct answer key immediately.",
+        "escalationLevel": "P0 — potential wrong answer key in learner pool"
+      },
+      {
+        "trigger": "Student challenge → IQ-003 finds DL-008 or DL-026 on Certified item",
+        "action": "Escalate as learner-pool exposure. Create P1 recommendation. Item is already flagged in scan artifact — the challenge provides learner-facing evidence of the defect's impact.",
+        "escalationLevel": "P1 — confirmed learner-safety impact"
+      },
+      {
+        "trigger": "Student challenge → IQ-004 finds question was not Certified at attempt time",
+        "action": "Escalate as pre-delivery safety check failure. Investigate app.js delivery pool filter. The question should never have been delivered. This is a platform-level governance issue.",
+        "escalationLevel": "P0 — delivery pool integrity failure"
+      },
+      {
+        "trigger": "Student challenge → IQ-005 finds question modified since attempt",
+        "action": "Student saw different question than current. If modification was a defect fix → acknowledge fix to student. No escalation needed. If modification introduced new defect → escalate.",
+        "escalationLevel": "P3 — informational closure to student"
+      },
+      {
+        "trigger": "Student challenge → IQ-006 finds open recommendation matching challenge",
+        "action": "Link student's challenge to existing recommendation as additional evidence. If recommendation is P0/P1 → reaffirm priority. If recommendation is P2/P3 → consider priority escalation based on learner impact.",
+        "escalationLevel": "Varies — based on existing recommendation priority"
+      }
+    ]
+  },
+
+  "student_challenge_lifecycle": {
+    "description": "The full lifecycle of a student challenge from submission to resolution. Future May Administration implementation.",
+    "stages": [
+      {"stage": "SUBMITTED", "description": "Student submits challenge via exam review interface. Challenge includes: qid, student answer, reason (optional comment). Stored in student_challenges.json (future)."},
+      {"stage": "TRIAGED", "description": "Investigation agent performs IQ-001 through IQ-007 queries. Classifies challenge as: BUG_CONFIRMED, STUDENT_ERROR, EXPLANATION_UNCLEAR, or SYSTEM_ISSUE."},
+      {"stage": "LINKED", "description": "Challenge linked to existing recommendation (IQ-006) or new recommendation created. Challenge receives investigationId for tracing."},
+      {"stage": "REMEDIATED", "description": "Linked recommendation resolved. Question content/answer key corrected. Change recorded in DELTA_LEDGER.json."},
+      {"stage": "RESPONDED", "description": "Student notified of resolution. If student was correct → acknowledgment + explanation of fix. If student was incorrect → explanation of why their answer was wrong, referencing the correct accounting principle."},
+      {"stage": "CLOSED", "description": "Challenge record closed. Linked to recommendation closure evidence. Investigation metadata preserved for analytics."}
+    ]
+  },
+
+  "future_may_administration_integration": {
+    "description": "The Question Investigation Workbench is a May Administration (P1) module defined in SESSION203_ADMIN_PLATFORM_SPEC.json. This specification defines the artifact-side contract that the workbench will consume.",
+    "workbench_components": [
+      {
+        "component": "Challenge Queue",
+        "consumes": "Student challenge records (future: student_challenges.json)",
+        "artifact_dependency": "IQ-001 and IQ-003 queries → most recent Certification Scan Artifact → perItemResults",
+        "description": "Prioritized queue of open student challenges. Each entry shows: qid, studentId, challenge date, IQ-001 result, current defects, linked recommendations."
+      },
+      {
+        "component": "Question Provenance View",
+        "consumes": "CANONICAL_REGISTRY.json + DELTA_LEDGER.json + Certification Scan Artifact lineage",
+        "artifact_dependency": "Full question card: identityKey, compoundKey, current question_state, last 5 delta ledger entries, current defectFlags, last certification date, template family siblings",
+        "description": "Single-page view showing a question's complete history. Used by investigation agents to assess the context of a student challenge."
+      },
+      {
+        "component": "Recommendation Linker",
+        "consumes": "RECOMMENDATION_REGISTRY.json",
+        "artifact_dependency": "getByQuestion(qid) → existing recommendations. getOpenCount() → prioritization context.",
+        "description": "Links student challenges to existing recommendations or creates new ones. Prevents duplicate investigation of the same defect."
+      },
+      {
+        "component": "Delivery Pool Auditor",
+        "consumes": "Certification Scan Artifact → perItemResults (question_state + defectFlags) vs. app.js delivery filter",
+        "artifact_dependency": "Cross-reference: items in learner delivery pool (question_state: Certified) vs. items with defects in scan artifact",
+        "description": "Audits the delivery pool for questions that should not be delivered: uncertified items, items with CRITICAL/HIGH defects, items with DL-030 confirmed."
+      }
+    ]
+  },
+
+  "artifact_fields_required_by_investigation": {
+    "description": "The specific fields from the Certification Scan Artifact that the Question Investigation Workbench depends on. These must never be removed or renamed.",
+    "mandatory_fields": [
+      {"path": "perItemResults[].qid", "usage": "Question lookup key"},
+      {"path": "perItemResults[].compoundKey", "usage": "Disambiguates template-rotation variants"},
+      {"path": "perItemResults[].identityKey", "usage": "Cross-reference to CANONICAL_REGISTRY.json"},
+      {"path": "perItemResults[].questionState", "usage": "Delivery pool eligibility check (IQ-004)"},
+      {"path": "perItemResults[].defectFlags", "usage": "Current defect status (IQ-003)"},
+      {"path": "perItemResults[].gateResults", "usage": "Gate-level pass/fail for detailed diagnosis"},
+      {"path": "perItemResults[].gateDetails", "usage": "Per-gate findings (e.g., which EW slots are empty)"},
+      {"path": "perItemResults[].lastKnownDefects", "usage": "Defect history including resolved defects (IQ-002)"},
+      {"path": "perItemResults[].contentHash", "usage": "Version comparison across attempts (IQ-005)"},
+      {"path": "section_7_lineage.artifactVersionChain", "usage": "Which artifact versions are available for historical comparison"},
+      {"path": "section_2_packFileHashes", "usage": "Verifies the pack file the student's question came from matches the scanned pack file"}
+    ]
+  },
+
+  "delivery_pool_safety_cross_reference": {
+    "description": "The investigation workbench must cross-reference the artifact's learner-pool exposure metrics to determine whether the student's challenge relates to a known systemic issue.",
+    "cross_reference": [
+      {"artifact_field": "aggregateStatistics.learnerPoolExposure.critical", "significance": "If > 0 → P0 alert: one or more Certified items with DL-008 or DL-030. Student challenge may be one of these items."},
+      {"artifact_field": "aggregateStatistics.learnerPoolExposure.high", "significance": "If > 0 → P1 alert: Certified items with empty distractor slots (DL-026) or wrong-topic feedback (DL-016 SEVERE). Student may be affected."},
+      {"artifact_field": "aggregateStatistics.totalCertified", "significance": "Total items in learner pool. Provides denominator for 'challenge rate' metrics."}
+    ]
+  },
+
+  "implementation_timeline": {
+    "now": "This specification (read-only) — defines the artifact-side contract",
+    "s830": "NAVIGATION_REGISTRY.json built (by_question, by_session indexes) — enables IQ-001 through IQ-007 queries",
+    "s900": "Question Investigation Workbench (P1) — student challenge submission, triage, linking",
+    "s910": "Full investigation lifecycle — automated IQ queries, delivery pool auditor, student notification"
+  }
+}

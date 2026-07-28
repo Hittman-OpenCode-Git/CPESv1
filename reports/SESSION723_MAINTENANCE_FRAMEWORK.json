@@ -1,0 +1,36 @@
+{
+  "session": "723",
+  "agent": "P",
+  "title": "700-Series Maintenance Mode Framework v1.0",
+  "status": "ACTIVE",
+  "audit_cadence": {
+    "t0_entry_protocol": { "frequency": "Every session start", "checks": ["13-file hash verify", "Certified count grep", "DL-008 Function constructor parse", "Governance guard 20/20", "Pack parse-count 500 each"], "time_budget": "~5 min" },
+    "rapid_pulse": { "frequency": "Every 5 sessions or 3 hours of write activity", "checks": ["Count stability", "DL-008 re-verify", "CC distribution"] },
+    "deep_audit": { "frequency": "Every 20 sessions or domain-closure milestone", "checks": ["Full G1-G5 reconciliation (Session 31 runbook)"] },
+    "pre_delivery_safety": { "frequency": "Before any learner-facing deployment", "checks": ["Certified-only pool", "Defective QID exclusion", "DL-008 = 0 final"] },
+    "baseline_refresh": { "frequency": "After any ≥3-file write session", "checks": ["Full 13-file hash recapture", "CURRENT_BASELINES.md update"] }
+  },
+  "trigger_thresholds": {
+    "certified_count_delta_gt_5": "HIGH — spawn ledger-reconciliation agent",
+    "dl008_reemergence_ge_1": "CRITICAL — halt all writes, quarantine, emergency remediation",
+    "governance_guard_failure": "CRITICAL — halt all pack writes, diagnose rule violation",
+    "pack_parse_not_500": "CRITICAL — halt pack-write agents, structural repair",
+    "unexpected_hash_change": "CRITICAL — halt all, G1-G5 reconciliation",
+    "cc_distribution_outside_22_28_pct": "MEDIUM — flag for psychometric review"
+  },
+  "escalation_conditions": [
+    "DL-008 re-emergence (≥1 Certified) → 700-series emergency remediation",
+    "New defect class (severity ≥ HIGH) → DEFECT_LIBRARY.md assignment",
+    "Certified count regression (≥5) → 300-series reconciliation",
+    "Answer-key integrity violation → TIER 1 answer-key audit"
+  ],
+  "maintenance_agent_types": [
+    "Governance Auditor — T0 entry protocol, hash verification, count stability (read-only)",
+    "Reconciliation Agent — G1-G5 gates (read-only, reports drift)",
+    "Defect Sweeper — DL-008/026/013/031 scans (read-only, flags findings)",
+    "Certification Auditor — CAQS §1.6 six-dimension verification (read-only)",
+    "Baseline Maintainer — CURRENT_BASELINES.md refresh (write, backup required)",
+    "Delivery Safety Inspector — Pre-delivery certified-only pool check (read-only)",
+    "Remediation Agent — Pack-file fixes (write, BLOCK-AUTHORIZED, ≤30 items/batch)"
+  ]
+}

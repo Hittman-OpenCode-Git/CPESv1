@@ -1,0 +1,189 @@
+{
+  "reportId": "SESSION255_STUDENT_DATA_BRIDGE",
+  "session": "255",
+  "title": "Student Data Bridge & Exposure Architecture",
+  "generatedTimestamp": "2026-07-27T18:40:00.000Z",
+  "verdict": "PARTIAL",
+  "verdictDetail": "Design complete. No operational student data exists in the repository.",
+  "dataSourceInventory": {
+    "operational": [],
+    "structural": [
+      {
+        "source": "may-learner-state.js",
+        "type": "RUNTIME_STATE",
+        "description": "Client-side learner state management. Tracks current session: hints consumed, confidence ratings, question responses. Stored in browser localStorage/memory. Not persisted server-side.",
+        "fields": ["hintsEnabled", "hintsConsumed", "questionResponses", "sessionStats", "confidenceRatings"],
+        "classification": "STRUCTURAL",
+        "notes": "Operational at runtime but no export mechanism. Would require explicit export action or server-side logging to populate student database."
+      },
+      {
+        "source": "scripts/student_exposure_index.js",
+        "type": "ANALYTICS_SCRIPT",
+        "description": "S252 Board H script. Consumes student_roll.json and student_exports/ directory. Produces student_exposure.json with per-student question exposure, duplicate detection, and challenge linkage.",
+        "cliFlags": ["--student", "--export", "--output"],
+        "classification": "STRUCTURAL",
+        "notes": "Script is complete and operational, but has no data to consume."
+      },
+      {
+        "source": "scored_cases.js (×5 files)",
+        "type": "CASE_SCORING",
+        "description": "Case study content with scoring rubrics. Contains answer keys and distractor explanations. Not student performance data — these are content files, not student records.",
+        "classification": "CONTENT",
+        "notes": "Scoring logic exists but no student attempt records are stored."
+      },
+      {
+        "source": "app.js + may-core.js",
+        "type": "COACHING_LAYER",
+        "description": "Application layer with hint tracking, exam-mode gate, and defect-aware recommendations. Tracks per-session statistics but does not persist student records across sessions.",
+        "classification": "STRUCTURAL",
+        "notes": "Coaching layer tracks per-attempt data at runtime. Cross-session student record requires export/persistence mechanism."
+      }
+    ],
+    "aspirational": [
+      {
+        "source": "challenge_registry.json",
+        "type": "CHALLENGE_DATA",
+        "description": "35 synthetic seed challenges. Self-identifies as 'synthetic seed data for development and testing.'",
+        "classification": "ASPIRATIONAL",
+        "notes": "Real student challenge data would replace this in production."
+      }
+    ]
+  },
+  "canonicalStudentRecord": {
+    "schemaVersion": "1.0.0",
+    "hierarchy": [
+      {
+        "level": "Student",
+        "fields": {
+          "studentId": {"type": "string", "required": true, "description": "Unique anonymized student identifier"},
+          "cohortId": {"type": "string", "required": false, "description": "Program cohort grouping"},
+          "programStartDate": {"type": "ISO8601", "required": false},
+          "programEndDate": {"type": "ISO8601", "required": false},
+          "totalAttempts": {"type": "integer", "required": false, "description": "Derived — sum of all attempts"}
+        }
+      },
+      {
+        "level": "Attempt",
+        "fields": {
+          "attemptId": {"type": "string", "required": true, "description": "Unique attempt identifier"},
+          "studentId": {"type": "string", "required": true, "description": "FK → Student.studentId"},
+          "sessionId": {"type": "string", "required": false, "description": "FK → session_registry.sessionId"},
+          "startTime": {"type": "ISO8601", "required": true},
+          "endTime": {"type": "ISO8601", "required": false},
+          "mode": {"type": "enum", "values": ["practice", "exam", "tutor"], "required": true},
+          "totalQuestions": {"type": "integer", "required": true},
+          "correctCount": {"type": "integer", "required": true},
+          "incorrectCount": {"type": "integer", "required": true},
+          "skippedCount": {"type": "integer", "required": true},
+          "scorePercent": {"type": "float", "required": true},
+          "domainScores": {"type": "object", "required": false, "description": "{A: %, B: %, C: %, D: %, E: %, F: %}"},
+          "cognitiveScores": {"type": "object", "required": false}
+        }
+      },
+      {
+        "level": "QuestionExposure",
+        "fields": {
+          "exposureId": {"type": "string", "required": true},
+          "attemptId": {"type": "string", "required": true, "description": "FK → Attempt.attemptId"},
+          "qid": {"type": "string", "required": true, "description": "FK → question_history.QuestionID"},
+          "presentedAt": {"type": "ISO8601", "required": true},
+          "answeredAt": {"type": "ISO8601", "required": false},
+          "selectedChoice": {"type": "string", "required": false, "enum": ["A", "B", "C", "D", null]},
+          "isCorrect": {"type": "boolean", "required": false},
+          "timeSpentSeconds": {"type": "integer", "required": false},
+          "hintsConsumed": {"type": "integer", "required": false, "default": 0},
+          "confidenceRating": {"type": "integer", "required": false, "min": 1, "max": 5}
+        }
+      },
+      {
+        "level": "Result",
+        "fields": {
+          "resultId": {"type": "string", "required": true},
+          "attemptId": {"type": "string", "required": true, "description": "FK → Attempt.attemptId"},
+          "totalQuestions": {"type": "integer", "required": true},
+          "correctCount": {"type": "integer", "required": true},
+          "incorrectCount": {"type": "integer", "required": true},
+          "skippedCount": {"type": "integer", "required": true},
+          "scorePercent": {"type": "float", "required": true},
+          "domainScores": {"type": "object", "required": true},
+          "completedAt": {"type": "ISO8601", "required": true}
+        }
+      },
+      {
+        "level": "Challenge",
+        "fields": {
+          "challengeId": {"type": "string", "required": true, "description": "FK → challenge_registry.challengeId"},
+          "studentId": {"type": "string", "required": true, "description": "FK → Student.studentId"},
+          "qid": {"type": "string", "required": true, "description": "FK → question_history.QuestionID"},
+          "challengeType": {"type": "enum", "values": ["CONTENT_ERROR", "TECHNICAL_ISSUE", "ANSWER_DISPUTE", "EXPLANATION_ISSUE", "AMBIGUITY", "OTHER"]},
+          "challengeText": {"type": "string", "required": true},
+          "submittedAt": {"type": "ISO8601", "required": true},
+          "status": {"type": "enum", "values": ["OPEN", "UNDER_REVIEW", "RESOLVED", "DISMISSED"]},
+          "resolution": {"type": "string", "required": false}
+        }
+      }
+    ],
+    "registryCompatibility": {
+      "questionHistory": "qid FK maps to question_history.questions.{QuestionID}",
+      "sessionRegistry": "sessionId FK maps to session_registry.sessions[].sessionId",
+      "challengeRegistry": "challengeId FK maps to challenge_registry.challenges[].challengeId"
+    }
+  },
+  "importExportContracts": {
+    "import": {
+      "format": "JSON (preferred) or CSV",
+      "schema": "StudentBatchImport: array of student records with embedded attempts, exposures, results",
+      "validationRules": [
+        "Every qid must exist in question_history.json",
+        "Every sessionId must exist in session_registry.json (if provided)",
+        "studentId must be unique within the batch",
+        "attemptId must be unique within the batch",
+        "scorePercent must be between 0 and 100",
+        "selectedChoice must be A/B/C/D or null"
+      ],
+      "errorHandling": "Row-level rejection with error detail. Valid rows committed, invalid rows rejected with reason."
+    },
+    "export": {
+      "queries": [
+        "Student performance by domain (avg score, attempt count per domain A-F)",
+        "Question exposure frequency (how many students saw each QID)",
+        "Most challenging questions (highest incorrect rate per QID)",
+        "Student challenge history (all challenges per student)",
+        "Attempt timeline (all attempts ordered by time per student)"
+      ],
+      "format": "JSON"
+    },
+    "apiContract": {
+      "lookupStudent": "Input: studentId → Output: student record + all attempts + exposures + results + challenges",
+      "lookupQuestionExposure": "Input: qid → Output: exposure count, correct/incorrect distribution, avg time, avg hints",
+      "lookupDomainPerformance": "Input: domain (A-F), cohortId (optional) → Output: aggregate score stats per domain",
+      "lookupChallengeHistory": "Input: studentId or qid → Output: all related challenges with status"
+    }
+  },
+  "privacyGovernance": {
+    "dataClassification": {
+      "pii": ["studentId (if linked to real identity elsewhere)", "export files containing timestamps that could identify individuals"],
+      "anonymized": ["studentId (standalone)", "attemptId", "exposureId"],
+      "aggregateOnly": ["domainScores by cohort", "question exposure frequency", "most challenging questions"]
+    },
+    "accessControls": {
+      "admin": "Full access to all student records and aggregate analytics",
+      "instructor": "Access to cohort-level aggregate data + individual student records within their cohort",
+      "student": "Access to own records only (self-service dashboard)",
+      "system": "Read-only access for pipeline automation, no export"
+    },
+    "retentionPolicy": {
+      "attemptData": "Retained for duration of program + 12 months post-completion",
+      "challengeData": "Retained indefinitely (anonymized — part of content quality record)",
+      "exportFiles": "Deleted after ingestion verified"
+    },
+    "governanceIntegration": {
+      "connection": "Student data ingestion triggers governance-guard Rule 4 verification (answer-key changes must include re-verified note). Student challenges feed into defect detection pipeline (→ REC-IDs → investigation_registry).",
+      "rules": "No new governance rules needed. Existing Rules 1-6 cover certification, registry, and defect enforcement for content. Student data is operational analytics, not content modification."
+    }
+  },
+  "decision": {
+    "verdict": "PARTIAL",
+    "rationale": "The canonical student record schema is fully designed with field-level types, constraints, and foreign key relationships to all existing registries (question_history, session_registry, challenge_registry). Import/export contracts specify formats, validation rules, and API query signatures. Privacy and governance controls are defined across all 4 dimensions (classification, access, retention, integration). However, zero operational student data exists in the repository. The student_exposure_index.js script is complete and validated but has no data to consume. The data bridge is architecturally ready but cannot be operationally validated until real student data is available."
+  }
+}

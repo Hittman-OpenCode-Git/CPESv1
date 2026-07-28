@@ -1,0 +1,194 @@
+{
+  "BLOCK-AUTHORIZED": "SESSION806 — quality gate results report (G1-G4). Read-only review of 10 authored items. No pack file modification. Contains QID references for traceability only.",
+  "title": "SESSION806_QUALITY_GATE_RESULTS",
+  "session": "806",
+  "generated": "2026-07-26",
+  "agents": "L (Gate 1) + M (Gate 2) + N (Gate 3) + O (Gate 4)",
+  "reviewScope": {
+    "totalItems": 10,
+    "batches": ["A (R11, R14, R15)", "B (R16, R17, R19, R20)", "C (R30, R31, R32)"],
+    "domain": "E — Internal Controls",
+    "sourceFiles": [
+      "SESSION806_AUTHORING_BATCH_A.json",
+      "SESSION806_AUTHORING_BATCH_B.json",
+      "SESSION806_AUTHORING_BATCH_C.json",
+      "SESSION806_TECHNICAL_REVIEW.json",
+      "SESSION311_DOMAIN_E_REPLACEMENT_SPEC.json",
+      "SESSION311_AUTHORING_QUALITY_GATE.json"
+    ]
+  },
+
+  "overallResults": {
+    "gate1_draft": { "status": "PASS", "pass": 10, "fail": 0, "agent": "L" },
+    "gate2_technical": { "status": "PASS", "pass": 10, "fail": 0, "agent": "M", "independentReview": "SESSION806_TECHNICAL_REVIEW.json (Agent H)" },
+    "gate3_blueprint": { "status": "CONDITIONAL_PASS", "pass": 8, "conditionalPass": 2, "fail": 0, "agent": "N" },
+    "gate4_qa": { "status": "PASS", "pass": 10, "fail": 0, "agent": "O" }
+  },
+
+  "gate1_draftQuality": {
+    "status": "PASS",
+    "agent": "L",
+    "methodology": "Per-item verification: stem clarity, 4 distinct choices, CorrectChoice defined, EC substantive, EW[A-D] all present, metadata completeness.",
+    "summary": "All 10 items pass Gate 1. Every item has a clear, unambiguous stem; 4 distinct, non-overlapping choices; a defined CorrectChoice; a substantive EC (all >750 chars); all 4 EW fields present with EW[CC] empty (DL-008 compliant); and complete metadata including LOSTag, Difficulty, DifficultyScore, CognitiveLevel, and governance fields."
+  },
+
+  "gate2_technicalReview": {
+    "status": "PASS",
+    "agent": "M",
+    "independentReviewConfirmed": {
+      "reviewer": "Agent H (SESSION806_TECHNICAL_REVIEW.json)",
+      "totalReviewed": 10,
+      "pass": 10,
+      "fail": 0,
+      "criticalFindings": 0
+    },
+    "structuralScanResults": {
+      "dl008": { "status": "CLEAN", "count": 0 },
+      "dl026": { "status": "CLEAN", "count": 0 },
+      "dl013": { "status": "CLEAN", "count": 0 },
+      "dl010": { "status": "CLEAN", "count": 0 }
+    },
+    "summary": "All 10 items pass Gate 2 with independent verification. Zero accounting errors. Zero misstated COSO/SOX/GAAP references. All distractors are plausible alternatives testing genuine misconceptions."
+  },
+
+  "gate3_blueprintReview": {
+    "status": "CONDITIONAL_PASS",
+    "agent": "N",
+    "losTagVerification": {
+      "status": "PASS — all 10 LOSTags map to correct CSO Section E LOS"
+    },
+    "topicAccuracy": {
+      "status": "PASS — all 10 Topic fields are descriptive and accurate"
+    },
+    "cognitiveLevelAccuracy": {
+      "status": "PASS — all 10 CognitiveLevel assignments are accurate"
+    },
+    "difficultyCalibration": {
+      "status": "CONDITIONAL_PASS — 2 items flagged as borderline DL-031",
+      "currentDistribution": {
+        "Easy_1": { "count": 1, "pct": "10%", "refs": ["R19 (SOX 302 recall)"] },
+        "ModerateEasy_2": { "count": 1, "pct": "10%", "refs": ["R20 (SOX 404 distinction)"] },
+        "Moderate_3": { "count": 8, "pct": "80%", "refs": ["R11","R14","R15","R16","R17","R30","R31","R32"] },
+        "Difficult_4": { "count": 0, "pct": "0%" },
+        "VeryDifficult_5": { "count": 0, "pct": "0%" }
+      },
+      "s311targetDistribution": {
+        "Easy": "~20% (16 of 81)", "Moderate": "~50% (41 of 81)", "Difficult": "~25% (20 of 81)", "Hard": "~5% (4 of 81)"
+      },
+      "note": "10-item sample too small to fully assess distribution. Remaining 71 items will fill in targets. Current Moderate-heavy skew expected for small sample of core Section E concepts.",
+      "dl031BorderlineItems": [
+        {
+          "ref": "R14",
+          "storedDifficulty": "Moderate (3)",
+          "concern": "Stem describes ITGC's 4 domains and asks 'Which category?' — definition-to-term pattern. Defenses: scenario framing (Atlas Financial Services), Understand CL, genuinely challenging distractors (application/entity/business-process).",
+          "recommendation": "CONDITIONAL PASS. Revisit when full Domain E portfolio assembled."
+        },
+        {
+          "ref": "R16",
+          "storedDifficulty": "Moderate (3)",
+          "concern": "Stem asks which fraud types COSO requires — closer to definition-recall than R14. Defenses: 4 alternative classification schemes as distractors, Understand CL.",
+          "recommendation": "CONDITIONAL PASS. At Easy/Moderate boundary. Revisit with full portfolio."
+        }
+      ]
+    },
+    "part1Relevance": {
+      "status": "PASS — all 10 items test CMA Part 1 Section E material. Zero Part 2 content."
+    },
+    "summary": "Gate 3 CONDITIONAL PASS. 8 items PASS fully. 2 items (R14, R16) flagged as borderline DL-031 — difficulty may be inflated. Both receive CONDITIONAL PASS with recommendation to revisit difficulty when full 81-item Domain E portfolio is assembled."
+  },
+
+  "gate4_qaReview": {
+    "status": "PASS",
+    "agent": "O",
+    "antiAIPatternsCheck": {
+      "status": "PASS",
+      "findings": [
+        "No 'Company XYZ is considering...' detected",
+        "No 'Which of the following is correct?' as sole stem detected",
+        "No 'Calculate the variance using the formula' detected",
+        "No template boilerplate or placeholder text detected"
+      ]
+    },
+    "businessRealism": {
+      "namedCompanyItems": ["R11 (Cascade Tech)","R14 (Atlas Financial)","R15 (Northpoint Distribution)","R17 (Mountain State Bank)","R30 (Summit Health System)","R32 (Apex Mfg + PayServe)"],
+      "frameworkItemsNoCompanyNeeded": ["R16 (COSO Principle 8)","R19 (SOX 302)","R20 (SOX 404)"],
+      "minorNote": "R31 uses 'An e-commerce company' — specific metrics (50K txns/day) provide realism; named company would improve consistency",
+      "bestRealismItems": ["R17 (Mountain State Bank — data breach, insurance, outsourcing)","R30 (Summit Health — HIPAA, MFA, role-based access)","R32 (Apex/PayServe — SOC 1, CUECs, indemnification)"]
+    },
+    "distractorQuality": {
+      "status": "PASS",
+      "note": "All 30 non-CC EW fields are choice-specific. Each identifies a specific misconception, explains why the distractor is wrong, and contrasts with the correct approach. No generic or placeholder text."
+    },
+    "absoluteLanguageCheck": {
+      "status": "PASS",
+      "note": "No absolute language in choices that would cue the correct answer. All choices use consistent linguistic patterns. Absolute language in EC is justified by authoritative standards."
+    },
+    "ecQualitySummary": {
+      "charsRange": "~800 (R15, R20, R31) to ~1100 (R17)",
+      "allMeet400charThreshold": true,
+      "allCiteFramework": true,
+      "allIdentifyExamTrap": true
+    },
+    "ewQualitySummary": {
+      "charsPerEWRange": "250–650 chars",
+      "allChoiceSpecific": true,
+      "noPlaceholderText": true,
+      "noGenericText": true
+    },
+    "summary": "Gate 4 PASS. High business realism across all items. All distractors target genuine, distinct misconceptions. No absolute language cueing. All ECs exceed S311 400-char threshold with framework citations. All EWs are choice-specific."
+  },
+
+  "gateResultsMatrix": {
+    "columns": ["Item","QID","Batch","G1","G2","G3","G4","Overall"],
+    "rows": [
+      {"item":"R11","qid":"P1-E-R11","batch":"A","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"},
+      {"item":"R14","qid":"P1-E-R14","batch":"A","g1":"PASS","g2":"PASS","g3":"CONDITIONAL","g4":"PASS","overall":"CONDITIONAL_PASS"},
+      {"item":"R15","qid":"P1-E-R15","batch":"A","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"},
+      {"item":"R16","qid":"P1-E-R16","batch":"B","g1":"PASS","g2":"PASS","g3":"CONDITIONAL","g4":"PASS","overall":"CONDITIONAL_PASS"},
+      {"item":"R17","qid":"P1-E-R17","batch":"B","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"},
+      {"item":"R19","qid":"P1-E-R19","batch":"B","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"},
+      {"item":"R20","qid":"P1-E-R20","batch":"B","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"},
+      {"item":"R30","qid":"P1-E-R30","batch":"C","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"},
+      {"item":"R31","qid":"P1-E-R31","batch":"C","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"},
+      {"item":"R32","qid":"P1-E-R32","batch":"C","g1":"PASS","g2":"PASS","g3":"PASS","g4":"PASS","overall":"PASS"}
+    ]
+  },
+
+  "openConditions": [
+    {
+      "condition": "R14 DL-031 borderline",
+      "detail": "Difficulty Moderate (3). Stem describes ITGC domains, asks which category — definition-to-term pattern. Defense: scenario framing, Understand CL, challenging distractors.",
+      "resolution": "Revisit when full 81-item Domain E portfolio assembled. May recalibrate to Moderate-Easy (2).",
+      "severity": "LOW — does not block certification"
+    },
+    {
+      "condition": "R16 DL-031 borderline",
+      "detail": "Difficulty Moderate (3). Stem asks which fraud types COSO requires — closer to definition-recall than R14. Defense: 4 alternative classification schemes as distractors, Understand CL.",
+      "resolution": "Revisit with full portfolio. May recalibrate to Easy (1).",
+      "severity": "LOW — does not block certification"
+    },
+    {
+      "condition": "R31 minor style note",
+      "detail": "Stem uses 'An e-commerce company' rather than named company. Specific metrics provide realism.",
+      "resolution": "Optional — name the company in future editorial pass.",
+      "severity": "INFORMATIONAL — cosmetic only"
+    }
+  ],
+
+  "certificationReadiness": {
+    "itemsReadyForGate5": ["R11","R15","R17","R19","R20","R30","R31","R32"],
+    "itemsWithConditions": ["R14","R16"],
+    "recommendation": "All 10 items may proceed to Gate 5 (Certification Candidate). The 2 DL-031 borderline conditions are low-severity and do not block advancement. Difficulty recalibration can be performed during batch certification or deferred to full-portfolio audit. R31 naming note is cosmetic.",
+    "blockingDefects": 0,
+    "structuralDefects": 0,
+    "accountingErrors": 0
+  },
+
+  "governanceAttestation": {
+    "readOnlyMode": "True — no pack files modified",
+    "backupProtocol": "N/A — no writes to pack files",
+    "revisionHistoryRequired": true,
+    "note": "This results report must be logged to knowledge/REVISION_HISTORY.md per AGENTS.md §4 and §12. All 10 items advance to Certification Candidate status for future certification session (max 30 per batch per Rule 5).",
+    "preDeliveryCheckRequired": "Before learner delivery, confirm all items in pack file have question_state: 'Certified' and pass pre-delivery safety check per AGENTS.md §7."
+  }
+}

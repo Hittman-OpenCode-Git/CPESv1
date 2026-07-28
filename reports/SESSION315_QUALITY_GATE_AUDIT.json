@@ -1,0 +1,468 @@
+{
+  "title": "SESSION315_QUALITY_GATE_AUDIT",
+  "session": "315",
+  "agent": "F",
+  "generated": "2026-07-27",
+  "workflow": "S311 5-Gate Quality Workflow",
+  "gates": [
+    {
+      "QuestionID": "P1-E-R11",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R14",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R15",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R16",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R17",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R19",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R20",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R30",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R31",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    },
+    {
+      "QuestionID": "P1-E-R32",
+      "gate1_draft": {
+        "status": "PASS",
+        "checks": {
+          "stem": true,
+          "choices": true,
+          "correctChoice": true,
+          "explanationCorrect": true,
+          "explanationWrongComplete": true,
+          "metadata": true
+        }
+      },
+      "gate2_technical": {
+        "status": "PASS",
+        "checks": {
+          "dl008": true,
+          "dl026": true,
+          "dl013": true,
+          "dl010": "PASS",
+          "fieldCompleteness": true
+        }
+      },
+      "gate3_blueprint": {
+        "status": "PASS",
+        "checks": {
+          "topicAccuracy": "PASS",
+          "losTagPrecision": "PASS",
+          "cognitiveLevelAccuracy": "PASS",
+          "difficultyCalibration": "PASS",
+          "part1Relevance": "PASS"
+        }
+      },
+      "gate4_qa": {
+        "status": "PASS",
+        "checks": {
+          "stemClarity": "PASS",
+          "distractorPlausibility": "PASS",
+          "explanationCorrectQuality": "PASS",
+          "explanationWrongSpecificity": "PASS",
+          "answerKeyCorrectness": "PASS"
+        }
+      },
+      "overallGateStatus": "ALL_GATES_PASS"
+    }
+  ],
+  "summary": {
+    "totalItems": 10,
+    "allGatesPass": 10,
+    "gate1Pass": 10,
+    "gate2Pass": 10,
+    "gate3Pass": 10,
+    "gate4Pass": 10,
+    "workflowCompliance": "S311 5-Gate workflow fully applied — all items pass all 4 gates"
+  }
+}

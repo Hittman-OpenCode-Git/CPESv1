@@ -1,0 +1,23 @@
+{
+  "session": "Session 4 — Defect Manifest Reconciliation",
+  "timestamp": "2026-07-24T15:23:35.130Z",
+  "mode": "READ-ONLY",
+  "packA": {
+    "file": "pack_a_corrected.js",
+    "sha256": "8164F1FC1B6509F88D2709DE3770ECBB49602D0EBE65F36CF46A652D5FCBC633",
+    "size": 1906851,
+    "qidCount": 500,
+    "totalDefects": 0,
+    "defects": [],
+    "virtualRepairResult": "see log above"
+  },
+  "packC": {
+    "file": "pack_c_corrected.js",
+    "sha256": "C934FD694CF718AF0D85F838AB350199385610A60D0DC9662DC9C47A8516ECE8",
+    "size": 1767306,
+    "qidCount": 500,
+    "totalDefects": 0,
+    "defects": [],
+    "virtualRepairResult": "see log above"
+  }
+}

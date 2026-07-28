@@ -1,0 +1,192 @@
+{
+  "specId": "SESSION850_WAVE_PLANNER_SPEC",
+  "board": "C",
+  "generatedTimestamp": "2026-07-27T13:50:34.350Z",
+  "summary": {
+    "totalWaves": 1,
+    "totalItemsPlanned": 77,
+    "wavesByTier": {
+      "WAVE_A": 1,
+      "WAVE_B": 0,
+      "WAVE_C": 0
+    }
+  },
+  "domainCoverage": {
+    "before": {
+      "A": {
+        "total": 375,
+        "certified": 373,
+        "pct": 99.5,
+        "gap": 2
+      },
+      "B": {
+        "total": 500,
+        "certified": 500,
+        "pct": 100,
+        "gap": 0
+      },
+      "C": {
+        "total": 500,
+        "certified": 500,
+        "pct": 100,
+        "gap": 0
+      },
+      "D": {
+        "total": 375,
+        "certified": 375,
+        "pct": 100,
+        "gap": 0
+      },
+      "E": {
+        "total": 415,
+        "certified": 248,
+        "pct": 59.8,
+        "gap": 167
+      },
+      "F": {
+        "total": 374,
+        "certified": 225,
+        "pct": 60.2,
+        "gap": 149
+      }
+    },
+    "after": {
+      "A": {
+        "total": 375,
+        "certified": 373,
+        "pct": 99.5,
+        "gap": 2
+      },
+      "B": {
+        "total": 500,
+        "certified": 500,
+        "pct": 100,
+        "gap": 0
+      },
+      "C": {
+        "total": 500,
+        "certified": 500,
+        "pct": 100,
+        "gap": 0
+      },
+      "D": {
+        "total": 375,
+        "certified": 375,
+        "pct": 100,
+        "gap": 0
+      },
+      "E": {
+        "total": 415,
+        "certified": 286,
+        "pct": 68.9,
+        "gap": 129
+      },
+      "F": {
+        "total": 374,
+        "certified": 264,
+        "pct": 70.6,
+        "gap": 110
+      }
+    }
+  },
+  "waves": [
+    {
+      "waveId": "WAVE-WAVE_A-01",
+      "waveTier": "WAVE_A",
+      "label": "Wave A — Priority Certification",
+      "sequence": 1,
+      "itemCount": 77,
+      "estimatedHours": 20,
+      "domainDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 38,
+        "F": 39
+      },
+      "readinessScoreAvg": 94.9,
+      "items": [
+        "P1-EC-004",
+        "P1-EC-008",
+        "P1-EC-014",
+        "P1-EC-020",
+        "P1-EC-021",
+        "P1-EC-022",
+        "P1-EC-023",
+        "P1-EC-024",
+        "P1-EC-025",
+        "P1-EC-028",
+        "P1-EC-031",
+        "P1-EC-040",
+        "P1-EC-041",
+        "P1-EC-049",
+        "P1-EC-052",
+        "P1-EC-060",
+        "P1-EC-061",
+        "P1-EC-066",
+        "P1-EC-072",
+        "P1-ED-001",
+        "P1-ED-010",
+        "P1-ED-014",
+        "P1-ED-016",
+        "P1-ED-025",
+        "P1-ED-028",
+        "P1-ED-035",
+        "P1-ED-036",
+        "P1-ED-042",
+        "P1-ED-046",
+        "P1-ED-051",
+        "P1-ED-058",
+        "P1-ED-064",
+        "P1-ED-066",
+        "P1-ED-071",
+        "P1-ED-072",
+        "P1-ED-073",
+        "P1-ED-074",
+        "P1-ED-075",
+        "P1-FC-001",
+        "P1-FC-006",
+        "P1-FC-007",
+        "P1-FC-010",
+        "P1-FC-015",
+        "P1-FC-020",
+        "P1-FC-025",
+        "P1-FC-026",
+        "P1-FC-031",
+        "P1-FC-036",
+        "P1-FC-043",
+        "P1-FC-048",
+        "P1-FC-053",
+        "P1-FC-058",
+        "P1-FC-063",
+        "P1-FC-068",
+        "P1-FC-073",
+        "P1-FC-074",
+        "P1-FC-075",
+        "P1-FD-001",
+        "P1-FD-006",
+        "P1-FD-011",
+        "P1-FD-016",
+        "P1-FD-021",
+        "P1-FD-026",
+        "P1-FD-027",
+        "P1-FD-030",
+        "P1-FD-031",
+        "P1-FD-033",
+        "P1-FD-034",
+        "P1-FD-043",
+        "P1-FD-049",
+        "P1-FD-054",
+        "P1-FD-059",
+        "P1-FD-064",
+        "P1-FD-069",
+        "P1-FD-073",
+        "P1-FD-074",
+        "P1-FD-075"
+      ],
+      "strategy": "Domain-balance-first",
+      "notes": "Domain-balanced wave targeting 85% coverage"
+    }
+  ]
+}

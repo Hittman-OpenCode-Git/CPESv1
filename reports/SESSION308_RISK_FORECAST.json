@@ -1,0 +1,58 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "governanceRisks": [
+    {
+      "risk": "DL-008 residual after Wave 1",
+      "probability": "LOW",
+      "impact": "MEDIUM",
+      "mitigation": "Post-Wave 1 scan; reserve 1 session for residuals"
+    },
+    {
+      "risk": "DL-016 metadata-content shift causing scan errors",
+      "probability": "MEDIUM",
+      "impact": "MEDIUM",
+      "mitigation": "Mitigate before Wave 2 (PR-2)"
+    },
+    {
+      "risk": "Pack file hash instability during concurrent sessions",
+      "probability": "LOW",
+      "impact": "LOW",
+      "mitigation": "Lane isolation, backup protocol, hash verification"
+    }
+  ],
+  "modernizationRisks": [
+    {
+      "risk": "Clone rotation audit uncovers >112 items",
+      "probability": "MEDIUM",
+      "impact": "LOW",
+      "mitigation": "Reserve 1 extra session in modernization budget"
+    },
+    {
+      "risk": "DL-031 difficulty recalibration scope expands",
+      "probability": "LOW",
+      "impact": "LOW",
+      "mitigation": "Strict scope enforcement — only pattern-matched items"
+    }
+  ],
+  "certificationRisks": [
+    {
+      "risk": "Domain E certification velocity lower than expected",
+      "probability": "MEDIUM",
+      "impact": "HIGH",
+      "mitigation": "Reserve 2 extra sessions. Prioritize highest-UIQS-impact items first."
+    },
+    {
+      "risk": "Pack E Section C (95 items) more complex than estimated",
+      "probability": "LOW",
+      "impact": "MEDIUM",
+      "mitigation": "Deferred to Wave 5 — can be descoped if time-constrained"
+    },
+    {
+      "risk": "FD-045/FD-075 require content authoring (not just repair)",
+      "probability": "MEDIUM",
+      "impact": "HIGH",
+      "mitigation": "Reserve 1 session for FD-045/075 before Wave 2"
+    }
+  ],
+  "overallRiskLevel": "MEDIUM — the plan is resilient to moderate velocity variation and minor scope expansion. Critical path (DL-008) has lowest risk."
+}

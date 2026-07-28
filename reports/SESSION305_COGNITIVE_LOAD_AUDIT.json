@@ -1,0 +1,76 @@
+{
+  "generated": "2026-07-26T21:49:14.792Z",
+  "session": "S305",
+  "caseLoadDistribution": {
+    "Excessive": 44,
+    "High": 23,
+    "Moderate": 8,
+    "Low": 45
+  },
+  "avgCaseLoadScore": "9.3",
+  "exhibitLoadDistribution": {
+    "Moderate": 52,
+    "Low": 29,
+    "Excessive": 8,
+    "High": 28
+  },
+  "avgExhibitCells": 14,
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "cases": 11,
+      "excessive": 1,
+      "high": 5,
+      "moderate": 5,
+      "low": 0,
+      "avgLoadScore": "8.0"
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "cases": 12,
+      "excessive": 7,
+      "high": 4,
+      "moderate": 1,
+      "low": 0,
+      "avgLoadScore": "12.0"
+    },
+    "C - Performance Management": {
+      "cases": 14,
+      "excessive": 8,
+      "high": 4,
+      "moderate": 2,
+      "low": 0,
+      "avgLoadScore": "15.4"
+    },
+    "D - Cost Management": {
+      "cases": 14,
+      "excessive": 11,
+      "high": 3,
+      "moderate": 0,
+      "low": 0,
+      "avgLoadScore": "15.9"
+    },
+    "E - Internal Controls": {
+      "cases": 13,
+      "excessive": 9,
+      "high": 4,
+      "moderate": 0,
+      "low": 0,
+      "avgLoadScore": "14.3"
+    },
+    "F - Technology & Analytics": {
+      "cases": 11,
+      "excessive": 8,
+      "high": 3,
+      "moderate": 0,
+      "low": 0,
+      "avgLoadScore": "14.5"
+    },
+    "Unknown": {
+      "cases": 45,
+      "excessive": 0,
+      "high": 0,
+      "moderate": 0,
+      "low": 45,
+      "avgLoadScore": "2.4"
+    }
+  }
+}

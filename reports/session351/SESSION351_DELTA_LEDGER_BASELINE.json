@@ -1,0 +1,112 @@
+{
+  "document": "SESSION351_DELTA_LEDGER_BASELINE",
+  "session": "S351",
+  "title": "Delta Ledger Baseline Establishment — Board F",
+  "series": "350-Series — Framework v2 Validation Readiness",
+  "date": "2026-07-27",
+  "type": "Read-Only Baseline Establishment — No Content Modifications",
+  "authority": "S350 Delta Review Scorecard (Board F); S204 Delta Review Results (Board D); S202.1 Artifact Storage Spec",
+  "purpose": "Validate deterministic hashing, classification logic, and baseline integrity. Establish reference ledger. Do not claim savings yet.",
+
+  "delta_ledger_stateless_status": {
+    "description": "The delta ledger requires a historical baseline (a prior scan artifact) to compare against the current scan artifact. Without at least two scan artifacts across different sessions, no delta comparison can be computed.",
+    "current_state": "FIRST_BASELINE — S322 certification_scan_artifact.json is the first and only production artifact. No prior artifact exists for comparison. All 2,540 items would receive deltaClassification: UNCLASSIFIED (first scan, no baseline exists).",
+    "minimum_requirement": "At least one subsequent session must produce a scan artifact (e.g., S206) before the delta ledger can compute ANY comparison.",
+    "expected_first_comparison": "S830 Phase 2 Gate — when a second scan artifact exists from a post-Hybrid session.",
+    "status_at_s351": "INSUFFICIENT_DATA — delta ledger has no operational history. This is expected at P0."
+  },
+
+  "inheritance_rules_validation": {
+    "source": "SESSION350_DELTA_REVIEW_SCORECARD.json §IR-001 through IR-005",
+    "rules": {
+      "IR-001_NO_CHANGE": {
+        "description": "Item content hash identical to prior scan. Inherit Certified status (CertifiedDelta). Zero review.",
+        "validation_status": "SPECIFIED — cannot be tested without comparison data",
+        "expected_skip_rate": ">80% (96.3% per S204 pilot estimate)"
+      },
+      "IR-002_EW_ONLY": {
+        "description": "Only ExplanationWrong fields changed. Partial review — audit new EW text only. Inherit structural verdicts.",
+        "validation_status": "SPECIFIED"
+      },
+      "IR-003_METADATA_CHANGED": {
+        "description": "Only non-content metadata changed (difficulty, cognitive level, tags). Skip content review. Verify metadata.",
+        "validation_status": "SPECIFIED"
+      },
+      "IR-004_CONTENT_CHANGED": {
+        "description": "Stem, Choices, or CorrectChoice changed. Full re-review required.",
+        "validation_status": "SPECIFIED"
+      },
+      "IR-005_STRUCTURE_ONLY": {
+        "description": "JSON structure changed (field order, formatting) but content identical. Skip review.",
+        "validation_status": "SPECIFIED"
+      }
+    },
+    "validation_verdict": "SPECIFICATION_VALID — all 5 rules are logically sound and have unambiguous detection criteria. Operational validation requires at least one comparison cycle."
+  },
+
+  "deterministic_hashing": {
+    "description": "SHA-256 of canonical content fields (Stem, CorrectChoice, Choices, ExplanationCorrect, ExplanationWrongA-D). Excludes metadata fields (QuestionID, question_state, difficulty, etc.).",
+    "hash_engine": "scripts/engine/hash_engine.js (S322 infrastructure)",
+    "verification_status": "INFRASTRUCTURE_VERIFIED — hash_engine.js is operational and self-tested in S322. Determinism not yet validated across independent runs because no comparison data exists.",
+    "determinism_test": "NOT_YET_EXECUTED — requires two independent AM-1 runs on the same pack file, computing content hashes, and comparing results. Target: 100% identical across runs."
+  },
+
+  "classification_logic": {
+    "delta_classifications": [
+      "UNCLASSIFIED — No baseline exists. First scan for this item.",
+      "NEW_ITEM — Item did not exist in prior scan.",
+      "UNCHANGED — Content hash identical to prior scan baseline.",
+      "CONTENT_CHANGED — Content hash differs due to stem/choices/CC/EC change.",
+      "METADATA_CHANGED — Content hash unchanged but non-content fields changed.",
+      "EW_ONLY — Content hash differs solely due to ExplanationWrong field changes.",
+      "STRUCTURE_ONLY — Content semantically identical, structure differs."
+    ],
+    "detection_mechanism": "Per-item SHA-256 comparison between current artifact perItemResults.contentHash and prior artifact perItemResults.contentHash for same compound key.",
+    "classification_validity": "UNVERIFIED — no comparison data. Logic is specified in IR-001 through IR-005 and is unambiguous, but operational validation deferred."
+  },
+
+  "baseline_integrity": {
+    "current_baseline_snapshot": {
+      "artifact_id": "CSA-S322-2026-07-27T05-45-08-670Z",
+      "pack_file_hashes": "Recorded in S322 artifact. Packs A/C/D/E have drifted since (post-S726 development).",
+      "content_hashes_per_item": "Computed by S322 hash_engine.js. 2,540 entries."
+    },
+    "integrity_measures": [
+      "Artifact SHALL NOT be overwritten mid-session — immutable once produced",
+      "Delta ledger entries keyed by compound key — survives QID renames",
+      "Prior artifact preserved in scripts/output/historical/ — audit trail retained",
+      "Content hash includes only content-fields — immune to metadata reorganizations"
+    ],
+    "verdict": "BASELINE_CAPTURED — S322 artifact serves as the T0 delta baseline. Integrity validations pass for the single-artifact state. Full integrity testing requires multi-session comparison chain."
+  },
+
+  "s350_framework_v2_target_reference": {
+    "TH-007_re_review_ratio": {"v1_baseline": "80%", "v2_target": "<20% (P3)", "current": "100% (no delta review — all items need full review)", "note": "100% re-review until at least one comparison cycle completes"},
+    "TH-008_skip_rate": {"v1_baseline": "0%", "v2_target": ">80% (P3)", "current": "0% (no items can be skipped — first baseline)", "expected_to_activate": "S830 Phase 2"},
+    "TH-009_throughput_multiplier": {"v1_baseline": "1.0x", "v2_target": "3.8x (P3)", "current": "1.0x (v1 operations continue; delta review not yet operational)"},
+    "note": "All TH-007/TH-008/TH-009 metrics are at v1 baseline. Delta review contributes 2.0-3.0× of the 3.8× throughput multiplier — but cannot activate until at least two scan artifacts exist for comparison. This is expected at P0."
+  },
+
+  "reference_ledger_establishment": {
+    "ledger_entry_format": {
+      "item_compound_key": "QID|CC|EWP|TF|FP|VID — uniquely identifies the item version",
+      "session_first_seen": "S322 (first scan)",
+      "content_hash": "SHA-256 of canonical content fields at S322",
+      "certified_at_scan": "question_state at scan time",
+      "delta_classification": "UNCLASSIFIED (first scan)",
+      "change_history": "empty array — no prior entries"
+    },
+    "ledger_population": "NOT_YET_GENERATED — delta_ledger_builder.js (S322 infrastructure) can generate from S322 artifact but has not been run to produce DELTA_LEDGER.json.",
+    "ledger_reference_status": "INFRASTRUCTURE_READY — delta_ledger_builder.js is operational but has not produced its first output. Recommended run at S206 T0."
+  },
+
+  "cross_references": {
+    "parent_s350": "reports/SESSION350_DELTA_REVIEW_SCORECARD.json",
+    "s204_inputs": ["reports/SESSION204_DELTA_REVIEW_RESULTS.json"],
+    "s2021_inputs": ["reports/SESSION2021_ARTIFACT_STORAGE_SPEC.json"],
+    "sibling_s351": [
+      "reports/session351/SESSION351_SCAN_ARTIFACT_VALIDATION.json",
+      "reports/session351/SESSION351_THROUGHPUT_GAP_ANALYSIS.json"
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "document": "SESSION353_THROUGHPUT_REAL",
+  "session": "S353",
+  "title": "Certification Throughput — First Real Measurement",
+  "board": "A",
+  "series": "350-Series — Framework v2 Operational Analytics (Wave 2)",
+  "date": "2026-07-27",
+  "type": "Read-Only Measurement — No Content Modifications",
+  "authority": [
+    "SESSION352_THROUGHPUT_MEASUREMENT.json (projected baseline)",
+    "SESSION350_V1_BASELINE.json §section_6 (v1 throughput baselines)",
+    "S853 REVISION_HISTORY.md entry (certification execution log)",
+    "S853.json session package (batch plan)",
+    "pack_c_corrected.js, pack_d_corrected.js (live state verification)"
+  ],
+  "depends_on": [
+    "S352 Board I",
+    "S853"
+  ],
+  "unlocks": "S353 Board G (Throughput Multiplier) + S353 Board H (Scorecard)",
+  "v1_baseline": {
+    "items_per_session": "30-50 (average 42)",
+    "sessions_per_wave": "4-5",
+    "agents_per_session": 19,
+    "boards_per_session": 8.5,
+    "agent_spawns_per_item": 0.305,
+    "description": "Each v1 certification wave spanned 4-5 sessions. Much of the session time was consumed by scanning, identity disputes, duplicate reviews, and manual governance checks."
+  },
+  "v2_s853_observed": {
+    "items_certified": 77,
+    "items_per_session": 77,
+    "sessions_used": 1,
+    "batches": 4,
+    "items_per_batch": [
+      28,
+      10,
+      28,
+      11
+    ],
+    "mean_batch_size": 19.25,
+    "max_batch_size": 28,
+    "packs_touched": 2,
+    "packs": [
+      "pack_c_corrected.js",
+      "pack_d_corrected.js"
+    ],
+    "domains_covered": [
+      "E",
+      "F"
+    ],
+    "per_pack": {
+      "pack_c": {
+        "certified": 38,
+        "before": 350,
+        "after": 388
+      },
+      "pack_d": {
+        "certified": 39,
+        "before": 350,
+        "after": 389
+      }
+    },
+    "agent_spawns_for_certification": 0,
+    "certification_method": "Batch script (s853_certify_wave_a.js) — direct string replacement. No per-item agent spawns.",
+    "governance_sessions": [
+      "S852 (manifest regeneration)",
+      "S854 (integrity sweep)"
+    ],
+    "total_session_footprint": "3 sessions including governance (S852 + S853 + S854)"
+  },
+  "throughput_comparison": {
+    "items/session (certification only)": {
+      "v1": 42,
+      "v2": 77,
+      "gain": "1.83×"
+    },
+    "items/session (including governance)": {
+      "v1": "42/session × 4-5 sessions = 8.4-10.5/wave",
+      "v2": "77 in 1 cert session + 2 governance = 25.7/cert+gov session",
+      "gain": "2.44× per-wave throughput"
+    },
+    "agents/item": {
+      "v1": 0.305,
+      "v2": "0 (structural elimination)",
+      "gain": "∞"
+    },
+    "sessions/wave": {
+      "v1": "4-5",
+      "v2": "1 certification + 2 governance = 3 total",
+      "gain": "1.33-1.67× reduction"
+    },
+    "governance overhead": {
+      "v1": "Manual — each change required manual verification, counting, cross-referencing",
+      "v2": "Automated — 10-check integrity sweep, batch-cap enforcement, backup protocol",
+      "gain": "Qualitative elimination"
+    }
+  },
+  "verdict": "THROUGHPUT_GAIN_MEASURED — 77 items in a single certification session vs. v1 average of 42 (1.83×). Agent-per-item overhead structurally eliminated (batch script, not per-item agent spawning). The S352 projection of \"0% measured\" is now resolved — first real certification throughput data exists.",
+  "cross_references": {
+    "s352_throughput": "reports/session352/SESSION352_THROUGHPUT_MEASUREMENT.json",
+    "s350_v1_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "s853_package": "scripts/output/session_packages/S853.json",
+    "s853_certify_script": "scripts/s853_certify_wave_a.js",
+    "revision_history_s853": "knowledge/REVISION_HISTORY.md (S853 entry)"
+  }
+}

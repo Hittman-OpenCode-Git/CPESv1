@@ -1,0 +1,156 @@
+{
+  "session": "S200",
+  "agent": "G",
+  "title": "Reporting Burden Analysis",
+  "report_volume": {
+    "total_json_reports": 829,
+    "total_md_reports": 371,
+    "total_report_files": 1212,
+    "session_prefixed_files": 914,
+    "non_session_files": 178,
+    "unique_sessions_with_reports": 178,
+    "avg_per_session_all": 7.0,
+    "avg_per_session_post_s300": 11.2,
+    "avg_per_session_by_series": {
+      "100_series": { "sessions": 62, "total_files": 170, "avg": 2.7 },
+      "300_series": { "sessions": 20, "total_files": 263, "avg": 13.2 },
+      "500_series": { "sessions": 32, "total_files": 118, "avg": 3.7 },
+      "600_series": { "sessions": 5, "total_files": 52, "avg": 10.4 },
+      "700_series": { "sessions": 24, "total_files": 238, "avg": 9.9 },
+      "800_series": { "sessions": 15, "total_files": 175, "avg": 11.7 }
+    },
+    "peak_sessions": [
+      { "session": "S301", "files": 27, "note": "26 agent JSON + 1 MD — largest 300-series session" },
+      { "session": "S726", "files": 29, "note": "17 JSON + 12 MD — largest single session overall" },
+      { "session": "S307", "files": 25, "note": "24 JSON + 1 MD — 22 deliverables from single JS engine" },
+      { "session": "S723", "files": 25, "note": "21-agent governance closure package + reporting manifest" },
+      { "session": "S725", "files": 25, "note": "19 JSON + 6 MD — governance architecture design" },
+      { "session": "S308", "files": 24, "note": "23 JSON + 1 MD — forecast engine outputs" },
+      { "session": "S802", "files": 24, "note": "23 JSON + 1 MD — 800-series scoping explosion" }
+    ],
+    "trend": "INCREASING",
+    "trend_detail": "Early 100-series sessions averaged 2.7 files (mostly 1 MD summary). 300-series jumped to 13.2 files/session. 700-series averaged 9.9. 800-series averages 11.7. The 500-series (3.7 avg) is an outlier — mostly single-MD case-bank remediation sessions. Post-S300, the norm is 10-13 files per session."
+  },
+  "report_categories": [
+    { "category": "Dashboard", "pattern": "*DASHBOARD*", "count": 47, "avg_per_session": null, "note": "Present in nearly every session S306+. Domain-specific dashboards (EW, UIQS, Certification, Modernization) inflate count." },
+    { "category": "Session Summary (MD)", "pattern": "*SESSION_SUMMARY.md", "count": 43, "avg_per_session": null, "note": "The one constant — almost every session produces one. Primary cross-session handoff." },
+    { "category": "Forecast / Completion Forecast", "pattern": "*FORECAST*", "count": 29, "avg_per_session": null, "note": "S307 introduced forecast files; heavily used in 800-series as completion forecasting became standard." },
+    { "category": "Risk Register", "pattern": "*RISK_REGISTER*", "count": 16, "avg_per_session": null, "note": "Major milestone sessions (S306, S307, S801-S803) produce risk registers consumed downstream." },
+    { "category": "Portfolio Impact Analysis", "pattern": "*PORTFOLIO_IMPACT*", "count": 12, "avg_per_session": null, "note": "S312+ standard output; every certification/authoring session in 800-series produces one." },
+    { "category": "Certification Results", "pattern": "*CERTIFICATION_RESULTS*", "count": 11, "avg_per_session": null, "note": "S315+ standard; produced by every certification wave session." },
+    { "category": "Quality Gate Results", "pattern": "*QUALITY_GATE*", "count": 10, "avg_per_session": null, "note": "S311 origin; standard output for authoring and certification sessions." },
+    { "category": "Governance Preservation Audit", "pattern": "*GOVERNANCE_PRESERVATION*", "count": 8, "avg_per_session": null, "note": "S312+ standard — checks that no pack content regressed during the session." },
+    { "category": "EW Integrity Audit", "pattern": "*EW_INTEGRITY*", "count": 6, "avg_per_session": null, "note": "ExplanationWrong slot audit — produced by remediation sessions." },
+    { "category": "Technical Review", "pattern": "*TECHNICAL_REVIEW*", "count": 5, "avg_per_session": null, "note": "Accounting/content quality review — produced by certification sessions." },
+    { "category": "Agent-Specific Outputs", "pattern": "*AGENT_* / named agents", "count": 120, "note": "S301 produced 26 agent files (A-Z). S8091 produced 8-9 agent files. S8092 produced 6 agent files. These are mostly one-off artifacts consumed within their session." },
+    { "category": "Meta-Reporting Package", "pattern": "*REPORTING_PACKAGE*", "count": 3, "note": "S723, S802, S803 produce reporting package manifests — reports about reports." },
+    { "category": "Executive Summary (MD)", "pattern": "*EXECUTIVE_SUMMARY*", "count": 2, "note": "S310 (final 300-series session) and S805 (Pack A Section E closeout)." },
+    { "category": "Defect-Specific Reports", "pattern": "*DL0* / *COSO* / *SEED*", "count": 35, "note": "Targeted defect audits (DL-008, DL-026, DL-031, DL-016, COSO citation, seed inventory). Many are single-session artifacts." },
+    { "category": "Other (unique patterns)", "pattern": "various", "count": 150, "note": "One-off reports: closure baselines, launch boards, dependency maps, strategy boards, capacity models, etc." }
+  ],
+  "consumed_vs_ignored": {
+    "frequently_consumed": [
+      "Session Summary (.md) — primary handoff mechanism; referenced by every subsequent planning session",
+      "Portfolio-level Dashboard (.json) — consumed by S310 (executive summary), S800-series roadmap sessions",
+      "Risk Register — S307 consumed by S309/S310; S801 consumed by S802/S803",
+      "Forecast / Completion Forecast — S308 consumed by S309/S310; S808 consumed by S809",
+      "Certification Results — consumed by next-wave planning sessions and portfolio dashboards",
+      "Defect Library (knowledge/DEFECT_LIBRARY.md) — cross-referenced by all remediation sessions",
+      "REVISION_HISTORY.md entries — mandatory per governance-guard Rule 4; consumed by all sessions"
+    ],
+    "rarely_consumed": [
+      "Individual agent reports (S301 A-Z, S8091 AA-J) — consumed only within their own session, never by later sessions",
+      "Early 100-series incremental status logs (S100-S135) — historical record, zero downstream reference",
+      "Reporting Package manifests (S723_REPORTING_PACKAGE.json) — meta-reports about reporting, never referenced by later work",
+      "Per-session dashboards from non-milestone sessions — e.g., S314 dashboard consumed only by S315, then forgotten",
+      "Duplicate dashboard variants (S310 produced 6 domain-specific dashboards + 1 executive) — most unused after S310 closure",
+      "One-off snapshot audits (Closure Baseline, Dependency Map, Strategy Board, Cross-Pack Consistency) — produced, consumed within session, never referenced again",
+      "Legacy naming variants (S809.2_AGENT_*, s116_pilot_*) — inconsistent naming, zero downstream traceability"
+    ],
+    "consumption_estimate_pct": 35,
+    "consumption_rationale": "Of ~914 session-prefixed files, approximately 320 (Session Summaries + milestone Dashboards + Risk Registers + Forecasts consumed downstream) are actually referenced by later sessions. The remainder (~594 files, 65%) are one-off artifacts: agent reports, per-session dashboards, snapshot audits, duplicate dashboard variants, and meta-reporting packages."
+  },
+  "data_duplication": [
+    {
+      "data_point": "Certified item count (2,181 → 2,221)",
+      "appears_in_files": [
+        "SESSIONXXX_DASHBOARD.json",
+        "SESSIONXXX_SESSION_SUMMARY.md",
+        "SESSIONXXX_PORTFOLIO_IMPACT_ANALYSIS.json",
+        "SESSIONXXX_CERTIFICATION_RESULTS.json",
+        "SESSIONXXX_FORECAST.json",
+        "SESSIONXXX_GOVERNANCE_PRESERVATION_AUDIT.json",
+        "SESSIONXXX_RISK_REGISTER.json",
+        "SESSIONXXX_COMPLETION_FORECAST.json",
+        "SESSIONXXX_EXECUTIVE_SUMMARY.md"
+      ],
+      "duplication_factor": 9,
+      "estimated_total_appearances": "~450+ across all sessions (appears in ~8 files per reporting session × 60+ reporting sessions)"
+    },
+    {
+      "data_point": "Governance guard result (N/N PASS)",
+      "appears_in_files": [
+        "SESSIONXXX_SESSION_SUMMARY.md",
+        "SESSIONXXX_DASHBOARD.json",
+        "SESSIONXXX_GOVERNANCE_PRESERVATION_AUDIT.json"
+      ],
+      "duplication_factor": 3,
+      "estimated_total_appearances": "~120+ across all sessions"
+    },
+    {
+      "data_point": "Total item count (2,500 MCQ + 400 cases = 2,900)",
+      "appears_in_files": [
+        "SESSIONXXX_SESSION_SUMMARY.md",
+        "SESSIONXXX_DASHBOARD.json",
+        "SESSIONXXX_FORECAST.json",
+        "SESSIONXXX_PORTFOLIO_IMPACT_ANALYSIS.json"
+      ],
+      "duplication_factor": 4,
+      "estimated_total_appearances": "~200+ across all sessions"
+    },
+    {
+      "data_point": "EW fill rate / EW gap metrics",
+      "appears_in_files": [
+        "SESSIONXXX_DASHBOARD.json (EW_DASHBOARD variant)",
+        "SESSIONXXX_PORTFOLIO_IMPACT_ANALYSIS.json",
+        "SESSIONXXX_EW_INTEGRITY_AUDIT.json"
+      ],
+      "duplication_factor": 3,
+      "estimated_total_appearances": "~90+ across all sessions"
+    },
+    {
+      "data_point": "Portfolio Health Index / UIQS score",
+      "appears_in_files": [
+        "SESSIONXXX_DASHBOARD.json",
+        "SESSIONXXX_PORTFOLIO_IMPACT_ANALYSIS.json",
+        "SESSIONXXX_EXECUTIVE_SUMMARY.md"
+      ],
+      "duplication_factor": 3,
+      "estimated_total_appearances": "~80+ across all sessions"
+    },
+    {
+      "data_point": "Section-level certification % per domain",
+      "appears_in_files": [
+        "SESSIONXXX_CERTIFICATION_RESULTS.json",
+        "SESSIONXXX_PORTFOLIO_IMPACT_ANALYSIS.json",
+        "SESSIONXXX_DASHBOARD.json",
+        "SESSIONXXX_SESSION_SUMMARY.md"
+      ],
+      "duplication_factor": 4,
+      "estimated_total_appearances": "~150+ across all sessions"
+    }
+  ],
+  "recommended_consolidation": [
+    "MANDATORY: Merge multiple dashboard variants per session into a single SESSIONXXX_DASHBOARD.json. S310 produced 7 dashboard files (certification, domain, EW, executive, forecast, modernization, risk, UIQS). One is sufficient.",
+    "MANDATORY: Eliminate REPORTING_PACKAGE meta-reports (S723_REPORTING_PACKAGE.json, S802_REPORTING_PACKAGE.json, S803_REPORTING_PACKAGE.json). These are reports about reporting — a recursion with zero downstream value.",
+    "HIGH: Consolidate individual agent reports into session summary. S301 produced 26 agent files (A-Z); S8091 produced 8 agent files. These should be embedded in or summarized within the session summary MD — not persisted as standalone JSON.",
+    "HIGH: Merge PORTFOLIO_IMPACT_ANALYSIS + CERTIFICATION_RESULTS + QUALITY_GATE_RESULTS into a single 'Session Results Package' per session. Currently 3 separate files with heavily overlapping data.",
+    "MEDIUM: Merge FORECAST + COMPLETION_FORECAST into a single file. Many sessions produce both.",
+    "MEDIUM: Archive all 100-series incremental status logs to a single consolidated history file. S100-S135 sessions (62 sessions, 170 files) have zero downstream consumption.",
+    "MEDIUM: Eliminate duplicate certified-count storage. Establish a single SESSION_STATUS file as the authoritative certified count — all other files reference it rather than storing their own copy.",
+    "LOW: Standardize subdirectory organization. Currently sessions scatter outputs across reports/ root, session_status/, systematic_testing/, sessions/, S809.2/, S810.1/, and session806/. Consistent per-session output directories would improve traceability.",
+    "LOW: Deprecate non-standard naming conventions. S809.2_AGENT_*, s116_pilot_*, S722A_*, etc. Adopt SESSIONXXX_ prefix consistently.",
+    "GOVERNANCE: Add a 'max 8 files per session' soft cap to AGENTS.md. Sessions exceeding 8 files must include a BLOCK-AUTHORIZED marker (same governance pattern as the 30-item batched-write cap)."
+  ],
+  "summary": "The reports/ directory contains 1,212 files (829 JSON, 371 MD) across 178 unique sessions. Reporting volume has GROWN from 2.7 files/session (100-series) to 10-13 files/session (300/700/800-series). The single largest driver is agent-specific JSON outputs: S301 produced 26 agent files alone. Approximately 65% of reports are one-off artifacts never referenced by later sessions. The certified item count is duplicated across ~8 files per session (~450 total appearances), representing the most severe data duplication. Key categories (Dashboard, Forecast, Risk Register, Portfolio Impact, Certification Results) frequently overlap in content. Recommended: merge dashboard variants, eliminate reporting-package meta-reports, consolidate agent outputs into session summaries, and establish an 8-file soft cap per session."
+}

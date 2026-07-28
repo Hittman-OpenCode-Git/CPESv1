@@ -1,0 +1,207 @@
+{
+  "session": "310",
+  "title": "Portfolio KPI Catalog — Permanent Reference",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "kpiCategories": {
+    "certification": {
+      "label": "Certification",
+      "weight": 25,
+      "kpis": {
+        "mcqCertified": {
+          "value": 2182,
+          "target": 2500,
+          "unit": "items",
+          "description": "Certified MCQ items across all 5 packs"
+        },
+        "mcqCertRate": {
+          "value": "87.3",
+          "target": 100,
+          "unit": "%",
+          "description": "MCQ certification percentage"
+        },
+        "caseCertified": {
+          "value": 90,
+          "target": 400,
+          "unit": "items",
+          "description": "Certified case-bank items"
+        },
+        "packsFullyCertified": {
+          "value": 2,
+          "target": 5,
+          "unit": "packs",
+          "description": "Packs at 100% certification (B, E)"
+        },
+        "domainsFullyCertified": {
+          "value": 1,
+          "target": 6,
+          "unit": "domains",
+          "description": "Domains at 100% certification (C)"
+        },
+        "sectionsFullyCertified": {
+          "value": 22,
+          "target": 30,
+          "unit": "sections",
+          "description": "Sections at 100% certification"
+        }
+      }
+    },
+    "modernization": {
+      "label": "Modernization",
+      "weight": 15,
+      "kpis": {
+        "dl008Remaining": {
+          "value": 0,
+          "target": 0,
+          "unit": "items",
+          "description": "DL-008 violations (S309 confirmed 0)"
+        },
+        "dl013Remaining": {
+          "value": 851,
+          "target": 0,
+          "unit": "fields",
+          "description": "Template boilerplate fields remaining"
+        },
+        "dl026Remaining": {
+          "value": 50,
+          "target": 0,
+          "unit": "items",
+          "description": "DL-026 empty distractor slots (Pack D Section C)"
+        },
+        "cloneArchiveCount": {
+          "value": 129,
+          "target": 0,
+          "unit": "items",
+          "description": "Archived DL-012 clone rotation artifacts (Domain E)"
+        },
+        "modernizedItems": {
+          "value": 0,
+          "target": 851,
+          "unit": "items",
+          "description": "Items processed through modernization pipeline"
+        }
+      }
+    },
+    "quality": {
+      "label": "Quality",
+      "weight": 25,
+      "kpis": {
+        "portfolioUIQS": {
+          "value": 68.8,
+          "target": 85,
+          "unit": "score",
+          "description": "Portfolio-wide Unified Item Quality Score"
+        },
+        "portfolioGrade": {
+          "value": "C",
+          "target": "B+",
+          "unit": "grade",
+          "description": "Portfolio quality grade"
+        },
+        "dqsAvg": {
+          "value": 68,
+          "target": 78,
+          "unit": "score",
+          "description": "Average Distractor Quality Score"
+        },
+        "eqsAvg": {
+          "value": 28,
+          "target": 55,
+          "unit": "score",
+          "description": "Average Explanation Quality Score"
+        },
+        "exqsAvg": {
+          "value": 79,
+          "target": 82,
+          "unit": "score",
+          "description": "Average Exhibit Quality Score"
+        },
+        "rewriteDebt": {
+          "value": 1632,
+          "target": 0,
+          "unit": "items",
+          "description": "Total rewrite candidates (BQS S304)"
+        }
+      }
+    },
+    "governance": {
+      "label": "Governance",
+      "weight": 10,
+      "kpis": {
+        "governanceGuardTests": {
+          "value": 20,
+          "target": 20,
+          "unit": "tests",
+          "description": "Governance guard test suite pass/fail"
+        },
+        "activeCriticalRisks": {
+          "value": 1,
+          "target": 0,
+          "unit": "risks",
+          "description": "Risks at CRITICAL level"
+        },
+        "activeHighRisks": {
+          "value": 3,
+          "target": 0,
+          "unit": "risks",
+          "description": "Risks at HIGH level"
+        },
+        "openDefects": {
+          "value": 4,
+          "target": 0,
+          "unit": "defects",
+          "description": "Open defect codes (DL-013, DL-026, DL-031, DL-032)"
+        },
+        "revisionHistoryEntries": {
+          "value": 9,
+          "target": "ongoing",
+          "unit": "entries",
+          "description": "300-series REVISION_HISTORY entries"
+        }
+      }
+    },
+    "ewCoverage": {
+      "label": "EW Coverage",
+      "weight": 25,
+      "kpis": {
+        "mcqEWFill": {
+          "value": "71.5",
+          "target": 88,
+          "unit": "%",
+          "description": "MCQ distractor explanation fill rate"
+        },
+        "caseEWFill": {
+          "value": "3.9",
+          "target": 80,
+          "unit": "%",
+          "description": "Case-bank distractor explanation fill rate"
+        },
+        "totalEWGap": {
+          "value": 2403,
+          "target": 0,
+          "unit": "slots",
+          "description": "Total empty EW slots across case banks"
+        },
+        "mcqEWGap": {
+          "value": 539,
+          "target": 0,
+          "unit": "items",
+          "description": "MCQ items with EW gaps"
+        },
+        "p0EWItems": {
+          "value": 46,
+          "target": 0,
+          "unit": "items",
+          "description": "P0 immediate EW priority items"
+        }
+      }
+    }
+  },
+  "kpiWeights": {
+    "certification": 25,
+    "quality": 25,
+    "ewCoverage": 25,
+    "modernization": 15,
+    "governance": 10
+  }
+}

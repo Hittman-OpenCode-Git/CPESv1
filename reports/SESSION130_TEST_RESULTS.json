@@ -1,0 +1,537 @@
+{
+  "session": "S130",
+  "analysisOnly": true,
+  "analysisTimestamp": "2026-07-15T00:00:00.000Z",
+  "currentTestResults": {
+    "tutoringSafety": {
+      "total": 178,
+      "pass": 178,
+      "fail": 0,
+      "file": "scripts/test_tutoring_safety.js",
+      "categories": [
+        "Category C: Tutoring Behavior Guardrails (10 tests)",
+        "Category E: Hallucination Detection (12 tests)",
+        "Category F: Answer Leakage Detection (11 tests)",
+        "Category GT: S108 Guarded Tutoring Wiring (12 tests)",
+        "S109: Pilot Gating & Usage Logging (9 tests)",
+        "S112: Recommendation Gate Wiring (8 tests)",
+        "S113: Evidence Threshold & Insight Guarding (15 tests)",
+        "S120: Tutor-Layer Explanation (12 tests)",
+        "S121: Wrong-Choice Misconception Coaching (12 tests)",
+        "S122: Simplify Coaching (12 tests)",
+        "S123: Action Plan Coaching (10 tests)",
+        "S124: Learning Journey Insights (8 tests)",
+        "S125: Adaptive Focus Areas (8 tests)",
+        "S126: Session Recap (8 tests)",
+        "S127: Weekly Learning Digest (8 tests)",
+        "S128: Study Strategy (6 tests)",
+        "S129: Strategy Effectiveness Analytics (20 tests)"
+      ]
+    },
+    "stageC": {
+      "total": 119,
+      "pass": 119,
+      "fail": 0,
+      "file": "scripts/test_may_stagec.js",
+      "categories": [
+        "Section 1: Learner State Integrity (8 tests)",
+        "Section 2: Explanation Grounding (3 tests)",
+        "Section 3: Hint Graduation (3 tests)",
+        "Section 4: Recommendation Engine (5 tests)",
+        "Section 5: Tone & Anti-Platitude (3 tests)",
+        "Section 6: Edge Cases & Failure Handling (9 tests)",
+        "Section 7: Realtime Layer Behaviors (6 tests)",
+        "Section 7B: Misconception Pattern Surfacing G-01 (3 tests)",
+        "Section 7C: Your-Answer Comparison G-02 (3 tests)",
+        "Section 7D: Recovery Set Generation G-03 (3 tests)",
+        "Section 7E: Confidence Calibration G-04 (3 tests)",
+        "Section 7F: Challenge Resolution (11 tests)",
+        "Section 8: Performance Sanity (2 tests)",
+        "S115: Student Roll & Synthetic Seeding (20 tests)",
+        "S117: Privacy Masking, Exam Schedule, Welcome (26 tests)"
+      ]
+    },
+    "governanceGuard": {
+      "total": 20,
+      "pass": 20,
+      "fail": 0,
+      "file": "scripts/test_governance_guard.js",
+      "categories": [
+        "Rule 2: ExplanationWrong[CorrectChoice] detection (5 tests)",
+        "Rule 5: Question count threshold (6 tests)",
+        "Rule 3: Registry file protection (2 tests)",
+        "Rule 4: RECOMPUTED note detection (5 tests)",
+        "Read-only passthrough (2 tests)"
+      ]
+    },
+    "overallTotal": 317,
+    "overallPass": 317,
+    "overallFail": 0,
+    "allSuitesPassing": true
+  },
+  "testStructurePattern": {
+    "namingConvention": "Session-prefix dash number colon space description. Format: '{SESSION_PREFIX}-{NN}: {human_readable_description}'. Examples: 'C-01: isFullTabBlocked returns true in full exam mode with questions loaded', 'GT-03: _guardedSpeak detects exam prediction', 'S109-01: isPilotEnvironment returns false when flag offline and no env', 'S129-17: S129 effectiveness engine never contains readiness estimates'. Suffixes like 'b', 'c' used for variants of same test concept.",
+    "assertionPattern": "Two helper functions: assert(cond, msg) — throws Error(msg) if cond is falsy; refute(cond, msg) — throws Error(msg) if cond is truthy. Tests wrapped in test(name, fn) function that catches exceptions, increments passed/failed counters, and prints 'PASS: name' or 'FAIL: name — error.message'. No external assertion library used — pure try/catch with manual assert/refute.",
+    "testLocation": "Scripts are in scripts/ directory. Each test file is self-contained: it mocks browser APIs (localStorage, sessionStorage, document, fetch, window, setTimeout), loads source files via lg() helper that converts const/let to global assignments, then defines test/assert/refute helpers, then runs test blocks organized by category with console.log section headers, ending with a summary line: '=== N tests: N PASS, 0 FAIL ==='.",
+    "mockEnvironment": "Each test file creates its own mock environment: in-memory localStorage/sessionStorage as plain objects, mock document with getElementById/createElement, mock fetch that rejects, mock setTimeout as synchronous, global.state = { session: null }, and loads source files in dependency order (pack data → may-learner-state.js → may-core.js). The lg() function reads source files and transforms module-scoped const/let into global assignments so they're testable. resetState() clears May.context fields, localStorage, and MayLearnerState between tests.",
+    "helperFunctions": "Common helper pattern: cloneBankQuestion(idx) to deep-clone a question from the bank; makeQuestionWithCC(desiredCC) to create questions with specific CorrectChoice values; resetState() to reset May context between tests. Questions loaded from pack_a_corrected.js (MCB_BANK_A or MCQ_BANK_A fallback)."
+  },
+  "architectureAuditFindings": {
+    "consistencyAudit": {
+      "file": "reports/SESSION130_CONSISTENCY_AUDIT.json",
+      "totalConflicts": 7,
+      "highSeverity": 2,
+      "mediumSeverity": 5,
+      "lowSeverity": 1,
+      "totalDuplicatedPaths": 35,
+      "topConflicts": [
+        "weak_topic_classification — S127/S128 use different thresholds (>=3 attempts, <60%) than S124/S125/getWeaknessClusters (>=5 attempts, <60%)",
+        "improving_trend_detection — 5 subsystems use 4 different delta thresholds (5, 10, 10+recentPct, 15)",
+        "strong_topic_classification — S127/S128 use >=70% vs S124/S125 >=85%",
+        "topic_priority_for_study — S127 uses <65% threshold vs S125/S128 <60%",
+        "declining_trend_detection — getTrends uses <=-15% vs S126/S127 <=-10%",
+        "cross_session_trend_comparison — S126 compares last-2 sessions vs S127 compares first-to-last",
+        "misconception_detection — pattern names map duplicated 7 times (maintenance risk, not logic conflict)"
+      ]
+    },
+    "thresholdGovernance": {
+      "file": "reports/SESSION130_THRESHOLD_GOVERNANCE_AUDIT.json",
+      "totalConflicts": 11,
+      "driftInstances": 7,
+      "missingThresholds": 10,
+      "totalDefinedThresholds": 90,
+      "criticalDrifts": [
+        "delta_improving: coaching=10, trends=15, outcomes=5 (10-point gap)",
+        "accuracy_high: coaching=85, readiness=80 (5-point gap)",
+        "session_weekly_window: S127/S128 use 7-session count, S129 uses 7-calendar-days (conceptual gap)"
+      ],
+      "missingThresholdCategories": [
+        "accuracy_medium_range (60-70% band)",
+        "stability_medium_range (50-60% band)",
+        "time_since_last_session",
+        "topic_coverage_pct",
+        "fatigue_detection",
+        "mastery_plateau",
+        "overstudy_warning",
+        "readiness_confidence_level"
+      ]
+    },
+    "provenance": {
+      "file": "reports/SESSION130_PROVENANCE_SYSTEM_RESULTS.json",
+      "coveragePercent": 40,
+      "functionsWithFullProvenance": 4,
+      "functionsWithPartialProvenance": 3,
+      "functionsWithNoProvenance": 3,
+      "zeroProvenanceFunctions": [
+        "_generateSessionRecap — recommended next step never recorded",
+        "_recommendNextAction — first recommendation returning learner sees, never recorded",
+        "preExamBriefing — review topic suggestions never recorded"
+      ],
+      "storageSystems": 2,
+      "storageSystemsUnified": false,
+      "unifiedSchemaFields": 16
+    },
+    "longitudinal": {
+      "file": "reports/SESSION130_LONGITUDINAL_VALIDATION.json",
+      "evidenceAging": "ABSENT",
+      "recommendationRollover": "ABSENT",
+      "observationRefresh": "PARTIAL",
+      "failureModes": 8,
+      "highSeverityModes": [
+        "Aggregate accuracy staleness — old poor performance permanently drags down topic accuracy",
+        "Misconception pattern inflation — old patterns never expire",
+        "Recommendation rollover failure — old recommendations never superseded",
+        "Narrow lookback windows — S127/S128 only see last 7 sessions"
+      ]
+    },
+    "performance": {
+      "file": "reports/SESSION130_PERFORMANCE_AUDIT.json",
+      "loadCalls": 42,
+      "duplicatedComputations": 8,
+      "redundantScans": 3,
+      "redundantRecommendationPatterns": 5,
+      "memoryGrowthRisks": 10,
+      "worstCaseSingleAction": "7-8 load() calls in a single _explainAnswer chain",
+      "topDuplicatedComputations": [
+        "Misconception pattern name map — 7 copies (48 lines)",
+        "Weak-topic identification — 7 independent implementations (~50 lines)",
+        "Section name map — 6 copies (30 lines)",
+        "Topic progress retrieval — 5 independent calls per explain chain",
+        "Hint level dispatch — 2 copies, miniHint lacks case support",
+        "Cross-session trend — 3 implementations with different windows",
+        "Session topic classification — 4 independent iteration patterns",
+        "Misconception pattern scan — 3 identical filter operations"
+      ]
+    }
+  },
+  "plannedTests": {
+    "evidenceGraph": [
+      {
+        "name": "EG-01: unified computation produces identical results to individual computations",
+        "description": "Verify that a single MayLearnerState.getCachedLearnerSnapshot() call returns the same topicProgress, trends, and weaknessClusters as calling getTopicProgress(), getTrends(), and getWeaknessClusters() individually. This validates the compute-once pattern proposed in S130 performance audit (optimization priority high).",
+        "session": "S131"
+      },
+      {
+        "name": "EG-02: evidence graph layers are correctly connected",
+        "description": "Verify that raw attempt data → topicPerformance aggregates → getTopicProgress() → getTrends() → getWeaknessClusters() forms a correct data pipeline where each layer's output matches the next layer's input. Test with seeded data at 1, 5, and 20 sessions to confirm propagation fidelity.",
+        "session": "S131"
+      },
+      {
+        "name": "EG-03: time-weighted accuracy (EWMA) differs from simple aggregate",
+        "description": "Seed a topic with 20 attempts: first 10 at 100% (old), last 10 at 40% (recent). Verify that simple aggregate accuracy = 70% but EWMA accuracy (half-life 10 attempts) ≈ 45-50%. This validates the longitudinal audit's Priority-1 recommendation to fix aggregate accuracy staleness.",
+        "session": "S131"
+      },
+      {
+        "name": "EG-04: calendar-window functions return correct date ranges",
+        "description": "Seed sessions with known dates spanning 6 weeks. Verify getLongitudinalAnalytics() 1-week window returns only sessions from last 7 calendar days, 2-week returns last 14, and 4-week returns last 28. Verify no session appears in a window it shouldn't. Confirm session-count-based windows (slice(-7)) and calendar windows produce different results when session cadence is irregular.",
+        "session": "S131"
+      },
+      {
+        "name": "EG-05: EWMA correctly weights recent attempts higher than older attempts",
+        "description": "Seed a topic with alternating correct/incorrect over 20 attempts (C, I, C, I, ...). Verify EWMA with half-life=10 gives more weight to the last 10 than the first 10. Verify that swapping the order (all correct first, all incorrect last) produces a lower EWMA than the reverse, confirming recency weighting.",
+        "session": "S131"
+      },
+      {
+        "name": "EG-06: getTopicProgress with EWMA produces different weak/strong classifications",
+        "description": "Seed a topic that is 'persistently weak' by aggregate (55% over 20 attempts) but 'recently strong' (85% over last 5). Verify that aggregate-based classification flags it as weak while EWMA-based classification does not. This directly tests the S130 longitudinal audit's core finding: aggregate staleness creates contradictory signals.",
+        "session": "S131"
+      },
+      {
+        "name": "EG-07: evidence graph correctly propagates changes when new session data arrives",
+        "description": "Start with 5 sessions of seed data. Compute snapshot. Add a 6th session. Recompute snapshot. Verify that topicProgress aggregates updated, trends recalculated, weaknessClusters reclassified, and any changed classifications are correctly reflected. Verify that unchanged topics produce identical results (no spurious drift).",
+        "session": "S131"
+      },
+      {
+        "name": "EG-08: cross-layer consistency under edge cases (empty state, single attempt, capped sessions)",
+        "description": "Verify evidence graph layers produce consistent results for: empty learner state (all empty/null), single attempt (no trends, no clusters), exactly-at-threshold (attempts=5, accuracy=60%), session cap reached (51st session pushes out 1st, verify aggregate behavior).",
+        "session": "S131"
+      }
+    ],
+    "provenance": [
+      {
+        "name": "PV-01: every recommendation type returns a ProvenanceID",
+        "description": "Exercise all 10 recommendation-generating functions: _generateNextBestStep, _suggestFocusAreas, _generateStudyStrategy, _generateWeeklyDigest, _generateSessionRecap, _recommendNextAction, preExamBriefing, _recommendNext, _recommendSimilar, _generateRecoverySet. Verify each returns or stores a ProvenanceID matching the format 'prov-' + timestamp(36) + '-' + hash. This lifts provenance coverage from 40% to 100%.",
+        "session": "S134"
+      },
+      {
+        "name": "PV-02: SourceEvidence is never empty for any recommendation type",
+        "description": "Verify that after S130 provenance enrichment, SourceEvidence arrays are populated for all recommendation types. Currently empty {} for _generateStudyStrategy and _generateWeeklyDigest. Verify SourceEvidence contains at minimum: topic accuracy, attempt count, trends, and the specific condition that triggered the recommendation.",
+        "session": "S134"
+      },
+      {
+        "name": "PV-03: TriggeringRule is recorded for all recommendation types",
+        "description": "Verify each recommendation records a TriggeringRule object with fields: { function, condition, threshold, decisiveFactors }. Test that different triggering conditions (persistent_weakness vs. calculation_miss vs. misconception vs. topic_strength) produce different TriggeringRule values.",
+        "session": "S134"
+      },
+      {
+        "name": "PV-04: _generateSessionRecap now stores provenance",
+        "description": "Generate a session recap via _summarizeSession. Verify that the recommended next step (lines 3041-3048) is now recorded via recordProvenance() with type='session_recap', full topicEntries as SourceEvidence, and all required provenance fields. This closes the zero-provenance gap identified in the S130 audit.",
+        "session": "S134"
+      },
+      {
+        "name": "PV-05: _recommendNextAction now stores provenance",
+        "description": "Trigger _buildWelcomeOverview for a returning student with ≥2 sessions. Verify that _recommendNextAction now records provenance with type='next_action', clusters and sessionCount as SourceEvidence, and all required fields. This closes the second zero-provenance gap.",
+        "session": "S134"
+      },
+      {
+        "name": "PV-06: preExamBriefing now stores provenance",
+        "description": "Trigger preExamBriefing for a learner with weakness clusters. Verify that each review-topic recommendation is now recorded via recordProvenance() with type='pre_exam_briefing', weakness clusters as SourceEvidence, and all required fields. This closes the third zero-provenance gap.",
+        "session": "S134"
+      },
+      {
+        "name": "PV-07: ObservationChain correctly links evidence to recommendations",
+        "description": "Generate a focus_area recommendation via _suggestFocusAreas. Verify that the ObservationChain field contains an ordered array linking: raw topicProgress data → _identifyLearningPatterns observations → _suggestFocusAreas recommendation. Each chain link must have observationId, category, and evidence fields.",
+        "session": "S134"
+      },
+      {
+        "name": "PV-08: ProvenanceID format is consistent and unique across all recommendation types",
+        "description": "Generate 20 recommendations across all 10 types. Verify all ProvenanceIDs match the format, are unique, and are sortable chronologically. Verify that the same recommendation generated twice (identical inputs) produces different ProvenanceIDs (uniqueness via timestamp+counter).",
+        "session": "S134"
+      }
+    ],
+    "thresholdGovernance": [
+      {
+        "name": "TH-01: single threshold registry returns correct canonical values",
+        "description": "Define a THRESHOLD_REGISTRY object in may-learner-state.js (proposed in S130 threshold audit). Verify it contains all ~90 thresholds with canonical values. Test that getThresholdSnapshot() reads from this registry and returns all values correctly. Verify that the unified threshold set from the audit (accuracy.high=80, accuracy.strong=85, delta.improving=15, etc.) is the source of truth.",
+        "session": "S132"
+      },
+      {
+        "name": "TH-02: all coaching functions use registry — no hardcoded literals",
+        "description": "Grep the codebase for numeric literals used as thresholds in coaching functions (e.g., 85, 60, 15, 10, 5, 3). Verify that each threshold references the registry (e.g., THRESHOLD_REGISTRY.accuracy.strong) rather than a hardcoded number. This validates that the S130 threshold drift findings (7 drift instances, 11 conflicts) have been resolved.",
+        "session": "S132"
+      },
+      {
+        "name": "TH-03: changing a threshold in registry affects all consumers",
+        "description": "Change THRESHOLD_REGISTRY.accuracy.weak from 60 to 55. Verify that getWeaknessClusters().persistentWeak now includes topics at 57% (previously excluded). Verify that S124 patterns, S125 focus areas, S127 digest, and S128 strategy all reflect the new 55% threshold — confirming single-source-of-truth behavior.",
+        "session": "S132"
+      },
+      {
+        "name": "TH-04: threshold drift detection — no function uses different value for same concept",
+        "description": "For each threshold concept (delta_improving, accuracy_strong, attempts_weakness, etc.), verify that ALL consumer functions use the identical registry value. For intentionally tiered thresholds (e.g., stability at 60/75/80), verify each tier has a distinct registry key and the tiering is documented. This directly validates resolution of the S130 drift instances DRIFT_001 through DRIFT_007.",
+        "session": "S132"
+      },
+      {
+        "name": "TH-05: getThresholdSnapshot returns all thresholds including newly defined ones",
+        "description": "Verify that getThresholdSnapshot() (may-learner-state.js line 1111) returns all previously-missing threshold categories identified in S130 audit: accuracy_medium_range, stability_medium_range, time_since_last_session, topic_coverage_pct, fatigue_detection, mastery_plateau, overstudy_warning, readiness_confidence_level. Verify each has a documented rationale.",
+        "session": "S132"
+      },
+      {
+        "name": "TH-06: intentionally tiered thresholds are documented with rationale",
+        "description": "Verify that every intentional threshold divergence (e.g., coaching needs 3 attempts for strength while readiness needs 6; delta 15 for trends vs 10 for coaching notable) has explicit documentation in the registry explaining WHY the tiers exist. Verify the documentation includes: which subsystems use which tier, the design rationale, and the learner-facing impact.",
+        "session": "S132"
+      }
+    ],
+    "consistency": [
+      {
+        "name": "CS-01: same input data produces same weak-topic classification from all subsystems",
+        "description": "Seed a learner state with known topic performance. Call getWeaknessClusters(), S124:_identifyLearningPatterns, S125:_suggestFocusAreas, S126:_generateSessionRecap, S127:_generateWeeklyDigest, and S128:_generateStudyStrategy. Verify that all subsystems agree on which topics are 'weak' — resolving the 4-way conflict identified in S130 consistency audit (weak_topic_classification with different thresholds).",
+        "session": "S133"
+      },
+      {
+        "name": "CS-02: same input data produces same strong-topic classification from all subsystems",
+        "description": "Seed learner state with a topic at 78% accuracy (6 attempts). Verify S124, S125, S127, and S128 all agree on whether this topic is 'strong' — resolving the 4-way conflict in strong_topic_classification where S127/S128 use >=70% but S124/S125 use >=85%. After unification, all should agree (either all yes or all no depending on the canonical threshold).",
+        "session": "S133"
+      },
+      {
+        "name": "CS-03: same input data produces same trend classification from all subsystems",
+        "description": "Seed a topic with delta=12% and recentPct=72%. Verify that getTrends(), S124, S125, S126, S127, and S129 all agree on the trend classification — resolving the 5-way conflict in improving_trend_detection (delta thresholds of 5, 10, 10+recentPct, and 15). After unification, all should use canonical delta>=15 for 'improving' or delta>=5 for 'slightly_improving'.",
+        "session": "S133"
+      },
+      {
+        "name": "CS-04: duplicate observation detection — no observation type generated by >1 subsystem",
+        "description": "For a single topic that qualifies for multiple observations (weak + misconception + declining), verify that each observation type appears in exactly ONE subsystem's output. No observation should be generated by two different subsystems independently. This validates the unified pipeline where subsystems consume pre-computed observations rather than independently deriving them.",
+        "session": "S133"
+      },
+      {
+        "name": "CS-05: identical learner state produces identical recommendation priority order across subsystems",
+        "description": "Seed learner state with 3 topics: one persistent-weak (42%, 8 attempts), one borderline (63%, 6 attempts), one strong (88%, 7 attempts). Verify S125, S126, S127, and S128 all prioritize recommendations in the same order (weak first, then borderline, strong last). This resolves the 6-way conflict in topic_priority_for_study.",
+        "session": "S133"
+      },
+      {
+        "name": "CS-06: consistency across coaching entry points for identical learner state",
+        "description": "With identical learner state and question context, call _explainAnswer, _explainWrongChoices, and _simplifyExplanation. Verify that the appended S123-S125 chains (next best step, learning patterns, focus areas) produce identical observations and recommendations regardless of which coaching entry point triggered them. The shared append chain should be deterministic.",
+        "session": "S133"
+      }
+    ],
+    "staleData": [
+      {
+        "name": "SD-01: observations pruned when evidence ages beyond window",
+        "description": "Seed a topic where early sessions (weeks 1-3, 15 attempts at 40%) precede recent sessions (weeks 4-6, 10 attempts at 80%). Verify that persistent_weakness observation is SUPPRESSED because recent evidence shows improvement — fixing the aggregate staleness failure mode (HIGH severity from S130 longitudinal audit).",
+        "session": "S135"
+      },
+      {
+        "name": "SD-02: misconception patterns pruned when lastSeen > 14 days old",
+        "description": "Seed misconception pattern 'variance_sign_confusion' with 12 occurrences, all from sessions 15+ days ago, lastSeen = 16 days ago. Verify the pattern is excluded from S124 observations and S125 focus areas. Verify that a pattern with both old and recent occurrences (lastSeen = 2 days ago) still appears but with a 'recent' annotation.",
+        "session": "S135"
+      },
+      {
+        "name": "SD-03: old sessions don't skew current topic accuracy — EWMA verified",
+        "description": "Seed a topic with 40 attempts over 8 weeks: first 20 at 30% (weeks 1-4), last 20 at 90% (weeks 5-8). Verify EWMA accuracy ≈ 85%+ while simple aggregate = 60%. Verify that S124 persistent_weakness does NOT fire (EWMA > 60%) and S124 topic_strength DOES fire (EWMA >= 85%) — the system correctly recognizes the topic is now strong despite historical weakness.",
+        "session": "S135"
+      },
+      {
+        "name": "SD-04: recommendations marked superseded when condition no longer applies",
+        "description": "Deliver a focus_area recommendation for topic X at 42% accuracy (persistent_weakness). Simulate 5 more sessions where topic X improves to 72%. Run classifyPendingOutcomes. Verify the original recommendation is now marked status='superseded' and excluded from recurrence tracking. Verify superseded reason is recorded (e.g., 'Topic accuracy improved from 42% to 72%, exceeding weak threshold of 60%').",
+        "session": "S135"
+      },
+      {
+        "name": "SD-05: recommendation outcome cap pruning is logged and does not lose critical data",
+        "description": "Seed 200 recommendation outcomes (at cap). Add a 201st. Verify the oldest outcome is pruned, a telemetry event is logged, and any superseded outcomes are pruned before active ones. Verify that outcome summary counts (positiveCount, neutralCount, contradictoryCount) are recalculated after pruning and remain accurate.",
+        "session": "S135"
+      }
+    ],
+    "recommendationLineage": [
+      {
+        "name": "RL-01: every recommendation is traceable through its observation chain",
+        "description": "Generate a focus_area recommendation. Verify that following ProvenanceID → ObservationChain → SourceEvidence reconstructs the full path: which raw data (topic accuracy=42%, attempts=7), which observation (persistent_weakness), which triggering rule (accuracy < 60% AND attempts >= 5), and which recommendation text was produced.",
+        "session": "S134"
+      },
+      {
+        "name": "RL-02: evidence sources are correctly linked to recommendations",
+        "description": "Generate a recommendation. Verify SourceSessions is populated with all session IDs whose data informed the recommendation — not just the active session. For a weekly digest recommendation, verify SourceSessions includes all sessions in the 7-session lookback window. For a focus_area, verify it includes all sessions where the topic was practiced.",
+        "session": "S134"
+      },
+      {
+        "name": "RL-03: outcome history correctly updated on learner follow-through",
+        "description": "Deliver a recommendation 'Focus on Planning & Budgeting.' Simulate the learner practicing that topic in the next 2 sessions and improving from 42% to 58%. Verify that classifyPendingOutcomes updates the outcome to 'positive' with outcomeEvidence showing the delta. Verify OutcomeHistory array shows: delivered → acted_on → classified(positive).",
+        "session": "S134"
+      },
+      {
+        "name": "RL-04: ParentRecommendationId links superseded or refined recommendations",
+        "description": "Deliver recommendation A for topic X (accuracy=42%). After improvement to 65%, deliver a refined recommendation B for the same topic (accuracy=65%, still needs work). Verify B.ParentRecommendationId = A.ProvenanceID. Verify that querying the lineage of B returns A as its predecessor with the full chain of evidence evolution.",
+        "session": "S134"
+      },
+      {
+        "name": "RL-05: cross-system recommendations (coaching + QID) have unified lineage",
+        "description": "Generate a focus_area recommendation (coaching system, recordProvenance) followed by a similar_question recommendation (QID system). Verify both write to the unified provenanceRecords array with consistent ProvenanceID format. Verify a single query can retrieve both and reconstruct the full recommendation timeline across both systems.",
+        "session": "S134"
+      }
+    ],
+    "regression": [
+      {
+        "name": "RG-01: all 178 existing tutoring safety tests still pass",
+        "description": "Run the full test_tutoring_safety.js suite. Verify all 178 tests pass with no regressions introduced by S131-S135 changes. This is the primary regression gate — any change to may-core.js or may-learner-state.js must not break existing safety, coaching, or wiring tests.",
+        "session": "S136"
+      },
+      {
+        "name": "RG-02: all 119 Stage C tests still pass",
+        "description": "Run the full test_may_stagec.js suite. Verify all 119 tests pass. Stage C covers learner state integrity, explanation grounding, hint graduation, recommendation engine, tone/anti-platitude, edge cases, misconception surfacing, confidence calibration, challenge resolution, S115 student roll, and S117 privacy/welcome.",
+        "session": "S136"
+      },
+      {
+        "name": "RG-03: all 20 governance guard tests still pass",
+        "description": "Run the full test_governance_guard.js suite. Verify all 20 tests pass. Governance guard tests cover ExplanationWrong detection, question count thresholds, registry file protection, RECOMPUTED note detection, and read-only passthrough.",
+        "session": "S136"
+      },
+      {
+        "name": "RG-04: all 7 coaching entry points still produce valid output",
+        "description": "Exercise all 7 coaching entry points: explain, wrong-choices, hint, simplify, progress, weakness, summary. Verify each produces non-empty, well-structured output. Verify no entry point throws an error, returns null unexpectedly, or produces empty recommendations. Verify S123-S125 append chain fires correctly for explain, wrong-choices, and simplify.",
+        "session": "S136"
+      },
+      {
+        "name": "RG-05: S129 effectiveness engine unchanged — backward compatible",
+        "description": "Run the S129-specific tests (S129-01 through S129-20) from test_tutoring_safety.js. Verify all 20 pass. Verify getOutcomeSummary(), classifyPendingOutcomes(), getRecommendationRecurrence(), getLongitudinalAnalytics(), _scoreRecommendationQuality(), and recordRecommendationDelivery() all produce identical results to pre-S131 behavior for existing data while also working with new unified provenance records.",
+        "session": "S136"
+      }
+    ]
+  },
+  "testsBySession": {
+    "S131": {
+      "title": "Foundation — Evidence Graph + Time-Weighted Accuracy",
+      "count": 8,
+      "tests": [
+        "EG-01: unified computation produces identical results to individual computations",
+        "EG-02: evidence graph layers are correctly connected",
+        "EG-03: time-weighted accuracy (EWMA) differs from simple aggregate",
+        "EG-04: calendar-window functions return correct date ranges",
+        "EG-05: EWMA correctly weights recent attempts higher than older attempts",
+        "EG-06: getTopicProgress with EWMA produces different weak/strong classifications",
+        "EG-07: evidence graph correctly propagates changes when new session data arrives",
+        "EG-08: cross-layer consistency under edge cases (empty state, single attempt, capped sessions)"
+      ],
+      "dependsOn": "S130 analysis findings (consistency audit, longitudinal validation, performance audit)",
+      "primaryFiles": ["may-learner-state.js"],
+      "newFunctionsNeeded": ["getCachedLearnerSnapshot()", "EWMA accuracy computation in getTopicProgress()"]
+    },
+    "S132": {
+      "title": "Observations & Thresholds — Threshold Registry + Governance",
+      "count": 6,
+      "tests": [
+        "TH-01: single threshold registry returns correct canonical values",
+        "TH-02: all coaching functions use registry — no hardcoded literals",
+        "TH-03: changing a threshold in registry affects all consumers",
+        "TH-04: threshold drift detection — no function uses different value for same concept",
+        "TH-05: getThresholdSnapshot returns all thresholds including newly defined ones",
+        "TH-06: intentionally tiered thresholds are documented with rationale"
+      ],
+      "dependsOn": "S131 (evidence graph + EWMA must be in place for threshold validation)",
+      "primaryFiles": ["may-learner-state.js (THRESHOLD_REGISTRY)", "may-core.js (consumer refactoring)"],
+      "newFunctionsNeeded": ["THRESHOLD_REGISTRY object", "extended getThresholdSnapshot()"]
+    },
+    "S133": {
+      "title": "Recommendations — Cross-Subsystem Consistency",
+      "count": 6,
+      "tests": [
+        "CS-01: same input data produces same weak-topic classification from all subsystems",
+        "CS-02: same input data produces same strong-topic classification from all subsystems",
+        "CS-03: same input data produces same trend classification from all subsystems",
+        "CS-04: duplicate observation detection — no observation type generated by >1 subsystem",
+        "CS-05: identical learner state produces identical recommendation priority order across subsystems",
+        "CS-06: consistency across coaching entry points for identical learner state"
+      ],
+      "dependsOn": "S131 (evidence graph) + S132 (threshold registry) — consistency requires unified thresholds and canonical computations",
+      "primaryFiles": ["may-core.js (S124-S128 refactoring)", "may-learner-state.js (canonical sources)"],
+      "newFunctionsNeeded": ["getTopicStrengthTiers()", "getRecommendedActions()", "getMisconceptionLabels()"]
+    },
+    "S134": {
+      "title": "Provenance — Full Recommendation Provenance + Lineage",
+      "count": 13,
+      "tests": [
+        "PV-01: every recommendation type returns a ProvenanceID",
+        "PV-02: SourceEvidence is never empty for any recommendation type",
+        "PV-03: TriggeringRule is recorded for all recommendation types",
+        "PV-04: _generateSessionRecap now stores provenance",
+        "PV-05: _recommendNextAction now stores provenance",
+        "PV-06: preExamBriefing now stores provenance",
+        "PV-07: ObservationChain correctly links evidence to recommendations",
+        "PV-08: ProvenanceID format is consistent and unique across all recommendation types",
+        "RL-01: every recommendation is traceable through its observation chain",
+        "RL-02: evidence sources are correctly linked to recommendations",
+        "RL-03: outcome history correctly updated on learner follow-through",
+        "RL-04: ParentRecommendationId links superseded or refined recommendations",
+        "RL-05: cross-system recommendations (coaching + QID) have unified lineage"
+      ],
+      "dependsOn": "S131 (evidence graph) + S132 (thresholds) + S133 (consistency) — provenance recording requires canonical data sources",
+      "primaryFiles": ["may-learner-state.js (provenanceRecords, recordProvenance)", "may-core.js (10 recommendation functions)"],
+      "newFunctionsNeeded": ["recordProvenance()", "_generateProvenanceID()", "provenanceRecords array", "8-step implementation plan from S130 provenance audit"]
+    },
+    "S135": {
+      "title": "Longitudinal — Stale-Data Pruning + Evidence Aging",
+      "count": 5,
+      "tests": [
+        "SD-01: observations pruned when evidence ages beyond window",
+        "SD-02: misconception patterns pruned when lastSeen > 14 days old",
+        "SD-03: old sessions don't skew current topic accuracy — EWMA verified",
+        "SD-04: recommendations marked superseded when condition no longer applies",
+        "SD-05: recommendation outcome cap pruning is logged and does not lose critical data"
+      ],
+      "dependsOn": "S131 (EWMA) + S134 (supersession) — EWMA is the foundation for stale-data detection; supersession logic uses provenance records",
+      "primaryFiles": ["may-core.js (S124-S128 pattern/misconception filtering)", "may-learner-state.js (classifyPendingOutcomes supersession, EWMA aging)"],
+      "newFunctionsNeeded": ["time-based staleness filter in _identifyLearningPatterns", "lastSeen check for misconception patterns", "supersession logic in classifyPendingOutcomes()"]
+    },
+    "S136": {
+      "title": "Effectiveness — Regression + Feedback Loop Validation",
+      "count": 5,
+      "tests": [
+        "RG-01: all 178 existing tutoring safety tests still pass",
+        "RG-02: all 119 Stage C tests still pass",
+        "RG-03: all 20 governance guard tests still pass",
+        "RG-04: all 7 coaching entry points still produce valid output",
+        "RG-05: S129 effectiveness engine unchanged — backward compatible"
+      ],
+      "dependsOn": "S131-S135 (all changes must be in place before regression gate)",
+      "primaryFiles": ["scripts/test_tutoring_safety.js", "scripts/test_may_stagec.js", "scripts/test_governance_guard.js"],
+      "newFunctionsNeeded": ["None — regression-only session. Run all existing suites + verify S131-S135 test suites pass."]
+    }
+  },
+  "totalPlannedTests": 43,
+  "testCountSummary": {
+    "evidenceGraph": 8,
+    "provenance": 8,
+    "thresholdGovernance": 6,
+    "consistency": 6,
+    "staleData": 5,
+    "recommendationLineage": 5,
+    "regression": 5,
+    "total": 43
+  },
+  "sessionDependencyOrder": {
+    "description": "Each session depends on prior sessions. S131 must complete before S132; S132 before S133; all three before S134; S134 before S135; all five before S136 (regression gate).",
+    "order": ["S131", "S132", "S133", "S134", "S135", "S136"],
+    "dependencies": {
+      "S131": [],
+      "S132": ["S131"],
+      "S133": ["S131", "S132"],
+      "S134": ["S131", "S132", "S133"],
+      "S135": ["S131", "S134"],
+      "S136": ["S131", "S132", "S133", "S134", "S135"]
+    }
+  },
+  "riskAssessment": {
+    "breakingChangeRisk": "MEDIUM — S134 (unified provenance system) changes the storage schema. Existing tests that rely on recommendationOutcomes or recommendationLog formats may need assertion updates. Mitigation: keep legacy fields alongside new provenanceRecords during transition.",
+    "regressionSurfaceArea": "All 317 existing tests across 3 suites touch may-core.js and may-learner-state.js. Changes to either file risk regressions. S136 regression gate is the final safety net.",
+    "highestRiskTests": [
+      "EG-06 (EWMA changes topic classification — could break S124/S125 tests)",
+      "CS-01 through CS-06 (consistency refactoring changes classification paths)",
+      "PV-01 through PV-08 (new storage schema side-by-side with legacy fields)",
+      "SD-03 (EWMA verification — must confirm it doesn't break S129 outcome classification)"
+    ],
+    "mitigationStrategy": "Run all 317 existing tests after every session (S131-S135), not just at S136. Catch regressions early rather than at the final gate."
+  },
+  "implementationNotes": {
+    "testFileNaming": "New test files should follow existing pattern: scripts/test_s131_evidence_graph.js, scripts/test_s132_threshold_governance.js, etc.",
+    "mockEnvironmentReuse": "Each new test file should use the same mock environment pattern (lg() loader, localStorage mock, document mock) as test_tutoring_safety.js. Consider extracting shared mock setup to scripts/test_harness_common.js for S131+.",
+    "canonicalSourcing": "All planned tests should seed data through MayLearnerState.recordAttempt() and MayLearnerState.recordRecommendationDelivery() — the same paths used by the live system — rather than directly manipulating internal data structures. This ensures tests validate real code paths.",
+    "assertionGranularity": "Follow existing pattern: assert() for positive checks, refute() for negative checks. Each test should verify one specific behavior. Use descriptive failure messages that include actual vs. expected values."
+  }
+}

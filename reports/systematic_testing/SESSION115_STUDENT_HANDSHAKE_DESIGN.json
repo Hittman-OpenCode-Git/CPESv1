@@ -1,0 +1,36 @@
+{
+  "session": "S115",
+  "type": "StudentHandshakeDesign",
+  "timestamp": "2026-07-25",
+  "stateMachine": {
+    "states": ["idle", "ASK_RETURNING", "SHOW_STUDENT_ROLL", "CREATE_NEW_STUDENT", "READY_TO_TUTOR"],
+    "transitions": [
+      { "from": "idle", "to": "ASK_RETURNING", "trigger": "init() when no cmaMaySelectedLearnerId", "action": "_enterGreetingFlow()" },
+      { "from": "ASK_RETURNING", "to": "SHOW_STUDENT_ROLL", "trigger": "User clicks 'Yes'", "action": "_handleGreetingResponse('yes')" },
+      { "from": "ASK_RETURNING", "to": "CREATE_NEW_STUDENT", "trigger": "User clicks 'No'", "action": "_handleGreetingResponse('no')" },
+      { "from": "SHOW_STUDENT_ROLL", "to": "READY_TO_TUTOR", "trigger": "User selects a student", "action": "_selectStudentFromRoll(learnerId)" },
+      { "from": "CREATE_NEW_STUDENT", "to": "READY_TO_TUTOR", "trigger": "User enters valid name", "action": "trySetName(text)" },
+      { "from": "idle", "to": "READY_TO_TUTOR", "trigger": "init() when cmaMaySelectedLearnerId exists (skip handshake)", "action": "getWelcomeMessage() or askForName()" }
+    ],
+    "entryCondition": "init() checks localStorage cmaMaySelectedLearnerId. If exists -> skip handshake. If not -> enter greeting flow."
+  },
+  "greetingMessage": "Welcome back — have we met before?",
+  "yesPath": "Presents 8 synthetic student names as clickable rows. Each row shows display name + session count + truncated profile summary.",
+  "noPath": "Calls askForName() — existing flow. On name set, marks profile synthetic/preProduction, persists selectedLearnerId, enters READY_TO_TUTOR.",
+  "selectedStudentSummary": "After selection: displayName, profileSummary, readinessSnapshot, weakAreas, progressSignals, session count, pre-production disclaimer.",
+  "uiRendering": {
+    "ASK_RETURNING": "Chat area shows greeting + two buttons: 'Yes — I've been here before' / 'No — I'm new here'",
+    "SHOW_STUDENT_ROLL": "Chat area shows list of 8 clickable student rows",
+    "CREATE_NEW_STUDENT": "Chat area shows name prompt (existing askForName flow)"
+  },
+  "safetyMarkers": {
+    "preProductionWarning": "⚠ This is a pre-production pilot environment. Your data is synthetic and stored locally only.",
+    "syntheticDataMarkers": "All profiles include synthetic:true, preProduction:true"
+  },
+  "implementation": {
+    "files": ["may-core.js", "may-learner-state.js"],
+    "newFunctions": ["_enterGreetingFlow", "_handleGreetingResponse", "_selectStudentFromRoll", "_ensureStudentRoll", "_generateSyntheticStudentRoll"],
+    "modifiedFunctions": ["init", "trySetName", "renderView"],
+    "contextAdditions": ["greetingState", "_sessionTelemetry"]
+  }
+}

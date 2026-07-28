@@ -1,0 +1,19 @@
+{
+  "session": "723",
+  "agent": "O",
+  "title": "Risk Register Closure Review",
+  "total_risks_reviewed": 8,
+  "closed": 1,
+  "accepted": 2,
+  "carry_forward": 5,
+  "risks": [
+    { "id": "DL-008", "desc": "67 Certified items (old stale report)", "classification": "CLOSED", "resolution": "0 actual DL-008 — all were DL-029 forward-scan false positives" },
+    { "id": "DL-026", "desc": "Pack D Section C (50 In Audit)", "classification": "CARRY_FORWARD", "rationale": "Blocks D-C section certification. ~100 distractor explanations needed." },
+    { "id": "DL-013", "desc": "~851 boilerplate fields", "classification": "ACCEPTED", "rationale": "Zero Certified items affected. Deferred to certification waves." },
+    { "id": "DL-031", "desc": "Difficulty inflation ~500 items", "classification": "CARRY_FORWARD", "rationale": "Systematic template-rotation artifact. Per-item recalibration needed." },
+    { "id": "DL-032", "desc": "Case uniform difficulty (420 items)", "classification": "CARRY_FORWARD", "rationale": "All 420 case items labeled Moderate. Per-case calibration needed." },
+    { "id": "DCS_174", "desc": "174 severe DCS §3 misalignments", "classification": "ACCEPTED", "rationale": "Calibration debt, not governance defect. Tracked, not escalated." },
+    { "id": "PACK_CD_EF", "desc": "Pack C/D Sections E/F not certified", "classification": "CARRY_FORWARD", "rationale": "400 items. Domain E: 129 DL-012 archived clones. Domain F: 149 greenfield items." },
+    { "id": "BASELINE_STALE", "desc": "CURRENT_BASELINES.md stale hashes", "classification": "CARRY_FORWARD", "rationale": "Authorized drift from S64-S537 development. Needs hash recapture." }
+  ]
+}

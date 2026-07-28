@@ -1,0 +1,74 @@
+{
+  "board": "Readiness Board — S361-S363 Pre-Flight Gate",
+  "timestamp": "2026-07-27T16:10:00Z",
+  "program": "350-Series Post-Adoption Measurement Authority (S361-S363)",
+  "decision": "BLOCKED — 4 of 6 automatic stop conditions triggered",
+  "adoption_status": "CONDITIONALLY ADOPTED (S822, 96/100) — NOT FULLY ADOPTED",
+
+  "live_state_verification": {
+    "certified_pool": 2298,
+    "coverage": "90.5% (2,298 / 2,540)",
+    "governance_guard": "32/32 PASS",
+    "identity_integrity": "99.96%",
+    "pack_hashes": {
+      "pack_a": { "baseline": "E237FE...", "live": "E237FE...", "match": true },
+      "pack_b": { "baseline": "8A6413...", "live": "8A6413...", "match": true },
+      "pack_c": { "baseline": "02BD4D...", "live": "113210...", "match": false },
+      "pack_d": { "baseline": "E0C365...", "live": "ED6942...", "match": false },
+      "pack_e": { "baseline": "A98B27...", "live": "A98B27...", "match": true }
+    }
+  },
+
+  "stop_condition_results": {
+    "governance_guard_neq_pass": { "status": "PASS", "value": "32/32" },
+    "identity_lt_99pct": { "status": "PASS", "value": "99.96%" },
+    "certification_drift_gt_0": { "status": "FAIL", "detail": "Pack C hash: baseline 02BD4D vs live 113210. Pack D hash: baseline E0C365 vs live ED6942. Post-S811 drift, unauthorized." },
+    "certified_dl008_exists": { "status": "FAIL", "detail": "8 Certified items carry DL-008. 1 in Pack C Section F (P1-FC-001). 7 in Pack D Section F (P1-FD-043/049/054/059/064/069/073)." },
+    "certified_dl026_exists": { "status": "FAIL", "detail": "~34-36 Certified items carry DL-026. All in Domain F: 16 Pack C + 18 Pack D. All empty non-CC distractor ExplanationWrong slots." },
+    "artifact_integrity_fail": { "status": "FAIL", "detail": "Pack C+D hashes do not match CURRENT_BASELINES.md (S811 T0)." }
+  },
+
+  "defect_scope_verified": {
+    "dl008_certified": {
+      "count": 8,
+      "pack_c": { "count": 1, "section": "F", "qids": ["P1-FC-001"] },
+      "pack_d": { "count": 7, "section": "F", "qids": ["P1-FD-043","P1-FD-049","P1-FD-054","P1-FD-059","P1-FD-064","P1-FD-069","P1-FD-073"] }
+    },
+    "dl026_certified": {
+      "count": 34,
+      "pack_c": { "count": 16, "section": "F" },
+      "pack_d": { "count": 18, "section": "F" },
+      "note": "S822 claimed 77. Actual verified: 34-36. S822 may have included Domain E items or used a different scan window. Domain E sections show 56 DL-026 each across Packs C+D but 0 are Certified. S822's 38 'Domain E' DL-026 items may be a pre-certification scan artifact."
+    },
+    "dl008_historical": {
+      "current_baselines_claim": "0 verified",
+      "actual": 8,
+      "note": "CURRENT_BASELINES.md §3 claims DL-008 RESOLVED with 0 learner pool items. This is inaccurate. The 8 items are Certified Domain F items from S853 WAVE_A certification wave."
+    }
+  },
+
+  "adoption_status_analysis": {
+    "s360_claim": "FULLY ADOPTED — 97/100 (all C1-C5 CLOSED)",
+    "s822_claim": "CONDITIONALLY ADOPTED — 96/100 (PROMOTION BLOCKED, C3 OPEN)",
+    "resolution": "S822 takes precedence as the later, more thorough review. S822 correctly identified content defects in the certified pool. S360's C3 closure was premature — the DL-026 process was certified via 2-item PoC but the 77 newly certified items (S853 WAVE_A) were not scanned for DL-026 before certification. S822 discovered this gap. Additionally, S822 identified DL-008 items that S360 missed.",
+    "actual_status": "CONDITIONALLY ADOPTED (not fully adopted). Framework v2 infrastructure (governance, automation, pipeline, traceability) is certified. Content quality is the blocker: 8 DL-008 + 34 DL-026 in the certified learner pool."
+  },
+
+  "program_viability": {
+    "verdict": "CANNOT PROCEED AS SPECIFIED",
+    "reasons": [
+      "1. Program prerequisite is FULLY ADOPTED Framework v2. Current status is CONDITIONALLY ADOPTED.",
+      "2. Program automatic stop conditions are designed to halt on: Certified DL-008 (8 exist), Certified DL-026 (34 exist), Certification Drift (Pack C+D), Artifact Integrity FAIL (hash mismatch).",
+      "3. Post-adoption maturity measurement requires a stable, defect-free baseline. The current pool has known certified defects that precede any maturity measurement.",
+      "4. Hash baselines are stale — CURRENT_BASELINES.md must be recaptured before any operational measurement can have a reliable T0."
+    ],
+    "options": [
+      "A. REMEDIATE FIRST — Clear 8 DL-008 + 34 DL-026, recapture baselines, verify all 6 stop conditions PASS, re-run S822 for FULLY ADOPTED confirmation, then proceed to S361-S363.",
+      "B. RESCOPE — Rewrite S361-S363 as a CONDITIONALLY ADOPTED maturity audit, acknowledging known defects and measuring the framework's operational characteristics around them.",
+      "C. PARTIAL EXECUTION — Run S361 (Operational Maturity Audit) only, treating it as a read-only gap analysis that quantifies the blockers precisely. Defer S362-S363 until remediation is complete."
+    ]
+  },
+
+  "governance_note": "This Readiness Board is issued as a read-only governance artifact. No content files are modified. The board consumes: live pack files (direct parse), CURRENT_BASELINES.md, REVISION_HISTORY.md, S360/S822 decision documents, governance-guard.js test results.",
+  "immutability_clause": "The live-state metrics captured in this artifact (2,298 certified, 8 DL-008, 34 DL-026, pack hash values) are frozen as the T0 ground truth for any subsequent remediation or audit session. Modification requires an amendment session with Governance Board authorization."
+}

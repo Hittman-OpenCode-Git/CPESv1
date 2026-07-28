@@ -1,0 +1,610 @@
+{
+  "session": "S132",
+  "directDataAccesses": [
+    {
+      "function": "_greetingForQuestion",
+      "line": 976,
+      "subsystem": "S120 (tutor-layer greeting)",
+      "method": "getTopicProgress",
+      "computation": "Checks per-topic accuracy for personalized greeting — if >= 80% or < 60%, tailors the opening message",
+      "duplicatesOf": "computeEvidenceGraph().evidence[topic].accuracy already available; _inferReviewFocus (line 1725) also calls getTopicProgress independently for the same question",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Accept evidence graph as parameter; read topicProgress from evidence[topic]"
+    },
+    {
+      "function": "_generateNextBestStep",
+      "line": 1123,
+      "subsystem": "S123 (next-best-step action plan)",
+      "method": "getTopicProgress",
+      "computation": "Determines topic accuracy to choose between 'advance', 'reinforce', and topic-specific action types",
+      "duplicatesOf": "_identifyLearningPatterns (line 1277) and _suggestFocusAreas (line 1412) both call getTopicProgress for the same question in the same call chain",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Read evidence[topic].accuracy and evidence[topic].totalAttempts from pre-computed graph"
+    },
+    {
+      "function": "_identifyLearningPatterns",
+      "line": 1277,
+      "subsystem": "S124 (learning pattern identification)",
+      "method": "getTopicProgress",
+      "computation": "Builds observations about topic_strength, persistent_weakness, and improving trends from per-topic accuracy data",
+      "duplicatesOf": "_generateNextBestStep (line 1123) and _suggestFocusAreas (line 1412); all three run sequentially on the same question — re-deriving the same topic data",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.observations.strengths and graph.observations.weaknesses directly"
+    },
+    {
+      "function": "_suggestFocusAreas",
+      "line": 1412,
+      "subsystem": "S125 (focus area suggestions)",
+      "method": "getTopicProgress",
+      "computation": "Aggregates topic-level accuracy, recent accuracy, and attempt counts to rank focus area suggestions by priority",
+      "duplicatesOf": "_identifyLearningPatterns (line 1277) — analyzes same topic data to produce overlapping conclusions. Also duplicates _generateNextBestStep (line 1123)",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence for accuracy/attempt data and graph.observations for pre-classified strengths/weaknesses"
+    },
+    {
+      "function": "_inferReviewFocus",
+      "line": 1725,
+      "subsystem": "S120 (tutor explanation builder)",
+      "method": "getTopicProgress",
+      "computation": "Appends accuracy note to review-focus recommendation (e.g. 'You're currently at 65% on this topic after 8 attempts')",
+      "duplicatesOf": "_greetingForQuestion (line 976) also calls getTopicProgress for the same question during 'Explain answer' flow",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Pass evidence[topic].accuracy and evidence[topic].totalAttempts from the evidence graph"
+    },
+    {
+      "function": "_explainAnswer",
+      "line": 1781,
+      "subsystem": "S120 (tutor explanation assembly)",
+      "method": "getTopicProgress",
+      "computation": "Appends a cross-session note: 'You've seen {topic} N times across sessions (X% correct overall)'",
+      "duplicatesOf": "_inferReviewFocus (line 1725) — called within the same _explainAnswer for the same topic. Also _greetingForQuestion (line 976) does the same check",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Read from evidence[topic].totalAttempts and evidence[topic].accuracy in graph"
+    },
+    {
+      "function": "_generateWeeklyDigest",
+      "line": 3099,
+      "subsystem": "S127 (weekly learning digest)",
+      "method": "getTopicProgress",
+      "computation": "Attempts to load topicProgress for cross-referencing with weekly session data — used only as context check (!!topicProgress)",
+      "duplicatesOf": "_generateStudyStrategy (line 3266) — same pattern: loads topicProgress for cross-referencing; also duplicates _getProgressInsight",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Replace with graph.evidence; topicProgress is only used for existence check"
+    },
+    {
+      "function": "_generateStudyStrategy",
+      "line": 3266,
+      "subsystem": "S128 (personal study strategy)",
+      "method": "getTopicProgress",
+      "computation": "Loads topicProgress to cross-reference with weekly session data; used only as context check (!!topicProgress)",
+      "duplicatesOf": "_generateWeeklyDigest (line 3099) uses identical approach; also duplicates _generateStrategyEffectiveness",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Replace with graph.evidence — the topicProgress check is purely existential"
+    },
+    {
+      "function": "renderMiniPanel",
+      "line": 5409,
+      "subsystem": "S120 (mini-panel rendering)",
+      "method": "getTopicProgress",
+      "computation": "Displays live per-topic accuracy insight in the mini-panel during active sessions",
+      "duplicatesOf": "showPostAnswerFeedback (line 5463) does the same accuracy lookup for the same question. Also duplicates _greetingForQuestion (line 976)",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Read evidence[topic].accuracy and evidence[topic].totalAttempts from pre-computed graph"
+    },
+    {
+      "function": "showPostAnswerFeedback",
+      "line": 5463,
+      "subsystem": "S120 (post-answer micro-feedback)",
+      "method": "getTopicProgress",
+      "computation": "Determines correct/wrong feedback with per-topic accuracy context for post-answer messaging",
+      "duplicatesOf": "renderMiniPanel (line 5409) — same topic progress lookup for same question. Also miniInsight (line 5596) reads similar data",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use evidence[topic].accuracy and evidence[topic].recentAccuracy from graph"
+    },
+    {
+      "function": "_buildWelcomeOverview",
+      "line": 279,
+      "subsystem": "S117 (welcome overview)",
+      "method": "getTrends",
+      "computation": "Uses trends to find stable/steady topics for positive trend detection in welcome-back overview",
+      "duplicatesOf": "_detectPositiveTrend (line 315) analyzes same trends data; _getProgressInsight (line 2746) also reads trends for identical 'stable topics' computation",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence properties (stability, direction, accuracy) and graph.observations.topicTrends"
+    },
+    {
+      "function": "_getProgressInsight",
+      "line": 2746,
+      "subsystem": "S120 (progress insight)",
+      "method": "getTrends",
+      "computation": "Filters trends for hint-decreasing topics, difficult-but-accurate topics, and stable topics to produce progress narrative",
+      "duplicatesOf": "_getWeaknessInsight (line 2850) loads same trends dataset; _buildWelcomeOverview (line 279) does overlapping trend analysis",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence for per-topic stability/hintTrend/accuracy and graph.observations.topicTrends"
+    },
+    {
+      "function": "_getWeaknessInsight",
+      "line": 2850,
+      "subsystem": "S120 (weakness insight)",
+      "method": "getTrends",
+      "computation": "Uses trends as fallback when no cluster data exists — picks lowest-accuracy topics with >=3 attempts",
+      "duplicatesOf": "_getProgressInsight (line 2746) loads same trends; _recommendNext (line 3812) loads trends for same purpose",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Sort graph.evidence entries by accuracy for the fallback path"
+    },
+    {
+      "function": "_recommendNext",
+      "line": 3812,
+      "subsystem": "S120 (recommend next question)",
+      "method": "getTrends",
+      "computation": "Finds strong topics (>=70% accuracy, >=2 attempts) for stretch recommendation when no weak areas exist",
+      "duplicatesOf": "_getProgressInsight (line 2746) uses identical filter for 'well-established' topics; _generateRecoverySet (line 3886) uses same for fallback targets",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence entries filtered by accuracy >= 70 and totalAttempts >= 2"
+    },
+    {
+      "function": "_generateRecoverySet",
+      "line": 3886,
+      "subsystem": "S120 (recovery set generation)",
+      "method": "getTrends",
+      "computation": "Fallback: when no cluster targets exist, picks lowest-accuracy trends with >=2 attempts as recovery targets",
+      "duplicatesOf": "_recommendNext (line 3812) uses same filter; _getWeaknessInsight (line 2850) uses same fallback pattern",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence sorted by accuracy ascending; graph.clusters already provides weakness clusters"
+    },
+    {
+      "function": "_renderInsightCards",
+      "line": 4638,
+      "subsystem": "S120 (sidebar rendering)",
+      "method": "getTrends",
+      "computation": "Loads trends alongside clusters — trends are loaded but only clusters are used in this function (trends is unused dead code at this call site)",
+      "duplicatesOf": "Same getTrends+getWeaknessClusters pattern as _getProgressInsight (line 2746-2747) — trends loaded but discarded",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Remove unused getTrends call; use graph.clusters directly"
+    },
+    {
+      "function": "_assessInsightEvidence",
+      "line": 6124,
+      "subsystem": "S113 (evidence-threshold validation)",
+      "method": "getTrends",
+      "computation": "Loads trends alongside clusters and calibration for evidence-threshold assessment of insight claims",
+      "duplicatesOf": "computeEvidenceGraph() already bundles trends into evidence entries — this is a complete duplicate of graph construction for audit purposes",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Call computeEvidenceGraph() once and validate threshold properties from graph.evidence entries"
+    },
+    {
+      "function": "getWelcomeMessage",
+      "line": 136,
+      "subsystem": "S115 (welcome/greeting)",
+      "method": "getWeaknessClusters",
+      "computation": "Reads persistentWeak and improving clusters to personalize the welcome message with weakest area and improving area",
+      "duplicatesOf": "_buildWelcomeOverview (line 278) reads same clusters for identical purpose; preExamBriefing (line 890) does the same",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters.persistentWeak and graph.clusters.improving"
+    },
+    {
+      "function": "_buildWelcomeOverview",
+      "line": 278,
+      "subsystem": "S117 (welcome overview)",
+      "method": "getWeaknessClusters",
+      "computation": "Uses clusters.improving and clusters.persistentWeak to build strength/opportunity messages in welcome overview",
+      "duplicatesOf": "getWelcomeMessage (line 136) reads same clusters for same purpose; _recommendNextAction (line 338) reads same cluster data",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters and graph.observations.topicTrends"
+    },
+    {
+      "function": "preExamBriefing",
+      "line": 890,
+      "subsystem": "S120 (pre-exam briefing)",
+      "method": "getWeaknessClusters",
+      "computation": "Builds review topic list from persistentWeak, declining, and unstable clusters for pre-exam weak-area review suggestions",
+      "duplicatesOf": "getWelcomeMessage (line 136) and _buildWelcomeOverview (line 278) read identical cluster data for similar audience",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters for all four cluster types"
+    },
+    {
+      "function": "_getProgressInsight",
+      "line": 2747,
+      "subsystem": "S120 (progress insight)",
+      "method": "getWeaknessClusters",
+      "computation": "Uses clusters.improving to populate 'Topics showing improvement' section of progress output",
+      "duplicatesOf": "Loaded right after getTrends (line 2746) — same pattern as _getWeaknessInsight, _buildWelcomeOverview, _renderInsightCards",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters.improving and graph.observations.topicTrends"
+    },
+    {
+      "function": "_getWeaknessInsight",
+      "line": 2849,
+      "subsystem": "S120 (weakness insight)",
+      "method": "getWeaknessClusters",
+      "computation": "Iterates all 5 cluster types (persistentWeak, declining, unstable, hintDependent, difficultySensitive) to produce weakness narrative",
+      "duplicatesOf": "_getProgressInsight uses same data; _recommendNext (line 3786) uses identical iteration for priority ordering",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters — all 5 cluster types are included in the evidence graph"
+    },
+    {
+      "function": "_recommendNext",
+      "line": 3786,
+      "subsystem": "S120 (recommend next question)",
+      "method": "getWeaknessClusters",
+      "computation": "Priority-orders clusters (persistentWeak > declining > unstable) to select target topic for next-question recommendation",
+      "duplicatesOf": "_getWeaknessInsight (line 2849) and _generateRecoverySet (line 3865) use same priority cascading",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters with same cascading priority — identical logic"
+    },
+    {
+      "function": "_generateRecoverySet",
+      "line": 3865,
+      "subsystem": "S120 (recovery set generation)",
+      "method": "getWeaknessClusters",
+      "computation": "Priority-orders clusters (persistentWeak > declining > unstable > difficultySensitive) and allocates questions proportionally",
+      "duplicatesOf": "_recommendNext (line 3786) uses same priority order; _getWeaknessInsight (line 2849) enumerates same cluster types",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters with same allocation logic"
+    },
+    {
+      "function": "_renderInsightCards",
+      "line": 4639,
+      "subsystem": "S120 (sidebar rendering)",
+      "method": "getWeaknessClusters",
+      "computation": "Renders improving and persistentWeak topic cards into the sidebar 'At a glance' panel",
+      "duplicatesOf": "_getProgressInsight and _getWeaknessInsight produce identical textual output; miniInsight (line 5596) does same",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters.improving and graph.clusters.persistentWeak directly"
+    },
+    {
+      "function": "miniInsight",
+      "line": 5596,
+      "subsystem": "S120 (mini-panel insight)",
+      "method": "getWeaknessClusters",
+      "computation": "Builds compact improving/weak summary for the in-exam mini-panel overlay",
+      "duplicatesOf": "_renderInsightCards (line 4639) does same rendering with richer HTML; _getProgressInsight produces same text",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters.improving and graph.clusters.persistentWeak"
+    },
+    {
+      "function": "renderSetupGreeting",
+      "line": 5660,
+      "subsystem": "S115 (setup panel greeting)",
+      "method": "getWeaknessClusters",
+      "computation": "Shows weakest area hint in the session setup panel greeting card",
+      "duplicatesOf": "getWelcomeMessage (line 136) — identical use of clusters.persistentWeak[0] for welcome messaging",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.clusters.persistentWeak[0]"
+    },
+    {
+      "function": "_assessInsightEvidence",
+      "line": 6125,
+      "subsystem": "S113 (evidence-threshold validation)",
+      "method": "getWeaknessClusters",
+      "computation": "Validates that each cluster claim has sufficient data backing using evidence-threshold checkers",
+      "duplicatesOf": "computeEvidenceGraph() bundles same cluster data — this function rebuilds the same evidence assessment from raw APIs",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Call computeEvidenceGraph() and validate threshold properties from graph.evidence entries rather than re-deriving"
+    },
+    {
+      "function": "getWelcomeMessage",
+      "line": 126,
+      "subsystem": "S115 (welcome/greeting)",
+      "method": "load",
+      "computation": "Loads learner data to count sessions, total attempts for welcome message; also loads clusters (line 136)",
+      "duplicatesOf": "_buildWelcomeOverview (line 280) does identical load+cluster pattern; preExamBriefing (line 859) same",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount and graph.metadata.topicCount"
+    },
+    {
+      "function": "_buildWelcomeOverview",
+      "line": 280,
+      "subsystem": "S117 (welcome overview)",
+      "method": "load",
+      "computation": "Loads learner data for session count, trend/cluster cross-referencing in welcome overview",
+      "duplicatesOf": "getWelcomeMessage (line 126) loads same data; _detectPositiveTrend receives data parameter from same load",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount"
+    },
+    {
+      "function": "preExamBriefing",
+      "line": 859,
+      "subsystem": "S120 (pre-exam briefing)",
+      "method": "load",
+      "computation": "Loads data for session count to determine returning vs. first-timer briefing path",
+      "duplicatesOf": "getWelcomeMessage (line 126) and _buildWelcomeOverview (line 280) — identical session-count pattern",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount"
+    },
+    {
+      "function": "_identifyLearningPatterns",
+      "line": 1314,
+      "subsystem": "S124 (learning pattern identification)",
+      "method": "load",
+      "computation": "Reads misconceptionPatterns from learner data to surface recurring misconception observations",
+      "duplicatesOf": "_suggestFocusAreas (line 1441) loads same misconceptionPatterns for the same question in the same call chain",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.patterns.misconceptions — already derived in computeEvidenceGraph"
+    },
+    {
+      "function": "_identifyLearningPatterns",
+      "line": 1348,
+      "subsystem": "S124 (learning pattern identification)",
+      "method": "sessions iteration",
+      "computation": "Iterates _learnerState.sessions to count calculation misses for repeated_calculation observation. Note: iterates data._learnerState.sessions (a different structure from data.sessions)",
+      "duplicatesOf": "This is a unique deep scan of an alternate session format — not directly replaceable by computeEvidenceGraph without extending it",
+      "replaceableWithEvidenceGraph": false,
+      "migrationTarget": "Extend computeEvidenceGraph to include calculationMissCount per topic, or refactor _learnerState access"
+    },
+    {
+      "function": "_suggestFocusAreas",
+      "line": 1415,
+      "subsystem": "S125 (focus area suggestions)",
+      "method": "load",
+      "computation": "Loads full learner data for topic progress cross-referencing and misconception pattern lookup",
+      "duplicatesOf": "_identifyLearningPatterns (line 1314) — loads same data for same question; also duplicates _inferReviewFocus",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.patterns.misconceptions and graph.evidence for topic data"
+    },
+    {
+      "function": "_explainYourMistake",
+      "line": 2719,
+      "subsystem": "S120 (mistake explanation)",
+      "method": "load",
+      "computation": "Reads misconceptionPatterns to surface recurring patterns relevant to the learner's wrong answer",
+      "duplicatesOf": "Identical pattern-lookup logic to _identifyLearningPatterns (line 1314) and _getWeaknessInsight (line 2925)",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.patterns.misconceptions filtered by topic"
+    },
+    {
+      "function": "_getProgressInsight",
+      "line": 2748,
+      "subsystem": "S120 (progress insight)",
+      "method": "load",
+      "computation": "Loads full learner data for session count and total attempts summary; iterates data.sessions for aggregate stats",
+      "duplicatesOf": "_getWeaknessInsight (line 2851) loads same data; _renderInsightCards (line 4635) same",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount; total attempts from graph.evidence aggregation"
+    },
+    {
+      "function": "_getWeaknessInsight",
+      "line": 2851,
+      "subsystem": "S120 (weakness insight)",
+      "method": "load",
+      "computation": "Loads full learner data for session count gate check; then loads again (line 2925) for misconception patterns in same function",
+      "duplicatesOf": "Calls load() twice in the same function (lines 2851 and 2925) — redundant second load",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount for gate; graph.patterns.misconceptions for pattern listing"
+    },
+    {
+      "function": "_getWeaknessInsight",
+      "line": 2925,
+      "subsystem": "S120 (weakness insight)",
+      "method": "load",
+      "computation": "Second load() in same function — reads misconceptionPatterns for 'Recurring traps' section. Uses fresh variable name 'data2'",
+      "duplicatesOf": "First load at line 2851 — redundant; also duplicates _explainYourMistake (line 2719) pattern loading",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Remove second load; use graph.patterns.misconceptions from single graph call"
+    },
+    {
+      "function": "_generateSessionRecap",
+      "line": 3016,
+      "subsystem": "S126 (session recap)",
+      "method": "load",
+      "computation": "Reads misconceptionPatterns for 'Key misconceptions encountered' section in session recap",
+      "duplicatesOf": "_getWeaknessInsight (line 2925) same pattern listing; _generateWeeklyDigest (line 3180) same pattern listing",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.patterns.misconceptions"
+    },
+    {
+      "function": "_generateSessionRecap",
+      "line": 3039,
+      "subsystem": "S126 (session recap)",
+      "method": "sessions iteration",
+      "computation": "Compares last two sessions' attempt arrays for progress-trend computation (recent vs. prior accuracy delta)",
+      "duplicatesOf": "_generateWeeklyDigest (line 3106-3144) does identical session comparison; _summarizeSession (line 3712) duplicates same",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence per-topic deltas or graph.observations.topicTrends"
+    },
+    {
+      "function": "_generateWeeklyDigest",
+      "line": 3096,
+      "subsystem": "S127 (weekly digest)",
+      "method": "load",
+      "computation": "Loads data for session iteration (lookback window), topic aggregation, and pattern listing across 7-day window",
+      "duplicatesOf": "_generateStudyStrategy (line 3263) does identical session iteration with different window; both iterate data.sessions manually",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence for per-topic stats; graph.patterns.misconceptions for patterns"
+    },
+    {
+      "function": "_generateStudyStrategy",
+      "line": 3263,
+      "subsystem": "S128 (study strategy)",
+      "method": "load",
+      "computation": "Loads data for session iteration with 7-session lookback, topic aggregation, strength/weakness ranking, and pattern listing",
+      "duplicatesOf": "_generateWeeklyDigest (line 3096) — structurally identical: both iterate data.sessions, aggregate topics, list misconception patterns",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence for per-topic accuracy and graph.patterns.misconceptions"
+    },
+    {
+      "function": "_generateStrategyEffectiveness",
+      "line": 3427,
+      "subsystem": "S129 (strategy effectiveness)",
+      "method": "load",
+      "computation": "Loads recommendationOutcomes from learner data for outcome distribution analysis",
+      "duplicatesOf": "_scoreRecommendationQuality (line 3612) loads same data for recurrence scoring",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Extend computeEvidenceGraph metadata to include recommendationOutcomes summary"
+    },
+    {
+      "function": "_scoreRecommendationQuality",
+      "line": 3612,
+      "subsystem": "S129 (recommendation quality scoring)",
+      "method": "load",
+      "computation": "Loads learner data for recommendationOutcomes filtering and session timeline analysis for follow-through scoring",
+      "duplicatesOf": "_generateStrategyEffectiveness (line 3427) — loads same data; iterates data.sessions for laterSessions filter",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount and graph.evidence for topic-level follow-through"
+    },
+    {
+      "function": "_generateStrategyEffectiveness",
+      "line": 3617,
+      "subsystem": "S129 (strategy effectiveness)",
+      "method": "sessions iteration",
+      "computation": "Iterates data.sessions to find laterSessions for follow-through scoring in recommendation quality",
+      "duplicatesOf": "_generateSessionRecap (line 3039) and _summarizeSession (line 3712) both compare session windows",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Graph metadata could include session timeline for cross-session comparison"
+    },
+    {
+      "function": "_summarizeSession",
+      "line": 3629,
+      "subsystem": "S120 (session summary)",
+      "method": "load",
+      "computation": "Loads data for sessionSummaries length check and cross-session trend comparison (last 2 sessions)",
+      "duplicatesOf": "_generateSessionRecap (line 3039) — identical two-session comparison logic for progress trend",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence topic deltas or graph.metadata for session counts"
+    },
+    {
+      "function": "_generateRecoverySet",
+      "line": 3871,
+      "subsystem": "S120 (recovery set generation)",
+      "method": "load",
+      "computation": "Gates recovery set generation on existence of session data; used together with getWeaknessClusters",
+      "duplicatesOf": "_recommendNext (line 3786) gates on cluster data from same load; _getProgressInsight (line 2748) same gate",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount > 0 as gate"
+    },
+    {
+      "function": "renderView",
+      "line": 4359,
+      "subsystem": "S120 (main view rendering)",
+      "method": "load",
+      "computation": "Loads data for sessionCount rendering in sidebar stats and total-attempt count display",
+      "duplicatesOf": "_renderInsightCards (line 4635) loads same data for same sidebar; renderView internal load at line 4425 duplicates same",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount; total attempts from graph.evidence keys aggregation"
+    },
+    {
+      "function": "renderView",
+      "line": 4425,
+      "subsystem": "S120 (main view rendering)",
+      "method": "load",
+      "computation": "Second load() within same renderView — for welcome-back card with session count and total attempts",
+      "duplicatesOf": "First load at line 4359 — redundant second data load in same function",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use the same graph from first load; eliminate duplicate"
+    },
+    {
+      "function": "_renderInsightCards",
+      "line": 4635,
+      "subsystem": "S120 (sidebar rendering)",
+      "method": "load",
+      "computation": "Loads data for session-count gating check before rendering insight cards",
+      "duplicatesOf": "renderView (line 4359) loads same data immediately before calling _renderInsightCards",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Accept sessionCount as parameter from renderView's graph.metadata"
+    },
+    {
+      "function": "miniInsight",
+      "line": 5597,
+      "subsystem": "S120 (mini-panel insight)",
+      "method": "load",
+      "computation": "Loads data for session-count fallback message when no clusters exist",
+      "duplicatesOf": "renderMiniPanel (line 5409) and showPostAnswerFeedback (line 5463) read same data pattern",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount"
+    },
+    {
+      "function": "renderSetupGreeting",
+      "line": 5645,
+      "subsystem": "S115 (setup panel greeting)",
+      "method": "load",
+      "computation": "Loads data for session count, total attempts, and weak-area hint in setup greeting card",
+      "duplicatesOf": "getWelcomeMessage (line 126) — identical data pattern for greeting messaging; renderView (line 4359) same stats",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount and graph.clusters.persistentWeak"
+    },
+    {
+      "function": "_assessInsightEvidence",
+      "line": 6127,
+      "subsystem": "S113 (evidence-threshold validation)",
+      "method": "load",
+      "computation": "Loads data for session count in cross-session comparison check and assessInsightEvidence summary",
+      "duplicatesOf": "computeEvidenceGraph already produces sessionCount in metadata — this re-derives the same count",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount directly"
+    },
+    {
+      "function": "_injectMayCompanionCard",
+      "line": 6177,
+      "subsystem": "S115 (companion card injection)",
+      "method": "load",
+      "computation": "Loads data for session count to personalize companion card message",
+      "duplicatesOf": "renderSetupGreeting (line 5645) and getWelcomeMessage (line 126) — identical session-count pattern",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount"
+    },
+    {
+      "function": "_detectPositiveTrend",
+      "line": 321,
+      "subsystem": "S117 (positive trend detection)",
+      "method": "sessions iteration",
+      "computation": "Iterates data.sessions.slice(-3) to compute hint-total trend for decreasing-hint-usage detection",
+      "duplicatesOf": "_generateSessionRecap (line 3041-3049) does similar recent-session slicing; _getProgressInsight does similar hint-trend analysis through getTrends",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.evidence[topic].hintTrend or graph.observations.behaviorTrends"
+    },
+    {
+      "function": "_recommendNextAction",
+      "line": 339,
+      "subsystem": "S117 (next action recommendation)",
+      "method": "sessions iteration",
+      "computation": "Checks data.sessions.length to gate 'insufficient_sessions' condition for welcome-screen recommendations",
+      "duplicatesOf": "_buildWelcomeOverview (line 281) checks same sessionCount for 'hasEvidence' gate",
+      "replaceableWithEvidenceGraph": true,
+      "migrationTarget": "Use graph.metadata.sessionCount"
+    }
+  ],
+  "duplicatedMaps": {
+    "patternNames": {
+      "count": 7,
+      "locations": [
+        "~line 1319 (_identifyLearningPatterns / S124)",
+        "~line 1447 (_suggestFocusAreas / S125)",
+        "~line 2723 (_explainYourMistake / S120)",
+        "~line 2928 (_getWeaknessInsight / S120)",
+        "~line 3019 (_generateSessionRecap / S126)",
+        "~line 3182 (_generateWeeklyDigest / S127)",
+        "~line 3297 (_generateStudyStrategy / S128)"
+      ],
+      "differences": "6 copies have identical 8-entry maps. The copy at line 2928 (_getWeaknessInsight) has slightly longer value strings (e.g. 'Classification errors (current vs. noncurrent, operating vs. investing)' vs 'classification errors') and an extra 'general_error' entry. The copy at line 3297 uses single-line formatting. All are semantically equivalent.",
+      "recommendation": "Define patternNames once in MayLearnerState (e.g., MayLearnerState.PATTERN_NAMES) and reference from computeEvidenceGraph().patterns."
+    },
+    "sectionNames": {
+      "count": 6,
+      "locations": [
+        "~line 969 (_greetingForQuestion / S120)",
+        "~line 1117 (_generateNextBestStep / S123)",
+        "~line 1470 (_suggestFocusAreas / S125)",
+        "~line 1569 (_buildTutorExplanation / S120)",
+        "~line 1846 (_buildWrongChoiceCoaching / S120)",
+        "~line 2293 (_buildSimplifyCoaching / S120)"
+      ],
+      "differences": "All 6 copies are identical — same 6 keys (A-F) with identical values.",
+      "recommendation": "Define once as MayLearnerState.SECTION_NAMES or in may-core.js at module level. Eliminate all 6 inline copies."
+    }
+  },
+  "summary": {
+    "totalDirectAccesses": 51,
+    "replaceableDirectly": 49,
+    "replaceableWithAdaptation": 1,
+    "notReplaceable": 1,
+    "breakdown": {
+      "getTopicProgress": 10,
+      "getTrends": 7,
+      "getWeaknessClusters": 11,
+      "load": 17,
+      "sessions_iteration": 6
+    },
+    "callChainContext": "In the typical coaching flow for 'explain answer', the call chain is: _explainAnswer → _generateNextBestStep (S123, line 1123) → _identifyLearningPatterns (S124, line 1277) → _suggestFocusAreas (S125, line 1412). Each independently calls MayLearnerState.getTopicProgress() and MayLearnerState.load() — three sequential redundant calls to the same data source for the same question with no caching between them.",
+    "migrationPlan": "Single call to MayLearnerState.computeEvidenceGraph() at the dispatch level (handleAction), pass graph down through call chain as parameter. All 49 directly replaceable accesses become property reads from the graph. The 1 'replaceableWithAdaptation' (line 1348, _learnerState.sessions scan) requires extending computeEvidenceGraph to include calculationMissCount per topic. The 1 'notReplaceable' is the same line 1348 if the _learnerState.sessions structure differs from standard data.sessions — verify and either extend graph or refactor the alternate session format.",
+    "estimatedImpact": "Eliminates ~35 redundant MayLearnerState calls per coaching interaction. Reduces duplicated code by eliminating 7 patternName maps and 6 sectionName maps (13 inline copies). Centralizes threshold gating through single evidence graph."
+  }
+}

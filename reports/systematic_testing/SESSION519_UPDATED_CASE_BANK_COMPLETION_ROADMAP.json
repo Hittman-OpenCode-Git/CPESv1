@@ -1,0 +1,24 @@
+{
+  "session": "519",
+  "timestamp": "2026-07-26T01:00:00",
+  "type": "Updated case-bank completion roadmap",
+  "based_on": "SESSION519 verification findings",
+  "change_from_s518": "S518 ledger was stale — both CBQ3-A1 and CASE-C1 were already Certified by prior sessions (S515/S516). No S519 edits needed.",
+  "current_state": {
+    "certified_arrays": 2,
+    "certified_cases_remaining_holdbacks": {
+      "MIGRATED_CASE_BASE_B": "FULLY CERTIFIED (78/78)",
+      "MIGRATED_CASE_BASE_C": "FULLY CERTIFIED via ENHANCED_CASE_BASE3 (79/79) + array (75/75)",
+      "MIGRATED_CASE_BASE_D": "3 HOLDBACKS: CBQ4-A1/A2/C1 (15 items Unprocessed)",
+      "ENHANCED_CASE_BASE5": "1 HOLDBACK: CBQ5-B2 (5 items Unprocessed)",
+      "MIGRATED_CASE_BASE_A": "WHOLLY UNPROCESSED (90 items)"
+    }
+  },
+  "updated_priority": [
+    { "phase": 1, "session": "S519", "status": "COMPLETE — verification only, both targets already Certified" },
+    { "phase": 2, "session": "S520", "target": "CBQ4-A1/A2/C1 (MIGRATED_CASE_BASE_D)", "items": 15, "action": "First CAQS §1.6 greenfield review" },
+    { "phase": 3, "session": "S521", "target": "CBQ5-B2 (ENHANCED_CASE_BASE5)", "items": 5, "action": "First CAQS §1.6 greenfield review" },
+    { "phase": 4, "session": "S522-S525", "target": "MIGRATED_CASE_BASE_A", "items": 90, "action": "Full CAQS §1.6 review"}
+  ],
+  "recommended_next_session": "S520 — MIGRATED_CASE_BASE_D greenfield CAQS review (3 cases, 15 items)"
+}

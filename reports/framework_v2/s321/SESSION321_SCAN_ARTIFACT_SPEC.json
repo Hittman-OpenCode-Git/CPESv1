@@ -1,0 +1,234 @@
+{
+  "document": "SESSION321_SCAN_ARTIFACT_SPEC",
+  "session": "S321",
+  "board": "E — Scan Once / Consume Many",
+  "phase": "3 — Scan Orchestration",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+  "depends_on": ["SESSION321_CANONICAL_REGISTRY_SPEC.json", "SESSION321_GATE_NEG1_SPEC.json"],
+
+  "purpose": "Define the CERTIFICATION_SCAN_ARTIFACT — a single, immutable, self-contained artifact produced by the pre-flight scan pipeline and consumed by all downstream boards. Eliminates the 3–12x scan redundancy of Framework v1 by mandating that the same scan output feeds Registry, Quality, Governance, and Certification boards.",
+
+  "motivation": {
+    "v1_redundancy": "Framework v1 runs the same defect scans 3–12x per defect class across different boards: DL-008 scanned 22 times across 15 sessions, 4–5 agents each. DL-026: 18 events. DL-013: 12 events. Certified count verified 25+ times. EW integrity metrics re-audited 6 times per session by 6 different agents. Total: ~50+ redundant scan passes across ~14 certification sessions.",
+    "v2_target": "One scan pipeline runs ONCE at session T0. Output: a single immutable JSON artifact (CERTIFICATION_SCAN_ARTIFACT). All 4 boards read from this artifact — no board runs its own scans. Scan redundancy: 1 per defect class per session."
+  },
+
+  "artifact_schema": {
+    "file_name": "CERTIFICATION_SCAN_ARTIFACT_S{NNN}.json",
+    "storage_location": "reports/framework_v2/scan_artifacts/",
+    "description": "Self-contained JSON artifact containing the complete pre-flight scan results for every item in scope for the current session. Immutable — never modified after generation.",
+    "generated_by": "Pre-flight scan pipeline (Gates -1 through 4)",
+    "consumed_by": ["Registry Board", "Quality Board", "Governance Board", "Certification Board"],
+    "immutable_after": "Generation at session T0. Any re-scan produces a NEW artifact (different filename per run if mid-session re-scan is needed).",
+    "version": "1.0",
+
+    "artifact_structure": {
+      "header": {
+        "artifact_id": "String — unique ID: SCAN-{SESSION_ID}-{sha256_short}",
+        "session_id": "String — e.g., 'S321'",
+        "generated_timestamp": "ISO 8601",
+        "generation_method": "String — 'AM-1 Function Constructor Parse'",
+        "packs_scanned": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+        "total_items_scanned": "Integer",
+        "total_scans_run": "Integer — total number of individual scan checks executed",
+        "scan_pipeline_duration_ms": "Integer",
+        "artifact_content_hash": "String — SHA-256 of the entire artifact (excluding this field), for integrity verification"
+      },
+
+      "identity_inventory": {
+        "description": "Complete identity handoff from Gate -1. Every item that passed identity validation is listed with full compound key.",
+        "source": "Gate -1 output",
+        "schema_ref": "SESSION321_GATE_NEG1_SPEC.json §gate_output.identity_handoff"
+      },
+
+      "scan_results_per_item": {
+        "description": "Per-item scan results array. Every item has a complete report of all 10 pre-flight scans.",
+        "item_scan_result": {
+          "registry_id": "String",
+          "compound_key": "String",
+          "scans": {
+            "gate_0_json_integrity": {
+              "passed": "Boolean",
+              "checks": ["parseability (Boolean)", "field_presence (Boolean)", "type_consistency (Boolean)", "corruption_detection (Boolean)"],
+              "errors": "Array of error messages (empty if passed)"
+            },
+            "gate_1_structural_dl008": {
+              "passed": "Boolean",
+              "description": "EV8 compliance: ExplanationWrong[CorrectChoice] is empty",
+              "ew_cc_field_content": "String — actual content (empty if passed)",
+              "ew_cc_field_content_length": "Integer"
+            },
+            "gate_1_structural_dl026": {
+              "passed": "Boolean",
+              "description": "All non-CC ExplanationWrong slots are present and non-empty (min 50 chars)",
+              "missing_slots": "Array of choice letters with absent/empty EW slots",
+              "short_slots": "Array of { choice: letter, length: integer } for slots under 50 chars"
+            },
+            "gate_1_structural_dl016": {
+              "passed": "Boolean",
+              "description": "No metadata-block ChoiceA-D +1 offset (within-object CC matches object's own CC)",
+              "cc_source": "String — 'within_object' or 'metadata_block'",
+              "cc_match": "Boolean — does within-object CC = metadata block CC?"
+            },
+            "gate_1_structural_dl018": {
+              "passed": "Boolean",
+              "description": "EW[CC] field exists (even if empty) — structural completeness check"
+            },
+            "gate_2_content_dl013": {
+              "passed": "Boolean",
+              "description": "No template boilerplate in explanation fields",
+              "boilerplate_detected_in": "Array of field names with boilerplate",
+              "matched_patterns": "Array of matched boilerplate pattern IDs"
+            },
+            "gate_2_content_ev3": {
+              "passed": "Boolean",
+              "description": "Correct answer explanation references accounting principle by name",
+              "principle_detected": "String or null"
+            },
+            "gate_2_content_dl010": {
+              "passed": "Boolean",
+              "description": "No misassigned explanation (WARN level — does not block readiness)",
+              "warning": "Boolean"
+            },
+            "gate_3_identity_reconciliation": {
+              "passed": "Boolean",
+              "description": "Compound key uniqueness confirmed, template family consistent, cross-pack collision checked",
+              "uniqueness": "Boolean",
+              "template_family_consistent": "Boolean",
+              "cross_pack_collision": "Boolean"
+            }
+          },
+          "aggregate": {
+            "all_scans_passed": "Boolean",
+            "hard_blocks": "Array of failing scan names (HARD_BLOCK level)",
+            "soft_blocks": "Array of failing scan names (SOFT_BLOCK level)",
+            "warnings": "Array of warning scan names",
+            "readiness_state": "String — per SESSION321_READINESS_ENGINE_SPEC.json state machine"
+          }
+        }
+      },
+
+      "aggregate_statistics": {
+        "description": "Portfolio-level aggregate statistics computed from per-item scan results.",
+        "fields": {
+          "total_items": "Integer",
+          "items_all_passed": "Integer",
+          "items_hard_blocked": "Integer",
+          "items_soft_blocked": "Integer",
+          "items_warnings_only": "Integer",
+          "pass_rate": "Float (0.0-1.0)",
+
+          "defect_counts": {
+            "dl008_affected": "Integer — items with GW[CC] non-empty",
+            "dl026_affected": "Integer — items with empty/missing non-CC EW slots",
+            "dl016_affected": "Integer — items with metadata-block offset detected",
+            "dl018_affected": "Integer — items with missing EW[CC] field",
+            "dl013_affected": "Integer — items with boilerplate detected",
+            "dl010_warnings": "Integer — items with WARN-level DL-010 flags"
+          },
+
+          "by_pack": {
+            "description": "Per-pack breakdown of pass/block rates",
+            "pack_a": {},
+            "pack_b": {},
+            "pack_c": {},
+            "pack_d": {},
+            "pack_e": {}
+          },
+
+          "by_domain": {
+            "description": "Per-domain breakdown",
+            "domain_a": {},
+            "domain_b": {},
+            "domain_c": {},
+            "domain_d": {},
+            "domain_e": {},
+            "domain_f": {}
+          },
+
+          "by_question_state": {
+            "description": "Breakdown by current governance state",
+            "certified": {},
+            "in_audit": {},
+            "unprocessed": {},
+            "editorial_queue": {},
+            "archived": {}
+          }
+        }
+      },
+
+      "delta_review_classification": {
+        "description": "Pre-computed delta review classifications for all items. Board G (Delta Engine) produces this as part of its T0 analysis; the scan artifact embeds the results so all boards know which items need review.",
+        "source": "SESSION321_DELTA_ENGINE_SPEC.json",
+        "classifications": {
+          "content_change": "Array of RegistryIDs — ~2% of items",
+          "metadata_change": "Array of RegistryIDs — ~8% of items",
+          "structural_fix": "Array of RegistryIDs — ~10% of items",
+          "no_change": "Array of RegistryIDs — ~80% of items",
+          "new_item": "Array of RegistryIDs — variable",
+          "removed_item": "Array of RegistryIDs — ~0% (anomaly if non-zero)"
+        }
+      },
+
+      "integrity": {
+        "artifact_hash": "String — SHA-256 of entire artifact content (self-validating)",
+        "source_pack_hashes": {
+          "description": "SHA-256 hashes of the pack files at the time the artifact was generated. Used for drift detection.",
+          "pack_a": "String",
+          "pack_b": "String",
+          "pack_c": "String",
+          "pack_d": "String",
+          "pack_e": "String"
+        },
+        "baseline_reference": "String — path to CURRENT_BASELINES.md or equivalent baseline file at time of artifact generation"
+      }
+    }
+  },
+
+  "consume_once_guarantees": {
+    "guarantee_1": "All 4 Framework v2 boards (Registry, Quality, Governance, Certification) must consume the same scan artifact. No board may run its own independent scans.",
+    "guarantee_2": "If at any point a board needs re-scan data (e.g., because pack files were modified mid-session), a NEW scan artifact is generated. The old artifact is retained for audit trail but the new one becomes authoritative.",
+    "guarantee_3": "The scan artifact is immutable after generation. No downstream board may modify it. Discrepancies between boards' interpretation of scan data are escalated to Governance Board — the SCAN ARTIFACT is the single source of truth.",
+    "guarantee_4": "Scan artifact includes source pack file hashes. If any board detects that current pack files differ from the scan-time hashes → escalate to Governance Board. Scan artifact may be stale. Do NOT use stale scan data for certification decisions."
+  },
+
+  "v2_operational_model": {
+    "description": "How the scan artifact fits into the Framework v2 session lifecycle.",
+    "session_lifecycle": [
+      {
+        "phase": "T0 — Session Startup",
+        "action": "Pre-flight scan pipeline runs (Gates -1 through 4). CERTIFICATION_SCAN_ARTIFACT generated. Registry generated from artifact's identity inventory. Delta review classification computed. Artifact distributed to all 4 boards."
+      },
+      {
+        "phase": "Tmid — Mid-Session",
+        "action": "If pack files were modified (remediation, content fix): re-run pre-flight pipeline. Generate NEW scan artifact. All boards consume the new artifact. Delta classification re-computed against new artifact. Old artifact archived with reason for re-scan."
+      },
+      {
+        "phase": "Tend — Session Closeout",
+        "action": "Governance Board compares final pack file hashes to T0 scan artifact source hashes. If drift detected: G1-G5 reconciliation. Scan artifact content hash must match self-reported artifact hash. Artifact archived to reports/framework_v2/scan_artifacts/history/."
+      }
+    ]
+  },
+
+  "implementation_notes": {
+    "size_estimate": "~8-15 MB JSON for 2,500 items (per-item scan results for 10 scans + aggregate statistics + delta classifications). Manageable for single-file consumption.",
+    "performance": "Pre-flight pipeline ~8 minutes for full 2,500 items (Gate -1: 3s, Gate 0: 5s, Gate 1: 10s, Gate 2: 12s, Gate 3: 20s, Gate 4: 50s). Scan artifact serialization ~2s additional.",
+    "protobuffer_alternative": "JSON is the preferred format for this project (per taste). If artifact size becomes a constraint in future sessions, protobuffer encoding could reduce size to ~2-4 MB.",
+    "integration": "Script: scripts/generate_scan_artifact.js. Orchestrates the pre-flight pipeline and produces the unified artifact."
+  },
+
+  "success_criteria": {
+    "SC-BE-01": "Scan artifact schema fully specified — header, identity_inventory, scan_results_per_item, aggregate_statistics, delta_review_classification, integrity.",
+    "SC-BE-02": "All 10 pre-flight scan results embedded per item (Gate 0 checks × 4, Gate 1 scans × 4, Gate 2 scans × 3, Gate 3 checks × 3).",
+    "SC-BE-03": "Aggregate statistics computed: per-pack, per-domain, per-question_state, per-defect-class breakdowns.",
+    "SC-BE-04": "Delta review classifications embedded in artifact (consumed by all downstream boards).",
+    "SC-BE-05": "Immutability guarantee stated — artifact never modified after generation. Re-scan produces NEW artifact.",
+    "SC-BE-06": "Source pack hashes included for drift detection at Tend.",
+    "SC-BE-07": "Session lifecycle integration defined: T0 generation, Tmid re-scan (if needed), Tend reconciliation.",
+    "SC-BE-08": "All 4 Framework v2 boards consume same artifact — no independent scans permitted.",
+    "SC-BE-09": "Specification is implementable — S322 can code the artifact generator from this document alone.",
+    "SC-BE-10": "0 certification actions, 0 content modifications, 0 pack-file writes."
+  }
+}

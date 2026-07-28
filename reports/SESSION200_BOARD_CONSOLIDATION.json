@@ -1,0 +1,474 @@
+{
+  "session": "S200",
+  "agent": "H",
+  "title": "Board Rationalization Study — Certification Architecture Assessment",
+  "methodology": "Read-only synthesis of: GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md, CAQS_v1.0.md §8-9, SESSION313_CERTIFICATION_BOARD_RESULTS.json, SESSION318_READINESS_BOARD.json, SESSION802_LAUNCH_BOARD.json, SESSION803_LAUNCH_BOARD.json, SESSION725/SESSION726_GOVERNANCE_BOARD_DECISION.json, SESSION726_GOVERNANCE_DASHBOARD.json, SESSION723_GOVERNANCE_SCORECARD.json. All claims cross-checked against source line references.",
+  "date": "2026-07-27",
+
+  "current_boards": [
+    {
+      "name": "Technical Review Board",
+      "caqs_gate": "G1 — Technical Review",
+      "checked_by": "Accountant",
+      "dimensions_reviewed": [
+        "Accounting accuracy (CAQS Dimension 3 — 15%)",
+        "Standard/framework references (ASC, COSO, IFRS, IAS)",
+        "Numerical integrity (CAQS Dimension 6 — 10%)",
+        "Business realism (CAQS Dimension 5 — 10%)",
+        "Formulas and calculations",
+        "Correct answer verification"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Explanation Quality Board (explanation correctness)",
+        "Difficulty Quality Board (difficulty tied to concept correctness)",
+        "Learner Safety Board (wrong answer = learner-safety risk)"
+      ],
+      "unique_scope_pct": 80,
+      "false_positive_rate": "LOW — well-defined accounting rules; structural FP rare. S313 showed 0 accounting errors in 10-item sample.",
+      "false_negative_rate": "LOW-MEDIUM — DL-030 (5 CorrectChoice errors escaped into Certified pool across Packs B+E). DL-009 (2 wrong ASC citations). Root cause: independent 'solve from scratch' not always performed.",
+      "scope_notes": "Most defensible standalone scope. Accounting correctness is the tier-1 concern per CAQS decision hierarchy. Overlaps occur where other boards evaluate explanation text for correctness vs. format quality.",
+      "consolidation_candidate": "YES"
+    },
+    {
+      "name": "Explanation Quality Board (EQS)",
+      "caqs_gate": "G4 — Instructional Review",
+      "checked_by": "Editor",
+      "dimensions_reviewed": [
+        "Explanation quality (CAQS Dimension 7 — 10%)",
+        "Writing clarity (CAQS Dimension 8 — 5%)",
+        "EV1-EV8 compliance (minimum 50 chars, no placeholder, ASC citation)",
+        "Distractor explanation distinctness (DL-007/DL-013 detection)",
+        "Educational value / learning science elements (LS1-LS5)"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Technical Review Board (explanation correctness vs. explanation quality)",
+        "Difficulty Quality Board (distractor quality is measured by both)",
+        "Learner Safety Board (DL-008 non-empty EW[CC] = explanation structural error)",
+        "QA Board (scanner-flagged explanation violations)"
+      ],
+      "unique_scope_pct": 45,
+      "false_positive_rate": "MEDIUM-HIGH — Explanation scanners produce false positives on legitimate content. S313: 26 scanner observations across 10 items, all adjudicated false positives. Evidenced by P1-E-R06 EW[D] flagged for 'missing choice letter' when text was clearly size-entity related.",
+      "false_negative_rate": "MEDIUM — DL-013 boilerplate (2,587 fields) escaped initial authoring undetected. DL-007 template text not caught by validator. DL-025/026 empty distractor slots only caught in later sweeps.",
+      "scope_notes": "Explanation quality is highly overlapping with Technical Review (correctness), DQS (distractor engineering), and Learner Safety (DL-008 structural rule). The EV checks are structural (regex) and could be automated into the QA Board's scanner pipeline. The qualitative judgment (educational depth, business interpretation) overlaps with Technical and DQS review of the same item.",
+      "consolidation_candidate": "YES"
+    },
+    {
+      "name": "Difficulty Quality Board (DQS)",
+      "caqs_gate": "G2 — Psychometric Review",
+      "checked_by": "Psychometrician",
+      "dimensions_reviewed": [
+        "Blueprint alignment (CAQS Dimension 1 — 20%)",
+        "Distractor quality (CAQS Dimension 4 — 15%)",
+        "Accessibility/fairness/bias (CAQS Dimension 9 — 5%)",
+        "Difficulty calibration (CAQS Dimension — across)",
+        "Bloom's taxonomy alignment",
+        "Cueing and pattern analysis",
+        "Answer-position balance (22-28% per slot)"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Explanation Quality Board (distractor quality)",
+        "Technical Review Board (difficulty is partly determined by technical complexity)",
+        "Learner Safety Board (bias = learner-safety concern)",
+        "QA Board (DL-031 difficulty inflation detection)"
+      ],
+      "unique_scope_pct": 55,
+      "false_positive_rate": "LOW — psychometric rules are well-defined. DL-031 (difficulty inflation) is systematic rather than individual-item FP.",
+      "false_negative_rate": "HIGH — DL-031: ~500 items systematically mislabeled Moderate/Easy (definition-match inflation). DL-032: all 420 case items uniformly labeled Moderate with zero variance. These are system-scale failures that the board has not detected across multiple certification waves. Additionally, 0 of 2,500 items are labeled 'Very Difficult' and 0 are 'Evaluate' cognitive level.",
+      "scope_notes": "The psychometric review has the most unique scope among the content boards — blueprint alignment and Bloom's taxonomy are distinct from explanation correctness and technical accuracy. However, distractor evaluation (dimension 4) directly overlaps with EQS and Technical Review looking at the same distractors. DL-031 discovery shows the board has underperformed on difficulty calibration.",
+      "consolidation_candidate": "YES"
+    },
+    {
+      "name": "UI Quality Board (UIQS)",
+      "caqs_gate": "N/A — not in CAQS 7-gate pipeline",
+      "checked_by": "N/A — application-layer review",
+      "dimensions_reviewed": [
+        "Question rendering correctness (choices display matching content block)",
+        "Screen-reader compatibility",
+        "Keyboard navigation",
+        "Color independence",
+        "Responsive scaling",
+        "Focus indicators"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "QA Board (automated UI validation tests)"
+      ],
+      "unique_scope_pct": 95,
+      "false_positive_rate": "VERY LOW — UI rendering is binary (correct/incorrect display). SESSION313 UIQS validation score 81.3 (A-), no FP noted.",
+      "false_negative_rate": "UNKNOWN — no documented UI defects in DEFECT_LIBRARY. DL-014/DL-022 were app.js crashes, not UI rendering defects.",
+      "scope_notes": "UIQS is the most uniquely-scoped board. It evaluates the rendering layer (what the learner sees on screen), not the content layer (what the answer key says). This is a distinct competency from accounting review, explanation editing, or psychometric analysis. The rendering correctness check is fundamentally different from content accuracy checks. Consolidation risk: a unified Quality Board agent may lack front-end expertise to evaluate keyboard navigation, screen-reader compatibility, or focus indicators.",
+      "consolidation_candidate": "CONDITIONAL"
+    },
+    {
+      "name": "Learner Safety Board",
+      "caqs_gate": "N/A — cross-cutting governance concern",
+      "checked_by": "Governance Auditor",
+      "dimensions_reviewed": [
+        "DL-008: non-empty ExplanationWrong[CorrectChoice] in learner pool",
+        "DL-030: answer-key errors in Certified items",
+        "DL-016: metadata-content Choice shift producing wrong-topic feedback",
+        "DL-021: absent distractor explanations (no feedback on wrong answers)",
+        "DL-026: empty distractor slots",
+        "DL-010: misassigned choice explanations (wrong topic in feedback)",
+        "Known-defective QID exclusion from delivery pool",
+        "G-NEW-1 through G-NEW-5 certification-blocking conditions"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Technical Review Board (DL-030 answer-key errors = technical)",
+        "Explanation Quality Board (DL-008/DL-021/DL-026 = explanation structural)",
+        "Difficulty Quality Board (DL-031 inflation = learner experience)",
+        "Certification Board (G-NEW enforcement blocks certification)",
+        "QA Board (structural defect detection)"
+      ],
+      "unique_scope_pct": 20,
+      "false_positive_rate": "HIGH — DL-029 forward-scan methodology produced hundreds of phantom DL-008 hits (S800: 67 phantom, Pack B: 257 false positives, SESSON_STATUS: 67 non-existent items reported as CRITICAL). The S726 governance guard upgrade (string-aware brace-matching, 27/27 pass) has eliminated this class.",
+      "false_negative_rate": "HISTORICALLY HIGH — DL-008 539 occurrences across all packs undetected until Build-Time AI sweep (2026-07-22). 175 Pack C items carrying DL-008 in Certified pool for extended period. DL-021 (Pack E Section C, 100 items) undetected. DL-026 (1,005 items pool-wide) undetected.",
+      "scope_notes": "Learner Safety is the most cross-cutting board — every defect class is a learner-safety concern, but it's defined by aggregation of concerns from other boards. The board's core function is the pre-delivery safety check: confirming 0 defective QIDs in the active delivery pool. This is a governance gate, not a content-review dimension. It should be either (a) folded into the Launch Board as a mandatory pre-launch condition, or (b) automated via governance-guard rule (delivery-pool exclusion list).",
+      "consolidation_candidate": "YES"
+    },
+    {
+      "name": "Readiness Board",
+      "caqs_gate": "N/A — session-level meta-board",
+      "checked_by": "Readiness Adjudicator",
+      "dimensions_reviewed": [
+        "Pre-session Go/No-Go determination",
+        "Governance attestation (guard pass, certified count stable)",
+        "Cross-gate prerequisite verification (all prior boards passed)",
+        "Portfolio state confirmation (counts stable)",
+        "Scoring integrity (app.js hash match)",
+        "Certification preservation (no decertification drift)"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Launch Board (both do pre-session authorization)",
+        "Certification Board (consumes certification results)"
+      ],
+      "unique_scope_pct": 90,
+      "false_positive_rate": "VERY LOW — Go/No-Go decisions are binary with defined conditions. S318: READY FOR S319 with 0 conditions, cascaded correctly.",
+      "false_negative_rate": "LOW — conditions are linked to concrete blockers (Wave 2b insertion, registry rebuild). S318 correctly reframed non-blocking work items (seed deduplication audit) as S319 work rather than blocking conditions.",
+      "scope_notes": "The Readiness Board serves a distinct meta-governance function that no content-review board performs: it determines whether the prerequisite pipeline is complete before the next session starts. It is the session-boundary gate. Consolidating this into the Launch Board would merge two distinct decision points (ready-for-next-session vs. ready-for-launch). The Readiness Board gates session transitions; the Launch Board gates content delivery to learners.",
+      "consolidation_candidate": "CONDITIONAL"
+    },
+    {
+      "name": "Launch Board",
+      "caqs_gate": "N/A — portfolio-level authorization",
+      "checked_by": "Launch Board Agent (Agent Y in S802/S803)",
+      "dimensions_reviewed": [
+        "Governance: DL-008 certified count, P0 blocker verification, backup protocol compliance",
+        "Portfolio health: certified %, archived %, quality tier assignment",
+        "Readiness scoring: section-level certification readiness rank",
+        "Learning safety: pedagogical quality, EC depth, citation coverage",
+        "Operations: batch planning, compression analysis, cost savings",
+        "Reliability: cross-agent consistency, critical discrepancy adjudication",
+        "Risk register: active/critical/high risks, learner pool safety"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Readiness Board (both authorize session progression)",
+        "Certification Board (both make authorization decisions)",
+        "Learner Safety Board (both check learner pool safety)",
+        "QA Board (both check governance guard status)"
+      ],
+      "unique_scope_pct": 70,
+      "false_positive_rate": "LOW — but evidence of DL-029 forward-scan contamination in earlier sessions (S800). S802 decision to refute 67 phantom DL-008 as 0 actual was correct and prevented 4 phantom remediation sessions. S803 GC-803-001 false alarm (Agent V claimed P1-E-056 broken; cross-checked refuted).",
+      "false_negative_rate": "LOW — S802 correctly identified risk N3 (SESSION_STATUS staleness, 2,031 vs 2,181) and deferred to S804. Only known gap: Agent P's QID-list errors (5 items) caused unreliable archival counts, but were caught by cross-agent verification.",
+      "scope_notes": "The Launch Board is the highest-authority portfolio-level gate. It synthesizes outputs from ALL other boards into a single go/no-go + conditions decision. Its unique value is cross-board evidence synthesis — no other board reads every other board's output. However, it overlaps significantly with Readiness Board in function (both are Go/No-Go gates). Key difference: Readiness gates session transitions; Launch gates learner-facing content delivery.",
+      "consolidation_candidate": "CONDITIONAL"
+    },
+    {
+      "name": "Certification Board",
+      "caqs_gate": "G7 — Approval (Release Manager)",
+      "checked_by": "Certification Board (Agent P in S313)",
+      "dimensions_reviewed": [
+        "Per-item CERTIFY/HOLD/ESCALATE decisions",
+        "Evidence synthesis from all prerequisite reviews (Technical, EQS, DQS, UIQS, Learner Safety, QA)",
+        "Gate-by-gate pass/fail adjudication per item",
+        "Scanner observation adjudication (false-positive triage)",
+        "Board consensus (ALL_AGREE requirement)",
+        "Post-certification actions (promote to state, registry update)"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Technical Review Board (consumes technical review evidence)",
+        "Explanation Quality Board (consumes EW audit)",
+        "Difficulty Quality Board (consumes difficulty/blueprint assessment)",
+        "UI Quality Board (consumes UIQS validation)",
+        "Learner Safety Board (consumes learner safety assessment)",
+        "QA Board (consumes quality gate certification)",
+        "Launch Board (both make authorization decisions)"
+      ],
+      "unique_scope_pct": 85,
+      "false_positive_rate": "VERY LOW — per-item evidence-based with cross-reference to raw file. S313: 10/10 CERTIFY, 0 HOLD, 0 ESCALATE, 100% certification rate. Board consensus ALL_AGREE unanimous.",
+      "false_negative_rate": "MEDIUM — S313 was a 10-item pilot and represents best-practice certification. Broader question: did prior certification waves (Sessions 1-500) have equivalent rigor? DL-030 (5 answer-key errors in Certified items) and DL-008 (539 occurrences, 175 Certified) suggest earlier certification lacked the current board structure.",
+      "scope_notes": "The Certification Board is the per-item final adjudication gate. It has the most unique value proposition: no other board makes CERTIFY/HOLD/ESCALATE decisions at the item level. It is the ONLY board that can change question_state. Its function is irreplaceable. The quality-content boards (Technical, EQS, DQS, UIQS, Learner Safety) feed INTO the Certification Board as evidence providers. Consolidating those feeders into a single Quality Board does not eliminate the Certification Board — it streamlines the evidence pipeline.",
+      "consolidation_candidate": "NO"
+    },
+    {
+      "name": "QA Board",
+      "caqs_gate": "G5 (Metadata Review) + G6 (Final Validation)",
+      "checked_by": "Validator",
+      "dimensions_reviewed": [
+        "Automated validation suite pass/fail",
+        "Scanner observation adjudication (false-positive triage)",
+        "ExplanationValidator (EV1-EV8)",
+        "MetadataValidator (field presence, type, ranges)",
+        "Governance guard rule compliance (Rule 2, 3, 4, 5)",
+        "Structural defect detection (DL-008, DL-018, DL-025, DL-026)",
+        "Duplicate ID detection"
+      ],
+      "agent_count": 1,
+      "overlaps_with": [
+        "Explanation Quality Board (validator flags explanation issues)",
+        "Learner Safety Board (DL-008 detection is core to both)",
+        "Certification Board (validator output is prerequisite evidence)"
+      ],
+      "unique_scope_pct": 75,
+      "false_positive_rate": "HIGH — Scanner observations have historically high FP rate. S313: 26 scanner observations across 10 items, ALL adjudicated false positives. S803 GC-803-001: Agent V DL-029 forward-scan false alarm (confused P1-E-055 content block with P1-E-056). S726: 67 phantom DL-008 entries in CURRENT_BASELINES.md (0 actual). The QA Board's primary function may be largely about false-positive triage rather than discovering real defects.",
+      "false_negative_rate": "MEDIUM — ExplanationValidator line-180 gap (missed DL-008 until patched). Brace-matcher string-unawareness (DL-020) caused undercounting. scan_dl008_dl026.js still non-compliant (FM-001 forward-scan, DL-029 vulnerable).",
+      "scope_notes": "The QA Board runs automated scanners and adjudicates their output. It is distinct from the content-review boards in that it checks structural compliance (field presence, types, emptiness), not semantic quality. However, scanner FP rates are high enough that the board's primary added value is triage, not detection. If scanner reliability improves (AM-1 Function Constructor Parse, S727), the QA Board function could become largely automated, leaving only edge-case adjudication.",
+      "consolidation_candidate": "YES"
+    }
+  ],
+
+  "overlap_analysis": {
+    "board_pairs_with_high_overlap": [
+      {
+        "pair": "Technical Review ↔ Explanation Quality",
+        "overlap_pct": 55,
+        "overlap_dimensions": "Both evaluate explanation text: Technical checks accounting correctness; EQS checks educational quality. Same text, different lens. Both contribute evidence to Certification Board for the same item."
+      },
+      {
+        "pair": "Explanation Quality ↔ Difficulty Quality",
+        "overlap_pct": 50,
+        "overlap_dimensions": "Distractor quality evaluated by both (CAQS Dimension 4). EQS checks if distractors are explained; DQS checks if distractors are psychometrically valid. Same distractors, different criteria."
+      },
+      {
+        "pair": "Learner Safety ↔ QA Board",
+        "overlap_pct": 70,
+        "overlap_dimensions": "Both detect structural defects (DL-008, DL-026). QA runs scanners; Learner Safety interprets results for pool exclusion. In practice, the same scan output drives both boards."
+      },
+      {
+        "pair": "Readiness Board ↔ Launch Board",
+        "overlap_pct": 60,
+        "overlap_dimensions": "Both are Go/No-Go authorization gates. Readiness gates session transitions; Launch gates learner delivery. Both check governance attestation, portfolio state, and prerequisite completion. Different scope (session-level vs. portfolio-level) but same function pattern."
+      },
+      {
+        "pair": "Technical Review ↔ Difficulty Quality",
+        "overlap_pct": 30,
+        "overlap_dimensions": "Difficulty calibration depends partly on technical complexity of the accounting concept. A technically complex item (multi-step consolidation) is inherently more difficult."
+      },
+      {
+        "pair": "Learner Safety ↔ Technical Review",
+        "overlap_pct": 25,
+        "overlap_dimensions": "DL-030 (wrong answer) is both a technical defect and a learner-safety risk. Same defect, detected by Technical Board, escalated by Learner Safety Board."
+      },
+      {
+        "pair": "EQS ↔ QA Board",
+        "overlap_pct": 40,
+        "overlap_dimensions": "QA scanners flag explanation violations (EV1-EV8); EQS evaluates explanation quality. Scanner FP rate means QA's EV flags often get adjudicated by EQS as false positives."
+      }
+    ],
+    "low_overlap_pairs": [
+      {
+        "pair": "UI Quality ↔ Technical Review",
+        "overlap_pct": 5,
+        "overlap_dimensions": "UIQS checks rendering layer (screen display); Technical checks content layer (answer correctness). Different competencies entirely."
+      },
+      {
+        "pair": "Certification Board ↔ QA Board",
+        "overlap_pct": 15,
+        "overlap_dimensions": "Certification consumes QA output as evidence; QA does not make certification decisions. Sequential dependency, not overlap."
+      }
+    ]
+  },
+
+  "proposed_consolidation": {
+    "rationale": "The 9-board structure exhibits significant redundancy. Five of nine boards review content quality along overlapping dimensions for the same items. The CAQS v1.0 §8.1 7-gate pipeline already defines a unified quality workflow. The current board structure adds governance overhead (separate agents, separate reports, cross-board handoff) without commensurate benefit. The S726 governance dashboard confirms the design-activation gap (23/25 design vs. 17/25 activation) — more boards does not mean more effective governance.",
+    "new_structure": [
+      {
+        "board_name": "Quality Board",
+        "merged_from": [
+          "Technical Review Board",
+          "Explanation Quality Board (EQS)",
+          "Difficulty Quality Board (DQS)",
+          "Learner Safety Board",
+          "QA Board"
+        ],
+        "merged_rationale": "These five boards review the same items through different lenses. CAQS §9.1 already defines these as sequential steps in a unified pipeline (Steps 1-6: Technical → Psychometric → Numerical → Instructional → Metadata → Final Validation). Consolidating into one board eliminates: (a) cross-board handoff overhead, (b) redundant per-item evidence collection, (c) conflicting assessments requiring adjudication, (d) the design-activation gap where 5 boards collectively have lower activation maturity than 1 well-structured board.",
+        "agent_count_after": 3,
+        "agent_count_rationale": "3 agents operating in parallel within one board (not 5 sequential agents across 5 separate boards): Agent 1 — Technical & Numerical (accounting accuracy, formula verification, numerical integrity, standard references, correct answer); Agent 2 — Psychometric & Instructional (difficulty, Bloom's, distractor quality, explanation quality, writing clarity, bias, blueprint alignment); Agent 3 — Structural & Safety (DL-008/DL-026/DL-021/DL-018 detection, scanner adjudication, governance guard compliance, certified pool exclusion list).",
+        "dimensions": [
+          "All CAQS 10 dimensions (1-10) — single quality verdict per item",
+          "All 20 Gold Standard Checklist items (CAQS §14.2)",
+          "Structural defect detection (DL-008 through DL-033 classes)",
+          "Governance guard compliance (Rules 1-5)",
+          "Scanner observation adjudication",
+          "Learner-safety certification: 0 Certified DL-008, 0 DL-030, 0 DL-016, 0 DL-021",
+          "G-NEW-1 through G-NEW-5 enforcement (certification-blocking conditions)"
+        ],
+        "workflow": "per CAQS §9.1 pipeline: Quality Board Agent 1 (Technical) → Agent 2 (Psychometric/Instructional) → Agent 3 (Structural/Safety). Gate: ALL_AGREE required for certification recommendation.",
+        "benefits": [
+          "Single evidence package per item — no redundant reads of same file",
+          "Conflicting assessments resolved within board, not across boards",
+          "Quality score computed once (not separately by Technical, EQS, DQS)",
+          "Learner-safety defects (DL-008, DL-030) discovered in the same pass as quality review",
+          "Scanner false positives adjudicated by the same agents evaluating content quality"
+        ]
+      },
+      {
+        "board_name": "UI Quality Board (standalone — RETAINED)",
+        "merged_from": [],
+        "retain_rationale": "UIQS has the highest unique-scope percentage (95%) of any board. It tests the rendering layer — what the learner sees on screen — not the content layer. The competencies required (front-end rendering, accessibility standards, screen-reader compatibility) are distinct from accounting/content review. Consolidating UIQS into the Quality Board would force content reviewers to also evaluate keyboard navigation and color independence, domains where they lack expertise.",
+        "agent_count_after": 1,
+        "dimensions": [
+          "Screen-reader compatibility",
+          "Keyboard navigation",
+          "Color independence",
+          "Responsive scaling",
+          "Focus indicators",
+          "Tab order correctness",
+          "Content display matching content block"
+        ],
+        "interface_with_quality_board": "UIQS receives content from Quality Board after certification. Tests rendering correctness. If rendering bug found (e.g., choices displayed in wrong order due to DL-016 metadata-content shift), escalates back to Quality Board Agent 3 (Structural/Safety)."
+      },
+      {
+        "board_name": "Session Gate Board",
+        "merged_from": [
+          "Readiness Board",
+          "Launch Board"
+        ],
+        "merged_rationale": "Readiness and Launch perform the same function (Go/No-Go authorization) at different scopes (session-level vs. portfolio-level). S802/S803 evidence shows the Launch Board already consumes Readiness outputs. Merging eliminates the intermediate handoff (Readiness → Launch → execution) in favor of a single gate with two decision tiers: Session Gate (ready for next session?) and Portfolio Gate (ready for learner delivery?).",
+        "agent_count_after": 1,
+        "dimensions": [
+          "Pre-session baseline verification (T0: 13 runtime hashes vs. CURRENT_BASELINES.md)",
+          "Governance guard test suite pass (27/27+)",
+          "Certified count stability (Select-String + Function constructor dual-verify)",
+          "P0/P1 blocker assessment",
+          "Portfolio health: certified %, archived %, quality tier distribution",
+          "Learner pool safety: 0 Certified DL-008, 0 DL-030, 0 known-defective QIDs",
+          "Risk register: critical/high risks, mitigation status",
+          "Cross-agent reliability: consistency check, discrepancy adjudication",
+          "Batch planning authorization (scope, item count, governance compliance)",
+          "Session closure verification: REVISION_HISTORY entry, backup protocol, hash drift check"
+        ],
+        "decision_tiers": {
+          "tier_1": "SESSION_READY — authorization to begin next session. Checks: T0 baselines, guard pass, P0 blockers = 0.",
+          "tier_2": "PORTFOLIO_READY — authorization for learner-facing delivery. Checks: all tier-1 + learner pool safety, portfolio health thresholds, risk register clean."
+        }
+      },
+      {
+        "board_name": "Certification Board (standalone — RETAINED)",
+        "merged_from": [],
+        "retain_rationale": "The Certification Board is the only board with authority to change question_state (CERTIFY/HOLD/ESCALATE). This is a governance-separation requirement: the boards that evaluate quality (Quality Board) should not be the same board that authorizes state transitions (Certification Board). The Certification Board consumes evidence from Quality Board and Session Gate Board but makes an independent per-item adjudication. This mirrors the CAQS §8.1 G7 (Release Manager approval) separation from G1-G6 (review).",
+        "agent_count_after": 1,
+        "dimensions": [
+          "Per-item CERTIFY/HOLD/ESCALATE decisions",
+          "ALL_AGREE consensus requirement (unanimous)",
+          "Evidence synthesis from Quality Board (all 10 CAQS dimensions)",
+          "Evidence synthesis from Session Gate (portfolio health, learner safety)",
+          "Scanner GAT1-GAT4 adjudication (false positives, edge cases)",
+          "Post-certification actions: state promotion, registry update, REVISION_HISTORY entry",
+          "G-NEW-1 through G-NEW-5 enforcement validation"
+        ]
+      }
+    ],
+    "agent_reduction": "9-11 agents to 6 agents",
+    "agent_reduction_detail": {
+      "before": {
+        "Technical Review": 1,
+        "EQS": 1,
+        "DQS": 1,
+        "UIQS": 1,
+        "Learner Safety": 1,
+        "QA Board": 1,
+        "Readiness Board": 1,
+        "Launch Board": 1,
+        "Certification Board": 1,
+        "total": 9,
+        "note": "Minimum. Some sessions (S802) used 20+ agents. The 9-count reflects the minimum per-board agent count for a single certification wave."
+      },
+      "after": {
+        "Quality Board": 3,
+        "UI Quality Board": 1,
+        "Session Gate Board": 1,
+        "Certification Board": 1,
+        "total": 6,
+        "note": "3-agent Quality Board operates in parallel (not sequential), potentially reducing wall-clock time despite fewer total agents."
+      }
+    },
+    "board_reduction": "9 boards to 4 boards",
+    "board_reduction_detail": {
+      "eliminated": [
+        "Technical Review Board → merged into Quality Board (Agent 1: Technical)",
+        "Explanation Quality Board → merged into Quality Board (Agent 2: Psychometric/Instructional)",
+        "Difficulty Quality Board → merged into Quality Board (Agent 2: Psychometric/Instructional)",
+        "Learner Safety Board → merged into Quality Board (Agent 3: Structural/Safety)",
+        "QA Board → merged into Quality Board (Agent 3: Structural/Safety)",
+        "Readiness Board → merged into Session Gate Board (Tier 1: Session Ready)",
+        "Launch Board → merged into Session Gate Board (Tier 2: Portfolio Ready)"
+      ],
+      "retained": [
+        "Quality Board (NEW — merger of 5 boards, 3 agents)",
+        "UI Quality Board (RETAINED — unique scope, 1 agent)",
+        "Session Gate Board (NEW — merger of 2 boards, 1 agent)",
+        "Certification Board (RETAINED — governance separation, 1 agent)"
+      ]
+    }
+  },
+
+  "s726_compliance_assessment": {
+    "governance_guard_rules": "All 5 rules (1-5) apply identically to the proposed structure. Rule 2 (BLOCK: non-empty EW[CC]) is enforced at Quality Board Agent 3 (Structural/Safety). Rule 5 (BLOCK: >30 items per batch) applies to Certification Board batch writes. Rule 6 (Closure Acceptance Gate, designed S726) applies to Session Gate Board Tier 2.",
+    "design_activation_gap_impact": "The S726 governance dashboard reports 23/25 design vs. 17/25 activation. The primary activation gap (0/6 ownership acceptances) is independent of board structure — it's a personnel/procedural issue, not an architectural one. However, reducing 9 boards to 4 reduces the ownership gap surface area: fewer boards = fewer board leads needing to accept ownership.",
+    "gn_new_enforcement": "G-NEW-1 through G-NEW-5 are certification-blocking conditions. In the proposed structure, they are enforced at Quality Board Agent 3 (Structural/Safety) — the Certification Board receives G-NEW-pass evidence as a prerequisite, rather than checking it independently. This strengthens G-NEW enforcement by integrating it into the quality review pipeline rather than treating it as a separate gate.",
+    "dl029_elimination": "The S726 governance guard upgrade (string-aware brace-matching, 27/27 pass) has eliminated the forward-scan false-positive problem. In the proposed structure, Quality Board Agent 3 uses AM-1 Function Constructor Parse for structural defect detection. This eliminates the primary source of cross-board phantom data (e.g., 67 phantom DL-008 entries that contaminated CURRENT_BASELINES.md, SESSION_STATUS, and the defect manifest).",
+    "scan_methodology_compliance": "Currently 5/7 tools compliant (71.4%). The proposed consolidation does not require new tools — all 5 compliant tools work identically. The 2 non-compliant tools (scan_dl008_dl026.js, scan_dl013sweep.js) must be upgraded regardless of board structure."
+  },
+
+  "risks_of_consolidation": [
+    {
+      "risk": "Single-board blind spot — Task complexity overload",
+      "severity": "MEDIUM",
+      "detail": "Quality Board Agent 2 (Psychometric/Instructional) must evaluate difficulty, Bloom's taxonomy, distractor psychology, writing clarity, and educational value — disciplines that currently span two specialized boards (DQS + EQS) and one general board (Technical, for difficulty calibration). Risk that the combined agent evaluates superficially across more dimensions.",
+      "mitigation": "Agent 2 can delegate sub-tasks to specialized sub-agents within the Quality Board framework. The 3-agent parallel design is the minimum; sessions with larger item batches can scale to 4-5 agents within the Quality Board without changing the board count."
+    },
+    {
+      "risk": "UIQS marginalization",
+      "severity": "LOW",
+      "detail": "UIQS is retained as a standalone board, but with only 1 agent and no merged scope expansion, it risks being treated as an afterthought.",
+      "mitigation": "UIQS is a mandatory gate in the pipeline: Certification Board does not accept items that have not passed UIQS. Retained as a distinct gate preserves its authority."
+    },
+    {
+      "risk": "Governance Board escalation overload",
+      "severity": "LOW",
+      "detail": "With fewer boards, intra-board disputes that would previously have been cross-board escalation become internal Quality Board disagreements. The Governance Board (Agent Y) may face fewer total escalations.",
+      "mitigation": "This is actually a benefit — intra-board resolution is faster than cross-board escalation. The Quality Board's ALL_AGREE requirement (inherited from S313 Certification Board consensus model) ensures disagreements are resolved within the board."
+    },
+    {
+      "risk": "Transition cost",
+      "severity": "MEDIUM",
+      "detail": "Changing board structure mid-pipeline (after S803, with 2,182 Certified items and active S804-S808 work) introduces procedural risk: agents accustomed to the 9-board structure may not understand the new 4-board structure.",
+      "mitigation": "Implement at a series boundary (after S830, before S900). Write a board transition guide mapping old boards to new agents. The 4-board structure maps cleanly to the CAQS 7-gate pipeline, which every agent already knows."
+    }
+  ],
+
+  "recommendation": "CONSOLIDATE TO 4 BOARDS. The 9-board structure has excessive overlap: five boards (Technical, EQS, DQS, Learner Safety, QA) review the same items with 25-70% dimensional overlap. Two boards (Readiness, Launch) perform the same Go/No-Go function at different scopes. The CAQS v1.0 §8.1 already defines a unified 7-gate quality pipeline. The proposed 4-board structure (Quality, UI Quality, Session Gate, Certification) maps directly to this pipeline, eliminates redundant evidence collection, reduces minimum agent count from 9 to 6, and strengthens G-NEW enforcement by integrating it into the quality review pipeline rather than treating it as a separate gate. The S726 governance dashboard confirms the design-activation gap exists primarily at the procedural layer (0/6 ownership acceptances), not the architectural layer — fewer boards means fewer ownership gaps to resolve. IMPLEMENT at the S900 series boundary (after S830 closes) with a board transition guide.",
+  "implementation_timeline": "S830 closeout → publish board transition guide → S900: new 4-board structure active. All 800-series sessions operate under current 9-board structure to avoid mid-series disruption.",
+
+  "evidence_references": {
+    "CAQS_v1_0": "knowledge/CAQS_v1.0.md §8.1 (7-gate quality pipeline), §9.1 (audit workflow: 7 sequential steps), §14.2 (20-item Gold Standard Checklist)",
+    "SESSION313": "reports/SESSION313_CERTIFICATION_BOARD_RESULTS.json — 10-item certification board with ALL_AGREE consensus, 4 prerequisite reviews consumed",
+    "SESSION318": "reports/SESSION318_READINESS_BOARD.json — Readiness Board: Go/No-Go with 3 conditions, governance attestation",
+    "SESSION802": "reports/SESSION802_LAUNCH_BOARD.json — Launch Board: portfolio-level authorization, 7 evidence dimensions, 13-agent reliability assessment",
+    "SESSION803": "reports/SESSION803_LAUNCH_BOARD.json — Launch Board: post-execution verification, GC-803-001 false alarm adjudication",
+    "SESSION725": "reports/SESSION725_GOVERNANCE_BOARD_DECISION.json — 8 conditions for HARDENED declaration, governance guard upgrade mandate",
+    "SESSION726": "reports/SESSION726_GOVERNANCE_DASHBOARD.json — Portfolio at 2,181 Certified (87.2%), governance guard 27/27 PASS, design 23/25 activation 17/25",
+    "SESSION726_BOARD": "reports/SESSION726_GOVERNANCE_BOARD_DECISION.json — 6 conditions for closure, 0/6 ownership acceptances, 4 activation gates to FULLY OPERATIONAL",
+    "SESSION723": "reports/SESSION723_GOVERNANCE_SCORECARD.json — Composite score 86.3 (A-), 174 severe DCS misalignments, 0 Very Difficult / 0 Evaluate items",
+    "GOV_REGISTER": "reports/GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md — §1 (1,078→2,181 Certified), §2 (pack structural status), §3 (TIER table), §9 (G-NEW rules)",
+    "DEFECT_LIBRARY": "knowledge/DEFECT_LIBRARY.md — DL-008 (539 occurrences, 175 Certified), DL-021 (100 items, 5 Certified), DL-026 (1,005 items pool-wide), DL-030 (5 answer-key errors), DL-031 (~500 difficulty-inflated items), DL-029 (forward-scan false positives)"
+  }
+}

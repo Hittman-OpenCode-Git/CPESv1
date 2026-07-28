@@ -1,0 +1,53 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "domain": "E — Internal Controls",
+  "currentState": {
+    "items": 442,
+    "certified": 264,
+    "uncertified": 178,
+    "p0Count": 29,
+    "avgUiqs": 62.5,
+    "ewDebtCount": 141
+  },
+  "remediationPhases": [
+    {
+      "phase": 1,
+      "name": "Bulk certification with EW authoring",
+      "items": 178,
+      "sessions": "6-8",
+      "description": "Certify all uncertified Domain E items per CAQS §1.6. Each item requires: explanation expansion (2500+ chars), EW authoring (choice-specific, ≥300 chars), metadata compliance (CognitiveLevel, Difficulty, ProductionStatus).",
+      "effort": "HIGH — 178 items requiring full certification pipeline",
+      "roi": "CRITICAL — addresses 29 P0 items, closes largest certification gap, adds EW coverage"
+    },
+    {
+      "phase": 2,
+      "name": "EW gap closure for already-certified items",
+      "items": 50,
+      "sessions": "2-3",
+      "description": "Certified Domain E items with EW <30% fill. Author choice-specific distractor explanations for low-EW items.",
+      "effort": "MEDIUM — existing certified state, EW-only work",
+      "roi": "HIGH — completes EW coverage for Domain E"
+    },
+    {
+      "phase": 3,
+      "name": "Quality sweep",
+      "items": 264,
+      "sessions": "1",
+      "description": "Post-certification quality review: DL-008 scan, DL-013 boilerplate check, EC adequacy audit.",
+      "effort": "LOW — verification only",
+      "roi": "MEDIUM — governance attestation"
+    }
+  ],
+  "totalEstimatedSessions": 11,
+  "totalEffort": "~15 hours",
+  "dependencies": [
+    "CAQS §1.6 standard",
+    "800-series certification methodology",
+    "DL-008 remediation (parallel)"
+  ],
+  "deliverables": [
+    "Domain E fully certified",
+    "All 178 items EW-complete",
+    "29 P0 items resolved"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "session": "S719",
+  "agent": "M",
+  "verdict": "FAIL",
+  "checks": {
+    "hashes": {
+      "verdict": "PASS",
+      "changed": ["pack_a", "pack_e"],
+      "unchanged": ["pack_b", "pack_c", "pack_d", "app.js", "index_updated.html", "styles.css"],
+      "no_baseline": ["scored_cases.js", "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+      "violations": [],
+      "details": {
+        "pack_a": { "t0": "66274C69BFB629AC04F5E6477991607086F6D8E15CA51F5CF46044ED80AB42ED", "current": "88799134D81DAC204BDB01F5CE719C9010A9A1068697E2C73F3BC8381BB0D779", "changed": true },
+        "pack_e": { "t0": "48D6E03B8E23FEBC228C829916F1463A8D151E65CCE698C9E56E0A2BF2FC66CB", "current": "E465E28A991EB7F8FFEBB9A14A597F3FCA980FF6C9F84E6FA10FA5AF7B07A416", "changed": true },
+        "pack_b": { "t0": "DF219E3241AB5F3D37C0AAF4520776C50B19F5FDD925CAC07A1EB14A7285A2CE", "current": "DF219E3241AB5F3D37C0AAF4520776C50B19F5FDD925CAC07A1EB14A7285A2CE", "changed": false },
+        "pack_c": { "t0": "D5EC28E30FE284C5025B84F67487DC9083D106BE3C4E546D7BF562BB566F1A70", "current": "D5EC28E30FE284C5025B84F67487DC9083D106BE3C4E546D7BF562BB566F1A70", "changed": false },
+        "pack_d": { "t0": "C2F16CF3A3B0C331DBA64EC737A73A58532B063435F92ABC60390858F741629C", "current": "C2F16CF3A3B0C331DBA64EC737A73A58532B063435F92ABC60390858F741629C", "changed": false },
+        "app.js": { "t0": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A", "current": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A", "changed": false },
+        "index_updated.html": { "t0": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755", "current": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755", "changed": false },
+        "styles.css": { "t0": "F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6", "current": "F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6", "changed": false }
+      }
+    },
+    "item_counts": {
+      "verdict": "PASS",
+      "pack_a": 500,
+      "pack_e": 500
+    },
+    "cognitive_level_coverage": {
+      "verdict": "PASS",
+      "pack_a": 500,
+      "pack_e": 500,
+      "total": 1000
+    },
+    "cognitive_level_distribution": {
+      "verdict": "FAIL",
+      "pack_a": {
+        "Remember": 3,
+        "Understand": 215,
+        "Apply": 278,
+        "Analyze": 2,
+        "Evaluate": 2,
+        "total": 500
+      },
+      "pack_e": {
+        "Remember": 0,
+        "Understand": 400,
+        "Apply": 95,
+        "Analyze": 3,
+        "Evaluate": 2,
+        "total": 500
+      },
+      "expected": {
+        "pack_a_Evaluate": "~55 (223 - 168 = 55)",
+        "pack_a_Understand": "~552 (384 + 168)",
+        "pack_e_Remember": "~102 (386 - 284 = 102)",
+        "pack_e_Understand": "~298 (14 + 284 = 298)"
+      },
+      "discrepancy_note": "All 4 expected values are significantly off from actual. Expected Pack A Understand+Evaluate = 607 exceeds 500-item count — the pre-S719 baseline assumptions used in expected calculations appear incorrect. Actual distribution sums correctly to 500 per pack with no missing/duplicate CognitiveLevel values. Recommend re-deriving expected values from actual pre-S719 baselines.",
+      "sum_valid": true
+    },
+    "certification_state_protection": {
+      "verdict": "PASS",
+      "pack_a_certified": 481,
+      "pack_e_certified": 500,
+      "unchanged": true
+    },
+    "governance_guard": {
+      "verdict": "PASS",
+      "result": "20/20 PASS"
+    },
+    "parse_integrity": {
+      "verdict": "PASS",
+      "method": "Function constructor (return MCQ_BANK_A / MCQ_BANK_E)",
+      "pack_a": { "parse_ok": true, "items": 500 },
+      "pack_e": { "parse_ok": true, "items": 500 }
+    },
+    "content_integrity_spot_check": {
+      "verdict": "PASS",
+      "stems_intact": true,
+      "correct_choices_present": true,
+      "question_states_intact": "All 20 spot-checked items: Certified",
+      "cognitive_levels_assigned": "All 20 spot-checked items have valid CognitiveLevel values",
+      "difficulty_labels_present": "All 20 spot-checked items have valid Difficulty values",
+      "spot_check_ids_pack_a": ["P1-A-004", "P1-A-018", "P1-A-043", "P1-B-014", "P1-B-059", "P1-C-025", "P1-C-082", "P1-D-037", "P1-E-028", "P1-F-031"],
+      "spot_check_ids_pack_e": ["P1E-A-008", "P1E-A-024", "P1E-A-059", "P1E-B-017", "P1E-C-005", "P1E-D-017", "P1E-F-027", "P1E-C-055", "P1E-E-054", "P1E-C-070"],
+      "no_pre_s719_baseline_available": "Cannot verify 'unchanged' — no pre-S719 stems/CC/state baselines provided. All current values appear legitimate."
+    },
+    "difficulty_distribution": {
+      "verdict": "PASS",
+      "pack_a": {
+        "Easy": 105,
+        "Moderate-Easy": 213,
+        "Moderate": "(not explicitly counted, remainder)",
+        "Difficult": "(not explicitly counted)",
+        "Very Difficult": "(not explicitly counted)"
+      },
+      "pack_e": {
+        "Moderate-Easy": 167,
+        "Moderate": "(not explicitly counted, remainder)",
+        "Difficult": 26,
+        "Easy": "(not explicitly counted)",
+        "Very Difficult": "(not explicitly counted)"
+      },
+      "note": "Full distribution not provided — only Easy/Moderate-Easy for Pack A and Difficult/Moderate-Easy for Pack E were queried per instructions. No expected values given; these are recorded as observed."
+    }
+  },
+  "blocking_issues": [
+    {
+      "check": "cognitive_level_distribution",
+      "severity": "HIGH",
+      "detail": "All 4 expected cognitive level counts (Pack A Evaluate, Pack A Understand, Pack E Remember, Pack E Understand) do not match actual post-S719 values. However, the expected Pack A Understand+Evaluate = 607 exceeds the 500-item count, indicating the pre-S719 baseline assumptions used in the expected-value formulas are likely incorrect. Actual distributions sum correctly to 500 per pack. Recommended action: independently derive expected post-S719 values from verified pre-S719 baselines and re-compare."
+    }
+  ]
+}

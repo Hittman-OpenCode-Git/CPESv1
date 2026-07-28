@@ -1,0 +1,324 @@
+{
+  "session": "725",
+  "title": "Governance Hardening & Post-700 Ownership Transition — Knowledge Base Update Plan",
+  "generated": "2026-07-26",
+  "role": "Agent J — Knowledge Base Auditor",
+  "documents_reviewed": [
+    "knowledge/CURRENT_BASELINES.md (125 lines)",
+    "knowledge/REVISION_HISTORY.md (17,173 lines — reviewed entries S722 through S804)",
+    "knowledge/DEFECT_LIBRARY.md (2,650 lines — reviewed DL-008 header, DL-029 status, DL-021, DL-026)",
+    "knowledge/AGENTS.md (232 lines — full review)",
+    "knowledge/CAQS_v1.0.md (916 lines — full review)",
+    "knowledge/QUESTION_METADATA_STANDARD.md (582 lines — §9.4 reviewed)",
+    "reports/session_status/SESSION_STATUS_2026-07-24.md (154 lines)"
+  ],
+  "updates_required": [
+    {
+      "id": "KB-001",
+      "document": "CURRENT_BASELINES.md",
+      "priority": "P0",
+      "section": "§3 — Defect & Risk Status",
+      "current_state": "Lists 67 phantom DL-008 items as CRITICAL learner-pool risk: 55 Pack C, 10 Pack D, 2 Pack A. References May defect manifest blocking 117 QIDs.",
+      "required_update": "Replace all 67 phantom entries with DL-008=0 (verified by Function-constructor parse across S801, S802, S723, S724). Register DL-016 as HIGH severity (58 Pack A Section E Certified items with metadata-content ExplanationWrong shift — learner sees wrong-topic feedback). Register DL-029 as RESOLVED (8 prevention rules codified by S802).",
+      "evidence": [
+        "S801 (line 16415): '0 actual — All 67 individually verified CLEAN via Function constructor same-object parse'",
+        "S802 (line 16920): 'Certified DL-008: 0 — DL-029 forward-scan artifact: CC-before-QID universal in all 5 packs'",
+        "S723 (line 16982): 'Certified DL-008: 0 — Agent D Function-constructor parse + independent line-level verification'",
+        "S724 (line 71): 'CURRENT_BASELINES.md §3 stale with 67 phantom DL-008 items (S802 confirmed 0 actual). P0 update required.'"
+      ],
+      "urgency": "Before next session — CURRENT_BASELINES.md is the T0 check source for §13 runtime governance. Any session reading §3 will report a CRITICAL emergency that doesn't exist."
+    },
+    {
+      "id": "KB-002",
+      "document": "CURRENT_BASELINES.md",
+      "priority": "P0",
+      "section": "§1 — Runtime-Critical Files SHA-256 Baseline",
+      "current_state": "All 13 hashes are S530 T0 snapshot (2026-07-26). S723 confirmed 5 of 6 pack files have drifted from S530 baselines due to authorized S530-S537 writes. CURRENT_BASELINES.md header says 'Updated: 2026-07-26 — Session 537' but hashes predate S537 writes.",
+      "required_update": "Recapture all 13 runtime-critical SHA-256 hashes via `Get-FileHash` on current files. Pack files A-E all show authorized drift from S530 baseline. `scored_cases.js` hash changed during S537 ENHANCED_CASE_BASE certification. app.js hash stable (5A4338C6...). Update header date and provenance notes for each file.",
+      "evidence": [
+        "S723 (lines 16996-17007): Hash drift analysis — all 5 pack files show DRIFT vs CURRENT_BASELINES.md. All attributed to authorized S530-S537 writes.",
+        "S801 (line 16489): 'CURRENT_BASELINES.md hash recapture for all 15 runtime files' — listed as S802 dependency but not executed.",
+        "S722 (lines 16333-16341): S722 Tend MD5s are the intermediate post-S722 state but CURRENT_BASELINES shows pre-S722 values."
+      ],
+      "urgency": "Before next session — the T0 checkpoint (AGENTS.md §13.1) hashes against CURRENT_BASELINES.md. New sessions will see 5/13 hash mismatches and halt for drift analysis."
+    },
+    {
+      "id": "KB-003",
+      "document": "CURRENT_BASELINES.md",
+      "priority": "P0",
+      "section": "§5 — Baseline Verification Log",
+      "current_state": "Last entry is Session 536 (2026-07-26). Log ends at 9 entries, oldest Session 20 (2026-07-24).",
+      "required_update": "Append verification entries for: Session 537 (ENHANCED_CASE_BASE closure), Session S722 (86 items), Session S722A (83 items, definitive 26-agent run), Session S801 (governance correction), Session S802 (26-agent analysis), Session S803 (Wave 1 certification), Session S804 (Wave 2 certification). Plus S725 (this governance hardening session). Minimum delta: 7 entries → 15 entries.",
+      "evidence": [
+        "S537 (REVISION_HISTORY.md line 16836): PROGRAM CLOSED — all 15 cases, 90 items certified.",
+        "S722 (line 16303): 86 items remediated across all 5 packs.",
+        "S722A (line 16708): Definitive 26-agent execution, 83 items, 0 Evaluate pool-wide.",
+        "S801 (line 16403): 3 S800 blockers refuted. DL-008=0 confirmed.",
+        "S802 (line 16907): Portfolio baseline correction, 2,181 certified confirmed.",
+        "S803 (line 17050): Wave 1 certification — 110 items, +1 Certified.",
+        "S804 (line 17125): Wave 2 certification — Pack A Section E clone de-certification."
+      ],
+      "urgency": "Before next session — verify the provenance chain for hashes used at T0 checkpoint."
+    },
+    {
+      "id": "KB-004",
+      "document": "DEFECT_LIBRARY.md",
+      "priority": "P0",
+      "section": "DL-008 — Header Status Field (line 359)",
+      "current_state": "Status: 'Open — 175 remaining in Pack C (discovered 2026-07-23 corrective session).' This is a 2026-07-23 status that has been superseded by 6+ governance sessions (S801, S802, S723, S724, S722, S722A) all converging on DL-008=0 actual. The DL-008 entry body (lines 362-463) contains detailed resolution timeline ending at '2026-07-23 — Tier 0 corrective session.'",
+      "required_update": "Update DL-008 Status header to: 'Resolved — 0 actual. All prior 67/175/336 counts were DL-029 forward-scan false positives (CC-before-QID in all 5 packs → ~75% FP rate). Confirmed by Function-constructor parse across S801, S802, S723, S724. All 5 packs verified DL-008=0 by same-object CC+EW extraction.' Add a Learner-Safety Status section: '0 Certified items carry DL-008. Learner pool fully secured.' Add Resolution Timeline entry for 2026-07-26: S801-S802-S723-S724 verification cascade.",
+      "evidence": [
+        "S801 (line 16415): '0 actual — All 67 individually verified CLEAN'",
+        "S802 (line 16920): 'Certified DL-008: 0' — all 5 packs",
+        "S723 (line 16982): 'Certified DL-008: 0' — Agent D Function-constructor parse",
+        "S723 (line 17011): DISC-001 — P1-CC-050 verified CLEAN (CC=B, EW_B=''). S722A survivor claim resolved.",
+        "S723 (line 17015): DISC-003 — DL-008 cascade 67→1→0. All 3 prior values wrong or stale; authoritative count is 0."
+      ],
+      "urgency": "Before next session — any agent reading the DL-008 header will report 175 CERTIFIED ITEMS IN LEARNER POOL as an active emergency, triggering unnecessary governance intervention."
+    },
+    {
+      "id": "KB-005",
+      "document": "DEFECT_LIBRARY.md",
+      "priority": "P1",
+      "section": "DL-029 — Status Field (line 2280)",
+      "current_state": "Status: 'Open — documented, methodology correction recommended.' Describes CC-forward-scan false positives but only recommends correction. Since this entry was written (2026-07-23), S802 codified 8 permanent prevention rules and S801/S723 conducted Function-constructor-based full-pool verification.",
+      "required_update": "Update DL-029 Status to: 'Resolved — methodology correction codified in S802 (8 prevention rules). Function-constructor parse verified 0 Certified DL-008 across all 5 packs (S723, S801). CC-position-aware scanning now required for all defect scans.' Add S802 cross-reference link. Update Verified Impact table to reflect S801/S723 confirmed counts: Pack A=0, B=0, C=0, D=0, E=0. Add Resolution entry at the end.",
+      "evidence": [
+        "S802 (line 16933): 'DL-029 Root Cause — 8 Permanent Prevention Rules' codified. Rules 1-8 enumerated.",
+        "S801 (line 16415): 'All 67 refuted via Function constructor same-object parse.'",
+        "S723 (line 16982): 'Certified DL-008: 0 — Function-constructor verified.'"
+      ],
+      "urgency": "Before next certification wave — DL-029 scanning methodology must not be re-used."
+    },
+    {
+      "id": "KB-006",
+      "document": "AGENTS.md",
+      "priority": "P0",
+      "section": "§9 — Session Startup Protocol (lines 131-142)",
+      "current_state": "Item 1: references SESSION_STATUS_2026-07-24.md as current (stale at 2,031 certified). Item 2: says 'currently ~1,080 certified' (actual is 2,181). Item 6: 'Prefer task agents over delegate' — delegate may no longer be an issue in current tooling.",
+      "required_update": "Item 1: Replace 'reports/session_status/SESSION_STATUS_2026-07-24.md' with 'knowledge/CURRENT_BASELINES.md' as the primary session-start reference (SESSION_STATUS_2026-07-24 is superseded). Item 2: Update certified count to '~2,181 certified (87.2%)'. Item 5: Add 'Do not skip ahead past documented stop conditions — S800→S801 blocker refutation required full governance correction before proceeding.' Version bump: 1.0 → 2.0. Add effective date: 2026-07-26.",
+      "evidence": [
+        "SESSION_STATUS_2026-07-24 reports 2,031 Certified. S723/S801/S802 converge on 2,181-2,182.",
+        "CURRENT_BASELINES.md §2 shows 2,181 certified post-S530 T0.",
+        "S801 (line 16428): '2,181/2,500 (87.2%)'",
+        "S723 (line 16979-16980): '2,182 at closure, 87.28%'"
+      ],
+      "urgency": "Before next session — §9 Step 1 directs every new session to read a superseded file with wrong certified count (2,031 vs actual 2,181)."
+    },
+    {
+      "id": "KB-007",
+      "document": "AGENTS.md",
+      "priority": "P1",
+      "section": "§8 — Key File Locations (lines 110-126)",
+      "current_state": "Pinned reference table row for SESSION_STATUS: 'reports/session_status/SESSION_STATUS_2026-07-24.md — Current end-of-cycle handoff log'. DEFECT_LIBRARY row says 'All DL-001 through DL-023 entries' (now up to DL-033).",
+      "required_update": "SESSION_STATUS row: Change to 'SUPERSEDED — replaced by knowledge/CURRENT_BASELINES.md as canonical session-start source'. Add CURRENT_BASELINES.md row pointing to 'knowledge/CURRENT_BASELINES.md'. DEFECT_LIBRARY row: Update to 'All DL-001 through DL-033 entries'.",
+      "evidence": [
+        "CURRENT_BASELINES.md serves as the definitive baseline for all runtime files, certified count, and defect status.",
+        "DEFECT_LIBRARY.md contains DL-001 through DL-033 (last: DL-033 Wave 4 archival discrepancy)."
+      ],
+      "urgency": "Within 2 sessions — stale SESSION_STATUS reference drives session-start protocol to wrong file."
+    },
+    {
+      "id": "KB-008",
+      "document": "AGENTS.md",
+      "priority": "P2",
+      "section": "§6 — Item-Count Volatility (lines 82-91)",
+      "current_state": "Describes the Hard Stop rule generically (count must stabilize before remediation). Does not reference the S802 8 Prevention Rules or DL-029 methodology correction.",
+      "required_update": "Add cross-reference to DL-029 Prevention Rules (S802): 'For DL-008 specifically, all scans must use Function-constructor parse or within-object CC+EW extraction — never forward-scan from QuestionID. CC-before-QID in all 5 packs creates ~75% false-positive rate on window-scan methods. Two independent methods must converge on identical count before any action.'",
+      "evidence": [
+        "S802 (line 16933): 8 DL-029 Permanent Prevention Rules codified — the implementation of §6 for DL-008 type scans."
+      ],
+      "urgency": "Before next DL-008 remediation attempt — avoids repeating the DL-029 false-positive cascade."
+    },
+    {
+      "id": "KB-009",
+      "document": "AGENTS.md",
+      "priority": "P2",
+      "section": "§5 — Dual Verification (lines 65-78)",
+      "current_state": "Good table of claim→cross-check mappings. Does not include CC-extraction methodology verification.",
+      "required_update": "Add row: 'No DL-008 violations' → 'Function-constructor parse with same-object CC+EW extraction; never forward-scan from QuestionID (DL-029 vulnerability). Two independent parse methods must agree.'",
+      "evidence": [
+        "S801 (line 16415): DL-029 forward-scan was the root cause of all 3 S800 P0 blockers."
+      ],
+      "urgency": "During next AGENTS.md revision pass (KB-006)."
+    },
+    {
+      "id": "KB-010",
+      "document": "AGENTS.md",
+      "priority": "P2",
+      "section": "§1 — Governance Guard Plugin (lines 10-22)",
+      "current_state": "Lists 5 rules. Test suite reference says '12 tests' at line 22; CURRENT_BASELINES.md §4 says '20/20 PASS Test Suite'.",
+      "required_update": "Update test count from '12 tests' to '20 tests' (appears to have been expanded since AGENTS.md was last updated). Verify current test count and update accordingly.",
+      "evidence": [
+        "CURRENT_BASELINES.md (line 105): 'Test Suite: 20/20 PASS — Verified S530 T0'",
+        "S723 (line 16987): 'Governance guard tests: 20/20 PASS'",
+        "S802 (line 16953): 'Governance guard 20/20 PASS'"
+      ],
+      "urgency": "Low — informational discrepancy, no governance impact."
+    },
+    {
+      "id": "KB-011",
+      "document": "CAQS_v1.0.md",
+      "priority": "P2",
+      "section": "Appendix A — Revision History (line 899)",
+      "current_state": "Single entry: v1.0 (2026-07-21). No amendments documented despite 700-series governance maturation.",
+      "required_update": "Add v1.1 entry: '2026-07-26 — Post-700-Series Governance Update. Cross-reference DCS v1.1 for difficulty calibration standards. Add DL-029 prevention rules (Function-constructor CC verification required for all certification audits). Note that §6.1-§6.2 difficulty/Bloom's targets are aspirational only — actual pool distribution reflects structural content gaps (0 Evaluate, 10 Analyze).'",
+      "evidence": [
+        "S722A (line 16747): Structural gaps — 0 Evaluate items, only 10 Analyze items (target: 375 + 625).",
+        "S723: DCS v1.1 production-ready with 95.0% reliability.",
+        "S802 (line 16933): DL-029 prevention rules for all scans."
+      ],
+      "urgency": "During next certification wave — CAQS is the authority for what 'certified' means."
+    },
+    {
+      "id": "KB-012",
+      "document": "QUESTION_METADATA_STANDARD.md",
+      "priority": "P2",
+      "section": "§9.4.2 — Dual-Block Source-of-Truth BLOCK (lines 520-526)",
+      "current_state": "Describes dual-block/split architecture with separate metadata block and content block. Asserts DL-016 risk from metadata-block ChoiceA-D differing from content-block Choices.A-D.",
+      "required_update": "Add Note (2026-07-26): 'S801 architectural audit confirmed all 5 current pack files use single-object architecture — each QuestionID has exactly one JSON object. The historical dual-block format has been normalized away. Zero flat ChoiceA fields exist in current files. DL-016 risk on same-object CC+EW extraction is zero. G-NEW-1/G-NEW-3 rules remain active as governance safeguards for any future content that re-introduces dual-block structure.'",
+      "evidence": [
+        "S801 (line 16432-16434): 'All 5 packs use single-object architecture. DL-016 interference risk on DL-008 scans is zero when using same-object CC+EW extraction.'"
+      ],
+      "urgency": "During next certification wave — prevents re-litigation of the dual-block assumption."
+    },
+    {
+      "id": "KB-013",
+      "document": "REVISION_HISTORY.md",
+      "priority": "P1",
+      "section": "New Entry — Session 725",
+      "current_state": "No S725 entry exists (last entry is S804 at line 17125).",
+      "required_update": "Append Session 725 entry documenting this governance hardening session: Knowledge Base Audit producing SESSION725_KB_UPDATE_PLAN.json. Read-only audit. 0 pack content changes. 0 certification-state changes. Governance guard 20/20 PASS. Identified 13 KB updates across 6 documents. Consolidated 700-series closure evidence. Cross-referenced S723 and S724." ,
+      "evidence": [
+        "This session is producing the KB update plan.",
+        "Per AGENTS.md §12: 'Every session must produce at minimum a REVISION_HISTORY.md entry as its closing action.'"
+      ],
+      "urgency": "Before this session closes — per AGENTS.md §12 mandatory rule."
+    },
+    {
+      "id": "KB-014",
+      "document": "DEFECT_LIBRARY.md",
+      "priority": "P3",
+      "section": "DL-021 — Status (line 1214)",
+      "current_state": "Status: 'Open — documented, not remediated.' 95 non-Certified Pack E Section C items with absent distractor slots. 5 Certified items remediated in Autonomous Run Part 4.",
+      "required_update": "No status change needed — defect remains open. Add cross-reference to S724 maintenance activation confirming DL-021 and DL-026 are separate authoritative pipelines needing explanation authoring (not scan methodology fixes). Add note that S724 'DO NOT START 600-SERIES' deferral means DL-021 will be addressed in the 800-series certification waves per S309's 17-session plan.",
+      "evidence": [
+        "S724 (line 188): 'Separate authoring pipelines produce systematic quality degradation — DL-021, DL-028, DL-013.'"
+      ],
+      "urgency": "Low — informational only. No status change needed."
+    },
+    {
+      "id": "KB-015",
+      "document": "DEFECT_LIBRARY.md",
+      "priority": "P2",
+      "section": "DL-026 — Status (line 1789)",
+      "current_state": "Status: 'Open — scoped, not remediated.' Extensive remediation notes in multiple CORRECTION entries. Most Certified items were remediated in Autonomous Run Part 2/3. CURRENT_BASELINES.md §3 still lists 'DL-026 — Pack D Section C: 50 In Audit items' at HIGH.",
+      "required_update": "Update status to: 'Partially remediated — Certified items cleared. Non-Certified Sections C-F remain open (~524 items). Cross-reference S309 priority queue: DL-026 fill is Session 10-12 in 17-session plan.' Update scope table to reflect S801/S802 verified counts removing phantom DL-008 confusion. Note that Pack D Section C items verified structurally complete post-S802.",
+      "evidence": [
+        "S801 (line 16449): '0 Certified DL-008 items confirmed across all 5 packs' — meaning Pack D Section C items are structurally complete.",
+        "S802 (line 16925): 'Sections C+D certified in Pack D — 350 total certified'.",
+        "S309 (line 228-236): 17-session plan includes DL-026 fill in post-cert modernization phase."
+      ],
+      "urgency": "During next DEFECT_LIBRARY revision pass."
+    }
+  ],
+  "superseded_documents": [
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "superseded_by": "knowledge/CURRENT_BASELINES.md",
+      "reason": "Reports 2,031 certified (actual: 2,181). Lists 67 Certified DL-008 items (actual: 0). All portfolio metrics are stale by 150 items. S723, S801, and S802 provide authoritative replacement data consolidated in CURRENT_BASELINES.md §2-§3. The file itself already lists SESSION_STATUS_2026-07-23.md as superseded — this is the same pattern one iteration later.",
+      "action": "Add SUPERSEDED header banner + cross-reference link to CURRENT_BASELINES.md. Do NOT delete — retains historical value for the S86-S87 final sweep and May governance fix documentation."
+    },
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-23.md",
+      "superseded_by": "knowledge/CURRENT_BASELINES.md + SESSION_STATUS_2026-07-24.md",
+      "reason": "Already marked stale in SESSION_STATUS_2026-07-24 §7. Reports 1,080 certified. Historical value only.",
+      "action": "No action needed — already marked superseded."
+    }
+  ],
+  "missing_entries": [
+    {
+      "document": "knowledge/REVISION_HISTORY.md",
+      "entry": "Session 725 — Governance Hardening KB Audit",
+      "status": "Not yet written",
+      "severity": "MANDATORY — per AGENTS.md §12: 'Every session must produce at minimum a REVISION_HISTORY.md entry as its closing action.'"
+    },
+    {
+      "document": "knowledge/CURRENT_BASELINES.md",
+      "entry": "Session 537 verification log entry",
+      "status": "Not yet logged",
+      "severity": "High — ENHANCED_CASE_BASE program closure changed scored_cases.js hash."
+    },
+    {
+      "document": "knowledge/CURRENT_BASELINES.md",
+      "entry": "Session S722/S722A verification log entry",
+      "status": "Not yet logged",
+      "severity": "High — 169 items modified across all 5 packs. All pack hashes drifted."
+    },
+    {
+      "document": "knowledge/CURRENT_BASELINES.md",
+      "entry": "Session S801/S802/S803/S804 verification log entry",
+      "status": "Not yet logged",
+      "severity": "Medium — governance correction + certification waves modified packs A/C/D."
+    }
+  ],
+  "obsolete_procedures": [
+    {
+      "procedure": "AGENTS.md §9 Step 1: 'Read SESSION_STATUS_2026-07-24.md for open risks'",
+      "reason": "SESSION_STATUS_2026-07-24 is superseded. Currently carries stale data: 2,031 vs 2,181 certified count, 67 phantom DL-008 items.",
+      "replacement": "Read CURRENT_BASELINES.md §2 (Certified Pool) and §3 (Defect & Risk Status)."
+    },
+    {
+      "procedure": "AGENTS.md §9 Step 2: 'Read REVISION_HISTORY.md for most recent certification state (currently ~1,080 certified)'",
+      "reason": "Count is >1,000 items stale. Actual is 2,181 (87.2%).",
+      "replacement": "Read REVISION_HISTORY.md S723 (700-series closure) or S804 (latest certification wave) for current state. Direct grep for question_state count."
+    },
+    {
+      "procedure": "DL-008 scanning via regex forward-scan from QuestionID",
+      "reason": "DL-029 root cause: CC-before-QID in all 5 packs produces ~75% false positive rate. Produced 67 phantom DL-008 items in CURRENT_BASELINES.md, 3 false S800 P0 blockers, and a 6-session governance correction cascade.",
+      "replacement": "Function-constructor parse with same-object CC+EW extraction. Two independent verify methods required. S802 8 Prevention Rules apply."
+    },
+    {
+      "procedure": "Using totals-only counts without QID lists in verification reports",
+      "reason": "AGENTS.md §5 already prohibits this, but multiple S723-S804 sessions found agents producing unverifiable totals.",
+      "replacement": "Enforce AGENTS.md §5 more rigorously. All count claims must include QID lists or be backed by reproducible parse scripts."
+    },
+    {
+      "procedure": "S800-style blocker declaration from totals reports without raw-file verification",
+      "reason": "All 3 S800 P0 blockers were false alarms from DL-029 scan artifacts. Required full S801 governance correction session to refute.",
+      "replacement": "Any P0 severity blocker MUST be verified by at least TWO independent methods including direct line-level file inspection (not scan totals) before declaration."
+    }
+  ],
+  "recommended_execution_order": [
+    "P0 items first (KB-001 through KB-004, KB-006): Fixes the most dangerous stale references in CURRENT_BASELINES.md and DEFECT_LIBRARY.md, and corrects AGENTS.md session startup protocol.",
+    "P0 supplementary (KB-002, KB-003): Hash recapture and verification log — follow immediately after P0 fixes since both modify CURRENT_BASELINES.md.",
+    "P1 items (KB-005, KB-013, KB-007): DL-029 status resolution, REVISION_HISTORY.md S725 entry, AGENTS.md §8 key file locations.",
+    "P2 items (KB-008, KB-009, KB-010, KB-011, KB-012, KB-015): AGENTS.md detail updates, CAQS revision, QUESTION_METADATA_STANDARD §9.4 architectural note, DL-026 status update.",
+    "P3 items (KB-014): DL-021 informational cross-reference — lowest urgency, status unchanged.",
+    "Superseded document actions: Add SUPERSEDED banner to SESSION_STATUS_2026-07-24.md.",
+    "Final: REVISION_HISTORY.md S725 entry — KB-013 — last action before session close per AGENTS.md §12."
+  ],
+  "cross_reference_matrix": {
+    "S723_700_series_closure": "Authoritative source for 0 DL-008, 2,182 certified, hash drift, DCS production readiness. Cross-referenced by KB-001, KB-002, KB-004, KB-005, KB-011.",
+    "S724_governance_activation": "Authoritative source for 600-series deferral, CURRENT_BASELINES §3 staleness identification, post-700 ownership gaps. Cross-referenced by KB-001, KB-004, KB-014.",
+    "S801_governance_correction": "Authoritative source for DL-008=0 refutation, single-object architecture, DL-029 root cause, corrected portfolio state. Cross-referenced by KB-001, KB-004, KB-005, KB-012.",
+    "S802_portfolio_baseline": "Authoritative source for 8 DL-029 prevention rules, 2,181 verified count, quality tier assignment, roadmap compression. Cross-referenced by KB-003, KB-005, KB-008, KB-015.",
+    "S803_wave1_certification": "Authoritative source for P1-E-056 recertification + Section F clone archival. Cross-referenced by KB-003.",
+    "S804_wave2_certification": "Authoritative source for Pack A Section E clone de-certification + DL-016 finding. Cross-referenced by KB-001, KB-003.",
+    "S722A_definitive_execution": "Authoritative source for 26-agent complete run, 0 Evaluate pool-wide, 95.0% DCS reliability, P1-CC-050 DL-008 survivor refuted. Cross-referenced by KB-003, KB-004, KB-011."
+  },
+  "governance_attestation": {
+    "read_only": true,
+    "pack_files_modified": 0,
+    "scored_cases_modified": 0,
+    "certification_state_changed": false,
+    "answer_keys_modified": false,
+    "scoring_modified": false,
+    "new_FILE_created": "reports/SESSION725_KB_UPDATE_PLAN.json",
+    "documents_reviewed_count": 7,
+    "updates_identified": 15,
+    "obsolete_procedures_identified": 5,
+    "superseded_documents_identified": 2,
+    "missing_entries_identified": 4
+  }
+}

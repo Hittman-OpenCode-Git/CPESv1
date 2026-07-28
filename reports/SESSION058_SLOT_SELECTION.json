@@ -1,0 +1,207 @@
+{
+  "session": "SESSION058",
+  "phase": 6,
+  "description": "Phase 6 Archived Clone Replacement — 20 items across Pack C Section E (10) + Pack D Section E (10). Continuing retirement of EC/ED archived clone inventory.",
+  "date": "2026-07-28",
+  "total_slots": 20,
+  "packs_affected": ["pack_c_corrected.js", "pack_d_corrected.js"],
+  "sections_affected": ["E"],
+  "domains_covered": ["COSO Internal Controls", "COSO ERM"],
+  "bloom_target": {"Analyze": 11, "Evaluate": 9},
+  "difficulty_target": {"Difficult": 14, "Very_Difficult": 6},
+  "question_state": "Certified",
+
+  "prior_consumed": {
+    "total_consumed": 80,
+    "S899": 20,
+    "S50": 20,
+    "S51": 20,
+    "S52": 20
+  },
+
+  "remaining_pool": {
+    "EC": 24,
+    "ED": 26,
+    "FC": 47,
+    "FD": 44,
+    "total_archived": 141
+  },
+
+  "selected_pool": {
+    "EC_remaining": ["P1-EC-033","P1-EC-036","P1-EC-037","P1-EC-042","P1-EC-043","P1-EC-045","P1-EC-046","P1-EC-047","P1-EC-050","P1-EC-051","P1-EC-053","P1-EC-056","P1-EC-057","P1-EC-059","P1-EC-062","P1-EC-063","P1-EC-064","P1-EC-065","P1-EC-068","P1-EC-070","P1-EC-071","P1-EC-073","P1-EC-074","P1-EC-075"],
+    "ED_remaining": ["P1-ED-019","P1-ED-022","P1-ED-024","P1-ED-027","P1-ED-029","P1-ED-030","P1-ED-032","P1-ED-034","P1-ED-037","P1-ED-039","P1-ED-041","P1-ED-044","P1-ED-045","P1-ED-047","P1-ED-048","P1-ED-052","P1-ED-053","P1-ED-055","P1-ED-056","P1-ED-057","P1-ED-059","P1-ED-061","P1-ED-062","P1-ED-063","P1-ED-065","P1-ED-068"]
+  },
+
+  "slots": [
+    {
+      "index": 81, "qid": "P1-EC-033", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic": "COSO ERM — Governance and Culture — evaluating board risk oversight when a chief risk officer reports to the CFO versus the board",
+      "bloom": "Evaluate", "difficulty": "Very_Difficult", "difficulty_score": 5
+    },
+    {
+      "index": 82, "qid": "P1-EC-036", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic": "COSO Principle 6 — risk identification — evaluating completeness of risk universe after a new product line launch in a regulated industry",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 83, "qid": "P1-EC-037", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic": "COSO Principle 14 — internal communication — evaluating the effectiveness of control awareness training after significant employee turnover",
+      "bloom": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 84, "qid": "P1-EC-042", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic": "COSO ERM — risk response — evaluating the adequacy of risk response when insurance coverage excludes a top-five operational risk",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 85, "qid": "P1-EC-043", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic": "COSO Principle 5 — accountability — evaluating individual accountability in a shared services center where controls span multiple cost centers",
+      "bloom": "Evaluate", "difficulty": "Very_Difficult", "difficulty_score": 5
+    },
+    {
+      "index": 86, "qid": "P1-EC-045", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic": "COSO Principle 13 — information quality — evaluating the reliability of data feeds from an acquired subsidiary during the first consolidation period",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 87, "qid": "P1-EC-046", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic": "COSO Principle 9 — fraud risk — evaluating fraud risk assessment methodology when the entity has never experienced a material fraud loss",
+      "bloom": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 88, "qid": "P1-EC-047", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic": "COSO ERM — Strategy and Objective-Setting — evaluating whether risk strategy aligns with business objectives after a strategic pivot to e-commerce",
+      "bloom": "Evaluate", "difficulty": "Very_Difficult", "difficulty_score": 5
+    },
+    {
+      "index": 89, "qid": "P1-EC-050", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic": "COSO Principle 4 — board expertise — evaluating whether the audit committee has sufficient expertise to oversee complex derivative instruments",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 90, "qid": "P1-EC-051", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic": "COSO Principle 10 — control activities — evaluating whether automated controls in a newly implemented SaaS platform are operating effectively",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 91, "qid": "P1-ED-019", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic": "COSO Principle 1 — integrity and ethical values — evaluating tone at the top after a whistleblower complaint reveals executive expense report manipulation",
+      "bloom": "Evaluate", "difficulty": "Very_Difficult", "difficulty_score": 5
+    },
+    {
+      "index": 92, "qid": "P1-ED-022", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic": "COSO Principle 7 — risk assessment — evaluating risk prioritization when a cyber breach, supply chain disruption, and regulatory change occur simultaneously",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 93, "qid": "P1-ED-024", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic": "COSO ERM — Performance — evaluating risk-adjusted performance measures when two business units have identical ROIC but different risk profiles",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 94, "qid": "P1-ED-027", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic": "COSO Principle 8 — fraud risk — evaluating fraud risk in a procurement function where one buyer has sole authority over a major vendor relationship",
+      "bloom": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 95, "qid": "P1-ED-029", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic": "COSO Principle 16 — monitoring — evaluating whether quarterly monitoring is adequate for controls over high-frequency trading activity",
+      "bloom": "Evaluate", "difficulty": "Very_Difficult", "difficulty_score": 5
+    },
+    {
+      "index": 96, "qid": "P1-ED-030", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic": "COSO Principle 12 — control activities — evaluating whether password rotation policies and multi-factor authentication provide adequate access control after a credential-stuffing attack",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 97, "qid": "P1-ED-032", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic": "COSO Principle 11 — IT general controls — evaluating change management controls when an emergency patch must be deployed to fix a zero-day vulnerability",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 98, "qid": "P1-ED-034", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic": "COSO ERM — Review and Revision — evaluating whether the risk management framework should be revised after a material weakness disclosure",
+      "bloom": "Evaluate", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 99, "qid": "P1-ED-037", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic": "COSO Principle 3 — organizational structure — evaluating whether a matrix reporting structure creates ambiguity in control ownership between regional and functional managers",
+      "bloom": "Analyze", "difficulty": "Difficult", "difficulty_score": 4
+    },
+    {
+      "index": 100, "qid": "P1-ED-039", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic": "COSO Principle 17 — monitoring — evaluating whether self-assessment results from operating managers can be relied upon when internal audit has been outsourced",
+      "bloom": "Evaluate", "difficulty": "Very_Difficult", "difficulty_score": 5
+    }
+  ],
+
+  "batch_plan": [
+    {
+      "batch": 1, "qids": ["P1-EC-033","P1-EC-036","P1-EC-037","P1-EC-042","P1-EC-043"],
+      "pack": "C", "section": "E",
+      "bloom": {"Analyze": 2, "Evaluate": 3},
+      "difficulty": {"Difficult": 3, "Very_Difficult": 2},
+      "topics": "ERM Governance, Risk Identification, Internal Communication, ERM Risk Response, Accountability"
+    },
+    {
+      "batch": 2, "qids": ["P1-EC-045","P1-EC-046","P1-EC-047","P1-EC-050","P1-EC-051"],
+      "pack": "C", "section": "E",
+      "bloom": {"Analyze": 3, "Evaluate": 2},
+      "difficulty": {"Difficult": 4, "Very_Difficult": 1},
+      "topics": "Information Quality, Fraud Risk, ERM Strategy, Board Expertise, Control Activities"
+    },
+    {
+      "batch": 3, "qids": ["P1-ED-019","P1-ED-022","P1-ED-024","P1-ED-027","P1-ED-029"],
+      "pack": "D", "section": "E",
+      "bloom": {"Analyze": 2, "Evaluate": 3},
+      "difficulty": {"Difficult": 3, "Very_Difficult": 2},
+      "topics": "Tone at the Top, Risk Assessment, ERM Performance, Fraud Risk, Monitoring"
+    },
+    {
+      "batch": 4, "qids": ["P1-ED-030","P1-ED-032","P1-ED-034","P1-ED-037","P1-ED-039"],
+      "pack": "D", "section": "E",
+      "bloom": {"Analyze": 3, "Evaluate": 2},
+      "difficulty": {"Difficult": 4, "Very_Difficult": 1},
+      "topics": "IT Controls, Change Management, ERM Review, Organizational Structure, Monitoring"
+    }
+  ],
+
+  "distribution_summary": {
+    "by_pack": {"Pack_C": 10, "Pack_D": 10},
+    "by_domain": {"COSO_IC": 16, "COSO_ERM": 4},
+    "by_bloom": {"Analyze": 10, "Evaluate": 10},
+    "by_difficulty": {"Difficult": 14, "Very_Difficult": 6},
+    "coso_principles_covered": ["P1","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P16","P17","ERM: Governance","ERM: Strategy","ERM: Performance","ERM: Review","ERM: Risk Response"]
+  },
+
+  "post_session_projection": {
+    "certified_before": 2379,
+    "certified_after": 2399,
+    "archived_before": 141,
+    "archived_after": 121,
+    "ec_ed_remaining": 30,
+    "fc_fd_remaining": 91
+  },
+
+  "created": "2026-07-28"
+}

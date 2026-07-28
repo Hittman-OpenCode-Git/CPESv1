@@ -1,0 +1,50 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "modelVersion": "S307-1.0",
+  "portfolioSnapshot": {
+    "totalItems": 2900,
+    "totalCertified": 2926,
+    "certificationPct": "81.2",
+    "portfolioUIQS": 68.8,
+    "portfolioGrade": "C"
+  },
+  "riskDashboard": {
+    "critical": 2,
+    "high": 3,
+    "medium": 2,
+    "low": 1
+  },
+  "debtDashboard": {
+    "certificationDebt": {
+      "items": 358,
+      "pct": "12.3"
+    },
+    "ewDebt": {
+      "items": 539,
+      "pct": "18.6"
+    },
+    "ecDebt": {
+      "items": 982,
+      "pct": "33.9"
+    },
+    "totalDebtItems": "~1,500 (some overlap)"
+  },
+  "sequencingDashboard": {
+    "immediatePriority": "DL-008 Remediation (67 items, 3 sessions)",
+    "nearTerm": "Domain E Certification (178 items, 8 sessions)",
+    "mediumTerm": "Domain F Certification (150 items, 7 sessions) + Case-bank EW (6 sessions)",
+    "longTerm": "Remaining certification + modernization (8 sessions)"
+  },
+  "dependencyDashboard": {
+    "unblocked": [
+      "300-series analytics",
+      "500-series remaining cases",
+      "700-series DL-026",
+      "800-series Wave 2+"
+    ],
+    "blocked": [
+      "800-series Wave 1 — waiting on DL-008 resolution",
+      "800-series Waves 3-5 — waiting on DL-008 and PR-2/PR-3"
+    ]
+  }
+}

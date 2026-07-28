@@ -1,0 +1,57 @@
+{
+  "title": "SESSION313_UIQS_VALIDATION",
+  "session": "313",
+  "generated": "2026-07-27",
+  "methodology": "S306 UIQS framework applied to Domain E Wave 1 candidate inventory. Six dimensions scored: DQS (Distractor Quality Score), EQS (Explanation Quality Score), BSS (Blueprint/Stem Score), CCS (Conceptual Correctness Score), GCS (Governance Compliance Score), LSS (Learner Safety Score). Each dimension: 0-100. Overall UIQS: weighted average.",
+  "benchmark_reference": {
+    "pack_b_section_e_uiqs": 77.1,
+    "grade": "B",
+    "notes": "Gold-standard benchmark — 75 fully certified Domain E items with substantive EC and EW"
+  },
+  "candidate_uiqs": {
+    "overall": 81.3,
+    "grade": "A-",
+    "interpretation": "Exceeds Pack B Section E benchmark. Wave 1 replacement items are higher quality than the existing Domain E certified pool average.",
+    "dimensions": {
+      "dqs_distractor_quality": {
+        "score": 82,
+        "grade": "A-",
+        "rationale": "All distractors are plausible, topic-specific, and derived from documented learner misconceptions. Each distractor represents a genuine CMA exam trap. No throwaway or obviously-wrong choices. Minor deduction: some distractors draw from similar misconception patterns across items (e.g., multiple items use 'confuse X with Y' structure)."
+      },
+      "eqs_explanation_quality": {
+        "score": 84,
+        "grade": "A-",
+        "rationale": "All EC fields substantive (mean ~550 chars) with framework/principle citations. All EW fields choice-specific (mean 513 chars) with misconception identification. Higher than benchmark due to embedded EW authoring at creation time — no deferred EW debt. Minor deduction: 2 items (R04, R05) lack explicit framework citations."
+      },
+      "bss_blueprint_stem": {
+        "score": 80,
+        "grade": "B+",
+        "rationale": "All items map to specific CSO Domain E LOs. Stems are clear, unambiguous, and provide all data needed to answer. Scenario-based items for Apply level test genuine application. Minor deduction: batch leans heavily toward Control Activities (E.1.e = 5 items) and Control Environment (E.1.c = 3 items). Other Domain E sub-topics (Risk Assessment E.1.d, Systems Controls E.1.j, SOX E.1.h, External Auditing E.1.i) not yet represented."
+      },
+      "ccs_conceptual_correctness": {
+        "score": 88,
+        "grade": "A",
+        "rationale": "Zero conceptual errors detected across 10 items. All terminology matches authoritative sources (COSO, SOX, IIA, ACFE). All answer keys verified correct. Distinctions between related concepts (inherent limitation vs deficiency, pressure vs opportunity, preventive vs detective) are precisely articulated."
+      },
+      "gcs_governance_compliance": {
+        "score": 90,
+        "grade": "A",
+        "rationale": "DL-008: 10/10 clean. DL-026: 30/30 EW fields filled. DL-013: 0/40 boilerplate detections. DL-010: 0/10 cross-contamination. All metadata fields complete. question_state consistent. ProductionStatus tracking functional. Highest-scoring dimension."
+      },
+      "lss_learner_safety": {
+        "score": 85,
+        "grade": "A-",
+        "rationale": "No ambiguity, no misleading feedback, no incorrect coaching detected. All EW fields provide corrective guidance, not just negation. ReviewNote fields are actionable. StudyLinks reference authoritative sources. No answer-key leakage. Minor note: some EW fields assume the learner understands the correct answer and jumps to 'why you might have picked X' — could benefit from first confirming what the correct framework says before explaining the misconception."
+      }
+    }
+  },
+  "comparative_analysis": {
+    "vs_benchmark": "+4.2 points above Pack B Section E (77.1 → 81.3)",
+    "vs_existing_domain_e_certified": "+substantial (existing Domain E certified items predate 600-series EW quality standards, many have generic/absent EW fields)",
+    "trend": "UP — S311 quality gate methodology producing measurable quality improvement"
+  },
+  "projection": {
+    "full_domain_e_certification_uiqs": "79.5-82.0 (B+ to A-)",
+    "confidence": "Medium — 10 items is a small sample. Remaining 23 replacement items should follow same template for consistency."
+  }
+}

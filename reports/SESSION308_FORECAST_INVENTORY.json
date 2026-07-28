@@ -1,0 +1,152 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "modelVersion": "S308-INV-1.0",
+  "totalRemainingSessions": 0,
+  "tracks": {
+    "300-series": {
+      "status": "ACTIVE",
+      "completed": [
+        "S301",
+        "S302",
+        "S303",
+        "S304",
+        "S305",
+        "S306",
+        "S307"
+      ],
+      "remaining": [
+        {
+          "session": "S308",
+          "name": "Portfolio Forecast Engine",
+          "type": "Analysis",
+          "sessions": 1,
+          "status": "IN PROGRESS"
+        },
+        {
+          "session": "S309",
+          "name": "Certification Bottleneck Analysis",
+          "type": "Analysis",
+          "sessions": 1,
+          "status": "PENDING"
+        },
+        {
+          "session": "S310",
+          "name": "Portfolio Readiness Dashboard",
+          "type": "Analysis",
+          "sessions": 1,
+          "status": "PENDING"
+        }
+      ],
+      "totalRemaining": 3
+    },
+    "700-series": {
+      "status": "PAUSED",
+      "completed": [
+        "S710",
+        "S710R",
+        "S711",
+        "S712",
+        "S713",
+        "S714A",
+        "S715",
+        "S716",
+        "S717"
+      ],
+      "remaining": [
+        {
+          "session": "S722A",
+          "name": "700-series lane closure audit",
+          "type": "Governance",
+          "sessions": 1,
+          "status": "BLOCKED — waiting DL-008"
+        },
+        {
+          "session": "S723",
+          "name": "700-series final closeout",
+          "type": "Governance",
+          "sessions": 1,
+          "status": "BLOCKED — waiting S722A"
+        }
+      ],
+      "totalRemaining": 2,
+      "blocker": "DL-008 remediation (67 items in learner pool)"
+    },
+    "800-series": {
+      "status": "LAUNCHED — S800 complete",
+      "completed": [
+        "S800"
+      ],
+      "waves": {
+        "Wave 1 — DL-008 Emergency": {
+          "sessions": "S801-S803",
+          "items": 67,
+          "sessionCount": 3,
+          "description": "Clear 67 Certified DL-008 items"
+        },
+        "Wave 2 — Structural Remediation": {
+          "sessions": "S804-S808",
+          "items": "~200",
+          "sessionCount": 5,
+          "description": "DL-013 + DL-026 remediation, Packs C/D Sections C-F"
+        },
+        "Wave 3 — Domain E/F Certification": {
+          "sessions": "S809-S813",
+          "items": 328,
+          "sessionCount": 5,
+          "description": "Certify Domain E (178) + Domain F (150) items"
+        },
+        "Wave 4 — Pack A Closeout": {
+          "sessions": "S814-S816",
+          "items": 19,
+          "sessionCount": 3,
+          "description": "Final 19 Pack A items → third 100% pack"
+        },
+        "Wave 5 — Quality Calibration": {
+          "sessions": "S817-S819",
+          "items": "~500",
+          "sessionCount": 3,
+          "description": "DL-031/DL-032, Pack E EC enrichment, global sweep"
+        }
+      },
+      "totalRemaining": 19,
+      "prerequisites": [
+        "PR-1: Clear DL-008 (67 items)",
+        "PR-2: Mitigate DL-016 shift",
+        "PR-3: Repair FD-045 + FD-075"
+      ]
+    },
+    "500-series": {
+      "status": "ACTIVE — partial completion",
+      "completed": [
+        "S518",
+        "S519",
+        "S520",
+        "S521",
+        "S522",
+        "S523",
+        "S524",
+        "S535",
+        "S536",
+        "S537"
+      ],
+      "remaining": [
+        {
+          "scope": "ENHANCED_CASE_BASE remaining",
+          "items": 42,
+          "sessions": 2,
+          "status": "READY",
+          "note": "Cases C2, D2, E2, F2, A3, B3, C3 (but S537 may have completed these)"
+        },
+        {
+          "scope": "MIGRATED_CASE_BASE_D",
+          "items": 75,
+          "sessions": 5,
+          "status": "DEFERRED",
+          "note": "75 wholly unprocessed items"
+        }
+      ],
+      "totalRemaining": 7
+    }
+  },
+  "grandTotal": 31
+}

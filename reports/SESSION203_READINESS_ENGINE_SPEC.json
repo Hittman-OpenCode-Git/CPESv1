@@ -1,0 +1,189 @@
+{
+  "document": "SESSION203_READINESS_ENGINE_SPEC",
+  "session": "S203",
+  "title": "Readiness Engine v2 — Implementation Specification",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION202_READINESS_GATE_ENGINEERING.json (Architecture)",
+  "purpose": "Defines the executable readiness engine that consumes pre-flight scan artifacts, computes per-item readiness classifications, enforces board visibility rules, generates readiness scores, and produces the session-level readiness report. This engine is the gatekeeper between the scan pipeline and certification boards.",
+  "constraints": ["No content changes", "No certification activity", "No governance changes", "No deployment"],
+
+  "implementation_file": "scripts/engine/readiness/readiness_engine.js",
+
+  "exports": {
+    "classifyReadiness(item, gateResults)": "Returns readiness classification: READY | MINOR_FIX | REMEDIATE | BLOCKED",
+    "computeReadinessScore(item, gateResults)": "Returns numeric score 0-100",
+    "isBoardVisible(item, boardType)": "Returns boolean — determines if item appears in board queue",
+    "generateReadinessReport(allItems, allGateResults)": "Returns SESSION_READINESS_REPORT.json",
+    "getSessionPlan(items, readinessClassifications)": "Returns prioritized work plan for the session",
+    "verifyReadinessGate(readinessReport, governanceThresholds)": "Returns gate pass/fail for phase authorization"
+  },
+
+  "readiness_classification_algorithm": {
+    "description": "Deterministic classification based on gate results. Runs after all gates complete. Classification order matters — first BLOCKED condition that matches wins.",
+    "pseudocode": "function classifyReadiness(item, gateResults) { if (gateResults.gateNeg1.verdict === 'IDENTITY_BLOCKED') return { class: 'BLOCKED', reason: 'IDENTITY_FAILURE', score: 0 }; if (gateResults.gate0.verdict === 'FAIL') return { class: 'BLOCKED', reason: 'JSON_INTEGRITY_FAILURE', score: 0 }; if (gateResults.gate1.verdict === 'HARD_FAIL') return { class: 'REMEDIATE', reason: 'STRUCTURAL_DEFECT', blockingDefects: gateResults.gate1.hardFailDefects }; if (gateResults.gate3.verdict === 'HARD_FAIL') return { class: 'REMEDIATE', reason: 'IDENTITY_RECONCILIATION_FAILURE' }; const hasSoftFail = gateResults.gate2.verdict === 'SOFT_FAIL' || gateResults.gate4.verdict === 'SOFT_FAIL'; const hasWarn = gateResults.gate2.warnCount > 0 || gateResults.gate4.warnCount > 0; if (hasSoftFail) return { class: 'MINOR_FIX', reasons: gateResults.softFailReasons }; if (hasWarn) return { class: 'READY', warnings: gateResults.warnings }; return { class: 'READY', warnings: [] }; }",
+    "edge_cases": {
+      "gate_1_hard_fail_on_certified": "If a Certified item fails Gate 1 → REMEDIATE with severity escalated to CRITICAL. The item is in the learner pool with structural defects. Immediate remediation required. Flag in governance report as LEARNER_POOL_EXPOSURE.",
+      "gate_4_dl030_on_certified": "If a Certified item fails Gate 4 with DL-030 CONFIRMED → REMEDIATE with severity CRITICAL. Wrong answer key in learner pool. This auto-triggers an emergency governance event.",
+      "all_gates_pass_but_unprocessed": "Item with no defects and question_state 'Unprocessed' → READY for certification. This is the ideal pipeline state.",
+      "all_gates_pass_but_certified": "Item already Certified with no new defects → READY_DELTA. No review needed unless content_hash change detected."
+    }
+  },
+
+  "readiness_score_algorithm": {
+    "description": "Per-item 0-100 numeric score computed from gate results. Used for session prioritization — highest-scoring items processed first. Zero score = auto-blocked from certification.",
+    "algorithm": {
+      "base_score": 100,
+      "deductions": [
+        {"condition": "QID missing → BLOCKED → score 0", "penalty": "auto_zero"},
+        {"condition": "CC missing → BLOCKED → score 0", "penalty": "auto_zero"},
+        {"condition": "JSON parse failure → BLOCKED → score 0", "penalty": "auto_zero"},
+        {"condition": "DL-008 present (EW[CC] non-empty)", "penalty": -50},
+        {"condition": "DL-026 present (any empty non-CC EW slot)", "penalty": -30},
+        {"condition": "DL-021 present (any absent non-CC EW field)", "penalty": -35},
+        {"condition": "DL-016 SEVERE (EW text describes wrong topic)", "penalty": -40},
+        {"condition": "DL-016 MODERATE (ChoiceA-D ≠ Choices.A-D)", "penalty": -10},
+        {"condition": "DL-013 Pattern A (standalone boilerplate)", "penalty": -15},
+        {"condition": "DL-030 CONFIRMED (wrong answer key)", "penalty": "auto_zero"},
+        {"condition": "DL-030 SUSPECT (possible wrong answer key)", "penalty": -40},
+        {"condition": "Identity unclassified (IDENTITY_WARN)", "penalty": -5},
+        {"condition": "EV3 citation missing (non-Remember/Understand)", "penalty": -5}
+      ],
+      "floor": 0,
+      "no_negative": "max(0, base_score - sum(penalties))"
+    },
+    "tier_mapping": {
+      "90-100": "GREEN — Ready for certification board",
+      "70-89": "YELLOW — Ready with warnings; minor fixes recommended",
+      "40-69": "ORANGE — Remediation required before certification",
+      "0-39": "RED — Blocked; structural defects present"
+    }
+  },
+
+  "board_visibility_rules": {
+    "description": "Determines which items appear in which board's review queue. REMEDIATE and BLOCKED items are invisible to Quality and Certification boards — they cannot be reviewed or certified. This is the mechanism that eliminates the 89.5% readiness failure rate.",
+    "quality_board": {
+      "visible": ["READY", "MINOR_FIX"],
+      "hidden": ["REMEDIATE", "BLOCKED"],
+      "display_as": "READY items show with full detail. MINOR_FIX items show with warning badges listing the specific SOFT_FAIL reasons."
+    },
+    "certification_board": {
+      "visible": ["READY", "MINOR_FIX"],
+      "hidden": ["REMEDIATE", "BLOCKED"],
+      "display_as": "READY items show with CERTIFIABLE flag. MINOR_FIX items show with DEFERRED flag — can be certified but warnings must be acknowledged."
+    },
+    "governance_board": {
+      "visible": ["READY", "MINOR_FIX", "REMEDIATE", "BLOCKED"],
+      "display_as": "Full inventory visibility. REMEDIATE items shown with defect severity. BLOCKED items shown with block reason."
+    },
+    "registry_board": {
+      "visible": ["READY", "MINOR_FIX", "REMEDIATE", "BLOCKED"],
+      "display_as": "Full inventory. Registry tracks all items regardless of readiness."
+    }
+  },
+
+  "session_plan_generation": {
+    "description": "Generates a prioritized work plan for the session based on readiness classifications. Items are sorted by priority score — highest urgency first.",
+    "priority_rules": [
+      {"priority": 1, "condition": "Certified items with DL-008", "label": "P0 — learner pool exposure, structural defect", "max_batch_size": 30},
+      {"priority": 2, "condition": "Certified items with DL-030 CONFIRMED", "label": "P0 — wrong answer key in learner pool", "max_batch_size": 30},
+      {"priority": 3, "condition": "Certified items with DL-026", "label": "P1 — learner pool exposure, missing distractor explanation", "max_batch_size": 30},
+      {"priority": 4, "condition": "In Audit items with DL-008", "label": "P2 — blocking certification, structural defect", "max_batch_size": 28},
+      {"priority": 5, "condition": "Unprocessed items with DL-026", "label": "P2 — blocking certification, empty distractor slot", "max_batch_size": 28},
+      {"priority": 6, "condition": "All READY items (no defects)", "label": "P3 — certification-ready", "max_batch_size": 50},
+      {"priority": 7, "condition": "MINOR_FIX items", "label": "P4 — minor editorial issues", "max_batch_size": 50}
+    ]
+  },
+
+  "readiness_report_generation": {
+    "output_file": "reports/_{SESSION_ID}_READINESS_REPORT.json",
+    "schema": {
+      "session_id": "str",
+      "generated_at": "ISO 8601",
+      "pool_summary": {
+        "total_items": "int",
+        "certified": "int",
+        "in_audit": "int",
+        "unprocessed": "int",
+        "editorial_queue": "int",
+        "archived": "int"
+      },
+      "readiness_distribution": {
+        "READY": "int",
+        "MINOR_FIX": "int",
+        "REMEDIATE": "int",
+        "BLOCKED": "int"
+      },
+      "gate_results": {
+        "gateNeg1": {"passed": "int", "blocked": "int", "warned": "int"},
+        "gate0": {"passed": "int", "failed": "int"},
+        "gate1": {"passed": "int", "hard_failed": "int", "certified_hard_failed": "int"},
+        "gate2": {"passed": "int", "soft_failed": "int", "warned": "int"},
+        "gate3": {"passed": "int", "hard_failed": "int"},
+        "gate4": {"passed": "int", "soft_failed": "int", "warned": "int"}
+      },
+      "defect_inventory": {
+        "dl008": {"total": "int", "certified": "int"},
+        "dl010": {"suspects": "int"},
+        "dl013": {"total_fields": "int", "unique_qids": "int"},
+        "dl016": {"total": "int", "severe": "int"},
+        "dl026": {"total": "int", "certified": "int"},
+        "dl030": {"confirmed": "int", "suspects": "int"},
+        "dl031": {"inflated": "int"}
+      },
+      "session_plan": {
+        "estimated_batches": "int",
+        "estimated_items": "int",
+        "priority_order": ["P0", "P1", "P2", "P3", "P4"],
+        "per_pack_breakdown": {"A": {"READY": "int", "MINOR_FIX": "int", "REMEDIATE": "int", "BLOCKED": "int"}}
+      },
+      "governance_flags": {
+        "learner_pool_exposure": "bool",
+        "wrong_answer_key_in_pool": "bool",
+        "identity_ambiguity_detected": "bool",
+        "corruption_detected": "bool"
+      }
+    }
+  },
+
+  "phase_gate_verification": {
+    "description": "Verifies that readiness metrics meet Framework v2 phase authorization thresholds. Uses the BF (Board F) metrics defined in SESSION203_THROUGHPUT_VALIDATION.json.",
+    "exports": {"verifyS830(readinessReport, v1Baseline)": "Returns { pass, failures, recommendations }", "verifyS900(readinessReport)": "Returns { pass, failures, recommendations }", "verifyS910(readinessReport)": "Returns { pass, failures, recommendations }"},
+    "s830_thresholds": {
+      "bf004_readiness_failure": "<44.7% (≥50% improvement from 89.5% v1 baseline)",
+      "bf007_identity_ambiguity": "ELIMINATED (0 disputes, 0 phantoms, 0 targeting failures)",
+      "bf005_duplicate_review": "<1.25 (≥50% improvement from 2.5:1 v1 baseline)",
+      "bf003_reports_per_session": "<4.5 (≥50% improvement from 9 v1 baseline)",
+      "all_bf_metrics": "All 10 BF metrics ≥20% improved"
+    },
+    "s900_thresholds": {
+      "bf004_readiness_failure": "<10%",
+      "bf005_duplicate_review": "<1.3:1",
+      "bf006_re_review_rate": "<25%",
+      "bf008_sessions_per_wave": "≤2"
+    },
+    "s910_thresholds": {
+      "bf003_reports_per_session": "≤4 (hard cap, block if >8)",
+      "bf010_consumption_rate": ">80%"
+    }
+  },
+
+  "mid_session_drift_check": {
+    "description": "At session Tmid (~30 minutes), the Readiness Engine re-checks readiness classifications against current pack-file state. If any item's classification changed (e.g., DL-008 appeared on a previously-clean item), the pipeline halts for reconciliation.",
+    "trigger": "Tmid checkpoint per AGENTS.md §13.1",
+    "checks": [
+      "Re-run Gate 1 structural scans → compare to T0 artifacts",
+      "If any item's EW_Pattern changed → flag DRIFT_DETECTED",
+      "If any item's question_state changed without corresponding REVISION_HISTORY.md entry → flag UNAUTHORIZED_STATE_CHANGE",
+      "If any item gained a HARD_BLOCK defect → escalate — possible concurrent-write overwrite (DL-019 pattern)"
+    ],
+    "on_drift": "HALT all write agents. Spawn governance agent. Run G1-G5 reconciliation (per Session 31 runbook). Resolve before proceeding."
+  },
+
+  "implementation_notes": {
+    "stateless": "Readiness Engine is stateless — it consumes scan artifacts and produces classification. No internal state between invocations.",
+    "cache_strategy": "Scan artifacts are read once and cached in memory for the session. Readiness classifications are recomputed on any artifact change.",
+    "governance_hooks": "The session plan output is consumed by Governance Board. The readiness report is consumed by Certification Board. Phase gate verification results are consumed by the session arbiter."
+  }
+}

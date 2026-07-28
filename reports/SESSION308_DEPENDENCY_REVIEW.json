@@ -1,0 +1,54 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "crossTrackLinks": [
+    {
+      "from": "300-series S307",
+      "to": "800-series Waves 1-5",
+      "type": "INPUT",
+      "detail": "Risk register, sequencing, resource allocation feed 800-series execution"
+    },
+    {
+      "from": "300-series S308",
+      "to": "800-series S801",
+      "type": "INPUT",
+      "detail": "Forecast engine provides capacity model for Wave 1 planning"
+    },
+    {
+      "from": "800-series Wave 1 (DL-008)",
+      "to": "700-series S722A",
+      "type": "UNBLOCKS",
+      "detail": "DL-008=0 is prerequisite for 700-series closure audit"
+    },
+    {
+      "from": "800-series Wave 1 (DL-008)",
+      "to": "800-series Waves 2-5",
+      "type": "UNBLOCKS",
+      "detail": "PR-1 satisfied → remaining waves proceed"
+    },
+    {
+      "from": "800-series Wave 3 (E/F cert)",
+      "to": "300-series forecast",
+      "type": "VALIDATES",
+      "detail": "Certification velocity confirms/refutes forecast model"
+    },
+    {
+      "from": "500-series ENHANCED cases",
+      "to": "EW Phase 1",
+      "type": "PARALLEL",
+      "detail": "No dependency — case files only; EW work is on different files"
+    },
+    {
+      "from": "700-series closure",
+      "to": "Governance attestation",
+      "type": "SEQUENTIAL",
+      "detail": "S723 closure must precede final governance sweep"
+    }
+  ],
+  "schedulingLogic": "VALID — dependencies form a clean directed graph. DL-008 is the single bottleneck. Once cleared, all other tracks can execute in parallel with lane-isolated file scopes.",
+  "recommendations": [
+    "Clear DL-008 as solo Phase 1 (3 sessions) — highest-leverage single action",
+    "After DL-008, maximize parallelism: 800-series Wave 2 || 500-series cases || 300-series closure",
+    "Wave 3 (E/F cert) is the longest sequential block — start as soon as Wave 2 completes",
+    "EW Phase 1 (case-bank) can run fully parallel to Wave 3 — disjoint file scopes"
+  ]
+}

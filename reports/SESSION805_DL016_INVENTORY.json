@@ -1,0 +1,1172 @@
+{
+  "session": "805",
+  "agent": "B",
+  "date": "2026-07-26",
+  "certified_count": 58,
+  "total_section_e": 58,
+  "inventory": [
+    {
+      "qid": "P1-E-001",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-001",
+        "state": "Certified",
+        "ewa": "External audits provide independent assurance but are detective in nature and occur after the fact. COSO Principle 16 (m",
+        "ewb": "Removing documentation to speed processing directly contradicts COSO Principle 3, which requires management to establish",
+        "ewc": "Capital budgeting is a Part 2 topic involving long-term investment decisions, not an internal control matter. Classifyin",
+        "ewd": "",
+        "ewa_len": 645,
+        "ewb_len": 585,
+        "ewc_len": 491,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-002",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-002",
+        "state": "Certified",
+        "ewa": "Removing documentation to speed processing directly contradicts COSO Principle 12, which states that management should d",
+        "ewb": "Waiting for the external audit before designing any internal control abdicates management's responsibility under COSO Pr",
+        "ewc": "Capital budgeting is a Part 2 topic involving long-term investment decision analysis. Classifying a risk assessment matt",
+        "ewd": "",
+        "ewa_len": 609,
+        "ewb_len": 541,
+        "ewc_len": 536,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-003",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-003",
+        "state": "Certified",
+        "ewa": "Granting the purchasing manager unlimited spending authority would remove a necessary segregation of duties and approval",
+        "ewb": "Eliminating the approval threshold entirely abandons the preventive control rather than fixing the circumvention method.",
+        "ewc": "",
+        "ewd": "Allowing the second manager to also split purchase orders would compound the control weakness rather than fix it. COSO P",
+        "ewa_len": 547,
+        "ewb_len": 615,
+        "ewc_len": 0,
+        "ewd_len": 590
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-004",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-004",
+        "state": "Certified",
+        "ewa": "Relying on trust and removing documentation directly violates COSO Principle 13, which requires relevant, quality inform",
+        "ewb": "",
+        "ewc": "Capital budgeting is a Part 2 topic involving the evaluation of long-term investment proposals using techniques such as ",
+        "ewd": "Deferring control design until the external audit contradicts COSO Principle 13 on management's responsibility for infor",
+        "ewa_len": 537,
+        "ewb_len": 0,
+        "ewc_len": 546,
+        "ewd_len": 480
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-005",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-005",
+        "state": "Certified",
+        "ewa": "Waiting for the external audit before designing any internal control reverses the proper sequence under COSO. Principle ",
+        "ewb": "",
+        "ewc": "Removing documentation to speed processing directly contradicts COSO Principle 16, which requires evaluations to be supp",
+        "ewd": "Capital budgeting is a Part 2 topic that evaluates long-term investment decisions. Monitoring activities belong to the C",
+        "ewa_len": 599,
+        "ewb_len": 0,
+        "ewc_len": 473,
+        "ewd_len": 412
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-006",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-006",
+        "state": "Certified",
+        "ewa": "Capital budgeting is a Part 2 topic involving the evaluation of long-term investments using discounted cash flow techniq",
+        "ewb": "Removing documentation to speed processing violates COSO Principle 10, which requires policies and procedures to be docu",
+        "ewc": "",
+        "ewd": "Waiting for the external audit before designing internal controls reverses management's responsibility under COSO. Segre",
+        "ewa_len": 465,
+        "ewb_len": 582,
+        "ewc_len": 0,
+        "ewd_len": 541
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-007",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-007",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "A physical inventory count verifies quantities on hand at a point in time but is a detective control that operates after",
+        "ewc": "Post-payment audits are detective controls under COSO Principle 16 (monitoring) that identify improper payments after di",
+        "ewd": "Vendor master file review is a control activity that helps ensure only legitimate vendors are added to the system. Howev",
+        "ewa_len": 0,
+        "ewb_len": 535,
+        "ewc_len": 522,
+        "ewd_len": 507
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-008",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-008",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "$52,000 is the unadjusted bank statement balance. Under COSO Principle 10, the reconciliation process requires adjusting",
+        "ewc": "$45,000 is the unadjusted book balance. The reconciliation process under COSO Principle 10 requires adjusting the book b",
+        "ewd": "This result incorrectly adds deposits in transit to the bank balance without deducting outstanding checks ($52,000 + $3,",
+        "ewa_len": 0,
+        "ewb_len": 449,
+        "ewc_len": 444,
+        "ewd_len": 446
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-009",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-009",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Capital budgeting is a Part 2 topic that evaluates long-term investment decisions. Corrective controls belong to COSO's ",
+        "ewc": "Relying on trust and removing documentation directly contradicts COSO Principle 10, which requires control activities to",
+        "ewd": "Waiting for the external audit before designing internal controls wrongly places responsibility for control design on th",
+        "ewa_len": 0,
+        "ewb_len": 466,
+        "ewc_len": 496,
+        "ewd_len": 511
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-010",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-010",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Waiting for the external audit before designing any internal control is inconsistent with COSO Principle 10, which place",
+        "ewc": "Capital budgeting is a Part 2 topic involving long-term investment analysis. Physical safeguards over inventory are cont",
+        "ewd": "Removing documentation directly undermines the effectiveness of physical safeguards. Under COSO Principle 10, control ac",
+        "ewa_len": 0,
+        "ewb_len": 625,
+        "ewc_len": 447,
+        "ewd_len": 511
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-011",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-011",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Capital budgeting is a Part 2 topic involving investment decision analysis. Payroll master file access controls are COSO",
+        "ewc": "Waiting for the external audit before designing internal controls inappropriately defers management's responsibility und",
+        "ewd": "Removing documentation to speed processing contradicts COSO Principle 11, which requires that general controls over tech",
+        "ewa_len": 0,
+        "ewb_len": 302,
+        "ewc_len": 496,
+        "ewd_len": 531
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-012",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-012",
+        "state": "Certified",
+        "ewa": "Capital budgeting is a Part 2 topic involving long-term investment evaluation. Change management is a COSO Principle 11 ",
+        "ewb": "Removing documentation to speed processing directly contradicts the purpose of change management under COSO Principle 11",
+        "ewc": "",
+        "ewd": "Waiting for the external audit before designing any internal control reverses the proper sequence under COSO. Management",
+        "ewa_len": 375,
+        "ewb_len": 500,
+        "ewc_len": 0,
+        "ewd_len": 470
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-013",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-013",
+        "state": "Certified",
+        "ewa": "Capital budgeting is a Part 2 topic involving the evaluation of long-term investments. The distinction between IT genera",
+        "ewb": "",
+        "ewc": "Waiting for the external audit before designing internal controls misplaces the responsibility for IT control design. Un",
+        "ewd": "Removing documentation to speed processing undermines both ITGCs and application controls. COSO Principle 11 requires do",
+        "ewa_len": 364,
+        "ewb_len": 0,
+        "ewc_len": 456,
+        "ewd_len": 481
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-014",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-014",
+        "state": "Certified",
+        "ewa": "Waiting for the external audit before designing any internal control contradicts COSO Principle 11, which requires manag",
+        "ewb": "",
+        "ewc": "Capital budgeting is a Part 2 topic evaluating long-term investments. Input validation edit checks are COSO Principle 11",
+        "ewd": "Removing documentation to speed processing contradicts COSO Principle 11, which requires documented control activities. ",
+        "ewa_len": 538,
+        "ewb_len": 0,
+        "ewc_len": 327,
+        "ewd_len": 507
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-015",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-015",
+        "state": "Certified",
+        "ewa": "Capital budgeting is a Part 2 topic that evaluates long-term investment proposals. Three-way matching is a COSO Principl",
+        "ewb": "Waiting for the external audit before designing any internal control is inconsistent with COSO Principle 10, which requi",
+        "ewc": "",
+        "ewd": "Removing documentation to speed processing would eliminate the very documents (purchase order, receiving report, vendor ",
+        "ewa_len": 372,
+        "ewb_len": 452,
+        "ewc_len": 0,
+        "ewd_len": 532
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-016",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-016",
+        "state": "Certified",
+        "ewa": "Capital budgeting is a Part 2 topic evaluating long-term investment decisions. Vendor master file maintenance is a COSO ",
+        "ewb": "Waiting for the external audit before designing any internal control incorrectly shifts responsibility for vendor file c",
+        "ewc": "",
+        "ewd": "Removing documentation to speed processing would eliminate the audit trail for vendor setup and changes, making it impos",
+        "ewa_len": 332,
+        "ewb_len": 493,
+        "ewc_len": 0,
+        "ewd_len": 506
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-017",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-017",
+        "state": "Certified",
+        "ewa": "Waiting for the external audit before designing any internal control would leave blank checks unsecured for an extended ",
+        "ewb": "Removing documentation to speed processing directly contradicts COSO Principle 10, which requires control activities to ",
+        "ewc": "Capital budgeting is a Part 2 topic evaluating long-term investment proposals. Blank check custody is a COSO Principle 1",
+        "ewd": "",
+        "ewa_len": 440,
+        "ewb_len": 500,
+        "ewc_len": 381,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-018",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-018",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Relying on trust and removing documentation eliminates evidence of credit review and creates an uncontrolled environment",
+        "ewc": "Customer credit approval is an internal control activity within the revenue cycle, not a capital budgeting decision. Cap",
+        "ewd": "Waiting for the external audit before designing internal controls reflects a fundamental misunderstanding of management'",
+        "ewa_len": 0,
+        "ewb_len": 497,
+        "ewc_len": 504,
+        "ewd_len": 523
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-019",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-019",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Relying on trust and removing documentation eliminates the audit trail that prenumbered shipping documents provide. Unde",
+        "ewc": "Waiting for the external audit before designing controls misstates management's ongoing responsibility. Under COSO Princ",
+        "ewd": "Shipping document prenumbering is an internal control activity over the revenue cycle, not a capital budgeting issue eva",
+        "ewa_len": 0,
+        "ewb_len": 540,
+        "ewc_len": 542,
+        "ewd_len": 563
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-020",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-020",
+        "state": "Certified",
+        "ewa": "Relying on trust without documentation eliminates the evidence needed to demonstrate that reconciliations were performed",
+        "ewb": "",
+        "ewc": "Monthly account reconciliation is an internal control activity that supports the accuracy of financial reporting, not a ",
+        "ewd": "Waiting for the external audit to design internal controls reverses the proper order of responsibility. Under COSO Princ",
+        "ewa_len": 542,
+        "ewb_len": 0,
+        "ewc_len": 567,
+        "ewd_len": 540
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-021",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-021",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Relying on trust and removing documentation creates an environment where management override is even harder to detect. U",
+        "ewc": "Management override risk is a fundamental internal control limitation addressed within the COSO framework and SOX requir",
+        "ewd": "Waiting for the external audit to address management override risk is incorrect because override risk is inherent in eve",
+        "ewa_len": 0,
+        "ewb_len": 565,
+        "ewc_len": 608,
+        "ewd_len": 615
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-022",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-022",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Relying on trust and removing documentation creates, rather than reduces, fraud opportunity. Under COSO Principle 12, co",
+        "ewc": "Waiting for the external audit to design internal controls is inconsistent with COSO Principle 5, which assigns manageme",
+        "ewd": "Fraud opportunity reduction is an internal control and fraud risk management topic addressed within the COSO framework a",
+        "ewa_len": 0,
+        "ewb_len": 616,
+        "ewc_len": 659,
+        "ewd_len": 663
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-023",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-023",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Relying on trust and removing documentation is fundamentally incompatible with SOX Section 404 requirements. Under SOX, ",
+        "ewc": "SOX management assessment of internal control over financial reporting is a Part 1 regulatory compliance and internal co",
+        "ewd": "Waiting for the external audit to design internal controls reverses the statutory responsibility established by SOX. Sec",
+        "ewa_len": 0,
+        "ewb_len": 610,
+        "ewc_len": 567,
+        "ewd_len": 602
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-024",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-024",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Relying on trust and removing documentation is itself a control deficiency — it does not help evaluate or classify defic",
+        "ewc": "Waiting for the external audit to classify control deficiencies is incorrect — management has the primary responsibility",
+        "ewd": "Control deficiency classification is a fundamental internal control evaluation topic under the COSO framework and SOX re",
+        "ewa_len": 0,
+        "ewb_len": 605,
+        "ewc_len": 643,
+        "ewd_len": 607
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-025",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-025",
+        "state": "Certified",
+        "ewa": "Waiting for the external audit before designing any internal control is inconsistent with management's ongoing responsib",
+        "ewb": "Relying on trust and removing documentation is especially dangerous in a small office where segregation of duties is alr",
+        "ewc": "Compensating controls for small offices are an internal control topic addressed within the COSO framework's control acti",
+        "ewd": "",
+        "ewa_len": 529,
+        "ewb_len": 594,
+        "ewc_len": 594,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-026",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-026",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Relying on trust and removing documentation directly contradicts the role of internal audit, which depends on documented",
+        "ewc": "Waiting for the external audit before designing any internal control misstates the distinct roles of external and intern",
+        "ewd": "Internal audit independence and its reporting relationship to the board or audit committee is a core internal control an",
+        "ewa_len": 0,
+        "ewb_len": 516,
+        "ewc_len": 575,
+        "ewd_len": 605
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-027",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-027",
+        "state": "Certified",
+        "ewa": "Waiting for the external audit before designing any internal control reverses the proper sequence: controls must be desi",
+        "ewb": "External audit reliance on internal controls is an auditing and internal control topic addressed within the COSO framewo",
+        "ewc": "",
+        "ewd": "Relying on trust and removing documentation is incompatible with the external auditor's ability to rely on internal cont",
+        "ewa_len": 658,
+        "ewb_len": 578,
+        "ewc_len": 0,
+        "ewd_len": 634
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-028",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-028",
+        "state": "Certified",
+        "ewa": "Waiting for the external audit before designing internal controls reverses the proper sequence — controls must exist and",
+        "ewb": "",
+        "ewc": "Relying on trust and removing documentation is the opposite of proper control documentation. Under COSO Principle 12, co",
+        "ewd": "Documentation of control performance is a core internal control concept within the COSO framework's control activities a",
+        "ewa_len": 612,
+        "ewb_len": 0,
+        "ewc_len": 557,
+        "ewd_len": 590
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-029",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-029",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Continuous monitoring dashboards are internal control monitoring tools under COSO Principle 16 — not a capital budgeting",
+        "ewc": "Waiting for the external audit to design internal controls is inconsistent with the continuous nature of monitoring. Und",
+        "ewd": "Relying on trust and removing documentation contradicts the purpose of continuous monitoring, which depends on data, ind",
+        "ewa_len": 0,
+        "ewb_len": 550,
+        "ewc_len": 563,
+        "ewd_len": 561
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-030",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-030",
+        "state": "Certified",
+        "ewa": "Data backup and recovery controls are technology general controls within the COSO framework's control activities compone",
+        "ewb": "",
+        "ewc": "Waiting for the external audit to design internal controls is incorrect because backup and recovery must operate continu",
+        "ewd": "Relying on trust and removing documentation is antithetical to data backup controls, which require systematic, documente",
+        "ewa_len": 536,
+        "ewb_len": 0,
+        "ewc_len": 617,
+        "ewd_len": 623
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-031",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-031",
+        "state": "Certified",
+        "ewa": "Disaster recovery testing is a technology general control and business continuity activity under COSO Principle 11 — not",
+        "ewb": "Relying on trust without testing or documentation is the exact problem that disaster recovery testing is designed to add",
+        "ewc": "",
+        "ewd": "Waiting for the external audit to design internal controls is incorrect. Under COSO Principle 5, management is responsib",
+        "ewa_len": 632,
+        "ewb_len": 667,
+        "ewc_len": 0,
+        "ewd_len": 556
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-032",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-032",
+        "state": "Certified",
+        "ewa": "Privacy access restriction is a control activity within the COSO framework's control activities and information security",
+        "ewb": "Waiting for the external audit to design internal controls is incorrect. Under COSO Principle 5, management is responsib",
+        "ewc": "",
+        "ewd": "Relying on trust and removing documentation is incompatible with effective privacy access controls. Under COSO Principle",
+        "ewa_len": 594,
+        "ewb_len": 622,
+        "ewc_len": 0,
+        "ewd_len": 666
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-033",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-033",
+        "state": "Certified",
+        "ewa": "Whistleblower channels are a governance and internal control mechanism required by SOX Section 301 and embedded in COSO ",
+        "ewb": "Relying on trust and removing documentation undermines the very purpose of a whistleblower channel, which depends on con",
+        "ewc": "Waiting for the external audit to design controls is incorrect because whistleblower channels must be available continuo",
+        "ewd": "",
+        "ewa_len": 657,
+        "ewb_len": 696,
+        "ewc_len": 704,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-034",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-034",
+        "state": "Certified",
+        "ewa": "Audit committee oversight is a corporate governance and internal control requirement under COSO Principle 2 and SOX Sect",
+        "ewb": "Waiting for the external audit to design internal controls reverses the proper governance structure. Under COSO Principl",
+        "ewc": "Relying on trust and removing documentation is antithetical to effective audit committee oversight. Under COSO Principle",
+        "ewd": "",
+        "ewa_len": 676,
+        "ewb_len": 701,
+        "ewc_len": 672,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-035",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-035",
+        "state": "Certified",
+        "ewa": "Waiting for the external audit delays control remediation and is inconsistent with COSO Principle 16, which requires man",
+        "ewb": "Remediation tracking is an internal control monitoring activity under COSO, not a Part 2 capital budgeting matter. Miscl",
+        "ewc": "",
+        "ewd": "COSO Principle 12 requires the organization to deploy control activities through policies that establish what is expecte",
+        "ewa_len": 461,
+        "ewb_len": 333,
+        "ewc_len": 0,
+        "ewd_len": 400
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-036",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-036",
+        "state": "Certified",
+        "ewa": "Recording receipts only after customer complaints is not a control; it delays detection and leaves completeness of cash ",
+        "ewb": "",
+        "ewc": "Giving the same employee write-off approval adds an authorization conflict and could help conceal stolen receipts.",
+        "ewd": "Delaying deposits increases safeguarding risk and does not address the custody-recordkeeping conflict.",
+        "ewa_len": 140,
+        "ewb_len": 0,
+        "ewc_len": 114,
+        "ewd_len": 102
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-037",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-037",
+        "state": "Certified",
+        "ewa": "",
+        "ewb": "Verbal approvals without documentation violate COSO Principle 12, which requires that control activities be deployed thr",
+        "ewc": "Classifying split purchases as favorable spending variances mischaracterizes a control circumvention as a performance re",
+        "ewd": "Raising approval limits without review weakens the authorization control under COSO Principle 11, which requires that tr",
+        "ewa_len": 0,
+        "ewb_len": 429,
+        "ewc_len": 409,
+        "ewd_len": 377
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-038",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-038",
+        "state": "Certified",
+        "ewa": "Disabling invoice-number validation removes a key automated preventive control. Under COSO Principle 10, technology-base",
+        "ewb": "Having payment preparers review only their own work lacks independence, violating the segregation-of-duties principle un",
+        "ewc": "Recording duplicate payments as prepaid expenses without follow-up misstates the accounting and fails to address the con",
+        "ewd": "",
+        "ewa_len": 469,
+        "ewb_len": 390,
+        "ewc_len": 401,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-039",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-039",
+        "state": "Certified",
+        "ewa": "Allowing supervisors to keep former employees active in payroll for convenience violates COSO Principle 11, which requir",
+        "ewb": "Annual audit review is a detective control that operates too infrequently for payroll disbursements. Under COSO Principl",
+        "ewc": "",
+        "ewd": "Informal emails do not constitute reliable evidence of control performance. Under COSO Principle 12, control activities ",
+        "ewa_len": 399,
+        "ewb_len": 425,
+        "ewc_len": 0,
+        "ewd_len": 419
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-040",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-040",
+        "state": "Certified",
+        "ewa": "Classifying inventory shortages as sales discounts misrepresents the nature of the transaction and obscures the control ",
+        "ewb": "Writing off shortages without investigation fails to address the underlying control weakness. COSO Principle 10 requires",
+        "ewc": "Stopping cycle counts because they reveal problems removes a critical detective control and worsens inventory safeguardi",
+        "ewd": "",
+        "ewa_len": 422,
+        "ewb_len": 436,
+        "ewc_len": 405,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-041",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-041",
+        "state": "Certified",
+        "ewa": "Shared administrator accounts destroy individual accountability, violating COSO Principle 11 on segregation of duties an",
+        "ewb": "",
+        "ewc": "Disabling logs removes the evidence needed for monitoring and detective controls. COSO Principle 16 requires the organiz",
+        "ewd": "Trust is not a control under the COSO framework. COSO Principle 11 requires objective segregation and access restriction",
+        "ewa_len": 509,
+        "ewb_len": 0,
+        "ewc_len": 393,
+        "ewd_len": 397
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-042",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-042",
+        "state": "Certified",
+        "ewa": "Payment completion does not validate the authorization control. Under COSO Principle 17, recurring exceptions must be ev",
+        "ewb": "Deleting exception reports removes the monitoring evidence needed for control evaluation. COSO Principle 16 requires tha",
+        "ewc": "Moving approval to the person who enters invoices creates a segregation-of-duties conflict under COSO Principle 11. The ",
+        "ewd": "",
+        "ewa_len": 487,
+        "ewb_len": 418,
+        "ewc_len": 400,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-043",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-043",
+        "state": "Certified",
+        "ewa": "System access alone proves only that a user could enter the system, not that a specific review was performed or that exc",
+        "ewb": "Deleting evidence undermines both the control environment component and the monitoring component of the COSO framework. ",
+        "ewc": "",
+        "ewd": "Oral statements after year-end are weak evidence that cannot demonstrate timely control performance. COSO Principle 12 e",
+        "ewa_len": 413,
+        "ewb_len": 429,
+        "ewc_len": 0,
+        "ewd_len": 405
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-044",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-044",
+        "state": "Certified",
+        "ewa": "No internal control, including segregation of duties and independent bank reconciliation, can guarantee that fraud will ",
+        "ewb": "",
+        "ewc": "A bank reconciliation is an important detective control but operates as part of a system of controls under the COSO fram",
+        "ewd": "Segregation of duties and independent reconciliation are fundamental internal control practices applicable to organizati",
+        "ewa_len": 455,
+        "ewb_len": 0,
+        "ewc_len": 454,
+        "ewd_len": 542
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-045",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-045",
+        "state": "Certified",
+        "ewa": "Bank reconciliation is a detective cash control that compares the organization's cash records to the bank statement to i",
+        "ewb": "",
+        "ewc": "Segregation of duties is a foundational COSO Principle 11 concept requiring that incompatible responsibilities (custody,",
+        "ewd": "Variance analysis under COSO Principle 10 is a monitoring and performance measurement tool that compares actual results ",
+        "ewa_len": 436,
+        "ewb_len": 0,
+        "ewc_len": 457,
+        "ewd_len": 452
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-048",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-048",
+        "state": "Certified",
+        "ewa": "A perpetual inventory system does not eliminate the need for physical inventory counts. Under COSO Principle 10, detecti",
+        "ewb": "",
+        "ewc": "No inventory system can automatically prevent all theft. COSO Principle 9 recognizes that internal controls provide reas",
+        "ewd": "Perpetual systems still require reconciliation between physical counts and recorded balances. Under COSO Principle 16, o",
+        "ewa_len": 433,
+        "ewb_len": 0,
+        "ewc_len": 433,
+        "ewd_len": 428
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-052",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-052",
+        "state": "Certified",
+        "ewa": "A lockbox system does not eliminate the need for bank reconciliation. Under COSO Principle 10, multiple control activiti",
+        "ewb": "",
+        "ewc": "A lockbox system may accelerate the processing and availability of customer payments, but it does not guarantee faster c",
+        "ewd": "A lockbox system separates custody of incoming cash from company personnel but does not replace the accounts receivable ",
+        "ewa_len": 469,
+        "ewb_len": 0,
+        "ewc_len": 427,
+        "ewd_len": 433
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-053",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-053",
+        "state": "Certified",
+        "ewa": "Late payment discounts are a treasury management concern related to the timing of cash disbursements, not the primary ri",
+        "ewb": "",
+        "ewc": "Excessive inventory holding costs relate to procurement quantities, demand forecasting, and inventory management practic",
+        "ewd": "Sales tax compliance errors relate to the accuracy of tax calculations and remittances to taxing authorities, not to the",
+        "ewa_len": 456,
+        "ewb_len": 0,
+        "ewc_len": 442,
+        "ewd_len": 459
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-056",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-056",
+        "state": "Certified",
+        "ewa": "Sharing administrator accounts for urgent requests violates the principle of least privilege and creates accountability ",
+        "ewb": "Disabling logs to avoid data overload removes the audit trail that would detect inappropriate access. Logs are a detecti",
+        "ewc": "Permitting access to remain because employees are trusted ignores the control principle that access should be based on j",
+        "ewd": "",
+        "ewa_len": 421,
+        "ewb_len": 341,
+        "ewc_len": 374,
+        "ewd_len": 0
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-076",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-076",
+        "state": "Certified",
+        "ewa": "Option A proposes documenting the finding and deferring action to the next evaluation in 18 months. COSO Principle 17 re",
+        "ewb": "",
+        "ewc": "Option C suggests raising the materiality threshold to $25,000 to reduce the volume of flagged items. This does not reme",
+        "ewd": "Option D suggests terminating the warehouse manager and outsourcing cycle counting to external auditors. Personnel actio",
+        "ewa_len": 547,
+        "ewb_len": 0,
+        "ewc_len": 631,
+        "ewd_len": 615
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-077",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-077",
+        "state": "Certified",
+        "ewa": "Option A references COSO Principle 10, which requires that control activities be deployed to address risks to achieving ",
+        "ewb": "",
+        "ewc": "Option C references Principle 14, which addresses internal communication of control responsibilities. While the organiza",
+        "ewd": "Option D references Principle 5, which requires that the organization holds individuals accountable for their internal c",
+        "ewa_len": 660,
+        "ewb_len": 0,
+        "ewc_len": 590,
+        "ewd_len": 717
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-078",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-078",
+        "state": "Certified",
+        "ewa": "Option A reverses the definition of inherent risk — residual risk, not inherent risk, is the risk that remains after con",
+        "ewb": "",
+        "ewc": "Option C incorrectly asserts that inherent and control risk are the same concept. They are distinct components of the ri",
+        "ewd": "Option D reverses the definitions of inherent and control risk, and further asserts that the distinction is irrelevant i",
+        "ewa_len": 472,
+        "ewb_len": 0,
+        "ewc_len": 569,
+        "ewd_len": 656
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-079",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-079",
+        "state": "Certified",
+        "ewa": "Option A incorrectly claims that monitoring only applies to financial reporting controls. COSO's internal control framew",
+        "ewb": "Option B asserts that only separate evaluations can detect control design flaws. This is incorrect — ongoing monitoring ",
+        "ewc": "",
+        "ewd": "Option D incorrectly equates ongoing and separate evaluations. They are complementary, not redundant. Ongoing monitoring",
+        "ewa_len": 498,
+        "ewb_len": 643,
+        "ewc_len": 0,
+        "ewd_len": 546
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-080",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-080",
+        "state": "Certified",
+        "ewa": "Option A proposes a policy requiring two signatures on deposit slips above $5,000. While dual authorization is a valid c",
+        "ewb": "Option B references COSO Principle 8, which requires consideration of fraud risk in risk assessment. Fraud risk assessme",
+        "ewc": "",
+        "ewd": "Option D proposes replacing manual posting with automated cash application software. While automation can reduce certain",
+        "ewa_len": 772,
+        "ewb_len": 481,
+        "ewc_len": 0,
+        "ewd_len": 532
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-081",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-081",
+        "state": "Certified",
+        "ewa": "Option A prioritizes based solely on quantifiable dollar impact of $180 in late fees. While financial impact is a releva",
+        "ewb": "",
+        "ewc": "Option C proposes remediating in chronological order of discovery. This is not a risk-based approach. The COSO framework",
+        "ewd": "Option D suggests remediating the simplest deficiency first to demonstrate progress. While demonstrating progress has co",
+        "ewa_len": 587,
+        "ewb_len": 0,
+        "ewc_len": 572,
+        "ewd_len": 592
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-082",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-082",
+        "state": "Certified",
+        "ewa": "Option A asserts no deficiency exists because the change succeeded and the controller authorized it. This reflects outco",
+        "ewb": "",
+        "ewc": "Option C characterizes the controller's action as an abuse of authority requiring audit committee reporting. While manag",
+        "ewd": "Option D categorizes the issue as an operational matter rather than a control deficiency, arguing that month-end deadlin",
+        "ewa_len": 687,
+        "ewb_len": 0,
+        "ewc_len": 741,
+        "ewd_len": 749
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-083",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-083",
+        "state": "Certified",
+        "ewa": "Option A references the receiving department's failure to match packing slips. While a three-way match is a detective co",
+        "ewb": "",
+        "ewc": "Option C suggests that accounts payable should have verified the vendor's tax ID. While tax ID verification, such as IRS",
+        "ewd": "Option D attributes the failure to internal audit not detecting the scheme during its annual review. Internal audit is a",
+        "ewa_len": 595,
+        "ewb_len": 0,
+        "ewc_len": 665,
+        "ewd_len": 672
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    },
+    {
+      "qid": "P1-E-084",
+      "state": "Certified",
+      "hasMetaBlock": true,
+      "hasContentBlock": false,
+      "block1": {
+        "qid": "P1-E-084",
+        "state": "Certified",
+        "ewa": "Option A asserts that quarterly meetings are too frequent. Under SOX and stock exchange standards, quarterly meetings ar",
+        "ewb": "",
+        "ewc": "Option C claims that three members is below the SOX minimum. SOX does not prescribe a specific minimum number of audit c",
+        "ewd": "Option D identifies the CEO's attendance as the only governance issue and asserts that removing the CEO from meetings wo",
+        "ewa_len": 515,
+        "ewb_len": 0,
+        "ewc_len": 425,
+        "ewd_len": 626
+      },
+      "dl016": "INCOMPLETE_BLOCKS",
+      "severity": "UNKNOWN"
+    }
+  ],
+  "status_summary": {
+    "undefined": 58
+  }
+}

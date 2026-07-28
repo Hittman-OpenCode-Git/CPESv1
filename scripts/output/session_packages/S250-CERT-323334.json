@@ -1,0 +1,263 @@
+{
+  "sessionId": "S250-CERT-323334",
+  "sessionType": "CERTIFICATION_SESSION",
+  "generatedTimestamp": "2026-07-27T15:58:10.926Z",
+  "status": "PENDING",
+  "pack": "pack_b",
+  "domains": [
+    "F"
+  ],
+  "qids": [
+    "P1B-F-127",
+    "P1B-F-128",
+    "P1B-F-129",
+    "P1B-F-130",
+    "P1B-F-131",
+    "P1B-F-132",
+    "P1B-F-133",
+    "P1B-F-134",
+    "P1B-F-135",
+    "P1B-F-136",
+    "P1B-F-137",
+    "P1B-F-138",
+    "P1B-F-139",
+    "P1B-F-140",
+    "P1B-F-141",
+    "P1B-F-142",
+    "P1B-F-143",
+    "P1B-F-144",
+    "P1B-F-145",
+    "P1B-F-146",
+    "P1B-F-147",
+    "P1B-F-148",
+    "P1B-F-149",
+    "P1B-F-150"
+  ],
+  "itemCount": 24,
+  "preExecutionChecks": [
+    {
+      "step": "GOVERNANCE_GUARD_RULE_2",
+      "description": "Confirm zero DL-008 on all items",
+      "required": true
+    },
+    {
+      "step": "DL_008_SCAN",
+      "description": "Run ExplanationValidator on target items",
+      "required": true
+    },
+    {
+      "step": "IDENTITY_VALIDATOR",
+      "description": "Run identity_validator.js on target pack",
+      "required": true
+    },
+    {
+      "step": "DL_013_CHECK",
+      "description": "Confirm no DL-013 boilerplate on items",
+      "required": true
+    }
+  ],
+  "verificationDimensions": [
+    {
+      "dimension": 1,
+      "name": "Correctness",
+      "description": "Against GAAP / IFRS / ICMA CSO",
+      "required": true
+    },
+    {
+      "dimension": 2,
+      "name": "Precision",
+      "description": "Internal consistency, unambiguous fact pattern",
+      "required": true
+    },
+    {
+      "dimension": 3,
+      "name": "Difficulty Calibration",
+      "description": "Matches stated tier and LOS depth",
+      "required": true
+    },
+    {
+      "dimension": 4,
+      "name": "Distractor Engineering",
+      "description": "Each distractor maps to real misconception",
+      "required": true
+    },
+    {
+      "dimension": 5,
+      "name": "Blueprint Alignment",
+      "description": "Maps to specific Part 1 CSO LOS",
+      "required": true
+    },
+    {
+      "dimension": 6,
+      "name": "CMA Part 1 Relevance",
+      "description": "In scope, not accidentally Part 2",
+      "required": true
+    }
+  ],
+  "postExecutionChecks": [
+    {
+      "step": "CERTIFIED_POOL_RECOUNT",
+      "description": "Re-count certified items via grep",
+      "required": true
+    },
+    {
+      "step": "REVISION_HISTORY",
+      "description": "Write certification batch entry with before/after counts",
+      "required": true
+    },
+    {
+      "step": "REGISTRY_UPDATE",
+      "description": "Update MASTER_QUESTION_REGISTRY.md if certified count changed",
+      "required": false
+    }
+  ],
+  "itemDetails": [
+    {
+      "qid": "P1B-F-127",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-128",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-129",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-130",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-131",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-132",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-133",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-134",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-135",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-136",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-137",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-138",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-139",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-140",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-141",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-142",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-143",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-144",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-145",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-146",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-147",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-148",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-149",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    },
+    {
+      "qid": "P1B-F-150",
+      "domain": "F",
+      "readinessState": "CERTIFY",
+      "certificationCandidate": false
+    }
+  ],
+  "batchIndex": 18,
+  "totalBatches": 18,
+  "sourceLane": "CERTIFY"
+}

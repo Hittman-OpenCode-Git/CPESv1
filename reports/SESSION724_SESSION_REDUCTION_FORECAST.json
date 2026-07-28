@@ -1,0 +1,65 @@
+{
+  "session": "724",
+  "title": "Session Reduction Forecast — S308 → S309 → 600-Enabled",
+  "generated": "2026-07-26",
+  "agents": ["R", "I", "Q"],
+  "verdict": "S309's 17-session plan is optimal. 600-series is net-negative (-1 to +7 sessions).",
+
+  "forecast_timeline": {
+    "s308_baseline": {
+      "sessions": 30,
+      "description": "Original HYBRID strategy: DL-008 remediation + sequential domain certification + modernization. Contains DL-008 false positives."
+    },
+    "s309_expected": {
+      "sessions": 17,
+      "reduction": "43% from S308",
+      "levers": "DL-008 removed (-3), modernization deferred (-10), E/F parallelized (-4), governance batched (-2), parallel overhead (+6)",
+      "status": "BASELINE — this is the optimal execution plan"
+    },
+    "with_600_expected": {
+      "sessions": 18,
+      "reduction": "40% from S308",
+      "vs_s309": "+1 session (worse)",
+      "levers": "600 startup (+4), cert acceleration (-3), additional governance overhead (+2), handoff rework (+1), minus residual cert savings (-3)",
+      "range": "15 (optimistic) to 24 (conservative)"
+    }
+  },
+
+  "reduction_levers_comparison": {
+    "confirmed_both_scenarios": [
+      {"lever": "DL-008 removal", "sessions_saved": 3, "confidence": "HIGH"},
+      {"lever": "Modernization deferral", "sessions_saved": 10, "confidence": "HIGH"}
+    ],
+    "s309_only": [
+      {"lever": "E/F parallelization", "sessions_saved": 4, "confidence": "HIGH"},
+      {"lever": "Governance batching", "sessions_saved": 2, "confidence": "HIGH"}
+    ],
+    "600_specific_savings": [
+      {"lever": "EW pre-authoring removes inline EW from cert", "sessions_saved": 3, "confidence": "MEDIUM"},
+      {"lever": "Factory model throughput boost", "sessions_saved": 1, "confidence": "LOW"}
+    ],
+    "600_specific_costs": [
+      {"lever": "Infrastructure build + pilot", "sessions_added": 4, "confidence": "HIGH"},
+      {"lever": "3-lane governance overhead", "sessions_added": 2, "confidence": "MEDIUM"},
+      {"lever": "Handoff rework", "sessions_added": 1, "confidence": "MEDIUM"}
+    ]
+  },
+
+  "when_600_becomes_beneficial": {
+    "current_state": "NONE of the breakeven conditions are met",
+    "breakeven_requires": [
+      "Startup cost ≤ 2 sessions (currently 4)",
+      "EW factory velocity ≥ 60 items/session (currently ~50 max)",
+      "600→800 EW acceptance rate ≥ 95% (currently 70-80%)",
+      "Certification acceleration from pre-authored EW ≥ 20% (currently ~10%)"
+    ],
+    "re_evaluation_triggers": [
+      "EW authoring becomes binding constraint on certification throughput",
+      "Portfolio grows to 5,000+ items",
+      "Observed cert velocity drops below 10 items/session",
+      "Post-S309 execution shows EW is actual bottleneck"
+    ]
+  },
+
+  "recommendation": "Execute S309's 17-session plan. No 600-series. Re-evaluate post-certification if modernization batch operations become the binding constraint."
+}

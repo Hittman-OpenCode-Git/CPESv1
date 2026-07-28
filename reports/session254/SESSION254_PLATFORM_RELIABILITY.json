@@ -1,0 +1,198 @@
+{
+  "reportId": "SESSION254_PLATFORM_RELIABILITY",
+  "session": "254",
+  "title": "Platform Reliability Audit — Investigation Engine Stress Test",
+  "generatedTimestamp": "2026-07-27T18:39:00.000Z",
+  "t0Checkpoint": {
+    "certifiedPool": 2298,
+    "governanceGuard": "32/32 PASS",
+    "deepLinkIntegrity": "5/5 PASS (S253)",
+    "packHashes": "15/15 match CURRENT_BASELINES.md"
+  },
+  "overallReliabilityScore": 96,
+  "verdict": "PASS",
+  "engineResults": {
+    "investigationApi": {
+      "agents": "A-B",
+      "validQidsTested": 26,
+      "validQidsPassed": 26,
+      "invalidQidsTested": 4,
+      "edgeCases": {
+        "invalidFormat": "P1-X-999 → INVALID_QID_FORMAT (PASS)",
+        "emptyArg": "(empty) → MISSING_ARGUMENT (PASS)",
+        "rSeries": "P1-E-R33 → OK (PASS)",
+        "qidNotFound": "P1B-B-001 → QID_NOT_FOUND (PASS — correct, Pack B Sections B-E start at 076)"
+      },
+      "score": 100,
+      "verdict": "PASS",
+      "notes": "All 26 valid QIDs return complete 7-section JSON output. Error handling correct for all edge cases. Pack B QID numbering quirk correctly handled (P1B format QIDs exist only at 076+ for Sections B-E)."
+    },
+    "studentExposureIndex": {
+      "agents": "C-D",
+      "scriptStatus": "OPERATIONAL",
+      "dataStatus": "NO_DATA",
+      "cliFlags": ["--student", "--export", "--output", "--help"],
+      "executionResult": "No student data found. Provide --student or --export, or place files in scripts/output/student_exports/.",
+      "gapRegister": [
+        "No student roll (scripts/output/student_roll.json missing)",
+        "No student exports (scripts/output/student_exports/ empty or missing)",
+        "Script expects mayLearnerState JSON export format"
+      ],
+      "score": 80,
+      "verdict": "DATA_GAP",
+      "notes": "Script is structurally complete and correctly handles the no-data case gracefully. All CLI flags validated. The gap is data availability, not script quality."
+    },
+    "challengeTriage": {
+      "agents": "E-F",
+      "totalChallenges": 35,
+      "triaged": 12,
+      "untriaged": 23,
+      "classificationDistribution": {
+        "NEEDS_REVIEW": 6,
+        "GOVERNANCE_ESCALATION": 4,
+        "LIKELY_DEFECT": 1,
+        "UNKNOWN": 1
+      },
+      "priorityDistribution": {
+        "85": 5,
+        "80": 1,
+        "70": 4,
+        "55": 1,
+        "50": 1
+      },
+      "investigationCoverage": "16/35 (46%)",
+      "classificationConsistency": 83,
+      "score": 83,
+      "verdict": "WARN",
+      "notes": "Only 12 of 35 challenges triaged — 23 untriaged. Classification reasonably consistent (matching challenge types get similar categories). Investigation coverage at 46% — most challenges auto-create investigations. Priority scoring: 5 at max 85, none at CRITICAL 90+."
+    },
+    "questionHealth": {
+      "agents": "G-H",
+      "totalQuestions": 2540,
+      "tierDistribution": {
+        "HEALTHY": 2214,
+        "FAIR": 324,
+        "NEEDS_ATTENTION": 2,
+        "CRITICAL": 0
+      },
+      "meanHealthScore": 95,
+      "worst10SpotCheck": [
+        {"qid": "P1-FC-030", "score": 62, "state": "Archived", "defects": ["DL-031"], "matchesRaw": true},
+        {"qid": "P1-BC-065", "score": 69, "state": "Certified", "defects": ["DL-005", "DL-009"], "matchesRaw": true},
+        {"qid": "P1-A-044", "score": 70, "state": "Archived", "defects": [], "matchesRaw": true},
+        {"qid": "P1-A-064", "score": 70, "state": "Archived", "defects": [], "matchesRaw": true},
+        {"qid": "P1-A-022", "score": 73, "state": "Certified", "defects": [], "matchesRaw": true},
+        {"qid": "P1-D-069", "score": 75, "state": "Certified", "defects": [], "matchesRaw": true},
+        {"qid": "P1-EC-018", "score": 76, "state": "Archived", "defects": [], "matchesRaw": true},
+        {"qid": "P1-EC-019", "score": 76, "state": "Archived", "defects": [], "matchesRaw": true},
+        {"qid": "P1-A-029", "score": 78, "state": "Certified", "defects": [], "matchesRaw": true},
+        {"qid": "P1-A-031", "score": 78, "state": "Certified", "defects": [], "matchesRaw": true}
+      ],
+      "scoringModelValidation": {
+        "componentScores": ["defect", "challenge", "recommendation", "certification", "structural", "usage"],
+        "tierThresholds": {"HEALTHY": ">=90", "FAIR": ">=70", "NEEDS_ATTENTION": ">=40", "CRITICAL": "<40"},
+        "validation": "PASS — 10/10 spot-checks match raw pack data"
+      },
+      "score": 100,
+      "verdict": "PASS"
+    },
+    "sessionIntelligence": {
+      "agents": "I-J",
+      "totalSessions": 40,
+      "uniqueQidsLinked": 535,
+      "sessionModes": {
+        "IMPLEMENTATION": 13,
+        "READ_ONLY": 11,
+        "UNKNOWN": 16
+      },
+      "linkIntegrity": {
+        "sessionToQuestion": "535/535 QIDs in question_history (PASS)",
+        "challengeToSession": "0 orphan references (PASS — post-S253)",
+        "sessionToChallenge": "Bidirectional links intact (PASS)"
+      },
+      "score": 100,
+      "verdict": "PASS",
+      "notes": "All 535 unique QIDs across 40 sessions verified in question_history. Post-S253 deep-link remediation confirmed: 0 duplicate sessions, 0 phantom sessions, 0 orphan challenge-to-session mappings."
+    },
+    "investigationRegistry": {
+      "agents": "K-L",
+      "totalInvestigations": 19,
+      "statusDistribution": {
+        "OPEN": 17,
+        "INVESTIGATING": 1,
+        "ACTION_REQUIRED": 0,
+        "RESOLVED": 0,
+        "CLOSED": 1
+      },
+      "typeDistribution": {
+        "CHALLENGE": 16,
+        "DEFECT": 1,
+        "GOVERNANCE": 1,
+        "SYSTEMATIC": 1
+      },
+      "lifecycleCompliance": "19/19 follow valid state transitions",
+      "orphanReferences": 0,
+      "blocking": 17,
+      "defectCoverage": {
+        "DL-008": {"investigations": 16, "open": 15, "closed": 1},
+        "DL-026": {"investigations": 8, "open": 8, "closed": 0},
+        "DL-035": {"investigations": 1, "open": 1, "closed": 0}
+      },
+      "score": 100,
+      "verdict": "PASS",
+      "notes": "All 19 investigations follow valid state transitions. Zero orphan references to challenges, sessions, defects, or recommendations. Most are OPEN (seeded from challenge registry). Single CLOSED investigation has proper resolution."
+    },
+    "crossEngineConsistency": {
+      "agents": "M-R",
+      "registriesValidated": 7,
+      "consistencyScore": 95,
+      "findings": {
+        "qidFormatConsistency": "PASS — all QIDs match known patterns",
+        "packAssignmentConsistency": "PASS — QID→pack correct for all tested",
+        "stateConsistency": "PASS — question_state consistent across registries",
+        "defectCodeConsistency": "PASS — defect codes match DEFECT_LIBRARY.md",
+        "crossReferenceIntegrity": "PASS — all cross-registry references valid post-S253"
+      },
+      "score": 95,
+      "verdict": "PASS"
+    }
+  },
+  "weightedScoreBreakdown": {
+    "investigationApi": {"score": 100, "weight": 20, "weighted": 20.0},
+    "questionHealth": {"score": 100, "weight": 20, "weighted": 20.0},
+    "sessionIntelligence": {"score": 100, "weight": 15, "weighted": 15.0},
+    "challengeTriage": {"score": 83, "weight": 15, "weighted": 12.5},
+    "investigationRegistry": {"score": 100, "weight": 10, "weighted": 10.0},
+    "studentExposure": {"score": 80, "weight": 5, "weighted": 4.0},
+    "crossEngine": {"score": 95, "weight": 15, "weighted": 14.25},
+    "total": {"weighted": 95.8, "rounded": 96}
+  },
+  "stopConditionCheck": {
+    "deepLinkFailure": "PASS — 0 critical findings",
+    "questionHistoryCorruption": "PASS — 2,540 QIDs, state counts consistent",
+    "challengeRegistryCorruption": "PASS — bidirectional links intact",
+    "sessionRegistryCorruption": "PASS — 40 sessions, 0 duplicates, 0 orphans",
+    "investigationReconstructionFailure": "PASS — all 19 investigations traceable",
+    "governanceGuard": "PASS — 32/32"
+  },
+  "openRisks": [
+    {
+      "severity": "MEDIUM",
+      "risk": "Challenge triage coverage at 34% (12/35). 23 challenges untriaged.",
+      "impact": "Admin cannot see routing/disposition for most challenges without manual review.",
+      "remediation": "Run full triage pass on remaining 23 challenges."
+    },
+    {
+      "severity": "LOW",
+      "risk": "16/40 sessions have UNKNOWN mode — not classified by REVISION_HISTORY source.",
+      "impact": "Session dashboard cannot filter by IMPLEMENTATION vs READ-ONLY for 40% of sessions.",
+      "remediation": "Cross-reference UNKNOWN sessions against REVISION_HISTORY.md entries."
+    },
+    {
+      "severity": "LOW",
+      "risk": "Student data gap — no student roll or exports exist.",
+      "impact": "Exposure index engine cannot produce output. Blocks student-facing analytics.",
+      "remediation": "Design canonical student record (S255), populate with actual learner data when available."
+    }
+  ]
+}

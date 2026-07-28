@@ -1,0 +1,46 @@
+{
+  "title": "SESSION316_DUPLICATE_PREVENTION_CERTIFICATION",
+  "session": "S316",
+  "generated": "2026-07-27",
+  "methodology": "Cross-checked all 10 Wave 2 + 10 Wave 3 QIDs against pack_e_corrected.js (520 items), QUESTION_REGISTRY_INDEX.md (2,884 entries), and DUPLICATE_PREVENTION_REPORT.json",
+  "wave2QIDs": [
+    "P1-E-R11",
+    "P1-E-R14",
+    "P1-E-R15",
+    "P1-E-R16",
+    "P1-E-R17",
+    "P1-E-R19",
+    "P1-E-R20",
+    "P1-E-R30",
+    "P1-E-R31",
+    "P1-E-R32"
+  ],
+  "wave3QIDs": [
+    "P1-E-R21",
+    "P1-E-R22",
+    "P1-E-R23",
+    "P1-E-R24",
+    "P1-E-R25",
+    "P1-E-R26",
+    "P1-E-R27",
+    "P1-E-R28",
+    "P1-E-R29",
+    "P1-E-R33"
+  ],
+  "findings": {
+    "packECollisions": {
+      "status": "CLEAN",
+      "detail": "0 of 20 QIDs found in pack_e pre-insertion"
+    },
+    "registryIndexCollisions": {
+      "status": "CLEAN",
+      "detail": "0 of 20 QIDs found in QUESTION_REGISTRY_INDEX.md"
+    },
+    "crossPackCollisions": {
+      "status": "CLEAN",
+      "detail": "0 QIDs found in packs A-D or scored_cases files"
+    }
+  },
+  "gate0Status": "DUPLICATE_PREVENTION_PASS_ALL_20_QIDS",
+  "certification": "All Wave 2 and Wave 3 QIDs receive DUPLICATE_PREVENTION_PASS"
+}

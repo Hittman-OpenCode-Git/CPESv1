@@ -1,0 +1,42 @@
+{
+  "session": "723",
+  "date": "2026-07-26",
+  "title": "Governance Closure & 700-Series Transition — Closure Baseline",
+  "certified_pool": {
+    "total_mcq_items": 2500,
+    "certified_mcq": 2182,
+    "certified_pct": 87.3,
+    "by_pack": { "A": 482, "B": 500, "C": 350, "D": 350, "E": 500 },
+    "uncertified": 318,
+    "archived": 132,
+    "unprocessed": 187
+  },
+  "case_bank": {
+    "total_cases": 75,
+    "total_items": 400,
+    "certified_cases": 75,
+    "certified_items": 400,
+    "files": ["scored_cases.js", "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"]
+  },
+  "defect_status": {
+    "dl008_certified": 0,
+    "dl008_total": 0,
+    "dl026_items": "299 (Packs C/D Sections E/F, non-Certified)",
+    "dl013_fields": "~163 (non-Certified only)",
+    "dl030_answer_key_errors": 0,
+    "certified_pool_clean": true
+  },
+  "governance_guard": { "tests": 20, "pass": 20, "rules_active": 5 },
+  "cognitivelevel_coverage": { "total": 2500, "with_cl": 2500, "pct": 100, "gaps": 0 },
+  "dcs_version": "v1.1",
+  "dcs_certification": "CERTIFIED",
+  "reliability": "CONDITIONAL — 95.0% DCS agreement, 174 severe misalignments",
+  "governance_maturity": { "score": 86.3, "grade": "A-" },
+  "hash_verification": {
+    "app_js": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A",
+    "packs_match_baseline": false,
+    "packs_parse_clean": true,
+    "hash_drift_authorized": true,
+    "note": "5 packs + scored_cases.js have authorized drift from S530 baseline due to S537/S722A writes"
+  }
+}

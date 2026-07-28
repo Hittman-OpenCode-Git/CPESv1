@@ -1,0 +1,86 @@
+{
+  "session": "S319",
+  "title": "DL Defect Closure Audit — Domain E Seed Certification Wave 1",
+  "generated": "2026-07-27",
+  "analyst": "Agent G — DL Defect Closure Audit",
+  "predecessors": [
+    "SESSION809_EW_INTEGRITY_AUDIT.json",
+    "SESSION809_CERTIFICATION_RESULTS.json",
+    "SESSION809_CROSS_PACK_CONSISTENCY.json"
+  ],
+  "purpose": "Verify status of all relevant DL defects (DL-008, DL-010, DL-013, DL-026, DL-031) for Domain E seed certification inventory.",
+
+  "defect_status": {
+    "DL-008": {
+      "name": "ExplanationWrong[CorrectChoice] Non-Empty",
+      "severity": "CRITICAL (governance-guard Rule 2 — BLOCK)",
+      "scope": "38 Domain E seeds",
+      "findings": 0,
+      "status": "CLEAN",
+      "detail": "All 38 seeds verified zero non-empty ExplanationWrong[CorrectChoice] slots. Governance-guard Rule 2 passes all 38 items. Confirmed by S809 Agent E per-item audit + S319 live verification.",
+      "blocking": false
+    },
+    "DL-010": {
+      "name": "Misassigned Explanations (EW text belongs to wrong distractor)",
+      "severity": "HIGH",
+      "scope": "61 existing non-empty EW slots across 38 seeds",
+      "findings": 0,
+      "status": "CLEAN",
+      "detail": "S809 Agent C confirmed all 61 existing non-empty EW slots are choice-specific and correctly assigned. 0 misassignments. Confirm SESSION809_TECHNICAL_REVIEW.json.",
+      "blocking": false
+    },
+    "DL-013": {
+      "name": "Template Boilerplate in ExplanationWrong Slots",
+      "severity": "HIGH",
+      "scope": "All 114 non-CC EW slots across 38 seeds",
+      "findings": 8,
+      "status": "OPEN — 8 boilerplate slots across 5 Pack D seeds",
+      "detail": "5 Pack D seeds contain truncated template boilerplate: P1-ED-016 (EWB, EWC), P1-ED-036 (EWB, EWC), P1-ED-046 (EWD), P1-ED-051 (EWB), P1-ED-075 (EWB, EWD). Boilerplate text: 'This option reflects a misunderstanding of [topic]. The choice [restated] is inconsistent with...' — truncated mid-sentence. Must be replaced with genuine choice-specific explanations.",
+      "remediation": "Rewrite 8 slots in Wave 3 batch. Deferred to S320-S325 remediation passes.",
+      "blocking": true,
+      "blocking_gate": "Gate 2 — Certification blocked until all 8 boilerplate slots replaced"
+    },
+    "DL-026": {
+      "name": "Empty Non-CorrectChoice ExplanationWrong Slots",
+      "severity": "HIGH",
+      "scope": "114 non-CC EW slots across 38 seeds",
+      "findings": 53,
+      "status": "OPEN — 53 empty slots across all 38 seeds",
+      "detail": "100% of seeds affected. Rotation artifact pattern: CC=A items have empty EW_B, CC=B items have empty EW_A+EW_C, CC=C items have empty EW_A, CC=D items have empty EW_A. Each seed has 1-2 empty non-CC slots. 61 of 114 non-CC EW slots have substantive text.",
+      "remediation": "Fill 53 empty slots with choice-specific distractor explanations (≥50 chars, identifying specific error + misconception + contrast with correct approach). Primary certification work across all 3 waves.",
+      "blocking": true,
+      "blocking_gate": "Gate 2 — Certification blocked until all 53 empty slots filled"
+    },
+    "DL-031": {
+      "name": "Difficulty / CognitiveLevel Calibration Inflation",
+      "severity": "MEDIUM",
+      "scope": "38 seeds",
+      "findings": 26,
+      "status": "OPEN — 12 difficulty score/label mismatches + 14 CognitiveLevel recalibrations needed",
+      "detail": "12 items have Difficulty label/score contradictions (e.g., 'Difficult' with DiffScore=2). 26 items have CognitiveLevel discrepancies per Agent H audit: 19 overstated (Understand→Remember or Apply→Understand) and 7 understated (Understand→Apply).",
+      "remediation": "Resolve label/score matches + recalibrate CL assignments in Pass 2 (metadata-only pass after EW fills complete).",
+      "blocking": false,
+      "blocking_note": "Non-blocking for certification per CAQS §1.6 — but required for learner-pool entry. Done in Pass 2."
+    }
+  },
+
+  "defect_closure_roadmap": {
+    "wave_1": {"resolves": "~14 DL-026 slots", "defect": "DL-026"},
+    "wave_2": {"resolves": "~24 DL-026 slots", "defect": "DL-026"},
+    "wave_3": {"resolves": "~15 DL-026 slots + 8 DL-013 slots", "defects": ["DL-026", "DL-013"]},
+    "pass_2": {"resolves": "26 DL-031 recalibrations + 14 metadata mismatches + 26 CL fixes", "defect": "DL-031"}
+  },
+
+  "governance_guard_status": {
+    "rule_2": {"name": "DL-008 BLOCK", "status": "PASS — 0 violations across all 38 seeds"},
+    "rule_3": {"name": "Registry BLOCK", "status": "PASS — no registry writes in this read-only session"},
+    "rule_5": {"name": "30-item cap BLOCK", "status": "PASS — 0 pack file modifications"},
+    "test_suite": "27/27 PASS"
+  },
+
+  "cross_reference": {
+    "s809_ew_audit": "SESSION809_EW_INTEGRITY_AUDIT.json — confirms 53 empty + 8 boilerplate",
+    "defect_library": "knowledge/DEFECT_LIBRARY.md — DL-008, DL-010, DL-013, DL-026, DL-031 entries current",
+    "governance_guard": ".opencode/plugins/governance-guard.js — Rule 2-5 all PASS"
+  }
+}

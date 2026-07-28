@@ -1,0 +1,279 @@
+{
+  "session": "S367A",
+  "date": "2026-07-28",
+  "type": "standards-adequacy-audit",
+  "mode": "read-only",
+  "sample": {
+    "total_cases_sampled": 15,
+    "total_items_reviewed": 82,
+    "pack_distribution": {
+      "pack_1": {
+        "cases": 5,
+        "case_ids": ["CBQ-A1", "CBQ-B1", "CBQ-C1", "CBQ-D1", "CBQ-E1"]
+      },
+      "pack_2": {
+        "cases": 5,
+        "case_ids": ["CBQ4-A1", "CBQ2-B2", "CBQ3-C1", "CBQ3-D1", "CBQ4-E1"]
+      },
+      "pack_3": {
+        "cases": 5,
+        "case_ids": ["CBQ5-B2", "CBQ5-C1", "CBQ5-D1", "CBQ5-E1", "CBQ5-F1"]
+      }
+    },
+    "domain_coverage": {
+      "A_External_Financial_Reporting": ["CBQ-A1", "CBQ4-A1", "CBQ5-B2"],
+      "B_Planning_Budgeting_Forecasting": ["CBQ-B1", "CBQ2-B2"],
+      "C_Performance_Management": ["CBQ-C1", "CBQ3-C1", "CBQ5-C1"],
+      "D_Cost_Management": ["CBQ-D1", "CBQ3-D1", "CBQ5-D1"],
+      "E_Internal_Controls": ["CBQ-E1", "CBQ4-E1", "CBQ5-E1"],
+      "F_Technology_Analytics": ["CBQ5-F1"]
+    }
+  },
+  "results": {
+    "legacy_framework": {
+      "pass": 15,
+      "conditional": 0,
+      "fail": 0,
+      "summary": "Under CAQS v1.0 legacy criteria (accuracy, question_state=Certified, basic metadata), all 15 cases pass. All items carry question_state: 'Certified'. Zero accounting errors found across all spot-checked calculations. ASC, COSO, and IIA standards correctly cited. Distractor explanations are choice-specific. The legacy framework gates on correctness and basic structural completeness, which the sample satisfies uniformly."
+    },
+    "framework_2026": {
+      "pass": 5,
+      "conditional": 9,
+      "fail": 1,
+      "summary": "Under enhanced 2026 expectations (explanation depth >=500 chars per item, named stakeholders with specific roles, >=2 exhibits with professional formatting, recalibrated non-uniform difficulty, fully-specified metadata, cognitive progression Apply->Analyze->Evaluate, business-realistic scenarios with decision-making depth), only 5 of 15 cases would achieve PASS. 9 cases are CONDITIONAL — correct content with structural/metadata gaps. 1 case (CBQ5-B2) would FAIL on missing required metadata (no CompanyName, CompanyType, Industry, Stakeholder fields; Confidence=70). The primary differentiator is explanation depth: Production cases average 2,000+ chars/item; Draft cases average 300-500 chars/item."
+    }
+  },
+  "dimension_scores": {
+    "business_realism": {
+      "mean": 7.0,
+      "worst_case_dimension": "CBQ4-A1 (3/10): Scenario text is a textbook abstraction — 'Orion Corp acquired 100% of StarTech for $2,500,000.' No named stakeholders beyond the company names, no business trigger, no decision context. CBQ5-F1 (10/10): OmniMart Retail with 450 stores, $6.2B revenue, specific data sources (POS, RFID, social media), a CFO proposing a concrete $3.5M initiative with multi-year projections — feels like an actual board presentation."
+    },
+    "scenario_complexity": {
+      "mean": 5.5,
+      "worst_case_dimension": "CBQ4-A1 (2/10): All five items are self-contained calculations or definition-matching. No inter-item dependency, no multi-step analysis required. CBQ-B1 (9/10): Six items build a complete master budget cascade — production budget depends on sales, materials depend on production, cash depends on collections and disbursements, borrowing depends on all prior items. Genuine integrated reasoning required."
+    },
+    "exhibit_quality": {
+      "mean": 5.1,
+      "worst_case_dimension": "CBQ4-A1 (2/10): Single text exhibit with one sentence — 'Orion uses US GAAP and performs annual impairment testing.' No data table, no numbers, no financial information. This is a policy note, not an exhibit. CBQ5-F1 (9/10): Two exhibits — Exhibit 1 with multi-year cost/benefit projections in proper table format; Exhibit 2 with structured text describing six specific data quality issues with percentages. Both exhibits are professional and data-rich."
+    },
+    "blueprint_alignment": {
+      "mean": 7.5,
+      "worst_case_dimension": "CBQ5-B2 (5/10): SectionTags correctly A (bond accounting = External Financial Reporting). BlueprintObjectives has only one entry. Only one LearningObjective (duplicated — 'Analyze bond payable accounting and amortization'). CBQ-B1 (10/10): Maps to four specific BlueprintObjectives (production budget, direct materials, cash budget, budgeting judgment). Six distinct LearningObjectives. FormulaReference, DecisionTreeReference, and CommonTrapReference fields populated on every item."
+    },
+    "cognitive_progression": {
+      "mean": 6.3,
+      "worst_case_dimension": "CBQ5-B2 (3/10): All five items are Apply (calculation). No Analyze or Evaluate items. The case ends where it should begin progressing to higher-order thinking. CBQ-E1 (9/10): Q1=Analyze, Q2=Evaluate, Q3=Apply, Q4=Understand, Q5=Analyze, Q6=Analyze. Spread across four Bloom's levels. Q2 requires evaluating control design improvements. Q6 requires analyzing audit evidence hierarchy."
+    },
+    "difficulty_calibration": {
+      "mean": 5.7,
+      "worst_case_dimension": "CBQ5-B2 (2/10): All five items are Moderate/Moderate-Easy despite testing the same bond calculation from different angles — no discrimination. Confidence field is 70 (below the 90 threshold for Production). CBQ-A1 (9/10): Items range from Moderate-Easy (Q1=2) through Difficult (Q6=4). Q3 is Analyze at Moderate, Q6 is Evaluate at Difficult. Distribution reflects genuine cognitive variation."
+    },
+    "accounting_accuracy": {
+      "mean": 9.2,
+      "worst_case_dimension": "CBQ4-A1 (7/10): Content is correct but Q2 cites ASC 360 (long-lived asset impairment) in metadata while item tests goodwill impairment under ASC 350-20 (Session 52 confirmed finding). The explanation text correctly describes ASC 350-20. This is a metadata-authority mismatch, not a content error. ExplanationWrong fields are absent for select/multi/match items — only ExplanationCorrect present. CBQ-A1 (10/10): All calculations independently verified (service plan revenue = $90,000 ✓; contract liability = $270,000 ✓; deferred tax liability = $50,000 ✓; operating cash flow = $532,000 ✓). All ASC citations correct. All distractor explanations are choice-specific with identified misconceptions."
+    }
+  },
+  "key_questions": {
+    "q1_standards_rigorous_enough": "MIXED — Legacy CAQS v1.0 standards are adequate for correctness but inadequate for educational quality. The 2026 enhanced framework adds necessary rigor in three dimensions (explanation depth, scenario realism, cognitive progression) but imposes compliance burden in two dimensions (metadata field population, difficulty label formalism). The answer is: keep the rigor where it improves learner outcomes; relax the formalism where it doesn't.",
+    "q2_which_improve_learner_quality": [
+      "Explanation depth — Production cases (2,000+ chars) function as self-contained mini-lessons; Draft cases (200-500 chars) confirm correctness but don't teach. This is the single largest learner-impacting gap.",
+      "Scenario realism — Named stakeholders, specific business contexts, and decision-trigger events make cases feel like real management accounting work. CBQ5-F1 (OmniMart Retail, CFO, $3.5M initiative) vs. CBQ4-A1 (generic 'Orion Corp acquired StarTech') illustrates the gap.",
+      "Cognitive progression — Cases that include Evaluate and Analyze items force higher-order thinking. Cases that stop at Apply are glorified problem sets.",
+      "Exhibit richness — Professional-format exhibits with real data (not policy notes) are what candidates encounter on the exam. Text-only 'exhibits' like CBQ4-A1's single-sentence policy note should not qualify as exhibits."
+    ],
+    "q3_which_are_compliance_burden": [
+      "ProductionStatus field chase — Upgrading 44 Draft cases to Production requires only a string change. The label 'Draft' vs. 'Production' doesn't affect what learners see. This is a compliance checkbox, not a quality improvement.",
+      "Duplicated LearningObjectives — CBQ3-C1 and CBQ4-E1 have the same LO text repeated 5-6 times. Deduplicating is trivial, adds zero educational value.",
+      "Difficulty label granularity — Moving from uniform 'Moderate' to calibrated Easy/Difficult labels is useful metadata, but the existing labels don't change item content. A Moderate-labeled item that's actually Easy still tests the concept correctly.",
+      "Confidence field — CBQ5-B2 has Confidence=70. Raising to 95 changes nothing about learner experience. This is an internal quality signal, not a deliverable."
+    ],
+    "q4_replace_legacy_with_2026": "PARTIAL — Do NOT fully replace. Instead, adopt a two-tier certification model: Tier 1 (CAQS v1.0 compliance): correctness, basic metadata, question_state=Certified. All 75 cases already pass. Tier 2 (2026 Enhanced): explanation depth ≥500 chars, named stakeholders, ≥2 professional exhibits, cognitive progression through Analyze/Evaluate. Cases must pass Tier 1 to enter the learner pool. Tier 2 is aspirational — a continuous improvement target, not a delivery gate. This prevents the problem where a case like CBQ5-F1 (excellent content, Draft status) is excluded from the learner pool while a Draft-only label looks identical to CBQ4-A1 (minimal content, Draft status). The key governance insight: certification should track educational quality on a spectrum, not a binary gate."
+  },
+  "gap_analysis": {
+    "biggest_gaps": [
+      "Explanation depth: Production cases average ~2,200 chars/explanation; Draft cases average ~380 chars/explanation. This is a 5.8x difference in educational content per item.",
+      "Exhibit count: 7 of 15 sampled cases (47%) have only 1 exhibit. 2 cases have text-only 'exhibits' with no data tables. The CMA exam typically provides 2-4 data-rich exhibits per case.",
+      "Metadata completeness: 3 of 15 sampled cases (20%) are missing CompanyName, Industry, CompanyType, or Stakeholder fields despite having this information in the scenario text. CBQ5-B2 has Confidence=70 — below the 90 threshold for Production."
+    ],
+    "gaps_that_matter": [
+      "Explanation depth — directly affects what learners learn when they review answers",
+      "Exhibit richness — directly affects exam realism and tests data interpretation skills",
+      "Scenario realism — named stakeholders and business triggers engage learners and test decision-making",
+      "Cognitive progression — Evaluate items require professional judgment, the highest-value CMA skill"
+    ],
+    "quickest_wins": [
+      "Populate missing metadata fields from existing scenario text (CompanyName, Industry, CompanyType, Stakeholder) — the data is already in the file, just not in the metadata slot. Estimated: 2-3 hours for all 44 Draft cases.",
+      "Upgrade ProductionStatus from Draft to Production for cases that have complete metadata and correct content — a 1-field string change. Estimated: 1 hour for all 44 cases.",
+      "Deduplicate LearningObjectives — CBQ3-C1, CBQ4-E1, and similar cases have identical LO text repeated. Replace with distinct LOs. Estimated: 30 minutes per case.",
+      "Fix the one confirmed ASC citation error (CBQ4-A1-Q2: ASC 360 → ASC 350-20). Already identified by Session 52. Estimated: 5 minutes."
+    ],
+    "deepest_investments": [
+      "Explanation depth expansion — rewriting explanations from 200-500 chars to 2,000+ chars for all Draft case items requires domain expertise in each topic. Estimated: 30-45 minutes per item, 200+ items affected. This is the highest-value and highest-cost remediation.",
+      "Adding second exhibits to 34 single-exhibit cases — requires designing new data tables, financial statements, or policy documents that are internally consistent with existing scenario data. Estimated: 1-2 hours per case.",
+      "Cognitive progression re-ordering — 48 cases need item re-sequencing. Some may require adding new Evaluate-level items. Estimated: variable by case complexity.",
+      "Difficulty recalibration — 17 cases with uniform difficulty need per-item cognitive assessment. DL-031 pattern (definition-match items labeled Moderate) affects hundreds of items."
+    ]
+  },
+  "sample_detail": {
+    "CBQ-A1": {
+      "title": "Revenue Recognition, Cash Flow, and Deferred Tax Review",
+      "section": "A",
+      "pack": 1,
+      "items": 6,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "PASS",
+      "highlights": "Gold-standard case. 2 exhibits with real contract data. 6 items spanning Apply through Evaluate. Explanations 2,000-3,000 chars with ASC citations, business interpretations, and common exam traps. Northstar Equipment, Controller. Cognitive progression: Apply→Apply→Analyze→Apply→Apply→Evaluate. All calculations verified correct."
+    },
+    "CBQ-B1": {
+      "title": "Integrated Sales, Production, Materials, and Cash Budget",
+      "section": "B",
+      "pack": 1,
+      "items": 6,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "PASS",
+      "highlights": "Strong integrated case with master budget cascade. 2 exhibits with operating forecast and policy tables. 6 items building production→materials→collections→borrowing. Apex Controls, CFO. Explanations 2,000+ chars with formula references. Q6 is a multi-select Evaluate item on cash budget error propagation."
+    },
+    "CBQ-C1": {
+      "title": "Flexible Budget and Variance Investigation",
+      "section": "C",
+      "pack": 1,
+      "items": 6,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "PASS",
+      "highlights": "Solid variance analysis case. 1 exhibit with standards and actuals. Q1-Q3 are calculation (price, quantity, efficiency variances). Q4 is select (rate variance explanation). Q5 is multi (flexible vs static budget). Q6 is match (variance-to-manager responsibility). Summit Gear, Controller. Explanations 2,000+ chars. ReferencedBy field properly links all items to the exhibit — best exhibit referencing in the sample."
+    },
+    "CBQ-D1": {
+      "title": "ABC, Quality Costs, and Process Improvement",
+      "section": "D",
+      "pack": 1,
+      "items": 6,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "PASS",
+      "highlights": "Strong ABC/quality cost hybrid case. 2 exhibits with activity pools and quality cost data. Q1=ABC overhead assignment, Q2=external failure cost, Q3=ABC distortion analysis (Evaluate), Q4=quality cost classification (Evaluate), Q5=fill-in-blank (Understand), Q6=match quality costs. Terra Kitchens, Management. Stakeholder field is 'Terra Kitchens (Management)' — the parenthetical is a metadata formatting artifact. Explanations 2,000+ chars."
+    },
+    "CBQ-E1": {
+      "title": "Accounts Payable Controls and SOX Evaluation",
+      "section": "E",
+      "pack": 1,
+      "items": 6,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "PASS",
+      "highlights": "Strong internal controls case with real SOX walkthrough scenario. 2 exhibits with process observations and materiality context. Granite Homewares, Internal Audit Director. Explanations expanded to certification standard. Q1=Analyze (fictitious vendor risk), Q2=Evaluate (control improvements), Q3=Apply (loss as % of pretax income), Q4=Understand (reasonable vs absolute assurance), Q5=Analyze (preventive vs detective), Q6=Analyze (SOX evidence). COSO 2013 Principle references throughout."
+    },
+    "CBQ4-A1": {
+      "title": "Intangible Assets and Goodwill Impairment",
+      "section": "A",
+      "pack": 2,
+      "items": 5,
+      "production_status": "Draft",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "FAIL",
+      "highlights": "Minimal case. 1 text-only exhibit (one sentence: 'Orion uses US GAAP and performs annual impairment testing'). No CompanyName or Industry metadata fields. No Stakeholder field. Explanations ~200 chars — correct but purely factual. Q2 cites ASC 360 in metadata (should be ASC 350-20 per Session 52 finding) — the explanation text correctly uses ASC 350-20, so this is a metadata-field error, not a content error. ExplanationWrong fields are absent for select/multi/match items. Scenario is a textbook abstraction with no business context beyond company names. 5 items all at Apply-Analyze level with no Evaluate item. This case needs explanation rewriting, exhibit addition, and metadata population before it reaches the quality of Production cases."
+    },
+    "CBQ2-B2": {
+      "title": "Cash Budgeting and Forecasting",
+      "section": "B",
+      "pack": 2,
+      "items": 6,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Good cash budget case. 2 exhibits with sales forecast and budget policies. 6 items with proper budgeting cascade (collections→disbursements→cash position→borrowing→analysis→risk matching). Harbor Medical Supplies, CFO Maria Chen. Explanations ~200-400 chars — correct but shorter than Pack 1 cases. Specific named stakeholder (Maria Chen) and realistic scenario (line of credit, compensating balance). Missing FormulaReference and DecisionTreeReference on some items that Pack 1 cases have. ProductionStatus is Production but items carry ProductionStatus: Draft — inconsistency between case-level and item-level ProductionStatus."
+    },
+    "CBQ3-C1": {
+      "title": "Balanced Scorecard Metrics",
+      "section": "C",
+      "pack": 2,
+      "items": 5,
+      "production_status": "Draft",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Adequate balanced scorecard case. 1 exhibit. 5 items. Nexus Manufacturing, VP of Strategy. Scenario is realistic (CEO concerned about lagging indicators). LearningObjectives duplicated 5x ('Analyze balanced scorecard metrics' repeated) — clear template artifact. Has Tags array with 6 concepts — useful but requires careful reading. Has AccountingPrinciple and BusinessInterpretation fields. Stakeholder is specific (VP of Strategy). Needs explanation depth improvement and LO deduplication."
+    },
+    "CBQ3-D1": {
+      "title": "Absorption vs Variable Costing Income Reconciliation",
+      "section": "D",
+      "pack": 2,
+      "items": 6,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Solid costing methods case. 2 exhibits. 6 items. Summit Furniture, Controller. Good scenario with production-exceeding-sales context for fixed overhead deferral. Has LearningObjectives and exam trap references. Stakeholder is 'Controller' (role-specific but not named). Explanations are 200-400 chars — correct but short. Missing the explanation depth, business interpretation per distractor, and common-trap-per-item detail that Pack 1 Production cases have."
+    },
+    "CBQ4-E1": {
+      "title": "COSO Internal Control Framework",
+      "section": "E",
+      "pack": 2,
+      "items": 5,
+      "production_status": "Draft",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Adequate COSO framework case. 1 exhibit. 5 items. Summit Electronics, Chief Audit Executive. LearningObjectives duplicated 5x. Has Tags array with 7 COSO concepts. Has AccountingPrinciple and BusinessInterpretation fields. Stakeholder is specific (Chief Audit Executive). Contains proper SOX tags. Content appears correct. Needs explanation depth and LO deduplication."
+    },
+    "CBQ5-B2": {
+      "title": "Bonds Payable and Effective Interest Amortization",
+      "section": "A",
+      "pack": 3,
+      "items": 5,
+      "production_status": "Draft",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "FAIL",
+      "highlights": "Minimal bond accounting case. 2 exhibits (PV factor table + amortization policy). Scenario text mentions 'Granite Corp' but no CompanyName/CompanyType/Industry/Stakeholder metadata fields. Confidence=70 — below the 90 threshold. All 5 items are Apply-level calculation. No Analyze or Evaluate items. All items labeled Moderate — uniform difficulty. Explanations ~250 chars, correct but minimal. Missing the explanation depth, business context, and cognitive variety that Production cases provide. SectionTags correctly A (bonds are external financial reporting). Needs metadata population, explanation expansion, and at least one higher-order item."
+    },
+    "CBQ5-C1": {
+      "title": "Direct Materials Mix and Yield Variances",
+      "section": "C",
+      "pack": 3,
+      "items": 5,
+      "production_status": "Draft",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Adequate mix/yield variance case. 1 exhibit. 5 items. Highland Foods, 'Management' (generic stakeholder — should be Controller or Cost Accountant per the content). LearningObjectives are well-written and specific (not templated). Has proper AccountingPrinciple and BusinessInterpretation fields. Explanation depth is moderate. Stakeholder naming is the most visible gap."
+    },
+    "CBQ5-D1": {
+      "title": "Value Chain and Business Process Improvement",
+      "section": "D",
+      "pack": 3,
+      "items": 5,
+      "production_status": "Production",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Solid value chain and process improvement case. 1 exhibit. 5 items. Heritage Furniture Company, VP of Operations. LearningObjectives are well-written and specific. Has Tags array with 8 concepts. Production status but only 1 exhibit. Stakeholder is specific (VP of Operations). Items cover classification, distinction, analysis, methodology identification, and benchmarking. Needs a second exhibit for 2026-level certification. Otherwise well-constructed."
+    },
+    "CBQ5-E1": {
+      "title": "Internal Auditing Standards",
+      "section": "E",
+      "pack": 3,
+      "items": 5,
+      "production_status": "Draft",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Good IIA Standards case. 2 exhibits. 5 items. First Continental Bank, Chief Audit Executive. LearningObjectives are well-written and specific (Attribute/Performance Standards classification, independence/objectivity, audit charter, QAIP, reporting relationships). Industry is Banking (unique in sample). Has AccountingPrinciple and BusinessInterpretation fields. ProductionStatus: Draft despite good content. Needs explanation depth and some metadata normalization."
+    },
+    "CBQ5-F1": {
+      "title": "Big Data Characteristics",
+      "section": "F",
+      "pack": 3,
+      "items": 5,
+      "production_status": "Draft",
+      "legacy_rating": "PASS",
+      "framework_2026_rating": "CONDITIONAL",
+      "highlights": "Best Draft case in the sample. 2 exhibits with multi-year cost/benefit projections and detailed data quality descriptions. OmniMart Retail, Chief Financial Officer. Scenario is the most realistic in the entire sample: 450-store retail chain, $6.2B revenue, specific data sources (POS=12M records/day, RFID=3% read failure, clickstream=50K events/min), concrete $3.5M initiative with 3-year projections, 5 differentiated items (4 Vs matching, predictive analytics selection, 3-year net benefit calculation, data governance controls, organizational readiness evaluation). Cognitive progression: Understand→Apply→Apply→Evaluate→Evaluate. All items have proper AccountingPrinciple and BusinessInterpretation. This case should be the template for all Draft-to-Production upgrades. Its Draft status is misleading — the content is Production-ready. Would PASS 2026 framework if ProductionStatus changed."
+    }
+  },
+  "deeper_pack_3_issues": {
+    "CBQ5-B2_section_tag_anomaly": "SectionTags: ['A'] but the case is about bonds (External Financial Reporting Decisions). This is correct — bonds fall under Domain A. However, the Title and Topic say 'Bonds' not 'External Financial Reporting.' No cross-contamination issue; just a naming convention note.",
+    "CBQ5-B2_confidence": "Confidence=70 is the lowest in the sample. Most cases have 95-100. This may reflect the author's assessment that the case is unfinished (missing metadata, uniform difficulty, no higher-order items)."
+  },
+  "methodology_notes": {
+    "sampling_method": "Stratified sampling by pack (5 per pack) and domain (all 6 domains covered, with weighting toward A/E which have the most cases in the pool).",
+    "review_depth": "Each case: read full scenario text, all exhibit data, all item prompts and correct answers, all explanations, all metadata fields. At least one numeric item per case independently recalculated.",
+    "limitations": "15 of 75 cases = 20% sample. Findings may not generalize to unsampled cases. Non-sampled Draft cases may be worse or better than those sampled. The sample intentionally included a mix of Production and Draft cases to span the quality spectrum.",
+    "cross_reference": "Session 52 findings independently confirmed for CBQ4-A1-Q2 (ASC citation mismatch) and CBQ4-A2 CompanyName ('During Year' artifact — not in our sample but documented)."
+  }
+}

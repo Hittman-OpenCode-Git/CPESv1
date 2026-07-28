@@ -1,0 +1,545 @@
+{
+  "sessionId": "268",
+  "title": "May Admin Phase 1 — Administrative Operations Pilot",
+  "generatedAt": "2026-07-27T21:50:42.557Z",
+  "thresholds": {
+    "questionSamplesPerPackCertified": 5,
+    "questionSamplesInAudit": 5,
+    "questionSamplesUnprocessed": 5,
+    "challengeFullReview": true,
+    "investigationFullReview": true,
+    "sessionFullReview": true,
+    "recommendationFullReview": true,
+    "crossEntityTraces": 3
+  },
+  "questionOperations": {
+    "certifiedSamples": {
+      "pack_a": [
+        "P1-A-001",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005"
+      ],
+      "pack_b": [
+        "P1B-A-076",
+        "P1B-A-077",
+        "P1B-A-078",
+        "P1B-A-079",
+        "P1B-A-080"
+      ],
+      "pack_c": [
+        "P1-AC-001",
+        "P1-AC-002",
+        "P1-AC-003",
+        "P1-AC-004",
+        "P1-AC-005"
+      ],
+      "pack_d": [
+        "P1-AD-001",
+        "P1-AD-002",
+        "P1-AD-003",
+        "P1-AD-004",
+        "P1-AD-005"
+      ],
+      "pack_e": [
+        "P1E-A-001",
+        "P1E-A-002",
+        "P1E-A-003",
+        "P1E-A-004",
+        "P1E-A-005"
+      ]
+    },
+    "inAuditSamples": [],
+    "unprocessedSamples": [
+      "P1-EC-008",
+      "P1-EC-014",
+      "P1-EC-020",
+      "P1-EC-021",
+      "P1-EC-022"
+    ],
+    "lookupResults": [
+      {
+        "qid": "P1-A-001",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 89,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 3,
+        "fksBroken": 0,
+        "durationMs": 88
+      },
+      {
+        "qid": "P1-A-002",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 89,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 3,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1-A-003",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 90,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 6,
+        "fksBroken": 0,
+        "durationMs": 1
+      },
+      {
+        "qid": "P1-A-004",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 82,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 5,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1-A-005",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 82,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 5,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1B-A-076",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 92,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 18
+      },
+      {
+        "qid": "P1B-A-077",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 25
+      },
+      {
+        "qid": "P1B-A-078",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 16
+      },
+      {
+        "qid": "P1B-A-079",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 24
+      },
+      {
+        "qid": "P1B-A-080",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 19
+      },
+      {
+        "qid": "P1-AC-001",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 85,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 5,
+        "fksBroken": 0,
+        "durationMs": 23
+      },
+      {
+        "qid": "P1-AC-002",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 2,
+        "fksBroken": 0,
+        "durationMs": 23
+      },
+      {
+        "qid": "P1-AC-003",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 3,
+        "fksBroken": 0,
+        "durationMs": 26
+      },
+      {
+        "qid": "P1-AC-004",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 28
+      },
+      {
+        "qid": "P1-AC-005",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 21
+      },
+      {
+        "qid": "P1-AD-001",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 3,
+        "fksBroken": 0,
+        "durationMs": 34
+      },
+      {
+        "qid": "P1-AD-002",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1-AD-003",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 3,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1-AD-004",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1-AD-005",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1E-A-001",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 31
+      },
+      {
+        "qid": "P1E-A-002",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 93,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 1,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1E-A-003",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 85,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 3,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1E-A-004",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 100,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 0,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1E-A-005",
+        "error": null,
+        "state": "Certified",
+        "healthScore": 100,
+        "healthTier": "HEALTHY",
+        "sectionsReturned": 8,
+        "fksTotal": 0,
+        "fksBroken": 0,
+        "durationMs": 0
+      },
+      {
+        "qid": "P1-EC-008",
+        "error": null,
+        "state": "Unprocessed",
+        "healthScore": 85,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 3,
+        "fksBroken": 0,
+        "durationMs": 18
+      },
+      {
+        "qid": "P1-EC-014",
+        "error": null,
+        "state": "Unprocessed",
+        "healthScore": 85,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 4,
+        "fksBroken": 0,
+        "durationMs": 22
+      },
+      {
+        "qid": "P1-EC-020",
+        "error": null,
+        "state": "Unprocessed",
+        "healthScore": 85,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 2,
+        "fksBroken": 0,
+        "durationMs": 24
+      },
+      {
+        "qid": "P1-EC-021",
+        "error": null,
+        "state": "Unprocessed",
+        "healthScore": 85,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 0,
+        "fksBroken": 0,
+        "durationMs": 29
+      },
+      {
+        "qid": "P1-EC-022",
+        "error": null,
+        "state": "Unprocessed",
+        "healthScore": 85,
+        "healthTier": "FAIR",
+        "sectionsReturned": 8,
+        "fksTotal": 0,
+        "fksBroken": 0,
+        "durationMs": 33
+      }
+    ],
+    "avgLookupTimeMs": 17,
+    "totalLookups": 30,
+    "failedLookups": 0
+  },
+  "challengeOperations": {
+    "total": 35,
+    "reviewed": 35,
+    "errors": 0,
+    "errorList": [],
+    "byStatus": {
+      "OPEN": 12,
+      "INVESTIGATING": 8,
+      "RESOLVED": 6,
+      "CLOSED": 6,
+      "DISMISSED": 3
+    },
+    "byType": {
+      "CONTENT_ERROR": 6,
+      "TECHNICAL_ISSUE": 6,
+      "ANSWER_DISPUTE": 6,
+      "EXPLANATION_ISSUE": 6,
+      "AMBIGUITY": 6,
+      "OTHER": 5
+    },
+    "byTriageCategory": {
+      "Untriaged": 35
+    },
+    "triagedCount": 0,
+    "untriagedCount": 35
+  },
+  "investigationOperations": {
+    "total": 19,
+    "reviewed": 19,
+    "errors": 0,
+    "errorList": [],
+    "byStatus": {
+      "INVESTIGATING": 11,
+      "OPEN": 7,
+      "CLOSED": 1
+    },
+    "byType": {
+      "CHALLENGE": 16,
+      "DEFECT": 1,
+      "GOVERNANCE": 1,
+      "SYSTEMATIC": 1
+    }
+  },
+  "sessionOperations": {
+    "total": 40,
+    "reviewed": 40,
+    "errors": 0,
+    "errorList": [],
+    "byMode": {
+      "IMPLEMENTATION": 13,
+      "UNKNOWN": 16,
+      "READ-ONLY": 11
+    },
+    "totalQidsAcrossSessions": 1163,
+    "totalCertifiedAcrossSessions": 990
+  },
+  "recommendationOperations": {
+    "total": 5,
+    "reviewed": 5,
+    "errors": 0,
+    "errorList": [],
+    "byStatus": {
+      "Open": 4,
+      "Resolved": 1
+    },
+    "bySeverity": {
+      "CRITICAL": 1,
+      "HIGH": 2,
+      "MEDIUM": 2
+    },
+    "openCount": 4,
+    "resolvedCount": 1
+  },
+  "crossEntityTraces": [
+    {
+      "qid": "P1-A-036",
+      "chain": [],
+      "questionLookup": {
+        "state": "Certified",
+        "healthTier": "FAIR",
+        "challengeLinks": [
+          "CH-CC1ECA89"
+        ],
+        "investigationLinks": [
+          "INV-20260727-001",
+          "INV-20260727-019"
+        ]
+      },
+      "challengeChain": [
+        {
+          "challengeId": "CH-CC1ECA89",
+          "type": "CONTENT_ERROR",
+          "status": "OPEN",
+          "linkedInvestigations": [
+            "INV-20260727-001"
+          ],
+          "linkedRecommendations": [
+            "REC-5B1E489D",
+            "REC-1100DF07"
+          ]
+        }
+      ],
+      "totalFks": 15,
+      "brokenFks": 0,
+      "verdict": "PASS"
+    },
+    {
+      "qid": "P1-EC-004",
+      "chain": [],
+      "questionLookup": {
+        "state": "Certified",
+        "healthTier": "HEALTHY",
+        "challengeLinks": [],
+        "investigationLinks": []
+      },
+      "challengeChain": [],
+      "totalFks": 0,
+      "brokenFks": 0,
+      "verdict": "PASS"
+    },
+    {
+      "qid": "P1B-B-153",
+      "chain": [],
+      "questionLookup": {
+        "state": "Certified",
+        "healthTier": "HEALTHY",
+        "challengeLinks": [],
+        "investigationLinks": []
+      },
+      "challengeChain": [],
+      "totalFks": 0,
+      "brokenFks": 0,
+      "verdict": "PASS"
+    }
+  ],
+  "summary": {
+    "totalLookupsPerformed": 129,
+    "questionsSampled": 30,
+    "challengesReviewed": 35,
+    "investigationsReviewed": 19,
+    "sessionsReviewed": 40,
+    "recommendationsReviewed": 5,
+    "crossEntityTraces": 3,
+    "totalErrors": 0,
+    "totalBrokenFks": 0,
+    "avgQuestionLookupTimeMs": 17,
+    "verdict": "PASS"
+  }
+}

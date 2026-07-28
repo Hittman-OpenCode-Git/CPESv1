@@ -1,0 +1,40 @@
+{
+  "session": "712",
+  "batch": 1,
+  "qid": "P1-BC-094",
+  "pack": "C",
+  "timestamp": "2026-07-25T23:00:00",
+  "type": "P1-BC-094 DL-010 feedback remediation",
+  "defect_class": "DL-010 — cross-topic ExplanationWrongA contamination",
+  "verification_method": "G-NEW-3 object-bounded extraction via Function constructor",
+  "item_topic": "Sensitivity (what-if) analysis",
+  "stem": "Silverton models several scenarios in its budget by changing key assumptions such as sales volume and material cost. What is this technique called?",
+  "choices": {
+    "A": "Standard costing, which sets a single fixed benchmark",
+    "B": "Sensitivity (what-if) analysis, which shows how outcomes change with different assumptions",
+    "C": "Zero-based budgeting, which resets every account",
+    "D": "Responsibility accounting, which assigns costs to managers"
+  },
+  "correct_choice": "B",
+  "question_state_before": "Certified",
+  "question_state_after": "Certified",
+  "remediation": {
+    "field_changed": "ExplanationWrongA",
+    "before": "A department consistently beating its budget by a wide margin suggests budget targets are set too low—not that the company's sales price needs adjustment. This pattern is a classic indicator of budgetary slack, where managers deliberately underestimate revenues or overestimate costs during budget negotiations to create easily achievable targets. The controller's concern should focus on whether the department has padded its budget assumptions, not on pricing strategy.",
+    "after": "Standard costing establishes a single fixed benchmark for evaluating performance and does not involve varying assumptions or modeling alternative scenarios. Sensitivity (what-if) analysis, by contrast, systematically changes key inputs such as sales volume and material cost to determine how outcomes shift under different conditions. Selecting this option confuses a performance-evaluation tool with a risk-assessment and scenario-modeling technique.",
+    "reason": "The old text described budgetary slack (P1-BC-095's topic). The new text explains why standard costing is wrong for the question about sensitivity/what-if analysis, matching the item's actual stem and Choice A."
+  },
+  "fields_preserved": {
+    "correct_choice_unchanged": true,
+    "explanation_correct_unchanged": true,
+    "stems_unchanged": true,
+    "choices_unchanged": true,
+    "explanation_wrong_b_unchanged": true,
+    "explanation_wrong_c_unchanged": true,
+    "explanation_wrong_d_unchanged": true,
+    "question_state_unchanged": true,
+    "no_dl008_introduced": true
+  },
+  "post_remediation_parse": "Pack C parses: 500 items OK",
+  "post_remediation_state": "P1-BC-094 remains Certified, CC=B, EW_B empty"
+}

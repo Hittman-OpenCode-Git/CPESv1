@@ -1,0 +1,393 @@
+{
+  "report": "SESSION529_FORECAST_AGENT_M",
+  "date": "2026-07-26",
+  "agent": "M — Program Forecast",
+  "role": "Synthesis and estimation — integrates all prior Agent A/B/C/H/I findings + D-Program Closure reference",
+  "inputSources": [
+    "SESSION529_CENSUS_AGENT_A.json (15 cases, 90 items, 0 Certified, 80 avg chars)",
+    "SESSION529_CERTIFICATION_ROADMAP_AGENT_B.json (6-wave structure, 36h estimate)",
+    "SESSION529_READINESS_ANALYSIS_AGENT_C.json (8 READY, 78 REMEDIATION, 4 HIGH_RISK, 0 ESCALATE)",
+    "SESSION529_EXPLANATION_GAP_AGENT_H.json (1 SUFFICIENT, 72 THIN, 17 DEFECTIVE)",
+    "SESSION529_CROSS_PROGRAM_AUDIT_AGENT_I.json (BASE vs. CBQ2/CBQ4/CBQ5/D-Program comparison, 8 blindspots)",
+    "SESSION528_D_PROGRAM_CLOSURE.md (75/75 Certified, 5 waves, 14 agents, 1,282 avg chars)"
+  ],
+
+  "1_TOTAL_CERTIFICATION_PATH": {
+    "estimatedSessions": 8,
+    "confidence": "MODERATE",
+    "breakdown": [
+      {"session": "S530", "phase": "Wave 0 — Pre-Certification Audit", "type": "Read-only", "cases": "All 15", "items": 90, "estimatedHours": 13, "writes": false},
+      {"session": "S531", "phase": "Wave 1 — Foundation: A1, B1", "type": "Certification write", "items": 12, "estimatedHours": 3, "domains": ["A", "B"]},
+      {"session": "S532", "phase": "Wave 2 — Expansion: A3, B3, C1", "type": "Certification write", "items": 18, "estimatedHours": 4, "domains": ["A", "B", "C"]},
+      {"session": "S533", "phase": "Wave 3 — Deepening: A2, B2, D1", "type": "Certification write", "items": 18, "estimatedHours": 4, "domains": ["A", "B", "D"]},
+      {"session": "S534", "phase": "Wave 4 — Integration: C2, D2", "type": "Certification write", "items": 12, "estimatedHours": 3.5, "domains": ["C", "D"]},
+      {"session": "S535", "phase": "Wave 5 — Technology: C3, F1", "type": "Certification write", "items": 12, "estimatedHours": 3.5, "domains": ["C", "F"]},
+      {"session": "S536", "phase": "Wave 6 — Governance Capstone: E1, E2, F2", "type": "Certification write", "items": 18, "estimatedHours": 5, "domains": ["E", "E,F"]},
+      {"session": "S537", "phase": "Governance Closeout — All 15 cases", "type": "Read-only audit + metadata promotion", "items": 90, "estimatedHours": 3, "writes": "metadata-only"}
+    ],
+    "totalEstimatedHours": "39 (Agent B reconciliation: 13 W0 + 23 certification + 3 closeout)",
+    "totalItems_certified": 90,
+    "alternativeCompactPath": {
+      "sessions": 6,
+      "description": "If W0 and Wave 1 are combined into S530, and Waves 4+5 are merged (C2/D2/C3/F1 = 24 items ≤ 30 cap): S530 (W0+W1), S531 (W2), S532 (W3), S533 (W4+W5 merged), S534 (W6), S535 (Closeout). Higher session intensity but fewer sessions.",
+      "totalHours": "~33",
+      "risk": "Combining W4+W5 crosses C→D→C→F domain boundary — context-switch overhead"
+    },
+    "precedent": "D-Program used exactly 1 session per wave × 5 waves (S523-S527) for 75 items. BASE adds 1 session for Wave 0 pre-cert audit + 1 session for governance closeout. The +2 session delta is primarily driven by the 13-hour Wave 0 audit (new work — D-Program did not have a formal pre-cert audit)."
+  },
+
+  "2_TOTAL_ESTIMATED_EFFORT": {
+    "totalAgentHours": 41,
+    "confidence": "MODERATE-HIGH (D-Program actuals vs. Agent B estimates are within ±20%)",
+    "calendarDaysSingleTrack": "8-9 days (1 session/day)",
+    "breakdownByWorkType": {
+      "wave0_audit": {
+        "hours": 13,
+        "pct": "32%",
+        "subTasks": [
+          {"task": "Answer-key independent verification (38 numeric items)", "hours": 5, "method": "Read stem + exhibits → solve independently → compare to stored Correct → reconcile"},
+          {"task": "Difficulty recalibration audit (90 items)", "hours": 3, "focus": "DL-031 pattern — ~50% of items labeled Moderate/3 that should be Easy/1 or Moderate-Easy/2"},
+          {"task": "Explanation sufficiency baseline (90 items)", "hours": 3, "flags": "EV1 (<50 chars), EV3 (no principle), EV5 (no formula steps), EV2 (placeholder text)"},
+          {"task": "Metadata gap inventory (15 cases + 90 items)", "hours": 2, "fields": "ProductionStatus, Difficulty, DifficultyScore, RevisionHistory, AccountingPrinciple, BusinessInterpretation"}
+        ]
+      },
+      "explanationAuthoring": {
+        "hours": 20,
+        "pct": "49%",
+        "description": "89 items (excluding 1 SUFFICIENT: CBQ-B1-Q3 at 244 chars) expand from avg 80 chars to 500-800 chars. D-Program achieved 8x growth (120→1,282). BASE needs 10x growth (80→800).",
+        "subTasks": [
+          {"task": "Core explanation expansion (89 items × 0.15h avg)", "hours": 13.4, "perItem": "0.15h ≈ 9 min per item for authoring 400-700 additional chars"},
+          {"task": "Distractor rationale for select/multi/match items (~40 items)", "hours": 4, "perItem": "0.1h ≈ 6 min"},
+          {"task": "DEFECTIVE items deep remediation (17 items × 0.2h)", "hours": 3.4, "affected": ["CBQ-B1-Q1/Q2 (47 chars each)", "CBQ-B2-Q1 (33)", "CBQ-C1-Q1 (44)", "CBQ-C2-Q1 (37)", "CBQ-C2-Q2 (26)", "CBQ-D2-Q2 (45)", "CBQ-D2-Q3 (49)", "CBQ-E1-Q3 (27)", "CBQ-E1-Q4 (43)", "CBQ-E2-Q2 (35)", "CBQ-F1-Q1 (21)", "CBQ-B3-Q2 (37)", "CBQ-B3-Q3 (24)", "CBQ-C3-Q2 (46)", "CBQ-F2-Q2 (36)", "CBQ-A3-Q6 (45)"]}
+        ]
+      },
+      "metadataFixes": {
+        "hours": 3,
+        "pct": "7%",
+        "subTasks": [
+          {"task": "CalculationRequired schema errors (18 items)", "hours": 1, "items": ["CBQ-A1-Q6", "CBQ-C1-Q4/Q5/Q6", "CBQ-C2-Q3/Q4", "CBQ-D1-Q5/Q6", "CBQ-D2-Q3", "CBQ-E1-Q6", "CBQ-E2-Q3/Q4", "CBQ-F1-Q6", "CBQ-A3-Q4", "CBQ-B2-Q3", "CBQ-C3-Q6", "CBQ-B2-Q5", "CBQ-A2-Q5"]},
+          {"task": "AccountingPrinciple field population (~45 items)", "hours": 1, "note": "~50% currently missing"},
+          {"task": "BusinessInterpretation field population (~85 items)", "hours": 0.5, "note": "~95% currently missing"},
+          {"task": "ProductionStatus Draft→Production promotion", "hours": 0.5, "note": "Per D-Program lesson (closure report H1): promote during wave, not after"}
+        ]
+      },
+      "difficultyRecalibration": {
+        "hours": 2,
+        "pct": "5%",
+        "description": "Recalibrate ~50-60% of items downward by 1 tier per DL-031. Must happen DURING certification waves, not post-hoc per D-Program C2 lesson.",
+        "target": "Achieve CAQS §6.1 distribution: Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10%"
+      },
+      "exhibitVerification": {
+        "hours": 2,
+        "pct": "5%",
+        "description": "Verify ~24 exhibits across 15 cases. Check: internal consistency, every row consumed by ≥1 item, subtotals sum correctly. D-Program had 0 exhibits — this is entirely new work.",
+        "blindspot": "Agent I Blindspot #2"
+      },
+      "governance": {
+        "hours": 4,
+        "pct": "10%",
+        "subTasks": [
+          {"task": "REVISION_HISTORY entries (1 per wave × 6)", "hours": 2},
+          {"task": "Final closeout audit (cross-wave consistency)", "hours": 1},
+          {"task": "Backup protocol compliance (6 backups)", "hours": 0.5},
+          {"task": "DEFECT_LIBRARY entries for new findings", "hours": 0.5}
+        ]
+      }
+    }
+  },
+
+  "3_HIGH_RISK_AREAS": {
+    "top10": [
+      {
+        "rank": 1,
+        "item": "CBQ-F1-Q1",
+        "severity": "CRITICAL",
+        "issue": "Shortest explanation in entire pool (21 chars). Zero educational content. F-domain topic requires unfamiliar data governance frameworks.",
+        "wave": 5,
+        "mitigation": "Must be completely rewritten as a mini-lesson with DAMA-DMBOK citation, data quality dimensions, and warranty analytics context."
+      },
+      {
+        "rank": 2,
+        "item": "CBQ-B3-Q3",
+        "severity": "HIGH",
+        "issue": "Second-shortest explanation (24 chars). Prompt wording ambiguous: 'current-month cash collections from current-month sales' could confuse with total collections.",
+        "wave": 2,
+        "mitigation": "Clarify prompt. Rewrite explanation with collection-timing breakdown, cash-vs-accrual trap warning."
+      },
+      {
+        "rank": 3,
+        "item": "CBQ-D1-Q4 and CBQ-D1-Q6",
+        "severity": "HIGH",
+        "issue": "Both test the same quality-cost classification concept. Redundant pair — no additional pedagogical value. Agent C flags RED-001.",
+        "wave": 3,
+        "mitigation": "Replace one item (preferably Q6, the match-type at 58 chars) with a new concept: process improvement metrics or cost of quality trend analysis."
+      },
+      {
+        "rank": 4,
+        "item": "CBQ-A1-Q4",
+        "severity": "HIGH",
+        "issue": "Ambiguous prompt wording: 'before income-tax cash effects not listed' may confuse candidates. Explanation only 54 chars.",
+        "wave": 1,
+        "mitigation": "Rewrite prompt to clarify operating vs. financing classification. Expand explanation with ASC 230 walk-through."
+      },
+      {
+        "rank": 5,
+        "item": "CBQ-A1-Q6",
+        "severity": "MEDIUM-HIGH",
+        "issue": "CalculationRequired: true on multi type (schema error). Generic 92-char explanation with no distractor rationale at Evaluate level.",
+        "wave": 1,
+        "mitigation": "Fix schema error. Add per-choice distractor rationale inline in Explanation."
+      },
+      {
+        "rank": 6,
+        "item": "Systemic: Difficulty Inflation (DL-031)",
+        "severity": "HIGH",
+        "issue": "~50-60% of items labeled Moderate/3 or Difficult/4 that should be 1-2 tiers lower. Simple arithmetic items labeled Moderate; definition-match items labeled Difficult.",
+        "affects": "All 6 waves",
+        "mitigation": "Recalibrate DURING each wave (not post-hoc per D-Program C2 lesson). Apply recalibration BEFORE certifying items."
+      },
+      {
+        "rank": 7,
+        "item": "Systemic: Explanation Quality Gap",
+        "severity": "HIGH",
+        "issue": "Avg 80 chars vs. D-Program post-cert 1,282 chars. 0% distractor coverage, 1% exam traps, 11% business interpretation. 17 DEFECTIVE items below EV1 threshold (50 chars).",
+        "affects": "89 of 90 items",
+        "mitigation": "Enforce 500-char minimum quality floor across ALL waves (Agent I Blindspot #4). Use D-Program explanation templates."
+      },
+      {
+        "rank": 8,
+        "item": "CBQ-E2 and CBQ-F2 (Wave 6)",
+        "severity": "MEDIUM",
+        "issue": "Cross-domain E,F cases in the final wave. COSO + NIST + COBIT dual citations required. Team fatigue at end of program. SOX 404 + ITGC + RPA governance + cybersecurity — most complex topic cluster.",
+        "wave": 6,
+        "mitigation": "Schedule as 3 sequential sub-sessions within Wave 6 (E1 → quality gate → E2 → quality gate → F2). Do not attempt all 3 in one pass."
+      },
+      {
+        "rank": 9,
+        "item": "18 CalculationRequired schema errors",
+        "severity": "MEDIUM",
+        "issue": "Select/multi/match items where no calculation is needed have CalculationRequired: true. Metadata accuracy defect across Waves 1-6.",
+        "mitigation": "Batch-fix at Wave 0 or Wave 1. Correct each before certifying the parent item."
+      },
+      {
+        "rank": 10,
+        "item": "Legacy CASE-* items in scored_cases.js",
+        "severity": "MEDIUM",
+        "issue": "scored_cases.js contains both CBQ-* cases (90 items) AND 15 legacy cases (CASE-A1, CASE-B1, etc., ~120 items). Write operations must ONLY touch CBQ-* items. Cross-contamination risk per Agent I Challenge #7.",
+        "mitigation": "Validate before every write: grep for modified CASE-* ItemIDs. Add pre-write/post-write diff check to wave protocol."
+      }
+    ],
+    "mostLilelyToCauseDelays": [
+      "CBQ-F1 (Data Governance): 21-char explanation + unfamiliar F-domain → may stall Wave 5 certification",
+      "CBQ-E1/E2 (Internal Controls): Dual COSO/SOX citations needed in Wave 6 → team fatigue compounds difficulty",
+      "CBQ-D1 Q4/Q6 redundancy: Content redesign (not just expansion) → may require cross-wave coordination"
+    ]
+  },
+
+  "4_DEPENDENCY_CHAIN": {
+    "hardDependencies": [
+      {"step": "Wave 0 (S530)", "dependsOn": "Session 529 closeout (all agent reports synthesized)", "blocks": "All certification waves (W1-W6)", "reason": "Answer-key errors must be found before certifying items. Difficulty labels must be calibrated before certifying. Explanation baseline must be established as quality floor."},
+      {"step": "Wave 1 (S531)", "dependsOn": "Wave 0 complete with zero CRITICAL findings unresolved", "blocks": "Wave 2 (Wave 1 establishes templates, citation patterns, quality floor)", "reason": "Wave 1 is the quality template for the entire program. If Wave 1 items are certified at a lower standard, later waves will inherit that standard (D-Program W1→W5 quality gradient issue)."},
+      {"step": "Wave 2 (S532)", "dependsOn": "Wave 1 complete", "reason": "Builds on Wave 1's A/B domain work, introduces C-domain (first Difficult case)"},
+      {"step": "Wave 3 (S533)", "dependsOn": "Wave 2 complete", "reason": "Introduces D-domain (ABC costing); first all-Difficult wave"},
+      {"step": "Wave 4 (S534)", "dependsOn": "Wave 3 complete", "reason": "Deepest C/D focus; highest expansion ratio (63→600 = 9.5×)"},
+      {"step": "Wave 5 (S535)", "dependsOn": "Wave 4 complete", "reason": "First F-domain case; requires 4 waves of certification experience"},
+      {"step": "Wave 6 (S536)", "dependsOn": "Wave 5 complete", "reason": "Capstone E/F cases; maximum complexity; requires full team expertise"},
+      {"step": "Closeout (S537)", "dependsOn": "All 6 waves complete, 90/90 Certified", "reason": "Cross-wave consistency audit, ProductionStatus promotion, REVISION_HISTORY consolidation"}
+    ],
+    "parallelOpportunities": [
+      {"opportunity": "Within-wave multi-agent orchestration", "description": "Per D-Program precedent: within each wave, 2-3 agents can work on different cases simultaneously. Example: Wave 3 (A2 + B2 + D1) → Agent 1 works A2 explanations, Agent 2 works B2 explanations, Agent 3 works D1 explanations, Agent 4 cross-verifies."},
+      {"opportunity": "Metadata fixes concurrent with explanation expansion", "description": "CalculationRequired schema errors, AccountingPrinciple field, BusinessInterpretation field can all be corrected during the same session as explanation authoring."},
+      {"opportunity": "Exhibit verification parallel with Agent I audit", "description": "While explanation agents work on text, a separate exhibit-consistency agent can verify all ~24 exhibits across all 15 cases."},
+      {"opportunity": "Difficulty calibration pre-computed in W0", "description": "Pre-compute all difficulty recalibration recommendations in Wave 0. Apply mechanically during each certification wave without re-evaluating."}
+    ],
+    "cannotParallelize": [
+      "Wave 0 must complete before Wave 1 begins (answer-key errors could change explanations)",
+      "Waves must execute in sequential order (each builds on prior quality floor)",
+      "Cross-wave consistency audit requires all waves complete"
+    ]
+  },
+
+  "5_COMPARISON_TO_D_PROGRAM": {
+    "summaryVerdict": "ENHANCED_CASE_BASE is 1.4× more complex and requires ~4× more agent-hours than D-Program, but is LOWER architectural risk due to single-block structure and no DL-008/DL-016 vulnerability.",
+    "dimensionComparison": [
+      {"dimension": "Item count", "d_program": "75 items (15 cases × 5)", "base": "90 items (15 cases × 6)", "ratio": "1.2×", "effortImpact": "+20% items"},
+      {"dimension": "Items per case", "d_program": 5, "base": 6, "ratio": "1.2×", "effortImpact": "More work per case session"},
+      {"dimension": "Baseline explanation (chars)", "d_program": "~120", "base": "~80", "ratio": "0.67×", "effortImpact": "MUCH larger expansion gap (WORSE)"},
+      {"dimension": "Post-cert explanation (chars)", "d_program": "1,282 avg (500–2,055)", "base": "800+ avg (500–1,500 target)", "ratio": "0.62×", "effortImpact": "Lower quality target (acceptable)"},
+      {"dimension": "Expansion factor", "d_program": "8.0× (120→1,282)", "base": "10.0× (80→800)", "ratio": "1.25×", "effortImpact": "More authoring per item (WORSE)"},
+      {"dimension": "Exhibits", "d_program": "0 exhibits", "base": "~24 exhibits (1-2/case)", "ratio": "∞", "effortImpact": "Entirely new verification work (WORSE)"},
+      {"dimension": "Architecture", "d_program": "Dual-block (metadata + content)", "base": "Single-block (no EW fields)", "ratio": "Simpler", "effortImpact": "No DL-008/DL-016/DL-021/DL-025/DL-026 risk (BETTER)"},
+      {"dimension": "Metadata completeness", "d_program": "Low pre-cert (built during waves)", "base": "Higher pre-cert (CognitiveLevel, Difficulty already present)", "ratio": "Easier", "effortImpact": "Less metadata authoring needed (BETTER)"},
+      {"dimension": "Pre-cert audit", "d_program": "None (ad-hoc verification)", "base": "Formal Wave 0 (13 hours)", "ratio": "New", "effortImpact": "Front-loaded quality assurance (BETTER outcome, more effort)"},
+      {"dimension": "Total sessions", "d_program": "5 certification (S523-S527) + 1 closeout (S528)", "base": "Estimated 8 (1 W0 + 6 waves + 1 closeout)", "ratio": "1.33×", "effortImpact": "3 more sessions"},
+      {"dimension": "Total agent-hours", "d_program": "~10 hours (5 waves × ~2h)", "base": "~41 hours", "ratio": "4.1×", "effortImpact": "SIGNIFICANTLY more effort (WORSE)"},
+      {"dimension": "Architectural risk", "d_program": "Medium (DL-016 dual-block, CASE-D15 SectionTags)", "base": "Low (single-block, no EW slots)", "ratio": "Lower", "effortImpact": "Fewer structural defect categories to fix (BETTER)"},
+      {"dimension": "Domain coverage", "d_program": "A-F all 6 (2-3 cases each)", "base": "A-F all 6 (2-3 cases each)", "ratio": "Same", "effortImpact": "Equivalent"}
+    ],
+    "whyEffortIsHigher": [
+      "PRIMARY DRIVER — Explanation gap: BASE avg 80 chars vs D-Program pre-cert ~120 chars. BASE needs 10× expansion vs D-Program's 8×. This alone adds ~30% to explanation authoring effort.",
+      "SECONDARY — Exhibits: D-Program had 0 exhibits to verify. BASE has ~24 exhibits requiring data-consistency checks, row-consumption validation, and subtotal reconciliation. This is ~2h of entirely new work.",
+      "TERTIARY — Wave 0: D-Program did not have a formal pre-certification audit. BASE injects 13h of audit work before any certification writes occur. This is a quality improvement over D-Program but adds to total effort.",
+      "MODERATING FACTOR — Experience: Team has D-Program's playbook, templates, and lessons learned. Agent efficiency should be 20-30% higher than during first-time D-Program certification.",
+      "MODERATING FACTOR — Lower quality target: BASE targets 800+ avg vs D-Program's 1,282. This is a conscious trade-off: the last remaining Unprocessed array can accept a slightly lower ceiling since 7 of 9 arrays are already Certified."
+    ]
+  },
+
+  "6_STAFFING_MODEL": {
+    "totalAgentDeployments": "25-35 across the full program (comparable to D-Program's 14 agents across 5 sessions)",
+    "perWaveStaffing": {
+      "Wave_0": {
+        "agents": 4,
+        "roles": [
+          {"agent": "Accountant", "task": "Answer-key verification (38 numeric, 52 conceptual). Read each stem+exhibits, solve independently, compare to stored Correct.", "output": "Per-item ALL_AGREE/DISCREPANCY verdict"},
+          {"agent": "Psychometrician", "task": "Difficulty recalibration audit on all 90 items. Flag DL-031 inflation.", "output": "Per-item KEEP/DOWNGRADE/UPGRADE with rationale"},
+          {"agent": "Quality Auditor", "task": "Explanation sufficiency baseline. Classify each item: SUFFICIENT/ADEQUATE/THIN/DEFECTIVE per Agent H methodology.", "output": "Per-item classification + expansion priority CRITICAL/HIGH/MEDIUM/LOW"},
+          {"agent": "Metadata Specialist", "task": "Metadata gap inventory. Identify missing fields per item/case.", "output": "Per-case/per-item gap list"}
+        ]
+      },
+      "Waves_1_through_6": {
+        "agents_perWave": 5,
+        "roles": [
+          {"agent": "Explanation Author 1", "task": "Expand explanations for Case 1 (if 3-case wave) or Case 1 items (if 2-case wave)", "pattern": "D-Program explanation template: principle → formula+substitution → business interpretation → trap warning"},
+          {"agent": "Explanation Author 2", "task": "Expand explanations for Case 2 items", "pattern": "Same template, independent authoring for cross-verification"},
+          {"agent": "Explanation Author 3 (if 3-case wave)", "task": "Expand explanations for Case 3 items"},
+          {"agent": "Distractor Engineer", "task": "Add inline distractor rationale for all select/multi/match items in the wave", "pattern": "Per-choice: 'Option X is incorrect because...' format"},
+          {"agent": "Independent Verifier", "task": "Cross-check all explanations, recalculate numerics, verify citations, flag remaining schema errors", "output": "Post-wave verification report"}
+        ],
+        "governanceAgent": {
+          "shared": true,
+          "task": "PRE-WAVE: Backup scored_cases.js. POST-WAVE: REVISION_HISTORY entry, governance guard compliance check, backup-placement verification."
+        }
+      }
+    },
+    "learnedFromDProgram": [
+      "Agent role clarity is critical — D-Program had 14 agents (A-N) with clear role boundaries",
+      "Independent verification after each wave prevents answer-key drift (Agents C, I in D-Program performed cross-checks)",
+      "Governance agent must enforce backup protocol — D-Program had 2 backup violations (root-level .bak files)",
+      "Multi-agent orchestration per wave is proven — D-Program Wave 4 used 4+ agents simultaneously"
+    ]
+  },
+
+  "7_RESOURCE_CONSTRAINTS": {
+    "processGaps": [
+      {
+        "gap": "No automated exhibit data verification tool",
+        "severity": "Medium",
+        "description": "D-Program had 0 exhibits so no verification tool was developed. BASE has ~24 exhibits. Data-consistency checks must be manual.",
+        "mitigation": "Agent C's exhibit check methodology: read each exhibit → verify subtotals → verify every row referenced by ≥1 ItemID. Manual but systematic."
+      },
+      {
+        "gap": "Domain F expertise gap",
+        "severity": "Medium",
+        "description": "Agents have less experience with F-domain (data governance, analytics, RPA, cybersecurity) vs. A-E domains. This showed in D-Program's lower explanation quality on D6/D12.",
+        "mitigation": "Pre-wave briefing on F-domain frameworks (DAMA-DMBOK, NIST CSF, COBIT 2019). Reference EXAM_BLUEPRINT.md Domain F for terminology."
+      },
+      {
+        "gap": "No ExplanationWrong fields in case-study architecture",
+        "severity": "Low",
+        "description": "All distractor rationale goes inline in the Explanation field. The rendering engine (app.js) must be verified to correctly display inline distractor text for case-study items.",
+        "mitigation": "Verify app.js case-item rendering path before Wave 1. Confirm it reads and displays the Explanation field as expected."
+      },
+      {
+        "gap": "Backup protocol fatigue",
+        "severity": "Low",
+        "description": "D-Program had 2 backup violations (S525/S526 .bak files in root). With 6 waves, the risk of backup-path errors accumulates.",
+        "mitigation": "Governance agent must verify backup placement BEFORE and AFTER each wave write. Add to pre-flight checklist."
+      },
+      {
+        "gap": "scored_cases.js legacy item cohabitation",
+        "severity": "Medium",
+        "description": "The same file (scored_cases.js) contains both CBQ-* cases (90 items) and legacy CASE-* cases (~120 items). Write operations must ONLY modify CBQ-* item blocks.",
+        "mitigation": "Pre-write validation: grep for CASE-A/CASE-B/CASE-C/CASE-D/CASE-E/CASE-F before and after each write. Flag any diff in legacy lines."
+      }
+    ],
+    "toolingGaps": [
+      "No grid-search script for checking that 'CorrectChoice' is not modified during explanation-only edits",
+      "No automated exhibit data consumption checker (which ItemIDs reference which exhibit rows)",
+      "No wave-diff tool to confirm only target CBQ-* items changed between pre/post-wave file states"
+    ]
+  },
+
+  "8_EXPECTED_COMPLETION_DATE_RANGE": {
+    "earliestPossible": "2026-08-01 (5 working days, compact 6-session path, 1 session/day)",
+    "realisticExpected": "2026-08-04 (7 working days, 8-session path with Wave 0 taking full session + buffer for Wave 6 complexity)",
+    "conservativeEstimate": "2026-08-07 (9 working days, allowing 2 sessions for Wave 6 capstone + 1 buffer day for rework)",
+    "assumptions": [
+      "1 session per calendar day (no multi-session days per D-Program precedent)",
+      "Each session runs 3-5 hours of active agent work",
+      "Wave 6 may need 2 sessions due to 18 items × E/F cross-domain complexity",
+      "No mid-program blocker discoveries that halt certification (confidence: MODERATE-HIGH based on Agent C 7/7 spot-checks passing)",
+      "Team maintains the same agent deployment rate as D-Program (1 wave/session)"
+    ]
+  },
+
+  "9_POST_CERTIFICATION_STATE": {
+    "enhancedCaseBasePostCert": {
+      "file": "scored_cases.js",
+      "totalItems": 210,
+      "cbqItems": 90,
+      "cbqCertified": "90/90 (100%)",
+      "legacyItems": "~120 (status varies — some Certified, some Unprocessed from pre-CBQ authoring)",
+      "productionStatus": "Promoted from Draft → Production for all 15 CBQ cases",
+      "questionState": "All 90 CBQ items: Certified"
+    },
+    "fullCaseBankPostBASE": {
+      "arrays": {
+        "scored_cases.js": {"totalItems": 210, "certifiedItems": "225+ (135 pre-existing + 90 new) — NOTE: 225 > 210 indicates some legacy items are uncertified. True count from Agent I: 135 pre-existing Certified. Post-BASE: 225 Certified = 135 legacy + 90 CBQ.", "status": "8th array certified"},
+        "scored_cases2.js": {"totalItems": "183 (15 cases × varying items)", "certifiedItems": 183, "status": "100% Certified (CBQ2)"},
+        "scored_cases3.js": {"totalItems": 75, "certifiedItems": 75, "status": "100% Certified"},
+        "scored_cases4.js": {"totalItems": 150, "certifiedItems": 150, "status": "100% Certified (75 CBQ4 + 75 CASE-D)"},
+        "scored_cases5.js": {"totalItems": 90, "certifiedItems": 90, "status": "100% Certified"}
+      },
+      "postCertMilestone": "8 of 9 case-bank arrays at or near 100% Certified. The legacy items in scored_cases.js are the only uncertified residual in the case-bank lane.",
+      "totalCertifiedAcrossAll5Files": "583+ certified case-study items",
+      "notedException": "Legacy CASE-* items in scored_cases.js have varying certification standards (some Certified from pre-D-Program era, some Unprocessed). These are NOT part of the ENHANCED_CASE_BASE program and remain outside any active certification workstream."
+    }
+  },
+
+  "10_GO_NOGO_RECOMMENDATION": {
+    "verdict": "CONDITIONAL GO",
+    "confidence": "HIGH (based on 7/7 Agent C spot-checks passing, 0 ESCALATE items, proven D-Program playbook)",
+    "conditionsForGO": [
+      {
+        "condition": "Complete Wave 0 pre-certification audit BEFORE any certification writes",
+        "rationale": "D-Program had no pre-cert audit. 5 answer-key errors (DL-030) were found in the MCQ pool after certification, creating revision-history complexity. Must front-load independent verification.",
+        "session": "S530",
+        "exitCriteria": "ALL 38 numeric items independently recalculated with ALL_AGREE or DISCREPANCY documented and resolved. ALL 52 conceptual items have Correct verified against stem+choices. Difficulty calibration recommendations applied."
+      },
+      {
+        "condition": "Fix the 4 HIGH_RISK items before end of Wave 1",
+        "rationale": "Agent C identified 4 HIGH_RISK items. CBQ-A1-Q4 (ambiguous prompt), CBQ-A1-Q6 (CalcRequired schema error), CBQ-F1-Q1 (21-char placeholder), CBQ-B3-Q3 (24 chars + ambiguous prompt). These cannot be certified in their current state.",
+        "session": "S530 (fixes) + S531 (verify fixes in Wave 1)",
+        "exitCriteria": "All 4 items reclassified as READY or REMEDIATION_NEEDED (not HIGH_RISK)."
+      },
+      {
+        "condition": "Resolve CBQ-D1 Q4/Q6 redundancy",
+        "rationale": "Two items testing identical quality-cost concept provides zero additional pedagogical value. Replace CBQ-D1-Q6 (match, 58 chars) with a distinct cost-management concept.",
+        "session": "S530 or S533 (Wave 3)",
+        "exitCriteria": "CBQ-D1 has 6 items testing distinct concepts. Q4 and Q6 no longer overlap."
+      }
+    ],
+    "doNotProceedIf": [
+      "Wave 0 discovers answer-key errors on >5% of numeric items (≥2 of 38). This would indicate systemic authoring quality issues requiring deeper investigation.",
+      "Any HIGH_RISK item remains unfixed at Wave 1 close.",
+      "CBQ-D1 Q4/Q6 redundancy unresolved before Wave 3 certification."
+    ],
+    "recommendedSession530Scope": "Wave 0 pre-certification audit ONLY. Do not attempt Wave 1 certification in the same session. The 13-hour audit workload is sufficient for a full session."
+  },
+
+  "EXECUTIVE_SUMMARY": {
+    "estimatedSessions": "8 (S530–S537)",
+    "estimatedAgentHours": 41,
+    "comparisonToDProgram": "1.4× items, 4.1× effort, LOWER architectural risk",
+    "completionDateRange": "July 27 – August 7, 2026",
+    "goNoGo": "CONDITIONAL GO — 3 prerequisites must be cleared in S530 before S531 certification begins",
+    "top3Risks": [
+      "CBQ-F1-Q1: 21-char placeholder explanation in unfamiliar F-domain (Wave 5)",
+      "Systemic difficulty inflation: ~50% of items labeled 1-2 tiers too high (all waves)",
+      "CBQ-D1 Q4/Q6 redundancy: two items test same concept (Wave 3)"
+    ],
+    "keyAdvantageOverDProgram": "Single-block architecture eliminates DL-008/DL-016/DL-029 defect categories — case-study certification is simpler than MCQ certification. No ExplanationWrong fields to validate, no dual-block mismatch to reconcile."
+  }
+}

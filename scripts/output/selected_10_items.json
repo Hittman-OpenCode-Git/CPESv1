@@ -1,0 +1,504 @@
+[
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Section": "C",
+    "Difficulty": "Moderate",
+    "SectionName": "Performance Management",
+    "Topic": "E-C.044 Material quantity variance calc",
+    "UniqueConceptKey": "E-C-044-Material-quantity-variance-calc",
+    "MicroTopic": "Material quantity variance calc",
+    "CorrectChoice": "D",
+    "Choices": {
+      "A": "$2,000 favorable",
+      "B": "$1,500 unfavorable",
+      "C": "$500 favorable",
+      "D": "$2,000 unfavorable"
+    },
+    "CalculationItem": true,
+    "Part": 1,
+    "ItemType": "MCQ",
+    "LOSTag": "Part 1 Section C.1",
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Stem": "A company uses 10,000 lbs of material, standard is 9,500 lbs, standard price $4/lb. Quantity variance:",
+    "ExplanationCorrect": "(10,000 - 9,500) x $4 = $2,000 unfavorable",
+    "QuestionID": "P1E-C-044",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "ExplanationWrongA": "$2,000 favorable reverses the sign. Using 10,000 lbs instead of the standard 9,500 lbs means 500 extra pounds were consumed. Since actual quantity exceeds standard, the variance is unfavorable — the reversal of sign here is a common error from reading the subtraction backward.",
+    "ExplanationWrongB": "$1,500 unfavorable likely results from multiplying the 500-lb excess by $3 instead of the correct $4 standard price. The material quantity variance always uses the standard price (not actual price) to isolate the quantity effect from any price changes.",
+    "ExplanationWrongC": "$500 favorable uses only the 500-lb quantity difference without multiplying by the standard price and also reverses the direction. The formula is (AQ − SQ) × SP = (10,000 − 9,500) × $4 = $2,000 unfavorable, not merely the quantity difference alone.",
+    "ExplanationWrongD": "",
+    "question_state": "Certified",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
+  },
+  {
+    "StudyLinks": [
+      {
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx",
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C"
+      },
+      {
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction",
+        "label": "OpenStax Accounting"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Section": "C",
+    "Difficulty": "Difficult",
+    "SectionName": "Performance Management",
+    "Topic": "E-C.059 Operating leverage calculation",
+    "UniqueConceptKey": "E-C-059-Operating-leverage-calculation",
+    "MicroTopic": "Operating leverage calculation",
+    "CorrectChoice": "C",
+    "Choices": {
+      "A": "20%",
+      "B": "3%",
+      "C": "30%",
+      "D": "10%"
+    },
+    "CalculationItem": true,
+    "Part": 1,
+    "ItemType": "MCQ",
+    "LOSTag": "Part 1 Section C.2",
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "Stem": "A company with operating leverage of 3 will see operating income change by ___ for a 10% sales change:",
+    "ExplanationCorrect": "Degree of operating leverage = 3; 3 x 10% = 30% change.",
+    "QuestionID": "P1E-C-059",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "ItemStyle": "single-select",
+    "ExplanationWrongC": "",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "ExplanationWrongA": "20% would require DOL of 2 (2 x 10%). The correct calculation uses the given DOL of 3: 3 x 10% = 30%.",
+    "ExplanationWrongB": "3% confuses the DOL multiplier with the percentage result. Operating leverage multiplies the sales change, it is not the answer itself.",
+    "ExplanationWrongD": "10% ignores the DOL effect entirely. Operating income changes by DOL multiplied by the sales change, not by the sales change alone.",
+    "certification_date": "2026-07-24",
+    "certification_batch": "S71",
+    "CognitiveLevel": "Apply"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.005 profit center evaluation",
+    "MicroTopic": "profit center evaluation",
+    "UniqueConceptKey": "C-005-profit-center-evaluation",
+    "LOSTag": "C.2 Responsibility centers",
+    "Difficulty": "Easy",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Willow manages a business unit responsible for revenues and costs but not major investments. Which response is most appropriate?",
+    "Choices": {
+      "A": "Exclude revenue because profit centers manage only costs",
+      "B": "Evaluate operating profit and related revenue and cost drivers",
+      "C": "Evaluate only asset turnover",
+      "D": "Charge the manager with corporate financing decisions"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Profit centers are responsible for both revenues and costs.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-005",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Excluding revenue contradicts the definition of a profit center. Unlike a cost center, a profit center manager is responsible for both revenues and costs. By definition, profit centers generate revenue, so excluding it would treat the profit center as if it were a cost center.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Asset turnover is a component of return on investment (ROI) and is used to evaluate investment centers—units responsible for revenues, costs, and invested assets. A profit center does not control investment in assets. Evaluating only asset turnover ignores the revenue and cost drivers central to profit center performance.",
+    "ExplanationWrongD": "Corporate financing decisions (e.g., issuing debt or equity, setting dividend policy) are made at the corporate level, not by a profit center manager. Profit center evaluation should focus on the revenues and costs within the manager’s span of control, including factors such as sales volume, pricing, and controllable expenses.",
+    "question_state": "Certified",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.012 residual income advantage",
+    "MicroTopic": "residual income advantage",
+    "UniqueConceptKey": "C-012-residual-income-advantage",
+    "LOSTag": "C.3 Performance measures",
+    "Difficulty": "Easy",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Evergreen worries ROI discourages managers from accepting profitable projects above the required return but below current ROI. Which response is most appropriate?",
+    "Choices": {
+      "A": "Lower the cost of capital to zero for all projects",
+      "B": "Use residual income to reduce the incentive to reject value-adding investments",
+      "C": "Evaluate only sales volume",
+      "D": "Use gross margin percentage as the only investment center measure"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Residual income charges for capital and can encourage acceptance of projects earning above the required return.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-012",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Setting the cost of capital to zero ignores the real economic cost of financing. Capital providers (both debt and equity) require a return. Residual income explicitly subtracts a capital charge (operating assets multiplied by the required rate of return) from operating income to measure value creation above the cost of capital.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Sales volume ignores both profitability and the investment required to generate those sales. An investment center must be evaluated on how efficiently it uses its assets, not just on how much it sells. Neither ROI nor residual income can be calculated from sales volume alone; both require operating income and asset data.",
+    "ExplanationWrongD": "Gross margin percentage (gross profit divided by sales) does not account for the assets invested in the division. An investment center could have a high gross margin but still destroy value if it ties up excessive capital. Residual income charges for the cost of invested assets, providing a more complete measure of value creation.",
+    "question_state": "Certified",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.025 transfer price capacity condition 10",
+    "MicroTopic": "transfer price capacity condition 10",
+    "UniqueConceptKey": "C-025-transfer-price-capacity-condition-10",
+    "LOSTag": "C.2 Responsibility centers",
+    "Difficulty": "Easy",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Riverview has idle capacity in the selling division and no external market for the intermediate component. Which response is most appropriate?",
+    "Choices": {
+      "A": "Refuse all internal transfers if market price is unavailable",
+      "B": "Set the transfer price equal to corporate income tax expense",
+      "C": "A transfer price near variable cost may promote company-wide use of idle capacity while preserving relevant cost logic",
+      "D": "Use full cost plus markup because idle capacity is irrelevant"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Transfer pricing should consider capacity, external market, and opportunity cost.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax Managerial Accounting: Standard Costs and Variances",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/8-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-025",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "The absence of a market price does not mean internal transfers should be refused. When no external market exists, cost-based transfer prices (variable cost or full cost) or negotiated prices can be used. Refusing all transfers would leave idle capacity unused and forgo the contribution margin the buying division could generate.",
+    "ExplanationWrongB": "Corporate income tax expense is a company-level obligation based on taxable income and tax rates, not a transfer pricing methodology. Transfer prices are set based on market prices, costs, or negotiations between divisions. Tax expense has no logical relationship to the value of goods transferred between responsibility centers.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Idle capacity is highly relevant to transfer pricing decisions. When the selling division has excess capacity, the opportunity cost of internal transfers is zero or near zero, making variable-cost-based transfer prices appropriate. Full cost plus markup ignores the economic reality of idle capacity and may cause the buying division to source externally when internal transfer would benefit the company.",
+    "question_state": "Certified",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.048 lag vs lead indicator distinction",
+    "MicroTopic": "lag vs lead indicator distinction",
+    "UniqueConceptKey": "C-048-lag-vs-lead-indicator-distinction",
+    "LOSTag": "C.4 Balanced scorecard and other performance measures",
+    "Difficulty": "Easy",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "A company treats 'customer satisfaction score' as a leading indicator of future revenue growth, while 'net income' is a lagging indicator of past performance. What is the primary reason organizations track leading indicators?",
+    "Choices": {
+      "A": "Leading indicators are always more accurate than lagging indicators",
+      "B": "Leading indicators provide early signals that allow corrective action before financial results are affected",
+      "C": "Leading indicators eliminate the need to track financial performance",
+      "D": "Leading indicators are required by GAAP for external reporting"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Leading indicators, like customer satisfaction, signal future performance early enough that management can take corrective action before the impact shows up in lagging financial metrics like net income.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax: Principles of Managerial Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-048",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Leading indicators are forward-looking predictions and are inherently less certain than lagging indicators, which measure outcomes that have already occurred. Their value lies not in accuracy but in timeliness—they provide early signals that enable proactive management before financial results are locked in.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Leading indicators complement lagging indicators; they do not replace them. Financial performance measures (lagging indicators) remain essential for evaluating actual results and accountability. The balanced scorecard framework intentionally includes both leading and lagging measures to provide a complete picture of strategy execution.",
+    "ExplanationWrongD": "GAAP governs financial reporting to external stakeholders and does not require the disclosure of leading indicators such as customer satisfaction scores or employee training metrics. Leading indicators are internal management tools used for decision-making and performance management, not external reporting compliance.",
+    "question_state": "Certified",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Apply"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.060 scorecard measure overload risk",
+    "MicroTopic": "scorecard measure overload risk",
+    "UniqueConceptKey": "C-060-scorecard-measure-overload-risk",
+    "LOSTag": "C.4 Balanced scorecard and other performance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Northfield's balanced scorecard has grown to include 45 separate metrics across all four perspectives. What is the primary risk of this many performance measures?",
+    "Choices": {
+      "A": "The scorecard becomes too simple to be useful",
+      "B": "Employees may lose focus on the most critical strategic drivers among too many competing metrics",
+      "C": "The financial perspective will automatically become overweighted",
+      "D": "GAAP prohibits scorecards with more than 20 measures"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "An excessive number of scorecard metrics can dilute focus, making it difficult for employees and managers to identify and prioritize the measures most critical to strategic execution.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax: Principles of Managerial Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-060",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "With 45 metrics, the problem is not simplicity but excessive complexity. Too many measures overwhelm users with information and dilute attention from the handful of metrics that truly drive strategy. Best practice recommends 15–25 measures total across all four perspectives to maintain focus and clarity.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Having many metrics does not automatically overweight any single perspective. The risk is not about weighting but about cognitive overload—employees cannot effectively track and act on 45 different performance signals simultaneously. The scorecard loses its strategic focus regardless of how measures are distributed.",
+    "ExplanationWrongD": "GAAP governs external financial reporting and has no provisions limiting the number of balanced scorecard measures. The balanced scorecard is an internal management tool, not a financial reporting framework. There is no regulatory limit on the number of measures a company may track internally.",
+    "question_state": "Certified",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.061 dual transfer pricing rationale",
+    "MicroTopic": "dual transfer pricing rationale",
+    "UniqueConceptKey": "C-061-dual-transfer-pricing-rationale",
+    "LOSTag": "C.3 Responsibility centers and transfer pricing",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Meridian uses a dual transfer pricing system where the selling division records the transfer at market price while the buying division records it at variable cost. What is the primary purpose of this approach?",
+    "Choices": {
+      "A": "To simplify consolidated financial reporting",
+      "B": "To allow both divisions to report performance that motivates goal congruence, since each records the price most favorable to their own evaluation",
+      "C": "To eliminate the need for any transfer pricing policy",
+      "D": "To comply with a specific GAAP requirement for transfer pricing"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Dual transfer pricing can support goal congruence by letting the selling division record a market-based price while the buying division records a cost-based price. The approach can improve divisional performance incentives, but the difference must be eliminated for consolidated reporting.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax: Principles of Managerial Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-061",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Dual prices usually complicate, rather than simplify, consolidation because the internal profit difference must be eliminated.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Dual transfer pricing is itself a transfer-pricing policy; it does not eliminate the need to define prices and consolidation treatment.",
+    "ExplanationWrongD": "Transfer pricing for internal management purposes is not required by GAAP in this form. The rationale is managerial performance evaluation and goal congruence.",
+    "question_state": "Certified",
+    "DifficultyScore": 3,
+    "CognitiveLevel": "Apply"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.073 cost-based transfer pricing limitation",
+    "MicroTopic": "cost-based transfer pricing limitation",
+    "UniqueConceptKey": "C-073-cost-based-transfer-pricing-limitation",
+    "LOSTag": "C.3 Responsibility centers and transfer pricing",
+    "Difficulty": "Easy",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Highland transfers products between divisions at full absorption cost with no markup. What is a key limitation of this cost-based transfer pricing approach?",
+    "Choices": {
+      "A": "It always maximizes overall company profit",
+      "B": "It provides the selling division no profit incentive and may not reflect true opportunity cost",
+      "C": "It is prohibited under U.S. GAAP",
+      "D": "It eliminates the need for divisional performance evaluation"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Transferring at cost with no markup gives the selling division no profit margin on internal transfers, reducing its incentive to supply internally and failing to capture any opportunity cost of foregone external sales.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax: Principles of Managerial Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-073",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Cost-based transfer pricing at full absorption cost with no markup does not automatically maximize company profit. It ignores opportunity cost—if the selling division could sell externally at a higher price, transferring at cost may lead to suboptimal decisions and lost contribution margin for the company as a whole.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Cost-based transfer pricing is not prohibited under U.S. GAAP. It is a widely used internal management accounting practice. GAAP governs external financial reporting and does not prescribe how companies set internal transfer prices for management decision-making and performance evaluation.",
+    "ExplanationWrongD": "Transfer pricing does not eliminate the need for divisional performance evaluation—it directly affects it. Cost-based transfer prices still require measuring each division’s costs, revenues, and efficiency. The limitation is that the selling division earns no profit, which can distort performance comparisons.",
+    "question_state": "Certified",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Apply"
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.096 scorecard alignment with strategy",
+    "MicroTopic": "scorecard alignment with strategy",
+    "UniqueConceptKey": "C-096-scorecard-alignment-with-strategy",
+    "LOSTag": "C.4 Balanced scorecard and other performance measures",
+    "Difficulty": "Easy",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Ridgeline adopts a cost-leadership strategy but its balanced scorecard emphasizes innovation and new product development metrics almost exclusively. What is the most likely consequence?",
+    "Choices": {
+      "A": "The scorecard will automatically adjust to reflect the correct strategy",
+      "B": "Misalignment between measured performance and actual strategic priorities, potentially driving the wrong behaviors",
+      "C": "No consequence, since all scorecards should include innovation metrics",
+      "D": "The company will be forced to switch to a differentiation strategy"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "A balanced scorecard should be tailored to the organization's specific strategy. When the metrics emphasized do not align with the actual strategy (cost leadership), it can drive behavior that is disconnected from real strategic priorities.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "OpenStax: Principles of Managerial Accounting",
+        "url": "https://openstax.org/books/principles-managerial-accounting/pages/1-introduction"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-C-096",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Scorecards do not automatically adjust—they are designed by management and must be intentionally aligned with strategy. If a cost-leadership strategy is being pursued but the scorecard tracks innovation metrics, the misalignment will persist until management deliberately revises the measures to reflect cost control and operational efficiency.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Scorecards must be tailored to the organization’s specific strategy. A cost-leadership strategy requires metrics focused on cost reduction, efficiency, and process standardization, not innovation. Emphasizing the wrong metrics drives behavior that conflicts with strategic priorities and wastes resources on activities that do not support competitive advantage.",
+    "ExplanationWrongD": "A scorecard misalignment does not force a strategy change. The company remains free to pursue cost leadership, but its measurement system will undermine rather than support that strategy. The consequence is poor execution and confused priorities, not an automatic strategic pivot.",
+    "question_state": "Certified",
+    "DifficultyScore": 1,
+    "CognitiveLevel": "Understand"
+  }
+]

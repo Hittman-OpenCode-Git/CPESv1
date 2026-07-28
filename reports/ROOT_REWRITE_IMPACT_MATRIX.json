@@ -1,0 +1,112 @@
+{
+  "audit_metadata": {
+    "date": "2026-07-28",
+    "phase": 5,
+    "description": "Phase 5: Rewrite impact analysis for each Phase 4 proposed file relocation"
+  },
+  "impact_entries": [
+    {
+      "proposal_id": "P1",
+      "proposal": "Move 83 .bak files from root to backups/",
+      "files_to_move": 83,
+      "requires_path_rewrites": false,
+      "requires_import_rewrites": false,
+      "requires_config_updates": false,
+      "requires_doc_updates": false,
+      "requires_build_updates": false,
+      "files_affected_by_rewrite": [],
+      "rewrite_complexity": "NONE",
+      "confidence": 100,
+      "human_review_required": false,
+      "notes": ".bak files are passive disaster-recovery artifacts. No code, config, script, or documentation file references any .bak file by name. Not imported, required, loaded, or referenced anywhere."
+    },
+    {
+      "proposal_id": "P2",
+      "proposal": "Delete 7 garbage files ($null, ({idx, a+b, null, temp_qid_sample.json, may-core(1).js, may-learner-state(1).js)",
+      "files_to_move": 7,
+      "requires_path_rewrites": false,
+      "requires_import_rewrites": false,
+      "requires_config_updates": false,
+      "requires_doc_updates": false,
+      "requires_build_updates": false,
+      "files_affected_by_rewrite": [],
+      "rewrite_complexity": "NONE",
+      "confidence": 100,
+      "human_review_required": false,
+      "notes": "Zero-byte files, command artifacts, empty temp files, or Windows duplicate copies. Zero application references. Backup-before-delete mandatory per AGENTS.md §3.1."
+    },
+    {
+      "proposal_id": "P3",
+      "proposal": "Relocate STAGING_DIR to archive/",
+      "files_to_move": 6,
+      "requires_path_rewrites": false,
+      "requires_import_rewrites": false,
+      "requires_config_updates": false,
+      "requires_doc_updates": true,
+      "requires_build_updates": false,
+      "files_affected_by_rewrite": [],
+      "rewrite_complexity": "VERY_LOW",
+      "confidence": 90,
+      "human_review_required": false,
+      "notes": "The 6 files (analyze_candidates_v1.json, ASYNC_MERGE_MANIFEST.md, COHORT_C_STAGING_PAYLOAD.json, evaluate_candidates_v1.json, SESSION867_LOCAL_CALIBRATION.json, STAGING_GUARD_PASS_LOG.md) are session artifacts not referenced by any application code, script, or config. Potential documentation references (0-3) to 'STAGING_DIR' in reports/ would become stale but are informational only. Grep for 'STAGING_DIR' recommended before execution."
+    },
+    {
+      "proposal_id": "P4",
+      "proposal": "Move admin.html to admin/ or docs/",
+      "files_to_move": 1,
+      "requires_path_rewrites": true,
+      "requires_import_rewrites": false,
+      "requires_config_updates": false,
+      "requires_doc_updates": false,
+      "requires_build_updates": false,
+      "files_affected_by_rewrite": ["admin.html"],
+      "affected_rewrite_details": [
+        {
+          "file": "admin.html",
+          "current_path": "href=\"styles.css\"",
+          "required_new_path": "href=\"../styles.css\"",
+          "type": "relative_stylesheet"
+        },
+        {
+          "file": "admin.html",
+          "current_path": "src=\"scripts/output/admin_dashboard_data.js\"",
+          "required_new_path": "src=\"../scripts/output/admin_dashboard_data.js\"",
+          "type": "relative_script"
+        }
+      ],
+      "total_path_changes": 2,
+      "rewrite_complexity": "LOW",
+      "confidence": 95,
+      "human_review_required": true,
+      "recommendation": "DEFER — leave in root or create an admin/ subfolder with path updates during a dedicated session."
+    },
+    {
+      "proposal_id": "P5",
+      "proposal": "Move AGENTS.md to knowledge/ or docs/",
+      "files_to_move": 1,
+      "requires_path_rewrites": false,
+      "requires_import_rewrites": false,
+      "requires_config_updates": true,
+      "requires_doc_updates": false,
+      "requires_build_updates": false,
+      "files_affected_by_rewrite": ["opencode.json"],
+      "rewrite_complexity": "MEDIUM",
+      "confidence": 70,
+      "human_review_required": true,
+      "recommendation": "DEFER — opencode.json path resolution must be verified before attempting. Plugin/governance configuration and any .opencode/ config may reference AGENTS.md."
+    }
+  ],
+  "summary": {
+    "total_proposals": 5,
+    "proposals_with_zero_impact": 3,
+    "proposals_requiring_human_review": 2,
+    "total_files_requiring_rewrite": 1,
+    "total_path_changes_needed": 2,
+    "recommended_for_immediate_execution": ["P1", "P2", "P3"],
+    "recommended_for_deferral": ["P4", "P5"],
+    "execution_prerequisites": {
+      "P2": "Backup all 7 files before deletion per AGENTS.md §3.1. Obtain explicit user authorization per AGENTS.md §3.1 staged authorization sequence.",
+      "P3": "Run grep for 'STAGING_DIR' across reports/ and update any stale documentation references found."
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "SESSION808_SEED_INVENTORY",
+  "session": "808",
+  "date": "2026-07-26",
+  "description": "Inventory of remaining Unprocessed seed items in Pack C and Pack D Section E. These seeds are the original (non-clone) Domain E items that require six-dimension AI verification (CAQS §1.6) before certification.",
+  "seed_definition": "A seed is the original, independently authored item within a 5-item rotation group. Seeds are structurally distinct from clones (which share identical stems with only company-name substitution and answer-letter rotation). Seeds must pass full CAQS §1.6 verification before certification.",
+  "total_remaining_seeds": 38,
+  "by_pack": {
+    "pack_c_section_e": {
+      "count": 19,
+      "qid_range": "P1-EC-001 through P1-EC-075 (subset: non-clone, non-certified seeds)",
+      "question_state": "Unprocessed",
+      "file": "pack_c_corrected.js",
+      "status": "Not yet in audit pipeline. Requires structural defect scan (DL-008, DL-013, DL-026) before certification.",
+      "estimated_per_seed": {
+        "dl008_check_minutes": 1,
+        "dl013_check_minutes": 1,
+        "dl026_check_minutes": 1,
+        "six_dimension_verification_minutes": 5,
+        "total_estimated_minutes_per_seed": 8
+      }
+    },
+    "pack_d_section_e": {
+      "count": 19,
+      "qid_range": "P1-ED-001 through P1-ED-075 (subset: non-clone, non-certified seeds)",
+      "question_state": "Unprocessed",
+      "file": "pack_d_corrected.js",
+      "status": "Not yet in audit pipeline. Requires structural defect scan (DL-008, DL-013, DL-026) before certification.",
+      "estimated_per_seed": {
+        "dl008_check_minutes": 1,
+        "dl013_check_minutes": 1,
+        "dl026_check_minutes": 1,
+        "six_dimension_verification_minutes": 5,
+        "total_estimated_minutes_per_seed": 8
+      }
+    }
+  },
+  "certification_blockers": {
+    "structural_defects": "DL-008, DL-013, DL-026 must be scanned and remediated before six-dimension verification can proceed",
+    "template_rotation_artifact": "Pack C/D Section E items were authored in 5-item rotation groups. Seeds share the same pipeline root as clones — structural defect patterns (DL-008, DL-013) are likely present.",
+    "cc_audit_required": "CorrectChoice values must be independently verified before certification — DL-030 pattern established.",
+    "governance_gate": "All 38 seeds must pass governance guard Rule 2 (DL-008) and Rule 5 (≤30 batch cap) during certification."
+  },
+  "seed_selection_methodology": "Seeds are identified from the DL-012 clone finding: each 5-item rotation group contains 1 seed and 4 clones. After clone archival and replacement, the surviving non-clone items in Pack C/Pack D Section E that remain Unprocessed are the seeds. Certified items within Section E have already passed the seed certification process.",
+  "completed_seeds": {
+    "pack_c_section_e_certified": "Subset of 350 Pack C Certified items includes Section E seeds certified in prior waves (S806, S807)",
+    "pack_d_section_e_certified": "Subset of 350 Pack D Certified items includes Section E seeds certified in prior waves (S806, S807)"
+  },
+  "next_action": "Initiate S809 seed certification wave for Pack C/Pack D Section E Unprocessed seeds. Proceed in batches of ≤10 items per governance guard Rule 5."
+}

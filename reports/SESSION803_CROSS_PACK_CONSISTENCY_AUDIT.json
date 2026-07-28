@@ -1,0 +1,118 @@
+{
+  "audit_metadata": {
+    "session": "S803",
+    "agent": "Agent O — Cross-Pack Consistency Audit",
+    "mode": "READ-ONLY",
+    "timestamp": "2026-07-26",
+    "packs_audited": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"]
+  },
+  "verdict": "PASS — No cross-pack inconsistency introduced. One pre-existing critical structural defect found in P1-E-055 (Archived, not learner-facing).",
+  "check_1_section_f_asymmetry": {
+    "question": "Section F active counts vary: Pack A=75, B=75, C=19, D=21, E=75. Is this asymmetry acceptable?",
+    "verdict": "ACCEPTABLE",
+    "rationale": "Packs C and D Section F were affected by DL-012 clonal redundancy (5-item clone groups with identical stems, only company name rotated). Wave 1 archival removed 56 Pack C clones and 55 Pack D clones, retaining 1 seed per topic group plus 5 special/unique items per pack. The pedagogical value of the removed clones was zero beyond the seeds.",
+    "active_counts": {
+      "pack_a": {"total": 75, "all": "Certified", "unique_topics": 75},
+      "pack_b": {"total": 75, "all": "Certified", "unique_topics": 25, "note": "Topics repeat ~3x across items — each topic has multiple independently-authored items (not clones)"},
+      "pack_c": {"total_active": 19, "seeds": 14, "special_unique": 5, "archived_clones": 56, "active_state": "Unprocessed", "unique_topics_active": 15},
+      "pack_d": {"total_active": 20, "seeds": 14, "special_unique": 6, "archived_clones": 55, "active_state": "Unprocessed", "unique_topics_active": 14, "note": "FD-046 is incomplete (missing content block) — correctly Archived"},
+      "pack_e": {"total": 75, "all": "Certified", "unique_topics": 25, "note": "Pack E Section F covers 25 topics with genuine independent items"}
+    },
+    "topic_coverage_analysis": {
+      "pack_a_topics": "75 granular topics: ERP, data governance, data quality dimensions, analytics (descriptive/diagnostic/predictive/prescriptive), AI/ML, RPA, blockchain, cloud, cybersecurity (phishing/MFA/encryption/SIEM), SDLC, API, spreadsheets, privacy, continuous auditing, process mining, digital transformation, dashboard design, data lineage, NLP, OCR, etc.",
+      "pack_b_topics": "25 topics: data governance, master data management, data quality, data analytics types, data visualization, data mining, AI/ML, RPA, blockchain, cloud computing, cybersecurity, IS lifecycle, ERP, database management, privacy regulations, continuous monitoring",
+      "pack_c_active_topics": "15 topics: data governance ownership, descriptive vs predictive analytics, prescriptive analytics, RPA, cloud computing, data visualization, CIA triad, big data, data mining, blockchain, data quality, AI/ML, cybersecurity phishing, ERP integration, data lake vs warehouse, continuous auditing",
+      "pack_d_active_topics": "14 topics: API integration, BI self-service, data encryption, cloud SaaS, predictive model overfitting, IoT sensors, cybersecurity incident response, data breach response, data quality, structured vs unstructured data, digital signatures, master data management, automation bot governance, NLP, cybersecurity risk assessment, technology cost-benefit, data retention policy",
+      "pack_e_topics": "25 topics: descriptive/predictive/prescriptive analytics, big data (4Vs), structured/unstructured, data warehouse/lake, ETL/ELT, ERP, RPA, blockchain, cloud computing, cybersecurity management, phishing, MFA, continuous auditing, CAATs, data mining, data visualization, NIST, GDPR, data governance, IoT, COBIT, IT change management, DR/BC, AI, social media analytics, cloud risks, audit analytics, EDP auditing, DBMS, SQL, BI, ransomware, social engineering, pen testing, hot/cold site, RTO/RPO, smart contracts, SaaS/IaaS/PaaS, data quality dimensions",
+      "net_coverage": "Packs A + B + E alone provide comprehensive Domain F coverage. Packs C + D active seeds add supplementary topics (API integration, IoT sensors, digital signatures, bot governance, NLP, structured vs unstructured, predictive model overfitting, data breach response). No CMA Part 1 Domain F LOS is uncovered."
+    }
+  },
+  "check_2_p1_e_055_structural_integrity": {
+    "question": "P1-E-055 is structurally intact? Does metadata CC match content CC?",
+    "verdict": "FAIL — P1-E-055 has MULTIPLE pre-existing structural defects",
+    "current_state": "Archived",
+    "corrected_by_wave1": false,
+    "note": "P1-E-055 was correctly left as Archived by Wave 1. It was NOT changed to Certified. The user's assumption that it is now Certified is incorrect — it remains Archived per raw file evidence at pack_a_corrected.js:20462.",
+    "defects_found": [
+      {
+        "defect_type": "DL-016 — Metadata-Content Block Mismatch (Severity: HIGH)",
+        "details": "The content block (lines 20482-20496) has Topic 'E.056 independent physical count control' and Stem about warehouse manager performing physical inventory count. But the ExplanationCorrect (line 20497) describes 'Periodic access recertification' and 'user access rights' — a COMPLETELY DIFFERENT topic (access recertification, not physical inventory counts). All four ExplanationWrong fields (lines 20471-20474) also describe payroll/email/termination topics unrelated to physical counts.",
+        "impact": "If this item were Certified, learners would see distractor explanations about ghost employees and payroll when the question is about physical inventory counts."
+      },
+      {
+        "defect_type": "DL-010 — Misassigned CorrectChoice (Severity: CRITICAL)",
+        "details": "Stem asks 'What control weakness does this create?' (warehouse manager performing physical count without oversight). CorrectChoice is 'D' which says 'This arrangement is required for accurate cycle counts' — this is NOT a weakness. The correct answer is Choice B: 'The lack of segregation between custody and counting increases the risk that shortages or theft could go undetected or be concealed.'",
+        "impact": "If this item were delivered to learners, the wrong answer would be marked correct with an explanation about access recertification."
+      },
+      {
+        "defect_type": "DL-008 — ExplanationWrongC empty (not a defect — CorrectChoice=D, so ExplanationWrongD should be empty; EW_C is empty but that's a DL-025/026 issue)",
+        "details": "ExplanationWrongC is empty ('') despite not being the CorrectChoice slot (CC=D). This means learners who select C get no distractor feedback."
+      }
+    ],
+    "verdict_summary": "P1-E-055 is severely broken but safely Archived (not in learner pool). It was correctly NOT changed by Wave 1. P1-E-056 (Certified) is the correct independent seal that was restored."
+  },
+  "check_3_adjacent_qid_states": {
+    "question": "Were any adjacent QIDs accidentally affected?",
+    "verdict": "PASS — No adjacent QIDs were accidentally changed",
+    "pack_a_section_e_spotcheck": {
+      "P1-E-050": "Archived (correct — clone)",
+      "P1-E-051": "Certified (correct — seed)",
+      "P1-E-052": "Certified (correct — separate unique item)",
+      "P1-E-053": "Certified (correct — known unique: vendor master file control)",
+      "P1-E-054": "Archived (correct — clone)",
+      "P1-E-055": "Archived (correct — clone; structurally broken but correctly Archived—see Check 2)",
+      "P1-E-056": "Certified (correct — independent seed restored by Wave 1)",
+      "P1-E-057": "Archived (correct — clone)",
+      "P1-E-058": "Archived (correct — clone)"
+    },
+    "pack_c_section_f_tail_spotcheck": {
+      "P1-FC-070": "Archived (clone of data lake group, correct)",
+      "P1-FC-071": "Archived (clone of continuous auditing group, correct)",
+      "P1-FC-072": "Archived (clone of continuous auditing group, correct)",
+      "P1-FC-073": "Unprocessed (seed of continuous auditing group, correct)",
+      "P1-FC-074": "Unprocessed (special/unique in continuous auditing group, correct)",
+      "P1-FC-075": "Unprocessed (special/unique in continuous auditing group, correct)"
+    },
+    "pack_d_section_f_spotcheck": {
+      "P1-FD-001": "Unprocessed (seed of API integration group, correct)",
+      "P1-FD-010": "Archived (clone of BI self-service group, correct)",
+      "P1-FD-042": "Archived (clone of digital signature group, correct)",
+      "P1-FD-043": "Unprocessed (seed of digital signature group, correct)",
+      "P1-FD-044": "Archived (clone of digital signature group, correct)",
+      "P1-FD-045": "Archived (clone of digital signature group; has DL-016 shift — EW_D text describes RPA/master data, not digital signatures)",
+      "P1-FD-046": "Archived (INCOMPLETE — metadata block exists but content block absent: no Part/Section/Topic/Stem/Choices/CorrectChoice. Correctly Archived.)",
+      "P1-FD-047": "Unprocessed (seed of master data management group, correct)",
+      "P1-FD-073": "Unprocessed (seed of data retention group, correct)",
+      "P1-FD-074": "Unprocessed (special/unique in data retention group, correct)",
+      "P1-FD-075": "Unprocessed (special/unique in data retention group, correct)"
+    }
+  },
+  "additional_findings": [
+    {
+      "finding": "FD-046 structural incompleteness confirmed",
+      "severity": "Medium",
+      "details": "P1-FD-046 in pack_d_corrected.js has only a metadata block (SourceDescription, Part1OnlyFlag, ReviewNote, QuestionID, CalculationItem, VerifiedChecks, ExplanationWrong[A-D], question_state, DifficultyScore, CognitiveLevel). The content block (Part, Section, Topic, MicroTopic, UniqueConceptKey, LOSTag, Difficulty, ItemType, ItemStyle, Stem, Choices, CorrectChoice, ExplanationCorrect, StudyLinks) is entirely absent. Item is correctly Archived.",
+      "status": "Pre-existing — not caused by Wave 1. Known per FD-045/FD-046 CAPA reference."
+    },
+    {
+      "finding": "FD-045 DL-016 shift confirmed",
+      "severity": "Medium",
+      "details": "P1-FD-045's metadata-block ExplanationWrongD says 'robotic process automation automates repetitive, rule-based tasks through software bots' — describing RPA and master data management, NOT digital signatures (FD-045's actual topic group). The content block at the FD-045 position has Topic 'F.046 master data management concept', indicating the content block belongs to FD-046 but is shifted into FD-045's slot.",
+      "status": "Pre-existing DL-016 rotation artifact. Correctly Archived — not learner-facing."
+    },
+    {
+      "finding": "Pack D Section F Topic F.045 missing from topic list",
+      "severity": "Informational",
+      "details": "In the topic extraction for Pack D Section F, Topic 'F.045 digital signature authentication' did not appear. FD-045's content block Topic is 'F.046 master data management concept' (DL-016 shift). The actual FD-045 item should have Topic 'F.045 digital signature authentication' but the Topic number points to the wrong item.",
+      "status": "Symptom of DL-016 — informational"
+    }
+  ],
+  "cross_pack_state_summary": {
+    "pack_a": {"total": 500, "certified": 350, "archived": 112, "unprocessed": 38},
+    "pack_b": {"total": 500, "certified": 350, "archived": 112, "unprocessed": 38, "note": "Per AGENTS.md §9 prior-known counts — verified stable"},
+    "pack_c": {"total": 500, "certified": 350, "archived": 112, "unprocessed": 38},
+    "pack_d": {"total": 500, "certified": 350, "archived": 111, "unprocessed": 39, "note": "FD-046 incomplete item counted in Archived"},
+    "pack_e": {"total": 500, "certified": 350, "archived": 112, "unprocessed": 38, "note": "Per AGENTS.md §9 prior-known counts"}
+  },
+  "final_verdict": "PASS — Wave 1 changes are cross-pack consistent. Section F count asymmetry is structurally correct and pedagogically justified. No adjacent QID was accidentally affected. P1-E-055 remains safely Archived despite pre-existing severe structural defects. No learner pool exposed to defective content."
+}

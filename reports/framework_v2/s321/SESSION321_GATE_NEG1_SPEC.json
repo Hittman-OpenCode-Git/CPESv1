@@ -1,0 +1,230 @@
+{
+  "document": "SESSION321_GATE_NEG1_SPEC",
+  "session": "S321",
+  "board": "C — Gate -1 Implementation Design",
+  "phase": "2 — Gate Engine",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+  "depends_on": ["SESSION321_IDENTITY_SCHEMA_V2.json", "SESSION321_CANONICAL_REGISTRY_SPEC.json"],
+
+  "purpose": "Define Gate -1 (Identity Validation) — the mandatory pre-condition gate that runs before any item enters the certification pipeline. Every item must have a valid, unique, resolvable compound-key identity before any other gate can process it. Gate -1 is the FIRST gate in the Framework v2 pipeline — it is the structural foundation that eliminates the S320/S809 chain failures where remediation targeted wrong variants because identity was ambiguous.",
+
+  "motivation": {
+    "s320_failure": "S320 remediation targeted items by QID alone. Template rotation created 5 variants per QID, each with different CorrectChoice. QID-first-match grabbed whichever variant was found first (not necessarily the one needing remediation). S320 applied fixes to wrong variants — a direct consequence of broken identity.",
+    "dl_029_cost": "DL-029 forward-scan produced ~75% false positives on Pack B. ~8 sessions consumed on phantom remediations for defect classes that didn't exist. All DL-029 artifacts trace to identity extraction from QID position rather than item object.",
+    "gate_neg1_role": "Gate -1 is a HARD_BLOCK. If an item's identity cannot be validated — if compound key fields are missing, contradictory, or non-unique — the item is BLOCKED from entering the pipeline. No further gates process it. This forces identity resolution BEFORE any review or remediation decision."
+  },
+
+  "gate_specification": {
+    "gate_id": "Gate -1",
+    "gate_name": "Identity Validation",
+    "position": "First — runs before Gates 0-5",
+    "blocking": "HARD_BLOCK",
+    "runtime": "~3 seconds",
+    "description": "Validates that every item in the scope of the current session has a valid, unique, resolvable compound-key identity as defined by the v2 Identity Schema. Gate -1 produces the item identity inventory that all downstream gates consume.",
+
+    "preconditions": [
+      {
+        "id": "PRE-N1",
+        "name": "QID Valid",
+        "description": "Every question object has a non-empty, non-null QID field. QID format matches the expected pattern for its pack (see per-pack identity handling in IDENTITY_SCHEMA_V2).",
+        "validation": "QID exists AND QID ≠ '' AND QID matches pack-specific regex.",
+        "failure_action": "BLOCKED. Item cannot proceed. No further gates.",
+        "failure_severity": "CRITICAL — item is structurally unidentifiable."
+      },
+      {
+        "id": "PRE-N2",
+        "name": "CorrectChoice Valid",
+        "description": "CorrectChoice field is one of A, B, C, D. CC is extracted from within-object parse (AM-1), NOT from forward-scan or metadata block.",
+        "validation": "CorrectChoice ∈ {A, B, C, D}.",
+        "failure_action": "BLOCKED. Item cannot proceed.",
+        "failure_severity": "CRITICAL — no correct answer means item is unusable."
+      },
+      {
+        "id": "PRE-N3",
+        "name": "TemplateFamily Resolved",
+        "description": "Each item is assigned to a TemplateFamily group. TemplateFamily is computed from stem+choice hashing. All items in the same group share the same stem skeleton and choice texts (positionally rotated).",
+        "validation": "TemplateFamily ≠ null AND TemplateFamily ≠ '' AND TemplateFamily is consistent across the rotation group (same stem hash, same choice hashes in different orders).",
+        "failure_action": "BLOCKED with HOLD. Item identity is resolvable but TemplateFamily assignment is ambiguous. Human review needed.",
+        "failure_severity": "HIGH — affects rotation-aware delivery but item itself may be valid."
+      },
+      {
+        "id": "PRE-N4",
+        "name": "Registry Identity Resolvable",
+        "description": "The item's compound key resolves to exactly one entry in the CANONICAL_ITEM_REGISTRY. No collisions. No missing entries.",
+        "validation": "Lookup compound_key in registry → exactly 1 RegistryID returned. 0 collisions, 0 missing entries.",
+        "failure_action": "BLOCKED. If 0 entries: item is new (first registration — proceed to Gate 0 with 'new_item' flag). If >1 entries: registry corruption, escalate to Governance Board.",
+        "failure_severity": "0 entries: LOW (new item, expected). >1 entries: CRITICAL (registry corruption)."
+      }
+    ]
+  },
+
+  "validation_checks": {
+    "description": "Gate -1 runs 8 automated validation checks. All checks must PASS for the item to proceed. Any FAIL is HARD_BLOCK.",
+    "checks": [
+      {
+        "check_id": "GV-N1-01",
+        "name": "Compound Key Field Completeness",
+        "description": "All six compound key fields (QID, CorrectChoice, EWPattern, TemplateFamily, FilePath, VersionID) are present and non-null.",
+        "validation": "For each item: extract all 6 fields. Any missing or null field → FAIL.",
+        "action_on_fail": "BLOCKED. Missing identity fields. Report which fields are missing."
+      },
+      {
+        "check_id": "GV-N1-02",
+        "name": "QID Format Per-Pack Validation",
+        "description": "QID matches the expected format for the pack the item is in.",
+        "validation": "Apply pack-specific regex: Pack A: /^P1-[A-F]-\\\\d{3}$/. Pack B: /^P1B-[A-F]-\\\\d{3}$/. Pack C: /^P1-[A-F]C?-\\\\d{3}$/. Pack D: /^P1-[A-F]D-\\\\d{3}$/. Pack E: /^P1E-[A-F]-\\\\d{3}$/.",
+        "action_on_fail": "BLOCKED. QID format does not match expected pack pattern. Possible pack misassignment."
+      },
+      {
+        "check_id": "GV-N1-03",
+        "name": "CorrectChoice Extraction Source Verification",
+        "description": "Confirm CorrectChoice was extracted via within-object Function constructor parse (AM-1), not forward-scan or metadata block.",
+        "validation": "Extraction method metadata tag must be present and set to 'AM-1_FUNCTION_CONSTRUCTOR_PARSE'. Any other extraction method → FAIL.",
+        "action_on_fail": "BLOCKED. Non-AM-1 extraction detected. Re-extract with AM-1 method."
+      },
+      {
+        "check_id": "GV-N1-04",
+        "name": "EWPattern CorrectChoice Bit Validation",
+        "description": "The EWPattern bit corresponding to the CorrectChoice position MUST be 0. No ExplanationWrong[CorrectChoice] content allowed (EV8 enforcement).",
+        "validation": "EWPattern bit at position matching CorrectChoice (A=bit0, B=bit1, C=bit2, D=bit3) MUST equal 0.",
+        "action_on_fail": "BLOCKED + DL-008 flag. The CorrectChoice slot in ExplanationWrong is non-empty. This is a structural defect (DL-008). Item cannot proceed until remediated."
+      },
+      {
+        "check_id": "GV-N1-05",
+        "name": "Compound Key Uniqueness — Global",
+        "description": "No two items in the current scope have the same compound key.",
+        "validation": "Group all items by compound_key. Any group with count > 1 → FAIL.",
+        "action_on_fail": "BLOCKED all items in the collision group. Compound key collision — two distinct physical items produce the same identity. Investigate: possible duplicate in pack file, or EWPattern hash collision (virtually impossible)."
+      },
+      {
+        "check_id": "GV-N1-06",
+        "name": "Cross-Pack QID+CC Collision Detection",
+        "description": "No two items in different packs have the same {QID, CorrectChoice} pair with different content.",
+        "validation": "For each {QID, CC} pair: if items found in >1 pack AND content_hash differs → FAIL (identity collision). If content_hash same → WARN (possible duplicate; one should be canonical).",
+        "action_on_fail": "BLOCKED. Cross-pack identity collision with distinct content. Items cannot be distinguished — pack assignment is ambiguous. Human review required."
+      },
+      {
+        "check_id": "GV-N1-07",
+        "name": "TemplateFamily Consistency",
+        "description": "All items within the same TemplateFamily share consistent stem and choice texts after rotation normalization.",
+        "validation": "For each TemplateFamily: extract stem text and choice texts from all members. After rotation normalization (re-sort choices to alphabetical order, ignoring position), ALL members must have identical stem + identical choice texts (in normalized order).",
+        "action_on_fail": "BLOCKED. TemplateFamily inconsistency — items grouped to same family but have different stem or choice content. TemplateFamily assignment may be incorrect. Flag for human review."
+      },
+      {
+        "check_id": "GV-N1-08",
+        "name": "Pack B CC-Before-QID Structural Verification",
+        "description": "For Pack B items specifically: confirm that CC was correctly extracted from the BEFORE-QID position (unique to Pack B's object layout).",
+        "validation": "For Pack B items only: the parsed object must have CC field ordered before QID in the raw object structure. Within-object AM-1 parse handles this correctly. Verify that the extracted CC is from the SAME object, not from the next object in the file.",
+        "action_on_fail": "BLOCKED. Pack B CC-Before-QID extraction failed. Re-extract with AM-1 method. Do NOT use forward-scan."
+      }
+    ]
+  },
+
+  "gate_output": {
+    "description": "Gate -1 produces a structural output consumed by all downstream gates. This is the 'identity handoff' artifact.",
+    "output_schema": {
+      "gate": "Gate -1 — Identity Validation",
+      "session_id": "SESSION_ID",
+      "timestamp": "ISO 8601",
+      "total_items_scanned": "Integer",
+      "items_passed": "Integer",
+      "items_blocked": "Integer",
+      "pass_rate": "Float (0.0-1.0)",
+      "blocked_items": {
+        "description": "Array of blocked items with reasons",
+        "items": [
+          {
+            "registry_id": "String or null (if not yet registered)",
+            "qid": "String",
+            "block_reason": "String (check_id that failed)",
+            "block_severity": "CRITICAL | HIGH",
+            "resolution_required": "String (what must be done to unblock)"
+          }
+        ]
+      },
+      "identity_handoff": {
+        "description": "For every passed item: full compound key + extracted identity fields. Consumed by Gates 0-5.",
+        "items": [
+          {
+            "registry_id": "String",
+            "compound_key": "String",
+            "qid": "String",
+            "correct_choice": "String",
+            "ew_pattern": "String",
+            "template_family": "String",
+            "file_path": "String",
+            "version_id": "String"
+          }
+        ]
+      },
+      "validation_summary": {
+        "gv_n1_01_passed": "Integer",
+        "gv_n1_02_passed": "Integer",
+        "gv_n1_03_passed": "Integer",
+        "gv_n1_04_passed": "Integer",
+        "gv_n1_05_passed": "Integer",
+        "gv_n1_06_passed": "Integer",
+        "gv_n1_07_passed": "Integer",
+        "gv_n1_08_passed": "Integer"
+      }
+    }
+  },
+
+  "gate_pipeline_position": {
+    "description": "Gate -1 is the FIRST gate, running before the existing 5-gate pre-flight pipeline. It gates items INTO the pre-flight pipeline.",
+    "pipeline_sequence": [
+      "Gate -1 — Identity Validation (THIS SPEC) ← HARD_BLOCK — items cannot proceed without valid identity",
+      "Gate 0 — JSON Integrity (S201 Pre-Flight: parseability, field presence, type consistency, corruption detection)",
+      "Gate 1 — Structural Scan (S201 Pre-Flight: DL-008, EV8, DL-026, DL-016)",
+      "Gate 2 — Content Scan (S201 Pre-Flight: DL-013 boilerplate, EV3, DL-010)",
+      "Gate 3 — Identity Reconciliation (S201 Pre-Flight: compound key uniqueness, template family identification, cross-pack QID collision)",
+      "Gate 4 — Calculation Validation (S201 Pre-Flight: DL-030 CC verification, DL-031 difficulty inflation)",
+      "Gate 5 — Delivery Pool Safety (Readiness Board: delivery_pool_eligible assertion, known-defective exclusion)"
+    ],
+    "note": "Gate -1 performs some overlap with Gate 3 (Identity Reconciliation). Gate -1 validates per-item identity; Gate 3 validates cross-item identity relationships (template family completeness, cross-pack collisions AFTER all items are registered). Gate -1 is item-level; Gate 3 is registry-level."
+  },
+
+  "governance_integration": {
+    "governance_guard_rules": [
+      {
+        "rule": "RULE 6 (NEW — HARD_BLOCK)",
+        "description": "Pre-Flight Gate Passage Required. No item may transition to 'In Audit' or 'Certified' without a current same-session pre-flight gate PASS report. Gate -1 is part of the pre-flight pipeline — its PASS report is included in the Pre-Flight Gate Passage evidence package.",
+        "gate_neg1_impact": "Gate -1 PASS is required before Gate 0 can run. Gate -1 FAIL blocks pre-flight pipeline for Failed items."
+      },
+      {
+        "rule": "RULE 2 (EXISTING — BLOCK)",
+        "description": "ExplanationWrong[CorrectChoice] must be empty. Gate -1 check GV-N1-04 enforces this at the identity level — any item with a non-zero CC bit in EWPattern is blocked BEFORE it reaches Gate 1's DL-008 scanner."
+      }
+    ]
+  },
+
+  "error_handling": {
+    "partial_failure": "If Gate -1 encounters an extraction error on one item (e.g., Function constructor parse fails on a specific object), it BLOCKS that item and continues processing remaining items. The gate report lists all blocked items. Items that failed extraction cannot proceed — their identity is unknown.",
+    "catastrophic_failure": "If AM-1 Function Constructor Parse fails on an ENTIRE pack file (e.g., syntax error in pack file), ALL items in that pack are BLOCKED. The governance guard detects the pack file corruption. Session cannot proceed until pack file is repaired and Gate -1 re-run.",
+    "registry_generation_failure": "If registry cannot be generated (e.g., compound key collisions > 0), escalate to Governance Board Tier 1 SESSION_READY — P0 blocker. Session cannot proceed until collisions are resolved."
+  },
+
+  "implementation_notes": {
+    "script": "Node.js script: scripts/gate_neg1_identity_validation.js. Input: identity_handoff from CANONICAL_ITEM_REGISTRY. Output: gate_neg1_report (as per output_schema).",
+    "performance": "~3 seconds for 2,500 items (field extraction + validation + uniqueness check).",
+    "pre_req": "Cannot run without a valid CANONICAL_ITEM_REGISTRY generated from the current pack files. Registry must be generated at session T0 BEFORE Gate -1 runs.",
+    "integration_testing": "Must be tested with: (a) clean pack files (all 2,500 items pass), (b) Pack B items (CC-before-QID extraction verified), (c) DL-008-affected items (EWPattern CC bit ≠ 0 detected and blocked), (d) duplicate QID+CC pairs across packs (collision detection), (e) corrupted QID formats (format rejection)."
+  },
+
+  "success_criteria": {
+    "SC-BC-01": "All 4 preconditions (PRE-N1 through PRE-N4) formally specified with validation rules and failure actions.",
+    "SC-BC-02": "All 8 validation checks (GV-N1-01 through GV-N1-08) formally specified with validation logic and block actions.",
+    "SC-BC-03": "Pack B CC-before-QID extraction verified as mandatory within-object (AM-1) — forward-scan FORBIDDEN.",
+    "SC-BC-04": "EWPattern CC bit validation (GV-N1-04) enforces EV8 / governance guard Rule 2 at identity level.",
+    "SC-BC-05": "Compound key uniqueness (GV-N1-05) and cross-pack collision (GV-N1-06) checks specified.",
+    "SC-BC-06": "TemplateFamily consistency check (GV-N1-07) specified — rotation normalization algorithm defined.",
+    "SC-BC-07": "Gate output schema (identity_handoff) defined — downstream gates (0-5) consume this output.",
+    "SC-BC-08": "Pipeline position formally stated — Gate -1 → Gate 0 → Gate 1 → Gate 2 → Gate 3 → Gate 4 → Gate 5.",
+    "SC-BC-09": "Governance guard Rule 6 integration specified — Gate -1 PASS required for pre-flight pipeline.",
+    "SC-BC-10": "Error handling (partial failure, catastrophic failure, registry generation failure) defined.",
+    "SC-BC-11": "Specification is implementable — S322 can code the gate from this document alone.",
+    "SC-BC-12": "0 certification actions, 0 content modifications, 0 pack-file writes."
+  }
+}

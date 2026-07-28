@@ -1,0 +1,30 @@
+{
+  "session": "513",
+  "agent": "C",
+  "type": "explanation_remediation_results",
+  "timestamp": "2026-07-25",
+  "remediations": [
+    {
+      "item_id": "CASE-B13-Q3",
+      "field_changed": "Explanation",
+      "before_excerpt": "Option A ($18,000) incorrectly computes the shortfall from the minimum instead of the available cash. Option C ($48,000) is correct. Option D ($78,000) appears to add borrowing to cover an incorrectly computed deficit.",
+      "after_excerpt": "Option A ($18,000) incorrectly computes the shortfall from the minimum instead of the available cash. Option B ($30,000) incorrectly selects the minimum cash balance requirement rather than the computed ending cash balance. Bridgeport must maintain a minimum of $30,000, but the ending cash balance after all receipts and disbursements is $48,000 — the minimum is a constraint that only triggers borrowing when the computed balance falls below it. Option D ($78,000) appears to add borrowing to cover an incorrectly computed deficit.",
+      "defect_addressed": "Added distractor rationale for Option B ($30,000 minimum cash). Distinguishes minimum cash balance constraint from computed ending cash balance. Also removed redundant 'Option C is correct' from distractor text.",
+      "g54_result": "PASS",
+      "no_prompt_changed": true,
+      "no_choices_changed": true,
+      "no_answer_key_changed": true
+    },
+    {
+      "item_id": "CASE-B18-Q4",
+      "field_changed": "Explanation",
+      "before_excerpt": "2.18 equals $2,400,000 / $1,100,000, which is the current ratio — including inventory, it overstates liquidity by counting an asset that cannot directly pay obligations. 0.55 equals $600,000 / $1,100,000, dividing only inventory by current liabilities — this is not a standard liquidity measure.",
+      "after_excerpt": "2.18 equals $2,400,000 / $1,100,000, which is the current ratio — including inventory, it overstates liquidity by counting an asset that cannot directly pay obligations. 1.18 equals ($2,400,000 - $1,100,000) / $1,100,000, which subtracts current liabilities from current assets instead of inventory. A candidate reaching this answer may have computed the current ratio (2.18) and then subtracted 1, effectively calculating net working capital divided by current liabilities, which is not the quick ratio. 0.55 equals $600,000 / $1,100,000, dividing only inventory by current liabilities — this is not a standard liquidity measure.",
+      "defect_addressed": "Added distractor rationale for Option C (1.18 quick ratio). Identifies the likely computation path: subtracting current liabilities from current assets instead of inventory. Explains the misconception (confusing subtraction of liabilities with subtraction of inventory).",
+      "g54_result": "PASS",
+      "no_prompt_changed": true,
+      "no_choices_changed": true,
+      "no_answer_key_changed": true
+    }
+  ]
+}

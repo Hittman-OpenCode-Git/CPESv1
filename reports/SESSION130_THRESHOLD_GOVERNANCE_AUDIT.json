@@ -1,0 +1,1404 @@
+{
+  "session": "S130",
+  "generatedAt": "2026-07-15T00:00:00.000Z",
+  "filesAudited": [
+    "may-core.js (6284 lines)",
+    "may-learner-state.js (1501 lines)"
+  ],
+  "thresholdDefinitions": [
+    {
+      "name": "ACCURACY_HIGH_85",
+      "value": 85,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 1259, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125", "S123"],
+      "concept": "Strong topic proficiency / solid performance — triggers 'advance' action type and 'topic_strength' observation"
+    },
+    {
+      "name": "ACCURACY_HIGH_80",
+      "value": 80,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 957, "function": "_greetingForQuestion" },
+      "usedBy": ["S88", "renderMiniPanel"],
+      "concept": "Solid on topic — used in greeting language and mini-panel insight; 'you've been solid on...'"
+    },
+    {
+      "name": "ACCURACY_READY_80",
+      "value": 80,
+      "type": "accuracy",
+      "definedAt": { "file": "may-learner-state.js", "line": 625, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103", "S104"],
+      "concept": "Ready for focused review band — requires accuracy >= 80 and recentPct >= 80"
+    },
+    {
+      "name": "ACCURACY_GOOD_75",
+      "value": 75,
+      "type": "accuracy",
+      "definedAt": { "file": "may-learner-state.js", "line": 629, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103", "S104"],
+      "concept": "Approaching review-ready band — accuracy >= 75"
+    },
+    {
+      "name": "ACCURACY_WEAK_60",
+      "value": 60,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 959, "function": "_greetingForQuestion" },
+      "usedBy": ["S88", "S124", "S125", "S102", "S103", "S113", "S126", "S127", "S128", "renderMiniPanel"],
+      "concept": "Weak topic / needs work / Recovery needed — used across ALL coaching subsystems"
+    },
+    {
+      "name": "ACCURACY_STRONG_70",
+      "value": 70,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 330, "function": "_detectPositiveTrend" },
+      "usedBy": ["S117", "S125", "S113"],
+      "concept": "Minimum for 'steady' or 'hint dependent' assessment; used as floor for stable topics and confidence anchoring"
+    },
+    {
+      "name": "ACCURACY_ADJACENT_WEAK_70",
+      "value": 70,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 1462, "function": "_suggestFocusAreas" },
+      "usedBy": ["S125"],
+      "concept": "Threshold below which an adjacent topic is considered weak enough to suggest shifting practice"
+    },
+    {
+      "name": "ATTEMPTS_MIN_OBSERVATION_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 1248, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125", "S123", "S88", "renderMiniPanel"],
+      "concept": "Minimum topic attempts before any accuracy observation or pattern claim is made"
+    },
+    {
+      "name": "ATTEMPTS_STRONG_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 1259, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125", "S123"],
+      "concept": "Minimum attempts to declare a topic 'strong' (combined with accuracy >= 85)"
+    },
+    {
+      "name": "ATTEMPTS_WEAKNESS_5",
+      "value": 5,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 1268, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125", "S102", "S113"],
+      "concept": "Minimum attempts before declaring persistent weakness (combined with accuracy < 60)"
+    },
+    {
+      "name": "ATTEMPTS_TREND_4",
+      "value": 4,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 1277, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125", "S113"],
+      "concept": "Minimum attempts to detect improvement/declining trend (combined with delta >= 10 or <= -15)"
+    },
+    {
+      "name": "ATTEMPTS_NOTE_2",
+      "value": 2,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 1704, "function": "_inferReviewFocus" },
+      "usedBy": ["S120", "S126"],
+      "concept": "Minimum attempts before appending a topic-progress accuracy note to review focus or explain"
+    },
+    {
+      "name": "ATTEMPTS_READY_6",
+      "value": 6,
+      "type": "attempt",
+      "definedAt": { "file": "may-learner-state.js", "line": 626, "function": "getReadinessSummary" },
+      "usedBy": ["S103", "S104"],
+      "concept": "Minimum attempts for 'Ready for focused review' band (S103: increased from 5→6)"
+    },
+    {
+      "name": "ATTEMPTS_APPROACHING_4",
+      "value": 4,
+      "type": "attempt",
+      "definedAt": { "file": "may-learner-state.js", "line": 630, "function": "getReadinessSummary" },
+      "usedBy": ["S103", "S104"],
+      "concept": "Minimum attempts for 'Approaching review-ready' band (S104: added)"
+    },
+    {
+      "name": "ATTEMPTS_TOPIC_FLOOR_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-learner-state.js", "line": 613, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103"],
+      "concept": "Minimum attempts before any per-topic readiness estimate is made; below → 'Not enough data'"
+    },
+    {
+      "name": "ATTEMPTS_EVIDENCE_STRENGTH_5",
+      "value": 5,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 3568, "function": "_scoreRecommendationQuality" },
+      "usedBy": ["S129"],
+      "concept": "Evidence strength = 3 (max) when topic attempts >= 5"
+    },
+    {
+      "name": "ATTEMPTS_EVIDENCE_STRENGTH_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 3569, "function": "_scoreRecommendationQuality" },
+      "usedBy": ["S129"],
+      "concept": "Evidence strength = 2 (medium) when topic attempts >= 3"
+    },
+    {
+      "name": "ATTEMPTS_CALCULATION_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 1334, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124"],
+      "concept": "Minimum calculation misses before 'repeated_calculation' observation is triggered"
+    },
+    {
+      "name": "SESSIONS_EVIDENCE_2",
+      "value": 2,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 282, "function": "_buildWelcomeOverview" },
+      "usedBy": ["S117", "S126"],
+      "concept": "Minimum sessions for evidence-backed welcome overview / session-to-session comparison"
+    },
+    {
+      "name": "SESSIONS_SPARSE_3",
+      "value": 3,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 300, "function": "_buildWelcomeOverview" },
+      "usedBy": ["S117"],
+      "concept": "Sessions below this trigger sparse-data fallback language in welcome"
+    },
+    {
+      "name": "SESSIONS_HINT_TREND_3",
+      "value": 3,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 322, "function": "_detectPositiveTrend" },
+      "usedBy": ["S117"],
+      "concept": "Minimum sessions to check for decreasing-hint-usage trend"
+    },
+    {
+      "name": "SESSIONS_FIRST_ACTION_2",
+      "value": 2,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 340, "function": "_recommendNextAction" },
+      "usedBy": ["S117"],
+      "concept": "Below this, recommend completing more sessions before personalized recommendations"
+    },
+    {
+      "name": "SESSIONS_DIGEST_2",
+      "value": 2,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 3063, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127"],
+      "concept": "Minimum sessions in 7-session lookback to produce a weekly digest"
+    },
+    {
+      "name": "SESSIONS_STRATEGY_1",
+      "value": 1,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 3230, "function": "_generateStudyStrategy" },
+      "usedBy": ["S128"],
+      "concept": "Minimum sessions in lookback to produce a study strategy"
+    },
+    {
+      "name": "SESSIONS_RECOVERY_LATEST_5",
+      "value": 5,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 3829, "function": "_generateRecoverySet" },
+      "usedBy": ["S89D"],
+      "concept": "Lookback window (last N sessions) for recently-seen exclusion in recovery sets"
+    },
+    {
+      "name": "SESSIONS_RECENTLY_SEEN_3",
+      "value": 3,
+      "type": "session",
+      "definedAt": { "file": "may-core.js", "line": 3749, "function": "_recommendNext" },
+      "usedBy": ["S89D"],
+      "concept": "Lookback window for 'recently seen' in next-question recommendations"
+    },
+    {
+      "name": "SESSIONS_OVERALL_NODATA_1",
+      "value": 1,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 681, "function": "getReadinessSummary" },
+      "usedBy": ["S102"],
+      "concept": "Zero sessions → overall 'Not enough data' band"
+    },
+    {
+      "name": "SESSIONS_OVERALL_NODATA_3",
+      "value": 3,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 686, "function": "getReadinessSummary" },
+      "usedBy": ["S102"],
+      "concept": "Fewer than 3 sessions AND fewer than 3 topics with data → overall 'Not enough data'"
+    },
+    {
+      "name": "SESSIONS_ADAPTIVE_MIN_1",
+      "value": 1,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 452, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "Minimum total sessions for adaptive practice mix ('Insufficient Data' below 1)"
+    },
+    {
+      "name": "SESSIONS_ADAPTIVE_MIN_2",
+      "value": 2,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 487, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "Below 2 sessions AND (no case data OR < 3 MCQ topics) → Insufficient Data"
+    },
+    {
+      "name": "SESSIONS_ADAPTIVE_CASE_INTRO_3",
+      "value": 3,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 576, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "MCQ stable AND no case data AND >= 3 sessions → introduce cases"
+    },
+    {
+      "name": "STABILITY_HIGH_75",
+      "value": 75,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 626, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103"],
+      "concept": "High stability threshold for 'Ready for focused review' band"
+    },
+    {
+      "name": "STABILITY_GOOD_60",
+      "value": 60,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 630, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103"],
+      "concept": "Good stability threshold for 'Approaching review-ready' band"
+    },
+    {
+      "name": "STABILITY_STEADY_60",
+      "value": 60,
+      "type": "stability",
+      "definedAt": { "file": "may-core.js", "line": 330, "function": "_detectPositiveTrend" },
+      "usedBy": ["S117"],
+      "concept": "Stability >= 60 AND accuracy >= 70 for 'steady performance' recognition"
+    },
+    {
+      "name": "STABILITY_LOW_50",
+      "value": 50,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 637, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103"],
+      "concept": "Below 50 → 'Recovery needed' / 'unstable' signal"
+    },
+    {
+      "name": "STABILITY_DEVELOPING_40",
+      "value": 40,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 634, "function": "getReadinessSummary" },
+      "usedBy": ["S102"],
+      "concept": "Stability >= 40 minimum for 'Developing' band (below → Recovery needed)"
+    },
+    {
+      "name": "STABILITY_UNSTABLE_50",
+      "value": 50,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 266, "function": "getWeaknessClusters" },
+      "usedBy": ["S88", "S113"],
+      "concept": "Stability < 50 AND attempts >= 4 → 'unstable' cluster"
+    },
+    {
+      "name": "STABILITY_COMPUTE_MIN_4",
+      "value": 4,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 247, "function": "getTrends" },
+      "usedBy": ["S88"],
+      "concept": "Minimum recent corrects (>= 4) before stability score is computed"
+    },
+    {
+      "name": "DELTA_IMPROVING_15",
+      "value": 15,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 252, "function": "getTrends" },
+      "usedBy": ["S88", "S102", "S113"],
+      "concept": "Delta >= 15 → 'improving' direction; delta <= -15 → 'declining'"
+    },
+    {
+      "name": "DELTA_SLIGHT_5",
+      "value": 5,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 252, "function": "getTrends" },
+      "usedBy": ["S88"],
+      "concept": "Delta > 5 → 'slightly_improving'; delta < -5 → 'slightly_declining'"
+    },
+    {
+      "name": "DELTA_IMPROVING_10",
+      "value": 10,
+      "type": "stability",
+      "definedAt": { "file": "may-core.js", "line": 1277, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125"],
+      "concept": "Delta >= 10 (combined with recentPct >= 75) for 'improving' observation in coaching"
+    },
+    {
+      "name": "RECENTPCT_HIGH_80",
+      "value": 80,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 626, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103", "renderMiniPanel"],
+      "concept": "Recent accuracy >= 80 → high recent performance (required for 'Ready' band)"
+    },
+    {
+      "name": "RECENTPCT_GOOD_75",
+      "value": 75,
+      "type": "recency",
+      "definedAt": { "file": "may-core.js", "line": 1277, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125"],
+      "concept": "Recent accuracy >= 75 (combined with delta >= 10) for 'improving' observation"
+    },
+    {
+      "name": "RECENTPCT_GOOD_70",
+      "value": 70,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 629, "function": "getReadinessSummary" },
+      "usedBy": ["S102", "S103"],
+      "concept": "Recent accuracy >= 70 for 'Approaching review-ready' band"
+    },
+    {
+      "name": "RECENT_WINDOW_5",
+      "value": 5,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 232, "function": "getTopicProgress" },
+      "usedBy": ["S88"],
+      "concept": "Number of recent attempts to use for recentPct calculation"
+    },
+    {
+      "name": "RECENT_MAX_15",
+      "value": 15,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 190, "function": "_updateTopicAggregate" },
+      "usedBy": ["S88"],
+      "concept": "Maximum recent attempts retained in topic aggregate"
+    },
+    {
+      "name": "RECENT_WINDOW_SESSIONS_7",
+      "value": 7,
+      "type": "recency",
+      "definedAt": { "file": "may-core.js", "line": 3062, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127", "S128"],
+      "concept": "Last 7 sessions used as window for weekly digest and study strategy"
+    },
+    {
+      "name": "LONGITUDINAL_1WEEK_MS",
+      "value": 604800000,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 1397, "function": "getLongitudinalAnalytics" },
+      "usedBy": ["S129"],
+      "concept": "1-week calendar window (7 days in ms) for longitudinal analytics"
+    },
+    {
+      "name": "LONGITUDINAL_2WEEK_MS",
+      "value": 1209600000,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 1398, "function": "getLongitudinalAnalytics" },
+      "usedBy": ["S129"],
+      "concept": "2-week calendar window (14 days in ms) for longitudinal analytics"
+    },
+    {
+      "name": "LONGITUDINAL_4WEEK_MS",
+      "value": 2419200000,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 1399, "function": "getLongitudinalAnalytics" },
+      "usedBy": ["S129"],
+      "concept": "4-week calendar window (28 days in ms) for longitudinal analytics"
+    },
+    {
+      "name": "RECOVERY_TOPIC_COUNT_3",
+      "value": 3,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 691, "function": "getReadinessSummary" },
+      "usedBy": ["S102"],
+      "concept": "Recovery topics >= 3 → overall 'Recovery needed' band"
+    },
+    {
+      "name": "READY_COUNT_2",
+      "value": 2,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 701, "function": "getReadinessSummary" },
+      "usedBy": ["S102"],
+      "concept": "Ready topics >= 2 AND zero recovery → 'Approaching review-ready'"
+    },
+    {
+      "name": "MISCONCEPTION_REPEAT_2",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 1292, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124", "S125", "S126", "S127", "S128"],
+      "concept": "Minimum count for a misconception pattern to appear in coaching output"
+    },
+    {
+      "name": "MISCONCEPTION_REPEAT_3_WEEKLY",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 3184, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127"],
+      "concept": "Pattern must appear >= 3 times to trigger a weekly focus recommendation"
+    },
+    {
+      "name": "MISCONCEPTION_TOP_STRATEGY_3",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 3272, "function": "_generateStudyStrategy" },
+      "usedBy": ["S128"],
+      "concept": "Pattern count >= 3 to appear in next-session plan of study strategy"
+    },
+    {
+      "name": "CASE_MISS_SUMMARY_3",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 346, "function": "getCasePatternSummary" },
+      "usedBy": ["S98"],
+      "concept": "Below 3 total case misses → suppress case pattern summary"
+    },
+    {
+      "name": "CASE_TREND_SESSIONS_2",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 354, "function": "getCasePatternTrends" },
+      "usedBy": ["S98"],
+      "concept": "Fewer than 2 sessions with case data → suppress case pattern trends"
+    },
+    {
+      "name": "CASE_BURDEN_DEGRADE_4",
+      "value": 4,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 730, "function": "getReadinessSummary" },
+      "usedBy": ["S103"],
+      "concept": "Case dominant pattern worsening AND total misses >= 4 → degrade overall band"
+    },
+    {
+      "name": "CASE_BANNER_MISS_3",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 5271, "function": "handoffCompletedSession" },
+      "usedBy": ["S98"],
+      "concept": "Case miss total >= 3 to show dominant pattern in session-complete banner"
+    },
+    {
+      "name": "CASE_SECONDARY_COUNT_2",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 434, "function": "getCasePatternPracticeGuidance" },
+      "usedBy": ["S99"],
+      "concept": "Secondary pattern must have >= 2 misses to appear in practice guidance"
+    },
+    {
+      "name": "CASE_WORSENING_ADAPTIVE_2",
+      "value": 2,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 513, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "Case worsening >= 2 patterns AND MCQ stable → case reinforcement mode"
+    },
+    {
+      "name": "MCQ_DOMINANTLY_WEAK_3",
+      "value": 3,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 463, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "Weak count >= 3 OR (weak >= 2 AND declining >= 1) → MCQ reinforcement mode"
+    },
+    {
+      "name": "MCQ_DECLINING_2",
+      "value": 2,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 503, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "Declining count >= 2 AND no case data → MCQ recovery mode"
+    },
+    {
+      "name": "MCQ_UNSTABLE_2",
+      "value": 2,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 544, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "Unstable count >= 2 → untimed recovery mode"
+    },
+    {
+      "name": "MCQ_CASE_GAP_20",
+      "value": 20,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 525, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "MCQ/case percentage gap >= 20 → whichever is lower gets focus"
+    },
+    {
+      "name": "MCQ_STABLE_TOPICS_3",
+      "value": 3,
+      "type": "priority",
+      "definedAt": { "file": "may-learner-state.js", "line": 463, "function": "getAdaptivePracticeMix" },
+      "usedBy": ["S100"],
+      "concept": "Minimum MCQ topics with data to consider MCQ performance 'stable'"
+    },
+    {
+      "name": "DIFFICULTY_SENSITIVE_GAP_30",
+      "value": 30,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 274, "function": "getWeaknessClusters" },
+      "usedBy": ["S88", "S113"],
+      "concept": "Easy minus hard accuracy gap >= 30 percentage points → difficulty-sensitive cluster"
+    },
+    {
+      "name": "DIFFICULTY_MIN_EASY_2",
+      "value": 2,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 274, "function": "getWeaknessClusters" },
+      "usedBy": ["S88"],
+      "concept": "Minimum easy-difficulty attempts for difficulty-sensitivity classification"
+    },
+    {
+      "name": "DIFFICULTY_MIN_HARD_2",
+      "value": 2,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 274, "function": "getWeaknessClusters" },
+      "usedBy": ["S88"],
+      "concept": "Minimum hard-difficulty attempts for difficulty-sensitivity classification"
+    },
+    {
+      "name": "CONFIDENCE_OVER_4",
+      "value": 4,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 306, "function": "getConfidenceCalibration" },
+      "usedBy": ["S88"],
+      "concept": "Confidence >= 4 AND incorrect → 'overconfident' classification"
+    },
+    {
+      "name": "CONFIDENCE_UNDER_2",
+      "value": 2,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 306, "function": "getConfidenceCalibration" },
+      "usedBy": ["S88"],
+      "concept": "Confidence <= 2 AND correct → 'underconfident' classification"
+    },
+    {
+      "name": "CONFIDENCE_MIN_ATTEMPTS_4",
+      "value": 4,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 2780, "function": "_getProgressInsight" },
+      "usedBy": ["S88", "S113"],
+      "concept": "Minimum calibration entries before over/underconfident claim (overconfident)"
+    },
+    {
+      "name": "CONFIDENCE_MIN_ATTEMPTS_3",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 2783, "function": "_getProgressInsight" },
+      "usedBy": ["S88", "S113"],
+      "concept": "Minimum calibration entries before underconfident claim"
+    },
+    {
+      "name": "CONFIDENCE_DELTA_OVER_0_8",
+      "value": 0.8,
+      "type": "stability",
+      "definedAt": { "file": "may-core.js", "line": 2780, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "CalibrationDelta >= 0.8 → overconfident topic identified"
+    },
+    {
+      "name": "CONFIDENCE_DELTA_UNDER_NEG_0_5",
+      "value": -0.5,
+      "type": "stability",
+      "definedAt": { "file": "may-core.js", "line": 2783, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "CalibrationDelta <= -0.5 → underconfident topic identified"
+    },
+    {
+      "name": "HINT_IMPROVING_ACC_60",
+      "value": 60,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 2751, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "Minimum accuracy for declining hint usage to be a 'good sign'"
+    },
+    {
+      "name": "HINT_IMPROVING_ATTEMPTS_4",
+      "value": 4,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 2751, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "Minimum attempts for declining-hint-usage insight"
+    },
+    {
+      "name": "PROGRESS_STABLE_ACC_70",
+      "value": 70,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 2752, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "Stability >= 80 AND accuracy >= 70 → 'well-established' topic"
+    },
+    {
+      "name": "PROGRESS_STABLE_STAB_80",
+      "value": 80,
+      "type": "stability",
+      "definedAt": { "file": "may-core.js", "line": 2770, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "Stability >= 80 for 'well-established' topic classification"
+    },
+    {
+      "name": "DIFFICULTY_STRONG_ACC_70",
+      "value": 70,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 2762, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "avgDifficulty >= 4 AND accuracy >= 70 → 'performing under pressure'"
+    },
+    {
+      "name": "DIFFICULTY_STRONG_AVG_4",
+      "value": 4,
+      "type": "stability",
+      "definedAt": { "file": "may-core.js", "line": 2762, "function": "_getProgressInsight" },
+      "usedBy": ["S88"],
+      "concept": "Average difficulty >= 4 for high-difficulty topics"
+    },
+    {
+      "name": "OUTCOME_CLASSIFY_ATTEMPTS_5",
+      "value": 5,
+      "type": "attempt",
+      "definedAt": { "file": "may-learner-state.js", "line": 1270, "function": "classifyPendingOutcomes" },
+      "usedBy": ["S129"],
+      "concept": "Minimum attempts for outcome classification (positive/neutral/contradictory)"
+    },
+    {
+      "name": "OUTCOME_POSITIVE_ACC_60",
+      "value": 60,
+      "type": "accuracy",
+      "definedAt": { "file": "may-learner-state.js", "line": 1270, "function": "classifyPendingOutcomes" },
+      "usedBy": ["S129"],
+      "concept": "Minimum accuracy for positive outcome classification"
+    },
+    {
+      "name": "OUTCOME_POSITIVE_DELTA_5",
+      "value": 5,
+      "type": "stability",
+      "definedAt": { "file": "may-learner-state.js", "line": 1272, "function": "classifyPendingOutcomes" },
+      "usedBy": ["S129"],
+      "concept": "Delta >= 5 for positive outcome (lower bar than cluster-level 15)"
+    },
+    {
+      "name": "OUTCOME_CONTRADICTORY_ACC_50",
+      "value": 50,
+      "type": "accuracy",
+      "definedAt": { "file": "may-learner-state.js", "line": 1284, "function": "classifyPendingOutcomes" },
+      "usedBy": ["S129"],
+      "concept": "Accuracy < 50 for contradictory outcome"
+    },
+    {
+      "name": "WEEKLY_WEAK_ATTEMPTS_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 3113, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127"],
+      "concept": "Minimum attempts in weekly window for topic to appear in strong/weak lists"
+    },
+    {
+      "name": "WEEKLY_STRONG_ACC_70",
+      "value": 70,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3113, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127"],
+      "concept": "Accuracy >= 70 in weekly window for 'strongest topics'"
+    },
+    {
+      "name": "WEEKLY_WEAK_ACC_60",
+      "value": 60,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3128, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127"],
+      "concept": "Accuracy < 60 in weekly window for 'topics needing attention'"
+    },
+    {
+      "name": "WEEKLY_FOCUS_ACC_65",
+      "value": 65,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3178, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127"],
+      "concept": "Accuracy < 65 for weekly focus recommendation"
+    },
+    {
+      "name": "STRATEGY_WEAK_ATTEMPTS_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 3255, "function": "_generateStudyStrategy" },
+      "usedBy": ["S128"],
+      "concept": "Minimum attempts for topic to be classified as weak/strong in strategy"
+    },
+    {
+      "name": "STRATEGY_WEAK_ACC_60",
+      "value": 60,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3255, "function": "_generateStudyStrategy" },
+      "usedBy": ["S128"],
+      "concept": "Accuracy < 60 for weak topics in study strategy"
+    },
+    {
+      "name": "STRATEGY_STRONG_ACC_70",
+      "value": 70,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3256, "function": "_generateStudyStrategy" },
+      "usedBy": ["S128"],
+      "concept": "Accuracy >= 70 for strong topics in study strategy"
+    },
+    {
+      "name": "STRATEGY_TARGET_ACC_60",
+      "value": 60,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3309, "function": "_generateStudyStrategy" },
+      "usedBy": ["S128"],
+      "concept": "Target accuracy > 60% in 2-week horizon for recovery topics"
+    },
+    {
+      "name": "EFFECTIVENESS_POSITIVE_2",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 3413, "function": "_generateStrategyEffectiveness" },
+      "usedBy": ["S129"],
+      "concept": "Minimum positive outcomes before showing 'Recommendations followed by improvement'"
+    },
+    {
+      "name": "EFFECTIVENESS_NEUTRAL_2",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 3437, "function": "_generateStrategyEffectiveness" },
+      "usedBy": ["S129"],
+      "concept": "Minimum neutral outcomes before showing 'no clear change' section"
+    },
+    {
+      "name": "EFFECTIVENESS_CONTRADICTORY_1",
+      "value": 1,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 3454, "function": "_generateStrategyEffectiveness" },
+      "usedBy": ["S129"],
+      "concept": "Minimum contradictory outcomes before showing 'Notes' section"
+    },
+    {
+      "name": "SCORE_COMPOSITE_MAX_15",
+      "value": 15,
+      "type": "priority",
+      "definedAt": { "file": "may-core.js", "line": 3584, "function": "_scoreRecommendationQuality" },
+      "usedBy": ["S129"],
+      "concept": "Maximum composite quality score for recommendations"
+    },
+    {
+      "name": "TOPIC_INDEX_RECENT_10",
+      "value": 10,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 1494, "function": "seedStudentHistory" },
+      "usedBy": ["S117"],
+      "concept": "Maximum recent attempts stored in seeded student history"
+    },
+    {
+      "name": "CALIBRATION_THROTTLE_MS",
+      "value": 300000,
+      "type": "recency",
+      "definedAt": { "file": "may-learner-state.js", "line": 1004, "function": "_commitCalibrationSnapshot" },
+      "usedBy": ["S109"],
+      "concept": "5 minutes between auto-calibration snapshots"
+    },
+    {
+      "name": "CALIBRATION_THROTTLE_ATTEMPTS",
+      "value": 20,
+      "type": "attempt",
+      "definedAt": { "file": "may-learner-state.js", "line": 1005, "function": "_commitCalibrationSnapshot" },
+      "usedBy": ["S109"],
+      "concept": "20 attempts between auto-calibration snapshots"
+    },
+    {
+      "name": "MAX_CHAT_MESSAGES",
+      "value": 40,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 10, "function": "May.config" },
+      "usedBy": ["S88"],
+      "concept": "Maximum chat messages retained in history"
+    },
+    {
+      "name": "MAX_SESSIONS_STORED",
+      "value": 50,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 123, "function": "recordAttempt" },
+      "usedBy": ["S88"],
+      "concept": "Maximum sessions retained; truncation at 20 on save failure"
+    },
+    {
+      "name": "MAX_SESSION_SUMMARIES",
+      "value": 30,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 173, "function": "recordSessionSummary" },
+      "usedBy": ["S88"],
+      "concept": "Maximum session summaries retained"
+    },
+    {
+      "name": "MAX_CHALLENGED_QIDS",
+      "value": 100,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 318, "function": "flagChallengedQID" },
+      "usedBy": ["S88"],
+      "concept": "Maximum challenged QID entries retained"
+    },
+    {
+      "name": "MAX_RECOMMENDATION_OUTCOMES",
+      "value": 200,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 1241, "function": "recordRecommendationDelivery" },
+      "usedBy": ["S129"],
+      "concept": "Maximum recommendation outcome entries retained"
+    },
+    {
+      "name": "MAX_RECOMMENDATION_LOG",
+      "value": 200,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 1452, "function": "logRecommendation" },
+      "usedBy": ["S88"],
+      "concept": "Maximum recommendation log entries retained"
+    },
+    {
+      "name": "MAX_PILOT_USAGE_LOG",
+      "value": 200,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 5907, "function": "_logPilotUsage" },
+      "usedBy": ["S109"],
+      "concept": "Maximum pilot usage log entries retained"
+    },
+    {
+      "name": "MAX_CALIBRATION_METRICS",
+      "value": 100,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 1058, "function": "logReadinessMetrics" },
+      "usedBy": ["S107"],
+      "concept": "Maximum calibration metrics entries retained"
+    },
+    {
+      "name": "MAX_LIVE_CALIBRATION_SNAPS",
+      "value": 500,
+      "type": "suppression",
+      "definedAt": { "file": "may-learner-state.js", "line": 1167, "function": "_commitCalibrationSnapshot" },
+      "usedBy": ["S109"],
+      "concept": "Maximum live calibration snapshots retained"
+    },
+    {
+      "name": "MAX_SAFETY_LOG",
+      "value": 50,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 5954, "function": "_guardedSpeak" },
+      "usedBy": ["S108"],
+      "concept": "Maximum safety log entries retained"
+    },
+    {
+      "name": "MAX_GATE_LOG",
+      "value": 50,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 5990, "function": "_guardedRecommend" },
+      "usedBy": ["S108"],
+      "concept": "Maximum gate log entries retained"
+    },
+    {
+      "name": "MAX_TELEMETRY",
+      "value": 100,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 5829, "function": "_logSessionTelemetry" },
+      "usedBy": ["S115"],
+      "concept": "Maximum session telemetry entries retained"
+    },
+    {
+      "name": "MAX_OBSERVATIONS",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 1350, "function": "_identifyLearningPatterns" },
+      "usedBy": ["S124"],
+      "concept": "Maximum learning pattern observations shown"
+    },
+    {
+      "name": "MAX_SUGGESTIONS",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 1490, "function": "_suggestFocusAreas" },
+      "usedBy": ["S125"],
+      "concept": "Maximum focus area suggestions shown"
+    },
+    {
+      "name": "MAX_WEEKLY_PRIORITIES",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 3191, "function": "_generateWeeklyDigest" },
+      "usedBy": ["S127"],
+      "concept": "Maximum weekly focus priorities shown"
+    },
+    {
+      "name": "NAME_MIN_LENGTH",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 178, "function": "trySetName" },
+      "usedBy": ["S88"],
+      "concept": "Minimum name length validation"
+    },
+    {
+      "name": "NAME_MAX_LENGTH",
+      "value": 40,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 178, "function": "trySetName" },
+      "usedBy": ["S88"],
+      "concept": "Maximum name length validation"
+    },
+    {
+      "name": "NAME_MAX_WORDS",
+      "value": 4,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 179, "function": "trySetName" },
+      "usedBy": ["S88"],
+      "concept": "Maximum words in name validation"
+    },
+    {
+      "name": "EXAM_DAYS_URGENT_7",
+      "value": 7,
+      "type": "recency",
+      "definedAt": { "file": "may-core.js", "line": 421, "function": "_daysUntilExam" },
+      "usedBy": ["S117"],
+      "concept": "Days until exam <= 7 → urgent/high-impact language"
+    },
+    {
+      "name": "EXAM_DAYS_SHORT_30",
+      "value": 30,
+      "type": "recency",
+      "definedAt": { "file": "may-core.js", "line": 422, "function": "_daysUntilExam" },
+      "usedBy": ["S117"],
+      "concept": "Days until exam <= 30 → prioritize high-yield review"
+    },
+    {
+      "name": "EXAM_DAYS_MEDIUM_90",
+      "value": 90,
+      "type": "recency",
+      "definedAt": { "file": "may-core.js", "line": 423, "function": "_daysUntilExam" },
+      "usedBy": ["S117"],
+      "concept": "Days until exam <= 90 → build steady readiness"
+    },
+    {
+      "name": "STEM_OVERLAP_2",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 1896, "function": "_inferWhyTempting" },
+      "usedBy": ["S120"],
+      "concept": "Minimum word overlap between stem and choice to trigger 'mirrors key terms' trap"
+    },
+    {
+      "name": "TRAP_TEXT_MAX_250",
+      "value": 250,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 1648, "function": "_inferCommonTrap" },
+      "usedBy": ["S120"],
+      "concept": "Maximum characters for trap text before truncation"
+    },
+    {
+      "name": "INTERPRET_MAX_200",
+      "value": 200,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 1620, "function": "_interpretExplanation" },
+      "usedBy": ["S120"],
+      "concept": "Maximum characters for interpretation sentence before truncation"
+    },
+    {
+      "name": "EXPLAIN_MIN_LENGTH_30",
+      "value": 30,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 1579, "function": "_buildTutorExplanation" },
+      "usedBy": ["S120"],
+      "concept": "Minimum explanation length before using bank explanation directly (else fallback)"
+    },
+    {
+      "name": "HINT_LEVEL_MAX",
+      "value": 4,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 2117, "function": "_provideHint" },
+      "usedBy": ["S88"],
+      "concept": "Level >= 4 → full explanation triggered instead of hint"
+    },
+    {
+      "name": "PROGRESS_STEADY_TOPICS_MIN_2",
+      "value": 2,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 331, "function": "_detectPositiveTrend" },
+      "usedBy": ["S117"],
+      "concept": "Minimum stable topics to declare 'steady performance' message"
+    },
+    {
+      "name": "WEAKNESS_LOWEST_TOPICS_3",
+      "value": 3,
+      "type": "suppression",
+      "definedAt": { "file": "may-core.js", "line": 2889, "function": "_getWeaknessInsight" },
+      "usedBy": ["S88"],
+      "concept": "Minimum attempts to include a topic in lowest-accuracy fallback"
+    },
+    {
+      "name": "WEAKNESS_LOWEST_ACC_50",
+      "value": 50,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 2893, "function": "_getWeaknessInsight" },
+      "usedBy": ["S88"],
+      "concept": "Accuracy < 50 → '(needs work)' label in lowest-accuracy fallback"
+    },
+    {
+      "name": "WEAKNESS_LOWEST_ACC_70",
+      "value": 70,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 2893, "function": "_getWeaknessInsight" },
+      "usedBy": ["S88"],
+      "concept": "Accuracy >= 70 → '(still decent)' label in lowest-accuracy fallback"
+    },
+    {
+      "name": "POST_FEEDBACK_WEAK_50",
+      "value": 50,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 5452, "function": "showPostAnswerFeedback" },
+      "usedBy": ["S88"],
+      "concept": "Accuracy < 50 → 'has been challenging' feedback for incorrect answer"
+    },
+    {
+      "name": "POST_FEEDBACK_ATTEMPTS_3",
+      "value": 3,
+      "type": "attempt",
+      "definedAt": { "file": "may-core.js", "line": 5452, "function": "showPostAnswerFeedback" },
+      "usedBy": ["S88"],
+      "concept": "Minimum attempts for accuracy-specific feedback on incorrect answer"
+    },
+    {
+      "name": "POST_FEEDBACK_RECENT_80",
+      "value": 80,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 5443, "function": "showPostAnswerFeedback" },
+      "usedBy": ["S88"],
+      "concept": "Recent accuracy >= 80 → 'solid' feedback for correct answer"
+    },
+    {
+      "name": "CROSS_SESSION_DELTA_10",
+      "value": 10,
+      "type": "stability",
+      "definedAt": { "file": "may-core.js", "line": 3027, "function": "_generateSessionRecap" },
+      "usedBy": ["S126"],
+      "concept": "Delta >= 10 → 'Up' trend; delta <= -10 → 'Down' trend in session recap"
+    },
+    {
+      "name": "RECAP_STRONG_ACC_85",
+      "value": 85,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3044, "function": "_generateSessionRecap" },
+      "usedBy": ["S126"],
+      "concept": "MCQ accuracy >= 85 → 'strong today' recommendation to mix in cases"
+    },
+    {
+      "name": "RECAP_WEAK_RATIO_60",
+      "value": 0.6,
+      "type": "accuracy",
+      "definedAt": { "file": "may-core.js", "line": 3042, "function": "_generateSessionRecap" },
+      "usedBy": ["S126"],
+      "concept": "Correct/total ratio < 0.6 → recommend focusing on weakest topic"
+    },
+    {
+      "name": "SECTION_READY_MIN_TOPICS_1",
+      "value": 1,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 912, "function": "getSectionReadinessSummary" },
+      "usedBy": ["S103"],
+      "concept": "Minimum ready topics for section to be 'Approaching review-ready'"
+    },
+    {
+      "name": "SECTION_RECOVERY_MIN_2",
+      "value": 2,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 902, "function": "getSectionReadinessSummary" },
+      "usedBy": ["S103"],
+      "concept": "Recovery topics >= 2 → section 'Recovery needed'"
+    },
+    {
+      "name": "SECTION_SPARSE_THRESHOLD_50",
+      "value": 0.5,
+      "type": "session",
+      "definedAt": { "file": "may-learner-state.js", "line": 897, "function": "getSectionReadinessSummary" },
+      "usedBy": ["S103"],
+      "concept": ">50% topics have 'Not enough data' → section 'Not enough data'"
+    },
+    {
+      "name": "RECOVERY_SET_DEFAULT_COUNT",
+      "value": 10,
+      "type": "priority",
+      "definedAt": { "file": "may-core.js", "line": 3825, "function": "_generateRecoverySet" },
+      "usedBy": ["S88"],
+      "concept": "Default number of questions in a recovery set"
+    }
+  ],
+  "thresholdConflicts": [
+    {
+      "concept": "High / strong topic accuracy",
+      "conflictingValues": {
+        "S124_S125_S123": { "value": 85, "location": "may-core.js:_identifyLearningPatterns:1259, _suggestFocusAreas:1445, _generateNextBestStep:1167" },
+        "S102_S103_readiness": { "value": 80, "location": "may-learner-state.js:getReadinessSummary:625" },
+        "S88_greeting": { "value": 80, "location": "may-core.js:_greetingForQuestion:957" }
+      },
+      "severity": "MEDIUM",
+      "resolution": "S124/S125 use 85% for 'strong' topic proficiency (advance action, topic_strength observation), while readiness declares a topic 'Ready for focused review' at 80%. These are different gates: S124/S125 gate a coaching-observation claim; readiness gates a band assignment. The 5% gap means a topic at 82% would be 'Ready' but not 'strong' — reasonable but worth documenting. Unify at 80% for 'strong' or keep 85% for the stricter claim."
+    },
+    {
+      "concept": "Improvement delta threshold",
+      "conflictingValues": {
+        "S124_S125_coaching": { "value": 10, "location": "may-core.js:_identifyLearningPatterns:1277, _suggestFocusAreas:1478" },
+        "S88_trends_clusters": { "value": 15, "location": "may-learner-state.js:getTrends:252, getWeaknessClusters:264-265" },
+        "S129_outcomes": { "value": 5, "location": "may-learner-state.js:classifyPendingOutcomes:1272" }
+      },
+      "severity": "HIGH",
+      "resolution": "MAJOR DRIFT. The coaching layer (S124/S125) declares improvement at delta >= 10, but the trend/cluster layer only classifies 'improving' at delta >= 15 (with 5-14 as 'slightly_improving'). Meanwhile S129 outcome classification uses delta >= 5. Three different values for the same concept. Unify: use 15 as the canonical 'improving' threshold across all subsystems; keep 5 as the 'slight' signal; reserve 10 for coaching-layer 'notable improvement' with explicit labeling."
+    },
+    {
+      "concept": "Declining delta threshold",
+      "conflictingValues": {
+        "S88_trends": { "value": -15, "location": "may-learner-state.js:getTrends:252" },
+        "S113_evidence": { "value": -15, "location": "may-core.js:_hasDecliningEvidence:6044" }
+      },
+      "severity": "LOW",
+      "resolution": "CONSISTENT across S88 and S113. No drift. Both use delta <= -15."
+    },
+    {
+      "concept": "Minimum attempts for strength observation",
+      "conflictingValues": {
+        "S124_S125_coaching": { "value": 3, "location": "may-core.js:_identifyLearningPatterns:1259, _suggestFocusAreas:1445" },
+        "S102_readiness_ready": { "value": 6, "location": "may-learner-state.js:getReadinessSummary:626" },
+        "S102_readiness_approaching": { "value": 4, "location": "may-learner-state.js:getReadinessSummary:630" }
+      },
+      "severity": "MEDIUM",
+      "resolution": "Coaching layer declares 'strong' at 3 attempts; readiness requires 6 for 'Ready' and 4 for 'Approaching'. This is by design — coaching observations are lower-stakes than readiness-band assignments. Document the tiered approach: 3 = 'can observe', 4 = 'approaching reliable', 6 = 'ready-reliable'."
+    },
+    {
+      "concept": "Recent accuracy threshold for 'good/solid'",
+      "conflictingValues": {
+        "S124_S125_coaching": { "value": 75, "location": "may-core.js:_identifyLearningPatterns:1277" },
+        "S102_readiness": { "value": 80, "location": "may-learner-state.js:getReadinessSummary:626" },
+        "S102_approaching": { "value": 70, "location": "may-learner-state.js:getReadinessSummary:629" }
+      },
+      "severity": "MEDIUM",
+      "resolution": "S124/S125 use recentPct >= 75 as part of the 'improving' coaching claim. Readiness uses >= 80 as 'high' and >= 70 as 'good'. The 75 sits between readiness tiers. Consider aligning S124/S125 to use 70 (matching the 'good' tier) or document that 75 is intentionally between the two readiness bands for coaching."
+    },
+    {
+      "concept": "Stability 'good/steady' threshold",
+      "conflictingValues": {
+        "S117_steady_performance": { "value": 60, "location": "may-core.js:_detectPositiveTrend:330" },
+        "S102_readiness_approaching": { "value": 60, "location": "may-learner-state.js:getReadinessSummary:630" },
+        "S102_readiness_ready": { "value": 75, "location": "may-learner-state.js:getReadinessSummary:626" },
+        "S88_progress_well_established": { "value": 80, "location": "may-core.js:_getProgressInsight:2770" }
+      },
+      "severity": "MEDIUM",
+      "resolution": "Three distinct stability tiers exist for different purposes: 60 = 'steady/good enough for approaching', 75 = 'high for ready', 80 = 'well-established for progress insight'. These represent genuine granularity tiers, not drift. The 60/75/80 cascade is intentional. Document as three-tier stability framework."
+    },
+    {
+      "concept": "Weak accuracy threshold (directional)",
+      "conflictingValues": {
+        "S88_all_subsystems": { "value": 60, "location": "may-core.js:_greetingForQuestion:959, _identifyLearningPatterns:1268, _suggestFocusAreas:1396; may-learner-state.js:getWeaknessClusters:263, getReadinessSummary:637" },
+        "S129_contradictory": { "value": 50, "location": "may-learner-state.js:classifyPendingOutcomes:1284" },
+        "S88_lowest_accuracy": { "value": 50, "location": "may-core.js:_getWeaknessInsight:2893" }
+      },
+      "severity": "LOW",
+      "resolution": "60% is the canonical 'weak' threshold across all subsystems. 50% is used only for the more severe labels: '(needs work)' in lowest-accuracy fallback and 'contradictory' outcome classification. These are sub-threshold tiers within the overall 'weak' band — not conflicts. Document as 'weak' (60) and 'severe' (50)."
+    },
+    {
+      "concept": "Session count for data sufficiency",
+      "conflictingValues": {
+        "S117_welcome_evidence": { "value": 2, "location": "may-core.js:_buildWelcomeOverview:282" },
+        "S117_sparse_fallback": { "value": 3, "location": "may-core.js:_buildWelcomeOverview:300" },
+        "S102_readiness_nodata": { "value": 3, "location": "may-learner-state.js:getReadinessSummary:686" },
+        "S127_digest_min": { "value": 2, "location": "may-core.js:_generateWeeklyDigest:3063" },
+        "S128_strategy_min": { "value": 1, "location": "may-core.js:_generateStudyStrategy:3230" }
+      },
+      "severity": "MEDIUM",
+      "resolution": "Multiple session-count gates exist for different purposes: 1 = can build strategy (minimal), 2 = can compare sessions / show digest, 3 = sufficient for readiness assessment. This is a tiered approach, not drift, but it should be documented as a single progression scale: 1 → basic insights, 2 → cross-session comparison, 3 → readiness assessment."
+    },
+    {
+      "concept": "Weekly digest window definition",
+      "conflictingValues": {
+        "S127_S128_session_count": { "value": 7, "location": "may-core.js:_generateWeeklyDigest:3062 ('last 7 sessions')" },
+        "S129_calendar": { "value": 604800000, "location": "may-learner-state.js:getLongitudinalAnalytics:1397 ('7 calendar days')" }
+      },
+      "severity": "MEDIUM",
+      "resolution": "S127/S128 define 'weekly' as 'last 7 sessions' (session-count-based), while S129 defines '1week' as 7 calendar days. These are different concepts: session-based (activity-triggered) vs. calendar-based (time-triggered). For a learner doing 3 sessions/day, 7 sessions ≈ 2.3 days; for one doing 1 session/week, 7 sessions ≈ 7 weeks. Document both definitions explicitly and consider adding a calendar-based digest alongside the session-based one."
+    },
+    {
+      "concept": "Misconception pattern minimum count for visibility",
+      "conflictingValues": {
+        "S124_S125_all_coaching": { "value": 2, "location": "may-core.js:_identifyLearningPatterns:1292" },
+        "S127_weekly_digest_focus": { "value": 3, "location": "may-core.js:_generateWeeklyDigest:3184" },
+        "S128_study_strategy": { "value": 3, "location": "may-core.js:_generateStudyStrategy:3272" }
+      },
+      "severity": "LOW",
+      "resolution": "Coaching shows misconception patterns at count >= 2; weekly digest and study strategy only recommend focus at count >= 3. This is reasonable tiering: 2 repetitions = 'noticeable', 3 repetitions = 'actionable'. Document as intentional."
+    },
+    {
+      "concept": "Confidence calibration minimum entries (overconfident vs underconfident)",
+      "conflictingValues": {
+        "overconfident": { "value": 4, "location": "may-core.js:_getProgressInsight:2780" },
+        "underconfident": { "value": 3, "location": "may-core.js:_getProgressInsight:2783" }
+      },
+      "severity": "LOW",
+      "resolution": "Overconfident claims require 4 entries; underconfident claims require only 3. Asymmetric threshold — underconfident claims are made with less evidence. Consider unifying at 4 for both, since both are calibration claims that affect learner self-perception."
+    }
+  ],
+  "thresholdDriftInstances": [
+    {
+      "id": "DRIFT_001",
+      "concept": "accuracy_high",
+      "value1": { "value": 85, "subsystem": "S124/S125 (coaching observations)", "location": "may-core.js:1259,1445,1167" },
+      "value2": { "value": 80, "subsystem": "S102/S103 (readiness bands)", "location": "may-learner-state.js:625" },
+      "gap": 5,
+      "note": "Coaching declares 'strong' at 85%; readiness declares 'Ready' at 80%. A topic at 82% is Ready but not Strong — the more conservative coaching layer creates a 5% gap."
+    },
+    {
+      "id": "DRIFT_002",
+      "concept": "delta_improving",
+      "value1": { "value": 10, "subsystem": "S124/S125 (coaching layer)", "location": "may-core.js:1277,1478" },
+      "value2": { "value": 15, "subsystem": "S88 (trend/cluster engine)", "location": "may-learner-state.js:252,264" },
+      "value3": { "value": 5, "subsystem": "S129 (outcome classification)", "location": "may-learner-state.js:1272" },
+      "gap": 10,
+      "note": "CRITICAL DRIFT. Coaching says improving at +10; cluster engine says improving at +15; outcomes say positive at +5. Three different thresholds for the same concept across three layers."
+    },
+    {
+      "id": "DRIFT_003",
+      "concept": "attempts_min_strength",
+      "value1": { "value": 3, "subsystem": "S124/S125 (coaching observations)", "location": "may-core.js:1259,1445" },
+      "value2": { "value": 6, "subsystem": "S102/S103 (readiness - Ready)", "location": "may-learner-state.js:626" },
+      "gap": 3,
+      "note": "Coaching needs only 3 attempts to call a topic 'strong'; readiness needs 6 for 'Ready'. Intentionally different (lower bar for coaching), but should be explicitly a tiered framework."
+    },
+    {
+      "id": "DRIFT_004",
+      "concept": "recentPct_good",
+      "value1": { "value": 75, "subsystem": "S124/S125 (coaching improving)", "location": "may-core.js:1277" },
+      "value2": { "value": 80, "subsystem": "S102 (readiness high)", "location": "may-learner-state.js:626" },
+      "value3": { "value": 70, "subsystem": "S102 (readiness good)", "location": "may-learner-state.js:629" },
+      "gap": 5,
+      "note": "Coaching-layer 75 sits between readiness tiers of 70 and 80 — intentionally between the bands but undocumented as such."
+    },
+    {
+      "id": "DRIFT_005",
+      "concept": "stability_high",
+      "value1": { "value": 60, "subsystem": "S117 (positive trend detection)", "location": "may-core.js:330" },
+      "value2": { "value": 75, "subsystem": "S102 (readiness Ready)", "location": "may-learner-state.js:626" },
+      "value3": { "value": 80, "subsystem": "S88 (progress 'well-established')", "location": "may-core.js:2770" },
+      "gap": 20,
+      "note": "Three tiers of stability: 60 (steady), 75 (ready-level), 80 (well-established). Gap of 20 points from lowest to highest — should be documented as a tiered stability model."
+    },
+    {
+      "id": "DRIFT_006",
+      "concept": "session_weekly_window",
+      "value1": { "value": 7, "subsystem": "S127/S128 (session-count based)", "location": "may-core.js:3062 ('last 7 sessions')" },
+      "value2": { "value": 604800000, "subsystem": "S129 (calendar-time based)", "location": "may-learner-state.js:1397 ('7 days in ms')" },
+      "gap": "conceptual",
+      "note": "One subsystem defines 'weekly' by session count (7 sessions), another by calendar time (7 days). These produce entirely different windows depending on study cadence."
+    },
+    {
+      "id": "DRIFT_007",
+      "concept": "confidence_min_entries",
+      "value1": { "value": 4, "subsystem": "S88 (overconfident claim)", "location": "may-core.js:2780" },
+      "value2": { "value": 3, "subsystem": "S88 (underconfident claim)", "location": "may-core.js:2783" },
+      "gap": 1,
+      "note": "Asymmetric evidence requirements: overconfident needs 4 entries, underconfident needs 3. The more impactful claim (overconfident) has the higher bar — defensible but asymmetric."
+    }
+  ],
+  "missingThresholds": [
+    "accuracy_medium_range: No threshold defines the 60-70% range — topics in this band are neither 'weak' nor 'strong' and have no dedicated coaching language",
+    "stability_medium_range: No threshold for the 50-60% stability band — between 'unstable' (50) and 'good' (60)",
+    "recentPct_declining: No explicit threshold for 'recent accuracy is concerning' independent of delta — only delta-based classification exists",
+    "hint_rate_threshold: No numeric threshold for 'excessive hint usage' — only trend direction ('increasing') is checked, not absolute rate",
+    "time_since_last_session: No threshold for detecting dormant/returning learners based on calendar gap between sessions",
+    "topic_coverage_pct: No threshold for 'topic coverage breadth' — e.g., % of CMA blueprint sections with at least N attempts",
+    "fatigue_detection: No threshold for detecting accuracy degradation within a single session (e.g., last 5 vs first 5 accuracy)",
+    "mastery_plateau: No threshold for detecting when a topic has stopped improving despite continued practice",
+    "overstudy_warning: No threshold for detecting when a strong topic is being over-practiced at the expense of weak areas",
+    "readiness_confidence_level: No threshold distinguishing 'high confidence' vs 'low confidence' readiness assessments — only a vague 'moderate'/'low' string exists"
+  ],
+  "unifiedThresholdSet": {
+    "accuracy": {
+      "high": 80,
+      "strong": 85,
+      "good": 75,
+      "approaching": 70,
+      "weak": 60,
+      "severe": 50
+    },
+    "attempts": {
+      "minObservation": 3,
+      "strength": 3,
+      "weakness": 5,
+      "trend": 4,
+      "note": 2,
+      "ready": 6,
+      "approaching": 4,
+      "repeatedCalculation": 3,
+      "evidenceStrong": 5,
+      "evidenceMedium": 3,
+      "evidenceWeak": 1
+    },
+    "sessions": {
+      "strategy": 1,
+      "comparison": 2,
+      "digest": 2,
+      "readiness": 3,
+      "recentlySeenRecommend": 3,
+      "recentlySeenRecovery": 5,
+      "weeklyLookback": 7
+    },
+    "stability": {
+      "wellEstablished": 80,
+      "high": 75,
+      "good": 60,
+      "minimum": 40,
+      "unstable": 50,
+      "computeMinimum": 4
+    },
+    "delta": {
+      "improving": 15,
+      "slightlyImproving": 5,
+      "declining": -15,
+      "slightlyDeclining": -5,
+      "coachingNotable": 10,
+      "outcomePositive": 5
+    },
+    "recency": {
+      "recentAttemptWindow": 5,
+      "maxRecentStored": 15,
+      "weeks": {
+        "1wk": 7,
+        "2wk": 14,
+        "4wk": 28
+      }
+    },
+    "priority": {
+      "high": "accuracy < 60 AND attempts >= 5",
+      "medium": "calculation_miss OR misconception >= 2",
+      "low": "accuracy >= 85 AND attempts >= 3 OR improving_trend"
+    },
+    "suppression": {
+      "misconceptionMinShow": 2,
+      "misconceptionMinAct": 3,
+      "caseMissSummaryMin": 3,
+      "caseTrendSessionsMin": 2,
+      "caseBannerMissMin": 3,
+      "caseBurdenDegrade": 4,
+      "maxObservations": 3,
+      "maxSuggestions": 3,
+      "maxWeeklyPriorities": 3,
+      "effectivenessPositiveMin": 2,
+      "effectivenessNeutralMin": 2,
+      "effectivenessContradictoryMin": 1,
+      "difficultySensitiveGap": 30
+    },
+    "calibration": {
+      "overconfidentConfidence": 4,
+      "underconfidentConfidence": 2,
+      "overconfidentDelta": 0.8,
+      "underconfidentDelta": -0.5,
+      "minEntriesOverconfident": 4,
+      "minEntriesUnderconfident": 3,
+      "minEntriesCalibration": 4,
+      "throttleMs": 300000,
+      "throttleAttempts": 20
+    }
+  },
+  "recommendation": "Adopt a single-source-of-truth (SSOT) threshold registry in may-learner-state.js. All coaching functions in may-core.js should read from this registry rather than hardcoding literals. The registry should define: (1) canonical value, (2) tier label, (3) which subsystems use which tier, (4) rationale for any intentional divergence. The getThresholdSnapshot() function (may-learner-state.js:1111) already provides the readiness thresholds — extend it to cover ALL thresholds. Create a THRESHOLD_REGISTRY object at the top of may-learner-state.js that all getter functions and may-core.js coaching functions reference. This eliminates the 11 identified conflicts and 7 drift instances, and gives tests (test_calibration.js) a single point of truth for validation."
+}

@@ -1,0 +1,106 @@
+{
+  "generated": "2026-07-26T22:05:28.405Z",
+  "modelVersion": "S306-UIQS-1.0",
+  "qualitySummary": {
+    "portfolioAvgUiqs": 68.8,
+    "mcqAvgUiqs": 68.7,
+    "caseAvgUiqs": 69.7,
+    "totalItems": 2900,
+    "mcqCount": 2500,
+    "caseCount": 400,
+    "gradeDistribution": {
+      "A": 170,
+      "B": 1431,
+      "C": 939,
+      "D": 313,
+      "F": 47
+    }
+  },
+  "riskSummary": {
+    "p0Immediate": 46,
+    "p1High": 583,
+    "totalCertDebt": 358,
+    "totalEWDebt": 539,
+    "totalECDebt": 982
+  },
+  "domainCards": {
+    "A": {
+      "uiqs": 70.3,
+      "grade": "B",
+      "certRate": 98.2,
+      "p0Items": 3,
+      "p1Items": 55,
+      "ewDebt": 58,
+      "avgDqs": 78.1,
+      "avgEqs": 49,
+      "riskLevel": "Low",
+      "mcqCount": 375,
+      "caseCount": 58
+    },
+    "B": {
+      "uiqs": 71.3,
+      "grade": "B",
+      "certRate": 98.9,
+      "p0Items": 0,
+      "p1Items": 68,
+      "ewDebt": 68,
+      "avgDqs": 79,
+      "avgEqs": 42.4,
+      "riskLevel": "Low",
+      "mcqCount": 500,
+      "caseCount": 68
+    },
+    "C": {
+      "uiqs": 74.1,
+      "grade": "B",
+      "certRate": 98.3,
+      "p0Items": 4,
+      "p1Items": 66,
+      "ewDebt": 70,
+      "avgDqs": 78.6,
+      "avgEqs": 52,
+      "riskLevel": "Low",
+      "mcqCount": 500,
+      "caseCount": 74
+    },
+    "D": {
+      "uiqs": 70.1,
+      "grade": "B",
+      "certRate": 98.7,
+      "p0Items": 2,
+      "p1Items": 70,
+      "ewDebt": 72,
+      "avgDqs": 75.9,
+      "avgEqs": 48.5,
+      "riskLevel": "Low",
+      "mcqCount": 375,
+      "caseCount": 76
+    },
+    "E": {
+      "uiqs": 62.5,
+      "grade": "C",
+      "certRate": 59.7,
+      "p0Items": 29,
+      "p1Items": 161,
+      "ewDebt": 141,
+      "avgDqs": 60.7,
+      "avgEqs": 58.9,
+      "riskLevel": "High",
+      "mcqCount": 375,
+      "caseCount": 67
+    },
+    "F": {
+      "uiqs": 62.4,
+      "grade": "C",
+      "certRate": 65.2,
+      "p0Items": 8,
+      "p1Items": 163,
+      "ewDebt": 130,
+      "avgDqs": 62.2,
+      "avgEqs": 54.2,
+      "riskLevel": "High",
+      "mcqCount": 374,
+      "caseCount": 57
+    }
+  }
+}

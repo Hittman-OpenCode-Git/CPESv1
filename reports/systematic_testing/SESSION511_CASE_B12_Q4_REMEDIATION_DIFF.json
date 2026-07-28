@@ -1,0 +1,18 @@
+{
+  "editsApplied": true,
+  "item": "CASE-B12-Q4",
+  "changes": {
+    "Correct": {"before": "$21,750", "after": "$20,143"},
+    "Choices[2]": {"before": "$19,500", "after": "$19,286"},
+    "Choices[3]": {"before": "$21,750", "after": "$20,143"},
+    "Explanation": {
+      "before_summary": "Stated ($159,000 - $18,000) / 7 = $21,750",
+      "after_summary": "Stated ($159,000 - $18,000) / 7 = $141,000 / 7 = $20,143 with independently recomputed note",
+      "distractor_C": {"before": "$19,500 likely ignores the reduction in residual value", "after": "$19,286 uses the original residual value instead of the revised residual"}
+    }
+  },
+  "fields_unchanged": ["Prompt", "Type", "Topic", "StudyLinks", "question_state", "Difficulty", "DifficultyScore", "ProductionStatus", "ItemID"],
+  "other_items_unchanged": true,
+  "cases_intact": "15",
+  "items_intact": "75"
+}

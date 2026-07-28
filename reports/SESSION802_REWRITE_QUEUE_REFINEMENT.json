@@ -1,0 +1,183 @@
+{
+  "session": "802",
+  "agent": "N",
+  "title": "Rewrite Queue Refinement — S801-Corrected P0-P4 Priorities",
+  "date": "2026-07-26",
+  "methodology": "Read-only synthesis of S800 §8 Rewrite Forecast + S801 Session Summary + S802 Agent I (Pack E), Agent P (clone reduction), Agent O (blueprint overlay), Agent R (cost savings), Agent E (archived inventory)",
+  "p0_learner_safety": {
+    "items": 0,
+    "status": "EMPTY — all 3 S800 P0 blockers refuted by S801",
+    "detail": {
+      "blocker_1_67_certified_dl008": "REFUTED — 0 actual Certified DL-008. All 67 were DL-029 forward-scan false positives (CC-before-QID in all 5 packs → ~75% FP rate). Verified by Agent B via Function constructor same-object parse at 100% confidence.",
+      "blocker_2_fd045_missing": "REFUTED — FD-045 structurally complete. All content fields present (Stem, Choices, CC=B, EC). Agent E confirmed.",
+      "blocker_3_fd075_missing": "REFUTED — FD-075 structurally complete. CC=C confirmed by S702 cross-reference. Agent F confirmed."
+    },
+    "note": "0 Certified DL-008, FD-045/FD-075 structurally complete, 0 answer-key errors in learner pool. Portfolio is governance-clean at P0."
+  },
+  "p1_certification_blockers": {
+    "items_estimate": 190,
+    "description": "Items that are not yet Certified and require work to enter the learner pool. All 187 Unprocessed items (C/D Sections E/F) + 3 Pack A recoverable items.",
+    "primary_blocks": [
+      {
+        "block": "Clone archival in Pack C/D Section F",
+        "items": 111,
+        "detail": "111 clone items (Pack C Section F: 56, Pack D Section F: 55) need archival to match DL-012 pattern. All Unprocessed — zero learner-pool exposure, zero de-certification required. 4 batches at ≤28 per Rule 5.",
+        "sessions": "1-2"
+      },
+      {
+        "block": "Seed/standalone certification in Pack C/D Sections E/F",
+        "items": 76,
+        "detail": "After clone archival, 66 unique items need CAQS §1.6 six-dimension verification: 19 per section × 4 sections (Pack C E, Pack C F, Pack D E, Pack D F) = 76 certifiable seeds + standalones. All currently Unprocessed.",
+        "sessions": "3-4"
+      },
+      {
+        "block": "Pack A closeout — 3 recoverable items",
+        "items": 3,
+        "detail": "P1-E-056 (accidentally archived, independent topic, was Certified — un-archive + recertify). P1-A-044/P1-A-064 (Archived, ASC 450 loss contingency axis cluster — un-archive one + enhance EC + certify; keep other archived to avoid pool dilution).",
+        "sessions": "<1"
+      },
+      {
+        "block": "DL-026 residual on non-Certified items",
+        "items": "~50-150 fields",
+        "detail": "DL-026 empty distractor slots in Pack C/D Sections E/F seeds that need filling before certification. Exact count requires boundary-aware scan on non-Certified sections.",
+        "sessions": "1-2"
+      }
+    ],
+    "sessions_estimate": "6-8"
+  },
+  "p2_educational_quality": {
+    "items_estimate": 1015,
+    "description": "Certified items in the learner pool with degraded educational feedback — structurally correct but pedagogically thin. Zero learner-safety risk, but reduced instructional value.",
+    "primary_targets": [
+      {
+        "target": "Pack E Sections A-F — explanation thinness",
+        "items": 500,
+        "detail": "All 500 Certified items are structurally clean (0 DL-008) but educationally impoverished: median ExplanationCorrect = 67 chars (vs. pool median ~213), 92.4% have zero ASC/COSO citations, 83.6% are definition-match format with no business scenarios. Learners receive structurally correct but pedagogically minimal feedback.",
+        "sessions": "10-14"
+      },
+      {
+        "target": "DL-021 — Pack E Section C missing distractor fields",
+        "items": 95,
+        "detail": "300 ExplanationWrong fields structurally absent across 95 Certified Pack E Section C items. Learners selecting wrong answers see zero feedback. 5 items were remediated in prior autonomous run; 95 remain.",
+        "sessions": "3-4"
+      },
+      {
+        "target": "Case bank — 0% distractor explanations",
+        "items": 420,
+        "detail": "All 420 case items lack distractor explanations (0% fill rate). Only 3.8% (16/420) cite ASC/COSO/GAAP in EC. All labeled Moderate (DL-032). Learners receive no wrong-answer feedback in any case session.",
+        "sessions": "5-6"
+      }
+    ],
+    "sessions_estimate": "18-24"
+  },
+  "p3_structural_normalization": {
+    "items_estimate": 163,
+    "description": "Metadata and structural normalization — fields that exist but carry legacy template text or incorrect labels. Zero learner-safety impact. Purely hygienic.",
+    "primary_targets": [
+      {
+        "target": "DL-013 boilerplate — C/D Sections E/F residual",
+        "items": 163,
+        "detail": "163 ExplanationWrong fields in Pack C/D Sections E/F still contain 'represents a plausible misconception' template text. All in Unprocessed items — zero learner-pool exposure. Must be cleaned before certification (P1 dependency).",
+        "sessions": "2-3"
+      },
+      {
+        "target": "Pack C/D Section E/F metadata normalization",
+        "items": "150 items",
+        "detail": "Topic labels, DifficultyScore alignment, Section tags for 150 items in Pack C/D Sections E/F. DL-015/DL-016 pattern: Topic numbering shifted by +1 in template rotation groups.",
+        "sessions": "1-2"
+      }
+    ],
+    "sessions_estimate": "3-5"
+  },
+  "p4_enhancement": {
+    "items_estimate": 1765,
+    "description": "Long-term enhancement — clone replacement with fresh-authored items, difficulty recalibration, and case bank modernization. These are not blocking launch and can parallel P1-P3.",
+    "primary_targets": [
+      {
+        "target": "Clone replacement via fresh authoring",
+        "items": 765,
+        "detail": "~765 total clone-affected items: 132 currently Archived + 111 actionable Unprocessed Section F clones + ~522 S801-claimed Section A-D clone items (CERTIFIED — requires de-certification before archival). Agent P verified Sections E/F only (300 clone-affected); A-D claims are unverified and may be inflated by DL-016/DL-029 scan artifacts. Pack B benchmark is the quality gate for fresh-authored replacements. S800 estimated 15-25 sessions; scope reduced ~20% by S801 clone count refinement.",
+        "sessions": "12-20"
+      },
+      {
+        "target": "DL-031 — systematic difficulty inflation",
+        "items": 500,
+        "detail": "~500 definition-match items labeled Moderate (DS=3) that test Bloom's Remember/Understand and should be Easy (DS=1). Dominant pattern: stem contains textbook definition, correct answer is the term being defined. Metadata-only edits — no content changes. DCS v1.1 governed.",
+        "sessions": "4-5"
+      },
+      {
+        "target": "DL-032 — case bank uniform difficulty",
+        "items": 420,
+        "detail": "All 420 case items labeled Moderate (3) with zero variance. Statistically implausible. Requires per-item cognitive assessment against CAQS §6.1 target distribution (15% Easy, 20% Mod-Easy, 30% Moderate, 25% Difficult, 10% Very Difficult).",
+        "sessions": "3-4"
+      },
+      {
+        "target": "Pack A Section E clone replacement",
+        "items": 17,
+        "detail": "17 Archived DL-012 clones in Pack A Section E. The 58 Certified items in the same section are the seed pool — full clone replacement requires de-certification of the 58 + fresh authoring of replacements. Deferred pending user authorization.",
+        "sessions": "deferred"
+      }
+    ],
+    "sessions_estimate": "19-29"
+  },
+  "total_sessions_all_priorities": "46-66",
+  "comparison_to_s800_forecast": {
+    "s800_original": "48-73 sessions (300-480 hrs)",
+    "agent_r_post_s801": "41-65 sessions (268-448 hrs) — 5-8 sessions saved from P0 elimination",
+    "agent_n_refined": "46-66 sessions — within Agent R's band but at the upper end, reflecting the full scope of P2 Pack E enhancement (500 items) and P4 clone replacement (765 items)",
+    "difference_from_s800": "Reduced from 48-73 to 46-66. P0 elimination saved 5-8 sessions but the reduction is partially offset by more accurate item counts (765 clone items vs. S800's ~765 confirms same magnitude, but P2 Pack E enhanced from 'targeted' to 'full' scope per Agent I's 83.6% definition-match finding)",
+    "key_refinement": "67 phantom DL-008 items removed from work queue. P1 shifted from 'remediation' to 'archival + certification' — no DL-008 clearance work needed anywhere in the pipeline."
+  },
+  "s801_census_basis": {
+    "total_items": 2500,
+    "certified": 2181,
+    "archived": 132,
+    "unprocessed": 187,
+    "certified_pct": "87.2%",
+    "packs_certified": "Pack B: 100%, Pack E: 100%, Pack A: 96.2%, Pack C: 70.0%, Pack D: 70.0%",
+    "sections_fully_certified": "22/30 (≥90% Certified): Pack A [B,C,D,F], Pack B [all 6], Pack C [A,B,C,D], Pack D [A,B,C,D], Pack E [A,B,E,F]",
+    "uncertified_sections": "8/30: Pack A [A: 2 items, E: 17 items], Pack C [E: 75, F: 75], Pack D [E: 75, F: 75], Pack E [C: ~4 measurement uncertainty, D: ~5 measurement uncertainty]",
+    "p0_blockers_refuted": 3,
+    "dl008_certified": 0,
+    "verification_method": "Function constructor same-object parse (100% confidence per S801 Agent B)",
+    "strongest_domains": "B (100%), A (99.5%), C (99.2%), D (98.7%)",
+    "weakest_domains": "E (55.5%), F (60.0%) — Packs C/D Sections E/F entirely non-Certified"
+  },
+  "dependency_graph": {
+    "description": "P0 (resolved) → P1 (clone archival + seed certification) → P3 (DL-013 cleanup, metadata) → P4 (clone replacement). P2 (Pack E enhancement, case bank) is independent of P1/P3 (different files). P4 difficulty recalibration can overlap all tiers.",
+    "critical_path": "P1 → P3 → P4 clone replacement: 6-8 + 3-5 + 12-20 = 21-33 sessions on critical path",
+    "parallel_path": "P2 can run simultaneously with P1/P3. Case bank work (P2/P4) is independent of MCQ workstreams."
+  },
+  "key_risks": [
+    {
+      "risk": "Pack E full rewrite scope creep",
+      "detail": "S800 estimated 'targeted enhancement' vs. Agent I's finding that 83.6% of Pack E is definition-match format suggests near-full rewrite may be needed. 500 items at ~3-5 items per session = 100-167 sessions if done individually. Batch rewriting may reduce to 10-14 sessions but at risk of DL-013-style template boilerplate reintroduction.",
+      "mitigation": "Pack B is the quality template. Phase Pack E in 4 sections (A/B, C/D, E, F) with independent QA per phase."
+    },
+    {
+      "risk": "S801 clone claims for A-D sections unverified",
+      "detail": "Agent J (Pack C: 347 archivable) and Agent K (Pack D: 437 archivable) claim ~414 clone items in already-Certified A-D sections. Agent P verified only E/F (300 clone-affected). A-D claims may be inflated by DL-016/DL-029 artifacts. Acting on unverified claims would require de-certification of hundreds of Certified items.",
+      "mitigation": "Require independent stem-comparison verification of A-D clone claims before any P4 archival action on Certified sections."
+    },
+    {
+      "risk": "DL-019 concurrent-write data loss",
+      "detail": "No file-lock protocol implemented. Prior sessions' remediation was overwritten by concurrent waves (432 items across Pack C+D). Remediation effort may be silently lost.",
+      "mitigation": "Session isolation enforced. Cross-session re-verification after every write batch."
+    }
+  ],
+  "governance_attestation": {
+    "read_only": true,
+    "no_pack_content_changes": true,
+    "no_answer_key_changes": true,
+    "no_certification_state_changes": true,
+    "no_scoring_changes": true,
+    "sources": [
+      "SESSION800_SESSION_SUMMARY.md §8 (Rewrite Forecast: 48-73 sessions)",
+      "SESSION801_SESSION_SUMMARY.md (P0 refutation: 0 DL-008, FD-045/075 complete)",
+      "SESSION802_CLONE_REDUCTION_ANALYSIS.json (Agent P: 111 actionable clones, ~765 total estimate)",
+      "SESSION802_COST_SAVINGS_ANALYSIS.json (Agent R: 5-8 sessions saved, 41-65 revised)",
+      "SESSION802_BLUEPRINT_HEALTH_OVERLAY.json (Agent O: E=55.5%, F=60.0% certified — largest gaps)",
+      "SESSION802_ARCHIVED_INVENTORY_REVIEW.json (Agent E: 16 keep-archived, 3 reconsider)"
+    ]
+  }
+}

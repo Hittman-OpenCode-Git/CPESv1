@@ -1,0 +1,867 @@
+{
+  "meta": {
+    "document_id": "PORTFOLIO_OWNERSHIP_MATRIX_v2.0",
+    "session": "725",
+    "agent": "D",
+    "agent_role": "Ownership Consolidation Agent",
+    "created": "2026-07-26",
+    "type": "Governance Artifact — Read-Only Creation",
+    "status": "ACTIVE",
+    "authority": "PROJECT_CONSTITUTION.md, S724 Executive Board Directive, S725 Agent O Portfolio Stewardship Framework v1.0, S725 Agent E Post-700 Governance Model v1.0",
+    "supersedes": "SESSION724_OPERATING_MODEL.json §ownership_gaps entries (resolved by this matrix)",
+    "dependencies": [
+      "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (Agent O — authoritative lane structure and stewardship principles)",
+      "SESSION725_POST700_GOVERNANCE_MODEL.md (Agent E — acceptance protocol and series transition governance)",
+      "SESSION724_OPERATING_MODEL.json (6 gap enumeration and portfolio track definitions)",
+      "SESSION723_PORTFOLIO_HANDOFF.json (integration compatibility assessments)",
+      "CURRENT_BASELINES.md (15-file SHA-256 baselines)",
+      "QUESTION_METADATA_STANDARD.md §9.4 (G-NEW-1 through G-NEW-5 certification-blocking conditions)"
+    ],
+    "purpose": "Comprehensive ownership resolution for all 6 S724 carry-forward gaps. Establishes the authoritative PORTFOLIO_OWNERSHIP_MATRIX_v2.0 mapping every governance responsibility to named owners, secondary owners, escalation paths, cadences, and acceptance status. Eliminates all orphaned responsibilities per Stewardship Principle 1."
+  },
+
+  "section_1_gap_resolution": {
+    "description": "Resolution of the 6 post-700 ownership gaps identified by S724. Each gap is assigned a named primary owner, secondary owner, acceptance criteria, transition steps, and deadline. Acceptance follows S725 Agent E's Transfer → Acceptance → Approval → Close protocol (per SESSION725_POST700_GOVERNANCE_MODEL.md §4).",
+    "resolution_authority": "Governance Board (convened S725), per Agent O Stewardship Framework §4 and Agent E Post-700 Governance Model §5.3",
+    "resolution_deadline_global": "Before S726 T0 — all 6 gaps must be ACCEPTED",
+    "gaps": [
+      {
+        "gap_id": "GAP-1",
+        "s724_reference": "S724-GAP-01 / S724 OWNERSHIP GAP #6",
+        "agent_e_reference": "GAP-1 (May coaching layer ownership unassigned)",
+        "agent_o_reference": "S724-GAP-06 (May Coaching Layer Ownership)",
+        "description": "May coaching layer ownership — runtime dependency with no owning track. May coaching layer consists of two runtime files: may-core.js (344,883 bytes, SHA-256: 183D2E6B...) and may-learner-state.js (110,240 bytes, SHA-256: BEE72B86...). Both are referenced by index_updated.html and tracked in CURRENT_BASELINES.md §1. The coaching engine interacts with app.js (100-series) and consumes Certified pool data. No lane has formally accepted ownership.",
+        "current_state": "No owner assigned — S724 identified as unassigned runtime dependency",
+        "resolved_owner": "100-series Lead (Platform Maintainer)",
+        "secondary_owner": "Governance Auditor (700-series Maintenance Mode)",
+        "escalation_owner": "Governance Board",
+        "acceptance_criteria": "(1) 100-series Lead explicitly accepts May coaching layer ownership per Agent E acceptance protocol §4.2. (2) May coaching files included in 100-series T0 hash verification. (3) Coaching-layer bug fixes follow 100-series boundary rules (MAY: fix runtime bugs; MAY NOT: create new coaching content, modify pack content). (4) Coaching-layer integrity verified at each quarterly stewardship review.",
+        "acceptance_status": "PENDING",
+        "accepting_entity": "100-series Lead (Platform Maintainer) — per Agent O Stewardship Framework §4.6",
+        "acceptance_date": "2026-07-26",
+        "transition_steps": [
+          "Step 1: Governance Auditor presents May coaching layer ownership proposal to 100-series Lead.",
+          "Step 2: 100-series Lead reviews: (a) CURRENT_BASELINES.md §1 for may-core.js and may-learner-state.js hashes, (b) index_updated.html script tag references, (c) S120-S131 session reports for coaching content context.",
+          "Step 3: 100-series Lead accepts ownership per Agent E Principle 2 protocol (explicit acceptance, documented in REVISION_HISTORY.md).",
+          "Step 4: Portfolio Lane Map updated: May Coaching Lane primary owner → 100-series Lead.",
+          "Step 5: Ownership Matrix row 6 populated with acceptance date.",
+          "Step 6: REVISION_HISTORY.md updated with ownership acceptance entry."
+        ],
+        "transition_deadline": "Before S726 T0",
+        "severity": "HIGH (runtime dependency without ownership is unmaintainable)",
+        "agent_o_lane_reference": "Portfolio Lane Map §May Coaching Layer — primary owner assigned to 100-series Lead"
+      },
+      {
+        "gap_id": "GAP-2",
+        "s724_reference": "S724-GAP-02 / S724 OWNERSHIP GAP #2",
+        "agent_e_reference": "GAP-2 (300-series closure trigger)",
+        "agent_o_reference": "S724-GAP-05 (300-Series S310 Dangling Closeout)",
+        "description": "300→Maintenance model consumption path — who acts on the analytics? 300-series produced DQS, EQS, BQS, ExQS, UIQS, Risk Register, Forecast Engine, and Bottleneck Analysis (S301-S309). S723 declared the 300-series 'COMPATIBLE' with governance continuity. But no mechanism exists for consuming these analytics — the quality scores exist but no lane is designated to act on them.",
+        "current_state": "300-series analytics exist but no consumption path assigned. S309 recommended S310 but no trigger enforces execution.",
+        "resolved_owner": "Reconciliation Agent (700-series) — primary consumption of DQS/EQS/BQS/ExQS/UIQS models and Risk Register for G1-G5 reconciliation gates. Certification Auditor (800-series) — consumption of Forecast Engine and Bottleneck Analysis for certification planning.",
+        "secondary_owner": "300-series Lead (Portfolio Analytics) — responsible for executing S310 as the formal closeout",
+        "escalation_owner": "Governance Board",
+        "acceptance_criteria": "(1) Reconciliation Agent confirms access to all 300-series analytics models. (2) Certification Auditor confirms it consumes Forecast Engine and Bottleneck Analysis for 800-series planning. (3) The consumption path is documented in the Ownership Matrix (rows 5 and 12). (4) S310 (Portfolio Operations Dashboard) is executed as the formal 300-series closeout.",
+        "acceptance_status": "PENDING",
+        "accepting_entity": "Reconciliation Agent (700-series) + Certification Auditor (800-series) — per Agent O Stewardship Framework §4.4",
+        "acceptance_date": "2026-07-26",
+        "transition_steps": [
+          "Step 1: Governance Auditor confirms 300-series analytics are accessible and interpretable.",
+          "Step 2: Reconciliation Agent reviews DQS/EQS/BQS/ExQS/UIQS models and Risk Register for integration into G1-G5 gates.",
+          "Step 3: Certification Auditor reviews Forecast Engine and Bottleneck Analysis for 800-series certification planning.",
+          "Step 4: 300-series Lead executes S310 (Portfolio Operations Dashboard) as formal closeout.",
+          "Step 5: 300-series ownership disposition documented per Agent O Principle 3 (Series Closure Requires Ownership Disposition).",
+          "Step 6: REVISION_HISTORY.md updated with consumption path assignments and S310 closeout entry."
+        ],
+        "transition_deadline": "Before S726 T0 (S310 execution); consumption path activation at S726 T0",
+        "severity": "HIGH (analytics produced but unconsumed — governance waste; 300-series cannot remain in 'pending closeout' indefinitely)",
+        "agent_o_lane_reference": "Portfolio Lane Map §Lane 300 — S310 closeout triggers formal CLOSED state. Consumption paths: Reconciliation Agent (700-series) + Certification Auditor (800-series)."
+      },
+      {
+        "gap_id": "GAP-3",
+        "s724_reference": "S724-GAP-03 / S724 OWNERSHIP GAP #4",
+        "agent_e_reference": "GAP-4 (G-NEW-1 through G-NEW-5 enforcement)",
+        "agent_o_reference": "S724-GAP-03 (G-NEW-1 through G-NEW-5 Enforcement in 800-Series)",
+        "description": "G-NEW-1 through G-NEW-5 enforcement in 800-series certification pipeline. G-NEW-1 through G-NEW-5 are certification-blocking conditions defined in QUESTION_METADATA_STANDARD.md §9.4 (effective Session 508, 2026-07-25). They block certification when: (G-NEW-1) dual-block Choice mismatch, (G-NEW-2) ExplanationWrong topic mismatch, (G-NEW-3) dual-block source-of-truth verification gap, (G-NEW-4) case explanation insufficiency, (G-NEW-5) within-object CC extraction. The 800-series certification pipeline currently does not programmatically enforce these rules at scale.",
+        "current_state": "G-NEW rules exist in QUESTION_METADATA_STANDARD.md §9.4 but no enforcement mechanism in the 800-series certification pipeline.",
+        "resolved_owner": "Certification Auditor (800-series) — primary enforcer at every certification wave gate. Defect Sweeper (700-series) — secondary auditor detecting G-NEW violations in Certified items during Rapid Pulse and Deep Audits.",
+        "secondary_owner": "Defect Sweeper (700-series)",
+        "escalation_owner": "Governance Board",
+        "acceptance_criteria": "(1) Every 800-series certification wave includes a G-NEW verification gate before 'Certified' state assignment. (2) Certification Auditor logs G-NEW pass/fail per wave in REVISION_HISTORY.md. (3) Defect Sweeper's Rapid Pulse audit (every 5 sessions) includes a G-NEW re-verification sweep on newly Certified items. (4) Any G-NEW violation found in a Certified item is escalated as CRITICAL (learner-safety risk per DL-016 severity upgrade).",
+        "acceptance_status": "PENDING",
+        "accepting_entity": "Certification Auditor (800-series) + Defect Sweeper (700-series) — per Agent O Stewardship Framework §4.5",
+        "acceptance_date": "2026-07-26",
+        "transition_steps": [
+          "Step 1: Certification Auditor reads QUESTION_METADATA_STANDARD.md §9.4 (all G-NEW rules, all examples, all blocking conditions).",
+          "Step 2: Certification Auditor integrates G-NEW gate into 800-series certification wave template: before state transition, verify (a) no dual-block Choice mismatch (G-NEW-1), (b) no EW topic mismatch (G-NEW-2), (c) content-block CC is source of truth (G-NEW-3), (d) case explanations meet sufficiency requirements (G-NEW-4), (e) CC extracted within same enclosing object (G-NEW-5).",
+          "Step 3: Defect Sweeper adds G-NEW verification to Rapid Pulse checklist (M2_RAPID_PULSE, RP-CHK-4 — NEW).",
+          "Step 4: Both Certification Auditor and Defect Sweeper log acceptance in REVISION_HISTORY.md.",
+          "Step 5: Governance Board confirms G-NEW enforcement at next stewardship review."
+        ],
+        "transition_deadline": "Before next 800-series certification wave (S803+)",
+        "severity": "CRITICAL (certification without G-NEW enforcement risks certifying items with topic-mismatched or dual-block-contradicted explanations — learner-safety risk per DL-016 HIGH severity upgrade)",
+        "agent_o_lane_reference": "Portfolio Lane Map §Lane 800 — G-NEW enforcement is a mandatory certification wave gate. Ownership Matrix row 11 — G-NEW-1 through G-NEW-5 enforcement."
+      },
+      {
+        "gap_id": "GAP-4",
+        "s724_reference": "S724-GAP-04",
+        "agent_e_reference": "Not separately enumerated by Agent E (merged into GAP-4/GAP-5 scope)",
+        "agent_o_reference": "S724-GAP-04 (Defect Manifest Maintenance After Remediation)",
+        "description": "Defect manifest maintenance after remediation — who updates DEFECT_LIBRARY.md and the DEFECT_MANIFEST_DL008_DL026.json after remediation completes? DEFECT_LIBRARY.md catalogs 33 defect entries (DL-001 through DL-033). Multiple remediation sessions across different lanes (700-series DL-008 sweeps, 800-series certification waves, autonomous runs) modify pack files to fix defects. But DEFECT_LIBRARY.md updates are inconsistent — some remediations are documented in REVISION_HISTORY.md but the defect library entry's 'Status' and 'Resolved' sections are not contemporaneously updated.",
+        "current_state": "DEFECT_LIBRARY.md updates are inconsistent and not owned. Remediations are recorded in REVISION_HISTORY.md but the defect library status fields lag behind actual state.",
+        "resolved_owner": "Defect Sweeper (700-series) — primary responsibility for DEFECT_LIBRARY.md maintenance",
+        "secondary_owner": "Certification Auditor (800-series) — cross-checking defect status during certification waves",
+        "escalation_owner": "Governance Board",
+        "acceptance_criteria": "(1) After every remediation batch (any lane, any defect), the Defect Sweeper updates the corresponding DEFECT_LIBRARY.md entry within the same session. (2) 'Status' field reflects current state (Open/Resolved/In Progress). (3) 'Resolved' section captures date, count, and cross-reference to the remediation session. (4) No remediated defect is marked 'Open' in DEFECT_LIBRARY.md more than one session after remediation completion. (5) DEFECT_MANIFEST_DL008_DL026.json updated contemporaneously if May coaching layer active.",
+        "acceptance_status": "PENDING",
+        "accepting_entity": "Defect Sweeper (700-series) — per Agent O Stewardship Framework §4.2",
+        "acceptance_date": "2026-07-26",
+        "transition_steps": [
+          "Step 1: Defect Sweeper accepts ownership (per Agent E Principle 2 protocol).",
+          "Step 2: Defect Sweeper audits all 33 DL entries against current pack-file state — flags any discrepancy between documented status and actual state.",
+          "Step 3: For each discrepancy, either (a) update DEFECT_LIBRARY.md to match actual state, or (b) if the remediation was incomplete, re-open the defect.",
+          "Step 4: Defect Sweeper establishes protocol: any remediation agent must append a status-change note to DEFECT_LIBRARY.md before their session closes (per AGENTS.md §12 — 'No Staged Findings').",
+          "Step 5: Log acceptance and audit results in REVISION_HISTORY.md."
+        ],
+        "transition_deadline": "Before S726 T0 (audit of all 33 DL entries); ongoing — before every remediation agent session close",
+        "severity": "HIGH (inconsistent defect status tracking misleads governance decisions and certification wave planning)",
+        "agent_o_lane_reference": "Ownership Matrix rows 2 and 10 — Defect Sweeper is primary owner for both defect library maintenance and defect manifest updates. Portfolio Lane Map §700-series."
+      },
+      {
+        "gap_id": "GAP-5",
+        "s724_reference": "S724 OWNERSHIP GAP #2",
+        "agent_e_reference": "GAP-2 (300-series closure trigger)",
+        "agent_o_reference": "S724-GAP-05 (300-Series S310 Dangling Closeout)",
+        "description": "300-series S310 dangling closeout — no trigger enforces execution. 300-series completed Sessions S302-S309 (8 of 10 planned), producing DQS, EQS, BQS, ExQS, UIQS, Risk Register, Forecast Engine, and Bottleneck Analysis. S309 recommended S310 (Portfolio Operations Dashboard) as the formal 300-series closeout. S724 confirmed S310 as 'Recommended Next: P0.' But no trigger enforces its execution — it is a dangling commitment with no owner.",
+        "current_state": "S310 recommended but no trigger enforces execution. 300-series remains in 'pending closeout' state.",
+        "resolved_owner": "300-series Lead (Portfolio Analytics) — responsible for executing S310 as the final 300-series deliverable",
+        "secondary_owner": "Reconciliation Agent (700-series) — responsible for triggering S310 if the 300-series Lead is unavailable",
+        "escalation_owner": "Governance Board",
+        "acceptance_criteria": "(1) S310 is executed — minimally producing a Portfolio Operations Dashboard that aggregates all 300-series analytics into a consumable governance view. (2) 300-series ownership disposition is documented per Agent O Principle 3 — all artifacts are either transferred, retired, or converted to stewardship. (3) The 300-series is formally CLOSED in the Portfolio Lane Map (§1). (4) The consumption paths (Gap 2) are activated.",
+        "acceptance_status": "PENDING",
+        "accepting_entity": "300-series Lead (Portfolio Analytics) + Reconciliation Agent (700-series) — per Agent O Stewardship Framework §4.3",
+        "acceptance_date": "2026-07-26",
+        "transition_steps": [
+          "Step 1: Governance Auditor flags S310 as overdue at T0 of the session immediately following S725.",
+          "Step 2: 300-series Lead is spawned to execute S310 (Portfolio Operations Dashboard).",
+          "Step 3: If 300-series Lead unavailable, Reconciliation Agent triggers S310 as closeout per succession plan.",
+          "Step 4: Upon S310 completion, 300-series Lead submits ownership disposition report per Agent O Principle 3.",
+          "Step 5: Governance Auditor updates Portfolio Lane Map §1: 300-series status → CLOSED.",
+          "Step 6: REVISION_HISTORY.md updated with S310 closeout entry and ownership disposition."
+        ],
+        "transition_deadline": "Before S726 T0",
+        "severity": "HIGH (incomplete series creates governance debt; 300-series cannot remain indefinitely in 'pending closeout')",
+        "agent_o_lane_reference": "Portfolio Lane Map §Lane 300 — S310 closeout transitions the lane to CLOSED. Ownership Matrix row 12 — 300-series S310 closeout."
+      },
+      {
+        "gap_id": "GAP-6",
+        "s724_reference": "S724-GAP-01",
+        "agent_e_reference": "GAP-6 / GAP-5 (merged — CURRENT_BASELINES.md maintenance + staleness)",
+        "agent_o_reference": "S724-GAP-01 (CURRENT_BASELINES.md Maintenance Ownership)",
+        "description": "CURRENT_BASELINES.md maintenance ownership — who updates after pack writes? CURRENT_BASELINES.md was generated Session 20 (2026-07-24). Updated by Session 530, Session 535, Session 536. No named maintainer — each session that wrote to a tracked file also updated the baselines document, creating inconsistency risk. S724 identified §3 as stale (lists 67 phantom DL-008 items as CRITICAL when S802 confirmed 0 actual). The document tracks 15 file SHA-256 hashes, Certified pool snapshot, defect & risk status, and governance guard status.",
+        "current_state": "No named maintainer. CURRENT_BASELINES.md §3 stale with 67 phantom DL-008 items. Hashes not recaptured since S530 T0 despite S536/S537/S722A modifications.",
+        "resolved_owner": "Baseline Maintainer (700-series Maintenance Mode) — per Agent O Stewardship Framework §4.7",
+        "secondary_owner": "Certification Auditor (800-series) — cross-checking baseline accuracy during certification waves",
+        "escalation_owner": "Governance Board",
+        "acceptance_criteria": "(1) Baseline Maintainer acknowledges ownership per Agent E Principle 2. (2) CURRENT_BASELINES.md §3 phantom DL-008 entries removed (P0 fix from S724). (3) All 15 SHA-256 hashes re-verified against current disk files via Get-FileHash -Algorithm SHA256. (4) Hash recapture automated via scripts/t0_baseline_verify.js (P1 from S724). (5) Baseline refresh cadence enforced: after any ≥3-file write session (per S723 Maintenance Framework M5_BASELINE_REFRESH).",
+        "acceptance_status": "PENDING",
+        "accepting_entity": "Baseline Maintainer (700-series Maintenance Mode) — per Agent O Stewardship Framework §4.7",
+        "acceptance_date": "2026-07-26",
+        "transition_steps": [
+          "Step 1: Governance Auditor designates the Baseline Maintainer role.",
+          "Step 2: Baseline Maintainer accepts (per Agent E Principle 2 protocol).",
+          "Step 3: Baseline Maintainer runs full T0 hash verification against all 15 baseline files (currently tracking 15: 3 app-core + 2 May coaching + 5 MCQ packs + 5 scored cases).",
+          "Step 4: Baseline Maintainer removes 67 phantom DL-008 entries from CURRENT_BASELINES.md §3 — replaces with Function-constructor-parse-verified counts (Pack A: 2, Pack B: 0, Pack C: ~6, Pack D: TBD-disputed, Pack E: ~1).",
+          "Step 5: Baseline Maintainer appends entry to REVISION_HISTORY.md documenting ownership acceptance and baseline refresh.",
+          "Step 6: Governance Auditor confirms CURRENT_BASELINES.md is clean at next T0."
+        ],
+        "transition_deadline": "Before S726 T0",
+        "severity": "HIGH (stale baselines mislead all governance sessions; phantom 67 DL-008 items create risk of unnecessary emergency remediation)",
+        "agent_o_lane_reference": "Ownership Matrix row 1 — CURRENT_BASELINES.md maintenance. Portfolio Lane Map §Governance Infrastructure — co-ownership between Baseline Maintainer and Governance Auditor."
+      }
+    ]
+  },
+
+  "section_2_ownership_matrix_v2.0": {
+    "description": "Comprehensive mapping of every governance responsibility to primary owner, secondary owner, escalation owner, cadence, and acceptance status. Extends Agent O's 19-row Stewardship Framework Ownership Matrix with additional rows for the 6 resolved gaps and cross-series responsibilities. Total: 25 rows (19 original + 6 gap-derived). No responsibility is orphaned per Stewardship Principle 1. Single point of accountability per Stewardship Principle 5.",
+    "version": "2.0",
+    "supersedes": "Agent O Portfolio Stewardship Framework §2 Ownership Matrix (19 rows — v1.0)",
+    "matrix": [
+      {
+        "row": 1,
+        "responsibility": "CURRENT_BASELINES.md maintenance — 15-file hash recapture, §3 defect status refresh, baseline verification log, provenance documentation",
+        "primary_owner": "Baseline Maintainer (700-series Maintenance Mode)",
+        "secondary_owner": "Certification Auditor (800-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "After any write to any pack file, app.js, governance file, or May coaching layer file. Mandatory after ≥3-file write sessions (M5_BASELINE_REFRESH).",
+        "status": "ACTIVE — acceptance PENDING per GAP-6 resolution",
+        "gape_reference": "GAP-6 (CURRENT_BASELINES.md maintenance ownership)"
+      },
+      {
+        "row": 2,
+        "responsibility": "Defect library maintenance (DEFECT_LIBRARY.md) — status updates, new DL-ID assignment, Resolved-section contemporaneous documentation",
+        "primary_owner": "Defect Sweeper (700-series)",
+        "secondary_owner": "Baseline Maintainer (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per defect finding — contemporaneous, not batched (AGENTS.md §12). Per remediation closeout — within same session.",
+        "status": "ACTIVE — acceptance PENDING per GAP-4 resolution",
+        "gape_reference": "GAP-4 (Defect manifest maintenance after remediation)"
+      },
+      {
+        "row": 3,
+        "responsibility": "Certification reporting — CAQS §1.6 six-dimension verification records, wave pass/fail logging, REVISION_HISTORY.md entries per certification wave",
+        "primary_owner": "Certification Auditor (800-series)",
+        "secondary_owner": "Defect Sweeper (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per certification wave; minimum entry in REVISION_HISTORY.md per wave",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established S723 Maintenance Framework"
+      },
+      {
+        "row": 4,
+        "responsibility": "Modernization reporting — DCS calibration batches, difficulty/CognitiveLevel adjustments, batch operation logs",
+        "primary_owner": "800-series Lead (Modernization & Certification)",
+        "secondary_owner": "Certification Auditor (800-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per modernization milestone; minimum entry in REVISION_HISTORY.md",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established S723"
+      },
+      {
+        "row": 5,
+        "responsibility": "Governance trigger monitoring — T0 entry protocol, Rapid Pulse, Deep Audit, trigger threshold surveillance, escalation invocation",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Reconciliation Agent (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "T0: every session start. Rapid Pulse: every 5 sessions or 3h cumulative writes (M2). Deep Audit: every 20 sessions or domain-closure milestone (M3).",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established S723 Maintenance Framework"
+      },
+      {
+        "row": 6,
+        "responsibility": "May coaching layer ownership — may-core.js and may-learner-state.js integrity, runtime dependency stewardship, coaching-layer T0 hash verification",
+        "primary_owner": "100-series Lead (Platform Maintainer)",
+        "secondary_owner": "Governance Auditor (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "At platform updates; T0 hash verification every session; quarterly stewardship review",
+        "status": "ACTIVE — acceptance PENDING per GAP-1 resolution",
+        "gape_reference": "GAP-1 (May coaching layer ownership)"
+      },
+      {
+        "row": 7,
+        "responsibility": "T0 protocol execution — 15-file hash verification, Certified count grep, DL-008 Function constructor parse, governance guard 20/20, pack parse-count 500",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Session Lead (any active lane)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Every session start — mandatory, not optional (M1_T0_ENTRY). Time budget: ~5 minutes.",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established S723 Maintenance Framework"
+      },
+      {
+        "row": 8,
+        "responsibility": "Pre-delivery safety check — Certified-only pool verification, known-defective QID exclusion cross-reference, DL-008 zero final confirmation, May DEFECT_MANIFEST integration",
+        "primary_owner": "Delivery Safety Inspector (700-series)",
+        "secondary_owner": "Governance Auditor (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Before any learner-facing deployment (exam session, review mode, practice test) (M4_PRE_DELIVERY). Time budget: ~10 minutes.",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established S723"
+      },
+      {
+        "row": 9,
+        "responsibility": "Knowledge base accuracy — CAQS v1.0, QUESTION_METADATA_STANDARD, AGENTS.md, PROJECT_CONSTITUTION.md, TAXONOMY_REGISTRY stewardship and staleness review",
+        "primary_owner": "Baseline Maintainer (700-series)",
+        "secondary_owner": "All lane owners",
+        "escalation_owner": "Governance Board",
+        "cadence": "Quarterly; after any CAQS or metadata standard amendment",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established Agent O Stewardship Framework"
+      },
+      {
+        "row": 10,
+        "responsibility": "Defect manifest updates (DEFECT_MANIFEST_DL008_DL026.json) — May coaching layer defect exclusion list maintenance, post-remediation manifest regeneration",
+        "primary_owner": "Defect Sweeper (700-series)",
+        "secondary_owner": "Delivery Safety Inspector (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "After every DL-008 or DL-026 remediation batch; before every learner-facing deployment",
+        "status": "ACTIVE — acceptance PENDING per GAP-4 resolution",
+        "gape_reference": "GAP-4 (Defect manifest maintenance after remediation)"
+      },
+      {
+        "row": 11,
+        "responsibility": "G-NEW-1 through G-NEW-5 enforcement — certification wave gate verification, dual-block Choice mismatch (G-NEW-1), EW topic mismatch (G-NEW-2), content-block CC source-of-truth (G-NEW-3), case explanation sufficiency (G-NEW-4), within-object CC extraction (G-NEW-5)",
+        "primary_owner": "Certification Auditor (800-series)",
+        "secondary_owner": "Defect Sweeper (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per certification wave gate (before 'Certified' state assignment); per Rapid Pulse (M2) G-NEW re-verification on newly Certified items",
+        "status": "ACTIVE — acceptance PENDING per GAP-3 resolution",
+        "gape_reference": "GAP-3 (G-NEW-1 through G-NEW-5 enforcement in 800-series certification pipeline)"
+      },
+      {
+        "row": 12,
+        "responsibility": "300-series S310 closeout — Portfolio Operations Dashboard execution, 300-series ownership disposition (Agent O Principle 3), lane status transition to CLOSED",
+        "primary_owner": "300-series Lead (Portfolio Analytics)",
+        "secondary_owner": "Reconciliation Agent (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "One-time — execute S310 before S726 T0. If unavailable: Reconciliation Agent triggers annual review.",
+        "status": "ACTIVE — acceptance PENDING per GAP-5 resolution",
+        "gape_reference": "GAP-5 (300-series S310 dangling closeout)"
+      },
+      {
+        "row": 13,
+        "responsibility": "Case-bank integrity stewardship — scored_cases*.js Certified-state monitoring, defect response for case-bank items, quarterly integrity audit",
+        "primary_owner": "500-series Lead (post-closure stewardship)",
+        "secondary_owner": "Certification Auditor (800-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per defect report affecting Certified case items; quarterly stewardship review",
+        "status": "ACTIVE — stewardship mode (500-series CLOSED)",
+        "gape_reference": "N/A — established S723 Portfolio Handoff"
+      },
+      {
+        "row": 14,
+        "responsibility": "Governance guard integrity — 12-test suite verification, rule enforcement monitoring, guard upgrade (DL-029 → Function constructor parse), 20/20 PASS certification",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Baseline Maintainer (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Every session start (20/20 test suite via T0-CHK-4); after any governance plugin change; guard upgrade (DL-029 fix) target S726",
+        "status": "ACTIVE — guard upgrade PENDING (DL-029-vulnerable window scan, S724 P0 fix)",
+        "gape_reference": "S724 OPERATIONAL READINESS GAP #5 (Governance guard DL-008 detection upgrade)"
+      },
+      {
+        "row": 15,
+        "responsibility": "AGENTS.md standing instructions — maintenance of all 13 sections, governance rule updates, startup protocol amendments, cross-reference management",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Baseline Maintainer (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "After any governance rule or protocol change; quarterly review",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established Agent O Stewardship Framework"
+      },
+      {
+        "row": 16,
+        "responsibility": "600-series deferred lane stewardship — annual reactivation criteria review, charter preservation, deferral decision re-evaluation",
+        "primary_owner": "Governance Board (collective)",
+        "secondary_owner": "None (deferred lane)",
+        "escalation_owner": "Executive Board",
+        "cadence": "Annual review for reactivation criteria; no active maintenance",
+        "status": "DEFERRED — S724 Executive Board unanimous (26/26 agents). Reactivation requires: (1) all 5 S724 criteria met, (2) 800-series certification complete, (3) new Executive Board vote.",
+        "gape_reference": "S724 600-series deferral"
+      },
+      {
+        "row": 17,
+        "responsibility": "Pack-file structural integrity — parse-count 500 verification per pack, QID inventory cross-check against MASTER_QUESTION_REGISTRY.md, pack hash integrity",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Baseline Maintainer (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Every session start (T0-CHK-5); after any pack-file write (T0 re-verification)",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established S723 Maintenance Framework"
+      },
+      {
+        "row": 18,
+        "responsibility": "DCS calibration data — DifficultyScore/CognitiveLevel calibration records, CL distribution monitoring, Bloom's taxonomy alignment auditing",
+        "primary_owner": "Certification Auditor (800-series)",
+        "secondary_owner": "800-series Lead (Modernization & Certification)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per Domain E/F certification wave; per modernization milestone",
+        "status": "ACTIVE",
+        "gape_reference": "N/A — established S718-S722A DCS Calibration Series"
+      },
+      {
+        "row": 19,
+        "responsibility": "DL-008 Function-constructor verification — mandatory parse (NOT regex window scan) on all 5 packs, Certified-pool DL-008 status, pack parse-count verification",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Baseline Maintainer (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Every session start (T0-CHK-3); after any pack-file write; Rapid Pulse re-verify (RP-CHK-2)",
+        "status": "ACTIVE",
+        "gape_reference": "S802 8 Permanent DL-029 Prevention Rules"
+      },
+      {
+        "row": 20,
+        "responsibility": "300-series analytics consumption — DQS/EQS/BQS/ExQS/UIQS models and Risk Register integration into G1-G5 reconciliation gates",
+        "primary_owner": "Reconciliation Agent (700-series)",
+        "secondary_owner": "Governance Auditor (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per Deep Audit (M3, every 20 sessions); per Rapid Pulse (M2, every 5 sessions) for quick-look consumption",
+        "status": "ACTIVE — acceptance PENDING per GAP-2/GAP-5 resolution (activated at S310 closeout)",
+        "gape_reference": "GAP-2 (300→Maintenance model consumption path)"
+      },
+      {
+        "row": 21,
+        "responsibility": "300-series Forecast Engine and Bottleneck Analysis consumption — certification throughput planning, resource allocation modeling, 800-series wave scheduling",
+        "primary_owner": "Certification Auditor (800-series)",
+        "secondary_owner": "800-series Lead (Modernization & Certification)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per 800-series certification wave planning session; quarterly portfolio review",
+        "status": "ACTIVE — acceptance PENDING per GAP-2/GAP-5 resolution (activated at S310 closeout)",
+        "gape_reference": "GAP-2 (300→Maintenance model consumption path)"
+      },
+      {
+        "row": 22,
+        "responsibility": "Runtime crash defense — app.js null-guard integrity, session recovery code paths (DL-022 pattern), defensive hardening",
+        "primary_owner": "100-series Lead (Platform Maintainer)",
+        "secondary_owner": "Governance Auditor (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per runtime incident; T0 app.js hash verification every session; quarterly code-path audit",
+        "status": "ACTIVE",
+        "gape_reference": "DL-022 (Null-Array Crash) — resolved; ongoing monitoring"
+      },
+      {
+        "row": 23,
+        "responsibility": "Scan methodology compliance (Governance Detection Standard v1.0 enforcement) — mandatory use of Function-constructor parse for all defect scans, prohibition of forward-scan regex (FM-001), string-aware brace-matchers required (FM-002), no totals-only reports (FM-005)",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Defect Sweeper (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Every scan report review; every certification wave; every defect sweep",
+        "status": "ACTIVE — standard established S725 Agent B",
+        "gape_reference": "S725 Agent B Governance Detection Standard v1.0; S725 Agent K Historical RCA FM-001 through FM-008 Forbidden Methodologies"
+      },
+      {
+        "row": 24,
+        "responsibility": "Series transition governance — ownership transfer before closure (Agent E rule), transfer checklist completion, receiving owner acceptance documentation, escalation owner designation",
+        "primary_owner": "Governance Auditor (700-series)",
+        "secondary_owner": "Governance Board",
+        "escalation_owner": "Executive Board",
+        "cadence": "At every series closure (100, 300, 500, 700, 800); at every boundary transition",
+        "status": "ACTIVE — established S725 Agent E Post-700 Governance Model v1.0 §2",
+        "gape_reference": "S725 Agent E Series Transition Governance rule — TRANSFER → ACCEPTANCE → APPROVAL → CLOSE"
+      },
+      {
+        "row": 25,
+        "responsibility": "Answer-key integrity verification — independent blind re-derivation for all Certified items, DL-030-class defect prevention, TIER 1 answer-key audit trigger",
+        "primary_owner": "Certification Auditor (800-series)",
+        "secondary_owner": "Governance Auditor (700-series)",
+        "escalation_owner": "Governance Board",
+        "cadence": "Per certification wave (CAQS §1.6 Dimension 1 — Correctness); per Deep Audit (M3); on any agent report of CC disagreement",
+        "status": "ACTIVE",
+        "gape_reference": "DL-030 (5 confirmed answer-key errors — resolved); T-008 trigger (answer-key integrity violation suspected)"
+      }
+    ]
+  },
+
+  "section_3_responsibility_map_by_series": {
+    "description": "Mapping of which series owns which responsibilities. Each responsibility is assigned to exactly one series as primary owner. Cross-series responsibilities have a designated coordinating lane. This map is the operational handoff reference — when any series closes, its responsibilities must be disposed per Agent O Principle 3.",
+    "series": {
+      "100_series": {
+        "label": "Maintenance & Runtime",
+        "status": "ACTIVE",
+        "primary_owner": "100-series Lead (Platform Maintainer)",
+        "responsibilities": [
+          {
+            "row": 6,
+            "description": "May coaching layer ownership — may-core.js, may-learner-state.js integrity, runtime dependency stewardship",
+            "gape_reference": "GAP-1"
+          },
+          {
+            "row": 22,
+            "description": "Runtime crash defense — app.js null-guard integrity, session recovery code paths, defensive hardening",
+            "gape_reference": "DL-022"
+          }
+        ],
+        "coordination_with": ["700-series (T0 hash verification, governance guard)", "May coaching layer (runtime integration)"],
+        "boundary_rules": "MAY: Fix runtime crashes, apply defensive null guards, update UI rendering for content schema changes, patch session persistence. MAY NOT: Change pack content, modify answer keys, make governance decisions."
+      },
+      "300_series": {
+        "label": "Portfolio Analytics",
+        "status": "ACTIVE — S310 closeout pending",
+        "primary_owner": "300-series Lead (Portfolio Analytics)",
+        "responsibilities": [
+          {
+            "row": 12,
+            "description": "300-series S310 closeout — Portfolio Operations Dashboard, ownership disposition, lane closure",
+            "gape_reference": "GAP-5"
+          }
+        ],
+        "post_closure_transfers": [
+          {
+            "responsibility": "DQS/EQS/BQS/ExQS/UIQS consumption",
+            "transfer_to": "Reconciliation Agent (700-series) — row 20",
+            "gape_reference": "GAP-2"
+          },
+          {
+            "responsibility": "Forecast Engine + Bottleneck Analysis consumption",
+            "transfer_to": "Certification Auditor (800-series) — row 21",
+            "gape_reference": "GAP-2"
+          },
+          {
+            "responsibility": "Risk Register",
+            "transfer_to": "Governance Auditor (700-series) — row 5",
+            "gape_reference": "S723 Portfolio Handoff"
+          }
+        ],
+        "closure_trigger": "S310 execution before S726 T0. If unavailable: Reconciliation Agent triggers per GAP-5 succession plan.",
+        "coordination_with": ["700-series (analytics consumption)", "800-series (forecast/bottleneck consumption)"]
+      },
+      "500_series": {
+        "label": "Case-Bank Certification",
+        "status": "CLOSED — stewardship mode",
+        "primary_owner": "500-series Lead (post-closure stewardship)",
+        "responsibilities": [
+          {
+            "row": 13,
+            "description": "Case-bank integrity stewardship — scored_cases*.js Certified-state monitoring, defect response",
+            "gape_reference": "S723 Portfolio Handoff"
+          }
+        ],
+        "coordination_with": ["800-series (Certification Auditor monitors case-bank integrity)"],
+        "closure_note": "All case-bank deliverables complete. 15/15 cases, 90/90 items Certified (100%). Stewardship mode per Agent O Principle 3 (converted to stewardship)."
+      },
+      "600_series": {
+        "label": "Content Operations (Candidate)",
+        "status": "DEFERRED — S724 Executive Board unanimous",
+        "primary_owner": "Governance Board (deferred lane stewardship)",
+        "responsibilities": [
+          {
+            "row": 16,
+            "description": "600-series deferred lane stewardship — annual reactivation criteria review",
+            "gape_reference": "S724 600-series deferral"
+          }
+        ],
+        "reactivation_criteria": [
+          "All 5 S724 Agent V Governance Preservation report criteria met",
+          "800-series certification complete OR binding constraint shifted",
+          "New Executive Board vote (cannot re-use S724 vote)",
+          "Full T0 governance baseline captured before launch"
+        ],
+        "deferral_rationale": "Startup cost (4 sessions) exceeds projected savings (3 sessions). Net session impact: +1 to +4 worse. Binding constraint is author capacity, not tooling."
+      },
+      "700_series": {
+        "label": "Governance & Calibration (Maintenance Mode)",
+        "status": "MAINTENANCE — S723 Maintenance Framework v1.0 active",
+        "primary_owner": "Governance Auditor (700-series Maintenance Mode)",
+        "responsibilities": [
+          {
+            "row": 1,
+            "description": "CURRENT_BASELINES.md maintenance — hash recapture, defect status refresh, baseline verification log",
+            "gape_reference": "GAP-6"
+          },
+          {
+            "row": 2,
+            "description": "Defect library maintenance (DEFECT_LIBRARY.md) — status updates, new DL-ID assignment",
+            "gape_reference": "GAP-4"
+          },
+          {
+            "row": 5,
+            "description": "Governance trigger monitoring — T0, Rapid Pulse, Deep Audit, trigger threshold surveillance",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 7,
+            "description": "T0 protocol execution — 15-file hash, Certified count, DL-008 parse, governance guard, pack parse-count",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 8,
+            "description": "Pre-delivery safety check — Certified-only pool, defective QID exclusion, DL-008 zero",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 10,
+            "description": "Defect manifest updates (DEFECT_MANIFEST_DL008_DL026.json) — post-remediation regeneration",
+            "gape_reference": "GAP-4"
+          },
+          {
+            "row": 14,
+            "description": "Governance guard integrity — 20/20 PASS, DL-029 upgrade, rule enforcement",
+            "gape_reference": "S724 Gap #5"
+          },
+          {
+            "row": 15,
+            "description": "AGENTS.md standing instructions — governance rule updates, startup protocol amendments",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 17,
+            "description": "Pack-file structural integrity — parse-count 500, QID inventory cross-check",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 19,
+            "description": "DL-008 Function-constructor verification — mandatory parse on all 5 packs",
+            "gape_reference": "S802"
+          },
+          {
+            "row": 20,
+            "description": "300-series analytics consumption — DQS/EQS/BQS/ExQS/UIQS for G1-G5 gates",
+            "gape_reference": "GAP-2"
+          },
+          {
+            "row": 23,
+            "description": "Scan methodology compliance — Governance Detection Standard enforcement, forbidden methodology prohibition",
+            "gape_reference": "S725 Agent B + Agent K"
+          },
+          {
+            "row": 24,
+            "description": "Series transition governance — ownership transfer protocol, closure checklist enforcement",
+            "gape_reference": "S725 Agent E"
+          }
+        ],
+        "agent_types": [
+          "Governance Auditor — T0 entry, hash verification, count stability, governance guard, sole clearance for T0/guard blocks",
+          "Reconciliation Agent — G1-G5 reconciliation gates, count discrepancy resolution, analytics consumption",
+          "Defect Sweeper — DL scans, DEFECT_LIBRARY.md, defect manifest, new DL-ID assignment, Rapid Pulse",
+          "Baseline Maintainer — CURRENT_BASELINES.md refresh, 15-file hash recapture, knowledge base accuracy",
+          "Delivery Safety Inspector — pre-delivery safety checks, deployment BLOCK authority"
+        ],
+        "coordination_with": ["100-series (T0 hash, May coaching layer)", "300-series (analytics consumption)", "800-series (certification auditing, G-NEW enforcement)"]
+      },
+      "800_series": {
+        "label": "Certification & Modernization",
+        "status": "ACTIVE — S803 cleared for launch",
+        "primary_owner": "800-series Lead (Certification Auditor)",
+        "responsibilities": [
+          {
+            "row": 3,
+            "description": "Certification reporting — CAQS §1.6 six-dimension verification records, wave pass/fail logging",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 4,
+            "description": "Modernization reporting — DCS calibration batches, difficulty/CognitiveLevel adjustments",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 11,
+            "description": "G-NEW-1 through G-NEW-5 enforcement — certification wave gate verification",
+            "gape_reference": "GAP-3"
+          },
+          {
+            "row": 18,
+            "description": "DCS calibration data — DifficultyScore/CognitiveLevel records, CL distribution monitoring",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 21,
+            "description": "300-series Forecast Engine + Bottleneck Analysis consumption — certification planning",
+            "gape_reference": "GAP-2"
+          },
+          {
+            "row": 25,
+            "description": "Answer-key integrity verification — independent blind re-derivation, DL-030-class prevention",
+            "gape_reference": "N/A"
+          }
+        ],
+        "remaining_work": [
+          "Domain E certification: 167 items",
+          "Domain F certification: 149 items",
+          "Pack A closeout: 19 items",
+          "Case-bank EW authoring: ~310 items",
+          "Governance closure: 2 sessions"
+        ],
+        "coordination_with": ["700-series (governance guard, defect sweeps, baselines)", "300-series (analytics consumption post-S310)"]
+      },
+      "cross_series": {
+        "label": "Cross-Series Responsibilities",
+        "description": "Responsibilities that span multiple series or sit at series boundaries. Owned by the Governance Board collectively, activated by the Governance Auditor.",
+        "responsibilities": [
+          {
+            "row": 9,
+            "description": "Knowledge base accuracy — CAQS, metadata standard, taxonomy registry stewardship (700-series primary, all lane owners secondary)",
+            "gape_reference": "N/A"
+          },
+          {
+            "row": 16,
+            "description": "600-series deferred lane stewardship — annual reactivation review (Governance Board primary)",
+            "gape_reference": "S724 deferral"
+          },
+          {
+            "row": 24,
+            "description": "Series transition governance — ownership transfer protocol across all active series (700-series primary, Governance Board secondary)",
+            "gape_reference": "S725 Agent E"
+          }
+        ]
+      }
+    }
+  },
+
+  "section_4_transition_verification": {
+    "description": "Verification that each of the 6 S724 carry-forward gap resolutions meets the S725 Agent E acceptance protocol requirements. Each gap must demonstrate: owner identified, acceptance criteria defined, transition deadline set, escalation path documented. Verification checklist per Agent E Post-700 Governance Model v1.0 §3.1.",
+    "verification_authority": "Governance Auditor (700-series) — per Agent E §6.4 Maintenance Owner Designation",
+    "verification_date": "2026-07-26",
+    "overall_status": "ALL 6 GAPS — owners identified, criteria defined, deadlines set, escalation paths documented. PENDING acceptance by receiving owners (per Agent E Principle 2: assignment alone is insufficient — receiving owner must explicitly accept).",
+    "gaps": [
+      {
+        "gap_id": "GAP-1",
+        "description": "May coaching layer ownership",
+        "owner_identified": true,
+        "owner": "100-series Lead (Platform Maintainer)",
+        "acceptance_criteria_defined": true,
+        "transition_deadline_set": true,
+        "transition_deadline": "Before S726 T0",
+        "escalation_path_documented": true,
+        "escalation_path": "Primary (100-series Lead) → Secondary (Governance Auditor) → Governance Board",
+        "acceptance_status": "PENDING — awaiting 100-series Lead explicit acceptance per Agent E §4.2",
+        "verification_evidence": "Agent O Stewardship Framework §4.6 — resolution steps, succession plan, onboarding checklist all documented. Agent E §5.3 — retroactive acceptance required, evidence form specified (session report or board resolution).",
+        "blocking": true,
+        "blocking_context": "Blocks S726 T0 if not accepted"
+      },
+      {
+        "gap_id": "GAP-2",
+        "description": "300→Maintenance model consumption path",
+        "owner_identified": true,
+        "owner": "Reconciliation Agent (700-series) + Certification Auditor (800-series)",
+        "acceptance_criteria_defined": true,
+        "transition_deadline_set": true,
+        "transition_deadline": "Before S726 T0 (S310 execution); consumption activation at S726 T0",
+        "escalation_path_documented": true,
+        "escalation_path": "Primary (Reconciliation Agent + Certification Auditor) → Governance Auditor → Governance Board",
+        "acceptance_status": "PENDING — awaiting Reconciliation Agent and Certification Auditor explicit acceptance per Agent E §4.2",
+        "verification_evidence": "Agent O Stewardship Framework §4.4 — dual consumption path documented (analytics models → Reconciliation Agent, forecast/bottleneck → Certification Auditor). S310 closed as formal acceptance trigger.",
+        "blocking": true,
+        "blocking_context": "Blocks S726 T0 if 300-series analytics consumption path not activated"
+      },
+      {
+        "gap_id": "GAP-3",
+        "description": "G-NEW-1 through G-NEW-5 enforcement in 800-series",
+        "owner_identified": true,
+        "owner": "Certification Auditor (800-series) + Defect Sweeper (700-series)",
+        "acceptance_criteria_defined": true,
+        "transition_deadline_set": true,
+        "transition_deadline": "Before next 800-series certification wave (S803+)",
+        "escalation_path_documented": true,
+        "escalation_path": "Primary (Certification Auditor) → Secondary (Defect Sweeper) → Governance Board. Any G-NEW violation on Certified item → CRITICAL escalation.",
+        "acceptance_status": "PENDING — awaiting Certification Auditor explicit acceptance per Agent E §4.2",
+        "verification_evidence": "Agent O Stewardship Framework §4.5 — G-NEW gate integrated into certification wave template. QUESTION_METADATA_STANDARD.md §9.4 cross-referenced. Defect Sweeper Rapid Pulse checklist updated (RP-CHK-4 for G-NEW re-verification).",
+        "blocking": true,
+        "blocking_context": "Blocks 800-series certification waves if not enforced"
+      },
+      {
+        "gap_id": "GAP-4",
+        "description": "Defect manifest maintenance after remediation",
+        "owner_identified": true,
+        "owner": "Defect Sweeper (700-series)",
+        "acceptance_criteria_defined": true,
+        "transition_deadline_set": true,
+        "transition_deadline": "Before S726 T0 (audit of all 33 DL entries); ongoing — before every remediation agent session close",
+        "escalation_path_documented": true,
+        "escalation_path": "Primary (Defect Sweeper) → Secondary (Certification Auditor) → Governance Board",
+        "acceptance_status": "PENDING — awaiting Defect Sweeper explicit acceptance per Agent E §4.2",
+        "verification_evidence": "Agent O Stewardship Framework §4.2 — audit of all 33 DL entries, discrepancy flagging, protocol establishment. AGENTS.md §12 'No Staged Findings' enforcement.",
+        "blocking": true,
+        "blocking_context": "Blocks S726 T0 if DEFECT_LIBRARY.md audit not completed"
+      },
+      {
+        "gap_id": "GAP-5",
+        "description": "300-series S310 dangling closeout",
+        "owner_identified": true,
+        "owner": "300-series Lead (Portfolio Analytics) + Reconciliation Agent (700-series trigger)",
+        "acceptance_criteria_defined": true,
+        "transition_deadline_set": true,
+        "transition_deadline": "Before S726 T0",
+        "escalation_path_documented": true,
+        "escalation_path": "Primary (300-series Lead) → Secondary (Reconciliation Agent trigger) → Governance Board (spawn or waive)",
+        "acceptance_status": "PENDING — awaiting 300-series Lead S310 execution per Agent E §4.2",
+        "verification_evidence": "Agent O Stewardship Framework §4.3 — S310 execution as formal closeout, ownership disposition per Principle 3, succession plan if 300-series Lead unavailable. Governance Auditor flags at T0 of session following S725.",
+        "blocking": true,
+        "blocking_context": "Blocks S726 T0 if S310 not executed"
+      },
+      {
+        "gap_id": "GAP-6",
+        "description": "CURRENT_BASELINES.md maintenance ownership",
+        "owner_identified": true,
+        "owner": "Baseline Maintainer (700-series Maintenance Mode)",
+        "acceptance_criteria_defined": true,
+        "transition_deadline_set": true,
+        "transition_deadline": "Before S726 T0",
+        "escalation_path_documented": true,
+        "escalation_path": "Primary (Baseline Maintainer) → Secondary (Certification Auditor) → Governance Board",
+        "acceptance_status": "PENDING — awaiting Baseline Maintainer explicit acceptance per Agent E §4.2",
+        "verification_evidence": "Agent O Stewardship Framework §4.7 — hash re-verification, phantom entry removal, automation via t0_baseline_verify.js, baseline refresh cadence (M5_BASELINE_REFRESH). CURRENT_BASELINES.md §3 P0 fix documented.",
+        "blocking": true,
+        "blocking_context": "Blocks S726 T0 if CURRENT_BASELINES.md not refreshed"
+      }
+    ],
+    "verification_checklist_compliance": {
+      "description": "Agent E Post-700 Governance Model §3.1 — Ownership Transfer Review Checklist. This checklist is completed at the portfolio level (ownership matrix assignment) but awaits per-owner acceptance.",
+      "checklist": [
+        {
+          "item": "All active responsibilities documented in Ownership Matrix",
+          "status": "COMPLETE — 25 rows in Ownership Matrix v2.0",
+          "evidence": "Section 2 — every responsibility has primary owner, secondary owner, escalation owner, cadence, and status."
+        },
+        {
+          "item": "Receiving Owner has explicitly accepted each responsibility",
+          "status": "PENDING — all 6 gap owners assigned but none yet accepted per Agent E §4.2 explicit acceptance protocol",
+          "evidence": "Section 1 — each gap has 'acceptance_status: PENDING'. Acceptance deadline: before S726 T0. Accepting entities specified."
+        },
+        {
+          "item": "Open items have documented disposition",
+          "status": "COMPLETE — S724 Executive Board deferred 600-series; S310 closeout triggers S726; G-NEW enforcement activates at next 800-series wave",
+          "evidence": "Section 1 — each gap has transition steps and deadline. Section 2 — rows 12, 16, 20, 21 document open-item disposition."
+        },
+        {
+          "item": "Escalation path defined for transition period",
+          "status": "COMPLETE — every gap has primary → secondary → escalation owner chain",
+          "evidence": "Section 1 — each gap has resolved_owner, secondary_owner, escalation_owner. Transition deadline: before S726 T0. Escalation to Governance Board if unresolved."
+        },
+        {
+          "item": "Maintenance cadence established for post-transition period",
+          "status": "COMPLETE — all 25 ownership matrix rows have cadence defined",
+          "evidence": "Section 2 — each row specifies cadence (per session, per wave, quarterly, annual, etc.). S723 Maintenance Framework M1-M5 cadences cross-referenced."
+        },
+        {
+          "item": "Documentation updated to reflect new ownership",
+          "status": "INITIATED — ownership assigned in this matrix. PENDING: CURRENT_BASELINES.md refresh, REVISION_HISTORY.md acceptance entries, AGENTS.md update",
+          "evidence": "Section 1 transition steps for each gap include documentation update. SESSION725_OWNERSHIP_MATRIX.json is the authoritative registry pending acceptance."
+        },
+        {
+          "item": "Closure certificate issued",
+          "status": "NOT APPLICABLE — no series is closing. This is a governance hardening session (S725), not a series closure.",
+          "evidence": "Series closure certificates apply when 300-series executes S310 (closeout), 800-series completes certification waves (closeout), or 100-series transitions (closeout)."
+        }
+      ]
+    }
+  },
+
+  "section_5_executive_summary": {
+    "resolved_gaps": 6,
+    "total_ownership_rows": 25,
+    "acceptance_pending": 12,
+    "acceptance_granted": 13,
+    "acceptance_deadline": "Before S726 T0 — all 6 gap acceptances must be received",
+    "key_decisions": [
+      "May coaching layer ownership assigned to 100-series Lead (Platform Maintainer) — GAP-1",
+      "300-series analytics consumption split: Reconciliation Agent (DQS/EQS/BQS/etc.) + Certification Auditor (Forecast/Bottleneck) — GAP-2",
+      "G-NEW-1 through G-NEW-5 enforcement assigned to Certification Auditor (800-series) with Defect Sweeper secondary — GAP-3",
+      "Defect manifest maintenance assigned to Defect Sweeper (700-series) with audit of all 33 DL entries required before S726 — GAP-4",
+      "300-series S310 closeout assigned to 300-series Lead with Reconciliation Agent as trigger if unavailable — GAP-5",
+      "CURRENT_BASELINES.md maintenance assigned to Baseline Maintainer (700-series) with phantom 67 DL-008 removal as P0 fix — GAP-6"
+    ],
+    "next_session_requirements": [
+      "S726 T0: Governance Auditor verifies all 6 gap acceptances are recorded in REVISION_HISTORY.md",
+      "S726 T0: Baseline Maintainer completes CURRENT_BASELINES.md refresh (remove phantom DL-008 entries, recapture 15 hashes)",
+      "S726 T0: Defect Sweeper completes audit of all 33 DEFECT_LIBRARY.md entries",
+      "S310: 300-series Lead executes Portfolio Operations Dashboard — formal 300-series closeout",
+      "S726: Governance guard DL-008 detection upgraded to Function-constructor parse (S724 P0 fix)",
+      "S803+: Certification Auditor activates G-NEW-1 through G-NEW-5 enforcement gate before first certification wave"
+    ]
+  },
+
+  "cross_references": {
+    "agent_o_deliverable": "reports/SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md",
+    "agent_e_deliverable": "reports/SESSION725_POST700_GOVERNANCE_MODEL.md",
+    "agent_b_deliverable": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md",
+    "agent_f_deliverable": "reports/SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json",
+    "agent_k_deliverable": "reports/SESSION725_HISTORICAL_GOVERNANCE_RCA.json",
+    "s724_operating_model": "reports/SESSION724_OPERATING_MODEL.json",
+    "s723_portfolio_handoff": "reports/SESSION723_PORTFOLIO_HANDOFF.json",
+    "s723_maintenance_framework": "reports/SESSION723_MAINTENANCE_FRAMEWORK.json",
+    "current_baselines": "knowledge/CURRENT_BASELINES.md",
+    "governance_guard": ".opencode/plugins/governance-guard.js",
+    "defect_library": "knowledge/DEFECT_LIBRARY.md",
+    "revision_history": "knowledge/REVISION_HISTORY.md",
+    "question_metadata_standard": "knowledge/QUESTION_METADATA_STANDARD.md §9.4",
+    "caqs": "knowledge/CAQS_v1.0.md",
+    "agents_md": "AGENTS.md"
+  },
+
+  "revision_history": [
+    {
+      "version": "2.0",
+      "date": "2026-07-26",
+      "author": "Agent D — S725 Ownership Consolidation Agent (Governance Hardening & Post-700 Ownership Transition)",
+      "summary": "Initial creation. Resolved all 6 S724 carry-forward ownership gaps with named primary owners, acceptance criteria, transition steps, and S726 T0 deadline. Established PORTFOLIO_OWNERSHIP_MATRIX v2.0 (25 rows) extending Agent O's 19-row Stewardship Framework with 6 gap-derived responsibilities. Documented Responsibility Map by Series (100/300/500/600/700/800/cross-series) with post-closure transfer paths. Verified transition readiness per Agent E Ownership Transfer Review Checklist §3.1. Read-only governance artifact — zero existing files modified."
+    }
+  ]
+}

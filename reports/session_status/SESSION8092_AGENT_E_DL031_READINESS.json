@@ -1,0 +1,115 @@
+{
+  "session": "S809.2",
+  "agent": "E",
+  "role": "DL-031 Readiness (Difficulty Calibration) Analyst",
+  "compiled_by": "Agent J (from Agent D difficulty score annotations + Agent C EW assessment content analysis)",
+  "dl031_readiness": {
+    "summary": {
+      "total_seeds": 38,
+      "items_needing_recalibration": 6,
+      "items_already_correctly_calibrated": 32,
+      "systemic_concern": "Template-based difficulty assignment from DL-012 clone-group rotation. 5-item groups assign difficulty by position (Easy, Moderate, Moderate, Difficult, Moderate) without cognitive assessment."
+    },
+    "difficulty_distribution": {
+      "easy_ds1": 1,
+      "moderate_easy_ds2": 14,
+      "moderate_ds3": 19,
+      "difficult_ds4": 4,
+      "very_difficult_ds5": 0
+    },
+    "flagged_items": [
+      {
+        "qid": "P1-ED-001",
+        "topic": "Three lines of defense model",
+        "stored_difficulty": "Difficult",
+        "stored_difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "recommended_difficulty": "Easy",
+        "recommended_score": 1,
+        "reason": "Tests name-recognition of three-lines model. Stem presents definition; candidate matches to correct term. No analysis or evaluation required. Bloom's Remember/Understand level. Stored label 'Difficult' is inflated — DS=2 (Moderate-Easy) is closer but still one step above actual cognitive demand."
+      },
+      {
+        "qid": "P1-ED-014",
+        "topic": "Independent verification control activity",
+        "stored_difficulty": "Difficult",
+        "stored_difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "recommended_difficulty": "Easy",
+        "recommended_score": 1,
+        "reason": "Topic is straightforward independent verification concept — 'one supervisor recounting inventory.' Agent D notes: 'Topic labeled Difficult but is straightforward independent verification concept.' DS=2 is closer than 'Difficult' label but still above actual cognitive demand."
+      },
+      {
+        "qid": "P1-ED-025",
+        "topic": "Control activities authorization",
+        "stored_difficulty": "Difficult",
+        "stored_difficulty_score": 2,
+        "cognitive_level": "Understand",
+        "recommended_difficulty": "Easy",
+        "recommended_score": 1,
+        "reason": "Tests basic authorization control classification — 'Manager approval before placing high-dollar purchase orders.' Agent D: 'Labeled Difficult but topic is basic authorization control classification.' Definition-recognition at Understand level."
+      },
+      {
+        "qid": "P1-EC-008",
+        "topic": "COSO Internal Control Framework",
+        "stored_difficulty": "Moderate",
+        "stored_difficulty_score": 2,
+        "cognitive_level": "Remember",
+        "recommended_difficulty": "Easy",
+        "recommended_score": 1,
+        "reason": "Tests name-recognition of COSO framework — 'which framework... Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring.' Pure recall. Agent D: 'Tests name-recognition of COSO framework - low topic sensitivity.' DS=2 is one step above actual cognitive demand."
+      },
+      {
+        "qid": "P1-EC-066",
+        "topic": "Segregation incompatible duties cash custody and recording",
+        "stored_difficulty": "Easy",
+        "stored_difficulty_score": 1,
+        "cognitive_level": "Understand",
+        "recommended_difficulty": "Easy",
+        "recommended_score": 1,
+        "reason": "CORRECTLY CALIBRATED. Included as a reference example — this item has DS=1 (Easy) for a definition-level SoD recognition item. Agent D: 'Very low cognitive demand - definition-level recognition.' Demonstrates correct calibration to contrast with inflated items."
+      },
+      {
+        "qid": "SYSTEMIC",
+        "topic": "Remaining ~30 seeds with Moderate (DS=3)",
+        "stored_difficulty": "Moderate",
+        "stored_difficulty_score": "3 average",
+        "cognitive_level": "Mix of Remember, Understand, Apply",
+        "recommended_action": "Per-item review by Difficulty Specialist",
+        "reason": "Approximately 30 of 38 seeds have DS=3 (Moderate) testing primarily Remember or Understand level COSO concepts. The template-rotation pipeline assigned difficulty by position, not by cognitive assessment. Items testing 'what is the fraud triangle,' 'what is a whistleblower hotline,' 'what is a compensating control' should be Easy (1), not Moderate (3). Items with applied scenarios (vendor-specific SoD, ERM risk appetite with scenario) may correctly be Moderate (3)."
+      }
+    ],
+    "recalibration_impact": {
+      "before_targets": {
+        "easy_pct": "2.6%",
+        "moderate_easy_pct": "36.8%",
+        "moderate_pct": "50.0%",
+        "difficult_pct": "10.5%",
+        "very_difficult_pct": "0.0%"
+      },
+      "after_estimated_targets": {
+        "easy_pct": "~18%",
+        "moderate_easy_pct": "~30%",
+        "moderate_pct": "~40%",
+        "difficult_pct": "~10%",
+        "very_difficult_pct": "~2%"
+      },
+      "caqs_target_comparison": {
+        "caqs_61_easy": "15%",
+        "caqs_61_moderate_easy": "20%",
+        "caqs_61_moderate": "30%",
+        "caqs_61_difficult": "25%",
+        "caqs_61_very_difficult": "10%",
+        "note": "Seeds only (38 items) are too small a sample for CAQS §6.1 distribution compliance. The difficulty label corrections primarily serve content-quality accuracy, not distribution targets."
+      }
+    },
+    "cognitive_level_alignment": {
+      "remember_items": 8,
+      "understand_items": 22,
+      "apply_items": 8,
+      "analyze_items": 0,
+      "evaluate_items": 0,
+      "note": "Zero items at Analyze or Evaluate level across all 38 seeds. Domain E (Internal Controls) at the seed level tests predominantly definition-recognition (Remember/Understand). Applied scenarios (vendor SoD, fraud purchasing, ERM risk appetite) reach Apply level."
+    }
+  },
+  "notes": "DL-031 findings compiled from Agent D difficulty score annotations (per per_qid notes) and Agent C content analysis (EC/EW topic assessment). Systemic concern: template-based difficulty assignment without cognitive calibration. Recalibration recommended before certification but does not block EW authoring — recalibration can run in parallel with EW batches."
+}

@@ -1,0 +1,426 @@
+{
+  "document": "SESSION203_SCAN_ENGINE_SPEC",
+  "session": "S203",
+  "title": "Scan Engine v2 — Implementation Specification",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION202_SCANNING_ARCHITECTURE.json + SESSION202_SCANNING_ALGORITHM_SPEC.md (Architecture)",
+  "purpose": "Defines the executable implementation of all 11 mandatory scans (PG-001 through PG-011 plus 4 analytical scans PG-AN-01 through PG-AN-04). Each scan is specified with exact algorithm, input schema, output schema, artifact storage path, dependency graph, performance targets, and error handling.",
+  "constraints": ["No content changes", "No certification activity", "No governance changes", "No deployment"],
+
+  "meta": {
+    "total_scans": 15,
+    "mandatory_gate_scans": 11,
+    "analytical_scans": 4,
+    "methodology": "AM-1 Function Constructor Parse (all scans)",
+    "fallback": "AM-2 String-Aware Object-Boundary Parse",
+    "forbidden": ["FM-001 Forward-scan regex", "FM-002 String-unaware brace matcher", "FM-003 Multi-block field cross-read", "FM-004 Flat field-name regex", "FM-005 Totals-only without QID lists"],
+    "implementation_files": [
+      "scripts/engine/scans/scan_engine_orchestrator.js",
+      "scripts/engine/scans/scans/pg001_dl008.js",
+      "scripts/engine/scans/scans/pg002_dl010.js",
+      "scripts/engine/scans/scans/pg003_dl013.js",
+      "scripts/engine/scans/scans/pg004_dl016.js",
+      "scripts/engine/scans/scans/pg005_dl026.js",
+      "scripts/engine/scans/scans/pg006_dl030.js",
+      "scripts/engine/scans/scans/pg007_dl031.js",
+      "scripts/engine/scans/scans/pg008_ev3.js",
+      "scripts/engine/scans/scans/pg009_ev8.js",
+      "scripts/engine/scans/scans/pg010_json_integrity.js",
+      "scripts/engine/scans/scans/pg011_identity.js",
+      "scripts/engine/scans/scans/pan01_choice_balance.js",
+      "scripts/engine/scans/scans/pan02_metadata_completeness.js",
+      "scripts/engine/scans/scans/pan03_certification_eligibility.js",
+      "scripts/engine/scans/scans/pan04_difficulty_distribution.js"
+    ]
+  },
+
+  "scan_engine_orchestrator": {
+    "file": "scripts/engine/scans/scan_engine_orchestrator.js",
+    "description": "Orchestrates all scans in gate order, manages artifact storage, enforces dependency graph, aggregates results, and produces unified readiness classification per item.",
+    "exports": {
+      "runPreFlight(items, options)": "Runs Gates -1 through 4 on provided items. Returns PreFlightResult.",
+      "runGate(gateId, items, artifacts)": "Runs a single gate's scans. Returns GateResult.",
+      "getReadinessClassification(itemId, gateResults)": "Computes READY/MINOR_FIX/REMEDIATE/BLOCKED for an item."
+    },
+    "pipeline_order": ["Gate_-1", "Gate_0", "Gate_1", "Gate_2", "Gate_3", "Gate_4"],
+    "scan_event_hooks": {
+      "pre_scan": "Verify identity_validated items only (Gate -1 passed). Load required artifacts. Check disk space for artifact storage.",
+      "post_scan": "Write scan artifacts. Update scan registry. Aggregate per-item verdicts.",
+      "on_hard_fail": "Route BLOCKED items to EditorialQueue. Exclude from subsequent gates. Generate HARD_FAIL report.",
+      "on_soft_fail": "Flag REMEDIATE items. Continue pipeline. Generate WARN report."
+    }
+  },
+
+  "scans": [
+    {
+      "scan_id": "PG-011",
+      "group": "Identity",
+      "gate": "Gate_-1",
+      "file": "scripts/engine/scans/scans/pg011_identity.js",
+      "defect_class": "IDENTITY",
+      "blocking": "HARD_BLOCK",
+      "description": "Identity Validation — QID Presence, CorrectChoice Presence, Pack Attribution, TemplateFamily Constructibility. The mandatory pre-condition gate — no downstream scan result admissible until IDENTITY_VALID.",
+      "exports": {"scan(items, packName)": "Returns IdentityScanResult"},
+      "algorithm": {
+        "step1_qid_validation": "For each item: check item.QuestionID is non-empty string matching pack-specific regex. Pack A: /^P1-[A-F]-\\d{3}$/. Pack B: /^P1B-[A-F]-\\d{3}$/. Pack C: /^P1-[A-F]C?-\\d{3}$/. Pack D: /^P1-[A-F]D-\\d{3}$/. Pack E: /^P1E-[A-F]-\\d{3}$/. Non-match → IDENTITY_BLOCKED: QID_INVALID_FORMAT.",
+        "step2_cc_validation": "For each item: check item.CorrectChoice is a single character in ['A','B','C','D']. Null/undefined/multi-char → IDENTITY_BLOCKED: CC_MISSING_OR_INVALID.",
+        "step3_pack_attribution": "For each item: verify item's file path matches its configured pack. Self-check: confirm QID format aligns with pack name (e.g., P1B- prefix items only appear in pack_b_corrected.js). Cross-pack collision scan: confirm no two items have identical QID in different pack files — actual collisions (not visual similarities per DL-033).",
+        "step4_template_family": "For each item: call TemplateFamilyClassifier. Items with >90% stem Jaccard → assign family ID. Items with <70% → STANDALONE. Items 70-90% → UNCLASSIFIED, IDENTITY_WARN.",
+        "step5_compound_key": "For each item: call IdentityKeyResolver.resolveIdentityKey(). Verify compound key is globally unique across all 5 packs."
+      },
+      "input": {"items": "Parsed question array from AM-1 Function Constructor", "packName": "String: pack_a through pack_e", "filePath": "String: full pack file path"},
+      "output": {
+        "artifact": "reports/scans/gate_neg1/SCAN_PG011_IDENTITY_{packName}_{timestamp}.json",
+        "schema": {"per_item": [{"QuestionID": "str", "qid_valid": "bool", "cc_valid": "bool", "pack_match": "bool", "template_family": "str", "is_standalone": "bool", "is_seed": "bool", "verdict": "IDENTITY_VALID|IDENTITY_BLOCKED|IDENTITY_WARN", "block_reason": "str|null"}], "aggregate": {"total_scanned": "int", "valid": "int", "blocked": "int", "warned": "int", "cross_pack_collisions": "int"}}
+      },
+      "performance_target_ms": 5000,
+      "error_handling": {"AM1_parse_failure": "Fallback to AM-2 string-aware parse. If AM-2 also fails → IDENTITY_FATAL for entire pack. Escalate to governance.", "QID_format_edge_case": "Pack C mixed format (P1-BC-094 vs P1-AC-001): both patterns accepted. Regex allows optional 'C' suffix."}
+    },
+
+    {
+      "scan_id": "PG-010",
+      "group": "Structural",
+      "gate": "Gate_0",
+      "file": "scripts/engine/scans/scans/pg010_json_integrity.js",
+      "defect_class": "JSON_Integrity",
+      "blocking": "HARD_BLOCK",
+      "description": "JSON Integrity — Parseability, Required Field Presence, Type Consistency, Corruption Detection, QuestionID Count Verification. Failing this gate blocks the entire pipeline for affected files.",
+      "exports": {"scan(items, rawFileContent, expectedCount)": "Returns JSONIntegrityResult"},
+      "algorithm": {
+        "step1_parse": "Attempt AM-1 Function Constructor parse: `new Function(rawContent + '; return MCQ_BANK_{X};')()`. If error → attempt AM-2 string-aware brace-matched extraction object-by-object. If AM-2 also fails → HARD_FAIL: PARSE_FAILURE. Record line number range of failure.",
+        "step2_field_presence": "For each parsed object, verify all 10 required fields exist: QuestionID, Stem, Choices (or Choices.{A,B,C,D}), CorrectChoice, ExplanationCorrect, ExplanationWrongA, ExplanationWrongB, ExplanationWrongC, ExplanationWrongD. Missing field → HARD_FAIL: MISSING_REQUIRED_FIELD. Record which field is missing.",
+        "step3_type_consistency": "Verify CorrectChoice is string ('A'-'D'). Verify ExplanationWrong fields are strings or 'undefined' (absent). Verify Choices is object with keys A-D or array. Type error → HARD_FAIL: TYPE_MISMATCH.",
+        "step4_corruption_detect": "Scan raw file content for known corruption patterns: DL-017 backtick-newline (`` `n `` regex), `,NNN: true,` artifact, unmatched braces, orphaned commas, duplicate QuestionIDs within same pack. Corruption → HARD_FAIL: CORRUPTION_DETECTED.",
+        "step5_count_verification": "Verify parse-count equals expected (Pack A:500, B:500, C:500, D:500, E:500). Cross-validate against grep count: `grep -c '\"QuestionID\"'` on raw file. Mismatch → HARD_FAIL: COUNT_MISMATCH."
+      },
+      "input": {"items": "Parsed question array from AM-1", "rawFileContent": "String: raw pack file content", "expectedCount": "Integer: expected item count for this pack", "packName": "String: pack_a through pack_e"},
+      "output": {
+        "artifact": "reports/scans/gate_0/SCAN_PG010_JSON_INTEGRITY_{packName}_{timestamp}.json",
+        "schema": {"per_file": {"parse_success": "bool", "item_count": "int", "expected_count": "int", "count_match": "bool", "missing_required_fields": [{"QuestionID": "str", "missing": ["field names"]}], "type_errors": [{"QuestionID": "str", "field": "str", "expected_type": "str", "actual_type": "str"}], "corruption_artifacts": [{"pattern": "str", "line": "int", "text": "str"}], "verdict": "PASS|FAIL"}, "aggregate": {"total_files_parsed": "int", "total_items_parsed": "int", "total_corruption": "int", "total_missing_fields": "int"}}
+      },
+      "performance_target_ms": 5000,
+      "error_handling": {"parse_failure": "HARD_FAIL entire pack file. Do NOT proceed to Gate 1 for any items in that pack. Generate PARSE_FAILURE report with file, line range, and raw error message.", "count_mismatch": "HARD_FAIL. Pipeline halts for that pack until count reconciled. Possible causes: items added/removed, parse undercount (DL-020), file corruption (DL-017)."}
+    },
+
+    {
+      "scan_id": "PG-001",
+      "group": "Structural",
+      "gate": "Gate_1",
+      "file": "scripts/engine/scans/scans/pg001_dl008.js",
+      "defect_class": "DL-008",
+      "blocking": "HARD_BLOCK",
+      "description": "ExplanationWrong[CorrectChoice] Non-Empty — EV8 violation. Highest-priority learner-safety defect.",
+      "exports": {"scan(items)": "Returns DL008ScanResult"},
+      "algorithm": {
+        "step1": "For each item with ValidCC: cc = item.CorrectChoice.toUpperCase(); ewField = 'ExplanationWrong' + cc; ewVal = item[ewField];",
+        "step2": "If ewVal !== undefined && ewVal !== null && String(ewVal).trim().length > 0 → DL-008 VIOLATION.",
+        "step3": "Record: QuestionID, CorrectChoice, field name, value excerpt (first 100 chars), full length, question_state, Template_Family.",
+        "step4_codetect": "In same pass: if item[ewField] === undefined → DL-018 (absent CC field). For each non-CC letter L: if item['ExplanationWrong' + L] === '' → DL-026. These are recorded to separate output arrays."
+      },
+      "input": {"items": "Parsed question array (IDENTITY_VALID + JSON clean only)", "packName": "String"},
+      "output": {
+        "artifact": "reports/scans/gate_1/SCAN_PG001_DL008_{packName}_{timestamp}.json",
+        "schema": {"violations": [{"QuestionID": "str", "CorrectChoice": "str", "field": "str", "value_excerpt": "str", "length": "int", "question_state": "str"}], "dl018_items": [{"QuestionID": "str", "CorrectChoice": "str", "missing_field": "str"}], "aggregate": {"total_dl008": "int", "certified_dl008": "int", "total_dl018": "int", "qid_list": ["str"], "scan_methodology": "AM-1_within_object_extraction"}}
+      },
+      "performance_target_ms": 2000,
+      "gold_standard_test": "Pack B must return 0 DL-008. Any scanner returning >0 on Pack B is non-compliant per S725 §6.2 (CC-before-QID format previously caused DL-029 false positives)."
+    },
+
+    {
+      "scan_id": "PG-009",
+      "group": "Structural",
+      "gate": "Gate_1",
+      "file": "scripts/engine/scans/scans/pg009_ev8.js",
+      "defect_class": "EV8",
+      "blocking": "HARD_BLOCK",
+      "description": "Correct-Answer Slot Must Be Empty — extends DL-008 detection to case-study items. Runs in same pass as PG-001 for MCQ items with zero additional runtime.",
+      "exports": {"scanMCQ(items)": "Reuses PG-001 output", "scanCaseItems(caseItems)": "Returns EV8CaseResult"},
+      "algorithm": {
+        "mcq_path": "PG-001 output is authoritative. PG-009 delegates to PG-001 for MCQs.",
+        "case_path": "For each case item: if item.Type is 'select' or 'multi', identify the correct-answer letter from item.Correct. Check if corresponding wrong-explanation field is non-empty. Case items use object-based explanation fields — adapt to case structure."
+      },
+      "input": {"mcq_items": "From PG-001 (already scanned)", "case_items": "Parsed case item arrays from scored_cases*.js"},
+      "output": {"artifact": "reports/scans/gate_1/SCAN_PG009_EV8_CASES_{timestamp}.json"},
+      "performance_target_ms": 2000
+    },
+
+    {
+      "scan_id": "PG-005",
+      "group": "Structural",
+      "gate": "Gate_1",
+      "file": "scripts/engine/scans/scans/pg005_dl026.js",
+      "defect_class": "DL-026 + DL-025 + DL-021",
+      "blocking": "HARD_BLOCK",
+      "description": "Empty or Absent Non-CorrectChoice ExplanationWrong Slots — unified detection of three defect classes in a single pass.",
+      "exports": {"scan(items)": "Returns DL026ScanResult"},
+      "algorithm": {
+        "step1": "For each item with ValidCC: cc = item.CorrectChoice.toUpperCase();",
+        "step2": "For each letter L in ['A','B','C','D'] where L !== cc: if !(('ExplanationWrong' + L) in item) → DL-021 (field absent). elif item['ExplanationWrong' + L] === '' → DL-026 (empty string). elif item['ExplanationWrong' + L].length > 0 AND item['ExplanationWrong' + L].length < 50 → DL-026_SHORT (too short for educational value).",
+        "step3_co_detect_dl008": "If item['ExplanationWrong' + cc] is non-empty → flag separately in PG-001 output — chaining prevention: DL-026 remediation for an item with active DL-008 must clear DL-008 first.",
+        "step4_record": "For each violation: QuestionID, CorrectChoice, empty_slot, field_state (absent|empty|short), estimated_impact (Certified → learner sees no feedback), question_state."
+      },
+      "input": {"items": "Parsed question array (IDENTITY_VALID + JSON clean + non-BLOCKED from Gate 0)"},
+      "output": {
+        "artifact": "reports/scans/gate_1/SCAN_PG005_DL026_{packName}_{timestamp}.json",
+        "schema": {"violations": [{"QuestionID": "str", "CorrectChoice": "str", "empty_slot": "str", "field_state": "absent|empty|short", "length": "int", "question_state": "str", "dl008_co_present": "bool"}], "aggregate": {"total_dl026": "int", "total_dl025": "int", "total_dl021": "int", "certified_affected": "int", "by_state": {"Certified": "int", "In Audit": "int", "Unprocessed": "int"}}}
+      },
+      "performance_target_ms": 2000
+    },
+
+    {
+      "scan_id": "PG-004",
+      "group": "Structural",
+      "gate": "Gate_1",
+      "file": "scripts/engine/scans/scans/pg004_dl016.js",
+      "defect_class": "DL-016",
+      "blocking": "HARD_BLOCK",
+      "description": "Metadata-Block vs Content-Block Choice Divergence — ChoiceA-D must match Choices.{A-D} for dual-block packs.",
+      "exports": {"scan(items, packName)": "Returns DL016ScanResult"},
+      "algorithm": {
+        "step1_pack_architecture": "Determine pack architecture: Pack A/C/D = dual-block (has both flat ChoiceA-D and nested Choices.{A-D}). Pack B/E = single-block (only nested Choices.{A-D}) — skip scan, return PASS.",
+        "step2_field_extraction": "For dual-block packs: from the SAME JSON object, extract choiceA = item.ChoiceA AND choicesA = item.Choices.A (same for B/C/D). These MUST come from the same brace-delimited object (AM-1 guarantee).",
+        "step3_comparison": "For each letter L: if normalize(choiceL) !== normalize(choicesL) → DL-016 VIOLATION. normalize() = trim + collapse_whitespace + lowercase.",
+        "step4_ew_relevance_check": "For items with DL-016: extract ExplanationWrong[A-D] text. Check if EW text topically relates to item's own Choices text or describes a different topic (DL-016 +1 shift symptom). If EW text mismatch → escalate to DL-016_SEVERE (learner-safety risk per G-NEW-2).",
+        "step5_template_family_correlation": "For items flagged DL-016: correlate with Template_Family. If all members of a family share the same shift offset → template-pipeline artifact (DL-016 root cause confirmed). If only some members → remediation artifact."
+      },
+      "input": {"items": "Parsed question array from dual-block packs only (A, C, D)", "packName": "String"},
+      "output": {
+        "artifact": "reports/scans/gate_1/SCAN_PG004_DL016_{packName}_{timestamp}.json",
+        "schema": {"divergences": [{"QuestionID": "str", "divergent_fields": ["str"], "metadata_text": "str", "content_text": "str", "ew_mismatch_confirmed": "bool", "severity": "DL-016|DL-016_SEVERE"}], "aggregate": {"total_divergent": "int", "severe_count": "int", "template_family_clusters": "int"}}
+      },
+      "performance_target_ms": 3000,
+      "note": "Dual-block packs only (A/C/D). Single-block packs (B/E) skip with PASS — no metadata-content split exists."
+    },
+
+    {
+      "scan_id": "PG-003",
+      "group": "Content",
+      "gate": "Gate_2",
+      "file": "scripts/engine/scans/scans/pg003_dl013.js",
+      "defect_class": "DL-013",
+      "blocking": "SOFT_BLOCK",
+      "description": "Template Boilerplate in ExplanationWrong Fields — dual-phrase detection plus Jaccard similarity analysis.",
+      "exports": {"scan(items)": "Returns DL013ScanResult"},
+      "algorithm": {
+        "step1_dual_phrase_detect": "For each EW[A-D] field: test for presence of BOTH signature phrases: 'represents a plausible misconception' AND 'A candidate may select this option by misapplying'. If BOTH present → DL-013 Pattern A (standalone boilerplate). If one present but not both → DL-013 Pattern C (partial).",
+        "step2_jaccard": "For each item: compute Jaccard similarity between EW slot pairs (EW-A/B, EW-A/C, EW-A/D, EW-B/C, EW-B/D, EW-C/D). If any pair > 0.85 similarity → DL-013 Pattern B (high similarity — likely copy-paste boilerplate). If > 0.70 → DL-013 Pattern D (moderate — flagged for review).",
+        "step3_closing_tag": "Test for DL-027 closing tag: 'A candidate selecting this option may misunderstand how the governing standard applies to this specific fact pattern.' If present standalone (without Pattern A phrases) → DL-027 (closing-tag only — more benign).",
+        "step4_certified_check": "If item.question_state === 'Certified' AND any DL-013 pattern detected → escalate to DL-013_CERTIFIED (violates CAQS §4.3 EV2 placeholder-text rule on active learner-pool items)."
+      },
+      "input": {"items": "Parsed question array (Gate 0-1 clean)", "packName": "String"},
+      "output": {
+        "artifact": "reports/scans/gate_2/SCAN_PG003_DL013_{packName}_{timestamp}.json",
+        "schema": {"boilerplate_items": [{"QuestionID": "str", "affected_slots": ["str"], "pattern": "A|B|C|D", "pattern_count": "int", "question_state": "str", "is_certified": "bool"}], "dl027_items": [{"QuestionID": "str", "affected_slot": "str"}], "aggregate": {"total_boilerplate_fields": "int", "unique_qids": "int", "certified_affected": "int", "patterns": {"Pattern_A": "int", "Pattern_B": "int", "Pattern_C": "int", "Pattern_D": "int"}}}
+      },
+      "performance_target_ms": 5000
+    },
+
+    {
+      "scan_id": "PG-008",
+      "group": "Content",
+      "gate": "Gate_2",
+      "file": "scripts/engine/scans/scans/pg008_ev3.js",
+      "defect_class": "EV3",
+      "blocking": "WARN",
+      "description": "ExplanationCorrect References Accounting Principle By Name — checks for ASC, COSO, IAS, IFRS, GAAP, FASB, IMA, Sarbanes-Oxley, PCAOB, AICPA citations in ExplanationCorrect text.",
+      "exports": {"scan(items)": "Returns EV3ScanResult"},
+      "algorithm": {
+        "step1_regex": "For each item: test ExplanationCorrect against citation regex library: /ASC\\s*\\d{3}(-\\d{2}(-\\d{2})?)?/i, /IAS\\s*\\d{1,2}/i, /IFRS\\s*\\d{1,2}/i, /\\bCOSO\\b/i, /\\bGAAP\\b/i, /\\bFASB\\b/i, /\\bIMA\\s+Statement\\b/i, /\\bSarbanes-Oxley\\b/i, /\\bSEC\\b/i, /\\bPCAOB\\b/i, /\\bAICPA\\b/i.",
+        "step2_cognitive_level_waiver": "If item.CognitiveLevel is 'Remember' or 'Understand' → EV3 waived (definition-level items don't require standard citation). Skip.",
+        "step3_principle_mention": "Extended check: does EC mention any accounting principle by name (even without standard number)? Check for: 'matching principle', 'revenue recognition', 'lower of cost', 'net realizable value', 'historical cost', 'fair value', 'consistency', 'conservatism', 'materiality', 'full disclosure', 'going concern'.",
+        "step4_citation_form": "If citation found: verify citation format is plausible for the standard. ASC 210 for loss contingency → DL-009 cross-flag (wrong standard cited for topic). Requires cross-reference to known topic→standard map."
+      },
+      "input": {"items": "Parsed question array (Gate 0-1 clean)"},
+      "output": {
+        "artifact": "reports/scans/gate_2/SCAN_PG008_EV3_{packName}_{timestamp}.json",
+        "schema": {"missing_citations": [{"QuestionID": "str", "cognitive_level": "str", "has_principle_mention": "bool", "question_state": "str"}], "dl009_suspects": [{"QuestionID": "str", "cited_standard": "str", "item_topic": "str", "expected_standard": "str"}], "aggregate": {"total_missing": "int", "waived_by_cognitive_level": "int", "certified_missing": "int", "dl009_suspects": "int"}}
+      },
+      "performance_target_ms": 2000
+    },
+
+    {
+      "scan_id": "PG-002",
+      "group": "Content",
+      "gate": "Gate_2",
+      "file": "scripts/engine/scans/scans/pg002_dl010.js",
+      "defect_class": "DL-010",
+      "blocking": "WARN",
+      "description": "Misassigned Choice Explanations — Tier 1 lexical overlap between EW text and choice text; Tier 2 numeric mismatch heuristic.",
+      "exports": {"scan(items)": "Returns DL010ScanResult"},
+      "algorithm": {
+        "step1_lexical_overlap": "For each item, for each letter L: compute Jaccard similarity between EW[L] text and Choices[L] text. If similarity < 0.10 → DL-010 SUSPECT (explanation has near-zero lexical overlap with the choice it's supposed to describe).",
+        "step2_cross_choice_best_match": "For each slot L where similarity < 0.10: compute similarity of EW[L] against Choices[K] for all other K. If EW[L] has higher similarity to Choices[K] (K ≠ L) than to Choices[L] → DL-010 HIGH (explanation better matches a different choice).",
+        "step3_numeric_mismatch": "For calculation items: extract numbers from EW text and compare to numbers in Choices text. If EW describes $16,160 but choice text is $80,800 → DL-010 NUMERIC (strong evidence of misassignment).",
+        "step4_fp_risk": "Automated DL-010 detection has ~94% false-positive risk (threshold-based lexical overlap is poor signal). This scan is advisory — outputs are WARN only, never HARD_BLOCK. Requires human editorial review to confirm."
+      },
+      "input": {"items": "Parsed question array (Gate 0-1 clean)"},
+      "output": {
+        "artifact": "reports/scans/gate_2/SCAN_PG002_DL010_{packName}_{timestamp}.json",
+        "schema": {"suspects": [{"QuestionID": "str", "slot": "str", "similarity_to_own_choice": "float", "best_match": "str", "best_match_similarity": "float", "confidence": "LOW|MEDIUM|HIGH"}], "aggregate": {"total_suspects": "int", "high_confidence": "int", "medium_confidence": "int", "low_confidence": "int", "estimated_false_positive_rate": "0.94"}}
+      },
+      "performance_target_ms": 5000
+    },
+
+    {
+      "scan_id": "PG-006",
+      "group": "Certification",
+      "gate": "Gate_4",
+      "file": "scripts/engine/scans/scans/pg006_dl030.js",
+      "defect_class": "DL-030",
+      "blocking": "SOFT_BLOCK",
+      "description": "CorrectChoice Answer-Key Verification — independently re-derives correct answer from stem + choices and compares to stored CorrectChoice. Detects CC answer-key errors.",
+      "exports": {"scan(items)": "Returns DL030ScanResult"},
+      "algorithm": {
+        "step1_calculation_items": "For items where CalculationRequired === true: extract all numeric values from stem. Derive correct answer using formula reference. Compare to stored CC's choice text. If mismatch → DL-030 NUMERIC.",
+        "step2_conceptual_items": "For conceptual items: verify CC is defensible as correct based on stem text. Flag any item where the CC choice directly contradicts an accounting standard cited in the stem or EC.",
+        "step3_confidence_flagging": "AI-derived verification is advisory. Each finding carries a confidence score (0-100). HIGH confidence (>90) → DL-030 CONFIRMED. MEDIUM confidence (70-90) → DL-030 SUSPECT, flagged for human review. LOW confidence (<70) → not flagged — defer to full Quality Board review.",
+        "step4_certified_priority": "Certified items with DL-030 CONFIRMED → critical learner-safety risk. Wrong answer marked correct in active delivery pool."
+      },
+      "input": {"items": "Parsed question array (Gate 0-3 clean)"},
+      "output": {
+        "artifact": "reports/scans/gate_4/SCAN_PG006_DL030_{packName}_{timestamp}.json",
+        "schema": {"answer_key_errors": [{"QuestionID": "str", "stored_CC": "str", "suggested_CC": "str", "confidence": "int", "rationale": "str", "question_state": "str"}], "aggregate": {"total_errors": "int", "confirmed_count": "int", "suspect_count": "int", "certified_errors": "int"}}
+      },
+      "performance_target_ms": 30000,
+      "note": "Heaviest scan — requires AI-powered independent re-derivation. May take 30s+ for all 2,500 items. Consider incremental approach: recheck only items with content_hash change since last verification."
+    },
+
+    {
+      "scan_id": "PG-007",
+      "group": "Certification",
+      "gate": "Gate_4",
+      "file": "scripts/engine/scans/scans/pg007_dl031.js",
+      "defect_class": "DL-031",
+      "blocking": "WARN",
+      "description": "Difficulty Calibration — Definition-Match Inflation Detection. Flags items labeled Moderate or higher that test only Bloom's Remember/Understand.",
+      "exports": {"scan(items)": "Returns DL031ScanResult"},
+      "algorithm": {
+        "step1_definition_match": "For each item: compute lexical overlap between stem and the correct answer choice text (Jaccard > 0.50 suggests definition-match).",
+        "step2_cognitive_demand": "If definition-match detected AND item.DifficultyScore >= 3 (Moderate+) AND item.CognitiveLevel is 'Remember' or 'Understand' → DL-031 INFLATED. The item tests definition recall but is labeled as requiring application/analysis.",
+        "step3_all_of_the_above": "Special case: correct answer is 'All of the above' where all sub-choices are definitionally correct. This is a recognition task, not analysis. Auto-flag as DL-031 if DifficultyScore >= 3.",
+        "step4_distractor_sophistication": "Retroactive check: if distractors are genuinely sophisticated (require application-level discernment despite definition-like stem), the Moderate label may be justified. Flag for human review rather than auto-recalibrating."
+      },
+      "input": {"items": "Parsed question array (Gate 0-3 clean)"},
+      "output": {
+        "artifact": "reports/scans/gate_4/SCAN_PG007_DL031_{packName}_{timestamp}.json",
+        "schema": {"inflated_items": [{"QuestionID": "str", "stored_difficulty": "str", "stored_score": "int", "recommended_difficulty": "str", "recommended_score": "int", "stem_cc_overlap": "float", "cognitive_level": "str", "question_state": "str"}], "aggregate": {"total_inflated": "int", "moderate_should_be_easy": "int", "per_pack": {"A": "int", "B": "int", "C": "int", "D": "int", "E": "int"}}}
+      },
+      "performance_target_ms": 5000
+    },
+
+    {
+      "scan_id": "PG-AN-01",
+      "group": "Metadata",
+      "gate": "N/A (Analytical)",
+      "file": "scripts/engine/scans/scans/pan01_choice_balance.js",
+      "defect_class": "PSYCHOMETRIC",
+      "blocking": "NONE (Advisory)",
+      "description": "Choice Position Balance Analysis — verifies correct answer distribution across A/B/C/D, checks for running patterns, sequential dependence, and position bias.",
+      "exports": {"scan(items)": "Returns ChoiceBalanceResult"},
+      "algorithm": {
+        "per_section": "Compute CC distribution percentage per section. Expected: 22-28% per position. Flag sections deviating >5% from 25%.",
+        "running_patterns": "Detect streaks of same CC > 4 consecutive items. Flag as POSITION_STREAK.",
+        "sequential_dependence": "For each section: compute P(next_CC | current_CC). If any conditional probability > 0.40 → POSITION_PATTERN (CC predictable from prior item).",
+        "pack_level": "Compute overall A/B/C/D distribution per pack. Flag packs with >30% in any single position."
+      },
+      "output": {"artifact": "reports/scans/analytical/SCAN_PAN01_CHOICE_BALANCE_{packName}_{timestamp}.json"},
+      "performance_target_ms": 1000
+    },
+
+    {
+      "scan_id": "PG-AN-02",
+      "group": "Metadata",
+      "gate": "N/A (Analytical)",
+      "file": "scripts/engine/scans/scans/pan02_metadata_completeness.js",
+      "defect_class": "METADATA",
+      "blocking": "NONE (Advisory)",
+      "description": "Metadata Completeness Audit — verifies all required metadata fields are present per QUESTION_METADATA_STANDARD.md.",
+      "exports": {"scan(items)": "Returns MetadataCompletenessResult"},
+      "algorithm": {
+        "required_fields": ["Topic", "Difficulty", "DifficultyScore", "CognitiveLevel", "Section", "Part"],
+        "for each item": "Check presence of each required field. Flag missing fields.",
+        "recommended_fields": ["PrimaryCompetency", "SecondaryCompetency", "LOSTag", "MicroTopic", "UniqueConceptKey", "ItemStyle", "StudyLinks"],
+        "for each item": "Check presence of recommended fields. Report completion percentage."
+      },
+      "output": {"artifact": "reports/scans/analytical/SCAN_PAN02_METADATA_{packName}_{timestamp}.json"},
+      "performance_target_ms": 2000
+    },
+
+    {
+      "scan_id": "PG-AN-03",
+      "group": "Certification",
+      "gate": "N/A (Analytical)",
+      "file": "scripts/engine/scans/scans/pan03_certification_eligibility.js",
+      "defect_class": "CERTIFICATION",
+      "blocking": "NONE (Advisory)",
+      "description": "Certification Eligibility Assessment — evaluates which items are eligible for certification (all gates passed, no HARD_BLOCK defects).",
+      "exports": {"scan(items, gateResults)": "Returns CertificationEligibilityResult"},
+      "algorithm": {
+        "for each item": "Aggregate all gate verdicts. If all gates PASS → CERTIFIABLE. If any HARD_BLOCK → NOT_CERTIFIABLE. If only WARN/SOFT_BLOCK → CERTIFIABLE_WITH_WARNINGS.",
+        "by_pack": "Compute certification-eligible counts per pack. Identify largest blocks of non-eligible items.",
+        "by_defect": "Compute which defect classes block the most items from certification."
+      },
+      "output": {"artifact": "reports/scans/analytical/SCAN_PAN03_ELIGIBILITY_{timestamp}.json"},
+      "performance_target_ms": 1000
+    },
+
+    {
+      "scan_id": "PG-AN-04",
+      "group": "Metadata",
+      "gate": "N/A (Analytical)",
+      "file": "scripts/engine/scans/scans/pan04_difficulty_distribution.js",
+      "defect_class": "PSYCHOMETRIC",
+      "blocking": "NONE (Advisory)",
+      "description": "Difficulty Distribution Analysis — verifies pool-wide difficulty distribution meets CAQS §6.1 targets.",
+      "exports": {"scan(items)": "Returns DifficultyDistributionResult"},
+      "algorithm": {
+        "target": {"Easy": "15%", "Moderate-Easy": "20%", "Moderate": "30%", "Difficult": "25%", "Very Difficult": "10%"},
+        "actual": "Compute pool-wide difficulty distribution. Compare to CAQS targets.",
+        "by_section": "Compute per-section difficulty distribution. Flag sections with zero difficulty variance (all Moderate — DL-032 pattern).",
+        "gap_analysis": "Identify which specific difficulty tiers need more items to meet CAQS targets."
+      },
+      "output": {"artifact": "reports/scans/analytical/SCAN_PAN04_DIFFICULTY_{timestamp}.json"},
+      "performance_target_ms": 1000
+    }
+  ],
+
+  "dependency_graph": {
+    "gates_depend_on": {
+      "Gate_-1": {"requires": "Raw pack file content + Function constructor parse capability", "blocks_if_fail": "All downstream gates for IDENTITY_BLOCKED items"},
+      "Gate_0": {"requires": "Gate_-1 IDENTITY_VALID items", "blocks_if_fail": "All downstream gates for that pack (unparseable file)"},
+      "Gate_1": {"requires": "Gate_0 parsed object arrays + Gate_-1 IDENTITY_VALID flag", "scans_parallel": "PG-001, PG-005, PG-004 can run in parallel on same item set", "blocks_if_fail": "HARD_BLOCK items excluded from Gate_2+ processing"},
+      "Gate_2": {"requires": "Gate_1 non-BLOCKED items", "scans_parallel": "PG-003, PG-008, PG-002 can run in parallel", "blocks_if_fail": "SOFT_BLOCK items proceed with warnings"},
+      "Gate_3": {"requires": "Gate_0-2 processed items + compound keys from Gate_-1 + Template_Family assignments", "blocks_if_fail": "HARD_BLOCK items excluded from Gate_4"},
+      "Gate_4": {"requires": "Gate_0-3 non-BLOCKED items", "scans_parallel": "PG-006, PG-007 can run in parallel", "blocks_if_fail": "SOFT_BLOCK items proceed with warnings"}
+    },
+    "scan_depends_on_scan": {
+      "PG-001 depends on PG-011": "Requires IDENTITY_VALID items with confirmed CorrectChoice from within-object extraction",
+      "PG-005 depends on PG-001": "PG-005's DL-026 detection shares the same CorrectChoice→EW[CC] check. If PG-001 DETECTS DL-008 on an item, PG-005 should flag that item as 'dl008_co_present' and warn: 'Clear DL-008 before DL-026 remediation.'",
+      "PG-004 depends on PG-011": "Requires Template_Family from identity resolution to correlate DL-016 with rotation artifacts",
+      "PG-006 depends on PG-001": "DL-030 CC verification must operate on the same CC value that PG-001 used for DL-008 detection. If CC is wrong due to DL-016, PG-006's independent re-derivation will flag it."
+    }
+  },
+
+  "artifact_storage": {
+    "base_path": "reports/scans/",
+    "naming_convention": "SCAN_{SCAN_ID}_{DEFECT_CLASS}_{PACK_NAME}_{TIMESTAMP}.json",
+    "timestamps": "ISO 8601 formatted: YYYY-MM-DDTHHMMSS",
+    "retention": "All scan artifacts retained through active phase (S202-S910). Archived to reports/legacy/scans/ after S910.",
+    "per_gate_directories": ["gate_neg1/", "gate_0/", "gate_1/", "gate_2/", "gate_3/", "gate_4/", "analytical/"]
+  },
+
+  "error_handling_standard": {
+    "am1_failure": "If Function constructor parse fails for any scan → fall back to AM-2 string-aware parse. If AM-2 also fails → record SCAN_ERROR with file+line_range+raw_error. Do NOT silently return empty results.",
+    "qid_list_mandatory": "All violation outputs MUST include per-QID list. Totals-only output is PROHIBITED per FM-005. Any scan producing totals without QID list is rejected.",
+    "count_stability": "Before accepting any count, run scan twice with identical methodology. Compare counts between runs. If mismatch → investigate scanner methodology (DL-020 brace-matcher string-awareness gap, or forward-scan CC-offset). Do not accept unstable counts.",
+    "idempotency": "All scans must be idempotent — running the same scan twice on the same input produces identical output (same QID lists, same counts, same verdicts). Non-idempotent scans indicate methodology bugs."
+  },
+
+  "implementation_notes": {
+    "scanner_shared_library": "All scans share a common extraction library: `scripts/engine/scans/lib/scanner_shared.js`. Provides: withinObjectExtract(), computeJaccard(), normalizeText(), stripProperNouns(), regexLibrary, fieldPresenceCheck().",
+    "governance_guard_integration": "Scans PG-001 through PG-010 produce artifact files. governance-guard.js Rules 6-8 read these artifacts at session T0/Tmid/Tend to enforce pre-flight gating.",
+    "delta_review_integration": "DeltaReviewEngine queries scan artifacts to determine if unchanged items (content_hash match) have new scan findings. If Gate 1 scan on unchanged item detects DL-026 that wasn't present in prior scan → item flagged for review despite hash match."
+  }
+}

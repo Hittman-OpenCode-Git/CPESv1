@@ -1,0 +1,202 @@
+BLOCK-AUTHORIZED: Session 529 Agent D — Wave 1 certification target package. Report file, NOT a pack file. 12 item profiles for audit/remediation inventory. Zero pack-file writes.
+{
+  "generated": "2026-07-26T20:45:00.000Z",
+  "agent": "Agent D — Wave 1 Target Package",
+  "program": "ENHANCED_CASE_BASE (scored_cases.js)",
+  "wave": 1,
+  "label": "Wave 1 — Foundation: Financial Reporting & Budgeting Fundamentals",
+  "cases": ["CBQ-A1", "CBQ-B1"],
+  "itemCount": 12,
+  "domainCoverage": {"A": 6, "B": 6},
+  "riskProfile": "LOW",
+
+  "preCertificationWave0": {
+    "blocksAllWaves": true,
+    "estimatedTotalHours": 3.25,
+    "summary": "3 Wave 0 blockers: 2 schema errors (CalcRequired on multi type) + 1 prompt clarification (CBQ-A1-Q4). All 12 numeric answer keys independently verify. No question_state changes — read-only audit.",
+    "tasks": [
+      {"id":"W0-T1","task":"Independent answer-key verification","items":12,"numericItems":[["CBQ-A1-Q1","360000 x 3/12 = 90000"],["CBQ-A1-Q2","360000 - 90000 = 270000"],["CBQ-A1-Q4","510000+72000-41000+18000-27000 = 532000"],["CBQ-A1-Q5","200000 x 0.25 = 50000"],["CBQ-B1-Q1","18000+4400-3600 = 18800"],["CBQ-B1-Q2","22000+5000-4400 = 22600"],["CBQ-B1-Q3","37600+4520-3900 = 38220"],["CBQ-B1-Q4","315000+480000 = 795000"],["CBQ-B1-Q5","75000+795000-1020000 = -150000; 60000-(-150000)=210000"]],"conceptualItems":["CBQ-A1-Q3: FOB shipping point -> recognize 84000","CBQ-A1-Q6: 3 correct (cash/earned, control transfer, deferred tax) + 1 exclude (classify all as revenue)","CBQ-B1-Q6: 3 correct (ignore min, total sales, uncollectible) + 1 exclude (April production)"]},
+      {"id":"W0-T2","task":"Schema error correction","errors":[{"item":"CBQ-A1-Q6","field":"CalculationRequired","current":true,"correct":false,"reason":"Type=multi has no numeric entry"},{"item":"CBQ-B1-Q6","field":"CalculationRequired","current":true,"correct":false,"reason":"Same — multi type"}]},
+      {"id":"W0-T3","task":"Difficulty recalibration audit","borderlineItems":[{"item":"CBQ-A1-Q3","current":"Difficult/4","recommend":"KEEP 4 — FOB concept straightforward but distractors require genuine judgment at Evaluate level"},{"item":"CBQ-B1-Q1","current":"Moderate/3","recommend":"BORDERLINE 2 — single-step formula, but requires 2 exhibits. KEEP 3 for Q1-Q2 consistency."}]},
+      {"id":"W0-T4","task":"Explanation sufficiency audit","criticalItems":[{"item":"CBQ-B1-Q1","length":47,"issue":"EV1 violation (47 < 50)"},{"item":"CBQ-A1-Q4","length":54,"issue":"HIGH_RISK — ambiguous prompt + shortest Wave 1 explanation"}]},
+      {"id":"W0-T5","task":"Metadata gap inventory","caseLevel":{"CBQ-A1":{"missingFields":["Stakeholder","CompanyName","CompanyType","Industry","BusinessFunction"],"blueprintIssue":"Missing ASC 740 (deferred tax) in BlueprintObjectives"},"CBQ-B1":{"complete":true}}},
+      {"id":"W0-T6","task":"Q4 prompt clarification","item":"CBQ-A1-Q4","currentPrompt":"Using the indirect method, enter cash flow from operating activities before income-tax cash effects not listed.","issue":"'before income-tax cash effects not listed' ambiguous","recommended":"Using the indirect method, enter cash flow from operating activities before income taxes. (Income tax cash effects are excluded — they are not listed in Exhibit 2.)"}
+    ]
+  },
+
+  "swapRecommendation": {
+    "recommendation": "NO SWAPS — proceed with A1+B1 as planned",
+    "rationale": "Two HIGH_RISK flags (Q4 prompt, Q6 schema) are fixable in Wave 0 — neither is a content defect. All 12 answer keys verified correct. Risk remains LOW. No item warrants replacement."
+  },
+
+  "domainCoverageAssurance": {
+    "A": {"items":6,"topics":["Revenue recognition (ASC 606)","Contract liabilities","FOB/control transfer","Cash flow indirect method","Deferred tax (ASC 740)","External reporting judgment"],"standards":["ASC 606","ASC 230","ASC 740"],"cognitiveMix":"4 Apply + 2 Evaluate","assessment":"STRONG — covers revenue, cash flow, and deferred tax with proper ASC references"},
+    "B": {"items":6,"topics":["Production budget","Direct materials purchases","Cash collections","Cash budget / borrowing","Budget error detection"],"standards":["Master budget sequence (managerial)"],"cognitiveMix":"5 Apply + 1 Evaluate","assessment":"STRONG — canonical budget chain (sales→production→materials→cash→borrowing). Q6 tests higher-order error detection."}
+  },
+
+  "profileA1": {
+    "Q1": {
+      "type":"numeric","topic":"Revenue recognition","explanationChars":104,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"REMEDIATION_NEEDED",
+      "tests":"ASC 606 over-time revenue recognition: 360,000 x 3/12 = 90,000",
+      "missingFromExplanation":"ASC 606-10-25-27 citation, business interpretation, common trap (full 360K at receipt), connection to Q2",
+      "metadataFixes":"Add FormulaReference, DecisionTreeReference, CommonTrapReference",
+      "difficulty":"KEEP Moderate/3",
+      "risk":"Formula-only — complete rewrite needed. Missing exhibit reference."
+    },
+    "Q2": {
+      "type":"numeric","topic":"Contract liabilities","explanationChars":96,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"REMEDIATION_NEEDED",
+      "tests":"ASC 606 contract liability: 360,000 - 90,000 = 270,000",
+      "missingFromExplanation":"ASC 606-10-45-2 citation, balance sheet presentation, distinction from accrued expenses, connection to Q1",
+      "metadataFixes":"Add FormulaReference, CommonTrapReference",
+      "difficulty":"KEEP Moderate/3 — depends on Q1 answer (chain dependency)",
+      "risk":"Dependent on Q1 for scoring integrity. No ASC number cited."
+    },
+    "Q3": {
+      "type":"select","topic":"Revenue recognition","explanationChars":75,"cognitiveLevel":"Evaluate","difficulty":"Difficult/4","classification":"REMEDIATION_NEEDED",
+      "tests":"FOB shipping point — control transfers at shipment (ASC 606-10-25-30). Correct: Recognize 84,000. Distractors: defer all, GP only, OCI.",
+      "missingFromExplanation":"Full ASC 606 citation, FOB shipping vs destination contrast, distractor-specific ExplanationWrong[A-D] fields (3 new fields needed)",
+      "metadataFixes":"Add ExplanationWrongA-D, CommonTrapReference, DecisionTreeReference. EW_A must be '' (correct answer slot).",
+      "difficulty":"KEEP Difficult/4 — Evaluate level. Distractors (OCI, GP-only, full deferral) require genuine judgment. Borderline — Wave 0 should verify.",
+      "risk":"Difficult label may be downgraded by Wave 0 audit. Must author 3 new distractor explanations from scratch."
+    },
+    "Q4": {
+      "type":"numeric","topic":"Cash flows","explanationChars":54,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"HIGH_RISK",
+      "tests":"ASC 230 indirect method: 510K+72K-41K+18K-27K = 532,000",
+      "missingFromExplanation":"ASC 230-10-45-28 citation, line-by-line sign rationale (+depr, -AR, +inv, -AP), why no tax adjustment, common trap (sign convention)",
+      "metadataFixes":"Add FormulaReference, DecisionTreeReference, CommonTrapReference. Recalibrate CalculationComplexity: Simple→Moderate.",
+      "promptFix":"Change 'before income-tax cash effects not listed' → 'before income taxes. (Income tax cash effects are excluded — not listed in Exhibit 2.)'",
+      "difficulty":"KEEP Moderate/3 — 5-step indirect method is foundational but sign convention demands attention",
+      "risk":"HIGH_RISK — Ambiguous prompt. Shortest explanation in Wave 1. Prompt fix must not break stored answer."
+    },
+    "Q5": {
+      "type":"numeric","topic":"Deferred taxes","explanationChars":72,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"READY",
+      "tests":"ASC 740 DTL: 200,000 x 25% = 50,000",
+      "missingFromExplanation":"Why DTL not DTA, temporary vs permanent difference, enacted rate rule (25% not expected rate), balance sheet classification",
+      "metadataFixes":"Add FormulaReference, DecisionTreeReference, CommonTrapReference. Fix CalculationComplexity: Moderate→Simple.",
+      "difficulty":"KEEP Moderate/3 — simple formula but DTL vs DTA classification requires understanding",
+      "risk":"READY is relative — only 72 chars. Missing enacted-rate trap (frequent CMA exam error)."
+    },
+    "Q6": {
+      "type":"multi","topic":"Reporting judgment","explanationChars":92,"cognitiveLevel":"Evaluate","difficulty":"Difficult/4","classification":"HIGH_RISK",
+      "tests":"3 correct: separating cash from revenue, control transfer timing, deferred tax; 1 exclude: classify all cash as revenue",
+      "missingFromExplanation":"Choice-by-choice rationale (why each of 3 is correct, why excluded choice is rule not judgment). ExplanationWrong[A-D] fields (4 new fields).",
+      "metadataFixes":"CRITICAL: CalculationRequired true→false. Add ExplanationWrongA-D.",
+      "difficulty":"KEEP Difficult/4 — multi-select with 3/4 correct testing judgment vs mechanical rules",
+      "risk":"HIGH_RISK — Schema error. No distractor explanations. Complete rewrite needed at 700+ chars."
+    }
+  },
+
+  "profileB1": {
+    "Q1": {
+      "type":"numeric","topic":"Production budget","explanationChars":47,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"REMEDIATION_NEEDED",
+      "tests":"Production = Sales + Ending FG - Beginning FG: 18,000 + 4,400 - 3,600 = 18,800",
+      "missingFromExplanation":"Budget sequence context (second after sales), variable attribution to exhibits (E1 Row 1, E2 Rows 1-2), business interpretation, common trap (omitting ending inventory = 14,400)",
+      "metadataFixes":"Already has FormulaReference, DecisionTreeReference, CommonTrapReference — best metadata in Wave 1",
+      "difficulty":"KEEP Moderate/3 — borderline Moderate-Easy/2 but requires navigating 2 exhibits",
+      "risk":"EV1 violation (47 < 50). Shortest explanation in ENHANCED_CASE_BASE pool. 10.6x expansion needed."
+    },
+    "Q2": {
+      "type":"numeric","topic":"Production budget","explanationChars":50,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"REMEDIATION_NEEDED",
+      "tests":"Same formula for February: 22,000 + 5,000 - 4,400 = 22,600",
+      "missingFromExplanation":"Sequential dependency (Jan ending FG = Feb beginning FG), month-specific variable attribution, business interpretation (production increases for sales growth)",
+      "metadataFixes":"Already complete — same rich metadata as Q1",
+      "difficulty":"KEEP Moderate/3 — same rationale as Q1",
+      "risk":"Near-identical to Q1 — risk of copy-paste explanation. Barely EV1 at 50 chars."
+    },
+    "Q3": {
+      "type":"numeric","topic":"Materials purchases","explanationChars":244,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"READY",
+      "tests":"Purchases = ProductionNeeds + EndingMaterials - BeginningMaterials: 37,600 + 4,520 - 3,900 = 38,220",
+      "missingFromExplanation":"Budget sequence position (third), business interpretation (38,220 lbs = production needs + safety cushion), unit conversion trap (forgetting 2 lbs/unit)",
+      "metadataFixes":"BusinessInterpretation field is CORRUPTED ('0 - 3,900 = 38,220...' — fragment). Repair needed.",
+      "difficulty":"KEEP Moderate/3 — multi-step with unit conversion",
+      "risk":"READY = lowest remediation need. BusinessInterpretation field repair is only required fix."
+    },
+    "Q4": {
+      "type":"numeric","topic":"Cash collections","explanationChars":81,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"READY",
+      "tests":"Collections = (900K x 35%) + (800K x 60%) = 315K + 480K = 795,000",
+      "missingFromExplanation":"Bad debt exclusion (5% uncollectible), collection policy attribution (Exhibit 2), common trap (applying 95% to Jan only = 855K), connection to Q5 borrowing",
+      "metadataFixes":"Already complete — strong metadata template",
+      "difficulty":"KEEP Moderate/3 — requires understanding lagged collections and cash vs revenue",
+      "risk":"Lowest remediation need. Missing bad-debt explanation."
+    },
+    "Q5": {
+      "type":"numeric","topic":"Cash budget","explanationChars":108,"cognitiveLevel":"Apply","difficulty":"Moderate/3","classification":"REMEDIATION_NEEDED",
+      "tests":"Borrowing = Minimum - (Beginning + Collections - Disbursements) = 60K - (-150K) = 210,000",
+      "missingFromExplanation":"Why deficit is -150K, why borrowing exceeds deficit (minimum balance adds 60K), connection to Q4, common trap (borrowing only 150K ignoring minimum)",
+      "metadataFixes":"Already complete",
+      "difficulty":"KEEP Moderate/3 — multi-step, Q4 dependency, minimum balance concept",
+      "risk":"Dependent on Q4 answer. Minimum balance concept is frequently tested CMA trap."
+    },
+    "Q6": {
+      "type":"multi","topic":"Budgeting judgment","explanationChars":100,"cognitiveLevel":"Evaluate","difficulty":"Difficult/4","classification":"REMEDIATION_NEEDED",
+      "tests":"3 correct (ignore min balance, total sales vs collections, treat uncollectible as cash) + 1 exclude (April production)",
+      "missingFromExplanation":"Per-choice dollar-impact analysis, direction-of-error (overstate vs understate), excluded choice rationale (April production would OVERSTATE disbursements), ExplanationWrong[A-D] fields (4 new)",
+      "metadataFixes":"CRITICAL: CalculationRequired true→false. Add ExplanationWrongA-D.",
+      "difficulty":"KEEP Difficult/4 — evaluating direction of budget errors is genuine Evaluate-level cognition",
+      "risk":"Schema error. No distractor explanations. Direction-of-error analysis must be precise."
+    }
+  },
+
+  "remediationChecklist": {
+    "wave0Blocks": [
+      {"item":"CBQ-A1-Q6","action":"CalculationRequired: true -> false"},
+      {"item":"CBQ-B1-Q6","action":"CalculationRequired: true -> false"},
+      {"item":"CBQ-A1-Q4","action":"Clarify prompt wording per W0-T6"}
+    ],
+    "explanationExpansionRanked": [
+      {"rank":1,"item":"CBQ-B1-Q1","current":47,"target":500,"reason":"EV1 violation"},
+      {"rank":2,"item":"CBQ-A1-Q4","current":54,"target":600,"reason":"HIGH_RISK + ambiguous prompt"},
+      {"rank":3,"item":"CBQ-A1-Q6","current":92,"target":700,"reason":"HIGH_RISK + schema error + multi type"},
+      {"rank":4,"item":"CBQ-B1-Q6","current":100,"target":700,"reason":"Schema error + multi type"},
+      {"rank":5,"item":"CBQ-A1-Q3","current":75,"target":500,"reason":"Select type — need EW fields"},
+      {"rank":6,"item":"CBQ-B1-Q2","current":50,"target":500,"reason":"Barely EV1"},
+      {"rank":7,"item":"CBQ-A1-Q2","current":96,"target":500,"reason":"Missing ASC 606"},
+      {"rank":8,"item":"CBQ-A1-Q1","current":104,"target":500,"reason":"Formula-only"},
+      {"rank":9,"item":"CBQ-B1-Q5","current":108,"target":600,"reason":"Missing beginning-cash logic"},
+      {"rank":10,"item":"CBQ-A1-Q5","current":72,"target":500,"reason":"READY — lowest lift"},
+      {"rank":11,"item":"CBQ-B1-Q4","current":81,"target":500,"reason":"READY — low lift"},
+      {"rank":12,"item":"CBQ-B1-Q3","current":244,"target":500,"reason":"READY — best explanation, least work"}
+    ],
+    "metadataAdditions": [
+      "Add ExplanationWrong[A-D] to CBQ-A1-Q3, CBQ-A1-Q6, CBQ-B1-Q6 (12 total fields, 9 content + 3 empty CC)",
+      "Add FormulaReference+DecisionTreeReference+CommonTrapReference to all 6 CBQ-A1 items",
+      "Add case-level Stakeholder, CompanyName, CompanyType, Industry, BusinessFunction to CBQ-A1",
+      "Fix CBQ-A1 BlueprintObjectives — add ASC 740 deferred tax (Q5 tests this)",
+      "Fix CBQ-A1 LearningObjectives — differentiate per-item (all 6 currently say 'Analyze')",
+      "Fix CBQ-B1-Q3 BusinessInterpretation field (corrupted)",
+      "Populate ReferencedBy on exhibits in both cases"
+    ]
+  },
+
+  "estimatedEffort": {
+    "wave0": "3.25 hours",
+    "wave1_certification": "3.0 hours",
+    "total": "6.25 hours"
+  },
+
+  "qualityFloor": {
+    "minExplanation": 500,
+    "mandatoryPerCAQS": ["Principle by name (EV3)","Formula with substitution (EV5)","Business interpretation","Distractor rationale (EV4)","Common exam trap","Min 50 chars (EV1)","No placeholders (EV2)","No uncertain language (EV7)"],
+    "certificationChecklist": [
+      "12/12 question_state = Certified",
+      "12/12 Explanation >= 500 chars",
+      "3/3 select/multi have ExplanationWrong[A-D] with choice-specific content",
+      "2/2 cases ProductionStatus = Production",
+      "2/2 cases RevisionHistory updated",
+      "0 DL-008 violations",
+      "0 schema errors",
+      "10/10 numeric answer keys verified",
+      "2/2 conceptual answer keys verified",
+      "1 backup of scored_cases.js per AGENTS.md §3",
+      "1 REVISION_HISTORY.md entry per AGENTS.md §4"
+    ]
+  },
+
+  "deferredToLaterWaves": [
+    "Exhibit ReferencedBy population (nice-to-have)",
+    "Q4 full prompt rewrite if clarification insufficient",
+    "Cross-case dependency chain verification"
+  ],
+
+  "signalsForNextAgent": "Wave 1 candidate package complete. 12 items profiled. 0 swaps recommended. 3 Wave 0 blockers (2 schema + 1 prompt). OUTPUT: SESSION529_WAVE1_TARGET_PACKAGE_AGENT_D.json"
+}

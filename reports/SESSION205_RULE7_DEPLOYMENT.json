@@ -1,0 +1,113 @@
+{
+  "document": "SESSION205_RULE7_DEPLOYMENT",
+  "session": "S205",
+  "board": "B — Governance Rule 7 Activation",
+  "program": "Framework v2 Deployment Authorization",
+  "date": "2026-07-27",
+  "type": "Governance Rule Activation — Read-Only",
+  "status": "ACTIVATED",
+
+  "rule_definition": {
+    "rule_id": "R7",
+    "name": "Identity Validation Required Before Any Scan Result Is Trusted",
+    "category": "Operational Governance — Identity Integrity",
+    "priority": "CRITICAL",
+    "activation_date": "2026-07-27",
+    "activated_by": "S205 Deployment Authorization Board (J)"
+  },
+
+  "rule_text": "No scan result, readiness classification, delta review, recommendation, or certification action shall be considered valid for any item unless that item has passed Gate -1 identity validation (PG-011). Identity validation confirms: (a) QID format matches the expected pack regex, (b) CorrectChoice is present and valid (A/B/C/D), (c) Stem is present and non-empty, (d) ExplanationCorrect is present and non-empty, (e) pack attribution is correct (no cross-pack QID leakage), and (f) no cross-pack QID collisions exist. Items failing identity validation are classified BLOCKED and excluded from all downstream processing.",
+
+  "enforcement": {
+    "mechanism": "Gate -1 (PG-011) is the first gate in the scan pipeline. It executes before all other gates. The Scan Orchestrator (S322 Script 3) checks Gate -1 results before proceeding to Gate 0. If Gate -1 produces BLOCKED items, the orchestrator logs identity blocks and continues processing only identity-valid items.",
+    "technical_implementation": "identity_validator.js (S322 Script 1) runs 9 checks (PRE-N1 through GV-N1-08) across all 2,540 items. BLOCKED items are logged in the scan artifact's perItemResults section with identity_block: true. All downstream consumers check identity_block before processing.",
+    "violation_consequence": "If a board consumes a scan result for an identity-blocked item, the downstream action is void. The item must be re-validated by Gate -1 before any further processing. Identity-blocked items must not appear in readiness classifications, recommendations, or certification queues."
+  },
+
+  "evidence_basis": {
+    "v1_problem": "S320 remediation targeted items by QID alone — 'P1-E-037: fix DL-025 EW slot.' But Pack A Section E uses a 5-item rotation group. QID-alone targeting grabbed the wrong variant (same QID prefix, different rotation position). The correct item was never fixed. The wrong item was modified.",
+    "v2_solution": "Gate -1 validates QID format, CC presence, Stem presence, EC presence, and pack attribution before any scan result is produced. Items with invalid QID formats (P1-E-Rxx in Pack E), missing CorrectChoice (P1-E-R33), or cross-pack QID leakage are BLOCKED. Compound-key identity prevents variant targeting failures.",
+    "s204_validation": "S204 Board B validated Gate -1 against all 5 packs: 2,539 PASS, 1 BLOCKED (P1-E-R33 — missing CC/Stem/EC). 40 items flagged with non-standard QID format (P1-E-R01 through P1-E-R40). Gate -1 correctly identified all identity anomalies. The Pack E regex was updated to accept P1-E-R\\d{2}$."
+  },
+
+  "identity_validation_checks": {
+    "pg011_checks": {
+      "PRE_N1_QID_FORMAT": {
+        "description": "QID matches expected regex per pack",
+        "regex_by_pack": {
+          "A": "^P1-[A-F]-\\d{3}$",
+          "B": "^P1B-[A-F]-\\d{3}$",
+          "C": "^P1-[A-F]C-\\d{3}$",
+          "D": "^P1-[A-F]D-\\d{3}$",
+          "E": "^P1E-[A-F]-\\d{3}$|^P1-E-R\\d{2}$"
+        },
+        "s204_result": "2,500/2,540 standard format. 40 supplementary P1-E-R items identified. Regex updated in S205."
+      },
+      "GV_N1_01_CORRECTCHOICE_PRESENT": {
+        "description": "CorrectChoice field exists and equals A/B/C/D",
+        "s204_result": "2,539/2,540 PASS. 1 BLOCKED (P1-E-R33 — CC missing)."
+      },
+      "GV_N1_02_STEM_PRESENT": {
+        "description": "Stem field exists and is non-empty",
+        "s204_result": "2,539/2,540 PASS. 1 BLOCKED (P1-E-R33 — Stem missing)."
+      },
+      "GV_N1_03_EXPLANATIONCORRECT_PRESENT": {
+        "description": "ExplanationCorrect field exists and is non-empty",
+        "s204_result": "2,539/2,540 PASS. 1 BLOCKED (P1-E-R33 — EC missing)."
+      },
+      "GV_N1_04_PACK_ATTRIBUTION": {
+        "description": "QID prefix matches containing pack file",
+        "s204_result": "2,540/2,540 PASS. Zero cross-pack QID leakage."
+      },
+      "GV_N1_05_CROSS_PACK_COLLISION": {
+        "description": "No QID appears in more than one pack file",
+        "s204_result": "2,540/2,540 PASS. Zero collisions. Note: P1-E-xxx (Pack A Section E) vs P1E-xxx (Pack E) are distinct by hyphen position — DL-033 naming convention confirmed."
+      },
+      "GV_N1_06_CORRECTCHOICE_VALID": {
+        "description": "CorrectChoice is exactly one of A/B/C/D",
+        "s204_result": "2,539/2,540 PASS. 1 BLOCKED (P1-E-R33). No CC=C/D/E/F/0/1/etc. anomalies."
+      },
+      "GV_N1_07_QID_UNIQUE_IN_PACK": {
+        "description": "No duplicate QIDs within a pack",
+        "s204_result": "2,540/2,540 PASS. All QIDs unique within their packs."
+      },
+      "GV_N1_08_QUESTION_STATE_PRESENT": {
+        "description": "question_state field exists (not required, but flagged if absent)",
+        "s204_result": "2,540/2,540 have question_state. (DL-024 Pack B Sections A/D fixed in prior session.)"
+      }
+    }
+  },
+
+  "interaction_with_other_rules": {
+    "R6 (READY Required)": "R7 is a prerequisite — R6's readiness classifications are only valid for R7-passing items. Identity-blocked items never receive a readiness classification.",
+    "R8 (Scan Once)": "R7 is the first scan in the R8 pipeline. The scan artifact's perItemResults section carries identity_block flags. All boards consuming the artifact check this flag.",
+    "Governance Guard R2": "R2 (EW[CC] empty) is a Gate 1 structural check — it operates on identity-valid items only. An identity-blocked item could carry DL-008, but the pipeline never reaches Gate 1 for that item."
+  },
+
+  "s320_prevention": {
+    "s320_failure_modes": [
+      "QID-only targeting — wrong rotation variant selected",
+      "Cross-pack QID confusion — P1-E-037 in Pack A vs P1E-037 in Pack E",
+      "Missing CC — remediation script writes to wrong ExplanationWrong slot"
+    ],
+    "r7_prevention": "All three failure modes are blocked by Gate -1: (1) compound-key identity resolves which variant is being targeted, (2) pack attribution check catches P1-E-xxx vs P1E-xxx confusion, (3) missing CC is blocked before any downstream script executes."
+  },
+
+  "activation_conditions": {
+    "gate_neg1_script": "identity_validator.js (S322 Script 1) — 10/10 self-test PASS",
+    "pack_e_regex_updated": true,
+    "p1_e_r33_blocked": true,
+    "s204_validation_complete": true,
+    "verdict": "RULE 7 ACTIVATED — Gate -1 identity validation is mandatory for all Framework v2 operations."
+  },
+
+  "cross_references": {
+    "rule_6": "SESSION205_RULE6_DEPLOYMENT.json",
+    "rule_8": "SESSION205_RULE8_DEPLOYMENT.json",
+    "dl034": "SESSION205_DL034_ANALYSIS.json",
+    "gate_neg1_pilot": "SESSION204_GATE_NEG1_VALIDATION.json",
+    "identity_blocks": "SESSION204_IDENTITY_BLOCK_REPORT.json",
+    "s322_script": "scripts/identity_validator.js",
+    "s203_spec": "SESSION203_IDENTITY_ENGINE_SPEC.json"
+  }
+}

@@ -1,0 +1,737 @@
+{
+  "session": "S303",
+  "type": "Explanation Quality Census & Instructional Value Audit",
+  "timestamp": "2026-07-26T21:30:48.351Z",
+  "summary": {
+    "totalItems": 3125,
+    "mcqItems": 2500,
+    "caseItems": 625,
+    "ecFillRate": "100.0%",
+    "ewNonCCFillRate": "71.5%",
+    "dl008Risk": 0,
+    "avgECLength": 313,
+    "ecGradeA": 18,
+    "ecGradeF": 2434,
+    "rewriteCandidates": 3007,
+    "totalSessionsEstimated": 108
+  },
+  "packEQS": {
+    "Pack A": {
+      "avgEQS": 30,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 6,
+        "C": 66,
+        "D": 50,
+        "F": 378
+      }
+    },
+    "Pack B": {
+      "avgEQS": 27,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 85,
+        "F": 414
+      }
+    },
+    "Pack C": {
+      "avgEQS": 22,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 22,
+        "F": 478
+      }
+    },
+    "Pack D": {
+      "avgEQS": 23,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 24,
+        "F": 476
+      }
+    },
+    "Pack E": {
+      "avgEQS": 17,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 2,
+        "C": 11,
+        "D": 25,
+        "F": 462
+      }
+    },
+    "scored_cases": {
+      "avgEQS": 41,
+      "count": 90,
+      "gradeDistribution": {
+        "A": 3,
+        "B": 27,
+        "C": 6,
+        "D": 1,
+        "F": 53
+      }
+    },
+    "scored_cases2": {
+      "avgEQS": 49,
+      "count": 153,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 6,
+        "C": 55,
+        "D": 64,
+        "F": 28
+      }
+    },
+    "scored_cases3": {
+      "avgEQS": 35,
+      "count": 154,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 2,
+        "C": 11,
+        "D": 57,
+        "F": 84
+      }
+    },
+    "scored_cases4": {
+      "avgEQS": 52,
+      "count": 153,
+      "gradeDistribution": {
+        "A": 2,
+        "B": 28,
+        "C": 50,
+        "D": 46,
+        "F": 27
+      }
+    },
+    "scored_cases5": {
+      "avgEQS": 42,
+      "count": 75,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 3,
+        "C": 13,
+        "D": 37,
+        "F": 22
+      }
+    }
+  },
+  "blueprint": {
+    "A - External Financial Reporting": {
+      "total": 433,
+      "ecPresent": 433,
+      "ecAvgLen": 261,
+      "eqsAvg": 27,
+      "iqA": 1,
+      "iqF": 356,
+      "certified": 419,
+      "ecFillRate": "100.0"
+    },
+    "B - Planning & Budgeting": {
+      "total": 568,
+      "ecPresent": 568,
+      "ecAvgLen": 207,
+      "eqsAvg": 23,
+      "iqA": 1,
+      "iqF": 514,
+      "certified": 556,
+      "ecFillRate": "100.0"
+    },
+    "C - Performance Management": {
+      "total": 618,
+      "ecPresent": 618,
+      "ecAvgLen": 256,
+      "eqsAvg": 27,
+      "iqA": 0,
+      "iqF": 460,
+      "certified": 606,
+      "ecFillRate": "100.0"
+    },
+    "D - Cost Management": {
+      "total": 497,
+      "ecPresent": 497,
+      "ecAvgLen": 317,
+      "eqsAvg": 29,
+      "iqA": 0,
+      "iqF": 381,
+      "certified": 491,
+      "ecFillRate": "100.0"
+    },
+    "E - Internal Controls": {
+      "total": 443,
+      "ecPresent": 443,
+      "ecAvgLen": 393,
+      "eqsAvg": 30,
+      "iqA": 0,
+      "iqF": 317,
+      "certified": 264,
+      "ecFillRate": "100.0"
+    },
+    "F - Technology & Analytics": {
+      "total": 430,
+      "ecPresent": 430,
+      "ecAvgLen": 276,
+      "eqsAvg": 24,
+      "iqA": 1,
+      "iqF": 370,
+      "certified": 281,
+      "ecFillRate": "100.0"
+    },
+    "Unknown": {
+      "total": 136,
+      "ecPresent": 135,
+      "ecAvgLen": 1019,
+      "eqsAvg": 56,
+      "iqA": 2,
+      "iqF": 24,
+      "certified": 135,
+      "ecFillRate": "99.3"
+    }
+  },
+  "crossPackDrift": {
+    "A": {
+      "packs": [
+        {
+          "pack": "Pack A",
+          "avgLen": 408,
+          "count": 75
+        },
+        {
+          "pack": "Pack B",
+          "avgLen": 172,
+          "count": 75
+        },
+        {
+          "pack": "Pack C",
+          "avgLen": 155,
+          "count": 75
+        },
+        {
+          "pack": "Pack D",
+          "avgLen": 160,
+          "count": 75
+        },
+        {
+          "pack": "Pack E",
+          "avgLen": 126,
+          "count": 75
+        },
+        {
+          "pack": "scored_cases",
+          "avgLen": 1076,
+          "count": 18
+        },
+        {
+          "pack": "scored_cases2",
+          "avgLen": 344,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases3",
+          "avgLen": 329,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases4",
+          "avgLen": 608,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases5",
+          "avgLen": 445,
+          "count": 10
+        }
+      ],
+      "maxAvg": 1076,
+      "minAvg": 126,
+      "ratio": "0.12"
+    },
+    "B": {
+      "packs": [
+        {
+          "pack": "Pack A",
+          "avgLen": 180,
+          "count": 100
+        },
+        {
+          "pack": "Pack B",
+          "avgLen": 148,
+          "count": 100
+        },
+        {
+          "pack": "Pack C",
+          "avgLen": 190,
+          "count": 100
+        },
+        {
+          "pack": "Pack D",
+          "avgLen": 185,
+          "count": 100
+        },
+        {
+          "pack": "Pack E",
+          "avgLen": 100,
+          "count": 100
+        },
+        {
+          "pack": "scored_cases",
+          "avgLen": 1544,
+          "count": 18
+        },
+        {
+          "pack": "scored_cases2",
+          "avgLen": 183,
+          "count": 17
+        },
+        {
+          "pack": "scored_cases3",
+          "avgLen": 199,
+          "count": 17
+        },
+        {
+          "pack": "scored_cases4",
+          "avgLen": 222,
+          "count": 11
+        },
+        {
+          "pack": "scored_cases5",
+          "avgLen": 97,
+          "count": 5
+        }
+      ],
+      "maxAvg": 1544,
+      "minAvg": 97,
+      "ratio": "0.06"
+    },
+    "C": {
+      "packs": [
+        {
+          "pack": "Pack A",
+          "avgLen": 194,
+          "count": 100
+        },
+        {
+          "pack": "Pack B",
+          "avgLen": 297,
+          "count": 100
+        },
+        {
+          "pack": "Pack C",
+          "avgLen": 175,
+          "count": 100
+        },
+        {
+          "pack": "Pack D",
+          "avgLen": 187,
+          "count": 100
+        },
+        {
+          "pack": "Pack E",
+          "avgLen": 146,
+          "count": 100
+        },
+        {
+          "pack": "scored_cases",
+          "avgLen": 828,
+          "count": 18
+        },
+        {
+          "pack": "scored_cases2",
+          "avgLen": 607,
+          "count": 15
+        },
+        {
+          "pack": "scored_cases3",
+          "avgLen": 575,
+          "count": 15
+        },
+        {
+          "pack": "scored_cases4",
+          "avgLen": 565,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases5",
+          "avgLen": 349,
+          "count": 15
+        }
+      ],
+      "maxAvg": 828,
+      "minAvg": 146,
+      "ratio": "0.18"
+    },
+    "D": {
+      "packs": [
+        {
+          "pack": "Pack A",
+          "avgLen": 181,
+          "count": 75
+        },
+        {
+          "pack": "Pack B",
+          "avgLen": 261,
+          "count": 75
+        },
+        {
+          "pack": "Pack C",
+          "avgLen": 167,
+          "count": 75
+        },
+        {
+          "pack": "Pack D",
+          "avgLen": 183,
+          "count": 75
+        },
+        {
+          "pack": "Pack E",
+          "avgLen": 123,
+          "count": 75
+        },
+        {
+          "pack": "scored_cases",
+          "avgLen": 1355,
+          "count": 12
+        },
+        {
+          "pack": "scored_cases2",
+          "avgLen": 439,
+          "count": 16
+        },
+        {
+          "pack": "scored_cases3",
+          "avgLen": 285,
+          "count": 17
+        },
+        {
+          "pack": "scored_cases4",
+          "avgLen": 343,
+          "count": 17
+        },
+        {
+          "pack": "scored_cases5",
+          "avgLen": 492,
+          "count": 15
+        }
+      ],
+      "maxAvg": 1355,
+      "minAvg": 123,
+      "ratio": "0.09"
+    },
+    "E": {
+      "packs": [
+        {
+          "pack": "Pack A",
+          "avgLen": 986,
+          "count": 75
+        },
+        {
+          "pack": "Pack B",
+          "avgLen": 333,
+          "count": 75
+        },
+        {
+          "pack": "Pack C",
+          "avgLen": 180,
+          "count": 75
+        },
+        {
+          "pack": "Pack D",
+          "avgLen": 175,
+          "count": 75
+        },
+        {
+          "pack": "Pack E",
+          "avgLen": 68,
+          "count": 75
+        },
+        {
+          "pack": "scored_cases",
+          "avgLen": 971,
+          "count": 18
+        },
+        {
+          "pack": "scored_cases2",
+          "avgLen": 547,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases3",
+          "avgLen": 478,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases4",
+          "avgLen": 492,
+          "count": 15
+        },
+        {
+          "pack": "scored_cases5",
+          "avgLen": 548,
+          "count": 15
+        }
+      ],
+      "maxAvg": 986,
+      "minAvg": 68,
+      "ratio": "0.07"
+    },
+    "F": {
+      "packs": [
+        {
+          "pack": "Pack A",
+          "avgLen": 227,
+          "count": 75
+        },
+        {
+          "pack": "Pack B",
+          "avgLen": 304,
+          "count": 75
+        },
+        {
+          "pack": "Pack C",
+          "avgLen": 205,
+          "count": 75
+        },
+        {
+          "pack": "Pack D",
+          "avgLen": 198,
+          "count": 74
+        },
+        {
+          "pack": "Pack E",
+          "avgLen": 77,
+          "count": 75
+        },
+        {
+          "pack": "scored_cases",
+          "avgLen": 2891,
+          "count": 6
+        },
+        {
+          "pack": "scored_cases2",
+          "avgLen": 513,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases3",
+          "avgLen": 442,
+          "count": 10
+        },
+        {
+          "pack": "scored_cases4",
+          "avgLen": 422,
+          "count": 15
+        },
+        {
+          "pack": "scored_cases5",
+          "avgLen": 664,
+          "count": 15
+        }
+      ],
+      "maxAvg": 2891,
+      "minAvg": 77,
+      "ratio": "0.03"
+    },
+    "": {
+      "packs": [
+        {
+          "pack": "scored_cases2",
+          "avgLen": 1069,
+          "count": 75
+        },
+        {
+          "pack": "scored_cases3",
+          "avgLen": 323,
+          "count": 30
+        },
+        {
+          "pack": "scored_cases4",
+          "avgLen": 1624,
+          "count": 30
+        }
+      ],
+      "maxAvg": 1624,
+      "minAvg": 323,
+      "ratio": "0.20"
+    }
+  },
+  "metadataCorrelation": {
+    "difficultyCorrelation": {
+      "Easy": 224,
+      "Moderate-Easy": 402,
+      "Moderate": 268,
+      "Difficult": 440,
+      "Very Difficult": 0,
+      "?": 0
+    },
+    "cognitiveLevelCorrelation": {
+      "Remember": {
+        "avgLen": 418,
+        "count": 71
+      },
+      "Understand": {
+        "avgLen": 255,
+        "count": 1271
+      },
+      "Apply": {
+        "avgLen": 281,
+        "count": 1318
+      },
+      "Evaluate": {
+        "avgLen": 472,
+        "count": 182
+      },
+      "Analyze": {
+        "avgLen": 419,
+        "count": 208
+      },
+      "?": {
+        "avgLen": 1069,
+        "count": 75
+      }
+    }
+  },
+  "rewriteForecast": {
+    "p0Critical": {
+      "count": 1,
+      "sessions": 1,
+      "description": "Missing/empty ExplanationCorrect"
+    },
+    "p1High": {
+      "count": 285,
+      "sessions": 19,
+      "description": "Placeholder/thin EC or 2+ empty EW slots"
+    },
+    "p2Medium": {
+      "count": 2407,
+      "sessions": 81,
+      "description": "Thin EC or 1 empty EW slot or grade F instructional quality"
+    },
+    "p3Low": {
+      "count": 314,
+      "sessions": 7,
+      "description": "Grade D instructional quality"
+    },
+    "totalCandidates": 3007,
+    "totalSessions": 108
+  },
+  "highRiskCount": 250,
+  "caseBankGap": {
+    "totalCaseEC": 625,
+    "ecPresent": 625,
+    "ecMissing": 0,
+    "ecAvgLen": 714,
+    "ewTotal": 2500,
+    "ewPresent": 97,
+    "ewEmpty": 2403,
+    "ewFillRate": "3.9",
+    "byFile": {
+      "scored_cases": {
+        "total": 90,
+        "ecPresent": 90,
+        "ecAvgLen": 1257,
+        "ewTotal": 360,
+        "ewPresent": 97,
+        "ecFillRate": "100.0",
+        "ewFillRate": "26.9"
+      },
+      "scored_cases2": {
+        "total": 153,
+        "ecPresent": 153,
+        "ecAvgLen": 742,
+        "ewTotal": 612,
+        "ewPresent": 0,
+        "ecFillRate": "100.0",
+        "ewFillRate": "0.0"
+      },
+      "scored_cases3": {
+        "total": 154,
+        "ecPresent": 154,
+        "ecAvgLen": 350,
+        "ewTotal": 616,
+        "ewPresent": 0,
+        "ecFillRate": "100.0",
+        "ewFillRate": "0.0"
+      },
+      "scored_cases4": {
+        "total": 153,
+        "ecPresent": 153,
+        "ecAvgLen": 849,
+        "ewTotal": 612,
+        "ewPresent": 0,
+        "ecFillRate": "100.0",
+        "ewFillRate": "0.0"
+      },
+      "scored_cases5": {
+        "total": 75,
+        "ecPresent": 75,
+        "ecAvgLen": 477,
+        "ewTotal": 300,
+        "ewPresent": 0,
+        "ecFillRate": "100.0",
+        "ewFillRate": "0.0"
+      }
+    },
+    "ecFillRate": "100.0"
+  },
+  "certBenchmark": {
+    "alreadyCertified": 2752,
+    "readyForCertification": 0,
+    "needsUpgrade": 1,
+    "needsMajorRewrite": 372,
+    "totalNotCertified": 373,
+    "certifiedReadinessPct": "88.1",
+    "byPack": {
+      "Pack A": {
+        "total": 500,
+        "certified": 481,
+        "notCertified": 19,
+        "readyForCert": 0,
+        "needsUpgrade": 1,
+        "needsMajorRewrite": 18
+      },
+      "Pack B": {
+        "total": 500,
+        "certified": 500,
+        "notCertified": 0,
+        "readyForCert": 0,
+        "needsUpgrade": 0,
+        "needsMajorRewrite": 0
+      },
+      "Pack C": {
+        "total": 500,
+        "certified": 350,
+        "notCertified": 150,
+        "readyForCert": 0,
+        "needsUpgrade": 0,
+        "needsMajorRewrite": 150
+      },
+      "Pack D": {
+        "total": 500,
+        "certified": 350,
+        "notCertified": 150,
+        "readyForCert": 0,
+        "needsUpgrade": 0,
+        "needsMajorRewrite": 150
+      },
+      "Pack E": {
+        "total": 500,
+        "certified": 500,
+        "notCertified": 0,
+        "readyForCert": 0,
+        "needsUpgrade": 0,
+        "needsMajorRewrite": 0
+      }
+    }
+  }
+}

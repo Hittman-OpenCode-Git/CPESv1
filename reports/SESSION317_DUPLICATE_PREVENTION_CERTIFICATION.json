@@ -1,0 +1,112 @@
+{
+  "title": "SESSION317_DUPLICATE_PREVENTION_CERTIFICATION",
+  "session": "317",
+  "generated": "2026-07-27",
+  "auditor": "S317 Agent AA — Duplicate Prevention Re-Certification",
+  "methodology": "Revalidated all 10 Wave 3 QIDs against: (1) QUESTION_REGISTRY_INDEX.md, (2) QUESTION_SIMILARITY_LEDGER.json, (3) all 5 pack files, (4) S806 collision audit reserved QIDs. Cross-referenced portal: Gate 0 Duplicate Prevention.",
+  "summary": {
+    "total_scanned": 10,
+    "collisions_detected": 0,
+    "reserved_conflicts": 0,
+    "cross_pack_duplicates": 0,
+    "uniqueness_confirmed": 10,
+    "gate0_status": "PASS"
+  },
+  "items": [
+    {
+      "QuestionID": "P1-E-R34",
+      "UniqueConceptKey": "E-R34-internal-control-objectives",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Assigned as part of S316 Wave 3 expanded range. No collision with any existing or reserved QID."
+    },
+    {
+      "QuestionID": "P1-E-R35",
+      "UniqueConceptKey": "E-R35-reasonable-assurance-limitations",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Assigned as part of S316 Wave 3 expanded range. No collision with any existing or reserved QID."
+    },
+    {
+      "QuestionID": "P1-E-R36",
+      "UniqueConceptKey": "E-R36-management-responsibility-internal-control",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Assigned as part of S316 Wave 3 expanded range. No collision with any existing or reserved QID."
+    },
+    {
+      "QuestionID": "P1-E-R26",
+      "UniqueConceptKey": "E-R26-segregation-incompatible-functions",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Was in original S316 planned range (R21-R33). Remapped from collision with S806 pre-authored R21-R25,R28,R33. Now confirmed unique."
+    },
+    {
+      "QuestionID": "P1-E-R27",
+      "UniqueConceptKey": "E-R27-authorization-general-specific",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Was in original S316 planned range (R21-R33). Remapped from collision with S806 pre-authored R21-R25,R28,R33. Now confirmed unique."
+    },
+    {
+      "QuestionID": "P1-E-R29",
+      "UniqueConceptKey": "E-R29-physical-controls-custody",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Was in original S316 planned range (R21-R33). Remapped from collision with S806 pre-authored R21-R25,R28,R33. Now confirmed unique."
+    },
+    {
+      "QuestionID": "P1-E-R37",
+      "UniqueConceptKey": "E-R37-risk-identification-techniques",
+      "LOSTag": "E.1.d Risk Assessment",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Assigned as part of S316 Wave 3 expanded range. No collision with any existing or reserved QID."
+    },
+    {
+      "QuestionID": "P1-E-R38",
+      "UniqueConceptKey": "E-R38-inherent-residual-risk",
+      "LOSTag": "E.1.d Risk Assessment",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Assigned as part of S316 Wave 3 expanded range. No collision with any existing or reserved QID."
+    },
+    {
+      "QuestionID": "P1-E-R39",
+      "UniqueConceptKey": "E-R39-SOX-302-906-comparison",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Assigned as part of S316 Wave 3 expanded range. No collision with any existing or reserved QID."
+    },
+    {
+      "QuestionID": "P1-E-R40",
+      "UniqueConceptKey": "E-R40-COSO-2013-principles",
+      "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+      "status": "UNIQUE",
+      "collision_check": "PASS",
+      "reserved_check": "PASS",
+      "notes": "Assigned as part of S316 Wave 3 expanded range. No collision with any existing or reserved QID."
+    }
+  ],
+  "registry_files_verified": [
+    "QUESTION_REGISTRY_INDEX.md — S316 updated (2,985→2,995); S317 will update (2,995→3,005)",
+    "QUESTION_SIMILARITY_LEDGER.json — 20 existing entries; 10 new entries to be added",
+    "DUPLICATE_PREVENTION_REPORT.json — Gate 0 confirmed ACTIVE"
+  ]
+}

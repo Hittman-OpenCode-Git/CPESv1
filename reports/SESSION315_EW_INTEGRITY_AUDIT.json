@@ -1,0 +1,396 @@
+{
+  "title": "SESSION315_EW_INTEGRITY_AUDIT",
+  "session": "315",
+  "agent": "E",
+  "generated": "2026-07-27",
+  "audits": [
+    {
+      "QuestionID": "P1-E-R11",
+      "CorrectChoice": "B",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 646,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "C": {
+          "isEmpty": false,
+          "charCount": 547,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 635,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R14",
+      "CorrectChoice": "A",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "B": {
+          "isEmpty": false,
+          "charCount": 681,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "C": {
+          "isEmpty": false,
+          "charCount": 650,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 611,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R15",
+      "CorrectChoice": "C",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 662,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": false,
+          "charCount": 588,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "C": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 573,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R16",
+      "CorrectChoice": "D",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 582,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": false,
+          "charCount": 552,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "C": {
+          "isEmpty": false,
+          "charCount": 472,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "D": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R17",
+      "CorrectChoice": "A",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "B": {
+          "isEmpty": false,
+          "charCount": 543,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "C": {
+          "isEmpty": false,
+          "charCount": 595,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 458,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R19",
+      "CorrectChoice": "C",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 550,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": false,
+          "charCount": 547,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "C": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 588,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R20",
+      "CorrectChoice": "B",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 516,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "C": {
+          "isEmpty": false,
+          "charCount": 470,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 589,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R30",
+      "CorrectChoice": "D",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 618,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": false,
+          "charCount": 546,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "C": {
+          "isEmpty": false,
+          "charCount": 533,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "D": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R31",
+      "CorrectChoice": "C",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 440,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": false,
+          "charCount": 425,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "C": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 563,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    },
+    {
+      "QuestionID": "P1-E-R32",
+      "CorrectChoice": "B",
+      "ewCoverage": {
+        "totalSlots": 4,
+        "correctlyEmptyCC": true,
+        "filledNonCCSlots": 3,
+        "totalNonCCSlots": 3,
+        "coveragePercent": 100
+      },
+      "ewDetails": {
+        "A": {
+          "isEmpty": false,
+          "charCount": 658,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "B": {
+          "isEmpty": true,
+          "charCount": 0,
+          "isCorrectChoice": true,
+          "status": "CORRECTLY_EMPTY"
+        },
+        "C": {
+          "isEmpty": false,
+          "charCount": 687,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        },
+        "D": {
+          "isEmpty": false,
+          "charCount": 568,
+          "isCorrectChoice": false,
+          "status": "SUBSTANTIVE"
+        }
+      },
+      "verdict": "INTEGRITY_CLEAN"
+    }
+  ],
+  "summary": {
+    "totalItems": 10,
+    "integrityClean": 10,
+    "ewCoverage": "100%",
+    "dl008Violations": 0,
+    "dl026Violations": 0,
+    "avgEWCharsPerDistractor": 570
+  }
+}

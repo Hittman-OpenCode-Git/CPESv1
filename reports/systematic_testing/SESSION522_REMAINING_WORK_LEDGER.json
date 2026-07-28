@@ -1,0 +1,77 @@
+{
+  "session": "522",
+  "timestamp": "2026-07-26T11:35:00Z",
+  "purpose": "Remaining-work ledger for 500-series case-bank completion",
+
+  "remaining_uncertified": [
+    {
+      "array": "ENHANCED_CASE_BASE",
+      "file": "scored_cases.js",
+      "items": 90,
+      "cases": 15,
+      "classification": "WHOLLY_UNPROCESSED",
+      "effort": "HIGH — 90 items, all need CAQS review, explanation uplift, difficulty",
+      "priority": "LOWEST — not wired into runtime delivery pool (Pack 1)",
+      "estimated_sessions": "4-5",
+      "notes": "Legacy CBQ-style CaseIDs (CBQ-A1 through CBQ-F2). Exists alongside MIGRATED_CASE_BASE_A (120 items, Certified) in same file. Different from ENHANCED_CASE_BASE2-5 format."
+    },
+    {
+      "array": "MIGRATED_CASE_BASE_D",
+      "file": "scored_cases4.js",
+      "items": 75,
+      "cases": 15,
+      "classification": "WHOLLY_UNPROCESSED",
+      "effort": "HIGH — 75 items, 15 cases, all need full CAQS review",
+      "priority": "MEDIUM — has Difficulty metadata already; only needs CAQS review + certification",
+      "estimated_sessions": "3-4",
+      "notes": "CASE-D* CaseIDs. Already has per-item Difficulty (0 missing). Likely migrated from MCQ with good structure but never CAQS-reviewed. Exists alongside ENHANCED_CASE_BASE4 (78/78 Certified) in same file."
+    }
+  ],
+
+  "deferred_enhancements": [
+    {
+      "id": "DL-032-DIFFICULTY",
+      "scope": "370 items across 5 ENHANCED arrays missing per-item Difficulty",
+      "effort": "4-6 hours",
+      "priority": "LOW — non-blocking for certification. Items are already Certified.",
+      "approach": "Scripted batch assignment by CognitiveLevel"
+    },
+    {
+      "id": "EXPLANATION_LENGTH",
+      "scope": "ENHANCED_CASE_BASE (66/90 items <100 chars), others already uplifted",
+      "effort": "Covered in certification waves",
+      "priority": "LOW — part of CAQS review"
+    },
+    {
+      "id": "CASE_METADATA",
+      "scope": "Industry, CompanyType, CompanyName, Stakeholder — inconsistent across arrays",
+      "effort": "1-2 hours",
+      "priority": "LOWEST — cosmetic metadata"
+    }
+  ],
+
+  "completed_enhanced_arrays": {
+    "ENHANCED_CASE_BASE2": "78/78 Certified (S518)",
+    "ENHANCED_CASE_BASE3": "79/79 Certified (S519 + prior cert)",
+    "ENHANCED_CASE_BASE4": "78/78 Certified (S520 + prior cert)",
+    "ENHANCED_CASE_BASE5": "75/75 Certified (S521 + prior cert)",
+    "total_certified_in_completed": 310
+  },
+
+  "next_recommended_targets": [
+    {
+      "session": "S523",
+      "target": "MIGRATED_CASE_BASE_D",
+      "file": "scored_cases4.js",
+      "items": 75,
+      "rationale": "Higher priority than ENHANCED_CASE_BASE (has Difficulty metadata, likely structurally cleaner). CASE-D* format suggests prior migration quality. 75 items = 3-4 sessions."
+    },
+    {
+      "session": "S527",
+      "target": "ENHANCED_CASE_BASE",
+      "file": "scored_cases.js",
+      "items": 90,
+      "rationale": "Largest remaining work. Not in runtime delivery pool. Defer until MIGRATED_CASE_BASE_D complete."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "session": "509",
+  "date": "2026-07-25",
+  "scope": "scored_cases2.js — MIGRATED_CASE_BASE_B array (15 cases, 75 items)",
+  "case_range": "CASE-B12 through CASE-B26",
+  "file": "scored_cases2.js",
+  "lines": "4129-6389",
+  "summary": {
+    "total_cases": 15,
+    "total_items": 75,
+    "item_types": {
+      "select": 75
+    },
+    "cognitive_levels": {
+      "Understand": "~15",
+      "Apply": "~45",
+      "Analyze": "~10",
+      "Evaluate": "~5"
+    },
+    "current_explanation_quality": {
+      "one_sentence_only": "~55 items (calculation formulas without accounting principle reference)",
+      "formula_with_brief_context": "~20 items",
+      "distractor_rationale_present": 0,
+      "asc_coso_citation_present": 0,
+      "business_interpretation_present": 0
+    },
+    "g_new4_gaps": {
+      "G5.3_case_explanation_sufficiency": "ALL 75 items fail — one-line explanations on Apply/Analyze/Evaluate items",
+      "G5.4_distractor_rationale": "ALL 75 items fail — zero distractor-oriented rationale",
+      "G5.5_authoritative_standard_citation": "ALL 75 items need citations — zero ASC/COSO/IFRS references in explanations"
+    },
+    "all_items_unprocessed": true,
+    "no_certified_items": true
+  },
+  "cases": [
+    {"CaseID": "CASE-B12", "topic": "Financial Reporting Analysis", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Revenue recognition","Asset impairment","Long-term liabilities","Fixed assets and depreciation","Statement of cash flows"]},
+    {"CaseID": "CASE-B13", "topic": "Budgeting Concepts", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Budgeting","Budgeting","Budgeting","Budgeting","Budgeting"]},
+    {"CaseID": "CASE-B14", "topic": "Performance Management", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Performance","Performance","Performance","Performance","Performance"]},
+    {"CaseID": "CASE-B15", "topic": "Cost Management", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Cost","Cost","Cost","Cost","Cost"]},
+    {"CaseID": "CASE-B16", "topic": "Internal Controls", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Controls","Controls","Controls","Controls","Controls"]},
+    {"CaseID": "CASE-B17", "topic": "Budgeting", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Budgeting","Budgeting","Budgeting","Budgeting","Budgeting"]},
+    {"CaseID": "CASE-B18", "topic": "Cost Behavior", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Cost","Cost","Cost","Cost","Cost"]},
+    {"CaseID": "CASE-B19", "topic": "Variance Analysis", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Variance","Variance","Variance","Variance","Variance"]},
+    {"CaseID": "CASE-B20", "topic": "Transfer Pricing", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Transfer","Transfer","Transfer","Transfer","Transfer"]},
+    {"CaseID": "CASE-B21", "topic": "CVP Analysis", "items": 5, "types": ["select","select","select","select","select"], "topics": ["CVP","CVP","CVP","CVP","CVP"]},
+    {"CaseID": "CASE-B22", "topic": "Standard Costing", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Standard","Standard","Standard","Standard","Standard"]},
+    {"CaseID": "CASE-B23", "topic": "Ethics", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Ethics","Ethics","Ethics","Ethics","Ethics"]},
+    {"CaseID": "CASE-B24", "topic": "Technology", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Technology","Technology","Technology","Technology","Technology"]},
+    {"CaseID": "CASE-B25", "topic": "Risk Management", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Risk","Risk","Risk","Risk","Risk"]},
+    {"CaseID": "CASE-B26", "topic": "Data Analytics", "items": 5, "types": ["select","select","select","select","select"], "topics": ["Analytics","Analytics","Analytics","Analytics","Analytics"]}
+  ],
+  "uplift_plan": {
+    "explanation_expansions": "Add accounting principle reference (ASC/IAS/COSO) + why correct is correct + distractor rationale for wrong choices + business interpretation where applicable",
+    "batch_1": "CASE-B12 through B16 (5 cases, 25 items)",
+    "batch_2": "CASE-B17 through B21 (5 cases, 25 items)",
+    "batch_3": "CASE-B22 through B26 (5 cases, 25 items)",
+    "max_per_batch": 28,
+    "governance_guard_rule_5_compliant": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "session": "515",
+  "agent": "E",
+  "timestamp": "2026-07-25T23:00:00Z",
+  "post_flight_tests": {
+    "governance_guard": { "suite": "test_governance_guard.js", "passed": 20, "failed": 0, "result": "PASS" },
+    "session_recovery": { "suite": "test_session_recovery.js", "passed": 12, "failed": 0, "result": "PASS" },
+    "total": "32/32 PASS"
+  },
+  "file_validation": {
+    "scored_cases3_js_parse": {
+      "ENHANCED_CASE_BASE3": "15 cases — PARSE OK",
+      "MIGRATED_CASE_BASE_C": "15 cases, 75 items — PARSE OK",
+      "certified_items": 74,
+      "unprocessed_items": 1,
+      "certified_cases": 14,
+      "unprocessed_cases": 1
+    },
+    "scored_cases2_js": {
+      "status": "UNCHANGED — no modifications in S515",
+      "MIGRATED_CASE_BASE_B": "15 cases, 75 items, 75 Certified — unchanged",
+      "ENHANCED_CASE_BASE2_CBQ2_A3": "5 Unprocessed items — unchanged (HOLD_BACK, no state changes applied)"
+    }
+  },
+  "file_changes": {
+    "scored_cases3_js": "74 item-level question_state: Unprocessed → Certified; 14 case-level question_state: Unprocessed → Certified; 1 item (CASE-C1-Q4) left Unprocessed",
+    "files_not_changed": [
+      "scored_cases.js", "scored_cases2.js", "scored_cases4.js", "scored_cases5.js",
+      "pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js",
+      "app.js", "index_updated.html",
+      "may-core.js", "may-learner-state.js"
+    ]
+  },
+  "unauthorized_diff_check": {
+    "may_files": "NOT IN DIFF",
+    "pack_files": "NOT IN DIFF",
+    "app_js": "NOT IN DIFF",
+    "index_html": "NOT IN DIFF",
+    "scored_cases_except_3": "NOT IN DIFF",
+    "status": "CLEAN — only scored_cases3.js modified, as authorized"
+  },
+  "backup": "backups/scored_cases3.js.bak-20260725S515 (396,685 bytes)"
+}

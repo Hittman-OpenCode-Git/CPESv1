@@ -1,0 +1,272 @@
+{
+  "document": "SESSION211_TECHNICAL_DEBT_REVIEW",
+  "session": "S211",
+  "series": "200-Series Architecture Stewardship",
+  "title": "Technical Debt Retirement Board — Post-S208 Reclassification",
+  "status": "COMPLETE",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — classification only, no remediation",
+  "verdict": "DEBT_CLASSIFIED_AND_TRACKED",
+  "authority": "PROJECT_CONSTITUTION.md; S208 Board G Technical Debt Register (SESSION208_TECHNICAL_DEBT_REGISTER.json)",
+  "depends_on": [
+    "SESSION208_TECHNICAL_DEBT_REGISTER.json — 12 debt items, priority-ordered",
+    "SESSION209_DRIFT_AUDIT.json — 0 major drift, baseline reconciled",
+    "SESSION210_REGISTRY_INTEGRITY.json — 0 authority conflicts",
+    "knowledge/CURRENT_BASELINES.md §3 — current defect status"
+  ],
+  "sources_consumed": [
+    "SESSION208_TECHNICAL_DEBT_REGISTER.json — original 12-item register",
+    "knowledge/DEFECT_LIBRARY.md — DL-001 through DL-036",
+    "knowledge/CURRENT_BASELINES.md — certified pool at 2,298, defect status",
+    "knowledge/REVISION_HISTORY.md — post-S208 remediation evidence",
+    "governance/DEFECT_MANIFEST_DL008_DL026.json — 117 blocked QIDs"
+  ],
+
+  "debt_reclassification_summary": {
+    "total_items_reviewed": 12,
+    "reclassification_results": {
+      "retire": 0,
+      "mitigate": 7,
+      "accept": 4,
+      "escalate": 1
+    },
+    "status_change_since_s208": "4 items changed status: TD-001 → learner-safety review updated, TD-006 scope reduced 851→163 fields, TD-012 expanded to 4-pack drift (resolved via G1-G5), TD-002 verified — no remediation yet executed (still scheduled S816-S818)"
+  },
+
+  "learner_safety_debt": [
+    {
+      "id": "TD-001",
+      "defect_ref": "DL-016",
+      "title": "Metadata-Block ChoiceA-D +1 Offset on Certified Pack A Items",
+      "s208_priority": 1,
+      "current_priority": 1,
+      "severity": "HIGH — ACTIVE LEARNER-SAFETY RISK",
+      "scope": "Pack A Sections B, C, F (Certified items). Metadata ExplanationWrong fields describe wrong item's distractors.",
+      "current_state": "UNCHANGED since S208. Pack A Section E remediated S805 (57 items). Sections B/C/F remain.",
+      "effort": "Medium — ~150 items, ≤30 per batch",
+      "classification": "MITIGATE",
+      "rationale": "Cannot retire — active learner-pool exposure. Cannot accept — learners see misleading feedback. Must mitigate before any further Pack A certification waves.",
+      "target": "Before any further Pack A Section B, C, or F certification waves",
+      "blocking_certification": true,
+      "recommendation": "Highest priority remediation. Align metadata-block ChoiceA-D with content-block Choices.A-D. Verify per-item that EW text corresponds to actual distractors."
+    },
+    {
+      "id": "TD-002",
+      "defect_ref": "DL-026 + DL-035",
+      "title": "39 Domain F Certified Items with Empty Distractor ExplanationWrong Slots",
+      "s208_priority": 2,
+      "current_priority": 2,
+      "severity": "HIGH — ACTIVE LEARNER-SAFETY RISK",
+      "scope": "39 items: Pack C (28) + Pack D (11). ~117 empty non-CC ExplanationWrong fields.",
+      "current_state": "UNCHANGED since S208. Scheduled S816-S818. Rule 6 deployed S814 — prevention active. 0 new DL-026-on-Certified since deployment. Content remediation not yet executed.",
+      "effort": "Medium — author ~117 choice-specific distractor explanations",
+      "classification": "MITIGATE",
+      "rationale": "Active learner-safety risk — learners see no distractor feedback. Prevention active (Rule 6). Content remediation pending. Cannot accept residual risk.",
+      "target": "S816-S818 as originally scheduled",
+      "blocking_certification": false,
+      "recommendation": "Execute scheduled S816-S818 remediation. Author choice-specific ExplanationWrong fields for all empty non-CC slots. Domain F Technology & Analytics content."
+    }
+  ],
+
+  "quality_systematic_debt": [
+    {
+      "id": "TD-003",
+      "defect_ref": "DL-031",
+      "title": "Systematic Difficulty Inflation — Definition-Match Items",
+      "s208_priority": 3,
+      "current_priority": 4,
+      "severity": "HIGH — systematic quality, no learner exposure",
+      "scope": "~500 items across all 5 packs",
+      "current_state": "UNCHANGED since S208. Scoped by Session 700 Layer 2. Not remediated.",
+      "effort": "High — 8-10 sessions for ~500 items",
+      "classification": "MITIGATE",
+      "rationale": "Systematic quality defect. Blocks difficulty-dependent features (adaptive learning, study planning). Not learner-safety critical (all items still correct). High remediation effort but necessary.",
+      "target": "Before any new difficulty-dependent features are deployed",
+      "blocking_certification": false,
+      "recommendation": "Schedule incremental recalibration alongside natural certification waves. Target definition-match items first. CAQS §6.1 distribution targets post-remediation."
+    },
+    {
+      "id": "TD-004",
+      "defect_ref": "DL-032",
+      "title": "Case Bank Uniform Difficulty — Zero Variance",
+      "s208_priority": 4,
+      "current_priority": 5,
+      "severity": "MEDIUM — blocks case item certification",
+      "scope": "~330 case items across scored_cases2-5",
+      "current_state": "UNCHANGED since S208. ENHANCED_CASE_BASE (90 items) remediated S530/S537. 330 remaining.",
+      "effort": "Medium-High — 5-7 sessions",
+      "classification": "MITIGATE",
+      "rationale": "Blocks case item certification pipeline. All 330 items labeled 'Moderate' with zero variance — psychometrically implausible.",
+      "target": "Before case items enter certification pipeline",
+      "blocking_certification": true,
+      "recommendation": "Assign genuine difficulty labels based on cognitive level, calculation complexity, exhibit dependencies, and distractor deceptiveness."
+    }
+  ],
+
+  "content_backlog_debt": [
+    {
+      "id": "TD-005",
+      "defect_ref": "DL-012",
+      "title": "Pack C/D Section E Clonal Redundancy — 140 Template Clones",
+      "s208_priority": 5,
+      "current_priority": 6,
+      "severity": "MEDIUM — blocks content certification",
+      "scope": "140 clone items across Pack C Section E and Pack D Section E",
+      "current_state": "UNCHANGED since S208. Remediation proposal exists (DL012_REMEDIATION_PROPOSAL.md). Decision pending: archive vs re-key.",
+      "classification": "ESCALATE",
+      "rationale": "Requires architectural decision before execution. Both options (archive 112 clones vs re-key with UniqueConceptKey) have different content impact. Decision cannot be made at the debt-review level — requires governance board authorization.",
+      "target": "Decision needed before Pack C/D Section E certification",
+      "blocking_certification": true,
+      "escalation_rationale": "Decision dependency. The debt review board cannot resolve the archive-vs-rekey question. This escalates to the S212 Executive Board for architectural guidance.",
+      "recommendation": "S212 Executive Board to select: Option A (Archive 112 clones, keep 28 seeds) or Option B (Re-key with UniqueConceptKey). Execute after decision."
+    },
+    {
+      "id": "TD-006",
+      "defect_ref": "DL-013",
+      "title": "Template Boilerplate Distractor Explanations — 163 Fields Remaining",
+      "s208_priority": 6,
+      "current_priority": 7,
+      "severity": "MEDIUM — non-Certified items only, 0 learner impact",
+      "scope": "163 remaining ExplanationWrong fields with boilerplate ('represents a plausible misconception...'). DOWNGRADED from 851 at S208 to 163 per CURRENT_BASELINES.md §3 (post-S723 closure baseline and autonomous runs).",
+      "current_state": "1,736 of 2,587 fields cleared (67.1%→93.7%). Remaining 163 fields in non-Certified Pack C/D Sections E/F only. 0 Certified items affected.",
+      "effort": "Medium — incremental alongside certification waves",
+      "classification": "MITIGATE",
+      "rationale": "Significant progress since S208: scope reduced from 851→163 fields (80% reduction). Remaining boilerplate only in non-Certified sections. Clear during natural certification waves — no urgency.",
+      "target": "During respective section certification waves",
+      "blocking_certification": true,
+      "recommendation": "Continue clearing boilerplate alongside certification. Per-section approach. Priority: Pack C Sections E/F, then Pack D Sections E/F."
+    }
+  ],
+
+  "architectural_gap_debt": [
+    {
+      "id": "TD-007",
+      "defect_ref": "S813 C2 / DL-036",
+      "title": "Pipeline Artifact Reuse — Zero Downstream Consumption",
+      "s208_priority": 7,
+      "current_priority": 8,
+      "severity": "MEDIUM — process improvement",
+      "scope": "Certification pipeline: scan orchestrator, readiness scorer, certification candidate engine. Each independently re-scans raw files.",
+      "current_state": "UNCHANGED since S208. Scheduled S819-S820.",
+      "effort": "Medium — connect existing pipeline stages via artifact consumption",
+      "classification": "MITIGATE",
+      "rationale": "Directly addresses P2 (Scan Once, Consume Many). Reduces DRIFT-2 and DRIFT-3 risk. Scheduled — not yet executed. Beneficial but not blocking.",
+      "target": "S819-S820 as originally scheduled",
+      "blocking_certification": false,
+      "recommendation": "Connect scan orchestrator output → readiness scorer input → certification candidate engine input. Eliminate independent re-scanning."
+    },
+    {
+      "id": "TD-008",
+      "defect_ref": "S255 Student Data Bridge",
+      "title": "Student Performance Data — Design Ready, Zero Operational Data",
+      "s208_priority": 8,
+      "current_priority": 10,
+      "severity": "LOW — deployment gap",
+      "scope": "Canonical student record schema v1.0.0 designed. Zero operational student data exists.",
+      "current_state": "UNCHANGED since S208. Architecture complete. This is a deployment milestone.",
+      "classification": "ACCEPT",
+      "rationale": "Not a content or architecture defect. The student data bridge design (S255) is architecturally complete with FK relationships to all registries. Remediation is deployment, not session work.",
+      "accepted_risk": "Student-facing analytics, adaptive learning, and exposure indexing remain blocked until deployment.",
+      "recommendation": "Deploy to production. No session work required."
+    },
+    {
+      "id": "TD-009",
+      "defect_ref": "Phase 1 Deployment",
+      "title": "No Production Deployment — All Validation at Build/Development Level",
+      "s208_priority": 9,
+      "current_priority": 11,
+      "severity": "LOW — deployment milestone",
+      "scope": "Entire CMA Part 1 Exam Simulator",
+      "current_state": "UNCHANGED since S208.",
+      "classification": "ACCEPT",
+      "rationale": "Deployment milestone, not content or architecture debt. All certification, validation, and testing has been at build/development level. Runtime performance at production scale remains untested.",
+      "accepted_risk": "Production-level crash scenarios, browser compatibility edge cases, and loading behavior under real-world conditions are untested.",
+      "recommendation": "Production deployment. Monitor runtime. Feed observations back into defect detection."
+    }
+  ],
+
+  "legacy_artifact_debt": [
+    {
+      "id": "TD-010",
+      "defect_ref": "DRIFT-5",
+      "title": "Report File Proliferation — ~1,227 Files, 65% Unconsumed",
+      "s208_priority": 10,
+      "current_priority": 12,
+      "severity": "LOW — informational debt",
+      "scope": "~1,227 report files across reports/ directory. 178 sessions.",
+      "current_state": "UNCHANGED since S208. No archival or cataloging performed.",
+      "classification": "ACCEPT",
+      "rationale": "Informational debt with zero operational impact. Cleanup is beneficial but non-urgent. New session reports trending toward higher consumption rates (S853-S856: 100% consumed). DRIFT-5 detection at session closeout provides ongoing prevention.",
+      "accepted_risk": "Discovery burden — finding the authoritative report on any topic requires searching hundreds of files.",
+      "recommendation": "Catalog, classify, archive during a low-priority maintenance session."
+    },
+    {
+      "id": "TD-011",
+      "defect_ref": "Root directory state",
+      "title": "Backup File Accumulation — Multiple Generations of .bak Files",
+      "s208_priority": 11,
+      "current_priority": 13,
+      "severity": "LOW — cleanup task",
+      "scope": "Dozens of .bak files in project root across multiple session generations.",
+      "current_state": "UNCHANGED since S208.",
+      "classification": "ACCEPT",
+      "rationale": "Cleanup task with zero operational impact. Backup protocol (BACKUP_PROTOCOL.md) requires creating backups before edits. Cleanup of old backups is desirable but non-urgent.",
+      "recommendation": "Move old .bak files to backups/archive/. Establish backup retention policy: keep last 2 sessions in root, archive older."
+    },
+    {
+      "id": "TD-012",
+      "defect_ref": "S209 T0 hash drift",
+      "title": "Pack B, C, D, E Hash Drift — Baseline Update Required",
+      "s208_priority": 12,
+      "current_priority": 3,
+      "severity": "RESOLVED — G1-G5 reconciliation completed S209 Phase 0",
+      "scope": "Originally Pack B+E at S208. Expanded to Packs B, C, D, E at S209 T0. All 4 resolved.",
+      "current_state": "RESOLVED at S209 T0. G1-G5 reconciliation completed. All drift AUTHORIZED. CURRENT_BASELINES.md updated with recaptured hashes.",
+      "classification": "MITIGATE",
+      "rationale": "Technically resolved, but the pattern (baseline staleness accumulating across multiple session chains) requires ongoing vigilance. Reclassified as MITIGATE rather than RETIRE because the prevention (regular T0 verification) must continue.",
+      "recommendation": "Continue T0 baseline verification at start of every session. Update CURRENT_BASELINES.md promptly after authorized write sessions. The pattern of baseline staleness accumulating across multiple session chains must not recur."
+    }
+  ],
+
+  "priority_ordered_debt_roadmap": [
+    {"rank": 1, "id": "TD-001", "title": "DL-016 metadata shift on Certified Pack A items", "classification": "MITIGATE", "target": "Next Pack A remediation session"},
+    {"rank": 2, "id": "TD-002", "title": "39 Domain F DL-026 items", "classification": "MITIGATE", "target": "S816-S818 (already scheduled)"},
+    {"rank": 3, "id": "TD-012", "title": "Pack hash drift — baseline maintenance", "classification": "MITIGATE", "target": "Ongoing — per-session T0 check"},
+    {"rank": 4, "id": "TD-003", "title": "DL-031 difficulty inflation (~500 items)", "classification": "MITIGATE", "target": "Incremental alongside certification waves"},
+    {"rank": 5, "id": "TD-004", "title": "DL-032 case uniform difficulty (~330 items)", "classification": "MITIGATE", "target": "Before case certification"},
+    {"rank": 6, "id": "TD-005", "title": "DL-012 Section E clones (140 items)", "classification": "ESCALATE", "target": "S212 Executive Board decision"},
+    {"rank": 7, "id": "TD-006", "title": "DL-013 boilerplate (163 fields)", "classification": "MITIGATE", "target": "Alongside certification waves"},
+    {"rank": 8, "id": "TD-007", "title": "Pipeline artifact reuse", "classification": "MITIGATE", "target": "S819-S820"},
+    {"rank": 9, "id": "TD-008", "title": "Student data bridge", "classification": "ACCEPT", "target": "Production deployment"},
+    {"rank": 10, "id": "TD-009", "title": "Production deployment", "classification": "ACCEPT", "target": "Deployment milestone"},
+    {"rank": 11, "id": "TD-010", "title": "Report file proliferation", "classification": "ACCEPT", "target": "Low-priority maintenance"},
+    {"rank": 12, "id": "TD-011", "title": "Backup file accumulation", "classification": "ACCEPT", "target": "Low-priority cleanup"}
+  ],
+
+  "learner_pool_safety_certification": {
+    "active_learner_risks": [
+      "TD-001: DL-016 metadata shift — learners see wrong-item distractor explanations on Pack A Sections B/C/F",
+      "TD-002: 39 DL-026 items — learners see no distractor feedback on Domain F items"
+    ],
+    "verified_not_in_learner_pool": [
+      "DL-008: 0 Certified items (Function constructor parse confirmed)",
+      "DL-026 new: 0 new since Rule 6 deployment (S814)",
+      "DL-021: 0 items (all 100 Pack E Section C items remediated)",
+      "DL-030: 0 items (all 5 answer-key errors fixed)",
+      "DL-034: 0 items (P1-E-R33 repaired S808)"
+    ],
+    "verdict": "2 active learner-pool risks — both known, tracked, and scheduled. 0 untracked risks."
+  },
+
+  "debt_trajectory": {
+    "assessment": "STABLE — not increasing faster than resolution capacity",
+    "evidence": [
+      "0 new defect classes discovered since S208",
+      "DL-013 scope reduced 851→163 fields (80% reduction) since S208 via certification waves",
+      "TD-012 (hash drift) resolved at S209 T0 via G1-G5",
+      "Governance guard preventing new DL-008 and DL-026 on Certified items",
+      "Rule 5 batch cap preventing large-scale undetected defects"
+    ],
+    "trend": "DECREASING — long-duration defects (DL-013, DL-008) being resolved faster than new defects discovered"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "session": "S809.2",
+  "agent": "G",
+  "role": "Learner-Safety Screen",
+  "compiled_by": "Agent J (from Agent C certification_blockers + Agent D risk tiers)",
+  "learner_safety_screen": {
+    "current_exposure": {
+      "certified_in_learner_pool": 0,
+      "in_audit": 0,
+      "unprocessed": 11,
+      "archived": 27,
+      "total_seeds": 38,
+      "verdict": "SAFE — ZERO learner-pool exposure. All 38 seeds are Unprocessed or Archived."
+    },
+    "blocked_from_certification": {
+      "blocked_count": 17,
+      "reason": "These seeds have severe EW gaps that make them unsafe for certification. If certified, learners would receive wrong-topic or empty distractor feedback.",
+      "detailed_list": [
+        {
+          "qid": "P1-EC-020",
+          "block_reason": "DL-010 CRITICAL: Two ExplanationWrong slots (B, C) contain text from an entirely different question. EWB describes physical access controls but distractor B is about monthly bank reconciliation. EWC describes compensating control but distractor C is about quarterly audit review. EWD is also empty. Every distractor slot is either misaligned or empty. Learner would see completely unrelated feedback for 3/3 wrong choices.",
+          "priority": "P0 — Full EW re-authoring required"
+        },
+        {
+          "qid": "P1-EC-014",
+          "block_reason": "DL-026 SEVERE: Only 1 of 4 EW slots has text (EWD). EW_A and EW_C are empty (Agent C CC=C, Agent D CC=B — slot letters differ per agent). 2-3 empty distractor slots. Learner receives no feedback for 2/3 wrong choices.",
+          "priority": "P1 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-EC-022",
+          "block_reason": "DL-026 SEVERE: Only 1 of 4 EW slots has text (EWD). EW_A and EW_C are empty. Learner receives no feedback for 2/3 wrong choices.",
+          "priority": "P1 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-EC-066",
+          "block_reason": "DL-026 SEVERE: Only 1 of 4 EW slots has text (EWD). EW_A and EW_C or EW_B and EW_C empty (CC-dependent). Very low cognitive demand (DS=1, Understand). Learner receives no feedback for 2/3 wrong choices on an Easy question.",
+          "priority": "P1 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-EC-023",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, D). Only EW_B has text. Learner sees no feedback for 2/3 wrong choices on IT access deprovisioning.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-EC-031",
+          "block_reason": "DL-026 + DL-013 WEAK: 2 empty non-CC slots (A, C or A, D per CC). EW_B is WEAK — defines concepts rather than explaining why the choice is wrong. Learner gets either no feedback or weak conceptual definitions.",
+          "priority": "P2 — 2 distractor EW slots to author + 1 to enhance"
+        },
+        {
+          "qid": "P1-EC-072",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, D or A, C per CC). Learner sees no feedback for 2/3 wrong choices on remediation tracking.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-ED-010",
+          "block_reason": "DL-010 + DL-026: 2 empty non-CC slots (A, B). EW_D has possible cross-item contamination text ('management override', 'limiting user access'). Learner sees either no feedback or wrong-topic feedback.",
+          "priority": "P1 — 2 distractor EW slots to author + 1 to replace"
+        },
+        {
+          "qid": "P1-ED-014",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, B). Only EW_D has text. Learner sees no feedback for 2/3 wrong choices. Additionally labeled 'Difficult' but tests simple definition — difficulty inflation compounds degraded feedback.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-ED-016",
+          "block_reason": "DL-026 + DL-013: 1 empty slot (D) + 2 DL-013 boilerplate slots (B, C). Zero choice-specific distractor explanations. Learner sees generic template text for 2 wrong choices and nothing for 1. ERM risk response is a nuanced topic.",
+          "priority": "P1 — 1 distractor EW slot to author + 2 to replace"
+        },
+        {
+          "qid": "P1-ED-035",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, D). Only EW_B has text. Learner sees no feedback for 2/3 wrong choices on backup/DR.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-ED-042",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, B or A, C per CC). Only EW_D has text. Learner sees no feedback for 2/3 wrong choices on risk assessment.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-ED-046",
+          "block_reason": "DL-026 + DL-013 TRUNCATED: 2 empty slots (A, B or A, C per CC). EW_D is truncated DL-013 boilerplate ending mid-word ('effectiven'). Zero choice-specific feedback for all 3 distractors.",
+          "priority": "P1 — 2 distractor EW slots to author + 1 to replace"
+        },
+        {
+          "qid": "P1-ED-051",
+          "block_reason": "DL-010 + DL-013 + DL-026: 2 empty slots (A, C). EW_B is DL-013 boilerplate with text-to-slot mismatch (references 'balanced scorecard' but assigned to SoD slot). Zero correct distractor feedback.",
+          "priority": "P0 — 2 distractor EW slots to author + 1 to rewrite"
+        },
+        {
+          "qid": "P1-ED-058",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, B). Only EW_D has text. Learner sees no feedback for 2/3 wrong choices on cost-benefit limitation.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-ED-066",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, B). Only EW_D has text. Learner sees no feedback for 2/3 wrong choices on audit committee oversight.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        },
+        {
+          "qid": "P1-ED-074",
+          "block_reason": "DL-026: 2 empty non-CC slots (A, C). Only EW_D has text. Learner sees no feedback for 2/3 wrong choices on EFT/reconciliation SoD.",
+          "priority": "P2 — 2 distractor EW slots to author"
+        }
+      ]
+    },
+    "certifiable_after_ew_remediation": {
+      "count": 21,
+      "description": "21 seeds have exactly 1 empty non-CC distractor slot. Once authored, these can proceed to certification (pending DL-031 recalibration and EC enhancement). No DL-010, DL-013, or severe DL-026 issues."
+    },
+    "defect_interactions": {
+      "dl010_combined_with_dl026": "4 items (EC-020, ED-010, ED-051, ED-046): wrong-topic AND missing text in different slots. These are the highest learner-safety concern because a learner might see wrong-topic feedback for one wrong choice and no feedback for another.",
+      "dl013_combined_with_dl026": "3 items (ED-016, ED-036, ED-075): template boilerplate AND empty slots. Learner sees generic non-instructional text OR nothing.",
+      "cc_discrepancy_impact": "5 seeds (EC-008, EC-014, EC-066, EC-031, EC-072): the exact empty-slot letters change depending on which CC value is authoritative. The learner-safety concern (number of empty slots) is stable, but the specific slot letters that need authoring may differ."
+    },
+    "pre_certification_gate": {
+      "condition": "All 38 seeds must have 3 non-empty, choice-specific ExplanationWrong fields before any certification decision.",
+      "blocking_defects": ["DL-010 (3 items)", "DL-013 boilerplate (5 items, 9 slots)", "DL-026 empty slots (38 items, 53 slots)"],
+      "non_blocking_defects": ["DL-031 difficulty inflation (~30 items, can be recalibrated post-certification)", "EC enhancement (17 weak items, can be enhanced during certification pass)"]
+    }
+  },
+  "notes": "Learner-safety screen compiled from Agent C's certification_blockers list and Agent D's per-QID risk analysis. Currently ZERO learner-pool exposure — all seeds are Unprocessed or Archived. The 17 blocked items should not enter the certification pipeline until EW remediation is complete. After EW remediation, all 38 seeds become structurally safe for certification consideration."
+}

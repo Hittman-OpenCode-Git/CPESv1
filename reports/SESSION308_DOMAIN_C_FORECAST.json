@@ -1,0 +1,46 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "domain": "C — Performance Management",
+  "baseline": {
+    "items": 574,
+    "certified": 564,
+    "avgUiqs": 74.1,
+    "grade": "B",
+    "p0Count": 4,
+    "rewriteCandidates": 454,
+    "uncertified": 10
+  },
+  "rootCause": "454 rewrite candidates driven by: 298 case-study items with 3.9% EW fill rate (primary). Low EC length in case items (secondary). 10 uncertified items = minimal certification impact.",
+  "forecast": {
+    "totalSessions": 7,
+    "phases": [
+      {
+        "name": "Phase 1: Case-bank EW for Domain C cases",
+        "sessions": 4,
+        "items": "~74 case items",
+        "uiqsGain": "+5.0",
+        "note": "Addresses the dominant EW gap"
+      },
+      {
+        "name": "Phase 2: Clone rotation audit (Pack C E/F)",
+        "sessions": 2,
+        "items": "~87",
+        "uiqsGain": "+2.0"
+      },
+      {
+        "name": "Phase 3: 10 uncertified + quality sweep",
+        "sessions": 1,
+        "items": 10,
+        "uiqsGain": "+1.0"
+      }
+    ],
+    "cumulativeImpact": {
+      "after7Sessions": {
+        "certified": 574,
+        "uiqs": "~82.1 (A-)",
+        "ewFillPct": "~70%"
+      }
+    }
+  },
+  "priority": "THIRD — after Domains E and F certification. Domain C is already 98.3% certified and UIQS 74.1 (Grade B). Volume creates high absolute debt, but per-item urgency is lower."
+}

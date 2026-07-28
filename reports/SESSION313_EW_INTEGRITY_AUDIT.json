@@ -1,0 +1,79 @@
+{
+  "title": "SESSION313_EW_INTEGRITY_AUDIT",
+  "session": "313",
+  "generated": "2026-07-27",
+  "methodology": "Independent verification of ExplanationCorrect and ExplanationWrong[A-D] fields across all 10 candidate items. Automated scans + human content review. Cross-referenced against DL-008, DL-026, DL-013 defect definitions from DEFECT_LIBRARY.md.",
+  "items_audited": 10,
+  "total_ew_slots": 40,
+  "results": {
+    "dl008_scan": {
+      "definition": "ExplanationWrong[CorrectChoice] must be empty string (DL-008)",
+      "slots_checked": 10,
+      "compliant": 10,
+      "violations": 0,
+      "compliance_rate": "100%",
+      "detail": "All 10 CorrectChoice-indexed EW fields verified empty: R01-B='', R02-D='', R03-A='', R04-C='', R05-A='', R06-B='', R07-D='', R08-A='', R09-C='', R10-B=''"
+    },
+    "dl026_scan": {
+      "definition": "All ExplanationWrong fields for non-CorrectChoice distractors must be non-empty with substantive content (DL-026)",
+      "slots_checked": 30,
+      "filled": 30,
+      "empty": 0,
+      "compliance_rate": "100%",
+      "mean_length_chars": 513,
+      "min_length_chars": 356,
+      "max_length_chars": 605,
+      "all_meet_minimum_100_chars": true
+    },
+    "dl013_scan": {
+      "definition": "No template boilerplate in any EC or EW field (DL-013)",
+      "slots_checked": 40,
+      "boilerplate_detected": 0,
+      "patterns_checked": [
+        "[Explanation of why",
+        "[This is",
+        "This is incorrect because",
+        "placeholder",
+        "[insert",
+        "[describe"
+      ],
+      "compliance_rate": "100%"
+    },
+    "dl010_scan": {
+      "definition": "ExplanationCorrect topic matches stem topic — no cross-contamination (DL-010)",
+      "items_checked": 10,
+      "cross_contamination": 0,
+      "compliance_rate": "100%",
+      "detail": "All EC fields are topic-consistent with their respective stems. No explanation describes a different control concept than what the stem tests."
+    },
+    "ew_choice_specificity": {
+      "method": "Human review — verify each EW addresses the specific distractor content, not generic 'this is wrong' text",
+      "total_non_cc_ew": 30,
+      "choice_specific": 30,
+      "generic": 0,
+      "compliance_rate": "100%",
+      "note": "All 30 non-CC EW fields contain choice-specific reasoning. Each EW addresses the exact misconception, calculation error, or conceptual confusion that would lead a learner to pick that specific distractor."
+    }
+  },
+  "ec_quality": {
+    "items_with_ec": 10,
+    "mean_length_chars": "~550",
+    "framework_citations": {
+      "present": 8,
+      "absent": 2,
+      "detail": "R04 (preventive/detective classification — does not cite specific framework but is standard terminology) and R05 (bank rec — same, standard segregation principle). Both remain substantively adequate."
+    },
+    "substantive_reasoning": 10,
+    "calculation_walkthrough_present": "N/A — no calculation items in this batch",
+    "common_misconception_addressed": 10
+  },
+  "overall": {
+    "ew_integrity": "PRESERVED",
+    "compliance_rate": "100%",
+    "dl008_clean": true,
+    "dl026_clean": true,
+    "dl013_clean": true,
+    "dl010_clean": true,
+    "certification_ready": true
+  }
+}

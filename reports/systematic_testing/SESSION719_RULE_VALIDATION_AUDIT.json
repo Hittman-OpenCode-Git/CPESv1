@@ -1,0 +1,338 @@
+{
+  "session": "S719",
+  "agent": "B",
+  "dcs_version": "1.0",
+  "audit_date": "2026-07-26",
+  "data_sources": [
+    "knowledge/DIFFICULTY_CALIBRATION_STANDARD.md",
+    "reports/session_status/SESSION716_DL032_CASE_BANK_CALIBRATION_WAVE1.md",
+    "reports/session_status/SESSION718_SESSION_SUMMARY.md",
+    "reports/session_status/SESSION718_GOVERNANCE_SUMMARY.md",
+    "reports/session_status/SESSION718_ANALYTICS_SUMMARY.md",
+    "reports/session_status/SESSION717_CALIBRATION_GOVERNANCE_VALIDATION_AUDIT.md"
+  ],
+  "checks": {
+    "internal_consistency": {
+      "verdict": "PASS",
+      "summary": "DCS §3 CognitiveLevel→Difficulty mappings are logically coherent. All five CL levels map to sensible defaults. Modifier directions are consistent within each row. No contradictory combinations exist between modifiers on the same row.",
+      "findings": [
+        {
+          "id": "IC-001",
+          "section": "§3",
+          "severity": "low",
+          "finding": "Terminology inconsistency: modifiers use 'upgrade' for both increasing AND decreasing difficulty scores. Example: Remember→Easy/1 calls the lower score an 'upgrade' when numerically it's a downgrade (2→1). Same for Apply→Moderate-Easy/2 described as 'downgrade.' The directional language (upgrade/downgrade) doesn't consistently match numeric direction.",
+          "evidence": "§3 Remember row: 'Upgrade to Easy/1 if distractors are entirely different domain' uses 'upgrade' for a numeric decrease; Analyze row: 'downgrade to Moderate/3 if simple pattern recognition' uses 'downgrade' for a numeric decrease.",
+          "recommendation": "Replace 'upgrade'/'downgrade' with direction-neutral language: 'adjust to [Level]/[Score]' or consistently use 'increase to'/'decrease to' based on numeric score direction."
+        },
+        {
+          "id": "IC-002",
+          "section": "§3 vs §4",
+          "severity": "low",
+          "finding": "Partial overlap between §3 row-specific modifiers and §4 secondary modifiers. Example: Apply row says 'downgrade to Moderate-Easy/2 if single-step formula with formula given' which covers the same case as §4's 'Formula provided in stem: -1'. Items matching both would be double-counted if both rules are applied independently.",
+          "evidence": "§3 Apply row: 'downgrade to Moderate-Easy/2 if single-step formula with formula given'. §4: 'Formula provided in stem | -1 | Reduces recall burden'.",
+          "recommendation": "Add a §4 preamble: 'These modifiers supplement §3 row-specific adjustments. When a §3 modifier already covers a condition, do not re-apply the corresponding §4 modifier.'"
+        },
+        {
+          "id": "IC-003",
+          "section": "§3",
+          "severity": "informational",
+          "finding": "The modifier 'can formula provided and calculation chain ≥3 both apply to the same item?' — They can. Example: cash collections question provides the formula but requires 3 separate collection-category calculations. Modifiers net: +1 (calc chain) + (-1) (formula provided) = 0. No contradiction — the cancellation is correct behavior. Confirmed via worked example.",
+          "evidence": "A cash-budget MCQ could provide 'Cash Collections = Cash Sales + Credit Sales Collected' while requiring the candidate to compute December collections, January collections, and net borrowing — 3 distinct arithmetic steps.",
+          "recommendation": "No action required. Document the cancellation example as a worked case in a DCS appendix."
+        },
+        {
+          "id": "IC-004",
+          "section": "§3",
+          "severity": "low",
+          "finding": "Remember→Moderate-Easy/2 as default: For pure recall items ('define X'), Moderate-Easy may be too high. The modifier 'Upgrade to Easy/1 if distractors are entirely different domain' covers this case but uses upward language for a downward score adjustment. The default should arguably be Easy/1 with an Upgrade to Moderate-Easy/2 for subtle discrimination — which reverses the current default+modifier relationship.",
+          "evidence": "A Remember-level item asking 'Which of the following is the COSO definition of control environment?' with distractors from completely different frameworks (e.g., ERM, SOX, COBIT) is definitionally Easy/1, yet DCS defaults to Moderate-Easy/2 and requires a modifier to reach Easy/1.",
+          "recommendation": "Consider: evaluation of whether the Remember default should be Easy/1 with a +1 modifier for subtle discrimination. Current design sets the floor at Moderate-Easy/2 for all Remember items — this may over-calibrate pure-recall items."
+        }
+      ]
+    },
+    "modifier_consistency": {
+      "verdict": "FLAG",
+      "summary": "DCS §4 secondary modifiers are generally sound but have three issues: (1) 'Plausible distractor count ≥3' is underspecified and could trigger on nearly all quality MCQ items; (2) no explicit clamping language for cumulative modifiers; (3) the ±1 per-modifier range with up to 4 modifiers can produce a 4-point swing without a ceiling-floor rule.",
+      "findings": [
+        {
+          "id": "MC-001",
+          "section": "§4 (Plausible distractor count ≥3)",
+          "severity": "medium",
+          "finding": "'Plausible distractor count ≥3' is underspecified. In practice, every well-written 4-choice MCQ has 3 distractors, and by definition they are intended to be plausible. This modifier could systematically fire on 80%+ of MCQ items, inflating the entire bank by +1. The modifier must distinguish between 'standard plausibility' (baseline — no modifier) and '3+ distractors that are highly deceptive/discriminating' (deserves +1).",
+          "evidence": "CAQS §6.3 requires 'Every distractor must be a reasonable choice for a candidate who misunderstands the concept.' If this standard is met across the bank, then 'plausible distractor count ≥3' is true for nearly all items — making +1 the de facto baseline rather than a genuine modifier.",
+          "recommendation": "Refine the definition: 'Plausible distractor count ≥3 AND distractor-distractor Jaccard similarity < 30% (i.e., each distractor tests a distinct misconception).' This gates the modifier behind genuine discrimination quality, not mere structure."
+        },
+        {
+          "id": "MC-002",
+          "section": "§4",
+          "severity": "medium",
+          "finding": "No explicit clamping rule for cumulative modifiers. A Difficult/4 item with multi-exhibit (+1), calculation chain ≥3 (+1), and plausible distractors ≥3 (+1) would score 7 — but the valid scale is 1-5. The standard implicitly caps at 5 (Very Difficult is the highest tier), but this is never stated as a rule.",
+          "evidence": "§2 defines score range as 1-5. §4 defines modifiers as ±1 each. No §4 text describes what happens when modifiers push the score outside [1,5].",
+          "recommendation": "Add to §4: 'Final DifficultyScore is clamped to [1, 5] after all modifiers are applied. A clamped score does not indicate calibration error — it indicates the item is at the scale extreme.'"
+        },
+        {
+          "id": "MC-003",
+          "section": "§4",
+          "severity": "low",
+          "finding": "Missing modifier: 'Cross-domain content.' DCS §2 defines Very Difficult/5 as 'Synthesis of multiple concepts across blueprint domains.' DCS §3 mentions 'cross-domain' as an Analyze→Very Difficult/5 modifier. But §4 has no standalone cross-domain modifier. Items that span E+F or span A+D sections legitimately carry higher cognitive demand and should receive +1.",
+          "evidence": "DCS §2: Very Difficult includes 'Synthesis of multiple concepts across blueprint domains.' DCS §3 Analyze row: 'Upgrade to Very Difficult/5 if cross-domain.' But no standalone §4 modifier exists for this factor.",
+          "recommendation": "Add to §4: 'Cross-domain content (2+ blueprint sections) | +1 | Candidate must integrate knowledge from distinct topic areas.'"
+        },
+        {
+          "id": "MC-004",
+          "section": "§4",
+          "severity": "low",
+          "finding": "The 'Explanation <100 chars → 0 (flag)' modifier is classifier-only — it triggers a flag but not a score change. This is valuable for quality review but could be confusing in a modifiers table where every other row adjusts score. The table header implies all rows are ±1 adjustments.",
+          "evidence": "The §4 table has columns Factor | Direction | Rationale. Explanation <100 chars uses '0 (flag)' as Direction, breaking the +1/-1 pattern of all other rows.",
+          "recommendation": "Move Explanation <100 chars to a separate 'Quality Flags' section or add a table footnote: '* This factor flags items for remediation review but does not change DifficultyScore.'"
+        },
+        {
+          "id": "MC-005",
+          "section": "§4 vs §5",
+          "severity": "informational",
+          "finding": "§4 includes 'Calculation chain ≥3 steps' (+1) and 'Formula provided in stem' (-1). §5 Type-Specific Adjustments includes 'numeric: 0' and 'fill: -1 (often).' These overlap conceptually: a numeric fill-in-the-blank item with 3+ calculation steps would have: §4 (+1 for calc chain) + §5 (0 for numeric) + §4 (-1 for formula if provided). The interaction between §4 and §5 modifiers is not documented.",
+          "evidence": "§5: 'numeric | 0 | Calculation demand already reflected in CognitiveLevel.' This suggests numeric-item calculation complexity is already baked into CL, making the §4 calculation chain modifier potentially double-count with the CL assignment.",
+          "recommendation": "Add to §5 preamble: '§5 modifiers apply ADDITIVELY with §4 modifiers. For numeric items in particular, do not double-count calculation complexity already reflected in the CognitiveLevel assignment. The calculation chain modifier in §4 should be reserved for items whose CL assignment did not capture the full calculation burden.'"
+        }
+      ]
+    },
+    "s716_alignment": {
+      "verdict": "PASS",
+      "summary": "S716 applied DCS §3 primary mapping (CognitiveLevel→default Difficulty) consistently across all 472 case items. No violations detected. Secondary modifiers (§4) were not applied because DCS v1.0 was being drafted during S716 — the modifiers were codified after the calibration wave. This is a forward-looking gap, not a violation.",
+      "findings": [
+        {
+          "id": "SF-001",
+          "section": "S716 vs DCS §3",
+          "severity": "informational",
+          "finding": "S716 applied uniform mapping: Understand→Moderate-Easy/2 (95 items), Apply→Moderate/3 (121 items), Analyze→Difficult/4 (140 items), Evaluate→Difficult/4 (116 items). All four mappings match DCS §3 defaults exactly. No deviations. Verified via S716 report §Cross-Case Consistency: 'All Apply items → Moderate/3 (across scored_cases 1-5).'",
+          "evidence": "SESSION716 line 69-73: cross-case consistency confirms uniform application. Line 43-48: cognitive level → target mapping verified against DCS §3 table.",
+          "recommendation": "No action required."
+        },
+        {
+          "id": "SF-002",
+          "section": "S716 vs DCS §4",
+          "severity": "informational",
+          "finding": "S716 did not apply secondary modifiers (§4). The post-S716 case distribution is 0% Easy, 15.5% Moderate-Easy, 43.5% Moderate, 41.0% Difficult, 0% Very Difficult. If §4 modifiers were applied, some Difficult items with multi-exhibit dependencies or calculation chains ≥3 would upgrade to Very Difficult/5 — currently at 0.",
+          "evidence": "S716 distribution shows 0 Very Difficult items despite the DCS §2 definition of Very Difficult including 'Complex exhibit interpretation' and 'multi-step reasoning chains' — both of which apply to case items with 3+ exhibits and calculation chains.",
+          "recommendation": "A future S716-wave-2 or S719 case recalibration pass should apply §4 modifiers to the case bank. This would likely surface 10-20 items appropriate for Very Difficult/5."
+        },
+        {
+          "id": "SF-003",
+          "section": "S716 vs DCS §7.3",
+          "severity": "informational",
+          "finding": "DCS §7.3 Recalibration Protocol step 3: 'Apply secondary modifiers where evidence supports.' S716 stopped at step 2 (primary CL→Difficulty mapping). Since DCS was being authored during S716, this is a sequential artifact, not a compliance failure. S716's post-flight 32/32 PASS confirms no structural regressions.",
+          "evidence": "S716 line 86: 'Difficulty Calibration Standard v1.0' listed as stretch goal created during S716. DCS §9 Implementation History lists S716 as the fourth calibration session.",
+          "recommendation": "No action required for S716. Future sessions applying secondary modifiers to the case bank should follow the full DCS §7.3 protocol."
+        }
+      ]
+    },
+    "s718_compatibility": {
+      "verdict": "FLAG",
+      "summary": "S718 assigned CognitiveLevel to 2,425 MCQs, enabling mechanical DCS §3 application in S719. However, three blocking concerns exist: (1) 168 Evaluate items have Easy difficulty — a 3-level upward shift that likely indicates CL misassignment rather than Difficulty mislabeling; (2) no confidence-gate exists in DCS for the CL→Difficulty mapping step; (3) the §4 'Multi-exhibit dependency' modifier is predominantly a case construct and rarely applies to MCQs.",
+      "findings": [
+        {
+          "id": "SC-001",
+          "section": "S718 CL × Difficulty matrix",
+          "severity": "high",
+          "finding": "168 Evaluate items are currently labeled Easy (per S718 analytics Difficulty×CL matrix). DCS §3 defaults Evaluate→Difficult/4. Applying DCS mechanically would shift these 168 items from DifficultyScore=1 to DifficultyScore=4 — a 3-level jump. This magnitude suggests one of: (a) the Evaluate CL assignment is wrong (items are likely Understand or Apply, not Evaluate), or (b) the Easy difficulty label is wrong (items were template-filled as Easy and are genuinely more complex). The S718 governance review found 15/20 sampled CL assignments were 'clearly reasonable' and 5/20 were 'borderline' — so the CL assignments are generally defensible. But the Evaluate→Easy combination for 168 items is statistically anomalous and likely indicates CL over-assignment for Evaluate.",
+          "evidence": "SESSION718_ANALYTICS_SUMMARY.md line 68-71: Difficulty×CL matrix shows 168 Evaluate items at Easy. SESSION718_GOVERNANCE_SUMMARY.md line 93-99: 20-item sampling found 15/20 reasonable, 5/20 borderline, 0/20 clearly wrong. Evaluate avg confidence 78.2% (SESSION718_ANALYTICS_SUMMARY.md line 187). 48 Evaluate items have confidence <70.",
+          "recommendation": "S719 must NOT mechanically map all Evaluate items to Difficult/4. Instead: (1) Items with CL confidence ≥85 should receive DCS mapping; (2) Items with CL confidence 70-84 should be flagged for review; (3) Items with CL confidence <70 should be reviewed individually before any Difficulty change. The 168 Evaluate+Easy items should be triaged: those with 'Evaluate at Easy with low confidence (X)' in the analytics report likely need CL reclassification, not Difficulty recalibration."
+        },
+        {
+          "id": "SC-002",
+          "section": "DCS §3 × S718 CL confidence",
+          "severity": "medium",
+          "finding": "DCS §7.1 requires difficulty assignments to be supported by evidence — CognitiveLevel field is listed as primary evidence. But DCS has no confidence-gate: it doesn't say 'only apply when CL confidence ≥ X.' This means S719 could mechanically map low-confidence CL assignments to difficulty — compounding the original assignment uncertainty. 372 items across all packs have CL confidence <70.",
+          "evidence": "SESSION718_ANALYTICS_SUMMARY.md line 189: 'Low Confidence Items (<70): 372'. Examples: P1E-C-071 (Remember, Conf=38), P1-C-036 (Remember, Conf=40), P1B-C-168 (Apply, Conf=40). DCS §7.1: 'CognitiveLevel field (primary evidence)' — no confidence threshold mentioned.",
+          "recommendation": "Add to DCS §7.1: 'When CognitiveLevel is the primary evidence source, the assignment confidence must be ≥85 for automatic calibration. Items with CL confidence <85 require either secondary evidence (independent recalculation, cross-reference) or manual review before Difficulty adjustment.'"
+        },
+        {
+          "id": "SC-003",
+          "section": "DCS §4 × MCQ format",
+          "severity": "low",
+          "finding": "The 'Multi-exhibit dependency' +1 modifier in §4 was designed for the case-bank context where exhibits are common. MCQs in pack_*_corrected.js have no exhibit infrastructure — stems sometimes embed table-like data inline but there are no Exhibit objects. This modifier will fire near-zero times on MCQs, making the §4 modifier set asymmetrically applicable across lanes.",
+          "evidence": "DCS §4: 'Multi-exhibit dependency | +1 | Candidate must synthesize data from 2+ exhibits'. Case items have Exhibits arrays with 2+ entries. MCQ items have no exhibits — data is embedded in the stem text.",
+          "recommendation": "Add a note to §4: 'For MCQ items, 'Multi-exhibit dependency' applies when the stem embeds data from 2+ distinct sources that the candidate must cross-reference (e.g., a stem paragraph about A/R aging AND a table of historical write-off percentages). This is rare in the current MCQ pool.'"
+        },
+        {
+          "id": "SC-004",
+          "section": "S718 → S719 readiness",
+          "severity": "informational",
+          "finding": "S718 achieved 100% CognitiveLevel coverage (2,500/2,500 items). 244 items flagged for Difficulty×CL misalignment (SESSION718_ANALYTICS_SUMMARY.md line 27). Of these, the majority (168) are Evaluate→Easy, 20 are Analyze→Easy, and the remaining 56 are scattered. S719 has a clear target set but must handle the Evaluate and Analyze cohorts carefully — these are the highest-magnitude shifts.",
+          "evidence": "S718 summary line 63: '244 Difficulty×CognitiveLevel misalignments: Items where stored Difficulty doesn't match CL — future recalibration needed.' Analytics matrix confirms distribution pattern.",
+          "recommendation": "S719 should batch the 244 misaligned items into cohorts: Cohort 1 (Evaluate+Easy, 168 items) — CL review before Difficulty change; Cohort 2 (Analyze+Easy, 20 items) — CL review before Difficulty change; Cohort 3 (remaining 56 items) — mechanical DCS application with confidence gate ≥85."
+        }
+      ]
+    },
+    "cross_lane_consistency": {
+      "verdict": "FLAG",
+      "summary": "DCS §8 asserts uniform rule application across 100/500/700-series lanes with a blanket prohibition on lane-specific difficulty inflation/deflation. This prohibition is too simplistic — it doesn't acknowledge that different item formats (case vs MCQ) legitimately produce different natural difficulty distributions. The standard should distinguish between structural divergence (legitimate) and intentional inflation/deflation (prohibited).",
+      "findings": [
+        {
+          "id": "CL-001",
+          "section": "§8",
+          "severity": "medium",
+          "finding": "DCS §8: 'No lane-specific difficulty inflation or deflation is permitted.' This blanket prohibition conflates two distinct concepts: (a) intentional label manipulation to make one lane appear harder/easier, and (b) natural difficulty divergence arising from different item formats. Case items inherently score higher difficulty (43.3% Difficult per S717) than MCQs (8.2% Difficult). This is a legitimate structural difference — case items require exhibit interpretation, multi-step reasoning, and judgment — not inflation. The §8 language risks misclassifying legitimate format-driven divergence as a governance violation.",
+          "evidence": "S717 Agent B cross-population analysis confirmed the 43.3% vs 8.2% Difficult divergence as 'legitimate structural difference.' DCS §8 makes no distinction between structural divergence and intentional inflation.",
+          "recommendation": "Revise §8: 'Same evidence rules apply across all lanes. No intentional lane-specific difficulty labeling (inflating or deflating scores) is permitted. Structural format differences (e.g., case items requiring exhibit interpretation) may legitimately produce different difficulty distributions across lanes — this is not a calibration defect.'"
+        },
+        {
+          "id": "CL-002",
+          "section": "§8",
+          "severity": "low",
+          "finding": "The 100-series lane (May tutoring configuration) is listed in §8 but has no documented calibration activity. If S719 recalibrates all 2,425 MCQs, the downstream May tutoring adaptive system will receive updated difficulty labels. DCS has no guidance on deployment synchronization — will the May system see updated labels immediately, or is there a staging process?",
+          "evidence": "DCS §8: '100-series (May) | May tutoring configuration | Learner-facing difficulty for adaptive recommendations.' No mention of deployment coordination.",
+          "recommendation": "Add to §8: 'When difficulty labels change, downstream systems consuming those labels (100-series May tutoring; analytics dashboards; adaptive recommendation engines) must be updated synchronously. A lane-status field should track whether a lane reflects current calibration or stale labels.'"
+        },
+        {
+          "id": "CL-003",
+          "section": "§8",
+          "severity": "low",
+          "finding": "Section 8 table lists only 3 lanes. The 720-series (DL-031/032 calibration sessions S713-S716) operates within the 700-series lane (MCQ) but uses session numbers in the 700s. This naming overlap (700-series as both lane identifier and session numbering scheme) could cause confusion. DCS should clarify that '700-series lane' refers to MCQ calibration, not to session numbers beginning with 7.",
+          "evidence": "DCS §8: '700-series (MCQ) | pack_a-e_corrected.js | Item-level difficulty for standalone MCQ items.' S713-S719 are all '700-series' sessions operating on MCQ files, which matches the §8 lane definition.",
+          "recommendation": "Add a note clarifying that '700-series' in DCS §8 refers to the MCQ content lane, not the session numbering scheme. Sessions operating on MCQ calibration may carry any session number (700-799) regardless."
+        },
+        {
+          "id": "CL-004",
+          "section": "§8",
+          "severity": "informational",
+          "finding": "The 500-series lane (case bank) has DCS §3 primary mapping applied (S716) but §4 secondary modifiers not yet applied. The 700-series lane is about to receive §3 primary mapping (S719). At present, the two lanes have different calibration maturity: case items are at 'primary mapped,' MCQs are about to enter 'primary mapped.' This is fine — it reflects sequencing, not inconsistency.",
+          "evidence": "S716 applied CL→Difficulty mapping to 472 case items. S719 will apply CL→Difficulty mapping to MCQs.",
+          "recommendation": "No action required. Document calibration maturity per lane in DCS §9 Implementation History."
+        }
+      ]
+    },
+    "target_vs_calibration": {
+      "verdict": "PASS",
+      "summary": "DCS §6 distribution targets are clearly marked as aspirational ('not quotas'). DCS §7.2 explicitly forbids quota-based labeling and difficulty inflation. The targeting language is sufficiently strong. One minor enhancement: the standard could add diagnostic guidance for interpreting significant gaps between actual and target distributions.",
+      "findings": [
+        {
+          "id": "TC-001",
+          "section": "§6 vs §7",
+          "severity": "low",
+          "finding": "The 'aspirational not quota' language is present but brief (one sentence in §6). DCS §7.2 reinforces with forbidden practices. However, DCS provides no guidance on what large distribution-to-target gaps MEAN or what action to take — the reader is told 'don't quota-adjust to meet targets' but isn't told what the targets are FOR. The current S718→S719 gap analysis shows: Analyze 2.4% vs 25% target (22.6pp gap), Remember 17.9% vs 5% target (12.9pp gap), Very Difficult 0% vs 10% target. These are large diagnostic signals about content-pool composition, not calibration errors. The standard should interpret them.",
+          "evidence": "DCS §6: one paragraph with distribution table and 'These are aspirational targets for content composition, not quotas.' DCS §7.2: 'Quota-based labeling to meet distribution targets.' S718 analytics: major deviations from CAQS §6.2 targets (Analyze 2.6% vs 25%, Remember 17.4% vs 5%).",
+          "recommendation": "Add to §6 or create §6.1: 'Interpreting Target Gaps — When actual distribution deviates significantly from targets: (1) The gap is a diagnostic signal about content-pool composition, not a calibration error. (2) Analyze shortfall → content pool needs more data-interpretation and pattern-recognition items. (3) Remember surplus → content pool has excess definition-recall items relative to CMA exam profile. (4) Difficulty inflation to shrink a gap is prohibited (§7.2). (5) Gaps are remedied by future content creation, not by relabeling existing items.'"
+        },
+        {
+          "id": "TC-002",
+          "section": "§6 vs S718 distribution",
+          "severity": "informational",
+          "finding": "DCS §6 targets are Difficulty-level targets (Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10%). S718 produced CognitiveLevel distribution targets from CAQS §6.2 (Remember 5%, Understand 15%, Apply 40%, Analyze 25%, Evaluate 15%). These are two different distribution axes (Difficulty vs CognitiveLevel). DCS §6 discusses Difficulty distribution only. The standard could benefit from explicitly distinguishing the two axes and noting that CL distribution targets are in CAQS, not DCS.",
+          "evidence": "DCS §6: Difficulty distribution targets. CAQS §6.2: Bloom's Taxonomy distribution targets (referenced in S718 Governance line 118-126).",
+          "recommendation": "Add to DCS §6: 'Difficulty distribution targets (§6) are separate from CognitiveLevel distribution targets (CAQS §6.2). Both are aspirational. Deviation from one does not imply deviation from the other — a bank can have correct Difficulty calibration while having skewed CognitiveLevel composition.'"
+        },
+        {
+          "id": "TC-003",
+          "section": "§7.2",
+          "severity": "informational",
+          "finding": "The forbidden practice 'Changing difficulty because it feels wrong without evidence' is a strong governance statement and aligns with the evidence-based ethos of the entire calibration framework. Confirmed that S713-S716 all used evidence-based methods (stem-length scans, pattern detection, CL mapping) rather than subjective judgment.",
+          "evidence": "S717 governance audit confirmed all three calibration sessions used pattern-based or framework-driven evidence (line 31-34). S716 used CognitiveLevel→Difficulty framework. S713/S715 used stem-length + definitional-pattern scans.",
+          "recommendation": "No action required. This rule is well-designed and has been followed."
+        }
+      ]
+    }
+  },
+  "recommended_dcs_updates": [
+    {
+      "section": "§3",
+      "issue": "Modifier directional language: 'upgrade'/'downgrade' used inconsistently relative to numeric score direction.",
+      "recommendation": "Replace with direction-neutral 'adjust to [Level]/[Score]' or consistently numeric-directional 'increase to'/'decrease to.'",
+      "severity": "low"
+    },
+    {
+      "section": "§3 → §4 boundary",
+      "issue": "§3 row-specific modifiers partially overlap with §4 secondary modifiers (e.g., Apply row 'single-step formula' vs §4 'Formula provided in stem').",
+      "recommendation": "Add §4 preamble: 'These modifiers supplement §3 row-specific adjustments. When a §3 modifier already covers a condition, do not re-apply the corresponding §4 modifier.'",
+      "severity": "low"
+    },
+    {
+      "section": "§4",
+      "issue": "'Plausible distractor count ≥3' is underspecified — would trigger on nearly all quality items.",
+      "recommendation": "Refine to: 'Plausible distractor count ≥3 AND distractors test distinct misconceptions (e.g., distractor-distractor Jaccard similarity < 30%)'.",
+      "severity": "medium"
+    },
+    {
+      "section": "§4",
+      "issue": "No clamping rule for cumulative modifiers pushing score outside [1,5].",
+      "recommendation": "Add: 'Final DifficultyScore is clamped to [1, 5] after all modifiers are applied.'",
+      "severity": "medium"
+    },
+    {
+      "section": "§4",
+      "issue": "Missing 'Cross-domain content (2+ blueprint sections)' as a standalone modifier.",
+      "recommendation": "Add row to §4 table: 'Cross-domain content (2+ blueprint sections) | +1 | Candidate must integrate knowledge from distinct topic areas.'",
+      "severity": "low"
+    },
+    {
+      "section": "§4",
+      "issue": "'Explanation <100 chars → 0 (flag)' breaks the ±1 pattern of the modifier table.",
+      "recommendation": "Move to a separate 'Quality Flags' section below the modifier table, or add a footnote explaining the 0/flag behavior.",
+      "severity": "low"
+    },
+    {
+      "section": "§7.1",
+      "issue": "DCS has no confidence-gate for CognitiveLevel as primary evidence source.",
+      "recommendation": "Add: 'When CognitiveLevel is the primary evidence source, the assignment confidence must be ≥85 for automatic calibration. Items with CL confidence <85 require secondary evidence or manual review before Difficulty adjustment.'",
+      "severity": "high"
+    },
+    {
+      "section": "§8",
+      "issue": "Blanket prohibition on lane-specific difficulty differences doesn't distinguish structural format divergence (legitimate) from intentional inflation/deflation (prohibited).",
+      "recommendation": "Revise: 'Structural format differences (e.g., case items requiring exhibit interpretation) may legitimately produce different difficulty distributions across lanes — this is not a calibration defect. Intentional label manipulation is prohibited.'",
+      "severity": "medium"
+    },
+    {
+      "section": "§6",
+      "issue": "Target gaps have no diagnostic interpretation — the reader knows not to quota-adjust but doesn't know what the gaps mean.",
+      "recommendation": "Add §6.1 'Interpreting Target Gaps' with guidance: gaps signal content-pool composition issues, not calibration errors; gaps are remedied by future content creation, not relabeling.",
+      "severity": "low"
+    },
+    {
+      "section": "§3",
+      "issue": "Remember→Moderate-Easy/2 default may be too high for pure-definition recall items with obviously different-domain distractors.",
+      "recommendation": "Consider: should Remember default be Easy/1 with a +1 modifier for subtle discrimination? Current design requires a modifier to reach Easy/1 from Moderate-Easy/2.",
+      "severity": "low"
+    }
+  ],
+  "dcs_is_sufficient_for_s719": true,
+  "dcs_is_internally_consistent": true,
+  "blocking_issues": [
+    {
+      "id": "S719-BLOCK-001",
+      "check": "s718_compatibility",
+      "finding_id": "SC-001",
+      "severity": "high",
+      "issue": "168 Evaluate items at Easy difficulty present a 3-level DCS mapping gap. S719 must NOT mechanically map all Evaluate items to Difficult/4 without verifying CL assignment accuracy. These items likely represent CL over-assignment (labeled Evaluate when actual cognitive demand is Understand or Apply) rather than Difficulty under-labeling.",
+      "mitigation": "Triage the 168 Evaluate+Easy items: (1) items with CL confidence ≥85 → apply DCS mapping; (2) items with CL confidence 70-84 → flag for review; (3) items with CL confidence <70 → review CL assignment before any Difficulty change. The Evaluate avg confidence (78.2%) and the 48 items with confidence <70 support this tiered approach.",
+      "evidence": "SESSION718_ANALYTICS_SUMMARY.md Difficulty×CL matrix line 68: 168 Evaluate items at Easy. Evaluate avg confidence 78.2% (line 187). 48 Evaluate items below confidence 70. 168 of 223 Evaluate items (75.3%) land at Easy — the magnitude alone signals a systematic CL assignment issue, not a systematic Difficulty under-labeling issue."
+    },
+    {
+      "id": "S719-BLOCK-002",
+      "check": "s718_compatibility",
+      "finding_id": "SC-002",
+      "severity": "medium",
+      "issue": "DCS §7.1 has no confidence-gate for CognitiveLevel as primary evidence. 372 items across all packs have CL confidence <70. Mechanical application of DCS §3 to low-confidence CL assignments would compound classification uncertainty with calibration uncertainty.",
+      "mitigation": "Establish a confidence threshold (≥85) for mechanical DCS application. Route items below threshold through secondary evidence verification or manual review. This gate should be documented in DCS §7.1 before S719 execution.",
+      "evidence": "SESSION718_ANALYTICS_SUMMARY.md line 189: 372 low-confidence items (<70). DCS §7.1 lists CL as 'primary evidence' without confidence threshold."
+    },
+    {
+      "id": "S719-BLOCK-003",
+      "check": "modifier_consistency",
+      "finding_id": "MC-001",
+      "severity": "medium",
+      "issue": "'Plausible distractor count ≥3' modifier is underspecified and would systematically fire on nearly all quality MCQ items, inflating the bank by +1.",
+      "mitigation": "Refine the modifier definition BEFORE S719 applies §4 modifiers to MCQs: gate behind distractor-distractor Jaccard similarity < 30% (i.e., distractors test genuinely distinct misconceptions, not just restatements). Alternatively, defer §4 modifier application to S720 and use S719 for primary CL→Difficulty mapping only.",
+      "evidence": "CAQS §6.3 requires all distractors to be 'plausible' for well-written items. Applying the current §4 definition mechanically would produce +1 on 80%+ of MCQ items."
+    }
+  ],
+  "severity_summary": {
+    "high_findings": 3,
+    "medium_findings": 2,
+    "low_findings": 9,
+    "informational": 7,
+    "total": 21
+  },
+  "overall_verdict": "PASS_WITH_FLAGS",
+  "verdict_narrative": "DCS v1.0 is internally consistent and sufficient for S719's primary objective (CognitiveLevel→Difficulty mapping for 2,425 MCQs). The standard's mappings are logically sound, the modifier framework is workable, and the calibration rules are evidence-based. However, S719 must address three blocking risks: (1) the 168 Evaluate+Easy items need CL confidence triage before Difficulty adjustment — a 3-level shift on low-confidence assignments risks compounding errors; (2) DCS §7.1 needs a confidence-gate for CL-as-evidence before low-confidence items receive mechanical calibration; (3) the 'Plausible distractor count ≥3' modifier must be refined before §4 application to MCQs, or §4 should be deferred to S720. The 10 recommended DCS updates documented above should be applied before S719 or early in S719 as a pre-calibration standards update."
+}

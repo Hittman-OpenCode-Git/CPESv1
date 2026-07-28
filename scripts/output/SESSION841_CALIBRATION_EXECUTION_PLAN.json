@@ -1,0 +1,153 @@
+{
+  "session": "S841",
+  "title": "Difficulty Calibration Execution Plan",
+  "date": "2026-07-27",
+  "program": "800-Series Content Maturity Transformation Program",
+  "source": "S835 Difficulty Distribution Scan + S839 Upgrade Cohorts",
+  "status": "PLAN — Ready for execution. Calibration requires pack file writes (Difficulty+DifficultyScore field changes).",
+
+  "current_state": {
+    "pool_size": 2540,
+    "distribution": {
+      "Easy_1": { "count": 569, "pct": 22.4, "target_pct": 15, "gap": 7.4 },
+      "ModerateEasy_2": { "count": 639, "pct": 25.2, "target_pct": 20, "gap": 5.2 },
+      "Moderate_3": { "count": 1228, "pct": 48.3, "target_pct": 30, "gap": 18.3 },
+      "Difficult_4": { "count": 113, "pct": 4.4, "target_pct": 25, "gap": -20.6 },
+      "VeryDifficult_5": { "count": 0, "pct": 0.0, "target_pct": 10, "gap": -10.0 }
+    },
+    "primary_issues": [
+      "DL-031: ~500 definition-match items labeled Moderate (3) — should be Easy (1)",
+      "DL-032: 420 case items uniformly Moderate — zero calibration",
+      "Massive Difficult deficit: 113 vs target 635 (-522 items)",
+      "Zero Very Difficult items: 0 vs target 254 (-254 items)",
+      "Moderate surplus: 1,228 vs target 762 (+466 items, mostly DL-031 inflated)"
+    ]
+  },
+
+  "calibration_segments": {
+    "segment_immediate": {
+      "name": "Accuracy Calibration — Fix Known Mislabeling",
+      "priority": "IMMEDIATE",
+      "items": 545,
+      "actions": [
+        {
+          "action": "DL-031 Correction: Definition-match Moderate→Easy",
+          "count": 500,
+          "description": "Items where stem is a textbook definition and correct answer is the term being defined. Currently labeled Moderate(3) or Moderate-Easy(2). Recalibrate to Easy(1). CognitiveLevel typically Remember or Understand. This is an accuracy fix — these items never required Moderate cognitive demand.",
+          "domains": "All 6 sections, all 5 packs",
+          "pattern": "Stem: '[textbook definition of concept X]' → Correct Answer: '[term for concept X]'. Lexical overlap between stem and correct choice > 50%. Distractors are definition-level alternatives, not application-level traps.",
+          "difficulty_change": "Moderate(3)→Easy(1) or Moderate-Easy(2)→Easy(1)",
+          "risk": "MEDIUM — batch identification may misclassify some items. Per-item stem review required.",
+          "governance": "Rule 4 (answer-key WARN): CorrectChoice unchanged, difficulty label only."
+        },
+        {
+          "action": "Case Study Recalibration: Break uniform Moderate labeling",
+          "count": 45,
+          "description": "75 cases × 6 items avg = ~420 items, all labeled Moderate. Select 45 items (10.7% of case pool) for recalibration based on cognitive demand: 15 Easy (definitional/recall case items), 15 Difficult (multi-exhibit analysis items), 15 Moderate-Easy (simple calculation items).",
+          "difficulty_change": "Moderate(3)→Easy(1): 15 items; Moderate(3)→Moderate-Easy(2): 15 items; Moderate(3)→Difficult(4): 15 items",
+          "risk": "LOW — case items already reviewed in certification waves. Per-item difficulty assessment is straightforward."
+        }
+      ],
+      "post_segment_distribution": {
+        "Easy_1": { "count": 1084, "pct": 42.7, "note": "Surplus increases (569→1084) — this is correct. DL-031 items were NEVER Moderate." },
+        "ModerateEasy_2": { "count": 654, "pct": 25.7 },
+        "Moderate_3": { "count": 698, "pct": 27.5, "note": "Drops from 1,228→698. Now closer to 30% target." },
+        "Difficult_4": { "count": 113, "pct": 4.4 },
+        "VeryDifficult_5": { "count": 0, "pct": 0.0 }
+      }
+    },
+
+    "segment_wave_1": {
+      "name": "Cognitive Upgrade Recalibration — Concurrent with S839 Cohort Execution",
+      "priority": "WAVE 1 (with S840-S842)",
+      "items": 200,
+      "actions": [
+        {
+          "action": "Upgrade candidate difficulty promotion: Moderate→Difficult for Analyze upgrades",
+          "count": 100,
+          "description": "S839 Cohorts A+B: 70 items being upgraded from Apply to Analyze. These items already require multi-step analysis. Promote difficulty from Moderate(3) to Difficult(4) to match the elevated cognitive demand.",
+          "difficulty_change": "Moderate(3)→Difficult(4)",
+          "risk": "LOW — cognitive upgrade to Analyze justifies difficulty promotion. Stage 5 verification ensures alignment."
+        },
+        {
+          "action": "Existing Difficult inventory: verify labeling accuracy",
+          "count": 113,
+          "description": "Review all 113 existing Difficult(4) items for labeling accuracy. Some may be Moderate over-labeled (DL-031 pattern on Difficult items). Correct any misclassifications.",
+          "difficulty_change": "Difficult(4)→Moderate(3): estimated ~10 items. Net: no change to Difficult count.",
+          "risk": "LOW — spot-check 20 items for consistency."
+        }
+      ],
+      "post_segment_distribution": {
+        "Easy_1": { "count": 1084, "pct": 42.7 },
+        "ModerateEasy_2": { "count": 654, "pct": 25.7 },
+        "Moderate_3": { "count": 598, "pct": 23.5, "note": "Drops further as 100 items promoted to Difficult." },
+        "Difficult_4": { "count": 213, "pct": 8.4, "note": "Grows from 113→213. Still far from 25% target (635)." },
+        "VeryDifficult_5": { "count": 0, "pct": 0.0 }
+      }
+    },
+
+    "segment_wave_2": {
+      "name": "Content Creation — Net-New Higher-Difficulty Items",
+      "priority": "WAVE 2 (Sprint 2-3 via S836 pipeline)",
+      "items": 522,
+      "description": "The difficult/very-difficult deficit cannot be closed by recalibration alone. The pool simply does not have enough items with complex, multi-step, or judgment-based content. New items must be authored at Difficult and Very Difficult levels.",
+      "actions": [
+        {
+          "action": "Author Difficult items via S836 pipeline (Sprint 2)",
+          "count": 400,
+          "description": "Net-new items authored at Difficulty=4. These are Analyze-level items with multi-step calculations, comparative frameworks, and interpretation requirements. The S836 pipeline's Stage 2 (Stem) will be designed for Difficult-level complexity from the start.",
+          "source": "S836 Sprint 2: 160 Analyze items (many at Difficult) + Sprint 3 items"
+        },
+        {
+          "action": "Author Very Difficult items via S836 pipeline (Sprint 3)",
+          "count": 122,
+          "description": "Net-new items authored at Difficulty=5. These are Evaluate-level items requiring judgment under ambiguity, trade-off assessment, multi-framework decisions, and extended business scenarios. The 10 R-series Evaluate candidates from S839 Cohort C are the prototype.",
+          "source": "S836 Sprint 3: 100 Evaluate items (subset at Very Difficult)"
+        }
+      ],
+      "post_segment_distribution": {
+        "Easy_1": { "count": 1084, "pct": 35.4, "note": "Pool grows to 3,062 items. Easy pct drops from 42.7%." },
+        "ModerateEasy_2": { "count": 654, "pct": 21.4 },
+        "Moderate_3": { "count": 598, "pct": 19.5, "note": "Below target (30%) — correct, this tier was inflated by DL-031." },
+        "Difficult_4": { "count": 613, "pct": 20.0, "note": "Approaching target (25%). Still 22 items short." },
+        "VeryDifficult_5": { "count": 122, "pct": 4.0, "note": "First Very Difficult items. Still far from 10% target (254)." }
+      }
+    }
+  },
+
+  "target_path_to_full_alignment": {
+    "description": "Full CAQS §6.1 alignment requires additional content beyond Wave 2.",
+    "remaining_gap_after_wave_2": {
+      "pool_size": 3062,
+      "target_difficult": { "target": 766, "current": 613, "gap": -153 },
+      "target_very_difficult": { "target": 306, "current": 122, "gap": -184 },
+      "target_easy": { "target": 459, "current": 1084, "gap": 625, "note": "Oversupply cannot be reduced without archiving items — not recommended." }
+    },
+    "note": "Full alignment of Difficult and Very Difficult tiers requires Sprint 4 (Part 2 expansion). CAQS targets are aspirational for a mature pool; the immediate objective is to eliminate the 0% Very Difficult and grow Difficult from 4.4% to ≥15%."
+  },
+
+  "execution_batch_plan": {
+    "immediate_segment_batches": [
+      { "batch": "I1", "items": 28, "focus": "Pack A DL-031 Moderate→Easy (Section B: budget definitions)", "est_hours": 1.5 },
+      { "batch": "I2", "items": 28, "focus": "Pack B DL-031 Moderate→Easy (Section F: technology definitions)", "est_hours": 1.5 },
+      { "batch": "I3", "items": 28, "focus": "Pack C DL-031 Moderate→Easy (Section E: control definitions)", "est_hours": 1.5 },
+      { "batch": "I4", "items": 28, "focus": "Pack D DL-031 Moderate→Easy (Section E: control definitions)", "est_hours": 1.5 },
+      { "batch": "I5", "items": 28, "focus": "Pack E DL-031 Moderate→Easy (Sections A-F: definitional items)", "est_hours": 1.5 },
+      { "batch": "I6-I18", "items": "360 (13×28)", "focus": "Remaining DL-031 items across all packs", "est_hours": 19.5 }
+    ],
+    "total_immediate_batches": 18,
+    "total_immediate_hours": 27,
+    "governance_compliance": "All batches ≤28 items. Rule 4 (answer-key WARN) applies — difficulty label changes only, no CorrectChoice changes."
+  },
+
+  "governance": {
+    "t0_checkpoint": {
+      "governance_guard": "32/32 PASS",
+      "certified_count": 2298
+    },
+    "rule_4_answer_key_warn": "All calibration actions change Difficulty/DifficultyScore only. No CorrectChoice, ExplanationCorrect, or ExplanationWrong changes. Rule 4 WARN applies — REVISION_HISTORY.md entry required per batch.",
+    "rule_5_batch_cap": "All batches ≤28 items.",
+    "backup_protocol": "Mandatory before any pack file write per AGENTS.md §3.",
+    "risk": "MEDIUM — batch identification of DL-031 items requires per-item stem review. Automated regex-based identification has false-positive risk."
+  }
+}

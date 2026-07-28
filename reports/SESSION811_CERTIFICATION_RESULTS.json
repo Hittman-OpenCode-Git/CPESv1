@@ -1,0 +1,83 @@
+{
+  "session": "S811",
+  "series": "800-series Modernization",
+  "title": "Framework v2 Certification Results — Retroactive Verification",
+  "timestamp": "2026-07-27T15:35:00Z",
+  "certification_pool": {
+    "total_items": 2540,
+    "certified": 2298,
+    "archived": 242,
+    "blocked": 282,
+    "ready": 0,
+    "remediate": 0,
+    "certified_pct": "90.47%",
+    "per_pack": {
+      "pack_a": {"total": 500, "certified": 481, "archived": 19, "certified_pct": "96.2%"},
+      "pack_b": {"total": 500, "certified": 500, "archived": 0, "certified_pct": "100.0%"},
+      "pack_c": {"total": 500, "certified": 388, "archived": 112, "certified_pct": "77.6%"},
+      "pack_d": {"total": 500, "certified": 389, "archived": 111, "certified_pct": "77.8%"},
+      "pack_e": {"total": 540, "certified": 540, "archived": 0, "certified_pct": "100.0%"}
+    },
+    "per_domain": {
+      "A": {"total": 375, "certified": 746, "note": "Cross-pack double-count in engine — actual is 375 total"},
+      "B": {"total": 500, "certified": 500},
+      "C": {"total": 500, "certified": 500},
+      "D": {"total": 375, "certified": 375},
+      "E": {"total": 415, "certified": 246},
+      "F": {"total": 375, "certified": 264}
+    }
+  },
+  "structural_integrity": {
+    "identity_pass_rate": "99.96% (2539/2540)",
+    "cross_pack_duplicates": 0,
+    "question_state_coverage": "100% (2540/2540)",
+    "correct_choice_coverage": "99.96% (2539/2540 — P1-FD-046 archived shell)",
+    "explanation_correct_coverage": "99.96% (2539/2540)",
+    "dl008_certified": 0,
+    "dl026_certified": 0,
+    "learner_pool_safe": true
+  },
+  "governance": {
+    "guard_test_suite": "27/27 PASS",
+    "rule_1_revision_pairing": "PASS",
+    "rule_2_dl008_block": "PASS — 0 Certified DL-008",
+    "rule_3_registry_integrity": "PASS",
+    "rule_4_answer_key_documentation": "PASS",
+    "rule_5_batch_cap": "PASS — all batches ≤28"
+  },
+  "six_dimension_coverage": {
+    "note": "Retroactive verification — 2,298 items were previously certified. Six-dimension verification fields (certification_session) present only on Pack E (40 items). Packs A-D pre-date the field's introduction. All items passed structural Gate -1 identity verification.",
+    "gate_neg1_identity": "2539/2540 PASS",
+    "gate_0_integrity": "2539/2540 PASS", 
+    "gate_1_dl008_dl026": "2266/2540 PASS (274 blocked)",
+    "gate_2_ev3_explanation": "2075 warnings (principle citation), 0 blocked",
+    "gate_3_dl013_boilerplate": "2540/2540 PASS (31 flagged, 0 blocked)",
+    "gate_4_dl016_dl010": "2540/2540 PASS (0 detected)"
+  },
+  "findings": [
+    {
+      "id": "S811-F1",
+      "severity": "Low",
+      "title": "P1-FD-046 Archived shell",
+      "detail": "Pack D, Archived. Empty metadata-block CorrectChoice. Content block has valid CC='C'. Not in learner pool. DL-016 dual-block architecture artifact."
+    },
+    {
+      "id": "S811-F2",
+      "severity": "Info",
+      "title": "certification_session field absent from Packs A-D",
+      "detail": "Only Pack E has certification_session (40 items). Optional field. Backfill during next certification wave."
+    },
+    {
+      "id": "S811-F3",
+      "severity": "Info",
+      "title": "CURRENT_BASELINES.md stale",
+      "detail": "Reports 2,181 Certified. Actual: 2,298. Requires re-baseline."
+    },
+    {
+      "id": "S811-F4",
+      "severity": "Info",
+      "title": "CSA-S322 artifact superseded",
+      "detail": "Certification scan artifact generated at 13:46 UTC was superseded by S853 certification wave. Packs C and D current hashes differ from artifact. Re-generate artifact for S812."
+    }
+  ]
+}

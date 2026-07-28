@@ -1,0 +1,136 @@
+{
+  "session": "S602",
+  "agent": "G",
+  "role": "Economic Gate Revalidation",
+  "generated": "2026-07-26",
+  "type": "Governance Audit — Economic Analysis",
+  "purpose": "Revalidate that Startup Cost > Benefits remains true. Document current assumptions and evidence. This assessment supersedes the S601 Agent G Resource Efficiency Review as the authoritative economic gate assessment for the S602 dormancy governance session.",
+  "previous_assessments": [
+    {"session": "S724", "date": "2026-07-26", "verdict": "Net -1 (startup 4 > savings 3)", "agents": "I, R, M, N, Q — 5 independent converged on DEFER"},
+    {"session": "S601", "date": "2026-07-26", "verdict": "Net -1 (startup 4 > savings 3) — reaffirmed", "agent": "G (Resource Efficiency Review)"}
+  ],
+
+  "current_state": {
+    "certified_pool": 2201,
+    "certified_percent": 88.0,
+    "remaining_items": 299,
+    "total_items": 2500,
+    "registry_entries": 2995,
+    "active_certification_pipeline": "800-series (Domain E — S316: +10 Certified, +10 Wave 3 authored)",
+    "pending_defects": {
+      "dl_008_certified": "~67 items (Pack A: 2, Pack C: 55, Pack D: 10)",
+      "dl_026_inaudit": "~50 items (Pack D Section C)",
+      "dl_013_residual": "~851 fields (non-Certified, deferred)",
+      "dl_031_miscalibrations": "~500 items (difficulty inflation, systematic)"
+    },
+    "observed_throughput": "S316: 10 items Certified in 1 production session (Wave 2). Wave 3: 10 items in authoring queue. Domain E: 228/359 items (63.5% certified rate)."
+  },
+
+  "startup_cost_analysis": {
+    "cost_items": [
+      {
+        "item": "Charter establishment and ratification",
+        "sessions": 1,
+        "detail": "S600 Charter v1.0 created. Governance Board ratification (PENDING GAP-3). Update S725 Ownership Matrix to reflect active lane (new rows for 600 domain agents).",
+        "changed_since_s724": false
+      },
+      {
+        "item": "Tooling infrastructure (scripts, workflows, templates)",
+        "sessions": 1,
+        "detail": "Build QUESTION_SIMILARITY_LEDGER.json generation scripts. Create EW template library scaffolding. Build draft-preparation queue management. Integrate with existing build scripts (build_master_registry.js, generate_registry.js).",
+        "changed_since_s724": true,
+        "change_detail": "Governance integration overhead has INCREASED since S724. S725/S726/S727 added formal frameworks (Stewardship Framework, Closure Gate, Ownership Acceptance Registry) that 600 tooling must integrate with. Original 1-session estimate is a floor — expected 1.5-2 sessions."
+      },
+      {
+        "item": "Workflow integration and pilot validation",
+        "sessions": 1,
+        "detail": "Define 600→800 handoff specification. Resolve C-001/C-002 ownership conflicts. Create acceptance criteria for drafted materials. Pilot validation with first batch of draft packets reviewed by 800-series.",
+        "changed_since_s724": false
+      },
+      {
+        "item": "First-run calibration and governance integration",
+        "sessions": 1,
+        "detail": "T0 baseline capture for active 600 lane. Integration with S726 Closure Gate. Update CURRENT_BASELINES.md with 600 artifact hashes. establish monitoring metrics (acceptance rate, rejection rate, draft throughput).",
+        "changed_since_s724": true,
+        "change_detail": "Governance ceremony overhead: ownership transfer acceptance (Stewardship P2), closure gate integration (4-step chain), and monitoring framework (S602 deliverable) add approximately 0.5 sessions to the calibration phase."
+      }
+    ],
+    "total_startup_floor": 4,
+    "total_startup_ceiling": 5,
+    "central_estimate": 4.5,
+    "changed_since_s724": true,
+    "change_rationale": "S725-S727 governance hardening increased the ceremony overhead for any lane activation. S726 Closure Gate's 4-step chain (TRANSFER → ACCEPTANCE → APPROVAL → CLOSE) applies to 600 activation as a state transition. The Stewardship Framework's Principle 2 (acceptance requirement) adds a governance checkpoint not present during the S724 estimate."
+  },
+
+  "savings_analysis": {
+    "savings_sources": [
+      {
+        "source": "EW authoring offload from 800 certification waves",
+        "sessions_saved": 1.5,
+        "detail": "Estimate: ~200 EW fields authored in-line during certification waves. If 600 pre-authors EW templates and 800 validates (rather than authors), saves approximately 0.5 sessions per 100-item certification block. At 3 certification blocks remaining (~299 items), saves 1.5 sessions.",
+        "changed_since_s724": true,
+        "change_detail": "Remaining workload dropped from ~400 to ~299 items since S724 — reducing the potential savings surface. Fewer remaining items = fewer certification waves = fewer sessions for 600 to amortize across."
+      },
+      {
+        "source": "Registry and duplicate prevention offload",
+        "sessions_saved": 0.5,
+        "detail": "Duplicate detection and similarity scanning currently performed ad-hoc. A dedicated registry agent could systematize this, saving ~0.5 sessions across remaining certification waves.",
+        "changed_since_s724": true,
+        "change_detail": "Registry growth has been modest (~10 items from 2,985 to 2,995). Similarity pressure is zero — no duplicate detection has been triggered. The registry savings estimate is speculative with no empirical basis."
+      },
+      {
+        "source": "Template library reuse across certification waves",
+        "sessions_saved": 1.0,
+        "detail": "EW templates (COSO misconceptions, SOX, Control Activities) are authored once and reused across multiple items. COSO Principles 1-17 each have 5-10 common misconceptions. A complete misconception catalog saves ~1 session of inline research across all remaining certification waves.",
+        "changed_since_s724": false,
+        "detail": "Template reuse savings are theoretical — no templates have been created, no acceptance rates have been measured, and no reuse has been validated."
+      }
+    ],
+    "total_savings_ceiling": 3.0,
+    "total_savings_floor": 1.0,
+    "central_estimate": 2.0,
+    "changed_since_s724": true,
+    "change_rationale": "S724 estimate of 3 sessions assumed all savings sources realized at ceiling. S602 finds two of three savings estimates have weakened: EW authoring offload surface has shrunk (299 vs. 400 items remaining), and registry savings are purely speculative with zero empirical basis. Template library reuse remains theoretical. Central savings estimate is now 2.0 sessions (down from 3.0)."
+  },
+
+  "net_effect": {
+    "best_case": "Startup 4.0 - Savings 3.0 = Net -1 (worse than no 600-series)",
+    "worst_case": "Startup 5.0 - Savings 1.0 = Net -4 (significantly worse)",
+    "central_estimate": "Startup 4.5 - Savings 2.0 = Net -2.5 (materially worse)",
+    "net_negative_confidence": "HIGH — all 3 estimates are net-negative. Best case is still -1. No scenario reaches breakeven within the ~20-session program horizon.",
+    "breakeven_sessions_required": 36,
+    "program_sessions_remaining": 20,
+    "breakeven_possible": false,
+    "breakeven_rationale": "Breakeven requires 36 sessions of amortization at S724 estimates. At current (~20 remaining), breakeven is unreachable. Even at S724's optimistic assumption of 17 remaining sessions, breakeven is unreachable."
+  },
+
+  "assumption_sensitivity": {
+    "description": "The following assumption changes could improve the economic picture, but none are currently satisfied.",
+    "sensitivities": [
+      {
+        "assumption": "EW acceptance rate > 90% (current unvalidated estimate: 70-80%)",
+        "impact": "Higher acceptance → fewer revision cycles → more sessions saved. At 90%, saves +0.5 sessions. Still net-negative at -2.0.",
+        "likelihood": "LOW — unvalidated. No pre-authored EW batches exist to measure."
+      },
+      {
+        "assumption": "Template reuse savings > 2 sessions (current estimate: 1.0)",
+        "impact": "At 2 sessions template savings, central estimate improves to -1.5. Still net-negative.",
+        "likelihood": "LOW — requires catalog completeness and >80% reuse rate, both unvalidated."
+      },
+      {
+        "assumption": "Remaining workload doubles (from 299 to 600 items)",
+        "impact": "More items → more certification waves → larger amortization surface. At 600 remaining, savings increase to ~4 sessions, reaching breakeven. But this would be a PORTFOLIO EXPANSION event — adding 300 new items is an executive decision independent of 600 activation.",
+        "likelihood": "LOW — no portfolio expansion is planned. Current growth is Domain E replacement (33 clone groups) and Domain F (similar scale) — estimated 100-150 new items total, not 300."
+      },
+      {
+        "assumption": "Startup cost drops to 3 sessions via pre-built infrastructure",
+        "impact": "At startup 3 and savings 2, net = -1. Still negative. Requires preconditioning that itself consumes sessions.",
+        "likelihood": "ZERO — startup cost cannot drop below 4 without consuming sessions that offset the reduction."
+      }
+    ]
+  },
+
+  "verdict": "STARTUP COST > BENEFITS remains TRUE by a widening margin. The S724 estimate of Net -1 was the BEST CASE. S602's updated estimate of Net -2.5 (central) reflects: (a) governance overhead increase (S725-S727 ceremonies), (b) shrinking remaining workload (299 vs. 400 items), (c) weakened savings estimates (empirical basis eroded by continued 800-series operation without 600). The economic gate is FAIL with HIGH confidence. No assumption change within the current program horizon can flip it to PASS.",
+
+  "recommendation": "Continue dormancy. The economic gate is the strongest of the 4 blocking gates — even if the other 3 gates (Board, Ownership, Baseline) were resolved, the economic gate independently blocks activation. No re-evaluation is warranted until the binding constraint empirically shifts or the remaining workload doubles."
+}

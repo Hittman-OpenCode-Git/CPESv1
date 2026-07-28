@@ -1,0 +1,35 @@
+{
+  "title": "SESSION314_PRODUCTION_PROMOTION_RESULTS",
+  "session": "314",
+  "generated": "2026-07-27",
+  "operation": "Production Insertion — Certification Candidate → Certified → Production",
+  "preFlight": {
+    "pack_e_items": 500,
+    "pack_e_certified": 500,
+    "pack_e_hash": "9F9B1381128184F92558A9F916DE6C99"
+  },
+  "itemsPromoted": [
+    {"QuestionID": "P1-E-R01", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R02", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R03", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R04", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R05", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R06", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R07", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R08", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R09", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"},
+    {"QuestionID": "P1-E-R10", "fromState": "Unprocessed", "toState": "Certified", "certificationSession": "S313", "certificationDate": "2026-07-27"}
+  ],
+  "postFlight": {
+    "pack_e_items": 510,
+    "pack_e_certified": 510,
+    "parseCheck": "PASS",
+    "dl008Check": "10/10 CLEAN"
+  },
+  "verification": {
+    "parseIntegrity": "node -e eval → MCQ_BANK_E.length = 510 ✓",
+    "qidPresence": "grep P1-E-R → 10 ✓",
+    "certifiedDelta": "+10 (500 → 510) ✓",
+    "dl008Clean": "All 10 EW[CC] = '' ✓"
+  }
+}

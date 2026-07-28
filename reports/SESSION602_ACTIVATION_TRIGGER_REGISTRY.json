@@ -1,0 +1,158 @@
+{
+  "session": "S602",
+  "agent": "C",
+  "role": "Activation Trigger Registry",
+  "generated": "2026-07-26",
+  "type": "Governance Registry — Single Authoritative Reference",
+  "purpose": "Document the ONLY conditions under which a new 600-series activation review may be initiated. This registry is the single source of truth until superseded by a future Governance Board vote.",
+  "authority": "S600 Charter §5 (Activation Conditions), S724 Agent V Governance Preservation (5 reactivation criteria), S725 Lane 600 §Stewardship Framework",
+
+  "governing_principle": "Activation review MAY ONLY be initiated when a trigger condition in this registry is satisfied. No other condition, argument, or request may trigger activation review. This registry supersedes all informal activation discussions.",
+
+  "triggers": {
+    "mandatory_gates_all_four": {
+      "description": "S600 Charter §5 requires ALL 4 mandatory gates to pass before activation can proceed. None is individually sufficient. All 4 must be PASS simultaneously.",
+      "gates": [
+        {
+          "id": "GATE_ECONOMIC",
+          "label": "Economic Gate — Forecast Savings > Startup Cost",
+          "current_status": "FAIL",
+          "current_value": "Startup 4 sessions > Savings 3 sessions = Net -1",
+          "pass_condition": "Independent 300-series analytics must verify Forecast Savings exceeds Startup Cost using current (not S724-era) data. S724 estimate may not be reused. The 300-series Forecast Engine (S309) must be updated with current portfolio state and produce a formal savings projection.",
+          "last_verified": "S724 (2026-07-26)",
+          "last_verified_by": "S724 Agent I Throughput Model + Agent R Session Reduction Forecast + Agent M Resource Efficiency",
+          "verification_methodology": "Independent 300-series re-verification using current certified pool (2,201), current remaining workload (~299 items), and 800-series observed throughput.",
+          "notes": "S601 Agent G confirmed: no assumption changes alter the -1 net effect. Governance overhead has INCREASED since S724 (S725/S726/S727 ceremonies). Breakeven at 36 sessions remains unreachable within 20-session program horizon."
+        },
+        {
+          "id": "GATE_BOARD",
+          "label": "Governance Board Approval — New Executive Board Vote Required",
+          "current_status": "FAIL",
+          "pass_condition": "A NEW Executive Board vote must be held. Minimum requirement: 300-series Lead confirms binding constraint shifted, 700-series Governance Auditor confirms no ownership conflicts, 800-series Certification Lead confirms drafting capacity is active bottleneck. ALL THREE leads must vote to activate. The S724 26/26 DEFER vote CANNOT be reused.",
+          "last_reviewed": "S601 Agent K Activation Board (2026-07-26)",
+          "notes": "S601: 0 of 3 required lead confirmations. S724 vote unreversed. GAP-3 ownership acceptance PENDING — the Governance Board, which would hold this vote, has not accepted stewardship of the 600-series lane."
+        },
+        {
+          "id": "GATE_OWNERSHIP",
+          "label": "No Ownership Conflict — All Overlaps Resolved",
+          "current_status": "FAIL",
+          "pass_condition": "Two MEDIUM overlaps (C-001: 800 handoff friction, C-002: 700 authority drift) must be formally resolved, not deferred. Resolution must include: joint rubric for the ambiguous boundary, documented acceptance by BOTH affected lanes (700 and 800), and an update to S725 Ownership Matrix reflecting resolution (new or amended rows).",
+          "last_reviewed": "S601 Agent B (2026-07-26) — 95/100 boundary integrity. C-001/C-002 carried forward as unresolved.",
+          "notes": "Cannot be resolved while 600 is dormant — both overlaps involve live operational boundaries. Must be resolved DURING the activation review, not deferred again."
+        },
+        {
+          "id": "GATE_BASELINE",
+          "label": "Pre-Launch Governance Baseline Captured",
+          "current_status": "FAIL",
+          "pass_condition": "Full T0 governance baseline captured before any 600-series agent executes. Minimum: all 13 runtime hashes verified against CURRENT_BASELINES.md, certified pool count verified by direct raw-file grep, all active defect manifests reviewed for 600-relevant entries, activation decision recorded in REVISION_HISTORY.md with binding-constraint evidence, updated Forecast Savings calculation, Governance Board vote record, and T0 baseline snapshot.",
+          "last_reviewed": "S601 Agent E (2026-07-26) — 0/4 sub-conditions met",
+          "notes": "S600 Charter §5.4 specifies exact REVISION_HISTORY.md entry requirements. The baseline must be captured at the moment of activation, not earlier."
+        }
+      ],
+      "all_passed": false,
+      "all_passed_current_count": 0,
+      "all_passed_required": 4
+    },
+
+    "reactivation_worth_evaluating": {
+      "description": "S600 Charter §1.3 identifies conditions under which reactivation becomes worth re-evaluating, independent of the mandatory gates. These are NOT sufficient for activation — they are triggers for initiating a new activation review.",
+      "conditions": [
+        {
+          "id": "TRIGGER_BINDING_CONSTRAINT",
+          "label": "Binding constraint shifts to drafting capacity",
+          "current_status": "NOT MET",
+          "detail": "S724 identified author capacity, not tooling, as the binding constraint. If the 800-series pipeline becomes throughput-limited by drafting capacity (EW authoring) rather than review capacity (CAQS §1.6 audit), the 600-series becomes relevant. Must be confirmed by 300-series analytics and 800-series Lead.",
+          "measurement": "800-series observed throughput ÷ items-per-session. If throughput is consistently bottlenecked at EW authoring (not certification audit), this trigger fires."
+        },
+        {
+          "id": "TRIGGER_BACKLOG",
+          "label": "Modernization backlog exceeds 50+ pending items at steady state",
+          "current_status": "NOT MET",
+          "detail": "Current pending count: ~299 items (non-Certified). However, these are spread across certification waves (D/F sections), operational defects (DL-008, DL-026), and content-authoring backlogs — not a single drafting queue. A 600-series drafting lane would only help if the backlog is primarily drafting-limited.",
+          "measurement": "Count of items in 'In Audit' state with DL-013/DL-026/DL-025 requiring EW authoring. If >= 50 are blocked specifically on EW authoring (not on audit capacity), this trigger fires."
+        },
+        {
+          "id": "TRIGGER_DEDICATED_LANE",
+          "label": "Dedicated drafting lane clears certification faster than adding authors to 800",
+          "current_status": "NOT MET",
+          "detail": "Must be demonstrated by 300-series simulation before activation. S724 Agent M showed breakeven at 36 sessions — unreachable within 20-session horizon. This trigger requires evidence that 600 would actually improve throughput, not just add overhead.",
+          "measurement": "300-series simulation: compare (800 with 4 authorized authors) vs. (800 with 2 authors + 600 with 2 drafters). The 600 scenario must show >= 2 sessions saved."
+        }
+      ],
+      "any_met": false,
+      "trigger_met_count": 0,
+      "trigger_required_for_evaluation": 1
+    },
+
+    "agent_v_preservation_criteria": {
+      "description": "S724 Agent V Governance Preservation report defined 5 criteria covering both charter and operational readiness. These are layered on top of the mandatory gates — criteria 1-2 overlap with GATE_ECONOMIC and GATE_BOARD; criteria 3-5 are additional operational requirements.",
+      "criteria": [
+        {
+          "id": "AV_1",
+          "label": "EW authoring velocity empirically confirmed as the binding constraint",
+          "status": "NOT MET",
+          "overlaps": "TRIGGER_BINDING_CONSTRAINT"
+        },
+        {
+          "id": "AV_2",
+          "label": "Portfolio grows to 5,000+ items making dedicated infrastructure cost-effective",
+          "status": "NOT MET",
+          "detail": "Current: 2,985 items in MASTER_QUESTION_REGISTRY.md + 10 Wave 2 production = 2,995. 500 items/pack × 5 packs = 2,500 MCQ. 420 case items. 800-series Domain E replacement items. Growth trajectory does not reach 5,000 within program horizon."
+        },
+        {
+          "id": "AV_3",
+          "label": "Observed cert velocity drops below 10 items/session due to EW-blocked items",
+          "status": "NOT MET",
+          "detail": "No 800-series certification wave has had throughput limited by EW authoring. S316 certified 10 items in a single production session. No throughput data suggests EW-blocked velocity below 10 items/session."
+        },
+        {
+          "id": "AV_4",
+          "label": "Post-certification modernization phase where batch DL-013/DL-031 ops become new bottleneck",
+          "status": "NOT MET",
+          "detail": "Post-certification modernization (800-series after 100% Certified) is theoretical. DL-013 (~851 fields remaining) and DL-031 (~500 DifficultyScore miscalibrations) are deferred to certification waves, not a separate modernization phase."
+        },
+        {
+          "id": "AV_5",
+          "label": "New Executive Board vote required — S724 DEFER vote CANNOT be reused",
+          "status": "NOT MET",
+          "overlaps": "GATE_BOARD"
+        }
+      ]
+    },
+
+    "economic_model_assumptions": {
+      "description": "Current assumptions in the S724 economic model. Any material change to these assumptions that would flip the Economic Gate from FAIL to PASS constitutes a valid trigger for re-evaluation.",
+      "assumptions": [
+        {"id": "ASM_1", "label": "Startup cost floor is 4 sessions", "current_value": 4, "must_become": "<3 for economical activation"},
+        {"id": "ASM_2", "label": "Savings ceiling is 3 sessions over program lifetime", "current_value": 3, "must_become": ">4 for economical activation"},
+        {"id": "ASM_3", "label": "800-series throughput at 12-15 items/session", "current_value": 12, "relevance": "Larger throughput = faster completion = fewer sessions for 600 to amortize across"},
+        {"id": "ASM_4", "label": "EW acceptance rate 70-80% (unvalidated)", "current_value": "unknown", "relevance": "Lower acceptance = wasted drafting = higher effective cost per accepted EW"},
+        {"id": "ASM_5", "label": "Remaining workload ~299 items", "current_value": 299, "relevance": "Smaller remaining = fewer sessions = harder to amortize startup cost"}
+      ]
+    }
+  },
+
+  "prohibited_activation_paths": {
+    "description": "The following paths are explicitly documented as invalid for 600-series activation, to prevent future governance ambiguity.",
+    "paths": [
+      "S724 26/26 DEFER vote reused as activation authority (charter §5.2 explicitly prohibits)",
+      "Activation by implication or 'de facto' operation (requires explicit vote)",
+      "Activation via stealth authoring (any 600-series artifact creation constitutes an attempted activation and is a governance violation per S600 §0)",
+      "Activation via 'pilot' or 'trial' without full mandatory gate satisfaction",
+      "Activation by any single lane lead without full Executive Board vote (3 leads minimum)",
+      "Activation by S601 Agent K Board Decision reinterpretation (S601 explicitly voted KEEP DEFERRED)",
+      "Activation by 'Agent AA' delegation (Agent AA is a 700/800 operational concern, not a 600-series activation path)"
+    ]
+  },
+
+  "next_mandatory_review": {
+    "trigger": "Annual stewardship review per S725 Row 16 cadence, or when any mandatory gate flips to PASS",
+    "earliest_trigger_date": "2027-07-26",
+    "review_authority": "Governance Board",
+    "review_scope": "Re-evaluate all 4 mandatory gates against current portfolio state"
+  },
+
+  "registry_last_updated": "2026-07-26 (S602)",
+  "registry_version": "1.0",
+  "registry_maintainer": "Governance Board (S725 Row 16, Stewardship of 600-series deferred lane)"
+}

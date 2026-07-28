@@ -1,0 +1,92 @@
+{
+  "A": {
+    "totalItems": 433,
+    "avgUiqs": 70.3,
+    "sections": {
+      "A": {
+        "count": 433,
+        "avgUiqs": 70.3,
+        "certified": 425,
+        "avgDqs": 78.1
+      }
+    },
+    "concentrationRisk": "Balanced",
+    "mcqCount": 375,
+    "caseCount": 58
+  },
+  "B": {
+    "totalItems": 568,
+    "avgUiqs": 71.3,
+    "sections": {
+      "B": {
+        "count": 568,
+        "avgUiqs": 71.3,
+        "certified": 562,
+        "avgDqs": 79
+      }
+    },
+    "concentrationRisk": "Balanced",
+    "mcqCount": 500,
+    "caseCount": 68
+  },
+  "C": {
+    "totalItems": 574,
+    "avgUiqs": 74.1,
+    "sections": {
+      "C": {
+        "count": 574,
+        "avgUiqs": 74.1,
+        "certified": 564,
+        "avgDqs": 78.6
+      }
+    },
+    "concentrationRisk": "Balanced",
+    "mcqCount": 500,
+    "caseCount": 74
+  },
+  "D": {
+    "totalItems": 451,
+    "avgUiqs": 70.1,
+    "sections": {
+      "D": {
+        "count": 451,
+        "avgUiqs": 70.1,
+        "certified": 445,
+        "avgDqs": 75.9
+      }
+    },
+    "concentrationRisk": "Balanced",
+    "mcqCount": 375,
+    "caseCount": 76
+  },
+  "E": {
+    "totalItems": 442,
+    "avgUiqs": 62.5,
+    "sections": {
+      "E": {
+        "count": 442,
+        "avgUiqs": 62.5,
+        "certified": 264,
+        "avgDqs": 60.7
+      }
+    },
+    "concentrationRisk": "Balanced",
+    "mcqCount": 375,
+    "caseCount": 67
+  },
+  "F": {
+    "totalItems": 431,
+    "avgUiqs": 62.4,
+    "sections": {
+      "F": {
+        "count": 431,
+        "avgUiqs": 62.4,
+        "certified": 281,
+        "avgDqs": 62.2
+      }
+    },
+    "concentrationRisk": "Balanced",
+    "mcqCount": 374,
+    "caseCount": 57
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "title": "SESSION312_AUTHORING_BATCH1",
+  "session": "312",
+  "generated": "2026-07-27T00:01:33.086Z",
+  "batch": 1,
+  "itemsAuthored": 10,
+  "targetCloneGroups": [
+    {
+      "group": "segregation of duties design",
+      "qids": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-004",
+        "P1-EC-005"
+      ],
+      "replacement": "P1-E-R01"
+    },
+    {
+      "group": "coso internal control framework",
+      "qids": [
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-008",
+        "P1-EC-009",
+        "P1-EC-010"
+      ],
+      "replacement": "P1-E-R02"
+    },
+    {
+      "group": "fraud triangle elements",
+      "qids": [
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-014",
+        "P1-EC-015"
+      ],
+      "replacement": "P1-E-R03"
+    },
+    {
+      "group": "physical controls over assets",
+      "qids": [
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-018",
+        "P1-EC-019",
+        "P1-EC-020"
+      ],
+      "replacement": "P1-E-R04"
+    },
+    {
+      "group": "bank reconciliation control",
+      "qids": [
+        "P1-EC-026",
+        "P1-EC-027",
+        "P1-EC-028",
+        "P1-EC-029",
+        "P1-EC-030"
+      ],
+      "replacement": "P1-E-R05"
+    },
+    {
+      "group": "management override risk",
+      "qids": [
+        "P1-EC-041",
+        "P1-EC-042",
+        "P1-EC-043",
+        "P1-EC-044",
+        "P1-EC-045"
+      ],
+      "replacement": "P1-E-R06"
+    },
+    {
+      "group": "whistleblower hotline purpose",
+      "qids": [
+        "P1-EC-046",
+        "P1-EC-047",
+        "P1-EC-048",
+        "P1-EC-049",
+        "P1-EC-050"
+      ],
+      "replacement": "P1-E-R07"
+    },
+    {
+      "group": "control environment tone at top",
+      "qids": [
+        "P1-EC-056",
+        "P1-EC-057",
+        "P1-EC-058",
+        "P1-EC-059",
+        "P1-EC-060"
+      ],
+      "replacement": "P1-E-R08"
+    },
+    {
+      "group": "three lines of defense model",
+      "qids": [
+        "P1-ED-001",
+        "P1-ED-002",
+        "P1-ED-003",
+        "P1-ED-004",
+        "P1-ED-005"
+      ],
+      "replacement": "P1-E-R09"
+    },
+    {
+      "group": "compensating control small business",
+      "qids": [
+        "P1-EC-051",
+        "P1-EC-052",
+        "P1-EC-053",
+        "P1-EC-054",
+        "P1-EC-055"
+      ],
+      "replacement": "P1-E-R10"
+    }
+  ],
+  "qualityGateValidation": {
+    "gate1_draft": {
+      "status": "COMPLETE",
+      "note": "All 10 items have stem, 4 choices, CorrectChoice, EC, EW[A-D], metadata"
+    },
+    "gate2_technical": {
+      "status": "PENDING",
+      "note": "Requires DL-008/DL-026/DL-013/DL-010/field completeness scan"
+    },
+    "gate3_blueprint": {
+      "status": "PENDING",
+      "note": "Requires topic/LO/CL/difficulty accuracy verification against CSO"
+    },
+    "gate4_qa": {
+      "status": "PENDING",
+      "note": "Requires stem clarity, distractor plausibility, EC quality, EW specificity review"
+    }
+  },
+  "ewCompliance": {
+    "dl008": "VERIFIED — all 10 items have empty EW[CorrectChoice] (field at CC index is '')",
+    "dl026": "VERIFIED — all non-CC EW fields have content >= 100 chars",
+    "dl013": "VERIFIED — no template boilerplate detected in any EC or EW field",
+    "dl010": "PENDING — cross-contamination check requires human review"
+  },
+  "items": [
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R01 segregation of duties — incompatible functions",
+      "MicroTopic": "segregation of duties incompatible functions",
+      "UniqueConceptKey": "E-R01-segregation-of-duties-incompatible-functions",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Meridian Corporation's accounting department has one employee who opens the mail, records cash receipts in the ledger, prepares the daily bank deposit, and reconciles the bank statement each month. Which of the following best describes the internal control weakness in this arrangement?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Segregation of duties requires that incompatible functions be separated among different individuals to reduce the risk of error or fraud. The four functions described — custody of incoming cash (opening mail), recording cash receipts (ledger entries), preparing deposits (asset custody), and reconciliation (independent verification) — should be divided among at least two, and ideally three or four, different employees. When one person performs all four, they can misappropriate cash and conceal the theft by manipulating the records and the reconciliation. The specific weakness is that this employee has both custody of assets and record-keeping authority, which are incompatible duties under COSO's control activities principle. A properly designed system would separate cash handling from recording and reconciliation, ensuring that no single individual controls a transaction from initiation to final recording.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces archived P1-EC-001 through P1-EC-005 clone rotation group.",
+      "QuestionID": "P1-E-R01",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed or marked, review segregation of duties under COSO Control Activities and the concept of incompatible functions.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The employee lacks sufficient training in internal control principles to perform all four functions accurately",
+        "B": "The employee has both custody of cash and record-keeping authority, which are incompatible duties that should be segregated",
+        "C": "The accounting department is understaffed, which creates an inherent risk that cannot be mitigated through controls",
+        "D": "The employee has authorization authority over cash transactions without proper management oversight"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — segregation of duties",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template",
+        "Distractors written as plausible CMA-style traps based on common learner misconceptions"
+      ],
+      "ExplanationWrongA": "Training adequacy is not the internal control weakness described. Even a well-trained employee should not be permitted to perform all four incompatible functions. The control principle at issue is segregation of duties, not employee competence. A candidate selecting this option may be confusing the concept of control environment (which includes commitment to competence) with control activities (which include segregation of duties).",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "Understaffing may be a contributing operational factor, but it does not change the nature of the internal control weakness. The core problem is that incompatible duties (custody and record-keeping) are concentrated in one person, regardless of department size. Inherent risk and control risk are distinct concepts, and the scenario describes a control design deficiency, not an unavoidable inherent risk. Even a small department can implement compensating controls such as owner review of bank reconciliations.",
+      "ExplanationWrongD": "While management oversight is important, the specific weakness described is not primarily about authorization authority. The employee is recording cash, handling deposits, and performing reconciliation — all without authorization being the key issue. The incompatible functions of custody and record-keeping represent the most fundamental segregation-of-duties violation, as the employee can both misappropriate assets and conceal the misappropriation through records."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R02 COSO framework — three categories of objectives",
+      "MicroTopic": "coso framework three categories of objectives",
+      "UniqueConceptKey": "E-R02-coso-three-categories-objectives",
+      "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Under the COSO Internal Control — Integrated Framework (2013), internal control is designed to provide reasonable assurance regarding the achievement of objectives in which of the following categories?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "The COSO 2013 framework defines internal control as a process designed to provide reasonable assurance regarding the achievement of objectives relating to operations, reporting, and compliance. Operations objectives pertain to the effectiveness and efficiency of the entity's operations, including operational and financial performance goals and safeguarding of assets. Reporting objectives relate to internal and external financial and non-financial reporting, encompassing reliability, timeliness, transparency, and other terms as established by regulators, standard-setters, or the entity's policies. Compliance objectives pertain to adherence to laws and regulations to which the entity is subject. These three categories are distinct but may overlap — for example, a control designed to ensure accurate financial reporting (reporting objective) may also support compliance with securities regulations (compliance objective). Strategic objectives are not one of the three COSO categories; they are addressed through the entity's strategic planning and governance processes, not through the internal control framework directly.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-006 through P1-EC-010 clone rotation group.",
+      "QuestionID": "P1-E-R02",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the COSO 2013 framework definition and the three categories of objectives.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Strategic, operational, and financial objectives — reflecting the entity's mission and long-term goals",
+        "B": "Operations, compliance, and governance objectives — covering entity-wide control and oversight",
+        "C": "Financial reporting, non-financial reporting, and sustainability objectives — as defined by external standards",
+        "D": "Operations, reporting, and compliance objectives — as defined in the COSO 2013 framework"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework Executive Summary",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.b Internal Control Framework (COSO 2013)",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement — tests framework knowledge, not company-name recognition",
+        "Distractors test common misconceptions about COSO objective categories"
+      ],
+      "ExplanationWrongA": "Strategic objectives are not one of the three COSO internal control objective categories. While COSO's broader enterprise risk management (ERM) framework addresses strategic objectives, the Internal Control — Integrated Framework is specifically concerned with operations, reporting, and compliance. Additionally, 'financial objectives' is not a standalone COSO category — financial reporting falls under reporting objectives, and financial performance falls under operations objectives. A candidate selecting this option may be confusing the Internal Control framework with the ERM framework.",
+      "ExplanationWrongB": "Governance objectives are not one of the three COSO internal control categories. While governance is related to the control environment (one of the five components, not a category of objectives), the three objective categories under COSO are operations, reporting, and compliance. The control environment provides the foundation for these three categories of objectives but is not itself a category of objectives.",
+      "ExplanationWrongC": "Sustainability objectives are not a separate category under the COSO Internal Control framework. While sustainability reporting has become increasingly important, COSO categorizes reporting objectives broadly to include both financial and non-financial reporting. Splitting reporting into sub-categories is a common exam trap. The three standard COSO categories are operations, reporting (which encompasses both financial and non-financial, internal and external), and compliance.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R03 fraud triangle — pressure element",
+      "MicroTopic": "fraud triangle pressure element",
+      "UniqueConceptKey": "E-R03-fraud-triangle-pressure",
+      "LOSTag": "E.1.c Control Environment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "A divisional controller at Pacific Manufacturing is under significant personal financial strain due to medical expenses and has access to override journal entry controls. Management recently eliminated a mandatory vacation policy to reduce costs. Under the fraud triangle framework, which element of fraud risk is most directly increased by the controller's personal financial situation?",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The fraud triangle, developed by criminologist Donald Cressey, identifies three conditions generally present when fraud occurs: pressure (also called incentive or motivation), opportunity, and rationalization. Pressure refers to a financial or non-financial incentive or need that motivates an individual to commit fraud. The controller's significant personal financial strain from medical expenses represents a classic pressure element — it creates a perceived need that could motivate fraudulent behavior. Opportunity is the ability to carry out the fraud, which in this scenario is present through the controller's access to override journal entry controls, but it is not the element most directly tied to the personal financial situation. Rationalization is the mindset that justifies the fraudulent act (e.g., 'I'll pay it back' or 'the company owes me'), which is not described in the scenario. The elimination of the mandatory vacation policy increases opportunity by reducing the likelihood of detection, but again, the financial situation itself is the pressure element. The CPA exam and CMA exam both test the fraud triangle, and candidates must distinguish between pressure (the motivation), opportunity (the means), and rationalization (the justification).",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-011 through P1-EC-015 clone rotation group.",
+      "QuestionID": "P1-E-R03",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the three elements of the fraud triangle and practice distinguishing between pressure, opportunity, and rationalization in scenario-based questions.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Pressure — the controller's financial strain creates an incentive to commit fraud",
+        "B": "Opportunity — the controller's access to override journal entries enables fraudulent activity",
+        "C": "Rationalization — the controller may believe the company is profitable enough to absorb any loss",
+        "D": "Collusion — the controller could coordinate with subordinates to circumvent remaining controls"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "ACFE Fraud Triangle Overview",
+          "url": "https://www.acfe.com/fraud-triangle.aspx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.c Control Environment — fraud risk and the fraud triangle",
+        "Distractors test ability to distinguish between pressure, opportunity, rationalization, and collusion"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "The controller's access to override journal entries is an opportunity factor, not the element most directly tied to personal financial strain. The question asks which element is most directly increased by the controller's personal financial situation. While the access to overrides does create opportunity, the personal financial situation is specifically a pressure element. A candidate selecting this option may be focusing on the control weakness (removal of vacation policy, override access) rather than on the element directly linked to the financial difficulty.",
+      "ExplanationWrongC": "Rationalization refers to the fraudster's internal justification for their actions, such as 'I deserve this' or 'I'll pay it back.' The scenario does not describe any rationalization by the controller — it describes financial strain (pressure) and weakened controls (opportunity). Rationalization is an attitude or mindset, not an external financial situation. A candidate selecting this option may be confusing rationalization with the idea that someone under financial pressure is more likely to justify fraud, but the direct causal link is from financial strain to pressure, not to rationalization.",
+      "ExplanationWrongD": "Collusion is not one of the three elements of the fraud triangle. Collusion refers to two or more individuals working together to perpetrate or conceal fraud, and while it can increase fraud risk by circumventing segregation of duties, it is not an element of the fraud triangle framework. The three elements are pressure, opportunity, and rationalization."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R04 preventive controls — physical safeguards",
+      "MicroTopic": "preventive controls physical safeguards",
+      "UniqueConceptKey": "E-R04-preventive-controls-physical",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "A company installs security cameras, requires badge access to its warehouse, and conducts a physical inventory count at year-end. Which of the following correctly classifies these controls?",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Internal controls are classified as either preventive or detective based on when they act in relation to an error or irregularity. Preventive controls are designed to deter errors or fraud before they occur — they proactively stop undesirable events. Detective controls are designed to identify errors or fraud after they have occurred — they discover undesirable events that have already happened. Security cameras serve a dual purpose: the visible presence of cameras deters theft (preventive), but recorded footage can also identify a thief after the fact (detective). Badge access to the warehouse is a preventive control — it physically prevents unauthorized individuals from entering the premises. The annual physical inventory count is a detective control — it identifies discrepancies between recorded inventory and actual physical inventory after any errors or theft have occurred. The key exam distinction: preventive controls act like a lock on a door (stopping entry), while detective controls act like an alarm (alerting after entry has occurred).",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-016 through P1-EC-020 clone rotation group.",
+      "QuestionID": "P1-E-R04",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "Review the distinction between preventive controls (deter before occurrence) and detective controls (discover after occurrence).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "All three are detective controls because they identify discrepancies after transactions are recorded",
+        "B": "Badge access and inventory count are preventive; security cameras are detective",
+        "C": "Badge access is preventive; security cameras serve both purposes; inventory count is detective",
+        "D": "Security cameras and badge access are preventive; inventory count is both preventive and detective"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — preventive vs detective controls",
+        "Distractors test common classification errors"
+      ],
+      "ExplanationWrongA": "This classification is incorrect for two reasons. First, badge access is a preventive control — it prevents unauthorized entry before it happens, not after. Second, security cameras have a deterrence effect (preventive) in addition to their recording function. A candidate selecting this option may be incorrectly assuming that all physical controls are detective in nature, without considering the timing of their effect.",
+      "ExplanationWrongB": "Badge access is correctly classified as preventive, but the physical inventory count is detective, not preventive. An inventory count compares recorded balances to physical counts after discrepancies have already occurred — it does not prevent inventory shrinkage. Additionally, security cameras serve a preventive function through their deterrent effect, making the classification 'detective only' incomplete.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "While badge access is correctly classified as preventive and security cameras have a preventive component, classifying the inventory count as also preventive is incorrect. The inventory count does not deter or prevent errors or theft — it simply identifies discrepancies after they have occurred. The count may create a perception of monitoring that indirectly influences behavior, but this indirect effect does not make it a preventive control in the accounting and internal control classification."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R05 bank reconciliation — segregation of duties",
+      "MicroTopic": "bank reconciliation segregation of duties",
+      "UniqueConceptKey": "E-R05-bank-reconciliation-segregation",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "At Crestview Enterprises, the accounts receivable clerk also prepares the monthly bank reconciliation. Which of the following risks is most directly created by this arrangement?",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "Bank reconciliation is a detective control that compares the entity's cash records to the bank's records to identify discrepancies. For this control to be effective, the person performing the reconciliation should be independent of the cash receipt and disbursement functions. When the accounts receivable clerk — who records customer payments (cash receipts) and may handle customer checks — also prepares the bank reconciliation, they can misappropriate cash receipts and conceal the theft by manipulating the reconciliation. This is a classic incompatible-function pairing: the person who records cash is also responsible for verifying the accuracy of those records. The risk created is that errors or irregularities in cash receipts could go undetected because the same person controls both the recording and the verification. Under a properly designed system of internal control, the bank reconciliation should be performed by someone who does not handle cash receipts, does not have check-signing authority, and does not maintain the cash receipts journal or accounts receivable subsidiary ledger.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-026 through P1-EC-030 clone rotation group.",
+      "QuestionID": "P1-E-R05",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review bank reconciliation as a detective control and the importance of segregation of duties in cash handling.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Errors or irregularities in cash receipts could go undetected because the same person records receipts and verifies the related bank activity",
+        "B": "The bank reconciliation will contain mathematical errors because the clerk is not trained in reconciliation procedures",
+        "C": "The company's cash balance will be understated because the clerk will double-count outstanding checks",
+        "D": "The external auditors will be unable to rely on the reconciliation and must perform additional substantive procedures"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — bank reconciliation and segregation of duties"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "There is no evidence in the scenario that the clerk lacks training. The internal control weakness is a segregation-of-duties deficiency, not a competence issue. Even a well-trained employee should not both record cash receipts and reconcile the bank account, because the control relies on independence, not skill. A candidate selecting this option may be incorrectly assuming that procedural errors are the primary risk, when the actual risk is concealment of irregularities through lack of independent verification.",
+      "ExplanationWrongC": "The scenario describes a segregation-of-duties risk, not a predictable directional error. A clerk who both records receipts and performs reconciliations could manipulate the reconciliation in either direction — to conceal theft (understate cash) or to hide errors (overstate cash). There is no inherent reason why this arrangement would specifically understate cash, and double-counting outstanding checks would overstate, not understate, the book balance relative to the bank balance.",
+      "ExplanationWrongD": "While it is true that external auditors may need to perform additional substantive procedures when they identify a control deficiency, this is a consequence of the weakness, not the risk most directly created by the arrangement. The question asks what risk is 'most directly created' — and the direct risk is that errors or fraud in cash receipts will go undetected. The auditor response is a downstream effect, not the primary internal control risk. A candidate selecting this option may be thinking from an auditor's perspective rather than from a control design perspective."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R06 management override — inherent limitation",
+      "MicroTopic": "management override inherent limitation",
+      "UniqueConceptKey": "E-R06-management-override-inherent-limitation",
+      "LOSTag": "E.1.c Control Environment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "COSO acknowledges that internal control has inherent limitations. Which of the following statements best describes why management override represents an inherent limitation rather than a control deficiency?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "COSO identifies several inherent limitations of internal control: human error, collusion, management override, and cost-benefit constraints. Management override is classified as an inherent limitation — not a control deficiency — because even in a well-designed system of internal control, management has the authority to override prescribed policies or procedures for what it believes to be legitimate business purposes. No internal control system can completely prevent management from exercising this override authority, because management by definition sits above the control structure. A control deficiency exists when the design or operation of a control does not allow management or employees, in the normal course of performing their assigned functions, to prevent or detect misstatements on a timely basis. The distinction matters for exam purposes: management override is an inherent limitation of any internal control system, while a missing segregation of duties, for example, is a control deficiency that can and should be remedied. The best mitigation for management override risk is a strong control environment — particularly an active, independent board of directors and audit committee that provides oversight of management's activities.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-041 through P1-EC-045 clone rotation group.",
+      "QuestionID": "P1-E-R06",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the inherent limitations of internal control under COSO and the distinction between inherent limitations and control deficiencies.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Management override can always be prevented by implementing a second level of approval for all transactions above a materiality threshold",
+        "B": "Management override cannot be fully prevented by any internal control system because management has the authority to override prescribed policies",
+        "C": "Management override is a control deficiency because it indicates the control environment is not functioning effectively",
+        "D": "Management override is only an inherent limitation in small entities where management has concentrated authority"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework (Inherent Limitations)",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.c Control Environment — inherent limitations of internal control",
+        "Distractors test common misunderstandings about the distinction between inherent limitations and control deficiencies"
+      ],
+      "ExplanationWrongA": "This statement is incorrect because management override cannot be fully prevented by any control mechanism, including dual approvals. Management can override dual approval requirements by directing subordinates to bypass the second approval or by colluding with the second approver. A second level of approval may reduce but cannot eliminate management override risk. This is precisely why it is classified as an inherent limitation — systemic in nature — rather than a deficiency that can be remedied through additional control procedures.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "Management override is not a control deficiency; it is an inherent limitation acknowledged by COSO. A control deficiency exists when controls are not designed or operating effectively. Management override is different — it represents management's legitimate authority to override controls for business reasons, which cannot be designed out of any internal control system. While a pattern of inappropriate overrides may indicate a weak control environment, the possibility of override itself is an inherent limitation present in all organizations regardless of the strength of their control environment.",
+      "ExplanationWrongD": "Management override is an inherent limitation in organizations of all sizes, not just small entities. While concentrated authority in small entities may increase the risk of management override, the limitation is universal. In large entities, senior management can still override controls through directive authority over subordinates, pressure on accounting personnel, or manipulation of financial reporting processes. Size affects the degree of risk but not the classification of override as an inherent limitation."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R07 whistleblower hotline — SOX requirement",
+      "MicroTopic": "whistleblower hotline sox requirement",
+      "UniqueConceptKey": "E-R07-whistleblower-hotline-sox",
+      "LOSTag": "E.1.f Information & Communication",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Remember",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Under the Sarbanes-Oxley Act of 2002, which of the following requirements applies to the audit committees of publicly traded companies regarding whistleblower complaints?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Section 301 of the Sarbanes-Oxley Act (SOX) requires the audit committee of each publicly traded company to establish procedures for the receipt, retention, and treatment of complaints received by the company regarding accounting, internal accounting controls, or auditing matters. This includes procedures for the confidential, anonymous submission of concerns by employees regarding questionable accounting or auditing matters. The audit committee must have a mechanism — typically a whistleblower hotline or similar reporting channel — that allows employees to report concerns directly to the audit committee without fear of retaliation. SOX also provides whistleblower protection provisions that make it a federal crime to retaliate against employees who provide truthful information to law enforcement about federal offenses. The whistleblower mechanism under SOX supports the information and communication component of the COSO framework by ensuring that relevant control-related information flows upward to those charged with governance.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-046 through P1-EC-050 clone rotation group.",
+      "QuestionID": "P1-E-R07",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review SOX Section 301 requirements for audit committees and the role of whistleblower mechanisms in the information and communication component of internal control.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The chief executive officer must personally review all whistleblower complaints before they are escalated to the audit committee",
+        "B": "Whistleblower complaints may only be submitted in writing and must include the employee's name and department",
+        "C": "The external auditor is responsible for maintaining the whistleblower hotline and investigating all complaints",
+        "D": "The audit committee must establish procedures for the confidential, anonymous submission of concerns regarding accounting or auditing matters"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "SEC: Sarbanes-Oxley Act Section 301",
+          "url": "https://www.sec.gov/rules/final/33-8220.htm"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.f Information & Communication — whistleblower mechanisms",
+        "Tests knowledge of SOX Section 301 audit committee requirements"
+      ],
+      "ExplanationWrongA": "This is contrary to the design of SOX whistleblower provisions. The purpose of the whistleblower mechanism is to allow employees to bypass management and report concerns directly to the audit committee, particularly when management may be involved in the alleged misconduct. Requiring CEO review before escalation defeats the purpose of independent oversight and could discourage employees from reporting concerns about management. The audit committee, not management, is responsible for overseeing the complaint process.",
+      "ExplanationWrongB": "SOX explicitly requires procedures for anonymous submission of concerns. Requiring employees to include their name would contradict the statute's intent to protect whistleblowers from retaliation. While companies may accept named complaints, they must provide a mechanism for anonymous reporting. Additionally, complaints may be submitted through various channels (phone hotline, web portal, mail), not exclusively in writing.",
+      "ExplanationWrongC": "While external auditors have responsibility for understanding the entity's whistleblower procedures as part of their audit risk assessment, they are not responsible for maintaining the hotline or investigating complaints. The audit committee, as a committee of the board of directors, is charged with establishing and overseeing the complaint procedures. The external auditor's independence would be compromised if they were managing the entity's internal complaint investigation process.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R08 control environment — tone at the top",
+      "MicroTopic": "control environment tone at the top",
+      "UniqueConceptKey": "E-R08-control-environment-tone-at-top",
+      "LOSTag": "E.1.c Control Environment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "The CEO of Northstar Industries publicly emphasizes that meeting quarterly earnings targets is the organization's highest priority and that 'results justify the approach.' Middle managers observe that employees who meet targets receive promotions regardless of compliance concerns. Under the COSO framework, which component of internal control is most directly weakened by this environment?",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The control environment is the foundation of the COSO internal control framework and sets the tone of an organization, influencing the control consciousness of its people. It includes factors such as integrity and ethical values, commitment to competence, board of directors and audit committee participation, management's philosophy and operating style, organizational structure, assignment of authority and responsibility, and human resource policies and practices. When the CEO explicitly prioritizes results over process ('results justify the approach') and the organization rewards employees who meet targets regardless of compliance concerns, the control environment is fundamentally weakened. The control environment is the most directly affected component because it reflects the tone at the top — the ethical climate and behavioral expectations set by senior management and the board. A strong control environment is a prerequisite for the other four COSO components (risk assessment, control activities, information and communication, and monitoring) to function effectively. Without an appropriate tone at the top, even well-designed control activities may be overridden or ignored.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-056 through P1-EC-060 clone rotation group.",
+      "QuestionID": "P1-E-R08",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the five components of the COSO internal control framework and the foundational role of the control environment.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Control Environment — the ethical climate and tone set by senior management are foundational to all other control components",
+        "B": "Risk Assessment — the organization has failed to identify the risk that aggressive targets create for financial reporting integrity",
+        "C": "Control Activities — the organization lacks specific policies and procedures to prevent earnings manipulation",
+        "D": "Monitoring Activities — the organization does not have ongoing evaluations to detect control failures"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework (Control Environment)",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.c Control Environment — tone at the top and ethical values",
+        "Distractors test ability to distinguish the five COSO components in scenario-based questions"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "While the aggressive target-setting may create financial reporting risk that should be assessed, the scenario primarily describes a failure in the organization's ethical climate and behavioral expectations — the control environment. Risk assessment is the process of identifying and analyzing risks to achieving objectives; it is the second component that depends on a properly functioning control environment. The more fundamental problem is that the tone at the top prioritizes results over integrity, which undermines the foundation on which risk assessment and all other components depend.",
+      "ExplanationWrongC": "The scenario does not describe the absence of specific policies and procedures (control activities); it describes a cultural problem where existing controls may be overridden or ignored because the organization rewards results regardless of how they are achieved. Control activities are policies and procedures that help ensure management directives are carried out, but they cannot be effective when the control environment — the foundation — is weak. Adding more control activities would not solve the fundamental problem of a toxic tone at the top.",
+      "ExplanationWrongD": "The organization may or may not have monitoring activities, but the scenario describes a foundational cultural issue, not a failure of monitoring. Monitoring activities evaluate whether controls are operating as intended over time. When the CEO is the source of the cultural problem, monitoring is unlikely to be effective because the monitors would report to the same CEO who created the environment. The root cause is the control environment, and monitoring deficiencies are a downstream symptom."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R09 three lines of defense model",
+      "MicroTopic": "three lines of defense model roles",
+      "UniqueConceptKey": "E-R09-three-lines-of-defense",
+      "LOSTag": "E.1.g Monitoring",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "At Harbor Financial Group, operational managers are responsible for implementing and maintaining effective internal controls within their departments. A separate risk management function develops policies and monitors compliance. Internal audit provides independent assurance to the board. Under the Three Lines of Defense model, which line does the risk management function represent?",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The Three Lines of Defense model, developed by the Institute of Internal Auditors (IIA), provides a framework for clarifying roles and responsibilities in governance and risk management. The first line of defense consists of operational management — the people who own and manage risk on a day-to-day basis by implementing and maintaining internal controls within their business units. The second line of defense consists of risk management and compliance functions that oversee risk — they develop policies, frameworks, and monitoring mechanisms to support the first line in managing risk effectively. They provide guidance, challenge, and oversight but are not independent of management. The third line of defense is internal audit, which provides independent, objective assurance to the board and senior management on the effectiveness of governance, risk management, and internal control. In this scenario, the risk management function that develops policies and monitors compliance is the second line — it provides oversight and support to the first line (operational managers) while itself being subject to independent assurance from the third line (internal audit).",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-ED-001 through P1-ED-005 clone rotation group.",
+      "QuestionID": "P1-E-R09",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the Three Lines of Defense model and the roles of operational management, risk management/compliance, and internal audit.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "First line of defense, because it develops and maintains the policies that govern control activities",
+        "B": "Third line of defense, because it provides oversight and reports on control effectiveness",
+        "C": "Second line of defense, because it provides oversight and support to operational management without being fully independent",
+        "D": "The risk management function does not fit within the Three Lines of Defense model because it is an advisory function"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "IIA: The Three Lines of Defense Model",
+          "url": "https://www.theiia.org/en/content/position-papers/2020/the-iias-three-lines-model-an-update-of-the-three-lines-of-defense-/"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.g Monitoring — three lines of defense governance model",
+        "Distractors test common misclassifications of the three lines"
+      ],
+      "ExplanationWrongA": "The first line of defense consists of operational management — the business unit managers who own the risks and are responsible for implementing controls within their areas. The risk management function, while it may develop policies, does not own the day-to-day operational risks. It supports and oversees the first line but is structurally separate from operations. A candidate selecting this option may be confusing the function that develops policies (second line) with the function that implements them (first line).",
+      "ExplanationWrongB": "The third line of defense is internal audit, which provides independent assurance. The key distinction between the second and third lines is independence: internal audit is independent of management and reports directly to the board or audit committee, while risk management functions are part of the management structure. The scenario explicitly states that internal audit provides independent assurance — making internal audit the third line. Risk management, which develops policies and monitors compliance, is the second line because it is a management function, not an independent assurance function.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "The risk management function is explicitly part of the Three Lines of Defense model — it is the second line. The model was designed to clarify the distinct roles of operational management (first line), risk management and compliance (second line), and internal audit (third line). Characterizing risk management as an 'advisory function that does not fit' misunderstands the model, which specifically includes risk management as a formal governance and oversight layer between operations and independent assurance."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R10 compensating controls — small business owner review",
+      "MicroTopic": "compensating controls small business owner review",
+      "UniqueConceptKey": "E-R10-compensating-controls-small-business",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Riverside Supply is a small business with only four accounting staff members. Due to limited personnel, the company cannot fully segregate cash handling, recording, and reconciliation duties. The owner reviews all bank reconciliations, approves all disbursements over $1,000, and compares actual-to-budget variances monthly. Under COSO, these owner activities are best described as:",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Compensating controls are alternative controls designed to reduce risk when ideal controls (such as full segregation of duties) are not practical. In smaller entities, limited personnel often make it impossible to fully segregate incompatible duties across different employees. However, management — particularly the owner or a senior manager — can compensate for this limitation through direct oversight activities. The owner's review of bank reconciliations, approval of significant disbursements, and budget variance analysis constitute compensating controls that mitigate the risk created by the lack of segregation of duties. Compensating controls differ from routine control activities because they are specifically designed to address a known control gap. They must be performed with sufficient frequency and diligence to be effective. Under COSO, smaller entities can still achieve effective internal control through active involvement of management and the board, even when formal segregation of duties is not feasible.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item replacing archived P1-EC-051 through P1-EC-055 clone rotation group.",
+      "QuestionID": "P1-E-R10",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review compensating controls as a mitigation strategy when segregation of duties is not practical, particularly in small businesses.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "An inherent limitation of internal control that cannot be mitigated in a small business environment",
+        "B": "Compensating controls that reduce the risk associated with the inability to fully segregate incompatible duties",
+        "C": "A control deficiency that requires disclosure as a material weakness in the company's financial statements",
+        "D": "Management override of controls, which undermines the effectiveness of the internal control system"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO: Internal Control over Financial Reporting in Smaller Entities",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — compensating controls in smaller entities",
+        "Distractors test common misunderstandings about control limitations vs compensating controls"
+      ],
+      "ExplanationWrongA": "The limitation created by a small staff (inability to segregate duties) is a constraint, not an inherent limitation that cannot be mitigated. COSO explicitly recognizes that smaller entities can compensate for lack of segregation through active management oversight. The owner's activities (reviewing reconciliations, approving disbursements, analyzing variances) are specifically designed to mitigate the risk. Inherent limitations are factors like human error and management override that exist regardless of entity size — they are inherent to any control system, not specific to staffing constraints.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "A control deficiency exists when a control does not allow management or employees to prevent or detect misstatements on a timely basis. However, when compensating controls effectively mitigate the risk, the condition may not rise to the level of a deficiency, much less a material weakness. The scenario describes active compensating controls that address the segregation gap, not an unmitigated deficiency. Not every limitation in segregation of duties automatically constitutes a control deficiency if compensating controls provide reasonable assurance.",
+      "ExplanationWrongD": "Management override refers to management's intentional disregard of prescribed policies or procedures for illegitimate purposes. The owner's activities (reviewing reconciliations, approving disbursements) are not an override of controls — they are controls. Override subverts the control system; compensating controls strengthen it. A candidate selecting this option may be confusing management's active involvement in controls (which is appropriate and beneficial) with management's circumvention of controls (which is inappropriate)."
+    }
+  ]
+}

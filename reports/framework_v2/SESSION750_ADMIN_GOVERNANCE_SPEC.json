@@ -1,0 +1,122 @@
+{
+  "deliverable": "SESSION750_ADMIN_GOVERNANCE_SPEC.json",
+  "session": 750,
+  "board": "I",
+  "title": "Administrative Governance Controls",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "description": "Defines role-based governance controls for the future Admin Portal. Prepares the May Admin Portal governance controls: role definitions, approval boundaries, and access control matrix.",
+  "roles": [
+    {
+      "role": "CONTENT_ADMIN",
+      "description": "Manages question content — authorized to write, edit, and archive questions. Cannot certify or change governance rules.",
+      "permissions": {
+        "packFiles": ["READ", "WRITE"],
+        "caseFiles": ["READ", "WRITE"],
+        "scripts": ["READ", "EXECUTE"],
+        "knowledge": ["READ"],
+        "revisionHistory": ["WRITE"],
+        "questionState": ["READ", "WRITE_UNCERTIFIED"],
+        "correctChoice": ["READ", "WRITE"],
+        "governanceRules": ["NONE"],
+        "certify": ["NONE"],
+        "archive": ["APPROVED_ONLY"]
+      },
+      "approvalBoundary": "May modify content only. All certification actions require CERTIFICATION_REVIEWER. All governance rule changes require GOVERNANCE_ADMIN.",
+      "maxBatchSize": 30,
+      "requiresBlockAuthorization": true
+    },
+    {
+      "role": "CERTIFICATION_REVIEWER",
+      "description": "Reviews and certifies questions — authorized to transition question_state to Certified after CAQS §1.6 verification.",
+      "permissions": {
+        "packFiles": ["READ"],
+        "caseFiles": ["READ"],
+        "scripts": ["READ", "EXECUTE"],
+        "knowledge": ["READ"],
+        "revisionHistory": ["WRITE"],
+        "questionState": ["READ", "WRITE"],
+        "correctChoice": ["NONE"],
+        "governanceRules": ["NONE"],
+        "certify": ["ALL"],
+        "archive": ["READ"]
+      },
+      "approvalBoundary": "May transition question_state across all states. Cannot modify CorrectChoice — that requires CONTENT_ADMIN. Must document HIGH-confidence verification per CAQS §1.6.",
+      "maxBatchSize": 30,
+      "requiresBlockAuthorization": true
+    },
+    {
+      "role": "GOVERNANCE_ADMIN",
+      "description": "Oversees governance enforcement — authorized to create/close governance events, approve waivers, and escalate critical findings.",
+      "permissions": {
+        "packFiles": ["READ"],
+        "caseFiles": ["READ"],
+        "scripts": ["READ", "EXECUTE"],
+        "knowledge": ["READ"],
+        "revisionHistory": ["READ"],
+        "questionState": ["READ"],
+        "correctChoice": ["NONE"],
+        "governanceRules": ["READ", "ESCLATE"],
+        "certify": ["NONE"],
+        "archive": ["READ"],
+        "governanceEvents": ["CRUD"],
+        "waivers": ["APPROVE"],
+        "escalations": ["ALL"],
+        "dashboard": ["VIEW_ALL"]
+      },
+      "approvalBoundary": "May manage governance events and approve waivers. Cannot modify content, answer keys, or governance rules. All rule changes require SYSTEM_ADMIN.",
+      "maxBatchSize": "N/A",
+      "requiresBlockAuthorization": false
+    },
+    {
+      "role": "SYSTEM_ADMIN",
+      "description": "Full platform authority — can modify governance rules, deployment configuration, and role definitions. Approves governance rule changes.",
+      "permissions": {
+        "packFiles": ["READ"],
+        "caseFiles": ["READ"],
+        "scripts": ["READ", "EXECUTE", "WRITE"],
+        "knowledge": ["READ"],
+        "revisionHistory": ["READ"],
+        "questionState": ["READ"],
+        "correctChoice": ["NONE"],
+        "governanceRules": ["ALL"],
+        "certify": ["NONE"],
+        "archive": ["NONE"],
+        "governanceEvents": ["ALL"],
+        "waivers": ["ALL"],
+        "escalations": ["ALL"],
+        "dashboard": ["ALL"],
+        "roles": ["ALL"],
+        "deployment": ["ALL"]
+      },
+      "approvalBoundary": "Full authority. Cannot modify content or answer keys — that requires CONTENT_ADMIN. Cannot certify — that requires CERTIFICATION_REVIEWER.",
+      "maxBatchSize": "N/A",
+      "requiresBlockAuthorization": false
+    }
+  ],
+  "approvalMatrix": [
+    { "action": "Modify question content", "requires": "CONTENT_ADMIN", "review": "CERTIFICATION_REVIEWER (post-review)" },
+    { "action": "Change CorrectChoice", "requires": "CONTENT_ADMIN", "review": "CERTIFICATION_REVIEWER (verify accuracy)" },
+    { "action": "Transition to Certified", "requires": "CERTIFICATION_REVIEWER", "review": "GOVERNANCE_ADMIN (post-certification audit)" },
+    { "action": "Decertify (Certified → In Audit)", "requires": "CERTIFICATION_REVIEWER + GOVERNANCE_ADMIN", "review": "Both must approve" },
+    { "action": "Archive question", "requires": "CONTENT_ADMIN", "review": "GOVERNANCE_ADMIN (confirm learner-pool exclusion)" },
+    { "action": "Create governance event", "requires": "GOVERNANCE_ADMIN (or auto-created)", "review": "NONE" },
+    { "action": "Approve waivers/exceptions", "requires": "GOVERNANCE_ADMIN", "review": "SYSTEM_ADMIN (monthly audit)" },
+    { "action": "Modify governance rules", "requires": "SYSTEM_ADMIN", "review": "GOVERNANCE_ADMIN (impact assessment)" },
+    { "action": "Deploy to production", "requires": "SYSTEM_ADMIN", "review": "All roles (read-only verification)" }
+  ],
+  "separationOfDuties": {
+    "rule": "No single role may both modify answer keys and certify. No role that certifies may also approve governance waivers on the same QID.",
+    "conflicts": [
+      { "roleA": "CONTENT_ADMIN", "roleB": "CERTIFICATION_REVIEWER", "conflict": "Cannot self-certify own content changes" },
+      { "roleA": "CERTIFICATION_REVIEWER", "roleB": "GOVERNANCE_ADMIN", "conflict": "Cannot approve waivers on QIDs they certified within 30 days" }
+    ]
+  },
+  "futureEnhancements": [
+    "Admin Portal UI with role-based dashboard views",
+    "Approval workflow engine: submit → review → approve → deploy",
+    "Audit log of all role actions (immutable append-only)",
+    "OAuth/SSO integration for role assignment",
+    "Session-scoped permissions: time-limited certification authority"
+  ]
+}

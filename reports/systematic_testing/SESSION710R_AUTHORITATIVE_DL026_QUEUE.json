@@ -1,0 +1,72 @@
+{
+  "session": "710R",
+  "timestamp": "2026-07-25T18:00:00",
+  "authority": "Current pack-file object-bounded scan (Function constructor parse, G-NEW-3 within-object CC extraction). Independently verified by two agents.",
+  "queue_version": "1.0 — AUTHORITATIVE",
+  "total_targets": 13,
+  "classification_legend": {
+    "AUTHORITATIVE_TARGET": "Confirmed Certified DL-026 item. Valid remediation target.",
+    "STALE_TARGET": "Listed in a prior report but does not appear in current scan as Certified DL-026.",
+    "NO_LONGER_DEFECTIVE": "Was previously DL-026 but has since been remediated or state changed.",
+    "SOURCE_MISMATCH": "Appears in one source report but not in current scan — likely stale or methodology artifact."
+  },
+  "authoritative_targets": [
+    { "pack": "A", "qid": "P1-B-001", "correct_choice": "D", "empty_slot": "ExplanationWrongB", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "C", "qid": "P1-BC-094", "correct_choice": "B", "empty_slot": "ExplanationWrongD", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "C", "qid": "P1-DC-019", "correct_choice": "C", "empty_slot": "ExplanationWrongD", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-AD-047", "correct_choice": "C", "empty_slot": "ExplanationWrongD", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-AD-048", "correct_choice": "D", "empty_slot": "ExplanationWrongA", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-AD-054", "correct_choice": "B", "empty_slot": "ExplanationWrongC", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-AD-055", "correct_choice": "C", "empty_slot": "ExplanationWrongD", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-CD-002", "correct_choice": "B", "empty_slot": "ExplanationWrongC", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-CD-003", "correct_choice": "C", "empty_slot": "ExplanationWrongD", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-CD-006", "correct_choice": "B", "empty_slot": "ExplanationWrongC", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-CD-022", "correct_choice": "B", "empty_slot": "ExplanationWrongC", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-CD-023", "correct_choice": "C", "empty_slot": "ExplanationWrongD", "classification": "AUTHORITATIVE_TARGET" },
+    { "pack": "D", "qid": "P1-CD-034", "correct_choice": "B", "empty_slot": "ExplanationWrongC", "classification": "AUTHORITATIVE_TARGET" }
+  ],
+  "rejected_targets": [
+    { "pack": "C", "qid": "P1-AC-001", "classification": "STALE_TARGET", "reason": "Listed in S709 freeze report. Current scan: AC-001 is Certified but has zero empty non-CC ExplanationWrong slots. NOT a DL-026 item." },
+    { "pack": "C", "qid": "P1-AC-002", "classification": "STALE_TARGET", "reason": "Listed in S709 freeze report. Current scan: AC-002 is Certified but has zero empty non-CC ExplanationWrong slots. NOT a DL-026 item." },
+    { "pack": "D", "qid": "P1-AD-052", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026. Likely remediated in S704 or not actually DL-026." },
+    { "pack": "D", "qid": "P1-BD-014", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026." },
+    { "pack": "D", "qid": "P1-BD-042", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026." },
+    { "pack": "D", "qid": "P1-BD-047", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026." },
+    { "pack": "D", "qid": "P1-CD-012", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026." },
+    { "pack": "D", "qid": "P1-CD-031", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026." },
+    { "pack": "D", "qid": "P1-DD-006", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026." },
+    { "pack": "D", "qid": "P1-DD-025", "classification": "SOURCE_MISMATCH", "reason": "Listed in S708 audit but NOT in current scan as Certified DL-026." }
+  ],
+  "remediation_batch_plan": [
+    {
+      "batch": 1,
+      "pack": "A",
+      "items": 1,
+      "qids": ["P1-B-001"]
+    },
+    {
+      "batch": 2,
+      "pack": "C",
+      "items": 2,
+      "qids": ["P1-BC-094", "P1-DC-019"]
+    },
+    {
+      "batch": 3,
+      "pack": "D",
+      "items": 10,
+      "qids": ["P1-AD-047", "P1-AD-048", "P1-AD-054", "P1-AD-055", "P1-CD-002", "P1-CD-003", "P1-CD-006", "P1-CD-022", "P1-CD-023", "P1-CD-034"],
+      "note": "10 items within governance-guard Rule 5 cap of 30. Single batch safe."
+    }
+  ],
+  "queue_governance": {
+    "all_targets_exist_exactly_once": true,
+    "all_targets_certified": true,
+    "all_targets_dl008_clean": true,
+    "all_targets_single_empty_slot": true,
+    "all_empty_slots_are_non_cc": true,
+    "no_answer_key_changes_required": true,
+    "no_stem_changes_required": true,
+    "no_choice_changes_required": true,
+    "no_state_changes_required": true
+  }
+}

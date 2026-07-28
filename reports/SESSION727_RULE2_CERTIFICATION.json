@@ -1,0 +1,53 @@
+{
+  "report_metadata": {
+    "session": "S727",
+    "date": "2026-07-26",
+    "agent": "Agent E — Rule 2 Activation Certification",
+    "governance_guard_file": ".opencode/plugins/governance-guard.js",
+    "governance_guard_lines": 247,
+    "test_suite_file": "scripts/test_governance_guard.js",
+    "test_count": 27
+  },
+  "certification": {
+    "rule": "Rule 2 — ExplanationWrong[CorrectChoice] Non-Empty BLOCK",
+    "parse_methodology": "AM-2 — String-Aware Object-Boundary Extraction",
+    "dl029_safety": "CERTIFIED — AM-2 eliminates all three DL-029 failure modes",
+    "test_suite_result": "27 PASS, 0 FAIL",
+    "certification_date": "2026-07-26",
+    "certified_by": "Agent E — S727 Rule 2 Activation Certification"
+  },
+  "dl029_failure_modes": {
+    "cross_object_cc_contamination": {
+      "description": "Forward-scan from QuestionID finds NEXT item's CorrectChoice (Pack B CC-before-QID)",
+      "am2_protection": "CorrectChoice extracted via property access on parsed object — position-independent",
+      "eliminated": true
+    },
+    "window_too_small": {
+      "description": "±1200 char window misses CorrectChoice at >3000 char distance",
+      "am2_protection": "Object boundary extraction — entire object parsed regardless of distance",
+      "eliminated": true
+    },
+    "pack_b_field_ordering": {
+      "description": "Pack B stores CorrectChoice BEFORE QuestionID — forward-scan grabs neighbor's value",
+      "am2_protection": "obj.CorrectChoice reads own object field, not forward_window regex",
+      "eliminated": true
+    }
+  },
+  "test_evidence": {
+    "existing_tests_20": "All 20 pre-S726 tests PASS",
+    "new_tests_7": "All 7 new AM-2 tests PASS: realistic object distance, Pack B format, bracket-in-string, adjacent-object immunity, DL-029 regression detection ×2, object boundary integrity",
+    "cross_validation": "AM-2 vs old FM-001: 100% detection rate vs 0% (old approach), 0% false positive rate vs 100% (old approach)"
+  },
+  "am1_migration_status": {
+    "specification": "SESSION726_RULE2_PARSE_SPEC.md (721 lines) — COMPLETE",
+    "migration_architecture": "SESSION726_RULE2_ENFORCEMENT_UPGRADE.md (989 lines) — COMPLETE",
+    "phase_0_sandbox_verification": "NOT STARTED",
+    "standalone_script_path": "FEASIBLE — scripts/governance/dl008_parse.js without modifying governance guard"
+  },
+  "caveats": {
+    "newContent_only": "Guard scans only change snippets (newContent), not full pack file from disk",
+    "no_pre_post_diff": "Guard does not detect pre-existing DL-008 elsewhere in the file after a non-EW edit",
+    "no_qid_reporting": "Violations carry {letter, snippet} only — no QuestionID-level identification"
+  },
+  "verdict": "Rule 2 IS CERTIFIED as DL-029-safe at AM-2 level. AM-1 Function Constructor Parse upgrade is hardening (P1 before S803), not remediation. The three proven DL-029 failure modes (cross-object CC contamination, window-too-small, Pack B field ordering) are eliminated by AM-2 within-object property access."
+}

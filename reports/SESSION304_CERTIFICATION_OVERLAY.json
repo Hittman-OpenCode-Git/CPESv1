@@ -1,0 +1,155 @@
+{
+  "generated": "2026-07-26T21:42:16.550Z",
+  "session": "S304",
+  "certifiedTotal": 2764,
+  "uncertifiedTotal": 361,
+  "overallCertRate": "88.4%",
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "total": 433,
+      "certified": 425,
+      "uncertified": 8,
+      "certificationRate": "98.2%",
+      "certifiedByPack": {
+        "Pack A": 73,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 12,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 10,
+        "scored_cases5": 10
+      },
+      "uncertifiedBySection": {
+        "Pack A|A": 2,
+        "scored_cases|A": 6
+      }
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "total": 568,
+      "certified": 562,
+      "uncertified": 6,
+      "certificationRate": "98.9%",
+      "certifiedByPack": {
+        "Pack A": 100,
+        "Pack B": 100,
+        "Pack C": 100,
+        "Pack D": 100,
+        "Pack E": 100,
+        "scored_cases": 12,
+        "scored_cases2": 17,
+        "scored_cases3": 17,
+        "scored_cases4": 11,
+        "scored_cases5": 5
+      },
+      "uncertifiedBySection": {
+        "scored_cases|B": 6
+      }
+    },
+    "C - Performance Management": {
+      "total": 798,
+      "certified": 786,
+      "uncertified": 12,
+      "certificationRate": "98.5%",
+      "certifiedByPack": {
+        "Pack A": 100,
+        "Pack B": 100,
+        "Pack C": 100,
+        "Pack D": 100,
+        "Pack E": 100,
+        "scored_cases": 6,
+        "scored_cases2": 90,
+        "scored_cases3": 90,
+        "scored_cases4": 85,
+        "scored_cases5": 15
+      },
+      "uncertifiedBySection": {
+        "scored_cases|C": 12
+      }
+    },
+    "D - Cost Management": {
+      "total": 452,
+      "certified": 446,
+      "uncertified": 6,
+      "certificationRate": "98.7%",
+      "certifiedByPack": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 6,
+        "scored_cases2": 16,
+        "scored_cases3": 17,
+        "scored_cases4": 17,
+        "scored_cases5": 15
+      },
+      "uncertifiedBySection": {
+        "scored_cases|D": 6
+      }
+    },
+    "E - Internal Controls": {
+      "total": 443,
+      "certified": 264,
+      "uncertified": 179,
+      "certificationRate": "59.6%",
+      "certifiedByPack": {
+        "Pack A": 58,
+        "Pack B": 75,
+        "Pack E": 75,
+        "scored_cases": 6,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 15,
+        "scored_cases5": 15
+      },
+      "uncertifiedBySection": {
+        "Pack A|E": 17,
+        "Pack C|E": 75,
+        "Pack D|E": 75,
+        "scored_cases|E": 12
+      }
+    },
+    "F - Technology & Analytics": {
+      "total": 430,
+      "certified": 281,
+      "uncertified": 149,
+      "certificationRate": "65.3%",
+      "certifiedByPack": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack E": 75,
+        "scored_cases": 6,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 15,
+        "scored_cases5": 15
+      },
+      "uncertifiedBySection": {
+        "Pack C|F": 75,
+        "Pack D|F": 74
+      }
+    },
+    "Unknown": {
+      "total": 1,
+      "certified": 0,
+      "uncertified": 1,
+      "certificationRate": "0.0%",
+      "certifiedByPack": {},
+      "uncertifiedBySection": {
+        "Pack D|?": 1
+      }
+    }
+  },
+  "certificationDebt": {
+    "A - External Financial Reporting": 8,
+    "B - Planning, Budgeting & Forecasting": 6,
+    "C - Performance Management": 12,
+    "D - Cost Management": 6,
+    "E - Internal Controls": 179,
+    "F - Technology & Analytics": 149,
+    "Unknown": 1
+  }
+}

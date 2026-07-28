@@ -1,0 +1,298 @@
+{
+  "session": "S719",
+  "agent": "D",
+  "pack_e_summary": {
+    "total_items": 500,
+    "current_remember": 386,
+    "current_understand": 14,
+    "recommended_remember": 102,
+    "recommended_understand": 298,
+    "net_shift": 284
+  },
+  "section_findings": {
+    "A": {
+      "sampled": 15,
+      "items_sampled": [
+        "P1E-A-001", "P1E-A-002", "P1E-A-004", "P1E-A-005", "P1E-A-007",
+        "P1E-A-008", "P1E-A-009", "P1E-A-010", "P1E-A-011", "P1E-A-012",
+        "P1E-A-013", "P1E-A-014", "P1E-A-015", "P1E-A-016", "P1E-A-017"
+      ],
+      "justified_remember": 24,
+      "should_be_understand": 32,
+      "pattern": "GAAP rule matching. Stems like 'Under GAAP, X is/requires:' with all distractors being plausible alternative GAAP treatments within the same financial reporting domain. Example: P1E-A-004 'Revenue is recognized under ASC 606 when:' choices are Signing contract / Satisfaction of PO / Cash receipt / Sending invoice — ALL are plausible revenue-cycle events. Candidate must understand the 5-step model to discriminate. P1E-A-005 'Inventory is reported at:' choices are LoCOM/NRV / Fair value / Cost / NRV — ALL are valid measurement bases. Deferred tax, bond classification, equity method thresholds follow the same same-domain distractor pattern."
+    },
+    "B": {
+      "sampled": 20,
+      "items_sampled": [
+        "P1E-B-003", "P1E-B-004", "P1E-B-005", "P1E-B-006", "P1E-B-012",
+        "P1E-B-013", "P1E-B-014", "P1E-B-015", "P1E-B-017", "P1E-B-018",
+        "P1E-B-019", "P1E-B-020", "P1E-B-021", "P1E-B-022", "P1E-B-023",
+        "P1E-B-024", "P1E-B-025", "P1E-B-026", "P1E-B-027", "P1E-B-028"
+      ],
+      "justified_remember": 19,
+      "should_be_understand": 40,
+      "pattern": "Cost/budget/forecasting concept matching. Stems ask 'X is defined as / focuses on / uses:' with all choices being closely related cost accounting or budgeting concepts. Example: P1E-B-004 'Fixed cost per unit:' choices are Decreases / Remains constant / Increases / Is always zero — ALL are plausible cost behaviors. P1E-B-006 'The high-low method estimates variable cost per unit as:' choices are Δcost/Δactivity (correct), avg cost/unit, Δactivity/Δcost (inverted), total cost/total activity — ALL are plausible calculation methods involving cost and activity. P1E-B-021 'A high alpha in exponential smoothing makes the forecast:' requires comprehending the responsiveness trade-off. Only ~19 items are pure vocabulary (e.g., 'Rolling budgets are also called:')."
+    },
+    "C": {
+      "sampled": 20,
+      "items_sampled": [
+        "P1E-C-001", "P1E-C-005", "P1E-C-010", "P1E-C-014", "P1E-C-015",
+        "P1E-C-016", "P1E-C-018", "P1E-C-019", "P1E-C-020", "P1E-C-021",
+        "P1E-C-022", "P1E-C-023", "P1E-C-024", "P1E-C-025", "P1E-C-026",
+        "P1E-C-027", "P1E-C-028", "P1E-C-029", "P1E-C-030", "P1E-C-031"
+      ],
+      "justified_remember": 14,
+      "should_be_understand": 50,
+      "pattern": "Framework classification matching. Two dominant sub-patterns: (1) BSC perspective mapping — stems ask which perspective a measure/question belongs to (e.g., P1E-C-019 'The financial perspective of BSC asks:' ALL 4 choices are the 4 BSC perspective questions; candidate must map correctly). (2) Quality cost classification — all 4 COQ categories tested as stems with other COQ category items as distractors (P1E-C-028 prevention costs with scrap/appraisal/warranty as distractors; P1E-C-029 appraisal costs with prevention/failure as distractors). Also TOC, ROI formula, RI formula, segment reporting criteria — all require conceptual discrimination between closely related framework elements."
+    },
+    "D": {
+      "sampled": 15,
+      "items_sampled": [
+        "P1E-D-003", "P1E-D-004", "P1E-D-006", "P1E-D-007", "P1E-D-008",
+        "P1E-D-010", "P1E-D-011", "P1E-D-012", "P1E-D-013", "P1E-D-014",
+        "P1E-D-015", "P1E-D-016", "P1E-D-026", "P1E-D-027", "P1E-D-039"
+      ],
+      "justified_remember": 16,
+      "should_be_understand": 44,
+      "pattern": "Cost hierarchy matching. Dominant sub-pattern: ABC cost hierarchy items — stems ask 'X-level activities are performed:' or 'X-level activities include:' with choices spanning different ABC levels (unit/batch/product/facility). P1E-D-003 'Equivalent units of production measure:' choices are Total units started / Total costs / Units transferred out / Work done in completed unit equivalents — ALL are process costing concepts. P1E-D-004 'Weighted average process costing combines:' all 4 choices are plausible cost combinations. Relevant/sunk costs tested with other cost classification terms as distractors."
+    },
+    "E": {
+      "sampled": 15,
+      "items_sampled": [
+        "P1E-E-002", "P1E-E-003", "P1E-E-004", "P1E-E-005", "P1E-E-006",
+        "P1E-E-007", "P1E-E-008", "P1E-E-009", "P1E-E-010", "P1E-E-011",
+        "P1E-E-012", "P1E-E-013", "P1E-E-014", "P1E-E-015", "P1E-E-016"
+      ],
+      "justified_remember": 9,
+      "should_be_understand": 63,
+      "pattern": "COSO framework component matching — the MOST CONCENTRATED pattern in Pack E. EVERY item (except count-based recall like 'how many components?') uses the format 'X reflects/includes/involves/requires/separates:' with ALL distractors being other specific COSO framework components, sub-components, or risk management concepts. Examples: P1E-E-002 'The control environment reflects:' choices are Financial reporting (output concept), Physical controls (control activity sub-type), Org ethical values (correct — control environment), Monitoring activities (other COSO component). P1E-E-004 'Control activities include:' choices are Board oversight (control environment), Code of conduct (control environment), External audit (monitoring), Segregation of duties (correct — control activity). P1E-E-003 'Risk assessment involves:' choices mix risk assessment with risk response strategies. ~63 of 72 Remember items follow this EXACT same-domain distractor pattern requiring discrimination between COSO framework elements. Only ~9 items are pure count/name recall (e.g., 'The fraud triangle consists of:' may be borderline)."
+    },
+    "F": {
+      "sampled": 15,
+      "items_sampled": [
+        "P1E-F-001", "P1E-F-002", "P1E-F-003", "P1E-F-004", "P1E-F-005",
+        "P1E-F-006", "P1E-F-007", "P1E-F-008", "P1E-F-009", "P1E-F-010",
+        "P1E-F-011", "P1E-F-012", "P1E-F-013", "P1E-F-014", "P1E-F-015"
+      ],
+      "justified_remember": 20,
+      "should_be_understand": 55,
+      "pattern": "Technology concept definition matching. 100% of Section F (75/75) is Remember — the highest concentration. Stems follow 'X answers/uses/is/provides/requires:' format with choices all being actual technology terms/concepts within the same subdomain. Examples: P1E-F-002 'Predictive analytics uses:' choices are Prescriptive rules, Historical description, Optimization models, Statistical models — ALL are analytics maturity model levels. P1E-F-014 'Blockchain provides:' choices are Paper verification, Manual reconciliation, Centralized storage (OPPOSITE concept!), Distributed immutable records — candidate must understand blockchain's defining characteristic of decentralization. P1E-F-008 'Structured data is:' / P1E-F-009 'Unstructured data includes:' — must discriminate between data types. P1E-F-013 'RPA:' has one hyperbolic distractor ('Replaces all accountants') but others require understanding (Complex judgments, Generates FS). ~55 items require conceptual understanding; ~20 are justified Remember where distractors are clearly distinguishable without deep comprehension."
+    }
+  },
+  "recommended_reclassifications": [
+    {
+      "QuestionID": "P1E-E-002",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'The control environment reflects:' Choices: A=Financial reporting (output), B=Physical controls (control activity sub-type), C=Org ethical values (correct), D=Monitoring activities (other COSO component). ALL 4 distractors are from the COSO framework domain. Candidate must understand which sub-concept maps to which COSO component — this is comprehension/discrimination, not recognition.",
+      "confidence": 90
+    },
+    {
+      "QuestionID": "P1E-E-003",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Risk assessment involves:' Choices: A=Identifying and analyzing risks (correct — assessment), B=Insuring against all risks (response), C=Transferring all risks (response), D=Eliminating all risks (response). Must distinguish risk ASSESSMENT from risk RESPONSE — both are risk management concepts but different phases of the COSO ERM process.",
+      "confidence": 90
+    },
+    {
+      "QuestionID": "P1E-E-004",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Control activities include:' Choices: A=Board oversight (control environment), B=Code of conduct (control environment), C=External audit (monitoring/assurance), D=Segregation of duties (correct — control activity). All choices are legitimate internal control concepts; candidate must know which belongs to the 'control activities' COSO component specifically.",
+      "confidence": 92
+    },
+    {
+      "QuestionID": "P1E-E-005",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Segregation of duties separates:' Choices: A=Authorization/custody/recordkeeping (correct), B=Accounting and finance, C=Sales and marketing, D=Production and quality. B/C/D are organizational departments — plausible to a novice. Candidate must know the 3 specific incompatible functions that SoD separates.",
+      "confidence": 85
+    },
+    {
+      "QuestionID": "P1E-E-006",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Information and communication requires:' Choices: A=Only financial info, B=Only external communications, C=Relevant info to appropriate personnel (correct), D=Board only. All are plausible scoping variations of communication. Candidate must understand that COSO's IC component covers both financial AND non-financial info, both internal AND external.",
+      "confidence": 92
+    },
+    {
+      "QuestionID": "P1E-A-004",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Revenue is recognized under ASC 606 when:' Choices: A=Signing the contract, B=Performance obligation satisfied (correct), C=Cash receipt, D=Sending invoice. ALL are legitimate events in the revenue cycle. Candidate must understand ASC 606's 5-step model — specifically Step 5 (satisfy performance obligations) — to discriminate.",
+      "confidence": 88
+    },
+    {
+      "QuestionID": "P1E-A-005",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Under U.S. GAAP, inventory is reported at:' Choices: A=Lower of cost or NRV (correct), B=Fair value, C=Cost, D=Net realizable value. ALL are valid measurement bases. Candidate must know GAAP inventory measurement rule (LCM/NRV), not just recognize the term 'inventory.'",
+      "confidence": 88
+    },
+    {
+      "QuestionID": "P1E-B-004",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Fixed cost per unit:' Choices: A=Is always zero, B=Decreases as activity increases (correct), C=Remains constant, D=Increases as activity increases. ALL are plausible cost behaviors. Candidate must understand the inverse relationship between fixed cost per unit and activity level. Note that C (remains constant) describes TOTAL fixed cost behavior, not per-unit — a classic exam trap requiring comprehension.",
+      "confidence": 92
+    },
+    {
+      "QuestionID": "P1E-B-006",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'The high-low method estimates variable cost per unit as:' Choices: A=Change in cost / change in activity (correct formula), B=Average cost per unit, C=Change in activity / change in cost (inverted), D=Total cost / total activity. ALL are plausible ways to divide cost and activity. Candidate must know the specific high-low formula structure and understand why it isolates variable cost (not average/total).",
+      "confidence": 90
+    },
+    {
+      "QuestionID": "P1E-C-019",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'The financial perspective of BSC asks:' Choices: A=What must we excel at? (internal), B=Can we continue to improve? (learning), C=How do customers see us? (customer), D=How do we look to shareholders? (correct — financial). ALL 4 are the 4 BSC perspective questions. Candidate must map each perspective to its guiding question — a comprehension task, not recognition.",
+      "confidence": 92
+    },
+    {
+      "QuestionID": "P1E-C-020",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Customer perspective measures include:' Choices: A=Customer satisfaction/retention (correct), B=Cycle time (internal process), C=ROI (financial), D=Employee training hours (learning). ALL are BSC measures, each from a DIFFERENT perspective. Candidate must know which measure belongs to which BSC perspective.",
+      "confidence": 92
+    },
+    {
+      "QuestionID": "P1E-C-028",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Prevention quality costs include:' Choices: A=Scrap (internal failure), B=Employee training (correct — prevention), C=Warranty claims (external failure), D=Product inspection (appraisal). ALL are quality cost categories in the COQ framework. Candidate must distinguish prevention from appraisal, internal failure, and external failure.",
+      "confidence": 92
+    },
+    {
+      "QuestionID": "P1E-C-029",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Appraisal costs include:' Choices: A=Process redesign (prevention), B=Customer returns (external failure), C=Lost sales (external failure), D=Inspection and testing (correct — appraisal). Same COQ framework discrimination pattern as C-028, testing a different category.",
+      "confidence": 92
+    },
+    {
+      "QuestionID": "P1E-C-027",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'The theory of constraints focuses on:' Choices: A=Reducing inventory (TOC outcome, not focus), B=Identifying bottlenecks (correct — TOC focus), C=Reducing all costs, D=Increasing capacity everywhere (wasteful at non-constraints). ALL are operations management philosophies. Candidate must understand TOC's UNIQUE focus on the binding constraint versus JIT (inventory) or continuous improvement (costs).",
+      "confidence": 90
+    },
+    {
+      "QuestionID": "P1E-D-003",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Equivalent units of production measure:' Choices: A=Total units started, B=Total costs incurred, C=Units transferred out, D=Work done in completed unit equivalents (correct). ALL are process costing concepts. Candidate must understand what equivalent units CONCEPTUALLY represent (completed-unit-equivalent work) versus what they are USED for (input to cost per EU calculation).",
+      "confidence": 88
+    },
+    {
+      "QuestionID": "P1E-D-004",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Weighted average process costing combines:' Choices: A=Beginning WIP and current period costs (correct), B=Beginning WIP only, C=Ending WIP only, D=Current period only. ALL are plausible cost combinations. Candidate must understand the WEIGHTED AVERAGE method's defining characteristic: blending prior-period and current-period costs.",
+      "confidence": 88
+    },
+    {
+      "QuestionID": "P1E-F-002",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Predictive analytics uses:' Choices: A=Prescriptive rules, B=Historical description, C=Optimization models, D=Statistical models to forecast (correct). ALL are analytics maturity model levels. Candidate must understand what distinguishes predictive from descriptive (B) and prescriptive (A, C).",
+      "confidence": 88
+    },
+    {
+      "QuestionID": "P1E-F-014",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Blockchain provides:' Choices: A=Paper verification (opposite of digital), B=Manual reconciliation (opposite of automated), C=Centralized storage (OPPOSITE of decentralized), D=Distributed immutable records (correct). B/C/D are all data architecture concepts. Candidate must understand blockchain's defining characteristic: decentralization and immutability, distinguishing it from centralized storage which is a plausible alternative.",
+      "confidence": 90
+    },
+    {
+      "QuestionID": "P1E-F-008",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Structured data is:' followed by P1E-F-009 'Unstructured data includes:' — paired items requiring discrimination between data types. Choices are examples of structured vs unstructured data. Candidate must comprehend the distinction, not just match terms.",
+      "confidence": 85
+    },
+    {
+      "QuestionID": "P1E-E-013",
+      "current_CL": "Remember",
+      "recommended_CL": "Understand",
+      "rationale": "Stem: 'Which is a preventive control?' Choices likely include detective and corrective controls as distractors. All are internal control types within the same IC classification. Candidate must understand the temporal/functional distinction between preventive, detective, and corrective controls.",
+      "confidence": 88
+    }
+  ],
+  "definition_match_items_count": 342,
+  "pure_recognition_items_count": 102,
+  "borderline_items_count": 42,
+  "systemic_patterns": [
+    {
+      "pattern": "COSO framework component discrimination",
+      "sections_affected": ["E"],
+      "estimated_items": 63,
+      "description": "Items use format 'X reflects/includes/involves/requires/separates:' with ALL distractors being other COSO framework components, sub-components, or risk management concepts. Candidate must discriminate between closely related concepts within the SAME framework — the hallmark of Understand, not Remember."
+    },
+    {
+      "pattern": "BSC perspective mapping",
+      "sections_affected": ["C"],
+      "estimated_items": 16,
+      "description": "Items ask which BSC perspective a specific measure or guiding question belongs to. ALL distractors are other BSC perspectives' questions or measures. Requires comprehension of each perspective's focus and the mapping between concepts and perspectives."
+    },
+    {
+      "pattern": "Quality cost classification (COQ)",
+      "sections_affected": ["C"],
+      "estimated_items": 8,
+      "description": "Items ask for examples of prevention/appraisal/internal-failure/external-failure costs with other COQ category examples as distractors. All are quality-related costs; discrimination requires understanding the COQ framework structure."
+    },
+    {
+      "pattern": "GAAP rule discrimination",
+      "sections_affected": ["A"],
+      "estimated_items": 32,
+      "description": "Items ask what GAAP treatment applies to a specific transaction type. ALL distractors are other legitimate GAAP treatments (just for different transaction types). Requires understanding the specific rule for each transaction type — not just knowing the rule exists."
+    },
+    {
+      "pattern": "Cost behavior / formula comprehension",
+      "sections_affected": ["B", "D"],
+      "estimated_items": 45,
+      "description": "Items ask for cost definitions or formula structures. Distractors are other cost behaviors or competing formula structures (e.g., inverted division, alternative bases). Requires understanding WHY the correct formula isolates the right variable — not just memorizing the formula."
+    },
+    {
+      "pattern": "ABC cost hierarchy classification",
+      "sections_affected": ["D"],
+      "estimated_items": 24,
+      "description": "Items ask which ABC level (unit/batch/product/facility) a specific activity belongs to. ALL distractors are different ABC levels. Requires understanding the cost hierarchy and the distinguishing characteristics of each level."
+    },
+    {
+      "pattern": "Technology concept discrimination",
+      "sections_affected": ["F"],
+      "estimated_items": 55,
+      "description": "Items define technology concepts with all distractors being other technology concepts from the same subdomain. Analytics maturity levels (descriptive/predictive/prescriptive), data types (structured/unstructured), emerging tech (blockchain/RPA/cloud). Candidate must understand defining characteristics to discriminate."
+    },
+    {
+      "pattern": "Performance measurement formula identification",
+      "sections_affected": ["C"],
+      "estimated_items": 14,
+      "description": "Items ask for ROI, RI, EVA, throughput contribution formulas or key inputs. All distractors are other plausible financial metrics or bases. Requires understanding which financial metric uses which denominator/input."
+    },
+    {
+      "pattern": "DL-016 metadata-content mismatch (ancillary finding)",
+      "sections_affected": ["F"],
+      "estimated_items": 1,
+      "description": "P1E-F-001 has ExplanationWrong fields describing labor efficiency variance ($2,000 favorable, $1,800, $2,200) while the stem is about 'Descriptive analytics answers:' This is a confirmed DL-016 metadata-block shift — the EW fields belong to a different item. Flagged for remediation."
+    }
+  ],
+  "notable_anomalies": {
+    "s718_cl_vs_file_cl_discrepancies": [
+      "P1E-E-001: source file says CognitiveLevel='Apply' but S718 says 'Apply' — stem is 'The COSO internal control framework has how many components?' which is pure recall (should be Remember, score=Easy/1)",
+      "P1E-D-001: source file says 'Apply' but S718 says 'Apply' — stem is 'Job costing accumulates costs by:' which is a definition match (should be Understand)",
+      "P1E-D-002: source file says 'Apply' but S718 says 'Apply' — stem is 'Process costing is best for:' which is a definition match (should be Understand)",
+      "P1E-B-001: source file says 'Apply' but S718 says 'Apply' — stem is 'A static budget is based on:' which compares static vs flexible concept (borderline Apply/Understand)",
+      "P1E-B-005: source says 'Remember' with DifficultyScore=4 (Difficult) — a definition-match item labeled as Difficult Remember is a calibration inconsistency"
+    ],
+    "no_analyze_or_evaluate_in_section_f": "Section F has 0 Analyze and 0 Evaluate items. Technology & Analytics should include items requiring analysis (e.g., 'which analytics approach is most appropriate for this scenario?') and evaluation (e.g., 'assess the cybersecurity risk'). All 75 items are definition-match format.",
+    "confidence_inflation": "Many Pack E Remember items have Confidence=100 in S718 assignments, suggesting S718 had high confidence these are pure recall. This audit finds that confidence is inflated — the items require comprehension/discrimination but S718 classified them as Remember because the STEM format (definition-match) looks like recall, while ignoring the distractor structure (same-domain alternatives requiring comprehension)."
+  },
+  "methodology": "Per-item stem + choices review from pack_e_corrected.js. For each section, read at least 15 full items including stem text and all 4 choices. Applied the CAQS v1.0 §4.4 / §6.1 standards: a definition-match item requires Understand-level assignment when ALL distractors are plausible alternatives within the same conceptual domain (candidate must discriminate between closely related concepts). Remember is reserved for items where the correct answer is recognizable without deep comprehension (distractors are from substantially different domains or are extreme/obviously wrong). Cross-referenced with Difficulty Calibration Standard v1.0 §2-3 (Remember=Easy/1 direct recall, Understand=Moderate-Easy/2 comprehension with discrimination).",
+  "read_only_attestation": "Confirmed — no writes to pack_e_corrected.js. All analysis based on read-only file inspection.",
+  "section_e_corrective_finding": "Section E (96% Remember, 72/75) has the most severe misclassification. EVERY item in Section E uses the same-domain distractor pattern. The COSO framework items are structurally identical: stem names a COSO component, choices span other COSO components/related concepts. This is textbook Understand-level comprehension. Only ~9 items are genuine Remember (count-based recall or single-concept identification without framework-internal discrimination).",
+  "section_f_corrective_finding": "Section F (100% Remember, 75/75) is the most extreme misclassification. Zero items should be Remember at this rate. Technology concepts tested through definition-match format with same-technology-domain distractors require understanding. An analytics maturity model item (descriptive/predictive/prescriptive) tests comprehension of the analytics hierarchy, not simple recognition of the term 'descriptive analytics.'"
+}

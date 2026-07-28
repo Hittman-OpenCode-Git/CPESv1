@@ -1,0 +1,118 @@
+{
+  "session": "S810.1",
+  "agent": "E",
+  "role": "DL-010 Investigation Support",
+  "agent_b_manifest_ref": "reports/session_status/SESSION8092_AGENT_B_DEFECT_MANIFEST.json",
+  "agent_b_dl010_claims": {
+    "P1-EC-020": {"severity": "HIGH", "affected_slots": ["EWB", "EWC"], "agent_b_detail": "EWB describes physical access controls but distractor B is about monthly bank reconciliation. EWC describes compensating control/physical access but distractor C is about quarterly audit review."},
+    "P1-ED-010": {"severity": "MEDIUM", "affected_slots": ["EWD"], "agent_b_detail": "EWD references 'limiting user access' which is unrelated to the question about independent verification / preventive controls."},
+    "P1-ED-051": {"severity": "MEDIUM", "affected_slots": ["EWB"], "agent_b_detail": "EWB ML-013 boilerplate references 'balanced scorecard metrics' (choice A) but assigned to slot B."}
+  },
+  "investigation_results": {
+    "P1-ED-010": {
+      "raw_source": "pack_d_corrected.js line 18160-18209",
+      "topic": "E.010 access control least privilege",
+      "stem": "Juniperfield grants employees system access limited only to what is necessary to perform their specific job duties. What security principle is being applied?",
+      "cc": "B",
+      "correct_answer": "The principle of least privilege",
+      "choices": {
+        "A": "The principle of maximum access for efficiency",
+        "B": "The principle of least privilege",
+        "C": "Risk transfer",
+        "D": "Management override"
+      },
+      "ew_state": {
+        "EWA": {"text": "", "len": 0},
+        "EWB": {"text": "", "len": 0, "note": "CC slot"},
+        "EWC": {"text": "", "len": 0},
+        "EWD": {"text": "Management override is bypassing controls, not a principle for limiting user access.", "len": 88}
+      },
+      "dl010_verdict": "CLEAN — NO DL-010",
+      "analysis": "EWD describes D (Management override) correctly. The phrase 'limiting user access' refers to the question's core concept (least privilege = limiting users to job-necessary access). Agent B misidentified the question's topic as 'independent verification / preventive controls' when it is actually 'access control / least privilege.'",
+      "defects_present": ["DL-026: EWA and EWC are empty"],
+      "defects_absent": ["DL-008", "DL-010", "DL-013"]
+    },
+    "P1-ED-014": {
+      "raw_source": "pack_d_corrected.js line 18360-18409",
+      "topic": "E.014 independent verification control activity",
+      "stem": "Northfell has a supervisor recount inventory counted by warehouse staff before finalizing the count. What type of control activity is this?",
+      "cc": "B",
+      "correct_answer": "Independent verification, checking the accuracy of work performed by others",
+      "choices": {
+        "A": "A physical control over inventory storage only",
+        "B": "Independent verification, checking the accuracy of work performed by others",
+        "C": "A preventive control that stops errors before they occur",
+        "D": "Segregation of duties, since only one person performs the recount"
+      },
+      "ew_state": {
+        "EWA": {"text": "", "len": 0},
+        "EWB": {"text": "", "len": 0, "note": "CC slot"},
+        "EWC": {"text": "", "len": 0},
+        "EWD": {"text": "Segregation of duties separates incompatible responsibilities; a one-person recount by a supervisor is independent verification, not the segregation concept itself.", "len": 160}
+      },
+      "dl010_verdict": "CLEAN — NO DL-010",
+      "analysis": "EWD describes D (Segregation of duties) correctly. The text explains what segregation is (separating incompatible responsibilities) and why it's wrong for this question (the recount is independent verification, not segregation). This is an exemplar of good distractor-explanation quality — choice-specific, concept-accurate, and instructive.",
+      "defects_present": ["DL-026: EWA and EWC are empty"],
+      "defects_absent": ["DL-008", "DL-010", "DL-013"]
+    },
+    "P1-EC-020": {
+      "raw_source": "pack_c_corrected.js line 18660-18711",
+      "topic": "E.020 physical controls over assets",
+      "stem": "Thornfield stores inventory in a locked warehouse accessible only to authorized personnel with badge access. What type of control is this?",
+      "cc": "D",
+      "correct_answer": "A physical control that restricts access to assets",
+      "choices": {
+        "A": "An entity-level control unrelated to specific assets",
+        "B": "A detective control performed after the fact only",
+        "C": "A compensating control for a segregation of duties gap",
+        "D": "A physical control that restricts access to assets"
+      },
+      "ew_state": {
+        "EWA": {"text": "Entity-level controls set the overall tone and governance structure for the organization. Here, the described badge-access warehouse is a specific, targeted physical safeguard over a particular asset class, not a broad entity-level policy.", "len": 230},
+        "EWB": {"text": "The control is not only detective after the fact; restricted access helps prevent unauthorized physical handling or removal.", "len": 141},
+        "EWC": {"text": "A compensating control offsets another weakness, such as limited segregation; the stem describes a direct physical access control.", "len": 135},
+        "EWD": {"text": "", "len": 0, "note": "CC slot"}
+      },
+      "dl010_verdict": "CLEAN — NO DL-010",
+      "analysis": "All three non-empty EW slots correctly describe their attached choices. EWA explains why entity-level control is wrong (not broad governance, it's specific). EWB explains why detective control is wrong (it's preventive, not only detective). EWC explains why compensating control is wrong (it's direct physical access, not compensating). Agent B's claim about 'monthly bank reconciliation' and 'quarterly audit review' matches EC-022's distractors, not EC-020's.",
+      "defects_present": ["DL-026: EWD is CC slot (correct). All 3 non-CC slots are non-empty — this item has FULL distractor coverage, which is rare among the 38 seeds."],
+      "defects_absent": ["DL-008", "DL-010", "DL-013"],
+      "note": "EC-020 is the only seed among the 38 with complete (100%) non-CC distractor coverage. All three distractor EW slots are substantive and choice-specific."
+    },
+    "P1-ED-051": {
+      "raw_source": "pack_d_corrected.js line 20210-20259",
+      "topic": "E.051 password access authentication control",
+      "stem": "Briarcliff requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+      "cc": "C",
+      "correct_answer": "To reduce the risk of unauthorized access to financial systems and data",
+      "choices": {
+        "A": "To replace the need for segregation of duties",
+        "B": "To ensure compliance with balanced scorecard metrics",
+        "C": "To reduce the risk of unauthorized access to financial systems and data",
+        "D": "To eliminate the need for any other IT general controls"
+      },
+      "ew_state": {
+        "EWA": {"text": "", "len": 0},
+        "EWB": {"text": "This option reflects a misunderstanding of password access authentication control. The choice \"To ensure compliance with balanced scorecard metrics\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.", "len": 307},
+        "EWC": {"text": "", "len": 0, "note": "CC slot"},
+        "EWD": {"text": "", "len": 0}
+      },
+      "dl010_verdict": "CLEAN — NO DL-010",
+      "analysis": "EWB text directly quotes choice B ('To ensure compliance with balanced scorecard metrics') and correctly says it's inconsistent. While the text is DL-013 boilerplate (generic template with no real instructional content), it IS correctly assigned to slot B. Agent B claimed boilerplate described choice A. Choice A is 'replace the need for segregation of duties' — not referenced in EWB at all.",
+      "defects_present": ["DL-013 (EWB is template boilerplate)", "DL-026: EWA and EWD are empty"],
+      "defects_absent": ["DL-008", "DL-010"]
+    }
+  },
+  "summary": {
+    "total_items_investigated": 4,
+    "dl010_confirmed": 0,
+    "dl010_false_positives": 3,
+    "false_positive_patterns": {
+      "qid_confusion": "Agent B confused EC-020 with EC-022 — completely different items.",
+      "topic_misidentification": "Agent B described ED-010 as 'about independent verification / preventive controls' — it's about access control / least privilege.",
+      "choice_text_misreading": "Agent B claimed ED-051 boilerplate described choice A when it actually described choice B."
+    },
+    "reliability_of_agent_b_manifest": "The S809.2 Agent B Defect Manifest's DL-010 section should be treated as UNRELIABLE. All three DL-010 claims were investigated via direct line-level inspection and found to be incorrect. The remaining sections of the manifest (DL-008, DL-025/DL-026, DL-013, DL-031, DL-018, DL-021) should be independently re-verified before any remediation is executed.",
+    "architectural_correction": "The S809 EW Integrity Audit claimed 'Dual-object (metadata block with EW fields + content block with EC/Stem/Choices/CC)' architecture for Pack D Section E. This is INCORRECT — all examined items (ED-010, ED-014, ED-051, EC-020) use SINGLE-OBJECT format where ExplanationWrong fields coexist with Stem/Choices/CorrectChoice/ExplanationCorrect in the same JSON block. There is no metadata-vs-content block divergence to worry about for these items."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "session": "S206",
+  "board": "D",
+  "title": "Delta Ledger Operational Baseline",
+  "baseline": {
+    "session": "S322",
+    "timestamp": "2026-07-27T06:15:59.070Z",
+    "totalItems": 2540
+  },
+  "comparison": {
+    "NO_CHANGE": 2540,
+    "CHANGED": 0,
+    "NEW": 0,
+    "REMOVED": 0,
+    "UNCLASSIFIED": 0
+  },
+  "reviewRouting": {
+    "fullReview": 0,
+    "partialReview": 0,
+    "noReview": 2540
+  },
+  "changeTypes": {
+    "CONTENT_CHANGE": 0,
+    "METADATA_CHANGE": 0,
+    "PRESENTATION_CHANGE": 0
+  },
+  "determinism": "100% — All SHA-256 hashes verified across independent builds",
+  "hashCoverage": {
+    "contentHash": "100%",
+    "metadataHash": "100%",
+    "identityHash": "100%"
+  },
+  "stability": "100% — Zero drift between independent scans",
+  "verdict": "OPERATIONAL — Delta ledger baseline established with zero content changes since S322"
+}

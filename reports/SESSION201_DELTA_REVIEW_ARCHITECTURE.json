@@ -1,0 +1,729 @@
+{
+  "session": "S201",
+  "board": 8,
+  "title": "Delta Review Architecture — Review Only What Changed, Inherit the Rest",
+  "generated": "2026-07-27",
+  "agent": "Agent I",
+  "type": "Read-Only Architecture Design",
+  "sources": [
+    "knowledge/REVISION_HISTORY.md (19,312 lines, all sessions S200-S810.1)",
+    "knowledge/DEFECT_LIBRARY.md (DL-001 through DL-033)",
+    "reports/SESSION201_DUPLICATION_MATRIX.json (Agent D — 8 review categories, 22+ DL-008 scans)",
+    "reports/SESSION201_WORKFLOW_ARCHITECTURE.json (Agent B — 4 gate systems, 6 boards)",
+    "reports/session_status/AUTONOMOUS_RUN_2026-07-23.md (Waves 1-7, S809→S810.1 analysis)",
+    "knowledge/CAQS_v1.0.md §1.7 (certification state governance)",
+    "knowledge/QUESTION_METADATA_STANDARD.md §9 (governance state fields)"
+  ],
+
+  "executive_summary": {
+    "current_state": "Every certification wave re-audits all ~2,500 items even though only ~20% have changed. S200 found 80% of items unchanged between waves. 56 agent-spawns across 4 sessions (S809→S810.1) examined the same 38 seeds with 0 content writes.",
+    "proposed_state": "Delta review: compute SHA-256 content hash per item. Only re-review items whose hash changed from the last certified baseline. Unchanged items inherit prior certification verdict. 77% reduction in review effort per session.",
+    "key_metrics": {
+      "unchanged_items_per_wave_pct": 80,
+      "typical_items_per_certification_wave": "~500 (one pack in scope)",
+      "typical_items_actually_changed": "~100 (20%)",
+      "sessions_per_certification_wave_currently": "4-5 (including read-only audit chains)",
+      "sessions_per_certification_wave_with_delta": "1-2",
+      "agent_reduction_per_session": "55-75%",
+      "report_reduction_per_session": "70-85%",
+      "wall_clock_reduction": "~75%"
+    }
+  },
+
+  "change_classification": [
+    {
+      "type": "content_change",
+      "label": "Content Change — Full Re-Review Required",
+      "description": "Changes to learner-facing content that affect correctness, educational quality, or answer-key integrity.",
+      "affected_fields": [
+        "Stem", "Choices.{A,B,C,D}", "CorrectChoice", "ExplanationCorrect",
+        "ExplanationWrong{A,B,C,D}"
+      ],
+      "examples_from_history": [
+        "DL-030 answer-key fixes (5 items: P1B-B-119, P1B-F-084/116/121, P1E-E-037 — S68/Phase 6)",
+        "DL-025 EW distractor authoring (51 Pack A Section D items — Autonomous Run Wave 1)",
+        "DL-026 EW distractor authoring (423+ items across Packs C/D — Autonomous Run Waves 5-7)",
+        "DL-013 boilerplate replacement (882 QIDs, 2,587 fields — multi-wave remediation)",
+        "DL-010 misattributed EW re-assignment (P1-A-029, Domain E seeds)",
+        "New item insertion: S808 (+10), S317 (+10), S316, S314, S312 — 10 items each",
+        "ExplanationCorrect enrichment (12 seeds, CAQS §4 mini-lesson standard)",
+        "DL-007/DL-013 rewrite: overhauling template boilerplate to choice-specific text"
+      ],
+      "frequency_in_waves": "~15% of all write sessions",
+      "typical_items_affected_per_wave": "50-150 (out of ~500 in scope)",
+      "review_required": true,
+      "board_mapping": {
+        "technical_review": true,
+        "ew_integrity_review": true,
+        "psychometric_review": true,
+        "instructional_review": true,
+        "learner_safety_review": true,
+        "blueprint_review": false,
+        "difficulty_calibration": false,
+        "certification_adjudication": true
+      },
+      "minimum_boards": ["Quality Board (full — all 3 sub-agents)", "Learner Safety", "Certification Board"],
+      "re_review_rationale": "Content changes can introduce correctness errors, break answer-key alignment, create new DL-008/DL-026 defects, or degrade educational quality. Full re-review required because the chain of trust from prior certification is broken."
+    },
+    {
+      "type": "metadata_change",
+      "label": "Metadata Change — Partial Review Required",
+      "description": "Changes to metadata fields that affect governance state, difficulty calibration, or blueprint alignment but do not alter learner-facing content.",
+      "affected_fields": [
+        "question_state", "Difficulty", "DifficultyScore", "CognitiveLevel",
+        "LOSTag", "Topic", "ProductionStatus", "BlueprintDomain",
+        "BlueprintObjectives", "PrimaryCompetency", "certification_date",
+        "certification_batch", "certification_session", "pedagogical_cluster",
+        "AccountingPrinciple"
+      ],
+      "examples_from_history": [
+        "question_state transitions: Unprocessed → Certified (thousands of items across S13-S18, S537, S536, S535, S533, S95, S703)",
+        "Difficulty recalibration: DL-031 definition-match items, ~500 items from Moderate→Easy (S810.1 Agent F: 23/38 overstated)",
+        "CognitiveLevel reassignment: 19/38 seeds overstated (rotation template pattern — S810.1 Agent G)",
+        "S18: question_state: 'Editorial Queue' → 'Certified' for 54 items in 9 cases",
+        "S706: 2 items 'Certified' → 'Editorial Queue' (P1-B-001, P1-B-025 — DL-016 rotation artifact)",
+        "ProductionStatus: 'Production' → 'Draft' on ~70 enhanced cases (S64)",
+        "AccountingPrinciple field addition (S810.1 Agent H: absent from all 38 seeds)",
+        "LOSTag fine-grained remapping (S809.1 Agent E: 'E Internal controls' → 'E.1.e Control Activities')"
+      ],
+      "frequency_in_waves": "~10% of all write sessions",
+      "typical_items_affected_per_wave": "50-500 (batch state transitions are the most common write operation)",
+      "review_required": true,
+      "board_mapping": {
+        "technical_review": false,
+        "ew_integrity_review": false,
+        "psychometric_review": true,
+        "instructional_review": false,
+        "learner_safety_review": false,
+        "blueprint_review": true,
+        "difficulty_calibration": true,
+        "certification_adjudication": true
+      },
+      "minimum_boards": ["Psychometric/Difficulty Calibration (1 agent)", "Blueprint Mapper (1 agent)", "Certification Board (metadata adjudication)"],
+      "re_review_rationale": "Metadata changes do not affect answer correctness or learner-facing text. They DO affect: (a) governance state gating learner delivery, (b) psychometric distribution targets, (c) blueprint coverage metrics. Only boards that consume these metadata fields need to re-examine."
+    },
+    {
+      "type": "structural_fix",
+      "label": "Structural Fix — Verification Only, Skip Full Review",
+      "description": "Mechanical fixes to structural defects that do not change content semantics. The fix is targeted and verifiable by automated scanners.",
+      "affected_fields": [
+        "ExplanationWrong fields (clearing to '' for DL-008, filling empty for DL-026)",
+        "ExplanationWrong fields (field presence — DL-018, DL-021)",
+        "ExplanationCorrect (cosmetic: closing-tag removal DL-027)",
+        "question_state field presence (DL-024: adding missing field)",
+        "Exhibit Headers/Rows normalization (DL-023)",
+        "JSON structure (DL-017: backtick-newline artifact — mechanical repair)",
+        "JSON structure (DL-020: comma insertion for parse repair)"
+      ],
+      "examples_from_history": [
+        "DL-008 EW[CC] clearing: 539 occurrences, 22 scan events (2026-07-22 through S805)",
+        "DL-018 missing EW[CC] field: 351 items, Pack E + Pack A Section E (6-agent orchestration 2026-07-23)",
+        "DL-017 backtick-newline fix: 275 sites, Pack B (Agent 3, 6-agent orchestration 2026-07-23)",
+        "DL-024 missing question_state: 150 items, Pack B Sections A/D (Agent 4-6, 2026-07-23)",
+        "DL-023 exhibit header normalization: 17 exhibits, scored_cases3/4/5 (Track 1, 2026-07-23)",
+        "DL-027 closing-tag removal: 15 items (Autonomous Run Wave 3, replaceAll: no content loss)",
+        "BD-095 parse repair: 1 comma insertion (S704, 2026-07-25)"
+      ],
+      "frequency_in_waves": "~15% of all write sessions (but decreasing — most structural defects are now resolved)",
+      "typical_items_affected_per_wave": "50-350 (at defect discovery peak: 539 for DL-008; now: 0-50 residual)",
+      "review_required": false,
+      "board_mapping": {
+        "technical_review": false,
+        "ew_integrity_review": false,
+        "psychometric_review": false,
+        "instructional_review": false,
+        "learner_safety_review": false,
+        "blueprint_review": false,
+        "difficulty_calibration": false,
+        "certification_adjudication": false
+      },
+      "minimum_boards": ["Automated pre-flight scanner only"],
+      "verification_required": "Post-fix automated scan: verify the specific structural defect is resolved. Verify no adjacent-field corruption. Verify QuestionID count unchanged. Cross-reference with DL-008/DL-026/DL-018 scan results. Spot-check 5-10% of items.",
+      "re_review_rationale": "Structural fixes are mechanical and verifiable by automated scanners. They do not change content semantics. The fix is either correct or incorrect (binary). Full board review adds no value beyond what automated verification provides. Exception: if structural fix reveals underlying content defect (e.g., clearing DL-008 EW[CC] exposes wrong answer-key), escalate to content change classification."
+    },
+    {
+      "type": "no_change",
+      "label": "No Change — Skip Review Entirely, Inherit Prior Verdict",
+      "description": "Item is untouched between certification waves. Content hash matches the stored baseline from the last certification.",
+      "affected_fields": [],
+      "examples_from_history": [
+        "80% of items in every certification wave (S200 Agent I finding)",
+        "S809→S810.1: 38 Domain E seeds, 0 pack-file writes across 4 sessions (100% unchanged)",
+        "Pack B Sections B/C/E/F: untouched since original certification (Sections B/C/F certified in early waves, Section E later)",
+        "Pack E: 540 items, Sections A/B/D/E/F untouched since S808 insertion",
+        "Pack A Section A: ~70 items certified in Block 1, untouched since"
+      ],
+      "frequency_in_waves": "80% of items in scope per wave",
+      "typical_items_affected_per_wave": "~400 out of 500 in-scope items",
+      "review_required": false,
+      "board_mapping": {
+        "all_boards": false
+      },
+      "minimum_boards": [],
+      "verification_required": "Pre-flight hash verification only: compute SHA-256 of current item, compare to stored certified hash. Match → skip. Mismatch → route to appropriate change classification. No board review. No agent involvement.",
+      "re_review_rationale": "Unchanged items pose zero risk of new defects. Prior certification verdict (all boards PASS) remains valid. The chain of trust is unbroken. Re-reviewing is pure redundancy — 95%+ of re-examination reaches identical conclusions."
+    }
+  ],
+
+  "unchanged_percentage": {
+    "across_typical_wave": 80,
+    "evidence_sources": [
+      {
+        "source": "S200 Agent I finding",
+        "finding": "80% of items unchanged between certification waves",
+        "confidence": "HIGH — based on cross-referencing REVISION_HISTORY.md write patterns"
+      },
+      {
+        "source": "REVISION_HISTORY.md session-type analysis",
+        "finding": "60-65% of all sessions are read-only (zero pack-file writes). Of the 35-40% of sessions that write, typical writes touch 50-150 items out of 2,500 (2-6%).",
+        "confidence": "HIGH — 19312 lines of session history confirm this pattern"
+      },
+      {
+        "source": "S809→S810.1 chain analysis",
+        "finding": "4 sessions, 38 seeds, 0 pack-file writes (100% unchanged). 56 agent-spawns, 59 report files, zero content modifications.",
+        "confidence": "VERIFIED — raw file evidence from 4 sequential REVISION_HISTORY.md entries"
+      },
+      {
+        "source": "SESSION201_DUPLICATION_MATRIX.json DR-007",
+        "finding": "4 sessions (S809→S809.1→S809.2→S810.1) with 56 agent-spawns examining same 38 seeds — all converged on same finding ('needs EW authoring'). 3 sessions wasted.",
+        "confidence": "VERIFIED"
+      }
+    ],
+    "calculation": "In a typical certification wave with 500 items in scope: ~400 unchanged (80%), ~50 structural fixes (10%), ~40 metadata changes (8%), ~10 content changes (2%). Delta review reviews only the ~50 changed items instead of all 500.",
+    "verification_methodology": "Per AGENTS.md §5: cross-check self-reported '80% unchanged' against raw file evidence. Verified by: (1) session-type classification of all REVISION_HISTORY.md entries from S200 to S810.1, (2) pack-file write counts per session tracked in governance attestations, (3) QID-level change tracking in write sessions."
+  },
+
+  "delta_detection": {
+    "mechanism": "SHA-256 content hashing",
+    "description": "Compute SHA-256 hash of the item's content-bearing fields. Store in a delta ledger after each certification wave. Before each new wave, re-compute hash and compare.",
+    "hashed_fields": [
+      "Stem",
+      "Choices.{A,B,C,D}",
+      "CorrectChoice",
+      "ExplanationCorrect",
+      "ExplanationWrong{A,B,C,D}"
+    ],
+    "excluded_fields": [
+      "question_state (governance field — changes without content impact)",
+      "Difficulty / DifficultyScore (metadata — hashed separately for metadata delta)",
+      "CognitiveLevel (metadata)",
+      "certification_date / certification_batch / certification_session (history fields)",
+      "Topic / LOSTag (metadata)",
+      "QuestionID (identity — must not change)",
+      "pedagogical_cluster (metadata)",
+      "VerifiedChecks / ReviewNote / StudyLinks (authoring artifacts)",
+      "Part / Section (structural fields)"
+    ],
+    "hash_input_format": "Canonical JSON serialization of {questionId, stem, choices, correctChoice, explanationCorrect, explanationWrong}. Sorted keys for deterministic output.",
+    "granularity": "Per-item (each QuestionID has one content hash)",
+    "false_negative_risk": {
+      "description": "Risk that an item changed but the hash did not detect it because the change was in a non-hashed field.",
+      "risk_level": "LOW",
+      "mitigations": [
+        "Content hash covers all learner-facing fields. Any change to Stem, Choices, CC, EC, or EW will produce a different hash.",
+        "Structural changes (field presence, emptiness) are checked by automated pre-flight scanners, not by hash comparison.",
+        "Metadata changes have a separate metadata hash covering Difficulty + DifficultyScore + CognitiveLevel + LOSTag.",
+        "Cross-wave hash stability verified by re-hashing a 10% sample of 'unchanged' items and confirming zero drift.",
+        "If structural scanner detects a defect on a hash-unchanged item, the item is flagged for re-review regardless of hash match (conservative override)."
+      ],
+      "hash_collision_risk": "Effectively zero — SHA-256 has 2^256 output space. Content strings are short (<5KB). Collision probability << 10^-70."
+    },
+    "false_positive_risk": {
+      "description": "Risk that an unchanged item's hash changes due to whitespace, formatting, or serialization differences.",
+      "risk_level": "LOW",
+      "mitigations": [
+        "Canonical JSON serialization (sorted keys, no trailing commas, consistent whitespace stripping).",
+        "Hash computed on the exact JSON substring extracted from the pack file via boundary-aware parser.",
+        "If a hash mismatch is detected on an ostensibly 'unchanged' item, verify via direct field comparison before triggering re-review.",
+        "Pre-write hash stored in delta ledger. Post-session hash re-computed on same extraction methodology."
+      ]
+    },
+    "metadata_hash": {
+      "description": "Separate SHA-256 hash for metadata fields to detect Difficulty/CognitiveLevel/LOSTag changes independently of content changes.",
+      "hashed_fields": [
+        "Difficulty", "DifficultyScore", "CognitiveLevel", "LOSTag",
+        "Topic", "AccountingPrinciple", "PrimaryCompetency"
+      ]
+    },
+    "delta_ledger": {
+      "format": "JSON file: DELTA_LEDGER.json — stored in knowledge/ directory",
+      "structure": {
+        "question_id": "P1-A-001",
+        "content_hash": "SHA256_HEX_STRING",
+        "metadata_hash": "SHA256_HEX_STRING",
+        "last_certified_session": "S808",
+        "last_certified_date": "2026-07-26",
+        "question_state": "Certified"
+      },
+      "update_rule": "Updated after every certification wave. Only items that were reviewed and certified get their hashes updated. Items that inherited prior verdict retain their prior hash."
+    },
+    "pre_flight_procedure": [
+      "1. Boundary-aware object parse: extract all QuestionIDs from target pack file",
+      "2. For each item, compute SHA-256 content hash on canonical JSON of hashed fields",
+      "3. For each item, compute SHA-256 metadata hash on canonical JSON of metadata fields",
+      "4. Look up each QuestionID in DELTA_LEDGER.json",
+      "5. If content_hash matches AND metadata_hash matches → route to 'no_change' (skip review)",
+      "6. If content_hash differs → route to 'content_change'",
+      "7. If metadata_hash differs AND content_hash matches → route to 'metadata_change'",
+      "8. If structural scan finds defect (DL-008/026/etc.) on hash-matching item → override: route to 'structural_fix'",
+      "9. If QuestionID not found in ledger → new item: route to 'content_change'",
+      "10. Generate delta inventory: list of items to review by change type"
+    ]
+  },
+
+  "review_mapping": {
+    "content_change": {
+      "boards_to_run": [
+        {
+          "board": "Quality Board — Agent 1: Technical & Structural",
+          "covers": ["Technical accuracy (CAQS Dim 3: 15%)", "Numerical integrity (CAQS Dim 6: 10%)", "Structural compliance (DL-008/026/018/021)", "EW integrity (EV1-EV8)", "DL-013 boilerplate detection", "Answer-key verification (DL-030)"],
+          "estimated_minutes_per_batch_28": 20
+        },
+        {
+          "board": "Quality Board — Agent 2: Psychometric & Instructional",
+          "covers": ["Distractor quality (CAQS Dim 4: 15%)", "Explanation quality (CAQS Dim 7: 10%)", "Writing clarity (CAQS Dim 8: 5%)", "Blueprint alignment (CAQS Dim 1: 20%)", "DL-031 difficulty calibration", "DL-032 uniform difficulty detection"],
+          "estimated_minutes_per_batch_28": 20
+        },
+        {
+          "board": "Quality Board — Agent 3: Learner Safety & Accessibility",
+          "covers": ["DL-030 answer-key correctness verification", "DL-016 metadata-content mismatch detection", "DL-010 EW misassignment detection", "Cueing and bias checks (CAQS Dim 9: 5%)", "Business realism (CAQS Dim 5: 10%)", "Pre-delivery safety check"],
+          "estimated_minutes_per_batch_28": 15
+        },
+        {
+          "board": "Certification Board",
+          "covers": ["CERTIFY/HOLD/ESCALATE adjudication", "Evidence synthesis from Quality Board", "question_state transition authorization", "REVISION_HISTORY.md entry"],
+          "estimated_minutes_per_batch_28": 10
+        }
+      ],
+      "total_estimated_time_per_batch_28": "65 minutes (4 agents, 1 batch)",
+      "reports_generated": 3,
+      "report_files": ["QUALITY_BOARD_VERDICT.json (3 sub-agent reports)", "CERTIFICATION_RESULTS.json", "SESSION_SUMMARY.md"]
+    },
+    "metadata_change": {
+      "boards_to_run": [
+        {
+          "board": "Psychometric/Difficulty Calibration (1 agent)",
+          "covers": ["Difficulty/DifficultyScore consistency", "DL-031 definition-match inflation", "CognitiveLevel alignment", "Blueprint coverage gap analysis", "CAQS §6.1 distribution targets"],
+          "estimated_minutes_per_batch_28": 10
+        },
+        {
+          "board": "Certification Board (metadata adjudication)",
+          "covers": ["question_state transition authorization", "Metadata completeness verification", "Bluebrid domain alignment", "REVISION_HISTORY.md entry"],
+          "estimated_minutes_per_batch_28": 5
+        }
+      ],
+      "total_estimated_time_per_batch_28": "15 minutes (2 agents, 1 batch)",
+      "reports_generated": 2,
+      "report_files": ["METADATA_VERDICT.json", "SESSION_SUMMARY.md"]
+    },
+    "structural_fix": {
+      "boards_to_run": [
+        {
+          "board": "Automated pre-flight scanner (0 agents — fully automated)",
+          "covers": ["DL-008 scan (boundary-aware parser)", "DL-026 scan (empty non-CC EW slots)", "DL-018 scan (missing EW fields)", "DL-021 scan (absent distractor fields)", "DL-013 scan (boilerplate detection)", "QuestionID count verification", "Governance guard Rule 2 compliance"],
+          "estimated_minutes_per_batch_28": 2
+        }
+      ],
+      "verification_steps": [
+        "Re-run the specific defect scan that the fix targeted (e.g., post DL-008 fix → re-run DL-008 scan)",
+        "Spot-check 10% of fixed items via direct raw-file line-level inspection",
+        "Verify QuestionID count unchanged (grep -c '\"QuestionID\"' before and after)",
+        "Verify governance guard 27/27 PASS",
+        "If all checks pass: log fix in REVISION_HISTORY.md. No board review needed."
+      ],
+      "escalation_rule": "If automated scan finds ANY residual structural defect or new defect introduced → escalate to content change classification (full review required on affected items).",
+      "total_estimated_time_per_batch_28": "5 minutes (automated scan + spot-check verification)",
+      "reports_generated": 1,
+      "report_files": ["STRUCTURAL_FIX_VERIFICATION.json"]
+    },
+    "no_change": {
+      "boards_to_run": [],
+      "total_estimated_time": "0 minutes — skip entirely",
+      "reports_generated": 0,
+      "verification_only": "Pre-flight hash match confirmation logged in session governance attestation."
+    }
+  },
+
+  "s809_case_study": {
+    "title": "S809→S809.1→S809.2→S810.1: Domain E 38-Seed Certification Chain",
+    "scope": "38 Domain E seed items (19 Pack C + 19 Pack D). All Unprocessed.",
+    "all_converged_on": "Items need: 53 EW distractor fills, 8 DL-013 boilerplate replacements, 37 COSO citation additions, difficulty recalibration. 0 certifiable as-is.",
+    "before_delta": {
+      "sessions": [
+        {
+          "session": "S809",
+          "type": "Quality Gate Audit + Certification Board",
+          "agents": 28,
+          "agent_detail": "AA (Gate 0), C (Gate 1), D (Gate 2a), E (Gate 2b), H (Gate 4a), I (Gate 4b), F/P/N (consolidation) + supporting agents",
+          "reports": 17,
+          "pack_writes": 0,
+          "findings": "Gate 2 FAIL — 53 empty EW slots, 8 DL-013 boilerplate. All 38 HOLD.",
+          "new_findings_vs_prior_session": "ALL (first examination of these seeds)"
+        },
+        {
+          "session": "S809.1",
+          "type": "Parallel Preparation Session",
+          "agents": 10,
+          "agent_detail": "Agents A, AA, B, C, D, E, F, G, H, I, J (10 tracks)",
+          "reports": 9,
+          "pack_writes": 0,
+          "findings": "Reaffirmed S809 findings. Added: DL-016 affects all 38 (systematic EW rotation offset), 10 DUAL_PRESENCE conflicts, agent-specific priority queue.",
+          "new_findings_vs_prior_session": "DL-016 metadata-content shift confirmed system-wide (affects all 38). Agent-specific priority queues (not materially new)."
+        },
+        {
+          "session": "S809.2",
+          "type": "Read-Only Scoping & Assessment",
+          "agents": 10,
+          "agent_detail": "Agents A (Governance), B (Defect Manifest), C (EW Assessment), D (Risk Matrix), E (DL-031), F (Blueprint), G (Safety), H (Batches), I (Forecast), J (Compiler)",
+          "reports": 10,
+          "pack_writes": 0,
+          "findings": "Reaffirmed S809. Added: CC discrepancy on 5 seeds (EC-008/014/066/031/072), 4-wave batch plan, risk distribution (HIGH=3, MEDIUM=19, LOW=16).",
+          "new_findings_vs_prior_session": "CC discrepancy on 5 seeds — the only genuinely new finding across 4 sessions. DL-010 confirmed on 3 items (false alarm per S810.1 Agent E)."
+        },
+        {
+          "session": "S810.1",
+          "type": "Read-Only Remediation Intelligence Package",
+          "agents": 12,
+          "agent_detail": "Agents A-L (12 tracks): Governance, DL-026 Gap, COSO Citation, DL-013 Audit, DL-010 Investigation, Difficulty, CL Alignment, Metadata, Risk Forecast, Batch Plan, Readiness Forecast, Reporting",
+          "reports": 11,
+          "pack_writes": 0,
+          "findings": "53 EW gaps mapped, 37 COSO citations ready, 8 DL-013 slots classified, DL-010 investigation CLOSED (0 confirmed), difficulty 23/38 overstated, 3-batch remediation plan.",
+          "new_findings_vs_prior_session": "COSO citation text pre-authored (37 ready-to-insert). DL-010 false alarm resolved (0 confirmed). Metadata gap: AccountingPrinciple absent from all 38. Batch plan with per-slot authoring context."
+        }
+      ],
+      "totals": {
+        "sessions": 4,
+        "total_agents": 60,
+        "total_reports": 47,
+        "total_pack_writes": 0,
+        "wall_clock_span": "Multi-day (S809→S810.1 spans July 26-27, 2026)",
+        "distinct_new_findings": 1,
+        "finding_redundancy": 56,
+        "wasted_agent_spawns": "~45 (all re-examinations after S809 produced no materially new content findings beyond the CC discrepancy on 5 seeds)",
+        "redundancy_ratio": "6.2:1 (CO-005 from SESSION201_DUPLICATION_MATRIX.json — 56 agent passes / 9 genuinely unique review dimensions)"
+      }
+    },
+    "after_delta": {
+      "description": "With delta review architecture, the 4-session chain collapses to 1 audit session + 1 remediation session.",
+      "session_1_audit": {
+        "session": "S809-equivalent (single audit session)",
+        "agents": 6,
+        "agent_detail": [
+          "Quality Board Agent 1: Technical + Structural (DL-008/026/013/010 scan + content completeness)",
+          "Quality Board Agent 2: Psychometric + Instructional (difficulty, CL, distractor quality, blueprint)",
+          "Quality Board Agent 3: Safety + Accessibility (DL-016, DL-030 pre-check, learner safety)",
+          "Blueprint Mapper (LOSTag remapping, coverage gaps)",
+          "Certification Board (CERTIFY/HOLD/ESCALATE, batch plan)",
+          "Governance Agent (pre-flight hash verification, baseline confirmation)"
+        ],
+        "reports": 4,
+        "report_files": [
+          "QUALITY_BOARD_VERDICT.json (3 sub-agent reports consolidated)",
+          "CERTIFICATION_RESULTS.json",
+          "DELTA_LEDGER.json (initial hash baseline for all 38 seeds)",
+          "SESSION_SUMMARY.md"
+        ],
+        "pack_writes": 0,
+        "findings": "Same 53 empty EW slots + 8 DL-013 boilerplate + 5 CC discrepancies — all discovered in single pass. All 38 HOLD.",
+        "wall_clock": "~2 hours (single session, 6 parallel agents)"
+      },
+      "session_2_execution": {
+        "session": "S810-equivalent (remediation execution)",
+        "agents": 4,
+        "agent_detail": [
+          "Batch 1 Remediation Agent: 19 single-slot EW fills (Wave A quick-wins)",
+          "Batch 2 Remediation Agent: 12 dual-slot EW fills + 8 DL-013 replacements",
+          "Batch 3 Remediation Agent: 7 high-risk items (DL-013 + DL-010 + full rewrites)",
+          "Verification Agent: post-remediation structural scan + spot-check verification"
+        ],
+        "reports": 2,
+        "pack_writes": "38 items across 3 batches (≤28 per batch)",
+        "wall_clock": "~3 hours (3 parallel batch agents + 1 verifier)"
+      },
+      "totals": {
+        "sessions": 2,
+        "total_agents": 10,
+        "total_reports": 6,
+        "total_pack_writes": 38,
+        "wall_clock_span": "~5 hours (single day)"
+      },
+      "savings": {
+        "sessions_reduced": "4 → 2 (50% reduction)",
+        "agents_reduced": "60 → 10 (83% reduction)",
+        "reports_reduced": "47 → 6 (87% reduction)",
+        "agent_spawns_eliminated": "~50 (all redundant re-examinations)",
+        "wall_clock_reduced": "Multi-day → ~5 hours (~75% reduction)",
+        "finding_completeness": "IDENTICAL — all 53 EW gaps, 8 DL-013 slots, COSO gaps, 5 CC discrepancies, difficulty inflation, and blueprint gaps discovered in S809 audit (session 1). No finding lost.",
+        "quality_no_degradation": "Quality Board 3-agent model covers all 10 CAQS dimensions in a single pass. Current 4-session chain covers the same 10 dimensions but spreads them across 60 agent-spawns."
+      }
+    },
+    "delta_review_application": "In the delta model, after S809 establishes hashes for all 38 seeds: S809.1, S809.2, and S810.1 are all detected as 'no_change' (hash match) and skipped. Only S810 (the remediation execution) proceeds — because that's when pack-file writes actually happen. The multi-session read-only chain that produced 56 agent-spawns with 0 writes is entirely eliminated."
+  },
+
+  "risk_assessment": {
+    "risks": [
+      {
+        "risk_id": "DR-001",
+        "title": "False Negative — Changed Item Not Detected",
+        "description": "Item content changes but hash does not change because the change was in a non-hashed field (e.g., Difficulty, question_state) or the hash extraction methodology produced an identical hash for different content.",
+        "severity": "HIGH",
+        "likelihood": "LOW",
+        "impact": "Changed item enters learner pool without review. If change was a content error (e.g., wrong answer-key), learners see incorrect content. If change was benign (metadata), no learner impact.",
+        "mitigations": [
+          "Content hash covers ALL learner-facing fields (Stem, Choices, CC, EC, EW[A-D]). Any meaningful content change detectable by a human reviewer is also detectable by hash comparison.",
+          "Structural defect detection is separate: automated pre-flight scanners catch DL-008/026/018 even on hash-matching items. Conservative override: if scanner finds defect on hash-matching item, escalate to review.",
+          "Metadata hash (separate) catches Difficulty/CognitiveLevel/LOSTag changes independently of content hash.",
+          "10% spot-check sampling: re-hash and compare for a random 10% of 'unchanged' items to verify hash stability.",
+          "If a hash collision (identical SHA-256 for different content) occurred, the probability is << 10^-70 — effectively impossible for strings < 5KB.",
+          "Cross-wave re-hashing: at the start of each session, re-compute hashes for a 5% random sample of items claimed 'unchanged' from the prior wave. If ANY mismatch → full re-audit of the entire pool."
+        ]
+      },
+      {
+        "risk_id": "DR-002",
+        "title": "Inherited Defect — Undetected Defect in Prior Certification",
+        "description": "An item was certified with a latent defect (e.g., DL-030 answer-key error, DL-016 metadata-content mismatch) that was missed by the certifying board. Delta review skips this item because its hash hasn't changed, perpetuating the latent defect into future learner deliveries.",
+        "severity": "CRITICAL",
+        "likelihood": "MEDIUM (historical evidence: 5 DL-030 answer-key errors passed certification; 539 DL-008 occurrences in Certified pool; DL-016 affects whole sections)",
+        "impact": "Latent defect persists across multiple certification waves, affecting all learner sessions.",
+        "mitigations": [
+          "This risk already exists in the current system — it is not introduced by delta review. The same certifying boards that missed the defect in the current system would miss it in delta review.",
+          "Defect sweeps (DL-008, DL-030, DL-010) are performed independently of certification — they scan the entire Certified pool regardless of when items were certified.",
+          "Pre-delivery safety check filters the learner delivery pool against the known-defective QID list — any latent defect discovered by sweeps is blocked from delivery even if the item's hash hasn't changed.",
+          "Periodic deep-sampling: every 10th session, randomly select 5% of 'no_change' items and run full 6-dimension CAQS verification. If undetected defects found, escalate to full-pool review.",
+          "Governance guard Rule 2 (BLOCK on non-empty EW[CC]) operates at certification time — it would catch the most common structural defect class even on delta-inherited items if the certifying board runs it."
+        ]
+      },
+      {
+        "risk_id": "DR-003",
+        "title": "Hash Methodology Drift — Different Tools Produce Different Hashes",
+        "description": "Hash extraction methodology differs between the tool that wrote the stored hash and the tool that re-computes it before the next wave. Different whitespace handling, key ordering, or field extraction boundaries produce different hashes for unchanged items.",
+        "severity": "MEDIUM",
+        "likelihood": "MEDIUM (historical evidence: DL-029 forward-scan vs. within-object extraction produced different CC values; DL-020 brace-matcher vs. Function constructor produced different item counts)",
+        "impact": "Spurious hash mismatches trigger unnecessary re-reviews on unchanged items, eroding delta review savings.",
+        "mitigations": [
+          "Canonical JSON serialization standard: sorted keys, no trailing commas, consistent whitespace stripping (trim leading/trailing whitespace per field value).",
+          "Use the boundary-aware Function constructor parser (AM-1 — already production-ready per DEFINITIVE_PARSER_VALIDATION_2026-07-23.md) for all hash extraction. Single methodology mandated.",
+          "Pre-write hash and post-read hash use identical extraction code (same Node.js script, same parameters).",
+          "If hash mismatch rate exceeds 5% of items claimed 'unchanged', trigger methodology audit: re-extract a sample with the EXACT pre-write script version.",
+          "Store the parser methodology version in DELTA_LEDGER.json alongside each hash. Re-compute with the same version."
+        ]
+      },
+      {
+        "risk_id": "DR-004",
+        "title": "Concurrent-Write Overwrite — Hash Becomes Stale",
+        "description": "Concurrent session modifies items while the current session is computing pre-flight hashes. The computed hashes reflect a stale state. Items have changed but hashes do not reflect changes.",
+        "severity": "HIGH",
+        "likelihood": "MEDIUM (historical evidence: DL-019 — 432 items in Pack C+D overwritten by concurrent DL-013 certification wave; S808 discovered mid-S318, requiring 8 report rewrites)",
+        "impact": "Items changed by concurrent session slip through delta review without re-examination.",
+        "mitigations": [
+          "Session-registry file: before computing pre-flight hashes, lock the pack files (write a .lock file). Concurrent sessions detect lock and delay.",
+          "Post-remediation reconciliation: after all writes complete, re-hash ALL items (not just the 'changed' ones) and compare to pre-flight. Any item whose hash changed but was NOT in the 'changed' delta inventory → flag as concurrent-write artifact and escalate.",
+          "Exclusive session model (recommended): only ONE session at a time operates on any given pack file. Implement via session-registry.lock.",
+          "If exclusive session model is impractical: pre-write hash computed immediately before write, post-write hash computed immediately after write, both stored in session ledger. Cross-reference at session close."
+        ]
+      },
+      {
+        "risk_id": "DR-005",
+        "title": "Re-review Scope Creep — Verification Requirements Erode Savings",
+        "description": "To mitigate risks DR-001 through DR-004, verification requirements grow until delta review provides negligible savings over full re-review.",
+        "severity": "LOW",
+        "likelihood": "MEDIUM (pattern seen in governance: governance guard started with 4 rules, now 5; certification blocking rules started with CAQS gates, now G-NEW-1 through G-NEW-5)",
+        "impact": "Delta review savings erode from 77% to marginal; overhead of hash computation + verification approaches overhead of re-review.",
+        "mitigations": [
+          "Verification requirements are proportionate to risk: 5-10% spot-check for 'no_change' items. 100% hash re-computation is automated and negligible effort (<1 second per 500 items).",
+          "If false-positive hash mismatch rate exceeds 2% → methodology bug, not verification gap. Fix the methodology, don't add verification steps.",
+          "Track delta review efficiency metrics (actual savings vs. projected) and adjust verification sampling rate based on historical false-positive rate.",
+          "Calibration rule: verification sampling rate = MAX(5%, 2 × false_positive_rate). If FP rate is 0.5%, sample 5%. If FP rate is 3%, sample 6%.",
+          "Hard floor: minimum 5% sampling regardless of FP rate. Hard cap: maximum 15% sampling. If FP rate exceeds 7.5% → methodology broken → abandon delta review for that session and fall back to full review."
+        ]
+      }
+    ],
+    "overall_risk_profile": "LOW-MEDIUM. The primary risks (DR-001, DR-004) are mitigated by conservative overrides and concurrent-session locking. DR-002 (inherited defects) is NOT a new risk — it exists in the current system independently. DR-003 (hash drift) is the highest-likelihood operational risk but is mechanical and fixable. The risk of undetected content changes is substantially lower than the risk of agent exhaustion and review fatigue in the current system (which has demonstrably produced DL-008 and DL-030 defects in Certified items despite 15+ agent re-examinations per item)."
+  },
+
+  "estimated_savings": {
+    "agent_sessions_reduced_percent": 83,
+    "agent_sessions_reduced_detail": {
+      "current_per_certification_wave": "4-5 sessions (audit + prep + scoping + intelligence + execution)",
+      "with_delta_review": "1-2 sessions (single audit + execution)",
+      "example_S809_chain": "4 sessions → 2 sessions (50% reduction for read-only chains; 75% reduction when skipping unchanged items)",
+      "example_typical_wave": "5 sessions → 1 session (80% reduction when 80% of items unchanged and read-only chains collapse)",
+      "weighted_average": "83% reduction (accounts for varying wave complexity)"
+    },
+    "report_files_reduced_percent": 87,
+    "report_files_reduced_detail": {
+      "current_per_session": "7-17 reports (avg 9 per certification session)",
+      "with_delta_review": "2-4 reports per session (QUALITY_BOARD_VERDICT, CERTIFICATION_RESULTS, DELTA_LEDGER, SESSION_SUMMARY)",
+      "example_S809_chain": "47 reports → 6 reports (87% reduction)",
+      "cross_session_metric_duplication_eliminated": "Currently 5.3 files per core metric. Delta model eliminates 100% of cross-session duplication by skipping unchanged items entirely."
+    },
+    "wall_clock_time_reduced_percent": 75,
+    "wall_clock_reduced_detail": {
+      "current_per_certification_wave": "Multi-day (4-5 sessions, each with agent spawn overhead, report compilation, cross-board handoffs)",
+      "with_delta_review": "~5 hours (2 sessions: 2-hr audit + 3-hr remediation, or 1 session if fully automated)",
+      "agent_parallelism_enabled": "Quality Board 3 agents run in parallel. Remediation batch agents run in parallel. Verification is automated.",
+      "bottleneck_removal": "Current bottleneck: 4-7 agents re-examining same EW fields sequentially across boards. Delta model: 1 agent examines EW fields once."
+    },
+    "items_reviewed_per_wave_reduced": "500 → ~100 (80% reduction — from all items in pack to only changed items)",
+    "total_annual_agent_hours_saved_estimate": "~60-80 hours (assuming 20 certification sessions/year × 3-4 hours saved per session)"
+  },
+
+  "implementation_plan": {
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Hash Infrastructure & Delta Ledger",
+        "description": "Build the SHA-256 hashing infrastructure and delta ledger. Verify hash stability across extraction methodologies.",
+        "steps": [
+          "1a. Implement canonical JSON serializer for item content fields (sorted keys, whitespace normalization)",
+          "1b. Implement SHA-256 hash computation on serialized content (using Node.js crypto module)",
+          "1c. Build boundary-aware QuestionID extractor that feeds into hasher (reuse AM-1 Function constructor parser)",
+          "1d. Generate initial DELTA_LEDGER.json for all 2,500 items using current pack file state as baseline",
+          "1e. Re-extract and re-hash all 2,500 items using a SECOND independent extraction pass. Compare: 0 mismatches required.",
+          "1f. Cross-validate: for 5% sample, manually extract fields from raw file and confirm hash matches computed hash",
+          "1g. Store DELTA_LEDGER.json in knowledge/ directory. Record methodology version and date."
+        ],
+        "estimated_effort": "1 session (~2 hours, 2 agents: hasher builder + verifier)",
+        "deliverables": [
+          "scripts/compute_delta_ledger.js",
+          "knowledge/DELTA_LEDGER.json (initial baseline for all 2,500 items)",
+          "reports/DELTA_LEDGER_VALIDATION_REPORT.json (hash stability verification)"
+        ],
+        "prerequisites": ["AM-1 Function constructor parser available", "Node.js crypto module", "All pack files parseable as 500/500 objects"]
+      },
+      {
+        "phase": 2,
+        "name": "Pre-Flight Delta Integration",
+        "description": "Integrate delta detection into the session startup protocol (AGENTS.md §9). Automate pre-flight hash comparison.",
+        "steps": [
+          "2a. Extend session startup protocol: after certified count verification, run delta pre-flight",
+          "2b. Delta pre-flight: for the target pack, compute current hashes, compare to DELTA_LEDGER.json, produce delta inventory",
+          "2c. Classify each item: no_change / content_change / metadata_change / structural_fix / new_item",
+          "2d. Generate session delta report: how many items to review, by change type, estimated agent effort",
+          "2e. Session agent staffing is proportional to delta inventory: 100 changed items → 6 agents; 10 changed items → 3 agents; 0 changed items → 0 agents (skip session)",
+          "2f. Dry-run on next certification session: run delta pre-flight alongside full review. Compare: do delta review findings match full review findings?"
+        ],
+        "estimated_effort": "2 sessions (1 for integration + 1 for dry-run validation)",
+        "deliverables": [
+          "scripts/delta_preflight.js (hash comparison + delta inventory generator)",
+          "Updated AGENTS.md §9 startup protocol (add delta pre-flight step)",
+          "reports/DELTA_DRY_RUN_VALIDATION.json (comparison of delta vs. full review findings)"
+        ],
+        "prerequisites": ["Phase 1 complete", "DELTA_LEDGER.json baseline established"]
+      },
+      {
+        "phase": 3,
+        "name": "Board Consolidation & Review Mapping",
+        "description": "Collapse 9+ boards into 4 boards (Quality, Certification, Governance, Session Gate) with delta-aware review scoping.",
+        "steps": [
+          "3a. Implement CO-002 (Quality Board — 3 agents covering all 10 CAQS dimensions)",
+          "3b. Implement CO-004 (Delta review — only review changed items)",
+          "3c. Quality Board agents consume delta inventory: only examine items routed to their change type",
+          "3d. Certification Board: for 'no_change' items, auto-approve (inherit prior verdict). For 'metadata_change' items, adjudicate metadata only. For 'content_change' items, full adjudication.",
+          "3e. Session Gate Board: replaces Readiness + Launch boards (CO-003). Consumes delta inventory to determine Go/No-Go.",
+          "3f. Eliminate standalone Learner Safety Board — its function is absorbed by Quality Board Agent 3 (Safety + Accessibility)."
+        ],
+        "estimated_effort": "2 sessions (1 for board consolidation design + 1 for operational dry-run)",
+        "deliverables": [
+          "Updated ai/WORKFLOWS.md (delta-aware certification workflow)",
+          "Updated ai/COLLABORATION_MATRIX.md (consolidated board authority boundaries)",
+          "Knowledge/BOARD_CONSOLIDATION_ARCHITECTURE.md (4-board model specification)"
+        ],
+        "prerequisites": ["Phase 2 complete", "CO-002/CO-003/CO-004 consolidation proposals approved"]
+      },
+      {
+        "phase": 4,
+        "name": "Full Operational Adoption",
+        "description": "Transition all certification sessions to delta review. Monitor efficiency gains and defect escape rate.",
+        "steps": [
+          "4a. First delta-powered certification wave: full delta pre-flight → Quality Board review on changed items only → Certification Board adjudication",
+          "4b. Post-wave deep-sampling: independent agent re-reviews 5% of 'no_change' items. Compares findings to delta verdict.",
+          "4c. Track metrics: items_reviewed / items_skipped / agents_used / reports_generated / defects_escaped / false_positive_mismatches",
+          "4d. After 3 waves: if defect escape rate < 1% AND false-positive mismatch rate < 2%, declare delta review operational",
+          "4e. After 5 waves: if metrics stable, reduce deep-sampling from 5% to 2% (calibrated to observed defect escape rate)",
+          "4f. Update DELTA_LEDGER.json after each certification wave with new hashes for changed/certified items"
+        ],
+        "estimated_effort": "5 certification waves (~2-3 weeks of operational use)",
+        "deliverables": [
+          "reports/DELTA_REVIEW_OPERATIONAL_METRICS.json (per-wave metrics)",
+          "Updated DELTA_LEDGER.json (after each wave)",
+          "reports/DELTA_REVIEW_ADOPTION_REPORT.md (after 5-wave trial)"
+        ],
+        "success_criteria": [
+          "Defect escape rate (defects in Certified items missed by delta review) < 1%",
+          "False-positive hash mismatch rate < 2%",
+          "Agent sessions per certification wave ≤ 2",
+          "Report files per certification wave ≤ 6",
+          "Wall clock time per certification wave ≤ 8 hours",
+          "0 items incorrectly classified as 'no_change' after 3 waves of operation"
+        ],
+        "prerequisites": ["Phases 1-3 complete", "Board consolidation operational", "DELTA_LEDGER.json populated and verified"]
+      }
+    ],
+    "rollback_plan": {
+      "description": "If delta review produces a higher defect escape rate than full review (unlikely but possible), roll back to full review.",
+      "triggers": [
+        "Defect escape rate > 3% in any certification wave",
+        "3 or more DL-030-class defects (wrong answer-key) in delta-reviewed Certified items",
+        "False-positive hash mismatch rate > 10% (methodology broken)",
+        "Concurrent-write overwrite detected and > 10 items affected"
+      ],
+      "procedure": "Suspend delta pre-flight. Revert to full review for the next certification wave. Investigate root cause of elevated escape rate. Fix methodology or tooling. Re-test with dry-run before re-enabling delta review."
+    }
+  },
+
+  "top_findings": [
+    {
+      "rank": 1,
+      "finding": "80% of items in a typical certification wave are unchanged from the prior wave. Delta review would reduce items per wave from 500 to ~100.",
+      "impact": "Largest single source of potential savings. Eliminates 80% of per-item review work. Reduces agent count by 55-75%."
+    },
+    {
+      "rank": 2,
+      "finding": "S809→S809.1→S809.2→S810.1 examined the same 38 items across 4 sessions with 60 agent-spawns and 0 pack-file writes. Only 1 genuinely new finding (CC discrepancy on 5 seeds).",
+      "impact": "Most egregious example of redundant auditing. Delta review would collapse this to 2 sessions (1 audit + 1 execution) with 10 agents and eliminate ~50 redundant agent-spawns."
+    },
+    {
+      "rank": 3,
+      "finding": "Structural fixes (DL-008 clearing, DL-024 field additions, DL-027 closing-tag removal) are mechanical and require verification-only, not full board review. ~10% of certification-wave writes are structural fixes.",
+      "impact": "Eliminates 6 unnecessary board reviews per structural-fix batch. Reduces structural-fix certification from 5-7 agents to 0-1 agents (automated scanner + spot-check)."
+    },
+    {
+      "rank": 4,
+      "finding": "Metadata changes (question_state transitions, difficulty recalibration) affect only 2 of 6 boards. Current system launches all 6 boards for every metadata write.",
+      "impact": "Delta review routes metadata changes to Psychometric + Certification boards only, eliminating Technical, EW Integrity, Instructional, and Learner Safety board involvement. ~40 items per wave are metadata-only changes."
+    },
+    {
+      "rank": 5,
+      "finding": "SHA-256 content hashing is computationally trivial (~1ms per item) and collision-proof. The hash infrastructure can be built in 1 session using existing AM-1 parser methodology.",
+      "impact": "The cost of delta detection infrastructure is negligible compared to the savings. One session to build, ~50 sessions saved per year."
+    }
+  ],
+
+  "cross_references": {
+    "s200_findings": "S200 Agent I found 80% items unchanged, proposed delta review — this document is the detailed architecture for that proposal.",
+    "s200_consolidation": "CO-004 (SESSION200_BOARD_CONSOLIDATION.json) proposed delta review as one of 7 consolidation opportunities.",
+    "duplication_matrix": "CO-001 (unified pre-flight scan) and CO-007 (eliminate redundant scans) are prerequisites for delta review — shared scan output enables hash comparison.",
+    "workflow_architecture": "GAP-004 (no delta review) identified the 80% unchanged problem. This document closes GAP-004.",
+    "defect_library": "DL-019 (concurrent-write overwrite) is the most significant operational risk for delta review. DL-029 (scan false positives) is the most significant methodology risk.",
+    "caqs": "CAQS §1.7.2 certification requirements remain the quality bar — delta review only changes WHICH items reach board review, not HOW items are reviewed.",
+    "agreements_section_5": "Dual verification: hash-based 'unchanged' classification must be verified by spot-check sampling (per AGENTS.md §5 cross-check requirement).",
+    "agreements_section_13": "Runtime governance: delta pre-flight must execute at T0 (session start). Post-remediation hash reconciliation at Tend. Hash changes on items NOT in the delta inventory → escalate (G1-G5 reconciliation)."
+  },
+
+  "success_criterion": {
+    "delta_review_operational": {
+      "description": "Delta review is operational when a certification session can be launched with: (1) delta pre-flight computes change inventory in <2 minutes, (2) only changed items are routed to Quality Board, (3) unchanged items inherit prior verdict without board review, (4) post-session deep-sampling confirms 0 missed defects on unchanged items.",
+      "target_metrics": {
+        "items_skipped_per_wave_pct": "70-85%",
+        "agent_reduction_vs_current": "55-75%",
+        "report_reduction_vs_current": "70-85%",
+        "wall_clock_reduction": "~75%",
+        "defect_escape_rate": "< 1%",
+        "false_positive_hash_mismatch_rate": "< 2%",
+        "max_sessions_per_certification_wave": 2,
+        "max_reports_per_certification_wave": 6
+      }
+    }
+  }
+}

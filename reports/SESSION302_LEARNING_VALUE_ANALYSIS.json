@@ -1,0 +1,33 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Learning Value Assessment",
+  "scoring_dimensions": {
+    "teaching_value": { "weight": 30, "question": "Does getting this wrong teach the candidate something they didn't know?" },
+    "misconception_visibility": { "weight": 25, "question": "Does the EW text make the specific misconception visible and understandable?" },
+    "remediation_value": { "weight": 25, "question": "Can the candidate self-correct their understanding after reading the EW text?" },
+    "retention_value": { "weight": 20, "question": "Will the candidate remember this trap on their next encounter with this concept?" }
+  },
+  "portfolio_learning_value_scores": {
+    "pack_a": { "avg_lv_score": 72, "tier": "Acceptable", "notes": "Good EW quality in most sections. DL-016 offset degrades some Pack A EW accessibility." },
+    "pack_b": { "avg_lv_score": 85, "tier": "Strong", "notes": "Best learning value. Independent authoring = genuinely instructive EW text. Example: P1B-C-185 EW explains variance-standard-cost confusion with formula walkthrough." },
+    "pack_c": { "avg_lv_score": 65, "tier": "Needs Work", "notes": "Certified sections A-D have good EW. Sections E-F have boilerplate/empty = zero learning value." },
+    "pack_d": { "avg_lv_score": 63, "tier": "Needs Work", "notes": "Similar to Pack C. Highest concentration of DL-013 boilerplate (91 fields) — zero learning value for those slots." },
+    "pack_e": { "avg_lv_score": 78, "tier": "Acceptable-Strong", "notes": "Good EW quality. Different authorship pipeline. DL-005 concentration means some distractors have reduced discrimination." },
+    "case_banks": { "avg_lv_score": 5, "tier": "Critical Gap", "notes": "Essentially zero learning value from distractor feedback. 97.8% of case EW slots empty." }
+  },
+  "learning_value_by_domain": {
+    "A": 74, "B": 71, "C": 70, "D": 76, "E": 72, "F": 75
+  },
+  "high_learning_value_examples": [
+    "Pack B Section C: Variance analysis EW texts show formula substitution AND explain 'why your answer differs' — highest remediation value",
+    "Pack D Section A: Joint cost allocation EW texts trace the specific allocation path that led to each distractor number",
+    "Pack E Section F: Technology questions have EW texts that reference real-world systems (ERP, blockchain) — high retention value"
+  ],
+  "low_learning_value_patterns": [
+    "DL-013 template: 'Option X represents a plausible misconception. Under CMA Part 1 accounting principles...' — zero remediation value (generic)",
+    "DL-007 cloned EW: All three distractor explanations are verbatim identical — candidate learns nothing about why their specific choice was wrong",
+    "Empty EW: Candidate receives no feedback at all — lowest possible learning value"
+  ],
+  "recommendation": "Case bank EW authoring should target the Pack B standard (avg LV score 85). Each EW must: (1) name the specific error in that choice, (2) explain the misconception behind it, (3) contrast with the correct approach. Template text that could apply to any question is worse than no text — it trains the candidate to ignore feedback."
+}

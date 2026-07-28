@@ -1,0 +1,471 @@
+{
+  "agent": "G",
+  "session": "S810.1",
+  "date": "2026-07-26",
+  "scope": "38 Domain E seed QIDs (Pack C: 19, Pack D: 19)",
+  "methodology": "Independent per-item stem analysis against Bloom's taxonomy per CAQS §6.2 and TAXONOMY_REGISTRY.md. Cross-referenced with S809 Agent H CL validation, S809 Agent K DQS review, and S809 Agent I blueprint audit. Bloom's definitions: Remember = recall facts/terms/definitions; Understand = explain concepts/interpret meaning; Apply = execute procedures/apply rules to scenarios; Analyze = break down/identify patterns; Evaluate = make judgments.",
+  "cross_reference_note": "S809 Agent H (SESSION809_COGNITIVELEVEL_VALIDATION.json) individual item assessments are confirmed CORRECT by independent verification. However, Agent H's distribution_by_recommended_cl (Remember=12, Understand=19, Apply=7) contains an ARITHMETIC ERROR: the 3 correct-Apply items (EC-021, EC-025, ED-073) + 7 understated→Apply items = 10 Apply items, not 7. The 9 correct-Understand items + 7 overstated→Understand items = 16 Understand, not 19. This report corrects the arithmetic while preserving Agent H's verified per-item assessments.",
+  "total_seeds": 38,
+  "current_distribution": {
+    "remember": 0,
+    "understand": 28,
+    "apply": 10,
+    "analyze": 0,
+    "evaluate": 0
+  },
+  "recommended_distribution": {
+    "remember": 12,
+    "understand": 16,
+    "apply": 10,
+    "analyze": 0,
+    "evaluate": 0
+  },
+  "overstated_count": 19,
+  "understated_count": 7,
+  "correct_count": 12,
+  "alignment_matrix": [
+    {
+      "qid": "P1-EC-004",
+      "pack": "C",
+      "topic": "segregation of duties design",
+      "current_cl": "Apply",
+      "actual_cl": "Understand",
+      "verdict": "OVERSTATED",
+      "recommended": "Understand",
+      "rationale": "Stem describes SoD (separated authorization/recording/reconciliation) and asks 'what concept?' — definition-matching. No procedure or rule is being applied. Candidate recognizes the described pattern as segregation of duties."
+    },
+    {
+      "qid": "P1-EC-008",
+      "pack": "C",
+      "topic": "COSO internal control framework",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'five integrated components' → COSO Internal Control Framework. Pure definition-match. No interpretation required beyond recognizing the textbook description. DL-031 pattern."
+    },
+    {
+      "qid": "P1-EC-014",
+      "pack": "C",
+      "topic": "fraud triangle elements",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'opportunity, pressure, and rationalization' → fraud triangle. Elements listed verbatim in stem. Matching term to definition. Pure recall. DL-031 pattern."
+    },
+    {
+      "qid": "P1-EC-020",
+      "pack": "C",
+      "topic": "physical controls over assets",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Stem describes locked warehouse + badge access; candidate must classify this as a physical control, distinguishing from detective, compensating, and entity-level controls. Requires concept interpretation and classification, not pure recall."
+    },
+    {
+      "qid": "P1-EC-021",
+      "pack": "C",
+      "topic": "segregation of duties vendor setup and payment",
+      "current_cl": "Apply",
+      "actual_cl": "Apply",
+      "verdict": "CORRECT",
+      "recommended": "Apply",
+      "rationale": "Must apply SoD/compensating control principles to a specific business scenario with a real constraint ('without adding staff'). Selects best control improvement from alternatives. Genuine scenario-based application. Best-quality Pack C seed (DQS 46)."
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "C",
+      "topic": "preventive vs detective duplicate payment control",
+      "current_cl": "Understand",
+      "actual_cl": "Apply",
+      "verdict": "UNDERSTATED",
+      "recommended": "Apply",
+      "rationale": "Must evaluate 4 specific control options, classify each as preventive or detective, and select the one that is preventive. Applies the preventive/detective classification framework to concrete controls. Requires discriminating between review/approval timing."
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "C",
+      "topic": "IT access control terminated employee deprovisioning",
+      "current_cl": "Understand",
+      "actual_cl": "Apply",
+      "verdict": "UNDERSTATED",
+      "recommended": "Apply",
+      "rationale": "Must analyze a specific control failure scenario (18-day access gap after termination) and select best remediation from alternatives. Applies IT access control and risk management principles. Highest potential of all Pack C seeds (DQS 48)."
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "C",
+      "topic": "application input control sales order validation",
+      "current_cl": "Understand",
+      "actual_cl": "Apply",
+      "verdict": "UNDERSTATED",
+      "recommended": "Apply",
+      "rationale": "Must diagnose specific input validation failures (invalid codes, negative quantities, missing addresses) and select the most appropriate application control. Applies input control concepts to a described system deficiency."
+    },
+    {
+      "qid": "P1-EC-025",
+      "pack": "C",
+      "topic": "preventive vs detective controls",
+      "current_cl": "Apply",
+      "actual_cl": "Apply",
+      "verdict": "CORRECT",
+      "recommended": "Apply",
+      "rationale": "Applies preventive/detective classification framework to a described control (dual signatures) AND must justify the classification. Requires both applying framework and reasoning about timing (before vs. after payment)."
+    },
+    {
+      "qid": "P1-EC-028",
+      "pack": "C",
+      "topic": "bank reconciliation control",
+      "current_cl": "Apply",
+      "actual_cl": "Understand",
+      "verdict": "OVERSTATED",
+      "recommended": "Understand",
+      "rationale": "Asks 'Why is independence important?' — a conceptual explanation question. The candidate explains the purpose of independent reconciliation, not executes a procedure. No rule or framework is being applied."
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "C",
+      "topic": "ERM risk appetite",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'amount of risk an organization is willing to accept' → risk appetite. Word-for-word textbook definition. No interpretation beyond matching definition to term. DL-031 pattern."
+    },
+    {
+      "qid": "P1-EC-040",
+      "pack": "C",
+      "topic": "IT general controls access",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must classify periodic access review into ITGC vs. application control vs. physical control vs. budgetary control. Requires interpreting the described activity and mapping to the correct control taxonomy."
+    },
+    {
+      "qid": "P1-EC-041",
+      "pack": "C",
+      "topic": "management override risk",
+      "current_cl": "Apply",
+      "actual_cl": "Understand",
+      "verdict": "OVERSTATED",
+      "recommended": "Understand",
+      "rationale": "Stem describes CEO instructing controller to bypass controls. Candidate recognizes this as management override — concept identification from a described situation. No procedure being applied. Strong item (DQS 42) — realistic scenario justifies Understand level."
+    },
+    {
+      "qid": "P1-EC-049",
+      "pack": "C",
+      "topic": "whistleblower hotline purpose",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must infer the objective served by an anonymous hotline from its described function. Goes beyond pure recall — candidate interprets what control objective a described mechanism serves."
+    },
+    {
+      "qid": "P1-EC-052",
+      "pack": "C",
+      "topic": "compensating control small business",
+      "current_cl": "Understand",
+      "actual_cl": "Apply",
+      "verdict": "UNDERSTATED",
+      "recommended": "Apply",
+      "rationale": "Must apply compensating control concept to a specific real-world constraint (small company, cannot segregate duties) and select the best approach from alternatives. Applies internal control principles to a constrained scenario."
+    },
+    {
+      "qid": "P1-EC-060",
+      "pack": "C",
+      "topic": "control environment tone at top",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'board and senior executives emphasize integrity and ethical behavior' → control environment (tone at the top). Textbook description. COSO component names are in the answer choices. Matching definition to component name. DL-031 pattern."
+    },
+    {
+      "qid": "P1-EC-061",
+      "pack": "C",
+      "topic": "inherent risk vs control risk",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'susceptibility of an account to material misstatement before considering any related controls' → inherent risk. Textbook definition with giveaway phrase 'before considering controls.' Pure definition-matching. DL-031 pattern."
+    },
+    {
+      "qid": "P1-EC-066",
+      "pack": "C",
+      "topic": "segregation cash custody recording",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must interpret a described SoD failure (cash handling + recording) and identify the specific control weakness created. Requires interpretation beyond pure recall — candidate connects custody/recordkeeping separation to risk of concealed theft."
+    },
+    {
+      "qid": "P1-EC-072",
+      "pack": "C",
+      "topic": "remediation of control deficiency",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'assigns an owner, a corrective action plan, and a target completion date' → remediation tracking. The stem literally defines the concept. Matching to the term requires no interpretation. DL-031 pattern."
+    },
+    {
+      "qid": "P1-ED-001",
+      "pack": "D",
+      "topic": "three lines of defense model",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'operational management, risk/compliance oversight, and internal audit as distinct layers' → three lines of defense. The three layers are explicitly named in the stem. Pure recall. DL-031 pattern."
+    },
+    {
+      "qid": "P1-ED-010",
+      "pack": "D",
+      "topic": "access control least privilege",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'system access limited only to what is necessary to perform their specific job duties' → principle of least privilege. Textbook definition. Matching to term. DL-031 pattern."
+    },
+    {
+      "qid": "P1-ED-014",
+      "pack": "D",
+      "topic": "independent verification control activity",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must classify supervisor recount among control types (physical, independent verification, preventive, SoD). Requires distinguishing independent verification from related concepts like segregation of duties — a known CMA candidate confusion."
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "D",
+      "topic": "ERM risk response strategies",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'purchase insurance to address a significant identified risk' → risk transfer/sharing. Textbook definition. Matching to term. DL-031 pattern. Note: explanation quality is poor — EW_B and EW_C use DL-013 boilerplate."
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "D",
+      "topic": "control activities authorization",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must classify manager approval before order placement as an authorization control, distinguishing from monitoring, SoD, and risk assessment. Requires interpreting the described control's nature and mapping to the correct control activity type."
+    },
+    {
+      "qid": "P1-ED-028",
+      "pack": "D",
+      "topic": "monitoring ongoing evaluations",
+      "current_cl": "Apply",
+      "actual_cl": "Understand",
+      "verdict": "OVERSTATED",
+      "recommended": "Understand",
+      "rationale": "Stem describes ongoing monitoring (reviewing exception reports to assess control functioning). Candidate matches to COSO component 'monitoring activities.' Concept recognition from a description — no application of COSO framework required. Good item (DQS 40) but CL is overstated."
+    },
+    {
+      "qid": "P1-ED-035",
+      "pack": "D",
+      "topic": "data backup disaster recovery",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'offsite backups of critical financial data and a documented plan for restoring systems after a disruption' → availability (CIA triad). Standard elements described explicitly. Matching to CIA triad objective. DL-031 pattern."
+    },
+    {
+      "qid": "P1-ED-036",
+      "pack": "D",
+      "topic": "change management control IT systems",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'software changes tested, approved, and documented before production' → change management IT general control. Textbook elements described. Matching to term. DL-031 pattern. Note: EW_B and EW_C use DL-013 boilerplate."
+    },
+    {
+      "qid": "P1-ED-042",
+      "pack": "D",
+      "topic": "risk assessment likelihood impact",
+      "current_cl": "Understand",
+      "actual_cl": "Remember",
+      "verdict": "OVERSTATED",
+      "recommended": "Remember",
+      "rationale": "STEM: 'scores identified risks based on likelihood of occurring and the potential impact' → risk assessment. Textbook definition. Pure definition-matching. DL-031 pattern."
+    },
+    {
+      "qid": "P1-ED-046",
+      "pack": "D",
+      "topic": "code of conduct ethics program",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must connect ethics training and code of conduct acknowledgment to the COSO control environment component, distinguishing from information & communication, risk assessment, and monitoring. Requires interpreting which COSO component a described activity primarily supports."
+    },
+    {
+      "qid": "P1-ED-051",
+      "pack": "D",
+      "topic": "password access authentication control",
+      "current_cl": "Apply",
+      "actual_cl": "Understand",
+      "verdict": "OVERSTATED",
+      "recommended": "Understand",
+      "rationale": "Asks 'What is the primary purpose of MFA?' — a conceptual purpose question. Candidate explains the purpose of a described control (reduce unauthorized access risk), not applies a procedure or framework. Understand level."
+    },
+    {
+      "qid": "P1-ED-058",
+      "pack": "D",
+      "topic": "internal control cost benefit limitation",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must recognize that declining a costly control for a low-risk area illustrates the cost-benefit limitation, distinguishing from control environment weakness, management override, and SoD failure. Requires interpreting the described decision and mapping to the correct limitation category."
+    },
+    {
+      "qid": "P1-ED-064",
+      "pack": "D",
+      "topic": "vendor master file controls",
+      "current_cl": "Apply",
+      "actual_cl": "Understand",
+      "verdict": "OVERSTATED",
+      "recommended": "Understand",
+      "rationale": "Asks 'What risk does this control primarily address?' — a conceptual interpretation question. Candidate explains the risk mitigated by vendor-master access restriction. No procedure or framework is being applied. Understand level."
+    },
+    {
+      "qid": "P1-ED-066",
+      "pack": "D",
+      "topic": "audit committee oversight role",
+      "current_cl": "Apply",
+      "actual_cl": "Understand",
+      "verdict": "OVERSTATED",
+      "recommended": "Understand",
+      "rationale": "Asks 'What is the primary purpose of audit committee oversight?' — a conceptual purpose question. Candidate explains the purpose of described oversight activities, not applies a procedure. Understand level."
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "D",
+      "topic": "change management control direct production change",
+      "current_cl": "Understand",
+      "actual_cl": "Apply",
+      "verdict": "UNDERSTATED",
+      "recommended": "Apply",
+      "rationale": "Must diagnose a specific IT control deficiency from a described scenario (developer made direct production change, no change request, no testing, no review) and identify which control type is missing. Applies ITGC knowledge to an operational scenario. Note: all 3 distractor explanation slots are empty (DL-026 — worst case in review)."
+    },
+    {
+      "qid": "P1-ED-072",
+      "pack": "D",
+      "topic": "fraud risk purchasing conflict of interest",
+      "current_cl": "Understand",
+      "actual_cl": "Apply",
+      "verdict": "UNDERSTATED",
+      "recommended": "Apply",
+      "rationale": "Must apply internal control/fraud-control concepts to a specific conflict-of-interest scenario (purchasing manager can both add vendors and select winners) and select the most appropriate control from alternatives. Requires evaluating four options against fraud-control principles."
+    },
+    {
+      "qid": "P1-ED-073",
+      "pack": "D",
+      "topic": "monitoring exception reports not reviewed",
+      "current_cl": "Apply",
+      "actual_cl": "Apply",
+      "verdict": "CORRECT",
+      "recommended": "Apply",
+      "rationale": "Must diagnose a monitoring failure from a described scenario (exception reports generated but not reviewed = detective control rendered ineffective). Applies COSO monitoring component concepts to evaluate a control deficiency. Best Pack D seed (DQS 42)."
+    },
+    {
+      "qid": "P1-ED-074",
+      "pack": "D",
+      "topic": "reconciliation incompatible duties EFT and bank rec",
+      "current_cl": "Understand",
+      "actual_cl": "Apply",
+      "verdict": "UNDERSTATED",
+      "recommended": "Apply",
+      "rationale": "Must analyze a described SoD conflict (EFT initiation + bank reconciliation by same person) and determine the specific risk it creates (concealment through reconciliation manipulation). Applies SoD analysis to infer the specific threat. Requires connecting control weakness to risk outcome."
+    },
+    {
+      "qid": "P1-ED-075",
+      "pack": "D",
+      "topic": "segregation approval reconciliation",
+      "current_cl": "Understand",
+      "actual_cl": "Understand",
+      "verdict": "CORRECT",
+      "recommended": "Understand",
+      "rationale": "Must interpret a described SoD control (separating invoice approval from AP subledger reconciliation) and identify the specific risk it mitigates. Requires understanding why separating approval from reconciliation prevents errors/fraud from going undetected. Understand is appropriate."
+    }
+  ],
+  "verdict_summary_by_section": {
+    "packC_sectionE": {
+      "total": 19,
+      "correct": 6,
+      "overstated": 9,
+      "understated": 4,
+      "correct_qids": ["P1-EC-020", "P1-EC-021", "P1-EC-025", "P1-EC-040", "P1-EC-049", "P1-EC-066"],
+      "overstated_qids": ["P1-EC-004", "P1-EC-008", "P1-EC-014", "P1-EC-028", "P1-EC-031", "P1-EC-041", "P1-EC-060", "P1-EC-061", "P1-EC-072"],
+      "understated_qids": ["P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-052"]
+    },
+    "packD_sectionE": {
+      "total": 19,
+      "correct": 6,
+      "overstated": 10,
+      "understated": 3,
+      "correct_qids": ["P1-ED-014", "P1-ED-025", "P1-ED-046", "P1-ED-058", "P1-ED-073", "P1-ED-075"],
+      "overstated_qids": ["P1-ED-001", "P1-ED-010", "P1-ED-016", "P1-ED-028", "P1-ED-035", "P1-ED-036", "P1-ED-042", "P1-ED-051", "P1-ED-064", "P1-ED-066"],
+      "understated_qids": ["P1-ED-071", "P1-ED-072", "P1-ED-074"]
+    }
+  },
+  "definition_match_items_dl031": {
+    "count": 12,
+    "description": "Items where the stem is a textbook definition and the correct answer is the defined term. These have >70% lexical overlap between stem keywords and correct answer. Should be Remember (1), not Understand (2) or Apply (3).",
+    "qids": ["P1-EC-008", "P1-EC-014", "P1-EC-031", "P1-EC-060", "P1-EC-061", "P1-EC-072", "P1-ED-001", "P1-ED-010", "P1-ED-016", "P1-ED-035", "P1-ED-036", "P1-ED-042"],
+    "current_cl": "Understand (all 12)",
+    "recommended_cl": "Remember"
+  },
+  "scenario_application_items": {
+    "count": 10,
+    "description": "Items requiring analysis of a specific scenario and selection from alternatives. Genuine Apply level.",
+    "qids": ["P1-EC-021", "P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-025", "P1-EC-052", "P1-ED-071", "P1-ED-072", "P1-ED-073", "P1-ED-074"],
+    "note": "3 were correctly labeled Apply (EC-021, EC-025, ED-073); 7 were understated at Understand (EC-022, EC-023, EC-024, EC-052, ED-071, ED-072, ED-074)"
+  },
+  "conceptual_purpose_items": {
+    "count": 7,
+    "description": "Items that ask 'why,' 'what purpose,' or 'what risk' about a described control. These test conceptual understanding, not procedure application.",
+    "qids": ["P1-EC-004", "P1-EC-028", "P1-EC-041", "P1-ED-028", "P1-ED-051", "P1-ED-064", "P1-ED-066"],
+    "current_cl": "Apply (all 7)",
+    "recommended_cl": "Understand",
+    "pattern": "All 7 ask for explanation/interpretation of a described scenario (what concept, why, what purpose, what risk) rather than requiring the candidate to execute a procedure or select among competing frameworks."
+  },
+  "rotation_pattern_evidence": "The 38 seeds were authored in 5-item rotation groups. CognitiveLevel labels follow a template-assignment pattern rather than per-item cognitive demand assessment. Evidence: (1) No item received 'Remember' despite 12 items (31.6%) testing pure definition recall. The template's minimum CL was 'Understand.' (2) 'Apply' was assigned to exactly one item per rotation group, typically at position 1, 3, or 4 in the 5-item sequence, regardless of whether the item required procedure execution or conceptual explanation. In Pack C: EC-004(pos4), EC-021(pos1), EC-025(pos5), EC-028(pos3), EC-041(pos1). In Pack D: ED-028(pos3), ED-051(pos1), ED-064(pos4), ED-066(pos1), ED-073(pos3). (3) Of the 10 items labeled Apply, 7 (70%) only ask for conceptual explanation (what concept/why/purpose/risk) rather than procedure execution — they should be Understand. (4) Of the 28 items labeled Understand, 12 (43%) are pure definition-matches that should be Remember. (5) The pattern mirrors DL-031 difficulty inflation: labels were assigned by template position, not by Bloom's analysis. This is systematic across both Pack C and Pack D Section E seeds.",
+  "comparison_with_agent_h": {
+    "per_item_assessments": "VERIFIED — all 38 individual item verdicts from S809 Agent H are confirmed correct by independent analysis.",
+    "distribution_arithmetic": "CORRECTED — Agent H's distribution_by_recommended_cl (Remember=12, Understand=19, Apply=7) is arithmetically inconsistent with their own per-item assessments. The correct distribution from their item data is: Remember=12, Understand=16, Apply=10. This report uses the corrected distribution.",
+    "root_cause_of_discrepancy": "Agent H's distribution summary likely counted 7 understated→Apply items as the total Apply count, omitting the 3 items that were already correctly at Apply (EC-021, EC-025, ED-073). Similarly, the Understand count (19) appears to add the 12 correct-Understand + 7 overstated→Understand items, but this omits that the 3 correct-Apply items are not in the Understand pool."
+  },
+  "caqs_distribution_assessment": {
+    "target_vs_actual": {
+      "remember_target": "5%",
+      "remember_actual": "0% (current) → 31.6% (recommended)",
+      "understand_target": "15%",
+      "understand_actual": "73.7% (current) → 42.1% (recommended)",
+      "apply_target": "40%",
+      "apply_actual": "26.3% (current) → 26.3% (recommended — unchanged, only reclassified within)",
+      "analyze_target": "25%",
+      "analyze_actual": "0%",
+      "evaluate_target": "15%",
+      "evaluate_actual": "0%"
+    },
+    "note": "Domain E (Internal Controls) is inherently concept-heavy — a higher Understand proportion is expected versus the global CAQS targets. However, 0% Remember and 0% Analyze/Evaluate are calibration gaps. The recommended recalibration brings Remember from 0% to 31.6%, which exceeds the 5% CAQS target but reflects the actual cognitive demand of the template-authored seeds. Post-remediation, additional seeds targeting Analyze and Evaluate levels should be authored to fill the higher-order gap, and existing definition-match items should be supplemented with genuinely-discriminating Understand items rather than artificially distributed across levels."
+  },
+  "summary": "All 38 Domain E seeds require at least one CognitiveLevel recalibration. The template-based authoring pipeline assigned CL by rotation group position rather than by per-item cognitive demand assessment. Of the 38 seeds: 12 (31.6%) are correctly calibrated, 19 (50.0%) are overstated by one Bloom's level, and 7 (18.4%) are understated by one level. The most systematic defect is the complete absence of Remember-level labeling despite 12 items testing pure definition recall — the template's minimum CL was Understand. The second systematic defect is 7 items labeled Apply that actually test conceptual understanding (asking 'what concept/why/purpose/risk' rather than requiring procedure execution). The 7 understated items represent genuinely application-level questions that the template mislabeled as Understand. These findings mirror and confirm the DL-031 difficulty inflation pattern documented in DEFECT_LIBRARY.md, extended here from difficulty calibration to cognitive level calibration. S809 Agent H's per-item assessments are independently confirmed correct; this report corrects an arithmetic error in Agent H's distribution summary (Understand=19→16, Apply=7→10)."
+}

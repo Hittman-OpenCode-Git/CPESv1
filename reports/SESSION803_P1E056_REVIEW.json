@@ -1,0 +1,124 @@
+{
+  "session": "803",
+  "agent": "E",
+  "title": "P1-E-056 Technical Review",
+  "date": "2026-07-26",
+  "qid": "P1-E-056",
+  "current_state": "Archived",
+  "previous_state": "Certified (2026-07-22)",
+  "content_summary": {
+    "topic": "User access recertification",
+    "stem": "Beacon finds employees retain access after changing departments. Which response is most appropriate?",
+    "correct_choice": "D",
+    "ec_snippet": "Periodic access recertification compares current user access rights against current job responsibilities..."
+  },
+  "review_dimensions": {
+    "d1_answer_accuracy": {
+      "stored_cc": "D",
+      "derived_cc": "D",
+      "verdict": "ALL_AGREE",
+      "score": 10,
+      "notes": "D is the only correct answer. A (share admin accounts) violates least privilege and SoD. B (disable logs) destroys audit trail. C (trust-based access) ignores control objective. D (periodic access recertification) aligns with COSO Principle 10 (control activities) and Principle 11 (access controls)."
+    },
+    "d2_explanation_quality": {
+      "ec_length": 405,
+      "lstag_present": true,
+      "principle_named": true,
+      "principle_detail": "References 'principle of least privilege' but does not explicitly name COSO as the governing framework",
+      "score": 8,
+      "notes": "Substantive explanation: traces access recertification logic, revoke/grant process, business interpretation (unauthorized access risk). Meets 150-char minimum. Weakness: does not explicitly cite COSO by name; no common exam trap."
+    },
+    "d3_distractor_quality": {
+      "ew_slots_present": 4,
+      "dl008": true,
+      "dl026": true,
+      "dl013": false,
+      "dl016": true,
+      "dl016_detail": "Metadata-block ExplanationWrong fields describe P1-E-055's topic (physical inventory counts: custodian counting, cycle counts, segregation of duties), not P1-E-056's topic (user access recertification). +1 offset confirmed.",
+      "ew_fields_analysis": {
+        "EWA": "Non-empty BUT describes P1-E-055 (inventory custodian/count): 'Operational knowledge does not eliminate the segregation risk created when the custodian counts without oversight.'",
+        "EWB": "Empty (should be distractor text for 'Disable logs' option). DL-026.",
+        "EWC": "Non-empty BUT describes P1-E-055 (inventory count verification): 'A count by the custodian is not automatically more accurate and lacks independent verification.'",
+        "EWD": "Non-empty BUT describes P1-E-055 (cycle counts). This is the CC slot for P1-E-056 (CC=D). DL-008 confirmed."
+      },
+      "choices_quality": "Content-block Choices A-D are good: distinct, plausible access-control misconceptions (admin sharing, disabling logs, trust-based access). Score 8 for choices, 0 for EW fields due to complete topic mismatch.",
+      "score": 3,
+      "notes": "DL-008 (EWD non-empty at CC slot), DL-026 (EWB empty at distractor slot), DL-016 (all 3 non-empty EW fields describe wrong topic). Learner sees inventory-count explanations when answering an access-control question. Critical learner-safety defect."
+    },
+    "d4_metadata": {
+      "all_required": true,
+      "discrepancies": [
+        "Content-block Difficulty='Moderate-Easy' vs metadata-block DifficultyScore=1 (Easy) — mismatch across blocks",
+        "Certification_date '2026-07-22' conflicts with current Archived state"
+      ],
+      "score": 8,
+      "notes": "All required fields present (QuestionID, Section, Topic, Difficulty, DifficultyScore, CognitiveLevel, question_state, CorrectChoice, EC, EW A-D, LOSTag, Stem, Choices). Cross-block Difficulty/DifficultyScore inconsistency."
+    },
+    "d5_blueprint": {
+      "lostag": "E Internal controls",
+      "topic_match": true,
+      "topic_label_issue": "Topic='E.057 user access recertification 22' — the number E.057 matches the Topic label convention. P1-E-056 is item 56 but Topic says 57 (DL-015 numbering shift).",
+      "score": 6,
+      "notes": "LOSTag is imprecise — just the domain name 'E Internal controls' rather than a specific CSO LOS. Topic correctly maps to access controls / COSO Principle 10/11. No Part 2 scope creep. But the LOSTag should reference specific E-section outcomes like 'E.3 Control activities' or mention access controls explicitly."
+    },
+    "d6_difficulty": {
+      "stored_content_block": "Moderate-Easy",
+      "stored_metadata_block": 1,
+      "actual": "Easy",
+      "actual_score": 1,
+      "score": 6,
+      "notes": "DL-031 pattern: stem is a straightforward scenario where the correct answer is the only choice following best practice. Distractors are clearly wrong (admin sharing, disabling logs, trust-based access). Requires Understanding of access control but no analysis or application complexity. Cross-block labeling mismatch (Moderate-Easy vs Easy=1). Actual difficulty: Easy (1). Content-block label overstated by ~1 tier."
+    },
+    "d7_cognitive_level": {
+      "stored": "Understand",
+      "actual": "Understand",
+      "score": 8,
+      "notes": "Understand is directionally correct. Candidate must comprehend the access recertification principle and select the right control response. Could arguably be 'Apply' (applying knowledge of COSO control activities to a specific scenario) but Understand is a reasonable label. Not Remember (not pure definition recall). Not Analyze or Evaluate."
+    },
+    "d8_learning_value": {
+      "ls1": true,
+      "ls2": false,
+      "ls3": "N/A for conceptual",
+      "ls4": true,
+      "score": 4,
+      "notes": "LS1 PASS: ExplanationCorrect identifies 'principle of least privilege' by name. LS2 FAIL: due to DL-016, distractor explanations describe inventory cycle counts — zero meaningful misconception identification for this item's access-control distractors. LS4 PASS: business interpretation present ('reducing the risk of unauthorized access'). If EW fields were corrected to match topic, LS2 would likely pass. EC is educationally solid; distractor learning is completely absent due to DL-016."
+    },
+    "d9_exam_realism": {
+      "business_context": true,
+      "score": 6,
+      "notes": "Named company (Beacon). Realistic business scenario: employees retaining access after department changes. Professional language. Weakness: no named stakeholder (no 'Controller' or 'CFO'), company type unspecified, minimal business context beyond the one-sentence scenario."
+    }
+  },
+  "weighted_scoring": {
+    "d1_gate": "PASS (auto-fail not triggered)",
+    "d2_weighted": "8 × 2.0 = 16.0 / 20",
+    "d3_weighted": "3 × 1.5 = 4.5 / 15",
+    "d4_weighted": "8 × 1.0 = 8.0 / 10",
+    "d5_weighted": "6 × 2.0 = 12.0 / 20",
+    "d6_weighted": "6 × 1.0 = 6.0 / 10",
+    "d7_weighted": "8 × 1.0 = 8.0 / 10",
+    "d8_weighted": "4 × 1.0 = 4.0 / 10",
+    "d9_weighted": "6 × 0.5 = 3.0 / 5",
+    "total": "61.5 / 100"
+  },
+  "overall_score": 62,
+  "certification_tier": "Tier 3 (Editorial Queue) — score 62 falls in 60-79 range",
+  "dl016_finding": "CONFIRMED — P1-E-056 metadata-block ExplanationWrong fields (EWA/C/D) describe P1-E-055's topic (physical inventory counts / segregation of duties over custody and counting). This is the classic +1 offset pattern. EWB is empty (DL-026 for this item since CC=D). EWD is non-empty at the CorrectChoice slot (DL-008). ALL FOUR EW fields are defective: three describe wrong-topic content, one is empty at a distractor position. Full EW rewrite required before recertification. Evidence: P1-E-055 content block topic='E.056 independent physical count control' with stem about warehouse manager counting inventory → P1-E-056 metadata EW fields all discuss 'custodian counts', 'cycle counts', 'segregation risk from counting without oversight.'",
+  "verdict": "RECERTIFY_AFTER_REPAIR",
+  "repair_instructions": [
+    "1. [DL-016] Rewrite ExplanationWrongA with choice-specific text about access recertification: why sharing admin accounts violates least privilege, SoD, and COSO access controls.",
+    "2. [DL-026] Rewrite ExplanationWrongB with choice-specific text about audit logs: why disabling logs destroys audit trail and violates COSO monitoring/Principle 16.",
+    "3. [DL-016+DL-008] Clear ExplanationWrongD (CorrectChoice slot for CC=D). Currently contains P1-E-055 inventory-count text.",
+    "4. [DL-016] Rewrite ExplanationWrongC with choice-specific text about trust-based access: why permitting access based on trust violates need-to-know and least privilege.",
+    "5. [D2 Enhancement] Add explicit COSO framework citation to ExplanationCorrect (e.g., 'Under COSO Principle 10, control activities include access controls such as periodic recertification...').",
+    "6. [D2 Enhancement] Add common exam trap to ExplanationCorrect (e.g., 'A common error is confusing access recertification with user provisioning — recertification verifies existing access, not new access requests.').",
+    "7. [D4 Fix] Align Difficulty and DifficultyScore: set both blocks to 'Easy' / 1 (actual cognitive demand confirmed).",
+    "8. [D5 Enhancement] Refine LOSTag from 'E Internal controls' to 'E.3 Control activities — access controls' or reference CSO Section E specific LOS.",
+    "9. [State] Change question_state from 'Archived' to 'Certified' after all repairs applied and independently verified.",
+    "10. [Governance] Backup pack_a_corrected.js before any writes. Log repair to REVISION_HISTORY.md and DEFECT_LIBRARY.md (update DL-016 status)."
+  ],
+  "post_repair_projection": {
+    "estimated_score_after_repair": "~80-85 (Tier 2 Certified)",
+    "key_improvements": "D3 jumps from 3→8 (clean EW fields, DL-008/026/016 resolved). D8 jumps from 4→7 (LS2 met). D2 gains 1-2 points with COSO citation + exam trap. D6 fixed to Easy/1. D5 improved with refined LOSTag."
+  }
+}

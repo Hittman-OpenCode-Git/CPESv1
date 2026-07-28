@@ -1,0 +1,34 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Distractor Misconception Matrix",
+  "misconception_types": {
+    "calculation_error": { "description": "Wrong formula, wrong arithmetic, wrong input substitution", "covered_by_distractors": "~35% of numerical distractors target this", "quality_assessment": "Strong — calculation errors map directly to common CMA traps (variance sign confusion, denominator choice, allocation base errors)" },
+    "formula_confusion": { "description": "Confuses one formula with another (e.g., NPV vs IRR, FIFO vs LIFO COGS)", "covered_by_distractors": "~20% of numerical distractors", "quality_assessment": "Strong — well-documented exam trap in DEFECT_LIBRARY.md (DL-001 pattern)" },
+    "terminology_confusion": { "description": "Confuses similar accounting terms (e.g., 'cost' vs 'expense', 'liability' vs 'equity')", "covered_by_distractors": "~15% of conceptual distractors", "quality_assessment": "Acceptable — common but some distractors are surface-level word swaps" },
+    "framework_confusion": { "description": "Applies wrong framework (e.g., US GAAP when IFRS applies, absorption when variable costing needed)", "covered_by_distractors": "~12% of conceptual distractors", "quality_assessment": "Strong — framework errors are high-discrimination distractors" },
+    "classification_error": { "description": "Classifies item incorrectly (e.g., operating vs financing cash flow, current vs non-current)", "covered_by_distractors": "~10% of conceptual distractors", "quality_assessment": "Strong — classification errors are authentic CMA exam traps" },
+    "policy_misunderstanding": { "description": "Misunderstands accounting policy choice (e.g., LIFO liquidation, revenue recognition timing)", "covered_by_distractors": "~5%", "quality_assessment": "Acceptable — less well-targeted; some policy distractors are straw-man arguments" },
+    "scope_error": { "description": "Applies Part 2 concepts in Part 1 context or vice versa", "covered_by_distractors": "~3%", "quality_assessment": "Weak — most scope-error distractors are obviously wrong; only advanced candidates would be tempted" }
+  },
+  "misconception_coverage_gaps": [
+    { "gap": "No distractors targeting 'unit-of-account confusion' (e.g., capitalizing costs that should be expensed at a different unit)", "domain": "A, D", "severity": "Medium" },
+    { "gap": "Underrepresentation of 'materiality vs precision' distractors (quantitative thresholds for investigation)", "domain": "C", "severity": "Low" },
+    { "gap": "No distractors targeting 'data governance ethical dilemmas' (confidentiality vs transparency tradeoffs)", "domain": "F", "severity": "Low" }
+  ],
+  "case_bank_misconception_coverage": "Cannot be assessed — 97.8% of case items have empty ExplanationWrong fields. Misconception mapping for case distractors requires full EW authoring first.",
+  "total_duplicate_groups": 706,
+  "near_identical_rationale_groups": 45,
+  "absolutist_patterns": {
+    "only": 794,
+    "always": 107,
+    "never": 59,
+    "must": 16,
+    "in_all_cases": 8,
+    "all_of_the_above": 6,
+    "in_every_case": 1,
+    "without_exception": 1,
+    "total": 992
+  },
+  "finding": "992 absolutist-language instances detected. However, per DISTRACTOR_REWRITE_CANDIDATES_S90.md, 99% of these are legitimate usage ('only' in technical contexts like 'recognize revenue only when...'). Only 10-12 instances represent genuine absolutist-distractor problems."
+}

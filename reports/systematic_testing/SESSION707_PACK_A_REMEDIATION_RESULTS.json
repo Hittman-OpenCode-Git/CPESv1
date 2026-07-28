@@ -1,0 +1,72 @@
+{
+  "session": "707",
+  "timestamp": "2026-07-25T16:33:00Z",
+  "agent": "Agent D — Targeted EW Remediation",
+  "methodology": "G-NEW-3 object-bounded verification. No forward-scan. Each EW field rewritten based on the QID's own stem, choices, and correct answer extracted from the SAME JSON object.",
+  "items_remediated": ["P1-B-025", "P1-B-008"],
+  "items_held_back": [],
+  "remediation_details": {
+    "P1-B-025": {
+      "defects_resolved": ["DL-008", "DL-016", "DL-025"],
+      "fields_changed": ["ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD"],
+      "fields_preserved": ["Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "question_state"],
+      "before_after": {
+        "ExplanationWrongA": {
+          "before_excerpt": "Abandoning forecasting because actual results differ from forecasts misunderstands the fundamental purpose of forecasting in management accounting...",
+          "after_excerpt": "",
+          "defect": "DL-008 (non-empty EW at CC slot A) + DL-016 (describes P1-B-026 forecast error analysis)",
+          "action": "Cleared to empty string — CC slot must be empty per EV8"
+        },
+        "ExplanationWrongB": {
+          "before_excerpt": "Not every forecast error indicates fraud. Errors arise from many legitimate sources: changes in market conditions, data limitations, model misspecification, or random variation...",
+          "after_excerpt": "Eliminating all variance analysis removes management's primary tool for detecting budgetary slack. Variance analysis compares actual results to budgeted targets — when managers set artificially low targets, unfavorable revenue variances and favorable cost variances can signal slack...",
+          "defect": "DL-016 (describes P1-B-026 forecast error analysis, not P1-B-025 Choice B 'Eliminate all variance analysis from the budget process')",
+          "action": "Rewrote to address why eliminating variance analysis is wrong for detecting budgetary slack"
+        },
+        "ExplanationWrongC": {
+          "before_excerpt": "Selecting only the best-performing month discards the other 11 months of data, creating a cherry-picked and unreliable assessment of forecast performance...",
+          "after_excerpt": "Budgetary slack is an intentional overestimation of costs or underestimation of revenues built into the budget by managers. It is a behavioral and organizational issue, not a financial instrument. Classifying slack as a cash equivalent misrepresents its nature...",
+          "defect": "DL-016 (describes P1-B-026 forecast error analysis, not P1-B-025 Choice C 'Classify slack as a cash equivalent')",
+          "action": "Rewrote to address why classifying slack as a cash equivalent is wrong"
+        },
+        "ExplanationWrongD": {
+          "before_excerpt": "",
+          "after_excerpt": "Rewarding only the most pessimistic forecast creates perverse incentives — it encourages managers to compete in understating their projections rather than providing accurate estimates...",
+          "defect": "DL-025 (empty EW at distractor position D)",
+          "action": "Wrote new choice-specific text explaining why rewarding pessimistic forecasts worsens slack"
+        }
+      },
+      "validation_status": "ALL_RESOLVED — EW_A=\"\" (DL-008 RESOLVED), EW_B/C are budgetary-slack-specific (DL-016 RESOLVED), EW_D is non-empty (DL-025 RESOLVED)",
+      "question_state": "Certified (preserved)"
+    },
+    "P1-B-008": {
+      "defects_resolved": ["DL-016"],
+      "fields_changed": ["ExplanationWrongC", "ExplanationWrongD"],
+      "fields_preserved": ["Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "ExplanationWrongA", "ExplanationWrongB", "question_state"],
+      "before_after": {
+        "ExplanationWrongC": {
+          "before_excerpt": "The cash budget is prepared after most operating budgets are complete, as it depends on cash inflows from sales and cash outflows from production, purchasing, and operating expenses.",
+          "after_excerpt": "The tax return is prepared after the fiscal year ends using historical financial data. It reflects what already happened, not what will happen. The tax return provides no forward-looking information about forecasted unit sales or budgeted production levels. Building the profit plan around a tax return would reverse the logical sequence of budgeting...",
+          "defect": "DL-016 (describes cash budget timing, not Choice C 'Prepare the tax return first because it determines units sold')",
+          "action": "Rewrote to address why preparing the tax return first is wrong — tax return is historical, not forward-looking"
+        },
+        "ExplanationWrongD": {
+          "before_excerpt": "The direct materials budget is derived from the production budget, which in turn depends on the sales budget. Materials cannot be planned without knowing production volumes.",
+          "after_excerpt": "The budgeted balance sheet is one of the final outputs of the master budget, not the starting point. It is prepared only after the sales budget, operating budgets, cash budget, and budgeted income statement are complete...",
+          "defect": "DL-016 (describes materials budget, not Choice D 'Prepare the budgeted balance sheet before estimating sales')",
+          "action": "Rewrote to address why the budgeted balance sheet is a final output, not a starting point"
+        }
+      },
+      "validation_status": "ALL_RESOLVED — EW_A=\"\" (DL-008 CLEAN), EW_B is choice-specific and topic-aligned, EW_C/D are now choice-specific (DL-016 RESOLVED)",
+      "question_state": "Certified (preserved)"
+    }
+  },
+  "no_change_attestation": {
+    "answer_keys_unchanged": true,
+    "stems_unchanged": true,
+    "choices_unchanged": true,
+    "explanation_correct_unchanged": true,
+    "state_unchanged": true,
+    "non_target_items_unchanged": true
+  }
+}

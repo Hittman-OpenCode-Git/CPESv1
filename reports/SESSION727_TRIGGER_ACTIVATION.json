@@ -1,0 +1,46 @@
+{
+  "report_metadata": {
+    "session": "S727",
+    "date": "2026-07-26",
+    "agent": "Agent F — G-NEW Trigger Registry Activation",
+    "trigger_registry": "reports/SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json",
+    "g_new_source": "knowledge/QUESTION_METADATA_STANDARD.md §9.4"
+  },
+  "g_new_conditions": {
+    "g_new_1": {
+      "condition": "Metadata-block ChoiceA-D ≠ content-block Choices.{A,B,C,D}",
+      "type": "BLOCK — structural comparison",
+      "automation_feasible": true,
+      "validator_status": "NOT BUILT",
+      "blocker": "No automated dual-block Choice comparison validator"
+    },
+    "g_new_2": {
+      "condition": "EW text topically unrelated to learner-facing distractor choice",
+      "type": "BLOCK — semantic/NLP check",
+      "automation_feasible": "PARTIAL — requires NLP/AI review",
+      "validator_status": "NOT BUILT",
+      "blocker": "Semantic mismatch detection requires human or AI review; not a structural check"
+    },
+    "g_new_3": {
+      "condition": "CC must be extracted from same JSON object as EW fields",
+      "type": "BLOCK — scan methodology",
+      "validator_status": "SATISFIED — AM-2 within-object property access",
+      "blocker": "NONE"
+    },
+    "g_new_4": {
+      "condition": "Case-study explanations sufficient for Apply/Analyze/Evaluate items",
+      "type": "BLOCK — per-item cognitive-level assessment",
+      "automation_feasible": "PARTIAL — requires cognitive-level-aware assessment",
+      "validator_status": "NOT BUILT",
+      "blocker": "No certification pipeline integration for G-NEW-4 checks"
+    }
+  },
+  "trigger_activation_status": {
+    "thresholds": "COMPLETE — 8 triggers (T-001 through T-008) with exact thresholds",
+    "escalation_paths": "COMPLETE — 6 procedures (ESC-001 through ESC-006)",
+    "ownership_assignments": "ASSIGNED — Certification Auditor (GAP-3), NOT ACCEPTED",
+    "cadence_integration": "DEFINED — M3 Deep Audit (DA-CHK-2), M4 Pre-Delivery (PD-CHK-1/2)",
+    "s803_block": "ACTIVE — G-NEW not operationalized blocks S803 launch per COND-S726-006"
+  },
+  "verdict": "G-NEW trigger definitions and thresholds are complete. Operationalization is blocked on: (1) G-NEW-1/2/4 validator development, (2) Certification Auditor acceptance (GAP-3), (3) 800-series certification pipeline integration. G-NEW-3 is already satisfied by AM-2 methodology."
+}

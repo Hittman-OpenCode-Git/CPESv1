@@ -1,0 +1,104 @@
+{
+  "session": "802",
+  "agent": "Q",
+  "title": "Risk Register Update — Post-S801 Governance Correction",
+  "date": "2026-07-26",
+  "predecessor": "SESSION801_RISK_REGISTER.json",
+  "s800_risk_reassessment": {
+    "R1_dl008_certified": {
+      "old_severity": "CRITICAL",
+      "new_severity": "RESOLVED",
+      "detail": "67 Certified DL-008 items were DL-029 forward-scan false positives. All 2,500 items verified via Function constructor same-object parse: 0 Certified DL-008. All 67 individually inspected and confirmed CLEAN. Root cause: CorrectChoice appears before QuestionID in all 5 pack files; any scanner searching forward from QID captures the NEXT item's CC → ~75% FP rate."
+    },
+    "R2_pack_e_thinness": {
+      "old_severity": "HIGH",
+      "new_severity": "HIGH",
+      "detail": "S801 Agent I confirmed: 500 Certified items with median ExplanationCorrect=67 chars, 92.4% zero ASC/COSO/GAAP citations, 83.6% definition-match pattern, 79.4% Understand cognitive level, 0% Analyze. Structurally pristine (0 defects) but educationally impoverished. Learners using Pack E exclusively would practice definition recall only — no accounting application. Pack B (500 items, extensive citations, 87/100 distractor quality) is the benchmark standard for enhancement."
+    },
+    "R3_clone_waste": {
+      "old_severity": "HIGH",
+      "new_severity": "HIGH",
+      "detail": "S801 Agents J/K found clone density FAR WORSE than S800 estimated. Pack C: 347/500 items (78.6%) are rotation-group clones — only 107 unique concepts. Pack D: 437/500 items (90.6%) — only 47 unique items across all 6 sections. S800 estimated '140 template-rotation items'; actual scope is 784 items across both packs. Currently 128 are Archived (Sections E/F), leaving ~656 Certified clone items in Sections A-D that inflate session composition. Pack D Section FD is 100% clones (all 75 items from the same 5-item rotation group). Pack D is effectively a 47-item pool artificially inflated to 500."
+    },
+    "R4_concurrency": {
+      "old_severity": "HIGH",
+      "new_severity": "LOW",
+      "detail": "DL-019 concurrent-write data loss was predicated on S700-era DL-008 remediation sessions being overwritten by DL-013 certification waves. S801 demonstrated those DL-008 items were already clean (DL-029 false positives). The '432 overwritten items' in DEFECT_LIBRARY.md DL-019 were ghost defects — the remediation was on non-existent violations. Concurrency risk remains real (no file-lock protocol) but the specific DL-019 incident was a measurement artifact. File-lock protocol remains unimplemented."
+    },
+    "R5_hash_drift": {
+      "old_severity": "MEDIUM",
+      "new_severity": "LOW",
+      "detail": "S801 Agent A confirmed all 5 pack file SHA-256 hashes differ from CURRENT_BASELINES.md. Drift is authorized (S530-S536 authorized sessions). No unauthorized modification detected. CURRENT_BASELINES.md was never updated post-S536. Risk is now documentation staleness only — no integrity concern. Needs baseline recapture in next write-authorized session."
+    }
+  },
+  "new_risks": [
+    {
+      "id": "N1",
+      "severity": "HIGH",
+      "category": "Governance Documentation",
+      "description": "SESSION_STATUS_2026-07-24 contains critically stale data: reports 2,031 Certified (actual: 2,181), 67 DL-008 (actual: 0), Pack C 250 Certified (actual: 350), Pack D 300 Certified (actual: 350), FD-045/FD-075 'missing content' (both structurally complete). Session startup protocol (AGENTS.md §9) directs every new session to read this file first. Wrong governance data → wrong session decisions. S800 itself was launched on stale status data.",
+      "mitigation": "Publish corrected SESSION_STATUS in S802 as P0 priority. Cross-reference all counts against raw file evidence per AGENTS.md §5.",
+      "status": "ACTIVE — P0 remediation in S802"
+    },
+    {
+      "id": "N2",
+      "severity": "HIGH",
+      "category": "Scan Methodology",
+      "description": "DL-029 forward-scan methodology is the root cause of 3 false P0 alarms (67 DL-008, FD-045 missing, FD-075 missing) across S800 and SESSION_STATUS. CorrectChoice-before-QuestionID is universal across all 5 packs. Any tool that locates a QID then searches forward for CC systematically grabs the NEXT item's answer letter (~75% false positive rate). All prior sessions' DL-008 scans using forward-search produced systematically inflated counts. The S700 ~395 DL-008 count and prior Pack D ~342 count were both inflated. Actual pre-S700-remediation DL-008 was ~73 items, not ~395.",
+      "mitigation": "Mandate Function constructor same-object parse (extract CC and EW fields from the SAME JSON object) for all future defect scans. Update all scan scripts in scripts/ to be CC-position-aware. Publish corrected DL-008 history in REVISION_HISTORY.md.",
+      "status": "ACTIVE — methodology correction documented, scripts not yet updated"
+    },
+    {
+      "id": "N3",
+      "severity": "MEDIUM",
+      "category": "Pack File Integrity Tracking",
+      "description": "CURRENT_BASELINES.md contains stale SHA-256 hashes for all 13 runtime-critical files. Post-S536 authorized drift (S530 case certification, S700-S721 remediation/calibration) is not reflected. AGENTS.md §13.1 requires T0 hash verification against CURRENT_BASELINES.md — every session starts with a baseline mismatch.",
+      "mitigation": "Recapture all 13 runtime hashes in S802 or next write-authorized session. Update CURRENT_BASELINES.md with post-S801 verified hashes.",
+      "status": "ACTIVE — recapture needed"
+    },
+    {
+      "id": "N4",
+      "severity": "LOW",
+      "category": "Structural",
+      "description": "FD-046 is a metadata-only orphan shell in Pack D Section F. No Stem, Choices, CorrectChoice, or ExplanationCorrect fields. Already marked 'Archived' — correctly excluded from learner pool. No learner impact. S801 Agent G confirmed this is the actual metadata-only item (not FD-045/FD-075 as S800 reported).",
+      "mitigation": "No action needed. Already Archived. Document in DEFECT_LIBRARY.md for completeness.",
+      "status": "MONITORED — no action required"
+    },
+    {
+      "id": "N5",
+      "severity": "LOW",
+      "category": "Cosmetic Metadata",
+      "description": "DL-015 Topic label +1 shift and DL-016 residual ExplanationWrong text describing neighbor QID's choices affect a small number of items (Pack D Section FD, Pack A Section E). Cosmetic metadata issues — zero learner impact. Stems are topically consistent with choices in all cases.",
+      "mitigation": "Fix during next Section certification pass. No urgency.",
+      "status": "MONITORED — deferred to next certification wave"
+    }
+  ],
+  "resolved_risks": [
+    "R1: 67 Certified DL-008 → REFUTED (0 exist — all were DL-029 false positives)",
+    "S800 FD-045 'missing content block' → REFUTED (structurally complete — forward-scan missed fields preceding QID)",
+    "S800 FD-075 'missing content block' → REFUTED (structurally complete — S702 verification confirmed correct)",
+    "DL-016 dual-block metadata concern → RESOLVED (all 5 packs are single-object architecture — no dual-block exists)"
+  ],
+  "active_risks_priority": [
+    "1. R2 — Pack E educational thinness (HIGH: 500 Certified items, median EC=67 chars, 92.4% zero citations)",
+    "2. R3 — Pack C/D clone density (HIGH: 784 clone items across C+D, 656 Certified, Pack D is 90.6% clones)",
+    "3. N1 — Documentation staleness in SESSION_STATUS (HIGH: wrong governance data, session startup reliance)",
+    "4. N2 — DL-029 forward-scan methodology (HIGH: caused 3 false P0 alarms, all prior DL-008 scans inflated)",
+    "5. N3 — CURRENT_BASELINES.md staleness (MEDIUM: all 13 runtime hashes stale, T0 verification broken)",
+    "6. R4 — DL-019 concurrency (LOW: specific DL-019 incident was measurement artifact — DL-029 false positives)",
+    "7. R5 — Pack D hash drift (LOW: authorized drift only, needs baseline recapture)",
+    "8. N4 — FD-046 orphan shell (LOW: already Archived, zero learner impact)",
+    "9. N5 — DL-015/DL-016 cosmetic metadata (LOW: Topic label shift, zero learner impact)"
+  ],
+  "learner_pool_risk": "NONE — S801 verified: 0 Certified DL-008 across all 2,500 items. FD-045 and FD-075 structurally complete with correct answer keys. 2,181 Certified items are structurally governance-clean. Remaining risks are educational quality (Pack E thinness), content dilution (clone waste), and documentation staleness — not structural defects.",
+  "s801_cross_reference": {
+    "dl008_inventory": "SESSION801_DL008_INVENTORY.json — 0 Certified DL-008, all 67 refuted",
+    "dl008_root_cause": "SESSION801_DL008_ROOT_CAUSE_ANALYSIS.json — DL-029 forward-scan artifact",
+    "fd045_review": "SESSION801_FD045_REVIEW.json — Structurally complete, DL-016 shift only",
+    "fd075_review": "SESSION801_FD075_REVIEW.json — Structurally complete, DL-026 only",
+    "dl016_audit": "SESSION801_DL016_INTERFERENCE_AUDIT.json — Single-object architecture confirmed",
+    "pack_e_analysis": "SESSION801_PACK_E_LEARNING_VALUE.json — 83.6% definition-match, median EC=67 chars",
+    "pack_c_clone": "SESSION801_PACK_C_CLONE_ANALYSIS.json — 347/500 clones, 107 unique",
+    "pack_d_clone": "SESSION801_PACK_D_CLONE_ANALYSIS.json — 437/500 clones, 47 unique"
+  }
+}

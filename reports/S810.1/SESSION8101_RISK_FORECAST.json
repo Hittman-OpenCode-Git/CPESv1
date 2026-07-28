@@ -1,0 +1,794 @@
+{
+  "agent": "I",
+  "session": "S810.1",
+  "role": "Certification Risk Forecast",
+  "date": "2026-07-26",
+  "scope": "38 Domain E seeds (Pack C: 19, Pack D: 19)",
+  "data_sources": [
+    "SESSION809_EW_INTEGRITY_AUDIT.json (EC scores, empty slot counts, CC values)",
+    "SESSION809_DQS_REVIEW.json (DQS totals, choice quality assessment)",
+    "SESSION809_CERTIFICATION_RESULTS.json (per-item certification decisions, remediation notes)",
+    "S809.2/agent_c_ew_assessment.json (EW quality, DL-010 misalignment, EC weak/complete)",
+    "SESSION8092_AGENT_G_LEARNER_SAFETY_SCREEN.json (blocked items, CC discrepancy impact)"
+  ],
+
+  "risk_distribution": {
+    "low": 16,
+    "medium": 11,
+    "high": 11
+  },
+
+  "risk_forecast": [
+    {
+      "qid": "P1-EC-004",
+      "risk_tier": "MEDIUM",
+      "risk_score": 40,
+      "risk_factors": [
+        "1 empty EW slot (EW_B — cost-benefit analysis distractor has no explanation)",
+        "EC score 5 — definition-level, lacks COSO citation and business interpretation",
+        "CC discrepancy flagged (EW audit CC=D vs DQS CC=A)",
+        "Missing COSO control-activity reference in EC"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_B with choice-specific text explaining why cost-benefit analysis is not the control concept shown",
+        "Gate 2: Add COSO principle 10-12 citation to EC",
+        "Gate 5: Resolve CC discrepancy — confirm authoritative CC value"
+      ],
+      "s810_2_cc_discrepancy_flagged": true
+    },
+    {
+      "qid": "P1-EC-008",
+      "risk_tier": "MEDIUM",
+      "risk_score": 50,
+      "risk_factors": [
+        "1 empty EW slot (EW_D if CC=D per EW audit — Six Sigma framework distractor no explanation)",
+        "DQS 14 — worst in pool: distractors are non-functional (Six Sigma, BSC, TOC all unrelated frameworks)",
+        "CC discrepancy flagged (EW audit CC=D vs DQS CC=A)",
+        "DL-031 definition-match: stem directly defines COSO — Easy(1) not Moderate(3)",
+        "Length cueing on correct answer"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill 1 empty EW slot",
+        "Gate 4: Consider distractor redesign — all 3 non-CC choices are obviously wrong to any prepared candidate",
+        "Gate 5: Resolve CC discrepancy",
+        "Pass 2: Recalibrate Difficulty Moderate(3)→Easy(1), CL Understand→Remember per DL-031"
+      ],
+      "s810_2_cc_discrepancy_flagged": true
+    },
+    {
+      "qid": "P1-EC-014",
+      "risk_tier": "HIGH",
+      "risk_score": 100,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — only EW_D has text",
+        "EC score 4 — bare definition only: lists fraud triangle elements with no business interpretation, no exam trap, no ACFE/COSO reference",
+        "DQS 17 — distractors rated poor (all three are unrelated frameworks)",
+        "DL-031 definition-match: stem lists fraud triangle elements explicitly → answer is giveaway",
+        "CC discrepancy flagged",
+        "Missing COSO P8 fraud risk linkage"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MAJOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific distractor explanations",
+        "Gate 3: Substantially rewrite EC — add business context (fraud detection implications), COSO P8 citation, fraud triangle organizational context",
+        "Gate 4: Improve distractors — current choices are trivially eliminated",
+        "Pass 2: Recalibrate Difficulty Moderate(3)→Easy(1), CL Understand→Remember"
+      ],
+      "s810_2_cc_discrepancy_flagged": true
+    },
+    {
+      "qid": "P1-EC-020",
+      "risk_tier": "HIGH",
+      "risk_score": 85,
+      "risk_factors": [
+        "1 empty EW slot (EW_A if CC=D per EW audit — entity-level control distractor no explanation)",
+        "DL-010 CRITICAL: 2 misaligned EW slots (B, C) — text from entirely different question (EW_B describes physical access controls but distractor B is about monthly bank reconciliation; EW_C describes compensating control but distractor C is about quarterly audit review)",
+        "EC score 7 — good text but missing explicit COSO component mapping",
+        "CC discrepancy flagged (EW audit CC=D vs DQS CC=A vs Agent C CC=A)",
+        "All 3 distractor slots effectively broken (1 empty + 2 wrong-topic)"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 3,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2 P0: Re-author ALL 3 distractor ExplanationWrong fields from scratch — current EWB/EWC are from wrong question, EWA is empty",
+        "Gate 2: Add COSO control-activity mapping to EC",
+        "Gate 5: Resolve CC discrepancy — confirm authoritative CC from content block"
+      ],
+      "s810_2_cc_discrepancy_flagged": true
+    },
+    {
+      "qid": "P1-EC-021",
+      "risk_tier": "LOW",
+      "risk_score": 15,
+      "risk_factors": [
+        "1 empty EW slot (EW_B — bank reconciliation distractor no explanation)",
+        "Missing explicit COSO component reference in EC",
+        "DQS 46 — highest quality seed in Pack C"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_B with choice-specific text explaining why adding bank rec to same employee's duties worsens the problem",
+        "Gate 2: Add COSO reference to EC"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-022",
+      "risk_tier": "MEDIUM",
+      "risk_score": 45,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — weekly check register review and quarterly vendor reconciliation distractors have no explanation",
+        "EC score 7 — good but missing COSO activity-level control taxonomy",
+        "Only EW_D has text"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific text",
+        "Gate 2: Add COSO P10-P12 control-activity reference to EC",
+        "Pass 2: CL Understand→Apply (understated — question requires preventive vs. detective discrimination)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-023",
+      "risk_tier": "MEDIUM",
+      "risk_score": 45,
+      "risk_factors": [
+        "2 empty EW slots (A, D) — risk acceptance and read-only access distractors have no explanation",
+        "EC score 7 — good but missing COSO component mapping",
+        "DQS 48 — highest in pool; excellent distractors undermined by missing explanations"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_D with choice-specific explanations for IT access deprovisioning scenario",
+        "Gate 2: Add COSO component mapping to EC",
+        "Pass 2: CL Understand→Apply (understated — scenario requires application-level reasoning)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-024",
+      "risk_tier": "LOW",
+      "risk_score": 10,
+      "risk_factors": [
+        "1 empty EW slot (EW_A — weekly exception reports distractor no explanation)",
+        "EC score 8 — strong; names real-time field validation, explains preventive vs. detective clearly"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A only",
+        "Pass 2: CL Understand→Apply (understated — requires application-level discrimination)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-025",
+      "risk_tier": "LOW",
+      "risk_score": 25,
+      "risk_factors": [
+        "1 empty EW slot (EW_B — compensating control distractor no explanation)",
+        "EC score 7 — good but missing explicit COSO preventive control classification",
+        "Minor distractor similarity: C and D both test detective/corrective confusion"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_B with choice-specific text explaining why dual signatures are NOT only a compensating control",
+        "Gate 2: Add explicit COSO preventive control classification to EC"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-028",
+      "risk_tier": "LOW",
+      "risk_score": 20,
+      "risk_factors": [
+        "1 empty EW slot (EW_A if CC=D per EW audit — no guarantee control distractor no explanation)",
+        "EC score 8 — strong; names bank reconciliation as detective cash control, explains independence rationale",
+        "DQS 28 — weak distractors: A is obviously wrong, C is definitionally wrong, length cueing on correct answer",
+        "CC alignment issue: EW Integrity audit shows CC=D but Agent C and DQS may have different"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill 1 empty EW slot",
+        "Gate 4: Redesign Choice A (guarantees no bank fees — categorically wrong)",
+        "Pass 2: CL Apply→Understand (overstated per Agent H)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-031",
+      "risk_tier": "HIGH",
+      "risk_score": 75,
+      "risk_factors": [
+        "2 empty EW slots (A, D) — risk transfer and risk appetite/no-appetite slot no explanation",
+        "EC score 5 — definition-only: no COSO ERM citation, no business interpretation, no risk tolerance distinction",
+        "DQS 25 — borderline defective distractors",
+        "DL-031 definition-match: stem is textbook definition of risk appetite",
+        "CC discrepancy flagged (EW audit CC=C vs DQS CC=D)",
+        "Missing COSO ERM (2017) citation",
+        "EW_B exists but is WEAK per Agent C — defines concepts rather than explaining why the choice is wrong"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MAJOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_D with choice-specific explanations",
+        "Gate 2: Enhance EW_B with distractor-specific error analysis (not just concept definitions)",
+        "Gate 3: Substantially enrich EC — add COSO ERM citation, risk tolerance vs. risk appetite distinction, business context",
+        "Pass 2: Recalibrate CL Understand→Remember"
+      ],
+      "s810_2_cc_discrepancy_flagged": true
+    },
+    {
+      "qid": "P1-EC-040",
+      "risk_tier": "LOW",
+      "risk_score": 25,
+      "risk_factors": [
+        "1 empty EW slot (EW_A — application control distractor no explanation)",
+        "EC score 7 — good; names IT general control, explains least privilege",
+        "DL-031 flag: Moderate→Easy recommended (definition-match pattern)"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A only",
+        "Pass 2: Recalibrate Difficulty Moderate→Easy per DL-031"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-041",
+      "risk_tier": "LOW",
+      "risk_score": 10,
+      "risk_factors": [
+        "1 empty EW slot (EW_B — segregation working as designed distractor no explanation)",
+        "EC score 8 — strong; uses scenario context (CEO instructing controller), explains inherent limitation"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_B only — this is the most interesting distractor (segregation 'working as designed') and needs good text",
+        "Pass 2: CL Apply→Understand (overstated per Agent H)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-049",
+      "risk_tier": "LOW",
+      "risk_score": 25,
+      "risk_factors": [
+        "1 empty EW slot (EW_B if CC=A per EW audit — guaranteed prevention distractor no explanation)",
+        "EC score 7 — good but brief; connects to information & communication but no explicit COSO citation",
+        "DL-031: Moderate→Easy recommended (obvious distractors: guarantees, replaces, eliminates)",
+        "CC discrepancy possible (EW audit CC=A vs DQS CC=B)"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill 1 empty EW slot",
+        "Gate 2: Add explicit COSO component reference to EC",
+        "Pass 2: Recalibrate Difficulty Moderate→Easy(1)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-052",
+      "risk_tier": "LOW",
+      "risk_score": 10,
+      "risk_factors": [
+        "1 empty EW slot (EW_A if CC=D per EW audit — ignoring risk distractor no explanation)",
+        "EC score 8 — strong; explains compensating controls for small business with specific risks mitigated"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A only",
+        "Pass 2: CL Understand→Apply (understated per Agent H)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-060",
+      "risk_tier": "LOW",
+      "risk_score": 15,
+      "risk_factors": [
+        "1 empty EW slot (EW_A — monitoring activities distractor no explanation)",
+        "EC score 8 — strong; names control environment as COSO foundation, explains tone at the top",
+        "DL-031: stem essentially defines control environment → Easy(1) appropriate"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A only",
+        "Pass 2: CL Understand→Remember, resolve Moderate/DiffScore=2 mismatch"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-061",
+      "risk_tier": "LOW",
+      "risk_score": 10,
+      "risk_factors": [
+        "1 empty EW slot (EW_B — detection risk distractor no explanation)",
+        "EC score 8 — strong; clearly distinguishes inherent risk from control risk using stem's own language"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_B only",
+        "Pass 2: CL Understand→Remember (definition-recognition item)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-EC-066",
+      "risk_tier": "HIGH",
+      "risk_score": 70,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — physical access control only and IT general control only distractors no explanation",
+        "EC score 6 — adequate but lacks COSO control-activity reference and exam-trap guidance",
+        "DQS 29 — distractors are weak: A and C use 'only' qualifiers that should be obvious elimination cues",
+        "DL-031 definition-match: classic segregation-of-duties scenario",
+        "CC discrepancy flagged per Agent G"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific text",
+        "Gate 2: Add COSO control-activity reference and concealment-risk elaboration to EC",
+        "Pass 2: Fix Moderate label → Easy to match Score=1"
+      ],
+      "s810_2_cc_discrepancy_flagged": true
+    },
+    {
+      "qid": "P1-EC-072",
+      "risk_tier": "LOW",
+      "risk_score": 25,
+      "risk_factors": [
+        "1 empty EW slot (EW_A — external audit sign-off distractor no explanation)",
+        "EC score 8 — strong; explains remediation tracking as managed corrective-action process",
+        "CC discrepancy flagged per Agent G"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A only",
+        "Pass 2: CL Understand→Remember, resolve Easy/DiffScore=3 mismatch"
+      ],
+      "s810_2_cc_discrepancy_flagged": true
+    },
+    {
+      "qid": "P1-ED-001",
+      "risk_tier": "MEDIUM",
+      "risk_score": 50,
+      "risk_factors": [
+        "1 empty EW slot (EW_B if CC=A per EW audit — COSO ERM distractor no explanation)",
+        "EC score 7 — good but missing explicit IIA Three Lines Model citation",
+        "DQS 20 — distractors rated poor (all three are unrelated business frameworks, definition-match item)",
+        "DL-031 definition-match: stem explicitly describes three lines model → Easy(1) not Difficult(2)",
+        "CRITICAL metadata mismatch: Difficulty='Difficult' but DiffScore=2 (Moderate-Easy)"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill 1 empty EW slot",
+        "Gate 4: Redesign distractors — all three are non-functional for any prepared candidate",
+        "Gate 5: Resolve Difficult/2 metadata contradiction → Easy(1)",
+        "Pass 2: CL Understand→Remember"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-010",
+      "risk_tier": "HIGH",
+      "risk_score": 95,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — risk transfer and management override distractors no explanation",
+        "DL-010: EW_D has cross-item contamination — text mentions 'management override' and 'limiting user access' which are from a different question about access control, not least privilege concept",
+        "DQS 19 — distractors rated poor: B (balanced scorecard) is non-sequitur, D ('maximum access for efficiency') is humorous",
+        "EC score 7 — good but EC text in EW audit (least privilege) doesn't match DQS/Agent C text (independent verification) — DL-016 metadata-content shift confirmed",
+        "DL-031: definition-match → Easy(1) not Difficult",
+        "Agent C notes EW_D text misalignment: 'mentions limiting user access which is completely unrelated'"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 3,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2 P1: Re-author ALL 3 distractor EW slots — 2 empty, 1 contaminated",
+        "Gate 4: Redesign distractors — current A and C choices are from unrelated topics",
+        "Pass 2: Recalibrate Difficulty Difficult→Easy(1), CL→Remember"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-014",
+      "risk_tier": "MEDIUM",
+      "risk_score": 45,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — physical control and preventive control distractors no explanation",
+        "EC score 7 — good but definition-level, no explicit COSO citation",
+        "Labeled 'Difficult' but content is Understand-level — difficulty inflation",
+        "Only EW_D has text (distinguishes independent verification from segregation of duties)"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific text",
+        "Gate 2: Add COSO control-activity reference to EC",
+        "Pass 2: Recalibrate Difficulty Difficult→Moderate(3)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-016",
+      "risk_tier": "HIGH",
+      "risk_score": 70,
+      "risk_factors": [
+        "1 empty EW slot (A — risk appetite distractor)",
+        "DL-013: BOTH EW_B and EW_C contain generic template boilerplate: 'This option reflects a misunderstanding of erm risk response strategies... Review the applicable costing standard...' — ZERO educational value",
+        "EC score 5 — definition-only (152 chars): insurance = risk transfer; no COSO ERM citation, no risk response taxonomy, no business context",
+        "Effectively ALL 3 non-CC slots broken (1 empty + 2 boilerplate)",
+        "Missing COSO ERM framework citation"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 3,
+      "estimated_ec_enhancement": "MAJOR",
+      "pre_certification_gates": [
+        "Gate 2: REWRITE EW_B and EW_C with genuine choice-specific text explaining why risk avoidance/acceptance are wrong for insurance purchase",
+        "Gate 2: Fill EW_A with risk appetite vs. risk transfer distinction",
+        "Gate 3: Substantially enrich EC — add COSO ERM citation, risk response taxonomy (avoid/accept/mitigate/transfer/share), business context for Palisade scenario",
+        "Pass 2: CL Understand→Remember, Easy(1)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-025",
+      "risk_tier": "LOW",
+      "risk_score": 25,
+      "risk_factors": [
+        "1 empty EW slot (EW_B — monitoring activity distractor no explanation)",
+        "EC score 6 — adequate but short; no exam-trap guidance or COSO component mapping"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_B with choice-specific text",
+        "Gate 2: Enrich EC with COSO P10-P12 authorization control reference"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-028",
+      "risk_tier": "LOW",
+      "risk_score": 20,
+      "risk_factors": [
+        "1 empty EW slot (EW_A — risk assessment distractor no explanation)",
+        "EC score 7 — good; names monitoring as COSO component, distinguishes ongoing evaluation from transaction-level",
+        "CRITICAL metadata: Difficulty='Moderate' but DiffScore=4 (Difficult) — label/score mismatch",
+        "DL-031 flag"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A only",
+        "Pass 2: Resolve Moderate/4 metadata contradiction → Moderate-Easy(2), CL→Understand"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-035",
+      "risk_tier": "MEDIUM",
+      "risk_score": 45,
+      "risk_factors": [
+        "2 empty EW slots (A, D) — SoD and confidentiality distractors no explanation",
+        "EC score 7 — good; explains availability control objective, connects to CIA triad",
+        "DL-031: Difficult→Moderate recommended — tests CIA triad identification",
+        "Only EW_B has text"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_D with choice-specific text",
+        "Pass 2: Recalibrate Difficulty Difficult→Moderate(3), CL→Remember"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-036",
+      "risk_tier": "HIGH",
+      "risk_score": 90,
+      "risk_factors": [
+        "1 empty EW slot (A — segregation of duties distractor no explanation)",
+        "DL-013: BOTH EW_B and EW_C contain template boilerplate: 'This option reflects a misunderstanding of change management control it systems...' — identical truncated text, zero educational value",
+        "EC score 3 — WEAKEST in pool (144 chars): bare statement identifying change management as ITGC; no explanation of WHY testing/approval/documentation matter, no business risk context",
+        "Effectively ALL 3 non-CC slots broken",
+        "DL-031: definition-match → Easy",
+        "Missing COSO/IT governance citation"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 3,
+      "estimated_ec_enhancement": "MAJOR",
+      "pre_certification_gates": [
+        "Gate 2: REWRITE EW_B and EW_C with genuine choice-specific text explaining why application control and physical control are wrong for change management",
+        "Gate 2: Fill EW_A with text explaining segregation of duties vs. change management distinction",
+        "Gate 3: SUBSTANTIALLY REWRITE EC — explain testing/approval/documentation as change management lifecycle, add business risk context (unauthorized changes causing financial statement errors), cite COSO IT general control category",
+        "Pass 2: CL Understand→Remember, Easy(1) or Moderate-Easy(2)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-042",
+      "risk_tier": "HIGH",
+      "risk_score": 65,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — monitoring and risk transfer distractors no explanation",
+        "EC score 7 — good but no COSO ERM framework citation; brief",
+        "DQS 24 — borderline defective distractors; stem explicitly defines risk assessment",
+        "DL-031: definition-match (stem says 'scores risks based on likelihood and impact' → answer is risk assessment)",
+        "Only EW_D has text"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific text",
+        "Gate 2: Add COSO ERM citation to EC",
+        "Pass 2: CL Understand→Remember, recalibrate to Moderate-Easy(2)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-046",
+      "risk_tier": "HIGH",
+      "risk_score": 85,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — information & communication and monitoring activities distractors no explanation",
+        "DL-013: EW_D contains TRUNCATED template boilerplate ending mid-word ('effectiven'): 'This option reflects a misunderstanding of code of conduct ethics program...' — zero educational value",
+        "EC score 5 — definition-only (158 chars): ethics program = control environment; no scenario connection, no COSO P1 reference",
+        "DQS 28 — poor quality; two of three distractor slots broken",
+        "Effectively ALL 3 non-CC slots are either empty or boilerplate"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 3,
+      "estimated_ec_enhancement": "MAJOR",
+      "pre_certification_gates": [
+        "Gate 2: REWRITE EW_D with genuine choice-specific text about monitoring vs. control environment",
+        "Gate 2: Fill EW_A and EW_C with choice-specific explanations",
+        "Gate 3: Enrich EC — add COSO P1 reference (integrity and ethical values), explain code-of-conduct role in control environment, connect to Umberglen scenario",
+        "Pass 2: Resolve Moderate/2 metadata mismatch → Moderate-Easy(2)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-051",
+      "risk_tier": "HIGH",
+      "risk_score": 100,
+      "risk_factors": [
+        "2 empty EW slots (A, C if CC=C per EW audit) — replace SoD and eliminate other controls distractors no explanation",
+        "DL-013: EW_B contains truncated template boilerplate 'This option reflects a misunderstanding of password access authentication control...' — no educational value",
+        "DL-010: EW_B text-to-slot MISMATCH — the boilerplate text references 'balanced scorecard metrics' but is assigned to slot B which is about 'replace segregation of duties'. The explanation describes a different choice than the one it's attached to",
+        "DQS 21 — defensive distractors: A is exaggerated claim, D is non-sequitur",
+        "EC score 6 — adequate but brief; no MFA vs. single-factor contrast, no defense-in-depth concept",
+        "Effectively ALL 3 non-CC slots broken (2 empty + 1 wrong-topic boilerplate)"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 3,
+      "estimated_ec_enhancement": "MAJOR",
+      "pre_certification_gates": [
+        "Gate 2 P0: REWRITE EW_B with genuinely choice-specific text about why MFA doesn't replace SoD",
+        "Gate 2: Fill EW_A and EW_C (or EW_D depending on CC) with choice-specific text",
+        "Gate 3: Enrich EC — add MFA vs. single-factor contrast, defense-in-depth concept, COSO IT general control reference",
+        "Gate 4: Redesign distractors — current choices are trivially eliminated",
+        "Pass 2: CL Apply→Understand, resolve Easy/3 mismatch → Moderate-Easy(2)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-058",
+      "risk_tier": "MEDIUM",
+      "risk_score": 30,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — control environment weakness and management override distractors no explanation",
+        "EC score 8 — strong: names cost-benefit limitation as inherent to internal control, explains reasonable assurance, connects to scenario"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific text",
+        "Pass 2: Resolve Moderate/2 label match → Moderate-Easy(2)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-064",
+      "risk_tier": "LOW",
+      "risk_score": 10,
+      "risk_factors": [
+        "1 empty EW slot (EW_A — FX translation error distractor no explanation)",
+        "EC score 8 — strong: explains vendor-master control specifically, names fictitious-vendor and payment-diversion risks"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A only",
+        "Pass 2: CL Apply→Understand, resolve Moderate/4 → Moderate(3)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-066",
+      "risk_tier": "MEDIUM",
+      "risk_score": 55,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — replace external audits and set compensation distractors no explanation",
+        "EC score 7 — good but missing SOX/SEC governance context",
+        "DQS 29 — distractors are weak: C is obviously wrong (compensation not audit committee role), A is exaggerated claim",
+        "DL-031: label 'Difficult' but content is Understand/Remember",
+        "Metadata anomaly: Easy/4 mismatch (highly anomalous)"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific text",
+        "Gate 2: Add SOX/SEC governance context to EC",
+        "Pass 2: Recalibrate Easy/DiffScore=4 anomaly → Moderate-Easy(2) or Moderate(3), CL→Understand"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-071",
+      "risk_tier": "MEDIUM",
+      "risk_score": 30,
+      "risk_factors": [
+        "2 empty EW slots (A, D if CC=C per EW audit) — application input validation and physical access controls distractors no explanation",
+        "EC score 8 — strong: uses scenario (developer direct production change), names approval/testing/controlled migration",
+        "NOTE: DQS review data may be from different rotation instance (DL-016 metadata-content shift)"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_D with choice-specific text",
+        "Pass 2: CL→Apply (understated per Agent H)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-072",
+      "risk_tier": "LOW",
+      "risk_score": 20,
+      "risk_factors": [
+        "1 empty EW slot (EW_A if CC=D per EW audit — vendor selection documentation distractor no explanation)",
+        "EC score 7 — good: explains conflict-of-interest risk, independent approval remedy"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill 1 empty EW slot",
+        "Pass 2: CL→Apply (understated per Agent H)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-073",
+      "risk_tier": "LOW",
+      "risk_score": 10,
+      "risk_factors": [
+        "1 empty EW slot (EW_B if CC=A per EW audit — exception report frequency distractor no explanation)",
+        "EC score 8 — strong: explains detective control effectiveness condition, monitoring failure principle; well-calibrated Apply item"
+      ],
+      "remediation_complexity": "LOW",
+      "estimated_ew_writes": 1,
+      "estimated_ec_enhancement": "NONE",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_B only — lowest remediation effort in pool"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-074",
+      "risk_tier": "MEDIUM",
+      "risk_score": 40,
+      "risk_factors": [
+        "2 empty EW slots (A, C) — unauthorized cash discounts and reconciliation frequency distractors no explanation",
+        "EC score 7 — good: explains incompatible-duty risk (initiating payments + bank rec = concealment)",
+        "Only EW_D has text"
+      ],
+      "remediation_complexity": "MEDIUM",
+      "estimated_ew_writes": 2,
+      "estimated_ec_enhancement": "MINOR",
+      "pre_certification_gates": [
+        "Gate 2: Fill EW_A and EW_C with choice-specific text",
+        "Pass 2: CL→Apply (understated per Agent H)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    },
+    {
+      "qid": "P1-ED-075",
+      "risk_tier": "HIGH",
+      "risk_score": 85,
+      "risk_factors": [
+        "1 empty EW slot (A — AP turnover ratio distractor no explanation)",
+        "DL-013: BOTH EW_B and EW_D contain template boilerplate: 'This option reflects a misunderstanding of segregation approval reconciliation... Review the applicable costing standard...' — ZERO educational value",
+        "EC score 4 — definition-only (153 chars): 'separating payment approval from reconciliation ensures independent check'; no COSO citation, no business interpretation, no specific error identification",
+        "Effectively ALL 3 non-CC slots broken (1 empty + 2 boilerplate)",
+        "TRIPLE-BLOCKER item: empty slot + 2 boilerplate slots + weak EC",
+        "Missing COSO control-activity reference in EC"
+      ],
+      "remediation_complexity": "HIGH",
+      "estimated_ew_writes": 3,
+      "estimated_ec_enhancement": "MAJOR",
+      "pre_certification_gates": [
+        "Gate 2: REWRITE EW_B and EW_D with genuine choice-specific text explaining why revenue recognition violation and cash discount increase are wrong for the reconciliation SCENARIO",
+        "Gate 2: Fill EW_A with choice-specific text about AP turnover",
+        "Gate 3: Substantially rewrite EC — explain WHY separating approval from reconciliation provides independent check, identify specific errors it detects, add COSO control-activity reference, connect to Alderway scenario",
+        "Pass 2: CL→Understand (correctly calibrated — one of few)"
+      ],
+      "s810_2_cc_discrepancy_flagged": false
+    }
+  ],
+
+  "top_5_highest_risk": [
+    "P1-ED-051",
+    "P1-EC-014",
+    "P1-ED-010",
+    "P1-ED-036",
+    "P1-EC-020"
+  ],
+
+  "top_5_lowest_risk": [
+    "P1-EC-024",
+    "P1-EC-041",
+    "P1-EC-052",
+    "P1-ED-064",
+    "P1-ED-073"
+  ],
+
+  "s810_estimated_total_writes": 65,
+  "s810_writes_breakdown": {
+    "empty_ew_slot_fills": 53,
+    "dl013_boilerplate_replacements": 8,
+    "dl010_misaligned_rewrites": 4,
+    "note": "No overlap between categories — boilerplate and misaligned slots are non-empty and not counted in empties"
+  },
+
+  "summary": "Overall risk assessment: 29% HIGH (11 seeds), 29% MEDIUM (11 seeds), 42% LOW (16 seeds). All 38 seeds are structurally blocked from certification by Gate 2 (EW Integrity). Primary risk driver is DL-026: 53 empty non-CC ExplanationWrong slots across all seeds (100% affected). Secondary risk: DL-013 template boilerplate in 5 Pack D seeds (8 slots) providing zero educational value. Critical risk: DL-010 misassigned explanations in 4 seeds (EC-020 BLOCKED, ED-010 CONTAMINATED, ED-051 MISMATCHED, EC-020 2-SLOT MISASSIGNMENT) where learners would see completely wrong-topic distractor feedback. Systemic concern: 44.7% of EC fields (17/38) rated WEAK with no governing standard citation or business interpretation. 32% of seeds exhibit DL-031 difficulty inflation (Moderate-labeled items that test Bloom's Remember level). Pack D is disproportionately affected: all 5 DL-013 seeds are Pack D; 12/19 Pack D ECs rated WEAK vs. 5/19 Pack C. Highest remediation complexity items (ED-051, ED-036, ED-016, ED-046, ED-075) require full EW re-authoring + EC major rewrites. Lowest complexity items (EC-024, EC-041, EC-052, ED-064, ED-073) need only 1 EW fill each with strong existing ECs. Currently ZERO learner-pool exposure — all seeds are Unprocessed. After full remediation: estimated +38 Certified (Domain E 228→266). Recommended execution: 3 batches (≤28 per governance-guard Rule 5), with P0 DL-010/EC-020 handled first, then DL-013 Pack D seeds, then remaining DL-026 fills."
+}

@@ -1,0 +1,49 @@
+{
+  "session": "702",
+  "agent": "C",
+  "target_session": "S704",
+  "blocks_remaining": true,
+  "parse_blocker_note": "P1-BD-095 has a missing comma at line 8537 between ExplanationWrongD and question_state. This single comma MUST be fixed before ANY JavaScript-based parse tool (require, Function constructor, vm, eval) can process Pack D. Without this fix, all 20 DL-008 items below cannot be remediated via scripts.",
+  "dl008_total": 20,
+  "dl008_certified": 20,
+  "remediation_queue": [
+    {"qid": "P1-BD-095", "issue": "PARSE_BLOCKER — Missing comma between ExplanationWrongD and question_state at line 8537. Blocks all JavaScript parsing.", "priority": "CRITICAL"},
+    {"qid": "P1-AD-047", "issue": "DL-008 — ExplanationWrongC is non-empty (CorrectChoice=C). EW[C] contains substantive consignment-inventory explanation text.", "priority": "HIGH", "section": "A", "state": "Certified", "current_cc": "C"},
+    {"qid": "P1-AD-048", "issue": "DL-008 — ExplanationWrongD is non-empty (CorrectChoice=D). EW[D] contains consignment-inventory explanation text.", "priority": "HIGH", "section": "A", "state": "Certified", "current_cc": "D"},
+    {"qid": "P1-AD-054", "issue": "DL-008 — ExplanationWrongB is non-empty (CorrectChoice=B). EW[B] contains diluted EPS calculation text.", "priority": "HIGH", "section": "A", "state": "Certified", "current_cc": "B"},
+    {"qid": "P1-AD-055", "issue": "DL-008 — ExplanationWrongC is non-empty (CorrectChoice=C). EW[C] contains straight-line depreciation calculation text.", "priority": "HIGH", "section": "A", "state": "Certified", "current_cc": "C", "note": "NO_STEM item — stem is inherited from rotation group neighbor"},
+    {"qid": "P1-BD-017", "issue": "DL-008 — ExplanationWrongA is non-empty (CorrectChoice=A). EW[A] contains budget-type explanation text about capital expenditure vs. direct materials budgets.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "A"},
+    {"qid": "P1-BD-021", "issue": "DL-008 — ExplanationWrongA is non-empty (CorrectChoice=A). EW[A] contains labor-budget calculation explanation text.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "A"},
+    {"qid": "P1-BD-022", "issue": "DL-008 — ExplanationWrongB is non-empty (CorrectChoice=B). EW[B] contains labor-budget calculation explanation text.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "B"},
+    {"qid": "P1-BD-023", "issue": "DL-008 — ExplanationWrongC is non-empty (CorrectChoice=C). EW[C] contains labor-budget calculation explanation text.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "C"},
+    {"qid": "P1-BD-024", "issue": "DL-008 — ExplanationWrongD is non-empty (CorrectChoice=D). EW[D] contains labor-budget calculation explanation text.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "D"},
+    {"qid": "P1-BD-057", "issue": "DL-008 — ExplanationWrongA is non-empty (CorrectChoice=A). EW[A] contains budget-committee explanation text about sales forecast elimination.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "A"},
+    {"qid": "P1-BD-058", "issue": "DL-008 — ExplanationWrongB is non-empty (CorrectChoice=B). EW[B] contains budget-committee explanation text about sales forecast as cornerstone.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "B"},
+    {"qid": "P1-BD-059", "issue": "DL-008 — ExplanationWrongC is non-empty (CorrectChoice=C). EW[C] contains budget-committee explanation text about budgetary slack.", "priority": "HIGH", "section": "B", "state": "Certified", "current_cc": "C"},
+    {"qid": "P1-CD-002", "issue": "DL-008 — ExplanationWrongB is non-empty (CorrectChoice=B). EW[B] contains labor variance joint-interaction calculation text.", "priority": "HIGH", "section": "C", "state": "Certified", "current_cc": "B"},
+    {"qid": "P1-CD-003", "issue": "DL-008 — ExplanationWrongC is non-empty (CorrectChoice=C). EW[C] contains labor rate variance calculation text.", "priority": "HIGH", "section": "C", "state": "Certified", "current_cc": "C"},
+    {"qid": "P1-CD-006", "issue": "DL-008 — ExplanationWrongB is non-empty (CorrectChoice=B). EW[B] contains labor rate variance calculation text.", "priority": "HIGH", "section": "C", "state": "Certified", "current_cc": "B"},
+    {"qid": "P1-CD-022", "issue": "DL-008 — ExplanationWrongB is non-empty (CorrectChoice=B). EW[B] contains responsibility-center classification explanation text.", "priority": "HIGH", "section": "C", "state": "Certified", "current_cc": "B"},
+    {"qid": "P1-CD-023", "issue": "DL-008 — ExplanationWrongC is non-empty (CorrectChoice=C). EW[C] contains responsibility-center classification explanation text.", "priority": "HIGH", "section": "C", "state": "Certified", "current_cc": "C"},
+    {"qid": "P1-CD-034", "issue": "DL-008 — ExplanationWrongB is non-empty (CorrectChoice=B). EW[B] contains transfer-pricing method explanation text. NO_STEM item.", "priority": "HIGH", "section": "C", "state": "Certified", "current_cc": "B", "note": "NO_STEM item — stem is inherited from rotation group neighbor"},
+    {"qid": "P1-DD-028", "issue": "DL-008 — ExplanationWrongD is non-empty (CorrectChoice=D). EW[D] contains margin-of-safety calculation explanation text.", "priority": "HIGH", "section": "D", "state": "Certified", "current_cc": "D"},
+    {"qid": "P1-DD-029", "issue": "DL-008 — ExplanationWrongA is non-empty (CorrectChoice=A). EW[A] contains margin-of-safety calculation explanation text.", "priority": "HIGH", "section": "D", "state": "Certified", "current_cc": "A"},
+    {"qid": "P1-FD-046", "issue": "MISSING_REQUIRED_FIELD — Shell item with no CorrectChoice, Stem, Choices, Part, or Section. Has ExplanationWrongA-D (A/B/C empty, D has text) and question_state=Unprocessed.", "priority": "MEDIUM", "section": "F", "state": "Unprocessed"}
+  ],
+  "items_confirmed_clean": [
+    {"qid": "P1-BD-001", "note": "Governance register false positive. CC=A, EW_A=\"\" confirmed at line 3871."},
+    {"qid": "P1-FD-045", "note": "S701 false alarm. STRUCTURALLY COMPLETE with CC=B, EW_B=\"\". All fields present."},
+    {"qid": "P1-FD-075", "note": "S701 false alarm. STRUCTURALLY COMPLETE with CC=C, EW_C=\"\". All fields present."}
+  ],
+  "execution_order_recommendation": "1. Fix BD-095 comma (unblocks all tooling). 2. Remediate 20 DL-008 items in 2-3 batches (≤10 items each). 3. Remediate or archive FD-046 shell. 4. All DL-008 items are Certified — these are in the active learner delivery pool and should be addressed first.",
+  "batch_plan_suggestion": {
+    "batch1": ["P1-BD-095 (comma fix)"],
+    "batch2": ["P1-AD-047", "P1-AD-048", "P1-AD-054", "P1-AD-055"],
+    "batch3": ["P1-BD-017", "P1-BD-021", "P1-BD-022", "P1-BD-023", "P1-BD-024", "P1-BD-057", "P1-BD-058", "P1-BD-059"],
+    "batch4": ["P1-CD-002", "P1-CD-003", "P1-CD-006", "P1-CD-022", "P1-CD-023", "P1-CD-034"],
+    "batch5": ["P1-DD-028", "P1-DD-029"],
+    "batch6": ["P1-FD-046 (shell remediation/archival)"]
+  },
+  "no_stem_certified_items_count": 53,
+  "no_stem_note": "53 Certified items lack a Stem field but have Choices, CorrectChoice, and ExplanationWrong fields. These are rotation-group objects where content is shared across the group. These 53 items are structurally valid but may exhibit DL-008 or other explanation defects not captured in this scan. See items: P1-AD-031/032/055/056, P1-BD-077/078/079/081/089/090/091/092/093/094, P1-CD-015/017/018/019/020/021/029/030/031/032/033/034/035/043/044/045/046/047/048/049, P1-DD-002/003/004/005/022/024/031/034/051/053/054/056/057/058/059/060/067/069/070."
+}

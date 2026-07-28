@@ -1,0 +1,7 @@
+{
+  "session": "S824",
+  "title": "Legacy Transition Audit",
+  "status": "DEFERRED",
+  "reason": "Requires S823 (Operating Model Promotion) which requires S822 (FULLY ADOPTED). Chain dependency.",
+  "activation_condition": "S823 COMPLETE"
+}

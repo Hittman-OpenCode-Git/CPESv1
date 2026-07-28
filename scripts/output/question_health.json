@@ -1,0 +1,640 @@
+{
+  "generated_timestamp": "2026-07-27T18:15:23.449Z",
+  "total_questions": 2540,
+  "tier_distribution": {
+    "HEALTHY": 2214,
+    "FAIR": 324,
+    "NEEDS ATTENTION": 2,
+    "CRITICAL": 0
+  },
+  "mean_health_score": 95,
+  "median_health_score": 96,
+  "worst_10": [
+    {
+      "qid": "P1-FC-030",
+      "section": "F",
+      "topic": "F.030 cybersecurity confidentiality integrity availability",
+      "question_state": "Archived",
+      "pack": "pack_c",
+      "health_score": 62,
+      "health_tier": "NEEDS ATTENTION",
+      "component_scores": {
+        "defect": 40,
+        "challenge": 100,
+        "recommendation": 70,
+        "certification": 50,
+        "structural": 20,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-031"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 2,
+        "structural_flags": [
+          "DL-026: FAIL — 2 empty EW slots",
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 0,
+        "cognitive_level": "Understand",
+        "difficulty": "Moderate"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-031); 2 pending recommendations; Structural flags: DL-026, EV3; Archived state."
+    },
+    {
+      "qid": "P1-BC-065",
+      "section": "B",
+      "topic": "B.065 high low method cost estimation",
+      "question_state": "Certified",
+      "pack": "pack_c",
+      "health_score": 69,
+      "health_tier": "NEEDS ATTENTION",
+      "component_scores": {
+        "defect": 10,
+        "challenge": 100,
+        "recommendation": 85,
+        "certification": 100,
+        "structural": 80,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-005",
+          "DL-009"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 1,
+        "structural_flags": [
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 0,
+        "cognitive_level": "Understand",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-009); 1 pending recommendation; Structural flags: EV3."
+    },
+    {
+      "qid": "P1-A-044",
+      "section": "A",
+      "topic": "A.044 loss contingency range disclosure 19",
+      "question_state": "Archived",
+      "pack": "pack_a",
+      "health_score": 70,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 40,
+        "challenge": 100,
+        "recommendation": 85,
+        "certification": 50,
+        "structural": 80,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-013"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 1,
+        "structural_flags": [
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 2,
+        "cognitive_level": "Apply",
+        "difficulty": "Easy"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-013); 1 pending recommendation; Structural flags: EV3; Archived state."
+    },
+    {
+      "qid": "P1-A-064",
+      "section": "A",
+      "topic": "A.064 loss contingency range disclosure 39",
+      "question_state": "Archived",
+      "pack": "pack_a",
+      "health_score": 70,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 40,
+        "challenge": 100,
+        "recommendation": 85,
+        "certification": 50,
+        "structural": 80,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-013"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 1,
+        "structural_flags": [
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 1,
+        "cognitive_level": "Apply",
+        "difficulty": "Easy"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-013); 1 pending recommendation; Structural flags: EV3; Archived state."
+    },
+    {
+      "qid": "P1-A-022",
+      "section": "A",
+      "topic": "A.022 GAAP IFRS development costs",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 73,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 10,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-007",
+          "DL-013"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 1,
+        "cognitive_level": "Apply",
+        "difficulty": "Easy"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-013)."
+    },
+    {
+      "qid": "P1-D-069",
+      "section": "D",
+      "topic": "D.069 value chain cost management 49",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 75,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 30,
+        "challenge": 100,
+        "recommendation": 85,
+        "certification": 100,
+        "structural": 80,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-025",
+          "DL-027"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 1,
+        "structural_flags": [
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 1,
+        "cognitive_level": "Understand",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-025); 1 pending recommendation; Structural flags: EV3."
+    },
+    {
+      "qid": "P1-EC-018",
+      "section": "E",
+      "topic": "E.018 physical controls over assets",
+      "question_state": "Archived",
+      "pack": "pack_c",
+      "health_score": 76,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 80,
+        "recommendation": 70,
+        "certification": 50,
+        "structural": 20,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 1,
+        "pending_recommendation_count": 2,
+        "structural_flags": [
+          "DL-026: FAIL — 2 empty EW slots",
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 1,
+        "cognitive_level": "Understand",
+        "difficulty": "Moderate"
+      },
+      "diagnosis": "1 open challenge; 2 pending recommendations; Structural flags: DL-026, EV3; Archived state."
+    },
+    {
+      "qid": "P1-EC-019",
+      "section": "E",
+      "topic": "E.019 physical controls over assets",
+      "question_state": "Archived",
+      "pack": "pack_c",
+      "health_score": 76,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 80,
+        "recommendation": 70,
+        "certification": 50,
+        "structural": 20,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 1,
+        "pending_recommendation_count": 2,
+        "structural_flags": [
+          "DL-026: FAIL — 2 empty EW slots",
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 1,
+        "cognitive_level": "Understand",
+        "difficulty": "Easy"
+      },
+      "diagnosis": "1 open challenge; 2 pending recommendations; Structural flags: DL-026, EV3; Archived state."
+    },
+    {
+      "qid": "P1-A-029",
+      "section": "A",
+      "topic": "A.029 straight-line depreciation expense 4",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 78,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 40,
+        "challenge": 100,
+        "recommendation": 85,
+        "certification": 100,
+        "structural": 80,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-010"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 1,
+        "structural_flags": [
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 1,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-010); 1 pending recommendation; Structural flags: EV3."
+    },
+    {
+      "qid": "P1-A-031",
+      "section": "A",
+      "topic": "A.031 retained earnings rollforward 6",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 78,
+      "health_tier": "FAIR",
+      "component_scores": {
+        "defect": 40,
+        "challenge": 100,
+        "recommendation": 85,
+        "certification": 100,
+        "structural": 80,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [
+          "DL-008"
+        ],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 1,
+        "structural_flags": [
+          "EV3: WARN — No accounting principle citation in ExplanationCorrect"
+        ],
+        "total_sessions": 1,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "1 High/Critical-severity defect (DL-008); 1 pending recommendation; Structural flags: EV3."
+    }
+  ],
+  "best_10": [
+    {
+      "qid": "P1-A-008",
+      "section": "A",
+      "topic": "A.008 inventory lower of cost and NRV",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 2,
+        "cognitive_level": "Understand",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-043",
+      "section": "A",
+      "topic": "A.043 net sales after returns and allowances 18",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 1,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-047",
+      "section": "A",
+      "topic": "A.047 revenue recognized on shipped units 22",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 0,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-054",
+      "section": "A",
+      "topic": "A.054 loss contingency reasonably possible disclosure",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 1,
+        "cognitive_level": "Understand",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-057",
+      "section": "A",
+      "topic": "A.057 revenue recognized on shipped units 32",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 0,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-062",
+      "section": "A",
+      "topic": "A.062 current assets classification total 37",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 0,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-067",
+      "section": "A",
+      "topic": "A.067 revenue recognized on shipped units 42",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 0,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-072",
+      "section": "A",
+      "topic": "A.072 current assets classification total 47",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 0,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-A-074",
+      "section": "A",
+      "topic": "A.074 loss contingency range no best estimate",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 1,
+        "cognitive_level": "Apply",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    },
+    {
+      "qid": "P1-B-005",
+      "section": "B",
+      "topic": "B.005 zero-based budgeting review",
+      "question_state": "Certified",
+      "pack": "pack_a",
+      "health_score": 100,
+      "health_tier": "HEALTHY",
+      "component_scores": {
+        "defect": 100,
+        "challenge": 100,
+        "recommendation": 100,
+        "certification": 100,
+        "structural": 100,
+        "usage": 100
+      },
+      "details": {
+        "defect_codes": [],
+        "open_challenge_count": 0,
+        "pending_recommendation_count": 0,
+        "structural_flags": [],
+        "total_sessions": 2,
+        "cognitive_level": "Understand",
+        "difficulty": "Moderate-Easy"
+      },
+      "diagnosis": "No health issues. Fully certified with zero defects or open challenges."
+    }
+  ],
+  "by_state": {
+    "Archived": {
+      "count": 242,
+      "mean_health": 82
+    },
+    "Certified": {
+      "count": 2221,
+      "mean_health": 96
+    },
+    "Unprocessed": {
+      "count": 77,
+      "mean_health": 90
+    }
+  },
+  "by_section": {
+    "F": {
+      "count": 374,
+      "mean_health": 91
+    },
+    "B": {
+      "count": 500,
+      "mean_health": 96
+    },
+    "A": {
+      "count": 375,
+      "mean_health": 96
+    },
+    "D": {
+      "count": 375,
+      "mean_health": 96
+    },
+    "E": {
+      "count": 415,
+      "mean_health": 93
+    },
+    "C": {
+      "count": 500,
+      "mean_health": 96
+    },
+    "?": {
+      "count": 1,
+      "mean_health": 81
+    }
+  }
+}

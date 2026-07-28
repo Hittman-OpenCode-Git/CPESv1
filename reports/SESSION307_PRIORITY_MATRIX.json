@@ -1,0 +1,73 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "quadrants": {
+    "highImpactLowEffort": [
+      {
+        "item": "DL-008 Remediation (67 items)",
+        "effort": 3,
+        "impact": "CRITICAL",
+        "description": "Clear EW[CC] from Certified items. Script-automatable with manual QA."
+      },
+      {
+        "item": "DL-026 Authoring (50 items Pack D)",
+        "effort": 2,
+        "impact": "HIGH",
+        "description": "One EW field per item. Unblocks certification for 50 items."
+      },
+      {
+        "item": "Pack A closeout (19 items)",
+        "effort": 2,
+        "impact": "MEDIUM",
+        "description": "Last 19 items to 100% Pack A certification."
+      }
+    ],
+    "highImpactHighEffort": [
+      {
+        "item": "Domain E Certification (178 items)",
+        "effort": 8,
+        "impact": "CRITICAL",
+        "description": "Full CAQS certification. 29 P0 items resolved."
+      },
+      {
+        "item": "Domain F Certification (150 items)",
+        "effort": 7,
+        "impact": "HIGH",
+        "description": "Full CAQS certification. 8 P0 items resolved."
+      },
+      {
+        "item": "Case-bank EW Authoring (~310 items)",
+        "effort": 8,
+        "impact": "HIGH",
+        "description": "First distractor feedback for case practice."
+      }
+    ],
+    "lowImpactLowEffort": [
+      {
+        "item": "DL-013 Boilerplate Cleanup",
+        "effort": 2,
+        "impact": "LOW",
+        "description": "Template text replacement. Non-blocking."
+      },
+      {
+        "item": "Metadata normalization (AccountPrinciple)",
+        "effort": 1,
+        "impact": "LOW",
+        "description": "Add missing citation fields."
+      }
+    ],
+    "lowImpactHighEffort": [
+      {
+        "item": "Full EC enrichment (all items)",
+        "effort": 15,
+        "impact": "MEDIUM",
+        "description": "Better done incrementally during certification waves."
+      },
+      {
+        "item": "Exhibit quality upgrades",
+        "effort": 10,
+        "impact": "MEDIUM",
+        "description": "Secondary to EW authoring per S305 findings."
+      }
+    ]
+  }
+}

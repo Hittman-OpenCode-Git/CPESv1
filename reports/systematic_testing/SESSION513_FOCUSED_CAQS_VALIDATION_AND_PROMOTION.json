@@ -1,0 +1,64 @@
+{
+  "session": "513",
+  "agent": "D",
+  "type": "focused_caqs_validation_and_promotion",
+  "timestamp": "2026-07-25",
+  "validation_results": [
+    {
+      "item_id": "CASE-B13-Q3",
+      "d1_answer_key_accuracy": "PASS",
+      "d1_notes": "Correct = $48,000 independently verified. Cash = $34,000 + $412,000 - $398,000 = $48,000. Exceeds $30,000 minimum; no borrowing triggered.",
+      "d2_explanation_sufficiency": "PASS",
+      "d2_notes": "Multi-sentence explanation names standard cash forecasting methodology. Shows full tie-out calculation. Business context provided.",
+      "d3_distractor_rationale": "PASS",
+      "d3_notes": "All four choices now have rationale: A (shortfall from minimum), B (confuses minimum with computed balance), C (correct answer — correctly identified as correct), D (adds unnecessary borrowing).",
+      "d4_authoritative_reference_alignment": "PASS",
+      "d4_notes": "Standard cash budgeting methodology referenced. Managerial accounting topic — no ASC/IFRS/COSO citation required.",
+      "d5_case_realism_exhibit_use": "PASS",
+      "d5_notes": "Uses Bridgeport Industries company name. Calculation inputs traceable to prompt values. No ambiguous wording.",
+      "d6_metadata_schema_readiness": "PASS",
+      "d6_notes": "All required fields present. Correct state values.",
+      "decision": "CERTIFY"
+    },
+    {
+      "item_id": "CASE-B18-Q4",
+      "d1_answer_key_accuracy": "PASS",
+      "d1_notes": "Correct = 1.64 independently verified. ($2,400,000 - $600,000) / $1,100,000 = 1.64.",
+      "d2_explanation_sufficiency": "PASS",
+      "d2_notes": "Multi-sentence explanation names U.S. GAAP, shows formula with full tie-out, provides business interpretation.",
+      "d3_distractor_rationale": "PASS",
+      "d3_notes": "All four choices now have rationale: 1.64 (correct answer), 2.18 (current ratio), 1.18 (subtracts CL instead of inventory), 0.55 (inventory/CL).",
+      "d4_authoritative_reference_alignment": "PASS",
+      "d4_notes": "U.S. GAAP financial statement analysis referenced. Ratio analysis is a standard financial reporting topic.",
+      "d5_case_realism_exhibit_use": "PASS",
+      "d5_notes": "Uses Gateway Logistics company name. Calculation inputs traceable to prompt values.",
+      "d6_metadata_schema_readiness": "PASS",
+      "d6_notes": "All required fields present. Correct state values.",
+      "decision": "CERTIFY"
+    }
+  ],
+  "state_changes_applied": {
+    "item_level": {
+      "CASE-B13-Q3": "Unprocessed → Certified",
+      "CASE-B18-Q4": "Unprocessed → Certified"
+    },
+    "case_level": {
+      "CASE-B13": "Unprocessed → Certified (all 5 items now Certified)",
+      "CASE-B18": "Unprocessed → Certified (all 5 items now Certified)"
+    }
+  },
+  "certification_summary": {
+    "before": {
+      "items_certified": 73,
+      "items_unprocessed": 2,
+      "cases_certified": 13,
+      "cases_unprocessed": 2
+    },
+    "after": {
+      "items_certified": 75,
+      "items_unprocessed": 0,
+      "cases_certified": 15,
+      "cases_unprocessed": 0
+    }
+  }
+}

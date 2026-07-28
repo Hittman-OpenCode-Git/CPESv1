@@ -1,0 +1,1008 @@
+{
+  "specId": "SESSION252_CHALLENGE_TRIAGE",
+  "board": "C",
+  "generatedTimestamp": "2026-07-27T18:15:19.757Z",
+  "command": "--all",
+  "results": [
+    {
+      "challengeId": "CH-CC1ECA89",
+      "challengeDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "questionId": "P1-A-036",
+      "challengeType": "CONTENT_ERROR",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 5,
+      "reasoning": "Mixed signals: user-error language but structural defects present",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-A-046",
+        "P1-A-056",
+        "P1-A-066",
+        "P1-A-001",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005",
+        "P1-A-006",
+        "P1-A-007",
+        "P1-A-008",
+        "P1-A-009",
+        "P1-A-010",
+        "P1-A-011",
+        "P1-A-012",
+        "P1-A-013"
+      ],
+      "priorityScore": 85,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T18:15:19.749Z"
+    },
+    {
+      "challengeId": "CH-42169D7F",
+      "challengeDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "questionId": "P1-A-046",
+      "challengeType": "TECHNICAL_ISSUE",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 5,
+      "reasoning": "Insufficient data to auto-classify",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-A-036",
+        "P1-A-056",
+        "P1-A-066",
+        "P1-A-001",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005",
+        "P1-A-006",
+        "P1-A-007",
+        "P1-A-008",
+        "P1-A-009",
+        "P1-A-010",
+        "P1-A-011",
+        "P1-A-012",
+        "P1-A-013"
+      ],
+      "priorityScore": 85,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T18:15:19.752Z"
+    },
+    {
+      "challengeId": "CH-53D73FDB",
+      "challengeDescription": "The question stem has a typo — the numbers don't add up.",
+      "questionId": "P1-A-056",
+      "challengeType": "ANSWER_DISPUTE",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 5,
+      "reasoning": "Insufficient data to auto-classify",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-A-036",
+        "P1-A-046",
+        "P1-A-066",
+        "P1-A-001",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005",
+        "P1-A-006",
+        "P1-A-007",
+        "P1-A-008",
+        "P1-A-009",
+        "P1-A-010",
+        "P1-A-011",
+        "P1-A-012",
+        "P1-A-013"
+      ],
+      "priorityScore": 85,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T18:15:19.755Z"
+    },
+    {
+      "challengeId": "CH-4A405E18",
+      "challengeDescription": "The difficulty label doesn't match the question complexity.",
+      "questionId": "P1-EC-006",
+      "challengeType": "AMBIGUITY",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "GOVERNANCE_ESCALATION",
+      "confidence": 85,
+      "reasoning": "QID P1-EC-006 is governance-blocked (Item is Archived)",
+      "recommendedAction": "Flag to governance board. Do not auto-close. Initiate cross-session defect tracking. Update DEFECT_LIBRARY.md.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-005",
+        "P1-EC-007",
+        "P1-EC-009",
+        "P1-EC-010",
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-015",
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-018",
+        "P1-EC-019"
+      ],
+      "priorityScore": 70,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-DEB509EA",
+      "challengeDescription": "The application crashed when I submitted this question.",
+      "questionId": "P1-EC-007",
+      "challengeType": "OTHER",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "GOVERNANCE_ESCALATION",
+      "confidence": 85,
+      "reasoning": "QID P1-EC-007 is governance-blocked (Item is Archived)",
+      "recommendedAction": "Flag to governance board. Do not auto-close. Initiate cross-session defect tracking. Update DEFECT_LIBRARY.md.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-005",
+        "P1-EC-006",
+        "P1-EC-009",
+        "P1-EC-010",
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-015",
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-018",
+        "P1-EC-019"
+      ],
+      "priorityScore": 70,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-DCB4A848",
+      "challengeDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "questionId": "P1-EC-009",
+      "challengeType": "CONTENT_ERROR",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "GOVERNANCE_ESCALATION",
+      "confidence": 80,
+      "reasoning": "QID P1-EC-009 is governance-blocked (Item is Archived)",
+      "recommendedAction": "Flag to governance board. Do not auto-close. Initiate cross-session defect tracking. Update DEFECT_LIBRARY.md.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-005",
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-010",
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-015",
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-018",
+        "P1-EC-019"
+      ],
+      "priorityScore": 80,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-2A63A075",
+      "challengeDescription": "The question stem has a typo — the numbers don't add up.",
+      "questionId": "P1-EC-018",
+      "challengeType": "ANSWER_DISPUTE",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "GOVERNANCE_ESCALATION",
+      "confidence": 85,
+      "reasoning": "QID P1-EC-018 is governance-blocked (Item is Archived)",
+      "recommendedAction": "Flag to governance board. Do not auto-close. Initiate cross-session defect tracking. Update DEFECT_LIBRARY.md.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-005",
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-009",
+        "P1-EC-010",
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-015",
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-019"
+      ],
+      "priorityScore": 70,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-6044F487",
+      "challengeDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "questionId": "P1-EC-019",
+      "challengeType": "EXPLANATION_ISSUE",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "GOVERNANCE_ESCALATION",
+      "confidence": 85,
+      "reasoning": "QID P1-EC-019 is governance-blocked (Item is Archived)",
+      "recommendedAction": "Flag to governance board. Do not auto-close. Initiate cross-session defect tracking. Update DEFECT_LIBRARY.md.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-005",
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-009",
+        "P1-EC-010",
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-015",
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-018"
+      ],
+      "priorityScore": 70,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-7BEEBD1E",
+      "challengeDescription": "The difficulty label doesn't match the question complexity.",
+      "questionId": "P1-A-001",
+      "challengeType": "AMBIGUITY",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Challenge description matches defect pattern for: DL-031",
+      "recommendedAction": "Verify defect in source file. If confirmed, add to remediation queue and link to REVISION_HISTORY.md.",
+      "relatedDefectCodes": [
+        "DL-027"
+      ],
+      "relatedQIDs": [
+        "P1-A-036",
+        "P1-A-046",
+        "P1-A-056",
+        "P1-A-066",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005",
+        "P1-A-006",
+        "P1-A-007",
+        "P1-A-008",
+        "P1-A-009",
+        "P1-A-010",
+        "P1-A-011",
+        "P1-A-012",
+        "P1-A-013"
+      ],
+      "priorityScore": 55,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-DDAE4F96",
+      "challengeDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "questionId": "P1-A-009",
+      "challengeType": "CONTENT_ERROR",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 5,
+      "reasoning": "Mixed signals: user-error language but structural defects present",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-027"
+      ],
+      "relatedQIDs": [
+        "P1-A-036",
+        "P1-A-046",
+        "P1-A-056",
+        "P1-A-066",
+        "P1-A-001",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005",
+        "P1-A-006",
+        "P1-A-007",
+        "P1-A-008",
+        "P1-A-010",
+        "P1-A-011",
+        "P1-A-012",
+        "P1-A-013"
+      ],
+      "priorityScore": 85,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-B5680FAC",
+      "challengeDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "questionId": "P1-A-010",
+      "challengeType": "TECHNICAL_ISSUE",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 5,
+      "reasoning": "Insufficient data to auto-classify",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-A-036",
+        "P1-A-046",
+        "P1-A-056",
+        "P1-A-066",
+        "P1-A-001",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005",
+        "P1-A-006",
+        "P1-A-007",
+        "P1-A-008",
+        "P1-A-009",
+        "P1-A-011",
+        "P1-A-012",
+        "P1-A-013"
+      ],
+      "priorityScore": 85,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-EACB8C9D",
+      "challengeDescription": "The question stem has a typo — the numbers don't add up.",
+      "questionId": "P1-A-011",
+      "challengeType": "ANSWER_DISPUTE",
+      "challengeStatus": "OPEN",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 15,
+      "reasoning": "First-time challenge — no existing defect data to cross-reference",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [],
+      "relatedQIDs": [
+        "P1-A-036",
+        "P1-A-046",
+        "P1-A-056",
+        "P1-A-066",
+        "P1-A-001",
+        "P1-A-002",
+        "P1-A-003",
+        "P1-A-004",
+        "P1-A-005",
+        "P1-A-006",
+        "P1-A-007",
+        "P1-A-008",
+        "P1-A-009",
+        "P1-A-010",
+        "P1-A-012",
+        "P1-A-013"
+      ],
+      "priorityScore": 50,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T18:15:19.756Z"
+    },
+    {
+      "challengeId": "CH-5DEDA52E",
+      "challengeDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "questionId": "P1-A-066",
+      "challengeType": "EXPLANATION_ISSUE",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-A-066"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-73FBA8ED",
+      "challengeDescription": "The difficulty label doesn't match the question complexity.",
+      "questionId": "P1-AC-026",
+      "challengeType": "AMBIGUITY",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-AC-026"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_c",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-F9057C5F",
+      "challengeDescription": "The application crashed when I submitted this question.",
+      "questionId": "P1-AC-028",
+      "challengeType": "OTHER",
+      "challengeStatus": "RESOLVED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-AC-028"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_c",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-22602334",
+      "challengeDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "questionId": "P1-EC-001",
+      "challengeType": "CONTENT_ERROR",
+      "challengeStatus": "RESOLVED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-001"
+      ],
+      "priorityScore": 53,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-5F402774",
+      "challengeDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "questionId": "P1-EC-002",
+      "challengeType": "TECHNICAL_ISSUE",
+      "challengeStatus": "CLOSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-002"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-27CB2741",
+      "challengeDescription": "The question stem has a typo — the numbers don't add up.",
+      "questionId": "P1-EC-003",
+      "challengeType": "ANSWER_DISPUTE",
+      "challengeStatus": "CLOSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-003"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-DD6AC127",
+      "challengeDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "questionId": "P1-EC-005",
+      "challengeType": "EXPLANATION_ISSUE",
+      "challengeStatus": "DISMISSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-005"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-4A14030D",
+      "challengeDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "questionId": "P1-EC-010",
+      "challengeType": "TECHNICAL_ISSUE",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008.",
+      "recommendedAction": "Assign to defect remediation team for DL-008 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-EC-010"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-E129E08E",
+      "challengeDescription": "The question stem has a typo — the numbers don't add up.",
+      "questionId": "P1-EC-011",
+      "challengeType": "ANSWER_DISPUTE",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-011"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-BC03C877",
+      "challengeDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "questionId": "P1-EC-012",
+      "challengeType": "EXPLANATION_ISSUE",
+      "challengeStatus": "RESOLVED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-012"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-9FD50300",
+      "challengeDescription": "The difficulty label doesn't match the question complexity.",
+      "questionId": "P1-EC-013",
+      "challengeType": "AMBIGUITY",
+      "challengeStatus": "RESOLVED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-013"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-83CAEBA3",
+      "challengeDescription": "The application crashed when I submitted this question.",
+      "questionId": "P1-EC-015",
+      "challengeType": "OTHER",
+      "challengeStatus": "CLOSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-015"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-B330A24E",
+      "challengeDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "questionId": "P1-EC-016",
+      "challengeType": "CONTENT_ERROR",
+      "challengeStatus": "CLOSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-016"
+      ],
+      "priorityScore": 53,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-BDF0C60D",
+      "challengeDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "questionId": "P1-EC-017",
+      "challengeType": "TECHNICAL_ISSUE",
+      "challengeStatus": "DISMISSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008, DL-026.",
+      "recommendedAction": "Assign to defect remediation team for DL-008, DL-026 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008",
+        "DL-026"
+      ],
+      "relatedQIDs": [
+        "P1-EC-017"
+      ],
+      "priorityScore": 43,
+      "qidState": "Archived",
+      "qidPack": "pack_c",
+      "qidSection": "E",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-F3E8B19D",
+      "challengeDescription": "The application crashed when I submitted this question.",
+      "questionId": "P1-A-002",
+      "challengeType": "OTHER",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 60,
+      "reasoning": "Ambiguous classification. Type: OTHER. Requires manual review.",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [],
+      "relatedQIDs": [
+        "P1-A-002"
+      ],
+      "priorityScore": 56,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-07EF5B50",
+      "challengeDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "questionId": "P1-A-003",
+      "challengeType": "CONTENT_ERROR",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008.",
+      "recommendedAction": "Assign to defect remediation team for DL-008 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-A-003"
+      ],
+      "priorityScore": 93,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-F94FB072",
+      "challengeDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "questionId": "P1-A-004",
+      "challengeType": "TECHNICAL_ISSUE",
+      "challengeStatus": "RESOLVED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008.",
+      "recommendedAction": "Assign to defect remediation team for DL-008 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-A-004"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-3B28168D",
+      "challengeDescription": "The question stem has a typo — the numbers don't add up.",
+      "questionId": "P1-A-005",
+      "challengeType": "ANSWER_DISPUTE",
+      "challengeStatus": "RESOLVED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008.",
+      "recommendedAction": "Assign to defect remediation team for DL-008 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-A-005"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-0AA70362",
+      "challengeDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "questionId": "P1-A-006",
+      "challengeType": "EXPLANATION_ISSUE",
+      "challengeStatus": "CLOSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008.",
+      "recommendedAction": "Assign to defect remediation team for DL-008 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-A-006"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-7D9EF3BC",
+      "challengeDescription": "The difficulty label doesn't match the question complexity.",
+      "questionId": "P1-A-007",
+      "challengeType": "AMBIGUITY",
+      "challengeStatus": "CLOSED",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008.",
+      "recommendedAction": "Assign to defect remediation team for DL-008 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-A-007"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-EE8FC06C",
+      "challengeDescription": "The application crashed when I submitted this question.",
+      "questionId": "P1-A-008",
+      "challengeType": "OTHER",
+      "challengeStatus": "DISMISSED",
+      "assignedCategory": "NEEDS_REVIEW",
+      "confidence": 60,
+      "reasoning": "Ambiguous classification. Type: OTHER. Requires manual review.",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [],
+      "relatedQIDs": [
+        "P1-A-008"
+      ],
+      "priorityScore": 56,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-8B19A949",
+      "challengeDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "questionId": "P1-A-012",
+      "challengeType": "EXPLANATION_ISSUE",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 70,
+      "reasoning": "Technical or explanation issue requiring investigation.",
+      "recommendedAction": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+      "relatedDefectCodes": [],
+      "relatedQIDs": [
+        "P1-A-012"
+      ],
+      "priorityScore": 57,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    },
+    {
+      "challengeId": "CH-90E9CA51",
+      "challengeDescription": "The difficulty label doesn't match the question complexity.",
+      "questionId": "P1-A-013",
+      "challengeType": "AMBIGUITY",
+      "challengeStatus": "INVESTIGATING",
+      "assignedCategory": "LIKELY_DEFECT",
+      "confidence": 85,
+      "reasoning": "Linked to defect codes: DL-008.",
+      "recommendedAction": "Assign to defect remediation team for DL-008 audit. Verify source file and answer key.",
+      "relatedDefectCodes": [
+        "DL-008"
+      ],
+      "relatedQIDs": [
+        "P1-A-013"
+      ],
+      "priorityScore": 83,
+      "qidState": "Certified",
+      "qidPack": "pack_a",
+      "qidSection": "A",
+      "triageTimestamp": "2026-07-27T19:00:00.000Z"
+    }
+  ],
+  "summary": {
+    "totalTriaged": 12,
+    "byCategory": {
+      "LIKELY_DEFECT": 1,
+      "LIKELY_USER_ERROR": 0,
+      "NEEDS_REVIEW": 6,
+      "GOVERNANCE_ESCALATION": 5
+    },
+    "bySeverity": {
+      "CRITICAL": 0,
+      "HIGH": 10,
+      "MEDIUM": 0,
+      "LOW": 2
+    },
+    "systematicIssues": [
+      {
+        "cluster": "pack_a:A",
+        "challengeCount": 7,
+        "qids": [
+          "P1-A-036",
+          "P1-A-046",
+          "P1-A-056",
+          "P1-A-001",
+          "P1-A-009",
+          "P1-A-010",
+          "P1-A-011"
+        ]
+      },
+      {
+        "cluster": "pack_c:E",
+        "challengeCount": 5,
+        "qids": [
+          "P1-EC-006",
+          "P1-EC-007",
+          "P1-EC-009",
+          "P1-EC-018",
+          "P1-EC-019"
+        ]
+      }
+    ]
+  }
+}

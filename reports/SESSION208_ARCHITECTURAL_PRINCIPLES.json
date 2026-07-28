@@ -1,0 +1,171 @@
+{
+  "document": "SESSION208_ARCHITECTURAL_PRINCIPLES",
+  "session": "S208",
+  "series": "200-Series Architecture Stewardship",
+  "board": "A",
+  "title": "Framework v2 Architectural Principles — Frozen Certification",
+  "status": "FROZEN",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — no content modifications",
+  "authority": "PROJECT_CONSTITUTION.md; CAQS_v1.0.md; Framework v2 Architecture (S200-S207)",
+  "governance_note": "These principles are FROZEN as of S208. Any modification requires a formal Architecture Amendment Session with Governance Board authorization.",
+  "immutability_clause": "These principles constitute the architectural constitution of the CMA Part 1 Exam Simulator. They may not be weakened, bypassed, or deprecated without an equivalent or stronger replacement. Violation of any principle is grounds for automatic certification block.",
+
+  "sources_consumed": [
+    "knowledge/CAQS_v1.0.md — 7-gate pipeline, 10-dimension rubric, certification standards §1.7, Gold Standard Checklist §14",
+    "knowledge/DEFECT_LIBRARY.md — DL-001 through DL-036 defect catalog with root causes and detection rules",
+    "knowledge/CURRENT_BASELINES.md — 15 runtime file baselines, certified pool at 2,298",
+    ".opencode/plugins/governance-guard.js — 6 rules (Rules 1-6), 32/32 test suite PASS",
+    "reports/SESSION202_FRAMEWORK_V2_ARCHITECTURE.json — 5-board architecture design",
+    "reports/SESSION201_FRAMEWORK_V2_VISION.json — Transformation roadmap, root problems 1-5",
+    "reports/SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json — Conditional adoption at 92% confidence, conditions C1-C5",
+    "reports/SESSION207_OPERATIONAL_HEALTH_REPORT.json — Operational certification, runtime stability"
+  ],
+
+  "principles": {
+    "P1_identity_before_trust": {
+      "title": "Identity Before Trust",
+      "statement": "No item, entity, or record shall be trusted as uniquely identified by QID alone. All identity resolution must use the compound-key model: QID + CorrectChoice + ExplanationWrong_Pattern + Template_Family + File_Path. Identity is verified before any certification, remediation, or delivery decision.",
+      "historical_evidence": {
+        "DL-029": "257 Pack B false-positive DL-008 flags caused by forward-scan methodology that trusted QID-first-match identity. Resolved by compound-key identity model.",
+        "S320_failure": "Wrong variants targeted during remediation because QID-only resolution matched the first object in the file, not the canonical seed.",
+        "DL-036": "40-item routing divergence between tools using different QID regex patterns — the correct tool used compound identity awareness.",
+        "Pack_B_CC_before_QID": "Pack B stores CorrectChoice before QuestionID in JSON object structure — a format anomaly that QID-trusting scanners cannot handle."
+      },
+      "operational_validation": {
+        "identity_pass_rate": "99.96% (2,539/2,540) — one item (P1-E-R33) resolved S808",
+        "governance_guard_rule2": "Object-boundary extraction (v2) validates identity at the object level, not the QID level",
+        "cross_engine_consistency": "S254: 95/100 — 7 registries validated, 1 anomaly identified and tracked"
+      },
+      "violation_detection": "Any tool, scan, or process that uses QID alone as a unique identifier without cross-referencing at least two compound-key fields. Detected via: DL-029-class false-positive audit (object-boundary vs. window-scan count divergence > 0).",
+      "non_negotiable": true,
+      "enforcement": "governance-guard.js Rule 2 (object-boundary extraction) — prevents identity-blind writes"
+    },
+
+    "P2_scan_once_consume_many": {
+      "title": "Scan Once, Consume Many",
+      "statement": "Every scan, validation, or analysis of raw content files shall produce a re-consumable artifact. Downstream consumers (readiness scorer, certification engine, delivery mechanism) shall consume artifacts, never re-scan raw files independently. One scan → one artifact → many consumers.",
+      "historical_evidence": {
+        "DL-008_scan_redundancy": "22 DL-008 scan events performed across 15 sessions — each independently re-scanning raw files with no artifact reuse.",
+        "DL-026_scan_redundancy": "18 DL-026 scan events — each with divergent methodology producing conflicting counts (632 vs 1,005 vs 1,056).",
+        "DL-036_pipeline_divergence": "40-item BLOCKED routing divergence because Candidate Engine independently re-scanned Pack E with a stale regex, instead of consuming the Readiness Scorer artifact.",
+        "S809_chain_cost": "4 sessions, 60 agent-spawns, 47 report files, 0 pack-file writes. 6.2:1 duplication ratio. All preventable with artifact consumption."
+      },
+      "operational_validation": {
+        "scan_orchestrator": "S202 scan architecture design — one scan orchestrator produces artifact consumed by downstream stages",
+        "artifact_reuse_gap": "S813 C2 — pipeline artifact reuse identified as blocking condition for full Framework v2 adoption",
+        "readiness_scorer": "S322 produces readiness_scoring.json consumed by certification pipeline"
+      },
+      "violation_detection": "Two or more tools produce divergent results for the same metric from the same source file. Detected via: cross-tool BLOCKED count comparison (candidate_count_a != candidate_count_b).",
+      "non_negotiable": true,
+      "enforcement": "S813 C2 (pipeline artifact reuse) — blocking condition for full adoption. New tools must register as artifact consumers."
+    },
+
+    "P3_delta_review": {
+      "title": "Delta Review",
+      "statement": "Only items that have changed since the last certification wave shall be reviewed. SHA-256 content hashing identifies unchanged items (typically 80%). Full re-review of entire packs is waste. Review effort shall scale with change volume, not pack size.",
+      "historical_evidence": {
+        "S809_unchanged_items": "38 seeds, 4 sessions, 60 agent-spawns — 80% of items unchanged from prior wave yet all were re-reviewed from scratch.",
+        "S200_agent_I": "80% unchanged per wave — systematic waste confirmed by 10-agent discovery session.",
+        "DR-002": "3-4 duplicate ExplanationCorrect analyses per session on identical content.",
+        "agent_redundancy": "4-7 agents re-audit same ExplanationWrong fields per session, reaching identical conclusions 95%+ of the time."
+      },
+      "operational_validation": {
+        "delta_ledger": "S206 operational baseline — delta ledger tracks SHA-256 hashes per item per wave",
+        "change_classification": "S203 change classification — 4 change types (NEW, MODIFIED, UNCHANGED, ROTATED)",
+        "review_savings": "S809 case study: 60→10 agent reduction potential via delta-only review"
+      },
+      "violation_detection": "Any session that re-reviews items whose SHA-256 hash matches the prior wave baseline. Detected via: delta ledger comparison — (items_reviewed / items_changed) > 1.5 indicates delta review not applied.",
+      "non_negotiable": true,
+      "enforcement": "S202 Delta Review Engineering specification — all certification waves must include delta determination step before agent dispatch"
+    },
+
+    "P4_readiness_before_certification": {
+      "title": "Readiness Before Certification",
+      "statement": "No item shall enter the Certified state without passing all pre-flight structural gates. The pre-flight pipeline (Gates 0-4, ~8 minutes) must complete with zero blocking errors before any Quality Board review begins. Structural cleanliness is a prerequisite for content quality review.",
+      "historical_evidence": {
+        "readiness_failure_rate": "89.5% prior to Framework v2 — 34 of 38 Domain E seeds arrived at certification with 2+ concurrent defects.",
+        "DL-008_539_occurrences": "539 ExplanationWrong[CorrectChoice] non-empty occurrences shipped to Certified pool before governance guard Rule 2 was activated.",
+        "DL-026_1005_items": "1,005 items with empty distractor slots entered certification pipeline without detection.",
+        "DL-021_100_items": "100 Pack E Section C items with zero distractor explanations certified.",
+        "DL-030_5_errors": "5 answer-key errors certified into learner pool.",
+        "DL-035_39_items": "39 Domain F items certified post-Framework v2 through a gate that checked DL-008 but not DL-026 — a governance coverage gap, not a framework gap."
+      },
+      "operational_validation": {
+        "pre_flight_gate_model": "S201 Board 7 — 10 automated scans across 5 gates, ~8 minute pipeline",
+        "readiness_reduction": "89.5% → <12% readiness failure rate after Framework v2 deployment",
+        "governance_guard_rules": "Rule 2 (DL-008 BLOCK), Rule 6 (DL-026 BLOCK) — automated enforcement at write-time",
+        "certification_velocity": "304.5 items/day over 4 days, 30 cert events — faster AND safer"
+      },
+      "violation_detection": "Any item with question_state='Certified' that does not have a corresponding readiness gate PASS record. Detected via: certification audit (question_state count with gate records < total certified count).",
+      "non_negotiable": true,
+      "enforcement": "Pre-flight gate pipeline (Gates 0-4) — blocking. Governance guard Rules 2+6 — blocking at write-time."
+    },
+
+    "P5_governance_automation": {
+      "title": "Governance Automation",
+      "statement": "Content governance rules shall be enforced at the tool-execution level by automated guards, not by human discipline. Every defect class that has a known detection pattern shall have a corresponding BLOCK-level governance guard rule. WARN-level rules notify but do not prevent certification.",
+      "historical_evidence": {
+        "pre_guard_certification": "Items were certified into learner pool with DL-008, DL-026, DL-021, DL-030 because no automated guard blocked them.",
+        "rule2_activation": "Rule 2 (DL-008 BLOCK) activated 2026-07-22 — 539 occurrences already in pool. Post-activation: 0 new DL-008 introduced.",
+        "rule6_gap": "39 Domain F items certified S853 because Rule 6 (DL-026 BLOCK) was not yet deployed. Deployed S814 — 0 new DL-026-on-Certified since.",
+        "rule5_batch_cap": "Rule 5 (30-item cap) prevents large-scale undetected defects — enforced on every write."
+      },
+      "operational_validation": {
+        "active_rules": "6 rules (Rules 1-6): 5 BLOCK, 1 WARN (Rule 1 question_state→REVISION_HISTORY). 32/32 test suite PASS.",
+        "rule_coverage": "DL-008 (Rule 2), DL-026 (Rule 6), Registry protection (Rule 3), Batch cap (Rule 5), REVISION_HISTORY pairing (Rule 1 WARN), Answer-key verification (Rule 4 WARN)",
+        "defect_prevention": "0 new DL-008, 0 new DL-026-on-Certified since respective rules deployed"
+      },
+      "violation_detection": "Any new defect class discovered without a corresponding governance guard rule within one session of discovery. Detected via: DEFECT_LIBRARY.md entry with Status='Open' and no matching governance guard rule.",
+      "non_negotiable": true,
+      "enforcement": "governance-guard.js — all rules active. New defect classes must produce new rules."
+    },
+
+    "P6_traceability_everywhere": {
+      "title": "Traceability Everywhere",
+      "statement": "Every entity in the system — questions, sessions, recommendations, challenges, investigations, certification events — shall be traceable through registries. No entity shall exist without a registry entry. Every state transition, certification decision, and remediation action shall be recorded in REVISION_HISTORY.md with before/after evidence.",
+      "historical_evidence": {
+        "P1-EC-004_inconsistency": "Registry reported 'Unprocessed' but REVISION_HISTORY said 'Certified' in S853 — a traceability gap flagged and tracked (S254).",
+        "session_to_qid_traceability": "S254: 40 sessions, 535 unique QIDs linked, 0 duplicate/phantom/orphan references — traceability working.",
+        "investigation_chains": "S256: 8/8 end-to-end investigation chains verified: challenge→defect→recommendation→session→certification.",
+        "MASTER_QUESTION_REGISTRY": "Auto-generated from raw pack files — never hand-edited (governance guard Rule 3). Single source of truth for question inventory."
+      },
+      "operational_validation": {
+        "registries": "7 registries validated (S254): question, session, recommendation, challenge, investigation, certification, defect",
+        "cross_engine_consistency": "95/100 — 1 anomaly (P1-EC-004) identified and tracked",
+        "revision_history": "REVISION_HISTORY.md pairs with every question_state change and certification event (Rule 1 WARN enforcement)"
+      },
+      "violation_detection": "Any entity referenced in one registry but absent from another when both should reflect the same entity. Detected via: cross-engine consistency scan (S254 pattern). Registry-vs-raw-file question_state mismatch.",
+      "non_negotiable": true,
+      "enforcement": "Governance guard Rule 3 (MASTER_QUESTION_REGISTRY auto-generation), Rule 1 (REVISION_HISTORY pairing WARN)"
+    }
+  },
+
+  "principle_interaction": {
+    "dependency_graph": {
+      "P1_identity": ["P4_readiness — identity verification is Gate -1 of pre-flight", "P6_traceability — compound identity enables cross-registry traceability"],
+      "P2_scan_once": ["P4_readiness — scan artifacts feed pre-flight gates", "P5_governance — automated guards consume scan artifacts"],
+      "P3_delta_review": ["P4_readiness — delta determination is Gate 0 of pre-flight", "P2_scan_once — delta artifacts enable artifact consumption optimization"],
+      "P4_readiness": ["P5_governance — readiness gates block at governance guard level", "P1_identity — identity validation is prerequisite"],
+      "P5_governance": ["All principles — governance automation enforces every principle at tool-execution level"],
+      "P6_traceability": ["All principles — traceability enables verification that every principle is being followed"]
+    }
+  },
+
+  "automatic_stop_conditions": {
+    "derived_from_principles": [
+      {"condition": "Governance Guard != PASS", "principle": "P5 Governance Automation", "action": "HALT — all writes blocked"},
+      {"condition": "Identity < 99%", "principle": "P1 Identity Before Trust", "action": "HALT — identity model compromised"},
+      {"condition": "Certified DL-008 Exists", "principle": "P4 Readiness Before Certification", "action": "HALT — learner pool contaminated"},
+      {"condition": "Certified DL-026 Exists", "principle": "P4 Readiness Before Certification", "action": "CONDITIONAL — known items tracked, new items blocked"},
+      {"condition": "Traceability Failure", "principle": "P6 Traceability Everywhere", "action": "HALT — registry inconsistency"},
+      {"condition": "Registry Authority Conflict", "principle": "P6 Traceability Everywhere + P2 Scan Once", "action": "HALT — duplicate authority"}
+    ]
+  },
+
+  "certification_basis": {
+    "method": "Each principle validated against operational evidence from Framework v2 deployment (S200-S207 + S252-S262 + S811-S853)",
+    "evidence_level": "HIGH — all principles supported by multiple documented operational outcomes with specific QID/file/session references",
+    "cross_validated_by": "Governance guard test suite (32/32 PASS), cross-engine consistency audit (95/100), operational certification (S207), May Admin reliability audit (96/100)"
+  }
+}

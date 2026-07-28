@@ -1,0 +1,47 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "validation": "Effort estimates from S302-S306 are cross-consistent. Improvement projections are conservative.",
+  "items": [
+    {
+      "activity": "Domain E certification",
+      "effort": "6-8 sessions",
+      "impact": "178 items certified, 29 P0 resolved, EW coverage added",
+      "value": "CRITICAL",
+      "validation": "CONFIRMED — aligns with S306/S304 findings"
+    },
+    {
+      "activity": "Domain F certification",
+      "effort": "5-7 sessions",
+      "impact": "150 items certified, 8 P0 resolved",
+      "value": "HIGH",
+      "validation": "CONFIRMED"
+    },
+    {
+      "activity": "DL-008 remediation",
+      "effort": "3 sessions",
+      "impact": "67 items cleared, learner pool safe",
+      "value": "CRITICAL",
+      "validation": "CONFIRMED"
+    },
+    {
+      "activity": "Case-bank EW authoring",
+      "effort": "6-8 sessions",
+      "impact": "~310 items receive distractor feedback",
+      "value": "HIGH",
+      "validation": "CONFIRMED — S302/S303/S305 all flag this as top gap"
+    },
+    {
+      "activity": "EC enrichment",
+      "effort": "In certification sessions",
+      "impact": "~1,500 items receive expanded explanations",
+      "value": "MEDIUM",
+      "validation": "CONFIRMED — secondary to EW; incorporated into cert waves"
+    }
+  ],
+  "assumptionsValidated": [
+    "EW authoring is the dominant instructional gap — CONFIRMED across S302-S306",
+    "Domain E/F certification addresses the largest quality AND certification gaps simultaneously — CONFIRMED",
+    "Case-bank EW gap (96.1%) is the single largest learner-impact deficit — CONFIRMED",
+    "DL-008 remediation is the highest-safety priority — CONFIRMED"
+  ]
+}

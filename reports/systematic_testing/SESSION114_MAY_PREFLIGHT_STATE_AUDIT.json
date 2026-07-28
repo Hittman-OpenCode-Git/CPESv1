@@ -1,0 +1,63 @@
+{
+  "session": "S114",
+  "timestamp": "2026-07-25",
+  "preflight_tests": {
+    "readiness": 37,
+    "calibration": 18,
+    "tutoring_safety": 74,
+    "total": 129,
+    "result": "PASS"
+  },
+  "may_configuration": {
+    "tutoringPilotEnabled_default": false,
+    "isPilotEnvironment_logic": "Checks this.config.tutoringPilotEnabled first; if true, returns true. Then checks process.env.CMA_MAY_PILOT === '1' (try/catch for browser env). Returns false otherwise. Three-tier: config flag > env var > pilotUserIds cohort (cohort path declared in comment but not yet wired).",
+    "guarded_speak_paths": [
+      "explain",
+      "hint_case",
+      "hint_mcq",
+      "wrong_choices",
+      "simplify",
+      "progress",
+      "weakness",
+      "summary"
+    ],
+    "guarded_recommend_paths": [
+      "similar",
+      "next",
+      "recovery"
+    ],
+    "evidence_validators": [
+      "_hasImprovingEvidence",
+      "_hasPersistentWeakEvidence",
+      "_hasDecliningEvidence",
+      "_hasUnstableEvidence",
+      "_hasHintDependentEvidence",
+      "_hasDifficultySensitiveEvidence",
+      "_hasConfidenceEvidence",
+      "_assessInsightEvidence"
+    ],
+    "safety_log_methods": [
+      "_safetyLog",
+      "_gateLog",
+      "_logPilotUsage"
+    ],
+    "no_pack_scoring_content_refs": true
+  },
+  "learner_state": {
+    "modelVersion": "S111-1.0",
+    "modelVersion_locations_confirmed": 2,
+    "stabilityHigh": 75,
+    "accuracyGood": 75,
+    "all_12_thresholds_confirmed": true
+  },
+  "git_status": {
+    "dirty_files": [],
+    "unexpected_diffs": false
+  },
+  "safeguard_status": {
+    "s111_guarded_speak": "INTACT",
+    "s112_recommendation_gates": "INTACT",
+    "s113_evidence_thresholds": "INTACT",
+    "isPilotEnvironment_gating": "INTACT"
+  }
+}

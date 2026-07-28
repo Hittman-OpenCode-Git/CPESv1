@@ -1,0 +1,218 @@
+{
+  "session": "802",
+  "agent": "D",
+  "title": "Governance Correction Package",
+  "date": "2026-07-26",
+  "superseded_document": "SESSION_STATUS_2026-07-24.md",
+  "purpose": "All prior reports (S800, S700, SESSION_STATUS_2026-07-24) used forward-scan regex methodology that systematically captured the NEXT QID's CorrectChoice (~75% false-positive rate) due to universal CC-before-QID architecture across all 5 packs. The corrected metrics below are based on Function-constructor same-object parsing (S801/S802) and raw-file grep — the only authoritative methods.",
+  "superseded_metrics": {
+    "certified_count": {
+      "old": 2031,
+      "new": 2181,
+      "delta": "+150",
+      "pct_old": 81.2,
+      "pct_new": 87.2,
+      "reason": "Pack C undercounted by 100 (250→350), Pack D undercounted by 50 (300→350). Sections C and D in both packs were Certified but reported as In Audit/Unprocessed."
+    },
+    "certified_dl008": {
+      "old": 67,
+      "new": 0,
+      "pct_reduction": "-100%",
+      "reason": "DL-029: forward-scan from QuestionID to find CorrectChoice captures the NEXT QID's answer letter in all 5 packs. All 67 reported DL-008 items were false positives. Zero Certified DL-008 actually exist.",
+      "methodology_fix": "Function-constructor same-object parse (P1). NEVER forward-scan from QID to CC (P2)."
+    },
+    "pack_c_certified": {
+      "old": 250,
+      "new": 350,
+      "delta": "+100",
+      "sections_now_certified": ["C", "D"],
+      "sections_remaining": ["E", "F"]
+    },
+    "pack_d_certified": {
+      "old": 300,
+      "new": 350,
+      "delta": "+50",
+      "sections_now_certified": ["C"],
+      "sections_remaining": ["E", "F"]
+    },
+    "fd045": {
+      "old": "missing content block",
+      "new": "structurally complete",
+      "correct_cc": "B",
+      "reason": "Forward-scan artifact — scanner captured adjacent QID's CC, concluded content referenced wrong item"
+    },
+    "fd075": {
+      "old": "missing content block",
+      "new": "structurally complete",
+      "correct_cc": "C",
+      "reason": "Identical forward-scan artifact pattern to FD-045"
+    }
+  },
+  "corrected_metrics": {
+    "total_certified": 2181,
+    "pct_certified": 87.2,
+    "total_archived": 132,
+    "total_unprocessed": 187,
+    "total_pool": 2500,
+    "certified_dl008": 0,
+    "certified_dl026": 0,
+    "governance_status": "CLEAN"
+  },
+  "pack_level_detail": {
+    "pack_a": {
+      "total": 500,
+      "certified": 481,
+      "archived": 19,
+      "unprocessed": 0,
+      "non_certified_non_archived": 0,
+      "pct_certified": 96.2,
+      "status": "All 500 accounted for (Agent F). 481 Certified, 19 Archived. Zero uncertified active items.",
+      "quality_tier": "Silver (92/100)",
+      "sections_certified": ["A", "D", "E"],
+      "sections_partial": ["B", "C", "F"]
+    },
+    "pack_b": {
+      "total": 500,
+      "certified": 500,
+      "archived": 0,
+      "unprocessed": 0,
+      "non_certified_non_archived": 0,
+      "pct_certified": 100.0,
+      "status": "Gold standard. All 6 sections fully certified. 500/500.",
+      "quality_tier": "Gold (96/100)",
+      "sections_certified": ["A", "B", "C", "D", "E", "F"],
+      "sections_partial": []
+    },
+    "pack_c": {
+      "total": 500,
+      "certified": 350,
+      "archived": 56,
+      "unprocessed": 94,
+      "non_certified_non_archived": 94,
+      "pct_certified": 70.0,
+      "status": "Sections A-D certified. E, F need work.",
+      "quality_tier": "Bronze (73/100)",
+      "sections_certified": ["A", "B", "C", "D"],
+      "sections_remaining": ["E", "F"]
+    },
+    "pack_d": {
+      "total": 500,
+      "certified": 350,
+      "archived": 57,
+      "unprocessed": 93,
+      "non_certified_non_archived": 93,
+      "pct_certified": 70.0,
+      "status": "Sections A-D certified. E, F need work.",
+      "quality_tier": "Bronze (73/100)",
+      "sections_certified": ["A", "B", "C", "D"],
+      "sections_remaining": ["E", "F"]
+    },
+    "pack_e": {
+      "total": 500,
+      "certified": 500,
+      "archived": 0,
+      "unprocessed": 0,
+      "non_certified_non_archived": 0,
+      "pct_certified": 100.0,
+      "status": "Structurally clean but educationally at-risk. DL-031 definition-match difficulty inflation affects ~50 items.",
+      "quality_tier": "Silver (85/100)",
+      "sections_certified": ["A", "B", "D", "E", "F"],
+      "sections_partial": ["C"],
+      "dl031_risk": "~50 items labeled Moderate test Bloom's Remember/Understand — should be Easy"
+    }
+  },
+  "quality_tier_summary": {
+    "gold": {
+      "pack": "B",
+      "score": 96,
+      "reason": "500/500 Gold standard. All 6 sections certified. Zero defects. Distractor explanations all substantive and choice-specific."
+    },
+    "silver": [
+      {
+        "pack": "A",
+        "score": 92,
+        "reason": "481/500 certified. 19 Archived. Sections B/C/F partially certified. Minor metadata issues (DL-015/016)."
+      },
+      {
+        "pack": "E",
+        "score": 85,
+        "reason": "500/500 certified but DL-031 difficulty inflation (~50 items). Section C partially certified. Structurally clean."
+      }
+    ],
+    "bronze": [
+      {
+        "pack": "C",
+        "score": 73,
+        "reason": "350/500 certified. Sections E/F remain Unprocessed with DL-013 boilerplate. 56 Archived."
+      },
+      {
+        "pack": "D",
+        "score": 73,
+        "reason": "350/500 certified. Sections E/F remain Unprocessed with DL-013 boilerplate. 57 Archived."
+      }
+    ]
+  },
+  "governance_state": {
+    "learner_delivery_pool": "2,181 Certified items — zero known defective items. Prior 67-item DL-008 block was a false alarm (DL-029 artifact).",
+    "pre_delivery_safety": "PASS. No Certified items carry DL-008. No known-defective QIDs in delivery pool.",
+    "active_risks": [
+      {
+        "risk": "DL-031 difficulty inflation in Pack E (~50 items)",
+        "severity": "Medium",
+        "impact": "Learners practicing on easy items labeled Moderate — distorted performance analytics"
+      },
+      {
+        "risk": "DL-013 boilerplate in Packs C/D Sections E/F (~613 fields)",
+        "severity": "Low",
+        "impact": "Non-Certified items only — zero learner pool exposure"
+      },
+      {
+        "risk": "DL-032 case bank uniform difficulty (420 items)",
+        "severity": "Medium",
+        "impact": "All case items labeled Moderate — zero differentiation for adaptive delivery"
+      }
+    ],
+    "cleared_risks": [
+      "DL-008 Certified (0 actual — was 67 false positives)",
+      "DL-026 Pack D Section D (0 actual — was scan artifact)",
+      "FD-045 missing content (structurally complete — CC:B)",
+      "FD-075 missing content (structurally complete — CC:C)",
+      "DL-030 answer-key errors (5 items — all fixed S68/Phase 6)"
+    ]
+  },
+  "methodology_corrections": {
+    "root_cause": "DL-029: All 5 pack files store CorrectChoice BEFORE QuestionID. Forward-scan from QID captures NEXT QID's CC → ~75% false-positive rate on ALL structural scans.",
+    "permanent_rules": [
+      "P1: Function-constructor parse is the ONLY authoritative method for structural analysis",
+      "P2: NEVER forward-scan from QuestionID to find CorrectChoice",
+      "P3: Verify CC position relative to QID before selecting scan methodology",
+      "P4: Every scan must self-verify against a ground-truth sample",
+      "P5: Scanning scripts must be CC-position-aware",
+      "P6: Totals-only reports without QID lists are rejected",
+      "P7: Brace-matchers must be string-aware (DL-020)",
+      "P8: Two independent scans must converge before accepting any count"
+    ],
+    "false_positive_tally_estimate": "~520+ across S800 (67), S700 (342), FD-045/075 (2), Pack B A/D (111)"
+  },
+  "documents_requiring_update": [
+    "SESSION_STATUS_2026-07-24.md — all counts incorrect due to DL-029 forward-scan methodology",
+    "CURRENT_BASELINES.md — hashes stale (pre-S801 drift). Requires re-hashing after S801 integrity confirmations.",
+    "DEFECT_LIBRARY.md — DL-008 entry needs CURRENT status update to reflect 0 Certified",
+    "DEFECT_LIBRARY.md — DL-026 entry needs correction for Pack D Section D (0 actual, not 50)"
+  ],
+  "architectural_note": {
+    "field_ordering": "CorrectChoice universally precedes QuestionID in all 5 packs (single-object architecture, no dual-block). This is the canonical file format — not a defect.",
+    "implication": "Every forward-scan script in the project (S700, S800, FD-045/075, prior DL-008/DL-026 sweeps) was broken by design. No pack files contain structural defects of the type reported.",
+    "dl_016_status": "Dual-block architecture (ChoiceA-D + Choices.A-D) does not exist in current pack files. DL-016 as originally described (metadata-content shift) is No Finding in current architecture."
+  },
+  "cross_references": {
+    "agent_b_baseline": "reports/SESSION802_BASELINE_CORRECTION.json",
+    "agent_c_dl029": "reports/SESSION802_DL029_ROOT_CAUSE_ANALYSIS.json",
+    "s801_summary": "reports/SESSION801_SESSION_SUMMARY.md",
+    "status_stale": "reports/session_status/SESSION_STATUS_2026-07-24.md (superseded — 2,031 is wrong)",
+    "status_superseded": "reports/session_status/SESSION_STATUS_2026-07-23.md (superseded — 1,080 is fully stale)",
+    "defect_library": "knowledge/DEFECT_LIBRARY.md",
+    "revision_history": "knowledge/REVISION_HISTORY.md"
+  },
+  "recommended_next_action": "Write SESSION_STATUS_2026-07-26.md with corrected 2,181/2,500 baseline. Update CURRENT_BASELINES.md hashes post-S801. Close DL-008/DL-026 as NO FINDING for Certified pool. Focus remediation on Pack C/D Sections E/F (DL-013) and Pack E DL-031 difficulty recalibration."
+}

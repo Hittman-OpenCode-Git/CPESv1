@@ -1,0 +1,199 @@
+{
+  "session": "S367",
+  "date": "2026-07-28",
+  "type": "remediation-automation-analysis",
+  "mode": "read-only",
+  "baseline_data": {
+    "total_items": 2540,
+    "total_certified": 2337,
+    "total_difficulty_score_3": 1154,
+    "total_archived_items_in_target_sections": 183,
+    "automation_score": 48,
+    "automation_score_rating": "AT RISK"
+  },
+  "workflows_analyzed": {
+    "dl031_calibration": {
+      "items_affected": "~500",
+      "manual_minutes_per_item": 2.0,
+      "automatable_minutes_per_item": 1.2,
+      "repetitive_steps": [
+        "Scan pack files for items with CognitiveLevel in {Remember, Understand} AND DifficultyScore >= 3",
+        "Compute lexical similarity between stem text and correct answer choice text",
+        "Flag items exceeding similarity threshold as DL-031 candidates",
+        "Bulk-replace Difficulty and DifficultyScore fields for confirmed items",
+        "Re-run validator suite post-change to confirm zero regressions",
+        "Update CURRENT_BASELINES.md hashes for modified pack files",
+        "Append REVISION_HISTORY.md entry with before/after counts"
+      ],
+      "decision_steps": [
+        "Verify flagged candidate is a genuine definition-match (not a legitimate Moderate conceptual item with definition-like stem)",
+        "Adjudicate borderline cases where stem-choice overlap is moderate but distractor engineering may justify Moderate label",
+        "Confirm the downgrade does not create a DifficultyScore-to-Difficulty label mismatch"
+      ],
+      "automation_feasibility": "HIGH",
+      "automation_approach": "A regex-based scanner (new script: scripts/scan_dl031.js) can identify definition-match candidates by: (1) filtering items with CognitiveLevel in {Remember, Understand} AND DifficultyScore >= 3; (2) computing the stem-to-correct-choice word overlap ratio (word-level Jaccard similarity); (3) checking for definition-stem patterns ('Which of the following', 'refers to', 'is defined as', 'is a', 'represents the'). High-confidence matches (overlap > 60% + definition pattern) can be auto-downgraded. Borderline cases (40-60% overlap) are routed to a verification queue for human/agent review. After verification, a bulk-apply script downgrades Difficulty from 'Moderate'/'Difficult' to 'Easy' and DifficultyScore to 1. Post-change verification (governance guard, validator, hash recapture) is fully script-chained.",
+      "estimated_savings_hours": 10.0,
+      "false_positive_risk": "MODERATE — 20-30% of flagged items may be legitimate Moderate items with definition-like stems but sophisticated distractor engineering. The verification queue handles this. Risk is contained: false positives result in slightly over-downgraded difficulty labels, never in content errors.",
+      "scanner_exists": false,
+      "scanner_recommended_name": "scan_dl031.js",
+      "scanner_effort_hours": 1.5
+    },
+    "dl035_remediation": {
+      "items_affected": 39,
+      "fields_to_author": 117,
+      "manual_minutes_per_field": 3.0,
+      "automatable_minutes_per_field": 0.5,
+      "repetitive_steps": [
+        "Pre-remediation scan to verify exactly which non-CC EW slots are empty",
+        "Post-remediation verification that all 3 non-CC slots per item are non-empty (Rule 6 compliance)",
+        "Governance guard Rule 6 test pass verification",
+        "QID count preservation check",
+        "Update CURRENT_BASELINES.md hashes for pack_c_corrected.js and pack_d_corrected.js",
+        "Append REVISION_HISTORY.md entry"
+      ],
+      "decision_steps": [
+        "Author 117 choice-specific distractor explanations with Technology & Analytics domain-appropriate content (data governance, ERP, cybersecurity, AI, etc.)",
+        "Each explanation must: identify specific error in that distractor, explain the misconception, contrast with correct approach",
+        "Each explanation must reference the choices from the content block (Choices.A-D), not the metadata block (ChoiceA-D) — DL-016 risk",
+        "Verify each authored explanation is semantically about the item's own topic, not a shifted/rotated neighbor (DL-010 risk)",
+        "Each field must be >= 50 characters per CAQS EV1"
+      ],
+      "automation_feasibility": "LOW",
+      "automation_approach": "The core authoring task (writing 117 choice-specific distractor explanations) is inherently judgment-based and cannot be meaningfully automated. AI-assisted drafting can produce template suggestions, but final text requires ACMA Part 1 domain knowledge appropriate to each distractor. Automation value is limited to pre/post verification scaffolding: a script can (1) inventory every empty non-CC EW slot by QID, (2) verify post-remediation that all 117 slots are non-empty and >= 50 chars, (3) flag any slot that still triggers Rule 6. The verification automation saves ~1 hour across 117 fields. A template-extraction tool could pre-fill distractor skeletons based on the item's Topic/MicroTopic fields, reducing draft time from 3 min to ~2 min per field, but this is AI-assisted drafting, not true automation.",
+      "estimated_savings_hours": 1.0,
+      "scanner_exists": false,
+      "scanner_recommended_name": "scan_dl035_preflight.js"
+    },
+    "clone_replacement": {
+      "items_remaining": "~180-200",
+      "manual_minutes_per_item": 15.0,
+      "automatable_minutes_per_item": 3.0,
+      "repetitive_steps": [
+        "Select next Archived QID slot from the replacement queue",
+        "Remove old QuestionID metadata while preserving slot position",
+        "Assign new QuestionID following naming convention (P1-EC-xxx, P1-FD-xxx, etc.)",
+        "Assign metadata fields: Part, Section, SectionName, ItemType, ItemStyle, DifficultyScore",
+        "Verify no duplicate QuestionID created",
+        "Run governance guard test suite post-batch",
+        "Update question_state to 'Active' or 'Certified' per batch rules",
+        "Update CURRENT_BASELINES.md hashes",
+        "Append REVISION_HISTORY.md and replacement_lineage_tracker entry"
+      ],
+      "decision_steps": [
+        "Select which blueprint topic/subtopic to author for this slot (requires coverage analysis)",
+        "Author a CMA Part 1 appropriate stem that tests the selected concept at the right cognitive level",
+        "Author 4 choices where exactly one is correct and 3 are plausible distractors",
+        "Author the ExplanationCorrect with formula substitution (if calculation) or reasoning chain (if conceptual)",
+        "Author 3 ExplanationWrong fields with choice-specific distractor analysis",
+        "Verify accounting correctness: independently solve the question, confirm CorrectChoice",
+        "Verify explanation quality: EV1-EV8, CAQS compliance",
+        "Assign correct CognitiveLevel, Difficulty, DifficultyScore based on actual cognitive demand",
+        "Cross-check against existing items to avoid clone overlap with other packs"
+      ],
+      "automation_feasibility": "MEDIUM",
+      "automation_approach": "Metadata scaffolding can be fully automated: a script can pre-fill all structural fields (QuestionID, Part, Section, SectionName, SectionTags, ItemType, ItemStyle) from the QID convention and section template, leaving only content fields (Stem, Choices, ExplanationCorrect, ExplanationWrong*) for authoring. Post-authoring verification can be script-chained: read the authored item from the pack file, verify CorrectChoice matches the independently derived answer, run governance guard Rule 2/6/9, and log discrepancies. The S899 model of 20 items/session can potentially increase to 25-30 items/session with automated metadata scaffolding and verification chaining — a 25-50% throughput improvement. However, the core creative work (stem design, distractor engineering, explanation authoring) remains irreducible manual/agent labor. The 15 min/item ceiling can be reduced to ~11 min/item (3 min metadata + 8 min authoring + 0 min verification).",
+      "estimated_savings_hours": 9.5,
+      "throughput_improvement_pct": 25,
+      "script_scaffolding_exists": false,
+      "scaffolding_script_name": "clone_replacement_scaffolder.js"
+    },
+    "certification_workflow": {
+      "steps_per_cert_pass": 9,
+      "manual_minutes_per_batch": 20.0,
+      "automatable_minutes_per_batch": 12.0,
+      "repetitive_steps": [
+        "Run identity_validator.js — verifies all required structural fields exist",
+        "Run readiness_scorer.js — scores items BLOCKED/CERTIFY/READY",
+        "Run certification_candidate_engine.js — selects candidate items within batch cap",
+        "Run scan_dl008_fn.js — DL-008 scan on candidate batch",
+        "Run scan_s710r_dl026.js — DL-026 scan on candidate batch",
+        "Run test_governance_guard.js — verify Rules 2, 6, 9 pass",
+        "Run validator suite — verify zero new errors",
+        "Run Get-FileHash for modified pack files",
+        "Update CURRENT_BASELINES.md with new hashes",
+        "Append REVISION_HISTORY.md entry with QID list, verification results, before/after counts"
+      ],
+      "decision_steps": [
+        "CAQS 6-dimension verification: assess correctness, precision, difficulty calibration, distractor engineering, blueprint alignment, CMA Part 1 relevance",
+        "Adjudicate scan findings: confirm flagged defects are genuine vs false positives (DL-016 metadata-content mismatch)",
+        "Determine certification disposition: certify, route to editorial queue, or escalate",
+        "Author REVISION_HISTORY.md entry content (not template — actual findings, counts, dispositions)"
+      ],
+      "automation_feasibility": "HIGH",
+      "automation_approach": "A certification pipeline orchestrator (scripts/pipeline_orchestrator.js — already exists but manual-invoke) can script-chain all 7 structural scans + verification steps into a single command. The orchestrator would: (1) accept a QID list or section range; (2) sequentially invoke identity_validator → readiness_scorer → candidate_engine → dl008_scanner → dl026_scanner → governance_guard_tests → validator_suite; (3) aggregate output into a per-batch certification report; (4) auto-generate the REVISION_HISTORY.md entry template with QID list and pass/fail counts. The only remaining manual step is the CAQS 6-dimension verification (requires accounting judgment). Baselines recapture (hashing, table update) can be added to the orchestrator as a post-certification hook. A full certification pass drops from ~20 min/batch to ~8 min/batch.",
+      "estimated_savings_hours": 2.0,
+      "orchestrator_exists": true,
+      "orchestrator_status": "Manual invocation only — no auto-chaining, no REVISION_HISTORY generation, no baselines hook"
+    },
+    "qc_workflow": {
+      "manual_minutes_per_change": 15.0,
+      "automatable_minutes_per_change": 12.0,
+      "repetitive_steps": [
+        "Run node scripts/test_governance_guard.js — confirm 51/51 PASS",
+        "Run validator suite — capture error/warning counts",
+        "Run Select-String -Pattern '\"QuestionID\"' — confirm QID count unchanged",
+        "Run Get-FileHash -Algorithm SHA256 on modified pack files — capture new hashes",
+        "Diff new hashes against CURRENT_BASELINES.md §5 baseline — flag drift",
+        "Run scan_dl008_fn.js on modified packs — confirm 0 new DL-008",
+        "Run scan_s710r_dl026.js — confirm no new empty distractor slots",
+        "Update CURRENT_BASELINES.md table rows with new hashes",
+        "Update CURRENT_BASELINES.md §1 certified counts if certification happened",
+        "Append REVISION_HISTORY.md entry"
+      ],
+      "decision_steps": [
+        "Interpret scan output: determine if flagged items are genuine defects or false positives",
+        "Decide whether hash drift is expected (intentional change) or alarming (unexpected corruption)",
+        "Determine if change warrants a full re-baseline or targeted §1 update"
+      ],
+      "automation_feasibility": "HIGH",
+      "automation_approach": "A post-change verification script (scripts/post_change_qc.js) can execute the entire QC pipeline: (1) run governance guard test suite; (2) run validator suite; (3) verify QID counts; (4) recapture SHA-256 hashes for all 13 runtime-critical files; (5) diff against stored baselines from CURRENT_BASELINES.md; (6) flag any unexpected hash drift; (7) auto-update CURRENT_BASELINES.md if hashes changed and a 'baselines-update' flag is set; (8) generate a QC report. The entire workflow drops from 15 min to ~3 min of human decision time (interpreting unexpected flags).",
+      "estimated_savings_hours": 2.0,
+      "qc_script_exists": false,
+      "qc_script_name": "post_change_qc.js"
+    }
+  },
+  "aggregate": {
+    "total_manual_hours_remaining": 79.8,
+    "total_automatable_hours": 24.5,
+    "automation_ratio_pct": 30.7,
+    "biggest_single_automation_win": "DL-031 difficulty calibration",
+    "hours_saved_by_biggest_win": 10.0,
+    "ranked_by_savings": [
+      { "workflow": "DL-031 calibration", "savings_hours": 10.0, "feasibility": "HIGH" },
+      { "workflow": "Clone replacement scaffolding", "savings_hours": 9.5, "feasibility": "MEDIUM" },
+      { "workflow": "Certification workflow orchestration", "savings_hours": 2.0, "feasibility": "HIGH" },
+      { "workflow": "QC workflow automation", "savings_hours": 2.0, "feasibility": "HIGH" },
+      { "workflow": "DL-035 remediation verification", "savings_hours": 1.0, "feasibility": "LOW" }
+    ],
+    "automation_development_effort_hours": 8.0,
+    "roi_ratio": 3.06,
+    "note": "Automation ratio of 30.7% means approximately one-third of all remediation labor is spent on tasks a script could perform. The remaining 69.3% is irreducible content work (authoring, verification, judgment) that requires CMA Part 1 domain expertise."
+  },
+  "existing_automation_inventory": {
+    "governance_guard": {
+      "status": "Fully automated — 9 BLOCK rules, 51/51 tests pass",
+      "coverage": "DL-008, DL-026, DL-037, batch caps, registry protection, answer-key verification, question_state tracking"
+    },
+    "defect_scanners": {
+      "status": "7 scanners exist, all manual-invoke",
+      "coverage": "DL-008 (scan_dl008_fn.js), DL-026 (scan_s710r_dl026.js), DL-021 (scan_dl021_s828.js), DL-037 (scan_logic_inversions.js), orchestrator (scan_orchestrator.js)"
+    },
+    "certification_pipeline": {
+      "status": "Framework v2 exists, manual orchestration only",
+      "components": "identity_validator.js, readiness_scorer.js, certification_candidate_engine.js"
+    },
+    "qc_tooling": {
+      "status": "No automated post-change QC script exists",
+      "manual_steps_remaining": "Governance test → validator → QID count → hash capture → baseline update → REVISION_HISTORY"
+    },
+    "gaps": [
+      "No DL-031 scanner — must be authored",
+      "No DL-035 pre/post-flight verification script",
+      "No clone replacement metadata scaffolder",
+      "No automated post-change QC script (post_change_qc.js)",
+      "No certification pipeline auto-chaining (pipeline_orchestrator.js exists but requires manual per-step invocation)",
+      "No automated CURRENT_BASELINES.md regeneration",
+      "No CI/CD pipeline (GitHub Actions, pre-commit hooks)"
+    ]
+  }
+}

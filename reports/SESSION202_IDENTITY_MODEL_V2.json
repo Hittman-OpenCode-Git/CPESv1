@@ -1,0 +1,436 @@
+{
+  "document": "SESSION202_IDENTITY_MODEL_V2",
+  "session": "S202",
+  "title": "Identity Model v2 — Compound-Key Architecture & Registry Specification",
+  "agent": "Architecture Design",
+  "date": "2026-07-27",
+  "mode": "READ_ONLY — design specification, no writes",
+  "sources": [
+    "SESSION201_IDENTITY_ARCHITECTURE.json (Board 4)",
+    "SESSION201_FRAMEWORK_V2_VISION.json (Board 9)",
+    "SESSION320_SESSION_SUMMARY.md",
+    "knowledge/DEFECT_LIBRARY.md (DL-008, DL-010, DL-012, DL-016, DL-018, DL-021, DL-025, DL-026, DL-028, DL-029, DL-030)",
+    "knowledge/QUESTION_METADATA_STANDARD.md §9",
+    "reports/PHASE0B_DL029_GROUND_TRUTH_AND_PREFLIGHT_REPORT.md",
+    "reports/defect_sweeps/DL012_SECTIONE_CLONE_FINDING.md",
+    "pack_d_corrected.js (AD-001 through AD-005 rotation group, lines 1-260)"
+  ],
+
+  "compound_key": {
+    "principle": "A QID is a template-group identifier, not a unique item instance. Uniqueness within the pool requires the full compound key. No tool, scanner, or remediation script shall identify items by QID alone.",
+    "fields": [
+      {
+        "field": "QID",
+        "type": "String",
+        "purpose": "Base template-group identifier — the human-readable label and file-scope namespace boundary.",
+        "format_rules": {
+          "pack_a": {
+            "pattern": "P1-{Section}-{NNN}",
+            "regex": "^P1-[A-F]-\\d{3}$",
+            "example": "P1-E-038",
+            "note": "Section E uses this format within pack_a. Section letters are capital A-F. NNN is 001-150."
+          },
+          "pack_b": {
+            "pattern": "P1B-{Section}-{NNN}",
+            "regex": "^P1B-[A-F]-\\d{3}$",
+            "example": "P1B-B-101",
+            "note": "Prefix 'P1B' distinguishes from Pack A's P1- format. CC stored BEFORE QID in JSON — unique to Pack B."
+          },
+          "pack_c": {
+            "pattern": "P1-{Section}C-{NNN} or P1-{Section}-{NNN}",
+            "regex": "^P1-[A-F]C?-\\d{3}$",
+            "example": "P1-EC-001, P1-AC-001, P1-BC-094",
+            "note": "Section letter + 'C' suffix for Pack C items. Older items may lack the C suffix (P1-BC-094 vs P1-AC-001). The C or lack thereof is the discriminator."
+          },
+          "pack_d": {
+            "pattern": "P1-{Section}D-{NNN}",
+            "regex": "^P1-[A-F]D-\\d{3}$",
+            "example": "P1-AD-001, P1-ED-001",
+            "note": "Section letter + 'D' suffix for Pack D items. Shares template families with Pack C (same choice texts, rotated CC)."
+          },
+          "pack_e": {
+            "pattern": "P1E-{Section}-{NNN}",
+            "regex": "^P1E-[A-F]-\\d{3}$",
+            "example": "P1E-B-079, P1E-C-001",
+            "note": "Prefix 'P1E' distinguishes from Pack A's P1- format. Independent authorship pipeline — different template engine, no rotation groups."
+          }
+        },
+        "cross_pack_collision_risk": [
+          {
+            "scenario": "Pack A Section E items use P1-E-NNN while Pack E items use P1E-E-NNN — visually similar but structurally distinct by prefix (P1- vs P1E-). No actual collision.",
+            "resolution": "File_Path component of compound key disambiguates. P1-E-042 belongs to pack_a_corrected.js. P1E-E-042 belongs to pack_e_corrected.js."
+          },
+          {
+            "scenario": "Pack C and Pack D items share the same template families (stem skeleton, choice texts). P1-EC-001 in Pack C and P1-ED-001 in Pack D are template siblings but belong to different packs. QID format embeds pack identity (EC vs ED). No collision by QID alone, but Template_Family and File_Path add defense-in-depth.",
+            "resolution": "Section suffix (EC/ED) embeds pack identity. File_Path is defense-in-depth."
+          }
+        ]
+      },
+      {
+        "field": "CorrectChoice",
+        "type": "String (enum: A | B | C | D)",
+        "purpose": "Distinguishes rotation positions within a template family. The CC value determines: (a) which EW slot must be empty (DL-008 governance), (b) which learner-facing choice letter is marked correct, (c) which distractor positions are expected to have non-empty EW text.",
+        "validation": "Must equal exactly one of A, B, C, D. Must not be empty, undefined, or multi-character.",
+        "critical_for": [
+          "DL-008 detection — EW[CC] must be empty. If CC is read from the wrong item, the wrong EW slot is flagged.",
+          "DL-026 detection — non-CC EW slots must be non-empty. If CC is wrong, the emptiness signature is misread.",
+          "DL-030 detection — independent CC verification. If CC is wrong, the answer key is wrong.",
+          "S320 remediation — targeting the correct item variant in a rotation group. CC distinguishes AD-002 (CC=B) from AD-004 (CC=D) which share the same stem skeleton."
+        ]
+      },
+      {
+        "field": "EW_Pattern",
+        "type": "4-character binary signature (e.g., '0100')",
+        "purpose": "The binary fingerprint of ExplanationWrong slot emptiness — the most reliable structural identity discriminator. Independent of CC value, stem text, and choice text. A bit-position change means a structurally different item.",
+        "encoding": "Position 0 = EW_A, Position 1 = EW_B, Position 2 = EW_C, Position 3 = EW_D. '0' = empty ('' or absent), '1' = non-empty.",
+        "significance": [
+          "Rotation position discrimination: In a 5-item group with CC rotation A→B→C→D→A, the EW_Pattern for CC=A is '0111' (A empty, B/C/D non-empty), CC=B is '1011', CC=C is '1101', CC=D is '1110'. These are unique within the group.",
+          "DL-008 presence: A '0' at the CC position is correct (DL-008 compliant). A '1' at the CC position is DL-008 defect.",
+          "DL-026 presence: A '0' at any non-CC position is DL-026 defect (missing distractor explanation).",
+          "DL-021 presence: An absent field at any non-CC position is DL-021 (worse than empty).",
+          "Remediation targeting: A remediation script filling EW_B on CC=A item must verify EW_Pattern is '0111' before writing. If EW_Pattern is '0011' (DL-026), the script must author new text, not reuse existing text."
+        ],
+        "edge_cases": {
+          "absent_vs_empty": "Absent ('undefined') and empty ('') both encode as '0' in the pattern. A separate field-level check distinguishes DL-018 (absent CC slot) from DL-008 (non-empty CC slot) and DL-021 (absent non-CC slot) from DL-026 (empty non-CC slot). The binary pattern treats both as '0' for structural identity but the field-presence audit differentiates them.",
+          "dl013_boilerplate": "DL-013 fields are technically non-empty ('1' in pattern) but contain boilerplate. The EW_Pattern alone cannot distinguish boilerplate from substantive text. Gate 2 content scan augments the pattern with semantic analysis.",
+          "dl010_misassignment": "DL-010 fields are non-empty but describe the wrong choice. The EW_Pattern shows '1' at the correct structural position but the text is semantically wrong. Requires Gate 2 semantic verification."
+        }
+      },
+      {
+        "field": "Template_Family",
+        "type": "String (PascalCase, e.g., 'AD_factoring_001')",
+        "purpose": "Identifies which rotation group this item belongs to. Items in a family share the same stem skeleton, the same four choice texts (positionally rotated), and the same ExplanationCorrect text. Only the company name and CC rotation distinguish family members.",
+        "identification_method": {
+          "step_1": "Parse all items in a section. Compute stem Jaccard similarity between all pairs after removing proper nouns (company names: Alderway, Bramblewood, Castlebrook, Deepwater, Elmsworth, Ashford, Brightpoint, Cedarline, Driftwood, Emberton, etc.).",
+          "step_2": "Group items with Jaccard similarity > 90% after company-name removal. These form a candidate template family.",
+          "step_3": "Within each candidate family, verify all items share the same four choice texts (only positionally rotated). Extract the canonical choice set: e.g., {A-text: 'sale of receivables', B-text: 'loan collateralized', C-text: 'reduction of revenue', D-text: 'increase to AP'}.",
+          "step_4": "Verify CC cycles through A, B, C, D, (A) across family members. A family of 5 items should have CC distribution A+B+C+D+A (2:1:1:1, 3 distinct letters, or other rotation patterns depending on family size).",
+          "step_5": "Verify company names follow a fixed alphabetical progression (e.g., Alderway→Bramblewood→Castlebrook→Deepwater→Elmsworth). This progression is the rotation-template artifact.",
+          "step_6": "Assign a canonical family identifier: {Section}_{concept}_{number}. Example: 'AD_factoring_001' for Pack D Section A factoring group 1. Save the family identifier to all member items.",
+          "step_7": "Identify the canonical seed: the item with the longest, most standard-referenced ExplanationCorrect (preferably with ASC/COSO citation), all EW slots substantive (no DL-013/010/026), and question_state: 'Unprocessed' or 'In Audit'. If no seed meets criteria, the family requires re-authoring."
+        },
+        "family_size_distribution": {
+          "typical": "5 items per family (1 seed + 4 clone siblings). The template engine generated 5 variants with company-name substitution.",
+          "variants": "Some families may have fewer items due to prior archival or remediation. The Template_Family field tracks group membership regardless of family size.",
+          "clone_determination": "An item is a clone if, compared to the canonical seed: (a) stem differs only by company name, (b) all 4 choice texts are identical (positionally rotated), (c) ExplanationCorrect is identical or nearly identical (Jaccard > 95%)."
+        },
+        "canonical_seed_criteria": [
+          "question_state: 'Unprocessed' or 'In Audit' (not Archived, not already Certified if family is being re-evaluated)",
+          "ExplanationCorrect contains an explicit ASC, COSO, IAS, or IMA standard citation",
+          "All 3 non-CC EW slots have non-empty, choice-specific text (no DL-013 boilerplate, no DL-010 misassignment, no DL-026 empty slots)",
+          "EW[CC] is empty or '' (DL-008 compliant)",
+          "DifficultyScore matches cognitive demand of the item (not inflated — DL-031 check)",
+          "Bloom's CognitiveLevel matches the cognitive demand implied by the stem"
+        ],
+        "clone_archival_rule": "Non-seed clones should be Archived (question_state: 'Archived') unless they offer genuine pedagogical differentiation beyond company-name substitution. Clone items inflate the pool with zero additional testing value (DL-012: 140 clones across Pack C/D Section E)."
+      },
+      {
+        "field": "File_Path",
+        "type": "String",
+        "purpose": "Disambiguates which pack file and section the item resides in. QID format alone is not globally unique. This field also determines scanner methodology (Pack B: CC-before-QID requires within-object extraction).",
+        "format": "pack_{letter}_corrected.js:{Section} {SectionName}",
+        "examples": [
+          "pack_d_corrected.js:Section A — External Financial Reporting Decisions",
+          "pack_b_corrected.js:Section B — Planning, Budgeting, and Forecasting",
+          "pack_e_corrected.js:Section E — Internal Controls"
+        ],
+        "scanner_implications": {
+          "pack_b": "CorrectChoice BEFORE QuestionID in JSON object. ALL scanners must use within-object extraction. Forward-scan from QID produces 100% false positives for CC-dependent checks.",
+          "packs_a_c_d_e": "CorrectChoice AFTER QuestionID. Standard within-object extraction works. Forward-scan produces ~25% false positives from boundary-crossing (missed QID or grabbed neighbor).",
+          "pack_a_dual": "Pack A items carry both metadata and content fields in a single JSON object. The 'dual-block' concept is a field-level organization pattern, not separate JSON objects. EW text and Choices text MUST be verified from the SAME object boundary. Cross-object EW-Choice pairing is invalid."
+        }
+      },
+      {
+        "field": "VersionID",
+        "type": "String (UUID v7 or ISO-8601-derived timestamp + increment)",
+        "purpose": "Tracks content changes across certification waves. When any learner-facing field changes (Stem, Choices, CC, EC, EW[A-D]), the VersionID increments. This enables delta review: unchanged items skip re-review.",
+        "format": "YYYYMMDDHHMMSS-{increment} (e.g., '20260723144421-1') or UUID v7. The timestamp-increment format is human-readable and sortable; UUID v7 is more robust for distributed systems.",
+        "versioning_rules": [
+          "Content change (Stem, Choices, CC, EC, EW[A-D]) → VersionID increments. New hash generated.",
+          "Metadata change (Difficulty, CognitiveLevel, question_state, LOSTag) → VersionID does NOT change. Metadata_Hash updates instead.",
+          "Structural fix (EW[CC] cleared from 'text' to '') → VersionID increments. The EW field changed. Hash changed.",
+          "No change → VersionID unchanged. Hash match confirmed."
+        ],
+        "lineage": {
+          "parent_version": "The VersionID of the item at the time of last certification. Tracked in CERTIFICATION_LEDGER.json.",
+          "replacement_lineage": "When an item is superseded (e.g., re-authored from scratch with new QID), the old item is Archived and the new item inherits a lineage reference to the old QID. Format: {new_QID}.lineage = {old_QID}@{old_VersionID}."
+        }
+      }
+    ],
+
+    "compound_key_example": {
+      "QID": "P1-AD-002",
+      "CorrectChoice": "B",
+      "EW_Pattern": "1011",
+      "Template_Family": "AD_factoring_001",
+      "File_Path": "pack_d_corrected.js:Section A — External Financial Reporting Decisions",
+      "VersionID": "20260724144500-1",
+      "canonical_string": "P1-AD-002::B::1011::AD_factoring_001::pack_d_corrected.js:A::20260724144500-1",
+      "hashable_string": "P1-AD-002|B|1011|AD_factoring_001|pack_d_corrected.js|20260724144500-1"
+    },
+
+    "rotation_group_example": {
+      "family": "AD_factoring_001",
+      "items": [
+        {"QID": "P1-AD-001", "CC": "A", "EW_Pattern": "0111", "Company": "Alderway", "is_seed": true},
+        {"QID": "P1-AD-002", "CC": "B", "EW_Pattern": "1011", "Company": "Bramblewood", "is_seed": false},
+        {"QID": "P1-AD-003", "CC": "C", "EW_Pattern": "1101", "Company": "Castlebrook", "is_seed": false},
+        {"QID": "P1-AD-004", "CC": "D", "EW_Pattern": "1110", "Company": "Deepwater", "is_seed": false},
+        {"QID": "P1-AD-005", "CC": "A", "EW_Pattern": "0111", "Company": "Elmsworth", "is_seed": false}
+      ],
+      "canonical_choice_texts": {
+        "A": "As a sale of receivables, removing them from the balance sheet and recognizing any loss on sale",
+        "B": "As a loan collateralized by receivables, with no change to the receivables balance",
+        "C": "As a reduction of revenue for the period",
+        "D": "As an increase to accounts payable"
+      },
+      "stem_skeleton": "{Company} sells its accounts receivable to a factor without recourse. How should this transaction generally be recorded?",
+      "ec_text": "A factoring transaction without recourse, where the factor assumes the risk of collection, is recorded as a sale of receivables, removing them from the seller's books.",
+      "note": "AD-001 and AD-005 have identical EW_Pattern ('0111') and CC ('A'). They are structurally equivalent variants — company-name + Topic number (A.001 vs A.005) are the only differentiator. AD-001 is the canonical seed (longest EC, ASC 860 citations in EW slots, substantive distractor text). AD-005 is a clone."
+    }
+  },
+
+  "rotation_resilience": {
+    "template_rotation": {
+      "description": "Template engine produces N variants of the same stem skeleton where CorrectChoice cycles through A→B→C→D→(A) across variants. Company names progress alphabetically. The compound key disambiguates each variant.",
+      "compound_key_role": "QID identifies the template group. CorrectChoice discriminates which variant this is (position in the rotation cycle). EW_Pattern confirms structural identity. Template_Family groups all variants for cross-item audit.",
+      "s320_prevention": "A remediation script must match on QID + CorrectChoice + EW_Pattern + question_state simultaneously. The script identifies P1-EC-001 with CC=A and EW_Pattern=0111 and question_state='Unprocessed' — not the first brace-matched occurrence of 'P1-EC-001' which might have CC=B.",
+      "canonical_seed_selection": "Within a family, the canonical seed is the item with the most substantive content (EC length, standard citations, EW quality). All other family members are clones. Seed selection must verify: CC matches EW_Pattern (CC-slot empty), EW non-CC slots are all non-empty + choice-specific."
+    },
+    "remastering": {
+      "description": "An existing Certified item's content is changed (Stem rewritten, Choices updated, EC expanded, EW slots filled). The item retains its QID but gets a new VersionID.",
+      "compound_key_role": "QID, CorrectChoice, EW_Pattern, Template_Family, and File_Path remain stable (identity components). Only VersionID increments. The item's content_hash changes but its compound key (minus VersionID) stays the same. Delta review detects the hash change and routes to full Quality Board review.",
+      "certification_continuity": "The item's question_state transitions: Certified → In Audit (re-verification) → Certified (with new VersionID). The CERTIFICATION_LEDGER appends a new entry with the new VersionID, linking to the previous version via parent_version."
+    },
+    "replacement_lineage": {
+      "description": "An item is replaced by a completely new item (new QID, new content). The old item is Archived. The new item inherits a lineage reference.",
+      "compound_key_role": "The old item's QID is Archived (question_state: 'Archived'). A new item with a new QID is created. The new item's metadata records: replaced: 'P1-AD-001@20260724144500-1'. This preserves the audit trail of what content was superseded.",
+      "archival_protection": "Archived items preserve all content fields (Stem, Choices, CC, EC, EW[A-D]). Only question_state changes to 'Archived'. The compound key remains resolvable in the registry — no loss of content provenance."
+    },
+    "certification_history": {
+      "description": "Every state transition (Unprocessed → In Audit → Certified → In Audit → Certified → ...) is recorded in CERTIFICATION_LEDGER.json with the full compound key.",
+      "ledger_entry_schema": {
+        "compound_key": "Full compound key string",
+        "version_id": "VersionID at time of certification",
+        "previous_version_id": "Parent VersionID (null for first certification)",
+        "state_transition": "from_state → to_state",
+        "content_hash": "SHA-256 of canonical content fields",
+        "metadata_hash": "SHA-256 of metadata fields",
+        "quality_verdict": "CERTIFY | HOLD | ESCALATE",
+        "dimension_scores": {"D1-BP": 9, "D2-Cog": 8, "D3-Tech": 10, "D4-Dist": 7, "D5-Real": 6, "D6-Num": 10, "D7-Exp": 8, "D8-Clarity": 7, "D9-Acc": 5, "D10-Meta": 8},
+        "agent_verdicts": [
+          {"agent": "Quality_Agent_1", "findings": [], "verdict": "CERTIFIABLE"},
+          {"agent": "Quality_Agent_2", "findings": [], "verdict": "CERTIFIABLE"},
+          {"agent": "Quality_Agent_3", "findings": ["DL-031: Difficulty inflated"], "verdict": "CERTIFIABLE_WITH_NOTES"}
+        ],
+        "certification_date": "ISO 8601",
+        "certification_batch": "Batch identifier",
+        "human_authorization": "User approval reference"
+      },
+      "audit_trail_integrity": "Ledger is append-only. No entry is ever modified or deleted. The ledger holds full certification provenance for every item."
+    },
+    "version_tracking": {
+      "description": "SHA-256 content hashing enables delta review: only items whose content changed since the last certification wave are reviewed. Unchanged items inherit their prior Quality verdict.",
+      "trigger": "Content hash mismatch between current pack file extraction and DELTA_LEDGER.json baseline → item routes to full Quality Board review. Hash match → item skips review (unless overridden by scanner finding).",
+      "hash_computation": {
+        "method": "SHA-256",
+        "canonical_fields": "Stem + Choices.{A,B,C,D} (sorted alphabetically) + CorrectChoice + ExplanationCorrect + ExplanationWrongA + ExplanationWrongB + ExplanationWrongC + ExplanationWrongD",
+        "canonical_serialization": "JSON.stringify(fields, Object.keys(fields).sort()) — deterministic key ordering to ensure hash stability across extractors",
+        "metadata_hash_fields": "Difficulty + DifficultyScore + CognitiveLevel + LOSTag + Topic + MicroTopic + UniqueConceptKey + question_state + certification_batch"
+      }
+    }
+  },
+
+  "delta_fingerprint": {
+    "description": "Every item in the Registered pool has a content fingerprint and a metadata fingerprint. These are stored in DELTA_LEDGER.json and refreshed after every certification wave. Fingerprints enable delta review — unchanged items skip re-review.",
+    "schema": {
+      "item_fingerprint": {
+        "compound_key": "P1-AD-002::B::1011::AD_factoring_001::pack_d_corrected.js:A::20260724144500-1",
+        "identity_key": "SHA-256 of compound key string (without VersionID). Used for fast registry lookup. Stable across version changes.",
+        "content_hash": "SHA-256 of canonical serialization of all learner-facing fields: Stem + Choices.{A,B,C,D} + CorrectChoice + ExplanationCorrect + ExplanationWrongA + ExplanationWrongB + ExplanationWrongC + ExplanationWrongD",
+        "metadata_hash": "SHA-256 of Difficulty + DifficultyScore + CognitiveLevel + LOSTag + Topic + MicroTopic + UniqueConceptKey + question_state + certification_batch + certification_date",
+        "ew_profile": {
+          "EW_Pattern": "1011",
+          "EW_A_nonempty": true,
+          "EW_B_nonempty": false,
+          "EW_C_nonempty": true,
+          "EW_D_nonempty": true,
+          "EW_A_boilerplate": false,
+          "EW_B_boilerplate": false,
+          "EW_C_boilerplate": false,
+          "EW_D_boilerplate": false,
+          "EW_A_choice_specific": true,
+          "EW_B_choice_specific": false,
+          "EW_C_choice_specific": true,
+          "EW_D_choice_specific": true
+        },
+        "last_updated": "2026-07-24T14:45:00Z",
+        "last_updated_by": "Quality Board, Session 800"
+      }
+    },
+    "storage": {
+      "file": "knowledge/DELTA_LEDGER.json",
+      "format": "JSON array of item_fingerprint objects, indexed by identity_key for O(1) lookup",
+      "generation": "Auto-generated from pack files at session T0 using AM-1 Function Constructor Parse. Never hand-edited.",
+      "refresh": "Updated after every certification wave that produces content changes. Only items with changed content_hash are updated. Unchanged items retain their prior fingerprint."
+    }
+  },
+
+  "identity_resilience_checklist": {
+    "description": "How the identity model prevents each documented failure class. Every check maps to a specific defect class from DEFECT_LIBRARY.md.",
+    "preventions": [
+      {
+        "failure_class": "S320 — Variant Misidentification in Rotation Groups",
+        "severity": "HIGH",
+        "how_prevented": "Remediation scripts must target items by compound key (QID + CC + EW_Pattern + question_state), not QID alone. Within a rotation group, items are distinguished by CC value and EW_Pattern. A script targeting P1-EC-001 matches on CC=A AND EW_Pattern=0111 AND question_state='Unprocessed'. The first brace-delimited object containing 'P1-EC-001' is NOT assumed to be the canonical seed.",
+        "protocol": "1) Extract all items with QID prefix P1-EC-001 using within-object parse. 2) Filter by CC value. 3) Filter by EW_Pattern. 4) Filter by question_state. 5) If multiple matches remain, select the one with the most substantive EC (canonical seed selection). 6) If zero matches, escalate to human — no fallback to first-match."
+      },
+      {
+        "failure_class": "DL-029 — Forward-Scan CC-Offset False Positives (Pack B CC-before-QID format)",
+        "severity": "HIGH",
+        "how_prevented": "ALL scanners use AM-1 within-object extraction. The Function Constructor parse extracts each item's COMPLETE JSON object, including its own CorrectChoice and ExplanationWrong fields from the SAME object boundary. Pack B's CC-before-QID ordering is handled automatically by object-level extraction — no special CC-position logic needed.",
+        "protocol": "1) Parse pack file via Function constructor: const items = new Function(pack_source + '; return MCQ_BANK_X;')(). 2) For each item, read item.CorrectChoice and item.ExplanationWrong[A-D] from the same item object. 3) Never forward-scan from QuestionID to find CorrectChoice. Never use regex-window matching. 4) Pack B items produce correct CC through the function constructor — CC is extracted from the same object as QID regardless of field ordering."
+      },
+      {
+        "failure_class": "DL-016 — Metadata-Block vs. Content-Block Identity Divergence",
+        "severity": "HIGH",
+        "how_prevented": "The compound key's EW_Pattern + CorrectChoice pair is derived from the SAME object boundary as the Choices.{A,B,C,D} and Stem. There is no 'metadata block' vs 'content block' — the architecture handbook (SESSION201) clarifies this is a conceptual distinction within a single JSON object, not separate objects. The compound key fields are all at the top level of one brace-delimited entity.",
+        "protocol": "1) Extract the full JSON object for the item. 2) From that SINGLE object, read: CorrectChoice, ExplanationWrong[A-D], Choices.{A,B,C,D}, Stem, ExplanationCorrect. 3) Verify that EW[A] text semantically refers to Choices.A (choice-specific verification). 4) If EW[A] describes Choices.B or a different item's topic → flag DL-016. 5) Compound key fields (QID, CC, EW_Pattern, Template_Family) all come from the same object — no cross-object contamination possible."
+      },
+      {
+        "failure_class": "Cross-Pack QID Collision (Pack A Section E vs Pack E, Pack C vs Pack D template aliasing)",
+        "severity": "MEDIUM",
+        "how_prevented": "The File_Path component of the compound key disambiguates all cross-pack collisions. P1-E-042 in pack_a_corrected.js is a different item than P1E-E-042 in pack_e_corrected.js. P1-EC-001 in pack_c_corrected.js is a different item than P1-ED-001 in pack_d_corrected.js even though they share template families.",
+        "protocol": "1) Always include File_Path in compound key resolution. 2) QID alone is insufficient for cross-pack identity. 3) Registry Board maintains a global uniqueness constraint on the FULL compound key (QID + CC + EW_Pattern + File_Path). 4) Template_Family records cross-pack family relationships (Pack C and Pack D items in the same template family have different File_Path values but the same Template_Family identifier)."
+      },
+      {
+        "failure_class": "DL-008/026 Count Instability Across Sessions",
+        "severity": "MEDIUM",
+        "how_prevented": "All scans use within-object extraction. The compound key's EW_Pattern field makes emptiness detection configuration-agnostic — a tool reporting DL-026 count must produce stable EW_Pattern fingerprints across runs. If fingerprints differ between scans, the scanner has a methodology error (e.g., brace-matcher undercount).",
+        "protocol": "1) Run scan twice with the same methodology. 2) Compare EW_Pattern fingerprints for each QID between runs. 3) If fingerprints differ → scanner methodology error (DL-020 brace-matcher string-awareness gap, or DL-029 CC-offset). 4) Do not accept any count that is not stable across two independent extraction passes."
+      }
+    ]
+  },
+
+  "registry_board_interface": {
+    "description": "The Registry Board manages the compound key namespace — the single source of truth for item identity. All other boards (Quality, Governance, Certification) query the Registry Board through this interface.",
+    "lookup": {
+      "description": "Find an item by any unique identifier. The registry supports multiple lookup modes for different use cases.",
+      "by_compound_key": {
+        "input": "Full compound key string: 'P1-AD-002::B::1011::AD_factoring_001::pack_d_corrected.js:A::20260724144500-1'",
+        "output": "Complete item fingerprint (content_hash, metadata_hash, question_state, certification_date, all quality scores, defect cross-references)",
+        "performance": "O(1) hash-map lookup on identity_key"
+      },
+      "by_identity_key": {
+        "input": "SHA-256 identity_key (QID|CC|EW_Pattern|Template_Family|File_Path — no VersionID)",
+        "output": "Complete item fingerprint plus current VersionID. Identity_key is stable across version changes — used by delta review to find the item's prior baseline.",
+        "performance": "O(1) hash-map lookup"
+      },
+      "by_qid_within_file": {
+        "input": "QID + File_Path (partial key — finds all rotation variants)",
+        "output": "Array of all compound keys matching that QID+File_Path, sorted by VersionID desc. E.g., 'P1-AD-001' in pack_d_corrected.js returns AD-001 (CC=A, EW_Pattern=0111) and may return archived clones.",
+        "use_case": "Rotation group audit, canonical seed selection, clone identification."
+      },
+      "by_template_family": {
+        "input": "Template_Family string",
+        "output": "Array of all compound keys in that family, including cross-pack siblings, with CC distribution and EW_Pattern distribution for rotation integrity verification.",
+        "use_case": "Family-wide CorrectChoice audit, DL-030 sweep, clone archival verification."
+      }
+    },
+    "insert": {
+      "description": "Register a new item or an existing item being enrolled in the compound key system. All 2,500 items must be registered (Phase 1 migration).",
+      "input": "Complete item fingerprint object (identity_key, content_hash, metadata_hash, compound_key, question_state, EW_Pattern)",
+      "preconditions": [
+        "Compound key is globally unique (QID + CC + EW_Pattern + File_Path does not already exist in the ledger)",
+        "Content hash is computed from within-object AM-1 extraction (not regex scan)",
+        "EW_Pattern is verified against direct field-level inspection (not pattern-matching across object boundaries)"
+      ],
+      "output": "Registered fingerprint with registry_entry_id (unique UUID), registered_date, registered_by (session ID)",
+      "collision_handling": "If compound key collision detected → escalate to human. Two items have the same QID, CC, EW_Pattern, and File_Path. This means either: (a) duplicate insert attempt (re-registering same item — safe to reject), or (b) genuine cross-pack collision (two different pack files with identical identity — check File_Path for pack-level disambiguation)."
+    },
+    "update": {
+      "description": "Update an item's fingerprint after a content change. The identity_key (without VersionID) remains stable. Only content_hash, metadata_hash, VersionID, and question_state change.",
+      "input": "Existing identity_key + new fingerprint fields (content_hash, metadata_hash, VersionID, question_state, new EW_Pattern if applicable)",
+      "preconditions": [
+        "The identity_key already exists in the ledger (item was previously registered)",
+        "The new content_hash differs from the stored content_hash (otherwise no update needed)",
+        "The EW_Pattern is verified post-write (confirms remediation was applied to the correct item variant)",
+        "Backup protocol completed before pack-file write (per BACKUP_PROTOCOL.md)"
+      ],
+      "output": "Updated fingerprint with previous_version set to old VersionID, last_updated timestamp, last_updated_by session ID",
+      "post_update_verification": [
+        "Re-extract fingerprint from the pack file using AM-1 parse",
+        "Verify content_hash matches the computed hash from the updated pack file",
+        "Verify EW_Pattern matches the expected post-write signature",
+        "Verify CorrectChoice unchanged (unless answer-key change is explicitly authorized)",
+        "Verify QID count in pack file unchanged"
+      ]
+    },
+    "collision_detection": {
+      "description": "Proactive collision detection at registry insertion, update, and session T0 reconciliation. Prevents compound-key duplication before it contaminates the delivery pool.",
+      "insert_time": "At insertion: check identity_key against all existing ledger entries. Reject duplicate. Escalate if two different pack files produce the same identity_key (QID + CC + EW_Pattern + File_Path should be file-unique because File_Path embeds pack identity).",
+      "session_t0_reconciliation": "At session startup: regenerate registry from pack files via AM-1 parse. Compare item count against prior session registry. If item count differs (items added or removed), reconcile through the G1-G5 gates. If compound key collision detected (two items produce identical identity_key), escalate — this indicates a registration methodology error.",
+      "cross_pack_family_verification": "At registry generation: for all items sharing the same Template_Family but residing in different pack files (e.g., Pack C and Pack D items), verify that the Template_Family identifier is correctly cross-referenced. P1-EC-001 and P1-ED-001 are template siblings in different files — not collisions.",
+      "phantom_qid_detection": "At session T0: cross-reference certified count from registry against dual-verified grep. If registry says 500 Certified but grep says 480, the registry is out of sync → re-generate from pack files."
+    }
+  },
+
+  "migration_from_qid_only": {
+    "phase": "S202-S203 (Phase 1 of Framework v2 transition)",
+    "steps": [
+      {
+        "step": 1,
+        "action": "Generate compound key for all 2,500 items via AM-1 Function Constructor Parse",
+        "output": "registry entries for every item with QID, CC, EW_Pattern, File_Path, Template_Family"
+      },
+      {
+        "step": 2,
+        "action": "Identify all template families via stem Jaccard similarity",
+        "output": "Template_Family assignments for all rotation-group items"
+      },
+      {
+        "step": 3,
+        "action": "Compute SHA-256 content hashes for all 2,500 items",
+        "output": "DELTA_LEDGER.json with initial baseline hashes"
+      },
+      {
+        "step": 4,
+        "action": "Independent re-extraction and re-hashing — 0 mismatches required",
+        "output": "Validation report confirming hash stability across two independent passes"
+      },
+      {
+        "step": 5,
+        "action": "Backward-compatibility shim: QID-only lookup still works during transition. Quality Board agents that use QID-only are routed through the Registry Board which resolves QID + File_Path to the current active compound key (highest VersionID with non-Archived question_state).",
+        "output": "No existing tool breaks during transition. Old tools using QID-only continue functioning through the registry shim."
+      }
+    ],
+    "backward_compatibility": {
+      "shim_behavior": "A QID-only query (e.g., 'P1-AD-002' from the old scan tool) returns the first active (non-Archived) entry for that QID in the given File_Path, ordered by VersionID desc. If multiple active variants exist (same QID, different CC), the shim returns ALL matching variants with a warning: 'QID-only lookup returned multiple compound keys. Require CC or EW_Pattern to disambiguate.'",
+      "deprecation_schedule": "QID-only lookup shim is active during Phase 1 (S202-S830). Deprecated in Phase 2 (S900+). All tools must use compound-key identity by S900."
+    }
+  },
+
+  "governance_integration": {
+    "governance_guard_extensions": [
+      {
+        "rule": "RULE 9 (NEW — HARD_BLOCK)",
+        "description": "Compound-Key Identity Required. No remediation script, certification entry, or question_state change may reference an item by QID alone from S830 onward. All item-level operations must use the full compound key or identity_key."
+      },
+      {
+        "rule": "RULE 10 (NEW — HARD_BLOCK)",
+        "description": "Registry Integrity. At session T0 and Tend, the registry must be regenerated from pack files and its item count must match dual-verified grep. Any discrepancy halts the session until resolved."
+      }
+    ],
+    "pre_flight_gate_integration": {
+      "gate": "Gate 3 — Identity Reconciliation",
+      "checks": [
+        "Compound key uniqueness across all 2,500 items (no duplicate identity_key)",
+        "Template_Family completeness (all CC-rotation items assigned to a family)",
+        "Canonical seed viability (each family has at least one item meeting seed criteria)",
+        "Cross-pack QID collision audit (no two items with identical QID + File_Path but different CC → would be same item with conflicting identity)",
+        "EW_Pattern stability (identical across two independent AM-1 extraction passes)",
+        "VersionID uniqueness (no duplicate VersionIDs across all items)"
+      ]
+    }
+  }
+}

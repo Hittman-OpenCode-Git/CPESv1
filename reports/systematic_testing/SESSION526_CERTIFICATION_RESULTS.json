@@ -1,0 +1,35 @@
+{
+  "session": "526",
+  "type": "CERTIFICATION_RESULTS",
+  "timestamp": "2026-07-26T14:10:00Z",
+  "wave": 4,
+  "target": "MIGRATED_CASE_BASE_D / scored_cases4.js / CASE-D10 through CASE-D12",
+  "results": {
+    "items_certified": 15,
+    "items_total": 15,
+    "cases_certified": 3,
+    "cases_total": 3,
+    "certification_rate": "100%"
+  },
+  "caqs_dimensions": {
+    "D1_answer_key_accuracy": {"status": "PASS", "details": "1 numeric item independently recalculated (D10-Q2: 600,000-420,000=180,000 ✓). All 14 conceptual items verified against authoritative standards (FIFO process costing, CVP/operating leverage, COSO IC vendor controls, audit committee governance, MFA access controls, predictive analytics, CIA triad, NIST IRP, big data 3 Vs, overfitting)."},
+    "D2_explanation_sufficiency": {"status": "PASS", "details": "All 15 explanations expanded from thin (83-189 chars) to comprehensive (1,235-1,540 chars). Each includes: accounting principle/framework named, formula/derivation shown where applicable, business interpretation, common exam trap, distractor contrast."},
+    "D3_distractor_rationale": {"status": "PASS", "details": "All 9 select/multi items received choice-specific distractor explanations identifying specific misconceptions."},
+    "D4_reference_alignment": {"status": "PASS", "details": "Domain-appropriate citations: FIFO/CVP/kaizen cost accounting (D10), COSO IC vendor fraud/audit committee/MFA/remediation (D11), NIST CSF/CIA triad/big data/predictive analytics (D12)."},
+    "D5_case_realism": {"status": "PASS", "details": "Juniperfield Beverages (process costing/CVP), Kelso Industrial Parts (vendor fraud), Lockhaven Insurance (cybersecurity/analytics)."},
+    "D6_metadata_readiness": {"status": "PASS", "details": "CognitiveLevel added to all 15 items (Understand: 11, Apply: 1, Remember: 3). Difficulty recalibrated. ProductionStatus → Production. Confidence → 95."}
+  },
+  "governance": {
+    "pre_flight": "20/20 PASS",
+    "post_flight": "20/20 PASS",
+    "non_target_files_modified": 0,
+    "scoring_drift": "NONE",
+    "answer_key_drift": "NONE — all 15 Correct values verified unchanged",
+    "backup": "scored_cases4.js.bak-20260726140450 (484,572 bytes)"
+  },
+  "migrated_case_base_d_progress": {
+    "before": "45/75 (60%)",
+    "after": "60/75 (80%)",
+    "remaining": "15/75 — D13 through D15"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "reportId": "SESSION254_PLATFORM_RELIABILITY",
+  "session": "254",
+  "verdict": "PASS",
+  "reliabilityScore": 96,
+  "engines": {
+    "investigationApi": {"score": 100, "verdict": "PASS"},
+    "questionHealth": {"score": 100, "verdict": "PASS"},
+    "sessionIntelligence": {"score": 100, "verdict": "PASS"},
+    "investigationRegistry": {"score": 100, "verdict": "PASS"},
+    "challengeTriage": {"score": 83, "verdict": "WARN", "note": "12/35 triaged"},
+    "studentExposure": {"score": 80, "verdict": "DATA_GAP"},
+    "crossEngine": {"score": 95, "verdict": "PASS"}
+  },
+  "stopConditions": "6/6 PASS",
+  "openRisks": 3
+}

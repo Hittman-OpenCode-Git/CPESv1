@@ -1,0 +1,43 @@
+{
+  "session": "S869",
+  "timestamp": "2026-07-27T20:30:00Z",
+  "type": "CONTENT_RECONSTRUCTION",
+  "status": "PASS",
+  "source_backup": "pack_c_corrected.js.bak-20260727121004",
+  "pack_c_final_state": {
+    "total_items": 500,
+    "certified": 388,
+    "archived": 112,
+    "analyze": 17,
+    "evaluate": 1
+  },
+  "items_upgraded": 16,
+  "ew_fields_rewritten": 2,
+  "dl008_violations": 0,
+  "dl026_violations": 0,
+  "answer_key_changes": 0,
+  "certification_changes": 0,
+  "governance_guard": "45/45",
+  "items": {
+    "P1-CC-060": {"section": "C", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4},
+    "P1-CC-061": {"section": "C", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4},
+    "P1-CC-064": {"section": "C", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4},
+    "P1-CC-065": {"section": "C", "cl_before": "Apply", "cl_after": "Evaluate", "ds_before": 1, "ds_after": 3, "ew_rewrite": true},
+    "P1-CC-071": {"section": "C", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4, "ew_rewrite": true},
+    "P1-DC-005": {"section": "D", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 3},
+    "P1-DC-010": {"section": "D", "cl_before": "Understand", "cl_after": "Analyze", "ds_before": 3, "ds_after": 3},
+    "P1-DC-012": {"section": "D", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4},
+    "P1-DC-013": {"section": "D", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4},
+    "P1-DC-015": {"section": "D", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 3},
+    "P1-DC-020": {"section": "D", "cl_before": "Analyze", "cl_after": "Analyze", "ds_before": 4, "ds_after": 4},
+    "P1-DC-025": {"section": "D", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4},
+    "P1-DC-030": {"section": "D", "cl_before": "Understand", "cl_after": "Analyze", "ds_before": 2, "ds_after": 3},
+    "P1-DC-035": {"section": "D", "cl_before": "Apply", "cl_after": "Analyze", "ds_before": 3, "ds_after": 3},
+    "P1-DC-040": {"section": "D", "cl_before": "Understand", "cl_after": "Analyze", "ds_before": 3, "ds_after": 4},
+    "P1-DC-045": {"section": "D", "cl_before": "Understand", "cl_after": "Analyze", "ds_before": 3, "ds_after": 3}
+  },
+  "deferred": [
+    "Section F XXXMARKER pre-existing DL-016 (42 instances in S829, 0 in restored source)",
+    "DL-013 contamination (4 items) verified clean in restored source"
+  ]
+}

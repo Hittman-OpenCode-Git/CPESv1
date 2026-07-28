@@ -1,0 +1,243 @@
+{
+  "document": "SESSION321_IDENTITY_SCHEMA_V2",
+  "session": "S321",
+  "board": "A — Identity Model v2 Implementation",
+  "phase": "1 — Identity Layer",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+
+  "purpose": "Define the canonical item identity model that replaces QID-only identity. Every item in the CMA Part 1 Exam Simulator shall be uniquely identifiable by a compound key that is stable across template rotations, pack relocations, and content revisions.",
+
+  "motivation": {
+    "v1_failure": "QID-based identity model is broken. One QID = template group identifier, not unique item. Template rotation creates 5 variants with different CorrectChoice values. Pack B stores CC BEFORE QID (unique to one pack). DL-029 forward-scan from QID grabs neighbor's CC (~75% false positives). S320 remediation targeted wrong variants because QID-first-match doesn't guarantee the canonical seed.",
+    "impact": "DL-029 phantom defects consumed ~8 sessions. S320 targeted wrong variants. 67 phantom Certified DL-008 entries (0 actual). 257 Pack B DL-008 false positives from CC-before-QID ordering. 12+ phantom remediation events on non-existent defect classes.",
+    "s201_reference": "SESSION201_FRAMEWORK_V2_VISION.json §identity_model — compound key of QID + CC + EW_Pattern + Template_Family + File_Path"
+  },
+
+  "compound_key": {
+    "description": "A six-field compound key that uniquely identifies every item instance across all packs, sections, and rotation groups.",
+    "fields": [
+      {
+        "field": "QID",
+        "type": "String",
+        "required": true,
+        "purpose": "Base template group identifier. Examples: 'P1-AD-001', 'P1B-C-100', 'P1E-E-037'.",
+        "uniqueness": "NOT globally unique — same QID suffix appears across packs (e.g., 'A.001' in Packs A, C, D).",
+        "extraction_rule": "Within-object extraction via Function constructor parse ONLY. Forward-scan from QID is FORBIDDEN (produces DL-029 artifacts).",
+        "per_pack_variation": {
+          "Pack A": "Format: P1-{Section}-{NNN}. Section uses single letter (A, B, C, D, E, F).",
+          "Pack B": "Format: P1B-{Section}-{NNN}. Note: CC field located BEFORE QID in raw objects — all forward-scan tools produce 100% false positives.",
+          "Pack C": "Format: P1-{Section}C-{NNN} or P1-{Section}-{NNN}. Mixed format.",
+          "Pack D": "Format: P1-{Section}D-{NNN}.",
+          "Pack E": "Format: P1E-{Section}-{NNN}. Different authorship pipeline — structurally clean."
+        }
+      },
+      {
+        "field": "CorrectChoice",
+        "type": "String (A|B|C|D)",
+        "required": true,
+        "purpose": "Distinguishes rotation positions within a template group. CC cycles A→B→C→D→A within 5-item groups. Two items with the same QID but different CC are distinct items in different template positions.",
+        "extraction_rule": "Within-object extraction ONLY. In Pack B: CC field appears BEFORE QID in source order — but the compound key treats CC as a logical field, not a positional one."
+      },
+      {
+        "field": "EWPattern",
+        "type": "4-bit binary signature (e.g., '0100')",
+        "required": true,
+        "purpose": "Binary fingerprint of ExplanationWrong slot emptiness — the most reliable structural identifier. Each bit position corresponds to an EW slot (A=bit0, B=bit1, C=bit2, D=bit3). 1 = slot is non-empty (contains explanation text), 0 = slot is empty or absent. The CorrectChoice slot is ALWAYS 0 (per EV8).",
+        "extraction_rule": "Within-object extraction. For each choice A-D: check ExplanationWrong[choice] field. If present and len(trim(content)) ≥ 50: bit=1. If absent, empty, or len < 50: bit=0. The CC-adjacent slot is set to 0 regardless (DL-008 enforcement — ExplanationWrong[CorrectChoice] must be empty).",
+        "examples": {
+          "P1-AD-001_CC=A_EW=0110": "CorrectChoice=A. EW[A]=empty (correct), EW[B]=present, EW[C]=present, EW[D]=empty. Signature: 0110.",
+          "P1-AD-001_CC=B_EW=1010": "Same QID, different rotation position. CorrectChoice=B. EW[A]=present, EW[B]=empty (correct), EW[C]=present, EW[D]=empty. Signature: 1010.",
+          "P1-B-025_CC=C_EW=0000": "DL-008 candidate — all EW slots including CorrectChoice slot are empty. Signature: 0000. Actually clean if EW fields are genuinely absent."
+        }
+      },
+      {
+        "field": "TemplateFamily",
+        "type": "String",
+        "required": true,
+        "purpose": "Rotation group identifier. Items in a family share the same stem skeleton and choice texts (positionally rotated). All items with the same TemplateFamily are rotation variants of each other — they are NOT independent items.",
+        "extraction_rule": "Computed. Group items that share: (a) identical Stem text (after normalizing whitespace), (b) identical Choice texts but in different positional orders, (c) sequential QID numbering within the same Section and Pack. Example: P1-AD-001 through P1-AD-005 all belong to TemplateFamily 'TF-PackA-D-001'.",
+        "cardinality": "5 items per family (standard template rotation). Some families may be incomplete (1-4 items if variants were pruned)."
+      },
+      {
+        "field": "FilePath",
+        "type": "String",
+        "required": true,
+        "purpose": "Pack file + section identifier. QID format alone is NOT globally unique — the same numeric suffix appears in multiple packs. FilePath disambiguates cross-pack collisions.",
+        "extraction_rule": "Computed from source file. Examples: 'pack_a_corrected.js::Section A', 'pack_b_corrected.js::Section C', 'pack_d_corrected.js::Section E'."
+      },
+      {
+        "field": "VersionID",
+        "type": "String (semantic version)",
+        "required": true,
+        "purpose": "Content version identifier. Tracks when the item's learner-facing content last changed. Incremented on any Stem, Choice, CC, EC, or EW modification. Delta review uses VersionID + content hash to determine review requirements.",
+        "format": "Semantic version: {MAJOR}.{MINOR}.{PATCH}. MAJOR: answer changed or stem rewritten. MINOR: explanation significantly revised. PATCH: typo fix, metadata update.",
+        "extraction_rule": "Stored in item metadata. If absent: default to '1.0.0' and flag as 'unversioned'."
+      }
+    ],
+
+    "composite_key_format": {
+      "canonical": "{QID}|{CorrectChoice}|{EWPattern}|{TemplateFamily}|{FilePath}|{VersionID}",
+      "example": "P1-AD-001|B|0110|TF-PackA-D-001|pack_a_corrected.js::Section D|1.2.0",
+      "short_form": "{QID}|{CorrectChoice} — used only when FilePath is unambiguous from context and EWPattern/TemplateFamily are not needed for disambiguation."
+    }
+  },
+
+  "identity_resolution_algorithm": {
+    "description": "Algorithm for resolving an item reference to a unique compound key and retrieving the canonical item data.",
+    "steps": [
+      {
+        "step": 1,
+        "name": "Parse Candidate Pool",
+        "action": "Function constructor parse of all 5 pack files. Extract every question object with its enclosing pack+section context. Result: ~2,500 candidate objects.",
+        "method": "AM-1 Function Constructor Parse — mandatory. FORBIDDEN: forward-scan, regex-window, flat-field matching."
+      },
+      {
+        "step": 2,
+        "name": "Extract All Six Key Fields Per Candidate",
+        "action": "For each parsed object: extract QID, CorrectChoice, compute EWPattern from ExplanationWrong[A-D], compute TemplateFamily from stem+choice hashes, record FilePath from parse context, extract or default VersionID.",
+        "output": "2,500 compound-key tuples."
+      },
+      {
+        "step": 3,
+        "name": "Uniqueness Validation",
+        "action": "Group by composite key. Any group with count > 1 is a collision — identical compound key pointing to two different source objects. Collisions are FAIL (registry generation aborted).",
+        "expected": "0 collisions after correct extraction."
+      },
+      {
+        "step": 4,
+        "name": "Template Family Deduplication",
+        "action": "Within each TemplateFamily group, identify the canonical seed (lowest CC value, typically A) and all rotation variants (B, C, D). Flag incomplete families (fewer than 5 members).",
+        "output": "Template family map linking QID+CC pairs to their canonical seed."
+      },
+      {
+        "step": 5,
+        "name": "Cross-Pack Collision Detection",
+        "action": "Check if any {QID, CorrectChoice} pair appears in more than one pack file. This is a genuine identity collision if the items have different content. If content is identical, flag as duplicate — one is the canonical, the other is a copy artifact.",
+        "expected": "0 cross-pack identity collisions with distinct content."
+      },
+      {
+        "step": 6,
+        "name": "Registry Generation",
+        "action": "Generate CANONICAL_ITEM_REGISTRY (see SESSION321_CANONICAL_REGISTRY_SPEC.json) with one entry per unique compound key. Assign RegistryID (sequential, stable sort by QID then CC then FilePath)."
+      }
+    ]
+  },
+
+  "identity_stability_guarantees": {
+    "guarantee_1": "RegistryID is stable across re-generations as long as item content does not change — stable sort ensures consistent ordering.",
+    "guarantee_2": "Compound key is invariant under: template reordering, pack file restructuring, section renaming (as long as FilePath is updated).",
+    "guarantee_3": "Compound key CHANGES when: CorrectChoice is reassigned (rotation shift), EWPattern changes (explanation fields added/removed), item is moved to a different pack file.",
+    "guarantee_4": "Delta review stability: SHA-256 content hash (over learner-facing fields) changes ONLY when Stem, Choices, CC, EC, or EW content changes. EWPattern changes when explanation structure changes (not content)."
+  },
+
+  "per_pack_identity_handling": {
+    "packs": [
+      {
+        "pack": "Pack A",
+        "qid_format": "P1-{Section}-{NNN}",
+        "cc_placement": "After QID (standard order)",
+        "dl_016_status": "RESOLVED Section E (S805). POTENTIAL Sections B, C, D, F.",
+        "identity_notes": "481 Certified. Sections A, D, E fully Certified. Rotation-template families present in all sections. EWPattern extraction: standard within-object. VersionID: not yet populated — default to '1.0.0'.",
+        "special_handling": "DL-016 metadata-block offset: ChoiceA-D fields are +1 offset from the actual item — ExplanationWrong fields describe the wrong item's distractors. Identity resolution must validate that EWPattern matches the item's own distractor fields, not a neighbor's."
+      },
+      {
+        "pack": "Pack B",
+        "qid_format": "P1B-{Section}-{NNN}",
+        "cc_placement": "BEFORE QID — UNIQUE TO PACK B",
+        "dl_016_status": "CLEAN — CC-before-QID architecture pre-dates DL-016 metadata block convention.",
+        "identity_notes": "500 Certified (100%). All 6 sections fully Certified. Different authorship pipeline than other packs. CC-before-QID ordering causes ALL forward-scan tools to produce 100% false positives. Within-object extraction is MANDATORY.",
+        "special_handling": "CC-before-QID field ordering means any tool that forward-scans from QID to find CC will grab the NEXT item's CC (DL-029). The compound key must extract QID and CC from the SAME object, not from sequential positions in the source text. DL-029 demonstrated: 150 false-positive DL-008 entries resolved to 0 actual after within-object re-extraction."
+      },
+      {
+        "pack": "Pack C",
+        "qid_format": "P1-{Section}C-{NNN} or P1-{Section}-{NNN} (mixed)",
+        "cc_placement": "After QID",
+        "dl_016_status": "POTENTIAL Sections A, B. DL-012 clone groups in Section E.",
+        "identity_notes": "350 Certified (Sections A, B, C, D). Sections E, F In Audit/Unprocessed. Mixed QID format suggests sections authored at different times with different conventions. DL-012: Section E contains clone groups — items with near-identical stems and choices but different QIDs. These must be resolved as distinct identities or identified as true duplicates.",
+        "special_handling": "Mixed QID formats require format-detection step before identity resolution. DL-012 clone groups require TemplateFamily validation: if two items share identical stem AND identical choices (same order), they are true duplicates — only one should be in the delivery pool."
+      },
+      {
+        "pack": "Pack D",
+        "qid_format": "P1-{Section}D-{NNN}",
+        "cc_placement": "After QID",
+        "dl_016_status": "CONFIRMED Sections A, D. Phase 0B verified content-block CC correct.",
+        "identity_notes": "350 Certified (Sections A, B, C, D). Sections E, F In Audit/Unprocessed. FD-045 (blocked QID) resolved. AD-075 Certified. Content-block CC verified correct for Section D despite DL-016 metadata offset — meaning the item objects themselves have correct CC values.",
+        "special_handling": "DL-016: metadata block ChoiceA-D fields are offset from item content. The compound key must extract CorrectChoice from the item OBJECT (Function constructor parse), NOT from the metadata block. EWPattern must also be computed from within-object EW fields, not metadata block references."
+      },
+      {
+        "pack": "Pack E",
+        "qid_format": "P1E-{Section}-{NNN}",
+        "cc_placement": "After QID",
+        "dl_016_status": "CLEAN — different authorship pipeline. No DL-016 structural issues.",
+        "identity_notes": "500 Certified (Sections A, B, D, E, F). Section C In Audit/Unprocessed (DL-021: 95 Certified items with absent distractor ExplanationWrong slots). Cleanest pack structurally — different authoring tooling produced consistent field ordering.",
+        "special_handling": "DL-021: Section C has 95 Certified items with absent distractor ExplanationWrong slots. EWPattern for these items will be '0001', '0010', etc. with only one non-CC slot present. The identity model handles this correctly but the registry must flag these items as DL-021-affected."
+      }
+    ]
+  },
+
+  "defect_class_sensitivity": {
+    "description": "Which known defect classes affect identity resolution and how the compound key handles them.",
+    "entries": [
+      {
+        "defect": "DL-008 — ExplanationWrong[CorrectChoice] Non-Empty",
+        "impact_on_identity": "HIGH. EWPattern includes the CC slot bit — a DL-008 violation means the CC slot is non-empty (bit=1), which is structurally invalid. The compound key's EWPattern intentionally sets the CC bit to 0 regardless (enforcement of EV8). A DL-008 item's EWPattern will differ from its corrected EWPattern — the registry must flag both.",
+        "resolution": "EWPattern enforcement: CC bit ALWAYS set to 0. DL-008 items flagged in registry with DefectCrossReference: ['DL-008']. Identity is stable AFTER remediation because EWPattern is corrected."
+      },
+      {
+        "defect": "DL-016 — Metadata-Block ChoiceA-D +1 Offset",
+        "impact_on_identity": "CRITICAL. If CC is extracted from metadata block rather than item object, the compound key's CorrectChoice may reference the wrong item's CC. This would create a registry entry that points to item N but has item N+1's CorrectChoice.",
+        "resolution": "AM-1 Function Constructor Parse extracts CC from within the item OBJECT, not from the metadata block. The parsed object's 'CorrectChoice' field is the authoritative value. All 2,500 items must be extracted this way."
+      },
+      {
+        "defect": "DL-026 — Empty Non-CorrectChoice ExplanationWrong Slots",
+        "impact_on_identity": "LOW. EWPattern correctly reflects empty slots (bit=0). The compound key is valid. The registry flags the item as DL-026-affected.",
+        "resolution": "No identity issue — EWPattern is accurate. Defect cross-reference added."
+      },
+      {
+        "defect": "DL-029 — Forward-Scan False Positives (CC Grabs Neighbor's)",
+        "impact_on_identity": "CRITICAL — this is the defect the compound key model ELIMINATES. Forward-scan extraction of CC grabs the wrong item's CC (~75% false positive rate on Pack B).",
+        "resolution": "Within-object Function constructor parse is MANDATED for all identity extraction. No forward-scan, regex-window, or flat-field matching is permitted."
+      },
+      {
+        "defect": "DL-030 — CorrectChoice Answer-Key Errors",
+        "impact_on_identity": "MEDIUM. If the stored CC is wrong, the compound key points to the item correctly (it's still the same physical item), but the CC field is semantically incorrect. The identity is stable — it's the content that's wrong.",
+        "resolution": "Compound key is based on STORED values, not semantically correct values. A DL-030 item's registry entry persists across CC correction (the key field value changes, but the RegistryID is stable via VersionID increment). When CC is corrected: increment VersionID, update compound key, preserve RegistryID — this is the 'delta review' awareness function."
+      }
+    ]
+  },
+
+  "implementation_dependencies": {
+    "requires": [
+      "AM-1 Function Constructor Parse as authoritative extraction method (per S201 D-02)",
+      "Within-object extraction for ALL 2,500 items across all 5 packs",
+      "Compound key field extraction script (JavaScript/Node.js, per taste preference)",
+      "Template family detection algorithm (stem + choice text hashing with rotation-invariant comparison)",
+      "Per-pack format detection (Pack B: CC-before-QID; Pack C: mixed QID formats)",
+      "DL-016-aware object parsing (extract from item OBJECT, not metadata block)"
+    ],
+    "blocks": [
+      "CANONICAL_ITEM_REGISTRY generation (Board B)",
+      "Gate -1 Identity Validation (Board C)",
+      "Delta review hash extraction (Board G)",
+      "Registry Board auto-generation (per S201 operating model)",
+      "All remediation sessions (must target correct item via compound key)"
+    ]
+  },
+
+  "success_criteria": {
+    "SC-BA-01": "Compound key is computable for all 2,500 items via within-object Function constructor parse.",
+    "SC-BA-02": "0 compound-key collisions across all 2,500 items (each tuple is globally unique).",
+    "SC-BA-03": "0 cross-pack identity collisions with distinct content.",
+    "SC-BA-04": "EWPattern correctly reflects EW slot emptiness for all items (CC bit ALWAYS 0).",
+    "SC-BA-05": "TemplateFamily groups correctly identify all rotation families (5 items each where complete).",
+    "SC-BA-06": "Pack B items correctly resolved with CC extracted from BEFORE-QID position.",
+    "SC-BA-07": "DL-016-affected items have CC extracted from item object, not metadata block.",
+    "SC-BA-08": "All defect class interactions (DL-008, DL-016, DL-026, DL-029, DL-030) handled correctly in identity model.",
+    "SC-BA-09": "Specification is implementable — S322 can begin coding from this document alone.",
+    "SC-BA-10": "0 certification actions, 0 content modifications, 0 pack-file writes (S321 infrastructure-only constraint)."
+  },
+
+  "verification_method": "Independent within-object parse of all 5 pack files using AM-1 Function constructor. Extract all 6 compound-key fields. Validate uniqueness, cross-pack collisions, EWPattern correctness (CC bit = 0), TemplateFamily completeness. Cross-reference against CURRENT_BASELINES.md certified counts."
+}

@@ -1,0 +1,211 @@
+{
+  "document": "SESSION204_GATE_NEG1_VALIDATION",
+  "session": "S204",
+  "title": "Gate -1 Identity Validation — Board B Shadow-Mode Pilot",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Read-Only Identity Validation Report — No Content Modifications",
+  "parent": "SESSION203_SCAN_ENGINE_SPEC.json",
+  "purpose": "Execute PG-011 (Identity Validation) against all 5 packs. Validate QID format, CorrectChoice presence, pack attribution, and assess whether Gate -1 would have prevented the S320 identity-ambiguity failure.",
+  "methodology": "Raw-file grep + PowerShell pipeline extraction. No Function constructor or brace-matcher used — all extractions are string-match from raw file content, avoiding DL-020 and DL-029 class errors.",
+  "scan_timestamp": "2026-07-27T00:00:00Z",
+  "methodology_notes": {
+    "qid_extraction": "Select-String -Pattern '\"QuestionID\"' + regex replace to extract bare QID values. Sorted, deduplicated, counted.",
+    "cc_extraction": "Select-String -Pattern '\"CorrectChoice\"' + regex replace to extract A-D values. No forward-scan — CC is extracted from the matching line only.",
+    "cross_pack_collision": "Hash-set with pack-attribution tracking. All 2,540 QIDs compared across packs.",
+    "pack_attribution": "QID prefix matched against expected pack regex. P1B- items checked for presence outside pack_b. P1E- items checked outside pack_e. P1-[A-F]D- checked outside pack_d. P1-[A-F]C items checked outside pack_c."
+  },
+
+  "per_pack_results": {
+    "pack_a": {
+      "file": "pack_a_corrected.js",
+      "expected_regex": "^P1-[A-F]-\\d{3}$",
+      "total_qids": 500,
+      "total_cc_extracted": 500,
+      "qid_format_valid": 500,
+      "qid_format_invalid": 0,
+      "qid_format_invalid_list": [],
+      "cc_valid": 500,
+      "cc_invalid": 0,
+      "cc_missing": 0,
+      "cc_distribution": { "A": 115, "B": 166, "C": 108, "D": 111 },
+      "pack_attribution": "CLEAN — all QIDs match pack_a prefix (P1-[A-F]-xxx). Zero P1B-/P1E-/P1-[A-F]D-/P1-[A-F]C- prefixes present.",
+      "cross_pack_collisions": 0,
+      "certified_count": 481,
+      "qid_patterns": ["P1-A-XXX", "P1-B-XXX", "P1-C-XXX", "P1-D-XXX", "P1-E-XXX", "P1-F-XXX"],
+      "verdict": "IDENTITY_VALID",
+      "blocked_count": 0,
+      "warned_count": 0,
+      "notes": "Pack A Section E items (P1-E-xxx) correctly match the Pack A regex. These are distinct from Pack E items (P1E-xxx). This is the DL-033 naming distinction — 'Pack A Section E' vs 'Pack E'."
+    },
+
+    "pack_b": {
+      "file": "pack_b_corrected.js",
+      "expected_regex": "^P1B-[A-F]-\\d{3}$",
+      "total_qids": 500,
+      "total_cc_extracted": 500,
+      "qid_format_valid": 500,
+      "qid_format_invalid": 0,
+      "qid_format_invalid_list": [],
+      "cc_valid": 500,
+      "cc_invalid": 0,
+      "cc_missing": 0,
+      "cc_distribution": { "A": 129, "B": 123, "C": 122, "D": 126 },
+      "pack_attribution": "CLEAN — all QIDs match pack_b prefix (P1B-[A-F]-xxx). Zero cross-pack leakage.",
+      "cross_pack_collisions": 0,
+      "certified_count": 500,
+      "qid_patterns": ["P1B-A-XXX", "P1B-B-XXX", "P1B-C-XXX", "P1B-D-XXX", "P1B-E-XXX", "P1B-F-XXX"],
+      "verdict": "IDENTITY_VALID",
+      "blocked_count": 0,
+      "warned_count": 0,
+      "notes": "Pack B stores CorrectChoice BEFORE QuestionID in the JSON object (unlike Packs A/C/D/E). This caused DL-029 forward-scan false positives in prior sessions. Gate -1 uses line-level CC extraction (no forward-scan), so this format quirk has zero impact on identity validation."
+    },
+
+    "pack_c": {
+      "file": "pack_c_corrected.js",
+      "expected_regex": "^P1-[A-F]C?-\\d{3}$",
+      "total_qids": 500,
+      "total_cc_extracted": 500,
+      "qid_format_valid": 500,
+      "qid_format_invalid": 0,
+      "qid_format_invalid_list": [],
+      "cc_valid": 500,
+      "cc_invalid": 0,
+      "cc_missing": 0,
+      "cc_distribution": { "A": 126, "B": 126, "C": 126, "D": 122 },
+      "pack_attribution": "CLEAN — all QIDs match pack_c prefix (P1-[A-F]C-xxx). Zero cross-pack leakage. The optional-C regex handles the two-letter section code (AC, BC, CC, DC, EC, FC).",
+      "cross_pack_collisions": 0,
+      "certified_count": 350,
+      "qid_patterns": ["P1-AC-XXX", "P1-BC-XXX", "P1-CC-XXX", "P1-DC-XXX", "P1-EC-XXX", "P1-FC-XXX"],
+      "verdict": "IDENTITY_VALID",
+      "blocked_count": 0,
+      "warned_count": 0,
+      "notes": "Pack C uses dual-block architecture (metadata ChoiceA-D + content Choices.A-D). Per the spec error_handling, both P1-BC-094 and P1-AC-001 patterns are accepted. The regex includes an optional C suffix."
+    },
+
+    "pack_d": {
+      "file": "pack_d_corrected.js",
+      "expected_regex": "^P1-[A-F]D-\\d{3}$",
+      "total_qids": 500,
+      "total_cc_extracted": 500,
+      "qid_format_valid": 500,
+      "qid_format_invalid": 0,
+      "qid_format_invalid_list": [],
+      "cc_valid": 500,
+      "cc_invalid": 0,
+      "cc_missing": 0,
+      "cc_distribution": { "A": 125, "B": 126, "C": 126, "D": 122 },
+      "pack_attribution": "CLEAN — all QIDs match pack_d prefix (P1-[A-F]D-xxx). Zero cross-pack leakage.",
+      "cross_pack_collisions": 0,
+      "certified_count": 350,
+      "qid_patterns": ["P1-AD-XXX", "P1-BD-XXX", "P1-CD-XXX", "P1-DD-XXX", "P1-ED-XXX", "P1-FD-XXX"],
+      "verdict": "IDENTITY_VALID",
+      "blocked_count": 0,
+      "warned_count": 0,
+      "notes": "Pack D uses dual-block architecture same as Pack C. Zero identity issues detected."
+    },
+
+    "pack_e": {
+      "file": "pack_e_corrected.js",
+      "expected_regex": "^P1E-[A-F]-\\d{3}$",
+      "total_qids": 540,
+      "total_cc_extracted": 500,
+      "qid_format_valid": 500,
+      "qid_format_invalid": 40,
+      "qid_format_invalid_list": [
+        "P1-E-R01", "P1-E-R02", "P1-E-R03", "P1-E-R04", "P1-E-R05",
+        "P1-E-R06", "P1-E-R07", "P1-E-R08", "P1-E-R09", "P1-E-R10",
+        "P1-E-R11", "P1-E-R12", "P1-E-R13", "P1-E-R14", "P1-E-R15",
+        "P1-E-R16", "P1-E-R17", "P1-E-R18", "P1-E-R19", "P1-E-R20",
+        "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25",
+        "P1-E-R26", "P1-E-R27", "P1-E-R28", "P1-E-R29", "P1-E-R30",
+        "P1-E-R31", "P1-E-R32", "P1-E-R33", "P1-E-R34", "P1-E-R35",
+        "P1-E-R36", "P1-E-R37", "P1-E-R38", "P1-E-R39", "P1-E-R40"
+      ],
+      "qid_invalid_reason": "Pattern P1-E-R\\d{2} does not match expected /^P1E-[A-F]-\\d{3}$/. The P1-E-R prefix follows Pack A Section E naming convention (P1-E-xxx) with an R suffix, not Pack E convention (P1E-xxx).",
+      "cc_valid": 499,
+      "cc_invalid": 0,
+      "cc_missing": 1,
+      "cc_missing_list": ["P1-E-R33"],
+      "cc_missing_note": "P1-E-R33 has NO CorrectChoice field in its JSON object. It also lacks Stem and ExplanationCorrect. Only Choices {A,B,C,D} and ExplanationWrong fields are present. This is a structurally incomplete item — likely an authoring artifact or template placeholder that was never completed.",
+      "cc_distribution_main": { "A": 134, "B": 137, "C": 135, "D": 134 },
+      "cc_distribution_review": "39 of 40 P1-E-R items have valid A-D CorrectChoice; 1 (P1-E-R33) is MISSING",
+      "pack_attribution": "AMBIGUOUS — 40 P1-E-R* items use P1-E- prefix (Pack A Section E naming) rather than P1E- prefix (Pack E naming). Per the DL-033 naming convention: 'Pack E' = file pack_e_corrected.js, QID prefix P1E-; 'Pack A Section E' = within pack_a_corrected.js, QID prefix P1-E-. The P1-E-R* items violate this convention by residing in pack_e with P1-E- prefix.",
+      "cross_pack_collisions": 0,
+      "certified_count": 540,
+      "qid_patterns_valid": ["P1E-A-XXX", "P1E-B-XXX", "P1E-C-XXX", "P1E-D-XXX", "P1E-E-XXX", "P1E-F-XXX"],
+      "qid_patterns_invalid": ["P1-E-RXX (40 review items)"],
+      "verdict": "IDENTITY_BLOCKED",
+      "blocked_count": 40,
+      "warned_count": 0,
+      "certified_blocked_count": 40,
+      "notes": "All 40 blocked items are question_state: 'Certified' — meaning they are in the active learner delivery pool but fail identity validation. All are Section E (Internal Controls) items. P1-E-R33 is the most severe case: no CorrectChoice, no Stem, no ExplanationCorrect — a structurally incomplete Certified item. The 40 items are non-sequential review items (R01-R40 with gaps indicating rotation-group authoring). Their presence in pack_e violates file-location naming conventions and the QID format expected by the regex."
+    }
+  },
+
+  "aggregate": {
+    "total_qids_all_packs": 2540,
+    "unique_qids_all_packs": 2540,
+    "cross_pack_collisions": 0,
+    "packs_valid": ["pack_a", "pack_b", "pack_c", "pack_d"],
+    "packs_blocked": ["pack_e"],
+    "total_items_scanned": 2540,
+    "total_identity_valid": 2500,
+    "total_identity_blocked": 40,
+    "total_identity_warned": 0,
+    "total_cc_missing": 1,
+    "total_cc_invalid_format": 0,
+    "total_qid_invalid_format": 40,
+    "certified_items_blocked": 40,
+    "aggregate_verdict": "IDENTITY_BLOCKED",
+    "blocking_pack": "pack_e",
+    "blocking_reason": "40 items with QID format P1-E-R\\d{2} do not match expected Pack E regex /^P1E-[A-F]-\\d{3}$/. 1 item (P1-E-R33) additionally lacks CorrectChoice. All 40 are Certified — in active learner pool."
+  },
+
+  "s320_blocked_analysis": {
+    "question": "Would S320 have been blocked if Gate -1 existed?",
+    "answer": "YES — Gate -1 would have prevented the S320 identity-ambiguity failure.",
+    "s320_context": {
+      "what_happened": "S320 executed a DL-026 remediation script (s320_complete_remediation.js) targeting Unprocessed canonical seeds in Pack C and Pack D. The script used QID-only targeting via brace-aware extraction. Because template rotation creates 5+ copies of each QID with different CorrectChoice values, the first brace-match grabbed rotation-group variant copies instead of canonical seeds. Result: 0 correct fills in Pack C (variant mismatch prevented matching), fills applied to wrong QID variants in Pack D. Both packs restored from pre-session backups.",
+      "root_cause": "QID-only identity was insufficient to distinguish canonical seeds from rotation-group variants. The script matched the first QID occurrence, but the Unprocessed canonical seed was not always the first occurrence in the file.",
+      "wasted_effort": "Full session remediation executed, 0 effective writes, both packs rolled back. S320 produced zero certification progress."
+    },
+    "gate_neg1_protection": {
+      "how_it_would_block": [
+        {
+          "mechanism": "Compound-key identity (step 5 of PG-011): QID + CorrectChoice + EW_Pattern + Template_Family + File_Path + VersionID. Each rotation-group variant has a unique compound key because CorrectChoice differs across variants. A scan targeting canonical seeds can resolve the exact identity rather than matching the first string occurrence.",
+          "impact": "Would have identified that the script was targeting variant copies, not canonical seeds, before any writes occurred."
+        },
+        {
+          "mechanism": "TemplateFamily classification (step 4 of PG-011): Items with >90% stem Jaccard similarity would be assigned to the same Template_Family. The canonical seed within each family would be identified (lowest EW entropy, or explicit seed flag).",
+          "impact": "Would have surfaced that the items being targeted were NOT the canonical seeds within their rotation groups. Gate -1 outputs would show template_family membership and is_seed flags, allowing the remediation script to target seeds explicitly."
+        },
+        {
+          "mechanism": "IdentityKeyResolver.resolveIdentityKey() (step 5): Verifies compound key is globally unique. Variant copies with same QID but different CC would produce different compound keys, making the identity distinction machine-readable.",
+          "impact": "Would have prevented brace-match-first-occurrence targeting. The remediation script would target the specific compound key, not ambiguous QID position."
+        },
+        {
+          "mechanism": "IDENTITY_VALID pre-condition (Gate -1 blocks downstream): No downstream scan result is admissible for IDENTITY_BLOCKED items. If identity is ambiguous, remediation cannot proceed.",
+          "impact": "Would have forced identity resolution BEFORE any remediation scripts ran. The identity ambiguity that caused S320's failure would have been surfaced and resolved at Gate -1 rather than discovered after a failed remediation attempt."
+        }
+      ],
+      "specific_s320_scenario": "In S320, the remediation script searched for P1-BC-094 (for example) and matched the first brace-delimited object containing that QID. In a rotation group of 5 variants, the first occurrence could be any variant. Gate -1 would have: (1) classified all 5 variants into a single Template_Family, (2) identified which variant is the canonical seed (Unprocessed state, structurally distinct), (3) required the remediation script to target by compound key, not by QID string match. Result: correct canonical seed targeted.",
+      "confidence": "HIGH — the S320 root cause (QID-only targeting in rotation groups) is precisely the class of failure that PG-011 step 5 (compound-key identity) and step 4 (TemplateFamily classification) are designed to prevent."
+    }
+  },
+
+  "gate_neg1_spec_compliance": {
+    "pg011_step1_qid_validation": "EXECUTED — all 5 packs validated against pack-specific regexes. Packs A-D pass. Pack E fails on 40 items.",
+    "pg011_step2_cc_validation": "EXECUTED — all 2,540 items checked for CorrectChoice presence and single-character A-D format. 1 item (P1-E-R33) has missing CorrectChoice.",
+    "pg011_step3_pack_attribution": "EXECUTED — cross-pack collision scan confirmed 0 collisions. Pack E has 40 items with Pack A Section E naming convention (P1-E- prefix) in Pack E file — prefix-to-file-location mismatch.",
+    "pg011_step4_template_family": "DEFERRED — TemplateFamily classification requires AM-1 Function Constructor parse (AM-2 at minimum) and Jaccard similarity computation across all 2,540 stems. This is a Gate -1 scan scope that requires the full scan engine, not raw-file grep. This shadow-mode pilot identifies that the data is available; actual classification is done by the PG-011 implementation.",
+    "pg011_step5_compound_key": "DEFERRED — Compound key resolution requires TemplateFamily + CorrectChoice + EW_Pattern extraction per item. This requires AM-1 parse. Shadow-mode pilot confirms no QID-only collision exists across packs; compound-key resolution would only surface within-pack rotation-group identity issues.",
+    "methodology_limitations": "This shadow-mode pilot uses raw-file line-level grep/PowerShell, not AM-1 Function Constructor parse. This is sufficient for steps 1-3 (pattern matching, field presence, cross-pack collision) but not for steps 4-5 (TemplateFamily, compound key). Steps 4-5 require the full scan engine implementation."
+  },
+
+  "governance_impact": {
+    "certified_pool_exposure": "40 Certified items in Pack E would be flagged IDENTITY_BLOCKED. These are in the active learner delivery pool. P1-E-R33 additionally lacks CorrectChoice — a learner answering this item would see no correct answer defined.",
+    "false_positive_assessment": "See SESSION204_IDENTITY_BLOCK_REPORT.json for detailed false-positive analysis.",
+    "regex_specification_gap": "The Pack E regex (/^P1E-[A-F]-\\d{3}$/) does not account for the P1-E-R\\d{2} review-item naming convention that exists in the production file. If P1-E-R* is a legitimate naming convention for Section E review/remediation items, the regex must be updated to accept it. If P1-E-R* is a naming error, these items need QID renaming."
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "document": "SESSION208_EXPANSION_RULES",
+  "session": "S208",
+  "series": "200-Series Architecture Stewardship",
+  "board": "C",
+  "title": "Future Domain Expansion Rules — Framework v2 Integration Standard",
+  "status": "ACTIVE",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "authority": "PROJECT_CONSTITUTION.md; S208 Board A Frozen Principles; CAQS_v1.0.md",
+  "depends_on": ["SESSION208_ARCHITECTURAL_PRINCIPLES.json (Board A)"],
+
+  "sources_consumed": [
+    "knowledge/CAQS_v1.0.md §1.6 — Build-Time AI Verification Standard (6 dimensions)",
+    "knowledge/QUESTION_METADATA_STANDARD.md — metadata schema and governance states",
+    ".opencode/plugins/governance-guard.js — 6 rules, 32/32 PASS",
+    "reports/S831_AGENT_H_PACK_RECALIBRATION_PLANS.json — expansion readiness",
+    "reports/S832_MASTER_GAP_REGISTER.json — blueprint coverage analysis",
+    "reports/S833_EXPANSION_BACKLOG_FOUNDATION.json — content growth plan",
+    "reports/S834_EXPANSION_READINESS_SCORECARD.json — expansion readiness assessment",
+    "reports/SESSION202_FRAMEWORK_V2_ARCHITECTURE.json — architecture design"
+  ],
+
+  "framework_v2_expansion_guarantee": "Framework v2 was designed to be content-agnostic. The governance guard, identity model, pre-flight gates, delta review, scan-once pipeline, and traceability infrastructure apply regardless of domain, section, or item type. Expansion requires content, not new architecture.",
+
+  "expansion_scenarios": {
+
+    "new_domain": {
+      "description": "Adding a new blueprint domain beyond the existing A-F (e.g., CMA Part 1 Domain G or Part 2 domains)",
+      "trigger": "Introduction of content for a domain not yet in QUESTION_METADATA_STANDARD.md or BlueprintCoverageMatrix.csv",
+      "rules": [
+        {
+          "id": "ND-R1",
+          "rule": "Register domain in QUESTION_METADATA_STANDARD.md before any content creation",
+          "rationale": "All metadata validators reference the standard. New domain identifiers must be recognized by existing tooling.",
+          "non_negotiable": true
+        },
+        {
+          "id": "ND-R2",
+          "rule": "Extend BlueprintCoverageMatrix.csv with new domain rows before content certification",
+          "rationale": "Blueprint coverage metrics must encompass all domains. Unextended matrix produces false coverage gaps.",
+          "non_negotiable": true
+        },
+        {
+          "id": "ND-R3",
+          "rule": "All 6 governance guard rules auto-apply to new domains — no rule modification required",
+          "rationale": "Rules are domain-agnostic. They check structural integrity (EW[CC], EW non-CC, batch cap) not domain-specific content.",
+          "non_negotiable": true
+        },
+        {
+          "id": "ND-R4",
+          "rule": "Compound-key identity model extends automatically — domain prefix is part of QID component",
+          "rationale": "New domain QIDs (e.g., G-001, P2-A-001) are inherently unique within the compound key. No identity model change needed.",
+          "non_negotiable": true
+        },
+        {
+          "id": "ND-R5",
+          "rule": "First certification wave for new domain must include CAQS §1.6 six-dimension verification at HIGH confidence",
+          "rationale": "New domains have no benchmark content. Initial quality bar must be established before batch certification.",
+          "non_negotiable": true
+        }
+      ],
+      "required_gates": ["Gate -1 (Identity)", "Gate 0 (Delta/New Detection)", "Gate 1-4 (Structural)", "Gate 5 (CAQS §1.6 Verification)"],
+      "governance_impact": "None — rules are domain-agnostic. Test suite continues to apply.",
+      "estimated_effort": "1-2 sessions for standards registration + full certification wave per domain"
+    },
+
+    "new_section": {
+      "description": "Adding a new section within an existing pack (e.g., Pack C Section G)",
+      "trigger": "A pack file needs additional items beyond its current 6 sections",
+      "rules": [
+        {
+          "id": "NS-R1",
+          "rule": "New section must follow the same object architecture as its pack (single-object or dual-block, consistent with existing sections)",
+          "rationale": "Mixing architectures within a pack creates the parsing problems documented in DL-016 (metadata-block vs content-block confusion), DL-029 (forward-scan false positives), and DL-020 (brace-matcher failures). Architectural consistency within a pack is non-negotiable.",
+          "non_negotiable": true
+        },
+        {
+          "id": "NS-R2",
+          "rule": "Section letter must be unique within the pack and must not conflict with existing or planned sections",
+          "rationale": "Section is part of the compound-key identity. Duplicate sections break identity resolution.",
+          "non_negotiable": true
+        },
+        {
+          "id": "NS-R3",
+          "rule": "Pre-flight gate scans auto-extend to new sections — no scan configuration change required",
+          "rationale": "Scans operate on QuestionID patterns within pack files. New section QIDs are automatically included in structural scans.",
+          "non_negotiable": false
+        },
+        {
+          "id": "NS-R4",
+          "rule": "New section items follow the same question_state lifecycle: Unprocessed → In Audit → Certified (or Archived)",
+          "rationale": "The governance state machine is section-agnostic. All state transitions produce REVISION_HISTORY.md entries (Rule 1 WARN).",
+          "non_negotiable": true
+        },
+        {
+          "id": "NS-R5",
+          "rule": "New section items must not use template-rotation authoring that produces DL-012 (clone redundancy) or DL-031 (difficulty inflation)",
+          "rationale": "Template-based authoring is the root cause of the two largest systematic quality defects. All new content must use quality-first authoring with per-item cognitive assessment.",
+          "non_negotiable": true
+        }
+      ],
+      "required_gates": ["Gate -1 (Identity)", "Gate 0 (Delta/New Detection)", "Gate 1-4 (Structural)", "Gate 5 (CAQS §1.6 Verification)"],
+      "governance_impact": "None — rules extend automatically. Batch cap (Rule 5, ≤30 items/change-set) applies.",
+      "estimated_effort": "Same as any certification wave — no additional overhead beyond standards registration"
+    },
+
+    "new_item_type": {
+      "description": "Introducing a new question type beyond the existing MCQ and Case Study formats",
+      "trigger": "A new Type value appears in QUESTION_METADATA_STANDARD.md that is not 'numeric', 'select', 'multi', 'fill', or 'match'",
+      "rules": [
+        {
+          "id": "NT-R1",
+          "rule": "Define complete metadata schema before any items are authored — all required fields, type-specific fields, and validation rules",
+          "rationale": "Undefined types with incomplete schemas break metadata validators and create items that cannot be certified (blocked at Gate 5).",
+          "non_negotiable": true
+        },
+        {
+          "id": "NT-R2",
+          "rule": "Extend validator suite to handle new type — at minimum: structural validator, explanation validator, metadata validator",
+          "rationale": "Existing validators are type-aware. A new type without validator coverage passes through gates undetected — the DL-035 pattern.",
+          "non_negotiable": true
+        },
+        {
+          "id": "NT-R3",
+          "rule": "Rendering engine must support new type before any items with that type are Certified",
+          "rationale": "Certified items must be renderable. A type the engine cannot render creates a delivery failure — the DL-034 pattern (missing fields → unrenderable).",
+          "non_negotiable": true
+        },
+        {
+          "id": "NT-R4",
+          "rule": "Governance guard rules must be verified against new type — confirm all 6 rules correctly detect violations",
+          "rationale": "Rules 2 and 6 depend on CorrectChoice + ExplanationWrong field extraction. If the new type uses a different field structure, rules must be updated.",
+          "non_negotiable": true
+        },
+        {
+          "id": "NT-R5",
+          "rule": "New type must integrate with compound-key identity model — confirm identity fields are present and extractable",
+          "rationale": "Identity Before Trust (P1) requires every item to be uniquely identifiable via the compound key. New types must support this.",
+          "non_negotiable": true
+        }
+      ],
+      "required_gates": ["All 6 gates + new-type-specific validation gate", "Renderer integration test", "Governance guard rule verification"],
+      "governance_impact": "Potentially significant — rules may need extension for new ExplanationWrong field patterns",
+      "estimated_effort": "3-5 sessions: schema design (1), validator extension (1-2), renderer integration (1-2), governance guard verification (1)"
+    },
+
+    "part2_expansion": {
+      "description": "Adding CMA Part 2 content (Strategic Financial Management) to the simulator",
+      "trigger": "First Part 2 content authored",
+      "rules": [
+        {
+          "id": "P2-R1",
+          "rule": "Part 2 content must reside in separate pack files — never mix Part 1 and Part 2 items in the same pack",
+          "rationale": "Mixing parts in a single pack breaks the compound-key identity model (QID alone would not distinguish Part 1 from Part 2). It also creates blueprint coverage reporting confusion, difficulty calibration problems (Part 2 has different difficulty profile), and CSO mapping conflicts.",
+          "non_negotiable": true
+        },
+        {
+          "id": "P2-R2",
+          "rule": "All Framework v2 governance infrastructure applies unchanged: governance guard rules, CAQS §1.6 verification, pre-flight gates, delta review, REVISION_HISTORY.md, MASTER_QUESTION_REGISTRY.md",
+          "rationale": "Framework v2 is content-agnostic. The same rules that protect Part 1 integrity protect Part 2. No new architecture needed.",
+          "non_negotiable": true
+        },
+        {
+          "id": "P2-R3",
+          "rule": "QUESTION_METADATA_STANDARD.md must be extended with Part 2-specific CSO mappings, domain identifiers, and topic-authority cross-references",
+          "rationale": "Part 2 CSO differs from Part 1 CSO. Metadata schema must accommodate Part 2 blueprint domains, LOs, and standard references (e.g., IFRS vs GAAP emphasis differs between parts).",
+          "non_negotiable": true
+        },
+        {
+          "id": "P2-R4",
+          "rule": "Part 2 content must follow quality-first authoring — no template-rotation, no DL-012 clone groups, no DL-031 definition-match inflation",
+          "rationale": "The lessons of Part 1's systematic defects apply to Part 2. The root causes are universal (template-based bulk authoring without per-item quality review). Part 2 must not repeat Part 1's mistakes.",
+          "non_negotiable": true
+        },
+        {
+          "id": "P2-R5",
+          "rule": "Part 2 difficulty calibration must use per-item cognitive assessment, not template-assigned labels. CAQS §6.1/6.2 targets apply.",
+          "rationale": "DL-031 (~500 items with definition-match Moderate→Easy miscalibration) and DL-032 (420 case items all Moderate) are the direct result of template-assigned difficulty. Part 2 content must use genuine cognitive assessment from first authoring.",
+          "non_negotiable": true
+        },
+        {
+          "id": "P2-R6",
+          "rule": "Part 2 certification velocity must not exceed part 1's proven rate (304.5 items/day) until the Part 2 quality baseline is established",
+          "rationale": "Certification velocity is a learned capacity. Part 1 achieved 304.5 items/day over 4 days only after establishing quality baselines. Part 2 starts without baselines. Velocity should ramp, not jump.",
+          "non_negotiable": false
+        }
+      ],
+      "required_gates": ["All 6 gates", "Part 2 CSO mapping verification", "Part 2-specific validator extension"],
+      "governance_impact": "None — all 6 rules auto-apply to new pack files. The pack file regex in governance-guard.js may need extension for new pack filenames.",
+      "estimated_effort": "Standards extension: 2-3 sessions. Content authoring: per-wave, same as Part 1. No architectural work required."
+    },
+
+    "may_admin_integration": {
+      "description": "Adding new admin features or integrating May Admin tools with Framework v2 pipelines",
+      "trigger": "A new May Admin module proposed or an existing module extended",
+      "rules": [
+        {
+          "id": "MA-R1",
+          "rule": "All admin tools must consume from authoritative registries — never directly from raw pack files",
+          "rationale": "Raw pack file consumption creates duplicate parsing logic (DL-036: 40-item divergence from independent re-scanning). Registry consumption ensures single source of truth (P2: Scan Once, Consume Many).",
+          "non_negotiable": true
+        },
+        {
+          "id": "MA-R2",
+          "rule": "New admin features must register as registry consumers — their read/write patterns must be documented in the registry authority model",
+          "rationale": "Unregistered consumers create shadow consumption paths that bypass traceability (P6). Every tool that reads or writes entity data must be known to the registry authority.",
+          "non_negotiable": true
+        },
+        {
+          "id": "MA-R3",
+          "rule": "Investigation chains must remain intact — challenge→defect→recommendation→session→certification links must not be broken by new features",
+          "rationale": "Investigation integrity is verified by S256 (8/8 cases PASS, 0 manual searches). New admin features must not introduce link breakage or orphan references.",
+          "non_negotiable": true
+        },
+        {
+          "id": "MA-R4",
+          "rule": "New admin features must integrate with governance guard — admin-initiated writes to content files must pass all 6 rules",
+          "rationale": "Governance automation (P5) applies to all write paths. Admin tools are not exempt from Rule 2 (DL-008 BLOCK), Rule 5 (batch cap), or Rule 6 (DL-026 BLOCK).",
+          "non_negotiable": true
+        },
+        {
+          "id": "MA-R5",
+          "rule": "Student Data Bridge remains a design-only component until operational student data exists — no May Admin feature may depend on it for operation",
+          "rationale": "S255 designed the canonical student record and data bridge. Zero operational data exists. Features that depend on student data cannot be operationally validated. Design must be ready but features must not require it.",
+          "non_negotiable": false
+        }
+      ],
+      "required_gates": ["Registry consumer registration", "Investigation chain integrity test (S256 pattern)", "Governance guard rule verification on admin write paths"],
+      "governance_impact": "Low — admin tools are primarily read-only. Write paths (investigation creation, recommendation generation) already pass governance guard.",
+      "estimated_effort": "1-2 sessions per new module for design + registration. Implementation effort varies by module complexity."
+    }
+  },
+
+  "cross_scenario_rules": {
+    "description": "Rules that apply to ALL expansion scenarios, regardless of type",
+    "universal_rules": [
+      {
+        "id": "U-R1",
+        "rule": "The six architectural principles are non-negotiable — no expansion scenario may violate P1-P6",
+        "principle": "All (P1-P6)",
+        "non_negotiable": true
+      },
+      {
+        "id": "U-R2",
+        "rule": "Governance guard test suite must maintain 100% pass rate before, during, and after any expansion",
+        "principle": "P5 Governance Automation",
+        "non_negotiable": true
+      },
+      {
+        "id": "U-R3",
+        "rule": "All expansion content must pass CAQS §1.6 six-dimension verification at HIGH confidence before certification",
+        "principle": "P4 Readiness Before Certification",
+        "non_negotiable": true
+      },
+      {
+        "id": "U-R4",
+        "rule": "Every expansion must produce a REVISION_HISTORY.md entry documenting what was added/changed and why",
+        "principle": "P6 Traceability Everywhere",
+        "non_negotiable": true
+      },
+      {
+        "id": "U-R5",
+        "rule": "Template-based bulk authoring (rotation groups, clone generation, difficulty-by-position) is prohibited for all new content",
+        "principle": "P4 Readiness Before Certification",
+        "rationale": "Template authoring is the root cause of DL-012 (140 clones), DL-031 (~500 difficulty miscalibrations), DL-032 (420 uniform-difficulty case items), and DL-016 (metadata-block shift). Quality-first authoring with per-item cognitive assessment is the only permitted approach.",
+        "non_negotiable": true
+      }
+    ]
+  },
+
+  "what_is_not_an_expansion_rule": {
+    "intentional_exclusions": [
+      "Content volume targets — expansion rules govern HOW content integrates, not HOW MUCH content is produced",
+      "Specific QID numbering schemes — identity model handles any QID format that includes pack+section+number components",
+      "Topic/LO selection — expansion rules govern architectural integration, not curriculum design",
+      "Session naming conventions — expansion rules govern system behavior, not session administration",
+      "Reporting format — expansion rules govern data integrity and traceability, not presentation"
+    ]
+  }
+}

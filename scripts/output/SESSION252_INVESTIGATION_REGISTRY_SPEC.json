@@ -1,0 +1,391 @@
+{
+  "specId": "SESSION252_INVESTIGATION_REGISTRY_SPEC",
+  "board": "D",
+  "session": "S252",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T20:30:00.000Z",
+  "purpose": "Unified investigation lifecycle management system — orchestrates formal inquiries triggered by challenges, defect discoveries, governance events, or systematic issues across the CMA Part 1 Exam Simulator repository.",
+  "scriptPath": "scripts/investigation_registry.js",
+  "storagePath": "scripts/output/investigation_registry.json",
+
+  "dataContract": {
+    "registrySchema": {
+      "specId": { "type": "string", "value": "SESSION252_INVESTIGATION_REGISTRY_SPEC" },
+      "board": { "type": "string", "description": "Session board identifier" },
+      "version": { "type": "string", "description": "Registry version, incremented on schema changes" },
+      "generatedTimestamp": { "type": "string", "format": "ISO 8601" },
+      "nextId": { "type": "integer", "description": "Monotonically increasing counter for INV-ID sequence generation" },
+      "investigations": { "type": "array", "description": "Ordered array of investigation objects" }
+    },
+
+    "investigationSchema": {
+      "id": {
+        "type": "string",
+        "pattern": "^INV-\\d{8}-\\d{3}$",
+        "description": "Unique investigation identifier: INV-{YYYYMMDD}-{NNN} where NNN is a 3-digit zero-padded sequence number"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 200,
+        "description": "Human-readable title describing the investigation scope"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["CHALLENGE", "DEFECT", "GOVERNANCE", "SYSTEMATIC"],
+        "description": "Investigation origin type: CHALLENGE — triggered by a student/auto challenge; DEFECT — triggered by a known defect code; GOVERNANCE — triggered by a governance event; SYSTEMATIC — cross-cutting pattern across multiple items"
+      },
+      "status": {
+        "type": "string",
+        "enum": ["OPEN", "INVESTIGATING", "ACTION_REQUIRED", "RESOLVED", "CLOSED"],
+        "description": "Current lifecycle state"
+      },
+      "priority": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 100,
+        "description": "Priority score: 1=lowest, 100=highest. Derived from trigger severity and learner-safety impact."
+      },
+      "related_qids": {
+        "type": "array<string>",
+        "description": "Question identifiers involved in this investigation"
+      },
+      "related_challenges": {
+        "type": "array<string>",
+        "description": "Challenge IDs (CH-XXXXXXXX) that triggered or relate to this investigation"
+      },
+      "related_defects": {
+        "type": "array<string>",
+        "description": "Defect codes (DL-XXX) implicated in this investigation"
+      },
+      "related_recommendations": {
+        "type": "array<string>",
+        "description": "Recommendation IDs (REC-XXXXXXXX) associated with this investigation"
+      },
+      "related_sessions": {
+        "type": "array<string>",
+        "description": "Session IDs that created, updated, or resolved this investigation"
+      },
+      "related_governance_events": {
+        "type": "array<string>",
+        "description": "Governance event IDs (GE-NNNN) associated with this investigation"
+      },
+      "created_date": {
+        "type": "string",
+        "format": "ISO 8601",
+        "description": "Timestamp when investigation was created"
+      },
+      "updated_date": {
+        "type": "string",
+        "format": "ISO 8601",
+        "description": "Timestamp of last modification"
+      },
+      "assigned_to": {
+        "type": "string",
+        "nullable": true,
+        "description": "Investigator assignee (persona, session, or role)"
+      },
+      "findings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "timestamp": { "type": "string", "format": "ISO 8601" },
+            "author": { "type": "string" },
+            "finding": { "type": "string", "minLength": 10 },
+            "severity": { "type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFORMATIONAL"] }
+          },
+          "required": ["timestamp", "finding"]
+        }
+      },
+      "resolution": {
+        "type": "string",
+        "nullable": true,
+        "minLength": 10,
+        "description": "Resolution summary — required when transitioning to RESOLVED or CLOSED"
+      },
+      "resolution_date": {
+        "type": "string",
+        "format": "ISO 8601",
+        "nullable": true,
+        "description": "Timestamp when resolution was recorded"
+      },
+      "resolution_type": {
+        "type": "string",
+        "enum": ["CONFIRMED_DEFECT", "CONFIRMED_VALID", "DUPLICATE", "INVALID", "NO_ACTION", "REMEDIATED", "DISMISSED"],
+        "nullable": true,
+        "description": "Categorization of the resolution"
+      },
+      "resolution_author": {
+        "type": "string",
+        "nullable": true
+      },
+      "resolution_session": {
+        "type": "string",
+        "nullable": true
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "source": { "type": "string", "description": "How investigation was created: manual, auto-create, from-challenge, from-defect" },
+          "tags": { "type": "array<string>" },
+          "estimated_hours": { "type": "number", "nullable": true },
+          "blocking": { "type": "boolean", "description": "If true, this investigation blocks further certification of affected QIDs" }
+        }
+      },
+      "timeline": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "timestamp": { "type": "string", "format": "ISO 8601" },
+            "from_status": { "type": "string" },
+            "to_status": { "type": "string" },
+            "author": { "type": "string" },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+
+  "lifecycleStateMachine": {
+    "description": "Deterministic state transitions for investigation lifecycle management",
+    "states": {
+      "OPEN": {
+        "description": "Investigation has been created but not yet assigned or active. Awaiting triage.",
+        "validTransitions": ["INVESTIGATING", "CLOSED"]
+      },
+      "INVESTIGATING": {
+        "description": "Investigation is assigned and actively in progress. Evidence gathering underway.",
+        "validTransitions": ["ACTION_REQUIRED", "RESOLVED", "CLOSED"]
+      },
+      "ACTION_REQUIRED": {
+        "description": "Findings are complete and require a remediation action before resolution.",
+        "validTransitions": ["RESOLVED", "CLOSED"],
+        "note": "ACTION_REQUIRED is a mandatory intermediate state when findings identify defects or issues requiring fix/rewrite/archive. Cannot go back to INVESTIGATING — must resolve or close."
+      },
+      "RESOLVED": {
+        "description": "Remediation action completed or no action needed. Awaiting independent verification.",
+        "validTransitions": ["CLOSED"],
+        "note": "RESOLVED requires resolution text, resolution_type, and resolution_author."
+      },
+      "CLOSED": {
+        "description": "Resolution verified by independent review, or investigation determined invalid/duplicate. Terminal state.",
+        "validTransitions": [],
+        "note": "CLOSED is a terminal state. No further transitions permitted."
+      }
+    },
+
+    "transitionRules": [
+      {
+        "from": "OPEN",
+        "to": "INVESTIGATING",
+        "conditions": ["assigned_to must be set", "At least one finding must be recorded OR the assignment itself acts as the trigger"],
+        "effect": "Sets updated_date. Records timeline entry."
+      },
+      {
+        "from": "INVESTIGATING",
+        "to": "ACTION_REQUIRED",
+        "conditions": ["At least one finding with severity >= MEDIUM", "No resolution text yet"],
+        "effect": "Sets updated_date. Flags as blocking if severity includes CRITICAL."
+      },
+      {
+        "from": "INVESTIGATING",
+        "to": "RESOLVED",
+        "conditions": ["resolution text provided", "resolution_type provided", "All findings documented"],
+        "effect": "Sets resolution_date. Records timeline entry."
+      },
+      {
+        "from": "ACTION_REQUIRED",
+        "to": "RESOLVED",
+        "conditions": ["resolution text provided", "resolution_type provided", "Remediation action completed (findings reference resolution)"],
+        "effect": "Sets resolution_date. Records timeline entry."
+      },
+      {
+        "from": "RESOLVED",
+        "to": "CLOSED",
+        "conditions": ["Independent verification performed", "Verification documented in findings or resolution"],
+        "effect": "Sets resolution_date to close date. Timeline entry recorded."
+      },
+      {
+        "from": "*",
+        "to": "CLOSED",
+        "conditions": ["Investigation determined to be invalid or duplicate", "resolution_type = DUPLICATE or INVALID or DISMISSED"],
+        "effect": "Sets resolution_date. Terminal."
+      }
+    ],
+
+    "invalidTransitions": {
+      "description": "The following transitions are rejected with an error",
+      "examples": [
+        "OPEN → RESOLVED (must go through INVESTIGATING first)",
+        "INVESTIGATING → OPEN (cannot regress)",
+        "ACTION_REQUIRED → INVESTIGATING (must resolve or close)",
+        "RESOLVED → INVESTIGATING (must close or re-open a new investigation)",
+        "CLOSED → any state (terminal)",
+        "Any → OPEN when not currently OPEN (cannot re-open)"
+      ]
+    }
+  },
+
+  "cliInterface": {
+    "script": "node scripts/investigation_registry.js",
+
+    "operations": {
+      "--create": {
+        "description": "Create a new investigation manually",
+        "usage": "node scripts/investigation_registry.js --create --title=\"<text>\" --type=<type> [--priority=<1-100>] [--qids=<QID,QID,...>]",
+        "requiredFlags": ["--title", "--type"],
+        "optionalFlags": ["--priority", "--qids"],
+        "defaultPriority": 50,
+        "output": "JSON of created investigation to stdout"
+      },
+
+      "--auto-create": {
+        "description": "Scan all OPEN challenges and create investigations for those meeting auto-creation criteria",
+        "usage": "node scripts/investigation_registry.js --auto-create [--min-priority=80]",
+        "criteria": [
+          "Challenge status is OPEN or INVESTIGATING",
+          "Challenge has linkedDefects that include critical/high defects (DL-008, DL-026, DL-030)",
+          "Challenge priority is HIGH or priority score >= min-priority threshold",
+          "No existing OPEN/INVESTIGATING investigation with the same QID and defect pairing"
+        ],
+        "optionalFlags": ["--min-priority"],
+        "output": "JSON array of created investigations to stdout"
+      },
+
+      "--from-challenge": {
+        "description": "Create an investigation from a specific challenge",
+        "usage": "node scripts/investigation_registry.js --from-challenge=CH_ID [--priority=<1-100>]",
+        "behavior": "Reads challenge_registry.json, extracts challenge data, creates linked investigation",
+        "output": "JSON of created investigation to stdout"
+      },
+
+      "--from-defect": {
+        "description": "Create an investigation from a known defect code",
+        "usage": "node scripts/investigation_registry.js --from-defect=DL-XXX [--priority=<1-100>]",
+        "behavior": "Creates a DEFECT-type investigation. Derives priority from DEFECT_LIBRARY.md severity.",
+        "output": "JSON of created investigation to stdout"
+      },
+
+      "--list": {
+        "description": "List investigations with optional filters",
+        "usage": "node scripts/investigation_registry.js --list [--status=OPEN] [--priority=80] [--type=DEFECT]",
+        "optionalFlags": ["--status", "--priority", "--type"],
+        "output": "JSON object with summary counts and filtered investigation array"
+      },
+
+      "--get": {
+        "description": "Retrieve a full investigation record by ID",
+        "usage": "node scripts/investigation_registry.js --get=INV_ID",
+        "output": "JSON of full investigation record with timeline and findings"
+      },
+
+      "--update": {
+        "description": "Update an investigation's metadata, status, findings, or assignment",
+        "usage": "node scripts/investigation_registry.js --update=INV_ID [--status=INVESTIGATING] [--finding=\"<text>\"] [--assign-to=\"<name>\"] [--add-qid=QID]",
+        "optionalFlags": ["--status", "--finding", "--assign-to", "--add-qid"],
+        "output": "JSON of updated investigation"
+      },
+
+      "--close": {
+        "description": "Close an investigation with required resolution text",
+        "usage": "node scripts/investigation_registry.js --close=INV_ID --resolution=\"<text>\" --resolution-type=<type>",
+        "requiredFlags": ["--resolution", "--resolution-type"],
+        "output": "JSON of closed investigation"
+      },
+
+      "--summary": {
+        "description": "Generate a summary dashboard of all investigations",
+        "usage": "node scripts/investigation_registry.js --summary",
+        "output": "JSON object with counts by status, type, priority band, and recent activity"
+      },
+
+      "--stats": {
+        "description": "Generate detailed statistics with QID impact analysis",
+        "usage": "node scripts/investigation_registry.js --stats",
+        "output": "JSON object with per-defect investigation counts, blocking investigation count, average time-to-resolution"
+      }
+    }
+  },
+
+  "autoCreateRules": {
+    "sourceFiles": [
+      "scripts/output/challenge_registry.json",
+      "scripts/output/question_history.json",
+      "scripts/output/readiness_scoring.json",
+      "scripts/output/work_queue.json"
+    ],
+    "challengeCriteria": {
+      "priorityThreshold": 80,
+      "statusFilter": ["OPEN", "INVESTIGATING"],
+      "defectFilter": ["DL-008", "DL-026", "DL-030", "DL-035"],
+      "deduplication": "If an OPEN or INVESTIGATING investigation already exists for all QIDs in the challenge AND all linked defect codes, skip creation."
+    },
+    "priorityDerivation": {
+      "HIGH_CHALLENGE": 85,
+      "MEDIUM_CHALLENGE": 65,
+      "LOW_CHALLENGE": 40,
+      "CRITICAL_DEFECT": 100,
+      "HIGH_DEFECT": 85,
+      "MEDIUM_DEFECT": 65,
+      "LOW_DEFECT": 40,
+      "GOVERNANCE_ESCALATION": 95,
+      "SYSTEMATIC_PATTERN": 80,
+      "bonusCertifiedItem": 15,
+      "bonusLearnerReported": 10,
+      "bonusMultipleChallenges": 5
+    }
+  },
+
+  "seedData": {
+    "description": "Initial investigations created from OPEN challenges in the challenge registry",
+    "sourceSession": "S252",
+    "challengeCount": 12,
+    "investigationsCreated": 12,
+    "byType": {
+      "CHALLENGE": 8,
+      "DEFECT": 2,
+      "GOVERNANCE": 1,
+      "SYSTEMATIC": 1
+    },
+    "byStatus": {
+      "OPEN": 12
+    }
+  },
+
+  "crossReferences": {
+    "parentSession": "S252",
+    "relatedSpecs": [
+      "SESSION252_CHALLENGE_TRIAGE_SPEC.json (Board C)",
+      "SESSION252_INVESTIGATION_API_SPEC.json (Board A)",
+      "SESSION252_STUDENT_EXPOSURE_SPEC.json (Board B)"
+    ],
+    "relatedScripts": [
+      "scripts/challenge_registry.js",
+      "scripts/governance_event_registry.js",
+      "scripts/recommendation_registry.js",
+      "scripts/remediation_queue_manager.js",
+      "scripts/work_queue_manager.js",
+      "scripts/question_investigation_api.js"
+    ],
+    "relatedDataFiles": [
+      "scripts/output/challenge_registry.json",
+      "scripts/output/governance_event_registry.json",
+      "scripts/output/recommendation_registry.json",
+      "scripts/output/question_history.json",
+      "scripts/output/readiness_scoring.json",
+      "scripts/output/work_queue.json"
+    ]
+  },
+
+  "governanceAlignment": {
+    "agreementWith_CONSTITUTION": "Fully compatible. Read-only access to pack files. Writes limited to investigation_registry.json.",
+    "agreementWith_AGENTS_md": "Compliant with §2 (read-only default), §4 (REVISION_HISTORY entries when content changes are triggered), §12 (investigation findings logged before session close).",
+    "agreementWith_CAQS": "Supports §1.6 build-time verification by tracking review dimensions. Supports §9 audit workflow by providing formal investigation lifecycle.",
+    "agreementWith_DEFECT_LIBRARY": "Uses DL-XXX codes as first-class references. Investigations can be spawned from defect library entries.",
+    "backupProtocol": "Investigation registry JSON is a new output artifact (not a pack file). Standard write-then-verify applies.",
+    "governanceGuardRules": "No conflict. Investigation management does not modify pack files. Rule 2 (DL-008) unaffected."
+  }
+}

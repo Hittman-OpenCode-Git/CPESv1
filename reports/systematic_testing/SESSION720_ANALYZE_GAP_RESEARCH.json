@@ -1,0 +1,276 @@
+{
+  "session": "S720",
+  "agent": "J",
+  "title": "Analyze Gap Research — Cognitive Level Classification Audit",
+  "date": "2026-07-26",
+  "read_only_attestation": "Zero files modified. All data from grep/Select-String and direct file reads.",
+  "current_state": {
+    "total_items_pool": 2500,
+    "analyze_labeled": 66,
+    "pct_analyze_labeled": 2.64,
+    "caqs_target_pct": 25,
+    "caqs_target_count": 625,
+    "gap_pct": 22.36,
+    "gap_count": 559,
+    "by_pack": {
+      "pack_a": 2,
+      "pack_b": 15,
+      "pack_c": 23,
+      "pack_d": 23,
+      "pack_e": 3
+    },
+    "by_section_approximate": {
+      "A": 0,
+      "B": 12,
+      "C": 24,
+      "D": 6,
+      "E": 13,
+      "F": 11
+    },
+    "section_pct": {
+      "A": 0.0,
+      "B": 4.8,
+      "C": 9.6,
+      "D": 3.2,
+      "E": 5.9,
+      "F": 5.8
+    },
+    "other_cognitive_levels": {
+      "Remember": 50,
+      "Understand": 1156,
+      "Apply": 1161,
+      "Evaluate": 67
+    }
+  },
+  "clone_analysis": {
+    "total_analyze_labeled": 66,
+    "identified_clones": 48,
+    "genuinely_unique_analyze_items": 18,
+    "pct_analyze_items_are_clones": 72.7,
+    "by_pack": {
+      "pack_c": {
+        "total": 23,
+        "clones": 18,
+        "unique": 5,
+        "clone_examples": [
+          "DuPont (C.009-014, 6 items)",
+          "Joint cost NRV (D.017-020, 4 items)",
+          "Inherent risk (E.062-065, 4 items)",
+          "Data mining (F.037-040, 4 items)"
+        ]
+      },
+      "pack_d": {
+        "total": 23,
+        "clones": 18,
+        "unique": 5,
+        "clone_examples": [
+          "Time series seasonal (B.044-049, 6 items)",
+          "Customer profitability (C.044-049, 6 items)",
+          "Common-size analysis (C.058-063, 6 items)"
+        ]
+      },
+      "pack_a": { "total": 2, "clones": 0, "unique": 2 },
+      "pack_b": { "total": 15, "clones": 0, "unique": 15 },
+      "pack_e": { "total": 3, "clones": 0, "unique": 3 }
+    },
+    "clone_pattern_description": "All 48 clone items follow DL-012 pattern: same stem skeleton, different company name only. Stem describes a concept; answer is the TERM for that concept. These are Remember/Understand definition-matching items — NOT genuine Analyze. The word 'analyzes' in the stem refers to what the fictional company is doing, not what the candidate must do."
+  },
+  "genuine_analyze_estimate": {
+    "describe": "After removing 48 definition-match clones and retaining 18 genuinely unique Analyze-labeled items, plus identifying misclassified items from Apply/Understand:",
+    "genuine_from_labeled_analyze": 18,
+    "misclassified_apply_to_analyze": 4,
+    "misclassified_understand_to_analyze": 3,
+    "borderline_could_be_analyze": 8,
+    "total_genuine_estimate": 33,
+    "pct_of_pool": 1.32,
+    "note": "Optimistic estimate. Conservative: ~25 items (1.0%)."
+  },
+  "reclassification_candidates": {
+    "items_reviewed": 15,
+    "confirmed_misclassified_apply_to_analyze": [
+      {
+        "qid": "P1-B-036",
+        "pack": "A",
+        "section": "B",
+        "current_cog": "Apply",
+        "should_be": "Analyze",
+        "stem": "Delta's flexible budget for 8,000 units shows budgeted variable costs of $64,000. Actual output was 8,000 units with actual variable costs of $70,000. What does this variance indicate?",
+        "rationale": "Candidate must INTERPRET the meaning of an unfavorable variance at constant output — pure analysis. No formula application required."
+      },
+      {
+        "qid": "P1-B-039",
+        "pack": "A",
+        "section": "B",
+        "current_cog": "Apply",
+        "should_be": "Analyze",
+        "stem": "Eastwood investigates any budget variance exceeding 5% of budgeted cost or $10,000, whichever is smaller. A department shows a $9,000 unfavorable variance on a $150,000 budget. Should this be investigated?",
+        "rationale": "Candidate must apply dual criteria, evaluate which threshold is binding, and make a decision. This is analysis, not rote application."
+      },
+      {
+        "qid": "P1-B-061",
+        "pack": "A",
+        "section": "B",
+        "current_cog": "Apply",
+        "should_be": "Analyze",
+        "stem": "Grayson's cost analyst distinguishes between a learning curve and an experience curve when discussing declining unit costs. What is the key difference between these two concepts?",
+        "rationale": "Candidate must compare/contrast two related but distinct concepts. Analysis (breaking down, differentiating). No computation."
+      }
+    ],
+    "confirmed_misclassified_understand_to_analyze": [
+      {
+        "qid": "P1-C-011",
+        "pack": "A",
+        "section": "C",
+        "current_cog": "Understand",
+        "should_be": "Analyze",
+        "stem": "Evergreen worries ROI discourages managers from accepting profitable projects above the required return but below current ROI. Which response is most appropriate?",
+        "rationale": "Candidate must diagnose WHY ROI creates this dysfunction and identify residual income as the solution. Requires analyzing ROI's behavioral effects on decision-making."
+      },
+      {
+        "qid": "P1-E-040",
+        "pack": "A",
+        "section": "E",
+        "current_cog": "Understand",
+        "should_be": "Analyze",
+        "stem": "Keystone finds employees retain access after changing departments. Which response is most appropriate?",
+        "rationale": "Candidate must identify this as an access control/segregation-of-duties weakness from a scenario. Requires analyzing the control gap, not just recalling a definition."
+      }
+    ],
+    "borderline_items": [
+      {
+        "qid": "P1-E-038",
+        "pack": "A",
+        "section": "E",
+        "current_cog": "Understand",
+        "should_be": "Analyze",
+        "stem": "Iris paid a terminated employee for two pay periods. Which response is most appropriate?",
+        "rationale": "Recognizing payroll control weakness from scenario. Borderline Understand/Analyze — depends on distractor complexity."
+      },
+      {
+        "qid": "P1-C-012",
+        "pack": "A",
+        "section": "C",
+        "current_cog": "Understand",
+        "should_be": "Analyze",
+        "stem": "Frontier produces more output with the same labor hours. Which response is most appropriate?",
+        "rationale": "Identifying productivity improvement from output/input ratio. Borderline Understand/Analyze."
+      },
+      {
+        "qid": "P1-E-036",
+        "pack": "A",
+        "section": "E",
+        "current_cog": "Understand",
+        "should_be": "Analyze",
+        "stem": "Granite notices managers split purchases to avoid approval limits. Which response is most appropriate?",
+        "rationale": "Recognizing circumvention of internal controls. Borderline Understand/Analyze."
+      }
+    ],
+    "separate_issue_computational_mislabeled_as_understand": {
+      "count": 47,
+      "description": "47 items asking 'What is...' / 'How much...' / 'Calculate...' labeled Understand but should be Apply. Separate error from the Analyze gap.",
+      "by_pack": { "pack_a": 4, "pack_b": 3, "pack_c": 16, "pack_d": 21, "pack_e": 3 },
+      "examples": [
+        { "qid": "P1-C-027", "stem": "What direct material price variance should be reported?", "current": "Understand", "should_be": "Apply" },
+        { "qid": "P1-D-020", "stem": "How much overhead is applied to the job?", "current": "Understand", "should_be": "Apply" },
+        { "qid": "P1-C-051", "stem": "What is the direct material price variance?", "current": "Understand", "should_be": "Apply" }
+      ]
+    }
+  },
+  "structural_gap_assessment": {
+    "verdict": "MIXED — Primarily CLASSIFICATION with significant STRUCTURAL component",
+    "evidence": {
+      "classification_gap": [
+        "72.7% of items labeled 'Analyze' (48/66) are definition-matching clones — they test TERM RECOGNITION, not analysis",
+        "4 confirmed Apply->Analyze + 3 Understand->Analyze + 8 borderline items found in 15-item sample",
+        "47 computational items labeled 'Understand' should be 'Apply' — systematic template labeling error",
+        "Template pipeline assigned CognitiveLevel by rotation-group position, not cognitive demand",
+        "Packs C and D show most severe bias: entire rotation groups share one CognitiveLevel"
+      ],
+      "structural_gap": [
+        "Genuine Analyze items: ~33 (1.32%) vs. CAQS target 625 (25%) — gap of 592 items",
+        "Pool designed via template authoring that produces definition-matching + formula-application items",
+        "Section A has ZERO Analyze items despite being the domain richest in judgment scenarios",
+        "No item asks candidates to IDENTIFY PATTERNS, DIAGNOSE CAUSES, or EXPLAIN WHY a variance occurred",
+        "'Which response is most appropriate?' format could test analysis but choices default to definition matching"
+      ]
+    },
+    "genuine_analyze_estimate": 33,
+    "new_analyze_items_needed_to_meet_25pct": 592,
+    "classification_fixes_could_add": 12,
+    "remaining_structural_gap_after_fixes": 580
+  },
+  "section_analyze_density": {
+    "A": {
+      "pct_analyze": 0.0,
+      "genuine_estimate": 0.0,
+      "note": "WORST gap. ~185 items, all scenario-based. Many stems could test analysis if choices required judgment."
+    },
+    "B": {
+      "pct_analyze": 4.8,
+      "genuine_estimate": 3.0,
+      "note": "Pack D has 7 definition-match clones. Pack B has 2 (high-low = Apply; ideal vs practical = borderline Analyze). Pack A has 2 confirmed misclassifications (B-036/B-039)."
+    },
+    "C": {
+      "pct_analyze": 9.6,
+      "genuine_estimate": 3.0,
+      "note": "Highest labeled count (24) but 19 are clones. Only C-018 and C-064 approach analytical thinking."
+    },
+    "D": {
+      "pct_analyze": 3.2,
+      "genuine_estimate": 1.0,
+      "note": "Pack D D-032 (DOL) is concept question. Pack C D-017-021 are clones. Relevant costing/make-or-buy/special-order items are completely absent from Analyze."
+    },
+    "E": {
+      "pct_analyze": 5.9,
+      "genuine_estimate": 6.0,
+      "note": "BEST Analyze items in pool: Pack B Section E COSO/ERM/SOX scenario questions. Genuinely analytical — apply framework knowledge to situations."
+    },
+    "F": {
+      "pct_analyze": 5.8,
+      "genuine_estimate": 2.0,
+      "note": "Pack A (ETL, RPA — borderline). Pack B (AI/ML, cybersecurity, SOC — borderline). Pack C clones."
+    }
+  },
+  "recommendations": [
+    {
+      "priority": 1,
+      "action": "Correct confirmed misclassifications",
+      "detail": "Recode P1-B-036, P1-B-039, P1-B-061: Apply->Analyze. Recode P1-C-011, P1-E-040: Understand->Analyze.",
+      "estimated_new_analyze": 5
+    },
+    {
+      "priority": 2,
+      "action": "Recode 48 definition-match clones: Analyze->Understand",
+      "detail": "All 48 DL-012 clones labeled Analyze are Remember/Understand level. Will REDUCE labeled count but fix structural issue.",
+      "estimated_new_analyze": -48
+    },
+    {
+      "priority": 3,
+      "action": "Recode 47 computational items: Understand->Apply",
+      "detail": "Items computing variance, overhead, etc. labeled Understand. Fix to Apply. Separate from Analyze gap.",
+      "estimated_new_analyze": 0
+    },
+    {
+      "priority": 4,
+      "action": "Author new Analyze-level items",
+      "detail": "Need ~580 genuine Analyze items. Focus areas: variance interpretation/diagnosis, ratio analysis/trend interpretation, cost behavior analysis, internal control weakness identification, make-or-buy/special-order decisions, budget variance root-cause analysis.",
+      "estimated_new_analyze": 580
+    },
+    {
+      "priority": 5,
+      "action": "Fix template-based labeling pipeline",
+      "detail": "Root cause: template assigns CognitiveLevel by rotation-group position. Future content needs per-item cognitive assessment."
+    },
+    {
+      "priority": 6,
+      "action": "Add CognitiveLevel validation rule to validator",
+      "detail": "Flag: (a) computation stems labeled Understand, (b) analytical stems labeled Understand/Apply, (c) definition-matching stems labeled Analyze."
+    }
+  ],
+  "methodology_notes": {
+    "inventory_method": "Select-String for CognitiveLevel count; -Context for stem/section; Node.js direct reads for per-item verification",
+    "sample_size": "15 items individually classified; 5 confirmed misclassifications; 8 borderline",
+    "clone_detection": "Grouped by topic pattern and stem similarity within packs",
+    "limitations": "Pack B Section field extraction unreliable (JSON field ordering). Per-section counts for C/D derived from topic prefix."
+  }
+}

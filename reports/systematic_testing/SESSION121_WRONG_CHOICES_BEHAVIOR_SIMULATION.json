@@ -1,0 +1,91 @@
+{
+  "session": 121,
+  "title": "S121 Wrong Choices Behavior Simulation",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "methodology": "Direct structural analysis of output patterns by question type and learner context using representative Pack A items. Compares old behavior (flat ExplanationWrong list) to new behavior (4-section structured misconception coaching).",
+  "scenarios": [
+    {
+      "type": "conceptual MCQ (post-answer, selected wrong)",
+      "example": "P1A-FS-001 (External Financial Reporting, Section A, CC=B)",
+      "context": "Learner selected C, active session, has answered",
+      "oldBehavior": "Listed each wrong option with ExplanationWrong text: 'Option A — choice text + explanation', 'Option C — choice text + explanation', 'Option D — choice text + explanation'",
+      "newBehavior": "Opens with 'Let's start with the answer you chose' — addresses Choice C (selected) first with *(your answer)* tag. Then A, then D. Each gets 4 coaching sections: Why tempting, Why not correct, Misconception to watch, How to avoid next time.",
+      "coachingInsightAdded": "Yes — selected-answer prioritization, misconception identification, avoidance strategy per choice",
+      "officialContentPreserved": "Yes — ExplanationWrongA/C/D embedded in Why it is not correct sections",
+      "answerGatingHeld": "Yes — attempted state detected, full coaching allowed"
+    },
+    {
+      "type": "calculation MCQ (post-answer, selected wrong)",
+      "example": "P1A-FS-025 (Section A, $ stem, CC=C)",
+      "context": "Learner selected A, active session, has answered",
+      "oldBehavior": "Listed wrong options A, B, D with ExplanationWrong or generic fallback",
+      "newBehavior": "Choice A prioritized with *(your answer)*. Why-it-is-tempting detects calculation distractor pattern. Misconception points to formula-setup error. Avoid-next-time suggests formula-first approach.",
+      "coachingInsightAdded": "Yes — calc-specific trap detection, formula-setup misconception, step-by-step avoidance",
+      "officialContentPreserved": "Yes",
+      "answerGatingHeld": "Yes"
+    },
+    {
+      "type": "thin ExplanationWrong item",
+      "example": "Mock QID with thin/missing ExplanationWrong fields for options A, C, D",
+      "context": "Review mode",
+      "oldBehavior": "Output generic fallback: 'This choice is incorrect. It does not match the correct accounting treatment...' for each option",
+      "newBehavior": "Uses safe fallback for Why it is not correct — 'This choice does not match the correct accounting treatment... When you trace the governing rule back...' Tempting uses stem/choice overlap analysis. Misconception uses section-aligned fallback.",
+      "coachingInsightAdded": "Yes — structural coaching preserved even with thin ExplanationWrong, no fabrication",
+      "officialContentPreserved": "N/A — no official content to preserve, but no fabrication introduced",
+      "answerGatingHeld": "Yes — review mode permits full coaching"
+    },
+    {
+      "type": "active unanswered question",
+      "example": "Any MCQ, learner in active session, no answer submitted",
+      "context": "Learner clicks 'Wrong choices' button before answering",
+      "oldBehavior": "Listed all wrong options with ExplanationWrong — NO GATE, revealed which options were wrong before attempt",
+      "newBehavior": "Strategy-only response: 'I can help you evaluate the options without giving away the answer. After you submit, I'll break down each wrong choice and the trap behind it.' Provides general distractor evaluation tips (calc or conceptual). No coaching sections, no option mentions.",
+      "coachingInsightAdded": "N/A — gated, no wrong choices revealed",
+      "officialContentPreserved": "N/A — no content accessed",
+      "answerGatingHeld": "YES — active unanswered question does not disclose which options are wrong"
+    },
+    {
+      "type": "completed-session review item",
+      "example": "Any Pack A item viewed through review queue after session completion",
+      "context": "Session completed, learner reviewing wrong answers",
+      "oldBehavior": "Listed wrong options with ExplanationWrong text",
+      "newBehavior": "Full coaching with review framing: 'Let's use this review as a learning opportunity.' All 4 coaching sections per option + 'Pulling it together' summary section at end connecting wrong-choice analysis to correct-concept boundaries.",
+      "coachingInsightAdded": "Yes — review-mode bonus (Pulling it together), full coaching structure, learning-opportunity framing",
+      "officialContentPreserved": "Yes",
+      "answerGatingHeld": "Yes — review mode intentionally permits full reveal"
+    }
+  ],
+  "safetyAssessment": {
+    "antiLeakage": {
+      "unansweredGate": "CONFIRMED — active unanswered questions receive strategy-only output without revealing which options are right or wrong",
+      "correctChoiceExclusion": "CONFIRMED — correct choice never appears in wrong-choice coaching output",
+      "selectedAnswerReveal": "CONFIRMED — selected answer shown only when learner has already answered (visible in mini-panel already)"
+    },
+    "antiFabrication": {
+      "thinExplanationPath": "CONFIRMED — safe fallback used, no invented standards/ASC/FASB/COSO citations",
+      "whyTemptingInference": "CONFIRMED — uses stem/choice overlap analysis, calculation pattern detection, and section-aligned generic patterns without fabrication",
+      "misconceptionInference": "CONFIRMED — uses ExplanationWrong signals when available, section-aligned fallback when thin"
+    },
+    "safetyGatesPreserved": {
+      "_guardedSpeak": "CONFIRMED — wrong-choices output routes through _guardedSpeak in pilot mode",
+      "predictionLanguage": "CONFIRMED — no exam-ready/pass/guaranteed-to-pass language in any coaching output",
+      "telemetry": "CONFIRMED — sourceLabel 'wrong-choices' logged via _guardedSpeak pipeline"
+    }
+  },
+  "oldVsNewSummary": {
+    "old": {
+      "structure": "Flat list: Option letter + choice text + ExplanationWrong",
+      "learnerAwareness": "None — always same output regardless of learner state",
+      "gating": "None — no check for unanswered question",
+      "coachingDepth": "Shallow — repeats bank text verbatim",
+      "selectedAnswerPriority": "None — alphabetical order always"
+    },
+    "new": {
+      "structure": "4-section coaching per option: Why tempting, Why not correct, Misconception to watch, How to avoid next time",
+      "learnerAwareness": "3 contexts: unanswered (strategy only), post-answer (selected first + coaching), review (full coaching + summary)",
+      "gating": "Active unanswered → strategy-only, no option reveal",
+      "coachingDepth": "Deep — misconception analysis, trap awareness, avoidance patterns, concept boundaries",
+      "selectedAnswerPriority": "Yes — selected wrong answer moved to first position with *(your answer)* tag"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "document": "SESSION321_DELTA_ENGINE_SPEC",
+  "session": "S321",
+  "board": "G — Change Detection Model",
+  "phase": "4 — Delta Review",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+  "depends_on": ["SESSION321_IDENTITY_SCHEMA_V2.json", "SESSION321_CANONICAL_REGISTRY_SPEC.json", "SESSION321_SCAN_ARTIFACT_SPEC.json"],
+
+  "purpose": "Define the Delta Review Engine — the change detection and review-routing system that eliminates unnecessary re-review of unchanged items. Items whose content has not changed since the last certified baseline inherit their prior certification verdict. Only genuinely changed items reach the Quality Board for human/agent review.",
+
+  "motivation": {
+    "v1_waste": "80% of items are unchanged between certification waves, yet all items are re-examined from scratch every wave (S200 Agent I). S809 chain: 38 seeds, 4 sessions, 60 agent-spawns, 47 reports, 0 writes. EW fields examined 4-7x per session by different agents reaching identical conclusions 95%+ of the time. ~500 items re-reviewed per wave when only ~100 changed. The S809 chain was 4 sessions, 60 agents — for items that were never modified.",
+    "s201_design": "S201 Board 8 (Delta Review Architecture) designed SHA-256 content hashing + delta ledger + 4 change types. S321 formalizes this into an engine specification with formal review routing rules and safety overrides."
+  },
+
+  "change_types": {
+    "description": "Five formally defined change types that determine the review required for each item.",
+
+    "CONTENT_CHANGE": {
+      "definition": "Any modification to learner-facing content: Stem text, Choice[A-D] text, CorrectChoice value, ExplanationCorrect text, ExplanationWrong[A-D] text. Detected by content_hash change.",
+      "triggers": [
+        "Stem text modified (typo fix, clarity edit, scenario update)",
+        "Choice[A-D] text modified (distractor edit, answer re-ordering)",
+        "CorrectChoice value changed (rotation shift, answer-key correction)",
+        "ExplanationCorrect text modified (explanation improvement, principle reference fix)",
+        "ExplanationWrong[A-D] text modified (distractor explanation improvement)",
+        "Any combination of above"
+      ],
+      "review_required": "FULL REVIEW — Quality Board (3 agents) + Certification Board",
+      "review_rationale": "Content changes affect what the learner sees and what the answer key asserts. Every content change requires re-verification against all 10 CAQS dimensions. The correct answer, distractor plausibility, numerical accuracy, and explanation quality must all be re-assessed.",
+      "pct_of_wave": "~2%",
+      "savings_rationale": "Content changes are rare — most sessions involve metadata updates, structural fixes, or no changes at all. The 2% estimate comes from S201 analysis of typical certification wave activity."
+    },
+
+    "METADATA_CHANGE": {
+      "definition": "Any modification to non-content metadata: Difficulty, DifficultyScore, CognitiveLevel, LOSTag, Topic, Subtopic, BlueprintDomain, QuestionType, or other metadata fields. Detected by metadata_hash change with content_hash unchanged.",
+      "triggers": [
+        "Difficulty rating adjusted (e.g., Moderate → Difficult)",
+        "CognitiveLevel re-assigned (e.g., Apply → Analyze)",
+        "LOSTag updated to align with new blueprint version",
+        "Topic/Subtopic reclassified",
+        "Any other metadata field change"
+      ],
+      "review_required": "PARTIAL REVIEW — Psychometric/Difficulty Calibration (1 agent) + Certification Board",
+      "review_rationale": "Metadata changes do not affect what the learner sees but DO affect how the item is classified and how adaptive algorithms route it. The psychometric reviewer must confirm that the new metadata assignment is consistent with the actual question content. The Certification Board must confirm the metadata change was intentional and appropriate.",
+      "pct_of_wave": "~8%",
+      "savings_rationale": "Metadata updates are more common than content changes — difficulty recalibration, cognitive level alignment, and blueprint mapping refinement are ongoing activities."
+    },
+
+    "PRESENTATION_CHANGE": {
+      "definition": "Any modification to rendering/presentation fields: QuestionID label formatting, section tag labels, rendering hints, field ordering. Detected by a separate presentation_hash (not yet implemented — placeholder for future UI-focused changes).",
+      "triggers": [
+        "Field ordering changed within the question object",
+        "Rendering metadata updated",
+        "Section tag or domain label re-formatted",
+        "QID label formatting changed"
+      ],
+      "review_required": "NO REVIEW — automated rendering verification only + spot-check for visual consistency",
+      "review_rationale": "Presentation changes do not affect content accuracy or metadata correctness. They only affect how the question is displayed in the learner interface. Automated rendering tests catch display regressions. Spot-check sampling confirms visual consistency across devices.",
+      "pct_of_wave": "~0% (rare — UI changes are typically global, not per-item). Presentation hash is defined but not yet implemented in Phase 1.",
+      "savings_rationale": "Presentation changes, when they occur, are typically batch-applied across all items (e.g., CSS class added). The delta engine classifies these as presentation_change for all affected items and routes to automated verification only."
+    },
+
+    "NO_CHANGE": {
+      "definition": "No learner-facing content change AND no metadata change. content_hash and metadata_hash both match prior baseline.",
+      "triggers": [
+        "Item was not touched in this session",
+        "Item's pack file was not modified since last certification",
+        "Item was reviewed in a prior wave and certified — content is unchanged"
+      ],
+      "review_required": "NO REVIEW — skip entirely, inherit prior certification verdict",
+      "review_rationale": "The item was previously certified under the same CAQS standard. Its content has not changed. Its metadata has not changed. Re-reviewing it would be pure duplication — the 2.5:1 ratio the Framework v2 eliminates. The prior certification verdict is authoritative until the item changes.",
+      "pct_of_wave": "~80%",
+      "savings_rationale": "The vast majority of items are unchanged between certification waves. This is the primary source of agent reduction (15-28 → 6-7) and session reduction (4-5 → 1-2).",
+      "safety_override": "CONSERVATIVE OVERRIDE: If the pre-flight structural scanner (Gate 1) finds ANY structural defect on a 'no_change' item → reclassify to 'CONTENT_CHANGE' (full review). This catches defects that were present in the prior certification but escaped detection — the item was certified defective, but its content_hash didn't change because the defect was there all along."
+    },
+
+    "UNCLASSIFIED": {
+      "definition": "Item not present in the prior baseline registry. This is a new item or an item that was previously unregistered.",
+      "triggers": [
+        "QID not found in prior registry (genuinely new item)",
+        "Compound key changed because item identity fields changed (rare — CC reassignment or pack relocation)",
+        "Registry record missing for this item (possible registry corruption)"
+      ],
+      "review_required": "FULL REVIEW — treated as first-time certification (same as CONTENT_CHANGE but flagged as new)",
+      "review_rationale": "New items have no prior certification to inherit. They must go through the full certification pipeline: all gates, full Quality Board review, Certification Board approval.",
+      "pct_of_wave": "Variable — 0% for existing-item sessions, higher for new-content authoring sessions."
+    }
+  },
+
+  "delta_detection_mechanism": {
+    "description": "How the Delta Engine determines which items have changed since the last certified baseline.",
+
+    "step_1_load_baseline": {
+      "action": "Load the prior session's CERTIFICATION_SCAN_ARTIFACT (from reports/framework_v2/scan_artifacts/history/). Extract per-item content_hash, metadata_hash, and ew_pattern from the scan_results_per_item section.",
+      "baseline_source": "Most recent scan artifact from a certification session (not from an audit-only session). If no prior certification session exists (first-ever v2 run), ALL items are UNCLASSIFIED."
+    },
+    "step_2_load_current": {
+      "action": "Load the current session's CERTIFICATION_SCAN_ARTIFACT (freshly generated at T0). Extract per-item content_hash, metadata_hash, and ew_pattern.",
+      "current_source": "Current session T0 scan artifact."
+    },
+    "step_3_join_on_registry_id": {
+      "action": "Join baseline and current on RegistryID. For items present in both: compare hashes. For items only in current: UNCLASSIFIED (new item). For items only in baseline: removed_item (escalate to Governance Board — anomaly).",
+      "join_key": "RegistryID (stable across sessions). If RegistryID is not yet assigned (pre-registry v1 items): join on compound_key as fallback."
+    },
+    "step_4_classify": {
+      "action": "For each item present in both:",
+      "rules": [
+        "IF content_hash_current ≠ content_hash_baseline → CONTENT_CHANGE",
+        "ELSE IF metadata_hash_current ≠ metadata_hash_baseline → METADATA_CHANGE",
+        "ELSE IF ew_pattern_current ≠ ew_pattern_baseline → STRUCTURAL_FIX (EW pattern changed but content hash is same — means explanation structure changed without content change, e.g., empty slot was filled with text but CorrectChoice didn't change)",
+        "ELSE IF content_hash_current = content_hash_baseline AND metadata_hash_current = metadata_hash_baseline → NO_CHANGE"
+      ]
+    },
+    "step_5_safety_override": {
+      "action": "Run the conservative scanner override: for every item classified as NO_CHANGE, check Gate 1 structural scan results. If any structural defect (DL-008, DL-026, DL-016) is detected → reclassify to CONTENT_CHANGE. This prevents certification of items that were defective at the time of their last certification.",
+      "rationale": "An item can be NO_CHANGE (same content) and still be defective (the defect was present at certification time and was missed). The scanner override catches inherited defects."
+    },
+    "step_6_output": {
+      "action": "Generate delta_classification section for inclusion in the CERTIFICATION_SCAN_ARTIFACT. Each item gets a classification label and review_routing instruction."
+    }
+  },
+
+  "review_routing_rules": {
+    "description": "How the Readiness Gate Engine routes items to review boards based on delta classification.",
+
+    "routing_table": {
+      "CONTENT_CHANGE": {
+        "gate_routing": "Gate -1 → Gate 0 → Gate 1 → Gate 2 → Gate 3 → Gate 4 → QUALITY_BOARD_FULL (3 agents) → CERTIFICATION_BOARD",
+        "agents_required": 4,
+        "estimated_time_per_item": "8-12 minutes",
+        "review_scope": "All 10 CAQS dimensions. Full Quality Board review. New certification decision."
+      },
+      "METADATA_CHANGE": {
+        "gate_routing": "Gate -1 → Gate 0 → PSYCHOMETRIC_CALIBRATION (1 agent) → CERTIFICATION_BOARD",
+        "agents_required": 2,
+        "estimated_time_per_item": "2-3 minutes",
+        "review_scope": "CAQS Dimensions 1 (Blueprint), 2 (Cognitive Level), 4 (Distractor Quality — psychometric aspects only). Metadata consistency check."
+      },
+      "PRESENTATION_CHANGE": {
+        "gate_routing": "AUTOMATED_RENDERING_TEST → SPOT_CHECK (1 in 20 items)",
+        "agents_required": "0 (automated) + 0.05 (spot check equivalent)",
+        "estimated_time_per_item": "<1 second (automated)",
+        "review_scope": "Automated rendering verification. 5% spot-check for visual consistency."
+      },
+      "NO_CHANGE": {
+        "gate_routing": "NONE — skip all gates. Inherit prior certification verdict.",
+        "agents_required": 0,
+        "estimated_time_per_item": "0 seconds — skipped",
+        "review_scope": "None. Prior certification verdict inherited. Scanner override may reclassify to CONTENT_CHANGE if structural defect detected."
+      },
+      "UNCLASSIFIED": {
+        "gate_routing": "Same as CONTENT_CHANGE — full pipeline + full review. Flagged as 'new_item' for tracking.",
+        "agents_required": 4,
+        "estimated_time_per_item": "8-12 minutes",
+        "review_scope": "Full first-time certification. All 10 CAQS dimensions. Registry registration."
+      }
+    }
+  },
+
+  "delta_ledger": {
+    "description": "The persistent record of all delta classifications across sessions. Stored alongside the registry.",
+    "file_name": "DELTA_LEDGER.json",
+    "storage_location": "knowledge/DELTA_LEDGER.json",
+    "schema": {
+      "header": {
+        "generated_session": "String — most recent session that updated the ledger",
+        "generated_timestamp": "ISO 8601",
+        "total_items_tracked": "Integer",
+        "baseline_registry_reference": "String — path to the baseline registry this ledger was computed against"
+      },
+      "entries": [
+        {
+          "registry_id": "String",
+          "qid": "String",
+          "content_hash_baseline": "String — hash from prior certification baseline",
+          "content_hash_current": "String — hash from current session T0",
+          "metadata_hash_baseline": "String",
+          "metadata_hash_current": "String",
+          "classification": "String — CONTENT_CHANGE | METADATA_CHANGE | PRESENTATION_CHANGE | NO_CHANGE | UNCLASSIFIED",
+          "classification_session": "String — session that produced this classification",
+          "classification_timestamp": "ISO 8601",
+          "review_routed_to": "String — which board(s) this item was routed to",
+          "review_outcome": "String — CERTIFIED | HELD | REMEDIATED | SKIPPED (for NO_CHANGE)",
+          "scanner_override_applied": "Boolean — was the conservative scanner override triggered?"
+        }
+      ]
+    },
+    "retention": "Delta ledger retains history for last 5 certification waves. Older entries archived to knowledge/DELTA_LEDGER_ARCHIVE/. Enables trend analysis: which items change frequently, which are stable, which defect classes recur."
+  },
+
+  "spot_check_verification": {
+    "description": "Independent verification that the delta engine is correctly classifying items. 5-10% of NO_CHANGE items are randomly sampled for manual verification.",
+    "sampling": {
+      "rate": "5% of NO_CHANGE items (minimum 10 items, maximum 25 items)",
+      "selection": "Random, weighted by: items from sections with known DL-016 offset (Pack A Sections B/C/D/F, Pack C, Pack D), items from Pack B (CC-before-QID architecture), items in TemplateFamilies with at least one member classified differently (inconsistency signal)"
+    },
+    "verification": {
+      "action": "For each sampled item: independently re-extract the learner-facing fields (Stem, Choices, CC, EC, EW[A-D]) from the current pack file. Independently re-extract from the baseline pack file backup. Compare. If they are identical → classification confirmed. If they differ → delta engine false-negative (item changed but was classified NO_CHANGE).",
+      "false_negative_action": "If ANY item in the spot-check is a false-negative → full re-audit of the entire pack. Delta engine configuration is adjusted. Scan pipeline is re-run. All items in that pack are reclassified. Root cause analysis documented in REVISION_HISTORY.md.",
+      "methodology_error_action": "If false-negative rate exceeds 5% across 3 waves → suspend delta review → revert to full review → investigate hash methodology → dry-run before re-enabling (per S201 MR-02)."
+    }
+  },
+
+  "hash_methodology": {
+    "description": "Deterministic methodology for computing content_hash and metadata_hash. Must produce identical results across all runs, sessions, and machines.",
+    "content_hash_computation": {
+      "fields_included": [
+        "Stem (trimmed, whitespace-normalized)",
+        "Choices[A] (trimmed, whitespace-normalized)",
+        "Choices[B] (trimmed, whitespace-normalized)",
+        "Choices[C] (trimmed, whitespace-normalized)",
+        "Choices[D] (trimmed, whitespace-normalized)",
+        "CorrectChoice (raw value: A|B|C|D)",
+        "ExplanationCorrect (trimmed, whitespace-normalized)",
+        "ExplanationWrong[A] (trimmed, whitespace-normalized — empty string if absent or CC slot)",
+        "ExplanationWrong[B] (trimmed, whitespace-normalized)",
+        "ExplanationWrong[C] (trimmed, whitespace-normalized)",
+        "ExplanationWrong[D] (trimmed, whitespace-normalized)"
+      ],
+      "excluded_fields": ["QuestionID (label only — changes without content change)", "question_state", "Difficulty", "DifficultyScore", "CognitiveLevel", "LOSTag", "Topic", "Subtopic", "BlueprintDomain", "any other metadata field"],
+      "serialization": "JSON.stringify(orderedObject) — keys alphabetically sorted. UTF-8 encoding.",
+      "hash_algorithm": "SHA-256"
+    },
+    "metadata_hash_computation": {
+      "fields_included": [
+        "Difficulty",
+        "DifficultyScore",
+        "CognitiveLevel",
+        "LOSTag",
+        "Topic",
+        "Subtopic",
+        "BlueprintDomain",
+        "PrimaryCompetency",
+        "SecondaryCompetency",
+        "CognitiveLevelCategory"
+      ],
+      "excluded_fields": ["All learner-facing content fields", "question_state (governance field, not metadata)", "QuestionID (label only)"],
+      "serialization": "JSON.stringify(orderedObject) — keys alphabetically sorted. UTF-8 encoding.",
+      "hash_algorithm": "SHA-256"
+    },
+    "normalization_rules": {
+      "whitespace": "Trim leading/trailing whitespace from all text fields. Normalize internal whitespace: collapse multiple spaces to single space. Preserve newlines within text fields (they are part of the content).",
+      "empty_fields": "Treat null, undefined, and empty string as identical ('').",
+      "absent_fields": "Treat absent field and empty field as identical (''). ExplanationWrong[CorrectChoice] is ALWAYS '' (per EV8 enforcement — the field may exist but its content is hashed as empty).",
+      "encoding": "UTF-8. All hash inputs are UTF-8 encoded before SHA-256."
+    }
+  },
+
+  "implementation_notes": {
+    "delta_engine_script": "scripts/delta_engine.js — loads baseline and current scan artifacts, performs join+compare+classify, applies scanner override, produces delta_classification section for scan artifact.",
+    "delta_ledger_script": "scripts/generate_delta_ledger.js — reads delta classifications from scan artifact, writes to knowledge/DELTA_LEDGER.json with retention management.",
+    "spot_check_script": "scripts/delta_spot_check.js — samples NO_CHANGE items, independently re-extracts fields, compares, reports false-negative rate.",
+    "integration": "Delta Engine runs at session T0 AFTER pre-flight scan pipeline. Its output (delta_classification) is embedded in the scan artifact BEFORE distribution to boards. Readiness Gate Engine uses delta classification to route items: NO_CHANGE items skip RG-2 through RG-4. METADATA_CHANGE items receive partial RG-3.",
+    "s201_reference": "SESSION201_FRAMEWORK_V2_VISION.json §delta_review, §transition_state.phase_1_foundation P1.3."
+  },
+
+  "success_criteria": {
+    "SC-BG-01": "All 5 change types (CONTENT_CHANGE, METADATA_CHANGE, PRESENTATION_CHANGE, NO_CHANGE, UNCLASSIFIED) formally defined with triggers and review requirements.",
+    "SC-BG-02": "Review routing rules per change type: full review, partial review, automated-only, skip-review, or full-first-time.",
+    "SC-BG-03": "Conservative scanner override defined — NO_CHANGE items with structural defects reclassified to CONTENT_CHANGE.",
+    "SC-BG-04": "Delta detection mechanism specified in 6 steps: load baseline, load current, join, classify, safety override, output.",
+    "SC-BG-05": "5-10% spot-check verification with false-negative escalation protocol.",
+    "SC-BG-06": "Hash methodology completely deterministic: fields included/excluded, serialization order, normalization rules, algorithm.",
+    "SC-BG-07": "Delta ledger schema fully specified with retention policy (5-wave history).",
+    "SC-BG-08": "Agent savings quantified: ~80% of items skip review, 15-28 agents → 6-7 agents per wave.",
+    "SC-BG-09": "S201 delta review architecture faithfully translated into implementable specification.",
+    "SC-BG-10": "Specification is implementable — S322 can code the delta engine from this document alone.",
+    "SC-BG-11": "0 certification actions, 0 content modifications, 0 pack-file writes."
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "session": "S719",
+  "agent": "K — Analytics Package",
+  "generated": "2026-07-26T23:00:00Z",
+  "data_sources": [
+    "SESSION719_DISTRIBUTION_ANALYTICS.json (Agent I)",
+    "SESSION719_ALIGNMENT_DECISIONS.json (Agent C)",
+    "SESSION719_PACK_E_FINDINGS.json (Agent D)",
+    "SESSION719_MISALIGNMENT_CENSUS.json (Agent A)",
+    "SESSION719_RULE_VALIDATION_AUDIT.json (Agent B)",
+    "SESSION718_ANALYTICS_SUMMARY.md (S718 baseline)",
+    "pack_a_corrected.js (verified post-S719 via grep)",
+    "pack_e_corrected.js (verified post-S719 via grep)"
+  ],
+  "verification_methodology": "Select-String grep on pack_a_corrected.js and pack_e_corrected.js for all Difficulty and CognitiveLevel values. Counts verified against Agent I projections — Pack A matches; Pack E differs significantly (actual Remember=0 vs projected 102).",
+
+  "section_1_misalignment_reduction": {
+    "s718_baseline_severe_flags": 244,
+    "s718_flagged_categories": {
+      "evaluate_at_easy_or_moderate_easy": "~168 items",
+      "remember_at_difficult": "~76 items"
+    },
+    "agent_c_items_addressed": 244,
+    "agent_c_by_pack": {
+      "pack_a": 156,
+      "pack_b": 3,
+      "pack_c": 6,
+      "pack_d": 3,
+      "pack_e": 76
+    },
+    "agent_d_items_addressed_pack_e": 284,
+    "actual_pack_e_remember_shifted": 386,
+    "note_pack_e_actual_vs_projection": "Agent D recommended 284 Remember→Understand (leaving 102 Remember). Agent C separately recommended 76 Difficult@Remember→Understand. Total recommended: 360. Actual implementation: ALL 386 Remember items shifted to Understand. Executor went further than recommendations by 26 items.",
+    "severe_misalignments_remaining_modified_packs": 0,
+    "severe_misalignments_remaining_unmodified_packs": "Unchanged — Packs B/C/D not modified by S719 except for Agent C's 12 items",
+    "all_s718_flagged_items_addressed": true,
+    "misalignment_resolution_pct": "100% of S718-flagged 244 severe items addressed",
+    "category_breakdown_before_after": {
+      "category_A_moderate_easy_evaluate": {
+        "before": 3,
+        "after": 0,
+        "action": "Agent C COGNITIVELEVEL_UPDATE"
+      },
+      "category_B_moderate_easy_analyze": {
+        "before": 7,
+        "after": "Unchanged (Packs B/C — not in S719 scope except Agent C's 3+6 items)"
+      },
+      "category_C_difficult_remember": {
+        "before": 76,
+        "after": 0,
+        "action": "Agent C BOTH_UPDATE + Agent D reclassification"
+      },
+      "category_D_difficult_understand": {
+        "before": 37,
+        "after": "Unchanged (not in S719 scope)"
+      },
+      "category_E_other_violations": {
+        "before": 1481,
+        "after": "Unchanged (1,481 DCS §3 strict-default misalignments outside S718-flagged 244; Packs B/C/D not modified)"
+      }
+    }
+  },
+
+  "section_2_difficulty_distribution_shift": {
+    "pre_s719_total_pool": {
+      "Easy": 699,
+      "Moderate-Easy": 339,
+      "Moderate": 1253,
+      "Difficult": 208,
+      "Very_Difficult": 0,
+      "empty_string": 1,
+      "total": 2500
+    },
+    "post_s719_total_pool_verified": {
+      "Easy": 531,
+      "Moderate-Easy": 583,
+      "Moderate": 1253,
+      "Difficult": 132,
+      "Very_Difficult": 0,
+      "empty_string": 1,
+      "total": 2500
+    },
+    "deltas": {
+      "Easy": { "delta": -168, "pct_change": "-24.0%" },
+      "Moderate-Easy": { "delta": 244, "pct_change": "+72.0%" },
+      "Moderate": { "delta": 0, "pct_change": "0.0%" },
+      "Difficult": { "delta": -76, "pct_change": "-36.5%" },
+      "Very_Difficult": { "delta": 0, "pct_change": "N/A" }
+    },
+    "post_s719_pct_of_total": {
+      "Easy": "21.2%",
+      "Moderate-Easy": "23.3%",
+      "Moderate": "50.1%",
+      "Difficult": "5.3%",
+      "Very_Difficult": "0.0%"
+    },
+    "dcs_section_6_targets": {
+      "Easy": "15% (+6.2pp above target)",
+      "Moderate-Easy": "20% (+3.3pp above target)",
+      "Moderate": "30% (+20.1pp above target)",
+      "Difficult": "25% (-19.7pp below target)",
+      "Very_Difficult": "10% (-10.0pp below target)"
+    },
+    "pack_level_breakdown": {
+      "pack_a": {
+        "before": { "Easy": 261, "Moderate-Easy": 57, "Moderate": 182, "Difficult": 0 },
+        "after": { "Easy": 105, "Moderate-Easy": 213, "Moderate": 182, "Difficult": 0 },
+        "shift": "156 items Easy→Moderate-Easy (Agent C Block-001)"
+      },
+      "pack_e": {
+        "before": { "Easy": 100, "Moderate-Easy": 91, "Moderate": 207, "Difficult": 102 },
+        "after": { "Easy": 100, "Moderate-Easy": 167, "Moderate": 207, "Difficult": 26 },
+        "shift": "76 items Difficult→Moderate-Easy (Agent C Block-C)"
+      },
+      "pack_b": {
+        "before": { "Easy": 140, "Moderate-Easy": 84, "Moderate": 248, "Difficult": 28 },
+        "after": { "Easy": 137, "Moderate-Easy": 87, "Moderate": 248, "Difficult": 28 },
+        "shift": "3 items Easy→Moderate-Easy (Agent C)"
+      },
+      "pack_c": {
+        "before": { "Easy": 99, "Moderate-Easy": 79, "Moderate": 303, "Difficult": 19 },
+        "after": { "Easy": 93, "Moderate-Easy": 85, "Moderate": 303, "Difficult": 19 },
+        "shift": "6 items Easy→Moderate-Easy (Agent C)"
+      },
+      "pack_d": {
+        "before": { "Easy": 99, "Moderate-Easy": 28, "Moderate": 313, "Difficult": 59 },
+        "after": { "Easy": 96, "Moderate-Easy": 31, "Moderate": 313, "Difficult": 59 },
+        "shift": "3 items Easy→Moderate-Easy (Agent C)"
+      }
+    }
+  },
+
+  "section_3_cognitive_level_distribution_shift": {
+    "pre_s719_total_pool": {
+      "Remember": 436,
+      "Understand": 614,
+      "Apply": 1161,
+      "Analyze": 66,
+      "Evaluate": 223,
+      "total": 2500
+    },
+    "post_s719_total_pool_verified": {
+      "Remember": 50,
+      "Understand": 1168,
+      "Apply": 1161,
+      "Analyze": 66,
+      "Evaluate": 55,
+      "total": 2500
+    },
+    "deltas": {
+      "Remember": { "delta": -386, "pct_change": "-88.5%" },
+      "Understand": { "delta": 554, "pct_change": "+90.2%" },
+      "Apply": { "delta": 0, "pct_change": "0.0%" },
+      "Analyze": { "delta": 0, "pct_change": "0.0%" },
+      "Evaluate": { "delta": -168, "pct_change": "-75.3%" }
+    },
+    "post_s719_pct_of_total": {
+      "Remember": "2.0%",
+      "Understand": "46.7%",
+      "Apply": "46.4%",
+      "Analyze": "2.6%",
+      "Evaluate": "2.2%"
+    },
+    "caqs_section_62_targets": {
+      "Remember": "5% (-3.0pp below target)",
+      "Understand": "15% (+31.7pp ABOVE target — MAJOR overcorrection)",
+      "Apply": "40% (+6.4pp above target)",
+      "Analyze": "25% (-22.4pp below target)",
+      "Evaluate": "15% (-12.8pp below target)"
+    },
+    "pack_level_breakdown": {
+      "pack_a": {
+        "before": { "Remember": 3, "Understand": 59, "Apply": 278, "Analyze": 2, "Evaluate": 158 },
+        "after": { "Remember": 3, "Understand": 215, "Apply": 278, "Analyze": 2, "Evaluate": 2 },
+        "shift": "156 items Evaluate→Understand (Agent C Block-001)"
+      },
+      "pack_e": {
+        "before": { "Remember": 386, "Understand": 14, "Apply": 95, "Analyze": 3, "Evaluate": 2 },
+        "after": { "Remember": 0, "Understand": 400, "Apply": 95, "Analyze": 3, "Evaluate": 2 },
+        "shift": "386 items Remember→Understand (Agent C Block-C: 76 + Agent D: 284 + executor overrun: 26)"
+      },
+      "pack_b": {
+        "before": { "Remember": 41, "Understand": 111, "Apply": 325, "Analyze": 15, "Evaluate": 8 },
+        "after": { "Remember": 41, "Understand": 114, "Apply": 325, "Analyze": 15, "Evaluate": 5 },
+        "shift": "3 items Evaluate→Understand (Agent C)"
+      },
+      "pack_c": {
+        "before": { "Remember": 5, "Understand": 221, "Apply": 230, "Analyze": 23, "Evaluate": 21 },
+        "after": { "Remember": 5, "Understand": 227, "Apply": 230, "Analyze": 23, "Evaluate": 15 },
+        "shift": "6 items Evaluate→Understand (Agent C)"
+      },
+      "pack_d": {
+        "before": { "Remember": 1, "Understand": 209, "Apply": 233, "Analyze": 23, "Evaluate": 34 },
+        "after": { "Remember": 1, "Understand": 212, "Apply": 233, "Analyze": 23, "Evaluate": 31 },
+        "shift": "3 items Evaluate→Understand (Agent C)"
+      }
+    }
+  },
+
+  "section_4_pack_level_section_breakdowns": {
+    "pack_a_section_by_section": {
+      "note": "Post-S719 verified via grep. Agent C's 156 Evaluate→Understand items were concentrated in Sections A-E with the template 'which response is most appropriate?' pattern.",
+      "pre_s719_cl": {
+        "section_A": "Remember: ~2, Understand: ~10, Apply: ~50, Analyze: ~0, Evaluate: ~13",
+        "section_B": "Remember: ~0, Understand: ~10, Apply: ~50, Analyze: ~0, Evaluate: ~40",
+        "section_C": "Remember: ~0, Understand: ~0, Apply: ~64, Analyze: ~0, Evaluate: ~36",
+        "section_D": "Remember: ~0, Understand: ~0, Apply: ~52, Analyze: ~0, Evaluate: ~23",
+        "section_E": "Remember: ~1, Understand: ~0, Apply: ~27, Analyze: ~0, Evaluate: ~47",
+        "section_F": "Remember: ~0, Understand: ~39, Apply: ~35, Analyze: ~1, Evaluate: ~0"
+      },
+      "post_s719_cl": {
+        "section_A": "All Evaluate items shifted to Understand. Former ~13 Evaluate → ~13 Understand added to baseline.",
+        "section_B": "All Evaluate items shifted to Understand. Former ~40 Evaluate → ~40 Understand.",
+        "section_C": "All Evaluate items shifted to Understand. Former ~36 Evaluate → ~36 Understand.",
+        "section_D": "All Evaluate items shifted to Understand. Former ~23 Evaluate → ~23 Understand.",
+        "section_E": "All Evaluate items shifted to Understand. Former ~47 Evaluate → ~47 Understand.",
+        "section_F": "Unchanged (no Evaluate items in Section F)."
+      },
+      "net_pack_a_change": "156 Evaluate→Understand across Sections A-E. Section F unchanged. Difficulty: 156 Easy→Moderate-Easy.",
+      "verified_totals": {
+        "Remember": 3,
+        "Understand": 215,
+        "Apply": 278,
+        "Analyze": 2,
+        "Evaluate": 2
+      }
+    },
+    "pack_e_section_by_section": {
+      "note": "Post-S719 verified via grep. ALL 386 Remember items shifted to Understand (executor went beyond Agent D's 284 recommendation + Agent C's 76).",
+      "agent_d_projection": {
+        "A": { "projected_Remember": 24, "projected_Understand": 40 },
+        "B": { "projected_Remember": 19, "projected_Understand": 41 },
+        "C": { "projected_Remember": 14, "projected_Understand": 52 },
+        "D": { "projected_Remember": 16, "projected_Understand": 45 },
+        "E": { "projected_Remember": 9, "projected_Understand": 65 },
+        "F": { "projected_Remember": 20, "projected_Understand": 55 }
+      },
+      "actual_post_s719": {
+        "A": "Remember: 0, Understand: ~64 (all 24 projected + all remaining Remember + Agent C's items)",
+        "B": "Remember: 0, Understand: ~60 (all 19 projected + remaining + Agent C's items)",
+        "C": "Remember: 0, Understand: ~66 (all 14 projected + remaining + Agent C's items)",
+        "D": "Remember: 0, Understand: ~61 (all 16 projected + remaining + Agent C's items)",
+        "E": "Remember: 0, Understand: ~74 (all 9 projected + remaining + Agent C's items)",
+        "F": "Remember: 0, Understand: ~75 (all 20 projected + remaining + Agent C's items)"
+      },
+      "verified_totals": {
+        "Remember": 0,
+        "Understand": 400,
+        "Apply": 95,
+        "Analyze": 3,
+        "Evaluate": 2
+      },
+      "difficulty_shift": "76 items Difficult→Moderate-Easy (Agent C Block-C). Easy: 100→100, Moderate-Easy: 91→167, Moderate: 207→207, Difficult: 102→26."
+    }
+  },
+
+  "section_5_topic_level_analysis": {
+    "methodology": "Agent C decisions provide per-item topic mappings; Agent D findings provide Pack E section-level patterns.",
+    "topics_with_most_cl_changes": {
+      "pack_a_evaluate_to_understand_156_items": {
+        "description": "All 156 items shared the template 'which response is most appropriate?' across GAAP/COSO/standard topics. Not a specific topic cluster — spread across all Pack A Sections A-E.",
+        "sample_topics": [
+          "A.004 statement of changes in equity treasury stock",
+          "A.006 contract liability for advance collections",
+          "A.007 allowance method doubtful accounts",
+          "A.011 asset impairment trigger",
+          "A.012 contingent liability accrual",
+          "A.013 subsequent event recognized condition",
+          "A.014 operating lease lessee recognition",
+          "A.016 consolidation control principle",
+          "B.001-budget.010 various budgeting concepts",
+          "C.001-C.100 performance management concepts",
+          "D.001-D.075 cost management concepts",
+          "E.001-E.075 internal controls concepts"
+        ]
+      },
+      "pack_e_remember_to_understand_386_items": {
+        "description": "Systematic over-classification: all 386 items were definition-match format with same-domain distractors. The most concentrated sections:",
+        "section_E_coso_framework": {
+          "count": 72,
+          "pattern": "COSO framework component discrimination — ALL distractors are other COSO components/sub-components/risk concepts",
+          "examples": ["control environment", "risk assessment", "control activities", "information & communication", "monitoring"]
+        },
+        "section_F_technology_concepts": {
+          "count": 75,
+          "pattern": "Technology concept definition matching — distractors are all related tech terms from same subdomain",
+          "examples": ["analytics maturity levels", "blockchain", "RPA", "data types", "cybersecurity"]
+        },
+        "section_D_cost_management": {
+          "count": 75,
+          "pattern": "Cost hierarchy/classification matching — distractors are competing cost concepts",
+          "examples": ["ABC hierarchy levels", "process costing terms", "relevant vs sunk costs", "job vs process costing"]
+        },
+        "section_C_performance_management": {
+          "count": 100,
+          "pattern": "BSC perspective mapping + COQ classification — all distractors from same framework",
+          "examples": ["BSC perspectives", "quality cost categories", "ROI/RI formulas", "TOC concepts"]
+        },
+        "section_B_budgeting_forecasting": {
+          "count": 100,
+          "pattern": "Cost behavior and formula comprehension — distractors are competing cost concepts",
+          "examples": ["fixed/variable cost behavior", "high-low method", "budget types", "forecasting methods"]
+        },
+        "section_A_financial_reporting": {
+          "count": 75,
+          "pattern": "GAAP rule discrimination — distractors are other legitimate GAAP treatments",
+          "examples": ["revenue recognition", "inventory measurement", "bond classification", "equity method"]
+        }
+      }
+    },
+    "topics_with_most_difficulty_changes": {
+      "agent_c_block_c_difficult_to_me": {
+        "count": 76,
+        "location": "Pack E Sections A-F",
+        "pattern": "Difficult@Remember items → Moderate-Easy@Understand",
+        "note": "These are a subset of the 386 Remember→Understand shift. The difficulty change was from Difficult/4 to Moderate-Easy/2.",
+        "examples": ["bond classification", "cost behavior definitions", "BSC perspective questions", "COSO component definitions"]
+      },
+      "agent_c_block_001_easy_to_me": {
+        "count": 168,
+        "location": "Pack A Sections A-E (156) + Packs B/C/D (12)",
+        "pattern": "Easy/1@Evaluate → Moderate-Easy/2@Understand",
+        "note": "All 'which response is most appropriate?' template items shifted from Easy to Moderate-Easy to match Understand CL default."
+      }
+    },
+    "systematically_miscalibrated_topic_clusters": {
+      "cluster_1_evaluate_template_artifact": {
+        "domain": "All CMA Part 1 domains (A-E)",
+        "pack": "Pack A (156 items), scattered in B/C/D (12 items)",
+        "root_cause": "Bulk-authoring template appended 'Which response is most appropriate?' to every stem, and the template engine interpreted this as Evaluate-level cognitive demand. Actual cognitive demand: single-standard comprehension (Understand).",
+        "remediation": "COGNITIVELEVEL_UPDATE: Evaluate→Understand, difficulty adjusted to match (Easy→ME/2)."
+      },
+      "cluster_2_pack_e_remember_inflation": {
+        "domain": "All CMA Part 1 domains (A-F)",
+        "pack": "Pack E (386 items)",
+        "root_cause": "Pack E template engine assigned Remember to ALL definition-match items regardless of distractor sophistication. ~284 items have same-domain distractors requiring comprehension-level discrimination. Only ~102 items are genuine pure-recall (different-domain distractors or obvious wrong answers).",
+        "remediation": "All 386 Remember→Understand (executor went beyond Agent D's 284 recommendation). Difficulty adjusted for the 76 items labeled Difficult (Block-C)."
+      },
+      "cluster_3_pack_e_difficult_inflation": {
+        "domain": "All sections in Pack E",
+        "pack": "Pack E (76 items)",
+        "root_cause": "Template assigned Difficult/4 by position in rotation group regardless of cognitive demand. Items are definition-recall/definition-match with no calculation, no exhibits, and distractors from same domain.",
+        "remediation": "BOTH_UPDATE: Remember→Understand, Difficult→Moderate-Easy (Agent C Block-C)."
+      }
+    }
+  },
+
+  "section_6_certification_impact": {
+    "pre_s719_counts": {
+      "pack_a_Certified": 481,
+      "pack_a_Unprocessed": 0,
+      "pack_a_Archived": 19,
+      "pack_e_Certified": 500,
+      "pack_e_Unprocessed": 0,
+      "pack_e_Archived": 0
+    },
+    "post_s719_counts_verified": {
+      "pack_a_Certified": 481,
+      "pack_a_Archived": 19,
+      "pack_e_Certified": 500
+    },
+    "items_changed": {
+      "pack_a": {
+        "total_changed": 156,
+        "certified_items_changed": 156,
+        "unprocessed_items_changed": 0,
+        "archived_items_changed": 0,
+        "note": "All 156 items in Pack A were Certified. No governance state change — items remain Certified."
+      },
+      "pack_e": {
+        "total_changed": 386,
+        "certified_items_changed": 386,
+        "unprocessed_items_changed": 0,
+        "archived_items_changed": 0,
+        "note": "All 386 items in Pack E were Certified. No governance state change — items remain Certified."
+      },
+      "cross_pack_total_changed": {
+        "pack_a": 156,
+        "pack_b": 3,
+        "pack_c": 6,
+        "pack_d": 3,
+        "pack_e": 386,
+        "total": 554
+      },
+      "certified_items_affected": 551,
+      "unprocessed_items_affected": 3,
+      "note_certification_state": "Agent I reported 430 Certified items affected by Agent C. After adding Agent D's 284 Pack E items (minus overlap with Agent C's 76 Pack E items, but executor shifted all 386), the total is higher. All affected items remain Certified — no governance state downgrades."
+    }
+  },
+
+  "section_7_summary_dashboard": {
+    "overall": {
+      "total_items": 2500,
+      "items_modified": 554,
+      "pct_items_modified": "22.2%",
+      "packs_modified": ["pack_a", "pack_b", "pack_c", "pack_d", "pack_e"],
+      "primary_modified_packs": ["pack_a (156)", "pack_e (386)"],
+      "minor_modified_packs": ["pack_b (3)", "pack_c (6)", "pack_d (3)"]
+    },
+    "misalignment_resolution": {
+      "s718_severe_flags": 244,
+      "resolved": "244 (100%)",
+      "remaining_in_modified_packs": 0,
+      "remaining_total_pool": "Unchanged in B/C/D — Agent A's census showed 1,604 total DCS §3 strict-default misalignments; S719 addressed the 244 severe subset"
+    },
+    "difficulty_shift": {
+      "Easy": "699 → 531 (-168, -24.0%)",
+      "Moderate-Easy": "339 → 583 (+244, +72.0%)",
+      "Moderate": "1253 → 1253 (unchanged)",
+      "Difficult": "208 → 132 (-76, -36.5%)",
+      "Very_Difficult": "0 → 0 (unchanged)",
+      "dcs_target_gap": "Moderate over-represented (+20pp), Difficult and Very Difficult severely under-represented"
+    },
+    "cognitive_level_shift": {
+      "Remember": "436 → 50 (-386, -88.5%)",
+      "Understand": "614 → 1168 (+554, +90.2%)",
+      "Apply": "1161 → 1161 (unchanged)",
+      "Analyze": "66 → 66 (unchanged)",
+      "Evaluate": "223 → 55 (-168, -75.3%)",
+      "caqs_target_gap": "Understand MAJORLY over-represented (+31.7pp over 15% target). Analyze critically under-represented (-22.4pp). Pool now has ~93% Understand+Apply — very narrow cognitive spread."
+    },
+    "certification_impact": {
+      "certified_items_modified": 551,
+      "certified_pct_of_modified": "99.5%",
+      "no_state_downgrades": true,
+      "learner_pool_impact": "551 Certified items now have updated difficulty and cognitive level labels. Delivery engine must reflect new labels."
+    },
+    "key_warnings": {
+      "understand_overcorrection": "Understand CL jumped from 24.2% → 46.7% — far above the 15% CAQS target. This is a 31.7pp overcorrection. The Pack E executor shifted ALL 386 Remember items to Understand instead of the recommended 360 (leaving 26 Remember). The Pack A shift (156 Evaluate→Understand) was evidence-driven. Combined, these two dominate the pool's CL distribution.",
+      "analyze_shortfall": "Analyze at 2.6% vs 25% CAQS target — a 22.4pp deficit. S719 did not increase Analyze (it was not in scope). Future content creation must focus on Analyze-level items.",
+      "difficult_shortfall": "Difficult at 5.3% vs 25% DCS target — a 19.7pp deficit. Very Difficult at 0% vs 10% DCS target. The pool has no Very Difficult items at all.",
+      "understand_review_needed": "With 46.7% Understand, many items previously labeled as Evaluate or Remember are now Understand. A post-S719 audit should verify that the new Understand assignments are accurate for all items — especially the 26 Pack E items that were shifted beyond Agent D's recommendation."
+    },
+    "primary_shifts_at_a_glance": {
+      "pack_a": "156 Evaluate@Easy → Understand@Moderate-Easy (template artifact correction)",
+      "pack_e": "386 Remember → Understand (definition-match with same-domain distractors correction) + 76 Difficult→Moderate-Easy (Pack E template inflation correction)",
+      "packs_b_c_d": "12 Evaluate→Understand (minor spillover)"
+    }
+  },
+
+  "raw_command_outputs": {
+    "pack_a_difficulty": {
+      "Easy": 105,
+      "Moderate-Easy": 213,
+      "Moderate": 182,
+      "Difficult": 0,
+      "Very_Difficult": 0,
+      "command": "Select-String -Path pack_a_corrected.js -Pattern '\"Difficulty\": \"<value>\"' | Measure-Object"
+    },
+    "pack_a_cognitive_level": {
+      "Remember": 3,
+      "Understand": 215,
+      "Apply": 278,
+      "Analyze": 2,
+      "Evaluate": 2,
+      "command": "Select-String -Path pack_a_corrected.js -Pattern '\"CognitiveLevel\": \"<value>\"' | Measure-Object"
+    },
+    "pack_e_difficulty": {
+      "Easy": 100,
+      "Moderate-Easy": 167,
+      "Moderate": 207,
+      "Difficult": 26,
+      "Very_Difficult": 0,
+      "command": "Select-String -Path pack_e_corrected.js -Pattern '\"Difficulty\": \"<value>\"' | Measure-Object"
+    },
+    "pack_e_cognitive_level": {
+      "Remember": 0,
+      "Understand": 400,
+      "Apply": 95,
+      "Analyze": 3,
+      "Evaluate": 2,
+      "command": "Select-String -Path pack_e_corrected.js -Pattern '\"CognitiveLevel\": \"<value>\"' | Measure-Object"
+    },
+    "pack_a_question_state": {
+      "Certified": 481,
+      "Unprocessed": 0,
+      "Archived": 19
+    },
+    "pack_e_question_state": {
+      "Certified": 500,
+      "Unprocessed": 0,
+      "Archived": 0
+    },
+    "pack_a_qid_count": 500,
+    "pack_e_qid_count": 500
+  },
+
+  "appendix_methodology_notes": {
+    "pack_e_actual_vs_projection": "Agent I projected Pack E post-S719 as Remember:102, Understand:298, Apply:95, Analyze:3, Evaluate:2 (Agent D recommendation). Verified grep shows Remember:0, Understand:400, Apply:95, Analyze:3, Evaluate:2. Executor shifted ALL 386 Remember items to Understand — 26 items beyond Agent D's 284 + Agent C's 76 total recommendation.",
+    "pack_a_verified_match": "Pack A verified grep counts match Agent I's projection exactly: Remember:3, Understand:215, Apply:278, Analyze:2, Evaluate:2.",
+    "cross_pack_totals": "Post-S719 pool totals computed as: verified Pack A + verified Pack E + Agent I B/C/D (unchanged). B/C/D had minor changes from Agent C (3+6+3 items) which Agent I already reflected.",
+    "severe_misalignment_remaining": "The S718 '244 severe misalignments' were the high-severity subset of Agent A's 1,604 DCS §3 strict-default misalignments. 100% of those 244 were addressed by Agent C. However, the remaining 1,360 DCS §3 misalignments in Packs B/C/D were not addressed by S719. A full post-S719 re-census would be needed for exact counts.",
+    "difficulty_empty_string": "1 item in Pack D has empty Difficulty string (pre-existing anomaly, not in S719 scope).",
+    "grep_limitations": "Select-String counts are exact for the literal strings searched. However, the pack files contain metadata blocks with ChoiceA-D fields that also contain 'Difficulty' text in some sections. The verified counts were cross-checked against Agent I's totals and match within expected tolerance."
+  }
+}

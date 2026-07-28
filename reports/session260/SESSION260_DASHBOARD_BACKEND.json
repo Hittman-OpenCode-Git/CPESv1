@@ -1,0 +1,98 @@
+{
+  "specId": "SESSION260_DASHBOARD_BACKEND",
+  "session": "260",
+  "title": "May Admin — Investigation Dashboard Backend Specification",
+  "program": "250-Series — Administrative Operations Platform",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T19:25:00.000Z",
+  "status": "DESIGN — Backend data model specification. Implementation deferred to Phase 1 Build dashboard frontend.",
+  "purpose": "Define the complete backend data model that powers the May Admin investigation dashboard. This specification describes the Unified Investigation Object — a single JSON representation that integrates data from all 5 registries and provides a complete view of any question's administrative state.",
+  "authority": "Derived from S252-S259 validated infrastructure. All FKs verified with 0 broken relationships at S260 T0.",
+  "depends_on": ["SESSION259_ENTITY_MODEL.json", "SESSION259_QUERY_LAYER_SPEC.json"],
+
+  "dashboardViews": {
+    "investigatorDossier": {
+      "description": "Per-question complete investigation view. Equivalent to the 9-section dossier from question_investigation_api.js, augmented with cross-entity drill-down links.",
+      "entryPoint": "QID lookup → full UnifiedInvestigationObject",
+      "sections": [
+        "1_identity — Who is this question? (pack, section, domain, topic, difficulty, cognitive level, state)",
+        "2_content — What does it ask? (stem, choices, correct answer, explanations)",
+        "3_health — How healthy is it? (score, tier, component breakdown, diagnosis)",
+        "4_defects — What defects affect it? (defect codes, severity, status)",
+        "5_challenges — Has anyone challenged it? (CH-IDs, types, triage classification)",
+        "6_recommendations — What should be done? (REC-IDs, severity, status)",
+        "7_sessions — When was it worked on? (session IDs, modes, dates)",
+        "8_certifications — When was it certified? (certification events, batches)",
+        "9_investigations — What's being investigated? (INV-IDs, status, findings)"
+      ]
+    },
+    "investigationQueue": {
+      "description": "Filterable list of all 19 investigations with status, priority, and linked entities.",
+      "filters": ["status (OPEN|INVESTIGATING|CLOSED)", "type (CHALLENGE|DEFECT|GOVERNANCE|SYSTEMATIC)", "priority band (critical|high|medium|low)"],
+      "dataSource": "investigation_registry.json"
+    },
+    "challengeQueue": {
+      "description": "Filterable list of all 35 challenges with triage classification and resolution status.",
+      "filters": ["status (OPEN|INVESTIGATING|RESOLVED|CLOSED|DISMISSED)", "triage category (LIKELY_DEFECT|NEEDS_REVIEW)", "type (CONTENT_ERROR|ANSWER_DISPUTE|TECHNICAL_ISSUE|etc.)"],
+      "dataSource": "challenge_registry.json + challenge_triage.json"
+    },
+    "questionHealthDashboard": {
+      "description": "Aggregate view of the 2,540-item health landscape.",
+      "metrics": ["tier distribution (HEALTHY/FAIR/NEEDS ATTENTION/CRITICAL)", "mean health score (95)", "worst 10 items", "domain breakdown by section"],
+      "dataSource": "question_health.json"
+    },
+    "sessionTimeline": {
+      "description": "40-session development history with linked QIDs and outcomes.",
+      "dataSource": "session_registry.json + session_intelligence.json"
+    }
+  },
+
+  "dataIntegrationModel": {
+    "description": "The dashboard backend integrates 5 registries + 1 pack-file layer into a single query surface. The UnifiedInvestigationObject is the canonical representation — see SESSION260_OBJECT_MODEL.json for the complete schema.",
+    "dataSources": {
+      "question_history.json": "Identity, state, timeline, sessions, challenges, defects, recommendations, certifications — 2,540 QIDs",
+      "investigation_registry.json": "19 investigations with linked QIDs, challenges, defects, recommendations, sessions — lifecycle state machine",
+      "challenge_registry.json": "35 challenges with linked QIDs, sessions, recommendations — triage classification via challenge_triage.json",
+      "recommendation_registry.json": "5 REC-IDs with 2,482 total QID target links — severity, status, source defect",
+      "session_registry.json": "40 sessions with QID lists — mode, series, title, date",
+      "pack_*_corrected.js": "Live content: stem, choices, correctChoice, ExplanationCorrect, ExplanationWrong[A-D], question_state (authoritative source)"
+    },
+    "fkRelationshipsValidated": {
+      "investigation→challenge": { "total": 16, "broken": 0 },
+      "investigation→recommendation": { "total": 24, "broken": 0 },
+      "investigation→question": { "total": 26, "broken": 0 },
+      "challenge→question": { "total": 35, "broken": 0 },
+      "challenge→session": { "total": 35, "broken": 0 },
+      "session→question": { "total": 1163, "broken": 0 },
+      "recommendation→question": { "total": 2482, "broken": 0 }
+    }
+  },
+
+  "integrationResults": {
+    "verified": true,
+    "reference": "SESSION260_INTEGRATION_RESULTS.md",
+    "summary": {
+      "totalRelationshipsChecked": "3,793 (16 INV→CH + 24 INV→REC + 26 INV→QID + 35 CH→QID + 35 CH→SESS + 1,163 SESS→QID + 2,482 REC→QID + 12 cross-registry)",
+      "brokenRelationships": 0,
+      "verdict": "PASS — 0 broken relationships across all FK links"
+    }
+  },
+
+  "stopConditions": {
+    "autoStopConditionsFromS257": "ALL 6 STILL PASS",
+    "conditions": [
+      {"number": 1, "condition": "Deep-Link Failure", "status": "PASS"},
+      {"number": 2, "condition": "Question History Corruption", "status": "PASS"},
+      {"number": 3, "condition": "Challenge Registry Corruption", "status": "PASS"},
+      {"number": 4, "condition": "Session Registry Corruption", "status": "PASS"},
+      {"number": 5, "condition": "Investigation Reconstruction Failure", "status": "PASS"},
+      {"number": 6, "condition": "Governance Guard ≠ PASS", "status": "PASS (32/32)"}
+    ]
+  },
+
+  "selfAssessment": {
+    "criterion": "S261 can code the dashboard frontend from this document alone",
+    "result": "PARTIALLY READY — The backend data model and FK relationships are fully specified and validated. The UnifiedInvestigationObject schema (SESSION260_OBJECT_MODEL.json) defines every field with its data source and FK. A frontend developer can consume this specification to build view components. However, rendering decisions (component library, layout, interactivity) are not specified — this is a data contract, not a UI specification.",
+    "gapsForS261": "None — S261 validates workflows against live registries, not against dashboard UI. The data model is complete for administrative workflow certification."
+  }
+}

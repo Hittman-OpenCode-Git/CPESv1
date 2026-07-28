@@ -1,0 +1,95 @@
+{
+  "sessionId": "S250-REME-93FB1B",
+  "sessionType": "REMEDIATION_SESSION",
+  "generatedTimestamp": "2026-07-27T14:06:52.292Z",
+  "status": "PENDING",
+  "defect": {
+    "type": "DL-031",
+    "tier": "TIER_2_MEDIUM",
+    "blocking": false,
+    "certifiedOnlyBlock": false
+  },
+  "pack": "pack_c",
+  "qids": [
+    "P1-EC-022",
+    "P1-EC-023",
+    "P1-EC-024"
+  ],
+  "itemCount": 3,
+  "preExecutionChecks": [
+    {
+      "step": "BACKUP",
+      "description": "Create timestamped backup per BACKUP_PROTOCOL.md",
+      "required": true
+    },
+    {
+      "step": "GOVERNANCE_GUARD",
+      "description": "Confirm Rule 5: batch ≤ 28 items",
+      "required": true
+    },
+    {
+      "step": "IDENTITY_VALIDATOR",
+      "description": "Run identity_validator.js on target pack",
+      "required": true
+    },
+    {
+      "step": "VERIFY_QIDS",
+      "description": "Confirm all QIDs exist in target pack",
+      "required": true
+    }
+  ],
+  "executionSteps": [],
+  "postExecutionChecks": [
+    {
+      "step": "DL_008_RESCAN",
+      "description": "Re-scan for DL-008 on remediated items",
+      "required": true
+    },
+    {
+      "step": "DL_026_RESCAN",
+      "description": "Re-scan for DL-026 on remediated items if applicable",
+      "required": false
+    },
+    {
+      "step": "REGRESSION_SUITE",
+      "description": "Run governance guard test suite",
+      "required": true
+    },
+    {
+      "step": "REVISION_HISTORY",
+      "description": "Write REVISION_HISTORY.md entry",
+      "required": true
+    }
+  ],
+  "itemDetails": [
+    {
+      "qid": "P1-EC-022",
+      "pack": "pack_c",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-031",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "pack_c",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-031",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "pack_c",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-031",
+      "recommendations": [],
+      "routes": []
+    }
+  ],
+  "batchIndex": 1,
+  "totalBatches": 2
+}

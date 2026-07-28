@@ -1,0 +1,258 @@
+{
+  "title": "SESSION317_EW_INTEGRITY_AUDIT",
+  "session": "317",
+  "generated": "2026-07-27",
+  "auditor": "S317 Agent E — EW Integrity Audit",
+  "methodology": "Verify 100% EW coverage (all non-CC choices have substantive explanation), DL-008 compliance (EW[CC] = ''), distractor alignment, misconception correction, and topic alignment. Minimum standards: EW non-CC >= 100 chars, EC >= 400 chars.",
+  "summary": {
+    "total": 10,
+    "ew_coverage_pct": 100,
+    "dl008_violations": 0,
+    "dl026_violations": 0,
+    "avg_ec_chars": 1103,
+    "avg_ew_chars": 435,
+    "all_pass": true
+  },
+  "items": [
+    {
+      "QuestionID": "P1-E-R34",
+      "CorrectChoice": "C",
+      "EC_chars": 1111,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "A": {
+          "chars": 360,
+          "status": "PASS"
+        },
+        "B": {
+          "chars": 335,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 444,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R35",
+      "CorrectChoice": "A",
+      "EC_chars": 947,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "B": {
+          "chars": 485,
+          "status": "PASS"
+        },
+        "C": {
+          "chars": 516,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 404,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R36",
+      "CorrectChoice": "D",
+      "EC_chars": 993,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "A": {
+          "chars": 395,
+          "status": "PASS"
+        },
+        "B": {
+          "chars": 423,
+          "status": "PASS"
+        },
+        "C": {
+          "chars": 453,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R26",
+      "CorrectChoice": "B",
+      "EC_chars": 989,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "A": {
+          "chars": 383,
+          "status": "PASS"
+        },
+        "C": {
+          "chars": 582,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 433,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R27",
+      "CorrectChoice": "A",
+      "EC_chars": 1061,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "B": {
+          "chars": 423,
+          "status": "PASS"
+        },
+        "C": {
+          "chars": 419,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 469,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R29",
+      "CorrectChoice": "C",
+      "EC_chars": 1085,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "A": {
+          "chars": 534,
+          "status": "PASS"
+        },
+        "B": {
+          "chars": 419,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 452,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R37",
+      "CorrectChoice": "B",
+      "EC_chars": 1319,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "A": {
+          "chars": 557,
+          "status": "PASS"
+        },
+        "C": {
+          "chars": 501,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 434,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R38",
+      "CorrectChoice": "A",
+      "EC_chars": 938,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "B": {
+          "chars": 296,
+          "status": "PASS"
+        },
+        "C": {
+          "chars": 416,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 415,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R39",
+      "CorrectChoice": "C",
+      "EC_chars": 1137,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "A": {
+          "chars": 463,
+          "status": "PASS"
+        },
+        "B": {
+          "chars": 363,
+          "status": "PASS"
+        },
+        "D": {
+          "chars": 369,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    },
+    {
+      "QuestionID": "P1-E-R40",
+      "CorrectChoice": "D",
+      "EC_chars": 1450,
+      "EC_status": "PASS",
+      "DL008_remediation": "NONE_REQUIRED",
+      "DL008_EW_CC_value": "",
+      "DL008_status": "PASS",
+      "EW_scores": {
+        "A": {
+          "chars": 428,
+          "status": "PASS"
+        },
+        "B": {
+          "chars": 478,
+          "status": "PASS"
+        },
+        "C": {
+          "chars": 403,
+          "status": "PASS"
+        }
+      },
+      "overall": "PASS"
+    }
+  ]
+}

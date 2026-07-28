@@ -1,0 +1,285 @@
+{
+  "session": "S369",
+  "date": "2026-07-28",
+  "type": "automation-roadmap",
+  "mode": "read-only",
+  "current_score": 48,
+  "target_score": 55,
+  "s365_phase1_projection": {
+    "estimated_score": 53,
+    "components": [
+      { "name": "Fix generate_registry.js section mapping", "effort_hours": 1, "score_impact": 1 },
+      { "name": "pre_delivery_safety_check.js (single-command)", "effort_hours": 3, "score_impact": 2 },
+      { "name": "rebuild_baselines.js (full regeneration)", "effort_hours": 2, "score_impact": 2 }
+    ],
+    "note": "S365 Phase 1 correctly identifies the three most impactful infrastructure gaps but underestimates what post_change_qc.js can consolidate and misses the DL-021 governance guard rule (trivially cheap, closes a documented coverage gap). S367 provides detailed per-workflow labor analysis confirming 24.5 automatable hours remain."
+  },
+  "candidate_automations": {
+    "quick_wins": [
+      {
+        "name": "Fix generate_registry.js Section Mapping",
+        "description": "The generate_registry.js script reads from build_master_registry.js CSV output but produces MASTER_QUESTION_REGISTRY.md with broken section labels (I/P/T/U instead of A-E). The root cause is an incomplete QID regex in extractQID() that fails to match Pack E and Pack C/D QID formats, coupled with a stale Domain field value in the CSV. Fix: (1) update the QID regex patterns in extractQID(); (2) ensure the Domain field maps correctly through the CSV → Markdown pipeline; (3) re-run npm run build-registry chain.",
+        "effort_hours": 1.0,
+        "score_impact": 1,
+        "hours_saved_per_month": 1.0,
+        "eliminates_manual_steps": [
+          "Manual QID → Section cross-referencing when consuming registry",
+          "Distrust of registry output leading to raw-file grep workarounds",
+          "RULE 3 exception manual appends to MASTER_QUESTION_REGISTRY.md"
+        ],
+        "implementation_notes": "Fix extractQID() regex in generate_registry.js to cover all five QID formats (P1-X-NNN, P1B-X-NNN, P1-XC-NNN, P1-XD-NNN, P1E-X-NNN, P1-E-RNN). Verify Domain field flows correctly from pack_reader.js → build_master_registry.js CSV → generate_registry.js. Test: run npm run build-registry, verify section column shows A-F only.",
+        "risk": "LOW"
+      },
+      {
+        "name": "DL-021 Governance Guard Rule (Rule 10)",
+        "description": "Add a new BLOCK rule to governance-guard.js that prevents certification of items with structurally absent distractor ExplanationWrong fields. Currently: Rule 6 covers empty non-CC EW slots (DL-026) but absent fields (DL-021) pass through unchecked. 95 Certified Pack E Section C items have absent distractor EW fields — this rule would block any future certification that introduces the same gap. The detection logic already exists in findDL026Violations() — extend it to flag !(ewKey in obj) as a separate violation class.",
+        "effort_hours": 0.5,
+        "score_impact": 1,
+        "hours_saved_per_month": 2.0,
+        "eliminates_manual_steps": [
+          "Manual DL-021 pre-certification scans that must be run separately",
+          "Post-certification discovery of absent distractor fields (expensive remediation)",
+          "Agent judgment about whether DL-021 is present (guard catches it mechanically)"
+        ],
+        "implementation_notes": "Extend findDL026Violations() or add findDL021Violations() to governance-guard.js. The check: for each non-CC letter, if !(ewKey in obj) → flag DL-021. Wire into tool.execute.before hook alongside existing Rule 6. Add 3 test cases to test_governance_guard.js (absent-field blocked, present-field passes, empty-string passes per Rule 6). ~30 lines of new code, ~20 lines of tests.",
+        "risk": "LOW"
+      },
+      {
+        "name": "scan_dl031.js — Difficulty Inflation Detector",
+        "description": "A regex-based scanner that identifies definition-match items with inflated difficulty labels (DL-031). Three-filter pipeline: (1) CognitiveLevel gate — only items with Remember/Understand AND DifficultyScore >= 3; (2) Definition-stem pattern gate — regex for 'Which of the following', 'refers to', 'is defined as', 'represents the'; (3) Stem-to-correct-choice lexical overlap — word-level Jaccard similarity > 50%. Output: scored candidate list sorted by confidence, with high-confidence matches auto-downgradable and borderline cases routed to verification queue.",
+        "effort_hours": 1.5,
+        "score_impact": 1,
+        "hours_saved_per_month": 10.0,
+        "eliminates_manual_steps": [
+          "Manual cross-referencing of 1,154 DifficultyScore=3 items against CognitiveLevel fields",
+          "Per-item stem-vs-answer comparison for ~500 definition-match candidates",
+          "Manual Difficulty/DifficultyScore field replacement for confirmed matches"
+        ],
+        "implementation_notes": "Use pack_reader.js Function constructor for CC-position-aware extraction. Implement tri-filter pipeline: Filter 1 (field check), Filter 2 (regex patterns on Stem), Filter 3 (word-level Jaccard between Stem and correct Choice text, stop words removed). Output JSON: { qid, confidence, pattern_matches, suggest_downgrade }. Bulk-apply script for high-confidence matches (extractDL031CandidatesScanOnly mode default — no auto-apply without explicit flag). See S367 §1.1 and §3 for detailed methodology.",
+        "risk": "MEDIUM"
+      },
+      {
+        "name": "Registry Auto-Regeneration Hook",
+        "description": "Add a post-write trigger to governance-guard.js that detects pack file modifications and appends a session-idle reminder to regenerate the registry. Does NOT auto-run the regeneration (that would require spawning a child process from the plugin, which is architecturally fragile). Instead, at session idle, if pack files were modified and the registry was not regenerated, the guard emits a Rule 10-level warning listing the exact command to run. This closes the staleness gap without introducing unsafe automatic writes.",
+        "effort_hours": 0.5,
+        "score_impact": 1,
+        "hours_saved_per_month": 0.5,
+        "eliminates_manual_steps": [
+          "Remembering to regenerate registry after pack file changes",
+          "Manual timestamp checks to determine registry staleness",
+          "Out-of-sync registry causing agent confusion about certified/non-certified counts"
+        ],
+        "implementation_notes": "In governance-guard.js tool.execute.before: track whether any pack source file was written to (pack_*_corrected.js). In session.idle: if pack files touched AND registry timestamp is older than pack modification timestamps, emit a WARN-level message: 'Registry may be stale. Run: npm run build-registry'. No auto-regeneration (avoids process-spawn complexity and unintended side effects). ~20 lines of code.",
+        "risk": "LOW"
+      }
+    ],
+    "medium_effort": [
+      {
+        "name": "pre_delivery_safety_check.js — Automated Delivery Pool Verification",
+        "description": "A single-command script that automates the 7-step pre-delivery safety check currently performed manually per the pre-delivery-safety-check skill (155 lines of agent instructions). The script: (1) verifies question_state filter exists in app.js; (2) counts Certified items across all packs via Function constructor parse; (3) cross-references known-defective QID lists (DL-012 clones, DL-008 history, DL-034 missing fields); (4) verifies section coverage A-F; (5) spot-checks 5 random Certified items for structural integrity; (6) produces a structured JSON verdict. Run via: node scripts/pre_delivery_safety_check.js.",
+        "effort_hours": 3.0,
+        "score_impact": 2,
+        "hours_saved_per_month": 3.0,
+        "eliminates_manual_steps": [
+          "Manual grep for question_state filter in app.js",
+          "Manual Certified count gathering across 5 packs",
+          "Manual cross-reference against DL-012 clone QID lists",
+          "Manual section coverage computation",
+          "Manual 5-item spot-check with per-field verification",
+          "Manual stop-condition adjudication",
+          "Manual verdict formatting"
+        ],
+        "implementation_notes": "Use pack_reader.js Function constructor for question_state extraction. Hardcode known-defective QID lists from DEFECT_LIBRARY.md (DL-012 clones, DL-008 re-contamination history, DL-034 missing-field items). Spot-check: verify CorrectChoice present, ExplanationWrong[CC] empty (Rule 2), ExplanationCorrect > 50 chars, 3 non-CC EW slots non-empty (Rule 6). Output JSON: { timestamp, certified_count, section_coverage: {A:N, B:N, ...}, known_defect_cross_reference: {...}, spot_checks: [...], stop_conditions: [...], verdict: 'SAFE'|'BLOCKED' }. See S365 §9 and pre-delivery-safety-check.md for requirements.",
+        "risk": "LOW",
+        "prerequisites": ["pack_reader.js (exists, production-grade)"]
+      },
+      {
+        "name": "post_change_qc.js — Automated Post-Change QC Pipeline",
+        "description": "A single-command script that executes all post-change quality-control steps currently performed manually (10 steps, ~15 minutes each). The script: (1) runs test_governance_guard.js — captures pass/fail count; (2) runs npm run validate — captures error/warning counts; (3) verifies QID counts unchanged via Function constructor parse on modified packs; (4) recaptures SHA-256 hashes for all 13 runtime-critical files; (5) diffs new hashes against stored baselines in CURRENT_BASELINES.md — flags drift; (6) re-scans modified packs for DL-008/DL-026/DL-037 using existing Function constructor scanners; (7) auto-updates CURRENT_BASELINES.md if hashes changed and --update-baselines flag set; (8) generates REVISION_HISTORY.md template entry with QID list and pass/fail counts; (9) outputs structured JSON QC report. This is the single highest-ROI automation investment per S367.",
+        "effort_hours": 3.0,
+        "score_impact": 2,
+        "hours_saved_per_month": 4.0,
+        "eliminates_manual_steps": [
+          "Manual governance guard test invocation (51 tests)",
+          "Manual validator suite invocation with error/warning counting",
+          "Manual QID count verification via Select-String",
+          "Manual Get-FileHash for each modified pack file",
+          "Manual hash diff against CURRENT_BASELINES.md §5",
+          "Manual DL-008/DL-026/DL-037 re-scans",
+          "Manual CURRENT_BASELINES.md table row updates",
+          "Manual REVISION_HISTORY.md entry authoring"
+        ],
+        "implementation_notes": "Chain existing tools: child_process.execSync for governance guard tests + validator suite. Use pack_reader.js for QID counts. Use crypto.createHash('sha256') for hash capture (avoids PowerShell dependency). Parse CURRENT_BASELINES.md §1 table for stored hashes (read, regex-extract rows, diff). For DL-008/026/037 scans: require() scan_dl008_fn.js and scan_s710r_dl026.js logic inline, or execSync them. CURRENT_BASELINES.md update: read file, regex-replace matching table rows with new hashes, write back (safer than rebuild_baselines regex hacks because it operates on structured table format). REVISION_HISTORY.md template: generate markdown skeleton with before/after counts, QID list, scan results — agent fills in narrative and appends. ~300 lines of code. See S367 §1.5 for detailed friction-point analysis.",
+        "risk": "MEDIUM",
+        "prerequisites": ["pack_reader.js", "test_governance_guard.js", "scan_dl008_fn.js", "scan_s710r_dl026.js", "scan_logic_inversions.js"]
+      },
+      {
+        "name": "rebuild_baselines.js — Full Regeneration from Source",
+        "description": "Replace the current rebuild_baselines_s*.js regex-replace hacks with a single regenerator that reads CURRENT_BASELINES.md, re-hashes all 13+ runtime-critical files from source, and rewrites the §1 table with current values. Unlike the current session-specific scripts (rebuild_baselines_s916.js, rebuild_baselines_s923.js, etc.) that regex-replace specific table rows, this script fully parses the markdown, recomputes all hashes, and writes a complete replacement. Also updates §2 (Certified Pool counts) by reading question_state from pack files via Function constructor.",
+        "effort_hours": 2.0,
+        "score_impact": 2,
+        "hours_saved_per_month": 2.0,
+        "eliminates_manual_steps": [
+          "Manual Get-FileHash per modified file",
+          "Manual CURRENT_BASELINES.md §1 table editing",
+          "Manual Certified pool count extraction",
+          "Ad-hoc rebuild_baselines_sNNN.js script creation per session"
+        ],
+        "implementation_notes": "Key design: parse CURRENT_BASELINES.md into sections (read full file, split on '## N. ' headers). For §1: extract file paths from table rows, recompute SHA-256 via crypto.createHash('sha256'), write updated rows. For §2: use pack_reader.js Function constructor to count question_state: 'Certified' per pack, write updated counts. Preserve §3-6 and append a regeneration log entry at §6. Avoid the regex-replace anti-pattern entirely — work with parsed table structures. Consolidate all rebuild_baselines_s*.js into backups/ and archive them. ~150 lines of code.",
+        "risk": "LOW",
+        "prerequisites": ["pack_reader.js (exists)"]
+      }
+    ],
+    "high_effort": [
+      {
+        "name": "CI/CD Pipeline — GitHub Actions on Push",
+        "description": "Set up a GitHub Actions workflow that runs automatically on push: (1) npm run validate (validator suite); (2) node scripts/test_governance_guard.js (governance guard 51 tests); (3) node scripts/pre_delivery_safety_check.js (delivery pool integrity); (4) node scripts/rebuild_baselines.js --check-only (hash drift detection, no write). Any failure blocks the PR merge. This moves from 0/10 CI/CD to a baseline automated gate. Requires: .github/workflows/ci.yml file, npm scripts organization, and reconciling the repo's private/non-GitHub status (the repo may not be hosted on GitHub — the CI concept applies to any Git forge).",
+        "effort_hours": 4.0,
+        "score_impact": 2,
+        "hours_saved_per_month": 4.0,
+        "eliminates_manual_steps": [
+          "Manual 'did I break anything?' checks before considering a session complete",
+          "Late discovery of regressions introduced days earlier",
+          "Manual cross-session drift reconciliation (G1-G5 runbook)",
+          "T0/Tmid/Tend checkpoint sequence being fully manual (AGENTS.md §13.1)"
+        ],
+        "implementation_notes": "Create .github/workflows/ci.yml: on push to any branch, checkout, setup Node.js, npm ci (if package-lock.json exists), run validate → test_governance_guard → pre_delivery_safety_check → rebuild_baselines --check-only. For repos not hosted on GitHub: the workflow file doubles as documentation of the canonical CI sequence; alternative runners (GitLab CI, local git hooks) can replicate. Add npm scripts: 'npm run ci' wraps all four checks. This is infrastructure, not content — zero CAQS verification required.",
+        "risk": "LOW",
+        "prerequisites": ["pre_delivery_safety_check.js", "rebuild_baselines.js"]
+      },
+      {
+        "name": "clone_replacement_scaffolder.js — Metadata Scaffolding for New Items",
+        "description": "A script that pre-populates all 12+ structural metadata fields for cloned/archived item replacement slots. Input: a JSON map of { slot_qid: { topic, difficulty, cognitive_level, ... } }. Output: pack-file insertions with QuestionID, Part, Section, SectionName, ItemType, ItemStyle, SourceDescription, VerifiedChecks, StudyLinks, UniqueConceptKey template, and governance_state preset, leaving Stem, Choices, ExplanationCorrect, and ExplanationWrong* as TODO stubs. Post-authoring verification chain: runs governance guard Rules 2/6/9 on the new items. This increases clone replacement throughput from ~20 items/session to ~25-30 (S367 projection).",
+        "effort_hours": 4.0,
+        "score_impact": 1,
+        "hours_saved_per_month": 9.5,
+        "eliminates_manual_steps": [
+          "Manual QID assignment with uniqueness checking",
+          "Manual Section/Part/Domain field population",
+          "Manual ItemType/ItemStyle assignment per QID convention",
+          "Manual VerifiedChecks boilerplate population",
+          "Manual UniqueConceptKey generation",
+          "Manual replacement_lineage_tracker entry"
+        ],
+        "implementation_notes": "Define QID template: {P1-|P1B-|P1E-}{Section}{C|D}-NNN based on pack and section. Pre-fill all metadata from template_family.js mappings. Use post_change_qc.js for post-authoring verification chain (reuse, don't duplicate). Key design constraint: scaffolding must not introduce DL-008 or DL-026 — leave EW[CC] as '' and 3 non-CC EW slots with TODO markers that Rule 6 will catch if not filled. ~200 lines. See S367 §5 for throughput analysis.",
+        "risk": "MEDIUM",
+        "prerequisites": ["post_change_qc.js (recommended, not required)", "pack_reader.js", "template_family.js"]
+      },
+      {
+        "name": "Script Hygiene Catalog & Archive Pass",
+        "description": "Taxonomize all 224 top-level scripts in scripts/ and archive confirmed one-offs, delete abandoned prototypes, and create a structured index. The current 53.1% uncategorized rate (119 scripts) means nearly half the scripts/ directory is opaque to any new agent or contributor. The SESSION950 index catalogs 22 uncertain scripts as a start; ~97 remain unexamined. This is a one-time investment with permanent benefits: every future session spends less time figuring out which script to run.",
+        "effort_hours": 8.0,
+        "score_impact": 1,
+        "hours_saved_per_month": 2.0,
+        "eliminates_manual_steps": [
+          "Agent confusion about which scanner to invoke for a given defect type",
+          "Time lost opening and reading abandoned one-off scripts",
+          "Risk of invoking a DL-029-vulnerable forward-scan script (check_ew.js, session86_*.js)",
+          "Uncertainty about whether a script is production-grade or session-specific"
+        ],
+        "implementation_notes": "Three-pass approach: Pass 1 (quick skim — classify by filename pattern: sNNN_* = session-specific, scan_* = defect scanner, build_* = generator, test_* = test, _* = abandoned). Pass 2 (deep read — open each uncertain script, read first 20 lines, classify by function). Pass 3 (archive — move confirmed one-offs to scripts/archive/, add .archive suffix to abandoned prototypes, update SESSION950 index with full taxonomy). Flag any script using forward-scan regex (DL-029 risk) — these must never be invoked for production decisions. Create scripts/README.md with structured taxonomy. ~8 hours because each of 67 uncertain scripts requires 30-60 sec of reading + classification + decision.",
+        "risk": "LOW",
+        "prerequisites": []
+      }
+    ]
+  },
+  "minimum_package_to_55": {
+    "components_needed": [
+      "Fix generate_registry.js Section Mapping",
+      "DL-021 Governance Guard Rule (Rule 10)",
+      "pre_delivery_safety_check.js — Automated Delivery Pool Verification",
+      "rebuild_baselines.js — Full Regeneration from Source",
+      "post_change_qc.js — Automated Post-Change QC Pipeline"
+    ],
+    "phase": "Phase 1 (S370-S372)",
+    "total_effort_hours": 10.0,
+    "projected_score": 55,
+    "score_breakdown": {
+      "governance_guard": "19 → 20 (DL-021 Rule 10)",
+      "validator_framework": "8 → 8",
+      "defect_scanning": "5 → 6 (post_change_qc auto-chains existing scanners)",
+      "registry_automation": "3 → 4 (Fix generate_registry.js)",
+      "baselines_automation": "2 → 6 (rebuild_baselines + post_change_qc auto-update)",
+      "ci_cd_pipeline": "0 → 0",
+      "pre_delivery_automation": "1 → 3 (pre_delivery_safety_check.js)",
+      "script_hygiene": "10 → 10"
+    },
+    "monthly_hours_saved": 12.5,
+    "roi_months_until_break_even": 0.8
+  },
+  "recommended_package_to_60": {
+    "components_needed": [
+      "Fix generate_registry.js Section Mapping",
+      "DL-021 Governance Guard Rule (Rule 10)",
+      "Registry Auto-Regeneration Hook",
+      "pre_delivery_safety_check.js — Automated Delivery Pool Verification",
+      "post_change_qc.js — Automated Post-Change QC Pipeline",
+      "rebuild_baselines.js — Full Regeneration from Source",
+      "scan_dl031.js — Difficulty Inflation Detector",
+      "CI/CD Pipeline — GitHub Actions on Push",
+      "clone_replacement_scaffolder.js — Metadata Scaffolding",
+      "Script Hygiene Catalog & Archive Pass"
+    ],
+    "phase": "Phase 1 (55) + Phase 2 (60)",
+    "total_effort_hours": 27.5,
+    "projected_score": 60,
+    "score_breakdown": {
+      "governance_guard": "19 → 20",
+      "validator_framework": "8 → 10 (post_change_qc auto-chaining + REVISION_HISTORY template)",
+      "defect_scanning": "5 → 10 (scan_dl031 + auto-chain + pre-delivery integration)",
+      "registry_automation": "3 → 5 (Fix + auto-regeneration hook)",
+      "baselines_automation": "2 → 8 (rebuild_baselines + post_change_qc + CI integration)",
+      "ci_cd_pipeline": "0 → 2 (GitHub Actions basic gate)",
+      "pre_delivery_automation": "1 → 4 (pre_delivery_safety_check.js + CI integration)",
+      "script_hygiene": "10 → 11 (taxonomy pass)"
+    },
+    "note": "Script hygiene already at 10/10 cap — the catalog pass improves governance posture but does not increase the component score. CI/CD at 2/10 reflects basic push-gate only (no auto-deploy, no staging environment). True CI/CD maturity (8-10/10) requires infrastructure not in scope."
+  },
+  "governance_gaps_analysis": {
+    "covered_by_rules": {
+      "DL-008 (non-empty EW[CC])": "Rule 2 — BLOCK at write time. 59 Certified items remediated S893-S896.",
+      "DL-026 (empty distractor EW)": "Rule 6 — BLOCK at write time. 0 Certified items remaining.",
+      "DL-037 (choice lead-in polarity)": "Rule 9 — BLOCK at write time. 0 instances pool-wide.",
+      "DL-029 (forward-scan methodology)": "Resolved for active tools. Three legacy scripts identified (check_ew.js, session86_*.js) — marked candidate_archive."
+    },
+    "gaps_no_guard_rule": {
+      "DL-021 (absent distractor EW)": {
+        "severity": "HIGH — 95 Certified Pack E Section C items have absent distractor EW fields",
+        "guard_status": "No rule exists. Rule 6 catches empty strings but not absent fields.",
+        "recommended_action": "Add Rule 10: BLOCK absent distractor EW fields at write time. See quick_wins.",
+        "effort": "0.5 hours"
+      },
+      "DL-010 (semantic misassignment)": {
+        "severity": "MEDIUM — no automated detection possible",
+        "guard_status": "Cannot be automated. Requires NLP/human judgment to determine if EW text describes the correct distractor.",
+        "recommended_action": "Document as permanently unautomatable. Address via spot-check protocol in certification workflow."
+      },
+      "DL-031 (difficulty inflation)": {
+        "severity": "MEDIUM — ~500 items systemically mislabeled",
+        "guard_status": "No rule. Is a content quality issue, not a structural defect.",
+        "recommended_action": "scan_dl031.js detection (not block — detection-only). See quick_wins."
+      },
+      "DL-019 (concurrent-write data loss)": {
+        "severity": "HIGH — process defect, not content defect",
+        "guard_status": "No guard rule can prevent multi-session concurrent writes to the same file. This is a session-management problem.",
+        "recommended_action": "post_change_qc.js hash-drift detection catches the symptom (unexpected hash change). Root cause: file-lock protocol needed."
+      }
+    }
+  },
+  "key_references": {
+    "s365_gap_report": "reports/sustainability/SESSION365_AUTOMATION_GAP_REPORT.md",
+    "s367_remediation_analysis": "reports/session367/SESSION367_REMEDIATION_AUTOMATION.json",
+    "s367_time_loss_analysis": "reports/session367/SESSION367_TIME_LOSS_ANALYSIS.md",
+    "governance_guard": ".opencode/plugins/governance-guard.js (9 BLOCK rules, 354 lines, 51/51 tests)",
+    "pack_reader": "scripts/engine/pack_reader.js (Function constructor, production-grade)",
+    "pipeline_orchestrator": "scripts/pipeline_orchestrator.js (Framework v2, 296 lines, manual invoke)",
+    "pre_delivery_skill": ".opencode/skills/pre-delivery-safety-check.md (155 lines, 100% manual)",
+    "current_baselines": "knowledge/CURRENT_BASELINES.md (13 runtime-critical file hashes)"
+  },
+  "verdict": {
+    "is_55_achievable_without_architecture_changes": true,
+    "rationale": "All Phase 1 components are additive — new scripts and one guard rule extension. No existing infrastructure needs to be redesigned. The pack_reader.js engine provides reliable Function constructor parsing for all new scripts. The governance guard plugin architecture supports additional rules without refactoring. The only architectural concern is the CI/CD component (Phase 2) which requires the repo to be hosted on a Git forge with CI runner support — but the Phase 1 55-target package does not depend on CI/CD.",
+    "biggest_risk": "The rebuild_baselines.js regenerator must correctly parse CURRENT_BASELINES.md's §1 table structure. The table format has been stable across 40+ manual updates, but edge cases (multiple provenance entries per cell, TBD placeholder values) need handling. Fallback: if table parsing proves fragile, the regenerator can use the simpler approach of reading file paths from a hardcoded manifest and writing a complete new §1 section — this eliminates the parsing ambiguity entirely.",
+    "next_session": "S370-A — Implement the first 2-3 QUICK WINS: Fix generate_registry.js + DL-021 governance guard Rule 10 + scan_dl031.js. These three changes take ~3 hours total, add +3 to automation score (48→51), and establish the pattern for the remaining Phase 1 components."
+  }
+}

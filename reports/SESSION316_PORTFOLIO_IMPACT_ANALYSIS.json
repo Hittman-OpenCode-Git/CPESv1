@@ -1,0 +1,48 @@
+{
+  "title": "SESSION316_PORTFOLIO_IMPACT_ANALYSIS",
+  "session": "S316",
+  "generated": "2026-07-27",
+  "preSession": {
+    "certified": 2191,
+    "domainECertified": 218,
+    "domainECompletionRate": "60.7%",
+    "cloneGroupsCleared": "10/33 (30.3%)",
+    "replacementItems": 10
+  },
+  "postSession": {
+    "certified": 2201,
+    "domainECertified": 228,
+    "domainECompletionRate": "63.5%",
+    "cloneGroupsCleared": "20/33 (60.6%)",
+    "replacementItems": 20
+  },
+  "delta": {
+    "certifiedGain": "+10",
+    "domainEGain": "+10",
+    "completionRateGain": "+2.8%",
+    "cloneGroupsClearedGain": "+10/33 (+30.3%)"
+  },
+  "wave3Pipeline": {
+    "itemsAuthored": 10,
+    "itemsPendingCertification": 10,
+    "projectedAfterS317": {
+      "certified": 2211,
+      "domainECertified": 238,
+      "domainECompletionRate": "66.3%"
+    }
+  },
+  "remainingDomainE": {
+    "replacementGroupsRemaining": 13,
+    "seedCertificationsRemaining": 38,
+    "totalRemaining": 51
+  },
+  "projectedAfterWave3Certification": {
+    "domainECertified": 238,
+    "remaining": 41
+  },
+  "certificationGainPerWave": {
+    "wave1": 10,
+    "wave2": 10,
+    "wave3Projected": 10
+  }
+}

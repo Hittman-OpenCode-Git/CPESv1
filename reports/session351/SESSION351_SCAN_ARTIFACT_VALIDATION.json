@@ -1,0 +1,119 @@
+{
+  "document": "SESSION351_SCAN_ARTIFACT_VALIDATION",
+  "session": "S351",
+  "title": "Scan Once / Consume Many Artifact Validation — Board D",
+  "series": "350-Series — Framework v2 Validation Readiness",
+  "date": "2026-07-27",
+  "type": "Read-Only Artifact Validation — No Content Modifications",
+  "authority": "S202.1 Scan Artifact Schema (Board A); S202.1 Board Consumption Matrix; S204 Scan Artifact Results (Board C); S205 Infrastructure Verification (Board E)",
+  "purpose": "Validate 'Scan Once, Consume Many' architecture using live artifacts. Verify the certification scan artifact schema is realizable, consumable, and compatible with all 5 boards.",
+
+  "scan_once_consume_many_validation": {
+    "architecture": {
+      "producer": "scripts/engine/scan/scan_orchestrator.js",
+      "artifact_path": "scripts/output/certification_scan_artifact.json",
+      "schema_version": "1.0.0",
+      "artifact_id_format": "CSA-{SourceSession}-{ISO8601Timestamp}"
+    },
+    "s322_reference_implementation": {
+      "artifact_id": "CSA-S322-2026-07-27T05-45-08-670Z",
+      "runtime": "0.7s for 2,540 items across all 5 packs",
+      "items_scanned": 2540,
+      "items_passed": 2539,
+      "items_blocked": 1,
+      "scan_modules": "PG-011 through PG-011 + PG-AN diagnostics",
+      "extraction_method": "AM-1 Function Constructor Parse",
+      "verdict": "REFERENCE_IMPLEMENTATION_VALID — S322 artifact proves the schema is realizable."
+    },
+    "artifact_schema_sections_validated": {
+      "section_1_scanContext": {"present_in_s322": true, "valid_per_schema": true},
+      "section_2_packFileHashes": {"present_in_s322": true, "valid_per_schema": true, "note": "S322 hashes match S322 T0 baselines (pre-S726 drift). Current pack hashes would differ for 4 of 5 packs."},
+      "section_3_aggregateStatistics": {"present_in_s322": true, "valid_per_schema": true},
+      "section_4_perItemResults": {"present_in_s322": true, "valid_per_schema": true, "entry_count": "2,540 (matches total_items)"},
+      "section_5_defectInventory": {"present_in_s322": true, "valid_per_schema": true},
+      "section_6_readiness": {"present_in_s322": true, "valid_per_schema": true},
+      "section_7_lineage": {"present_in_s322": true, "valid_per_schema": true},
+      "section_8_governanceAttestation": {"present_in_s322": false, "valid_per_schema": "optional — not present in S322 run", "note": "Governance attestation was deferred in S322 shadow-mode pilot"},
+      "section_9_consumerDigest": {"present_in_s322": false, "valid_per_schema": "optional — not present in S322 run"}
+    },
+    "artifact_validation_rules_assessment": {
+      "ART-001_global_uniqueness": "PASS — CSA-S322 has unique artifactId",
+      "ART-002_item_count_reconciliation": "PASS — perItemResults.length (2,540) matches sum of pack QID counts",
+      "ART-003_packfile_hashes_match_baseline": "PASS at S322 time; WOULD FAIL today on packs A/C/D/E due to post-S726 drift",
+      "ART-004_defectClass_reconciliation": "NOT_YET_VALIDATED — requires full scan re-run",
+      "ART-005_readinessClass_reconciliation": "NOT_YET_VALIDATED",
+      "ART-006_learnerPoolExposure": "PASS — S322 detected 0 CRITICAL exposure (DL-008 was 0 at that point)",
+      "ART-007_no_CLEAR_on_HARD_FAIL": "PASS — blocked items have correct verdicts",
+      "ART-008_registry_cross_reference": "DEFERRED — CANONICAL_REGISTRY.json not yet seeded",
+      "ART-009_governance_guard": "PASS — all governance guard rules pass at scan time",
+      "ART-010_deterministic_AM1": "NOT_YET_VALIDATED — requires two independent AM-1 runs"
+    }
+  },
+
+  "board_consumption_contracts": {
+    "source": "SESSION2021_BOARD_CONSUMPTION_MATRIX.json",
+    "boards": {
+      "registry_board": {
+        "required_sections_from_artifact": ["scanContext", "packFileHashes", "lineage", "consumerDigest"],
+        "producer_of": "certification_scan_artifact.json",
+        "status": "SPECIFIED — not yet operational"
+      },
+      "quality_board": {
+        "required_sections_from_artifact": ["perItemResults", "defectInventory", "readiness"],
+        "consumes_artifacts_from": "registry_board",
+        "status": "SPECIFIED — not yet operational"
+      },
+      "governance_board": {
+        "required_sections_from_artifact": ["perItemResults", "defectInventory", "aggregateStatistics", "governanceAttestation"],
+        "status": "SPECIFIED — not yet operational"
+      },
+      "certification_board": {
+        "required_sections_from_artifact": ["perItemResults", "defectInventory"],
+        "status": "SPECIFIED — not yet operational"
+      },
+      "throughput_board": {
+        "required_sections_from_artifact": ["scanContext", "aggregateStatistics", "readiness"],
+        "status": "SPECIFIED — not yet operational"
+      }
+    }
+  },
+
+  "scan_redundancy_elimination": {
+    "s204_measured": {
+      "per_session_redundancy_reduction": "2.17:1",
+      "cross_session_redundancy_reduction": "6.33:1",
+      "time_saved_per_session": "~9.5 minutes"
+    },
+    "current_state": "ADVISORY_ONLY — v2 scan pipeline runs in shadow mode alongside v1. v1 boards still perform independent scans. Redundancy reduction is theoretical until boards consume the artifact."
+  },
+
+  "artifact_lifecycle_validation": {
+    "creation": "S322 demonstrated. Scan Orchestrator produces single artifact. 0.7s pipeline.",
+    "versioning": "Schema v1.0.0. Artifact-id timestamping works. Prior artifacts chain via lineage section.",
+    "expiration": "Session-scoped — artifact is valid for the session that produced it. New artifact supersedes prior.",
+    "supersession": "Lineage.priorArtifacts chain explicitly documents SUPERSEDES relationship. Historical preservation achieved via timestamped copies.",
+    "storage": "Primary path: scripts/output/certification_scan_artifact.json. Historical: scripts/output/historical/. Backup: per BACKUP_PROTOCOL.md."
+  },
+
+  "scan_once_consume_many_verdict": {
+    "architecture_validation": "PASS — S202.1 schema is comprehensive and realizable. S322 reference implementation proves feasibility.",
+    "board_consumption_without_independent_scans": "DESIGNED — each board's section requirements are defined in consumption matrix. No board re-runs scans.",
+    "current_operational_gap": "S322 artifact is advisory-only. v1 boards have not yet switched to artifact consumption. This is expected at P0 (pre-Hybrid).",
+    "blocking_for_production": "Full PG-011 implementation (steps 4-5) + CANONICAL_REGISTRY.json seeding + board migration to artifact consumption. Target: S830 (Phase 2).",
+    "verdict": "SCHEMA_AND_ARCHITECTURE_VALID — Operational consumption awaits Phase 2 board migration at S830."
+  },
+
+  "cross_references": {
+    "parent_s350": "reports/SESSION350_SCAN_PERFORMANCE.json",
+    "s2021_inputs": [
+      "reports/SESSION2021_SCAN_ARTIFACT_SCHEMA.json",
+      "reports/SESSION2021_BOARD_CONSUMPTION_MATRIX.json",
+      "reports/SESSION2021_ARTIFACT_STORAGE_SPEC.json"
+    ],
+    "s204_inputs": ["reports/SESSION204_SCAN_ARTIFACT_RESULTS.json"],
+    "sibling_s351": [
+      "reports/session351/SESSION351_GATE_NEG1_RESULTS.json",
+      "reports/session351/SESSION351_READINESS_VALIDATION.json"
+    ]
+  }
+}

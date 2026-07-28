@@ -1,0 +1,172 @@
+{
+  "sessionId": "S250-REME-1E1BF2",
+  "sessionType": "REMEDIATION_SESSION",
+  "generatedTimestamp": "2026-07-27T14:03:35.142Z",
+  "status": "PENDING",
+  "defect": {
+    "type": "DL-013",
+    "tier": "TIER_2_MEDIUM",
+    "blocking": false,
+    "certifiedOnlyBlock": false
+  },
+  "pack": "pack_d",
+  "qids": [
+    "P1-ED-010",
+    "P1-ED-025",
+    "P1-ED-035",
+    "P1-ED-058",
+    "P1-ED-064",
+    "P1-ED-066",
+    "P1-ED-071",
+    "P1-ED-072",
+    "P1-ED-074",
+    "P1-ED-075"
+  ],
+  "itemCount": 10,
+  "preExecutionChecks": [
+    {
+      "step": "BACKUP",
+      "description": "Create timestamped backup per BACKUP_PROTOCOL.md",
+      "required": true
+    },
+    {
+      "step": "GOVERNANCE_GUARD",
+      "description": "Confirm Rule 5: batch ≤ 28 items",
+      "required": true
+    },
+    {
+      "step": "IDENTITY_VALIDATOR",
+      "description": "Run identity_validator.js on target pack",
+      "required": true
+    },
+    {
+      "step": "VERIFY_QIDS",
+      "description": "Confirm all QIDs exist in target pack",
+      "required": true
+    }
+  ],
+  "executionSteps": [
+    {
+      "step": 1,
+      "action": "Replace template boilerplate with choice-specific distractor explanation"
+    },
+    {
+      "step": 2,
+      "action": "Each explanation must reference the specific error in that choice"
+    },
+    {
+      "step": 3,
+      "action": "Each explanation must identify the likely misconception"
+    },
+    {
+      "step": 4,
+      "action": "Minimum 50 characters per field (EV1 compliance)"
+    }
+  ],
+  "postExecutionChecks": [
+    {
+      "step": "DL_008_RESCAN",
+      "description": "Re-scan for DL-008 on remediated items",
+      "required": true
+    },
+    {
+      "step": "DL_026_RESCAN",
+      "description": "Re-scan for DL-026 on remediated items if applicable",
+      "required": false
+    },
+    {
+      "step": "REGRESSION_SUITE",
+      "description": "Run governance guard test suite",
+      "required": true
+    },
+    {
+      "step": "REVISION_HISTORY",
+      "description": "Write REVISION_HISTORY.md entry",
+      "required": true
+    }
+  ],
+  "itemDetails": [
+    {
+      "qid": "P1-ED-010",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-035",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-058",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-064",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-066",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-072",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-074",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    },
+    {
+      "qid": "P1-ED-075",
+      "pack": "pack_d",
+      "domain": "E",
+      "currentState": "REMEDIATE",
+      "recommendations": [],
+      "routes": []
+    }
+  ],
+  "batchIndex": 2,
+  "totalBatches": 2
+}

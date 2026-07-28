@@ -1,0 +1,5077 @@
+{
+  "_metadata": {
+    "session": 852,
+    "date": "2026-07-27",
+    "source": "S852 — Direct object-parse scan (DL-029-safe)",
+    "scope": "Full 5-pack scan of 2540 items",
+    "packs_scanned": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "methodology": "pack_reader.parsePackFile() via Function constructor. Within-object CorrectChoice extraction. String-aware, no forward-scan or regex-window. DL-029 immune.",
+    "schema_version": "2.0",
+    "regenerated_at": "2026-07-27T14:10:33.763Z",
+    "regenerated_by": "S852 — Session Orchestrator",
+    "previous_manifest_false_positives": 351,
+    "previous_manifest_root_cause": "DL-029 regex block-scan bug: CorrectChoice-before-QuestionID object layout caused scanner to read next QID's CC (75% false positive rate)",
+    "counts_by_code": {
+      "DL-008": 3,
+      "DL-026": 261
+    },
+    "counts_by_pack": {
+      "DL-008_A": 0,
+      "DL-008_B": 0,
+      "DL-008_C": 0,
+      "DL-008_D": 3,
+      "DL-008_E": 0,
+      "DL-026_A": 0,
+      "DL-026_B": 0,
+      "DL-026_C": 131,
+      "DL-026_D": 130,
+      "DL-026_E": 0
+    },
+    "total_blocked": 264,
+    "validation_notes": "Regenerated from direct pack scan. Previous manifest had 351 false positives. Current state: 0 Certified DL-008, 0 Certified DL-026."
+  },
+  "dl008": [
+    {
+      "qid": "P1-ED-057",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "ewLen": 276
+    },
+    {
+      "qid": "P1-ED-063",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "ewLen": 82
+    },
+    {
+      "qid": "P1-ED-065",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "ewLen": 277
+    }
+  ],
+  "dl026": [
+    {
+      "qid": "P1-EC-001",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-002",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-003",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-005",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-006",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-007",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-009",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-010",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-011",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-012",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-013",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-015",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-016",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-017",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-018",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-019",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-026",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-027",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-029",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-030",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-032",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-033",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-034",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-035",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-036",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-037",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-038",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-039",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-042",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-043",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-044",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-045",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-046",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-047",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-048",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-050",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-051",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-053",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-054",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-055",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-056",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-057",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-058",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-059",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-062",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-063",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-064",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-065",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-067",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-068",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-EC-069",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-070",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-071",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-EC-073",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-EC-074",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-EC-075",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-001",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-002",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-003",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-004",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-005",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-006",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-007",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-008",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-009",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-010",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-011",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-012",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-013",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-014",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-015",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-016",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-017",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-018",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-019",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-020",
+      "section": "F",
+      "cc": "D",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-021",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-022",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-023",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-024",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-025",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-026",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-027",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-028",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-029",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-030",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-031",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-032",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-033",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-034",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-035",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-036",
+      "section": "F",
+      "cc": "D",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-037",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-038",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-039",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-040",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-041",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-042",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-043",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-044",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-045",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-046",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-047",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-048",
+      "section": "F",
+      "cc": "D",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-049",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-050",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-051",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-052",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-053",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-054",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-055",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-056",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-057",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-058",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-059",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-060",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-061",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-062",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-063",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-064",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-065",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-066",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-067",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-068",
+      "section": "F",
+      "cc": "D",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-069",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-070",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-071",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FC-072",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FC-073",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FC-074",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FC-075",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-002",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-003",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-004",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-005",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-006",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-007",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-008",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-009",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-011",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-012",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-013",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-015",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-017",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-018",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-019",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-020",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-021",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-022",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-023",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-024",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-026",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-027",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-029",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-030",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-031",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-032",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-033",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-034",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-037",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-038",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-039",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-040",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-041",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-043",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-044",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-045",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-047",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-048",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-049",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-050",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-052",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-053",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-054",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-055",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-056",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-057",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-059",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-060",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-061",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-062",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-ED-063",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "D"
+    },
+    {
+      "qid": "P1-ED-065",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-067",
+      "section": "E",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-ED-068",
+      "section": "E",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-ED-069",
+      "section": "E",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-ED-070",
+      "section": "E",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-001",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-002",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-003",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-004",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-005",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-006",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-007",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-008",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-009",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-010",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-011",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-012",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-013",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-014",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-015",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-016",
+      "section": "F",
+      "cc": "D",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-017",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-018",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-019",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-020",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-021",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-022",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-023",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-024",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-025",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-026",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-027",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-028",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-029",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-030",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-031",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-032",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-033",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-034",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-035",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-036",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-037",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-038",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-039",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-040",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-041",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-042",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-043",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-044",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-045",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-047",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-048",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-049",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-050",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-051",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-052",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-053",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-054",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-055",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-056",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-057",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-058",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-059",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-060",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-061",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-062",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-063",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-064",
+      "section": "F",
+      "cc": "D",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-065",
+      "section": "F",
+      "cc": "A",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-066",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-067",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-068",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-069",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-070",
+      "section": "F",
+      "cc": "B",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-071",
+      "section": "F",
+      "cc": "C",
+      "state": "Archived",
+      "emptySlots": 2,
+      "whichSlots": "A,D"
+    },
+    {
+      "qid": "P1-FD-072",
+      "section": "F",
+      "cc": "D",
+      "state": "Archived",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    },
+    {
+      "qid": "P1-FD-073",
+      "section": "F",
+      "cc": "A",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "B"
+    },
+    {
+      "qid": "P1-FD-074",
+      "section": "F",
+      "cc": "B",
+      "state": "Unprocessed",
+      "emptySlots": 2,
+      "whichSlots": "A,C"
+    },
+    {
+      "qid": "P1-FD-075",
+      "section": "F",
+      "cc": "C",
+      "state": "Unprocessed",
+      "emptySlots": 1,
+      "whichSlots": "A"
+    }
+  ],
+  "stats": {
+    "total_dl008": 3,
+    "dl008_certified": 0,
+    "dl008_archived": 3,
+    "dl008_by_pack": {
+      "D": 3
+    },
+    "dl026_total": 261,
+    "dl026_certified": 0,
+    "dl026_archived": 222,
+    "dl026_by_pack": {
+      "C": 131,
+      "D": 130
+    },
+    "grand_total_blocked": 264
+  },
+  "blocked": [
+    {
+      "qid": "P1-ED-057",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-008",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "cc": "A",
+      "ewLen": 276,
+      "notes": "S852-direct-scan: EW[A] 276 chars"
+    },
+    {
+      "qid": "P1-ED-063",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-008",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "cc": "C",
+      "ewLen": 82,
+      "notes": "S852-direct-scan: EW[C] 82 chars"
+    },
+    {
+      "qid": "P1-ED-065",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-008",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "cc": "A",
+      "ewLen": 277,
+      "notes": "S852-direct-scan: EW[A] 277 chars"
+    },
+    {
+      "qid": "P1-EC-001",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-002",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-003",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-005",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-006",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-007",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-009",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-010",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-011",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-012",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-013",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-015",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-016",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-017",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-018",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-019",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-026",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-027",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-029",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-030",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-032",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-033",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-034",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-035",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-036",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-037",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-038",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-039",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-042",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-043",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-044",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-045",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-046",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-047",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-048",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-050",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-051",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-053",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-054",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-055",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-056",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-057",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-058",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-059",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-062",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-063",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-064",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-065",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-067",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-068",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-EC-069",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-070",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-071",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-EC-073",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-EC-074",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-EC-075",
+      "pack": "C",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-001",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-002",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-003",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-004",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-005",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-006",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-007",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-008",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-009",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-010",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-011",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-012",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-013",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-014",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-015",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-016",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-017",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-018",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-019",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-020",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-021",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-022",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-023",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-024",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-025",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-026",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-027",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-028",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-029",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-030",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-031",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-032",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-033",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-034",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-035",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-036",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-037",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-038",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-039",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-040",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-041",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-042",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-043",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-044",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-045",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-046",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-047",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-048",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-049",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-050",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-051",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-052",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-053",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-054",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-055",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-056",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-057",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-058",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-059",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-060",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-061",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-062",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-063",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-064",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-065",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-066",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-067",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-068",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-069",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-070",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-071",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FC-072",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FC-073",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FC-074",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FC-075",
+      "pack": "C",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-002",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-003",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-004",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-005",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-006",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-007",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-008",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-009",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-011",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-012",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-013",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-015",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-017",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-018",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-019",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-020",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-021",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-022",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-023",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-024",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-026",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-027",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-029",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-030",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-031",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-032",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-033",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-034",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-037",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-038",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-039",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-040",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-041",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-043",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-044",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-045",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-047",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-048",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-049",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-050",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-052",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-053",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-054",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-055",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-056",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-057",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-059",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-060",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-061",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-062",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-ED-063",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (D)"
+    },
+    {
+      "qid": "P1-ED-065",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-067",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-ED-068",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-ED-069",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-ED-070",
+      "pack": "D",
+      "section": "E",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-001",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-002",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-003",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-004",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-005",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-006",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-007",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-008",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-009",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-010",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-011",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-012",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-013",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-014",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-015",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-016",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-017",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-018",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-019",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-020",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-021",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-022",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-023",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-024",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-025",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-026",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-027",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-028",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-029",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-030",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-031",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-032",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-033",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-034",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-035",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-036",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-037",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-038",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-039",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-040",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-041",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-042",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-043",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-044",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-045",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-047",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-048",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-049",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-050",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-051",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-052",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-053",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-054",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-055",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-056",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-057",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-058",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-059",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-060",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-061",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-062",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-063",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-064",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-065",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-066",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-067",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-068",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-069",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-070",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-071",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,D)"
+    },
+    {
+      "qid": "P1-FD-072",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Archived",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "D",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    },
+    {
+      "qid": "P1-FD-073",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "A",
+      "notes": "S852-direct-scan: empty non-CC EW slots (B)"
+    },
+    {
+      "qid": "P1-FD-074",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "B",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A,C)"
+    },
+    {
+      "qid": "P1-FD-075",
+      "pack": "D",
+      "section": "F",
+      "defect_code": "DL-026",
+      "state": "Unprocessed",
+      "block_from_delivery": true,
+      "block_from_recommendation": true,
+      "correctChoice": "C",
+      "notes": "S852-direct-scan: empty non-CC EW slots (A)"
+    }
+  ]
+}

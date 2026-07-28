@@ -1,0 +1,63 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "categories": {
+    "auditExposure": {
+      "rating": "MEDIUM",
+      "items": [
+        {
+          "risk": "67 Certified DL-008 items in learner pool",
+          "severity": "HIGH",
+          "mitigation": "S801-S803 remediation",
+          "timeline": "Immediate"
+        },
+        {
+          "risk": "Pack D Section C DL-026 (50 In Audit) blocks certification",
+          "severity": "MEDIUM",
+          "mitigation": "Author 50 EW fields",
+          "timeline": "S804-S808"
+        },
+        {
+          "risk": "S718/S719 metadata sessions no REVISION_HISTORY entries",
+          "severity": "LOW",
+          "mitigation": "Document in REVISION_HISTORY",
+          "timeline": "This session"
+        }
+      ]
+    },
+    "certificationExposure": {
+      "rating": "LOW",
+      "items": [
+        {
+          "risk": "358 uncertified items in portfolio",
+          "severity": "MEDIUM",
+          "mitigation": "800-series Waves 2-5",
+          "timeline": "S809-S819"
+        },
+        {
+          "risk": "0.09% calibration misalignment (S717 finding)",
+          "severity": "LOW",
+          "mitigation": "Accepted — negligible",
+          "timeline": "N/A"
+        }
+      ]
+    },
+    "governanceGuardExposure": {
+      "rating": "LOW",
+      "items": [
+        {
+          "risk": "Governance guard active 20/20 PASS",
+          "severity": "NONE",
+          "mitigation": "N/A",
+          "timeline": "N/A"
+        },
+        {
+          "risk": "All 5 rules enforced",
+          "severity": "NONE",
+          "mitigation": "N/A",
+          "timeline": "N/A"
+        }
+      ]
+    }
+  },
+  "overallRating": "MEDIUM — single critical item (DL-008 in learner pool) with clear remediation path"
+}

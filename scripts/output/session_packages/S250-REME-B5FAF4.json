@@ -1,0 +1,485 @@
+{
+  "sessionId": "S250-REME-B5FAF4",
+  "sessionType": "REMEDIATION_SESSION",
+  "generatedTimestamp": "2026-07-27T15:58:10.931Z",
+  "status": "PENDING",
+  "defect": {
+    "type": "DL-025",
+    "tier": "TIER_1_HIGH",
+    "blocking": true,
+    "certifiedOnlyBlock": false
+  },
+  "pack": "pack_d",
+  "qids": [
+    "P1-FD-001",
+    "P1-FD-006",
+    "P1-FD-011",
+    "P1-FD-016",
+    "P1-FD-021",
+    "P1-FD-026",
+    "P1-FD-027",
+    "P1-FD-030",
+    "P1-FD-031",
+    "P1-FD-033",
+    "P1-FD-034",
+    "P1-FD-043",
+    "P1-FD-049",
+    "P1-FD-054",
+    "P1-FD-059",
+    "P1-FD-064",
+    "P1-FD-069",
+    "P1-FD-073",
+    "P1-FD-074",
+    "P1-FD-075"
+  ],
+  "itemCount": 20,
+  "preExecutionChecks": [
+    {
+      "step": "BACKUP",
+      "description": "Create timestamped backup per BACKUP_PROTOCOL.md",
+      "required": true
+    },
+    {
+      "step": "GOVERNANCE_GUARD",
+      "description": "Confirm Rule 5: batch ≤ 28 items",
+      "required": true
+    },
+    {
+      "step": "IDENTITY_VALIDATOR",
+      "description": "Run identity_validator.js on target pack",
+      "required": true
+    },
+    {
+      "step": "VERIFY_QIDS",
+      "description": "Confirm all QIDs exist in target pack",
+      "required": true
+    }
+  ],
+  "executionSteps": [],
+  "postExecutionChecks": [
+    {
+      "step": "DL_008_RESCAN",
+      "description": "Re-scan for DL-008 on remediated items",
+      "required": true
+    },
+    {
+      "step": "DL_026_RESCAN",
+      "description": "Re-scan for DL-026 on remediated items if applicable",
+      "required": false
+    },
+    {
+      "step": "REGRESSION_SUITE",
+      "description": "Run governance guard test suite",
+      "required": true
+    },
+    {
+      "step": "REVISION_HISTORY",
+      "description": "Write REVISION_HISTORY.md entry",
+      "required": true
+    }
+  ],
+  "itemDetails": [
+    {
+      "qid": "P1-FD-001",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-006",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-011",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-016",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-021",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-026",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-027",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-030",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-031",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-033",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-034",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-043",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-049",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-054",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-059",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-064",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-069",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-073",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-074",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "qid": "P1-FD-075",
+      "pack": "pack_d",
+      "domain": "F",
+      "currentState": "REMEDIATE",
+      "remediationDefect": "DL-025",
+      "recommendations": [
+        {
+          "type": "REMEDIATE",
+          "severity": "HIGH",
+          "description": "Empty non-CC ExplanationWrong slots — DL-026 remediation required"
+        },
+        {
+          "type": "REVIEW",
+          "severity": "MEDIUM",
+          "description": "Missing accounting principle citation in ExplanationCorrect"
+        }
+      ],
+      "routes": []
+    }
+  ],
+  "batchIndex": 2,
+  "totalBatches": 2
+}

@@ -1,0 +1,169 @@
+{
+  "title": "SESSION806_LEARNER_SAFETY_ASSESSMENT",
+  "session": "806",
+  "agent": "R",
+  "role": "Learner-Safety Assessment (READ-ONLY)",
+  "generated": "2026-07-26",
+  "scope": {
+    "itemsAssessed": 10,
+    "questionIDs": [
+      "P1-E-R11", "P1-E-R14", "P1-E-R15",
+      "P1-E-R16", "P1-E-R17", "P1-E-R19", "P1-E-R20",
+      "P1-E-R30", "P1-E-R31", "P1-E-R32"
+    ],
+    "sourceFiles": [
+      "reports/SESSION806_AUTHORING_BATCH_A.json",
+      "reports/SESSION806_AUTHORING_BATCH_B.json",
+      "reports/SESSION806_AUTHORING_BATCH_C.json"
+    ],
+    "crossAgentEvidence": [
+      "Agent H — Technical Accuracy Review (SESSION806_TECHNICAL_REVIEW.json): 10/10 PASS, 0 factual errors",
+      "Agent G — EW Coverage Audit (SESSION806_EW_AUDIT.json): 0 DL-008, 0 DL-026, 0 DL-013, 0 DL-010, 5 standard-ref notes",
+      "Agents I/J/K — Difficulty/CL/Learning Value Review (SESSION806_DIFFICULTY_CL_LEARNING_REVIEW.json): 2 DL-031 flags, 2 CL flags"
+    ],
+    "itemsAreAuthoringArtifacts": true,
+    "noPackFileModifications": true,
+    "methodology": "Direct inspection of all 10 items (stems, choices, CorrectChoice, EC, all EW fields) from authoring batch JSON files. Cross-verified against Agent H (technical accuracy), Agent G (EW structural compliance), and Agents I/J/K (difficulty/CL/learning value) reports."
+  },
+  "riskDimensions": {
+    "1_answerKeyRisk": {
+      "risk": "LOW",
+      "detail": "All 10 CorrectChoice values independently verified as accounting-correct by Agent H (10/10 PASS, HIGH confidence). Agent G identified 1 CC expectation mismatch (R11: user expected B, file has A — A is accounting-correct per COSO control classification: three-way match before payment = preventive). No answer-key errors. The stored CorrectChoice for every item is the defensibly correct answer under the relevant authoritative framework (COSO, SOX, ERM, ISACA).",
+      "evidenceRef": "SESSION806_TECHNICAL_REVIEW.json §items, SESSION806_EW_AUDIT.json §violationDetails.ccExpectationMismatch"
+    },
+    "2_ambiguityRisk": {
+      "risk": "LOW",
+      "detail": "All 10 items have exactly one defensible answer per CMA/CPA exam standards. The closest item to ambiguity is R11 (preventive vs. detective three-way match classification), but the CMA standard treatment — three-way match before payment = preventive control — is well-established. A candidate who argues that the three-way match 'identifies discrepancies' (detective) is applying the wrong classification criterion: the timing of the control relative to the transaction (before payment vs. after recording) is the operative distinction, not whether the control involves comparison/matching. The EC explicitly teaches this timing-based distinction. No other item has any arguable ambiguity — all 9 remaining items have one clearly correct answer per the governing standard.",
+      "perItemSummary": {
+        "R11": "Three-way match = preventive (timing: before payment). Reconciliation = detective (timing: after recording). Standard COSO classification.",
+        "R14": "Four ITGC domains enumerated verbatim — no ambiguity about what category they belong to.",
+        "R15": "IPO classification by timing in transaction flow — unambiguous.",
+        "R16": "Pure recall of standard COSO fraud categories — unambiguous for knowledgeable candidate.",
+        "R17": "Standard COSO ERM risk response mapping — unambiguous.",
+        "R19": "Pure recall of SOX 302 requirements — unambiguous for knowledgeable candidate.",
+        "R20": "Standard SOX 404(a) vs. 404(b) distinction — unambiguous.",
+        "R30": "Authentication/authorization/access-review by control function — unambiguous.",
+        "R31": "RTO=time, RPO=data-loss — unambiguous given standard definitions.",
+        "R32": "Outsourcing does not outsource responsibility — well-settled under COSO/SOX."
+      }
+    },
+    "3_misconceptionRisk": {
+      "risk": "LOW",
+      "detail": "All 30 non-CC ExplanationWrong fields verified as factually accurate and choice-specific by Agent H (10/10 technical PASS) and Agent G (0 DL-010 violations). Each EW explains why the specific distractor is wrong, identifies the likely misconception, and contrasts with the correct approach. No EW contains factual errors, teaches incorrect accounting, or misrepresents the relevant standard. The 5 EC standard-reference notes from Agent G (R11, R14, R15, R30, R31 lack explicit COSO/ISACA/NIST citations in EC text) are educational-quality notes, not correctness defects — the ECs are substantively accurate even without named framework citations.",
+      "evidenceRef": "SESSION806_TECHNICAL_REVIEW.json, SESSION806_EW_AUDIT.json §perItemAudit",
+      "standardRefNotes": {
+        "affectedQIDs": ["P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R30", "P1-E-R31"],
+        "severity": "Medium — educational quality, not learner-safety. ECs are substantively accurate; framework citations would improve but are not required by CAQS EV3 for certification.",
+        "learnerImpact": "None. A learner reading the EC learns the correct concept even without a named framework citation. The StudyLinks field provides standard references."
+      }
+    },
+    "4_difficultyFairness": {
+      "risk": "MEDIUM",
+      "detail": "Two items (R14, R16) flagged by Agent I for DL-031 difficulty inflation. Two items (R16, R31) flagged by Agent J for CognitiveLevel mismatch. These are labeling defects, not content defects — the items themselves are correct and educationally sound. From a learner-safety perspective, difficulty inflation (labeling an Easy item as Moderate) is the safer direction of miscalibration: candidates who answer correctly receive positive reinforcement and may be pleasantly surprised by the exam's accessibility. However, it misleads readiness self-assessment — a candidate scoring 90% on 'Moderate' items thinking they are well-prepared when those items are actually Easy. The risk is in analytics accuracy and candidate calibration, not in unfair scoring.",
+      "flaggedItems": {
+        "R14": {
+          "assigned": "Moderate (3) / Understand",
+          "recommended": "Easy (1) or Moderate-Easy (2) / Understand (borderline Remember)",
+          "issue": "Stem recites the four ITGC domains verbatim. Correct answer is the defined term. DL-031 definition-match pattern.",
+          "learnerSafetyImpact": "A candidate who doesn't know ITGCs but reads the stem carefully gets a free correct answer. This inflates scores on this item relative to true knowledge — a mild validity concern. The item is educationally useful because the EC teaches ITGC domains thoroughly, but the stem gives away the answer."
+        },
+        "R16": {
+          "assigned": "Moderate (3) / Understand",
+          "recommended": "Easy (1) / Remember",
+          "issue": "Pure recall of COSO fraud categories (fraudulent financial reporting and misappropriation of assets). No scenario, no application, no interpretation.",
+          "learnerSafetyImpact": "Minimal. The item is factually correct and the recall is testable. Candidates either know the answer or don't — difficulty label does not affect answerability. The mismatch misleads analytics but does not harm the learner's exam experience."
+        },
+        "R31": {
+          "assigned": "Understand",
+          "recommended": "Apply",
+          "issue": "Candidate applies RTO/RPO definitions to specific numerical values in a novel scenario. This is Apply, not Understand.",
+          "learnerSafetyImpact": "None. Under-labeling cognitive level (saying an Apply item is only Understand) is conservative — it underpromises and overdelivers. No learner harm."
+        }
+      },
+      "recommendation": "Recalibrate R14 (Difficulty → Easy or Moderate-Easy), R16 (Difficulty → Easy, CL → Remember), and R31 (CL → Apply) before certification. These are labeling corrections that require no content changes."
+    },
+    "5_cloneMemorizationRisk": {
+      "risk": "LOW",
+      "detail": "All 10 items explicitly state in their VerifiedChecks and SourceDescription fields that they are original replacements, not derived from clone rotation templates. No item has a name-rotated stem with content identical to existing certified items. All items are genuinely new content with novel scenarios (R11: Cascade Technologies, R14: Atlas Financial, R15: Northpoint Distribution, R17: Mountain State Bank, R30: Summit Health System, R31: unnamed e-commerce company, R32: Apex Manufacturing/PayServe). Items without company names (R16, R19, R20) are conceptual recall items where clone risk is inapplicable — they test knowledge that is independent of scenario framing. A candidate who has taken prior practice sessions will not have encountered these items before."
+    },
+    "6_dl008Risk": {
+      "risk": "LOW",
+      "detail": "Agent G verified: all 10 items have empty ExplanationWrong[CorrectChoice] (field at CC index is ''). Ten out of ten pass. Zero chance a learner sees distractor-explanation text in the correct-answer feedback slot. DL-008 compliance is structural — these items, when inserted into the pack file with CC unchanged, will not produce DL-008 violations.",
+      "evidenceRef": "SESSION806_EW_AUDIT.json §perItemAudit.dl008"
+    },
+    "7_dl026Risk": {
+      "risk": "LOW",
+      "detail": "Agent G verified: all 30 non-CorrectChoice ExplanationWrong fields have substantive, choice-specific text ≥ 100 characters. Minimum observed: 504 chars (R20 EWC). All teach specific misconceptions. Zero chance a learner sees no educational feedback when selecting a wrong answer. DL-026 compliance is structural — these items, when inserted into the pack file, will not produce DL-026 violations.",
+      "evidenceRef": "SESSION806_EW_AUDIT.json §perItemAudit.dl026"
+    },
+    "8_biasRisk": {
+      "risk": "LOW",
+      "detail": "All 10 items use gender-neutral language with no pronouns in stems. Company names are fictional and diverse across industries (technology, financial services, distribution, banking, healthcare, e-commerce, manufacturing). No cultural stereotyping, no geographic bias, no religious or political references. The regulatory content (SOX, COSO) is inherently U.S.-centric because CMA is a U.S. certification — this is subject-matter scope, not bias. No item references specific ethnic groups, nationalities, genders, or cultures. Industry diversity across items is appropriate for a CMA exam.",
+      "industryDistribution": {
+        "technology": "R11 (Cascade Technologies)",
+        "financialServices": "R14 (Atlas Financial Services)",
+        "distribution": "R15 (Northpoint Distribution)",
+        "banking": "R17 (Mountain State Bank)",
+        "healthcare": "R30 (Summit Health System)",
+        "eCommerce": "R31 (unnamed e-commerce company)",
+        "manufacturing/outsourcing": "R32 (Apex Manufacturing, PayServe)",
+        "noCompanyContext": "R16, R19, R20 (conceptual/regulatory recall items)"
+      }
+    },
+    "9_accessibilityRisk": {
+      "risk": "LOW",
+      "detail": "All stems use clear, direct business English appropriate for a professional examination. No idioms ('ballpark figure,' 'in the red'), no culturally specific metaphors, no sport references, no pop-culture allusions. Technical terms (ITGC, RTO, RPO, IPO, SOC 1, ICFR, CUECs) are explicitly defined within the ExplanationCorrect fields — a non-native speaker who misses a term during the timed exam will learn it during review. Sentence structures are complex but grammatically standard — appropriate for the CMA exam's professional register. The SOX and COSO terminology is domain-required vocabulary that all CMA candidates must learn regardless of native language. No accessibility barriers for candidates using screen readers (all content is text-based; no images, no color-dependent cues, no non-text exhibits).",
+      "perItemNotes": {
+        "R11": "Clear control descriptions. 'Three-way match' and 'subsidiary ledger to general ledger' are standard accounting vocabulary.",
+        "R14": "Four ITGC domains listed clearly. 'IT environment' and 'application processing' are defined contextually.",
+        "R15": "'IPO' acronym is spelled out in stem. Order-entry workflow is described step-by-step.",
+        "R16": "Straightforward COSO terminology. No scenario complexity.",
+        "R17": "Risk responses are enumerated with clear business explanations. 'Cyber liability insurance' and 'service-level agreement' are standard business terms.",
+        "R19": "SOX 302 language uses legal/regulatory register appropriate for the topic.",
+        "R20": "SOX 404(a)/(b) distinction uses standard regulatory terminology.",
+        "R30": "'HIPAA' is spelled out in stem. MFA, role-based permissions, and elevated access are clearly described.",
+        "R31": "RTO and RPO are spelled out in stem and defined in EC. Transaction volume context (50K/day) provides concrete framing.",
+        "R32": "'SOC 1' and 'complementary user entity controls' are standard audit vocabulary that CMA candidates must know."
+      }
+    }
+  },
+  "overallSafetyVerdict": "PASS — LEARNER-SAFE WITH CALIBRATION NOTES",
+  "overallRiskLevel": "LOW",
+  "rationale": "All 10 items are structurally sound (0 DL-008, 0 DL-026, 0 DL-013, 0 DL-010, 0 field-completeness violations). All correct answers are independently verified as accounting-correct (Agent H: 10/10 PASS). All distractor explanations are choice-specific, factually accurate, and teach genuine misconceptions. No stem is ambiguous — every item has exactly one defensible answer per the governing standard (COSO, SOX, ERM, ISACA). No clone memorization risk — all items are original. No bias or accessibility barriers — language is professional, gender-neutral, and industry-diverse. The only learner-safety concerns are difficulty/CL miscalibrations on R14 (DL-031: stem gives away answer) and R16 (DL-031: pure recall labeled Moderate). These are labeling defects — they do not cause the learner to receive wrong feedback, see misleading explanations, or be unfairly penalized. They should be corrected before certification but are not learner-safety blockers.",
+  "perItemVerdict": {
+    "P1-E-R11": {"safety": "PASS", "notes": "Three-way match classification requires careful timing-based reasoning. EC teaches the distinction comprehensively."},
+    "P1-E-R14": {"safety": "PASS_WITH_CALIBRATION_NOTE", "notes": "DL-031: stem recites ITGC domains. Difficulty overstated (Moderate → Easy/Moderate-Easy). Stem-revision option: remove domain enumeration to keep Moderate difficulty."},
+    "P1-E-R15": {"safety": "PASS", "notes": "Strong IPO scenario. All three classifications correct. Excellent EW quality."},
+    "P1-E-R16": {"safety": "PASS_WITH_CALIBRATION_NOTE", "notes": "DL-031: pure recall of COSO fraud categories. Difficulty overstated (Moderate → Easy). CL mismatch (Understand → Remember)."},
+    "P1-E-R17": {"safety": "PASS", "notes": "Best item in the set. Four risk responses, insurance-with-deductible nuance, clear classification keys. Exemplary."},
+    "P1-E-R19": {"safety": "PASS", "notes": "Correctly calibrated as Easy/Remember. Pure SOX 302 recall. Appropriate for knowledge-level testing."},
+    "P1-E-R20": {"safety": "PASS", "notes": "Correctly calibrated as Moderate-Easy/Understand. Good 404(a) vs 404(b) distinction with useful memory aid."},
+    "P1-E-R30": {"safety": "PASS", "notes": "Strong access-control scenario with HIPAA context. Excellent three-question framework (who are you? what can you do? still correct?)."},
+    "P1-E-R31": {"safety": "PASS_WITH_CALIBRATION_NOTE", "notes": "CL mismatch (Understand → Apply). Item applies RTO/RPO concepts to numerical scenario. Difficulty at upper bound (Moderate → Moderate-Easy recommended). Content is correct and educationally sound."},
+    "P1-E-R32": {"safety": "PASS", "notes": "Comprehensive third-party risk management item. EC covers Principle 9, SOC 1, CUECs, ongoing monitoring. Professionally relevant."}
+  },
+  "certificationBlockingIssues": [],
+  "preCertificationRecommendations": [
+    {
+      "priority": "High",
+      "qid": "P1-E-R16",
+      "action": "Recalibrate Difficulty → Easy (1) and CognitiveLevel → Remember before certification. No content change required."
+    },
+    {
+      "priority": "Medium",
+      "qid": "P1-E-R14",
+      "action": "Either (a) remove four-domain enumeration from stem to preserve Moderate difficulty and add genuine cognitive demand, or (b) recalibrate Difficulty → Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "priority": "Medium",
+      "qid": "P1-E-R31",
+      "action": "Recalibrate CognitiveLevel → Apply. Consider recalibrating Difficulty → Moderate-Easy (2) given straightforward RTO/RPO mapping task."
+    },
+    {
+      "priority": "Low",
+      "qids": ["P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R30", "P1-E-R31"],
+      "action": "Add explicit COSO/ISACA/NIST framework citation to ExplanationCorrect text. StudyLinks already provide references; EC enrichment is a quality enhancement, not a safety fix."
+    }
+  ],
+  "readOnlyConfirmation": "This is a read-only assessment. No files were modified. All findings are based on direct inspection of authoring batch JSON files and cross-agent verification reports."
+}

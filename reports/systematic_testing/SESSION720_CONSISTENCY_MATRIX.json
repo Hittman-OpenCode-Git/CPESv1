@@ -1,0 +1,2002 @@
+{
+    "session":  "S720",
+    "agent":  "H",
+    "title":  "Cross-Pack Consistency Audit -- CognitiveLevel and Difficulty",
+    "generated":  "2026-07-26T19:48:05Z",
+    "data_source":  "SESSION718_COGNITIVELEVEL_ASSIGNMENTS_VFINAL.json",
+    "items_analyzed":  2425,
+    "patterns_analyzed":  [
+                              {
+                                  "pattern":  "definition-match",
+                                  "description":  "Items with stems containing \u0027is:\u0027, \u0027are:\u0027, \u0027refers to\u0027, \u0027defined as\u0027",
+                                  "total_pool":  924,
+                                  "per_pack_dominant":  {
+                                                            "pack_a":  {
+                                                                           "total":  344,
+                                                                           "count":  156,
+                                                                           "CL":  "Evaluate"
+                                                                       },
+                                                            "pack_d":  {
+                                                                           "total":  96,
+                                                                           "count":  68,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_c":  {
+                                                                           "total":  139,
+                                                                           "count":  77,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_e":  {
+                                                                           "total":  164,
+                                                                           "count":  127,
+                                                                           "CL":  "Remember"
+                                                                       },
+                                                            "pack_b":  {
+                                                                           "total":  181,
+                                                                           "count":  115,
+                                                                           "CL":  "Apply"
+                                                                       }
+                                                        },
+                                  "per_pack_samples":  {
+                                                           "pack_a":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1-A-001",
+                                                                                              "Topic":  "A.001 balance sheet current classification",
+                                                                                              "Stem":  "Quartz is preparing a classified balance sheet for a supplier financing arrangement due in nine months. Which response i"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Understand",
+                                                                                              "QID":  "P1-A-002",
+                                                                                              "Topic":  "A.002 income statement discontinued operation presentation",
+                                                                                              "Stem":  "Riverview will sell a component that represents a strategic shift and has met held-for-sale criteria. Which response is "
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Evaluate",
+                                                                                              "QID":  "P1-A-004",
+                                                                                              "Topic":  "A.004 statement of changes in equity treasury stock",
+                                                                                              "Stem":  "Titan repurchased its own common shares during the year. Which response is most appropriate?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Understand",
+                                                                                              "QID":  "P1-A-005",
+                                                                                              "Topic":  "A.005 revenue performance obligations",
+                                                                                              "Stem":  "Umbra sells equipment with a separately priced installation service that is distinct from the equipment. Which response "
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Evaluate",
+                                                                                              "QID":  "P1-A-006",
+                                                                                              "Topic":  "A.006 contract liability for advance collections",
+                                                                                              "Stem":  "Vantage received annual service fees in advance before performing the services. Which response is most appropriate?"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Evaluate",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  1
+                                                                      },
+                                                           "pack_d":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-041",
+                                                                                              "Topic":  "A.041 comprehensive income statement presentation",
+                                                                                              "Stem":  "Pinemount wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-042",
+                                                                                              "Topic":  "A.042 comprehensive income statement presentation",
+                                                                                              "Stem":  "Quarrycrest wants to present net income and other comprehensive income items. What are the acceptable presentation forma"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-043",
+                                                                                              "Topic":  "A.043 comprehensive income statement presentation",
+                                                                                              "Stem":  "Ridgewell wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-044",
+                                                                                              "Topic":  "A.044 comprehensive income statement presentation",
+                                                                                              "Stem":  "Sandpiper wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-045",
+                                                                                              "Topic":  "A.045 comprehensive income statement presentation",
+                                                                                              "Stem":  "Turnstone wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_c":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-016",
+                                                                                              "Topic":  "A.016 goodwill impairment testing",
+                                                                                              "Stem":  "Prairiewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curren"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-017",
+                                                                                              "Topic":  "A.017 goodwill impairment testing",
+                                                                                              "Stem":  "Quillfeather performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curre"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-018",
+                                                                                              "Topic":  "A.018 goodwill impairment testing",
+                                                                                              "Stem":  "Rosewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current g"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-019",
+                                                                                              "Topic":  "A.019 goodwill impairment testing",
+                                                                                              "Stem":  "Silverton performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current "
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-020",
+                                                                                              "Topic":  "A.020 goodwill impairment testing",
+                                                                                              "Stem":  "Thornfield performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_e":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-001",
+                                                                                              "Topic":  "E-A.001 Balance sheet purpose",
+                                                                                              "Stem":  "What is the primary purpose of the balance sheet?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-002",
+                                                                                              "Topic":  "E-A.002 Current asset identification",
+                                                                                              "Stem":  "Under U.S. GAAP, which is NOT a current asset?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-004",
+                                                                                              "Topic":  "E-A.004 Revenue recognition timing",
+                                                                                              "Stem":  "Revenue is recognized under ASC 606 when:"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-005",
+                                                                                              "Topic":  "E-A.005 Inventory measurement",
+                                                                                              "Stem":  "Under U.S. GAAP, inventory is reported at:"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Difficult",
+                                                                                              "DS":  4,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-007",
+                                                                                              "Topic":  "E-A.007 Bond classification",
+                                                                                              "Stem":  "A 10-year bond issued at par is classified on the balance sheet as:"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Remember",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_b":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Understand",
+                                                                                              "QID":  "P1B-A-080",
+                                                                                              "Topic":  "B-A.080 licenses revenue recognition",
+                                                                                              "Stem":  "Digital Dynamics grants a five-year right-to-use software license with no ongoing obligations. Under ASC 606, when is re"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-081",
+                                                                                              "Topic":  "B-A.081 contract costs",
+                                                                                              "Stem":  "Phoenix Aerospace incurs $50,000 incremental contract acquisition costs for a 4-year contract. Under ASC 340-40, how is "
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-087",
+                                                                                              "Topic":  "B-A.087 accrued liabilities",
+                                                                                              "Stem":  "Stonegate owes $95,000 in wages for December work, payable January 7. How is this classified on the Dec 31 balance sheet"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-088",
+                                                                                              "Topic":  "B-A.088 deferred revenue",
+                                                                                              "Stem":  "Peak Performance sells annual memberships for $1,200, collected Jan 1. At March 31, how is the unearned portion classifi"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-089",
+                                                                                              "Topic":  "B-A.089 restricted cash",
+                                                                                              "Stem":  "Silver Oak holds $500,000 cash restricted by a debt covenant for debt due in 2028. Current year is 2025. How is this cla"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      }
+                                                       },
+                                  "cross_pack_consistency":  "LOW",
+                                  "issues":  [
+                                                 {
+                                                     "sample_count":  344,
+                                                     "pool_norm":  "Apply",
+                                                     "pack_dominant":  "Evaluate",
+                                                     "pack":  "pack_a"
+                                                 },
+                                                 {
+                                                     "sample_count":  164,
+                                                     "pool_norm":  "Apply",
+                                                     "pack_dominant":  "Remember",
+                                                     "pack":  "pack_e"
+                                                 }
+                                             ]
+                              },
+                              {
+                                  "pattern":  "standard-application",
+                                  "description":  "Items beginning \u0027Which of the following...\u0027/ \u0027Under GAAP/COSO...\u0027",
+                                  "total_pool":  28,
+                                  "per_pack_dominant":  {
+                                                            "pack_a":  {
+                                                                           "total":  3,
+                                                                           "count":  2,
+                                                                           "CL":  "Understand"
+                                                                       },
+                                                            "pack_d":  {
+                                                                           "total":  0,
+                                                                           "count":  0,
+                                                                           "CL":  "N/A"
+                                                                       },
+                                                            "pack_c":  {
+                                                                           "total":  0,
+                                                                           "count":  0,
+                                                                           "CL":  "N/A"
+                                                                       },
+                                                            "pack_e":  {
+                                                                           "total":  3,
+                                                                           "count":  3,
+                                                                           "CL":  "Remember"
+                                                                       },
+                                                            "pack_b":  {
+                                                                           "total":  22,
+                                                                           "count":  15,
+                                                                           "CL":  "Remember"
+                                                                       }
+                                                        },
+                                  "per_pack_samples":  {
+                                                           "pack_a":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "B",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-B-051",
+                                                                                              "Topic":  "B.051 selling and administrative expense budget components",
+                                                                                              "Stem":  "Which of the following would typically be included in the selling and administrative expense budget rather than the prod"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "B",
+                                                                                              "CL":  "Understand",
+                                                                                              "QID":  "P1-B-088",
+                                                                                              "Topic":  "B.088 budgeted balance sheet purpose",
+                                                                                              "Stem":  "Which of the following best describes the purpose of the budgeted balance sheet in the master budget process?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "C",
+                                                                                              "CL":  "Understand",
+                                                                                              "QID":  "P1-C-072",
+                                                                                              "Topic":  "C.072 customer perspective metric example",
+                                                                                              "Stem":  "Which of the following metrics would be classified under the customer perspective of a balanced scorecard?"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Understand",
+                                                                          "sample_count":  3,
+                                                                          "dominant_ds":  1
+                                                                      },
+                                                           "pack_d":  {
+                                                                          "samples":  [
+
+                                                                                      ],
+                                                                          "dominant_cl":  "N/A",
+                                                                          "sample_count":  0,
+                                                                          "dominant_ds":  0
+                                                                      },
+                                                           "pack_c":  {
+                                                                          "samples":  [
+
+                                                                                      ],
+                                                                          "dominant_cl":  "N/A",
+                                                                          "sample_count":  0,
+                                                                          "dominant_ds":  0
+                                                                      },
+                                                           "pack_e":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-009",
+                                                                                              "Topic":  "E-A.009 Investing cash flow",
+                                                                                              "Stem":  "Which of the following is a cash flow from investing activities?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-014",
+                                                                                              "Topic":  "E-A.014 Finance lease criteria",
+                                                                                              "Stem":  "Under ASC 842, a lessee classifies a lease as finance if:"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-070",
+                                                                                              "Topic":  "E-A.070 Inventory write-down reversal IFRS",
+                                                                                              "Stem":  "Under IFRS, inventory write-downs can be reversed when:"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Remember",
+                                                                          "sample_count":  3,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_b":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1B-A-105",
+                                                                                              "Topic":  "B-A.105 dividends and interest classification",
+                                                                                              "Stem":  "Under GAAP, how are dividends received and interest paid classified on the cash flow statement?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1B-A-106",
+                                                                                              "Topic":  "B-A.106 lease classification criteria",
+                                                                                              "Stem":  "Under ASC 842, which criterion classifies a lease as a finance lease for the lessee?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1B-A-108",
+                                                                                              "Topic":  "B-A.108 lease expense pattern",
+                                                                                              "Stem":  "Under ASC 842 for an operating lease, how is total lease expense recognized over the lease term?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1B-A-109",
+                                                                                              "Topic":  "B-A.109 lessor classification",
+                                                                                              "Stem":  "Under ASC 842, if a lease meets any finance lease criterion and both lessor criteria (collectibility and no uncertaintie"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-110",
+                                                                                              "Topic":  "B-A.110 short-term lease exemption",
+                                                                                              "Stem":  "Under ASC 842, what is the maximum lease term for which a lessee may elect the short-term lease exemption?"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Remember",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      }
+                                                       },
+                                  "cross_pack_consistency":  "MODERATE",
+                                  "issues":  [
+                                                 {
+                                                     "sample_count":  3,
+                                                     "pool_norm":  "Remember",
+                                                     "pack_dominant":  "Understand",
+                                                     "pack":  "pack_a"
+                                                 }
+                                             ]
+                              },
+                              {
+                                  "pattern":  "calculation",
+                                  "description":  "Items with Apply/Analyze CL requiring formula execution",
+                                  "total_pool":  592,
+                                  "per_pack_dominant":  {
+                                                            "pack_a":  {
+                                                                           "total":  107,
+                                                                           "DS":  3,
+                                                                           "count":  105,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_d":  {
+                                                                           "total":  148,
+                                                                           "DS":  3,
+                                                                           "count":  140,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_c":  {
+                                                                           "total":  140,
+                                                                           "DS":  3,
+                                                                           "count":  133,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_e":  {
+                                                                           "total":  68,
+                                                                           "DS":  3,
+                                                                           "count":  67,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_b":  {
+                                                                           "total":  129,
+                                                                           "DS":  3,
+                                                                           "count":  129,
+                                                                           "CL":  "Apply"
+                                                                       }
+                                                        },
+                                  "per_pack_samples":  {
+                                                           "pack_a":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-003",
+                                                                                              "Topic":  "A.003 cash flow from operations indirect method",
+                                                                                              "Stem":  "A company reports net income of $172,000, depreciation expense of $53,000, a gain on sale of equipment of $14,000, and a"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-019",
+                                                                                              "Topic":  "A.019 OCI unrealized debt security",
+                                                                                              "Stem":  "Juniper holds debt securities classified so that unrealized gains bypass net income under the applicable model. Which re"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-025",
+                                                                                              "Topic":  "A.025 deferred tax liability calculation",
+                                                                                              "Stem":  "Pioneer purchases equipment for $100,000. For financial reporting, it uses straight-line depreciation ($20,000 per year)"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-026",
+                                                                                              "Topic":  "A.026 accounting equation equity calculation 1",
+                                                                                              "Stem":  "Beacon reports total assets of $324,300 and total liabilities of $127,100. What total equity should be reported?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-029",
+                                                                                              "Topic":  "A.029 straight-line depreciation expense 4",
+                                                                                              "Stem":  "Evergreen bought equipment for $92,800, estimates salvage value of $12,000, and a 5-year useful life. What is annual str"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_d":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-041",
+                                                                                              "Topic":  "A.041 comprehensive income statement presentation",
+                                                                                              "Stem":  "Pinemount wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-042",
+                                                                                              "Topic":  "A.042 comprehensive income statement presentation",
+                                                                                              "Stem":  "Quarrycrest wants to present net income and other comprehensive income items. What are the acceptable presentation forma"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-043",
+                                                                                              "Topic":  "A.043 comprehensive income statement presentation",
+                                                                                              "Stem":  "Ridgewell wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-044",
+                                                                                              "Topic":  "A.044 comprehensive income statement presentation",
+                                                                                              "Stem":  "Sandpiper wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-045",
+                                                                                              "Topic":  "A.045 comprehensive income statement presentation",
+                                                                                              "Stem":  "Turnstone wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_c":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-016",
+                                                                                              "Topic":  "A.016 goodwill impairment testing",
+                                                                                              "Stem":  "Prairiewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curren"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-017",
+                                                                                              "Topic":  "A.017 goodwill impairment testing",
+                                                                                              "Stem":  "Quillfeather performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curre"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-018",
+                                                                                              "Topic":  "A.018 goodwill impairment testing",
+                                                                                              "Stem":  "Rosewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current g"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-019",
+                                                                                              "Topic":  "A.019 goodwill impairment testing",
+                                                                                              "Stem":  "Silverton performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current "
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-020",
+                                                                                              "Topic":  "A.020 goodwill impairment testing",
+                                                                                              "Stem":  "Thornfield performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_e":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1E-A-006",
+                                                                                              "Topic":  "E-A.006 LIFO rising prices",
+                                                                                              "Stem":  "Which cost flow assumption results in the lowest net income during rising prices?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1E-A-018",
+                                                                                              "Topic":  "E-A.018 Equity method income",
+                                                                                              "Stem":  "Under the equity method, the investor records its share of investee:"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1E-A-027",
+                                                                                              "Topic":  "E-A.027 Direct method cash received",
+                                                                                              "Stem":  "NorthStar Equipment reported sales revenue of $2,500,000 for the year ended December 31, 2026. Accounts receivable incre"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1E-A-032",
+                                                                                              "Topic":  "E-A.032 Full disclosure",
+                                                                                              "Stem":  "NorthStar Equipment\u0027s controller, Maria Chen, is preparing the annual report. The company recently learned that one of i"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1E-A-043",
+                                                                                              "Topic":  "E-A.043 Effective interest expense",
+                                                                                              "Stem":  "On January 1, 2026, NorthStar Equipment issued $1,000,000 face value, 5-year bonds paying 8% annual interest when the ma"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_b":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-076",
+                                                                                              "Topic":  "B-A.076 revenue recognition - performance obligations",
+                                                                                              "Stem":  "Apex Manufacturing enters into a contract to sell a specialized machine for $500,000. The contract includes installation"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-088",
+                                                                                              "Topic":  "B-A.088 deferred revenue",
+                                                                                              "Stem":  "Peak Performance sells annual memberships for $1,200, collected Jan 1. At March 31, how is the unearned portion classifi"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-097",
+                                                                                              "Topic":  "B-A.097 gross profit calculation",
+                                                                                              "Stem":  "Southwest Retailers: net sales $2,500,000; COGS $1,400,000; selling expenses $350,000; admin $250,000; interest $40,000."
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-099",
+                                                                                              "Topic":  "B-A.099 operating activities classification",
+                                                                                              "Stem":  "Which cash flow is classified as an operating activity under GAAP?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-102",
+                                                                                              "Topic":  "B-A.102 indirect method",
+                                                                                              "Stem":  "Prairie Dog: NI $750,000; depreciation $120,000; AR increase $45,000; inventory decrease $30,000; AP decrease $25,000. N"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      }
+                                                       },
+                                  "cross_pack_consistency":  "LOW",
+                                  "issues":  [
+                                                 {
+                                                     "issue":  "Pack E labels 77.2% of items Remember, including calculation items other packs label Apply. Only 95/500 items labeled Apply."
+                                                 }
+                                             ]
+                              },
+                              {
+                                  "pattern":  "framework-application",
+                                  "description":  "Items citing GAAP/COSO/ASC/IASB",
+                                  "total_pool":  250,
+                                  "per_pack_dominant":  {
+                                                            "pack_a":  {
+                                                                           "total":  72,
+                                                                           "count":  58,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_d":  {
+                                                                           "total":  33,
+                                                                           "count":  24,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_c":  {
+                                                                           "total":  26,
+                                                                           "count":  15,
+                                                                           "CL":  "Apply"
+                                                                       },
+                                                            "pack_e":  {
+                                                                           "total":  57,
+                                                                           "count":  44,
+                                                                           "CL":  "Remember"
+                                                                       },
+                                                            "pack_b":  {
+                                                                           "total":  62,
+                                                                           "count":  46,
+                                                                           "CL":  "Apply"
+                                                                       }
+                                                        },
+                                  "per_pack_samples":  {
+                                                           "pack_a":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-019",
+                                                                                              "Topic":  "A.019 OCI unrealized debt security",
+                                                                                              "Stem":  "Juniper holds debt securities classified so that unrealized gains bypass net income under the applicable model. Which re"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-025",
+                                                                                              "Topic":  "A.025 deferred tax liability calculation",
+                                                                                              "Stem":  "Pioneer purchases equipment for $100,000. For financial reporting, it uses straight-line depreciation ($20,000 per year)"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-044",
+                                                                                              "Topic":  "A.044 loss contingency range disclosure 19",
+                                                                                              "Stem":  "Juniper faces a probable warranty loss. The best estimate is $62,800, and the reasonably possible range extends to $124,"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-A-059",
+                                                                                              "Topic":  "A.059 straight-line depreciation expense 34",
+                                                                                              "Stem":  "Juniper bought equipment for $188,800, estimates salvage value of $12,000, and a 7-year useful life. What is annual stra"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "B",
+                                                                                              "CL":  "Evaluate",
+                                                                                              "QID":  "P1-B-013",
+                                                                                              "Topic":  "B.013 learning curve budgeting",
+                                                                                              "Stem":  "Evergreen expects labor time per unit to fall as cumulative production doubles. Which response is most appropriate?"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  1
+                                                                      },
+                                                           "pack_d":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AD-044",
+                                                                                              "Topic":  "A.044 comprehensive income statement presentation",
+                                                                                              "Stem":  "Sandpiper wants to present net income and other comprehensive income items. What are the acceptable presentation formats"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "B",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-BD-022",
+                                                                                              "Topic":  "B.022 direct labor budget calculation",
+                                                                                              "Stem":  "Valemont plans to produce 8,000 units, each requiring 2 direct labor hours at a rate of 18 per hour. What is the total b"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "B",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-BD-023",
+                                                                                              "Topic":  "B.023 direct labor budget calculation",
+                                                                                              "Stem":  "Whitmore plans to produce 8,000 units, each requiring 2 direct labor hours at a rate of 18 per hour. What is the total b"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "B",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-BD-024",
+                                                                                              "Topic":  "B.024 direct labor budget calculation",
+                                                                                              "Stem":  "Yewbrook plans to produce 8,000 units, each requiring 2 direct labor hours at a rate of 18 per hour. What is the total b"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "B",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-BD-025",
+                                                                                              "Topic":  "B.025 direct labor budget calculation",
+                                                                                              "Stem":  "Zionsgate plans to produce 8,000 units, each requiring 2 direct labor hours at a rate of 18 per hour. What is the total "
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  1
+                                                                      },
+                                                           "pack_c":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-016",
+                                                                                              "Topic":  "A.016 goodwill impairment testing",
+                                                                                              "Stem":  "Prairiewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curren"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-017",
+                                                                                              "Topic":  "A.017 goodwill impairment testing",
+                                                                                              "Stem":  "Quillfeather performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curre"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-018",
+                                                                                              "Topic":  "A.018 goodwill impairment testing",
+                                                                                              "Stem":  "Rosewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current g"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-019",
+                                                                                              "Topic":  "A.019 goodwill impairment testing",
+                                                                                              "Stem":  "Silverton performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current "
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1-AC-020",
+                                                                                              "Topic":  "A.020 goodwill impairment testing",
+                                                                                              "Stem":  "Thornfield performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_e":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-002",
+                                                                                              "Topic":  "E-A.002 Current asset identification",
+                                                                                              "Stem":  "Under U.S. GAAP, which is NOT a current asset?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-004",
+                                                                                              "Topic":  "E-A.004 Revenue recognition timing",
+                                                                                              "Stem":  "Revenue is recognized under ASC 606 when:"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate",
+                                                                                              "DS":  3,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-005",
+                                                                                              "Topic":  "E-A.005 Inventory measurement",
+                                                                                              "Stem":  "Under U.S. GAAP, inventory is reported at:"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Difficult",
+                                                                                              "DS":  4,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-008",
+                                                                                              "Topic":  "E-A.008 Goodwill impairment testing",
+                                                                                              "Stem":  "Under U.S. GAAP, goodwill is:"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1E-A-011",
+                                                                                              "Topic":  "E-A.011 R\u0026D cost treatment",
+                                                                                              "Stem":  "Under U.S. GAAP, research and development costs are:"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Remember",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      },
+                                                           "pack_b":  {
+                                                                          "samples":  [
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Understand",
+                                                                                              "QID":  "P1B-A-080",
+                                                                                              "Topic":  "B-A.080 licenses revenue recognition",
+                                                                                              "Stem":  "Digital Dynamics grants a five-year right-to-use software license with no ongoing obligations. Under ASC 606, when is re"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-081",
+                                                                                              "Topic":  "B-A.081 contract costs",
+                                                                                              "Stem":  "Phoenix Aerospace incurs $50,000 incremental contract acquisition costs for a 4-year contract. Under ASC 340-40, how is "
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-093",
+                                                                                              "Topic":  "B-A.093 extraordinary items elimination",
+                                                                                              "Stem":  "Under current GAAP, what is the status of extraordinary items?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Easy",
+                                                                                              "DS":  1,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Remember",
+                                                                                              "QID":  "P1B-A-096",
+                                                                                              "Topic":  "B-A.096 matching principle",
+                                                                                              "Stem":  "Under the matching principle, when are expenses recognized?"
+                                                                                          },
+                                                                                          {
+                                                                                              "Diff":  "Moderate-Easy",
+                                                                                              "DS":  2,
+                                                                                              "Section":  "A",
+                                                                                              "CL":  "Apply",
+                                                                                              "QID":  "P1B-A-099",
+                                                                                              "Topic":  "B-A.099 operating activities classification",
+                                                                                              "Stem":  "Which cash flow is classified as an operating activity under GAAP?"
+                                                                                          }
+                                                                                      ],
+                                                                          "dominant_cl":  "Apply",
+                                                                          "sample_count":  5,
+                                                                          "dominant_ds":  2
+                                                                      }
+                                                       },
+                                  "cross_pack_consistency":  "MODERATE",
+                                  "issues":  [
+                                                 {
+                                                     "sample_count":  57,
+                                                     "pool_norm":  "Apply",
+                                                     "pack_dominant":  "Remember",
+                                                     "pack":  "pack_e"
+                                                 }
+                                             ]
+                              },
+                              {
+                                  "pattern":  "section-level-cross-pack",
+                                  "description":  "Same blueprint section (A-F) compared across packs for dominant CL",
+                                  "section_mismatches":  6,
+                                  "cross_pack_consistency":  "LOW",
+                                  "issues":  [
+                                                 {
+                                                     "section":  "D",
+                                                     "pack_dominant":  {
+                                                                           "pack_a":  {
+                                                                                          "total":  75,
+                                                                                          "count":  52,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_d":  {
+                                                                                          "total":  75,
+                                                                                          "count":  49,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_c":  {
+                                                                                          "total":  75,
+                                                                                          "count":  35,
+                                                                                          "CL":  "Understand"
+                                                                                      },
+                                                                           "pack_e":  {
+                                                                                          "total":  75,
+                                                                                          "count":  60,
+                                                                                          "CL":  "Remember"
+                                                                                      },
+                                                                           "pack_b":  {
+                                                                                          "total":  75,
+                                                                                          "count":  72,
+                                                                                          "CL":  "Apply"
+                                                                                      }
+                                                                       },
+                                                     "cl_variant_count":  3,
+                                                     "description":  "Remember (pack_e) vs. Apply (pack_a, pack_d, pack_b) vs. Understand (pack_c)"
+                                                 },
+                                                 {
+                                                     "section":  "E",
+                                                     "pack_dominant":  {
+                                                                           "pack_c":  {
+                                                                                          "total":  75,
+                                                                                          "count":  37,
+                                                                                          "CL":  "Understand"
+                                                                                      },
+                                                                           "pack_d":  {
+                                                                                          "total":  75,
+                                                                                          "count":  34,
+                                                                                          "CL":  "Understand"
+                                                                                      },
+                                                                           "pack_a":  {
+                                                                                          "total":  75,
+                                                                                          "count":  47,
+                                                                                          "CL":  "Evaluate"
+                                                                                      },
+                                                                           "pack_e":  {
+                                                                                          "total":  75,
+                                                                                          "count":  72,
+                                                                                          "CL":  "Remember"
+                                                                                      }
+                                                                       },
+                                                     "cl_variant_count":  3,
+                                                     "description":  "Remember (pack_e) vs. Evaluate (pack_a) vs. Understand (pack_c, pack_d)"
+                                                 },
+                                                 {
+                                                     "section":  "F",
+                                                     "pack_dominant":  {
+                                                                           "pack_a":  {
+                                                                                          "total":  75,
+                                                                                          "count":  34,
+                                                                                          "CL":  "Evaluate"
+                                                                                      },
+                                                                           "pack_d":  {
+                                                                                          "total":  74,
+                                                                                          "count":  62,
+                                                                                          "CL":  "Understand"
+                                                                                      },
+                                                                           "pack_c":  {
+                                                                                          "total":  75,
+                                                                                          "count":  54,
+                                                                                          "CL":  "Understand"
+                                                                                      },
+                                                                           "pack_e":  {
+                                                                                          "total":  75,
+                                                                                          "count":  75,
+                                                                                          "CL":  "Remember"
+                                                                                      },
+                                                                           "pack_b":  {
+                                                                                          "total":  75,
+                                                                                          "count":  48,
+                                                                                          "CL":  "Understand"
+                                                                                      }
+                                                                       },
+                                                     "cl_variant_count":  3,
+                                                     "description":  "Remember (pack_e) vs. Evaluate (pack_a) vs. Understand (pack_d, pack_c, pack_b)"
+                                                 },
+                                                 {
+                                                     "section":  "A",
+                                                     "pack_dominant":  {
+                                                                           "pack_a":  {
+                                                                                          "total":  75,
+                                                                                          "count":  58,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_d":  {
+                                                                                          "total":  75,
+                                                                                          "count":  57,
+                                                                                          "CL":  "Understand"
+                                                                                      },
+                                                                           "pack_c":  {
+                                                                                          "total":  75,
+                                                                                          "count":  40,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_e":  {
+                                                                                          "total":  75,
+                                                                                          "count":  56,
+                                                                                          "CL":  "Remember"
+                                                                                      },
+                                                                           "pack_b":  {
+                                                                                          "total":  75,
+                                                                                          "count":  54,
+                                                                                          "CL":  "Apply"
+                                                                                      }
+                                                                       },
+                                                     "cl_variant_count":  3,
+                                                     "description":  "Remember (pack_e) vs. Apply (pack_a, pack_c, pack_b) vs. Understand (pack_d)"
+                                                 },
+                                                 {
+                                                     "section":  "B",
+                                                     "pack_dominant":  {
+                                                                           "pack_a":  {
+                                                                                          "total":  100,
+                                                                                          "count":  79,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_d":  {
+                                                                                          "total":  100,
+                                                                                          "count":  80,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_c":  {
+                                                                                          "total":  100,
+                                                                                          "count":  70,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_e":  {
+                                                                                          "total":  100,
+                                                                                          "count":  59,
+                                                                                          "CL":  "Remember"
+                                                                                      },
+                                                                           "pack_b":  {
+                                                                                          "total":  100,
+                                                                                          "count":  64,
+                                                                                          "CL":  "Apply"
+                                                                                      }
+                                                                       },
+                                                     "cl_variant_count":  2,
+                                                     "description":  "Remember (pack_e) vs. Apply (pack_a, pack_d, pack_c, pack_b)"
+                                                 },
+                                                 {
+                                                     "section":  "C",
+                                                     "pack_dominant":  {
+                                                                           "pack_a":  {
+                                                                                          "total":  100,
+                                                                                          "count":  64,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_d":  {
+                                                                                          "total":  100,
+                                                                                          "count":  59,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_c":  {
+                                                                                          "total":  100,
+                                                                                          "count":  52,
+                                                                                          "CL":  "Apply"
+                                                                                      },
+                                                                           "pack_e":  {
+                                                                                          "total":  100,
+                                                                                          "count":  64,
+                                                                                          "CL":  "Remember"
+                                                                                      },
+                                                                           "pack_b":  {
+                                                                                          "total":  100,
+                                                                                          "count":  74,
+                                                                                          "CL":  "Apply"
+                                                                                      }
+                                                                       },
+                                                     "cl_variant_count":  2,
+                                                     "description":  "Remember (pack_e) vs. Apply (pack_a, pack_d, pack_c, pack_b)"
+                                                 }
+                                             ]
+                              }
+                          ],
+    "top_inconsistencies":  [
+                                {
+                                    "pack_e":  {
+                                                   "Remember":  386,
+                                                   "Understand":  14,
+                                                   "Apply":  95,
+                                                   "Evaluate":  2,
+                                                   "Analyze":  3
+                                               },
+                                    "description":  "Pack E labels 386/500 items (77.2%) as Remember while every other pack labels 0.2-8.0% as Remember. All 6 Pack E sections are Remember-dominant (Section F: 100% Remember). Pack E treats definition-recall and standard-application both as Remember where Packs A-D label them Understand and Apply.",
+                                    "other_packs_avg":  {
+                                                            "Remember":  12.2,
+                                                            "Understand":  143.2,
+                                                            "Apply":  256.8,
+                                                            "Evaluate":  55.2,
+                                                            "Analyze":  13.8
+                                                        },
+                                    "severity":  "Critical",
+                                    "category":  "Pack-Level Systematic Drift",
+                                    "rank":  1,
+                                    "title":  "Pack E: 77.2% Remember vs. 1-8% in other packs -- fundamentally different CL taxonomy"
+                                },
+                                {
+                                    "description":  "Pack A Section E labels 47/75 items as Evaluate, accounting for 168 of the 223 total Evaluate assignments pool-wide. No other pack-section exceeds 26.7%. Many are simple \u0027Which response is most appropriate?\u0027 stems that other packs label Understand or Apply.",
+                                    "pack_a_e":  {
+                                                     "Remember":  0,
+                                                     "Understand":  16,
+                                                     "Apply":  12,
+                                                     "Evaluate":  47,
+                                                     "Analyze":  0
+                                                 },
+                                    "section_e_others":  {
+                                                             "pack_c":  {
+                                                                            "Remember":  0,
+                                                                            "Understand":  37,
+                                                                            "Apply":  18,
+                                                                            "Evaluate":  15,
+                                                                            "Analyze":  5
+                                                                        },
+                                                             "pack_d":  {
+                                                                            "Remember":  0,
+                                                                            "Understand":  34,
+                                                                            "Apply":  21,
+                                                                            "Evaluate":  20,
+                                                                            "Analyze":  0
+                                                                        },
+                                                             "pack_e":  {
+                                                                            "Remember":  72,
+                                                                            "Understand":  2,
+                                                                            "Apply":  1,
+                                                                            "Evaluate":  0,
+                                                                            "Analyze":  0
+                                                                        }
+                                                         },
+                                    "severity":  "High",
+                                    "category":  "Section-Level Systematic Drift",
+                                    "rank":  2,
+                                    "title":  "Pack A Section E: 62.7% Evaluate vs. 0-26.7% in other pack-sections"
+                                },
+                                {
+                                    "rank":  3,
+                                    "title":  "Section E: 4 different dominant CL labels across 4 packs (Evaluate/Understand/Remember)",
+                                    "category":  "Section-Level Cross-Pack Drift",
+                                    "section":  "E",
+                                    "description":  "Section E (Internal Controls) has dominate CL = Evaluate in Pack A, Understand in Pack C/D, and Remember in Pack E. Same exam section, same standard, but the CL assigned is entirely pack-dependent.",
+                                    "cl_description":  "Remember (pack_e) vs. Evaluate (pack_a) vs. Understand (pack_c, pack_d)",
+                                    "severity":  "High",
+                                    "pack_dominant":  {
+                                                          "pack_c":  {
+                                                                         "total":  75,
+                                                                         "count":  37,
+                                                                         "CL":  "Understand"
+                                                                     },
+                                                          "pack_d":  {
+                                                                         "total":  75,
+                                                                         "count":  34,
+                                                                         "CL":  "Understand"
+                                                                     },
+                                                          "pack_a":  {
+                                                                         "total":  75,
+                                                                         "count":  47,
+                                                                         "CL":  "Evaluate"
+                                                                     },
+                                                          "pack_e":  {
+                                                                         "total":  75,
+                                                                         "count":  72,
+                                                                         "CL":  "Remember"
+                                                                     }
+                                                      }
+                                },
+                                {
+                                    "rank":  4,
+                                    "title":  "168 items labeled Evaluate+Easy (75.3% of all Evaluate at Easy) -- violates DCS v1.0",
+                                    "pct":  75.3,
+                                    "category":  "Difficulty-CognitiveLevel Misalignment",
+                                    "description":  "Evaluate per DCS v1.0 requires Moderate+ difficulty and professional judgment with multiple defensible positions. 75.3% of Evaluate items are labeled Easy -- a template artifact from auto-assigning Evaluate/Easy to \u0027Which response is most appropriate?\u0027 stems in the 5-item rotation.",
+                                    "severity":  "High",
+                                    "evaluate_at_easy":  168,
+                                    "evaluate_total":  223
+                                },
+                                {
+                                    "rank":  5,
+                                    "title":  "Section A: 3 different dominant CL labels across 5 packs (Apply/Understand/Remember)",
+                                    "category":  "Section-Level Cross-Pack Drift",
+                                    "section":  "A",
+                                    "description":  "Section A (External Financial Reporting) has dominant CL = Apply in Packs A/B/D (56-72%), Understand in Pack C (56%), and Remember in Pack E (74.7%). Same blueprint domain, entirely different CL distribution.",
+                                    "cl_description":  "Remember (pack_e) vs. Apply (pack_a, pack_c, pack_b) vs. Understand (pack_d)",
+                                    "severity":  "High",
+                                    "pack_dominant":  {
+                                                          "pack_a":  {
+                                                                         "total":  75,
+                                                                         "count":  58,
+                                                                         "CL":  "Apply"
+                                                                     },
+                                                          "pack_d":  {
+                                                                         "total":  75,
+                                                                         "count":  57,
+                                                                         "CL":  "Understand"
+                                                                     },
+                                                          "pack_c":  {
+                                                                         "total":  75,
+                                                                         "count":  40,
+                                                                         "CL":  "Apply"
+                                                                     },
+                                                          "pack_e":  {
+                                                                         "total":  75,
+                                                                         "count":  56,
+                                                                         "CL":  "Remember"
+                                                                     },
+                                                          "pack_b":  {
+                                                                         "total":  75,
+                                                                         "count":  54,
+                                                                         "CL":  "Apply"
+                                                                     }
+                                                      }
+                                }
+                            ],
+    "cl_distribution_by_pack":  {
+                                    "pack_a":  {
+                                                   "Remember":  3,
+                                                   "Understand":  59,
+                                                   "Apply":  278,
+                                                   "Evaluate":  158,
+                                                   "Analyze":  2
+                                               },
+                                    "pack_d":  {
+                                                   "Remember":  1,
+                                                   "Understand":  209,
+                                                   "Apply":  233,
+                                                   "Evaluate":  34,
+                                                   "Analyze":  23
+                                               },
+                                    "pack_c":  {
+                                                   "Remember":  5,
+                                                   "Understand":  221,
+                                                   "Apply":  230,
+                                                   "Evaluate":  21,
+                                                   "Analyze":  23
+                                               },
+                                    "pack_e":  {
+                                                   "Remember":  386,
+                                                   "Understand":  14,
+                                                   "Apply":  95,
+                                                   "Evaluate":  2,
+                                                   "Analyze":  3
+                                               },
+                                    "pack_b":  {
+                                                   "Remember":  40,
+                                                   "Understand":  84,
+                                                   "Apply":  286,
+                                                   "Evaluate":  8,
+                                                   "Analyze":  7
+                                               }
+                                },
+    "difficulty_distribution_by_pack":  {
+                                            "pack_a":  {
+                                                           "Difficult":  0,
+                                                           "Moderate":  182,
+                                                           "ModerateEasy":  57,
+                                                           "VeryDifficult":  0,
+                                                           "Easy":  261
+                                                       },
+                                            "pack_d":  {
+                                                           "Difficult":  59,
+                                                           "Moderate":  313,
+                                                           "ModerateEasy":  28,
+                                                           "VeryDifficult":  0,
+                                                           "Easy":  99,
+                                                           "":  1
+                                                       },
+                                            "pack_c":  {
+                                                           "Difficult":  19,
+                                                           "Moderate":  303,
+                                                           "ModerateEasy":  79,
+                                                           "VeryDifficult":  0,
+                                                           "Easy":  99
+                                                       },
+                                            "pack_e":  {
+                                                           "Difficult":  102,
+                                                           "Moderate":  207,
+                                                           "ModerateEasy":  91,
+                                                           "VeryDifficult":  0,
+                                                           "Easy":  100
+                                                       },
+                                            "pack_b":  {
+                                                           "Difficult":  28,
+                                                           "Moderate":  213,
+                                                           "ModerateEasy":  75,
+                                                           "VeryDifficult":  0,
+                                                           "Easy":  109
+                                                       }
+                                        },
+    "pack_e_drift_analysis":  {
+                                  "overall_cl":  {
+                                                     "Remember":  386,
+                                                     "Understand":  14,
+                                                     "Apply":  95,
+                                                     "Evaluate":  2,
+                                                     "Analyze":  3
+                                                 },
+                                  "other_packs_avg":  {
+                                                          "Remember":  12.2,
+                                                          "Understand":  143.2,
+                                                          "Apply":  256.8,
+                                                          "Evaluate":  55.2,
+                                                          "Analyze":  13.8
+                                                      },
+                                  "by_section":  {
+                                                     "E":  {
+                                                               "Remember":  72,
+                                                               "Understand":  2,
+                                                               "Apply":  1,
+                                                               "Evaluate":  0,
+                                                               "Analyze":  0
+                                                           },
+                                                     "D":  {
+                                                               "Remember":  60,
+                                                               "Understand":  1,
+                                                               "Apply":  14,
+                                                               "Evaluate":  0,
+                                                               "Analyze":  0
+                                                           },
+                                                     "F":  {
+                                                               "Remember":  75,
+                                                               "Understand":  0,
+                                                               "Apply":  0,
+                                                               "Evaluate":  0,
+                                                               "Analyze":  0
+                                                           },
+                                                     "B":  {
+                                                               "Remember":  59,
+                                                               "Understand":  1,
+                                                               "Apply":  37,
+                                                               "Evaluate":  0,
+                                                               "Analyze":  3
+                                                           },
+                                                     "C":  {
+                                                               "Remember":  64,
+                                                               "Understand":  2,
+                                                               "Apply":  32,
+                                                               "Evaluate":  2,
+                                                               "Analyze":  0
+                                                           },
+                                                     "A":  {
+                                                               "Remember":  56,
+                                                               "Understand":  8,
+                                                               "Apply":  11,
+                                                               "Evaluate":  0,
+                                                               "Analyze":  0
+                                                           }
+                                                 },
+                                  "by_section_other_packs_avg":  {
+                                                                     "E":  {
+                                                                               "Remember":  0,
+                                                                               "Understand":  29,
+                                                                               "Apply":  17,
+                                                                               "Evaluate":  27.3,
+                                                                               "Analyze":  1.7
+                                                                           },
+                                                                     "D":  {
+                                                                               "Remember":  0.5,
+                                                                               "Understand":  15,
+                                                                               "Apply":  52,
+                                                                               "Evaluate":  6,
+                                                                               "Analyze":  1.5
+                                                                           },
+                                                                     "F":  {
+                                                                               "Remember":  0.2,
+                                                                               "Understand":  47.2,
+                                                                               "Apply":  14,
+                                                                               "Evaluate":  10.5,
+                                                                               "Analyze":  2.8
+                                                                           },
+                                                                     "B":  {
+                                                                               "Remember":  5.5,
+                                                                               "Understand":  13.5,
+                                                                               "Apply":  73.2,
+                                                                               "Evaluate":  5.5,
+                                                                               "Analyze":  2.2
+                                                                           },
+                                                                     "C":  {
+                                                                               "Remember":  1.8,
+                                                                               "Understand":  20.2,
+                                                                               "Apply":  62.2,
+                                                                               "Evaluate":  9.8,
+                                                                               "Analyze":  6
+                                                                           },
+                                                                     "A":  {
+                                                                               "Remember":  4,
+                                                                               "Understand":  25.5,
+                                                                               "Apply":  42.5,
+                                                                               "Evaluate":  3,
+                                                                               "Analyze":  0
+                                                                           }
+                                                                 },
+                                  "root_cause":  "Pack E authored via independent pipeline without cross-pack CL calibration. Template assigned \u0027Remember\u0027 as default."
+                              },
+    "pack_a_section_e_analysis":  {
+                                      "cl":  {
+                                                 "Remember":  0,
+                                                 "Understand":  16,
+                                                 "Apply":  12,
+                                                 "Evaluate":  47,
+                                                 "Analyze":  0
+                                             },
+                                      "section_e_comparison":  {
+                                                                   "pack_c":  {
+                                                                                  "Remember":  0,
+                                                                                  "Understand":  37,
+                                                                                  "Apply":  18,
+                                                                                  "Evaluate":  15,
+                                                                                  "Analyze":  5
+                                                                              },
+                                                                   "pack_d":  {
+                                                                                  "Remember":  0,
+                                                                                  "Understand":  34,
+                                                                                  "Apply":  21,
+                                                                                  "Evaluate":  20,
+                                                                                  "Analyze":  0
+                                                                              },
+                                                                   "pack_e":  {
+                                                                                  "Remember":  72,
+                                                                                  "Understand":  2,
+                                                                                  "Apply":  1,
+                                                                                  "Evaluate":  0,
+                                                                                  "Analyze":  0
+                                                                              }
+                                                               },
+                                      "root_cause":  "Pack A Section E used a template that auto-assigned Evaluate/Easy to \u0027Which response is most appropriate?\u0027 stems."
+                                  },
+    "section_dominant_cl_by_pack":  {
+                                        "pack_a":  {
+                                                       "E":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  16,
+                                                                 "Apply":  12,
+                                                                 "Evaluate":  47,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "D":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  1,
+                                                                 "Apply":  52,
+                                                                 "Evaluate":  22,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "F":  {
+                                                                 "Remember":  1,
+                                                                 "Understand":  25,
+                                                                 "Apply":  13,
+                                                                 "Evaluate":  34,
+                                                                 "Analyze":  2
+                                                             },
+                                                       "B":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  7,
+                                                                 "Apply":  79,
+                                                                 "Evaluate":  14,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "C":  {
+                                                                 "Remember":  1,
+                                                                 "Understand":  6,
+                                                                 "Apply":  64,
+                                                                 "Evaluate":  29,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "A":  {
+                                                                 "Remember":  1,
+                                                                 "Understand":  4,
+                                                                 "Apply":  58,
+                                                                 "Evaluate":  12,
+                                                                 "Analyze":  0
+                                                             }
+                                                   },
+                                        "pack_d":  {
+                                                       "UNKNOWN":  {
+                                                                       "Remember":  1,
+                                                                       "Understand":  0,
+                                                                       "Apply":  0,
+                                                                       "Evaluate":  0,
+                                                                       "Analyze":  0
+                                                                   },
+                                                       "E":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  34,
+                                                                 "Apply":  21,
+                                                                 "Evaluate":  20,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "D":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  23,
+                                                                 "Apply":  49,
+                                                                 "Evaluate":  2,
+                                                                 "Analyze":  1
+                                                             },
+                                                       "F":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  62,
+                                                                 "Apply":  6,
+                                                                 "Evaluate":  6,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "B":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  7,
+                                                                 "Apply":  80,
+                                                                 "Evaluate":  6,
+                                                                 "Analyze":  7
+                                                             },
+                                                       "C":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  26,
+                                                                 "Apply":  59,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  15
+                                                             },
+                                                       "A":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  57,
+                                                                 "Apply":  18,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             }
+                                                   },
+                                        "pack_c":  {
+                                                       "E":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  37,
+                                                                 "Apply":  18,
+                                                                 "Evaluate":  15,
+                                                                 "Analyze":  5
+                                                             },
+                                                       "D":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  35,
+                                                                 "Apply":  35,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  5
+                                                             },
+                                                       "F":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  54,
+                                                                 "Apply":  15,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  6
+                                                             },
+                                                       "B":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  30,
+                                                                 "Apply":  70,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "C":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  35,
+                                                                 "Apply":  52,
+                                                                 "Evaluate":  6,
+                                                                 "Analyze":  7
+                                                             },
+                                                       "A":  {
+                                                                 "Remember":  5,
+                                                                 "Understand":  30,
+                                                                 "Apply":  40,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             }
+                                                   },
+                                        "pack_e":  {
+                                                       "E":  {
+                                                                 "Remember":  72,
+                                                                 "Understand":  2,
+                                                                 "Apply":  1,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "D":  {
+                                                                 "Remember":  60,
+                                                                 "Understand":  1,
+                                                                 "Apply":  14,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "F":  {
+                                                                 "Remember":  75,
+                                                                 "Understand":  0,
+                                                                 "Apply":  0,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "B":  {
+                                                                 "Remember":  59,
+                                                                 "Understand":  1,
+                                                                 "Apply":  37,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  3
+                                                             },
+                                                       "C":  {
+                                                                 "Remember":  64,
+                                                                 "Understand":  2,
+                                                                 "Apply":  32,
+                                                                 "Evaluate":  2,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "A":  {
+                                                                 "Remember":  56,
+                                                                 "Understand":  8,
+                                                                 "Apply":  11,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             }
+                                                   },
+                                        "pack_b":  {
+                                                       "C":  {
+                                                                 "Remember":  6,
+                                                                 "Understand":  14,
+                                                                 "Apply":  74,
+                                                                 "Evaluate":  4,
+                                                                 "Analyze":  2
+                                                             },
+                                                       "A":  {
+                                                                 "Remember":  10,
+                                                                 "Understand":  11,
+                                                                 "Apply":  54,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "F":  {
+                                                                 "Remember":  0,
+                                                                 "Understand":  48,
+                                                                 "Apply":  22,
+                                                                 "Evaluate":  2,
+                                                                 "Analyze":  3
+                                                             },
+                                                       "D":  {
+                                                                 "Remember":  2,
+                                                                 "Understand":  1,
+                                                                 "Apply":  72,
+                                                                 "Evaluate":  0,
+                                                                 "Analyze":  0
+                                                             },
+                                                       "B":  {
+                                                                 "Remember":  22,
+                                                                 "Understand":  10,
+                                                                 "Apply":  64,
+                                                                 "Evaluate":  2,
+                                                                 "Analyze":  2
+                                                             }
+                                                   }
+                                    },
+    "evaluate_at_easy_analysis":  {
+                                      "total":  168,
+                                      "pct_of_evaluate":  75.3,
+                                      "samples_by_pack":  {
+                                                              "pack_b":  [
+                                                                             {
+                                                                                 "QID":  "P1B-C-126",
+                                                                                 "Stem":  "The maintenance department of Harbor Manufacturing is evaluated solely on its ability to control costs while providing a",
+                                                                                 "Topic":  "B-C.126 responsibility centers"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1B-C-127",
+                                                                                 "Stem":  "The sales department of Pinnacle Products is evaluated based on total sales revenue generated. The sales manager has aut",
+                                                                                 "Topic":  "B-C.127 responsibility centers"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1B-C-153",
+                                                                                 "Stem":  "When a manager of a profit center is evaluated based on divisional profit, which transfer pricing conflict is most likel",
+                                                                                 "Topic":  "B-C.153 transfer pricing"
+                                                                             }
+                                                                         ],
+                                                              "pack_a":  [
+                                                                             {
+                                                                                 "QID":  "P1-A-004",
+                                                                                 "Stem":  "Titan repurchased its own common shares during the year. Which response is most appropriate?",
+                                                                                 "Topic":  "A.004 statement of changes in equity treasury stock"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-007",
+                                                                                 "Stem":  "Willow estimates uncollectible receivables using aging analysis. Which response is most appropriate?",
+                                                                                 "Topic":  "A.007 allowance method doubtful accounts"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-011",
+                                                                                 "Stem":  "Beacon observes a significant adverse change in the use of a long-lived asset. Which response is most appropriate?",
+                                                                                 "Topic":  "A.011 asset impairment trigger"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-012",
+                                                                                 "Stem":  "Crescent faces litigation in which loss is probable and reasonably estimable. Which response is most appropriate?",
+                                                                                 "Topic":  "A.012 contingent liability accrual"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-013",
+                                                                                 "Stem":  "Delta learns after year-end that a major customer was bankrupt at year-end. Which response is most appropriate?",
+                                                                                 "Topic":  "A.013 subsequent event recognized condition"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-014",
+                                                                                 "Stem":  "Evergreen enters a multi-year lease that does not transfer ownership. Which response is most appropriate?",
+                                                                                 "Topic":  "A.014 operating lease lessee recognition"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-016",
+                                                                                 "Stem":  "Granite owns a majority voting interest in a subsidiary. Which response is most appropriate?",
+                                                                                 "Topic":  "A.016 consolidation control principle"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-021",
+                                                                                 "Stem":  "Lumen is deciding whether to describe revenue recognition policies in the notes. Which response is most appropriate?",
+                                                                                 "Topic":  "A.021 disclosure notes accounting policies"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-023",
+                                                                                 "Stem":  "Northstar values an asset using quoted prices for identical assets in active markets. Which response is most appropriate",
+                                                                                 "Topic":  "A.023 fair value hierarchy observable inputs"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-A-024",
+                                                                                 "Stem":  "Orion is classifying a three-month Treasury bill purchased near maturity. Which response is most appropriate?",
+                                                                                 "Topic":  "A.024 cash equivalents maturity"
+                                                                             }
+                                                                         ],
+                                                              "pack_e":  [
+
+                                                                         ],
+                                                              "pack_c":  [
+                                                                             {
+                                                                                 "QID":  "P1-CC-029",
+                                                                                 "Stem":  "Dovetail\u0027s production supervisor is evaluated only on the costs incurred in the department, with no control over revenue",
+                                                                                 "Topic":  "C.029 responsibility center cost center"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-CC-031",
+                                                                                 "Stem":  "Foxglove\u0027s production supervisor is evaluated only on the costs incurred in the department, with no control over revenue",
+                                                                                 "Topic":  "C.031 responsibility center cost center"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-CC-034",
+                                                                                 "Stem":  "Ivywood\u0027s production supervisor is evaluated only on the costs incurred in the department, with no control over revenue ",
+                                                                                 "Topic":  "C.034 responsibility center cost center"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-EC-047",
+                                                                                 "Stem":  "Violethill establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations with",
+                                                                                 "Topic":  "E.047 whistleblower hotline purpose"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-EC-050",
+                                                                                 "Stem":  "Amberfield establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations with",
+                                                                                 "Topic":  "E.050 whistleblower hotline purpose"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-EC-056",
+                                                                                 "Stem":  "Glenmoor\u0027s board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee atti",
+                                                                                 "Topic":  "E.056 control environment tone at top"
+                                                                             }
+                                                                         ],
+                                                              "pack_d":  [
+                                                                             {
+                                                                                 "QID":  "P1-ED-019",
+                                                                                 "Stem":  "Stonewell decides to purchase insurance to address a significant identified risk rather than eliminate the underlying ac",
+                                                                                 "Topic":  "E.019 erm risk response strategies"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-ED-056",
+                                                                                 "Stem":  "Glenmore\u0027s management decides not to implement an extremely costly control because the risk it addresses is low and infr",
+                                                                                 "Topic":  "E.056 internal control cost benefit limitation"
+                                                                             },
+                                                                             {
+                                                                                 "QID":  "P1-FD-066",
+                                                                                 "Stem":  "Quillwood evaluates whether to invest in a new automation tool by comparing expected efficiency gains and cost savings t",
+                                                                                 "Topic":  "F.066 technology cost benefit evaluation"
+                                                                             }
+                                                                         ]
+                                                          }
+                                  },
+    "summary":  "CRITICAL FINDINGS: (1) Pack E uses a fundamentally different CL taxonomy: 77.2% Remember vs. 0.2-8.0% in other packs. (2) Pack A Section E has 62.7% Evaluate (168 of 223 total Evaluate assignments pool-wide). (3) Section E (Internal Controls) has 4 different dominant CL labels across 4 packs. (4) 168/223 Evaluate items (75.3%) labeled Easy -- violates DCS v1.0 which requires Moderate+ for Evaluate. (5) Zero items pool-wide labeled Very Difficult.",
+    "read_only_attestation":  "Zero files modified. All data sourced from SESSION718_COGNITIVELEVEL_ASSIGNMENTS_VFINAL.json."
+}

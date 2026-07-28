@@ -1,0 +1,58 @@
+{
+  "session": "525",
+  "type": "DEEP_INVENTORY",
+  "timestamp": "2026-07-26T14:00:00Z",
+  "target": {
+    "array": "MIGRATED_CASE_BASE_D",
+    "file": "scored_cases4.js",
+    "cases": ["CASE-D7", "CASE-D8", "CASE-D9"],
+    "wave": 3,
+    "items": 15
+  },
+  "pre_state": {
+    "case_level": "3 cases, all question_state: Unprocessed, ProductionStatus: Draft",
+    "item_level": "15 items, all question_state: Unprocessed, ProductionStatus: Draft",
+    "total_certified_before": "30/75 (D1-D6 only)"
+  },
+  "inventory": {
+    "CASE-D7": {
+      "title": "Revenue, Investments, and Fair Value Reporting",
+      "section": "A — External Financial Reporting Decisions",
+      "items": [
+        {"id": "CASE-D7-Q1", "type": "select", "correct": "Recognize unrealized gains and losses in net income each period", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 116, "expl_after_chars": 1148},
+        {"id": "CASE-D7-Q2", "type": "select", "correct": "Recognize revenue net of an estimated returns allowance", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 162, "expl_after_chars": 1256},
+        {"id": "CASE-D7-Q3", "type": "select", "correct": "In other comprehensive income, not in net income", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 124, "expl_after_chars": 1317},
+        {"id": "CASE-D7-Q4", "type": "multi", "correct": ["customer bankruptcy existed at BS date", "lawsuit settlement based on conditions at year-end"], "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Analyze", "expl_before_chars": 239, "expl_after_chars": 1474},
+        {"id": "CASE-D7-Q5", "type": "fill", "correct": "equity", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Remember", "expl_before_chars": 114, "expl_after_chars": 1314}
+      ]
+    },
+    "CASE-D8": {
+      "title": "Forecasting Techniques for a Growing Retailer",
+      "section": "B — Planning, Budgeting, and Forecasting",
+      "items": [
+        {"id": "CASE-D8-Q1", "type": "select", "correct": "Activity-based budgeting", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 138, "expl_after_chars": 1298},
+        {"id": "CASE-D8-Q2", "type": "numeric", "correct": "18500", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Apply", "expl_before_chars": 118, "expl_after_chars": 1238},
+        {"id": "CASE-D8-Q3", "type": "select", "correct": "To assess the accuracy and reliability of the forecasting method used", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 119, "expl_after_chars": 1480},
+        {"id": "CASE-D8-Q4", "type": "multi", "correct": ["long-term investments in fixed assets", "horizon longer than single year"], "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 183, "expl_after_chars": 1488},
+        {"id": "CASE-D8-Q5", "type": "fill", "correct": "average", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Remember", "expl_before_chars": 104, "expl_after_chars": 1423}
+      ]
+    },
+    "CASE-D9": {
+      "title": "Total Quality Management and Segment Reporting",
+      "section": "C — Performance Management",
+      "items": [
+        {"id": "CASE-D9-Q1", "type": "select", "correct": "Total quality management (TQM)", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 159, "expl_after_chars": 1371},
+        {"id": "CASE-D9-Q2", "type": "select", "correct": "To evaluate segment profitability before allocating common, untraceable corporate costs", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 155, "expl_after_chars": 1509},
+        {"id": "CASE-D9-Q3", "type": "numeric", "correct": "80000", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Apply", "expl_before_chars": 130, "expl_after_chars": 1256},
+        {"id": "CASE-D9-Q4", "type": "multi", "correct": ["Segment revenue", "Traceable fixed costs", "Segment margin"], "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 182, "expl_after_chars": 1511},
+        {"id": "CASE-D9-Q5", "type": "fill", "correct": "profitability", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Remember", "expl_before_chars": 105, "expl_after_chars": 1552}
+      ]
+    }
+  },
+  "post_state": {
+    "case_level": "3 cases, all question_state: Certified, ProductionStatus: Production",
+    "item_level": "15 items, all question_state: Certified, ProductionStatus: Production",
+    "total_certified_after": "45/75 (D1-D9)",
+    "cognitive_level_coverage": "15/15 = 100%"
+  }
+}

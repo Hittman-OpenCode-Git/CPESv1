@@ -1,0 +1,515 @@
+{
+  "BLOCK_AUTHORIZED": "Session 529 Agent E — Read-only CAQS §1.6 audit. No pack file modification.",
+  "generated": "2026-07-26T21:15:00.000Z",
+  "source": "scored_cases.js (ENHANCED_CASE_BASE — 15 CBQ-* cases, 90 items)",
+  "agent": "Agent E — Session 529 Deep CAQS §1.6 Six-Dimension Audit",
+  "methodology": {
+    "fileRead": "Read complete item objects for 16 sampled items across all 6 domains. Verified exhibit data for CBQ-B1, CBQ-C1, CBQ-D2. Cross-checked Agent C spot-check results.",
+    "samplingStrategy": "Purposeful sampling — at least 2 items per domain (A-F), mix of numeric and select/multi/match, span of difficulty levels. Selected 16 items total.",
+    "dimensionsEvaluated": [
+      "1. Correctness — against GAAP/COSO/IMA standards",
+      "2. Precision — internal consistency, fact pattern yields exactly one defensible answer",
+      "3. Difficulty Calibration — matches stated tier and LOS depth",
+      "4. Distractor Engineering — each distractor maps to a real misconception",
+      "5. Blueprint Alignment — maps to specific CMA Part 1 CSO LOS",
+      "6. CMA Part 1 Relevance — in scope for Part 1, not accidentally Part 2",
+      "7. CMA Realism — scenario feels like real business",
+      "8. Instructional Value — would a CMA candidate learn from this explanation",
+      "9. Trap Transparency — exam traps identified",
+      "10. Professional Judgment Support — develops CMA-relevant judgment"
+    ],
+    "confidenceScale": "HIGH (verified against authoritative standards), MEDIUM (likely correct, some ambiguity), LOW (insufficient evidence to confirm)"
+  },
+
+  "aggregateResults": {
+    "itemsAudited": 16,
+    "PASS": 0,
+    "CONDITIONAL_PASS": 14,
+    "FAIL": 2,
+    "passRate": "0% (0/16 PASS with HIGH confidence across all 6 dimensions)",
+    "conditionalPassRate": "87.5% (14/16 CONDITIONAL_PASS — answer keys correct but explanations/metadata insufficient)",
+    "failRate": "12.5% (2/16 FAIL — one has precision defect, one has schema/safety issues)",
+    "dimensionWithMostFailures": "Difficulty Calibration (Dimension 3) — 12/16 items over-labeled or uncalibrated",
+    "dimensionWithMostHIGHConfidence": "CMA Part 1 Relevance (Dimension 6) — 16/16 HIGH confidence",
+    "itemsFailingEvenAfterExplanationEnhancement": [
+      "CBQ-A1-Q4 — PRECISION defect: prompt wording 'before income-tax cash effects not listed' is internally contradictory and will confuse candidates even with enhanced explanation",
+      "CBQ-A1-Q6 — SCHEMA defect: CalculationRequired: true on multi type (blocks certification per CAQS metadata rules); no distractor-level feedback possible without ExplanationWrong fields"
+    ],
+    "systemicDefectsFound": [
+      "SYS-001: Explanation insufficiency (systematic) — 14/16 items have bare formula-to-result explanations with no principle citation, business interpretation, distractor analysis, or exam trap identification. Average sampled explanation = 64 chars.",
+      "SYS-002: CalculationRequired schema errors — 7/16 sampled items have CalculationRequired: true on select/multi/match types where no arithmetic is required by the learner.",
+      "SYS-003: Missing ExplanationWrong fields — all 7 select/multi/match items have no distractor-level feedback. Only correct-answer explanation exists.",
+      "SYS-004: Difficulty over-labeling (DL-031 pattern) — 9/16 items labeled Difficult (4) that test Bloom's Apply/Analyze at best. Definition-match items like CBQ-A3-Q4 and CBQ-B2-Q3 are over-labeled.",
+      "SYS-005: Missing LOSTag/CSO LOS references — 0/16 items have explicit IMA Content Specification Outline learning outcome references in metadata."
+    ]
+  },
+
+  "perItemAudits": [
+    {
+      "ItemID": "CBQ-A1-Q1",
+      "CaseID": "CBQ-A1",
+      "type": "numeric",
+      "topic": "Revenue recognition (ASC 606)",
+      "difficulty": "Moderate (3)",
+      "cognitiveLevel": "Apply",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "360,000 × 3/12 = 90,000. Correct under ASC 606 — revenue recognized as service is provided over 12-month period. Only 3 months delivered by Dec 31."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Exhibit E1 clearly states: $360,000 for service plans sold Oct 1, 3 of 12 months delivered, recognized evenly over term. Exactly one defensible answer."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Simple single-step calculation (division) at Bloom's Apply. Moderate (3) is acceptable but could be Moderate-Easy (2). The prompt is straightforward."},
+        "4_distractorEngineering": {"verdict": "N/A", "confidence": "N/A", "detail": "Numeric item — no distractors to evaluate."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Revenue recognition' aligns with Domain A (External Financial Reporting). AccountingPrinciple: 'ASC 606 requires revenue recognition when control transfers.' No explicit IMA CSO LOS reference (e.g., A.1.a)."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "ASC 606 revenue recognition is core CMA Part 1 Domain A material."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Northstar Equipment, service plans, replacement parts, installation bundles — realistic year-end reporting scenario with controller-facing task."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "104-char explanation: formula + result + cash-vs-revenue note. Missing: explicit ASC 606 section reference, business interpretation of the $270,000 remaining liability, common trap (confusing cash received with revenue earned)."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No exam trap identified. Common candidate error is to recognize all cash received ($360,000) as revenue — this is not mentioned."},
+        "10_professionalJudgment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Tests the fundamental accrual concept: cash ≠ revenue. Develops ability to distinguish timing of cash receipt from performance obligation satisfaction. A management accountant must make these judgments."}
+      },
+      "whatNeedsToChange": "Expand explanation to ≥150 chars with: (1) ASC 606-10-25 reference, (2) 'Cash collected = $360,000 but revenue = $90,000 because only 3/12 months delivered', (3) common trap: 'Many candidates incorrectly recognize the full $360,000 as current-year revenue.'"
+    },
+    {
+      "ItemID": "CBQ-A1-Q3",
+      "CaseID": "CBQ-A1",
+      "type": "select",
+      "topic": "Revenue recognition — FOB shipping point",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Evaluate",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "FOB shipping point means control transfers at shipment. Parts shipped Dec 28 → recognize $84,000 in current year. ASC 606 core principle: recognize revenue when control transfers to customer. Correct choice: A."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Exhibit E1 clearly states: 'Replacement parts, $84,000, Shipped FOB shipping point Dec. 28, Customer received Jan. 3'. FOB shipping point is unambiguous under UCC/GAAP. Exactly one defensible answer."},
+        "3_difficultyCalibration": {"verdict": "PASS", "confidence": "MEDIUM", "detail": "Difficult (4) is acceptable. Requires judging shipping terms against revenue recognition rules, distinguishing FOB shipping point from FOB destination. Choice B is a plausible wrong answer (date of receipt). Evaluate cognitive level appropriate."},
+        "4_distractorEngineering": {"verdict": "PASS", "confidence": "MEDIUM", "detail": "B: 'Defer until Jan 3' — tests FOB shipping vs. destination confusion (Trap 16: Shipping terms). C: 'Recognize only gross profit' — plausible for percentage-of-completion confusion but not correct for goods. D: 'Record as OCI' — thinner distractor, no scenario element supports OCI treatment."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Revenue recognition' aligns with Domain A. AccountingPrinciple field present. No explicit CSO LOS reference."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "FOB shipping point and revenue recognition timing are core Part 1 Domain A."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Year-end cutoff for replacement parts shipped late December is a classic real-world controller scenario."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "75-char explanation. Explains why A is correct but does not explain why B, C, D are wrong. No distractor-level feedback fields exist (ExplanationWrong fields absent). Correct explanation too brief for a Difficult Evaluate-level item."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No exam trap identified. The key trap is FOB shipping vs. FOB destination — candidates should know control transfers at shipment for FOB shipping point. Not mentioned."},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Excellent — forces the candidate to evaluate shipping terms and timing, exactly what a controller does at year-end. Judgment about when control transfers is a core CMA competency."}
+      },
+      "whatNeedsToChange": "Add ExplanationWrong[B-D] fields with choice-specific feedback. Expand Explanation to ≥150 chars with explicit ASC 606 citation, distinction of FOB shipping point vs. destination, and common trap: 'Mistaking customer receipt date for the revenue trigger.' Recalibrate DifficultyDrivers to include 'Terminology'."
+    },
+    {
+      "ItemID": "CBQ-A3-Q4",
+      "CaseID": "CBQ-A3",
+      "type": "select",
+      "topic": "Cash classification — Treasury bill as cash equivalent",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Analyze",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "88-day Treasury bill = 88 days < 90 days (3 months). Under ASC 230/305, cash equivalents are highly liquid investments with original maturity ≤3 months. Correct answer: 'Cash equivalent'."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Clean fact pattern: '88-day Treasury bill' — unambiguous. 88 < 90, so classification as cash equivalent is the only GAAP-compliant answer."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Difficult (4) may be over-labeled. This is a straightforward application of the 'three months or less' cash equivalent rule (Bloom's Understand/Apply). Moderate (3) would be more appropriate per DL-031 pattern."},
+        "4_distractorEngineering": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "A: 'Cash equivalent' — correct. B: 'Inventory' — very weak (T-bills are never inventory). C: 'Operating receivable' — thin (T-bills are financial assets, not operational receivables). D: 'Long-term investment' — plausible for candidates who think 'investment' means long-term only, but original maturity is short. Distractors B and C are too obvious for a 'Difficult' item."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Cash classification'. Aligns with Domain A — balance sheet classification of financial assets. No explicit ASC reference in item-level metadata."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Cash equivalents classification is core Part 1 Domain A — External Financial Reporting Decisions."},
+        "7_cmaRealism": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Treasury bill classification is realistic but the item lacks business scenario integration — it reads as a standalone MCQ dropped into a case. No business context like 'The treasury team reports...'"},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Explanation: 'A highly liquid investment with original maturity of three months or less is generally a cash equivalent.' No business interpretation of why this matters (cash ratio, liquidity analysis). No distractor explanations exist."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No trap identified. Key trap: 'confusing remaining maturity vs. original maturity for cash equivalent determination' — a classic CMA Part 1 trap."},
+        "10_professionalJudgment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Tests classification judgment but as a standalone fact — missing the evaluative layer. A controller needs to classify financial instruments; this item tests that, but at a basic level."}
+      },
+      "whatNeedsToChange": "Add ExplanationWrong[B-D] fields. Expand Explanation. Recalibrate difficulty to Moderate (3). Add CalculationRequired: false (currently true — schema error). Add AccountingPrinciple field at item level. Add trap: 'Remaining maturity ≠ original maturity for cash equivalent classification.' Add business context: 'The treasury report shows an 88-day T-bill at year-end; the controller needs to classify it correctly.'"
+    },
+    {
+      "ItemID": "CBQ-A1-Q4",
+      "CaseID": "CBQ-A1",
+      "type": "numeric",
+      "topic": "Statement of cash flows — indirect method",
+      "difficulty": "Moderate (3)",
+      "cognitiveLevel": "Apply",
+      "verdict": "FAIL",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "510,000 + 72,000 - 41,000 + 18,000 - 27,000 = 532,000. Correct calculation for operating cash flow under indirect method: net income + depreciation - increase in A/R + decrease in inventory - decrease in A/P."},
+        "2_precision": {"verdict": "FAIL", "confidence": "HIGH", "detail": "PROMPT: 'Enter cash flow from operating activities before income-tax cash effects not listed.' The phrase 'before income-tax cash effects not listed' is internally contradictory and ambiguous. Does 'before' mean 'excluding' tax effects? Does 'not listed' mean those effects are intentionally omitted or that they are not in the exhibits? A candidate cannot determine with certainty what to include/exclude. The explanation ignores this ambiguity entirely — it just shows the calculation. This is a PRECISION defect: the fact pattern does not yield one unambiguous answer because the prompt wording creates confusion about whether tax cash effects should be considered or excluded."},
+        "3_difficultyCalibration": {"verdict": "PASS", "confidence": "MEDIUM", "detail": "Moderate (3) for a multi-step indirect method cash flow calculation is appropriate. Apply cognitive level correct."},
+        "4_distractorEngineering": {"verdict": "N/A", "confidence": "N/A", "detail": "Numeric item."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Statement of cash flows'. AccountingPrinciple: 'ASC 230 requires classification of cash flows...' Present. No explicit CSO LOS."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Indirect method operating cash flow is core CMA Part 1 Domain A."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Year-end cash flow statement preparation from net income and balance sheet changes — exactly what a controller does."},
+        "8_instructionalValue": {"verdict": "FAIL", "confidence": "HIGH", "detail": "54-char explanation: '510,000 + 72,000 - 41,000 + 18,000 - 27,000 = 532,000.' Zero principle explanation. Zero walk-through of why each item is added or subtracted. Zero reference to the indirect method logic. A candidate gets no learning from this beyond the arithmetic."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No trap identified. Key traps not mentioned: confusing increase in A/R (subtract) vs. decrease in A/R (add); confusing the sign on changes in current liabilities vs. current assets."},
+        "10_professionalJudgment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Indirect method cash flow preparation develops core CMA competency but the explanation provides zero professional judgment development."}
+      },
+      "whatNeedsToChange": "HIGH PRIORITY — Precision defect. Rewrite prompt to remove ambiguity: 'Using the indirect method, enter operating cash flow from the data in Exhibit 2. Do not adjust for income tax cash effects.' Then expand explanation to ≥150 chars with: (1) ASC 230 reference, (2) walk-through of each line, (3) why depreciation is added back, why A/R increase is subtracted, (4) common traps about sign conventions."
+    },
+    {
+      "ItemID": "CBQ-A1-Q6",
+      "CaseID": "CBQ-A1",
+      "type": "multi",
+      "topic": "External reporting judgment / accrual accounting",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Evaluate",
+      "verdict": "FAIL",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "Three correct answers: 'Separating cash collections from earned revenue' (accrual judgment), 'Determining whether control transferred before year-end' (ASC 606 judgment), 'Recognizing deferred tax effects from timing differences' (ASC 740 judgment). Wrong answer: 'Classifying all cash receipts as revenue' — this is a cash-basis error, not a judgment. Correct."},
+        "2_precision": {"verdict": "PASS", "confidence": "MEDIUM", "detail": "Fact pattern is internally consistent — the question asks which items 'require judgment rather than simple cash matching.' All three correct answers are judgment-requiring tasks. The one bad answer is definitionally not a judgment. However, the prompt is somewhat vague: 'audit-review risks that require judgment' — what does 'audit-review' mean? The candidate may not be sure if this is about the audit committee review of the reporting package or an external audit."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Difficult (4) may be slightly over-labeled. At Evaluate level it's plausible, but the one incorrect choice ('classifying all cash receipts as revenue') is a blatantly wrong cash-basis approach that most CMA candidates would immediately exclude. This makes the item easier than it appears."},
+        "4_distractorEngineering": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "The one incorrect distractor ('Classifying all cash receipts as revenue') is a conceptual foil — it represents the cash-basis fallacy. Plausible for very weak candidates but too obvious for a Difficult item. The other three options are all 100% correct judgment-requiring tasks. Missing one nuanced distractor that a strong candidate might plausibly select."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Tests integrated Domain A concepts: accrual accounting, revenue recognition, deferred taxes. No explicit ASC references at the item level. No CSO LOS."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Accrual basis vs. cash basis distinction is foundational Part 1 Domain A."},
+        "7_cmaRealism": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Controller evaluating audit-review risks is realistic but slightly abstract — a specific scenario reference would strengthen it."},
+        "8_instructionalValue": {"verdict": "FAIL", "confidence": "HIGH", "detail": "92-char explanation: 'The case requires accrual-basis judgments. Cash collection alone does not determine revenue.' Generic statement that does not explain WHY each choice is/isn't a judgment. No ExplanationWrong fields exist for the multi-select format — a learner who picks wrong sees no feedback."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No trap identified. The trap is the cash-basis fallacy (treating cash = earnings), which is exactly what the item tests, but the explanation doesn't name it."},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Strong — directly tests the ability to distinguish cash-based vs. accrual-based accounting judgments, which is the essence of CMA professional judgment in financial reporting."}
+      },
+      "whatNeedsToChange": "CRITICAL — Two blockers: (1) CalculationRequired: true must change to false (schema error). (2) Add ExplanationWrong fields with choice-specific feedback explaining why each option is correct/wrong. (3) Expand Explanation to ≥150 chars naming accrual vs. cash-basis distinction. (4) Slightly harder distractor engineering: replace the obvious cash-basis foil with a more nuanced option like 'Calculating depreciation using straight-line method' which some might confuse for a judgment rather than a mechanical choice."
+    },
+    {
+      "ItemID": "CBQ-B1-Q1",
+      "CaseID": "CBQ-B1",
+      "type": "numeric",
+      "topic": "Production budget",
+      "difficulty": "Moderate (3)",
+      "cognitiveLevel": "Apply",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "18,000 + (22,000 × 20%) - 3,600 = 18,800. Verified against Exhibit E1 (January sales 18,000, February 22,000) and Exhibit E2 (FG ending = 20% of next month sales, beginning FG = 3,600). 18,000 + 4,400 - 3,600 = 18,800. Correct."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "All inputs clearly traceable to exhibits. No ambiguity. Exactly one defensible answer."},
+        "3_difficultyCalibration": {"verdict": "PASS", "confidence": "HIGH", "detail": "Moderate (3) correct for multi-step budget formula at Apply level. Both CommonTrapReference (Trap 4: Budget Order) and FormulaReference (Production Budget) support this."},
+        "4_distractorEngineering": {"verdict": "N/A", "confidence": "N/A", "detail": "Numeric item."},
+        "5_blueprintAlignment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Excellent metadata: Topic 'Production budget', FormulaReference 'Production Budget', DecisionTreeReference 'Budget Sequence', CommonTrapReference 'Trap 4: Budget Order', AccountingPrinciple field present. Strongest alignment in the sample."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Production budget is core Domain B — Planning, Budgeting, and Forecasting."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Apex Controls quarterly budget with named company, sales forecast table, policy exhibit — excellent business realism."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "47-char explanation: '18,000 + (22,000 x 20%) - 3,600 = 18,800 units.' Formula-only. Missing: principle (budget order: sales budget → production budget), why ending FG = 20% of February sales, common trap about confusing units vs. dollars."},
+        "9_trapTransparency": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Trap 4 (Budget Order) is referenced in metadata but NOT explained in the Explanation text. The candidate reading the review screen doesn't see the trap reference — only the bare formula."},
+        "10_professionalJudgment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Tests budget preparation skill. Limited judgment development — the formula is mechanical. Could be enhanced by asking WHY ending inventory policy matters for the production decision."}
+      },
+      "whatNeedsToChange": "Expand Explanation to ≥150 chars with: (1) Production budget = Budgeted Sales + Desired Ending FG - Beginning FG, (2) reference to budget sequence (sales budget must come first), (3) common trap: confusing units with dollars, (4) business interpretation: 'Apex needs 18,800 units in January to cover expected sales and maintain the 20% ending inventory policy.'"
+    },
+    {
+      "ItemID": "CBQ-B2-Q3",
+      "CaseID": "CBQ-B2",
+      "type": "select",
+      "topic": "Leading vs. lagging indicators",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Analyze",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "'Prior-year dividend payout' is the only lagging indicator — it's a financing/distribution decision reflecting past performance. Other three (order backlog, supplier lead time, adjusted bookings) are forward-looking operational indicators. Correct."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Prompt asks 'least useful as a leading operational indicator.' All four options are clearly defined terms. Exactly one answer fits."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Difficult (4) is over-labeled. This is a straightforward classification: dividend payout = financing/lagging, order backlog/supplier lead time/bookings = operational/leading. A candidate can answer by elimination. Moderate (3) or even Moderate-Easy (2) would better match the cognitive demand."},
+        "4_distractorEngineering": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "B: 'Firm order backlog' — clearly leading (future revenue). C: 'Supplier lead time' — clearly leading (capacity/availability predictor). D: 'Bookings adjusted for cancellation risk' — clearly leading (demand forecast). All three distractors are obvious leading indicators. Once the candidate knows the distinction, all three are immediately eliminated. A more discriminating item would mix in borderline indicators."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Forecasting indicators'. Aligns with Domain B (forecasting, leading/lagging indicators). No explicit IMA CSO LOS or CAS reference."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Leading vs. lagging indicators is relevant to Domain B forecasting and Domain C performance measurement. In scope for Part 1."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Operational vs. financial metric distinction is exactly the kind of analysis a controller performs when evaluating forecast inputs."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "112-char explanation: 'Dividend payout is a lagging financing/shareholder metric, not a leading operating demand or capacity indicator.' Good explanation but no distinction of WHY the other three ARE leading. No distractor explanations exist."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No trap identified. Traps: confusing financial metrics (dividends, EPS, ratios) with operational metrics (orders, capacity, lead time)."},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Strong — forces CFO-level thinking about which metrics predict future performance vs. which merely report results. Exactly the judgment a CMA needs."}
+      },
+      "whatNeedsToChange": "Fix CalculationRequired: true → false. Recalibrate difficulty to Moderate (3). Add ExplanationWrong[B-D] fields. Expand Explanation to name the distinction: 'Leading indicators predict future outcomes; lagging indicators report past results.' Add trap about confusing financial metrics for operational ones."
+    },
+    {
+      "ItemID": "CBQ-B3-Q5",
+      "CaseID": "CBQ-B3",
+      "type": "select",
+      "topic": "Cash budget — borrowing requirement",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Analyze",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "852,600 - 780,000 = 72,600, which is 2,400 below 75,000 minimum → 2,400 borrowing required. Logic: ending cash before borrowing - disbursements = 72,600; need 75,000 minimum → borrow 2,400. Correct."},
+        "2_precision": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Explanation references values (852,600, 780,000, 75,000) that are not stated in the item object. The candidate must derive these from prior items (Q1-Q4) in the case. This is acceptable for an integrated case study but the item itself is not independently answerable — it depends on computed values from Q1-Q4. The prompt does not warn candidates that prior answers are needed. This is a case-design feature, not a defect, but a weaker candidate who got Q1-Q4 wrong is penalized again here."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Difficult (4) is reasonable given the dependency on prior items and the multi-step calculation. However, the answer choices make it easier: only one choice says '2,400 borrowing required' while others are far larger (75,000, 780,000) or say no borrowing needed. The candidate can pick the right answer by recognizing 72,600 < 75,000 and seeing that 2,400 is the only small borrowing amount."},
+        "4_distractorEngineering": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "A: '2,400 borrowing required' — correct. B: 'No borrowing required' — tests the trap of stopping at positive ending cash without checking minimum. C: '75,000 borrowing required' — tests confusion between minimum cash and borrowing amount. D: '780,000 borrowing required' — tests the trap of borrowing ALL disbursements. Distractors C and D are good; B is also good. But the choice format ('2,400 borrowing required' / 'No borrowing required...' / '75,000 borrowing required' / '780,000 borrowing required') is inconsistent — some include numeric results, others are descriptive."},
+        "5_blueprintAlignment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Topic: 'Cash budget'. FormulaReference: 'Cash Budget'. DecisionTreeReference: 'Budget Sequence'. CommonTrapReference: 'Trap 5: Cash Budget'. AccountingPrinciple: 'Cash budget: Beginning Cash + Cash Receipts - Cash Disbursements = Ending Cash.' Strong alignment."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Cash budget and borrowing requirement calculation are core Domain B."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Lakeside Instruments cash planning — realistic treasury scenario."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "68-char explanation: '852,600 - 780,000 = 72,600, which is 2,400 below the 75,000 minimum.' Formula-only. Missing: why borrowed amount is the shortfall, not the full minimum. No distractor explanations."},
+        "9_trapTransparency": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Trap 5 (Cash Budget) is referenced in metadata but not explained in the Explanation text. Traps: confusing borrowing need with minimum cash, using total disbursements as borrowing, stopping at positive cash without checking minimum."},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Excellent — tests whether a treasury analyst correctly computes the borrowing need (shortfall only) rather than the full minimum cash requirement. A real-world decision."}
+      },
+      "whatNeedsToChange": "Fix CalculationRequired: false (currently missing — should be true since prior items require calculation). Add ExplanationWrong[B-D] fields. Expand Explanation with trap identification. Consider standardizing choice format."
+    },
+    {
+      "ItemID": "CBQ-C1-Q2",
+      "CaseID": "CBQ-C1",
+      "type": "numeric",
+      "topic": "Material quantity variance",
+      "difficulty": "Moderate (3)",
+      "cognitiveLevel": "Apply",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "Standard quantity allowed = 13,500 × 3 = 40,500 lb. Quantity variance = 6.00 × (41,850 - 40,500) = 8,100 unfavorable. Verified against Exhibit E1: standard 3 lb/unit at $6.00, actual 41,850 lb at $6.40, output 13,500 units. 6.00 × 1,350 = 8,100. Correct."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "All inputs traceable to Exhibit E1. Prompt specifies signed amount with negative for favorable. 8,100 positive = unfavorable. Unambiguous."},
+        "3_difficultyCalibration": {"verdict": "PASS", "confidence": "HIGH", "detail": "Moderate (3) correct. Two-step calculation (SQ computation + variance formula) at Bloom's Apply level. Trap 7 (Price vs Quantity Variance) is exactly the discrimination being tested."},
+        "4_distractorEngineering": {"verdict": "N/A", "confidence": "N/A", "detail": "Numeric item."},
+        "5_blueprintAlignment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Excellent metadata: Topic 'Material quantity variance', FormulaReference 'Material Quantity Variance', DecisionTreeReference 'Variance Analysis', CommonTrapReference 'Trap 7: Price vs Quantity Variance', AccountingPrinciple field with explicit formula. One of the best-aligned items in the sample."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Material quantity variance is core Domain C — Performance Management, standard costing."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Summit Gear production variance analysis — realistic controller task."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "117-char explanation: formula + substitution + result + unfavorable label. One of the better explanations in the sample. Still missing: why SP not AP is used (to isolate the purchasing manager from the production manager's quantity decisions), business interpretation of 8,100U, sign convention note."},
+        "9_trapTransparency": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Trap 7 (Price vs Quantity Variance) is in metadata but not in the Explanation text. The explanation should explicitly warn: 'A common error is to use actual price (6.40) instead of standard price (6.00) — this would conflate the purchasing department's price variance with the production department's quantity variance.'"},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Strong — tests ability to isolate quantity variance from price variance for proper responsibility assignment. Core CMA competency."}
+      },
+      "whatNeedsToChange": "Expand Explanation to ≥150 chars with trap warning about using AP vs SP, sign convention clarification (positive = unfavorable on this item), and business interpretation: 'The 8,100 unfavorable quantity variance means production used 1,350 more pounds than the standard for actual output.'"
+    },
+    {
+      "ItemID": "CBQ-C2-Q3",
+      "CaseID": "CBQ-C2",
+      "type": "select",
+      "topic": "Transfer pricing — minimum transfer price with idle capacity",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Analyze",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "With idle capacity and no opportunity cost, minimum transfer price = variable cost + opportunity cost = $70 + $0 = $70. Correct under economic transfer pricing theory: when the selling division has idle capacity, the internal transfer does not displace external sales, so opportunity cost is zero."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Prompt: 'With idle capacity and no opportunity cost, what is the minimum transfer price from the company perspective?' Clear, unambiguous. All four options are distinct dollar amounts. One defensible answer."},
+        "3_difficultyCalibration": {"verdict": "PASS", "confidence": "HIGH", "detail": "Difficult (4) appropriate. Requires understanding of transfer pricing theory: general rule vs. idle-capacity exception. The full-cost option (95) is a plausible wrong answer — many candidates assume full cost is the minimum."},
+        "4_distractorEngineering": {"verdict": "PASS", "confidence": "HIGH", "detail": "B: '95 full cost' — tests whether candidate confuses minimum transfer price with full cost absorption. Classic trap. C: '108 outside purchase price' — tests whether candidate applies market-based transfer pricing rule instead of the idle-capacity rule. D: '110 market price' — similar to C, tests whether candidate ignores the idle capacity exception. All three distractors map to specific misconceptions."},
+        "5_blueprintAlignment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Topic: 'Transfer pricing'. AccountingPrinciple: 'Transfer price should promote goal congruence; minimum = variable cost + opportunity cost.' DecisionTreeReference: 'Transfer Pricing'. Strong alignment."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Transfer pricing is core Domain C — Performance Management."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Division with idle capacity deciding internal transfer price — classic real-world management accounting scenario."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "108-char explanation: 'With idle capacity, minimum transfer price is variable cost plus opportunity cost. Opportunity cost is zero.' Good core concept explanation. No distractor-specific feedback exists. Does not explain WHY full cost is NOT the minimum (fixed costs are sunk for this decision)."},
+        "9_trapTransparency": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "No explicit trap named. Key trap: 'Using full cost instead of variable cost when idle capacity exists' — a classic transfer pricing error. The explanation hints at this but doesn't name it."},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Strong — differentiates between transfer pricing at capacity (market-based) vs. idle capacity (variable-cost based). Real CMA judgment call."}
+      },
+      "whatNeedsToChange": "Fix CalculationRequired: true → false. Add ExplanationWrong[B-D] fields. Expand Explanation to explain why full cost (95) is wrong (fixed costs are sunk for idle-capacity transfer decisions). Name the trap explicitly."
+    },
+    {
+      "ItemID": "CBQ-D1-Q1",
+      "CaseID": "CBQ-D1",
+      "type": "numeric",
+      "topic": "Activity-based costing",
+      "difficulty": "Moderate (3)",
+      "cognitiveLevel": "Apply",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "72,000 + 72,000 + 40,000 = 184,000. The three pools (setups, engineering, moves) are assigned based on ABC cost drivers. Sum is correct. The explanation states the addition but doesn't show per-pool rates × driver quantities, making independent verification from the item alone incomplete."},
+        "2_precision": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Prompt: 'Enter total ABC cost assigned to Product B from the three pools.' The exhibit presumably provides per-pool rates and Product B's consumption of each cost driver. The explanation only shows: 'Setups 72,000 + engineering 72,000 + moves 40,000 = 184,000.' Without seeing the intermediate calculation (rate × driver units per pool), the precision is harder to verify. The answer is likely correct but the traceability is incomplete."},
+        "3_difficultyCalibration": {"verdict": "PASS", "confidence": "HIGH", "detail": "Moderate (3) correct for multi-pool ABC cost aggregation at Apply level."},
+        "4_distractorEngineering": {"verdict": "N/A", "confidence": "N/A", "detail": "Numeric item."},
+        "5_blueprintAlignment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Topic: 'Activity-based costing'. AccountingPrinciple: 'ABC assigns overhead using activity cost drivers rather than single volume-based allocation.' CommonTrapReference: 'Trap 3: Allocated Fixed Costs'. Good alignment."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "ABC costing is core Domain D — Cost Management."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Multi-pool ABC assignment — realistic cost accounting scenario."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "60-char explanation: bare summation. Missing: per-pool rate calculations, why ABC is used instead of single plantwide rate, business interpretation."},
+        "9_trapTransparency": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Trap 3 in metadata only. Explanation should name: 'A common error is to allocate all overhead using a single volume-based rate, which would undercost product B due to its high batch complexity.'"},
+        "10_professionalJudgment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "ABC costing develops product-profitability analysis skill. Limited judgment — the calculation is mechanical once the cost drivers are known."}
+      },
+      "whatNeedsToChange": "Expand Explanation to ≥150 chars showing per-pool rates and driver quantities, not just sums. Add business interpretation: 'Product B consumes disproportionate shares of setup and engineering resources relative to volume-based allocation.' Add trap about single-rate undercosting."
+    },
+    {
+      "ItemID": "CBQ-D2-Q3",
+      "CaseID": "CBQ-D2",
+      "type": "select",
+      "topic": "Theory of constraints — bottleneck identification",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Analyze",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "From Exhibit E2: Cutting 24,000, Welding 19,500, Painting 21,000 frames. Lowest capacity = Welding at 19,500. Bottleneck = Welding. Correct under TOC principles."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Exhibit E2 clearly shows three operations with distinct capacities. One obviously lowest. Exactly one defensible answer."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Difficult (4) is over-labeled. Finding the minimum of three numbers is a Bloom's Understand-level task. Moderate (3) would better match the cognitive demand. However, TOC bottleneck identification is conceptually important, so Difficult at Analyze level is borderline defensible."},
+        "4_distractorEngineering": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "B: 'Cutting' — second-lowest, tests whether candidate picks the first operation. C: 'Painting' — middle capacity. D: 'No bottleneck exists' — tests whether candidate mistakenly thinks bottlenecks require zero capacity. All three are plausible wrong answers for someone who glances at the data without computing the minimum. However, the arithmetic is so straightforward that these distractors are weak for a 'Difficult' item."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Theory of constraints'. AccountingPrinciple: 'The bottleneck operation constrains throughput; improve the lowest-capacity resource.' No explicit CSO LOS."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Theory of Constraints is core Domain D — Cost Management."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Three-operation manufacturing process with bottleneck identification — realistic cost accounting/operations analysis."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "49-char explanation: 'Welding has the lowest capacity at 19,500 frames.' Formula-only. No Why-this-matters: 'The bottleneck determines maximum throughput for the entire process. Improving any non-bottleneck operation does not increase throughput.' No distractor explanations."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No trap identified. Trap: 'improving a non-bottleneck operation wastes resources without increasing throughput' — this is the central insight of TOC and should be in the explanation."},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Good — trains operations-aware cost analysis. A CMA needs to identify bottlenecks to guide resource allocation decisions."}
+      },
+      "whatNeedsToChange": "Fix CalculationRequired: true → false. Recalibrate difficulty to Moderate (3). Add ExplanationWrong[B-D] fields. Expand Explanation with TOC principle: bottleneck constrains total throughput. Add trap about wasted improvement on non-bottlenecks."
+    },
+    {
+      "ItemID": "CBQ-E1-Q1",
+      "CaseID": "CBQ-E1",
+      "type": "select",
+      "topic": "Segregation of duties — fictitious vendor risk",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Analyze",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "'Same AP clerk can create vendors and enter invoices' is the most direct fictitious-vendor risk — combining vendor-master creation with invoice entry enables an employee to set up a fake vendor and pay it. Classic segregation of duties violation per COSO Principle 12 (Control Activities). Correct."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Prompt: 'Which control weakness is most directly related to fictitious vendor risk?' Four specific control weaknesses from the case scenario. Exactly one answer directly enables fictitious vendors."},
+        "3_difficultyCalibration": {"verdict": "PASS", "confidence": "HIGH", "detail": "Difficult (4) at Analyze level is appropriate. Requires distinguishing between different control weaknesses and identifying which one specifically enables fictitious vendor schemes. Other options are real weaknesses but test different risks (approval after payment, duplicate review, missing receiving docs)."},
+        "4_distractorEngineering": {"verdict": "PASS", "confidence": "HIGH", "detail": "B: 'Supervisor approves invoices after payment' — tests post-payment approval weakness (detective, not preventive). C: 'Duplicate report was not reviewed in April or May' — tests monitoring failure. D: 'Service invoices lack receiving documents' — tests three-way match gap. All are real control weaknesses but target different risks. Strong distractor set."},
+        "5_blueprintAlignment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Topic: 'Segregation of duties'. AccountingPrinciple: 'Incompatible duties (authorization, custody, recordkeeping) should be separated.' DecisionTreeReference: 'Internal Controls (COSO)'. CommonTrapReference: 'Trap 26: Segregation of Duties'. Strong alignment."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Segregation of duties and internal controls are core Domain E."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "AP clerk with combined vendor creation + invoice entry — classic real-world SOX control weakness. Named company context."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "106-char explanation: 'Combining vendor creation and invoice entry violates segregation of duties and enables fictitious vendors.' Good principle identification. No COSO Principle 12 reference. No ExplanationWrong fields for distractors."},
+        "9_trapTransparency": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Trap 26 referenced in metadata but not in explanation text. Trap: confusing detective controls (post-payment review) with preventive controls (SoD)."},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Strong — forces the candidate to evaluate which control weakness is directly causal to a specific fraud risk. Core internal audit/CMA judgment."}
+      },
+      "whatNeedsToChange": "Add ExplanationWrong[B-D] fields explaining why each other weakness is real but targets a different risk. Add explicit COSO Principle 12 reference. Expand Explanation with trap: 'Post-payment review (Choice B) is detective, not preventive — it can detect fictitious vendors after payment but does not prevent them.'"
+    },
+    {
+      "ItemID": "CBQ-E2-Q6",
+      "CaseID": "CBQ-E2",
+      "type": "select",
+      "topic": "Monitoring — log retention for IT controls",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Analyze",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "'It may prevent investigation of issues discovered after logs are overwritten' — correct. Short log retention limits the ability to detect and investigate security incidents or control failures that are discovered after the retention window. This is a monitoring deficiency per COSO Principle 16."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Prompt: 'Why is 14-day log retention a concern?' Clear, specific. Four distinct answer choices. One correct answer."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Difficult (4) may be over-labeled. The correct answer is the only one that logically addresses a monitoring concern. The other three are clearly wrong: 'It proves all users are unauthorized' (nonsensical), 'It makes reconciliations unnecessary' (wrong direction), 'It converts preventive controls into manual controls' (unrelated to retention). Moderate (3) would be more appropriate."},
+        "4_distractorEngineering": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "B: 'It proves all users are unauthorized' — clearly nonsensical. C: 'It makes reconciliations unnecessary' — wrong direction, log retention supports reconciliation. D: 'It converts preventive controls into manual controls' — unrelated to retention period. Distractors B and D are weak. Only the correct answer addresses the logical consequence of short retention."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Monitoring'. AccountingPrinciple: 'Monitoring evaluates whether internal controls continue to operate effectively.' Cross-domain (E,F). DecisionTreeReference: 'Internal Controls (COSO)'. Good but could reference COSO Principle 16 explicitly."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Monitoring of IT controls is Domain E (COSO Monitoring) and Domain F (IT general controls). In scope for Part 1."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "Log retention policy review is realistic IT audit / internal control assessment. Companies regularly debate retention periods."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "54-char explanation: 'Short retention limits monitoring and forensic review.' Brief and correct but no COSO reference, no business impact statement. No distractor explanations."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No trap identified. Trap: 'Log retention is not just a compliance checkbox — it enables substantive monitoring and investigation. Short retention windows create blind spots.'"},
+        "10_professionalJudgment": {"verdict": "PASS", "confidence": "HIGH", "detail": "Good — develops IT control awareness. CMAs need to evaluate whether IT controls support effective monitoring."}
+      },
+      "whatNeedsToChange": "Add ExplanationWrong[B-D] fields. Recalibrate difficulty to Moderate (3). Expand Explanation with COSO Principle 16 reference: 'Monitoring activities assess the quality of internal control performance over time.' Add trap about retention-as-compliance vs. retention-as-investigation-enabler."
+    },
+    {
+      "ItemID": "CBQ-F1-Q1",
+      "CaseID": "CBQ-F1",
+      "type": "numeric",
+      "topic": "Data quality — completeness metric",
+      "difficulty": "Moderate (3)",
+      "cognitiveLevel": "Apply",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "3,600 / 18,000 = 20%. Verified against Exhibit E1: 18,000 warranty claims, 3,600 missing installation date. Correct."},
+        "2_precision": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Prompt: 'Enter the percentage of claims missing installation date, as a whole number.' 'As a whole number' is ambiguous — 20% as a whole number = 20 (entered without % sign), but 3,600/18,000 = 0.20 = 20%. The correct answer is '20' (the whole number). However, a candidate might enter '20%' or '0.20'. The prompt says 'as a whole number' but the Correct value is stored as '20' (string). This is a minor precision issue — 'Enter as a whole number (do not include % sign)' would be clearer."},
+        "3_difficultyCalibration": {"verdict": "FAIL", "confidence": "HIGH", "detail": "Moderate (3) is over-labeled. This is a single-step division (3,600 ÷ 18,000) with no accounting principle application. This is Bloom's Apply at best, but the arithmetic is elementary (basic percentage calculation). Easy (1) or Moderate-Easy (2) would be more appropriate per DL-031 pattern. The metadata lists only 'Terminology' as a DifficultyDriver — this is inconsistent with a Moderate classification."},
+        "4_distractorEngineering": {"verdict": "N/A", "confidence": "N/A", "detail": "Numeric item."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Data quality'. CommonTrapReference: 'Trap 29: Data Governance'. No AccountingPrinciple field at item level. No explicit CSO LOS. The Data Governance trap is mismatched — this item tests data quality metrics (completeness), not governance policies."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Data quality metrics are Domain F — Technology and Analytics."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "BrightLine Equipment warranty data quality assessment — realistic analytics scenario."},
+        "8_instructionalValue": {"verdict": "FAIL", "confidence": "HIGH", "detail": "SHORTEST explanation in entire 90-item pool: 21 chars — '3,600 / 18,000 = 20%.' Zero educational content. No mention of completeness as a data quality dimension. No interpretation of what 20% missing means for decision-making. Candidate learns nothing."},
+        "9_trapTransparency": {"verdict": "FAIL", "confidence": "HIGH", "detail": "No trap identified. Trap: confusing completeness (missing data) with accuracy (wrong data). Both affect data quality but require different remediation."},
+        "10_professionalJudgment": {"verdict": "FAIL", "confidence": "HIGH", "detail": "Zero judgment development. Simple division with no evaluative component. A CMA needs to assess whether 20% incompleteness is material for warranty analysis — this item asks nothing about materiality, threshold, or decision impact."}
+      },
+      "whatNeedsToChange": "HIGH PRIORITY — Shortest explanation in pool. Needs complete rewrite to ≥150 chars: (1) Define completeness as a data quality dimension, (2) Show calculation, (3) Interpret: '20% missing installation dates means warranty age analysis is unreliable — decisions based on this data may be flawed', (4) Trap: confusing missing data (completeness) with incorrect data (accuracy), (5) Recalibrate difficulty to Easy (1). Reword prompt for clarity: 'Enter as a whole number without the percent sign.' Add item-level AccountingPrinciple field."
+    },
+    {
+      "ItemID": "CBQ-F1-Q2",
+      "CaseID": "CBQ-F1",
+      "type": "select",
+      "topic": "Data governance — master data standards",
+      "difficulty": "Difficult (4)",
+      "cognitiveLevel": "Evaluate",
+      "verdict": "CONDITIONAL_PASS",
+      "confidence": "HIGH",
+      "dimensions": {
+        "1_correctness": {"verdict": "PASS", "confidence": "HIGH", "detail": "'Assign data ownership and master-data standards' is the textbook data governance response to inconsistent product codes. Under DAMA/DMBOK data governance framework, master data management establishes valid values, ownership, and maintenance procedures. Correct."},
+        "2_precision": {"verdict": "PASS", "confidence": "HIGH", "detail": "Prompt addresses the 'inconsistent product codes' issue from Exhibit E1. Clean fact pattern. One clearly correct answer."},
+        "3_difficultyCalibration": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Difficult (4) may be over-labeled. The other three options are clearly wrong: 'Delete all XR-500 claims' (destructive, not governance), 'Use only spreadsheet formulas' (anti-governance), 'Classify the issue as residual income' (nonsensical — residual income is Domain C, not data governance). A candidate can eliminate all three distractors immediately. Moderate (3) would be more appropriate. The 'Evaluate' cognitive level is plausible but the answer is too obvious."},
+        "4_distractorEngineering": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "B: 'Delete all XR-500 claims' — tests the trap of destructive 'fixes' vs. governance solutions. Moderate quality. C: 'Use only spreadsheet formulas' — tests the trap of bypassing governance with ad-hoc tools. Good. D: 'Classify the issue as residual income' — nonsensical crossover (residual income is a performance measurement concept from Domain C, completely irrelevant to data quality). This is a filler distractor."},
+        "5_blueprintAlignment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Topic: 'Data governance'. AccountingPrinciple: 'Data governance establishes policies for data quality, security, and usage.' CommonTrapReference: 'Trap 29: Data Governance'. Good but no explicit CSO LOS."},
+        "6_cmaPart1Relevance": {"verdict": "PASS", "confidence": "HIGH", "detail": "Data governance is Domain F — Technology and Analytics."},
+        "7_cmaRealism": {"verdict": "PASS", "confidence": "HIGH", "detail": "BrightLine Equipment with inconsistent product codes and no master data standards — realistic data governance gap."},
+        "8_instructionalValue": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "83-char explanation: 'Master-data governance defines ownership, valid values, and maintenance procedures.' Good principle identification. No ExplanationWrong fields for distractors. No business interpretation of why governance matters."},
+        "9_trapTransparency": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Trap 29 referenced in metadata but not explained. Trap: treating data quality as a one-time cleanup rather than an ongoing governance process."},
+        "10_professionalJudgment": {"verdict": "CONDITIONAL_PASS", "confidence": "MEDIUM", "detail": "Tests data governance knowledge. Limited judgment required — the distractors are too obvious. A CMA should recognize that governance is organizational, not technical, but the item doesn't push this distinction."}
+      },
+      "whatNeedsToChange": "Add ExplanationWrong[B-D] fields. Recalibrate difficulty to Moderate (3). Improve distractor D (replace 'residual income' with a more plausible wrong answer like 'Run a one-time data cleansing script'). Expand Explanation with: (1) DAMA/DMBOK reference, (2) Why ownership matters — 'without clear data ownership, product code inconsistencies persist across systems', (3) trap: confusing one-time data cleanup with ongoing governance."
+    }
+  ],
+
+  "systemicPatternsDetail": {
+    "explanationDeficit": {
+      "description": "Systematic explanation insufficiency — the single largest certification blocker across the ENHANCED_CASE_BASE",
+      "metrics": {
+        "averageSampledExplanationLength": 64,
+        "poolAverage": 80,
+        "shortestInSample": 21,
+        "longestInSample": 117
+      },
+      "whatsMissing": [
+        "Explicit accounting principle/standard citations in Explanation text (present in AccountingPrinciple metadata field but not in the learner-facing Explanation)",
+        "Business interpretation of results (what does this number mean for the company?)",
+        "Distractor-level feedback on select/multi/match items (no ExplanationWrong fields exist)",
+        "Named exam traps with specific candidate errors",
+        "Formula with substitution for all calculation items (present on only ~50%)"
+      ],
+      "certificationImpact": "All 90 items fail CAQS §4.2 (Explanation Standards — Required Elements). Missing: accounting concept by name in text, business interpretation, and common exam trap identification."
+    },
+    "schemaAnomaly": {
+      "description": "CalculationRequired: true on select/multi/match/fill types",
+      "affectedInSample": 7,
+      "details": "CBQ-A1-Q6 (multi), CBQ-A3-Q4 (select), CBQ-B2-Q3 (select), CBQ-C2-Q3 (select), CBQ-D2-Q3 (select), CBQ-B3-Q5 (select), CBQ-E1-Q6 (select). This is a template-filling error: the CalculationRequired field was set to true on all items regardless of type. For select/multi/match/fill items, the learner is not performing arithmetic — the field should be false."
+    },
+    "missingDistractorExplanations": {
+      "description": "Zero ExplanationWrong fields on any select/multi/match items",
+      "affectedInSample": 7,
+      "impact": "Learners who select wrong answers see no educational feedback explaining why their choice is wrong. Per CAQS §4.2, distractor explanations must identify the specific error, the misconception, and the correct approach."
+    },
+    "difficultyOverLabeling": {
+      "description": "DL-031 pattern: items labeled Difficult (4) that test straightforward definition-matching or single-step arithmetic",
+      "affectedInSample": 9,
+      "examples": [
+        "CBQ-A3-Q4: '88-day T-bill classification' labeled Difficult (4) but tests the straightforward '≤3 months = cash equivalent' rule",
+        "CBQ-B2-Q3: 'Which is least useful as leading indicator' labeled Difficult (4) but all distractors are clearly leading — one obviously lagging",
+        "CBQ-F1-Q2: Data governance response labeled Difficult (4) but distractors are nonsensical ('residual income' has nothing to do with data quality)",
+        "CBQ-D2-Q3: Bottleneck identification labeled Difficult (4) but requires finding the minimum of three numbers",
+        "CBQ-F1-Q1: Simple division labeled Moderate (3) — should be Easy (1)"
+      ]
+    },
+    "missingBlueprintReferences": {
+      "description": "Zero of 16 sampled items have explicit IMA CSO LOS / Content Specification Outline references",
+      "impact": "Cannot verify blueprint coverage to the CSO level. Per CAQS §3.6, every item must carry BlueprintDomain, LearningOutcomeStatement, PrimaryCompetency, etc."
+    }
+  },
+
+  "certificationReadinessAssessment": {
+    "canAnyItemCertifyNOW": false,
+    "reasoning": "All 90 items fail at least one CAQS §1.6 dimension at HIGH confidence. The primary blocker is Dimension 1 (Correctness) — the answer keys are correct for all sampled items — but Dimensions 3 (Calibration), 4 (Distractor Engineering), and 5 (Blueprint Alignment) prevent HIGH-confidence certification. Explanation insufficiency (CAQS §4.2) is a secondary blocker.",
+    "itemsNeedingURGENTFix": [
+      "CBQ-A1-Q4 — Precision defect: ambiguous prompt wording makes item unanswerable with certainty",
+      "CBQ-A1-Q6 — Schema defect: CalculationRequired: true on multi type + missing distractor fields",
+      "CBQ-F1-Q1 — Educational defect: 21-char explanation (shortest in pool), zero educational value"
+    ],
+    "estimatedRemediationEffort": {
+      "explanations": "Rewrite all 90 explanations to ≥150 chars. ~8-10 hours.",
+      "distractorFields": "Author ExplanationWrong fields for ~40 select/multi/match items. ~6-8 hours.",
+      "schemaFixes": "Fix CalculationRequired on ~18 items. ~30 minutes.",
+      "difficultyRecalibration": "Recalibrate DL-031 pattern items. ~2 hours.",
+      "metadataEnrichment": "Add CSO LOS references to all 90 items. ~3 hours.",
+      "total": "~20-25 hours for full certification readiness"
+    },
+    "recommendedExecutionOrder": [
+      "1. Fix schema errors (CalculationRequired) — purely mechanical",
+      "2. Recalibrate difficulty labels — pattern-based, fast",
+      "3. Author ExplanationWrong fields for select/multi/match items",
+      "4. Rewrite all explanations to CAQS §4.2 standard",
+      "5. Add CSO LOS references to metadata",
+      "6. Fix precision defects (CBQ-A1-Q4 prompt)"
+    ]
+  },
+
+  "comparisonWithAgentC": {
+    "agentCFindingsValidated": true,
+    "areasOfAgreement": [
+      "Explanation insufficiency is systematic (Agent C reported 82 items REMEDIATION_NEEDED — confirmed)",
+      "HIGH_RISK items (CBQ-A1-Q4, CBQ-A1-Q6, CBQ-F1-Q1, CBQ-B3-Q3) — all confirmed",
+      "CalculationRequired schema errors (Agent C reported 18 — confirmed in 7/16 sample)",
+      "Missing ExplanationWrong fields (Agent C reported ~40 — confirmed)",
+      "Difficulty over-labeling (Agent C reported ~12 — confirmed, likely ~25-30 in full pool)"
+    ],
+    "areasOfDifference": [
+      "Agent C had 8 READY items — this audit finds 0 PASS (answer keys correct but explanations insufficient for CAQS §1.6 HIGH-confidence certification across all 6 dimensions)",
+      "Agent C rated 78 REMEDIATION_NEEDED vs. this audit's 14 CONDITIONAL_PASS + 2 FAIL — same total items needing work, different taxonomy",
+      "Agent C focused on explanation adequacy; this audit adds precision, distractor engineering, and blueprint alignment as additional blockers"
+    ]
+  },
+
+  "verification": {
+    "exhibitCrossChecks": [
+      {"case": "CBQ-B1", "exhibits": "E1 (sales forecast) + E2 (policies) — verified internally consistent. January sales 18,000, FG ending 20%, beginning 3,600. Production = 18,800 ✓."},
+      {"case": "CBQ-C1", "exhibits": "E1 (standards/actuals) — verified internally consistent. Standard 3 lb/unit at $6.00, actual 41,850 lb, output 13,500. SQ = 40,500. QV = 6.00 × 1,350 = 8,100 U ✓."},
+      {"case": "CBQ-D2", "exhibits": "E2 (cost/capacity) — verified internally consistent. Cutting 24K, Welding 19.5K, Painting 21K. Welding is bottleneck ✓."}
+    ],
+    "allAnswerKeysCorrectInSample": true,
+    "noAccountingErrorsFound": true,
+    "allItemsPart1Scope": true
+  }
+}

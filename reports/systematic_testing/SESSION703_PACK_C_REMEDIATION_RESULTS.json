@@ -1,0 +1,489 @@
+{
+  "session": "703",
+  "timestamp": "2026-07-25T19:54:16.840Z",
+  "summary": {
+    "targets_total": 52,
+    "cleared": 52,
+    "failed": 0,
+    "dl008_only_cleared": 22,
+    "dl008_plus_dl016_cleared": 30,
+    "holdbacks": 0,
+    "already_clean": 0,
+    "missing": 0,
+    "errors": 0
+  },
+  "cleared": [
+    {
+      "qid": "P1-DC-019",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 304,
+      "fileLength": 304,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-100",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 529,
+      "fileLength": 529,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-099",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 527,
+      "fileLength": 527,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-098",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 483,
+      "fileLength": 483,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-097",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 454,
+      "fileLength": 454,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-096",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 446,
+      "fileLength": 446,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-095",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 424,
+      "fileLength": 424,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-088",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 465,
+      "fileLength": 465,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-084",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 397,
+      "fileLength": 397,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-083",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 422,
+      "fileLength": 422,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-082",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 499,
+      "fileLength": 499,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-081",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 550,
+      "fileLength": 550,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-080",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 544,
+      "fileLength": 544,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-079",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 480,
+      "fileLength": 480,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-078",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 574,
+      "fileLength": 574,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-077",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 408,
+      "fileLength": 408,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-076",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 520,
+      "fileLength": 520,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-075",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 498,
+      "fileLength": 498,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-074",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 503,
+      "fileLength": 503,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-073",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 408,
+      "fileLength": 408,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-069",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 386,
+      "fileLength": 386,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-065",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 383,
+      "fileLength": 383,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-061",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 399,
+      "fileLength": 399,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-059",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 345,
+      "fileLength": 345,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-058",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 350,
+      "fileLength": 350,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-057",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 406,
+      "fileLength": 406,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-053",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 399,
+      "fileLength": 399,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-049",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 448,
+      "fileLength": 448,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-045",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 399,
+      "fileLength": 399,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-041",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 399,
+      "fileLength": 399,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-037",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 461,
+      "fileLength": 461,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-033",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 461,
+      "fileLength": 461,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-032",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 423,
+      "fileLength": 423,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-029",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 406,
+      "fileLength": 406,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-028",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 406,
+      "fileLength": 406,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-025",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 461,
+      "fileLength": 461,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-024",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 406,
+      "fileLength": 406,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-021",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 423,
+      "fileLength": 423,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-020",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 399,
+      "fileLength": 399,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-017",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 408,
+      "fileLength": 408,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-016",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 461,
+      "fileLength": 461,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-013",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 423,
+      "fileLength": 423,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-010",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 461,
+      "fileLength": 461,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-009",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 423,
+      "fileLength": 423,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-007",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 384,
+      "fileLength": 384,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-006",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 375,
+      "fileLength": 375,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-005",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 408,
+      "fileLength": 408,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-004",
+      "cc": "D",
+      "field": "ExplanationWrongD",
+      "wasLength": 408,
+      "fileLength": 408,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-003",
+      "cc": "C",
+      "field": "ExplanationWrongC",
+      "wasLength": 348,
+      "fileLength": 348,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-BC-002",
+      "cc": "B",
+      "field": "ExplanationWrongB",
+      "wasLength": 354,
+      "fileLength": 354,
+      "classification": "DL-008_ONLY",
+      "decision": "safe_clear"
+    },
+    {
+      "qid": "P1-BC-001",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 408,
+      "fileLength": 408,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    },
+    {
+      "qid": "P1-AC-001",
+      "cc": "A",
+      "field": "ExplanationWrongA",
+      "wasLength": 439,
+      "fileLength": 439,
+      "classification": "DL-008_PLUS_DL-016",
+      "decision": "CC_VERIFIED_CLEAR_ALLOWED"
+    }
+  ],
+  "failed": [],
+  "holdbacks": [],
+  "already_clean": [],
+  "missing": []
+}

@@ -1,0 +1,126 @@
+{
+  "session": "310",
+  "title": "Forecast Dashboard — Completion Timeline & Milestones",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "baseline": {
+    "totalSessions": 17,
+    "confidence": "expected",
+    "range": "14-22 sessions",
+    "reductionFromS308": "43% (30→17)"
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "label": "300-Series Close",
+      "sessions": "1-3 (S308-S310)",
+      "status": "COMPLETE",
+      "keyMetric": "Portfolio dashboard published"
+    },
+    {
+      "phase": 2,
+      "label": "Domain E Baseline Certification",
+      "sessions": "4-5",
+      "status": "PENDING",
+      "keyMetric": "Assess 129 clone items, prepare replacement spec"
+    },
+    {
+      "phase": 3,
+      "label": "Domain F Greenfield Authoring",
+      "sessions": "6-8",
+      "status": "PENDING",
+      "keyMetric": "Author 149 new T&A items"
+    },
+    {
+      "phase": 4,
+      "label": "Domain E Replacement Execution",
+      "sessions": "9-11",
+      "status": "PENDING",
+      "keyMetric": "Author + certify 129 replacement items"
+    },
+    {
+      "phase": 5,
+      "label": "Case-bank EW Rollout",
+      "sessions": "12-14",
+      "status": "PENDING",
+      "keyMetric": "EW fill rate from 3.9% → 80%"
+    },
+    {
+      "phase": 6,
+      "label": "MCQ EW + Pack A Closeout",
+      "sessions": "15-16",
+      "status": "PENDING",
+      "keyMetric": "MCQ EW 71.5% → 88%, Pack A 100%"
+    },
+    {
+      "phase": 7,
+      "label": "Governance Closure",
+      "sessions": "17",
+      "status": "PENDING",
+      "keyMetric": "All tracks closed, attestation complete"
+    }
+  ],
+  "milestones": {
+    "completed": [
+      {
+        "id": "M0",
+        "label": "300-Series Analytics Complete",
+        "date": "2026-07-26"
+      },
+      {
+        "id": "M0b",
+        "label": "DL-008 Closed (0 items)",
+        "date": "2026-07-26"
+      },
+      {
+        "id": "M0c",
+        "label": "600-Series Deferred Decision",
+        "date": "2026-07-26"
+      }
+    ],
+    "upcoming": [
+      {
+        "id": "M1",
+        "label": "Domain E Baseline Complete",
+        "estimatedSessions": 2
+      },
+      {
+        "id": "M2",
+        "label": "Domain F Authoring Complete",
+        "estimatedSessions": 3
+      },
+      {
+        "id": "M3",
+        "label": "Domain E Replacement Complete",
+        "estimatedSessions": 3
+      },
+      {
+        "id": "M4",
+        "label": "Case-bank EW 80% Fill",
+        "estimatedSessions": 3
+      },
+      {
+        "id": "M5",
+        "label": "MCQ EW 88% Fill",
+        "estimatedSessions": 2
+      },
+      {
+        "id": "M6",
+        "label": "Pack A 100% Certified",
+        "estimatedSessions": 1
+      },
+      {
+        "id": "M7",
+        "label": "All Tracks Closed",
+        "estimatedSessions": 1
+      }
+    ]
+  },
+  "projectedCompletion": {
+    "certification": "2,500/2,500 (100%)",
+    "uiqs": "82.5 (B+)",
+    "ewFill": "88%",
+    "estimatedSessions": 17,
+    "estimatedCalendarDate": "~2026-08-15"
+  }
+}

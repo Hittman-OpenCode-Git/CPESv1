@@ -1,0 +1,19 @@
+{
+  "decision": "HYBRID",
+  "rationale": [
+    "S306 UIQS evidence shows Domains E/F carry BOTH certification debt (178+150 uncertified) AND quality debt (37 P0 items).",
+    "Certifying E/F (per CAQS §1.6) inherently requires EW authoring — the same remediation that fixes P0 quality deficits.",
+    "For already-certified deficit items (Pack C DL-008 cluster, case-bank EW gap at 3.9%), standalone EW remediation is needed.",
+    "A pure certification-first strategy leaves 67 DL-008 items in learner pool through Wave 3.",
+    "A pure EW-first strategy leaves 190 items uncertified at program end.",
+    "The hybrid approach: DL-008 immediate → Domain E cert (includes EW) → Domain F cert (includes EW) → standalone EW for certified gaps → remaining modernization."
+  ],
+  "evidenceBasis": [
+    "S306 UIQS: Portfolio 68.8, Domains E/F at 62.5/62.4 (C-grade)",
+    "S302 DQS: Case-bank distractor quality = 5 (F-grade), 96.1% EW gap",
+    "S303 EQS: 77.9% of portfolio instructional quality Grade F",
+    "S304 BQS: Domains E/F carry the portfolio's certification debt",
+    "S305 ExQS: EW gap confirmed as primary blocker, not exhibit quality",
+    "S800 Census: 67 DL-008 items in learner pool — safety priority"
+  ]
+}

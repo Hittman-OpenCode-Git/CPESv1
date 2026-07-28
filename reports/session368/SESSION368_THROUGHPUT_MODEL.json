@@ -1,0 +1,309 @@
+{
+  "session": "S368",
+  "date": "2026-07-28",
+  "type": "throughput-simulation",
+  "mode": "read-only",
+  "current_state": {
+    "total_items": 2540,
+    "certified_items": 2298,
+    "uncertified_items": 242,
+    "cognitive_gap_items": 866,
+    "analyze_current_pct": 5.8,
+    "evaluate_current_pct": 0.5,
+    "analyze_current_count": 147,
+    "evaluate_current_count": 13,
+    "analyze_evaluate_current_count": 160,
+    "analyze_target_count": 635,
+    "evaluate_target_count": 381,
+    "analyze_evaluate_target_count": 1016,
+    "analyze_gap": 488,
+    "evaluate_gap": 368,
+    "sections_uncertified": [
+      "Pack C: E(56) + F(56)",
+      "Pack D: E(56) + F(52)"
+    ],
+    "uncertified_detail": {
+      "Pack_A": 19,
+      "Pack_B": 0,
+      "Pack_C": 112,
+      "Pack_D": 111,
+      "Pack_E": 0
+    },
+    "dl031_inflated": "~500",
+    "readiness_score": 75,
+    "readiness_target": 80,
+    "pipeline_status": "PLATEAUED — label-change pipeline exhausted in Sections C/D. Cognitive growth requires stem rewrites or net-new authoring."
+  },
+  "reference_sessions": {
+    "s899_phase1": {
+      "items_authored": 20,
+      "defects": 0,
+      "type": "net-new item authoring (clone replacement)",
+      "proven_throughput": "20 items/session"
+    },
+    "s861": {
+      "items_directly_edited": 15,
+      "net_new_analyze_pool": 25,
+      "explanationcorrect_enhanced": 11,
+      "explanationwrong_authored": 10,
+      "defects": 0,
+      "type": "cognitive upgrade (Apply/Understand → Analyze)",
+      "throughput": "15 items directly edited, 25 net-new Analyze (includes rotation-clone inheritances)"
+    },
+    "s853": {
+      "items_upgraded": 22,
+      "defects_introduced": 1,
+      "defects_fixed": 1,
+      "type": "Analyze expansion (Remember/Understand/Apply → Analyze)",
+      "throughput": "22 Analyze items/session"
+    },
+    "s854": {
+      "items_upgraded": 3,
+      "target": 10,
+      "defects": 0,
+      "type": "Evaluate expansion",
+      "throughput": "3 Evaluate items/session (target of 10 not met — Section F items 83% definition-recall)"
+    },
+    "s861_s864": {
+      "total_edits": 16,
+      "sessions": 4,
+      "analyze_upgraded": 15,
+      "evaluate_upgraded": 1,
+      "defects": 0,
+      "throughput": "4 items/session for content edits; 6.25 Analyze+Evaluate/session"
+    },
+    "s865_s868": {
+      "total_edits": 30,
+      "sessions": 4,
+      "net_analyze_delta": -8,
+      "net_evaluate_delta": 9,
+      "defects": 0,
+      "throughput": "7.5 items/session; net Analyze+Evaluate: +1 (pipeline exhaustion)",
+      "key_finding": "Label-change pipeline EXHAUSTED. 147/147 Understand items in Sections C/D are definition-match."
+    },
+    "autonomous_run_2026_07_23": {
+      "duration_hours": 3.5,
+      "waves_completed": 5,
+      "items_fixed": 70,
+      "type": "defect remediation (DL-025, DL-026, DL-027)",
+      "throughput": "20 items fixed/hour (remediation is faster than authoring)",
+      "stop_condition": "Triggered at 478 cumulative fixes"
+    }
+  },
+  "throughput_calibrations": {
+    "analyze_authoring_rate": { "items_per_hour": "~4", "source": "S856 calibration" },
+    "evaluate_authoring_rate": { "items_per_hour": "~1", "source": "S856 calibration — requires stem redesign" },
+    "calibration_rate": { "items_per_hour": "~3", "source": "S359" },
+    "sustained_daily": { "items_per_day": 5.6, "source": "S362 expansion economics" },
+    "sessions_per_day": { "typical": 1, "source": "S359 entry density shows 1-2 peak sessions/day" },
+    "evaluate_vs_analyze_difficulty_multiplier": { "multiplier": 2.5, "source": "S360 bottleneck report: Analyze 21.9/hr vs Evaluate 11.3/hr ≈ 1.94x; S854: 3 Evaluate vs 22 Analyze ≈ 7.3x in practice. Weighted estimate: 2.5x" }
+  },
+  "throughput_models": {
+    "current_sustained": {
+      "label": "Current Sustained (5.6 items/day)",
+      "analyze_items_per_session": 5,
+      "evaluate_items_per_session": 1,
+      "mixed_cognitive_items_per_session": 6,
+      "label_change_items_per_session": 25,
+      "certification_verification_items_per_session": 12,
+      "assumptions": [
+        "~7.5 total items/session but ~5 are net cognitive upgrades",
+        "Evaluate is 2.5x harder → 1 Evaluate = 2.5 Analyze in effort",
+        "1 session per calendar day",
+        "Label changes (DL-031) are fast but do not close cognitive gap",
+        "Certification verification (structural checks) is faster than creative authoring",
+        "Based on S359/S362/S868 measured throughput data"
+      ],
+      "scenarios": {
+        "reach_20pct_analyze": {
+          "description": "Reach 20% pool-wide Analyze (508 items, +361 from current 147)",
+          "items_needed": 361,
+          "sessions_needed": 73,
+          "calendar_days": 73,
+          "work_weeks": 14.6
+        },
+        "reach_30pct_analyze": {
+          "description": "Reach 30% pool-wide Analyze (762 items, +615 from current 147)",
+          "items_needed": 615,
+          "sessions_needed": 123,
+          "calendar_days": 123,
+          "work_weeks": 24.6
+        },
+        "reach_40pct_analyze_evaluate": {
+          "description": "Reach 40% Analyze+Evaluate combined (1,016 items, +856 from current 160)",
+          "items_needed": 866,
+          "sessions_needed": 144,
+          "calendar_days": 144,
+          "work_weeks": 28.8,
+          "note": "At current single-person velocity, the cognitive gap would close in ~7 months of continuous work. This assumes no defect regressions, no additional defects discovered, and sustained commitment."
+        },
+        "full_certification": {
+          "description": "Certify all 242 remaining uncertified items (structural verification + remediation of Sections E+F)",
+          "items_needed": 242,
+          "sessions_needed": 21,
+          "calendar_days": 21,
+          "work_weeks": 4.2
+        }
+      }
+    },
+    "s899_peak": {
+      "label": "S899 Peak (20 items/session)",
+      "analyze_items_per_session": 20,
+      "evaluate_items_per_session": 5,
+      "assumptions": [
+        "20 items/session for net-new Analyze authoring (S899 Phase 1 proved, zero defects)",
+        "Evaluate authoring is fundamentally slower: 5 items/session due to stem redesign",
+        "Items authored from scratch at desired cognitive level — no label-change pipeline dependency",
+        "Uses 183 archived DL-012 clone slots in Pack C+D Sections E+F as insertion points",
+        "1 session per calendar day sustained",
+        "Based on S899 Phase 1 completion report and S360 bottleneck analysis"
+      ],
+      "scenarios": {
+        "reach_20pct_analyze": {
+          "description": "Reach 20% pool-wide Analyze via dedicated Analyze authoring sessions",
+          "items_needed": 361,
+          "sessions_needed": 19,
+          "calendar_days": 19,
+          "work_weeks": 3.8
+        },
+        "reach_30pct_analyze": {
+          "description": "Reach 30% pool-wide Analyze",
+          "items_needed": 615,
+          "sessions_needed": 31,
+          "calendar_days": 31,
+          "work_weeks": 6.2
+        },
+        "reach_40pct_analyze_evaluate": {
+          "description": "Reach 40% Analyze+Evaluate (488 Analyze + 368 Evaluate at 20/5 per session ratio)",
+          "items_needed": 866,
+          "analyze_only_sessions": 25,
+          "evaluate_only_sessions": 74,
+          "mixed_sessions_needed": 99,
+          "calendar_days": 99,
+          "work_weeks": 19.8,
+          "note": "Evaluate is the long pole. Even at S899 peak, 368 Evaluate items at 5/session = 74 sessions for Evaluate alone. The bottleneck shifts from 'throughput' to 'Evaluate complexity.'"
+        }
+      }
+    },
+    "automation_assisted": {
+      "label": "Automation-Assisted (projected 12 items/session)",
+      "analyze_items_per_session": 8,
+      "evaluate_items_per_session": 4,
+      "assumptions": [
+        "S367 identified 60-80% QC overhead reduction → ~40% throughput gain on current 7.5 items/session",
+        "Clone replacement scaffolder saves ~3 min/metadata per item (S367 §5.4)",
+        "Post-change QC automation saves ~2h per change-set (S367 §7.1, Recommendation #2)",
+        "DL-031 scanner bulk downgrade saves ~10h across 500 items (S367 §3.3)",
+        "Net effect: 7.5 → 12 items/session (~1.6x throughput)",
+        "Evaluate throughput improves from 1 → 4 due to scaffolding reducing mechanical overhead",
+        "1 session per calendar day",
+        "Based on S367 time-loss analysis automation projections (automation score 48→56)"
+      ],
+      "scenarios": {
+        "reach_20pct_analyze": {
+          "description": "Reach 20% pool-wide Analyze with automation-assisted throughput",
+          "items_needed": 361,
+          "sessions_needed": 46,
+          "calendar_days": 46,
+          "work_weeks": 9.2
+        },
+        "reach_30pct_analyze": {
+          "description": "Reach 30% pool-wide Analyze",
+          "items_needed": 615,
+          "sessions_needed": 77,
+          "calendar_days": 77,
+          "work_weeks": 15.4
+        },
+        "reach_40pct_analyze_evaluate": {
+          "description": "Reach 40% Analyze+Evaluate with automation assisting Evaluate throughput",
+          "items_needed": 866,
+          "analyze_sessions": 61,
+          "evaluate_sessions": 92,
+          "total_sessions_needed": 153,
+          "calendar_days": 153,
+          "work_weeks": 30.6,
+          "note": "Reduce to 108 sessions if 183 archived slots are fully utilized with automation scaffolding"
+        }
+      }
+    }
+  },
+  "sensitivity_analysis": {
+    "what_if_doubling_velocity": {
+      "description": "Two full-time contributors working in parallel. Session count halved but calendar time depends on session-per-day constraint.",
+      "current_throughput_2x": "10 cognitive items/session",
+      "sessions_to_40pct": 87,
+      "calendar_weeks_at_1_session_per_day": 17.4,
+      "calendar_weeks_at_2_independent_sessions_per_day": 8.7,
+      "constraint": "Single contributor model at 1 session/day. Two contributors doing independent sessions could halve calendar time."
+    },
+    "what_if_focused_analyze_only": {
+      "description": "Ignore Evaluate gap (15% CAQS target). Focus all effort on closing only the Analyze gap (25% CAQS target). This is suboptimal for CAQS compliance but realistic if Evaluate authoring throughput is the binding constraint.",
+      "items_needed": 488,
+      "sessions_at_current_rate": 98,
+      "sessions_at_peak_rate": 25,
+      "sessions_at_automation_rate": 61,
+      "evaluate_consequence": "Evaluate would remain at ~0.5% vs 15% CAQS target. Pool passes Analyze dimension but fails Evaluate dimension of CAQS §6.2."
+    },
+    "what_if_label_change_only": {
+      "description": "DL-031 recalibration only — re-label ~500 definition-match items from Moderate→Easy. Improves difficulty distribution but does NOT change cognitive distribution.",
+      "sessions_needed": 3,
+      "cognitive_impact": "ZERO — labels change, cognitive levels unchanged. Difficulty distribution looks better on reports but actual cognitive demand of items is identical. Does not move readiness score. Does not close Analyze/Evaluate gap. Is purely cosmetic for analytics accuracy.",
+      "difficulty_impact": "Improves difficulty distribution accuracy. ~500 items move from Moderate→Easy. Difficulty distribution shifts closer to CAQS §6.1 targets. Enables accurate blueprint reporting.",
+      "why_it_doesnt_solve_the_problem": "The analytic coverage report would show 'correct' difficulty labels but still 5.8% Analyze+Evaluate vs. 40% CAQS target. The candidate still answers the same definition-match items — they're just labeled honestly now."
+    },
+    "what_if_sections_e_f_certification_only": {
+      "description": "Goal: 100% pool certification (2,540/2,540) without addressing cognitive gap. Focus only on structural remediation + question_state certification of Sections E+F.",
+      "items_needed": 242,
+      "sessions_at_current_cert_rate": 21,
+      "sessions_at_peak_rate": 12,
+      "cognitive_gap_after": "Still 866 items. 100% certified pool with 5.8% Analyze+Evaluate. Platform is 'complete' but does not meet CAQS cognitive standards."
+    },
+    "what_if_evaluate_outsourced": {
+      "description": "Two-person team where a second contributor handles all Evaluate authoring. Person 1: continuous Analyze pipeline. Person 2: dedicated Evaluate pipeline.",
+      "person1_analyze_sessions_to_target": 31,
+      "person2_evaluate_sessions_to_target": 74,
+      "parallel_calendar_days": "max(31, 74) = 74 days (Evaluate is still long pole)",
+      "note": "Even with parallelization, Evaluate gap at 5/session S899 rate = 74 sessions. This is the irreducible constraint of Evaluate content design complexity."
+    }
+  },
+  "binding_constraint_assessment": {
+    "primary_constraint": "Content design capacity — not governance, not architecture, not review capacity",
+    "evidence": [
+      "S868 found pipeline plateaued at readiness 75 because label-change upgrades are exhausted",
+      "S359 confirmed 1,248 Understand items are predominantly definition-match — cannot be upgraded via metadata alone",
+      "S865 found ZERO Analyze candidates in Sections C/D — pipeline is structurally empty",
+      "S854 found only 2 of 12 Section F items had natural Evaluate potential — template pipeline creates definition-recall items",
+      "S899 proved 20 items/session is achievable with zero defects — the model works, it's not sustained",
+      "S362 concluded: 'The binding constraint is content design throughput, not governance, not review capacity, not infrastructure'"
+    ],
+    "secondary_constraints": [
+      "30-item batch cap (Rule 5) limits batch remediation throughput but is NOT the binding constraint for cognitive upgrades (creative work produces fewer items than the cap)",
+      "DL-016 metadata-content drift requires per-item verification of dual-block items during authoring — adds ~0.5 min/item overhead",
+      "Pack C Section F structural corruption (15 unparseable items, 42 XXXMARKERs) must be cleaned before certification operations",
+      "No automated pre-certification quality gate for DL-026/DL-031 — these defects pass through unchecked",
+      "MASTER_QUESTION_REGISTRY.md is 2 days stale with broken section categorization — coverage planning tools produce unreliable data"
+    ],
+    "not_a_constraint": [
+      "Governance guard (9 BLOCK rules, 51/51 tests) — fully automated, zero false positives",
+      "Validator infrastructure — functional and recently repaired (DL-020 brace-matcher fixed)",
+      "Backup protocol — automated and enforced",
+      "Case-study pool — 100% certified (75 cases, 400 items), no outstanding defects",
+      "May coaching layer — operational, no production blockers"
+    ]
+  },
+  "data_sources": [
+    "reports/session861/SESSION861_AUTHORING_METRICS.md",
+    "reports/session868/SESSION868_EXPANSION_PROGRAM_SCORECARD.json",
+    "reports/session868/SESSION868_EXECUTIVE_DECISION.md",
+    "reports/sustainability/SESSION359_CONTENT_SUSTAINABILITY.json",
+    "reports/sustainability/SESSION362_EXECUTIVE_DECISION.md",
+    "reports/sustainability/SESSION360_BOTTLENECK_REPORT.md",
+    "reports/sustainability/SESSION365_AUTOMATION_AUDIT.json",
+    "reports/session367/SESSION367_TIME_LOSS_ANALYSIS.md",
+    "reports/session853/SESSION853_CONTENT_VALIDATION.md",
+    "reports/session853/SESSION853_ANALYZE_EXPANSION_RESULTS.json",
+    "reports/session854/SESSION854_EVALUATE_EXPANSION_RESULTS.json",
+    "reports/session_status/AUTONOMOUS_RUN_2026-07-23.md",
+    "knowledge/CURRENT_BASELINES.md"
+  ]
+}

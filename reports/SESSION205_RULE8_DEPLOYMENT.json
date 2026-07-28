@@ -1,0 +1,110 @@
+{
+  "document": "SESSION205_RULE8_DEPLOYMENT",
+  "session": "S205",
+  "board": "B — Governance Rule 8 Activation",
+  "program": "Framework v2 Deployment Authorization",
+  "date": "2026-07-27",
+  "type": "Governance Rule Activation — Read-Only",
+  "status": "ACTIVATED",
+
+  "rule_definition": {
+    "rule_id": "R8",
+    "name": "Scan Once / Consume Many — Mandatory for v2 Operations",
+    "category": "Operational Governance — Pipeline Architecture",
+    "priority": "CRITICAL",
+    "activation_date": "2026-07-27",
+    "activated_by": "S205 Deployment Authorization Board (J)"
+  },
+
+  "rule_text": "All Framework v2 boards shall consume from a single Certification Scan Artifact generated once per session by the Registry Board. No board may execute independent scans, parse pack files directly, or generate its own defect inventory. The Certification Scan Artifact, conforming to the S202.1 canonical schema (9 sections, 10 validation rules), is the single source of truth for all per-item scan results, defect flags, readiness classifications, content hashes, and governance attestations created during that session.",
+
+  "enforcement": {
+    "mechanism": "Board consumption contracts (S202.1 Board Consumption Matrix). Each board specifies which artifact sections it requires, at which minimum version. The Scan Orchestrator (S322 Script 3) is the only component authorized to generate or update the Certification Scan Artifact. All other scripts consume existing artifact files.",
+    "technical_implementation": "S322 Script 3 (scan_orchestrator.js) runs Gate -1 through Gate 4 → produces CERTIFICATION_SCAN_ARTIFACT.json. S322 Script 4 (report_reducer.js) consumes the artifact → produces QUALITY_VERDICT.json. S322 Script 5 (recommendation_registry.js) consumes the artifact → produces RECOMMENDATION_REGISTRY.json. S322 Script 7 (readiness_scorer.js) consumes the artifact → produces readiness classifications. No script generates its own scan results.",
+    "violation_consequence": "If a board agent independently scans pack files (bypassing the artifact), its results are quarantined — they are compared against the single-source-of-truth artifact. Any discrepancy triggers a governance audit (G1-G5 reconciliation runbook). The independent scan results are discarded unless the audit confirms a genuine artifact defect."
+  },
+
+  "evidence_basis": {
+    "v1_problem": "S200 Agent B/D documented 2.5:1 duplicate review cycles (peak 6.2:1 in S809 chain). 22 DL-008 scans executed across 6 independent sessions on the same inventory — each session re-discovering the same defects. S809 chain (S809 → S809.1 → S809.2 → S810.1) saw ~60 agent-spawns examining 38 items with 1 genuinely novel finding.",
+    "v2_solution": "One scan per session. One artifact. All boards consume the same artifact sections. The S202.1 Board Consumption Matrix formalizes per-board requirements. The S202.1 Artifact Storage Spec defines the lifecycle. The S202.1 Artifact Economics document quantifies −73% DL-008 scans, −90% review effort, −56% reports.",
+    "s204_validation": "S204 Board C confirmed 2.17:1 per-session redundancy reduction, 6.33:1 across 4-session chains. ~9.5 minutes eliminated per session. All 15 scan sub-results consumed by 3-5 boards without re-execution."
+  },
+
+  "artifact_sections_and_consumers": {
+    "scanContext": {
+      "consumers": ["Registry Board (lineage)", "Throughput Board (runtime metrics)", "Governance Board (audit trail)"],
+      "mandatory": true
+    },
+    "packFileHashes": {
+      "consumers": ["Registry Board (integrity verification)", "Governance Board (drift detection)"],
+      "mandatory": true
+    },
+    "aggregateStatistics": {
+      "consumers": ["All Boards (portfolio snapshot, defect density, readiness distribution)"],
+      "mandatory": true
+    },
+    "perItemResults": {
+      "consumers": ["All Boards (per-item scan results, defect flags, readiness class)"],
+      "mandatory": true
+    },
+    "defectInventory": {
+      "consumers": ["Certification Board (blocking items)", "Governance Board (learner-pool safety)", "Recommendation Pipeline (finding creation)"],
+      "mandatory": true
+    },
+    "readiness": {
+      "consumers": ["Governance Board (Go/No-Go)", "Certification Board (session plan)", "Throughput Board (BF-004 metric)"],
+      "mandatory": true
+    },
+    "lineage": {
+      "consumers": ["Registry Board (version chain)", "Governance Board (audit trail)"],
+      "mandatory": true
+    },
+    "governanceAttestation": {
+      "consumers": ["Governance Board (rule compliance verification)", "Certification Board (pre-certification gate)"],
+      "mandatory": true
+    },
+    "consumerDigest": {
+      "consumers": ["All Boards (compatibility check, artifact integrity hash)"],
+      "mandatory": true
+    }
+  },
+
+  "interaction_with_other_rules": {
+    "R6 (READY Required)": "R6 consumes readiness_classification from section 6 of the R8 artifact. R6 is not independently computed.",
+    "R7 (Identity Validation)": "R7 is executed in Gate -1 of the R8 pipeline. Identity block flags are part of section 4 (perItemResults).",
+    "Governance Guard R3": "R3 (MASTER_QUESTION_REGISTRY.md is generated) aligns with R8 — the registry is generated once from the artifact, not independently rebuilt by each board."
+  },
+
+  "forbidden_actions_under_R8": [
+    "Executing Select-String or grep on pack files to count DL-008 — use artifact section 5 (defectInventory) instead",
+    "Running independent scan_dl026.js against pack files — use artifact section 5",
+    "Parsing pack files via Function constructor to verify item counts — use artifact section 3 (aggregateStatistics)",
+    "Computing readiness classifications independently — use artifact section 6",
+    "Generating recommendations from raw file inspection — use artifact section 5 → S322 Script 5 pipeline"
+  ],
+
+  "permitted_exceptions": [
+    "Governance audit: direct file inspection is permitted when verifying an artifact claim (per AGENTS.md §5 dual-verification). The audit result must be compared against the artifact. If they disagree, the artifact is re-generated.",
+    "Pack hash verification: hash_engine.js (S322 Script 2) re-computes pack-level hashes at session T0. The resulting hashes are compared against delta_ledger.json. If they differ, drift analysis is triggered (not a new scan).",
+    "Identity re-validation at T0: identity_validator.js (S322 Script 1) runs at session start for hash-comparison, not for per-item scan purposes. Its output is compared against the previous artifact; discrepancies trigger delta review, not re-classification."
+  ],
+
+  "activation_conditions": {
+    "s322_scan_orchestrator": "scan_orchestrator.js — 10/10 self-test PASS. Produces valid CERTIFICATION_SCAN_ARTIFACT.json.",
+    "s2021_schema": "SESSION2021_SCAN_ARTIFACT_SCHEMA.json — 9 sections, 10 validation rules formalized.",
+    "s2021_consumption": "SESSION2021_BOARD_CONSUMPTION_MATRIX.json — 5 boards, per-section requirements documented.",
+    "s204_redundancy_elimination": "2.17:1 per-session, 6.33:1 cross-session validated.",
+    "verdict": "RULE 8 ACTIVATED — Scan Once / Consume Many is mandatory for all Framework v2 operations."
+  },
+
+  "cross_references": {
+    "rule_6": "SESSION205_RULE6_DEPLOYMENT.json",
+    "rule_7": "SESSION205_RULE7_DEPLOYMENT.json",
+    "s2021_schema": "SESSION2021_SCAN_ARTIFACT_SCHEMA.json",
+    "s2021_consumption": "SESSION2021_BOARD_CONSUMPTION_MATRIX.json",
+    "s2021_storage": "SESSION2021_ARTIFACT_STORAGE_SPEC.json",
+    "s2021_economics": "SESSION2021_ARTIFACT_ECONOMICS.json",
+    "s204_scan": "SESSION204_SCAN_ARTIFACT_RESULTS.json",
+    "s322_orchestrator": "scripts/scan_orchestrator.js"
+  }
+}

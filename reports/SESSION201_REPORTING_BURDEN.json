@@ -1,0 +1,137 @@
+﻿{
+  "total_report_files": 1227,
+  "total_content_files_excl_bak": 1225,
+  "total_size_kb": 39724.83,
+  "by_extension": {
+    ".json": 843,
+    ".md": 372,
+    ".csv": 4,
+    ".txt": 6,
+    ".bak": 2
+  },
+  "by_subfolder": {
+    "reports_root": 698,
+    "systematic_testing": 236,
+    "session_status": 191,
+    "defect_sweeps": 30,
+    "S810.1": 23,
+    "reconciliation": 19,
+    "audit": 13,
+    "remediation": 13,
+    "SESSION116_EXPORTS": 9,
+    "S809_1": 9,
+    "SESSION118_EXPORTS": 8,
+    "S809.2": 2,
+    "certification": 1,
+    "sessions": 1,
+    "empty_dirs_logs_loose_temp_session806": 0
+  },
+  "size_by_subfolder_kb": {
+    "reports_root": 15669.4,
+    "session_status": 11441.5,
+    "systematic_testing": 9505.4,
+    "defect_sweeps": 1705.7,
+    "S810.1": 623.1,
+    "audit": 224.8,
+    "reconciliation": 222.2,
+    "remediation": 171.3,
+    "S809.2": 89.2,
+    "certification": 43.5,
+    "sessions": 28.8
+  },
+  "classification": {
+    "produced_mentioned_in_revision_history": 725,
+    "consumed_cross_referenced_from_governance_docs": 432,
+    "never_referenced_in_any_governance_doc": 492,
+    "total_unique_basenames": 1217
+  },
+  "consumption_rate_percent": {
+    "broadly_mentioned_in_revision_history": 59.6,
+    "cross_referenced_as_consumed_source": 35.5,
+    "estimated_actually_consumed_by_later_sessions": 35.0
+  },
+  "per_session_average": {
+    "all_sessions": 6.9,
+    "post_s300_sessions": 11.2,
+    "by_series": {
+      "100_series": 2.7,
+      "300_series": 13.2,
+      "500_series": 3.7,
+      "600_series": 10.4,
+      "700_series": 9.9,
+      "800_series": 11.7
+    },
+    "peak_session_files": 29,
+    "peak_session": "S726",
+    "trend": "INCREASING from ~3 to ~12 files/session over project lifetime"
+  },
+  "retention_recommendation": {
+    "keep_types": [
+      "Session summaries (*_SESSION_SUMMARY.md) — primary cross-session handoff mechanism",
+      "Portfolio-level dashboards (*_DASHBOARD.json from milestone sessions only)",
+      "Risk registers (*_RISK_REGISTER.json) — consumed by downstream planning",
+      "Completion forecasts (*_COMPLETION_FORECAST.json) — used by next-wave planning",
+      "Certification results (*_CERTIFICATION_RESULTS.json) — consumed by portfolio dashboards",
+      "Defect sweep reports (defect_sweeps/*.md) — cross-referenced from DEFECT_LIBRARY.md",
+      "Governance attestations (*_GOVERNANCE_ATTESTATION.md) — required for compliance trail",
+      "Session status files (session_status/SESSION_STATUS_*.md) — authoritative state snapshots"
+    ],
+    "retire_types": [
+      "Individual agent outputs (agent_*.json, SESSION301_AGENT_*.json) — 120+ files, consumed only within their session",
+      "Duplicate dashboard variants (6-7 per session S310+) — merge to single DASHBOARD.json per session",
+      "Meta-reporting packages (*_REPORTING_PACKAGE.json) — reports about reports, zero downstream value",
+      "100-series incremental status logs (SESSION100-SESSION135) — 170 files, zero downstream reference",
+      "Pilot dry-run exports (SESSION116_EXPORTS/*.json, SESSION118_EXPORTS/*.json) — 17 synthetic student files",
+      "Per-session non-milestone dashboards — S314 dashboard consumed only by S315, then forgotten",
+      "One-off snapshot audits (Closure Baseline, Dependency Map, Strategy Board) — consumed within session only",
+      "Legacy naming variants (S809.2_AGENT_*, s116_pilot_*) — inconsistent naming, zero traceability",
+      "Forecast duplicates (FORECAST + COMPLETION_FORECAST per session) — merge to single file"
+    ]
+  },
+  "top_duplicated_content": {
+    "certified_item_count": {
+      "description": "Certified item count (2,181 -> 2,221) appears in ~8 files per reporting session: DASHBOARD.json, SESSION_SUMMARY.md, PORTFOLIO_IMPACT_ANALYSIS.json, CERTIFICATION_RESULTS.json, FORECAST.json, GOVERNANCE_PRESERVATION_AUDIT.json, RISK_REGISTER.json, EXECUTIVE_SUMMARY.md",
+      "estimated_total_appearances": 450
+    },
+    "governance_guard_result": {
+      "description": "Governance guard N/N PASS appears in SESSION_SUMMARY.md, DASHBOARD.json, GOVERNANCE_PRESERVATION_AUDIT.json",
+      "estimated_total_appearances": 120
+    },
+    "total_item_count": {
+      "description": "2,500 MCQ + 400 cases = 2,900 total appears in SESSION_SUMMARY.md, DASHBOARD.json, FORECAST.json, PORTFOLIO_IMPACT_ANALYSIS.json",
+      "estimated_total_appearances": 200
+    },
+    "explanation_wrong_fill_rate": {
+      "description": "EW fill rate / EW gap metrics in DASHBOARD.json (EW variant), PORTFOLIO_IMPACT_ANALYSIS.json, EW_INTEGRITY_AUDIT.json",
+      "estimated_total_appearances": 90
+    },
+    "section_certification_pct": {
+      "description": "Section-level certification percentage per domain in CERTIFICATION_RESULTS.json, PORTFOLIO_IMPACT_ANALYSIS.json, DASHBOARD.json, SESSION_SUMMARY.md",
+      "estimated_total_appearances": 150
+    },
+    "portfolio_health_index": {
+      "description": "Portfolio Health Index / UIQS score in DASHBOARD.json, PORTFOLIO_IMPACT_ANALYSIS.json, EXECUTIVE_SUMMARY.md",
+      "estimated_total_appearances": 80
+    }
+  },
+  "top_file_producing_sessions": [
+    { "session": "S726", "files": 29, "note": "Governance operations — 17 JSON + 12 MD" },
+    { "session": "S301", "files": 27, "note": "26 agent JSON reports + 1 MD summary" },
+    { "session": "S307", "files": 25, "note": "24 JSON + 1 MD — strategy engine outputs" },
+    { "session": "S723", "files": 25, "note": "21-agent governance closure package" },
+    { "session": "S725", "files": 25, "note": "19 JSON + 6 MD — governance architecture design" },
+    { "session": "S308", "files": 24, "note": "23 JSON + 1 MD — forecast engine" },
+    { "session": "S802", "files": 24, "note": "23 JSON + 1 MD — scoping explosion" }
+  ],
+  "recommended_immediate_actions": [
+    "MERGE: Dashboard variants (6-7 per session S310+) into single DASHBOARD.json per session",
+    "ELIMINATE: REPORTING_PACKAGE meta-reports (3 files) — reports about reports",
+    "EMBED: Agent outputs into session summaries rather than persisting as standalone JSON",
+    "ARCHIVE: 100-series status logs (170 files, 62 sessions) — zero downstream consumption",
+    "MERGE: PORTFOLIO_IMPACT + CERTIFICATION_RESULTS + QUALITY_GATE into single Results Package",
+    "STANDARDIZE: Subdirectory organization — scatter across root, session_status/, systematic_testing/, S810.1/, sessions/ is unsustainable",
+    "DEPRECATE: Non-standard naming (S809.2_*, s116_pilot_*) in favor of SESSIONXXX_ prefix",
+    "CAP: Add 'max 8 files per session' soft cap to governance — sessions exceeding 8 need BLOCK-AUTHORIZED marker"
+  ],
+  "methodology_note": "File counts exclude 2 .bak backup copies of GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md. Consumption analysis cross-references REVISION_HISTORY.md (1,235,584 chars), DEFECT_LIBRARY.md, and AGENTS.md. S200 analysis reported 1,212 files; the additional 15 files (1,227 minus 1,212) are S200/S201 session outputs created during/after the S200 reporting analysis. Unique basename count (1217) is lower than file count (1225 content files) because 8 files share basenames with different extensions."
+}

@@ -1,0 +1,279 @@
+{
+  "generatedAt": "2026-07-25T20:16:07.730Z",
+  "environment": "pre-production",
+  "syntheticData": true,
+  "selectedLearnerId": "learner-ms0t7cxc",
+  "studentRoll": [],
+  "pilotUsageLog": [
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "explain",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": false,
+      "safetyViolations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice B"
+      ],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "hint",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": true,
+      "safetyViolations": [],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "wrong-choices",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": true,
+      "safetyViolations": [],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "simplify",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": false,
+      "safetyViolations": [
+        "ANSWER_LEAKAGE_HINT: hint level 1 reveals correct choice B"
+      ],
+      "gateSafe": null
+    }
+  ],
+  "safetyLog": [
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "explain",
+      "textLength": 176,
+      "safe": false,
+      "violations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice B"
+      ],
+      "hintLevel": 0,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "hint",
+      "textLength": 307,
+      "safe": true,
+      "violations": [],
+      "hintLevel": 1,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "wrong-choices",
+      "textLength": 377,
+      "safe": true,
+      "violations": [],
+      "hintLevel": 1,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.729Z",
+      "sourceLabel": "simplify",
+      "textLength": 328,
+      "safe": false,
+      "violations": [
+        "ANSWER_LEAKAGE_HINT: hint level 1 reveals correct choice B"
+      ],
+      "hintLevel": 1,
+      "examMode": false,
+      "pilotActive": true
+    }
+  ],
+  "gateLog": [],
+  "sessionTelemetry": [
+    {
+      "event": "greeting_flow_started",
+      "timestamp": "2026-07-25T20:16:07.727Z",
+      "learnerId": null,
+      "data": {
+        "state": "ASK_RETURNING"
+      }
+    },
+    {
+      "event": "greeting_response",
+      "timestamp": "2026-07-25T20:16:07.727Z",
+      "learnerId": null,
+      "data": {
+        "response": "no"
+      }
+    },
+    {
+      "event": "new_student_created",
+      "timestamp": "2026-07-25T20:16:07.728Z",
+      "learnerId": "learner-ms0t7cxc",
+      "data": {
+        "learnerId": "learner-ms0t7cxc",
+        "displayName": "Jamie Dryrun"
+      }
+    },
+    {
+      "event": "session_start",
+      "timestamp": "2026-07-25T20:16:07.730Z",
+      "learnerId": "learner-ms0t7cxc",
+      "data": {
+        "learnerId": "learner-ms0t7cxc",
+        "action": "returning_skip_handshake"
+      }
+    }
+  ],
+  "calibrationExport": {
+    "thresholdSnapshot": {
+      "accuracyHigh": 80,
+      "accuracyGood": 75,
+      "accuracyLow": 60,
+      "stabilityHigh": 75,
+      "stabilityGood": 60,
+      "stabilityLow": 50,
+      "recentPctHigh": 80,
+      "recentPctGood": 70,
+      "minAttemptsReady": 6,
+      "minAttemptsApproaching": 4,
+      "minAttemptsTopic": 3,
+      "caseBurdenDegradeMisses": 4,
+      "modelVersion": "S111-1.0",
+      "dataContext": {
+        "sessionCount": 0,
+        "topicsWithData": 0,
+        "recoveryCount": 0,
+        "readyCount": 0,
+        "caseSessions": 0,
+        "caseMissesTotal": 0
+      }
+    },
+    "readinessSummary": {
+      "overall": {
+        "band": "Not enough data",
+        "rationale": "No practice sessions recorded yet.",
+        "signals": [
+          "no_sessions"
+        ],
+        "confidence": "high"
+      },
+      "topics": [],
+      "caseReadiness": {
+        "band": "Not enough data",
+        "rationale": "No case miss data yet — complete at least one case session.",
+        "signals": [
+          "no_case_data"
+        ],
+        "dominantPattern": null,
+        "dominantTrend": null,
+        "totalCaseMisses": 0,
+        "sessionsWithCases": 0
+      },
+      "hasEnoughData": false,
+      "dataNote": "No practice data yet. Complete at least one session to begin readiness tracking.",
+      "_provenance": {
+        "modelVersion": "S111-1.0",
+        "computedAt": "2026-07-25T20:16:07.730Z",
+        "triggerSignals": [
+          "no_sessions"
+        ],
+        "decisiveFactors": [
+          "Zero sessions"
+        ],
+        "thresholdsApplied": {
+          "minAttemptsReady": 6,
+          "minAttemptsApproaching": 4,
+          "minAttemptsTopic": 3,
+          "accuracyHigh": 80,
+          "accuracyGood": 75,
+          "accuracyLow": 60,
+          "stabilityHigh": 75,
+          "stabilityGood": 60,
+          "stabilityLow": 50,
+          "recentPctHigh": 80,
+          "recentPctGood": 70,
+          "caseBurdenDegrade": false
+        },
+        "dataContext": {
+          "sessionCount": 0,
+          "topicsWithData": 0,
+          "recoveryCount": 0,
+          "readyCount": 0,
+          "caseSessions": 0,
+          "caseMissesTotal": 0
+        }
+      }
+    },
+    "sectionReadiness": null,
+    "trends": [],
+    "clusters": {
+      "persistentWeak": [],
+      "improving": [],
+      "declining": [],
+      "unstable": [],
+      "hintDependent": [],
+      "difficultySensitive": []
+    },
+    "calibration": {},
+    "calibrationMetrics": [],
+    "casePatternSummary": null,
+    "casePatternTrends": [],
+    "adaptivePracticeMix": {
+      "mode": "Insufficient Data",
+      "reason": "Complete at least one practice session before optimization is available.",
+      "badge": "NEED_DATA"
+    },
+    "exportedAt": "2026-07-25T20:16:07.730Z"
+  },
+  "thresholdSnapshot": {
+    "accuracyHigh": 80,
+    "accuracyGood": 75,
+    "accuracyLow": 60,
+    "stabilityHigh": 75,
+    "stabilityGood": 60,
+    "stabilityLow": 50,
+    "recentPctHigh": 80,
+    "recentPctGood": 70,
+    "minAttemptsReady": 6,
+    "minAttemptsApproaching": 4,
+    "minAttemptsTopic": 3,
+    "caseBurdenDegradeMisses": 4,
+    "modelVersion": "S111-1.0",
+    "dataContext": {
+      "sessionCount": 0,
+      "topicsWithData": 0,
+      "recoveryCount": 0,
+      "readyCount": 0,
+      "caseSessions": 0,
+      "caseMissesTotal": 0
+    }
+  },
+  "modelVersion": "S111-1.0",
+  "learnerState": {
+    "learnerId": "learner-ms0t7cxc",
+    "userName": "Jamie Dryrun",
+    "firstVisit": "2026-07-25T20:16:07.728Z",
+    "sessions": [],
+    "topicPerformance": {},
+    "subtopicPerformance": {},
+    "misconceptionPatterns": [],
+    "recommendationLog": [],
+    "sessionSummaries": [],
+    "lastUpdated": "2026-07-25T20:16:07.728Z",
+    "preProduction": true,
+    "synthetic": true
+  }
+}

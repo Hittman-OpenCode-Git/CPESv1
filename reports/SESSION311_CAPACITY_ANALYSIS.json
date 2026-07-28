@@ -1,0 +1,109 @@
+{
+  "session": "311",
+  "agents": ["J", "K"],
+  "title": "Capacity Analysis — Domain E Replacement + Domain F Authoring",
+  "generated": "2026-07-26",
+
+  "domainE": {
+    "workload": {
+      "replacementItems": 43,
+      "certificationItems": 38,
+      "totalItems": 81
+    },
+    "sessionsRequired": {
+      "authoring": 5,
+      "note": "43 replacement items at ~10/session. Includes EC+EW authoring per Authoring Quality Gate.",
+      "certification": 2,
+      "note": "38 seed certifications at ~20/session. Seeds are existing items — less authoring, more verification.",
+      "qaOverhead": 1,
+      "note": "Review gates add ~1 session equivalent of reviewer time per 40 items.",
+      "totalNoParallel": 8,
+      "totalWithParallel": 6
+    },
+    "throughput": {
+      "itemsPerSession": 10,
+      "constraints": [
+        "Author capacity: ~15-20 min per item for full EC+EW authoring",
+        "Quality gate review: ~5 min per item per gate",
+        "Governance Rule 5: max 30 items per batch (not binding at ~10/session)",
+        "Human author capacity is the binding constraint per S724"
+      ]
+    },
+    "authoringBurden": {
+      "timePerItem": "15-20 min (stem + 4 choices + EC + 3 EW + metadata)",
+      "totalAuthoringHours": "~13 hours for 43 replacement items",
+      "bindingConstraint": "HUMAN AUTHOR TIME — not tooling, not governance, not file access"
+    },
+    "parallelizationPotential": {
+      "possiblePairs": [
+        "Pack C Section E || Pack D Section F (different files — no write conflict)",
+        "Pack D Section E || Pack C Section F (different files — no write conflict)"
+      ],
+      "methodologySessions": 2,
+      "note": "First 2 sessions establish quality baseline. Remaining 4+ sessions can parallelize 2-at-a-time."
+    }
+  },
+
+  "domainF": {
+    "workload": {
+      "replacementItems": 37,
+      "certificationItems": 39,
+      "totalItems": 76
+    },
+    "sessionsRequired": {
+      "authoring": 4,
+      "note": "37 replacement items at ~10/session.",
+      "certification": 2,
+      "note": "39 seed certifications at ~20/session.",
+      "qaOverhead": 1,
+      "totalNoParallel": 7,
+      "totalWithParallel": 5
+    },
+    "throughput": {
+      "itemsPerSession": 10,
+      "constraints": [
+        "Same author capacity constraint as Domain E",
+        "Domain F items may be slightly faster (Technology & Analytics scenarios are more concrete than Internal Controls theory)",
+        "Governance Rule 5: not binding at ~10/session"
+      ]
+    }
+  },
+
+  "combinedEstimate": {
+    "sequentialTotal": 15,
+    "parallelizedTotal": 11,
+    "parallelizationGain": "27% reduction (15 → 11 sessions)",
+    "breakdown": {
+      "methodologySessions": 2,
+      "parallelAuthoringSessions": 7,
+      "certificationSessions": 1,
+      "closeoutSession": 1
+    },
+    "comparisonToS310": {
+      "s310Estimate": "17 sessions total (for all 800-series including case-bank EW, MCQ EW, Pack A closeout)",
+      "s311DomainEFOnly": "11 sessions (for Domain E+F only — ~65% of 800-series scope)",
+      "s310DomainEFImplied": "~9 sessions (phases 2-4: Domain E baseline + Domain F authoring + Domain E replacement)",
+      "deltaNote": "S311 estimate is slightly higher (11 vs 9) because it includes full 5-gate quality workflow not assumed in S310. The extra 2 sessions are QA overhead."
+    }
+  },
+
+  "riskFactors": {
+    "throughputDegradation": {
+      "scenario": "Author burnout or complex items → throughput drops to 7/session",
+      "impact": "+3-4 sessions",
+      "probability": "20-25%"
+    },
+    "parallelizationFailure": {
+      "scenario": "File conflicts or sequencing errors prevent parallel execution",
+      "impact": "+2-3 sessions",
+      "probability": "15-20%"
+    },
+    "qualityGateBypass": {
+      "scenario": "QA gate skipped to accelerate throughput",
+      "impact": "DL-013/DL-008 re-contamination → +2-3 remediation sessions later",
+      "probability": "10-15%"
+    }
+  },
+
+  "recommendation": "Proceed with 11 parallelized sessions. Maintain strict 5-gate quality workflow. Limit to 2 authoring sessions per day to prevent burnout. Rotate reviewers to prevent gate fatigue."
+}

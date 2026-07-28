@@ -1,0 +1,553 @@
+{
+  "C": [
+    {
+      "qid": "P1-EC-004",
+      "cc": "D",
+      "topic": "E.004 segregation of duties design",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 302,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-008",
+      "cc": "D",
+      "topic": "E.008 coso internal control framework",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 312,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-014",
+      "cc": "B",
+      "topic": "E.014 fraud triangle elements",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 224,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-020",
+      "cc": "D",
+      "topic": "E.020 physical controls over assets",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 269,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-021",
+      "cc": "A",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 247,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-022",
+      "cc": "B",
+      "topic": "E.022 preventive vs detective duplicate payment control",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 237,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-023",
+      "cc": "C",
+      "topic": "E.023 IT access control terminated employee deprovisioning",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 213,
+      "dw": [
+        "A",
+        "D"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-024",
+      "cc": "D",
+      "topic": "E.024 application input control sales order validation",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 261,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-025",
+      "cc": "A",
+      "topic": "E.025 preventive vs detective controls",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 220,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-028",
+      "cc": "D",
+      "topic": "E.028 bank reconciliation control",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 280,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-031",
+      "cc": "C",
+      "topic": "E.031 erm risk appetite",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 168,
+      "dw": [
+        "A",
+        "D"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-040",
+      "cc": "D",
+      "topic": "E.040 it general controls access",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 226,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-041",
+      "cc": "A",
+      "topic": "E.041 management override risk",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 280,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-049",
+      "cc": "A",
+      "topic": "E.049 whistleblower hotline purpose",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 266,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-052",
+      "cc": "D",
+      "topic": "E.052 compensating control small business",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 270,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-060",
+      "cc": "D",
+      "topic": "E.060 control environment tone at top",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 276,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-061",
+      "cc": "A",
+      "topic": "E.061 inherent risk vs control risk",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 241,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-066",
+      "cc": "B",
+      "topic": "E.066 segregation cash custody recording",
+      "difficulty": "Easy",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 217,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-EC-072",
+      "cc": "D",
+      "topic": "E.072 remediation of control deficiency",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 244,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    }
+  ],
+  "D": [
+    {
+      "qid": "P1-ED-001",
+      "cc": "A",
+      "topic": "E.001 three lines of defense model",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 237,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-010",
+      "cc": "B",
+      "topic": "E.010 access control least privilege",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 208,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-014",
+      "cc": "B",
+      "topic": "E.014 independent verification control activity",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 225,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-016",
+      "cc": "D",
+      "topic": "E.016 erm risk response strategies",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 152,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-025",
+      "cc": "A",
+      "topic": "E.025 control activities authorization",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 197,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-028",
+      "cc": "D",
+      "topic": "E.028 monitoring ongoing evaluations",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 210,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-035",
+      "cc": "C",
+      "topic": "E.035 data backup disaster recovery",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 215,
+      "dw": [
+        "A",
+        "D"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-036",
+      "cc": "D",
+      "topic": "E.036 change management control it systems",
+      "difficulty": "Moderate-Easy",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 144,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-042",
+      "cc": "B",
+      "topic": "E.042 risk assessment likelihood impact",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 238,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-046",
+      "cc": "B",
+      "topic": "E.046 code of conduct ethics program",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 158,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-051",
+      "cc": "C",
+      "topic": "E.051 password access authentication control",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 167,
+      "dw": [
+        "A",
+        "D"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-058",
+      "cc": "B",
+      "topic": "E.058 internal control cost benefit limitation",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 273,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-064",
+      "cc": "D",
+      "topic": "E.064 vendor master file controls",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 280,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-066",
+      "cc": "B",
+      "topic": "E.066 audit committee oversight role",
+      "difficulty": "Difficult",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 265,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-071",
+      "cc": "C",
+      "topic": "E.071 change management control direct production change",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 247,
+      "dw": [
+        "A",
+        "D"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-072",
+      "cc": "D",
+      "topic": "E.072 fraud risk purchasing conflict of interest",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 206,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-073",
+      "cc": "A",
+      "topic": "E.073 monitoring exception reports not reviewed",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Apply",
+      "question_state": "Unprocessed",
+      "ec_len": 246,
+      "dw": [
+        "B"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-074",
+      "cc": "B",
+      "topic": "E.074 reconciliation incompatible duties EFT and bank rec",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 227,
+      "dw": [
+        "A",
+        "C"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    },
+    {
+      "qid": "P1-ED-075",
+      "cc": "C",
+      "topic": "E.075 segregation approval reconciliation",
+      "difficulty": "Moderate",
+      "cognitiveLevel": "Understand",
+      "question_state": "Unprocessed",
+      "ec_len": 153,
+      "dw": [
+        "A"
+      ],
+      "dl008": false,
+      "dl013_slots": []
+    }
+  ]
+}

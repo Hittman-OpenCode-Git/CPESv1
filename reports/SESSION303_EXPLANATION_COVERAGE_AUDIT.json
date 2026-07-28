@@ -1,0 +1,179 @@
+{
+  "ecTotal": 3125,
+  "ecPresent": 3124,
+  "ecMissing": 1,
+  "ecFillRate": "100.0",
+  "ecPlaceholder": 41,
+  "ecBoilerplate": 10,
+  "ecThin": 970,
+  "ecAdequate": 1562,
+  "ecGood": 267,
+  "ecExcellent": 274,
+  "ewTotal": 12496,
+  "ewPresent": 7148,
+  "ewEmpty": 5348,
+  "ewNonCCFillRate": "71.5",
+  "ewCChasText": 0,
+  "packStats": {
+    "Pack A": {
+      "total": 500,
+      "ecPresent": 500,
+      "ecAvgLen": 345,
+      "ewNonCCPresent": 1500,
+      "ewNonCCTotal": 1500,
+      "ecGrades": {
+        "A": 0,
+        "B": 50,
+        "C": 43,
+        "D": 43,
+        "F": 364
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "100.0"
+    },
+    "Pack B": {
+      "total": 500,
+      "ecPresent": 500,
+      "ecAvgLen": 250,
+      "ewNonCCPresent": 1500,
+      "ewNonCCTotal": 1500,
+      "ecGrades": {
+        "A": 0,
+        "B": 0,
+        "C": 8,
+        "D": 97,
+        "F": 395
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "100.0"
+    },
+    "Pack C": {
+      "total": 500,
+      "ecPresent": 500,
+      "ecAvgLen": 179,
+      "ewNonCCPresent": 1276,
+      "ewNonCCTotal": 1500,
+      "ecGrades": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 23,
+        "F": 477
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "85.1"
+    },
+    "Pack D": {
+      "total": 500,
+      "ecPresent": 499,
+      "ecAvgLen": 181,
+      "ewNonCCPresent": 1275,
+      "ewNonCCTotal": 1497,
+      "ecGrades": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 23,
+        "F": 476
+      },
+      "ecFillRate": "99.8",
+      "ewFillRate": "85.2"
+    },
+    "Pack E": {
+      "total": 500,
+      "ecPresent": 500,
+      "ecAvgLen": 108,
+      "ewNonCCPresent": 1500,
+      "ewNonCCTotal": 1500,
+      "ecGrades": {
+        "A": 0,
+        "B": 7,
+        "C": 9,
+        "D": 10,
+        "F": 474
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "100.0"
+    },
+    "scored_cases": {
+      "total": 90,
+      "ecPresent": 90,
+      "ecAvgLen": 1257,
+      "ewNonCCPresent": 97,
+      "ewNonCCTotal": 360,
+      "ecGrades": {
+        "A": 11,
+        "B": 25,
+        "C": 0,
+        "D": 0,
+        "F": 54
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "26.9"
+    },
+    "scored_cases2": {
+      "total": 153,
+      "ecPresent": 153,
+      "ecAvgLen": 742,
+      "ewNonCCPresent": 0,
+      "ewNonCCTotal": 612,
+      "ecGrades": {
+        "A": 2,
+        "B": 47,
+        "C": 34,
+        "D": 35,
+        "F": 35
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    },
+    "scored_cases3": {
+      "total": 154,
+      "ecPresent": 154,
+      "ecAvgLen": 350,
+      "ewNonCCPresent": 0,
+      "ewNonCCTotal": 616,
+      "ecGrades": {
+        "A": 0,
+        "B": 6,
+        "C": 14,
+        "D": 38,
+        "F": 96
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    },
+    "scored_cases4": {
+      "total": 153,
+      "ecPresent": 153,
+      "ecAvgLen": 849,
+      "ewNonCCPresent": 0,
+      "ewNonCCTotal": 612,
+      "ecGrades": {
+        "A": 4,
+        "B": 50,
+        "C": 38,
+        "D": 24,
+        "F": 37
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    },
+    "scored_cases5": {
+      "total": 75,
+      "ecPresent": 75,
+      "ecAvgLen": 477,
+      "ewNonCCPresent": 0,
+      "ewNonCCTotal": 300,
+      "ecGrades": {
+        "A": 1,
+        "B": 13,
+        "C": 14,
+        "D": 21,
+        "F": 26
+      },
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    }
+  }
+}

@@ -1,0 +1,1118 @@
+[
+  {
+    "qid": "P1-A-003",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "A company reports net income of $172,000, depreciation expense of $53,000, a gai",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-010",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "A company purchases equipment for $96,000 on July 1. It has an estimated salvage",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-025",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Pioneer purchases equipment for $100,000. For financial reporting, it uses strai",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-027",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Crescent accepted an order for 414 units at $55 each. 396 units shipped before y",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-028",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Delta has beginning inventory of $44,700, purchases of $166,900, and ending inve",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-029",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Evergreen bought equipment for $92,800, estimates salvage value of $12,000, and ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-031",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Granite began the year with retained earnings of $195,000, earned net income of ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-032",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Harbor lists cash $72,000, accounts receivable $90,300, inventory $122,600, acco",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-033",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Iris recorded gross sales of $244,000, sales returns of $10,600, and sales allow",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-034",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Zephyr faces a probable warranty loss. The best estimate is $50,800, and the rea",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-035",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Keystone had 60,000 common shares outstanding all year and issued 14,000 additio",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-036",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Lumen reports total assets of $367,300 and total liabilities of $148,100. What t",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-037",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Meridian accepted an order for 484 units at $45 each. 466 units shipped before y",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-038",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Northstar has beginning inventory of $53,700, purchases of $189,900, and ending ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-039",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Orion bought equipment for $124,800, estimates salvage value of $12,000, and a 7",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-041",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Quartz began the year with retained earnings of $220,000, earned net income of $",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-042",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Riverview lists cash $82,000, accounts receivable $99,300, inventory $130,600, a",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-043",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Summit recorded gross sales of $299,000, sales returns of $12,600, and sales all",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-045",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Umbra had 70,000 common shares outstanding all year and issued 16,000 additional",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-046",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Vantage reports total assets of $410,300 and total liabilities of $169,100. What",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-047",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Willow accepted an order for 554 units at $65 each. 536 units shipped before yea",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-048",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Yukon has beginning inventory of $62,700, purchases of $212,900, and ending inve",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-049",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Zephyr bought equipment for $156,800, estimates salvage value of $12,000, and a ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-051",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Beacon began the year with retained earnings of $245,000, earned net income of $",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-052",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Crescent lists cash $92,000, accounts receivable $108,300, inventory $138,600, a",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-053",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Delta recorded gross sales of $354,000, sales returns of $14,600, and sales allo",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-055",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Frontier had 80,000 common shares outstanding all year and issued 18,000 additio",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-056",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Granite reports total assets of $453,300 and total liabilities of $190,100. What",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-057",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Harbor accepted an order for 624 units at $55 each. 606 units shipped before yea",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-058",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Iris has beginning inventory of $71,700, purchases of $235,900, and ending inven",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-059",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Juniper bought equipment for $188,800, estimates salvage value of $12,000, and a",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-061",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Lumen began the year with retained earnings of $270,000, earned net income of $1",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-062",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Meridian lists cash $102,000, accounts receivable $117,300, inventory $146,600, ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-063",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Northstar recorded gross sales of $409,000, sales returns of $16,600, and sales ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-065",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Pioneer had 90,000 common shares outstanding all year and issued 20,000 addition",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-066",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Quartz reports total assets of $496,300 and total liabilities of $211,100. What ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-067",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Riverview accepted an order for 694 units at $45 each. 676 units shipped before ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-068",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Summit has beginning inventory of $80,700, purchases of $258,900, and ending inv",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-069",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Titan bought equipment for $220,800, estimates salvage value of $12,000, and a 5",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-071",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Vantage began the year with retained earnings of $295,000, earned net income of ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-072",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Willow lists cash $112,000, accounts receivable $126,300, inventory $154,600, ac",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-073",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Yukon recorded gross sales of $464,000, sales returns of $18,600, and sales allo",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-074",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Orion faces a probable warranty loss. The estimated loss ranges from $80,000 to ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-A-075",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Apex had 100,000 common shares outstanding all year and issued 22,000 additional",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-B-047",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Willow updates its 12-month rolling forecast every month by dropping the oldest ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-B-049",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Cascade's sales are highly seasonal, with 40% of annual volume occurring in Q4. ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-B-064",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Pinehollow has practical capacity of 50,000 machine hours but budgets production",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-C-049",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Selling division's variable cost is $18/unit and the external market price is $3",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-E-003",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Willow's purchasing policy requires a second manager's approval for purchase ord",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-E-079",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "NovaCare Health System's ERP system automatically generates a report every night",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-E-080",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "At Crestwood Medical Clinic, the same staff accountant opens the daily mail cont",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-E-081",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "An external audit of Grandview Enterprises identified four control deficiencies ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-E-083",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "At Woodland Supply, the purchasing clerks enter purchase orders into the ERP sys",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-F-016",
+    "pack": "A",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Lumen reviews a chart showing quarterly gross margin percentages. The vertical a",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-076",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Apex Manufacturing enters into a contract to sell a specialized machine for $500",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-079",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Blue Ridge sells at $100/unit with a volume discount to $85/unit if >10,000 unit",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-080",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Digital Dynamics grants a five-year right-to-use software license with no ongoin",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-081",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Phoenix Aerospace incurs $50,000 incremental contract acquisition costs for a 4-",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-089",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Silver Oak holds $500,000 cash restricted by a debt covenant for debt due in 202",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-090",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Maple Leaf is selling a factory (carrying value $3,000,000, fair value less cost",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-093",
+    "pack": "B",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Under current GAAP, what is the status of extraordinary items?",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  },
+  {
+    "qid": "P1B-A-097",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Southwest Retailers: net sales $2,500,000; COGS $1,400,000; selling expenses $35",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-102",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Prairie Dog: NI $750,000; depreciation $120,000; AR increase $45,000; inventory ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-108",
+    "pack": "B",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Under ASC 842 for an operating lease, how is total lease expense recognized over",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  },
+  {
+    "qid": "P1B-A-109",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Under ASC 842, if a lease meets any finance lease criterion and both lessor crit",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-131",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "In 2025, Willow Corp discovered that it had incorrectly expensed $500,000 of equ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-A-135",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Crestview Corp had an unrealized gain of $50,000 on AFS debt securities. Later i",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-B-135",
+    "pack": "B",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Which of the following is considered a financial budget?",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  },
+  {
+    "qid": "P1B-B-151",
+    "pack": "B",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Which of the following is the correct order of budget preparation?",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  },
+  {
+    "qid": "P1B-C-135",
+    "pack": "B",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Which of the following best describes the fundamental principle of responsibilit",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  },
+  {
+    "qid": "P1B-C-139",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Southside Division currently has an ROI of 22%. The division is considering a ne",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-C-146",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Stonebridge Industries has two divisions. Division A produces components that Di",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-C-152",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Meadowbrook Inc. uses dual-rate transfer pricing. The selling division records t",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-C-183",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Thornwood Manufacturing has a favorable direct materials price variance of $25,0",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-C-185",
+    "pack": "B",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Which of the following factors is LEAST likely to trigger a variance investigati",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  },
+  {
+    "qid": "P1B-C-189",
+    "pack": "B",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Which of the following is an advantage of standard costing over actual costing?",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  },
+  {
+    "qid": "P1B-C-198",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Briarwood Manufacturing updates its standard costs annually. During the year, th",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-076",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Apex Manufacturing pays a monthly rent of $15,000 for its factory building regar",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-077",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Benton Manufacturing produces 5,000 units at a total variable cost of $100,000. ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-078",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Crestwood Inc. has a utility cost that includes a fixed base fee of $500 per mon",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-079",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Dunwoody Manufacturing employs one supervisor for every 10 production workers. E",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-082",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Forest Hill Manufacturing expects its fixed costs of $200,000 to remain constant",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-083",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Glen Haven Company sells a product for $80 per unit. Variable costs are $50 per ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-084",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Hampton Inc. sells a product for $120 with variable costs of $78. What is the co",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-109",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Dawson Processing incurs $240,000 in joint costs before the split-off point to p",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-130",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Warren is preparing a variable-costing inventory report. Per-unit manufacturing ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-131",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Xavier Manufacturing uses throughput costing. Per-unit costs are: materials $20,",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-134",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Beta Company has fixed costs of $300,000. The contribution margin ratio is 25%. ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-147",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Xi Company purchased a machine three years ago for $100,000. It now has a book v",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-148",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Omicron Company incurred the following costs during the year: direct materials $",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-D-149",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Pi Company has the following costs: direct materials $50,000, direct labor $40,0",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-079",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Meridian Health Corporation has implemented approval requirements for all purcha",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-085",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Orion Medical is using the COSO ERM 2017 framework. Management is reviewing the ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-088",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Summit Energy has a policy that all capital expenditures exceeding ,000 require ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-095",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Silverline Inc. has established an audit committee as part of its board of direc",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-099",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Under the Sarbanes-Oxley Act of 2002, publicly traded companies are required to ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-113",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Under Section 302 of the Sarbanes-Oxley Act of 2002, which of the following must",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-114",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Titan Global is a publicly traded company required to comply with Section 404 of",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-139",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Under the COSO 2013 framework, one of the 17 principles states: The organization",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-E-145",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Section 201 of the Sarbanes-Oxley Act addresses auditor independence by listing ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-F-081",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Atlas Global noticed that its gross profit margin decreased from 35% to 28% comp",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-F-082",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Sterling Financial uses historical customer payment data and machine learning al",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-F-115",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Silverline Corp's internal audit function has implemented automated tools that c",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1B-F-124",
+    "pack": "B",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Harbor Corp's accounting team needs to retrieve a list of all vendors with outst",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-AC-011",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Kestrel owns 30% of the voting stock of an investee and can exercise significant",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-AC-013",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Meridian Peak owns 30% of the voting stock of an investee and can exercise signi",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-AC-014",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Nightingale owns 30% of the voting stock of an investee and can exercise signifi",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-002",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Brightpoint prepared a static budget for 10,000 units but actual production was ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-006",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Fairhaven prepared a static budget for 10,000 units but actual production was 11",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-007",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Gladstone prepared a static budget for 10,000 units but actual production was 11",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-019",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Silverton updates its 12-month forecast every month by adding a new month as the",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-043",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Ridgeline forecasts sales of 40,000 units, wants ending inventory of 5,000 units",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-045",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Timberlake forecasts sales of 40,000 units, wants ending inventory of 5,000 unit",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-046",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Umberfield forecasts sales of 40,000 units, wants ending inventory of 5,000 unit",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BC-065",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Poplarwood has highest activity of 8,000 machine hours costing 62,000 and lowest",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-CC-015",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Oakhurst has operating income of 450,000, average operating assets of 3,000,000,",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-CC-020",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Thornfield has operating income of 450,000, average operating assets of 3,000,00",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-CC-056",
+    "pack": "C",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Glenmoor budgeted to sell units at 25 each but actually sold them at 23 each, wi",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-BD-028",
+    "pack": "D",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Crownridge plans to produce 8,000 units, each requiring 2 direct labor hours at ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-CD-004",
+    "pack": "D",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Deepwater paid direct labor at 19 per hour instead of the 18 standard rate, and ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-DD-027",
+    "pack": "D",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Bellcourt budgets sales of 24,000 units for a product line. Break-even volume is",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-DD-030",
+    "pack": "D",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Everhart expects sales of $1,250,000 and has break-even sales of $875,000. What ",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1-DD-053",
+    "pack": "D",
+    "pattern": "SCENARIO-CALC",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Duskgrove sold 7,500 units for $44 per unit. Variable manufacturing cost was $18",
+    "justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute"
+  },
+  {
+    "qid": "P1E-B-067",
+    "pack": "E",
+    "pattern": "DEFINITIONAL",
+    "oldDiff": "Easy/1",
+    "newDiff": "Moderate-Easy/2",
+    "stem": "Which budget is most detailed for planning purposes?",
+    "justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge"
+  }
+]

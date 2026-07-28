@@ -1,0 +1,83 @@
+{
+  "document": "SESSION353_ARTIFACT_REUSE_EFFECTIVENESS",
+  "session": "S353",
+  "title": "Artifact Reuse Effectiveness — Session Package Consumption Analysis",
+  "board": "E",
+  "series": "350-Series — Framework v2 Operational Analytics (Wave 2)",
+  "date": "2026-07-27",
+  "type": "Read-Only Measurement — No Content Modifications",
+  "authority": [
+    "SESSION851_ORCHESTRATOR_MANIFEST.json",
+    "S852.json, S853.json, S854.json session packages",
+    "SESSION352_SCAN_ARTIFACT_METRICS.json (v2 scan artifact reuse)"
+  ],
+  "depends_on": [
+    "S851",
+    "S852",
+    "S853",
+    "S854"
+  ],
+  "unlocks": "S353 Board F (Session Generation)",
+  "orchestrator_manifest_consumption": {
+    "artifact": "SESSION851_ORCHESTRATOR_MANIFEST.json",
+    "produced_by": "session_orchestrator.js",
+    "consumed_by": [
+      "S852 (manifest regeneration — consumed truth-check data)",
+      "S853 (certification — consumed batch plan)",
+      "S854 (governance — consumed verification checklist)",
+      "S353 (this session — consumed as primary input)"
+    ],
+    "consumption_count": 4,
+    "consumption_rate": "100%"
+  },
+  "session_package_consumption": {
+    "s852_json": {
+      "consumed_by": [
+        "s852_regenerate_manifest.js (execution)",
+        "S854 (verification cross-reference)",
+        "knowledge/REVISION_HISTORY.md (attestation)"
+      ],
+      "consumptions": 3
+    },
+    "s853_json": {
+      "consumed_by": [
+        "s853_certify_wave_a.js (certification execution)",
+        "S854 (verification cross-reference)",
+        "knowledge/REVISION_HISTORY.md (attestation)"
+      ],
+      "consumptions": 3,
+      "format": "JSON — 154 lines, compact, machine-consumable",
+      "execution_fidelity": "Consumed without modification. DL-033 naming correction handled automatically by execution script."
+    },
+    "s854_json": {
+      "consumed_by": [
+        "Integration sweep execution",
+        "knowledge/REVISION_HISTORY.md (attestation)"
+      ],
+      "consumptions": 2
+    }
+  },
+  "consumption_chain": {
+    "description": "Single orchestrator manifest → 3 session packages → each consumed by execution script + verification session + governance attestation",
+    "total_artifacts": 4,
+    "total_consumptions": 12,
+    "zero_stale_artifacts": true,
+    "zero_unconsumed_artifacts": true
+  },
+  "v1_comparison": {
+    "v1_consumption_rate": "35% (432 of 1,227 reports referenced)",
+    "v2_consumption_rate": "100% (all session packages consumed by execution, verification, and attestation)",
+    "v1_format": "Ad-hoc markdown reports — variable structure, difficult to machine-consume",
+    "v2_format": "Structured JSON packages — consistent schema, machine-consumable",
+    "v1_redundancy": "50+ independent scans per wave (each session re-scanned from scratch)",
+    "v2_redundancy": "1 scan → 12+ consumptions across governance pipeline"
+  },
+  "verdict": "ARTIFACT_REUSE_PROVEN_ACROSS_CERTIFICATION_PIPELINE — The S351→S352 pattern (scan artifacts consumed by measurement boards) has now been extended to the certification pipeline. Session packages are produced once (by the orchestrator), consumed by execution scripts (certification), verification sessions (governance), and attestation documents (revision history). 100% consumption rate vs. v1's 35%. The \"Scan Once, Consume Many\" pattern has been generalized to \"Plan Once, Execute/Verify/Attest Many.\"",
+  "cross_references": {
+    "orchestrator_manifest": "scripts/output/session_packages/SESSION851_ORCHESTRATOR_MANIFEST.json",
+    "s852_package": "scripts/output/session_packages/S852.json",
+    "s853_package": "scripts/output/session_packages/S853.json",
+    "s854_package": "scripts/output/session_packages/S854.json",
+    "s352_scan_metrics": "reports/session352/SESSION352_SCAN_ARTIFACT_METRICS.json"
+  }
+}

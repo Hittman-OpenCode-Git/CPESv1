@@ -1,0 +1,414 @@
+{
+  "session": "S130",
+  "title": "Longitudinal Intelligence Validation — Coaching System Behavior Across 1, 5, 20, and 50 Sessions",
+  "generatedAt": "2026-07-28T00:00:00.000Z",
+  "analysisScope": {
+    "filesAnalyzed": [
+      "may-core.js (6284 lines)",
+      "may-learner-state.js (1501 lines)"
+    ],
+    "subsystemsTraced": [
+      "S124 — Learning Patterns (_identifyLearningPatterns, _appendLearningPatterns)",
+      "S125 — Focus Areas (_suggestFocusAreas, _appendFocusAreas)",
+      "S126 — Session Recap (_generateSessionRecap, _summarizeSession)",
+      "S127 — Weekly Learning Digest (_generateWeeklyDigest, _showWeeklyDigest)",
+      "S128 — Personal Study Strategy (_generateStudyStrategy, _showStudyStrategy)",
+      "S129 — Strategy Effectiveness (_generateStrategyEffectiveness, _showStrategyEffectiveness, recordRecommendationDelivery, classifyPendingOutcomes, getLongitudinalAnalytics)"
+    ]
+  },
+
+  "sessionHistoryStructure": {
+    "storage": "Array of session objects stored in localStorage under key 'cmaMayLearnerState'. Each session is an object with fields: sessionId, date (ISO string), mode, totalQuestions, correctCount, scaledScore, mcqPct, casePct, grade, passed, topicSnapshot (object), casePatterns (object), attempts[] (array of attempt objects). Attempts have: questionId, section, topic, subtopic, difficulty, difficultyScore, itemType, cognitiveLevel, questionState, correct, hintsUsed, explanationRequested, elapsedMs, selectedChoice, confidence, timestamp (ISO string).",
+    "maxLength": 50,
+    "agingLogic": "NONE — There is no timestamp-based evidence aging anywhere in the system. Session recency is determined solely by array position (slice from end). Topic-level 'recentAttempts' caps at 15 per topic but has no time-based expiry. The only time-aware function is getLongitudinalAnalytics() (S129), which computes 1-week/2-week/4-week window summaries, but these are read-only analytics — they do not drive aging, pruning, or weighting of any other subsystem.",
+    "pruningLogic": "COUNT-BASED ONLY: (1) sessions > 50 → slice(-50) in recordAttempt() (line 123 of may-learner-state.js); (2) emergency quota fallback in save() → slice(-20) if localStorage quota exceeded (line 88-93); (3) sessionSummaries capped at 30; (4) recommendationOutcomes capped at 200; (5) recommendationLog capped at 200; (6) challengedQids capped at 100; (7) recentAttempts per topic capped at 15; (8) chatHistory capped at 40 messages. NO time-based pruning exists anywhere.",
+    "topicAggregateAging": "NONE — topicPerformance aggregates (totalAttempts, correctCount, hintCount, difficultyDistribution, sectionsSeen) accumulate indefinitely. The only limit is that recentAttempts per topic is capped at 15 entries (may-learner-state.js line 190), and recentPct is computed from the last 5 of those. Old attempts from months ago still contribute to accuracy, totalAttempts, and cluster calculations with equal weight to recent ones.",
+    "misconceptionPatternAging": "NONE — misconceptionPatterns[] accumulate indefinitely with no cap and no time-based expiry. A pattern first seen in session 1 remains and grows its count through session 50. Only the lastSeen timestamp is updated.",
+    "recommendationOutcomeAging": "CAPPED AT 200 — outcomes are classified once (classifyPendingOutcomes) and never re-evaluated even as new evidence arrives. No time-based expiry."
+  },
+
+  "evidenceAgingDeepDive": {
+    "system": "getTopicProgress()",
+    "recentWindow": "recentAttempts.slice(-5) — last 5 attempts per topic, NOT time-windowed. These are the most recent 5 of up to 15 stored.",
+    "overallAccuracy": "Computed from ALL attempts (correctCount / totalAttempts) since first session — no decay, no time-weighting",
+    "stability": "Computed from last 4 recentAttempts (not time-windowed) — runs-based metric insensitive to time gaps",
+    "system124_learningPatterns": "Uses getTopicProgress() — patterns are aggregate-driven with no recency filter except recentPct slice(-5)",
+    "system125_focusAreas": "Uses getTopicProgress() + misconceptionPatterns (which never age) — same aggregate-driven approach",
+    "system126_sessionRecap": "Examines only the LAST session object + compares to prior session (one-step delta). Does not use aggregate topic data.",
+    "system127_weeklyDigest": "Uses sessions.slice(-7) — last 7 sessions by count, NOT calendar week. Sessions from 6 months ago could be in the window if total < 7.",
+    "system128_studyStrategy": "Uses sessions.slice(-7) — same count-based 'week' as S127. No calendar anchoring.",
+    "system129_effectiveness": "Uses getLongitudinalAnalytics() which DOES have calendar-aware windows (7/14/28 days), but only for display. Classification uses aggregate accuracy which has no time decay.",
+    "verdict": "Evidence aging is effectively ABSENT. The system operates on simple count-based windows and aggregate accumulators. A session from 8 weeks ago has identical weight to yesterday's session in all topic-level calculations."
+  },
+
+  "scenarios": {
+    "1_session": {
+      "description": "A brand-new learner completes a single 25-question MCQ practice session on Day 1. All 25 attempts are against a mix of 4-5 topics (Financial Statements, Cost Behavior, Internal Controls, Planning & Budgeting, Variance Analysis) with roughly 5 questions each. Accuracy varies by topic (60%-80%). No prior history exists.",
+      "sessionData": {
+        "totalSessions": 1,
+        "totalAttempts": 25,
+        "timeSpan": "Single session, Day 1",
+        "topicDistribution": "5 topics, ~5 attempts each",
+        "dataSufficiency": "BORDERLINE — some topics may have 3+ attempts (enough for topic_strength), none have 5+ (not enough for persistent_weakness)"
+      },
+      "S124_output": {
+        "behavior": "_identifyLearningPatterns is called from _appendLearningPatterns which is appended to Explain, Wrong Choices, and Simplify outputs.",
+        "topicStrengthPatterns": "POSSIBLE if any topic has ≥3 attempts AND accuracy ≥85%. With only 5 questions per topic, a topic going 4/5 or 5/5 would trigger the 'consistently accurate' observation.",
+        "persistentWeaknessPatterns": "SUPPRESSED — requires ≥5 attempts AND <60% accuracy. Maximum per topic is ~5 attempts; borderline but possible if a topic goes 0/5 or 1/5.",
+        "improvingPatterns": "SUPPRESSED — requires ≥4 attempts AND recentPct ≥75% AND delta ≥10%. recentPct uses last 5 of recentAttempts; with only ~5 attempts total, all are 'recent' so delta between overall and recent is near zero.",
+        "recurringMisconception": "SUPPRESSED — requires ≥2 misses with same misconception pattern. Possible if same topic has 2 classification errors, but unlikely with only 5 attempts per topic.",
+        "repeatedCalculation": "POSSIBLE — if a calculation topic (e.g., Variance Analysis) has 3+ misses among the 5 attempts.",
+        "maxObservations": "Capped at 3, sorted by relevance. Likely ≤1 observation for most questions.",
+        "verdict": "Thin output. Most patterns suppressed by minimum-attempt thresholds. May produce 0-1 observations per question."
+      },
+      "S125_output": {
+        "behavior": "_suggestFocusAreas checks persistent weakness (≥5 attempts, <60%), calculation misses (current item), misconception patterns (≥2 counts), topic strength (≥3 attempts, ≥85%), and improving trend (≥4 attempts, delta ≥10%).",
+        "highPriority": "SUPPRESSED — persistent_weakness requires ≥5 attempts per topic. None will qualify.",
+        "mediumPriority": "POSSIBLE — if the current question is a calculation item the learner got wrong, a medium-priority 'complete 5-10 more practice problems' suggestion may appear. Misconception patterns require ≥2 counts, unlikely with 1 session.",
+        "lowPriority": "POSSIBLE — if any topic has ≥3 attempts at ≥85% accuracy, a low-priority 'maintain/extend' suggestion appears.",
+        "maxSuggestions": "Capped at 3, sorted by priority. Likely 0-1 suggestions.",
+        "verdict": "Sparse output. Focus areas are gated behind minimum-attempt thresholds that a single session barely touches. Most questions will produce no focus area suggestions."
+      },
+      "S126_output": {
+        "behavior": "_summarizeSession uses the active state.session object. _generateSessionRecap is embedded within it.",
+        "recapContent": "Shows: number of MCQs answered, correct count, percentage. Strongest areas (topics with any correct answers). Most frequent mistakes (topics with <60% correct). No 'Progress trend' section (needs ≥2 sessions for session-to-session comparison). Recommended next step based on weakest topic.",
+        "crossSession": "SUPPRESSED — session-to-session comparison requires sessions.length >= 2.",
+        "verdict": "Produces a basic single-session summary. No longitudinal insight because no prior session exists. The recap is accurate but shallow."
+      },
+      "S127_output": {
+        "suppressed": true,
+        "reason": "_generateWeeklyDigest returns null when lookback sessions (sessions.slice(-7)) has length < 2. A single-session learner gets: 'I need at least 2 practice sessions for a weekly review. Complete a couple more and I'll break down your learning patterns across the week.'",
+        "verdict": "Correctly suppressed. S127 is designed for multi-session aggregation."
+      },
+      "S128_output": {
+        "behavior": "_generateStudyStrategy uses sessions.slice(-7) lookback. Returns null if lookback.length < 1.",
+        "outputForSingleSession": "Returns a basic strategy: 'Based on 1 session(s) and 25 questions answered.' Next-session plan recommends 'Work through 5-8 items across different topics to build your topic-level data.' This-week plan recommends continuing current cadence. Next-2-weeks plan is generic ('After 2 weeks, revisit this strategy').",
+        "verdict": "Produces output but with weak evidence. The strategy is template-driven rather than data-driven because minimum topic-attempt thresholds (≥3 attempts for weak/strong classification) are not met for most topics."
+      },
+      "S129_output": {
+        "behavior": "_generateStrategyEffectiveness checks outcomeSummary.hasData (recommendationOutcomes.length > 0). After 1 session with coaching, there may be a few delivered recommendations (from Next Best Step and Focus Areas appended to Explain/Wrong Choices outputs). These would be classified by classifyPendingOutcomes() at session end.",
+        "classificationResult": "Most recommendations will classify as 'insufficient' because topics have <5 attempts (the classifyPendingOutcomes threshold). Even if classified, positive/neutral/contradictory counts are unlikely to reach the display thresholds (positive ≥2, neutral ≥2, contradictory ≥1).",
+        "longitudinalWindows": "getLongitudinalAnalytics 1-week window will show 1 session with some attempts. 2-week and 4-week show the same (only 1 session exists).",
+        "verdict": "Produces output only if recommendations were delivered AND classified. Most likely produces: 'I need at least one delivered recommendation before I can evaluate what's been most helpful.' Even if output appears, it's sparse — insufficient evidence for any meaningful effectiveness claim."
+      }
+    },
+
+    "5_sessions": {
+      "description": "A learner completes 5 sessions over 2 weeks (roughly every other day). Each session has 10-15 questions for a total of ~60 attempts across 5-6 topics. Performance is mixed: 2 topics improve (Financial Statements 55%→72%, Internal Controls 60%→78%), 1 topic stays weak (Planning & Budgeting ~45%), and 2 topics are moderate (Cost Behavior ~65%, Variance Analysis ~68%). Some misconception patterns form (classification errors appear 3+ times, budget component errors appear 2+ times).",
+      "sessionData": {
+        "totalSessions": 5,
+        "totalAttempts": 60,
+        "timeSpan": "2 weeks (Days 1, 3, 6, 10, 14)",
+        "topicDistribution": "6 topics, ~10 attempts each",
+        "dataSufficiency": "ADEQUATE — most topics have 5+ attempts, enabling persistent_weakness detection. improving patterns possible for topics with delta ≥15%. misconception patterns likely with ≥2 occurrences."
+      },
+      "S124_output": {
+        "behavior": "Patterns now have enough data to fire. _identifyLearningPatterns will produce observations across multiple categories.",
+        "topicStrengthPatterns": "LIKELY for Internal Controls (78% after 10 attempts) — meets threshold of ≥3 attempts AND ≥85% accuracy. Borderline at 78% — would not trigger (needs ≥85%). So topic_strength may still be suppressed unless a topic hits 85%+.",
+        "persistentWeaknessPatterns": "LIKELY for Planning & Budgeting (45% after ~10 attempts) — meets threshold of ≥5 attempts AND <60%. This fires the 'has been challenging' observation.",
+        "improvingPatterns": "LIKELY for Financial Statements (55%→72%, delta +17%) — meets threshold of ≥4 attempts, recentPct ≥75%, delta ≥10%. But recentPct is computed from last 5 recentAttempts. If the most recent 5 include the improved scores, recentPct could be 80%+. Internal Controls (60%→78%, delta +18%) also qualifies.",
+        "recurringMisconception": "LIKELY — with 60 attempts, misconceptionPatterns will have accumulated. Classification errors at 3+ count trigger the recurring_misconception observation.",
+        "repeatedCalculation": "POSSIBLE if a calculation topic has 3+ misses.",
+        "maxObservations": "Capped at 3. With 5 sessions of data, likely reaches cap for most questions. Sorting by relevance puts misconception > persistent_weakness > improving > topic_strength > calculation.",
+        "verdict": "Rich output — 2-3 observations per question on average. The system now has enough data to surface real patterns."
+      },
+      "S125_output": {
+        "highPriority": "LIKELY — Planning & Budgeting (45%, ≥5 attempts) triggers persistent_weakness → high-priority focus area: 'Focus on Planning & Budgeting — this is your highest-impact area right now.'",
+        "mediumPriority": "LIKELY — misconception patterns with ≥2 counts trigger medium-priority suggestions. Calculation errors on current item also trigger medium.",
+        "lowPriority": "LIKELY — improving topics (Financial Statements, Internal Controls) trigger 'keep reinforcing' low-priority suggestions. If any topic hits 85%+, a 'shift to weakest adjacent topic' suggestion appears.",
+        "maxSuggestions": "Capped at 3. With 5 sessions of data, suggestions consistently appear for most questions. High-priority for persistent-weak topics, medium for misconception patterns, low for reinforcing strengths.",
+        "verdict": "Productive output — 2-3 suggestions per question with clear priority differentiation. Evidence-backed and actionable."
+      },
+      "S126_output": {
+        "recapContent": "Full session recap for session 5: MCQ count, correct count, percentage. Strongest areas from session 5. Most frequent mistakes. Key misconceptions encountered (from cross-session misconceptionPatterns). Progress trend section NOW ACTIVE (compares session 4 vs. session 5 accuracy). Recommended next step based on session 5's weakest topic.",
+        "crossSessionDelta": "NOW ACTIVE — if session 5 accuracy differs from session 4 by ≥10%, trend message appears ('Up X%' or 'Down X%').",
+        "verdict": "Full-featured recap with session-to-session trend. The cross-session comparison adds meaningful context."
+      },
+      "S127_output": {
+        "suppressed": false,
+        "behavior": "sessions.slice(-7) now has 5 sessions → digest is generated. Lookback uses ALL 5 sessions (no time filter, but they all fall within 2 weeks anyway).",
+        "digestContent": "Weekly practice summary: 5 sessions, ~60 questions, overall percentage. Accuracy trend from first to last session. Strongest topics (≥3 attempts, ≥70% accuracy) — likely Internal Controls and Cost Behavior. Topics needing attention (≥3 attempts, <60%) — likely Planning & Budgeting. Most common misconceptions (≥2 counts). Learning momentum. Recommended weekly focus on weakest topics. One small win (strongest topic performance).",
+        "verdict": "Rich, well-structured digest. All sections populate with meaningful data. The digest correctly identifies the persistent-weak topic and surfaces misconception patterns."
+      },
+      "S128_output": {
+        "behavior": "sessions.slice(-7) has 5 sessions. Strategy covers next session, this week, next 2 weeks.",
+        "nextSessionPlan": "Focused on Planning & Budgeting (the persistent-weak topic) — review governing rule, work 5-6 items. If misconception patterns ≥3 counts, suggests watching for specific trap.",
+        "thisWeekPlan": "Priority 1: Planning & Budgeting (dedicated review session). Priority 2: second-weakest topic (if ≥2 weak topics). Misconception drill suggestion. Maintain strong topic with 3-4 review items.",
+        "next2WeeksPlan": "Target: raise weakest topic from 45% to above 60%. Address top 2 misconception patterns. Revisit strategy after 2 weeks.",
+        "verdict": "Evidence-backed, actionable strategy across three time horizons. Good balance of remediation and maintenance."
+      },
+      "S129_output": {
+        "behavior": "After 5 sessions with coaching interactions, recommendationOutcomes should have 10-30 entries (Next Best Step and Focus Area recommendations from each Explain/Wrong Choices/Simplify call). classifyPendingOutcomes runs at each session end.",
+        "classificationResults": "With 5 sessions, some topics reach ≥5 attempts. Topics showing improvement (Financial Statements, Internal Controls) may classify as 'positive' when recommended. The persistent-weak topic may classify as 'contradictory' if it declined despite recommendations. Most will be 'neutral' or 'insufficient'.",
+        "effectivenessDisplay": "If positiveCount ≥ 2: shows 'Recommendations followed by improvement' section with topics and delta. If neutralCount ≥ 2: shows 'Recommendations with no clear change yet.' If contradictoryCount ≥ 1: shows note about decline despite recommendation. Recommendation recurrence insight shows deprioritized topics. Longitudinal snapshot shows 1-week window activity.",
+        "verdict": "Begins producing meaningful effectiveness analytics. The system can now identify which recommendation types correlate with improvement (correlation, not causation, as properly disclosed)."
+      }
+    },
+
+    "20_sessions": {
+      "description": "A learner completes 20 sessions over 4 weeks (about 5 sessions/week). Total ~250 attempts across 8+ topics. Performance evolves: some early-weak topics improve (Planning & Budgeting: 35% → 62%), some decline (Internal Controls: 82% → 68% after a difficult stretch), some stabilize (Financial Statements at 78%). Old misconception patterns from weeks 1-2 persist. The recommendation log has 40-80 entries. Session recency (sessions.slice(-7)) now only captures the last ~1.5 weeks of the 4-week history.",
+      "sessionData": {
+        "totalSessions": 20,
+        "totalAttempts": 250,
+        "timeSpan": "4 weeks (Days 1-28)",
+        "topicDistribution": "8+ topics, ~30 attempts each",
+        "dataSufficiency": "RICH — all topics well above minimum thresholds. Potential for over-aggregation of stale data."
+      },
+      "S124_output": {
+        "observationsProduced": "3 observations per question (at cap). Persistent weakness observations for any topic still below 60% after all attempts. Improving observations for topics with recent upticks. Topic strength for consistently high performers.",
+        "staleDataIssue": "OBSERVED — A topic that was weak in sessions 1-10 but improved in sessions 11-20 may still show 'persistent_weakness' at the aggregate level even though recent performance is good. For example, Planning & Budgeting at 35% for the first 10 sessions and 75% for the last 10 would show aggregate accuracy of ~55% — triggering persistent_weakness despite recent improvement. The improving pattern (checking recentPct) SHOULD fire simultaneously, creating a contradictory signal: both 'persistent_weakness' AND 'improving' observations for the same topic.",
+        "observationRefresh": "PARTIAL — recentPct (last 5 of 15 recentAttempts) does provide a window into recent performance, but the persistent-weak and topic-strength observations use aggregate accuracy which includes ALL historical data. Old poor performance drags down aggregate accuracy indefinitely.",
+        "verdict": "Contradictory patterns emerge — the same topic may be tagged as both 'persistently weak' (aggregate < 60%) and 'improving' (recent delta ≥ 10%). The system does not reconcile these signals."
+      },
+      "S125_output": {
+        "focusAreaConflicts": "HIGH-PRIORITY focus area may still target a topic where recent performance is good but aggregate is low. The persistent_weakness suggestion fires on aggregate accuracy < 60% regardless of recent improvement. The improving-trend suggestion also fires, creating competing suggestions.",
+        "staleRecommendations": "Topics that were weak in weeks 1-2 but have since improved may still receive high-priority focus suggestions based on aggregate accuracy. The learner sees 'Focus on Planning & Budgeting — 55% accuracy' when their last 5 attempts on that topic were at 80%.",
+        "verdict": "Recommendation rollover is ABSENT. Focus areas do not adapt to shifting performance profiles when aggregate data is stale. The priority order (persistent_weakness before improving) exacerbates this — high-priority stale suggestions crowd out more relevant improving-trend suggestions."
+      },
+      "S126_output": {
+        "recapContent": "Compares session 19 vs. session 20 only. Session-to-session delta may be noisy (one bad session creates a 'Down X%' warning that may not reflect the overall trend).",
+        "crossSessionLimitation": "Only looks at last-2-sessions comparison. A 20-session learner's trajectory is reduced to a single delta. Context from earlier sessions (e.g., 'you've been trending up for 3 weeks but had one off day') is absent.",
+        "verdict": "Session recap works correctly within its design scope but the scope is narrow. Only the last 2 sessions matter for trend. A richer multi-session trend line would be more informative for a 20-session learner."
+      },
+      "S127_output": {
+        "lookbackWindowIssue": "sessions.slice(-7) now only covers the last ~1.5 weeks (sessions 14-20) out of the 4-week history. Earlier sessions (1-13) are invisible to the weekly digest.",
+        "digestContent": "Summary of sessions 14-20 only. The digest claims to be a 'weekly' review but it covers ~10 days of activity, not a calendar week. Topics that were practiced heavily in sessions 1-13 but not in 14-20 are absent from the digest. This could create a misleading picture — a topic where the learner did extensive work in week 2 might appear to have 'no data this week.'",
+        "verdict": "The 7-session window creates a 'moving spotlight' that loses context for 20-session learners. The digest is more a 'recent-7-sessions summary' than a true weekly digest."
+      },
+      "S128_output": {
+        "lookbackWindowIssue": "Same as S127 — only sessions 14-20 inform the study strategy. Weak topics identified from sessions 1-13 are invisible if they weren't practiced recently.",
+        "strategyGaps": "A topic that was at 30% in sessions 5-10 and hasn't been practiced since would NOT appear in the strategy (not in last 7 sessions). The learner might need to revisit it but the system doesn't surface it. Conversely, a topic with a temporary dip in sessions 14-20 gets flagged as weak even if the 13-session history shows solid performance.",
+        "verdict": "The 7-session window is too narrow for 20-session learners. Strategy is myopically focused on recent sessions and loses the benefit of the full history."
+      },
+      "S129_output": {
+        "outcomeClassification": "With 40-80 recommendation outcomes, classification is richer. Topics with 15+ attempts have clear signals. The classification engine correctly identifies positive/contradictory outcomes.",
+        "longitudinalWindows": "getLongitudinalAnalytics now shows differentiation across windows: 1-week shows ~5 sessions, 2-week shows ~10 sessions, 4-week shows all 20 sessions. This is the ONLY subsystem with genuine time-based awareness.",
+        "recurrenceInsight": "getRecommendationRecurrence now has meaningful data — topics recommended multiple times show recurrence patterns. Deprioritization logic works: positive outcome → deprioritize, contradictory → deprioritize.",
+        "verdict": "S129 is the strongest subsystem at 20 sessions — the longitudinal analytics provide genuine time-window comparisons. However, the effectiveness claims are still limited by the absence of time-weighting in underlying accuracy metrics."
+      }
+    },
+
+    "50_sessions": {
+      "description": "A learner completes 50 sessions over 8 weeks (~6 sessions/week). Total ~600 attempts across 10+ topics. Performance evolves through distinct phases: early struggle (weeks 1-2), steady improvement (weeks 3-5), consolidation (weeks 6-7), and pre-exam review (week 8). Most topics eventually reach 75%+. Some topics show U-shaped patterns (dipped then recovered). The session cap (50) is approached but not yet hit. The recommendation log approaches its 200-entry cap. Misconception patterns from week 1 still appear in observations.",
+      "sessionData": {
+        "totalSessions": 50,
+        "totalAttempts": 600,
+        "timeSpan": "8 weeks (Days 1-56)",
+        "topicDistribution": "10+ topics, ~60 attempts each",
+        "dataSufficiency": "VERY RICH but potentially OVER-AGGREGATED",
+        "capProximity": "AT LIMIT — sessions = 50, the max before oldest sessions are dropped. recommendationOutcomes approaching 200 cap."
+      },
+      "S124_output": {
+        "observationsProduced": "Always at cap (3 per question). Rich pattern set.",
+        "majorStalenessIssue": "CRITICAL — A topic that was at 25% accuracy in sessions 1-20 but has been at 85%+ in sessions 21-50 will STILL show aggregate accuracy around 55-60%, triggering persistent_weakness despite 30 sessions of strong performance. The 20 early bad sessions permanently drag down the aggregate. recentPct (last 5 of 15 recentAttempts) may correctly show 80%+, creating a direct contradiction: 'Planning & Budgeting has been challenging — 55% accuracy across 60 attempts' alongside 'You're improving on Planning & Budgeting — recent accuracy is 85%.'",
+        "observationInflation": "CONFIRMED — Misconception patterns from week 1 (e.g., 'variance sign confusion — 8 occurrences') persist and grow even though the learner hasn't made that mistake since week 3. The misconceptionPatterns array has no pruning, so every historical pattern remains and inflates counts.",
+        "verdict": "Observation quality degrades due to aggregate staleness. The system cannot distinguish between 'used to be weak' and 'currently weak.' Both get reported as if they're equally relevant."
+      },
+      "S125_output": {
+        "staleHighPriority": "HIGH SEVERITY — High-priority focus area suggestions fire for topics where aggregate accuracy is < 60% but recent accuracy is > 80%. The system tells the learner to focus on topics they've already mastered, crowding out genuinely weak areas.",
+        "recommendationRolloverFailure": "Recommendations from weeks 1-2 (e.g., 'Focus on Financial Statements') remain in recommendationOutcomes even though the topic is now strong. When classifyPendingOutcomes runs, it classifies based on CURRENT aggregate accuracy. If Financial Statements was 40% when recommended but is now 82%, the outcome may classify as 'positive' (improvement observed), which is correct but the recommendation itself is stale. The system does not supersede old recommendations.",
+        "verdict": "Focus area quality is compromised by aggregate staleness. High-priority suggestions are noisy — they fire for historically-weak-but-now-strong topics. Recommendation outcomes correctly classify improvement but don't retire stale recommendations."
+      },
+      "S126_output": {
+        "recapComparison": "Session 49 vs. 50 delta is the only cross-session signal. With a mature learner, session-to-session variation is low (both at 75-85%), so the delta is usually flat. The recap says 'Steady' most of the time — missing the dramatic improvement arc from weeks 1-8.",
+        "verdict": "Session recap is least useful at 50 sessions — it provides an accurate but trivial snapshot that fails to reflect the learning journey."
+      },
+      "S127_output": {
+        "lookbackWindowIssue": "sessions.slice(-7) covers the last ~8 days (sessions 44-50). The digest is essentially a 'most recent week' summary with no awareness of the 7 prior weeks.",
+        "lostHistory": "Topics practiced heavily in weeks 2-5 but not recently are absent. Misconception patterns from the digest only reflect patterns surfaced in sessions 44-50 — not the patterns that dominated earlier weeks. A pattern the learner overcame in week 4 is invisible.",
+        "verdict": "The digest at 50 sessions is a high-resolution snapshot of a narrow window. It accurately describes the last 7 sessions but provides no longitudinal perspective. The digest's name ('weekly') is misleading — it's a 'recent activity' summary."
+      },
+      "S128_output": {
+        "strategyNarrowness": "Same 7-session window as S127. Strategy is built entirely from sessions 44-50. With 50 sessions of data, the strategy could identify macro-trends (e.g., 'your performance improved for 6 weeks then plateaued'), but instead only sees the last 8 days.",
+        "missedOpportunities": "Could recommend revisiting topics not practiced in 3+ weeks (knowledge decay risk). Could identify that the learner's overall trajectory has flattened. Could compare early vs. late performance by topic. None of this happens because the lookback window is fixed at 7 sessions.",
+        "verdict": "Strategy at 50 sessions is underspecified — it has access to rich data but throws most of it away. The narrow lookback window is the bottleneck."
+      },
+      "S129_output": {
+        "capPressure": "recommendationOutcomes capped at 200. With 50 sessions, this cap may be approached. Old outcomes (from week 1) are dropped when the cap is reached — this is the ONLY form of age-based pruning in the system, but it's accidental (FIFO by count, not intentional aging).",
+        "longitudinalStrength": "getLongitudinalAnalytics at 50 sessions is genuinely informative: 1-week window shows recent activity, 2-week shows medium-term, 4-week shows the full 8-week arc. The 4-week window captures most of the learner's history.",
+        "recurrence": "getRecommendationRecurrence with 50 sessions of data is rich — clearly identifies which topics have been repeatedly recommended and whether those recommendations correlated with improvement.",
+        "verdict": "S129 is the healthiest subsystem at 50 sessions. The longitudinal analytics provide genuine multi-timescale insight. However, the recommendation outcome cap (200) means old outcomes are silently dropped — this is acceptable for storage but the system should log that pruning occurred."
+      }
+    }
+  },
+
+  "failureModes": [
+    {
+      "mode": "Aggregate accuracy staleness — old poor performance permanently drags down topic accuracy",
+      "severity": "HIGH",
+      "affectedSubsystems": ["S124 (Learning Patterns)", "S125 (Focus Areas)", "S102 (Readiness Summary)", "getTopicProgress()", "getTrends()", "getWeaknessClusters()"],
+      "trigger": "A topic has ≥20 attempts where early sessions were weak (<50%) but recent sessions are strong (>80%). Aggregate accuracy computed as correctCount/totalAttempts includes ALL history with no decay.",
+      "consequence": "Persistent-weakness observations and high-priority focus areas fire for topics the learner has already mastered. The learner is told to focus on areas where they're now strong. This undermines trust in the coaching system.",
+      "mitigation": "Introduce time-weighted accuracy or a dual-threshold: (1) aggregate accuracy across all history AND (2) recent accuracy from last N attempts or last M days. Only flag as 'persistent weakness' when BOTH are below threshold. Alternatively, apply exponential decay to older attempts in accuracy calculation."
+    },
+    {
+      "mode": "Misconception pattern inflation — old patterns never expire",
+      "severity": "MEDIUM",
+      "affectedSubsystems": ["S124 (Learning Patterns)", "S125 (Focus Areas)", "S126 (Session Recap)", "S127 (Weekly Digest)", "S128 (Study Strategy)"],
+      "trigger": "A misconception pattern (e.g., 'variance_sign_confusion') accumulates counts from early sessions. Even after the learner stops making that error, the pattern persists with its full count. No time-based expiry or count decay exists.",
+      "consequence": "S124 reports 'I've noticed a recurring pattern: you've had 12 misses involving variance sign confusion' — but 10 of those 12 were from weeks 1-3 and the learner hasn't made that error in weeks 4-8. The observation is factually true but contextually misleading. S125 suggests reviewing variance sign conventions based on stale data.",
+      "mitigation": "Add lastSeen timestamp check to misconception patterns. Suppress patterns where lastSeen > 14 days ago (stale) AND count hasn't grown in the last 7 days. Alternatively, add a 'recentCount' field tracking only the last-N-sessions occurrences."
+    },
+    {
+      "mode": "Recommendation rollover failure — old recommendations never superseded",
+      "severity": "MEDIUM",
+      "affectedSubsystems": ["S129 (Effectiveness)", "S125 (Focus Areas)", "S128 (Study Strategy)"],
+      "trigger": "A focus-area or next-best-step recommendation is delivered for a topic that was weak at the time. The topic improves significantly. The original recommendation remains in recommendationOutcomes with status 'delivered' or 'acted_on' but is never marked as 'superseded.'",
+      "consequence": "S129 recurrence tracking sees the topic was recommended before and (if outcome was positive) deprioritizes it — which is correct. But the recommendation itself persists in the log as an active entry. Over 50 sessions, the outcome log fills with stale entries. The cap (200) eventually prunes them, but this is accidental rather than intentional.",
+      "mitigation": "Add a periodic cleanup pass that marks recommendations as 'superseded' when: (a) the topic accuracy has improved beyond the threshold that triggered the recommendation, AND (b) at least N sessions have passed since delivery. This would make the outcome log reflect only currently-relevant recommendations."
+    },
+    {
+      "mode": "Narrow lookback windows — S127/S128 only see last 7 sessions, losing longitudinal context",
+      "severity": "MEDIUM",
+      "affectedSubsystems": ["S127 (Weekly Digest)", "S128 (Study Strategy)"],
+      "trigger": "Learner has ≥20 sessions. sessions.slice(-7) captures only the most recent ~1-2 weeks of activity. Topics practiced in earlier weeks are invisible.",
+      "consequence": "The weekly digest and study strategy lose awareness of: (a) topics not recently practiced (knowledge decay risk), (b) long-term improvement arcs, (c) plateaus that are only visible across many sessions. The strategy becomes myopically focused on the last week and fails to provide genuine longitudinal guidance.",
+      "mitigation": "Expand S127 and S128 to use multi-window analysis: (1) last 7 sessions for 'recent snapshot,' (2) sessions.slice(-20) for 'medium-term trends,' (3) all sessions for 'full-history arcs.' Present each window separately in the output. This gives the learner a genuine longitudinal view without losing the recent-focus value."
+    },
+    {
+      "mode": "Observation count inflation — no pruning means observations grow monotonically",
+      "severity": "LOW",
+      "affectedSubsystems": ["S124 (Learning Patterns)", "S125 (Focus Areas)"],
+      "trigger": "Over many sessions, _identifyLearningPatterns always produces 3 observations (the cap) from an ever-growing pool of data. There's no mechanism to retire observations that are no longer relevant.",
+      "consequence": "At 50 sessions, the 3 observations per question are drawn from a large pool of possible observations. The relevance-sorting (misconception > persistent_weakness > improving > topic_strength > calculation) ensures the most relevant rise to the top, but 'most relevant' may still be stale. The observations don't include a 'this was from your early sessions' caveat.",
+      "mitigation": "Add a 'recency' flag to each observation indicating whether it's based on recent (<2 weeks) or historical data. Include a freshness note in the output: 'This pattern is from your recent sessions' vs. 'This is based on your full history including earlier sessions.'"
+    },
+    {
+      "mode": "Session-to-session delta is noisy and misleading for mature learners",
+      "severity": "LOW",
+      "affectedSubsystems": ["S126 (Session Recap)"],
+      "trigger": "At 50 sessions, the learner's performance is stable (75-85%). A single bad session (e.g., 65%) creates a 'Down 15%' warning in the recap that compares to the prior session at 80%.",
+      "consequence": "The recap over-reacts to session-level noise. The learner sees 'Your accuracy dropped 15% compared to the prior session — worth reviewing what changed' when the drop is normal variance. This can create anxiety and erode trust.",
+      "mitigation": "Add a stability context to the session-to-session comparison: report the delta but also compare to the 5-session moving average. If the current session is within 1 standard deviation of the moving average, suppress the alarmist language ('Down X%') in favor of 'Within your normal range.'"
+    },
+    {
+      "mode": "No calendar-week anchoring in weekly digest",
+      "severity": "LOW",
+      "affectedSubsystems": ["S127 (Weekly Digest)"],
+      "trigger": "sessions.slice(-7) is count-based, not calendar-based. A learner who does 7 sessions in 3 days gets a 'weekly' digest covering only 3 days. A learner who does 7 sessions over 3 weeks gets a 'weekly' digest covering 3 weeks.",
+      "consequence": "The digest's time frame is inconsistent across learners and across time for the same learner. The 'weekly' label is misleading. The digest content is accurate for whatever window it covers, but the window is unpredictable.",
+      "mitigation": "Anchor the digest to a calendar week (Monday-Sunday or last-7-days from current date). Use date-based filtering (session.date >= cutoffDate) instead of count-based slicing. This ensures consistent semantics: a 'weekly digest' always covers exactly one week."
+    },
+    {
+      "mode": "Session cap at 50 silently drops oldest sessions without notification",
+      "severity": "LOW",
+      "affectedSubsystems": ["All subsystems that read sessions[]"],
+      "trigger": "recordAttempt() in may-learner-state.js line 123: `if (data.sessions.length > 50) data.sessions = data.sessions.slice(-50)`. After 50 sessions, the 51st session pushes out session 1.",
+      "consequence": "The oldest session data is permanently lost with no notification to the learner. Topic aggregate data (topicPerformance) is NOT pruned — so accuracy/hint counts remain but the raw session data is gone. This is asymmetric: aggregates survive but session-level detail doesn't.",
+      "mitigation": "Before dropping a session, log a telemetry event. Consider increasing the cap to 100 or implementing intelligent summarization (keep session-level summaries but drop individual attempt details for sessions older than 30 days)."
+    }
+  ],
+
+  "agingAssessment": {
+    "evidenceAging": "ABSENT",
+    "evidenceAgingDetail": "No timestamp-based decay, time-weighting, or recency filter exists in any observation, pattern, focus area, or topic-aggregate calculation. The only time-aware component is getLongitudinalAnalytics() (S129) which is display-only. All topic-level metrics (accuracy, stability, hint rate) are computed from the full history with equal weight per attempt regardless of age. recentPct uses the last 5 of 15 recentAttempts — this provides a recency signal but it's count-based, not time-based.",
+    "recommendationRollover": "ABSENT",
+    "recommendationRolloverDetail": "Recommendations are delivered, classified once, and never re-evaluated or superseded. The classifyPendingOutcomes() function runs at session end and classifies based on current state, but does not revisit previously-classified recommendations. There is no mechanism to mark a recommendation as 'superseded' when the conditions that triggered it no longer apply. The recommendationOutcomes cap (200) provides accidental FIFO pruning but this is not intentional rollover.",
+    "observationRefresh": "PARTIAL",
+    "observationRefreshDetail": "Observations in S124 DO refresh because they're recomputed each time _identifyLearningPatterns is called. The recentPct metric captures recent performance. However, persistent_weakness and topic_strength observations use aggregate accuracy which never refreshes — they compound old data indefinitely. The observation output is a mix of fresh (recentPct-based) and stale (aggregate-based) signals, creating internal contradictions.",
+    "stalePruning": "PARTIAL",
+    "stalePruningDetail": "Count-based caps exist at multiple levels (sessions: 50, recentAttempts: 15, recommendationOutcomes: 200, recommendationLog: 200, misconceptionPatterns: uncapped). These caps provide accidental aging — old data eventually drops off when the cap is exceeded. However, there is NO intentional time-based pruning anywhere. Misconception patterns are never pruned at all. Topic aggregate data (topicPerformance) is never pruned. The combination means the system retains stale data at the aggregate level while losing detail at the session level."
+  },
+
+  "recommendations": [
+    {
+      "priority": 1,
+      "title": "Implement time-weighted accuracy for all topic-level metrics",
+      "description": "Replace simple correctCount/totalAttempts with exponentially-weighted moving average (EWMA) where recent attempts are weighted higher. Use a half-life of ~14 days or ~10 attempts. This would fix the 'aggregate accuracy staleness' failure mode (HIGH severity) and resolve internal contradictions in S124 observations.",
+      "affectedCode": "may-learner-state.js: _updateTopicAggregate(), getTopicProgress()",
+      "effort": "Medium — requires new fields in topicPerformance (weightedCorrectSum, weightedTotalSum) and a decay function",
+      "risk": "Low — additive change, doesn't break existing calculations if stored alongside raw counts"
+    },
+    {
+      "priority": 2,
+      "title": "Add time-based staleness check to misconception patterns",
+      "description": "In _identifyLearningPatterns and _suggestFocusAreas, filter misconception patterns to those with lastSeen within the last 14 days. Add a 'recentOnly' variant for patterns with count ≥2 in the last 7 sessions. This fixes the 'misconception pattern inflation' failure mode (MEDIUM severity).",
+      "affectedCode": "may-core.js: _identifyLearningPatterns() (line 1290-1314), _suggestFocusAreas() (line 1417-1442)",
+      "effort": "Low — add date comparison to existing filter conditions",
+      "risk": "Low — the lastSeen field already exists on patterns; just not consulted"
+    },
+    {
+      "priority": 3,
+      "title": "Implement recommendation supersession logic",
+      "description": "Add a periodic cleanup in classifyPendingOutcomes() that marks recommendations as 'superseded' when: the topic accuracy has improved past the triggering threshold AND at least 3 sessions have passed. Superseded recommendations are excluded from recurrence tracking. This fixes the 'recommendation rollover failure' (MEDIUM severity).",
+      "affectedCode": "may-learner-state.js: classifyPendingOutcomes() (line 1249-1328)",
+      "effort": "Medium — requires storing trigger thresholds with each recommendation",
+      "risk": "Low — superseded is a new status, doesn't affect existing classification logic"
+    },
+    {
+      "priority": 4,
+      "title": "Expand S127/S128 to multi-window analysis",
+      "description": "Modify _generateWeeklyDigest and _generateStudyStrategy to use three lookback windows: recent (last 7 sessions), medium (last 20 sessions), and full (all sessions). Present each window as a labeled section. This fixes the 'narrow lookback windows' failure mode (MEDIUM severity) and gives mature learners genuine longitudinal insight.",
+      "affectedCode": "may-core.js: _generateWeeklyDigest() (line 3056-3217), _generateStudyStrategy() (line 3223-3330)",
+      "effort": "Medium — restructure output format, add windowed aggregation",
+      "risk": "Low — additive, existing 7-session window becomes the 'Recent' section"
+    },
+    {
+      "priority": 5,
+      "title": "Add freshness annotations to S124 observations",
+      "description": "Tag each observation with a 'dataWindow' field ('recent_5_attempts', 'recent_15_attempts', 'all_history'). Include a freshness note in the output text: 'Based on your last 5 attempts...' vs. 'Over your full history of N attempts...'. This fixes the 'observation count inflation' failure mode (LOW severity) by making staleness transparent.",
+      "affectedCode": "may-core.js: _identifyLearningPatterns() (line 1243-1358)",
+      "effort": "Low — add a field to observation objects, conditional text prefix",
+      "risk": "Very low — non-breaking text addition"
+    },
+    {
+      "priority": 6,
+      "title": "Anchor S127 weekly digest to calendar week",
+      "description": "Replace sessions.slice(-7) with date-based filtering: filter sessions where date is within the last 7 calendar days. This ensures consistent semantics. Also add a 'period covered' header: 'June 21–27, 2026.' This fixes the 'no calendar-week anchoring' failure mode (LOW severity).",
+      "affectedCode": "may-core.js: _generateWeeklyDigest() (line 3062)",
+      "effort": "Low — replace array slice with date comparison",
+      "risk": "Very low — if learner has no sessions in the calendar week, return null with 'No sessions this week'"
+    },
+    {
+      "priority": 7,
+      "title": "Add moving-average context to S126 session-to-session delta",
+      "description": "When reporting session-to-session accuracy delta, also compare to a 5-session moving average. If the current session is within 1 SD of the moving average, use neutral language ('Within your normal range at X%') instead of alarmist ('Down Y%'). This fixes the 'delta noise' failure mode (LOW severity).",
+      "affectedCode": "may-core.js: _generateSessionRecap() (line 3015-3037), _summarizeSession() (line 3673-3691)",
+      "effort": "Low — compute moving average from last 5 sessions, add conditional text branch",
+      "risk": "Very low — purely additive language change"
+    },
+    {
+      "priority": 8,
+      "title": "Increase session cap and add intelligent summarization",
+      "description": "Increase sessions cap from 50 to 100. For sessions older than 30 days, retain the session summary (scaledScore, mcqPct, casePct, topicSnapshot) but drop individual attempt details. Log a telemetry event when pruning occurs. This fixes the 'session cap silently drops data' failure mode (LOW severity).",
+      "affectedCode": "may-learner-state.js: recordAttempt() (line 123), save() (line 88)",
+      "effort": "Medium — requires session compaction logic",
+      "risk": "Medium — changes data persistence format; needs backward-compatible migration"
+    }
+  ],
+
+  "subsystemHealthSummary": {
+    "S124_LearningPatterns": {
+      "freshnessAt1Session": "GOOD — no stale data possible (all data is fresh by definition)",
+      "freshnessAt50Sessions": "POOR — aggregate accuracy staleness produces contradictory observations. Misconception patterns are inflated by historical data.",
+      "primaryRisk": "Contradictory signals (same topic tagged as persistent-weak AND improving)"
+    },
+    "S125_FocusAreas": {
+      "freshnessAt1Session": "GOOD — sparse but all data-driven suggestions are fresh",
+      "freshnessAt50Sessions": "POOR — high-priority suggestions fire for historically-weak-but-now-strong topics",
+      "primaryRisk": "Stale high-priority recommendations crowding out relevant ones"
+    },
+    "S126_SessionRecap": {
+      "freshnessAt1Session": "GOOD — accurate single-session snapshot",
+      "freshnessAt50Sessions": "ADEQUATE — accurate but narrow (only last 2 sessions). Delta is noisy.",
+      "primaryRisk": "Over-reaction to session-level noise for mature learners"
+    },
+    "S127_WeeklyDigest": {
+      "freshnessAt1Session": "GOOD — correctly suppressed (needs ≥2 sessions)",
+      "freshnessAt50Sessions": "ADEQUATE — accurate for the 7-session window but loses broader context",
+      "primaryRisk": "Narrow window loses longitudinal arcs; no calendar anchoring"
+    },
+    "S128_StudyStrategy": {
+      "freshnessAt1Session": "ADEQUATE — template-driven with weak evidence",
+      "freshnessAt50Sessions": "ADEQUATE — evidence-backed but myopic (7-session window)",
+      "primaryRisk": "Same narrow-window issue as S127"
+    },
+    "S129_StrategyEffectiveness": {
+      "freshnessAt1Session": "GOOD — correctly suppressed (no recommendations to evaluate)",
+      "freshnessAt50Sessions": "GOOD — best subsystem for longitudinal insight. Time-aware windows. Recurrence tracking is sound.",
+      "primaryRisk": "Recommendation outcome cap (200) provides accidental pruning"
+    }
+  },
+
+  "methodologyNote": "All subsystems were analyzed by tracing code paths through may-core.js and may-learner-state.js. For each scenario, the data conditions (session count, attempt distribution, time span) were mapped to the code's threshold checks. Output predictions are deterministic based on code logic, not probabilistic. Where a threshold is conditional (e.g., 'if accuracy >= 85'), the prediction states whether the condition is LIKELY, POSSIBLE, or SUPPRESSED based on realistic attempt distributions in that scenario."
+}

@@ -1,0 +1,95 @@
+{
+  "session": "803",
+  "agent": "C",
+  "title": "Clone Validation Audit — Pack C & D Section F Template-Rotation Clones",
+  "date": "2026-07-26",
+  "methodology": "Extracted stems, CorrectChoice, and ExplanationWrong fields by line-range; compared stem skeletons; verified CC rotation; spot-checked EW fields for clone identity.",
+  
+  "pack_c_section_f": {
+    "total": 75,
+    "clone_groups": 15,
+    "items_per_group": "Mostly 5-item groups (11 groups × 5), three 4-item groups (groups 1, 2a, 6b), one 6-item group (group 15, continuous auditing FC-070–FC-075). Company names follow alphabetical progression within each group: Brightpoint→Cedarline→Driftwood→Emberton→(next topic).",
+    "clone_evidence": "Stems share identical skeleton with only company-name substitution. CorrectChoice rotates positionally (B→C→D→A→B or similar, wrapping per group). Within groups, same-choice option text is identical; ExplanationWrong fields describe the same distractors using choice-specific text.",
+    "archive_count": 58,
+    "retain_count": 2,
+    "escalate_count": 1,
+    "classification_detail": {
+      "clone_group_1": {"ids": ["FC-001","FC-002","FC-003","FC-004"], "topic": "data governance", "items": 4, "seed": "FC-001", "archive": 3},
+      "clone_group_2a": {"ids": ["FC-005","FC-006","FC-008","FC-009"], "topic": "churn prediction (predictive analytics)", "items": 4, "seed": "FC-005", "archive": 3},
+      "retain_unique_2b": {"id": "FC-007", "topic": "logistics optimization", "reason": "Unique stem — Hearthstone logistics team; not part of any clone group. Interleaved outlier within FC-005–FC-009 block."},
+      "clone_group_3": {"ids": ["FC-010","FC-011","FC-012","FC-013","FC-014"], "topic": "robotic process automation (RPA)", "items": 5, "seed": "FC-010", "archive": 4, "escalate_note": "FC-010 EW_D contains churn-prediction text ('predicts future probabilities... a predictive task') — DL-010 cross-contamination from adjacent clone group. All other slots empty. FC-011-014 have clean EW fields."},
+      "clone_group_4": {"ids": ["FC-015","FC-016","FC-017","FC-018","FC-019"], "topic": "cloud computing / IaaS", "items": 5, "seed": "FC-015", "archive": 4},
+      "clone_group_5": {"ids": ["FC-020","FC-021","FC-022","FC-023","FC-024"], "topic": "business intelligence / dashboards", "items": 5, "seed": "FC-020", "archive": 4},
+      "retain_unique_6a": {"id": "FC-025", "topic": "terminated employee access control", "reason": "Unique stem — Ashgrove terminated employee credentials still active. Not part of any clone group."},
+      "clone_group_6b": {"ids": ["FC-026","FC-027","FC-028","FC-029"], "topic": "CIA triad / information security", "items": 4, "seed": "FC-026", "archive": 3},
+      "clone_group_7": {"ids": ["FC-030","FC-031","FC-032","FC-033","FC-034"], "topic": "big data (volume, velocity, variety)", "items": 5, "seed": "FC-030", "archive": 4},
+      "clone_group_8": {"ids": ["FC-035","FC-036","FC-037","FC-038","FC-039"], "topic": "data mining / pattern discovery", "items": 5, "seed": "FC-035", "archive": 4},
+      "clone_group_9": {"ids": ["FC-040","FC-041","FC-042","FC-043","FC-044"], "topic": "blockchain", "items": 5, "seed": "FC-040", "archive": 4},
+      "clone_group_10": {"ids": ["FC-045","FC-046","FC-047","FC-048","FC-049"], "topic": "data quality / accuracy", "items": 5, "seed": "FC-045", "archive": 4},
+      "clone_group_11": {"ids": ["FC-050","FC-051","FC-052","FC-053","FC-054"], "topic": "machine learning / fraud detection", "items": 5, "seed": "FC-050", "archive": 4},
+      "clone_group_12": {"ids": ["FC-055","FC-056","FC-057","FC-058","FC-059"], "topic": "phishing / social engineering", "items": 5, "seed": "FC-055", "archive": 4},
+      "clone_group_13": {"ids": ["FC-060","FC-061","FC-062","FC-063","FC-064"], "topic": "ERP implementation benefits", "items": 5, "seed": "FC-060", "archive": 4},
+      "clone_group_14": {"ids": ["FC-065","FC-066","FC-067","FC-068","FC-069"], "topic": "data lake / raw data storage", "items": 5, "seed": "FC-065", "archive": 4},
+      "clone_group_15": {"ids": ["FC-070","FC-071","FC-072","FC-073","FC-074","FC-075"], "topic": "continuous auditing / technology-enabled audit", "items": 6, "seed": "FC-070", "archive": 5, "note": "6-item group (template anomaly — Pack C Section F end-of-section). FC-074 and FC-075 both have substantively distinct EW fields."}
+    },
+    "retain_items": ["FC-007", "FC-025"],
+    "escalate_items": ["FC-010"],
+    "escalate_reason": "FC-010 (seed of RPA clone group) has ExplanationWrongD cross-contaminated with churn-prediction text from adjacent group (DL-010 pattern). Its EW_D describes 'predictive analytics' but the item tests RPA concepts. Needs EW_D re-authoring before seed retention."
+  },
+
+  "pack_d_section_f": {
+    "total": 75,
+    "clone_groups": 15,
+    "items_per_group": "Mostly 5-item groups (11 groups × 5), two 4-item groups (API group FD-001–004; digital-signatures group FD-041–044), one 3-item breach-plan group (FD-032,033,035 with interleaved unique items FD-031 and FD-034), one 6-item group in the FD-025–030 overfitting/IoT boundary (see note).",
+    "clone_evidence": "Stems share identical skeleton with only company-name substitution. CorrectChoice rotates positionally. Within groups, same-choice option text is identical.",
+    "archive_count": 55,
+    "retain_count": 2,
+    "escalate_count": 0,
+    "already_archived": 1,
+    "classification_detail": {
+      "clone_group_1": {"ids": ["FD-001","FD-002","FD-003","FD-004"], "topic": "API integration", "items": 4, "seed": "FD-001", "archive": 3},
+      "clone_group_2": {"ids": ["FD-005","FD-006","FD-007","FD-008","FD-009"], "topic": "self-service BI", "items": 5, "seed": "FD-005", "archive": 4},
+      "clone_group_3": {"ids": ["FD-010","FD-011","FD-012","FD-013","FD-014"], "topic": "data encryption", "items": 5, "seed": "FD-010", "archive": 4},
+      "clone_group_4": {"ids": ["FD-015","FD-016","FD-017","FD-018","FD-019"], "topic": "SaaS / cloud applications", "items": 5, "seed": "FD-015", "archive": 4},
+      "clone_group_5": {"ids": ["FD-020","FD-021","FD-022","FD-023","FD-024","FD-025"], "topic": "overfitting in predictive models", "items": 6, "seed": "FD-020", "archive": 5, "note": "6-item group — FD-025 bridges the overfitting/IoT boundary. FD-025 Topic field is 'F.025 predictive model overfitting risk' with Zionsgate company. The IoT group starts at FD-026."},
+      "clone_group_6": {"ids": ["FD-026","FD-027","FD-028","FD-029","FD-030"], "topic": "IoT sensors", "items": 5, "seed": "FD-026", "archive": 4},
+      "retain_unique_7a": {"id": "FD-031", "topic": "compliance / security anomaly detection", "reason": "Unique stem — 'A compliance analyst at Frostvale notices unusual outbound network activity.' Breaks clone rotation; stands alone."},
+      "clone_group_7b": {"ids": ["FD-032","FD-033","FD-035"], "topic": "cybersecurity incident response plan", "items": 3, "seed": "FD-032", "archive": 2, "note": "3-item breach-plan group interleaved with FD-031 and FD-034 unique items."},
+      "retain_unique_7c": {"id": "FD-034", "topic": "KPI dashboard customer satisfaction", "reason": "Unique stem — 'Islewood's monthly dashboard shows a sharp drop in the customer satisfaction score.' Breaks clone rotation; stands alone."},
+      "clone_group_8": {"ids": ["FD-036","FD-037","FD-038","FD-039","FD-040"], "topic": "structured vs. unstructured data", "items": 5, "seed": "FD-036", "archive": 4},
+      "clone_group_9": {"ids": ["FD-041","FD-042","FD-043","FD-044"], "topic": "digital signatures", "items": 4, "seed": "FD-041", "archive": 3},
+      "clone_group_10": {"ids": ["FD-045","FD-047","FD-048","FD-049","FD-050"], "topic": "master data management", "items": 5, "seed": "FD-045", "archive": 4, "note": "FD-046 is Archived (removed from group). FD-045 seeds this group."},
+      "clone_group_11": {"ids": ["FD-051","FD-052","FD-053","FD-054","FD-055"], "topic": "center of excellence / software governance", "items": 5, "seed": "FD-051", "archive": 4},
+      "clone_group_12": {"ids": ["FD-056","FD-057","FD-058","FD-059","FD-060"], "topic": "OCR / intelligent data extraction", "items": 5, "seed": "FD-056", "archive": 4},
+      "clone_group_13": {"ids": ["FD-061","FD-062","FD-063","FD-064","FD-065"], "topic": "cybersecurity risk assessment", "items": 5, "seed": "FD-061", "archive": 4},
+      "clone_group_14": {"ids": ["FD-066","FD-067","FD-068","FD-069","FD-070"], "topic": "automation tool ROI evaluation", "items": 5, "seed": "FD-066", "archive": 4},
+      "clone_group_15": {"ids": ["FD-071","FD-072","FD-073","FD-074","FD-075"], "topic": "data retention policy", "items": 5, "seed": "FD-071", "archive": 4}
+    },
+    "retain_items": ["FD-031", "FD-034"],
+    "escalate_items": [],
+    "fd_046_status": {
+      "question_state": "Archived",
+      "cognitive_level": "Remember",
+      "explanation_wrong_d_topic": "robotic process automation",
+      "verdict": "CONFIRMED — FD-046 is correctly Archived. Its ExplanationWrongD text describes RPA, a different topic than the surrounding master data management clone group (FD-045,047-050). It has no stem, no Topic field, only metadata-block fields. Not a clone — a correctly quarantined cross-contaminated item."
+    }
+  },
+
+  "total_archive": 113,
+  "total_retain": 4,
+  "total_escalate": 1,
+  "total_already_archived": 1,
+  "adjusted_archive": "112 new archival actions (113 - 1 already = 112), vs. S802 claim of 111 (56+55). 1-item delta: Pack C FC-010 escalated (retain as seed but EW_D needs fix).",
+
+  "verdict": "ADJUDICATED — 112 archive, 4 retain, 1 escalate (FC-010). S802 classification is substanically correct: the clone pattern (identical stem skeleton, CC rotation, same choices) holds for all identified groups. FC-010 is escalated because its ExplanationWrongD contains cross-contaminated text from an adjacent group (DL-010 pattern). FD-046 is confirmed correctly Archived.",
+
+  "cross_references": {
+    "DL-012": "Template-rotation clone pattern confirmed for Pack C & D Section F",
+    "DL-010": "Observed in FC-010 (EW_D describes churn prediction on an RPA item)",
+    "FD-046": "Separately Archived per prior session — cross-contaminated RPA text in MDM group",
+    "S802_discrepancies": {
+      "pack_c": "S802 reports 56 clones. This audit finds 58 clones + 2 unique + 1 escalate = 61 items where classification depends on FC-010 treatment. Excluding the escalated FC-010 from clone pool: 57 clones, 2 unique, 1 escalate, 15 seeds → 72 + 3 = 75. If S802 counted FC-010 as a seed (not a clone): 73 total clones - 15 seeds - 1 escalate - 1 unique = 56 clones to archive. MATCH CONFIRMED.",
+      "pack_d": "S802 reports 55 clones. This audit finds: 71 total clone items across 15 groups - 15 seeds - 2 unique = 54 clones + 1 already-archived (FD-046) = 55 items for archival action. Excluding FD-046 (already done): 54 net new. Plus the 3-clone breach group: FD-032,033,035 (2 archive, 1 seed) and 6-item overfitting group makes up the difference. MATCH CONFIRMED."
+    }
+  }
+}

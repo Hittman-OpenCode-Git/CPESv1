@@ -1,0 +1,183 @@
+{
+  "session": "53",
+  "title": "Session 52 Failure Category Analysis — Classified by Rubric Impact",
+  "date": "2026-07-28",
+  "source": "Session 52 audit findings re-analyzed against CERTIFICATION_RUBRICS.md §2",
+  "categories": {
+    "substantive": {
+      "count": 1,
+      "cases_affected": 1,
+      "items_affected": 1,
+      "findings": [
+        {
+          "id": "S-001",
+          "case": "CBQ4-A1-Q2",
+          "detail": "AccountingPrinciple metadata = 'ASC 360' instead of 'ASC 350-20'",
+          "learner_visible": false,
+          "learner_text": "Explanation correctly states 'ASC 350-20' — only metadata field is wrong",
+          "rubric_impact": "NONE — AccountingPrinciple is not a rubric-gated field. D1 (accuracy) is unaffected: the correct standard IS applied in the learner-facing explanation."
+        }
+      ],
+      "severity": "LOW",
+      "blocks_certification": false
+    },
+    "metadata": {
+      "count": 6,
+      "cases_affected": 44,
+      "items_affected": 305,
+      "findings": [
+        {
+          "id": "M-001",
+          "finding": "44 cases have ProductionStatus: 'Draft' despite all items being question_state: 'Certified'",
+          "rubric_impact": "NONE. D4 defect gate 'ProductionStatus → question_state contradiction' covers Production+Unprocessed (inflated claim), not Draft+Certified (conservative direction). No dimension cap.",
+          "blocks_certification": false
+        },
+        {
+          "id": "M-002",
+          "finding": "4 cases missing CompanyName metadata field (company IS named in ScenarioText)",
+          "rubric_impact": "NONE. CompanyName is optional per QUESTION_METADATA_STANDARD.md. D4 Score 4 critical fields = 'CaseID, Title, SectionTags, Difficulty/DifficultyScore, ProductionStatus, Version' — CompanyName not listed. D2 satisfied by ScenarioText.",
+          "blocks_certification": false
+        },
+        {
+          "id": "M-003",
+          "finding": "305 items have item-level ProductionStatus: 'Draft' (case_items, not the wrapper)",
+          "rubric_impact": "NONE. CERTIFICATION_RUBRICS.md gates on case-level ProductionStatus. Item-level ProductionStatus is not a rubric dimension field.",
+          "blocks_certification": false
+        },
+        {
+          "id": "M-004",
+          "finding": "CBQ4-A2 CompanyName = 'During Year' (corrupted metadata field)",
+          "rubric_impact": "NONE. Same reasoning as M-002 — optional field, ScenarioText is correct.",
+          "blocks_certification": false
+        },
+        {
+          "id": "M-005",
+          "finding": "CBQ2-A3 BlueprintObjectives mentions 'Inventory valuation' but case tests revenue/ADA",
+          "rubric_impact": "D2 Score 4 requires 'Specific topic mapping.' One mismatched objective in an otherwise aligned case → minor. D2 likely remains ≥ 4.",
+          "blocks_certification": false
+        },
+        {
+          "id": "M-006",
+          "finding": "CURRENT_BASELINES.md §2 table stale (Pack A shown as 481, actual 500)",
+          "rubric_impact": "NONE — documentation staleness, not a content defect.",
+          "blocks_certification": false
+        }
+      ],
+      "severity": "LOW",
+      "blocks_certification": false
+    },
+    "presentation": {
+      "count": 4,
+      "cases_affected": 55,
+      "items_affected": 180,
+      "findings": [
+        {
+          "id": "P-001",
+          "finding": "21 cases have generic Stakeholder: 'Management' instead of named role",
+          "rubric_impact": "BLOCKS. D2 Score 3: 'Company named but scenario is generic.' D2 requires ≥ 4 for certification. CAQS §3.1 requires 'a specific decision-maker with a role.' 'Management' is a collective noun, not a specific stakeholder. D2=3 in affected cases.",
+          "blocks_certification": true
+        },
+        {
+          "id": "P-002",
+          "finding": "27 items have explanations < 100 characters",
+          "rubric_impact": "BLOCKS on cases with 2+ thin items. D5 Score 3: 'Explanations are correct but terse — state the answer without full reasoning.' Cases with 2+ such items fall at D5=3 < required 4. Cases with exactly 1 thin item may pass under Score 4 'Minor gaps' clause.",
+          "blocks_certification": true
+        },
+        {
+          "id": "P-003",
+          "finding": "34 cases have ExhibitCount < 2 — only 1 exhibit per case",
+          "rubric_impact": "NONE. No rubric dimension gate explicitly caps on exhibit count. D4 gate on ExhibitCount only fires when count field ≠ actual array length, not when count=1 correctly. CAQS §3.4 recommends ≥2 but rubric does not enforce.",
+          "blocks_certification": false
+        },
+        {
+          "id": "P-004",
+          "finding": "Generic scenario language in some Draft cases (textbook-style vs. business-authentic)",
+          "rubric_impact": "D2 Score 3 for affected cases: 'Adequate but generic.' D2 minimum 4 → BLOCK. However, this was not quantified precisely in Session 52 — ad-hoc observation. Requires per-case D2 scoring.",
+          "blocks_certification": "YELLOW — depends on per-case D2 scoring"
+        }
+      ],
+      "severity": "MEDIUM",
+      "blocks_certification": "PARTIAL — stakeholders + thin explanations block; exhibit count does not"
+    },
+    "calibration": {
+      "count": 4,
+      "cases_affected": 17,
+      "items_affected": 214,
+      "findings": [
+        {
+          "id": "C-001",
+          "finding": "17 cases have uniform difficulty labels (all items same level) — DL-032",
+          "rubric_impact": "NONE. D6 defect gate 'No cognitive progression (all items same type/difficulty)' requires BOTH same type AND same difficulty. If item types vary (numeric→select→multi), uniform difficulty alone does not trigger this gate. D4 CF4 (DifficultyScore within ±1 of mean) passes trivially. No dimension cap.",
+          "blocks_certification": false
+        },
+        {
+          "id": "C-002",
+          "finding": "214/400 items labeled 'Difficult' (53.5% vs. CAQS §6.1 25% target)",
+          "rubric_impact": "NONE. CAQS §6.1 is a target distribution — not a rubric dimension or defect gate. The rubric gates on DifficultyScore PRESENCE, not distribution alignment.",
+          "blocks_certification": false
+        },
+        {
+          "id": "C-003",
+          "finding": "51 items with case-level DifficultyScore > 1 from item mean (CF4 violation)",
+          "rubric_impact": "D4 caps at 3 when CF4 violated. However, this requires per-case verification of which 51 items and whether the containing cases' D4 drops below 4. May affect a subset of cases.",
+          "blocks_certification": "YELLOW — requires per-case CF4 check"
+        },
+        {
+          "id": "C-004",
+          "finding": "29 select+Evaluate items (possible DL-031 definition-match mislabel)",
+          "rubric_impact": "D6 evaluates cognitive-level progression but not individual Bloom's mislabeling. No specific gate for mislabeled Bloom's level. D2 may be affected if LOSTag mismatches.",
+          "blocks_certification": false
+        }
+      ],
+      "severity": "LOW",
+      "blocks_certification": "MINIMAL — only CF4 violation cases potentially affected"
+    },
+    "structural": {
+      "count": 4,
+      "cases_affected": 48,
+      "items_affected": 254,
+      "findings": [
+        {
+          "id": "ST-001",
+          "finding": "48 cases have cognitive progression violations — items not ordered Apply→Analyze→Evaluate",
+          "rubric_impact": "BLOCKS. D6 Score 3: 'Items don't follow cognitive progression.' Score 4: 'Items mostly follow progression but one pair is inverted.' When the entire sequence is unordered (template artifact), D6=3 < required 4. CERTIFICATION_RUBRICS.md defect gate also fires if items are all same type+same difficulty but independent gate.",
+          "blocks_certification": true
+        },
+        {
+          "id": "ST-002",
+          "finding": "Item type distribution not matching Gold Standard pattern (e.g., too many select, too few numeric)",
+          "rubric_impact": "NONE. Gold Standard type distribution is aspirational (CASE_STUDY_GOLD_STANDARD.md), not rubric-gated. D6 evaluates progression quality, not type-count targets.",
+          "blocks_certification": false
+        },
+        {
+          "id": "ST-003",
+          "finding": "Case-level QuestionCount/ExhibitCount fields present but may not equal array lengths (CF: cross-field rule)",
+          "rubric_impact": "D4 caps at 2 (QuestionCount≠Items.length) or 3 (ExhibitCount≠Exhibits.length). However, these are structural fields that were populated correctly during the S916 reconsolidation. Requires verification but likely clean.",
+          "blocks_certification": "UNLIKELY — check per-case"
+        },
+        {
+          "id": "ST-004",
+          "finding": "5 legacy scored_cases*.js files in repository root — governance violation (Constitution §11.4)",
+          "rubric_impact": "NONE — file hygiene, not a case content defect.",
+          "blocks_certification": false
+        }
+      ],
+      "severity": "HIGH",
+      "blocks_certification": "YES — cognitive progression blocks 48 cases"
+    }
+  },
+  "summary": {
+    "total_findings": 19,
+    "block_under_rubric": 3,
+    "warn_under_rubric": 10,
+    "no_rubric_impact": 6,
+    "block_breakdown": [
+      "Cognitive progression violations → D6=3 (48 cases)",
+      "Generic stakeholders → D2=3 (21 cases)",
+      "Thin explanations → D5=3 (subset of 27 items across cases)"
+    ],
+    "most_impactful_single_finding": "Cognitive progression (48 cases, 64% of inventory) — the only finding that independently blocks a large portion of the case pool under the certification rubric",
+    "least_relevant_to_certification": "Difficulty calibration (DL-032) and ExhibitCount < 2 — Session 52's heaviest-scored dimensions but have zero rubric gate impact",
+    "key_insight": "Session 52's 0/75 result is an artifact of the scoring instrument. When judged against the authoritative CERTIFICATION_RUBRICS.md, many cases would certify that Session 52 rated CONDITIONAL — specifically cases with proper cognitive progression, named stakeholders, and substantive explanations, regardless of their difficulty labels, exhibit count, or metadata completeness."
+  }
+}

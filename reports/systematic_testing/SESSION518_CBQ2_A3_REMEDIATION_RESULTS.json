@@ -1,0 +1,101 @@
+{
+  "session": "518",
+  "timestamp": "2026-07-26T00:10:00Z",
+  "purpose": "CBQ2-A3 remediation results — explanation uplift, citations, distractor rationale, and metadata additions",
+
+  "target": {
+    "file": "scored_cases2.js",
+    "array": "ENHANCED_CASE_BASE2",
+    "case": "CBQ2-A3",
+    "title": "Revenue Recognition and Receivables Valuation",
+    "items": 5
+  },
+
+  "pre_mediation_state": {
+    "case_state": "Unprocessed",
+    "items_state": "5 Unprocessed",
+    "explanation_avg_length": 63.2,
+    "has_citations": false,
+    "has_distractor_rationale": false,
+    "has_per_item_difficulty": false,
+    "answer_keys_verified": true
+  },
+
+  "items": [
+    {
+      "itemId": "CBQ2-A3-Q1",
+      "type": "numeric",
+      "cognitiveLevel": "Apply",
+      "difficulty_added": "Moderate/3",
+      "explanation_before": "($400k / $550k) * $500k = $363,636 (34 chars)",
+      "explanation_after": "571 chars",
+      "citations_added": "ASC 606",
+      "distractor_rationale": "N/A (numeric)",
+      "changes": "Expanded from formula-only to: ASC 606 citation, standalone price allocation method, formula with substitution, business interpretation (Vertex delivery recognition), common trap warning."
+    },
+    {
+      "itemId": "CBQ2-A3-Q2",
+      "type": "numeric",
+      "cognitiveLevel": "Apply",
+      "difficulty_added": "Moderate/3",
+      "explanation_before": "(800k*0.01) + (300k*0.05) + (100k*0.20) = 8k + 15k + 20k = 43,000 (65 chars)",
+      "explanation_after": "567 chars",
+      "citations_added": "ASC 326, allowance method, balance sheet approach",
+      "distractor_rationale": "N/A (numeric)",
+      "changes": "Expanded from formula-only to: ASC 326 citation, aging schedule breakdown (0-30/31-60/>60), allowance method principle, balance sheet approach context, net realizable value interpretation."
+    },
+    {
+      "itemId": "CBQ2-A3-Q3",
+      "type": "multi",
+      "cognitiveLevel": "Evaluate",
+      "difficulty_added": "Moderate/3",
+      "explanation_before": "A good is distinct if it can be benefited from on its own and is separately identifiable. (89 chars)",
+      "explanation_after": "651 chars",
+      "citations_added": "ASC 606-10-25-19",
+      "distractor_rationale": "ADDED: Explains why 'physical delivery' and 'payment received' are wrong — they confuse timing of revenue recognition with identification of performance obligations",
+      "changes": "Expanded from single sentence to: specific ASC paragraph citation, both criteria explained, wrong-choice rationale for 2 excluded options, candidate misconception identification."
+    },
+    {
+      "itemId": "CBQ2-A3-Q4",
+      "type": "select",
+      "cognitiveLevel": "Analyze",
+      "difficulty_added": "Moderate/3",
+      "explanation_before": "Target is $43k credit. Current is $5k debit. Expense = $43k + $5k = $48k. (73 chars)",
+      "explanation_after": "784 chars",
+      "citations_added": "allowance method",
+      "distractor_rationale": "ADDED: $38k (incorrectly subtracts debit), $43k (ignores debit balance), $5k (merely the debit balance) — each with specific accounting reasoning",
+      "changes": "Expanded from fragmentary to: principle explanation, calculation trace, full distractor analysis for all 3 wrong answers, allowance method context."
+    },
+    {
+      "itemId": "CBQ2-A3-Q5",
+      "type": "fill",
+      "cognitiveLevel": "Understand",
+      "difficulty_added": "Moderate-Easy/2",
+      "explanation_before": "Aging AR focuses on the ending balance sheet valuation. (55 chars)",
+      "explanation_after": "611 chars",
+      "citations_added": "ASC 326, balance sheet approach, income statement approach contrast",
+      "distractor_rationale": "N/A (fill)",
+      "changes": "Expanded from single sentence to: balance sheet approach named and explained, income statement approach contrasted, ASC 326 expected credit loss model alignment, net realizable value context."
+    }
+  ],
+
+  "post_remediation_state": {
+    "case_state": "Certified",
+    "items_state": "5 Certified",
+    "explanation_avg_length": 636.8,
+    "has_citations": true,
+    "has_distractor_rationale": true,
+    "has_per_item_difficulty": true,
+    "answer_keys_unchanged": true
+  },
+
+  "verification": {
+    "parse_status": "OK (Function constructor)",
+    "answer_keys_verified": "All 5 match S515 independent calculations",
+    "prompts_unchanged": true,
+    "exhibits_unchanged": true,
+    "choices_unchanged": true,
+    "scoring_unchanged": true,
+    "unrelated_cases_unchanged": true
+  }
+}

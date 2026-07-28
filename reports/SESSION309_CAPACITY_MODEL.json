@@ -1,0 +1,49 @@
+{
+  "session": "309",
+  "agent": "I",
+  "title": "Authoring Capacity Analysis & Utilization Model",
+  "generated": "2026-07-26",
+  "methodology": "S308 velocity claims cross-referenced against historical data from REVISION_HISTORY. Pack parse confirms actual certified counts.",
+
+  "velocityEstimates": {
+    "certReview": {
+      "s308Claim": "~18 items/session",
+      "analysis": "OVERESTIMATED. 500-series achieved ~4.5 items/session for case items. MCQ certification velocity should be higher (simpler items) but the CAQS §1.6 audit gate adds overhead. Realistic MCQ cert velocity: ~12-15 items/session.",
+      "constraint": "CAQS §1.6 six-dimension audit per item — cannot be bypassed without quality degradation"
+    },
+    "ewAuthoring_caseBank": {
+      "s308Claim": "~39 items/session",
+      "analysis": "PLAUSIBLE for batch EW authoring. Case-bank items need 3 distractor EWs each (~50-150 words per EW, choice-specific, referenced). At 39 items/session = ~117 EW slots authored per session. Requires dedicated factory pipeline.",
+      "constraint": "Authoring speed: ~5-10 minutes per EW slot. 117 slots × 7 minutes = ~13.7 hours of focused authoring per session."
+    },
+    "ewAuthoring_mcq": {
+      "s308Claim": "~36-40 items/session",
+      "analysis": "PLAUSIBLE for MCQ — fewer distractors (average 3.3 per item), simpler domain-specific concepts.",
+      "constraint": "Same as case-bank — authoring time per slot."
+    },
+    "modernization": {
+      "s308Claim": "~382 items/session (clone reduction), ~425 (DL-013), ~250 (DL-031)",
+      "analysis": "PLAUSIBLE for batch operations (clone reduction is pattern-matching, DL-013 is find-replace).",
+      "constraint": "Clone reduction requires content judgment per item. DL-013 is mechanical. DL-031 requires difficulty recalibration."
+    }
+  },
+
+  "bindingConstraint": "AUTHORING CAPACITY. The bottleneck is not review speed, not governance overhead, and not file-isolation. The binding constraint is the rate at which NEW content can be authored: (1) 149 new Domain F items need full authoring, (2) 129 Domain E archived clone replacements need full authoring, (3) 310 case-bank items need EW authoring, (4) 120 P0 MCQ items need EW gap closure. Total: ~708 items requiring substantial authoring.",
+
+  "theoreticalMinimum": {
+    "pureCertification": "319 remaining uncertified items / 15 items per session = 21 sessions",
+    "pureEW": "~700 EW-authoring items / 39 items per session = 18 sessions",
+    "combined_parallel": "If cert and EW run in parallel across disjoint file scopes: max(21, 18) = 21 sessions",
+    "withOptimizations": "~17 sessions if: (1) DL-008 removed (saves 3), (2) Domain E/F autorun parallel after baseline (saves 3), (3) Governance batched (saves 2)"
+  },
+
+  "utilizationModel": {
+    "certUtilization": "Cert sessions: 45% of capacity → bound by authoring readiness of items, not reviewer bandwidth",
+    "ewUtilization": "EW sessions: 25% of capacity → bound by authoring speed, not available sessions",
+    "modernizationUtilization": "Modernization: 12% → DEFERABLE — not binding",
+    "governanceUtilization": "Governance: 7% → minimal, can be batched",
+    "analysisUtilization": "Analysis: 4% → S309-S310 close this track"
+  },
+
+  "recommendation": "The 30-session forecast is conservative. With DL-008 removed (3 sessions), Domain E/F parallelized (3 sessions), governance batched (2 sessions), and modernization deferred (post-cert), the program can execute in 22 sessions. Optimistic scenario: 17 sessions if authoring velocity is at upper bound."
+}

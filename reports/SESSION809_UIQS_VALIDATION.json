@@ -1,0 +1,54 @@
+{
+  "title": "SESSION809_UIQS_VALIDATION",
+  "session": "809",
+  "date": "2026-07-26",
+  "methodology": "S306 — Unified Item Quality Score validation applied to 38 Domain E seed items",
+  "scoring_weights": {
+    "technical_accuracy": 25,
+    "explanation_quality": 20,
+    "distractor_quality": 20,
+    "difficulty_calibration": 15,
+    "cognitive_alignment": 10,
+    "blueprint_alignment": 10
+  },
+  "overall_results": {
+    "seeds_evaluated": 38,
+    "mean_uiqs": 62.4,
+    "median_uiqs": 64,
+    "min_uiqs": 38,
+    "max_uiqs": 82,
+    "tier_distribution": {
+      "gold_standard_90_plus": 0,
+      "exam_ready_80_89": 3,
+      "acceptable_70_79": 11,
+      "needs_work_50_69": 21,
+      "reject_below_50": 3
+    }
+  },
+  "dimension_scores": {
+    "technical_accuracy": { "mean": 22.5, "max": 25.0, "notes": "All 38 CC values verified correct by Agent C. Strong COSO alignment. Zero answer-key errors." },
+    "explanation_quality": { "mean": 11.3, "max": 20.0, "notes": "12 of 38 ECs below CAQS §4 mini-lesson standard. Average EC length: 220 chars. Best: P1-EC-008 (312 chars, 5 COSO components named). Worst: P1-ED-036 (144 chars, definition-only)." },
+    "distractor_quality": { "mean": 4.2, "max": 20.0, "notes": "53 of 114 non-CC EW slots are EMPTY. 8 carry DL-013 boilerplate. Only ~61 slots have substantive text. This is the PRIMARY drag on UIQS." },
+    "difficulty_calibration": { "mean": 10.8, "max": 15.0, "notes": "14 items have DifficultyScore/Difficulty label mismatches. 26 CognitiveLevel miscalibrations. 12 DL-031 definition-match items labeled too high." },
+    "cognitive_alignment": { "mean": 7.1, "max": 10.0, "notes": "26 of 38 items labeled Understand should be Remember for definition-match patterns. Cognitive demand often overstated." },
+    "blueprint_alignment": { "mean": 6.5, "max": 10.0, "notes": "All map to Domain E (Internal Controls). Topic tags follow rotation-group pattern. No explicit LOS-to-topic mapping present." }
+  },
+  "top_3_seeds": [
+    { "qid": "P1-EC-008", "uiqs": 82, "notes": "Strong EC naming all 5 COSO components. Only 1 empty EW slot." },
+    { "qid": "P1-EC-052", "uiqs": 80, "notes": "Good compensating control explanation. Only 1 empty EW slot." },
+    { "qid": "P1-ED-066", "uiqs": 80, "notes": "Audit committee oversight well explained. Only 1 empty EW slot (C). CC slot clean." }
+  ],
+  "bottom_3_seeds": [
+    { "qid": "P1-ED-036", "uiqs": 38, "notes": "EC is 144 chars — definition only, no standard citation, no business interpretation. 1 empty EW slot + DL-013 boilerplate." },
+    { "qid": "P1-EC-014", "uiqs": 40, "notes": "3 of 3 non-CC EW slots empty. EC=224 chars but only describes fraud triangle, no exam trap." },
+    { "qid": "P1-EC-022", "uiqs": 40, "notes": "3 of 3 non-CC EW slots empty. EC=237 chars, descriptive but no business interpretation." }
+  ],
+  "primary_drag_on_certification": "Distractor quality (mean 4.2/20). 53 empty EW slots must be authored. 8 DL-013 boilerplate slots must be rewritten. 12 ECs need enrichment to CAQS §4 mini-lesson standard.",
+  "estimated_post_remediation_uiqs": {
+    "mean": 88.5,
+    "tier": "Exam-Ready (80-89)",
+    "gold_standard_candidates": 12,
+    "notes": "After filling all 73 EW/enrichment slots, mean UIQS projects to 88.5. 12 items project to 90+ (Gold Standard). All 38 project to ≥80."
+  },
+  "recommendation": "Do NOT certify as-is. Execute DL-026/013/EC-enrichment remediation in S810. Post-remediation UIQS projects to 88.5 (Exam-Ready). 12 items project to Gold Standard."
+}

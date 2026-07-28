@@ -1,0 +1,121 @@
+{
+  "title": "SESSION808_DL031_REVIEW",
+  "session": "808",
+  "date": "2026-07-26",
+  "defect_reference": "DL-031 — Definition-Match Difficulty Inflation (Systematic)",
+  "description": "Adjudication of 10 Wave 2b items for difficulty label accuracy per CAQS §6.1 and §6.2 (Bloom's alignment). Items where stem defines the concept and CC names the term are recalibrated downward per DL-031 pattern.",
+  "items_reviewed": 10,
+  "recalibrations_applied": 7,
+  "retained_at_original": 3,
+  "adjudications": [
+    {
+      "qid": "P1-E-R18",
+      "topic": "Monitoring activities — ongoing vs separate evaluations (COSO Principle 16)",
+      "cognitive_level": "Understand",
+      "original_difficulty": "Moderate",
+      "original_score": 3,
+      "adjudicated_difficulty": "Easy",
+      "adjudicated_score": 1,
+      "rationale": "Stem defines the concept ('Ongoing evaluations differ from separate evaluations primarily because ongoing evaluations are:'). CorrectChoice C is the textbook definition of ongoing evaluations. Candidate matches definition to term — pure Understand-level, no application required.",
+      "action": "RECALIBRATED"
+    },
+    {
+      "qid": "P1-E-R21",
+      "topic": "External audit opinions — types under GAAS (AU-C 705)",
+      "cognitive_level": "Remember",
+      "original_difficulty": "Moderate",
+      "original_score": 3,
+      "adjudicated_difficulty": "Easy",
+      "adjudicated_score": 1,
+      "rationale": "Stem describes material-and-pervasive misstatements → CC names the opinion type (adverse). Pure recall of audit opinion taxonomy. No analysis or judgment required beyond memorization of AU-C 705 opinion types.",
+      "action": "RECALIBRATED"
+    },
+    {
+      "qid": "P1-E-R22",
+      "topic": "Audit committee — composition and independence requirements (SOX 301/407)",
+      "cognitive_level": "Understand",
+      "original_difficulty": "Moderate",
+      "original_score": 3,
+      "adjudicated_difficulty": "Moderate-Easy",
+      "adjudicated_score": 2,
+      "rationale": "Tests multiple standards (SOX 301, SEC 10A-3, NYSE 303A.02) and requires distinguishing permissible vs impermissible relationships. Candidates must evaluate 4 scenarios against multiple criteria — more than pure recall but not application-level. Moderate-Easy (2) reflects the multi-standard burden without requiring computation or extended analysis.",
+      "action": "RECALIBRATED"
+    },
+    {
+      "qid": "P1-E-R23",
+      "topic": "Board governance — oversight responsibilities under COSO Principle 2",
+      "cognitive_level": "Understand",
+      "original_difficulty": "Moderate",
+      "original_score": 3,
+      "adjudicated_difficulty": "Moderate-Easy",
+      "adjudicated_score": 2,
+      "rationale": "Tests the board-oversight-vs-management-execution distinction — a conceptual distinction that candidates must understand. Not a pure definition-match (stem does not define 'board oversight'; it asks what best describes the board's responsibility). But the distractors are clearly wrong at an operational level, so Moderate-Easy (2) is the correct calibration.",
+      "action": "RECALIBRATED"
+    },
+    {
+      "qid": "P1-E-R24",
+      "topic": "Entity-level controls — scope and application vs transaction controls",
+      "cognitive_level": "Understand",
+      "original_difficulty": "Moderate",
+      "original_score": 3,
+      "adjudicated_difficulty": "Easy",
+      "adjudicated_score": 1,
+      "rationale": "Stem asks 'Which of the following is the best example of an entity-level control?' and the code of ethics (A) is the unmistakable entity-level control. Distractors (purchase order approval, bank reconciliation, password policy) are clearly transaction-level or IT general controls. Recognizable classification task at lower cognitive demand.",
+      "action": "RECALIBRATED"
+    },
+    {
+      "qid": "P1-E-R25",
+      "topic": "Information quality — timeliness characteristic (COSO Principle 13)",
+      "cognitive_level": "Remember",
+      "original_difficulty": "Moderate",
+      "original_score": 3,
+      "adjudicated_difficulty": "Easy",
+      "adjudicated_score": 1,
+      "rationale": "Stem defines the characteristic ('available to decision-makers before it loses its capacity to influence decisions') and CC names it ('Timeliness'). Pure definition → term matching. No analysis, application, or judgment required.",
+      "action": "RECALIBRATED"
+    },
+    {
+      "qid": "P1-E-R33",
+      "topic": "Internal audit — organizational placement and reporting structure (IIA 1110)",
+      "cognitive_level": "Understand",
+      "original_difficulty": "Moderate",
+      "original_score": 3,
+      "adjudicated_difficulty": "Moderate-Easy",
+      "adjudicated_score": 2,
+      "rationale": "Tests knowledge of IIA Standard 1110 best practice (functional reporting to audit committee + administrative to CEO). The candidate must distinguish from common but incorrect reporting lines (CFO, general counsel, COO). More nuanced than pure recall because it requires understanding why each alternative impairs independence, but still below the application threshold. Moderate-Easy (2) is appropriate.",
+      "action": "RECALIBRATED"
+    }
+  ],
+  "retained_at_moderate": [
+    {
+      "qid": "P1-E-R12",
+      "cognitive_level": "Apply",
+      "difficulty": "Moderate",
+      "score": 3,
+      "rationale": "Tests correct classification of a control (reconciliation) as detective, preventive, or entity-level. Candidate must apply the COSO Principle 12 control classification framework across 4 distinct scenarios. Genuine Apply-level task with meaningful distractor discrimination. Retained at Moderate/3."
+    },
+    {
+      "qid": "P1-E-R13",
+      "cognitive_level": "Apply",
+      "difficulty": "Moderate",
+      "score": 3,
+      "rationale": "Tests the distinction between correction (fixing the error) and corrective control (structural change to prevent recurrence). Candidate must apply the formal internal control distinction across 4 actions in a realistic scenario. The correction-vs-corrective-control nuance requires Apply-level reasoning. Retained at Moderate/3."
+    },
+    {
+      "qid": "P1-E-R28",
+      "cognitive_level": "Apply",
+      "difficulty": "Moderate",
+      "score": 3,
+      "rationale": "Tests comparison of manual vs automated controls with a realistic business scenario (bank loan approval). Candidate must identify which inherent limitation of manual controls automation specifically addresses. All 4 distractors are plausible generalizations; the correct answer requires understanding trade-offs, not memorization. Retained at Moderate/3."
+    }
+  ],
+  "difficulty_distribution_post_recalibration": {
+    "Easy_1": 3,
+    "ModerateEasy_2": 3,
+    "Moderate_3": 3,
+    "Difficult_4": 0,
+    "VeryDifficult_5": 0,
+    "note": "Distribution aligns with Domain E certification profile — foundational concepts at lower difficulty, application-oriented items at Moderate."
+  },
+  "methodology_note": "DL-031 adjudication follows CAQS §6.1 calibration standard. Key test: when stem defines the concept and CC names it with >50% lexical overlap, the item defaults to Easy (1) unless distractors demand genuine application-level discernment. Items R12, R13, and R28 were verified to have sufficient distractor engineering to justify Moderate retention."
+}

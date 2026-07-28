@@ -1,0 +1,89 @@
+{
+  "document": "SESSION203_NAVIGATION_MODEL",
+  "session": "S203",
+  "title": "Navigation Model — Session & Question Deep Linking",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "authority": "S202 Addendum A-03, A-04",
+  "purpose": "Defines the bidirectional linking model between questions, sessions, and recommendations. Every entity becomes navigable — click a question to see its sessions, click a session to see its questions, click a recommendation to launch its assigned session. This closes the gap between findings and execution.",
+  "constraints": ["No content changes", "No certification activity", "No governance changes", "No deployment"],
+
+  "navigation_graph": {
+    "entities": ["Question", "Session", "Recommendation", "Report", "TemplateFamily"],
+    "relationships": {
+      "Question → Sessions": "A question is referenced by zero or more sessions. Sessions are discovered via registry cross-reference and recommendation linkage.",
+      "Session → Questions": "A session operates on zero or more questions. Questions are listed in session deliverables and recommendation records.",
+      "Recommendation → Question": "A recommendation targets zero or more questions. Questions are linked via LinkedQuestions array.",
+      "Recommendation → Session": "A recommendation is assigned to a target session. Session is linked via TargetSession field.",
+      "Session → Recommendations": "A session may contain zero or more recommendations (source or target). Recommendations are discovered via registry scan.",
+      "Question → Recommendations": "A question may be referenced by zero or more recommendations. Recommendations discovered via getByQuestion().",
+      "Report → Session": "A report is produced by exactly one session."
+    }
+  },
+
+  "question_deep_linking": {
+    "description": "Every question reference in the platform is navigable. A question link provides access to all related context.",
+    "compound_key_resolution": "All question links resolve via compound-key identity (QID + CC + EW_Pattern + Template_Family + File_Path + VersionID). QID-only is insufficient for template-rotation items.",
+    "available_actions": {
+      "open_question": "Navigate to question viewer showing: Stem, Choices, CorrectChoice (masked/highlighted based on mode), ExplanationCorrect, ExplanationWrong[A-D], all metadata fields, governance state.",
+      "view_history": "Show all DELTA_LEDGER entries for this identity_key. Version chain with dates and change types.",
+      "view_certification_state": "Show current question_state, quality scores across 10 CAQS dimensions, last certification date, certification batch.",
+      "view_recommendations": "List all recommendations linked to this question. Each entry shows: RecommendationId, Status, Priority, SourceSession, Description.",
+      "view_sessions": "List all sessions that referenced this question. Each entry shows: SessionId, Role (source of finding, target of remediation, verified by), Date."
+    },
+    "example_view": {
+      "question": "P1-EC-024",
+      "compound_key": "P1-EC-024::B::1011::EC_variance_003::pack_c_corrected.js:Section_C::20260724144500-1",
+      "identity_key": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+      "question_state": "In Audit",
+      "referenced_by_sessions": ["S809.1", "S809.2", "S810", "S811"],
+      "open_recommendations": [
+        {"id": "REC-0809-014", "status": "IN_PROGRESS", "priority": "P1", "target_session": "S811", "finding_type": "DL-026"}
+      ],
+      "certification_status": "Not Certified — Structural defect (DL-026) present"
+    }
+  },
+
+  "session_linking": {
+    "description": "Every session exposes: its findings, deliverables, linked questions, linked recommendations, and produced reports. Sessions become navigable hubs for certification workflow.",
+    "available_actions": {
+      "open_session": "Navigate to session summary showing: SessionId, Date, Type, Status, Pre-flight checklist results, Readiness distribution.",
+      "view_findings": "List all defects or issues discovered by this session. Each finding shows: FindingType, Severity, QuestionIDs, Status.",
+      "view_deliverables": "List all files produced by this session (reports, specs, registry entries).",
+      "view_questions": "List all questions referenced by this session. Each entry links via compound-key deep link.",
+      "view_recommendations": "List all recommendations created by or assigned to this session.",
+      "view_reports": "List all report files generated. Link to each file."
+    },
+    "example_view": {
+      "session": "S811",
+      "type": "DL-026 Remediation — Pack C Section E",
+      "questions": ["P1-EC-024", "P1-EC-061", "P1-ED-073"],
+      "recommendations_created": ["REC-0811-001", "REC-0811-002"],
+      "recommendations_executed": ["REC-0810-014"],
+      "deliverables": ["reports/S811/verification_report.json"],
+      "status": "Complete — 3 items remediated, 0 DL-026 remaining in Section E"
+    }
+  },
+
+  "recommendation_linking": {
+    "description": "A recommendation is the bridge between finding and execution. Every recommendation provides direct access to launch work.",
+    "available_actions": {
+      "open_recommendation": "View full recommendation: ID, Status, Priority, Description, LinkedQuestions, TargetSession, Owner, CreatedDate, ClosureEvidence.",
+      "open_assigned_session": "Navigate to the session assigned to execute this recommendation.",
+      "view_linked_questions": "List all linked questions with deep links.",
+      "view_history": "Show state transitions with timestamps.",
+      "verify_closure": "Check ClosureEvidence file exists and is valid."
+    }
+  },
+
+  "implementation_file": "scripts/engine/navigation/navigation_model.js",
+  "navigation_registry_file": "knowledge/NAVIGATION_REGISTRY.json",
+
+  "navigation_registry_schema": {
+    "description": "Stores all entity relationships for O(1) cross-referencing. Rebuilt at session T0 from CANONICAL_REGISTRY, RECOMMENDATION_REGISTRY, and SESSION_REGISTRY.",
+    "by_question": {"P1-EC-024": {"sessions": ["S809.1", "S809.2", "S810", "S811"], "recommendations": ["REC-0810-014", "REC-0811-001"]}},
+    "by_session": {"S811": {"questions": ["P1-EC-024", "P1-EC-061", "P1-ED-073"], "recommendations_created": ["REC-0811-001"], "recommendations_executed": ["REC-0810-014"]}},
+    "by_recommendation": {"REC-0810-014": {"source_session": "S810", "target_session": "S811", "questions": ["P1-EC-024"]}}
+  }
+}

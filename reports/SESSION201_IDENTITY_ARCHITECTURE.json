@@ -1,0 +1,337 @@
+{
+  "report": "SESSION201_IDENTITY_ARCHITECTURE",
+  "session": "S201",
+  "agent": "Agent_E_Board4",
+  "date": "2026-07-27",
+  "mode": "READ_ONLY",
+
+  "current_identity_model": {
+    "description": "The system identifies items by QuestionID string alone (e.g., 'P1B-B-119'). All governance, scanning, remediation, and certification tooling was built on this assumption.",
+    "assumptions": [
+      "One QID = One item with a fixed CorrectChoice",
+      "CorrectChoice is an immutable property of the QID",
+      "ExplanationWrongA-D fields belong to the QID and describe its own choices",
+      "QID is a stable token usable as a database primary key",
+      "Scanning forward from a QuestionID line reliably finds that item's CorrectChoice",
+      "The temporal order of fields in the JSON object is consistent across packs"
+    ],
+    "failure_points": [
+      {
+        "assumption_broken": "One QID = One item with fixed CC",
+        "reality": "In template rotation groups, the same QID prefix appears at multiple positions (e.g., AD-002 and AD-004 have the same stem skeleton but CC rotates A→B→C→D→A). The QID is a template-group identifier, not a unique item instance.",
+        "evidence": "Pack D Section A Phase 0B audit: 15 five-item groups with rotating CC values. AD-001(CC=A), AD-002(CC=B), AD-003(CC=C), AD-004(CC=D), AD-005(CC=A).",
+        "defects_caused": ["DL-012", "DL-030"]
+      },
+      {
+        "assumption_broken": "ExplanationWrong text belongs to the labeled QID",
+        "reality": "In rotation group items, ExplanationWrong text can be contaminated with neighbor QID's topic text (DL-016 +1 offset). The EW fields carry template-stale data from the adjacent item in the rotation cycle.",
+        "evidence": "TIER0_STEM_CHOICE_MISMATCH_EMERGENCY.md: P1-E-038 (payroll terminated employee stem) had ExplanationWrong text about duplicate invoice controls (from P1-E-045's topic).",
+        "defects_caused": ["DL-016", "DL-010"]
+      },
+      {
+        "assumption_broken": "Scanning forward from QuestionID finds its CorrectChoice",
+        "reality": "Pack B stores CorrectChoice BEFORE QuestionID in the JSON object (lines 3168 CC then 3171 QID). Forward-scanning finds the NEXT QID's CC, producing ~75% false-positive rate.",
+        "evidence": "Pack B P1B-B-101: lines 3168 (CorrectChoice: 'D'), 3171 (QuestionID: 'P1B-B-101'). DEFECT_LIBRARY DL-024 Note: 'Pack B stores CorrectChoice BEFORE QuestionID... Forward-scanning from QID systematically grabs the NEXT item's CC.'",
+        "defects_caused": ["DL-029"]
+      },
+      {
+        "assumption_broken": "Template position = canonical seed position",
+        "reality": "The first brace-delimited occurrence of a QID in the file is not necessarily the canonical Unprocessed seed. Template rotation creates multiple items with the same QID format at different positions, and the canonical seed may not be the first occurrence.",
+        "evidence": "S320 REVISION_HISTORY entry: 'brace-aware extraction matched the first QID occurrence, but template rotation creates 5+ copies of each QID with different CC values — the Unprocessed canonical seed was not always the first occurrence.'",
+        "defects_caused": ["S320 targeting failure"]
+      }
+    ]
+  },
+
+  "dual_block_architecture": {
+    "physical_reality": "ALL pack files use SINGLE-OBJECT per QID — there are no literal separate JSON objects for metadata vs. content blocks. Every field (QuestionID, question_state, ExplanationWrongA-D, Stem, Choices, CorrectChoice, ExplanationCorrect) resides in one brace-delimited JSON object.",
+    "conceptual_layers": "Within each single object, there are two conceptual layers that can semantically diverge:",
+    "block1_metadata": {
+      "fields": ["QuestionID", "question_state", "certification_date", "certification_batch", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "DifficultyScore", "CognitiveLevel", "VerifiedChecks"],
+      "purpose": "Governance state, distractor explanations, difficulty labeling",
+      "risk": "ExplanationWrong text may reference choices from a NEIGHBORING QID's content block (DL-016 +1 shift). The text is in the right STRUCTURAL slot but describes the semantically WRONG topic."
+    },
+    "block2_content": {
+      "fields": ["Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "ItemType", "ItemStyle", "Stem", "Choices.{A,B,C,D}", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription"],
+      "purpose": "Learner-facing question content: stem, choices, correct answer, correct explanation",
+      "authoritative": true,
+      "note": "The content block is the SOURCE OF TRUTH for learner-facing content (per QUESTION_METADATA_STANDARD.md §9.4.2 G-NEW-1, G-NEW-3)"
+    },
+    "divergence_types": [
+      {
+        "type": "DL-016: ExplanationWrong topic shift",
+        "mechanism": "EW text in Block 1 describes a NEIGHBOR QID's topic, not the current QID's content block topic. Caused by template rotation where EW text was populated by positional assignment rather than per-QID alignment.",
+        "example": "P1-E-038 (terminated employee control stem) had EW fields describing duplicate invoice control topic — the topic of P1-E-045, the +1 neighbor.",
+        "status": "Pack A Section E: RESOLVED (S805). Pack D Sections A/D: PARTIALLY RESOLVED (Phase 0B confirmed content block CC is correct). Pack C Sections A/B: UNKNOWN."
+      },
+      {
+        "type": "DL-010: ExplanationWrong choice misassignment",
+        "mechanism": "EW[A] text describes Choice B, EW[B] text describes Choice C, etc. The text content describes the wrong choice letter, even though topics may match.",
+        "example": "P1-A-029: EW[A] described correct Choice B ($16,160), EW[B] described distractor Choice C ($18,560).",
+        "status": "Open — requires semantic per-slot verification."
+      },
+      {
+        "type": "DL-013: Template boilerplate EW",
+        "mechanism": "EW fields contain identical cross-slot template text ('represents a plausible misconception'). No divergence between blocks per se, but Block 1 lacks choice-specific educational value.",
+        "status": "~851 fields remaining across Packs A/C/D (non-Certified sections only)."
+      }
+    ],
+    "divergence_impact": "When Block 1 and Block 2 describe different items, learners see distractor explanations about the WRONG TOPIC. Certification requires these blocks to be aligned (G-NEW-1, G-NEW-2, G-NEW-3)."
+  },
+
+  "s320_failure_analysis": {
+    "what_s320_tried": "Execute s320_complete_remediation.js to fill empty ExplanationWrong slots on 38 Unprocessed seed items (19 Pack C + 19 Pack D Section E). Seeds were identified by QID + question_state: 'Unprocessed'.",
+    "what_broke": {
+      "symptom": "Pack C: 0 fills (variant mismatch prevented matching). Pack D: fills applied to wrong QID variants (not the canonical seeds). Both packs restored from pre-session backups.",
+      "mechanism": "The brace-aware extraction matched the FIRST brace-delimited object containing the target QID string. But in template rotation groups, the same QID (or a variant sharing the stem skeleton) appears in multiple brace-delimited objects — each with a different CorrectChoice value. The first occurrence is NOT necessarily the canonical Unprocessed seed.",
+      "example": "In a 5-item rotation group (EC-001 through EC-005), all 5 items share the same stem skeleton with company-name variation. The Unprocessed seed (EC-001 with CC=A) might be the 3rd occurrence in the file if items were reordered during prior remediation waves. The script's first-match strategy grabbed whatever occurrence came first.",
+      "root_cause_diagram": [
+        "1. Script identifies QID 'P1-EC-001' as target",
+        "2. Brace-matcher finds first '{...}' containing 'P1-EC-001' → grabs item with CC=B (variant, not seed)",
+        "3. Script attempts to fill EW[C] (empty for CC=B variant) but EW pattern doesn't match expected single-empty-slot signature",
+        "4. Fill fails silently (Pack C) or applies to wrong item (Pack D)",
+        "5. BOTH packs restored from backups — zero effective writes"
+      ]
+    },
+    "root_cause": "The identity model used QID alone as the lookup key. In a template-rotation architecture, QID is NOT sufficiently unique. You need QID + CorrectChoice + EW slot pattern + question_state to uniquely identify the canonical seed instance.",
+    "lesson": "Any remediation script targeting seed QIDs must verify the specific variant being modified matches ALL ground-truth parameters (CC value + EW slot emptiness pattern + question_state), not just the QID string. Future remediation must use explicit line-number targeting with pre-verified CC values, or a match that includes the full compound key."
+  },
+
+  "required_identity_model": {
+    "principle": "A QID is a TEMPLATE GROUP IDENTIFIER, not a unique item instance. Uniqueness requires a compound key across multiple dimensions.",
+    "compound_key_fields": [
+      {
+        "field": "QID",
+        "type": "String",
+        "why_required": "Base identifier — the template group name. Cannot be discarded as it is the only human-readable label and governs file-level section organization. Example: 'P1-AD-001'."
+      },
+      {
+        "field": "CorrectChoice",
+        "type": "String (A|B|C|D)",
+        "why_required": "Distinguishes rotation positions within a template group. In a 5-item group, CC cycles A→B→C→D→A. A QID with CC='A' is a DIFFERENT item instance than the same QID stem with CC='B'. The CC value determines: (a) which EW slot must be empty (DL-008 governance), (b) which answer text the learner is told is correct."
+      },
+      {
+        "field": "EW_Pattern",
+        "type": "4-bit signature (e.g., '0100' = EW_A empty, B/C/D non-empty)",
+        "why_required": "The binary fingerprint of which ExplanationWrong slots are empty vs. non-empty. This is the most reliable structural identifier because: (a) it distinguishes rotation positions where CC is the same but EW distribution differs, (b) it detects DL-026 (empty non-CC slots), (c) it detects items where a remediation action accidentally cleared the wrong slot."
+      },
+      {
+        "field": "Template_Family",
+        "type": "String (e.g., 'AD_factoring_001')",
+        "why_required": "Identifies which 5-item rotation group this QID belongs to. Items within a family share the same stem skeleton (company-name substitution only) and the same four choice text strings (only positionally rotated). This field enables: (a) canonical seed selection (the Unprocessed item with the most substantive ExplanationCorrect), (b) clone identification (DL-012), (c) cross-item audit (DL-030 verification by group)."
+      },
+      {
+        "field": "File_Path",
+        "type": "String (e.g., 'pack_d_corrected.js', section 'A')",
+        "why_required": "The QID format is NOT globally unique. 'A.001' appears in Pack A (P1-A-001), Pack C (P1-AC-001 or P1-A-001), and Pack D (P1-AD-001). The file location + section are required to disambiguate. Also critical for scan tooling — Pack B has CC BEFORE QID in the JSON object while all other packs have CC AFTER QID."
+      }
+    ],
+    "example_compound_key": {
+      "QID": "P1-AD-002",
+      "CorrectChoice": "B",
+      "EW_Pattern": "0100",
+      "Template_Family": "AD_factoring_001",
+      "File_Path": "pack_d_corrected.js:Section A"
+    }
+  },
+
+  "template_family_model": {
+    "how_to_identify": [
+      "1. Parse all items in a section and group by stem similarity after removing proper nouns (company names).",
+      "2. Jaccard stem similarity > 90% after company-name substitution → same template family.",
+      "3. Within each family, verify that all items share the same 4 choice text strings (only positionally rotated).",
+      "4. Verify CorrectChoice cycles through A/B/C/D across the 5 items in the family.",
+      "5. Companies follow a fixed alphabetical progression within each family (e.g., Alderway→Bramblewood→Castlebrook→Driftwood→Emberton).",
+      "6. The canonical seed is the item with the most substantive ExplanationCorrect (longest, most standard-referenced)."
+    ],
+    "canonical_seed_selection": {
+      "criteria": [
+        "question_state: 'Unprocessed' (or 'In Audit')",
+        "ExplanationCorrect length >= 200 characters",
+        "ExplanationCorrect contains an explicit ASC/COSO/IAS standard citation",
+        "EW slots are all substantive (no DL-013 boilerplate, no DL-010 misassignment)",
+        "EW[CC] is empty (DL-008 clean)",
+        "Exactly 3 non-CC EW slots have non-empty text"
+      ],
+      "note": "If no item in the family meets these criteria, the family requires re-authoring from scratch rather than seed selection."
+    },
+    "clone_identification": {
+      "definition": "An item is a clone if, compared to the canonical seed: (a) stem differs only by company name, (b) all 4 choice texts are identical (only positionally rotated), (c) ExplanationCorrect is identical or nearly identical.",
+      "DL_012_pattern": "Pack C/D Section E: 28 groups of 5 items each. 1 seed + 4 clones per group. 128 total clone items. Only company name varies across items. Zero additional pedagogical value.",
+      "recommended_action": "Archive clones (set question_state: 'Archived'). Retain canonical seed as active. If the seed itself has DL-016 contamination, remediate the seed first, then decide on cloning."
+    }
+  },
+
+  "defect_class_identity_failures": [
+    {
+      "defect": "DL-008",
+      "identity_failure": "Scan tool reads CorrectChoice from wrong item (DL-029 CC-offset). Clears the wrong EW slot — or fails to detect non-empty EW[CC] because it's looking at the neighbor's CC.",
+      "severity": "HIGH — 67 Certified items currently affected (SESSION_STATUS_2026-07-24 §3). Learner sees wrong-answer explanation in correct-answer slot.",
+      "resolution_status": "OPEN for Pack C Section B (54 items), Pack D (10 items), Pack A (2 items). Require CC-position-aware scan methodology."
+    },
+    {
+      "defect": "DL-016",
+      "identity_failure": "Block 1 (EW text) references neighbor QID's topic, not current QID's content. Stem tests concept X but EW explains concept Y. Scan tools reading EW text to determine correctness find wrong answers.",
+      "severity": "HIGH — Certified items deliver wrong-topic distractor feedback to learners.",
+      "resolution_status": "Pack A Section E: RESOLVED (S805). Pack D Sections A/D: EW fields rewritten (Phase 0B confirmed content-block CC correct), but EW text topic alignment not fully verified. Pack C: UNKNOWN."
+    },
+    {
+      "defect": "DL-029",
+      "identity_failure": "Forward-scan regex matches from QuestionID to next CorrectChoice found. In Pack B, CC precedes QID → scanner grabs NEXT item's CC. In Packs C/D with DL-016, scanner reads CC from content block (Block 2) but EW from metadata block (Block 1) which may describe a different item.",
+      "severity": "HIGH — Caused prior sessions to report 885+ Certified DL-008 where actual count was dozens. Led to unnecessary remediation waves and false sense of learner-pool contamination.",
+      "resolution_status": "Methodology correction documented. Scan tools need within-object extraction, not forward-scan/regex-window."
+    },
+    {
+      "defect": "DL-030",
+      "identity_failure": "CorrectChoice was assigned by template rotation position rather than by independent derivation from the stem. The CC letter points to the right answer TEXT in a DIFFERENT rotation position — but in THIS item's rotation position, that letter maps to the wrong text. Example: DL-030 P1E-E-037: CC=D should be B. The author's ExplanationCorrect text correctly describes Principle 15 (external communication), but the D slot contained Principle 14 text.",
+      "severity": "CRITICAL — 5 items found wrong (all fixed). Root cause enables more undiscovered cases.",
+      "resolution_status": "5 items fixed (2026-07-24). Systematic CC audit needed for all rotation-group items."
+    },
+    {
+      "defect": "DL-012",
+      "identity_failure": "QID-based de-duplication fails because 5 items in a rotation group have different QIDs but are content-identical (company-name substitution + CC rotation only). The identity model treats them as 5 distinct items when they are 1 concept repeated 5 times.",
+      "severity": "MEDIUM — 140 clone items provide zero additional pedagogical value.",
+      "resolution_status": "Open — documented, not remediated. Remediation blocked by variant targeting issue (S320)."
+    },
+    {
+      "defect": "S320-seed-targeting",
+      "identity_failure": "Remediation script targeted seed by QID string only. In a file where the same QID template has 5 variants (one per CC position), the first-matching object is not reliably the canonical seed. Script modified wrong variants.",
+      "severity": "HIGH — All S320 writes were to wrong targets. Both packs restored from backups.",
+      "resolution_status": "Lessons documented. Compound key requirement established."
+    },
+    {
+      "defect": "DL-026",
+      "identity_failure": "Empty non-CC EW slots detected by scan tools that read CC from content block but check EW emptiness against a positional assumption (e.g., 'slot B should be non-empty for all items'). In rotation groups, slot B is empty when CC=B and non-empty otherwise — but the scan tool doesn't know which rotation position it's in.",
+      "severity": "MEDIUM — ~50 In Audit items affected (Pack D Section C).",
+      "resolution_status": "Partially remediated. Remaining concentration in Pack D Section C."
+    }
+  ],
+
+  "classification_rules": {
+    "per_pack_identity_model": [
+      {
+        "pack": "A",
+        "file": "pack_a_corrected.js",
+        "object_architecture": "Single-object. All fields in one JSON object per item.",
+        "cc_placement": "CorrectChoice AFTER QuestionID (standard). Forward-scan safe.",
+        "dl_016_status": "Section E: RESOLVED (S805 single-object conversion). Sections B/C/D/F: POTENTIAL — EW fields may carry stale neighbor text.",
+        "scan_method": "Within-object extraction (brace-matched, string-aware parse). CC and EW from SAME object boundary.",
+        "qid_format": "P1-{Section}-{NNN} (e.g., P1-E-038, P1-B-025)",
+        "rotation_groups": "Section E: 5-item groups. Section D: 5-item groups. Sections B/C/F: present.",
+        "certified_count": 481
+      },
+      {
+        "pack": "B",
+        "file": "pack_b_corrected.js",
+        "object_architecture": "Single-object. Clean, authoritative pipeline.",
+        "cc_placement": "CorrectChoice BEFORE QuestionID — UNIQUE to Pack B. Forward-scan from QID finds NEXT item's CC. MUST use within-object CC extraction.",
+        "dl_016_status": "CLEAN — Pack B uses single-object architecture with no DL-016 divergence.",
+        "scan_method": "Within-object extraction. Do NOT use forward-scan. Do NOT use regex-window scanning. Extract CC from the same object as EW fields.",
+        "qid_format": "P1B-{Section}-{NNN} (e.g., P1B-B-101)",
+        "rotation_groups": "Present but answer-key verified (Phase 0B Full CorrectChoice Audit). CC values confirmed correct.",
+        "certified_count": 500,
+        "critical_note": "DL-029 was discovered here — the CC-before-QID format caused ALL regex-based DL-008 scans on Pack B to produce 100% false positives."
+      },
+      {
+        "pack": "C",
+        "file": "pack_c_corrected.js",
+        "object_architecture": "Single-object. Template-rotation heavy.",
+        "cc_placement": "CorrectChoice AFTER QuestionID (standard).",
+        "dl_016_status": "POTENTIAL in Sections A/B. DL-012 clone groups in Section E (28 groups). DL-013 boilerplate in Sections C-F.",
+        "scan_method": "Within-object extraction. EW fields MUST be validated against the SAME object's Choices.{A,B,C,D} for topic alignment.",
+        "qid_format": "P1-{Section}C-{NNN} or P1-{Section}-{NNN} (e.g., P1-EC-001)",
+        "rotation_groups": "Heavy: all sections. 5-item groups with company-name substitution.",
+        "certified_count": 250
+      },
+      {
+        "pack": "D",
+        "file": "pack_d_corrected.js",
+        "object_architecture": "Single-object. Phase 0B confirmed 'paired-object' is conceptual, not literal — no separate JSON objects per QID.",
+        "cc_placement": "CorrectChoice AFTER QuestionID (standard).",
+        "dl_016_status": "CONFIRMED in Sections A/D: Block 1 (EW) text can reference neighbor QID topics. Phase 0B audit verified all 148 certified items have CORRECT CC in content block.",
+        "scan_method": "Within-object extraction. CC from Block 2 (content), EW from Block 1 (metadata), but BOTH from the SAME brace-delimited object. Cross-object CC-EW pairing is invalid.",
+        "qid_format": "P1-{Section}D-{NNN} (e.g., P1-AD-001, P1-ED-001)",
+        "rotation_groups": "Heavy. Phase 0B confirmed 15 five-item groups in Section A with CC rotation A→B→C→D→A.",
+        "certified_count": 300
+      },
+      {
+        "pack": "E",
+        "file": "pack_e_corrected.js",
+        "object_architecture": "Single-object. Different authorship pipeline (not template-rotation).",
+        "cc_placement": "CorrectChoice AFTER QuestionID (standard).",
+        "dl_016_status": "CLEAN — Pack E uses all-or-nothing EW generation. No rotation artifacts.",
+        "scan_method": "Standard within-object extraction.",
+        "qid_format": "P1E-{Section}-{NNN} (e.g., P1E-B-079, P1E-C-001)",
+        "rotation_groups": "Minimal/none. Pack E items are individually authored rather than template-generated.",
+        "certified_count": 500,
+        "critical_note": "DL-021 (Section C only): All 3 distractor EW fields are structurally absent — more severe than DL-026."
+      }
+    ]
+  },
+
+  "recommendations": {
+    "minimum_identity_for_scan_tools": {
+      "description": "Scan tools (DL-008 detection, DL-026 detection, DL-029 avoidance) must use WITHIN-OBJECT EXTRACTION. Never use forward-scan or regex-window scanning.",
+      "requirements": [
+        "1. String-aware brace-matcher extracts each item's COMPLETE JSON object (brace-delimited, string-aware per DL-020 fix).",
+        "2. From that single object, extract ALL of: QuestionID, CorrectChoice, ExplanationWrongA/B/C/D, Choices.{A,B,C,D}, Stem.",
+        "3. CorrectChoice and ExplanationWrong slots come from the SAME object. Never pair CC from object N with EW from object N+1.",
+        "4. For DL-008 detection: within the extracted object, read CC letter → read EW[CC letter] → flag if non-empty.",
+        "5. For DL-026 detection: within the extracted object, read CC letter → for all other letters L, read EW[L] → flag if empty/absent.",
+        "6. For DL-016 detection: within the extracted object, compare EW text semantics to Choices text to verify topic alignment.",
+        "7. Pack B special handling: Object extraction automatically handles CC-before-QID ordering. No special logic needed."
+      ]
+    },
+    "minimum_identity_for_certification": {
+      "description": "Certification (CAQS §1.6 six-dimension verification) must validate the COMPLETE compound identity.",
+      "requirements": [
+        "1. Extract the FULL compound key: QID + CorrectChoice + EW_Pattern + Template_Family + File_Path.",
+        "2. Verify CorrectChoice independently from Stem + Choices — do not trust the stored value.",
+        "3. Verify ALL 4 EW slots: CC slot = empty (DL-008), other 3 slots = non-empty + choice-specific + topic-aligned (DL-016, DL-026, DL-010).",
+        "4. Map the item to its Template_Family. Verify all family members have consistent CC rotation (A→B→C→D→A).",
+        "5. Cross-check against known-defective QID list (DEFECT_LIBRARY.md). If item belongs to a template family with known DL-016, require EW topic realignment.",
+        "6. Document the item's compound key in the certification record (REVISION_HISTORY.md). Future audits reference the compound key, not QID alone.",
+        "7. Per G-NEW-1/G-NEW-3: EW text MUST align with the content block's Choices.{A,B,C,D}, not with stale template values."
+      ]
+    },
+    "minimum_identity_for_remediation": {
+      "description": "Any script that modifies pack files must identify items by COMPOUND KEY.",
+      "requirements": [
+        "1. Target identification: match on QID + CorrectChoice + EW_Pattern + question_state simultaneously. Never target by QID alone.",
+        "2. Pre-modification lock: within the extracted object, verify ALL fields match expected values before writing. If CC differs from expected, abort.",
+        "3. Post-modification verification: re-extract from the same object boundary and verify the write succeeded on the correct target.",
+        "4. Template family awareness: if modifying seed items, verify no unintended clone siblings were modified.",
+        "5. Backup protocol: backup the entire file before ANY modification (per BACKUP_PROTOCOL.md)."
+      ]
+    },
+    "next_session_recommendations": [
+      "S202: Implement within-object extraction in all scan scripts (replace regex and forward-scan methods). Validate against known ground-truth QID lists.",
+      "S203: Build template family map for all 2,500 items. Identify all rotation groups, canonical seeds, and clone siblings.",
+      "S204: Re-audit Pack C Section B DL-008 using compound-key methodology. SESSION_STATUS reports 54 items — verify count is not inflated by DL-029.",
+      "S205: Reattempt S320 seed remediation using compound-key targeting (QID + CC + EW_Pattern + question_state).",
+      "S206: Systematic CorrectChoice audit of ALL rotation-group items across all packs (extend Phase 0B methodology to Packs A, C, E).",
+      "S207: Archive clone items (DL-012) after compound-key verification confirms clone status."
+    ]
+  },
+
+  "evidence_catalog": {
+    "primary_sources": [
+      "knowledge/DEFECT_LIBRARY.md: DL-008, DL-010, DL-012, DL-015, DL-016, DL-018, DL-020, DL-021, DL-024, DL-025, DL-026, DL-028, DL-029, DL-030",
+      "knowledge/QUESTION_METADATA_STANDARD.md §9: Governance state fields and G-NEW-1 through G-NEW-4",
+      "knowledge/REVISION_HISTORY.md: S320 entry (lines 44-99)",
+      "reports/session_status/SESSION_STATUS_2026-07-24.md: 2,031 Certified, 67 DL-008, 50 DL-026",
+      "reports/defect_sweeps/PHASE0B_PACK_D_CC_AUDIT_2026-07-24.md: 'Pack D uses a paired-object architecture with DL-016'",
+      "reports/defect_sweeps/TIER0_STEM_CHOICE_MISMATCH_EMERGENCY.md: 4 Certified seeds with stem-choice mismatch",
+      "reports/defect_sweeps/PACK_A_16CLONE_ARCHIVE_VERIFICATION.md: 12 clones confirmed, 4 distinct items incorrectly archived",
+      "reports/defect_sweeps/DL012_SECTIONE_CLONE_FINDING.md: 28 groups, 5 items each, 140 clones",
+      "reports/defect_sweeps/DL008_FULL_POOL_SWEEP_2026-07-23.md: 393 DL-008 violations, Method 3 rejected (300 Pack E false positives)"
+    ],
+    "pack_file_evidence": [
+      "pack_a_corrected.js: P1-E-037 through P1-E-042 (lines 19550-19780) — single-object architecture, post-S805 EW alignment",
+      "pack_b_corrected.js: P1B-B-101 (lines 3156-3196) — CC at line 3168 BEFORE QID at line 3171 — Pack B unique ordering",
+      "pack_d_corrected.js: P1-AD-001 through P1-AD-005 (lines 1-105) — 5-item rotation group, CC cycles A→B→C→D→A, company-name progression Alderway→Bramblewood→Castlebrook→Driftwood→Emberton",
+      "pack_d_corrected.js: P1-ED-001 through P1-ED-003 (lines 17710-17829) — DL-012 Section E clone groups with DL-013 boilerplate EW",
+      "pack_c_corrected.js: P1-EC-001 through P1-EC-005 (lines 17745-17869) — DL-012 rotation group with Archived state, CC rotation, EW boilerplate"
+    ]
+  }
+}

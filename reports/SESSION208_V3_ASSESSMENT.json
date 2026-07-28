@@ -1,0 +1,175 @@
+{
+  "document": "SESSION208_V3_ASSESSMENT",
+  "session": "S208",
+  "series": "200-Series Architecture Stewardship",
+  "board": "H",
+  "title": "Framework v3 Prevention Board — Necessity Assessment",
+  "status": "COMPLETE",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — assessment only",
+  "authority": "PROJECT_CONSTITUTION.md; S208 Board A Frozen Principles",
+  "depends_on": ["SESSION208_ARCHITECTURAL_PRINCIPLES.json (Board A)"],
+
+  "sources_consumed": [
+    "SESSION208_ARCHITECTURAL_PRINCIPLES.json — 6 frozen principles",
+    "SESSION208_EXPANSION_RULES.json — expansion scenarios",
+    "SESSION208_PART2_ARCHITECTURE_REVIEW.json — Part 2 readiness",
+    "SESSION208_ADMIN_ALIGNMENT.json — May Admin alignment",
+    "SESSION208_DRIFT_MODEL.json — drift detection",
+    "knowledge/DEFECT_LIBRARY.md — DL-001 through DL-036",
+    "knowledge/CURRENT_BASELINES.md — certified pool at 2,298",
+    "reports/SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json — conditional adoption at 92%",
+    "reports/SESSION207_OPERATIONAL_HEALTH_REPORT.json — operational certification"
+  ],
+
+  "verdict": "FRAMEWORK_V2_SUFFICIENT",
+  "framework_v3_required": false,
+  "framework_v3_recommended": false,
+  "confidence": 98,
+
+  "governing_principle": "Framework v3 shall only be considered if: (1) a new content type or operational requirement demands a fundamentally different certification model that Framework v2 cannot accommodate, (2) the six architectural principles prove insufficient for a demonstrated use case, or (3) governance guard rules fail to prevent a new class of systemic defect despite full coverage.",
+
+  "questions": {
+
+    "q1_what_problems_exist": {
+      "question": "What problems still exist that Framework v2 does not address?",
+      "findings": [
+        {
+          "problem": "39 Domain F items carry DL-026 in learner pool",
+          "classification": "Governance coverage gap — NOT a framework deficiency",
+          "analysis": "These items were certified during a wave (S853) that checked Rule 2 (DL-008) but not Rule 6 (DL-026). The gap was the absence of Rule 6 — a governance configuration issue, not a framework architecture issue. Rule 6 was deployed in S814. 0 new DL-026-on-Certified since.",
+          "solvable_in_v2": true,
+          "solution": "Author ~117 distractor ExplanationWrong fields across 39 items (S816-S818). The framework already provides the pipeline, batch cap, governance guard, and traceability for this remediation."
+        },
+        {
+          "problem": "DL-016 metadata-block +1 offset on Certified items",
+          "classification": "Content quality defect from template authoring — NOT a framework deficiency",
+          "analysis": "The metadata-block ChoiceA-D shift is a residue of template-based authoring. The framework's identity model (P1) correctly distinguishes metadata blocks from content blocks. The defect exists because of the original authoring pipeline, not because the framework fails to detect it.",
+          "solvable_in_v2": true,
+          "solution": "Realign metadata ChoiceA-D with content Choices.A-D. Framework provides the identity model for correct alignment and governance guard for structural validation."
+        },
+        {
+          "problem": "DL-031: ~500 items with definition-match difficulty inflation",
+          "classification": "Content quality defect — NOT a framework deficiency",
+          "analysis": "Template-based authoring assigned difficulty by position in rotation groups. The framework's pre-flight gates detect structural defects, not pedagogical ones like difficulty miscalibration. CAQS §6.1 defines targets. This is a content remediation task.",
+          "solvable_in_v2": true,
+          "solution": "Recalibrate ~500 items from Moderate→Easy where definition-match confirmed. Framework provides Difficulty dimension in CAQS §1.6 (dimension 3) and psychometric standards for calibration."
+        },
+        {
+          "problem": "DL-032: 330 remaining case items with uniform difficulty",
+          "classification": "Content quality defect — NOT a framework deficiency",
+          "analysis": "Case authoring pipeline assigned Moderate as default. Same root cause as DL-031. No framework change needed — the framework's psychometric standards (CAQS §6.1) already define the target distribution.",
+          "solvable_in_v2": true,
+          "solution": "Assign genuine difficulty labels to remaining 330 case items. ENHANCED_CASE_BASE (90 items) already remediated S530/S537."
+        },
+        {
+          "problem": "Student Data Bridge: design complete, zero operational data",
+          "classification": "Deployment gap — NOT a framework deficiency",
+          "analysis": "S255 designed the canonical student record and data bridge. The design is architecturally complete with FK relationships to all registries. Zero operational data exists because the platform has no production deployment.",
+          "solvable_in_v2": true,
+          "solution": "Deploy to production. Student data flows through the designed bridge. Framework v2 is ready for this — it's a deployment milestone, not an architecture one."
+        },
+        {
+          "problem": "Pipeline artifact reuse at 0",
+          "classification": "Process gap — NOT a framework deficiency",
+          "analysis": "Framework v2 designed the scan-once/consume-many pipeline (P2). The architecture is correct. Implementation is incomplete — downstream tools still independently re-scan. This is a build-out issue (S813 C2), not a framework issue.",
+          "solvable_in_v2": true,
+          "solution": "S813 C2: Connect scan orchestrator → readiness scorer → certification candidate engine via artifact consumption. S819-S820 scheduled."
+        },
+        {
+          "problem": "~1,227 report files, 65% unconsumed",
+          "classification": "Process waste — NOT a framework deficiency",
+          "analysis": "Report proliferation is a session management issue. Framework v2's delta review and scan-once principles directly address this by reducing re-reviews. The remaining waste is session discipline, not architecture.",
+          "solvable_in_v2": true,
+          "solution": "Apply DRIFT-5 detection: flag untracked artifacts at session closeout. Archive one-off reports. S208 establishes the first formal drift model which includes this category."
+        }
+      ],
+      "summary": "All 7 identified problems are operational, process, or content gaps — none are architectural deficiencies. Each has a defined remediation path within Framework v2."
+    },
+
+    "q2_require_v3": {
+      "question": "Do any of these problems require Framework v3?",
+      "answer": "No.",
+      "analysis": "Framework v3 would be a solution in search of a problem. The existing problems are all solvable within Framework v2's architecture. None require a fundamental redesign of the certification pipeline, identity model, governance guard, or traceability infrastructure.",
+      "problems_requiring_v3": [],
+      "rationale": "Framework v3 would be justified only if: (a) the structural defect detection model fundamentally failed (it hasn't — DL-008/026/021/030 were all detected by Framework v2 tools), (b) the identity model couldn't distinguish between items (it can — 99.96% pass rate), (c) governance automation couldn't prevent defects from reaching Certified (it can — 0 new DL-008 since Rule 2, 0 new DL-026-on-Certified since Rule 6), or (d) the pipeline couldn't scale to new domains or Part 2 (it can — 2,600 items/sec throughput, content-agnostic design)."
+    },
+
+    "q3_solvable_in_v2": {
+      "question": "Can all remaining problems be solved inside Framework v2?",
+      "answer": "Yes.",
+      "solutions": [
+        {
+          "problem": "39 Domain F DL-026 items",
+          "solution_path": "S816-S818 remediation (content authoring)", 
+          "uses_framework": "Rule 6 BLOCK, batch cap ≤30, governance guard enforcement, REVISION_HISTORY.md tracking"
+        },
+        {
+          "problem": "DL-016 metadata shift",
+          "solution_path": "Realign metadata blocks with content blocks",
+          "uses_framework": "Compound-key identity model identifies correct alignment. Pre-flight gates verify structural consistency."
+        },
+        {
+          "problem": "DL-031/DL-032 difficulty calibration",
+          "solution_path": "Per-item cognitive assessment, recalibration",
+          "uses_framework": "CAQS §6.1/6.2 targets, difficulty dimension in §1.6 verification"
+        },
+        {
+          "problem": "Student data gap",
+          "solution_path": "Production deployment",
+          "uses_framework": "S255 canonical student record schema, existing registries for FK relationships"
+        },
+        {
+          "problem": "Pipeline artifact reuse",
+          "solution_path": "S813 C2: connect pipeline stages (S819-S820)",
+          "uses_framework": "P2 Scan Once Consume Many architecture — already designed"
+        },
+        {
+          "problem": "Report proliferation",
+          "solution_path": "Apply DRIFT-5 detection, archive one-off reports",
+          "uses_framework": "S208 drift model — already defined"
+        }
+      ]
+    }
+  },
+
+  "v3_prevention_rules": {
+    "description": "Rules to prevent unnecessary Framework v3 discussions from consuming project resources",
+    "rules": [
+      {
+        "rule": "Framework v3 must NOT be discussed or proposed unless one of the three trigger conditions is met",
+        "trigger_conditions": [
+          "A new content type demands a fundamentally different certification model that Framework v2 cannot accommodate with configuration changes",
+          "One of the six frozen principles proves insufficient for a demonstrated use case (not a hypothetical one)",
+          "Governance guard rules fail to prevent a new class of systemic defect despite full coverage for that defect class"
+        ]
+      },
+      {
+        "rule": "Framework v3 proposals must be accompanied by evidence that Framework v2 was attempted and failed — not that Framework v2 was never tried",
+        "rationale": "Many of Framework v1's problems existed because the architecture was never fully implemented (e.g., CAQS §8.1 sequential pipeline was documented but never operated). Framework v2 must be given the same chance to operate as designed before being replaced."
+      },
+      {
+        "rule": "Framework v3 must be demonstrably better than Framework v2, not just newer",
+        "rationale": "The bar for replacement is not 'we found new problems' — it's 'the existing architecture is provably incapable of solving these problems.'"
+      },
+      {
+        "rule": "Framework v2's six principles are frozen. Any Framework v3 must include equivalent or stronger principles. Weakening any principle is prohibited.",
+        "rationale": "The principles are not Framework v2 principles — they are the architectural constitution of the project. They apply to all frameworks."
+      }
+    ]
+  },
+
+  "re_evaluation_trigger": {
+    "description": "This assessment is valid until one of these events occurs",
+    "triggers": [
+      "Part 2 certification pipeline is operational and encounters a structural problem Framework v2 cannot detect",
+      "A new item type is created that fundamentally cannot use the existing ExplanationWrong field model",
+      "The certified pool exceeds 10,000 items and the pipeline cannot maintain throughput",
+      "A new IMA CSO is released that reorganizes blueprint domains in a way incompatible with the current QID scheme",
+      "None of the above — this assessment should remain valid indefinitely"
+    ],
+    "next_scheduled_review": "After Part 2 first certification wave completes"
+  },
+
+  "conclusion": "Framework v2 is sufficient for the projected scope of the CMA Part 1 Exam Simulator. It was designed to be content-agnostic, domain-agnostic, and scale-agnostic. The problems that exist today are operational execution gaps, not architectural deficiencies. Solving them requires content work, process discipline, and production deployment — not a new framework. The 200-Series fulfilled its mission. Framework v2 protects itself through frozen principles, automated drift detection, and governance automation. There is no Framework v3 on the horizon, and there should not be one."
+}

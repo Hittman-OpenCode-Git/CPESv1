@@ -1,0 +1,95 @@
+{
+  "session": "802",
+  "agent": "B",
+  "title": "Portfolio Baseline Correction",
+  "date": "2026-07-26",
+  "methodology": "Direct raw-file grep (Select-String) with Group-Object for state distribution verification",
+  "corrections_from_session_status": [
+    "SESSION_STATUS_2026-07-24.md reports 2,031 total Certified — actual is 2,181 (+150). Underreported Pack C by 100 and Pack D by 50.",
+    "Pack C: SESSION_STATUS says 250 Certified (A,B only) — actual is 350 (A,B,C,D all certified). Sections C and D were reported as 'In Audit/Unprocessed' but are actually Certified.",
+    "Pack D: SESSION_STATUS says 300 Certified (A,B,D) — actual is 350 (A,B,C,D all certified). Section C was reported as 'In Audit' but is actually Certified.",
+    "DL-008 Certified: SESSION_STATUS says 67 Certified DL-008 items — actual is 0. All 67 were DL-029 forward-scan false positives (CC-before-QID architecture).",
+    "SESSION_STATUS 2026-07-23 reports 1,080 Certified (stale, superseded).",
+    "S801 corrected census (2,181) confirmed by S802 independent raw-file grep — count stable at 2,181."
+  ],
+  "corrected_census": {
+    "pack_a": {
+      "total": 500,
+      "certified": 481,
+      "archived": 19,
+      "unprocessed": 0,
+      "pct_certified": 96.2
+    },
+    "pack_b": {
+      "total": 500,
+      "certified": 500,
+      "archived": 0,
+      "unprocessed": 0,
+      "pct_certified": 100.0
+    },
+    "pack_c": {
+      "total": 500,
+      "certified": 350,
+      "archived": 56,
+      "unprocessed": 94,
+      "pct_certified": 70.0
+    },
+    "pack_d": {
+      "total": 500,
+      "certified": 350,
+      "archived": 57,
+      "unprocessed": 93,
+      "pct_certified": 70.0
+    },
+    "pack_e": {
+      "total": 500,
+      "certified": 500,
+      "archived": 0,
+      "unprocessed": 0,
+      "pct_certified": 100.0
+    },
+    "total": {
+      "total": 2500,
+      "certified": 2181,
+      "archived": 132,
+      "unprocessed": 187,
+      "pct_certified": 87.2
+    }
+  },
+  "grep_verification": {
+    "command": "Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' | Measure-Object | Select-Object -ExpandProperty Count",
+    "pack_a_certified": 481,
+    "pack_b_certified": 500,
+    "pack_c_certified": 350,
+    "pack_d_certified": 350,
+    "pack_e_certified": 500,
+    "total_certified": 2181,
+    "pack_a_archived": 19,
+    "pack_b_archived": 0,
+    "pack_c_archived": 56,
+    "pack_d_archived": 57,
+    "pack_e_archived": 0,
+    "total_archived": 132
+  },
+  "file_integrity": {
+    "pack_a_qids": 500,
+    "pack_b_qids": 500,
+    "pack_c_qids": 500,
+    "pack_d_qids": 500,
+    "pack_e_qids": 500,
+    "verdict": "All 5 packs confirmed at 500 QuestionID entries each — zero file corruption"
+  },
+  "certified_count_stability": "Counted twice (S801 Function-constructor parse + S802 direct grep), stable at 2,181. Group-Object state distribution confirmed: Pack A (481C/19A), Pack B (500C), Pack C (350C/56A/94U), Pack D (350C/57A/93U), Pack E (500C).",
+  "architectural_verification": {
+    "single_object_architecture": true,
+    "cc_before_qid": "Universal across all 5 packs",
+    "dl_029_forward_scan_fp_rate": "~75%",
+    "dl_016_dual_block_exists": false,
+    "flat_choice_fields_exist": false
+  },
+  "cross_references": {
+    "s801_summary": "reports/SESSION801_SESSION_SUMMARY.md",
+    "session_status_stale": "reports/session_status/SESSION_STATUS_2026-07-24.md (reports 2,031 — undercount by 150)",
+    "session_status_superseded": "reports/session_status/SESSION_STATUS_2026-07-23.md (reports 1,080 — fully stale)"
+  }
+}

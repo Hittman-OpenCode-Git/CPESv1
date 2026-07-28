@@ -1,0 +1,119 @@
+{
+  "session": "310",
+  "title": "Risk Dashboard — Active, Accepted & Closed Risks",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "critical": [
+    {
+      "id": "R-001",
+      "risk": "Domain E bottleneck — 129 archived DL-012 clones",
+      "status": "ACCEPTED",
+      "mitigation": "REPLACE strategy accepted. 800-series execution.",
+      "source": "S309"
+    },
+    {
+      "id": "R-002",
+      "risk": "Domain F greenfield authoring — 149 items",
+      "status": "ACCEPTED",
+      "mitigation": "AUTHOR strategy accepted. Pack B Section F benchmark.",
+      "source": "S309"
+    },
+    {
+      "id": "R-003",
+      "risk": "Case-bank EW gap — 2,403 empty slots",
+      "status": "ACCEPTED",
+      "mitigation": "EW Factory Model adopted. Post-cert rollout.",
+      "source": "S309"
+    }
+  ],
+  "high": [
+    {
+      "id": "R-004",
+      "risk": "DL-026 Pack D Section C — 50 In Audit items",
+      "status": "ACTIVE",
+      "mitigation": "Requires 100+ distractor explanations. Blocks certification.",
+      "source": "S303"
+    },
+    {
+      "id": "R-005",
+      "risk": "Pack C Sections D/E/F — not yet audited",
+      "status": "ACTIVE",
+      "mitigation": "Audit required before certification waves.",
+      "source": "S307"
+    },
+    {
+      "id": "R-006",
+      "risk": "May case-review support deferred (G2F)",
+      "status": "ACCEPTED",
+      "mitigation": "MCQ-only for now. Case tutoring deferred.",
+      "source": "SESSION_STATUS"
+    }
+  ],
+  "medium": [
+    {
+      "id": "R-007",
+      "risk": "DL-013 boilerplate — ~851 fields remaining",
+      "status": "DEFERRED",
+      "mitigation": "Post-cert modernization.",
+      "source": "S302"
+    },
+    {
+      "id": "R-008",
+      "risk": "Pack A Sections B/C/F partial certification",
+      "status": "ACTIVE",
+      "mitigation": "19 items remaining in Pack A closeout.",
+      "source": "S308"
+    }
+  ],
+  "low": [
+    {
+      "id": "R-009",
+      "risk": "DL-014 sibling null guard (app.js)",
+      "status": "ACCEPTED",
+      "mitigation": "Defensive hardening — low priority.",
+      "source": "SESSION_STATUS"
+    },
+    {
+      "id": "R-010",
+      "risk": "DL-015/016 metadata numbering shifts",
+      "status": "DEFERRED",
+      "mitigation": "Cosmetic — fix during next cert wave.",
+      "source": "SESSION_STATUS"
+    }
+  ],
+  "closed": [
+    {
+      "id": "R-Z01",
+      "risk": "DL-008 — 67 Certified items with non-empty EW[CC]",
+      "resolution": "S309 confirmed 0 actual items. DL-029 false positive.",
+      "closedDate": "2026-07-26"
+    },
+    {
+      "id": "R-Z02",
+      "risk": "DL-030 answer-key errors (5 items)",
+      "resolution": "All 5 fixed S68/Phase 6.",
+      "closedDate": "2026-07-24"
+    },
+    {
+      "id": "R-Z03",
+      "risk": "DL-017 backtick-newline corruption (275 sites)",
+      "resolution": "Fixed via 6-agent orchestration.",
+      "closedDate": "2026-07-24"
+    },
+    {
+      "id": "R-Z04",
+      "risk": "DL-018 missing EW[CC] fields (352 items)",
+      "resolution": "All remediated.",
+      "closedDate": "2026-07-24"
+    }
+  ],
+  "summary": {
+    "critical": 3,
+    "high": 3,
+    "medium": 2,
+    "low": 2,
+    "closed": 4,
+    "totalActive": 10,
+    "totalClosed": 4
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "agent": "P",
+  "session": "S301",
+  "phase": 5,
+  "domain": "Unified Risk Taxonomy",
+  "risk_matrix": [
+    { "id": "R301-01", "class": "DL-008 (Critical items + CC-rotation)", "severity": "Critical", "scope": "174 Pack C Certified items", "remediation_pathway": "Expert review — CC audit then EW[CC] remediation", "learner_pool": true, "blocks_certification": true },
+    { "id": "R301-02", "class": "DL-016 Content-Metadata Offset", "severity": "High", "scope": "Pack A (all sections)", "remediation_pathway": "Expert review — realign or document offset pattern", "learner_pool": true, "blocks_certification": false },
+    { "id": "R301-03", "class": "DL-012 Clone Group Archival", "severity": "High", "scope": "112 items (C-E: 56, D-E: 56)", "remediation_pathway": "Expert review — per-group clone audit", "learner_pool": false, "blocks_certification": true },
+    { "id": "R301-04", "class": "DL-013 Template Boilerplate", "severity": "Medium", "scope": "851 fields (Packs A/C/D)", "remediation_pathway": "Editorial — rewrite generic EW text for each affected item", "learner_pool": false, "blocks_certification": false },
+    { "id": "R301-05", "class": "DL-026 Empty Non-CC EW Slots", "severity": "Medium", "scope": "50 Pack D Section C items", "remediation_pathway": "Editorial — write per-choice distractor explanations", "learner_pool": false, "blocks_certification": true },
+    { "id": "R301-06", "class": "DL-009 Authority Citation Errors", "severity": "Medium", "scope": "Pack D: 171 citations (highest density)", "remediation_pathway": "Mechanical — cross-check ASC citations against topic → standard mapping", "learner_pool": false, "blocks_certification": false },
+    { "id": "R301-07", "class": "DL-030 Answer-Key Errors (undetected)", "severity": "Critical", "scope": "Unknown — uncertified Pack C/D Sections E/F", "remediation_pathway": "Expert review — independent re-derivation", "learner_pool": false, "blocks_certification": true },
+    { "id": "R301-08", "class": "DL-019 Concurrent-Write Data Loss", "severity": "Medium", "scope": "Potential in any session", "remediation_pathway": "Process — pause OneDrive sync, verify after every write", "learner_pool": false, "blocks_certification": false }
+  ],
+  "summary": {
+    "critical_risks": 2,
+    "high_risks": 2,
+    "medium_risks": 4,
+    "low_risks": 0,
+    "learner_pool_exposures": 2,
+    "certification_blocking": 5
+  }
+}

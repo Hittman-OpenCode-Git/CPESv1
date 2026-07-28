@@ -1,0 +1,41 @@
+{
+  "sessionId": "S852",
+  "title": "Defect Manifest Regeneration — Stale Manifest Cleanup",
+  "type": "GOVERNANCE",
+  "priority": "CRITICAL",
+  "generatedFrom": "S851 — Session Orchestrator (Truth-Verified)",
+  "timestamp": "2026-07-27T14:08:01.786Z",
+  "summary": {
+    "manifestState": "351 false positives out of 351 total entries",
+    "dl008Direct": "3 total (0 certified)",
+    "dl026Direct": "261 total (0 certified)",
+    "totalBatches": 1,
+    "successCriteria": "Manifest entries match direct pack-file scan with 0 false positives",
+    "note": "The current manifest was built with a DL-029-vulnerable regex forward-scanner. All 353 DL-008 entries are false positives — the scanner picked up the next item's CorrectChoice due to CC-before-QID object layout."
+  },
+  "batches": [
+    {
+      "batchId": "S852-B1",
+      "operation": "REGENERATE_MANIFEST",
+      "itemCount": 264,
+      "instructions": "1. Run full direct pack-file scan for DL-008 and DL-026 (object-aware, string-safe)\n2. Regenerate governance/DEFECT_MANIFEST_DL008_DL026.json from scan results\n3. Only include items confirmed by direct pack-file inspection (not regex forward-scan)\n4. Mark all entries with verif_method: \"direct-object-parse\" and verif_timestamp\n5. Update stats with verified counts",
+      "stages": [
+        {
+          "stage": "SCAN",
+          "description": "Full direct pack scan (DL-008 + DL-026)",
+          "engine": "direct object parse"
+        },
+        {
+          "stage": "BUILD",
+          "description": "Build manifest from scan results only",
+          "engine": "manifest builder"
+        },
+        {
+          "stage": "VERIFY",
+          "description": "Cross-check manifest counts vs direct scan",
+          "engine": "reconciliation"
+        }
+      ]
+    }
+  ]
+}

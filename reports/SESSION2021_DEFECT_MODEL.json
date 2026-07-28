@@ -1,0 +1,315 @@
+{
+  "document": "SESSION2021_DEFECT_MODEL",
+  "session": "S202.1",
+  "title": "Standardized Defect Model — Severity, Blocking Status, Owner, Remediation Path",
+  "series": "200-Series — Framework v2 Architecture Addendum",
+  "date": "2026-07-27",
+  "type": "Standardization Specification — Read-Only",
+  "parent": "SESSION2021_SCAN_ARTIFACT_SCHEMA.json (Board A) + knowledge/DEFECT_LIBRARY.md",
+  "purpose": "Standardizes every defect class that appears in the Certification Scan Artifact's defectInventory and perItemResults.defectFlags. Each defect has a canonical severity, blocking status, owner, remediation path, and gate assignment. This is the single source of truth that all boards, scanners, and remediation scripts use to classify and route defects.",
+  "constraints": ["No content changes", "No certification actions", "No governance changes", "Read-only specification"],
+
+  "defect_model_version": "1.0.0",
+
+  "severity_scale": {
+    "CRITICAL": {
+      "description": "Wrong answer, learner-safety risk on Certified items, structural impossibility (missing CC/Stem). Immediate governance alert.",
+      "blocking": "HARD_BLOCK — item cannot be delivered, cannot be certified. Requires immediate remediation.",
+      "escalation": "P0 — halt all non-P0 work, remediate first."
+    },
+    "HIGH": {
+      "description": "Multiple defensible answers, systematic educational degradation, structural defects on Certified items.",
+      "blocking": "HARD_BLOCK — blocks certification. Certified items require priority remediation.",
+      "escalation": "P1 — urgent, schedule in current session."
+    },
+    "MEDIUM": {
+      "description": "Degraded educational value, weak distractor feedback, missing non-critical metadata.",
+      "blocking": "SOFT_BLOCK — blocks certification but can be deferred. May be certified WITH WARNINGS.",
+      "escalation": "P2 — schedule when P0/P1 work is complete."
+    },
+    "LOW": {
+      "description": "Cosmetic, informational, future improvement. Does not affect certification eligibility.",
+      "blocking": "WARN_ONLY — does not block certification. Acknowledged by Certification Board.",
+      "escalation": "P3 — low priority, deferred."
+    },
+    "WARN": {
+      "description": "Informational flag. No defect present, but best-practice advisory. Auto-suppressed for Remember/Understand items where EV3 citation is not required.",
+      "blocking": "NONE — informational only.",
+      "escalation": "P4 — not scheduled, visible in dashboards."
+    }
+  },
+
+  "defects": [
+    {
+      "defectId": "DL-008",
+      "label": "ExplanationWrong[CorrectChoice] Non-Empty",
+      "class": "Structural",
+      "domain": "Explanation Slot Error (EV8)",
+      "category": "FIELD_CONTENT_VIOLATION",
+      "canonical_reference": "knowledge/DEFECT_LIBRARY.md DL-008",
+      "severity": "HIGH",
+      "severityOverride": {
+        "condition": "When present on Certified item (learner pool exposure)",
+        "overrideSeverity": "CRITICAL"
+      },
+      "blockingStatus": "HARD_BLOCK",
+      "detectionGate": "gate_1",
+      "scanModules": ["PG-001", "PG-009"],
+      "detectionRule": "For each item, let cc = CorrectChoice. If ExplanationWrong[cc] is truthy (non-empty, non-null, non-undefined) → flag DL-008.",
+      "owner": "Structural Remediation Script (automated clear for Bucket 1 patterns; editorial review for Bucket 2 patterns)",
+      "remediationPath": {
+        "bucket1_calculation_summary": "Mechanical clear — set ExplanationWrong[cc] to empty string. ExplanationCorrect independently contains the full explanation. Zero content loss.",
+        "bucket2_fragmentary_conceptual": "Editorial judgment — merge into ExplanationCorrect, relocate to distractor slot, or remove.",
+        "bucket3_misattributed": "Re-attribute to correct ExplanationWrong slot. Verify distractor choice text matches explanation content.",
+        "automated": "Pattern 1 (naked calculation summary) is fully automatable. Patterns 2-3 require editorial review."
+      },
+      "certificationImpact": "Blocks certification per governance-guard Rule 2 (BLOCK level). Certified items with DL-008 produce learner-safety risk — wrong-answer explanation text appears in the correct-answer slot.",
+      "postRemediationVerification": "Re-scan with PG-001. Verify ExplanationWrong[cc] is empty. Verify ExplanationCorrect still contains full explanation.",
+      "history": "First detected: Build-Time AI Verification, Sub-batch 2A Wave 1 (2026-07-22). Full-pool scope: 539 total occurrences across all 5 packs, all now resolved. Certified exposure peaked at 75 items. Current status: 0 open pool-wide (per CURRENT_BASELINES.md). Entry preserved as active scan module target."
+    },
+    {
+      "defectId": "DL-010",
+      "label": "Misassigned Choice Explanations",
+      "class": "Structural / Content (hybrid)",
+      "domain": "Explanation Assignment",
+      "category": "SEMANTIC_MISMATCH",
+      "canonical_reference": "knowledge/DEFECT_LIBRARY.md DL-010",
+      "severity": "HIGH",
+      "blockingStatus": "SOFT_BLOCK",
+      "detectionGate": "gate_2",
+      "scanModules": ["PG-002"],
+      "detectionRule": "For each ExplanationWrong[X] field, assess whether the explanation semantically describes the choice it is assigned to. This is inherently an NLP check — no regex or structural rule can reliably detect it. Run Jaccard similarity between ExplanationWrong[X] text and Choice[X] text. If similarity < threshold (10%) while similarity to another Choice[Y] is higher → flag DL-010 SUSPECT.",
+      "owner": "Editorial Review (human-in-the-loop required — AI confidence < 90% on semantic mismatch assessment)",
+      "confidence_threshold": 80,
+      "tier1_human_review_on_low_confidence": true,
+      "remediationPath": {
+        "confirmed": "Re-align each ExplanationWrong field to semantically describe the choice it annotates.",
+        "suspect": "Do not auto-remediate. Flag for editorial review with evidence package showing the semantic mismatch evidence."
+      },
+      "certificationImpact": "Blocks certification when CONFIRMED. SUSPECT items may be certified with acknowledgment but the explanation quality dimension score (D7_Exp) should be flagged.",
+      "postRemediationVerification": "Re-run PG-002 with augmented keyword-overlap check. Manual spot-check 20% of flagged items to confirm semantic alignment.",
+      "history": "First detected: P1-A-029 (Wave 2, 2026-07-22). Known scope: at least 2 items (P1-B-001, P1-B-025) confirmed — text from +1 neighbor in rotation group. Pack B Section B items suspected. Current status: Open — scoped, not fully inventoried."
+    },
+    {
+      "defectId": "DL-013",
+      "label": "Template Boilerplate Distractor Explanations",
+      "class": "Content",
+      "domain": "Explanation Quality",
+      "category": "TEMPLATE_BOILERPLATE",
+      "canonical_reference": "knowledge/DEFECT_LIBRARY.md DL-013",
+      "severity": "HIGH",
+      "severityOverride": {
+        "condition": "Pattern A (standalone boilerplate, zero educational value) + Certified",
+        "overrideSeverity": "HIGH"
+      },
+      "blockingStatus": "SOFT_BLOCK",
+      "detectionGate": "gate_2",
+      "scanModules": ["PG-003"],
+      "detectionRule": "For each ExplanationWrong[X] field, scan for template patterns: (a) 'represents a plausible misconception', (b) 'A candidate may select this option by misapplying', (c) 'does not align with', (d) 'The correct approach involves'. Flag DL-013 with pattern classification (Pattern A/B/C/D).",
+      "owner": "DL-013 Remediation Agent (automated one-time rewrite for Patterns A/B; editorial session for Pattern C)",
+      "remediationPath": {
+        "pattern_A_standalone_boilerplate": "Rewrite distractor explanation with choice-specific content explaining why that specific choice is wrong, the misconception it targets, and the correct approach.",
+        "pattern_B_closing_tag": "Delete closing tag only. Preceding text is usually substantive.",
+        "pattern_C_hybrid": "Rewrite companion boilerplate slots first, then remove closing tag.",
+        "pattern_D_nonsensical_citation": "Replace placeholder citation (e.g., 'Artificial intelligence in accounting') with genuine standard reference."
+      },
+      "certificationImpact": "Blocks certification for Unprocessed items. Certified items with DL-013 are degraded educational quality (learner sees generic feedback) but not a learner-safety risk. MINOR_FIX classification.",
+      "postRemediationVerification": "Re-run PG-003. Verify all ExplanationWrong fields are choice-specific (no template phrases remaining). Verify no new DL-008 introduced.",
+      "history": "First detected: P1-A-022 prototype (DL-007, 2026-07-22). Full scope: initially 2,587 fields across 882 QIDs (Packs A/C/D). Remediated to ~163 fields in non-Certified Pack C/D Sections E/F only (per CURRENT_BASELINES.md). Entry preserved as active scan module target for residual fields."
+    },
+    {
+      "defectId": "DL-016",
+      "label": "Metadata-Block Topic-Numbering Shift / Dual-Block Divergence",
+      "class": "Structural / Documentation",
+      "domain": "Metadata Consistency",
+      "category": "METADATA_CONTENT_DIVERGENCE",
+      "canonical_reference": "knowledge/DEFECT_LIBRARY.md DL-016",
+      "severity": "HIGH",
+      "severityOverride": {
+        "condition": "SEVERE variant: ExplanationWrong text topically unrelated to learner-facing item content",
+        "overrideSeverity": "HIGH"
+      },
+      "blockingStatus": "HARD_BLOCK",
+      "detectionGate": "gate_1",
+      "scanModules": ["PG-004"],
+      "detectionRule": "For dual-block items: extract metadata-block ChoiceA-D + content-block Choices.A-D. Compare. If different → flag DL-016. Assess severity: (a) MODERATE = Choice text differs but topically related, (b) SEVERE = EW text describes wrong topic (unrelated to learner-facing item). For single-object items: extract Topic field label numbering; if shifted by +1 → flag DL-016 COSMETIC.",
+      "owner": "Metadata Remediation Agent (MODERATE) or Editorial Review (SEVERE — required for learner-safety)",
+      "remediationPath": {
+        "moderate": "Align metadata-block ChoiceA-D text with content-block Choices.A-D. No content change — metadata normalization only.",
+        "severe": "Rewrite ExplanationWrong fields to describe the correct item's distractors. This is a learner-safety issue — the learner sees feedback about a completely different topic.",
+        "cosmetic": "Correct Topic field number labels during next certification pass. Lowest priority — no learner or content impact."
+      },
+      "certificationImpact": "SEVERE variant blocks certification (G-NEW-1, G-NEW-3 enforcement per QUESTION_METADATA_STANDARD.md §9.4.2). MODERATE variant blocks certification but is structurally fixable. COSMETIC variant does not block.",
+      "postRemediationVerification": "Re-run PG-004. For SEVERE: verify EW text describes the correct item's choices via manual spot-check (20% sample).",
+      "history": "First detected: Session 5 — reconciliation-audit skill validation (2026-07-23). Expanded: Session 64 pilot found DL-016 affects ALL Pack A sections, not just Section E. S805: 57 Pack A Section E items remediated (single-object format confirmed). Packs C/D dual-block status not fully confirmed. Current status: Resolved for Pack A Section E only."
+    },
+    {
+      "defectId": "DL-026",
+      "label": "Empty Non-CorrectChoice ExplanationWrong Slots (Cross-Pool)",
+      "class": "Structural / Content (hybrid)",
+      "domain": "Explanation Slot Error",
+      "category": "FIELD_CONTENT_VIOLATION",
+      "canonical_reference": "knowledge/DEFECT_LIBRARY.md DL-026",
+      "severity": "HIGH",
+      "severityOverride": {
+        "condition": "When present on Certified item (learner sees no feedback on wrong answer)",
+        "overrideSeverity": "HIGH"
+      },
+      "blockingStatus": "HARD_BLOCK",
+      "detectionGate": "gate_1",
+      "scanModules": ["PG-005"],
+      "detectionRule": "For each item, let cc = CorrectChoice. For each letter L in {A, B, C, D}: if L != cc AND ExplanationWrong[L] is present but empty (zero-length string) → flag DL-026. Distinct from DL-021 (field absent, not empty) and DL-025 (Pack A-only legacy naming).",
+      "owner": "DL-026 Remediation Agent (choice-specific distractor authoring)",
+      "remediationPath": "Author choice-specific distractor explanation for each empty non-CC slot. Each explanation must: (a) identify the specific error in that choice, (b) explain the misconception a candidate likely held, (c) contrast with the correct approach, (d) minimum 50 characters, (e) reference the item's actual Choices (not metadata-block ChoiceA-D).",
+      "certificationImpact": "Blocks certification. Certified items have degraded educational quality — learners who select affected distractors see no feedback.",
+      "postRemediationVerification": "Re-run PG-005. Verify all 3 non-CC ExplanationWrong slots are non-empty and contain choice-specific text (no boilerplate). Verify CorrectChoice slot is empty (DL-008 compliance). Verify no CorrectChoice changes occurred during remediation.",
+      "history": "First detected: 5-agent scoping session (2026-07-23), cross-pool expansion by Agent 6. Initial scope: 1,005 items across Packs A/C/D. Multiple remediation waves: Autonomous Run Parts 2-4 cleared most Certified items. Current residual: ~27 items (mix of genuine + scan false-positives from DL-016 metadata-content mismatch). Entry preserved as active scan module target."
+    },
+    {
+      "defectId": "DL-030",
+      "label": "CorrectChoice Answer-Key Errors",
+      "class": "Content",
+      "domain": "Semantic Accuracy",
+      "category": "ANSWER_KEY_ERROR",
+      "canonical_reference": "knowledge/DEFECT_LIBRARY.md DL-030",
+      "severity": "CRITICAL",
+      "blockingStatus": "HARD_BLOCK",
+      "detectionGate": "gate_4",
+      "scanModules": ["PG-006"],
+      "detectionRule": "For each item, independently derive the correct answer from stem + choices. Compare to stored CorrectChoice. If mismatch AND confidence > 90% → flag DL-030 CONFIRMED. If mismatch AND confidence 70-90% → flag DL-030 SUSPECT (escalate to human review).",
+      "owner": "Accounting Review (human-in-the-loop required — answer-key correction must be verified by Accounting persona per COLLABORATION_MATRIX.md)",
+      "confidence_threshold": 90,
+      "remediationPath": "Correct CorrectChoice to the independently verified answer. Clear ExplanationWrong[new_CC] slot. Fill ExplanationWrong[old_CC] with appropriate distractor text for the new distractor position. Update ExplanationCorrect if it describes the old correct answer. Document in REVISION_HISTORY.md per governance-guard Rule 4.",
+      "certificationImpact": "ABSOLUTE_BLOCK when CONFIRMED — wrong answer key in pool. Triggers emergency governance event. Item auto-routed to REMEDIATE with severity CRITICAL.",
+      "postRemediationVerification": "Independent 20% re-derivation of all corrected items by a second accounting agent. Verify all 5 items have ALL_AGREE verdict after fix. Verify no new DL-008 introduced.",
+      "history": "First detected: Phase 0B Full CorrectChoice Ground-Truth Audit (2026-07-23/24). 5 items confirmed across Pack B (4) and Pack E (1). All 5 resolved 2026-07-24. Root causes: arithmetic error (P1B-B-119), template rotation CC assignment errors (P1B-F-084/116/121, P1E-E-037). Entry preserved as active scan module target."
+    },
+    {
+      "defectId": "DL-031",
+      "label": "Definition-Match Difficulty Inflation",
+      "class": "Pedagogical",
+      "domain": "Difficulty Calibration",
+      "category": "DIFFICULTY_MISCALIBRATION",
+      "canonical_reference": "knowledge/DEFECT_LIBRARY.md DL-031",
+      "severity": "MEDIUM",
+      "blockingStatus": "SOFT_BLOCK",
+      "detectionGate": "gate_4",
+      "scanModules": ["PG-007"],
+      "detectionRule": "For each item: compute lexical overlap (Jaccard similarity) between stem and correct answer choice text. If overlap > 50% AND difficulty is labeled ≥ Moderate (3) AND cognitive level is Remember or Understand → flag DL-031.",
+      "owner": "Editorial Review (difficulty recalibration during certification pass)",
+      "remediationPath": "Recalibrate Difficulty from Moderate (3) to Easy (1) where definition-match pattern is confirmed. Verify cognitive level is correctly assigned. Per-item verification required — not all Moderate items with high lexical overlap are automatically Easy.",
+      "certificationImpact": "Does not block certification. Flagged as WARN or MINOR_FIX. Certifiable WITH WARNINGS.",
+      "postRemediationVerification": "Verify difficulty distribution meets CAQS §6.1 targets after recalibration. Verify Bloom's level alignment with difficulty label.",
+      "history": "First detected: Session 700 Layer 2 Difficulty Specialist (2026-07-25). Estimated ~500 items across all 5 packs. Root cause: template-rotation authoring assigned difficulty labels by position in rotation group rather than by cognitive demand assessment. Current status: Open — scoped, not remediated."
+    },
+    {
+      "defectId": "EV3",
+      "label": "Missing Accounting Principle Citation in ExplanationCorrect",
+      "class": "Content",
+      "domain": "Explanation Quality",
+      "category": "EXPLANATION_QUALITY",
+      "canonical_reference": "CAQS v1.0 §4.3 — EV3 validation rule",
+      "severity": "LOW",
+      "severityOverride": {
+        "condition": "For items at Apply, Analyze, or Evaluate cognitive levels with no citation",
+        "overrideSeverity": "MEDIUM"
+      },
+      "blockingStatus": "WARN_ONLY",
+      "detectionGate": "gate_2",
+      "scanModules": ["PG-008"],
+      "detectionRule": "For each item at Apply, Analyze, or Evaluate cognitive level: verify ExplanationCorrect references an accounting principle, standard, or framework by name (ASC xxx, COSO, IAS xxx, IMA standard, GAAP concept). If no citation found → flag EV3. For Remember/Understand items: EV3 is informational only (auto-suppressed from blocking count).",
+      "owner": "Editorial Review (add principle citation during certification pass for Apply+ items)",
+      "remediationPath": "Add appropriate accounting principle citation to ExplanationCorrect. Citation must reference the correct standard for the item's topic (verify per DL-009 cross-check).",
+      "certificationImpact": "Does not block certification. Flagged as WARN. Certifiable WITH WARNINGS.",
+      "postRemediationVerification": "Re-run PG-008. Verify citation is topically correct (not DL-009 pattern). Verify citation format matches authoritative source.",
+      "history": "S322 scan: 2,074 EV3 warnings across all packs (82% of scanned items). Vast majority are legitimate but this high rate reflects template-based authoring that omitted citations. Long-tail remediation target."
+    },
+    {
+      "defectId": "EV8",
+      "label": "ExplanationWrong[CorrectChoice] Content Rule — Empty Requirement",
+      "class": "Structural",
+      "domain": "Explanation Slot Error",
+      "category": "FIELD_CONTENT_RULE",
+      "canonical_reference": "CAQS v1.0 §4.4 — EV8 validation rule",
+      "severity": "HIGH",
+      "blockingStatus": "HARD_BLOCK",
+      "detectionGate": "gate_1",
+      "scanModules": ["PG-009"],
+      "detectionRule": "For each item, let cc = CorrectChoice. If ExplanationWrong[cc] is truthy → flag EV8. This is the CAQS §4.4 rule enforced by governance-guard Rule 2. Note: EV8 is the rule; DL-008 is the defect instance. PG-009 enforces the rule; PG-001 detects the defect.",
+      "owner": "Governance Guard (Rule 2 — BLOCK level, automated enforcement)",
+      "remediationPath": "Identical to DL-008 remediation. The distinction is semantic: EV8 is the CAQS rule; DL-008 is the specific defect ID for non-empty EW[CC].",
+      "certificationImpact": "Absolute block per governance-guard Rule 2. No item may transit from any state to Certified with a non-empty ExplanationWrong[CorrectChoice].",
+      "postRemediationVerification": "Identical to DL-008 verification.",
+      "relationship_to_DL008": "EV8 is the validation rule from CAQS §4.4. DL-008 is the defect library entry for violations of EV8. In the defect model, they are treated as a single defect class with DL-008 as the primary identifier and EV8 as the rule reference."
+    }
+  ],
+
+  "defect_classification_matrix": {
+    "description": "Cross-reference: which gate detects which defect, and at what severity/blocking level.",
+    "table": [
+      {"defectId": "DL-008", "gate": "gate_1", "severity": "HIGH", "certifiedSeverity": "CRITICAL", "blocking": "HARD_BLOCK", "owner": "Automated Script"},
+      {"defectId": "DL-010", "gate": "gate_2", "severity": "HIGH", "certifiedSeverity": "HIGH", "blocking": "SOFT_BLOCK", "owner": "Editorial Review"},
+      {"defectId": "DL-013", "gate": "gate_2", "severity": "HIGH", "certifiedSeverity": "HIGH", "blocking": "SOFT_BLOCK", "owner": "DL-013 Agent"},
+      {"defectId": "DL-016", "gate": "gate_1", "severity": "HIGH", "certifiedSeverity": "HIGH", "blocking": "HARD_BLOCK", "owner": "Metadata Agent"},
+      {"defectId": "DL-026", "gate": "gate_1", "severity": "HIGH", "certifiedSeverity": "HIGH", "blocking": "HARD_BLOCK", "owner": "DL-026 Agent"},
+      {"defectId": "DL-030", "gate": "gate_4", "severity": "CRITICAL", "certifiedSeverity": "CRITICAL", "blocking": "HARD_BLOCK", "owner": "Accounting Review"},
+      {"defectId": "DL-031", "gate": "gate_4", "severity": "MEDIUM", "certifiedSeverity": "MEDIUM", "blocking": "SOFT_BLOCK", "owner": "Editorial Review"},
+      {"defectId": "EV3", "gate": "gate_2", "severity": "LOW", "certifiedSeverity": "MEDIUM", "blocking": "WARN_ONLY", "owner": "Editorial Review"},
+      {"defectId": "EV8", "gate": "gate_1", "severity": "HIGH", "certifiedSeverity": "CRITICAL", "blocking": "HARD_BLOCK", "owner": "Governance Guard"}
+    ]
+  },
+
+  "remediation_owner_assignment_rules": [
+    "Automated Script: defect is mechanically fixable without editorial judgment. Clear, align, or normalize fields.",
+    "Editorial Review: defect requires editorial judgment — wording choice, distractor quality, difficulty calibration. Human-in-the-loop.",
+    "Accounting Review: defect involves the answer key (DL-030). Must be verified by Accounting persona per COLLABORATION_MATRIX.md override rules.",
+    "Governance Guard: defect enforced at the governance level. Automated block, not a remediation action."
+  ],
+
+  "scan_module_to_defect_mapping": {
+    "description": "Each scan module targets specific defect classes. This mapping is consumed by the Scan Orchestrator to determine which scans to run based on the session's defect priorities.",
+    "mappings": [
+      {"scanId": "PG-001", "defects": ["DL-008"], "category": "EW[CC] non-empty detection"},
+      {"scanId": "PG-002", "defects": ["DL-010"], "category": "Semantic mismatch detection (NLP-assisted)"},
+      {"scanId": "PG-003", "defects": ["DL-013"], "category": "Template boilerplate detection"},
+      {"scanId": "PG-004", "defects": ["DL-016"], "category": "Metadata-content divergence detection"},
+      {"scanId": "PG-005", "defects": ["DL-026", "DL-021", "DL-025"], "category": "Empty/absent non-CC EW slot detection"},
+      {"scanId": "PG-006", "defects": ["DL-030"], "category": "CorrectChoice answer-key verification"},
+      {"scanId": "PG-007", "defects": ["DL-031"], "category": "Difficulty inflation detection"},
+      {"scanId": "PG-008", "defects": ["EV3"], "category": "Principle citation presence check"},
+      {"scanId": "PG-009", "defects": ["EV8"], "category": "EW[CC] content rule enforcement"}
+    ]
+  },
+
+  "related_defects_not_in_artifact_scope": {
+    "description": "Defects that exist in DEFECT_LIBRARY.md but are not scanned by the current pre-flight pipeline. These are either resolved, informational, or tracked outside the artifact.",
+    "excluded": [
+      {"defectId": "DL-001", "reason": "Resolved — single-item manual fix. No scan module needed."},
+      {"defectId": "DL-002", "reason": "No findings — clean across all packs."},
+      {"defectId": "DL-003", "reason": "Pedagogical — absolute language flags. 958 hits. Deferred for editorial review."},
+      {"defectId": "DL-004", "reason": "Pedagogical — ambiguity. 410 hits. Deferred for editorial review."},
+      {"defectId": "DL-005", "reason": "Pedagogical — distractor similarity. 450 warnings. Deferred for editorial review."},
+      {"defectId": "DL-006", "reason": "Application code defect — resolved in app.js."},
+      {"defectId": "DL-007", "reason": "Superseded by DL-013."},
+      {"defectId": "DL-009", "reason": "Authority citation errors — 10 resolved. Residual scanning deferred."},
+      {"defectId": "DL-012", "reason": "Clone redundancy — structural, not content defect. Deferred for archival."},
+      {"defectId": "DL-014", "reason": "Application code — low-priority null guard."},
+      {"defectId": "DL-015", "reason": "Cosmetic metadata numbering — no learner impact."},
+      {"defectId": "DL-017", "reason": "File corruption — resolved. File-level, not per-item."},
+      {"defectId": "DL-018", "reason": "Resolved — all 351 items fixed."},
+      {"defectId": "DL-019", "reason": "Process defect — resolved. Not a content defect."},
+      {"defectId": "DL-020", "reason": "Validator infrastructure — resolved."},
+      {"defectId": "DL-021", "reason": "Scanned by PG-005 as DL-026 variant — absent = empty for scoring purposes."},
+      {"defectId": "DL-022", "reason": "Application code — resolved crash fix."},
+      {"defectId": "DL-023", "reason": "Case-study exhibit — resolved normalization."},
+      {"defectId": "DL-024", "reason": "Resolved — all 150 items now have question_state."},
+      {"defectId": "DL-025", "reason": "Pack A-only legacy naming. Scanned as DL-026 by PG-005."},
+      {"defectId": "DL-027", "reason": "Closing-tag boilerplate — resolved. 15/15 closing tags removed."},
+      {"defectId": "DL-028", "reason": "Process defect — tooling regression. Not a content defect."},
+      {"defectId": "DL-029", "reason": "Methodology defect — resolved. Forward-scan deprecated."},
+      {"defectId": "DL-032", "reason": "Case bank — uniform difficulty labeling. Deferred."},
+      {"defectId": "DL-033", "reason": "Documentation — naming confusion. Resolved."},
+      {"defectId": "DL-034", "reason": "Scanned by Gate -1 (PG-011). Single item: P1-E-R33 missing CC/Stem/EC."}
+    ]
+  }
+}

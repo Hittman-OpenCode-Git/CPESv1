@@ -1,0 +1,420 @@
+{
+  "session": "S720",
+  "agent": "L — Analytics Package",
+  "title": "Consolidated S720 Analytics from All Agent Findings",
+  "generated": "2026-07-26T23:59:00Z",
+  "data_sources": {
+    "agent_a": "reports/systematic_testing/SESSION720_S719_RECONCILIATION.json — current CL/DS distributions, S719 claim verification",
+    "agent_i": "reports/systematic_testing/SESSION720_ALIGNMENT_MATRIX_VALIDATION.json — CL×DS matrix, DCS §3 compliance",
+    "agent_f": "reports/systematic_testing/SESSION720_RELIABILITY_PROGRAM_RESULTS.json — 73.7% agreement, 388-item sample",
+    "agent_c": "reports/systematic_testing/SESSION720_BOUNDARY_REVIEW_RESULTS.json — 7 Remember restorations, 70 candidates reviewed",
+    "agent_j": "reports/systematic_testing/SESSION720_ANALYZE_GAP_RESEARCH.json — Analyze gap, 48 clones, ~33 genuine",
+    "agent_h": "reports/systematic_testing/SESSION720_CONSISTENCY_MATRIX.json — cross-pack consistency audit, 4 patterns × 5 packs",
+    "s719_analytics": "reports/systematic_testing/SESSION719_ANALYTICS_PACKAGE.json — S719 distributions (with known B/C/D phantom data)",
+    "s718_baseline": "User-provided S718 post-assignment census values (SESSION718_ANALYTICS_PACKAGE.json not found on disk)",
+    "current_grep": "Select-String on all 5 pack_*_corrected.js files — 2026-07-26 authoritative counts"
+  },
+
+  "section_1_before_after_cl_distribution": {
+    "note": "S718 values from user's session startup table (SESSION718_ANALYTICS_PACKAGE.json not found on disk — proxy from SESSION719_ANALYTICS_PACKAGE.json §section_3 pre-S719 pool totals + user's approximate S718 distribution). S719 reported values include 12 phantom B/C/D items (Agent C projections never executed — see Agent A D1-D4). S720 actual = current grep counts (no S720 write operations executed). S720 projected = actual + Agent C's 7 Remember restorations + 1 Analyze→Apply + agent J's 47 Understand→Apply NOT applied.",
+    "by_cognitive_level": {
+      "Remember": {
+        "s718_post_assignment": { "count": 436, "pct": 17.4 },
+        "s719_post_alignment_reported": { "count": 50, "pct": 2.0 },
+        "s720_actual_current": { "count": 50, "pct": 2.0 },
+        "s720_projected_with_restorations": { "count": 57, "pct": 2.28 },
+        "s720_projected_with_all_recommendations": { "count": 57, "pct": 2.28 },
+        "caqs_target": { "pct": 5.0, "gap_pct": -2.72 },
+        "per_pack_actual": { "pack_a": 3, "pack_b": 41, "pack_c": 5, "pack_d": 1, "pack_e": 0 },
+        "note": "7 items identified by Agent C for restoration from Understand/Apply→Remember in Pack E. Pack E has 0 Remember currently (S719 executor overran). Packs B has 41 (41/500 = 8.2%) — Pack B Section B alone has ~20 Remember items, likely 17.4% of Pack B. Highest Remember concentration."
+      },
+      "Understand": {
+        "s718_post_assignment": { "count": 614, "pct": 24.6 },
+        "s719_post_alignment_reported": { "count": 1168, "pct": 46.7 },
+        "s720_actual_current": { "count": 1156, "pct": 46.2 },
+        "s720_projected_with_restorations": { "count": 1149, "pct": 45.96 },
+        "s720_projected_with_all_recommendations": { "count": 1102, "pct": 44.08 },
+        "caqs_target": { "pct": 15.0, "gap_pct": 29.08 },
+        "per_pack_actual": { "pack_a": 215, "pack_b": 111, "pack_c": 221, "pack_d": 209, "pack_e": 400 },
+        "note": "S719 reported 1,168 (includes 12 phantom B/C/D items). Actual grep: 1,156 (-12). If Agent C restorations applied (7→Remember, 2→Apply): 1,147. If Agent J's 47 computational Understand→Apply fix also applied: 1,100. Dominant CL — 46.2% of pool (CAQS target: 15%). MAJOR overcorrection from S719."
+      },
+      "Apply": {
+        "s718_post_assignment": { "count": 1122, "pct": 44.9 },
+        "s719_post_alignment_reported": { "count": 1161, "pct": 46.4 },
+        "s720_actual_current": { "count": 1161, "pct": 46.4 },
+        "s720_projected_with_restorations": { "count": 1161, "pct": 46.44 },
+        "s720_projected_with_all_recommendations": { "count": 1208, "pct": 48.32 },
+        "caqs_target": { "pct": 40.0, "gap_pct": 8.32 },
+        "per_pack_actual": { "pack_a": 278, "pack_b": 325, "pack_c": 230, "pack_d": 233, "pack_e": 95 },
+        "note": "S718→S719: Apply went from 1,122→1,161 (+39) from S718 CL assignment work (pre-S719 baseline). S719 did NOT change Apply (Pack A only Evaluate→Understand). Current 1,161 includes many items that should be Analyze per Agent J (B-036, B-039, B-061). If all Agent J reclassifications applied: +47 from Understand, +1 from Analyze (B-045), -3 to Analyze = net +45 → 1,206. Pack E has only 95/500 Apply items (19%) — lowest of all packs."
+      },
+      "Analyze": {
+        "s718_post_assignment": { "count": 58, "pct": 2.3 },
+        "s719_post_alignment_reported": { "count": 66, "pct": 2.6 },
+        "s720_actual_current": { "count": 66, "pct": 2.6 },
+        "s720_projected_with_restorations": { "count": 66, "pct": 2.64 },
+        "s720_projected_with_all_recommendations": { "count": 66, "pct": 2.64 },
+        "caqs_target": { "pct": 25.0, "gap_pct": -22.36 },
+        "per_pack_actual": { "pack_a": 2, "pack_b": 15, "pack_c": 23, "pack_d": 23, "pack_e": 3 },
+        "note": "72.7% of labeled Analyze items (48/66) are DL-012 definition-match clones. Only ~18 genuinely unique. Section A has ZERO Analyze items — worst gap by domain. After removing 48 clones + adding 5 confirmed misclassifications from Apply/Understand → Analyze: net ~-43. Genuine Analyze ~33 items (1.32%). CAQS deficit: ~592 new items needed. This is a STRUCTURAL gap, not a calibration issue."
+      },
+      "Evaluate": {
+        "s718_post_assignment": { "count": 270, "pct": 10.8 },
+        "s719_post_alignment_reported": { "count": 55, "pct": 2.2 },
+        "s720_actual_current": { "count": 67, "pct": 2.7 },
+        "s720_projected_with_restorations": { "count": 67, "pct": 2.68 },
+        "s720_projected_with_all_recommendations": { "count": 67, "pct": 2.68 },
+        "caqs_target": { "pct": 15.0, "gap_pct": -12.32 },
+        "per_pack_actual": { "pack_a": 2, "pack_b": 8, "pack_c": 21, "pack_d": 34, "pack_e": 2 },
+        "note": "S719 Analytics Package reported Evaluate=55 (includes -12 phantom B/C/D changes). Actual grep: 67 (+12). The 12 B/C/D Agent C projections (3+6+3) were never executed. Pack A: 158→2 (156 items correctly shifted to Understand). Pack D has the most remaining Evaluate at 34 (6.8% of Pack D)."
+      }
+    },
+    "s720_actual_difficulty_distribution": {
+      "Easy_1": 543,
+      "ModerateEasy_2": 571,
+      "Moderate_3": 1253,
+      "Difficult_4": 132,
+      "VeryDifficult_5": 0,
+      "empty_string": 1,
+      "total": 2500,
+      "caqs_target_gaps": {
+        "Easy": "21.7% actual vs 15% target (+6.7pp)",
+        "Moderate-Easy": "22.8% actual vs 20% target (+2.8pp)",
+        "Moderate": "50.1% actual vs 30% target (+20.1pp)",
+        "Difficult": "5.3% actual vs 25% target (-19.7pp)",
+        "Very_Difficult": "0.0% actual vs 10% target (-10.0pp)"
+      }
+    },
+    "s720_actual_total": 2500,
+    "certified_count": {
+      "pack_a": 481,
+      "pack_b": 500,
+      "pack_c": 350,
+      "pack_d": 350,
+      "pack_e": 500,
+      "total": 2181,
+      "archived_pack_a": 19,
+      "unprocessed_packs_c_d": 300
+    }
+  },
+
+  "section_2_pack_e_restoration_metrics": {
+    "title": "Agent C Boundary Review — Pack E Remember Restoration",
+    "total_candidates_reviewed": 70,
+    "methodology": "Per-item manual domain classification of all 4 choices against CMA Part 1 blueprint domains (A-F). ALIGNMENT_MAINTENANCE_GUIDE.md §2.1 decision tree (Q1→Q2→Q3). Agent B's automated domain classifier independently cross-checked and found unreliable (~85% error rate).",
+    "decisions": {
+      "retain_remember": { "count": 7, "pct_of_candidates": 10.0 },
+      "retain_understand": { "count": 60, "pct_of_candidates": 85.7 },
+      "upgrade_to_apply": { "count": 2, "pct_of_candidates": 2.9 },
+      "escalate": { "count": 1, "pct_of_candidates": 1.4 }
+    },
+    "confirmed_restorations": {
+      "count": 7,
+      "pct_of_candidates": 10.0,
+      "by_section": {
+        "A": { "count": 1, "qids": ["P1E-A-074"], "reason": "ASC 820 fair value hierarchy (3 levels). Pure count recall — all numeric distractors." },
+        "B": { "count": 3, "qids": ["P1E-B-028", "P1E-B-032", "P1E-B-033"], "reason": "Cross-domain distractors enable domain-disjoint elimination per Q3 rule (>=2 cross-domain distractors)." },
+        "E": { "count": 3, "qids": ["P1E-E-001", "P1E-E-031", "P1E-E-049"], "reason": "COSO IC 5 components (pure count), COSO Principle 7 (cross-domain distractors), COSO ERM 8 components (pure count)." }
+      },
+      "current_cl_distribution": { "Understand": 5, "Apply": 2 },
+      "agent_b_classifier_accuracy": "~14.3% (10 of 70 correct). Agent B's 7-signal domain classifier systematically misclassified all-distractors-as-cross-domain — ~85.7% false-positive rate on Remember candidates.",
+      "note": "Of 70 candidates flagged by automated classifier, only 7 (10%) confirmed as genuine Remember. The remaining 63 (90%) have same-domain distractors requiring conceptual comprehension → correctly labeled Understand/Apply."
+    },
+    "rejected_restorations": {
+      "count": 63,
+      "pct_of_candidates": 90.0,
+      "reason": "All distractors are from the same CMA domain as the correct answer. Candidate must understand concept relationships, not just eliminate by domain. Agent B's classifier incorrectly labeled same-domain distractors as cross-domain.",
+      "breakdown": "60 retain_understand + 2 upgrade_to_apply + 1 escalate"
+    },
+    "escalated_item": {
+      "qid": "P1E-C-051",
+      "stem": "Standard cost system provides:",
+      "escalation_reason": "Q3 (3/3 cross-domain → Remember) conflicts with functional-purpose stem requiring conceptual comprehension. Decision tree conflict — human review needed.",
+      "confidence": 65
+    }
+  },
+
+  "section_3_reliability_trend_analysis": {
+    "title": "Agent F — Reliability Improvement Program 388-Item Sample",
+    "methodology": "DCS v1.0 / ALIGNMENT_MAINTENANCE_GUIDE v1.0 §§1.2-2.4. Manual expert classification with 7-signal automated detection + 48 manual overrides. Default: Understand/ME-2 (conservative).",
+    "trend": {
+      "s717": { "agreement_pct": 71.0, "method": "Baseline (earliest reliability measurement)" },
+      "s719": { "agreement_pct": 72.0, "method": "Retest on recalibrated items only (Pack A + Pack E). Computational stem-only DCS §3 classifier.", "note": "+1.0pp from S717. Controls-only agreement was 46.0%. Human manual review of 39 items achieved 84.6% CL agreement." },
+      "s720": { "agreement_pct": 73.7, "method": "388-item sample (Pack E: 200, Pack A: 88, Controls: 100). Enhanced with 48 manual overrides.", "note": "+1.7pp from S719. Conservative Understand-default aligns with S719-normalized items." },
+      "improvement_rate": "+1.3pp per session (linear trend: 71.0 → 72.0 → 73.7)"
+    },
+    "per_pack_agreement": {
+      "pack_a": { "agreed": 76, "disagreed": 12, "pct": 86.4, "recalibrated": true },
+      "pack_e": { "agreed": 163, "disagreed": 37, "pct": 81.5, "recalibrated": true },
+      "controls": { "agreed": 47, "disagreed": 53, "pct": 47.0, "recalibrated": false },
+      "recalibrated_combined": { "pct": "~83.0 (286/288)" },
+      "non_recalibrated": { "pct": 47.0 }
+    },
+    "per_cl_agreement": {
+      "Remember": { "agreed": 0, "disagreed": 1, "pct": 0.0, "note": "Only 1 Remember in sample — insufficient data" },
+      "Understand": { "agreed": 241, "disagreed": 2, "pct": 99.2, "note": "Near-perfect agreement — conservative Understand-default matches S719 normalization" },
+      "Apply": { "agreed": 45, "disagreed": 89, "pct": 33.6, "note": "CRITICAL hotspot — only 33.6% agreement at Apply level" },
+      "Analyze": { "agreed": 0, "disagreed": 5, "pct": 0.0, "note": "0% agreement — all 5 Analyze items disagreed" },
+      "Evaluate": { "agreed": 0, "disagreed": 5, "pct": 0.0, "note": "0% agreement — all 5 Evaluate items disagreed" }
+    },
+    "main_hotspot": {
+      "pair": "Apply→Understand boundary",
+      "count": 88,
+      "pct_of_disagreements": 86.3,
+      "description": "88 of 102 disagreements (86.3%) are at the Apply→Understand boundary. The conservative Understand-default classifier labels many Apply items as Understand. Reduces to: can this item be solved WITHOUT computation? If yes → Understand; if computation or procedure execution is required → Apply."
+    },
+    "disagreement_causes": {
+      "BOUNDARY_AMBIGUOUS": { "count": 91, "pct": 89.2, "description": "Items straddling two adjacent CL levels" },
+      "TEMPLATE_ARTIFACT": { "count": 10, "pct": 9.8, "description": "CL label assigned by rotation-group position, not cognitive demand" },
+      "RULE_ERROR": { "count": 1, "pct": 1.0, "description": "Clear file label error" },
+      "DOMAIN_KNOWLEDGE": { "count": 0, "pct": 0.0 },
+      "YOU_UNCERTAIN": { "count": 0, "pct": 0.0 }
+    }
+  },
+
+  "section_4_dcs_compliance_dashboard": {
+    "title": "Agent I — Difficulty×CognitiveLevel Matrix Validation + DCS §3 Compliance",
+    "overall_compliance": {
+      "rate_pct": 89.3,
+      "compliant_items": 2233,
+      "total_items_with_cl_ds": 2500,
+      "severe_misalignments_current": 267,
+      "pre_s719_severe_misalignments": 244,
+      "dcs_strict_default_misalignments_pre_s719": 483,
+      "dcs_strict_default_misalignments_post_s719": 267,
+      "s719_resolution_pct": 95.1,
+      "note": "S719 resolved 232 of 244 S718-flagged items (95.1%). 12 Evaluate@Easy items remain (Sections C/E/F). DCS §3 strict-default counting (gap >=2 from default DS) yields 483 pre-S719 and 267 post-S719. The 267 includes patterns not in S718 scope."
+    },
+    "severe_misalignment_patterns": {
+      "Understand_at_Difficult_DS4": { "count": 38, "gap": 2, "description": "Understand CL items labeled Difficult (default DS=2 for Understand)" },
+      "Apply_at_Easy_DS1": { "count": 184, "gap": 2, "description": "DOMINANT PATTERN — Apply CL items labeled Easy (default DS=3 for Apply). 184 items where computation is required but difficulty is Easy." },
+      "Analyze_at_Easy_DS1": { "count": 21, "gap": 3, "description": "Analyze CL items labeled Easy (default DS=4). All 21 are Pack C/D clone artifacts." },
+      "Analyze_at_ModerateEasy_DS2": { "count": 9, "gap": 2, "description": "Analyze CL items labeled Moderate-Easy." },
+      "Evaluate_at_Easy_DS1": { "count": 12, "gap": 3, "description": "Residual Evaluate@Easy — Pack C (6), Pack E (5), Pack F (1)" },
+      "Evaluate_at_ModerateEasy_DS2": { "count": 3, "gap": 2, "description": "Residual Evaluate@ME" }
+    },
+    "by_section": {
+      "B": { "severe_count": 57, "rank": 1, "dominant_issue": "Apply@Easy and Understand@Difficult concentration" },
+      "C": { "severe_count": 53, "rank": 2, "dominant_issue": "Evaluate@Easy residual + Analyze@Easy clones" },
+      "F": { "severe_count": 50, "rank": 3, "dominant_issue": "Understand@ME (Pack E — all 400 items are Understand with varying DS)" },
+      "E": { "severe_count": 42, "rank": 4 },
+      "D": { "severe_count": 37, "rank": 5 },
+      "A": { "severe_count": 28, "rank": 6, "note": "Best aligned section post-S719" }
+    },
+    "by_pack": {
+      "pack_d": 75,
+      "pack_b": 65,
+      "pack_c": 56,
+      "pack_a": 54,
+      "pack_e": 17
+    },
+    "s719_elimination_verification": {
+      "evaluate_at_easy_ds1": { "pre": 168, "post_claimed": 0, "current": 12, "resolution_pct": 92.9, "residual_sections": ["C", "E", "F"] },
+      "remember_at_difficult_ds4": { "pre": 76, "post_claimed": 0, "current": 0, "resolution_pct": 100, "note": "Completely eliminated from pool" },
+      "overall": "S719 resolved 232 of 244 S718-flagged items (95.1%). 12 residual plus 255 newly surfaced = 267 total severe."
+    }
+  },
+
+  "section_5_cross_pack_consistency": {
+    "title": "Agent H — Cross-Pack Consistency Audit",
+    "items_analyzed": 2425,
+    "patterns_analyzed": 4,
+    "definition_match_pattern": {
+      "description": "Items with stems containing 'is:', 'are:', 'refers to', 'defined as'",
+      "total_pool": 924,
+      "cross_pack_consistency": "LOW",
+      "dominant_cl_by_pack": {
+        "pack_a": { "count": 156, "dominant_cl": "Evaluate", "note": "Pre-S719 — now Understand after S719 fix" },
+        "pack_b": { "count": 115, "dominant_cl": "Apply" },
+        "pack_c": { "count": 77, "dominant_cl": "Apply" },
+        "pack_d": { "count": 68, "dominant_cl": "Apply" },
+        "pack_e": { "count": 127, "dominant_cl": "Remember", "note": "Pre-S719 — now Understand after S719 fix" }
+      },
+      "issues": [
+        "Pack E previously labeled 77% of definition-match items as Remember (S719 fixed to Understand)",
+        "Pack A previously labeled 45% as Evaluate (S719 fixed to Understand)",
+        "Packs B/C/D label definition-match items as Apply — inconsistent even among the 'normal' packs",
+        "Same cognitive demand across all packs; 3 different labels assigned by different template engines"
+      ]
+    },
+    "standard_application_pattern": {
+      "description": "Items beginning 'Which of the following...'/'Under GAAP/COSO...'",
+      "total_pool": 28,
+      "cross_pack_consistency": "MODERATE",
+      "dominant_cl_by_pack": {
+        "pack_b": { "count": 15, "dominant_cl": "Remember" },
+        "pack_e": { "count": 3, "dominant_cl": "Remember" },
+        "pack_a": { "count": 2, "dominant_cl": "Understand" }
+      },
+      "issues": ["Pack A labels standard-application items as Understand; Packs B and E label them as Remember"]
+    },
+    "calculation_pattern": {
+      "description": "Items with Apply/Analyze CL requiring formula execution",
+      "total_pool": 592,
+      "cross_pack_consistency": "HIGH (within packs A/B/C/D), LOW (Pack E)",
+      "dominant_cl_by_pack": {
+        "pack_a": { "count": 105, "dominant_cl": "Apply", "dominant_ds": 3 },
+        "pack_b": { "count": 129, "dominant_cl": "Apply", "dominant_ds": 3 },
+        "pack_c": { "count": 133, "dominant_cl": "Apply", "dominant_ds": 3 },
+        "pack_d": { "count": 140, "dominant_cl": "Apply", "dominant_ds": 3 },
+        "pack_e": { "count": 67, "dominant_cl": "Apply", "dominant_ds": 3, "note": "Only 67 of 500 Pack E items have calculations — lowest of all packs" }
+      },
+      "issues": ["Pack E has only 13.4% calculation items vs 21-29% in other packs — reflects Pack E's definition-heavy template"]
+    },
+    "framework_application_pattern": {
+      "description": "Items citing GAAP/COSO/ASC/IASB",
+      "total_pool": 250,
+      "cross_pack_consistency": "LOW",
+      "dominant_cl_by_pack": {
+        "pack_a": { "count": 58, "dominant_cl": "Apply" },
+        "pack_b": { "count": 46, "dominant_cl": "Apply" },
+        "pack_c": { "count": 15, "dominant_cl": "Apply" },
+        "pack_d": { "count": 24, "dominant_cl": "Apply" },
+        "pack_e": { "count": 44, "dominant_cl": "Remember", "note": "Pre-S719 — now Understand after S719 fix. Still lowest of all packs." }
+      },
+      "issues": ["Pack E labels framework-application items 1-2 CL levels lower than Pack B/D equivalents"]
+    },
+    "overall_verdict": "PACK E USES A DIFFERENT TAXONOMY. Packs A-D are internally consistent with similar CL distributions and DS mappings. Pack E diverges on all 4 pattern types. Section E (Internal Controls) has 4 different dominant CLs across packs (Evaluate, Apply, Understand, Remember) for conceptually equivalent items. Pack E needs full CL re-audit beyond S719 normalization.",
+    "section_e_cl_by_pack": {
+      "pack_a_section_e": "Evaluate (pre-S719) → now Understand",
+      "pack_b_section_e": "Apply (dominant for control concepts)",
+      "pack_c_section_e": "Apply (DL-012 clone groups)",
+      "pack_d_section_e": "Apply (DL-012 clone groups)",
+      "pack_e_section_e": "Remember (pre-S719) → now Understand"
+    }
+  },
+
+  "section_6_analyze_gap_dashboard": {
+    "title": "Agent J — Analyze Gap Research",
+    "current_state": {
+      "analyze_labeled": 66,
+      "pct_of_pool": 2.64,
+      "caqs_target": 625,
+      "gap_count": 559,
+      "gap_pct": 22.36,
+      "by_pack": { "pack_a": 2, "pack_b": 15, "pack_c": 23, "pack_d": 23, "pack_e": 3 }
+    },
+    "clone_analysis": {
+      "total_analyze_labeled": 66,
+      "identified_clones": 48,
+      "pct_are_clones": 72.7,
+      "genuinely_unique": 18,
+      "clone_examples": [
+        "Pack C: DuPont (6 items), Joint cost NRV (4 items), Inherent risk (4 items), Data mining (4 items)",
+        "Pack D: Time series seasonal (6 items), Customer profitability (6 items), Common-size analysis (6 items)"
+      ],
+      "pattern": "Same stem skeleton, different company name. Stem DESCRIBES a concept; answer is the TERM. These are Remember/Understand definition-matching — NOT genuine Analyze."
+    },
+    "genuine_analyze_estimate": {
+      "from_labeled_analyze": 18,
+      "misclassified_apply_to_analyze": 4,
+      "misclassified_understand_to_analyze": 3,
+      "borderline_could_be_analyze": 8,
+      "total_genuine_estimate": 33,
+      "pct_of_pool": 1.32,
+      "conservative_estimate": "~25 items (1.0%)",
+      "structural_gap": 592,
+      "classification_fixes_would_add": 12,
+      "remaining_gap_after_fixes": 580
+    },
+    "separate_issue_computational_mislabeled": {
+      "count": 47,
+      "description": "47 items asking 'What is...'/'How much...'/'Calculate...' labeled Understand but should be Apply. Separate from Analyze gap.",
+      "by_pack": { "pack_a": 4, "pack_b": 3, "pack_c": 16, "pack_d": 21, "pack_e": 3 }
+    },
+    "section_analyze_density": {
+      "A": { "pct": 0.0, "genuine_estimate": 0.0, "note": "WORST gap. ~185 items, all scenario-based. Section A has ZERO Analyze-labeled items." },
+      "B": { "pct": 4.8, "genuine_estimate": 3.0, "note": "Pack D has 7 clone items. Pack B has 2 borderline. Pack A has 2 confirmed misclassifications." },
+      "C": { "pct": 9.6, "genuine_estimate": 3.0, "note": "Highest labeled count (24) but 19 are DL-012 clones." },
+      "D": { "pct": 3.2, "genuine_estimate": 1.0, "note": "Relevant costing/make-or-buy/special-order items completely absent from Analyze." },
+      "E": { "pct": 5.9, "genuine_estimate": 6.0, "note": "BEST Analyze items: Pack B Section E COSO/ERM/SOX scenario questions." },
+      "F": { "pct": 5.8, "genuine_estimate": 2.0 }
+    },
+    "structural_gap_assessment": {
+      "verdict": "MIXED — Primarily CLASSIFICATION with significant STRUCTURAL component",
+      "classification_issues": "72.7% of labeled Analyze items are clones. Template assigned CognitiveLevel by rotation-group position. 47 computation items labeled Understand.",
+      "structural_issues": "Section A: 0 Analyze items. No items ask candidates to IDENTIFY PATTERNS, DIAGNOSE CAUSES, or EXPLAIN WHY. Need ~580 new items."
+    }
+  },
+
+  "section_7_s719_claim_discrepancies": {
+    "title": "Agent A — S719 Reconciliation (Dual Verification per AGENTS.md §5)",
+    "overall_verdict": "DISCREPANCIES_FOUND — 2 HIGH, 2 MEDIUM, 2 LOW",
+    "discrepancies": [
+      {
+        "id": "D1", "severity": "HIGH",
+        "finding": "S719 Distribution Analytics and Analytics Package both project B/C/D changes that were never executed. 12 Agent C items (B:3, C:6, D:3 Evaluate→Understand) in analytics projections but not on disk."
+      },
+      {
+        "id": "D3", "severity": "HIGH",
+        "finding": "S719 Analytics Package pool-wide CL totals are wrong: Understand=1,168 (should be 1,156), Evaluate=55 (should be 67). ±12 offset from unexecuted B/C/D changes."
+      },
+      {
+        "id": "D2", "severity": "MEDIUM",
+        "finding": "Items modified: 542 (REVISION_HISTORY) vs 554 (Analytics Package §7.1 cross_pack_total). ±12 from B/C/D phantom items."
+      },
+      {
+        "id": "D4", "severity": "MEDIUM",
+        "finding": "168 Evaluate→Understand claimed; actual pool delta = -156 (Pack A only). 12-item overcount."
+      },
+      {
+        "id": "D5", "severity": "LOW",
+        "finding": "72% 'reviewer agreement' is computational stem-only classifier, not human judgment. Actual human agreement: 84.6% (39 items)."
+      },
+      {
+        "id": "D6", "severity": "LOW",
+        "finding": "1 item in Pack D has empty Difficulty field (pre-existing, not S719-introduced)."
+      }
+    ],
+    "verified_correct": [
+      "Pack E: 386 Remember→Understand (verified by grep: 0 Remember, 400 Understand)",
+      "Pack A: 156 Evaluate→Understand + difficulty Easy→ME (verified by grep: 2 Evaluate, 215 Understand)",
+      "Pack B/C/D: UNCHANGED (hash-verified by Agent M)",
+      "Governance guard: 20/20 PASS (0 FAIL)",
+      "Certified counts: 2,181 total (481+500+350+350+500)",
+      "CL coverage: 2,500/2,500 items have CognitiveLevel"
+    ]
+  },
+
+  "section_8_biggest_surprise_finding": {
+    "finding": "ANALYZE CL IS 72.7% COUNTERFEIT",
+    "detail": "48 of 66 items (72.7%) labeled 'Analyze' are definition-match clones — stems describe a concept, answer is the TERM. These test Remember/Understand comprehension, not analysis. Only ~18 items are potentially genuine Analyze. Of the 1,161 Apply-labeled items, at least 4 are genuine Analyze (mislabeled). Section A — the domain richest in judgment scenarios — has ZERO Analyze items. The structural gap (need ~580 new items) means the pool cannot meet the 25% CAQS Analyze target without new content creation.",
+    "second_finding": "S719 UNDERSTAND OVERCORRECTION: 46.2% of pool is Understand (vs 15% CAQS target). 93% of pool is Understand+Apply. Cognitive spread is dangerously narrow — no room for genuine higher-order thinking items.",
+    "third_finding": "S719 ANALYTICS CONTAIN PHANTOM DATA: The official S719 Analytics Package and Distribution Analytics report pool-wide totals that include 12 B/C/D items never actually modified on disk. All downstream reports using S719 analytics as source data will carry this 12-item error.",
+    "fourth_finding": "PACK E USES A DIFFERENT TAXONOMY: Even after S719 normalization, Pack E diverges from Packs A-D on all 4 consistency patterns. Section E (Internal Controls) has 4 different dominant CLs across packs for equivalent content.",
+    "fifth_finding": "APPLY→UNDERSTAND IS THE BOUNDARY OF MAXIMUM CONFUSION: 86.3% of all reliability disagreements (88/102) occur at the Apply/Understand boundary. The classification system cannot reliably distinguish 'applying a procedure' from 'understanding how to apply a procedure.' This is the single biggest source of inter-rater disagreement."
+  },
+
+  "section_9_key_recommendations": {
+    "immediate": [
+      "Apply Agent C's 7 Remember restorations to Pack E (no risk — 10% confirmation rate with full manual review)",
+      "Downgrade 48 DL-012 Analyze clones to Understand (fixes the counterfeit Analyze issue)",
+      "Recode 47 computational items: Understand→Apply (P1-C-027, P1-D-020, P1-C-051, etc.)",
+      "Recode 5 confirmed Analyze misclassifications: B-036, B-039, B-061 (Apply→Analyze); C-011, E-040 (Understand→Analyze)"
+    ],
+    "short_term": [
+      "Pack E full CL re-audit — 400/500 items are Understand. Agent D estimated ~102 should be Remember. Agent C confirmed 7. Pack E has a different taxonomy and needs per-item review.",
+      "Address 267 DCS §3 severe misalignments (Apply@Easy = 184 items is the dominant pattern)",
+      "Fix the 12-item S719 phantom data across SESSION_SUMMARY, Distribution Analytics, and Analytics Package",
+      "Implement reliability improvement: clarify Apply-vs-Understand boundary rules in ALIGNMENT_MAINTENANCE_GUIDE.md §2.2"
+    ],
+    "long_term": [
+      "Author ~580 new genuine Analyze-level items — this is a CONTENT CREATION task, not a calibration task",
+      "Author ~250 new Difficult items — pool has 0 Very Difficult items and 5.3% Difficult (vs 35% combined target)",
+      "Fix DL-012 clones in Packs C/D Section E (28 clone groups, 140 items)",
+      "Fix template-based labeling pipeline — CognitiveLevel must be assigned per-item, not by rotation-group position"
+    ]
+  },
+
+  "appendix_counting_methodology": {
+    "cl_counts": "Select-String -Path pack_*_corrected.js -Pattern '\"CognitiveLevel\": \"<value>\"' | Measure-Object. Summed across all 5 packs. Verified sum = 2,500 for each scan.",
+    "difficulty_counts": "Same method for Difficulty field. Sum = 2,499 (1 empty string in Pack D).",
+    "certified_counts": "Same method for question_state: Certified. Verified 2,181 total.",
+    "s719_reconciliation": "Direct grep counts compared against S719 Analytics Package §section_3 and REVISION_HISTORY.md. B/C/D unchanged status verified by Agent M hash comparison + file timestamps.",
+    "reliability_sample": "Agent F manual classification of 388 items: Pack E (200), Pack A (88), Controls (100). Enhanced with 48 manual overrides.",
+    "boundary_review": "Agent C per-item manual domain classification of 70 Pack E candidates. ALIGNMENT_MAINTENANCE_GUIDE.md §2.1 decision tree (Q1→Q2→Q3).",
+    "cross_pack_consistency": "Agent H 4-pattern analysis × 5 packs = 20 cells. 2,425 items analyzed from S718 CL assignment data.",
+    "analyze_gap": "Agent J Select-String inventory + 15-item sample classification + clone detection by topic/stem similarity.",
+    "all_agents_read_only": "Zero pack file modifications by any S720 agent."
+  }
+}

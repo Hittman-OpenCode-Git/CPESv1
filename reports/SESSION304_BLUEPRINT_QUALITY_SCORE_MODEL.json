@@ -1,0 +1,143 @@
+{
+  "generated": "2026-07-26T21:42:16.567Z",
+  "session": "S304",
+  "modelVersion": "S304-BQS-1.0",
+  "dimensions": {
+    "certificationMaturity": {
+      "weight": "25%",
+      "description": "Based on certification rate (25=max at 100%, 0=not certified)"
+    },
+    "explanationQuality": {
+      "weight": "25%",
+      "description": "Based on average EC length (25=max at ≥500 chars)"
+    },
+    "distractorQuality": {
+      "weight": "20%",
+      "description": "Based on average DQS (20=max at ≥80)"
+    },
+    "metadataQuality": {
+      "weight": "10%",
+      "description": "Fixed at 10 — detailed metadata audit deferred"
+    },
+    "learningValue": {
+      "weight": "20%",
+      "description": "Based on average EC length (20=max at ≥400 chars)"
+    }
+  },
+  "gradingScale": {
+    "A": "85-100 — Excellent blueprint quality",
+    "B": "70-84 — Good",
+    "C": "55-69 — Needs improvement",
+    "D": "35-54 — Significant gaps",
+    "F": "0-34 — Critical quality deficit"
+  },
+  "scores": {
+    "A - External Financial Reporting": {
+      "bqs": 85,
+      "grade": "A",
+      "components": {
+        "certificationMaturity": 25,
+        "explanationQuality": 15,
+        "distractorQuality": 20,
+        "metadataQuality": 10,
+        "learningValue": 15
+      }
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "bqs": 80,
+      "grade": "B",
+      "components": {
+        "certificationMaturity": 25,
+        "explanationQuality": 15,
+        "distractorQuality": 20,
+        "metadataQuality": 10,
+        "learningValue": 10
+      }
+    },
+    "C - Performance Management": {
+      "bqs": 85,
+      "grade": "A",
+      "components": {
+        "certificationMaturity": 25,
+        "explanationQuality": 20,
+        "distractorQuality": 10,
+        "metadataQuality": 10,
+        "learningValue": 20
+      }
+    },
+    "D - Cost Management": {
+      "bqs": 75,
+      "grade": "B",
+      "components": {
+        "certificationMaturity": 25,
+        "explanationQuality": 15,
+        "distractorQuality": 15,
+        "metadataQuality": 10,
+        "learningValue": 10
+      }
+    },
+    "E - Internal Controls": {
+      "bqs": 75,
+      "grade": "B",
+      "components": {
+        "certificationMaturity": 15,
+        "explanationQuality": 20,
+        "distractorQuality": 15,
+        "metadataQuality": 10,
+        "learningValue": 15
+      }
+    },
+    "F - Technology & Analytics": {
+      "bqs": 71,
+      "grade": "B",
+      "components": {
+        "certificationMaturity": 16,
+        "explanationQuality": 15,
+        "distractorQuality": 15,
+        "metadataQuality": 10,
+        "learningValue": 15
+      }
+    },
+    "Unknown": {
+      "bqs": 30,
+      "grade": "F",
+      "components": {
+        "certificationMaturity": 0,
+        "explanationQuality": 5,
+        "distractorQuality": 10,
+        "metadataQuality": 10,
+        "learningValue": 5
+      }
+    }
+  },
+  "summary": {
+    "A - External Financial Reporting": {
+      "score": 85,
+      "grade": "A"
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "score": 80,
+      "grade": "B"
+    },
+    "C - Performance Management": {
+      "score": 85,
+      "grade": "A"
+    },
+    "D - Cost Management": {
+      "score": 75,
+      "grade": "B"
+    },
+    "E - Internal Controls": {
+      "score": 75,
+      "grade": "B"
+    },
+    "F - Technology & Analytics": {
+      "score": 71,
+      "grade": "B"
+    },
+    "Unknown": {
+      "score": 30,
+      "grade": "F"
+    }
+  }
+}

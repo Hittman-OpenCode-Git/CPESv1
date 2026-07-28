@@ -1,0 +1,5082 @@
+{
+  "specId": "SESSION850_REMEDIATION_QUEUE_SPEC",
+  "board": "B",
+  "generatedTimestamp": "2026-07-27T13:50:23.935Z",
+  "summary": {
+    "totalDefectiveItems": 369,
+    "totalQueues": 20,
+    "byTier": {
+      "TIER_0_CRITICAL": 24,
+      "TIER_1_HIGH": 265,
+      "TIER_2_MEDIUM": 207,
+      "TIER_3_LOW": 0
+    },
+    "byDefectType": {
+      "DL-008": 3,
+      "DL-013": 108,
+      "DL-025": 262,
+      "DL-026": 0,
+      "DL-021": 0,
+      "DL-030": 0,
+      "DL-031": 99,
+      "DL-032": 0,
+      "DL-018": 0,
+      "DL-034": 24
+    },
+    "byDomain": {
+      "A": 7,
+      "B": 15,
+      "C": 24,
+      "D": 21,
+      "E": 258,
+      "F": 169,
+      "?": 2
+    }
+  },
+  "queues": [
+    {
+      "queueId": "Q0001",
+      "defectType": "DL-034",
+      "defectName": "Missing Structural Fields",
+      "tier": "TIER_0_CRITICAL",
+      "priority": 0,
+      "domain": "C,D,E,F,?",
+      "itemCount": 24,
+      "batchSize": 28,
+      "batchIndex": 1,
+      "totalBatches": 1,
+      "items": [
+        "P1E-C-044",
+        "P1E-C-050",
+        "P1E-C-069",
+        "P1E-C-098",
+        "P1E-C-099",
+        "P1E-D-034",
+        "P1E-D-043",
+        "P1E-E-004",
+        "P1E-E-010",
+        "P1E-E-064",
+        "P1E-F-006",
+        "P1E-F-009",
+        "P1E-F-010",
+        "P1E-F-013",
+        "P1E-F-014",
+        "P1E-F-016",
+        "P1E-F-019",
+        "P1E-F-021",
+        "P1E-F-024",
+        "P1E-F-044",
+        "P1E-F-058",
+        "P1E-F-065",
+        "P1E-F-066",
+        "P1-FD-046"
+      ],
+      "certifiedCount": 23,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "Critical"
+    },
+    {
+      "queueId": "Q0002",
+      "defectType": "DL-008",
+      "defectName": "ExplanationWrong[CorrectChoice] Non-Empty",
+      "tier": "TIER_1_HIGH",
+      "priority": 1,
+      "domain": "E",
+      "itemCount": 3,
+      "batchSize": 28,
+      "batchIndex": 1,
+      "totalBatches": 1,
+      "items": [
+        "P1-ED-057",
+        "P1-ED-063",
+        "P1-ED-065"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0003",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "?,E",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 1,
+      "totalBatches": 10,
+      "items": [
+        "P1-FD-046",
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-005",
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-009",
+        "P1-EC-010",
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-015",
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-018",
+        "P1-EC-019",
+        "P1-EC-026",
+        "P1-EC-027",
+        "P1-EC-029",
+        "P1-EC-030",
+        "P1-EC-032",
+        "P1-EC-033",
+        "P1-EC-034",
+        "P1-EC-035",
+        "P1-EC-036",
+        "P1-EC-037",
+        "P1-EC-038"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0004",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "E",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 2,
+      "totalBatches": 10,
+      "items": [
+        "P1-EC-039",
+        "P1-EC-042",
+        "P1-EC-043",
+        "P1-EC-044",
+        "P1-EC-045",
+        "P1-EC-046",
+        "P1-EC-047",
+        "P1-EC-048",
+        "P1-EC-050",
+        "P1-EC-051",
+        "P1-EC-053",
+        "P1-EC-054",
+        "P1-EC-055",
+        "P1-EC-056",
+        "P1-EC-057",
+        "P1-EC-058",
+        "P1-EC-059",
+        "P1-EC-062",
+        "P1-EC-063",
+        "P1-EC-064",
+        "P1-EC-065",
+        "P1-EC-067",
+        "P1-EC-068",
+        "P1-EC-069",
+        "P1-EC-070",
+        "P1-EC-071",
+        "P1-EC-073",
+        "P1-EC-074"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0005",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "E",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 3,
+      "totalBatches": 10,
+      "items": [
+        "P1-EC-075",
+        "P1-ED-002",
+        "P1-ED-003",
+        "P1-ED-004",
+        "P1-ED-005",
+        "P1-ED-006",
+        "P1-ED-007",
+        "P1-ED-008",
+        "P1-ED-009",
+        "P1-ED-011",
+        "P1-ED-012",
+        "P1-ED-013",
+        "P1-ED-015",
+        "P1-ED-017",
+        "P1-ED-018",
+        "P1-ED-019",
+        "P1-ED-020",
+        "P1-ED-021",
+        "P1-ED-022",
+        "P1-ED-023",
+        "P1-ED-024",
+        "P1-ED-026",
+        "P1-ED-027",
+        "P1-ED-029",
+        "P1-ED-030",
+        "P1-ED-031",
+        "P1-ED-032",
+        "P1-ED-033"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0006",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "E",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 4,
+      "totalBatches": 10,
+      "items": [
+        "P1-ED-034",
+        "P1-ED-037",
+        "P1-ED-038",
+        "P1-ED-039",
+        "P1-ED-040",
+        "P1-ED-041",
+        "P1-ED-043",
+        "P1-ED-044",
+        "P1-ED-045",
+        "P1-ED-047",
+        "P1-ED-048",
+        "P1-ED-049",
+        "P1-ED-050",
+        "P1-ED-052",
+        "P1-ED-053",
+        "P1-ED-054",
+        "P1-ED-055",
+        "P1-ED-056",
+        "P1-ED-057",
+        "P1-ED-059",
+        "P1-ED-060",
+        "P1-ED-061",
+        "P1-ED-062",
+        "P1-ED-063",
+        "P1-ED-065",
+        "P1-ED-067",
+        "P1-ED-068",
+        "P1-ED-069"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0007",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "E,F",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 5,
+      "totalBatches": 10,
+      "items": [
+        "P1-ED-070",
+        "P1-FC-001",
+        "P1-FC-002",
+        "P1-FC-003",
+        "P1-FC-004",
+        "P1-FC-005",
+        "P1-FC-006",
+        "P1-FC-007",
+        "P1-FC-008",
+        "P1-FC-009",
+        "P1-FC-010",
+        "P1-FC-011",
+        "P1-FC-012",
+        "P1-FC-013",
+        "P1-FC-014",
+        "P1-FC-015",
+        "P1-FC-016",
+        "P1-FC-017",
+        "P1-FC-018",
+        "P1-FC-019",
+        "P1-FC-020",
+        "P1-FC-021",
+        "P1-FC-022",
+        "P1-FC-023",
+        "P1-FC-024",
+        "P1-FC-025",
+        "P1-FC-026",
+        "P1-FC-027"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0008",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "F",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 6,
+      "totalBatches": 10,
+      "items": [
+        "P1-FC-028",
+        "P1-FC-029",
+        "P1-FC-030",
+        "P1-FC-031",
+        "P1-FC-032",
+        "P1-FC-033",
+        "P1-FC-034",
+        "P1-FC-035",
+        "P1-FC-036",
+        "P1-FC-037",
+        "P1-FC-038",
+        "P1-FC-039",
+        "P1-FC-040",
+        "P1-FC-041",
+        "P1-FC-042",
+        "P1-FC-043",
+        "P1-FC-044",
+        "P1-FC-045",
+        "P1-FC-046",
+        "P1-FC-047",
+        "P1-FC-048",
+        "P1-FC-049",
+        "P1-FC-050",
+        "P1-FC-051",
+        "P1-FC-052",
+        "P1-FC-053",
+        "P1-FC-054",
+        "P1-FC-055"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0009",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "F",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 7,
+      "totalBatches": 10,
+      "items": [
+        "P1-FC-056",
+        "P1-FC-057",
+        "P1-FC-058",
+        "P1-FC-059",
+        "P1-FC-060",
+        "P1-FC-061",
+        "P1-FC-062",
+        "P1-FC-063",
+        "P1-FC-064",
+        "P1-FC-065",
+        "P1-FC-066",
+        "P1-FC-067",
+        "P1-FC-068",
+        "P1-FC-069",
+        "P1-FC-070",
+        "P1-FC-071",
+        "P1-FC-072",
+        "P1-FC-073",
+        "P1-FC-074",
+        "P1-FC-075",
+        "P1-FD-001",
+        "P1-FD-002",
+        "P1-FD-003",
+        "P1-FD-004",
+        "P1-FD-005",
+        "P1-FD-006",
+        "P1-FD-007",
+        "P1-FD-008"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0010",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "F",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 8,
+      "totalBatches": 10,
+      "items": [
+        "P1-FD-009",
+        "P1-FD-010",
+        "P1-FD-011",
+        "P1-FD-012",
+        "P1-FD-013",
+        "P1-FD-014",
+        "P1-FD-015",
+        "P1-FD-016",
+        "P1-FD-017",
+        "P1-FD-018",
+        "P1-FD-019",
+        "P1-FD-020",
+        "P1-FD-021",
+        "P1-FD-022",
+        "P1-FD-023",
+        "P1-FD-024",
+        "P1-FD-025",
+        "P1-FD-026",
+        "P1-FD-027",
+        "P1-FD-028",
+        "P1-FD-029",
+        "P1-FD-030",
+        "P1-FD-031",
+        "P1-FD-032",
+        "P1-FD-033",
+        "P1-FD-034",
+        "P1-FD-035",
+        "P1-FD-036"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0011",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "F",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 9,
+      "totalBatches": 10,
+      "items": [
+        "P1-FD-037",
+        "P1-FD-038",
+        "P1-FD-039",
+        "P1-FD-040",
+        "P1-FD-041",
+        "P1-FD-042",
+        "P1-FD-043",
+        "P1-FD-044",
+        "P1-FD-045",
+        "P1-FD-047",
+        "P1-FD-048",
+        "P1-FD-049",
+        "P1-FD-050",
+        "P1-FD-051",
+        "P1-FD-052",
+        "P1-FD-053",
+        "P1-FD-054",
+        "P1-FD-055",
+        "P1-FD-056",
+        "P1-FD-057",
+        "P1-FD-058",
+        "P1-FD-059",
+        "P1-FD-060",
+        "P1-FD-061",
+        "P1-FD-062",
+        "P1-FD-063",
+        "P1-FD-064",
+        "P1-FD-065"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0012",
+      "defectType": "DL-025",
+      "defectName": "Empty Non-CorrectChoice ExplanationWrong",
+      "tier": "TIER_1_HIGH",
+      "priority": 2,
+      "domain": "F",
+      "itemCount": 10,
+      "batchSize": 28,
+      "batchIndex": 10,
+      "totalBatches": 10,
+      "items": [
+        "P1-FD-066",
+        "P1-FD-067",
+        "P1-FD-068",
+        "P1-FD-069",
+        "P1-FD-070",
+        "P1-FD-071",
+        "P1-FD-072",
+        "P1-FD-073",
+        "P1-FD-074",
+        "P1-FD-075"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": true,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0013",
+      "defectType": "DL-013",
+      "defectName": "Template Boilerplate Distractor Explanations",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 3,
+      "domain": "E",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 1,
+      "totalBatches": 4,
+      "items": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-005",
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-009",
+        "P1-EC-010",
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-015",
+        "P1-EC-016",
+        "P1-EC-018",
+        "P1-EC-019",
+        "P1-EC-026",
+        "P1-EC-027",
+        "P1-EC-029",
+        "P1-EC-030",
+        "P1-EC-032",
+        "P1-EC-033",
+        "P1-EC-034",
+        "P1-EC-035",
+        "P1-EC-036",
+        "P1-EC-037",
+        "P1-EC-038",
+        "P1-EC-039",
+        "P1-EC-042"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Content Author",
+      "blockingCertification": false,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0014",
+      "defectType": "DL-013",
+      "defectName": "Template Boilerplate Distractor Explanations",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 3,
+      "domain": "E",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 2,
+      "totalBatches": 4,
+      "items": [
+        "P1-EC-043",
+        "P1-EC-044",
+        "P1-EC-045",
+        "P1-EC-046",
+        "P1-EC-047",
+        "P1-EC-048",
+        "P1-EC-050",
+        "P1-EC-051",
+        "P1-EC-053",
+        "P1-EC-054",
+        "P1-EC-055",
+        "P1-EC-056",
+        "P1-EC-057",
+        "P1-EC-058",
+        "P1-EC-059",
+        "P1-EC-062",
+        "P1-EC-063",
+        "P1-EC-064",
+        "P1-EC-065",
+        "P1-EC-067",
+        "P1-EC-068",
+        "P1-EC-069",
+        "P1-EC-070",
+        "P1-EC-071",
+        "P1-EC-073",
+        "P1-EC-074",
+        "P1-EC-075",
+        "P1-ED-002"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Content Author",
+      "blockingCertification": false,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0015",
+      "defectType": "DL-013",
+      "defectName": "Template Boilerplate Distractor Explanations",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 3,
+      "domain": "E",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 3,
+      "totalBatches": 4,
+      "items": [
+        "P1-ED-003",
+        "P1-ED-004",
+        "P1-ED-005",
+        "P1-ED-006",
+        "P1-ED-007",
+        "P1-ED-008",
+        "P1-ED-009",
+        "P1-ED-011",
+        "P1-ED-012",
+        "P1-ED-013",
+        "P1-ED-015",
+        "P1-ED-017",
+        "P1-ED-018",
+        "P1-ED-019",
+        "P1-ED-020",
+        "P1-ED-021",
+        "P1-ED-022",
+        "P1-ED-023",
+        "P1-ED-024",
+        "P1-ED-026",
+        "P1-ED-027",
+        "P1-ED-029",
+        "P1-ED-030",
+        "P1-ED-031",
+        "P1-ED-032",
+        "P1-ED-033",
+        "P1-ED-034",
+        "P1-ED-037"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Content Author",
+      "blockingCertification": false,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0016",
+      "defectType": "DL-013",
+      "defectName": "Template Boilerplate Distractor Explanations",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 3,
+      "domain": "E",
+      "itemCount": 24,
+      "batchSize": 28,
+      "batchIndex": 4,
+      "totalBatches": 4,
+      "items": [
+        "P1-ED-038",
+        "P1-ED-039",
+        "P1-ED-040",
+        "P1-ED-041",
+        "P1-ED-043",
+        "P1-ED-044",
+        "P1-ED-045",
+        "P1-ED-047",
+        "P1-ED-048",
+        "P1-ED-049",
+        "P1-ED-050",
+        "P1-ED-052",
+        "P1-ED-053",
+        "P1-ED-054",
+        "P1-ED-055",
+        "P1-ED-056",
+        "P1-ED-059",
+        "P1-ED-060",
+        "P1-ED-061",
+        "P1-ED-062",
+        "P1-ED-067",
+        "P1-ED-068",
+        "P1-ED-069",
+        "P1-ED-070"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Content Author",
+      "blockingCertification": false,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0017",
+      "defectType": "DL-031",
+      "defectName": "Difficulty Inflation (Systematic)",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 4,
+      "domain": "A,B,C",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 1,
+      "totalBatches": 4,
+      "items": [
+        "P1B-A-083",
+        "P1B-A-120",
+        "P1B-A-124",
+        "P1-AD-032",
+        "P1-AD-033",
+        "P1-AD-034",
+        "P1-AD-035",
+        "P1-B-037",
+        "P1-B-040",
+        "P1-BD-007",
+        "P1-BD-036",
+        "P1-BD-037",
+        "P1-BD-038",
+        "P1-BD-039",
+        "P1-BD-040",
+        "P1-BD-041",
+        "P1-BD-095",
+        "P1-BD-096",
+        "P1-BD-097",
+        "P1-BD-098",
+        "P1-BD-099",
+        "P1-BD-100",
+        "P1B-C-110",
+        "P1B-C-113",
+        "P1B-C-137",
+        "P1B-C-144",
+        "P1B-C-149",
+        "P1B-C-150"
+      ],
+      "certifiedCount": 28,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": false,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0018",
+      "defectType": "DL-031",
+      "defectName": "Difficulty Inflation (Systematic)",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 4,
+      "domain": "C,D",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 2,
+      "totalBatches": 4,
+      "items": [
+        "P1B-C-173",
+        "P1B-C-194",
+        "P1B-C-196",
+        "P1-CC-071",
+        "P1-CC-072",
+        "P1-CC-073",
+        "P1-CC-074",
+        "P1-CC-075",
+        "P1-CC-076",
+        "P1-CD-014",
+        "P1-CD-030",
+        "P1-CD-034",
+        "P1-CD-035",
+        "P1B-D-090",
+        "P1B-D-107",
+        "P1B-D-114",
+        "P1-DC-002",
+        "P1-DC-003",
+        "P1-DC-004",
+        "P1-DC-005",
+        "P1-DC-009",
+        "P1-DC-010",
+        "P1-DC-016",
+        "P1-DC-017",
+        "P1-DC-019",
+        "P1-DC-023",
+        "P1-DC-025",
+        "P1-DD-010"
+      ],
+      "certifiedCount": 28,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": false,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0019",
+      "defectType": "DL-031",
+      "defectName": "Difficulty Inflation (Systematic)",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 4,
+      "domain": "D,E,F",
+      "itemCount": 28,
+      "batchSize": 28,
+      "batchIndex": 3,
+      "totalBatches": 4,
+      "items": [
+        "P1-DD-018",
+        "P1-DD-019",
+        "P1-DD-020",
+        "P1E-D-039",
+        "P1-E-007",
+        "P1-E-078",
+        "P1B-E-107",
+        "P1B-E-146",
+        "P1-E-R01",
+        "P1-E-R03",
+        "P1-E-R06",
+        "P1-E-R09",
+        "P1-E-R10",
+        "P1-E-R14",
+        "P1-E-R16",
+        "P1-E-R27",
+        "P1-E-R38",
+        "P1-E-R13",
+        "P1-E-R28",
+        "P1B-F-113",
+        "P1B-F-121",
+        "P1B-F-138",
+        "P1B-F-140",
+        "P1B-F-142",
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-009",
+        "P1-EC-010"
+      ],
+      "certifiedCount": 24,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": false,
+      "severity": "High"
+    },
+    {
+      "queueId": "Q0020",
+      "defectType": "DL-031",
+      "defectName": "Difficulty Inflation (Systematic)",
+      "tier": "TIER_2_MEDIUM",
+      "priority": 4,
+      "domain": "E,F",
+      "itemCount": 15,
+      "batchSize": 28,
+      "batchIndex": 4,
+      "totalBatches": 4,
+      "items": [
+        "P1-EC-022",
+        "P1-EC-023",
+        "P1-EC-024",
+        "P1-ED-041",
+        "P1-ED-044",
+        "P1-ED-045",
+        "P1-ED-057",
+        "P1-ED-059",
+        "P1-ED-060",
+        "P1-ED-068",
+        "P1-ED-069",
+        "P1-ED-070",
+        "P1-ED-073",
+        "P1-FD-022",
+        "P1-FD-023"
+      ],
+      "certifiedCount": 0,
+      "suggestedOwner": "Remediation Agent",
+      "blockingCertification": false,
+      "severity": "High"
+    }
+  ],
+  "perItem": [
+    {
+      "qid": "P1-B-037",
+      "pack": "pack_a",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.037 flexible budget variance interpretation"
+    },
+    {
+      "qid": "P1-B-040",
+      "pack": "pack_a",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.040 standard costing variance investigation threshold"
+    },
+    {
+      "qid": "P1-E-007",
+      "pack": "pack_a",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E.007 three-way match preventive control"
+    },
+    {
+      "qid": "P1-E-078",
+      "pack": "pack_a",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E.078 inherent risk vs control risk"
+    },
+    {
+      "qid": "P1B-A-083",
+      "pack": "pack_b",
+      "section": "A",
+      "domain": "A",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-A.083 point-in-time vs over-time"
+    },
+    {
+      "qid": "P1B-A-120",
+      "pack": "pack_b",
+      "section": "A",
+      "domain": "A",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-A.120 subsequent events"
+    },
+    {
+      "qid": "P1B-A-124",
+      "pack": "pack_b",
+      "section": "A",
+      "domain": "A",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-A.124 equity method - fair value option"
+    },
+    {
+      "qid": "P1B-C-110",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.110 variance analysis"
+    },
+    {
+      "qid": "P1B-C-113",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.113 variance analysis"
+    },
+    {
+      "qid": "P1B-C-137",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.137 ROI and residual income"
+    },
+    {
+      "qid": "P1B-C-144",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.144 ROI and residual income"
+    },
+    {
+      "qid": "P1B-C-149",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.149 transfer pricing"
+    },
+    {
+      "qid": "P1B-C-150",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.150 transfer pricing"
+    },
+    {
+      "qid": "P1B-C-173",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.173 customer profitability analysis"
+    },
+    {
+      "qid": "P1B-C-194",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.194 standard costing"
+    },
+    {
+      "qid": "P1B-C-196",
+      "pack": "pack_b",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-C.196 standard costing vs actual costing"
+    },
+    {
+      "qid": "P1B-D-090",
+      "pack": "pack_b",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-D.090 job order costing"
+    },
+    {
+      "qid": "P1B-D-107",
+      "pack": "pack_b",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-D.107 activity-based costing"
+    },
+    {
+      "qid": "P1B-D-114",
+      "pack": "pack_b",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-D.114 byproduct costing"
+    },
+    {
+      "qid": "P1B-E-107",
+      "pack": "pack_b",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-E.107 application controls"
+    },
+    {
+      "qid": "P1B-E-146",
+      "pack": "pack_b",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-E.146 COSO Internal Control"
+    },
+    {
+      "qid": "P1B-F-113",
+      "pack": "pack_b",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-F.113 RPA"
+    },
+    {
+      "qid": "P1B-F-121",
+      "pack": "pack_b",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-F.121 blockchain"
+    },
+    {
+      "qid": "P1B-F-138",
+      "pack": "pack_b",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-F.138 ERP systems"
+    },
+    {
+      "qid": "P1B-F-140",
+      "pack": "pack_b",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-F.140 data governance"
+    },
+    {
+      "qid": "P1B-F-142",
+      "pack": "pack_b",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B-F.142 continuous monitoring"
+    },
+    {
+      "qid": "P1-CC-071",
+      "pack": "pack_c",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.071 gross margin variance analysis"
+    },
+    {
+      "qid": "P1-CC-072",
+      "pack": "pack_c",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.072 gross margin variance analysis"
+    },
+    {
+      "qid": "P1-CC-073",
+      "pack": "pack_c",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.073 gross margin variance analysis"
+    },
+    {
+      "qid": "P1-CC-074",
+      "pack": "pack_c",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.074 gross margin variance analysis"
+    },
+    {
+      "qid": "P1-CC-075",
+      "pack": "pack_c",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.075 gross margin variance analysis"
+    },
+    {
+      "qid": "P1-CC-076",
+      "pack": "pack_c",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.076 gross margin variance analysis"
+    },
+    {
+      "qid": "P1-DC-002",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.002 job order costing overhead"
+    },
+    {
+      "qid": "P1-DC-003",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.003 job order costing overhead"
+    },
+    {
+      "qid": "P1-DC-004",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.004 job order costing overhead"
+    },
+    {
+      "qid": "P1-DC-005",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.005 job order costing overhead"
+    },
+    {
+      "qid": "P1-DC-009",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.009 process costing weighted average"
+    },
+    {
+      "qid": "P1-DC-010",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.010 process costing weighted average"
+    },
+    {
+      "qid": "P1-DC-016",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.016 joint cost allocation method"
+    },
+    {
+      "qid": "P1-DC-017",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.017 joint cost allocation method"
+    },
+    {
+      "qid": "P1-DC-019",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.019 joint cost allocation method"
+    },
+    {
+      "qid": "P1-DC-023",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.023 variable costing vs absorption costing"
+    },
+    {
+      "qid": "P1-DC-025",
+      "pack": "pack_c",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.025 variable costing vs absorption costing"
+    },
+    {
+      "qid": "P1-EC-001",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.001 segregation of duties design"
+    },
+    {
+      "qid": "P1-EC-002",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.002 segregation of duties design"
+    },
+    {
+      "qid": "P1-EC-003",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.003 segregation of duties design"
+    },
+    {
+      "qid": "P1-EC-005",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.005 segregation of duties design"
+    },
+    {
+      "qid": "P1-EC-006",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.006 coso internal control framework"
+    },
+    {
+      "qid": "P1-EC-007",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.007 coso internal control framework"
+    },
+    {
+      "qid": "P1-EC-009",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.009 coso internal control framework"
+    },
+    {
+      "qid": "P1-EC-010",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.010 coso internal control framework"
+    },
+    {
+      "qid": "P1-EC-011",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.011 fraud triangle elements"
+    },
+    {
+      "qid": "P1-EC-012",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.012 fraud triangle elements"
+    },
+    {
+      "qid": "P1-EC-013",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.013 fraud triangle elements"
+    },
+    {
+      "qid": "P1-EC-015",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.015 fraud triangle elements"
+    },
+    {
+      "qid": "P1-EC-016",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.016 physical controls over assets"
+    },
+    {
+      "qid": "P1-EC-017",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "E.017 physical controls over assets"
+    },
+    {
+      "qid": "P1-EC-018",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.018 physical controls over assets"
+    },
+    {
+      "qid": "P1-EC-019",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.019 physical controls over assets"
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E.022 preventive vs detective duplicate payment control"
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E.023 IT access control terminated employee deprovisioning"
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E.024 application input control sales order validation"
+    },
+    {
+      "qid": "P1-EC-026",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.026 bank reconciliation control"
+    },
+    {
+      "qid": "P1-EC-027",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.027 bank reconciliation control"
+    },
+    {
+      "qid": "P1-EC-029",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.029 bank reconciliation control"
+    },
+    {
+      "qid": "P1-EC-030",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.030 bank reconciliation control"
+    },
+    {
+      "qid": "P1-EC-032",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.032 erm risk appetite"
+    },
+    {
+      "qid": "P1-EC-033",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.033 erm risk appetite"
+    },
+    {
+      "qid": "P1-EC-034",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.034 erm risk appetite"
+    },
+    {
+      "qid": "P1-EC-035",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.035 erm risk appetite"
+    },
+    {
+      "qid": "P1-EC-036",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.036 it general controls access"
+    },
+    {
+      "qid": "P1-EC-037",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.037 it general controls access"
+    },
+    {
+      "qid": "P1-EC-038",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.038 it general controls access"
+    },
+    {
+      "qid": "P1-EC-039",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.039 it general controls access"
+    },
+    {
+      "qid": "P1-EC-042",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.042 management override risk"
+    },
+    {
+      "qid": "P1-EC-043",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.043 management override risk"
+    },
+    {
+      "qid": "P1-EC-044",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.044 management override risk"
+    },
+    {
+      "qid": "P1-EC-045",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.045 management override risk"
+    },
+    {
+      "qid": "P1-EC-046",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.046 whistleblower hotline purpose"
+    },
+    {
+      "qid": "P1-EC-047",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.047 whistleblower hotline purpose"
+    },
+    {
+      "qid": "P1-EC-048",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.048 whistleblower hotline purpose"
+    },
+    {
+      "qid": "P1-EC-050",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.050 whistleblower hotline purpose"
+    },
+    {
+      "qid": "P1-EC-051",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.051 compensating control small business"
+    },
+    {
+      "qid": "P1-EC-053",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.053 compensating control small business"
+    },
+    {
+      "qid": "P1-EC-054",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.054 compensating control small business"
+    },
+    {
+      "qid": "P1-EC-055",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.055 compensating control small business"
+    },
+    {
+      "qid": "P1-EC-056",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.056 control environment tone at top"
+    },
+    {
+      "qid": "P1-EC-057",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.057 control environment tone at top"
+    },
+    {
+      "qid": "P1-EC-058",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.058 control environment tone at top"
+    },
+    {
+      "qid": "P1-EC-059",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.059 control environment tone at top"
+    },
+    {
+      "qid": "P1-EC-062",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.062 inherent risk vs control risk"
+    },
+    {
+      "qid": "P1-EC-063",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.063 inherent risk vs control risk"
+    },
+    {
+      "qid": "P1-EC-064",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.064 inherent risk vs control risk"
+    },
+    {
+      "qid": "P1-EC-065",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.065 inherent risk vs control risk"
+    },
+    {
+      "qid": "P1-EC-067",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.067 segregation cash custody recording"
+    },
+    {
+      "qid": "P1-EC-068",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.068 segregation cash custody recording"
+    },
+    {
+      "qid": "P1-EC-069",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.069 segregation cash custody recording"
+    },
+    {
+      "qid": "P1-EC-070",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.070 segregation cash custody recording"
+    },
+    {
+      "qid": "P1-EC-071",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.071 remediation of control deficiency"
+    },
+    {
+      "qid": "P1-EC-073",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.073 remediation of control deficiency"
+    },
+    {
+      "qid": "P1-EC-074",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.074 remediation of control deficiency"
+    },
+    {
+      "qid": "P1-EC-075",
+      "pack": "pack_c",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.075 remediation of control deficiency"
+    },
+    {
+      "qid": "P1-FC-001",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.001 data governance ownership"
+    },
+    {
+      "qid": "P1-FC-002",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.002 data governance ownership"
+    },
+    {
+      "qid": "P1-FC-003",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.003 data governance ownership"
+    },
+    {
+      "qid": "P1-FC-004",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.004 data governance ownership"
+    },
+    {
+      "qid": "P1-FC-005",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.005 data governance ownership"
+    },
+    {
+      "qid": "P1-FC-006",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.006 descriptive vs predictive analytics"
+    },
+    {
+      "qid": "P1-FC-007",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.007 descriptive vs predictive analytics"
+    },
+    {
+      "qid": "P1-FC-008",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.008 prescriptive analytics applied scenario"
+    },
+    {
+      "qid": "P1-FC-009",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.009 descriptive vs predictive analytics"
+    },
+    {
+      "qid": "P1-FC-010",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.010 descriptive vs predictive analytics"
+    },
+    {
+      "qid": "P1-FC-011",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.011 robotic process automation use case"
+    },
+    {
+      "qid": "P1-FC-012",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.012 robotic process automation use case"
+    },
+    {
+      "qid": "P1-FC-013",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.013 robotic process automation use case"
+    },
+    {
+      "qid": "P1-FC-014",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.014 robotic process automation use case"
+    },
+    {
+      "qid": "P1-FC-015",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.015 robotic process automation use case"
+    },
+    {
+      "qid": "P1-FC-016",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.016 cloud computing service models"
+    },
+    {
+      "qid": "P1-FC-017",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.017 cloud computing service models"
+    },
+    {
+      "qid": "P1-FC-018",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.018 cloud computing service models"
+    },
+    {
+      "qid": "P1-FC-019",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.019 cloud computing service models"
+    },
+    {
+      "qid": "P1-FC-020",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.020 cloud computing service models"
+    },
+    {
+      "qid": "P1-FC-021",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.021 data visualization dashboard design"
+    },
+    {
+      "qid": "P1-FC-022",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.022 data visualization dashboard design"
+    },
+    {
+      "qid": "P1-FC-023",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.023 data visualization dashboard design"
+    },
+    {
+      "qid": "P1-FC-024",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.024 data visualization dashboard design"
+    },
+    {
+      "qid": "P1-FC-025",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.025 data visualization dashboard design"
+    },
+    {
+      "qid": "P1-FC-026",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.026 CIA triad access control applied"
+    },
+    {
+      "qid": "P1-FC-027",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.027 cybersecurity confidentiality integrity availability"
+    },
+    {
+      "qid": "P1-FC-028",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.028 cybersecurity confidentiality integrity availability"
+    },
+    {
+      "qid": "P1-FC-029",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.029 cybersecurity confidentiality integrity availability"
+    },
+    {
+      "qid": "P1-FC-030",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.030 cybersecurity confidentiality integrity availability"
+    },
+    {
+      "qid": "P1-FC-031",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.031 big data characteristics volume velocity variety"
+    },
+    {
+      "qid": "P1-FC-032",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.032 big data characteristics volume velocity variety"
+    },
+    {
+      "qid": "P1-FC-033",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.033 big data characteristics volume velocity variety"
+    },
+    {
+      "qid": "P1-FC-034",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.034 big data characteristics volume velocity variety"
+    },
+    {
+      "qid": "P1-FC-035",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.035 big data characteristics volume velocity variety"
+    },
+    {
+      "qid": "P1-FC-036",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.036 data mining pattern discovery"
+    },
+    {
+      "qid": "P1-FC-037",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.037 data mining pattern discovery"
+    },
+    {
+      "qid": "P1-FC-038",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.038 data mining pattern discovery"
+    },
+    {
+      "qid": "P1-FC-039",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.039 data mining pattern discovery"
+    },
+    {
+      "qid": "P1-FC-040",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.040 data mining pattern discovery"
+    },
+    {
+      "qid": "P1-FC-041",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.041 blockchain distributed ledger"
+    },
+    {
+      "qid": "P1-FC-042",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.042 blockchain distributed ledger"
+    },
+    {
+      "qid": "P1-FC-043",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.043 blockchain distributed ledger"
+    },
+    {
+      "qid": "P1-FC-044",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.044 blockchain distributed ledger"
+    },
+    {
+      "qid": "P1-FC-045",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.045 blockchain distributed ledger"
+    },
+    {
+      "qid": "P1-FC-046",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.046 data quality dimensions accuracy completeness"
+    },
+    {
+      "qid": "P1-FC-047",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.047 data quality dimensions accuracy completeness"
+    },
+    {
+      "qid": "P1-FC-048",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.048 data quality dimensions accuracy completeness"
+    },
+    {
+      "qid": "P1-FC-049",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.049 data quality dimensions accuracy completeness"
+    },
+    {
+      "qid": "P1-FC-050",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.050 data quality dimensions accuracy completeness"
+    },
+    {
+      "qid": "P1-FC-051",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.051 artificial intelligence machine learning"
+    },
+    {
+      "qid": "P1-FC-052",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.052 artificial intelligence machine learning"
+    },
+    {
+      "qid": "P1-FC-053",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.053 artificial intelligence machine learning"
+    },
+    {
+      "qid": "P1-FC-054",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.054 artificial intelligence machine learning"
+    },
+    {
+      "qid": "P1-FC-055",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.055 artificial intelligence machine learning"
+    },
+    {
+      "qid": "P1-FC-056",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.056 cybersecurity phishing social engineering"
+    },
+    {
+      "qid": "P1-FC-057",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.057 cybersecurity phishing social engineering"
+    },
+    {
+      "qid": "P1-FC-058",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.058 cybersecurity phishing social engineering"
+    },
+    {
+      "qid": "P1-FC-059",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.059 cybersecurity phishing social engineering"
+    },
+    {
+      "qid": "P1-FC-060",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.060 cybersecurity phishing social engineering"
+    },
+    {
+      "qid": "P1-FC-061",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.061 erp system integration benefits"
+    },
+    {
+      "qid": "P1-FC-062",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.062 erp system integration benefits"
+    },
+    {
+      "qid": "P1-FC-063",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.063 erp system integration benefits"
+    },
+    {
+      "qid": "P1-FC-064",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.064 erp system integration benefits"
+    },
+    {
+      "qid": "P1-FC-065",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.065 erp system integration benefits"
+    },
+    {
+      "qid": "P1-FC-066",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.066 data lake vs data warehouse"
+    },
+    {
+      "qid": "P1-FC-067",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.067 data lake vs data warehouse"
+    },
+    {
+      "qid": "P1-FC-068",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.068 data lake vs data warehouse"
+    },
+    {
+      "qid": "P1-FC-069",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.069 data lake vs data warehouse"
+    },
+    {
+      "qid": "P1-FC-070",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.070 data lake vs data warehouse"
+    },
+    {
+      "qid": "P1-FC-071",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.071 technology enabled continuous auditing"
+    },
+    {
+      "qid": "P1-FC-072",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.072 technology enabled continuous auditing"
+    },
+    {
+      "qid": "P1-FC-073",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.073 technology enabled continuous auditing"
+    },
+    {
+      "qid": "P1-FC-074",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.074 technology enabled continuous auditing"
+    },
+    {
+      "qid": "P1-FC-075",
+      "pack": "pack_c",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.075 technology enabled continuous auditing"
+    },
+    {
+      "qid": "P1-AD-032",
+      "pack": "pack_d",
+      "section": "A",
+      "domain": "A",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "A.032 subsequent events recognized"
+    },
+    {
+      "qid": "P1-AD-033",
+      "pack": "pack_d",
+      "section": "A",
+      "domain": "A",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "A.033 subsequent events recognized"
+    },
+    {
+      "qid": "P1-AD-034",
+      "pack": "pack_d",
+      "section": "A",
+      "domain": "A",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "A.034 subsequent events recognized"
+    },
+    {
+      "qid": "P1-AD-035",
+      "pack": "pack_d",
+      "section": "A",
+      "domain": "A",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "A.035 subsequent events recognized"
+    },
+    {
+      "qid": "P1-BD-007",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.007 flexible budget variance analysis"
+    },
+    {
+      "qid": "P1-BD-036",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.036 operating budget vs financial budget"
+    },
+    {
+      "qid": "P1-BD-037",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.037 operating budget vs financial budget"
+    },
+    {
+      "qid": "P1-BD-038",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.038 operating budget vs financial budget"
+    },
+    {
+      "qid": "P1-BD-039",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.039 operating budget vs financial budget"
+    },
+    {
+      "qid": "P1-BD-040",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.040 operating budget vs financial budget"
+    },
+    {
+      "qid": "P1-BD-041",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.041 operating budget vs financial budget"
+    },
+    {
+      "qid": "P1-BD-095",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.095 strategic vs operational planning horizon"
+    },
+    {
+      "qid": "P1-BD-096",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.096 strategic vs operational planning horizon"
+    },
+    {
+      "qid": "P1-BD-097",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.097 strategic vs operational planning horizon"
+    },
+    {
+      "qid": "P1-BD-098",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.098 strategic vs operational planning horizon"
+    },
+    {
+      "qid": "P1-BD-099",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.099 strategic vs operational planning horizon"
+    },
+    {
+      "qid": "P1-BD-100",
+      "pack": "pack_d",
+      "section": "B",
+      "domain": "B",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "B.100 strategic vs operational planning horizon"
+    },
+    {
+      "qid": "P1-CD-014",
+      "pack": "pack_d",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.014 variable overhead spending variance"
+    },
+    {
+      "qid": "P1-CD-030",
+      "pack": "pack_d",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.030 dual rate transfer pricing"
+    },
+    {
+      "qid": "P1-CD-034",
+      "pack": "pack_d",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.034 dual rate transfer pricing"
+    },
+    {
+      "qid": "P1-CD-035",
+      "pack": "pack_d",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "C.035 dual rate transfer pricing"
+    },
+    {
+      "qid": "P1-DD-010",
+      "pack": "pack_d",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.010 equivalent units fifo method"
+    },
+    {
+      "qid": "P1-DD-018",
+      "pack": "pack_d",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.018 step down method service allocation"
+    },
+    {
+      "qid": "P1-DD-019",
+      "pack": "pack_d",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.019 step down method service allocation"
+    },
+    {
+      "qid": "P1-DD-020",
+      "pack": "pack_d",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "D.020 step down method service allocation"
+    },
+    {
+      "qid": "P1-ED-002",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.002 three lines of defense model"
+    },
+    {
+      "qid": "P1-ED-003",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.003 three lines of defense model"
+    },
+    {
+      "qid": "P1-ED-004",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.004 three lines of defense model"
+    },
+    {
+      "qid": "P1-ED-005",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.005 three lines of defense model"
+    },
+    {
+      "qid": "P1-ED-006",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.006 access control least privilege"
+    },
+    {
+      "qid": "P1-ED-007",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.007 access control least privilege"
+    },
+    {
+      "qid": "P1-ED-008",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.008 access control least privilege"
+    },
+    {
+      "qid": "P1-ED-009",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.009 access control least privilege"
+    },
+    {
+      "qid": "P1-ED-011",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.011 independent verification control activity"
+    },
+    {
+      "qid": "P1-ED-012",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.012 independent verification control activity"
+    },
+    {
+      "qid": "P1-ED-013",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.013 independent verification control activity"
+    },
+    {
+      "qid": "P1-ED-015",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.015 independent verification control activity"
+    },
+    {
+      "qid": "P1-ED-017",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.017 erm risk response strategies"
+    },
+    {
+      "qid": "P1-ED-018",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.018 erm risk response strategies"
+    },
+    {
+      "qid": "P1-ED-019",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.019 erm risk response strategies"
+    },
+    {
+      "qid": "P1-ED-020",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.020 erm risk response strategies"
+    },
+    {
+      "qid": "P1-ED-021",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.021 control activities authorization"
+    },
+    {
+      "qid": "P1-ED-022",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.022 control activities authorization"
+    },
+    {
+      "qid": "P1-ED-023",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.023 control activities authorization"
+    },
+    {
+      "qid": "P1-ED-024",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.024 control activities authorization"
+    },
+    {
+      "qid": "P1-ED-026",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.026 monitoring ongoing evaluations"
+    },
+    {
+      "qid": "P1-ED-027",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.027 monitoring ongoing evaluations"
+    },
+    {
+      "qid": "P1-ED-029",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.029 monitoring ongoing evaluations"
+    },
+    {
+      "qid": "P1-ED-030",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.030 monitoring ongoing evaluations"
+    },
+    {
+      "qid": "P1-ED-031",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.031 data backup disaster recovery"
+    },
+    {
+      "qid": "P1-ED-032",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.032 data backup disaster recovery"
+    },
+    {
+      "qid": "P1-ED-033",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.033 data backup disaster recovery"
+    },
+    {
+      "qid": "P1-ED-034",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.034 data backup disaster recovery"
+    },
+    {
+      "qid": "P1-ED-037",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.037 change management control it systems"
+    },
+    {
+      "qid": "P1-ED-038",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.038 change management control it systems"
+    },
+    {
+      "qid": "P1-ED-039",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.039 change management control it systems"
+    },
+    {
+      "qid": "P1-ED-040",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.040 change management control it systems"
+    },
+    {
+      "qid": "P1-ED-041",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.041 risk assessment likelihood impact"
+    },
+    {
+      "qid": "P1-ED-043",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.043 risk assessment likelihood impact"
+    },
+    {
+      "qid": "P1-ED-044",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.044 risk assessment likelihood impact"
+    },
+    {
+      "qid": "P1-ED-045",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.045 risk assessment likelihood impact"
+    },
+    {
+      "qid": "P1-ED-047",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.047 code of conduct ethics program"
+    },
+    {
+      "qid": "P1-ED-048",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.048 code of conduct ethics program"
+    },
+    {
+      "qid": "P1-ED-049",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.049 code of conduct ethics program"
+    },
+    {
+      "qid": "P1-ED-050",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.050 code of conduct ethics program"
+    },
+    {
+      "qid": "P1-ED-052",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.052 password access authentication control"
+    },
+    {
+      "qid": "P1-ED-053",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.053 password access authentication control"
+    },
+    {
+      "qid": "P1-ED-054",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.054 password access authentication control"
+    },
+    {
+      "qid": "P1-ED-055",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.055 password access authentication control"
+    },
+    {
+      "qid": "P1-ED-056",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.056 internal control cost benefit limitation"
+    },
+    {
+      "qid": "P1-ED-057",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-008",
+        "DL-025",
+        "DL-031"
+      ],
+      "topic": "E.057 internal control cost benefit limitation"
+    },
+    {
+      "qid": "P1-ED-059",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.059 internal control cost benefit limitation"
+    },
+    {
+      "qid": "P1-ED-060",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.060 internal control cost benefit limitation"
+    },
+    {
+      "qid": "P1-ED-061",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.061 vendor master file controls"
+    },
+    {
+      "qid": "P1-ED-062",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.062 vendor master file controls"
+    },
+    {
+      "qid": "P1-ED-063",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-008",
+        "DL-025"
+      ],
+      "topic": "E.063 vendor master file controls"
+    },
+    {
+      "qid": "P1-ED-065",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-008",
+        "DL-025"
+      ],
+      "topic": "E.065 vendor master file controls"
+    },
+    {
+      "qid": "P1-ED-067",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013"
+      ],
+      "topic": "E.067 audit committee oversight role"
+    },
+    {
+      "qid": "P1-ED-068",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.068 audit committee oversight role"
+    },
+    {
+      "qid": "P1-ED-069",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.069 audit committee oversight role"
+    },
+    {
+      "qid": "P1-ED-070",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-013",
+        "DL-031"
+      ],
+      "topic": "E.070 audit committee oversight role"
+    },
+    {
+      "qid": "P1-ED-073",
+      "pack": "pack_d",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E.073 monitoring exception reports not reviewed"
+    },
+    {
+      "qid": "P1-FD-001",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.001 api integration systems"
+    },
+    {
+      "qid": "P1-FD-002",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.002 api integration systems"
+    },
+    {
+      "qid": "P1-FD-003",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.003 api integration systems"
+    },
+    {
+      "qid": "P1-FD-004",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.004 api integration systems"
+    },
+    {
+      "qid": "P1-FD-005",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.005 api integration systems"
+    },
+    {
+      "qid": "P1-FD-006",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.006 business intelligence self service reporting"
+    },
+    {
+      "qid": "P1-FD-007",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.007 business intelligence self service reporting"
+    },
+    {
+      "qid": "P1-FD-008",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.008 business intelligence self service reporting"
+    },
+    {
+      "qid": "P1-FD-009",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.009 business intelligence self service reporting"
+    },
+    {
+      "qid": "P1-FD-010",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.010 business intelligence self service reporting"
+    },
+    {
+      "qid": "P1-FD-011",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.011 data encryption at rest and in transit"
+    },
+    {
+      "qid": "P1-FD-012",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.012 data encryption at rest and in transit"
+    },
+    {
+      "qid": "P1-FD-013",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.013 data encryption at rest and in transit"
+    },
+    {
+      "qid": "P1-FD-014",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.014 data encryption at rest and in transit"
+    },
+    {
+      "qid": "P1-FD-015",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.015 data encryption at rest and in transit"
+    },
+    {
+      "qid": "P1-FD-016",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.016 cloud saas subscription model"
+    },
+    {
+      "qid": "P1-FD-017",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.017 cloud saas subscription model"
+    },
+    {
+      "qid": "P1-FD-018",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.018 cloud saas subscription model"
+    },
+    {
+      "qid": "P1-FD-019",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.019 cloud saas subscription model"
+    },
+    {
+      "qid": "P1-FD-020",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.020 cloud saas subscription model"
+    },
+    {
+      "qid": "P1-FD-021",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.021 predictive model overfitting risk"
+    },
+    {
+      "qid": "P1-FD-022",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-031"
+      ],
+      "topic": "F.022 predictive model overfitting risk"
+    },
+    {
+      "qid": "P1-FD-023",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-031"
+      ],
+      "topic": "F.023 predictive model overfitting risk"
+    },
+    {
+      "qid": "P1-FD-024",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.024 predictive model overfitting risk"
+    },
+    {
+      "qid": "P1-FD-025",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.025 predictive model overfitting risk"
+    },
+    {
+      "qid": "P1-FD-026",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.026 internet of things iot sensors"
+    },
+    {
+      "qid": "P1-FD-027",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.027 internet of things iot sensors"
+    },
+    {
+      "qid": "P1-FD-028",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.028 internet of things iot sensors"
+    },
+    {
+      "qid": "P1-FD-029",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.029 internet of things iot sensors"
+    },
+    {
+      "qid": "P1-FD-030",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.030 internet of things iot sensors"
+    },
+    {
+      "qid": "P1-FD-031",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.031 cybersecurity incident response actions"
+    },
+    {
+      "qid": "P1-FD-032",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.032 data breach incident response plan"
+    },
+    {
+      "qid": "P1-FD-033",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.033 data breach incident response plan"
+    },
+    {
+      "qid": "P1-FD-034",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.034 data quality investigation applied"
+    },
+    {
+      "qid": "P1-FD-035",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.035 data breach incident response plan"
+    },
+    {
+      "qid": "P1-FD-036",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.036 structured vs unstructured data"
+    },
+    {
+      "qid": "P1-FD-037",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.037 structured vs unstructured data"
+    },
+    {
+      "qid": "P1-FD-038",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.038 structured vs unstructured data"
+    },
+    {
+      "qid": "P1-FD-039",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.039 structured vs unstructured data"
+    },
+    {
+      "qid": "P1-FD-040",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.040 structured vs unstructured data"
+    },
+    {
+      "qid": "P1-FD-041",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.041 digital signature authentication"
+    },
+    {
+      "qid": "P1-FD-042",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.042 digital signature authentication"
+    },
+    {
+      "qid": "P1-FD-043",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.043 digital signature authentication"
+    },
+    {
+      "qid": "P1-FD-044",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.044 digital signature authentication"
+    },
+    {
+      "qid": "P1-FD-045",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.046 master data management concept"
+    },
+    {
+      "qid": "P1-FD-046",
+      "pack": "pack_d",
+      "section": "?",
+      "domain": "?",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025",
+        "DL-034"
+      ],
+      "topic": ""
+    },
+    {
+      "qid": "P1-FD-047",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.047 master data management concept"
+    },
+    {
+      "qid": "P1-FD-048",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.048 master data management concept"
+    },
+    {
+      "qid": "P1-FD-049",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.049 master data management concept"
+    },
+    {
+      "qid": "P1-FD-050",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.050 master data management concept"
+    },
+    {
+      "qid": "P1-FD-051",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.051 automation bot governance oversight"
+    },
+    {
+      "qid": "P1-FD-052",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.052 automation bot governance oversight"
+    },
+    {
+      "qid": "P1-FD-053",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.053 automation bot governance oversight"
+    },
+    {
+      "qid": "P1-FD-054",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.054 automation bot governance oversight"
+    },
+    {
+      "qid": "P1-FD-055",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.055 automation bot governance oversight"
+    },
+    {
+      "qid": "P1-FD-056",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.056 natural language processing use case"
+    },
+    {
+      "qid": "P1-FD-057",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.057 natural language processing use case"
+    },
+    {
+      "qid": "P1-FD-058",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.058 natural language processing use case"
+    },
+    {
+      "qid": "P1-FD-059",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.059 natural language processing use case"
+    },
+    {
+      "qid": "P1-FD-060",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.060 natural language processing use case"
+    },
+    {
+      "qid": "P1-FD-061",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.061 cybersecurity risk assessment framework"
+    },
+    {
+      "qid": "P1-FD-062",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.062 cybersecurity risk assessment framework"
+    },
+    {
+      "qid": "P1-FD-063",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.063 cybersecurity risk assessment framework"
+    },
+    {
+      "qid": "P1-FD-064",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.064 cybersecurity risk assessment framework"
+    },
+    {
+      "qid": "P1-FD-065",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.065 cybersecurity risk assessment framework"
+    },
+    {
+      "qid": "P1-FD-066",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.066 technology cost benefit evaluation"
+    },
+    {
+      "qid": "P1-FD-067",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.067 technology cost benefit evaluation"
+    },
+    {
+      "qid": "P1-FD-068",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.068 technology cost benefit evaluation"
+    },
+    {
+      "qid": "P1-FD-069",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.069 technology cost benefit evaluation"
+    },
+    {
+      "qid": "P1-FD-070",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.070 technology cost benefit evaluation"
+    },
+    {
+      "qid": "P1-FD-071",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.071 data retention policy compliance"
+    },
+    {
+      "qid": "P1-FD-072",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Archived",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.072 data retention policy compliance"
+    },
+    {
+      "qid": "P1-FD-073",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.073 data retention policy compliance"
+    },
+    {
+      "qid": "P1-FD-074",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.074 data retention policy compliance"
+    },
+    {
+      "qid": "P1-FD-075",
+      "pack": "pack_d",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Unprocessed",
+      "defects": [
+        "DL-025"
+      ],
+      "topic": "F.075 data retention policy compliance"
+    },
+    {
+      "qid": "P1E-C-044",
+      "pack": "pack_e",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-C.044 Material quantity variance calc"
+    },
+    {
+      "qid": "P1E-D-034",
+      "pack": "pack_e",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-D.034 POHR calculation"
+    },
+    {
+      "qid": "P1E-E-004",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-E.004 Control activities"
+    },
+    {
+      "qid": "P1E-E-010",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-E.010 Inherent risk"
+    },
+    {
+      "qid": "P1E-F-006",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.006 Big data velocity"
+    },
+    {
+      "qid": "P1E-F-009",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.009 Unstructured data"
+    },
+    {
+      "qid": "P1E-F-010",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.010 Data warehouse"
+    },
+    {
+      "qid": "P1E-F-013",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.013 RPA"
+    },
+    {
+      "qid": "P1E-F-014",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.014 Blockchain"
+    },
+    {
+      "qid": "P1E-F-016",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.016 Cybersecurity management"
+    },
+    {
+      "qid": "P1E-F-019",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.019 Continuous auditing"
+    },
+    {
+      "qid": "P1E-F-021",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.021 Data mining"
+    },
+    {
+      "qid": "P1E-F-024",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.024 GDPR"
+    },
+    {
+      "qid": "P1E-C-050",
+      "pack": "pack_e",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-C.050 Analytics variance analysis"
+    },
+    {
+      "qid": "P1E-D-039",
+      "pack": "pack_e",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-D.039 Sales value method"
+    },
+    {
+      "qid": "P1E-D-043",
+      "pack": "pack_e",
+      "section": "D",
+      "domain": "D",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-D.043 TOC bottleneck"
+    },
+    {
+      "qid": "P1E-E-064",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-E.064 PCAOB"
+    },
+    {
+      "qid": "P1E-F-044",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.044 Analytics maturity"
+    },
+    {
+      "qid": "P1E-F-058",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.058 Computer virus"
+    },
+    {
+      "qid": "P1E-F-065",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.065 Maximum tolerable downtime"
+    },
+    {
+      "qid": "P1E-F-066",
+      "pack": "pack_e",
+      "section": "F",
+      "domain": "F",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-F.066 Recovery time objective"
+    },
+    {
+      "qid": "P1E-C-069",
+      "pack": "pack_e",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-C.069 Statistical process control"
+    },
+    {
+      "qid": "P1E-C-098",
+      "pack": "pack_e",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-C.098 Unfavorable cost variance"
+    },
+    {
+      "qid": "P1E-C-099",
+      "pack": "pack_e",
+      "section": "C",
+      "domain": "C",
+      "questionState": "Certified",
+      "defects": [
+        "DL-034"
+      ],
+      "topic": "E-C.099 Favorable revenue variance"
+    },
+    {
+      "qid": "P1-E-R01",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R01 segregation of duties — incompatible functions"
+    },
+    {
+      "qid": "P1-E-R03",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R03 fraud triangle — pressure element"
+    },
+    {
+      "qid": "P1-E-R06",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R06 management override — inherent limitation"
+    },
+    {
+      "qid": "P1-E-R09",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R09 three lines of defense model"
+    },
+    {
+      "qid": "P1-E-R10",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R10 compensating controls — small business owner review"
+    },
+    {
+      "qid": "P1-E-R14",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R14 IT general controls — categories and scope"
+    },
+    {
+      "qid": "P1-E-R16",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R16 risk assessment — COSO process and steps"
+    },
+    {
+      "qid": "P1-E-R27",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R27 authorization controls — transaction approval hierarchies"
+    },
+    {
+      "qid": "P1-E-R38",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R38 risk analysis — inherent vs residual risk"
+    },
+    {
+      "qid": "P1-E-R13",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R13 corrective control — remediation actions after detection"
+    },
+    {
+      "qid": "P1-E-R28",
+      "pack": "pack_e",
+      "section": "E",
+      "domain": "E",
+      "questionState": "Certified",
+      "defects": [
+        "DL-031"
+      ],
+      "topic": "E-R28 manual controls — characteristics, strengths, and limitations"
+    }
+  ]
+}

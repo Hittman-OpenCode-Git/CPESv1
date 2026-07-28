@@ -1,0 +1,112 @@
+{
+  "title": "SESSION806_TECHNICAL_REVIEW",
+  "session": "806",
+  "generated": "2026-07-26",
+  "agent": "H",
+  "role": "Technical Accuracy Review (READ-ONLY)",
+  "reviewMethodology": "Independent verification of each item against COSO Internal Control Framework (2013), COSO ERM Framework (2017), SOX Sections 302/404, ISACA IT control frameworks, and AICPA SSAE 18 / SOC 1 standards. Each item evaluated for factual accuracy of stem content, correct answer justification, distractor classifications, and explanation quality.",
+  "summary": {
+    "totalItemsReviewed": 10,
+    "pass": 10,
+    "fail": 0,
+    "criticalFindings": 0,
+    "minorNotes": 0
+  },
+  "items": [
+    {
+      "batch": "A",
+      "itemRef": "R11",
+      "questionID": "P1-E-R11",
+      "topic": "Preventive vs. Detective vs. Corrective Control Classification",
+      "correctChoice": "A",
+      "verdict": "PASS",
+      "reasoning": "All three control classifications are correct per COSO. Control (1) — manager PO approval before issuance — is a preventive control (stops unauthorized transactions before initiation). Control (2) — automated three-way match before payment — is a preventive control (prevents incorrect payments from being made). Control (3) — monthly AP subsidiary-to-GL reconciliation — is a detective control (identifies discrepancies after transactions are recorded). The EC correctly distinguishes the timing (before/after the error) as the classification criterion. Distractors B, C, D all test genuine classification errors (overgeneralizing all as preventive, confusing match with detective, conflating reconciliation with corrective). No factual errors."
+    },
+    {
+      "batch": "A",
+      "itemRef": "R14",
+      "questionID": "P1-E-R14",
+      "topic": "IT General Controls (ITGC) — Four Domains",
+      "correctChoice": "D",
+      "verdict": "PASS",
+      "reasoning": "The four domains listed (program development, program change, computer operations, access to programs and data) are the canonical ITGC categories under COSO and ISACA frameworks. Program development controls and program change controls are correctly treated as separate ITGC subcategories — the former covers new system development (SDLC), the latter covers modifications to existing systems. CorrectChoice D correctly identifies these as ITGC because they apply across the entire IT environment. All distractors are plausible: application controls (scope confusion), entity-level controls (control environment confusion), business process controls (level confusion). No factual errors."
+    },
+    {
+      "batch": "A",
+      "itemRef": "R15",
+      "questionID": "P1-E-R15",
+      "topic": "Application Controls — Input-Processing-Output (IPO) Classification",
+      "correctChoice": "B",
+      "verdict": "PASS",
+      "reasoning": "All three IPO classifications are correct. Control (1) — customer number validation against master file at entry — is an input control (validates data as it enters the system). Control (2) — automatic calculation of order total during transaction processing — is a processing control (ensures correct computation during transformation). Control (3) — supervisor comparison of system confirmation report to physical picking tickets after processing — is an output control (verification of system output against an independent source). Distractors A (all-input), C (reversed), and D (misclassified via file-matching logic) test real IPO classification errors. No factual errors."
+    },
+    {
+      "batch": "B",
+      "itemRef": "R16",
+      "questionID": "P1-E-R16",
+      "topic": "COSO Principle 8 — Fraud Risk Assessment Categories",
+      "correctChoice": "C",
+      "verdict": "PASS",
+      "reasoning": "COSO Principle 8 (Risk Assessment component of the Internal Control — Integrated Framework) requires management to consider fraud in assessing risks. The framework distinguishes two categories: fraudulent financial reporting and misappropriation of assets. This is correct per COSO (see also AU-C 240/PCAOB AS 2401 which uses the same categories). The EC correctly links each category to the relevant COSO objective (reporting vs. operations/asset safeguarding) and explains the distinct characteristics of each. Distractors test classification by perpetrator level (A: management vs. employee), source (B: internal vs. external), and objective category (D: financial statement vs. operational) — all plausible errors. No factual errors."
+    },
+    {
+      "batch": "B",
+      "itemRef": "R17",
+      "questionID": "P1-E-R17",
+      "topic": "COSO ERM Risk Responses — Avoid, Reduce, Share, Accept",
+      "correctChoice": "B",
+      "verdict": "PASS",
+      "reasoning": "All four risk response classifications are correct under COSO ERM. (1) Cyber liability insurance = risk sharing (transfers financial impact to insurer — insurance is the textbook example of risk sharing). (2) Discontinuing online banking = risk avoidance (eliminates the risk-generating activity). (3) Enhanced encryption + MFA with residual acceptance = risk reduction (implements controls to lower likelihood). (4) Outsourcing to third party under SLA = risk sharing (transfers operational responsibility and associated risk). The EC correctly addresses the nuance of insurance-with-deductible (sharing with a retained element) and the distinction between reduction and acceptance. Distractors test common confusion: classifying insurance as reduction (A), discontinuing as reduction (C), insurance as acceptance (D). No factual errors."
+    },
+    {
+      "batch": "B",
+      "itemRef": "R19",
+      "questionID": "P1-E-R19",
+      "topic": "SOX Section 302 — CEO/CFO Certification Requirements",
+      "correctChoice": "D",
+      "verdict": "PASS",
+      "reasoning": "SOX Section 302 requires the CEO and CFO to certify, among other things, that the financial statements 'fairly present, in all material respects, the financial condition and results of operations' of the company. This is a core 302 certification requirement distinct from the disclosure controls evaluation. The EC correctly enumerates all six 302 certification elements and distinguishes 302 from 404. Distractor A correctly describes 404(b) auditor attestation (not 302), B tests a related-party certification (not in 302), and C tests board review of accounting policies (not in 302). Difficulty: Easy (1) and CognitiveLevel: Remember are appropriate — this tests recall of the 302 requirements. No factual errors."
+    },
+    {
+      "batch": "B",
+      "itemRef": "R20",
+      "questionID": "P1-E-R20",
+      "topic": "SOX Section 404(a) vs. 404(b) — Management Assessment vs. Auditor Attestation",
+      "correctChoice": "A",
+      "verdict": "PASS",
+      "reasoning": "CorrectChoice A accurately describes the distinction: 404(a) = management's assessment and report on ICFR effectiveness; 404(b) = external auditor's attestation on management's assessment. The EC correctly explains the two-tiered structure, applicability (404(a) applies to all publicly traded companies; 404(b) applies only to accelerated and large accelerated filers — smaller reporting companies and EGCs are exempt), and the nature of each requirement. Distractor B reverses the applicability (would make 404(a) more restrictive than 404(b), which is wrong). Distractor C reverses the responsibilities (404(a) = management, not auditor). Distractor D tests the misconception of a joint report (reports are separate). The 'a = assessment by management, b = backup by auditor' memory aid is a useful and accurate heuristic. No factual errors."
+    },
+    {
+      "batch": "C",
+      "itemRef": "R30",
+      "questionID": "P1-E-R30",
+      "topic": "Logical Access Controls — Authentication, Authorization, Access Review",
+      "correctChoice": "B",
+      "verdict": "PASS",
+      "reasoning": "All three control classifications are correct. Control (1) — multi-factor authentication (password + one-time mobile code) — is authentication (verifies identity). Control (2) — role-based permissions (own patients: full; others: view-only) — is authorization (determines what authenticated users can do). Control (3) — quarterly certification of elevated access — is access review (periodic validation of ongoing appropriateness). The EC correctly frames these as answering three distinct questions: 'Are you who you claim to be?' (authentication), 'What are you allowed to access?' (authorization), 'Are the access rights still correct?' (access review). Distractors test sequence reversal (A), wrong classification framework (C: preventive/detective/corrective instead of auth/auth/review), and overgeneralization + wrong framework (D: both authentication + ITGC). No factual errors."
+    },
+    {
+      "batch": "C",
+      "itemRef": "R31",
+      "questionID": "P1-E-R31",
+      "topic": "Disaster Recovery — RTO vs. RPO Definitions",
+      "correctChoice": "D",
+      "verdict": "PASS",
+      "reasoning": "RTO (Recovery Time Objective) and RPO (Recovery Point Objective) are correctly defined and matched to the scenario. RTO = maximum acceptable system downtime = 4 hours. RPO = maximum acceptable data loss measured in time = 15 minutes. The EC correctly explains that RTO answers 'How quickly must we be back up?' and RPO answers 'How much data can we afford to lose?' The explanation of how shorter RPO requires more frequent backups (near-real-time replication for 15-minute RPO vs. daily backups for 24-hour RPO) and how RTO drives decisions about alternate processing sites (hot/warm/cold) is accurate. Distractors test reversal (A), wrong unit of measurement (B: transaction count vs. time), and conflation (C: both RTO). The memory aid ('Time' in RTO → how much TIME; 'Point' in RPO → what POINT in time) is useful and accurate. No factual errors."
+    },
+    {
+      "batch": "C",
+      "itemRef": "R32",
+      "questionID": "P1-E-R32",
+      "topic": "Third-Party Vendor Risk Management — SOC 1 Reports and CUECs",
+      "correctChoice": "C",
+      "verdict": "PASS",
+      "reasoning": "CorrectChoice C accurately describes management's retained responsibility for ICFR when outsourcing — the entity does not outsource its responsibility. The EC correctly references: COSO Principle 9 (identify and analyze significant changes, which includes use of service organizations), SOC 1 Type 2 reports (SSAE 18 / AT-C Section 320 — provides assurance on design and operating effectiveness), complementary user entity controls (controls at the user entity necessary for service organization controls to function), and management's ongoing monitoring obligations. All four responsibilities listed are correct. Distractors test: delegating responsibility entirely (A), requiring a full independent audit (B — SOC 1 serves this purpose), and relying on contract indemnification (D — legal liability transfer ≠ ICFR responsibility under SOX/COSO). No factual errors."
+    }
+  ],
+  "overallAssessment": "All 10 items (R11, R14, R15, R16, R17, R19, R20, R30, R31, R32) pass technical/accounting accuracy review. Every item correctly classifies the relevant COSO/SOX/IT control concepts. CorrectChoice values are independently verified as correct. ExplanationCorrect fields are thorough, accurate, and aligned with authoritative standards. Distractors test genuine classification errors and misconceptions. No factual errors, misstatements of accounting standards, or conceptual inaccuracies were found.",
+  "readOnlyConfirmation": "This is a read-only review. No files were modified. All findings reported for GATE 2 (Technical Accuracy) sign-off.",
+  "gatesSignedOff": {
+    "GATE_2_TECHNICAL_ACCURACY": "PASS — 10/10 items verified accurate"
+  }
+}

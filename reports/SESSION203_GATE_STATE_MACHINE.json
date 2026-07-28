@@ -1,0 +1,212 @@
+{
+  "document": "SESSION203_GATE_STATE_MACHINE",
+  "session": "S203",
+  "title": "Gate State Machine — Implementation Specification",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION203_READINESS_ENGINE_SPEC.json",
+  "purpose": "Defines the formal state machine for readiness classification and certification gating. Specifies all valid states, state transitions, transition pre-conditions, auto-fail conditions, and escalation paths.",
+
+  "states": {
+    "READINESS_STATES": {
+      "BLOCKED": {
+        "label": "Blocked — Structurally Impaired",
+        "description": "Item has identity, JSON integrity, or severe structural defects that make it unprocessable. Cannot enter any review pipeline.",
+        "triggers": ["IDENTITY_BLOCKED (Gate -1)", "JSON parse failure (Gate 0)", "Missing required fields (Gate 0)", "Corruption artifact (Gate 0)"],
+        "symptoms": "Missing QID, missing CorrectChoice, unparseable JSON, DL-017 corruption artifacts",
+        "resolution": "Must be manually repaired before re-entering pipeline. Route to EditorialQueue with BLOCK_REASON."
+      },
+      "REMEDIATE": {
+        "label": "Remediation Required",
+        "description": "Item has structural or content defects that block certification but are automatically receivable (DL-008 clear, DL-026 fill, DL-016 alignment).",
+        "triggers": ["DL-008 detected (Gate 1 HARD_FAIL)", "DL-026 detected (Gate 1 HARD_FAIL)", "DL-016 SEVERE (Gate 1 HARD_FAIL)", "Compound-key collision (Gate 3 HARD_FAIL)"],
+        "symptoms": "Non-empty EW[CC], empty non-CC EW slot, metadata-content choice divergence",
+        "resolution": "Can be remediated by authorized remediation script or editorial session. Post-remediation: re-enter Gate 1 for re-scan."
+      },
+      "MINOR_FIX": {
+        "label": "Minor Fixes Recommended",
+        "description": "Item has content-quality issues that degrade educational value but do not affect answer correctness or create learner-safety risk.",
+        "triggers": ["DL-013 boilerplate (Gate 2 SOFT_FAIL)", "EV3 citation missing (Gate 2 WARN)", "DL-010 suspected (Gate 2 WARN)", "DL-031 difficulty inflation (Gate 4 WARN)"],
+        "symptoms": "Template boilerplate in EW, missing standard citation, suspected misassigned EW (unconfirmed), inflated difficulty",
+        "resolution": "Can be certified WITH WARNINGS. Warnings must be acknowledged by Certification Board. Can be remediated in editorial pass."
+      },
+      "READY": {
+        "label": "Ready for Certification",
+        "description": "Item has passed all pre-flight gates. Eligible for Quality Board and Certification Board review.",
+        "triggers": ["All gates PASS (no HARD_FAIL, no SOFT_FAIL, no WARN)"],
+        "symptoms": "All structural scans clean, all content scans clean, identity validated, JSON integrity confirmed",
+        "resolution": "Immediately eligible for CAQS §1.6 six-dimension verification."
+      }
+    },
+    "CERTIFICATION_STATES": {
+      "CERTIFIED": {
+        "label": "Certified — Learner-Pool Eligible",
+        "description": "Item has passed all pre-flight gates + certification board review. Available for learner practice sessions.",
+        "pre_conditions": ["Readiness classification must be READY or MINOR_FIX", "All HARD_BLOCK defects resolved", "Quality Board review complete with CERTIFY verdict", "REVISION_HISTORY.md entry recorded", "Governance guard Rule 6-8 checks PASS"]
+      },
+      "CERTIFIED_DELTA": {
+        "label": "Certified (Delta-Inherited)",
+        "description": "Item was previously Certified. Content hash unchanged. Prior certification decision inherited without re-review.",
+        "pre_conditions": ["Content hash matches DELTA_LEDGER.json baseline", "No new scan findings since last certification", "Goernance guard pre-flight gate PASS (Gates -1 through 4 re-run on current pack file state)"]
+      },
+      "HOLD": {
+        "label": "Held — Certification Deferred",
+        "description": "Item is structurally clean but has unresolved quality concerns that prevent certification at this time.",
+        "triggers": ["Quality Board identifies accounting concern requiring human review", "Certification Board escalates due to confidence < 90%", "Pending remediation of dependent defect in template family sibling"],
+        "resolution": "Resolve concern → re-enter certification pipeline. HOLD is temporary — items cannot remain HOLD past S900."
+      },
+      "EDITORIAL_QUEUE": {
+        "label": "Editorial Queue — Awaiting Content Revision",
+        "description": "Item requires content changes (explanation rewrite, choice revision, stem clarification) before re-entering certification.",
+        "triggers": ["DL-013 boilerplate on Certified item", "DL-031 difficulty inflation confirmed", "CAQS rubric score < 70% on any dimension"],
+        "resolution": "Author makes content changes → re-enters pre-flight pipeline at Gate 0."
+      },
+      "ARCHIVED": {
+        "label": "Archived — Preserved, Excluded from Active Pool",
+        "description": "Item content preserved but excluded from learner delivery pool. Used for clones, superseded items, and rotation-artifact waste.",
+        "triggers": ["Designated as clone in template family (DL-012 pattern)", "Superseded by replacement item", "Rotation-artifact duplicate with zero pedagogical differentiation"],
+        "resolution": "Permanent (reversible only via explicit un-archive authorization). All content preserved — only question_state changes."
+      }
+    }
+  },
+
+  "state_transitions": {
+    "transitions": [
+      {
+        "from": "Unprocessed",
+        "to": "BLOCKED",
+        "trigger": "Gate -1 IDENTITY_BLOCKED or Gate 0 FAIL",
+        "auto": true
+      },
+      {
+        "from": "Unprocessed",
+        "to": "REMEDIATE",
+        "trigger": "Gate 1 HARD_FAIL or Gate 3 HARD_FAIL",
+        "auto": true
+      },
+      {
+        "from": "Unprocessed",
+        "to": "MINOR_FIX",
+        "trigger": "Gate 2 SOFT_FAIL or Gate 4 WARN",
+        "auto": true
+      },
+      {
+        "from": "Unprocessed",
+        "to": "READY",
+        "trigger": "All gates PASS, question_state transition",
+        "auto": true
+      },
+      {
+        "from": "REMEDIATE",
+        "to": "READY",
+        "trigger": "Defect remediated → re-scan gates PASS",
+        "auto": false,
+        "requires_authorization": true
+      },
+      {
+        "from": "READY",
+        "to": "In Audit",
+        "trigger": "Enter certification pipeline",
+        "auto": false,
+        "requires_authorization": true
+      },
+      {
+        "from": "In Audit",
+        "to": "Certified",
+        "trigger": "Quality + Certification boards CERTIFY verdict",
+        "auto": false,
+        "requires_authorization": true
+      },
+      {
+        "from": "In Audit",
+        "to": "HOLD",
+        "trigger": "Certification Board HOLD verdict",
+        "auto": false
+      },
+      {
+        "from": "In Audit",
+        "to": "Editorial Queue",
+        "trigger": "Quality Board identifies content revision needed",
+        "auto": false
+      },
+      {
+        "from": "Certified",
+        "to": "In Audit",
+        "trigger": "Re-verification requested or content_hash changed",
+        "auto": false,
+        "requires_authorization": true
+      },
+      {
+        "from": "Certified",
+        "to": "CERTIFIED_DELTA",
+        "trigger": "New certification wave, content_hash unchanged, all pre-flight gates PASS",
+        "auto": true
+      },
+      {
+        "from": "Any state",
+        "to": "Archived",
+        "trigger": "Clone archival, replacement, deprecation",
+        "auto": false,
+        "requires_authorization": true
+      },
+      {
+        "from": "HOLD",
+        "to": "In Audit",
+        "trigger": "Concern resolved, re-enter certification",
+        "auto": false,
+        "requires_authorization": true
+      },
+      {
+        "from": "Editorial Queue",
+        "to": "Unprocessed",
+        "trigger": "Content revised → re-enter pipeline from start",
+        "auto": false
+      }
+    ],
+    "forbidden_transitions": [
+      "Certified → Unprocessed (must go through In Audit)",
+      "Certified → BLOCKED (Certified items cannot be blocked; they become REMEDIATE with escalated severity)",
+      "Archived → any state without explicit un-archive authorization",
+      "Unprocessed → Certified (must pass pre-flight + Quality Board + Certification Board)"
+    ]
+  },
+
+  "auto_fail_conditions": {
+    "description": "Conditions that automatically route an item to BLOCKED or REMEDIATE regardless of other gate results.",
+    "conditions": [
+      {"condition": "QID is null, undefined, or empty string", "action": "BLOCKED — no identity possible", "gate": "Gate_-1"},
+      {"condition": "CorrectChoice is null, undefined, empty, or not A-D", "action": "BLOCKED — no answer key of reference", "gate": "Gate_-1"},
+      {"condition": "Pack file unparseable via AM-1 and AM-2", "action": "BLOCKED — all items in pack blocked until file repaired", "gate": "Gate_0"},
+      {"condition": "DL-017 corruption artifact detected", "action": "BLOCKED for affected items — file corruption must be repaired", "gate": "Gate_0"},
+      {"condition": "QuestionID count mismatch (parse count ≠ expected)", "action": "BLOCKED for entire pack — pipeline halted until count reconciled", "gate": "Gate_0"},
+      {"condition": "DL-008 on Certified item (EW[CC] non-empty)", "action": "REMEDIATE with severity CRITICAL — learner pool exposure", "gate": "Gate_1"},
+      {"condition": "DL-030 CONFIRMED (wrong answer key, confidence >90%)", "action": "REMEDIATE with severity CRITICAL — wrong answer in pool", "gate": "Gate_4"},
+      {"condition": "DL-016 SEVERE (EW text topically unrelated to item)", "action": "REMEDIATE — learner sees wrong-topic feedback", "gate": "Gate_1"}
+    ]
+  },
+
+  "escalation_paths": {
+    "description": "When an item cannot be auto-classified or requires human judgment, it escalates through defined paths.",
+    "tier1_human_review": {
+      "trigger": "Confidence < 90% on any AI-derived classification (DL-010 suspect, DL-030 suspect, DL-031 borderline)",
+      "action": "Flag item for human editorial review. Do not auto-remediate. Escalate to Quality Board with evidence package."
+    },
+    "tier2_governance": {
+      "trigger": "Certified item with CRITICAL severity defect (DL-008 + Certified, DL-030 CONFIRMED + Certified)",
+      "action": "Immediate governance alert. Item marked in defect manifest. Session plan prioritizes this item as P0. Governance Board must acknowledge before session close."
+    },
+    "tier3_structural_repair": {
+      "trigger": "Pack-file corruption, identity collision, or cross-pack QID overlap",
+      "action": "Escalate to Governance Board. Session cannot close until resolved. Pack file quarantined from all write operations until structural integrity restored."
+    }
+  },
+
+  "implementation_file": "scripts/engine/readiness/gate_state_machine.js",
+  "exports": {
+    "isValidTransition(fromState, toState)": "Returns boolean",
+    "executeTransition(item, fromState, toState, authorization)": "Returns { success, reason, newState }",
+    "getAvailableTransitions(currentState)": "Returns array of valid destination states",
+    "validateState(item)": "Returns { valid, warnings } — checks if current state is consistent with gate results"
+  }
+}

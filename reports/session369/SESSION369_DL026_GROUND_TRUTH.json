@@ -1,0 +1,57 @@
+{
+  "session": "S369",
+  "board": "DL-026 Ground Truth Audit",
+  "timestamp": "2026-07-27T17:50:00Z",
+  "methodology": "Direct raw-file line-level inspection (DL-029 immune). No forward-scan regex, no manifest, no window-scan.",
+  "verification_method": "read_file tool with offset/limit on each target QID. CorrectChoice extracted from content block (within-object). ExplanationWrong slots verified from metadata block. DL-016 dual-block awareness applied: CC lives in content block, EW fields in metadata block.",
+  
+  "s821_claim_summary": {
+    "total_claimed": 37,
+    "total_claimed_fields": 56,
+    "verdict": "OVERWHELMINGLY DL-029 CONTAMINATED"
+  },
+
+  "pack_d_verification": {
+    "items_claimed": 18,
+    "verified_clean": 18,
+    "verified_genuine": 0,
+    "root_cause": "S826 (2026-07-27) completed Pack D Domain F DL-026 remediation. All 18 items confirmed clean via S826 Phase 1 (9 items, 13 fields) + Phase 3 (9 items, 15 fields). Raw-line inspection of P1-FD-043 confirms EW-A/B/D all non-empty with choice-specific text; EW-C='' (CorrectChoice slot, DL-008 compliant). The S821 DL-029-vulnerable window scanner picked up adjacent-item fields due to CC-before-QID Pack D object layout.",
+    "spot_checked": [
+      {"qid": "P1-FD-043", "cc": "C", "ewA": "TEXT(586)", "ewB": "TEXT(582)", "ewC": "'' (CC, clean)", "ewD": "TEXT(778)", "verdict": "CLEAN — 0 empty non-CC slots"}
+    ],
+    "authoritative": "0 Certified DL-026 in Pack D Domain F"
+  },
+
+  "pack_c_verification": {
+    "items_claimed": 19,
+    "s826_processed": "S826 Phase 2 claimed '19 items, 27 fields — 0 DL-026 remaining.' This claim is PARTIALLY INACCURATE.",
+    "discrepancy_cause": "S826 used S821 QID list which contained DL-029-contaminated CC data. The authoring agent used wrong CC values, filling slots that were already non-empty and leaving genuinely empty slots untouched. Same root cause as S361 RB (DL-008: 8→1).",
+    "archived_items": 14,
+    "archived_note": "14 Pack C Domain F items carry DL-026 but are Archived (NOT in learner pool). S821 incorrectly included these in the 'Certified remediation queue.' No learner impact from these items.",
+    "certified_genuine": 3,
+    "certified_fields": 3,
+    "certified_items": [
+      {"qid": "P1-FC-006", "line": 21745, "cc": "C", "empty_slot": "EW-B (line 21755)", "state": "Certified", "topic": "descriptive vs predictive analytics"},
+      {"qid": "P1-FC-025", "line": 22695, "cc": "B", "empty_slot": "EW-A (line 22704)", "state": "Certified", "topic": "CIA triad — de-provisioning"},
+      {"qid": "P1-FC-073", "line": 25095, "cc": "B", "empty_slot": "EW-A (line 25104)", "state": "Certified", "topic": "continuous auditing"}
+    ],
+    "pending_verification": ["P1-FC-074", "P1-FC-075"]
+  },
+
+  "authoritative_dl026_inventory": {
+    "s821_original_claim": 37,
+    "s821_false_positives": 34,
+    "genuine_certified": 3,
+    "genuine_certified_fields": 3,
+    "genuine_archived": 14,
+    "genuine_archived_fields": 28,
+    "learner_pool_exposure": "3 Certified Pack C Domain F items with 1 empty non-CC EW slot each",
+    "root_cause_classification": {
+      "dl029_artifact": 34,
+      "genuine_dl026_template_rotation": 17,
+      "s826_remediation_gap": 3
+    }
+  },
+
+  "key_finding": "The 37-item S821 DL-026 queue is 92% (34/37) DL-029 false positives. The actual Certified learner-pool DL-026 scope is 3 items (3 fields), not 37 items (56 fields). These 3 items survived S826 because the remediation tooling used DL-029-contaminated CC data from the S821 queue."
+}

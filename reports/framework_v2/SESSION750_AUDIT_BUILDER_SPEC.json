@@ -1,0 +1,58 @@
+{
+  "deliverable": "SESSION750_AUDIT_BUILDER_SPEC.json",
+  "session": 750,
+  "board": "C",
+  "title": "Certification Audit Builder",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "status": "DEPLOYED",
+  "description": "Generates complete certification audit chains from REVISION_HISTORY.md and DEFECT_LIBRARY.md data. Links Question → Certification → Recommendation → Session → Challenge → Closure for any QuestionID.",
+  "sourceFile": "scripts/certification_audit_builder.js",
+  "auditChainModel": {
+    "question": {
+      "QuestionID": "string — the target question identifier",
+      "investigationLevel": "integer — depth of investigation (1 = QID only, 2 = + surrounding QIDs, 3 = + full section)"
+    },
+    "certification": {
+      "certified": "boolean",
+      "entries": "array of { session, date, action } — certification timeline"
+    },
+    "recommendations": "array of REC-IDs linked to this QID",
+    "sessions": "array of { session, date } — all sessions that touched this QID",
+    "challenges": "array of CH-IDs raised against this QID",
+    "defects": "array of { id, status, severity } — DL-IDs from DEFECT_LIBRARY.md",
+    "closure": {
+      "status": "CLOSED | IN_PROGRESS | UNPROCESSED | UNKNOWN",
+      "recommendation": "string — next action or final disposition"
+    }
+  },
+  "dataSources": [
+    {
+      "source": "knowledge/REVISION_HISTORY.md",
+      "extracted": "Session IDs, dates, QID references, certification actions, REC-IDs, CH-IDs, DL-IDs"
+    },
+    {
+      "source": "knowledge/DEFECT_LIBRARY.md",
+      "extracted": "DL-ID status (Open/Resolved) and severity, enrichment for audit chain defects"
+    }
+  ],
+  "CLI": {
+    "usage": "node scripts/certification_audit_builder.js [--json] [--qid <QuestionID>]",
+    "options": {
+      "--json": "Output structured JSON",
+      "--qid": "Build chain for a single QuestionID (e.g., P1-A-012). Without --qid, builds chains for all QIDs in revision history."
+    }
+  },
+  "integrationPoints": [
+    "Investigation Workbench (Board G): provides per-question audit context",
+    "Certification Review: verify a question's full audit trail before certifying",
+    "Challenge Resolution: trace which sessions and defects apply to a challenged QID",
+    "Delta Ledger: enrich delta entries with audit context"
+  ],
+  "futureEnhancements": [
+    "Full text search of REVISION_HISTORY.md for faster QID matching",
+    "Incremental build — only re-parse new entries since last run",
+    "Integration with question_history_builder.js for per-question timeline",
+    "Export to CSV for offline analysis"
+  ]
+}

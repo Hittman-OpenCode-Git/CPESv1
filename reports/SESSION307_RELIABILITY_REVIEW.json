@@ -1,0 +1,31 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "checks": [
+    {
+      "check": "P0 criteria consistency",
+      "status": "PASS",
+      "detail": "All 46 P0 items have UIQS < 35 and are uncertified. Consistent application."
+    },
+    {
+      "check": "Domain rankings alignment",
+      "status": "PASS",
+      "detail": "S302 DQS, S303 EQS, S304 BQS, S305 ExQS, S306 UIQS all rank Domains E/F lowest. Cross-session consistency confirmed."
+    },
+    {
+      "check": "EW debt quantification",
+      "status": "PASS",
+      "detail": "S302: 839 empty EW slots. S303: 2,403 missing case EW. S305: 96.1% case EW gap. S306: 539 items EW<30%. Numbers are methodologically different (slots vs items) but directionally consistent."
+    },
+    {
+      "check": "Certification count stability",
+      "status": "PASS",
+      "detail": "2,181 Certified stable across S301-S306. Two consecutive scans agree."
+    },
+    {
+      "check": "Priority scoring consistency",
+      "status": "PASS",
+      "detail": "UIQS component weights produce stable rankings. Domain E/F consistently rank 5th/6th."
+    }
+  ],
+  "overallReliability": "HIGH — rankings, priorities, and debt quantification are consistent across 5 independent analysis sessions"
+}

@@ -1,0 +1,41 @@
+{
+  "session": "SESSION050",
+  "phase": 2,
+  "date": "2026-07-28",
+  "tracking": {
+    "phase_1_completed": "S899 (20 items)",
+    "phase_2_completed": "SESSION050 (20 items)",
+    "cumulative_replaced": 40,
+    "remaining_archived": 183,
+    "total_archived_original": 223
+  },
+  "slots_replaced": [
+    {"index": 21, "qid": "P1-EC-003", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 10 — preventive vs. detective control design"},
+    {"index": 22, "qid": "P1-EC-009", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 15 — SOC report evaluation"},
+    {"index": 23, "qid": "P1-EC-035", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO ERM — risk appetite strategic alignment"},
+    {"index": 24, "qid": "P1-EC-038", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 11 — IT general controls access migration"},
+    {"index": 25, "qid": "P1-EC-069", "pack": "C", "section": "E", "status": "replaced", "new_topic": "COSO Principle 10 — segregation duties small entity"},
+    {"index": 26, "qid": "P1-FC-012", "pack": "C", "section": "F", "status": "replaced", "new_topic": "RPA governance — bot failure risks"},
+    {"index": 27, "qid": "P1-FC-029", "pack": "C", "section": "F", "status": "replaced", "new_topic": "Cybersecurity — CIA triad ransomware evaluation"},
+    {"index": 28, "qid": "P1-FC-034", "pack": "C", "section": "F", "status": "replaced", "new_topic": "Big data — 3Vs capability investment"},
+    {"index": 29, "qid": "P1-FC-055", "pack": "C", "section": "F", "status": "replaced", "new_topic": "AI/ML governance — model bias loan approval"},
+    {"index": 30, "qid": "P1-FC-067", "pack": "C", "section": "F", "status": "replaced", "new_topic": "Data architecture — lake vs warehouse selection"},
+    {"index": 31, "qid": "P1-ED-005", "pack": "D", "section": "E", "status": "replaced", "new_topic": "Three Lines of Defense — second line dual reporting"},
+    {"index": 32, "qid": "P1-ED-009", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 12 — access control ERP exceptions"},
+    {"index": 33, "qid": "P1-ED-023", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 12 — authorization fraud evaluation"},
+    {"index": 34, "qid": "P1-ED-033", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 11 — RTO/RPO business continuity"},
+    {"index": 35, "qid": "P1-ED-069", "pack": "D", "section": "E", "status": "replaced", "new_topic": "COSO Principle 2 — audit committee independence"},
+    {"index": 36, "qid": "P1-FD-005", "pack": "D", "section": "F", "status": "replaced", "new_topic": "System integration — API vs ESB architecture"},
+    {"index": 37, "qid": "P1-FD-015", "pack": "D", "section": "F", "status": "replaced", "new_topic": "Cybersecurity — encryption strategy cloud migration"},
+    {"index": 38, "qid": "P1-FD-018", "pack": "D", "section": "F", "status": "replaced", "new_topic": "Cloud computing — SaaS vs on-premise regulated industry"},
+    {"index": 39, "qid": "P1-FD-025", "pack": "D", "section": "F", "status": "replaced", "new_topic": "AI/ML governance — model validation overfitting drift"},
+    {"index": 40, "qid": "P1-FD-055", "pack": "D", "section": "F", "status": "replaced", "new_topic": "Automation governance — RPA bot credential unauthorized transaction"}
+  ],
+  "remaining_by_section": {
+    "EC": 51,
+    "FC": 52,
+    "ED": 51,
+    "FD": 49
+  },
+  "next_session": "SESSION051 — Phase 3 (20 additional archived clone replacements, Packs C+D Sections E+F)"
+}

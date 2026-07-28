@@ -1,0 +1,432 @@
+{
+  "session": "725",
+  "agent": "N",
+  "type": "Series Boundary Ownership Audit",
+  "generated": "2026-07-26",
+  "mode": "READ-ONLY",
+  "authority": "S725 Portfolio Stewardship Framework v1.0 (Agent O)",
+  "series_audited": ["100", "300", "500", "700", "800"],
+
+  "reference_files_consulted": [
+    "SESSION724_OPERATING_MODEL.json (55 lines)",
+    "SESSION723_PORTFOLIO_HANDOFF.json (29 lines)",
+    "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (492 lines, Agent O)",
+    "CURRENT_BASELINES.md (125 lines, updated Session 536/537)",
+    "SESSION723_MAINTENANCE_FRAMEWORK.json (36 lines, Agent P)",
+    "SESSION_STATUS_2026-07-24.md (154 lines)",
+    "SESSION800_SESSION_SUMMARY.md (491 lines, Agent X)",
+    "SESSION800_DASHBOARD.json (581 lines, Agent T)",
+    "DEFECT_LIBRARY.md (DL-001 through DL-033)",
+    "QUESTION_METADATA_STANDARD.md §9.4 (G-NEW-1 through G-NEW-5)"
+  ],
+
+  "note_ownership_matrix": "SESSION725_OWNERSHIP_MATRIX.json (Agent D) does not exist at audit time. Analysis uses Stewardship Framework §2 Ownership Matrix as authoritative source.",
+
+  "overall_verdict": "GAPS_FOUND",
+  "overall_clarity_score": "C+",
+  "overall_summary": "5 of 6 S724 ownership gaps have documented resolution plans in the Stewardship Framework, but 0 of 6 have completed the Principle 2 acceptance protocol. Two critical boundary transitions (100→300, 700→800) carry HIGH gap-risk. Governance status log (SESSION_STATUS_2026-07-24.md) is stale by 150 Certified items vs. CURRENT_BASELINES.md (2,031 vs 2,181). One contradictory reference: S800 forecast lists S534-S537 as future work, but CURRENT_BASELINES.md confirms S537 already executed with 100% ENHANCED_CASE_BASE closure. G-NEW-1 through G-NEW-5 enforcement is assigned but not operationalized in the 800-series certification pipeline.",
+
+  "per_series": [
+    {
+      "series": "100",
+      "label": "Platform Maintenance & Runtime",
+      "status": "ACTIVE",
+      "owner_clarity": "GAPS",
+      "primary_owner": "100-series Lead (Platform Maintainer) — per Stewardship Framework §1 Lane 100",
+      "scope_documented": true,
+      "scope_reference": "Stewardship Framework §1 Lane 100: Bug fixes, session recovery, app.js integrity, UI rendering. MAY NOT: change pack content, modify answer keys, adjust scoring.",
+      "key_artifacts_owned": ["app.js", "index_updated.html", "styles.css", "may-core.js (co-ownership pending)", "may-learner-state.js (co-ownership pending)"],
+      "runtime_dependencies_documented": true,
+      "runtime_dependencies": {
+        "app.js": "SHA-256 tracked in CURRENT_BASELINES.md §1. DL-022 null-guard applied.",
+        "may-core.js": "SHA-256: 183D2E6B... (344,883 bytes). Runtime exception under Constitution §11.4.",
+        "may-learner-state.js": "SHA-256: BEE72B86... (110,240 bytes). Runtime exception under Constitution §11.4."
+      },
+      "gaps": [
+        {
+          "id": "GAP-MAY-OWNERSHIP-UNACCEPTED",
+          "severity": "HIGH",
+          "description": "May coaching layer ownership assigned to 100-series Lead by Stewardship Framework §4.6 (Gap 6 resolution), but Principle 2 acceptance protocol NOT yet executed. The framework states ownership is 'assigned by S725 ownership resolution §4.6' — this is a proposal, not a confirmed transfer.",
+          "principle_2_steps_outstanding": [
+            "100-series Lead must review CURRENT_BASELINES.md §1 for may-core.js and may-learner-state.js hashes",
+            "100-series Lead must review index_updated.html script tag references (lines 11, 13)",
+            "100-series Lead must review S120-S131 session reports for coaching content context",
+            "100-series Lead must confirm acceptance in REVISION_HISTORY.md",
+            "Governance Board must confirm transfer at next stewardship review"
+          ],
+          "current_state": "May coaching layer is a runtime dependency with no formally accepted owner. Both files are tracked in CURRENT_BASELINES.md but the owning role has not acknowledged the transfer.",
+          "risk": "If 100-series Lead is unavailable, coaching-layer integrity monitoring falls to Governance Auditor — but this is a succession fallback, not a primary acceptance."
+        },
+        {
+          "id": "GAP-100-SERIES-LEAD-ID",
+          "severity": "LOW",
+          "description": "The 100-series Lead is referenced by role name only. No session report or REVISION_HISTORY.md entry identifies the specific agent or session where the 100-series Lead was appointed. This is a role-naming gap — the Ownership Matrix assumes this role exists but its provenance is unclear.",
+          "risk": "If the 100-series Lead role was assumed rather than formally designated, any ownership acceptance under Principle 2 may be challenged."
+        }
+      ],
+      "recommendations": [
+        "Execute Principle 2 acceptance protocol for May coaching layer ownership before S726 T0",
+        "100-series Lead must confirm acceptance in REVISION_HISTORY.md with explicit reference to Stewardship Framework §4.6",
+        "Document 100-series Lead role provenance (which session appointed this role?)",
+        "Update CURRENT_BASELINES.md §1 May Coaching Layer to reflect primary ownership"
+      ]
+    },
+    {
+      "series": "300",
+      "label": "Portfolio Analytics",
+      "status": "ACTIVE — S310 (final session) pending",
+      "owner_clarity": "GAPS",
+      "primary_owner": "300-series Lead (Portfolio Analytics) — per Stewardship Framework §1 Lane 300",
+      "scope_documented": true,
+      "scope_reference": "Stewardship Framework §1 Lane 300: Read-only quality analytics — DQS, EQS, BQS, ExQS, UIQS, Risk Register, Forecast Engine, Bottleneck Analysis.",
+      "key_artifacts_owned": ["DQS model", "EQS model", "BQS model", "ExQS model", "UIQS model", "Risk Register", "Forecast Engine", "Bottleneck Analysis report"],
+      "handoff_to_800_documented": true,
+      "handoff_reference": "Stewardship Framework §4.3 Gap 2: Reconciliation Agent (700-series) consumes analytics for governance; Certification Auditor (800-series) consumes Forecast Engine and Bottleneck Analysis.",
+      "gaps": [
+        {
+          "id": "GAP-S310-DANGLING",
+          "severity": "HIGH",
+          "description": "S310 (Portfolio Operations Dashboard — 300-series closeout) is a dangling commitment with no enforcement trigger. S309 recommended it. S724 elevated it to P0 ('Recommended Next'). The Stewardship Framework §4.3 (Gap 5) has a detailed resolution plan but S310 remains unexecuted.",
+          "factual_state": {
+            "sessions_completed": "S302–S309 (8 of 10 planned)",
+            "s310_status": "NOT EXECUTED",
+            "s310_owner": "300-series Lead (per Stewardship Framework §4.3)",
+            "s310_fallback": "Reconciliation Agent (700-series)",
+            "s310_deadline": "Before S726 (per Stewardship Framework §4.3 Gap Resolution Summary)"
+          },
+          "risk": "300-series has no formal closure. All analytics models (DQS through Bottleneck Analysis) exist but have no formal handoff. 300-series status in Portfolio Lane Map says 'ACTIVE' but no sessions are planned beyond S310."
+        },
+        {
+          "id": "GAP-ANALYTICS-CONSUMPTION-UNCONFIRMED",
+          "severity": "MEDIUM",
+          "description": "Analytics consumption paths are ASSIGNED (Reconciliation Agent + Certification Auditor) but not CONFIRMED. No REVISION_HISTORY.md entry documents that the Reconciliation Agent has reviewed or accepted the analytics models as inputs to G1-G5 gates or that the Certification Auditor is actively consuming the Forecast Engine.",
+          "risk": "Analytics models produced over 8 sessions may be orphaned — no consumer has formally acknowledged the handoff."
+        }
+      ],
+      "recommendations": [
+        "Execute S310 before S726 T0 — this is the minimum viable closeout: produce Portfolio Operations Dashboard",
+        "If 300-series Lead unavailable, Governance Auditor must trigger S310 via Reconciliation Agent per escalation path",
+        "Upon S310 completion, file ownership disposition report per Principle 3 — transfer or retire all 300-series artifacts",
+        "Update Portfolio Lane Map: 300-series status → CLOSED",
+        "Record analytics consumption acceptance by Reconciliation Agent and Certification Auditor in REVISION_HISTORY.md"
+      ]
+    },
+    {
+      "series": "500",
+      "label": "Case-Bank Certification",
+      "status": "CLOSED",
+      "owner_clarity": "CLEAR",
+      "primary_owner": "500-series Lead (post-closure stewardship) — per Stewardship Framework §1 Lane 500",
+      "scope_documented": true,
+      "scope_reference": "Stewardship Framework §1 Lane 500: ENHANCED_CASE_BASE 15/15 cases, 90/90 items Certified (100%). Post-closure: integrity monitoring and defect-response only.",
+      "all_cases_certified": true,
+      "certification_evidence": {
+        "source": "CURRENT_BASELINES.md §2",
+        "statement": "ENHANCED_CASE_BASE: 15 CBQ-* cases, 90 items. All 15 cases, 90 items Certified (post-S537).",
+        "cases_certified": ["CBQ-A1", "CBQ-A2", "CBQ-A3", "CBQ-B1", "CBQ-B2", "CBQ-B3", "CBQ-C1", "CBQ-C2", "CBQ-C3", "CBQ-D1", "CBQ-D2", "CBQ-E1", "CBQ-E2", "CBQ-F1", "CBQ-F2"],
+        "hash": "scored_cases.js SHA-256: 97AAFFA80E90C74EDA4113E9E5E617EE598C7044D8D139EBDE906B668F187B71"
+      },
+      "maintenance_ownership_assigned": true,
+      "maintenance_ownership_reference": "Ownership Matrix §2 row 13: Case-bank integrity stewardship → 500-series Lead (primary), Certification Auditor 800-series (secondary), Governance Board (escalation).",
+      "gaps": [
+        {
+          "id": "GAP-800-FORECAST-CONTRADICTION",
+          "severity": "MEDIUM",
+          "description": "SESSION800_SESSION_SUMMARY.md §9 Wave 5 lists S534–S537 as 'Planned' future work (ENHANCED_CASE_BASE CBQ-G1 through CBQ-L1). This directly contradicts CURRENT_BASELINES.md §2, which confirms S537 already executed with all 15 cases and 90 items Certified. The S800 forecast appears to have been written before S537 executed (stale forward-plan).",
+          "risk": "Documentation inconsistency — future sessions may re-execute already-completed work if they follow the S800 forecast rather than CURRENT_BASELINES.md."
+        },
+        {
+          "id": "GAP-500-ROLE-PROVENANCE",
+          "severity": "LOW",
+          "description": "Same as 100-series: the 500-series Lead role is referenced by name only. The closure of the 500-series is well-documented in CURRENT_BASELINES.md and SESSION723_PORTFOLIO_HANDOFF.json, but the specific agent or session that established the 500-series Lead role is not explicitly documented.",
+          "risk": "Low — the closure artifacts (scored_cases.js hash, Certified counts) are independently verifiable regardless of role provenance."
+        }
+      ],
+      "recommendations": [
+        "Update SESSION800_SESSION_SUMMARY.md §9 Wave 5 to reflect actual completion: mark S534-S537 as COMPLETED, not Planned",
+        "File formal 500-series ownership disposition report per Principle 3 — the framework already describes this in §3 example",
+        "Verify no session is actively planning S534-S537 as future work"
+      ]
+    },
+    {
+      "series": "700",
+      "label": "Governance & Calibration",
+      "status": "MAINTENANCE MODE v1.0",
+      "owner_clarity": "CLEAR — with operational gaps",
+      "primary_owner": "Governance Auditor (700-series Maintenance Mode) — per Stewardship Framework §1 Lane 700",
+      "scope_documented": true,
+      "scope_reference": "Stewardship Framework §1 Lane 700 + SESSION723_MAINTENANCE_FRAMEWORK.json: T0 entry protocol, hash verification, count stability, DL-008 Function-constructor verify, governance guard 20/20, trigger monitoring, escalation response.",
+      "maintenance_framework_active": true,
+      "maintenance_framework_reference": "SESSION723_MAINTENANCE_FRAMEWORK.json — 5 audit cadences, 6 trigger thresholds, 4 escalation conditions, 7 maintenance agent types.",
+      "t0_protocol_defined": true,
+      "t0_protocol_reference": "S723 Maintenance Framework: 13-file hash verify + Certified count grep + DL-008 Function constructor parse + Governance guard 20/20 + Pack parse-count 500 each. Time budget ~5 min.",
+      "ownership_gaps_resolved_count": 4,
+      "ownership_gaps_unresolved_count": 2,
+      "gaps": [
+        {
+          "id": "GAP-SESSION-STATUS-STALE",
+          "severity": "HIGH",
+          "description": "SESSION_STATUS_2026-07-24.md reports 2,031 Certified (81.2%). CURRENT_BASELINES.md (updated Session 536, 2026-07-26) reports 2,181 Certified (87.2%). Both claim Select-String grep verification. The SESSION_STATUS file is stale by 150 Certified items and has not been updated since July 24. AGENTS.md §2 references SESSION_STATUS_2026-07-24.md as the 'current end-of-cycle handoff log' — this is now incorrect.",
+          "discrepancy_detail": {
+            "session_status_pack_C": "250 Certified (claimed 2026-07-24)",
+            "baselines_pack_C": "350 Certified (actual 2026-07-26)",
+            "session_status_pack_D": "300 Certified (claimed 2026-07-24)",
+            "baselines_pack_D": "350 Certified (actual 2026-07-26)",
+            "delta": "+150 Certified (Pack C: +100, Pack D: +50)"
+          },
+          "risk": "Any session that follows AGENTS.md §9 startup protocol and reads SESSION_STATUS_2026-07-24.md will operate on stale (under-counted) certified pool data. Governance decisions based on this file will be wrong."
+        },
+        {
+          "id": "GAP-BASELINES-DL008-PHANTOM",
+          "severity": "HIGH",
+          "description": "CURRENT_BASELINES.md §3 lists 67 Certified DL-008 items as CRITICAL: Pack A (2), Pack C (55), Pack D (10). S724 identified these as phantom — a mix of DL-029 forward-scan artifacts and stale pre-remediation counts. S702 independently confirmed 73 total DL-008 (A=2, C=52, D=20, E=1). Post-S703–S706 remediation reduced these to ~5 residual + the 67 tracked baseline entries. The baselines document has not been updated to reflect actual post-remediation state.",
+          "risk": "Any T0 protocol that reads CURRENT_BASELINES.md §3 for DL-008 status will trigger CRITICAL alerts on items that may already be remediated — causing unnecessary governance interventions."
+        },
+        {
+          "id": "GAP-GOVERNANCE-GUARD-DL029",
+          "severity": "MEDIUM",
+          "description": "S724 operating readiness identified: 'Governance guard still uses DL-029-vulnerable window scan.' The governance-guard.js Rule 2 blocks certification of DL-008 items, but its detection method uses forward-scan (not Function constructor parse). This is the same methodology that produced the 342→73 false-positive inflation in S700→S702. The pre-activation requirement to 'Fix governance guard DL-008 detection to use Function constructor parse' has not been executed.",
+          "risk": "Governance guard may flag false-positive DL-008 and block certification of clean items, or miss genuine DL-008 in Pack B format (CC-before-QID)."
+        },
+        {
+          "id": "GAP-T0-BASELINE-VERIFY-MISSING",
+          "severity": "MEDIUM",
+          "description": "S724 operating readiness pre-activation requirement: 'Create scripts/t0_baseline_verify.js for automated T0 protocol.' This script does not exist. T0 protocol is manually executed each session — no automation ensures consistency.",
+          "risk": "Manual T0 execution is error-prone. Hash verification across 13 files with manual comparison to CURRENT_BASELINES.md is tedious and invites mistakes."
+        }
+      ],
+      "recommendations": [
+        "Update SESSION_STATUS_2026-07-24.md or create SESSION_STATUS_2026-07-26.md reflecting 2,181 Certified per CURRENT_BASELINES.md",
+        "Remove 67 phantom DL-008 entries from CURRENT_BASELINES.md §3 — replace with post-S706 authoritative residual count",
+        "Fix governance guard DL-008 detection to use Function constructor parse (P0 from S724 operational readiness)",
+        "Create scripts/t0_baseline_verify.js for automated T0 protocol (P1 from S724 operational readiness)",
+        "Update AGENTS.md §2 to reference CURRENT_BASELINES.md as the authoritative certified count (not SESSION_STATUS)"
+      ]
+    },
+    {
+      "series": "800",
+      "label": "Certification & Modernization",
+      "status": "ACTIVE — S803 cleared for launch",
+      "owner_clarity": "GAPS",
+      "primary_owner": "800-series Lead (Certification Auditor) — per Stewardship Framework §1 Lane 800",
+      "scope_documented": true,
+      "scope_reference": "Stewardship Framework §1 Lane 800: CAQS §1.6 certification waves, Domain E (167 items), Domain F (149 items), Pack A closeout (19 items), case-bank EW (~310 items), governance closure (2 sessions), DCS calibration, G-NEW-1 through G-NEW-5 enforcement.",
+      "gn_new_enforcement_assigned": true,
+      "gn_new_reference": "Ownership Matrix §2 row 11: G-NEW-1 through G-NEW-5 enforcement → Certification Auditor (800-series, primary), Defect Sweeper (700-series, secondary).",
+      "certification_plan_documented": true,
+      "certification_plan_reference": "SESSION800_SESSION_SUMMARY.md §9: 5-wave roadmap, S801–S819, targeting 2,431+ Certified (97%+) across 19 sessions. NOTE: Wave 5 (S534-S537) is STALE — these sessions have already executed per CURRENT_BASELINES.md.",
+      "gaps": [
+        {
+          "id": "GAP-GNEW-NOT-OPERATIONAL",
+          "severity": "HIGH",
+          "description": "G-NEW-1 through G-NEW-5 enforcement is ASSIGNED to the Certification Auditor in the Ownership Matrix (row 11), but Stewardship Framework §4.3 (Gap 3) acceptance criteria require: (1) every certification wave includes a G-NEW verification gate, (2) Certification Auditor logs pass/fail per wave, (3) Defect Sweeper includes G-NEW re-verification in Rapid Pulse, (4) any G-NEW violation in Certified items is escalated as CRITICAL. NONE of these acceptance criteria have been confirmed as operational. The 800-series certification pipeline (S801–S819) does not reference G-NEW gates in its wave plan.",
+          "risk": "800-series certification waves may certify items with ExplanationWrong topic-mismatch (G-NEW-2), dual-block Choice mismatch (G-NEW-1/G-NEW-3), or case explanation insufficiency (G-NEW-4) — all learner-safety risks that the G-NEW rules were specifically designed to block."
+        },
+        {
+          "id": "GAP-800-WAVE5-STALE",
+          "severity": "MEDIUM",
+          "description": "SESSION800_SESSION_SUMMARY.md §9 Wave 5 lists S534–S537 (ENHANCED_CASE_BASE CBQ-G1 through CBQ-L1) as future work. CURRENT_BASELINES.md §2 confirms all 15 ENHANCED_CASE_BASE cases are already Certified at 100% post-S537. The 800-series certification plan includes 4 sessions of already-completed work.",
+          "risk": "Scheduling confusion — the 19-session plan overstates remaining work by 4 sessions."
+        },
+        {
+          "id": "GAP-800-ROLE-TRANSITION",
+          "severity": "LOW",
+          "description": "The Stewardship Framework §1 Lane 800 succession plan states: 'If 800-series Lead unavailable → Defect Sweeper (700-series) assumes certification-wave monitoring. Certification Auditor role transitions to the next appointed auditor via S725 Agent E acceptance protocol.' The S725 Agent E acceptance protocol is referenced but may not yet exist — no SESSION725_OWNERSHIP_MATRIX.json (Agent D) was found at audit time.",
+          "risk": "If 800-series Lead becomes unavailable before G-NEW enforcement is operational, certification waves may proceed without the G-NEW gate."
+        }
+      ],
+      "recommendations": [
+        "Operationalize G-NEW-1 through G-NEW-5 enforcement in the 800-series certification pipeline before S801 begins",
+        "Integrate G-NEW verification gate into the certification wave template (per Gap 3 acceptance criteria)",
+        "Update SESSION800_SESSION_SUMMARY.md §9 Wave 5: remove S534-S537 (already completed), replace with actual remaining work",
+        "Rebase the 800-series certification plan on the S537 post-closure state: 2,181→2,500 in ~15 sessions (not 19)",
+        "Certification Auditor must accept G-NEW enforcement responsibility per Principle 2 protocol before first certification wave"
+      ]
+    }
+  ],
+
+  "boundary_transitions_audited": [
+    {
+      "transition": "100→300",
+      "label": "Platform Runtime → Analytics Consumption",
+      "what_crosses": "May coaching layer runtime behavior → analytics models that measure coaching effectiveness. Coaching-layer structural integrity (may-core.js, may-learner-state.js) → DQS/EQS quality models that evaluate pack content the coaching layer delivers.",
+      "gap_risk": "HIGH",
+      "findings": [
+        "May coaching layer ownership NOT accepted by 100-series Lead (Principle 2 pending). Until acceptance, there is no owner to guarantee coaching-layer integrity data flows to analytics.",
+        "300-series S310 not executed — analytics models exist but have no formal delivery mechanism. No analytics consumer can confirm whether coaching-layer metrics are captured in any 300-series model.",
+        "The Stewardship Framework assigns May coaching to 100-series Lead (Gap 6 resolution) but this is PROPOSED, not OPERATIONAL. The 100→300 boundary has two unconfirmed owners on either side — the 100-series Lead (proposed, not accepted) feeds data to analytics consumers (assigned, not confirmed).",
+        "CURRENT_BASELINES.md tracks both May files with SHA-256 hashes, providing structural integrity — but content-level coaching analytics (hint accuracy, learner interaction patterns) are not modeled."
+      ],
+      "recommendations": [
+        "100-series Lead must accept May coaching ownership before this boundary can be declared operational",
+        "Include coaching-layer analytics consumption in S310 Portfolio Operations Dashboard scope",
+        "Document May coaching → 300-series analytics data flow in Ownership Matrix"
+      ]
+    },
+    {
+      "transition": "300→700",
+      "label": "Analytics Production → Governance Consumption",
+      "what_crosses": "DQS/EQS/BQS/ExQS/UIQS quality models + Risk Register + Forecast Engine + Bottleneck Analysis → 700-series G1-G5 reconciliation gates and governance trigger monitoring.",
+      "gap_risk": "HIGH",
+      "findings": [
+        "S310 (300-series closeout) is a dangling commitment with no enforcement trigger. The governance consumption path (Gap 2 in Stewardship Framework) cannot be activated until the analytics models are formally delivered.",
+        "Reconciliation Agent and Certification Auditor are ASSIGNED as consumers (Gap 2) but neither has confirmed they have reviewed or can interpret the analytics models.",
+        "No REVISION_HISTORY.md entry documents the analytics handoff. The Stewardship Framework §4.3 describes what should happen but does not confirm what has happened.",
+        "The S723 Maintenance Framework's Rapid Pulse audit (every 5 sessions) and Deep Audit (every 20 sessions) are designed to consume analytics output — but with no S310 closeout, these cadences lack input data."
+      ],
+      "recommendations": [
+        "Execute S310 before any governance cadence that depends on analytics input",
+        "Reconciliation Agent must confirm analytics model access and interpretability (per Gap 2 acceptance criteria)",
+        "Document analytics consumption paths in REVISION_HISTORY.md when S310 completes",
+        "If 300-series Lead is unavailable, escalate per Gap 5 fallback: Reconciliation Agent triggers S310 or Governance Board waives it"
+      ]
+    },
+    {
+      "transition": "700→800",
+      "label": "Governance Closure → Certification Execution",
+      "what_crosses": "Governance guard rules + CAQS §1.6 verification standards + DCS v1.1 calibration standard + G-NEW-1 through G-NEW-5 certification-blocking conditions + DL-008/DL-026/DL-013 residual defect manifests → 800-series certification wave pipeline.",
+      "gap_risk": "HIGH",
+      "findings": [
+        "G-NEW-1 through G-NEW-5 enforcement is ASSIGNED but NOT OPERATIONALIZED. This is the single highest-risk finding of this audit: the 800-series certification pipeline is cleared to launch (S803) but lacks the G-NEW gate that prevents certification of items with ExplanationWrong topic-mismatch, dual-block Choice mismatch, or case explanation insufficiency.",
+        "CURRENT_BASELINES.md §3 lists 67 phantom DL-008 items as CRITICAL. If 800-series uses this baseline for certification gating, it will block certification of already-clean items or miss genuine DL-008 in others.",
+        "Governance guard DL-008 detection still uses DL-029-vulnerable window scan — the same methodology that produced 342 false positives in S700. If 800-series relies on governance guard for DL-008 gating, false positives may block viable certification waves.",
+        "67 Certified DL-008 items remain in the learner pool (per SESSION_STATUS). The 800-series plan (S801–S803) targets these for clearance, but the exact count after S703–S706 remediation is uncertain — the baselines document disagrees with post-remediation session reports."
+      ],
+      "recommendations": [
+        "Operationalize G-NEW enforcement BEFORE S801 launches — this is a hard gate, not a deferred item",
+        "Reconcile the DL-008 count: run Function-constructor parse across all 5 packs, verify against post-S706 session reports, update CURRENT_BASELINES.md §3",
+        "Fix governance guard DL-008 detection to use Function constructor parse before 800-series certification waves begin",
+        "Clear 67 phantom DL-008 entries from CURRENT_BASELINES.md §3 — replace with authoritative residual count"
+      ]
+    },
+    {
+      "transition": "500→700",
+      "label": "Case Bank Certification → Governance Maintenance",
+      "what_crosses": "ENHANCED_CASE_BASE: 15 cases, 90 items at 100% Certified → 700-series maintenance: case-bank integrity stewardship, hash monitoring, defect response.",
+      "gap_risk": "LOW",
+      "findings": [
+        "500-series is formally CLOSED per CURRENT_BASELINES.md §2. All 15 ENHANCED_CASE_BASE cases Certified. scored_cases.js hash confirmed: SHA-256 97AAFFA80E90... (456,368 bytes).",
+        "Case-bank integrity stewardship is assigned to 500-series Lead (post-closure) with Certification Auditor (800-series) as secondary — per Ownership Matrix row 13.",
+        "Ownership disposition per Principle 3 is conceptually documented (Stewardship Framework §3 example) but a formal disposition report has not been separately filed in REVISION_HISTORY.md.",
+        "The S800 forecast contradiction (listing S534-S537 as future work) is the only documentation gap at this boundary. It does not affect the actual case-bank state — only forward planning references."
+      ],
+      "recommendations": [
+        "File formal ownership disposition report for 500-series closure in REVISION_HISTORY.md (Principle 3)",
+        "Correct SESSION800_SESSION_SUMMARY.md §9 Wave 5 to reflect completed status",
+        "Verify no session is planning duplicate ENHANCED_CASE_BASE work"
+      ]
+    },
+    {
+      "transition": "800→700",
+      "label": "Certification Output → Pool Governance",
+      "what_crosses": "Newly Certified items from 800-series certification waves → 700-series governance: Certified count update in CURRENT_BASELINES.md, T0 protocol verification, delivery pool safety check, governance guard re-verification.",
+      "gap_risk": "MEDIUM",
+      "findings": [
+        "This is a forward-looking boundary — 800-series certification has not yet produced Certified output (S803 cleared for launch, not yet executed). The boundary will be tested at the first certification wave (S801).",
+        "The CURRENT_BASELINES.md update cadence is defined (after any ≥3-file write session per S723 Maintenance Framework), but the owner (Baseline Maintainer, Gap 1) has not yet accepted the role per Principle 2. Until then, there is no guaranteed mechanism to update Certified counts in CURRENT_BASELINES.md after 800-series waves.",
+        "The SESSION_STATUS → CURRENT_BASELINES discrepancy (2,031 vs 2,181) demonstrates exactly how this boundary fails: if 800-series certifies 100 items and writes to pack files but no one updates the status log or baselines, the certified count diverges across governance artifacts.",
+        "The pre-delivery safety check (S723 Maintenance Framework cadence) should catch Certified-only pool issues, but S724 operational readiness score is 23/25 — two documentation gaps remain unresolved."
+      ],
+      "recommendations": [
+        "Baseline Maintainer must accept ownership (Gap 1, Principle 2) before the first 800-series certification wave",
+        "Define the certified count reporting protocol: after each 800-series wave, (1) Direct grep Certified count, (2) Update CURRENT_BASELINES.md §2, (3) Update SESSION_STATUS, (4) Run T0 baseline verify, (5) Verify governance guard 20/20",
+        "Resolve S724's two documentation gaps (governance guard DL-008 fix, phantom DL-008 removal) before 800-series begins producing Certified output"
+      ]
+    }
+  ],
+
+  "cross_cutting_findings": [
+    {
+      "id": "CCF-1-ACCEPTANCE-PROTOCOL",
+      "severity": "CRITICAL",
+      "description": "0 of 6 S724 ownership gaps have completed the Principle 2 acceptance protocol. The Stewardship Framework §4 resolves all 6 gaps at the design level (who should own what), but none of the assigned owners have explicitly accepted their roles with a REVISION_HISTORY.md entry. Until acceptance is confirmed, all 6 gap resolutions are proposals — not operational ownership transfers.",
+      "unaccepted_owners": [
+        "Baseline Maintainer (Gap 1) — must accept CURRENT_BASELINES.md maintenance",
+        "Reconciliation Agent + Certification Auditor (Gap 2) — must accept analytics consumption",
+        "Certification Auditor (Gap 3) — must accept G-NEW enforcement",
+        "Defect Sweeper (Gap 4) — must accept DEFECT_LIBRARY.md maintenance",
+        "300-series Lead (Gap 5) — must execute S310 closeout",
+        "100-series Lead (Gap 6) — must accept May coaching layer ownership"
+      ],
+      "deadline": "S726 T0 (per Stewardship Framework §4.3 Gap Resolution Summary)"
+    },
+    {
+      "id": "CCF-2-SESSION-STATUS-STALENESS",
+      "severity": "HIGH",
+      "description": "SESSION_STATUS_2026-07-24.md is stale by 150 Certified items. CURRENT_BASELINES.md has a more current snapshot (2,181) but lists phantom DL-008 items. No single governance document presents a coherent, accurate picture of the current portfolio state. Two independent sources disagree on three metrics: Certified count, DL-008 count, and remaining work (S800 forecast vs. CURRENT_BASELINES)."
+    },
+    {
+      "id": "CCF-3-DUAL-BASELINE-CONFUSION",
+      "severity": "MEDIUM",
+      "description": "Two documents claim to be the authoritative certified pool snapshot: (1) SESSION_STATUS_2026-07-24.md — referenced by AGENTS.md §2 as 'current end-of-cycle handoff log,' reports 2,031. (2) CURRENT_BASELINES.md §2 — referenced by AGENTS.md §13 as 'all 13 runtime-critical file hashes,' reports 2,181. AGENTS.md points to both — one is stale, one is current — and the startup protocol (§9 step 2) tells sessions to read SESSION_STATUS first, guaranteeing stale data."
+    },
+    {
+      "id": "CCF-4-OWNERSHIP-MATRIX-FILE-MISSING",
+      "severity": "LOW",
+      "description": "SESSION725_OWNERSHIP_MATRIX.json (Agent D's deliverable) does not exist at audit time. The Stewardship Framework §2 serves as the de facto ownership matrix, but the explicit JSON artifact that formalizes the matrix for machine consumption is absent. All boundary analysis uses Stewardship Framework §2 text entries as proxy."
+    }
+  ],
+
+  "per_boundary_scorecard": {
+    "100_series_ownership": "C (Gaps: May ownership unaccepted, role provenance unclear)",
+    "300_series_closure": "D (Gaps: S310 dangling, analytics consumption unconfirmed, no formal closure)",
+    "500_series_closure": "A- (Gaps: documentation contradiction in S800 forecast only — no operational gap)",
+    "700_series_maintenance": "B- (Gaps: stale SESSION_STATUS, phantom DL-008 baselines, governance guard DL-029 vulnerability, missing T0 automation)",
+    "800_series_certification": "C (Gaps: G-NEW not operational, stale wave plan, role transition dependency)",
+    "boundary_100_to_300": "D (Two unconfirmed owners, missing analytics delivery mechanism)",
+    "boundary_300_to_700": "D (S310 not executed — no formal handoff possible until closeout)",
+    "boundary_700_to_800": "C (G-NEW not operational, baseline DL-008 count unreliable)",
+    "boundary_500_to_700": "B+ (Well-defined but formal disposition report unfiled)",
+    "boundary_800_to_700": "C+ (Forward-looking — model is sound but ownership acceptance gap remains)"
+  },
+
+  "pre_s726_remediation_sequence": [
+    {
+      "priority": "P0 — CRITICAL",
+      "action": "Execute all 6 Principle 2 acceptance protocols. Every owner named in Stewardship Framework §4 Gap Resolution Summary must accept in REVISION_HISTORY.md.",
+      "owner": "Governance Auditor (700-series)",
+      "deadline": "S726 T0"
+    },
+    {
+      "priority": "P0 — CRITICAL",
+      "action": "Reconcile Certified pool count: update SESSION_STATUS or create new session-status file reflecting 2,181 Certified per CURRENT_BASELINES.md. Remove 67 phantom DL-008 entries from CURRENT_BASELINES.md §3.",
+      "owner": "Baseline Maintainer (after acceptance) or Governance Auditor (if Gap 1 unresolved)",
+      "deadline": "Before S801"
+    },
+    {
+      "priority": "P0 — CRITICAL",
+      "action": "Operationalize G-NEW-1 through G-NEW-5 enforcement in 800-series certification pipeline. Integrate into wave template before S801.",
+      "owner": "Certification Auditor (after acceptance) or 800-series Lead",
+      "deadline": "Before S801"
+    },
+    {
+      "priority": "P1 — HIGH",
+      "action": "Execute S310 (Portfolio Operations Dashboard) as 300-series closeout. If 300-series Lead unavailable, Reconciliation Agent triggers per escalation path.",
+      "owner": "300-series Lead or Reconciliation Agent",
+      "deadline": "Before S726"
+    },
+    {
+      "priority": "P1 — HIGH",
+      "action": "Fix governance guard DL-008 detection to use Function constructor parse. Create scripts/t0_baseline_verify.js.",
+      "owner": "Governance Auditor",
+      "deadline": "Before first 800-series certification wave"
+    },
+    {
+      "priority": "P2 — MEDIUM",
+      "action": "Correct SESSION800_SESSION_SUMMARY.md §9 Wave 5: remove S534-S537 (completed). Rebase certification plan on 2,181→2,500 (~15 sessions). File formal 500-series ownership disposition report.",
+      "owner": "800-series Lead or Baseline Maintainer",
+      "deadline": "Before S801"
+    }
+  ],
+
+  "governance_attestation": {
+    "read_only": true,
+    "no_files_modified": true,
+    "no_pack_content_changes": true,
+    "no_certification_state_changes": true,
+    "no_answer_key_modifications": true,
+    "new_file_created": "reports/SESSION725_SERIES_BOUNDARY_AUDIT.json",
+    "sources_cross_referenced": 10,
+    "independent_verification": "All boundary claims cross-referenced against at least 2 independent source files per AGENTS.md §5 (Dual Verification)"
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "session": "SESSION537",
+  "timestamp": "2026-07-26T18:15:00Z",
+  "totalItems": 42,
+  "cases": [
+    {
+      "CaseID": "CBQ-C2",
+      "Title": "Investment Center Performance and Transfer Pricing",
+      "caseState": "Certified",
+      "items": [
+        {
+          "ItemID": "CBQ-C2-Q1",
+          "Type": "numeric",
+          "Topic": "Residual income",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1494,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q2",
+          "Type": "numeric",
+          "Topic": "ROI",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1564,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q3",
+          "Type": "select",
+          "Topic": "Transfer pricing",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1593,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q4",
+          "Type": "multi",
+          "Topic": "Performance measurement",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1777,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q5",
+          "Type": "fill",
+          "Topic": "Transfer pricing",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1479,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q6",
+          "Type": "match",
+          "Topic": "Performance management",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1640,
+          "expLengthBefore": null
+        }
+      ]
+    },
+    {
+      "CaseID": "CBQ-D2",
+      "Title": "Process Costing, Lean Waste, and Bottleneck Analysis",
+      "caseState": "Certified",
+      "items": [
+        {
+          "ItemID": "CBQ-D2-Q1",
+          "Type": "numeric",
+          "Topic": "Process costing",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1292,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q2",
+          "Type": "numeric",
+          "Topic": "Process costing",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1373,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q3",
+          "Type": "select",
+          "Topic": "Theory of constraints",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1385,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q4",
+          "Type": "multi",
+          "Topic": "Lean operations",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1356,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q5",
+          "Type": "fill",
+          "Topic": "Process costing",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1050,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q6",
+          "Type": "match",
+          "Topic": "Cost management",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1332,
+          "expLengthBefore": null
+        }
+      ]
+    },
+    {
+      "CaseID": "CBQ-E2",
+      "Title": "IT General Controls, Change Management, and Access Review",
+      "caseState": "Certified",
+      "items": [
+        {
+          "ItemID": "CBQ-E2-Q1",
+          "Type": "select",
+          "Topic": "Access controls",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1305,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q2",
+          "Type": "numeric",
+          "Topic": "Access review",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1032,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q3",
+          "Type": "multi",
+          "Topic": "IT controls",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1319,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q4",
+          "Type": "fill",
+          "Topic": "Change management",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1245,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q5",
+          "Type": "match",
+          "Topic": "ITGC risk",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1138,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q6",
+          "Type": "select",
+          "Topic": "Monitoring",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1360,
+          "expLengthBefore": null
+        }
+      ]
+    },
+    {
+      "CaseID": "CBQ-A3",
+      "Title": "Inventory, ARO, Subsequent Events, and Cash Classification",
+      "caseState": "Certified",
+      "items": [
+        {
+          "ItemID": "CBQ-A3-Q1",
+          "Type": "numeric",
+          "Topic": "Inventory measurement",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1131,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q2",
+          "Type": "numeric",
+          "Topic": "Asset retirement obligations",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1224,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q3",
+          "Type": "select",
+          "Topic": "Subsequent events",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1345,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q4",
+          "Type": "select",
+          "Topic": "Cash classification",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1098,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q5",
+          "Type": "numeric",
+          "Topic": "Statement of cash flows",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1273,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q6",
+          "Type": "match",
+          "Topic": "External reporting",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1227,
+          "expLengthBefore": null
+        }
+      ]
+    },
+    {
+      "CaseID": "CBQ-B3",
+      "Title": "Scenario Forecast, Expected Value, and Working Capital Plan",
+      "caseState": "Certified",
+      "items": [
+        {
+          "ItemID": "CBQ-B3-Q1",
+          "Type": "numeric",
+          "Topic": "Expected value",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1162,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q2",
+          "Type": "numeric",
+          "Topic": "Forecasting",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1078,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q3",
+          "Type": "numeric",
+          "Topic": "Cash collections",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1124,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q4",
+          "Type": "numeric",
+          "Topic": "Cash budget",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1042,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q5",
+          "Type": "select",
+          "Topic": "Cash budget",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1044,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q6",
+          "Type": "multi",
+          "Topic": "Forecast assumptions",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1176,
+          "expLengthBefore": null
+        }
+      ]
+    },
+    {
+      "CaseID": "CBQ-C3",
+      "Title": "Balanced Scorecard and Operating Performance Review",
+      "caseState": "Certified",
+      "items": [
+        {
+          "ItemID": "CBQ-C3-Q1",
+          "Type": "numeric",
+          "Topic": "Performance variance",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1120,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q2",
+          "Type": "numeric",
+          "Topic": "Nonfinancial measures",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1147,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q3",
+          "Type": "select",
+          "Topic": "Balanced scorecard",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1223,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q4",
+          "Type": "multi",
+          "Topic": "Leading indicators",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1234,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q5",
+          "Type": "match",
+          "Topic": "Balanced scorecard",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1289,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q6",
+          "Type": "select",
+          "Topic": "Responsibility accounting",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1399,
+          "expLengthBefore": null
+        }
+      ]
+    },
+    {
+      "CaseID": "CBQ-F2",
+      "Title": "Cybersecurity, RPA, and Finance Automation Governance",
+      "caseState": "Certified",
+      "items": [
+        {
+          "ItemID": "CBQ-F2-Q1",
+          "Type": "numeric",
+          "Topic": "RPA benefits",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1035,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q2",
+          "Type": "numeric",
+          "Topic": "Exception analytics",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1135,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q3",
+          "Type": "select",
+          "Topic": "Cybersecurity controls",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1130,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q4",
+          "Type": "multi",
+          "Topic": "Automation governance",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1219,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q5",
+          "Type": "fill",
+          "Topic": "Analytics governance",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1050,
+          "expLengthBefore": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q6",
+          "Type": "match",
+          "Topic": "Technology controls",
+          "certified": true,
+          "state": "Certified",
+          "expLengthAfter": 1191,
+          "expLengthBefore": null
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalItemsCertified": 42,
+    "allPreviouslyCertified": true,
+    "priorSessionOrWave": "S537 prior wave (pre-this-session)",
+    "changesThisSession": "Removed 7 duplicate RevisionHistory entries (one per case)",
+    "dl008Compliance": "0 violations across 22 select/multi/match items with ExplanationWrong fields",
+    "questionStateCount": {
+      "Certified": 42,
+      "Unprocessed": 0,
+      "Other": 0
+    }
+  }
+}

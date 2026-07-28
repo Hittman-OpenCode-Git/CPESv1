@@ -1,0 +1,100 @@
+{
+  "deliverable": "SESSION750_INVESTIGATION_GOVERNANCE.json",
+  "session": 750,
+  "board": "G",
+  "title": "Investigation Governance Integration",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "description": "Integrates the Challenge Registry, Question History, Recommendation Registry, and Session Registry into governance review workflows. Provides end-to-end investigative traceability for any question, certification decision, or governance event.",
+  "integratedRegistries": [
+    {
+      "registry": "CHALLENGE_REGISTRY",
+      "sourceFile": "scripts/challenge_registry.js",
+      "description": "Tracks challenges (CH-IDs) raised against specific questions during certification or audit",
+      "governanceIntegration": "Links CH-ID → QuestionID → Session → Recommendation. Challenges can trigger governance events (VIOLATION, ESCALATION).",
+      "linkage": "CH-ID → {QuestionID, Session, Rec-ID, Status, Resolution}"
+    },
+    {
+      "registry": "QUESTION_HISTORY",
+      "sourceFile": "scripts/question_history_builder.js",
+      "description": "Per-question timeline: all sessions, certification events, content changes, and defect assignments",
+      "governanceIntegration": "Provides audit trail for any question under governance review. Answers: when was this last certified? who reviewed it? what defects apply?",
+      "linkage": "QuestionID → [{Session, Date, Action, Fields}...]"
+    },
+    {
+      "registry": "RECOMMENDATION_REGISTRY",
+      "sourceFile": "scripts/recommendation_registry.js",
+      "description": "Tracks recommendations (REC-IDs) from audit findings to remediation actions",
+      "governanceIntegration": "Links governance events (VIOLATION) to remediation recommendations. Closure of a recommendation can auto-resolve linked governance events.",
+      "linkage": "REC-ID → {QuestionIDs, Finding, Recommendation, AssignedTo, Status}"
+    },
+    {
+      "registry": "SESSION_REGISTRY",
+      "sourceFile": "scripts/session_registry_gen.js",
+      "description": "Registry of all governance/remediation/certification sessions with deliverables and outcomes",
+      "governanceIntegration": "Provides session-level context for any investigation. Answers: what sessions touched this question? what were the outcomes?",
+      "linkage": "Session → {Date, Type, Deliverables, QIDs_Touched, Outcome}"
+    }
+  ],
+  "investigationWorkflows": [
+    {
+      "workflow": "CERTIFICATION_DISPUTE",
+      "description": "When a candidate challenges a question's answer during a practice session",
+      "steps": [
+        "1. Candidate raises challenge → CH-ID created",
+        "2. Challenge linked to QuestionID via challenge_registry.js",
+        "3. Audit chain built via certification_audit_builder.js (Board C)",
+        "4. Question history consulted via question_history_builder.js",
+        "5. Governance guard engine re-verifies the question (Board A)",
+        "6. Policy drift detector scans for structural issues (Board B)",
+        "7. Resolution recorded in REVISION_HISTORY.md per Rule 1"
+      ]
+    },
+    {
+      "workflow": "DEFECT_INVESTIGATION",
+      "description": "When a governance scan detects a new defect pattern",
+      "steps": [
+        "1. Governance event created (VIOLATION) via governance_event_registry.js (Board D)",
+        "2. Event linked to relevant DL-ID from DEFECT_LIBRARY.md",
+        "3. Audit chains built for all affected QIDs (Board C)",
+        "4. Recommendation created (REC-ID) via recommendation_registry.js",
+        "5. Remediation session assigned and tracked via session_registry_gen.js",
+        "6. Post-remediation, governance guard engine re-scans to confirm closure",
+        "7. Event status transitioned to CLOSED"
+      ]
+    },
+    {
+      "workflow": "CERTIFICATION_WAVE_PREFLIGHT",
+      "description": "Before a certification wave, verify no blocked items",
+      "steps": [
+        "1. Governance guard engine runs all 8 rules (Board A)",
+        "2. Policy drift detector scans for structural drift (Board B)",
+        "3. Gate -1 identity validation checks all QIDs (Rule 6)",
+        "4. Open governance events for target QIDs reviewed (Board D)",
+        "5. Recommendation registry checked for outstanding REC-IDs",
+        "6. Pre-flight report generated → go/no-go decision"
+      ]
+    }
+  ],
+  "crossRegistryTraceability": {
+    "description": "Any QuestionID can be traced across all four registries",
+    "example": {
+      "questionID": "P1-A-012",
+      "traceability": {
+        "sessions": ["Session 750", "Session 706", "Session 64"],
+        "certification": "Certified (Session 706)",
+        "defects": ["DL-009 — Incorrect ASC citation"],
+        "recommendations": ["REC-002"],
+        "challenges": [],
+        "governanceEvents": [],
+        "revisionEntries": 3
+      }
+    }
+  },
+  "futureEnhancements": [
+    "Unified cross-registry query API: GET /investigation?qid=P1-A-012",
+    "Investigation Workbench UI (Board I — Admin Portal)",
+    "Automated root-cause correlation across defect clusters",
+    "Predictive: flag QIDs likely to be challenged based on defect history"
+  ]
+}

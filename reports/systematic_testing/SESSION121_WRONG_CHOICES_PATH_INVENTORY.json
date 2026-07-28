@@ -1,0 +1,128 @@
+{
+  "session": 121,
+  "title": "May Wrong Choices Path Inventory",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "scope": "100-series May lane only",
+  "preFlightTestResult": "225/225 PASS (119 Stage C + 86 tutoring safety + 20 governance guard)",
+  "methodology": "Direct source-code inspection of may-core.js, test_may_stagec.js, test_tutoring_safety.js",
+  "inventory": {
+    "wrongChoicePath": {
+      "primaryMethod": {
+        "name": "_explainWrongChoices",
+        "file": "may-core.js",
+        "lines": "1327-1369",
+        "description": "Generates wrong-choice output. Iterates non-correct choices, includes bank ExplanationWrong fields if >10 chars, otherwise uses generic fallback."
+      },
+      "currentBehavior": [
+        "Skips correct choice (CC) — only outputs wrong options A/C/D when CC=B",
+        "For each wrong option with ExplanationWrong > 10 chars: displays 'Option X — choice text' + one-line ExplanationWrong",
+        "For each wrong option with thin/missing ExplanationWrong: displays generic 'This choice is incorrect' + topic mention",
+        "No selected-answer prioritization — always presents options in alphabetical order",
+        "No answer-gating — does not check if learner has attempted the question",
+        "No review-mode distinction — same behavior in active session and review mode",
+        "No misconception coaching — repeats ExplanationWrong verbatim without context",
+        "Routes through _guardedSpeak in pilot mode, _speak in non-pilot",
+        "Handles null question gracefully",
+        "Handles items with no choices gracefully"
+      ],
+      "gating": {
+        "examMode": "Blocked by isFullTabBlocked() in handleAction (line 972-978)",
+        "nullQuestion": "Graceful — 'I don't have a question to work with' message",
+        "noChoices": "Graceful — suggests using Explain answer instead",
+        "activeUnanswered": "NO GATE — _explainWrongChoices does not check if learner has attempted",
+        "reviewMode": "No distinction — same output as active session",
+        "correctChoiceExclusion": "PRESERVED — skips CC (line 1343: 'if (l === cc) return')"
+      },
+      "callers": [
+        {
+          "source": "handleAction('wrong-choices')",
+          "file": "may-core.js",
+          "line": "987-988",
+          "buttonUI": "line 2818 — Wrong choices button",
+          "gating": "Exam mode blocked by handleAction before call"
+        },
+        {
+          "source": "freeform chat routing",
+          "file": "may-core.js",
+          "line": "2292-2294",
+          "trigger": "'why is X wrong/incorrect/not' pattern in learner message",
+          "gating": "No exam-mode check in freeform path (handleAction not called)"
+        }
+      ]
+    },
+    "learnerAnswerAccess": {
+      "location": "may-core.js lines 3681-3682",
+      "method": "state.session.answers[question.QuestionID] from global window.state",
+      "format": "String — single letter ('A', 'B', 'C', 'D')",
+      "note": "Available to _explainWrongChoices if it reads window.state directly"
+    },
+    "reviewModeDetection": {
+      "location": "may-core.js line 3775",
+      "method": "state.session.completed === true"
+    },
+    "guardedSpeakIntegration": {
+      "location": "may-core.js line 1364-1366",
+      "usage": "Called in pilot mode with sourceLabel 'wrong-choices'",
+      "safetyContext": "_guardedTutoringContext() at line 4173 — includes correctChoice, correctAnswer, examModeActive, hintLevel, allowPatterns"
+    },
+    "telemetryLogging": {
+      "location": "may-core.js lines 4142-4156",
+      "method": "_logPilotUsage called from _guardedSpeak → logs sourceLabel, section, topic, qid, safetySafe",
+      "note": "Wrong-choice telemetry already captured via _guardedSpeak pipeline"
+    },
+    "existingTests": {
+      "stageC": [
+        {
+          "test": "_explainWrongChoices uses bank ExplanationWrong fields",
+          "file": "test_may_stagec.js",
+          "line": 258,
+          "assertions": "Verifies each non-CC option letter appears in output",
+          "needsUpdate": true,
+          "updateTo": "Verify structured coaching output with misconception sections"
+        }
+      ],
+      "tutoringSafety": [
+        {
+          "test": "F-04: _explainWrongChoices never explains correct choice",
+          "file": "test_tutoring_safety.js",
+          "line": 291,
+          "needsUpdate": false,
+          "reason": "Correct-choice exclusion is invariant"
+        },
+        {
+          "test": "F-04b: _explainWrongChoices includes all wrong choices",
+          "file": "test_tutoring_safety.js",
+          "line": 314,
+          "needsUpdate": false,
+          "reason": "All wrong options must still appear, just with richer content"
+        }
+      ]
+    }
+  },
+  "gapsVsSpec": {
+    "missingFeatures": [
+      "No selected-answer prioritization",
+      "No answer-gating before attempt",
+      "No review-mode awareness",
+      "No misconception coaching structure (why tempting, why wrong, misconception, how to avoid)",
+      "No safe-fallback when ExplanationWrong is thin",
+      "No learner-specific coaching",
+      "No trap-awareness language"
+    ],
+    "safetyPreserved": [
+      "CorrectChoice never listed as wrong",
+      "_guardedSpeak integration exists",
+      "Anti-fabrication via ensureSafeTutoringOutput",
+      "Telemetry logging exists",
+      "No prediction language in current output"
+    ]
+  },
+  "implementationPlan": {
+    "newHelper": "_buildWrongChoiceCoaching(question, context)",
+    "helperPurpose": "Builds structured misconception coaching for each wrong choice using ExplanationWrong + inference",
+    "outputFields": ["choiceLabel", "text", "whyTempting", "whyWrong", "misconception", "avoidNextTime", "sourceExplanationIncluded", "safeFallbackUsed"],
+    "answerGatingLogic": "Check for active unanswered question BEFORE revealing which options are wrong",
+    "selectedAnswerPrioritization": "If learner has selected a wrong answer, present that option first",
+    "reviewModeBehavior": "Allow full coaching with review-mode-specific framing"
+  }
+}

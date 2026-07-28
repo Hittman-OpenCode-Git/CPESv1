@@ -1,0 +1,53 @@
+{
+  "session": "S922",
+  "title": "Pack A + Case Pack UI Wiring",
+  "date": "2026-07-28",
+  "status": "COMPLETE",
+  "type": "WRITE",
+  "files_modified": [
+    "case_pack_1_corrected.js",
+    "case_pack_2_corrected.js"
+  ],
+  "files_updated": [
+    "knowledge/CURRENT_BASELINES.md",
+    "knowledge/REVISION_HISTORY.md"
+  ],
+  "pre_state": {
+    "caseBanks_defined": ["A", "B", "C"],
+    "caseBanks_missing": ["D", "E"],
+    "packs_with_zero_cases": ["D", "E"]
+  },
+  "post_state": {
+    "caseBanks_defined": ["A", "B", "C", "D", "E"],
+    "caseBanks_missing": [],
+    "packs_with_zero_cases": [],
+    "case_counts": {
+      "A": 25,
+      "B": 25,
+      "C": 27,
+      "D": 25,
+      "E": 25
+    },
+    "mcq_counts": {
+      "A": 500,
+      "B": 500,
+      "C": 500,
+      "D": 500,
+      "E": 500
+    }
+  },
+  "governance_guard": {
+    "pre_write": "51/51 PASS",
+    "post_write": "51/51 PASS"
+  },
+  "backups": [
+    "backups/case_pack_1_corrected.js.bak-20260728123032",
+    "backups/case_pack_2_corrected.js.bak-20260728123032",
+    "backups/case_pack_3_corrected.js.bak-20260728123032",
+    "backups/REVISION_HISTORY.md.bak-20260728123359"
+  ],
+  "hashes_post": {
+    "case_pack_1_corrected.js": "10BB5CE59D04F44398F8CE27C42C3F9BD15714CF586D4E3F68234B8A41BAF330",
+    "case_pack_2_corrected.js": "76DF40C2B9A6BC7EF446BE9B1AC75FC10CBADA65F77D62777C337C0DCF15DBD1"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "title": "SESSION316_PRODUCTION_PROMOTION_RESULTS",
+  "session": "S316",
+  "generated": "2026-07-27",
+  "wave": "Wave 2",
+  "items": [
+    "P1-E-R11",
+    "P1-E-R14",
+    "P1-E-R15",
+    "P1-E-R16",
+    "P1-E-R17",
+    "P1-E-R19",
+    "P1-E-R20",
+    "P1-E-R30",
+    "P1-E-R31",
+    "P1-E-R32"
+  ],
+  "source": "SESSION314_AUTHORING_BATCH_FULL.json",
+  "target": "pack_e_corrected.js",
+  "promotionStatus": "COMPLETE",
+  "preInsertionState": {
+    "items": 510,
+    "certified": 510,
+    "production": 10
+  },
+  "postInsertionState": {
+    "items": 520,
+    "certified": 520,
+    "production": 20
+  },
+  "verification": {
+    "parseIntegrity": "PASS",
+    "dl008": "CLEAN (0 violations)",
+    "crossPackContamination": "CLEAN (0 Wave 2 QIDs in packs A-D)",
+    "governanceGuard": "27/27 PASS"
+  },
+  "packESize": "1,500,137 bytes",
+  "backupFile": "pack_e_corrected.js.bak-20260726205554"
+}

@@ -1,0 +1,116 @@
+{
+  "session": "S131",
+  "timestamp": "2026-07-26T20:45:00Z",
+  "testResults": {
+    "tutoringSafety": { "total": 190, "pass": 190, "fail": 0 },
+    "stageC": { "total": 119, "pass": 119, "fail": 0 },
+    "governanceGuard": { "total": 20, "pass": 20, "fail": 0 },
+    "overallTotal": 329,
+    "overallPass": 329,
+    "overallFail": 0
+  },
+  "entryPointVerification": {
+    "explain": {
+      "present": true,
+      "action": "explain",
+      "dispatchesTo": "_explainAnswer",
+      "mayCoreLine": 1008,
+      "guardedSpeakLabel": "explain",
+      "pilotModeVerified": true
+    },
+    "simplify": {
+      "present": true,
+      "action": "simplify",
+      "dispatchesTo": "_simplifyExplanation",
+      "mayCoreLine": 1017,
+      "guardedSpeakLabel": "simplify",
+      "pilotModeVerified": true
+    },
+    "wrong-choices": {
+      "present": true,
+      "action": "wrong-choices",
+      "dispatchesTo": "_explainWrongChoices",
+      "mayCoreLine": 1011,
+      "guardedSpeakLabel": "wrong-choices",
+      "pilotModeVerified": true
+    },
+    "summary": {
+      "present": true,
+      "action": "summary",
+      "dispatchesTo": "_summarizeSession",
+      "mayCoreLine": 1029,
+      "guardedSpeakLabel": "summary",
+      "pilotModeVerified": true
+    },
+    "digest": {
+      "present": true,
+      "action": "digest",
+      "dispatchesTo": "_showWeeklyDigest",
+      "mayCoreLine": 1041,
+      "guardedSpeakLabel": "digest",
+      "pilotModeVerified": true
+    },
+    "strategy": {
+      "present": true,
+      "action": "strategy",
+      "dispatchesTo": "_showStudyStrategy",
+      "mayCoreLine": 1044,
+      "guardedSpeakLabel": "strategy",
+      "pilotModeVerified": true
+    },
+    "effectiveness": {
+      "present": true,
+      "action": "effectiveness",
+      "dispatchesTo": "_showStrategyEffectiveness",
+      "mayCoreLine": 1047,
+      "guardedSpeakLabel": "effectiveness",
+      "pilotModeVerified": true
+    }
+  },
+  "evidenceGraphIntegration": {
+    "evidenceGraphConsumerCount": 0,
+    "note": "computeEvidenceGraph is defined in may-learner-state.js (line 1456) but is NOT directly imported or called from may-core.js. All 7 coaching endpoints access learner data through MayLearnerState.getTopicProgress(), getTrends(), and getWeaknessClusters() — the same data sources that feed computeEvidenceGraph. The evidence graph is available to coaching endpoints indirectly through MayLearnerState.",
+    "directConsumers": [],
+    "indirectConsumers": [
+      "_getProgressInsight (via MayLearnerState.getTopicProgress / getTrends)",
+      "_getWeaknessInsight (via MayLearnerState.getTopicProgress / getWeaknessClusters / getTrends)",
+      "_summarizeSession (via MayLearnerState.load / getTopicProgress)",
+      "_generateRecoverySet (via MayLearnerState.getWeaknessClusters)",
+      "_generateWeeklyDigest (via MayLearnerState.load / getTopicProgress)",
+      "_generateStudyStrategy (via MayLearnerState.getTopicProgress / getTrends)",
+      "_generateStrategyEffectiveness (via MayLearnerState.load / getTopicProgress / getOutcomeSummary)"
+    ],
+    "evidenceGraphConsumersInLearnerState": [
+      "getEvidenceWindows (line 1647, calls computeEvidenceGraph)",
+      "getFreshObservations (line 1667, calls computeEvidenceGraph)",
+      "verifyClassificationConsistency (line 1711, calls computeEvidenceGraph)"
+    ]
+  },
+  "safetyVerification": {
+    "predictionLanguage": 0,
+    "readinessLanguage": 0,
+    "answerLeakage": 0,
+    "hallucinatedPatterns": 0,
+    "modelVersion": "S111-1.0",
+    "bannedPhrasesComplete": true,
+    "examModeAnswerLeakageBlocked": true,
+    "defectGateFunctional": true,
+    "certifiedOnlyGateFunctional": true
+  },
+  "s131SpecificTests": {
+    "S131-01_computeEvidenceGraph_structure": "PASS",
+    "S131-02_timeWeightedAccuracy": "PASS",
+    "S131-03_observationsAlignWithEvidence": "PASS",
+    "S131-04_evidenceWindows": "PASS",
+    "S131-05_freshObservationsFilter": "PASS",
+    "S131-06_timeWeightedDecay": "PASS",
+    "S131-07_recommendNextAction_provenance": "PASS",
+    "S131-08_sessionRecap_provenance": "PASS",
+    "S131-09_preExamBriefing_provenance": "PASS",
+    "S131-10_classificationConsistency": "PASS",
+    "S131-11_thresholdAlignment": "PASS",
+    "S131-12_provenanceCoverage100pct": "PASS",
+    "allS131Pass": true
+  },
+  "overallStatus": "PASS"
+}

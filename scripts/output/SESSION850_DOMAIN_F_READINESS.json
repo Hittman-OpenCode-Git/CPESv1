@@ -1,0 +1,110 @@
+{
+  "specId": "SESSION850_DOMAIN_F_READINESS",
+  "board": "H",
+  "title": "Domain F Readiness Engine",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Assess Domain F (Technology and Analytics) inventory, blueprint coverage, and readiness for eventual modernization activation. Prepares Domain F for the next modernization wave.",
+  "outputFile": "scripts/output/domain_f_readiness.json",
+  "inputs": {
+    "packFiles": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+    "domainProgress": "scripts/output/domain_progress.json",
+    "examBlueprint": "foundation/EXAM_BLUEPRINT.md"
+  },
+  "domainFBlueprint": {
+    "domain": "F",
+    "name": "Technology and Analytics",
+    "topics": [
+      "Information Systems",
+      "ERP Systems",
+      "Data Governance",
+      "Data Quality",
+      "Cybersecurity",
+      "Data Analytics",
+      "Business Intelligence",
+      "Artificial Intelligence",
+      "Automation",
+      "Emerging Technologies"
+    ],
+    "subtopics": [
+      "System development life cycle",
+      "IT general controls vs application controls",
+      "Data management and governance frameworks",
+      "Data quality dimensions (accuracy, completeness, consistency, timeliness, validity)",
+      "Cybersecurity risk management",
+      "Descriptive, diagnostic, predictive, prescriptive analytics",
+      "Data visualization best practices",
+      "AI/ML applications in management accounting",
+      "RPA and process automation",
+      "Blockchain and distributed ledger technology"
+    ],
+    "cognitiveDistributionTarget": {
+      "Remember": 5,
+      "Understand": 15,
+      "Apply": 40,
+      "Analyze": 25,
+      "Evaluate": 15
+    }
+  },
+  "assessmentDimensions": {
+    "inventory": {
+      "totalItems": "integer",
+      "byPack": { "pack_a": "integer", "pack_b": "integer" },
+      "byQuestionType": { "select": "integer", "numeric": "integer", "multi": "integer" },
+      "byDifficulty": { "Easy": "integer", "Moderate": "integer", "Difficult": "integer", "Very Difficult": "integer" }
+    },
+    "coverage": {
+      "topicCoveragePct": "float",
+      "missingTopics": ["string"],
+      "overrepresentedTopics": ["string"],
+      "subtopicGaps": ["string"]
+    },
+    "quality": {
+      "certifiedItems": "integer",
+      "readyItems": "integer",
+      "remediateItems": "integer",
+      "blockedItems": "integer",
+      "openDefects": { "DL-008": "integer", "DL-013": "integer", "DL-025": "integer" },
+      "avgReadinessScore": "float"
+    },
+    "modernizationReadiness": {
+      "status": "NOT_STARTED | INVENTORY_AUDIT | BLUEPRINT_MAPPED | REMEDIATION_ACTIVE | CERTIFICATION_READY | ACTIVATED",
+      "score": "integer (0-100)",
+      "blockers": ["string"],
+      "estimatedEffort": "string (e.g. '3 sessions, ~8 hours')",
+      "recommendedWaves": "integer"
+    }
+  },
+  "output": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "assessment": { "...assessmentDimensions schema..." },
+      "recommendations": [
+        {
+          "priority": "integer",
+          "action": "string",
+          "target": "string",
+          "estimatedItems": "integer",
+          "rationale": "string"
+        }
+      ],
+      "activationChecklist": [
+        "Verify all Domain F items have question_state",
+        "Run identity validation gate on all Domain F items",
+        "Map every Domain F item to specific CSO learning outcome",
+        "Identify and remediate DL-008/DL-026 defects",
+        "Certify READY items via wave planner",
+        "Confirm blueprint coverage >= 85%"
+      ]
+    }
+  },
+  "usage": "node scripts/certification_candidate_engine.js  // then filter by domain=F from domain_progress.json",
+  "dependencies": {
+    "engine": ["scripts/engine/pack_reader.js"],
+    "optional": ["scripts/output/domain_progress.json"]
+  }
+}

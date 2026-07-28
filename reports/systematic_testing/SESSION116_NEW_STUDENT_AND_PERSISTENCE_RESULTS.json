@@ -1,0 +1,40 @@
+{
+  "session": "S116",
+  "type": "NewStudentAndPersistenceResults",
+  "timestamp": "2026-07-25T20:16:00.000Z",
+  "simulatedName": "Jamie Dryrun",
+  "path": "No — I'm new here",
+  "results": {
+    "greetingFlowEntered": true,
+    "createNewStudentStateEntered": true,
+    "profileCreated": true,
+    "syntheticFlag": true,
+    "preProductionFlag": true,
+    "learnerId": "learner-ms0t7cxc",
+    "selectedLearnerIdPersisted": "learner-ms0t7cxc",
+    "relaunchSkipsHandshake": true,
+    "localStoragePersistenceAfterRelaunch": "CONFIRMED",
+    "behaviorsExercised": 10,
+    "behaviors": [
+      "explain", "hint", "wrong-choices", "simplify",
+      "similar", "next", "recovery", "progress", "weakness", "summary"
+    ],
+    "exportPayloadGenerated": true,
+    "exportFile": "s116_pilot_new_student_jamie_dryrun.json",
+    "exportPayloadSize": 5209
+  },
+  "telemetrySummary": {
+    "telemetryEvents": [
+      "greeting_flow_started",
+      "greeting_response (no)",
+      "new_student_created",
+      "session_start (relaunch skip)"
+    ],
+    "safetyLogEntries": "Populated",
+    "pilotUsageLogEntries": "Populated",
+    "gateLogEntries": "Empty (no recommendations on empty history)",
+    "modelVersion": "S111-1.0",
+    "thresholdsStable": true
+  },
+  "notes": "New student path exercised end-to-end. Profile correctly marked synthetic/preProduction. localStorage persistence confirmed across simulated page reload. Selected learner ID restored on re-init, skipping handshake as expected."
+}

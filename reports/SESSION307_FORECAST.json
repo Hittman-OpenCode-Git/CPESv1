@@ -1,0 +1,37 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "baselineUIQS": 68.8,
+  "baselineCertified": 2181,
+  "forecastHorizons": {
+    "sixSessions": {
+      "description": "After DL-008 remediation + Domain E certification wave start",
+      "projectedCertified": "2,248 (+67 DL-008 cleared, not newly certified)",
+      "projectedUIQS": "71.5 (estimated +2.7 from DL-008 + initial E domain certification)",
+      "deliverables": [
+        "DL-008 cleared",
+        "Domain E certification ~50 items"
+      ]
+    },
+    "twelveSessions": {
+      "description": "After Domain E/F initial certification waves",
+      "projectedCertified": "2,431 (+250 Domain E/F new certifications)",
+      "projectedUIQS": "74.8 (estimated +6.0 from certification + EW improvements)",
+      "deliverables": [
+        "Domain E: 100+ certified",
+        "Domain F: 50+ certified",
+        "EW gap reduced ~30%"
+      ]
+    },
+    "twentyFourSessions": {
+      "description": "Full portfolio certification + major EW gap closure",
+      "projectedCertified": "2,500 (100% certified)",
+      "projectedUIQS": "82.5 (estimated +13.7, Grade B → B+/A- range)",
+      "deliverables": [
+        "All packs 100% certified",
+        "EW fill rate >80%",
+        "Case-bank EW >50%",
+        "DL-008=0, DL-026=0"
+      ]
+    }
+  }
+}

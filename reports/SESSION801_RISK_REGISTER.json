@@ -1,0 +1,83 @@
+{
+  "session": "S801",
+  "date": "2026-07-26",
+  "title": "S801 Risk Register — Governance, Certification, and Instructional Risks",
+  "critical_risks_resolved": [
+    {
+      "risk": "67 Certified DL-008 items in learner pool",
+      "s800_status": "CRITICAL — P0 blocker",
+      "s801_finding": "REFUTED. 0 Certified DL-008 items. All 67 were DL-029 forward-scan false positives.",
+      "resolution": "All items individually verified clean via Function constructor same-object parse."
+    },
+    {
+      "risk": "FD-045 missing content block",
+      "s800_status": "CRITICAL — P0 blocker",
+      "s801_finding": "REFUTED. FD-045 structurally complete. S800 forward-scan missed content fields preceding QuestionID in merged block.",
+      "resolution": "All content fields present: Stem, Choices.{A-D}, CorrectChoice=B, ExplanationCorrect."
+    },
+    {
+      "risk": "FD-075 missing content block",
+      "s800_status": "CRITICAL — P0 blocker",
+      "s801_finding": "REFUTED. FD-075 structurally complete. CorrectChoice=C present. S702 claim verified correct.",
+      "resolution": "All content fields present. Only defect: DL-026 (EW_A empty). Non-blocking."
+    }
+  ],
+  "active_risks": [
+    {
+      "id": "R801-01",
+      "severity": "HIGH",
+      "category": "Scan Reliability",
+      "description": "DL-029 forward-scan methodology produces ~75% false positives on ALL 5 packs. CC-before-QID position is universal. Any future scan that uses forward-scan from QuestionID to CorrectChoice will produce systematically inflated defect counts.",
+      "mitigation": "Mandate Function constructor parse or reverse-scan methodology for all future defect scans. Update SESSION_STATUS with corrected counts.",
+      "status": "ACTIVE — methodology correction recommended"
+    },
+    {
+      "id": "R801-02",
+      "severity": "HIGH",
+      "category": "Instructional Quality",
+      "description": "Pack E: 500 Certified items with median EC=67 chars, 92.4% zero authoritative citations, 83.6% definition-match pattern, 79.4% Understand cognitive level, 0% Analyze. Learners using Pack E exclusively would practice definition recall, not accounting application.",
+      "mitigation": "Pack E pedagogical enhancement wave (P4 in rewrite queue). Keep Pack E in delivery pool with content-quality advisory until enhanced.",
+      "status": "ACTIVE — deferred to P4 (S809-S813)"
+    },
+    {
+      "id": "R801-03",
+      "severity": "MEDIUM",
+      "category": "Clone Dilution",
+      "description": "Pack C: 347/500 items (78.6%) are rotation-group clones. Pack D: 437/500 items (90.6%) are rotation-group clones. Sections A-D (350 Certified each) contain 321-344 clone items that inflate session composition without adding conceptual coverage.",
+      "mitigation": "Clone archival program (P2). Sections E/F first (zero learner pool risk). Sections A-D require explicit authorization (Certified items).",
+      "status": "ACTIVE — P2 for E/F, A-D deferred"
+    },
+    {
+      "id": "R801-04",
+      "severity": "MEDIUM",
+      "category": "Documentation Staleness",
+      "description": "SESSION_STATUS_2026-07-24 reports 2,031 Certified (actual: 2,181), 67 DL-008 (actual: 0), Pack C 250 Certified (actual: 350), Pack D 300 (actual: 350). Multiple S800 reports contain stale data.",
+      "mitigation": "P0 governance cleanup (S802). Publish corrected SESSION_STATUS.",
+      "status": "ACTIVE — P0 remediation assigned"
+    },
+    {
+      "id": "R801-05",
+      "severity": "MEDIUM",
+      "category": "Pack File Hash Drift",
+      "description": "All 5 pack file SHA-256 hashes differ from CURRENT_BASELINES.md. Authorized drift from S530-S536 sessions, but baselines were not updated to reflect post-S536 state.",
+      "mitigation": "Recapture all 13 runtime-critical file baselines in next write-authorized session. Update CURRENT_BASELINES.md.",
+      "status": "ACTIVE — baseline recapture needed"
+    },
+    {
+      "id": "R801-06",
+      "severity": "LOW",
+      "category": "Structural",
+      "description": "FD-046: Metadata-only orphan shell in Pack D Section F. No Stem, Choices, CorrectChoice, ExplanationCorrect. Already 'Archived' — correctly excluded from learner pool.",
+      "mitigation": "No action needed. Already Archived. Document as known non-functional item.",
+      "status": "MONITORED — no action"
+    },
+    {
+      "id": "R801-07",
+      "severity": "LOW",
+      "category": "Cosmetic",
+      "description": "DL-015/DL-016: Topic label +1 shift and ExplanationWrong text describing neighbor QID's choices on 2 items (FD-045, and residual across Pack A). Cosmetic metadata issues. Zero learner impact.",
+      "mitigation": "Fix during next Section F certification pass.",
+      "status": "MONITORED — deferred"
+    }
+  ]
+}

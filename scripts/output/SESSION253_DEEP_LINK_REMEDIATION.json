@@ -1,0 +1,68 @@
+{
+  "reportId": "SESSION253_DEEP_LINK_VALIDATION",
+  "title": "Post-Repair Deep-Link Validation",
+  "generatedTimestamp": "2026-07-27T18:27:18.211Z",
+  "overallVerdict": "PASS",
+  "checks": [
+    {
+      "name": "check1_questionToSession",
+      "description": "Q→S: Every QID in session_registry exists in question_history",
+      "duplicateCount": 0,
+      "totalLinks": 1163,
+      "validLinks": 1163,
+      "missingQIDs": [],
+      "sessionCount": 40,
+      "status": "PASS"
+    },
+    {
+      "name": "check2_questionToRecommendation",
+      "description": "Q→R: Every QID in recommendation_registry exists",
+      "totalLinks": 2382,
+      "validLinks": 2382,
+      "missingQIDs": [],
+      "status": "PASS"
+    },
+    {
+      "name": "check3_challengeSessionLinks",
+      "description": "Challenge→Session: All challenge-linked sessions exist in registry",
+      "totalLinks": 0,
+      "validLinks": 0,
+      "missingSessions": [],
+      "status": "PASS"
+    },
+    {
+      "name": "check4_challengeQIDs",
+      "description": "Every challenge QID exists in question_history",
+      "totalQids": 35,
+      "validQids": 35,
+      "missingQids": [],
+      "status": "PASS"
+    },
+    {
+      "name": "check5_certificationQIDs",
+      "description": "Every planned cert QID exists in question_history",
+      "totalPlanned": 77,
+      "validQids": 77,
+      "missingQids": [],
+      "status": "PASS"
+    }
+  ],
+  "criticalFindings": [],
+  "warnings": [],
+  "summary": {
+    "totalChecks": 5,
+    "passed": 5,
+    "failed": 0,
+    "warned": 0,
+    "criticalCount": 0,
+    "warningCount": 0,
+    "overallVerdict": "PASS"
+  },
+  "stopConditions": {
+    "deepLinkCriticalFindings": 0,
+    "sessionRegistryIntegrity": true,
+    "challengeRegistryIntegrity": true,
+    "totalSessions": 40,
+    "allPass": true
+  }
+}

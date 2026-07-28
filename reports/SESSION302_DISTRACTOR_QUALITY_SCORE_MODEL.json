@@ -1,0 +1,71 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Distractor Quality Score (DQS) Model v1.0",
+  "model_version": "S302-1.0",
+  "purpose": "Standardized 0-100 score for distractor quality assessment. Implements CERTIFICATION_RUBRICS D4 (Distractor Quality) dimension with enhanced granularity.",
+  "dimensions": {
+    "DQS_1_plausibility": {
+      "weight": 30,
+      "score_range": "0-30",
+      "rubric": {
+        "30": "Targets a specific, documented misconception. Requires genuine content knowledge to eliminate. Would fool a candidate holding that misconception.",
+        "22": "Plausible but surface-level. Some test-taking strategies could help eliminate. Covers a real but shallow misconception.",
+        "15": "Eliminable by test-taking tricks alone (length cueing, grammatical mismatch). Does not require content knowledge to dismiss.",
+        "5": "Obviously wrong (absurd number, nonsensical concept, contradicts scenario facts). No candidate would genuinely select this.",
+        "0": "100% identical to another distractor or the correct answer. Non-functional."
+      }
+    },
+    "DQS_2_uniqueness": {
+      "weight": 20,
+      "score_range": "0-20",
+      "rubric": {
+        "20": "Completely distinct from all other distractors and correct answer. Tests a unique misconception.",
+        "12": "Mostly distinct. Minor overlap with another distractor but different misconception targeted.",
+        "5": "Significant overlap (>70% Jaccard similarity) with another distractor. Tests nearly the same error.",
+        "0": "100% identical to another distractor or verbatim duplicate across items."
+      }
+    },
+    "DQS_3_misconception_value": {
+      "weight": 20,
+      "score_range": "0-20",
+      "rubric": {
+        "20": "Maps to a documented CMA exam trap. Misconception is common among real candidates. EW text names and explains the error.",
+        "12": "Maps to a plausible but less common error. EW text acknowledges a genuine misunderstanding.",
+        "5": "Maps to a generic or vague error ('misapplied a concept'). EW text does not identify specific misconception.",
+        "0": "No misconception targeted. Distractor is random, nonsensical, or impossible to reach by any error."
+      }
+    },
+    "DQS_4_instructional_quality": {
+      "weight": 20,
+      "score_range": "0-20",
+      "rubric": {
+        "20": "EW text teaches candidate why their choice was wrong, names the governing standard, shows correct reasoning, and provides a memory anchor.",
+        "12": "EW text explains why the choice was wrong but lacks standard reference or contrast with correct approach.",
+        "5": "EW text is present but generic ('Option X is incorrect'). No teaching content.",
+        "0": "EW text is empty, boilerplate template, or factually wrong."
+      }
+    },
+    "DQS_5_discrimination_value": {
+      "weight": 10,
+      "score_range": "0-10",
+      "rubric": {
+        "10": "Would discriminate between candidates at different proficiency levels. Advanced candidates recognize the trap; weaker candidates fall for it.",
+        "6": "Moderate discrimination. Separates strong from weak candidates but doesn't distinguish mid-level.",
+        "3": "Low discrimination. Both strong and weak candidates either both get it right or both get it wrong.",
+        "0": "No discrimination — everyone gets it right (obviously wrong) or everyone gets it wrong (unfairly tricky)."
+      }
+    }
+  },
+  "aggregation": {
+    "item_dqs": "Average DQS of all distractors in the item",
+    "section_dqs": "Average of item DQS in the section",
+    "pack_dqs": "Average of section DQS weighted by item count",
+    "portfolio_dqs": "Average of pack DQS weighted by item count"
+  },
+  "portfolio_dqs_estimates": {
+    "pack_a": 72, "pack_b": 85, "pack_c": 65, "pack_d": 63, "pack_e": 78,
+    "case_banks": 5, "portfolio_overall": 67
+  },
+  "certification_threshold": "Item DQS >= 60 required (maps to CERTIFICATION_RUBRICS D4 >= 4). Pack-level DQS < 60 indicates sections needing targeted distractor remediation before certification."
+}

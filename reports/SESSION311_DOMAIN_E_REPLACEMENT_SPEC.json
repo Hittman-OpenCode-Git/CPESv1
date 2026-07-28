@@ -1,0 +1,127 @@
+{
+  "spec_version": "DOMAIN_E_REPLACEMENT_SPEC_v1.0",
+  "session": "311",
+  "agent": "D",
+  "title": "Domain E Replacement Specification — Section E Internal Controls",
+  "generated": "2026-07-26",
+  "status": "Spec Only — Implementation in S804+",
+
+  "quantity": {
+    "replacements": 43,
+    "description": "1 replacement item per DL-012 clone group. Consolidate from 4 template variants (1 seed + 3 company-name-rotated clones) to 1 unique, pedagogically distinct item per topic.",
+    "certifications": 38,
+    "description": "38 retained seeds across Packs C/D Section E. Full CAQS §1.6 certification pipeline.",
+    "totalItems": 81
+  },
+
+  "difficultyTargets": {
+    "distribution": {
+      "Easy": "~20% (16 items)",
+      "Moderate": "~50% (41 items)",
+      "Difficult": "~25% (20 items)",
+      "Hard": "~5% (4 items)"
+    },
+    "antiInflationRules": [
+      "Definition-recall items are Easy, not Moderate (DL-031 prevention)",
+      "Single-step application items are Moderate, not Difficult",
+      "Multi-step analysis items are Difficult, not Hard",
+      "DifficultyScore must match actual cognitive demand of the item, not the LOS verb alone"
+    ],
+    "benchmark": "Pack B Section E difficulty distribution"
+  },
+
+  "cognitiveLevelTargets": {
+    "distribution": {
+      "Remembering": "~15% (12 items)",
+      "Understanding": "~40% (32 items)",
+      "Application": "~30% (25 items)",
+      "Analysis": "~15% (12 items)"
+    },
+    "accuracyRequirements": [
+      "CognitiveLevel must be verified against Bloom's taxonomy by independent reviewer",
+      "No mismatch between LOS verb and CognitiveLevel",
+      "Application items must present novel scenarios, not recall"
+    ]
+  },
+
+  "blueprintTargets": {
+    "topics": [
+      "E.1.a Corporate Governance",
+      "E.1.b Internal Control Framework (COSO 2013)",
+      "E.1.c Control Environment",
+      "E.1.d Risk Assessment",
+      "E.1.e Control Activities",
+      "E.1.f Information & Communication",
+      "E.1.g Monitoring",
+      "E.1.h Sarbanes-Oxley Act (SOX)",
+      "E.1.i External Auditing",
+      "E.1.j Systems Controls"
+    ],
+    "losPrecisionRequirement": "LOSTag must reference a specific CSO LOS (e.g., 'E.1.e Segregation of duties') not a generic section label ('E. Internal controls'). Verified against IMA CMA Part 1 Content Specification Outline."
+  },
+
+  "qualityRequirements": {
+    "explanationCorrect": {
+      "minimumLength": 400,
+      "requiredElements": [
+        "Principle or framework citation (COSO, SOX, GAAS)",
+        "Why the correct answer is correct (substantive reasoning)",
+        "Common exam trap or misconception identified",
+        "Calculation walkthrough if applicable (formula + steps)"
+      ]
+    },
+    "explanationWrong": {
+      "perDistractor": {
+        "minimumLength": 100,
+        "requirement": "Choice-specific — explains WHY this specific choice is wrong. References the specific concept, framework, or calculation error that would lead to this choice."
+      },
+      "dl008Compliance": "EW[CorrectChoice] must be empty string. Non-negotiable."
+    },
+    "distractors": {
+      "plausibility": "Must represent a genuine misconception, calculation error, or plausible alternative — not an obviously wrong throwaway",
+      "specificity": "Each distractor must be topic-specific and draw from common CMA exam traps",
+      "misconceptionBasis": "Derived from documented learner errors, not invented for the item"
+    },
+    "stem": {
+      "clarity": "Unambiguous. Contains all data needed to answer. No trick wording.",
+      "completeness": "No hidden assumptions. All values explicitly stated.",
+      "fairness": "Tests knowledge of the topic, not reading comprehension or esoteric terminology"
+    },
+    "metadata": {
+      "difficultyScore": "Realistic — no DL-031 inflation",
+      "cognitiveLevel": "Accurate — matches actual cognitive demand",
+      "topics": "Precise — specific CSO LOS, not generic section label",
+      "losTag": "CSO-formatted (e.g., 'E.1.e')",
+      "productionStatus": "Draft → Technical Review → Blueprint Review → QA Review → Certification Candidate"
+    },
+    "antiPatterns": [
+      { "pattern": "Template boilerplate", "defect": "DL-013", "example": "\"[Explanation of why X is correct]\"", "prevention": "Never use template text. All explanations must be original." },
+      { "pattern": "Generic EW", "defect": "DL-021/026", "example": "\"This is incorrect\"", "prevention": "Every EW must be choice-specific." },
+      { "pattern": "Non-empty EW[CC]", "defect": "DL-008", "prevention": "EW at CorrectChoice index must always be empty." },
+      { "pattern": "Difficulty inflation", "defect": "DL-031", "example": "Definition-recall labeled Moderate", "prevention": "Definition recall = Easy." },
+      { "pattern": "Cross-contaminated content", "defect": "DL-010/DL-016", "prevention": "Verify EC matches stem topic before submission." }
+    ]
+  },
+
+  "replacementStrategy": {
+    "cloneGroupConsolidation": "Each clone group (1 seed + 3 rotated clones) → 1 replacement item. This collapses 129 archived clones into 43 unique items covering the same topics.",
+    "answerRotation": "Use different CorrectChoice letter than original seed to prevent answer memorization by learners who encountered the seed previously.",
+    "ewAuthoring": "Author EC and all 3 EW fields during item creation — do not defer to separate EW pass. This prevents DL-021/026 empty-slot defects."
+  },
+
+  "benchmark": {
+    "source": "Pack B Section E",
+    "items": 75,
+    "reason": "100% certified. Gold standard for Section E quality. All items have substantive EC (400+ chars), choice-specific EW, and precise metadata."
+  },
+
+  "governanceCompliance": {
+    "dl008": "EW[CorrectChoice] = empty — verified at Technical Review gate",
+    "dl013": "No template boilerplate — verified at Technical Review gate",
+    "dl026": "All non-CC EW slots non-empty — verified at Technical Review gate",
+    "dl031": "DifficultyScore realistic — verified at Blueprint Review gate",
+    "caqs16": "Six-dimension verification (Correctness, Precision, Difficulty, Distractor, Blueprint, Relevance) — HIGH confidence required for Certification Candidate"
+  },
+
+  "implementationSessions": "S805-S807 (Phase 2 of 800-series execution roadmap)"
+}

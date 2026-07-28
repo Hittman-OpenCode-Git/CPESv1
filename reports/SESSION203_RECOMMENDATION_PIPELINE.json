@@ -1,0 +1,75 @@
+{
+  "document": "SESSION203_RECOMMENDATION_PIPELINE",
+  "session": "S203",
+  "title": "Recommendation Pipeline — Implementation Specification",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION203_IDENTITY_ENGINE_SPEC.json",
+  "authority": "S202 Addendum A-01, A-02",
+  "purpose": "Defines the recommendation registry as a first-class platform service. Recommendations are no longer report-only artifacts — they become traceable objects with full lifecycle management, session linking, and question-level resolution. This addresses the S809.1/S809.2 gap where recommendations existed but could not launch work.",
+  "constraints": ["No content changes", "No certification activity", "No governance changes", "No deployment"],
+
+  "recommendation_entity": {
+    "description": "A Recommendation is a first-class platform object that links a finding to executable work. It carries a full lifecycle (OPEN → CLOSED), session assignment, question references, and closure evidence.",
+    "required_fields": {
+      "RecommendationId": {"type": "String", "pattern": "^REC-\\d{4}-\\d{3}$", "example": "REC-0810-014", "description": "Globally unique. Format: REC-{SourceSession}-{NNN}. NNN is sequential within source session."},
+      "SourceSession": {"type": "String", "pattern": "^S\\d{3}(\\.\\d)?$", "example": "S809.1", "description": "Session that discovered the finding and created the recommendation."},
+      "Priority": {"type": "String", "enum": ["P0", "P1", "P2", "P3"], "description": "P0 = learner-pool exposure (answer-key error, structural defect on Certified item). P1 = certification-blocking. P2 = editorial quality. P3 = low-priority enhancement."},
+      "Status": {"type": "String", "enum": ["OPEN", "ASSIGNED", "IN_PROGRESS", "VERIFIED", "CLOSED"], "description": "Lifecycle state."},
+      "FindingType": {"type": "String", "enum": ["DL-008", "DL-010", "DL-013", "DL-016", "DL-026", "DL-030", "DL-031", "EV3", "EV8", "JSON_INTEGRITY", "IDENTITY", "CERTIFICATION", "EDITORIAL", "METADATA", "OTHER"], "description": "Defect class or improvement category."},
+      "TargetSession": {"type": "String", "example": "S811", "description": "Session assigned to execute the recommendation."},
+      "LinkedQuestions": {"type": "Array[String]", "example": ["P1-EC-024", "P1-EC-061"], "description": "QuestionIDs affected. Resolved via compound-key identity."},
+      "LinkedReports": {"type": "Array[String]", "example": ["reports/S809.2/detailed_audit.json"], "description": "Report files providing evidence for the finding."},
+      "Owner": {"type": "String", "example": "Agent B — DL-026 Remediation", "description": "Persona or role responsible for execution."},
+      "CreatedDate": {"type": "String", "format": "date-time"},
+      "ClosedDate": {"type": ["String", "null"], "format": "date-time"},
+      "ClosureEvidence": {"type": ["String", "null"], "example": "reports/S811/verification_report.json", "description": "File reference to evidence that the recommendation was executed and verified."}
+    },
+    "optional_fields": {
+      "Description": {"type": "String", "description": "Human-readable description of the finding and recommended action."},
+      "BatchPlan": {"type": "Object", "description": "Proposed batch breakdown with estimated item counts per batch."},
+      "BlockedBy": {"type": "Array[String]", "description": "Other RecommendationIds that must be completed first."},
+      "Notes": {"type": "String", "description": "Free-text notes for executor."}
+    }
+  },
+
+  "lifecycle": {
+    "states": {
+      "OPEN": {"description": "Recommendation created but not yet assigned to a session.", "next": ["ASSIGNED"]},
+      "ASSIGNED": {"description": "Recommendation assigned to a target session. Work queued but not started.", "next": ["IN_PROGRESS", "OPEN"]},
+      "IN_PROGRESS": {"description": "Execution underway. Linked questions being remediated.", "next": ["VERIFIED", "ASSIGNED"]},
+      "VERIFIED": {"description": "Execution complete. Independent verification passed. Awaiting closure sign-off.", "next": ["CLOSED", "IN_PROGRESS"]},
+      "CLOSED": {"description": "Recommendation fully executed and verified. Closure evidence recorded.", "next": []}
+    },
+    "transitions": [
+      {"from": "OPEN", "to": "ASSIGNED", "trigger": "Session assignment", "requires": "TargetSession must be specified"},
+      {"from": "ASSIGNED", "to": "IN_PROGRESS", "trigger": "Work begins", "requires": "Owner acknowledges assignment"},
+      {"from": "IN_PROGRESS", "to": "VERIFIED", "trigger": "Work complete + independent verification", "requires": "ClosureEvidence file exists and is valid"},
+      {"from": "VERIFIED", "to": "CLOSED", "trigger": "Governance Board sign-off", "requires": "ClosureEvidence referenced, defect flags updated in registry"},
+      {"from": "ASSIGNED", "to": "OPEN", "trigger": "De-assignment (backlog)", "requires": "TargetSession and Owner cleared"},
+      {"from": "IN_PROGRESS", "to": "ASSIGNED", "trigger": "Work paused / returned to queue", "requires": "Notes updated with pause reason"}
+    ]
+  },
+
+  "recommendation_registry": {
+    "file": "knowledge/RECOMMENDATION_REGISTRY.json",
+    "description": "Persistent store of all recommendations. Generated and maintained by the Recommendation Pipeline engine.",
+    "governance": "Append-only for new recommendations. Status transitions logged. Never hand-edited.",
+    "exports": {
+      "createRecommendation(finding)": "Generates RecommendationId, pushes to registry with status OPEN. Returns recommendation object.",
+      "assignToSession(recommendationId, sessionId)": "Status → ASSIGNED. TargetSession set.",
+      "startWork(recommendationId)": "Status → IN_PROGRESS.",
+      "submitForVerification(recommendationId, evidencePath)": "Status → VERIFIED. ClosureEvidence set.",
+      "closeRecommendation(recommendationId, authorizerId)": "Status → CLOSED. ClosedDate set. Registry entry locked.",
+      "getBySession(sessionId)": "Returns all recommendations for a session (source or target).",
+      "getByQuestion(qid)": "Returns all recommendations linked to a question.",
+      "getByStatus(status)": "Returns all recommendations with given status.",
+      "getOpenCount()": "Returns counts by priority and finding type."
+    }
+  },
+
+  "implementation_file": "scripts/engine/recommendation/recommendation_pipeline.js",
+
+  "strategic_outcome": "Framework v2 enables: Finding → Recommendation → Session → Execution → Verification → Closure. The S809 chain (4 sessions, 60 agents, 0 writes) is prevented because recommendations block re-review of the same finding and route directly to execution."
+}

@@ -1,0 +1,61 @@
+{
+  "session": "515",
+  "agent": "D",
+  "target": "MIGRATED_CASE_BASE_C (scored_cases3.js)",
+  "case_count": 15,
+  "item_count": 75,
+  "d2_4_5_summary": {
+    "d2_explanation_sufficiency": { "pass": 75, "fail": 0 },
+    "d3_distractor_rationale": { "pass": 14, "fail": 38, "na": 23 },
+    "d4_authoritative_references": { "pass": 0, "fail": 75 },
+    "d5_case_realism": { "pass": 45, "fail": 30 }
+  },
+  "critical_findings": [
+    {
+      "id": "S515-D4-001",
+      "severity": "High",
+      "description": "UNIVERSAL D4 FAILURE: All 75 items lack authoritative citations (ASC, COSO, IFRS, IAS, IMA) in explanation text. Explanations use generic descriptions without naming the specific governing standard. Per CAQS §4.1 EV3, explanations must reference the governing accounting principle by name. However, per S515 prompt D4 criteria, 'absence of a citation is not a blocker unless the item clearly requires one under project standards' — this finding is documented for S516 uplift, not as a certification blocker.",
+      "examples": [
+        "CASE-C7-Q1: Explains acquisition method fair value measurement without citing ASC 805",
+        "CASE-C1-Q1: Explains revenue allocation to performance obligations without citing ASC 606",
+        "CASE-C5-Q2: Explains control environment/tone at the top without citing COSO"
+      ]
+    },
+    {
+      "id": "S515-D3-001",
+      "severity": "Medium",
+      "description": "SYSTEMATIC D3 FAILURE: 36 of 37 select-type items have zero distractor rationale in the single Explanation field. Multi-type items fare better (13/15 include why the wrong choice is excluded). Fill and numeric items are N/A (no distractors).",
+      "affected": "38 items total (36 select + 2 multi lacking explicit wrong-choice discussion)"
+    },
+    {
+      "id": "S515-D5-001",
+      "severity": "Medium",
+      "description": "SYSTEMATIC D5 FAILURE: All 30 Q4 (multi) and Q5 (fill) items are generic — they test broad concepts without referencing the case company, scenario, or data. The first 3 items per case (Q1-Q3) consistently reference the case company and scenario; Q4-Q5 items never do. This structural pattern suggests the migration template placed generic concept-testing items in positions 4-5.",
+      "case_q1_q3_pass": 45,
+      "case_q4_q5_fail": 30
+    },
+    {
+      "id": "S515-D1-001",
+      "severity": "CRITICAL",
+      "description": "CASE-C1-Q4 choice-text error confirmed: multi-select choice says 'The asset has an alternative use' but ASC 606-10-25-27(c) requires NO alternative use. Explanation correctly states 'no alternative use' — choice text and explanation are contradictory.",
+      "fix": "Must change choice text before certification."
+    }
+  ],
+  "explanation_quality_notes": {
+    "avg_length": "~90 characters — adequate for concept identification but too short for CMA exam-level instructional quality",
+    "strengths": [
+      "All explanations are factually accurate",
+      "Numeric items consistently show formula + substitution + result",
+      "Multi-select items consistently explain why the excluded choice is wrong (13/15)",
+      "Q1-Q3 items consistently reference case scenario facts",
+      "StudyLinks present on all items (provides external reference even without inline citation)"
+    ],
+    "weaknesses": [
+      "Zero citations to authoritative accounting standards (ASC, COSO, IFRS) anywhere in explanations",
+      "Select-type items rarely discuss why specific distractors are wrong",
+      "Q4-Q5 items are generic rather than case-grounded",
+      "Single-sentence format for most fill/select items",
+      "No common CMA exam traps identified in any explanation"
+    ]
+  }
+}

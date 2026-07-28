@@ -1,0 +1,422 @@
+{
+  "gate0": {
+    "status": "PASS",
+    "collisions": []
+  },
+  "dl008": {
+    "status": "PASS",
+    "violations": []
+  },
+  "dl026": {
+    "status": "PASS",
+    "violations": []
+  },
+  "ewIntegrity": {
+    "status": "PASS",
+    "details": [
+      {
+        "qid": "P1-E-R34",
+        "cc": "C",
+        "slots": {
+          "ExplanationWrongA": "OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "EMPTY_OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R35",
+        "cc": "A",
+        "slots": {
+          "ExplanationWrongA": "EMPTY_OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R36",
+        "cc": "D",
+        "slots": {
+          "ExplanationWrongA": "OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "OK",
+          "ExplanationWrongD": "EMPTY_OK"
+        }
+      },
+      {
+        "qid": "P1-E-R26",
+        "cc": "B",
+        "slots": {
+          "ExplanationWrongA": "OK",
+          "ExplanationWrongB": "EMPTY_OK",
+          "ExplanationWrongC": "OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R27",
+        "cc": "A",
+        "slots": {
+          "ExplanationWrongA": "EMPTY_OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R29",
+        "cc": "C",
+        "slots": {
+          "ExplanationWrongA": "OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "EMPTY_OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R37",
+        "cc": "B",
+        "slots": {
+          "ExplanationWrongA": "OK",
+          "ExplanationWrongB": "EMPTY_OK",
+          "ExplanationWrongC": "OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R38",
+        "cc": "A",
+        "slots": {
+          "ExplanationWrongA": "EMPTY_OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R39",
+        "cc": "C",
+        "slots": {
+          "ExplanationWrongA": "OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "EMPTY_OK",
+          "ExplanationWrongD": "OK"
+        }
+      },
+      {
+        "qid": "P1-E-R40",
+        "cc": "D",
+        "slots": {
+          "ExplanationWrongA": "OK",
+          "ExplanationWrongB": "OK",
+          "ExplanationWrongC": "OK",
+          "ExplanationWrongD": "EMPTY_OK"
+        }
+      }
+    ],
+    "avgChars": 435,
+    "totalSlots": 30
+  },
+  "fieldCompleteness": {
+    "status": "PASS",
+    "missing": []
+  },
+  "dl013": {
+    "status": "PASS",
+    "violations": []
+  },
+  "difficulty": {
+    "status": "PASS",
+    "items": [
+      {
+        "qid": "P1-E-R34",
+        "difficulty": "Easy",
+        "score": 2,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R35",
+        "difficulty": "Easy",
+        "score": 2,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R36",
+        "difficulty": "Moderate",
+        "score": 3,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R26",
+        "difficulty": "Moderate",
+        "score": 3,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R27",
+        "difficulty": "Moderate",
+        "score": 3,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R29",
+        "difficulty": "Easy",
+        "score": 2,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R37",
+        "difficulty": "Moderate",
+        "score": 3,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R38",
+        "difficulty": "Moderate",
+        "score": 3,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R39",
+        "difficulty": "Moderate",
+        "score": 3,
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R40",
+        "difficulty": "Moderate",
+        "score": 3,
+        "valid": true
+      }
+    ]
+  },
+  "cognitiveLevel": {
+    "status": "PASS",
+    "items": [
+      {
+        "qid": "P1-E-R34",
+        "level": "Understand",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R35",
+        "level": "Understand",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R36",
+        "level": "Apply",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R26",
+        "level": "Apply",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R27",
+        "level": "Apply",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R29",
+        "level": "Understand",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R37",
+        "level": "Apply",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R38",
+        "level": "Apply",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R39",
+        "level": "Apply",
+        "valid": true
+      },
+      {
+        "qid": "P1-E-R40",
+        "level": "Understand",
+        "valid": true
+      }
+    ]
+  },
+  "ecLength": {
+    "status": "PASS",
+    "items": [
+      {
+        "qid": "P1-E-R34",
+        "chars": 1111,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R35",
+        "chars": 947,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R36",
+        "chars": 993,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R26",
+        "chars": 989,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R27",
+        "chars": 1061,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R29",
+        "chars": 1085,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R37",
+        "chars": 1319,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R38",
+        "chars": 938,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R39",
+        "chars": 1137,
+        "ok": true
+      },
+      {
+        "qid": "P1-E-R40",
+        "chars": 1450,
+        "ok": true
+      }
+    ]
+  },
+  "choices": {
+    "status": "PASS",
+    "items": [
+      {
+        "qid": "P1-E-R34",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R35",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R36",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R26",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R27",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R29",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R37",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R38",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R39",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      },
+      {
+        "qid": "P1-E-R40",
+        "allPresent": true,
+        "ccValid": true,
+        "missing": []
+      }
+    ]
+  },
+  "qidFormat": {
+    "status": "PASS",
+    "invalid": []
+  },
+  "summary": {
+    "allPass": true,
+    "checks": [
+      {
+        "check": "gate0",
+        "status": "PASS"
+      },
+      {
+        "check": "dl008",
+        "status": "PASS"
+      },
+      {
+        "check": "dl026",
+        "status": "PASS"
+      },
+      {
+        "check": "ewIntegrity",
+        "status": "PASS"
+      },
+      {
+        "check": "fieldCompleteness",
+        "status": "PASS"
+      },
+      {
+        "check": "dl013",
+        "status": "PASS"
+      },
+      {
+        "check": "difficulty",
+        "status": "PASS"
+      },
+      {
+        "check": "cognitiveLevel",
+        "status": "PASS"
+      },
+      {
+        "check": "ecLength",
+        "status": "PASS"
+      },
+      {
+        "check": "choices",
+        "status": "PASS"
+      },
+      {
+        "check": "qidFormat",
+        "status": "PASS"
+      }
+    ]
+  }
+}

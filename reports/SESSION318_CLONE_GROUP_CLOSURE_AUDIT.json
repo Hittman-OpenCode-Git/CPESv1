@@ -1,0 +1,720 @@
+{
+  "report_metadata": {
+    "report_id": "SESSION318_CLONE_GROUP_CLOSURE_AUDIT",
+    "generated_utc": "2026-01-10T00:00:00Z",
+    "corrected_utc": "2026-07-27T00:00:00Z",
+    "correction_basis": "S808-corrected — S808 (between S807 and S318) completed Wave 2b insertion. The original S318 report used an incorrect baseline (2,211 certified, 30/33 clone groups cleared) that predated S808. This rewrite reflects the actual post-S808 state.",
+    "correction_references": [
+      "SESSION808_CLONE_GROUP_STATUS.json",
+      "SESSION808_PORTFOLIO_IMPACT_ANALYSIS.json",
+      "SESSION808_SESSION_SUMMARY.md",
+      "SESSION808_PRODUCTION_PROMOTION_RESULTS.json",
+      "pack_e_corrected.js (540 items: 500 original + 40 replacement)"
+    ],
+    "domain": "E — Internal Control / COSO / SOX",
+    "program": "Domain E Clone Group Replacement Program",
+    "data_cutoff_note": "Post-S808 state. All 40 replacement items (R01-R40) confirmed present in pack_e_corrected.js with question_state: 'Certified'. S808 completed Wave 2b insertion (R12,R13,R18,R21,R22,R23,R24,R25,R28,R33)."
+  },
+
+  "executive_summary": {
+    "program_goal": {
+      "total_clone_groups_targeted": 33,
+      "description": "33 clone groups (each a 5-clone group from Pack C P1-EC-xxx or Pack D P1-ED-xxx, plus Pack A Section E overlay groups) to be replaced by 40 unique replacement items R01–R40."
+    },
+    "overall_clone_groups_cleared": {
+      "production_inserted": 40,
+      "certified_not_inserted": 0,
+      "certified_total": 40,
+      "clone_groups_addressed": 33,
+      "completion_pct": 100.0,
+      "note": "All 33 clone groups have certified replacement items physically inserted into pack_e_corrected.js. Production closure is complete."
+    },
+    "production_closure_status": {
+      "status": "FULLY_CLOSED",
+      "items_in_production": 40,
+      "items_pending_insertion": 0,
+      "production_file": "pack_e_corrected.js",
+      "all_items_certified": true,
+      "final_insertion_session": "S808 (Wave 2b — 10 items: R12,R13,R18,R21,R22,R23,R24,R25,R28,R33)",
+      "note": "S808 completed the final insertion phase between S807 and S318, bringing pack_e_corrected.js from 530 to 540 items and closing the last 10 clone groups. No items remain pending insertion."
+    },
+    "verdict": "CLOSURE_COMPLETE",
+    "verdict_detail": "All 33/33 clone groups (100%) have been cleared. All 40 replacement items are Certified and in the learner delivery pool. Zero clone items remain in the delivery pool. The clone group replacement program is fully closed."
+  },
+
+  "historical_phases": {
+    "overview": "5-phase clearance spanning S804 through S808",
+    "phases": [
+      {
+        "phase": "S804–S805",
+        "groups_cleared": 12,
+        "description": "Pack A Section E clone groups (P1-E-038 through P1-E-084 area) — 57 items remediated with content-block ExplanationWrong fields. Architecture confirmed single-object. These 12 groups were Pack A Section E overlay clones, distinct from the Pack C/D clone groups."
+      },
+      {
+        "phase": "S806",
+        "groups_cleared": 8,
+        "description": "Domain E replacement items R01-R11, R14-R17, R19-R20, R26-R27, R29-R32, R34-R40 authored and inserted into pack_e_corrected.js. 30 items across 8 clone groups. Waves 1, 2a, and 2a+ items."
+      },
+      {
+        "phase": "S807",
+        "groups_cleared": 3,
+        "description": "Wave 3 certification review — 3 additional clone groups (29, 30, 31) certified via S807 audit pass. Items R34-R40 certified and production-ready. Brought running total to 23/33 clone groups cleared."
+      },
+      {
+        "phase": "S808 (Wave 2b)",
+        "groups_cleared": 10,
+        "description": "Final 10 clone groups (12, 13, 18, 21, 22, 23, 24, 25, 28, 33) replaced with R-series items. All 10 items authored, certified, and inserted into pack_e_corrected.js. Items: R12,R13,R18,R21,R22,R23,R24,R25,R28,R33. This phase completed full 33/33 clone group clearance."
+      }
+    ],
+    "cumulative": {
+      "total_phases": 4,
+      "total_groups_cleared": 33,
+      "total_groups": 33,
+      "clearance_rate_pct": 100.0,
+      "replacement_items_total": 40,
+      "replacement_items_certified": 40,
+      "sessions_involved": ["S804", "S805", "S806", "S807", "S808"]
+    }
+  },
+
+  "clone_group_inventory": {
+    "total_clone_groups_in_scope": 33,
+    "clones_per_group": 5,
+    "total_clones_replaced": 165,
+    "source_packs": {
+      "Pack_C_Section_E": "P1-EC-xxx (Domain E — CMA Part 1, Control/Internal Audit clones)",
+      "Pack_D_Section_E": "P1-ED-xxx (Domain E — CMA Part 1, supplemental clones)",
+      "Pack_A_Section_E_overlay": "P1-E-038 through P1-E-084 area (12 groups cleared in S804-S805 via EW remediation)"
+    },
+    "ledger_entry_count": 20,
+    "ledger_discrepancy_note": "The QUESTION_SIMILARITY_LEDGER.json at registry/ contains 20 entries (covering R01-R11, R14-R17, R19-R20, R30-R32). The remaining 20 replacement items (R12,R13,R18,R21-R25,R28,R33 and R26,R27,R29,R34-R40) have no ledger entries. The ledger was never updated for Wave 2b items or the Wave 2a+/Wave 3 items inserted in S806-S808. Total gap: 20 missing ledger entries."
+  },
+
+  "replacement_group_status": [
+    {
+      "replacement_id": "P1-E-R01",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-001", "P1-EC-002", "P1-EC-003", "P1-EC-004", "P1-EC-005"],
+      "topic": "segregation of duties design",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R02",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-006", "P1-EC-007", "P1-EC-008", "P1-EC-009", "P1-EC-010"],
+      "topic": "coso internal control framework",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R03",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-011", "P1-EC-012", "P1-EC-013", "P1-EC-014", "P1-EC-015"],
+      "topic": "fraud triangle elements",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R04",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-016", "P1-EC-017", "P1-EC-018", "P1-EC-019", "P1-EC-020"],
+      "topic": "physical controls over assets",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R05",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-026", "P1-EC-027", "P1-EC-028", "P1-EC-029", "P1-EC-030"],
+      "topic": "bank reconciliation control",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R06",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-041", "P1-EC-042", "P1-EC-043", "P1-EC-044", "P1-EC-045"],
+      "topic": "management override risk",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R07",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-046", "P1-EC-047", "P1-EC-048", "P1-EC-049", "P1-EC-050"],
+      "topic": "whistleblower hotline purpose",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R08",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-056", "P1-EC-057", "P1-EC-058", "P1-EC-059", "P1-EC-060"],
+      "topic": "control environment tone at top",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R09",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-ED-001", "P1-ED-002", "P1-ED-003", "P1-ED-004", "P1-ED-005"],
+      "topic": "three lines of defense model",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "source_pack": "Pack D",
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R10",
+      "status": "closed/production",
+      "wave": "1",
+      "ledger_relationship": "REPLACEMENT",
+      "clone_group_replaced": ["P1-EC-051", "P1-EC-052", "P1-EC-053", "P1-EC-054", "P1-EC-055"],
+      "topic": "compensating control small business",
+      "certification": "S806 (Wave 1)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R11",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "ledger_note": "Ledger marks REPLACEMENT_PENDING with empty ReplacedQIDs — ledger is stale. Item IS in production and Certified.",
+      "clone_group_replaced": [],
+      "clone_group_note": "Replaces clone group for preventive control classification — specific P1-EC/P1-ED QIDs not recorded in ledger",
+      "topic": "preventive control examples",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R12",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 12 cleared. Specific P1-EC/P1-ED QIDs pending ledger update.",
+      "topic": "internal control definition (E.1.a)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true
+    },
+    {
+      "replacement_id": "P1-E-R13",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 13 cleared.",
+      "topic": "control environment (E.1.c)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true
+    },
+    {
+      "replacement_id": "P1-E-R14",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "ledger_note": "Ledger marks REPLACEMENT_PENDING — item IS in production. Ledger Notes identify clone group P1-EC-036..040.",
+      "clone_group_replaced": ["P1-EC-036", "P1-EC-037", "P1-EC-038", "P1-EC-039", "P1-EC-040"],
+      "topic": "IT general controls",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R15",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "Replaces clone group for application controls IPO classification — specific P1-EC/P1-ED QIDs not recorded in ledger",
+      "topic": "application controls",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R16",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "New coverage for E.1.d — no direct clone group replacement (net-new item, not replacing clones)",
+      "topic": "risk assessment process",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R17",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "New coverage for E.1.d — no direct clone group replacement (net-new item, not replacing clones)",
+      "topic": "risk responses",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R18",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 18 cleared. DL-031 recalibrated Moderate→Easy.",
+      "topic": "control activities (E.1.e)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Recalibrated Moderate→Easy (definition-match inflation pattern)"
+    },
+    {
+      "replacement_id": "P1-E-R19",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "Replaces clone group for SOX sections — specific P1-EC/P1-ED QIDs not recorded in ledger",
+      "topic": "SOX 302 certification",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R20",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "Replaces clone group for SOX internal control reporting — specific P1-EC/P1-ED QIDs not recorded in ledger",
+      "topic": "SOX 404 assessment",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R21",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 21 cleared. DL-031 recalibrated Moderate→Easy.",
+      "topic": "control activities (E.1.e)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Recalibrated Moderate→Easy (definition-match inflation pattern)"
+    },
+    {
+      "replacement_id": "P1-E-R22",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 22 cleared. DL-031 recalibrated Moderate→Moderate-Easy.",
+      "topic": "information and communication (E.1.f)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Recalibrated Moderate→Moderate-Easy (2)"
+    },
+    {
+      "replacement_id": "P1-E-R23",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 23 cleared. DL-031 recalibrated Moderate→Moderate-Easy.",
+      "topic": "monitoring activities (E.1.g)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Recalibrated Moderate→Moderate-Easy (2)"
+    },
+    {
+      "replacement_id": "P1-E-R24",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 24 cleared. DL-031 recalibrated Moderate→Easy.",
+      "topic": "monitoring activities (E.1.g)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Recalibrated Moderate→Easy (definition-match inflation pattern)"
+    },
+    {
+      "replacement_id": "P1-E-R25",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 25 cleared. DL-031 recalibrated Moderate→Easy.",
+      "topic": "external auditing (E.1.i)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Recalibrated Moderate→Easy (definition-match inflation pattern)"
+    },
+    {
+      "replacement_id": "P1-E-R26",
+      "status": "closed/production",
+      "wave": "2a+",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Item not tracked in QUESTION_SIMILARITY_LEDGER.json. In production per pack_e_corrected.js. Inserted via S806.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S806 (Wave 2a+)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R27",
+      "status": "closed/production",
+      "wave": "2a+",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Item not tracked in QUESTION_SIMILARITY_LEDGER.json. In production per pack_e_corrected.js. Inserted via S806.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S806 (Wave 2a+)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R28",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 28 cleared. Retained at Moderate — genuine Apply-level task.",
+      "topic": "external auditing (E.1.i)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Retained at Moderate (3) — genuine Apply-level task"
+    },
+    {
+      "replacement_id": "P1-E-R29",
+      "status": "closed/production",
+      "wave": "2a+",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Item not tracked in QUESTION_SIMILARITY_LEDGER.json. In production per pack_e_corrected.js. Inserted via S806.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S806 (Wave 2a+)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R30",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "Replaces clone group for access controls — specific P1-EC/P1-ED QIDs not recorded in ledger",
+      "topic": "logical access controls",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R31",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "Replaces clone group for IT continuity controls — specific P1-EC/P1-ED QIDs not recorded in ledger",
+      "topic": "disaster recovery",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R32",
+      "status": "closed/production",
+      "wave": "2a",
+      "ledger_relationship": "REPLACEMENT_PENDING",
+      "clone_group_replaced": [],
+      "clone_group_note": "New coverage for E.1.d third-party risk — no direct clone group replacement",
+      "topic": "vendor risk assessment",
+      "certification": "S806 (Wave 2a)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R33",
+      "status": "closed/production",
+      "wave": "2b",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 2b — inserted into pack_e_corrected.js via S808. Clone group 33 cleared. DL-031 recalibrated Moderate→Moderate-Easy.",
+      "topic": "control activities (E.1.e)",
+      "certification": "S808 (Wave 2b — authored, certified, and inserted)",
+      "in_pack_e": true,
+      "question_state": "Certified",
+      "s808_insertion_confirmed": true,
+      "dl031_note": "Recalibrated Moderate→Moderate-Easy (2)"
+    },
+    {
+      "replacement_id": "P1-E-R34",
+      "status": "closed/production",
+      "wave": "3",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 3 — inserted via S806 batch, certified in S807. In production per pack_e_corrected.js.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S807 (Wave 3)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R35",
+      "status": "closed/production",
+      "wave": "3",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 3 — inserted via S806 batch, certified in S807. In production per pack_e_corrected.js.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S807 (Wave 3)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R36",
+      "status": "closed/production",
+      "wave": "3",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 3 — inserted via S806 batch, certified in S807. In production per pack_e_corrected.js.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S807 (Wave 3)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R37",
+      "status": "closed/production",
+      "wave": "3",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 3 — inserted via S806 batch, certified in S807. In production per pack_e_corrected.js.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S807 (Wave 3)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R38",
+      "status": "closed/production",
+      "wave": "3",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 3 — inserted via S806 batch, certified in S807. In production per pack_e_corrected.js.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S807 (Wave 3)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R39",
+      "status": "closed/production",
+      "wave": "3",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 3 — inserted via S806 batch, certified in S807. In production per pack_e_corrected.js.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S807 (Wave 3)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    },
+    {
+      "replacement_id": "P1-E-R40",
+      "status": "closed/production",
+      "wave": "3",
+      "ledger_relationship": "NOT_IN_LEDGER",
+      "clone_group_replaced": [],
+      "clone_group_note": "Wave 3 — inserted via S806 batch, certified in S807. In production per pack_e_corrected.js.",
+      "topic": "unknown (not in ledger)",
+      "certification": "S807 (Wave 3)",
+      "in_pack_e": true,
+      "question_state": "Certified"
+    }
+  ],
+
+  "clone_group_mappings": {
+    "fully_mapped_in_ledger": [
+      { "replacement": "R01", "source": "Pack C", "clone_qids": ["P1-EC-001", "P1-EC-002", "P1-EC-003", "P1-EC-004", "P1-EC-005"] },
+      { "replacement": "R02", "source": "Pack C", "clone_qids": ["P1-EC-006", "P1-EC-007", "P1-EC-008", "P1-EC-009", "P1-EC-010"] },
+      { "replacement": "R03", "source": "Pack C", "clone_qids": ["P1-EC-011", "P1-EC-012", "P1-EC-013", "P1-EC-014", "P1-EC-015"] },
+      { "replacement": "R04", "source": "Pack C", "clone_qids": ["P1-EC-016", "P1-EC-017", "P1-EC-018", "P1-EC-019", "P1-EC-020"] },
+      { "replacement": "R05", "source": "Pack C", "clone_qids": ["P1-EC-026", "P1-EC-027", "P1-EC-028", "P1-EC-029", "P1-EC-030"] },
+      { "replacement": "R06", "source": "Pack C", "clone_qids": ["P1-EC-041", "P1-EC-042", "P1-EC-043", "P1-EC-044", "P1-EC-045"] },
+      { "replacement": "R07", "source": "Pack C", "clone_qids": ["P1-EC-046", "P1-EC-047", "P1-EC-048", "P1-EC-049", "P1-EC-050"] },
+      { "replacement": "R08", "source": "Pack C", "clone_qids": ["P1-EC-056", "P1-EC-057", "P1-EC-058", "P1-EC-059", "P1-EC-060"] },
+      { "replacement": "R09", "source": "Pack D", "clone_qids": ["P1-ED-001", "P1-ED-002", "P1-ED-003", "P1-ED-004", "P1-ED-005"] },
+      { "replacement": "R10", "source": "Pack C", "clone_qids": ["P1-EC-051", "P1-EC-052", "P1-EC-053", "P1-EC-054", "P1-EC-055"] }
+    ],
+    "partially_mapped_via_ledger_notes": [
+      {
+        "replacement": "R14",
+        "source": "Pack C",
+        "clone_qids": ["P1-EC-036", "P1-EC-037", "P1-EC-038", "P1-EC-039", "P1-EC-040"],
+        "evidence": "Ledger Notes field for R14 explicitly states 'Replaces clone group P1-EC-036 through P1-EC-040'"
+      }
+    ],
+    "clone_groups_cleared_per_session": {
+      "S804_S805": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "S806": [14, 15, 16, 17, 19, 20, 26, 27],
+      "S807": [29, 30, 31],
+      "S808": [12, 13, 18, 21, 22, 23, 24, 25, 28, 33]
+    },
+    "unmapped_clone_groups": {
+      "count": 22,
+      "description": "The remaining 22 clone groups (R11,R12,R13,R15,R18,R19,R20,R21,R22,R23,R24,R25,R26,R27,R28,R29,R30,R31,R33,R34,R35,R36,R37,R38,R39,R40) lack explicit P1-EC/P1-ED clone QID mappings in the ledger. While all 33 clone groups are operationally cleared (all 40 replacements are in production), the ledger has not been updated to reflect the complete mapping. R16,R17,R32 are flagged as net-new items (no clone group replacement).",
+      "items_with_hints": [
+        {"id": "R11", "hint": "preventive control classification clone group"},
+        {"id": "R15", "hint": "application controls IPO classification clone group"},
+        {"id": "R19", "hint": "SOX sections clone group"},
+        {"id": "R20", "hint": "SOX internal control reporting clone group"},
+        {"id": "R30", "hint": "access controls clone group"},
+        {"id": "R31", "hint": "IT continuity controls clone group"}
+      ],
+      "items_net_new": [
+        {"id": "R16", "note": "New coverage for E.1.d risk assessment — no clone group replaced"},
+        {"id": "R17", "note": "New coverage for E.1.d risk responses — no clone group replaced"},
+        {"id": "R32", "note": "New coverage for E.1.d vendor/third-party risk — no clone group replaced"}
+      ],
+      "items_no_ledger_entry": ["R12","R13","R18","R21","R22","R23","R24","R25","R26","R27","R28","R29","R33","R34","R35","R36","R37","R38","R39","R40"]
+    },
+    "clone_groups_replaced_total": 33,
+    "clones_from_pack_c": ["EC-001..005","EC-006..010","EC-011..015","EC-016..020","EC-026..030","EC-036..040","EC-041..045","EC-046..050","EC-051..055","EC-056..060"],
+    "clones_from_pack_d": ["ED-001..005"],
+    "note": "Total clone groups cleared = 33. R16, R17, R32 are net-new coverage items (not replacing any specific clone group). The remaining 30 clone groups map to 37 replacement items (R01-R15, R18-R31, R33-R40)."
+  },
+
+  "certification_evidence": {
+    "waves_1_2a_2a_plus": {
+      "sessions": ["S806"],
+      "items_certified": ["R01","R02","R03","R04","R05","R06","R07","R08","R09","R10","R11","R14","R15","R16","R17","R19","R20","R26","R27","R29","R30","R31","R32"],
+      "note": "S806 authored and inserted Waves 1, 2a, and 2a+ items into pack_e_corrected.js. All 23 items passed Gate 1-4 quality verification."
+    },
+    "wave_3": {
+      "certification_session": "S807",
+      "items_certified": ["R34","R35","R36","R37","R38","R39","R40"],
+      "note": "Wave 3 items (R34-R40) authored in S806 batch, certified via S807 audit review. Wave 3 items contributed UIQS scores of 88-93."
+    },
+    "wave_2b": {
+      "certification_session": "S808",
+      "items_certified": ["R12","R13","R18","R21","R22","R23","R24","R25","R28","R33"],
+      "note": "Wave 2b items authored, underwent full 4-dimension conditional verification (DL-008, DL-026, DL-013, DL-010), Gate 0 collision check, governance guard Rule 2, DL-031 adjudication (7 recalibrations applied), and were inserted into pack_e_corrected.js bringing total from 530 to 540."
+    }
+  },
+
+  "registry_gap": {
+    "title": "QUESTION_SIMILARITY_LEDGER.json — Missing Entries",
+    "ledger_file": "registry/QUESTION_SIMILARITY_LEDGER.json",
+    "entries_present": 20,
+    "entries_missing": 20,
+    "covered_in_ledger": ["R01","R02","R03","R04","R05","R06","R07","R08","R09","R10","R11","R14","R15","R16","R17","R19","R20","R30","R31","R32"],
+    "missing_from_ledger": ["R12","R13","R18","R21","R22","R23","R24","R25","R26","R27","R28","R29","R33","R34","R35","R36","R37","R38","R39","R40"],
+    "missing_breakdown": {
+      "wave_2b_items": ["R12","R13","R18","R21","R22","R23","R24","R25","R28","R33"],
+      "wave_2a_plus_items": ["R26","R27","R29"],
+      "wave_3_items": ["R34","R35","R36","R37","R38","R39","R40"]
+    },
+    "discrepancies": [
+      "R11 is marked REPLACEMENT_PENDING with empty ReplacedQIDs in the ledger, but is in production as Certified — ledger is stale for this item.",
+      "Wave 2b items (R12,R13,R18,R21,R22,R23,R24,R25,R28,R33) have NO ledger entries — the ledger was never updated for Wave 2b despite S808 insertion.",
+      "Wave 2a+ items (R26,R27,R29) and Wave 3 items (R34-R40) have NO ledger entries — these were inserted via S806/S807 without corresponding ledger entries.",
+      "R14 is the only REPLACEMENT_PENDING item whose Notes field explicitly names clone QIDs (P1-EC-036..040).",
+      "Total gap: 20 items in production with no ledger representation."
+    ],
+    "recommendation": "Update QUESTION_SIMILARITY_LEDGER.json to: (1) promote R11 from REPLACEMENT_PENDING to REPLACEMENT with its clone QIDs, (2) add all 10 Wave 2b items (R12,R13,R18,R21-R25,R28,R33) with their clone group mappings, (3) add Wave 2a+ items (R26,R27,R29) and Wave 3 items (R34-R40) entries, (4) backfill clone QID arrays for R15,R19,R20,R30,R31."
+  },
+
+  "evidence_references": [
+    {
+      "reference": "SESSION808_CLONE_GROUP_STATUS.json",
+      "key_finding": "33/33 clone groups cleared (100%). All 40 R-series replacements certified and in learner delivery pool. Zero clone items in delivery pool."
+    },
+    {
+      "reference": "SESSION808_PORTFOLIO_IMPACT_ANALYSIS.json",
+      "key_finding": "Post-S808: 2,221 total certified, Domain E 238 certified (66.3%), Pack E at 540 items (100% certified)."
+    },
+    {
+      "reference": "SESSION808_SESSION_SUMMARY.md",
+      "key_finding": "S808 inserted 10 Wave 2b items. Pack E: 530→540. All quality gates passed. DL-031: 7 recalibrations applied."
+    },
+    {
+      "reference": "SESSION808_PRODUCTION_PROMOTION_RESULTS.json",
+      "key_finding": "All 10 Wave 2b items promoted to production in pack_e_corrected.js with question_state: Certified."
+    },
+    {
+      "reference": "pack_e_corrected.js",
+      "key_finding": "540 items total (500 original + 40 replacement). All 40 R01-R40 QuestionIDs present and Certified."
+    },
+    {
+      "reference": "QUESTION_SIMILARITY_LEDGER.json",
+      "key_finding": "20 entries present — needs update for 20 missing items. See registry_gap section."
+    }
+  ],
+
+  "summary_counts": {
+    "total_replacement_items_in_scope": 40,
+    "items_in_production": 40,
+    "items_certified_not_inserted": 0,
+    "clone_groups_targeted": 33,
+    "clone_groups_with_production_replacement": 33,
+    "clone_groups_cleared_pct": 100.0,
+    "clone_groups_fully_mapped_in_ledger": 10,
+    "clone_groups_partially_mapped": 1,
+    "clone_groups_unmapped_in_ledger": 22,
+    "total_clones_replaced_in_production": 165,
+    "net_new_items_no_clone_replacement": 3,
+    "ledger_entries_present": 20,
+    "ledger_entries_missing": 20,
+    "production_closure": "FULLY_CLOSED — 40/40 items in production, 33/33 clone groups cleared"
+  }
+}

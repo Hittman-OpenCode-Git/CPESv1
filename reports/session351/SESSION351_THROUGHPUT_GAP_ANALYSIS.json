@@ -1,0 +1,118 @@
+{
+  "document": "SESSION351_THROUGHPUT_GAP_ANALYSIS",
+  "session": "S351",
+  "title": "Throughput Gap Analysis — Board I",
+  "series": "350-Series — Framework v2 Validation Readiness",
+  "date": "2026-07-27",
+  "type": "Read-Only Gap Analysis — No Content Modifications",
+  "authority": "S350 Throughput Metrics (Board B); S350 Framework v2 Scorecard (Board K); S204 Throughput Pilot (Board I); S205 Throughput Revalidation (Board I)",
+  "purpose": "Compare S350 targets against current infrastructure state. Do not claim observed throughput gains.",
+
+  "s350_throughput_targets_vs_current_infrastructure": {
+    "note": "S350 defines throughput targets at three phases (P1/P2/P3). Current state is P0 (pre-Hybrid) — Framework v2 infrastructure is built but not yet processing certification waves. All throughput measurements reflect v1 operations.",
+    "phase": "P0 — Pre-Hybrid Baseline",
+    "measurement_reference": "SESSION350_THROUGHPUT_METRICS.json",
+
+    "TH-001_items_reviewed_per_hour": {
+      "v1_baseline": "3-5 items/hour",
+      "v2_target_p1": "5-8 items/hour",
+      "current_operational": "3-5 items/hour (v1 operations continue)",
+      "infrastructure_ready_for_p1": true,
+      "gap": "P0→P1 transition requires at least one v2-assisted certification wave to begin measuring. S322 scripts are advisory but not yet used in production certification sessions.",
+      "what_changes_at_p1": "Pre-flight gates run before board reviews. Items arrive READY (no BLOCKED/REMEDIATE items in review queue). Single-pass review instead of multi-round firefighting."
+    },
+    "TH-002_items_certified_per_session": {
+      "v1_baseline": "42 items/session",
+      "v2_target_p1": "63 items/session",
+      "current_operational": "42 items/session (v1 operations)",
+      "infrastructure_ready_for_p1": true,
+      "gap": "Batch velocity improvements from pre-flight gating and delta review are architectural — they activate when boards consume the scan artifact and when the delta ledger has comparison data.",
+      "what_changes_at_p1": "Pre-flight reduces items entering boards by 242 (BLOCKED) + 77 (REMEDIATE). Delta review (once comparison data exists) skips unchanged items. Combined: fewer unique items per wave × faster per-item review = higher certified-per-session."
+    },
+    "TH-003_cycle_time": {
+      "v1_baseline": "4-5 sessions/wave",
+      "v2_target_p1": "2-3 sessions/wave",
+      "current_operational": "4-5 sessions/wave (v1 operations)",
+      "infrastructure_ready_for_p1": true,
+      "gap": "Cycle time reduction comes from single-pass review (pre-flight catches issues before boards) and delta review (unchanged items skip). Both depend on infrastructure that is operational (S322) but not yet consumed by active certification boards."
+    },
+    "TH-009_throughput_multiplier": {
+      "v1_baseline": "1.0×",
+      "v2_target_p1": "1.5-2.0×",
+      "v2_target_p3": "3.8×",
+      "current_operational": "1.0× (v1 operations)",
+      "infrastructure_ready_for_p1": "PARTIAL — pre-flight gating is ready (S322 demonstrates 0.7s full-pool scan). Delta review requires comparison data (first comparison at S206/S830). Board consolidation (8→5) is specified but not yet adopted by certification sessions.",
+      "gap": "The 1.5-2.0× P1 target requires: (a) pre-flight operational with board visibility enforcement, (b) at least one session operating with 5-board model. Neither condition is met at S351. Both are achievable with current infrastructure."
+    },
+    "TH-010_cost_per_item": {
+      "v1_baseline": "0.305 agent-spawns/item",
+      "v2_target_p1": "<0.15",
+      "current_operational": "0.305 (v1 operations)",
+      "gap": "50% waste ratio in v1 (phantom investigations, duplicate reviews, template remediation). Waste reduction depends on: identity validation eliminating false positives, pre-flight gating eliminating re-reviews, delta review eliminating unchanged-item re-audits."
+    }
+  },
+
+  "s350_bf_metrics_state_vs_target": {
+    "source": "SESSION350_FRAMEWORK_V2_SCORECARD.json §bf_metric_summary",
+    "bf_metrics_at_p0": {
+      "operational_improvements": {
+        "BF-007_identity_ambiguity": "PARTIAL — compound-key identity operational at 99.96% (Gate -1). 1 item blocked (P1-E-R33). 8 forbidden methodologies active (FM-001 through FM-008). No new S320-class wrong-variant failures.",
+        "BF-009_defect_timing": "PARTIAL — pre-flight pipeline is operational (S322: 0.7s, 2,540 items). Scans execute but are advisory, not blocking. 0% pre-flight detection in v1 baseline → infrastructure exists for 78% target."
+      },
+      "unchanged_metrics": {
+        "BF-001_agents_per_session": "19 (v1 active)",
+        "BF-002_boards_per_session": "8.5 (v1 active)",
+        "BF-003_reports_per_session": "9 (v1 active; S350 itself produced 12)",
+        "BF-004_readiness_failure": "89.5% (v1 baseline — v2 infrastructure not yet preventing leakage)",
+        "BF-005_duplicate_review": "2.5:1 (v1 active)",
+        "BF-006_re_review_rate": "80% (v1 active — delta review not yet operational)",
+        "BF-008_cycle_time": "4-5 sessions (v1 active)",
+        "BF-010_consumption_rate": "35% (v1 active)"
+      },
+      "analysis": "1 of 10 BF metrics shows partial improvement (BF-007). BF-009 infrastructure is operational but not yet producing results. 8 of 10 BF metrics are unchanged from v1 baseline — Framework v2 is not yet processing certification waves. This is the expected state at P0."
+    }
+  },
+
+  "infrastructure_readiness_for_targets": {
+    "pre_flight_gating": {
+      "status": "OPERATIONAL — S322 demo: Gates -1 through 4, 0.7s, 2,540 items",
+      "gap_to_p1": "Board visibility enforcement not active. Scan is advisory, not blocking. Items still enter Certification Board regardless of readiness state.",
+      "resolution": "Activate governance Rules 6-7 (READY-gate mandatory, Identity-validation mandatory). S205 activated them at specification level. Operationally enforced at S206+."
+    },
+    "delta_review": {
+      "status": "NOT_OPERATIONAL — infrastructure built (hash_engine.js, delta_ledger_builder.js). Requires comparison data.",
+      "gap_to_p1": "First comparison data available at S206 (second scan artifact). Until then, all items require full review.",
+      "resolution": "Execute S206 T0 scan → produce second artifact → delta_ledger_builder.js computes first comparison → items with UNCHANGED classification become eligible for CertifiedDelta inheritance."
+    },
+    "board_consolidation": {
+      "status": "SPECIFIED — 5-board model defined in S202. v1 boards still operate.",
+      "gap_to_p1": "v1 boards (8) have not migrated to v2 board model. S350 Board Efficiency Model documents the savings (47% board reduction, 57% scope overlap elimination).",
+      "resolution": "S208+ (Shadow Mode) — boards migrate from 8 to 5 as v2 becomes authoritative."
+    },
+    "compound_key_identity": {
+      "status": "PARTIALLY_OPERATIONAL — Steps 1-3 validated (S204). Steps 4-5 deferred to S206.",
+      "gap_to_p1": "TemplateFamily classification and compound key resolution not yet computed for all 2,540 items. Until complete, S320-class prevention is governance-layer only (Rules 9-10).",
+      "resolution": "S206 PG-011 full implementation."
+    }
+  },
+
+  "throughput_claim_restraint": {
+    "s204_observed": "85-93% marginal savings projected (S204 Board I). Break-even at 72-150 items (mid-Phase 1). These are architectural projections, not operational measurements.",
+    "s205_revalidated": "S202 projections confirmed as conservative. Verified against engineering plan. Still projections — no v2 certification wave has executed.",
+    "s351_stance": "S351 does not claim any observed throughput gains. All throughput targets remain aspirational until the first v2-assisted certification wave completes. The infrastructure required to achieve each target exists (S322) but has not been applied to production certification.",
+    "next_measurement": "S830 (Phase 2 Authorization Gate). All 10 BF metrics must be ≥20% improved from v1 baseline. First operational throughput data from P1 certification waves."
+  },
+
+  "cross_references": {
+    "parent_s350": [
+      "reports/SESSION350_THROUGHPUT_METRICS.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "s204_inputs": ["reports/SESSION204_THROUGHPUT_PILOT.json"],
+    "s205_inputs": ["reports/SESSION205_THROUGHPUT_REVALIDATION.json"],
+    "sibling_s351": [
+      "reports/session351/SESSION351_RESTART_ADVISORY.json",
+      "reports/session351/SESSION351_DELTA_LEDGER_BASELINE.json"
+    ]
+  }
+}

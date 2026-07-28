@@ -1,0 +1,113 @@
+{
+  "session": "711",
+  "timestamp": "2026-07-25T22:00:00",
+  "type": "Cross-lane operations restart manifest",
+  "wind_down_decision": "PAUSE after S711 unless explicitly resumed",
+  "lanes": {
+    "100_series_may": {
+      "label": "May Learner Support Lane",
+      "last_session": "S118 — Seeded-history telemetry simulation and UI/accessibility polish",
+      "last_test_baseline": "248/248 PASS",
+      "thresholds": "12 thresholds stable at documented defaults",
+      "modelVersion": "S111-1.0",
+      "pilot_status": "Pre-production simulation only. No real pilot launched.",
+      "readiness_for_single_user": "RECOMMENDED for S119 review — all guards active (privacy, evidence, recommendation, hallucination, exam-prediction), 8 synthetic students with seeded history, exam onboarding and privacy masking verified",
+      "known_deferred_items": [
+        "Real-pilot launch not yet authorized"
+      ],
+      "recommended_restart_session": "S119 — single-user pre-production pilot readiness review",
+      "alternate_restart": "Skip May; defer to later date"
+    },
+    "500_series_case_bank": {
+      "label": "Case-Bank Certification Lane",
+      "last_session": "S516 — MIGRATED_CASE_BASE_C holdback remediation + quality uplift",
+      "last_test_baseline": "32/32 PASS",
+      "completed_certified_banks": {
+        "MIGRATED_CASE_BASE_B": "75/75 items, 15/15 cases, 100% Certified (S513)",
+        "MIGRATED_CASE_BASE_C": "75/75 items, 15/15 cases, 100% Certified (S516)"
+      },
+      "recommended_next_options": [
+        {
+          "option": "CBQ2-A3 explanation uplift",
+          "description": "5 held-back items in ENHANCED_CASE_BASE2 (scored_cases2.js) need citations, distractor rationale, and CognitiveLevel assignments — same treatment MIGRATED_CASE_BASE_C received",
+          "recommended_session": "S517",
+          "effort": "~45-60 min",
+          "priority": "High — closes the last open items in Case Base 2"
+        },
+        {
+          "option": "MIGRATED_CASE_BASE_D first CAQS review",
+          "description": "Start the S515 certification pattern on scored_cases4.js (75 items, 15 cases). Full CAQS §1.6 six-dimension validation needed.",
+          "recommended_session": "S518",
+          "effort": "~2-3 hours",
+          "priority": "Medium"
+        },
+        {
+          "option": "Case realism / difficulty / metadata enhancements",
+          "description": "DL-032 uniform difficulty labels on case items; case-level metadata enrichment per QUESTION_METADATA_STANDARD.md",
+          "recommended_session": "S519",
+          "effort": "~2-4 hours",
+          "priority": "Low"
+        }
+      ]
+    },
+    "700_series_mcq": {
+      "label": "MCQ Certification & Governance Lane",
+      "last_session": "S710 — Certified DL-026 pedagogical uplift",
+      "last_test_baseline": "384/0 PASS",
+      "freeze_status": "CONFIRMED — 2,500 QIDs, 2,181 Certified, DL-008=0, DL-016=0, DL-025=0, Certified DL-026=0",
+      "recommended_next_options": [
+        {
+          "option": "Pause 700-series",
+          "description": "Certification-baseline is stable. All blocking defects are zero. 2,181 items are learner-ready. No urgent remediation needed.",
+          "priority": "Recommended"
+        },
+        {
+          "option": "DL-010/DL-016 targeted cleanup",
+          "description": "Fix 2 documented legacy issues: P1-BC-094 EW_A cross-topic contamination and P1-CD-022 EW_A/EW_D swap",
+          "recommended_session": "S712",
+          "effort": "~15-20 min",
+          "priority": "Medium"
+        },
+        {
+          "option": "DL-031/DL-032 difficulty recalibration",
+          "description": "Recalibrate ~500 MCQ items and all 420 case items from inflated difficulty labels to actual cognitive levels",
+          "recommended_session": "S712-S713",
+          "effort": "~4-6 hours",
+          "priority": "Low"
+        }
+      ]
+    }
+  },
+  "primary_restart_option": {
+    "name": "Defer all lanes; return when ready",
+    "description": "All three lanes are in stable, documented states. The 700-series certification baseline is frozen clean. The 500-series has two fully certified case banks. The 100-series May is ready for single-user pilot after a readiness review. No urgent action required."
+  },
+  "alternate_restart_options": [
+    {
+      "lane": "500-series",
+      "session": "S517",
+      "task": "CBQ2-A3 explanation uplift — close the last 5 held-back items in Case Base 2",
+      "rationale": "Quickest win across all lanes (~45-60 min, single task)"
+    },
+    {
+      "lane": "100-series",
+      "session": "S119",
+      "task": "May single-user pre-production pilot readiness review",
+      "rationale": "If a test-taker wants to try May before an upcoming exam"
+    },
+    {
+      "lane": "700-series",
+      "session": "S712",
+      "task": "Optional DL-010 cleanup or DL-031/DL-032 difficulty recalibration",
+      "rationale": "If 700-series governance work resumes"
+    }
+  ],
+  "deferred_items": [
+    "Real-pilot launch (all lanes)",
+    "Broad rollout (all lanes)",
+    "External telemetry endpoints (100-series)",
+    "LMS/SCORM integration (all lanes)",
+    "Real learner data entry (all lanes)",
+    "DL-031/DL-032 difficulty recalibration (700-series, optional)"
+  ]
+}

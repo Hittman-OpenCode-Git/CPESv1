@@ -1,0 +1,51 @@
+{
+  "title": "SESSION313_REMAINING_INVENTORY_UPDATE",
+  "session": "313",
+  "generated": "2026-07-27",
+  "methodology": "Recalculation of remaining Domain E modernization inventory after Wave 1 certification. Updates replacement inventory (33 groups → 23 groups remaining) and certification inventory (38 items → 38 items, still pending). Cross-referenced against S311 inventory and S312 authoring data.",
+  "domain_e_replacement_inventory": {
+    "total_groups_per_s311": 43,
+    "corrected_total_groups_per_s312": 33,
+    "groups_completed_wave_1": 10,
+    "groups_remaining": 23,
+    "remaining_groups": [
+      {"group": "preventive control examples", "topic": "E.1.e", "replacement": "P1-E-R11"},
+      {"group": "detective control examples", "topic": "E.1.e", "replacement": "P1-E-R12"},
+      {"group": "corrective controls", "topic": "E.1.e", "replacement": "P1-E-R13"},
+      {"group": "IT general controls", "topic": "E.1.j", "replacement": "P1-E-R14"},
+      {"group": "application controls", "topic": "E.1.j", "replacement": "P1-E-R15"},
+      {"group": "risk assessment process", "topic": "E.1.d", "replacement": "P1-E-R16"},
+      {"group": "risk responses", "topic": "E.1.d", "replacement": "P1-E-R17"},
+      {"group": "monitoring activities", "topic": "E.1.g", "replacement": "P1-E-R18"},
+      {"group": "SOX 302 CEO/CFO certification", "topic": "E.1.h", "replacement": "P1-E-R19"},
+      {"group": "SOX 404 internal control report", "topic": "E.1.h", "replacement": "P1-E-R20"},
+      {"group": "external audit opinions", "topic": "E.1.i", "replacement": "P1-E-R21"},
+      {"group": "audit committee composition", "topic": "E.1.i", "replacement": "P1-E-R22"},
+      {"group": "board governance responsibilities", "topic": "E.1.a", "replacement": "P1-E-R23"},
+      {"group": "entity-level controls", "topic": "E.1.c", "replacement": "P1-E-R24"},
+      {"group": "information systems control", "topic": "E.1.f", "replacement": "P1-E-R25"},
+      {"group": "control documentation", "topic": "E.1.e", "replacement": "P1-E-R26"},
+      {"group": "redundant controls", "topic": "E.1.e", "replacement": "P1-E-R27"},
+      {"group": "manual vs automated controls", "topic": "E.1.e", "replacement": "P1-E-R28"},
+      {"group": "purchase order approval control", "topic": "E.1.e", "replacement": "P1-E-R29"},
+      {"group": "access controls logical", "topic": "E.1.j", "replacement": "P1-E-R30"},
+      {"group": "disaster recovery controls", "topic": "E.1.j", "replacement": "P1-E-R31"},
+      {"group": "vendor risk assessment", "topic": "E.1.d", "replacement": "P1-E-R32"},
+      {"group": "internal audit reporting", "topic": "E.1.g", "replacement": "P1-E-R33"}
+    ],
+    "note": "Remaining 23 groups mapped above are representative based on S311 clone group analysis. Exact group names and replacement QIDs to be finalized in S314 batch planning."
+  },
+  "domain_e_certification_inventory": {
+    "unprocessed_seeds": 38,
+    "progress": "0/38 certified",
+    "status": "Deferred to S315-S316 wave",
+    "description": "38 retained seed items (not clones) across Packs C and D Section E that require full CAQS §1.6 certification pipeline. These are existing items that need quality review and explanation field completion."
+  },
+  "combined_remaining": {
+    "replacement_items": 23,
+    "certification_candidates": 38,
+    "total_remaining": 61,
+    "projected_sessions": "4-5 sessions (S314-S317)",
+    "projected_completion": "S317 (Domain E Closeout)"
+  }
+}

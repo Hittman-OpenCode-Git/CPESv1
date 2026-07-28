@@ -1,0 +1,212 @@
+{
+  "session": "S836",
+  "title": "Quality-First Authoring Pipeline Specification",
+  "date": "2026-07-27",
+  "authority": "800-Series Content Maturity Transformation Program",
+
+  "defect_origin_analysis": {
+    "total_defect_classes": 36,
+    "by_root_cause": {
+      "TEMPLATE_PIPELINE": {
+        "count": 19,
+        "pct": 52.8,
+        "description": "Defects originating in the 5-item rotation template engine that produced all original content",
+        "defects": [
+          "DL-003: Absolute language (958 hits)",
+          "DL-004: Ambiguity (410 hits)",
+          "DL-005: Distractor similarity (450 warnings)",
+          "DL-008: ExplanationWrong[CC] non-empty (539 cleared)",
+          "DL-010: Misassigned choice explanations",
+          "DL-012: Section E clonal redundancy (140 clones)",
+          "DL-013: Template boilerplate explanations (2,587 fields)",
+          "DL-015: Topic numbering shift",
+          "DL-016: Metadata-block topic shift (58 Certified + all sections)",
+          "DL-018: Missing EW[CC] fields (352 items)",
+          "DL-021: Missing distractor EW fields (100 items)",
+          "DL-024: Missing question_state field (150 items)",
+          "DL-025: Empty non-CC EW slots (56 items)",
+          "DL-026: Empty non-CC slots cross-pool (1,005 items)",
+          "DL-027: Closing-tag boilerplate (15 items)",
+          "DL-031: Definition-match difficulty inflation (~500 items)",
+          "DL-032: Case uniform difficulty (420 items)",
+          "DL-034: Missing structural fields"
+        ],
+        "template_pipeline_characteristics": [
+          "5-item rotation groups: stems identical except company name, CorrectChoice rotates A→B→C→D→A",
+          "Difficulty labels assigned by position in rotation, not by cognitive assessment",
+          "Distractor explanations generated from boilerplate templates ('represents a plausible misconception')",
+          "All 4 ExplanationWrong slots filled identically without checking CorrectChoice position",
+          "Metadata blocks carry stale rotation-template residue independent of content blocks",
+          "Topic labels auto-incremented without content verification",
+          "No post-generation quality check beyond structural validation"
+        ]
+      },
+      "AUTHOR_ERROR": {
+        "count": 5,
+        "pct": 13.9,
+        "description": "Individual item-level authoring errors, not systematic",
+        "defects": [
+          "DL-001: Imprecise wording (1 item)",
+          "DL-007: Generic distractor explanation (1 item → superseded by DL-013)",
+          "DL-009: Wrong ASC authority citation (10 items)",
+          "DL-023: Case exhibit headers missing (17 exhibits)",
+          "DL-030: CorrectChoice answer-key errors (5 items)"
+        ]
+      },
+      "CODE_DEFECT": {
+        "count": 4,
+        "pct": 11.1,
+        "description": "Application-layer bugs in app.js, validators, or tooling",
+        "defects": [
+          "DL-006: Session recovery stale checkpoint",
+          "DL-014: Missing null-guard on s.mcqs",
+          "DL-020: Validator brace-matcher string-awareness",
+          "DL-022: Null-array crash on corrupted restore"
+        ]
+      },
+      "PROCESS_METHODOLOGY": {
+        "count": 7,
+        "pct": 19.4,
+        "description": "Cross-session, tooling, or methodology bugs in remediation pipeline",
+        "defects": [
+          "DL-017: Backtick-newline file corruption (reconstruction script)",
+          "DL-019: Concurrent-write data loss (multi-session)",
+          "DL-028: DL-013 remediation tooling regression",
+          "DL-029: Regex block-scan false positives",
+          "DL-033: Naming confusion (Pack E vs Pack A Section E)",
+          "DL-035: Governance guard coverage gap",
+          "DL-036: Pipeline artifact reuse gap"
+        ]
+      }
+    },
+
+    "critical_insight": "53% of all defect classes trace to a single root cause: the template-rotation authoring pipeline. This pipeline produced 2,500 items but also generated 19 classes of structural and content defects that required hundreds of hours of remediation. Any new authoring system must eliminate the template-rotation approach entirely."
+  },
+
+  "quality_first_pipeline": {
+    "design_principle": "Every item is a discrete product of a quality-assured sequence. No bulk generation. No template rotation. No position-based labeling.",
+    
+    "stages": {
+      "stage_1_blueprint": {
+        "name": "Blueprint Anchoring",
+        "input": "CMA Part 1 CSO Learning Outcome Statement",
+        "activities": [
+          "Select specific LOS from official IMA blueprint",
+          "Determine cognitive level (Remember→Evaluate) per LOS verb",
+          "Identify topic, subtopic, domain",
+          "Select formula reference if applicable",
+          "Document accounting principle to be tested"
+        ],
+        "output": "BLUEPRINT_CARD: {LOS, CognitiveLevel, Topic, Formula, Principle}",
+        "quality_gate": "LOS must be selectable from IMA blueprint. CognitiveLevel must match LOS verb. Topic must exist in TAXONOMY_REGISTRY.md.",
+        "failure_mode_prevention": "Prevents DL-031 (miscalibration) and DL-032 (uniform labeling) by anchoring difficulty to LOS verb before writing begins"
+      },
+
+      "stage_2_stem": {
+        "name": "Stem Authoring",
+        "input": "BLUEPRINT_CARD",
+        "activities": [
+          "Write business scenario with named company, stakeholder, business trigger",
+          "Include all numerical data needed for calculation (if applicable)",
+          "Ensure scenario is self-contained but not definitional",
+          "For Analyze items: scenario must require comparison, interpretation, or pattern identification",
+          "For Evaluate items: scenario must involve judgment under ambiguity or trade-off assessment",
+          "Check: stem must NOT be a textbook definition followed by a term-identification question"
+        ],
+        "output": "STEM_DRAFT with scenario data",
+        "quality_gate": "Stem must be unique within section. Must use business language (CAQS §3.2). Must not match definition-match pattern (DL-031). For Analyze+: must require interpretation beyond single-step calculation.",
+        "failure_mode_prevention": "Prevents DL-001 (imprecise wording), DL-031 (definition-match), DL-004 (ambiguity) by requiring business-context scenario, not textbook framing"
+      },
+
+      "stage_3_correct_reasoning": {
+        "name": "Correct Reasoning Path",
+        "input": "STEM_DRAFT",
+        "activities": [
+          "Solve independently — do not read stored answer",
+          "Document complete solution: formula → substitution → result → interpretation",
+          "Reference authoritative source (ASC, COSO, IAS, IMA) by correct section number",
+          "For Analyze items: document the analysis pattern (comparison framework, trend logic, root-cause chain)",
+          "For Evaluate items: document the judgment criteria and decision rule",
+          "Verify arithmetic independently"
+        ],
+        "output": "CORRECT_REASONING: {Formula, Substitution, Result, Principle, Authority, Interpretation}",
+        "quality_gate": "Calculation must be independently verified. ASC/COSO citation must match actual standard scope (prevents DL-009). For Apply+: business interpretation required.",
+        "failure_mode_prevention": "Prevents DL-009 (wrong authority), DL-030 (wrong answer key), DL-001 (imprecise wording) by requiring independent solve before answer registration"
+      },
+
+      "stage_4_distractor_logic": {
+        "name": "Distractor Engineering",
+        "input": "STEM_DRAFT + CORRECT_REASONING",
+        "activities": [
+          "For each distractor (3 per item):",
+          "  1. Identify a specific, named misconception (e.g., 'confuses cash vs. accrual basis')",
+          "  2. Construct a choice text that would attract a candidate with that misconception",
+          "  3. Write an ExplanationWrong that: names the error, explains the misconception, contrasts with correct approach",
+          "  4. Verify explanation is choice-specific (prevents DL-007/DL-013)",
+          "Confirm: all 3 distractors target distinct errors",
+          "Confirm: no distractor matches the correct answer in category",
+          "For the correct-answer slot: ExplanationWrong[CC] = '' (empty — DL-008 compliance)"
+        ],
+        "output": "DISTRACTOR_SET: {Choice + ExplanationWrong for A, B, C, D} + CorrectChoice",
+        "quality_gate": "All 3 distractors must be choice-specific (no copy-paste). Each must name a distinct misconception. ExplanationWrong[CC] must be ''. Each slot must reference the item's own Choices text (not metadata-block ChoiceA-D). Minimum 50 characters per field. No 'represents a plausible misconception' template language.",
+        "failure_mode_prevention": "Prevents DL-007/DL-013 (generic explanations), DL-008 (non-empty CC slot), DL-010 (misassigned), DL-016 (metadata-content mismatch), DL-021 (absent fields), DL-025/DL-026 (empty distractor slots), DL-027 (closing-tag boilerplate)"
+      },
+
+      "stage_5_evidence_review": {
+        "name": "Evidence Review",
+        "input": "Full item: STEM + CORRECT_REASONING + DISTRACTOR_SET",
+        "activities": [
+          "Verify CorrectChoice against independent solution (Stage 3)",
+          "Verify ExplanationCorrect contains all required elements (CAQS §4.1)",
+          "Verify all 4 ExplanationWrong fields present and type-correct",
+          "Verify ExplanationWrong[CC] is empty string (not absent, not non-empty)",
+          "Verify all distractor ExplanationWrong fields are non-empty and >= 50 chars",
+          "Verify ASC/COSO citations match item topic",
+          "Verify Difficulty and DifficultyScore match cognitive demand",
+          "Verify CognitiveLevel matches LOS verb",
+          "Run governance guard Rule 2, Rule 6 checks",
+          "Verify item renders correctly in minimal test harness"
+        ],
+        "output": "EVIDENCE_REVIEW_REPORT: {All checks, PASS/FAIL per check, confidence score}",
+        "quality_gate": "All checks must PASS. Zero DL-008. Zero DL-026. Zero DL-009. Zero DL-010. Confidence >= 95.",
+        "failure_mode_prevention": "Catches all 19 template-pipeline defect classes before item enters certification pipeline. Gate-based — an item cannot accidentally pass through."
+      },
+
+      "stage_6_certification": {
+        "name": "Certification",
+        "input": "Full item with EVIDENCE_REVIEW_REPORT (all PASS)",
+        "activities": [
+          "Six-dimension AI verification (CAQS §1.6): Correctness, Precision, Difficulty Calibration, Distractor Engineering, Blueprint Alignment, CMA Part 1 Relevance",
+          "All six must be HIGH confidence",
+          "Record distractor tier map (A/B/C/D)",
+          "Set question_state = 'Certified'",
+          "Update REVISION_HISTORY.md",
+          "Re-run governance guard"
+        ],
+        "output": "Certified item in learner pool",
+        "quality_gate": "CAQS §1.7.2: All 6 dimensions HIGH confidence. Governance guard 32/32 PASS. REVISION_HISTORY.md entry written."
+      }
+    },
+
+    "pipeline_diagram": "Blueprint → Stem → Correct Reasoning → Distractor Logic → Evidence Review → Certification",
+    
+    "anti_patterns_eliminated": [
+      "Template rotation groups (DL-012, DL-015, DL-016, DL-024)",
+      "Bulk-generated stems with company-name-only variation (DL-012)",
+      "Position-based difficulty labeling (DL-031, DL-032)",
+      "Boilerplate distractor explanations (DL-007, DL-013, DL-027)",
+      "All-slots-filled explanation generation (DL-008, DL-025, DL-026)",
+      "Metadata-content block divergence (DL-016)",
+      "Missing field authoring (DL-018, DL-021, DL-024, DL-034)"
+    ],
+
+    "quality_gates_summary": {
+      "stage_1": "Blueprint anchored to IMA CSO; cognitive level matches LOS verb",
+      "stage_2": "Business-context stem; not definition-match; self-contained scenario data",
+      "stage_3": "Independent solve; correct ASC/COSO citation; verified arithmetic",
+      "stage_4": "Choice-specific distractor explanations; distinct misconception per distractor; CC-slot empty",
+      "stage_5": "Full structural + content verification; all governance rules pass; confidence >= 95",
+      "stage_6": "All 6 CAQS dimensions HIGH confidence; certified into learner pool"
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "title": "SESSION313_CANDIDATE_INVENTORY",
+  "session": "313",
+  "generated": "2026-07-27",
+  "source": "S312 Authoring Batch 1 — Domain E Replacement Exemplars",
+  "items_in_inventory": 10,
+  "candidates": [
+    {
+      "QuestionID": "P1-E-R01",
+      "Topic": "E.1.e Control Activities — segregation of duties incompatible functions",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CloneGroup": "segregation of duties design",
+      "Replaces": ["P1-EC-001", "P1-EC-002", "P1-EC-003", "P1-EC-004", "P1-EC-005"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R02",
+      "Topic": "E.1.b Internal Control Framework (COSO 2013) — three categories of objectives",
+      "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Understand",
+      "CloneGroup": "coso internal control framework",
+      "Replaces": ["P1-EC-006", "P1-EC-007", "P1-EC-008", "P1-EC-009", "P1-EC-010"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R03",
+      "Topic": "E.1.c Control Environment — fraud triangle pressure element",
+      "LOSTag": "E.1.c Control Environment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CloneGroup": "fraud triangle elements",
+      "Replaces": ["P1-EC-011", "P1-EC-012", "P1-EC-013", "P1-EC-014", "P1-EC-015"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R04",
+      "Topic": "E.1.e Control Activities — preventive vs detective physical controls",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "CloneGroup": "physical controls over assets",
+      "Replaces": ["P1-EC-016", "P1-EC-017", "P1-EC-018", "P1-EC-019", "P1-EC-020"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R05",
+      "Topic": "E.1.e Control Activities — bank reconciliation segregation of duties",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CloneGroup": "bank reconciliation control",
+      "Replaces": ["P1-EC-026", "P1-EC-027", "P1-EC-028", "P1-EC-029", "P1-EC-030"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R06",
+      "Topic": "E.1.c Control Environment — management override as inherent limitation",
+      "LOSTag": "E.1.c Control Environment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "CloneGroup": "management override risk",
+      "Replaces": ["P1-EC-041", "P1-EC-042", "P1-EC-043", "P1-EC-044", "P1-EC-045"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R07",
+      "Topic": "E.1.f Information & Communication — whistleblower hotline SOX requirement",
+      "LOSTag": "E.1.f Information & Communication",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Remember",
+      "CloneGroup": "whistleblower hotline purpose",
+      "Replaces": ["P1-EC-046", "P1-EC-047", "P1-EC-048", "P1-EC-049", "P1-EC-050"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R08",
+      "Topic": "E.1.c Control Environment — tone at the top",
+      "LOSTag": "E.1.c Control Environment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CloneGroup": "control environment tone at top",
+      "Replaces": ["P1-EC-056", "P1-EC-057", "P1-EC-058", "P1-EC-059", "P1-EC-060"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R09",
+      "Topic": "E.1.g Monitoring — three lines of defense model",
+      "LOSTag": "E.1.g Monitoring",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CloneGroup": "three lines of defense model",
+      "Replaces": ["P1-ED-001", "P1-ED-002", "P1-ED-003", "P1-ED-004", "P1-ED-005"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    },
+    {
+      "QuestionID": "P1-E-R10",
+      "Topic": "E.1.e Control Activities — compensating controls in small business",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "CloneGroup": "compensating control small business",
+      "Replaces": ["P1-EC-051", "P1-EC-052", "P1-EC-053", "P1-EC-054", "P1-EC-055"],
+      "CertificationStatus": "Candidate — pre-certification review"
+    }
+  ],
+  "batch_distribution": {
+    "by_difficulty": {
+      "Easy": 2,
+      "Moderate-Easy": 1,
+      "Moderate": 7,
+      "Difficult": 0,
+      "Hard": 0
+    },
+    "by_cognitive_level": {
+      "Remember": 1,
+      "Understand": 3,
+      "Apply": 6,
+      "Analyze": 0
+    },
+    "by_los_tag": {
+      "E.1.b": 1,
+      "E.1.c": 3,
+      "E.1.e": 5,
+      "E.1.f": 1,
+      "E.1.g": 1
+    }
+  },
+  "clone_replacement_summary": {
+    "total_clone_groups": 10,
+    "total_archived_items_replaced": 50,
+    "average_replacement_ratio": "5:1"
+  }
+}

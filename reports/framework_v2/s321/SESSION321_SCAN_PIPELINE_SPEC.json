@@ -1,0 +1,216 @@
+{
+  "document": "SESSION321_SCAN_PIPELINE_SPEC",
+  "session": "S321",
+  "board": "F — Scan Dependency Graph",
+  "phase": "3 — Scan Orchestration",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+  "depends_on": ["SESSION321_GATE_NEG1_SPEC.json", "SESSION321_SCAN_ARTIFACT_SPEC.json"],
+
+  "purpose": "Formalize the complete 7-gate scan pipeline dependency graph. Every gate has explicit inputs, outputs, dependencies, blocking behavior, and runtime. The pipeline is the backbone of the Framework v2 pre-flight certification process — it must be deterministic, auditable, and fast enough to run at every session boundary.",
+
+  "motivation": {
+    "v1_pipeline": "The documented CAQS §8.1 pipeline (Accountant → Editor → Psychometrician → Validator → Release Manager) was NEVER operated as designed. Instead, Framework v1 operated an informal 6-gate parallel pipeline with 10+ agents running independent scans simultaneously across 8 boards. There was no dependency graph — agents duplicated each other's work (2.5:1 ratio). S201 Board 7 designed the 5-gate pre-flight pipeline; S321 formalizes it into a 7-gate pipeline with Gate -1 as the structural addition.",
+    "target": "A linear, deterministic pipeline with explicit dependencies. Each gate produces its output artifact; downstream gates consume upstream outputs. No gate runs independently. The pipeline is idempotent — same input produces same output every time."
+  },
+
+  "scan_pipeline": {
+    "description": "7-gate pipeline: Gate -1 → Gate 0 → Gate 1 → Gate 2 → Gate 3 → Gate 4 → Gate 5. Each gate passes its output to the next gate. The final output is the CERTIFICATION_SCAN_ARTIFACT consumed by all Framework v2 boards.",
+
+    "gates": [
+      {
+        "gate": "Gate -1",
+        "name": "Identity Validation",
+        "position": 0,
+        "depends_on": [],
+        "blocking": "HARD_BLOCK",
+        "runtime": "3s",
+        "input": "Raw pack files (pack_*_corrected.js) via AM-1 Function Constructor Parse",
+        "output": "Identity handoff: compound_key tuples for all items, blocked items list",
+        "next_gate": "Gate 0 (only for passed items)",
+        "description": "Validates that every item has a valid, unique compound-key identity. Items that fail Gate -1 are BLOCKED — they cannot proceed to any further gate.",
+        "spec_ref": "SESSION321_GATE_NEG1_SPEC.json",
+        "checks": ["GV-N1-01: Compound Key Completeness", "GV-N1-02: QID Format", "GV-N1-03: CC Extraction Source", "GV-N1-04: EWPattern CC Bit", "GV-N1-05: Key Uniqueness", "GV-N1-06: Cross-Pack Collision", "GV-N1-07: TemplateFamily Consistency", "GV-N1-08: Pack B CC Extraction"]
+      },
+      {
+        "gate": "Gate 0",
+        "name": "JSON Integrity",
+        "position": 1,
+        "depends_on": ["Gate -1 (identity valid for all items in scope)"],
+        "blocking": "HARD_BLOCK",
+        "runtime": "5s",
+        "input": "Identity handoff from Gate -1 + raw pack files",
+        "output": "Per-item: parseability, field presence, type consistency, corruption detection results",
+        "next_gate": "Gate 1 (all items — JSON integrity is prerequisite for structural scanning)",
+        "description": "Ensures all question objects parse correctly with all required fields present and correctly typed. Corrupted objects that cannot be parsed are BLOCKED.",
+        "checks": [
+          {"name": "AM-1 Parseability", "description": "Function constructor parse succeeds on the question object.", "blocking": "HARD_BLOCK"},
+          {"name": "Field Presence", "description": "All required fields (QID, Choices, CorrectChoice, ExplanationCorrect, ExplanationWrong) are present.", "blocking": "HARD_BLOCK"},
+          {"name": "Type Consistency", "description": "All fields have expected types (String for text, String for choice values, Array for Choices).", "blocking": "HARD_BLOCK"},
+          {"name": "Corruption Detection", "description": "No malformed JSON, no unescaped characters in strings, no truncated objects.", "blocking": "HARD_BLOCK"},
+          {"name": "QuestionID Count", "description": "Count of QuestionID fields matches expected per-section count.", "blocking": "WARN"}
+        ]
+      },
+      {
+        "gate": "Gate 1",
+        "name": "Structural Scan",
+        "position": 2,
+        "depends_on": ["Gate 0 (JSON integrity passed for all items)"],
+        "blocking": "HARD_BLOCK",
+        "runtime": "10s",
+        "input": "Gate 0 output + parsed question objects",
+        "output": "Per-item: DL-008 status, DL-026 status, DL-016 status, DL-018 status",
+        "next_gate": "Gate 2 (all items — structural defects don't block content scan but items are flagged)",
+        "description": "Detects structural field-level defects: non-empty EW[CC] slots (DL-008), missing EW distractor slots (DL-026), metadata-block CC offsets (DL-016), missing EW[CC] field (DL-018). Structural defects are HARD_BLOCK — items with DL-008/026/016/018 cannot proceed to Quality Board review until remediated.",
+        "checks": [
+          {"name": "DL-008 — EW[CC] Non-Empty", "scan": "For each item: check ExplanationWrong[CorrectChoice]. If non-empty → FAIL. Per governance guard Rule 2 HARD_BLOCK.", "blocking": "HARD_BLOCK"},
+          {"name": "DL-026 — Empty Non-CC EW Slots", "scan": "For each item: for choices A-D where choice ≠ CorrectChoice, check ExplanationWrong[choice] is present and has length ≥ 50.", "blocking": "HARD_BLOCK"},
+          {"name": "DL-016 — Metadata-Block CC Offset", "scan": "Compare within-object CorrectChoice to metadata block ChoiceA-D positions. If offset detected → FAIL. Per G-NEW-1.", "blocking": "HARD_BLOCK"},
+          {"name": "DL-018 — Missing EW[CC] Field", "scan": "Check ExplanationWrong[CorrectChoice] field EXISTS (even if empty). Missing field = structural corruption.", "blocking": "HARD_BLOCK"}
+        ]
+      },
+      {
+        "gate": "Gate 2",
+        "name": "Content Scan",
+        "position": 3,
+        "depends_on": ["Gate 1 (structural scan complete — all items flagged with defect status)"],
+        "blocking": "SOFT_BLOCK",
+        "runtime": "12s",
+        "input": "Gate 1 output + parsed question objects",
+        "output": "Per-item: DL-013 boilerplate status, EV3 principle citation status, DL-010 screening status",
+        "next_gate": "Gate 3 (all items — content warnings don't block further scanning)",
+        "description": "Detects content-level quality issues: template boilerplate in explanations (DL-013), missing accounting principle references in correct answer explanations (EV3), misassigned explanations (DL-010 WARN). These are SOFT_BLOCK — items can proceed but must be remediated before certification.",
+        "checks": [
+          {"name": "DL-013 — Template Boilerplate", "scan": "Scan all EW and EC fields for known boilerplate patterns: 'does not align with', 'this is the correct choice', 'plausible distractor', 'common misunderstanding', etc.", "blocking": "SOFT_BLOCK"},
+          {"name": "EV3 — Principle Citation", "scan": "Check ExplanationCorrect references an accounting principle by name (ASC, COSO, GAAP, IFRS, standard name). Absence = SOFT_BLOCK.", "blocking": "SOFT_BLOCK"},
+          {"name": "DL-010 — Misassigned Explanation", "scan": "Check if explanation content matches the QuestionID's topic/domain. Mismatch = WARN.", "blocking": "WARN"}
+        ]
+      },
+      {
+        "gate": "Gate 3",
+        "name": "Identity Reconciliation",
+        "position": 4,
+        "depends_on": ["Gate -1 (identity inventory available)", "Gate 0 (all items parsed)"],
+        "blocking": "HARD_BLOCK",
+        "runtime": "20s",
+        "input": "Gate -1 identity handoff + Gate 0 parsed objects + Gate 1 structural data",
+        "output": "Cross-item: compound key uniqueness, template family consistency, cross-pack collision, canonical seed viability",
+        "next_gate": "Gate 4 (identity must be reconciled before calculation validation)",
+        "description": "Validates cross-item identity relationships that can only be checked once all items are registered. Template families must be consistent (same stem+choices after rotation normalization). Cross-pack QID collisions must be resolved. Canonical seeds must be viable (at least one variant per family has valid CC).",
+        "checks": [
+          {"name": "Compound Key Uniqueness", "scan": "All compound keys are globally unique. Any collision = HARD_BLOCK for all colliding items.", "blocking": "HARD_BLOCK"},
+          {"name": "Template Family Completeness", "scan": "Each TemplateFamily has 1-5 members. Families with <1 member = HARD_BLOCK (orphan). Families with >5 = WARN (possible family merge needed).", "blocking": "HARD_BLOCK (orphan), WARN (>5)"},
+          {"name": "Canonical Seed Viability", "scan": "Each TemplateFamily has at least one member with valid CC and all EW slots. If no member is viable → HARD_BLOCK for entire family.", "blocking": "HARD_BLOCK"},
+          {"name": "Cross-Pack QID Collision", "scan": "For each {QID, CC} pair: if found in >1 pack with different content_hash → HARD_BLOCK. If same content_hash → WARN (duplicate).", "blocking": "HARD_BLOCK"},
+          {"name": "QID Format Consistency", "scan": "All items in the same section share the same QID format pattern. Deviations → WARN (possible format error or mixed-authorship section).", "blocking": "WARN"}
+        ]
+      },
+      {
+        "gate": "Gate 4",
+        "name": "Calculation Validation",
+        "position": 5,
+        "depends_on": ["Gate 3 (identity reconciled — can trace items to their correct data)", "Gate 0 (all items parsed)"],
+        "blocking": "SOFT_BLOCK",
+        "runtime": "50s",
+        "input": "Gate 3 resolved identities + parsed question objects",
+        "output": "Per-item: CC verification (Tier 1 numeric + Tier 3 EC-CC consistency), difficulty inflation detection",
+        "next_gate": "Gate 5 (calculation results feed into readiness state assignment)",
+        "description": "Validates numerical correctness: stored CorrectChoice matches independent calculation (DL-030 detection), ExplanationCorrect result is consistent with stated CC (EC-CC consistency), difficulty rating is appropriate for the actual cognitive demand (DL-031 detection).",
+        "checks": [
+          {"name": "DL-030 Tier 1 — Numeric CC Verification", "scan": "For numerical items: independently compute the correct answer from stem data. Compare to stored CorrectChoice. Mismatch = HARD_BLOCK.", "blocking": "HARD_BLOCK"},
+          {"name": "DL-030 Tier 3 — EC-CC Consistency", "scan": "Check that the correct answer described in ExplanationCorrect matches the stored CorrectChoice value. Mismatch = HARD_BLOCK.", "blocking": "HARD_BLOCK"},
+          {"name": "DL-031 — Difficulty Inflation", "scan": "Compute actual cognitive demand (Jaccard similarity to known-hard items, formula complexity, multi-step requirement). If stated difficulty is significantly higher than computed → SOFT_BLOCK.", "blocking": "SOFT_BLOCK"}
+        ]
+      },
+      {
+        "gate": "Gate 5",
+        "name": "Delivery Pool Safety",
+        "position": 6,
+        "depends_on": ["All prior gates (Gate -1 through Gate 4 complete)", "CANONICAL_ITEM_REGISTRY (for defect cross-references)", "DEFECT_LIBRARY.md (for known defective QIDs)", "Defect manifest (for delivery-blocked items)"],
+        "blocking": "HARD_BLOCK (for delivery pool inclusion)",
+        "runtime": "2s",
+        "input": "Gate -1 through Gate 4 results + Registry + Defect Library + Defect Manifest",
+        "output": "Final delivery pool inventory: items where delivery_pool_eligible = true",
+        "next_gate": "N/A — terminal gate. Output feeds Governance Board Tier 3 PORTFOLIO_READY.",
+        "description": "The final safety gate. Cross-references all Certified items against known-defective QID lists. Any Certified item with an open HIGH+ severity defect is removed from the delivery pool. The delivery pool is the set of items available for learner practice sessions.",
+        "checks": [
+          {"name": "Certified-Only Filter", "scan": "Only items with question_state = 'Certified' are eligible.", "blocking": "HARD_BLOCK for non-Certified"},
+          {"name": "Known-Defective Exclusion", "scan": "Cross-reference against DEFECT_LIBRARY.md: any Certified item with open defect Severity ≥ High → EXCLUDED.", "blocking": "HARD_BLOCK for defective"},
+          {"name": "Delivery-Blocked Exclusion", "scan": "Cross-reference against May's defect manifest: any explicitly blocked QID → EXCLUDED.", "blocking": "HARD_BLOCK for blocked"},
+          {"name": "Registry Delivery Pool Assertion", "scan": "Registry delivery_pool_eligible field matches Gate 5 computed eligibility. Mismatch → WARN (registry desync).", "blocking": "WARN"}
+        ]
+      }
+    ]
+  },
+
+  "pipeline_metrics": {
+    "total_runtime": "~102 seconds (~1.7 minutes) for full 2,500-item scan across 5 packs",
+    "runtime_by_gate": {
+      "gate_neg1": "3s",
+      "gate_0": "5s",
+      "gate_1": "10s",
+      "gate_2": "12s",
+      "gate_3": "20s",
+      "gate_4": "50s",
+      "gate_5": "2s"
+    },
+    "bottleneck": "Gate 4 (Calculation Validation) at ~50s — formula computation + CC verification. Can be parallelized per-section if needed.",
+    "v1_comparison": "v1: ~50+ scan passes across 14 sessions at ~3-5 minutes each = ~150-250 minutes of cumulative scan time. v2: 1 pipeline run at ~2 minutes per session. ~99% reduction in scan time per session."
+  },
+
+  "pipeline_execution_rules": {
+    "rule_1_linear": "Gates execute in strict sequential order: -1 → 0 → 1 → 2 → 3 → 4 → 5. No gate may execute before its dependencies are satisfied.",
+    "rule_2_no_skip": "No item may skip a gate. Even items classified as 'no_change' by delta review must pass through the pipeline (they are fast-tracked through checks using cached prior results).",
+    "rule_3_blocked_items": "Items that FAIL a HARD_BLOCK gate do not proceed to that gate's output (they remain in the blocked items list). The NEXT gate processes all remaining (non-blocked) items.",
+    "rule_4_scan_artifact": "The scan artifact is generated only after ALL gates complete. Partial artifacts are not distributed. This ensures downstream boards receive complete data.",
+    "rule_5_idempotency": "Running the pipeline twice on the same input pack files produces identical scan artifacts (identical content hash). Deterministic: same input → same output every run.",
+    "rule_6_pack_file_hash_lock": "Pipeline captures pack file hashes at the start of execution. If pack files change during pipeline execution (detected by hash comparison at end of run), the scan is invalidated and must be re-run.",
+    "rule_7_governance_halt": "If Governance Board detects pack file hash drift between T0 scan and Tmid (post-remediation), the pipeline must be re-run. No scan artifact that was generated from pre-remediation pack files may be used for certification decisions on post-remediation pack files."
+  },
+
+  "dependency_graph_visualization": {
+    "description": "Textual representation of the pipeline dependency graph",
+    "graph": [
+      "Gate -1 (Identity Validation)",
+      "  ↓",
+      "Gate 0 (JSON Integrity)",
+      "  ↓",
+      "Gate 1 (Structural Scan) ─────────────────┐",
+      "  ↓                                         │",
+      "Gate 2 (Content Scan)                       │ (identity data flows to Gate 3)",
+      "  ↓                                         │",
+      "Gate 3 (Identity Reconciliation) ←─────────┘",
+      "  ↓",
+      "Gate 4 (Calculation Validation)",
+      "  ↓",
+      "Gate 5 (Delivery Pool Safety)",
+      "  ↓",
+      "CERTIFICATION_SCAN_ARTIFACT",
+      "  ├──→ Registry Board",
+      "  ├──→ Quality Board",
+      "  ├──→ Governance Board",
+      "  └──→ Certification Board"
+    ]
+  },
+
+  "implementation_notes": {
+    "orchestrator_script": "scripts/run_scan_pipeline.js — orchestrates all 7 gates in sequence, generates CERTIFICATION_SCAN_ARTIFACT.",
+    "parallelization_opportunity": "Within Gate 4 (Calculation Validation): per-pack or per-section parallelization of formula computation. All other gates are inherently sequential due to dependency chain.",
+    "caching": "Items classified as 'no_change' in delta review can reuse their prior scan-pass results instead of being re-scanned. Cache: previous scan artifact's per-item results indexed by content_hash. If content_hash matches and no structural change detected → reuse cached results. Reduces Gate 1-4 runtime by ~80% on re-scans of unchanged items.",
+    "integration": "Pipeline is triggered at session T0 (AGENTS.md §9 updated to include pipeline run as part of session startup protocol). Pipeline is re-run at Tmid if pack files change. Governance Board Tier 1 SESSION_READY requires pipeline PASS report before session authorization."
+  },
+
+  "success_criteria": {
+    "SC-BF-01": "All 7 gates formally specified with position, dependencies, blocking behavior, runtime, input, output, and checks.",
+    "SC-BF-02": "Pipeline dependency graph fully defined — linear sequence with data flow arrows.",
+    "SC-BF-03": "Gate -1 (Identity) is the structural addition that fixes the v1 missing-identity problem.",
+    "SC-BF-04": "Each gate's checks enumerated with scan descriptions, blocking levels, and failure actions.",
+    "SC-BF-05": "Pipeline metrics: total runtime ~102 seconds for 2,500 items — fast enough for every session boundary.",
+    "SC-BF-06": "Execution rules: linear, no-skip, blocked-item routing, scan-artifact-generation gating, idempotency, hash-lock.",
+    "SC-BF-07": "Dependency graph visualization: textual representation showing gate sequence and board consumers.",
+    "SC-BF-08": "Integration points specified: T0 startup protocol, Tmid re-scan trigger, Tend hash reconciliation.",
+    "SC-BF-09": "Specification is implementable — S322 can code the pipeline orchestrator from this document alone.",
+    "SC-BF-10": "0 certification actions, 0 content modifications, 0 pack-file writes."
+  }
+}

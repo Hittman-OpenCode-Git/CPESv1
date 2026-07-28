@@ -1,0 +1,359 @@
+{
+  "session": "S720",
+  "agent": "E",
+  "title": "Pack A Section E Residual Review",
+  "generated": "2026-07-26T23:59:00Z",
+  "methodology": "Direct raw-file extraction via Node.js boundary-aware object parser (QuestionID → next QuestionID). All 75 QIDs extracted. CognitiveLevel, DifficultyScore, Difficulty, CorrectChoice, question_state, ExplanationWrong[CorrectChoice] emptiness verified per-item. Cross-reference: Pack E Section E extracted via same methodology. DL-027/DL-013 residual scanned via Select-String regex. Evidence: pack_a_corrected.js lines 17684–25267, pack_e_corrected.js grep.",
+
+  "section_e_summary": {
+    "total_items": 75,
+    "archived_clones": 16,
+    "additional_archived": 1,
+    "note_additional": "P1-E-056 (independent physical count control) is Archived but is NOT a DL-012 clone. DL-033 entry marks it as 'Independent topic, possibly mis-archived' — may warrant re-certification review.",
+    "active_items": 58,
+    "certified": 58,
+    "unprocessed": 0,
+    "in_audit": 0
+  },
+
+  "active_items_breakdown": {
+    "qid_range_001_043": {
+      "description": "Template rotation block — 5-item groups with rotating CorrectChoice. Company name progression (alphabetical).",
+      "active_count": 37,
+      "archived_from_this_range": 11
+    },
+    "qid_range_044_058": {
+      "description": "Transition block — scenario-based items with operative facts. 12 active, 7 archived.",
+      "active_count": 12,
+      "archived_from_this_range": 7
+    },
+    "qid_range_076_084": {
+      "description": "Post-template items — evolved scenarios with real business detail (Barrett Manufacturing, Pendleton Bank, NovaCare Health). Fully Certified.",
+      "active_count": 9,
+      "archived_from_this_range": 0
+    }
+  },
+
+  "current_cl_distribution": {
+    "Remember": 0,
+    "Understand": 46,
+    "Apply": 12,
+    "Analyze": 0,
+    "Evaluate": 0,
+    "total": 58,
+    "pre_s719": "47 Evaluate, ~8 Understand, ~3 Apply (estimated from 62.7% Evaluate claim)",
+    "s719_impact": "All ~47 former Evaluate items reclassified to Understand. This was correct — every 'Which response is most appropriate?' stem with a cosmetic company wrapper tested single-standard comprehension, not professional judgment."
+  },
+
+  "current_difficulty_distribution": {
+    "Easy_1": 19,
+    "ModerateEasy_2": 36,
+    "Moderate_3": 3,
+    "Difficult_4": 0,
+    "VeryDifficult_5": 0,
+    "total": 58
+  },
+
+  "dls_cl_difficulty_mapping_audit": {
+    "severe_gaps": {
+      "description": "Items where stored DifficultyScore is ≥2 levels from DCS §3 default for the assigned CognitiveLevel. This indicates either CL misclassification or difficulty miscalibration.",
+      "count": 12,
+      "items": [
+        {
+          "qid": "P1-E-004",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "Cosmetic scenario wrapper ('Yukon is reviewing internal controls related to information and communication exception reports. Which response is most appropriate?'). Removing the company name leaves the same concept-recognition question. CL should be Understand (not Apply). At Understand, DCS default is 2 → gap reduces to -1 (justified as Easy for obvious distractors).",
+          "recommendation": "Downgrade CL: Apply → Understand. Keep DS=1/Easy (justified because distractors A/C/D are obviously wrong 'capital budgeting', 'wait for external audit', 'trust and remove documentation')."
+        },
+        {
+          "qid": "P1-E-006",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "Same cosmetic pattern: 'Apex is reviewing internal controls related to segregation authorization custody recording. Which response is most appropriate?' Same template rotation group as 004.",
+          "recommendation": "Downgrade CL: Apply → Understand. Keep DS=1/Easy."
+        },
+        {
+          "qid": "P1-E-013",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "Cosmetic pattern: 'Harbor is reviewing internal controls related to IT general controls versus application controls. Which response is most appropriate?'",
+          "recommendation": "Downgrade CL: Apply → Understand. Keep DS=1/Easy."
+        },
+        {
+          "qid": "P1-E-044",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "Has operative facts: 'A company assigns the monthly bank reconciliation to an employee who has no involvement in cash receipts, cash disbursements, or the general ledger.' Tests applying segregation-of-duties knowledge to diagnose control purpose. CL=Apply is correct. DS=1 is 2 levels below DCS default of 3.",
+          "recommendation": "CL stays Apply. Upgrade DS: 1→3 (Moderate). Has multi-step reasoning (identify incompatible functions, match to COSO principle) justifying Moderate."
+        },
+        {
+          "qid": "P1-E-045",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "'Before an invoice is approved for payment, the accounts payable clerk compares the purchase order, receiving report, and supplier invoice.' Tests applying knowledge of three-way match control. CL=Apply is correct (operative facts present). DS=1 is 2 levels below default.",
+          "recommendation": "CL stays Apply. Upgrade DS: 1→2 (Moderate-Easy). Single straightforward control identification — doesn't reach Moderate/3. Justified -1 modifier from DCS default."
+        },
+        {
+          "qid": "P1-E-048",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "'A company switches from a periodic inventory system to a perpetual inventory system with real-time tracking.' Tests applying knowledge of perpetual inventory control benefits. CL=Apply is correct. DS=1 is 2 levels below.",
+          "recommendation": "Upgrade DS: 1→2 (Moderate-Easy). Straightforward system comparison — single-step reasoning."
+        },
+        {
+          "qid": "P1-E-052",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "'A company implements a bank lockbox system where customer payments are sent directly to a bank-controlled P.O. box.' Tests applying lockbox control knowledge. CL=Apply is correct.",
+          "recommendation": "Upgrade DS: 1→2 (Moderate-Easy). Single control identification."
+        },
+        {
+          "qid": "P1-E-053",
+          "cl": "Apply",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 3,
+          "gap": -2,
+          "diagnosis": "'A company maintains a formally approved vendor master list, and purchases can only be made from vendors on that list.' Tests applying vendor master file control knowledge. CL=Apply is correct.",
+          "recommendation": "Upgrade DS: 1→2 (Moderate-Easy). Single control identification — not multi-step."
+        },
+        {
+          "qid": "P1-E-007",
+          "cl": "Understand",
+          "ds": 1,
+          "difficulty": "Easy",
+          "dls_default_for_cl": 2,
+          "gap": -1,
+          "diagnosis": "'Beacon receives an invoice from a vendor for raw materials that Beacon never ordered and never received. Which control would have most effectively prevented payment on this fraudulent invoice?' HAS operative facts (fraud scenario). Candidate must diagnose which control maps to this specific fraud pattern. CL should be Apply. If Apply, DCS default=3 → gap=-2.",
+          "recommendation": "Upgrade CL: Understand → Apply. Upgrade DS: 1→3 (Moderate). Requires diagnosing the correct preventive control from a specific fraud scenario — genuine application."
+        },
+        {
+          "qid": "P1-E-076",
+          "cl": "Understand",
+          "ds": 3,
+          "difficulty": "Moderate",
+          "dls_default_for_cl": 2,
+          "gap": 1,
+          "diagnosis": "Detailed scenario: 'Barrett Manufacturing's internal audit team completed a separate evaluation of inventory cycle counting controls. 19 out of 200 items failed... variances exceeding $5,000 are not investigated unless the warehouse manager personally flags them... 23 variances above threshold went unexamined... $18,500 variance with materiality threshold $15,000 — no follow-up.' This requires PARSING operative facts and applying COSO Principle 17 (deficiency communication/remediation). CL should be Apply. If Apply, DCS default=3 → gap=0 (correct).",
+          "recommendation": "Upgrade CL: Understand → Apply. DS=3 stays (DCS default for Apply). ExplanationCorrect references COSO Principle 17 by name — EV3 passed."
+        },
+        {
+          "qid": "P1-E-078",
+          "cl": "Understand",
+          "ds": 3,
+          "difficulty": "Moderate",
+          "dls_default_for_cl": 2,
+          "gap": 1,
+          "diagnosis": "'Pendleton Bank processes over 400,000 wire transfers monthly through its treasury operations center. The bank's operational risk manager is reviewing the risk assessment framework and must identify which factor has the greatest impact on inherent risk for this specific function.' Has operative facts requiring analysis. CL should be Apply. If Apply, DS=3 is DCS default → correct.",
+          "recommendation": "Upgrade CL: Understand → Apply. DS=3 stays correct."
+        },
+        {
+          "qid": "P1-E-008",
+          "cl": "Apply",
+          "ds": 3,
+          "difficulty": "Moderate",
+          "dls_default_for_cl": 3,
+          "gap": 0,
+          "diagnosis": "Bank reconciliation calculation with specific numbers ($52,000, $45,000, $12,000, $4,500, $500). CL=Apply is correct. DS=3 is DCS default. Multi-step arithmetic (+1 modifier) already baked into Apply→Moderate default. This is the single best-calibrated item in Section E.",
+          "recommendation": "No change. Reference example of correct calibration."
+        }
+      ]
+    },
+    "moderate_gaps": {
+      "description": "Items where stored DifficultyScore is ±1 from DCS §3 default for the assigned CL. These may be justified by secondary modifiers.",
+      "count": 39,
+      "examples": [
+        {
+          "qid_range": "P1-E-009 through P1-E-012, P1-E-027, P1-E-028, P1-E-051, P1-E-077, P1-E-082, P1-E-084",
+          "cl": "Understand",
+          "ds": 1,
+          "dls_default": 2,
+          "gap": -1,
+          "count": 10,
+          "assessment": "All are the cosmetic template pattern ('X is reviewing internal controls related to Y. Which response is most appropriate?'). Distractors include obviously-wrong options ('classify as Part 2 capital budgeting matter', 'wait for external audit', 'remove documentation and trust'). The obviousness of distractors justifies Easy/1. Justified -1 modifier: formula provided in stem effect (stem spells out the topic), company name only."
+        },
+        {
+          "qid_range": "P1-E-004, 006, 013",
+          "cl": "Apply",
+          "ds": 1,
+          "dls_default": 3,
+          "gap": -2,
+          "count": 3,
+          "assessment": "See severe gaps table above — CL should be Understand for these cosmetic-wrapper items."
+        },
+        {
+          "qid_range": "P1-E-076, 078",
+          "cl": "Understand",
+          "ds": 3,
+          "dls_default": 2,
+          "gap": 1,
+          "count": 2,
+          "assessment": "See severe gaps table above — CL should be Apply for these operative-scenario items."
+        }
+      ]
+    }
+  },
+
+  "structural_defects": {
+    "dl_008": {
+      "status": "CLEAN",
+      "count": 0,
+      "note": "All 58 active items have empty ExplanationWrong[CorrectChoice]. Zero non-empty EW[CC] slots. Section E is structurally DL-008 compliant."
+    },
+    "dl_016": {
+      "status": "NOT_APPLICABLE",
+      "note": "Section E metadata blocks do not contain flat ChoiceA/ChoiceB/ChoiceC/ChoiceD fields. Only ExplanationWrongA-D, DifficultyScore, and CognitiveLevel are in the metadata block. No dual-block Choice mismatch risk. The DL-016 entry (DEFECT_LIBRARY.md) was flagged for P1-E-038 through P1-E-042 based on stale template residue that MAY have existed in a prior pack format, but current raw file evidence shows zero ChoiceA-D fields in Section E metadata blocks."
+    },
+    "dl_026": {
+      "status": "CLEAN",
+      "count": 0,
+      "note": "All 58 active items have non-empty ExplanationWrong at all 3 non-CorrectChoice positions. Zero empty distractor slots."
+    },
+    "dl_013": {
+      "status": "CLEAN",
+      "count_represents_plausible_misconception": 0,
+      "count_does_not_align_with": 0,
+      "note": "Section E is 100% free of DL-013 template boilerplate. All distractor explanations are choice-specific with proper COSO principle references."
+    },
+    "dl_027": {
+      "status": "CLEAN",
+      "count": 0,
+      "note": "Zero matches for 'misunderstand how the governing standard applies to this specific fact pattern'. The DL-027 closing-tag variants were fully removed from Pack A during the autonomous 5-hour run WAVE 3."
+    }
+  },
+
+  "explanation_ev3_audit": {
+    "description": "CAQS §4.3 EV3: Correct-answer explanation must reference the governing accounting principle by name.",
+    "result": "ALL_PASS",
+    "note": "Spot-checked 15 items across all three ranges (001-043, 044-058, 076-084). All ExplanationCorrect fields reference COSO by name with specific principle numbers (e.g., 'COSO Principle 6', 'COSO Principle 10', 'COSO Principle 17'). No EV3 failures found.",
+    "spot_checked_qids": ["P1-E-001", "P1-E-003", "P1-E-008", "P1-E-021", "P1-E-044", "P1-E-052", "P1-E-076", "P1-E-078", "P1-E-079", "P1-E-080", "P1-E-081", "P1-E-082", "P1-E-083", "P1-E-084"]
+  },
+
+  "reclassification_recommendations": [
+    {
+      "priority": "HIGH",
+      "qid": "P1-E-076",
+      "current": {"cl": "Understand", "ds": 3, "difficulty": "Moderate"},
+      "proposed": {"cl": "Apply", "ds": 3, "difficulty": "Moderate"},
+      "rationale": "Detailed operative scenario (19/200 items failed, $18,500 variance vs $15,000 threshold, 23 unexamined variances). Candidate must parse specific facts and apply COSO Principle 17 to determine the correct audit response. This is Apply, not Understand. DS stays at 3 (DCS default for Apply).",
+      "confidence": 90
+    },
+    {
+      "priority": "HIGH",
+      "qid": "P1-E-078",
+      "current": {"cl": "Understand", "ds": 3, "difficulty": "Moderate"},
+      "proposed": {"cl": "Apply", "ds": 3, "difficulty": "Moderate"},
+      "rationale": "Operative scenario ('400,000 wire transfers monthly', 'treasury operations center', 'risk assessment framework'). Candidate must apply inherent-risk concepts to a specific banking scenario. DS stays at 3.",
+      "confidence": 90
+    },
+    {
+      "priority": "HIGH",
+      "qid": "P1-E-007",
+      "current": {"cl": "Understand", "ds": 1, "difficulty": "Easy"},
+      "proposed": {"cl": "Apply", "ds": 3, "difficulty": "Moderate"},
+      "rationale": "Specific fraud scenario ('never ordered and never received'). Candidate must diagnose which control mechanism (three-way match) would have prevented this specific fraud pattern. Requires application of control knowledge to fact pattern — not mere concept recognition.",
+      "confidence": 85
+    },
+    {
+      "priority": "MEDIUM",
+      "qid": "P1-E-004, P1-E-006, P1-E-013",
+      "current": {"cl": "Apply", "ds": 1, "difficulty": "Easy"},
+      "proposed": {"cl": "Understand", "ds": 1, "difficulty": "Easy"},
+      "rationale": "All three are cosmetic company-name wrappers on 'X is reviewing internal controls.' Removing company name leaves equivalent concept-recognition question. CL should be Understand per ALIGNMENT_MAINTENANCE_GUIDE §2.2 scenario-operativity test. DS=1/Easy is justified at Understand level because distractors include obviously-wrong options (capital budgeting, wait for external audit).",
+      "confidence": 90,
+      "note": "3 items"
+    },
+    {
+      "priority": "MEDIUM",
+      "qid": "P1-E-044, P1-E-048, P1-E-052",
+      "current": {"cl": "Apply", "ds": 1, "difficulty": "Easy"},
+      "proposed": {"cl": "Apply", "ds": 2, "difficulty": "Moderate-Easy"},
+      "rationale": "These have genuine operative facts requiring application. CL=Apply is correct. But DS=1 is 2 levels below DCS default of 3. Upgrading to DS=2 (Moderate-Easy) with -1 modifier justified by single-step reasoning and company-name-only scenario format. P1-E-044 (bank reconciliation control purpose), P1-E-048 (perpetual inventory), P1-E-052 (lockbox system).",
+      "confidence": 85,
+      "note": "3 items"
+    },
+    {
+      "priority": "LOW",
+      "qid": "P1-E-056",
+      "current": {"state": "Archived"},
+      "proposed": {"state": "Certified (after CL/Difficulty audit)"},
+      "rationale": "P1-E-056 ('A warehouse manager who has custody of inventory is also assigned to perform the annual physical inventory count') is an independent topic (physical count control independence), not a DL-012 clone. DL-033 entry flags it as 'Independent topic, possibly mis-archived'. Should be reviewed and re-certified. ExplanationWrong fields are short (1-2 sentences) — borderline for DL-025/026 but not empty. Would benefit from explanation expansion during re-certification.",
+      "confidence": 75
+    }
+  ],
+
+  "item_level_findings": [
+    {
+      "qid": "P1-E-008",
+      "finding": "BEST_CALIBRATED",
+      "detail": "Bank reconciliation calculation. CL=Apply, DS=3, Difficulty=Moderate. DCS default match. Multi-step calculation. Choice-specific distractor explanations reference COSO by name. No structural defects. Reference example for Section E calibration.",
+      "cc": "A",
+      "topic": "E.008 bank reconciliation adjusted balance calculation"
+    },
+    {
+      "qid": "P1-E-003",
+      "finding": "CORRECTLY_CALIBRATED",
+      "detail": "Order splitting control weakness. CL=Apply, DS=2, Difficulty=Moderate-Easy. Has operative facts ($25,000 order split into three invoices under $10,000). CL correct (Apply). DS=2 is -1 from DCS default of 3 — justified by single straightforward concept (control circumvention identification).",
+      "cc": "C",
+      "topic": "E.003 purchase order splitting control weakness"
+    },
+    {
+      "qid": "P1-E-080",
+      "finding": "CORRECTLY_CALIBRATED",
+      "detail": "Crestwood Medical Clinic segregation of duties. CL=Apply, DS=2, Difficulty=Moderate-Easy. Genuine operative facts ('staff accountant opens mail, records, and deposits'). -1 from DCS default justified by single-step diagnosis.",
+      "cc": "C",
+      "topic": "E.080 segregation of duties cash custody and recording"
+    },
+    {
+      "qid": "P1-E-079",
+      "finding": "CORRECTLY_CALIBRATED",
+      "detail": "NovaCare COSO monitoring activities. CL=Apply, DS=2, Difficulty=Moderate-Easy. Operational scenario with specific facts. CL correct. -1 modifier justified.",
+      "cc": "C",
+      "topic": "E.079 coso monitoring activities ongoing vs separate"
+    },
+    {
+      "qid": "P1-E-084",
+      "finding": "OK_BUT_VERIFY_CL",
+      "detail": "SignalPoint audit committee independence. CL=Understand, DS=1, Easy. Scenario with operative facts (CEO's brother, marketing exec, former CFO as audit committee members). Candidate must parse specific independence violations and match to SOX/audit committee standards. Could be Apply (operative facts). If kept as Understand, DS=1 is -1 from default (justified). If upgraded to Apply, DS would need upgrade to 3.",
+      "cc": "B",
+      "topic": "E.084 audit committee oversight independence"
+    }
+  ],
+
+  "cross_reference_pack_e_section_e": {
+    "pack_e_section_e_summary": {
+      "total": 75,
+      "certified": 75,
+      "archived": 0,
+      "cl_distribution": {"Understand": 74, "Apply": 1},
+      "difficulty_distribution": {"Easy": 18, "Moderate-Easy": 24, "Moderate": 33}
+    },
+    "consistency_analysis": "MAJOR_DISPARITY. Pack E Section E is 74/75 Understand (98.7%) with pure definition-matching stems ('The control environment reflects:', 'Risk assessment involves:', 'Control activities include:'). Pack A Section E is 46/58 Understand (79.3%) with 12/58 Apply (20.7%) and scenario-based stems. Both are Section E (Internal Controls) but were authored through completely different pipelines. Pack E Section E tested definition recognition; Pack A Section E tested concept application in business scenarios. Difficulty also diverges: Pack E has 33/75 Moderate items (44%) at Understand level — these are DCS-inflated. Pack A has 3/58 Moderate (5.2%) at Understand level — more realistic.",
+    "pack_e_dls_issue": "33 Pack E Section E items at Understand/Moderate (DS=3): DCS default for Understand is Moderate-Easy/2. These items are pure definitions at inflated difficulty. This is the Pack E difficulty inflation pattern documented in S719 Agent C Block-C. 24 of these items were moved from Difficult→Moderate by S719 but are still 1 level above DCS default.",
+    "recommendation": "Pack E Section E 33 items at Understand/Moderate should be downgraded to Moderate-Easy/2. Pack A Section E has the more accurate Section E calibration. Recommend using Pack A Section E as the cross-pack reference standard for Internal Controls domain difficulty calibration."
+  },
+
+  "read_only_attestation": "Zero files modified. All evidence from direct Node.js extraction, PowerShell Select-String grep, and raw file inspection. No pack files were edited."
+}

@@ -1,0 +1,113 @@
+{
+  "specId": "SESSION850_MODERNIZATION_ANALYTICS",
+  "board": "I",
+  "title": "Modernization Throughput Analytics",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Measure items certified per wave, items remediated per session, cycle time, queue health, and wave velocity. Provides data-driven insight into modernization throughput.",
+  "outputFile": "scripts/output/modernization_analytics.json",
+  "inputs": {
+    "revisionHistory": "knowledge/REVISION_HISTORY.md",
+    "domainProgress": "scripts/output/domain_progress.json",
+    "certificationWaves": "scripts/output/certification_waves.json",
+    "remediationQueue": "scripts/output/remediation_queue.json"
+  },
+  "metrics": {
+    "itemsCertified": {
+      "label": "Items Certified per Wave",
+      "unit": "items",
+      "calculation": "Count of Certification wave completions from REVISION_HISTORY.md",
+      "target": "50-100 items per wave",
+      "trend": "cumulative over time"
+    },
+    "itemsRemediated": {
+      "label": "Items Remediated per Session",
+      "unit": "items",
+      "calculation": "Count of remediation entries from REVISION_HISTORY.md",
+      "target": "10-30 items per session",
+      "trend": "cumulative over time"
+    },
+    "cycleTime": {
+      "label": "Cycle Time (In Audit → Certified)",
+      "unit": "hours",
+      "calculation": "Timestamps from REVISION_HISTORY.md certification entries",
+      "target": "< 4 hours per wave",
+      "trend": "average over recent waves"
+    },
+    "queueHealth": {
+      "label": "Queue Health Index",
+      "unit": "percentage",
+      "calculation": "1 - (blocked items / total non-certified items)",
+      "target": "> 85%",
+      "levels": {
+        "healthy": "> 85% — queue is flowing",
+        "warning": "60-85% — backlog accumulating",
+        "critical": "< 60% — major blockage"
+      }
+    },
+    "waveVelocity": {
+      "label": "Wave Velocity",
+      "unit": "items per wave",
+      "calculation": "Certified items count / number of waves",
+      "target": "> 40 items per wave average",
+      "trend": "moving average of last 3 waves"
+    },
+    "defectResolutionRate": {
+      "label": "Defect Resolution Rate",
+      "unit": "percentage",
+      "calculation": "Remediated items / (remediated + open items)",
+      "target": "> 90%",
+      "byDefectType": {
+        "DL-008": "percentage resolved",
+        "DL-013": "percentage resolved",
+        "DL-025": "percentage resolved",
+        "DL-026": "percentage resolved"
+      }
+    },
+    "domainAdvancementRate": {
+      "label": "Domain Advancement Rate",
+      "unit": "percentage points per session",
+      "calculation": "Δ coverage% / number of sessions",
+      "target": "> 2 pp per session",
+      "byDomain": { "A": "float", "B": "float", "C": "float", "D": "float", "E": "float", "F": "float" }
+    }
+  },
+  "analyticsOutput": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "period": { "start": "ISO 8601 date", "end": "ISO 8601 date" },
+      "throughput": {
+        "totalCertifiedThisPeriod": "integer",
+        "totalRemediatedThisPeriod": "integer",
+        "avgCycleTimeHours": "float",
+        "avgWaveVelocity": "float"
+      },
+      "queueHealth": {
+        "index": "float",
+        "status": "healthy | warning | critical",
+        "openDefects": "integer",
+        "blockedItems": "integer"
+      },
+      "defectResolution": {
+        "overallRate": "float",
+        "byType": { "DL-008": "float", "DL-013": "float" }
+      },
+      "domainAdvancement": {
+        "A": { "currentCoverage": "float", "trend": "stable | improving | declining" }
+      },
+      "projections": {
+        "estimatedCompletionDate": "ISO 8601 date or null",
+        "remainingWaves": "integer",
+        "remainingSessions": "integer"
+      }
+    }
+  },
+  "usage": "Updated manually per session or regenerated via script reading REVISION_HISTORY.md entries.",
+  "dependencies": {
+    "required": ["REVISION_HISTORY.md", "scripts/output/domain_progress.json"]
+  }
+}

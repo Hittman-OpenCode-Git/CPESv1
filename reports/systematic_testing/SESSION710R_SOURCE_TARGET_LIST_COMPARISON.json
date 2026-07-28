@@ -1,0 +1,70 @@
+{
+  "session": "710R",
+  "timestamp": "2026-07-25T18:00:00",
+  "type": "Source-list extraction — Certified DL-026 target comparison across 4 sources",
+  "comparison_method": "Side-by-side QID list extraction from S708 audit, S708 ledger, S709 freeze, and fresh object-bounded scan",
+  "sources": {
+    "source_1": {
+      "name": "S708 DL-026 Audit JSON",
+      "path": "reports/systematic_testing/SESSION708_DL026_DEFINITION_AND_RESIDUAL_AUDIT.json",
+      "certified_qids": {
+        "pack_a": ["P1-B-001"],
+        "pack_c": ["P1-BC-094", "P1-DC-019"],
+        "pack_d": ["P1-AD-047", "P1-AD-052", "P1-BD-014", "P1-BD-042", "P1-BD-047", "P1-CD-002", "P1-CD-012", "P1-CD-031", "P1-DD-006", "P1-DD-025"]
+      },
+      "accuracy": {
+        "pack_a": "CORRECT — matches current scan",
+        "pack_c": "CORRECT — matches current scan",
+        "pack_d": "WRONG — only AD-047 and CD-002 overlap with current scan. Remaining 8 QIDs differ. Likely stale snapshot from before S704 Pack D DL-008 remediation (which cleared AD-048, AD-054, AD-055, CD-003, CD-006, CD-022, CD-023, CD-034)."
+      }
+    },
+    "source_2": {
+      "name": "S708 Residual Defect Ledger",
+      "path": "reports/systematic_testing/SESSION708_CROSS_PACK_RESIDUAL_DEFECT_LEDGER.json",
+      "note": "Does not list individual QIDs — only aggregate counts (Pack A:1, Pack C:2, Pack D:10 certified). Counts match current scan. No QID-level reconciliation possible from this source alone."
+    },
+    "source_3": {
+      "name": "S709 Freeze Report",
+      "path": "reports/session_status/SESSION709_700_SERIES_CERTIFICATION_STATE_FREEZE.md",
+      "certified_qids": {
+        "pack_a": ["P1-B-001"],
+        "pack_c": ["P1-AC-001", "P1-AC-002"],
+        "pack_d": ["P1-AD-047", "P1-AD-048", "P1-AD-054", "P1-AD-055", "P1-CD-002", "P1-CD-003", "P1-CD-006", "P1-CD-022", "P1-CD-023", "P1-CD-034"]
+      },
+      "accuracy": {
+        "pack_a": "CORRECT — matches current scan",
+        "pack_c": "WRONG — lists AC-001/AC-002 instead of BC-094/DC-019. AC-001 and AC-002 are in Pack C Section A (Certified) but are NOT DL-026 items per current scan (all EW slots are non-empty). This appears to be a copy-paste error from a stale target list draft.",
+        "pack_d": "CORRECT — all 10 QIDs match current scan exactly"
+      }
+    },
+    "source_4": {
+      "name": "Current Object-Bounded Pack Scan (GROUND TRUTH)",
+      "method": "Function constructor parse, G-NEW-3 within-object CorrectChoice extraction",
+      "tool": "tools/qc/analyze_s708_cross_pack_residuals.js",
+      "certified_qids": {
+        "pack_a": ["P1-B-001"],
+        "pack_c": ["P1-BC-094", "P1-DC-019"],
+        "pack_d": ["P1-AD-047", "P1-AD-048", "P1-AD-054", "P1-AD-055", "P1-CD-002", "P1-CD-003", "P1-CD-006", "P1-CD-022", "P1-CD-023", "P1-CD-034"]
+      },
+      "note": "Independently verified by two agents with identical results. This is the authoritative source."
+    }
+  },
+  "overlap_analysis": {
+    "all_4_sources_agree": ["P1-B-001"],
+    "sources_1_4_agree_sources_2_3_disagree": {
+      "pack_c": ["P1-BC-094", "P1-DC-019"],
+      "note": "S708 audit (source 1) and current scan (source 4) agree. S709 freeze (source 3) has different QIDs for Pack C."
+    },
+    "sources_3_4_agree_source_1_disagrees": {
+      "pack_d": ["P1-AD-048", "P1-AD-054", "P1-AD-055", "P1-CD-003", "P1-CD-006", "P1-CD-022", "P1-CD-023", "P1-CD-034"],
+      "note": "S709 freeze (source 3) and current scan (source 4) agree. S708 audit (source 1) has 8 different QIDs."
+    },
+    "only_in_source_1": ["P1-AD-052", "P1-BD-014", "P1-BD-042", "P1-BD-047", "P1-CD-012", "P1-CD-031", "P1-DD-006", "P1-DD-025"],
+    "only_in_source_3": ["P1-AC-001", "P1-AC-002"],
+    "cross_source_overlap": ["P1-B-001", "P1-AD-047", "P1-CD-002"]
+  },
+  "discrepancy_root_cause": {
+    "s708_pack_d_error": "S708 audit appears to have used a pre-S704 snapshot of Pack D. S704 cleared 20 Pack D DL-008 items and the accompanying DL-026 remediation changed the Certified DL-026 landscape. The S708 Pack D DL-026 list reflects Pack D state BEFORE S704, not after.",
+    "s709_pack_c_error": "S709 freeze report appears to have used a stale/estimated target list for Pack C (AC-001, AC-002) rather than copying from the S708 audit JSON (BC-094, DC-019). Possible copy-paste artifact from an earlier draft."
+  }
+}

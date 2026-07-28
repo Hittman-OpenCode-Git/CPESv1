@@ -1,0 +1,220 @@
+{
+  "title": "S723 Cross-Pack Consistency Review",
+  "date": "2026-07-26",
+  "agent": "Agent H (Governance Closure Program)",
+  "methodology": "Direct Select-String field counting on all 5 pack files. QID/state/field counts independently verified. Structural field presence checked for Stem, Choices, CorrectChoice, ExplanationCorrect, ExplanationWrongA/B/C/D.",
+  "per_pack": {
+    "A": {
+      "total": 500,
+      "questionid_count": 500,
+      "question_state_count": 500,
+      "certified": 481,
+      "unprocessed": 0,
+      "archived": 19,
+      "in_audit": 0,
+      "editorial_queue": 0,
+      "sections_certified": ["A", "D", "E"],
+      "sections_partial": ["B", "C", "F"],
+      "structural_anomalies": [],
+      "field_summary": {
+        "Stem": 500,
+        "Choices": 500,
+        "CorrectChoice": 500,
+        "ExplanationCorrect": 500,
+        "ExplanationWrongA": 500,
+        "ExplanationWrongB": 500,
+        "ExplanationWrongC": 500,
+        "ExplanationWrongD": 500
+      }
+    },
+    "B": {
+      "total": 500,
+      "questionid_count": 500,
+      "question_state_count": 500,
+      "certified": 500,
+      "unprocessed": 0,
+      "archived": 0,
+      "in_audit": 0,
+      "editorial_queue": 0,
+      "sections_certified": ["A", "B", "C", "D", "E", "F"],
+      "sections_partial": [],
+      "structural_anomalies": [],
+      "field_summary": {
+        "Stem": 500,
+        "Choices": 500,
+        "CorrectChoice": 500,
+        "ExplanationCorrect": 500,
+        "ExplanationWrongA": 500,
+        "ExplanationWrongB": 500,
+        "ExplanationWrongC": 500,
+        "ExplanationWrongD": 500
+      }
+    },
+    "C": {
+      "total": 500,
+      "questionid_count": 500,
+      "question_state_count": 500,
+      "certified": 350,
+      "unprocessed": 94,
+      "archived": 56,
+      "in_audit": 0,
+      "editorial_queue": 0,
+      "sections_certified": ["A", "B"],
+      "sections_partial": ["C", "D", "E", "F"],
+      "structural_anomalies": [],
+      "field_summary": {
+        "Stem": 500,
+        "Choices": 500,
+        "CorrectChoice": 500,
+        "ExplanationCorrect": 500,
+        "ExplanationWrongA": 500,
+        "ExplanationWrongB": 500,
+        "ExplanationWrongC": 500,
+        "ExplanationWrongD": 500
+      }
+    },
+    "D": {
+      "total": 500,
+      "questionid_count": 500,
+      "question_state_count": 500,
+      "certified": 350,
+      "unprocessed": 93,
+      "archived": 57,
+      "in_audit": 0,
+      "editorial_queue": 0,
+      "sections_certified": ["A", "B", "D"],
+      "sections_partial": ["C", "E", "F"],
+      "structural_anomalies": [
+        {
+          "qid": "P1-FD-045",
+          "severity": "HIGH",
+          "description": "Missing core content fields: CorrectChoice, ExplanationCorrect, Stem, Choices. Item has question_state='Unprocessed', VerifiedChecks, and ExplanationWrongA/B/C/D, but no learner-facing content fields. Known defect (referenced in AGENTS.md §13.2 and CURRENT_BASELINES.md §6).",
+          "impact": "Item cannot be rendered in exam sessions. Blocks certification."
+        }
+      ],
+      "field_summary": {
+        "Stem": 499,
+        "Choices": 499,
+        "CorrectChoice": 499,
+        "ExplanationCorrect": 499,
+        "ExplanationWrongA": 500,
+        "ExplanationWrongB": 500,
+        "ExplanationWrongC": 500,
+        "ExplanationWrongD": 500
+      }
+    },
+    "E": {
+      "total": 500,
+      "questionid_count": 500,
+      "question_state_count": 500,
+      "certified": 500,
+      "unprocessed": 0,
+      "archived": 0,
+      "in_audit": 0,
+      "editorial_queue": 0,
+      "sections_certified": ["A", "B", "C", "D", "E", "F"],
+      "sections_quality_blocked": ["C"],
+      "notes": "All 100 Section C items carry question_state='Certified', but 95 have DL-021 (absent distractor ExplanationWrong fields). Section C is governance-state Certified but structurally incomplete for learner feedback. CURRENT_BASELINES.md lists 'All except C' as sections closed.",
+      "structural_anomalies": [],
+      "field_summary": {
+        "Stem": 500,
+        "Choices": 500,
+        "CorrectChoice": 500,
+        "ExplanationCorrect": 500,
+        "ExplanationWrongA": 500,
+        "ExplanationWrongB": 500,
+        "ExplanationWrongC": 500,
+        "ExplanationWrongD": 500
+      }
+    }
+  },
+  "totals": {
+    "grand_total_qids": 2500,
+    "grand_total_certified": 2181,
+    "grand_total_unprocessed": 187,
+    "grand_total_archived": 132,
+    "overall_certification_pct": 87.24,
+    "items_missing_question_state": 0,
+    "packs_with_field_anomalies": 1
+  },
+  "structural_consistency": {
+    "all_packs_use_same_field_names": true,
+    "all_packs_have_correctchoice": false,
+    "all_packs_have_explanationcorrect": false,
+    "all_packs_have_stem": false,
+    "note": "Packs A, B, C, E are structurally identical at the field-count level (all core fields = 500). Pack D has 1 item (P1-FD-045) missing CorrectChoice, ExplanationCorrect, Stem, and Choices — a known structural defect tracked in AGENTS.md §13.2.",
+    "anomalies": [
+      "Pack D: 499/500 items have CorrectChoice (missing: P1-FD-045)",
+      "Pack D: 499/500 items have ExplanationCorrect (missing: P1-FD-045)",
+      "Pack D: 499/500 items have Stem (missing: P1-FD-045)",
+      "Pack D: 499/500 items have Choices (missing: P1-FD-045)"
+    ]
+  },
+  "certification_balance": {
+    "most_certified_pack": "B (500/500 = 100%)",
+    "least_certified_pack": "C and D (350/500 = 70%)",
+    "balance_score_pct": 70,
+    "balance_assessment": "NOTABLE IMBALANCE: Packs B and E at 100%, Packs C and D at 70%. A 30-percentage-point gap between highest and lowest certification coverage. Packs C and D each have 150 items not yet in the learner pool.",
+    "per_pack_pct": {
+      "A": 96.2,
+      "B": 100.0,
+      "C": 70.0,
+      "D": 70.0,
+      "E": 100.0
+    }
+  },
+  "residual_risk_by_pack": {
+    "A": {
+      "risk_level": "LOW",
+      "certified_pct": 96.2,
+      "known_defects": [
+        "DL-008: 2 Certified items (P1-B-001, P1-B-025) with non-empty EW[CC]",
+        "DL-016: Metadata-block Choice shift across all sections (structural, not learner-facing)"
+      ],
+      "uncertified_remaining": "19 Archived items (Pack A Section E DL-012 clones)"
+    },
+    "B": {
+      "risk_level": "NONE",
+      "certified_pct": 100.0,
+      "known_defects": [],
+      "uncertified_remaining": "0 — fully certified, all 6 sections"
+    },
+    "C": {
+      "risk_level": "MEDIUM",
+      "certified_pct": 70.0,
+      "known_defects": [
+        "DL-008: 52-55 Certified items with non-empty EW[CC] across Sections A and B",
+        "DL-026: Empty distractor slots in Certified Section A+B items",
+        "DL-013: ~357 boilerplate fields across Sections D, E, F",
+        "DL-012: Section E clone redundancy (28 clone groups)"
+      ],
+      "uncertified_remaining": "94 Unprocessed + 56 Archived = 150 items (Sections C, D, E, F)"
+    },
+    "D": {
+      "risk_level": "MEDIUM",
+      "certified_pct": 70.0,
+      "known_defects": [
+        "DL-008: 10 Certified items with non-empty EW[CC]",
+        "FD-045: Missing core content fields (structural, Unprocessed)",
+        "DL-026: Empty distractor slots in Certified items",
+        "DL-013: ~256 boilerplate fields across Sections E, F",
+        "DL-012: Section E clone redundancy (28 clone groups)"
+      ],
+      "uncertified_remaining": "93 Unprocessed + 57 Archived = 150 items (Sections C, E, F)"
+    },
+    "E": {
+      "risk_level": "LOW",
+      "certified_pct": 100.0,
+      "known_defects": [
+        "DL-021: 95 Certified Section C items with absent distractor ExplanationWrong fields (learner-safety concern for learners selecting wrong answers)",
+        "DL-021: 5 Section C items remediated (distractor explanations added)",
+        "DL-030: P1E-E-037 — CorrectChoice fixed (Principle 14→15) — RESOLVED"
+      ],
+      "uncertified_remaining": "0 — fully certified, but Section C structurally incomplete"
+    }
+  },
+  "governance_quality": "ADEQUATE",
+  "governance_quality_rationale": "87.2% overall certified (2,181/2,500). Structural consistency is strong across Packs A, B, C, E (all core fields at 500). Pack D has 1 known structural anomaly (FD-045). State coverage is complete (0 items missing question_state). Certified pool carries known residual defects (DL-008, DL-021, DL-026) that degrade learner experience quality but do not affect scoring correctness. Packs C and D lag at 70% certification — a 30-point gap from Packs B/E at 100%. Governance framework (5 rules, 20/20 tests) is active and enforced.",
+  "verdict": "INCONSISTENCIES_FOUND",
+  "verdict_rationale": "Three inconsistencies found: (1) Certification coverage ranges from 70% (C/D) to 100% (B/E) — a 30-point spread. (2) Pack D has 1 item (FD-045) with missing core content fields while all other packs are structurally complete. (3) Pack E Section C items are state-Certified but have a known DL-021 quality defect spanning 95 of 100 items — governance state and structural quality are decoupled. These inconsistencies do not block operations but should be addressed before declaring program-level governance closure."
+}

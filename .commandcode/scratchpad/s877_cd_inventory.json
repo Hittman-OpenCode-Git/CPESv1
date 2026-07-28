@@ -1,0 +1,5616 @@
+{
+  "items": [
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-001",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.001 standard cost system purpose",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-002",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.002 management by exception",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-003",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.003 controllable cost performance",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-004",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.004 cost center evaluation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-005",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.005 profit center evaluation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-006",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.006 investment center evaluation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-007",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.007 balanced scorecard perspectives",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-008",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.008 leading versus lagging indicator",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-009",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.009 benchmarking application",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-010",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.010 nonfinancial quality metrics",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-011",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.011 transfer price goal congruence",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-012",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.012 residual income advantage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-013",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.013 productivity measure interpretation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-014",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.014 efficiency versus effectiveness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-015",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.015 variance responsibility nuance",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-016",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.016 direct material price variance 1",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-017",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.017 direct material quantity variance 2",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-018",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.018 direct labor rate variance 3",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-019",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.019 direct labor efficiency variance 4",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-020",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.020 flexible budget variance spending 5",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-021",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.021 ROI investment center measure 6",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-022",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.022 residual income investment charge 7",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-023",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.023 sales volume versus flexible budget variance 8",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-024",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.024 balanced scorecard causal linkage 9",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-025",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.025 transfer price capacity condition 10",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-026",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.026 KPI controllability alignment 11",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-027",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.027 variance investigation threshold 12",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-028",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.028 direct material price variance 13",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-029",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.029 direct material quantity variance 14",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-030",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.030 direct labor rate variance 15",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-031",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.031 direct labor efficiency variance 16",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-032",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.032 flexible budget variance spending 17",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-033",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.033 ROI investment center measure 18",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-034",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.034 residual income investment charge 19",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-035",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.035 sales volume versus flexible budget variance 20",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-036",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.036 balanced scorecard perspective classification",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-037",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.037 transfer price at market price with excess capacity",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-038",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.038 KPI controllability alignment 23",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-039",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.039 variance investigation threshold 24",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-040",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.040 direct material price variance 25",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-041",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.041 direct material quantity variance 26",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-042",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.042 direct labor rate variance 27",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-043",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.043 direct labor efficiency variance 28",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-044",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.044 flexible budget variance spending 29",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-045",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.045 ROI investment center measure 30",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-046",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.046 residual income investment charge 31",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-047",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.047 sales volume versus flexible budget variance 32",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-048",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.048 lag vs lead indicator distinction",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-049",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.049 negotiated transfer price range",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-050",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.050 KPI controllability alignment 35",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-051",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.051 variance investigation threshold 36",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-052",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.052 direct material price variance 37",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-053",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.053 direct material quantity variance 38",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-054",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.054 direct labor rate variance 39",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-055",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.055 direct labor efficiency variance 40",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-056",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.056 flexible budget variance spending 41",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-057",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.057 ROI investment center measure 42",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-058",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.058 residual income investment charge 43",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-059",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.059 sales volume versus flexible budget variance 44",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-060",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.060 scorecard measure overload risk",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-061",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.061 dual transfer pricing rationale",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-062",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.062 KPI controllability alignment 47",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-063",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.063 variance investigation threshold 48",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-064",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.064 direct material price variance 49",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-065",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.065 direct material quantity variance 50",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-066",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.066 direct labor rate variance 51",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-067",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.067 direct labor efficiency variance 52",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-068",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.068 flexible budget variance spending 53",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-069",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.069 ROI investment center measure 54",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-070",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.070 residual income investment charge 55",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-071",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.071 sales volume versus flexible budget variance 56",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-072",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.072 customer perspective metric example",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-073",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.073 cost-based transfer pricing limitation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-074",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.074 KPI controllability alignment 59",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-075",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.075 variance investigation threshold 60",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-076",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.076 direct material price variance 61",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-077",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.077 direct material quantity variance 62",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-078",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.078 direct labor rate variance 63",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-079",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.079 direct labor efficiency variance 64",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-080",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.080 flexible budget variance spending 65",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-081",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.081 ROI investment center measure 66",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-082",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.082 residual income investment charge 67",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-083",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.083 sales volume versus flexible budget variance 68",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-084",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.084 strategy map cause-and-effect logic",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-085",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.085 goal congruence in transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-086",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.086 KPI controllability alignment 71",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-087",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.087 variance investigation threshold 72",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-088",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.088 direct material price variance 73",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-089",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.089 direct material quantity variance 74",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-090",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.090 direct labor rate variance 75",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-091",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.091 direct labor efficiency variance 76",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-092",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.092 flexible budget variance spending 77",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-093",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.093 ROI investment center measure 78",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-094",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.094 residual income investment charge 79",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-095",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.095 sales volume versus flexible budget variance 80",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-096",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.096 scorecard alignment with strategy",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-097",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.097 transfer price with no excess capacity",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-098",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.098 KPI controllability alignment 83",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-099",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.099 variance investigation threshold 84",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-C-100",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.100 direct material price variance 85",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-001",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.001 job order costing use case",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-002",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.002 process costing use case",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-003",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.003 normal costing timing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-004",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.004 overhead overapplied underapplied calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-005",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.005 equivalent units concept",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-006",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.006 weighted-average process costing",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-007",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.007 ABC activity rate materials handling",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-008",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.008 unit-level versus batch-level activity",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-009",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.009 service department direct method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-010",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.010 service department step method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-011",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.011 reciprocal allocation method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-012",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.012 target costing market price",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-013",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.013 life-cycle costing scope",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-014",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.014 kaizen costing focus",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-015",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.015 quality cost prevention",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-016",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.016 quality cost appraisal",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-017",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.017 internal failure cost",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-018",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.018 external failure cost",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-019",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.019 lean waste reduction",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-020",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.020 theory of constraints bottleneck",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-021",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.021 predetermined overhead applied to job 1",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-022",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.022 overhead underapplied or overapplied 2",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-023",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.023 equivalent units conversion cost 3",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-024",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.024 cost per equivalent unit weighted average 4",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-025",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.025 ABC setup cost assignment 5",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-026",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.026 target cost allowable cost 6",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-027",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.027 process improvement learning effect cost 7",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-028",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.028 ABC facility-level cost allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-029",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.029 value chain cost management 9",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-030",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.030 JIT inventory risk control 10",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-031",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.031 predetermined overhead applied to job 11",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-032",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.032 overhead underapplied or overapplied 12",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-033",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.033 equivalent units conversion cost 13",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-034",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.034 cost per equivalent unit weighted average 14",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-035",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.035 ABC setup cost assignment 15",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-036",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.036 target cost allowable cost 16",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-037",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.037 process improvement learning effect cost 17",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-038",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.038 batch-level activity classification",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-039",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.039 value chain cost management 19",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-040",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.040 JIT and supplier relationship dependency",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-041",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.041 predetermined overhead applied to job 21",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-042",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.042 overhead underapplied or overapplied 22",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-043",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.043 equivalent units conversion cost 23",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-044",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.044 cost per equivalent unit weighted average 24",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-045",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.045 ABC setup cost assignment 25",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-046",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.046 target cost allowable cost 26",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-047",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.047 process improvement learning effect cost 27",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-048",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.048 ABC product-level cost allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-049",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.049 value chain cost management 29",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-050",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.050 JIT effect on inventory carrying costs",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-051",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.051 predetermined overhead applied to job 31",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-052",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.052 overhead underapplied or overapplied 32",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-053",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.053 equivalent units conversion cost 33",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-054",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.054 cost per equivalent unit weighted average 34",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-055",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.055 ABC setup cost assignment 35",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-056",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.056 target cost allowable cost 36",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-057",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.057 process improvement learning effect cost 37",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-058",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.058 ABC cost pool allocation calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-059",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.059 value chain cost management 39",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-060",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.060 backflush costing under JIT",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-061",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.061 predetermined overhead applied to job 41",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-062",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.062 overhead underapplied or overapplied 42",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-063",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.063 equivalent units conversion cost 43",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-064",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.064 cost per equivalent unit weighted average 44",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-065",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.065 ABC setup cost assignment 45",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-066",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.066 target cost allowable cost 46",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-067",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.067 process improvement learning effect cost 47",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-068",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.068 ABC versus traditional overhead cost comparison",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-069",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.069 value chain cost management 49",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-070",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.070 JIT quality requirement",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-071",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.071 predetermined overhead applied to job 51",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-072",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.072 overhead underapplied or overapplied 52",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-073",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.073 equivalent units conversion cost 53",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-074",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.074 cost per equivalent unit weighted average 54",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_A",
+      "qid": "P1-D-075",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.075 ABC setup cost assignment 55",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-101",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.101 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-102",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.102 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-103",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.103 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-104",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.104 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-105",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.105 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-106",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.106 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-107",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.107 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-108",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.108 variance analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-109",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.109 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-110",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.110 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-111",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.111 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-112",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.112 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-113",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.113 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-114",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.114 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-115",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.115 variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-116",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.116 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-117",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.117 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-118",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.118 sales variance analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-119",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.119 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-120",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.120 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-121",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.121 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-122",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.122 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-123",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.123 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-124",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.124 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-125",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.125 sales variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-126",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.126 responsibility centers",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-127",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.127 responsibility centers",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-128",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.128 responsibility centers",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-129",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.129 responsibility centers",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-130",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.130 responsibility centers",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-131",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.131 responsibility centers",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-132",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.132 responsibility centers",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-133",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.133 responsibility centers",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-134",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.134 responsibility centers",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-135",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.135 responsibility centers",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-136",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.136 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-137",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.137 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-138",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.138 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-139",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.139 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-140",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.140 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-141",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.141 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-142",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.142 ROI and residual income",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-143",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.143 ROI and residual income",
+      "cleft": "Evaluate"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-144",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.144 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-145",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.145 ROI and residual income",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-146",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.146 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-147",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.147 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-148",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.148 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-149",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.149 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-150",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.150 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-151",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.151 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-152",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.152 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-153",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.153 transfer pricing",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-154",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.154 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-155",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.155 transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-156",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.156 balanced scorecard",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-157",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.157 balanced scorecard",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-158",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.158 balanced scorecard",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-159",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.159 balanced scorecard",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-160",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.160 balanced scorecard",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-161",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.161 balanced scorecard",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-162",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.162 balanced scorecard",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-163",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.163 balanced scorecard",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-164",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.164 benchmarking",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-165",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.165 benchmarking",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-166",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.166 benchmarking",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-167",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.167 benchmarking",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-168",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.168 segment performance evaluation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-169",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.169 segment performance evaluation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-170",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.170 segment performance evaluation",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-171",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.171 product profitability analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-172",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.172 product profitability analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-173",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.173 customer profitability analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-174",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.174 customer profitability analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-175",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.175 product profitability analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-176",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.176 product profitability analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-177",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.177 customer profitability analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-178",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.178 product profitability analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-179",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.179 product profitability analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-180",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.180 variance investigation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-181",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.181 variance investigation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-182",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.182 variance investigation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-183",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.183 variance investigation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-184",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.184 variance investigation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-185",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.185 variance investigation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-186",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.186 variance investigation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-187",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.187 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-188",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.188 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-189",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.189 standard costing",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-190",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.190 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-191",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.191 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-192",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.192 standard costing vs actual costing",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-193",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.193 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-194",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.194 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-195",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.195 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-196",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.196 standard costing vs actual costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-197",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.197 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-198",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.198 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-199",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.199 standard costing vs actual costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-C-200",
+      "section": "C",
+      "state": "Certified",
+      "topic": "B-C.200 standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-076",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.076 cost behavior",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-077",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.077 cost behavior",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-078",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.078 cost behavior",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-079",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.079 cost behavior",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-080",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.080 cost behavior",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-081",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.081 cost behavior",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-082",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.082 cost behavior",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-083",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.083 contribution margin",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-084",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.084 contribution margin",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-085",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.085 contribution margin",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-086",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.086 job order costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-087",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.087 job order costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-088",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.088 job order costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-089",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.089 job order costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-090",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.090 job order costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-091",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.091 job order costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-092",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.092 job order costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-093",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.093 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-094",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.094 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-095",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.095 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-096",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.096 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-097",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.097 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-098",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.098 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-099",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.099 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-100",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.100 process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-101",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.101 activity-based costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-102",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.102 activity-based costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-103",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.103 activity-based costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-104",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.104 activity-based costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-105",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.105 activity-based costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-106",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.106 activity-based costing",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-107",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.107 activity-based costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-108",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.108 activity-based costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-109",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.109 joint product costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-110",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.110 joint product costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-111",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.111 joint product costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-112",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.112 joint product costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-113",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.113 joint product costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-114",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.114 byproduct costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-115",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.115 cost allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-116",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.116 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-117",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.117 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-118",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.118 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-119",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.119 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-120",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.120 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-121",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.121 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-122",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.122 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-123",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.123 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-124",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.124 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-125",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.125 overhead allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-126",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.126 variable vs absorption costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-127",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.127 variable vs absorption costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-128",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.128 variable vs absorption costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-129",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.129 variable vs absorption costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-130",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.130 variable vs absorption costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-131",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.131 variable vs absorption costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-132",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.132 variable vs absorption costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-133",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.133 CVP analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-134",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.134 CVP analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-135",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.135 CVP analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-136",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.136 CVP analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-137",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.137 CVP analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-138",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.138 CVP analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-139",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.139 CVP analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-140",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.140 CVP analysis",
+      "cleft": "Remember"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-141",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.141 relevant costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-142",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.142 relevant costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-143",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.143 relevant costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-144",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.144 relevant costing",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-145",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.145 relevant costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-146",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.146 relevant costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-147",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.147 relevant costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-148",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.148 mfg vs non-mfg costs",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-149",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.149 mfg vs non-mfg costs",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_B",
+      "qid": "P1B-D-150",
+      "section": "D",
+      "state": "Certified",
+      "topic": "B-D.150 mfg vs non-mfg costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-001",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.001 labor rate and efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-002",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.002 labor rate and efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-003",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.003 labor rate and efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-004",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.004 labor rate and efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-005",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.005 labor rate and efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-006",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.006 labor rate and efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-007",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.007 labor rate and efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-008",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.008 variable overhead spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-009",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.009 variable overhead spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-010",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.010 variable overhead spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-011",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.011 variable overhead spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-012",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.012 variable overhead spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-013",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.013 variable overhead spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-014",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.014 variable overhead spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-015",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.015 sales mix variance concept",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-016",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.016 sales mix variance two-product calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-017",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.017 sales mix variance concept",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-018",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.018 sales mix variance three-product analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-019",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.019 sales mix variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-020",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.020 sales mix variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-021",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.021 sales mix variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-022",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.022 profit center evaluation appropriateness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-023",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.023 profit center evaluation appropriateness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-024",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.024 profit center evaluation appropriateness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-025",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.025 profit center evaluation appropriateness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-026",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.026 profit center evaluation appropriateness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-027",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.027 profit center evaluation appropriateness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-028",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.028 profit center evaluation appropriateness",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-029",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.029 dual rate transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-030",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.030 dual rate transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-031",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.031 dual rate transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-032",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.032 dual rate transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-033",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.033 dual rate transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-034",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.034 dual rate transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-035",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.035 dual rate transfer pricing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-036",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.036 cost center variance responsibility",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-037",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.037 cost center variance responsibility",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-038",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.038 cost center variance responsibility",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-039",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.039 cost center variance responsibility",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-040",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.040 cost center variance responsibility",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-041",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.041 cost center variance responsibility",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-042",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.042 cost center variance responsibility",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-043",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.043 customer profitability analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-044",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.044 customer profitability analysis multi-customer",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-045",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.045 customer profitability analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-046",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.046 customer profitability analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-047",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.047 customer profitability analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-048",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.048 customer profitability ratio ranking",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-049",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.049 customer profitability analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-050",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.050 performance measurement goal congruence",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-051",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.051 performance measurement goal congruence ROI conflict",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-052",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.052 performance measurement goal congruence",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-053",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.053 performance measurement goal congruence",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-054",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.054 performance measurement goal congruence",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-055",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.055 performance measurement goal congruence",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-056",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.056 performance measurement goal congruence",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-057",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.057 common size financial statement analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-058",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.058 common-size analysis margin compression",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-059",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.059 common size financial statement analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-060",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.060 common size financial statement analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-061",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.061 common size financial statement analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-062",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.062 common-size multi-period trend analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-063",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.063 common size financial statement analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-064",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.064 variance investigation cost benefit",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-065",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.065 variance investigation dual-threshold cost-benefit",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-066",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.066 variance investigation cost benefit",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-067",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.067 variance investigation cost benefit",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-068",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.068 variance investigation multi-variance dual-threshold",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-069",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.069 variance investigation cost benefit",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-070",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.070 variance investigation cost benefit",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-071",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.071 total quality management philosophy",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-072",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.072 cost of quality profile quality management approach",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-073",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.073 total quality management philosophy",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-074",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.074 total quality management philosophy",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-075",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.075 cost of quality maturity assessment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-076",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.076 total quality management philosophy",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-077",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.077 segment margin reporting",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-078",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.078 segment margin reporting",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-079",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.079 segment margin reporting",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-080",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.080 segment margin reporting",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-081",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.081 segment margin reporting",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-082",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.082 segment margin reporting",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-083",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.083 total variable overhead variance decomposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-084",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.084 total variable overhead variance decomposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-085",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.085 total variable overhead variance decomposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-086",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.086 total variable overhead variance decomposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-087",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.087 total variable overhead variance decomposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-088",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.088 total variable overhead variance decomposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-089",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.089 value based management EVA linkage",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-090",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.090 value based management EVA calculation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-091",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.091 value based management EVA linkage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-092",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.092 value based management EVA linkage",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-093",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.093 EVA NOPAT components and adjustments",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-094",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.094 value based management EVA linkage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-095",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.095 segment reporting decision usefulness",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-096",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.096 segment reporting decision usefulness",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-097",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.097 segment reporting decision usefulness",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-098",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.098 segment reporting decision usefulness",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-099",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.099 segment reporting decision usefulness",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-CD-100",
+      "section": "C",
+      "state": "Certified",
+      "topic": "C.100 segment reporting decision usefulness",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-001",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.001 normal costing overhead application",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-002",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.002 normal costing predetermined overhead rate calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-003",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.003 normal costing overhead application",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-004",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.004 overhead disposition proration material underapplied",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-005",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.005 normal costing overhead application",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-006",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.006 equivalent units fifo method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-007",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.007 equivalent units fifo method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-008",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.008 equivalent units fifo method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-009",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.009 equivalent units fifo method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-010",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.010 equivalent units fifo method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-011",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.011 overapplied overhead disposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-012",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.012 overapplied overhead disposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-013",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.013 overapplied overhead disposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-014",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.014 overapplied overhead disposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-015",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.015 overapplied overhead disposition",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-016",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.016 step down method service allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-017",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.017 step down method service allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-018",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.018 step down method service allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-019",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.019 step down method service allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-020",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.020 step down method service allocation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-021",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.021 cost driver selection abc pool",
+      "cleft": "Evaluate"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-022",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.022 ABC cost driver selection correlation analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-023",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.023 cost driver selection abc pool",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-024",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.024 ABC cost assignment from activity rate",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-025",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.025 cost driver selection abc pool",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-026",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.026 margin of safety calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-027",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.027 margin of safety calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-028",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.028 margin of safety calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-029",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.029 margin of safety calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-030",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.030 margin of safety calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-031",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.031 degree of operating leverage",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-032",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.032 degree of operating leverage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-033",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.033 degree of operating leverage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-034",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.034 degree of operating leverage",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-035",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.035 degree of operating leverage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-036",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.036 kaizen costing continuous improvement",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-037",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.037 kaizen costing periodic compound reduction",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-038",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.038 kaizen costing continuous improvement",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-039",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.039 kaizen costing continuous improvement",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-040",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.040 kaizen costing multi-component reduction",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-041",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.041 cost behavior mixed cost analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-042",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.042 cost estimation high-low method variable rate",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-043",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.043 cost behavior mixed cost analysis",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-044",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.044 cost estimation high-low prediction",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-045",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.045 cost behavior mixed cost analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-046",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.046 service department reciprocal method",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-047",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.047 service department reciprocal method computation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-048",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.048 service department reciprocal method",
+      "cleft": "Evaluate"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-049",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.049 service department method comparison reciprocal vs direct",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-050",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.050 service department reciprocal method",
+      "cleft": "Evaluate"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-051",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.051 step method service department allocation hierarchy",
+      "cleft": "Evaluate"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-052",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.052 contribution margin income statement CVP projection",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-053",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.053 contribution margin income statement format",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-054",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.054 contribution margin income statement format",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-055",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.055 contribution margin income statement format",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-056",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.056 ABC multi-pool cost assignment",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-057",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.057 multiple cost driver activity hierarchy",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-058",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.058 multiple cost driver activity hierarchy",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-059",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.059 fixed overhead volume variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-060",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.060 variable overhead efficiency variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-061",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.061 cvp analysis multiple products",
+      "cleft": "Evaluate"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-062",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.062 multi-product break-even weighted average CM",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-063",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.063 cvp analysis multiple products",
+      "cleft": "Analyze"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-064",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.064 multi-product target profit volume",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-065",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.065 cvp analysis multiple products",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-066",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.066 direct materials price variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-067",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.067 direct materials quantity variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-068",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.068 direct labor rate variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-069",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.069 direct labor efficiency variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-070",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.070 variable overhead spending variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-071",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.071 abnormal spoilage cost treatment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-072",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.072 abnormal spoilage cost treatment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-073",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.073 abnormal spoilage cost treatment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-074",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.074 abnormal spoilage cost treatment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_D",
+      "qid": "P1-DD-075",
+      "section": "D",
+      "state": "Certified",
+      "topic": "D.075 abnormal spoilage cost treatment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-001",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.001 Standard cost definition",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-002",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.002 Unfavorable price variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-003",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.003 Material quantity variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-004",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.004 Labor rate variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-005",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.005 Labor efficiency responsibility",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-006",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.006 VOH spending variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-007",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.007 VOH efficiency variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-008",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.008 FOH volume variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-009",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.009 Favorable variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-010",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.010 Management by exception",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-011",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.011 Material price variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-012",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.012 Standard hours allowed",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-013",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.013 Labor efficiency variance calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-014",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.014 ROI formula",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-015",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.015 Residual income",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-016",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.016 EVA definition",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-017",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.017 ROI vs RI decision",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-018",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.018 BSC perspectives",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-019",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.019 Financial perspective BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-020",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.020 Customer perspective BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-021",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.021 Learning and growth BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-022",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.022 Leading indicators",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-023",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.023 Lagging indicators",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-024",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.024 ASC 280 segment reporting",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-025",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.025 Reportable segment threshold",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-026",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.026 Throughput contribution",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-027",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.027 Theory of constraints",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-028",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.028 Prevention costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-029",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.029 Appraisal costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-030",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.030 Internal failure costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-031",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.031 External failure costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-032",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.032 Six Sigma target",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-033",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.033 DMAIC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-034",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.034 Strategy map BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-035",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.035 Currently attainable standards",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-036",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.036 Ideal standards",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-037",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.037 Sales volume variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-038",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.038 Sales price variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-039",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.039 Market share variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-040",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.040 Market size variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-041",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.041 Favorable efficiency",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-042",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.042 Labor rate calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-043",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.043 Total variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-044",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.044 Material quantity variance calc",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-045",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.045 Nonfinancial BSC measures",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-001",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.001 Job costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-002",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.002 Process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-003",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.003 Equivalent units",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-004",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.004 Weighted average process",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-005",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.005 FIFO process costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-006",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.006 Normal spoilage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-007",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.007 Abnormal spoilage",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-008",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.008 POHR formula",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-009",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.009 Underapplied overhead",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-010",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.010 Overapplied disposition",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-011",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.011 Plantwide rate",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-012",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.012 Departmental rates",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-013",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.013 ABC multiple drivers",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-014",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.014 ABC consumption",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-015",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.015 Unit-level ABC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-016",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.016 Batch-level ABC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-017",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.017 Facility-level ABC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-018",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.018 Value-added activities",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-019",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.019 Non-value-added",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-020",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.020 Life-cycle costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-021",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.021 Target costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-022",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.022 Kaizen costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-023",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.023 Joint cost allocation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-024",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.024 Physical measure method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-025",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.025 By-product accounting",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-026",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.026 Relevant costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-027",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.027 Sunk costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-028",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.028 Opportunity cost",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-029",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.029 Make-or-buy analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-030",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.030 Special order decision",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-031",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.031 Keep-or-drop",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-032",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.032 Constraint optimization",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-033",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.033 Sell or process further",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-034",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.034 POHR calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-035",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.035 Applied overhead",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-036",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.036 Activity-based management",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-037",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.037 ABC accuracy",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-046",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.046 Internal process BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-047",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.047 Customer profitability analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-048",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.048 Quality cost index",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-049",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.049 Benchmarking definition",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-050",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.050 Analytics variance analysis",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-051",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.051 Standard cost purpose",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-052",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.052 Sales variance interpretation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-053",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.053 DuPont ROI",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-054",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.054 Profit margin formula",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-055",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.055 Asset turnover",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-056",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.056 Performance reports",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-057",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.057 Mix variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-058",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.058 Yield variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-059",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.059 Operating leverage calculation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-060",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.060 BSC strategy translation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-061",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.061 Segment disclosure items",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-062",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.062 ROI spread",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-063",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.063 EVA vs residual income",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-064",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.064 Nonfinancial measures importance",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-038",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.038 Backflush costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-039",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.039 Sales value method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-040",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.040 NRV joint cost method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-041",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.041 JIT definition",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-042",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.042 Lean manufacturing",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-043",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.043 TOC bottleneck",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-044",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.044 Throughput accounting",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-045",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.045 Throughput operating expenses",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-046",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.046 Constraint management",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-047",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.047 Transferred-in costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-048",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.048 FIFO process WIP",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-049",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.049 Normal capacity",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-050",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.050 Practical capacity",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-051",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.051 Practical capacity overhead",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-052",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.052 Actual costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-053",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.053 Normal costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-054",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.054 Standard costing",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-055",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.055 Step-down allocation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-056",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.056 Reciprocal method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-057",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.057 Direct allocation method",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-058",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.058 ABC cost pool",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-059",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.059 Activity driver",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-060",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.060 ABC best use",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-065",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.065 BSC goal alignment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-066",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.066 Strategy map cause-effect",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-067",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.067 Performance prism",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-068",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.068 Quality function deployment",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-069",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.069 Statistical process control",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-070",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.070 Pareto analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-071",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.071 Root cause analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-072",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.072 Variance significance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-073",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.073 Favorable variance interpretation",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-074",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.074 Variance investigation criteria",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-075",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.075 Segment margin calc",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-076",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.076 Common costs keep-drop",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-077",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.077 Keep-drop decision rule",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-078",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.078 BSC balance",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-079",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.079 Leading indicators BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-080",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.080 Lagging indicators",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-081",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.081 Market share BSC perspective",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-082",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.082 Employee turnover BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-083",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.083 Cycle time BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-084",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.084 First-pass yield BSC",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-085",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.085 BSC customization",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-086",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.086 Variance BSC perspective",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-087",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.087 Customer satisfaction",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-088",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.088 Target costing timing",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-089",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.089 Value engineering",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-061",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.061 Cost allocation base criteria",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-062",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.062 Cost driver definition",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-063",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.063 Traditional volume-based driver",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-064",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.064 ABC accuracy condition",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-065",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.065 Pull system JIT",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-066",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.066 Kanban",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-067",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.067 TQM",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-068",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.068 Product lifecycle stages",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-069",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.069 Cost estimation methods",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-070",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.070 Account analysis",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-071",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.071 Engineering cost estimates",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-072",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.072 COGM components",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-073",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.073 Prime costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-074",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.074 Conversion costs",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-D-075",
+      "section": "D",
+      "state": "Certified",
+      "topic": "E-D.075 Cost assignment methods",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-090",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.090 Profit center evaluation",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-091",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.091 Segment disclosure minimum",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-092",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.092 Reportable segment 10% test",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-093",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.093 Performance report qualities",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-094",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.094 Variance analysis purpose",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-095",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.095 Standard cost card",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-096",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.096 Ideal standards term",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-097",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.097 Practical standards",
+      "cleft": "Understand"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-098",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.098 Unfavorable cost variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-099",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.099 Favorable revenue variance",
+      "cleft": "Apply"
+    },
+    {
+      "pack": "PACK_E",
+      "qid": "P1E-C-100",
+      "section": "C",
+      "state": "Certified",
+      "topic": "E-C.100 Budgeting behavioral aspects",
+      "cleft": "Understand"
+    }
+  ],
+  "summary": {
+    "total": 700,
+    "cert": 700,
+    "unproc": 0,
+    "byPack": {
+      "pack_a_corrected.js": 175,
+      "pack_b_corrected.js": 175,
+      "pack_c_corrected.js": 0,
+      "pack_d_corrected.js": 175,
+      "pack_e_corrected.js": 175
+    }
+  }
+}

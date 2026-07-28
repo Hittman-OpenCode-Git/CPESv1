@@ -1,0 +1,1335 @@
+{
+  "BLOCK_AUTHORIZED": "Session 720 Boundary Review — read-only audit report, zero pack file modifications",
+  "session": "S720",
+  "agent": "C",
+  "title": "Cognitive Boundary Review Board — Pack E Restoration",
+  "methodology": "Per-item manual domain classification of all 4 choices against CMA Part 1 blueprint domains (A-F). Remember-vs-Understand per ALIGNMENT_MAINTENANCE_GUIDE.md §2.1 decision tree. Understand-vs-Apply per §2.2. 5 borderline cases also analyzed via §2.3 Apply-vs-Analyze. Agent B's automated domain classifier was independently cross-checked and found unreliable — content-based domain classification used throughout.",
+  "candidates_reviewed": 70,
+  "decisions": {
+    "retain_remember": 7,
+    "retain_understand": 60,
+    "upgrade_to_apply": 2,
+    "escalate": 1
+  },
+  "by_section": {
+    "A": {
+      "reviewed": 13,
+      "retain_remember": 1,
+      "retain_understand": 12,
+      "upgrade_to_apply": 0,
+      "escalate": 0
+    },
+    "B": {
+      "reviewed": 21,
+      "retain_remember": 3,
+      "retain_understand": 17,
+      "upgrade_to_apply": 1,
+      "escalate": 0
+    },
+    "C": {
+      "reviewed": 19,
+      "retain_remember": 0,
+      "retain_understand": 17,
+      "upgrade_to_apply": 1,
+      "escalate": 1
+    },
+    "D": {
+      "reviewed": 8,
+      "retain_remember": 0,
+      "retain_understand": 8,
+      "upgrade_to_apply": 0,
+      "escalate": 0
+    },
+    "E": {
+      "reviewed": 7,
+      "retain_remember": 3,
+      "retain_understand": 4,
+      "upgrade_to_apply": 0,
+      "escalate": 0
+    },
+    "F": {
+      "reviewed": 2,
+      "retain_remember": 0,
+      "retain_understand": 2,
+      "upgrade_to_apply": 0,
+      "escalate": 0
+    }
+  },
+  "escalated_items": [
+    {
+      "QuestionID": "P1E-C-051",
+      "stem_preview": "Standard cost system provides:",
+      "choices": "Tax reporting / External audit / Financial statement only / Basis for budgeting and cost control",
+      "correct": "Basis for budgeting and cost control",
+      "escalation_reason": "Q3 vs Q2 decision tree conflict. CC=Domain C. Distractor domains: A(tax)→A, B(audit)→E, C(financial statement only)→A. All 3 distractors from domains different than CC → Q3 → REMEMBER per rule. However stem tests functional PURPOSE of standard costing, requiring conceptual comprehension. Cross-domain distractors are in domains so different a candidate could eliminate them without understanding standard costing, but the stem 'provides' tests understanding of management accounting role vs financial reporting/external audit functions. Human review needed to determine if domain-disjoint elimination is the PRIMARY discriminative mechanism.",
+      "confidence": 65
+    }
+  ],
+  "agent_b_classifier_issues": {
+    "summary": "Agent B's automated 7-signal domain classifier produced unreliably cross-domain classifications. Of 70 candidates reviewed, the classifier was independently verified as incorrect for approximately 60+ candidates. The classifier appears to use template-based domain assignment by choice-letter position rather than content-based domain classification.",
+    "recommendation": "Agent B's census should be re-run with corrected domain assignments. Only ~5 of 70 candidates confirm as genuine Remember items under independent content-based domain classification."
+  },
+  "read_only_attestation": "Zero files modified. Read-only review of pack_e_corrected.js via Function constructor.",
+  "items": [
+    {
+      "Q": "P1E-A-007",
+      "S": "A",
+      "stem": "A 10-year bond issued at par is classified on the balance sheet as:",
+      "ch": {
+        "A": "Current liability",
+        "B": "Equity",
+        "C": "Long-term liability",
+        "D": "Contingent liability"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-A. All 4 choices are balance sheet classification categories (current, equity, long-term, contingent) — all Domain A. 0/3 cross-domain distractors. Candidate must understand liability classification taxonomy (current vs non-current, liability vs equity). Per §2.1: all same-domain → Q2 → keyword-insufficient → UNDERSTAND.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 92,
+      "ev": "All choices are balance sheet classification categories within Domain A. 10-year bond = non-current liability.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-011",
+      "S": "A",
+      "stem": "Under U.S. GAAP, research and development costs are:",
+      "ch": {
+        "A": "Capitalized and amortized",
+        "B": "Deferred until product launch",
+        "C": "Capitalized as intangible",
+        "D": "Expensed as incurred"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-A. All 4 choices are GAAP accounting treatments for costs. 'Capitalized and amortized' and 'Capitalized as intangible' are Domain A accounting methods, not Domain F. 0/3 cross-domain. Candidate must know the specific GAAP rule (expense as incurred per ASC 730).",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "Agent B misclassified capitalization treatments as Domain F. All choices are GAAP accounting treatments under Domain A.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-039",
+      "S": "A",
+      "stem": "Under U.S. GAAP, bond issue costs are:",
+      "ch": {
+        "A": "Expensed when incurred",
+        "B": "Deducted from the bond liability",
+        "C": "Deferred and amortized separately",
+        "D": "Capitalized as intangible asset"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-A. All 4 choices are GAAP accounting treatments for bond issue costs. 0/3 cross-domain. Candidate must know ASU 2015-03: bond issue costs deducted from bond liability.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain A — bond accounting under GAAP. Agent B labeled CC as Domain F incorrectly.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-041",
+      "S": "A",
+      "stem": "A bond issued at a premium has a carrying value that:",
+      "ch": {
+        "A": "Increases over time",
+        "B": "Stays constant",
+        "C": "Decreases to par at maturity",
+        "D": "Fluctuates with market"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-A. All choices describe bond carrying value behavior. 0/3 cross-domain. Must understand premium amortization: carrying value decreases to par.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain A — bond amortization concepts.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-042",
+      "S": "A",
+      "stem": "A bond issued at a discount has a carrying value that:",
+      "ch": {
+        "A": "Decreases over time",
+        "B": "Increases to par at maturity",
+        "C": "Fluctuates with market",
+        "D": "Stays constant"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-A. Mirror of A-041. 0/3 cross-domain. Discount amortization: carrying value increases to par.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain A — bond amortization. Agent B's domain labels wrong.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-047",
+      "S": "A",
+      "stem": "Under U.S. GAAP, software development costs are capitalized:",
+      "ch": {
+        "A": "At start of development",
+        "B": "When technological feasibility is established",
+        "C": "When product is released",
+        "D": "When revenue is generated"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-A (ASC 985-20). All choices are timing milestones in software development. 0/3 cross-domain. Must know the specific GAAP threshold. Q2: keyword 'technological feasibility' could be memorized, but 'at start of development' requires understanding WHY feasibility (not start) triggers capitalization = research vs development distinction.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All timing milestones within same GAAP standard. Requires comprehension of research/development boundary.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-049",
+      "S": "A",
+      "stem": "Variable consideration in ASC 606 is estimated using:",
+      "ch": {
+        "A": "Weighted average",
+        "B": "Expected value or most likely amount",
+        "C": "Minimum amount",
+        "D": "Maximum amount"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-A (ASC 606). All choices are estimation methods. 0/3 cross-domain. Must know the TWO specific ASC 606 methods.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 85,
+      "ev": "All Domain A. ASC 606 specifies expected value OR most likely amount. Agent B's domain labels incorrect.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-055",
+      "S": "A",
+      "stem": "ASC 740 requires recognition of deferred taxes for:",
+      "ch": {
+        "A": "Permanent differences only",
+        "B": "All differences including permanent",
+        "C": "Only taxable temporary differences",
+        "D": "All temporary differences"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-A. All choices address scope of deferred tax recognition. 0/3 cross-domain. Must understand ASC 740 framework.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain A — income tax accounting. Agent B's domain labels wrong.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-058",
+      "S": "A",
+      "stem": "Under U.S. GAAP, a restructuring liability is recognized when:",
+      "ch": {
+        "A": "The board approves",
+        "B": "The liability is incurred and can be reasonably estimated",
+        "C": "Employees are terminated",
+        "D": "Restructuring is announced"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-A. All choices are events in restructuring timeline. 0/3 cross-domain. Must know GAAP liability recognition criteria.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain A — liability recognition. Agent B's domain labels wrong.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-064",
+      "S": "A",
+      "stem": "Which characteristic enhances relevance of financial information?",
+      "ch": {
+        "A": "Comparability",
+        "B": "Understandability",
+        "C": "Timeliness",
+        "D": "Verifiability"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-A (FASB conceptual framework). All choices are FASB qualitative characteristics. 0/3 cross-domain. Must know which belong to 'relevance' vs 'faithful representation' vs 'enhancing.' Agent B misclassified comparability, understandability, and verifiability as Domain F — all are Domain A.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 92,
+      "ev": "All FASB qualitative characteristics within Domain A. Requires comprehension of conceptual framework taxonomy.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-074",
+      "S": "A",
+      "stem": "ASC 820 establishes a fair value hierarchy with how many levels?",
+      "ch": {
+        "A": "Three",
+        "B": "Four",
+        "C": "Two",
+        "D": "Five"
+      },
+      "CC": "A",
+      "cl": "Apply",
+      "ana": "Pure count recall. All choices are numbers. Candidate knows ASC 820 has 3 levels or doesn't. No conceptual discrimination. Current CL=Apply is inflated. Per §2.1: trivially eliminable numeric distractors. Q2: keyword-matching suffices.",
+      "dec": "RETAIN_REMEMBER",
+      "conf": 95,
+      "ev": "ASC 820 = 3 levels (Level 1, Level 2, Level 3). Pure recall. Agent B CORRECT.",
+      "ab": true
+    },
+    {
+      "Q": "P1E-A-076",
+      "S": "A",
+      "stem": "A contract asset under ASC 606 is recognized when:",
+      "ch": {
+        "A": "Contract is signed",
+        "B": "Payment is received",
+        "C": "Performance occurs before billing",
+        "D": "Invoice is sent"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-A (ASC 606). All choices are events in contract lifecycle. 0/3 cross-domain. Must understand when a contract asset arises.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain A — ASC 606 revenue recognition cycle.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-006",
+      "S": "B",
+      "stem": "The high-low method estimates variable cost per unit as:",
+      "ch": {
+        "A": "Change in cost divided by change in activity",
+        "B": "Average cost per unit",
+        "C": "Change in activity divided by change in cost",
+        "D": "Total cost divided by total activity"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-B (cost estimation). B→Domain-D (average cost = cost management). C→Domain-B (inverted formula). D→Domain-B (alternative method). Only 1 cross-domain (B). Must understand the high-low formula to distinguish from C (inverted) and D (total/total).",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "1 cross-domain insufficient per Q3. C and D are same-domain formula variations.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-016",
+      "S": "B",
+      "stem": "What is the core focus of Kaizen budgeting?",
+      "ch": {
+        "A": "Continuous improvement targets",
+        "B": "One-time cost cuts",
+        "C": "Zero-based review",
+        "D": "Inflation adjustments"
+      },
+      "CC": "A",
+      "cl": "Apply",
+      "ana": "CC=Domain-B. B→Domain-D (cost cutting). C→Domain-B (ZBB). D→Domain-B (inflation adj). 1 cross-domain. No operative facts — definition recognition. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Tests concept recognition of Kaizen budgeting. No computation or procedure.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-018",
+      "S": "B",
+      "stem": "Time series forecasting uses:",
+      "ch": {
+        "A": "Causal relationships",
+        "B": "Market research",
+        "C": "Historical data patterns",
+        "D": "Expert opinions"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-B. All choices are forecasting approaches. 0/3 cross-domain. Must distinguish time series from causal, qualitative, and market research methods.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain B forecasting methods. Same-domain taxonomy comprehension required.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-028",
+      "S": "B",
+      "stem": "Responsibility accounting assigns:",
+      "ch": {
+        "A": "Overhead to products",
+        "B": "Revenue and cost responsibility to managers",
+        "C": "All costs to production",
+        "D": "Costs based on cause-effect"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (responsibility accounting = performance management). A→Domain-D (overhead allocation). C→Domain-D (cost assignment). D→Domain-D (ABC/driver-based costing). ALL 3 distractors from Domain D vs CC=Domain C. 3/3 cross-domain. Per Q3: >=2 → REMEMBER.",
+      "dec": "RETAIN_REMEMBER",
+      "conf": 88,
+      "ev": "All distractors are Domain D cost allocation concepts. CC is Domain C performance management. Agent B CORRECT.",
+      "ab": true
+    },
+    {
+      "Q": "P1E-B-031",
+      "S": "B",
+      "stem": "An investment center manager is evaluated on:",
+      "ch": {
+        "A": "Market share",
+        "B": "Cost variances",
+        "C": "ROI or residual income",
+        "D": "Sales growth"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-C. All choices are performance metrics. 0/3 cross-domain. Must know investment center = ROI/RI, not operational metrics.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain C performance metrics. Must understand responsibility center taxonomy.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-032",
+      "S": "B",
+      "stem": "Controllable costs are:",
+      "ch": {
+        "A": "Variable costs only",
+        "B": "Costs manager can directly influence",
+        "C": "All costs charged to division",
+        "D": "Fixed costs only"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (controllable costs = responsibility accounting). A→Domain-D (variable cost = cost behavior). D→Domain-D (fixed cost = cost behavior). 2/3 cross-domain (A and D). C→Domain-C (same domain). Per Q3: >=2 → REMEMBER.",
+      "dec": "RETAIN_REMEMBER",
+      "conf": 85,
+      "ev": "A and D are Domain D cost behavior concepts. 2/3 cross-domain. Agent B CORRECT.",
+      "ab": true
+    },
+    {
+      "Q": "P1E-B-033",
+      "S": "B",
+      "stem": "Segment margin equals:",
+      "ch": {
+        "A": "Revenue minus variable costs",
+        "B": "Contribution margin minus common costs",
+        "C": "Revenue minus all costs",
+        "D": "Revenue minus direct costs and traceable fixed costs"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (segment margin). A→Domain-D (contribution margin formula). C→Domain-A (net income = financial reporting). B→Domain-C/D borderline. 2 clear cross-domain (A and C). Per Q3: REMEMBER.",
+      "dec": "RETAIN_REMEMBER",
+      "conf": 82,
+      "ev": "A=contribution margin (Domain-D), C=net income (Domain-A). Domain-disjoint elimination possible. Agent B CORRECT.",
+      "ab": true
+    },
+    {
+      "Q": "P1E-B-036",
+      "S": "B",
+      "stem": "The minimum transfer price under the general rule is:",
+      "ch": {
+        "A": "Variable cost plus lost external profit",
+        "B": "Market price",
+        "C": "Full cost",
+        "D": "Variable cost"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (transfer pricing). All choices are transfer pricing methods. 0/3 cross-domain. Must understand the general rule formula.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain C transfer pricing methods. Must comprehend the general rule structure.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-037",
+      "S": "B",
+      "stem": "When excess capacity exists, the optimal transfer price is:",
+      "ch": {
+        "A": "Full cost",
+        "B": "Negotiated price",
+        "C": "Market price",
+        "D": "Variable cost"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-C. All transfer pricing methods. 0/3 cross-domain. Must understand capacity-transfer price relationship.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain C. Must comprehend why excess capacity → variable cost floor.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-042",
+      "S": "B",
+      "stem": "A step cost:",
+      "ch": {
+        "A": "Is always fixed",
+        "B": "Is always variable",
+        "C": "Is not related to activity",
+        "D": "Changes at specific activity intervals"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (cost behavior). All Domain D. 0/3 cross-domain. Must understand step cost definition within cost behavior taxonomy. Agent B's extreme-statements argument valid for psychometrics but all Domain D.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain D cost behavior concepts. Requires taxonomy comprehension.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-045",
+      "S": "B",
+      "stem": "Five months of sales: 100, 110, 120, 130, 140. Trend line slope is:",
+      "ch": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "CC": "B",
+      "cl": "Analyze",
+      "ana": "Contains OPERATIVE numbers. Computation required: (140-100)/(5-1)=10 or simply observe +10/period. Remove numbers = unanswerable. Per §2.2: operative facts → Apply. Current CL=Analyze inflated (method is given: slope from data). This is a computation, not concept recall.",
+      "dec": "UPGRADE_TO_APPLY",
+      "conf": 85,
+      "ev": "Numbers must be processed. Computation required. Neither Analyze (no method selection) nor Remember (computation precludes recall).",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-059",
+      "S": "B",
+      "stem": "The budgeted balance sheet shows:",
+      "ch": {
+        "A": "Expected production costs",
+        "B": "Expected cash flows",
+        "C": "Expected sales",
+        "D": "Expected financial position at period end"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-B (master budget). All choices are budget component outputs. 0/3 cross-domain. Must know what each budget component produces.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain B budget component outputs. Must understand master budget structure.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-061",
+      "S": "B",
+      "stem": "Trend analysis identifies:",
+      "ch": {
+        "A": "Long-term upward/downward movement",
+        "B": "Random variations",
+        "C": "Cyclical patterns",
+        "D": "Seasonal patterns"
+      },
+      "CC": "A",
+      "cl": "Analyze",
+      "ana": "All time series components. 0/3 cross-domain. Per §2.3: stem asks 'trend analysis identifies' = description-to-concept matching → Understand, not Analyze. Current CL=Analyze inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "Description-to-concept matching. All Domain B/F time series taxonomy.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-001",
+      "S": "C",
+      "stem": "Standard costs are:",
+      "ch": {
+        "A": "Actual costs incurred",
+        "B": "Budgeted costs for a single unit",
+        "C": "Historical costs",
+        "D": "Average costs"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (standard costing). All Domain C. 0/3 cross-domain. Q2: 'budgeted' keyword eliminates 'actual' and 'historical,' but 'average costs' requires comprehension why standard is not average.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 85,
+      "ev": "All Domain C cost definitions. Average costs distractor requires comprehension to distinguish.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-006",
+      "S": "C",
+      "stem": "Variable overhead spending variance =:",
+      "ch": {
+        "A": "Applied overhead - actual overhead",
+        "B": "(Actual rate - standard rate) x actual hours",
+        "C": "(Actual hours - standard hours) x standard rate",
+        "D": "Actual overhead - budgeted overhead"
+      },
+      "CC": "B",
+      "cl": "Apply",
+      "ana": "CC=Domain-C. All variance formulas. 0/3 cross-domain. No operative facts — formula definition recognition. Current CL=Apply inflated: no computation against specific data.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Formula recognition, not application. Must distinguish spending vs efficiency variance formulas.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-007",
+      "S": "C",
+      "stem": "Variable overhead efficiency variance is caused by:",
+      "ch": {
+        "A": "Overhead price changes",
+        "B": "Fixed cost changes",
+        "C": "Material price changes",
+        "D": "Efficiency in using the allocation base"
+      },
+      "CC": "D",
+      "cl": "Apply",
+      "ana": "CC=Domain-C. All Domain C variance concepts. 0/3 cross-domain. No operative facts. Causal attribution = concept comprehension, not application. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Conceptual understanding of variance causation. No computation required.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-012",
+      "S": "C",
+      "stem": "Standard hours 2 per unit, 500 units actual, hours allowed:",
+      "ch": {
+        "A": "250",
+        "B": "1000",
+        "C": "500",
+        "D": "750"
+      },
+      "CC": "B",
+      "cl": "Apply",
+      "ana": "OPERATIVE numbers: 2 hrs/unit, 500 units. Computation: 2 x 500 = 1,000. Remove numbers = unanswerable. Per §2.2: operative facts → Apply. Agent B's Remember is wrong — computation precludes recall.",
+      "dec": "UPGRADE_TO_APPLY",
+      "conf": 92,
+      "ev": "Single-step computation required. Current CL=Apply is CORRECT (reject Agent B's reclassification).",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-016",
+      "S": "C",
+      "stem": "Economic value added adjusts NOI for:",
+      "ch": {
+        "A": "Depreciation",
+        "B": "Inflation",
+        "C": "Taxes",
+        "D": "Cost of capital and invested capital"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (EVA). All Domain C performance measurement concepts. 0/3 cross-domain. Must know EVA = NOPAT - (IC x WACC).",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain C. Must understand EVA framework structure.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-019",
+      "S": "C",
+      "stem": "The financial perspective of BSC asks:",
+      "ch": {
+        "A": "What must we excel at?",
+        "B": "Can we continue to improve?",
+        "C": "How do customers see us?",
+        "D": "How do we look to shareholders?"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (BSC). All four BSC perspectives. 0/3 cross-domain. Must map each question to each perspective.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 92,
+      "ev": "All Domain C Balanced Scorecard perspectives. Requires taxonomy comprehension.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-025",
+      "S": "C",
+      "stem": "A segment is reportable if it meets:",
+      "ch": {
+        "A": "15% of net income",
+        "B": "20% of sales",
+        "C": "10% of combined revenue, profit, or assets",
+        "D": "5% of total assets"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-A (ASC 280 segment reporting). All Domain A. 0/3 cross-domain. Candidate must know the 10% test AND the three criteria. Q2 borderline: percentage can be memorized but three-criteria structure requires comprehension.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain A. Multi-criterion nature pushes from recall to comprehension.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-026",
+      "S": "C",
+      "stem": "Throughput contribution equals:",
+      "ch": {
+        "A": "Revenue minus labor",
+        "B": "Revenue minus all variable costs",
+        "C": "Revenue minus direct materials",
+        "D": "Revenue minus fixed costs"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (TOC). All Domain D. 0/3 cross-domain. Must know TOC: Throughput = Revenue - Direct Materials.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain D cost formulas. Must distinguish TOC from contribution margin.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-010",
+      "S": "D",
+      "stem": "Overapplied overhead is typically closed to:",
+      "ch": {
+        "A": "Cost of goods sold",
+        "B": "Finished goods",
+        "C": "Operating expenses",
+        "D": "Work in process"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (overhead disposition). All Domain D. 0/3 cross-domain. Must know overhead variance disposition rules.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain D. Must know COGS is the typical close-out account.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-024",
+      "S": "D",
+      "stem": "The physical measure method allocates joint costs by:",
+      "ch": {
+        "A": "Gross profit",
+        "B": "Relative weight or volume",
+        "C": "Sales value",
+        "D": "Net realizable value"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (joint cost allocation). All Domain D allocation bases. 0/3 cross-domain. Must know which method uses which basis.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain D joint cost methods. Requires method-to-basis mapping comprehension.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-E-001",
+      "S": "E",
+      "stem": "The COSO internal control framework has how many components?",
+      "ch": {
+        "A": "Five",
+        "B": "Three",
+        "C": "Seven",
+        "D": "Eight"
+      },
+      "CC": "A",
+      "cl": "Apply",
+      "ana": "Pure count recall. COSO IC = 5 components. All choices are numbers. Current CL=Apply inflated — no application to scenario.",
+      "dec": "RETAIN_REMEMBER",
+      "conf": 95,
+      "ev": "COSO IC = 5 components. Pure recall. Agent B CORRECT.",
+      "ab": true
+    },
+    {
+      "Q": "P1E-F-002",
+      "S": "F",
+      "stem": "Predictive analytics uses:",
+      "ch": {
+        "A": "Prescriptive rules",
+        "B": "Historical data description",
+        "C": "Optimization models",
+        "D": "Statistical models to forecast outcomes"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-F (analytics). All Domain F analytics types. 0/3 cross-domain. Must distinguish predictive from descriptive and prescriptive.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain F data analytics taxonomy.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-F-031",
+      "S": "F",
+      "stem": "Artificial intelligence in accounting:",
+      "ch": {
+        "A": "Is prohibited",
+        "B": "Has no accounting applications",
+        "C": "Enhances analysis and automates tasks",
+        "D": "Replaces all professional judgment"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-F (AI in accounting). All Domain F. 0/3 cross-domain. Agent B's extreme-statements argument: A, B, D are extreme but all still Domain F.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain F. Extreme distractors are same-domain.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-073",
+      "S": "B",
+      "stem": "Capital expenditure budget authorizes:",
+      "ch": {
+        "A": "Daily operations",
+        "B": "Revenue spending",
+        "C": "Inventory purchases",
+        "D": "Long-term asset purchases"
+      },
+      "CC": "D",
+      "cl": "Apply",
+      "ana": "CC=Domain-B (capital budgeting). All Domain B budget types. 0/3 cross-domain. No operative facts. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Definition recognition. No computation.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-081",
+      "S": "B",
+      "stem": "In regression analysis, the dependent variable is:",
+      "ch": {
+        "A": "The variable being predicted",
+        "B": "The error term",
+        "C": "The predictor variable",
+        "D": "The constant term"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-B (regression). All Domain B regression terminology. 0/3 cross-domain. Must understand Y = dependent variable.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain B regression components.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-082",
+      "S": "B",
+      "stem": "Standard error of the estimate measures:",
+      "ch": {
+        "A": "Variation of the regression line",
+        "B": "Slope of the line",
+        "C": "Typical distance of data points from regression line",
+        "D": "Correlation"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-B (regression). All Domain B regression concepts. 0/3 cross-domain. Must understand standard error definition.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain B regression diagnostics.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-092",
+      "S": "B",
+      "stem": "Which lever controls divisional behavior in decentralized organizations?",
+      "ch": {
+        "A": "Standard costs",
+        "B": "Joint cost allocation",
+        "C": "Quality control",
+        "D": "Transfer pricing"
+      },
+      "CC": "D",
+      "cl": "Apply",
+      "ana": "CC=Domain-C (transfer pricing = divisional control). A→Domain-D (cost management). B→Domain-D (cost management). 2+ cross-domain but stem requires conceptual reasoning about WHY transfer pricing (not just matching). No operative facts. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 82,
+      "ev": "Conceptual question: which tool controls divisional behavior? Requires understanding transfer pricing's role.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-093",
+      "S": "B",
+      "stem": "Variable costing treats fixed manufacturing overhead as:",
+      "ch": {
+        "A": "Product cost",
+        "B": "Manufacturing cost",
+        "C": "Period cost",
+        "D": "Asset"
+      },
+      "CC": "C",
+      "cl": "Apply",
+      "ana": "CC=Domain-D (variable costing). All Domain D cost classifications. 0/3 cross-domain. No operative facts. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Definition recognition. All same-domain.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-094",
+      "S": "B",
+      "stem": "Absorption costing includes fixed manufacturing overhead in:",
+      "ch": {
+        "A": "Selling expense",
+        "B": "Product cost",
+        "C": "Period cost",
+        "D": "Administrative expense"
+      },
+      "CC": "B",
+      "cl": "Apply",
+      "ana": "CC=Domain-D (absorption costing). All Domain D. Mirror of B-093.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Definition recognition.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-095",
+      "S": "B",
+      "stem": "The difference between absorption and variable costing net income is due to:",
+      "ch": {
+        "A": "Treatment of fixed overhead in inventory",
+        "B": "Treatment of variable costs",
+        "C": "Revenue recognition",
+        "D": "Treatment of SG&A"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (costing reconciliation). C→Domain-A (revenue recognition). Only 1 clear cross-domain. B and D are Domain D. Insufficient for Remember.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "1 cross-domain insufficient. Must understand FMOH inventory flow mechanics.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-B-099",
+      "S": "B",
+      "stem": "Transfer price set at full cost plus markup is:",
+      "ch": {
+        "A": "Market-based transfer price",
+        "B": "Negotiated transfer price",
+        "C": "Dual-rate transfer price",
+        "D": "Cost-based transfer price"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (transfer pricing). All Domain C. 0/3 cross-domain. Must match description to method name. Agent B's provisional confidence 78 rejected: same-domain taxonomy comprehension required.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain C. Description-to-method-name matching = Understand.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-051",
+      "S": "C",
+      "stem": "Standard cost system provides:",
+      "ch": {
+        "A": "Tax reporting",
+        "B": "External audit",
+        "C": "Financial statement only",
+        "D": "Basis for budgeting and cost control"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (standard costing purpose). A→Domain-A (tax reporting). B→Domain-E (audit). C→Domain-A (financial reporting). ALL 3 distractors different domains vs CC=Domain-C. 3/3 cross-domain. Q3=REMEMBER. BUT stem 'provides' tests functional PURPOSE — candidate must understand what standard costs DO, not just match a definition. ESCALATION: does the functional-purpose stem override cross-domain rule?",
+      "dec": "ESCALATE",
+      "conf": 65,
+      "ev": "3/3 cross-domain distractors per Q3 → Remember. But stem tests conceptual purpose. Decision tree conflict.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-056",
+      "S": "C",
+      "stem": "Performance reports compare:",
+      "ch": {
+        "A": "All of the above",
+        "B": "Actual results to budget",
+        "C": "This year to last year",
+        "D": "Company to industry"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "'All of the above' correct answer. All sub-choices are Domain C performance comparisons. Must evaluate each sub-choice's truth.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All-of-the-above structure prevents domain-disjoint elimination.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-061",
+      "S": "C",
+      "stem": "Segment reporting disclosures include:",
+      "ch": {
+        "A": "Segment assets",
+        "B": "Segment profit or loss",
+        "C": "Segment liabilities",
+        "D": "All of the above"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "'All of the above' correct answer. All sub-choices Domain A (ASC 280). Must evaluate all sub-choices as correct.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All-of-the-above. All Domain A.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-063",
+      "S": "C",
+      "stem": "EVA differs from residual income by using:",
+      "ch": {
+        "A": "Lower required rate",
+        "B": "Economic adjustments to income and capital",
+        "C": "Accounting income",
+        "D": "Higher required rate"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (EVA). All Domain C. 0/3 cross-domain. Must know EVA's economic adjustments.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain C. Must understand Stern Stewart EVA adjustments.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-039",
+      "S": "D",
+      "stem": "The sales value at split-off method allocates joint costs by:",
+      "ch": {
+        "A": "Net realizable value",
+        "B": "Physical quantity",
+        "C": "Gross profit",
+        "D": "Relative sales value at split-off"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (joint cost allocation). All Domain D allocation methods. 0/3 cross-domain. Must know method-to-basis mapping.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain D joint cost methods.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-044",
+      "S": "D",
+      "stem": "Throughput accounting focuses on:",
+      "ch": {
+        "A": "Sales minus direct materials",
+        "B": "All costs of production",
+        "C": "Full absorption cost",
+        "D": "Variable costing"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (TOC). All Domain D. 0/3 cross-domain. Must know TOC focus = throughput.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain D costing approaches.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-045",
+      "S": "D",
+      "stem": "In throughput accounting, operating expenses include:",
+      "ch": {
+        "A": "All costs except direct materials",
+        "B": "Only variable costs",
+        "C": "Only fixed costs",
+        "D": "Direct materials"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (TOC). All Domain D. 0/3 cross-domain. Must know TOC OE definition.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain D TOC concepts.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-E-031",
+      "S": "E",
+      "stem": "COSO principle 7 states the organization identifies risks to:",
+      "ch": {
+        "A": "Achievement of objectives",
+        "B": "Profitability",
+        "C": "Market share",
+        "D": "Stock price"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-E (COSO Principle 7). B→Domain-C (profitability metric). C→Domain-C (market share metric). D→Domain-C (stock price metric). 3/3 cross-domain (all Domain C performance metrics vs Domain E COSO). Per Q3: >=2 → REMEMBER.",
+      "dec": "RETAIN_REMEMBER",
+      "conf": 85,
+      "ev": "All distractors are Domain C financial metrics. CC=Domain E COSO principle. Agent B CORRECT.",
+      "ab": true
+    },
+    {
+      "Q": "P1E-E-035",
+      "S": "E",
+      "stem": "COSO principle 11 requires selection of:",
+      "ch": {
+        "A": "Specific controls for transactions",
+        "B": "Physical controls",
+        "C": "General controls over technology",
+        "D": "Monitoring tools"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-E (COSO Principle 11). All Domain E control activity types. 0/3 cross-domain. Must know which control type maps to Principle 11.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain E internal controls. COSO principles are Domain E, not Domain F.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-E-041",
+      "S": "E",
+      "stem": "Access controls limit:",
+      "ch": {
+        "A": "Physical and logical access to assets and data",
+        "B": "Only logical access",
+        "C": "Employee behavior",
+        "D": "Only physical access"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-E (access controls). All Domain E. 0/3 cross-domain. Must know comprehensive scope of access controls.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain E. B and D are partial answers.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-E-049",
+      "S": "E",
+      "stem": "COSO ERM has how many components?",
+      "ch": {
+        "A": "Four",
+        "B": "Eight",
+        "C": "Seven",
+        "D": "Five"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "Pure count recall. COSO ERM 2004 = 8 components. All numeric. NOTE: COSO ERM 2017 has 5 components — potential accuracy concern. Stem doesn't specify version. But per cognitive analysis: pure recall regardless.",
+      "dec": "RETAIN_REMEMBER",
+      "conf": 90,
+      "ev": "COSO ERM 2004 = 8 components. Pure count recall. Ambiguity about framework version flagged.",
+      "ab": true
+    },
+    {
+      "Q": "P1E-E-053",
+      "S": "E",
+      "stem": "Detective IT controls include:",
+      "ch": {
+        "A": "Firewalls",
+        "B": "Encryption",
+        "C": "Intrusion detection systems",
+        "D": "Access controls"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-E/F (IT controls). All Domain E/F. 0/3 cross-domain. Must classify controls: detective vs preventive.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All IT security controls. Must understand preventive/detective taxonomy.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-E-054",
+      "S": "E",
+      "stem": "Encryption protects:",
+      "ch": {
+        "A": "Network speed",
+        "B": "System performance",
+        "C": "Data availability",
+        "D": "Data confidentiality"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-E/F (encryption). All Domain E/F. 0/3 cross-domain. Must know CIA triad: encryption = confidentiality.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All IT security concepts. Must understand CIA triad mapping.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-065",
+      "S": "C",
+      "stem": "Scorecards based on BSC perspectives help align:",
+      "ch": {
+        "A": "Individual goals with organizational strategy",
+        "B": "Budgets with actuals",
+        "C": "Revenue with costs",
+        "D": "Assets with liabilities"
+      },
+      "CC": "A",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (BSC alignment). D→Domain-A (balance sheet equation). Only 1 clear cross-domain. B and C closer to Domain C.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 85,
+      "ev": "1 clear cross-domain insufficient. B and C domain-ambiguous.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-072",
+      "S": "C",
+      "stem": "A standard cost variance is considered significant if:",
+      "ch": {
+        "A": "It exceeds a predetermined threshold",
+        "B": "It is favorable",
+        "C": "It is any amount",
+        "D": "It is unfavorable"
+      },
+      "CC": "A",
+      "cl": "Apply",
+      "ana": "CC=Domain-C (variance investigation). All Domain C. 0/3 cross-domain. No operative facts. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Management-by-exception concept. No computation.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-073",
+      "S": "C",
+      "stem": "Favorable variances can be:",
+      "ch": {
+        "A": "Always positive",
+        "B": "The result of good performance or too-loose standards",
+        "C": "Never investigated",
+        "D": "Always beneficial"
+      },
+      "CC": "B",
+      "cl": "Apply",
+      "ana": "CC=Domain-C (variance interpretation). All Domain C. 0/3 cross-domain. No operative facts. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Concept comprehension: favorable variances may be from good performance or loose standards.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-074",
+      "S": "C",
+      "stem": "Variance investigation should consider:",
+      "ch": {
+        "A": "Only dollar amount",
+        "B": "Only percentage",
+        "C": "Only direction",
+        "D": "Materiality, controllability, and trend"
+      },
+      "CC": "D",
+      "cl": "Apply",
+      "ana": "CC=Domain-C (variance investigation). All Domain C. 0/3 cross-domain. No operative facts. Current CL=Apply inflated.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "Concept comprehension: investigation considers multiple factors, not just one.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-077",
+      "S": "C",
+      "stem": "A segment that is losing money should be dropped if:",
+      "ch": {
+        "A": "Market share declines",
+        "B": "Segment margin is negative",
+        "C": "Total revenue is low",
+        "D": "Avoidable costs exceed contribution margin"
+      },
+      "CC": "D",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (relevant costing/keep-or-drop). Mixed domains but borderline. Must apply relevant costing logic: drop when avoidable costs > contribution margin.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 85,
+      "ev": "Relevant costing concept. B is plausible but wrong (may still cover common fixed costs).",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-067",
+      "S": "D",
+      "stem": "Total quality management emphasizes:",
+      "ch": {
+        "A": "Inventory reduction",
+        "B": "Speed only",
+        "C": "Continuous improvement and customer focus",
+        "D": "Cost reduction only"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-D/E (TQM). All Domain D. 0/3 cross-domain. Must know TQM philosophy.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All operational improvement concepts. TQM = continuous improvement + customer focus.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-073",
+      "S": "D",
+      "stem": "Prime costs are:",
+      "ch": {
+        "A": "Direct labor and overhead",
+        "B": "All manufacturing costs",
+        "C": "Direct materials and direct labor",
+        "D": "Direct materials and overhead"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (cost classification). All Domain D cost classifications. 0/3 cross-domain. Must know: Prime = DM+DL, Conversion = DL+OH.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain D. A is conversion costs (close confusable). Requires taxonomy comprehension.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-D-074",
+      "S": "D",
+      "stem": "Conversion costs are:",
+      "ch": {
+        "A": "Direct materials and direct labor",
+        "B": "Direct materials and overhead",
+        "C": "Direct labor and manufacturing overhead",
+        "D": "All period costs"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-D (cost classification). All Domain D. Mirror of D-073.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain D cost classifications.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-090",
+      "S": "C",
+      "stem": "Profit center evaluation is typically based on:",
+      "ch": {
+        "A": "Market share",
+        "B": "Residual income only",
+        "C": "Actual profit vs budgeted profit",
+        "D": "ROI only"
+      },
+      "CC": "C",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (responsibility center evaluation). All Domain C performance metrics. 0/3 cross-domain. Must know profit center metrics.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain C. Must map responsibility center type to evaluation metric.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-C-095",
+      "S": "C",
+      "stem": "Standard cost card includes standard:",
+      "ch": {
+        "A": "Only budgeted cost",
+        "B": "Price and quantity for each cost element",
+        "C": "Only total cost",
+        "D": "Only actual cost"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-C (standard costing). All Domain C. 0/3 cross-domain. Must know standard cost card structure.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 90,
+      "ev": "All Domain C. Standard cost card = SP x SQ for each element.",
+      "ab": false
+    },
+    {
+      "Q": "P1E-A-070",
+      "S": "A",
+      "stem": "Under IFRS, inventory write-downs can be reversed when:",
+      "ch": {
+        "A": "Never",
+        "B": "NRV recovers",
+        "C": "Inventory is sold",
+        "D": "Cost increases"
+      },
+      "CC": "B",
+      "cl": "Understand",
+      "ana": "CC=Domain-A (IAS 2 inventory). All Domain A. 0/3 cross-domain. Must know GAAP-vs-IFRS difference: IFRS permits reversal when NRV recovers. Agent B provisional confidence 72 rejected. All same-domain.",
+      "dec": "RETAIN_UNDERSTAND",
+      "conf": 88,
+      "ev": "All Domain A inventory accounting. GAAP-vs-IFRS comparison knowledge required.",
+      "ab": false
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "agent": "H",
+  "task": "S810.1 Metadata Completeness Audit — 38 Domain E Seeds",
+  "date": "2026-07-26",
+  "total_seeds": 38,
+  "packs_audited": ["C", "D"],
+  "seeds_per_pack": {
+    "C": 19,
+    "D": 19
+  },
+  "methodology": "Direct source-file line-level inspection for all 38 seeds. Verified Difficulty, DifficultyScore, CognitiveLevel, question_state, LOSTag, ExplanationWrongA/B/C/D presence, Choices format, and optional/recommended field presence by sampling 8 representative QIDs (EC-004, EC-008, EC-014, EC-025, EC-028, EC-031, EC-066, ED-001, ED-010, ED-014, ED-016, ED-036, ED-051, ED-058) and confirming pattern uniformity via line-position extraction for all 38.",
+  "fields_audit": [
+    {
+      "field_name": "question_state",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0,
+      "note": "All 38 seeds are 'Unprocessed' — correct for pre-certification state"
+    },
+    {
+      "field_name": "Topic",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0,
+      "note": "All seeds have a descriptive Topic field with E.NNN pattern"
+    },
+    {
+      "field_name": "Difficulty",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0,
+      "note": "All values in permitted set per TAXONOMY_REGISTRY §6. However, SEED INVENTORY has 3 mismatches vs. source (see seed_inventory_discrepancies)"
+    },
+    {
+      "field_name": "DifficultyScore",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 15,
+      "invalid_values": 23,
+      "note": "23 of 38 seeds (60.5%) have DifficultyScore that does NOT match the Difficulty label per TAXONOMY_REGISTRY §6 mapping (1=Easy, 2=Moderate-Easy, 3=Moderate, 4=Difficult, 5=Very Difficult). This is a systematic calibration defect."
+    },
+    {
+      "field_name": "CognitiveLevel",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0,
+      "note": "All values in permitted set: Understand (26), Apply (11), Analyze (1). SEED INVENTORY has 11 mismatches vs. source (see seed_inventory_discrepancies)"
+    },
+    {
+      "field_name": "LOSTag",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0,
+      "note": "All 38 seeds have LOSTag: 'E Internal controls' — generic, not LOS-specific"
+    },
+    {
+      "field_name": "Stem",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0
+    },
+    {
+      "field_name": "Choices",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0
+    },
+    {
+      "field_name": "CorrectChoice",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0
+    },
+    {
+      "field_name": "ExplanationCorrect",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": 38,
+      "invalid_values": 0
+    },
+    {
+      "field_name": "ExplanationWrongA",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": "mixed",
+      "invalid_values": "mixed",
+      "note": "Structurally present in all 38 seeds. Some are empty (DL-025/DL-026) and some contain DL-013 boilerplate. See DL-026 entry in DEFECT_LIBRARY.md."
+    },
+    {
+      "field_name": "ExplanationWrongB",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": "mixed",
+      "invalid_values": "mixed"
+    },
+    {
+      "field_name": "ExplanationWrongC",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": "mixed",
+      "invalid_values": "mixed"
+    },
+    {
+      "field_name": "ExplanationWrongD",
+      "present_in": 38,
+      "missing_in": 0,
+      "valid_values": "mixed",
+      "invalid_values": "mixed"
+    },
+    {
+      "field_name": "AccountingPrinciple",
+      "present_in": 0,
+      "missing_in": 38,
+      "valid_values": 0,
+      "invalid_values": 0,
+      "note": "Recommended field per CAQS v1.0 §7.2 — absent across all 38 seeds"
+    },
+    {
+      "field_name": "PrimaryCompetency",
+      "present_in": 0,
+      "missing_in": 38,
+      "valid_values": 0,
+      "invalid_values": 0,
+      "note": "Recommended field per QUESTION_METADATA_STANDARD.md §2.1 — absent across all 38 seeds"
+    },
+    {
+      "field_name": "Tags",
+      "present_in": 0,
+      "missing_in": 38,
+      "valid_values": 0,
+      "invalid_values": 0,
+      "note": "Optional field — absent across all 38 seeds"
+    },
+    {
+      "field_name": "ExplanationVersion",
+      "present_in": 0,
+      "missing_in": 38,
+      "valid_values": 0,
+      "invalid_values": 0,
+      "note": "Optional field — absent across all 38 seeds"
+    },
+    {
+      "field_name": "CreatedDate",
+      "present_in": 0,
+      "missing_in": 38,
+      "valid_values": 0,
+      "invalid_values": 0,
+      "note": "Optional field — absent across all 38 seeds"
+    },
+    {
+      "field_name": "ModifiedDate",
+      "present_in": 0,
+      "missing_in": 38,
+      "valid_values": 0,
+      "invalid_values": 0,
+      "note": "Optional field — absent across all 38 seeds"
+    }
+  ],
+  "difficulty_calibration_analysis": {
+    "correct_alignment": 15,
+    "incorrect_alignment": 23,
+    "incorrect_percentage": "60.5%",
+    "pattern": "DifficultyScore is systematically depressed by 1-2 points relative to Difficulty label. Pack D seeds labeled 'Difficult' most commonly have DifficultyScore=2 (Moderate-Easy equivalent). Pack C seeds labeled 'Moderate' most commonly have DifficultyScore=3 (correct) but several have DifficultyScore=1 or 2.",
+    "by_pack": {
+      "C": {
+        "correct": 9,
+        "incorrect": 10,
+        "note": "3 seeds labeled 'Easy' have DS=2 or 3 (should be 1). 1 seed labeled 'Moderate-Easy' has DS=3 (should be 2). 3 seeds labeled 'Moderate' have DS=1 (should be 3). 3 seeds labeled 'Moderate' have DS=2 (should be 3)."
+      },
+      "D": {
+        "correct": 6,
+        "incorrect": 13,
+        "note": "7 seeds labeled 'Difficult' have DS=2 (should be 4). 2 seeds labeled 'Difficult' have DS=3 (should be 4). 1 seed labeled 'Difficult' has DS=1 (should be 4). 2 seeds labeled 'Moderate' have DS=2 (should be 3). 1 seed labeled 'Moderate' has DS=1 (should be 3)."
+      }
+    },
+    "severity": "HIGH — difficulty calibration is systematically broken across 60.5% of seeds. Affects learner experience (wrong difficulty shown) and blueprint coverage reporting."
+  },
+  "seed_inventory_discrepancies": {
+    "description": "The SESSION809_SEED_INVENTORY.json file has 3 Difficulty and 11 CognitiveLevel values that differ from the actual source files. The source files are authoritative.",
+    "difficulty_mismatches": [
+      {"qid": "P1-EC-004", "inventory": "Moderate", "source": "Moderate-Easy"},
+      {"qid": "P1-EC-008", "inventory": "Moderate", "source": "Easy"},
+      {"qid": "P1-EC-014", "inventory": "Moderate", "source": "Easy"}
+    ],
+    "cognitive_level_mismatches": [
+      {"qid": "P1-EC-014", "inventory": "Understand", "source": "Apply"},
+      {"qid": "P1-EC-021", "inventory": "Apply", "source": "Understand"},
+      {"qid": "P1-EC-022", "inventory": "Understand", "source": "Apply"},
+      {"qid": "P1-EC-023", "inventory": "Understand", "source": "Apply"},
+      {"qid": "P1-EC-024", "inventory": "Understand", "source": "Apply"},
+      {"qid": "P1-EC-041", "inventory": "Apply", "source": "Understand"},
+      {"qid": "P1-EC-066", "inventory": "Understand", "source": "Analyze"},
+      {"qid": "P1-ED-051", "inventory": "Apply", "source": "Understand"},
+      {"qid": "P1-ED-071", "inventory": "Understand", "source": "Apply"},
+      {"qid": "P1-ED-073", "inventory": "Apply", "source": "Understand"},
+      {"qid": "P1-ED-074", "inventory": "Understand", "source": "Apply"}
+    ]
+  },
+  "difficulty_distribution": {
+    "Easy": 3,
+    "Moderate-Easy": 2,
+    "Moderate": 19,
+    "Difficult": 13,
+    "Very_Difficult": 0,
+    "unclassified": 1,
+    "note": "ED-001 shows 'Difficult' label but DS=3; included as Difficult for distribution. CAQS §6.1 target: Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10%. Current: Easy ~8%, Moderate-Easy ~5%, Moderate ~50%, Difficult ~34% — skewed heavy toward Moderate-Difficult with no Very Difficult items."
+  },
+  "cognitive_level_distribution": {
+    "Remember": 0,
+    "Understand": 26,
+    "Apply": 11,
+    "Analyze": 1,
+    "Evaluate": 0,
+    "note": "Heavily skewed toward Understand (68.4%). CAQS §6.2 target: Remember 5%, Understand 15%, Apply 40%, Analyze 25%, Evaluate 15%. Domain E seeds are predominantly Understand-level definition-matching items — consistent with DL-031 pattern (definition-match difficulty inflation)."
+  },
+  "missing_metadata_matrix": [
+    {
+      "qid": "P1-EC-004",
+      "pack": "C",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 3 does not match 'Moderate-Easy' (should be 2)"],
+      "missing_count": 6,
+      "severity": "MEDIUM"
+    },
+    {
+      "qid": "P1-EC-008",
+      "pack": "C",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 2 does not match 'Easy' (should be 1)"],
+      "missing_count": 6,
+      "severity": "MEDIUM"
+    },
+    {
+      "qid": "P1-EC-014",
+      "pack": "C",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 3 does not match 'Easy' (should be 1)"],
+      "missing_count": 6,
+      "severity": "MEDIUM"
+    },
+    {
+      "qid": "P1-EC-020",
+      "pack": "C",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 1 does not match 'Moderate' (should be 3)"],
+      "missing_count": 6,
+      "severity": "MEDIUM"
+    },
+    {
+      "qid": "P1-EC-066",
+      "pack": "C",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 3 does not match 'Easy' (should be 1)"],
+      "missing_count": 6,
+      "severity": "MEDIUM"
+    },
+    {
+      "qid": "P1-ED-001",
+      "pack": "D",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 3 does not match 'Difficult' (should be 4)"],
+      "missing_count": 6,
+      "severity": "MEDIUM"
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "D",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 1 does not match 'Difficult' (should be 4)"],
+      "missing_count": 6,
+      "severity": "HIGH"
+    },
+    {
+      "qid": "P1-ED-046",
+      "pack": "D",
+      "present_fields": ["QuestionID", "Part", "Section", "SectionName", "Topic", "MicroTopic", "UniqueConceptKey", "LOSTag", "Difficulty", "DifficultyScore", "ItemType", "ItemStyle", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote", "question_state", "CalculationItem", "VerifiedChecks", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "CognitiveLevel"],
+      "missing_fields": ["AccountingPrinciple", "PrimaryCompetency", "Tags", "ExplanationVersion", "CreatedDate", "ModifiedDate"],
+      "invalid_fields": ["DifficultyScore: 2 does not match 'Moderate' (should be 3)"],
+      "missing_count": 6,
+      "severity": "MEDIUM"
+    }
+  ],
+  "structural_findings": {
+    "all_four_ew_fields_present": true,
+    "exceptions": [],
+    "note": "All 38 seeds have ExplanationWrongA, ExplanationWrongB, ExplanationWrongC, and ExplanationWrongD structurally present as JSON fields. However, many seeds have empty ExplanationWrong slots at non-CorrectChoice positions (DL-026) — this is a content quality issue, not a structural absence. Additionally, 19 of 38 seeds (Pack C ED-010, ED-016, ED-025, ED-028, ED-035, ED-042, ED-046, ED-051, ED-058, ED-071, ED-072, ED-073, ED-074, ED-075 and Pack C seeds) have DL-013 boilerplate text in some distractor slots. The S810.1 EW authorship remediation is the planned fix.",
+    "choices_object_format": "all_nested",
+    "choices_format_detail": "All 38 seeds use nested object format: 'Choices': { 'A': 'text', 'B': 'text', 'C': 'text', 'D': 'text' }. No flat 'ChoiceA/B/C/D' format used in any seed."
+  },
+  "most_commonly_missing_fields": [
+    {"field": "AccountingPrinciple", "missing_in": 38, "total": 38, "percentage": "100%", "priority": "HIGH", "reason": "CAQS §4.3 EV3 requires governing principle by name. Cert-blocking per CAQS §1.6.3"},
+    {"field": "PrimaryCompetency", "missing_in": 38, "total": 38, "percentage": "100%", "priority": "MEDIUM", "reason": "QUESTION_METADATA_STANDARD.md §2.1 recommended field"},
+    {"field": "Tags", "missing_in": 38, "total": 38, "percentage": "100%", "priority": "LOW", "reason": "Optional filtering tags"},
+    {"field": "ExplanationVersion", "missing_in": 38, "total": 38, "percentage": "100%", "priority": "LOW", "reason": "Revision tracking — all seeds are pre-first-audit"},
+    {"field": "CreatedDate", "missing_in": 38, "total": 38, "percentage": "100%", "priority": "LOW", "reason": "QA traceability"},
+    {"field": "ModifiedDate", "missing_in": 38, "total": 38, "percentage": "100%", "priority": "LOW", "reason": "QA traceability"}
+  ],
+  "recommended_enrichment_pass": "S810 should perform the following enrichment beyond EW authorship:\n\n1. CRITICAL — Difficulty/DifficultyScore alignment: Fix the 23 seeds (60.5%) where DifficultyScore does not match Difficulty label per TAXONOMY_REGISTRY §6. This is a learner-facing defect (wrong difficulty displayed). Pack D 'Difficult' labels should all map to DS=4.\n\n2. HIGH — CognitiveLevel recalibration: 26 of 38 seeds (68.4%) are labeled 'Understand' but many are definition-match items that should be 'Remember'. Per DL-031 pattern, recategorize definition-matching stems as 'Remember' (not 'Understand'). EC-066 is the only 'Analyze' — verify this is justified.\n\n3. HIGH — LOSTag specificity: All 38 seeds have generic 'E Internal controls' LOSTag. Replace with specific LOS identifiers from the IMA CSO (E.1, E.2.a, E.2.b, E.4, E.5.a, E.5.b, E.5.c) per Agent I's blueprint coverage audit.\n\n4. MEDIUM — AccountingPrinciple: Add COSO framework or IMA standard reference to every seed. Required for certification per CAQS §1.6.3 (EV3). Most Domain E items can reference COSO Internal Control Framework or COSO ERM Framework.\n\n5. MEDIUM — PrimaryCompetency: Assign 'Conceptual' to definition-match items, 'Analysis' to scenario-application items, 'Judgment' to control-design items. This supports future adaptive difficulty calibration.\n\n6. LOW — Tags: Add topic-based tags for filtering (e.g., 'SoD', 'ITGC', 'Fraud', 'ERM', 'Monitoring', 'ControlEnvironment').\n\n7. LOW — ExplanationVersion: Initialize to 1 for all seeds (pre-first-audit).\n\n8. LOW — CreatedDate/ModifiedDate: Add ISO 8601 dates (2026-07-26 for initial audit).\n\n9. SEED INVENTORY CORRECTION: The SESSION809_SEED_INVENTORY.json has 3 Difficulty and 11 CognitiveLevel values that differ from source files. Regenerate from authoritative source files before S810 remediation begins."
+}

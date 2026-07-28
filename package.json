@@ -1,0 +1,17 @@
+{
+  "name": "cma-part-1-exam-simulator",
+  "version": "0.9.0-alpha",
+  "description": "CMA Part 1 Exam Simulator & Question Repository",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "registry": "node scripts/build_master_registry.js",
+    "audit": "node scripts/section_a_validation_batch.js",
+    "dashboard": "node scripts/build_dashboard.js",
+    "build-registry": "node scripts/build_master_registry.js && node scripts/generate_registry.js",
+    "generate-registry": "node scripts/generate_registry.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

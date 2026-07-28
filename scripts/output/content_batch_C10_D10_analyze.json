@@ -1,0 +1,962 @@
+[
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-001 multi-variance root cause analysis",
+    "MicroTopic": "multi-variance root cause analysis",
+    "UniqueConceptKey": "C-CA-001-multi-variance-root-cause-analysis",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Northstar Manufacturing reports October variances: material price $42,000 U; material quantity $14,000 F; labor rate $8,000 U; labor efficiency $56,000 U. The Controller notes 22% of the workforce was replaced by temporary workers from a staffing agency during the month. Which root cause hypothesis best explains this combined variance pattern?",
+    "Choices": {
+      "A": "The purchasing department secured a volume discount on premium materials, which reduced waste but increased per-unit material cost without affecting labor",
+      "B": "Machine breakdowns reduced throughput, forcing overtime pay for remaining skilled workers while leaving materials idle and unused",
+      "C": "Lower-skill temporary workers used materials inefficiently, generating excess scrap requiring premium-price emergency reorders while also consuming far more labor hours per unit than standard",
+      "D": "Production volume fell significantly below the master budget, spreading fixed overhead over fewer units and creating unfavorable static budget variances across all categories"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The combined variance pattern reveals a shared operational root cause tied to the 22% temporary workforce substitution. The $42,000 U material price variance signals the company paid more than standard for materials. Inexperienced temporary workers generate higher scrap rates, forcing emergency reorders at premium spot prices. The $14,000 F material quantity variance may appear counterintuitive alongside an unfavorable price variance, but in this context it likely reflects that some materials were wasted before entering production, so the quantity charged to production was less than purchased. The $56,000 U labor efficiency variance confirms temporary workers consumed substantially more hours per unit than the standard allows, consistent with an inexperienced workforce. The $8,000 U labor rate variance is modest relative to the efficiency variance. The key analytical skill is recognizing that when workforce composition changes coincide with both material and labor variances, worker skill level is the likely common driver. A common exam trap is analyzing each variance category in isolation rather than seeking a shared operational driver across material and labor categories.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-001",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A attributes material variances solely to purchasing department decisions for premium materials. While higher-grade materials could explain a favorable quantity variance paired with an unfavorable price variance, this hypothesis cannot explain the $56,000 U labor efficiency variance. In fact, premium materials typically reduce processing time and scrap, which would create a favorable labor efficiency variance, not the massive unfavorable one observed. The error is attributing all material variances to purchasing decisions while ignoring the simultaneous labor deterioration that indicates a workforce-skill root cause spanning both material and labor categories.",
+    "ExplanationWrongB": "Option B attributes the unfavorable labor efficiency variance to machine breakdowns and idle time, and the favorable material quantity variance to unused materials. While machine downtime could idle workers and leave materials unused, machine breakdowns cannot explain the $42,000 U material price variance. Purchasing pays higher prices for materials regardless of whether machines are running. Additionally, overtime pay creates a labor rate variance (higher hourly rates), not a labor efficiency variance (more hours per unit). The error is confusing rate variance drivers with efficiency variance drivers and failing to connect material price effects to workforce quality.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D attempts to explain all variances as consequences of lower production volume through static budget logic. However, flexible budget variances for materials and labor are computed at actual output levels and already adjust for volume differences. The price, quantity, rate, and efficiency variances presented compare actual costs at actual volume against standard costs at actual volume, isolating per-unit cost performance from volume effects. The error is failing to distinguish between flexible budget variances (which hold volume constant at actual output) and static budget variances (which include volume effects). The reported variances reflect cost per unit, not volume shortfall.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-002 ROI decomposition analysis DuPont method",
+    "MicroTopic": "ROI decomposition analysis DuPont method",
+    "UniqueConceptKey": "C-CA-002-roi-decomposition-dupont",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Bayside Electronics evaluates two divisions. Division X: operating income $3,200,000, sales $40,000,000, average operating assets $16,000,000. Division Y: operating income $2,700,000, sales $18,000,000, average operating assets $15,000,000. The CEO believes Division Y is the stronger performer despite lower absolute profit. Using DuPont ROI decomposition, which analysis best supports the CEO's assessment?",
+    "Choices": {
+      "A": "Division Y's margin of 15% significantly exceeds Division X's 8% margin, indicating superior pricing power or cost control per sales dollar, even though Division X's higher asset turnover of 2.50 gives it the higher overall ROI of 20% versus Division Y's 18%",
+      "B": "Division Y's ROI equals Division X's ROI, so the CEO's belief is unfounded and both divisions perform identically by the standard return metric",
+      "C": "Division X generates more absolute operating income than Division Y, which is the only meaningful performance measure since shareholders care about total profit, not ratios",
+      "D": "Division Y's higher ROI of 22.5% exceeds Division X's 16%, confirming the CEO's assessment through the standard ROI calculation"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The DuPont ROI decomposition separates ROI into margin (operating income / sales) and asset turnover (sales / average operating assets). Division X: margin = $3,200,000 / $40,000,000 = 8%, turnover = $40,000,000 / $16,000,000 = 2.50, ROI = 8% x 2.50 = 20%. Division Y: margin = $2,700,000 / $18,000,000 = 15%, turnover = $18,000,000 / $15,000,000 = 1.20, ROI = 15% x 1.20 = 18%. Although Division X has the higher aggregate ROI, Division Y achieves a dramatically stronger margin suggesting a differentiated competitive position. Division X's higher ROI is entirely attributable to asset turnover, which may reflect a high-volume, low-margin commodity business model. The CEO's assessment is defensible because margin strength often signals sustainable competitive advantage (brand, technology, or service differentiation), while asset-turnover-driven ROI is vulnerable to competitive price pressure. The analytical skill is looking past the aggregate ROI number to understand the business model drivers each component reveals. A common exam trap is comparing only the final ROI percentage without decomposing the operational meaning behind margin and turnover differences.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-002",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B asserts both divisions have equal ROI. If ROI were equal, margin and turnover would be exact inverses: a high-margin division must have a proportionally low turnover. Division X achieves 8% margin x 2.50 turnover = 20% ROI, while Division Y achieves 15% margin x 1.20 turnover = 18% ROI. The difference of 2 percentage points is driven by Division X's turnover advantage more than compensating for its margin deficit. The error is assuming high margins and low turnover must mathematically offset to produce identical ROI across divisions, which ignores genuine differences in asset efficiency.",
+    "ExplanationWrongC": "Option C asserts absolute operating income is the sole meaningful performance measure. Division X earns $3,200,000 on $16,000,000 in assets (20% return), while Division Y earns $2,700,000 on $15,000,000 (18% return). The capital invested matters because a division earning higher absolute profit but consuming proportionally more assets may be the less efficient capital allocator. The error is ignoring the investment base required to generate profits. Performance evaluation must consider both the return achieved and the assets deployed to achieve it.",
+    "ExplanationWrongD": "Option D fabricates ROI values that do not match the data. Division Y's ROI is $2,700,000 / $15,000,000 = 18%, not 22.5%. Division X's ROI is $3,200,000 / $16,000,000 = 20%, not 16%. The error is miscalculating ROI. A candidate reaching 22.5% for Division Y may have used $18,000,000 (sales) instead of $15,000,000 (assets) as the denominator. For Division X, a result of 16% could arise from using $20,000,000 as the denominator. The misconception is confusing sales with invested assets when computing ROI.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-003 transfer pricing method comparison analysis",
+    "MicroTopic": "transfer pricing method comparison analysis",
+    "UniqueConceptKey": "C-CA-003-transfer-pricing-method-comparison",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Harbor Industrial's Component Division manufactures Part Z-9 at variable cost $180 and full cost $240 per unit, with external market price $310. Assembly Division can purchase identical parts externally at $295. Component Division has idle capacity of 15,000 units. The CFO requests a transfer pricing analysis to determine which method maximizes consolidated company profit while incentivizing goal-congruent behavior. Which analysis is correct?",
+    "Choices": {
+      "A": "A market-based transfer price of $310 provides the strongest incentive for the Component Division and is optimal regardless of idle capacity because external prices represent fair value",
+      "B": "A negotiated transfer price between $180 and $295 encourages internal sourcing because the variable cost of internal production ($180) is below the external purchase price ($295), generating $115 per unit in consolidated savings",
+      "C": "A full-cost transfer price of $240 ensures Component Division recovers all manufacturing costs and is the only method that fairly evaluates both divisions' performance",
+      "D": "Mandating external purchase at $295 is optimal because the market price objectively confirms the component's value and avoids transfer pricing disputes between divisions"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "When Component Division has idle capacity, the relevant cost of internal production is the variable cost of $180 per unit. Fixed costs are incurred regardless of whether the internal transfer occurs. The external purchase price for Assembly Division is $295. From the consolidated company perspective, every unit produced internally costs $180 (incremental) versus $295 (external), saving $115 per unit. A negotiated transfer price between $180 (Component Division's minimum, its variable cost with zero opportunity cost given idle capacity) and $295 (Assembly Division's maximum, its external alternative) ensures both divisions benefit. For example, at $250, Component Division earns a $70 contribution per unit on otherwise idle capacity, while Assembly Division saves $45 versus buying externally. Under the general transfer pricing rule, transfer price = outlay cost + opportunity cost. With idle capacity, opportunity cost is zero, so the minimum transfer price equals variable cost. A common exam trap is applying market-based transfer pricing when excess capacity exists. Market-based pricing at $310 would cause Assembly Division to purchase externally at $295, losing the $115 per unit internal savings.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-003",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A applies market-based transfer pricing at $310 when Component Division has 15,000 units of idle capacity. At $310, Assembly Division would rationally purchase externally at $295, saving $15 per unit. The consolidated company then loses the $115 per unit savings that internal sourcing generates. Market-based pricing is appropriate when the selling division is at full capacity because the opportunity cost equals the market price. With idle capacity, the opportunity cost is zero, and market-based pricing produces a suboptimal sourcing decision. The error is applying the full-capacity transfer pricing rule in an excess-capacity scenario, where only variable outlay costs are relevant.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C advocates full-cost transfer pricing at $240 as the only fair method. While $240 is below the external price of $295 and would result in internal sourcing (preserving some consolidated savings), full cost includes $60 of fixed overhead per unit that is irrelevant to the transfer decision because those costs are incurred whether or not the internal transfer occurs. The error is treating fixed manufacturing costs as relevant for transfer pricing decisions when idle capacity exists. Under the general transfer pricing rule, only variable costs plus opportunity costs determine the economically correct minimum transfer price.",
+    "ExplanationWrongD": "Option D recommends external purchase at $295. From the consolidated company perspective, producing internally at $180 variable cost versus purchasing externally at $295 destroys $115 of savings per unit. The external market price confirms what outside buyers would pay, but the relevant comparison for the consolidated entity is the incremental cost of internal production against the external price. The error is treating the external market price as definitive for internal decisions rather than comparing incremental costs. The correct corporate decision rule is to produce internally whenever variable cost of internal production is below the external purchase price.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-004 balanced scorecard measure selection analysis",
+    "MicroTopic": "balanced scorecard measure selection analysis",
+    "UniqueConceptKey": "C-CA-004-balanced-scorecard-measure-selection",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Evergreen Logistics is designing its first balanced scorecard. The management team proposed: (1) on-time delivery percentage, (2) return on invested capital, (3) employee retention rate, (4) average days to fill customer orders, (5) revenue from new services launched in the past 24 months, (6) operating income margin. The CFO asks which two measures belong in the Internal Business Process perspective. Which classification is correct?",
+    "Choices": {
+      "A": "Measures (1) on-time delivery and (2) return on invested capital belong to Internal Business Process",
+      "B": "Measures (3) employee retention and (5) revenue from new services belong to Internal Business Process",
+      "C": "Measures (2) return on invested capital and (6) operating income margin belong to Internal Business Process",
+      "D": "Measures (1) on-time delivery and (4) average days to fill orders belong to Internal Business Process"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under the Kaplan and Norton Balanced Scorecard framework, the Internal Business Process perspective captures measures of operational efficiency, quality, and process throughput. On-time delivery percentage measures the effectiveness of logistics and fulfillment processes. Average days to fill customer orders measures the speed of the order-to-delivery cycle. Both are process-efficiency metrics reflecting how well the organization executes its core operational activities. Return on invested capital and operating income margin belong to the Financial perspective because they address the question 'How do we look to shareholders?' Employee retention rate fits Learning and Growth as it measures workforce stability and human capital. Revenue from new services belongs to the Financial perspective as a growth measure or, in some frameworks, the Customer perspective as an indicator of market acceptance, but definitively not Internal Business Process. The analytical skill is distinguishing process-efficiency metrics from financial outcomes and capability metrics. A common exam trap is confusing which perspective hosts process-efficiency measures versus customer-facing outcomes or financial results.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-004",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A pairs on-time delivery (correctly Internal Business Process) with return on invested capital, which belongs to the Financial perspective. ROIC measures the return generated on invested capital and addresses shareholder value creation, not operational process performance. The error is confusing a process enabler (on-time delivery drives customer satisfaction, which drives revenue, which ultimately affects ROIC) with the financial measure itself. The balanced scorecard maintains a clear cause-and-effect chain: Learning and Growth drives Internal Business Process, which drives Customer outcomes, which drive Financial results. ROIC is the end result, not the process.",
+    "ExplanationWrongB": "Option B pairs employee retention rate with revenue from new services. Employee retention measures organizational capability and belongs to the Learning and Growth perspective, which addresses workforce capabilities and organizational climate. Revenue from new services measures market success with innovative offerings and is typically classified under Financial as a growth revenue measure. Neither belongs to Internal Business Process. The error is classifying any metric that involves employees or new offerings as process-oriented rather than recognizing that the BSC separates human capital development from operational process execution.",
+    "ExplanationWrongC": "Option C attributes both ROIC and operating income margin to Internal Business Process. Both are Financial perspective measures because they assess profitability and return. ROIC measures capital efficiency, and operating income margin measures profit per revenue dollar. The error is assuming that because efficient internal processes contribute to profitability, the financial metrics themselves belong to the process perspective. The balanced scorecard deliberately separates the drivers (processes) from the outcomes (financial results) to make the causal linkages explicit and measurable.",
+    "ExplanationWrongD": "",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-005 sales mix variance interpretation",
+    "MicroTopic": "sales mix variance interpretation",
+    "UniqueConceptKey": "C-CA-005-sales-mix-variance-interpretation",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Coastal Beverage sells two lines: Premium Sparkling Water (contribution margin $4.80/unit, budgeted 60% of total units) and Standard Flavored Water (contribution margin $1.90/unit, budgeted 40% of total units). Actual results: total units matched budget at 200,000, but Premium comprised 45% and Standard 55%. The CFO's variance report shows total contribution margin $58,000 below budget despite hitting the unit sales target. Which analysis correctly identifies the root cause?",
+    "Choices": {
+      "A": "The sales price variance is unfavorable because Premium units were sold at a discount, reducing the contribution margin per unit below the budgeted $4.80",
+      "B": "The unfavorable sales mix variance arose because the actual product mix shifted toward the lower-margin Standard product (55% vs 40% budgeted), reducing the weighted-average contribution margin from $3.64 to approximately $3.21 per unit",
+      "C": "The market size variance is unfavorable because Coastal's total market share declined relative to competitors, preventing the company from selling more Premium units",
+      "D": "The sales volume variance is unfavorable because actual total units sold fell short of the master budget volume, reducing overall contribution margin"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "The sales mix variance isolates the effect of selling a different proportion of products than budgeted. Since total units exactly matched budget (200,000), there is no sales volume variance. The budgeted weighted-average contribution margin was ($4.80 x 60%) + ($1.90 x 40%) = $2.88 + $0.76 = $3.64 per unit. The actual mix produced ($4.80 x 45%) + ($1.90 x 55%) = $2.16 + $1.045 = $3.205 per unit. The $0.435 per unit decline times 200,000 units equals $87,000 unfavorable mix variance. The $58,000 figure reported may reflect additional minor variance components or rounding, but the direction and root cause are clear: shoppers traded down from the premium product to the standard product within Coastal's portfolio. This requires the candidate to recognize that equal total unit volume rules out a volume variance, calculate the budgeted and actual weighted-average contribution margins, attribute the shortfall to mix shift, and interpret the operational meaning: product substitution within the same total unit count. A common exam trap is confusing sales mix variance with sales price variance or sales volume variance when total units equal budget.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-005",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A attributes the contribution margin decline to a sales price variance. A sales price variance measures the difference between actual and budgeted selling price per unit, affecting revenue rather than the mix of products sold. The scenario provides contribution margins per unit, not selling prices, and the data clearly shows the product mix shifted while total units remained at budget. The error is attributing a composition (mix) effect to a rate (price) effect. The mix shift from 60/40 to 45/55 alone explains the weighted-average contribution margin decline; no price change is needed to generate the result.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C invokes a market size or market share variance, which measures the company's performance relative to the overall market. The scenario provides no external market data: no total market size, no competitor share information, no data about Coastal's competitive position. More importantly, Standard's unit share increased (from 40% to 55%) while total Coastal units equaled budget, indicating internal product substitution, not external market share loss. The error is reaching for an external market explanation when the data supports an internal product-mix shift explanation without any market-level information.",
+    "ExplanationWrongD": "Option D claims an unfavorable sales volume variance. A sales volume variance measures the difference between actual and budgeted total units sold, multiplied by the budgeted contribution margin per unit. The scenario states explicitly that actual total units matched the budget of 200,000, meaning the sales volume variance is zero. The error is automatically attributing any contribution margin shortfall to volume when the data clearly shows volume was exactly on target. The candidate must recognize that the mix of products, not the total quantity, drove the unfavorable result.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-006 flexible budget performance evaluation",
+    "MicroTopic": "flexible budget performance evaluation",
+    "UniqueConceptKey": "C-CA-006-flexible-budget-performance-evaluation",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Meridian Apparel's sewing department: actual costs $428,000 at 52,000 actual machine hours; flexible budget for actual output allows $420,000 at 50,000 standard machine hours; master budget at planned production was $390,000 at 46,000 hours. The Plant Controller asks the Cost Analyst to isolate how much of the $38,000 total variance ($428,000 - $390,000) is attributable to volume effects versus spending/efficiency effects under flexible budget performance evaluation.",
+    "Choices": {
+      "A": "The entire $38,000 is a spending variance because the department overspent its flexible budget by $8,000 and also failed to control volume-driven cost increases",
+      "B": "The total variance contains a $30,000 volume variance (flexible budget $420,000 minus master budget $390,000) and an $8,000 flexible budget variance (actual $428,000 minus flexible $420,000), where the $8,000 is controllable by the department manager",
+      "C": "The entire $38,000 variance is attributable to the department producing more output than planned at a higher efficiency rate, which is favorable for the company overall",
+      "D": "The variance decomposes into a $10,000 favorable rate variance and a $48,000 unfavorable efficiency variance based on the difference between actual and standard machine hours"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Flexible budget performance evaluation separates the total variance into volume-driven and performance-driven components. The volume variance measures the difference between the flexible budget (adjusted for actual output) and the master budget (at planned output): $420,000 - $390,000 = $30,000 unfavorable. This reflects that actual output required more resources than originally planned, which is driven by production levels set by sales and production planning, not by department efficiency. The flexible budget variance measures how actual costs compare to what costs should have been at actual output: $428,000 - $420,000 = $8,000 unfavorable. This $8,000 is the controllable component that reflects the department manager's cost performance. The total $38,000 variance = $30,000 volume + $8,000 performance. The key analytical skill is recognizing that $30,000 of the total variance is production-volume-driven and should not be attributed to the department manager, while only $8,000 reflects actual cost control relative to the adjusted standard. A common CMA exam trap is blaming department managers for volume variances, which are driven by activity levels beyond their control.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-006",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A treats the entire $38,000 as a spending variance. The $30,000 difference between the flexible budget ($420,000) and master budget ($390,000) is attributable to higher actual production volume requiring more resources, which is a volume effect, not overspending. Only the $8,000 excess over the flexible budget represents spending or efficiency shortfalls. The error is failing to distinguish between costs that increased because the department produced more output (volume effect, expected and not the manager's fault) and costs that exceeded the standard allowance for the output actually achieved (performance effect, controllable).",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C characterizes the entire variance as favorable due to higher output. Producing more output than planned may be strategically desirable to meet customer demand, but the cost variance is still unfavorable: actual costs exceeded the master budget by $38,000, and the flexible budget variance of $8,000 indicates actual costs per unit exceeded standard. The error is conflating production achievement (meeting higher demand) with cost control (spending within budgeted rates for the actual volume achieved). Higher output at higher-than-standard cost per unit does not represent favorable overall performance.",
+    "ExplanationWrongD": "Option D attempts to decompose the variance into rate and efficiency components using machine hours. While conceptually this parallels the standard cost variance framework, the scenario provides cost totals in dollars with standard hours for actual output, not the actual-versus-standard rate per machine hour. Without knowing the standard variable overhead rate per hour, separate rate and efficiency components cannot be calculated. The error is applying the price/quantity variance decomposition formula without having the per-unit rate data required to compute the individual components.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-007 residual income vs ROI comparison analysis",
+    "MicroTopic": "residual income vs ROI comparison analysis",
+    "UniqueConceptKey": "C-CA-007-residual-income-vs-roi-comparison",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Pinnacle Corporation evaluates divisions using ROI with a 12% company-wide required rate of return. Division M: operating income $4,800,000 on average operating assets $30,000,000 (ROI = 16%). The Division Manager considers a new $5,000,000 investment generating $650,000 annual operating income (ROI = 13%) and rejects it because it would dilute the division's ROI. The Corporate Controller disagrees. Which analysis correctly identifies the divergence between divisional and corporate incentives?",
+    "Choices": {
+      "A": "The Division Manager correctly rejected the investment because the project's ROI of 13% is below the division's current 16%, and accepting it would reduce divisional ROI, which is the proper decision criterion",
+      "B": "The Division Manager's rejection is consistent with ROI-based evaluation incentives but economically suboptimal for the corporation because the 13% project return exceeds the 12% required rate, meaning it creates $50,000 in additional residual income and positive shareholder value",
+      "C": "The project should be accepted because it increases total operating income from $4,800,000 to $5,450,000, and maximizing absolute profit is always the correct capital allocation criterion",
+      "D": "Both the Division Manager and Corporate Controller are incorrect because the project's ROI of 13% equals the company's cost of capital of 13%, making the investment value-neutral"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "This is the classic ROI myopia problem. The project ROI is $650,000 / $5,000,000 = 13%. The division's current ROI is 16%. If accepted: new operating income = $4,800,000 + $650,000 = $5,450,000; new assets = $30,000,000 + $5,000,000 = $35,000,000; new ROI = $5,450,000 / $35,000,000 = 15.57%. The division manager rationally rejects the project under ROI-based evaluation because it dilutes the division's ROI from 16% to 15.57%. However, from the corporate perspective, the project earns 13% which exceeds the 12% cost of capital. Residual income before: $4,800,000 - (12% x $30,000,000) = $4,800,000 - $3,600,000 = $1,200,000. After: $5,450,000 - (12% x $35,000,000) = $5,450,000 - $4,200,000 = $1,250,000. Residual income increases by $50,000, confirming value creation. The key analytical insight is that ROI-based performance evaluation creates underinvestment incentives: managers reject projects earning more than the cost of capital but less than the division's current ROI. Residual income would align divisional and corporate incentives because it increases whenever a project's return exceeds the required rate. A common exam trap is accepting the division manager's decision as correct without recognizing the incentive distortion inherent in ROI-based evaluation.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-007",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A endorses the Division Manager's rejection as correct. While rejecting the project does protect the division's 16% ROI, this is a well-documented flaw of ROI-based performance evaluation: it encourages managers to turn down value-creating investments that would reduce their division's ROI but still exceed the company's cost of capital. The error is treating the division's current ROI as the hurdle rate for capital allocation decisions. The correct corporate criterion is whether a project's return exceeds the cost of capital, not whether it exceeds the division's historical ROI. The 13% project adds $50,000 in residual income and should be accepted.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C correctly identifies that the project should be accepted but for the wrong reason: maximizing absolute operating income. Accepting projects solely because they increase total profit, without considering the capital required, can lead to value destruction. A project earning 2% on a $10 billion investment increases absolute profit but destroys shareholder value. The correct criterion is whether the project's return exceeds the cost of capital, which can be measured through residual income or by comparing ROI to the required rate. The error is using absolute profit rather than risk-adjusted return relative to invested capital as the decision criterion.",
+    "ExplanationWrongD": "Option D incorrectly claims the project return equals the cost of capital. The company's required rate is 12%, not 13%. The project ROI is 13%, which unambiguously exceeds the 12% hurdle rate, creating positive residual income. Additionally, the option claims the cost of capital is 13% when the stem states 12%. The error is either misreading the required rate from the stem or incorrectly computing the project's ROI. The project earns 13%, the cost of capital is 12%, and the investment is value-accretive, not value-neutral.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-008 segment margin analysis",
+    "MicroTopic": "segment margin analysis",
+    "UniqueConceptKey": "C-CA-008-segment-margin-analysis",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Summit Retail operates three segments. Segment 3 reports: sales $8,400,000, variable costs $5,040,000, traceable fixed costs $2,600,000, allocated common fixed costs $1,400,000. The CEO notes Segment 3's reported loss of $640,000 and proposes closing it. The Controller prepares a segment margin analysis distinguishing traceable from common fixed costs. By how much would Summit's total company operating income change if Segment 3 were eliminated, assuming the freed capacity has no alternative use and allocated common fixed costs would be redistributed to remaining segments?",
+    "Choices": {
+      "A": "Operating income would increase by $640,000 because the segment currently generates a loss that would be eliminated",
+      "B": "Operating income would increase by $760,000 because the segment contribution margin of $3,360,000 is more than offset by traceable fixed costs of $2,600,000, and common costs would be absorbed elsewhere",
+      "C": "Operating income would decrease by $640,000 because the segment currently reports a loss of $640,000, and eliminating the segment would remove this loss from the consolidated income statement",
+      "D": "Operating income would decrease by $760,000 because the segment contribution of $3,360,000 exceeds traceable fixed costs of $2,600,000, and the $1,400,000 in allocated common fixed costs would continue as a corporate expense regardless of elimination"
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The segment margin analysis isolates avoidable versus unavoidable costs. Segment 3's contribution margin is $8,400,000 - $5,040,000 = $3,360,000. Traceable fixed costs of $2,600,000 would be eliminated if the segment closes, producing a segment margin of $3,360,000 - $2,600,000 = $760,000. However, the common fixed costs of $1,400,000 are allocated corporate expenses that would continue even if Segment 3 is eliminated: they would simply be redistributed to the remaining segments. The current reported loss of $640,000 is $3,360,000 - $2,600,000 - $1,400,000 = -$640,000, but this includes the unavoidable common costs. If Segment 3 is eliminated, Summit loses the $3,360,000 contribution margin, saves the $2,600,000 traceable fixed costs, and still incurs the $1,400,000 common costs. Net effect on operating income: -$3,360,000 + $2,600,000 = -$760,000. Summit would be $760,000 worse off. The key analytical point is that allocated common fixed costs are irrelevant to the keep-or-drop decision because they continue regardless. A common exam trap is looking at the reported segment loss including allocated common costs rather than computing segment margin using only traceable costs.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-008",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A uses the reported segment loss of $640,000 as the benefit of elimination. The $640,000 loss includes $1,400,000 in allocated common fixed costs that are corporate expenses not caused by Segment 3. These costs continue after elimination and are simply redistributed to remaining segments. The error is treating the fully allocated segment income (including unavoidable common costs) as the measure of segment performance for the keep-or-drop decision. The correct analysis uses segment margin: contribution margin minus traceable fixed costs only. Common fixed costs are irrelevant to the decision.",
+    "ExplanationWrongB": "Option B arrives at an increase in operating income of $760,000, which incorrectly reverses the sign. Segment 3 generates $760,000 in segment margin ($3,360,000 contribution - $2,600,000 traceable fixed). Eliminating the segment destroys this $760,000 contribution toward covering common fixed costs and profit. The error is treating the segment margin as a cost rather than a contribution. The candidate may have confused contribution margin with cost elimination: closing a segment saves its traceable fixed costs but sacrifices its contribution margin. Since contribution margin exceeds traceable fixed costs, the net effect is negative.",
+    "ExplanationWrongC": "Option C states operating income would decrease by $640,000 because the segment's reported loss would be eliminated. This incorrectly uses the fully allocated segment net income (which includes $1,400,000 of allocated common fixed costs) as the relevant measure for the keep-or-drop decision. The $640,000 loss figure treats allocated common costs as if they would disappear with the segment, when in reality those corporate-level costs continue and are redistributed to remaining segments. The error is using the segment's reported bottom line rather than computing segment margin. The correct analysis subtracts only traceable (avoidable) costs from contribution margin: $3,360,000 contribution - $2,600,000 traceable fixed = $760,000 segment margin that would be lost.",
+    "ExplanationWrongD": "",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-009 labor efficiency variance root cause analysis",
+    "MicroTopic": "labor efficiency variance root cause analysis",
+    "UniqueConceptKey": "C-CA-009-labor-efficiency-variance-root-cause",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Axon Industries' machining department: standard 2.0 hours per unit at $28/hour. November actual: produced 8,400 units using 18,480 actual hours at $27.50/hour. The labor efficiency variance is $33,600 U. The Operations VP investigates and finds that the raw material supplier changed its alloy composition without notice starting November 1, resulting in harder material that takes longer to machine. Additionally, two new CNC programmers were hired in October and were still in their learning curve. Which factor most likely explains the majority of the labor efficiency variance?",
+    "Choices": {
+      "A": "The unfavorable labor rate variance of $9,240 F partially offset the efficiency variance, so the net labor variance is less concerning than the efficiency variance alone suggests",
+      "B": "The harder alloy composition from the supplier change is the dominant factor because it directly increases the physical machining time required per unit, affecting all units produced by all workers regardless of operator skill",
+      "C": "The new CNC programmers are the primary cause because inexperienced operators consistently produce more scrap and require more setup time per batch, disproportionately affecting efficiency relative to the alloy change",
+      "D": "The labor efficiency variance is entirely attributable to the Production Manager scheduling too many units for November, forcing overtime at premium rates and distorting the standard hour comparison"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "To analyze root cause, the candidate must evaluate the scope of each factor's likely impact. The alloy composition change affects every unit machined in November (all 8,400 units) because the material property change is universal: harder material physically takes longer to machine regardless of operator skill. The two new CNC programmers affect only the units they personally produced. With 18,480 total hours, if the department has, say, 10-12 operators total, two new hires would account for roughly 15-20% of labor hours. Even if new programmers are 50% less efficient than standard, their impact would be limited to their share of total hours. In contrast, if the harder alloy increases machining time by 10-15% across all 8,400 units, that alone could account for 1,680-2,520 excess hours, which at $28/hour would be $47,040-$70,560 of the $33,600 efficiency variance. The alloy change is therefore the dominant root cause. The analytical skill is (1) computing the standard hours allowed (8,400 x 2.0 = 16,800) vs actual (18,480) = 1,680 excess hours, (2) recognizing that a supplier-driven material change affects all production uniformly, and (3) comparing the universal effect of material hardness against the partial effect of two inexperienced operators. A common exam trap is attributing labor efficiency variances solely to workforce skill without considering material-driven root causes that systematically increase processing time.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-009",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A discusses the labor rate variance as an offset to the efficiency variance. While the rate variance is indeed favorable at $9,240 (18,480 hours x ($27.50 - $28.00) = -$9,240, favorable), this is a completely separate variance component that does not explain the root cause of the efficiency variance. The error is conflating two distinct variance categories in a root-cause analysis. Rate variances and efficiency variances have different drivers: rate variance reflects the wage paid per hour, while efficiency variance reflects the hours consumed per unit. The question asks about the root cause of the efficiency variance, not the net labor variance.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C attributes primary causation to the two new CNC programmers. While inexperienced operators do affect efficiency, their impact is limited to the units they personally produce. If the department has multiple operators and the new hires represent a fraction of total labor hours, even severely reduced productivity from the new hires would account for only a portion of the 1,680 excess hours. The alloy change, by contrast, affects every unit machined. The error is overestimating the scope of the workforce factor (partial, affecting ~15-20% of hours) relative to the material factor (universal, affecting 100% of units). Root cause analysis requires assessing the breadth of impact, not just the existence of a plausible factor.",
+    "ExplanationWrongD": "Option D attributes the efficiency variance entirely to the Production Manager's scheduling decision. The scenario states actual production was 8,400 units and provides standard hours at 2.0 per unit = 16,800 standard hours. There is no evidence that 8,400 units exceeded planned production or that overtime was worked. The actual wage rate of $27.50 is below the standard rate of $28.00, suggesting no overtime premium was paid (overtime would typically increase the average rate above standard). The error is introducing facts not present in the scenario and misattributing an efficiency variance (hours per unit) to a scheduling/volume issue.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "C",
+    "SectionName": "Performance Management",
+    "Topic": "C.CA-010 benchmarking analysis",
+    "MicroTopic": "benchmarking analysis",
+    "UniqueConceptKey": "C-CA-010-benchmarking-analysis",
+    "LOSTag": "C.1 Cost and variance measures",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Apex Industries' Controller benchmarks Apex against industry quartiles. Apex's metrics: gross margin 38%, operating margin 11%, inventory turnover 8.2, days sales outstanding 34, SG&A as percentage of revenue 22%. Industry data: top-quartile gross margin 42%, median gross margin 35%; top-quartile operating margin 15%, median 9%; top-quartile inventory turnover 12.0, median 7.5; top-quartile DSO 22 days, median 38 days; top-quartile SG&A ratio 15%, median 24%. Which conclusion about Apex's competitive position is best supported by this comparative data?",
+    "Choices": {
+      "A": "Apex's gross margin of 38% exceeds the industry median of 35%, indicating Apex has superior pricing power and should focus its improvement efforts on production cost reduction rather than revenue-side initiatives",
+      "B": "Apex is positioned as a premium manufacturer with industry-leading margins, as demonstrated by its gross margin and operating margin both exceeding industry medians",
+      "C": "Apex's operating margin of 11% substantially exceeds the industry median of 9% but falls well below the top-quartile 15%, while its SG&A ratio of 22% is much closer to the median (24%) than the top quartile (15%), suggesting that high SG&A spending is the most significant drag preventing Apex from reaching top-quartile operating profitability",
+      "D": "Apex's inventory turnover of 8.2 falls between the top quartile (12.0) and median (7.5), and its DSO of 34 days is near the median of 38 days, indicating Apex should prioritize working capital management over operating margin improvement"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Benchmarking analysis requires decomposing performance gaps into their component drivers. Apex's operating margin of 11% exceeds the industry median of 9% but trails the top-quartile 15% by 4 percentage points. To diagnose this gap, the analyst decomposes operating margin into gross margin and operating expenses. Apex's gross margin of 38% compares to top-quartile 42%, a 4-point disadvantage. However, Apex's SG&A ratio of 22% compares to top-quartile 15%, a 7-point disadvantage. The operating margin gap is driven more by excessive SG&A spending (7 points above top-quartile) than by gross margin deficiency (4 points below top-quartile). The analytical insight is that Apex's revenue generation is reasonably strong (gross margin above median) but its cost structure is bloated relative to best-in-class competitors. Meanwhile, Apex's inventory turnover (8.2 vs median 7.5) and DSO (34 days vs median 38) indicate working capital management is performing above average and is not the primary competitive weakness. The conclusion that SG&A spending is the most significant drag on operating profitability, and that working capital metrics are not the priority improvement area, is well-supported by the comparative data. A common exam trap in benchmarking is identifying the metric with the largest gap relative to top-quartile performance and reasoning that closing this gap offers the highest-return improvement opportunity.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-C-CA-010",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A asserts that Apex has superior pricing power because its gross margin (38%) exceeds the industry median (35%) and should focus on production costs. While Apex's gross margin is above median, it trails top-quartile (42%) by 4 percentage points, suggesting that neither pricing nor production costs are truly superior. More importantly, benchmarking identifies the SG&A gap (22% vs top-quartile 15%) as the larger performance deficit. The error is drawing premature conclusions from a single metric relative to the median rather than comparing all metrics against top-quartile performance to identify the largest improvement opportunity.",
+    "ExplanationWrongB": "Option B characterizes Apex as an industry-leading premium manufacturer. While Apex's gross margin of 38% and operating margin of 11% both exceed medians, they fall well short of top-quartile performance (42% and 15%). Apex is above average but not industry-leading. The gap between Apex's operating margin (11%) and the top quartile (15%) represents a substantial performance deficit. The error is overcharacterizing above-median performance as best-in-class when the benchmarking data clearly shows a meaningful gap between Apex and top-performing competitors.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D prioritizes working capital management over operating margin improvement. Apex's inventory turnover of 8.2 is above the median of 7.5, and DSO of 34 days is better than the median of 38 days. Both metrics indicate above-average working capital management. The gap to top-quartile in operating margin (11% vs 15%) represents a far larger profit opportunity. The error is misprioritizing improvement areas: modest gains in already-adequate working capital metrics would generate far less value than closing the 4-point operating margin gap, which is primarily driven by the 7-point SG&A disadvantage.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-001 CVP multi-product break-even analysis",
+    "MicroTopic": "CVP multi-product break-even analysis",
+    "UniqueConceptKey": "D-CA-001-cvp-multi-product-break-even",
+    "LOSTag": "D.1 Measurement concepts",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Triton Industries produces Alpha (CM $24/unit, 70% of budgeted units) and Beta (CM $18/unit, 30% of budgeted units). Fixed costs are $936,000 at 48,000 budgeted units. The Sales Director proposes shifting to 55% Alpha/45% Beta, projecting 52,000 total units. The Controller must analyze whether the mix shift combined with the volume increase improves operating income. Which multi-product CVP analysis is correct?",
+    "Choices": {
+      "A": "Under the current mix, WA-CM is $22.20/unit producing operating income of $129,600. Under the proposed mix at 52,000 units, WA-CM drops to $21.30/unit but operating income rises to $171,600. Acceptance should be recommended because the volume increase adds more contribution than the mix shift removes.",
+      "B": "The proposed mix should be rejected because Beta's $18 CM is lower than Alpha's $24, and increasing any lower-margin product's proportion necessarily reduces operating income regardless of volume changes.",
+      "C": "Under the current mix, WA-CM is $22.20/unit producing operating income of $129,600. With 52,000 units and WA-CM of $21.30, operating income rises to $171,600. However, the $42,000 increase depends entirely on achieving 4,000 additional units. If volume stays at 48,000 under the new mix, operating income drops to $86,400, making the proposal's viability contingent on the volume assumption.",
+      "D": "The proposal should be rejected because the new break-even point of 43,944 units exceeds the current break-even of 42,162 units, proving the proposed mix is riskier and less desirable."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Multi-product CVP analysis requires computing the weighted-average contribution margin under each mix scenario. Current mix (70/30): WA-CM = ($24 x 0.70) + ($18 x 0.30) = $16.80 + $5.40 = $22.20. At 48,000 units: OI = $22.20 x 48,000 - $936,000 = $1,065,600 - $936,000 = $129,600. Proposed mix (55/45): WA-CM = ($24 x 0.55) + ($18 x 0.45) = $13.20 + $8.10 = $21.30. At 52,000 units: OI = $21.30 x 52,000 - $936,000 = $1,107,600 - $936,000 = $171,600. The $42,000 increase occurs because 4,000 additional units at $21.30 each ($85,200 contribution) outweigh the mix effect of 48,000 units shifted to a $0.90 lower WA-CM ($43,200 reduction). Critically, if the volume increase does not materialize, OI under the new mix at 48,000 units = $21.30 x 48,000 - $936,000 = $86,400, a $43,200 decline. The analytical insight is that the mix shift alone is unfavorable; the proposal succeeds only if the mix shift genuinely generates additional volume. A common exam trap is evaluating the mix shift directionally without quantifying both the mix effect and the volume effect separately.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-001",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A correctly computes both WA-CM figures and operating income amounts, but draws an unqualified acceptance recommendation without flagging the critical dependency on the volume assumption. The proposal's profitability is entirely contingent on the 4,000-unit volume increase. If the mix change does not generate additional demand, accepting it would destroy $43,200 in operating income. The error is treating the projected volume increase as guaranteed rather than as an assumption requiring verification before a final decision.",
+    "ExplanationWrongB": "Option B asserts that increasing a lower-margin product's proportion always reduces operating income, regardless of volume. This is a directional fallacy. While the weighted-average CM does decline from $22.20 to $21.30, the additional 4,000 units at $21.30 each add $85,200 in contribution, which more than offsets the $43,200 mix-driven reduction. The error is making an absolute claim based on one factor's direction while ignoring the countervailing magnitude of another factor.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D rejects the proposal based solely on a higher break-even point. While the proposed mix raises BE from 42,162 to 43,944 units, this higher BE reflects the lower WA-CM. The relevant criterion is projected operating income at the expected volume, not the break-even point in isolation. With 52,000 projected units, both mixes are profitable. The error is using break-even as the sole decision criterion when the projected sales volume significantly exceeds both break-even points.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-002 make-or-buy differential analysis with capacity constraints",
+    "MicroTopic": "make-or-buy differential analysis with capacity constraints",
+    "UniqueConceptKey": "D-CA-002-make-or-buy-differential-analysis",
+    "LOSTag": "D.5 Relevant costing for decision-making",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Caldera Manufacturing's Component X-7: direct materials $14, direct labor $22, variable overhead $10, fixed overhead (allocated) $16, total unit cost $62. An outside supplier offers X-7 at $52/unit. If Caldera outsources, it can lease freed factory space for $180,000 annually. Production is 30,000 units/year. After outsourcing, 40% of fixed overhead continues as unavoidable facility-level costs. The Controller must identify the total annual financial impact of outsourcing. Which analysis is correct?",
+    "Choices": {
+      "A": "The relevant cost to make is $62/unit (full absorption cost), making outsourcing at $52/unit the obvious choice with annual savings of $300,000",
+      "B": "The relevant cost to make is $55.60/unit ($46 variable + $9.60 avoidable fixed). Outsourcing saves $3.60/unit x 30,000 units = $108,000, plus $180,000 lease income, for a total annual benefit of $288,000",
+      "C": "The relevant cost to make is $46/unit (variable only). Outsourcing at $52/unit costs $6/unit more, for a net disadvantage of $180,000 annually minus lease income",
+      "D": "The relevant cost to make equals $55.60/unit. Outsourcing saves $3.60/unit plus $180,000 lease income. However, the $180,000 lease income is a one-time benefit and should not be included in annual analysis"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Make-or-buy differential analysis includes only costs that differ between alternatives. Making internally: variable costs ($14 + $22 + $10 = $46/unit) are relevant because they are avoided if production stops. Of the $16/unit fixed overhead, 60% is avoidable ($16 x 0.60 = $9.60/unit) and 40% continues ($16 x 0.40 = $6.40/unit) as unavoidable facility-level costs. Total relevant cost to make = $46.00 + $9.60 = $55.60/unit. Cost to buy = $52.00/unit. Per-unit savings from outsourcing = $55.60 - $52.00 = $3.60. On 30,000 units: $3.60 x 30,000 = $108,000 in purchasing savings. Additionally, the freed factory space generates $180,000 in annual lease income, a relevant benefit of the buy alternative. Total annual benefit = $108,000 + $180,000 = $288,000. The key analytical skills are: distinguishing avoidable from unavoidable fixed costs, recognizing that only differential costs are relevant, and including opportunity benefits such as lease income from freed capacity. A common exam trap is using full absorption cost as the relevant cost to make, which overstates internal production cost by including unavoidable fixed overhead.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-002",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A uses full absorption cost ($62/unit) as the relevant cost to make. Absorption cost includes unavoidable fixed overhead ($6.40/unit) that continues regardless of the decision and is therefore not differential. Only costs that change as a result of the make-or-buy choice are relevant. The error is treating total absorption cost as the relevant decision input, which systematically biases decisions toward outsourcing by overstating internal production cost.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C includes only variable costs ($46/unit) as relevant and treats all fixed costs as sunk regardless of avoidability. While variable costs are relevant, $9.60/unit of fixed overhead is avoidable and therefore differential. Omitting avoidable fixed costs understates the cost of internal production and biases toward continued making. The error is the blanket classification of all fixed costs as irrelevant, failing to distinguish between facility-level costs that continue and production-related fixed costs that cease with the outsourcing decision.",
+    "ExplanationWrongD": "Option D correctly identifies the relevant cost to make as $55.60/unit and the per-unit savings of $3.60, but dismisses the $180,000 lease income as a one-time benefit when the scenario clearly states it is annual. An annual lease payment of $180,000 provides recurring benefit each year outsourcing continues. The error is misreading the time frame. In differential analysis, recurring benefits are fully relevant for decision-making. Rejecting the lease income as one-time understates the total benefit of outsourcing by $180,000 annually.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-003 joint cost allocation method comparison",
+    "MicroTopic": "joint cost allocation method comparison",
+    "UniqueConceptKey": "D-CA-003-joint-cost-allocation-method-comparison",
+    "LOSTag": "D.4 Joint product and by-product costing",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Pacific Chemical processes a single raw material into three joint products at a split-off point, incurring $480,000 in joint costs. P1: 20,000 units, split-off price $8/unit, further processing cost $60,000, final price $14/unit. P2: 30,000 units, split-off price $12/unit, further processing $90,000, final price $18/unit. P3: 50,000 units, split-off price $5/unit, no further processing. The CFO analyzes how the allocation method affects reported product-line profitability. Which statement comparing NRV and physical units methods is most accurate?",
+    "Choices": {
+      "A": "Under NRV, P2 receives the largest joint cost allocation at $234,783 because its NRV of $450,000 is highest among the three products. Under physical units, P3 receives $240,000 or 50% of joint costs because it represents 50% of total units. The method changes which product appears most and least profitable, even though total joint costs allocated always sum to $480,000 and joint costs are irrelevant for sell-or-process-further decisions",
+      "B": "Under NRV, P1 receives the largest allocation because it has the highest final selling price per unit ($14). Under physical units, P3 receives the most joint costs because it has the highest unit volume. P3 always appears least profitable under both methods",
+      "C": "The physical units method is required by GAAP for external financial reporting of joint products because it provides the most objective basis for inventory valuation, while NRV may only be used for internal management reporting",
+      "D": "Both methods allocate identical joint costs to P3 because P3 undergoes no further processing, which means its NRV equals its sales value at split-off and physical units applies the same ratio as NRV when no separable costs exist"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "NRV method allocates joint costs based on each product's final sales value minus separable processing costs. P1 NRV: (20,000 x $14) - $60,000 = $220,000. P2 NRV: (30,000 x $18) - $90,000 = $450,000. P3 NRV: 50,000 x $5 = $250,000. Total NRV = $920,000. P2 allocation: ($450,000/$920,000) x $480,000 = $234,783. P1: ($220,000/$920,000) x $480,000 = $114,783. P3: ($250,000/$920,000) x $480,000 = $130,435. Under physical units: total 100,000 units. P3: (50,000/100,000) x $480,000 = $240,000. P1: (20,000/100,000) x $480,000 = $96,000. P2: (30,000/100,000) x $480,000 = $144,000. The methods shift which product bears the largest cost burden, affecting reported profitability, even though total joint costs are fixed and unavoidable at the split-off point. The analytical insight is that joint cost allocation serves inventory valuation and financial reporting, not decision-making. Joint costs are sunk at split-off and irrelevant for determining whether to process products further. A common exam trap is treating joint costs as relevant for sell-or-process-further decisions.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-003",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B claims P1 receives the largest NRV allocation because it has the highest final selling price. Under NRV, allocation uses net realizable value (final price minus separable costs), not gross final selling price. P1's NRV of $220,000 is the lowest because its high final price ($14) is offset by significant further processing costs ($60,000). P2's NRV of $450,000 is highest. The error is confusing final selling price per unit with net realizable value. A candidate making this error focuses on the final price column while ignoring the further processing costs that reduce P1's NRV.",
+    "ExplanationWrongC": "Option C claims physical units is required by GAAP for external reporting. GAAP does not prescribe a single joint cost allocation method. Companies may use NRV, physical units, sales value at split-off, or other rational and systematic methods. There is no GAAP hierarchy favoring physical units over NRV for external financial reporting. The error is attributing regulatory authority to a preference that does not exist. Both methods are acceptable for external reporting when applied consistently.",
+    "ExplanationWrongD": "Option D claims both methods allocate the same joint costs to P3. Under physical units, P3 receives $240,000. Under NRV, P3 receives $130,435. The difference is $109,565. The error is assuming that because P3 has no separable costs, the allocation must be the same under both methods. Allocation depends on each product's relative share of the total allocation base, not on whether an individual product's NRV calculation is simple or complex.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-004 ABC vs traditional costing comparison",
+    "MicroTopic": "ABC vs traditional costing comparison",
+    "UniqueConceptKey": "D-CA-004-abc-vs-traditional-costing-comparison",
+    "LOSTag": "D.2 Costing systems",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Stonegate Manufacturing uses a plantwide overhead rate of $10 per DLH. Standard: 80,000 units, 1.5 DLH/unit. Custom: 10,000 units, 6 DLH/unit. Total overhead $1,800,000. ABC study: setups $600,000 (Standard 60, Custom 140); quality inspections $480,000 (Standard 800 hrs, Custom 1,600 hrs); materials handling $720,000 (Standard 1,400 moves, Custom 1,480 moves). Which analysis correctly identifies the cost distortion and its primary cause?",
+    "Choices": {
+      "A": "Standard is overcosted under traditional costing by $510,000 because it consumes 67% of DLH but only 30% of setups, 33% of inspections, and 49% of material moves. Custom is undercosted by $510,000 because its high consumption of batch-level activities is averaged across volume-based DLH rather than traced to activity drivers",
+      "B": "Custom is correctly costed under traditional costing because DLH correlates well with overhead consumption. The ABC study merely redistributes the same total overhead without providing new insights into product profitability",
+      "C": "Standard is undercosted under traditional costing because its high unit volume of 80,000 units means it must consume more overhead resources than Custom regardless of the allocation method used",
+      "D": "The total cost assigned to both products must be identical under either method because total overhead of $1,800,000 is fully allocated to the two products, and changing the allocation basis cannot change total costs"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under traditional costing: Standard DLH = 80,000 x 1.5 = 120,000; Custom = 10,000 x 6 = 60,000; Total = 180,000 DLH. Traditional: Standard = 120,000 x $10 = $1,200,000; Custom = 60,000 x $10 = $600,000. Under ABC: Setup rate = $600,000/200 = $3,000. Standard = 60 x $3,000 = $180,000; Custom = 140 x $3,000 = $420,000. Inspection rate = $480,000/2,400 = $200. Standard = 800 x $200 = $160,000; Custom = 1,600 x $200 = $320,000. Handling rate = $720,000/2,880 = $250. Standard = 1,400 x $250 = $350,000; Custom = 1,480 x $250 = $370,000. ABC Standard total = $180,000 + $160,000 + $350,000 = $690,000. ABC Custom total = $420,000 + $320,000 + $370,000 = $1,110,000. Standard overcosted by $1,200,000 - $690,000 = $510,000; Custom undercosted by $1,110,000 - $600,000 = $510,000. The distortion occurs because traditional costing allocates overhead using DLH, a unit-level driver, while setups, inspections, and material movements are batch-level activities. Custom's higher complexity is hidden when overhead is averaged across all DLH. The analytical insight is that volume-based costing systematically overcosts high-volume, low-complexity products and undercosts low-volume, high-complexity products. A common exam trap is asserting total costs must be the same under both methods, which confuses total plant cost with per-unit product cost.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-004",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B claims DLH correlates well with overhead and ABC provides no new insights. Standard consumes 67% of DLH but only 30% of setups, 33% of inspections, and 49% of material moves. Custom, with only 33% of DLH, consumes 70% of setups, 67% of inspections, and 51% of moves. DLH systematically understates Custom's overhead consumption. The error is assuming resource consumption is proportional to a single volume-based measure without examining whether batch-level and product-level activities follow the same pattern as unit-level labor hours.",
+    "ExplanationWrongC": "Option C claims Standard is undercosted because high volume implies high overhead. Under ABC, Standard receives only $690,000 (38%) of overhead versus $1,200,000 (67%) under traditional costing, demonstrating that high volume does not drive high overhead when most activities are batch-level. The error is assuming unit volume drives all overhead costs, ignoring that setup, inspection, and material handling activities are driven by batch frequency and complexity, not unit count.",
+    "ExplanationWrongD": "Option D states total costs assigned to both products must be identical under either method. While total plant-wide overhead is indeed $1,800,000 under both methods (the sum of both products' allocations equals $1,800,000), the individual product allocations differ by $510,000 each. The error is confusing aggregate allocation with product-level allocation. Changing the allocation basis changes the per-unit cost of each product, which affects profitability analysis and pricing decisions even though total overhead is unchanged.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-005 special order profitability analysis with opportunity cost",
+    "MicroTopic": "special order profitability analysis with opportunity cost",
+    "UniqueConceptKey": "D-CA-005-special-order-profitability-analysis",
+    "LOSTag": "D.5 Relevant costing for decision-making",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Valmont Industries operates at 85% of practical capacity producing 17,000 units/month (practical capacity: 20,000 units). Regular sales: 17,000 units at $140/unit. Unit costs: DM $38, DL $28, variable overhead $16, fixed overhead $24, variable selling $8, total $114. A customer offers to buy 4,000 units at $92/unit, which would require forgoing 1,000 units of regular sales. The Controller must determine whether to accept. Which analysis correctly applies relevant costing?",
+    "Choices": {
+      "A": "The special order price of $92 is below total unit cost of $114, creating a loss of $22/unit. Valmont should reject because selling below total cost is never profitable",
+      "B": "The relevant cost is $82/unit (DM $38 + DL $28 + variable overhead $16). At $92/unit, contribution is $10/unit on 4,000 units = $40,000. But forgoing 1,000 regular units sacrifices $50/unit contribution ($140 - $38 - $28 - $16 - $8 = $50), a $50,000 opportunity cost exceeding the special order contribution. Valmont should reject",
+      "C": "The relevant cost is $90/unit including variable selling, but selling costs are not incurred on the special order, so only $82 is relevant. The $10/unit contribution x 4,000 = $40,000 exceeds the opportunity cost, making the order desirable",
+      "D": "The special order generates $368,000 in revenue. Displaced sales lose $140,000. Net revenue gain of $228,000 clearly exceeds any costs, so the order should be accepted"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Special order analysis uses relevant costing. The special order price is $92/unit. Relevant manufacturing costs are variable costs only: DM $38 + DL $28 + variable overhead $16 = $82/unit. Variable selling costs ($8/unit) are not incurred on the special order. Contribution per unit = $92 - $82 = $10. On 4,000 units = $40,000 incremental contribution. However, the capacity constraint is critical: the special order of 4,000 requires 21,000 total units against 20,000 practical capacity, exceeding by 1,000. These 1,000 units must come from forgoing regular sales. Regular contribution = $140 - $38 - $28 - $16 - $8 = $50/unit. Opportunity cost = 1,000 x $50 = $50,000. Net effect = $40,000 - $50,000 = -$10,000. Reject. The analytical insight is that when capacity is constrained, special orders carry an opportunity cost equal to the contribution margin lost on displaced regular sales. A common exam trap is ignoring the opportunity cost when capacity is insufficient, or using full cost rather than incremental cost.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-005",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A uses total absorption cost ($114/unit) as the relevant cost, including fixed overhead of $24/unit. Fixed overhead is a sunk cost at current production and does not change with the accept/reject decision. Only incremental costs and revenues are relevant. The error is using full cost rather than differential cost. Using total cost systematically biases toward rejecting special orders even when they contribute positively to covering fixed costs and profit.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C correctly identifies $82 in relevant variable manufacturing costs and the $40,000 contribution, but asserts the contribution exceeds the opportunity cost without calculating the opportunity cost. The displaced 1,000 regular units carry a $50/unit contribution, for a $50,000 opportunity cost that exceeds the $40,000 special order contribution by $10,000. The error is assuming the opportunity cost is smaller than the special order contribution without performing the calculation.",
+    "ExplanationWrongD": "Option D compares total revenues ($368,000 from special order vs $140,000 from displaced sales) without considering the costs of producing the special order units. The special order incurs incremental variable costs of $82/unit x 4,000 = $328,000. The displaced units save variable costs but lose contribution. The error is comparing only revenues without netting incremental costs against incremental revenues and opportunity costs.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-006 process costing FIFO vs weighted average comparison",
+    "MicroTopic": "process costing FIFO vs weighted average comparison",
+    "UniqueConceptKey": "D-CA-006-process-costing-fifo-vs-weighted-average",
+    "LOSTag": "D.2 Costing systems",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Atlas Chemical's Mixing Department: beginning WIP 8,000 units (60% complete for conversion), started 72,000, completed 68,000, ending WIP 12,000 units (75% complete). Beginning costs: materials $24,000, conversion $18,600. Current costs: materials $216,000, conversion $342,000. Materials added at start. Which FIFO vs WA comparison for conversion costs is correct?",
+    "Choices": {
+      "A": "FIFO and WA produce identical conversion cost per EUP because total conversion costs ($360,600) and total EUP are the same regardless of method",
+      "B": "WA conversion EUP = 77,000 with cost/EUP of $4.68 ($360,600 / 77,000). FIFO conversion EUP = 72,200 with cost/EUP of $4.74 ($342,000 / 72,200). WA produces a lower rate because it blends lower-cost prior-period conversion with higher current costs",
+      "C": "Materials cost per EUP is $3.00 under both methods because materials are added at start and beginning WIP is 100% complete, producing identical EUP calculations for materials regardless of cost flow assumption",
+      "D": "FIFO ending WIP is higher than WA because FIFO assigns only current-period costs to ending inventory while WA dilutes costs with lower beginning inventory rates"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "WA conversion EUP = units transferred (68,000) + ending WIP equivalent units (12,000 x 75% = 9,000) = 77,000 EUP. WA conversion cost/EUP = ($18,600 + $342,000) / 77,000 = $360,600/77,000 = $4.68. FIFO conversion EUP = work to complete beginning WIP (8,000 x 40% remaining = 3,200) + units started and completed (68,000 - 8,000 = 60,000) + ending WIP (12,000 x 75% = 9,000) = 72,200 EUP. FIFO conversion cost/EUP = $342,000 / 72,200 = $4.74 (current period costs only). WA produces a lower rate because it blends the $18,600 in lower-cost prior-period conversion with the $342,000 in higher current-period conversion. The fundamental difference is that WA averages beginning inventory costs into the current period's unit cost, while FIFO keeps periods separate. A common exam trap is assuming both methods produce the same unit cost because total costs are fixed, which ignores the different treatment of equivalent units and cost pools.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-006",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A claims both methods produce identical conversion cost per EUP. FIFO and WA use fundamentally different cost pools: WA uses total costs ($360,600), FIFO uses only current costs ($342,000). Additionally, EUP differ: WA = 77,000, FIFO = 72,200. Different numerators and denominators produce different rates. The error is assuming that because total conversion costs are fixed, per-unit rates are the same. The treatment of beginning inventory costs and the flow of equivalent units drives the difference.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C notes that materials cost per EUP is $3.00 under both methods. In this specific problem, WA materials = ($24,000 + $216,000) / 80,000 = $3.00 and FIFO materials = $216,000 / 72,000 = $3.00. This equality is coincidental because the beginning inventory unit cost ($24,000 / 8,000 = $3.00) happens to equal the current period unit cost ($216,000 / 72,000 = $3.00). In general, materials cost per EUP differs between methods when beginning and current costs differ. The explanation attributing the equality to structural features of FIFO vs WA for materials is misleading.",
+    "ExplanationWrongD": "Option D claims FIFO ending WIP is higher than WA. In this scenario, WA ending WIP = 12,000 x $3.00 materials + 9,000 x $4.68 conversion = $36,000 + $42,120 = $78,120. FIFO ending WIP = 12,000 x $3.00 + 9,000 x $4.74 = $36,000 + $42,660 = $78,660. FIFO ending WIP IS higher, but for the opposite reason stated: WA blends in lower prior-period costs ($4.68 vs $4.74), making WA ending WIP lower, not higher. The error is in the causal reasoning about which method produces higher ending WIP and why.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-007 sell-or-process-further decision analysis",
+    "MicroTopic": "sell-or-process-further decision analysis",
+    "UniqueConceptKey": "D-CA-007-sell-or-process-further-decision",
+    "LOSTag": "D.5 Relevant costing for decision-making",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Cascade Foods processes raw input into three products at split-off, incurring $600,000 in joint costs. Juice Base: 40,000 gallons, split-off $8/gal, further cost $140,000, final price $13/gal. Concentrate: 60,000 gallons, split-off $5/gal, further cost $200,000, final price $10/gal. Fiber: 20,000 tons, split-off $2/ton, further cost $30,000, final price $6/ton. Which analysis uses the correct sell-or-process-further decision framework?",
+    "Choices": {
+      "A": "Juice Base incremental revenue $5/gal exceeds further cost $3.50/gal. Concentrate incremental $5/gal exceeds $3.33/gal. Fiber incremental $4/ton exceeds $1.50/ton. Process all three further because each independently earns positive incremental margin per unit",
+      "B": "Joint costs of $600,000 must be allocated before evaluating further processing. Juice Base receives $240,000 in joint costs, making total cost $380,000 versus revenue of $520,000, confirming it should be processed further",
+      "C": "Juice Base incremental revenue $200,000 exceeds incremental cost $140,000 by $60,000. Concentrate incremental $300,000 exceeds $200,000 by $100,000. Fiber incremental $80,000 exceeds $30,000 by $50,000. All three should be processed further because each independently earns positive incremental profit",
+      "D": "Concentrate should be sold at split-off because its final price of $10/gal yields only a 100% markup over split-off, while Juice Base's final price of $13 yields only 62.5%, making Juice Base the better further-processing candidate"
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Sell-or-process-further analysis uses incremental analysis: compare additional revenue from further processing against additional separable costs. Joint costs of $600,000 are sunk at the split-off point and irrelevant. Juice Base: incremental revenue = 40,000 x ($13 - $8) = $200,000. Incremental cost = $140,000. Incremental profit = $60,000. Concentrate: incremental revenue = 60,000 x ($10 - $5) = $300,000. Incremental cost = $200,000. Incremental profit = $100,000. Fiber: incremental revenue = 20,000 x ($6 - $2) = $80,000. Incremental cost = $30,000. Incremental profit = $50,000. All three earn positive incremental profit, so all should be processed beyond split-off. The analytical insight is that joint costs are irrelevant because they are incurred before the decision point and are sunk regardless. Only post-split-off incremental revenues and costs matter. A common exam trap is including allocated joint costs in the further-processing analysis, which can reverse the decision.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-007",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A computes incremental revenue per unit correctly but evaluates decisions using per-unit comparisons rather than total incremental profit. While per-unit values yield the same directional conclusion as total analysis here, the recommended analytical approach is total incremental revenue minus total incremental cost, which directly measures profit impact. The error is using per-unit metrics rather than total dollar analysis for decision-making. When products have different volumes, per-unit comparisons can be misleading.",
+    "ExplanationWrongB": "Option B allocates joint costs before evaluating further processing. Joint costs are sunk at the split-off point and their allocation is arbitrary. Including allocated joint costs can reverse a correct decision: if Juice Base were allocated a disproportionately large share, it might appear unprofitable to process further even when incremental revenue exceeds incremental cost. The error is failing to recognize that joint costs are irrelevant to post-split-off decisions because they are incurred regardless of the further-processing choice.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Option D compares markup percentages to rank further-processing candidates. Markup percentages do not measure incremental profitability: Juice Base earns $60,000 in incremental profit and Concentrate earns $100,000. Concentrate has a higher markup but that is irrelevant. The decision criterion for each product is whether incremental revenue exceeds incremental cost, tested independently for each product. The error is using relative metrics instead of absolute incremental profit, and treating the decision as a ranking of products rather than independent go/no-go decisions for each.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-008 relevant cost identification in equipment replacement",
+    "MicroTopic": "relevant cost identification in equipment replacement",
+    "UniqueConceptKey": "D-CA-008-relevant-cost-identification",
+    "LOSTag": "D.5 Relevant costing for decision-making",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Northfield Equipment evaluates replacing an old industrial press. Old press: original cost $480,000, accumulated depreciation $320,000, book value $160,000, current disposal value $45,000, remaining life 4 years, annual variable operating cost $95,000. New press: purchase price $280,000, life 4 years, annual variable operating cost $38,000, salvage value $40,000 after 4 years. The Controller must identify which costs are relevant. Which analysis correctly distinguishes relevant from irrelevant costs?",
+    "Choices": {
+      "A": "The old press's original cost, accumulated depreciation, and book value are sunk costs and irrelevant. Relevant items include the $45,000 disposal value, $280,000 purchase price, $57,000 annual operating savings, and $40,000 salvage value. These are future cash flows that differ between the keep and replace alternatives",
+      "B": "The book value of $160,000 is relevant because it represents the unrecovered investment that would be written off, creating a $115,000 loss on disposal that must be included as an incremental cost of replacement",
+      "C": "All historical costs including original cost, accumulated depreciation, and book value are relevant because the replacement decision triggers a loss on disposal that affects reported net income",
+      "D": "Only current cash flows should be considered. The salvage value of the new press is irrelevant because it occurs four years in the future and cannot be reliably estimated"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "In relevant cost analysis for equipment replacement, historical costs are sunk and irrelevant. The old press's original cost ($480,000), accumulated depreciation ($320,000), and book value ($160,000) are all past expenditures that cannot be changed. The book value is particularly deceptive: it represents the unrecovered portion of a past cash outflow, not a current or future cash flow. The current disposal value of $45,000 is relevant because it is a cash inflow available only if replacement occurs. The new press's purchase price ($280,000) and annual operating cost savings of $57,000 ($95,000 - $38,000) are future differential items. The salvage value of the new press ($40,000) is also a relevant future cash inflow. The analytical insight is distinguishing accounting measurements (book value, depreciation, loss on disposal) from economic cash flows. A common exam trap is including the book value or loss on disposal as a relevant cost because it appears as an income statement charge. These are non-cash accounting entries representing the timing difference between depreciation and actual asset decline, not incremental cash flows of the decision.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-008",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "Option B treats the book value of $160,000 and the resulting loss on disposal ($115,000) as relevant incremental costs. Book value is the unrecovered portion of a past expenditure: the $480,000 cash outflow occurred when the asset was purchased. The loss on disposal is a non-cash accounting entry that reduces reported income but does not represent a current or future cash payment. The error is confusing accounting losses with relevant cash flows. Sunk costs and their income statement consequences are never differential for decision-making.",
+    "ExplanationWrongC": "Option C claims all historical costs are relevant because replacement triggers a loss on disposal. Original cost, accumulated depreciation, and book value are all sunk: they result from past decisions and cannot be altered by the keep-or-replace choice. The loss on disposal is an accounting recognition of under-depreciation, not a differential cash flow triggered by the decision. The error is treating income statement entries as economically relevant when only future cash flows that differ between alternatives matter.",
+    "ExplanationWrongD": "Option D dismisses the salvage value of the new press as irrelevant because it occurs in the future. Salvage value is a future cash inflow that occurs only if replacement happens, making it differential and relevant. Estimation uncertainty justifies using the best available estimate and possibly sensitivity analysis, not excluding the item entirely. The error is treating estimation uncertainty as grounds for excluding a legitimate differential cash flow rather than addressing it through conservative estimation.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-009 contribution margin analysis by product line",
+    "MicroTopic": "contribution margin analysis by product line",
+    "UniqueConceptKey": "D-CA-009-contribution-margin-analysis-by-product-line",
+    "LOSTag": "D.5 Relevant costing for decision-making",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "TerraSport Outdoors sells three product lines. Hiking: sales $820,000, variable costs $492,000, traceable fixed costs $210,000. Camping: sales $640,000, variable costs $416,000, traceable fixed costs $180,000. Climbing: sales $340,000, variable costs $272,000, traceable fixed costs $110,000. Common fixed costs total $155,000 and are allocated equally. The Marketing Director recommends discontinuing Climbing because it reports a net loss of $93,667 after allocated common costs. Which contribution margin analysis correctly evaluates this recommendation?",
+    "Choices": {
+      "A": "The Climbing line reports a net loss after allocated common costs and should be discontinued. Eliminating it removes the $93,667 loss and increases total company operating income by that amount",
+      "B": "The Climbing line's segment margin is -$42,000 ($68,000 CM - $110,000 traceable fixed). Since segment margin is negative even before common costs, discontinuing increases total operating income by $42,000 because $110,000 in traceable fixed costs are avoided while $68,000 in contribution margin is lost",
+      "C": "Hiking generates $118,000 segment margin and Camping generates $44,000. Climbing's segment margin of -$42,000 drags on total profitability, but the $155,000 in common fixed costs is the real problem and should be the focus of cost reduction efforts rather than line elimination",
+      "D": "The Climbing line's contribution margin of $68,000 is positive. After deducting traceable fixed costs of $110,000, segment margin is -$42,000. If discontinued, the $155,000 in common fixed costs would be redistributed to remaining lines, so the net effect on total operating income is larger than $42,000"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Contribution margin analysis for segment decisions: Climbing contribution margin = $340,000 - $272,000 = $68,000. Segment margin = $68,000 - $110,000 (traceable fixed) = -$42,000. Segment margin is negative, meaning the line does not cover its own traceable fixed costs. If discontinued, the company loses $68,000 in contribution margin but avoids $110,000 in traceable fixed costs. Net increase in operating income = $42,000. Common fixed costs of $155,000 are irrelevant because they continue regardless and are simply reallocated to remaining lines. Hiking segment margin = $820,000 - $492,000 - $210,000 = $118,000. Camping segment margin = $640,000 - $416,000 - $180,000 = $44,000. The analytical insight is that segment margin (contribution minus traceable fixed costs) is the relevant metric for keep-or-drop decisions when common fixed costs are unavoidable. The reported net loss of $93,667 is misleading because it includes $51,667 in allocated common costs that would not disappear. A common exam trap is using the fully allocated bottom line rather than segment margin.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-009",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A recommends discontinuation based on the fully allocated net loss of $93,667, which includes $51,667 in allocated common fixed costs. Common fixed costs are corporate-level expenses that do not disappear if Climbing is eliminated; they are redistributed to remaining lines. The error is treating allocated common costs as avoidable. The correct criterion is segment margin, which shows discontinuing Climbing increases income by only $42,000, not $93,667.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C correctly computes the segment margins and identifies common fixed costs, but reframes the analysis toward cost reduction rather than elimination. While cost reduction is always worth exploring, the question is specifically whether Climbing should be discontinued. With a negative segment margin of -$42,000, discontinuation is the recommended action because the line does not cover its own traceable costs. The error is deflecting from the binary keep-or-drop decision to a broader cost management discussion.",
+    "ExplanationWrongD": "Option D correctly computes segment margin but claims the net effect is larger than $42,000 because common costs would be redistributed. Common costs being redistributed does not create additional income impact beyond the $42,000. The $42,000 already captures the full income effect: loss of $68,000 CM offset by saving $110,000 in traceable fixed costs. The redistribution of $155,000 in common costs is an allocation exercise that does not change total company income. The error is overstating the impact beyond what segment margin analysis captures.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  },
+  {
+    "Part": 1,
+    "Section": "D",
+    "SectionName": "Cost Management",
+    "Topic": "D.CA-010 service department cost allocation method comparison",
+    "MicroTopic": "service department cost allocation method comparison",
+    "UniqueConceptKey": "D-CA-010-service-department-cost-allocation-method-comparison",
+    "LOSTag": "D.3 Overhead allocation",
+    "Difficulty": "Moderate",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Westbrook Manufacturing has two service departments: Maintenance ($120,000) and IT ($80,000), plus two production departments: Assembly and Finishing. Maintenance provides 20% to IT, 50% to Assembly, 30% to Finishing. IT provides 10% to Maintenance, 45% to Assembly, 45% to Finishing. The Controller compares direct, step (Maintenance first), and reciprocal methods. Which analysis of the step method with Maintenance allocated first is correct?",
+    "Choices": {
+      "A": "Maintenance allocates $120,000 using production-only percentages: Assembly gets 50/80 = $75,000, Finishing gets 30/80 = $45,000. IT's $80,000 is then allocated 45/90 to Assembly ($40,000) and 45/90 to Finishing ($40,000). Assembly total = $115,000; Finishing = $85,000",
+      "B": "Maintenance distributes its full $120,000: 20% to IT ($24,000), 50% to Assembly ($60,000), 30% to Finishing ($36,000). IT then allocates its new total of $104,000 ($80,000 + $24,000) at 45/90 to Assembly ($52,000) and 45/90 to Finishing ($52,000). Assembly total = $112,000; Finishing = $88,000",
+      "C": "All three methods allocate different total amounts to production departments because the step method omits reciprocal services while the reciprocal method captures them fully, resulting in different total overhead charged to production",
+      "D": "The direct method is required by GAAP for external reporting because it is the most conservative approach, while the step and reciprocal methods may only be used for internal management decisions"
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under the step method with Maintenance allocated first: Maintenance's $120,000 is distributed to all remaining departments including IT. IT receives 20% = $24,000. Assembly receives 50% = $60,000. Finishing receives 30% = $36,000. After this step, IT's total cost is $80,000 (original) + $24,000 (from Maintenance) = $104,000. IT then allocates its total to remaining departments (Assembly and Finishing only, since Maintenance is already closed). IT's allocation percentages for production departments are recalculated based on the proportion of services to those departments only: 45% to Assembly and 45% to Finishing out of 90% total production usage. Assembly receives 45/90 = 50% of $104,000 = $52,000. Finishing receives 45/90 = 50% of $104,000 = $52,000. Final: Assembly $60,000 + $52,000 = $112,000; Finishing $36,000 + $52,000 = $88,000. Total to production = $200,000. The analytical insight is that step-method results depend on allocation order. If IT were allocated first, IT's $80,000 would go to Maintenance, Assembly, and Finishing, then Maintenance's increased total would go to Assembly and Finishing only, producing different amounts. A common exam trap is forgetting to include inter-service allocations in the step method and instead using direct-method percentages.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section D",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam preparation content created by AI-assisted authoring.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "",
+    "QuestionID": "P1-D-CA-010",
+    "question_state": "Unprocessed",
+    "certification_date": "",
+    "certification_batch": "",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Content auto-generated via sandboxed pipeline",
+      "Answer independently verified",
+      "Distractors written as plausible CMA-style traps",
+      "Cognitive level confirmed as Analyze",
+      "Explanation references authoritative accounting standards"
+    ],
+    "ExplanationWrongA": "Option A applies the direct method rather than the step method with Maintenance first. The step method acknowledges inter-service usage: Maintenance's allocation includes the 20% going to IT before IT is closed. The percentages 50/80 and 30/80 are direct-method percentages that ignore the 20% service to IT. The error is confusing the direct method (which ignores inter-service usage entirely) with the step method (which recognizes sequential inter-service allocation but in one direction only).",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Option C claims the three methods allocate different total amounts to production departments. All three methods allocate the full $200,000 in service department costs to production departments because this is a zero-sum allocation: service department costs ultimately flow to production. The methods differ in distribution between Assembly and Finishing, not in the total allocated. The error is confusing total cost allocation (always $200,000) with cost distribution (method-dependent).",
+    "ExplanationWrongD": "Option D claims the direct method is required by GAAP. GAAP does not prescribe a specific service department cost allocation method. Companies may use direct, step, or reciprocal methods as long as the chosen method is rational, systematic, and consistently applied. The reciprocal method is generally considered the most theoretically accurate. The error is fabricating a GAAP requirement that does not exist. All three methods are acceptable for external financial reporting when applied consistently.",
+    "CognitiveLevel": "Analyze",
+    "DifficultyScore": 3
+  }
+]

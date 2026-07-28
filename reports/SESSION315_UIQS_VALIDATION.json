@@ -1,0 +1,151 @@
+{
+  "title": "SESSION315_UIQS_VALIDATION",
+  "session": "315",
+  "agent": "M",
+  "generated": "2026-07-27",
+  "framework": "S306 UIQS v1.0 — 6 dimensions",
+  "scores": [
+    {
+      "QuestionID": "P1-E-R11",
+      "uiqsScore": 93,
+      "uiqsGrade": "A",
+      "dimensions": {
+        "clarity": 95,
+        "depth": 95,
+        "fairness": 85,
+        "engagement": 90,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R14",
+      "uiqsScore": 91,
+      "uiqsGrade": "A",
+      "dimensions": {
+        "clarity": 90,
+        "depth": 90,
+        "fairness": 85,
+        "engagement": 85,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R15",
+      "uiqsScore": 91,
+      "uiqsGrade": "A",
+      "dimensions": {
+        "clarity": 85,
+        "depth": 90,
+        "fairness": 85,
+        "engagement": 90,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R16",
+      "uiqsScore": 88,
+      "uiqsGrade": "A-",
+      "dimensions": {
+        "clarity": 80,
+        "depth": 95,
+        "fairness": 85,
+        "engagement": 70,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R17",
+      "uiqsScore": 92,
+      "uiqsGrade": "A",
+      "dimensions": {
+        "clarity": 85,
+        "depth": 95,
+        "fairness": 85,
+        "engagement": 90,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R19",
+      "uiqsScore": 88,
+      "uiqsGrade": "A-",
+      "dimensions": {
+        "clarity": 75,
+        "depth": 90,
+        "fairness": 85,
+        "engagement": 85,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R20",
+      "uiqsScore": 88,
+      "uiqsGrade": "A-",
+      "dimensions": {
+        "clarity": 85,
+        "depth": 95,
+        "fairness": 85,
+        "engagement": 70,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R30",
+      "uiqsScore": 92,
+      "uiqsGrade": "A",
+      "dimensions": {
+        "clarity": 90,
+        "depth": 90,
+        "fairness": 85,
+        "engagement": 90,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R31",
+      "uiqsScore": 89,
+      "uiqsGrade": "A-",
+      "dimensions": {
+        "clarity": 85,
+        "depth": 100,
+        "fairness": 85,
+        "engagement": 70,
+        "specificity": 95,
+        "governance": 100
+      }
+    },
+    {
+      "QuestionID": "P1-E-R32",
+      "uiqsScore": 93,
+      "uiqsGrade": "A",
+      "dimensions": {
+        "clarity": 90,
+        "depth": 95,
+        "fairness": 85,
+        "engagement": 90,
+        "specificity": 95,
+        "governance": 100
+      }
+    }
+  ],
+  "summary": {
+    "overallUIQS": 91,
+    "overallGrade": "A",
+    "dimensionAverages": {
+      "clarity": 86,
+      "depth": 94,
+      "fairness": 85,
+      "engagement": 83,
+      "specificity": 95,
+      "governance": 100
+    }
+  }
+}

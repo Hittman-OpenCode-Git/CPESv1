@@ -1,0 +1,61 @@
+{
+  "document": "SESSION205_RULE6_DEPLOYMENT",
+  "session": "S205",
+  "board": "B — Governance Rule 6 Activation",
+  "program": "Framework v2 Deployment Authorization",
+  "date": "2026-07-27",
+  "type": "Governance Rule Activation — Read-Only",
+  "status": "ACTIVATED",
+
+  "rule_definition": {
+    "rule_id": "R6",
+    "name": "READY Required Before Certification Board Review",
+    "category": "Operational Governance — Certification Pipeline Gate",
+    "priority": "CRITICAL",
+    "activation_date": "2026-07-27",
+    "activated_by": "S205 Deployment Authorization Board (J)"
+  },
+
+  "rule_text": "No item shall enter a Certification Board review unless its Framework v2 readiness classification is READY (all gates PASS) or MINOR_FIX (SOFT_FAIL with acknowledged warnings). Items classified as BLOCKED or REMEDIATE are excluded from Certification Board queues. This rule prevents the v1 pattern where 89.5% of items entering certification boards carried hidden structural defects.",
+
+  "enforcement": {
+    "mechanism": "Pre-Certification Board gate check. The Readiness Scorer (S322 Script 7) produces readiness_classification per item in the Certification Scan Artifact. The Certification Board consumer (per S202.1 Board Consumption Matrix §D, sections 4+6) queries the artifact before any certification action.",
+    "technical_implementation": "Certification Board agent script reads certification_scan_artifact.json → filters items where readiness_classification == 'READY' OR (readiness_classification == 'MINOR_FIX' AND certification_warnings_accepted == true). All other items are removed from the certification queue.",
+    "violation_consequence": "If a Certification Board certifies a REMEDIATE or BLOCKED item, the certification is void. The item is re-classified REMEDIATE at the next scan. A governance exception must be filed and approved by a Governance Board member."
+  },
+
+  "evidence_basis": {
+    "v1_problem": "S200 Agent C found 89.5% readiness failure rate — 34/38 seeds had 2+ defects when entering certification boards. S809 confirmed 38/38 seeds were HOLD at Gate 2. Boards wasted 56 agent-spawns on items that could not be certified without prior remediation.",
+    "v2_solution": "Readiness Engine pre-classifies every item before board entry. Only READY items (0 defects) and MINOR_FIX items (acknowledged warnings only) reach the Certification Board. REMEDIATE items are routed to remediation worklists, not certification boards.",
+    "s204_validation": "S204 Board E confirmed 89.5% → 0.0% hard defect leakage. 70/2,221 Certified items flagged REMEDIATE (not READY). 1,601 items READY. The rule correctly gates certification board access."
+  },
+
+  "impact_on_workflows": {
+    "certification_board": "Board queue is pre-filtered. Board only sees READY + acknowledged MINOR_FIX items. Review time per session: from ~6 hours (scanning + reviewing all items) to ~2 hours (reviewing only ready items).",
+    "remediation_worklist": "REMEDIATE items are auto-routed to a remediation queue with specific defect flags and suggested fixes. No board resource wasted on discovering known defects.",
+    "governance_board": "BLOCKED items (Gate -1 identity failures) are flagged immediately. No downstream processing occurs. Governance Board receives identity-block reports at scan time, not after wasted review cycles."
+  },
+
+  "interaction_with_other_rules": {
+    "R7 (Identity Validation)": "R6 depends on R7 — identity-validated scan results are a prerequisite for readiness classification. Items failing R7 are BLOCKED, never reaching the R6 gate.",
+    "R8 (Scan Once)": "R6 consumes readiness_classification from the scan artifact (R8 product). No independent readiness scan is executed at the Certification Board.",
+    "Governance Guard R2": "R2 (EW[CC] empty) is a content-level rule. R6 is a pipeline-level rule. R2 is enforced by Gate 1 PG-001; R6 is enforced by the Certification Board consumer. Both must pass for certification."
+  },
+
+  "example_application": {
+    "scenario": "S206 certification wave: 100 items enter the pipeline.",
+    "pre_r6_gates": "Gate -1: 1 BLOCKED (P1-E-R33). Gate 1: 54 REMEDIATE (DL-008), 3 REMEDIATE (DL-026). Gate 2: 42 MINOR_FIX (EV3 + DL-031). 0 items REMEDIATE at Gate 3 or Gate 4.",
+    "certification_board_queue": "42 MINOR_FIX + 0 READY = 42 items. 58 items excluded (1 BLOCKED, 57 REMEDIATE).",
+    "without_r6": "100 items enter the board. Board spends ~4 hours discovering the 57 HARD_FAIL items that could not be certified.",
+    "with_r6": "42 items enter the board. Board spends ~1.5 hours certifying MINOR_FIX items with acknowledged warnings."
+  },
+
+  "cross_references": {
+    "rule_7": "SESSION205_RULE7_DEPLOYMENT.json",
+    "rule_8": "SESSION205_RULE8_DEPLOYMENT.json",
+    "readiness_cert": "SESSION205_READINESS_ENGINE_CERTIFICATION.json",
+    "state_machine": "SESSION205_STATE_MACHINE_VALIDATION.json",
+    "s2021_consumption": "SESSION2021_BOARD_CONSUMPTION_MATRIX.json",
+    "s204_results": "SESSION204_READINESS_RESULTS.json"
+  }
+}

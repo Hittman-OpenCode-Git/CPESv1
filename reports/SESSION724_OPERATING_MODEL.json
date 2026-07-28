@@ -1,0 +1,55 @@
+{
+  "session": "724",
+  "type": "Post-700 Operating Model",
+  "generated": "2026-07-26",
+  "agents": ["A", "B", "S", "V"],
+  "decision_700": "CLOSED — Maintenance Mode v1.0 Active",
+  "portfolio_tracks": {
+    "100_series": {
+      "label": "Maintenance & Runtime",
+      "status": "Active",
+      "scope": "Runtime bug fixes, session recovery, app.js integrity",
+      "exclusions": "No content changes, no governance decisions",
+      "key_files": ["app.js", "index_updated.html", "styles.css", "may-core.js", "may-learner-state.js"],
+      "ownership_gaps": ["May coaching layer ownership unassigned — recommended assignment to 100-series as runtime dependency"]
+    },
+    "300_series": {
+      "label": "Portfolio Analytics",
+      "status": "Active — S310 (final session) pending",
+      "scope": "Read-only quality analytics: DQS, EQS, BQS, ExQS, UIQS, Risk Register, Forecast Engine, Bottleneck Analysis",
+      "exclusions": "No content changes, no governance decisions",
+      "sessions_completed": "S302–S309 (8 of 10)", 
+      "remaining": "S310 — Portfolio Operations Dashboard (300-series closeout)",
+      "ownership_gaps": ["No formal 300-series closure mechanism — S309 recommended S310 but no trigger enforces execution"]
+    },
+    "600_series": {
+      "label": "Content Operations (Candidate)",
+      "status": "DEFERRED — S724 Executive Board decision",
+      "rationale": "Startup cost (4 sessions) exceeds projected savings (3 sessions). Net session impact: +1 to +4 worse. Binding constraint is author capacity, not tooling."
+    },
+    "800_series": {
+      "label": "Certification & Modernization",
+      "status": "Active — S803 cleared for launch",
+      "scope": "Certification waves (CAQS §1.6), EW authoring (embedded), DCS calibration, modernization batch operations",
+      "exclusions": "No analytics production, no governance framework changes",
+      "remaining_work": ["Domain E certification: 167 items", "Domain F certification: 149 items", "Pack A closeout: 19 items", "Case-bank EW: ~310 items", "Governance closure: 2 sessions"],
+      "ownership_gaps": ["No G-NEW-1 through G-NEW-5 enforcement in certification pipeline"]
+    }
+  },
+  "governance": {
+    "authority": "700-series (Maintenance Mode v1.0)",
+    "governance_guard": "20/20 PASS — 5 rules active",
+    "certified_pool": "2,182 / 2,500 (87.3%)",
+    "dl008_status": "0 confirmed (S723 Function constructor parse)",
+    "open_risks": ["6 post-700 ownership gaps identified", "Governance guard still uses DL-029-vulnerable window scan", "CURRENT_BASELINES.md §3 stale with 67 phantom DL-008 items"]
+  },
+  "operational_readiness": {
+    "score": "23/25 — two documentation gaps from S723 unresolved",
+    "pre_activation_requirements": [
+      "Fix governance guard DL-008 detection to use Function constructor parse",
+      "Update CURRENT_BASELINES.md §3 to remove 67 phantom DL-008 items",
+      "Create scripts/t0_baseline_verify.js for automated T0 protocol"
+    ]
+  },
+  "recommended_next": "S310 — Portfolio Operations Dashboard (300-series closeout). Execute S309's 17-session certification plan."
+}

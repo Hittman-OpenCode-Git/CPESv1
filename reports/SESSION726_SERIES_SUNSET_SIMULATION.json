@@ -1,0 +1,458 @@
+{
+  "simulation_metadata": {
+    "session": "S726",
+    "simulation_id": "S726-GOV-C-SUNSET",
+    "author": "Agent M — Governance Simulation C",
+    "date": "2026-07-26",
+    "authority": "SESSION726_SERIES_CLOSURE_GATE.md §2 (4-Step Closure Chain), §3 (Pre-Closure Checklist), §4 (Closure Attestation), §5 (Enforcement Mechanism)",
+    "sources_referenced": [
+      "SESSION726_SERIES_CLOSURE_GATE.md (Agent H — Closure Gate Spec v1.0)",
+      "SESSION726_UNAUTHORIZED_CLOSURE_PREVENTION_REPORT.md (Agent J — 5 attack vectors, 4-phase recommendation, rule enforceability)",
+      "SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json (Agent I — 33-entry registry, 0/6 accepted)",
+      "SESSION725_POST700_GOVERNANCE_MODEL.md (Agent E — TRANSFER → ACCEPTANCE → APPROVAL → CLOSE)",
+      "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (Agent O — 5 Stewardship Principles, Lane Map, Ownership Matrix)",
+      "SESSION723_PROGRAM_CLOSURE_REPORT.md (26 agents A-Z — S723 closure declaration)"
+    ],
+    "purpose": "Simulate a future series closing (800-series) under the S726 closure gate to test whether the TRANSFER → ACCEPTANCE → APPROVAL → CLOSE gate prevents premature series closure when the ownership acceptance registry reveals PENDING acceptances.",
+    "simulation_scenario": "800-series Certification Auditor completes all certification waves. The 800-series Lead declares '800-SERIES CLOSED. All artifacts delivered.' The S726 closure gate's Pre-Closure Checklist fires. It reads the S726 Ownership Acceptance Registry and finds GAP-2, GAP-3, GAP-4 with acceptance_status: 'PENDING' — some of which the 800-series itself is the proposed receiving owner for.",
+    "hypothesis_testing": [
+      "Does the closure gate mechanically REJECT a closure when acceptance_status === 'PENDING'?",
+      "What happens when the closing agent IS the acceptance owner? (Self-acceptance)",
+      "What happens when the ownership registry is stale?",
+      "Would S723 have been prevented by this gate?"
+    ]
+  },
+
+  "simulation_trajectories": {
+
+    "pre_gate_trajectory_s723_actual": {
+      "title": "Pre-S726 (S723 Actual Events) — No Closure Gate Existed",
+      "series": "700-series Governance & Calibration Maturity Program",
+      "closure_declaring_agent": "26 agents (A-Z)",
+      "closure_declaring_session": "S723 (2026-07-24)",
+      "event_sequence": [
+        {
+          "step": 1,
+          "action": "26-agent (A-Z) audit of certified pool (2,182 items) completed",
+          "verification": "Certified pool integrity verified. DL-008 = 0 (Function constructor parse). Governance guard 20/20 PASS. Answer-key integrity confirmed."
+        },
+        {
+          "step": 2,
+          "action": "Maintenance Framework v1.0 produced (SESSION723_MAINTENANCE_FRAMEWORK.json)",
+          "content": "Catalogued 5 maintenance cadences, agent types, trigger thresholds"
+        },
+        {
+          "step": 3,
+          "action": "Portfolio Handoff produced (SESSION723_PORTFOLIO_HANDOFF.json)",
+          "content": "Listed 6 'open items' transferred to post-700 lanes (100-series, 300-series, 800-series)"
+        },
+        {
+          "step": 4,
+          "action": "Program Closure Report written: SESSION723_PROGRAM_CLOSURE_REPORT.md",
+          "content": "Declared: 'PROGRAM CLOSED — Transition to Maintenance Mode.' REVISION_HISTORY.md entry appended."
+        },
+        {
+          "step": 5,
+          "action": "No ownership acceptance verification occurred during any step",
+          "gap_analysis": "The TRANSFER step was PARTIALLY completed (6 items catalogued in handoff). ACCEPTANCE was COMPLETELY SKIPPED — zero receiving owners were contacted or recorded as accepted. APPROVAL was COMPLETELY SKIPPED — no Governance Board reviewed the transition. CLOSE was declared anyway."
+        },
+        {
+          "step": 6,
+          "action": "Series 700 declared CLOSED. Handoff documented. Done.",
+          "result": "6 ownership gaps undiscovered until S724 (next session)."
+        }
+      ],
+      "governance_guard_intersection": "governance-guard.js had 5 rules at S723. RULE 1 (question_state → REVISION_HISTORY.md) was a WARN. RULE 2-5 were content-level rules. None checked ownership acceptance. None blocked closure declarations. The write of 'PROGRAM CLOSED' to REVISION_HISTORY.md triggered no gate.",
+      "ownership_registry": "Did not exist. No structured record of who owned what. The 6 gaps were embedded in free-text handoff documents.",
+      "outcome": {
+        "closure_status": "DECLARED CLOSED (unenforced)",
+        "ownership_gaps_created": 6,
+        "gaps_discovered": "S724 (one session later, 26 agents)",
+        "gaps_resolved_design_level": "S725 (one session later, 5+ agents)",
+        "total_cost": "3 sessions of governance overhead (S724 discovery + S725 resolution + S726 enforcement hardening)",
+        "root_cause_per_agent_e": "TRANSFER (Partial) → ACCEPTANCE (SKIPPED) → APPROVAL (SKIPPED) → CLOSE (Declared). The skipped steps created a governance vacuum."
+      }
+    },
+
+    "post_gate_trajectory_800_series_simulation": {
+      "title": "Post-S726 (800-Series Closure Under the S726 Gate) — Full Simulation",
+      "series": "800-series Modernization & Certification",
+      "scenario_context": {
+        "pre_closure_state": "800-series completed: Domain E certification (167 items), Domain F certification (149 items), Pack A closeout (19 items), Case-bank EW authoring (~310 items). All certification waves finished. All EV8, DL-008, DL-013, DL-026 verification gates passed.",
+        "active_800_series_responsibilities": [
+          "CAQS §1.6 six-dimension certification verification pipeline",
+          "G-NEW-1 through G-NEW-5 enforcement in certification pipeline (GAP-3 — primary owner)",
+          "Certification Auditor consumption of 300-series Forecast Engine and Bottleneck Analysis (GAP-2 — dual owner with 700-series)",
+          "Cross-checking defect status during certification waves (GAP-4 — secondary owner)",
+          "Certification Auditor cross-check of CURRENT_BASELINES.md accuracy (GAP-6 — secondary owner)",
+          "DCS calibration and modernization batch operations",
+          "EW authoring pipeline (embedded, co-owned with 700-series Defect Sweeper)"
+        ],
+        "existing_registry_state_at_closure_attempt": {
+          "registry_file": "reports/SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json",
+          "total_gaps": 6,
+          "assigned": 6,
+          "accepted": 0,
+          "pending": 6,
+          "gaps_relevant_to_800_series_closure": [
+            {
+              "gap": "GAP-2",
+              "description": "300→Maintenance model consumption path — 800-series Certification Auditor is dual receiving owner",
+              "acceptance_status": "PENDING",
+              "primary_owner": "Reconciliation Agent (700-series) + Certification Auditor (800-series)",
+              "blocking_800_closure": true,
+              "reason": "Certification Auditor (800-series) has not accepted responsibility to consume 300-series Forecast Engine and Bottleneck Analysis for certification planning"
+            },
+            {
+              "gap": "GAP-3",
+              "description": "G-NEW-1 through G-NEW-5 enforcement in 800-series certification pipeline",
+              "acceptance_status": "PENDING",
+              "primary_owner": "Certification Auditor (800-series)",
+              "blocking_800_closure": true,
+              "reason": "Certification Auditor (800-series) has not accepted responsibility to enforce G-NEW-1 through G-NEW-5 certification-blocking conditions. CRITICAL severity — certification without G-NEW enforcement risks certifying items with topic-mismatched or dual-block-contradicted explanations."
+            },
+            {
+              "gap": "GAP-4",
+              "description": "Defect manifest maintenance — 800-series Certification Auditor is secondary owner",
+              "acceptance_status": "PENDING",
+              "primary_owner": "Defect Sweeper (700-series)",
+              "secondary_owner": "Certification Auditor (800-series)",
+              "blocking_800_closure": true,
+              "reason": "800-series secondary ownership is PENDING. Defect Sweeper has not accepted primary ownership either. Both acceptance records missing."
+            }
+          ]
+        }
+      },
+      "closure_attempt_event_sequence": [
+        {
+          "gate_step": "STEP 0 — Agent Declares Closure",
+          "action": "800-series Lead agent: '800-SERIES CLOSED. All certification waves complete. Domain E: 167 items certified. Domain F: 149 items certified. Pack A closeout: 19 items certified. Case-bank EW: ~310 items authored. All artifacts delivered.'",
+          "trigger": "Agent attempts to write closure declaration to REVISION_HISTORY.md and produce SESSION8XX_PROGRAM_CLOSURE_REPORT.md",
+          "what_happens_without_gate": "Write succeeds. REVISION_HISTORY.md entry appended. 800-series declared CLOSED. GAP-2, GAP-3, GAP-4 remain PENDING — discovered later as orphaned responsibilities.",
+          "what_happens_with_gate": "Closure Attestation not yet produced. The governance guard Rule 6 (if active) detects closure language and checks for attestation. If Rule 6 is not yet code-integrated, the procedural gate (§3 Pre-Closure Checklist) triggers when the Governance Auditor reviews the closure request."
+        },
+        {
+          "gate_step": "STEP 1 — TRANSFER (Checklist T-1, T-2, T-3)",
+          "checklist_ref": "SESSION726_SERIES_CLOSURE_GATE.md §3.1, items T-1 through T-3",
+          "execution": "Governance Auditor reviews 800-series' proposed TRANSFER outputs: Ownership Matrix + Open Responsibilities Register.",
+          "outcome": {
+            "T-1_ownership_matrix": "PASS (conditional)",
+            "detail": "800-series produces a complete Ownership Matrix mapping all 7 active responsibilities to proposed receiving owners: (1) CAQS certification pipeline → new 800-series Certification Steward, (2) G-NEW enforcement → needs acceptance from Certification Auditor (800-series) — currently PENDING in registry, (3) 300-series analytics consumption → needs acceptance from Certification Auditor + Reconciliation Agent — currently PENDING, (4) defect status cross-check → needs acceptance from Defect Sweeper — currently PENDING, (5) CURRENT_BASELINES.md integrity → needs acceptance from Baseline Maintainer — currently PENDING, (6) DCS calibration process → Documentation Steward, (7) EW authoring pipeline → Defect Sweeper.",
+            "T-2_open_items_register": "PASS (conditional)",
+            "T-3_named_roles": "PASS",
+            "verdict": "TRANSFER step is structurally complete — responsibilities are catalogued with proposed owners. However, 4 of 7 proposed owners have PENDING acceptance in the existing registry. This will cascade into ACCEPTANCE failures.",
+            "note": "The TRANSFER step itself passes because cataloguing is complete. The gate correctly defers the acceptance check to ACCEPTANCE (Step 2). This is per design — T-1 through T-3 only verify that the catalogue exists and is complete, not that acceptances are recorded."
+          }
+        },
+        {
+          "gate_step": "STEP 2 — ACCEPTANCE (Checklist A-1, A-2, A-3, A-4)",
+          "checklist_ref": "SESSION726_SERIES_CLOSURE_GATE.md §3.1, items A-1 through A-4",
+          "execution": "Governance Auditor reads SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json and cross-references each proposed receiving owner against documented acceptance records.",
+          "outcome": {
+            "A-1_acceptance_records": "FAIL",
+            "detail": "The registry has acceptance_summary.accepted: 0, acceptance_summary.pending: 6. Three gaps directly block 800-series closure:",
+            "failed_entries": [
+              {
+                "gap": "GAP-2",
+                "receiving_owner": "Certification Auditor (800-series)",
+                "registry_status": "PENDING",
+                "accepted_by": null,
+                "accepted_date": null,
+                "acceptance_evidence": null,
+                "checklist_impact": "A-1 FAIL — Certification Auditor (800-series) has not accepted consumption of 300-series analytics. Closure cannot proceed."
+              },
+              {
+                "gap": "GAP-3",
+                "receiving_owner": "Certification Auditor (800-series)",
+                "registry_status": "PENDING",
+                "accepted_by": null,
+                "accepted_date": null,
+                "acceptance_evidence": null,
+                "checklist_impact": "A-1 FAIL — Certification Auditor (800-series) has not accepted G-NEW-1 through G-NEW-5 enforcement. Closure cannot proceed. CRITICAL: certifying items without G-NEW enforcement is a learner-safety risk per DL-016."
+              },
+              {
+                "gap": "GAP-4",
+                "receiving_owner": "Defect Sweeper (700-series) + Certification Auditor (800-series)",
+                "registry_status": "PENDING",
+                "accepted_by": null,
+                "accepted_date": null,
+                "acceptance_evidence": null,
+                "checklist_impact": "A-1 FAIL — Neither Defect Sweeper nor Certification Auditor has accepted defect manifest maintenance. Closure cannot proceed."
+              },
+              {
+                "gap": "GAP-5",
+                "receiving_owner": "300-series Lead (Portfolio Analytics)",
+                "registry_status": "PENDING",
+                "checklist_impact": "A-3/A-4 FAIL (conditional) — S310 closeout trigger still PENDING. If 800-series analytics consumption depends on S310 completion, this is a dependency that blocks closure."
+              },
+              {
+                "gap": "GAP-6",
+                "receiving_owner": "Baseline Maintainer (700-series Maintenance Mode)",
+                "registry_status": "PENDING",
+                "checklist_impact": "A-1 FAIL (conditional) — If 800-series closure requires CURRENT_BASELINES.md refresh (P-4), the Baseline Maintainer must accept before baseline can be updated."
+              }
+            ],
+            "A-2_no_non_qualifying_language": "FAIL (by implication)",
+            "detail": "No acceptance records exist to review for non-qualifying language. The absence of any records is a failure under A-2.",
+            "A-3_accept_as_debt_triggers": "FAIL",
+            "detail": "Any 800-series open items not transferred with acceptance must be documented as ACCEPT AS DEBT with review triggers. None are documented.",
+            "A-4_close_resolution": "PASS (conditional)",
+            "detail": "800-series certification completion evidence exists. But CLOSE resolution for the series as a whole is contingent on A-1 through A-3 passing."
+          }
+        },
+        {
+          "gate_step": "STEP 2 VERDICT — CLOSURE REJECTED",
+          "checklist_items_failed": ["A-1", "A-2", "A-3"],
+          "checklist_items_blocked": ["A-4", "P-1", "P-2", "P-3", "P-4", "P-5"],
+          "reason": "Per §3.3 Checklist Execution Protocol: 'Any item that fails blocks the checklist — remaining items are not evaluated until the failed item is remediated.' A-1 failed on GAP-2, GAP-3, GAP-4. The checklist halted at A-1. Remaining items A-2 through P-5 were not evaluated because A-1 is a blocking failure.",
+          "closure_rejected": true,
+          "governance_action": {
+            "immediate": "800-series closure declaration is REJECTED. Series remains ACTIVE. Closure Attestation cannot be produced — it would carry FAIL items.",
+            "governance_debt_item_created": {
+              "type": "GOVERNANCE DEBT ITEM — 800-series Closure Rejected",
+              "date": "2026-07-26",
+              "closure_attempt": "S726 (simulated)",
+              "rejected_by": "Governance Auditor",
+              "failed_checklist": ["A-1 — Acceptance Records: 3 gaps PENDING (GAP-2, GAP-3, GAP-4)"],
+              "required_remediation": [
+                "Certification Auditor (800-series) must explicitly accept GAP-2 (300-series analytics consumption)",
+                "Certification Auditor (800-series) must explicitly accept GAP-3 (G-NEW-1 through G-NEW-5 enforcement)",
+                "Defect Sweeper (700-series) must explicitly accept GAP-4 (defect manifest maintenance)",
+                "All 6 registry gaps must transition from PENDING → ACCEPTED before re-attempt",
+                "Closure Attestation must be re-submitted with all checklist items PASS"
+              ],
+              "resolution_deadline": "5 sessions or 1 calendar week (per §9.3)"
+            },
+            "next_steps": [
+              "Governance Board escalation triggered (all 6 gaps past S726 T0 deadline per registry acceptance_summary)",
+              "800-series cannot close until all PENDING acceptances are resolved",
+              "Acceptance must follow the §2.2 evidence standards: explicit 'I accept' statement, board resolution, governance record entry, or dedicated handoff session — not 'recommended' or 'proposed' language"
+            ]
+          }
+        },
+        {
+          "gate_step": "STEP 2a — Gap Resolution (Post-Rejection Remediation)",
+          "scenario": "Governance Board reviews. Certification Auditor (800-series) explicitly accepts GAP-2 and GAP-3. Defect Sweeper (700-series) explicitly accepts GAP-4. Registry updated: acceptance_status → ACCEPTED. Closure re-attempted.",
+          "registry_state_after_remediation": {
+            "GAP-2": {
+              "acceptance_status": "ACCEPTED",
+              "accepted_by": "Certification Auditor (800-series)",
+              "accepted_date": "2026-07-26",
+              "acceptance_evidence": "Agent M (Certification Auditor): 'I explicitly accept responsibility for consuming 300-series Forecast Engine and Bottleneck Analysis for 800-series certification planning. I confirm the analytics are accessible and I am prepared to integrate them into certification wave planning.'"
+            },
+            "GAP-3": {
+              "acceptance_status": "ACCEPTED",
+              "accepted_by": "Certification Auditor (800-series)",
+              "accepted_date": "2026-07-26",
+              "acceptance_evidence": "Agent M (Certification Auditor): 'I explicitly accept responsibility for enforcing G-NEW-1 through G-NEW-5 in the 800-series certification pipeline. I will integrate G-NEW checks into every certification wave and will not certify any item with topic-mismatched or dual-block-contradicted explanations.'"
+            },
+            "GAP-4": {
+              "acceptance_status": "ACCEPTED",
+              "accepted_by": "Defect Sweeper (700-series)",
+              "accepted_date": "2026-07-26",
+              "acceptance_evidence": "Agent (Defect Sweeper): 'I explicitly accept responsibility for defect manifest maintenance. I will audit all 33 DL entries against current pack-file state, flag discrepancies, and establish protocol for remediation agents to append DEFECT_LIBRARY.md before session close.'"
+            }
+          }
+        },
+        {
+          "gate_step": "STEP 3 — APPROVAL (Re-Check After Remediation)",
+          "checklist_ref": "SESSION726_SERIES_CLOSURE_GATE.md §3.1, items P-1 through P-5",
+          "execution": "Governance Auditor re-executes the Pre-Closure Checklist. A-1 through A-4 now PASS (acceptances recorded). P-1 through P-5 are evaluated.",
+          "outcome": {
+            "A-1_acceptance_records": "PASS — All 6 gaps accepted per updated registry.",
+            "A-2_no_non_qualifying": "PASS — All acceptance records use explicit 'I accept' language.",
+            "A-3_accept_as_debt_triggers": "PASS — 800-series CLOSE-dispositioned items have resolution evidence.",
+            "A-4_close_resolution": "PASS — Certification completion evidence documented.",
+            "P-1_escalation_path": "PASS — Every transferred 800-series responsibility has primary/secondary/escalation owner chain confirmed.",
+            "P-2_maintenance_cadence": "PASS — Post-800 maintenance cadence defined: quarterly stewardship review for certification records, per-wave baseline refresh.",
+            "P-3_transition_period": "PASS — Transition period: 3 sessions (S8XX through S8XX+3). Escalation owner: Governance Board.",
+            "P-4_documents_updated": "PASS — CURRENT_BASELINES.md refreshed, AGENTS.md updated, SESSION_STATUS updated, REVISION_HISTORY.md updated, Portfolio Lane Map updated, Ownership Matrix updated.",
+            "P-5_attestation_signed": "PASS",
+            "all_checklist_items": "PASS — 12 of 12",
+            "verdict": "APPROVAL GRANTED. Proceed to CLOSE."
+          }
+        },
+        {
+          "gate_step": "STEP 4 — CLOSE",
+          "execution": "Closure Attestation completed and signed by Governance Auditor, Closing Series Lead, and Witness. Closure Report produced. Portfolio Lane Map updated: 800-series → CLOSED. CURRENT_BASELINES.md refreshed. REVISION_HISTORY.md entry appended.",
+          "outcome": "800-series declared CLOSED. All ownership transitions verified. No orphaned responsibilities. Closure is valid and complete.",
+          "closure_attestation_reference": "Per SESSION726_SERIES_CLOSURE_GATE.md §4.1 and §4.2 — all fields populated, all 12 checklist items PASS, three signatures present."
+        }
+      ],
+      "simulation_summary": {
+        "closure_attempted": "Yes — 800-series Lead declared closure",
+        "closure_initially_rejected": "Yes — GAP-2, GAP-3, GAP-4 acceptance_status was PENDING",
+        "rejection_checklist_item": "A-1 (Acceptance Records) — failure blocked evaluation of all remaining items",
+        "gaps_that_blocked_closure": ["GAP-2", "GAP-3", "GAP-4"],
+        "remediation_required": "Explicit acceptance by Certification Auditor (800-series) for GAP-2 and GAP-3; explicit acceptance by Defect Sweeper (700-series) for GAP-4",
+        "closure_approved_after_remediation": "Yes — all 12 checklist items PASS",
+        "ownership_gaps_created": 0,
+        "governance_sessions_saved": "3 (no S724-style discovery, no S725-style resolution, no S726-style hardening — all gaps surfaced AT THE GATE)"
+      }
+    },
+
+    "historical_retrospection_s723_under_gate": {
+      "title": "What Would Have Happened at S723 If the Closure Gate Existed",
+      "scenario": "S723's 26-agent (A-Z) audit completes. The agent declares closure. The Pre-Closure Checklist fires.",
+      "event_sequence": [
+        {
+          "checklist_item": "T-1 (Ownership Matrix)",
+          "s723_status": "FAIL",
+          "reason": "S723 produced a Portfolio Handoff (SESSION723_PORTFOLIO_HANDOFF.json) listing 6 'open items' — not a complete Ownership Matrix with every responsibility itemized. The handoff described items at a high level without structured receiving owner designations per §2.1 'Named Roles' requirement.",
+          "what_s723_would_have_needed": "A structured matrix mapping every 700-series responsibility to a receiving owner with transfer status."
+        },
+        {
+          "checklist_item": "T-2 (Open Items Register)",
+          "s723_status": "FAIL",
+          "reason": "Portfolio Handoff listed items but did not assign dispositions (TRANSFER / CLOSE / ACCEPT AS DEBT) with rationale and risk. Per §2.1: 'Every open defect, debt, or incomplete workstream must have an explicit disposition.'",
+          "what_s723_would_have_needed": "A register with 3-column format: Item, Disposition, Rationale/Risk."
+        },
+        {
+          "checklist_item": "T-3 (Named Roles)",
+          "s723_status": "FAIL",
+          "reason": "Portfolio Handoff assigned responsibilities to generic series labels ('100-series', '300-series'), not specific role designations. Per §2.1: 'Specific role designation (e.g., Baseline Maintainer (700-series)), not generic series label.'",
+          "what_s723_would_have_needed": "Specific roles for every receiving owner."
+        },
+        {
+          "checklist_item": "A-1 (Acceptance Records)",
+          "s723_status": "FAIL",
+          "reason": "Zero acceptance records existed. Zero receiving owners were contacted. The TRANSFER step was partial; ACCEPTANCE was skipped entirely. Per Agent E §4.1: 'Closure cannot be declared until Receiving Owner = ACCEPTED is explicitly documented.'",
+          "what_s723_would_have_needed": "Explicit acceptance from 100-series Lead (for May coaching layer), Reconciliation Agent + Certification Auditor (for analytics consumption), Certification Auditor (for G-NEW enforcement), Defect Sweeper (for defect manifest), etc."
+        },
+        {
+          "checklist_item": "A-2 (No Non-Qualifying Language)",
+          "s723_status": "FAIL",
+          "reason": "Handoff used 'recommended assignment' language (per Agent J §3.3 V3 analysis) — explicitly non-qualifying per §2.2. 'Recommended assignment language is not accepted.'",
+          "what_s723_would_have_needed": "Language shift from 'recommended' to 'accepted' with explicit 'I accept' statements."
+        },
+        {
+          "checklist_item": "A-3 through P-5",
+          "s723_status": "NOT EVALUATED — checklist halted at A-1, per §3.3 sequential evaluation protocol",
+          "reason": "A-1 fails → evaluation stops. All remaining 10 items would not have been evaluated. This reveals a subtle property of the gate: the ACCEPTANCE step is the PRIMARY blocking gate. TRANSFER alone can be partially incomplete and the gate won't catch it until ACCEPTANCE forces the issue."
+        },
+        {
+          "checklist_item": "Result",
+          "s723_status": "CLOSURE REJECTED — 5 of 12 checklist items FAIL (T-1, T-2, T-3, A-1, A-2). Remaining 7 items not evaluated.",
+          "governance_debt_item_created": "S723 would have produced a Governance Debt Item: '700-series Closure Rejected — failed TRANSFER (T-1/T-2/T-3) and ACCEPTANCE (A-1/A-2). Required: complete Ownership Matrix, Open Responsibilities Register with dispositions, specific role designations, and explicit acceptance from all proposed receiving owners.'",
+          "s723_substantive_work_preserved": "The 26-agent audit, certified pool verification (DL-008 = 0, governance guard 20/20 PASS, answer-key integrity) would NOT be challenged. The gate rejects the transition process, not the content work. S723 would have needed to complete ACCEPTANCE — not re-audit the pool.",
+          "timeline_impact": "S723's closure would have been delayed by 1-2 governance sessions to complete TRANSFER and obtain ACCEPTANCE records. But these sessions would have been PLANNED TRANSITION sessions — not reactive discovery sessions (S724) and hardening sessions (S725). The total session count might be equivalent, but the governance quality is higher: planned transitions produce documented acceptance records; reactive discovery produces gaps that must be retroactively filled."
+        }
+      ],
+      "verdict": "S723 would have been BLOCKED. The gate would have required all 12 checklist items to PASS before closure. With 5 FAIL items (T-1, T-2, T-3, A-1, A-2), closure would have been rejected. The 6 ownership gaps that were only discovered at S724 would have been surfaced at the closure gate itself."
+    }
+  },
+
+  "edge_cases": {
+
+    "edge_case_1_self_acceptance": {
+      "title": "What If the Closure Agent Is Also the Acceptance Owner? (Self-Acceptance)",
+      "scenario": "The 800-series Certification Auditor is both the closing agent (declaring '800-SERIES CLOSED') AND the proposed receiving owner for GAP-2 and GAP-3. The Certification Auditor writes their own acceptance into the registry and then declares closure.",
+      "question": "Does self-acceptance satisfy the ACCEPTANCE step, or does it create a governance conflict-of-interest?",
+      "analysis": {
+        "per_gate_spec_2_2": "The Closure Gate §2.2 qualifies 'Agent Acceptance Statement' as valid evidence: 'An agent in the receiving series explicitly states \"I accept responsibility for [X]\" in a session report, REVISION_HISTORY.md entry, or dedicated acceptance record.' The specification does NOT require that the accepting agent be distinct from the closing agent. The key requirement is: (1) named responsibility, (2) explicit acceptance language, (3) date, (4) agent/role designation.",
+        "per_stewardship_principle_5": "Agent O's Stewardship Principle 5: 'Single Point of Accountability per Responsibility — Every responsibility has exactly one primary owner. No responsibility is owned by a committee, shared between equals, or left to 'all lane owners' collectively.' Self-acceptance satisfies this — there IS one named owner.",
+        "per_agent_j": "Agent J's report §3.3 identified Vector V3 (Fake Acceptance) as a vulnerability. But the gate's design intentionally treats ACCEPTANCE as a procedural trust step — it cannot mechanically verify sincerity. Self-acceptance is procedurally valid if documented with proper evidence.",
+        "governance_board_safeguard": "The Witness signature (§4.1 Closure Attestation, third signature) provides a check: the Witness (a Governance Board member or Receiving Owner Representative) must sign the attestation. If the Witness observes that the same agent is both closing and self-accepting without proper documentation, they can refuse to sign — triggering §5.3 Board Review.",
+        "escalation_path": "If a dispute arises (e.g., the 800-series closes and later a G-NEW violation is found but the self-accepted Certification Auditor is unavailable), the secondary and escalation owners in the Ownership Matrix chain activate. Per §2.2: 'If a proposed receiving owner declines or is unavailable, the closing series must propose a new receiving owner.' This applies to self-accepted owners as well — they have the same accountability obligations.",
+        "per_s725_agent_e": "Agent E's Post-700 Governance Model §4.1: 'Closure cannot be declared until Receiving Owner = ACCEPTED is explicitly documented. Assignment alone is insufficient.' Self-acceptance IS explicit documentation — it satisfies the letter of the requirement."
+      },
+      "verdict": "Self-acceptance is PROCEDURALLY VALID under the current gate specification. The gate does not distinguish between self-acceptance and third-party acceptance. This is by design — the gate enforces documentation completeness, not organizational separation. The risk mitigation comes from the Witness signature (§4.1), the escalation path (§8), and the secondary/escalation owner chain in the Ownership Matrix (per Agent O Stewardship Principle 2: 'Original owner retains ownership until acceptance confirmed.')",
+      "risk_level": "MEDIUM. Self-acceptance without Governance Board review creates a single-point-of-failure. However, the Witness signature and escalation chain provide safeguards. A future enhancement could add a rule: 'If the accepting agent is the same as the closing agent across >50% of transferred responsibilities, Board approval is required' — but this is beyond the current specification's scope.",
+      "recommendation": "Gate specification should be amended to add: §2.2 'Self-Acceptance' subsection — 'When the accepting agent is the same entity as the closing series agent, the Witness (per §4.1) must be from a different active lane. Self-acceptance of ALL transferred responsibilities by the closing agent alone shall require Governance Board review.'"
+    },
+
+    "edge_case_2_stale_ownership_registry": {
+      "title": "What If the Ownership Registry Is Stale?",
+      "scenario": "The 800-series closure gate reads SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json. The registry shows all entries ACCEPTED (closure gate: 'PASS'). The closure proceeds. But the registry was last updated at T0 — and during the session, a new gap was discovered (e.g., the Certification Auditor's G-NEW enforcement tooling was found to be incomplete). The registry does not reflect this.",
+      "question": "Does the gate catch a stale registry? Can the registry be out of date, and what happens?",
+      "analysis": {
+        "per_agent_j_vector_v5": "Agent J §3.3 identified Vector V5 (Stale Registry) as an open vulnerability: 'Close using a registry that was accurate at T0 but stale because a new gap was discovered mid-session. Nothing. No mechanism re-validates registry freshness.'",
+        "per_gate_spec": "The Closure Gate specification does not mandate a registry re-verification step at closure time. The Pre-Closure Checklist reads the registry as a passive data source — it trusts the registry's values. If the registry is stale, the checklist items pass with stale data.",
+        "per_procedural_safeguards": [
+          "§3.3 Checklist Execution Protocol §1: 'Governance Auditor reviews the TRANSFER outputs' — this review could catch discrepancies between the current session's TRANSFER outputs and the registry's stored acceptance state. If the TRANSFER matrix identifies a responsibility that the registry does not list, the Governance Auditor should flag it.",
+          "§5.3 Tier 3 Governance Board Review: Any closure that is 'challenged by a Governance Board member' is escalated. A Board member aware of a mid-session gap could file a dispute.",
+          "AGENTS.md §9 Session Startup Protocol item 6 (to be added per Agent J Recommendation 4): 'Before any series closure declaration, verify ownership acceptance per TRANSFER → ACCEPTANCE → APPROVAL → CLOSE workflow.' This T0 verification catch the drift between registry and ground truth."
+        ],
+        "per_agent_j_recommendation": "Agent J Recommendation 3 (Phase 3): 'Structured Closure Record' with registry hash. If the closure attestation references the registry by SHA-256 hash, and the hash doesn't match the current on-disk registry, the gate can detect drift. But this requires the registry to be re-hashed at closure time — a procedural practice, not automated enforcement.",
+        "fundamental_limitation": "The registry is a JSON file on disk. Any agent can edit it. There is no write integrity checking. Per Agent J §4.3: 'The guard cannot detect drift between the registry and ground truth.' This is the core limitation: the gate can enforce that the registry SAYS 'ACCEPTED' — it cannot enforce that the registry IS correct."
+      },
+      "verdict": "The gate CANNOT mechanically detect a stale registry. If the registry shows ACCEPTED for all entries, the Pre-Closure Checklist A-1 will PASS — even if ground truth has changed. This is the most significant vulnerabilitiy in the gate design and the one that cannot be closed with current tooling.",
+      "risk_level": "HIGH. The registry is the single source of truth. If it becomes stale, all downstream governance decisions (closure gates, audit decisions, certification planning) are based on stale data.",
+      "mitigation_strategies": [
+        "AGENTS.md amendment (Agent J Recommendation 4): Session Startup Protocol §7 — verify registry freshness at T0.",
+        "Structured closure record with registry hash (Agent J Recommendation 3): closure attestation must reference the SHA-256 of the registry file at closure time.",
+        "Pre-Closure Gatekeeper agent (Agent J Recommendation 2): an independent agent re-validates the registry against ground truth before any closure.",
+        "Governance Board witness: the Witness signature on the Closure Attestation serves as a human-in-the-loop check on registry accuracy."
+      ],
+      "recommendation": "The gate specification should add a §3.4 'Registry Freshness Check' — 'Before evaluating A-1 (Acceptance Records), the Governance Auditor must: (1) compute the SHA-256 of the current on-disk ownership registry, (2) compare to the hash recorded in the registry's revision_history, (3) verify that the registry's last-modified timestamp is later than the last session that could have changed ownership state. If the registry has been modified without a revision_history entry, or if the hash does not match, A-1 is blocked until the registry is brought current.'"
+    },
+
+    "edge_case_3_registry_modification_at_closure_time": {
+      "title": "What If an Agent Modifies the Registry to FAKE Acceptance During Closure?",
+      "scenario": "The 800-series agent writes to the ownership registry: changes acceptance_status from PENDING to ACCEPTED without actual receiving-owner confirmation. Then declares closure. The gate reads the registry — sees ACCEPTED — passes A-1.",
+      "question": "Can the gate detect fabricated acceptance?",
+      "verdict": "NO. This is Agent J's Vector V3 (Fake Acceptance). The governance guard can read the registry but cannot verify that the acceptance_status value was honestly populated. Per Agent J §4.3: 'An agent writing ACCEPTED into the JSON is indistinguishable from a real acceptance.' The gate's procedural controls (Explicit acceptance statements in session reports, Board Resolutions, Witness signature) are the only protection against fabricated acceptance.",
+      "risk_level": "HIGH. This is a trust-in-the-agent problem — no mechanical solution exists without cryptographic signing or an immutable ledger.",
+      "mitigation": "Procedural only: Witness signature, Governance Board review, acceptance evidence cross-referencing against original session reports."
+    }
+  },
+
+  "verdict": {
+    "title": "Is the S726 Closure Gate Sufficient to Prevent Premature Series Closure?",
+    "answer": "PARTIALLY SUFFICIENT — with documented limitations.",
+    "analysis": {
+      "what_the_gate_catches": [
+        "Closure without any TRANSFER documentation (T-1, T-2, T-3 would FAIL)",
+        "Closure without any ACCEPTANCE records (A-1, A-2 would FAIL — this is what S723 did)",
+        "Closure with PENDING acceptances in the registry (A-1 FAIL — this is what would block 800-series in our simulation)",
+        "Closure with non-qualifying acceptance language (A-2 — 'recommended' and 'proposed' language rejected)",
+        "Closure without escalation paths, maintenance cadences, transition periods, or document updates (P-1 through P-5)",
+        "Closure without a signed attestation (P-5)"
+      ],
+      "what_the_gate_does_not_catch": [
+        "Fabricated acceptance (registry edited without genuine acceptance) — trust-in-agent gap",
+        "Stale registry (registry shows ACCEPTED but ground truth has changed) — freshness gap",
+        "Incomplete TRANSFER catalogue (responsibilities omitted from the Ownership Matrix that the series actually owned) — cataloguing-completeness gap",
+        "Self-acceptance conflicts of interest — organizational-separation gap",
+        "Acceptance without onboarding readiness (accepting owner says 'I accept' but hasn't reviewed the onboarding checklist) — readiness gap"
+      ],
+      "gate_design_strengths": [
+        "The 4-step sequential chain (TRANSFER → ACCEPTANCE → APPROVAL → CLOSE) correctly models the governance flow that S723 violated",
+        "The Pre-Closure Checklist enforcement of A-1 (Acceptance Records) is the PRIMARY blocking mechanism — it would have caught S723's complete skip of the ACCEPTANCE step",
+        "Sequential checklist evaluation (§3.3) prevents workaround: fail any item and the rest are not evaluated until remediation",
+        "The three-tier enforcement model (Procedural / Plugin / Board) does not over-invest in automation that cannot be built with current tooling — it acknowledges the procedural dependency",
+        "The historical compliance check (§6) confirms the design: S723 would have failed 12 of 12 checklist items"
+      ],
+      "gate_design_weaknesses": [
+        "Agent J correctly identifies the TRANSFER → ACCEPTANCE → APPROVAL → CLOSE gate is 'procedurally dependent on agent compliance' — no mechanical block prevents writing 'CLOSED' to REVISION_HISTORY.md",
+        "Governance Guard Rule 6 is specified but NOT IMPLEMENTED — until Rule 6 code exists in governance-guard.js, the gate has Tier 2 (plugin enforcement) coverage gap",
+        "The ownership registry has no integrity checking — stale or fabricated acceptances are undetectable",
+        "Self-acceptance is procedurally valid but lacks the organizational firebreak that prevents conflicts of interest",
+        "The gate checks documented acceptance but does not verify acceptance GENUINENESS — it trusts the registry"
+      ],
+      "canonical_verdict": "The S726 Closure Gate is SUFFICIENT to prevent the SPECIFIC failure mode that caused the S723→S724 ownership gaps: a well-intentioned closure audit that verifies content integrity but skips the ACCEPTANCE step. The gate would have REJECTED S723's closure with 5 FAIL items on the checklist, surfaced all 6 gaps before closure, and saved 2-3 governance sessions of reactive discovery and hardening.",
+      "additional_verdict": "The gate is NOT SUFFICIENT to prevent fabricated acceptance, stale registry usage, or self-acceptance conflicts. These gaps are documented and acknowledged. Per Agent J §7.2: 'This is acceptable for the current governance maturity level. The procedural gaps (genuineness of acceptance, board approval authenticity) are inherent to any governance framework — they cannot be automated away without replacing agent deliberation with deterministic code, which is neither desirable nor feasible.'",
+      "minimum_viable_gate": "For the gate to be MINIMALLY VIABLE against the S723-class failure (closure without any acceptance), two things must exist: (1) the Pre-Closure Checklist must be procedurally enforced per §3.3, and (2) the Governance Auditor must refuse to approve any closure without a completed Closure Attestation with all items PASS. The Governance Guard Rule 6 (BLOCK-level plugin enforcement) would elevate this from procedural to mechanical, but is not an absolute requirement for the gate to function — it is a hardening layer."
+    }
+  },
+
+  "cross_references": {
+    "agent_h_closure_gate_spec": "reports/SESSION726_SERIES_CLOSURE_GATE.md — defines the 4-step chain, 11-item checklist, attestation format, enforcement tiers",
+    "agent_j_prevention_report": "reports/SESSION726_UNAUTHORIZED_CLOSURE_PREVENTION_REPORT.md — identifies 5 attack vectors, 5 procedural gaps, 5 technical gaps, 4 documentation gaps",
+    "agent_i_ownership_registry": "reports/SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json — 33 entries, 6 gaps, acceptance_summary.accepted: 0, acceptance_summary.pending: 6",
+    "agent_e_post700_model": "reports/SESSION725_POST700_GOVERNANCE_MODEL.md — TRANSFER → ACCEPTANCE → APPROVAL → CLOSE, acceptance evidence standards",
+    "agent_o_stewardship_framework": "reports/SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md — 5 stewardship principles, 8-lane portfolio map, succession plans",
+    "s723_closure_report": "reports/SESSION723_PROGRAM_CLOSURE_REPORT.md — the closure that created 6 gaps",
+    "governance_guard_plugin": ".opencode/plugins/governance-guard.js — 5 rules, no closure rule, integration point for Rule 6 at session.idle hook",
+    "agents_md": "AGENTS.md — §9 Session Startup Protocol, §12 No Staged Findings, §13 Runtime Governance"
+  },
+
+  "simulation_revision_history": [
+    {
+      "version": "1.0",
+      "date": "2026-07-26",
+      "author": "Agent M — Governance Simulation C (Session 726)",
+      "summary": "Initial simulation. Simulated 800-series closure under the S726 closure gate. Confirmed: gate REJECTS closure when registry shows PENDING acceptances (GAP-2, GAP-3, GAP-4). Documented two edge cases: self-acceptance (procedurally valid, medium risk) and stale registry (high risk, undetectable mechanically). Confirmed S723 would have been REJECTED with 5 FAIL items. Verdict: gate is sufficient for S723-class failures (closure without acceptance) but not for registry integrity issues."
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "specId": "SESSION252_SESSION_INTELLIGENCE_SPEC",
+  "board": "F",
+  "session": "252",
+  "title": "Session Intelligence Engine — Relationship Analysis Engine Specification",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T19:13:29.300Z",
+  "engineScript": "scripts/session_intelligence_engine.js",
+  "outputFile": "scripts/output/session_intelligence.json",
+  "purpose": "Map every development session's relationships to questions, challenges, recommendations, and certification events. Produces a session intelligence report that answers: What did this session touch? What risks did it carry? How does it relate to other sessions?",
+  "inputSources": {
+    "session_registry": {
+      "path": "scripts/output/session_registry.json",
+      "entity": "SessionRegistryEntry",
+      "description": "98 sessions with QID lists, modes, titles, series"
+    },
+    "question_history": {
+      "path": "scripts/output/question_history.json",
+      "entity": "QuestionHistoryEntry",
+      "description": "Per-question timeline with certification state, difficulty, defects, challenges, recommendations"
+    },
+    "challenge_registry": {
+      "path": "scripts/output/challenge_registry.json",
+      "entity": "ChallengeEntry",
+      "description": "35 challenges with linkedSessions, linkedRecommendations, linkedDefects"
+    },
+    "challenge_to_session": {
+      "path": "scripts/output/challenge_to_session.json",
+      "entity": "ChallengeToSessionMap",
+      "description": "Session ID → array of challenge IDs"
+    },
+    "recommendation_registry": {
+      "path": "scripts/output/recommendation_registry.json",
+      "entity": "RecommendationEntry",
+      "description": "~67 recommendations with questionIds, targetSession, severity"
+    },
+    "certification_waves": {
+      "path": "scripts/output/certification_waves.json",
+      "entity": "CertificationWaveEntry",
+      "description": "Wave plans with item QID lists and domain distribution"
+    },
+    "question_to_session_index": {
+      "path": "scripts/output/question_to_session_index.json",
+      "entity": "QuestionToSessionEntry",
+      "description": "QID → array of session references with pack, section, currentState"
+    }
+  },
+  "outputSchemas": {
+    "SessionIntelligenceRoot": {
+      "description": "Top-level output for --all mode (single-session wraps one entry)",
+      "fields": {
+        "generatedTimestamp": "ISO 8601 — when the report was generated",
+        "specId": "SESSION252_SESSION_INTELLIGENCE_SPEC",
+        "mode": "'single' | 'all' | 'summary'",
+        "totalSessions": "number — sessions processed",
+        "sessions": "array of SessionIntelligenceReport"
+      }
+    },
+    "SessionIntelligenceReport": {
+      "description": "Full intelligence report for one development session",
+      "fields": {
+        "sessionId": "string — from session_registry.json",
+        "sessionIdentity": "SessionIdentity",
+        "questionInventory": "QuestionInventory",
+        "performanceMap": "PerformanceMap",
+        "challengeTrace": "ChallengeTrace",
+        "recommendationTrace": "RecommendationTrace",
+        "certificationEvents": "CertificationEvents",
+        "relationshipGraph": "RelationshipGraph",
+        "outcomeSummary": "OutcomeSummary"
+      }
+    },
+    "SessionIdentity": {
+      "description": "Core identity and metadata of the development session",
+      "fields": {
+        "sessionId": "string — unique session identifier",
+        "series": "string — development series (Early Content Audit, 500-Series, 600-Series, 700-Series, 800-Series, 900+)",
+        "title": "string — session title/description",
+        "date": "string — session date (may be empty)",
+        "mode": "string — READ-ONLY | IMPLEMENTATION | UNKNOWN",
+        "questionCount": "integer — total QIDs in this session's questionIds array",
+        "uniqueQuestionCount": "integer — deduplicated count"
+      }
+    },
+    "QuestionInventory": {
+      "description": "All QIDs touched by this session, organized by pack and section",
+      "fields": {
+        "totalQids": "integer",
+        "uniqueQids": "integer",
+        "byPack": "object — { pack_name: { count, bySection: { section: count }, byState: { state: count } } }",
+        "bySection": "object — { section_label: { count, packs: [pack_name], byState: { state: count } } }",
+        "byCertificationState": "object — { Certified: count, Unprocessed: count, Archived: count }",
+        "difficultyDistribution": "object — { Easy: count, Moderate-Easy: count, Moderate: count, Difficult: count, Very_Difficult: count }",
+        "cognitiveLevelDistribution": "object — { Remember: count, Understand: count, Apply: count, Analyze: count, Evaluate: count }"
+      }
+    },
+    "PerformanceMap": {
+      "description": "Quality and risk metrics for questions in this session",
+      "fields": {
+        "certifiedPct": "number — percentage of questions currently Certified",
+        "unprocessedPct": "number — percentage Unprocessed",
+        "archivedPct": "number — percentage Archived",
+        "byHealthTier": "object — { HEALTHY: count, FAIR: count, NEEDS_ATTENTION: count, CRITICAL: count, UNKNOWN: count }",
+        "defectExposure": {
+          "questionsWithDefects": "integer — QIDs with >= 1 defect",
+          "totalDefectReferences": "integer — sum of all defectHistory entries",
+          "bySeverity": "object — { Critical: count, High: count, Medium: count, Low: count }",
+          "topDefects": "array of { defectId, count } sorted by count desc"
+        },
+        "challengeExposure": {
+          "questionsWithChallenges": "integer — QIDs with >= 1 challenge",
+          "totalChallenges": "integer",
+          "byStatus": "object — { OPEN: count, INVESTIGATING: count, RESOLVED: count, CLOSED: count, DISMISSED: count }"
+        }
+      }
+    },
+    "ChallengeTrace": {
+      "description": "Challenges that originated from or reference this session",
+      "fields": {
+        "directChallenges": "array of ChallengeReference — challenges where linkedSessions includes this sessionId",
+        "indirectChallenges": "array of ChallengeReference — challenges on QIDs in this session (not directly linked)",
+        "totalDirect": "integer",
+        "totalIndirect": "integer",
+        "byStatus": "object — { OPEN: count, INVESTIGATING: count, RESOLVED: count, CLOSED: count, DISMISSED: count }",
+        "byType": "object — { CONTENT_ERROR: count, TECHNICAL_ISSUE: count, ANSWER_DISPUTE: count, EXPLANATION_ISSUE: count, AMBIGUITY: count, OTHER: count }"
+      }
+    },
+    "ChallengeReference": {
+      "fields": {
+        "challengeId": "string — CH-XXXXXXXX",
+        "status": "string — OPEN | INVESTIGATING | RESOLVED | CLOSED | DISMISSED",
+        "type": "string",
+        "questionId": "string — the QID challenged",
+        "priority": "string",
+        "linkedDefects": "array of DL-IDs",
+        "matchType": "string — 'direct' (via linkedSessions) | 'indirect' (via QID overlap)"
+      }
+    },
+    "RecommendationTrace": {
+      "description": "Recommendations that reference QIDs from this session",
+      "fields": {
+        "directRecommendations": "array of RecommendationReference — recs whose questionIds overlap with session QIDs",
+        "totalDirect": "integer",
+        "byType": "object — { REMEDIATE: count, REVIEW: count, ... }",
+        "bySeverity": "object — { CRITICAL: count, HIGH: count, MEDIUM: count, LOW: count }",
+        "byStatus": "object — { Open: count, Closed: count, ... }",
+        "topSourceScans": "array of { sourceScan, count } sorted desc"
+      }
+    },
+    "RecommendationReference": {
+      "fields": {
+        "recommendationId": "string — REC-XXXXXXXX",
+        "type": "string — REMEDIATE | REVIEW | ...",
+        "sourceScan": "string — e.g., DL-008, DL-026",
+        "severity": "string",
+        "status": "string",
+        "overlapCount": "integer — how many QIDs overlap between this rec and the session",
+        "overlapQids": "array of overlapping QIDs (max 10, truncated with truncated: true)"
+      }
+    },
+    "CertificationEvents": {
+      "description": "Certification waves that include QIDs from this session",
+      "fields": {
+        "waves": "array of CertificationWaveReference",
+        "totalWaves": "integer",
+        "totalQidsInWaves": "integer — count of session QIDs that appear in certification waves",
+        "certifiedPctInWaves": "number — percentage of session QIDs that are now Certified"
+      }
+    },
+    "CertificationWaveReference": {
+      "fields": {
+        "waveId": "string",
+        "waveTier": "string — WAVE_A | WAVE_B | WAVE_C",
+        "label": "string",
+        "itemCount": "integer — total items in wave",
+        "overlapCount": "integer — session QIDs in this wave",
+        "overlapQids": "array of QIDs (max 20, truncated with hasMore: true if needed)"
+      }
+    },
+    "RelationshipGraph": {
+      "description": "Other sessions that share QIDs with this one — overlap analysis",
+      "fields": {
+        "relatedSessions": "array of SessionOverlapEntry",
+        "totalRelatedSessions": "integer",
+        "maxOverlap": "integer — highest overlap count",
+        "avgOverlap": "number",
+        "totalSharedQids": "integer — sum of unique QIDs shared with other sessions",
+        "mostRelatedSeries": "array of { series, sharedQidCount, sessionCount } sorted desc"
+      }
+    },
+    "SessionOverlapEntry": {
+      "fields": {
+        "sessionId": "string",
+        "title": "string",
+        "series": "string",
+        "mode": "string",
+        "sharedQidCount": "integer",
+        "sharedQids": "array of QIDs (max 10, truncated)",
+        "overlapPct": "number — shared / this session's total * 100"
+      }
+    },
+    "OutcomeSummary": {
+      "description": "Overall quality and risk assessment of the session experience",
+      "fields": {
+        "qualityScore": "number 0-100 — composite health of questions touched",
+        "riskLevel": "string — LOW | MODERATE | HIGH | CRITICAL",
+        "certifiedExposure": "number — percentage of session QIDs that are currently in learner pool",
+        "defectDensity": "number — defects per QID",
+        "challengeRate": "number — challenges per QID",
+        "crossSessionReach": "integer — number of other sessions that share QIDs",
+        "flags": "array of string — risk flags (e.g., 'HIGH_DEFECT_DENSITY', 'CERTIFIED_DL008_EXPOSURE', 'UNPROCESSED_ITEMS')",
+        "recommendation": "string — 1-2 sentence summary verdict"
+      }
+    },
+    "SummaryReport": {
+      "description": "Aggregate statistics across all sessions (--summary mode)",
+      "fields": {
+        "totalSessions": "integer",
+        "sessionsByMode": "object — { READ-ONLY: count, IMPLEMENTATION: count, UNKNOWN: count }",
+        "sessionsBySeries": "object — { series: count }",
+        "totalUniqueQidsAcrossAllSessions": "integer",
+        "sessionsByCertifiedExposure": {
+          "highCertified": "integer — sessions where >75% QIDs are Certified",
+          "mixedCertified": "integer — 25-75% Certified",
+          "lowCertified": "integer — <25% Certified"
+        },
+        "mostTestedQids": "array of { qid, sessionCount, currentState, section } sorted by sessionCount desc, top 20",
+        "sessionsByDefectExposure": {
+          "highDefect": "integer — sessions with >5 defect references",
+          "mediumDefect": "integer — 1-5 defect references",
+          "noDefect": "integer — sessions with 0 defect references"
+        },
+        "sessionsByChallengeExposure": {
+          "highChallenge": "integer — sessions with >5 challenges",
+          "mediumChallenge": "integer — 1-5 challenges",
+          "noChallenge": "integer — sessions with 0 challenges"
+        },
+        "topOverlappingSessions": "array of { sessionId, overlapCount, title } — sessions that share QIDs with the most other sessions, top 10",
+        "seriesCrossReference": "object — { series: [relatedSeries] } — which series overlap with which other series",
+        "qidFrequencyDistribution": {
+          "touchedOnce": "integer — QIDs in exactly 1 session",
+          "touched2to5": "integer",
+          "touched6to10": "integer",
+          "touched11to20": "integer",
+          "touched21plus": "integer"
+        },
+        "challengeToSessionRatio": "number — average challenges per session",
+        "certifiedItemSessionCoverage": "number — percentage of 2,221 Certified items touched by at least one session",
+        "defectLibraryCoverageInSessions": "object — { dl_id: sessionCount } — how many sessions touched each defect class"
+      }
+    }
+  },
+  "relationshipTypes": {
+    "DIRECT_CHALLENGE": {
+      "description": "The challenge's linkedSessions array includes this sessionId",
+      "source": "challenge_registry.json → challenges[].linkedSessions",
+      "direction": "challenge → session"
+    },
+    "INDIRECT_CHALLENGE": {
+      "description": "A challenge exists on a QID that is in this session's questionIds, but the challenge's linkedSessions does not include this sessionId",
+      "source": "challenge_registry.json → challenges[].questionId cross-referenced with session_registry.json → sessions[].questionIds",
+      "direction": "challenge(question) → session"
+    },
+    "QID_OVERLAP": {
+      "description": "Two sessions share at least one QID in their questionIds arrays",
+      "source": "session_registry.json → sessions[].questionIds pairwise comparison",
+      "direction": "session ↔ session (bidirectional)"
+    },
+    "RECOMMENDATION_QID": {
+      "description": "A recommendation's questionIds array overlaps with session questionIds",
+      "source": "recommendation_registry.json → recommendations[].questionIds cross-referenced with session questionIds",
+      "direction": "recommendation → session"
+    },
+    "CERTIFICATION_QID": {
+      "description": "A certification wave's items array overlaps with session questionIds",
+      "source": "certification_waves.json → waves[].items cross-referenced with session questionIds",
+      "direction": "certificationWave → session"
+    }
+  },
+  "enumDefinitions": {
+    "SessionMode": [
+      "READ-ONLY",
+      "IMPLEMENTATION",
+      "UNKNOWN"
+    ],
+    "CertificationState": [
+      "Certified",
+      "Unprocessed",
+      "Archived",
+      "In Audit",
+      "Editorial Queue"
+    ],
+    "HealthTier": [
+      "HEALTHY",
+      "FAIR",
+      "NEEDS_ATTENTION",
+      "CRITICAL",
+      "UNKNOWN"
+    ],
+    "ChallengeStatus": [
+      "OPEN",
+      "INVESTIGATING",
+      "RESOLVED",
+      "CLOSED",
+      "DISMISSED"
+    ],
+    "ChallengeType": [
+      "CONTENT_ERROR",
+      "TECHNICAL_ISSUE",
+      "ANSWER_DISPUTE",
+      "EXPLANATION_ISSUE",
+      "AMBIGUITY",
+      "OTHER"
+    ],
+    "RiskLevel": [
+      "LOW",
+      "MODERATE",
+      "HIGH",
+      "CRITICAL"
+    ],
+    "DefectSeverity": [
+      "Critical",
+      "High",
+      "Medium",
+      "Low"
+    ],
+    "SectionLabels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "PackNames": [
+      "pack_a",
+      "pack_b",
+      "pack_c",
+      "pack_d",
+      "pack_e"
+    ]
+  },
+  "computationRules": {
+    "qualityScore": {
+      "description": "Composite 0-100 health score for the session's questions",
+      "components": {
+        "certificationWeight": 0.35,
+        "defectPenaltyWeight": 0.3,
+        "challengePenaltyWeight": 0.2,
+        "stateVarietyWeight": 0.15
+      },
+      "formula": "qualityScore = certificationScore * 0.35 + defectScore * 0.30 + challengeScore * 0.20 + varietyScore * 0.15",
+      "certificationScore": "certifiedPct (0-100)",
+      "defectScore": "100 - (defectDensity * 20), clamped to 0-100",
+      "challengeScore": "100 - (challengeRate * 25), clamped to 0-100",
+      "varietyScore": "100 for sessions touching multiple sections, 50 for single-section"
+    },
+    "riskLevel": {
+      "description": "Derived from qualityScore and flagged conditions",
+      "thresholds": {
+        "CRITICAL": "qualityScore < 30 OR has certified items with DL-008 exposure",
+        "HIGH": "qualityScore < 50 OR defectDensity > 0.5",
+        "MODERATE": "qualityScore < 70 OR challengeRate > 0.1",
+        "LOW": "qualityScore >= 70"
+      }
+    },
+    "qidSectionExtraction": {
+      "description": "Derive section from QID format",
+      "rules": {
+        "P1-A-NNN": "Section A (Pack A)",
+        "P1-B-NNN": "Section B (Pack A)",
+        "P1-C-NNN": "Section C (Pack A)",
+        "P1-D-NNN": "Section D (Pack A)",
+        "P1-E-NNN": "Section E (Pack A)",
+        "P1-F-NNN": "Section F (Pack A)",
+        "P1-AC-NNN": "Section A (Pack C)",
+        "P1-BC-NNN": "Section B (Pack C)",
+        "P1-CC-NNN": "Section C (Pack C)",
+        "P1-DC-NNN": "Section D (Pack C)",
+        "P1-EC-NNN": "Section E (Pack C)",
+        "P1-FC-NNN": "Section F (Pack C)",
+        "P1-AD-NNN": "Section A (Pack D)",
+        "P1-BD-NNN": "Section B (Pack D)",
+        "P1-CD-NNN": "Section C (Pack D)",
+        "P1-DD-NNN": "Section D (Pack D)",
+        "P1-ED-NNN": "Section E (Pack D)",
+        "P1-FD-NNN": "Section F (Pack D)",
+        "P1B-A-NNN": "Section A (Pack B)",
+        "P1B-B-NNN": "Section B (Pack B)",
+        "P1B-C-NNN": "Section C (Pack B)",
+        "P1B-D-NNN": "Section D (Pack B)",
+        "P1B-E-NNN": "Section E (Pack B)",
+        "P1B-F-NNN": "Section F (Pack B)",
+        "P1E-A-NNN": "Section A (Pack E)",
+        "P1E-B-NNN": "Section B (Pack E)",
+        "P1E-C-NNN": "Section C (Pack E)",
+        "P1E-D-NNN": "Section D (Pack E)",
+        "P1E-E-NNN": "Section E (Pack E)",
+        "P1E-F-NNN": "Section F (Pack E)"
+      },
+      "fallback": "Use question_history.json → qid.section and qid.pack"
+    },
+    "defectDensity": {
+      "formula": "totalDefectReferences / uniqueQidCount",
+      "description": "Average number of defect references per unique QID in the session"
+    },
+    "challengeRate": {
+      "formula": "totalChallengeReferences / uniqueQidCount",
+      "description": "Challenges per unique QID across both direct and indirect"
+    }
+  },
+  "revisionHistory": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-27",
+      "author": "Board F — Session 252",
+      "summary": "Initial Session Intelligence Engine specification. Defines all output schemas, relationship types, enum definitions, and computation rules for session relationship analysis."
+    }
+  ]
+}

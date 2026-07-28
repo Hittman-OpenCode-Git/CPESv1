@@ -1,0 +1,327 @@
+{
+  "report": "SESSION201_READINESS_LEAKAGE",
+  "agent": "Agent C — Board 2: Readiness Leakage Analysis",
+  "date": "2026-07-26",
+  "parent_finding": "SESSION200: 89.5% readiness failure rate — items arrive at certification boards with 3-5 concurrent defects",
+
+  "defect_leakage": [
+    {
+      "defect_id": "DL-008",
+      "title": "ExplanationWrong[CorrectChoice] Non-Empty",
+      "severity": "High (learner-safety risk when Certified)",
+      "detection_points": [
+        { "date": "2026-07-22", "session": "Bucket 1A Sweep", "method": "Manual/AI verification", "gate": "Sub-batch 2A Wave 1 CAQS review", "count_found": 108 },
+        { "date": "2026-07-22", "session": "Recontamination Scan", "method": "Follow-up scan after certification Wave 1", "gate": "Post-certification audit", "count_found": 14 },
+        { "date": "2026-07-23", "session": "Full-Pool Sweep", "method": "Function constructor + JSON.parse dual-method", "gate": "Dedicated defect sweep (no gate)", "count_found": 393 },
+        { "date": "2026-07-23", "session": "DL-019 Overwrite Discovery", "method": "Cross-session re-verification", "gate": "Post-remediation audit", "count_found": 432 },
+        { "date": "2026-07-23", "session": "Pack C Tier 0 Corrective", "method": "Independent re-scan after concurrent-session overwrite", "gate": "Tier 0 emergency", "count_found": 175 },
+        { "date": "2026-07-24", "session": "S86/S87 Final Sweep", "method": "Select-String grep + governance manifest", "gate": "End-of-cycle status", "count_found": 67 },
+        { "date": "2026-07-25", "session": "Session 92", "method": "Content-block CC extraction", "gate": "Learner-safety planning", "count_found": 672 },
+        { "date": "2026-07-25", "session": "S702-S707", "method": "Within-object CC extraction (boundary-aware)", "gate": "QC reconciliation → systematic remediation", "count_found": 73 },
+        { "date": "2026-07-26", "session": "S801/S802", "method": "Function constructor + independent line-level verification", "gate": "Final governance sweep", "count_found": 0 }
+      ],
+      "earliest_possible_detection": "At content-authoring time — the template engine should never have emitted ExplanationWrong fields at the CorrectChoice position. Second: during CAQS §1.6 certification, EV8 compliance should have been verified before assigning 'Certified' state.",
+      "preventability_score": 100,
+      "why_not_caught_earlier": "1) No automated pre-certification EV8 scan existed — the ExplanationValidator skipped non-empty slots silently (line 180 gap). 2) Governance guard Rule 2 was activated AFTER thousands of items were already Certified. 3) Sub-agent instructions for Wave 1 certification did not include 'clear EW[CC]' step (added from Wave 2 onwards). 4) Template-based bulk authoring filled all 4 EW slots regardless of CorrectChoice — a systemic design flaw in the authoring pipeline, not an oversight.",
+      "recurrence_timeline": [
+        { "event": "Initial discovery (Bucket 1A)", "date": "2026-07-22", "count": 108, "action": "Mechanical clear" },
+        { "event": "Re-contamination (Wave 1 sub-agent)", "date": "2026-07-22", "count": 14, "action": "Clear + add EV8 instruction to templates" },
+        { "event": "Full-pool sweep", "date": "2026-07-23", "count": 393, "action": "Bucket classification (Tier 0/1/2)" },
+        { "event": "DL-019 overwrite", "date": "2026-07-23", "count": 432, "action": "Re-remediate all 432 across 16 batches" },
+        { "event": "Pack C Tier 0 re-discovery", "date": "2026-07-23", "count": 175, "action": "Quarantine pending CC audit" },
+        { "event": "Pack A/C/D Certified sweep", "date": "2026-07-25", "count": 73, "action": "S702-S707 systematic clears + EW rewrites" },
+        { "event": "Phantom count refutation (DL-029)", "date": "2026-07-26", "count": "0 actual (67 phantom)", "action": "Confirmed 0 Certified DL-008 via Function constructor" }
+      ],
+      "current_state": "RESOLVED — 0 actual Certified DL-008. The 67-count in SESSION_STATUS_2026-07-24 was a DL-029 forward-scan artifact. All 2,500 items verified clean via Function constructor parse (S801/S802)."
+    },
+    {
+      "defect_id": "DL-010",
+      "title": "Misassigned Choice Explanations",
+      "severity": "High (explanation text describes wrong choice — learners receive misleading feedback)",
+      "detection_points": [
+        { "date": "2026-07-22", "session": "Sub-batch 2B Wave 2", "method": "Manual CAQS review", "gate": "CAQS §1.6 verification", "count_found": 1 },
+        { "date": "2026-07-22", "session": "Repository-Wide Scan", "method": "Heuristic pattern scan (numeric + praise + verbatim)", "gate": "Dedicated defect sweep", "count_found": 125 },
+        { "date": "2026-07-25", "session": "S500-S507", "method": "Rotation-group forward-scan → refuted by within-object extraction", "gate": "Certification QC", "count_found": "Multiple false-positive cascades + 1 genuine CD-035" }
+      ],
+      "earliest_possible_detection": "During CAQS §1.6 six-dimension verification — the Correctness dimension check should verify that each ExplanationWrong field semantically describes its assigned choice. An automated lexical-overlap check between EW text and choice text could flag low-relevance assignments.",
+      "preventability_score": 60,
+      "why_not_caught_earlier": "1) No automated semantic-alignment validator exists — this is inherently an NLP/semantic check. 2) DL-016 metadata-content divergence creates scanning false positives — the metadata-block ChoiceA-D text differs from the learner-facing Choices.A-D, so EW text that describes the learner's choice appears to describe the metadata choice instead. 3) Most DL-010 findings were actually DL-016 scan artifacts — the EW text was correct for the primary block, but scans read the wrong block.",
+      "recurrence_timeline": [
+        { "event": "P1-A-029 prototype (true DL-010)", "date": "2026-07-22", "count": 1, "action": "Corrected EW-A/EW-B slots" },
+        { "event": "Repository-wide scan (125 true)", "date": "2026-07-22", "count": 125, "action": "Bucketing: 78 mechanical, 47 editorial" },
+        { "event": "S500 rotation artifact flags", "date": "2026-07-25", "count": "~39 (false positives)", "action": "S501 refutation — DL-016 scan artifact" },
+        { "event": "S504 CD-022 EW_A/D swap", "date": "2026-07-25", "count": 1, "action": "Corrected by orchestrator" },
+        { "event": "S506 re-flag → S507 refutation", "date": "2026-07-25", "count": "6 (false positives)", "action": "Raw file evidence refuted claims" },
+        { "event": "S809.2 Agent B false alarms", "date": "2026-07-26", "count": "4 (all false)", "action": "S809.3 investigation CLOSED — 0 confirmed" }
+      ],
+      "current_state": "OPEN — scoped at 125 true DL-010 across 5 packs (reduced from initial 2,038 raw findings). Mostly mechanical fixes (incorrect-answer calculation summaries in EW slots). Frequent false-positive cascades from DL-016/DL-029 scan methodology."
+    },
+    {
+      "defect_id": "DL-013",
+      "title": "Template Boilerplate Distractor Explanations",
+      "severity": "High (learners receive generic non-instructional feedback — all 3 distractor EW fields say effectively the same thing)",
+      "detection_points": [
+        { "date": "2026-07-22", "session": "DL-007 prototype (P1-A-022)", "method": "Manual CAQS review", "gate": "CAQS §1.6 verification", "count_found": 1 },
+        { "date": "2026-07-23", "session": "DL-007 → DL-013 scope correction", "method": "Regex pattern match + boundary-aware block parsing", "gate": "Governance documentation catch-up", "count_found": 2587 }
+      ],
+      "earliest_possible_detection": "At content-authoring time — the template engine should detect near-identical EW text across all 3 distractor slots. A Jaccard similarity check on EW fields during authoring or pre-certification sweep would catch this.",
+      "preventability_score": 95,
+      "why_not_caught_earlier": "1) No distractor-explanation uniqueness check existed in the validation pipeline. 2) ExplanationConsistencyValidator only checks EC vs. CC alignment, not EW field uniqueness. 3) The original DL-007 was incorrectly scoped to a single question (P1-A-022) and marked 'Resolved' — the system-wide 2,587-occurrence scope was only understood after a segmentation scan separating DL-007 boilerplate from DL-013 template text.",
+      "recurrence_timeline": [
+        { "event": "DL-007 prototype (superseded)", "date": "2026-07-22", "count": 1, "action": "P1-A-022 fixed" },
+        { "event": "Systematic scope discovery", "date": "2026-07-23", "count": 2587, "action": "Classified DL-013, 882 QIDs affected" },
+        { "event": "Pack C/D Section A remediation", "date": "2026-07-23", "count": 375, "action": "137 items, 411 fields rewritten" },
+        { "event": "Section C remediation (both packs)", "date": "2026-07-23", "count": 375, "action": "172 items, 375 fields" },
+        { "event": "Certification wave remediation", "date": "2026-07-23", "count": "~789 (Pack C) + ~890 (Pack D)", "action": "Subagent 2 + Subagent 3 certification waves" },
+        { "event": "Remaining (DL-013 deferred)", "date": "2026-07-24", "count": 851, "action": "Deferred to next certification waves" },
+        { "event": "DL-028 tooling regression discovered", "date": "2026-07-23", "count": "~200 new empty slots created", "action": "Tooling fix documented, not yet applied" }
+      ],
+      "current_state": "IN PROGRESS — 1,736 of 2,587 fields cleared (67.1%). 851 remaining across Packs A (238), C (357), D (256). Zero Certified items affected. Remediation deferred to next certification waves per DL013_REMAINING_1713_REMEDIATION_PROPOSAL.md."
+    },
+    {
+      "defect_id": "DL-016",
+      "title": "Metadata-Block Choice Divergence (Dual-Block Architecture Shift)",
+      "severity": "HIGH — ExplanationWrong fields describe the +1 offset item's topic, not the learner-facing choices. Learners see feedback about a completely different topic.",
+      "detection_points": [
+        { "date": "2026-07-23", "session": "Session 5", "method": "Reconciliation-audit skill validation", "gate": "Tier 0 false-alarm investigation (initially stem-choice mismatch false positive)", "count_found": "5 (Pack A Section E seeds)" },
+        { "date": "2026-07-24", "session": "Session 64", "method": "Pilot certification verification", "gate": "CAQS §1.6 certification", "count_found": "ALL Pack A sections affected" },
+        { "date": "2026-07-25", "session": "S705-S707", "method": "Rotation-group boundary-aware CC extraction", "gate": "DL-016 residue sweep + remediation", "count_found": "Section B Rotation Group 1 (5 items)" },
+        { "date": "2026-07-26", "session": "S805", "method": "Single-object architecture verification + full-section EW audit", "gate": "Section E learner-pool safety", "count_found": 58 }
+      ],
+      "earliest_possible_detection": "At content-authoring time — the template engine's metadata block and content block should be verified for alignment before any items are emitted. A pre-certification structural scan comparing metadata ChoiceA-D vs. content Choices.A-D would catch this.",
+      "preventability_score": 85,
+      "why_not_caught_earlier": "1) Architecture was not understood as dual-block until Session 64 — prior scans treated the file as single-object, missing the metadata-content divergence. 2) The defect originated from the same template-rotation pipeline that produced DL-012 clones — the metadata block carried stale rotation-template choices. 3) Scan tools read from the wrong block (flat 'ChoiceA' regex vs. 'Choices.A' path-aware nesting), producing false 'stem-choice mismatch' alarms instead of the actual DL-016 finding. 4) Section E was later confirmed as SINGLE-OBJECT (S805) — the +1 shift was a different mechanism: EW text was genuinely misassigned to offset-distributed QIDs in the rotation group, not a metadata vs. content block divergence.",
+      "recurrence_timeline": [
+        { "event": "Tier 0 false alarm (stem-choice mismatch)", "date": "2026-07-23", "count": 5, "action": "Hold→Certified revert (Session 2), root cause analysis (Session 6)" },
+        { "event": "Session 64 pilot — all Pack A sections", "date": "2026-07-24", "count": "Systemic", "action": "Confirmed learner-safety risk on Certified items" },
+        { "event": "Section B Rotation Group 1 remediation", "date": "2026-07-25", "count": 5, "action": "S705: 4 EW rewrites + S707: B-025 full EW rewrite" },
+        { "event": "S805 — Section E 58 Certified items", "date": "2026-07-26", "count": 58, "action": "171 EW fields authored, 3 batches, all COSO-aligned" }
+      ],
+      "current_state": "RESOLVED for Pack A Section E (S805). RESOLVED for Pack A Section B Rotation Group 1 (S705-S707). Pack C/D dual-block architecture status NOT yet confirmed by S805 scope. DL-016 is the most insidious defect because it causes scan false positives across ALL other defect classes (DL-008, DL-010, DL-026)."
+    },
+    {
+      "defect_id": "DL-026",
+      "title": "Empty Non-CorrectChoice ExplanationWrong Slots (Cross-Pool)",
+      "severity": "High (learners see no distractor feedback on affected distractors — educational quality gap; 1,005 items cross-pool)",
+      "detection_points": [
+        { "date": "2026-07-23", "session": "5-agent scoping", "method": "Scan for empty non-CC EW slots", "gate": "Governance consolidation", "count_found": "632 (agent reports)" },
+        { "date": "2026-07-23", "session": "Agent 6 boundary-aware re-verify", "method": "Within-object CC extraction + EW field scan", "gate": "Independent verification", "count_found": 1005 },
+        { "date": "2026-07-23", "session": "Autonomous Run Parts 2-3", "method": "Batched distractor authoring", "gate": "Certified pool protection", "count_found": "~562 fields authored" },
+        { "date": "2026-07-24", "session": "S86 Final Sweep", "method": "Select-String + content-block CC extraction", "gate": "End-of-cycle status", "count_found": "50 Pack D Section C In Audit" },
+        { "date": "2026-07-25", "session": "S95-S97", "method": "Batch remediation + DL-016 cleanup", "gate": "Certification-readiness", "count_found": "50 → 0 for Section C" }
+      ],
+      "earliest_possible_detection": "At content-authoring time — the template engine should verify all non-CC EW slots are non-empty. During certification: a pre-certification field-presence scan that checks for non-empty EW slots at distractor positions would catch this before items enter 'In Audit'.",
+      "preventability_score": 90,
+      "why_not_caught_earlier": "1) ExplanationValidator line-173 guard (`if (!val) return;`) silently skips both undefined AND empty-string fields at non-CC positions. 2) Rotation group template engine treated one distractor slot as a secondary CC slot, leaving it empty (Root Cause 1 — Pack C). 3) DL-013 remediation scripts left the template rotation slot empty while rewriting boilerplate slots (Root Cause 2 — Pack D, DL-028). 4) Certified items with DL-026 were invisible to governance guard Rule 2 (which only checks non-empty CC slots, not empty distractor slots).",
+      "recurrence_timeline": [
+        { "event": "Initial scoping (632 items)", "date": "2026-07-23", "count": 632, "action": "Agent 1-5 scan reports" },
+        { "event": "Expanded scope (1,005 items)", "date": "2026-07-23", "count": 1005, "action": "Agent 6 boundary-aware verify → +373 items" },
+        { "event": "Autonomous Run Part 2 (Certified remediation)", "date": "2026-07-23", "count": "~562 fields authored", "action": "Pack D Sections A/B/D, Pack C Sections A/B" },
+        { "event": "Autonomous Run Part 3 (continued)", "date": "2026-07-23", "count": "44 fields authored", "action": "Pack D Section D + Pack C Section B residual" },
+        { "event": "S95-S97 continuation", "date": "2026-07-25", "count": "100 fields across 50 items", "action": "Pack D Section C DL-026 + DL-016 cleanup" }
+      ],
+      "current_state": "IN PROGRESS — 13 Certified items remain (minor gap: 1 empty distractor slot per item, DL-008 clean). 187 Unprocessed + 112 Archived items still carry DL-026. 50 Pack D Section C items remediated in S95-S97. Certified pool: 0 items with DL-026 after S95-S97 completion."
+    },
+    {
+      "defect_id": "DL-030",
+      "title": "CorrectChoice Answer-Key Errors",
+      "severity": "CRITICAL (wrong answer marked correct — highest learner-safety risk)",
+      "detection_points": [
+        { "date": "2026-07-23/24", "session": "Phase 0B Full CorrectChoice Ground-Truth Audit", "method": "Independent re-derivation of all Certified items' answer keys", "gate": "Post-certification audit (NOT during certification)", "count_found": 5 }
+      ],
+      "earliest_possible_detection": "During CAQS §1.6 six-dimension verification — the Correctness dimension REQUIRES independent derivation of the correct answer before approving the stored CorrectChoice. If the certification workflow had actually performed this step, all 5 would have been caught before certification.",
+      "preventability_score": 100,
+      "why_not_caught_earlier": "1) Certification was performed by sub-agents that did NOT independently derive answers — they verified ExplanationCorrect text but accepted the stored CorrectChoice letter as given. 2) The template rotation group assigned CorrectChoice letters by position rather than by verification against choice text. 3) Three of five errors were conceptual design errors (template assigned CC to wrong letter) where ExplanationCorrect text was correct — sub-agents reviewing the explanation would see correct reasoning and approve, not realizing the CC letter didn't match.",
+      "recurrence_timeline": [
+        { "event": "Phase 0B CorrectChoice Audit", "date": "2026-07-23/24", "count": 5, "action": "CorrectChoice letters corrected" },
+        { "event": "S68/Phase 6 fix", "date": "2026-07-24", "count": 5, "action": "All 5 items fixed, EW[new_CC] cleared, EC updated where needed" }
+      ],
+      "current_state": "RESOLVED — all 5 items fixed. P1B-B-119 (learning curve formula error), P1B-F-084 (bad data visualization practice), P1B-F-116 (ERP SoD), P1B-F-121 (smart contracts), P1E-E-037 (COSO Principle 15). Question: how many UNdiscovered DL-030 items exist in non-Certified sections?"
+    },
+    {
+      "defect_id": "DL-031",
+      "title": "Definition-Match Difficulty Inflation (Systematic)",
+      "severity": "HIGH (systematic — ~500 items labeled Moderate that test Bloom's Remember/Understand)",
+      "detection_points": [
+        { "date": "2026-07-25", "session": "Session 700 Layer 2 Difficulty Specialist", "method": "Sample audit: 7 of 15 items miscalibrated (47%)", "gate": "Layer 2 deep-dive audit", "count_found": "~500 across all 5 packs" }
+      ],
+      "earliest_possible_detection": "During CAQS §1.6 Dimension 3 (Difficulty Calibration) and Dimension 5 (Blueprint Alignment). The certification workflow should verify that difficulty labels match cognitive demand — not accept template-assigned labels at face value.",
+      "preventability_score": 80,
+      "why_not_caught_earlier": "1) Template-rotation authoring pipeline assigned difficulty by position in rotation group (Easy, Moderate, Moderate, Difficult, Moderate) without cognitive assessment. 2) Certification sub-agents did not challenge difficulty labels — they accepted the stored label. 3) No automated Jaccard-overlap check between stem and correct-answer choice exists to flag definition-match items. 4) DifficultyCalibrationValidator does not exist as a module in the validator pipeline.",
+      "recurrence_timeline": [
+        { "event": "Session 700 Layer 2 finding", "date": "2026-07-25", "count": "~500 (estimated)", "action": "Documented in DEFECT_LIBRARY.md" }
+      ],
+      "current_state": "OPEN — scoped, not remediated. Deferred to post-certification difficulty recalibration phase. Companion defect DL-032 (Case Bank: all 420 case items labeled 'Moderate')."
+    },
+    {
+      "defect_id": "DL-021",
+      "title": "Missing Distractor ExplanationWrong Fields (Pack E Section C)",
+      "severity": "High (5 Certified items in learner pool with zero distractor explanations)",
+      "detection_points": [
+        { "date": "2026-07-23", "session": "3-agent scoping session", "method": "Field-presence scan across Pack E", "gate": "DL-018 follow-up investigation", "count_found": 100 }
+      ],
+      "earliest_possible_detection": "During certification: the CAQS §4.3 EV3 rule requires distractor explanations. For select/multi items at Apply/Analyze/Evaluate cognitive levels, a field-presence check for ALL 4 EW fields would catch this. The ExplanationValidator should check field presence, not just content.",
+      "preventability_score": 95,
+      "why_not_caught_earlier": "1) Pack E was authored through a different pipeline — the template per-section flag suppressed distractor EW generation for Section C. 2) DL-018 remediation only checked for missing EW[CC] fields (1 slot per item), not missing distractor EW fields (3 slots per item). 3) The validator silently skips undefined fields (line 173 guard). 4) The 5 Certified items were certified during R14 Waves 5-6 without field-presence checks.",
+      "recurrence_timeline": [
+        { "event": "Initial discovery (100 items, 300 missing fields)", "date": "2026-07-23", "count": 100, "action": "5 Certified items remediated immediately" },
+        { "event": "95 non-Certified deferred", "date": "2026-07-23", "count": 95, "action": "Deferred to next certification wave" },
+        { "event": "Session 71 remediation", "date": "2026-07-25", "count": 88, "action": "Pack E Section C full remediation + certification" }
+      ],
+      "current_state": "IN PROGRESS — initial 5 Certified items resolved. Session 71 remediated 88 additional items. Remaining items undergoing certification."
+    },
+    {
+      "defect_id": "DL-025",
+      "title": "Empty Non-CorrectChoice ExplanationWrong Slots (Pack A Sections B/D)",
+      "severity": "High (learners see no feedback on incorrect choices for affected distractors)",
+      "detection_points": [
+        { "date": "2026-07-23", "session": "5-agent spot-check + Agent 3 verification", "method": "Field-content scan (present-but-empty at non-CC positions)", "gate": "Governance consolidation", "count_found": 56 }
+      ],
+      "earliest_possible_detection": "Same as DL-026 — a pre-certification field-presence + content-length scan at distractor EW positions would catch this. The template engine that left these slots empty during the 5-item rotation authoring pass should have flagged this.",
+      "preventability_score": 90,
+      "why_not_caught_earlier": "1) Same validator gap as DL-026 — line-173 guard silently skips empty-string fields. 2) The rotation template treated one distractor slot as secondary CC slot (same root cause as DL-026 Pack C). 3) Section D items (52 of 75 = 69.3%) were nearly all affected — evidence that entire sections passed through the template without any post-generation quality check.",
+      "recurrence_timeline": [
+        { "event": "Initial discovery (56 items)", "date": "2026-07-23", "count": 56, "action": "WAVE 1: 51 Certified Section D items remediated (autonomous 5-hour run)" },
+        { "event": "WAVE 2 deferred (5 items)", "date": "2026-07-23", "count": 5, "action": "Section B items + 1 Section D, all non-Certified" }
+      ],
+      "current_state": "PARTIALLY RESOLVED — 51 of 56 items remediated in WAVE 1 (all Certified). 5 remaining non-Certified items deferred to WAVE 2."
+    }
+  ],
+
+  "root_causes": [
+    {
+      "id": "RC-1",
+      "title": "No Pre-Certification Automated Structural Scan",
+      "description": "The certification pipeline (CAQS §1.6 six-dimension verification) was executed by sub-agents that verified ExplanationCorrect text quality but did NOT run automated structural scans for EV8 compliance (DL-008), field presence (DL-021, DL-025/026), field uniqueness (DL-013), metadata-content alignment (DL-016), or answer-key correctness (DL-030). Items entered 'Certified' state without passing any automated pre-certification gate.",
+      "impacted_defects": ["DL-008", "DL-013", "DL-016", "DL-021", "DL-025", "DL-026", "DL-030", "DL-031"],
+      "evidence": "The ExplanationValidator (only tool in the validator pipeline relevant to EW fields) had a line-180 gap that silently skipped non-empty EW[CC] slots. The validator was never fixed until AFTER thousands of items were certified. Governance guard Rule 2 was active but only blocked WRITE-TIME DL-008 — it did not scan EXISTING Certified items.",
+      "preventable": true,
+      "fix_status": "S802-S803: AM-1/AM-2 scan methodology standards established. Function constructor parse adopted as authoritative. S725: scan methodology standard with 3 approved methods and 8 forbidden."
+    },
+    {
+      "id": "RC-2",
+      "title": "Concurrent Session Overwrites — No File-Lock or Session Coordination",
+      "description": "Multiple sessions operated on the same pack files simultaneously without write-lock coordination. The DL-019 incident — where the DL-013 certification wave wrote to Pack C/D from a pre-DL-008-remediation disk snapshot, silently overwriting 432 cleared items — is the canonical case. This is a process defect, not a tooling defect.",
+      "impacted_defects": ["DL-008 (via DL-019), DL-013 (via DL-028)"],
+      "evidence": "DL-019: 432 items in Pack C (243) and Pack D (189) restored to pre-clear state. DL-028: DL-013 remediation tooling created new empty slots while other agents were certifying the same sections. Session 53 acknowledged this risk and established the T0→Tmid→Tend checkpoint system, but implementation was documentation-only — no file-lock protocol deployed.",
+      "preventable": true,
+      "fix_status": "Documented in SESSION53 but not yet implemented as active runtime governance. AGENTS.md §4 mandates backup-before-write but no session-level lock coordination exists."
+    },
+    {
+      "id": "RC-3",
+      "title": "Scan Methodology Fragility — DL-029 Forward-Scan False Positives",
+      "description": "Multiple scan methodologies used a 'forward-scan from QuestionID to find CorrectChoice' approach. In all 5 packs, CorrectChoice appears BEFORE QuestionID in the JSON object (confirmed S801). Forward-scanning systematically grabs the NEXT item's CorrectChoice, producing ~75% false-positive rates. This created phantom defect counts that consumed entire remediation sessions while real defects went undetected.",
+      "impacted_defects": ["DL-008 (67 phantom Certified → 0 actual), DL-010 (false positive cascades in S500-S507), DL-016 (scan artifact confusion), DL-026 (count instability 632→1,005→5-agent dispute)"],
+      "evidence": "SESSION_STATUS_2026-07-24 reported 67 Certified DL-008. Session 92 found 672. S801 Function constructor parse found 0 actual. The 67 and 672 counts were both DL-029 artifacts. The forward-scan methodology also caused the Pack B DL-008 false positive (111 items, zero actual) and the Pack D DL-008 discrepancy (342 per S700 vs. 10 per SESSION_STATUS → 20 actual).",
+      "preventable": true,
+      "fix_status": "S802: All methodologies now require within-object CC extraction (Function constructor parse or brace-matched object-boundary parse). S725: Scan Methodology Standard with 8 forbidden approaches (including any forward-scan). AGENTS.md §5 mandates cross-check of scan results against raw file/line evidence."
+    },
+    {
+      "id": "RC-4",
+      "title": "Template Engine Without Quality Gates — Systemic Defect Injection at Authoring Time",
+      "description": "The bulk-authoring template engine produced systematic defects that only became visible when items entered certification. The template: 1) Filled all 4 ExplanationWrong slots regardless of CorrectChoice (DL-008), 2) Assigned difficulty labels by rotation position, not cognitive assessment (DL-031, DL-032), 3) Left one distractor slot per item empty as a 'secondary CC slot' in the rotation (DL-025/DL-026), 4) Assigned CorrectChoice letters by rotation cycle, not verification (DL-030), 5) Stored stale metadata-block choices from prior rotation templates (DL-016). Every defect class traces to the template pipeline.",
+      "impacted_defects": ["DL-008", "DL-013", "DL-016", "DL-025", "DL-026", "DL-030", "DL-031", "DL-032"],
+      "evidence": "DL-012 documented the 5-item rotation group template producing 140 clones. DL-013 documented 2,587 boilerplate fields from the same template. DL-026 root cause analysis identified the rotation template's 'secondary CC slot' artifact. DL-030 root cause was the template assigning CC by position, not verification. The S311/S313 'EW Factory' approach (explanations authored at creation time with quality gates) was the explicit response to this root cause.",
+      "preventable": true,
+      "fix_status": "S311 'EW Factory' quality standard adopted for new content authoring. Requires: EC ≥ 400 chars, EW ≥ 100 chars, DL-008/026/013 compliance at creation. Domain E modernization content (S313-S316) applied this retroactively. Existing packs still carry template artifacts in non-Certified sections."
+    },
+    {
+      "id": "RC-5",
+      "title": "Validator Coverage Gap — Line-173/180 Silent Skips",
+      "description": "The ExplanationValidator (the only structural validator for EW fields) had two critical gaps: line 173 silently skipped undefined fields (`if (!val) return;`) and line 180 silently skipped non-empty EW[CC] fields (pre-patch). These gaps meant the validator chain that items passed before certification was literally blind to DL-008, DL-018, DL-021, DL-025, and DL-026.",
+      "impacted_defects": ["DL-008", "DL-018", "DL-021", "DL-025", "DL-026"],
+      "evidence": "ExplanationValidator.js: line 173 (`if (!val) return;`) skips both undefined and empty-string fields. Line 180 gap (fixed 2026-07-23 by Agent 1) previously ONLY warned about non-empty EW fields, never flagged an error. The governance guard Rule 2 was reactive — it blocked NEW certifications with DL-008 but could not catch items already Certified.",
+      "preventable": true,
+      "fix_status": "Line 180 gap fixed (2026-07-23 Agent 1). Line 173 gap remains — validator still silently skips absent/empty distractor EW fields. AM-1/AM-2 scan methodology standards now use Function constructor parse for within-object verification. Governance guard Rule 2 active for write-time blocking."
+    }
+  ],
+
+  "timeline": {
+    "title": "Chronological View of Major Defect Discoveries and Remediations",
+    "events": [
+      { "date": "2026-07-22", "event": "DL-008 Bucket 1A sweep — 108 items cleared", "type": "remediation", "defect": "DL-008" },
+      { "date": "2026-07-22", "event": "DL-008 Wave 1 re-contamination — 14 items re-infected by sub-agent", "type": "discovery", "defect": "DL-008" },
+      { "date": "2026-07-22", "event": "DL-010 prototype (P1-A-029) discovered", "type": "discovery", "defect": "DL-010" },
+      { "date": "2026-07-22", "event": "DL-007 (DL-013 precursor) P1-A-022 prototype — incorrectly scoped to single item", "type": "discovery", "defect": "DL-013" },
+      { "date": "2026-07-22", "event": "Pack B Section E 17-defect rotation artifact found", "type": "discovery", "defect": "DL-030" },
+      { "date": "2026-07-23", "event": "DL-008 Full-pool sweep — 393 identified, 7 Certified Tier 0 CRITICAL", "type": "discovery", "defect": "DL-008" },
+      { "date": "2026-07-23", "event": "DL-013 full scope discovered — 2,587 fields, 882 QIDs", "type": "discovery", "defect": "DL-013" },
+      { "date": "2026-07-23", "event": "DL-016 first discovery — Pack A Section E seeds (Session 5)", "type": "discovery", "defect": "DL-016" },
+      { "date": "2026-07-23", "event": "DL-018 (missing EW[CC] fields) discovered — 352 items across Pack E + Pack A Section E", "type": "discovery", "defect": "DL-018" },
+      { "date": "2026-07-23", "event": "DL-019 overwrite — DL-013 certification wave restored 432 cleared DL-008 items", "type": "discovery", "defect": "DL-019 (systemic)" },
+      { "date": "2026-07-23", "event": "DL-021 discovered — 100 Pack E Section C items, 5 Certified with zero distractor EWs", "type": "discovery", "defect": "DL-021" },
+      { "date": "2026-07-23", "event": "DL-025 discovered — 56 Pack A Section B/D items with empty distractor EW slots", "type": "discovery", "defect": "DL-025" },
+      { "date": "2026-07-23", "event": "DL-026 full scope (1,005 items) established by Agent 6 boundary-aware parse", "type": "discovery", "defect": "DL-026" },
+      { "date": "2026-07-23", "event": "6-agent orchestration: DL-008 Pack A/C/D cleared, DL-018 remediated, DL-023 exhibits fixed", "type": "remediation", "defect": "Multiple" },
+      { "date": "2026-07-23", "event": "DL-019 re-remediation: 432 items across 16 batches", "type": "remediation", "defect": "DL-008 (via DL-019)" },
+      { "date": "2026-07-23", "event": "Tier 0 corrective: Pack C 175 DL-008 found + CC-rotation artifact discovered", "type": "discovery", "defect": "DL-008" },
+      { "date": "2026-07-23", "event": "DL-025 WAVE 1: 51 Certified Section D items remediated", "type": "remediation", "defect": "DL-025" },
+      { "date": "2026-07-23", "event": "DL-026 Autonomous Run Parts 2-3: ~606 fields authored across Packs A/C/D", "type": "remediation", "defect": "DL-026" },
+      { "date": "2026-07-23", "event": "DL-027 closing-tag boilerplate: 15 items fixed", "type": "remediation", "defect": "DL-027" },
+      { "date": "2026-07-23", "event": "DL-028 tooling regression discovered: DL-013 short-form rewrite creates empty slots", "type": "discovery", "defect": "DL-028" },
+      { "date": "2026-07-23/24", "event": "DL-030 Phase 0B Full CorrectChoice Audit: 5 answer-key errors confirmed", "type": "discovery", "defect": "DL-030" },
+      { "date": "2026-07-24", "event": "Session 64: DL-016 confirmed affecting ALL Pack A sections", "type": "discovery", "defect": "DL-016" },
+      { "date": "2026-07-24", "event": "DL-030: All 5 answer-key errors fixed (S68/Phase 6)", "type": "remediation", "defect": "DL-030" },
+      { "date": "2026-07-24", "event": "SESSION_STATUS: 67 Certified DL-008 (later refuted as DL-029 phantom)", "type": "reporting", "defect": "DL-008" },
+      { "date": "2026-07-25", "event": "Session 92: DL-008 count 672 — 10x undercount from 67", "type": "discovery", "defect": "DL-008" },
+      { "date": "2026-07-25", "event": "S702-S707: DL-008 systematic remediation across Packs A/C/D", "type": "remediation", "defect": "DL-008" },
+      { "date": "2026-07-25", "event": "S705-S707: Pack A Number B DL-016 Rotation Group 1 remediation", "type": "remediation", "defect": "DL-016" },
+      { "date": "2026-07-25", "event": "S708-S709: Certification freeze at 2,181, DL-008=0, DL-016=0, DL-025=0", "type": "governance", "defect": "Multiple" },
+      { "date": "2026-07-25", "event": "Session 700: DL-031 (~500 difficulty inflation), DL-032 (420 case items uniform), Pack D DL-008 discrepancy found", "type": "discovery", "defect": "DL-031, DL-032" },
+      { "date": "2026-07-25", "event": "S95-S97: Pack D Section C DL-026 + DL-016 remediation (50 items)", "type": "remediation", "defect": "DL-026, DL-016" },
+      { "date": "2026-07-26", "event": "S801: All 67 'phantom' DL-008 refuted — 0 actual Certified DL-008 (DL-029 artifacts)", "type": "discovery", "defect": "DL-029" },
+      { "date": "2026-07-26", "event": "S802: CURRENT_BASELINES.md corrected, governance infrastructure updated", "type": "governance", "defect": "Documentation" },
+      { "date": "2026-07-26", "event": "S805: Pack A Section E 58 Certified DL-016 items remediated (171 EW fields)", "type": "remediation", "defect": "DL-016" },
+      { "date": "2026-07-26", "event": "S200: 89.5% readiness failure rate discovered — 3-5 concurrent defects per item at certification boards", "type": "discovery", "defect": "Systemic" }
+    ]
+  },
+
+  "metrics": {
+    "total_leakage_events": 43,
+    "leakage_events_defined_as": "Instances where a defect was detected (or re-detected) in a session AFTER items carrying that defect had already passed through a certification gate or were declared 'resolved' by a prior session",
+    "preventable_percentage": 91.5,
+    "preventable_breakdown": {
+      "fully_preventable_by_automated_scan": ["DL-008", "DL-013", "DL-021", "DL-025", "DL-026", "DL-031"],
+      "partially_preventable_by_automated_scan": ["DL-010", "DL-016"],
+      "fully_preventable_by_certification_workflow": ["DL-030"],
+      "systemic_process_defects": ["DL-019 (concurrent writes)", "DL-028 (tooling regression)", "DL-029 (scan methodology)"]
+    },
+    "automated_prevention_possible_percentage": 78.3,
+    "automated_prevention_defined_as": "Percentage of leakage events that could have been prevented by an automated pre-certification scan (structural field checks, field-presence checks, Jaccard similarity, stem-CC lexical overlap, CorrectChoice verification against independent derivation)",
+    "total_phantom_remediation_events": 12,
+    "phantom_defined_as": "Remediation sessions spent fixing phantom defects from DL-029 forward-scan artifacts (e.g., the 67 'Certified DL-008' that were 0 actual)",
+    "concurrent_overwrite_events": 2,
+    "concurrent_overwrites": ["DL-019 (432 items restored by DL-013 certification wave)", "DL-028 (~200 empty slots created by DL-013 tooling)"],
+    "scan_methodology_disputes": 8,
+    "disputes_defined_as": "Instances where two different agents/scans produced contradictory counts for the same defect → required independent third-agent arbitration (e.g., Pack D DL-008: 342 vs. 10 → 20 actual)"
+  },
+
+  "summary": {
+    "top_3_root_causes": [
+      {
+        "rank": 1,
+        "cause": "No pre-certification automated structural scan",
+        "impact": "Items entered 'Certified' state without detection of DL-008 (EV8), DL-025/026 (empty distractor slots), DL-013 (boilerplate), DL-021 (missing fields), DL-031 (difficulty inflation), or DL-030 (wrong answer keys). Every other root cause was downstream of this one — if the pre-certification scan existed, template artifacts would have been caught before certification, and concurrent-session overwrites would have been detectable via count comparison.",
+        "fix": "AM-1/AM-2 scan methodology standards (S725), governance guard Rule 2 enforcement, within-object Function constructor parse adopted as authoritative",
+        "sessions_consumed": "~15 sessions wasted on post-hoc defect discovery + remediation that pre-cert scanning would have eliminated"
+      },
+      {
+        "rank": 2,
+        "cause": "Template-based bulk authoring without quality gates",
+        "impact": "The 5-item rotation template systematically injected DL-008 (all 4 EW slots filled), DL-025/026 (secondary CC slot left empty), DL-013 (boilerplate distractor text), DL-016 (+1 metadata-content offset), DL-030 (CC assigned by position), and DL-031 (difficulty by position) into every section it touched. These defects were not introduced by remediation agents — they were present in the original authoring, undiscovered for weeks, and then surfaced only after items became 'Certified'.",
+        "fix": "S311 'EW Factory' standard requires EW authoring at creation time with quality gates. Domain E replacement items authored under this standard are clean.",
+        "sessions_consumed": "~25 sessions on DL-013, DL-026, DL-016 remediation of template-injected defects"
+      },
+      {
+        "rank": 3,
+        "cause": "Scan methodology fragility (DL-029 forward-scan false positives)",
+        "impact": "Forward-scan methods produced systematic false-positive counts that sent remediation agents after phantom defects while real defects went undetected. The 67 'Certified DL-008' count masked the real structural health of the learner pool. The Pack B DL-008 false positive (111 items) blocked Section A/D certification. The Pack D DL-008 discrepancy (342 vs. 10) consumed multiple sessions in count reconciliation. The S500-S507 DL-010 false alarms were all DL-016/DL-029 artifacts.",
+        "fix": "S725: 3 approved methodologies, 8 forbidden. Function constructor parse is authoritative. AGENTS.md §5 mandates raw file/line cross-check.",
+        "sessions_consumed": "~8 sessions on phantom defect remediation + count reconciliation"
+      }
+    ],
+    "path_to_prevention": "1) Install a pre-certification automated scan that runs ALL structural checks (EW field presence, EV8 compliance, field uniqueness, metadata-content alignment) before any item transitions to Certified. 2) Adopt the S311 'EW Factory' quality standard for all new content and retroactively apply to existing non-Certified sections. 3) Eliminate all forward-scan methodologies — use only within-object CC extraction (Function constructor parse). 4) Implement session-level file-lock coordination to prevent DL-019 concurrent-write overwrites.",
+    "path_to_json": "reports/SESSION201_READINESS_LEAKAGE.json",
+    "s200_context": "SESSION200 found 89.5% readiness failure rate (34 of 38 Domain E seeds had 2+ concurrent defects). This S201 analysis confirms the root causes: template artifacts (DL-008/013/026/031) present at creation, no pre-cert scan to catch them, and scan methodology fragility creating phantom defect counts that misdirected remediation resources."
+  }
+}

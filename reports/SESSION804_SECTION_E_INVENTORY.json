@@ -1,0 +1,164 @@
+{
+  "session": "804",
+  "agent": "B",
+  "title": "Pack A Section E Inventory — Clone Group Analysis",
+  "date": "2026-07-26",
+  "methodology": "READ-ONLY. PowerShell Select-String + regex block extraction for QuestionID, question_state, Topic, Stem, CorrectChoice, DifficultyScore, CognitiveLevel. Stem comparison for clone group identification. All counts verified against S803 baseline.",
+  "section_e_total": 75,
+  "state_distribution": {
+    "Certified": 59,
+    "Archived": 16,
+    "Unprocessed": 0,
+    "In Audit": 0,
+    "Editorial Queue": 0
+  },
+  "s803_baseline_verified": {
+    "source": "reports/SESSION803_PORTFOLIO_HEALTH_REFRESH.json",
+    "claimed_certified": 59,
+    "claimed_archived": 16,
+    "verified_certified": 59,
+    "verified_archived": 16,
+    "match": true
+  },
+  "p1_e_056_status": "Certified — S803 restoration confirmed (was Archived in S802, now Certified)",
+  "clone_groups": [
+    {
+      "group_id": "G1",
+      "topic": "AP Duplicate Invoice Control",
+      "qids": ["P1-E-037", "P1-E-045", "P1-E-053", "P1-E-058", "P1-E-066"],
+      "states": {
+        "Certified": ["P1-E-037", "P1-E-045", "P1-E-053"],
+        "Archived": ["P1-E-058", "P1-E-066"]
+      },
+      "certified_count": 3,
+      "archived_count": 2,
+      "pattern": "identical stem: '[Company] paid two invoices with the same vendor, invoice number, and amount. Which response is most appropriate?'",
+      "company_names": ["Harbor", "Pioneer", "Yukon", "Granite", "Orion"],
+      "correct_choice_rotation": { "P1-E-037": "D", "P1-E-045": "B", "P1-E-053": "A" },
+      "difficulty_range": "1-2 (Moderate-Easy to Easy)",
+      "cognitive_levels": ["Understand", "Apply"]
+    },
+    {
+      "group_id": "G2",
+      "topic": "Payroll Terminated Employee Control",
+      "qids": ["P1-E-038", "P1-E-046", "P1-E-054", "P1-E-062", "P1-E-070"],
+      "states": {
+        "Certified": ["P1-E-038"],
+        "Archived": ["P1-E-046", "P1-E-054", "P1-E-062", "P1-E-070"]
+      },
+      "certified_count": 1,
+      "archived_count": 4,
+      "pattern": "identical stem: '[Company] paid a terminated employee for two pay periods. Which response is most appropriate?'",
+      "company_names": ["Iris", "Quartz", "Zephyr", "Harbor", "Pioneer"],
+      "correct_choice_rotation": { "P1-E-038": "C" }
+    },
+    {
+      "group_id": "G3",
+      "topic": "User Access Recertification",
+      "qids": ["P1-E-040", "P1-E-048", "P1-E-056", "P1-E-063", "P1-E-071"],
+      "states": {
+        "Certified": ["P1-E-040", "P1-E-048", "P1-E-056"],
+        "Archived": ["P1-E-063", "P1-E-071"]
+      },
+      "certified_count": 3,
+      "archived_count": 2,
+      "pattern": "identical stem: '[Company] finds employees retain access after changing departments. Which response is most appropriate?'",
+      "company_names": ["Keystone", "Summit", "Beacon", "Juniper", "Riverview"],
+      "correct_choice_notes": "P1-E-040=CC:B, P1-E-048=CC:D, P1-E-056=CC:D — two members share CC=D (imperfect rotation)",
+      "risk_flag": "TWO Certified items (P1-E-048, P1-E-056) share the same correct answer position (D) — if drawn in same session, learner gets identical stem + identical CC letter"
+    },
+    {
+      "group_id": "G4",
+      "topic": "Control Exception Root Cause",
+      "qids": ["P1-E-041", "P1-E-049", "P1-E-057", "P1-E-065", "P1-E-073"],
+      "states": {
+        "Certified": ["P1-E-041"],
+        "Archived": ["P1-E-049", "P1-E-057", "P1-E-065", "P1-E-073"]
+      },
+      "certified_count": 1,
+      "archived_count": 4,
+      "pattern": "identical stem: '[Company] finds recurring invoice approval exceptions in one region. Which response is most appropriate?'",
+      "company_names": ["Lumen", "Titan", "Crescent", "Keystone", "Summit"]
+    },
+    {
+      "group_id": "G5",
+      "topic": "Control Evidence Retention / Documentation of Control Performance",
+      "qids": ["P1-E-042", "P1-E-050"],
+      "states": {
+        "Certified": ["P1-E-042"],
+        "Archived": ["P1-E-050"]
+      },
+      "certified_count": 1,
+      "archived_count": 1,
+      "pattern": "near-identical stem: manager approves journal entries without retaining review evidence",
+      "notes": "Only 2 members found across the 75-item range — partial rotation group (expected 5). Other 3 members may exist in P1-E-059/060/061 range (currently absent from file).",
+      "correct_choice_notes": "P1-E-042=CC:C"
+    }
+  ],
+  "certified_clones": {
+    "count": 9,
+    "qids": ["P1-E-037", "P1-E-038", "P1-E-040", "P1-E-041", "P1-E-042", "P1-E-045", "P1-E-048", "P1-E-053", "P1-E-056"],
+    "groups_represented": 5,
+    "risk": "HIGH — 9 Certified items (15.3% of Section E learner pool) deliver near-identical content differentiated only by fictional company name. 3 of 5 clone groups (G1, G3) have 3 Certified members each, meaning the same stem could appear up to 3 times in a single practice session. G3 is particularly risky: P1-E-048 and P1-E-056 share the same CorrectChoice (D), creating a direct duplicate experience.",
+    "per_group": {
+      "G1_AP_Duplicate": { "certified": 3, "qids": ["P1-E-037", "P1-E-045", "P1-E-053"] },
+      "G2_Payroll_Terminated": { "certified": 1, "qids": ["P1-E-038"] },
+      "G3_User_Access": { "certified": 3, "qids": ["P1-E-040", "P1-E-048", "P1-E-056"] },
+      "G4_Control_Exception": { "certified": 1, "qids": ["P1-E-041"] },
+      "G5_Control_Evidence": { "certified": 1, "qids": ["P1-E-042"] }
+    }
+  },
+  "unique_items": {
+    "count": 66,
+    "categories": {
+      "block_1_unique_001_036": { "count": 36, "qids": ["P1-E-001 through P1-E-036"], "pattern": "Template-structured stems ('[Company] is reviewing internal controls related to [unique topic]. Which response is most appropriate?') — topically distinct, not clones" },
+      "rotation_seed_unique": { "count": 1, "qids": ["P1-E-039"], "topic": "Inventory cycle count investigation", "notes": "No clones found across Section E for this topic" },
+      "interleaved_unique": { "count": 4, "qids": ["P1-E-043", "P1-E-044", "P1-E-051", "P1-E-052"], "topics": ["Bank reconciliation", "Three-way match", "Lockbox system", "Vendor master file"] },
+      "block_2_unique_076_084": { "count": 9, "qids": ["P1-E-076 through P1-E-084"], "topics": ["IT general controls", "Inherent vs control risk", "COSO monitoring", "Segregation of duties", "Remediation prioritization", "IT change management", "Vendor master segregation", "Audit committee oversight", "ERP transaction integration"], "notes": "All Certified, distinct stems, second batch of unique items. P1-E-084 Topic is 'F.001 ERP transaction integration' — cross-domain item at boundary." }
+    },
+    "note": "66 unique = 75 total - 9 clone members. Breakdown: 36 (001-036) + 1 (039) + 4 (043,044,051,052) + 9 (076-084) + 16 (Archived unique: 046,047,049,050,054,055,057,058,062,063,065,066,070,071,073,074). 50 unique Certified + 16 unique Archived = 66."
+  },
+  "sample_stems": {
+    "clone_evidence": [
+      { "G1": "P1-E-037: 'Harbor paid two invoices with the same vendor, invoice number, and amount. Which response is most appropriate?'" },
+      { "G1": "P1-E-045: 'Pioneer paid two invoices with the same vendor, invoice number, and amount. Which response is most appropriate?'" },
+      { "G1": "P1-E-053: 'Yukon paid two invoices with the same vendor, invoice number, and amount. Which response is most appropriate?'" },
+      { "G2": "P1-E-038: 'Iris paid a terminated employee for two pay periods. Which response is most appropriate?'" },
+      { "G2": "P1-E-046: 'Quartz paid a terminated employee for two pay periods. Which response is most appropriate?'" },
+      { "G3": "P1-E-040: 'Keystone finds employees retain access after changing departments. Which response is most appropriate?'" },
+      { "G3": "P1-E-048: 'Summit finds employees retain access after changing departments. Which response is most appropriate?'" },
+      { "G3": "P1-E-056: 'Beacon finds employees retain access after changing departments. Which response is most appropriate?'" },
+      { "G4": "P1-E-041: 'Lumen finds recurring invoice approval exceptions in one region. Which response is most appropriate?'" },
+      { "G4": "P1-E-049: 'Titan finds recurring invoice approval exceptions in one region. Which response is most appropriate?'" },
+      { "G5": "P1-E-042: 'Meridian has managers approve journal entries but does not retain evidence of review.'" },
+      { "G5": "P1-E-050: 'A manager reviews and approves journal entries each month but does not initial, date, or otherwise document that the rev...'" }
+    ],
+    "unique_evidence": [
+      { "P1-E-001": "Vantage is reviewing internal controls related to risk assessment for new revenue system." },
+      { "P1-E-035": "Frontier has one employee opening mail, recording receipts, and depositing checks." },
+      { "P1-E-039": "Juniper uses cycle counts and identifies repeated shortages in high-value components." },
+      { "P1-E-076": "Morgan transferred from accounts payable to treasury last month, but her system profile still grants her full access..." },
+      { "P1-E-084": "Vantage is evaluating ERP transaction integration in a finance transformation project." }
+    ]
+  },
+  "delivery_pool_impact": {
+    "total_certified_in_section_e": 59,
+    "certified_clone_items": 9,
+    "certified_unique_items": 50,
+    "pct_clones_in_delivery_pool": 15.3,
+    "worst_case_same_topic_draw": 3,
+    "worst_case_description": "If a practice session draws P1-E-040, P1-E-048, and P1-E-056 simultaneously, the learner sees the same stem 3 times with only the fictional company name changed."
+  },
+  "s804_recommendation": {
+    "action": "Archival candidate assessment for the 9 Certified clone items",
+    "rationale": "9 Certified items deliver near-identical educational content. For each clone group, archiving N-1 members and retaining 1 seed reduces redundancy while preserving topic coverage.",
+    "per_group_recommendation": {
+      "G1_AP_Duplicate": "Retain 1 seed (P1-E-037 recommended as first instance). Archive P1-E-045 and P1-E-053. 3 Certified → 1 Certified, -2 Certified.",
+      "G3_User_Access": "Retain 1 seed (P1-E-040 recommended). Archive P1-E-048 and P1-E-056. 3 Certified → 1 Certified, -2 Certified.",
+      "G2_Payroll": "Already has only 1 Certified member (P1-E-038). No action.",
+      "G4_Control_Exception": "Already has only 1 Certified member (P1-E-041). No action.",
+      "G5_Control_Evidence": "Already has only 1 Certified member (P1-E-042). No action."
+    },
+    "net_impact": "Archiving 4 items reduces Section E Certified from 59 to 55. Pack A total Certified would drop from 482 to 478. This is a defensible quality improvement, not a regression — the archived items add zero unique educational value."
+  }
+}

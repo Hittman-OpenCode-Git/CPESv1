@@ -1,0 +1,198 @@
+{
+  "session": "S132",
+  "callSiteInventory": [
+    {
+      "function": "_recommendNextAction",
+      "line": 355,
+      "method": "recordRecommendationDelivery",
+      "type": "recommendation",
+      "subType": "welcome_action",
+      "via": "direct"
+    },
+    {
+      "function": "preExamBriefing",
+      "line": 904,
+      "method": "recordRecommendationDelivery",
+      "type": "recommendation",
+      "subType": "pre_exam_briefing",
+      "via": "direct (per-topic loop)"
+    },
+    {
+      "function": "_generateSessionRecap",
+      "line": 3080,
+      "method": "recordRecommendationDelivery",
+      "type": "recommendation",
+      "subType": "session_recap",
+      "via": "direct"
+    },
+    {
+      "function": "_recordRecommendation (wrapper)",
+      "line": 3578,
+      "method": "recordRecommendationDelivery",
+      "type": "recommendation",
+      "subType": "multi (dispatched by caller)",
+      "via": "wrapper, called at lines 1231, 1532, 3381, 3405"
+    },
+    {
+      "function": "_recommendSimilar",
+      "line": 3772,
+      "method": "logRecommendation",
+      "type": "qid_recommendation",
+      "subType": "similar_question",
+      "via": "direct"
+    },
+    {
+      "function": "_recommendNext",
+      "line": 3849,
+      "method": "logRecommendation",
+      "type": "qid_recommendation",
+      "subType": "persistent_weak|declining_or_unstable",
+      "via": "direct"
+    },
+    {
+      "function": "_generateRecoverySet",
+      "line": 3947,
+      "method": "logRecommendation",
+      "type": "qid_recommendation",
+      "subType": "recovery_set",
+      "via": "direct"
+    }
+  ],
+  "recommendationProvenanceStatus": [
+    {
+      "function": "_generateNextBestStep",
+      "subsystem": "S123",
+      "hasProvenance": true,
+      "provenanceType": "recordRecommendationDelivery (via _appendNextBestStep → _recordRecommendation wrapper at line 1231)",
+      "storageSurface": "recommendationOutcomes"
+    },
+    {
+      "function": "_suggestFocusAreas",
+      "subsystem": "S125",
+      "hasProvenance": true,
+      "provenanceType": "recordRecommendationDelivery (via _appendFocusAreas → _recordRecommendation wrapper at line 1532)",
+      "storageSurface": "recommendationOutcomes"
+    },
+    {
+      "function": "_generateStudyStrategy",
+      "subsystem": "S128",
+      "hasProvenance": true,
+      "provenanceType": "recordRecommendationDelivery (via _showStudyStrategy → _recordRecommendation wrapper at line 3405)",
+      "storageSurface": "recommendationOutcomes"
+    },
+    {
+      "function": "_generateWeeklyDigest",
+      "subsystem": "S127",
+      "hasProvenance": true,
+      "provenanceType": "recordRecommendationDelivery (via _showWeeklyDigest → _recordRecommendation wrapper at line 3381)",
+      "storageSurface": "recommendationOutcomes"
+    },
+    {
+      "function": "_recommendNext",
+      "subsystem": "S115",
+      "hasProvenance": true,
+      "provenanceType": "logRecommendation (direct at line 3849)",
+      "storageSurface": "recommendationLog"
+    },
+    {
+      "function": "_recommendSimilar",
+      "subsystem": "S115",
+      "hasProvenance": true,
+      "provenanceType": "logRecommendation (direct at line 3772)",
+      "storageSurface": "recommendationLog"
+    },
+    {
+      "function": "_generateRecoverySet",
+      "subsystem": "S115",
+      "hasProvenance": true,
+      "provenanceType": "logRecommendation (direct at line 3947)",
+      "storageSurface": "recommendationLog"
+    },
+    {
+      "function": "_recommendNextAction",
+      "subsystem": "S117",
+      "hasProvenance": true,
+      "provenanceType": "recordRecommendationDelivery (direct at line 355)",
+      "storageSurface": "recommendationOutcomes"
+    },
+    {
+      "function": "_generateSessionRecap",
+      "subsystem": "S126",
+      "hasProvenance": true,
+      "provenanceType": "recordRecommendationDelivery (direct at line 3080)",
+      "storageSurface": "recommendationOutcomes"
+    },
+    {
+      "function": "preExamBriefing",
+      "subsystem": "S117",
+      "hasProvenance": true,
+      "provenanceType": "recordRecommendationDelivery (direct at line 904)",
+      "storageSurface": "recommendationOutcomes"
+    }
+  ],
+  "observationProvenanceStatus": [
+    {
+      "function": "_identifyLearningPatterns",
+      "subsystem": "S124",
+      "recordsObservations": false,
+      "storageSurface": "none",
+      "detail": "Generates observations array (topic_strength, persistent_weakness, improving, recurring_misconception, repeated_calculation) returned to _appendLearningPatterns for display only. Never persisted to recommendationOutcomes, recommendationLog, or any other storage surface."
+    },
+    {
+      "function": "_suggestFocusAreas",
+      "subsystem": "S125",
+      "recordsObservations": true,
+      "storageSurface": "recommendationOutcomes",
+      "detail": "Suggestions are recorded via _appendFocusAreas → _recordRecommendation → recordRecommendationDelivery at line 1532."
+    },
+    {
+      "function": "_generateSessionRecap",
+      "subsystem": "S126",
+      "recordsObservations": true,
+      "storageSurface": "recommendationOutcomes",
+      "detail": "Directly calls recordRecommendationDelivery at line 3080 with type 'session_recap'."
+    },
+    {
+      "function": "_generateWeeklyDigest",
+      "subsystem": "S127",
+      "recordsObservations": true,
+      "storageSurface": "recommendationOutcomes",
+      "detail": "Recorded via _showWeeklyDigest → _recordRecommendation at line 3381 for each weak topic."
+    },
+    {
+      "function": "_generateStudyStrategy",
+      "subsystem": "S128",
+      "recordsObservations": true,
+      "storageSurface": "recommendationOutcomes",
+      "detail": "Recorded via _showStudyStrategy → _recordRecommendation at line 3405 for each weak topic."
+    },
+    {
+      "function": "_generateStrategyEffectiveness",
+      "subsystem": "S129",
+      "recordsObservations": false,
+      "storageSurface": "none",
+      "detail": "This is a read-only consumer of recommendationOutcomes. It produces analytics output but does not generate new observations that need storage."
+    }
+  ],
+  "provenanceCoverage": {
+    "recommendations": {
+      "total": 10,
+      "withProvenance": 10,
+      "withoutProvenance": 0,
+      "pct": 100
+    },
+    "observations": {
+      "totalFunctions": 6,
+      "recordingObservations": 4,
+      "notRecording": 2,
+      "notRecordingDetail": "_identifyLearningPatterns (ephemeral observations never stored), _generateStrategyEffectiveness (consumer only, not a producer)"
+    }
+  },
+  "remainingGaps": [
+    "_identifyLearningPatterns (S124) generates 5 categories of structured observations — topic_strength, persistent_weakness, improving, recurring_misconception, repeated_calculation — that are returned and displayed via _appendLearningPatterns but never persisted to recommendationOutcomes, recommendationLog, sessions, or any other learner-state storage surface. These observations are ephemeral: spoken/rendered once and lost. Without storage they cannot participate in longitudinal trend analysis, recurrence detection, or outcome classification.",
+    "_generateStrategyEffectiveness (S129) is not a gap per se — it is a read-only consumer of recommendationOutcomes, not a producer of new observations. However, its analytics output (e.g. 'Recommendations followed by improvement' classifications) is also ephemeral and never stored for historical comparison across sessions."
+  ],
+  "s131CoveragePreserved": true,
+  "s131CoveragePreservedDetail": "All 3 S131-new functions (_recommendNextAction, _generateSessionRecap, preExamBriefing) have provenance via recordRecommendationDelivery. Welcome-action, session-recap, and pre-exam-briefing recommendations all flow into recommendationOutcomes. The 100% recommendation-provenance coverage achieved in S131 is fully maintained.",
+  "auditTimestamp": "2026-04-16T00:00:00.000Z"
+}

@@ -1,0 +1,2500 @@
+P1-A-001|A|A|Remember|1|Certified|A.002 income statement discontinued operation presentation
+P1-A-002|A|A|Understand|1|Certified|A.003 cash flow from operations indirect method
+P1-A-003|A|A|Apply|2|Certified|A.004 statement of changes in equity treasury stock
+P1-A-004|A|A|Understand|2|Certified|A.005 revenue performance obligations
+P1-A-005|A|A|Understand|2|Certified|A.006 contract liability for advance collections
+P1-A-006|A|A|Evaluate|2|Certified|A.007 allowance method doubtful accounts
+P1-A-007|A|A|Understand|2|Certified|A.008 inventory lower of cost and NRV
+P1-A-008|A|A|Understand|2|Certified|A.009 LIFO liquidation effect
+P1-A-009|A|A|Understand|1|Certified|A.010 straight-line depreciation expense
+P1-A-010|A|A|Apply|2|Certified|A.011 asset impairment trigger
+P1-A-011|A|A|Understand|2|Certified|A.012 contingent liability accrual
+P1-A-012|A|A|Understand|2|Certified|A.013 subsequent event recognized condition
+P1-A-013|A|A|Understand|2|Certified|A.014 operating lease lessee recognition
+P1-A-014|A|A|Understand|2|Certified|A.015 equity method investment influence
+P1-A-015|A|A|Apply|1|Certified|A.016 consolidation control principle
+P1-A-016|A|A|Understand|2|Certified|A.017 intercompany inventory profit elimination
+P1-A-017|A|A|Apply|1|Certified|A.018 noncontrolling interest presentation
+P1-A-018|A|A|Apply|1|Certified|A.019 OCI unrealized debt security
+P1-A-019|A|A|Apply|1|Certified|A.020 integrated reporting value creation
+P1-A-020|A|A|Apply|1|Certified|A.021 disclosure notes accounting policies
+P1-A-021|A|A|Understand|2|Certified|A.022 GAAP IFRS development costs
+P1-A-022|A|A|Apply|1|Certified|A.023 fair value hierarchy observable inputs
+P1-A-023|A|A|Understand|2|Certified|A.024 cash equivalents maturity
+P1-A-024|A|A|Understand|2|Certified|A.025 deferred tax liability calculation
+P1-A-025|A|A|Apply|2|Certified|A.026 accounting equation equity calculation 1
+P1-A-026|A|A|Apply|2|Certified|A.027 revenue recognized on shipped units 2
+P1-A-027|A|A|Apply|2|Certified|A.028 cost of goods sold from inventory flow 3
+P1-A-028|A|A|Apply|2|Certified|A.029 straight-line depreciation expense 4
+P1-A-029|A|A|Apply|2|Certified|A.030 indirect operating cash flow adjustment 5
+P1-A-030|A|A|Apply|3|Certified|A.031 retained earnings rollforward 6
+P1-A-031|A|A|Apply|2|Certified|A.032 current assets classification total 7
+P1-A-032|A|A|Apply|2|Certified|A.033 net sales after returns and allowances 8
+P1-A-033|A|A|Apply|2|Certified|A.034 loss contingency range disclosure 9
+P1-A-034|A|A|Apply|2|Certified|A.035 basic EPS weighted-average shares 10
+P1-A-035|A|A|Apply|2|Certified|A.036 accounting equation equity calculation 11
+P1-A-036|A|A|Apply|2|Certified|A.037 revenue recognized on shipped units 12
+P1-A-037|A|A|Apply|2|Certified|A.038 cost of goods sold from inventory flow 13
+P1-A-038|A|A|Apply|2|Certified|A.039 straight-line depreciation expense 14
+P1-A-039|A|A|Apply|2|Certified|A.040 indirect operating cash flow adjustment 15
+P1-A-040|A|A|Apply|3|Certified|A.041 retained earnings rollforward 16
+P1-A-041|A|A|Apply|2|Certified|A.042 current assets classification total 17
+P1-A-042|A|A|Apply|2|Certified|A.043 net sales after returns and allowances 18
+P1-A-043|A|A|Apply|2|Certified|A.044 loss contingency range disclosure 19
+P1-A-044|A|A|Apply|2|Archived|A.045 basic EPS weighted-average shares 20
+P1-A-045|A|A|Apply|2|Certified|A.046 accounting equation equity calculation 21
+P1-A-046|A|A|Apply|2|Certified|A.047 revenue recognized on shipped units 22
+P1-A-047|A|A|Apply|2|Certified|A.048 cost of goods sold from inventory flow 23
+P1-A-048|A|A|Apply|2|Certified|A.049 straight-line depreciation expense 24
+P1-A-049|A|A|Apply|2|Certified|A.050 indirect operating cash flow adjustment 25
+P1-A-050|A|A|Apply|3|Certified|A.051 retained earnings rollforward 26
+P1-A-051|A|A|Apply|2|Certified|A.052 current assets classification total 27
+P1-A-052|A|A|Apply|2|Certified|A.053 net sales after returns and allowances 28
+P1-A-053|A|A|Apply|2|Certified|A.054 loss contingency reasonably possible disclosure
+P1-A-054|A|A|Understand|2|Certified|A.055 basic EPS weighted-average shares 30
+P1-A-055|A|A|Apply|2|Certified|A.056 accounting equation equity calculation 31
+P1-A-056|A|A|Apply|2|Certified|A.057 revenue recognized on shipped units 32
+P1-A-057|A|A|Apply|2|Certified|A.058 cost of goods sold from inventory flow 33
+P1-A-058|A|A|Apply|2|Certified|A.059 straight-line depreciation expense 34
+P1-A-059|A|A|Apply|2|Certified|A.060 indirect operating cash flow adjustment 35
+P1-A-060|A|A|Apply|3|Certified|A.061 retained earnings rollforward 36
+P1-A-061|A|A|Apply|2|Certified|A.062 current assets classification total 37
+P1-A-062|A|A|Apply|2|Certified|A.063 net sales after returns and allowances 38
+P1-A-063|A|A|Apply|2|Certified|A.064 loss contingency range disclosure 39
+P1-A-064|A|A|Apply|2|Archived|A.065 basic EPS weighted-average shares 40
+P1-A-065|A|A|Apply|2|Certified|A.066 accounting equation equity calculation 41
+P1-A-066|A|A|Apply|2|Certified|A.067 revenue recognized on shipped units 42
+P1-A-067|A|A|Apply|2|Certified|A.068 cost of goods sold from inventory flow 43
+P1-A-068|A|A|Apply|2|Certified|A.069 straight-line depreciation expense 44
+P1-A-069|A|A|Apply|2|Certified|A.070 indirect operating cash flow adjustment 45
+P1-A-070|A|A|Apply|3|Certified|A.071 retained earnings rollforward 46
+P1-A-071|A|A|Apply|2|Certified|A.072 current assets classification total 47
+P1-A-072|A|A|Apply|2|Certified|A.073 net sales after returns and allowances 48
+P1-A-073|A|A|Apply|2|Certified|A.074 loss contingency range no best estimate
+P1-A-074|A|A|Apply|2|Certified|A.075 basic EPS weighted-average shares 50
+P1-A-075|A|B|Apply|2|Certified|B.001 mission to tactical planning linkage
+P1-B-001|A|B|Understand|2|Certified|B.002 top-down budgeting limitation
+P1-B-002|A|B|Understand|2|Certified|B.003 participative budgeting slack risk
+P1-B-003|A|B|Understand|2|Certified|B.004 rolling budget horizon
+P1-B-004|A|B|Understand|2|Certified|B.005 zero-based budgeting review
+P1-B-005|A|B|Understand|2|Certified|B.006 activity-based budgeting drivers
+P1-B-006|A|B|Understand|2|Certified|B.007 flexible budget purpose
+P1-B-007|A|B|Understand|2|Certified|B.008 sales budget sequencing
+P1-B-008|A|B|Understand|2|Certified|B.009 cash budget minimum balance
+P1-B-009|A|B|Understand|2|Certified|B.010 forecasting causal model
+P1-B-010|A|B|Understand|2|Certified|B.011 time-series trend
+P1-B-011|A|B|Understand|2|Certified|B.012 expected value decision planning
+P1-B-012|A|B|Understand|2|Certified|B.013 learning curve budgeting
+P1-B-013|A|B|Understand|2|Certified|B.014 sensitivity analysis budget
+P1-B-014|A|B|Apply|1|Certified|B.015 pro forma financial statements
+P1-B-015|A|B|Understand|1|Certified|B.016 project budgeting distinction
+P1-B-016|A|B|Apply|1|Certified|B.017 production budget units 1
+P1-B-017|A|B|Apply|3|Certified|B.018 direct materials purchases budget 2
+P1-B-018|A|B|Apply|3|Certified|B.019 cash collections schedule 3
+P1-B-019|A|B|Apply|3|Certified|B.020 flexible budget cost 4
+P1-B-020|A|B|Apply|3|Certified|B.021 expected value budget scenario 5
+P1-B-021|A|B|Apply|3|Certified|B.022 regression forecast cost equation 6
+P1-B-022|A|B|Apply|3|Certified|B.023 learning curve average time after doubling 7
+P1-B-023|A|B|Apply|3|Certified|B.024 cash budget borrowing need 8
+P1-B-024|A|B|Apply|3|Certified|B.025 budgetary slack incentive design 9
+P1-B-025|A|B|Apply|1|Certified|B.026 forecast error analysis 10
+P1-B-026|A|B|Understand|2|Certified|B.027 budget committee coordination 11
+P1-B-027|A|B|Apply|1|Certified|B.028 continuous planning update trigger 12
+P1-B-028|A|B|Apply|1|Certified|B.029 production budget units 13
+P1-B-029|A|B|Apply|3|Certified|B.030 direct materials purchases budget 14
+P1-B-030|A|B|Apply|3|Certified|B.031 cash collections schedule 15
+P1-B-031|A|B|Apply|3|Certified|B.032 flexible budget cost 16
+P1-B-032|A|B|Apply|3|Certified|B.033 expected value budget scenario 17
+P1-B-033|A|B|Apply|3|Certified|B.034 regression forecast cost equation 18
+P1-B-034|A|B|Apply|3|Certified|B.035 learning curve incremental unit time
+P1-B-035|A|B|Apply|3|Certified|B.036 cash budget borrowing need 20
+P1-B-036|A|B|Apply|3|Certified|B.037 flexible budget variance interpretation
+P1-B-037|A|B|Apply|3|Certified|B.038 moving average forecast calculation
+P1-B-038|A|B|Apply|3|Certified|B.039 cash collections schedule
+P1-B-039|A|B|Apply|3|Certified|B.040 standard costing variance investigation threshold
+P1-B-040|A|B|Apply|3|Certified|B.041 production budget units 25
+P1-B-041|A|B|Apply|3|Certified|B.042 direct materials purchases budget 26
+P1-B-042|A|B|Apply|3|Certified|B.043 cash collections schedule 27
+P1-B-043|A|B|Apply|3|Certified|B.044 flexible budget cost 28
+P1-B-044|A|B|Apply|3|Certified|B.045 expected value budget scenario 29
+P1-B-045|A|B|Apply|3|Certified|B.046 regression forecast cost equation 30
+P1-B-046|A|B|Apply|3|Certified|B.047 rolling forecast update frequency
+P1-B-047|A|B|Apply|2|Certified|B.048 cash budget borrowing need 32
+P1-B-048|A|B|Apply|3|Certified|B.049 sales budget seasonality adjustment
+P1-B-049|A|B|Apply|2|Certified|B.050 exponential smoothing weighting concept
+P1-B-050|A|B|Understand|3|Certified|B.051 selling and administrative expense budget components
+P1-B-051|A|B|Apply|1|Certified|B.052 budget slack ethical considerations
+P1-B-052|A|B|Apply|1|Certified|B.053 production budget units 37
+P1-B-053|A|B|Apply|3|Certified|B.054 direct materials purchases budget 38
+P1-B-054|A|B|Apply|3|Certified|B.055 cash collections schedule 39
+P1-B-055|A|B|Apply|3|Certified|B.056 flexible budget cost 40
+P1-B-056|A|B|Apply|3|Certified|B.057 expected value budget scenario 41
+P1-B-057|A|B|Apply|3|Certified|B.058 regression forecast cost equation 42
+P1-B-058|A|B|Apply|3|Certified|B.059 regression forecast calculation
+P1-B-059|A|B|Apply|3|Certified|B.060 cash budget borrowing need 44
+P1-B-060|A|B|Apply|3|Certified|B.061 production budget with target ending inventory
+P1-B-061|A|B|Apply|3|Certified|B.062 learning curve vs experience curve distinction
+P1-B-062|A|B|Understand|1|Certified|B.063 budgeted income statement sequencing
+P1-B-063|A|B|Apply|1|Certified|B.064 capacity planning and budgeted volume
+P1-B-064|A|B|Understand|2|Certified|B.065 production budget units 49
+P1-B-065|A|B|Apply|3|Certified|B.066 direct materials purchases budget 50
+P1-B-066|A|B|Apply|3|Certified|B.067 cash collections schedule 51
+P1-B-067|A|B|Apply|3|Certified|B.068 flexible budget cost 52
+P1-B-068|A|B|Apply|3|Certified|B.069 expected value budget scenario 53
+P1-B-069|A|B|Apply|3|Certified|B.070 regression forecast cost equation 54
+P1-B-070|A|B|Apply|3|Certified|B.071 zero-based budgeting rationale
+P1-B-071|A|B|Apply|1|Certified|B.072 cash budget borrowing need 56
+P1-B-072|A|B|Apply|3|Certified|B.073 budget manual purpose
+P1-B-073|A|B|Apply|1|Certified|B.074 production budget units
+P1-B-074|A|B|Apply|3|Certified|B.075 participative budgeting drawback
+P1-B-075|A|B|Understand|3|Certified|B.076 contingency planning for supply disruption
+P1-B-076|A|B|Apply|3|Certified|B.077 production budget units 61
+P1-B-077|A|B|Apply|3|Certified|B.078 direct materials purchases budget 62
+P1-B-078|A|B|Apply|3|Certified|B.079 cash collections schedule 63
+P1-B-079|A|B|Apply|3|Certified|B.080 flexible budget cost 64
+P1-B-080|A|B|Apply|3|Certified|B.081 expected value budget scenario 65
+P1-B-081|A|B|Apply|3|Certified|B.082 regression forecast cost equation 66
+P1-B-082|A|B|Apply|3|Certified|B.083 learning curve cost estimate application
+P1-B-083|A|B|Apply|3|Certified|B.084 cash budget borrowing need 68
+P1-B-084|A|B|Apply|3|Certified|B.085 direct materials purchases budget
+P1-B-085|A|B|Apply|3|Certified|B.086 forecast bias detection
+P1-B-086|A|B|Understand|1|Certified|B.087 budget committee composition role
+P1-B-087|A|B|Apply|1|Certified|B.088 budgeted balance sheet purpose
+P1-B-088|A|B|Understand|1|Certified|B.089 production budget units 73
+P1-B-089|A|B|Apply|3|Certified|B.090 direct materials purchases budget 74
+P1-B-090|A|B|Apply|3|Certified|B.091 cash collections schedule 75
+P1-B-091|A|B|Apply|3|Certified|B.092 flexible budget cost 76
+P1-B-092|A|B|Apply|3|Certified|B.093 expected value budget scenario 77
+P1-B-093|A|B|Apply|3|Certified|B.094 regression forecast cost equation 78
+P1-B-094|A|B|Apply|3|Certified|B.095 top-down vs bottom-up budgeting
+P1-B-095|A|B|Apply|1|Certified|B.096 cash budget borrowing need 80
+P1-B-096|A|B|Apply|3|Certified|B.097 budget review and revision timing
+P1-B-097|A|B|Apply|1|Certified|B.098 cash budget disbursement timing
+P1-B-098|A|B|Apply|3|Certified|B.099 kaizen budgeting concept
+P1-B-099|A|B|Apply|1|Certified|B.100 standard cost variance types overview
+P1-B-100|A|C|Apply|1|Certified|C.001 standard cost system purpose
+P1-C-001|A|C|Understand|2|Certified|C.002 management by exception
+P1-C-002|A|C|Understand|2|Certified|C.003 controllable cost performance
+P1-C-003|A|C|Understand|2|Certified|C.004 cost center evaluation
+P1-C-004|A|C|Understand|2|Certified|C.005 profit center evaluation
+P1-C-005|A|C|Understand|1|Certified|C.006 investment center evaluation
+P1-C-006|A|C|Understand|2|Certified|C.007 balanced scorecard perspectives
+P1-C-007|A|C|Understand|2|Certified|C.008 leading versus lagging indicator
+P1-C-008|A|C|Understand|2|Certified|C.009 benchmarking application
+P1-C-009|A|C|Understand|2|Certified|C.010 nonfinancial quality metrics
+P1-C-010|A|C|Understand|2|Certified|C.011 transfer price goal congruence
+P1-C-011|A|C|Understand|2|Certified|C.012 residual income advantage
+P1-C-012|A|C|Understand|1|Certified|C.013 productivity measure interpretation
+P1-C-013|A|C|Understand|2|Certified|C.014 efficiency versus effectiveness
+P1-C-014|A|C|Understand|2|Certified|C.015 variance responsibility nuance
+P1-C-015|A|C|Understand|2|Certified|C.016 direct material price variance 1
+P1-C-016|A|C|Apply|3|Certified|C.017 direct material quantity variance 2
+P1-C-017|A|C|Apply|3|Certified|C.018 direct labor rate variance 3
+P1-C-018|A|C|Apply|3|Certified|C.019 direct labor efficiency variance 4
+P1-C-019|A|C|Apply|3|Certified|C.020 flexible budget variance spending 5
+P1-C-020|A|C|Apply|3|Certified|C.021 ROI investment center measure 6
+P1-C-021|A|C|Apply|3|Certified|C.022 residual income investment charge 7
+P1-C-022|A|C|Apply|3|Certified|C.023 sales volume versus flexible budget variance 8
+P1-C-023|A|C|Apply|3|Certified|C.024 balanced scorecard causal linkage 9
+P1-C-024|A|C|Understand|2|Certified|C.025 transfer price capacity condition 10
+P1-C-025|A|C|Understand|1|Certified|C.026 KPI controllability alignment 11
+P1-C-026|A|C|Understand|2|Certified|C.027 variance investigation threshold 12
+P1-C-027|A|C|Understand|2|Certified|C.028 direct material price variance 13
+P1-C-028|A|C|Apply|3|Certified|C.029 direct material quantity variance 14
+P1-C-029|A|C|Apply|3|Certified|C.030 direct labor rate variance 15
+P1-C-030|A|C|Apply|3|Certified|C.031 direct labor efficiency variance 16
+P1-C-031|A|C|Apply|3|Certified|C.032 flexible budget variance spending 17
+P1-C-032|A|C|Apply|3|Certified|C.033 ROI investment center measure 18
+P1-C-033|A|C|Apply|3|Certified|C.034 residual income investment charge 19
+P1-C-034|A|C|Evaluate|3|Certified|C.035 sales volume versus flexible budget variance 20
+P1-C-035|A|C|Apply|3|Certified|C.036 balanced scorecard perspective classification
+P1-C-036|A|C|Remember|1|Certified|C.037 transfer price at market price with excess capacity
+P1-C-037|A|C|Apply|3|Certified|C.038 KPI controllability alignment 23
+P1-C-038|A|C|Understand|2|Certified|C.039 variance investigation threshold 24
+P1-C-039|A|C|Understand|2|Certified|C.040 direct material price variance 25
+P1-C-040|A|C|Apply|3|Certified|C.041 direct material quantity variance 26
+P1-C-041|A|C|Apply|3|Certified|C.042 direct labor rate variance 27
+P1-C-042|A|C|Apply|3|Certified|C.043 direct labor efficiency variance 28
+P1-C-043|A|C|Apply|3|Certified|C.044 flexible budget variance spending 29
+P1-C-044|A|C|Apply|3|Certified|C.045 ROI investment center measure 30
+P1-C-045|A|C|Apply|3|Certified|C.046 residual income investment charge 31
+P1-C-046|A|C|Apply|3|Certified|C.047 sales volume versus flexible budget variance 32
+P1-C-047|A|C|Apply|3|Certified|C.048 lag vs lead indicator distinction
+P1-C-048|A|C|Apply|1|Certified|C.049 negotiated transfer price range
+P1-C-049|A|C|Apply|2|Certified|C.050 KPI controllability alignment 35
+P1-C-050|A|C|Understand|2|Certified|C.051 variance investigation threshold 36
+P1-C-051|A|C|Understand|2|Certified|C.052 direct material price variance 37
+P1-C-052|A|C|Apply|3|Certified|C.053 direct material quantity variance 38
+P1-C-053|A|C|Apply|3|Certified|C.054 direct labor rate variance 39
+P1-C-054|A|C|Apply|3|Certified|C.055 direct labor efficiency variance 40
+P1-C-055|A|C|Apply|3|Certified|C.056 flexible budget variance spending 41
+P1-C-056|A|C|Apply|3|Certified|C.057 ROI investment center measure 42
+P1-C-057|A|C|Apply|3|Certified|C.058 residual income investment charge 43
+P1-C-058|A|C|Apply|3|Certified|C.059 sales volume versus flexible budget variance 44
+P1-C-059|A|C|Apply|3|Certified|C.060 scorecard measure overload risk
+P1-C-060|A|C|Apply|3|Certified|C.061 dual transfer pricing rationale
+P1-C-061|A|C|Apply|3|Certified|C.062 KPI controllability alignment 47
+P1-C-062|A|C|Understand|2|Certified|C.063 variance investigation threshold 48
+P1-C-063|A|C|Understand|2|Certified|C.064 direct material price variance 49
+P1-C-064|A|C|Apply|3|Certified|C.065 direct material quantity variance 50
+P1-C-065|A|C|Apply|3|Certified|C.066 direct labor rate variance 51
+P1-C-066|A|C|Apply|3|Certified|C.067 direct labor efficiency variance 52
+P1-C-067|A|C|Apply|3|Certified|C.068 flexible budget variance spending 53
+P1-C-068|A|C|Apply|3|Certified|C.069 ROI investment center measure 54
+P1-C-069|A|C|Apply|3|Certified|C.070 residual income investment charge 55
+P1-C-070|A|C|Apply|3|Certified|C.071 sales volume versus flexible budget variance 56
+P1-C-071|A|C|Apply|3|Certified|C.072 customer perspective metric example
+P1-C-072|A|C|Understand|1|Certified|C.073 cost-based transfer pricing limitation
+P1-C-073|A|C|Apply|1|Certified|C.074 KPI controllability alignment 59
+P1-C-074|A|C|Understand|2|Certified|C.075 variance investigation threshold 60
+P1-C-075|A|C|Understand|2|Certified|C.076 direct material price variance 61
+P1-C-076|A|C|Apply|3|Certified|C.077 direct material quantity variance 62
+P1-C-077|A|C|Apply|3|Certified|C.078 direct labor rate variance 63
+P1-C-078|A|C|Apply|3|Certified|C.079 direct labor efficiency variance 64
+P1-C-079|A|C|Apply|3|Certified|C.080 flexible budget variance spending 65
+P1-C-080|A|C|Apply|3|Certified|C.081 ROI investment center measure 66
+P1-C-081|A|C|Apply|3|Certified|C.082 residual income investment charge 67
+P1-C-082|A|C|Apply|3|Certified|C.083 sales volume versus flexible budget variance 68
+P1-C-083|A|C|Apply|3|Certified|C.084 strategy map cause-and-effect logic
+P1-C-084|A|C|Understand|3|Certified|C.085 goal congruence in transfer pricing
+P1-C-085|A|C|Apply|1|Certified|C.086 KPI controllability alignment 71
+P1-C-086|A|C|Understand|2|Certified|C.087 variance investigation threshold 72
+P1-C-087|A|C|Understand|2|Certified|C.088 direct material price variance 73
+P1-C-088|A|C|Apply|3|Certified|C.089 direct material quantity variance 74
+P1-C-089|A|C|Apply|3|Certified|C.090 direct labor rate variance 75
+P1-C-090|A|C|Apply|3|Certified|C.091 direct labor efficiency variance 76
+P1-C-091|A|C|Apply|3|Certified|C.092 flexible budget variance spending 77
+P1-C-092|A|C|Apply|3|Certified|C.093 ROI investment center measure 78
+P1-C-093|A|C|Apply|3|Certified|C.094 residual income investment charge 79
+P1-C-094|A|C|Apply|3|Certified|C.095 sales volume versus flexible budget variance 80
+P1-C-095|A|C|Apply|3|Certified|C.096 scorecard alignment with strategy
+P1-C-096|A|C|Understand|1|Certified|C.097 transfer price with no excess capacity
+P1-C-097|A|C|Apply|3|Certified|C.098 KPI controllability alignment 83
+P1-C-098|A|C|Understand|2|Certified|C.099 variance investigation threshold 84
+P1-C-099|A|C|Understand|2|Certified|C.100 direct material price variance 85
+P1-C-100|A|D|Apply|3|Certified|D.001 job order costing use case
+P1-D-001|A|D|Understand|2|Certified|D.002 process costing use case
+P1-D-002|A|D|Understand|2|Certified|D.003 normal costing timing
+P1-D-003|A|D|Apply|1|Certified|D.004 overhead overapplied underapplied calculation
+P1-D-004|A|D|Apply|3|Certified|D.005 equivalent units concept
+P1-D-005|A|D|Understand|2|Certified|D.006 weighted-average process costing
+P1-D-006|A|D|Understand|2|Certified|D.007 ABC activity rate materials handling
+P1-D-007|A|D|Apply|3|Certified|D.008 unit-level versus batch-level activity
+P1-D-008|A|D|Understand|2|Certified|D.009 service department direct method
+P1-D-009|A|D|Understand|2|Certified|D.010 service department step method
+P1-D-010|A|D|Understand|2|Certified|D.011 reciprocal allocation method
+P1-D-011|A|D|Understand|2|Certified|D.012 target costing market price
+P1-D-012|A|D|Understand|2|Certified|D.013 life-cycle costing scope
+P1-D-013|A|D|Understand|2|Certified|D.014 kaizen costing focus
+P1-D-014|A|D|Apply|1|Certified|D.015 quality cost prevention
+P1-D-015|A|D|Understand|2|Certified|D.016 quality cost appraisal
+P1-D-016|A|D|Understand|2|Certified|D.017 internal failure cost
+P1-D-017|A|D|Understand|2|Certified|D.018 external failure cost
+P1-D-018|A|D|Understand|2|Certified|D.019 lean waste reduction
+P1-D-019|A|D|Understand|2|Certified|D.020 theory of constraints bottleneck
+P1-D-020|A|D|Understand|2|Certified|D.021 predetermined overhead applied to job 1
+P1-D-021|A|D|Apply|3|Certified|D.022 overhead underapplied or overapplied 2
+P1-D-022|A|D|Apply|3|Certified|D.023 equivalent units conversion cost 3
+P1-D-023|A|D|Apply|3|Certified|D.024 cost per equivalent unit weighted average 4
+P1-D-024|A|D|Apply|3|Certified|D.025 ABC setup cost assignment 5
+P1-D-025|A|D|Apply|3|Certified|D.026 target cost allowable cost 6
+P1-D-026|A|D|Apply|3|Certified|D.027 process improvement learning effect cost 7
+P1-D-027|A|D|Apply|3|Certified|D.028 ABC facility-level cost allocation
+P1-D-028|A|D|Apply|3|Certified|D.029 value chain cost management 9
+P1-D-029|A|D|Understand|2|Certified|D.030 JIT inventory risk control 10
+P1-D-030|A|D|Understand|2|Certified|D.031 predetermined overhead applied to job 11
+P1-D-031|A|D|Apply|3|Certified|D.032 overhead underapplied or overapplied 12
+P1-D-032|A|D|Apply|3|Certified|D.033 equivalent units conversion cost 13
+P1-D-033|A|D|Apply|3|Certified|D.034 cost per equivalent unit weighted average 14
+P1-D-034|A|D|Apply|3|Certified|D.035 ABC setup cost assignment 15
+P1-D-035|A|D|Apply|3|Certified|D.036 target cost allowable cost 16
+P1-D-036|A|D|Apply|3|Certified|D.037 process improvement learning effect cost 17
+P1-D-037|A|D|Apply|3|Certified|D.038 batch-level activity classification
+P1-D-038|A|D|Apply|3|Certified|D.039 value chain cost management 19
+P1-D-039|A|D|Understand|2|Certified|D.040 JIT and supplier relationship dependency
+P1-D-040|A|D|Apply|1|Certified|D.041 predetermined overhead applied to job 21
+P1-D-041|A|D|Apply|3|Certified|D.042 overhead underapplied or overapplied 22
+P1-D-042|A|D|Apply|3|Certified|D.043 equivalent units conversion cost 23
+P1-D-043|A|D|Apply|3|Certified|D.044 cost per equivalent unit weighted average 24
+P1-D-044|A|D|Apply|3|Certified|D.045 ABC setup cost assignment 25
+P1-D-045|A|D|Apply|3|Certified|D.046 target cost allowable cost 26
+P1-D-046|A|D|Apply|3|Certified|D.047 process improvement learning effect cost 27
+P1-D-047|A|D|Apply|3|Certified|D.048 ABC product-level cost allocation
+P1-D-048|A|D|Apply|3|Certified|D.049 value chain cost management 29
+P1-D-049|A|D|Understand|2|Certified|D.050 JIT effect on inventory carrying costs
+P1-D-050|A|D|Apply|1|Certified|D.051 predetermined overhead applied to job 31
+P1-D-051|A|D|Apply|3|Certified|D.052 overhead underapplied or overapplied 32
+P1-D-052|A|D|Apply|3|Certified|D.053 equivalent units conversion cost 33
+P1-D-053|A|D|Apply|3|Certified|D.054 cost per equivalent unit weighted average 34
+P1-D-054|A|D|Apply|3|Certified|D.055 ABC setup cost assignment 35
+P1-D-055|A|D|Apply|3|Certified|D.056 target cost allowable cost 36
+P1-D-056|A|D|Apply|3|Certified|D.057 process improvement learning effect cost 37
+P1-D-057|A|D|Apply|3|Certified|D.058 ABC cost pool allocation calculation
+P1-D-058|A|D|Apply|3|Certified|D.059 value chain cost management 39
+P1-D-059|A|D|Understand|2|Certified|D.060 backflush costing under JIT
+P1-D-060|A|D|Apply|3|Certified|D.061 predetermined overhead applied to job 41
+P1-D-061|A|D|Apply|3|Certified|D.062 overhead underapplied or overapplied 42
+P1-D-062|A|D|Apply|3|Certified|D.063 equivalent units conversion cost 43
+P1-D-063|A|D|Apply|3|Certified|D.064 cost per equivalent unit weighted average 44
+P1-D-064|A|D|Apply|3|Certified|D.065 ABC setup cost assignment 45
+P1-D-065|A|D|Apply|3|Certified|D.066 target cost allowable cost 46
+P1-D-066|A|D|Apply|3|Certified|D.067 process improvement learning effect cost 47
+P1-D-067|A|D|Apply|3|Certified|D.068 ABC versus traditional overhead cost comparison
+P1-D-068|A|D|Apply|3|Certified|D.069 value chain cost management 49
+P1-D-069|A|D|Understand|2|Certified|D.070 JIT quality requirement
+P1-D-070|A|D|Understand|1|Certified|D.071 predetermined overhead applied to job 51
+P1-D-071|A|D|Apply|3|Certified|D.072 overhead underapplied or overapplied 52
+P1-D-072|A|D|Apply|3|Certified|D.073 equivalent units conversion cost 53
+P1-D-073|A|D|Apply|3|Certified|D.074 cost per equivalent unit weighted average 54
+P1-D-074|A|D|Apply|3|Certified|D.075 ABC setup cost assignment 55
+P1-D-075|A|E|Apply|3|Certified|E.001 control environment tone at the top
+P1-E-001|A|E|Understand|2|Certified|E.002 risk assessment for new revenue system
+P1-E-002|A|E|Understand|2|Certified|E.003 purchase order splitting control weakness
+P1-E-003|A|E|Apply|2|Certified|E.004 information and communication exception reports
+P1-E-004|A|E|Understand|2|Certified|E.005 monitoring separate evaluations
+P1-E-005|A|E|Understand|2|Certified|E.006 segregation authorization custody recording
+P1-E-006|A|E|Apply|1|Certified|E.007 three-way match preventive control
+P1-E-007|A|E|Apply|3|Certified|E.008 bank reconciliation adjusted balance calculation
+P1-E-008|A|E|Apply|3|Certified|E.009 corrective controls after failed batch
+P1-E-009|A|E|Understand|1|Certified|E.010 physical safeguards over inventory
+P1-E-010|A|E|Understand|1|Certified|E.011 access controls for payroll master file
+P1-E-011|A|E|Understand|1|Certified|E.012 change management approval evidence
+P1-E-012|A|E|Understand|1|Certified|E.013 IT general controls versus application controls
+P1-E-013|A|E|Understand|2|Certified|E.014 input validation edit checks
+P1-E-014|A|E|Understand|2|Certified|E.015 three-way match before payment
+P1-E-015|A|E|Understand|2|Certified|E.016 vendor master file maintenance
+P1-E-016|A|E|Understand|2|Certified|E.017 blank check custody
+P1-E-017|A|E|Understand|2|Certified|E.018 customer credit approval
+P1-E-018|A|E|Understand|2|Certified|E.019 shipping document prenumbering
+P1-E-019|A|E|Understand|2|Certified|E.020 monthly account reconciliation
+P1-E-020|A|E|Understand|2|Certified|E.021 management override risk
+P1-E-021|A|E|Understand|2|Certified|E.022 fraud opportunity reduction
+P1-E-022|A|E|Understand|2|Certified|E.023 SOX management assessment
+P1-E-023|A|E|Understand|2|Certified|E.024 control deficiency severity
+P1-E-024|A|E|Understand|2|Certified|E.025 compensating controls small office
+P1-E-025|A|E|Understand|2|Certified|E.026 internal audit independence
+P1-E-026|A|E|Understand|2|Certified|E.027 external audit reliance on controls
+P1-E-027|A|E|Understand|1|Certified|E.028 documentation of control performance
+P1-E-028|A|E|Understand|1|Certified|E.029 continuous monitoring dashboard
+P1-E-029|A|E|Understand|2|Certified|E.030 data backup recovery control
+P1-E-030|A|E|Understand|2|Certified|E.031 disaster recovery test
+P1-E-031|A|E|Understand|2|Certified|E.032 privacy access restriction
+P1-E-032|A|E|Understand|2|Certified|E.033 whistleblower channel
+P1-E-033|A|E|Understand|2|Certified|E.034 board audit committee oversight
+P1-E-034|A|E|Understand|2|Certified|E.035 remediation tracking
+P1-E-035|A|E|Understand|2|Certified|E.036 cash receipts segregation scenario 1
+P1-E-036|A|E|Understand|2|Certified|E.037 purchasing authorization threshold 2
+P1-E-037|A|E|Understand|2|Certified|E.038 accounts payable duplicate invoice control 3
+P1-E-038|A|E|Understand|2|Certified|E.039 payroll terminated employee control 4
+P1-E-039|A|E|Understand|2|Certified|E.040 inventory cycle count investigation 5
+P1-E-040|A|E|Understand|2|Certified|E.041 user access recertification 6
+P1-E-041|A|E|Understand|2|Certified|E.042 control exception root cause 7
+P1-E-042|A|E|Understand|2|Certified|E.043 control evidence retention 8
+P1-E-043|A|E|Understand|2|Certified|E.044 bank reconciliation control purpose
+P1-E-044|A|E|Apply|1|Certified|E.045 three-way match control
+P1-E-045|A|E|Apply|1|Certified|E.046 accounts payable duplicate invoice control 11
+P1-E-046|A|E|Understand|2|Archived|E.047 payroll terminated employee control 12
+P1-E-047|A|E|Understand|2|Archived|E.048 perpetual vs periodic inventory control
+P1-E-048|A|E|Apply|1|Certified|E.049 user access recertification 14
+P1-E-049|A|E|Understand|2|Archived|E.050 control exception root cause 15
+P1-E-050|A|E|Understand|2|Archived|E.051 documentation of control performance
+P1-E-051|A|E|Understand|1|Certified|E.052 lockbox system control benefit
+P1-E-052|A|E|Apply|1|Certified|E.053 approved vendor master file control
+P1-E-053|A|E|Apply|1|Certified|E.054 accounts payable duplicate invoice control 19
+P1-E-054|A|E|Understand|2|Archived|E.055 payroll terminated employee control 20
+P1-E-055|A|E|Understand|2|Archived|E.056 independent physical count control
+P1-E-056|A|E|Understand|1|Archived|E.057 user access recertification 22
+P1-E-057|A|E|Understand|2|Archived|E.058 control exception root cause 23
+P1-E-058|A|E|Understand|2|Archived|E.062 accounts payable duplicate invoice control 27
+P1-E-062|A|E|Understand|2|Archived|E.063 payroll terminated employee control 28
+P1-E-063|A|E|Understand|2|Archived|E.065 user access recertification 30
+P1-E-065|A|E|Understand|2|Archived|E.066 control exception root cause 31
+P1-E-066|A|E|Understand|2|Archived|E.070 accounts payable duplicate invoice control 35
+P1-E-070|A|E|Understand|2|Archived|E.071 payroll terminated employee control 36
+P1-E-071|A|E|Understand|2|Archived|E.073 user access recertification 38
+P1-E-073|A|E|Understand|2|Archived|E.074 control exception root cause 39
+P1-E-074|A|E|Understand|2|Archived|E.076 control monitoring separate evaluations
+P1-E-076|A|E|Apply|3|Certified|E.077 it general controls access
+P1-E-077|A|E|Understand|1|Certified|E.078 inherent risk vs control risk
+P1-E-078|A|E|Apply|3|Certified|E.079 coso monitoring activities ongoing vs separate
+P1-E-079|A|E|Apply|2|Certified|E.080 segregation of duties cash custody and recording
+P1-E-080|A|E|Apply|2|Certified|E.081 remediation of control deficiency prioritization
+P1-E-081|A|E|Understand|2|Certified|E.082 it change management emergency bypass
+P1-E-082|A|E|Understand|1|Certified|E.083 vendor master file segregation
+P1-E-083|A|E|Understand|2|Certified|E.084 audit committee oversight independence
+P1-E-084|A|F|Understand|1|Certified|F.001 ERP transaction integration
+P1-F-001|A|F|Understand|1|Certified|F.002 EPM planning and consolidation
+P1-F-002|A|F|Apply|1|Certified|F.003 AIS audit trail
+P1-F-003|A|F|Understand|1|Certified|F.004 master data governance
+P1-F-004|A|F|Apply|1|Certified|F.005 data dictionary definitions
+P1-F-005|A|F|Understand|1|Certified|F.006 data life cycle retention
+P1-F-006|A|F|Apply|1|Certified|F.007 data quality completeness
+P1-F-007|A|F|Apply|1|Certified|F.008 data quality accuracy
+P1-F-008|A|F|Understand|1|Certified|F.009 data quality timeliness
+P1-F-009|A|F|Understand|1|Certified|F.010 data cleansing duplicate customers
+P1-F-010|A|F|Understand|1|Certified|F.011 relational database primary key
+P1-F-011|A|F|Apply|1|Certified|F.012 database referential integrity
+P1-F-012|A|F|Apply|1|Certified|F.013 data warehouse purpose
+P1-F-013|A|F|Analyze|1|Certified|F.014 ETL process controls
+P1-F-014|A|F|Understand|1|Certified|F.015 business intelligence dashboard
+P1-F-015|A|F|Apply|1|Certified|F.016 data visualization misleading axis
+P1-F-016|A|F|Apply|2|Certified|F.017 descriptive analytics dashboard
+P1-F-017|A|F|Apply|1|Certified|F.018 diagnostic analytics root cause
+P1-F-018|A|F|Apply|1|Certified|F.019 predictive analytics forecast
+P1-F-019|A|F|Apply|1|Certified|F.020 prescriptive analytics recommendation
+P1-F-020|A|F|Understand|2|Certified|F.021 classification model use
+P1-F-021|A|F|Remember|1|Certified|F.022 clustering customer segments
+P1-F-022|A|F|Understand|1|Certified|F.023 regression analytics driver
+P1-F-023|A|F|Understand|1|Certified|F.024 outlier detection
+P1-F-024|A|F|Understand|1|Certified|F.025 sampling bias
+P1-F-025|A|F|Apply|1|Certified|F.026 correlation not causation
+P1-F-026|A|F|Understand|1|Certified|F.027 RPA invoice matching
+P1-F-027|A|F|Understand|2|Certified|F.028 AI model governance
+P1-F-028|A|F|Understand|2|Certified|F.029 machine learning training data
+P1-F-029|A|F|Understand|1|Certified|F.030 blockchain shared ledger
+P1-F-030|A|F|Understand|2|Certified|F.031 cloud computing scalability risk
+P1-F-031|A|F|Understand|1|Certified|F.032 cybersecurity phishing control
+P1-F-032|A|F|Understand|1|Certified|F.033 multi-factor authentication
+P1-F-033|A|F|Understand|2|Certified|F.034 least privilege access
+P1-F-034|A|F|Understand|2|Certified|F.035 encryption at rest and transit
+P1-F-035|A|F|Understand|1|Certified|F.036 backup recovery objective
+P1-F-036|A|F|Understand|2|Certified|F.037 incident response plan
+P1-F-037|A|F|Understand|2|Certified|F.038 SDLC requirements phase
+P1-F-038|A|F|Understand|2|Certified|F.039 SDLC testing before deployment
+P1-F-039|A|F|Understand|1|Certified|F.040 change control migration
+P1-F-040|A|F|Understand|2|Certified|F.041 system interface reconciliation
+P1-F-041|A|F|Understand|1|Certified|F.042 API access control
+P1-F-042|A|F|Understand|2|Certified|F.043 spreadsheet control risk
+P1-F-043|A|F|Understand|2|Certified|F.044 version control analytics model
+P1-F-044|A|F|Understand|1|Certified|F.045 data privacy minimization
+P1-F-045|A|F|Understand|2|Certified|F.046 retention policy legal hold
+P1-F-046|A|F|Understand|2|Certified|F.047 continuous auditing exception
+P1-F-047|A|F|Understand|1|Certified|F.048 process mining use
+P1-F-048|A|F|Understand|2|Certified|F.049 digital transformation finance role
+P1-F-049|A|F|Understand|1|Certified|F.050 technology ROI benefits tracking
+P1-F-050|A|F|Understand|1|Certified|F.051 data visualization KPI selection
+P1-F-051|A|F|Understand|2|Certified|F.052 dashboard drilldown design
+P1-F-052|A|F|Understand|2|Certified|F.053 self-service BI governance
+P1-F-053|A|F|Understand|2|Certified|F.054 data lineage tracing
+P1-F-054|A|F|Understand|2|Certified|F.055 metadata management
+P1-F-055|A|F|Understand|2|Certified|F.056 robot exception handling
+P1-F-056|A|F|Understand|2|Certified|F.057 model validation holdout data
+P1-F-057|A|F|Understand|1|Certified|F.058 algorithmic bias monitoring
+P1-F-058|A|F|Understand|2|Certified|F.059 cybersecurity logging SIEM
+P1-F-059|A|F|Understand|1|Certified|F.060 third-party vendor cyber risk
+P1-F-060|A|F|Understand|1|Certified|F.061 SOC report use
+P1-F-061|A|F|Understand|2|Certified|F.062 mobile device management
+P1-F-062|A|F|Understand|2|Certified|F.063 segregation of duties in ERP
+P1-F-063|A|F|Understand|2|Certified|F.064 role-based access control
+P1-F-064|A|F|Understand|2|Certified|F.065 password policy weakness
+P1-F-065|A|F|Understand|2|Certified|F.066 patch management
+P1-F-066|A|F|Understand|2|Certified|F.067 vulnerability scanning
+P1-F-067|A|F|Understand|2|Certified|F.068 business continuity for systems
+P1-F-068|A|F|Apply|1|Certified|F.069 real-time analytics use
+P1-F-069|A|F|Understand|2|Certified|F.070 data lake governance
+P1-F-070|A|F|Understand|2|Certified|F.071 unstructured data analysis
+P1-F-071|A|F|Understand|2|Certified|F.072 natural language processing use
+P1-F-072|A|F|Understand|1|Certified|F.073 optical character recognition invoice
+P1-F-073|A|F|Understand|1|Certified|F.074 workflow automation approval
+P1-F-074|A|F|Understand|2|Certified|F.075 electronic records retention
+P1-F-075|A||Understand|2|Certified|
+P1B-A-076|B|A|Apply|2|Certified|B-A.077 transaction price allocation
+P1B-A-077|B|A|Apply|3|Certified|B-A.078 over-time revenue recognition
+P1B-A-078|B|A|Apply|3|Certified|B-A.079 variable consideration
+P1B-A-079|B|A|Apply|2|Certified|B-A.080 licenses revenue recognition
+P1B-A-080|B|A|Understand|2|Certified|B-A.081 contract costs
+P1B-A-081|B|A|Apply|2|Certified|B-A.082 principal vs agent
+P1B-A-082|B|A|Apply|4|Certified|B-A.083 point-in-time vs over-time
+P1B-A-083|B|A|Understand|3|Certified|B-A.084 current vs noncurrent classification
+P1B-A-084|B|A|Remember|3|Certified|B-A.085 intangible assets classification
+P1B-A-085|B|A|Apply|3|Certified|B-A.086 equity components calculation
+P1B-A-086|B|A|Apply|4|Certified|B-A.087 accrued liabilities
+P1B-A-087|B|A|Apply|2|Certified|B-A.088 deferred revenue
+P1B-A-088|B|A|Apply|2|Certified|B-A.089 restricted cash
+P1B-A-089|B|A|Apply|2|Certified|B-A.090 held-for-sale classification
+P1B-A-090|B|A|Apply|2|Certified|B-A.091 single-step vs multi-step
+P1B-A-091|B|A|Understand|1|Certified|B-A.092 discontinued operations
+P1B-A-092|B|A|Apply|3|Certified|B-A.093 extraordinary items elimination
+P1B-A-093|B|A|Apply|2|Certified|B-A.094 earnings per share
+P1B-A-094|B|A|Apply|3|Certified|B-A.095 comprehensive income
+P1B-A-095|B|A|Apply|3|Certified|B-A.096 matching principle
+P1B-A-096|B|A|Remember|1|Certified|B-A.097 gross profit calculation
+P1B-A-097|B|A|Apply|2|Certified|B-A.098 operating income calculation
+P1B-A-098|B|A|Apply|3|Certified|B-A.099 operating activities classification
+P1B-A-099|B|A|Apply|2|Certified|B-A.100 investing activities
+P1B-A-100|B|A|Apply|2|Certified|B-A.101 financing activities
+P1B-A-101|B|A|Apply|2|Certified|B-A.102 indirect method
+P1B-A-102|B|A|Apply|2|Certified|B-A.103 direct method
+P1B-A-103|B|A|Apply|3|Certified|B-A.104 noncash investing and financing
+P1B-A-104|B|A|Apply|2|Certified|B-A.105 dividends and interest classification
+P1B-A-105|B|A|Remember|2|Certified|B-A.106 lease classification criteria
+P1B-A-106|B|A|Remember|1|Certified|B-A.107 operating lease lessee accounting
+P1B-A-107|B|A|Apply|3|Certified|B-A.108 lease expense pattern
+P1B-A-108|B|A|Remember|2|Certified|B-A.109 lessor classification
+P1B-A-109|B|A|Remember|2|Certified|B-A.110 short-term lease exemption
+P1B-A-110|B|A|Apply|1|Certified|B-A.111 sale and leaseback
+P1B-A-111|B|A|Apply|3|Certified|B-A.112 deferred tax liability
+P1B-A-112|B|A|Apply|3|Certified|B-A.113 deferred tax asset
+P1B-A-113|B|A|Apply|3|Certified|B-A.114 valuation allowance
+P1B-A-114|B|A|Apply|3|Certified|B-A.115 permanent vs temporary differences
+P1B-A-115|B|A|Understand|2|Certified|B-A.116 net operating loss carryforward
+P1B-A-116|B|A|Apply|3|Certified|B-A.117 tax rate changes
+P1B-A-117|B|A|Apply|4|Certified|B-A.118 segment reporting thresholds
+P1B-A-118|B|A|Remember|2|Certified|B-A.119 related party transactions
+P1B-A-119|B|A|Remember|2|Certified|B-A.120 subsequent events
+P1B-A-120|B|A|Apply|3|Certified|B-A.121 contingencies
+P1B-A-121|B|A|Apply|2|Certified|B-A.122 equity method - significant influence
+P1B-A-122|B|A|Apply|3|Certified|B-A.123 equity method - income recognition
+P1B-A-123|B|A|Apply|3|Certified|B-A.124 equity method - fair value option
+P1B-A-124|B|A|Understand|3|Certified|B-A.125 consolidations - control criteria
+P1B-A-125|B|A|Apply|1|Certified|B-A.126 noncontrolling interest
+P1B-A-126|B|A|Apply|3|Certified|B-A.127 goodwill calculation
+P1B-A-127|B|A|Apply|3|Certified|B-A.128 intercompany eliminations
+P1B-A-128|B|A|Apply|3|Certified|B-A.129 accounting changes - change in estimate
+P1B-A-129|B|A|Understand|2|Certified|B-A.130 accounting changes - change in principle
+P1B-A-130|B|A|Understand|2|Certified|B-A.131 error corrections
+P1B-A-131|B|A|Apply|2|Certified|B-A.132 change in reporting entity
+P1B-A-132|B|A|Apply|2|Certified|B-A.133 EPS - diluted EPS basics
+P1B-A-133|B|A|Apply|2|Certified|B-A.134 segment reporting - aggregation criteria
+P1B-A-134|B|A|Remember|2|Certified|B-A.135 comprehensive income - reclassification
+P1B-A-135|B|A|Apply|2|Certified|B-A.136 balance sheet - debt covenant compliance disclosure
+P1B-A-136|B|A|Understand|3|Certified|B-A.137 cash flow - reconciling net income to cash flow
+P1B-A-137|B|A|Apply|3|Certified|B-A.138 income statement - gain contingencies
+P1B-A-138|B|A|Apply|3|Certified|B-A.139 equity method - investee losses
+P1B-A-139|B|A|Apply|4|Certified|B-A.140 lease - operating vs finance expense pattern
+P1B-A-140|B|A|Understand|1|Certified|B-A.141 cash flow - free cash flow
+P1B-A-141|B|A|Apply|3|Certified|B-A.142 income statement - R&D capitalization vs expense
+P1B-A-142|B|A|Remember|2|Certified|B-A.143 balance sheet - treasury stock method impact
+P1B-A-143|B|A|Apply|1|Certified|B-A.144 consolidations - pushdown accounting
+P1B-A-144|B|A|Understand|3|Certified|B-A.145 income statement - restructuring charges
+P1B-A-145|B|A|Understand|1|Certified|B-A.146 cash flow - gain on sale of asset indirect method
+P1B-A-146|B|A|Apply|3|Certified|B-A.147 accounting changes - change in depreciation method
+P1B-A-147|B|A|Apply|2|Certified|B-A.148 balance sheet - accrued revenue
+P1B-A-148|B|A|Apply|3|Certified|B-A.149 EPS - treasury stock method
+P1B-A-149|B|A|Apply|4|Certified|B-A.150 balance sheet - accumulated other comprehensive income
+P1B-A-150|B|B|Apply|3|Certified|B-B.101 master budget components
+P1B-B-101|B|B|Apply|2|Certified|B-B.102 operating budgets
+P1B-B-102|B|B|Remember|2|Certified|B-B.103 production budget
+P1B-B-103|B|B|Apply|3|Certified|B-B.104 direct materials purchases
+P1B-B-104|B|B|Apply|3|Certified|B-B.105 direct labor budget
+P1B-B-105|B|B|Apply|3|Certified|B-B.106 manufacturing overhead budget
+P1B-B-106|B|B|Apply|3|Certified|B-B.107 S&A expense budget
+P1B-B-107|B|B|Apply|3|Certified|B-B.108 cash receipts budget
+P1B-B-108|B|B|Apply|3|Certified|B-B.109 cash disbursements budget
+P1B-B-109|B|B|Apply|3|Certified|B-B.110 cash budget minimum balance
+P1B-B-110|B|B|Apply|3|Certified|B-B.111 cash budget borrowing
+P1B-B-111|B|B|Apply|3|Certified|B-B.112 flexible budget concept
+P1B-B-112|B|B|Apply|1|Certified|B-B.113 flexible budget calculation
+P1B-B-113|B|B|Apply|3|Certified|B-B.114 sales volume variance
+P1B-B-114|B|B|Apply|3|Certified|B-B.115 rolling forecasts
+P1B-B-115|B|B|Remember|1|Certified|B-B.116 regression analysis R-squared
+P1B-B-116|B|B|Remember|2|Certified|B-B.117 regression cost prediction
+P1B-B-117|B|B|Apply|3|Certified|B-B.118 learning curve cumulative average
+P1B-B-118|B|B|Apply|3|Certified|B-B.119 learning curve incremental unit
+P1B-B-119|B|B|Apply|4|Certified|B-B.120 time series components
+P1B-B-120|B|B|Understand|2|Certified|B-B.121 expected value analysis
+P1B-B-121|B|B|Apply|3|Certified|B-B.122 expected value - profit
+P1B-B-122|B|B|Apply|3|Certified|B-B.123 sensitivity analysis
+P1B-B-123|B|B|Remember|3|Certified|B-B.124 sensitivity analysis - what-if
+P1B-B-124|B|B|Apply|3|Certified|B-B.125 responsibility accounting
+P1B-B-125|B|B|Evaluate|2|Certified|B-B.126 cost center vs investment center
+P1B-B-126|B|B|Remember|3|Certified|B-B.127 budget slack
+P1B-B-127|B|B|Apply|2|Certified|B-B.128 participative budgeting
+P1B-B-128|B|B|Remember|3|Certified|B-B.129 top-down budgeting
+P1B-B-129|B|B|Remember|3|Certified|B-B.130 activity-based budgeting
+P1B-B-130|B|B|Understand|1|Certified|B-B.131 zero-based budgeting
+P1B-B-131|B|B|Remember|3|Certified|B-B.132 Kaizen budgeting
+P1B-B-132|B|B|Remember|1|Certified|B-B.133 continuous budgeting
+P1B-B-133|B|B|Remember|2|Certified|B-B.134 budget committee role
+P1B-B-134|B|B|Apply|3|Certified|B-B.135 financial budgets components
+P1B-B-135|B|B|Remember|2|Certified|B-B.136 capital expenditure budget
+P1B-B-136|B|B|Apply|3|Certified|B-B.137 budgeted income statement
+P1B-B-137|B|B|Understand|3|Certified|B-B.138 strategic planning vs budgeting
+P1B-B-138|B|B|Understand|1|Certified|B-B.139 probability-based budgeting
+P1B-B-139|B|B|Remember|1|Certified|B-B.140 moving average forecasting
+P1B-B-140|B|B|Understand|3|Certified|B-B.141 exponential smoothing
+P1B-B-141|B|B|Apply|3|Certified|B-B.142 cost behavior analysis
+P1B-B-142|B|B|Analyze|2|Certified|B-B.143 high-low method
+P1B-B-143|B|B|Apply|3|Certified|B-B.144 contribution margin in budgeting
+P1B-B-144|B|B|Apply|3|Certified|B-B.145 budget period and fiscal year
+P1B-B-145|B|B|Apply|3|Certified|B-B.146 static budget definition
+P1B-B-146|B|B|Apply|3|Certified|B-B.147 variance analysis - favorable vs unfavorable
+P1B-B-147|B|B|Apply|1|Certified|B-B.148 flexible budget variance
+P1B-B-148|B|B|Apply|3|Certified|B-B.149 management by exception
+P1B-B-149|B|B|Remember|2|Certified|B-B.150 cash budget - short-term financing
+P1B-B-150|B|B|Apply|3|Certified|B-B.151 master budget - order of preparation
+P1B-B-151|B|B|Apply|2|Certified|B-B.152 sales forecasting methods
+P1B-B-152|B|B|Understand|2|Certified|B-B.153 seasonality in budgeting
+P1B-B-153|B|B|Apply|3|Certified|B-B.154 cash budget - interest calculation
+P1B-B-154|B|B|Apply|3|Certified|B-B.155 correlation analysis
+P1B-B-155|B|B|Understand|2|Certified|B-B.156 standard cost - ideal vs practical standards
+P1B-B-156|B|B|Understand|3|Certified|B-B.157 benchmarking in budgeting
+P1B-B-157|B|B|Remember|3|Certified|B-B.158 participative vs imposed budgeting
+P1B-B-158|B|B|Understand|3|Certified|B-B.159 cost of goods sold budget
+P1B-B-159|B|B|Apply|3|Certified|B-B.160 financial budget - budgeted balance sheet
+P1B-B-160|B|B|Apply|3|Certified|B-B.161 incremental budgeting
+P1B-B-161|B|B|Remember|3|Certified|B-B.162 budget manual
+P1B-B-162|B|B|Apply|1|Certified|B-B.163 sales mix budget
+P1B-B-163|B|B|Apply|3|Certified|B-B.164 regression - standard error
+P1B-B-164|B|B|Apply|2|Certified|B-B.165 responsibility accounting - controllable costs
+P1B-B-165|B|B|Evaluate|3|Certified|B-B.166 cash budget - repayment planning
+P1B-B-166|B|B|Apply|3|Certified|B-B.167 non-monetary considerations in budgeting
+P1B-B-167|B|B|Remember|3|Certified|B-B.168 time series - seasonal index
+P1B-B-168|B|B|Apply|3|Certified|B-B.169 ABC vs ABB relationship
+P1B-B-169|B|B|Understand|1|Certified|B-B.170 forecasting - qualitative vs quantitative
+P1B-B-170|B|B|Remember|2|Certified|B-B.171 production budget - safety stock
+P1B-B-171|B|B|Apply|3|Certified|B-B.172 rolling budget vs static budget
+P1B-B-172|B|B|Apply|3|Certified|B-B.173 standard setting in budgeting
+P1B-B-173|B|B|Apply|2|Certified|B-B.174 mixed cost estimation
+P1B-B-174|B|B|Apply|3|Certified|B-B.175 scenario analysis
+P1B-B-175|B|B|Remember|3|Certified|B-B.176 probability distributions in budgeting
+P1B-B-176|B|B|Apply|3|Certified|B-B.177 flexible budget - revenue variance
+P1B-B-177|B|B|Apply|3|Certified|B-B.178 sales volume variance calculation
+P1B-B-178|B|B|Apply|3|Certified|B-B.179 sales price variance
+P1B-B-179|B|B|Apply|3|Certified|B-B.180 spending variance
+P1B-B-180|B|B|Apply|3|Certified|B-B.181 efficiency variance
+P1B-B-181|B|B|Apply|3|Certified|B-B.182 rate variance
+P1B-B-182|B|B|Apply|3|Certified|B-B.183 material price variance
+P1B-B-183|B|B|Apply|3|Certified|B-B.184 material usage variance
+P1B-B-184|B|B|Apply|3|Certified|B-B.185 overhead volume variance
+P1B-B-185|B|B|Apply|3|Certified|B-B.186 variable overhead efficiency variance
+P1B-B-186|B|B|Apply|3|Certified|B-B.187 budget slack - ethical implications
+P1B-B-187|B|B|Apply|1|Certified|B-B.188 cost-volume-profit in budgeting
+P1B-B-188|B|B|Apply|3|Certified|B-B.189 target profit in budgeting
+P1B-B-189|B|B|Apply|3|Certified|B-B.190 margin of safety in budgeting
+P1B-B-190|B|B|Apply|3|Certified|B-B.191 product mix in budget constraints
+P1B-B-191|B|B|Apply|3|Certified|B-B.192 budget variance investigation
+P1B-B-192|B|B|Apply|2|Certified|B-B.193 regression - t-statistic
+P1B-B-193|B|B|Understand|2|Certified|B-B.194 behavioral issues in budgeting
+P1B-B-194|B|B|Remember|3|Certified|B-B.195 Monte Carlo simulation in forecasting
+P1B-B-195|B|B|Remember|3|Certified|B-B.196 standard cost card
+P1B-B-196|B|B|Remember|1|Certified|B-B.197 throughput contribution in budgeting
+P1B-B-197|B|B|Remember|1|Certified|B-B.198 cash budget - pros and cons of borrowing
+P1B-B-198|B|B|Apply|2|Certified|B-B.199 learning curve - practical application
+P1B-B-199|B|B|Apply|4|Certified|B-B.200 budget process - approval and review
+P1B-B-200|B|C|Apply|3|Certified|B-C.101 variance analysis
+P1B-C-101|B|C|Apply|3|Certified|B-C.102 variance analysis
+P1B-C-102|B|C|Apply|3|Certified|B-C.103 variance analysis
+P1B-C-103|B|C|Apply|3|Certified|B-C.104 variance analysis
+P1B-C-104|B|C|Apply|3|Certified|B-C.105 variance analysis
+P1B-C-105|B|C|Apply|3|Certified|B-C.106 variance analysis
+P1B-C-106|B|C|Apply|3|Certified|B-C.107 variance analysis
+P1B-C-107|B|C|Apply|3|Certified|B-C.108 variance analysis
+P1B-C-108|B|C|Apply|4|Certified|B-C.109 variance analysis
+P1B-C-109|B|C|Apply|4|Certified|B-C.110 variance analysis
+P1B-C-110|B|C|Apply|3|Certified|B-C.111 variance analysis
+P1B-C-111|B|C|Apply|4|Certified|B-C.112 variance analysis
+P1B-C-112|B|C|Apply|4|Certified|B-C.113 variance analysis
+P1B-C-113|B|C|Apply|3|Certified|B-C.114 variance analysis
+P1B-C-114|B|C|Apply|4|Certified|B-C.115 variance analysis
+P1B-C-115|B|C|Apply|2|Certified|B-C.116 sales variance analysis
+P1B-C-116|B|C|Apply|3|Certified|B-C.117 sales variance analysis
+P1B-C-117|B|C|Apply|3|Certified|B-C.118 sales variance analysis
+P1B-C-118|B|C|Apply|4|Certified|B-C.119 sales variance analysis
+P1B-C-119|B|C|Apply|4|Certified|B-C.120 sales variance analysis
+P1B-C-120|B|C|Apply|4|Certified|B-C.121 sales variance analysis
+P1B-C-121|B|C|Apply|4|Certified|B-C.122 sales variance analysis
+P1B-C-122|B|C|Apply|3|Certified|B-C.123 sales variance analysis
+P1B-C-123|B|C|Apply|4|Certified|B-C.124 sales variance analysis
+P1B-C-124|B|C|Apply|3|Certified|B-C.125 sales variance analysis
+P1B-C-125|B|C|Apply|3|Certified|B-C.126 responsibility centers
+P1B-C-126|B|C|Evaluate|1|Certified|B-C.127 responsibility centers
+P1B-C-127|B|C|Evaluate|1|Certified|B-C.128 responsibility centers
+P1B-C-128|B|C|Understand|1|Certified|B-C.129 responsibility centers
+P1B-C-129|B|C|Understand|1|Certified|B-C.130 responsibility centers
+P1B-C-130|B|C|Understand|1|Certified|B-C.131 responsibility centers
+P1B-C-131|B|C|Apply|3|Certified|B-C.132 responsibility centers
+P1B-C-132|B|C|Apply|3|Certified|B-C.133 responsibility centers
+P1B-C-133|B|C|Apply|3|Certified|B-C.134 responsibility centers
+P1B-C-134|B|C|Apply|3|Certified|B-C.135 responsibility centers
+P1B-C-135|B|C|Understand|2|Certified|B-C.136 ROI and residual income
+P1B-C-136|B|C|Apply|3|Certified|B-C.137 ROI and residual income
+P1B-C-137|B|C|Apply|3|Certified|B-C.138 ROI and residual income
+P1B-C-138|B|C|Apply|3|Certified|B-C.139 ROI and residual income
+P1B-C-139|B|C|Apply|2|Certified|B-C.140 ROI and residual income
+P1B-C-140|B|C|Apply|3|Certified|B-C.141 ROI and residual income
+P1B-C-141|B|C|Apply|3|Certified|B-C.142 ROI and residual income
+P1B-C-142|B|C|Remember|1|Certified|B-C.143 ROI and residual income
+P1B-C-143|B|C|Apply|4|Certified|B-C.144 ROI and residual income
+P1B-C-144|B|C|Apply|3|Certified|B-C.145 ROI and residual income
+P1B-C-145|B|C|Evaluate|3|Certified|B-C.146 transfer pricing
+P1B-C-146|B|C|Apply|2|Certified|B-C.147 transfer pricing
+P1B-C-147|B|C|Apply|3|Certified|B-C.148 transfer pricing
+P1B-C-148|B|C|Apply|3|Certified|B-C.149 transfer pricing
+P1B-C-149|B|C|Apply|3|Certified|B-C.150 transfer pricing
+P1B-C-150|B|C|Apply|3|Certified|B-C.151 transfer pricing
+P1B-C-151|B|C|Apply|3|Certified|B-C.152 transfer pricing
+P1B-C-152|B|C|Apply|2|Certified|B-C.153 transfer pricing
+P1B-C-153|B|C|Evaluate|1|Certified|B-C.154 transfer pricing
+P1B-C-154|B|C|Apply|4|Certified|B-C.155 transfer pricing
+P1B-C-155|B|C|Apply|3|Certified|B-C.156 balanced scorecard
+P1B-C-156|B|C|Understand|1|Certified|B-C.157 balanced scorecard
+P1B-C-157|B|C|Understand|1|Certified|B-C.158 balanced scorecard
+P1B-C-158|B|C|Understand|1|Certified|B-C.159 balanced scorecard
+P1B-C-159|B|C|Understand|1|Certified|B-C.160 balanced scorecard
+P1B-C-160|B|C|Understand|1|Certified|B-C.161 balanced scorecard
+P1B-C-161|B|C|Understand|1|Certified|B-C.162 balanced scorecard
+P1B-C-162|B|C|Understand|1|Certified|B-C.163 balanced scorecard
+P1B-C-163|B|C|Remember|1|Certified|B-C.164 benchmarking
+P1B-C-164|B|C|Understand|1|Certified|B-C.165 benchmarking
+P1B-C-165|B|C|Remember|1|Certified|B-C.166 benchmarking
+P1B-C-166|B|C|Remember|1|Certified|B-C.167 benchmarking
+P1B-C-167|B|C|Understand|1|Certified|B-C.168 segment performance evaluation
+P1B-C-168|B|C|Apply|3|Certified|B-C.169 segment performance evaluation
+P1B-C-169|B|C|Apply|3|Certified|B-C.170 segment performance evaluation
+P1B-C-170|B|C|Remember|1|Certified|B-C.171 product profitability analysis
+P1B-C-171|B|C|Apply|3|Certified|B-C.172 product profitability analysis
+P1B-C-172|B|C|Apply|3|Certified|B-C.173 customer profitability analysis
+P1B-C-173|B|C|Apply|3|Certified|B-C.174 customer profitability analysis
+P1B-C-174|B|C|Analyze|1|Certified|B-C.175 product profitability analysis
+P1B-C-175|B|C|Analyze|4|Certified|B-C.176 product profitability analysis
+P1B-C-176|B|C|Apply|3|Certified|B-C.177 customer profitability analysis
+P1B-C-177|B|C|Apply|3|Certified|B-C.178 product profitability analysis
+P1B-C-178|B|C|Apply|3|Certified|B-C.179 product profitability analysis
+P1B-C-179|B|C|Apply|3|Certified|B-C.180 variance investigation
+P1B-C-180|B|C|Apply|3|Certified|B-C.181 variance investigation
+P1B-C-181|B|C|Apply|3|Certified|B-C.182 variance investigation
+P1B-C-182|B|C|Apply|1|Certified|B-C.183 variance investigation
+P1B-C-183|B|C|Apply|2|Certified|B-C.184 variance investigation
+P1B-C-184|B|C|Apply|4|Certified|B-C.185 variance investigation
+P1B-C-185|B|C|Apply|2|Certified|B-C.186 variance investigation
+P1B-C-186|B|C|Apply|1|Certified|B-C.187 standard costing
+P1B-C-187|B|C|Apply|1|Certified|B-C.188 standard costing
+P1B-C-188|B|C|Apply|3|Certified|B-C.189 standard costing
+P1B-C-189|B|C|Remember|2|Certified|B-C.190 standard costing
+P1B-C-190|B|C|Apply|3|Certified|B-C.191 standard costing
+P1B-C-191|B|C|Apply|1|Certified|B-C.192 standard costing vs actual costing
+P1B-C-192|B|C|Understand|1|Certified|B-C.193 standard costing
+P1B-C-193|B|C|Apply|1|Certified|B-C.194 standard costing
+P1B-C-194|B|C|Apply|3|Certified|B-C.195 standard costing
+P1B-C-195|B|C|Apply|1|Certified|B-C.196 standard costing vs actual costing
+P1B-C-196|B|C|Apply|3|Certified|B-C.197 standard costing
+P1B-C-197|B|C|Apply|1|Certified|B-C.198 standard costing
+P1B-C-198|B|C|Apply|2|Certified|B-C.199 standard costing vs actual costing
+P1B-C-199|B|C|Apply|1|Certified|B-C.200 standard costing
+P1B-C-200|B|D|Apply|3|Certified|B-D.076 cost behavior
+P1B-D-076|B|D|Apply|2|Certified|B-D.077 cost behavior
+P1B-D-077|B|D|Apply|2|Certified|B-D.078 cost behavior
+P1B-D-078|B|D|Apply|2|Certified|B-D.079 cost behavior
+P1B-D-079|B|D|Apply|2|Certified|B-D.080 cost behavior
+P1B-D-080|B|D|Apply|3|Certified|B-D.081 cost behavior
+P1B-D-081|B|D|Apply|3|Certified|B-D.082 cost behavior
+P1B-D-082|B|D|Apply|2|Certified|B-D.083 contribution margin
+P1B-D-083|B|D|Apply|2|Certified|B-D.084 contribution margin
+P1B-D-084|B|D|Apply|2|Certified|B-D.085 contribution margin
+P1B-D-085|B|D|Apply|3|Certified|B-D.086 job order costing
+P1B-D-086|B|D|Apply|1|Certified|B-D.087 job order costing
+P1B-D-087|B|D|Apply|3|Certified|B-D.088 job order costing
+P1B-D-088|B|D|Apply|3|Certified|B-D.089 job order costing
+P1B-D-089|B|D|Apply|3|Certified|B-D.090 job order costing
+P1B-D-090|B|D|Apply|3|Certified|B-D.091 job order costing
+P1B-D-091|B|D|Apply|1|Certified|B-D.092 job order costing
+P1B-D-092|B|D|Apply|3|Certified|B-D.093 process costing
+P1B-D-093|B|D|Apply|1|Certified|B-D.094 process costing
+P1B-D-094|B|D|Apply|3|Certified|B-D.095 process costing
+P1B-D-095|B|D|Apply|4|Certified|B-D.096 process costing
+P1B-D-096|B|D|Apply|3|Certified|B-D.097 process costing
+P1B-D-097|B|D|Apply|3|Certified|B-D.098 process costing
+P1B-D-098|B|D|Apply|4|Certified|B-D.099 process costing
+P1B-D-099|B|D|Apply|3|Certified|B-D.100 process costing
+P1B-D-100|B|D|Apply|1|Certified|B-D.101 activity-based costing
+P1B-D-101|B|D|Apply|1|Certified|B-D.102 activity-based costing
+P1B-D-102|B|D|Apply|1|Certified|B-D.103 activity-based costing
+P1B-D-103|B|D|Apply|3|Certified|B-D.104 activity-based costing
+P1B-D-104|B|D|Apply|3|Certified|B-D.105 activity-based costing
+P1B-D-105|B|D|Apply|1|Certified|B-D.106 activity-based costing
+P1B-D-106|B|D|Remember|1|Certified|B-D.107 activity-based costing
+P1B-D-107|B|D|Apply|3|Certified|B-D.108 activity-based costing
+P1B-D-108|B|D|Apply|3|Certified|B-D.109 joint product costing
+P1B-D-109|B|D|Apply|2|Certified|B-D.110 joint product costing
+P1B-D-110|B|D|Apply|3|Certified|B-D.111 joint product costing
+P1B-D-111|B|D|Apply|3|Certified|B-D.112 joint product costing
+P1B-D-112|B|D|Apply|4|Certified|B-D.113 joint product costing
+P1B-D-113|B|D|Apply|3|Certified|B-D.114 byproduct costing
+P1B-D-114|B|D|Apply|3|Certified|B-D.115 cost allocation
+P1B-D-115|B|D|Apply|3|Certified|B-D.116 overhead allocation
+P1B-D-116|B|D|Apply|3|Certified|B-D.117 overhead allocation
+P1B-D-117|B|D|Apply|3|Certified|B-D.118 overhead allocation
+P1B-D-118|B|D|Apply|3|Certified|B-D.119 overhead allocation
+P1B-D-119|B|D|Apply|4|Certified|B-D.120 overhead allocation
+P1B-D-120|B|D|Apply|4|Certified|B-D.121 overhead allocation
+P1B-D-121|B|D|Apply|1|Certified|B-D.122 overhead allocation
+P1B-D-122|B|D|Apply|3|Certified|B-D.123 overhead allocation
+P1B-D-123|B|D|Apply|3|Certified|B-D.124 overhead allocation
+P1B-D-124|B|D|Apply|3|Certified|B-D.125 overhead allocation
+P1B-D-125|B|D|Apply|1|Certified|B-D.126 variable vs absorption costing
+P1B-D-126|B|D|Apply|3|Certified|B-D.127 variable vs absorption costing
+P1B-D-127|B|D|Apply|3|Certified|B-D.128 variable vs absorption costing
+P1B-D-128|B|D|Apply|2|Certified|B-D.129 variable vs absorption costing
+P1B-D-129|B|D|Apply|3|Certified|B-D.130 variable vs absorption costing
+P1B-D-130|B|D|Apply|2|Certified|B-D.131 variable vs absorption costing
+P1B-D-131|B|D|Apply|2|Certified|B-D.132 variable vs absorption costing
+P1B-D-132|B|D|Apply|1|Certified|B-D.133 CVP analysis
+P1B-D-133|B|D|Apply|3|Certified|B-D.134 CVP analysis
+P1B-D-134|B|D|Apply|2|Certified|B-D.135 CVP analysis
+P1B-D-135|B|D|Apply|3|Certified|B-D.136 CVP analysis
+P1B-D-136|B|D|Apply|3|Certified|B-D.137 CVP analysis
+P1B-D-137|B|D|Apply|3|Certified|B-D.138 CVP analysis
+P1B-D-138|B|D|Apply|4|Certified|B-D.139 CVP analysis
+P1B-D-139|B|D|Apply|3|Certified|B-D.140 CVP analysis
+P1B-D-140|B|D|Remember|1|Certified|B-D.141 relevant costing
+P1B-D-141|B|D|Apply|3|Certified|B-D.142 relevant costing
+P1B-D-142|B|D|Apply|3|Certified|B-D.143 relevant costing
+P1B-D-143|B|D|Apply|3|Certified|B-D.144 relevant costing
+P1B-D-144|B|D|Apply|4|Certified|B-D.145 relevant costing
+P1B-D-145|B|D|Apply|3|Certified|B-D.146 relevant costing
+P1B-D-146|B|D|Apply|3|Certified|B-D.147 relevant costing
+P1B-D-147|B|D|Apply|2|Certified|B-D.148 mfg vs non-mfg costs
+P1B-D-148|B|D|Apply|2|Certified|B-D.149 mfg vs non-mfg costs
+P1B-D-149|B|D|Apply|2|Certified|B-D.150 mfg vs non-mfg costs
+P1B-D-150|B|E|Understand|1|Certified|B-E.076 internal control framework
+P1B-E-076|B|E|Apply|3|Certified|B-E.077 internal control framework
+P1B-E-077|B|E|Understand|1|Certified|B-E.078 internal control framework
+P1B-E-078|B|E|Understand|2|Certified|B-E.079 internal control framework
+P1B-E-079|B|E|Apply|3|Certified|B-E.080 internal control framework
+P1B-E-080|B|E|Apply|3|Certified|B-E.081 internal control framework
+P1B-E-081|B|E|Apply|3|Certified|B-E.082 internal control framework
+P1B-E-082|B|E|Understand|1|Certified|B-E.083 internal control framework
+P1B-E-083|B|E|Understand|1|Certified|B-E.084 internal control framework
+P1B-E-084|B|E|Understand|2|Certified|B-E.085 internal control framework
+P1B-E-085|B|E|Apply|3|Certified|B-E.086 control activities
+P1B-E-086|B|E|Apply|1|Certified|B-E.087 control activities
+P1B-E-087|B|E|Understand|2|Certified|B-E.088 control activities
+P1B-E-088|B|E|Apply|3|Certified|B-E.089 control activities
+P1B-E-089|B|E|Understand|1|Certified|B-E.090 control activities
+P1B-E-090|B|E|Apply|3|Certified|B-E.091 control activities
+P1B-E-091|B|E|Understand|1|Certified|B-E.092 internal audit function
+P1B-E-092|B|E|Apply|3|Certified|B-E.093 internal audit function
+P1B-E-093|B|E|Understand|1|Certified|B-E.094 internal audit function
+P1B-E-094|B|E|Remember|2|Certified|B-E.095 audit committee
+P1B-E-095|B|E|Apply|3|Certified|B-E.096 fraud prevention
+P1B-E-096|B|E|Understand|1|Certified|B-E.097 fraud prevention
+P1B-E-097|B|E|Apply|1|Certified|B-E.098 fraud prevention
+P1B-E-098|B|E|Understand|2|Certified|B-E.099 whistleblower programs
+P1B-E-099|B|E|Apply|3|Certified|B-E.100 whistleblower programs
+P1B-E-100|B|E|Understand|1|Certified|B-E.101 data protection controls
+P1B-E-101|B|E|Apply|3|Certified|B-E.102 data protection controls
+P1B-E-102|B|E|Apply|1|Certified|B-E.103 IT general controls
+P1B-E-103|B|E|Apply|3|Certified|B-E.104 IT general controls
+P1B-E-104|B|E|Apply|1|Certified|B-E.105 IT general controls
+P1B-E-105|B|E|Understand|1|Certified|B-E.106 application controls
+P1B-E-106|B|E|Apply|3|Certified|B-E.107 application controls
+P1B-E-107|B|E|Apply|3|Certified|B-E.108 application controls
+P1B-E-108|B|E|Understand|1|Certified|B-E.109 business continuity planning
+P1B-E-109|B|E|Understand|3|Certified|B-E.110 business continuity planning
+P1B-E-110|B|E|Understand|3|Certified|B-E.111 disaster recovery
+P1B-E-111|B|E|Apply|3|Certified|B-E.112 disaster recovery
+P1B-E-112|B|E|Apply|2|Certified|B-E.113 Sarbanes-Oxley Act
+P1B-E-113|B|E|Understand|2|Certified|B-E.114 Sarbanes-Oxley Act
+P1B-E-114|B|E|Understand|3|Certified|B-E.115 Sarbanes-Oxley Act
+P1B-E-115|B|E|Apply|3|Certified|B-E.116 ICFR
+P1B-E-116|B|E|Analyze|3|Certified|B-E.117 ICFR
+P1B-E-117|B|E|Understand|1|Certified|B-E.118 control activities
+P1B-E-118|B|E|Apply|3|Certified|B-E.119 control activities
+P1B-E-119|B|E|Understand|1|Certified|B-E.120 fraud prevention
+P1B-E-120|B|E|Understand|1|Certified|B-E.121 internal audit function
+P1B-E-121|B|E|Apply|3|Certified|B-E.122 internal audit function
+P1B-E-122|B|E|Apply|1|Certified|B-E.123 audit committee
+P1B-E-123|B|E|Apply|1|Certified|B-E.124 fraud prevention
+P1B-E-124|B|E|Apply|3|Certified|B-E.125 data protection controls
+P1B-E-125|B|E|Understand|1|Certified|B-E.126 IT general controls
+P1B-E-126|B|E|Understand|3|Certified|B-E.127 application controls
+P1B-E-127|B|E|Apply|3|Certified|B-E.128 IT general controls
+P1B-E-128|B|E|Apply|3|Certified|B-E.129 disaster recovery
+P1B-E-129|B|E|Apply|1|Certified|B-E.130 Sarbanes-Oxley Act
+P1B-E-130|B|E|Understand|1|Certified|B-E.131 control environment
+P1B-E-131|B|E|Apply|1|Certified|B-E.132 control activities
+P1B-E-132|B|E|Understand|3|Certified|B-E.133 ICFR
+P1B-E-133|B|E|Apply|1|Certified|B-E.134 business continuity planning
+P1B-E-134|B|E|Understand|1|Certified|B-E.135 COSO ERM
+P1B-E-135|B|E|Apply|3|Certified|B-E.136 fraud prevention
+P1B-E-136|B|E|Apply|1|Certified|B-E.137 internal audit function
+P1B-E-137|B|E|Understand|1|Certified|B-E.138 data protection controls
+P1B-E-138|B|E|Understand|2|Certified|B-E.139 COSO Internal Control
+P1B-E-139|B|E|Apply|3|Certified|B-E.140 COSO ERM
+P1B-E-140|B|E|Understand|3|Certified|B-E.141 IT general controls
+P1B-E-141|B|E|Understand|1|Certified|B-E.142 whistleblower programs
+P1B-E-142|B|E|Understand|3|Certified|B-E.143 ICFR
+P1B-E-143|B|E|Apply|3|Certified|B-E.144 business continuity planning
+P1B-E-144|B|E|Apply|2|Certified|B-E.145 Sarbanes-Oxley Act
+P1B-E-145|B|E|Understand|3|Certified|B-E.146 COSO Internal Control
+P1B-E-146|B|E|Apply|1|Certified|B-E.147 fraud prevention
+P1B-E-147|B|E|Understand|1|Certified|B-E.148 control activities
+P1B-E-148|B|E|Apply|3|Certified|B-E.149 Sarbanes-Oxley Act
+P1B-E-149|B|E|Apply|1|Certified|B-E.150 COSO Internal Control
+P1B-E-150|B|F|MISSING|-1|Certified|B-F.076 data governance
+P1B-F-076|B|F|Understand|1|Certified|B-F.077 data governance
+P1B-F-077|B|F|Understand|1|Certified|B-F.078 master data management
+P1B-F-078|B|F|Understand|1|Certified|B-F.079 data quality
+P1B-F-079|B|F|Apply|3|Certified|B-F.080 data analytics types
+P1B-F-080|B|F|Apply|1|Certified|B-F.081 data analytics types
+P1B-F-081|B|F|Apply|2|Certified|B-F.082 data analytics types
+P1B-F-082|B|F|Apply|2|Certified|B-F.083 data analytics types
+P1B-F-083|B|F|Understand|3|Certified|B-F.084 data visualization
+P1B-F-084|B|F|Apply|1|Certified|B-F.085 data mining
+P1B-F-085|B|F|Understand|1|Certified|B-F.086 AI and machine learning
+P1B-F-086|B|F|Understand|1|Certified|B-F.087 AI and machine learning
+P1B-F-087|B|F|Understand|3|Certified|B-F.088 RPA
+P1B-F-088|B|F|Understand|1|Certified|B-F.089 blockchain
+P1B-F-089|B|F|Understand|3|Certified|B-F.090 blockchain
+P1B-F-090|B|F|Understand|3|Certified|B-F.091 cloud computing
+P1B-F-091|B|F|Understand|1|Certified|B-F.092 cloud computing
+P1B-F-092|B|F|Understand|1|Certified|B-F.093 cybersecurity
+P1B-F-093|B|F|Understand|1|Certified|B-F.094 cybersecurity
+P1B-F-094|B|F|Understand|1|Certified|B-F.095 information systems lifecycle
+P1B-F-095|B|F|Understand|1|Certified|B-F.096 ERP systems
+P1B-F-096|B|F|Understand|1|Certified|B-F.097 ERP systems
+P1B-F-097|B|F|Apply|1|Certified|B-F.098 database management
+P1B-F-098|B|F|Understand|3|Certified|B-F.099 privacy regulations
+P1B-F-099|B|F|Apply|1|Certified|B-F.100 privacy regulations
+P1B-F-100|B|F|Understand|3|Certified|B-F.101 continuous monitoring
+P1B-F-101|B|F|Apply|1|Certified|B-F.102 data analytics
+P1B-F-102|B|F|Understand|3|Certified|B-F.103 cybersecurity
+P1B-F-103|B|F|Understand|1|Certified|B-F.104 data governance
+P1B-F-104|B|F|Understand|1|Certified|B-F.105 data quality
+P1B-F-105|B|F|Understand|3|Certified|B-F.106 data visualization
+P1B-F-106|B|F|Understand|1|Certified|B-F.107 AI and machine learning
+P1B-F-107|B|F|Understand|1|Certified|B-F.108 cloud computing
+P1B-F-108|B|F|Understand|3|Certified|B-F.109 information systems lifecycle
+P1B-F-109|B|F|Apply|3|Certified|B-F.110 cybersecurity
+P1B-F-110|B|F|Understand|3|Certified|B-F.111 database management
+P1B-F-111|B|F|Apply|1|Certified|B-F.112 data analytics
+P1B-F-112|B|F|Understand|3|Certified|B-F.113 RPA
+P1B-F-113|B|F|Understand|3|Certified|B-F.114 privacy regulations
+P1B-F-114|B|F|Apply|3|Certified|B-F.115 continuous monitoring
+P1B-F-115|B|F|Apply|2|Certified|B-F.116 ERP systems
+P1B-F-116|B|F|Understand|3|Certified|B-F.117 data governance
+P1B-F-117|B|F|Understand|1|Certified|B-F.118 data quality
+P1B-F-118|B|F|Apply|1|Certified|B-F.119 cybersecurity
+P1B-F-119|B|F|Apply|1|Certified|B-F.120 AI and machine learning
+P1B-F-120|B|F|Understand|1|Certified|B-F.121 blockchain
+P1B-F-121|B|F|Understand|3|Certified|B-F.122 cloud computing
+P1B-F-122|B|F|Understand|3|Certified|B-F.123 data analytics
+P1B-F-123|B|F|Understand|1|Certified|B-F.124 database management
+P1B-F-124|B|F|Apply|2|Certified|B-F.125 privacy regulations
+P1B-F-125|B|F|Understand|3|Certified|B-F.126 data mining
+P1B-F-126|B|F|Understand|3|Certified|B-F.127 information systems lifecycle
+P1B-F-127|B|F|Apply|1|Certified|B-F.128 data visualization
+P1B-F-128|B|F|Understand|1|Certified|B-F.129 cybersecurity
+P1B-F-129|B|F|Understand|1|Certified|B-F.130 master data management
+P1B-F-130|B|F|Understand|1|Certified|B-F.131 RPA
+P1B-F-131|B|F|Understand|1|Certified|B-F.132 data analytics
+P1B-F-132|B|F|Apply|3|Certified|B-F.133 database management
+P1B-F-133|B|F|Understand|1|Certified|B-F.134 cybersecurity
+P1B-F-134|B|F|Understand|3|Certified|B-F.135 AI and machine learning
+P1B-F-135|B|F|Understand|1|Certified|B-F.136 cloud computing
+P1B-F-136|B|F|Understand|1|Certified|B-F.137 data analytics
+P1B-F-137|B|F|Apply|1|Certified|B-F.138 ERP systems
+P1B-F-138|B|F|Understand|3|Certified|B-F.139 cybersecurity
+P1B-F-139|B|F|Understand|1|Certified|B-F.140 data governance
+P1B-F-140|B|F|Evaluate|3|Certified|B-F.141 blockchain
+P1B-F-141|B|F|Understand|1|Certified|B-F.142 continuous monitoring
+P1B-F-142|B|F|Apply|3|Certified|B-F.143 data analytics
+P1B-F-143|B|F|Understand|3|Certified|B-F.144 cybersecurity
+P1B-F-144|B|F|Apply|1|Certified|B-F.145 information systems lifecycle
+P1B-F-145|B|F|Evaluate|3|Certified|B-F.146 data governance
+P1B-F-146|B|F|Understand|3|Certified|B-F.147 data quality
+P1B-F-147|B|F|Apply|1|Certified|B-F.148 RPA
+P1B-F-148|B|F|Understand|1|Certified|B-F.149 privacy regulations
+P1B-F-149|B|F|Understand|3|Certified|B-F.150 data analytics
+P1B-F-150|B||Apply|1|Certified|
+P1-AC-001|C|A|Apply|2|Certified|A.002 bond premium amortization
+P1-AC-002|C|A|Apply|1|Certified|A.003 bond premium amortization
+P1-AC-003|C|A|Apply|2|Certified|A.004 bond premium amortization
+P1-AC-004|C|A|Apply|1|Certified|A.005 bond premium amortization
+P1-AC-005|C|A|Apply|2|Certified|A.006 held to maturity classification
+P1-AC-006|C|A|Remember|1|Certified|A.007 held to maturity classification
+P1-AC-007|C|A|Remember|1|Certified|A.008 held to maturity classification
+P1-AC-008|C|A|Remember|2|Certified|A.009 held to maturity classification
+P1-AC-009|C|A|Remember|2|Certified|A.010 held to maturity classification
+P1-AC-010|C|A|Remember|2|Certified|A.011 equity method investment
+P1-AC-011|C|A|Apply|2|Certified|A.012 equity method investment
+P1-AC-012|C|A|Apply|3|Certified|A.013 equity method investment
+P1-AC-013|C|A|Apply|2|Certified|A.014 equity method investment
+P1-AC-014|C|A|Apply|2|Certified|A.015 equity method investment
+P1-AC-015|C|A|Apply|3|Certified|A.016 goodwill impairment testing
+P1-AC-016|C|A|Apply|2|Certified|A.017 goodwill impairment testing
+P1-AC-017|C|A|Apply|2|Certified|A.018 goodwill impairment testing
+P1-AC-018|C|A|Apply|2|Certified|A.019 goodwill impairment testing
+P1-AC-019|C|A|Apply|2|Certified|A.020 goodwill impairment testing
+P1-AC-020|C|A|Apply|2|Certified|A.021 operating lease right of use asset
+P1-AC-021|C|A|Apply|3|Certified|A.022 operating lease right of use asset
+P1-AC-022|C|A|Apply|1|Certified|A.023 operating lease right of use asset
+P1-AC-023|C|A|Apply|3|Certified|A.024 operating lease right of use asset
+P1-AC-024|C|A|Apply|1|Certified|A.025 operating lease right of use asset
+P1-AC-025|C|A|Apply|1|Certified|A.026 basic EPS calculation
+P1-AC-026|C|A|Apply|3|Certified|A.027 weighted-average shares calculation
+P1-AC-027|C|A|Apply|3|Certified|A.028 cash collected from customers
+P1-AC-028|C|A|Apply|3|Certified|A.029 cash paid to suppliers
+P1-AC-029|C|A|Apply|3|Certified|A.030 FIFO cost of goods sold
+P1-AC-030|C|A|Apply|3|Certified|A.031 foreign currency translation
+P1-AC-031|C|A|Understand|1|Certified|A.032 foreign currency translation
+P1-AC-032|C|A|Understand|2|Certified|A.033 foreign currency translation
+P1-AC-033|C|A|Understand|2|Certified|A.034 foreign currency translation
+P1-AC-034|C|A|Understand|2|Certified|A.035 foreign currency translation
+P1-AC-035|C|A|Understand|1|Certified|A.036 nonmonetary exchange
+P1-AC-036|C|A|Understand|3|Certified|A.037 nonmonetary exchange
+P1-AC-037|C|A|Understand|3|Certified|A.038 nonmonetary exchange
+P1-AC-038|C|A|Understand|1|Certified|A.039 nonmonetary exchange
+P1-AC-039|C|A|Understand|3|Certified|A.040 nonmonetary exchange
+P1-AC-040|C|A|Understand|1|Certified|A.041 stock compensation expense
+P1-AC-041|C|A|Understand|3|Certified|A.042 stock compensation expense
+P1-AC-042|C|A|Understand|3|Certified|A.043 stock compensation expense
+P1-AC-043|C|A|Understand|1|Certified|A.044 stock compensation expense
+P1-AC-044|C|A|Understand|1|Certified|A.045 stock compensation expense
+P1-AC-045|C|A|Understand|3|Certified|A.046 held for sale asset measurement
+P1-AC-046|C|A|Understand|1|Certified|A.047 held for sale asset measurement
+P1-AC-047|C|A|Understand|2|Certified|A.048 held for sale asset measurement
+P1-AC-048|C|A|Understand|2|Certified|A.049 held for sale asset measurement
+P1-AC-049|C|A|Understand|1|Certified|A.050 held for sale asset measurement
+P1-AC-050|C|A|Understand|1|Certified|A.051 interim reporting income tax
+P1-AC-051|C|A|Apply|2|Certified|A.052 interim reporting income tax
+P1-AC-052|C|A|Apply|2|Certified|A.053 interim reporting income tax
+P1-AC-053|C|A|Apply|2|Certified|A.054 interim reporting income tax
+P1-AC-054|C|A|Apply|2|Certified|A.055 interim reporting income tax
+P1-AC-055|C|A|Apply|1|Certified|A.056 business combination measurement
+P1-AC-056|C|A|Understand|3|Certified|A.057 business combination measurement
+P1-AC-057|C|A|Understand|1|Certified|A.058 business combination measurement
+P1-AC-058|C|A|Understand|3|Certified|A.059 business combination measurement
+P1-AC-059|C|A|Understand|3|Certified|A.060 business combination measurement
+P1-AC-060|C|A|Understand|1|Certified|A.061 pension funded status
+P1-AC-061|C|A|Apply|3|Certified|A.062 pension funded status
+P1-AC-062|C|A|Apply|3|Certified|A.063 pension funded status
+P1-AC-063|C|A|Apply|1|Certified|A.064 pension funded status
+P1-AC-064|C|A|Apply|3|Certified|A.065 pension funded status
+P1-AC-065|C|A|Apply|3|Certified|A.066 contingent liability disclosure
+P1-AC-066|C|A|Understand|2|Certified|A.067 contingent liability disclosure
+P1-AC-067|C|A|Understand|2|Certified|A.068 contingent liability disclosure
+P1-AC-068|C|A|Understand|2|Certified|A.069 contingent liability disclosure
+P1-AC-069|C|A|Understand|2|Certified|A.070 contingent liability disclosure
+P1-AC-070|C|A|Understand|1|Certified|A.071 intangible asset amortization
+P1-AC-071|C|A|Apply|3|Certified|A.072 intangible asset amortization
+P1-AC-072|C|A|Apply|3|Certified|A.073 intangible asset amortization
+P1-AC-073|C|A|Apply|3|Certified|A.074 intangible asset amortization
+P1-AC-074|C|A|Apply|3|Certified|A.075 intangible asset amortization
+P1-AC-075|C|B|Apply|3|Certified|B.001 static vs flexible budget
+P1-BC-001|C|B|Apply|3|Certified|B.002 static vs flexible budget
+P1-BC-002|C|B|Apply|2|Certified|B.003 static vs flexible budget
+P1-BC-003|C|B|Apply|2|Certified|B.004 static vs flexible budget
+P1-BC-004|C|B|Apply|2|Certified|B.005 static vs flexible budget
+P1-BC-005|C|B|Apply|2|Certified|B.006 static vs flexible budget
+P1-BC-006|C|B|Apply|2|Certified|B.007 static vs flexible budget
+P1-BC-007|C|B|Apply|2|Certified|B.008 sales forecasting regression
+P1-BC-008|C|B|Understand|2|Certified|B.009 sales forecasting regression
+P1-BC-009|C|B|Understand|2|Certified|B.010 sales forecasting regression
+P1-BC-010|C|B|Understand|2|Certified|B.011 sales forecasting regression
+P1-BC-011|C|B|Understand|2|Certified|B.012 sales forecasting regression
+P1-BC-012|C|B|Understand|2|Certified|B.013 sales forecasting regression
+P1-BC-013|C|B|Apply|2|Certified|B.014 sales forecasting regression
+P1-BC-014|C|B|Understand|2|Certified|B.015 rolling forecast
+P1-BC-015|C|B|Apply|3|Certified|B.016 rolling forecast
+P1-BC-016|C|B|Apply|3|Certified|B.017 rolling forecast
+P1-BC-017|C|B|Apply|3|Certified|B.018 rolling forecast
+P1-BC-018|C|B|Apply|2|Certified|B.019 rolling forecast
+P1-BC-019|C|B|Apply|2|Certified|B.020 rolling forecast
+P1-BC-020|C|B|Apply|2|Certified|B.021 rolling forecast
+P1-BC-021|C|B|Apply|2|Certified|B.022 zero based budgeting
+P1-BC-022|C|B|Understand|3|Certified|B.023 zero based budgeting
+P1-BC-023|C|B|Understand|1|Certified|B.024 zero based budgeting
+P1-BC-024|C|B|Understand|2|Certified|B.025 zero based budgeting
+P1-BC-025|C|B|Apply|2|Certified|B.026 zero based budgeting
+P1-BC-026|C|B|Understand|1|Certified|B.027 zero based budgeting
+P1-BC-027|C|B|Understand|2|Certified|B.028 zero based budgeting
+P1-BC-028|C|B|Understand|1|Certified|B.029 sales budget starting point
+P1-BC-029|C|B|Apply|2|Certified|B.030 sales budget starting point
+P1-BC-030|C|B|Apply|1|Certified|B.031 sales budget starting point
+P1-BC-031|C|B|Apply|2|Certified|B.032 sales budget starting point
+P1-BC-032|C|B|Apply|2|Certified|B.033 sales budget starting point
+P1-BC-033|C|B|Apply|1|Certified|B.034 sales budget starting point
+P1-BC-034|C|B|Apply|2|Certified|B.035 cash budget financing needs
+P1-BC-035|C|B|Apply|2|Certified|B.036 cash budget financing needs
+P1-BC-036|C|B|Apply|1|Certified|B.037 cash budget financing needs
+P1-BC-037|C|B|Apply|4|Certified|B.038 cash budget financing needs
+P1-BC-038|C|B|Apply|4|Certified|B.039 cash budget financing needs
+P1-BC-039|C|B|Apply|2|Certified|B.040 cash budget financing needs
+P1-BC-040|C|B|Apply|4|Certified|B.041 production budget calculation
+P1-BC-041|C|B|Apply|3|Certified|B.042 production budget calculation
+P1-BC-042|C|B|Apply|3|Certified|B.043 production budget calculation
+P1-BC-043|C|B|Apply|2|Certified|B.044 production budget calculation
+P1-BC-044|C|B|Apply|3|Certified|B.045 production budget calculation
+P1-BC-045|C|B|Apply|2|Certified|B.046 production budget calculation
+P1-BC-046|C|B|Apply|2|Certified|B.047 participative budgeting risk
+P1-BC-047|C|B|Apply|4|Certified|B.048 participative budgeting risk
+P1-BC-048|C|B|Apply|1|Certified|B.049 participative budgeting risk
+P1-BC-049|C|B|Apply|3|Certified|B.050 participative budgeting risk
+P1-BC-050|C|B|Apply|1|Certified|B.051 participative budgeting risk
+P1-BC-051|C|B|Apply|4|Certified|B.052 participative budgeting risk
+P1-BC-052|C|B|Apply|1|Certified|B.053 top down budgeting characteristic
+P1-BC-053|C|B|Apply|2|Certified|B.054 top down budgeting characteristic
+P1-BC-054|C|B|Apply|4|Certified|B.055 top down budgeting characteristic
+P1-BC-055|C|B|Apply|2|Certified|B.056 cash collections budget calculation
+P1-BC-056|C|B|Apply|3|Certified|B.057 top down budgeting characteristic
+P1-BC-057|C|B|Apply|2|Certified|B.058 top down budgeting characteristic
+P1-BC-058|C|B|Apply|2|Certified|B.059 learning curve forecasting
+P1-BC-059|C|B|Understand|2|Certified|B.060 learning curve forecasting
+P1-BC-060|C|B|Understand|2|Certified|B.061 learning curve forecasting
+P1-BC-061|C|B|Understand|3|Certified|B.062 learning curve forecasting
+P1-BC-062|C|B|Understand|3|Certified|B.063 learning curve forecasting
+P1-BC-063|C|B|Understand|3|Certified|B.064 learning curve forecasting
+P1-BC-064|C|B|Understand|1|Certified|B.065 high low method cost estimation
+P1-BC-065|C|B|Understand|2|Certified|B.066 high low method cost estimation
+P1-BC-066|C|B|Understand|3|Certified|B.067 high low method cost estimation
+P1-BC-067|C|B|Understand|3|Certified|B.068 high low method cost estimation
+P1-BC-068|C|B|Understand|2|Certified|B.069 high low method cost estimation
+P1-BC-069|C|B|Understand|2|Certified|B.070 high low method cost estimation
+P1-BC-070|C|B|Understand|3|Certified|B.071 budgetary control feedback loop
+P1-BC-071|C|B|Understand|3|Certified|B.072 budgetary control feedback loop
+P1-BC-072|C|B|Understand|1|Certified|B.073 budgetary control feedback loop
+P1-BC-073|C|B|Understand|2|Certified|B.074 budgetary control feedback loop
+P1-BC-074|C|B|Understand|2|Certified|B.075 budgetary control feedback loop
+P1-BC-075|C|B|Understand|3|Certified|B.076 budgetary control feedback loop
+P1-BC-076|C|B|Understand|1|Certified|B.077 continuous improvement kaizen budget
+P1-BC-077|C|B|Apply|3|Certified|B.078 continuous improvement kaizen budget
+P1-BC-078|C|B|Apply|4|Certified|B.079 continuous improvement kaizen budget
+P1-BC-079|C|B|Apply|4|Certified|B.080 continuous improvement kaizen budget
+P1-BC-080|C|B|Apply|4|Certified|B.081 continuous improvement kaizen budget
+P1-BC-081|C|B|Apply|3|Certified|B.082 continuous improvement kaizen budget
+P1-BC-082|C|B|Apply|1|Certified|B.083 moving average forecast smoothing
+P1-BC-083|C|B|Apply|3|Certified|B.084 moving average forecast smoothing
+P1-BC-084|C|B|Apply|3|Certified|B.085 moving average forecast smoothing
+P1-BC-085|C|B|Apply|1|Certified|B.086 moving average forecast smoothing
+P1-BC-086|C|B|Apply|4|Certified|B.087 moving average forecast smoothing
+P1-BC-087|C|B|Apply|3|Certified|B.088 moving average forecast smoothing
+P1-BC-088|C|B|Apply|3|Certified|B.089 what if sensitivity analysis budgeting
+P1-BC-089|C|B|Apply|2|Certified|B.090 what if sensitivity analysis budgeting
+P1-BC-090|C|B|Apply|2|Certified|B.091 what if sensitivity analysis budgeting
+P1-BC-091|C|B|Apply|2|Certified|B.092 what if sensitivity analysis budgeting
+P1-BC-092|C|B|Apply|2|Certified|B.093 what if sensitivity analysis budgeting
+P1-BC-093|C|B|Apply|4|Certified|B.094 what if sensitivity analysis budgeting
+P1-BC-094|C|B|Apply|4|Certified|B.095 budget slack detection
+P1-BC-095|C|B|Apply|3|Certified|B.096 budget slack detection
+P1-BC-096|C|B|Apply|1|Certified|B.097 budget slack detection
+P1-BC-097|C|B|Apply|3|Certified|B.098 budget slack detection
+P1-BC-098|C|B|Apply|1|Certified|B.099 budget slack detection
+P1-BC-099|C|B|Apply|3|Certified|B.100 budget slack detection
+P1-BC-100|C|C|Apply|3|Certified|C.001 balanced scorecard perspectives
+P1-CC-001|C|C|Understand|3|Certified|C.002 balanced scorecard perspectives
+P1-CC-002|C|C|Understand|1|Certified|C.003 balanced scorecard perspectives
+P1-CC-003|C|C|Understand|3|Certified|C.004 balanced scorecard perspectives
+P1-CC-004|C|C|Understand|3|Certified|C.005 balanced scorecard perspectives
+P1-CC-005|C|C|Understand|3|Certified|C.006 balanced scorecard perspectives
+P1-CC-006|C|C|Understand|3|Certified|C.007 balanced scorecard perspectives
+P1-CC-007|C|C|Understand|3|Certified|C.008 return on investment dupont
+P1-CC-008|C|C|Understand|2|Certified|C.009 return on investment dupont
+P1-CC-009|C|C|Understand|2|Certified|C.010 return on investment dupont
+P1-CC-010|C|C|Understand|2|Certified|C.011 return on investment dupont
+P1-CC-011|C|C|Understand|2|Certified|C.012 return on investment dupont
+P1-CC-012|C|C|Understand|1|Certified|C.013 return on investment dupont
+P1-CC-013|C|C|Understand|2|Certified|C.014 return on investment dupont
+P1-CC-014|C|C|Analyze|1|Certified|C.015 residual income calculation
+P1-CC-015|C|C|Apply|2|Certified|C.016 residual income calculation
+P1-CC-016|C|C|Apply|3|Certified|C.017 residual income calculation
+P1-CC-017|C|C|Apply|3|Certified|C.018 residual income calculation
+P1-CC-018|C|C|Apply|3|Certified|C.019 residual income calculation
+P1-CC-019|C|C|Apply|3|Certified|C.020 residual income calculation
+P1-CC-020|C|C|Apply|2|Certified|C.021 residual income calculation
+P1-CC-021|C|C|Apply|3|Certified|C.022 transfer pricing negotiated
+P1-CC-022|C|C|Apply|3|Certified|C.023 transfer pricing negotiated
+P1-CC-023|C|C|Apply|1|Certified|C.024 transfer pricing negotiated
+P1-CC-024|C|C|Apply|3|Certified|C.025 transfer pricing negotiated
+P1-CC-025|C|C|Apply|3|Certified|C.026 transfer pricing negotiated
+P1-CC-026|C|C|Apply|3|Certified|C.027 transfer pricing negotiated
+P1-CC-027|C|C|Apply|3|Certified|C.028 transfer pricing negotiated
+P1-CC-028|C|C|Apply|3|Certified|C.029 responsibility center cost center
+P1-CC-029|C|C|Evaluate|1|Certified|C.030 responsibility center cost center
+P1-CC-030|C|C|Evaluate|3|Certified|C.031 responsibility center cost center
+P1-CC-031|C|C|Evaluate|1|Certified|C.032 responsibility center cost center
+P1-CC-032|C|C|Evaluate|3|Certified|C.033 responsibility center cost center
+P1-CC-033|C|C|Evaluate|3|Certified|C.034 responsibility center cost center
+P1-CC-034|C|C|Evaluate|1|Certified|C.035 investment center evaluation
+P1-CC-035|C|C|Understand|3|Certified|C.036 investment center evaluation
+P1-CC-036|C|C|Understand|3|Certified|C.037 investment center evaluation
+P1-CC-037|C|C|Understand|1|Certified|C.038 investment center evaluation
+P1-CC-038|C|C|Understand|3|Certified|C.039 investment center evaluation
+P1-CC-039|C|C|Understand|3|Certified|C.040 investment center evaluation
+P1-CC-040|C|C|Understand|3|Certified|C.041 economic value added concept
+P1-CC-041|C|C|Apply|3|Certified|C.042 economic value added concept
+P1-CC-042|C|C|Apply|3|Certified|C.043 economic value added concept
+P1-CC-043|C|C|Apply|3|Certified|C.044 economic value added concept
+P1-CC-044|C|C|Apply|1|Certified|C.045 economic value added concept
+P1-CC-045|C|C|Apply|3|Certified|C.046 economic value added concept
+P1-CC-046|C|C|Apply|3|Certified|C.047 benchmarking best practices
+P1-CC-047|C|C|Understand|1|Certified|C.048 benchmarking best practices
+P1-CC-048|C|C|Understand|3|Certified|C.049 benchmarking best practices
+P1-CC-049|C|C|Understand|3|Certified|C.050 benchmarking best practices
+P1-CC-050|C|C|Understand|3|Certified|C.051 benchmarking best practices
+P1-CC-051|C|C|Understand|1|Certified|C.052 benchmarking best practices
+P1-CC-052|C|C|Understand|3|Certified|C.053 sales price variance
+P1-CC-053|C|C|Apply|3|Certified|C.054 sales price variance
+P1-CC-054|C|C|Apply|3|Certified|C.055 sales price variance
+P1-CC-055|C|C|Apply|3|Certified|C.056 sales price variance
+P1-CC-056|C|C|Apply|2|Certified|C.057 sales price variance
+P1-CC-057|C|C|Apply|3|Certified|C.058 sales price variance
+P1-CC-058|C|C|Apply|3|Certified|C.059 fixed overhead volume variance calculation
+P1-CC-059|C|C|Apply|3|Certified|C.060 fixed overhead volume variance calculation
+P1-CC-060|C|C|Apply|3|Certified|C.061 fixed overhead volume variance calculation
+P1-CC-061|C|C|Apply|3|Certified|C.062 fixed overhead volume variance calculation
+P1-CC-062|C|C|Apply|3|Certified|C.063 fixed overhead volume variance calculation
+P1-CC-063|C|C|Apply|3|Certified|C.064 total fixed overhead variance calculation
+P1-CC-064|C|C|Apply|3|Certified|C.065 controllability principle
+P1-CC-065|C|C|Apply|1|Certified|C.066 controllability principle
+P1-CC-066|C|C|Apply|3|Certified|C.067 controllability principle
+P1-CC-067|C|C|Apply|3|Certified|C.068 controllability principle
+P1-CC-068|C|C|Apply|3|Certified|C.069 controllability principle
+P1-CC-069|C|C|Apply|3|Certified|C.070 controllability principle
+P1-CC-070|C|C|Apply|3|Certified|C.071 gross margin variance analysis
+P1-CC-071|C|C|Apply|3|Certified|C.072 gross margin variance analysis
+P1-CC-072|C|C|Apply|3|Certified|C.073 gross margin variance analysis
+P1-CC-073|C|C|Apply|3|Certified|C.074 gross margin variance analysis
+P1-CC-074|C|C|Apply|3|Certified|C.075 gross margin variance analysis
+P1-CC-075|C|C|Apply|3|Certified|C.076 gross margin variance analysis
+P1-CC-076|C|C|Apply|3|Certified|C.077 quality cost prevention
+P1-CC-077|C|C|Understand|3|Certified|C.078 quality cost prevention
+P1-CC-078|C|C|Understand|3|Certified|C.079 quality cost prevention
+P1-CC-079|C|C|Understand|3|Certified|C.080 quality cost prevention
+P1-CC-080|C|C|Understand|3|Certified|C.081 quality cost prevention
+P1-CC-081|C|C|Understand|3|Certified|C.082 quality cost prevention
+P1-CC-082|C|C|Understand|1|Certified|C.083 management by exception
+P1-CC-083|C|C|Understand|3|Certified|C.084 management by exception
+P1-CC-084|C|C|Understand|3|Certified|C.085 management by exception
+P1-CC-085|C|C|Understand|3|Certified|C.086 management by exception
+P1-CC-086|C|C|Understand|3|Certified|C.087 management by exception
+P1-CC-087|C|C|Understand|3|Certified|C.088 management by exception
+P1-CC-088|C|C|Apply|3|Certified|C.089 nonfinancial performance measures
+P1-CC-089|C|C|Apply|3|Certified|C.090 nonfinancial performance measures
+P1-CC-090|C|C|Apply|1|Certified|C.091 nonfinancial performance measures
+P1-CC-091|C|C|Apply|3|Certified|C.092 nonfinancial performance measures
+P1-CC-092|C|C|Apply|3|Certified|C.093 nonfinancial performance measures
+P1-CC-093|C|C|Apply|3|Certified|C.094 nonfinancial performance measures
+P1-CC-094|C|C|Apply|3|Certified|C.095 market based transfer price
+P1-CC-095|C|C|Understand|3|Certified|C.096 market based transfer price
+P1-CC-096|C|C|Understand|1|Certified|C.097 market based transfer price
+P1-CC-097|C|C|Understand|3|Certified|C.098 market based transfer price
+P1-CC-098|C|C|Understand|1|Certified|C.099 market based transfer price
+P1-CC-099|C|C|Understand|3|Certified|C.100 market based transfer price
+P1-CC-100|C|D|Apply|3|Certified|D.001 job order costing overhead
+P1-DC-001|C|D|Apply|1|Certified|D.002 job order costing overhead
+P1-DC-002|C|D|Apply|3|Certified|D.003 job order costing overhead
+P1-DC-003|C|D|Apply|3|Certified|D.004 job order costing overhead
+P1-DC-004|C|D|Apply|3|Certified|D.005 job order costing overhead
+P1-DC-005|C|D|Apply|3|Certified|D.006 process costing weighted average
+P1-DC-006|C|D|Understand|1|Certified|D.007 process costing weighted average
+P1-DC-007|C|D|Understand|1|Certified|D.008 process costing weighted average
+P1-DC-008|C|D|Understand|1|Certified|D.009 process costing weighted average
+P1-DC-009|C|D|Understand|3|Certified|D.010 process costing weighted average
+P1-DC-010|C|D|Understand|3|Certified|D.011 activity based costing cost driver
+P1-DC-011|C|D|Apply|3|Certified|D.012 joint cost allocation physical units method
+P1-DC-012|C|D|Apply|3|Certified|D.013 joint cost allocation sales value method
+P1-DC-013|C|D|Apply|3|Certified|D.014 support department cost allocation machine hours
+P1-DC-014|C|D|Apply|3|Certified|D.015 activity based costing cost driver
+P1-DC-015|C|D|Apply|3|Certified|D.016 joint cost allocation method
+P1-DC-016|C|D|Understand|3|Certified|D.017 joint cost allocation method
+P1-DC-017|C|D|Understand|3|Certified|D.018 joint cost allocation method
+P1-DC-018|C|D|Understand|1|Certified|D.019 joint cost allocation method
+P1-DC-019|C|D|Understand|1|Certified|D.020 joint cost allocation method
+P1-DC-020|C|D|Analyze|1|Certified|D.021 variable costing vs absorption costing
+P1-DC-021|C|D|Apply|3|Certified|D.022 variable costing vs absorption costing
+P1-DC-022|C|D|Apply|3|Certified|D.023 variable costing vs absorption costing
+P1-DC-023|C|D|Apply|3|Certified|D.024 variable costing vs absorption costing
+P1-DC-024|C|D|Apply|3|Certified|D.025 variable costing vs absorption costing
+P1-DC-025|C|D|Apply|3|Certified|D.026 relevant range cost behavior
+P1-DC-026|C|D|Understand|1|Certified|D.027 relevant range cost behavior
+P1-DC-027|C|D|Understand|2|Certified|D.028 relevant range cost behavior
+P1-DC-028|C|D|Understand|2|Certified|D.029 relevant range cost behavior
+P1-DC-029|C|D|Understand|1|Certified|D.030 relevant range cost behavior
+P1-DC-030|C|D|Understand|2|Certified|D.031 target costing approach
+P1-DC-031|C|D|Apply|3|Certified|D.032 target costing approach
+P1-DC-032|C|D|Apply|3|Certified|D.033 target costing approach
+P1-DC-033|C|D|Apply|3|Certified|D.034 target costing approach
+P1-DC-034|C|D|Apply|3|Certified|D.035 target costing approach
+P1-DC-035|C|D|Apply|3|Certified|D.036 theory of constraints throughput
+P1-DC-036|C|D|Understand|3|Certified|D.037 theory of constraints throughput
+P1-DC-037|C|D|Understand|3|Certified|D.038 theory of constraints throughput
+P1-DC-038|C|D|Understand|3|Certified|D.039 theory of constraints throughput
+P1-DC-039|C|D|Understand|1|Certified|D.040 theory of constraints throughput
+P1-DC-040|C|D|Understand|3|Certified|D.041 cost of quality external failure
+P1-DC-041|C|D|Understand|3|Certified|D.042 cost of quality external failure
+P1-DC-042|C|D|Understand|3|Certified|D.043 cost of quality external failure
+P1-DC-043|C|D|Understand|3|Certified|D.044 cost of quality external failure
+P1-DC-044|C|D|Understand|1|Certified|D.045 cost of quality external failure
+P1-DC-045|C|D|Understand|3|Certified|D.046 byproduct accounting treatment
+P1-DC-046|C|D|Understand|2|Certified|D.047 byproduct accounting treatment
+P1-DC-047|C|D|Understand|2|Certified|D.048 byproduct accounting treatment
+P1-DC-048|C|D|Understand|1|Certified|D.049 byproduct accounting treatment
+P1-DC-049|C|D|Understand|2|Certified|D.050 byproduct accounting treatment
+P1-DC-050|C|D|Understand|2|Certified|D.051 standard costing variance investigation
+P1-DC-051|C|D|Apply|1|Certified|D.052 standard costing variance investigation
+P1-DC-052|C|D|Apply|3|Certified|D.053 standard costing variance investigation
+P1-DC-053|C|D|Apply|1|Certified|D.054 standard costing variance investigation
+P1-DC-054|C|D|Apply|3|Certified|D.055 standard costing variance investigation
+P1-DC-055|C|D|Apply|3|Certified|D.056 cost allocation direct method
+P1-DC-056|C|D|Apply|3|Certified|D.057 cost allocation direct method
+P1-DC-057|C|D|Apply|3|Certified|D.058 cost allocation direct method
+P1-DC-058|C|D|Apply|3|Certified|D.059 cost allocation direct method
+P1-DC-059|C|D|Apply|3|Certified|D.060 cost allocation direct method
+P1-DC-060|C|D|Apply|3|Certified|D.061 lean manufacturing waste reduction
+P1-DC-061|C|D|Understand|3|Certified|D.062 lean manufacturing waste reduction
+P1-DC-062|C|D|Understand|3|Certified|D.063 lean manufacturing waste reduction
+P1-DC-063|C|D|Understand|3|Certified|D.064 lean manufacturing waste reduction
+P1-DC-064|C|D|Understand|3|Certified|D.065 lean manufacturing waste reduction
+P1-DC-065|C|D|Understand|3|Certified|D.066 contribution margin break even
+P1-DC-066|C|D|Apply|3|Certified|D.067 contribution margin break even
+P1-DC-067|C|D|Apply|3|Certified|D.068 contribution margin break even
+P1-DC-068|C|D|Apply|3|Certified|D.069 contribution margin break even
+P1-DC-069|C|D|Apply|3|Certified|D.070 contribution margin break even
+P1-DC-070|C|D|Apply|3|Certified|D.071 spoilage normal abnormal
+P1-DC-071|C|D|Understand|3|Certified|D.072 spoilage normal abnormal
+P1-DC-072|C|D|Understand|3|Certified|D.073 spoilage normal abnormal
+P1-DC-073|C|D|Understand|1|Certified|D.074 spoilage normal abnormal
+P1-DC-074|C|D|Understand|1|Certified|D.075 spoilage normal abnormal
+P1-DC-075|C|E|Understand|3|Certified|E.001 segregation of duties design
+P1-EC-001|C|E|Apply|3|Archived|E.002 segregation of duties design
+P1-EC-002|C|E|Apply|3|Archived|E.003 segregation of duties design
+P1-EC-003|C|E|Apply|3|Archived|E.004 segregation of duties design
+P1-EC-004|C|E|Apply|3|Unprocessed|E.005 segregation of duties design
+P1-EC-005|C|E|Apply|3|Archived|E.006 coso internal control framework
+P1-EC-006|C|E|Evaluate|3|Archived|E.007 coso internal control framework
+P1-EC-007|C|E|Evaluate|3|Archived|E.008 coso internal control framework
+P1-EC-008|C|E|Evaluate|3|Unprocessed|E.009 coso internal control framework
+P1-EC-009|C|E|Evaluate|3|Archived|E.010 coso internal control framework
+P1-EC-010|C|E|Evaluate|3|Archived|E.011 fraud triangle elements
+P1-EC-011|C|E|Understand|1|Archived|E.012 fraud triangle elements
+P1-EC-012|C|E|Understand|1|Archived|E.013 fraud triangle elements
+P1-EC-013|C|E|Apply|3|Archived|E.014 fraud triangle elements
+P1-EC-014|C|E|Understand|3|Unprocessed|E.015 fraud triangle elements
+P1-EC-015|C|E|Understand|3|Archived|E.016 physical controls over assets
+P1-EC-016|C|E|Understand|3|Archived|E.017 physical controls over assets
+P1-EC-017|C|E|Understand|3|Archived|E.018 physical controls over assets
+P1-EC-018|C|E|Understand|3|Archived|E.019 physical controls over assets
+P1-EC-019|C|E|Understand|1|Archived|E.020 physical controls over assets
+P1-EC-020|C|E|Understand|3|Unprocessed|E.021 segregation of duties vendor setup and payment
+P1-EC-021|C|E|Apply|3|Unprocessed|E.022 preventive vs detective duplicate payment control
+P1-EC-022|C|E|Understand|3|Unprocessed|E.023 IT access control terminated employee deprovisioning
+P1-EC-023|C|E|Understand|3|Unprocessed|E.024 application input control sales order validation
+P1-EC-024|C|E|Understand|3|Unprocessed|E.025 preventive vs detective controls
+P1-EC-025|C|E|Apply|3|Unprocessed|E.026 bank reconciliation control
+P1-EC-026|C|E|Apply|3|Archived|E.027 bank reconciliation control
+P1-EC-027|C|E|Apply|3|Archived|E.028 bank reconciliation control
+P1-EC-028|C|E|Apply|3|Unprocessed|E.029 bank reconciliation control
+P1-EC-029|C|E|Apply|3|Archived|E.030 bank reconciliation control
+P1-EC-030|C|E|Apply|1|Archived|E.031 erm risk appetite
+P1-EC-031|C|E|Understand|3|Unprocessed|E.032 erm risk appetite
+P1-EC-032|C|E|Understand|3|Archived|E.033 erm risk appetite
+P1-EC-033|C|E|Understand|3|Archived|E.034 erm risk appetite
+P1-EC-034|C|E|Understand|3|Archived|E.035 erm risk appetite
+P1-EC-035|C|E|Understand|3|Archived|E.036 it general controls access
+P1-EC-036|C|E|Understand|3|Archived|E.037 it general controls access
+P1-EC-037|C|E|Understand|3|Archived|E.038 it general controls access
+P1-EC-038|C|E|Understand|3|Archived|E.039 it general controls access
+P1-EC-039|C|E|Understand|3|Archived|E.040 it general controls access
+P1-EC-040|C|E|Understand|3|Unprocessed|E.041 management override risk
+P1-EC-041|C|E|Apply|3|Unprocessed|E.042 management override risk
+P1-EC-042|C|E|Apply|1|Archived|E.043 management override risk
+P1-EC-043|C|E|Apply|1|Archived|E.044 management override risk
+P1-EC-044|C|E|Apply|3|Archived|E.045 management override risk
+P1-EC-045|C|E|Apply|1|Archived|E.046 whistleblower hotline purpose
+P1-EC-046|C|E|Evaluate|3|Archived|E.047 whistleblower hotline purpose
+P1-EC-047|C|E|Evaluate|1|Archived|E.048 whistleblower hotline purpose
+P1-EC-048|C|E|Evaluate|3|Archived|E.049 whistleblower hotline purpose
+P1-EC-049|C|E|Evaluate|3|Unprocessed|E.050 whistleblower hotline purpose
+P1-EC-050|C|E|Evaluate|1|Archived|E.051 compensating control small business
+P1-EC-051|C|E|Understand|1|Archived|E.052 compensating control small business
+P1-EC-052|C|E|Understand|3|Unprocessed|E.053 compensating control small business
+P1-EC-053|C|E|Understand|3|Archived|E.054 compensating control small business
+P1-EC-054|C|E|Understand|1|Archived|E.055 compensating control small business
+P1-EC-055|C|E|Understand|1|Archived|E.056 control environment tone at top
+P1-EC-056|C|E|Evaluate|1|Archived|E.057 control environment tone at top
+P1-EC-057|C|E|Evaluate|3|Archived|E.058 control environment tone at top
+P1-EC-058|C|E|Evaluate|3|Archived|E.059 control environment tone at top
+P1-EC-059|C|E|Evaluate|3|Archived|E.060 control environment tone at top
+P1-EC-060|C|E|Evaluate|3|Unprocessed|E.061 inherent risk vs control risk
+P1-EC-061|C|E|Understand|3|Unprocessed|E.062 inherent risk vs control risk
+P1-EC-062|C|E|Understand|3|Archived|E.063 inherent risk vs control risk
+P1-EC-063|C|E|Understand|3|Archived|E.064 inherent risk vs control risk
+P1-EC-064|C|E|Understand|1|Archived|E.065 inherent risk vs control risk
+P1-EC-065|C|E|Analyze|3|Archived|E.066 segregation cash custody recording
+P1-EC-066|C|E|Understand|1|Unprocessed|E.067 segregation cash custody recording
+P1-EC-067|C|E|Understand|3|Archived|E.068 segregation cash custody recording
+P1-EC-068|C|E|Understand|1|Archived|E.069 segregation cash custody recording
+P1-EC-069|C|E|Understand|3|Archived|E.070 segregation cash custody recording
+P1-EC-070|C|E|Understand|3|Archived|E.071 remediation of control deficiency
+P1-EC-071|C|E|Understand|3|Archived|E.072 remediation of control deficiency
+P1-EC-072|C|E|Understand|3|Unprocessed|E.073 remediation of control deficiency
+P1-EC-073|C|E|Understand|1|Archived|E.074 remediation of control deficiency
+P1-EC-074|C|E|Understand|3|Archived|E.075 remediation of control deficiency
+P1-EC-075|C|F|Understand|3|Archived|F.001 data governance ownership
+P1-FC-001|C|F|Understand|3|Unprocessed|F.002 data governance ownership
+P1-FC-002|C|F|Understand|3|Unprocessed|F.003 data governance ownership
+P1-FC-003|C|F|Understand|3|Unprocessed|F.004 data governance ownership
+P1-FC-004|C|F|Understand|3|Unprocessed|F.005 data governance ownership
+P1-FC-005|C|F|Understand|3|Unprocessed|F.006 descriptive vs predictive analytics
+P1-FC-006|C|F|Apply|3|Unprocessed|F.007 descriptive vs predictive analytics
+P1-FC-007|C|F|Apply|3|Unprocessed|F.008 prescriptive analytics applied scenario
+P1-FC-008|C|F|Understand|3|Unprocessed|F.009 descriptive vs predictive analytics
+P1-FC-009|C|F|Apply|3|Unprocessed|F.010 descriptive vs predictive analytics
+P1-FC-010|C|F|Apply|3|Unprocessed|F.011 robotic process automation use case
+P1-FC-011|C|F|Understand|3|Unprocessed|F.012 robotic process automation use case
+P1-FC-012|C|F|Understand|3|Unprocessed|F.013 robotic process automation use case
+P1-FC-013|C|F|Apply|3|Unprocessed|F.014 robotic process automation use case
+P1-FC-014|C|F|Understand|3|Unprocessed|F.015 robotic process automation use case
+P1-FC-015|C|F|Understand|3|Unprocessed|F.016 cloud computing service models
+P1-FC-016|C|F|Understand|1|Unprocessed|F.017 cloud computing service models
+P1-FC-017|C|F|Understand|3|Unprocessed|F.018 cloud computing service models
+P1-FC-018|C|F|Understand|3|Unprocessed|F.019 cloud computing service models
+P1-FC-019|C|F|Understand|3|Unprocessed|F.020 cloud computing service models
+P1-FC-020|C|F|Understand|3|Unprocessed|F.021 data visualization dashboard design
+P1-FC-021|C|F|Apply|1|Unprocessed|F.022 data visualization dashboard design
+P1-FC-022|C|F|Apply|3|Unprocessed|F.023 data visualization dashboard design
+P1-FC-023|C|F|Apply|3|Unprocessed|F.024 data visualization dashboard design
+P1-FC-024|C|F|Apply|3|Unprocessed|F.025 data visualization dashboard design
+P1-FC-025|C|F|Apply|1|Unprocessed|F.026 CIA triad access control applied
+P1-FC-026|C|F|Understand|3|Unprocessed|F.027 cybersecurity confidentiality integrity availability
+P1-FC-027|C|F|Understand|3|Unprocessed|F.028 cybersecurity confidentiality integrity availability
+P1-FC-028|C|F|Understand|3|Unprocessed|F.029 cybersecurity confidentiality integrity availability
+P1-FC-029|C|F|Understand|3|Unprocessed|F.030 cybersecurity confidentiality integrity availability
+P1-FC-030|C|F|Understand|3|Unprocessed|F.031 big data characteristics volume velocity variety
+P1-FC-031|C|F|Understand|3|Unprocessed|F.032 big data characteristics volume velocity variety
+P1-FC-032|C|F|Understand|3|Unprocessed|F.033 big data characteristics volume velocity variety
+P1-FC-033|C|F|Understand|1|Unprocessed|F.034 big data characteristics volume velocity variety
+P1-FC-034|C|F|Understand|3|Unprocessed|F.035 big data characteristics volume velocity variety
+P1-FC-035|C|F|Understand|1|Unprocessed|F.036 data mining pattern discovery
+P1-FC-036|C|F|Understand|3|Unprocessed|F.037 data mining pattern discovery
+P1-FC-037|C|F|Understand|1|Unprocessed|F.038 data mining pattern discovery
+P1-FC-038|C|F|Understand|3|Unprocessed|F.039 data mining pattern discovery
+P1-FC-039|C|F|Understand|1|Unprocessed|F.040 data mining pattern discovery
+P1-FC-040|C|F|Understand|3|Unprocessed|F.041 blockchain distributed ledger
+P1-FC-041|C|F|Apply|3|Unprocessed|F.042 blockchain distributed ledger
+P1-FC-042|C|F|Apply|3|Unprocessed|F.043 blockchain distributed ledger
+P1-FC-043|C|F|Apply|3|Unprocessed|F.044 blockchain distributed ledger
+P1-FC-044|C|F|Apply|3|Unprocessed|F.045 blockchain distributed ledger
+P1-FC-045|C|F|Apply|3|Unprocessed|F.046 data quality dimensions accuracy completeness
+P1-FC-046|C|F|Understand|1|Unprocessed|F.047 data quality dimensions accuracy completeness
+P1-FC-047|C|F|Understand|3|Unprocessed|F.048 data quality dimensions accuracy completeness
+P1-FC-048|C|F|Understand|3|Unprocessed|F.049 data quality dimensions accuracy completeness
+P1-FC-049|C|F|Understand|3|Unprocessed|F.050 data quality dimensions accuracy completeness
+P1-FC-050|C|F|Understand|1|Unprocessed|F.051 artificial intelligence machine learning
+P1-FC-051|C|F|Understand|3|Unprocessed|F.052 artificial intelligence machine learning
+P1-FC-052|C|F|Understand|3|Unprocessed|F.053 artificial intelligence machine learning
+P1-FC-053|C|F|Understand|3|Unprocessed|F.054 artificial intelligence machine learning
+P1-FC-054|C|F|Understand|3|Unprocessed|F.055 artificial intelligence machine learning
+P1-FC-055|C|F|Understand|1|Unprocessed|F.056 cybersecurity phishing social engineering
+P1-FC-056|C|F|Understand|3|Unprocessed|F.057 cybersecurity phishing social engineering
+P1-FC-057|C|F|Understand|3|Unprocessed|F.058 cybersecurity phishing social engineering
+P1-FC-058|C|F|Understand|1|Unprocessed|F.059 cybersecurity phishing social engineering
+P1-FC-059|C|F|Understand|3|Unprocessed|F.060 cybersecurity phishing social engineering
+P1-FC-060|C|F|Understand|3|Unprocessed|F.061 erp system integration benefits
+P1-FC-061|C|F|Understand|3|Unprocessed|F.062 erp system integration benefits
+P1-FC-062|C|F|Understand|1|Unprocessed|F.063 erp system integration benefits
+P1-FC-063|C|F|Understand|3|Unprocessed|F.064 erp system integration benefits
+P1-FC-064|C|F|Understand|1|Unprocessed|F.065 erp system integration benefits
+P1-FC-065|C|F|Understand|3|Unprocessed|F.066 data lake vs data warehouse
+P1-FC-066|C|F|Understand|3|Unprocessed|F.067 data lake vs data warehouse
+P1-FC-067|C|F|Understand|3|Unprocessed|F.068 data lake vs data warehouse
+P1-FC-068|C|F|Understand|3|Unprocessed|F.069 data lake vs data warehouse
+P1-FC-069|C|F|Understand|1|Unprocessed|F.070 data lake vs data warehouse
+P1-FC-070|C|F|Understand|3|Unprocessed|F.071 technology enabled continuous auditing
+P1-FC-071|C|F|Understand|3|Unprocessed|F.072 technology enabled continuous auditing
+P1-FC-072|C|F|Understand|3|Unprocessed|F.073 technology enabled continuous auditing
+P1-FC-073|C|F|Understand|3|Unprocessed|F.074 technology enabled continuous auditing
+P1-FC-074|C|F|Understand|3|Unprocessed|F.075 technology enabled continuous auditing
+P1-FC-075|C||Understand|3|Unprocessed|
+P1-AD-001|D|A|Apply|2|Certified|A.002 accounts receivable factoring
+P1-AD-002|D|A|Apply|1|Certified|A.003 accounts receivable factoring
+P1-AD-003|D|A|Apply|2|Certified|A.004 accounts receivable factoring
+P1-AD-004|D|A|Apply|2|Certified|A.005 accounts receivable factoring
+P1-AD-005|D|A|Apply|3|Certified|A.006 capitalized interest construction
+P1-AD-006|D|A|Understand|2|Certified|A.007 capitalized interest construction
+P1-AD-007|D|A|Understand|1|Certified|A.008 capitalized interest construction
+P1-AD-008|D|A|Understand|3|Certified|A.009 capitalized interest construction
+P1-AD-009|D|A|Understand|1|Certified|A.010 capitalized interest construction
+P1-AD-010|D|A|Understand|1|Certified|A.011 statement of cash flows financing activities
+P1-AD-011|D|A|Understand|2|Certified|A.012 statement of cash flows financing activities
+P1-AD-012|D|A|Understand|3|Certified|A.013 statement of cash flows financing activities
+P1-AD-013|D|A|Understand|3|Certified|A.014 statement of cash flows financing activities
+P1-AD-014|D|A|Understand|1|Certified|A.015 statement of cash flows financing activities
+P1-AD-015|D|A|Understand|2|Certified|A.016 revenue variable consideration
+P1-AD-016|D|A|Understand|3|Certified|A.017 revenue variable consideration
+P1-AD-017|D|A|Understand|1|Certified|A.018 revenue variable consideration
+P1-AD-018|D|A|Understand|3|Certified|A.019 revenue variable consideration
+P1-AD-019|D|A|Understand|3|Certified|A.020 revenue variable consideration
+P1-AD-020|D|A|Understand|3|Certified|A.021 other comprehensive income items
+P1-AD-021|D|A|Apply|1|Certified|A.022 other comprehensive income items
+P1-AD-022|D|A|Apply|2|Certified|A.023 other comprehensive income items
+P1-AD-023|D|A|Apply|2|Certified|A.024 other comprehensive income items
+P1-AD-024|D|A|Apply|2|Certified|A.025 other comprehensive income items
+P1-AD-025|D|A|Apply|2|Certified|A.026 asset retirement obligation
+P1-AD-026|D|A|Understand|1|Certified|A.027 asset retirement obligation
+P1-AD-027|D|A|Understand|3|Certified|A.028 asset retirement obligation
+P1-AD-028|D|A|Understand|3|Certified|A.029 asset retirement obligation
+P1-AD-029|D|A|Understand|3|Certified|A.030 asset retirement obligation
+P1-AD-030|D|A|Understand|3|Certified|A.031 subsequent events recognized
+P1-AD-031|D|A|Understand|1|Certified|A.032 subsequent events recognized
+P1-AD-032|D|A|Understand|3|Certified|A.033 subsequent events recognized
+P1-AD-033|D|A|Understand|3|Certified|A.034 subsequent events recognized
+P1-AD-034|D|A|Understand|3|Certified|A.035 subsequent events recognized
+P1-AD-035|D|A|Understand|3|Certified|A.036 bond issuance costs
+P1-AD-036|D|A|Understand|2|Certified|A.037 bond issuance costs
+P1-AD-037|D|A|Understand|1|Certified|A.038 bond issuance costs
+P1-AD-038|D|A|Understand|3|Certified|A.039 bond issuance costs
+P1-AD-039|D|A|Understand|3|Certified|A.040 bond issuance costs
+P1-AD-040|D|A|Understand|1|Certified|A.041 comprehensive income statement presentation
+P1-AD-041|D|A|Apply|2|Certified|A.042 comprehensive income statement presentation
+P1-AD-042|D|A|Apply|1|Certified|A.043 comprehensive income statement presentation
+P1-AD-043|D|A|Apply|1|Certified|A.044 comprehensive income statement presentation
+P1-AD-044|D|A|Apply|1|Certified|A.045 comprehensive income statement presentation
+P1-AD-045|D|A|Apply|1|Certified|A.046 inventory consignment
+P1-AD-046|D|A|Understand|3|Certified|A.047 inventory consignment
+P1-AD-047|D|A|Understand|3|Certified|A.048 inventory consignment
+P1-AD-048|D|A|Understand|1|Certified|A.049 inventory consignment
+P1-AD-049|D|A|Understand|1|Certified|A.050 inventory consignment
+P1-AD-050|D|A|Understand|3|Certified|A.051 convertible preferred stock
+P1-AD-051|D|A|Understand|3|Certified|A.052 convertible preferred stock
+P1-AD-052|D|A|Understand|3|Certified|A.053 convertible preferred stock
+P1-AD-053|D|A|Understand|3|Certified|A.054 basic EPS calculation preferred dividends
+P1-AD-054|D|A|Apply|3|Certified|A.055 diluted EPS calculation convertible
+P1-AD-055|D|A|Apply|3|Certified|A.056 straight-line depreciation partial year
+P1-AD-056|D|A|Apply|3|Certified|A.057 change in accounting estimate
+P1-AD-057|D|A|Understand|3|Certified|A.058 change in accounting estimate
+P1-AD-058|D|A|Understand|3|Certified|A.059 change in accounting estimate
+P1-AD-059|D|A|Understand|3|Certified|A.060 change in accounting estimate
+P1-AD-060|D|A|Understand|3|Certified|A.061 statement of cash flows noncash disclosure
+P1-AD-061|D|A|Understand|3|Certified|A.062 statement of cash flows noncash disclosure
+P1-AD-062|D|A|Understand|3|Certified|A.063 statement of cash flows noncash disclosure
+P1-AD-063|D|A|Understand|3|Certified|A.064 statement of cash flows noncash disclosure
+P1-AD-064|D|A|Understand|3|Certified|A.065 statement of cash flows noncash disclosure
+P1-AD-065|D|A|Understand|3|Certified|A.066 held for trading securities
+P1-AD-066|D|A|Understand|3|Certified|A.067 held for trading securities
+P1-AD-067|D|A|Understand|1|Certified|A.068 held for trading securities
+P1-AD-068|D|A|Understand|3|Certified|A.069 held for trading securities
+P1-AD-069|D|A|Understand|3|Certified|A.070 held for trading securities
+P1-AD-070|D|A|Understand|3|Certified|A.071 statement of retained earnings prior period adjustment
+P1-AD-071|D|A|Understand|1|Certified|A.072 statement of retained earnings prior period adjustment
+P1-AD-072|D|A|Understand|3|Certified|A.073 statement of retained earnings prior period adjustment
+P1-AD-073|D|A|Understand|3|Certified|A.074 statement of retained earnings prior period adjustment
+P1-AD-074|D|A|Understand|3|Certified|A.075 statement of retained earnings prior period adjustment
+P1-AD-075|D|B|Understand|3|Certified|B.001 flexible budget variance analysis
+P1-BD-001|D|B|Apply|1|Certified|B.002 flexible budget variance analysis
+P1-BD-002|D|B|Apply|1|Certified|B.003 flexible budget variance analysis
+P1-BD-003|D|B|Apply|1|Certified|B.004 flexible budget variance analysis
+P1-BD-004|D|B|Apply|1|Certified|B.005 flexible budget variance analysis
+P1-BD-005|D|B|Apply|1|Certified|B.006 flexible budget variance analysis
+P1-BD-006|D|B|Apply|1|Certified|B.007 flexible budget variance analysis
+P1-BD-007|D|B|Apply|3|Certified|B.008 incremental budgeting drawback
+P1-BD-008|D|B|Apply|2|Certified|B.009 incremental budgeting drawback
+P1-BD-009|D|B|Apply|2|Certified|B.010 incremental budgeting drawback
+P1-BD-010|D|B|Apply|2|Certified|B.011 incremental budgeting drawback
+P1-BD-011|D|B|Apply|2|Certified|B.012 incremental budgeting drawback
+P1-BD-012|D|B|Apply|2|Certified|B.013 incremental budgeting drawback
+P1-BD-013|D|B|Apply|2|Certified|B.014 incremental budgeting drawback
+P1-BD-014|D|B|Apply|2|Certified|B.015 capital expenditure budget planning
+P1-BD-015|D|B|Apply|3|Certified|B.016 capital expenditure budget planning
+P1-BD-016|D|B|Apply|3|Certified|B.017 capital expenditure budget planning
+P1-BD-017|D|B|Apply|3|Certified|B.018 capital expenditure budget planning
+P1-BD-018|D|B|Apply|3|Certified|B.019 capital expenditure budget planning
+P1-BD-019|D|B|Apply|3|Certified|B.020 capital expenditure budget planning
+P1-BD-020|D|B|Apply|3|Certified|B.021 capital expenditure budget planning
+P1-BD-021|D|B|Apply|3|Certified|B.022 direct labor budget calculation
+P1-BD-022|D|B|Apply|3|Certified|B.023 direct labor budget calculation
+P1-BD-023|D|B|Apply|3|Certified|B.024 direct labor budget calculation
+P1-BD-024|D|B|Apply|3|Certified|B.025 direct labor budget calculation
+P1-BD-025|D|B|Apply|3|Certified|B.026 direct labor budget calculation
+P1-BD-026|D|B|Apply|3|Certified|B.027 direct labor budget calculation
+P1-BD-027|D|B|Apply|3|Certified|B.028 direct labor budget calculation
+P1-BD-028|D|B|Apply|2|Certified|B.029 standard cost setting basis
+P1-BD-029|D|B|Understand|1|Certified|B.030 standard cost setting basis
+P1-BD-030|D|B|Understand|1|Certified|B.031 standard cost setting basis
+P1-BD-031|D|B|Understand|1|Certified|B.032 standard cost setting basis
+P1-BD-032|D|B|Understand|1|Certified|B.033 standard cost setting basis
+P1-BD-033|D|B|Understand|1|Certified|B.034 standard cost setting basis
+P1-BD-034|D|B|Understand|1|Certified|B.035 standard cost setting basis
+P1-BD-035|D|B|Understand|3|Certified|B.036 operating budget vs financial budget
+P1-BD-036|D|B|Apply|3|Certified|B.037 operating budget vs financial budget
+P1-BD-037|D|B|Apply|3|Certified|B.038 operating budget vs financial budget
+P1-BD-038|D|B|Apply|3|Certified|B.039 operating budget vs financial budget
+P1-BD-039|D|B|Apply|3|Certified|B.040 operating budget vs financial budget
+P1-BD-040|D|B|Apply|3|Certified|B.041 operating budget vs financial budget
+P1-BD-041|D|B|Apply|3|Certified|B.042 operating budget vs financial budget
+P1-BD-042|D|B|Apply|1|Certified|B.043 time series forecasting components
+P1-BD-043|D|B|Understand|1|Certified|B.044 time series forecasting components
+P1-BD-044|D|B|Understand|1|Certified|B.045 time series forecasting components
+P1-BD-045|D|B|Understand|1|Certified|B.046 time series forecasting components
+P1-BD-046|D|B|Understand|1|Certified|B.047 time series forecasting components
+P1-BD-047|D|B|Understand|1|Certified|B.048 time series forecasting components
+P1-BD-048|D|B|Understand|1|Certified|B.049 time series forecasting components
+P1-BD-049|D|B|Analyze|3|Certified|B.050 direct materials purchases budget
+P1-BD-050|D|B|Apply|3|Certified|B.051 direct materials purchases budget
+P1-BD-051|D|B|Apply|3|Certified|B.052 direct materials purchases budget
+P1-BD-052|D|B|Apply|3|Certified|B.053 direct materials purchases budget
+P1-BD-053|D|B|Apply|3|Certified|B.054 direct materials purchases budget
+P1-BD-054|D|B|Apply|3|Certified|B.055 direct materials purchases budget
+P1-BD-055|D|B|Apply|3|Certified|B.056 direct materials purchases budget
+P1-BD-056|D|B|Apply|3|Certified|B.057 budget committee role
+P1-BD-057|D|B|Apply|3|Certified|B.058 budget committee role
+P1-BD-058|D|B|Apply|3|Certified|B.059 budget committee role
+P1-BD-059|D|B|Apply|3|Certified|B.060 budget committee role
+P1-BD-060|D|B|Apply|3|Certified|B.061 budget committee role
+P1-BD-061|D|B|Apply|3|Certified|B.062 budget committee role
+P1-BD-062|D|B|Apply|3|Certified|B.063 budget committee role
+P1-BD-063|D|B|Apply|3|Certified|B.064 selling and administrative expense budget
+P1-BD-064|D|B|Apply|3|Certified|B.065 selling and administrative expense budget
+P1-BD-065|D|B|Apply|3|Certified|B.066 selling and administrative expense budget
+P1-BD-066|D|B|Apply|3|Certified|B.067 selling and administrative expense budget
+P1-BD-067|D|B|Apply|3|Certified|B.068 selling and administrative expense budget
+P1-BD-068|D|B|Apply|3|Certified|B.069 selling and administrative expense budget
+P1-BD-069|D|B|Apply|3|Certified|B.070 selling and administrative expense budget
+P1-BD-070|D|B|Apply|3|Certified|B.071 forecast accuracy measurement
+P1-BD-071|D|B|Evaluate|3|Certified|B.072 forecast accuracy measurement
+P1-BD-072|D|B|Evaluate|3|Certified|B.073 forecast accuracy measurement
+P1-BD-073|D|B|Evaluate|3|Certified|B.074 forecast accuracy measurement
+P1-BD-074|D|B|Evaluate|3|Certified|B.075 forecast accuracy measurement
+P1-BD-075|D|B|Evaluate|3|Certified|B.076 forecast accuracy measurement
+P1-BD-076|D|B|Evaluate|3|Certified|B.077 activity based budgeting cost calculation
+P1-BD-077|D|B|Apply|3|Certified|B.078 direct materials purchases budget
+P1-BD-078|D|B|Apply|3|Certified|B.079 flexible budget at actual activity
+P1-BD-079|D|B|Apply|3|Certified|B.080 expected value forecast
+P1-BD-080|D|B|Apply|3|Certified|B.081 cash budget borrowing need
+P1-BD-081|D|B|Apply|3|Certified|B.082 production budget units to produce calculation
+P1-BD-082|D|B|Apply|3|Certified|B.083 budget revision mid year
+P1-BD-083|D|B|Apply|3|Certified|B.084 budget revision mid year
+P1-BD-084|D|B|Apply|3|Certified|B.085 budget revision mid year
+P1-BD-085|D|B|Apply|3|Certified|B.086 budget revision mid year
+P1-BD-086|D|B|Apply|3|Certified|B.087 budget revision mid year
+P1-BD-087|D|B|Apply|3|Certified|B.088 budget revision mid year
+P1-BD-088|D|B|Apply|3|Certified|B.089 cash collection pattern budgeting
+P1-BD-089|D|B|Apply|3|Certified|B.090 cash collection pattern budgeting
+P1-BD-090|D|B|Apply|3|Certified|B.091 cash collection pattern budgeting
+P1-BD-091|D|B|Apply|3|Certified|B.092 cash collection pattern budgeting
+P1-BD-092|D|B|Apply|3|Certified|B.093 cash collection pattern budgeting
+P1-BD-093|D|B|Apply|3|Certified|B.094 cash collection pattern budgeting
+P1-BD-094|D|B|Apply|3|Certified|B.095 strategic vs operational planning horizon
+P1-BD-095|D|B|Apply|3|Certified|B.096 strategic vs operational planning horizon
+P1-BD-096|D|B|Apply|3|Certified|B.097 strategic vs operational planning horizon
+P1-BD-097|D|B|Apply|3|Certified|B.098 strategic vs operational planning horizon
+P1-BD-098|D|B|Apply|3|Certified|B.099 strategic vs operational planning horizon
+P1-BD-099|D|B|Apply|3|Certified|B.100 strategic vs operational planning horizon
+P1-BD-100|D|C|Apply|3|Certified|C.001 labor rate and efficiency variance
+P1-CD-001|D|C|Apply|3|Certified|C.002 labor rate and efficiency variance
+P1-CD-002|D|C|Apply|4|Certified|C.003 labor rate and efficiency variance
+P1-CD-003|D|C|Apply|3|Certified|C.004 labor rate and efficiency variance
+P1-CD-004|D|C|Apply|2|Certified|C.005 labor rate and efficiency variance
+P1-CD-005|D|C|Apply|3|Certified|C.006 labor rate and efficiency variance
+P1-CD-006|D|C|Apply|3|Certified|C.007 labor rate and efficiency variance
+P1-CD-007|D|C|Apply|3|Certified|C.008 variable overhead spending variance
+P1-CD-008|D|C|Apply|1|Certified|C.009 variable overhead spending variance
+P1-CD-009|D|C|Apply|4|Certified|C.010 variable overhead spending variance
+P1-CD-010|D|C|Apply|4|Certified|C.011 variable overhead spending variance
+P1-CD-011|D|C|Apply|4|Certified|C.012 variable overhead spending variance
+P1-CD-012|D|C|Apply|1|Certified|C.013 variable overhead spending variance
+P1-CD-013|D|C|Apply|4|Certified|C.014 variable overhead spending variance
+P1-CD-014|D|C|Apply|3|Certified|C.015 sales mix variance concept
+P1-CD-015|D|C|Apply|3|Certified|C.016 sales mix variance concept
+P1-CD-016|D|C|Apply|3|Certified|C.017 sales mix variance concept
+P1-CD-017|D|C|Analyze|3|Certified|C.018 sales mix variance calculation
+P1-CD-018|D|C|Apply|3|Certified|C.019 sales mix variance calculation
+P1-CD-019|D|C|Apply|3|Certified|C.020 sales mix variance calculation
+P1-CD-020|D|C|Apply|3|Certified|C.021 sales mix variance calculation
+P1-CD-021|D|C|Apply|3|Certified|C.022 profit center evaluation appropriateness
+P1-CD-022|D|C|Understand|3|Certified|C.023 profit center evaluation appropriateness
+P1-CD-023|D|C|Understand|2|Certified|C.024 profit center evaluation appropriateness
+P1-CD-024|D|C|Understand|1|Certified|C.025 profit center evaluation appropriateness
+P1-CD-025|D|C|Understand|3|Certified|C.026 profit center evaluation appropriateness
+P1-CD-026|D|C|Understand|3|Certified|C.027 profit center evaluation appropriateness
+P1-CD-027|D|C|Understand|3|Certified|C.028 profit center evaluation appropriateness
+P1-CD-028|D|C|Understand|2|Certified|C.029 dual rate transfer pricing
+P1-CD-029|D|C|Apply|1|Certified|C.030 dual rate transfer pricing
+P1-CD-030|D|C|Apply|3|Certified|C.031 dual rate transfer pricing
+P1-CD-031|D|C|Apply|1|Certified|C.032 dual rate transfer pricing
+P1-CD-032|D|C|Apply|1|Certified|C.033 dual rate transfer pricing
+P1-CD-033|D|C|Apply|4|Certified|C.034 dual rate transfer pricing
+P1-CD-034|D|C|Apply|3|Certified|C.035 dual rate transfer pricing
+P1-CD-035|D|C|Apply|3|Certified|C.036 cost center variance responsibility
+P1-CD-036|D|C|Apply|4|Certified|C.037 cost center variance responsibility
+P1-CD-037|D|C|Apply|1|Certified|C.038 cost center variance responsibility
+P1-CD-038|D|C|Apply|3|Certified|C.039 cost center variance responsibility
+P1-CD-039|D|C|Apply|3|Certified|C.040 cost center variance responsibility
+P1-CD-040|D|C|Apply|3|Certified|C.041 cost center variance responsibility
+P1-CD-041|D|C|Apply|3|Certified|C.042 cost center variance responsibility
+P1-CD-042|D|C|Apply|4|Certified|C.043 customer profitability analysis
+P1-CD-043|D|C|Understand|3|Certified|C.044 customer profitability analysis
+P1-CD-044|D|C|Understand|4|Certified|C.045 customer profitability analysis
+P1-CD-045|D|C|Understand|3|Certified|C.046 customer profitability analysis
+P1-CD-046|D|C|Understand|3|Certified|C.047 customer profitability analysis
+P1-CD-047|D|C|Understand|3|Certified|C.048 customer profitability analysis
+P1-CD-048|D|C|Understand|3|Certified|C.049 customer profitability analysis
+P1-CD-049|D|C|Understand|1|Certified|C.050 performance measurement goal congruence
+P1-CD-050|D|C|Understand|3|Certified|C.051 performance measurement goal congruence
+P1-CD-051|D|C|Understand|2|Certified|C.052 performance measurement goal congruence
+P1-CD-052|D|C|Understand|2|Certified|C.053 performance measurement goal congruence
+P1-CD-053|D|C|Understand|3|Certified|C.054 performance measurement goal congruence
+P1-CD-054|D|C|Understand|3|Certified|C.055 performance measurement goal congruence
+P1-CD-055|D|C|Understand|1|Certified|C.056 performance measurement goal congruence
+P1-CD-056|D|C|Understand|1|Certified|C.057 common size financial statement analysis
+P1-CD-057|D|C|Understand|4|Certified|C.058 common size financial statement analysis
+P1-CD-058|D|C|Understand|3|Certified|C.059 common size financial statement analysis
+P1-CD-059|D|C|Understand|3|Certified|C.060 common size financial statement analysis
+P1-CD-060|D|C|Understand|3|Certified|C.061 common size financial statement analysis
+P1-CD-061|D|C|Understand|4|Certified|C.062 common size financial statement analysis
+P1-CD-062|D|C|Understand|3|Certified|C.063 common size financial statement analysis
+P1-CD-063|D|C|Understand|4|Certified|C.064 variance investigation cost benefit
+P1-CD-064|D|C|Apply|3|Certified|C.065 variance investigation cost benefit
+P1-CD-065|D|C|Apply|3|Certified|C.066 variance investigation cost benefit
+P1-CD-066|D|C|Apply|3|Certified|C.067 variance investigation cost benefit
+P1-CD-067|D|C|Apply|4|Certified|C.068 variance investigation cost benefit
+P1-CD-068|D|C|Apply|1|Certified|C.069 variance investigation cost benefit
+P1-CD-069|D|C|Apply|3|Certified|C.070 variance investigation cost benefit
+P1-CD-070|D|C|Apply|3|Certified|C.071 total quality management philosophy
+P1-CD-071|D|C|Understand|3|Certified|C.072 total quality management philosophy
+P1-CD-072|D|C|Understand|3|Certified|C.073 total quality management philosophy
+P1-CD-073|D|C|Understand|3|Certified|C.074 total quality management philosophy
+P1-CD-074|D|C|Understand|3|Certified|C.075 total quality management philosophy
+P1-CD-075|D|C|Understand|1|Certified|C.076 total quality management philosophy
+P1-CD-076|D|C|Understand|1|Certified|C.077 segment margin reporting
+P1-CD-077|D|C|Apply|3|Certified|C.078 segment margin reporting
+P1-CD-078|D|C|Apply|4|Certified|C.079 segment margin reporting
+P1-CD-079|D|C|Apply|4|Certified|C.080 segment margin reporting
+P1-CD-080|D|C|Apply|3|Certified|C.081 segment margin reporting
+P1-CD-081|D|C|Apply|3|Certified|C.082 segment margin reporting
+P1-CD-082|D|C|Apply|3|Certified|C.083 total variable overhead variance decomposition
+P1-CD-083|D|C|Apply|4|Certified|C.084 total variable overhead variance decomposition
+P1-CD-084|D|C|Apply|4|Certified|C.085 total variable overhead variance decomposition
+P1-CD-085|D|C|Apply|2|Certified|C.086 total variable overhead variance decomposition
+P1-CD-086|D|C|Apply|2|Certified|C.087 total variable overhead variance decomposition
+P1-CD-087|D|C|Apply|4|Certified|C.088 total variable overhead variance decomposition
+P1-CD-088|D|C|Apply|2|Certified|C.089 value based management EVA linkage
+P1-CD-089|D|C|Understand|3|Certified|C.090 value based management EVA linkage
+P1-CD-090|D|C|Understand|3|Certified|C.091 value based management EVA linkage
+P1-CD-091|D|C|Understand|3|Certified|C.092 value based management EVA linkage
+P1-CD-092|D|C|Understand|2|Certified|C.093 value based management EVA linkage
+P1-CD-093|D|C|Understand|1|Certified|C.094 value based management EVA linkage
+P1-CD-094|D|C|Understand|3|Certified|C.095 segment reporting decision usefulness
+P1-CD-095|D|C|Apply|1|Certified|C.096 segment reporting decision usefulness
+P1-CD-096|D|C|Apply|3|Certified|C.097 segment reporting decision usefulness
+P1-CD-097|D|C|Apply|3|Certified|C.098 segment reporting decision usefulness
+P1-CD-098|D|C|Apply|3|Certified|C.099 segment reporting decision usefulness
+P1-CD-099|D|C|Apply|3|Certified|C.100 segment reporting decision usefulness
+P1-CD-100|D|D|Apply|1|Certified|D.001 normal costing overhead application
+P1-DD-001|D|D|Apply|3|Certified|D.002 normal costing overhead application
+P1-DD-002|D|D|Apply|3|Certified|D.003 normal costing overhead application
+P1-DD-003|D|D|Apply|3|Certified|D.004 normal costing overhead application
+P1-DD-004|D|D|Apply|3|Certified|D.005 normal costing overhead application
+P1-DD-005|D|D|Apply|3|Certified|D.006 equivalent units fifo method
+P1-DD-006|D|D|Understand|1|Certified|D.007 equivalent units fifo method
+P1-DD-007|D|D|Understand|1|Certified|D.008 equivalent units fifo method
+P1-DD-008|D|D|Understand|1|Certified|D.009 equivalent units fifo method
+P1-DD-009|D|D|Understand|1|Certified|D.010 equivalent units fifo method
+P1-DD-010|D|D|Understand|3|Certified|D.011 overapplied overhead disposition
+P1-DD-011|D|D|Apply|2|Certified|D.012 overapplied overhead disposition
+P1-DD-012|D|D|Apply|3|Certified|D.013 overapplied overhead disposition
+P1-DD-013|D|D|Apply|2|Certified|D.014 overapplied overhead disposition
+P1-DD-014|D|D|Apply|3|Certified|D.015 overapplied overhead disposition
+P1-DD-015|D|D|Apply|3|Certified|D.016 step down method service allocation
+P1-DD-016|D|D|Apply|1|Certified|D.017 step down method service allocation
+P1-DD-017|D|D|Apply|1|Certified|D.018 step down method service allocation
+P1-DD-018|D|D|Apply|3|Certified|D.019 step down method service allocation
+P1-DD-019|D|D|Apply|3|Certified|D.020 step down method service allocation
+P1-DD-020|D|D|Apply|3|Certified|D.021 cost driver selection abc pool
+P1-DD-021|D|D|Evaluate|3|Certified|D.022 ABC overhead assignment calculation
+P1-DD-022|D|D|Apply|3|Certified|D.023 cost driver selection abc pool
+P1-DD-023|D|D|Apply|3|Certified|D.024 ABC cost assignment from activity rate
+P1-DD-024|D|D|Apply|3|Certified|D.025 cost driver selection abc pool
+P1-DD-025|D|D|Evaluate|3|Certified|D.026 margin of safety calculation
+P1-DD-026|D|D|Apply|3|Certified|D.027 margin of safety calculation
+P1-DD-027|D|D|Apply|2|Certified|D.028 margin of safety calculation
+P1-DD-028|D|D|Apply|3|Certified|D.029 margin of safety calculation
+P1-DD-029|D|D|Apply|3|Certified|D.030 margin of safety calculation
+P1-DD-030|D|D|Apply|2|Certified|D.031 degree of operating leverage
+P1-DD-031|D|D|Analyze|1|Certified|D.032 degree of operating leverage
+P1-DD-032|D|D|Understand|1|Certified|D.033 degree of operating leverage
+P1-DD-033|D|D|Understand|2|Certified|D.034 degree of operating leverage
+P1-DD-034|D|D|Apply|3|Certified|D.035 degree of operating leverage
+P1-DD-035|D|D|Understand|1|Certified|D.036 kaizen costing continuous improvement
+P1-DD-036|D|D|Apply|3|Certified|D.037 kaizen costing continuous improvement
+P1-DD-037|D|D|Apply|1|Certified|D.038 kaizen costing continuous improvement
+P1-DD-038|D|D|Apply|1|Certified|D.039 kaizen costing continuous improvement
+P1-DD-039|D|D|Apply|4|Certified|D.040 kaizen costing continuous improvement
+P1-DD-040|D|D|Apply|1|Certified|D.041 cost behavior mixed cost analysis
+P1-DD-041|D|D|Understand|1|Certified|D.042 cost behavior mixed cost analysis
+P1-DD-042|D|D|Understand|1|Certified|D.043 cost behavior mixed cost analysis
+P1-DD-043|D|D|Understand|3|Certified|D.044 cost behavior mixed cost analysis
+P1-DD-044|D|D|Understand|2|Certified|D.045 cost behavior mixed cost analysis
+P1-DD-045|D|D|Understand|1|Certified|D.046 service department reciprocal method
+P1-DD-046|D|D|Understand|3|Certified|D.047 service department reciprocal method
+P1-DD-047|D|D|Understand|3|Certified|D.048 service department reciprocal method
+P1-DD-048|D|D|Understand|3|Certified|D.049 service department reciprocal method
+P1-DD-049|D|D|Understand|3|Certified|D.050 service department reciprocal method
+P1-DD-050|D|D|Understand|3|Certified|D.051 contribution margin income statement format
+P1-DD-051|D|D|Apply|3|Certified|D.052 contribution margin income statement format
+P1-DD-052|D|D|Apply|4|Certified|D.053 contribution margin income statement format
+P1-DD-053|D|D|Apply|2|Certified|D.054 contribution margin income statement format
+P1-DD-054|D|D|Apply|3|Certified|D.055 contribution margin income statement format
+P1-DD-055|D|D|Apply|2|Certified|D.056 ABC multi-pool cost assignment
+P1-DD-056|D|D|Apply|3|Certified|D.057 multiple cost driver activity hierarchy
+P1-DD-057|D|D|Apply|3|Certified|D.058 multiple cost driver activity hierarchy
+P1-DD-058|D|D|Apply|3|Certified|D.059 fixed overhead volume variance calculation
+P1-DD-059|D|D|Apply|3|Certified|D.060 variable overhead efficiency variance calculation
+P1-DD-060|D|D|Apply|3|Certified|D.061 cvp analysis multiple products
+P1-DD-061|D|D|Apply|3|Certified|D.062 cvp analysis multiple products
+P1-DD-062|D|D|Apply|1|Certified|D.063 cvp analysis multiple products
+P1-DD-063|D|D|Apply|4|Certified|D.064 cvp analysis multiple products
+P1-DD-064|D|D|Apply|3|Certified|D.065 cvp analysis multiple products
+P1-DD-065|D|D|Apply|3|Certified|D.066 direct materials price variance calculation
+P1-DD-066|D|D|Apply|3|Certified|D.067 direct materials quantity variance calculation
+P1-DD-067|D|D|Apply|3|Certified|D.068 direct labor rate variance calculation
+P1-DD-068|D|D|Apply|3|Certified|D.069 direct labor efficiency variance calculation
+P1-DD-069|D|D|Apply|3|Certified|D.070 variable overhead spending variance calculation
+P1-DD-070|D|D|Apply|3|Certified|D.071 abnormal spoilage cost treatment
+P1-DD-071|D|D|Understand|3|Certified|D.072 abnormal spoilage cost treatment
+P1-DD-072|D|D|Understand|2|Certified|D.073 abnormal spoilage cost treatment
+P1-DD-073|D|D|Understand|3|Certified|D.074 abnormal spoilage cost treatment
+P1-DD-074|D|D|Understand|2|Certified|D.075 abnormal spoilage cost treatment
+P1-DD-075|D|E|Understand|3|Certified|E.001 three lines of defense model
+P1-ED-001|D|E|Understand|2|Unprocessed|E.002 three lines of defense model
+P1-ED-002|D|E|Understand|3|Archived|E.003 three lines of defense model
+P1-ED-003|D|E|Understand|3|Archived|E.004 three lines of defense model
+P1-ED-004|D|E|Understand|3|Archived|E.005 three lines of defense model
+P1-ED-005|D|E|Understand|1|Archived|E.006 access control least privilege
+P1-ED-006|D|E|Understand|1|Archived|E.007 access control least privilege
+P1-ED-007|D|E|Understand|3|Archived|E.008 access control least privilege
+P1-ED-008|D|E|Understand|3|Archived|E.009 access control least privilege
+P1-ED-009|D|E|Understand|1|Archived|E.010 access control least privilege
+P1-ED-010|D|E|Understand|2|Unprocessed|E.011 independent verification control activity
+P1-ED-011|D|E|Understand|3|Archived|E.012 independent verification control activity
+P1-ED-012|D|E|Understand|1|Archived|E.013 independent verification control activity
+P1-ED-013|D|E|Understand|3|Archived|E.014 independent verification control activity
+P1-ED-014|D|E|Understand|2|Unprocessed|E.015 independent verification control activity
+P1-ED-015|D|E|Understand|1|Archived|E.016 erm risk response strategies
+P1-ED-016|D|E|Evaluate|3|Unprocessed|E.017 erm risk response strategies
+P1-ED-017|D|E|Evaluate|3|Archived|E.018 erm risk response strategies
+P1-ED-018|D|E|Evaluate|3|Archived|E.019 erm risk response strategies
+P1-ED-019|D|E|Evaluate|1|Archived|E.020 erm risk response strategies
+P1-ED-020|D|E|Evaluate|3|Archived|E.021 control activities authorization
+P1-ED-021|D|E|Understand|3|Archived|E.022 control activities authorization
+P1-ED-022|D|E|Understand|3|Archived|E.023 control activities authorization
+P1-ED-023|D|E|Understand|3|Archived|E.024 control activities authorization
+P1-ED-024|D|E|Understand|1|Archived|E.025 control activities authorization
+P1-ED-025|D|E|Understand|2|Unprocessed|E.026 monitoring ongoing evaluations
+P1-ED-026|D|E|Apply|1|Archived|E.027 monitoring ongoing evaluations
+P1-ED-027|D|E|Apply|3|Archived|E.028 monitoring ongoing evaluations
+P1-ED-028|D|E|Apply|4|Unprocessed|E.029 monitoring ongoing evaluations
+P1-ED-029|D|E|Apply|3|Archived|E.030 monitoring ongoing evaluations
+P1-ED-030|D|E|Apply|3|Archived|E.031 data backup disaster recovery
+P1-ED-031|D|E|Understand|3|Archived|E.032 data backup disaster recovery
+P1-ED-032|D|E|Understand|3|Archived|E.033 data backup disaster recovery
+P1-ED-033|D|E|Understand|1|Archived|E.034 data backup disaster recovery
+P1-ED-034|D|E|Understand|3|Archived|E.035 data backup disaster recovery
+P1-ED-035|D|E|Understand|2|Unprocessed|E.036 change management control it systems
+P1-ED-036|D|E|Understand|3|Unprocessed|E.037 change management control it systems
+P1-ED-037|D|E|Understand|3|Archived|E.038 change management control it systems
+P1-ED-038|D|E|Understand|1|Archived|E.039 change management control it systems
+P1-ED-039|D|E|Understand|3|Archived|E.040 change management control it systems
+P1-ED-040|D|E|Understand|3|Archived|E.041 risk assessment likelihood impact
+P1-ED-041|D|E|Evaluate|3|Archived|E.042 risk assessment likelihood impact
+P1-ED-042|D|E|Evaluate|4|Unprocessed|E.043 risk assessment likelihood impact
+P1-ED-043|D|E|Evaluate|3|Archived|E.044 risk assessment likelihood impact
+P1-ED-044|D|E|Evaluate|3|Archived|E.045 risk assessment likelihood impact
+P1-ED-045|D|E|Evaluate|3|Archived|E.046 code of conduct ethics program
+P1-ED-046|D|E|Evaluate|3|Unprocessed|E.047 code of conduct ethics program
+P1-ED-047|D|E|Evaluate|3|Archived|E.048 code of conduct ethics program
+P1-ED-048|D|E|Evaluate|3|Archived|E.049 code of conduct ethics program
+P1-ED-049|D|E|Evaluate|3|Archived|E.050 code of conduct ethics program
+P1-ED-050|D|E|Evaluate|3|Archived|E.051 password access authentication control
+P1-ED-051|D|E|Apply|3|Unprocessed|E.052 password access authentication control
+P1-ED-052|D|E|Apply|1|Archived|E.053 password access authentication control
+P1-ED-053|D|E|Apply|3|Archived|E.054 password access authentication control
+P1-ED-054|D|E|Apply|3|Archived|E.055 password access authentication control
+P1-ED-055|D|E|Apply|1|Archived|E.056 internal control cost benefit limitation
+P1-ED-056|D|E|Evaluate|1|Archived|E.057 internal control cost benefit limitation
+P1-ED-057|D|E|Evaluate|3|Archived|E.058 internal control cost benefit limitation
+P1-ED-058|D|E|Evaluate|4|Unprocessed|E.059 internal control cost benefit limitation
+P1-ED-059|D|E|Evaluate|3|Archived|E.060 internal control cost benefit limitation
+P1-ED-060|D|E|Evaluate|3|Archived|E.061 vendor master file controls
+P1-ED-061|D|E|Apply|3|Archived|E.062 vendor master file controls
+P1-ED-062|D|E|Apply|3|Archived|E.063 vendor master file controls
+P1-ED-063|D|E|Apply|3|Archived|E.064 vendor master file controls
+P1-ED-064|D|E|Apply|4|Unprocessed|E.065 vendor master file controls
+P1-ED-065|D|E|Apply|3|Archived|E.066 audit committee oversight role
+P1-ED-066|D|E|Apply|4|Unprocessed|E.067 audit committee oversight role
+P1-ED-067|D|E|Apply|1|Archived|E.068 audit committee oversight role
+P1-ED-068|D|E|Apply|3|Archived|E.069 audit committee oversight role
+P1-ED-069|D|E|Apply|3|Archived|E.070 audit committee oversight role
+P1-ED-070|D|E|Apply|3|Archived|E.071 change management control direct production change
+P1-ED-071|D|E|Understand|3|Unprocessed|E.072 fraud risk purchasing conflict of interest
+P1-ED-072|D|E|Understand|3|Unprocessed|E.073 monitoring exception reports not reviewed
+P1-ED-073|D|E|Apply|3|Unprocessed|E.074 reconciliation incompatible duties EFT and bank rec
+P1-ED-074|D|E|Understand|3|Unprocessed|E.075 segregation approval reconciliation
+P1-ED-075|D|F|Understand|3|Unprocessed|F.001 api integration systems
+P1-FD-001|D|F|Understand|3|Unprocessed|F.002 api integration systems
+P1-FD-002|D|F|Understand|2|Unprocessed|F.003 api integration systems
+P1-FD-003|D|F|Understand|3|Unprocessed|F.004 api integration systems
+P1-FD-004|D|F|Understand|1|Unprocessed|F.005 api integration systems
+P1-FD-005|D|F|Understand|3|Unprocessed|F.006 business intelligence self service reporting
+P1-FD-006|D|F|Apply|3|Unprocessed|F.007 business intelligence self service reporting
+P1-FD-007|D|F|Apply|4|Unprocessed|F.008 business intelligence self service reporting
+P1-FD-008|D|F|Apply|4|Unprocessed|F.009 business intelligence self service reporting
+P1-FD-009|D|F|Apply|4|Unprocessed|F.010 business intelligence self service reporting
+P1-FD-010|D|F|Apply|1|Unprocessed|F.011 data encryption at rest and in transit
+P1-FD-011|D|F|Understand|2|Unprocessed|F.012 data encryption at rest and in transit
+P1-FD-012|D|F|Understand|2|Unprocessed|F.013 data encryption at rest and in transit
+P1-FD-013|D|F|Understand|1|Unprocessed|F.014 data encryption at rest and in transit
+P1-FD-014|D|F|Understand|2|Unprocessed|F.015 data encryption at rest and in transit
+P1-FD-015|D|F|Understand|3|Unprocessed|F.016 cloud saas subscription model
+P1-FD-016|D|F|Understand|3|Unprocessed|F.017 cloud saas subscription model
+P1-FD-017|D|F|Understand|1|Unprocessed|F.018 cloud saas subscription model
+P1-FD-018|D|F|Understand|2|Unprocessed|F.019 cloud saas subscription model
+P1-FD-019|D|F|Understand|3|Unprocessed|F.020 cloud saas subscription model
+P1-FD-020|D|F|Understand|3|Unprocessed|F.021 predictive model overfitting risk
+P1-FD-021|D|F|Understand|1|Unprocessed|F.022 predictive model overfitting risk
+P1-FD-022|D|F|Understand|3|Unprocessed|F.023 predictive model overfitting risk
+P1-FD-023|D|F|Understand|3|Unprocessed|F.024 predictive model overfitting risk
+P1-FD-024|D|F|Understand|2|Unprocessed|F.025 predictive model overfitting risk
+P1-FD-025|D|F|Understand|3|Unprocessed|F.026 internet of things iot sensors
+P1-FD-026|D|F|Understand|2|Unprocessed|F.027 internet of things iot sensors
+P1-FD-027|D|F|Understand|1|Unprocessed|F.028 internet of things iot sensors
+P1-FD-028|D|F|Understand|3|Unprocessed|F.029 internet of things iot sensors
+P1-FD-029|D|F|Understand|1|Unprocessed|F.030 internet of things iot sensors
+P1-FD-030|D|F|Understand|3|Unprocessed|F.031 cybersecurity incident response actions
+P1-FD-031|D|F|Evaluate|3|Unprocessed|F.032 data breach incident response plan
+P1-FD-032|D|F|Understand|3|Unprocessed|F.033 data breach incident response plan
+P1-FD-033|D|F|Understand|2|Unprocessed|F.034 data quality investigation applied
+P1-FD-034|D|F|Apply|3|Unprocessed|F.035 data breach incident response plan
+P1-FD-035|D|F|Understand|3|Unprocessed|F.036 structured vs unstructured data
+P1-FD-036|D|F|Understand|2|Unprocessed|F.037 structured vs unstructured data
+P1-FD-037|D|F|Understand|3|Unprocessed|F.038 structured vs unstructured data
+P1-FD-038|D|F|Understand|3|Unprocessed|F.039 structured vs unstructured data
+P1-FD-039|D|F|Understand|2|Unprocessed|F.040 structured vs unstructured data
+P1-FD-040|D|F|Understand|3|Unprocessed|F.041 digital signature authentication
+P1-FD-041|D|F|Understand|3|Unprocessed|F.042 digital signature authentication
+P1-FD-042|D|F|Understand|3|Unprocessed|F.043 digital signature authentication
+P1-FD-043|D|F|Understand|2|Unprocessed|F.044 digital signature authentication
+P1-FD-044|D|F|Understand|1|Unprocessed|F.046 master data management concept
+P1-FD-045|D|F|Understand|3|Unprocessed|F.047 master data management concept
+P1-FD-046|D|F|Remember|3|Archived|F.047 master data management concept
+P1-FD-047|D|F|Understand|1|Unprocessed|F.048 master data management concept
+P1-FD-048|D|F|Understand|2|Unprocessed|F.049 master data management concept
+P1-FD-049|D|F|Understand|1|Unprocessed|F.050 master data management concept
+P1-FD-050|D|F|Understand|3|Unprocessed|F.051 automation bot governance oversight
+P1-FD-051|D|F|Understand|3|Unprocessed|F.052 automation bot governance oversight
+P1-FD-052|D|F|Understand|3|Unprocessed|F.053 automation bot governance oversight
+P1-FD-053|D|F|Understand|2|Unprocessed|F.054 automation bot governance oversight
+P1-FD-054|D|F|Understand|3|Unprocessed|F.055 automation bot governance oversight
+P1-FD-055|D|F|Understand|3|Unprocessed|F.056 natural language processing use case
+P1-FD-056|D|F|Understand|3|Unprocessed|F.057 natural language processing use case
+P1-FD-057|D|F|Understand|3|Unprocessed|F.058 natural language processing use case
+P1-FD-058|D|F|Understand|2|Unprocessed|F.059 natural language processing use case
+P1-FD-059|D|F|Understand|1|Unprocessed|F.060 natural language processing use case
+P1-FD-060|D|F|Understand|2|Unprocessed|F.061 cybersecurity risk assessment framework
+P1-FD-061|D|F|Understand|3|Unprocessed|F.062 cybersecurity risk assessment framework
+P1-FD-062|D|F|Understand|3|Unprocessed|F.063 cybersecurity risk assessment framework
+P1-FD-063|D|F|Understand|3|Unprocessed|F.064 cybersecurity risk assessment framework
+P1-FD-064|D|F|Understand|3|Unprocessed|F.065 cybersecurity risk assessment framework
+P1-FD-065|D|F|Understand|3|Unprocessed|F.066 technology cost benefit evaluation
+P1-FD-066|D|F|Evaluate|1|Unprocessed|F.067 technology cost benefit evaluation
+P1-FD-067|D|F|Evaluate|3|Unprocessed|F.068 technology cost benefit evaluation
+P1-FD-068|D|F|Evaluate|3|Unprocessed|F.069 technology cost benefit evaluation
+P1-FD-069|D|F|Evaluate|4|Unprocessed|F.070 technology cost benefit evaluation
+P1-FD-070|D|F|Evaluate|3|Unprocessed|F.071 data retention policy compliance
+P1-FD-071|D|F|Understand|3|Unprocessed|F.072 data retention policy compliance
+P1-FD-072|D|F|Understand|3|Unprocessed|F.073 data retention policy compliance
+P1-FD-073|D|F|Understand|1|Unprocessed|F.074 data retention policy compliance
+P1-FD-074|D|F|Understand|3|Unprocessed|F.075 data retention policy compliance
+P1-FD-075|D||Understand|3|Unprocessed|
+P1E-A-001|E|A|Understand|2|Certified|E-A.002 Current asset identification
+P1E-A-002|E|A|Understand|2|Certified|E-A.003 Accounting equation
+P1E-A-003|E|A|Apply|3|Certified|E-A.004 Revenue recognition timing
+P1E-A-004|E|A|Understand|2|Certified|E-A.005 Inventory measurement
+P1E-A-005|E|A|Understand|3|Certified|E-A.006 LIFO rising prices
+P1E-A-006|E|A|Apply|2|Certified|E-A.007 Bond classification
+P1E-A-007|E|A|Understand|2|Certified|E-A.008 Goodwill impairment testing
+P1E-A-008|E|A|Understand|2|Certified|E-A.009 Investing cash flow
+P1E-A-009|E|A|Understand|2|Certified|E-A.010 Prepaid insurance classification
+P1E-A-010|E|A|Understand|1|Certified|E-A.011 R&D cost treatment
+P1E-A-011|E|A|Understand|1|Certified|E-A.012 Contingent liability recognition
+P1E-A-012|E|A|Understand|2|Certified|E-A.013 LIFO reserve definition
+P1E-A-013|E|A|Understand|2|Certified|E-A.014 Finance lease criteria
+P1E-A-014|E|A|Understand|3|Certified|E-A.015 AFS debt securities
+P1E-A-015|E|A|Understand|2|Certified|E-A.016 HTM securities measurement
+P1E-A-016|E|A|Understand|2|Certified|E-A.017 Equity method threshold
+P1E-A-017|E|A|Understand|2|Certified|E-A.018 Equity method income
+P1E-A-018|E|A|Apply|3|Certified|E-A.019 Cash dividend effect
+P1E-A-019|E|A|Understand|2|Certified|E-A.020 Stock split effect
+P1E-A-020|E|A|Understand|1|Certified|E-A.021 Cumulative preferred
+P1E-A-021|E|A|Understand|2|Certified|E-A.022 Cost method treasury
+P1E-A-022|E|A|Understand|3|Certified|E-A.023 Basic EPS formula
+P1E-A-023|E|A|Understand|3|Certified|E-A.024 Diluted EPS scope
+P1E-A-024|E|A|Understand|3|Certified|E-A.025 Deferred tax liability
+P1E-A-025|E|A|Understand|2|Certified|E-A.026 Valuation allowance
+P1E-A-026|E|A|Understand|2|Certified|E-A.027 Direct method cash received
+P1E-A-027|E|A|Apply|3|Certified|E-A.028 Comprehensive income
+P1E-A-028|E|A|Understand|3|Certified|E-A.029 Land depreciation
+P1E-A-029|E|A|Understand|1|Certified|E-A.030 Impairment loss measurement
+P1E-A-030|E|A|Understand|3|Certified|E-A.031 LIFO IFRS prohibition
+P1E-A-031|E|A|Understand|1|Certified|E-A.032 Full disclosure
+P1E-A-032|E|A|Apply|3|Certified|E-A.033 Accrual expense recognition
+P1E-A-033|E|A|Understand|2|Certified|E-A.034 AR net realizable value
+P1E-A-034|E|A|Understand|3|Certified|E-A.035 Aging method
+P1E-A-035|E|A|Understand|3|Certified|E-A.036 AR write-off effect
+P1E-A-036|E|A|Understand|3|Certified|E-A.037 Factoring without recourse
+P1E-A-037|E|A|Understand|3|Certified|E-A.038 Pledged receivables
+P1E-A-038|E|A|Understand|3|Certified|E-A.039 Bond issue costs
+P1E-A-039|E|A|Understand|2|Certified|E-A.040 Effective interest method
+P1E-A-040|E|A|Understand|3|Certified|E-A.041 Bond premium amortization
+P1E-A-041|E|A|Understand|3|Certified|E-A.042 Bond discount amortization
+P1E-A-042|E|A|Understand|3|Certified|E-A.043 Effective interest expense
+P1E-A-043|E|A|Apply|3|Certified|E-A.044 Equity securities fair value
+P1E-A-044|E|A|Understand|2|Certified|E-A.045 Equity method dividends
+P1E-A-045|E|A|Understand|3|Certified|E-A.046 AFS OCI reporting
+P1E-A-046|E|A|Apply|2|Certified|E-A.047 Software capitalization
+P1E-A-047|E|A|Understand|2|Certified|E-A.048 Construction loss recognition
+P1E-A-048|E|A|Understand|3|Certified|E-A.049 Variable consideration
+P1E-A-049|E|A|Understand|3|Certified|E-A.051 Transaction price allocation
+P1E-A-051|E|A|Apply|3|Certified|E-A.052 Depreciation method change
+P1E-A-052|E|A|Apply|3|Certified|E-A.054 NOL carryforward DTA
+P1E-A-054|E|A|Understand|3|Certified|E-A.055 Temporary differences
+P1E-A-055|E|A|Understand|3|Certified|E-A.056 Short-term refinancing
+P1E-A-056|E|A|Understand|2|Certified|E-A.057 Going concern
+P1E-A-057|E|A|Understand|1|Certified|E-A.058 Restructuring liability
+P1E-A-058|E|A|Understand|2|Certified|E-A.059 Treasury stock classification
+P1E-A-059|E|A|Understand|3|Certified|E-A.060 APIC definition
+P1E-A-060|E|A|Understand|2|Certified|E-A.061 Small stock dividend
+P1E-A-061|E|A|Apply|3|Certified|E-A.062 AOCI components
+P1E-A-062|E|A|Understand|3|Certified|E-A.063 Inventory method change
+P1E-A-063|E|A|Understand|3|Certified|E-A.064 Enhancing qualitative characteristics
+P1E-A-064|E|A|Understand|2|Certified|E-A.065 Franchise revenue
+P1E-A-065|E|A|Understand|3|Certified|E-A.066 Consignment inventory
+P1E-A-066|E|A|Understand|1|Certified|E-A.067 Bill-and-hold
+P1E-A-067|E|A|Understand|3|Certified|E-A.068 Sales returns allowance
+P1E-A-068|E|A|Understand|3|Certified|E-A.069 Loyalty program accounting
+P1E-A-069|E|A|Understand|2|Certified|E-A.070 Inventory write-down reversal IFRS
+P1E-A-070|E|A|Understand|2|Certified|E-A.071 Inventory write-down US GAAP
+P1E-A-071|E|A|Understand|3|Certified|E-A.073 Equity method goodwill
+P1E-A-073|E|A|Apply|3|Certified|E-A.074 Fair value hierarchy
+P1E-A-074|E|A|Remember|1|Certified|E-A.075 Level 1 inputs
+P1E-A-075|E|A|Understand|2|Certified|E-A.076 Contract asset
+P1E-A-076|E|A|Understand|2|Certified|E-A.077 Contract liability
+P1E-A-077|E|A|Understand|2|Certified|E-A.078 Completed contract method
+P1E-A-078|E|B|Understand|3|Certified|E-B.001 Static budget
+P1E-B-001|E|B|Apply|3|Certified|E-B.002 Flexible budget
+P1E-B-002|E|B|Apply|4|Certified|E-B.003 Variable cost definition
+P1E-B-003|E|B|Understand|2|Certified|E-B.004 Fixed cost per unit behavior
+P1E-B-004|E|B|Understand|3|Certified|E-B.005 Mixed cost definition
+P1E-B-005|E|B|Understand|2|Certified|E-B.006 High-low method
+P1E-B-006|E|B|Understand|2|Certified|E-B.007 Master budget starting point
+P1E-B-007|E|B|Apply|3|Certified|E-B.008 Production budget
+P1E-B-008|E|B|Apply|1|Certified|E-B.009 Materials purchases budget
+P1E-B-009|E|B|Apply|3|Certified|E-B.010 Cash collections budget
+P1E-B-010|E|B|Apply|1|Certified|E-B.011 Cash budget purpose
+P1E-B-011|E|B|Apply|3|Certified|E-B.012 Zero-based budgeting
+P1E-B-012|E|B|Understand|1|Certified|E-B.013 Activity-based budgeting
+P1E-B-013|E|B|Understand|3|Certified|E-B.014 Participative budgeting
+P1E-B-014|E|B|Understand|2|Certified|E-B.015 Budgetary slack
+P1E-B-015|E|B|Understand|2|Certified|E-B.016 Kaizen budgeting
+P1E-B-016|E|B|Apply|2|Certified|E-B.017 Rolling budgets
+P1E-B-017|E|B|Understand|2|Certified|E-B.018 Time series forecasting
+P1E-B-018|E|B|Understand|3|Certified|E-B.019 Moving average purpose
+P1E-B-019|E|B|Understand|1|Certified|E-B.020 Exponential smoothing alpha
+P1E-B-020|E|B|Understand|1|Certified|E-B.021 High alpha effect
+P1E-B-021|E|B|Understand|3|Certified|E-B.022 Regression analysis use
+P1E-B-022|E|B|Understand|3|Certified|E-B.023 R-squared
+P1E-B-023|E|B|Understand|2|Certified|E-B.024 Mean absolute deviation
+P1E-B-024|E|B|Understand|2|Certified|E-B.025 Causal forecasting
+P1E-B-025|E|B|Understand|3|Certified|E-B.026 Delphi method
+P1E-B-026|E|B|Understand|3|Certified|E-B.027 Market research
+P1E-B-027|E|B|Understand|2|Certified|E-B.028 Responsibility accounting
+P1E-B-028|E|B|Remember|1|Certified|E-B.029 Cost center
+P1E-B-029|E|B|Understand|2|Certified|E-B.030 Profit center
+P1E-B-030|E|B|Understand|1|Certified|E-B.031 Investment center evaluation
+P1E-B-031|E|B|Understand|2|Certified|E-B.032 Controllable costs
+P1E-B-032|E|B|Remember|1|Certified|E-B.033 Segment margin
+P1E-B-033|E|B|Remember|1|Certified|E-B.034 Common cost allocation
+P1E-B-034|E|B|Understand|2|Certified|E-B.035 Transfer pricing definition
+P1E-B-035|E|B|Understand|2|Certified|E-B.036 Minimum transfer price
+P1E-B-036|E|B|Understand|3|Certified|E-B.037 Transfer price excess capacity
+P1E-B-037|E|B|Understand|2|Certified|E-B.038 Transfer price full capacity
+P1E-B-038|E|B|Understand|3|Certified|E-B.039 Dual-rate transfer pricing
+P1E-B-039|E|B|Understand|3|Certified|E-B.040 Learning curve
+P1E-B-040|E|B|Understand|3|Certified|E-B.041 Relevant range
+P1E-B-041|E|B|Understand|1|Certified|E-B.042 Step cost
+P1E-B-042|E|B|Understand|2|Certified|E-B.043 Contribution margin
+P1E-B-043|E|B|Apply|4|Certified|E-B.044 Moving average calculation
+P1E-B-044|E|B|Apply|4|Certified|E-B.045 Trend analysis
+P1E-B-045|E|B|Understand|4|Certified|E-B.046 Low R-squared
+P1E-B-046|E|B|Understand|2|Certified|E-B.047 High-low method data
+P1E-B-047|E|B|Understand|2|Certified|E-B.048 Top-down budgeting disadvantage
+P1E-B-048|E|B|Understand|2|Certified|E-B.049 Benchmarking
+P1E-B-049|E|B|Understand|2|Certified|E-B.050 Strategic budgeting
+P1E-B-050|E|B|Understand|3|Certified|E-B.051 Static budget limitation
+P1E-B-051|E|B|Apply|2|Certified|E-B.052 Cash collections calculation
+P1E-B-052|E|B|Apply|3|Certified|E-B.053 Direct labor budget
+P1E-B-053|E|B|Apply|3|Certified|E-B.054 Manufacturing overhead budget
+P1E-B-054|E|B|Apply|3|Certified|E-B.055 Ending FG budget
+P1E-B-055|E|B|Apply|3|Certified|E-B.056 S&A budget
+P1E-B-056|E|B|Apply|1|Certified|E-B.057 Cash budget financing
+P1E-B-057|E|B|Apply|4|Certified|E-B.058 Budgeted income statement
+P1E-B-058|E|B|Understand|2|Certified|E-B.059 Budgeted balance sheet
+P1E-B-059|E|B|Understand|2|Certified|E-B.060 Econometric forecast
+P1E-B-060|E|B|Understand|3|Certified|E-B.061 Trend analysis
+P1E-B-061|E|B|Understand|4|Certified|E-B.062 Seasonal patterns
+P1E-B-062|E|B|Understand|1|Certified|E-B.063 Incremental budgeting
+P1E-B-063|E|B|Understand|2|Certified|E-B.064 Participative advantage
+P1E-B-064|E|B|Understand|3|Certified|E-B.065 Production budget calculation
+P1E-B-065|E|C|Apply|4|Certified|E-C.001 Standard cost definition
+P1E-C-001|E|C|Understand|2|Certified|E-C.002 Unfavorable price variance
+P1E-C-002|E|C|Apply|1|Certified|E-C.003 Material quantity variance
+P1E-C-003|E|C|Apply|1|Certified|E-C.004 Labor rate variance
+P1E-C-004|E|C|Apply|3|Certified|E-C.005 Labor efficiency responsibility
+P1E-C-005|E|C|Understand|2|Certified|E-C.006 VOH spending variance
+P1E-C-006|E|C|Apply|3|Certified|E-C.007 VOH efficiency variance
+P1E-C-007|E|C|Apply|3|Certified|E-C.008 FOH volume variance
+P1E-C-008|E|C|Apply|2|Certified|E-C.009 Favorable variance
+P1E-C-009|E|C|Apply|1|Certified|E-C.010 Management by exception
+P1E-C-010|E|C|Understand|2|Certified|E-C.011 Material price variance calculation
+P1E-C-011|E|C|Apply|3|Certified|E-C.012 Standard hours allowed
+P1E-C-012|E|C|Apply|4|Certified|E-C.013 Labor efficiency variance calculation
+P1E-C-013|E|C|Apply|3|Certified|E-C.014 ROI formula
+P1E-C-014|E|C|Understand|1|Certified|E-C.015 Residual income
+P1E-C-015|E|C|Understand|3|Certified|E-C.016 EVA definition
+P1E-C-016|E|C|Understand|3|Certified|E-C.017 ROI vs RI decision
+P1E-C-017|E|C|Evaluate|3|Certified|E-C.018 BSC perspectives
+P1E-C-018|E|C|Understand|2|Certified|E-C.019 Financial perspective BSC
+P1E-C-019|E|C|Understand|1|Certified|E-C.020 Customer perspective BSC
+P1E-C-020|E|C|Understand|2|Certified|E-C.021 Learning and growth BSC
+P1E-C-021|E|C|Understand|3|Certified|E-C.022 Leading indicators
+P1E-C-022|E|C|Understand|3|Certified|E-C.023 Lagging indicators
+P1E-C-023|E|C|Understand|3|Certified|E-C.024 ASC 280 segment reporting
+P1E-C-024|E|C|Understand|3|Certified|E-C.025 Reportable segment threshold
+P1E-C-025|E|C|Understand|3|Certified|E-C.026 Throughput contribution
+P1E-C-026|E|C|Understand|3|Certified|E-C.027 Theory of constraints
+P1E-C-027|E|C|Understand|3|Certified|E-C.028 Prevention costs
+P1E-C-028|E|C|Understand|3|Certified|E-C.029 Appraisal costs
+P1E-C-029|E|C|Understand|1|Certified|E-C.030 Internal failure costs
+P1E-C-030|E|C|Understand|1|Certified|E-C.031 External failure costs
+P1E-C-031|E|C|Understand|2|Certified|E-C.032 Six Sigma target
+P1E-C-032|E|C|Understand|3|Certified|E-C.033 DMAIC
+P1E-C-033|E|C|Understand|3|Certified|E-C.034 Strategy map BSC
+P1E-C-034|E|C|Understand|3|Certified|E-C.035 Currently attainable standards
+P1E-C-035|E|C|Understand|1|Certified|E-C.036 Ideal standards
+P1E-C-036|E|C|Understand|2|Certified|E-C.037 Sales volume variance
+P1E-C-037|E|C|Apply|3|Certified|E-C.038 Sales price variance
+P1E-C-038|E|C|Apply|3|Certified|E-C.039 Market share variance
+P1E-C-039|E|C|Apply|4|Certified|E-C.040 Market size variance
+P1E-C-040|E|C|Apply|4|Certified|E-C.041 Favorable efficiency
+P1E-C-041|E|C|Understand|2|Certified|E-C.042 Labor rate calculation
+P1E-C-042|E|C|Apply|4|Certified|E-C.043 Total variance
+P1E-C-043|E|C|Apply|4|Certified|E-C.044 Material quantity variance calc
+P1E-C-044|E|C|Apply|3|Certified|E-C.045 Nonfinancial BSC measures
+P1E-C-045|E|D|Understand|1|Certified|E-D.001 Job costing
+P1E-D-001|E|D|Apply|3|Certified|E-D.002 Process costing
+P1E-D-002|E|D|Apply|3|Certified|E-D.003 Equivalent units
+P1E-D-003|E|D|Understand|2|Certified|E-D.004 Weighted average process
+P1E-D-004|E|D|Understand|3|Certified|E-D.005 FIFO process costing
+P1E-D-005|E|D|Apply|3|Certified|E-D.006 Normal spoilage
+P1E-D-006|E|D|Understand|3|Certified|E-D.007 Abnormal spoilage
+P1E-D-007|E|D|Understand|3|Certified|E-D.008 POHR formula
+P1E-D-008|E|D|Understand|2|Certified|E-D.009 Underapplied overhead
+P1E-D-009|E|D|Apply|1|Certified|E-D.010 Overapplied disposition
+P1E-D-010|E|D|Understand|3|Certified|E-D.011 Plantwide rate
+P1E-D-011|E|D|Understand|3|Certified|E-D.012 Departmental rates
+P1E-D-012|E|D|Understand|2|Certified|E-D.013 ABC multiple drivers
+P1E-D-013|E|D|Understand|2|Certified|E-D.014 ABC consumption
+P1E-D-014|E|D|Understand|2|Certified|E-D.015 Unit-level ABC
+P1E-D-015|E|D|Understand|2|Certified|E-D.016 Batch-level ABC
+P1E-D-016|E|D|Understand|2|Certified|E-D.017 Facility-level ABC
+P1E-D-017|E|D|Understand|2|Certified|E-D.018 Value-added activities
+P1E-D-018|E|D|Understand|2|Certified|E-D.019 Non-value-added
+P1E-D-019|E|D|Understand|3|Certified|E-D.020 Life-cycle costing
+P1E-D-020|E|D|Apply|3|Certified|E-D.021 Target costing
+P1E-D-021|E|D|Apply|3|Certified|E-D.022 Kaizen costing
+P1E-D-022|E|D|Apply|3|Certified|E-D.023 Joint cost allocation
+P1E-D-023|E|D|Understand|2|Certified|E-D.024 Physical measure method
+P1E-D-024|E|D|Understand|3|Certified|E-D.025 By-product accounting
+P1E-D-025|E|D|Understand|3|Certified|E-D.026 Relevant costs
+P1E-D-026|E|D|Understand|2|Certified|E-D.027 Sunk costs
+P1E-D-027|E|D|Understand|2|Certified|E-D.028 Opportunity cost
+P1E-D-028|E|D|Understand|2|Certified|E-D.029 Make-or-buy analysis
+P1E-D-029|E|D|Understand|1|Certified|E-D.030 Special order decision
+P1E-D-030|E|D|Understand|1|Certified|E-D.031 Keep-or-drop
+P1E-D-031|E|D|Understand|3|Certified|E-D.032 Constraint optimization
+P1E-D-032|E|D|Understand|3|Certified|E-D.033 Sell or process further
+P1E-D-033|E|D|Understand|2|Certified|E-D.034 POHR calculation
+P1E-D-034|E|D|Apply|4|Certified|E-D.035 Applied overhead
+P1E-D-035|E|D|Apply|1|Certified|E-D.036 Activity-based management
+P1E-D-036|E|D|Understand|2|Certified|E-D.037 ABC accuracy
+P1E-D-037|E|E|Understand|2|Certified|E-E.001 COSO five components
+P1E-E-001|E|E|Remember|1|Certified|E-E.002 Control environment
+P1E-E-002|E|E|Understand|2|Certified|E-E.003 Risk assessment COSO
+P1E-E-003|E|E|Understand|1|Certified|E-E.004 Control activities
+P1E-E-004|E|E|Understand|1|Certified|E-E.005 Segregation of duties
+P1E-E-005|E|E|Understand|2|Certified|E-E.006 Information and communication
+P1E-E-006|E|E|Understand|2|Certified|E-E.007 Monitoring COSO
+P1E-E-007|E|E|Understand|1|Certified|E-E.008 COSO ERM strategy
+P1E-E-008|E|E|Understand|2|Certified|E-E.009 Risk appetite
+P1E-E-009|E|E|Understand|2|Certified|E-E.010 Inherent risk
+P1E-E-010|E|E|Understand|1|Certified|E-E.011 Residual risk
+P1E-E-011|E|E|Understand|2|Certified|E-E.012 Fraud triangle
+P1E-E-012|E|E|Understand|1|Certified|E-E.013 Preventive control
+P1E-E-013|E|E|Understand|1|Certified|E-E.014 Detective control
+P1E-E-014|E|E|Understand|2|Certified|E-E.015 Tone at the top
+P1E-E-015|E|E|Understand|2|Certified|E-E.016 Internal audit independence
+P1E-E-016|E|E|Understand|3|Certified|E-E.017 Internal audit purpose
+P1E-E-017|E|E|Understand|3|Certified|E-E.018 Control deficiency
+P1E-E-018|E|E|Understand|2|Certified|E-E.019 Material weakness
+P1E-E-019|E|E|Understand|3|Certified|E-E.020 IT general controls
+P1E-E-020|E|E|Understand|2|Certified|E-E.021 Application controls
+P1E-E-021|E|E|Understand|3|Certified|E-E.022 Firewall control type
+P1E-E-022|E|E|Understand|2|Certified|E-E.023 SOX 404
+P1E-E-023|E|E|Understand|3|Certified|E-E.024 SOX 302
+P1E-E-024|E|E|Understand|3|Certified|E-E.025 Audit committee composition
+P1E-E-025|E|E|Understand|3|Certified|E-E.026 Management override
+P1E-E-026|E|E|Understand|3|Certified|E-E.027 Collusion
+P1E-E-027|E|E|Understand|3|Certified|E-E.028 COSO principle 1
+P1E-E-028|E|E|Understand|2|Certified|E-E.029 COSO principle 13
+P1E-E-029|E|E|Understand|3|Certified|E-E.030 Control self-assessment
+P1E-E-030|E|F|Understand|3|Certified|E-F.001 Descriptive analytics
+P1E-F-001|E|F|Understand|2|Certified|E-F.002 Predictive analytics
+P1E-F-002|E|F|Understand|3|Certified|E-F.003 Prescriptive analytics
+P1E-F-003|E|F|Understand|1|Certified|E-F.004 Big data four Vs
+P1E-F-004|E|F|Understand|3|Certified|E-F.005 Big data volume
+P1E-F-005|E|F|Understand|2|Certified|E-F.006 Big data velocity
+P1E-F-006|E|F|Understand|1|Certified|E-F.007 Big data variety
+P1E-F-007|E|F|Understand|2|Certified|E-F.008 Structured data
+P1E-F-008|E|F|Understand|1|Certified|E-F.009 Unstructured data
+P1E-F-009|E|F|Understand|2|Certified|E-F.010 Data warehouse
+P1E-F-010|E|F|Understand|1|Certified|E-F.011 ETL
+P1E-F-011|E|F|Understand|2|Certified|E-F.012 ERP
+P1E-F-012|E|F|Understand|3|Certified|E-F.013 RPA
+P1E-F-013|E|F|Understand|1|Certified|E-F.014 Blockchain
+P1E-F-014|E|F|Understand|1|Certified|E-F.015 Cloud computing
+P1E-F-015|E|F|Understand|3|Certified|E-F.016 Cybersecurity management
+P1E-F-016|E|F|Understand|1|Certified|E-F.017 Phishing
+P1E-F-017|E|F|Understand|3|Certified|E-F.018 Multi-factor authentication
+P1E-F-018|E|F|Understand|3|Certified|E-F.019 Continuous auditing
+P1E-F-019|E|F|Understand|3|Certified|E-F.020 CAATs
+P1E-F-020|E|F|Understand|1|Certified|E-F.021 Data mining
+P1E-F-021|E|F|Understand|1|Certified|E-F.022 Data visualization
+P1E-F-022|E|F|Understand|1|Certified|E-F.023 NIST framework
+P1E-F-023|E|F|Understand|2|Certified|E-F.024 GDPR
+P1E-F-024|E|F|Understand|3|Certified|E-F.025 Data governance
+P1E-F-025|E|F|Understand|1|Certified|E-F.026 IoT
+P1E-F-026|E|F|Understand|1|Certified|E-F.027 COBIT
+P1E-F-027|E|F|Understand|2|Certified|E-F.028 IT change management
+P1E-F-028|E|F|Understand|1|Certified|E-F.029 Disaster recovery
+P1E-F-029|E|F|Understand|3|Certified|E-F.030 Business continuity
+P1E-F-030|E|F|Understand|1|Certified|E-F.031 AI in accounting
+P1E-F-031|E|F|Understand|1|Certified|E-F.032 IoT accounting impact
+P1E-F-032|E|F|Understand|1|Certified|E-F.033 Big data auditing
+P1E-F-033|E|F|Understand|3|Certified|E-F.034 RPA accounting use
+P1E-F-034|E|F|Understand|1|Certified|E-F.035 Social media analytics
+P1E-F-035|E|F|Understand|2|Certified|E-F.036 Cloud risks
+P1E-F-036|E|F|Understand|3|Certified|E-F.037 Audit analytics planning
+P1E-F-037|E|B|Understand|3|Certified|E-B.066 Sales mix variance
+P1E-B-066|E|B|Apply|2|Certified|E-B.067 Operating budget detail
+P1E-B-067|E|B|Apply|2|Certified|E-B.068 FOH spending calc
+P1E-B-068|E|B|Apply|3|Certified|E-B.069 Continuous budget horizon
+P1E-B-069|E|B|Apply|3|Certified|E-B.070 Correlation coefficient
+P1E-B-070|E|B|Understand|3|Certified|E-B.071 R-squared interpretation
+P1E-B-071|E|B|Understand|2|Certified|E-B.072 Variance analysis cycle
+P1E-B-072|E|B|Apply|4|Certified|E-B.073 Capital budget
+P1E-B-073|E|B|Apply|1|Certified|E-B.074 Production budget calc
+P1E-B-074|E|B|Apply|4|Certified|E-B.075 Jury of executive opinion
+P1E-B-075|E|B|Understand|2|Certified|E-B.076 Econometric models
+P1E-B-076|E|B|Understand|3|Certified|E-B.077 ABB vs traditional
+P1E-B-077|E|B|Understand|3|Certified|E-B.078 Budget cycle time
+P1E-B-078|E|B|Apply|4|Certified|E-B.079 Cost function fixed cost
+P1E-B-079|E|B|Apply|4|Certified|E-B.080 Mixed cost behavior
+P1E-B-080|E|B|Apply|3|Certified|E-B.081 Dependent variable regression
+P1E-B-081|E|B|Understand|1|Certified|E-B.082 Standard error estimate
+P1E-B-082|E|B|Understand|2|Certified|E-B.083 Market transfer price benefit
+P1E-B-083|E|B|Understand|3|Certified|E-B.084 Cost center evaluation
+P1E-B-084|E|B|Understand|1|Certified|E-B.085 Residual income benefit
+P1E-B-085|E|B|Understand|3|Certified|E-B.086 Operating leverage effect
+P1E-B-086|E|B|Apply|4|Certified|E-B.087 Rolling forecast
+P1E-B-087|E|B|Understand|2|Certified|E-B.088 Variable cost behavior
+P1E-B-088|E|B|Apply|4|Certified|E-B.089 Quantitative forecasting
+P1E-B-089|E|B|Understand|2|Certified|E-B.090 CM ratio calculation
+P1E-B-090|E|B|Apply|3|Certified|E-B.091 Segment margin calc
+P1E-B-091|E|B|Apply|3|Certified|E-B.092 Decentralization transfer pricing
+P1E-B-092|E|B|Apply|2|Certified|E-B.093 Variable costing
+P1E-B-093|E|B|Apply|4|Certified|E-B.094 Absorption costing
+P1E-B-094|E|B|Apply|3|Certified|E-B.095 Absorption vs variable difference
+P1E-B-095|E|B|Understand|3|Certified|E-B.096 Standard hours allowed calc
+P1E-B-096|E|B|Apply|4|Certified|E-B.097 Material usage variance cause
+P1E-B-097|E|B|Understand|3|Certified|E-B.098 Financial vs operating budget
+P1E-B-098|E|B|Apply|2|Certified|E-B.099 Cost-plus transfer price
+P1E-B-099|E|B|Understand|2|Certified|E-B.100 Negotiated transfer disadvantage
+P1E-B-100|E|C|Understand|3|Certified|E-C.046 Internal process BSC
+P1E-C-046|E|C|Understand|2|Certified|E-C.047 Customer profitability analysis
+P1E-C-047|E|C|Understand|3|Certified|E-C.048 Quality cost index
+P1E-C-048|E|C|Understand|3|Certified|E-C.049 Benchmarking definition
+P1E-C-049|E|C|Understand|1|Certified|E-C.050 Analytics variance analysis
+P1E-C-050|E|C|Apply|3|Certified|E-C.051 Standard cost purpose
+P1E-C-051|E|C|Understand|3|Certified|E-C.052 Sales variance interpretation
+P1E-C-052|E|C|Apply|3|Certified|E-C.053 DuPont ROI
+P1E-C-053|E|C|Understand|3|Certified|E-C.054 Profit margin formula
+P1E-C-054|E|C|Understand|3|MISSING|E-C.055 Asset turnover
+P1E-C-055|E|C|Understand|2|Certified|E-C.056 Performance reports
+P1E-C-056|E|C|Understand|1|Certified|E-C.057 Mix variance
+P1E-C-057|E|C|Apply|2|Certified|E-C.058 Yield variance
+P1E-C-058|E|C|Apply|2|Certified|E-C.059 Operating leverage calculation
+P1E-C-059|E|C|Apply|4|Certified|E-C.060 BSC strategy translation
+P1E-C-060|E|C|Understand|1|Certified|E-C.061 Segment disclosure items
+P1E-C-061|E|C|Understand|3|Certified|E-C.062 ROI spread
+P1E-C-062|E|C|Apply|4|Certified|E-C.063 EVA vs residual income
+P1E-C-063|E|C|Understand|2|Certified|E-C.064 Nonfinancial measures importance
+P1E-C-064|E|D|Understand|2|Certified|E-D.038 Backflush costing
+P1E-D-038|E|D|Apply|4|Certified|E-D.039 Sales value method
+P1E-D-039|E|D|Understand|3|Certified|E-D.040 NRV joint cost method
+P1E-D-040|E|D|Understand|3|Certified|E-D.041 JIT definition
+P1E-D-041|E|D|Understand|3|Certified|E-D.042 Lean manufacturing
+P1E-D-042|E|D|Understand|1|Certified|E-D.043 TOC bottleneck
+P1E-D-043|E|D|Understand|3|Certified|E-D.044 Throughput accounting
+P1E-D-044|E|D|Understand|3|Certified|E-D.045 Throughput operating expenses
+P1E-D-045|E|D|Understand|3|Certified|E-D.046 Constraint management
+P1E-D-046|E|D|Understand|3|Certified|E-D.047 Transferred-in costs
+P1E-D-047|E|D|Understand|2|Certified|E-D.048 FIFO process WIP
+P1E-D-048|E|D|Understand|3|Certified|E-D.049 Normal capacity
+P1E-D-049|E|D|Understand|3|Certified|E-D.050 Practical capacity
+P1E-D-050|E|D|Understand|3|Certified|E-D.051 Practical capacity overhead
+P1E-D-051|E|D|Apply|2|Certified|E-D.052 Actual costing
+P1E-D-052|E|D|Apply|3|Certified|E-D.053 Normal costing
+P1E-D-053|E|D|Apply|3|Certified|E-D.054 Standard costing
+P1E-D-054|E|D|Apply|1|Certified|E-D.055 Step-down allocation
+P1E-D-055|E|D|Understand|2|Certified|E-D.056 Reciprocal method
+P1E-D-056|E|D|Understand|2|Certified|E-D.057 Direct allocation method
+P1E-D-057|E|D|Understand|3|Certified|E-D.058 ABC cost pool
+P1E-D-058|E|D|Understand|1|Certified|E-D.059 Activity driver
+P1E-D-059|E|D|Understand|2|Certified|E-D.060 ABC best use
+P1E-D-060|E|E|Understand|1|Certified|E-E.031 COSO principle 7
+P1E-E-031|E|E|Remember|1|Certified|E-E.032 COSO principle 8
+P1E-E-032|E|E|Understand|3|Certified|E-E.033 COSO principle 9
+P1E-E-033|E|E|Understand|3|Certified|E-E.034 COSO principle 10
+P1E-E-034|E|E|Understand|1|Certified|E-E.035 COSO principle 11
+P1E-E-035|E|E|Understand|1|Certified|E-E.036 COSO principle 12
+P1E-E-036|E|E|Understand|3|Certified|E-E.037 COSO principle 15
+P1E-E-037|E|E|Understand|3|Certified|E-E.038 COSO principle 16
+P1E-E-038|E|E|Understand|3|Certified|E-E.039 COSO principle 17
+P1E-E-039|E|E|Understand|3|Certified|E-E.040 Physical controls
+P1E-E-040|E|E|Understand|2|Certified|E-E.041 Access controls
+P1E-E-041|E|E|Understand|1|Certified|E-E.042 Authorization controls
+P1E-E-042|E|E|Understand|2|Certified|E-E.043 Verification controls
+P1E-E-043|E|E|Understand|1|Certified|E-E.044 Internal audit charter
+P1E-E-044|E|E|Understand|3|Certified|E-E.045 Internal audit reporting
+P1E-E-045|E|E|Understand|2|Certified|E-E.046 Operational audit
+P1E-E-046|E|E|Understand|2|Certified|E-E.047 Compliance audit
+P1E-E-047|E|E|Understand|2|Certified|E-E.048 Financial audit
+P1E-E-048|E|E|Understand|2|Certified|E-E.049 COSO ERM components
+P1E-E-049|E|E|Remember|1|Certified|E-E.050 Risk tolerance
+P1E-E-050|E|E|Understand|3|Certified|E-E.051 Compensating control
+P1E-E-051|E|E|Understand|3|Certified|E-E.052 IT preventive controls
+P1E-E-052|E|E|Understand|2|Certified|E-E.053 IT detective controls
+P1E-E-053|E|E|Understand|1|Certified|E-E.054 Encryption purpose
+P1E-E-054|E|E|Understand|2|Certified|E-E.055 COSO objectives
+P1E-E-055|E|E|Understand|1|Certified|E-E.056 Control matrix
+P1E-E-056|E|E|Understand|3|Certified|E-E.057 COSO definition
+P1E-E-057|E|E|Understand|3|Certified|E-E.058 Cost-benefit controls
+P1E-E-058|E|E|Understand|3|Certified|E-E.059 Internal control limitations
+P1E-E-059|E|E|Understand|1|Certified|E-E.060 Control environment influence
+P1E-E-060|E|E|Understand|2|Certified|E-E.061 Entity-level controls
+P1E-E-061|E|E|Understand|1|Certified|E-E.062 Activity-level controls
+P1E-E-062|E|E|Understand|3|Certified|E-E.063 SOX 906
+P1E-E-063|E|E|Understand|3|Certified|E-E.064 PCAOB
+P1E-E-064|E|E|Understand|3|Certified|E-E.065 COSO principle 5
+P1E-E-065|E|F|Understand|3|Certified|E-F.038 Analytics internal audit
+P1E-F-038|E|F|Understand|3|Certified|E-F.039 EDP auditing
+P1E-F-039|E|F|Understand|3|Certified|E-F.040 Test data approach
+P1E-F-040|E|F|Understand|3|Certified|E-F.041 Integrated test facility
+P1E-F-041|E|F|Understand|2|Certified|E-F.042 Generalized audit software
+P1E-F-042|E|F|Understand|3|Certified|E-F.043 Parallel simulation
+P1E-F-043|E|F|Understand|2|Certified|E-F.044 Analytics maturity
+P1E-F-044|E|F|Understand|3|Certified|E-F.045 Analytics maturity highest
+P1E-F-045|E|F|Understand|1|Certified|E-F.046 Diagnostic analytics
+P1E-F-046|E|F|Understand|2|Certified|E-F.047 Semi-structured data
+P1E-F-047|E|F|Understand|2|Certified|E-F.048 Data lake
+P1E-F-048|E|F|Understand|2|Certified|E-F.049 Data warehouse vs lake
+P1E-F-049|E|F|Understand|3|Certified|E-F.050 ELT vs ETL
+P1E-F-050|E|F|Understand|3|Certified|E-F.051 Relational database
+P1E-F-051|E|F|Understand|3|Certified|E-F.052 DBMS
+P1E-F-052|E|F|Understand|2|Certified|E-F.053 SQL
+P1E-F-053|E|F|Understand|2|Certified|E-F.054 Data dictionary
+P1E-F-054|E|F|Understand|2|Certified|E-F.055 Database backup
+P1E-F-055|E|F|Understand|1|Certified|E-F.056 BI system
+P1E-F-056|E|F|Understand|2|Certified|E-F.057 Ransomware
+P1E-F-057|E|F|Understand|1|Certified|E-F.058 Computer virus
+P1E-F-058|E|F|Understand|2|Certified|E-F.059 Social engineering
+P1E-F-059|E|F|Understand|1|Certified|E-F.060 Penetration testing
+P1E-F-060|E|F|Understand|3|Certified|E-F.061 Vulnerability assessment
+P1E-F-061|E|F|Understand|3|Certified|E-F.062 IT continuity
+P1E-F-062|E|F|Understand|2|Certified|E-F.063 Hot site
+P1E-F-063|E|F|Understand|1|Certified|E-F.064 Cold site
+P1E-F-064|E|F|Understand|3|Certified|E-F.065 Maximum tolerable downtime
+P1E-F-065|E|F|Understand|3|Certified|E-F.066 Recovery time objective
+P1E-F-066|E|F|Understand|3|Certified|E-F.067 Recovery point objective
+P1E-F-067|E|F|Understand|3|Certified|E-F.068 Blockchain audit
+P1E-F-068|E|F|Understand|3|Certified|E-F.069 Smart contracts
+P1E-F-069|E|F|Understand|2|Certified|E-F.070 Cloud deployment models
+P1E-F-070|E|F|Understand|2|Certified|E-F.071 SaaS
+P1E-F-071|E|F|Understand|1|Certified|E-F.072 IaaS
+P1E-F-072|E|F|Understand|2|Certified|E-F.073 PaaS
+P1E-F-073|E|F|Understand|1|Certified|E-F.074 Analytics management support
+P1E-F-074|E|F|Understand|1|Certified|E-F.075 Data quality dimensions
+P1E-F-075|E|C|Understand|2|Certified|E-C.065 BSC goal alignment
+P1E-C-065|E|C|Understand|1|Certified|E-C.066 Strategy map cause-effect
+P1E-C-066|E|C|Understand|2|Certified|E-C.067 Performance prism
+P1E-C-067|E|C|Understand|2|Certified|E-C.068 Quality function deployment
+P1E-C-068|E|C|Understand|2|Certified|E-C.069 Statistical process control
+P1E-C-069|E|C|Understand|3|Certified|E-C.070 Pareto analysis
+P1E-C-070|E|C|Understand|3|Certified|E-C.071 Root cause analysis
+P1E-C-071|E|C|Understand|3|Certified|E-C.072 Variance significance
+P1E-C-072|E|C|Apply|3|Certified|E-C.073 Favorable variance interpretation
+P1E-C-073|E|C|Apply|3|Certified|E-C.074 Variance investigation criteria
+P1E-C-074|E|C|Apply|3|MISSING|E-C.075 Segment margin calc
+P1E-C-075|E|C|Apply|3|Certified|E-C.076 Common costs keep-drop
+P1E-C-076|E|C|Understand|3|Certified|E-C.077 Keep-drop decision rule
+P1E-C-077|E|C|Understand|3|Certified|E-C.078 BSC balance
+P1E-C-078|E|C|Understand|2|Certified|E-C.079 Leading indicators BSC
+P1E-C-079|E|C|Understand|2|Certified|E-C.080 Lagging indicators
+P1E-C-080|E|C|Understand|2|Certified|E-C.081 Market share BSC perspective
+P1E-C-081|E|C|Understand|3|Certified|E-C.082 Employee turnover BSC
+P1E-C-082|E|C|Understand|1|Certified|E-C.083 Cycle time BSC
+P1E-C-083|E|C|Understand|2|Certified|E-C.084 First-pass yield BSC
+P1E-C-084|E|C|Understand|2|Certified|E-C.085 BSC customization
+P1E-C-085|E|C|Understand|2|Certified|E-C.086 Variance BSC perspective
+P1E-C-086|E|C|Apply|2|Certified|E-C.087 Customer satisfaction
+P1E-C-087|E|C|Understand|2|Certified|E-C.088 Target costing timing
+P1E-C-088|E|C|Evaluate|2|Certified|E-C.089 Value engineering
+P1E-C-089|E|D|Understand|3|Certified|E-D.061 Cost allocation base criteria
+P1E-D-061|E|D|Understand|1|Certified|E-D.062 Cost driver definition
+P1E-D-062|E|D|Understand|1|Certified|E-D.063 Traditional volume-based driver
+P1E-D-063|E|D|Understand|2|Certified|E-D.064 ABC accuracy condition
+P1E-D-064|E|D|Understand|2|Certified|E-D.065 Pull system JIT
+P1E-D-065|E|D|Understand|1|Certified|E-D.066 Kanban
+P1E-D-066|E|D|Understand|2|Certified|E-D.067 TQM
+P1E-D-067|E|D|Understand|2|Certified|E-D.068 Product lifecycle stages
+P1E-D-068|E|D|Understand|1|Certified|E-D.069 Cost estimation methods
+P1E-D-069|E|D|Understand|3|Certified|E-D.070 Account analysis
+P1E-D-070|E|D|Understand|3|Certified|E-D.071 Engineering cost estimates
+P1E-D-071|E|D|Understand|2|Certified|E-D.072 COGM components
+P1E-D-072|E|D|Understand|3|Certified|E-D.073 Prime costs
+P1E-D-073|E|D|Understand|2|Certified|E-D.074 Conversion costs
+P1E-D-074|E|D|Understand|1|Certified|E-D.075 Cost assignment methods
+P1E-D-075|E|E|Understand|2|Certified|E-E.066 COSO principle 2
+P1E-E-066|E|E|Understand|3|Certified|E-E.067 COSO principle 3
+P1E-E-067|E|E|Understand|1|Certified|E-E.068 COSO principle 4
+P1E-E-068|E|E|Understand|1|Certified|E-E.069 COSO principle 14
+P1E-E-069|E|E|Understand|3|Certified|E-E.070 Variables sampling
+P1E-E-070|E|E|Understand|3|Certified|E-E.071 Attributes sampling
+P1E-E-071|E|E|Understand|3|Certified|E-E.072 Internal audit access
+P1E-E-072|E|E|Understand|3|Certified|E-E.073 Pre-numbered documents
+P1E-E-073|E|E|Understand|1|Certified|E-E.074 Dual custody
+P1E-E-074|E|E|Understand|3|Certified|E-E.075 Mandatory vacation control
+P1E-E-075|E|C|Understand|2|Certified|E-C.090 Profit center evaluation
+P1E-C-090|E|C|Understand|1|Certified|E-C.091 Segment disclosure minimum
+P1E-C-091|E|C|Understand|3|Certified|E-C.092 Reportable segment 10% test
+P1E-C-092|E|C|Apply|3|Certified|E-C.093 Performance report qualities
+P1E-C-093|E|C|Understand|1|Certified|E-C.094 Variance analysis purpose
+P1E-C-094|E|C|Apply|1|Certified|E-C.095 Standard cost card
+P1E-C-095|E|C|Understand|1|Certified|E-C.096 Ideal standards term
+P1E-C-096|E|C|Understand|1|Certified|E-C.097 Practical standards
+P1E-C-097|E|C|Understand|1|Certified|E-C.098 Unfavorable cost variance
+P1E-C-098|E|C|Apply|1|Certified|E-C.099 Favorable revenue variance
+P1E-C-099|E|C|Apply|2|Certified|E-C.100 Budgeting behavioral aspects
+P1E-C-100|E||Understand|1|Certified|

@@ -1,0 +1,205 @@
+{
+  "document": "SESSION350_READINESS_SCORECARD",
+  "session": "S350",
+  "title": "Readiness Leakage Scorecard — Framework v1 Baseline vs. v2 Target",
+  "board": "C — Readiness Leakage Authority",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Scorecard — Readiness Tracking",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION203_READINESS_ENGINE_SPEC.json; SESSION321_READINESS_ENGINE_SPEC.json; scripts/output/readiness_scoring.json (S322 operational snapshot)",
+  "purpose": "Measure readiness leakage — the rate at which structurally defective items reach certification. Framework v1 leaked at 89.5%. Framework v2 targets <10% via pre-flight gating that hides REMEDIATE and BLOCKED items from Quality and Certification boards.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+  "current_operational_snapshot": "scripts/output/readiness_scoring.json (S322 live run)",
+
+  "readiness_state_machine": {
+    "authority": "SESSION203_GATE_STATE_MACHINE.json; SESSION321_READINESS_ENGINE_SPEC.json",
+    "states": {
+      "BLOCKED": {
+        "label": "BLOCKED — Structurally Impaired",
+        "description": "Item has identity, JSON integrity, or severe structural defects. Cannot enter any review pipeline.",
+        "triggers": ["Gate -1 IDENTITY_BLOCKED", "Gate 0 JSON parse failure", "Missing required fields", "Corruption artifact"],
+        "board_visibility": "Governance Board only — invisible to Quality and Certification boards",
+        "resolution": "Manual repair → re-enter pipeline. Route to EditorialQueue with BLOCK_REASON."
+      },
+      "REMEDIATE": {
+        "label": "REMEDIATE — Remediation Required",
+        "description": "Item has structural/content defects that block certification but are automatically receivable.",
+        "triggers": ["Gate 1 HARD_FAIL (DL-008, DL-026, DL-016)", "Gate 3 HARD_FAIL (compound-key collision)"],
+        "board_visibility": "Governance Board only — invisible to Quality and Certification boards",
+        "resolution": "Authorized remediation script or editorial session → re-enter Gate 1"
+      },
+      "MINOR_FIX": {
+        "label": "MINOR_FIX — Minor Fixes Recommended",
+        "description": "Content-quality issues that don't affect answer correctness or learner safety.",
+        "triggers": ["Gate 2 SOFT_FAIL (DL-013, EV3, DL-010)", "Gate 4 WARN (DL-031)"],
+        "board_visibility": "Quality Board (with warning badges), Certification Board (with DEFERRED flag)",
+        "resolution": "Can be certified WITH WARNINGS. Warnings must be acknowledged by Certification Board."
+      },
+      "READY": {
+        "label": "READY — Ready for Certification",
+        "description": "All pre-flight gates PASS. Eligible for Quality Board and Certification Board review.",
+        "triggers": ["All gates PASS — no HARD_FAIL, no SOFT_FAIL, no WARN"],
+        "board_visibility": "Quality Board and Certification Board — full detail",
+        "resolution": "Immediately eligible for CAQS §1.6 six-dimension verification."
+      },
+      "CERTIFY": {
+        "label": "CERTIFY — Certified for Learner Pool",
+        "description": "Quality Board + Certification Board approved. question_state = 'Certified'.",
+        "triggers": ["Quality Board CERTIFIABLE verdict", "Certification Board APPROVED", "Governance Board AUTHORIZED"],
+        "board_visibility": "All boards — final state",
+        "resolution": "Item available for learner practice sessions."
+      }
+    },
+    "readiness_score_algorithm": {
+      "description": "Per-item 0-100 numeric score from gate results. Used for session prioritization.",
+      "source": "SESSION203_READINESS_ENGINE_SPEC.json §readiness_score_algorithm",
+      "base_score": 100,
+      "deductions": [
+        {"defect": "DL-008 present (EW[CC] non-empty)", "penalty": -50},
+        {"defect": "DL-026 present (empty non-CC EW slot)", "penalty": -30},
+        {"defect": "DL-021 present (absent non-CC EW field)", "penalty": -35},
+        {"defect": "DL-016 SEVERE (EW describes wrong topic)", "penalty": -40},
+        {"defect": "DL-016 MODERATE (ChoiceA-D ≠ Choices.A-D)", "penalty": -10},
+        {"defect": "DL-013 Pattern A (standalone boilerplate)", "penalty": -15},
+        {"defect": "DL-030 CONFIRMED (wrong answer key)", "penalty": "auto_zero"},
+        {"defect": "DL-030 SUSPECT (possible wrong answer key)", "penalty": -40},
+        {"defect": "Identity unclassified (IDENTITY_WARN)", "penalty": -5},
+        {"defect": "EV3 citation missing", "penalty": -5}
+      ],
+      "tier_mapping": {
+        "90-100": "GREEN — Ready for certification board",
+        "70-89": "YELLOW — Ready with warnings; minor fixes recommended",
+        "40-69": "ORANGE — Remediation required before certification",
+        "0-39": "RED — Blocked; structural defects present"
+      }
+    }
+  },
+
+  "readiness_leakage_definition": {
+    "description": "Readiness leakage is the rate at which items reach certification (question_state='Certified') with undetected defects that should have been caught by pre-flight gating. Leakage is measured post-certification by retrospective scan — if a currently Certified item would fail a pre-flight gate if re-scanned today, it leaked.",
+    "leakage_categories": {
+      "structural_leakage": "Certified item has DL-008, DL-026, DL-016, or DL-021 — structural defects that Gate 1 should have caught",
+      "identity_leakage": "Certified item has identity ambiguity — Gate -1 should have caught",
+      "content_leakage": "Certified item has DL-013 boilerplate or EV3 citation gap — Gate 2 should have flagged",
+      "answer_key_leakage": "Certified item has wrong CorrectChoice — Gate 4 should have caught (most severe leakage)"
+    },
+    "formula": "readiness_leakage_pct = (certified_items_with_detectable_defects / total_certified_items) × 100",
+    "measurement_frequency": "Every session at T0 by re-running Gates -1 through 4 against all Certified items. Any newly detected defects in the Certified pool = leakage event."
+  },
+
+  "v1_baseline": {
+    "label": "Framework v1 Readiness Leakage — Historical Baseline",
+    "readiness_failure_rate": "89.5%",
+    "evidence": {
+      "domain_e_seeds": "34 of 38 Domain E seeds arrived at certification with 2+ concurrent defects (S200)",
+      "zero_scanned": "38 of 38 seeds had zero pre-certification automated scanning",
+      "leakage_events": "43 leakage events documented across 14 certification waves (S201 Board 2)",
+      "preventable_pct": "91.5% of leakage events classified as preventable via pre-flight gating",
+      "root_causes": [
+        "No pre-certification automated structural scan existed",
+        "ExplanationValidator had line-173/180 gaps that silently skipped DL-008/DL-026/DL-013",
+        "Governance guard Rule 2 BLOCK was activated AFTER thousands of items were already Certified",
+        "QID-only identity model caused wrong-target remediation",
+        "No board visibility rules — defective items appeared in Certification Board review queues"
+      ]
+    },
+    "defect_prevalence_in_certified_pool": {
+      "dl008_peak": "539 occurrences historically — resolved to 0 via S722A/S802/S726 verification",
+      "dl026_peak": "1,005 items historically — reduced but active",
+      "dl021_active": "95 Certified items in Pack E Section C with absent distractor EW slots",
+      "dl016_active": "58 Pack A Section E Certified items with metadata offset — EW describes wrong item",
+      "dl013_peak": "2,587 fields historically — reduced via certification waves",
+      "dl030_historical": "5 answer-key errors found in Certified pool (all resolved Phase 0B)"
+    }
+  },
+
+  "v2_target": {
+    "label": "Framework v2 Readiness Leakage Target",
+    "target_leakage_rate": "<10%",
+    "reduction": "-89% from v1 baseline (89.5% → <10%)",
+    "enablers": [
+      "Gate -1 through Gate 4 pre-flight pipeline — 7 gates catch defects before any human review",
+      "Board visibility rules — REMEDIATE and BLOCKED items invisible to Quality and Certification boards",
+      "Mandatory pre-flight at every session T0 — no item enters review without current scan",
+      "Compound-key identity — eliminates wrong-target remediation (S320-class failures)",
+      "Governance guard Rules 6-10 — HARD_BLOCK enforcement on un-scanned items"
+    ],
+    "phase_gates": {
+      "S830": "<44.7% (≥50% improvement from v1 baseline). HARD_BLOCK if not met.",
+      "S900": "<10% (full v2 target). HARD_BLOCK if not met."
+    },
+    "measurement_method": "Re-run full Gate -1 through Gate 4 scan against all Certified items at session T0. Count items that would fail a gate today ÷ total Certified items."
+  },
+
+  "current_operational_snapshot_s322": {
+    "label": "S322 Readiness Scoring — Live Operational Data",
+    "source": "scripts/output/readiness_scoring.json (S322 live run)",
+    "timestamp": "2026-07-27T05:45:20.382Z",
+    "portfolio_readiness": {
+      "readiness_score": "0.8744",
+      "readiness_status": "IN_PROGRESS",
+      "by_state": {
+        "BLOCKED": 242,
+        "REMEDIATE": 77,
+        "READY": 0,
+        "CERTIFY": 2221
+      }
+    },
+    "per_domain": {
+      "Domain A": { "total": 375, "ready": 373, "blocked": 2, "remediate": 0, "readiness_score": "0.9947" },
+      "Domain B": { "total": 500, "ready": 500, "blocked": 0, "remediate": 0, "readiness_score": "1.0000" },
+      "Domain C": { "total": 500, "ready": 500, "blocked": 0, "remediate": 0, "readiness_score": "1.0000" },
+      "Domain D": { "total": 375, "ready": 375, "blocked": 0, "remediate": 0, "readiness_score": "1.0000" },
+      "Domain E": { "total": 415, "ready": 248, "blocked": 129, "remediate": 38, "readiness_score": "0.5976" },
+      "Domain F": { "total": 374, "ready": 225, "blocked": 110, "remediate": 39, "readiness_score": "0.6016" }
+    },
+    "analysis": "Framework v1 readiness at S322: 87.44% overall. Domains B, C, D fully ready. Domain A nearly ready (99.47%). Domains E and F are the primary readiness drag (59.8% and 60.2% respectively) — these are the uncertified sections with structural defects (DL-008, DL-026, DL-013) holding items in BLOCKED and REMEDIATE states."
+  },
+
+  "leakage_tracking_protocol": {
+    "description": "How readiness leakage is measured at each session checkpoint",
+    "T0_check": {
+      "action": "Re-run pre-flight Gates -1 through 4 against all items with question_state='Certified'",
+      "pass_condition": "Zero newly detected HARD_FAIL or HARD_BLOCK conditions on Certified items",
+      "response_to_failure": "Any Certified item that fails a gate is immediately flagged as a leakage event. Severity CRITICAL if DL-030 or DL-008. Logged in GOVERNANCE_REPORT and DEFECT_LIBRARY.md.",
+      "metric": "Number of leakage events detected at T0"
+    },
+    "Tmid_check": {
+      "action": "Re-run Gate 1 (structural) against items currently under review",
+      "pass_condition": "No items transitioning toward certification have undetected structural defects",
+      "response_to_failure": "Halt certification actions on affected items. Route to REMEDIATE."
+    },
+    "Tend_check": {
+      "action": "Re-run full pre-flight on all newly Certified items",
+      "pass_condition": "Zero leakage events on newly Certified items",
+      "response_to_failure": "Immediate governance escalation. Newly Certified items with defects are reverted to REMEDIATE."
+    }
+  },
+
+  "trend_tracking": {
+    "metric": "readiness_leakage_rate",
+    "baseline_v1": "89.5% (S202 measurement point)",
+    "measurements": [
+      {"session": "S322", "phase": "P0 — Pre-Hybrid", "leakage_rate": "NOT_MEASURED", "notes": "S322 built measurement infrastructure. No leakage scan performed on Certified pool."},
+      {"session": "S350", "phase": "P0 — Baseline Establishment", "leakage_rate": "TO_BE_MEASURED", "notes": "First formal leakage measurement. Run Gate -1 through Gate 4 against all 2,221 Certified items. Count leakage events."},
+      {"session": "S830", "phase": "P1 Exit Gate", "leakage_target": "<44.7%", "notes": "HARD_BLOCK if not met — Phase 2 cannot proceed."},
+      {"session": "S900", "phase": "P2 Exit Gate", "leakage_target": "<10%", "notes": "HARD_BLOCK if not met — Framework v2 readiness failure target not achieved."}
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_THROUGHPUT_METRICS.json",
+      "reports/SESSION350_IDENTITY_SCORECARD.json",
+      "reports/SESSION350_SCAN_PERFORMANCE.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/SESSION203_READINESS_ENGINE_SPEC.json",
+      "reports/SESSION203_GATE_STATE_MACHINE.json",
+      "reports/framework_v2/s321/SESSION321_READINESS_ENGINE_SPEC.json"
+    ],
+    "operational_data": "scripts/output/readiness_scoring.json"
+  }
+}

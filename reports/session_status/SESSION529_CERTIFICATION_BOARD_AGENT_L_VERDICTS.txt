@@ -1,0 +1,345 @@
+﻿AGENT L — CERTIFICATION BOARD — PER-ITEM VERDICTS (Session 529)
+================================================================
+Generated: 2026-07-26T22:30 UTC
+Authority: FINAL. These verdicts determine Wave 1 certification eligibility at Session 530.
+
+BOARD SUMMARY: CERTIFY=0, HOLD=90, ESCALATE=0
+ANSWER KEYS: ALL VERIFIED (Agent F: 35/35 numeric, Agent C: 7/7 spot-checks, Agent E: 16/16 deep-sampled)
+GO/NO-GO for Session 530: NO-GO — DELAY REQUIRED
+
+================================================================
+WAVE 1 ITEMS (CBQ-A1, CBQ-B1 = 12 items)
+================================================================
+
+CBQ-A1-Q1 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (360Kx3/12=90K). Agent H: THIN 104 chars.
+  No business interpretation, no exam trap, no ASC 606 cite in text.
+  Need: Expand to >=150 chars, add ASC 606-10-25, trap: cash-vs-revenue confusion.
+
+CBQ-A1-Q2 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (360K-90K=270K). Agent H: THIN 96 chars.
+  Need: ASC 606 contract liability, business interpretation.
+
+CBQ-A1-Q3 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Evidence: Agent E CONDITIONAL_PASS. Agent H: THIN 75 chars, distractorCoverage=false.
+  No ExplanationWrong[B-D] fields exist.
+  Need: Add EW[B-D] fields, expand: ASC 606 + FOB shipping vs destination trap.
+
+CBQ-A1-Q4 | HOLD | HOLD-STRUCTURAL, HOLD-EXPLANATION
+  Evidence: Agent E FAIL — PRECISION DEFECT. Agent C HIGH_RISK. Agent F verified calc.
+  Agent H: THIN 54 chars. Prompt "before income-tax cash effects not listed" ambiguous.
+  Need: REWRITE PROMPT. Expand explanation with ASC 230 walk-through, trap sign conventions.
+
+CBQ-A1-Q5 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (200Kx0.25=50K). Agent C: READY (only A1 item). Agent H: THIN 68 chars.
+  Need: ASC 740, trap: future vs current tax rate.
+
+CBQ-A1-Q6 | HOLD | HOLD-METADATA, HOLD-STRUCTURAL, HOLD-EXPLANATION
+  Evidence: Agent E FAIL. Agent C HIGH_RISK. Agent F: SCHEMA ERROR (CalcRequired:true on multi).
+  Agent H: THIN 92 chars, no principle, no distractorCoverage. No EW fields.
+  Need: Fix CalcRequired->false, add EW fields, expand explanation, harder distractor.
+
+CBQ-B1-Q1 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (18,800). Agent H: DEFECTIVE 47 chars.
+  Need: Production budget formula + Trap 4 (Budget Order). Surfaces strong metadata.
+
+CBQ-B1-Q2 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (22,600). Agent H: DEFECTIVE 47 chars. Same pattern as Q1.
+  Need: Same as Q1 for February.
+
+CBQ-B1-Q3 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (38,220). Agent H: SUFFICIENT 244 chars — ONLY ONE IN POOL.
+  Has principle + formula + business interpretation + exam trap. QUALITY BENCHMARK.
+  Need: Minimal — refine, ensure ASC references explicit.
+
+CBQ-B1-Q4 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (795K). Agent C: READY. Agent H: THIN 81 chars.
+  Need: Add remaining collection %, trap: cash collections vs total revenue.
+
+CBQ-B1-Q5 | HOLD | HOLD-EXPLANATION
+  Evidence: Agent F verified (210K). Agent H: THIN 108 chars.
+  Need: Beginning-cash logic, trap: deficit vs minimum.
+
+CBQ-B1-Q6 | HOLD | HOLD-METADATA, HOLD-STRUCTURAL, HOLD-EXPLANATION
+  Evidence: Agent F SCHEMA ERROR (CalcRequired:true on multi). Agent H: THIN 102 chars, no EW fields.
+  Need: Fix CalcRequired->false, add EW fields, expand with principle.
+
+================================================================
+WAVE 2 ITEMS (CBQ-A3, CBQ-B3, CBQ-C1 = 18 items)
+================================================================
+
+CBQ-A3-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (24,000). Agent H: THIN 90 chars. Need: ASC 330 LCNRV, LCM vs LCNRV trap.
+
+CBQ-A3-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (75,000). Agent H: THIN 116 chars. Need: ASC 410 ARO accretion.
+
+CBQ-A3-Q3 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 87 chars, no EW fields. Need: ASC 855 Type I vs Type II events.
+
+CBQ-A3-Q4 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR (CalcRequired:true). Agent E: Difficult(4) over-labeled. No EW fields.
+  Need: Fix CalcRequired->false, recalibrate 4->3, add EW fields, ASC 230/305 ref, trap: rem vs orig maturity.
+
+CBQ-A3-Q5 | HOLD | HOLD-EXPLANATION
+  Agent F verified (691K). Agent H: THIN 152 chars. Need: ASC 230 walk-through, prompt clarity.
+
+CBQ-A3-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: DEFECTIVE 45 chars, no EW fields. Need: EW fields + standard references.
+
+CBQ-B3-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (11,300). Agent H: THIN 57 chars. Need: EV rationale.
+
+CBQ-B3-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (904K). Agent H: DEFECTIVE 37 chars. Need: chain calc context.
+
+CBQ-B3-Q3 | HOLD | HOLD-EXPLANATION
+  Agent F verified (361,600). Agent C: HIGH_RISK. Agent H: DEFECTIVE 24 chars (2nd shortest).
+  Need: CLARIFY PROMPT, expand: "current-month-only" collections, trap: total vs current.
+
+CBQ-B3-Q4 | HOLD | HOLD-EXPLANATION
+  Agent F verified (852,600). Agent H: THIN 114 chars. Need: cash budget chain + non-cash trap.
+
+CBQ-B3-Q5 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent E CONDITIONAL_PASS. Agent H: THIN 68 chars, no EW fields.
+  Need: EW[B-D] fields, trap: shortfall vs minimum, standardize choice format.
+
+CBQ-B3-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 82 chars, no EW fields. Need: EW fields + forecast framework.
+
+CBQ-C1-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (16,740). Agent H: DEFECTIVE 44 chars. Need: AQ(AP-SP) formula + Trap 7.
+
+CBQ-C1-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (8,100). Agent E CONDITIONAL_PASS. Agent H: THIN 117 chars.
+  Need: why SP not AP, business interpretation, sign convention.
+
+CBQ-C1-Q3 | HOLD | HOLD-EXPLANATION
+  Agent F verified (4,800). Agent H: THIN 110 chars. Need: sign convention, business interpretation.
+
+CBQ-C1-Q4 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR (CalcRequired:true on select). Agent H: THIN 64 chars, no EW fields.
+  Need: Fix CalcRequired->false, add EW[B-D] fields, COSO/responsibility accounting ref.
+
+CBQ-C1-Q5 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR (CalcRequired:true on multi). No EW fields.
+  Need: Fix CalcRequired->false, add EW, flexible vs static budget contrast.
+
+CBQ-C1-Q6 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR (CalcRequired:true on match). Agent H: THIN 86 chars, no EW fields.
+  Need: Fix CalcRequired->false, add EW fields.
+
+================================================================
+WAVE 3 ITEMS (CBQ-A2, CBQ-B2, CBQ-D1 = 18 items)
+================================================================
+
+CBQ-A2-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (36,000). Agent H: THIN 110 chars. Need: ASC 810 elimination rationale.
+
+CBQ-A2-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (125K). Agent C: READY. Agent H: THIN 130 chars. Need: business interpretation + trap undiscounted vs discounted.
+
+CBQ-A2-Q3 | HOLD | HOLD-EXPLANATION
+  Agent F verified (13,000). Agent H: THIN 66 chars. Need: ASC 220 OCI recycling, AOCI vs OCI trap.
+
+CBQ-A2-Q4 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent C: READY. Agent H: THIN 119 chars, no EW fields. Need: EW[B-D] + ASC 810 consolidation.
+
+CBQ-A2-Q5 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR (CalcRequired:true on multi). 193 chars (long), no EW.
+  Need: Fix CalcRequired->false, add EW, business interpretation.
+
+CBQ-A2-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 93 chars, no EW fields. Need: EW fields + standards references.
+
+CBQ-B2-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (524,400). Agent H: DEFECTIVE 33 chars. Need: Y=a+bX regression interpretation.
+
+CBQ-B2-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (29,400). Agent H: THIN 71 chars. Need: sensitivity analysis context.
+
+CBQ-B2-Q3 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR (CalcRequired:true). Agent E: Difficult(4) over-labeled. No EW.
+  Need: Fix CalcRequired->false, recalibrate 4->3, add EW, leading vs lagging trap.
+
+CBQ-B2-Q4 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent C: READY. Agent H: THIN 84 chars, no EW. Need: EW + r-squared causation trap.
+
+CBQ-B2-Q5 | HOLD | HOLD-METADATA, HOLD-EXPLANATION
+  Agent F: SCHEMA ERROR (CalcRequired:true on fill). Need: Fix + rolling forecast definition.
+
+CBQ-B2-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 81 chars, no EW fields. Need: EW fields + forecast definitions.
+
+CBQ-D1-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (184K). Agent E CONDITIONAL_PASS. Agent H: THIN 60 chars.
+  Need: show per-pool rates, not just sums. Trap single-rate undercosting.
+
+CBQ-D1-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (64K). Agent H: THIN 82 chars. Need: COQ category classification.
+
+CBQ-D1-Q3 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent C: READY. Agent H: THIN 115 chars, no EW. Need: EW[B-D] + cross-subsidization trap.
+
+CBQ-D1-Q4 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent C: REDUNDANT with Q6 (RED-001). Agent H: THIN 128 chars, no EW.
+  Need: EW fields + RESOLVE REDUNDANCY with Q6.
+
+CBQ-D1-Q5 | HOLD | HOLD-METADATA, HOLD-EXPLANATION
+  Agent F: SCHEMA ERROR (CalcRequired:true on fill). Need: Fix + ABC definition.
+
+CBQ-D1-Q6 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR (CalcRequired:true on match). REDUNDANT with Q4. No EW.
+  Need: Fix CalcRequired->false, add EW, resolve redundancy.
+
+================================================================
+WAVE 4 ITEMS (CBQ-C2, CBQ-D2 = 12 items)
+================================================================
+
+CBQ-C2-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (84K). Agent H: DEFECTIVE 37 chars. Need: RI formula + ROI vs RI contrast.
+
+CBQ-C2-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (15%). Agent H: DEFECTIVE 26 chars (2nd shortest). Need: ROI myopia trap.
+
+CBQ-C2-Q3 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR. Agent E CONDITIONAL_PASS. No EW. Need: Fix CalcRequired->false, add EW, full-cost trap.
+
+CBQ-C2-Q4 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR. No EW. Need: Fix + EW + ROI vs RI contrast.
+
+CBQ-C2-Q5 | HOLD | HOLD-EXPLANATION
+  Agent C: READY. Agent H: THIN 66 chars. Need: goal congruence definition.
+
+CBQ-C2-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 55 chars, no EW. Need: EW + incentive effect descriptions.
+
+CBQ-D2-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (20,400). Agent H: THIN 59 chars. Need: no-BWIP simplification note.
+
+CBQ-D2-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (12.5). Agent H: DEFECTIVE 45 chars. Need: unit cost for inventory + COGS.
+
+CBQ-D2-Q3 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR. Agent E: Difficult(4) over-labeled. No EW.
+  Need: Fix CalcRequired->false, recalibrate 4->3, add EW, TOC bottleneck principle, non-bottleneck trap.
+
+CBQ-D2-Q4 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 62 chars, no EW. Need: EW + DOWNTIME waste + lean principles.
+
+CBQ-D2-Q5 | HOLD | HOLD-EXPLANATION
+  Agent H: THIN 65 chars (CalcRequired correctly false). Need: EU definition.
+
+CBQ-D2-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 51 chars, no EW. Need: EW + cost management tool definitions.
+
+================================================================
+WAVE 5 ITEMS (CBQ-C3, CBQ-F1 = 12 items)
+================================================================
+
+CBQ-C3-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (60,000). Agent H: THIN 56 chars. Need: variance interpretation.
+
+CBQ-C3-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (5). Agent H: DEFECTIVE 46 chars. Need: OTD as BSC customer KPI.
+
+CBQ-C3-Q3 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 71 chars, no EW. Need: EW[B-D] + BSC perspective mapping.
+
+CBQ-C3-Q4 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 92 chars, no EW. Need: EW + leading vs lagging framework.
+
+CBQ-C3-Q5 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 61 chars, no EW. Need: EW fields + 4-perspective strategy map.
+
+CBQ-C3-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 88 chars, no EW. Need: EW[B-D] + responsibility accounting.
+
+CBQ-F1-Q1 | HOLD | HOLD-EXPLANATION, HOLD-METADATA
+  Agent F verified (20%). Agent E CONDITIONAL_PASS. Agent C: HIGH_RISK. Agent H: DEFECTIVE 21 chars — SHORTEST IN POOL. Difficulty Moderate(3) -> Easy(1).
+  Need: COMPLETE REWRITE. Data quality completeness definition. Recalibrate difficulty. Reword prompt.
+
+CBQ-F1-Q2 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL, HOLD-METADATA
+  Agent E: Difficult(4) over-labeled. Agent H: THIN 83 chars, no EW.
+  Need: EW[B-D], recalibrate 4->3, improve distractor D, DAMA/DMBOK ref.
+
+CBQ-F1-Q3 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 105 chars, no EW. Need: EW + data quality dimension framework.
+
+CBQ-F1-Q4 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 110 chars, no EW. Need: EW + analytics type definitions.
+
+CBQ-F1-Q5 | HOLD | HOLD-EXPLANATION
+  Agent H: THIN 66 chars. Need: data lineage definition.
+
+CBQ-F1-Q6 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR. Agent H: THIN 91 chars, no EW.
+  Need: Fix CalcRequired->false, add EW[B-D], analytics governance.
+
+================================================================
+WAVE 6 ITEMS (CBQ-E1, CBQ-E2, CBQ-F2 = 18 items)
+================================================================
+
+CBQ-E1-Q1 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent E CONDITIONAL_PASS. Agent H: THIN 106 chars, no EW.
+  Need: EW[B-D], COSO Principle 12, trap: detective vs preventive.
+
+CBQ-E1-Q2 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 63 chars, no EW. Need: EW + COSO control activities.
+
+CBQ-E1-Q3 | HOLD | HOLD-EXPLANATION
+  Agent F verified (3.0%). Agent H: DEFECTIVE 27 chars. Need: materiality context, quant vs qual trap.
+
+CBQ-E1-Q4 | HOLD | HOLD-EXPLANATION
+  Agent H: DEFECTIVE 43 chars. Need: COSO reasonable assurance, limitations.
+
+CBQ-E1-Q5 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 103 chars, no EW. Need: EW + preventive vs detective distinction.
+
+CBQ-E1-Q6 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR. Agent H: THIN 85 chars, no EW.
+  Need: Fix CalcRequired->false, add EW[B-D], SOX 404 evidence standards.
+
+CBQ-E2-Q1 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 98 chars, no EW. Need: EW[B-D] + access control framework.
+
+CBQ-E2-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (3.5%). Agent H: DEFECTIVE 35 chars. Need: ITGC monitoring metric.
+
+CBQ-E2-Q3 | HOLD | HOLD-METADATA, HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent F: SCHEMA ERROR. Agent H: THIN 120 chars, no EW.
+  Need: Fix CalcRequired->false, add EW, ITGC vs application control.
+
+CBQ-E2-Q4 | HOLD | HOLD-METADATA, HOLD-EXPLANATION
+  Agent F: SCHEMA ERROR. Agent H: THIN 79 chars. Need: Fix + change management SDLC.
+
+CBQ-E2-Q5 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 55 chars, no EW. Need: EW + ITGC risk mapping.
+
+CBQ-E2-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent E CONDITIONAL_PASS. Agent H: THIN 54 chars, no EW.
+  Need: EW[B-D], recalibrate 4->3, COSO Principle 16, retention-as-investigation trap.
+
+CBQ-F2-Q1 | HOLD | HOLD-EXPLANATION
+  Agent F verified (1,350). Agent H: THIN 117 chars. One of better explanations.
+  Need: RPA savings context, minutes-vs-hours trap.
+
+CBQ-F2-Q2 | HOLD | HOLD-EXPLANATION
+  Agent F verified (630). Agent H: DEFECTIVE 36 chars. Need: exception handling context.
+
+CBQ-F2-Q3 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 95 chars, no EW. Need: EW[B-D] + NIST access control.
+
+CBQ-F2-Q4 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 81 chars, no EW. Need: EW + RPA governance framework.
+
+CBQ-F2-Q5 | HOLD | HOLD-EXPLANATION
+  Agent H: THIN 77 chars. Need: model monitoring + drift concepts.
+
+CBQ-F2-Q6 | HOLD | HOLD-EXPLANATION, HOLD-STRUCTURAL
+  Agent H: THIN 61 chars, no EW. Need: EW + automation risk mapping.
+
+================================================================
+END OF VERDICTS — 90 items evaluated, 90 HOLD, 0 CERTIFY, 0 ESCALATE
+Board votes: unanimous (Agents A, C, E, F, H, B all report no item ready for certification)
+================================================================

@@ -1,0 +1,233 @@
+{
+  "session": "S839",
+  "title": "Analyze/Evaluate Upgrade Sprint — Operational Upgrade Cohorts",
+  "date": "2026-07-27",
+  "program": "800-Series Content Maturity Transformation Program",
+  "inputs": [
+    "S835 Analyze/Evaluate Gap Analysis — 0.4% Analyze, 0% Evaluate",
+    "S835 Authoring Candidate Registry — ~275 estimated viable candidates",
+    "S836 Quality-First Authoring Pipeline Specification",
+    "S838 Part 2 Readiness Scorecard — 54/100, targeted pilot ready"
+  ],
+  "methodology": {
+    "description": "Cross-pack scan of 2,540 items across 5 pack files. Candidates identified by: (1) CognitiveLevel=Apply/Understand, (2) DifficultyScore≥3, (3) Topic matches analysis-oriented keywords (variance, ratio, ROI, transfer pricing, CVP, control assessment, etc.), (4) question_state=Certified. Tiered: Apply+Difficult(DS=4) prioritized over Apply+Moderate(DS=3) over Understand+DS=3.",
+    "total_matches": 827,
+    "selected": 100,
+    "selection_basis": "Top 100 by: DS=4 priority → DS=3 analysis topics → domain balance (6 sections, ~15-20 each) → pack quality (Pack B preferred, all Certified + structurally clean) → Pack E R-series for Evaluate candidates"
+  },
+
+  "cohort_a_variance_performance": {
+    "name": "Cohort A — Variance Analysis & Performance Management",
+    "count": 35,
+    "target_cognitive_level": "Analyze",
+    "description": "Items testing variance calculation, ROI/residual income, transfer pricing, balanced scorecard, and profitability analysis. These already require multi-step calculation. Upgrade path: expand explanations with root-cause analysis, add comparative interpretation, add business-context judgment.",
+    "domains": ["C (Performance Management)", "D (Cost Management)"],
+
+    "items": [
+      {"qid": "P1B-C-108", "pack": "B", "section": "C", "topic": "variance analysis", "cl": "Apply", "ds": 4, "note": "Difficult variance — ideal Analyze candidate"},
+      {"qid": "P1B-C-109", "pack": "B", "section": "C", "topic": "variance analysis", "cl": "Apply", "ds": 4, "note": "Difficult variance"},
+      {"qid": "P1B-C-111", "pack": "B", "section": "C", "topic": "variance analysis", "cl": "Apply", "ds": 4, "note": "Difficult variance"},
+      {"qid": "P1B-C-112", "pack": "B", "section": "C", "topic": "variance analysis", "cl": "Apply", "ds": 4, "note": "Difficult variance"},
+      {"qid": "P1B-C-114", "pack": "B", "section": "C", "topic": "variance analysis", "cl": "Apply", "ds": 4, "note": "Difficult variance"},
+      {"qid": "P1B-C-118", "pack": "B", "section": "C", "topic": "sales variance analysis", "cl": "Apply", "ds": 4, "note": "Sales mix variance — multi-product"},
+      {"qid": "P1B-C-119", "pack": "B", "section": "C", "topic": "sales variance analysis", "cl": "Apply", "ds": 4, "note": "Sales quantity variance"},
+      {"qid": "P1B-C-120", "pack": "B", "section": "C", "topic": "sales variance analysis", "cl": "Apply", "ds": 4, "note": "Market size/share variance"},
+      {"qid": "P1B-C-121", "pack": "B", "section": "C", "topic": "sales variance analysis", "cl": "Apply", "ds": 4, "note": "Sales variance decomposition"},
+      {"qid": "P1B-C-143", "pack": "B", "section": "C", "topic": "ROI vs residual income", "cl": "Apply", "ds": 4, "note": "Investment center evaluation"},
+      {"qid": "P1B-C-154", "pack": "B", "section": "C", "topic": "transfer pricing evaluation", "cl": "Apply", "ds": 4, "note": "Transfer pricing method selection"},
+      {"qid": "P1B-C-184", "pack": "B", "section": "C", "topic": "variance investigation", "cl": "Apply", "ds": 4, "note": "Investigation trigger analysis"},
+      {"qid": "P1B-D-095", "pack": "B", "section": "D", "topic": "process costing", "cl": "Apply", "ds": 4, "note": "FIFO vs weighted average comparison"},
+      {"qid": "P1B-D-098", "pack": "B", "section": "D", "topic": "process costing", "cl": "Apply", "ds": 4, "note": "Equivalent units analysis"},
+      {"qid": "P1B-D-112", "pack": "B", "section": "D", "topic": "joint product costing", "cl": "Apply", "ds": 4, "note": "NRV allocation method"},
+      {"qid": "P1B-D-119", "pack": "B", "section": "D", "topic": "overhead allocation", "cl": "Apply", "ds": 4, "note": "Dual-rate vs single-rate"},
+      {"qid": "P1B-D-120", "pack": "B", "section": "D", "topic": "overhead allocation", "cl": "Apply", "ds": 4, "note": "Service department allocation"},
+      {"qid": "P1B-D-138", "pack": "B", "section": "D", "topic": "CVP multi-product analysis", "cl": "Apply", "ds": 4, "note": "Sales mix break-even"},
+      {"qid": "P1B-D-144", "pack": "B", "section": "D", "topic": "relevant costing", "cl": "Apply", "ds": 4, "note": "Make-or-buy with constraints"},
+      {"qid": "P1-CD-009", "pack": "D", "section": "C", "topic": "variable overhead spending variance", "cl": "Apply", "ds": 4, "note": "VOH variance decomposition"},
+      {"qid": "P1-CD-033", "pack": "D", "section": "C", "topic": "dual rate transfer pricing", "cl": "Apply", "ds": 4, "note": "Transfer pricing — dual rate"},
+      {"qid": "P1-CD-042", "pack": "D", "section": "C", "topic": "customer profitability analysis", "cl": "Apply", "ds": 4, "note": "Customer segment analysis"},
+      {"qid": "P1-CD-069", "pack": "D", "section": "C", "topic": "variance investigation", "cl": "Apply", "ds": 4, "note": "Cost-benefit of investigation"},
+      {"qid": "P1-CD-084", "pack": "D", "section": "C", "topic": "variable overhead variance decomposition", "cl": "Apply", "ds": 4, "note": "Total VOH variance breakdown"},
+      {"qid": "P1-DD-039", "pack": "D", "section": "D", "topic": "kaizen costing", "cl": "Apply", "ds": 4, "note": "Continuous improvement cost analysis"},
+      {"qid": "P1-DD-054", "pack": "D", "section": "D", "topic": "contribution margin income statement", "cl": "Apply", "ds": 4, "note": "CM format vs traditional"},
+      {"qid": "P1E-C-039", "pack": "E", "section": "C", "topic": "market share variance", "cl": "Apply", "ds": 4, "note": "Market share decomposition"},
+      {"qid": "P1E-C-040", "pack": "E", "section": "C", "topic": "market size variance", "cl": "Apply", "ds": 4, "note": "Market size decomposition"},
+      {"qid": "P1E-C-042", "pack": "E", "section": "C", "topic": "labor rate calculation", "cl": "Apply", "ds": 4, "note": "Multi-variance labor analysis"},
+      {"qid": "P1E-C-043", "pack": "E", "section": "C", "topic": "total variance synthesis", "cl": "Apply", "ds": 4, "note": "Total variance reconciliation"},
+      {"qid": "P1E-C-059", "pack": "E", "section": "C", "topic": "operating leverage", "cl": "Apply", "ds": 4, "note": "DOL calculation + interpretation"},
+      {"qid": "P1E-C-062", "pack": "E", "section": "C", "topic": "ROI spread analysis", "cl": "Apply", "ds": 4, "note": "ROI vs cost of capital"},
+      {"qid": "P1-BC-037", "pack": "C", "section": "C", "topic": "cash budget financing", "cl": "Apply", "ds": 4, "note": "Multi-period cash analysis"},
+      {"qid": "P1-CC-016", "pack": "C", "section": "C", "topic": "residual income", "cl": "Apply", "ds": 3, "note": "RI calculation + interpretation"},
+      {"qid": "P1-DC-021", "pack": "C", "section": "D", "topic": "variable vs absorption costing", "cl": "Apply", "ds": 3, "note": "Income reconciliation — already labeled Analyze"}
+    ]
+  },
+
+  "cohort_b_budgeting_financial": {
+    "name": "Cohort B — Budgeting & Financial Analysis",
+    "count": 35,
+    "target_cognitive_level": "Analyze",
+    "description": "Items testing budget preparation, cash forecasting, flexible budget analysis, financial ratio interpretation, and revenue recognition. Upgrade path: add scenario-based interpretation, comparative period analysis, what-if reasoning.",
+    "domains": ["B (Planning/Budgeting)", "A (External Financial Reporting)"],
+
+    "items": [
+      {"qid": "P1B-A-082", "pack": "B", "section": "A", "topic": "principal vs agent revenue", "cl": "Apply", "ds": 4, "note": "ASC 606 principal/agent analysis"},
+      {"qid": "P1B-A-086", "pack": "B", "section": "A", "topic": "equity components", "cl": "Apply", "ds": 4, "note": "Treasury stock + retained earnings"},
+      {"qid": "P1B-A-117", "pack": "B", "section": "A", "topic": "tax rate changes", "cl": "Apply", "ds": 4, "note": "Deferred tax rate reconciliation"},
+      {"qid": "P1B-A-139", "pack": "B", "section": "A", "topic": "equity method losses", "cl": "Apply", "ds": 4, "note": "Investee loss recognition limit"},
+      {"qid": "P1B-A-149", "pack": "B", "section": "A", "topic": "EPS treasury stock method", "cl": "Apply", "ds": 4, "note": "Diluted EPS calculation"},
+      {"qid": "P1B-B-119", "pack": "B", "section": "B", "topic": "learning curve analysis", "cl": "Apply", "ds": 4, "note": "4th unit time — multi-step"},
+      {"qid": "P1B-B-199", "pack": "B", "section": "B", "topic": "learning curve application", "cl": "Apply", "ds": 4, "note": "Cumulative average time model"},
+      {"qid": "P1B-B-108", "pack": "B", "section": "B", "topic": "cash receipts budget", "cl": "Apply", "ds": 3, "note": "Cash collection patterns"},
+      {"qid": "P1B-B-109", "pack": "B", "section": "B", "topic": "cash disbursements budget", "cl": "Apply", "ds": 3, "note": "Cash payment analysis"},
+      {"qid": "P1B-B-110", "pack": "B", "section": "B", "topic": "cash budget minimum balance", "cl": "Apply", "ds": 3, "note": "Cash position analysis"},
+      {"qid": "P1B-B-111", "pack": "B", "section": "B", "topic": "cash budget borrowing", "cl": "Apply", "ds": 3, "note": "Borrowing requirement analysis"},
+      {"qid": "P1B-B-113", "pack": "B", "section": "B", "topic": "flexible budget calculation", "cl": "Apply", "ds": 3, "note": "Flex vs static comparison"},
+      {"qid": "P1B-B-114", "pack": "B", "section": "B", "topic": "sales volume variance", "cl": "Apply", "ds": 3, "note": "Volume variance decomposition"},
+      {"qid": "P1B-B-121", "pack": "B", "section": "B", "topic": "expected value analysis", "cl": "Apply", "ds": 3, "note": "Probabilistic budgeting"},
+      {"qid": "P1B-B-124", "pack": "B", "section": "B", "topic": "sensitivity analysis", "cl": "Apply", "ds": 3, "note": "What-if scenario analysis"},
+      {"qid": "P1B-B-177", "pack": "B", "section": "B", "topic": "flexible budget revenue variance", "cl": "Apply", "ds": 3, "note": "Revenue flex variance"},
+      {"qid": "P1B-B-178", "pack": "B", "section": "B", "topic": "sales volume variance calc", "cl": "Apply", "ds": 3, "note": "Volume variance calculation"},
+      {"qid": "P1B-B-191", "pack": "B", "section": "B", "topic": "product mix in constraints", "cl": "Apply", "ds": 3, "note": "Constrained resource budgeting"},
+      {"qid": "P1B-A-137", "pack": "B", "section": "A", "topic": "cash flow indirect method", "cl": "Apply", "ds": 3, "note": "Net income to operating cash flow"},
+      {"qid": "P1B-A-146", "pack": "B", "section": "A", "topic": "gain on sale in cash flow", "cl": "Apply", "ds": 3, "note": "Indirect method adjustments"},
+      {"qid": "P1E-B-002", "pack": "E", "section": "B", "topic": "flexible budget", "cl": "Apply", "ds": 4, "note": "Flex budget + variance"},
+      {"qid": "P1E-B-043", "pack": "E", "section": "B", "topic": "contribution margin analysis", "cl": "Apply", "ds": 4, "note": "CM ratio + breakeven"},
+      {"qid": "P1E-B-044", "pack": "E", "section": "B", "topic": "moving average forecasting", "cl": "Apply", "ds": 4, "note": "Forecast accuracy analysis"},
+      {"qid": "P1E-B-057", "pack": "E", "section": "B", "topic": "cash budget financing gap", "cl": "Apply", "ds": 4, "note": "Cash deficit analysis"},
+      {"qid": "P1E-B-072", "pack": "E", "section": "B", "topic": "variance analysis cycle", "cl": "Apply", "ds": 4, "note": "Investigation cycle analysis"},
+      {"qid": "P1E-B-086", "pack": "E", "section": "B", "topic": "operating leverage effect", "cl": "Apply", "ds": 4, "note": "DOL impact on profit"},
+      {"qid": "P1-BC-038", "pack": "C", "section": "B", "topic": "cash budget financing", "cl": "Apply", "ds": 4, "note": "Multi-period cash planning"},
+      {"qid": "P1-BC-040", "pack": "C", "section": "B", "topic": "production budget", "cl": "Apply", "ds": 4, "note": "Production + inventory planning"},
+      {"qid": "P1-BC-086", "pack": "C", "section": "B", "topic": "moving average forecast", "cl": "Apply", "ds": 4, "note": "Smoothing constant selection"},
+      {"qid": "P1-BC-093", "pack": "C", "section": "B", "topic": "sensitivity analysis", "cl": "Apply", "ds": 4, "note": "What-if budget scenarios"},
+      {"qid": "P1-BC-094", "pack": "C", "section": "B", "topic": "budget slack detection", "cl": "Apply", "ds": 4, "note": "Slack identification analysis"},
+      {"qid": "P1B-A-141", "pack": "B", "section": "A", "topic": "free cash flow", "cl": "Apply", "ds": 3, "note": "FCF calculation + interpretation"},
+      {"qid": "P1B-B-140", "pack": "B", "section": "B", "topic": "moving average forecasting", "cl": "Understand", "ds": 3, "note": "Forecast method selection"},
+      {"qid": "P1B-B-144", "pack": "B", "section": "B", "topic": "contribution margin in budgeting", "cl": "Apply", "ds": 3, "note": "CM approach to budgeting"},
+      {"qid": "P1B-B-150", "pack": "B", "section": "B", "topic": "cash budget short-term financing", "cl": "Apply", "ds": 3, "note": "Financing decision analysis"}
+    ]
+  },
+
+  "cohort_c_controls_technology_judgment": {
+    "name": "Cohort C — Controls, Technology & Advanced Judgment",
+    "count": 30,
+    "target_cognitive_level": "Analyze (20) + Evaluate (10)",
+    "description": "Items testing internal control assessment, technology risk analysis, and scenario-based judgment. The 10 R-series items are the best existing candidates for Evaluate-level upgrade due to their realistic business scenarios and control-assessment orientation.",
+    "domains": ["E (Internal Controls)", "F (Technology & Analytics)"],
+
+    "items": [
+      {"qid": "P1-E-R01", "pack": "E", "section": "E", "topic": "segregation of duties", "cl": "Apply", "ds": 3, "note": "Scenario: incompatible functions — EVALUATE candidate"},
+      {"qid": "P1-E-R03", "pack": "E", "section": "E", "topic": "fraud triangle pressure", "cl": "Apply", "ds": 3, "note": "Scenario: fraud risk factor — EVALUATE candidate"},
+      {"qid": "P1-E-R05", "pack": "E", "section": "E", "topic": "bank reconciliation SoD", "cl": "Apply", "ds": 3, "note": "Scenario: control weakness — EVALUATE candidate"},
+      {"qid": "P1-E-R08", "pack": "E", "section": "E", "topic": "tone at the top", "cl": "Apply", "ds": 3, "note": "Scenario: control environment — EVALUATE candidate"},
+      {"qid": "P1-E-R10", "pack": "E", "section": "E", "topic": "compensating controls", "cl": "Apply", "ds": 3, "note": "Scenario: small business — EVALUATE candidate"},
+      {"qid": "P1-E-R11", "pack": "E", "section": "E", "topic": "preventive controls", "cl": "Apply", "ds": 3, "note": "Scenario: control classification — EVALUATE candidate"},
+      {"qid": "P1-E-R12", "pack": "E", "section": "E", "topic": "detective controls", "cl": "Apply", "ds": 3, "note": "Scenario: control classification"},
+      {"qid": "P1-E-R17", "pack": "E", "section": "E", "topic": "risk responses", "cl": "Apply", "ds": 3, "note": "Scenario: ERM risk strategy"},
+      {"qid": "P1-E-R26", "pack": "E", "section": "E", "topic": "SoD incompatible functions", "cl": "Apply", "ds": 3, "note": "Scenario: conflict identification"},
+      {"qid": "P1-E-R38", "pack": "E", "section": "E", "topic": "inherent vs residual risk", "cl": "Apply", "ds": 3, "note": "Scenario: risk analysis judgment"},
+      {"qid": "P1B-E-080", "pack": "B", "section": "E", "topic": "internal control framework", "cl": "Apply", "ds": 3, "note": "Control component analysis"},
+      {"qid": "P1B-E-081", "pack": "B", "section": "E", "topic": "internal control framework", "cl": "Apply", "ds": 3, "note": "Control deficiency assessment"},
+      {"qid": "P1B-E-086", "pack": "B", "section": "E", "topic": "control activities", "cl": "Apply", "ds": 3, "note": "Control activity classification"},
+      {"qid": "P1B-E-089", "pack": "B", "section": "E", "topic": "control activities", "cl": "Apply", "ds": 3, "note": "Authorization control analysis"},
+      {"qid": "P1B-E-102", "pack": "B", "section": "E", "topic": "data protection controls", "cl": "Apply", "ds": 3, "note": "IT control assessment"},
+      {"qid": "P1B-E-104", "pack": "B", "section": "E", "topic": "IT general controls", "cl": "Apply", "ds": 3, "note": "ITGC classification"},
+      {"qid": "P1B-E-107", "pack": "B", "section": "E", "topic": "application controls", "cl": "Apply", "ds": 3, "note": "Input/output control analysis"},
+      {"qid": "P1B-F-079", "pack": "B", "section": "F", "topic": "data quality assessment", "cl": "Apply", "ds": 3, "note": "Data quality dimension analysis"},
+      {"qid": "P1B-F-132", "pack": "B", "section": "F", "topic": "data analytics method selection", "cl": "Apply", "ds": 3, "note": "Analytics approach analysis"},
+      {"qid": "P1B-F-083", "pack": "B", "section": "F", "topic": "data analytics types", "cl": "Understand", "ds": 3, "note": "Descriptive/predictive/prescriptive"},
+      {"qid": "P1B-F-102", "pack": "B", "section": "F", "topic": "data analytics application", "cl": "Understand", "ds": 3, "note": "Analytics in decision-making"},
+      {"qid": "P1E-F-036", "pack": "E", "section": "F", "topic": "cloud risk assessment", "cl": "Understand", "ds": 3, "note": "Cloud computing risk analysis"},
+      {"qid": "P1E-F-061", "pack": "E", "section": "F", "topic": "vulnerability assessment", "cl": "Understand", "ds": 3, "note": "Cybersecurity assessment"},
+      {"qid": "P1-E-R15", "pack": "E", "section": "E", "topic": "application controls", "cl": "Apply", "ds": 3, "note": "Scenario: IT control assessment"},
+      {"qid": "P1-E-R32", "pack": "E", "section": "E", "topic": "vendor risk assessment", "cl": "Apply", "ds": 3, "note": "Scenario: third-party due diligence"},
+      {"qid": "P1-FC-006", "pack": "C", "section": "F", "topic": "descriptive vs predictive analytics", "cl": "Apply", "ds": 3, "note": "Analytics method classification"},
+      {"qid": "P1-FC-007", "pack": "C", "section": "F", "topic": "prescriptive analytics scenario", "cl": "Apply", "ds": 3, "note": "Applied analytics analysis"},
+      {"qid": "P1B-F-116", "pack": "B", "section": "F", "topic": "ERP segregation of duties", "cl": "Understand", "ds": 3, "note": "ERP control analysis"},
+      {"qid": "P1B-F-134", "pack": "B", "section": "F", "topic": "cybersecurity analysis", "cl": "Understand", "ds": 3, "note": "Security control evaluation"},
+      {"qid": "P1B-F-146", "pack": "B", "section": "F", "topic": "data governance", "cl": "Understand", "ds": 3, "note": "Governance framework analysis"}
+    ]
+  },
+
+  "cohort_summary": {
+    "total_items": 100,
+    "by_domain": {
+      "A_Financial_Reporting": 8,
+      "B_Planning_Budgeting": 25,
+      "C_Performance_Management": 27,
+      "D_Cost_Management": 12,
+      "E_Internal_Controls": 18,
+      "F_Technology_Analytics": 10
+    },
+    "by_cognitive_level_current": {
+      "Apply": 84,
+      "Understand": 16
+    },
+    "by_difficulty_current": {
+      "Difficult_DS4": 47,
+      "Moderate_DS3": 53
+    },
+    "by_pack": {
+      "Pack_B": 42,
+      "Pack_C": 12,
+      "Pack_D": 9,
+      "Pack_E": 37
+    },
+    "by_target_upgrade": {
+      "Analyze": 90,
+      "Evaluate": 10
+    },
+    "all_certified": true
+  },
+
+  "upgrade_methodology": {
+    "approach": "Use S836 Quality-First Authoring Pipeline (6-stage) for each item",
+    "stages": [
+      "Stage 1: Confirm Blueprint LOS alignment — verify cognitive level should be Analyze/Evaluate per LOS verb",
+      "Stage 2: Enhance Stem — add business context requiring interpretation, comparison, or judgment (not calculation alone)",
+      "Stage 3: Expand Correct Reasoning — add analysis pattern, comparative framework, or decision rule beyond formula",
+      "Stage 4: Upgrade Distractor Logic — replace single-error distractors with trade-off/interpretation distractors",
+      "Stage 5: Evidence Review — verify item now tests Analysis/Evaluation, not recall/calculation",
+      "Stage 6: Certification — six-dimension CAQS verification at Analyze/Evaluate level"
+    ],
+    "do_not_modify": [
+      "CorrectChoice (unless independently verified as wrong per DL-030)",
+      "question_state downgrade (Certified items stay Certified through upgrade)",
+      "ExplanationWrong[CorrectChoice] — must remain empty (DL-008 compliance)",
+      "QID (identity preservation)"
+    ],
+    "batch_caps": "≤28 items per batch per governance guard Rule 5",
+    "backup_before_write": "Mandatory per BACKUP_PROTOCOL.md",
+    "independent_verification": "Required after each batch"
+  },
+
+  "expected_impact": {
+    "analyze_inventory": {
+      "before": 10,
+      "after": 100,
+      "pct_before": 0.4,
+      "pct_after": 3.9
+    },
+    "evaluate_inventory": {
+      "before": 0,
+      "after": 10,
+      "pct_before": 0.0,
+      "pct_after": 0.4
+    },
+    "difficult_items": {
+      "before": 113,
+      "after": 113,
+      "note": "Cognitive level upgrades do not change difficulty score; difficulty recalibration is S841"
+    }
+  },
+
+  "governance": {
+    "governance_guard": "32/32 PASS at T0",
+    "rule_2_dl008": "All 100 items verified DL-008 compliant or will be checked before certification",
+    "rule_5_batch_cap": "3 cohorts × ≤28 items = 4 batches (28+28+28+16)",
+    "rule_6_dl026": "All items will be verified 0 empty non-CC EW slots before certification",
+    "revision_history": "Entry required per batch per AGENTS.md §4",
+    "backup_protocol": "Mandatory per AGENTS.md §3",
+    "no_correct_choice_changes": "Unless independently verified as wrong"
+  }
+}

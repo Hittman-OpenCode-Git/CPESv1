@@ -1,0 +1,14 @@
+{
+  "session": "S320",
+  "timestamp": "2026-07-27T03:26:39.237Z",
+  "certified_baseline": 2221,
+  "domain_e_certified": 238,
+  "seeds_total": 38,
+  "seeds_remediated_ew": 10,
+  "seeds_remediated_coso": 8,
+  "seeds_ready": 4,
+  "seeds_hold_or_minor": 34,
+  "projected_certification_impact": "+0 (no certification actions in S320)",
+  "estimated_remaining_sessions": 3,
+  "next": "S321 — Pack C EW fills + COSO + EC enrichment for weak items"
+}

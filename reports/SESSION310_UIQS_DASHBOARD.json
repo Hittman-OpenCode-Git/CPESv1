@@ -1,0 +1,97 @@
+{
+  "session": "310",
+  "title": "UIQS Dashboard — Unified Item Quality Score Tracking",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "portfolioUIQS": 68.8,
+  "portfolioGrade": "C",
+  "gradeDistribution": {
+    "A": 170,
+    "B": 1431,
+    "C": 939,
+    "D": 313,
+    "F": 47
+  },
+  "qualityThresholds": {
+    "A": ">=80",
+    "B": "70-79",
+    "C": "60-69",
+    "D": "50-59",
+    "F": "<50"
+  },
+  "byDomain": {
+    "A": {
+      "uiqs": 70.3,
+      "grade": "B",
+      "certRate": "98.2%",
+      "riskLevel": "Low",
+      "trend": "Stable"
+    },
+    "B": {
+      "uiqs": 71.3,
+      "grade": "B",
+      "certRate": "98.9%",
+      "riskLevel": "Low",
+      "trend": "Stable"
+    },
+    "C": {
+      "uiqs": 74.1,
+      "grade": "B",
+      "certRate": "98.3%",
+      "riskLevel": "Low",
+      "trend": "Stable"
+    },
+    "D": {
+      "uiqs": 70.1,
+      "grade": "B",
+      "certRate": "98.7%",
+      "riskLevel": "Low",
+      "trend": "Stable"
+    },
+    "E": {
+      "uiqs": 62.5,
+      "grade": "C",
+      "certRate": "59.7%",
+      "riskLevel": "High",
+      "trend": "IMPROVING (projected: 79.0 post-replacement)"
+    },
+    "F": {
+      "uiqs": 62.4,
+      "grade": "C",
+      "certRate": "65.2%",
+      "riskLevel": "High",
+      "trend": "IMPROVING (projected: 77.9 post-authoring)"
+    }
+  },
+  "forecast": {
+    "postReplacement": {
+      "targetUIQS": 82.5,
+      "domainsImproved": [
+        "E",
+        "F"
+      ],
+      "sessionsRequired": 17
+    },
+    "trajectory": [
+      {
+        "milestone": "S310 (Current)",
+        "uiqs": 68.8
+      },
+      {
+        "milestone": "Post-DomainE (S320)",
+        "uiqs": 74.2,
+        "unit": "projected"
+      },
+      {
+        "milestone": "Post-DomainF (S330)",
+        "uiqs": 79.8,
+        "unit": "projected"
+      },
+      {
+        "milestone": "Post-EW (S340)",
+        "uiqs": 82.5,
+        "unit": "projected"
+      }
+    ]
+  }
+}

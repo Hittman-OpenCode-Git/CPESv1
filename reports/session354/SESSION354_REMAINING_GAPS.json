@@ -1,0 +1,283 @@
+{
+  "document": "SESSION354_REMAINING_GAPS",
+  "session": "S354",
+  "title": "Remaining Gaps Register — Blocking vs Non-Blocking for Framework v2 Permanent Adoption",
+  "board": "H — Remaining Gaps Register",
+  "series": "350-Series — Framework v2 Measurement Authority (Adoption Certification)",
+  "date": "2026-07-27",
+  "type": "Read-Only Adoption Certification — No Content Modifications",
+  "authority": [
+    "S813 Executive Decision (5 conditions for full adoption)",
+    "S352 Remaining Unmeasured Areas",
+    "S353 Certification Scorecard (P3 gap)",
+    "S354 Boards A-G findings",
+    "CURRENT_BASELINES.md (defect status)",
+    "DEFECT_LIBRARY.md (DL-001 through DL-034)"
+  ],
+  "depends_on": ["S813", "S352", "S353", "S354 A-G"],
+
+  "categorization_key": {
+    "BLOCKING": "Must be resolved before Framework v2 transitions from Conditional to Full Adoption",
+    "HIGH_PRIORITY": "Should be resolved in next 5 sessions; impacts operational quality but does not block adoption",
+    "MEDIUM_PRIORITY": "Deferred to P2/P3; infrastructure exists, enhancement only",
+    "LOW_PRIORITY": "Deferred to P3+; cosmetic, optimization, or forward-looking"
+  },
+
+  "gaps": {
+    "s813_adoption_conditions": {
+      "label": "S813 Conditions for Full Adoption (C1-C5)",
+      "source": "SESSION813_EXECUTIVE_DECISION.md",
+      "items": [
+        {
+          "id": "GAP-S813-C1",
+          "description": "Governance Guard Rule 6 — DL-026 BLOCK enforcement on non-CC distractor slots",
+          "priority": "BLOCKING",
+          "effort": "Low (1 session)",
+          "target_session": "S814",
+          "current_state": "Rule 2 blocks DL-008 (CC slot). Rule 6 does not yet block DL-026 (non-CC slots). 39 Domain F certified items have empty distractor EW slots.",
+          "impact": "Blocks new certifications of items with empty distractor slots. Required for full adoption per S813.",
+          "remediation": "Add enforcement check: all non-CorrectChoice ExplanationWrong slots must be non-empty before certification. Mirror existing Rule 2 pattern."
+        },
+        {
+          "id": "GAP-S813-C2",
+          "description": "Pipeline artifact reuse between scan orchestrator, readiness scorer, and certification candidate engine",
+          "priority": "BLOCKING",
+          "effort": "Medium (2-3 sessions)",
+          "target_session": "S819-S820",
+          "current_state": "Each engine re-computes from source. No shared scan artifact consumption. 40-item BLOCKED divergence between tools. Artifact reuse = 0 downstream consumers in S812.",
+          "impact": "Redundant re-computation. Routing divergence (242 vs 282 BLOCKED). Blocks efficient multi-wave pipeline.",
+          "remediation": "Connect scan orchestrator output → readiness scorer input → candidate engine input. Standardize artifact schema for consumption contract."
+        },
+        {
+          "id": "GAP-S813-C3",
+          "description": "Remediate 39 Domain F certified DL-026 items (~117 empty EW fields)",
+          "priority": "BLOCKING",
+          "effort": "Medium (3-4 sessions, content authoring bottleneck)",
+          "target_session": "S816-S818",
+          "current_state": "39 items in learner pool with empty distractor ExplanationWrong slots. Learners see no feedback on wrong answers for these items.",
+          "impact": "Educational quality degradation in learner pool. Blocks full adoption per S813.",
+          "remediation": "Author choice-specific distractor explanations for ~117 empty non-CC EW slots. Batch into ≤30 items per governance guard Rule 5."
+        },
+        {
+          "id": "GAP-S813-C4",
+          "description": "Log DL-035 (39 Domain F DL-026-on-Certified) and DL-036 (40-item routing divergence) to DEFECT_LIBRARY.md",
+          "priority": "BLOCKING",
+          "effort": "Low (1 session — this session or S815)",
+          "target_session": "S815",
+          "current_state": "Not yet entered in DEFECT_LIBRARY.md. Per AGENTS.md §12: findings discovered in session must be logged before session close.",
+          "impact": "Governance compliance — AGENTS.md §12 requires findings to be logged. Blocks full adoption per S813.",
+          "remediation": "Add DL-035 and DL-036 entries to DEFECT_LIBRARY.md with full description, QID lists, and status."
+        },
+        {
+          "id": "GAP-S813-C5",
+          "description": "Remediation queue auto-dispatch from defect manifest",
+          "priority": "BLOCKING",
+          "effort": "Medium (2-3 sessions)",
+          "target_session": "S819-S820",
+          "current_state": "S852 defect manifest has 264 entries. Work queue has 5 lanes. But no automated dispatch from manifest to remediation lane.",
+          "impact": "Manual orchestration needed to convert defect manifest entries into remediation session packages. Blocks full adoption per S813.",
+          "remediation": "Feed S852 defect manifest into automated remediation queue for batch dispatch (≤30 items per Rule 5). Connect to S250.3 session generator."
+        }
+      ]
+    },
+
+    "delta_review_gaps": {
+      "label": "Delta Review — Pending Second Certification Wave",
+      "items": [
+        {
+          "id": "GAP-DR-001",
+          "description": "Delta review skip rate not measured — requires re-certification of previously certified items",
+          "priority": "HIGH_PRIORITY",
+          "effort": "Requires S811+ second wave data",
+          "current_state": "Delta ledger is 100% deterministic. All 2,540 items hashed. But zero operational delta comparisons exist — all items are NO_CHANGE vs baseline because no re-certification events have occurred.",
+          "impact": "The projected 2.0-2.5× delta review multiplier is unproven. P3 target (3.8×) depends on delta review being activated.",
+          "resolution": "Execute a re-certification wave on a set of already-Certified items. Measure skip rate, re-review reduction. First measurable at S811→S812 delta comparison."
+        },
+        {
+          "id": "GAP-DR-002",
+          "description": "Delta review inheritance rules (IR-001 through IR-005) not operationally exercised",
+          "priority": "MEDIUM_PRIORITY",
+          "current_state": "All 5 rules validated as logically sound (S352 Board F). Not yet tested with real changed-content scenarios.",
+          "impact": "Risk of undiscovered edge cases when content actually changes between certifications.",
+          "resolution": "Exercise all 5 inheritance rules with real content changes in second certification wave."
+        }
+      ]
+    },
+
+    "board_consolidation_gaps": {
+      "label": "Board Consolidation — Pending Adoption in Certification Sessions",
+      "items": [
+        {
+          "id": "GAP-BC-001",
+          "description": "v2 5-board model not yet adopted by certification execution sessions",
+          "priority": "HIGH_PRIORITY",
+          "current_state": "5-board model operational in verification sessions (S811-S813: Registry, Quality, Governance, Certification, Throughput). Not yet adopted by certification sessions. S853 used batch script, not board model.",
+          "impact": "P3 throughput target (3.8×) depends on 1.3-1.4× board consolidation multiplier. Agent reduction of 8→5 boards (37.5%) unrealized in certification workflow.",
+          "resolution": "Adopt 5-board model as the standard for certification sessions. Phase in with next certification wave."
+        }
+      ]
+    },
+
+    "certified_pool_defects": {
+      "label": "Certified Pool Defects — Known Issues in Learner Pool",
+      "items": [
+        {
+          "id": "GAP-POOL-001",
+          "description": "DL-021: 95 Pack E Section C Certified items with absent distractor ExplanationWrong slots",
+          "priority": "HIGH_PRIORITY",
+          "effort": "Medium (3-4 sessions, content authoring)",
+          "current_state": "Per CURRENT_BASELINES.md: 95 Certified items with absent distractor EW slots. Active learner-pool exposure — degraded educational feedback.",
+          "impact": "Learners receive no distractor explanation for wrong answers on these 95 items.",
+          "resolution": "Author EW distractor explanations for all 95 items. Batch into ≤30 per Rule 5."
+        },
+        {
+          "id": "GAP-POOL-002",
+          "description": "DL-016: Metadata-block Choice A-D +1 offset on 58 Pack A Section E Certified items + likely Pack C/D",
+          "priority": "HIGH_PRIORITY",
+          "effort": "High (5+ sessions, requires systematic per-item CC verification)",
+          "current_state": "ExplanationWrong fields describe wrong item's distractors due to metadata-content offset. Severity HIGH per DEFECT_LIBRARY.md.",
+          "impact": "Distractor explanations misaligned — learners may see explanation for neighbor item's choices, not their own.",
+          "resolution": "Per-item audit: verify all EW fields against content-block Choices (not metadata-block ChoiceA-D). Reconcile offset."
+        },
+        {
+          "id": "GAP-POOL-003",
+          "description": "39 Domain F DL-026 items — empty non-CC distractor EW slots on Certified items",
+          "priority": "BLOCKING",
+          "effort": "Medium (3-4 sessions) — same as GAP-S813-C3",
+          "note": "This gap was previously unknown. Discovered during S812 repeatability verification."
+        }
+      ]
+    },
+
+    "governance_gaps": {
+      "label": "Governance — Automation Expansion Gaps",
+      "items": [
+        {
+          "id": "GAP-GOV-001",
+          "description": "Governance Guard Rule 6 (DL-026 BLOCK) not yet deployed",
+          "priority": "BLOCKING",
+          "note": "Same as GAP-S813-C1"
+        },
+        {
+          "id": "GAP-GOV-002",
+          "description": "Policy drift detector detects 420 combined critical findings on Packs C/D — findings not yet resolved",
+          "priority": "MEDIUM_PRIORITY",
+          "current_state": "S750 policy_drift_detector.js identified 420 critical findings (metadata drift, DL-013 residual, DL-026 gaps). Findings are monitored but not remediated.",
+          "impact": "Drift accumulates over certification cycles. Non-blocking for adoption but degrades content quality.",
+          "resolution": "Scheduled remediation as part of certification waves — not a separate remediation program."
+        },
+        {
+          "id": "GAP-GOV-003",
+          "description": "Governance event registry storage not integrated into Admin Portal",
+          "priority": "LOW_PRIORITY",
+          "current_state": "Event registry at scripts/output/governance_event_registry.json. CLI access only. No dashboard visualization.",
+          "resolution": "Integration with May Administration Portal (P1 deliverable)."
+        }
+      ]
+    },
+
+    "workflow_gaps": {
+      "label": "Workflow Automation — Remaining Process Integration",
+      "items": [
+        {
+          "id": "GAP-WF-001",
+          "description": "Work queue not regenerated from post-S853 live state",
+          "priority": "MEDIUM_PRIORITY",
+          "effort": "Low (1 command — scripts/work_queue_manager.js re-run)",
+          "current_state": "Queue from S250 initial run (2,540 items, 265 BLOCKED). Post-S853: 2,298 Certified, 242 remaining. Queue lanes stale.",
+          "resolution": "Regenerate work queue from live pack state. Scheduled as part of next certification wave planning."
+        },
+        {
+          "id": "GAP-WF-002",
+          "description": "Content authoring remains manual — modernization gates validation, does not create content",
+          "priority": "MEDIUM_PRIORITY",
+          "current_state": "All 242 remaining BLOCKED items need content authoring (EW fills, boilerplate removal, metadata correction). v2 pipeline validates/classifies but does not create content.",
+          "impact": "Certification throughput is gated by human authoring speed, not pipeline capacity.",
+          "resolution": "Design limitation — content authoring is inherently human (IMA standards, COSO alignment). Pipeline can be optimized for validation speed but not for authoring speed."
+        }
+      ]
+    },
+
+    "admin_portal_gaps": {
+      "label": "May Administration Portal — Implementation Gaps",
+      "items": [
+        {
+          "id": "GAP-ADMIN-001",
+          "description": "May Administration Portal P0 modules not implemented (Question Management, Recommendation Registry, Session Registry, Certification Console, Admin Auth)",
+          "priority": "MEDIUM_PRIORITY",
+          "effort": "Large (10+ sessions, web UI development)",
+          "current_state": "Backend registries operational. CLI access only. No web UI. RBAC model specified but not implemented. S204 Board H specification complete.",
+          "impact": "All registry access requires CLI. No non-technical user access. No student-facing interface.",
+          "resolution": "Phased implementation: P0 at S830, P1 at S900, P2 at S910. Per S203 migration plan."
+        },
+        {
+          "id": "GAP-ADMIN-002",
+          "description": "Student data feed not operational",
+          "priority": "MEDIUM_PRIORITY",
+          "current_state": "Student→Challenge→Question traceability chain specified but requires student attempt data which does not yet exist.",
+          "resolution": "Implement when May learner engine (may-core.js) produces structured attempt data feed."
+        },
+        {
+          "id": "GAP-ADMIN-003",
+          "description": "Investigation Workbench UI not built",
+          "priority": "LOW_PRIORITY",
+          "current_state": "Specified in S204 Board G. 35 challenges in registry. All investigation workflows are manual review.",
+          "resolution": "Admin Portal P1 deliverable (S900)."
+        }
+      ]
+    },
+
+    "infrastructure_gaps": {
+      "label": "Infrastructure — Performance and Reliability",
+      "items": [
+        {
+          "id": "GAP-INF-001",
+          "description": "S812 pipeline throughput regression: 3,175/s (W1) → 2,024/s (W2), -36.3%",
+          "priority": "LOW_PRIORITY",
+          "current_state": "S812 reported +13.7% pipeline timing increase. Attributed to environment variance. 176,000× vs manual provides enormous overhead margin.",
+          "impact": "Non-blocking — throughput is in seconds, not hours. 2,024/s is still ~40,000× faster than v1 manual review.",
+          "resolution": "Monitor across S813+ waves. Investigate only if trend continues below 1,000/s."
+        },
+        {
+          "id": "GAP-INF-002",
+          "description": "Pack A hash drift from S805 baseline — pre-existing, not S317/S318/S808 attributable",
+          "priority": "LOW_PRIORITY",
+          "current_state": "Documented in SESSION_STATUS_2026-07-24.md. Pack A SHA-256 drifted from S805 baseline but all content and certified count verified correct. OneDrive sync timestamp artifact suspected.",
+          "resolution": "Re-baseline after next authorized Pack A modification. Non-urgent."
+        }
+      ]
+    }
+  },
+
+  "gap_summary": {
+    "total_gaps_cataloged": 18,
+    "blocking": 5,
+    "high_priority": 4,
+    "medium_priority": 6,
+    "low_priority": 3,
+    "blocking_items": [
+      "GAP-S813-C1: Governance Guard Rule 6 (DL-026 BLOCK)",
+      "GAP-S813-C2: Pipeline artifact reuse",
+      "GAP-S813-C3: Remediate 39 Domain F DL-026 items",
+      "GAP-S813-C4: Log DL-035/DL-036 to DEFECT_LIBRARY.md",
+      "GAP-S813-C5: Remediation queue auto-dispatch"
+    ],
+    "note": "All 5 blocking gaps are the S813 Conditional Adoption conditions (C1-C5). No NEW blocking gaps were discovered in S354 analysis — all 5 were identified in S813 and are now cataloged with detailed remediation paths."
+  },
+
+  "what_is_not_a_gap": {
+    "label": "Items Classified as 'NOT A GAP' — Design Limitations or P3+ Targets",
+    "items": [
+      "Delta review data (unrealized because first certification wave): P3 target by design, not a gap",
+      "Board consolidation (adoption deferred to P3): P3 target by design, not a gap",
+      "Content authoring automation (gates validate, don't create content): Design limitation, not a gap",
+      "Admin Portal UI (not implemented): P1/P2 deliverable by design, not a gap",
+      "Full 3.8× multiplier (requires delta + boards): P3 target by design, not a P1 gap",
+      "Pack C Sections C-F not audited: Deferred to certification waves — queue identifies all items"
+    ]
+  },
+
+  "verdict": "REMAINING_GAPS_CATALOGED — 18 gaps identified across 7 categories. 5 blocking (all S813 conditions C1-C5). 4 high-priority (certified pool defects DL-021/DL-016 + delta review/board consolidation data). 6 medium-priority (infrastructure enhancements). 3 low-priority (cosmetic/optimization). No new blocking gaps discovered beyond S813. Framework v2 is adoptable with C1-C5 closure within 5 sessions.",
+  "confidence": "HIGH"
+
+}

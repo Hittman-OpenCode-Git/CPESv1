@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "session": "S360",
+    "title": "Expansion Risk Analysis",
+    "date": "2026-07-28",
+    "mode": "READ-ONLY",
+    "baseline_certified_pool": 2320,
+    "baseline_total_items": 2540,
+    "baseline_case_items": 400,
+    "pack_d_baseline_discrepancy": {
+      "current_baselines_claim": 389,
+      "measured_certified": 392,
+      "delta": 3,
+      "resolution": "Pack D baseline is stale — 3 additional items certified post-baseline. CURRENT_BASELINES.md needs update."
+    }
+  },
+  "content_quality": {
+    "open_defects_total": 12,
+    "open_defects_by_severity": {
+      "critical": 0,
+      "high": 6,
+      "medium": 4,
+      "low": 2
+    },
+    "open_defects_detail": [
+      { "id": "DL-009", "severity": "High", "domain": "Authority Citation", "status": "Open — ASC 450/ASC 210 citation errors in Pack A. 2 items identified (P1-A-012, P1-BC-065 area)." },
+      { "id": "DL-010", "severity": "High", "domain": "Explanation Assignment", "status": "Open — misassigned choice explanations. P1-A-029 prototype. Full-pool semantic scan not completed." },
+      { "id": "DL-012", "severity": "Medium", "domain": "Clone Redundancy", "status": "Open — 150 Section E Pack C/D items. 140 clones across 28 groups. ~100 now Archived (S899 Phase 1 authored 20 replacements). ~83 remain un-replaced." },
+      { "id": "DL-014", "severity": "Low", "domain": "Session Recovery", "status": "Open — null guard missing at app.js:1187 (s.mcqs). Defensive hardening, low priority." },
+      { "id": "DL-015", "severity": "Low", "domain": "Metadata Consistency", "status": "Open — Topic numbering shift E.040-E.042. Cosmetic only, zero learner impact." },
+      { "id": "DL-026", "severity": "High", "domain": "Explanation Quality", "status": "Open — 1,005 items pool-wide with empty non-CC distractor slots (pre-remediation). Current: 0 Certified items affected per S227 verification. Residual in non-Certified Pack C/D Sections E/F." },
+      { "id": "DL-028", "severity": "Medium", "domain": "Remediation Tooling", "status": "Open — DL-013 short-form rewrite creates empty slots. Tooling fix documented but not implemented." },
+      { "id": "DL-029", "severity": "High", "domain": "Scan Reliability", "status": "Open — regex block-scan DL-008 false positives. Methodology correction documented. Scan scripts need CC-position-aware updates." },
+      { "id": "DL-031", "severity": "High", "domain": "Difficulty Calibration", "status": "Open — ~500 items with inflated difficulty labels across all packs. Systematic template-rotation artifact. DL-031 label changes alone insufficient; cognitive upgrade needed." },
+      { "id": "DL-032", "severity": "Medium", "domain": "Difficulty Calibration", "status": "Open — 330 case items uniform Moderate (60 cases, scored_cases2-5). ENHANCED_CASE_BASE (90 items) fully remediated." },
+      { "id": "DL-035", "severity": "High", "domain": "Governance Coverage", "status": "Open — 39 Certified Domain F items (28 Pack C + 11 Pack D) lack choice-specific distractor explanations. Rule 6 deployed (prevention), content remediation pending S816-S818." },
+      { "id": "DL-036", "severity": "Medium", "domain": "Pipeline Consistency", "status": "Open — 40-item readiness routing divergence (Pack E R-series) between Readiness Scorer and Candidate Engine. C2 artifact reuse pending S819-S820." }
+    ],
+    "structural_completeness": {
+      "pack_a": { "items": 500, "stem": 500, "correct_choice": 500, "explanation_correct": 500, "choices": 500, "status": "COMPLETE" },
+      "pack_b": { "items": 500, "stem": 500, "correct_choice": 500, "explanation_correct": 500, "choices": 500, "status": "COMPLETE" },
+      "pack_c": { "items": 500, "stem": 500, "correct_choice": 500, "explanation_correct": 500, "choices": 500, "status": "COMPLETE" },
+      "pack_d": { "items": 500, "stem": 499, "correct_choice": 499, "explanation_correct": 499, "choices": 499, "status": "INCOMPLETE — 2 items missing structural fields" },
+      "pack_e": { "items": 540, "stem": 540, "correct_choice": 540, "explanation_correct": 540, "choices": 540, "status": "COMPLETE" }
+    },
+    "structural_defects": [
+      {
+        "qid": "P1-FD-045",
+        "pack": "D",
+        "question_state": "Archived",
+        "missing_fields": ["Stem", "CorrectChoice", "ExplanationCorrect", "Choices"],
+        "severity": "MEDIUM — not in learner pool but blocks activation. Documented as FD-045 CAPA in AGENTS.md §13.2."
+      },
+      {
+        "qid": "P1-FD-075",
+        "pack": "D",
+        "question_state": "Certified",
+        "missing_fields": ["Stem", "CorrectChoice", "ExplanationCorrect", "Choices"],
+        "severity": "CRITICAL — item in active learner pool with zero renderable content. Learner sees blank question."
+      }
+    ],
+    "dl021_status": {
+      "status_current_baselines": "OPEN — 95 Certified items affected",
+      "actual_field_presence": "All 100 Pack E Section C items now have all 4 ExplanationWrong fields present",
+      "actual_content_quality": "Sample of 10 items: 7 had empty (\"\") non-CC distractor EW slots",
+      "assessment": "DL-021 not fully resolved. Fields structurally present (DL-018 normalization) but content absent. 95 Certified items in learner pool have degraded educational feedback."
+    },
+    "uncertified_sections_count": 4,
+    "sections_below_50_pct_certified": [
+      "Pack C Section EC: 19/75 (25.3%)",
+      "Pack C Section FC: 19/75 (25.3%)",
+      "Pack D Section ED: 19/75 (25.3%)",
+      "Pack D Section FD: 23/75 (30.7%)"
+    ],
+    "items_not_certified": 218
+  },
+  "inventory": {
+    "total_items_across_packs": 2540,
+    "total_certified": 2320,
+    "total_non_certified": 220,
+    "certification_rate": "91.3%",
+    "per_pack": {
+      "pack_a": { "total": 500, "certified": 500, "non_certified": 0, "registered_100": true },
+      "pack_b": { "total": 500, "certified": 500, "non_certified": 0, "registered_100": true },
+      "pack_c": {
+        "total": 500,
+        "certified": 388,
+        "non_certified": 112,
+        "certified_pct": 77.6,
+        "registered_100": false,
+        "sections": {
+          "AC": { "total": 75, "certified": 75, "archived": 0, "active": 0, "pct_certified": 100 },
+          "BC": { "total": 100, "certified": 100, "archived": 0, "active": 0, "pct_certified": 100 },
+          "CC": { "total": 100, "certified": 100, "archived": 0, "active": 0, "pct_certified": 100 },
+          "DC": { "total": 75, "certified": 75, "archived": 0, "active": 0, "pct_certified": 100 },
+          "EC": { "total": 75, "certified": 19, "archived": 51, "active": 5, "pct_certified": 25.3 },
+          "FC": { "total": 75, "certified": 19, "archived": 52, "active": 4, "pct_certified": 25.3 }
+        }
+      },
+      "pack_d": {
+        "total": 500,
+        "certified": 392,
+        "non_certified": 108,
+        "certified_pct": 78.4,
+        "registered_100": false,
+        "structural_note": "2 items (FD-045, FD-075) missing Stem/CC/EC/Choices. FD-075 is Certified — critical learner-safety risk.",
+        "sections": {
+          "AD": { "total": 75, "certified": 75, "archived": 0, "active": 0, "pct_certified": 100 },
+          "BD": { "total": 100, "certified": 100, "archived": 0, "active": 0, "pct_certified": 100 },
+          "CD": { "total": 100, "certified": 100, "archived": 0, "active": 0, "pct_certified": 100 },
+          "DD": { "total": 75, "certified": 75, "archived": 0, "active": 0, "pct_certified": 100 },
+          "ED": { "total": 75, "certified": 19, "archived": 51, "active": 5, "pct_certified": 25.3 },
+          "FD": { "total": 75, "certified": 23, "archived": 46, "active": 6, "pct_certified": 30.7 }
+        }
+      },
+      "pack_e": { "total": 540, "certified": 540, "non_certified": 0, "registered_100": true }
+    },
+    "case_packs": {
+      "case_pack_1": { "cases": 25, "items": 141, "certified": 141, "pct_certified": 100 },
+      "case_pack_2": { "cases": 25, "items": 132, "certified": 132, "pct_certified": 100 },
+      "case_pack_3": { "cases": 25, "items": 127, "certified": 127, "pct_certified": 100 }
+    },
+    "non_certified_composition": {
+      "pack_c_archived": 103,
+      "pack_c_active": 9,
+      "pack_d_archived": 97,
+      "pack_d_active": 11,
+      "total_archived_dl012_clones": 200,
+      "total_active_partial_authored": 20
+    }
+  },
+  "dl031_backlog": {
+    "estimated_items": 500,
+    "methodology": "Items with CognitiveLevel Remember/Understand but Difficulty Moderate+. Template rotation artifact from bulk-authoring pipeline.",
+    "pool_wide_remember_understand": 1270,
+    "pool_wide_remember_understand_pct": 50.0,
+    "cognitve_distribution": {
+      "remember": 81,
+      "understand": 1189,
+      "apply": 1120,
+      "analyze": 105,
+      "evaluate": 45,
+      "caqs_target_analyze": "25% (635 items)",
+      "caqs_target_evaluate": "15% (381 items)",
+      "analyze_deficit": 530,
+      "evaluate_deficit": 336
+    },
+    "difficulty_distribution": {
+      "easy": 575,
+      "moderate": 1180,
+      "difficult": 174,
+      "very_difficult": 4,
+      "caqs_target_moderate": "30% (762 items)",
+      "caqs_target_difficult": "25% (635 items)",
+      "caqs_target_very_difficult": "10% (254 items)",
+      "moderate_excess": 418,
+      "difficult_deficit": 461,
+      "very_difficult_deficit": 250
+    },
+    "estimated_effort_label_change_only": {
+      "minutes_per_item": 2,
+      "total_hours": 16.7,
+      "note": "This is for DIFFICULTY LABEL changes only (Moderate→Easy for definition-match items). Does NOT address the cognitive-level gap (1,270 Remember/Understand items vs 20% CAQS target)."
+    },
+    "estimated_effort_cognitive_upgrade": {
+      "analyze_velocity_items_per_hour": 21.9,
+      "evaluate_velocity_items_per_hour": 11.3,
+      "items_needed_analyze": 530,
+      "items_needed_evaluate": 336,
+      "estimated_analyze_hours": 24.2,
+      "estimated_evaluate_hours": 29.7,
+      "total_upgrade_hours": 53.9,
+      "note": "Genuine cognitive upgrades require stem rewrites or net-new authoring. Label changes alone will not close the CAQS gap."
+    },
+    "certified_affected": "~500 items (all DL-031 candidates currently Certified)",
+    "non_certified_affected": "0 (DL-031 affects Certified items only — uncertified items will be calibrated during certification)"
+  },
+  "throughput": {
+    "measurement_period": "2026-07-22 to 2026-07-28 (7 days)",
+    "total_session_entries": 373,
+    "total_s_numbered_sessions": 60,
+    "sessions_per_day_avg": 53.3,
+    "sessions_by_date": {
+      "2026-07-22": 5,
+      "2026-07-23": 61,
+      "2026-07-24": 47,
+      "2026-07-25": 70,
+      "2026-07-26": 89,
+      "2026-07-27": 86,
+      "2026-07-28": 15
+    },
+    "content_output": {
+      "net_new_items_authored": 39,
+      "cognitive_upgrades_completed": 80,
+      "defect_remediations": "100+ items across DL-008/DL-013/DL-025/DL-026/DL-016 waves",
+      "certification_waves": "S853, S865-S868, S886, S889-S892, S899",
+      "items_per_session_avg": 0.65,
+      "items_per_day_avg": 5.6
+    },
+    "authoring_velocity": {
+      "analyze": "21.9 items/hr",
+      "evaluate": "11.3 items/hr",
+      "net_new_best_session": "20 items (S899)"
+    },
+    "trend": "INCREASING — S899 Phase 1 proved 20 items/session with zero defects. But total content output is small relative to backlog size. 39 net-new items across 7 days = 5.6 items/day. At this rate, closing the 500-item DL-031 gap would take ~89 days. Closing the Analyze/Evaluate deficit (866 items) via net-new authoring would take ~155 days.",
+    "note": "Session count (373) includes sub-sessions and chained agents within nested chains (e.g., S889-S892 = 4 sessions but counted as 4+ entries). True independent sessions per day is likely 10-15."
+  },
+  "review_capacity": {
+    "items_in_editorial_queue": 0,
+    "items_in_audit": 0,
+    "items_unprocessed": 0,
+    "note": "Zero items in intermediate review states. All reviews happen at certification time. No backlog in the review pipeline itself.",
+    "bottleneck_category": "CONTENT DESIGN — not reviewer availability",
+    "rationale": "The pipeline is not bottlenecked by review capacity (0 items awaiting review). It is bottlenecked by the cognitive gap: 1,270 items (50%) at Remember/Understand level need to be upgraded to Analyze/Evaluate to meet CAQS targets. This requires content design work (stem rewrites, distractor engineering), not just review. Additionally, 202 items in Sections E+F remain uncertified because they are Archived DL-012 clones that need replacement authoring."
+  }
+}

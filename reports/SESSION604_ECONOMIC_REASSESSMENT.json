@@ -1,0 +1,38 @@
+{
+  "session": "S604",
+  "agent": "E",
+  "role": "Economic Reassessment",
+  "generated": "2026-07-26",
+  "type": "Read-Only Economic Analysis",
+  "decision": "ECONOMIC_GATE_LOCKED_STRONGER",
+  "current_state": {
+    "startup_cost": {"central": 4.5, "best": 3.0, "worst": 6.0},
+    "forecast_savings": {"central": 2.0, "best": 3.0, "worst": 1.0},
+    "net_effect": {"central": -2.5, "best": -1.0, "worst": -4.0},
+    "breakeven_sessions": 36,
+    "program_horizon_sessions": 20,
+    "certified_pool": 2211,
+    "certified_pct": 88.4,
+    "remaining_items": 289
+  },
+  "delta_from_S603": {
+    "certified_pool": "+30 (2,181→2,211 via 800-series operations)",
+    "remaining_items": "-10 (299→289)",
+    "startup_cost": "UNCHANGED (locked)",
+    "forecast_savings": "UNCHANGED (locked)",
+    "net_effect": "UNCHANGED (locked)"
+  },
+  "assumptions_detail": [
+    {"id": "ASM_1", "label": "Startup cost floor", "locked_value": 4, "current": "UNCHANGED", "flip_threshold": "<3"},
+    {"id": "ASM_2", "label": "Savings ceiling", "locked_value": 3, "current": "UNCHANGED", "flip_threshold": ">4"},
+    {"id": "ASM_3", "label": "800-series throughput", "locked_value": 12, "current": "12-15 confirmed (S316/S317)", "note": "Consistent with locked assumption"},
+    {"id": "ASM_4", "label": "EW acceptance rate", "locked_value": "unknown (70-80% estimated)", "current": "STILL UNVALIDATED"},
+    {"id": "ASM_5", "label": "Remaining workload", "locked_value": 299, "current": 289, "trend": "WORSENING — fewer items = harder to amortize startup cost"}
+  ],
+  "scenario_analysis": {
+    "central": {"net": -2.5, "verdict": "NET-NEGATIVE — ACTIVATION NOT JUSTIFIED"},
+    "best": {"net": -1.0, "verdict": "NET-NEGATIVE — STILL NOT BREAK-EVEN"},
+    "worst": {"net": -4.0, "verdict": "NET-NEGATIVE — STRONG ANTI-ACTIVATION SIGNAL"}
+  },
+  "conclusion": "Economic Gate LOCKED at Net -2.5. All 5 assumptions frozen. Certified pool increased (+30) and remaining workload decreased (−10) since S603 — both changes WEAKEN the activation case. No assumption change within the 20-session program horizon can flip the gate. Breakeven at 36 sessions remains unreachable. Future activation review MUST commission independent 300-series re-evaluation. S724-era estimates may not be reused."
+}

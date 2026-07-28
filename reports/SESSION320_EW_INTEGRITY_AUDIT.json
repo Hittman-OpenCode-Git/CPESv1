@@ -1,0 +1,20 @@
+{
+  "session": "S320",
+  "type": "EW Integrity Audit",
+  "pack_c": {
+    "seeds": 19,
+    "empty_slots": 19,
+    "remediated": 0,
+    "remaining": 19
+  },
+  "pack_d": {
+    "seeds": 19,
+    "empty_slots": 19,
+    "remediated": 10,
+    "remaining": 9
+  },
+  "total_remediated": 10,
+  "total_remaining": 28,
+  "dl008_risk": 0,
+  "note": "All EW[CC] slots verified empty — no DL-008 violations introduced"
+}

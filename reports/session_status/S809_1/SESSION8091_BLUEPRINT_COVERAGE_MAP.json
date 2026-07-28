@@ -1,0 +1,77 @@
+{
+  "session": "S809.1",
+  "title": "Blueprint Coverage Map — Domain E Seed LOSTag Reassignment",
+  "generated_by": "Agent E — Blueprint Mapper",
+  "date": "2026-07-26",
+  "domain": "E — Internal Controls",
+  "LO_distribution": {
+    "E.1.a": { "count": 1, "description": "COSO Internal Control Framework overview", "QIDs": ["P1-EC-008"] },
+    "E.1.b": { "count": 1, "description": "Corporate governance / board oversight", "QIDs": ["P1-ED-001"] },
+    "E.1.c": { "count": 4, "description": "Control environment principles", "QIDs": ["P1-EC-004", "P1-EC-060", "P1-EC-066", "P1-ED-046"] },
+    "E.1.d": { "count": 4, "description": "Control activities — specific controls", "QIDs": ["P1-EC-020", "P1-EC-022", "P1-EC-024", "P1-EC-025"] },
+    "E.1.e": { "count": 13, "description": "Risk assessment and ERM", "QIDs": ["P1-EC-014", "P1-EC-031", "P1-EC-041", "P1-EC-049", "P1-EC-061", "P1-ED-016", "P1-ED-042", "P1-ED-072", "P1-ED-028", "P1-ED-058", "P1-ED-021", "P1-ED-052", "P1-ED-025"] },
+    "E.1.f": { "count": 1, "description": "Information and communication", "QIDs": ["P1-EC-049"] },
+    "E.1.g": { "count": 4, "description": "IT general controls and application controls", "QIDs": ["P1-EC-023", "P1-EC-040", "P1-ED-010", "P1-ED-035"] },
+    "E.1.h": { "count": 0, "description": "SOX requirements", "QIDs": [], "status": "GAP — 0 seeds" },
+    "E.1.i": { "count": 2, "description": "Monitoring activities", "QIDs": ["P1-EC-072", "P1-ED-073"] },
+    "E.1.j": { "count": 8, "description": "Segregation of duties, preventive/detective, compensating controls, change management, bank reconciliation, vendor management", "QIDs": ["P1-EC-021", "P1-EC-028", "P1-EC-052", "P1-ED-014", "P1-ED-036", "P1-ED-051", "P1-ED-064", "P1-ED-071"] }
+  },
+  "gaps": [
+    {
+      "LO": "E.1.h",
+      "description": "Sarbanes-Oxley Act requirements (Sections 302, 404, 802, 806)",
+      "status": "CRITICAL — 0 seeds",
+      "recommendation": "Author 2-3 seeds covering SOX Section 302 certification, Section 404 internal control assessment, and whistleblower protections (Section 806)"
+    }
+  ],
+  "seed_lo_mapping": {
+    "Pack_C": {
+      "P1-EC-004": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.c", "rationale": "Tests control environment — organizational structure and assignment of authority" },
+      "P1-EC-008": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.a", "rationale": "Tests COSO Internal Control Framework components — foundational" },
+      "P1-EC-014": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Correctly mapped — fraud triangle is risk assessment" },
+      "P1-EC-020": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.d", "rationale": "Tests physical controls — a control activity" },
+      "P1-EC-021": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests segregation of duties — vendor setup vs. approval" },
+      "P1-EC-022": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.d", "rationale": "Tests classification of preventive vs. detective controls — control activities" },
+      "P1-EC-023": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.g", "rationale": "Tests IT access deprovisioning — IT general control" },
+      "P1-EC-024": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.d", "rationale": "Tests application input controls — a control activity" },
+      "P1-EC-025": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.d", "rationale": "Tests preventive vs. detective control classification" },
+      "P1-EC-028": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests bank reconciliation — segregation of duties sensitive control" },
+      "P1-EC-031": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Correctly mapped — ERM risk appetite" },
+      "P1-EC-040": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.g", "rationale": "Tests IT general controls — access/change management at IT level" },
+      "P1-EC-041": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Correctly mapped — management override as risk assessment/control limitation" },
+      "P1-EC-049": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.f", "rationale": "Tests whistleblower hotline — information and communication component" },
+      "P1-EC-052": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests compensating controls — alternative to segregation of duties" },
+      "P1-EC-060": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.c", "rationale": "Tests tone at the top — control environment principle" },
+      "P1-EC-061": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Correctly mapped — inherent risk vs. control risk assessment" },
+      "P1-EC-066": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.c", "rationale": "Tests segregation of cash custody — control environment/SoD" },
+      "P1-EC-072": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.i", "rationale": "Tests remediation of control deficiencies — monitoring" }
+    },
+    "Pack_D": {
+      "P1-ED-001": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.b", "rationale": "Tests three lines of defense — governance/oversight" },
+      "P1-ED-010": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.g", "rationale": "Tests least privilege — IT access control principle" },
+      "P1-ED-014": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests independent verification — control activity" },
+      "P1-ED-016": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Correctly mapped — ERM risk response strategies" },
+      "P1-ED-025": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Tests authorization — a control activity within risk context" },
+      "P1-ED-028": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Tests monitoring — ongoing and separate evaluations" },
+      "P1-ED-035": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.g", "rationale": "Tests data backup and disaster recovery — IT general controls" },
+      "P1-ED-036": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests change management — IT control activity" },
+      "P1-ED-042": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Correctly mapped — risk assessment process" },
+      "P1-ED-046": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.c", "rationale": "Tests code of conduct and ethics — control environment" },
+      "P1-ED-051": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests password authentication — IT application control" },
+      "P1-ED-058": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Tests cost-benefit principle — limitation of internal control" },
+      "P1-ED-064": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests vendor master file access — SoD sensitive access" },
+      "P1-ED-066": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Tests audit committee — monitoring/oversight" },
+      "P1-ED-071": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests change management — IT control activity (direct variant)" },
+      "P1-ED-072": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.e", "rationale": "Correctly mapped — fraud risk in purchasing" },
+      "P1-ED-073": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.i", "rationale": "Tests monitoring exceptions — ongoing monitoring activity" },
+      "P1-ED-074": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests reconciliation segregation of duties" },
+      "P1-ED-075": { "stored_LOSTag": "E.1.e", "recommended_LOSTag": "E.1.j", "rationale": "Tests segregation of approval duties" }
+    }
+  },
+  "lo_renumbering_impact": {
+    "E.1.e_before": 38,
+    "E.1.e_after": 13,
+    "net_change": -25,
+    "note": "All 38 seeds currently carry E.1.e LOSTag; remapping distributes them across 9 LOs"
+  }
+}

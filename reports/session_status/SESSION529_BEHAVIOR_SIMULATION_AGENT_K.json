@@ -1,0 +1,613 @@
+{
+  "report": {
+    "title": "SESSION 529 — Agent K Behavior Simulation: Wave 1 (CBQ-A1 + CBQ-B1)",
+    "date": "2026-07-26",
+    "agent": "Agent K — Behavior Simulation",
+    "scope": "12 items across 2 cases: CBQ-A1 (Q1–Q6) + CBQ-B1 (Q1–Q6)",
+    "methodology": "Per-item candidate-experience simulation: read stem, attempt answer, read explanation, assess learning quality, distractor feedback, certification readiness, and case-level flow."
+  },
+  "case_summaries": {
+    "CBQ-A1": {
+      "CaseID": "CBQ-A1",
+      "Title": "Revenue Recognition, Cash Flow, and Deferred Tax Review",
+      "BlueprintDomain": "External Financial Reporting Decisions",
+      "ScenarioText": "Northstar Equipment is closing its year-end reporting package. The controller must evaluate revenue recognition, operating cash flow, and deferred taxes using the exhibits. Management wants answers that reconcile cash activity to accrual accounting and identify reporting treatments before the audit committee meeting.",
+      "ExhibitCount": 2,
+      "ItemCount": 6,
+      "question_state": "Unprocessed",
+      "scenario_quality": {
+        "realism": "MEDIUM",
+        "notes": "Company name (Northstar Equipment) is present but no named stakeholder — just 'the controller' and 'Management'. No individual decision-maker with a role (e.g., 'CFO Maria Chen'). Does not meet CAQS §3.1 named-stakeholder requirement. The scenario is a recognizable year-end close context but reads as generic textbook framing rather than authentic business communication."
+      },
+      "exhibit_quality": {
+        "Exhibit_1": "Clear table with 3 contracts showing cash received, performance status, and other facts. Data is internally consistent. Missing Purpose and ReferencedBy fields.",
+        "Exhibit_2": "Clear table of reporting data (net income, depreciation, working capital changes, tax info). Data is consistent. Missing Purpose and ReferencedBy fields."
+      },
+      "cognitive_progression": {
+        "actual": "Apply → Apply → Evaluate → Apply → Apply → Evaluate",
+        "required_per_CAQS_35": "Apply → Analyze → Evaluate",
+        "passes": false,
+        "issues": [
+          "Q3 jumps to Evaluate before any Analyze-level item",
+          "Q4–Q5 revert to Apply after Q3 Evaluate (no building progression)",
+          "No Analyze-level items exist in this case at all",
+          "Topics are disjointed: revenue recognition → cash flow → deferred tax → audit risks; not a coherent narrative arc"
+        ]
+      }
+    },
+    "CBQ-B1": {
+      "CaseID": "CBQ-B1",
+      "Title": "Integrated Sales, Production, Materials, and Cash Budget",
+      "BlueprintDomain": "Planning, Budgeting, and Forecasting",
+      "ScenarioText": "Apex Controls is preparing its first-quarter budget. The CFO asks the planning team to connect sales assumptions to production, material purchases, collections, disbursements, and short-term borrowing requirements.",
+      "ExhibitCount": 2,
+      "ItemCount": 6,
+      "question_state": "Unprocessed",
+      "scenario_quality": {
+        "realism": "MEDIUM",
+        "notes": "Company name (Apex Controls) and industry (industrial controls manufacturer) are present. Stakeholder field says 'Apex Controls (CFO)' — the literal value is a parenthetical, not a named person. The scenario task is reasonable for a budget cycle. But the language is still textbook-adjacent: 'connect sales assumptions to production, material purchases...' rather than authentic CFO communication."
+      },
+      "exhibit_quality": {
+        "Exhibit_1": "Clear 4-month sales forecast (Jan–Apr) with units and dollars. Data is internally consistent. Missing Purpose and ReferencedBy fields.",
+        "Exhibit_2": "Comprehensive policy table: FG inventory policy, DM per unit, material inventory policy, collection percentages, cash data. Well-structured and complete for the budget cascade. Missing Purpose and ReferencedBy fields."
+      },
+      "cognitive_progression": {
+        "actual": "Apply → Apply → Apply → Apply → Apply → Evaluate",
+        "required_per_CAQS_35": "Apply → Analyze → Evaluate",
+        "passes": false,
+        "issues": [
+          "Q1–Q5 are all Apply-level — five consecutive calculation items with no analysis or interpretation step",
+          "Q6 jumps directly from Apply to Evaluate with no Analyze bridge",
+          "The budget cascade (sales → production → materials → cash → borrow) follows the correct operational sequence, but items are purely computational with no interpretative depth"
+        ]
+      }
+    }
+  },
+  "per_item_simulation": {
+    "CBQ-A1-Q1": {
+      "ItemID": "CBQ-A1-Q1",
+      "Type": "numeric",
+      "Prompt": "Enter service-plan revenue recognized at Dec. 31.",
+      "CorrectAnswer": "90000",
+      "IndependentVerification": "360,000 × 3/12 = 90,000. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — The explanation shows the arithmetic (360,000 × 3/12 = 90,000) but does not state the accounting principle. A candidate learns WHAT number to compute but not WHY revenue is recognized over time rather than at collection. The text 'Cash collected in advance is recognized as revenue only as service is provided' is a single sentence that assumes the candidate already knows the deferral concept. No mention of ASC 606, performance obligations, or the revenue recognition criteria.",
+        "understands_why_wrong_answers_wrong": "N/A — numeric question has no distractors",
+        "complete_without_external_resources": "NO — A candidate unfamiliar with ASC 606 revenue recognition would need to look up why cash ≠ revenue for service contracts. The explanation provides the computation but teaches no concept.",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "360,000 x 3/12 = 90,000. Cash collected in advance is recognized as revenue only as service is provided.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — ASC 606 is in the metadata field (AccountingPrinciple) but not in the learner-facing explanation text. Per CAQS §4.4 EV3, the correct-answer explanation MUST reference the governing accounting principle by name.",
+        "calculation_shown_step_by_step": "PARTIALLY — Single-step arithmetic shown, but no formula annotation, no identification of which exhibit values were used, and no explanation of what '3/12' represents (3 months served out of a 12-month contract).",
+        "business_context_clear": "NO — No mention of Northstar Equipment, no interpretation of what the $90,000 means for the year-end close.",
+        "would_need_google": "YES — To understand the underlying revenue recognition principle.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false,
+        "note": "Numeric question — no distractors"
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Expand explanation to 4–5 sentences: name ASC 606, state the performance-obligation-satisfaction rule, identify the 3/12 fraction as 3 months of 12 delivered, and interpret the result in Northstar's business context.",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": []
+    },
+    "CBQ-A1-Q2": {
+      "ItemID": "CBQ-A1-Q2",
+      "Type": "numeric",
+      "Prompt": "Enter the contract liability remaining for the service plans at Dec. 31.",
+      "CorrectAnswer": "270000",
+      "IndependentVerification": "360,000 − 90,000 = 270,000. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — The arithmetic is clear but the concept of a 'contract liability' is stated without definition. The phrase 'leaves a 270,000 contract liability' tells the candidate the name of the account but not what a contract liability IS or why ASC 606 requires deferral. Builds on Q1 which is good for coherence, but Q1's own explanation was too thin.",
+        "understands_why_wrong_answers_wrong": "N/A",
+        "complete_without_external_resources": "NO — A candidate who doesn't know the term 'contract liability' would need to look it up.",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "Cash collected of 360,000 less recognized revenue of 90,000 leaves a 270,000 contract liability.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — ASC 606 definition is in metadata only.",
+        "calculation_shown_step_by_step": "PARTIALLY — Single subtraction shown, but doesn't reference Q1's result explicitly or show the formula: Contract Liability = Cash Received − Revenue Recognized.",
+        "business_context_clear": "NO",
+        "would_need_google": "YES — To understand what a contract liability represents.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false,
+        "note": "Numeric question — no distractors"
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Expand: define contract liability under ASC 606, reference the Q1 revenue calculation, explain that the $270,000 is the unearned revenue that will be recognized over the remaining 9 months, and connect to Northstar's balance sheet.",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": []
+    },
+    "CBQ-A1-Q3": {
+      "ItemID": "CBQ-A1-Q3",
+      "Type": "select",
+      "Prompt": "Which treatment is most appropriate for the replacement parts shipment?",
+      "CorrectAnswer": "Recognize 84,000 revenue in the current year",
+      "IndependentVerification": "FOB shipping point → title transfers at shipment (Dec 28). Control transfers before year-end. Revenue recognized in current year. CORRECT.",
+      "CognitiveLevel": "Evaluate",
+      "Difficulty": "Difficult",
+      "choices": {
+        "A": "Recognize 84,000 revenue in the current year [CORRECT]",
+        "B": "Defer all revenue until customer receipt on Jan. 3",
+        "C": "Recognize only gross profit in the current year",
+        "D": "Record as other comprehensive income"
+      },
+      "learning_quality": {
+        "understands_why_correct": "MINIMALLY — Explanation is ONE sentence: 'FOB shipping point indicates control transfers at shipment before year-end.' This names FOB shipping point as the trigger but does not explain what FOB shipping point means, why control transfers at shipment, or how ASC 606's control-transfer model applies. A candidate who already knows FOB terms gets nothing new. A candidate who doesn't know FOB terms learns only that it's 'before year-end.'",
+        "understands_why_wrong_answers_wrong": "NO — There are ZERO ExplanationWrong fields. No distractor explanations exist. A candidate selecting B (FOB destination confusion), C (percentage-of-completion confusion), or D (OCI for revenue — categorically wrong) receives ZERO feedback. This is a structural defect: select-type items must have distractor explanations per CAQS §4.2.",
+        "complete_without_external_resources": "NO — Missing both conceptual depth and distractor feedback.",
+        "rating": "NOT_READY"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "FOB shipping point indicates control transfers at shipment before year-end.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — ASC 606 is in metadata. Even the metadata's AccountingPrinciple field says 'ASC 606 requires revenue recognition when control transfers to the customer' which is generic — doesn't specifically address FOB terms.",
+        "calculation_shown_step_by_step": "N/A — no calculation",
+        "business_context_clear": "NO — No mention of Northstar, the Dec 28 shipment date, or why year-end cutoff matters.",
+        "would_need_google": "YES — To understand FOB shipping point vs. FOB destination.",
+        "rating": "NOT_READY"
+      },
+      "distractor_behavior": {
+        "ExplanationWrong_present": "NONE — All four ExplanationWrong fields are ABSENT from the item object.",
+        "distractor_plausibility": {
+          "B": "PLAUSIBLE — FOB destination is a common confusion with FOB shipping point. A reasonable candidate could think revenue recognition waits for physical receipt.",
+          "C": "WEAKLY PLAUSIBLE — Recognizing only gross profit is a percentage-of-completion pattern from long-term contracts, not relevant to a parts shipment. May confuse someone who overgeneralizes.",
+          "D": "NOT PLAUSIBLE — Recording a routine sale as OCI is categorically incorrect. No reasonable CMA candidate would select this. This is a 'throwaway' distractor that fails CAQS §6.3 plausibility requirement."
+        },
+        "candidate_sees_useful_feedback_on_wrong_answer": "NO — Zero distractor explanations. Selecting any wrong answer yields no educational feedback.",
+        "rating": "NOT_READY"
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Add ExplanationWrong fields for B, C, D explaining each specific error: (B) FOB shipping point transfers ownership at shipment, not delivery; (C) percentage-of-completion applies to long-term contracts, not product sales; (D) OCI is for unrealized gains/losses and foreign currency translation, not operating revenue. Also expand ExplanationCorrect to 3+ sentences with ASC 606 reference and business context.",
+        "overall_rating": "NOT_READY"
+      },
+      "metadata_issues": [
+        "No ExplanationWrong fields present (DL-021 class defect — absent distractor explanations)",
+        "Distractor D ('Record as other comprehensive income') has zero plausibility — fails CAQS §6.3",
+        "AccountingPrinciple field text is generic; does not address FOB terms specifically"
+      ]
+    },
+    "CBQ-A1-Q4": {
+      "ItemID": "CBQ-A1-Q4",
+      "Type": "numeric",
+      "Prompt": "Using the indirect method, enter cash flow from operating activities before income-tax cash effects not listed.",
+      "CorrectAnswer": "532000",
+      "IndependentVerification": "510,000 + 72,000 − 41,000 + 18,000 − 27,000 = 532,000. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — The arithmetic is shown as a single line. A candidate sees the numbers but doesn't learn WHY depreciation is added back (non-cash), WHY the A/R increase is subtracted (sales on account exceeded cash collected), WHY inventory decrease is added back (more sold than purchased), or WHY A/P decrease is subtracted (paid more to suppliers than purchased). The explanation teaches pattern-matching, not the indirect method logic.",
+        "understands_why_wrong_answers_wrong": "N/A",
+        "complete_without_external_resources": "NO — Indirect method logic requires conceptual understanding. The raw arithmetic provides no conceptual foundation.",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "510,000 + 72,000 - 41,000 + 18,000 - 27,000 = 532,000.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — ASC 230 is in metadata only.",
+        "calculation_shown_step_by_step": "YES — But only as raw arithmetic with no annotations explaining what each number represents.",
+        "business_context_clear": "NO — No interpretation of what $532,000 operating cash flow means for Northstar's liquidity.",
+        "would_need_google": "YES — To understand the indirect method reconciliation logic.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Rewrite explanation to annotate each adjustment: '+72,000 depreciation (non-cash expense added back), −41,000 A/R increase (more revenue recognized than cash collected), +18,000 inventory decrease (cash inflow from inventory reduction), −27,000 A/P decrease (cash paid to suppliers exceeded purchases).' Reference ASC 230.",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": [
+        "ReadingComplexity: 'Moderate' but the prompt is only one sentence; should be 'Short'"
+      ]
+    },
+    "CBQ-A1-Q5": {
+      "ItemID": "CBQ-A1-Q5",
+      "Type": "numeric",
+      "Prompt": "Enter the deferred tax liability created by the depreciation temporary difference.",
+      "CorrectAnswer": "50000",
+      "IndependentVerification": "200,000 × 25% = 50,000. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — The multiplication is trivial. But the explanation doesn't explain WHY tax depreciation exceeding book depreciation creates a deferred tax liability (future taxable amounts > future deductible amounts). A candidate learns the arithmetic but not the tax accounting concept behind it.",
+        "understands_why_wrong_answers_wrong": "N/A",
+        "complete_without_external_resources": "NO — Needs external resources to understand temporary differences and DTL logic.",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "Future taxable amount 200,000 x 25% = 50,000 deferred tax liability.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — ASC 740 is in metadata only.",
+        "calculation_shown_step_by_step": "YES — But just one step. No explanation of why 200,000 is a 'future taxable amount.'",
+        "business_context_clear": "NO",
+        "would_need_google": "YES — To understand deferred tax liability mechanics.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Expand to explain: 'When tax depreciation exceeds book depreciation, the company pays less tax now but will pay more in future years when the difference reverses — creating a deferred tax liability. $200,000 × 25% = $50,000 DTL, per ASC 740.'",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": []
+    },
+    "CBQ-A1-Q6": {
+      "ItemID": "CBQ-A1-Q6",
+      "Type": "multi",
+      "Prompt": "Select audit-review risks that require judgment rather than simple cash matching.",
+      "CorrectAnswer": [
+        "Separating cash collections from earned revenue",
+        "Determining whether control transferred before year-end",
+        "Recognizing deferred tax effects from timing differences"
+      ],
+      "IndependentVerification": "All three require accrual-basis judgment. 'Classifying all cash receipts as revenue' is cash-basis accounting (no judgment — it's simply wrong under GAAP). CORRECT.",
+      "CognitiveLevel": "Evaluate",
+      "Difficulty": "Difficult",
+      "choices": {
+        "A": "Separating cash collections from earned revenue [CORRECT — requires judgment about performance obligations]",
+        "B": "Determining whether control transferred before year-end [CORRECT — requires judgment about ASC 606 control criteria]",
+        "C": "Classifying all cash receipts as revenue [WRONG — this is cash-basis accounting, not judgment]",
+        "D": "Recognizing deferred tax effects from timing differences [CORRECT — requires judgment about temporary differences]"
+      },
+      "learning_quality": {
+        "understands_why_correct": "MINIMALLY — Explanation is: 'The case requires accrual-basis judgments. Cash collection alone does not determine revenue.' This is 2 sentences. It names 'accrual-basis judgments' as the theme but does not explain WHY EACH of the three correct choices involves judgment. A candidate who selected the correct combination doesn't learn anything beyond 'accrual ≠ cash.'",
+        "understands_why_wrong_answers_wrong": "NO — Zero per-choice explanation. 'Classifying all cash receipts as revenue' is cash-basis accounting, but the explanation doesn't address this directly. A candidate who incorrectly selected C gets NO feedback.",
+        "complete_without_external_resources": "NO — Needs external resources to understand judgment-vs-mechanical distinctions in accounting.",
+        "rating": "NOT_READY"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "The case requires accrual-basis judgments. Cash collection alone does not determine revenue.",
+        "accounting_principle_stated": "NO — No ASC reference, no framework reference.",
+        "calculation_shown_step_by_step": "N/A",
+        "business_context_clear": "NO",
+        "would_need_google": "YES",
+        "rating": "NOT_READY"
+      },
+      "distractor_behavior": {
+        "ExplanationWrong_present": "NONE — All four ExplanationWrong fields are ABSENT.",
+        "distractor_plausibility": {
+          "C": "MODERATELY PLAUSIBLE — A weak candidate who doesn't understand accrual accounting might think 'classifying cash receipts as revenue' is a valid approach. But the phrase 'classifying ALL cash receipts as revenue' is extreme enough that most CMA candidates would recognize it as incorrect."
+        },
+        "candidate_sees_useful_feedback_on_wrong_answer": "NO — Zero distractor explanations.",
+        "rating": "NOT_READY"
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Add per-choice explanations for all 4 options. Expand correct explanation to address each of the 3 correct choices individually. Fix metadata: CalculationRequired: true → false (this is a judgment/conceptual question, not a calculation).",
+        "overall_rating": "NOT_READY"
+      },
+      "metadata_issues": [
+        "CalculationRequired: true — but this is a judgment/evaluation question with zero arithmetic. This is a metadata error.",
+        "No ExplanationWrong fields — absent distractor explanations",
+        "AccountingPrinciple field is absent from this item entirely"
+      ]
+    },
+    "CBQ-B1-Q1": {
+      "ItemID": "CBQ-B1-Q1",
+      "Type": "numeric",
+      "Prompt": "Enter January required production units.",
+      "CorrectAnswer": "18800",
+      "IndependentVerification": "Budgeted sales (Jan) = 18,000. Desired ending FG = 20% × 22,000 (Feb sales) = 4,400. Beginning FG = 3,600. Production = 18,000 + 4,400 − 3,600 = 18,800. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — The arithmetic line '18,000 + (22,000 x 20%) - 3,600 = 18,800 units' shows the computation but doesn't explain what each term represents. A candidate sees numbers but doesn't learn the production budget formula conceptually: 'Units to produce = Budgeted Sales + Desired Ending Inventory − Beginning Inventory.' The beginning inventory 3,600 is not explained — it's just a number pulled from the exhibit.",
+        "understands_why_wrong_answers_wrong": "N/A",
+        "complete_without_external_resources": "PARTIALLY — A diligent candidate could reverse-engineer the formula from the arithmetic, but standard references and conceptual framing are absent.",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "18,000 + (22,000 x 20%) - 3,600 = 18,800 units.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — The production budget formula is in the metadata's AccountingPrinciple field ('Production budget formula: Budgeted Sales + Desired Ending Inventory - Beginning Inventory') but not in the learner-facing text.",
+        "calculation_shown_step_by_step": "YES — But terms are not labeled. '22,000 × 20%' should be annotated as 'desired ending inventory.'",
+        "business_context_clear": "NO — No mention of Apex Controls or why production exceeds sales (to build inventory for February).",
+        "would_need_google": "PARTIALLY — The arithmetic is self-contained but the concept requires external framing.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Expand: state the production budget formula, annotate each term (18,000 = January budgeted sales, 22,000×20% = 4,400 desired ending inventory for February, 3,600 = beginning inventory from exhibit), and interpret why production (18,800) exceeds sales (18,000). Reference the Budget Sequence decision tree.",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": []
+    },
+    "CBQ-B1-Q2": {
+      "ItemID": "CBQ-B1-Q2",
+      "Type": "numeric",
+      "Prompt": "Enter February required production units.",
+      "CorrectAnswer": "22600",
+      "IndependentVerification": "Budgeted sales (Feb) = 22,000. Desired ending FG = 20% × 25,000 (Mar sales) = 5,000. Beginning FG = 20% × 22,000 = 4,400 (Jan ending = Feb beginning). Production = 22,000 + 5,000 − 4,400 = 22,600. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — Same pattern as Q1. The arithmetic '22,000 + (25,000 x 20%) - 4,400 = 22,600 units' doesn't explain where 4,400 comes from. A candidate who doesn't realize that January's ending inventory (4,400) becomes February's beginning inventory would be confused. This is a critical conceptual link in the budget cascade that goes unexplained.",
+        "understands_why_wrong_answers_wrong": "N/A",
+        "complete_without_external_resources": "NO — The beginning inventory value 4,400 is unexplained. A candidate needs to infer it from Q1 or the 20% policy applied to February sales.",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "22,000 + (25,000 x 20%) - 4,400 = 22,600 units.",
+        "accounting_principle_stated": "NOT IN EXPLANATION",
+        "calculation_shown_step_by_step": "PARTIALLY — Shows arithmetic but doesn't explain that 4,400 = 20% × 22,000 (January ending FG = February beginning FG), which is the cascade logic.",
+        "business_context_clear": "NO",
+        "would_need_google": "YES — To understand the inventory cascade between months.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Add: 'February beginning FG inventory = January ending FG inventory = 20% × 22,000 = 4,400.' This teaches the budget cascade — a foundational concept in the master budget sequence.",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": []
+    },
+    "CBQ-B1-Q3": {
+      "ItemID": "CBQ-B1-Q3",
+      "Type": "numeric",
+      "Prompt": "Enter January material purchases in pounds.",
+      "CorrectAnswer": "38220",
+      "IndependentVerification": "Production needs = 18,800 × 2 lbs/unit = 37,600. Desired ending materials = 10% × (22,600 × 2) = 10% × 45,200 = 4,520. Beginning materials = 3,900. Purchases = 37,600 + 4,520 − 3,900 = 38,220 lbs. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "MOSTLY YES — This is the BEST explanation in the 12-item set. It shows intermediate steps: production needs (18,800 × 2 = 37,600), desired ending materials (22,600 × 2 × 10% = 4,520), and the final purchase calculation. It even includes a common trap warning: 'A common error is to use the wrong beginning materials balance.'",
+        "understands_why_wrong_answers_wrong": "N/A — but the common trap reference addresses one error path.",
+        "complete_without_external_resources": "MOSTLY YES — The step-by-step breakdown allows a candidate to follow the logic without external references. However, the formula is not named and no standard is referenced.",
+        "rating": "READY — with caveats (see below)"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "January production needs = 18,800 x 2 = 37,600. Desired ending materials = 10% of February production needs (22,600 x 2 x 10%) = 4,520. Purchases = 37,600 + 4,520 - 3,900 = 38,220. A common error is to use the wrong beginning materials balance.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — The direct materials purchases formula is in metadata only.",
+        "calculation_shown_step_by_step": "YES — Three labeled intermediate steps, fully traceable.",
+        "business_context_clear": "NO — No interpretation of the 38,220 pounds result for Apex Controls.",
+        "would_need_google": "PROBABLY NOT — The step-by-step breakdown is self-contained enough for most candidates.",
+        "rating": "READY — best explanation in Wave 1"
+      },
+      "distractor_behavior": {
+        "applicable": false
+      },
+      "certification_readiness": {
+        "ready_today": "MARGINALLY YES — This is the ONLY item in Wave 1 that approaches certification-readiness. The explanation is structured, traceable, and includes a trap warning. Gaps: no formula name in explanation, no ASC/managerial accounting reference, no business interpretation.",
+        "most_impactful_improvement": "Add: 'Under the direct materials purchases budget formula (Materials Needed + Desired Ending − Beginning), January requires 38,220 pounds. For Apex Controls, this represents the raw material order quantity for the month.'",
+        "overall_rating": "READY"
+      },
+      "metadata_issues": [
+        "BusinessInterpretation field contains truncated text: '0 - 3,900 = 38,220. A common error is to use the wrong beginning materials balance.' — this appears to be a copy-paste artifact with a leading '0 - 3,900' fragment. Not learner-facing but indicates sloppy metadata."
+      ]
+    },
+    "CBQ-B1-Q4": {
+      "ItemID": "CBQ-B1-Q4",
+      "Type": "numeric",
+      "Prompt": "Enter January cash collections.",
+      "CorrectAnswer": "795000",
+      "IndependentVerification": "35% × 900,000 (Jan sales collected in Jan) = 315,000. 60% × 800,000 (Dec sales collected in Jan) = 480,000. Total = 315,000 + 480,000 = 795,000. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — Shows the two components (Jan sales × 35% and Dec sales × 60%) but doesn't explain WHY the 5% uncollectible portion is excluded. Doesn't explain the collection pattern concept: 'cash collections ≠ sales when customers pay on credit.'",
+        "understands_why_wrong_answers_wrong": "N/A",
+        "complete_without_external_resources": "PARTIALLY — The arithmetic is traceable but the collection-pattern logic is not explained.",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "35% of January sales = 315,000. 60% of December sales = 480,000. Total = 795,000.",
+        "accounting_principle_stated": "NOT IN EXPLANATION — Cash budget formula is in metadata only.",
+        "calculation_shown_step_by_step": "PARTIALLY — Two components shown but the 5% uncollectible portion is never mentioned. A candidate might wonder 'why isn't 100% collected?'",
+        "business_context_clear": "NO",
+        "would_need_google": "YES — To understand collection patterns and uncollectible treatment.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Expand: 'January cash collections = (35% × $900,000 January credit sales collected same month) + (60% × $800,000 December credit sales collected in January) = $315,000 + $480,000 = $795,000. The 5% uncollectible portion ($45,000) is excluded from cash collections. This is the cash receipts component of the cash budget.'",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": []
+    },
+    "CBQ-B1-Q5": {
+      "ItemID": "CBQ-B1-Q5",
+      "Type": "numeric",
+      "Prompt": "Enter January borrowing required to maintain the minimum cash balance.",
+      "CorrectAnswer": "210000",
+      "IndependentVerification": "Beginning cash = 75,000. + Cash collections = 795,000. − Cash disbursements = 1,020,000. = Cash before financing = −150,000. Borrowing needed to reach minimum 60,000 = 60,000 − (−150,000) = 210,000. CORRECT.",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "learning_quality": {
+        "understands_why_correct": "PARTIALLY — Shows the key calculation: cash before financing = −150,000, borrowing = 210,000. But doesn't explicitly state that 210,000 = 60,000 − (−150,000). A candidate might think '210,000 = 150,000 + 60,000' without understanding that it's the gap between the deficit and the required minimum. The algebraic logic is implied but not explained.",
+        "understands_why_wrong_answers_wrong": "N/A",
+        "complete_without_external_resources": "PARTIALLY",
+        "rating": "NEEDS_WORK"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "Cash before financing = 75,000 + 795,000 - 1,020,000 = -150,000. Borrowing needed to reach 60,000 = 210,000.",
+        "accounting_principle_stated": "NOT IN EXPLANATION",
+        "calculation_shown_step_by_step": "PARTIALLY — Shows cash before financing but doesn't explicitly calculate 60,000 − (−150,000).",
+        "business_context_clear": "NO",
+        "would_need_google": "PARTIALLY — The arithmetic is clear enough but a candidate might not understand the borrowing formula: Borrowing = Minimum Cash − Ending Cash Before Financing.",
+        "rating": "NEEDS_WORK"
+      },
+      "distractor_behavior": {
+        "applicable": false
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Expand: 'Ending cash before financing = $75,000 + $795,000 − $1,020,000 = −$150,000 (a deficit). To maintain the $60,000 minimum cash balance, Apex must borrow: $60,000 − (−$150,000) = $210,000.' Reference the cash budget formula.",
+        "overall_rating": "NEEDS_WORK"
+      },
+      "metadata_issues": []
+    },
+    "CBQ-B1-Q6": {
+      "ItemID": "CBQ-B1-Q6",
+      "Type": "multi",
+      "Prompt": "Select common errors that would understate January borrowing.",
+      "CorrectAnswer": [
+        "Ignoring the minimum cash balance",
+        "Using total sales instead of expected collections",
+        "Treating uncollectible sales as current cash"
+      ],
+      "IndependentVerification": "All three overstate available cash → understate borrowing need. 'Including April production directly in January production' — this would distort the production budget but doesn't directly understate borrowing (it would overstate production needs, potentially overstating cash outflows, which would OVERSTATE borrowing, not understate it). CORRECT answer key.",
+      "CognitiveLevel": "Evaluate",
+      "Difficulty": "Difficult",
+      "choices": {
+        "A": "Ignoring the minimum cash balance [CORRECT — excluding the $60,000 requirement understates the borrowing need]",
+        "B": "Using total sales instead of expected collections [CORRECT — overstates cash inflows, understating the borrowing need]",
+        "C": "Treating uncollectible sales as current cash [CORRECT — counts money that won't arrive, understating the borrowing need]",
+        "D": "Including April production directly in January production [WRONG — this affects production/material costs, not cash collections timing; and would overstate borrowing, not understate]"
+      },
+      "learning_quality": {
+        "understands_why_correct": "MINIMALLY — Explanation: 'Borrowing depends on cash timing and the required minimum balance, not total sales or accrual revenue.' This is 1 sentence. It names the general concept but does not explain any individual choice. A candidate who selected the correct three learns nothing new.",
+        "understands_why_wrong_answers_wrong": "NO — Zero per-choice explanation. Why is D wrong? The explanation doesn't say. A candidate who incorrectly included D gets NO feedback explaining that D would affect production/material costs, not cash collections directly, and would overstate (not understate) borrowing.",
+        "complete_without_external_resources": "NO — Needs per-choice explanations.",
+        "rating": "NOT_READY"
+      },
+      "explanation_adequacy": {
+        "explanation_text": "Borrowing depends on cash timing and the required minimum balance, not total sales or accrual revenue.",
+        "accounting_principle_stated": "NO",
+        "calculation_shown_step_by_step": "N/A",
+        "business_context_clear": "NO",
+        "would_need_google": "YES",
+        "rating": "NOT_READY"
+      },
+      "distractor_behavior": {
+        "ExplanationWrong_present": "NONE",
+        "distractor_plausibility": {
+          "D": "MODERATELY PLAUSIBLE — 'Including April production directly in January production' could confuse a candidate who thinks any budget error affects borrowing. But it's a production budget error, not a cash budget error — a distinction that should be taught in the explanation."
+        },
+        "candidate_sees_useful_feedback_on_wrong_answer": "NO",
+        "rating": "NOT_READY"
+      },
+      "certification_readiness": {
+        "ready_today": false,
+        "most_impactful_improvement": "Add per-choice explanations: (A) why ignoring the minimum cash balance understates borrowing [gap to reach $60K is missed]; (B) why using total sales instead of collections understates borrowing [overstates cash inflows by ignoring collection timing]; (C) why treating uncollectible sales as cash understates borrowing [counts revenue that will never be collected]; (D) why including April production does NOT understate borrowing [it's a production budget issue, not a cash collection issue, and would affect outflows in a different direction]. Fix CalculationRequired: true → false.",
+        "overall_rating": "NOT_READY"
+      },
+      "metadata_issues": [
+        "CalculationRequired: true — but this is an evaluation/judgment question with no arithmetic",
+        "No ExplanationWrong fields — absent distractor explanations",
+        "AccountingPrinciple field is absent from this item entirely"
+      ]
+    }
+  },
+  "cross_cutting_analysis": {
+    "readiness_summary": {
+      "total_items": 12,
+      "READY": 1,
+      "READY_pct": "8.3%",
+      "NEEDS_WORK": 8,
+      "NEEDS_WORK_pct": "66.7%",
+      "NOT_READY": 3,
+      "NOT_READY_pct": "25.0%"
+    },
+    "explanation_deficiency_patterns": {
+      "most_common": "UNIVERSAL BREVITY — All 12 items have 1–3 sentence explanations. None exceed 3 sentences. The longest (CBQ-B1-Q3 at ~60 words with 4 calculation lines) is still under 70 words. Per CAQS §4.3, the minimum is 50 characters — but that's a floor, not a quality target. Every explanation reads as a calculation memo, not a teaching explanation.",
+      "pattern_1": "Missing accounting principle in explanation text — 12/12 items. Every item has an AccountingPrinciple in metadata, but zero items state the standard in the learner-facing explanation. Per CAQS §4.4 EV3: 'Correct answer must reference the accounting principle by name.' This is a universal EV3 violation.",
+      "pattern_2": "No business interpretation — 12/12 items. No item explains what the result means for the fictional company. Per CAQS §4.1: 'Business interpretation' is a required element. This is a universal omission.",
+      "pattern_3": "No distractor explanations — 3/3 select/multi items (CBQ-A1-Q3, CBQ-A1-Q6, CBQ-B1-Q6) have ZERO ExplanationWrong fields. This matches DL-021 class defect (absent distractor explanations).",
+      "pattern_4": "No exam trap warnings — 11/12 items. Only CBQ-B1-Q3 includes a common trap reference. Per CAQS §4.1, 'Common exam trap' is a recommended element.",
+      "pattern_5": "Metadata inconsistency — 2 items (CBQ-A1-Q6, CBQ-B1-Q6) have CalculationRequired: true but test judgment/evaluation with no arithmetic. These are metadata errors."
+    },
+    "case_flow_assessment": {
+      "cognitive_progression_CAQS_35": {
+        "overall_passes": false,
+        "CBQ_A1_verdict": "FAILS — Sequence is Apply→Apply→Evaluate→Apply→Apply→Evaluate. No Analyze items. Topics are disjointed (revenue → cash flow → deferred tax → audit risks), not a coherent narrative arc. Q3 Evaluate-level question appears before any analytical foundation is built.",
+        "CBQ_B1_verdict": "FAILS — Five consecutive Apply-level calculations (Q1–Q5) then one Evaluate (Q6). The budget cascade sequence (sales → production → materials → cash → borrow) is logically correct for the domain, but there are zero Analyze-level items. A candidate calculates five numbers and then jumps to a judgment question with no analytical bridge. The master budget is a classic place for an Analyze item (e.g., 'Explain why production exceeds sales in January' or 'Analyze the impact of a 5% change in collection rate on borrowing')."
+      },
+      "scenario_realism": {
+        "overall": "BELOW STANDARD",
+        "issues": [
+          "Neither case has a named stakeholder (e.g., 'CFO Maria Chen') — only roles. Per CAQS §3.1, a named stakeholder is required.",
+          "Both scenarios use textbook-adjacent language ('Management wants answers that reconcile cash activity to accrual accounting') rather than authentic business communication ('The audit committee meeting is Tuesday — I need the cash-to-accrual bridge by Friday').",
+          "Neither scenario has a specific business trigger with urgency or consequence beyond 'closing the year-end' / 'preparing the budget.' The scenarios happen AT a company but don't FEEL like you're inside a company.",
+          "CBQ-A1 jumps across three unrelated financial reporting topics (revenue, cash flow, deferred tax) in one 6-item case — a real controller wouldn't present these as a single integrated scenario without connecting them."
+        ]
+      },
+      "exhibit_quality": {
+        "overall": "ADEQUATE STRUCTURALLY, WEAK METADATA",
+        "issues": [
+          "All 4 exhibits (2 per case) have clean, internally consistent data. Tables are well-formatted.",
+          "All 4 exhibits are MISSING Purpose and ReferencedBy fields — per QUESTION_METADATA_STANDARD.md §3.1, these are required fields.",
+          "No exhibit references any specific item — ReferencedBy is empty for all 4 exhibits. This means no automated validation can confirm exhibit data is consumed by items.",
+          "CBQ-A1 Exhibit 2 includes 'Temporary difference: tax depreciation exceeds book depreciation — $200,000' and 'Enacted tax rate — 25%' which are used only by Q5. The other rows (net income, depreciation, working capital changes) are used by Q4. Data is consumed, but the traceability is not documented."
+        ]
+      }
+    },
+    "certification_blockers": {
+      "universal": [
+        {
+          "blocker": "EV3 — Missing accounting principle in learner-facing explanation",
+          "affected": "12/12 items",
+          "standard": "CAQS §4.4 EV3",
+          "remediation": "Every Explanation field must name the governing standard (ASC 606, ASC 230, ASC 740, or the managerial accounting principle)."
+        },
+        {
+          "blocker": "Business interpretation absent",
+          "affected": "12/12 items",
+          "standard": "CAQS §4.1",
+          "remediation": "Every explanation must include a business interpretation that connects the result to the fictional company's context."
+        }
+      ],
+      "select_and_multi_specific": [
+        {
+          "blocker": "No ExplanationWrong fields — DL-021 class defect",
+          "affected": "3/3 select/multi items (CBQ-A1-Q3, CBQ-A1-Q6, CBQ-B1-Q6)",
+          "standard": "CAQS §4.2",
+          "remediation": "Author choice-specific distractor explanations for all wrong-answer slots. Each must identify the specific error, the likely misconception, and the correct approach."
+        }
+      ],
+      "metadata_errors": [
+        {
+          "blocker": "CalculationRequired: true on non-calculation items",
+          "affected": "CBQ-A1-Q6, CBQ-B1-Q6",
+          "standard": "QUESTION_METADATA_STANDARD.md §2.1",
+          "remediation": "Change CalculationRequired to false."
+        }
+      ]
+    },
+    "pre_certification_checklist": {
+      "explanation_length": "All 12 items need expansion from 1–3 sentences to 4–7 sentences",
+      "distractor_explanations": "3 items need ExplanationWrong fields authored from scratch",
+      "standard_references": "12 items need ASC/COSO/IMA standard names in explanation text",
+      "business_interpretation": "12 items need business context interpretation",
+      "exhibit_metadata": "4 exhibits need Purpose and ReferencedBy fields",
+      "scenario_quality": "2 cases need named stakeholders and more authentic business language",
+      "cognitive_progression": "Both cases need Analyze-level items inserted between Apply and Evaluate",
+      "metadata_correction": "2 items need CalculationRequired: false"
+    }
+  },
+  "verdict": {
+    "wave_1_overall_readiness": "8.3% (1/12 items READY)",
+    "certification_blocked": true,
+    "blocked_by": [
+      "Universal EV3 violation — no accounting principles in explanation text (12/12)",
+      "Universal business interpretation gap (12/12)",
+      "DL-021 — missing distractor explanations on 3 select/multi items",
+      "Metadata errors on 2 items (CalculationRequired: true on judgment questions)",
+      "Both cases fail CAQS §3.5 cognitive progression",
+      "Exhibit metadata incomplete (missing Purpose and ReferencedBy on all 4 exhibits)"
+    ],
+    "estimated_remediation_effort": "MODERATE — approximately 3–4 hours of editorial work: expand 12 explanations (~20 min each = 4 hours), author 9 distractor explanations (~10 min each = 1.5 hours), fix 2 metadata errors (5 min), add 4 exhibit Purpose/ReferencedBy fields (10 min), improve 2 scenarios (30 min). TOTAL: ~6 hours. However, cognitive progression gaps (adding Analyze items) would require case redesign — likely 2+ additional hours.",
+    "recommended_action": "DO NOT CERTIFY Wave 1 in its current state. Remediate the 12 items against CAQS §4.1–§4.4 and §14 Gold Standard Checklist before any certification pass. The single item approaching readiness (CBQ-B1-Q3) demonstrates the target quality: multi-step calculation with labeled intermediates and a trap warning. Use it as the template for rewriting the other 11 explanations."
+  }
+}

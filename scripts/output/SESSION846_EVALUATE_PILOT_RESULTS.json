@@ -1,0 +1,67 @@
+{
+  "session": "S846",
+  "title": "Evaluate Micro-Pilot — 10 R-Series Classification & Feasibility Analysis",
+  "date": "2026-07-27",
+  "program": "800-Series Controlled Expansion Pilot — Session 3/5",
+  "status": "RESEARCH COMPLETE — All 10 items classified. Evaluate upgrade feasible for all but requires stem+distractor+EC rewrite per S836 pipeline.",
+
+  "preconditions": {
+    "target": "10 Evaluate items from S839 Cohort C (Pack E R-series)",
+    "governance_guard": "32/32 PASS",
+    "all_items_certified": true,
+    "all_items_ds3": true,
+    "all_items_cognitive_level_apply": true
+  },
+
+  "methodology": "Per-item read from pack_e_corrected.js — Stem, CorrectChoice, Choices, ExplanationCorrect, ExplanationWrongA-D, CognitiveLevel, DifficultyScore. Classified as READY/NEEDS ENHANCEMENT/NOT SUITABLE based on whether existing scenario supports judgment-level decision without substantial stem rewrite.",
+
+  "results": {
+    "total_analyzed": 10,
+    "ready": 0,
+    "needs_enhancement": 10,
+    "not_suitable": 0,
+    "assessment": "All 10 R-series items have well-constructed business scenarios (named companies, specific stakeholders, realistic control contexts). However, every item currently tests at Bloom's Apply classification/identification level. The stems ask candidates to identify, classify, or describe — not to evaluate, recommend, or choose among competing valid options with trade-offs. The Evaluate upgrade is FEASIBLE for all 10 but requires substantial rewrite."
+  },
+
+  "per_item_classification": [
+    {"qid": "P1-E-R01", "classification": "NEEDS ENHANCEMENT", "topic": "Segregation of duties — incompatible functions", "scenario_quality": "HIGH — specific employee tasks, rich context", "upgrade_path": "From 'what is the weakness?' to 'which restructuring recommendation best addresses the risk given staffing constraints?'"},
+    {"qid": "P1-E-R03", "classification": "NEEDS ENHANCEMENT", "topic": "Fraud triangle — pressure element", "scenario_quality": "HIGH — multiple red flags (financial strain, override access, no vacation policy)", "upgrade_path": "From 'which element?' to 'which mitigation action should audit committee prioritize?'"},
+    {"qid": "P1-E-R05", "classification": "NEEDS ENHANCEMENT", "topic": "Bank reconciliation SoD", "scenario_quality": "MEDIUM — realistic small-company scenario", "upgrade_path": "Add staffing constraint (3 clerks); pivot to 'which workflow restructure best balances SoD and efficiency?'"},
+    {"qid": "P1-E-R08", "classification": "NEEDS ENHANCEMENT", "topic": "Tone at the top / control environment", "scenario_quality": "HIGH — CEO quotes, promotion patterns, board concern", "upgrade_path": "From 'which component is weakened?' to 'which board response most effectively addresses the control environment weakness while preserving business momentum?'"},
+    {"qid": "P1-E-R10", "classification": "NEEDS ENHANCEMENT", "topic": "Compensating controls — small business", "scenario_quality": "HIGHEST — natural trade-off context (4 staff, limited budget, owner reviews)", "upgrade_path": "Owner considering 3 additional measures with budget constraint — which provides greatest incremental risk reduction?"},
+    {"qid": "P1-E-R11", "classification": "NEEDS ENHANCEMENT", "topic": "Preventive controls classification", "scenario_quality": "MEDIUM — three named controls, purely classification", "upgrade_path": "Keep controls as context; ask 'which additional detective control best complements existing preventive framework?'"},
+    {"qid": "P1-E-R12", "classification": "NEEDS ENHANCEMENT", "topic": "Detective controls classification", "scenario_quality": "LOW — 'which is detective?' classification only", "upgrade_path": "Add volume constraint (500 claims/day); pivot to 'which additional detective control is most efficient?'"},
+    {"qid": "P1-E-R17", "classification": "NEEDS ENHANCEMENT", "topic": "Risk responses — avoid/share/reduce/accept", "scenario_quality": "HIGH — four concrete board-level options already enumerated", "upgrade_path": "Add constraints (rural hospital, $200K IT budget); pivot to 'which risk response strategy should the board prioritize?'"},
+    {"qid": "P1-E-R26", "classification": "NEEDS ENHANCEMENT", "topic": "SoD incompatible functions", "scenario_quality": "MEDIUM — AP department restructuring scenario", "upgrade_path": "Add 3-clerk constraint; pivot to 'which assignment structure best balances SoD and operational efficiency?'"},
+    {"qid": "P1-E-R38", "classification": "NEEDS ENHANCEMENT", "topic": "Inherent vs residual risk", "scenario_quality": "HIGH — specific $ values, hedging program, dual-approval requirements", "upgrade_path": "Add risk appetite ($300K); pivot to 'residual exceeds appetite — which recommendation addresses the gap?'"}
+  ],
+
+  "evaluate_upgrade_requirements": {
+    "stem_rewrite": "From classification to recommendation: replace 'Which of the following best describes...' with 'Which recommendation should [stakeholder] present to [board/management] given [constraints]?'",
+    "distractor_rewrite": "From single-error identification to competing-recommendation distractors. Each must be plausibly defensible but suboptimal under COSO principles and operational constraints.",
+    "ec_rewrite": "From concept identification to judgment rationale — including trade-off analysis, constraint assessment, criterion-based decision justification, and COSO framework alignment.",
+    "correct_choice": "All current answer keys are correct. No CorrectChoice changes needed — the upgrade changes question FORMAT, not underlying accounting truth.",
+    "cognitive_level": "Apply → Evaluate (all 10 items)",
+    "difficulty": "DS=3 (Moderate) may need upgrade to DS=4 (Difficult) for Evaluate-level items"
+  },
+
+  "wave_plan": {
+    "wave_1_3_items": ["P1-E-R10", "P1-E-R17", "P1-E-R08"],
+    "wave_1_rationale": "Strongest business decision context — each has natural trade-offs and constraints that support genuine judgment.",
+    "wave_2_4_items": ["P1-E-R03", "P1-E-R05", "P1-E-R01", "P1-E-R26"],
+    "wave_3_3_items": ["P1-E-R38", "P1-E-R11", "P1-E-R12"],
+    "wave_3_rationale": "Classification-focused items — may be better suited for Analyze upgrade rather than Evaluate."
+  },
+
+  "comparison_to_s845_cohort_a": {
+    "s845_analyze_upgrade": "22 items — enhances existing content with analysis layer",
+    "s846_evaluate_upgrade": "10 items — requires stem format change (classification → recommendation)",
+    "relative_difficulty": "S846 is 2-3x more effort per item than S845 because the question FORMAT changes, not just the explanation layer",
+    "pipeline_time_estimate": "10 items x ~25 min = 4.2 hours"
+  },
+
+  "deliverables": {
+    "json": "scripts/output/SESSION846_EVALUATE_PILOT_RESULTS.json",
+    "md": "scripts/output/SESSION846_CLASSIFICATION_CERTIFICATION.md"
+  }
+}

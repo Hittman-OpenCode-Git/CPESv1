@@ -1,0 +1,62 @@
+{
+  "session": 120,
+  "title": "S120 Explain Test Results",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "suites": {
+    "stageC": {
+      "file": "scripts/test_may_stagec.js",
+      "preFlight": "119/119 PASS",
+      "postFlight": "119/119 PASS",
+      "testsUpdated": [
+        {
+          "oldName": "_explainAnswer uses bank ExplanationCorrect verbatim",
+          "newName": "_explainAnswer includes bank ExplanationCorrect and adds tutor-layer insight",
+          "change": "Added 5 assertions for tutor-layer section headers (What this is testing, Why the answer works, Common trap, How to spot it next time, If you missed it)"
+        }
+      ],
+      "testsPreserved": 118,
+      "testEnvironmentFixes": [
+        "Added sessionStorage mock (required for S127 launcher injection)",
+        "Enhanced document.querySelector mock",
+        "Added window/Blob/URL/FileReader mocks",
+        "Added document.body mock with appendChild/prepend"
+      ]
+    },
+    "tutoringSafety": {
+      "file": "scripts/test_tutoring_safety.js",
+      "preFlight": "74/74 PASS",
+      "postFlight": "86/86 PASS",
+      "newTests": 12,
+      "testEnvironmentFixes": [
+        "Added sessionStorage mock"
+      ],
+      "newTestsList": [
+        "S120-01: _buildTutorExplanation returns structured object with all sections",
+        "S120-02: _buildTutorExplanation includes source ExplanationCorrect when available",
+        "S120-03: thin explanation uses safe fallback without fabrication",
+        "S120-04: _explainAnswer output contains all tutor-layer sections",
+        "S120-05: _explainAnswer preserves ExplanationCorrect in output",
+        "S120-06: tutor output contains no exam-prediction language",
+        "S120-07: _inferCommonTrap does not fabricate facts not in question",
+        "S120-08: _interpretExplanation stays grounded in source text",
+        "S120-09: _buildTutorExplanation handles null question gracefully",
+        "S120-10: _explainAnswer routes through _guardedSpeak in pilot mode",
+        "S120-11: miniExplain gate still blocks when no attempt recorded (S120 regression)",
+        "S120-12: miniExplain reveals answer in review mode (S120 regression)"
+      ]
+    },
+    "governanceGuard": {
+      "file": "scripts/test_governance_guard.js",
+      "result": "20/20 PASS (unchanged)"
+    }
+  },
+  "totalPostFlight": "205/205 PASS (119 Stage C + 86 tutoring safety)",
+  "thresholdVerification": {
+    "accuracyHigh": 80,
+    "accuracyGood": 75,
+    "stabilityHigh": 75,
+    "stabilityGood": 60,
+    "unchanged": true
+  },
+  "modelVersion": "S111-1.0 (unchanged)"
+}

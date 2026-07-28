@@ -1,0 +1,120 @@
+{
+  "generated": "2026-07-26T21:49:14.805Z",
+  "session": "S305",
+  "modelVersion": "S305-ExQS-1.0",
+  "dimensions": {
+    "realism": {
+      "weight": "25%",
+      "description": "Professional/CMA realism score 0-100"
+    },
+    "usability": {
+      "weight": "25%",
+      "description": "Ease of use for learner 0-100"
+    },
+    "instructionalSupport": {
+      "weight": "20%",
+      "description": "Contribution to learning objective"
+    },
+    "cognitiveEfficiency": {
+      "weight": "15%",
+      "description": "Information density vs comprehension burden"
+    },
+    "businessRelevance": {
+      "weight": "15%",
+      "description": "Real-world applicability"
+    }
+  },
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "exqs": 67,
+      "grade": "C",
+      "components": {
+        "realism": 13,
+        "usability": 15,
+        "instructionalSupport": 15,
+        "cognitiveEfficiency": 9,
+        "businessRelevance": 15
+      },
+      "exhibitCount": 15,
+      "caseCount": 11
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "exqs": 79,
+      "grade": "B",
+      "components": {
+        "realism": 18,
+        "usability": 20,
+        "instructionalSupport": 15,
+        "cognitiveEfficiency": 11,
+        "businessRelevance": 15
+      },
+      "exhibitCount": 20,
+      "caseCount": 12
+    },
+    "C - Performance Management": {
+      "exqs": 78,
+      "grade": "B",
+      "components": {
+        "realism": 19,
+        "usability": 18,
+        "instructionalSupport": 15,
+        "cognitiveEfficiency": 11,
+        "businessRelevance": 15
+      },
+      "exhibitCount": 19,
+      "caseCount": 14
+    },
+    "D - Cost Management": {
+      "exqs": 83,
+      "grade": "B",
+      "components": {
+        "realism": 20,
+        "usability": 20,
+        "instructionalSupport": 15,
+        "cognitiveEfficiency": 13,
+        "businessRelevance": 15
+      },
+      "exhibitCount": 24,
+      "caseCount": 14
+    },
+    "E - Internal Controls": {
+      "exqs": 85,
+      "grade": "A",
+      "components": {
+        "realism": 21,
+        "usability": 21,
+        "instructionalSupport": 15,
+        "cognitiveEfficiency": 13,
+        "businessRelevance": 15
+      },
+      "exhibitCount": 20,
+      "caseCount": 13
+    },
+    "F - Technology & Analytics": {
+      "exqs": 87,
+      "grade": "A",
+      "components": {
+        "realism": 19,
+        "usability": 20,
+        "instructionalSupport": 20,
+        "cognitiveEfficiency": 13,
+        "businessRelevance": 15
+      },
+      "exhibitCount": 19,
+      "caseCount": 11
+    },
+    "Unknown": {
+      "exqs": 40,
+      "grade": "D",
+      "components": {
+        "realism": 0,
+        "usability": 0,
+        "instructionalSupport": 20,
+        "cognitiveEfficiency": 10,
+        "businessRelevance": 10
+      },
+      "exhibitCount": 0,
+      "caseCount": 45
+    }
+  }
+}

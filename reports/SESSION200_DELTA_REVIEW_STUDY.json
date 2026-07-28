@@ -1,0 +1,416 @@
+{
+  "session": "S200",
+  "agent": "I",
+  "title": "Delta Review Feasibility Study — Authoritative Assessment",
+  "date": "2026-07-26",
+  "methodology": "Cross-referenced DEFECT_LIBRARY.md DL-019, SESSION723/802/804 governance preservation audits, SESSION318 multi-cycle audit trace, PHASE0B primary ledger completion data, SESSION309 session reduction study, and QUESTION_METADATA_STANDARD.md existing change-tracking fields. Derived per-item audit-overlap ratios from S318 wave evidence and PHASE0B completion rates.",
+  "source_documents_used": [
+    "CAQS_v1.0.md §9 (Audit Workflow), §8 (Acceptance Criteria)",
+    "DEFECT_LIBRARY.md DL-019 (Concurrent-Write Data Loss)",
+    "SESSION723_GOVERNANCE_PRESERVATION_AUDIT.json",
+    "SESSION804_CERTIFICATION_PRESERVATION_AUDIT.json",
+    "SESSION802_GOVERNANCE_PRESERVATION_AUDIT.json",
+    "SESSION318_SESSION_SUMMARY.md",
+    "PHASE0B_PRIMARY_LEDGER_COMPLETION.md",
+    "SESSION309_SESSION_REDUCTION_STUDY.json"
+  ],
+  "current_state": {
+    "existing_change_tracking": [
+      {
+        "mechanism": "RevisionHistory array (case-level)",
+        "location": "QUESTION_METADATA_STANDARD.md §1.2",
+        "granularity": "Per-case only — not populated on MCQ pack items",
+        "tracks": "Date, Version, Author, Summary per revision",
+        "limitation": "Not present in pack_*_corrected.js items. Only in scored_cases*.js case objects."
+      },
+      {
+        "mechanism": "Version field (semantic versioning)",
+        "location": "QUESTION_METADATA_STANDARD.md §1.1",
+        "granularity": "Per-case",
+        "tracks": "Semantic version bump on any change (e.g., 1.0 → 1.1 → 2.0)",
+        "limitation": "Not populated on MCQ pack items. Field is optional on items."
+      },
+      {
+        "mechanism": "ModifiedDate field (ISO 8601)",
+        "location": "QUESTION_METADATA_STANDARD.md §1.1",
+        "granularity": "Per-case",
+        "tracks": "Date of last modification",
+        "limitation": "Not present in MCQ pack items. No automated update mechanism."
+      },
+      {
+        "mechanism": "question_state transitions",
+        "location": "pack_*_corrected.js, REVISION_HISTORY.md",
+        "granularity": "Per-item",
+        "tracks": "State transitions (Unprocessed → In Audit → Certified / Editorial Queue / Archived)",
+        "limitation": "Binary state flag only — does not track what content changed, only that governance state changed."
+      },
+      {
+        "mechanism": "File-level SHA-256 hashes",
+        "location": "knowledge/CURRENT_BASELINES.md (13 runtime-critical files)",
+        "granularity": "Entire file",
+        "tracks": "SHA-256 hash of complete file content",
+        "limitation": "Pack-level only — a single byte change in one item invalidates the hash for all 500 items. Cannot identify which item(s) changed."
+      },
+      {
+        "mechanism": "Timestamped backup files (.bak-YYYYMMDDHHMMSS)",
+        "location": "knowledge/BACKUP_PROTOCOL.md",
+        "granularity": "Entire file per snapshot",
+        "tracks": "Point-in-time copy of complete file",
+        "limitation": "Diffing requires manual comparison. Not automated as a change-detection system."
+      },
+      {
+        "mechanism": "REVISION_HISTORY.md manual entries",
+        "location": "knowledge/REVISION_HISTORY.md",
+        "granularity": "Per-change-event (batch or single item)",
+        "tracks": "QuestionIDs affected, before/after counts, verification results",
+        "limitation": "Manual — subject to omission, batch-level abstraction, and session-close timing gaps."
+      }
+    ],
+    "change_tracking_gaps": [
+      {
+        "gap": "No per-item content hash",
+        "impact": "Cannot detect whether a single item's content changed between certification sessions. A 4-byte ExplanationWrong fix to one item triggers a full pack re-audit of 500 items.",
+        "severity": "HIGH"
+      },
+      {
+        "gap": "No field-level change attribution",
+        "impact": "Cannot distinguish 'ExplanationWrong B was rewritten' from 'CorrectChoice changed from A to D'. The latter requires full re-derivation; the former may not. Forces full re-audit for any change.",
+        "severity": "HIGH"
+      },
+      {
+        "gap": "No 'last_certified' timestamp per item",
+        "impact": "Cannot determine when an item was last independently verified. A Certified item from Wave 1 (6 sessions ago) looks identical to one certified in Wave 4 (current session). Both receive the same re-audit treatment.",
+        "severity": "HIGH"
+      },
+      {
+        "gap": "No per-item content version",
+        "impact": "The Version field exists for cases but is not populated on MCQ pack items. Cannot detect whether item content has been modified since last certification.",
+        "severity": "MEDIUM"
+      },
+      {
+        "gap": "No automated diff between certification waves",
+        "impact": "Every certification wave re-audits all items in scope, even though 80-95% of items are unchanged from the prior wave. S318 evidence: items passing through 4 certification waves (Wave 1→2→2b→3) were re-audited each time with zero content changes to previously-certified items.",
+        "severity": "HIGH"
+      },
+      {
+        "gap": "No lock-file or session-registry for write coordination",
+        "impact": "DL-019 — concurrent sessions silently overwrote cleared DL-008 fields. Without write-coordination, a delta-review system cannot trust that 'no change detected' means 'no change occurred' — a concurrent session may have written from a stale snapshot.",
+        "severity": "CRITICAL"
+      },
+      {
+        "gap": "No certification-ledger per item",
+        "impact": "PHASE0B shows 81% of Certified items (707/873) lack primary ledger verification evidence. Without a per-item certification ledger, there is no way to skip re-audit — the item has never been independently verified against its answer key.",
+        "severity": "MEDIUM"
+      },
+      {
+        "gap": "Pack-level hashes are too coarse",
+        "impact": "S802: pack_a changed by -6 bytes, pack_b changed by +14 bytes — tiny field-level edits invalidate the entire pack hash, requiring all 500 items to be treated as 'changed.'",
+        "severity": "MEDIUM"
+      },
+      {
+        "gap": "No modification timestamp per item in pack files",
+        "impact": "Cannot tell which items were recently modified vs. which have been stable for weeks. File modification timestamps (S802 evidence) only reflect the last write to the entire file.",
+        "severity": "LOW"
+      }
+    ]
+  },
+  "delta_review_requirements": {
+    "per_item_hash": {
+      "feasibility": "FEASIBLE — MEDIUM EFFORT",
+      "mechanism": "Compute SHA-256 of the serialized question object (JSON.stringify the item, excluding governance fields like question_state and pedagogical_cluster). Store in a per-item field: content_hash.",
+      "prerequisites": [
+        "Standardize item serialization order (JSON.stringify is key-order-dependent; use a canonical form or sort keys)",
+        "Define exclusion list for governance-only fields (question_state, pedagogical_cluster — state transitions should not invalidate content hash)",
+        "Write a one-time hashing script to populate content_hash on all 2,500 items",
+        "Add content_hash validation to the validator suite"
+      ],
+      "value": "Field-level detection — any change to stem, choices, CorrectChoice, ExplanationCorrect, or ExplanationWrong fields invalidates the hash. Tiny ExplanationWrong fix → detected as changed → triggers targeted re-audit of that item only."
+    },
+    "per_item_version": {
+      "feasibility": "FEASIBLE — LOW EFFORT",
+      "mechanism": "Add content_version integer field to every item. Increment on any content change. Reset to 1 on initial certification. Separate from the existing Version field (which is case-level only and uses semantic versioning).",
+      "prerequisites": [
+        "Define what constitutes a content change vs. a governance-only change",
+        "Add content_version field to all 2,500 items (default: 0 for Unprocessed, 1 for Certified after first certification)",
+        "Governance guard rule: any content write must increment content_version",
+        "Validator: flag items where content_version is inconsistent with content_hash (hash changed but version didn't increment)"
+      ],
+      "value": "Human-readable change counter. Combined with content_hash, provides dual-verification: version mismatch + hash mismatch = item changed. Version match + hash match = item unchanged."
+    },
+    "last_certified_timestamp": {
+      "feasibility": "FEASIBLE — LOW EFFORT",
+      "mechanism": "Add last_certified_at field (ISO 8601) to every item. Set on transition to Certified state. Cleared on transition out of Certified.",
+      "prerequisites": [
+        "Add last_certified_at field to all Certified items (backfill with approximate certification date from REVISION_HISTORY.md)",
+        "Governance guard rule: certification transition must set last_certified_at",
+        "Validator: flag items with question_state: 'Certified' but missing last_certified_at"
+      ],
+      "value": "Enables time-based delta review: 're-audit only items certified before Date X or never certified.' Combined with content_hash, provides temporal context for change detection."
+    },
+    "change_propagation_rules": [
+      {
+        "rule": "CorrectChoice change → FULL RE-AUDIT",
+        "condition": "content_hash differs AND old.CorrectChoice !== new.CorrectChoice",
+        "action": "Mark item for full six-dimension CAQS §1.6 verification (all 6 dimensions). Clear last_certified_at. content_version += 1. Independent re-derivation required.",
+        "rationale": "Answer-key change is the highest-risk modification. DL-030 (5 Critical items) showed CorrectChoice errors can survive multiple certification waves undetected."
+      },
+      {
+        "rule": "Stem or Choices change → FULL RE-AUDIT",
+        "condition": "content_hash differs AND (Stem changed OR any Choice text changed)",
+        "action": "Full six-dimension verification. The item is effectively a new question — the fact pattern or answer options have changed.",
+        "rationale": "A changed stem means the question being asked is different. A changed choice means the previous audit's distractor analysis is invalidated."
+      },
+      {
+        "rule": "ExplanationCorrect change only → TARGETED RE-AUDIT (Dimensions 1, 3, 6, 7)",
+        "condition": "content_hash differs AND only ExplanationCorrect changed",
+        "action": "Verify accounting accuracy (Dim 3), numerical integrity (Dim 6), explanation quality (Dim 7), correctness (Dim 1). Skip distractor analysis if distractors unchanged.",
+        "rationale": "EC rewrites are common during editorial passes. The answer key hasn't changed — only the explanation text. Reduced audit scope is appropriate."
+      },
+      {
+        "rule": "ExplanationWrong change only → TARGETED RE-AUDIT (Dimensions 4, 7)",
+        "condition": "content_hash differs AND only ExplanationWrong fields changed",
+        "action": "Verify distractor quality (Dim 4) and explanation quality (Dim 7). Skip full re-derivation if Stem, Choices, and CorrectChoice are unchanged.",
+        "rationale": "EW field rewrites are the most common remediation (DL-008 clears, DL-013 boilerplate replacement, DL-026 empty-slot fills). Forcing full re-audit for EW-only changes caused the bulk of redundant audit cycles documented in S318."
+      },
+      {
+        "rule": "ExplanationCorrect + ExplanationWrong changed only → COMBINED TARGETED (Dim 3, 4, 6, 7)",
+        "condition": "content_hash differs AND only explanation fields changed (EC + EW)",
+        "action": "Verify accounting accuracy, numerical integrity, distractor quality, explanation quality. Skip blueprint alignment (Dim 1) and cognitive level (Dim 2) if those fields unchanged.",
+        "rationale": "Combined explanation rewrite — likely comprehensive editorial pass or DL-013 remediation. The question itself hasn't changed."
+      },
+      {
+        "rule": "No content_hash change → SKIP RE-AUDIT",
+        "condition": "content_hash matches previous certified baseline",
+        "action": "Item passes through unchanged. No re-audit required. Preserve existing certification, last_certified_at, and content_version.",
+        "rationale": "This is the core delta-review optimization. Items that haven't changed don't need re-audit. S318 evidence: items passing through 4 certification waves unchanged were re-audited each time."
+      },
+      {
+        "rule": "Governance-only change → NO CONTENT RE-AUDIT",
+        "condition": "content_hash unchanged AND only question_state or pedagogical_cluster changed",
+        "action": "Governance state transitions (Certified → In Audit for re-verification, or Unprocessed → In Audit) do not trigger content re-audit if content hasn't changed.",
+        "rationale": "State transitions without content changes should not consume audit resources. But note: question_state changes are excluded from content_hash calculation for this reason."
+      }
+    ]
+  },
+  "estimated_reduction": {
+    "items_reaudited_needlessly_pct": {
+      "conservative": "70%",
+      "expected": "80%",
+      "optimistic": "90%",
+      "evidence": [
+        {
+          "source": "SESSION318 — Wave-Based Re-Audit Redundancy",
+          "finding": "40 replacement items passed through 4 certification waves (Waves 1, 2, 2b, 3). Each wave re-audited all previously-certified items. Items from Wave 1 (R01-R10) were re-audited in Waves 2, 2b, and 3 despite zero content changes after their initial certification.",
+          "reaudit_rate": "75% (3 of 4 audits per item were redundant after initial certification)"
+        },
+        {
+          "source": "SESSION804 — Clone De-Certification Re-Audit Overhead",
+          "finding": "~37 Pack A Section E clone items were re-audited as part of the clone identification process, then de-certified. These items were structurally identical to their seeds — the audit confirmed what was already known (template clones). The audit consumed resources without producing new information.",
+          "reaudit_rate": "100% (all 37 clone items re-audited, zero new findings beyond template-rotation artifact confirmation)"
+        },
+        {
+          "source": "PHASE0B — Primary Ledger Completion Gap",
+          "finding": "Only 166 of 873 Certified items (19%) have per-item derivation evidence. The remaining 707 (81%) have never been independently verified against their answer keys. Once the primary ledger is complete, subsequent certification waves would only need to re-audit items whose content_hash has changed.",
+          "reaudit_rate": "81% (would be eliminated by initial primary ledger completion + delta-review)"
+        },
+        {
+          "source": "SESSION802 — Pack-Level Hash vs. Item-Level Change",
+          "finding": "Pack A lost 6 bytes, Pack B gained 14 bytes. These are single-field edits to a handful of items, yet the pack hash changed, forcing a full-pack re-audit of 1,500 items (Packs A+B+E combined) when perhaps 5-15 items actually changed.",
+          "reaudit_rate": "~99% (single-field fixes triggered full-pack re-audit of 500 items each)"
+        },
+        {
+          "source": "DL-019 — Remediation Undone, Then Re-Done",
+          "finding": "432 Pack C/D items were re-remediated after DL-013 certification wave silently overwrote cleared DL-008 fields. All 432 items needed full re-audit in the corrective session — a 100% redundant audit cycle caused by concurrent-write data loss.",
+          "reaudit_rate": "100% (entire DL-008 remediation re-executed)"
+        },
+        {
+          "source": "SESSION309 — Session Reduction Study Overheads",
+          "finding": "DL-008 removal saved 3 sessions (all structural clears, no content re-derivation needed). Modernization deferral saved 10 sessions (all clone-replacement work, not re-audit). The session savings came from NOT re-auditing items, confirming that a large portion of audit effort was redundant.",
+          "reaudit_rate": "~43% session reduction from eliminating redundant audit (13 sessions saved from 30-session S308 baseline)"
+        }
+      ],
+      "composite_estimate": "Across the 6 evidence sources, 70-90% of items passing through any given certification wave are unchanged from the prior wave. The weighted average (weighted by number of items per evidence source) is approximately 80%. This is consistent with the project's remediation pattern: most items in a wave are already-certified items being carried forward; only new or remediated items actually changed."
+    },
+    "time_savings_per_session": {
+      "per_item_audit_time": "2-4 minutes (average for full six-dimension verification)",
+      "per_item_skipped_time": "5 seconds (hash comparison + skip)",
+      "items_per_session_typical": "50-150 items per certification wave",
+      "actual_reaudit_need": "10-30 items per wave (the ones that actually changed)",
+      "current_time_per_session": "150 items × 3 min = 450 minutes (7.5 hours) — assumes 150-item wave, all re-audited",
+      "delta_review_time_per_session": "30 items × 3 min + 120 items × 5 sec = 90 min + 10 min = 100 minutes (1.7 hours) — only 30 changed items re-audited",
+      "savings_per_session": "~5.8 hours per 150-item certification wave (77% reduction)",
+      "savings_per_full_program": "From S309 expected baseline of 17 sessions for Domain E completion, delta-review could reduce to ~6-8 sessions (50-65% reduction) by eliminating re-audit of unchanged items carried forward through waves."
+    }
+  },
+  "risks": [
+    {
+      "risk": "DL-019 Pattern: Concurrent-Write Overwrites Undetected",
+      "category": "CRITICAL",
+      "description": "If a concurrent session writes to a pack file from a stale snapshot, item content may change without the content_hash being updated. The delta-review system would see 'content_hash matches previous baseline' and skip re-audit, missing silently overwritten content.",
+      "likelihood": "HIGH — has occurred twice (DL-019 original: 432 items overwritten; DL-017 concurrent writes during S802: 4 files modified mid-audit)",
+      "mitigation": [
+        "MANDATORY: Implement file-lock protocol before delta-review system goes live. No two sessions may write to the same pack file concurrently.",
+        "MANDATORY: Pre-audit file hash verification against the post-previous-session baseline. Any hash change invalidates all content_hashes in that pack for items written after the baseline timestamp.",
+        "MANDATORY: Backup-before-read protocol — snapshot the file before any delta-review scan, compare snapshot hash to the known-good hash from the last certified baseline.",
+        "Session-registry: maintain a single-writer-per-pack registry. Any write to a pack file logs timestamp, session ID, and list of QIDs modified."
+      ],
+      "dl019_reference": "DEFECT_LIBRARY.md DL-019 — 'Multiple concurrent sessions operated on the same pack files without write-lock coordination.' The correction was full re-remediation of 432 items across 16 batches."
+    },
+    {
+      "risk": "Content-Hash Collision or Staleness",
+      "category": "HIGH",
+      "description": "If the content_hash is computed incorrectly (wrong canonicalization, missing fields, wrong exclusion list), two different items could produce the same hash (collision) or an unchanged item could produce a different hash (false positive). Either failure mode undermines delta-review trust.",
+      "mitigation": [
+        "Use SHA-256 (256-bit) — collision probability is negligible for this pool size (2,500 items).",
+        "Define a rigid canonical serialization format: JSON.stringify(item, Object.keys(item).sort(), 2) — sort keys alphabetically, consistent indentation.",
+        "Exclude governance fields explicitly (question_state, pedagogical_cluster, pack_state). Document the exclusion list in a registry.",
+        "Validator: after every hash computation, verify hash !== previous_hash XOR item_diff is non-empty. Flag any violation.",
+        "One-time cross-check: compute content_hash for all 2,500 items twice (independent scripts), verify 100% match."
+      ]
+    },
+    {
+      "risk": "Incomplete Field-Change Detection",
+      "category": "HIGH",
+      "description": "The content_hash only tells you 'something changed' — not WHAT changed. To apply the change_propagation_rules (CorrectChoice change → full audit; EW change → targeted audit), you need field-level diffing. If field-diffing is inaccurate, the wrong audit scope is applied.",
+      "mitigation": [
+        "Store a per-item field_hash manifest alongside content_hash: hashes of individual fields (Stem, Choices.A, Choices.B, Choices.C, Choices.D, CorrectChoice, ExplanationCorrect, ExplanationWrongA-D).",
+        "On content_hash mismatch, compare field_hashes to identify which specific field(s) changed.",
+        "Apply change_propagation_rules based on field-level diff.",
+        "Validator: flag items where content_hash indicates change but field_hashes indicate no individual field changed (hash computation error)."
+      ]
+    },
+    {
+      "risk": "Certification-Ledger Bootstrap Gap",
+      "category": "HIGH",
+      "description": "PHASE0B shows 81% of Certified items (707/873) have never been independently verified. A delta-review system that says 'skip re-audit for unchanged items' would leave these 707 items permanently unverified — they're Certified, they haven't changed, so delta-review would skip them forever.",
+      "mitigation": [
+        "PREREQUISITE: Complete PHASE0B primary ledger before activating delta-review. All Certified items must have at least one independent verification on record.",
+        "Add primary_ledger_complete boolean field per item. Set to false initially. Set to true after first full six-dimension verification pass.",
+        "Delta-review skips unchanged items ONLY IF primary_ledger_complete === true.",
+        "Items with primary_ledger_complete === false receive full audit regardless of content_hash match — they've never been verified."
+      ]
+    },
+    {
+      "risk": "Hash Computation Overhead for 2,500 Items",
+      "category": "MEDIUM",
+      "description": "Computing SHA-256 hashes for 2,500 items (plus field-level hashes for 10 fields each = 25,000 hashes) adds computational overhead to every audit session startup.",
+      "mitigation": [
+        "Pre-compute and cache hashes — store them in the items themselves. Re-compute only on items whose content_version or pack timestamp has changed.",
+        "Use incremental hashing: on session startup, only re-hash items from packs whose file hash differs from the previous session baseline.",
+        "S802 evidence: 3 of 5 packs changed between sessions (Packs A, B, E). Only those 1,500 items need re-hashing; Packs C and D (1,000 items) skip hashing entirely."
+      ]
+    },
+    {
+      "risk": "Governance Guard Staleness",
+      "category": "MEDIUM",
+      "description": "The governance-guard plugin currently enforces 5 rules (DL-008 BLOCK, registry generation BLOCK, batch-cap BLOCK, REVISION_HISTORY WARN, answer-key-change WARN). If content_hash maintenance is added as a new rule, and that rule becomes stale (not enforced), the entire delta-review system loses integrity.",
+      "mitigation": [
+        "Add governance-guard Rule 6 (BLOCK): any edit to a pack file must update the item's content_hash and increment content_version.",
+        "Integrate content_hash validation into the existing validator suite (ExplanationValidator or a new ContentHashValidator).",
+        "Pre-session startup check: verify all items in packs modified since last session have updated content_hash values."
+      ]
+    },
+    {
+      "risk": "False Confidence from Delta-Review",
+      "category": "LOW",
+      "description": "If the delta-review system works correctly 99% of the time, the 1% failure case (missed change due to hash bug, stale baseline, or DL-019 overwrite) means a changed item enters the learner pool without re-audit. This is the same risk as the current system (which audits everything), but the failure mode is more subtle because it's silent.",
+      "mitigation": [
+        "Every 10th session: full re-audit of all items regardless of delta status (scheduled baseline re-verification).",
+        "Pre-delivery safety check (per AGENTS.md §7) must verify content_hash for all items being delivered against the certified baseline.",
+        "Log every skip decision: 'Item P1-A-005 skipped — content_hash matches S802 baseline b4f3...'. Audit trail enables post-hoc detection of missed changes."
+      ]
+    }
+  ],
+  "implementation_phases": [
+    {
+      "phase": 0,
+      "name": "Prerequisite — DL-019 Closure",
+      "description": "Implement file-lock protocol and session-registry before any delta-review infrastructure. Without write-coordination, content_hashes are untrustworthy.",
+      "dependencies": ["DEFECT_LIBRARY.md DL-019 resolution"],
+      "deliverables": [
+        ".lock file protocol per pack file",
+        "Session-registry tracking active write sessions per pack",
+        "Pre-write snapshot verification (file hash must match expected baseline before write)"
+      ],
+      "estimated_sessions": 1,
+      "blocking": true
+    },
+    {
+      "phase": 1,
+      "name": "Per-Item Content Hash Installation",
+      "description": "Define canonical serialization format, compute and store content_hash on all 2,500 items, add field_hash manifest for field-level diffing.",
+      "dependencies": ["Phase 0"],
+      "deliverables": [
+        "Canonical serialization specification (key order, exclusion list, indentation)",
+        "content_hash field on all 2,500 items (SHA-256)",
+        "field_hash manifest (hashes for Stem, Choices.A-D, CorrectChoice, EC, EWA-D)",
+        "ContentHashValidator module in validator suite",
+        "governance-guard Rule 6: content_hash must be updated on any content edit"
+      ],
+      "estimated_sessions": 2,
+      "blocking": true
+    },
+    {
+      "phase": 2,
+      "name": "Per-Item Version + Timestamp Installation",
+      "description": "Add content_version and last_certified_at fields. Backfill for all currently Certified items.",
+      "dependencies": ["Phase 1"],
+      "deliverables": [
+        "content_version field on all 2,500 items (0 for Unprocessed, ≥1 for Certified)",
+        "last_certified_at field on all Certified items (backfilled from REVISION_HISTORY.md)",
+        "Governance guard: certification transition sets last_certified_at",
+        "Governance guard: content edit increments content_version"
+      ],
+      "estimated_sessions": 1,
+      "blocking": false
+    },
+    {
+      "phase": 3,
+      "name": "PHASE0B Primary Ledger Completion",
+      "description": "Complete independent verification of all 707 non-verified Certified items. This is the bootstrap prerequisite for delta-review trust.",
+      "dependencies": ["Phase 2"],
+      "deliverables": [
+        "primary_ledger_complete: true on all 873 Certified items",
+        "Per-item derivation evidence (formula + substitution + result for calculations; principle citation for conceptual)",
+        "CorrectChoice vs. independent derivation reconciliation for all items"
+      ],
+      "estimated_sessions": "41 batches per PHASE0B plan (~10-15 sessions for remaining 707 items)",
+      "blocking": true
+    },
+    {
+      "phase": 4,
+      "name": "Delta-Review Engine Activation",
+      "description": "Integrate content_hash, field_hashes, content_version, and last_certified_at into the audit workflow. Implement change_propagation_rules for scoped re-audit decisions.",
+      "dependencies": ["Phase 3"],
+      "deliverables": [
+        "Pre-audit scanner: reads pack files, computes hash diff against baseline, identifies changed items",
+        "Change classifier: maps field_hash changes to change_propagation_rules → audit scope",
+        "Skip-log: records every skipped item with content_hash, baseline reference, and timestamp",
+        "Scheduled full re-audit: every 10th session, all items re-audited regardless of delta status"
+      ],
+      "estimated_sessions": 2,
+      "blocking": false
+    },
+    {
+      "phase": 5,
+      "name": "Continuous Monitoring + Baseline Recapture",
+      "description": "After each certification wave, recapture content_hash baselines for changed items. The delta-review system is self-maintaining: only items whose content_version incremented need new baselines.",
+      "dependencies": ["Phase 4"],
+      "deliverables": [
+        "Per-session baseline update: re-hash only items with incremented content_version",
+        "CURRENT_BASELINES.md update: now includes per-pack hash + per-section changed-item-count",
+        "T0/Tmid/Tend checkpoint integration per AGENTS.md §13.1",
+        "Full re-audit scheduler (every 10th session)"
+      ],
+      "estimated_sessions": "Ongoing — integrated into each certification session startup"
+    }
+  ],
+  "total_implementation_effort": {
+    "prerequisite_phases_0_to_3": "14-19 sessions before delta-review can be activated",
+    "delta_review_activation_phase_4": "2 sessions",
+    "total_to_activation": "16-21 sessions",
+    "break_even_point": "13 sessions (at 17 sessions for Domain E completion per S309 expected baseline, delta-review could reduce to 6-8 sessions — savings of 9-11 sessions. Break-even occurs after ~2 certification programs.)",
+    "note": "The 16-21 session upfront investment is primarily PHASE0B primary ledger completion (10-15 sessions), which is independently valuable regardless of delta-review — it closes the 81% verification gap that exists today."
+  },
+  "recommendation": "IMPLEMENT — PHASED ROLLOUT WITH HARD PREREQUISITES. The evidence is conclusive: 70-90% of items passing through any certification wave are unchanged from the prior wave, yet every wave re-audits everything. The S318 evidence of 4-wave re-audit for 40 items (75% redundant), the S802 evidence of full-pack re-audit for single-field edits, and the PHASE0B evidence of 81% unverified Certified items all point to the same conclusion: the current 'audit everything every time' model is the single largest source of wasted audit effort. However, delta-review cannot be activated until three hard prerequisites are satisfied: (1) DL-019 file-lock protocol prevents concurrent-write data loss, (2) content_hash infrastructure is built and validated, and (3) PHASE0B primary ledger completion provides the initial certification baseline. The 16-21 session upfront investment is substantial but unavoidable — skipping any prerequisite would make content_hash-based delta-review untrustworthy and potentially introduce silent certification drift (items marked 'no change needed' that actually changed due to concurrent writes). The 70-80% time savings per certification wave post-activation (from 7.5 hours to 1.7 hours per 150-item wave) justifies the investment. Recommend Phase 0 (file-lock protocol) begin immediately, concurrent with Phase 1 feasibility prototype (content_hash on a single pack to validate the canonical serialization format)."
+}

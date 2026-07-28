@@ -1,0 +1,134 @@
+{
+  "audit": "SESSION803_GOVERNANCE_PRESERVATION_AUDIT",
+  "agent": "Agent V — Governance Preservation Audit",
+  "timestamp": "2026-07-26T19:30:00Z",
+  "verdict": "PASS WITH GOVERNANCE CONCERNS",
+
+  "checks": {
+    "1_correctchoice_integrity": {
+      "status": "FAIL — governance concern",
+      "detail": "P1-E-056 CorrectChoice changed from B to D. This was the ONLY CC change across all 3 packs (Pack A: 1 change, Pack C: 0, Pack D: 0).",
+      "scan_method": "Boundary-aware regex: QuestionID → nearest CorrectChoice per object",
+      "cc_changes": [
+        {
+          "qid": "P1-E-056",
+          "file": "pack_a_corrected.js",
+          "old_cc": "B",
+          "new_cc": "D",
+          "claim": "DL-016 correction to match content block",
+          "finding": "BROKEN — stem is about warehouse manager inventory count w/o oversight; correct answer should be B (segregation risk). New CC=D is wrong for this stem. ExplanationCorrect was completely replaced with access-recertification text (different topic). ExplanationWrong fields also replaced. Stem and Choices unchanged. This is a content-quality regression, not a valid DL-016 fix.",
+          "severity": "HIGH — wrong answer marked correct in a now-Certified item"
+        }
+      ],
+      "other_packs": {
+        "pack_c": "0 CC changes",
+        "pack_d": "0 CC changes"
+      },
+      "unchanged_qids": {
+        "P1-E-055": "CC=C — unchanged (confirmed by direct line inspection)"
+      }
+    },
+
+    "2_scoring_integrity": {
+      "status": "PASS",
+      "app_js_hash": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A",
+      "baseline": "S802 baseline 5A4338C625...",
+      "match": true
+    },
+
+    "3_certification_state_changes": {
+      "status": "CONCERN — P1-E-056 is broken + count discrepancy",
+      "pack_a": {
+        "certified_before": 481,
+        "certified_after": 482,
+        "delta": "+1 (P1-E-056: Archived → Certified)",
+        "archived_before": 19,
+        "archived_after": 18,
+        "delta": "-1"
+      },
+      "pack_c": {
+        "certified_before": 350,
+        "certified_after": 350,
+        "delta": "0",
+        "archived_before": 56,
+        "archived_after": 112,
+        "delta": "+56",
+        "unprocessed_before": 94,
+        "unprocessed_after": 38,
+        "delta": "-56",
+        "section_f_transitions": "56 items: Section F, Unprocessed → Archived"
+      },
+      "pack_d": {
+        "certified_before": 350,
+        "certified_after": 350,
+        "delta": "0",
+        "archived_before": 57,
+        "archived_after": 111,
+        "delta": "+54",
+        "unprocessed_before": 93,
+        "unprocessed_after": 39,
+        "delta": "-54",
+        "section_f_transitions": "54 items: Section F, Unprocessed → Archived"
+      },
+      "claimer_discrepancy": {
+        "claimed": "109 Section F items Unprocessed → Archived",
+        "actual": "110 (56 Pack C + 54 Pack D)",
+        "delta": "+1 over claim"
+      }
+    },
+
+    "4_backup_protocol": {
+      "status": "PASS",
+      "backups": [
+        { "file": "pack_a_corrected.js.bak-20260726183716", "size": 1820374 },
+        { "file": "pack_c_corrected.js.bak-20260726183716", "size": 1716975 },
+        { "file": "pack_d_corrected.js.bak-20260726183716", "size": 1764262 }
+      ],
+      "all_nonzero": true
+    },
+
+    "5_governance_guard": {
+      "status": "PASS",
+      "test_suite": "scripts/test_governance_guard.js",
+      "result": "20 PASS, 0 FAIL"
+    },
+
+    "6_qid_count_preservation": {
+      "status": "PASS",
+      "pack_a": "500 → 500 (unchanged)",
+      "pack_c": "500 → 500 (unchanged)",
+      "pack_d": "500 → 500 (unchanged)"
+    }
+  },
+
+  "governance_concerns": [
+    {
+      "id": "GC-803-001",
+      "severity": "HIGH",
+      "description": "P1-E-056 BROKEN — CC changed from B to D but stem is about warehouse manager inventory count (correct answer should be B). ExplanationCorrect now describes access recertification (different topic entirely). Stem and Choices unchanged. This Certified item will present wrong-answer feedback to learners.",
+      "recommendation": "Immediate re-verification of P1-E-056. Either revert CC to B with inventory-count explanation, or update stem/choices to match access-recertification topic."
+    },
+    {
+      "id": "GC-803-002",
+      "severity": "LOW",
+      "description": "Section F archival count discrepancy: user claimed 109 items, actual count is 110 (56 Pack C + 54 Pack D).",
+      "recommendation": "Determine whether this is a one-off counting error or a QID that should not have been archived."
+    },
+    {
+      "id": "GC-803-003",
+      "severity": "INFORMATIONAL",
+      "description": "P1-E-056 CC change was incorrectly attributed to P1-E-055 by a regex forward-scan due to the dual-block architecture (CC positioned before QuestionID within the same object). This is a DL-029 pattern scan artifact. The real change is on P1-E-056, not P1-E-055."
+    }
+  ],
+
+  "unrelated_packs_status": {
+    "pack_b": "Not in S803 scope — 0 changes claimed, 0 changes verified",
+    "pack_e": "Not in S803 scope — 0 changes claimed, 0 changes verified"
+  },
+
+  "methodology_notes": {
+    "correctchoice_extraction": "Boundary-aware dual-occurrence scan: for each QuestionID, searched ±2500 char window around each occurrence (metadata block first, content block second). Verified via direct line-level inspection.",
+    "question_state_counting": "First-occurrence match per QuestionID (metadata block) in single-architecture packs (C/D); single-occurrence match in dual-architecture Pack A.",
+    "pack_architecture": "Pack A = dual-block (QuestionID appears twice per item: metadata + content). Packs C/D = single-block (QuestionID appears once). Packs B/E = not in S803 scope."
+  }
+}

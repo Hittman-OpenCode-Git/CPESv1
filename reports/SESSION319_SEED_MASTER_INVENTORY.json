@@ -1,0 +1,162 @@
+{
+  "session": "S319",
+  "title": "Seed Master Inventory — Domain E Certification Wave 1",
+  "generated": "2026-07-27",
+  "analyst": "Agents AA+B — Duplicate Prevention + Inventory Verification",
+  "predecessor": "SESSION809_SEED_INVENTORY.json",
+  "purpose": "Authoritative seed inventory with live-file verification, wave assignment, and remediation tracking. Cross-referenced against pack_c_corrected.js and pack_d_corrected.js live state.",
+
+  "governance_baseline": {
+    "certified_total": 2221,
+    "domain_e_certified": 238,
+    "domain_e_seeds": 38,
+    "domain_e_denominator": 359,
+    "governance_guard": "27/27 PASS",
+    "t0_hash_match": "13/15 match (pack_a pre-existing S805 drift, pack_e S808 authorized)"
+  },
+
+  "live_verification": {
+    "verification_date": "2026-07-27",
+    "method": "Select-String per QID against pack_c_corrected.js + pack_d_corrected.js",
+    "all_38_present": true,
+    "all_38_unprocessed": true,
+    "collision_free": true,
+    "dual_presence_expected": [
+      {"qid": "P1-EC-020", "files": ["pack_c_corrected.js", "pack_e_corrected.js"], "note": "Replacement R02 clone in Pack E — dual-presence is expected (seed vs replacement)"},
+      {"qid": "P1-EC-041", "files": ["pack_c_corrected.js", "pack_e_corrected.js"], "note": "Replacement R07 clone in Pack E"},
+      {"qid": "P1-EC-060", "files": ["pack_c_corrected.js", "pack_e_corrected.js"], "note": "Replacement R10 clone in Pack E"},
+      {"qid": "P1-ED-001", "files": ["pack_d_corrected.js", "pack_e_corrected.js"], "note": "Replacement R04 clone in Pack E"}
+    ],
+    "zero_unexpected_collisions": true,
+    "duplicate_prevention_gate": "PASS"
+  },
+
+  "wave_strategy": {
+    "total_seeds": 38,
+    "waves": 3,
+    "strategy_rationale": "Items prioritized by remediation effort (EW slots to fill), DL-013 contamination severity, and blueprint coverage criticality. Wave 1 = lowest remediation effort + highest learner impact. Wave 3 = highest remediation effort.",
+
+    "wave_1": {
+      "label": "Wave 1 — Quick Wins (Lowest Remediation Effort)",
+      "seeds": 14,
+      "criteria": "1-2 empty EW slots, no DL-013 boilerplate, EC score ≥6/10",
+      "target_session": "S320-S321",
+      "pack_c": [
+        {"qid": "P1-EC-021", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-EC-024", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-EC-025", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-EC-028", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-EC-040", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-EC-041", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-EC-049", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-EC-052", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-EC-060", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-EC-061", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-EC-072", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false}
+      ],
+      "pack_d": [
+        {"qid": "P1-ED-025", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 6, "has_boilerplate": false},
+        {"qid": "P1-ED-064", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-ED-073", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 8, "has_boilerplate": false, "note": "Best item in pool — minimal remediation"}
+      ],
+      "total_empty_ew": 14,
+      "total_dl013_slots": 0,
+      "avg_ec_score": 7.7
+    },
+
+    "wave_2": {
+      "label": "Wave 2 — Moderate Remediation",
+      "seeds": 14,
+      "criteria": "2-3 empty EW slots, no DL-013 boilerplate, EC score ≥5/10",
+      "target_session": "S322-S323",
+      "pack_c": [
+        {"qid": "P1-EC-004", "cc": "D", "empty_ew": 2, "dl013": 0, "ec_score": 5, "has_boilerplate": false},
+        {"qid": "P1-EC-008", "cc": "D", "empty_ew": 2, "dl013": 0, "ec_score": 9, "has_boilerplate": false},
+        {"qid": "P1-EC-014", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 4, "has_boilerplate": false, "note": "Weak EC — needs substantial enrichment"},
+        {"qid": "P1-EC-020", "cc": "D", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-EC-022", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-EC-023", "cc": "C", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-EC-031", "cc": "C", "empty_ew": 2, "dl013": 0, "ec_score": 5, "has_boilerplate": false},
+        {"qid": "P1-EC-066", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 6, "has_boilerplate": false}
+      ],
+      "pack_d": [
+        {"qid": "P1-ED-001", "cc": "A", "empty_ew": 1, "dl013": 0, "ec_score": 7, "has_boilerplate": false, "note": "Only 1 empty EW but critical metadata issues (Difficult/2 mismatch)"},
+        {"qid": "P1-ED-010", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-ED-014", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-ED-028", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 7, "has_boilerplate": false, "note": "Critical metadata: Moderate/4 mismatch — escalated for difficulty fix"},
+        {"qid": "P1-ED-035", "cc": "C", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-ED-042", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false}
+      ],
+      "total_empty_ew": 26,
+      "total_dl013_slots": 0,
+      "avg_ec_score": 6.8
+    },
+
+    "wave_3": {
+      "label": "Wave 3 — Deep Remediation (DL-013 Contaminated + Weak EC)",
+      "seeds": 10,
+      "criteria": "DL-013 boilerplate present, weakest EC scores, highest remediation per-item",
+      "target_session": "S324-S325",
+      "pack_c": [
+        {"qid": "P1-EC-004", "note": "Already in Wave 2"}
+      ],
+      "pack_d": [
+        {"qid": "P1-ED-016", "cc": "D", "empty_ew": 1, "dl013": 2, "ec_score": 5, "has_boilerplate": true, "note": "DOUBLE-BLOCKER: EWB+EWC truncated boilerplate, EW_A empty, EC weak"},
+        {"qid": "P1-ED-036", "cc": "D", "empty_ew": 1, "dl013": 2, "ec_score": 3, "has_boilerplate": true, "note": "TRIPLE-BLOCKER: weakest EC in pool, EWB+EWC boilerplate, EW_A empty"},
+        {"qid": "P1-ED-046", "cc": "B", "empty_ew": 2, "dl013": 1, "ec_score": 5, "has_boilerplate": true, "note": "DOUBLE-BLOCKER: EWD boilerplate, EW_A+EW_C empty"},
+        {"qid": "P1-ED-051", "cc": "C", "empty_ew": 2, "dl013": 1, "ec_score": 6, "has_boilerplate": true, "note": "DOUBLE-BLOCKER: EWB boilerplate, EW_A+EW_D empty"},
+        {"qid": "P1-ED-075", "cc": "C", "empty_ew": 1, "dl013": 2, "ec_score": 4, "has_boilerplate": true, "note": "TRIPLE-BLOCKER: EWB+EWD boilerplate, EW_A empty, worst-covered item in pool"},
+        {"qid": "P1-ED-058", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 8, "has_boilerplate": false, "note": "Strong EC but 2 empty EW — included for metadata fix"},
+        {"qid": "P1-ED-066", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false, "note": "2 empty EW + anomalous Easy/4 metadata"},
+        {"qid": "P1-ED-071", "cc": "C", "empty_ew": 2, "dl013": 0, "ec_score": 8, "has_boilerplate": false},
+        {"qid": "P1-ED-072", "cc": "D", "empty_ew": 1, "dl013": 0, "ec_score": 7, "has_boilerplate": false},
+        {"qid": "P1-ED-074", "cc": "B", "empty_ew": 2, "dl013": 0, "ec_score": 7, "has_boilerplate": false}
+      ],
+      "total_empty_ew": 17,
+      "total_dl013_slots": 8,
+      "avg_ec_score": 5.9,
+      "dl013_contaminated_items": ["P1-ED-016", "P1-ED-036", "P1-ED-046", "P1-ED-051", "P1-ED-075"]
+    }
+  },
+
+  "remediation_totals": {
+    "total_empty_ew": 53,
+    "total_dl013_boilerplate_slots": 8,
+    "total_ec_enrichment_needed": 12,
+    "total_difficulty_calibration_fixes": 14,
+    "total_cognitive_level_recalibrations": 26,
+    "estimated_batches": "5 (max 28 per batch per governance-guard Rule 5)",
+    "batches_breakdown": [
+      {"batch": "1A", "wave": 1, "qids": 11, "type": "EW fills only (Pack C quick-wins)", "fields": "~11 EW", "estimated_effort": "1 session"},
+      {"batch": "1B", "wave": 1, "qids": 3, "type": "EW fills + metadata (Pack D quick-wins)", "fields": "~3 EW + 3 metadata", "estimated_effort": "1 session"},
+      {"batch": "2A", "wave": 2, "qids": 8, "type": "Pack C moderate (2 EW each + EC enrichment)", "fields": "~16 EW + 2 EC enriched", "estimated_effort": "1 session"},
+      {"batch": "2B", "wave": 2, "qids": 6, "type": "Pack D moderate (2 EW each + metadata)", "fields": "~10 EW + 4 metadata", "estimated_effort": "1 session"},
+      {"batch": "3", "wave": 3, "qids": 10, "type": "Deep remediation (DL-013 rewrites + EC enrichment + metadata)", "fields": "~15 EW + 8 DL-013 rewrite + 4 EC enriched + 7 metadata", "estimated_effort": "1-2 sessions"}
+    ]
+  },
+
+  "blueprint_coverage": {
+    "los_areas_covered": "12/13 (92.3%)",
+    "los_details": {
+      "E.1.a": {"label": "Risk Assessment", "seed_count": 3, "qids": ["P1-EC-031", "P1-ED-042", "P1-ED-016"]},
+      "E.1.b": {"label": "Internal Control Framework (COSO)", "seed_count": 2, "qids": ["P1-EC-008", "P1-EC-060"]},
+      "E.1.c": {"label": "Control Environment", "seed_count": 3, "qids": ["P1-EC-049", "P1-EC-060", "P1-ED-046"]},
+      "E.1.d": {"label": "Segregation of Duties", "seed_count": 8, "qids": ["P1-EC-004", "P1-EC-021", "P1-EC-066", "P1-ED-074", "P1-ED-075", "P1-EC-022", "P1-EC-025", "P1-ED-064"]},
+      "E.1.e": {"label": "Control Activities", "seed_count": 6, "qids": ["P1-EC-020", "P1-EC-024", "P1-EC-025", "P1-ED-014", "P1-ED-025", "P1-ED-028"]},
+      "E.1.f": {"label": "Information & Communication", "seed_count": 1, "qids": ["P1-EC-023"], "status": "THIN — only 1 seed"},
+      "E.1.g": {"label": "Monitoring", "seed_count": 2, "qids": ["P1-ED-028", "P1-ED-073"]},
+      "E.1.h": {"label": "Fraud Risk", "seed_count": 3, "qids": ["P1-EC-014", "P1-EC-041", "P1-ED-072"]},
+      "E.1.i": {"label": "IT Controls", "seed_count": 4, "qids": ["P1-EC-023", "P1-EC-040", "P1-ED-036", "P1-ED-051"]},
+      "E.1.j": {"label": "Technology Controls & Change Management", "seed_count": 2, "qids": ["P1-ED-036", "P1-ED-071"]},
+      "E.1.GAP": {"label": "Internal Auditing", "seed_count": 0, "status": "GAP — no seed coverage"}
+    },
+    "concentration_risk": "SoD over-concentration (8 seeds = 21%) — flag for psychometric balancing"
+  },
+
+  "cross_reference": {
+    "s809_audit": "SESSION809_SEED_INVENTORY.json — matches live verification",
+    "s809_certification": "SESSION809_CERTIFICATION_RESULTS.json — all 38 HOLD reaffirmed",
+    "s809_quality_gate": "SESSION809_QUALITY_GATE_AUDIT.json — Gate 2 FAIL confirmed",
+    "governance_guard": "27/27 PASS — no blocking rules triggered"
+  }
+}

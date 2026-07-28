@@ -1,0 +1,14 @@
+{
+  "session": "SESSION056",
+  "phase": 5,
+  "total_replaced": 20,
+  "remaining_archived": {"EC": 16, "ED": 16, "total": 32},
+  "previously_used": ["S899(20)","S50(20)","S51(20)"],
+  "cumulative_replaced": 80,
+  "batch_details": [
+    {"batch": 1, "pack": "C", "qids": ["P1-EC-027","P1-EC-032","P1-EC-033","P1-EC-036","P1-EC-037"]},
+    {"batch": 2, "pack": "D", "qids": ["P1-ED-019","P1-ED-022","P1-ED-024","P1-ED-027","P1-ED-029"]},
+    {"batch": 3, "pack": "C", "qids": ["P1-EC-042","P1-EC-043","P1-EC-045","P1-EC-046","P1-EC-047"]},
+    {"batch": 4, "pack": "D", "qids": ["P1-ED-030","P1-ED-032","P1-ED-034","P1-ED-037","P1-ED-039"]}
+  ]
+}

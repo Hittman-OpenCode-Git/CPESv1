@@ -1,0 +1,1868 @@
+{
+  "contractId": "ADMIN-DATA-CONTRACT-v1.0",
+  "title": "May Administration Portal — Data Contract",
+  "version": "1.0.0",
+  "status": "DESIGN",
+  "authority": "SESSION252 Board H",
+  "generatedTimestamp": "2026-07-27T23:00:00.000Z",
+  "appliesTo": "May Administration Portal (CMA Part 1 Exam Simulator Admin Interface)",
+
+  "preamble": {
+    "purpose": "Define the complete data contract for all admin-facing views in the May Administration Portal. This contract specifies what data each role can see, how it is fetched, what operations are permitted, and how views relate to each other. It is a design document — no implementation code.",
+    "scope": "Five admin views covering student management, content investigation, content administration, governance oversight, and system administration. All views operate on the project's existing data artifacts (pack files, registries, pipeline outputs, governance records).",
+    "context": {
+      "totalMCQs": 2540,
+      "totalPacks": 5,
+      "packECount": 540,
+      "standardPackCount": 500,
+      "totalCertified": 2298,
+      "certifiedPct": 90.5,
+      "totalCases": 75,
+      "totalCaseItems": "~420",
+      "enhancedCasesCertified": 15,
+      "enhancedCaseItemsCertified": 90,
+      "totalRecordedSessions": 98,
+      "totalChallenges": 35,
+      "totalRecommendations": "~67",
+      "defectLibrarySize": 36,
+      "governanceRules": 5,
+      "guardTests": 27,
+      "runtimeBaselineFiles": 13,
+      "pipelineOutputFiles": 15
+    }
+  },
+
+  "authenticationAndAuthorization": {
+    "model": "Role-Based Access Control (RBAC)",
+    "roles": [
+      {
+        "roleId": "ROLE_SUPPORT",
+        "name": "Support Staff / Instructor",
+        "description": "Views student progress and session history. Cannot modify content.",
+        "inherits": [],
+        "views": ["View1-Student"],
+        "permissionProfile": "READ_ONLY_STUDENT"
+      },
+      {
+        "roleId": "ROLE_INVESTIGATOR",
+        "name": "Content Investigator / QA",
+        "description": "Investigates reported issues, tracks defect resolution, manages challenge queue.",
+        "inherits": ["ROLE_SUPPORT"],
+        "views": ["View1-Student", "View2-Investigator"],
+        "permissionProfile": "INVESTIGATOR"
+      },
+      {
+        "roleId": "ROLE_CONTENT_ADMIN",
+        "name": "Content Author / Editor",
+        "description": "Manages question bank, tracks content quality, plans and executes remediation.",
+        "inherits": ["ROLE_INVESTIGATOR"],
+        "views": ["View1-Student", "View2-Investigator", "View3-ContentAdmin"],
+        "permissionProfile": "CONTENT_ADMIN"
+      },
+      {
+        "roleId": "ROLE_GOVERNANCE",
+        "name": "Governance Board / Release Manager",
+        "description": "Monitors compliance, manages certification pipeline, oversees risk.",
+        "inherits": ["ROLE_CONTENT_ADMIN"],
+        "views": ["View1-Student", "View2-Investigator", "View3-ContentAdmin", "View4-Governance"],
+        "permissionProfile": "GOVERNANCE"
+      },
+      {
+        "roleId": "ROLE_SYSADMIN",
+        "name": "Platform Operator",
+        "description": "Full system access. Monitors health, data integrity, file state.",
+        "inherits": ["ROLE_GOVERNANCE"],
+        "views": ["View1-Student", "View2-Investigator", "View3-ContentAdmin", "View4-Governance", "View5-SystemAdmin"],
+        "permissionProfile": "FULL_ACCESS"
+      }
+    ],
+    "permissionProfiles": {
+      "READ_ONLY_STUDENT": {
+        "canRead": true,
+        "canCreate": false,
+        "canUpdate": false,
+        "canDelete": false,
+        "canExport": false,
+        "canExecuteRemediation": false,
+        "canCertify": false
+      },
+      "INVESTIGATOR": {
+        "canRead": true,
+        "canCreate": true,
+        "canUpdate": true,
+        "canDelete": false,
+        "canExport": true,
+        "canExecuteRemediation": false,
+        "canCertify": false,
+        "creatableEntities": ["investigations", "findings", "investigationNotes"],
+        "updatableEntities": ["investigationStatus", "challengeStatus", "defectFlags"]
+      },
+      "CONTENT_ADMIN": {
+        "canRead": true,
+        "canCreate": true,
+        "canUpdate": true,
+        "canDelete": false,
+        "canExport": true,
+        "canExecuteRemediation": true,
+        "canCertify": true,
+        "creatableEntities": ["remediationBatches", "contentRevisions", "certificationBatches"],
+        "updatableEntities": ["questionContent", "explanationFields", "difficultyLabels", "metadataFields"]
+      },
+      "GOVERNANCE": {
+        "canRead": true,
+        "canCreate": true,
+        "canUpdate": true,
+        "canDelete": false,
+        "canExport": true,
+        "canExecuteRemediation": true,
+        "canCertify": true,
+        "creatableEntities": ["governanceEvents", "policyWaivers", "baselineSnapshots"],
+        "updatableEntities": ["questionState", "certificationStatus", "blocklistEntries"]
+      },
+      "FULL_ACCESS": {
+        "canRead": true,
+        "canCreate": true,
+        "canUpdate": true,
+        "canDelete": true,
+        "canExport": true,
+        "canExecuteRemediation": true,
+        "canCertify": true,
+        "creatableEntities": ["all"],
+        "updatableEntities": ["all"],
+        "deletableEntities": ["staleArtifacts", "corruptedSessions"]
+      }
+    },
+    "authenticationMethods": {
+      "primary": "Local admin API key (HMAC-SHA256 signed tokens)",
+      "sessionDuration": "4 hours",
+      "refreshPolicy": "Re-authenticate after session expiry",
+      "auditLogging": "All role mutations logged to governance_event_registry with actor role + timestamp"
+    }
+  },
+
+  "views": {
+
+    "View1-Student": {
+      "viewId": "VIEW_STUDENT",
+      "title": "Student View",
+      "purpose": "Understand individual student progress, question exposure, session history, challenges filed, and recommendations received. Provides a complete narrative of a student's experience in the simulator.",
+      "targetRoles": ["ROLE_SUPPORT", "ROLE_INVESTIGATOR", "ROLE_CONTENT_ADMIN", "ROLE_GOVERNANCE", "ROLE_SYSADMIN"],
+      "permissions": "READ-ONLY for all roles. ROLE_SUPPORT lowest; higher roles inherit automatically.",
+      "dataSources": [
+        {
+          "source": "session_registry.json",
+          "path": "scripts/output/session_registry.json",
+          "refresh": "per session close (near-real-time from app.js localStorage on submit)"
+        },
+        {
+          "source": "session_intelligence.json",
+          "path": "scripts/output/session_intelligence.json",
+          "refresh": "per session close"
+        },
+        {
+          "source": "challenge_registry.json",
+          "path": "scripts/output/challenge_registry.json",
+          "refresh": "on challenge submission"
+        },
+        {
+          "source": "recommendation_registry.json",
+          "path": "scripts/output/recommendation_registry.json",
+          "refresh": "on recommendation generation"
+        },
+        {
+          "source": "question_health.json",
+          "path": "scripts/output/question_health.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "domain_progress.json",
+          "path": "scripts/output/domain_progress.json",
+          "refresh": "per session close"
+        },
+        {
+          "source": "question_to_session_index.json",
+          "path": "scripts/output/question_to_session_index.json",
+          "refresh": "per session close"
+        },
+        {
+          "source": "session_to_question_index.json",
+          "path": "scripts/output/session_to_question_index.json",
+          "refresh": "per session close"
+        },
+        {
+          "source": "SESSION252_STUDENT_EXPOSURE_SPEC.json",
+          "path": "scripts/output/SESSION252_STUDENT_EXPOSURE_SPEC.json",
+          "refresh": "per session close"
+        }
+      ],
+      "fieldList": [
+        {
+          "field": "studentProfile",
+          "type": "object",
+          "description": "Student identity and metadata (anon-keyed).",
+          "children": [
+            {"field": "studentId", "type": "string", "format": "USER-NNN", "example": "USER-100"},
+            {"field": "registeredDate", "type": "ISO8601", "description": "First session date"},
+            {"field": "totalSessions", "type": "integer", "example": 12},
+            {"field": "totalQuestionsAttempted", "type": "integer", "example": 347},
+            {"field": "totalTimeMinutes", "type": "integer", "example": 482}
+          ]
+        },
+        {
+          "field": "sessionHistory",
+          "type": "array<sessionRecord>",
+          "description": "All completed sessions with scores, timing, domain breakdown.",
+          "children": [
+            {"field": "sessionId", "type": "string", "example": "S89B"},
+            {"field": "date", "type": "ISO8601"},
+            {"field": "mode", "type": "enum", "values": ["PRACTICE", "EXAM", "REVIEW"]},
+            {"field": "score", "type": "number", "min": 0, "max": 100},
+            {"field": "questionsAnswered", "type": "integer"},
+            {"field": "questionsCorrect", "type": "integer"},
+            {"field": "durationMinutes", "type": "integer"},
+            {"field": "domainScores", "type": "object", "children": [
+              {"field": "A", "type": "number"},
+              {"field": "B", "type": "number"},
+              {"field": "C", "type": "number"},
+              {"field": "D", "type": "number"},
+              {"field": "E", "type": "number"},
+              {"field": "F", "type": "number"}
+            ]},
+            {"field": "questionIds", "type": "array<string>"}
+          ]
+        },
+        {
+          "field": "topicPerformance",
+          "type": "object",
+          "description": "Rollup of accuracy and speed per Topic tag, derived from session_to_question_index aggregations.",
+          "children": [
+            {"field": "topic", "type": "string", "example": "Cash collections"},
+            {"field": "domain", "type": "string", "enum": ["A","B","C","D","E","F"]},
+            {"field": "questionsAttempted", "type": "integer"},
+            {"field": "accuracyPct", "type": "number", "min": 0, "max": 100},
+            {"field": "avgTimeSeconds", "type": "number"},
+            {"field": "streakCorrect", "type": "integer"},
+            {"field": "streakIncorrect", "type": "integer"}
+          ]
+        },
+        {
+          "field": "questionExposureMatrix",
+          "type": "array<exposureRecord>",
+          "description": "Every question exposed to this student, with outcome.",
+          "children": [
+            {"field": "qid", "type": "string", "pattern": "P1[A-E]-[A-F]R?-\\d{3}"},
+            {"field": "pack", "type": "string", "enum": ["pack_a","pack_b","pack_c","pack_d","pack_e"]},
+            {"field": "section", "type": "string", "enum": ["A","B","C","D","E","F"]},
+            {"field": "questionState", "type": "string", "description": "Snapshot of question_state at time of delivery"},
+            {"field": "timesDelivered", "type": "integer"},
+            {"field": "timesCorrect", "type": "integer"},
+            {"field": "lastSeenDate", "type": "ISO8601"},
+            {"field": "lastSessionId", "type": "string"},
+            {"field": "topic", "type": "string"},
+            {"field": "difficulty", "type": "string", "enum": ["Easy","Moderate-Easy","Moderate","Difficult","Very Difficult"]},
+            {"field": "cognitiveLevel", "type": "string", "enum": ["Remember","Understand","Apply","Analyze","Evaluate"]}
+          ]
+        },
+        {
+          "field": "challengeHistory",
+          "type": "array<challengeRecord>",
+          "description": "Challenges filed by this student.",
+          "children": [
+            {"field": "challengeId", "type": "string", "format": "CH-XXXXXXXX"},
+            {"field": "qid", "type": "string"},
+            {"field": "type", "type": "string", "enum": ["CONTENT_ERROR","TECHNICAL_ISSUE","ANSWER_DISPUTE","EXPLANATION_ISSUE","AMBIGUITY","OTHER"]},
+            {"field": "status", "type": "string", "enum": ["OPEN","INVESTIGATING","RESOLVED","CLOSED","DISMISSED"]},
+            {"field": "reportedDate", "type": "ISO8601"},
+            {"field": "resolutionType", "type": "string", "nullable": true},
+            {"field": "linkedDefects", "type": "array<string>", "format": "DL-NNN"}
+          ]
+        },
+        {
+          "field": "recommendationsReceived",
+          "type": "array<recommendationRecord>",
+          "description": "Remediation / study recommendations generated for this student.",
+          "children": [
+            {"field": "recommendationId", "type": "string", "format": "REC-XXXXXXXX"},
+            {"field": "sourceScan", "type": "string", "example": "DL-008"},
+            {"field": "type", "type": "string", "enum": ["REMEDIATE","CERTIFY","REVIEW","STUDY_FOCUS"]},
+            {"field": "severity", "type": "string", "enum": ["LOW","MEDIUM","HIGH","CRITICAL"]},
+            {"field": "targetSession", "type": "string"},
+            {"field": "status", "type": "string"}
+          ]
+        }
+      ],
+      "queryPatterns": [
+        {
+          "name": "GetStudentSnapshot",
+          "endpoint": "GET /api/admin/v1/students/{studentId}",
+          "description": "Full student profile with all history, keyed by studentId.",
+          "primaryJoin": "studentId → session_registry, challenge_registry, recommendation_registry"
+        },
+        {
+          "name": "GetStudentSessions",
+          "endpoint": "GET /api/admin/v1/students/{studentId}/sessions",
+          "description": "Session history with pagination.",
+          "queryParams": ["limit", "offset", "sortBy", "sortOrder", "dateFrom", "dateTo"]
+        },
+        {
+          "name": "GetStudentExposure",
+          "endpoint": "GET /api/admin/v1/students/{studentId}/exposure",
+          "description": "Question exposure matrix, filterable by domain/section/outcome.",
+          "queryParams": ["domain", "section", "correctOnly", "incorrectOnly", "limit", "offset"]
+        },
+        {
+          "name": "GetStudentTopicPerformance",
+          "endpoint": "GET /api/admin/v1/students/{studentId}/topics",
+          "description": "Aggregated performance per topic.",
+          "queryParams": ["domain", "minAccuracy", "maxAccuracy"]
+        },
+        {
+          "name": "GetStudentChallenges",
+          "endpoint": "GET /api/admin/v1/students/{studentId}/challenges",
+          "description": "All challenges filed by this student.",
+          "queryParams": ["status", "type"]
+        },
+        {
+          "name": "GetStudentRecommendations",
+          "endpoint": "GET /api/admin/v1/students/{studentId}/recommendations",
+          "description": "All recommendations targeting this student's exposed questions.",
+          "queryParams": ["status", "severity"]
+        },
+        {
+          "name": "SearchStudents",
+          "endpoint": "GET /api/admin/v1/students",
+          "description": "Search student pool by criteria.",
+          "queryParams": ["q", "minSessions", "maxSessions", "minAccuracy", "maxAccuracy", "domain", "limit", "offset"]
+        }
+      ],
+      "uiComponentHints": {
+        "primary": "Student detail dashboard with tabbed navigation",
+        "components": [
+          {"component": "StudentProfileCard", "type": "card", "data": "studentProfile"},
+          {"component": "SessionTimeline", "type": "timeline", "data": "sessionHistory, sorted by date descending"},
+          {"component": "TopicPerformanceHeatmap", "type": "heatmap", "data": "topicPerformance, rows=topics, cols=accuracy+count"},
+          {"component": "QuestionExposureTable", "type": "table", "data": "questionExposureMatrix, filterable, sortable, paginated"},
+          {"component": "DomainRadarChart", "type": "radar", "data": "aggregate domainScores across sessions"},
+          {"component": "ChallengeList", "type": "list", "data": "challengeHistory, status-badged"}
+        ],
+        "statePattern": "Single-student drill-down. Entry from search or from Investigator View cross-link."
+      },
+      "relationships": {
+        "toView2": "Challenge detail → opens Investigator View for that QID. Challenge status changes in View2 reflect here.",
+        "toView3": "Question health score visible in exposure matrix → links to Content Admin View for that QID.",
+        "toView4": "If student was delivered a blocked/suspect QID, flag visible here and cross-referenced in Governance View.",
+        "toView5": "Session files backing this data → linked from System Admin View for integrity verification."
+      }
+    },
+
+    "View2-Investigator": {
+      "viewId": "VIEW_INVESTIGATOR",
+      "title": "Investigator View",
+      "purpose": "Provide a complete investigative workspace for content QA: challenge triage, question history deep-dive, defect flagging, recommendation tracking, and investigation lifecycle management.",
+      "targetRoles": ["ROLE_INVESTIGATOR", "ROLE_CONTENT_ADMIN", "ROLE_GOVERNANCE", "ROLE_SYSADMIN"],
+      "permissions": "CREATE investigation records, UPDATE challenge status/investigation status, UPDATE defect flags. Cannot modify question content directly (that requires Content Admin role). READ all linked data.",
+      "dataSources": [
+        {
+          "source": "challenge_registry.json",
+          "path": "scripts/output/challenge_registry.json",
+          "refresh": "on challenge submission"
+        },
+        {
+          "source": "challenge_triage.json",
+          "path": "scripts/output/challenge_triage.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "challenge_to_question.json",
+          "path": "scripts/output/challenge_to_question.json",
+          "refresh": "on challenge link"
+        },
+        {
+          "source": "challenge_to_session.json",
+          "path": "scripts/output/challenge_to_session.json",
+          "refresh": "on challenge link"
+        },
+        {
+          "source": "challenge_to_recommendation.json",
+          "path": "scripts/output/challenge_to_recommendation.json",
+          "refresh": "on recommendation generation"
+        },
+        {
+          "source": "investigation_registry.json",
+          "path": "scripts/output/investigation_registry.json",
+          "refresh": "real-time (on investigation mutation)"
+        },
+        {
+          "source": "question_history.json",
+          "path": "scripts/output/question_history.json",
+          "refresh": "on question write"
+        },
+        {
+          "source": "question_health.json",
+          "path": "scripts/output/question_health.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "question_investigation.json",
+          "path": "scripts/output/question_investigation.json",
+          "refresh": "on investigation creation"
+        },
+        {
+          "source": "recommendation_registry.json",
+          "path": "scripts/output/recommendation_registry.json",
+          "refresh": "on recommendation generation"
+        },
+        {
+          "source": "recommendation_routing.json",
+          "path": "scripts/output/recommendation_routing.json",
+          "refresh": "on recommendation routing"
+        },
+        {
+          "source": "defectLibrary": "knowledge/DEFECT_LIBRARY.md",
+          "path": "knowledge/DEFECT_LIBRARY.md",
+          "refresh": "on defect library update (manual)",
+          "note": "Read-only reference. Defect codes linked to challenge/investigation records."
+        },
+        {
+          "source": "SESSION252_INVESTIGATION_REGISTRY_SPEC.json",
+          "path": "scripts/output/SESSION252_INVESTIGATION_REGISTRY_SPEC.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "SESSION252_INVESTIGATION_API_SPEC.json",
+          "path": "scripts/output/SESSION252_INVESTIGATION_API_SPEC.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "SESSION252_CHALLENGE_TRIAGE_SPEC.json",
+          "path": "scripts/output/SESSION252_CHALLENGE_TRIAGE_SPEC.json",
+          "refresh": "per spec generation"
+        }
+      ],
+      "fieldList": [
+        {
+          "field": "challengeQueue",
+          "type": "array<challenge>",
+          "description": "All challenges grouped by status (OPEN | INVESTIGATING | RESOLVED | CLOSED | DISMISSED). Triage priority computed.",
+          "children": [
+            {"field": "challengeId", "type": "string", "format": "CH-XXXXXXXX"},
+            {"field": "status", "type": "string", "enum": ["OPEN","INVESTIGATING","RESOLVED","CLOSED","DISMISSED"]},
+            {"field": "type", "type": "string", "enum": ["CONTENT_ERROR","TECHNICAL_ISSUE","ANSWER_DISPUTE","EXPLANATION_ISSUE","AMBIGUITY","OTHER"]},
+            {"field": "priority", "type": "string", "enum": ["LOW","MEDIUM","HIGH","CRITICAL"]},
+            {"field": "qid", "type": "string"},
+            {"field": "studentId", "type": "string"},
+            {"field": "reportedDate", "type": "ISO8601"},
+            {"field": "assignedTo", "type": "string", "nullable": true},
+            {"field": "linkedInvestigations", "type": "array<string>", "format": "INV-YYYYMMDD-NNN"},
+            {"field": "linkedDefects", "type": "array<string>", "format": "DL-NNN"},
+            {"field": "linkedRecommendations", "type": "array<string>", "format": "REC-XXXXXXXX"},
+            {"field": "linkedSessions", "type": "array<string>"}
+          ]
+        },
+        {
+          "field": "investigationDetail",
+          "type": "object",
+          "description": "Full investigation record for a specific QID or challenge.",
+          "children": [
+            {"field": "id", "type": "string", "format": "INV-YYYYMMDD-NNN"},
+            {"field": "title", "type": "string"},
+            {"field": "type", "type": "string", "enum": ["CHALLENGE","DEFECT","RECOMMENDATION","AUDIT","AD_HOC"]},
+            {"field": "status", "type": "string", "enum": ["OPEN","INVESTIGATING","RESOLVED","CLOSED","DISMISSED"]},
+            {"field": "priority", "type": "integer", "min": 0, "max": 100, "description": "Computed urgency score"},
+            {"field": "relatedQids", "type": "array<string>"},
+            {"field": "relatedChallenges", "type": "array<string>"},
+            {"field": "relatedDefects", "type": "array<string>"},
+            {"field": "relatedRecommendations", "type": "array<string>"},
+            {"field": "relatedSessions", "type": "array<string>"},
+            {"field": "relatedGovernanceEvents", "type": "array<string>", "format": "GE-NNNN"},
+            {"field": "relatedInvestigations", "type": "array<string>"},
+            {"field": "createdDate", "type": "ISO8601"},
+            {"field": "updatedDate", "type": "ISO8601"},
+            {"field": "assignedTo", "type": "string"},
+            {"field": "findings", "type": "array<finding>", "children": [
+              {"field": "timestamp", "type": "ISO8601"},
+              {"field": "author", "type": "string"},
+              {"field": "finding", "type": "string"},
+              {"field": "severity", "type": "string", "enum": ["LOW","MEDIUM","HIGH","CRITICAL"]}
+            ]},
+            {"field": "resolution", "type": "string", "nullable": true},
+            {"field": "resolutionType", "type": "string", "nullable": true, "enum": ["CONFIRMED_DEFECT","CONFIRMED_VALID","INCONCLUSIVE","DUPLICATE","NO_ACTION"]},
+            {"field": "resolutionDate", "type": "ISO8601", "nullable": true},
+            {"field": "resolutionSession", "type": "string", "nullable": true}
+          ]
+        },
+        {
+          "field": "questionDeepDive",
+          "type": "object",
+          "description": "Complete forensic timeline for a single QID. Cross-references all linked data.",
+          "children": [
+            {"field": "qid", "type": "string"},
+            {"field": "defectCodes", "type": "array<string>", "description": "All defect library entries affecting this QID"},
+            {"field": "challengeHistory", "type": "array<challenge>", "description": "All challenges filed against this QID"},
+            {"field": "investigationHistory", "type": "array<investigation>", "description": "All investigations involving this QID"},
+            {"field": "recommendationHistory", "type": "array<recommendation>", "description": "All recommendations targeting this QID"},
+            {"field": "sessionExposure", "type": "object", "description": "How many sessions have delivered this QID, student outcomes, challenge rate"},
+            {"field": "contentTimeline", "type": "array<contentChange>", "description": "All content edits to this QID with before/after diffs", "children": [
+              {"field": "sessionId", "type": "string"},
+              {"field": "date", "type": "ISO8601"},
+              {"field": "changeType", "type": "string", "enum": ["CORRECTION","REMEDIATION","CERTIFICATION","STATE_CHANGE","METADATA_UPDATE"]},
+              {"field": "diffSummary", "type": "string"}
+            ]},
+            {"field": "governanceEvents", "type": "array<string>", "description": "Governance events linked to this QID"},
+            {"field": "healthScore", "type": "number", "min": 0, "max": 100},
+            {"field": "healthTier", "type": "string", "enum": ["GOLD STANDARD","EXAM READY","ACCEPTABLE","NEEDS ATTENTION","REJECT"]},
+            {"field": "structuralFlags", "type": "array<string>"}
+          ]
+        },
+        {
+          "field": "investigationDashboard",
+          "type": "object",
+          "description": "Aggregate metrics for the investigation pipeline.",
+          "children": [
+            {"field": "openInvestigations", "type": "integer"},
+            {"field": "investigatingCount", "type": "integer"},
+            {"field": "resolvedCount", "type": "integer"},
+            {"field": "closedCount", "type": "integer"},
+            {"field": "avgTimeToResolveHours", "type": "number"},
+            {"field": "investigationsByDefect", "type": "object", "description": "Count of investigations per DL-NNN code"},
+            {"field": "investigationsByDomain", "type": "object", "description": "Count per A-F domain"},
+            {"field": "challengeToInvestigationRatio", "type": "number"},
+            {"field": "oldestOpenDate", "type": "ISO8601"}
+          ]
+        }
+      ],
+      "queryPatterns": [
+        {
+          "name": "GetInvestigationQueue",
+          "endpoint": "GET /api/admin/v1/investigations",
+          "description": "Investigation queue sorted by priority, filterable by status/type/assignee.",
+          "queryParams": ["status", "type", "assignedTo", "priorityMin", "domain", "limit", "offset", "sortBy"]
+        },
+        {
+          "name": "GetInvestigation",
+          "endpoint": "GET /api/admin/v1/investigations/{investigationId}",
+          "description": "Full investigation detail with all linked entities."
+        },
+        {
+          "name": "CreateInvestigation",
+          "endpoint": "POST /api/admin/v1/investigations",
+          "description": "Create new investigation from challenge, defect scan, or ad-hoc trigger.",
+          "requestBody": {
+            "type": "string (required)",
+            "relatedQids": "array<string> (required)",
+            "relatedChallenges": "array<string>",
+            "title": "string",
+            "assignedTo": "string"
+          }
+        },
+        {
+          "name": "UpdateInvestigation",
+          "endpoint": "PATCH /api/admin/v1/investigations/{investigationId}",
+          "description": "Update status, add findings, assign investigator, record resolution.",
+          "updatableFields": ["status", "assignedTo", "findings", "resolution", "resolutionType", "priority"]
+        },
+        {
+          "name": "GetQuestionDeepDive",
+          "endpoint": "GET /api/admin/v1/questions/{qid}/deepdive",
+          "description": "Complete forensic timeline for a single QID. The canonical 'what is the full story on QID X?' query.",
+          "primaryJoin": "qid → challenge_registry, investigation_registry, question_history, question_health, recommendation_registry, session_to_question_index"
+        },
+        {
+          "name": "GetChallengesByQID",
+          "endpoint": "GET /api/admin/v1/questions/{qid}/challenges",
+          "description": "All challenges filed against a specific QID."
+        },
+        {
+          "name": "TriageChallenge",
+          "endpoint": "POST /api/admin/v1/challenges/{challengeId}/triage",
+          "description": "Assign priority, link to investigation, update status.",
+          "requestBody": {
+            "status": "string (required)",
+            "priority": "string",
+            "linkedInvestigation": "string"
+          }
+        },
+        {
+          "name": "GetDefectTimeline",
+          "endpoint": "GET /api/admin/v1/defects/{defectId}/timeline",
+          "description": "All challenges, investigations, and remediations linked to a specific defect code (DL-NNN).",
+          "queryParams": ["status", "limit", "offset"]
+        }
+      ],
+      "uiComponentHints": {
+        "primary": "Three-column investigative workspace",
+        "components": [
+          {"component": "ChallengeTriageBoard", "type": "kanban", "data": "challengeQueue, columns=status, cards=challenge summary"},
+          {"component": "InvestigationDetailPanel", "type": "detail-panel", "data": "investigationDetail, collapsible sections"},
+          {"component": "QuestionForensicTimeline", "type": "timeline", "data": "questionDeepDive.contentTimeline, chronological"},
+          {"component": "LinkedEntitiesGraph", "type": "graph", "data": "questionDeepDive, nodes=QID+challenges+investigations+defects+recommendations, edges=relationships"},
+          {"component": "DefectClusterView", "type": "cluster-chart", "data": "grouped by DL-NNN across all investigations"},
+          {"component": "FindingLog", "type": "log", "data": "investigationDetail.findings, chronological, filterable by author"}
+        ],
+        "statePattern": "Dual-context: (1) queue-level triage board, (2) single-investigation or single-QID deep-dive. Context switch via search bar or cross-link click."
+      },
+      "relationships": {
+        "toView1": "Challenges → linked student drill-down. Student exposure visible for QID context.",
+        "toView3": "Defect confirmed → Content Admin View for remediation batch creation. Question content comparison across revisions.",
+        "toView4": "Investigation → linked governance events. Certification-blocking findings → governance alert.",
+        "toView5": "Question content diffs → linked file integrity checks. QID parse validation against source pack files."
+      }
+    },
+
+    "View3-ContentAdmin": {
+      "viewId": "VIEW_CONTENT_ADMIN",
+      "title": "Content Admin View",
+      "purpose": "Manage the question bank, track content quality, plan and execute remediation, and drive certification progress. The primary workspace for content authors and editors.",
+      "targetRoles": ["ROLE_CONTENT_ADMIN", "ROLE_GOVERNANCE", "ROLE_SYSADMIN"],
+      "permissions": "CREATE remediation batches, UPDATE question content and metadata, EXECUTE certification operations. All content mutations must be logged to REVISION_HISTORY.md.",
+      "dataSources": [
+        {
+          "source": "readiness_scoring.json",
+          "path": "scripts/output/readiness_scoring.json",
+          "refresh": "scheduled (hourly) or on-demand regeneration"
+        },
+        {
+          "source": "certification_waves.json",
+          "path": "scripts/output/certification_waves.json",
+          "refresh": "on wave execution"
+        },
+        {
+          "source": "certification_candidates.json",
+          "path": "scripts/output/certification_candidates.json",
+          "refresh": "on readiness scoring regeneration"
+        },
+        {
+          "source": "certification_scan_artifact.json",
+          "path": "scripts/output/certification_scan_artifact.json",
+          "refresh": "on scan execution"
+        },
+        {
+          "source": "work_queue.json",
+          "path": "scripts/output/work_queue.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "remediation_queue.json",
+          "path": "scripts/output/remediation_queue.json",
+          "refresh": "on remediation batch execution"
+        },
+        {
+          "source": "question_health.json",
+          "path": "scripts/output/question_health.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "domain_progress.json",
+          "path": "scripts/output/domain_progress.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "modernization_progress.json",
+          "path": "scripts/output/modernization_progress.json",
+          "refresh": "on modernization batch execution"
+        },
+        {
+          "source": "SESSION252_QUESTION_HEALTH_SPEC.json",
+          "path": "scripts/output/SESSION252_QUESTION_HEALTH_SPEC.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "SESSION850_CANDIDATE_ENGINE_SPEC.json",
+          "path": "scripts/output/SESSION850_CANDIDATE_ENGINE_SPEC.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "SESSION850_WAVE_PLANNER_SPEC.json",
+          "path": "scripts/output/SESSION850_WAVE_PLANNER_SPEC.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "SESSION850_REMEDIATION_QUEUE_SPEC.json",
+          "path": "scripts/output/SESSION850_REMEDIATION_QUEUE_SPEC.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "SESSION850_DOMAIN_F_READINESS.json",
+          "path": "scripts/output/SESSION850_DOMAIN_F_READINESS.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "SESSION850_MODERNIZATION_ANALYTICS.json",
+          "path": "scripts/output/SESSION850_MODERNIZATION_ANALYTICS.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "packFiles": "pack_*_corrected.js",
+          "path": "root: pack_{a,b,c,d,e}_corrected.js",
+          "refresh": "on file write (watched)",
+          "note": "Source of truth. All content mutations write here. Current state: 2,298 Certified items across 2,540 total."
+        },
+        {
+          "source": "defectLibrary": "knowledge/DEFECT_LIBRARY.md",
+          "path": "knowledge/DEFECT_LIBRARY.md",
+          "refresh": "on defect library update (manual)"
+        },
+        {
+          "source": "revisionHistory": "knowledge/REVISION_HISTORY.md",
+          "path": "knowledge/REVISION_HISTORY.md",
+          "refresh": "on content mutation"
+        },
+        {
+          "source": "caqsStandard": "knowledge/CAQS_v1.0.md",
+          "path": "knowledge/CAQS_v1.0.md",
+          "refresh": "on standard update (manual)",
+          "note": "Reference standard for Certification Requirements (§1.7, §9.4)."
+        }
+      ],
+      "fieldList": [
+        {
+          "field": "questionInventory",
+          "type": "array<questionInventoryRecord>",
+          "description": "Complete question registry with all governance fields. Filterable by any dimension.",
+          "children": [
+            {"field": "qid", "type": "string", "pattern": "P1[A-E]-[A-F]R?-\\d{3}"},
+            {"field": "pack", "type": "string", "enum": ["pack_a","pack_b","pack_c","pack_d","pack_e"]},
+            {"field": "section", "type": "string", "enum": ["A","B","C","D","E","F"]},
+            {"field": "questionState", "type": "string", "enum": ["Unprocessed","In Audit","Editorial Queue","Certified","Archived"]},
+            {"field": "topic", "type": "string"},
+            {"field": "difficulty", "type": "string", "enum": ["Easy","Moderate-Easy","Moderate","Difficult","Very Difficult"]},
+            {"field": "difficultyScore", "type": "integer", "min": 1, "max": 5},
+            {"field": "cognitiveLevel", "type": "string", "enum": ["Remember","Understand","Apply","Analyze","Evaluate"]},
+            {"field": "blueprintDomain", "type": "string", "enum": ["A","B","C","D","E","F"]},
+            {"field": "healthScore", "type": "number", "min": 0, "max": 100},
+            {"field": "healthTier", "type": "string", "enum": ["GOLD STANDARD","EXAM READY","ACCEPTABLE","NEEDS ATTENTION","REJECT"]},
+            {"field": "defectCodes", "type": "array<string>"},
+            {"field": "certificationSession", "type": "string", "nullable": true},
+            {"field": "lastModified", "type": "ISO8601"},
+            {"field": "structuralFlags", "type": "array<string>"}
+          ]
+        },
+        {
+          "field": "certificationProgress",
+          "type": "object",
+          "description": "Overall certification pipeline status by domain, pack, and section.",
+          "children": [
+            {"field": "totalCertified", "type": "integer", "example": 2298},
+            {"field": "totalItems", "type": "integer", "example": 2540},
+            {"field": "certifiedPct", "type": "number", "example": 90.5},
+            {"field": "byDomain", "type": "object", "children": [
+              {"field": "A", "type": "object", "children": [
+                {"field": "total", "type": "integer", "example": 375},
+                {"field": "certified", "type": "integer", "example": 373},
+                {"field": "pct", "type": "number", "example": 99.5},
+                {"field": "gap", "type": "integer", "example": 2}
+              ]},
+              {"field": "B", "type": "object"},
+              {"field": "C", "type": "object"},
+              {"field": "D", "type": "object"},
+              {"field": "E", "type": "object"},
+              {"field": "F", "type": "object"}
+            ]},
+            {"field": "byState", "type": "object", "children": [
+              {"field": "BLOCKED", "type": "integer", "example": 242},
+              {"field": "REMEDIATE", "type": "integer", "example": 77},
+              {"field": "READY", "type": "integer"},
+              {"field": "CERTIFY", "type": "integer", "example": 2221}
+            ]},
+            {"field": "portfolioReadinessScore", "type": "number", "min": 0, "max": 1, "example": 0.8744},
+            {"field": "readinessStatus", "type": "string", "enum": ["NOT_STARTED","IN_PROGRESS","NEARLY_COMPLETE","COMPLETE"]}
+          ]
+        },
+        {
+          "field": "defectDistribution",
+          "type": "object",
+          "description": "Distribution of all defect codes (DL-001 through DL-036) across sections/packs/states.",
+          "children": [
+            {"field": "byDefectCode", "type": "object", "description": "QID count per DL-NNN, grouped by status (Open vs Resolved)"},
+            {"field": "bySection", "type": "object", "description": "Defect counts per A-F section"},
+            {"field": "byPack", "type": "object", "description": "Defect counts per pack_a through pack_e"},
+            {"field": "byState", "type": "object", "description": "Defect counts per question_state, highlighting Certified items with open defects"},
+            {"field": "bySeverity", "type": "object", "description": "Count per severity (Critical/High/Medium/Low/Informational)"},
+            {"field": "learnerPoolExposure", "type": "array", "description": "Open defects affecting Certified items currently in the delivery pool"}
+          ]
+        },
+        {
+          "field": "remediationPlan",
+          "type": "object",
+          "description": "Active and planned remediation work broken into batches.",
+          "children": [
+            {"field": "workQueue", "type": "array<workItem>", "children": [
+              {"field": "batchId", "type": "string"},
+              {"field": "defectCode", "type": "string", "format": "DL-NNN"},
+              {"field": "targetSection", "type": "string"},
+              {"field": "targetPack", "type": "string"},
+              {"field": "qids", "type": "array<string>"},
+              {"field": "qidCount", "type": "integer", "max": 30, "description": "Governance-guard Rule 5 cap"},
+              {"field": "status", "type": "string", "enum": ["QUEUED","IN_PROGRESS","COMPLETED","VERIFIED","BLOCKED"]},
+              {"field": "priority", "type": "string", "enum": ["CRITICAL","HIGH","MEDIUM","LOW"]},
+              {"field": "assignedSession", "type": "string"},
+              {"field": "estimatedFields", "type": "integer", "description": "Number of ExplanationWrong fields needing authoring"},
+              {"field": "fieldsCompleted", "type": "integer"},
+              {"field": "createdDate", "type": "ISO8601"},
+              {"field": "completedDate", "type": "ISO8601", "nullable": true}
+            ]},
+            {"field": "remediationQueue", "type": "array", "description": "Prioritized backlog from remediation_queue.json"},
+            {"field": "batchCapRule", "type": "string", "value": "30 items per batch — governance-guard Rule 5 BLOCK"}
+          ]
+        },
+        {
+          "field": "certificationWavePlanner",
+          "type": "object",
+          "description": "Plan upcoming certification waves. Define scope, validate candidates, execute.",
+          "children": [
+            {"field": "waves", "type": "array<wave>", "children": [
+              {"field": "waveId", "type": "string", "format": "WAVE_A / WAVE_B / WAVE_C"},
+              {"field": "tier", "type": "string", "enum": ["TIER_0_LEARNER_SAFETY","TIER_1_CERTIFICATION_BLOCKER","TIER_2_QUALITY"]},
+              {"field": "targetDomains", "type": "array<string>"},
+              {"field": "qidCount", "type": "integer"},
+              {"field": "prerequisites", "type": "array<string>", "description": "Defect codes that must be resolved before wave can execute"},
+              {"field": "status", "type": "string", "enum": ["PLANNED","IN_PROGRESS","EXECUTED","VERIFIED"]},
+              {"field": "certificationBlockers", "type": "array<string>", "description": "G-NEW rules that may block certification per §9.4"}
+            ]},
+            {"field": "candidateEngine", "type": "object", "description": "From SESSION850_CANDIDATE_ENGINE_SPEC.json — selection rules for which items are certifiable"}
+          ]
+        },
+        {
+          "field": "difficultyDistribution",
+          "type": "object",
+          "description": "Current difficulty label distribution vs. CAQS §6.1 targets.",
+          "children": [
+            {"field": "actual", "type": "object", "children": [
+              {"field": "Easy", "type": "object", "children": [
+                {"field": "count", "type": "integer"},
+                {"field": "pct", "type": "number"}
+              ]},
+              {"field": "Moderate", "type": "object"},
+              {"field": "Difficult", "type": "object"},
+              {"field": "Very Difficult", "type": "object"}
+            ]},
+            {"field": "target", "type": "object", "description": "Per CAQS §6.1: Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10%"},
+            {"field": "inflatedItems", "type": "array", "description": "Items flagged by DL-031 (definition-match difficulty inflation)"},
+            {"field": "caseUniformIssue", "type": "boolean", "description": "True if case items are still uniformly Moderate (DL-032)"}
+          ]
+        }
+      ],
+      "queryPatterns": [
+        {
+          "name": "GetQuestionInventory",
+          "endpoint": "GET /api/admin/v1/questions",
+          "description": "Paginated, filterable, sortable question inventory.",
+          "queryParams": ["domain", "section", "pack", "questionState", "difficulty", "cognitiveLevel", "healthTier", "defectCode", "hasOpenChallenges", "certificationStatus", "limit", "offset", "sortBy", "sortOrder"]
+        },
+        {
+          "name": "GetSectionHealth",
+          "endpoint": "GET /api/admin/v1/sections/{section}/health",
+          "description": "Aggregated health metrics for a specific section. Answers 'Which Section D questions need attention?'.",
+          "queryParams": ["pack"],
+          "response": {
+            "section": "D",
+            "totalItems": 375,
+            "certifiedItems": 375,
+            "certifiedPct": 100,
+            "meanHealthScore": 85.3,
+            "itemsNeedingAttention": 12,
+            "itemsNeedingAttentionList": ["array of qids with health_tier=NEEDS ATTENTION"],
+            "topDefects": [{"code": "DL-013", "count": 48}, {"code": "DL-026", "count": 12}],
+            "openChallenges": 0
+          }
+        },
+        {
+          "name": "GetCertificationProgress",
+          "endpoint": "GET /api/admin/v1/certification/progress",
+          "description": "Current certification pipeline state. From readiness_scoring.json + certification_waves.json.",
+          "queryParams": ["byDomain", "byPack", "byState", "detail"]
+        },
+        {
+          "name": "GetRemediationBatches",
+          "endpoint": "GET /api/admin/v1/remediation/batches",
+          "description": "All remediation batches with status. For planning and tracking.",
+          "queryParams": ["status", "defectCode", "targetPack", "targetSection", "assignedSession"]
+        },
+        {
+          "name": "CreateRemediationBatch",
+          "endpoint": "POST /api/admin/v1/remediation/batches",
+          "description": "Create a new remediation batch targeting specific QIDs. Enforces Rule 5 (max 30 QIDs).",
+          "requestBody": {
+            "targetQids": "array<string> (required, max 30)",
+            "defectCode": "string (required)",
+            "priority": "string"
+          }
+        },
+        {
+          "name": "ExecuteRemediationBatch",
+          "endpoint": "POST /api/admin/v1/remediation/batches/{batchId}/execute",
+          "description": "Execute the remediation batch — write changes to target pack file. Triggers backup protocol, governance guard, and registry regeneration.",
+          "requestBody": {
+            "authorizedBy": "string (required)",
+            "confirmBackup": "boolean (required)"
+          }
+        },
+        {
+          "name": "GetQuestionDetail",
+          "endpoint": "GET /api/admin/v1/questions/{qid}",
+          "description": "Full question object (stem, choices, correctChoice, all explanation fields, all metadata) from source pack file."
+        },
+        {
+          "name": "UpdateQuestionContent",
+          "endpoint": "PATCH /api/admin/v1/questions/{qid}",
+          "description": "Update question content fields. Triggers governance guard validation, revision history entry, and backup.",
+          "updatableFields": ["ExplanationCorrect", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD", "Choices", "Topic", "Difficulty", "DifficultyScore", "CognitiveLevel", "question_state"],
+          "blockedMutations": ["CorrectChoice (requires separate answer-key audit workflow)", "QuestionID (immutable)"]
+        },
+        {
+          "name": "PlanCertificationWave",
+          "endpoint": "POST /api/admin/v1/certification/waves",
+          "description": "Plan a certification wave: select candidate items, validate via governance guard, estimate scope.",
+          "requestBody": {
+            "targetDomains": "array<string> (required)",
+            "tier": "string (required)",
+            "maxItems": "integer (required)",
+            "prerequisiteDefects": "array<string>"
+          }
+        },
+        {
+          "name": "ExecuteCertificationWave",
+          "endpoint": "POST /api/admin/v1/certification/waves/{waveId}/execute",
+          "description": "Execute certification — update question_state to Certified for all passing items.",
+          "requestBody": {
+            "authorizedBy": "string (required)",
+            "confirmSixDimensionVerified": "boolean (required)",
+            "confirmNoGovernanceBlockers": "boolean (required)"
+          }
+        },
+        {
+          "name": "GetDefectDistribution",
+          "endpoint": "GET /api/admin/v1/content/defect-distribution",
+          "description": "Heatmap of defects across the question bank.",
+          "queryParams": ["byDomain", "byPack", "bySeverity", "learnerPoolOnly"]
+        }
+      ],
+      "uiComponentHints": {
+        "primary": "Question inventory with multi-faceted filtering and batch operations panel",
+        "components": [
+          {"component": "QuestionInventoryTable", "type": "table", "data": "questionInventory, filterable by every dimension, sortable, paginated. Columns: QID, Section, State, Topic, Difficulty, Health, Defects."},
+          {"component": "CertificationProgressDashboard", "type": "dashboard", "data": "certificationProgress, per-domain progress bars, per-state pie chart, portfolio readiness score gauge"},
+          {"component": "DefectHeatmap", "type": "heatmap", "data": "defectDistribution, rows=defect codes, cols=sections, colored by count"},
+          {"component": "SectionHealthPanel", "type": "panel", "data": "individual section drill-down with items needing attention list"},
+          {"component": "RemediationBatchPanel", "type": "panel", "data": "remediationPlan, batch queue with status badges, batch creation form"},
+          {"component": "CertificationWavePlanner", "type": "wizard", "data": "certificationWavePlanner, multi-step: select candidates, validate, preview, execute"},
+          {"component": "DifficultyDistributionChart", "type": "bar-chart", "data": "difficultyDistribution, actual vs target per difficulty tier"},
+          {"component": "QuestionDiffViewer", "type": "diff", "data": "before/after comparison when reviewing question content changes"}
+        ],
+        "statePattern": "Dual mode: (1) inventory-level browsing/filtering, (2) QID-level editing with governance guard validation. Certification waves run as a multi-step wizard."
+      },
+      "relationships": {
+        "toView1": "Question exposure data → context for which items are high-risk based on student delivery frequency.",
+        "toView2": "Investigation findings → trigger remediation batch creation. Challenge resolution → confirmation for certification.",
+        "toView4": "Certification waves → governance events logged. Answer-key changes → governance audit trail. Blocklist updates reflect here.",
+        "toView5": "File integrity checks → pre-requisite before content writes. Registry consistency → post-remediation verification."
+      }
+    },
+
+    "View4-Governance": {
+      "viewId": "VIEW_GOVERNANCE",
+      "title": "Governance View",
+      "purpose": "Monitor compliance, track certification pipeline integrity, manage policy drift, oversee learner-pool safety, and provide release authorization. The nerve center for governance board and release managers.",
+      "targetRoles": ["ROLE_GOVERNANCE", "ROLE_SYSADMIN"],
+      "permissions": "UPDATE question_state, UPDATE certification status, CREATE governance events, READ all pipeline data. May issue governance overrides (with documented rationale).",
+      "dataSources": [
+        {
+          "source": "governance_event_registry.json",
+          "path": "scripts/output/governance_event_registry.json",
+          "refresh": "real-time (on governance event)"
+        },
+        {
+          "source": "readiness_scoring.json",
+          "path": "scripts/output/readiness_scoring.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "certification_waves.json",
+          "path": "scripts/output/certification_waves.json",
+          "refresh": "on wave execution"
+        },
+        {
+          "source": "certification_scan_artifact.json",
+          "path": "scripts/output/certification_scan_artifact.json",
+          "refresh": "on scan execution"
+        },
+        {
+          "source": "identity_validation_report.json",
+          "path": "scripts/output/identity_validation_report.json",
+          "refresh": "on identity scan"
+        },
+        {
+          "source": "QUALITY_VERDICT.json",
+          "path": "scripts/output/QUALITY_VERDICT.json",
+          "refresh": "on quality scan"
+        },
+        {
+          "source": "delta_ledger.json",
+          "path": "scripts/output/delta_ledger.json",
+          "refresh": "on delta computation"
+        },
+        {
+          "source": "replacement_lineage.json",
+          "path": "scripts/output/replacement_lineage.json",
+          "refresh": "on replacement event"
+        },
+        {
+          "source": "currentBaselines": "knowledge/CURRENT_BASELINES.md",
+          "path": "knowledge/CURRENT_BASELINES.md",
+          "refresh": "on baseline recapture",
+          "note": "13 runtime-critical file SHA-256 hashes. Drift detection reference."
+        },
+        {
+          "source": "defectLibrary": "knowledge/DEFECT_LIBRARY.md",
+          "path": "knowledge/DEFECT_LIBRARY.md",
+          "refresh": "on defect library update",
+          "note": "Defect entries DL-008, DL-016, DL-021, DL-026, DL-035 are governance-critical."
+        },
+        {
+          "source": "revisionHistory": "knowledge/REVISION_HISTORY.md",
+          "path": "knowledge/REVISION_HISTORY.md",
+          "refresh": "on content mutation"
+        },
+        {
+          "source": "caqsStandard": "knowledge/CAQS_v1.0.md",
+          "path": "knowledge/CAQS_v1.0.md",
+          "refresh": "on standard update",
+          "note": "§1.7 Certification Standard, §9.4 Certification-Blocking Conditions (G-NEW rules)."
+        },
+        {
+          "source": "metadataStandard": "knowledge/QUESTION_METADATA_STANDARD.md",
+          "path": "knowledge/QUESTION_METADATA_STANDARD.md",
+          "refresh": "on standard update",
+          "note": "§9 Governance State Fields, §9.4 Certification-Blocking Conditions."
+        },
+        {
+          "source": "defectManifest": "governance/DEFECT_MANIFEST_DL008_DL026.json",
+          "path": "governance/DEFECT_MANIFEST_DL008_DL026.json",
+          "refresh": "on defect scan",
+          "note": "Blocked QID manifest for delivery-pool exclusion."
+        },
+        {
+          "source": "governanceGuardPlugin": ".opencode/plugins/governance-guard.js",
+          "path": ".opencode/plugins/governance-guard.js",
+          "refresh": "on plugin update",
+          "note": "5 rules (Rule 1-5, Rule 6 deployed S814). 27-test suite."
+        },
+        {
+          "source": "governanceGuardTests": "scripts/test_governance_guard.js",
+          "path": "scripts/test_governance_guard.js",
+          "refresh": "on test update",
+          "note": "27 tests. Must be all PASS before release authorization."
+        }
+      ],
+      "fieldList": [
+        {
+          "field": "deliveryPoolSafety",
+          "type": "object",
+          "description": "Current safety status of the learner delivery pool. The canonical answer to 'Is the delivery pool safe?'",
+          "children": [
+            {"field": "safetyStatus", "type": "string", "enum": ["SAFE","CAUTION","UNSAFE","UNKNOWN"]},
+            {"field": "totalCertifiedInPool", "type": "integer", "example": 2298},
+            {"field": "certifiedItemsWithOpenDefects", "type": "integer", "description": "Certified items flagged with non-resolved DL entries"},
+            {"field": "certifiedItemsWithOpenChallenges", "type": "integer"},
+            {"field": "certifiedItemsWithEmptyDistractorSlots", "type": "integer", "description": "DL-026 / DL-035 affected"},
+            {"field": "certifiedItemsWithWrongAnswerKey", "type": "integer", "description": "DL-030 affected"},
+            {"field": "certifiedItemsWithMetadataShift", "type": "integer", "description": "DL-016 affected — ExplanationWrong describes wrong item"},
+            {"field": "blockedQids", "type": "array<string>", "description": "Known-defective QIDs excluded from delivery per §7"},
+            {"field": "blockedQidCount", "type": "integer", "example": 242},
+            {"field": "lastSafetyScanDate", "type": "ISO8601"},
+            {"field": "deliveryMechanismVerification", "type": "boolean", "description": "Confirmed delivery pool only pulls question_state=Certified items (AGENTS.md §7)"}
+          ]
+        },
+        {
+          "field": "governanceEventLog",
+          "type": "array<governanceEvent>",
+          "description": "All governance events: rule violations, certification events, policy changes, baseline recaptures.",
+          "children": [
+            {"field": "id", "type": "string", "format": "GE-NNNN"},
+            {"field": "type", "type": "string", "enum": ["VIOLATION","CERTIFICATION","BASELINE_RECAPTURE","POLICY_CHANGE","OVERRIDE","DRIFT_ALERT","RULE_DEPLOYMENT","SAFETY_SCAN"]},
+            {"field": "summary", "type": "string"},
+            {"field": "severity", "type": "string", "enum": ["LOW","MEDIUM","HIGH","CRITICAL"]},
+            {"field": "linkedRule", "type": "string", "nullable": true, "description": "Governance guard rule number"},
+            {"field": "status", "type": "string", "enum": ["OPEN","ACKNOWLEDGED","MITIGATED","CLOSED"]},
+            {"field": "sourceFile", "type": "string"},
+            {"field": "created", "type": "ISO8601"},
+            {"field": "updated", "type": "ISO8601"},
+            {"field": "resolution", "type": "string", "nullable": true},
+            {"field": "linkedQids", "type": "array<string>"},
+            {"field": "linkedSessions", "type": "array<string>"},
+            {"field": "linkedInvestigations", "type": "array<string>"}
+          ]
+        },
+        {
+          "field": "certificationPipeline",
+          "type": "object",
+          "description": "Complete certification pipeline state with all waves, gates, and blocker status.",
+          "children": [
+            {"field": "waves", "type": "array<certificationWave>", "description": "All executed and planned certification waves"},
+            {"field": "identityValidation", "type": "object", "description": "QID identity integrity — no duplicates, no missing fields, all parseable"},
+            {"field": "qualityVerdict", "type": "object", "description": "Overall repository quality assessment from QUALITY_VERDICT.json"},
+            {"field": "scanArtifactIntegrity", "type": "object", "description": "Scan methodology integrity — DL-029 false-positive status"},
+            {"field": "governanceGuardStatus", "type": "object", "children": [
+              {"field": "testSuiteStatus", "type": "string", "enum": ["ALL_PASS","SOME_FAIL","NOT_RUN"]},
+              {"field": "passingTests", "type": "integer"},
+              {"field": "totalTests", "type": "integer", "example": 27},
+              {"field": "activeRules", "type": "array", "children": [
+                {"field": "ruleId", "type": "string"},
+                {"field": "level", "type": "string", "enum": ["BLOCK","WARN"]},
+                {"field": "description", "type": "string"},
+                {"field": "status", "type": "string"}
+              ]}
+            ]}
+          ]
+        },
+        {
+          "field": "policyDriftAlerts",
+          "type": "array<driftAlert>",
+          "description": "Detected deviations from baselines, standards, or governance rules.",
+          "children": [
+            {"field": "alertId", "type": "string"},
+            {"field": "type", "type": "string", "enum": ["HASH_MISMATCH","PARSE_COUNT_CHANGE","CERTIFIED_DENOMINATOR_MISMATCH","RULE_VIOLATION_WAVE","CRITICAL_QID_MISSING","DUAL_BLOCK_DIVERGENCE","REGISTRY_STALE"]},
+            {"field": "severity", "type": "string", "enum": ["CRITICAL","HIGH","MEDIUM"]},
+            {"field": "description", "type": "string"},
+            {"field": "detectedDate", "type": "ISO8601"},
+            {"field": "affectedFiles", "type": "array<string>"},
+            {"field": "affectedBaselines", "type": "array<string>"},
+            {"field": "resolutionRequired", "type": "string", "enum": ["IMMEDIATE_HALT","G1_G5_RECONCILIATION","INVESTIGATION","DOCUMENT_ONLY"]},
+            {"field": "status", "type": "string", "enum": ["OPEN","ACKNOWLEDGED","INVESTIGATING","RESOLVED"]}
+          ]
+        },
+        {
+          "field": "baselineStatus",
+          "type": "object",
+          "description": "Current baseline hashes for all 13 runtime-critical files vs. last recaptured snapshots.",
+          "children": [
+            {"field": "lastRecaptureDate", "type": "ISO8601"},
+            {"field": "lastRecaptureSession", "type": "string"},
+            {"field": "files", "type": "array<baselineFile>", "children": [
+              {"field": "file", "type": "string"},
+              {"field": "currentHash", "type": "string", "format": "SHA-256 (64 hex chars)"},
+              {"field": "baselineHash", "type": "string", "format": "SHA-256"},
+              {"field": "drifted", "type": "boolean"},
+              {"field": "size", "type": "integer", "format": "bytes"},
+              {"field": "lastModified", "type": "ISO8601"},
+              {"field": "provenance", "type": "string"}
+            ]}
+          ]
+        },
+        {
+          "field": "blocklistStatus",
+          "type": "object",
+          "description": "Current blocklist: QIDs excluded from delivery pool.",
+          "children": [
+            {"field": "blockedQidCount", "type": "integer"},
+            {"field": "byReason", "type": "object", "description": "Counts grouped by block reason (DL-008, DL-026, DL-030, DL-016, etc.)"},
+            {"field": "bySection", "type": "object", "description": "Counts per A-F section"},
+            {"field": "byPack", "type": "object", "description": "Counts per pack"},
+            {"field": "recentlyUnblocked", "type": "array<string>", "description": "QIDs removed from blocklist in last 7 days"},
+            {"field": "recentlyAdded", "type": "array<string>", "description": "QIDs added to blocklist in last 7 days"}
+          ]
+        },
+        {
+          "field": "releaseReadiness",
+          "type": "object",
+          "description": "Release authorization checklist.",
+          "children": [
+            {"field": "canRelease", "type": "boolean"},
+            {"field": "blockers", "type": "array<string>", "description": "Items preventing release"},
+            {"field": "warnings", "type": "array<string>", "description": "Non-blocking concerns"},
+            {"field": "guardTestsPassing", "type": "boolean"},
+            {"field": "deliveryPoolSafe", "type": "boolean"},
+            {"field": "noDriftActive", "type": "boolean"},
+            {"field": "revisionHistoryCurrent", "type": "boolean"},
+            {"field": "defectLibraryCurrent", "type": "boolean"}
+          ]
+        }
+      ],
+      "queryPatterns": [
+        {
+          "name": "GetDeliveryPoolSafety",
+          "endpoint": "GET /api/admin/v1/governance/delivery-pool/safety",
+          "description": "Current learner-pool safety status. The canonical 'Is the delivery pool safe?' query.",
+          "response": "deliveryPoolSafety object"
+        },
+        {
+          "name": "GetGovernanceEvents",
+          "endpoint": "GET /api/admin/v1/governance/events",
+          "description": "Governance event log, filterable by type/severity/status.",
+          "queryParams": ["type", "severity", "status", "linkedRule", "dateFrom", "dateTo", "limit", "offset"]
+        },
+        {
+          "name": "GetBaselineStatus",
+          "endpoint": "GET /api/admin/v1/governance/baselines",
+          "description": "Current baseline hash comparison for all 13 runtime files."
+        },
+        {
+          "name": "RunBaselineRecapture",
+          "endpoint": "POST /api/admin/v1/governance/baselines/recapture",
+          "description": "Recapture SHA-256 hashes for all 13 runtime files. Updates CURRENT_BASELINES.md.",
+          "requestBody": {
+            "authorizedBy": "string (required)",
+            "reason": "string (required)"
+          }
+        },
+        {
+          "name": "GetDriftAlerts",
+          "endpoint": "GET /api/admin/v1/governance/drift-alerts",
+          "description": "All active policy drift alerts.",
+          "queryParams": ["severity", "status", "type"]
+        },
+        {
+          "name": "AcknowledgeDriftAlert",
+          "endpoint": "PATCH /api/admin/v1/governance/drift-alerts/{alertId}",
+          "description": "Acknowledge, investigate, or resolve a drift alert.",
+          "requestBody": {
+            "status": "string (required)",
+            "resolution": "string",
+            "authorizedBy": "string (required)"
+          }
+        },
+        {
+          "name": "GetCertificationPipeline",
+          "endpoint": "GET /api/admin/v1/governance/certification-pipeline",
+          "description": "Full certification pipeline state with waves, gates, and identity validation."
+        },
+        {
+          "name": "GetBlocklist",
+          "endpoint": "GET /api/admin/v1/governance/blocklist",
+          "description": "Current blocklist of QIDs excluded from delivery pool.",
+          "queryParams": ["reason", "section", "pack"]
+        },
+        {
+          "name": "UpdateBlocklist",
+          "endpoint": "PATCH /api/admin/v1/governance/blocklist",
+          "description": "Add or remove QIDs from blocklist.",
+          "requestBody": {
+            "action": "string (ADD | REMOVE)",
+            "qids": "array<string> (required)",
+            "reason": "string (required)",
+            "authorizedBy": "string (required)"
+          }
+        },
+        {
+          "name": "GetReleaseReadiness",
+          "endpoint": "GET /api/admin/v1/governance/release-readiness",
+          "description": "Release authorization status with blockers and warnings."
+        },
+        {
+          "name": "AuthorizeRelease",
+          "endpoint": "POST /api/admin/v1/governance/release/authorize",
+          "description": "Issue release authorization. Hard-gated by: all guard tests PASS, delivery pool SAFE, no CRITICAL drift.",
+          "requestBody": {
+            "authorizedBy": "string (required)",
+            "releaseVersion": "string (required)",
+            "releaseNotes": "string"
+          }
+        }
+      ],
+      "uiComponentHints": {
+        "primary": "Governance cockpit with safety-at-a-glance status and drill-down panels",
+        "components": [
+          {"component": "DeliveryPoolSafetyIndicator", "type": "status-indicator", "data": "deliveryPoolSafety.safetyStatus, prominent red/green/amber indicator"},
+          {"component": "GovernanceEventTimeline", "type": "timeline", "data": "governanceEventLog, chronological, filterable by type"},
+          {"component": "BaselineDriftTable", "type": "table", "data": "baselineStatus, rows=files, columns=currentHash+baselineHash+drifted+lastModified"},
+          {"component": "CertificationPipelineGauge", "type": "gauge", "data": "certificationPipeline, multi-stage pipeline viz with gate status"},
+          {"component": "BlocklistPanel", "type": "panel", "data": "blocklistStatus with add/remove form for authorized roles"},
+          {"component": "DriftAlertList", "type": "list", "data": "policyDriftAlerts, severity-badged, with acknowledge/resolve actions"},
+          {"component": "GuardRuleStatusCards", "type": "card-grid", "data": "governance guard rules 1-6, each card shows rule+level+status"},
+          {"component": "ReleaseAuthorizationPanel", "type": "wizard", "data": "releaseReadiness, checklist with proceed/block gate"}
+        ],
+        "statePattern": "Dashboard-first with KPI cards at top (pool safety, drift count, event count, baseline drift count). Drill-down to event detail, baseline detail, or blocklist management."
+      },
+      "relationships": {
+        "toView1": "Student delivery pool exposure numbers driven by governance blocklist decisions.",
+        "toView2": "Investigation resolutions → governance events logged. Defect confirmations → blocklist updates.",
+        "toView3": "Certification waves → governance events. Content Admin actions gated by governance guard validation. Remediation completion → blocklist removal.",
+        "toView5": "Baseline hashes and file integrity from System Admin View feed governance drift detection. Registry consistency checks inform release readiness."
+      }
+    },
+
+    "View5-SystemAdmin": {
+      "viewId": "VIEW_SYSTEM_ADMIN",
+      "title": "System Admin View",
+      "purpose": "Monitor system health, data integrity, file state, and registry consistency. Provide deep-link validation and session telemetry for platform operators.",
+      "targetRoles": ["ROLE_SYSADMIN"],
+      "permissions": "READ all system data. EXECUTE integrity scans, baseline recaptures, and registry regeneration. May DELETE stale/corrupted artifacts. Full system access.",
+      "dataSources": [
+        {
+          "source": "currentBaselines": "knowledge/CURRENT_BASELINES.md",
+          "path": "knowledge/CURRENT_BASELINES.md",
+          "refresh": "on baseline recapture",
+          "note": "13 runtime files with SHA-256, MD5, size, lastModified, provenance."
+        },
+        {
+          "source": "packFiles": "pack_*_corrected.js (5 files)",
+          "path": "root directory",
+          "refresh": "on file write (watched)",
+          "note": "2,540 QIDs total. Must be parseable via Function constructor and JSON.parse. Current sizes: 1.4-1.8 MB each."
+        },
+        {
+          "source": "scoredCaseFiles": "scored_cases{,.js,2.js,3.js,4.js,5.js} (5 files)",
+          "path": "root directory",
+          "refresh": "on file write (watched)",
+          "note": "75 cases total (15 + 15 + 15 + 15 + 15). 420 items."
+        },
+        {
+          "source": "applicationCore": "[app.js, index_updated.html, styles.css] (3 files)",
+          "path": "root directory",
+          "refresh": "on file write (watched)",
+          "note": "app.js: 209,937 bytes. index_updated.html: 6,090 bytes. styles.css: 68,696 bytes."
+        },
+        {
+          "source": "mayLayer": "[may-core.js, may-learner-state.js] (2 files)",
+          "path": "root directory",
+          "refresh": "on file write (watched)",
+          "note": "may-core.js: 344,883 bytes. may-learner-state.js: 110,240 bytes."
+        },
+        {
+          "source": "session_registry.json",
+          "path": "scripts/output/session_registry.json",
+          "refresh": "scheduled (hourly)"
+        },
+        {
+          "source": "session_intelligence.json",
+          "path": "scripts/output/session_intelligence.json",
+          "refresh": "on session close"
+        },
+        {
+          "source": "session_package_index.json",
+          "path": "scripts/output/session_package_index.json",
+          "refresh": "on session package creation"
+        },
+        {
+          "source": "session_packages/",
+          "path": "scripts/output/session_packages/",
+          "refresh": "on session package creation",
+          "note": "Per-session certification/operation packages (S250-CERT-*, etc.)"
+        },
+        {
+          "source": "identity_validation_report.json",
+          "path": "scripts/output/identity_validation_report.json",
+          "refresh": "on identity scan"
+        },
+        {
+          "source": "certification_scan_artifact.json",
+          "path": "scripts/output/certification_scan_artifact.json",
+          "refresh": "on scan execution"
+        },
+        {
+          "source": "SESSION252_DEEP_LINK_VALIDATION.json",
+          "path": "scripts/output/SESSION252_DEEP_LINK_VALIDATION.json",
+          "refresh": "on deep-link scan"
+        },
+        {
+          "source": "SESSION252_SESSION_INTELLIGENCE_SPEC.json",
+          "path": "scripts/output/SESSION252_SESSION_INTELLIGENCE_SPEC.json",
+          "refresh": "per spec generation"
+        },
+        {
+          "source": "backupDirectory": "backups/",
+          "path": "backups/",
+          "refresh": "on backup creation"
+        },
+        {
+          "source": "revisionHistory": "knowledge/REVISION_HISTORY.md",
+          "path": "knowledge/REVISION_HISTORY.md",
+          "refresh": "on content mutation"
+        },
+        {
+          "source": "governanceGuardPlugin": ".opencode/plugins/governance-guard.js",
+          "path": ".opencode/plugins/governance-guard.js",
+          "refresh": "on plugin update"
+        },
+        {
+          "source": "governanceGuardTests": "scripts/test_governance_guard.js",
+          "path": "scripts/test_governance_guard.js",
+          "refresh": "on test update"
+        }
+      ],
+      "fieldList": [
+        {
+          "field": "fileIntegrity",
+          "type": "object",
+          "description": "Current hash, size, parseability, and structural integrity for all 13 runtime-critical files.",
+          "children": [
+            {"field": "category", "type": "string", "enum": ["APPLICATION_CORE","MAY_LAYER","MCQ_PACK","SCORED_CASE"]},
+            {"field": "fileName", "type": "string"},
+            {"field": "currentHash_SHA256", "type": "string", "format": "SHA-256"},
+            {"field": "baselineHash_SHA256", "type": "string", "format": "SHA-256"},
+            {"field": "hashMatch", "type": "boolean"},
+            {"field": "currentSize_Bytes", "type": "integer"},
+            {"field": "baselineSize_Bytes", "type": "integer"},
+            {"field": "sizeMatch", "type": "boolean"},
+            {"field": "lastModified", "type": "ISO8601"},
+            {"field": "parseable", "type": "boolean", "description": "Passes JSON.parse() or Function constructor parse"},
+            {"field": "parseCount", "type": "integer", "description": "Number of question/case objects extracted"},
+            {"field": "expectedCount", "type": "integer", "description": "Expected count (500/540 per pack, 15 per case file)"},
+            {"field": "countMatch", "type": "boolean"},
+            {"field": "driftDetected", "type": "boolean"},
+            {"field": "lastIntegrityScan", "type": "ISO8601"},
+            {"field": "backupAvailable", "type": "boolean"},
+            {"field": "latestBackupPath", "type": "string", "nullable": true}
+          ]
+        },
+        {
+          "field": "registryConsistency",
+          "type": "object",
+          "description": "Cross-validation of all registries against source files. The canonical answer to 'Are all registries consistent with source files?'",
+          "children": [
+            {"field": "consistencyStatus", "type": "string", "enum": ["CONSISTENT","INCONSISTENT","UNKNOWN","STALE"]},
+            {"field": "checks", "type": "array<consistencyCheck>", "children": [
+              {"field": "checkName", "type": "string", "example": "question_health vs pack_*_corrected.js"},
+              {"field": "description", "type": "string"},
+              {"field": "registryFile", "type": "string"},
+              {"field": "sourceFile", "type": "string"},
+              {"field": "registryCount", "type": "integer"},
+              {"field": "sourceCount", "type": "integer"},
+              {"field": "matched", "type": "boolean"},
+              {"field": "mismatchedQids", "type": "array<string>", "description": "QIDs present in one but not the other"},
+              {"field": "staleFlag", "type": "boolean", "description": "Registry generation timestamp predates source file modification"}
+            ]},
+            {"field": "crossRegistryConsistency", "type": "array", "description": "Pairs of registries that should agree (e.g., session_registry vs session_intelligence counts)"},
+            {"field": "lastConsistencyScan", "type": "ISO8601"},
+            {"field": "scanDurationMs", "type": "integer"}
+          ]
+        },
+        {
+          "field": "deepLinkValidation",
+          "type": "object",
+          "description": "Validation of all cross-reference links between artifacts.",
+          "children": [
+            {"field": "linksTested", "type": "integer"},
+            {"field": "linksValid", "type": "integer"},
+            {"field": "linksBroken", "type": "integer"},
+            {"field": "linksExternal", "type": "integer"},
+            {"field": "brokenLinks", "type": "array<brokenLink>", "children": [
+              {"field": "sourceArtifact", "type": "string"},
+              {"field": "targetReference", "type": "string"},
+              {"field": "targetPath", "type": "string"},
+              {"field": "failureReason", "type": "string", "enum": ["FILE_NOT_FOUND","QID_NOT_FOUND","SESSION_NOT_FOUND","DEFECT_NOT_FOUND","INVESTIGATION_NOT_FOUND"]}
+            ]},
+            {"field": "linkTypes", "type": "object", "description": "Breakdown by link type: qid→defect, qid→challenge, challenge→investigation, investigation→recommendation, session→question, etc."}
+          ]
+        },
+        {
+          "field": "parseMetricMatrix",
+          "type": "object",
+          "description": "Parse method comparison metrics. Guards against DL-020 (brace-matcher undercount) and DL-029 (regex block-scan false positives).",
+          "children": [
+            {"field": "methods", "type": "array", "children": [
+              {"field": "methodName", "type": "string", "enum": ["JSON_PARSE","FUNCTION_CONSTRUCTOR","BRACE_MATCHED","REGEX_BLOCK_SCAN","SELECT_STRING_GREP"]},
+              {"field": "packFile", "type": "string"},
+              {"field": "qidCount", "type": "integer"},
+              {"field": "discrepancies", "type": "array", "description": "Methods that disagree on counts for same file"},
+              {"field": "recommendedMethod", "type": "string"}
+            ]},
+            {"field": "ccOffsetAwareness", "type": "object", "description": "Per-pack: does CorrectChoice appear before or after QuestionID in JSON? Packs A/C/D/E: CC after QID. Pack B: CC before QID. Critical for scan methodology."}
+          ]
+        },
+        {
+          "field": "backupStatus",
+          "type": "object",
+          "description": "Backup inventory and integrity.",
+          "children": [
+            {"field": "backupDirectory", "type": "string", "value": "backups/"},
+            {"field": "totalBackups", "type": "integer"},
+            {"field": "byFile", "type": "object", "description": "Backup count per pack/case file"},
+            {"field": "oldestBackup", "type": "ISO8601"},
+            {"field": "newestBackup", "type": "ISO8601"},
+            {"field": "largestBackup_Bytes", "type": "integer"},
+            {"field": "backupsNeedingRotation", "type": "integer", "description": "Backups older than 30 days"}
+          ]
+        },
+        {
+          "field": "sessionTelemetry",
+          "type": "object",
+          "description": "Aggregated session data for system health monitoring.",
+          "children": [
+            {"field": "totalSessions", "type": "integer", "example": 98},
+            {"field": "sessionsLast24h", "type": "integer"},
+            {"field": "sessionsLast7d", "type": "integer"},
+            {"field": "activeStudents", "type": "integer"},
+            {"field": "avgSessionDuration", "type": "number", "format": "minutes"},
+            {"field": "errorRate", "type": "number", "min": 0, "max": 100, "description": "Percentage of sessions with technical errors"},
+            {"field": "avgQuestionsPerSession", "type": "number"},
+            {"field": "mostDeliveredQids", "type": "array<{qid: string, count: integer}>"},
+            {"field": "neverDeliveredQids", "type": "array<string>"},
+            {"field": "storageUsed_KB", "type": "integer", "description": "localStorage utilization estimate"}
+          ]
+        },
+        {
+          "field": "governanceGuardHealth",
+          "type": "object",
+          "description": "Governance guard plugin operational status.",
+          "children": [
+            {"field": "pluginActive", "type": "boolean"},
+            {"field": "testSuitePassing", "type": "boolean"},
+            {"field": "passingTests", "type": "integer"},
+            {"field": "totalTests", "type": "integer"},
+            {"field": "failingTests", "type": "array<{testName: string, failureReason: string}>"},
+            {"field": "rulesActive", "type": "array<{ruleId: string, level: string, status: string}>"},
+            {"field": "lastTestRun", "type": "ISO8601"}
+          ]
+        }
+      ],
+      "queryPatterns": [
+        {
+          "name": "GetSystemHealth",
+          "endpoint": "GET /api/admin/v1/system/health",
+          "description": "System-wide health summary. File integrity, registry consistency, guard status, backup status, telemetry in one call."
+        },
+        {
+          "name": "GetFileIntegrity",
+          "endpoint": "GET /api/admin/v1/system/files/integrity",
+          "description": "Current hash comparison for all 13 runtime files vs. baselines.",
+          "queryParams": ["category"]
+        },
+        {
+          "name": "RunFileIntegrityScan",
+          "endpoint": "POST /api/admin/v1/system/files/integrity/scan",
+          "description": "Recompute hashes and parse counts for all runtime files. Compare against CURRENT_BASELINES.md."
+        },
+        {
+          "name": "GetParseMetrics",
+          "endpoint": "GET /api/admin/v1/system/files/parse-metrics",
+          "description": "Parse method comparison across all 5 pack files. DL-020 / DL-029 health."
+        },
+        {
+          "name": "GetRegistryConsistency",
+          "endpoint": "GET /api/admin/v1/system/registries/consistency",
+          "description": "Cross-validate all registries against source files. The canonical 'Are all registries consistent?' query."
+        },
+        {
+          "name": "RunRegistryConsistencyScan",
+          "endpoint": "POST /api/admin/v1/system/registries/consistency/scan",
+          "description": "Regenerate and re-compare all registry artifacts against source files."
+        },
+        {
+          "name": "GetDeepLinks",
+          "endpoint": "GET /api/admin/v1/system/deep-links",
+          "description": "Deep-link validation status. All broken links with source/target/failure reason.",
+          "queryParams": ["status", "linkType"]
+        },
+        {
+          "name": "RunDeepLinkScan",
+          "endpoint": "POST /api/admin/v1/system/deep-links/scan",
+          "description": "Validate all cross-reference links between artifacts."
+        },
+        {
+          "name": "GetBackupStatus",
+          "endpoint": "GET /api/admin/v1/system/backups",
+          "description": "Backup inventory, integrity, and rotation recommendations."
+        },
+        {
+          "name": "GetSessionTelemetry",
+          "endpoint": "GET /api/admin/v1/system/telemetry",
+          "description": "Aggregated session statistics and system usage.",
+          "queryParams": ["period", "days"]
+        },
+        {
+          "name": "GetGuardHealth",
+          "endpoint": "GET /api/admin/v1/system/governance-guard/health",
+          "description": "Governance guard plugin operational status and test suite results."
+        },
+        {
+          "name": "RegenerateRegistry",
+          "endpoint": "POST /api/admin/v1/system/registries/{registryName}/regenerate",
+          "description": "Force-regenerate a specific registry artifact from source files.",
+          "requestBody": {
+            "registryName": "string (required: question_health | readiness_scoring | session_registry | certification_candidates | investigation_registry | challenge_registry | recommendation_registry)",
+            "authorizedBy": "string (required)"
+          }
+        },
+        {
+          "name": "CleanStaleArtifacts",
+          "endpoint": "DELETE /api/admin/v1/system/artifacts/stale",
+          "description": "Remove stale pipeline artifacts (requires FULL_ACCESS / ROLE_SYSADMIN)."
+        }
+      ],
+      "uiComponentHints": {
+        "primary": "System health dashboard with red/amber/green status indicators and drill-down tables",
+        "components": [
+          {"component": "SystemHealthOverview", "type": "dashboard", "data": "KPI cards: File Integrity, Registry Consistency, Guard Status, Backup Status, Session Health"},
+          {"component": "FileIntegrityTable", "type": "table", "data": "fileIntegrity, rows=13 files, columns=hash+size+parseCount+drift"},
+          {"component": "RegistryConsistencyPanel", "type": "panel", "data": "registryConsistency, mismatched QIDs list, stale flag warnings"},
+          {"component": "ParseMethodComparisonChart", "type": "comparison-chart", "data": "parseMetricMatrix, methods side-by-side per pack"},
+          {"component": "DeepLinkValidationReport", "type": "report", "data": "deepLinkValidation, broken links table with source/target/failure"},
+          {"component": "BackupInventoryTable", "type": "table", "data": "backupStatus, sortable by age/size/file"},
+          {"component": "SessionTelemetryDashboard", "type": "dashboard", "data": "sessionTelemetry, time-series charts for session volume, error rate, storage"},
+          {"component": "GuardTestSuitePanel", "type": "panel", "data": "governanceGuardHealth, test pass/fail list, rule status cards"}
+        ],
+        "statePattern": "Dashboard-first with KPI cards. Each card links to detail view with scan/regenerate actions. All integrity scans are on-demand (POST) with progress indicator for long-running operations."
+      },
+      "relationships": {
+        "toView1": "Session telemetry feeds student view availability. Corrupted sessions flagged here → student view may show gaps.",
+        "toView2": "Deep-link validation ensures investigation→challenge→QID links resolve. Broken links visible in Investigator View.",
+        "toView3": "File integrity checks → content admin writes blocked if files are corrupted. Registry consistency → remediation verification.",
+        "toView4": "Baseline hashes feed governance drift detection. Registry consistency → release readiness gate. Guard health → certification pipeline gate."
+      }
+    }
+  },
+
+  "apiPatterns": {
+    "basePath": "/api/admin/v1",
+    "format": "All responses in JSON. All timestamps in ISO 8601. All IDs in their canonical formats.",
+    "pagination": {
+      "strategy": "Offset-based pagination",
+      "params": ["limit (default: 50, max: 200)", "offset (default: 0)"],
+      "responseEnvelope": {
+        "data": "array<record>",
+        "pagination": {
+          "total": "integer",
+          "limit": "integer",
+          "offset": "integer",
+          "hasMore": "boolean"
+        }
+      }
+    },
+    "authentication": {
+      "header": "Authorization: Bearer <admin-api-key>",
+      "keyFormat": "HMAC-SHA256 signed JWT with role claim",
+      "tokenExpiry": "4 hours",
+      "refreshEndpoint": "POST /api/admin/v1/auth/refresh"
+    },
+    "authorization": {
+      "enforcement": "Per-endpoint role check. Return 403 Forbidden if role insufficient.",
+      "auditHeader": "X-Admin-Actor: {roleId}"
+    },
+    "errorFormat": {
+      "type": "https://api.cma-simulator.dev/admin/errors/{error-code}",
+      "title": "string",
+      "status": "integer (HTTP status)",
+      "detail": "string",
+      "instance": "/api/admin/v1/{endpoint-path}",
+      "timestamp": "ISO8601"
+    },
+    "rateLimit": {
+      "READ": "100 requests/minute per admin session",
+      "WRITE": "10 requests/minute per admin session (governance-gated)",
+      "SCAN": "2 requests/minute per admin session (long-running)"
+    }
+  },
+
+  "dataRefreshCadence": {
+    "REAL_TIME": {
+      "triggers": ["challenge submission", "investigation mutation", "governance event creation", "session close"],
+      "artifacts": ["challenge_registry.json", "investigation_registry.json", "governance_event_registry.json", "session_registry.json"]
+    },
+    "ON_FILE_WRITE": {
+      "triggers": ["pack file write", "case file write", "app.js change", "baseline update"],
+      "artifacts": ["pack_*_corrected.js", "scored_cases*.js", "CURRENT_BASELINES.md"]
+    },
+    "SCHEDULED_HOURLY": {
+      "artifacts": ["question_health.json", "readiness_scoring.json", "domain_progress.json", "certification_candidates.json", "work_queue.json", "session_registry.json (aggregations)"]
+    },
+    "ON_DEMAND": {
+      "artifacts": ["file integrity scan", "registry consistency scan", "deep-link validation", "baseline recapture", "parse metric comparison"],
+      "note": "Initiated by System Admin or Governance role. May be long-running (>30s for full-pool scans)."
+    }
+  },
+
+  "crossViewDataDependencies": {
+    "dependencies": [
+      {
+        "consumer": "View1-Student",
+        "dependsOn": ["session_registry.json (View5 manages)", "question_health.json (View3 manages)", "blocklist (View4 manages)"],
+        "impactIfBroken": "Student exposure data may show questions that were blocked/removed"
+      },
+      {
+        "consumer": "View2-Investigator",
+        "dependsOn": ["challenge_registry.json (View2 manages)", "question_health.json (View3 manages)", "defect_library (View4 references)", "deep_link_validation (View5 verifies)"],
+        "impactIfBroken": "Investigation links may break if QIDs are reindexed or registries become stale"
+      },
+      {
+        "consumer": "View3-ContentAdmin",
+        "dependsOn": ["readiness_scoring.json (View3 manages)", "question_health.json (View3 manages)", "certification_waves.json (View3 manages)", "pack_files (View5 verifies integrity)", "governance_guard (View4 enforces)"],
+        "impactIfBroken": "Content writes may corrupt pack files if integrity not verified first"
+      },
+      {
+        "consumer": "View4-Governance",
+        "dependsOn": ["governance_event_registry.json (View4 manages)", "baselines (View5 recaptures)", "registry_consistency (View5 verifies)", "guard_test_suite (View5 monitors)", "delivery_pool_safety (View4 computes from View3+View5 data)"],
+        "impactIfBroken": "Release authorization may proceed with stale or incorrect safety data"
+      },
+      {
+        "consumer": "View5-SystemAdmin",
+        "dependsOn": ["baselines (View5 manages)", "pack_files (View5 monitors)", "all_registries (Views 1-4 consume)", "backups (View5 manages)"],
+        "impactIfBroken": "System integrity checks may produce false drift alerts"
+      }
+    ],
+    "criticalPath": "View5 → View4 → View3 → View2 → View1 (bottom-up dependency chain: file integrity must be confirmed before content admin writes, governance must verify before release, investigations depend on content admin data, student view depends on all upstream data)"
+  },
+
+  "breakingChangePolicy": {
+    "version": "1.0.0",
+    "semanticVersioning": "MAJOR.MINOR.PATCH",
+    "breakingChanges": [
+      "Removing or renaming any endpoint path",
+      "Removing or renaming any required field in a response",
+      "Changing a field type (e.g., string → integer)",
+      "Removing an enumeration value from a closed enum",
+      "Adding a new required field to a request body",
+      "Changing authentication method or token format",
+      "Changing pagination strategy (offset → cursor)"
+    ],
+    "nonBreakingChanges": [
+      "Adding new endpoints",
+      "Adding new optional fields to responses",
+      "Adding new query parameters with defaults",
+      "Adding new enumeration values to open enums",
+      "Extending rate limit windows",
+      "Adding new roles or permission profiles"
+    ],
+    "deprecationPolicy": {
+      "noticePeriod": "30 days minimum",
+      "deprecationHeader": "Sunset: {ISO8601-date-of-removal}",
+      "documentation": "All deprecated endpoints remain in contract with deprecation notice for full notice period"
+    },
+    "contractUpdateProcess": [
+      "Propose change in a session-spec artifact (SESSION-NNN_*)",
+      "Review against all 5 view schemas for cross-view impact",
+      "Update contract version per semantic versioning",
+      "Regenerate affected registry artifacts",
+      "Run full governance guard test suite (must be ALL PASS)",
+      "Document in REVISION_HISTORY.md",
+      "Deploy with new contract version number"
+    ]
+  },
+
+  "governanceIntegration": {
+    "guardRulesEnforced": [
+      {
+        "rule": "Rule 2",
+        "level": "BLOCK",
+        "description": "ExplanationWrong[CorrectChoice] must be empty (DL-008 prevention)",
+        "adminPortalEnforcement": "Any PATCH to ExplanationWrong fields must pass Rule 2 validation before write commits"
+      },
+      {
+        "rule": "Rule 3",
+        "level": "BLOCK",
+        "description": "MASTER_QUESTION_REGISTRY.md is generated, never hand-edited",
+        "adminPortalEnforcement": "Registry regeneration only via POST endpoint, never direct edit"
+      },
+      {
+        "rule": "Rule 5",
+        "level": "BLOCK",
+        "description": "Max 30 question objects per change-set without BLOCK-AUTHORIZED marker",
+        "adminPortalEnforcement": "Remediation batch creation enforces ≤30 QIDs. BLOCK-AUTHORIZED override requires governance role."
+      },
+      {
+        "rule": "Rule 6",
+        "level": "BLOCK",
+        "description": "No empty non-CC ExplanationWrong slots (DL-026/DL-035 prevention) — deployed S814",
+        "adminPortalEnforcement": "Certification execution checks all non-CC EW slots are non-empty before certifying"
+      }
+    ],
+    "certificationBlockingConditions": {
+      "source": "CAQS_v1.0.md §9.4 + QUESTION_METADATA_STANDARD.md §9.4",
+      "rules": [
+        "G-NEW-1: Metadata-block ChoiceA-D must match content-block Choices.A-D (DL-016 prevention)",
+        "G-NEW-2: ExplanationWrong text must be topically relevant to the learner-facing distractor",
+        "G-NEW-3: CorrectChoice extraction must use within-object parsing, not forward-scan (DL-029 prevention)",
+        "G-NEW-4: Case-study item explanations must meet sufficiency standards"
+      ]
+    },
+    "backupProtocol": {
+      "source": "knowledge/BACKUP_PROTOCOL.md",
+      "portalEnforcement": "Content write endpoints must confirm backup exists before committing write. Timestamped backup path returned in response."
+    }
+  },
+
+  "appendixA_sourceFileInventory": {
+    "runtimeCriticalFiles": [
+      {"file": "app.js", "category": "APPLICATION_CORE", "size": 209937, "purpose": "Exam engine, session management, rendering, scoring"},
+      {"file": "index_updated.html", "category": "APPLICATION_CORE", "size": 6090, "purpose": "Main entry point, May layer script tags"},
+      {"file": "styles.css", "category": "APPLICATION_CORE", "size": 68696, "purpose": "All styling including May coaching UI"},
+      {"file": "may-core.js", "category": "MAY_LAYER", "size": 344883, "purpose": "May Coaching Layer core engine"},
+      {"file": "may-learner-state.js", "category": "MAY_LAYER", "size": 110240, "purpose": "May Coaching Layer learner state management"},
+      {"file": "pack_a_corrected.js", "category": "MCQ_PACK", "size": 1827160, "purpose": "500 MCQ items, 481 Certified, Sections A/D/E certified"},
+      {"file": "pack_b_corrected.js", "category": "MCQ_PACK", "size": 1386746, "purpose": "500 MCQ items, 500 Certified (100%), all 6 sections certified"},
+      {"file": "pack_c_corrected.js", "category": "MCQ_PACK", "size": 1716807, "purpose": "500 MCQ items, 388 Certified, Sections A/B/C/D certified"},
+      {"file": "pack_d_corrected.js", "category": "MCQ_PACK", "size": 1764100, "purpose": "500 MCQ items, 389 Certified, Sections A/B/C/D certified"},
+      {"file": "pack_e_corrected.js", "category": "MCQ_PACK", "size": 1391661, "purpose": "540 MCQ items (incl. R-series), 540 Certified (100%)"},
+      {"file": "scored_cases.js", "category": "SCORED_CASE", "size": 457390, "purpose": "15 ENHANCED_CASE_BASE cases, 90 items Certified (100%)"},
+      {"file": "scored_cases2.js", "category": "SCORED_CASE", "size": 438676, "purpose": "15 cases, ~60 items"},
+      {"file": "scored_cases3.js", "category": "SCORED_CASE", "size": 444754, "purpose": "15 cases, ~60 items"},
+      {"file": "scored_cases4.js", "category": "SCORED_CASE", "size": 534846, "purpose": "15 cases, ~60 items"},
+      {"file": "scored_cases5.js", "category": "SCORED_CASE", "size": 333161, "purpose": "15 cases, ~60 items"}
+    ],
+    "pipelineOutputFiles": [
+      {"file": "readiness_scoring.json", "consumer": "View3, View4", "purpose": "Per-QID readiness classification: BLOCKED/REMEDIATE/READY/CERTIFY"},
+      {"file": "certification_waves.json", "consumer": "View3, View4", "purpose": "Certification wave plans and execution records"},
+      {"file": "certification_candidates.json", "consumer": "View3", "purpose": "Items eligible for certification"},
+      {"file": "certification_scan_artifact.json", "consumer": "View3, View4, View5", "purpose": "Raw scan output used by readiness scorer"},
+      {"file": "question_health.json", "consumer": "View1, View2, View3", "purpose": "Per-QID health score (6 components, 0-100)"},
+      {"file": "challenge_registry.json", "consumer": "View1, View2", "purpose": "All 35 challenges with status and links"},
+      {"file": "investigation_registry.json", "consumer": "View2", "purpose": "All investigations with findings and resolution"},
+      {"file": "recommendation_registry.json", "consumer": "View1, View2, View3", "purpose": "All ~67 recommendations with QID targets"},
+      {"file": "session_registry.json", "consumer": "View1, View5", "purpose": "All 98 recorded sessions with QID lists"},
+      {"file": "session_intelligence.json", "consumer": "View1, View5", "purpose": "Session-level analytics and intelligence"},
+      {"file": "governance_event_registry.json", "consumer": "View4, View5", "purpose": "All governance events and policy violations"},
+      {"file": "identity_validation_report.json", "consumer": "View4, View5", "purpose": "QID identity integrity scan results"},
+      {"file": "work_queue.json", "consumer": "View3", "purpose": "Prioritized remediation work queue"},
+      {"file": "remediation_queue.json", "consumer": "View3", "purpose": "Remediation backlog"},
+      {"file": "delta_ledger.json", "consumer": "View4", "purpose": "Content change delta tracking"},
+      {"file": "replacement_lineage.json", "consumer": "View4", "purpose": "QID replacement lineage tracking"},
+      {"file": "SESSION252_DEEP_LINK_VALIDATION.json", "consumer": "View5", "purpose": "Deep-link validation results"},
+      {"file": "domain_progress.json", "consumer": "View1, View3", "purpose": "Per-domain certification progress"}
+    ],
+    "knowledgeFiles_referenced": [
+      {"file": "knowledge/CURRENT_BASELINES.md", "purpose": "13-file SHA-256 baseline reference"},
+      {"file": "knowledge/DEFECT_LIBRARY.md", "purpose": "DL-001 through DL-036 defect catalog"},
+      {"file": "knowledge/CAQS_v1.0.md", "purpose": "Content quality standard including §9.4 certification blockers"},
+      {"file": "knowledge/QUESTION_METADATA_STANDARD.md", "purpose": "Metadata schema including §9 governance state fields"},
+      {"file": "knowledge/REVISION_HISTORY.md", "purpose": "All content changes, certification events, audit trails"},
+      {"file": "knowledge/BACKUP_PROTOCOL.md", "purpose": "Hard backup rules enforced at write time"}
+    ]
+  },
+
+  "appendixB_checkpointIntegration": {
+    "description": "Each view must provide a checkpoint at T0/Tmid/Tend if the portal session exceeds 30 minutes. Per AGENTS.md §13 runtime governance.",
+    "checkpoints": {
+      "T0": {
+        "checks": ["All 13 runtime file hashes match CURRENT_BASELINES.md", "Governance guard 27/27 PASS", "Registry parse-counts match source grep counts"],
+        "responsibleView": "View5"
+      },
+      "Tmid": {
+        "checks": ["Pack file parse-counts unchanged", "Governance events since T0 reviewed", "No new CRITICAL drift alerts"],
+        "responsibleView": "View4 + View5"
+      },
+      "Tend": {
+        "checks": ["All 13 hashes vs T0 baseline", "G1-G5 reconciliation if drift detected", "REVISION_HISTORY.md entry appended"],
+        "responsibleView": "View4"
+      }
+    }
+  },
+
+  "appendixC_glossary": {
+    "qid": {
+      "pattern": "P1[A-E]-[A-F]R?-\\d{3}",
+      "examples": ["P1-A-001 (Pack A, Section A)", "P1B-C-101 (Pack B, Section C)", "P1-E-R33 (Pack E, R-series supplement)"],
+      "note": "Pack A items use P1- prefix; Packs B-E use P1B- through P1E- prefix. Pack E has 40 supplementary R-series items."
+    },
+    "questionState": {
+      "values": ["Unprocessed (not yet audited)", "In Audit (under review)", "Editorial Queue (needs revision)", "Certified (learner-pool eligible)", "Archived (removed from pool)"],
+      "deliveryRule": "Only Certified items are eligible for learner practice sessions."
+    },
+    "defectCodes": {
+      "format": "DL-NNN",
+      "range": "DL-001 through DL-036",
+      "governanceCritical": ["DL-008", "DL-016", "DL-021", "DL-026", "DL-030", "DL-035"]
+    },
+    "healthTier": {
+      "values": ["GOLD STANDARD (100)", "EXAM READY (85-99)", "ACCEPTABLE (70-84)", "NEEDS ATTENTION (50-69)", "REJECT (0-49)"],
+      "components": ["defect (weighted by defect severity)", "challenge (weighted by open challenges)", "recommendation (weighted by pending recs)", "certification (100 if Certified)", "structural (structural flags)", "usage (delivery frequency)"]
+    },
+    "challengeFlow": {
+      "states": ["OPEN → INVESTIGATING or DISMISSED", "INVESTIGATING → RESOLVED or CLOSED or DISMISSED", "RESOLVED → CLOSED", "CLOSED → (terminal)", "DISMISSED → (terminal)"],
+      "resolutionTypes": ["CONFIRMED_DEFECT", "CONFIRMED_VALID", "INCONCLUSIVE", "DUPLICATE", "NO_ACTION"]
+    },
+    "certificationRequirement": {
+      "perCAQS": "Six-dimension AI verification at HIGH confidence across: Correctness, Precision, Difficulty Calibration, Distractor Engineering, Blueprint Alignment, CMA Part 1 Relevance.",
+      "perMetadataStandard": "G-NEW-1 through G-NEW-4 certification-blocking conditions must be clear."
+    }
+  }
+}

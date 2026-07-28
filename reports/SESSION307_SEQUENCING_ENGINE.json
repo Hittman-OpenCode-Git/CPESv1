@@ -1,0 +1,62 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "strategy": "HYBRID — Certification-first for Domains E/F + parallel EW remediation for certified deficit items",
+  "rationale": "Domains E/F uncertified items ARE the P0 quality items. Certifying them (with required EW authoring) addresses both deficits in a single workstream. Parallel standalone EW remediation for already-certified deficit items (Pack C DL-008 cluster, case-bank EW gap).",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "EMERGENCY — DL-008 Remediation",
+      "priority": "IMMEDIATE",
+      "items": 67,
+      "sessions": "S801-S803 (3 sessions)",
+      "description": "Clear 67 Certified DL-008 items from learner pool. Pack C Section B (54 items) first — densest cluster. Pack D (10 items), Pack A (2 items).",
+      "roi": "CRITICAL — learner safety; removes pool contamination"
+    },
+    {
+      "phase": 2,
+      "name": "Domain E Certification Wave",
+      "priority": "HIGH",
+      "items": 178,
+      "sessions": "S809-S813 subset (5 sessions)",
+      "description": "Certify all uncertified Domain E items per CAQS §1.6. Includes EW authoring, EC expansion, metadata compliance.",
+      "roi": "HIGH — certifies 178 items, resolves 29 P0, adds EW for all"
+    },
+    {
+      "phase": 3,
+      "name": "Domain F Certification Wave",
+      "priority": "HIGH",
+      "items": 150,
+      "sessions": "S809-S813 subset (4 sessions)",
+      "description": "Certify all uncertified Domain F items. Sequential after Domain E.",
+      "roi": "HIGH — certifies 150 items, resolves 8 P0, closes F gap"
+    },
+    {
+      "phase": 4,
+      "name": "Case-Bank EW Authoring (Certified Cases)",
+      "priority": "MEDIUM",
+      "items": "~310 items across 5 case banks",
+      "sessions": "S814-S819 (6 sessions)",
+      "description": "Author ExplanationWrong for certified case items (3.9% current fill → target 80%+). Focus on certified cases first (A1-F2) where learners are active.",
+      "roi": "HIGH — direct learner feedback for wrong answers in case practice"
+    },
+    {
+      "phase": 5,
+      "name": "Pack C/D Sections E/F Certification + Modernization",
+      "priority": "MEDIUM",
+      "items": "~150",
+      "sessions": "S814-S816 subset (3 sessions)",
+      "description": "Certify remaining Pack C/D sections. Audit and resolve clone rotation artifacts.",
+      "roi": "MEDIUM — structural quality improvement"
+    },
+    {
+      "phase": 6,
+      "name": "Pack A Closeout + Remaining Gaps",
+      "priority": "LOW",
+      "items": "~30",
+      "sessions": "S816-S819 (3 sessions)",
+      "description": "Final 19 Pack A items, Pack E Section C, remaining modernization.",
+      "roi": "MEDIUM — completes portfolio certification"
+    }
+  ],
+  "estimatedCompletion": "~24 sessions to full portfolio certification and major EW gap closure"
+}

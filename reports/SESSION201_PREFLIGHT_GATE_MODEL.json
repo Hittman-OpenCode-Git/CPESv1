@@ -1,0 +1,637 @@
+{
+  "report": "SESSION201_PREFLIGHT_GATE_MODEL",
+  "agent": "Agent H — Board 5: Mandatory Automated Pre-Flight Gate Design",
+  "session": "S201",
+  "date": "2026-07-27",
+  "mode": "READ_ONLY — design specification only",
+  "parent_finding": "S200: 89.5% readiness failure rate — items reach certification boards with 3-5 concurrent defects that could have been detected automatically",
+  "design_principles": [
+    "Every gate produces a PASS/FAIL/HOLD verdict. HOLD = human review required. FAIL = certification blocked.",
+    "Within-object extraction is the ONLY approved method. No forward-scan. No regex-window. No flat-field matching.",
+    "Compound key identity (QID + CorrectChoice + EW_Pattern + Template_Family + File_Path) governs Gate -1 and Gate 3.",
+    "Gate order matters: identity must be validated before any downstream scan result becomes admissible. S320 lesson: wrong target + perfect scan = wrong result.",
+    "Zero tolerance for HARD_BLOCK failures — items cannot enter In Audit with any HARD_BLOCK violation.",
+    "S202 Amendment 1 (2026-07-27): Gate -1 Identity Validation added. No downstream scan result is admissible until IDENTITY_VALID. Structural and content scans can produce correct outputs against the wrong item (DL-016 +1 shift, DL-029 forward-scan CC offset) — identity must be confirmed first."
+  ],
+  "scans": [
+    {
+      "scan_id": "PG-001",
+      "defect_class": "DL-008",
+      "title": "ExplanationWrong[CorrectChoice] Non-Empty",
+      "severity": "High (learner-safety risk when Certified)",
+      "gate": "Gate 1 — Structural Scan",
+      "detection_method": "String-aware brace-matched object parse (Function constructor → extract CorrectChoice + ExplanationWrong[A-D] from SAME object boundary). For each object: read CorrectChoice letter → access ExplanationWrong[letter] → flag if typeof === 'string' && length > 0.",
+      "input_required": "Raw pack file content + Function constructor parse capability",
+      "false_positive_risk": "LOW",
+      "false_positive_risk_rationale": "0% false positive rate across 539 historical occurrences — every flag was a genuine EV8 violation. DL-029 CC-offset artifacts are eliminated by within-object extraction.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "Items with non-empty EW[CC] display wrong-answer text in the correct-answer review slot. Per governance-guard Rule 2 and CAQS §4.4 EV8. Certification must be blocked until cleared.",
+      "automatable": true,
+      "automatable_rationale": "Purely structural check — within-object field extraction + string length test. No NLP or semantic judgment required.",
+      "runtime_per_500_items_seconds": 2,
+      "runtime_rationale": "Single-pass object extraction + field check. Bounded by Function constructor parse (~0.5s per pack) + per-object field access (~3ms × 500 = 1.5s).",
+      "implementation_complexity": "LOW",
+      "implementation_complexity_rationale": "Governance guard Rule 2 already implements this logic (extractObjectsFromText → findDL008Violations). Reuse existing extractObjectsFromText pattern with string-aware brace-matching per ExplanationValidator.js lines 114-144 (DL-020 fix). Implementation: ~20 lines of JavaScript.",
+      "existing_code_references": [
+        "governance-guard.js: lines 42-92 (extractObjectsFromText, findDL008Violations)",
+        "ExplanationValidator.js: lines 114-144 (string-aware extractQuestions)",
+        "CAQS_v1.0.md: §4.4 EV8 — Correct-answer slot in distractor explanations must be empty"
+      ],
+      "historical_evidence": {
+        "total_identified": 539,
+        "false_positives": 0,
+        "peak_certified_exposure": "75 (2026-07-23, pre-DL-019 overwrite discovery)",
+        "current_certified_remaining": 0,
+        "sessions_consumed_on_detection_and_remediation": "~22 sessions (2026-07-22 through 2026-07-26)"
+      }
+    },
+    {
+      "scan_id": "PG-002",
+      "defect_class": "DL-010",
+      "title": "Misassigned Choice Explanations",
+      "severity": "High (explanation text describes wrong choice — learners receive misleading feedback)",
+      "gate": "Gate 2 — Content Scan",
+      "detection_method": "Two-tier: (Tier 1) Lexical overlap — compute Jaccard similarity between each ExplanationWrong[L] text and the corresponding Choices.{L} text. Flag if similarity < 15% (EW text has no lexical relationship to its choice). (Tier 2) Numeric mismatch heuristic — if EW text contains a dollar amount or numeric result, compare to Constraints in Choices. If EW describes Choice B's value but is assigned to slot A → flag. Cross-validate against ExplanationCorrect for items where EC text matches the EW slot's numeric values.",
+      "input_required": "Parsed question objects with Choices.{A,B,C,D} and ExplanationWrong[A-D] from SAME object boundary",
+      "false_positive_risk": "HIGH",
+      "false_positive_risk_rationale": "DL-010 is inherently semantic — no purely structural test can reliably detect it. Lexical overlap can produce false positives when EW text is generic but choice-specific (e.g., 'This option incorrectly applies a FIFO assumption when the scenario describes LIFO liquidation' has low lexical overlap with the actual choice text but is correctly assigned). DL-016 metadata-content divergence creates additional false positives: when the metadata-block ChoiceA text differs from content-block Choices.A text, lexical overlap measures against the wrong target. Recommended: flag for HUMAN REVIEW, not automated remediation.",
+      "blocking_level": "WARN",
+      "blocking_rationale": "Cannot auto-block certification — high FP risk. Items flagged as WARN must receive human editorial review before certification. Items with confirmed DL-010 (human-confirmed) are blocked until remediated.",
+      "automatable": false,
+      "automatable_rationale": "Tier 1 (lexical overlap) is automatable but produces ~60% false-positive rate based on historical DL-010 scan data (125 true positives from 2,038 raw findings = 6.1% precision). Tier 2 (numeric drift) is automatable for calculation items only. Full semantic verification requires AI-assisted review, not automated gating.",
+      "runtime_per_500_items_seconds": 8,
+      "runtime_rationale": "Per-item Jaccard computation across 4 slots × 4 choices = 16 comparisons/item × 500 items. Lexical overlap is fast (~0.5ms per comparison). Total ~4s for Tier 1 + ~4s for Tier 2 numeric extraction.",
+      "implementation_complexity": "MEDIUM",
+      "implementation_complexity_rationale": "Jaccard similarity implementation is straightforward (~30 lines). Numeric extraction regex is simple. The complexity is in threshold calibration and cross-block validation (avoiding DL-016 contamination of the comparison baseline). Recommend using content-block Choices.{A,B,C,D} as ground truth, not metadata-block ChoiceA-D.",
+      "existing_code_references": [
+        "DEFECT_LIBRARY.md: DL-010 lines 531-603 — detection rule and reference instance",
+        "DEFECT_LIBRARY.md: DL-016 lines 888-962 — metadata-content divergence creates DL-010 false positives",
+        "SESSION201_READINESS_LEAKAGE.json: DL-010 preventability_score=60, 125 true positives from 2,038 raw findings"
+      ],
+      "historical_evidence": {
+        "total_raw_findings": 2038,
+        "confirmed_true": 125,
+        "false_positive_rate": "93.9% (mostly DL-016 scan artifacts)",
+        "peak_certified_exposure": "Unknown — DL-016 confusion masks true count",
+        "current_status": "OPEN — 125 scoped, ~78 mechanical fixes + ~47 editorial"
+      }
+    },
+    {
+      "scan_id": "PG-003",
+      "defect_class": "DL-013",
+      "title": "Boilerplate Distractor Explanations",
+      "severity": "High (learners receive generic non-instructional feedback — all 3 distractor EW fields say effectively the same thing)",
+      "gate": "Gate 2 — Content Scan",
+      "detection_method": "Two-pattern regex match within each ExplanationWrong field: (Pattern A) presence of 'represents a plausible misconception' AND 'A candidate may select this option by misapplying' → classic DL-013 boilerplate. (Pattern B) Jaccard similarity > 80% between any two ExplanationWrong fields within the same item → near-identical template text detected even when boilerplate phrases are absent. Also scan for DL-027 closing-tag variant: 'A candidate selecting this option may misunderstand how the governing standard applies to this specific fact pattern.'",
+      "input_required": "Parsed question objects with ExplanationWrong[A-D] field values",
+      "false_positive_risk": "LOW",
+      "false_positive_risk_rationale": "Pattern A (dual-phrase regex) had 0% false positive rate across 2,587 confirmed occurrences — the template text is mechanically distinctive. Pattern B (Jaccard similarity > 80%) may produce false positives for items where two distractors genuinely share vocabulary (rare but possible). Recommend: Pattern A = HARD_BLOCK, Pattern B = WARN.",
+      "blocking_level": "SOFT_BLOCK",
+      "blocking_rationale": "DL-013 boilerplate is NOT a learner-safety risk (text is directionally correct, just generic). It blocks certification because it fails CAQS §4.3 'Choice-specific' rule and EV4 (distractor explanations must be choice-specific). SOFT_BLOCK = certification deferred until remediated, but existing Certified items with DL-013 are not retroactively decertified (zero currently affected).",
+      "automatable": true,
+      "automatable_rationale": "Pattern A is pure regex — fully automatable. Pattern B is Jaccard similarity — fully automatable. Detection is 100% automatable. Remediation (authoring choice-specific text) requires human or AI editorial work.",
+      "runtime_per_500_items_seconds": 3,
+      "runtime_rationale": "Regex match across 2,000 EW fields (500 items × 4 slots) is near-instant (<1s). Jaccard comparison between slot pairs per item (6 comparisons × 500 = 3,000) adds ~2s.",
+      "implementation_complexity": "LOW",
+      "implementation_complexity_rationale": "Regex pattern matching is trivial (~10 lines). Jaccard similarity is a standard function (~15 lines). The ExplanationValidator already implements placeholder pattern detection (lines 9-16) — extend that pattern list with the DL-013 boilerplate regex.",
+      "existing_code_references": [
+        "ExplanationValidator.js: lines 9-16 (placeholderPatterns array — add DL-013 and DL-027 patterns)",
+        "DEFECT_LIBRARY.md: DL-013 lines 676-795 — detection rule and scope",
+        "CAQS_v1.0.md: §4.3 Language Rules — 'Choice-specific: Each distractor explanation must be specific to that choice'",
+        "CAQS_v1.0.md: §4.4 EV4 — Distractor explanations must be choice-specific"
+      ],
+      "historical_evidence": {
+        "total_identified": 2587,
+        "total_remediated": 1736,
+        "remaining_fields": 851,
+        "remaining_qids": 366,
+        "certified_affected": 0,
+        "sessions_consumed": "~25 sessions on detection and remediation"
+      }
+    },
+    {
+      "scan_id": "PG-004",
+      "defect_class": "DL-016",
+      "title": "Metadata-Block vs Content-Block ChoiceDivergence",
+      "severity": "HIGH — ExplanationWrong fields describe +1 offset item's topic. Learners see feedback about a completely different topic.",
+      "gate": "Gate 1 — Structural Scan",
+      "detection_method": "Within-object extraction (string-aware brace-matched parse). For each object, extract BOTH the flat metadata-style fields (ChoiceA, ChoiceB, ChoiceC, ChoiceD) and the nested content-style fields (Choices.A, Choices.B, Choices.C, Choices.D). Compare pairwise: ChoiceA vs Choices.A, ChoiceB vs Choices.B, etc. If ANY pair differs → flag DL-016 structural divergence. Also compute EW-to-choice lexical overlap: if EW text in slot L has >50% overlap with choice L+1 (rotation neighbor) but <20% overlap with choice L → confirm +1 offset pattern.",
+      "input_required": "Parsed question objects with BOTH flat ChoiceA-D AND nested Choices.{A-D} extracted from SAME object boundary",
+      "false_positive_risk": "LOW",
+      "false_positive_risk_rationale": "Structural divergence (ChoiceA != Choices.A) has 0% false positive rate — if the two fields exist and differ, it is a genuine divergence. The edge case is when one field exists and the other is absent — this should be flagged as WARN rather than HARD_BLOCK. Semantic EW-to-choice lexical overlap has higher FP risk (~20%) and should be human-reviewed.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "Items with confirmed DL-016 deliver wrong-topic distractor feedback. Per CAQS §1.6 (Correctness dimension) and QUESTION_METADATA_STANDARD.md §9.4.2 G-NEW-1/G-NEW-3: the content block is the authoritative source of truth. Metadata-block choices that diverge from content-block choices create a learner-safety risk. Certification is blocked until blocks are aligned.",
+      "automatable": true,
+      "automatable_rationale": "Structural divergence (field-level string comparison) is fully automatable. The +1 offset pattern verification (lexical overlap with rotation neighbor) is automatable but should produce WARN-level output for human confirmation.",
+      "runtime_per_500_items_seconds": 3,
+      "runtime_rationale": "Within-object field extraction is already performed in Gate 1 structural scan (reuse parsed objects). Pairwise string comparison across 4 slots × 500 items = ~1s. Lexical overlap computation adds ~2s.",
+      "implementation_complexity": "MEDIUM",
+      "implementation_complexity_rationale": "Requires dual-field-path extraction (flat + nested fields from the same object). Not all items have both field formats — Pack B uses single-object architecture with only one format. Implementation must handle absent fields gracefully. The governance guard's extractObjectsFromText function (line 70: filter for objects with CorrectChoice) needs modification to also extract ChoiceA-D and Choices.A-D paths.",
+      "existing_code_references": [
+        "DEFECT_LIBRARY.md: DL-016 lines 888-962 — detection rule: compare ChoiceA-D vs Choices.A-D",
+        "QUESTION_METADATA_STANDARD.md: §9.4.2 G-NEW-1/G-NEW-3 — content block is source of truth",
+        "SESSION201_IDENTITY_ARCHITECTURE.json: dual_block_architecture — Block 1 metadata vs Block 2 content",
+        "governance-guard.js: lines 42-76 (extractObjectsFromText — extend to extract both field paths)"
+      ],
+      "historical_evidence": {
+        "sections_confirmed_affected": "Pack A Sections A/B/C/D (all), Pack D Sections A/D",
+        "pack_c_d_dual_block_status": "NOT YET CONFIRMED",
+        "pack_b": "CLEAN — single-object architecture, no divergence",
+        "pack_e": "CLEAN — different authoring pipeline",
+        "pack_a_section_e": "RESOLVED (S805) — 57 items, 171 EW fields authored",
+        "learner_safety_note": "DL-016 is the most insidious defect because it causes scan false positives across ALL other defect classes (DL-008, DL-010, DL-026)"
+      }
+    },
+    {
+      "scan_id": "PG-005",
+      "defect_class": "DL-026",
+      "title": "Empty Non-CorrectChoice ExplanationWrong Slots",
+      "severity": "High (learners see no distractor feedback on affected distractors — educational quality gap)",
+      "gate": "Gate 1 — Structural Scan",
+      "detection_method": "Within-object extraction. For each object: read CorrectChoice → for each letter L in {A,B,C,D}: if L != CorrectChoice AND (ExplanationWrong[L] is absent OR ExplanationWrong[L] === '' OR ExplanationWrong[L] is undefined) → flag DL-026. Simultaneously check: if L == CorrectChoice AND ExplanationWrong[L] !== '' → flag DL-008 (co-detected in same pass).",
+      "input_required": "Parsed question objects with CorrectChoice + all 4 ExplanationWrong fields from SAME object boundary",
+      "false_positive_risk": "MEDIUM",
+      "false_positive_risk_rationale": "DL-016 metadata-content mismatch can cause scan false positives when EW text is read from Block 1 while Expected non-empty status is computed from Block 2 choices. In items with DL-016, a slot that appears empty in Block 1 may actually have text in a different field path. Recommendation: cross-validate DL-026 flags against DL-016 status — if an item has BOTH DL-016 and DL-026, the DL-026 flag may be a scan artifact. Ref: Agent 1-5 vs Agent 6 counting discrepancy (632 vs 1,005) was partly due to this.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "Empty distractor slots mean learners receive zero educational feedback when they select certain wrong answers. This is a certification-blocking defect per CAQS §4.3 (Choice-specific explanations required) and CAQS §4.4 EV1 (minimum 50 characters). Items cannot be certified with any empty non-CC EW slot.",
+      "automatable": true,
+      "automatable_rationale": "Purely structural check — field presence + string length test. No semantic judgment required. The ExplanationValidator.js line 173 guard (`if (!val) return;`) must be removed/replaced to catch empty strings.",
+      "runtime_per_500_items_seconds": 2,
+      "runtime_rationale": "Single-pass object extraction (reused from Gate 1 DL-008 scan) + per-object field-length check across 3 non-CC slots. ~1.5s for 1,500 field checks.",
+      "implementation_complexity": "LOW",
+      "implementation_complexity_rationale": "The ExplanationValidator already iterates all 4 EW slots per item (line 197). Modifying the validateQuestion method to flag empty-string non-CC slots is a ~5-line addition. The current line 173 guard must be replaced with a check that distinguishes CC-slots (DL-008) from non-CC-slots (DL-026).",
+      "existing_code_references": [
+        "ExplanationValidator.js: lines 178-200 (validateQuestion — add DL-026 check)",
+        "ExplanationValidator.js: line 173 guard (currently skips empty — must be modified)",
+        "DEFECT_LIBRARY.md: DL-026 lines 1781-2100 — detection rule and scope",
+        "governance-guard.js: Rule 2 only checks non-empty CC slots — needs extension for DL-026"
+      ],
+      "historical_evidence": {
+        "total_identified": 1005,
+        "packs_affected": "A (5), C (500), D (500)",
+        "packs_clean": "B (0), E (0)",
+        "certified_affected_peak": "~423 (2026-07-23)",
+        "certified_remaining_current": "~13 (mostly residual, post-S95-S97 remediation)",
+        "sessions_consumed": "~15 sessions on detection and remediation"
+      }
+    },
+    {
+      "scan_id": "PG-006",
+      "defect_class": "DL-030",
+      "title": "CorrectChoice Answer-Key Errors",
+      "severity": "CRITICAL (wrong answer marked correct — highest learner-safety risk)",
+      "gate": "Gate 4 — Calculation Validation",
+      "detection_method": "Tier 1 (numeric items): Extract numeric values from Stem + Choices. Apply known formula templates from FORMULA_MASTER.md. Compute independently. Compare to stored Correct. Tier 2 (conceptual items): Use build-time AI to independently derive the correct answer from stem + choices — compare to stored CorrectChoice. Tier 3: Cross-check CorrectChoice against ExplanationCorrect text — if EC describes a different choice than CC, flag (this catches DL-030 Type 2: conceptual design errors where template assigned CC to wrong letter).",
+      "input_required": "Parsed question objects with Stem, Choices.{A,B,C,D}, CorrectChoice, ExplanationCorrect + FORMULA_MASTER.md formula library",
+      "false_positive_risk": "HIGH",
+      "false_positive_risk_rationale": "Tier 1 (numeric with formula templates) has LOW FP risk for items matching known formulas (~5%). Tier 2 (conceptual AI derivation) has HIGH FP risk — the AI may derive a different but also defensible answer. Tier 3 (EC-CC cross-check) has MEDIUM FP risk — the EC text may accidentally use language that matches a different choice. All tiers must produce WARN-level output requiring human confirmation before CC is changed.",
+      "blocking_level": "SOFT_BLOCK",
+      "blocking_rationale": "Cannot HARD_BLOCK certification on automated CC verification — the AI may be wrong about the correct answer (DL-030 root cause: certification sub-agents accepted stored CC without independent verification). SOFT_BLOCK = item flagged for mandatory human expert review before certification. The gate output is a 'CC_VERDICT: REQUIRES_HUMAN_REVIEW' flag, not an automated CC change.",
+      "automatable": false,
+      "automatable_rationale": "Tier 1 (numeric formula verification) is automatable for ~200 items with known formula patterns. Tier 2 (conceptual verification) requires AI reasoning with accounting expertise — automatable with AI assistance but must be gated by human confirmation. Tier 3 (EC-CC consistency) is automatable via semantic comparison. Overall: PARTIALLY automatable; final CC confirmation requires human expert.",
+      "runtime_per_500_items_seconds": 45,
+      "runtime_rationale": "Tier 1 (numeric): ~5s for formula matching + computation across ~200 numeric items. Tier 2 (conceptual): ~30s for AI-assisted reasoning across ~300 conceptual items. Tier 3 (EC-CC cross-check): ~10s for semantic comparison across 500 items. Total is dominated by AI-assisted Tier 2 verification.",
+      "implementation_complexity": "HIGH",
+      "implementation_complexity_rationale": "Tier 1 requires a formula-template library mapped to item topics (FORMULA_MASTER.md integration). Tier 2 requires integration with build-time AI verification — the AI must receive stem + choices, derive answer independently, and return a confidence score. Tier 3 requires NLP/semantic comparison. The full system is a multi-component architecture. Interim approach: Tier 3 only (EC-CC consistency check — catches 3 of 5 known DL-030 items), with Tier 1 added in Phase 2 and Tier 2 added in Phase 3.",
+      "existing_code_references": [
+        "DEFECT_LIBRARY.md: DL-030 lines 2330-2405 — 5 items, detection rule, root cause analysis",
+        "CAQS_v1.0.md: §5.1 — Independent Recalculation Requirement",
+        "CAQS_v1.0.md: §1.6 Dimension 1 — Correctness verification",
+        "foundation/FORMULA_MASTER.md: 34 canonical formula names for Tier 1 matching",
+        "SESSION201_READINESS_LEAKAGE.json: DL-030 preventability_score=100 — fully preventable by certification workflow"
+      ],
+      "historical_evidence": {
+        "total_identified": 5,
+        "all_certified_at_time_of_discovery": true,
+        "root_causes": "2 arithmetic errors + 3 conceptual design errors (template assigned CC to wrong letter)",
+        "current_status": "RESOLVED — all 5 fixed (2026-07-24)",
+        "open_question": "How many undiscovered DL-030 items exist in non-Certified sections?"
+      }
+    },
+    {
+      "scan_id": "PG-007",
+      "defect_class": "DL-031",
+      "title": "Definition-Match Difficulty Inflation",
+      "severity": "HIGH (systematic — ~500 items labeled Moderate that test Bloom's Remember/Understand)",
+      "gate": "Gate 4 — Calculation Validation",
+      "detection_method": "For each item: (Step 1) Compute Jaccard lexical overlap between Stem text and CorrectChoice's corresponding Choices text. (Step 2) If overlap > 50% AND DifficultyScore >= 3 AND CognitiveLevel is Remember/Understand → flag DL-031. (Step 3) Secondary check: verify that at least 2 distractors require application-level discernment. If distractors are also definition-level (Jaccard overlap > 40% with their own descriptions) → confirm inflation. Cross-validate against CognitiveLevel field — if CognitiveLevel is 'Apply' or higher but the item is a definition-match, flag BOTH DL-031 AND cognitive-level mismatch.",
+      "input_required": "Parsed question objects with Stem, Choices.{A,B,C,D}, CorrectChoice, DifficultyScore, CognitiveLevel",
+      "false_positive_risk": "MEDIUM",
+      "false_positive_risk_rationale": "Jaccard overlap alone is insufficient — some items with high stem-CC overlap have sophisticated distractor engineering that justifies Moderate labeling (e.g., items where all 4 choices are closely related terms and the candidate must distinguish nuances). The secondary distractor check reduces FP risk but cannot eliminate it. Recommend: flag as WARN for human reviewer to confirm calibration, not auto-recalibrate.",
+      "blocking_level": "WARN",
+      "blocking_rationale": "Difficulty miscalibration does not create learner-safety risk (the answer is still correct). It degrades psychometric quality and distorts blueprint coverage reporting. WARN = flag for difficulty recalibration during certification review. Does not block certification but must be addressed before item reaches Gold Standard.",
+      "automatable": true,
+      "automatable_rationale": "Jaccard overlap + DifficultyScore comparison is fully automatable. The secondary distractor check is automatable. Final calibration decision requires human judgment (is the item genuinely easy or do distractors add complexity?), but the detection/flagging step is 100% automatable.",
+      "runtime_per_500_items_seconds": 5,
+      "runtime_rationale": "Jaccard computation for stem-CC overlap (500 items × 1 comparison) + distractor-level overlap (500 items × 3 distractors × 1 comparison each) = ~2,000 Jaccard computations. ~2.5ms each ≈ 5s total.",
+      "implementation_complexity": "LOW",
+      "implementation_complexity_rationale": "Jaccard similarity is a standard function. Threshold comparison is simple. The DifficultyCalibrationValidator does not currently exist but would be a straightforward addition to the validator pipeline (~50 lines).",
+      "existing_code_references": [
+        "DEFECT_LIBRARY.md: DL-031 lines 2407-2488 — detection rule and pattern",
+        "CAQS_v1.0.md: §6.1 — Target Difficulty Distribution (Easy 15%, Moderate 30%)",
+        "CAQS_v1.0.md: §1.6 Dimension 3 — Difficulty Calibration verification",
+        "TAXONOMY_REGISTRY.md: §1 CognitiveLevel — Remember/Understand definitions"
+      ],
+      "historical_evidence": {
+        "estimated_scope": "~500 items across all 5 packs",
+        "sample_audit": "7 of 15 sampled items miscalibrated (47%)",
+        "companion_defect": "DL-032 — Case Bank: all 420 case items labeled 'Moderate'",
+        "current_status": "OPEN — scoped, not remediated"
+      }
+    },
+    {
+      "scan_id": "PG-008",
+      "defect_class": "EV3",
+      "title": "ExplanationCorrect References Accounting Principle By Name",
+      "severity": "Medium (educational quality — explanation missing governing standard reference)",
+      "gate": "Gate 2 — Content Scan",
+      "detection_method": "Regex scan of ExplanationCorrect for accounting principle citations: 'ASC \\d{3}', 'IAS \\d{1,2}', 'IFRS \\d{1,2}', 'COSO', 'GAAP', 'FASB', 'IMA Statement', 'Sarbanes-Oxley', 'SEC', 'PCAOB', 'AICPA'. If NONE of these patterns match → flag EV3. Additional check: if ExplanationCorrect reference exists but appears to be the WRONG standard for the topic (e.g., 'ASC 210 Accruals' for loss contingency — should be ASC 450) → flag DL-009 (cross-detected).",
+      "input_required": "Parsed question objects with ExplanationCorrect text",
+      "false_positive_risk": "MEDIUM",
+      "false_positive_risk_rationale": "Some legitimate explanations reference the standard by description rather than code (e.g., 'Under generally accepted accounting principles, revenue is recognized when...'). This passes the GAAP keyword but fails the specific ASC citation check. Conversely, an explanation may mention 'ASC 606' in passing without it being the governing principle for the tested concept — the regex matches but the EV3 intent is not satisfied. Recommend: flag as WARN, not HARD_BLOCK.",
+      "blocking_level": "WARN",
+      "blocking_rationale": "Missing principle citation degrades educational quality but does not create learner-safety risk (the answer and reasoning are still correct). WARN = flag for editorial enhancement. CAQS §4.3 makes this mandatory for Gold Standard but not for basic certification.",
+      "automatable": true,
+      "automatable_rationale": "Pure regex pattern matching. The ExplanationValidator already checks ExplanationCorrect content (lines 183-194). Adding an EV3 regex check is a ~10-line extension.",
+      "runtime_per_500_items_seconds": 1,
+      "runtime_rationale": "Single regex pass across 500 ExplanationCorrect fields. Near-instant (<1s).",
+      "implementation_complexity": "LOW",
+      "implementation_complexity_rationale": "Add regex pattern array to ExplanationValidator. ~10 lines of code. Pattern list from DL-009 scan (483 ASC citations catalogued).",
+      "existing_code_references": [
+        "CAQS_v1.0.md: §4.4 EV3 — Correct answer must reference the accounting principle by name",
+        "CAQS_v1.0.md: §4.3 — Minimum length 50 characters per explanation field",
+        "ExplanationValidator.js: lines 183-194 (validateQuestion ExplanationCorrect check)",
+        "DEFECT_LIBRARY.md: DL-009 lines 460-528 — cross-detection of wrong standard citations"
+      ]
+    },
+    {
+      "scan_id": "PG-009",
+      "defect_class": "EV8",
+      "title": "Correct-Answer Slot in ExplanationWrong Fields Must Be Empty",
+      "severity": "High (learner-safety risk when Certified)",
+      "gate": "Gate 1 — Structural Scan",
+      "detection_method": "Same as PG-001 (DL-008). Within-object extraction: read CorrectChoice → check ExplanationWrong[CorrectChoice] → flag if non-empty. EV8 is the CAQS rule; DL-008 is the defect classification. Single scan serves both. Additionally extends to case-study items: for each item in scored_cases*.js, if item.Type is 'select' or 'multi' and item has Choices array, verify the CorrectChoice-indexed explanation slot is empty (case items use different field naming — adapt detection accordingly).",
+      "input_required": "Parsed question objects (MCQ) + parsed case items (scored_cases) with Correct/CorrectChoice and explanation fields",
+      "false_positive_risk": "LOW",
+      "false_positive_risk_rationale": "Same as DL-008 — 0% historical false positive rate for within-object extraction. Case-study items have not been systematically scanned for EV8 but use parallel field structure.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "Same as DL-008. Per CAQS §4.4 EV8: 'Correct-answer slot in distractor explanations must be empty.' Per governance-guard Rule 2 (BLOCK level).",
+      "automatable": true,
+      "automatable_rationale": "Structural check — no semantic judgment required. Extension to case items requires adapting field-name mapping but the logic is identical.",
+      "runtime_per_500_items_seconds": 2,
+      "runtime_rationale": "Combined with DL-008 scan — same pass, zero additional runtime for MCQ packs. Case items add ~0.5s for 420 items across 5 scored_cases files.",
+      "implementation_complexity": "LOW",
+      "implementation_complexity_rationale": "Reuses PG-001 implementation. Extension to case items requires field-name mapping (case items use 'Correct' not 'CorrectChoice', and explanation fields differ). ~20 additional lines for case-item handling.",
+      "existing_code_references": [
+        "CAQS_v1.0.md: §4.4 EV8 — Correct-answer slot in distractor explanations must be empty",
+        "governance-guard.js: Rule 2 — BLOCK: ExplanationWrong[CorrectChoice] must be ''",
+        "PG-001: DL-008 — identical detection method"
+      ]
+    },
+    {
+      "scan_id": "PG-010",
+      "defect_class": "JSON_Integrity",
+      "title": "JSON Integrity — Parseable, All Required Fields Present, No Corruption",
+      "severity": "Critical (unparseable files block ALL downstream operations)",
+      "gate": "Gate 0 — JSON Integrity",
+      "detection_method": "Step 1 (Parse): Function constructor parse of full pack array. If parse fails → attempt brace-matched extraction of individual objects. If that fails → HARD_BLOCK with error report showing line numbers. Step 2 (Field Presence): For each parsed object, verify all required fields exist: QuestionID, Stem, Choices (or Choices.A-D), CorrectChoice, ExplanationCorrect, ExplanationWrongA, ExplanationWrongB, ExplanationWrongC, ExplanationWrongD. Missing required fields → flag. Step 3 (Type Consistency): Verify CorrectChoice is a single letter A-D (not a number, not an array). Verify ExplanationWrong fields are strings or empty strings (not numbers, not objects). Step 4 (Corruption Detection): Scan for known corruption artifacts: `` `n `` (DL-017 backtick-newline), 'NNN: true,' (DL-017 duplicate artifact), unmatched braces, orphaned commas, duplicate QuestionIDs. Step 5 (QuestionID Count): Verify parse-count matches expected pack size (Pack A: 500, Pack B: 500, Pack C: 500, Pack D: 500, Pack E: 500).",
+      "input_required": "Raw pack file content + Function constructor parse capability + expected question counts per pack",
+      "false_positive_risk": "LOW",
+      "false_positive_risk_rationale": "Parse failures are deterministic — a file either parses or it doesn't. Field-presence checks are deterministic. Corruption artifact matching (DL-017 pattern) had 0 false positives on Pack B. QuestionID count is deterministic via grep. The only fuzzy area is type-consistency for numeric fields in 'select' items where CorrectChoice should be 'A'-'D' but some templates may store numeric values.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "If the file cannot be parsed, no downstream gate can operate. If required fields are missing, structural and content scans will crash or produce unreliable results. HARD_BLOCK = certification pipeline stops. File must be repaired before any item in the pack can proceed to certification.",
+      "automatable": true,
+      "automatable_rationale": "All 5 steps are fully automatable — parse, field-presence check, type check, pattern matching, counting. No human judgment required for gate PASS/FAIL decision.",
+      "runtime_per_500_items_seconds": 5,
+      "runtime_rationale": "Function constructor parse: ~1s. Field-presence check across 500 objects × ~15 fields: ~2s. Type consistency: ~1s. Corruption pattern scan: ~0.5s. QuestionID count verification: ~0.5s.",
+      "implementation_complexity": "MEDIUM",
+      "implementation_complexity_rationale": "Step 1 (parse) reuses ExplanationValidator.extractQuestions string-aware parser. Step 2 (field presence) requires a canonical list of required fields per question type — straightforward but needs maintenance as schema evolves. Step 4 (corruption detection) requires maintaining a catalog of known corruption patterns (currently DL-017 only; extensible).",
+      "existing_code_references": [
+        "ExplanationValidator.js: lines 114-144 (extractQuestions — string-aware brace-matched parser)",
+        "governance-guard.js: lines 42-76 (extractObjectsFromText — reusable)",
+        "DEFECT_LIBRARY.md: DL-017 lines 967-1086 — backtick-newline corruption pattern",
+        "DEFECT_LIBRARY.md: DL-020 lines 1400-1460 — ExplanationValidator brace-matcher string-awareness fix",
+        "QUESTION_METADATA_STANDARD.md: §2.1 — Required item-level fields",
+        "QUESTION_METADATA_STANDARD.md: §5.1 — Field-level validation rules"
+      ],
+      "historical_evidence": {
+        "known_corruption_patterns": [
+          "DL-017: 275 Pack B sites with backtick-newline artifact"
+        ],
+        "parse_failure_history": "Pack B was unparseable by JSON.parse and Function constructor for 2 weeks before DL-017 was identified",
+        "impact": "2-week blocking of Pack B Sections A/D certification (147 items) because JSON-based tools crashed before reaching clean sections"
+      }
+    },
+    {
+      "scan_id": "PG-011",
+      "defect_class": "IDENTITY",
+      "title": "Identity Validation — QID, CorrectChoice, Pack Attribution, TemplateFamily Constructibility",
+      "severity": "Critical (if identity is broken, all downstream scan results are inadmissible — S320: wrong target + perfect scan = wrong result)",
+      "gate": "Gate -1 — Identity Validation (Pre-Condition)",
+      "detection_method": "Step 1 (QID Presence): For every item in every pack, verify QuestionID field exists and matches expected pack format (Pack A: P1-{Section}-{NNN}, Pack B: P1B-{Section}-{NNN}, Pack C: P1-{Section}C-{NNN}, Pack D: P1-{Section}D-{NNN}, Pack E: P1E-{Section}-{NNN}). Step 2 (CorrectChoice Presence): Verify CorrectChoice exists and is a single letter A-D. Step 3 (Pack Attribution): Verify the item's file path matches its configured pack. No cross-pack QID collisions (e.g., a P1-AD-001 appearing in both Pack A and Pack D). Step 4 (TemplateFamily Constructibility): For each item, compute stem Jaccard similarity (proper-noun-removed) against all other items in same section. Classify into rotation groups (>90% stem similarity + same choice texts, positionally rotated) or confirm standalone (<70% similarity to any other item). Mark items that cannot be classified as IDENTITY_BLOCKED.",
+      "input_required": "Raw pack file content + within-object extraction + per-pack QID format rules + cross-pack QID collision check",
+      "false_positive_risk": "LOW",
+      "false_positive_risk_rationale": "QID presence and format validation are deterministic. CorrectChoice presence is deterministic. Pack attribution is deterministic. TemplateFamily classification via Jaccard clustering is well-established (>90% threshold produces clean separation between rotation families and standalone items). The only fuzzy area is edge-case items at boundary thresholds (70-90% similarity) — these should be flagged IDENTITY_WARN rather than IDENTITY_BLOCKED.",
+      "blocking_level": "HARD_BLOCK",
+      "blocking_rationale": "Per S202 Amendment 1: no downstream scan result is admissible until IDENTITY_VALID. DL-008, DL-026, DL-013, and DL-016 scans produce unusable results when run against items with broken identity. S320 proved that remediation targeting by QID alone in a rotation-group file hits wrong variants. DL-029 proved that forward-scan CC extraction from wrong objects produces ~75% false-positive rates. Identity must be confirmed before any structural or content scan output is trusted.",
+      "automatable": true,
+      "automatable_rationale": "All four steps are fully automatable: QID regex validation, CorrectChoice field type check, file-path-to-pack mapping, Jaccard stem clustering for template family identification. No NLP or human judgment required.",
+      "runtime_per_500_items_seconds": 5,
+      "runtime_rationale": "QID format validation: ~0.5s (regex across 500 items). CorrectChoice check: ~0.5s. Pack attribution: ~0.5s. TemplateFamily Jaccard clustering: ~3.5s (500 items × ~250 pairwise comparisons for section-level clustering). Total ~5s.",
+      "implementation_complexity": "MEDIUM",
+      "implementation_complexity_rationale": "QID/CC/pack checks are trivial (~15 lines each). TemplateFamily Jaccard clustering requires a proper-noun-stripping function + stem-level Jaccard computation + group-threshold clustering (~60 lines). The cross-pack collision check requires loading all 5 packs simultaneously. Overall ~120 lines of JavaScript. Reuses existing stem-comparison infrastructure from PG-007 (DL-031 difficulty inflation detection).",
+      "existing_code_references": [
+        "SESSION201_IDENTITY_ARCHITECTURE.json: per-pack classification rules, compound key model, template family model",
+        "governance-guard.js: lines 42-76 (extractObjectsFromText — reuses within-object extraction)",
+        "QUESTION_METADATA_STANDARD.md: §6.1 CaseID format patterns (reuse for QID format validation)",
+        "DEFECT_LIBRARY.md: DL-012 (clone redundancy) — template family identification is the same detection mechanism"
+      ],
+      "historical_evidence": {
+        "s320_failure": "Remediation targeted QID by string alone — first-match grabbed wrong variant. Both packs restored from backups. Zero effective writes.",
+        "dl029_impact": "Forward-scan CC extraction produced 100% false positives on Pack B (CC before QID). ~8 sessions wasted on phantom defect counts.",
+        "dual_block_risk": "DL-016 metadata-content divergence creates a scenario where structural scans in Gate 1 read EW fields from Block 1 (metadata) but identify items by Block 2 (content) QID — identity confusion at the sub-object level.",
+        "cross_pack_collision": "Pack C and Pack D share QID formats from the historical bulk-authoring aliasing pipeline (DL-012). A QID appearing in both packs without pack attribution is ambiguous."
+      }
+    }
+  ],
+  "pipeline": {
+    "description": "Six sequential gates. Each gate HARD_BLOCKs the pipeline if any HARD_BLOCK-level violation is detected. Items with SOFT_BLOCK violations are deferred for remediation but do not stop the pipeline for clean items. Items with WARN violations are flagged for human review but proceed through the pipeline. Gate -1 runs before all other gates — S320 proved that structural and content scans can produce correct outputs against the wrong item, making their results inadmissible until identity is confirmed.",
+    "execution_order": "Gate -1 → Gate 0 → Gate 1 → Gate 2 → Gate 3 → Gate 4. No gate may be skipped. Gate N's input depends on Gate N-1's successful parse output. Gate -1 is the mandatory identity pre-condition — no downstream scan result is admissible until IDENTITY_VALID.",
+    "gates": [
+      {
+        "gate_id": "Gate_-1",
+        "gate_name": "Identity Validation (Pre-Condition)",
+        "description": "Verify every item has a constructible identity before any structural or content scan runs. This is the mandatory identity pre-condition added by S202 Amendment 1. S320 proved: wrong target + perfect scan = wrong result. DL-008, DL-026, DL-013, and DL-016 scans can all report correctly against the wrong item when identity is broken (DL-016 +1 metadata-content shift, DL-029 forward-scan CC offset). No downstream scan result is admissible until this gate produces IDENTITY_VALID.",
+        "order": -1,
+        "scans": [
+          "PG-011"
+        ],
+        "blocking_level": "HARD_BLOCK",
+        "blocking_condition": "Any item missing QID → HARD_BLOCK. Any item missing CorrectChoice → HARD_BLOCK. Any item with unidentifiable pack attribution → HARD_BLOCK. Any item with unclassifiable TemplateFamily → HARD_BLOCK (item cannot be matched to a rotation group or confirmed standalone).",
+        "runtime_per_pack_seconds": 3,
+        "output": "IDENTITY_VALID (all items have QID, CC, and pack attribution) or IDENTITY_BLOCKED (with per-item failure report). IDENTITY_BLOCKED items are excluded from all downstream gates. Additionally produces: per-pack QID format validation report, CorrectChoice field presence audit, pack attribution confirmation.",
+        "pass_condition": "All items in all packs pass: QID present and matches expected pack format, CorrectChoice present and is a single letter A-D, pack file matches item's configured file path, TemplateFamily classifiable for all items (either in a rotation group or confirmed standalone).",
+        "on_pass": "IDENTITY_VALID flag set. Proceed to Gate 0 with identity-confirmed item list. All downstream scan results are now admissible.",
+        "on_fail": "IDENTITY_BLOCKED items are excluded from all downstream gates. Pipeline proceeds for IDENTITY_VALID items only. Generate identity gap report.",
+        "dependency": "None — this is the mandatory entry gate. Runs before JSON parsing of content fields.",
+        "s320_lesson": "S320 failed because remediation targeted items by QID string alone in a file where the same QID prefix appeared at multiple positions with different CorrectChoice values. The first-match strategy grabbed the wrong variant. Gate -1 prevents this by requiring QID + CC + pack attribution before any tool is allowed to target an item.",
+        "dl029_lesson": "Forward-scan from QID grabs neighbor item's CC when CC is stored before QID in the JSON object (Pack B pattern). Within-object extraction solves this at the parse level — Gate -1 verifies it at the identity level by cross-checking CC belongs to the same object as its QID."
+      },
+      {
+        "gate_id": "Gate_0",
+        "gate_name": "JSON Integrity",
+        "description": "Verify all pack and case files are parseable, structurally complete, and free of known corruption. This gate must pass before any downstream structural or content scan can operate — unparseable files block the entire pipeline.",
+        "order": 0,
+        "scans": [
+          "PG-010"
+        ],
+        "blocking_level": "HARD_BLOCK",
+        "blocking_condition": "Any file fails parse → pipeline stops. Any required field absent → pipeline stops for that item. Corruption artifact detected → pipeline stops. QuestionID count mismatch → pipeline stops.",
+        "runtime_per_pack_seconds": 5,
+        "output": "PASS (all files parseable, all fields present, count verified) or FAIL (with error report specifying file, line range, and failure reason).",
+        "pass_condition": "All 5 packs parse clean. All 5 scored_cases files parse clean. All 2,500 MCQs + 420 case items have required fields present. Zero corruption artifacts. QuestionID counts match expected.",
+        "on_pass": "Proceed to Gate 1 with parsed object arrays.",
+        "on_fail": "Halt pipeline. Generate error report. File must be repaired and Gate 0 re-run."
+      },
+      {
+        "gate_id": "Gate_1",
+        "gate_name": "Structural Scan",
+        "description": "Detect field-level structural defects that create learner-safety risks or block certification per CAQS §4.4 and governance-guard rules. All scans use within-object extraction (no forward-scan).",
+        "order": 1,
+        "scans": [
+          "PG-001 (DL-008)",
+          "PG-009 (EV8)",
+          "PG-005 (DL-026)",
+          "PG-004 (DL-016)"
+        ],
+        "blocking_level": "HARD_BLOCK",
+        "blocking_condition": "Any item fails DL-008/EV8 (non-empty EW[CC]) → HARD_BLOCK certification for that item. Any item fails DL-026 (empty non-CC EW slot) → HARD_BLOCK certification for that item. Any item has confirmed DL-016 structural divergence (ChoiceA-D != Choices.A-D) → HARD_BLOCK certification for that item.",
+        "runtime_per_pack_seconds": 10,
+        "runtime_sum": "PG-001 (DL-008): 2s + PG-009 (EV8): 0s (combined) + PG-005 (DL-026): 2s + PG-004 (DL-016): 3s = 7s. Rounding to 10s for overhead.",
+        "output": "Per-item PASS/FAIL verdict. Aggregate report: total items scanned, HARD_BLOCK violations by defect class, SOFT_BLOCK/WARN violations. QID list for each violation class.",
+        "pass_condition": "Zero HARD_BLOCK violations. SOFT_BLOCK/WARN violations documented but do not block pipeline progression.",
+        "on_pass": "All items pass structural integrity checks. Proceed to Gate 2.",
+        "on_fail": "HARD_BLOCK items are excluded from Gate 2+ processing. Report generated. Non-failing items proceed normally.",
+        "dependency": "Requires Gate 0 parsed objects as input."
+      },
+      {
+        "gate_id": "Gate_2",
+        "gate_name": "Content Scan",
+        "description": "Detect content-quality defects in explanation text: boilerplate, missing principle references, and placeholder patterns. These defects degrade educational quality but do not create learner-safety risk (answer key is still correct).",
+        "order": 2,
+        "scans": [
+          "PG-003 (DL-013)",
+          "PG-008 (EV3)",
+          "PG-002 (DL-010)"
+        ],
+        "blocking_level": "SOFT_BLOCK",
+        "blocking_condition": "DL-013 boilerplate detected → SOFT_BLOCK (certification deferred but existing Certified status not revoked). EV3 principle citation missing → WARN (flagged for editorial enhancement). DL-010 misassignment suspected → WARN (flagged for human editorial review; cannot auto-confirm).",
+        "runtime_per_pack_seconds": 12,
+        "runtime_sum": "PG-003 (DL-013): 3s + PG-008 (EV3): 1s + PG-002 (DL-010): 8s = 12s.",
+        "output": "Per-item content quality report. Fields flagged by defect class. Boilerplate pattern matches with snippet. Missing principle citation flag. DL-010 suspected items for human review.",
+        "pass_condition": "All items pass SOFT_BLOCK checks OR flagged items have documented deferral/exemption. WARN items documented.",
+        "on_pass": "Content quality verified. Proceed to Gate 3.",
+        "on_fail": "SOFT_BLOCK items deferred for remediation. Pipeline proceeds for clean items.",
+        "dependency": "Requires Gate 1 structural scan output (items must be structurally clean before content evaluation — avoids DL-016 scan artifacts contaminating content checks)."
+      },
+      {
+        "gate_id": "Gate_3",
+        "gate_name": "Identity Reconciliation",
+        "description": "Verify compound-key identity integrity across all packs. Prevent cross-item contamination (DL-016), clone duplication (DL-012), and rotation-artifact misidentification. This gate confirms that every QID maps to a unique, unambiguous item instance with consistent metadata and content alignment.",
+        "order": 3,
+        "scans": [],
+        "blocking_level": "HARD_BLOCK",
+        "blocking_condition": "Duplicate compound keys detected (same QID + CC + EW_Pattern across two packs) → HARD_BLOCK. Template family with ALL items failing canonical seed criteria → HARD_BLOCK (requires re-authoring). QID format violation (doesn't match expected pattern) → HARD_BLOCK.",
+        "runtime_per_pack_seconds": 20,
+        "runtime_rationale": "Compound key extraction: 2s per pack. Template family identification (Jaccard clustering): 10s per pack. Cross-pack duplicate detection: 5s. Canonical seed evaluation: 3s. Total ~20s per pack (can be parallelized across packs).",
+        "output": "Compound key registry for all items. Template family map with canonical seed identification. Cross-pack duplicate report. Per-pack identity integrity score.",
+        "pass_condition": "All 2,500 items have unique compound keys. All template families have at least one viable canonical seed. Zero cross-pack QID collisions. All QIDs match expected format patterns.",
+        "checks": [
+          {
+            "check": "Compound Key Uniqueness",
+            "method": "Compute compound key (QID + CorrectChoice + EW_Pattern + File_Path) for every item. Verify uniqueness across all 5 packs. Flag duplicates.",
+            "rationale": "S320 failure: remediation targeted items by QID alone, modifying wrong variants because the same QID template appeared at multiple CC positions."
+          },
+          {
+            "check": "Template Family Identification",
+            "method": "Parse all items per section, compute stem Jaccard similarity after proper-noun removal. Group items with >90% stem similarity AND identical choice texts (positionally rotated) into template families. Verify CorrectChoice cycles A→B→C→D→A within each family.",
+            "rationale": "DL-012: 140 clone items in 28 template families provided zero additional pedagogical value. DL-030: 3 of 5 answer-key errors were template-rotation assignment mistakes."
+          },
+          {
+            "check": "Canonical Seed Viability",
+            "method": "For each template family, evaluate all items against canonical seed criteria: question_state='Unprocessed', EC >= 200 chars, EC contains ASC/COSO citation, all EW slots substantive, EW[CC] empty, exactly 3 non-CC slots non-empty. If zero items meet criteria → flag family for re-authoring.",
+            "rationale": "Per SESSION201_IDENTITY_ARCHITECTURE.json §template_family_model: if no item meets canonical seed criteria, the family requires re-authoring from scratch."
+          },
+          {
+            "check": "Cross-Pack QID Collision",
+            "method": "Compare QID sets across packs. Packs C and D may share QID formats from the historical bulk-authoring aliasing pipeline. Verify no two packs have the same QID prefix space with identical stems.",
+            "rationale": "DL-012: Pack C and Pack D share identical item sets (1,146 DL-013 fields each) from duplicate authoring pipeline."
+          },
+          {
+            "check": "QID Format Validation",
+            "method": "Verify each QID matches expected pattern per pack: Pack A = P1-{Section}-{NNN}, Pack B = P1B-{Section}-{NNN}, Pack C = P1-{Section}C-{NNN} or P1-{Section}-{NNN}, Pack D = P1-{Section}D-{NNN}, Pack E = P1E-{Section}-{NNN}. Flag format violations.",
+            "rationale": "Per SESSION201_IDENTITY_ARCHITECTURE.json §classification_rules: each pack has a specific QID format. Violations indicate cross-pack contamination or template aliasing."
+          }
+        ],
+        "dependency": "Requires Gate 2 output (clean, identified items). Operates cross-pack — all 5 packs must be loaded simultaneously."
+      },
+      {
+        "gate_id": "Gate_4",
+        "gate_name": "Calculation Validation",
+        "description": "Verify answer-key correctness (DL-030) and difficulty calibration (DL-031). This is the most computationally intensive gate — it requires build-time AI reasoning for conceptual items and is therefore the last gate in the pipeline (all structural and content defects have been cleared first, minimizing wasted computation on defective items).",
+        "order": 4,
+        "scans": [
+          "PG-006 (DL-030)",
+          "PG-007 (DL-031)"
+        ],
+        "blocking_level": "SOFT_BLOCK",
+        "blocking_condition": "DL-030 suspected (CorrectChoice appears wrong) → SOFT_BLOCK item for mandatory human expert review. DL-031 flagged (difficulty inflation) → WARN for recalibration.",
+        "runtime_per_pack_seconds": 50,
+        "runtime_sum": "PG-006 (DL-030): 45s + PG-007 (DL-031): 5s = 50s. Dominated by AI-assisted conceptual CC verification.",
+        "output": "Per-item CC_Verdict report (CONFIRMED / REQUIRES_HUMAN_REVIEW / SUSPECT). Per-item difficulty calibration report. Aggregate difficulty distribution vs CAQS §6.1 targets.",
+        "pass_condition": "Zero DL-030 SUSPECT items remaining. Difficulty distribution within 5% tolerance of CAQS §6.1 targets.",
+        "on_fail": "SOFT_BLOCK items routed to human expert review. Difficulty-recalibration queue generated.",
+        "dependency": "Requires Gate 3 output (identity-confirmed items with unique compound keys — ensures CC verification targets the correct item variant)."
+      }
+    ],
+    "pipeline_summary": {
+      "total_scans": 11,
+      "total_gates": 6,
+      "total_runtime_per_pack_seconds": 102,
+      "total_runtime_per_pack_minutes": 1.6,
+      "total_runtime_all_5_packs_seconds": 510,
+      "total_runtime_all_5_packs_minutes": 8.5,
+      "parallelizable_reduction": "Gates -1 and 1 can be parallelized across packs (identity and structural checks are per-pack independent). Gates 2, 3, and selected Gate 4 checks can run in parallel across packs. With 3 parallel workers, total pipeline time ≈ 5 + 5 + 10 + 12 + 20 + 50 = 102s sequential, or ~60s with pack-level parallelism for Gates -1 through 4.",
+      "expected_pre_flight_runtime": "Under 2 minutes for the full 5-pack pipeline including case files. Gate -1 (Identity Validation) adds 3s per pack (5s × 5 packs = 25s sequential, or ~5s if parallelized across packs). This makes the pre-flight gate fast enough to run at every certification board meeting without noticeable delay."
+    }
+  },
+  "readiness_failure_reduction": {
+    "baseline_readiness_failure_rate": "89.5% (S200 finding: 34 of 38 Domain E seeds had 2+ concurrent defects at certification boards)",
+    "baseline_defined_as": "Percentage of items arriving at certification boards (CAQS §1.6 review) with 2 or more concurrent detectable defects",
+    "projected_post_gate_readiness_failure_rate": "12-15%",
+    "projection_methodology": "Compound defect exhaustion model based on historical leakage data",
+    "projection_steps": [
+      {
+        "step": 1,
+        "description": "Model pre-gate defect distribution",
+        "finding": "S200 sample: items arrive with 3-5 concurrent defects. Mean defect count ≈ 3.5 per item (Poisson-like). P(2+ defects) = 1 - P(0) - P(1) ≈ 1 - e^(-3.5) - 3.5e^(-3.5) ≈ 0.864 ≈ 86%. Close to observed 89.5%."
+      },
+      {
+        "step": 2,
+        "description": "Estimate per-gate defect catch rate",
+        "calculation": "Gate 0 (JSON Integrity): catches DL-017 corruption → eliminates ~3% of defects. Gate 1 (Structural): catches DL-008 + DL-026 + DL-016 → eliminates ~40% of defects (539 DL-008 + 1,005 DL-026 + systemic DL-016). Gate 2 (Content): catches DL-013 + EV3 + EV8 → eliminates ~25% of defects (2,587 DL-013 fields). Gate 3 (Identity): catches compound key failures + clone duplication + QID collisions → eliminates ~7% of defects. Gate 4 (Calculation): catches DL-030 + DL-031 → eliminates ~5% of defects (5 confirmed + ~500 unverified)."
+      },
+      {
+        "step": 3,
+        "description": "Estimate post-gate mean defect count",
+        "calculation": "Starting mean 3.5. Cumulative catch rate ≈ 80% (78.3% per SESSION201_READINESS_LEAKAGE.json metrics.automated_prevention_possible_percentage). Post-gate mean = 3.5 × (1 - 0.80) = 0.70 defects per item."
+      },
+      {
+        "step": 4,
+        "description": "Estimate post-gate readiness failure rate",
+        "calculation": "P(2+ defects) with mean 0.70 = 1 - e^(-0.70) - 0.70e^(-0.70) ≈ 1 - 0.497 - 0.348 ≈ 0.155 ≈ 15.5%. Conservative rounding: 12-15% accounting for uncatchable defects (DL-010 semantic misassignment, novel defect classes, scan methodology edge cases)."
+      }
+    ],
+    "summary": "89.5% → 12-15%: expected ~77% reduction in readiness failure rate (from 89.5% to ~13.5%). Corresponds to a 6.6× reduction in defective items reaching certification boards.",
+    "uncatchable_residual": [
+      "DL-010 semantic misassignment — no fully automated detection method exists (requires NLP/human review)",
+      "Novel/unclassified defect classes — the gate model covers 10 known defect classes; new defect types may emerge",
+      "Scan methodology edge cases — per-pack field ordering variations (Pack B CC-before-QID) may cause rare false negatives",
+      "Concurrent-write overwrites (DL-019) — the gate is a snapshot-time check; it cannot prevent a concurrent session from overwriting remediated items after gate passage",
+      "Template-authoring errors not matching known patterns — e.g., a new boilerplate variant that escapes the DL-013 regex",
+      "S202 Amendment 1 improvement: identity-confusion defects (DL-016 +1 shift causing wrong-target scans, DL-029 CC-offset false positives) are now caught by Gate -1 before structural scans run — previously these were in 'uncatchable' but are now HARD_BLOCKED at the entry gate"
+    ],
+    "required_companion_measures": [
+      "Session-level file-lock protocol (prevents DL-019 concurrent-write overwrites)",
+      "Mandatory within-object extraction for ALL scan tools (eliminates DL-029 forward-scan false positives)",
+      "Human expert review for all SOFT_BLOCK items before certification approval",
+      "Regular pattern-update cycle: add new boilerplate patterns, corruption artifacts, and scan heuristics as new defect classes are discovered",
+      "Pre-gate + post-gate count comparison: run the same gate before and after any remediation session and require count stability before declaring 'clean' (per AGENTS.md §6)"
+    ]
+  },
+  "governance_integration": {
+    "governance_guard_rule_extensions": [
+      {
+        "rule": "RULE 6 (NEW — HARD_BLOCK)",
+        "description": "Pre-Flight Gate Passage Required — No item may transition to 'In Audit' or 'Certified' state without a current (same-session) pre-flight gate PASS report for its parent pack. The gate report timestamp must be within the current session window.",
+        "enforcement": "governance-guard.js: add RULE 6 check to any write that modifies question_state field."
+      },
+      {
+        "rule": "RULE 7 (NEW — HARD_BLOCK)",
+        "description": "ExplanationWrong Distractor Completeness — All non-CorrectChoice ExplanationWrong slots must be present and non-empty (minimum 50 characters). This extends Rule 2 (DL-008 CC-slot check) to cover DL-026, DL-021, and DL-025.",
+        "enforcement": "governance-guard.js: add RULE 7 check alongside existing RULE 2 check in findDL008Violations → rename to findExplanationWrongViolations."
+      },
+      {
+        "rule": "RULE 8 (NEW — WARN)",
+        "description": "Template Boilerplate Prohibition — No ExplanationWrong field may contain boilerplate patterns ('represents a plausible misconception', 'does not align with the correct accounting treatment', 'A candidate selecting this option may misunderstand'). Detected at write time; warns but does not block (certification blocked by Gate 2 SOFT_BLOCK).",
+        "enforcement": "governance-guard.js: add RULE 8 pattern check to edit/write handlers."
+      }
+    ],
+    "explanation_validator_modifications": [
+      {
+        "file": "scripts/validators/ExplanationValidator.js",
+        "changes": [
+          "Line 173: Replace 'if (!val) return;' with separate handling: if field is absent → flag DL-018/DL-021; if field is '' at non-CC position → flag DL-025/DL-026; if field is '' at CC position → pass (DL-008 compliant).",
+          "Line 180: Already patched (Agent 1, 2026-07-23) to flag non-empty EW[CC] as errors.",
+          "Lines 9-16: Extend placeholderPatterns array with DL-013 boilerplate patterns and DL-027 closing-tag pattern.",
+          "New method: validateEWCompleteness() — checks all 4 EW slots: CC slot empty (DL-008), distractor slots non-empty (DL-026), distractor slots >= 50 chars (EV1), no boilerplate (DL-013).",
+          "New method: validatePrincipleCitation() — checks ExplanationCorrect for ASC/COSO/IAS/IFRS/GAAP pattern (EV3).",
+          "New method: validateChoiceAlignment() — for each EW slot, compute Jaccard overlap with corresponding choice text; flag low-overlap pairs for human review (DL-010 screening)."
+        ]
+      }
+    ]
+  },
+  "implementation_roadmap": {
+    "phase_1_critical": {
+      "timeline": "S202-S205",
+      "description": "Implement Gate -1 (Identity Validation) + Gates 0 (JSON Integrity) and 1 (Structural Scan) — the highest-impact, lowest-complexity gates that stop learner-safety defects at the certification boundary. Gate -1 is the S202 Amendment 1 addition: identity must be validated before any downstream scan result is admissible.",
+      "tasks": [
+        "S202: Implement within-object extraction in all scan scripts (replace regex/forward-scan per SESSION201_IDENTITY_ARCHITECTURE.json recommendations)",
+        "S202: Implement Gate -1 Identity Validation (PG-011): QID presence, CorrectChoice presence, pack attribution, TemplateFamily constructibility. Generates IDENTITY_VALID / IDENTITY_BLOCKED verdicts.",
+        "S203: Implement Gate 0 JSON Integrity validator with all 5 steps",
+        "S204: Implement Gate 1 DL-008 + DL-026 + DL-016 structural scans (now operating on Gate -1 IDENTITY_VALID items only)",
+        "S205: Add governance-guard RULE 6 (Pre-Flight Gate Passage) and RULE 7 (Distractor Completeness)"
+      ]
+    },
+    "phase_2_high": {
+      "timeline": "S206-S209",
+      "description": "Implement Gates 2 (Content Scan) and 3 (Identity Reconciliation).",
+      "tasks": [
+        "S206: Implement DL-013 boilerplate detection + EV3 principle citation check in ExplanationValidator",
+        "S207: Build template family map for all 2,500 items (stem clustering + rotation group identification)",
+        "S208: Implement Gate 3 compound key identity registry",
+        "S209: Add governance-guard RULE 8 (Template Boilerplate Prohibition)"
+      ]
+    },
+    "phase_3_medium": {
+      "timeline": "S210-S213",
+      "description": "Implement Gate 4 (Calculation Validation) — the most complex gate, requiring AI-assisted verification.",
+      "tasks": [
+        "S210: Implement DL-031 Jaccard-based difficulty inflation detection",
+        "S211: Implement DL-030 Tier 3 (EC-CC consistency check — catches 3/5 known errors)",
+        "S212: Implement DL-030 Tier 1 (numeric formula verification with FORMULA_MASTER.md integration)",
+        "S213: Implement DL-030 Tier 2 (build-time AI conceptual CC verification — Phase 3 scope)"
+      ]
+    },
+    "phase_4_continuous": {
+      "timeline": "S214+",
+      "description": "Continuous improvement and pattern extension.",
+      "tasks": [
+        "Regular pattern-update cycle for new boilerplate variants, corruption artifacts, and detection heuristics",
+        "Difficulty calibration validator extension (DL-032 for case banks)",
+        "Pre-gate + post-gate count reconciliation automation (AGENTS.md §6 enforcement)",
+        "Session-level file-lock protocol implementation (prevents DL-019 concurrent-write overwrites)"
+      ]
+    }
+  },
+  "source_documents": [
+    "knowledge/DEFECT_LIBRARY.md — DL-008 (lines 351-457), DL-010 (lines 531-603), DL-013 (lines 676-795), DL-016 (lines 888-962), DL-026 (lines 1781-2100), DL-030 (lines 2330-2405), DL-031 (lines 2407-2488)",
+    "knowledge/CAQS_v1.0.md — §4.4 EV rules (lines 339-351), §1.6 Build-Time AI Verification Standard",
+    "scripts/validators/ExplanationValidator.js — existing validator code (lines 1-239), line-173 guard gap, line-180 fix, extractQuestions string-aware parser",
+    ".opencode/plugins/governance-guard.js — existing plugin code (lines 1-100 of 247), Rule 2 BLOCK for DL-008, extractObjectsFromText function",
+    "reports/SESSION201_READINESS_LEAKAGE.json — full leakage analysis (327 lines): 43 leakage events, 91.5% preventable, 78.3% automatable, RC-1 through RC-5 root causes",
+    "reports/SESSION201_IDENTITY_ARCHITECTURE.json — compound key model (337 lines): dual-block architecture, template family model, per-pack classification rules, S320 failure analysis",
+    "knowledge/QUESTION_METADATA_STANDARD.md — §9 Governance State Fields, §9.4 Certification-Blocking Conditions (G-NEW-1 through G-NEW-5)",
+    "knowledge/TAXONOMY_REGISTRY.md — §1 CognitiveLevel, §6 Difficulty scale, §14 FormulaReference (34 canonical formulas)"
+  ]
+}

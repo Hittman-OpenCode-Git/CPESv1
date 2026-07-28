@@ -1,0 +1,100 @@
+{
+  "session": "S132",
+  "classificationThresholds": {
+    "weak": {
+      "attempts": 5,
+      "accuracy": 60,
+      "operator": "<",
+      "appliedIn": ["S124", "S125", "S127", "S128", "S113", "S106"],
+      "canonicalGuard": "May._hasPersistentWeakEvidence (line 6013)",
+      "canonicalExpression": "topicData.totalAttempts >= 5 && topicData.accuracy < 60"
+    },
+    "strong": {
+      "attempts": 3,
+      "accuracy": 85,
+      "operator": ">=",
+      "appliedIn": ["S124", "S125", "S127", "S128", "S123"],
+      "canonicalExpression": "totalAttempts >= 3 && accuracy >= 85"
+    },
+    "improving": {
+      "attempts": 4,
+      "delta": 10,
+      "operator": ">=",
+      "appliedIn": ["S124", "S125", "S127", "S126"],
+      "note": "Coaching-layer uses delta >=10; Evidence-gate _hasImprovingEvidence (S113/S106) uses delta >=15 for stricter claim gating"
+    },
+    "declining": {
+      "attempts": 4,
+      "delta": -10,
+      "operator": "<=",
+      "appliedIn": ["S126", "S127"],
+      "note": "Coaching-layer uses delta <= -10; Evidence-gate _hasDecliningEvidence (S113/S106) uses delta <= -15 for stricter claim gating"
+    }
+  },
+  "consistencyVerification": {
+    "allSubsystemsAgreeOnWeak": true,
+    "allSubsystemsAgreeOnStrong": true,
+    "allSubsystemsAgreeOnImproving": true,
+    "allSubsystemsAgreeOnDeclining": true,
+    "detail": {
+      "weakThreshold": {
+        "systemsChecked": [
+          "_identifyLearningPatterns (S124, line 1304)",
+          "_suggestFocusAreas (S125, line 1422)",
+          "_generateWeeklyDigest (S127, line 3120)",
+          "_generateStudyStrategy (S128, line 3237)",
+          "_hasPersistentWeakEvidence (S113, line 6013)"
+        ],
+        "allUse": ">= 5 attempts AND < 60% accuracy",
+        "verdict": "CONSISTENT"
+      },
+      "strongThreshold": {
+        "systemsChecked": [
+          "_generateNextBestStep (S123, line 1203)",
+          "_identifyLearningPatterns (S124, line 1295)",
+          "_suggestFocusAreas (S125, line 1461)",
+          "_generateWeeklyDigest (S127, line 3105)",
+          "_generateStudyStrategy (S128, line 3238)"
+        ],
+        "allUse": ">= 3 attempts AND >= 85% accuracy",
+        "verdict": "CONSISTENT"
+      },
+      "improvingThreshold": {
+        "systemsChecked": [
+          "_identifyLearningPatterns (S124, line 1313)",
+          "_suggestFocusAreas (S125, line 1492-1493)",
+          "_generateSessionRecap (S126, line 3004)",
+          "_generateWeeklyDigest (S127, line 3089)",
+          "_summarizeSession (pre-S126, line 3660)"
+        ],
+        "allUse": ">= 4 attempts AND delta >= 10",
+        "verdict": "CONSISTENT"
+      },
+      "decliningThreshold": {
+        "systemsChecked": [
+          "_generateSessionRecap (S126, line 3006)",
+          "_generateWeeklyDigest (S127, line 3091)",
+          "_summarizeSession (pre-S126, line 3662)"
+        ],
+        "allUse": "delta <= -10",
+        "verdict": "CONSISTENT"
+      }
+    },
+    "deltaDualThresholdNote": "S106 §4.2 defines stricter evidence gates (delta >=15 for improving, delta <=-15 for declining) used by _hasImprovingEvidence and _hasDecliningEvidence for claim qualification. The coaching/display layer uses the more permissive delta >=10 / delta <=-10. This is by design: the display layer can note a trend direction without claiming it as a qualified insight."
+  },
+  "remainingConflicts": 0,
+  "s130ConflictsResolved": 7,
+  "overallClassificationStatus": "UNIFIED",
+  "verificationEvidence": {
+    "sectionNameMapsConsolidated": true,
+    "patternNameMapsConsolidated": true,
+    "hardcodedThresholdsVerified": "All 24 threshold comparisons across may-core.js (7 for >=85, 8 for <60, 6 for delta>=10, 3 for delta<=-10) use consistent numeric values with uniform operator semantics",
+    "testSuiteResult": "190/190 PASS (0 FAIL)",
+    "grepConfirmation": {
+      "'External Financial Reporting' occurrences": 1,
+      "'classification errors' occurrences": 1,
+      "remaining 'sectionNames = {' blocks": 0,
+      "remaining 'patternNames = {' blocks": 0
+    }
+  }
+}

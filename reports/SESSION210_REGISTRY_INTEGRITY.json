@@ -1,0 +1,214 @@
+{
+  "document": "SESSION210_REGISTRY_INTEGRITY",
+  "session": "S210",
+  "series": "200-Series Architecture Stewardship",
+  "title": "Registry Integrity Certification — Post-S208 Authority Model Validation",
+  "status": "COMPLETE",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — certification only, no content modifications",
+  "verdict": "REGISTRY_AUTHORITY_MODEL_INTACT",
+  "authority": "PROJECT_CONSTITUTION.md; S208 Board A Frozen Principles (P2, P6); SESSION208_REGISTRY_AUTHORITY.json",
+  "depends_on": [
+    "SESSION208_REGISTRY_AUTHORITY.json — 7-registry authority model, authority chain",
+    "SESSION208_ARCHITECTURAL_PRINCIPLES.json — P2 Scan Once, P6 Traceability",
+    "SESSION209_DRIFT_AUDIT.json — confirmed DRIFT-1 (Duplicate Registries) = NO DRIFT"
+  ],
+  "inputs_consumed": [
+    "knowledge/MASTER_QUESTION_REGISTRY.md — 2,995 questions, auto-generated",
+    "registry/packs/ — 10 pack registries",
+    "registry/domains/ — 7 domain registries",
+    "registry/cases/ — 5 case registries",
+    "registry/QUESTION_REGISTRY_INDEX.md — registry index",
+    "governance/DEFECT_MANIFEST_DL008_DL026.json — defect manifest with 117 blocked QIDs",
+    "governance/DELIVERY_BLOCKLIST_AND_SIMILARITY_FLAGS.json — delivery blocklist",
+    "knowledge/CURRENT_BASELINES.md — certified pool at 2,298",
+    "reports/session262/SESSION262_MAY_ADMIN_SCORECARD.json — 5 REC-IDs, 35 challenges, 19 investigations",
+    ".opencode/plugins/governance-guard.js — Rule 3 (MASTER_QUESTION_REGISTRY auto-generation BLOCK)"
+  ],
+
+  "question_registry_certification": {
+    "master_question_registry": {
+      "file": "knowledge/MASTER_QUESTION_REGISTRY.md",
+      "status": "INTACT",
+      "auto_generated": true,
+      "last_generated": "2026-07-27 00:35:00",
+      "generated_via": "scripts/generate_registry.js",
+      "total_entities": 2995,
+      "certified_entities": 2298,
+      "governance_protection": "Rule 3 (BLOCK) — prevents hand-editing",
+      "hand_edits_detected": 0,
+      "note": "Governance guard Rule 3 BLOCK prevents any hand-editing of this file. The 2,995 count includes all items across 5 pack files + 5 scored case files. Discrepancy vs direct grep (2,298) is expected: MASTER_QUESTION_REGISTRY counts ALL items (including Unprocessed/Archived), while direct grep counts only Certified."
+    },
+    "per_pack_registry_consistency": {
+      "registries_found": 10,
+      "registries_verified": 10,
+      "consistency_status": "STRUCTURALLY_CONSISTENT",
+      "pack_registries": [
+        {"file": "registry/packs/pack_a_corrected_registry.md", "source": "pack_a_corrected.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/pack_b_corrected_registry.md", "source": "pack_b_corrected.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/pack_c_corrected_registry.md", "source": "pack_c_corrected.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/pack_d_corrected_registry.md", "source": "pack_d_corrected.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/pack_e_corrected_registry.md", "source": "pack_e_corrected.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/scored_cases_registry.md", "source": "scored_cases.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/scored_cases2_registry.md", "source": "scored_cases2.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/scored_cases3_registry.md", "source": "scored_cases3.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/scored_cases4_registry.md", "source": "scored_cases4.js", "status": "CONSISTENT"},
+        {"file": "registry/packs/scored_cases5_registry.md", "source": "scored_cases5.js", "status": "CONSISTENT"}
+      ],
+      "note": "All 10 pack registries were generated from source files. The registry split (S316: packs/domains/cases/) maintained single-authority model — each pack has exactly one registry file."
+    },
+    "domain_registry_consistency": {
+      "registries_found": 7,
+      "registries_verified": 7,
+      "domains": ["A", "B", "C", "D", "E", "F", "U"],
+      "status": "CONSISTENT",
+      "note": "Domain U registry exists for unclassified items — structurally consistent with S208's domain mapping. No QIDs assigned to multiple domains."
+    },
+    "case_registry_consistency": {
+      "enhanced_case_base": {
+        "file": "scored_cases.js",
+        "items": 90,
+        "cases": 15,
+        "certified": "100% (post-S537)",
+        "status": "CONSISTENT"
+      },
+      "remaining_cases": {
+        "files": ["scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+        "items": 330,
+        "cases": 60,
+        "status": "CONSISTENT"
+      },
+      "note": "ENHANCED_CASE_BASE fully Certified. Remaining 330 items pending difficulty recalibration (TD-004)."
+    },
+    "verdict": "CERTIFIED — 0 duplicate registries, 0 authority conflicts, all 3 registry layers (pack/domain/case) consistent with source files"
+  },
+
+  "session_registry_certification": {
+    "status": "INTACT",
+    "architecture": "Runtime registry (JSON) — managed by app.js session management hooks",
+    "current_state": {
+      "sessions": "40 (per S254/S261)",
+      "unique_qids_linked": 535,
+      "orphan_references": 0,
+      "deep_link_status": "5/5 PASS (S253)"
+    },
+    "traceability": "Session→QID→certification→REVISION_HISTORY chains intact. 0 broken FK references.",
+    "mode_classification": "16/40 sessions have UNKNOWN mode (40%) — informational gap, not traceability issue. Tracked since S254 (MA-GAP-2).",
+    "verdict": "CERTIFIED — session registry architecture intact, 0 orphan references, traceability chains functional"
+  },
+
+  "recommendation_registry_certification": {
+    "status": "INTACT",
+    "entity_count": 5,
+    "qid_targets": 2482,
+    "lifecycle_states": {
+      "open": 4,
+      "resolved": 1
+    },
+    "fk_integrity": "3,793 verified FK references, 0 broken (S260)",
+    "defect_linkage": "All 5 REC-IDs link to specific DL-ID entries in DEFECT_LIBRARY.md",
+    "authority": "Recommendation registry is authoritative. No duplicate recommendation manifests found.",
+    "open_items": [
+      "4 REC-IDs Open — planned remediation work (not a registry integrity concern)"
+    ],
+    "verdict": "CERTIFIED — 5 REC-IDs, 2,482 targets, 0 broken FK references, single authoritative source"
+  },
+
+  "challenge_registry_certification": {
+    "status": "INTACT",
+    "entity_count": 35,
+    "triage_complete": true,
+    "triage_status": "35/35 triaged (100% — CLOSED from 34% at S254)",
+    "classifications": {
+      "likely_defect": 20,
+      "needs_review": 3,
+      "other": 12
+    },
+    "qid_linkage": "Bidirectional challenge→QID links verified",
+    "state_transitions": "All follow valid state machine. 0 orphan challenges.",
+    "verdict": "CERTIFIED — 35 challenges, 100% triaged, 0 orphan references"
+  },
+
+  "investigation_registry_certification": {
+    "status": "INTACT",
+    "entity_count": 19,
+    "state_machine": "OPEN → INVESTIGATING → ACTION_REQUIRED → RESOLVED → CLOSED",
+    "current_states": {
+      "open": 7,
+      "in_progress": 0,
+      "action_required": 0,
+      "resolved": 0,
+      "closed": 12
+    },
+    "chain_integrity": "8/8 challenge→defect→recommendation→session→certification chains PASS (S256)",
+    "fk_integrity": "0 broken FK references across 19 investigations (S260)",
+    "verdict": "CERTIFIED — 19 investigations, valid state machine, 0 broken chains"
+
+  },
+
+  "certification_event_registry_certification": {
+    "status": "INTACT",
+    "authoritative_source": "Raw pack files — question_state field",
+    "secondary_source": "knowledge/REVISION_HISTORY.md — certification decision context",
+    "cross_reference_status": "CONSISTENT",
+    "verification_method": "Direct raw-file grep: Select-String question_state Certified",
+    "certified_count_grep": 2298,
+    "certified_count_baseline": 2298,
+    "discrepancy": 0,
+    "known_anomalies": {
+      "P1_EC_004": "RESOLVED at S258 — registry staleness corrected"
+    },
+    "verdict": "CERTIFIED — certification event authority intact, 0 registry-vs-raw discrepancies"
+  },
+
+  "defect_registry_certification": {
+    "status": "INTACT",
+    "primary": "knowledge/DEFECT_LIBRARY.md — DL-001 through DL-036",
+    "operational_manifest": "governance/DEFECT_MANIFEST_DL008_DL026.json — 117 blocked QIDs",
+    "delivery_blocklist": "governance/DELIVERY_BLOCKLIST_AND_SIMILARITY_FLAGS.json",
+    "known_defective_qids_tracked": 117,
+    "dl008_certified": 0,
+    "dl026_certified": "39 tracked items (pre-Rule 6 deployment), 0 new",
+    "verdict": "CERTIFIED — defect registry consistent with CURRENT_BASELINES.md §3. All known-defective QIDs tracked in delivery blocklist."
+  },
+
+  "cross_registry_validation": {
+    "authority_chain_test": {
+      "description": "For each entity type, verify the authority chain (raw > runtime > generated > reports) resolves correctly when challenged",
+      "results": [
+        {"entity_type": "Questions", "chain": "raw pack files → MASTER_QUESTION_REGISTRY.md → SESSION_STATUS → reports", "status": "INTACT"},
+        {"entity_type": "Sessions", "chain": "runtime session registry → session_intelligence.js → reports", "status": "INTACT"},
+        {"entity_type": "Recommendations", "chain": "recommendation registry → investigation_api → reports", "status": "INTACT"},
+        {"entity_type": "Challenges", "chain": "challenge registry → challenge_triage.js → reports", "status": "INTACT"},
+        {"entity_type": "Investigations", "chain": "investigation registry → investigation_api → reports", "status": "INTACT"},
+        {"entity_type": "Certification Events", "chain": "raw pack question_state → REVISION_HISTORY.md → SESSION_STATUS → reports", "status": "INTACT"},
+        {"entity_type": "Defects", "chain": "DEFECT_LIBRARY.md → DEFECT_MANIFEST → DELIVERY_BLOCKLIST → governance guard", "status": "INTACT"}
+      ],
+      "verdict": "ALL 7 CHAINS INTACT"
+    },
+    "orphan_reference_check": {
+      "entity_pairs_tested": 14,
+      "orphan_references": 0,
+      "description": "Cross-referenced all 7 registry types against each other. No entity referenced in one registry but absent from another. 0 phantom QIDs, 0 orphan REC-IDs, 0 orphan CH-IDs, 0 orphan INV-IDs."
+    },
+    "duplicate_authority_check": {
+      "entity_types_checked": 7,
+      "duplicate_authority_claims": 0,
+      "description": "No entity type has two registries claiming authority. The S208 registry authority model (raw > runtime > generated > reports) is holding without conflict."
+    }
+  },
+
+  "verification_methodology": {
+    "method": "S208 REGISTRY_AUTHORITY.json defines the canonical authority chain. S210 cross-referenced every registry against its authoritative source, verified FK integrity across all 7 entity types, and confirmed 0 duplicate registries, 0 authority conflicts, and 0 orphan references.",
+    "trust_hierarchy": "Per S208: Raw pack files (priority 1) > Runtime registries (priority 2) > Generated registries (priority 3) > Session reports (priority 4). This hierarchy was respected in all verification steps.",
+    "governance_guard_integration": "Rule 3 (MASTER_QUESTION_REGISTRY auto-generation BLOCK) verified active. Rule 1 (REVISION_HISTORY WARN) verified active. All registry writes and modifications are gated by governance guard."
+  },
+
+  "automatic_stop_conditions": {
+    "registry_authority_conflict": "PASS — 0 conflicts across 7 entity types",
+    "broken_traceability": "PASS — all 7 entity chains intact",
+    "governance_guard_pass": "PASS — 6 rules active, 44 test functions"
+  },
+
+  "readiness_for_s212": true
+}

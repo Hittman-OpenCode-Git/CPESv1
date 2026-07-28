@@ -1,0 +1,431 @@
+{
+  "session": "S809.2",
+  "agent": "D",
+  "certification_risk_matrix": {
+    "summary": {
+      "total_seeds": 38,
+      "high_risk": 3,
+      "medium_risk": 19,
+      "low_risk": 16,
+      "average_risk_score": 2.49,
+      "risk_distribution": "healthy"
+    },
+    "risk_factors": {
+      "topic_sensitivity_avg": 2.29,
+      "ew_readiness_avg": 2.63,
+      "blueprint_complexity_avg": 1.82,
+      "content_structure_avg": 1.16
+    },
+    "top_risks": [
+      {
+        "qid": "P1-EC-014",
+        "risk": "HIGH",
+        "primary_factor": "EW Readiness (5/5)",
+        "recommendation": "Only 1 of 4 EW slots has text (EW_D). CC=B so slot B is correctly empty, but EW_A and EW_C are also empty. Must author 2 distractor explanations before certification."
+      },
+      {
+        "qid": "P1-EC-022",
+        "risk": "HIGH",
+        "primary_factor": "EW Readiness (5/5)",
+        "recommendation": "Only 1 of 4 EW slots has text (EW_D). CC=B so slot B is correctly empty, but EW_A and EW_C are also empty. Must author 2 distractor explanations before certification."
+      },
+      {
+        "qid": "P1-EC-066",
+        "risk": "HIGH",
+        "primary_factor": "EW Readiness (5/5)",
+        "recommendation": "Only 1 of 4 EW slots has text (EW_D). CC=A so slot A is correctly empty, but EW_B and EW_C are also empty. Topic also low cognitive demand - definition-level segregation violation."
+      },
+      {
+        "qid": "P1-ED-046",
+        "risk": "MEDIUM",
+        "primary_factor": "EW Readiness (4/5)",
+        "recommendation": "EW_A, EW_B, EW_C all empty (CC=B). Only EW_D has text - and it's generic boilerplate: 'This option reflects a misunderstanding of code of conduct ethics program... Review the applicable costing standard or framework...' Must author 2 genuine choice-specific distractor explanations + fix boilerplate."
+      },
+      {
+        "qid": "P1-ED-036",
+        "risk": "MEDIUM",
+        "primary_factor": "EW Readiness (4/5)",
+        "recommendation": "EW_A and EW_C empty (CC=D). EW_B has generic boilerplate text. Must author 2 genuine choice-specific explanations + fix EW_B."
+      },
+      {
+        "qid": "P1-ED-016",
+        "risk": "MEDIUM",
+        "primary_factor": "EW Readiness (4/5)",
+        "recommendation": "EW_A empty, EW_C empty (CC=D). EW_B has generic boilerplate. Must author 2 genuine explanations + fix EW_B."
+      },
+      {
+        "qid": "P1-ED-075",
+        "risk": "MEDIUM",
+        "primary_factor": "EW Readiness (4/5)",
+        "recommendation": "EW_A empty, EW_C empty (CC=C). EW_B and EW_D have generic boilerplate. Must author 2 genuine explanations + fix boilerplate."
+      }
+    ],
+    "per_qid": {
+      "P1-EC-004": {
+        "topic": "segregation of duties design",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=A. EW_B=choice-specific ('Cost-benefit analysis may influence control design...'), EW_C=choice-specific ('Management override is a bypass...'). EW_A=''(CC slot, correct), EW_D=''(missing distractor). Single-object structure. 1 empty non-CC slot to fill. Topic is straightforward segregation-of-duties definition. DifficultyScore=3, Apply."
+      },
+      "P1-EC-008": {
+        "topic": "coso internal control framework",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=D. EW_B=choice-specific, EW_C=choice-specific. EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Tests name-recognition of COSO framework - low topic sensitivity. DifficultyScore=2, Understand."
+      },
+      "P1-EC-014": {
+        "topic": "fraud triangle elements",
+        "topic_sensitivity": 2,
+        "ew_readiness": 5,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "HIGH",
+        "notes": "CC=B. EW_D only slot with text ('COSO ERM addresses enterprise risk management broadly, but the specific three-factor fraud model in the stem is the fraud triangle.'). EW_A='', EW_B=''(CC slot, correct), EW_C=''. 3 empty slots total, 2 are non-CC distractor slots needing text. Fraud triangle is a straightforward topic but massive EW gap = certification-blocking."
+      },
+      "P1-EC-020": {
+        "topic": "physical controls over assets",
+        "topic_sensitivity": 1,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=D. EW_B=choice-specific ('not only detective after the fact...'), EW_C=choice-specific ('compensating control offsets another weakness...'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Topic is simple physical control classification. DifficultyScore=3, Understand."
+      },
+      "P1-EC-021": {
+        "topic": "segregation of duties vendor setup and payment",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=A. EW_C=choice-specific ('Quarterly detective review may catch errors after the fact...'), EW_D=choice-specific ('Raising the threshold reduces oversight...'). EW_A=''(CC slot, correct), EW_B=''(missing distractor). 1 empty non-CC slot. More nuanced scenario than simple SoD - vendor setup specific. Apply cognitive level. Moderate TS due to practical business application."
+      },
+      "P1-EC-022": {
+        "topic": "preventive vs detective duplicate payment control",
+        "topic_sensitivity": 2,
+        "ew_readiness": 5,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "HIGH",
+        "notes": "CC=B. EW_D only slot with text ('Monthly aging report review is a detective control...'). EW_A='', EW_B=''(CC slot, correct), EW_C=''. 3 empty slots total, 2 non-CC distractor slots empty. Preventive vs detective is moderately straightforward but EW gap is massive and certification-blocking."
+      },
+      "P1-EC-023": {
+        "topic": "IT access control terminated employee deprovisioning",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=C. EW_B=choice-specific ('Stronger passwords address authentication strength but do not address the failure to revoke access...'). EW_A=''(missing distractor), EW_C=''(CC slot, correct), EW_D=''(missing distractor). 2 empty non-CC slots. ITGC-specific topic with real-world application scenario. DifficultyScore=3, Understand."
+      },
+      "P1-EC-024": {
+        "topic": "application input control sales order validation",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=D. EW_B=choice-specific ('Month-end reconciliation is a detective control...'), EW_C=choice-specific ('Manual approval of every order is inefficient...'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Application control (input validation) straddles E/F boundary - moderate TS. DifficultyScore=3, Understand."
+      },
+      "P1-EC-025": {
+        "topic": "preventive vs detective controls",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=A. EW_C=choice-specific ('A corrective control fixes problems after they occur...'), EW_D=choice-specific ('A detective control identifies errors after the fact...'). EW_A=''(CC slot, correct), EW_B=''(missing distractor). 1 empty non-CC slot. Dual-signature preventive control is straightforward classification."
+      },
+      "P1-EC-028": {
+        "topic": "bank reconciliation control",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=D. EW_B=choice-specific ('Management review may still be needed...'), EW_C=choice-specific ('The reconciliation still requires comparing bank records...'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Bank rec independence is a well-established control concept. DifficultyScore=3, Apply."
+      },
+      "P1-EC-031": {
+        "topic": "erm risk appetite",
+        "topic_sensitivity": 4,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=C. EW_B=choice-specific ('Inherent risk is the susceptibility of an assertion to material misstatement before considering controls. Risk appetite is the amount of risk an organization is willing to accept...'). EW_A=''(missing distractor), EW_C=''(CC slot, correct), EW_D=''(missing distractor). 2 empty non-CC slots. ERM risk appetite is conceptually nuanced (often confused with risk tolerance) - HIGHER TS. DifficultyScore=3, Understand."
+      },
+      "P1-EC-040": {
+        "topic": "it general controls access",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=D. EW_B=choice-specific ('A budgetary control over IT spending does not validate whether users have appropriate system permissions.'), EW_C=choice-specific ('Physical data-center controls restrict physical entry...'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. ITGC logical access classification requires understanding the ITGC vs application control distinction. DifficultyScore=3."
+      },
+      "P1-EC-041": {
+        "topic": "management override risk",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=A. EW_C=choice-specific ('The facts describe a human override of approval controls, not a logical-access or other IT general-control weakness.'), EW_D=choice-specific ('Cost-benefit limitations concern whether a control is worth implementing; the issue here is intentional bypass...'). EW_A=''(CC slot, correct), EW_B=''(missing distractor). 1 empty non-CC slot. Well-written scenario with clear CEO override illustration. DifficultyScore=3, Apply."
+      },
+      "P1-EC-049": {
+        "topic": "whistleblower hotline purpose",
+        "topic_sensitivity": 1,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=B. EW_C=choice-specific ('A hotline complements a code of conduct; it does not replace the need for standards of ethical behavior.'), EW_D=choice-specific ('External audits may still be required or useful...'). EW_A=''(missing distractor), EW_B=''(CC slot, correct). 1 empty non-CC slot. Whistleblower is a straightforward control concept. DifficultyScore=2."
+      },
+      "P1-EC-052": {
+        "topic": "compensating control small business",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=D. EW_B=choice-specific ('Outsourcing without oversight does not remove management responsibility...'), EW_C=choice-specific ('Small companies still need internal controls; the issue is designing practical compensating controls.'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Compensating controls is a standard COSO concept. DifficultyScore=3."
+      },
+      "P1-EC-060": {
+        "topic": "control environment tone at top",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=D. EW_B=choice-specific ('Risk assessment identifies and analyzes specific threats; tone at the top is part of the control environment.'), EW_C=choice-specific ('Information and communication concerns how relevant information is captured and shared; the stem describes ethical leadership and culture.'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Control environment is straightforward. DifficultyScore=2."
+      },
+      "P1-EC-061": {
+        "topic": "inherent risk vs control risk",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=A. EW_C=choice-specific ('Control risk considers whether controls fail to prevent or detect misstatement; the stem excludes controls from the assessment.'), EW_D=choice-specific ('Business risk is broader operating or strategic risk...'). EW_A=''(CC slot, correct), EW_B=''(missing distractor). 1 empty non-CC slot. Inherent vs control risk distinction requires precision. DifficultyScore=3."
+      },
+      "P1-EC-066": {
+        "topic": "segregation incompatible duties cash custody and recording",
+        "topic_sensitivity": 2,
+        "ew_readiness": 5,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "HIGH",
+        "notes": "CC=A. EW_D only slot with text ('The control environment is not overly strong; the described arrangement weakens control by enabling concealment.'). EW_A=''(CC slot, correct), EW_B=''(missing distractor), EW_C=''(missing distractor). 2 empty non-CC slots. Classic DL-012 clone-model seed. DifficultyScore=1, Understand. Very low cognitive demand - definition-level recognition. Both empty distractor slots AND topic simplicity make this high-risk for certification quality."
+      },
+      "P1-EC-072": {
+        "topic": "remediation of control deficiency",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=C. EW_B=choice-specific ('Control environment assessment is broad and entity-level; the stem describes tracking a specific deficiency through correction.'), EW_C=''(CC slot, correct), EW_D=''(missing distractor). EW_A=''(missing distractor). 2 empty non-CC slots. Remediation tracking is a moderate topic. DifficultyScore=3."
+      },
+      "P1-ED-001": {
+        "topic": "three lines of defense model",
+        "topic_sensitivity": 2,
+        "ew_readiness": 2,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=A. EW_C=choice-specific ('The balanced scorecard is a performance measurement tool, not a governance model for control responsibilities.'), EW_D=choice-specific ('COSO ERM is broader risk-management guidance; the distinct operational, oversight, and internal-audit layers describe the three lines model.'). EW_A=''(CC slot, correct), EW_B=''(missing distractor). 1 empty non-CC slot. Three lines model explained well. DifficultyScore=2, Understand. Labeled Difficult but content is straightforward definition."
+      },
+      "P1-ED-010": {
+        "topic": "least privilege access control",
+        "topic_sensitivity": 2,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=A. EW_D only slot with text ('Management override is bypassing controls, not a principle for limiting user access.'). EW_A=''(CC slot, correct), EW_B=''(missing distractor), EW_C=''(missing distractor). 2 empty non-CC slots. Least privilege is straightforward but 2 empty EW slots. DifficultyScore=2."
+      },
+      "P1-ED-014": {
+        "topic": "independent verification control activity",
+        "topic_sensitivity": 2,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=B. EW_D only slot with text ('Segregation of duties separates incompatible responsibilities; a one-person recount by a supervisor is independent verification, not the segregation concept itself.'). EW_A=''(missing distractor), EW_B=''(CC slot, correct), EW_C=''(missing distractor). 2 empty non-CC slots. Topic labeled Difficult but is straightforward independent verification concept. DifficultyScore=2."
+      },
+      "P1-ED-016": {
+        "topic": "erm risk response strategies",
+        "topic_sensitivity": 3,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=D. EW_A=''(missing distractor), EW_C=''(missing distractor), EW_D=''(CC slot, correct). EW_B=generic boilerplate ('This option reflects a misunderstanding... Review the applicable costing standard or framework...'). 2 empty non-CC slots + 1 boilerplate. ERM risk response is nuanced (avoid/transfer/mitigate/accept). DifficultyScore=2, Understand."
+      },
+      "P1-ED-025": {
+        "topic": "control activities authorization",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=A. EW_C=choice-specific ('Segregation may support purchasing controls, but the specific activity described is management authorization.'), EW_D=choice-specific ('Risk assessment identifies and analyzes risk; it is not the transaction-level approval control described.'). EW_A=''(CC slot, correct), EW_B=''(missing distractor). 1 empty non-CC slot. Labeled Difficult but topic is basic authorization control classification. DifficultyScore=2."
+      },
+      "P1-ED-028": {
+        "topic": "monitoring ongoing evaluations",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=D. EW_B=choice-specific ('Information and communication supports reporting relevant information, but the periodic review of exceptions and reconciliations is monitoring.'), EW_C=choice-specific ('Control environment concerns tone, structure, and accountability; the stem focuses on evaluating whether controls continue to operate.'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Monitoring vs other COSO components requires discernment. DifficultyScore=4, Apply."
+      },
+      "P1-ED-035": {
+        "topic": "data backup disaster recovery",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=C. EW_B=choice-specific ('Transaction authorization controls approve business transactions; they do not restore systems after an outage.'). EW_A=''(missing distractor), EW_C=''(CC slot, correct), EW_D=''(missing distractor). 2 empty non-CC slots. Disaster recovery/availability objective is straightforward IT control. DifficultyScore=2."
+      },
+      "P1-ED-036": {
+        "topic": "change management control it systems",
+        "topic_sensitivity": 3,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=D. EW_A=''(missing distractor), EW_C=''(missing distractor), EW_D=''(CC slot, correct). EW_B=generic boilerplate ('This option reflects a misunderstanding... Review the applicable costing standard or framework...'). 2 empty non-CC slots + 1 boilerplate. IT change management is a moderately complex ITGC topic. DifficultyScore=3."
+      },
+      "P1-ED-042": {
+        "topic": "risk assessment likelihood impact",
+        "topic_sensitivity": 2,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=B. EW_D only slot with text ('Monitoring evaluates whether controls continue to function; the stem is about assessing risk before deciding on responses.'). EW_A=''(missing distractor), EW_B=''(CC slot, correct), EW_C=''(missing distractor). 2 empty non-CC slots. Risk assessment is foundational COSO, straightforward. DifficultyScore=2."
+      },
+      "P1-ED-046": {
+        "topic": "code of conduct ethics program",
+        "topic_sensitivity": 2,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=B. EW_D only slot with text - and it's generic boilerplate. EW_A=''(missing distractor), EW_B=''(CC slot, correct), EW_C=''(missing distractor). 2 empty non-CC slots + 1 boilerplate slot. Code of conduct/control environment is straightforward but EW quality is very poor. DifficultyScore=2."
+      },
+      "P1-ED-051": {
+        "topic": "password access authentication control",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=C. EW_B=generic boilerplate text. EW_A=''(missing distractor), EW_C=''(CC slot, correct), EW_D=''(missing distractor). 2 empty non-CC slots but EW_B also boilerplate. MFA/authentication is a straightforward IT control. DifficultyScore=3, Apply."
+      },
+      "P1-ED-058": {
+        "topic": "internal control cost benefit limitation",
+        "topic_sensitivity": 2,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=A. EW_D only slot with text ('A segregation-of-duties failure combines incompatible duties; the issue is not task assignment but cost versus benefit.'). EW_A=''(CC slot, correct), EW_B=''(missing distractor), EW_C=''(missing distractor). 2 empty non-CC slots. Cost-benefit limitation is a standard COSO concept. DifficultyScore=2."
+      },
+      "P1-ED-064": {
+        "topic": "vendor master file controls",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=D. EW_B=choice-specific ('Revenue recognition timing is a revenue-cycle issue; the stem concerns vendor records and cash disbursements.'), EW_C=choice-specific ('Inventory obsolescence is not addressed by restricting vendor-master-file changes.'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Vendor master file controls require understanding of AP cycle risks. DifficultyScore=4, Apply."
+      },
+      "P1-ED-066": {
+        "topic": "audit committee oversight role",
+        "topic_sensitivity": 2,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=B. EW_D only slot with text ('Management prepares the financial statements; the audit committee oversees integrity and control effectiveness.'). EW_A=''(missing distractor), EW_B=''(CC slot, correct), EW_C=''(missing distractor). 2 empty non-CC slots. Audit committee role is straightforward governance concept. DifficultyScore=4, Apply."
+      },
+      "P1-ED-071": {
+        "topic": "change management control direct production change",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=C. EW_B=choice-specific ('Segregation between billing and collections addresses revenue-cycle conflicts but does not address the lack of change oversight for production database modifications.'). EW_A=''(missing distractor), EW_C=''(CC slot, correct), EW_D=''(missing distractor). 2 empty non-CC slots. Realistic business scenario (developer bypassing change management) - good applied question. DifficultyScore=3, Understand."
+      },
+      "P1-ED-072": {
+        "topic": "fraud risk purchasing conflict of interest",
+        "topic_sensitivity": 3,
+        "ew_readiness": 3,
+        "blueprint_complexity": 2,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=D. EW_B=choice-specific ('Eliminating competitive bidding removes an important control and would increase the risk...'), EW_C=choice-specific ('Adding payment approval to the same role further concentrates incompatible duties...'). EW_A=''(missing distractor), EW_D=''(CC slot, correct). 1 empty non-CC slot. Procurement fraud risk with vendor master conflict is a real-world scenario. DifficultyScore=3."
+      },
+      "P1-ED-073": {
+        "topic": "monitoring exception reports not reviewed",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=A. EW_C=choice-specific ('The limits may be appropriate; the documented weakness is that violations of those limits are reported but not investigated...'), EW_D=choice-specific ('While some controls can prevent exceptions proactively, practical systems rely on a mix...'). EW_A=''(CC slot, correct), EW_B=''(missing distractor). 1 empty non-CC slot. Exception report monitoring is straightforward detective control failure. DifficultyScore=3, Apply."
+      },
+      "P1-ED-074": {
+        "topic": "reconciliation incompatible duties EFT and bank rec",
+        "topic_sensitivity": 2,
+        "ew_readiness": 3,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "LOW",
+        "notes": "CC=B. EW_D=choice-specific ('The stem does not describe a dual-authorization requirement; the primary weakness is the incompatible combination of initiation and reconciliation duties.'). EW_A=''(missing distractor), EW_B=''(CC slot, correct), EW_C=''(missing distractor). 2 empty non-CC slots but EW_D text is solid. SoD for EFT+reconciliation is well-understood. DifficultyScore=3."
+      },
+      "P1-ED-075": {
+        "topic": "segregation approval reconciliation",
+        "topic_sensitivity": 2,
+        "ew_readiness": 4,
+        "blueprint_complexity": 1,
+        "content_structure": 1,
+        "overall_risk": "MEDIUM",
+        "notes": "CC=C. EW_A=''(missing distractor), EW_C=''(CC slot, correct). EW_B and EW_D both generic boilerplate ('This option reflects a misunderstanding... Review the applicable costing standard or framework...'). 1 empty non-CC slot + 2 boilerplate slots. Approval/reconciliation separation is straightforward SoD but EW quality is poor. DifficultyScore=3."
+      }
+    }
+  },
+  "methodology_notes": {
+    "architecture": "All 38 items confirmed as single-object format (no dual-block). QuestionID, content fields (Part, Section, Topic, Stem, Choices, CorrectChoice, ExplanationCorrect, StudyLinks), and metadata fields (question_state, VerifiedChecks, ExplanationWrongA-D, DifficultyScore, CognitiveLevel) are all within a single JSON object per QID.",
+    "risk_factors_defined": {
+      "topic_sensitivity_1": "Simple definition-recognition (e.g., 'What is the fraud triangle?', 'What is physical access control?') = TS 1",
+      "topic_sensitivity_3": "Requires nuanced distinction between related concepts (e.g., inherent vs control risk, ERM risk appetite vs risk tolerance, ITGC vs application control) = TS 3-4",
+      "ew_readiness_1": "All 3 distractor EW slots have genuine, choice-specific text >= 50 chars. CC slot correctly empty. = EW 1",
+      "ew_readiness_5": "Only 0-1 of 4 slots have any text; >2 non-CC slots empty = EW 5 (certification-blocking)",
+      "blueprint_complexity_1": "Tests single COSO concept with no cross-domain dependencies = BC 1",
+      "content_structure_1": "Single-object architecture, no dual-block, no CC-position ambiguity = CS 1"
+    },
+    "key_findings": [
+      "All 38 items are single-object architecture - NO dual-block DL-016 risk",
+      "All CorrectChoice slots are correctly empty (DL-008 compliant) across all 38 seeds",
+      "3 items are HIGH risk (P1-EC-014, P1-EC-022, P1-EC-066) due to massive EW gaps (only 1/4 slots populated)",
+      "Most common EW gap pattern: exactly 1 empty non-CC distractor slot per item (Pack C rotation artifact)",
+      "Pack D items show more boilerplate/generic EW text ('This option reflects a misunderstanding...') than Pack C",
+      "Pack D has 5 items (ED-016, ED-036, ED-046, ED-075, ED-051) with generic boilerplate EW text needing replacement",
+      "All items are Unprocessed - zero are Certified",
+      "Single-object architecture confirmed by direct inspection - QuestionID appears once per object, no metadata/content split",
+      "Several items labeled Difficult (DS=4) test straightforward definition-level concepts (e.g., ED-001 labeled Difficult for three-lines-of-defense definition)"
+    ],
+    "certification_readiness": "The 38 seeds are structurally ready for certification (0 DL-008, 0 dual-block issues) but ALL require EW gap remediation before certification. The 3 HIGH-risk items must be remediated first. 16 LOW-risk items need only 1-2 distractor EW slots authored. 19 MEDIUM-risk items have variable gaps - some need distractor authoring, others need boilerplate replacement. No CC-content-block disagreements were found."
+  }
+}

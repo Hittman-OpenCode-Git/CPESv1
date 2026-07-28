@@ -1,0 +1,45 @@
+{
+  "session": "S801",
+  "date": "2026-07-26",
+  "title": "FD-045 Complete Review — Structurally Complete; S800 'Missing Content' Claim Refuted",
+  "qid": "P1-FD-045",
+  "pack": "D",
+  "section": "F",
+  "file": "pack_d_corrected.js",
+  "line": 23693,
+  "architecture": "Single merged block (content + metadata in one JSON object)",
+  "question_state": "Unprocessed",
+  "structural_status": "STRUCTURALLY COMPLETE",
+  "field_inventory": {
+    "QuestionID": {"present": true, "value": "P1-FD-045"},
+    "Part": {"present": true, "value": 1},
+    "Section": {"present": true, "value": "F"},
+    "Stem": {"present": true, "value": "Umberglen maintains a single, authoritative source of core customer and product information used consistently across multiple systems. What practice does this describe?"},
+    "Choices": {"present": true, "value": {"A": "Data mining", "B": "Master data management", "C": "Predictive analytics", "D": "Robotic process automation"}},
+    "CorrectChoice": {"present": true, "value": "B"},
+    "ExplanationCorrect": {"present": true, "value": "Master data management establishes a single, authoritative, consistent source of core business data (such as customers or products) shared across multiple systems."},
+    "ExplanationWrongA": {"present": true, "value": "empty", "note": "DL-026 — empty non-CC slot"},
+    "ExplanationWrongB": {"present": true, "value": "empty", "note": "correct — CC slot per EV8"},
+    "ExplanationWrongC": {"present": true, "value": "Text about digital signatures — NOT predictive analytics", "note": "DL-016 shift — text belongs to neighbor QID in rotation group"},
+    "ExplanationWrongD": {"present": true, "value": "Text about GAAP compliance — NOT RPA", "note": "DL-016 shift"},
+    "StudyLinks": {"present": true},
+    "DifficultyScore": {"present": true, "value": 3},
+    "CognitiveLevel": {"present": true, "value": "Understand"}
+  },
+  "defects": [
+    {"defect": "DL-026", "detail": "ExplanationWrongA is empty (non-CorrectChoice slot)", "severity": "Low"},
+    {"defect": "DL-016", "detail": "ExplanationWrongC and D describe digital signature/GAAP concepts — belong to neighboring QID in rotation group, not this item's choices", "severity": "Medium"},
+    {"defect": "DL-015", "detail": "Topic label says 'F.046' for QID ending in -045 (cosmetic numbering shift)", "severity": "Informational"}
+  ],
+  "fd045_gate": {
+    "status": "CLOSED",
+    "boundary_check": "The '},' at line 23709 is present and intact. FD-045 and FD-046 are separate, independently parseable objects. 500/500 QuestionIDs parseable.",
+    "anti_reversion": "Current SHA-256 differs from Session 28 baseline (post-S530 authorized drift). FD-045 object present and independently parseable. Parse count = 500."
+  },
+  "s800_claim_vs_actual": {
+    "s800_claim": "FD-045 has ONLY a metadata block — content block MISSING",
+    "actual": "Content fields (Part, Section, Stem, Choices, CorrectChoice, ExplanationCorrect) precede QuestionID within the same merged object at lines 23661-23679",
+    "root_cause_of_false_positive": "S800 assumed dual-block architecture. FD-045's content fields appear BEFORE QuestionID in the single merged object. Forward-scan from QuestionID found next item's block, not FD-045's content."
+  },
+  "recommendation": "AUTHOR new ExplanationWrongA/C/D text matching item's actual choices. Fix Topic label (F.046→F.045). Do NOT change CorrectChoice (B is correct for MDM stem)."
+}

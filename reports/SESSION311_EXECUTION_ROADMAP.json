@@ -1,0 +1,165 @@
+{
+  "executionRoadmapVersion": "S311-1.0",
+  "session": "311",
+  "agent": "R",
+  "title": "800-Series Execution Roadmap — S804 Through S812",
+  "generated": "2026-07-26",
+  "basedOn": "S309 forecast + S803 post-archive state + S311 capacity analysis",
+
+  "phases": [
+    {
+      "phase": 1,
+      "label": "Foundation — Learner Safety",
+      "sessions": ["S804"],
+      "description": "De-certify 37 Pack A Section E Certified clone items. Remove identical-stem items from learner delivery pool. 2 batches (28 + 11). Per S803 conditions C1-C9.",
+      "milestones": ["M1: Pack A Section E clones de-certified"],
+      "dependencies": ["S803 launch board conditions"],
+      "blockers": ["User authorization for de-certification of Certified items (C1)"],
+      "duration": "1 session",
+      "parallelization": "None — this is a single-session phase"
+    },
+    {
+      "phase": 2,
+      "label": "Domain E Replacement Authoring",
+      "sessions": ["S805", "S806", "S807"],
+      "description": "Author 43 Domain E replacement items (1 per clone group). Certify 38 retained seeds. S805: methodology session (first 10 items). S806: Pack C/E replacement || Pack D/F seed cert. S807: Pack D/E replacement || Pack C/F seed cert.",
+      "milestones": [
+        "M2: Domain E methodology established (10 items authored, quality baseline set)",
+        "M3: 20 Domain E replacement items complete",
+        "M4: All 43 Domain E replacement items authored"
+      ],
+      "dependencies": ["S804 complete", "Domain E Replacement Spec (Agent D)", "Quality Gate (Agent I)"],
+      "blockers": [],
+      "duration": "3 sessions",
+      "parallelization": "S806 and S807 can run parallel pairs within each session (Pack C/E || Pack D/F, then Pack D/E || Pack C/F)"
+    },
+    {
+      "phase": 3,
+      "label": "Domain F Authoring",
+      "sessions": ["S808", "S809", "S810"],
+      "description": "Author 37 Domain F replacement items. Certify 39 retained seeds. S808: methodology session (first 10 items). S809: Pack C/F replacement || Pack D/E seed cert. S810: Pack D/F replacement || Pack C/E seed cert.",
+      "milestones": [
+        "M5: Domain F methodology established (10 items authored)",
+        "M6: 20 Domain F items complete",
+        "M7: All 37 Domain F replacement items authored"
+      ],
+      "dependencies": ["Domain F Authoring Spec (Agent F)", "Quality Gate (Agent I)", "Domain E methodology baseline (S805)"],
+      "blockers": [],
+      "duration": "3 sessions",
+      "parallelization": "Same parallel pairing strategy as Phase 2"
+    },
+    {
+      "phase": 4,
+      "label": "Catch-Up & Consistency",
+      "sessions": ["S811"],
+      "description": "Catch-up session for any items that failed QA review. Cross-pack consistency audit. Verify no answer-key drift. Run full governance guard suite.",
+      "milestones": ["All Domain E/F items pass QA gates", "Cross-pack consistency verified"],
+      "dependencies": ["S807 and S810 complete"],
+      "blockers": [],
+      "duration": "1 session"
+    },
+    {
+      "phase": 5,
+      "label": "Closeout & Certification",
+      "sessions": ["S812"],
+      "description": "Final certification wave. Promote Certification Candidate → Certified. Recalculate Domain E/F UIQS. Refresh Portfolio Health Index. Generate 800-series completion report. Update CURRENT_BASELINES.md. Write REVISION_HISTORY.md closeout entry.",
+      "milestones": [
+        "M8: All Domain E/F items Certified",
+        "M9: Domain E UIQS recalculated (target: 79.0, B)",
+        "M10: Domain F UIQS recalculated (target: 77.9, B)",
+        "M11: Portfolio Health Index refreshed",
+        "M12: 800-series completion report published"
+      ],
+      "dependencies": ["S811 complete"],
+      "blockers": [],
+      "duration": "1 session"
+    }
+  ],
+
+  "milestones": [
+    { "id": "M1", "label": "Pack A Section E clone de-certification", "session": "S804", "type": "learner-safety" },
+    { "id": "M2", "label": "Domain E methodology baseline", "session": "S805", "type": "quality-gate" },
+    { "id": "M3", "label": "20 Domain E replacement items complete", "session": "S806", "type": "progress" },
+    { "id": "M4", "label": "All 43 Domain E replacements authored", "session": "S807", "type": "completion" },
+    { "id": "M5", "label": "Domain F methodology baseline", "session": "S808", "type": "quality-gate" },
+    { "id": "M6", "label": "20 Domain F items complete", "session": "S809", "type": "progress" },
+    { "id": "M7", "label": "All 37 Domain F replacements authored", "session": "S810", "type": "completion" },
+    { "id": "M8", "label": "All Domain E/F items Certified", "session": "S812", "type": "certification" },
+    { "id": "M9", "label": "Domain E UIQS: 79.0 (B)", "session": "S812", "type": "quality" },
+    { "id": "M10", "label": "Domain F UIQS: 77.9 (B)", "session": "S812", "type": "quality" },
+    { "id": "M11", "label": "Portfolio Health Index refreshed", "session": "S812", "type": "governance" },
+    { "id": "M12", "label": "800-series completion report", "session": "S812", "type": "closure" }
+  ],
+
+  "dependencies": [
+    { "from": "S803", "to": "S804", "type": "SEQUENTIAL — S803 launch conditions must be resolved" },
+    { "from": "S804", "to": "S805", "type": "SEQUENTIAL — de-certification establishes post-archive baseline" },
+    { "from": "S805", "to": "S808", "type": "SEQUENTIAL — Domain E methodology must be established before Domain F authoring begins" },
+    { "from": "S806", "to": "S807", "type": "PARALLEL_READY — different file scopes" },
+    { "from": "S809", "to": "S810", "type": "PARALLEL_READY — different file scopes" },
+    { "from": "S807+S810", "to": "S811", "type": "CONVERGE — both tracks must complete before catch-up" },
+    { "from": "S811", "to": "S812", "type": "SEQUENTIAL — catch-up must complete before closeout" }
+  ],
+
+  "parallelizationSchedule": [
+    {
+      "session": "S806",
+      "trackA": "Pack C Section E replacement authoring",
+      "trackB": "Pack D Section F seed certification",
+      "rationale": "Different pack files — no write conflict"
+    },
+    {
+      "session": "S807",
+      "trackA": "Pack D Section E replacement authoring",
+      "trackB": "Pack C Section F seed certification",
+      "rationale": "Different pack files — no write conflict"
+    },
+    {
+      "session": "S809",
+      "trackA": "Pack C Section F replacement authoring",
+      "trackB": "Pack D Section E seed certification",
+      "rationale": "Different pack files"
+    },
+    {
+      "session": "S810",
+      "trackA": "Pack D Section F replacement authoring",
+      "trackB": "Pack C Section E seed certification",
+      "rationale": "Different pack files"
+    }
+  ],
+
+  "criticalPath": "S803 → S804 → S805 → S808 → S811 → S812",
+
+  "cannotParallelize": [
+    "Pack C Sections E+F in the same session (same file — pack_c_corrected.js)",
+    "Pack D Sections E+F in the same session (same file — pack_d_corrected.js)"
+  ],
+
+  "totalSessions": 9,
+
+  "comparisonToS310": {
+    "s310Phases": 7,
+    "s310Sessions": 17,
+    "s311Phases": 5,
+    "s311Sessions": 9,
+    "changes": [
+      "S310 Phase 5 (Case-bank EW) and Phase 6 (MCQ EW + Pack A closeout) are post-800-series work — not in S311 roadmap scope",
+      "S310 Phase 2+4 (Domain E baseline + replacement) merged into S311 Phase 2",
+      "S310 Phase 3 (Domain F authoring) refined to S311 Phase 3 with post-S803 item counts",
+      "S311 adds 5-gate quality workflow not assumed in S310 — slightly higher per-item session cost",
+      "S311 total: 9 sessions (Domain E+F only) vs S310 total: 17 sessions (full 800-series + case-bank EW + MCQ EW + Pack A closeout)"
+    ]
+  },
+
+  "post800Series": {
+    "remainingS310Scope": [
+      "Case-bank EW rollout (3 sessions)",
+      "MCQ EW 88% fill (2 sessions)",
+      "Pack A Sections B/C/F certification (1 session)",
+      "DL-008/DL-026 remediation (2 sessions)",
+      "Modernization sweep DL-013/DL-031/DL-032 (3-4 sessions)",
+      "Governance closure (1 session)"
+    ],
+    "estimatedAdditionalSessions": "8-10 sessions post-S812"
+  }
+}

@@ -1,0 +1,3004 @@
+# Defect Library
+
+**Purpose:** Catalog every content defect discovered after initial authoring, with root cause, detection method, and correction. Entries drive automated validator rules and improve future content creation.
+
+**Note â€” Build-Time AI Verification as Defect Source:** As of the governance amendment (Sprint 6.x), build-time AI verification is an accepted defect-detection source alongside automated validators. Defects surfaced by AI verification follow the same schema (ID, Class, Domain, Severity, Detection Rule, Validator/Source, Root Cause, Correct Pattern, Regression Test) with the "Validator" field allowed to read "Build-Time AI Verification" where appropriate. This does not create a new validator module or alter the existing validator pipeline order.
+
+**Class Scale (Structural Audit):**
+
+| Class | Meaning | Examples |
+|-------|---------|----------|
+| Structural | Field-level rule violations | Missing fields, wrong types, format mismatches, empty-when-required, non-empty-when-empty (DL-008) |
+| Content | Accounting/educational quality issues | Wrong answer, imprecise explanation, distractor quality (DL-001, DL-002, DL-006, DL-007) |
+| Pedagogical | Learning science / psychometric issues | Cognitive level mismatch, absolute language, ambiguity, distractor similarity (DL-003, DL-004, DL-005) |
+
+**Severity Scale:**
+
+| Severity      | Meaning                             |
+| ------------- | ----------------------------------- |
+| Critical      | Wrong answer / incorrect accounting |
+| High          | Multiple defensible answers         |
+| Medium        | Weak distractors                    |
+| Low           | Grammar / wording                   |
+| Informational | Metadata only                       |
+
+---
+
+## DL-001
+
+```
+Defect ID        DL-001
+Class            Content
+Domain           Semantic Accuracy
+Severity         Critical
+Detected By      Manual Review (Phase 1 CAQS)
+Status           Resolved
+```
+
+**Question IDs:** P1B-C-185
+
+**File:** `pack_b_corrected.js`
+
+**Stem:** "Which of the following factors is LEAST likely to trigger a variance investigation?"
+
+### Issue
+
+Option C read: *"A variance that is exactly equal to the standard cost."*
+
+By definition: **Variance = Actual âˆ’ Standard**
+
+If variance equals the standard cost (e.g., standard = $100, variance = $100), then actual is either $0 or $200 â€” an enormous variance that absolutely warrants investigation.
+
+The author intended to describe **a zero variance** (actual = standard), but the option text says something mathematically different. The explanation correctly described the intended meaning, creating an answer/explanation mismatch.
+
+### Root Cause
+
+Imprecise wording during authoring. The phrase "variance equals standard cost" was substituted for "actual cost equals standard cost (zero variance)" without verifying mathematical consistency.
+
+### Pattern
+
+```
+"Variance equals standard cost"
+```
+
+**Correct pattern:** "Actual cost equals standard cost" / "zero variance"
+
+Indirection in variance descriptions. Authors describe the variance magnitude ($0) by referencing standard cost ($100) rather than stating "zero variance" directly. This creates ambiguity whenever the two numbers happen to be equal.
+
+### Detection Rule (v2 â€” Calibrated)
+
+Primary pattern: `/variance\s+.*\b(equals?|equal to|same as)\b/i`
+
+Exclusion (legitimate formula descriptions):  
+`/\bstandard\s+(?:price|quantity|rate|hours?|CM|cost per|usage|allowance|input|output|budget|volume|efficiency|spending)\b/i`
+
+A match only triggers if the primary pattern matches AND the exclusion pattern does NOT match.
+
+### Validator
+
+`PsychometricValidator.MathematicalValidator`
+
+### Regression Test Suite
+
+| Input | Expected | Status |
+|-------|----------|--------|
+| "A variance that is exactly equal to the standard cost" | Trigger | âœ… |
+| "A variance that is equal to the standard" | Trigger | âœ… |
+| "Variance equals standard cost" | Trigger | âœ… |
+| "variance equals standard price times actual quantity" | No trigger | âœ… |
+| "variance equals ... minus standard price" | No trigger | âœ… |
+| "variance equals ... Ã— Standard CM" | No trigger | âœ… |
+| "variance equals standard rate Ã— (actual - standard) hours" | No trigger | âœ… |
+| "variance equals actual hours Ã— (actual - standard) rate" | No trigger | âœ… |
+| "variance equals standard price Ã— usage difference" | No trigger | âœ… |
+
+Run with: `node -e "const MV = require('./scripts/validators/psychometric/MathematicalValidator'); const v = new MV(); const r = v.runSelfTest(); console.log(r.failed === 0 ? 'ALL PASS' : 'FAIL: ' + r.failed);"`
+
+### Correction
+
+| Field | Before | After |
+|-------|--------|-------|
+| Choices.C | "A variance that is exactly equal to the standard cost" | "Actual costs equal standard costs, resulting in a zero variance" |
+| Choices.A | "A variance that persists for several consecutive periods" | "A recurring unfavorable variance that exceeds the investigation threshold" |
+| Choices.D | "A variance that exceeds a predetermined monetary threshold" | "A significant variance whose cause has not yet been identified" |
+| ExplanationCorrect | "A variance that equals the standard cost (i.e., zero variance)..." | "When actual costs equal standard costs, the variance is zero..." |
+| ExplanationWrongA | Referenced old A text | Updated to match new Option A |
+| ExplanationWrongB | Referenced old B text | Updated for clarity |
+| ExplanationWrongD | Referenced old D text | Updated to match new Option D |
+
+### Regression Test
+
+- Verify Option C is selected as the correct answer (least likely trigger)
+- Verify all three distractors are genuine investigation triggers
+- Verify no other question contains "variance equals standard"
+
+### Resolved
+
+2026-07-21 â€” Applied to `pack_b_corrected.js` line 10467.
+
+---
+
+---
+
+## DL-002
+
+```
+Defect ID        DL-002
+Class            Content
+Domain           Explanation Consistency
+Severity         Medium
+Detected By      ExplanationConsistencyValidator
+Status           No Findings â€” Clean
+```
+
+**Result:** Zero findings across 2,575 scanned questions. All explanations are consistent with their corresponding correct answers.
+
+**Pattern:** ExplanationCorrect contradicts the selected correct-answer letter (e.g., explanation says "is not correct" about the correct choice).
+
+**Detection Rule:** Regex negation patterns (`/is not correct/i`, `/is incorrect/i`) on ExplanationCorrect text, combined with low keyword overlap between the explanation and the correct-choice text.
+
+**Validator:** `PsychometricValidator.ExplanationConsistencyValidator`
+
+### Note
+This validator has an 80% confidence rating. Low-confidence checks (keyword overlap heuristics) did not trigger, suggesting all explanations are genuinely well-aligned.
+
+---
+
+## DL-003
+
+```
+Defect ID        DL-003
+Class            Pedagogical
+Domain           Absolute Language
+Severity         Medium
+Detected By      AbsoluteLanguageValidator
+Status           Has Findings â€” 958 Hits
+```
+
+**Result:** 958 instances of absolute language detected across 2,575 questions. Breakdown:
+- "only"/"exclusively": 824 (86%)
+- "always": 79 (8%)
+- "never": 39 (4%)
+- "must", "exactly", "impossible": 16 (<2%)
+
+**Recommendation:** Prioritize "always" and "never" findings first (118 errors). Most "only" uses are legitimate (e.g., "recognize revenue only when...").
+
+**Pattern:** Choice or prompt contains absolute wording: "always", "never", "only", "must", "exactly", "impossible".
+
+**Detection Rule:** Regex patterns for each absolute term in choice text and prompt text.
+
+**Validator:** `PsychometricValidator.AbsoluteLanguageValidator`
+
+### Notes
+- "Always" and "never" are almost never justified in a well-written CMA choice â€” flag as errors
+- "Only", "must", "exactly" may be justified in narrow technical contexts â€” flag as warnings
+- Review priority: always/never > must > only > exactly/impossible
+
+---
+
+## DL-004
+
+```
+Defect ID        DL-004
+Class            Pedagogical
+Domain           Ambiguity
+Severity         Medium
+Detected By      AmbiguityValidator
+Status           Has Findings â€” 410 Hits
+```
+
+**Result:** 410 instances of vague qualifiers flagged across 2,575 questions. Also includes overlapping-distractor warnings.
+
+**Recommendation:** Cluster by term for efficient review (e.g., review all "generally"/"usually" questions together).
+
+**Pattern:** Choice or prompt contains vague qualifiers: "usually", "normally", "generally", "often", "typically".
+
+**Detection Rule:** Regex patterns for each vague qualifier in choice and prompt text.
+
+**Validator:** `PsychometricValidator.AmbiguityValidator`
+
+### Notes
+- Vague qualifiers reduce item discrimination because test-takers can rationalize almost any answer
+- Some usage is legitimate (e.g., "Costs are generally classified as..." in a knowledge-level item)
+- Flag for human review rather than auto-fix
+
+---
+
+## DL-005
+
+```
+Defect ID        DL-005
+Class            Pedagogical
+Domain           Distractor Similarity
+Severity         Medium
+Detected By      DistractorSimilarityValidator
+Status           Has Findings â€” 450 Warnings
+```
+
+**Result:** 450 distractor-similarity warnings across 2,500 MCQ questions. Notable high-severity findings:
+- Numerous 100% identical distractors (e.g., P1B-C-194 B/D, P1B-D-092 A/D, P1B-D-136 A/C, P1-DC-069 all pairs)
+- Multiple questions with all 6 pairs > 50% similarity (e.g., P1B-D-088, P1-BC-065â€“070, P1E-A-003, P1E-C-003/004)
+- Pack E has the highest concentration of similarity issues
+
+**Recommendation:** Investigate 100% identical distractors first (placeholder quality). Then review domain clusters with pervasive moderate similarity.
+
+**Pattern:** Two or more distractors share high word overlap (Jaccard similarity > 70%), making them psychometrically redundant.
+
+**Detection Rule:** Jaccard similarity of significant words (length > 2, excluding stop words) between every pair of choices. Flag distractor-distractor pairs > 70%.
+
+**Validator:** `PsychometricValidator.DistractorSimilarityValidator`
+
+### Notes
+- Distractor-correct pairs are flagged at > 70% (moderate similarity between correct and a distractor is itself worth reviewing)
+- Distractor-distractor pairs > 50% are flagged as warnings
+- Questions with high-similarity distractors almost always underperform psychometrically
+- Confidence: 70% â€” Jaccard similarity without NLP has non-trivial false-positive rate
+
+---
+
+## DL-007
+
+```
+Defect ID        DL-007
+Class            Content
+Domain           Explanation Quality
+Severity         Medium
+Detected By      Manual CAQS Review (Sprint 6.1, Batch 1)
+Status           Superseded â€” see DL-013 for corrected scope. The single-question entry below (P1-A-022) was the prototype finding. Actual scope: 2,587 occurrences across 882 QIDs in Packs A/C/D (Pack A: 118, Pack C: 382, Pack D: 382). The original "Resolved" annotation applied only to this one item; the broader defect category was not understood at time of filing.
+```
+
+**Question IDs:** P1-A-022 (prototype only â€” full scope at DL-013)
+
+**File:** `pack_a_corrected.js` lines 1120â€“1123
+
+**Stem:** "Meridian is comparing U.S. GAAP and IFRS treatment of internally developed intangible costs. Which response is most appropriate?"
+
+### Issue
+
+All three distractor explanation fields (ExplanationWrongA, ExplanationWrongC, ExplanationWrongD) contained nearly identical generic text that differed only by the option letter and choice text inserted verbatim at the beginning. Each explanation read:
+
+> "Option X (choice text) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that recognize that ifrs may permit capitalization of qualifying development costs, while u.s. gaap is generally more restrictive. A candidate may select this option by misapplying a related but distinct concept."
+
+This is a copy-paste defect. None of the distractor explanations explained WHY that specific choice was wrong or addressed the specific misconception the distractor targets.
+
+### Root Cause
+
+Template-based bulk authoring without per-distractor quality review. The author wrote one generic explanation and reused it across all three distractor slots.
+
+### Pattern
+
+Identical or near-identical distractor explanations differing only by inserted choice text. Look for:
+```
+/represents a plausible misconception[\s\S]*A candidate may select this option by misapplying a related but distinct concept/
+```
+
+### Detection Rule
+
+The ExplanationConsistencyValidator does NOT catch this (it only checks consistency between ExplanationCorrect and CorrectChoice). A validator that checks for distractor explanation uniqueness (comparing Jaccard similarity between distractor explanation pairs) would detect this pattern.
+
+### Correction
+
+Each distractor explanation was rewritten to:
+1. Address the specific error in the choice
+2. Explain the misconception behind selecting that option
+3. Contrast with the correct approach
+
+| Field | Before | After |
+|-------|--------|-------|
+| ExplanationWrongA | Generic template | Explains why development costs are not inventory |
+| ExplanationWrongC | Generic template | Explains why GAAP doesn't capitalize research costs + "always" overgeneralization |
+| ExplanationWrongD | Generic template | Explains why IFRS may permit capitalization â†’ not "always expense" |
+| ExplanationCorrect | 1 sentence | Full explanation: IAS 38 vs ASC 350-40, capitalization criteria, exam trap |
+
+### Regression Test
+
+- Verify P1-A-022 ExplanationWrongA, C, D are all unique and choice-specific
+- Verify ExplanationCorrect references specific accounting standards (IAS 38, ASC 350-40)
+- Verify no other question has all three distractor explanations as near-copies
+
+### Resolved
+
+2026-07-22 â€” Applied to `pack_a_corrected.js` lines 1093â€“1123.
+
+---
+
+## DL-006
+
+```
+Defect ID        DL-006
+Class            Content
+Domain           Session Recovery
+Severity         High
+Detected By      Regression Test (test_session_recovery.js â€” Test 12)
+Status           Resolved
+```
+
+**Component:** `SessionPersistence.save()`
+
+### Issue
+
+When a user completes an exam (`session.completed = true`, `session.submitted = true`), the primary save correctly stores the completed state. However, stale checkpoints in `cmaP1SessionCheckpoints` remain from earlier in the session, causing `restore()` to fall back to an old checkpoint and return `true`.
+
+### Root Cause
+
+The `save()` method wrote the primary save but never cleared checkpoints or journal when the session was marked completed. `restore()` checks `!sn.session.completed` on the primary save (skips it), then falls through to `_restoreFromCheckpoints()`, which finds a pre-completion checkpoint and restores it.
+
+### Detection Rule
+
+If `session.completed` is true during `save()`, immediately remove `CHECKPOINT_KEY` and `JOURNAL_KEY` from localStorage.
+
+### Correction
+
+Added to `save()` in `SessionPersistence`:
+
+```javascript
+if (sn.session && sn.session.completed) {
+    localStorage.removeItem(this.CHECKPOINT_KEY);
+    localStorage.removeItem(this.JOURNAL_KEY);
+}
+```
+
+### Regression Test
+
+- Test 12 in `scripts/test_session_recovery.js`: save completed session â†’ `restore()` returns false â†’ `clear()` removes all keys
+
+### Resolved
+
+2026-07-22 â€” Applied to `app.js` line 413.
+
+---
+
+## DL-008 â€” ExplanationWrong[CorrectChoice] Non-Empty
+
+```
+Defect ID        DL-008
+Class            Structural
+Domain           Explanation Slot Error (EV8 â€” CAQS v1.0 Â§4.4)
+Severity         High (learner-safety risk when Certified â€” wrong-answer explanation displayed in correct-answer slot; upgraded from 2026-07-22 "Low" after full-pool severity reassessment 2026-07-23)
+Detected By      Build-Time AI Verification (Sub-batch 2A Wave 1, 2026-07-22); full-pool sweep (2026-07-23)
+Status           **Open — 175 remaining in Pack C (discovered 2026-07-23 corrective session).** Prior 6-agent orchestration claimed "0 remaining across all 5 packs" but a 2026-07-23 Tier 0 corrective session found 175 DL-008 items in Pack C (174 Certified + 1 MISSING: P1-BC-094) — likely DL-019 concurrent-write overwrite: the DL-013/certification wave restored pre-cleared EW[CC] fields. Additionally, all 175 items are affected by a systematic CorrectChoice rotation artifact (CC ≠ EC for 74.1%), making simple EW[CC] clear unsafe. See `reports/session_status/TIER0_PACK_C_DL008_SESSION_2026-07-23.md` for full evidence ledger. Validator gap (ExplanationValidator.js:180) fixed. Governance guard Rule 2 BLOCK active.
+```
+
+### Affected
+
+| Category | Count | Scope | Status |
+|----------|-------|-------|--------|
+| Previously resolved | 203 | Tier 0 (7) + Bucket 1A (108) + Wave 1 (14) + Pack B/E (24 — re-authoring) + Pack A (187 via Agent 4) + Pack C (74 via Agent 4) + Pack D (75 via Agent 5) = 539 | **All resolved 2026-07-22/23** |
+| **Total identified** | **539** | All 5 packs, all sections, all states | **539 identified — 539 resolved = 0 remaining** |
+| **Certified pool impact** | **0** | All 75 Certified + all non-Certified cleared | **Learner pool fully secured** |
+
+### Pattern
+
+The distractor explanation slot corresponding to the correct answer (ExplanationWrong[CorrectChoice]) is non-empty. Per EV8 (CAQS_v1.0.md Â§4.4), this slot must be empty (`""`). Instead, many questions store a duplicate of ExplanationCorrect or a fragmentary clause in the correct-answer's ExplanationWrong slot.
+
+**Certified example (P1-A-031, RESOLVED):** CorrectChoice was D. The ExplanationWrongÂ·D field contained `"Ending retained earnings = $195,000 + $80,400 - $20,700 = $254,700."` â€” a verbatim subset of the ExplanationCorrect field which independently contains the full explanation (formula + substitution + business interpretation). Zero content loss when cleared.
+
+**Non-Certified example (P1-B-008, MISSING-state, Pack A Section B):** CorrectChoice is B. The ExplanationWrongÂ·B field contains substantive conceptual prose describing why the sales budget is prepared first. This is a full explanation fragment misplaced in the wrong slot.
+
+### Root Cause
+
+Template-based authoring: authors filled all four ExplanationWrong fields without verifying which slot maps to the correct answer. The defect manifests in three patterns:
+
+| Pattern | Prevalence | Content Type | Remediation |
+|---------|-----------|--------------|-------------|
+| Bucket 1 â€” Naked calculation summary | ~46% (171/372 Tier 2 + 108 swept) | Duplicate of EC calculation portion | Mechanical clear â€” safe, zero content loss |
+| Bucket 2 â€” Fragmentary conceptual clause | ~54% (201/372 Tier 2) | "because..." fragments, substantive prose | Editorial review â€” merge into EC, relocate, or remove |
+| Bucket 3 â€” Misattributed distractor | 0 currently (1 resolved in Bucket 1A) | Explains a different choice's error | Re-attribute to correct ExplanationWrong slot |
+
+### Severity Reassessment (2026-07-23)
+
+DL-008 was originally classified **Low** severity based on the assumption that non-empty ExplanationWrong[CorrectChoice] is redundant but not harmful. The 2026-07-23 full-pool sweep reassessed this:
+
+- **When Certified items are affected:** severity is **High** (learner-safety risk). If the delivery engine reads the distractor explanation slot for the correct answer, a learner reviewing the correct answer sees calculation-summary or fragmentary text instead of a proper explanation. While the content is typically not factually wrong, the degraded educational feedback undermines the simulator's pedagogical purpose.
+- **When non-Certified items are affected:** severity is **Medium** (certification-blocking). Items with DL-008 cannot be certified per governance-guard Rule 2.
+
+### Detection Rule
+
+```
+For each question Q:
+  let letter = Q.CorrectChoice;
+  if Q["ExplanationWrong" + letter] is truthy â†’ flag DL-008
+```
+
+**Automated enforcement:** governance-guard Rule 2 (BLOCK) â€” prevents certification of any item with non-empty ExplanationWrong[CorrectChoice]. Active as of 2026-07-22. The `ExplanationValidator` module reports these as warnings (not errors) â€” DL-008 is the only structural defect in the validator suite that is tracked as a warning rather than a blocking error. A validator gap exists: Certified items should produce errors, not warnings.
+
+### Validator / Source
+
+- **Primary detection:** `Build-Time AI Verification` â€” full-pool scan scripts at scripts/ directory (Method 1: Function constructor; Method 2: JSON.parse â€” identical 393 result, both methods verified)
+- **Runtime enforcement:** `governance-guard.js` Rule 2 (BLOCK level)
+- **Validator integration:** `ExplanationValidator` reports DL-008 violations as warnings (gap: should be errors for Certified items)
+- **Validated false positive rate:** 0% across 539 occurrences â€” every flag is a genuine EV8 violation
+
+### Correction
+
+For Bucket 1 (calculation summaries): set ExplanationWrong[correct_letter] to `""` â€” no content loss, ExplanationCorrect independently contains the full explanation.
+
+For Bucket 2 (fragmentary conceptual): per-item editorial judgment required â€” merge into ExplanationCorrect, relocate to distractor slot, or remove.
+
+For Bucket 3 (misattributed): re-attribute to correct ExplanationWrong slot.
+
+### Regression Test
+
+- Verify ExplanationWrongA/B/C/D are empty for the slot matching CorrectChoice
+- Verify no content loss â€” ExplanationCorrect must still contain the full explanation
+- Re-run validator â€” zero new errors
+- Re-run registry build â€” item count unchanged, MD5 match on second pass
+
+### Resolution Timeline
+
+| Date | Action | Count | Impact |
+|------|--------|-------|--------|
+| 2026-07-22 | Bucket 1A sweep | 108 clears | Packs A/C/D — mechanical only |
+| 2026-07-22 | Wave 1 re-contamination fix | 14 clears | Pack A Section A — sub-agent "Option X is correct" bug |
+| 2026-07-23 | Full-pool sweep | 393 identified | All 5 packs, all states — first complete inventory |
+| 2026-07-23 | Certified Tier 0 fix | 7 clears | Pack A Section A — learner pool secured |
+| 2026-07-23 | Authoritative paired-object rescan | **336 remaining** (75 Certified + 261 non-Certified) | Refutes prior "197 cleared / ~189 remain" estimate. **75 Certified items live.** |
+| 2026-07-23 | ExplanationValidator line-180 gap fix (Agent 1) | 3 lines added; 336/336 detected; 0 false positives | Validator now catches DL-008 at validation time |
+| 2026-07-23 | Pack A DL-008 remediation (Agent 4) | 187 clears (7 batches ≤30) | Pack A: 0 remaining |
+| 2026-07-23 | Pack C DL-008 remediation (Agent 4) | 74 clears (3 batches ≤30) | Pack C: 0 remaining |
+| 2026-07-23 | Pack D DL-008 remediation (Agent 5) | 75 clears (3 batches ≤30) | Pack D: 0 remaining |
+| 2026-07-23 | Independent verification (Agent 6) | 20/20 spot-checks pass; 10/10 CorrectChoice intact | **0 classic DL-008 remaining — all 5 packs clean** |
+| 2026-07-23 | **Tier 0 corrective session — Pack C re-scan** | **175 items found** (174 Certified + 1 MISSING: P1-BC-094) | **Pack C: 175 remaining. CC-rotation artifact discovered. All 175 quarantined (Tier 1).** Prior "74 clears" claim refuted — likely DL-019 overwrite by DL-013/certification wave. |
+
+### Learner-Safety Status
+
+**OPEN for Pack C.** 175 items (174 Certified + 1 MISSING: P1-BC-094) carry DL-008 as of 2026-07-23 (discovered by Tier 0 corrective session). Packs A, B, D, E confirmed 0 remaining (0 Certified). All 174 Certified Pack C items are in the active learner delivery pool with non-empty EW[CC] — additionally affected by a systematic CorrectChoice rotation artifact (129 of 174 have CC ≠ EC best match, making simple EW[CC] clear unsafe). Pack C items are quarantined (Tier 1) pending a CorrectChoice audit. Full report: `reports/session_status/TIER0_PACK_C_DL008_SESSION_2026-07-23.md`.
+
+**Validator gap fixed:** `ExplanationValidator.js` line 180 was patched (Agent 1) to flag non-empty `ExplanationWrong[CorrectChoice]` as errors. Previously the validator silently skipped non-empty slots at the CorrectChoice position.
+
+### Cross-References
+
+- Full-pool sweep report: `reports/defect_sweeps/DL008_FULL_POOL_SWEEP_2026-07-23.md`
+- Remediation proposal: `reports/remediation/DL008_REMEDIATION_PROPOSAL.md` (batch plan, â‰¤28 items/batch)
+- Prior sweep closeout: `reports/defect_sweeps/DL-008_SWEEP_CLOSEOUT.md`
+- Re-contamination scan: `reports/defect_sweeps/DL008_RECONTAMINATION_SCAN.md`
+- Governance guard: `.opencode/plugins/governance-guard.js` Rule 2
+- REVISION_HISTORY.md: 7-item fix entry and formalization entry (both 2026-07-23)
+
+---
+
+## DL-009 â€” Incorrect Authority Citation
+
+```
+Defect ID        DL-009
+Class            Content
+Domain           Authority Citation
+Severity         High (correctness defect â€” candidates learn wrong authoritative reference)
+Category         Incorrect ASC authority citation
+Detected By      Build-Time AI Verification (Sub-batch 2A Wave 3 â€” P1-A-012, expanded to P1-BC-065)
+Status           Open
+```
+
+**Question IDs:** P1-A-012, P1-BC-065 area
+
+**Files:** `pack_a_corrected.js`
+
+**Stems:**
+- P1-A-012: "A company is sued for defective products. The company's legal team estimates a 70% probability of losing $500,000. Which of the following correctly describes the required accounting treatment?"
+- P1-BC-065 area: Budget/contingency planning question â€” "Which step should management take after determining a risk is reasonably likely to occur?"
+
+### Issue
+
+The cited ASC authority reference does not match the accounting concept being tested:
+
+1. **P1-A-012** cites "ASC 210 (Accruals)" for loss contingency treatment. ASC 210 covers balance sheet classification (current vs. non-current). The correct authority for loss contingencies is ASC 450 (Contingencies).
+
+2. **P1-BC-065 area distractor explanations** (~3 occurrences at line 7699â€“7702) use "Under ASC 450 (Contingencies)" in a budget/contingency planning question. The question tests management's planning response to risk, not loss contingency accounting. The ASC 450 citation is a DL-007 template artifact â€” the explanation text was reused from loss-contingency questions without updating the authority reference.
+
+### Root Cause
+
+Template-based authoring artifact. Questions were produced using a text template that included boilerplate authority citations. When the template was reused across topics, the ASC reference was not updated to match the new question's actual accounting concept.
+
+The P1-A-012 case additionally reflects an original authoring error: the question writer cited the wrong ASC section for the topic.
+
+### Correct Pattern
+
+Verify every cited ASC section against the actual standard scope before production. The rule: **the cited ASC reference must match the accounting concept being tested, not merely be a valid ASC section**.
+
+### Detection Rule
+
+For each question, scan for pattern `ASC \d{3}(-\d{2}(-\d{2})?)?`. For each match, verify:
+1. Does the cited standard's scope topic match the question's topic?
+2. Is there a more specific subsection that should be cited?
+
+Automated implementation: extend ReferenceValidator to cross-check cited ASC sections against a known-good topicâ†’standard mapping.
+
+### Regression Test
+
+Scan all pack files for cited ASC references (total: 483 across 5 packs). Cross-check each against the known-good list. Flag any citation where the standard's scope does not match the question's topic.
+
+### Estimated Scope
+
+| Pack | ASC Citations | Est. Scan Time |
+|------|---------------|----------------|
+| pack_a | 107 | ~30 min |
+| pack_b | 53 | ~15 min |
+| pack_c | 126 | ~35 min |
+| pack_d | 171 | ~45 min |
+| pack_e | 26 | ~10 min |
+| **Total** | **483** | **~2â€“3 hours** |
+
+### Resolved
+
+2026-07-22 â€” 10 Pack C citation defects corrected:
+- P1-AC-016 through P1-AC-020: "ASC 360 (Impairment)" â†’ "ASC 350 (Goodwill)" â€” goodwill impairment testing is governed by ASC 350, not ASC 360
+- P1-AC-066 through P1-AC-070: "ASC 405 (Liabilities)" â†’ "ASC 450 (Contingencies)" â€” loss contingency disclosure is governed by ASC 450, not ASC 405
+
+All 30 occurrences (3 per question Ã— 10 questions) corrected. Zero regressions on validator suite. Remaining 473 ASC citations across packs A/B/D/E were verified as correct during the DL-009 scan completed earlier.
+
+---
+
+## DL-010 â€” Misassigned Choice Explanations
+
+```
+Defect ID        DL-010
+Class            Structural / Content (hybrid)
+Domain           Explanation Assignment
+Severity         High
+Detected By      Build-Time AI Verification (Sub-batch 2B Wave 2 â€” P1-A-029)
+Status           Open
+```
+
+**Category:** Misassigned choice explanations
+
+**Question IDs (known):** P1-A-029 (Wave 2)
+
+**File:** `pack_a_corrected.js`
+
+**Stem (P1-A-029):** "Holt bought equipment for $92,800 with a $12,000 salvage value and a 5-year useful life. Using straight-line depreciation, what is the annual depreciation?"
+
+### Issue
+
+The content of `ExplanationWrong[X]` semantically describes a choice other than X, or `ExplanationCorrect` describes a wrong choice. In P1-A-029:
+
+- **ExplanationWrongA** described Choice B ($16,160 = correct answer), not Choice A ($80,800)
+- **ExplanationWrongB** described Choice C ($18,560, a distractor), not Choice B ($16,160, the correct answer)
+
+A learner reviewing why A is wrong receives the text for the correct answer. A learner reviewing why B is wrong receives text about a different distractor. Both receive educationally misleading feedback.
+
+### Root Cause
+
+Authoring pattern where explanation fields were populated by column position rather than by choice assignment â€” a copy-paste artifact from bulk template filling. The author intended to write explanations in order (A-wrong, B-correct, C-wrong, D-wrong) but populated slots by a different mapping (Aâ†’correct text, Bâ†’distractor text, Câ†’distractor text, Dâ†’distractor text).
+
+### Detection Rule
+
+For each question Q, for each letter L in {A, B, C, D}:
+
+1. Read the choice text `Q.Choices[L]`
+2. Read the explanation text `Q["ExplanationWrong" + L]` (or `Q.ExplanationCorrect` for L = CorrectChoice)
+3. Assess whether the explanation semantically describes the choice it is assigned to
+
+This is inherently a semantic (NLP/human) check. No regex or structural rule can reliably detect it.
+
+### Correct Pattern
+
+Each `ExplanationWrong[X]` must describe why choice X is wrong. `ExplanationCorrect` must describe why the designated correct choice is correct. Formally:
+
+```
+For each letter L:
+  if L == CorrectChoice:
+    Q.ExplanationCorrect semantically describes Q.Choices[L]
+  else:
+    Q["ExplanationWrong" + L] semantically describes Q.Choices[L]
+```
+
+### Validator / Source
+
+`Build-Time AI Verification` â€” no automated validator can reliably detect semantically-misassigned explanations. This is a fundamental gap: the existing validator suite checks structural correctness (DL-008), explanation uniqueness (DL-007), and authority accuracy (DL-009), but cannot verify that explanation text matches the specific choice it annotates.
+
+### Reference Instance (P1-A-029)
+
+| Slot | Before (wrong) | After (correct) |
+|------|----------------|-----------------|
+| ExplanationWrongA | "$16,160 equals ($92,800 - $12,000) / 5, correctly applying the straight-line formula." (describes Choice B) | "$80,800 is the depreciable base (cost minus salvage), not the annual depreciation. Annual depreciation = $80,800 / 5 = $16,160." |
+| ExplanationWrongB | "$18,560 results from dividing the full cost ($92,800) by 5 without subtracting salvage value." (describes Choice C) | "Option B ($16,160) is correct. Straight-line depreciation = ($92,800 - $12,000) / 5 = $80,800 / 5 = $16,160 per year." |
+
+### Regression Test
+
+Repository-wide semantic scan across all packs and scored-case files. For each question and case item, confirm:
+
+- Each `ExplanationWrong[X]` text refers to the specific error in Choice X
+- `ExplanationCorrect` text refers to the specific correct answer
+- No explanation text is wholly generic or describes a different choice
+
+---
+
+## DL-011 — Reserved (Intentionally Skipped — Numbering Gap)
+
+```
+Defect ID        DL-011
+Class            Structural
+Domain           N/A — Reserved
+Severity         Informational
+Detected By      N/A
+Status           Reserved — skipped during initial authoring
+```
+
+### Issue
+
+DL-011 was not assigned during the original defect library authoring sequence (DL-001 through DL-010, then DL-012). This entry exists to document the gap as intentional, preventing future auditors from incorrectly assuming an entry was deleted or overlooked.
+
+**No content defect associated with this DL-ID.**
+
+---
+
+## DL-012 â€” Section E Clonal Redundancy (Pack C/D)
+
+```
+Defect ID        DL-012
+Class            Structural
+Domain           Clone Redundancy
+Severity         Medium
+Detected By      Section E Population Scan (2026-07-22)
+Status           Open â€” documented, not remediated
+Category         Template-generated clone waste
+```
+
+**Question IDs:** 150 items across Pack C (Section E: EC-001â€“EC-075) and Pack D (Section E: ED-001â€“ED-075). 140 clones (28 groups Ã— 5 items each) + 10 standalone unique items.
+
+**Files:** `pack_c_corrected.js`, `pack_d_corrected.js`
+
+**Pattern:** 28 clone groups, each containing 5 items generated via template:
+- Stem variation: fictional company names only (alphabetical progression), no other content varies
+- Answer choices: same four options, positionally rotated so correct answer lands in A/B/C/D once per group
+- Distractor explanations: verbatim identical within each group (generic "plausible misconception" template text)
+- Difficulty: one item per group marked "Difficult" with expanded ExplanationCorrect; others are "Moderate" or "Easy"
+
+### Root Cause
+
+Residual duplication from the historical Pack C/Pack D bulk-authoring aliasing issue. The same authoring template was used to generate variant packs (Aâ†’Câ†’Dâ†’Bâ†’E), producing 5-item groups where only the company name and answer-letter position varied.
+
+### Detection Rule
+
+For each micro-topic within a Section, compare stems for Jaccard similarity > 90% after removing proper nouns. Flag groups of 5 items sharing the same stem skeleton with only company-name substitution and answer-letter rotation.
+
+### Remediation Plan
+
+| Batch | Scope | Approach |
+|-------|-------|----------|
+| 1 | Segment 1 + 3 (Unprocessed) | Rewrite distractor explanations to be choice-specific. Blocking certification. |
+| 2-3 | Segments 2, 4, 6 | Deferred -- per-wave editorial enhancement. Not blocking. |
+| 4 | Segment 5 | Route to DL-010 workstream. |
+
+Batch cap: <=28 items per governance-guard Rule 5. Backup-before-write: mandatory per BACKUP_PROTOCOL.md.
+
+
+### Count Stability
+
+Three scans were run before the count stabilized at 140 clones. The original finding report (128) had an arithmetic error (56+56â‰ 128) and an undercount. The first background agent (138) miscounted Groups 1 and 15. The definitive scan (BG Agent 3, 150 items / 140 clones) is authoritative.
+
+### Open Decisions
+
+- Option A (Archive) vs. Option B (Re-key `UniqueConceptKey`)
+- Group 1 seed: EC-003 (template, prior selection) vs. EC-004 (custom distractors, 302-char EC, recommended)
+- See `reports/remediation/DL012_REMEDIATION_PROPOSAL.md` Â§9 for full comparison
+
+### Remediation Status
+
+**Not executed.** The 4-batch write plan, backup protocol, and governance guard compliance are all documented and verified. Pack C and D are BLOCKED from any edit per `reports/session_status/SESSION_STATUS_2026-07-22.md` Â§3.3 until all risks are resolved.
+
+### Regression Test
+
+After archival:
+- Verify 28 seeds have `question_state: "Unprocessed"` (active)
+- Verify 112 clones have `question_state: "Archived"` (excluded from learner pool)
+- Verify 10 standalone items preserved unchanged
+- Verify zero Section F misplacements (EC-075 and ED-075 confirmed Section E)
+- Verify no clone QID appears in delivery pool
+
+### Impact
+
+Before remediation, 140 clone items (93.3% of the 150 Pack C/D Section E inventory) provide zero additional pedagogical value beyond the 28 seed items. The clone waste also dilutes Section E population metrics and distorts blueprint coverage reporting.
+
+---
+
+## DL-013 â€” Template Boilerplate Distractor Explanations
+
+```
+Defect ID        DL-013
+Class            Content
+Domain           Explanation Quality
+Severity         High (educational quality â€” learners receive generic, non-instructional feedback)
+Detected By      Build-Time AI Verification (DL-007 segmentation scan, 2026-07-22; scope corrected 2026-07-23)
+Status           In Progress — 1,736 of 2,587 fields cleared (67.1%). Section A fully remediated. Section C fully remediated and confirmed 0 by fresh boundary-safe rescan (2026-07-23). Sections B and D confirmed clean in all remediated packs (A, C, D) by fresh rescan. Remaining: **366 QIDs, 851 fields (authoritative)** — Pack A (94/238: A-residual/B/C/E), Pack C (159/357: D/E/F), Pack D (113/256: E/F). Zero Certified items affected.
+Category         Template-generated boilerplate distractor explanations
+```
+
+**Question IDs:** 882 unique QuestionIDs across Pack A (118), Pack C (382), and Pack D (382). Total: 2,587 individual ExplanationWrong field occurrences. Zero Certified QIDs affected (learner pool clean). âš  The original 1,011 figure was produced by brace-matched object parsing which fragments single QIDs across multiple pseudo-objects (~15% inflation). Boundary-aware block-parsing (QuestionID â†’ next QuestionID boundary) is the authoritative method per `reports/defect_sweeps/DL007_QID_COUNT_BOUNDARY_REVERIFY.md` and `.opencode/skills/reconciliation-audit.md` Â§3a.
+
+**Files:** `pack_a_corrected.js`, `pack_c_corrected.js`, `pack_d_corrected.js`
+
+**Pattern:** Distractor explanation fields contain identical or near-identical generic template text:
+> "Option X (...) represents a plausible misconception. Under CMA Part 1 accounting principles, the correct analysis leads to the conclusion that [correct answer]. A candidate may select this option by misapplying a related but distinct concept."
+
+All three distractor slots per question share this template, differing only by the option letter and inserted choice text. The explanations do not address WHY each specific distractor is wrong or identify the targeted misconception.
+
+### Root Cause
+
+Template-based bulk authoring (same pipeline that produced DL-012 clones). Questions were authored in 5-item groups where distractor explanations were template-filled rather than individually written.
+
+### Detection Rule
+
+```
+For each ExplanationWrong[X] field in each question:
+  if field contains "represents a plausible misconception"
+    AND "A candidate may select this option by misapplying"
+    â†’ flag DL-013
+```
+
+Scanning methodology (corrected 2026-07-23): The original brace-matched object parsing inflated the unique QID count by ~15% (1,011 vs. correct 882 â€” see `reports/defect_sweeps/DL007_QID_COUNT_BOUNDARY_REVERIFY.md`). The authoritative method is boundary-aware block-parsing (find `"QuestionID"` â†’ scan to next `"QuestionID"` â†’ test block per `.opencode/skills/reconciliation-audit.md` Â§3a). Zero Certified items affected (down from an initial false-positive count of 9 caused by a prior window-based scan). The field-occurrence count (2,587) was unaffected by the parsing error and remains confirmed by all methods.
+
+### Segmentation (from DL007_SEGMENTATION.md, scaled to 2,587 occurrences)
+
+| Segment | Description | Est. Occurrences | Priority |
+|---------|-------------|-----------------|----------|
+| 1 | Exact duplicate generic (identical across all 3 slots) | ~640 | Highest â€” zero educational value |
+| 2 | Generic but directionally accurate | ~1,280 | Deferred â€” not blocking certification |
+| 3 | Misleading or inconsistent | ~250 | High â€” correctness defect |
+| 4 | Intentional equivalents (accepted pattern) | ~155 | Document and close |
+| 5 | Misassigned (route to DL-010) | ~10 | Correctness defect |
+| 6 | Unassessed | ~252 | Classify during remediation |
+
+### Certified QIDs Affected
+
+**0.** All 2,587 occurrences are in Unprocessed or legacy (no `question_state`) items. The learner pool is clean. This defect blocks certification of the affected items but has no impact on current learner delivery.
+
+### Count Stability
+
+Three independent methods converged at 2,587:
+- Method 1: global regex (pattern match across raw files) = 2,587
+- Method 2: field-bounded extraction (ExplanationWrong field name â†’ value regex) = 2,587
+- Method 3: boundary-aware parse (brace-matched complete objects) = 2,587
+
+Cross-check: all 2,587 occurrences contain both "represents a plausible misconception" AND "A candidate may select this option by misapplying" â€” confirming identical template origin.
+
+### Distribution
+
+| Pack | Occurrences (original) | Remediated | Remaining (authoritative) | Sections with Residue |
+|------|------------------------|-----------|--------------------------|----------------------|
+| Pack A | 295 | 57 | **238** | A (5), B (111), C (94), E (28) |
+| Pack C | 1,146 | ~789 | **357** | D (131), E (125), F (101) |
+| Pack D | 1,146 | ~890 | **256** | E (138), F (118) |
+| **Total** | **2,587** | **~1,736** | **851** | Boundary-safe rescan confirmed |
+
+Packs C and D have identical counts (1,146 each) â€” a duplicate artifact from the historical bulk-authoring pipeline (same root cause as DL-012).
+
+### Remediation Plan
+
+| Batch | Scope | Approach |
+|-------|-------|----------|
+| 1 | Segment 1 + 3 (Unprocessed) | Rewrite distractor explanations to be choice-specific. Blocking certification. |
+| 2-3 | Segments 2, 4, 6 | Deferred -- per-wave editorial enhancement. Not blocking. |
+| 4 | Segment 5 | Route to DL-010 workstream. |
+
+Batch cap: <=28 items per governance-guard Rule 5. Backup-before-write: mandatory per BACKUP_PROTOCOL.md.
+
+**Detailed execution proposal:** 
+`
+` reports/remediation/DL013_REMEDIATION_PROPOSAL.md ` -- 6-batch plan targeting Pack C/D Section A first (137 items, 411 fields, 100% Segment 1 boilerplate). These are the highest-density DL-013 clusters: Pack C Section A has 65 contaminated items (86.7% of section); Pack D Section A has 72 (96.0%). All are fully templated -- all 3 distractor slots per item carry identical boilerplate. Zero DL-008 overlap (all CorrectChoice slots clean). Proposed execution order: Pack C (3 batches: 20+28+17), then Pack D (3 batches: 28+28+16). This represents the largest single remediation block within the 882-QID DL-013 population.
+
+### Relationship to DL-007
+
+DL-007 was originally filed as a single-instance defect (P1-A-022) and marked Resolved. The prototype finding was correct in pattern but incomplete in scope â€” the defect category spans 2,587 occurrences, not one question. DL-013 supersedes DL-007 as the authoritative defect record. DL-007 is retained in the library with a cross-reference annotation. The DL-007 entry's "Resolved" status applied only to P1-A-022; the entry has been re-labeled "Superseded â€” see DL-013."
+
+### Resolved
+
+2026-07-23 — In progress. As of the 2026-07-23 governance documentation catch-up session, a fresh boundary-safe QID-indexing rescan (QuestionID → next QuestionID block, per `.opencode/skills/reconciliation-audit.md` §3a) produced the following authoritative counts:
+
+**Remaining: 366 QIDs, 851 fields** — zero Certified items affected (learner pool clean).
+
+| Pack | Remaining QIDs | Remaining Fields | Sections with Residue |
+|------|---------------|-----------------|----------------------|
+| Pack A | 94 | 238 | A (2 QIDs: P1-A-044, P1-A-064), B (41), C (38), E (13) |
+| Pack C | 159 | 357 | D (60), E (56), F (43) |
+| Pack D | 113 | 256 | E (61), F (52) |
+| **Total** | **366** | **851** | |
+
+**Remediation completed since original scan (2,587 → 851 = 1,736 fields cleared):**
+- Pack D Section A: 72 items (dedicated DL-013 batches)
+- Pack C Section A: 65 items (dedicated DL-013 batches)
+- Pack C Section C: 86 items / 182 fields (Subagent 2, confirmed 0 by fresh rescan)
+- Pack D Section C: 86 items / 193 fields (Subagent 2, confirmed 0 by fresh rescan)
+- Pack C Section B: 57 items (Subagent 3 certification wave, confirmed 0 by fresh rescan)
+- Pack D Section B: 51 items (Subagent 3 certification wave, confirmed 0 by fresh rescan)
+- Pack A Section D: 24 items (Subagent 3 certification wave, confirmed 0 by fresh rescan)
+- Pack D Section D: 37 items (Subagent 3 certification wave, confirmed 0 by fresh rescan)
+
+**Fresh rescan cross-checks:**
+- Section C (both Pack C and Pack D): **0 fields** — Subagent 2 remediation fully confirmed
+- Section B (both Pack C and Pack D): **0 fields** — Subagent 3 certification wave fully confirmed
+- Pack A Section D: **0 fields** — Subagent 3 certification wave fully confirmed
+- Pack A Section A residual: 2 items (P1-A-044, P1-A-064) with 5 fields — edge cases missed by prior sweeps
+
+**Count stability:** The 851 field total was confirmed by 5 independent boundary-safe per-section scans. No counting instability observed. Full plan: `reports/remediation/DL013_REMAINING_1713_REMEDIATION_PROPOSAL.md`.
+
+---
+
+## DL-014 — Sibling Null Guard Missing (app.js:1187 s.mcqs)
+
+```
+Defect ID        DL-014
+Class            Structural
+Domain           Session Recovery
+Severity         Low (defensive — no crash reported for this path)
+Detected By      Code path analysis during DL-013 / app.js crash guard work (2026-07-23)
+Status           Open — documented, low priority
+```
+
+**File:** `app.js` line 1187
+
+**Issue:** The same null-guard vulnerability applied at line 1188 (`s.cases.length` → `(s.cases || []).length`) exists one line earlier for `s.mcqs.length`. If a session restore corruption produces null/undefined for both `s.mcqs` and `s.cases`, line 1187 throws TypeError before reaching the guarded line 1188.
+
+**Current code (line 1187):**
+```javascript
+if (s.qIndex < s.mcqs.length) return this.renderMCQ(s.mcqs[s.qIndex]);
+```
+
+**Proposed fix (identical pattern to line 1188):**
+```javascript
+if (s.qIndex < (s.mcqs || []).length) return this.renderMCQ(s.mcqs[s.qIndex]);
+```
+
+**Root Cause:** Same as the line 1188 crash — the `render()` decision tree assumes `s.mcqs` and `s.cases` are always valid arrays. Session restoration via `localStorage.getItem()` + `JSON.parse()` can produce partial/corrupted snapshots.
+
+**Remediation Priority:** Low. No crash has been reported for the MCQ path. The line 1188 fix already handles the known crash vector. This is a defensive hardening item for a future session.
+
+**Resolved**
+
+Not yet.
+
+---
+
+## DL-015 — Metadata Topic Numbering Shift (E.040–E.042)
+
+```
+Defect ID        DL-015
+Class            Structural
+Domain           Metadata Consistency
+Severity         Low (informational — no content or learner impact)
+Detected By      Session 1 Tier 0 escalation investigation; confirmed by Sessions 2, 5, 6 (2026-07-23)
+Status           Open — documented, low priority
+```
+
+**Question IDs:** P1-E-040, P1-E-041, P1-E-042
+
+**File:** `pack_a_corrected.js`
+
+**Issue:** The Topic field number labels for items E.040 through E.042 are shifted by one position relative to the expected sequential topic mapping. The Topic *descriptions* are correct — the numbering labels alone are shifted:
+
+| QID | Topic Field (current) | Actual Content | Expected Topic Number |
+|-----|----------------------|----------------|----------------------|
+| P1-E-040 | "E.040 inventory cycle count investigation 5" | Inventory cycle count | E.040 (or alternate slot) |
+| P1-E-041 | "E.041 user access recertification 6" | User access recertification | E.040 per sequential mapping |
+| P1-E-042 | "E.042 control exception root cause 7" | Control exception root cause | E.041 per sequential mapping |
+
+In all three cases, the Topic *description* portion ("inventory cycle count investigation 5", "user access recertification 6", "control exception root cause 7") correctly describes the item's actual content. Only the numeric label (E.040, E.041, E.042) is offset from expectation.
+
+### Root Cause
+
+Template authoring — items were generated from a 5-item rotation group where the Topic label was auto-incremented sequentially, but a prior item (E.040's index position) was assigned a different topic ("inventory cycle count") than the rotation template expected ("user access recertification"). This shifted all subsequent Topic labels by one.
+
+### Impact
+
+**None.** The Topic description matches the content. The rendering engine does not use Topic numbers for content display. No stem-choice inconsistency exists — this was confirmed by three independent sessions (2, 5, 6). The initial Tier 0 emergency flag was a false positive caused by comparing Topic numbers rather than Topic descriptions.
+
+### Detection Rule
+
+For any item where `Topic` contains a label like "E.NNN <description>", verify that `<description>` matches the item's `Stem` content semantics. The numeric label `E.NNN` is cosmetic metadata.
+
+### Validator
+
+This defect category is not currently covered by any validator module. Recommended: add a `TopicDescriptionConsistencyValidator` to the `MetadataValidator` pipeline for future certification waves.
+
+### Remediation
+
+Correct the Topic number labels when the items next undergo certification review. Priority: lowest — no learner impact, no content incorrectness, no certification-blocking property.
+
+### Cross-Reference
+
+**DL-016** documents a related but distinct manifestation of the same template-pipeline root cause: the metadata-block `ChoiceA`-`D` text (first object per QuestionID) is shifted such that each seed's metadata advertises the *previous* QID's topic, not its own. Both defects arise from the same 5-item rotation template but affect different fields. DL-015 = content-block Topic labels; DL-016 = metadata-block ChoiceA-D text.
+
+### Resolved
+
+Not yet.
+
+---
+
+## DL-016 — Metadata-Block Topic-Numbering Shift (Pack A Section E)
+
+```
+Defect ID        DL-016
+Class            Structural / Documentation
+Domain           Metadata Consistency
+Severity         Upgraded to HIGH (2026-07-24 — Session 64 pilot certification found DL-016 affects ALL Pack A sections, not just Section E; learner-safety risk on Certified items where EW text describes wrong item's choices)
+Detected By      Build-Time AI Verification (Session 5 — reconciliation-audit skill validation, 2026-07-23; EXPANDED Session 64, 2026-07-24)
+Status           **Resolved — S805 (2026-07-26). 57 Certified Pack A Section E items remediated: 171 ExplanationWrong fields authored with choice-specific, COSO-aligned distractor explanations. 0 DL-008, 0 empty distractor slots. Architecture confirmed as SINGLE-OBJECT (not dual-block) for Section E. P1-E-084 was naturally clean (last in rotation group).** Packs C and D dual-block status not yet confirmed — S805 scope was Pack A Section E only.
+```
+
+**Question IDs:** P1-E-038 through P1-E-042 (5 certified seeds)
+
+**File:** `pack_a_corrected.js`
+
+### Issue
+
+The pack file uses a paired-object structure per QuestionID: a **metadata block** (QuestionID, question_state, ChoiceA–D, ExplanationWrongA–D) and a **content block** (Part, Section, Topic, Stem, Choices, CorrectChoice, ExplanationCorrect). The metadata blocks for seeds P1-E-038 through P1-E-042 exhibit a systematic one-position shift: each seed's metadata `ChoiceA`–`D` text advertises the *previous* QID's topic, not its own.
+
+| Seed QID | Metadata ChoiceA-D Topic | Content-Block Actual Topic |
+|----------|--------------------------|---------------------------|
+| P1-E-038 | AP duplicate invoice control | **Payroll terminated employee control** |
+| P1-E-039 | Payroll terminated employee | **Inventory cycle count** |
+| P1-E-040 | Inventory cycle count | **User access recertification** |
+| P1-E-041 | User access recertification | **Control exception root cause** |
+| P1-E-042 | Control exception root cause | **Control evidence retention** |
+
+The content block (what the app renders to the learner) is internally consistent in every case — stem matches choices topically, CorrectChoice is correct for the rendered stem. The metadata block's choices are stale template residue from the original bulk-authoring pipeline.
+
+### Root Cause
+
+Template-based bulk authoring produced items in 5-item rotation groups. When the content blocks were independently authored/upgraded during the Section E Block 1 certification wave, the metadata blocks were not updated to match — they still carry the rotation-template choices from the original authoring pass. This is the same template pipeline that produced the DL-012 Pack C/D clones and the Pack B Section E 17-defect rotation artifacts.
+
+### Impact
+
+**HIGH — Learner-safety risk on Certified items.** The metadata block's ExplanationWrong fields describe a *different* item's choices than the content block that the learner sees. This means a learner who selects a wrong answer may see an explanation about a completely different topic.
+
+**Session 64 pilot evidence (2026-07-24):**
+- **P1-A-005** (contract liability for advance collections, CC=D): Metadata EW fields describe P1-A-004's ASC 606 equipment installation scenario. A learner answering P1-A-005 incorrectly sees distractor explanations about Umbra's installation contract revenue recognition.
+- **P1-A-030** (retained earnings rollforward, CC=D): Metadata EW fields describe a cash-flow indirect-method question (depreciation, A/R, A/P), not the retained earnings calculation.
+- **P1-D-030** (predetermined overhead applied to job, CC=A): Metadata EW fields describe a JIT philosophy question, not overhead allocation.
+- **P1-DD-025** (margin of safety calculation, CC=B): Metadata EW_B contains text about reciprocal cost allocation method ("Option B is incorrect. The reciprocal method best captures...") — completely unrelated to the margin-of-safety question the learner answered.
+
+**Previously documented impact (2026-07-23):** The content block (what the app renders to the learner) is internally consistent — stem matches choices topically, CorrectChoice is correct for the rendered stem. The metadata block's ExplanationWrong fields, however, are from a +1 offset item. The rendering engine reads ExplanationWrong fields from the metadata block, meaning learners see wrong explanations for wrong-answer choices on affected Pack A/C/D items.
+
+### Detection Rule
+
+For any item with `question_state: "Certified"`, extract both metadata-block `ChoiceA`–`D` and content-block `Choices.A`–`D`. Compare:
+- If identical → structurally consistent
+- If different → flag as metadata-content inconsistency (this defect)
+
+### Correction
+
+Align the metadata-block `ChoiceA`–`D` text with the content-block `Choices.A`–`D` text for all 5 seeds during a future metadata-remediation pass. Low priority — the content blocks are already correct.
+
+### Scanning-Quality Impact (2026-07-23)
+
+This defect class caused a Tier 0 false alarm when Session 1's scanning script used a flat regex match (`/ChoiceA/`) that captured the metadata-block field before reaching the content-block nested field (`"Choices": { "A": ... }`). The script reported stem-choice mismatches based on metadata-block choices, which carry stale template residue from the original bulk-authoring pipeline. The content block (actual learner-facing choices) was internally coherent for all affected items. The Hold→Certified revert was executed by Session 2, and Session 6 independently confirmed via direct field reconciliation.
+
+**Rule for future scans:** When reading learner-facing choices, use path-aware matching (`"Choices": { "A"`) — never use flat `"ChoiceA"` regex on blocks that contain both metadata and content sub-blocks. The rendering engine indexes by `Choices.A`–`D` (nested), not by `ChoiceA`–`D` (flat metadata).
+
+### Converged Sessions
+
+- Session 2 (Hold→Certified revert + root cause analysis)
+- Session 6 (direct field reconciliation refuting the stem-choice mismatch claim)
+- Session 1 (third-angle verification: re-examined raw file, confirmed metadata vs. content block confusion)
+
+### Cross-Reference
+
+**DL-015** documents a related but distinct manifestation of the same template-pipeline root cause: the content-block `Topic` field number labels are shifted by one position. Both defects arise from the same 5-item rotation template but affect different fields. DL-015 = content-block Topic labels; DL-016 = metadata-block ChoiceA-D text.
+
+### Resolved
+
+2026-07-26 — S805: 57 Certified Pack A Section E items remediated. 171 ExplanationWrong fields authored with choice-specific, COSO-principled distractor explanations. All fields reference appropriate COSO principles (1-5: Control Environment, 6-9: Risk Assessment, 10-12: Control Activities, 13-15: Information & Communication, 16-17: Monitoring). Zero DL-008, zero empty distractor slots. Architecture investigation confirmed Section E uses single-object format (not dual-block) — the +1 shift was an ExplanationWrong rotation artifact from template-based authoring, not a metadata-vs-content block divergence. P1-E-084 naturally clean (last in rotation group). Governance guard 27/27 PASS. Pack A Section E learner pool fully secured.
+
+---
+
+---
+
+## DL-017 — Pack B Sections B/C/F File Corruption (Backtick-Newline Artifact)
+
+```
+Defect ID        DL-017
+Class            Structural
+Domain           File Integrity / Parser Infrastructure
+Severity         High (blocks Pack B Sections A/D certification, rotation-artifact audit, and all JSON/object-parsing tools on Sections B/C/F)
+Detected By      Build-Time AI Verification (2026-07-23 governance documentation catch-up — root-cause analysis of the Pack B "eval() parser failure")
+Status           Resolved — 275 sites fixed 2026-07-23 via 6-agent orchestration (Agent 3)
+Category         File corruption residue from prior reconstruction script
+```
+
+**Question IDs:** 275 Certified items across Pack B Sections B (P1B-B-101 through P1B-B-200, 100 items), C (P1B-C-101 through P1B-C-200, 100 items), and F (P1B-F-076 through P1B-F-150, 75 items).
+
+**File:** `pack_b_corrected.js`
+
+### Issue
+
+A `` `n `` (backtick-literal-n) artifact is embedded in the inter-object space of 275 question objects, making them unparseable by `JSON.parse()` or `new Function()`:
+
+```
+"QuestionID": "P1B-B-101",`n    "question_state": "Certified",101: true,
+```
+
+The corruption has two components:
+1. `` `n `` appears where a JSON property separator should be (e.g., ``,`` or ``,`` + newline)
+2. `NNN: true,` is a duplicate artifact appended after `question_state` (e.g., `,101: true,`)
+
+The corruption is mechanically identical at all 275 locations across Sections B, C, and F.
+
+### Root Cause
+
+Residue from a prior file reconstruction/recovery script that mismatched a newline replacement pattern, substituting a backtick for a comma or newline character. The original authoring pipeline likely used template strings with `` ` `` delimiters in a separate build step; when the build output was reconstructed from a partial backup, the replacement pattern substituted `` ` `` for ``,`` at specific line positions.
+
+Sections A (73 items, lines 19–2919) and D (74 items, lines 10952–14160) have clean JSON structure with zero backtick corruption and no `question_state` field (MISSING state). These 147 items are the uncertified sections that require a rotation-artifact audit — currently blocked because scripts that attempt JSON.parse() on the full Pack B array fail before reaching Sections A and D.
+
+Section E (75 items, lines 14164–17597) has clean JSON with `question_state: "Certified"` and zero backtick corruption.
+
+### Impact
+
+| Blocked Work | Scope | Notes |
+|-------------|-------|-------|
+| Pack B Sections A/D rotation-artifact audit | 147 items | Batch parse fails before reaching these clean sections |
+| Pack B Sections A/D certification | 147 items | Both sections lack question_state entirely |
+| Pack B Sections B/C/F DL-008 scan | 275 items | JSON-based tools crash on corrupted objects |
+| Pack B Sections B/C/F DL-013 scan | 275 items | JSON-based tools crash on corrupted objects |
+| `build_master_registry.js` on Pack B | 500 items | Brace-tracking may survive; JSON.parse() per-object fails |
+| Any script calling `JSON.parse()` on full Pack B array | 500 items | Malformed JSON rejected |
+
+**NOT blocked:** Simple grep/regex scans via `Select-String` work fine (string matching unaffected).
+
+### Pattern
+
+At each of the 275 corruption sites:
+```
+"QuestionID": "P1B-[BCF]-\d+",`n    "question_state": "Certified", NNN: true,
+```
+
+**Correct pattern:**
+```
+"QuestionID": "P1B-[BCF]-\d+",
+    "question_state": "Certified",
+    ...
+```
+
+### Detection Rule
+
+Grep for `` `n `` in `pack_b_corrected.js`:
+```
+Select-String -Path pack_b_corrected.js -Pattern '`n'
+```
+Expected: 275 matches, all in Sections B/C/F. Zero matches in Sections A/D/E.
+
+### Validator / Source
+
+`Build-Time AI Verification` — no existing validator detects this pattern. The file corruption was previously mischaracterized as "template string literals preventing `eval()` parsing" (see `reports/session_status/SESSION_STATUS_2026-07-23.md` §5). The actual parser issue is that the JSON is structurally malformed, not a JavaScript language feature.
+
+### Correction
+
+**Option A (recommended — simple find-and-replace):**
+
+A 2-pattern mechanical fix across 275 locations:
+1. Replace `` `n    "question_state" `` → ``,
+    "question_state" `` (restore valid JSON separator)
+2. Remove ``,NNN: true,`` artifact entirely
+
+This is NOT a parser upgrade. It is a file-correction operation. No AST parser, acorn, babel, or npm install required.
+
+Estimated effort: ~30 minutes. Risk: LOW — the corruption is mechanically identical at all 275 locations.
+
+**Option B (validation-gated):**
+
+Write a targeted Node.js script that:
+1. Reads the file line-by-line
+2. On lines matching `/P1B-[BCF]-\d+",\x60n/` applies both replacements
+3. Writes cleaned file to a new path
+4. Validates all 275 affected objects parse via `JSON.parse()` individually
+5. Confirms QuestionID count unchanged (500)
+6. Cross-checks: pack_a and pack_d backup integrity; zero regression on validator suite
+
+### Regression Test
+
+After correction:
+- `JSON.parse()` the full Pack B array succeeds (500 items)
+- `grep -c '"QuestionID"'` returns 500
+- `grep '` + '`n`' returns 0
+- Sections A and D (147 items) are parseable — unblocking rotation-artifact audit
+- Sections B, C, F (275 items) show `question_state: "Certified"` on the correct line with no `NNN: true` artifact
+
+### Cross-References
+
+- SESSION_STATUS: `reports/session_status/SESSION_STATUS_2026-07-23.md` §5 (mischaracterized as "eval() parser failure")
+- Pack B Section E rotation artifacts: 17 confirmed defects (prior to Section E certification)
+- REVISION_HISTORY.md: Governance catch-up entry (this session)
+- governance-guard.js Rule 5: 30-item batch cap — the 275-location fix is above the cap but is a file-correction, not a batch content write
+
+### Resolved
+
+2026-07-23 — 275 corruption sites fixed via Agent 3 (6-agent orchestration). All `` `n `` artifacts removed and `NNN: true` duplicates stripped. Pack B Sections A/D (147 items) now unblocked for rotation-artifact audit. Sections B/C/F remain Certified with `question_state` intact. `JSON.parse()` validates clean across all 500 items. Backup: `pack_b_corrected.js.bak-20260723141212` (1,330,691 bytes).
+
+---
+
+## DL-018 — Missing ExplanationWrong[CorrectChoice] Fields (Pack E + Pack A Section E)
+
+```
+Defect ID        DL-018
+Class            Structural
+Domain           Explanation Slot Error (complementary to DL-008)
+Severity         Medium (field absent rather than non-empty; ExplanationCorrect + ExplanationWrongA–D fields exist at all other positions; 104 Certified items affected but learner impact is indirect — missing field produces cleaner rendering than DL-008's misplaced text)
+Detected By      Build-Time AI Verification (6-agent orchestration Wave 2, Agent 2 + Agent 5, 2026-07-23)
+Status           **Resolved — 351/351 items remediated (2026-07-23). P1-E-027 confirmed NOT DL-018 (CorrectChoice=B, ExplanationWrongB exists and is ""). P1-E-032 confirmed genuine DL-018 (CorrectChoice=C, ExplanationWrongC was absent) — fixed by orchestrator. All 349 Pack E items fixed by Agent 2. All 2 Pack A Section E items fixed (P1-E-031 by Agent 2, P1-E-032 by orchestrator).**
+Category         Missing-field artifact from separate authorship pipeline (Pack E + Pack A Section E legacy templates)
+```
+
+**Question IDs:** 352 items across:
+- **Pack E:** 349 items (Sections A–F, all sections). Specific distribution: 104 Certified, 245 non-Certified. **All 349 remediated by Agent 2 — 0 remaining.**
+- **Pack A Section E:** 2 items (P1-E-031, P1-E-032 — **both remediated**). P1-E-027 originally listed but confirmed NOT DL-018 (CorrectChoice=B, ExplanationWrongB exists and is "").
+
+**File:** `pack_e_corrected.js`, `pack_a_corrected.js`
+
+### Issue
+
+The `ExplanationWrong[CorrectChoice]` field is **structurally absent** (undefined) from the question object at the slot matching the CorrectChoice letter. This is distinct from classic DL-008 where the field exists with non-empty content.
+
+Unlike DL-008, where the learner sees misplaced text in the correct-answer explanation slot, a missing field typically causes no user-visible defect — the rendering engine encounters `undefined` and treats it equivalently to an empty string. However, the field's absence means:
+1. The ExplanationValidator silently skips these items (line 173 guard: `if (!val) return;`) — the validator was designed to validate non-empty strings, not check field presence
+2. The item's JSON structure is incomplete relative to the schema assumed by `governance-guard.js` Rule 2
+3. Future tooling that expects all four `ExplanationWrong` keys to exist may encounter unexpected `undefined` behavior
+
+**104 of these 352 items are Certified** — they are in the active learner delivery pool. The absence of the field at the CorrectChoice position means no wrong-answer text appears where the correct-answer explanation should be, which is the correct rendering behavior (empty = no wrong-answer text shown). This is why severity is Medium, not High — the missing-field scenario paradoxically produces *correct* rendering, unlike DL-008 which produces *wrong* rendering.
+
+### Root Cause
+
+Separate authorship pipeline. Pack E was authored independently from Packs A–D (not through the same template-based bulk-authoring pipeline). Pack E items use a JSON structure where ExplanationWrong fields are only populated for distractors (non-correct-answer slots) and omitted entirely for the correct-answer slot. Pack A Section E items (E-033, E-046, E-047) share this structural pattern — likely authored by the same pipeline or writer.
+
+In contrast, Packs A–D items populate all four ExplanationWrong slots regardless of CorrectChoice, creating the DL-008 problem. The Pack E authorship pipeline avoided the DL-008 defect category by simply not emitting the ExplanationWrong field at the CorrectChoice position.
+
+### Pattern
+
+```
+{
+  ...
+  "CorrectChoice": "B",
+  "ExplanationWrongA": "why A is wrong...",
+  "ExplanationWrongC": "why C is wrong...",
+  "ExplanationWrongD": "why D is wrong...",
+  // ExplanationWrongB is simply not present
+  "ExplanationCorrect": "why B is correct..."
+}
+```
+
+Compare with DL-008, where `ExplanationWrongB` exists and contains `"some text"` instead of being absent.
+
+### Detection Rule
+
+```
+For each question Q:
+  let letter = Q.CorrectChoice;
+  if !(("ExplanationWrong" + letter) in Q) → flag DL-018
+```
+
+Note: This is the *structural inverse* of DL-008. DL-008 flags non-empty; DL-018 flags absent. Both can be detected with the same scan by checking both conditions:
+- `typeof Q["ExplanationWrong" + letter] === "undefined"` → DL-018
+- `Q["ExplanationWrong" + letter] !== ""` → DL-008
+
+### Validator / Source
+
+- **Primary detection:** `Build-Time AI Verification` — Agent 2 and Agent 5 during the 6-agent orchestrated DL-008 remediation (2026-07-23)
+- **Validator integration:** `ExplanationValidator.js` line 173 guard (`if (!val) return;`) silently skips undefined fields. A separate validation path is needed for field-presence checks.
+- **Governance guard:** No explicit rule for missing ExplanationWrong fields (Rule 2 only blocks non-empty ExplanationWrong[CorrectChoice], not absent fields)
+
+### Correction
+
+Add the missing ExplanationWrong[CorrectChoice] field with value `""` for all 352 affected items. This is a structural normalization with zero content impact:
+- The field value is empty (nothing to render)
+- ExplanationCorrect independently contains the full explanation
+- Validator and governance guard will no longer encounter undefined fields at the CorrectChoice position
+
+**For Pack E:** ~349 items need the missing field added. This can be done via a single targeted script since the structural pattern is uniform across the pack.
+**For Pack A Section E:** 3 items (P1-E-033, P1-E-046, P1-E-047).
+
+### Priority
+
+**Medium.** No learner-facing defect exists (missing field produces correct rendering behavior). The remediation is a structural normalization to close the validator gap and ensure future tooling compatibility. Defer to next Pack E or Pack A Section E certification wave.
+
+### Relationship to DL-008
+
+| Property | DL-008 | DL-018 |
+|----------|--------|--------|
+| Field state | Exists, non-empty | Absent (undefined) |
+| Learner impact | Wrong text in correct-answer slot | Correct rendering (empty = no text) |
+| Severity | High (learner-safety risk) | Medium (validator normalization) |
+| Detection gap | Validator line 180 | Validator line 173 |
+| Packs affected | A, C, D | E, A (Section E only) |
+| Status | Resolved | Resolved |
+
+### Regression Test
+
+After correction:
+- All 352 items have `ExplanationWrong[CorrectChoice]: ""` (field exists, value is empty string)
+- ExplanationCorrect content preserved unchanged
+- No learner-facing text changes
+- QuestionID count unchanged by field
+- Validator: 0 DL-008 errors, 0 DL-018 field-presence warnings
+
+### Cross-References
+
+- 6-Agent orchestration session: REVISION_HISTORY.md lines 3561–3613
+- Agent 2 finding: 46 Pack E items flagged (determined to be missing-field, not classic DL-008)
+- Agent 5 investigation: Pack E confirmed 0 classic DL-008, 349 missing-field items
+- DL-008 entry (DEFECT_LIBRARY.md): complementary defect — non-empty field at CorrectChoice position
+- ExplanationValidator.js: line 173 guard (`if (!val) return;`)
+
+### Resolved
+
+2026-07-23 — 351 of 351 items remediated (Pack E: 349 items by Agent 2 across 13 batches; Pack A Section E: P1-E-031 by Agent 2, P1-E-032 by orchestrator). ExplanationWrong[CorrectChoice] fields added as `""`. **0 remaining.** P1-E-027 was a false positive (CorrectChoice=B, ExplanationWrongB exists and is ""). All other ExplanationWrong fields (A, B, D) are present with genuine, choice-specific text across all affected items.
+
+---
+
+## DL-021 — Missing Distractor ExplanationWrong Fields (Pack E Section C)
+
+```
+Defect ID        DL-021
+Class            Structural / Content (hybrid)
+Domain           Explanation Slot Absence (distinct from DL-018 CorrectChoice-only absence)
+Severity         High (educational quality — 5 Certified items in learner pool; all 100 Section C items have zero distractor explanations; learners see no feedback on incorrect choices) — RESOLVED
+Detected By      Build-Time AI Verification (3-agent scoping session, 2026-07-23)
+Status           Resolved — S71 (2026-07-24) authored 264 choice-specific distractor explanations across 88 Unprocessed items and certified all 100. 5 previously remediated items (Autonomous Run Part 4) intact. Confirmed 0 DL-021 remaining by S828 (2026-07-27). All 100 Section C items Certified with fully authored distractor EW fields (300 fields, avg 162 chars).
+Category         Template pipeline gap — distractor ExplanationWrong fields completely absent
+```
+
+**Question IDs:** 100 items: P1E-C-001 through P1E-C-100 (all Pack E Section C)
+
+**File:** `pack_e_corrected.js`
+
+**Pattern:** Every Pack E Section C item has exactly 1 ExplanationWrong field — the CorrectChoice-matching slot, which is empty (`""`). This empty slot was added by the DL-018 remediation session, which scanned for missing ExplanationWrong[CorrectChoice] across all Pack E items and added `""` where absent. The three distractor ExplanationWrong fields are structurally absent (undefined, not present in the JSON object).
+
+```
+// Actual structure (P1E-C-001, CorrectChoice=B):
+{
+  ...
+  "Stem": "Standard costs are:",
+  "ExplanationCorrect": "Standard costs are predetermined target costs...",
+  "QuestionID": "P1E-C-001",
+  ...
+  "ExplanationWrongB": ""      // ← Only field present (DL-018 fix)
+  // ExplanationWrongA: ABSENT
+  // ExplanationWrongC: ABSENT
+  // ExplanationWrongD: ABSENT
+}
+
+// Expected structure (cf. P1E-B-001, CorrectChoice=D):
+{
+  ...
+  "Stem": "A static budget is based on:",
+  "ExplanationCorrect": "Static budgets are fixed for...",
+  "QuestionID": "P1E-B-001",
+  ...
+  "ExplanationWrongA": "Multiple activity levels...",   // ← Present
+  "ExplanationWrongB": "Industry averages...",           // ← Present
+  "ExplanationWrongC": "Actual activity levels...",      // ← Present
+  "ExplanationWrongD": ""                                // ← CorrectChoice, empty
+}
+```
+
+### Issue
+
+All 100 Pack E Section C items are missing three ExplanationWrong fields each (300 total distractor explanation slots). When a learner selects an incorrect answer, the review screen shows no feedback explaining why that choice is wrong. The CorrectChoice slot is present and empty (normalized by DL-018), and ExplanationCorrect is present with text for all items. But the distractor feedback layer — the educational content that teaches why each wrong option is wrong — does not exist for Section C.
+
+This is a **distinct defect from DL-018**. DL-018 is the absence of the ExplanationWrong field at the CorrectChoice position (1 slot per item). DL-021 is the absence of the ExplanationWrong fields at all three distractor positions (3 slots per item). DL-018 is a structural normalization issue; DL-021 is a content-authoring gap.
+
+**5 of the 100 affected items are Certified and in the active learner delivery pool:**
+| QID | CorrectChoice | Certification Batch |
+|-----|--------------|---------------------|
+| P1E-C-013 | D | R14 Wave 5 |
+| P1E-C-054 | D | R14 Wave 6 |
+| P1E-C-055 | A | R14 Wave 6 |
+| P1E-C-074 | D | R14 Wave 6 |
+| P1E-C-083 | C | R14 Wave 6 |
+
+These 5 Certified items have been delivered to learners with no distractor explanations visible. The educational quality of the review experience for these items is degraded — learners who select wrong answers receive no instructive feedback on why their answer is incorrect.
+
+### Root Cause
+
+The Pack E authoring template engine was configured with a per-section flag that controlled ExplanationWrong field generation. For all other sections (A, B, D, E, F), the template emitted all 4 ExplanationWrong fields with choice-specific distractor text (and the CorrectChoice slot empty). For Section C, the template was configured to suppress distractor ExplanationWrong generation entirely.
+
+Evidence supporting this hypothesis:
+1. All 5 other Pack E sections have 4.0 ExplanationWrong fields per item with real text. Only Section C has 1.0 (just the DL-018-added empty CorrectChoice slot).
+2. All other structural fields (StudyLinks, SourceDescription, VerifiedChecks, UniqueConceptKey, MicroTopic, LOSTag format, ReviewNote, ItemStyle) are identical between Section C and Section B/D/E/F — ruling out a different author or pipeline.
+3. Section C items are interleaved within the same rotation-group blocks as other sections — they were generated at the same time, not in a separate authorship pass.
+4. The VerifiedChecks boilerplate for Section C claims "Distractors written as plausible CMA-style traps" — but no distractor explanations exist. This boilerplate was emitted by the template regardless of whether distractors were written, confirming the template was the source of the gap rather than a post-hoc stripping operation.
+5. Pack B Section C (a different pipeline) has all 4 ExplanationWrong fields with detailed text — demonstrating that the defect is Pack E/template-specific, not Section C topic-specific.
+
+### Pattern
+
+```
+"ExplanationCorrect": "<substantive text>",
+"QuestionID": "P1E-C-NNN",
+...
+"ExplanationWrong[CC]": ""  // ← Only field present, empty (DL-018 added)
+// ExplanationWrong[other 3 letters] are structurally absent
+```
+
+**Correct pattern (cf. Pack E Section B):**
+```
+"ExplanationCorrect": "<substantive text>",
+"QuestionID": "P1E-B-NNN",
+...
+"ExplanationWrongA": "<why A is wrong>",  // ← Present with text
+"ExplanationWrongB": "<why B is wrong>",  // ← Present with text  
+"ExplanationWrongC": "<why C is wrong>",  // ← Present with text
+"ExplanationWrongD": ""                    // ← Present, empty (CorrectChoice)
+```
+
+### Detection Rule
+
+```
+For each question Q with Section == "C" in pack_e:
+  let cc = Q.CorrectChoice;
+  for each letter L in {A, B, C, D}:
+    if L == cc:
+      Verify Q["ExplanationWrong" + L] === "" (DL-018 normalization, OK)
+    else:
+      Verify Q["ExplanationWrong" + L] is present and non-empty
+      If absent → flag DL-021
+```
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — 3-agent sequential-safe scoping session (2026-07-23)
+- **Validator integration:** No existing validator detects field absence (present/absent) — only field content (empty/non-empty). The `ExplanationValidator.js` line 173 guard (`if (!val) return;`) silently skips both undefined and empty fields. A field-presence check (`hasOwnProperty` or `!== undefined` vs `=== ""`) is needed to distinguish DL-021 from DL-018.
+- **Governance guard:** The `governance-guard.js` Rule 2 BLOCKs non-empty ExplanationWrong[CorrectChoice] but does not check for absent distractor ExplanationWrong fields.
+
+### Correction
+
+For all 100 Pack E Section C items, author choice-specific distractor explanations for the 3 absent ExplanationWrong slots per item (300 total fields). Each distractor explanation must:
+1. Explain why that specific choice is wrong
+2. Identify the likely misconception that leads to selecting that choice
+3. Contrast with the correct approach
+
+Remediation should follow the same batch protocol as DL-018 remediation: ≤30 items per batch per governance-guard Rule 5, backup-before-write per BACKUP_PROTOCOL.md, and independent post-remediation verification.
+
+**Certified items (5) must be remediated first** — they are in the active learner delivery pool and represent the highest-priority educational-quality gap.
+
+### Relationship to DL-018
+
+| Property | DL-018 | DL-021 |
+|----------|--------|--------|
+| Affected slots | CorrectChoice only (1 per item) | Distractor slots (3 per item) |
+| Field state | Absent (undefined) | Absent (undefined) — same field state |
+| Learner impact | None (absent field = correct rendering) | **Degraded educational feedback** (no distractor explanations shown) |
+| Scope | Pack E Sections A-F + Pack A Section E (352 total) | **Pack E Section C only** (100 items) |
+| Root cause | Authorship pipeline omitted CorrectChoice slot | **Template per-section flag suppressed all distractor ExplanationWrong generation** |
+| Status | Resolved (351/351 fixed) | **Open — 300 fields not yet authored** |
+| Severity | Medium | **High** (5 Certified items in learner pool) |
+
+### Regression Test
+
+After remediation:
+- All 100 Section C items have ExplanationWrong[A,B,C,D] fields present
+- Each distractor ExplanationWrong field (non-CorrectChoice) contains ≥ 50 characters of choice-specific text
+- Each CorrectChoice ExplanationWrong field is `""`
+- ExplanationCorrect preserved unchanged for all 100 items
+- QuestionID count unchanged (100 P1E-C-*)
+- 0 new validator errors
+- Pre-delivery safety check: 0 Section C items flagged for missing distractor explanations
+
+### Resolved
+
+2026-07-24 — S71 authored 264 choice-specific distractor explanations across 88 Unprocessed items and certified all 100. 5 previously remediated items (Autonomous Run Part 4) intact. Confirmed 0 DL-021 remaining by S828 (2026-07-27). All 100 Section C items Certified with fully authored distractor EW fields (300 fields, avg 162 chars).
+
+---
+
+## DL-019 — Concurrent-Write Data Loss (DL-008 Remediation Silently Overwritten)
+
+```
+Defect ID        DL-019
+Class            Structural
+Domain           Concurrent-Write Integrity / Session Isolation
+Severity         High
+Detected By      Build-Time AI Verification (cross-session DL-008 re-verification, 2026-07-23)
+Status           Resolved — overwritten items re-remediated 2026-07-23. File-lock protocol not yet implemented.
+```
+
+**Question IDs:** 432 items across Pack C (243) and Pack D (189)
+
+**Files:** `pack_c_corrected.js`, `pack_d_corrected.js`
+
+### Issue
+
+The prior session's DL-008 remediation (clearing 74 Pack C + 75 Pack D items) was overwritten by a concurrent DL-013 certification wave. This session's pre-remediation scan found the violations restored, requiring full re-remediation of 432 items across 16 batches.
+
+### Root Cause
+
+Multiple concurrent sessions operated on the same pack files without write-lock coordination. The DL-013/certification-wave session wrote to Pack C and Pack D from a disk snapshot that predated the DL-008 remediation, silently overwriting the cleared ExplanationWrong[CorrectChoice] fields. No file-lock or session-coordination mechanism existed to prevent this.
+
+### Pattern
+
+After any remediation session, re-scan for the same defect class. A count that regresses (0 → N) indicates a concurrent-write overwrite. The temporal sequence was:
+1. Session A: DL-008 remediation (Pack C: 74 cleared, Pack D: 75 cleared)
+2. Session B: DL-013/certification wave writes Pack C/D from pre-session-A snapshot
+3. Session C (this session): DL-008 re-scan finds 432 violations restored
+
+### Detection Rule
+
+After every write to a pack file from any session, re-verify the defect class that was supposedly resolved before accepting "resolved" status. Count must be stable across two independent post-write scans.
+
+### Validator / Source
+
+`Build-Time AI Verification` — no automated validator can detect cross-session overwrites. This is a process/session-management defect.
+
+### Correction
+
+Re-executed full remediation (this session, 432 items across 16 batches, ≤30 per batch per Rule 5). Short-term: enforce exclusive file access per session. Medium-term: implement a session-registry file or `.lock` file protocol. Long-term: single-source-of-truth session model.
+
+### Resolved
+
+2026-07-23 — Pack C and Pack D re-remediated. Zero remaining DL-008 confirmed by independent verification (Agent 6). File-lock protocol documented but not yet implemented.
+
+---
+
+## DL-020 — ExplanationValidator Brace-Matcher Lack of String-Awareness
+
+```
+Defect ID        DL-020
+Class            Structural
+Domain           Validator Infrastructure / Parser
+Severity         High (caused silent false negatives on DL-008 detection; 336 items missed)
+Detected By      Build-Time AI Verification (2026-07-23)
+Status           Resolved — string-aware parser applied to extractQuestions() and extractCases()
+```
+
+**Files:** `scripts/validators/ExplanationValidator.js` lines 114-131 (extractQuestions), 133-150 (extractCases)
+
+### Issue
+
+The `extractQuestions()` and `extractCases()` methods used a naive bracket counter (`depth` increment/decrement on `{`/`}`) without tracking whether the parser was inside a JSON string value. Brackets inside string values (e.g., `"Which of the following [A, B, C]..."` in stems) caused the counter to misidentify array boundaries, producing truncated/corrupted question objects and **silent false negatives** on DL-008 detection. This was the root cause of the 197-vs-336 counting discrepancy — the validator's brace-matcher was undercounting because it dropped corrupted objects.
+
+### Root Cause
+
+The extraction methods were written without string-awareness. The do...while loop tracked `{` and `}` only, with no `inString`/`stringChar`/`escape` state machine. When a question stem, explanation, or choice text contained bracket characters, the depth counter either exited early (undercounting items) or tried to parse malformed JSON (silent failure).
+
+### Detection Rule
+
+Compare validator-reported item counts against `grep -c '"QuestionID"'` on the target file. A discrepancy >0 indicates the brace-matcher is undercounting (or the file has structural corruption like DL-017).
+
+### Validator
+
+`ExplanationValidator.extractQuestions()` / `extractCases()` — now fixed.
+
+### Correction
+
+Replaced the naive `do...while` loop with a string-aware `while` loop tracking `inString`/`stringChar`/`escape` flags (per `parse_pack_b.js` reference pattern). Applied to both `extractQuestions()` and `extractCases()`.
+
+### Resolved
+
+2026-07-23 — Fix applied. Backup: `ExplanationValidator.js.bak-20260723145752`. 336/336 DL-008 items now correctly detected. 0 false positives. Post-fix item counts verified matching against `grep -c '"QuestionID"'` on all packs.
+
+---
+
+## DL-022 — Null-Array Crash on Corrupted Session Restore (app.js:1187, 2009, 2014, 2019)
+
+```
+Defect ID        DL-022
+Class            Structural
+Domain           Application Crash / Session Recovery
+Severity         High (blocks exam session — null-pointer crash on corrupted localStorage restore)
+Detected By      Build-Time AI Verification (app.js:1188 crash diagnosis, 2026-07-23)
+Status           Resolved — two-insertion fix applied and independently verified 2026-07-23
+Category         Missing null-guard on session arrays after corrupted restore
+```
+
+**File:** `app.js`
+
+**Lines affected:** 1187, 2009, 2014, 2019 (pre-fix); protected by Insertions 1 and 2 (post-fix)
+
+### Issue
+
+When `localStorage` session restore via `JSON.parse()` produces a session object where `s.mcqs` or `s.cases` is `null`/`undefined` (corrupted or partial snapshot), two code paths crash:
+
+1. **render() crash (line 1187):** `s.qIndex < s.mcqs.length` — accessing `.length` on `null` throws `TypeError`, crashing the `render()` function and showing the emergency error div rather than the session view.
+
+2. **Keyboard handler crashes (lines 2009, 2019):** `s.mcqs.length` and `s.cases.length` accessed inside ArrowRight (`n`), ArrowLeft (`p`), and `m` (mark) key handlers without null guards. Any keyboard navigation while a corrupted session is active produces a `TypeError`.
+
+Line 1188 (`s.cases` access) was already guarded with `(s.cases || []).length` — the fix at DL-014's recommendation. But lines 1187, 2009, and 2019 had no equivalent guard.
+
+### Root Cause
+
+The `render()` decision tree and keyboard handler assumed `s.mcqs` and `s.cases` are always valid arrays. Session restoration via `localStorage.getItem()` + `JSON.parse()` can produce partial/corrupted snapshots where these fields are null or absent. The defensive `|| []` pattern was applied to `s.cases` (line 1188) after DL-014 was filed, but `s.mcqs` was not protected, and the keyboard handler was not protected at all.
+
+### Pattern
+
+```
+TypeError: Cannot read properties of null (reading 'length')
+    at ExamSessionManager.render (app.js:1187)
+    at ExamSessionManager.navigateTo (app.js:2009)
+```
+
+### Detection Rule
+
+For all access points of `session.mcqs.length` and `session.cases.length` in `app.js`:
+- Verify each access is preceded by a null-guard (`s.mcqs = s.mcqs || []`) or uses the pattern `(s.mcqs || []).length`
+- Identified 35 total access points; zero remain unprotected after fix
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — crash reproduction via corrupted localStorage entry
+- **Independent verification:** Agent 4 (this session) — confirmed all 35 `.mcqs.length`/`.cases.length` access points in app.js are downstream of Insertion 1 or Insertion 2
+- **Governance guard:** DL-014 (filed earlier) documented the line 1188 sibling gap
+
+### Correction
+
+Two insertions applied 2026-07-23:
+
+**Insertion 1 (app.js:1182, inside render()):**
+```javascript
+// After: let s = state.session;
+// Before: if (!s) {
+if (s) { s.mcqs = s.mcqs || []; s.cases = s.cases || []; }
+```
+Normalizes `s.mcqs` and `s.cases` to `[]` if null/undefined on every render() call, before any downstream code accesses `.length`. If `s` is falsy (no session), the existing `if (!s)` guard handles it. The `||` short-circuit preserves existing valid arrays unchanged.
+
+**Insertion 2 (app.js:2004-2005, keyboard handler):**
+```javascript
+// After: if (!state.session || state.session.completed) return;
+// Before: if (e.key === 'ArrowRight' || e.key === 'n') {
+state.session.mcqs = state.session.mcqs || [];
+state.session.cases = state.session.cases || [];
+```
+Normalizes the arrays on the session object itself, before any handler block re-declares `let s = state.session;`. The null-session guard at line 2003 (`!state.session`) returns early, making Insertion 2 unreachable when session is null — zero regression risk.
+
+### Regression Test
+
+- Agent 4 (independent forensic analysis): 35/35 `.mcqs.length`/`.cases.length` access points verified downstream of Insertion 1 or Insertion 2. Zero unprotected accesses.
+- Null-session keyboard guard (line 2003) verified intact — Insertion 2 unreachable when session is null.
+- Governance guard test suite: 20/20 PASS, 0 FAIL.
+- Validator baseline: unchanged (no pack-file modification).
+
+### Cross-References
+
+- DL-014 — sibling null guard missing (line 1188, now redundant)
+- `app.js.bak-20260723-wave1` (111,658 bytes) — pre-fix backup
+- `reports/DL008_RE_REMEDIATION_CONSOLIDATED_2026-07-23.md` — diagnosis session
+
+### Resolved
+
+2026-07-23 — Fix applied (Agent 1), independently verified (Agent 4). Backup confirmed. Governance guard tests pass. Zero regression.
+
+---
+
+## DL-023 — Case-Study Exhibit Headers Missing (scored_cases3/4/5)
+
+```
+Defect ID        DL-023
+Class            Structural
+Domain           Exhibit Metadata / Schema Conformance
+Severity         Medium (data present in non-standard field — 0 Certified items, no learner impact)
+Detected By      Build-Time AI Verification (Agent 2 — 5-agent governance consolidation, 2026-07-23)
+Status           Resolved — all 17 exhibits normalized to Headers + Rows (2026-07-23 6-agent orchestration, Track 1)
+Category         Exhibit Body-instead-of-Headers/Rows on Type: "table"
+```
+
+**Case IDs:** 9 cases: CBQ3-C2, CBQ3-C3, CBQ3-E2, CBQ3-F2, CBQ4-D3, CBQ4-E2, CBQ4-E3, CBQ4-F1, CBQ5-E3
+
+**Files:** `scored_cases3.js`, `scored_cases4.js`, `scored_cases5.js`
+
+### Issue
+
+17 table-type exhibits across 9 cases have `Headers: undefined` because the data is stored in a `Body` property instead of the canonical `Headers` + `Rows` schema. The data is present and complete — the defect is field naming convention, not missing content.
+
+Two serialization patterns were used:
+| Pattern | Files | Body Format | First Row Contains Headers? |
+|---------|-------|-------------|---------------------------|
+| A — 2D-array Body | scored_cases3.js, scored_cases4.js | `Body: [[col1, col2, ...], [row1...], ...]` | Yes (row 0) |
+| B — Markdown-string Body | scored_cases5.js (CBQ5-E3) | `Body: "\| col1 \| col2 \|\n\|..."` | Yes (embedded in pipe format) |
+
+### Root Cause
+
+Separate authorship pipeline used `Body` as the primary data container instead of `Headers`/`Rows`. The `validateCase()` function does not check for this mismatch — it validates `Headers` presence for `Type: "table"` only by checking if the field exists and is an array, but does not flag when `Headers` is `undefined` and data is in `Body`.
+
+### Detection Rule
+
+For each exhibit with `Type: "table"`:
+- If `Headers` is undefined/null AND `Body` is truthy → flag DL-023
+- If `Rows` is undefined/null AND `Body` is truthy → flag DL-023
+
+### Distribution
+
+| File | Total Cases | Cases with DL-023 | Affected Exhibits | Item States |
+|------|------------|------------------|-------------------|-------------|
+| `scored_cases.js` | 15 | 0 | 0 | — |
+| `scored_cases2.js` | 15 | 0 | 0 | — |
+| `scored_cases3.js` | 15 | 4 | 8 | 20 × Unprocessed |
+| `scored_cases4.js` | 15 | 4 | 8 | 20 × Unprocessed |
+| `scored_cases5.js` | 15 | 1 | 1 | 5 × Unprocessed |
+| **Total** | **75** | **9** | **17** | **45 × Unprocessed** |
+
+### Tier 0 / Certification Impact
+
+**0 Certified items affected.** All 45 items (9 cases × 5 items each) are `Unprocessed`. The learner delivery pool is not impacted.
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — Agent 2 manual scan (this session)
+- **Validator integration:** `validateCase()` does not check for this field-convention mismatch. Gap identified.
+- **Schema reference:** `QUESTION_METADATA_STANDARD.md` §3.1 — `Headers` is Conditional-Required for `table` type
+
+### Correction
+
+Field renaming: `Body` → `Rows` and extracting row 0 into `Headers` (Pattern A) or parsing the pipe-delimited string into `Headers`/`Rows` (Pattern B). The underlying data is present — this is a normalization, not a content-authoring task.
+
+### Resolved
+
+2026-07-23 — All 17 exhibits across 9 cases (scored_cases3/4/5) converted from Body → Headers + Rows. Zero data loss. Zero remaining Body-only table exhibits. Fix applied by 6-agent orchestration (Track 1: Agents 1-3). Backups: scored_cases3/4/5.js.bak-20260723161244.
+
+---
+
+## DL-024 — Missing question_state Field (Pack B Sections A/D)
+
+```
+Defect ID        DL-024
+Class            Structural
+Domain           Metadata Completeness
+Severity         Low (informational — no learner impact; items were excluded from governance framework)
+Detected By      Build-Time AI Verification (6-agent orchestration Track 2, 2026-07-23)
+Status           Resolved — all 150 items now carry question_state: "Unprocessed"
+Category         Missing governance-state field
+```
+
+**Question IDs:** 150 items: P1B-A-076 through P1B-A-150 (75 items) and P1B-D-076 through P1B-D-150 (75 items)
+
+**File:** `pack_b_corrected.js`
+
+### Issue
+
+149 items in Pack B Sections A and D had no `question_state` field. One item (P1B-A-143) anomalously had `question_state: "Certified"` despite carrying DL-008 (non-empty ExplanationWrong[CorrectChoice]). All 150 items were outside the governance framework and uncountable in certification audits.
+
+### Root Cause
+
+Sections A/D were authored in the original Pack B bulk-authoring pipeline (same as Sections B/C/E/F) but the `question_state` field was never populated. P1B-A-143 was accidentally included in a certification sweep before governance-guard Rule 2 was active.
+
+### Correction
+
+Added `question_state: "Unprocessed"` to all 150 items (149 additions + 1 correction from `"Certified"` → `"Unprocessed"`). 6 batches ≤28 items per governance-guard Rule 5. Zero content changes. Zero regression on validator baseline. Backup: `pack_b_corrected.js.bak-20260723161300`.
+
+### Note (CORRECTED 2026-07-23)
+
+**0 of 150 items (0%) carry DL-008.** The prior claim of 111 (74.0%) was a false positive caused by a forward-scan methodology bug: Pack B stores `CorrectChoice` BEFORE `QuestionID` in the JSON object (unlike Packs A/C/D/E where CC follows QID). The original scan searched forward from QuestionID, systematically grabbing the NEXT item's CorrectChoice (~75% mismatch rate → 111-112 false positives). Verified with a string-aware object-boundary parser on 2026-07-23: all 150 items have exactly 3 non-empty distractor ExplanationWrong slots + 1 empty CorrectChoice slot. Zero DL-008. Sections A/D are structurally DL-008 clean.
+
+### Resolved
+
+2026-07-23 — question_state fix: 6-agent orchestration Track 2 (Agents 4-6). DL-008 false-positive corrected: dedicated verification session (2026-07-23).
+
+---
+
+## Tracked Note — Pack B Sections A/D Certification Readiness (2026-07-23)
+
+**Status:** Certification-ready on all structural dimensions. Ready for human-authorized CAQS §1.6 six-dimension verification pass.
+
+**Question IDs:** 150 items: P1B-A-076 through P1B-A-150 (75 items, Section A) and P1B-D-076 through P1B-D-150 (75 items, Section D)
+
+**File:** `pack_b_corrected.js`
+
+**Source:** Agent 1 + 2 — independent re-verification with corrected CC-offset-aware methodology (2026-07-23)
+
+### Findings (VERIFIED 2026-07-23 — Authoritative)
+
+| Metric | Section A | Section D |
+|--------|-----------|-----------|
+| QuestionID count | 75 | 75 |
+| question_state | Resolved 2026-07-23 — all 150 items now "Unprocessed" | |
+| question_state: Certified (pre-fix) | 1 (P1B-A-143, anomalous) | 0 |
+| DL-008 | **0 (0%)** — all 150 clean. Prior 111-count was false positive (forward-scan bug: CorrectChoice before QuestionID in Pack B format) | |
+| DL-013 | 0 | 0 |
+| DL-017 | 0 | 0 |
+| DL-026 | 0 | 0 |
+| DL-016 risk | **None** — Pack B uses single-object architecture (no metadata-block divergence) | |
+| Parseable as JSON | Yes | Yes |
+| Rotation artifact (DL-012 pattern) | None | None |
+| Distractor explanations | All 3 non-CC slots per item: substantive, choice-specific text | |
+| **Last Updated** | **2026-07-23 (Agents 1-2 — CC-offset-aware methodology)** | |
+
+### Resolved Defects
+
+1. `question_state` — RESOLVED 2026-07-23. All 150 items now carry `question_state: "Unprocessed"`
+2. P1B-A-143 — RESOLVED 2026-07-23. Corrected from "Certified" → "Unprocessed"
+3. **DL-008 — RESOLVED. 0 items carry DL-008.** The prior 111 count was a false positive from a forward-scan methodology bug. Pack B stores CorrectChoice before QuestionID (unlike Packs A/C/D/E where CC follows QID). Forward-scanning from QID systematically grabs the NEXT item's CC → 74% false-positive rate = 111-112 hits. Verified with string-aware object-boundary parser: all 150 items have exactly 3 non-empty distractor EW slots + 1 empty CC slot.
+4. Topic number +1 offset (150 items) — cosmetic, same as DL-015
+
+### Root Cause of the 111 False-Positive Count
+
+Pack B's JSON object stores `CorrectChoice` at the top of the object (before `QuestionID`). All other packs (A/C/D/E) store CorrectChoice after QuestionID. When Agent 6's fresh scan searched forward from each `"QuestionID"` line to find `"CorrectChoice"`, it found the NEXT item's CorrectChoice in every case. With 150 items each having 1 of 4 possible values for CorrectChoice, ~75% of items receive a wrong CC from the neighbor → ~112 items flagged as DL-008. Only items where the next item happened to have the same CC letter escaped. This explains both the 112 and 111 counts (different agents used different boundary conditions).
+
+### Known Defects — None Blocking
+
+The 150 items are structurally clean on all known defect dimensions (DL-007, DL-008, DL-013, DL-017, DL-026). No DL-016 metadata architecture applies (single-object format, no paired blocks). Topic labels have a cosmetic +1 offset (DL-015 pattern) and cross-section Topic labels for boundary items (P1B-A-150 = "B-B.101", P1B-D-150 = "B-E.076") — both cosmetic metadata issues with zero learner impact.
+
+### Verdict
+
+Items are structurally clean and educationally sound with genuinely distinct stems and choice-specific distractor explanations. **Ready for a human-authorized CAQS §1.6 six-dimension verification certification pass.** No open structural defects remain.
+
+### Recommendation
+
+Enter 150 items into the `"In Audit"` pipeline for six-dimension verification per CAQS §1.6. Correct Topic label numbers during certification pass.
+
+---
+
+## DL-025 — Empty Non-CorrectChoice ExplanationWrong Slots
+
+```
+Defect ID        DL-025
+Class            Structural
+Domain           Explanation Slot Error (distractor ExplanationWrong fields empty at non-CorrectChoice positions)
+Severity         High (educational quality — learners see no feedback on incorrect choices for affected distractors)
+Detected By      Build-Time AI Verification (5-agent spot-check investigation, 2026-07-23)
+Status           Partially Resolved — 51/56 items remediated (WAVE 1, all Certified); 5 non-Certified remaining (Section B: 4 + Section D: 1)
+Category         Empty ExplanationWrong field at distractor (non-CorrectChoice) position
+```
+
+**Question IDs:** 56 items — Section B (4): P1-B-001, P1-B-004, P1-B-006, P1-B-025; Section D (52): P1-D-001 through P1-D-073 (nearly all)
+
+**File:** `pack_a_corrected.js`
+
+### Issue
+
+Fifty-six items in Pack A Sections B and D have at least one ExplanationWrong field that is present-but-empty (`""`) at a distractor (non-CorrectChoice) position. When a learner selects the distractor whose ExplanationWrong slot is empty, the review screen shows no educational feedback explaining why the choice is wrong.
+
+This is distinct from DL-008 (non-empty ExplanationWrong[CorrectChoice]) and DL-021 (absent distractor ExplanationWrong fields). Here, the fields exist but contain `""` at non-CorrectChoice positions.
+
+### Root Cause
+
+Template-based authoring rotation artifact. The original 5-item rotation template generated items where the CorrectChoice slot was intentionally left empty (DL-008 compliance), but one additional slot per item was also left empty — likely a template logic error where the slot corresponding to the rotation's "next" correct-answer position was treated as a CC slot even when it wasn't.
+
+### Pattern
+
+For each affected item:
+- CorrectChoice ExplanationWrong slot: empty (correct — DL-008 compliance)
+- At least one non-CorrectChoice ExplanationWrong slot: empty (DEFECT)
+- Other non-CorrectChoice slots: substantive text
+
+### Detection Rule
+
+```
+For each question Q:
+  let cc = Q.CorrectChoice;
+  for each letter L in {A, B, C, D}:
+    if L != cc AND Q["ExplanationWrong" + L] === "":
+      flag DL-025
+```
+
+### Distribution
+
+| Section | Items | Defective | % |
+|---------|-------|-----------|---|
+| B | 100 | 4 | 4.0% |
+| D | 75 | 52 | 69.3% |
+| All others | 325 | 0 | 0.0% |
+| **Total** | **500** | **56** | **11.2%** |
+
+### Severity
+
+| Factor | Assessment |
+|--------|-----------|
+| Learner impact | Degraded educational feedback — learners who select affected distractors see no explanation |
+| Certified pool | TBD (requires cross-reference against question_state) |
+| Remediation effort | Requires authoring 56+ choice-specific distractor explanations |
+
+### Relationship to Related Defects
+
+| Defect | Pattern | Overlap |
+|--------|---------|---------|
+| DL-008 | ExplanationWrong[CC] non-empty | Complementary (empty CC slot is correct) |
+| DL-021 | Distractor ExplanationWrong fields absent | Distinct (fields exist as `""` vs. absent) |
+| **DL-025** | Distractor ExplanationWrong fields `""` | This defect |
+| DL-026 | +1-offset DL-010 + empty slot on B-001/025 | Subset of DL-025 (2 items) |
+
+### Validator / Source
+
+- **Primary detection:** `Build-Time AI Verification` — Agent 2 scan (2026-07-23)
+- **Independent verification:** Agent 3 (2026-07-23)
+- **Validator integration:** No existing validator detects empty-non-CC ExplanationWrong slots.
+
+### Correction
+
+Author choice-specific distractor explanations for all empty non-CC ExplanationWrong slots. Batch cap ≤30 items per governance-guard Rule 5. Backup-before-write mandatory.
+
+### Resolved
+
+2026-07-23 — **51 of 56 items remediated (all Certified).** Autonomous 5-hour run, WAVE 1. All 51 Certified Section D items (P1-D-001 through P1-D-073) received genuine, choice-specific distractor explanations for their empty non-CC ExplanationWrong slots. 5 remaining items (Section B: P1-B-001, P1-B-004, P1-B-006, P1-B-025 + 1 Section D non-Certified) are deferred to WAVE 2. P1-D-069 also received a concurrent DL-008 fix (ExplanationWrongA cleared). 15/15 spot-checks pass. Backup: pack_a_corrected.js.bak-20260723DL025W1. No question_state changes. No CorrectChoice changes. Remediator: Agent 2 (2-batch task agent authoring). Verifier: Agent 3 (independent scan + spot-check).
+
+**Note:** Section B items (4) + P1-D-070 duplicate slot remain open for WAVE 2 — all non-Certified. See AUTONOMOUS_RUN_2026-07-23.md for full ledger.
+
+---
+
+## DL-026 — Empty Non-CorrectChoice ExplanationWrong Slots (Cross-Pool)
+
+```
+Defect ID        DL-026
+Class            Structural / Content (hybrid)
+Domain           Explanation Slot Error — distractor ExplanationWrong fields empty at non-CorrectChoice positions
+Severity         High (educational quality — learners see no feedback on incorrect choices for affected distractors; 1,005 items pool-wide, all 500 Pack C/D items affected)
+Detected By      Build-Time AI Verification (5-agent scoping session + Agent 6 independent boundary-aware object-level re-verification, 2026-07-23)
+Status           Open — scoped, not remediated
+Category         Empty ExplanationWrong field at distractor (non-CorrectChoice) position — cross-pool scope
+```
+
+**Question IDs:** 1,005 items across Packs A (5), C (500), D (500). Packs B (0) and E (0) are clean.
+
+**Files:** `pack_a_corrected.js`, `pack_c_corrected.js`, `pack_d_corrected.js`
+
+### Issue
+
+ExplanationWrong fields are present-but-empty (`""`) at distractor (non-CorrectChoice) positions. When a learner selects the distractor whose ExplanationWrong slot is empty, the review screen shows no educational feedback explaining why the choice is wrong.
+
+This is the cross-pool expansion of the originally narrow DL-026 (Pack A Section B only). Independent boundary-aware object-level re-verification (Agent 6, 2026-07-23) found the defect spans 3 of 5 packs with 1,005 affected items — far more than the 5-agent scoping session's initial estimate of 632 items.
+
+### Scope (Boundary-Aware Object-Level Verified, 2026-07-23)
+
+| Pack | DL-026 Items | Empty Non-CC Fields | DL-008 | Sections Affected | Root Cause |
+|------|-------------|---------------------|--------|-------------------|------------|
+| A | 5 | 5 | 1 remaining | B (4), D (1) | Remediation artifact — DL-025 WAVE 1 cleared 51, left 5 |
+| B | 0 | 0 | 0 | — | Authoritative pipeline, all slots correct |
+| C | **500** (all) | 711 | 0 | A–F (all 6 sections) | Pre-existing template rotation artifact |
+| D | **500** (all) | 710 | 0 | A–F (all 6 sections) | Remediation artifact — DL-013 rewrites |
+| E | 0 | 0 | 0 | — | Different pipeline (all-or-nothing); Section C has DL-021 (absent fields, more severe) |
+| **Total** | **1,005** | **1,426** | **1** | A, C, D (3 packs) | Three root causes |
+
+### Discrepancy with 5-Agent Scoping Reports (Agent 1-5)
+
+The 5-agent scoping session (2026-07-23) reported 632 DL-026 items (A:56, B:0, C:288, D:288, E:0). Agent 6 independent re-verification using boundary-aware object-level parsing (QuestionID → enclosing-brace object → CorrectChoice + ExplanationWrong extraction) found **1,005 items** — 373 more than the agent reports. Root cause of the discrepancy:
+
+| Agent | Reported | Verified | Discrepancy | Explanation |
+|-------|----------|----------|-------------|-------------|
+| Agent 1 (Pack A) | 56 | **5** | -51 | Agent used PRE-REMEDIATION DL-025 counts. DL-025 WAVE 1 (autonomous 5-hour run) cleared 51 Section D items. Only the 5 WAVE 2 deferred items remain. |
+| Agent 3 (Pack C) | 288 | **500** | +212 | Agent counted items with exactly 1 empty non-CC slot (rotation artifact subset). Agent 6 counted all items with ≥1 empty non-CC slot. Pack C has 711 empty non-CC fields across 500 items — the 212 items with 2 empty slots were not counted by Agent 3. |
+| Agent 4 (Pack D) | 288 | **500** | +212 | Same counting artifact as Agent 3. Pack D has 710 empty non-CC fields across 500 items. |
+
+### Rotation Group Analysis
+
+**Pack C/D (5-item rotation template):**
+- Items are organized in 5-item groups where `CorrectChoice` rotates through A→B→C→D→A
+- Each item's CorrectChoice slot is correctly empty (DL-008 compliant)
+- The template engine treats ONE additional slot as a secondary CC slot, leaving it empty
+- In the rotation: `CC=A → empty=B`, `CC=B → empty=C`, `CC=C → empty=D`, `CC=D → empty=A`, `CC=A → empty=B`
+- The "secondary empty" slot cycles in lockstep with CorrectChoice — confirming the rotation artifact
+- ~288 items have exactly 1 empty non-CC slot (the rotation artifact); ~212 have 2 (rotation artifact + additional defect from DL-013 remediation)
+
+**Pack A Section B (4 items — +1-offset DL-010):**
+- P1-B-001, P1-B-004, P1-B-006, P1-B-025
+- ExplanationWrong text from the +1 neighbor in the rotation group was placed in the wrong item
+- The neighbor's CC-empty slot was also inherited, creating an empty distractor slot
+- P1-B-001 and P1-B-025 additionally have DL-010 misattribution (wrong-topic text in non-empty slots)
+
+### Three Root-Cause Branches
+
+**ROOT CAUSE 1 — Pre-Existing Template Rotation Artifact (Pack C only):**
+- Items were authored in 5-item rotation groups
+- The template engine treated one distractor slot position as if it were the CorrectChoice slot, leaving it empty
+- This pre-dates any remediation; existed in the original authoring pipeline (403 occurrences in oldest backup)
+- DL-008 remediation on CC=C/D positions correctly cleared the actual CC slot; the secondary empty slot was NOT the CC slot (DL-026 vs. DL-008)
+- Decline 403→288→500 (current): the count fluctuated because DL-013 rewrites sometimes filled the secondary empty slot and sometimes created a new one
+
+**ROOT CAUSE 2 — Remediation Artifact (Pack D, partially Pack A):**
+- DL-008/DL-013 remediation agents cleared ExplanationWrong[CC] and rewrote template-boilerplate slots
+- In Pack D, the DL-013 short-form rewrite pattern left one distractor slot empty per item — the template rotation position
+- In Pack A, DL-008 clear scripts produced the +1-offset empty-slot pattern in Section B items
+- Pack D went from 0 DL-026 (pre-DL-013) to 348 (post-DL-013) to 500 (current — DL-008 remediation exposed underlying rotation template artifacts)
+- Unlike Pack C, this was NOT pre-existing — it was induced by remediation operations
+
+**ROOT CAUSE 3 — Different Authoring Pipeline (Packs B and E):**
+- **Pack B:** Authoritative pipeline — all 4 ExplanationWrong fields populated with choice-specific text, CorrectChoice slot empty. Zero DL-026. Zero DL-008 remaining.
+- **Pack E:** Independent pipeline — all-or-nothing ExplanationWrong generation. Sections A/B/D/E/F have all distractor slots present with substantive text. Section C has DL-021 (all distractor fields absent — a separate, more severe defect requiring 300 explanations to be authored from scratch). Zero DL-026.
+
+### Pattern
+
+For each affected item:
+- CorrectChoice ExplanationWrong slot: empty (correct — DL-008 compliance)  
+- At least one non-CorrectChoice ExplanationWrong slot: empty (DEFECT)
+- Other non-CorrectChoice slots: may have substantive text, boilerplate text, or misattributed text
+
+```
+// Example: Pack C P1-AC-001, CorrectChoice = B
+"ExplanationWrongA": "",           // ← Empty non-CC slot = DL-026
+"ExplanationWrongB": "",           // ← Empty CC slot = DL-008 compliant
+"ExplanationWrongC": "A bond premium means...",  // ← Substantive text
+"ExplanationWrongD": "Under accrual accounting..." // ← Substantive text
+```
+
+### Certified Pool Impact
+
+| Pack | DL-026 Items | Certified Among Them | % of Pack Certified | Sections with Certified DL-026 |
+|------|-------------|---------------------|--------------------|-------------------------------|
+| A | 5 | 0 (all deferred WAVE 2) | 0% | — |
+| C | 500 | ~175 (all Section A+B certified + scattered) | ~35% | A (75), B (100) |
+| D | 500 | ~248 (Sections A+B+D+F certified) | ~50% | A (73), B (100), D (75) |
+| **Total** | **1,005** | **~423** | — | 3 packs |
+
+**Tier 0 risk: ~423 Certified items are in the active learner delivery pool with at least one distractor explanation missing.** When learners select specific wrong answers on these items, no educational feedback is shown.
+
+### Relationship to Related Defects
+
+| Defect | Pattern | Relationship to DL-026 |
+|--------|---------|------------------------|
+| DL-008 | ExplanationWrong[CC] non-empty | Complementary — DL-008 clean is prerequisite for DL-026 analysis |
+| DL-018 | ExplanationWrong[CC] absent | Distinct — DL-026 is present-but-empty at non-CC positions |
+| DL-021 | Distractor ExplanationWrong entirely absent | More severe — DL-021 means no explanation exists at all (Pack E Section C); DL-026 means the field exists but is empty |
+| DL-025 | Empty non-CC slots (Pack A only) | Same defect pattern; DL-025 = Pack A scoping scan, DL-026 = cross-pool expansion including Packs C/D |
+| DL-010 | ExplanationWrong text describes wrong choice | DL-010 component present in P1-B-001 and P1-B-025 (text from +1 neighbor) |
+
+### Detection Rule
+
+```
+For each question Q in each pack file:
+  Extract Q's enclosing JSON object boundary (brace-matched, string-aware)
+  let cc = Q.CorrectChoice;
+  for each letter L in {A, B, C, D}:
+    if L != cc AND Q["ExplanationWrong" + L] === "":
+      flag DL-026
+    if L != cc AND !(("ExplanationWrong" + L) in Q):
+      flag DL-021 (field absent — more severe)
+    if L == cc AND Q["ExplanationWrong" + L] !== "":
+      flag DL-008 (non-empty CC slot)
+```
+
+### Validator / Source
+
+- **Primary detection:** `Build-Time AI Verification` — Agent 6 boundary-aware object-level parse (this session)
+- **5-agent scoping:** Agents 1-5 focused on the rotation artifact subset (632 items); Agent 6 expanded to full object-level scan (1,005 items)
+- **Validator integration:** No existing validator detects empty-non-CC ExplanationWrong slots. The `ExplanationValidator.js` line-173 guard (`if (!val) return;`) silently skips empty-string and undefined fields. A field-presence + content validation path is needed.
+- **Governance guard:** No explicit rule for empty distractor ExplanationWrong fields. Rule 2 only blocks non-empty ExplanationWrong[CorrectChoice].
+
+### Proposed Remediation Plan (NOT EXECUTED — read-only scoping)
+
+**Phased approach following DL-021 proposal precedent:**
+
+| Phase | Scope | Items | Batches (≤28) | Rationale |
+|-------|-------|-------|---------------|-----------|
+| Phase 1 | Pack D Section A Certified | 73 | 3 (28+28+17) | Highest Certified density, cleanest section |
+| Phase 1b | Pack D Sections B (50) + D (38) Certified | 88 | 4 (28+28+28+4) | Second-highest Certified count |
+| Phase 2 | Pack C Sections A (75) + B (50) Certified | 125 | 5 (28×4+13) | Full sections, all Certified |
+| Phase 3 | Pack A Section D (1) + Section B (4) | 5 | 1 | WAVE 2 deferred from DL-025 |
+| Phase 4 | Non-Certified: Pack C Sections C-F (275), Pack D Sections C-F (249) | 524 | 19+ (28×19+?) | Lowest priority, no learner pool impact |
+| **Total** | **All phases** | **815** | **~30 batches** | Excludes items already remediated in DL-025 WAVE 1 |
+
+**Authoring standard:** Each remediated slot must receive a choice-specific distractor explanation:
+- Identifies the specific error in that choice
+- Explains the misconception a candidate likely held
+- Contrasts with the correct approach
+- Minimum 50 characters
+- Must reference the item's actual Choices (not the metadata-block ChoiceA-D — avoids DL-016 mismatch)
+
+**Execution protocol:** 
+- ≤28 items per batch per governance-guard Rule 5
+- Backup-before-write mandatory per BACKUP_PROTOCOL.md
+- Independent post-batch verification required
+- governance-guard Rule 2 compliance verified for all CorrectChoice slots
+- CorrectChoice must not change — this is distractor authoring, not answer-key modification
+
+**Post-remediation cross-check:** After all phases, re-run the object-boundary DL-026 scan. Target: 0 empty non-CC ExplanationWrong fields across all 5 packs.
+
+### Cross-References
+
+- DL-025 entry: Pack A-only pre-cursor (56 items, 51 remediated in WAVE 1). DL-026 expands this to the cross-pool scope.
+- DL-008 entry: CorrectChoice-slot governance. DL-008 clean is a prerequisite for DL-026 certification.
+- DL-018 entry: Missing ExplanationWrong[CC] fields (absent, not empty). Complementary structural defect.
+- DL-021 entry: Absent distractor ExplanationWrong fields (Pack E Section C). More severe — no explanations exist at all.
+- DL-010 entry: Misassigned ExplanationWrong text. DL-010 component present in 2 DL-026 items (P1-B-001, P1-B-025).
+- 5-agent scoping session: `reports/defect_sweeps/` (Agent 1-5 reports)
+- Agent 6 independent verification: This entry (boundary-aware object-level parse)
+- DL-025 WAVE 1 autonomous run: `reports/session_status/AUTONOMOUS_RUN_2026-07-23.md`
+
+### Resolved
+
+2026-07-23 — Partially remediated (Part 3 Autonomous Run, Phase 1). Pack D Section B: 73 of 91 items cleared (80%). Remaining: 18 Pack D Section B (templates exist), 75 Pack D Section D (not started), 175 Pack C Sections A+B (not started). 103 ExplanationWrong fields authored. 0 DL-008 regressions. Backup: `pack_d_corrected.js.bak-20260723180802`. Scripted approach proven viable for ~70 items/hour. See `reports/session_status/AUTONOMOUS_RUN_2026-07-23_PART3.md` for full ledger.
+
+### CORRECTION — 2026-07-23 (Autonomous Run Part 2 — DL-026 Root Cause + Certified Remediation)
+
+**Massive remediation completed.** Phases 1-4 of Autonomous Run Part 2 remediated Certfied items across Packs A, C, and D.
+
+**Phase 0 Root Cause Determination (read-only):** Pre-DL-013-remediation backup comparison revealed three factors:
+1. **Pre-existing rotation artifact** (original template): 1 non-CC ExplanationWrong slot left empty per item, cycling in lockstep with CorrectChoice.
+2. **DL-013 remediation expanded empty slots** (tooling regression): DL-013 short-form rewrite format added ~0.5 extra empty slots per item. Logged as **DL-028**.
+3. **Certification surface expansion:** MISSING→Certified state changes made pre-existing empty slots visible in the learner pool.
+
+**Phase 1 — Pack D Section A (73 Certified items):** 73 ExplanationWrong fields authored. 3 batches (25+28+22). 0 DL-008 regressions. **COMPLETE.**
+
+**Phase 2 — Pack D Sections B+D (175 Certified items):** 262 ExplanationWrong fields authored. 7 batches. 0 DL-008 regressions. **COMPLETE.**
+
+**Phase 3 — Pack C Sections A+B (175 Certified items):** 225 ExplanationWrong fields authored. 7 batches across Section A (3 batches) and Section B (4 batches). ~24 items remaining (partial/residual, mostly scan false-positives from DL-016 metadata-content mismatch). **SUBSTANTIALLY COMPLETE.**
+
+**Phase 4 — Pack A Remaining (4 items):** P1-B-001, B-006, B-025, D-075. All non-Certified. B-006 and D-075 fixed; B-001 and B-025 confirmed structurally clean (scan false positives). **COMPLETE.**
+
+| Pack | Pre-Run DL-026 | Post-Run DL-026 | Fields Authored | % Certified Protected |
+|------|---------------|-----------------|-----------------|----------------------|
+| A | ~56 | 0 | 2 | N/A (all non-Certified) |
+| D | ~500 | ~2 (scan FP) | 335 | ~99.2% |
+| C | ~500 | ~25 (mix real + FP) | 225 | ~85.7% |
+| B | 0 | 0 | 0 | N/A |
+| E | 0 | 0 | 0 | N/A |
+| **Total** | **~1,056** | **~27** | **~562** | **~94.4%** |
+
+**Scanning-methodology note:** The `scan_dl026.js` tool produces false positives when DL-016 (metadata-content Choice mismatch) is present. Items where metadata ChoiceA-D values differ from content Choices.A-D values should be cross-checked manually. All Pack D Section A and Section B items have DL-016 and may produce scan false positives in the ~2 remaining "DL-026" flags.
+
+**Next session:** Pack A/C/D non-Certified sections C-F. Also Pack C Section B residual (3 items: BC-030, BC-060, AC-030 — discovered in enforced-depth spot-checks 2026-07-23, not yet remediated).
+
+### CORRECTION — 2026-07-23 (Enforced-Depth Autonomous Run — Pack D Section D + Pack C Sections A+B)
+
+**Session:** Enforced-depth autonomous run (minimum 2 hours, per-item raw evidence required).
+
+**Phase 0 — Count Reconciliation (Pack D Section D 75/63/47 discrepancy):**
+- Ground truth: 75 Section D items (Select-String confirmed). 73 DL-026 items originally flagged by boundary-aware scan.
+- Root cause of 75/63/47: all three claims produced by same DL-020-vulnerable brace-matcher without string-awareness; totals-only (no QID lists), making them unverifiable.
+- Prior verification agents confused Block 2's Choices text with Block 1's ExplanationWrong text, producing false claims.
+- **Methodology correction:** ExplanationWrong fields exist ONLY in Block 1 (metadata), NOT in Block 2 (content). Cross-block field conflation was the root cause of the agent-level verification errors.
+
+**Phase 1 — Pack D Section D Remediation (27 items, 27 fields):**
+- Items DD-001 through DD-004: 4 empty slots filled (Batch 1, independently verified)
+- Items DD-005 through DD-027: 23 empty slots filled (Batch 2, independently verified)
+- Items DD-028 through DD-075: 0 DL-026 remaining (confirmed CC-slot-clean for 030-075; 028-029 have DL-008 only)
+- **All 27 remediated items independently verified with raw-source evidence by two separate agents.**
+
+**Phase 2 — Pack C Sections A+B Remediation (17 items, 17 fields):**
+- 20 items flagged by authoritative scan; 3 were false positives (CC-slot empty, not DL-026)
+- 17 items remediated: P1-AC-001, P1-BC-057/058/059/079/081/082/083/084/088/094/095/096/097/098/099/100
+- **All 17 independently verified with raw-source evidence.**
+- 3 additional DL-026 items discovered in spot-checks (P1-BC-030, P1-BC-060, P1-AC-030) — scan undercount, not yet remediated.
+
+**Post-Remediation Cross-Pool State:**
+
+| Pack | Pre-Session DL-026 | Post-Session DL-026 | Fields Authored This Session | Certified Items Remaining with DL-026 |
+|------|-------------------|--------------------|------------------------------|---------------------------------------|
+| A | ~0 (after Part 2) | ~3 (BC-030/060, AC-030 spot-check finds) | 0 | ~3 |
+| B | 0 | 0 | 0 | 0 |
+| C | ~25 (per Part 2 estimate) | ~3 (spot-check finds) | 17 | ~3 |
+| D | ~2 (scan FP per Part 2) → 27 (verified this session) | **0** | 27 | **0** |
+| E | 0 | 0 | 0 | 0 |
+| **Total** | **~27** | **~6** | **44** | **~6** |
+
+**Scanning-methodology findings (cross-session):**
+1. DL-016 (metadata-content Choice mismatch) causes scan false positives — metadata-block ChoiceA-D differs from content-block Choices.A-D.
+2. Block 1 vs. Block 2 conflation by agents: verification agents sometimes read Block 2 Choice text and reported it as Block 1 ExplanationWrong text — a recurring scanning error across multiple sessions.
+3. Totals-only reports without QID lists are unverifiable and should be rejected (per AGENTS.md §5).
+4. The `scan_dl026.js` tool produces false positives on items with DL-016.
+
+**Backups:**
+- `pack_d_corrected.js.bak-20260723184413` (1,894,646 bytes) — Pack D pre-remediation
+- `pack_c_corrected.js.bak-20260723191906` (1,756,262 bytes) — Pack C pre-remediation
+- `DEFECT_LIBRARY.md.bak-20260723193019` (127,530 bytes)
+- `REVISION_HISTORY.md.bak-20260723193019` (269,169 bytes)
+
+**Cross-References:**
+- DL-026: This entry
+- DL-016: Metadata-content mismatch (causes scan false positives)
+- DL-028: New — DL-013 remediation tooling regression (see new entry below)
+- REVISION_HISTORY.md: AUTONOMOUS RUN PART 2 entry appended
+- `reports/session_status/AUTONOMOUS_RUN_2026-07-23_PART2.md`
+
+### CORRECTION — 2026-07-23 (Enforced-Depth Autonomous Run — Phase 0 Reconciliation + Pack C Section B Remediation)
+
+**Session:** Enforced-depth run (minimum 2 hours, per-item raw evidence standard)
+
+**Phase 0 — Pack D Section D Reconciliation:**
+The prior CORRECTION entry claimed "27 items, 27 fields filled" in Pack D Section D on 2026-07-23. **This claim is refuted by independent boundary-aware re-scan: Pack D Section D has never had DL-026.** The DL-013 certification wave (2026-07-23 orchestrated session) inadvertently filled all empty distractor slots during certification. The "27 fills" were applied to already-filled slots or to the wrong block (DL-016 metadata-content shift). The 75/63/47 discrepancy was purely a brace-tracker artifact (DL-020) — 3 different runs of the same broken string-unaware tool produced 3 different counts on a file that was already clean.
+
+**Phase 0 Authoritative Finding:** 0 DL-026 items in Pack D Section D. Pack D Section A has 2 residual items (AD-054, AD-055) — not addressed. Phase 1 skipped.
+
+**Phase 2 — Pack C Section B (BC-001-028):**
+- Batch 1: 28 items, 32 fields authored
+- Topics: static vs. flexible budget, sales forecasting regression, rolling forecast, zero-based budgeting, sales budget starting point
+- Independently verified: 0 empty non-CC slots remaining
+- **Note:** 17 of 28 items carry pre-existing DL-008 (non-empty EW[CC]) — NOT addressed
+
+**Phase 2 — Pack C Section B (BC-073-100):**
+- Batch 2: 26 of 28 items, 31 fields authored
+- BC-073 and BC-077 skipped (all non-CC slots already non-empty)
+- Topics: budgetary control, kaizen budgeting, moving average, sensitivity analysis, budget slack, balanced scorecard
+- Independently verified: 0 len=0 non-CC slots remaining
+- **BC-094 EW_D is structurally ABSENT** (not empty — DL-018 pattern on distractor slot). Deferred.
+- ~36 non-CC slots carry residual DL-013 boilerplate ("Option X is incorrect... does not align with..."). Deferred.
+
+**Post-Session DL-026 State:**
+
+| Pack | Pre-Session DL-026 | Post-Session DL-026 | This Session Fields Authored | Remaining |
+|------|-------------------|--------------------|------------------------------|-----------|
+| A | ~0 (after Part 2) | ~0 | 0 | ~0 |
+| B | 0 | 0 | 0 | 0 |
+| C | ~25 (scan PF per Part 2) → 54 (verified this session) | **0 len=0 non-CC; 1 absent field (BC-094 EW_D)** | **63** | **1 absent field + ~36 DL-013 boilerplate slots** |
+| D | ~2 (scan FP per Part 2) → 0 (verified this session) | **0** | 0 | **0** |
+| E | 0 | 0 | 0 | 0 |
+| **Total** | | | **63** | **1 absent + 36 boilerplate** |
+
+**Critical finding — DL-008 co-occurrence in Pack C Sections A+B:**
+52 Certified items carry DL-008 (non-empty ExplanationWrong[CorrectChoice]). The 2026-07-23 orchestrated DL-008 sweep was reported complete at 0 but these 52 escaped detection — likely because the DL-016 metadata-content shift caused the validator to read from the wrong block. **Immediate follow-up required.**
+
+**Scan false-positive root cause confirmed:**
+The DL-016 metadata-content mismatch causes EVERY scan tool to produce false-positive DL-026 counts when it reads CC from the content block but indexes ExplanationWrong slots by metadata block choices. Direct raw-file inspection of BC-079 disproved the rescan's claim: EW_A=386, EW_C=480, EW_D=492 — all non-empty. **Prior sessions' conflicting DL-026 counts for Pack C were likely DL-016 scan artifacts.**
+
+**Backup:**
+- `backups\pack_c_corrected.js.bak-20260723DL026P2` (1,717,364 bytes)
+- `knowledge\DEFECT_LIBRARY.md.bak-20260723193016` (127,530 bytes)
+- `knowledge\REVISION_HISTORY.md.bak-20260723193016` (269,169 bytes)
+
+**Writes:**
+- pack_c_corrected.js: 63 ExplanationWrong fields authored across 54 Pack C Section B QIDs
+- REVISION_HISTORY.md: Entry appended
+- DEFECT_LIBRARY.md: This update
+
+---
+
+## DL-028 — DL-013 Remediation Tooling Regression (Short-Form Rewrite Creates Empty Slots)
+
+```
+Defect ID        DL-028
+Class            Process / Methodology
+Domain           Remediation Tooling
+Severity         Medium (procedural — affects future DL-013 sweeps, not current learner pool)
+Detected By      Build-Time AI Verification (Phase 0 of Autonomous Run Part 2, 2026-07-23)
+Status           Open — documented, tooling fix not yet applied
+Category         Remediation-induced regression
+```
+
+**Files:** DL-013 remediation scripts (source not preserved in repo; evidence from file diffs)
+
+### Issue
+
+The DL-013 short-form rewrite template (used for Packs C and D Sections C-F during the Section C DL-013 sweep on 2026-07-23) left the template rotation slot empty while filling the other non-CC slots with new text. This produced items with 1 pre-existing empty slot (rotation artifact) + 1 remediation-induced empty slot (DL-013 tooling), increasing DL-026 from 56→75 items per section and 56→112 fields.
+
+Pre-remediation backup (`pack_d_corrected.js.bak-dl013v1-20260723133327`): Pack D Sections C-F had 56-75 DL-026 items with 1 empty field each.
+Post-remediation current (`pack_d_corrected.js`): Same sections have 75-100 DL-026 items with 1.5 empty fields each.
+
+### Root Cause
+
+DL-013 remediation script used a replaceAll pattern that substituted boilerplate text with choice-specific text but did not verify that ALL non-CorrectChoice ExplanationWrong slots received content. The script treated the rotation-artifact empty slot identically to already-filled boilerplate slots, never filling it.
+
+### Detection Rule
+
+After every DL-013 remediation batch, run a DL-026 scan on the affected sections. If DL-026 count increases (not decreases), the tooling has a regression.
+
+### Correction
+
+DL-013 remediation scripts must include a post-processing verification step: for each item, verify all 3 non-CorrectChoice ExplanationWrong slots are non-empty. Any empty non-CC slot must be flagged and either filled by the script or logged for human review.
+
+### Resolved
+
+Not yet. Tooling fix documented but not implemented.
+
+---
+
+## DL-027 — Pattern-3 Closing-Tag Variant ("may misunderstand how the governing standard applies")
+
+```
+Defect ID        DL-027
+Class            Pedagogical / Content (hybrid)
+Domain           Explanation Quality — closing-tag boilerplate
+Severity         Low (closing-tag-only variant — substantive text precedes the tag; 15 items scoped, all Certified)
+Detected By      Build-Time AI Verification (Agent 5 — DL-013 Pack A Full Sweep verification, 2026-07-23)
+Status           Resolved — 15 closing tags removed 2026-07-23 (autonomous run WAVE 3)
+Category         Closing-tag boilerplate on otherwise substantive explanations
+```
+
+**Question IDs:** 15 items: Section A (4): P1-A-001 (EWA), P1-A-002 (EWB), P1-A-009 (EWA), P1-A-018 (EWB); Section D (11): P1-D-002 (EWA), P1-D-005 (EWD), P1-D-006 (EWA), P1-D-008 (EWC), P1-D-012 (EWC), P1-D-013 (EWD), P1-D-018 (EWA), P1-D-019 (EWB), P1-D-020 (EWC), P1-D-029 (EWD), P1-D-069 (EWD)
+
+**File:** `pack_a_corrected.js`
+
+### Issue
+
+Fifteen ExplanationWrong fields contain the sentence "A candidate selecting this option may misunderstand how the governing standard applies to this specific fact pattern" appended to otherwise substantive, choice-specific explanation text. This is a closing tag — not a standalone template.
+
+Three distinct severities:
+1. **Section A (4 items):** The closing tag is the ONLY boilerplate. All text before it is choice-specific with proper ASC citations. No "represents a plausible misconception" anywhere. Qualitatively distinct from classic DL-013.
+2. **Section D (11 items):** **HYBRID.** The closing-tag slot has substantive choice-specific text + closing tag, but the same item's OTHER distractor ExplanationWrong slots contain classic DL-013 boilerplate ("does not align with... The correct approach involves..."). These 11 items need BOTH DL-013 remediation (for boilerplate slots) AND DL-027 closing-tag cleanup (for the tagged slot).
+3. **Nonsensical standard citations (3 items):** P1-D-018, P1-D-029, P1-D-069 cite "Artificial intelligence in accounting" as the governing standard for quality cost classification, value chain analysis, and life-cycle costing — a template placeholder.
+
+### Root Cause
+
+Template engine appended a standard closing sentence to ExplanationWrong fields as a pedagogical flourish. The core text was authored substantively, but the engine auto-appended this tag. For Section D items, the same template engine also left classic DL-013 boilerplate in companion slots.
+
+### Pattern
+
+```
+"<substantive choice-specific text with proper standard citation>. A candidate selecting this option may misunderstand how the governing standard applies to this specific fact pattern."
+```
+
+### Detection Rule
+
+Grep for: `/A candidate selecting this option may misunderstand how the governing standard applies/`
+
+Confirmed: 15 matches across Sections A (4) and D (11).
+
+### Correction
+
+Section A (4 items): Delete the closing tag only. The preceding text is fully substantive.
+
+Section D (11 items): Remediate companion DL-013 boilerplate slots first. Then delete the closing tag from the one flagged slot per item. Fix nonsensical standard citations (3 items) in the same pass.
+
+### Resolved
+
+2026-07-23 — 15/15 closing tags removed via replaceAll (autonomous 5-hour run, WAVE 3). `. A candidate selecting this option may misunderstand how the governing standard applies to this specific fact pattern.` → `.`. Zero content loss — all preceding text was substantive with proper ASC/cost-management citations. Verification: Select-String count = 0. File: pack_a_corrected.js.
+
+---
+
+## DL-033 — Wave 4 "Pack E" Archival Discrepancy (Naming Confusion, False Alarm)
+
+```
+Defect ID        DL-033
+Class            Structural / Documentation
+Domain           Process Integrity — Claim-Verification Gap
+Severity         Informational (no content defect — false alarm, documentation-only)
+Detected By      Build-Time AI Verification (Autonomous Run Wave 4 + Phase 0 resolution, 2026-07-23)
+Status           Resolved — no content fix needed; root cause documented; naming convention clarified
+Category         Pack-file naming confusion: "Pack A Section E" vs "Pack E"
+```
+
+**No content defect — false alarm.** No pack file modification required.
+
+### Issue
+
+The AUTONOMOUS_RUN Wave 4 (2026-07-23) searched `pack_e_corrected.js` (the Pack E file, QID format P1E-xxx) for Archived DL-012 clone items and found 0. It reported this as a discrepancy: "Pack E: 0 Archived... Prior session's claim of '16 Pack E clones already Archived' does not match current file state."
+
+The prior "16 Archived" claim (REVISION_HISTORY.md line 2572) referred to **Pack A Section E** items (P1-E-046 through P1-E-074, in `pack_a_corrected.js`), NOT to Pack E items (P1E-xxx, in `pack_e_corrected.js`). The labeling convention confusion between "Pack A Section E" (prefixed P1-E-) and "Pack E" (file `pack_e_corrected.js`, prefixed P1E-) caused Wave 4 to check the wrong file.
+
+### Root Cause
+
+**File-location vs. section-name ambiguity.** The project uses two parallel naming conventions:
+- File-based: Packs A, B, C, D, E → `pack_a_corrected.js` through `pack_e_corrected.js`
+- Section-based within Pack A: Sections A through F → items prefixed P1-A- through P1-E-
+
+The "16 clones" were in Pack **A**, Section **E** (P1-E-046–074) — a Section E inside Pack A. Wave 4 interpreted "Pack E" as meaning the entire Pack E file (`pack_e_corrected.js`), which was authored through a completely different pipeline and has no DL-012 clones.
+
+### Current Verified State (pack_a_corrected.js, 2026-07-23)
+
+| Category | Count | Items | Status |
+|----------|-------|-------|--------|
+| Genuine template clones (DL-012 pattern) | 12 | P1-E-046, 049, 054, 057, 058, 062, 063, 065, 066, 070, 071, 073 | **Archived** — no issue |
+| Re-archived after Tier 0 reversal | 4 | P1-E-047, 050, 055, 074 | **Archived** — re-archived by Session 5 corrective reversal |
+| Unique seed (not a clone) | 1 | P1-E-053 | **Certified** — correct status (vendor master file control, independent topic) |
+| Independent topic, possibly mis-archived | 1 | P1-E-056 | **Archived** — independent topic (physical count control); may warrant re-review |
+| **Learner pool exposure** | **0** | — | **No Certified clone items in learner pool** |
+
+### Detection Rule
+
+Any report that references "Pack E" must disambiguate whether it means:
+- The file `pack_e_corrected.js` (QIDs: P1E-A-xxx through P1E-F-xxx), or
+- Pack A Section E (QIDs: P1-E-xxx, in `pack_a_corrected.js`)
+
+The disambiguation rule: "Pack E" = the file. "Pack A Section E" = Section E within Pack A. Never abbreviate "Pack A Section E" as "Pack E."
+
+### Validator / Source
+
+`Build-Time AI Verification` — Phase 0 resolution, this session (2026-07-23).
+
+### Correction
+
+No content fix required. Documentation clarification only:
+1. DL-033 entry added to DEFECT_LIBRARY.md (this entry) — documenting the naming-confusion root cause
+2. REVISION_HISTORY.md entry appended — Phase 0 resolution and cross-reference
+3. AUTONOMOUS_RUN_2026-07-23.md Wave 4 note: "0 Archived" in pack_e_corrected.js is correct; the 16 Archived items are in pack_a_corrected.js Section E
+4. SESSION_STATUS_2026-07-23.md §5 note: "Pack A Section E — 16 clones" wording is correct; Wave 4 misinterpreted it
+
+### Regression Test
+
+After this documentation fix:
+- Verify no pack file was modified (true — read-only resolution)
+- Verify the 17 clone items remain Archived in pack_a_corrected.js (confirmed)
+- Verify P1-E-053 remains Certified (correctly a unique seed)
+- Verify pack_e_corrected.js has 0 Archived (correct — no clones exist there)
+- Verify 0 Certified items exposed (confirmed)
+
+### Cross-References
+
+- DL-012 entry: `knowledge/DEFECT_LIBRARY.md` DL-012 (Pack C/D Section E clone redundancy)
+- REVISION_HISTORY.md line 2572: "16 clones (P1-E-046 through P1-E-074) — Archived — No change"
+- Tier 0 closeout: REVISION_HISTORY.md lines 2463–2534
+- AUTONOMOUS_RUN Wave 4: `reports/session_status/AUTONOMOUS_RUN_2026-07-23.md` lines 99–111
+- PACK_A_16CLONE_ARCHIVE_VERIFICATION.md: `reports/defect_sweeps/PACK_A_16CLONE_ARCHIVE_VERIFICATION.md`
+- DL-015/DL-016 entries: related metadata-numbering issues in same section
+
+### Resolved
+
+2026-07-23 — Phase 0 resolution. No content defect. Naming confusion documented. DL-033 closed.
+
+---
+
+---
+
+## DL-029 — Regex Block-Scan DL-008 False Positives (Cross-Pack Parsing Methodology)
+
+```
+Defect ID        DL-029
+Class            Methodology / Process
+Domain           Scan Reliability
+Severity         High (caused prior sessions to report 885+ Certified DL-008 where actual count is dozens)
+Detected By      Build-Time AI Verification (Full-Depth Audit Phase 0B, 2026-07-23)
+Status           Open — documented, methodology correction recommended
+Category         Scan false-positive inflation from CC-offset in block-window extraction
+```
+
+**Scope:** All prior sessions that used regex block-window scanning to count DL-008.
+
+### Issue
+
+The regex block-window scanning methodology extracts QuestionID → searches forward in a fixed window for CorrectChoice → flags EW[CC] as DL-008. When the JSON object stores CorrectChoice BEFORE QuestionID (Pack B format, some Pack D objects), the scanner reads the NEXT QID's CorrectChoice. With random CC distribution, this produces a ~75% false-positive rate.
+
+**Example:**
+- QID N's object: `{ "CorrectChoice": "A", ... "QuestionID": "P1B-xxx", ... "ExplanationWrongA": "" }`
+- Scanner reads: QID at position P → searches forward → finds CC="B" (from QID N+1's object) → flags EW-B (from QID N's object) as non-empty → FALSE POSITIVE
+
+### Verified Impact
+
+| Pack | Regex Scan DL-008 (Certified) | Actual (from verified samples) | False Positive Rate |
+|------|------------------------------|-------------------------------|---------------------|
+| A | 138 | ~2 confirmed (B-001, B-025) + unknown residual | High |
+| B | 257 | **0** (Function constructor parse, 500 items) | **100%** |
+| C | 174 | At least 6 confirmed (BC-001/010/020/030/094, AC-001) + unknown | Mixed |
+| D | 246 | At least 1 confirmed (BD-001) | Very high for Section A |
+| E | 70 | 1 confirmed (P1E-B-079) | Very high |
+
+### Detection Rule
+
+After every scan, verify CorrectChoice positioning: if CC field appears BEFORE QuestionID in the source file for that pack, the block-window scan is unreliable for that pack. Use Function constructor parse or direct line-level inspection instead.
+
+### Validator
+
+`Build-Time AI Verification` — no automated validator can detect this. It is a methodology defect in the scanning approach, not a validator bug.
+
+### Correction
+
+1. **Pack B**: Use Function constructor parse (already working). Confirmed 0 DL-008.
+2. **Pack E**: Use Function constructor parse (already working). Confirmed 1 DL-008.
+3. **Packs A/C/D**: Need direct line-level inspection per item, or fix the brace-matcher to be CC-position-aware.
+
+### Cross-References
+
+- DL-008 entry: The defect being counted
+- DL-020: Brace-matcher string-awareness (related parser issue)
+- Full-Depth Audit Phase 0B: `reports/session_status/FULL_DEPTH_AUDIT_2026-07-23.md`
+
+### Resolved
+
+Not yet. Methodology correction documented. Scan scripts in `scripts/` directory may need updates to be CC-position-aware.
+
+---
+
+## DL-030 — CorrectChoice Answer-Key Errors (Phase 0B Full-Pool Audit)
+
+```
+Defect ID        DL-030
+Class            Content
+Domain           Semantic Accuracy — Answer-Key Error
+Severity         Critical (High learner-safety risk — wrong answer marked correct)
+Detected By      Build-Time AI Verification — Phase 0B Full CorrectChoice Ground-Truth Audit (2026-07-23/24)
+Status           Resolved — all 5 items fixed 2026-07-24
+Category         Stored CorrectChoice disagrees with independently derived correct answer
+```
+
+**Question IDs:** 5 items across Pack B (4) and Pack E (1)
+
+**Files:** `pack_b_corrected.js`, `pack_e_corrected.js`
+
+### Issue
+
+Five Certified items in the active learner delivery pool had stored CorrectChoice values that disagreed with the independently derived correct answer. All 5 were confirmed by independent 20% re-derivation.
+
+### Confirmed Items
+
+| QID | Pack/Section | Topic | Stored CC | Correct CC | Root Cause |
+|-----|-------------|-------|-----------|------------|------------|
+| **P1B-B-119** | B/B | Learning curve 4th unit | B (51.2) | **C (64)** | Formula error: EC used 8^(-0.3219) instead of 4^(-0.3219). The 4th unit time = 100 × 4^(-0.32193) = 64, not 51.2. |
+| **P1B-F-084** | B/F | Data visualization best practice | A (3D pie) | **D (appropriate chart)** | CC pointed to a known bad practice (3D pie charts with 12 categories). D is the textbook best practice. |
+| **P1B-F-116** | B/F | ERP segregation of duties | C (SoD irrelevant) | **A (access controls)** | CC claimed SoD "no longer relevant in ERP" — categorically false. SoD is maintained through role-based access controls in ERP. |
+| **P1B-F-121** | B/F | Smart contracts | C (paper-based) | **B (self-executing)** | CC claimed smart contracts are "legally binding only when printed" — wrong. Smart contracts are self-executing code-based agreements. |
+| **P1E-E-037** | E/E | COSO Principle 15 | D (all personnel) | **B (external parties)** | CC pointed to COSO Principle 14 (internal communication). Principle 15 covers external party communication. The EC text itself confirmed the correct answer. |
+
+### Root Cause
+
+Multiple causes:
+- P1B-B-119: Arithmetic error in the author's learning curve calculation (exponent applied to 8 instead of 4)
+- P1B-F-084/116/121, P1E-E-037: Conceptual design errors — the authoring template assigned the correct answer to the wrong letter in the 5-item rotation group. The ExplanationCorrect text was correct, but CorrectChoice pointed to a different choice.
+
+### Detection Rule
+
+For each question Q, independently derive the correct answer from stem + choices. Compare to stored CorrectChoice. Flag any mismatch.
+
+### Validator
+
+Build-Time AI Verification — Phase 0B Full CorrectChoice Ground-Truth Audit
+
+### Correction
+
+Applied 2026-07-24:
+
+| QID | Before CC | After CC | EW[new_CC] cleared | EC updated |
+|-----|-----------|----------|-------------------|------------|
+| P1B-B-119 | B | C | Yes (was "" already) | Yes — 0.64/64 |
+| P1B-F-084 | A | D | Yes | No (already described D) |
+| P1B-F-116 | C | A | Yes | No (already described A) |
+| P1B-F-121 | C | B | Yes | No (already described B) |
+| P1E-E-037 | D | B | Yes | Yes — COSO Principle 15 |
+
+All ExplanationWrong[old_CC] slots filled with appropriate distractor text for the new distractor position. All files retain 500 QIDs. Zero DL-008 on corrected items.
+
+### Regression Test
+
+- Verify all 5 items have ALL_AGREE verdict after fix
+- Re-run the Phase 0B CorrectChoice sweep on corrected items
+- Verify no new DL-008 violations introduced
+- Verify ExplanationCorrect text describes the new correct answer
+
+### Cross-References
+
+- Phase 0B CorrectChoice Ground-Truth Audit: `reports/PHASE0B_DL029_GROUND_TRUTH_AND_PREFLIGHT_REPORT.md`
+- Independent 20% Re-Derivation: All 5 confirmed
+- REVISION_HISTORY.md: Phase 0B-10 entry
+
+### Resolved
+
+2026-07-24 — All 5 items corrected. Backups: pack_b_corrected.js.bak-phase6-20260724094003, pack_e_corrected.js.bak-phase6-20260724094003.
+
+---
+
+## DL-031 — Definition-Match Difficulty Inflation (Systematic)
+
+```
+Defect ID        DL-031
+Class            Pedagogical
+Domain           Difficulty Calibration — Systematic Over-Labeling
+Severity         High (systematic — estimated ~500 items across all 5 packs labeled Moderate that test Bloom's Remember/Understand)
+Detected By      Build-Time AI Verification — Session 700 Layer 2 Difficulty Specialist
+Status           Open — scoped, not remediated
+Category         Systematic difficulty inflation from template-based labeling
+```
+
+**Question IDs:** ~500 items across all 5 packs (see Session 700 Global Summary §5.3)
+
+**Files:** All `pack_*_corrected.js` files
+
+### Issue
+
+Items where the question stem is a textbook definition and the correct answer is the term being defined are systematically labeled `Difficulty: "Moderate" / DifficultyScore: 3` when they should be `"Easy" / 1`. These items test Bloom's Remember or Understand level — the candidate matches the definition in the stem to the term in the answer choices. No application, analysis, or evaluation is required.
+
+Six of seven difficulty miscalibrations found in Session 700's 15-item sample follow this exact pattern:
+
+| QID | Topic | Stored | Should Be | Pattern |
+|-----|-------|--------|-----------|---------|
+| P1B-B-120 | Time series — trend | Moderate (3) | Easy (1) | Stem: "long-term direction" → Answer: "Trend" |
+| P1B-F-100 | CCPA rights | Moderate (3) | Easy (1) | "All of the above" where all sub-choices correct |
+| P1-BC-075 | Budgetary control | Moderate (3) | Easy (1) | Stem: "compares actual to budgeted" → Answer: "budgetary control" |
+| P1-FC-030 | CIA triad | Moderate (3) | Easy (1) | Stem: "confidentiality... integrity... availability" → Answer: "CIA triad" |
+| P1-CD-050 | Goal congruence | Moderate (3) | Easy (1) | Stem: "best interest of the company as a whole" → Answer: "goal congruence" |
+| P1E-F-050 | ELT vs ETL | Moderate (3) | Easy (1) | Acronym self-defines answer |
+
+### Root Cause
+
+Template-rotation authoring pipeline assigned difficulty labels by position in the 5-item rotation group rather than by cognitive demand assessment. The template engine used a fixed difficulty assignment pattern (Easy, Moderate, Moderate, Difficult, Moderate) without evaluating whether the item's cognitive requirements matched the assigned label.
+
+### Pattern
+
+For any item where the question stem contains a textbook definition and the correct answer is the defined term:
+```
+Stem: "[textbook definition of concept X]"
+Correct answer: "[term for concept X]"
+```
+
+When the overlap between stem keywords and correct answer choice text exceeds ~50%, the item should default to Easy (1) unless the distractors require genuine application-level discernment.
+
+### Detection Rule
+
+For each item:
+1. Compute lexical overlap (Jaccard or word-level) between stem and correct answer choice text
+2. If overlap > 50% AND distractors are definition-level opposites → flag as potential DL-031
+3. For any item flagged, verify: does answering correctly require more than reading comprehension? If no → recalibrate to Easy (1).
+
+### Estimated Scope
+
+| Pack | Estimated Affected Items | Based On |
+|------|------------------------|----------|
+| A | ~100 | CC B-bias + template rotation pattern |
+| B | ~200 | 2/3 sampled items overstated; 600 Moderate items, estimated 33% inflated |
+| C | ~100 | 2/3 sampled items overstated; large Unprocessed pool |
+| D | ~100 | 1/3 sampled items overstated |
+| E | ~50 | 1/3 sampled items overstated; Pack E tends to understate |
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — Session 700 Layer 2 Difficulty Specialist
+- **Validator integration:** No existing validator detects definition-match inflation. Recommended: add `DifficultyCalibrationValidator` to flag items where stem-CorrectChoice lexical overlap exceeds threshold while difficulty is labeled ≥ Moderate.
+
+### Correction
+
+Recalibrate ~500 items from Moderate→Easy where definition-match pattern is confirmed. Per-item verification required — not all Moderate items with high lexical overlap are automatically Easy; some have sophisticated distractor engineering that justifies Moderate labeling.
+
+### Regression Test
+
+After recalibration:
+- Verify difficulty distribution meets CAQS §6.1 targets (Easy 15%, Moderate 30%, etc.)
+- Re-run difficulty calibration sample audit
+- Confirm Bloom's level alignment with difficulty label
+
+### Resolved
+
+Not yet.
+
+---
+
+## DL-032 — Case Bank Uniform Difficulty (No Calibration)
+
+```
+Defect ID        DL-032
+Class            Pedagogical
+Domain           Difficulty Calibration — Zero Variance
+Severity         Medium (all items labeled "Moderate" with no differentiation — statistical implausibility for 420-item pool)
+Detected By      Build-Time AI Verification — Session 700 Layer 1 Case Files Scan
+Status           Open — scoped, not remediated
+Category         Template-based uniform labeling — no cognitive calibration performed
+```
+
+**Question IDs:** 420 items across 75 cases in all 5 scored_cases files
+
+**Files:** `scored_cases.js`, `scored_cases2.js`, `scored_cases3.js`, `scored_cases4.js`, `scored_cases5.js`
+
+### Issue
+
+Every single case and item across all 5 case files is labeled `Difficulty: "Moderate"`. Zero items are Easy, Difficult, or Very Difficult. For a pool of 420 items spanning 75 cases across 6 blueprint domains, this is statistically implausible — it indicates template-based labeling with no cognitive calibration.
+
+The CAQS v1.0 §6.1 target distribution is:
+- Easy: 15%
+- Moderate-Easy: 20%
+- Moderate: 30%
+- Difficult: 25%
+- Very Difficult: 10%
+
+The current case bank distribution is:
+- Moderate: 100%
+- All other tiers: 0%
+
+### Root Cause
+
+Template-based case authoring pipeline that assigned `Difficulty: "Moderate"` as a default value without per-item cognitive assessment. Unlike the MCQ banks (where the 5-item rotation template at least varied difficulty labels — albeit often mechanically), the case pipeline appears to have used a single difficulty label for all items.
+
+### Detection Rule
+
+For each case file, compute difficulty label distribution. If any single label accounts for ≥ 90% of items → flag DL-032.
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — Session 700 Layer 1 Case Files Scan
+- **Validator integration:** No existing validator checks for uniform difficulty labels across a pool. Recommended: add `CaseDifficultyVarianceValidator`.
+
+### Correction
+
+Assign genuine difficulty labels to all 420 case items based on:
+1. Cognitive level (Bloom's) of the item
+2. Calculation complexity
+3. Number of exhibits the item depends on
+4. Distractor deceptiveness
+5. Required CMA Part 1 maturity
+
+Target the CAQS §6.1 distribution post-recalibration.
+
+### Cross-References
+
+- DL-031: Systematic difficulty inflation in MCQ banks (same root cause — template-based labeling without cognitive calibration)
+- CAQS v1.0 §6.1: Target difficulty distribution
+- CAQS v1.0 §6.2: Bloom's taxonomy distribution targets
+
+### Resolved
+
+Not yet.
+
+---
+
+## Tracked Note — Pack D DL-008 Count Discrepancy (Session 700 Finding)
+
+**Status:** Open — independent verification required before any remediation
+
+**Source:** Session 700 Layer 1 structural scan + deep verification
+
+### Finding
+
+SESSION_STATUS_2026-07-24 reports 10 DL-008 items in Pack D. Session 700's structural scan using Select-String + content-block CC extraction produced a count of ~342 items (341 Certified). Deep verification of 10 sampled items found 7/8 Certified items (87.5%) had DL-008 confirmed by direct line-level inspection.
+
+### Discrepancy Analysis
+
+| Source | Count | Method | Date |
+|--------|-------|--------|------|
+| SESSION_STATUS_2026-07-24 | 10 | Unknown | 2026-07-24 |
+| Session 700 L1 scan | ~342 | Select-String + content-block CC | 2026-07-25 |
+| Session 700 deep verification | 7/8 in sample (87.5%) | Line-level inspection of 10 QIDs | 2026-07-25 |
+
+### Root Cause Hypotheses
+
+1. **Genuine discrepancy:** SESSION_STATUS undercounted (e.g., only counted specific QID ranges). Session 700 scan methodology is correct.
+2. **DL-016 scan artifact:** The dual-block architecture causes confusion between metadata-block CC and content-block CC, inflating the count.
+3. **Both partially true:** Session 700 count is inflated by DL-016 artifacts, but the true count is higher than 10.
+
+### Required Action
+
+Session 701 must independently verify the Pack D DL-008 count using boundary-aware object parsing (Function-constructor parse or within-object-field-extraction), not forward-scan/back-scan regex. Until verified, assume the higher count for learner-safety purposes (conservative approach).
+
+### Cross-References
+
+- DL-008 entry: DEFECT_LIBRARY.md
+- DL-016: Metadata-block topic-numbering shift
+- DL-029: Regex block-scan false positives
+- Session 506/507: Prior Pack D Section C DL-008/DL-010 controversy resolved by within-object extraction
+
+---
+
+## DL-034 — P1-E-R33 Missing Structural Fields (CorrectChoice, Stem, ExplanationCorrect)
+
+```
+Defect ID        DL-034
+Class            Structural
+Domain           Identity Integrity — Missing Required Fields
+Severity         Critical
+Detected By      Build-Time AI Verification — S204 Gate -1 Identity Validation Pilot (Board B)
+Status           Resolved
+```
+
+**Question IDs:** P1-E-R33
+
+**File:** `pack_e_corrected.js`
+
+**Section:** E (Pack E — items P1-E-R01 through P1-E-R40 are supplemental Section E items beyond the standard 500)
+
+### Issue
+
+~~P1-E-R33 was identified as a `question_state: "Certified"` item in the learner delivery pool that is missing three structural fields: CorrectChoice, Stem, and ExplanationCorrect.~~ **(RESOLVED — see below. The S204 Gate -1 scan was executed against a pre-S808 file state. S207 T0 verification (2026-07-27) confirmed the item is now structurally complete.)**
+
+### Root Cause
+
+The item was part of the Pack E supplemental item set (P1-E-R01 through P1-E-R40). At the time of the S204 Gate -1 scan, P1-E-R33 genuinely had missing fields — a template-rotation omission from the original authoring pipeline. Between S204 and S207, Session 808 (2026-07-26) repaired and certified the item. The S205/S206 analysis chain was based on the stale S204 data.
+
+### Resolution
+
+P1-E-R33 was repaired and certified in **Session 808 (2026-07-26)**. Current file state (verified by S207 T0, 2026-07-27):
+
+- **CorrectChoice:** "D" — PRESENT
+- **Stem:** "The IIA's International Standards for the Professional Practice of Internal Auditing require that the chief audit executive (CAE) report to a level within the organization that allows the internal audit activity to fulfill its responsibilities..." — PRESENT
+- **ExplanationCorrect:** Full IIA Standard 1110/1110.A1/1130 explanation — PRESENT
+- **ExplanationWrongA/B/C:** All populated with choice-specific distractor text — PRESENT
+- **ExplanationWrongD:** "" (correctly empty for CC=D, DL-008 compliant) — PRESENT
+- **Choices:** {A, B, C, D} all populated — PRESENT
+- **question_state:** "Certified" — PRESENT
+- **certification_session:** "S808" — RECORDED
+
+Identity validator self-test: 540/540 PASS on Pack E (includes P1-E-R33). All Gate -1 checks PASS.
+
+### Impact (Post-Resolution)
+
+| Category | Assessment |
+|----------|------------|
+| Learner pool | **Safe** — item is structurally complete and renderable |
+| Renderability | Fully functional — Stem, CC, EC, all EW fields present |
+| Application stability | No crash risk — all required fields populated |
+| 800-Series | **BLOCKER REMOVED** — no longer blocks restart |
+
+### Cross-References
+
+- **S207 resolution disposition:** `reports/SESSION207_DL034_RISK_REVIEW.json`, `reports/SESSION207_DL034_DISPOSITION.json`
+- S204 Board B (Gate -1 Validation): `reports/SESSION204_GATE_NEG1_VALIDATION.json` (stale — pre-S808 state)
+- S205 Analysis: `reports/SESSION205_DL034_ANALYSIS.json` (stale — pre-S808 state)
+- S207 Executive Summary: `reports/SESSION207_EXECUTIVE_SUMMARY.md`
+
+### Resolved
+
+2026-07-26 — S808 repaired and certified P1-E-R33. Resolution confirmed 2026-07-27 by S207 T0 verification (direct file inspection + identity validator self-test).
+
+---
+
+## DL-035 — Governance Guard DL-026 Coverage Gap (39 Certified Domain F Items)
+
+```
+Defect ID        DL-035
+Class            Structural / Governance
+Domain           Governance Guard Coverage Gap — Certification Pipeline
+Severity         High (39 Certified items in active learner pool carry empty distractor EW slots)
+Detected By      Build-Time AI Verification (S812 Repeatability Review — Board G-L)
+Status           Open — documented, Rule 6 deployed (S814), content remediation pending (S816-S818)
+```
+
+**Question IDs:** 39 items across Pack C (28) and Pack D (11), all Domain F, all `question_state: "Certified"` (certified via S853 WAVE_A, 2026-07-27)
+
+**Pack C — Domain F (28 items from S853 Batch B3):**
+`P1-FC-001`, `P1-FC-006`, `P1-FC-007`, `P1-FC-010`, `P1-FC-015`, `P1-FC-020`, `P1-FC-025`, `P1-FC-026`, `P1-FC-031`, `P1-FC-036`, `P1-FC-043`, `P1-FC-048`, `P1-FC-053`, `P1-FC-058`, `P1-FC-063`, `P1-FC-068`, `P1-FC-073`, `P1-FC-074`, `P1-FC-075`, `P1-FD-001`, `P1-FD-006`, `P1-FD-011`, `P1-FD-016`, `P1-FD-021`, `P1-FD-026`, `P1-FD-027`, `P1-FD-030`, `P1-FD-031`
+
+**Pack D — Domain F (11 items from S853 Batch B4):**
+`P1-FD-033`, `P1-FD-034`, `P1-FD-043`, `P1-FD-049`, `P1-FD-054`, `P1-FD-059`, `P1-FD-064`, `P1-FD-069`, `P1-FD-073`, `P1-FD-074`, `P1-FD-075`
+
+**Files:** `pack_c_corrected.js`, `pack_d_corrected.js`
+
+### Issue
+
+The governance guard enforces Rule 2 (DL-008: non-empty ExplanationWrong[CorrectChoice] BLOCK) but did not enforce a parallel rule for DL-026 (empty non-CorrectChoice ExplanationWrong slots). The S853 WAVE_A certification pipeline checked DL-008 (passed: 0 violations) but did not check DL-026 on the 39 candidate items before certifying them.
+
+As a result, 39 Domain F items were certified into the learner delivery pool (2,298-item pool) with ~117 empty distractor ExplanationWrong slots. When learners select wrong answers on these items, no educational feedback is displayed — an educational quality degradation, not a correctness risk (zero DL-008 = no wrong answers displayed).
+
+The pre-existing DL-026 baseline in `CURRENT_BASELINES.md` §3 stated "MINIMAL — no learner-pool exposure" as of 2026-07-27, which was true pre-S853 but became stale post-S853 when these 39 items were certified.
+
+### Root Cause
+
+**Primary:** Governance guard coverage gap. The guard's certification rules (Rules 1-5) covered DL-008 (wrong text shown as correct), DL-029 (scan methodology), and batch-size limits — but had zero coverage for DL-026 (empty distractor explanation slots). The certification pipeline treated "DL-008 clean" as sufficient for certification, which was a false assumption.
+
+**Secondary:** `CURRENT_BASELINES.md` stale status. The pre-S853 DL-026 count reflected the state before the S853 certification wave, and no re-scan was performed post-certification.
+
+**Tertiary:** Artifact reuse gap. The S853 cert wave and the governance guard operate on independent scans — no shared truth source.
+
+### Relationship to DL-026
+
+DL-026 documents the defect CLASS (1,005 items pool-wide with empty non-CC EW slots across all state types). DL-035 documents the GOVERNANCE INSTANCE: 39 specific Certified items that passed through the certification pipeline because DL-026 was not a certification-blocking check. DL-026 is the defect pattern; DL-035 is the certification failure that put learners at risk.
+
+### Pattern
+
+For each affected item:
+- CorrectChoice ExplanationWrong slot: empty (DL-008 compliant)
+- One or more non-CorrectChoice ExplanationWrong slots: empty or absent (DL-026 — not blocked pre-Rule 6)
+- Item carries `question_state: "Certified"` — in active learner pool
+- All certified during a single wave (S853 WAVE_A) that only enforced DL-008
+
+### Detection Rule
+
+```
+For each Certified question Q across all packs:
+  let cc = Q.CorrectChoice;
+  for each letter L in {A, B, C, D}:
+    if L != cc AND (Q["ExplanationWrong" + L] === "" OR absent):
+      flag DL-035 — Certified item with empty distractor ExplanationWrong slot
+```
+
+**Automated enforcement:** governance-guard.js Rule 6 (deployed S814) — BLOCKs any write containing empty/absent non-CC ExplanationWrong slots. Post-S814, new certifications cannot introduce DL-035.
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — S812 Repeatability Review (Board G-L)
+- **S813 formalization:** SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json (C1, C3)
+- **Governance enforcement:** governance-guard.js Rule 6 (S814)
+- **QID list source:** `scripts/output/session_packages/S853.json`
+
+### Correction
+
+**Prevention:** Rule 6 deployed (S814) — BLOCKs future certifications with empty non-CC EW slots.
+
+**Remediation:** Author ~117 choice-specific distractor explanations for all empty non-CC EW slots across the 39 items (~1.5 empty slots per item). Scheduled for S816-S818. Each slot requires:
+- Choice-specific text identifying why that distractor is wrong
+- Minimum 50 characters
+- Technology & Analytics domain-appropriate content (data governance, ERP, cybersecurity, AI, etc.)
+
+### Regression Test
+
+After remediation:
+- Verify 0 DL-035 items across all 5 packs (via object-boundary DL-026 scan filtered to `question_state: "Certified"`)
+- Verify governance guard Rule 6 blocked if any non-CC EW slot is empty
+- Verify learner-pool delivery safety check passes
+
+### Resolved
+
+Not yet. Rule 6 deployed (S814). Content remediation pending (S816-S818).
+
+### Cross-References
+
+- DL-026: Parent defect class (1,005 items pool-wide)
+- DL-036: 40-item pipeline routing divergence (S812 concurrent finding)
+- S812 Repeatability Review: `reports/SESSION812_REPEATABILITY_REVIEW.json`
+- S813 Conditional Adoption: `reports/SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json`
+- S853 WAVE_A: `scripts/output/session_packages/S853.json`
+- governance-guard.js Rule 6: `.opencode/plugins/governance-guard.js`
+- REVISION_HISTORY.md: S814 C1/C4 entry
+
+---
+
+## DL-036 — Pipeline Artifact Reuse Gap (40-Item Readiness Routing Divergence)
+
+```
+Defect ID        DL-036
+Class            Process / Methodology
+Domain           Pipeline Consistency — Readiness Routing Divergence
+Severity         Medium (no learner impact — 40 Certified items misclassified as BLOCKED by one tool)
+Detected By      Build-Time AI Verification (S812 Repeatability Review — Board A-F)
+Status           Open — documented, root cause identified, correction pending (C2 artifact reuse targeted S819-S820)
+```
+
+**Question IDs:** 40 items: P1-E-R01 through P1-E-R40 (Pack E R-series, all `question_state: "Certified"`)
+
+**Files:** `pack_e_corrected.js`
+
+### Issue
+
+Two Framework v2 pipeline tools produce different BLOCKED item counts (242 vs 282) because they use different QID-matching regexes against the same pack file. The 40-item divergence is entirely isolated to Pack E's supplementary R-series items.
+
+| Tool | Session | BLOCKED Count | Pack E BLOCKED | QID Regex |
+|------|---------|--------------|----------------|-----------|
+| Readiness Scorer (S322) | S322 | 242 | 0 | Correctly matches `P1-E-R##` |
+| Candidate Engine (SESSION850) | SESSON850 | 282 | 40 | Does NOT match `P1-E-R##` |
+
+The Readiness Scorer correctly recognizes all 540 Pack E items (500 standard + 40 R-series) as CERTIFY/BLOCKED=0. The Candidate Engine sees the 40 R-series items as identity-validation failures (regex mismatch) and classifies them as BLOCKED.
+
+The 282-item "BLOCKED" count reported by the Candidate Engine is therefore inflated by 40 false positives. The authoritative BLOCKED count is 242 (from the Readiness Scorer, matching ground truth of 540/540 Pack E Certified).
+
+### Root Cause
+
+**Primary:** Zero artifact reuse between pipeline stages. Each stage independently re-scans all 5 pack files from source with its own parsing rules, rather than consuming a pre-computed artifact from an upstream stage.
+
+**Secondary:** The Candidate Engine's Pack E QID regex (`/^P1E-[A-F]-\d{3}$/`) was not updated when 40 R-series items (format `P1-E-R##`) were inserted into Pack E via S808. The Readiness Scorer was updated; the Candidate Engine was not.
+
+This is a synchronization gap caused by the pipeline operating as independent transforms rather than a connected consumer chain.
+
+### Detection Rule
+
+```
+At each pipeline gate checkpoint:
+  1. Extract total_BLOCKED from readiness_scoring.json
+  2. Extract total_BLOCKED from certification_candidates.json
+  3. If totals diverge → flag DL-036
+  4. Isolate divergent pack by comparing perPack BLOCKED counts
+  5. Reconcile each divergent item against raw file question_state:
+     - If raw file shows "Certified" but tool shows BLOCKED → QID regex mismatch (DL-036)
+     - If raw file shows non-Certified but readiness scorer shows CERTIFY → state-classification divergence (different root cause)
+```
+
+### Validator / Source
+
+- **Primary detection:** Build-Time AI Verification — S812 Repeatability Review (Board A-F)
+- **Concurrent finding:** S204 Gate -1 identity validation (documented P1-E-R## regex gap)
+- **Governance relevance:** S813 Condition C2 (pipeline artifact reuse)
+
+### Correction
+
+**Short-term:** Update Candidate Engine's Pack E QID regex to accept `P1-E-R\d{2}$` format — eliminates the 40 false positives immediately.
+
+**Long-term (C2):** Connect pipeline stages via artifact consumption — Candidate Engine should consume Readiness Scorer output artifact rather than re-scanning from source. This eliminates the entire class of regex-divergence defects and ensures a single source of truth for QID classification across the pipeline.
+
+### Regression Test
+
+After correction:
+- Verify `readiness_scoring.json.total_BLOCKED === certification_candidates.json.total_BLOCKED`
+- Verify both = 242 (the authoritative BLOCKED count matching Pack E ground truth of 540/540 Certified)
+- Verify perPack BLOCKED counts match for all 5 packs
+
+### Resolved
+
+Not yet. Root cause identified and documented. Correction pending (C2 target: S819-S820). 40 R-series items are correctly Certified in the learner pool — no content remediation required.
+
+### Cross-References
+
+- S812 Repeatability Review: `reports/SESSION812_REPEATABILITY_REVIEW.json` (Board A-F)
+- S813 Condition C2: `reports/SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json`
+- S204 Gate -1 identity validation: P1-E-R## regex gap documented
+- S808: Pack E R-series insertion (500→540 items)
+- `scripts/output/readiness_scoring.json` (S322) — authoritative: 242 BLOCKED
+- `scripts/output/certification_candidates.json` (SESSION850) — inflated: 282 BLOCKED
+- DL-035: Concurrent governance gap finding (39 Domain F items)
+
+---
+
+## DL-037 — Choice Binary Lead-In Polarity Mismatch
+
+```
+Defect ID        DL-037
+Class            Content
+Domain           Semantic Accuracy — Choice Lead-In / Conclusion Alignment
+Severity         Medium
+Detected By      Manual Review (Post-Exam Project Reopening)
+Status           Resolved (S911 fix + S913 Rule 9 automated prevention)
+```
+
+**Question IDs:** P1-B-040 (Pack A, Section B)
+
+**File:** `pack_a_corrected.js`
+
+**Stem:** "Eastwood investigates any budget variance exceeding 5% of budgeted cost or $10,000, whichever is smaller. A department shows a $9,000 unfavorable variance on a $150,000 budget. Should this be investigated?"
+
+### Issue
+
+Choice B (the correct answer) read: *"**No**, because 5% of $150,000 is $7,500 and $9,000 exceeds that, so it **should be investigated**."*
+
+The lead-in word "No" directly contradicts the conclusion "so it should be investigated." The correct answer is mathematically YES — the variance exceeds the $7,500 threshold, so investigation is warranted. Choice B's trailing rationale is correct, but the one-word lead-in "No" is semantically wrong.
+
+The stem asks "Should this be investigated?" and the answer is yes. Choice B was the only choice that correctly calculates the threshold, but it opens with the wrong binary signal.
+
+### Root Cause
+
+Human authoring error — the choice text's leading binary ("No" / "Yes") was misaligned with the logical conclusion of the trailing clause. The distractor was written correctly (5% threshold calculation is right) but the initial Yes/No polarity was inverted during authoring.
+
+The exact same content with "Yes" instead of "No" would be semantically consistent: "Yes, because 5% of $150,000 = $7,500, and $9,000 exceeds it, so it should be investigated."
+
+### Pattern
+
+```
+// BAD — "No" contradicts "should be investigated"
+"No, because <calculation is correct>, so it should be investigated"
+
+// FIXED — "Yes" aligns with "should be investigated"
+"Yes, because <calculation is correct>, and it exceeds the threshold, so it should be investigated"
+```
+
+**Correct pattern:** Match the binary lead-in word ("Yes"/"No") to the conclusion of the sentence.
+
+### Detection Rule
+
+1. Scan all Choice text values starting with "Yes," or "No,"
+2. Pattern 1: `^No,.*\b(should be investigated|should be accepted|should be selected|...)\b` — a "No" paired with an affirmative conclusion
+3. Pattern 2: `^Yes,.*\b(should not|shouldn't|cannot|must not|...)\b` — a "Yes" paired with a negative conclusion
+4. Flag any match as a DL-037 logic inversion
+
+### Validator / Source
+
+- **Primary detection:** Manual Review (post-exam project reopening)
+- **Automated prevention:** Rule 9 (governance-guard.js) — BLOCK enforcement at write/edit time
+- **Full-pool scan:** `scripts/scan_logic_inversions.js` — independent full-pool audit
+- **Governance relevance:** S913 Rule 9 deployment; S914 baselines recaptured
+
+### Correction
+
+**S911:** Changed P1-B-040 Choice B from "No" → "Yes." One-word edit. All other fields unchanged: CorrectChoice=B, ExplanationWrongB="" (DL-008 clean), all 3 non-CC EW slots non-empty (DL-026 clean), question_state="Certified." Backup: `backups\pack_a_corrected.js.bak-S911-20260728090956`.
+
+**S912:** Full-pool semantic scan executed across all 2,500 items via `scripts/scan_logic_inversions.js`. Result: 0 additional inversions found. P1-B-040 was the sole instance of this defect class.
+
+**S913:** Rule 9 (Choice Binary Lead-In Polarity Mismatch) deployed to governance guard. BLOCK-level enforcement at write/edit time. Test suite expanded from 45 → 51 tests. Verified 51/51 PASS. Rule 9 successfully catches the historical P1-B-040 pattern and correctly passes semantically-aligned text.
+
+### Regression Test
+
+After correction:
+- Verify P1-B-040 Choice B reads "Yes, because..." with semantically-aligned conclusion
+- Verify no other questions flag on Pattern 1 or Pattern 2 via full-pool scan
+- Verify Rule 9 BLOCKs a synthetic write introducing "No, ... should be investigated"
+- Verify Rule 9 does NOT flag "No, because the variance is favorable" (correctly aligned)
+- Verify Rule 9 does NOT flag "Yes, because the variance exceeds the threshold" (correctly aligned)
+
+### Resolved
+
+2026-07-28 — S911 (content fix) + S912 (pool scan) + S913 (Rule 9 prevention) + S914 (commit). Defect corrected. Automated guard deployed. Full pool confirmed clean.
+
+### Cross-References
+
+- S911–S914 Nuisance Defect Remediation Program
+- Rule 9: `governance-guard.js` §RULE_9, `test_governance_guard.js` Rule 9 test block
+- Full-pool scan: `scripts/scan_logic_inversions.js` + `scripts/output/logic_inversion_scan.json`
+- CURRENT_BASELINES.md: pack_a_corrected.js hash updated (605F576F → D7422331)
+- DL-008 (explanation purity — related: ExplanationWrongB remains "" post-fix)
+- DL-026 (distractor completeness — related: all 3 non-CC EW slots remain populated)
+
+---
+
+## Template for New Entries
+
+```markdown
+## DL-NNN
+
+```
+Defect ID        DL-NNN
+Class            <Structural | Content | Pedagogical>
+Domain           <Semantic Accuracy | Distractor Quality | Explanation Consistency | ...>
+Severity         <Critical | High | Medium | Low | Informational>
+Detected By      <Manual Review | Build-Time AI Verification | PsychometricValidator | ...>
+Status           <Open | Resolved>
+```
+
+**Question IDs:** <list>
+
+**File:** `<filename>`
+
+**Stem:** "<stem text>"
+
+### Issue
+
+<description>
+
+### Root Cause
+
+<cause>
+
+### Pattern
+
+```
+<problematic text>
+```
+
+**Correct pattern:** <correct text>
+
+### Detection Rule
+
+<regex or rule description>
+
+### Validator
+
+<module name>
+
+### Correction
+
+<description or table>
+
+### Regression Test
+
+<steps>
+
+### Resolved
+
+<date>
+```

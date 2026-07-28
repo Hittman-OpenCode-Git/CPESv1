@@ -1,0 +1,71 @@
+{
+  "session": 120,
+  "title": "May Explain Tutor-Layer Implementation Results",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "scope": "100-series May lane only",
+  "implementation": {
+    "newFunctions": [
+      {
+        "name": "_buildTutorExplanation(question)",
+        "file": "may-core.js",
+        "lines": "1071-1168",
+        "purpose": "Builds a structured tutor-layer explanation object from question data",
+        "returns": {
+          "shortAnswer": "string — concise answer in May's voice",
+          "testedConcept": "string — what concept/topic/section this tests",
+          "whyItWorks": "string — bank explanation + plain-language interpretation",
+          "commonTrap": "string — what learners commonly confuse",
+          "patternRecognition": "string — how to recognize this pattern next time",
+          "reviewFocus": "string — what to review if missed",
+          "sourceExplanationIncluded": "boolean — whether bank ExplanationCorrect is embedded"
+        }
+      },
+      {
+        "name": "_interpretExplanation(explanation, topic, isCalculation)",
+        "file": "may-core.js",
+        "lines": "1170-1185",
+        "purpose": "Extracts a plain-language key sentence from the bank explanation"
+      },
+      {
+        "name": "_inferCommonTrap(q, topic, isCalculation)",
+        "file": "may-core.js",
+        "lines": "1187-1220",
+        "purpose": "Infers a common trap from wrong-answer explanations or question type"
+      },
+      {
+        "name": "_inferPatternRecognition(q, topic, section, isCalculation)",
+        "file": "may-core.js",
+        "lines": "1222-1239",
+        "purpose": "Suggests how to recognize this question pattern in the future"
+      },
+      {
+        "name": "_inferReviewFocus(q, topic, section)",
+        "file": "may-core.js",
+        "lines": "1229-1247",
+        "purpose": "Recommends what to review if the learner missed this item"
+      }
+    ],
+    "modifiedFunctions": [
+      {
+        "name": "_explainAnswer()",
+        "file": "may-core.js",
+        "lines": "1249-1300",
+        "change": "Delegates to _buildTutorExplanation; assembles 6-section structured output instead of flat explanation-only output"
+      },
+      {
+        "name": "miniExplain()",
+        "file": "may-core.js",
+        "lines": "3760-3796",
+        "change": "Uses _buildTutorExplanation for richer mini-explain with trap awareness"
+      }
+    ]
+  },
+  "safetyPreserved": {
+    "_guardedSpeak": "Still wraps explain output in pilot mode",
+    "antiFabrication": "Thin-explanation fallback says 'bank explanation is brief, so I'll keep this grounded' — no invented ASC/FASB/COSO citations",
+    "answerLeakage": "No changes to answer-gating — miniExplain still blocks before attempt",
+    "examMode": "No changes — _explainAnswer unreachable during exam mode via handleAction gate",
+    "predictionLanguage": "No pass/fail/exam-ready language in any tutor-layer output"
+  },
+  "note": "All existing section-specific coaching (caseWhatMattered, caseApproachNote, topic progress) preserved alongside new tutor-layer sections."
+}

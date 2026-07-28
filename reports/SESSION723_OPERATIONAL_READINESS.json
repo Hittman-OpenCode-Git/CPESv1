@@ -1,0 +1,174 @@
+{
+  "title": "S723 Operational Readiness Audit",
+  "date": "2026-07-26",
+  "auditor": "Agent M — S723 Governance Closure Program",
+  "scope": "Governance framework: AGENTS.md, governance-guard.js, test_governance_guard.js, BACKUP_PROTOCOL.md, REVISION_HISTORY.md, DEFECT_LIBRARY.md, CURRENT_BASELINES.md, SESSION_STATUS, opencode.json",
+  "maintainability": {
+    "score": 78,
+    "assessment": "HIGH",
+    "strengths": [
+      "AGENTS.md (232 lines) covers 13 governance areas comprehensively — a new operator can understand the entire framework from it",
+      "BACKUP_PROTOCOL.md (28 lines) is concise with hard rules, script safety rules, and incident reference",
+      "DEFECT_LIBRARY.md (155KB, 32 DL entries) uses consistent schema: ID, Class, Domain, Severity, Root Cause, Pattern, Detection Rule, Correction, Regression Test",
+      "opencode.json registers all plugins (governance-guard included), all instruction files, and 4 named commands",
+      "Key file locations pinned in AGENTS.md §8 — 12 external references with paths and purposes",
+      "Two project-level skills documented in AGENTS.md §10 with file locations",
+      "Session startup protocol (AGENTS.md §9) defines 6 mandatory steps for any new session"
+    ],
+    "gaps": [
+      "AGENTS.md §9.1/§9.2 references stale certified count (~1,080) — actual is 2,181 per CURRENT_BASELINES.md. New operator would start with wrong baseline.",
+      "AGENTS.md §9.1 instructs reading SESSION_STATUS_2026-07-24.md which is itself stale (2,031 vs actual 2,181). No newer SESSION_STATUS file exists.",
+      "No master document explaining session numbering conventions (S309, S530, S723, etc.) or the relationship between session series (300-series, 500-series, 700-series, 800-series)",
+      "No document explaining agent coordination protocols within orchestrated sessions — only high-level 'spawn N agents' guidance",
+      "The distinction between 'Waves', 'Batches', 'Phases', and 'Tiers' is used across documents but never formally defined in one place",
+      "No automated staleness check for SESSION_STATUS or key reference documents referenced by AGENTS.md"
+    ],
+    "recommendations": [
+      "Update AGENTS.md §9 lines 133-135 to reference CURRENT_BASELINES.md certified count (2,181) instead of stale (~1,080)",
+      "Point AGENTS.md §9.1 to CURRENT_BASELINES.md as the authoritative certified-count source, not SESSION_STATUS",
+      "Create a SESSION_NAMING_CONVENTIONS.md document defining 300/500/700/800 series meanings and Wave/Batch/Phase/Tier definitions",
+      "Add a T0 automated checklist script that reads CURRENT_BASELINES.md and verifies all 15 hashes + warns on doc staleness",
+      "Consider reducing AGENTS.md's dependency on dated SESSION_STATUS files — prefer CURRENT_BASELINES.md for all counts"
+    ]
+  },
+  "auditability": {
+    "score": 82,
+    "assessment": "HIGH",
+    "strengths": [
+      "REVISION_HISTORY.md: 1,015,892 bytes, 177 session entries, 16,750 lines — complete multi-month audit trail",
+      "Every defect has a unique DL-ID, root cause analysis, detection rule, correction, and regression test specification",
+      "CURRENT_BASELINES.md has SHA-256 hashes for 15 runtime-critical files with provenance, last-modified dates, and verification logs",
+      "Governance guard Rule 1 traces question_state changes to REVISION_HISTORY.md; Rule 4 traces answer-key changes to recomputed notes",
+      "Session entries in REVISION_HISTORY.md consistently include before/after counts, QID lists, and governance attestations",
+      "DEFECT_LIBRARY.md entries include cross-references to session reports and revision history entries"
+    ],
+    "gaps": [
+      "SESSION_STATUS file is stale (2026-07-24, reports 2,031; actual is 2,181 per CURRENT_BASELINES.md 2026-07-26). No newer SESSION_STATUS was generated.",
+      "DL-008 audit trail has been refuted: prior sessions reported 67 Certified DL-008 items; S802 proved all were DL-029 forward-scan false positives. The false count propagated through SESSION_STATUS and REVISION_HISTORY entries for an unknown duration.",
+      "CURRENT_BASELINES.md §3 (Defect & Risk Status) still lists 67 Certified DL-008 items as CRITICAL as of 2026-07-26 — contradicting S802's finding of 0 actual DL-008. Defect status section not updated after S802.",
+      "No automated consistency check between REVISION_HISTORY.md, DEFECT_LIBRARY.md, SESSION_STATUS, and CURRENT_BASELINES.md — cross-document contradictions can persist undetected",
+      "DEFECT_LIBRARY.md has 32 entries but DL-IDs have gaps (no DL-011, DL-034) — unclear if these are reserved or skipped"
+    ],
+    "recommendations": [
+      "Update CURRENT_BASELINES.md §3 to reflect S802's finding of 0 Certified DL-008 items (remove the 3 OPEN CRITICAL lines for DL-008)",
+      "Generate SESSION_STATUS_2026-07-26.md as part of S723 closeout — SESSION_STATUS should be per-session, not per-date",
+      "Add a cross-document consistency check script that verifies: (a) certified counts match between CURRENT_BASELINES and REVISION_HISTORY, (b) SESSION_STATUS defect lists match CURRENT_BASELINES, (c) AGENTS.md references point to files that exist",
+      "Add REVISION_HISTORY.md entry for every corrective finding that refutes prior claims (e.g., S802 refutation of DL-008 counts should have an explicit entry noting the refutation)",
+      "Consider versioning SESSION_STATUS with a session-ID prefix rather than date prefix to enable multiple status docs per day"
+    ]
+  },
+  "repeatability": {
+    "score": 85,
+    "assessment": "HIGH",
+    "strengths": [
+      "Governance guard test suite: 20/20 PASS — re-runnable with `node scripts/test_governance_guard.js`, no external dependencies, pure logic tests",
+      "CURRENT_BASELINES.md provides SHA-256 hashes for all 15 runtime-critical files — verifiable with any hash tool",
+      "T0 → Tmid → Tend checkpoint sequence is documented in AGENTS.md §13.1 with timing, minimum checks, and escalation conditions",
+      "G1–G5 reconciliation runbook exists at reports/SESSION31_RECONCILIATION_EXECUTION.md",
+      "Full runtime governance procedures are at reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md with drift signals and response paths",
+      "Validation pipeline is available via `node scripts/validate.js` and as a named command in opencode.json",
+      "Backup protocol (BACKUP_PROTOCOL.md) is mechanical: copy → confirm size → proceed. No judgment required.",
+      "Session startup protocol (AGENTS.md §9) is 6 concrete steps — any operator can execute them"
+    ],
+    "gaps": [
+      "Governance guard DL-008 detection method (±1200 char window from ExplanationWrong matching CorrectChoice) is the same forward-scan approach documented as DL-029-vulnerable. The plugin can produce false positives when CC is >1200 chars from EW.",
+      "The '13 runtime hashes' referenced in AGENTS.md §13.1 does not map cleanly to CURRENT_BASELINES.md which lists 15 files. Which 2 are excluded? Not documented.",
+      "No automated T0 baseline verification script — hash comparison must be done manually by reading CURRENT_BASELINES.md and computing hashes",
+      "CURRENT_BASELINES.md baseline verification log (11 entries, §5) is sparse for a project with 177 documented sessions — most sessions did not log baseline checks",
+      "No automated test for the governance guard plugin running against actual pack files (the test suite uses synthetic test strings only)"
+    ],
+    "recommendations": [
+      "Replace governance guard's ±1200 char window DL-008 detection with full-object Function-constructor parse per S802's 8 permanent prevention rules",
+      "Clearly label which 13 of the 15 hashed files in CURRENT_BASELINES.md are the 'runtime-critical 13' and which 2 are supplementary",
+      "Create `scripts/t0_baseline_verify.js` that reads CURRENT_BASELINES.md, computes hashes, and reports PASS/FAIL per file",
+      "Add an integration test to test_governance_guard.js that loads a real pack file (or a representative fragment) and verifies Rule 2 detection",
+      "Establish minimum T0/Tend logging requirements: every session should log baseline verification in REVISION_HISTORY.md or a dedicated baseline log"
+    ]
+  },
+  "governance_maturity": {
+    "cmm_level": 3,
+    "cmm_label": "Defined",
+    "rationale": "The governance framework demonstrates all characteristics of CMM Level 3 (Defined). Standardized processes exist and are documented for: defect tracking (DEFECT_LIBRARY.md with 32 entries using consistent schema), change management (REVISION_HISTORY.md with 177 entries), backup protocol (BACKUP_PROTOCOL.md), session startup (AGENTS.md §9), runtime governance (AGENTS.md §13 with T0/Tmid/Tend checkpoints), baseline verification (CURRENT_BASELINES.md), and quality standards (CAQS_v1.0.md). Processes are institutionalized across sessions — any operator following AGENTS.md can execute them. Level 2 (Managed) is achieved through session tracking, defect categorization, and basic metrics. Level 4 (Quantitatively Managed) is partially achieved (SHA-256 hashes, certified counts, quality scores) but inconsistent: SESSION_STATUS is stale, baseline verification is incomplete across sessions, and cross-document metrics are not automatically reconciled. Level 5 (Optimizing) is partially achieved through the defect library's learning loop (DL-019 led to backup protocol, DL-029 led to 8 prevention rules, DL-020 led to string-aware parsers) but improvement is reactive — triggered by discovered defects rather than proactive measurement. The governance guard itself has not been updated to incorporate its own learned lessons (still uses DL-029-vulnerable window scanning).",
+    "self_correcting": true,
+    "self_correcting_evidence": [
+      "DL-019 (concurrent-write data loss) → BACKUP_PROTOCOL.md enacted with hard rules",
+      "DL-020 (validator brace-matcher undercount) → string-aware parser applied to extraction methods",
+      "DL-029 (regex block-scan false positives) → 8 permanent prevention rules codified in S802 findings",
+      "DL-022 (null-array crash) → Insertions 1+2 applied to app.js with independent verification",
+      "DEFECT_LIBRARY.md entries consistently include root cause analysis, detection rules, and regression tests — each defect generates reusable prevention",
+      "AGENTS.md §12 (No Staged Findings) was enacted after DL-019/DL-020 were lost in session reports without defect library entries"
+    ],
+    "self_correcting_limitations": [
+      "The governance guard plugin still uses the DL-029-vulnerable ±1200 char window method despite the project proving it produces ~75% false positives",
+      "CURRENT_BASELINES.md §3 still lists DL-008 as CRITICAL with 67 items — S802 resolved this but the document wasn't updated",
+      "Self-correction is reactive (triggered by defects) not proactive (triggered by metrics trending out of tolerance)",
+      "No automated cross-document consistency verification catches stale/contradictory information between CURRENT_BASELINES, SESSION_STATUS, and DEFECT_LIBRARY"
+    ]
+  },
+  "operational_gaps": {
+    "undocumented_processes": [
+      "Session lifecycle management: how sessions are numbered (S309 vs S530 vs S723), created, and closed — no formal definition",
+      "The relationship between session series (300-series = analysis, 500-series = content, 700-series = governance, 800-series = correction) is used in REVISION_HISTORY but never formally documented in AGENTS.md or a reference doc",
+      "Agent coordination protocol for orchestrated sessions: AGENTS.md §13.3 says 'spawn three separate agents' but doesn't explain how agents communicate or avoid stepping on each other",
+      "The distinction between 'Wave', 'Batch', 'Phase', and 'Tier' is used extensively across REVISION_HISTORY.md and DEFECT_LIBRARY.md but these terms are never formally defined",
+      "How CURRENT_BASELINES.md gets updated after content changes — the document says 'Generated: 2026-07-24 — Session 20' and 'Updated: 2026-07-26 — Session 537', but the update process (who, when, what triggers it) is not documented",
+      "What constitutes a 'governance correction lane' (800-series) vs a 'content certification lane' (500-series) — lane rules are implicit in session reports but not codified"
+    ],
+    "single_points_of_failure": [
+      "REVISION_HISTORY.md is a single 1MB file (16,750 lines) with no alternative copy or automated backup — if corrupted, the entire audit trail is lost",
+      "SESSION_STATUS is maintained as a single file per date — if not regenerated (as happened between 2026-07-24 and 2026-07-26), the status document becomes stale with no automatic fallback",
+      "CURRENT_BASELINES.md is manually maintained — if the maintainer forgets to update §3 (Defect & Risk Status) after defect resolution, contradictory information persists (DL-008 CRITICAL:67 vs actual:0)",
+      "The governance guard plugin is the sole automated enforcement mechanism — if it's disabled or its window-scan limitation (DL-029) causes a false-negative cascade, no secondary guard exists",
+      "Knowledge transfer depends on AGENTS.md being current — but AGENTS.md contains stale numbers (~1,080 certified) that a new operator would trust"
+    ],
+    "dependency_chain_gaps": [
+      "AGENTS.md §9.1 → SESSION_STATUS_2026-07-24.md (STALE: 2,031 vs 2,181). No pointer to the canonical source (CURRENT_BASELINES.md).",
+      "AGENTS.md §9.2 → REVISION_HISTORY.md for 'most recent certification state (~1,080 certified)' — this parenthetical is hardcoded in AGENTS.md and diverges from actual state (2,181).",
+      "CURRENT_BASELINES.md §3 → claims 67 Certified DL-008 items (CRITICAL) but S802 proved 0 actual — the defect status section is a dependency that was not updated after the resolving session.",
+      "AGENTS.md §13.1 → '13 runtime hashes vs CURRENT_BASELINES.md' but CURRENT_BASELINES.md lists 15 files total (3 app core + 2 May layer + 5 MCQ packs + 5 scored cases) — which 2 are excluded from the 13? Not specified.",
+      "AGENTS.md §13.6 → references 6 external documents (SESSION53, SESSION31, Governance Risk Register, CURRENT_BASELINES, FD-045 Reference, SESSION52) — a 7-hop dependency chain where any broken link breaks the runtime governance process.",
+      "CURRENT_BASELINES.md → depends on accurate human maintenance of all 15 hashes, 5 certified-count rows, and 3 defect-status sections — no script verifies these are consistent with source files."
+    ]
+  },
+  "readiness_for_maintenance_mode": "CONDITIONALLY_READY",
+  "conditions": [
+    {
+      "id": "COND-1",
+      "priority": "CRITICAL",
+      "condition": "Update AGENTS.md §9 to reference CURRENT_BASELINES.md (2,181 certified) instead of stale numbers (~1,080) and stale SESSION_STATUS (2,031)",
+      "rationale": "New operator's first action per AGENTS.md §9 is to read wrong numbers. This is the most impactful single fix."
+    },
+    {
+      "id": "COND-2",
+      "priority": "CRITICAL",
+      "condition": "Update CURRENT_BASELINES.md §3 (Defect & Risk Status) to reflect S802 findings — remove 67 Certified DL-008 (proven 0 actual)",
+      "rationale": "The governance baseline document reports a CRITICAL risk that was proven false. This erodes trust in all baseline data."
+    },
+    {
+      "id": "COND-3",
+      "priority": "HIGH",
+      "condition": "Generate fresh SESSION_STATUS for 2026-07-26 reflecting actual state (2,181 certified, 0 Certified DL-008, S802 refutation documented)",
+      "rationale": "SESSION_STATUS is the primary handoff document per AGENTS.md §9.1. It has been stale for 2 days."
+    },
+    {
+      "id": "COND-4",
+      "priority": "HIGH",
+      "condition": "Fix governance guard DL-008 detection to use Function-constructor parse instead of ±1200 char window (per S802's 8 permanent prevention rules)",
+      "rationale": "The plugin enforces a rule using a method the project itself proved unreliable. Contradicts the self-correcting principle."
+    },
+    {
+      "id": "COND-5",
+      "priority": "MEDIUM",
+      "condition": "Create automated baseline verification script (scripts/t0_baseline_verify.js) so T0 checkpoints are mechanical, not manual",
+      "rationale": "Reduces single-point-of-failure risk in CURRENT_BASELINES.md maintenance."
+    },
+    {
+      "id": "COND-6",
+      "priority": "MEDIUM",
+      "condition": "Document session naming conventions and Wave/Batch/Phase/Tier definitions in AGENTS.md or a dedicated reference",
+      "rationale": "These terms are used across 177 session entries and 32 defect entries with no formal definition."
+    }
+  ],
+  "verdict": "OPERATIONAL_AUDIT_COMPLETE",
+  "summary": "The CMA Part 1 Exam Simulator governance framework is well-architected, extensively documented, and demonstrates institutional learning from past failures. It scores 78/100 on maintainability, 82/100 on auditability, and 85/100 on repeatability. CMM Level 3 (Defined) is achieved — processes are standardized and documented. The framework is self-correcting in that defects produce lasting process improvements (BACKUP_PROTOCOL, prevention rules, string-aware parsers). However, CONDITIONALLY_READY status reflects three critical document-staleness issues: AGENTS.md contains stale certified counts, SESSION_STATUS has not been updated since 2026-07-24, and CURRENT_BASELINES.md §3 still reports DL-008 CRITICAL risks that S802 proved were 100% false positives. Additionally, the governance guard plugin itself uses a DL-029-vulnerable detection method — the framework's own lessons have not been applied to itself. With the 6 conditions above addressed, the framework would be READY for maintenance mode."
+}

@@ -1,0 +1,189 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "modelVersion": "S307-EW-1.0",
+  "summary": {
+    "totalMissingEWSlots": 2403,
+    "mcqEWFillPct": 89.4,
+    "caseEWFillPct": 3.9,
+    "itemsWithLowEW": 539,
+    "domains": {}
+  },
+  "byDomain": {
+    "A": {
+      "domain": "External Financial Reporting",
+      "ewDebtCount": 58,
+      "totalItems": 433,
+      "certified": 425,
+      "avgUiqs": 70.3,
+      "debtIntensity": 0.64,
+      "priority": "STANDARD"
+    },
+    "B": {
+      "domain": "Planning, Budgeting & Forecasting",
+      "ewDebtCount": 68,
+      "totalItems": 568,
+      "certified": 562,
+      "avgUiqs": 71.3,
+      "debtIntensity": 0.55,
+      "priority": "STANDARD"
+    },
+    "C": {
+      "domain": "Performance Management",
+      "ewDebtCount": 70,
+      "totalItems": 574,
+      "certified": 564,
+      "avgUiqs": 74.1,
+      "debtIntensity": 0.44,
+      "priority": "ELEVATED"
+    },
+    "D": {
+      "domain": "Cost Management",
+      "ewDebtCount": 72,
+      "totalItems": 451,
+      "certified": 445,
+      "avgUiqs": 70.1,
+      "debtIntensity": 0.46,
+      "priority": "ELEVATED"
+    },
+    "E": {
+      "domain": "Internal Controls",
+      "ewDebtCount": 141,
+      "totalItems": 442,
+      "certified": 264,
+      "avgUiqs": 62.5,
+      "debtIntensity": 1,
+      "priority": "IMMEDIATE"
+    },
+    "F": {
+      "domain": "Technology & Analytics",
+      "ewDebtCount": 130,
+      "totalItems": 431,
+      "certified": 281,
+      "avgUiqs": 62.4,
+      "debtIntensity": 0.88,
+      "priority": "IMMEDIATE"
+    }
+  },
+  "bySource": {
+    "Pack B": {
+      "count": 500,
+      "avgUiqs": 76.4,
+      "certified": 500,
+      "gradeDist": {
+        "A": 30,
+        "B": 395,
+        "C": 75,
+        "D": 0,
+        "F": 0
+      }
+    },
+    "Pack A": {
+      "count": 500,
+      "avgUiqs": 74.8,
+      "certified": 481,
+      "gradeDist": {
+        "A": 93,
+        "B": 286,
+        "C": 106,
+        "D": 15,
+        "F": 0
+      }
+    },
+    "Case Bank 4": {
+      "count": 78,
+      "avgUiqs": 72.4,
+      "certified": 78,
+      "gradeDist": {
+        "A": 0,
+        "B": 55,
+        "C": 20,
+        "D": 3,
+        "F": 0
+      }
+    },
+    "Case Bank 5": {
+      "count": 75,
+      "avgUiqs": 72.2,
+      "certified": 75,
+      "gradeDist": {
+        "A": 0,
+        "B": 57,
+        "C": 11,
+        "D": 7,
+        "F": 0
+      }
+    },
+    "Case Bank 2": {
+      "count": 78,
+      "avgUiqs": 71.8,
+      "certified": 78,
+      "gradeDist": {
+        "A": 0,
+        "B": 57,
+        "C": 13,
+        "D": 8,
+        "F": 0
+      }
+    },
+    "Case Bank 3": {
+      "count": 79,
+      "avgUiqs": 70.6,
+      "certified": 79,
+      "gradeDist": {
+        "A": 0,
+        "B": 48,
+        "C": 27,
+        "D": 4,
+        "F": 0
+      }
+    },
+    "Pack E": {
+      "count": 500,
+      "avgUiqs": 66,
+      "certified": 500,
+      "gradeDist": {
+        "A": 34,
+        "B": 13,
+        "C": 453,
+        "D": 0,
+        "F": 0
+      }
+    },
+    "Pack D": {
+      "count": 500,
+      "avgUiqs": 63.3,
+      "certified": 350,
+      "gradeDist": {
+        "A": 0,
+        "B": 264,
+        "C": 89,
+        "D": 135,
+        "F": 12
+      }
+    },
+    "Pack C": {
+      "count": 500,
+      "avgUiqs": 62.9,
+      "certified": 350,
+      "gradeDist": {
+        "A": 5,
+        "B": 214,
+        "C": 139,
+        "D": 120,
+        "F": 22
+      }
+    },
+    "Case Bank 1": {
+      "count": 90,
+      "avgUiqs": 62.6,
+      "certified": 50,
+      "gradeDist": {
+        "A": 8,
+        "B": 42,
+        "C": 6,
+        "D": 21,
+        "F": 13
+      }
+    }
+  }
+}

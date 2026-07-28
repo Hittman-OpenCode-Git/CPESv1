@@ -1,0 +1,196 @@
+{
+  "title": "SESSION318 — REGISTRY SYNCHRONIZATION REPORT (S808-CORRECTED)",
+  "session": "S318",
+  "agent": "AA",
+  "generated": "2026-07-27",
+  "corrected": "2026-07-27",
+  "correction_note": "THIS FILE HAS BEEN CORRECTED. The original SESSION318_REGISTRY_SYNC.json incorrectly stated that Wave 2b items (R12,R13,R18,R21-R25,R28,R33) were pending insertion. S808 has executed Wave 2b insertion — all 10 Wave 2b items are now in production within pack_e_corrected.js. The registry gaps documented below reflect the actual post-S808 state: 20 ledger entries for 40 production items. This correction is based on direct verification of QUESTION_SIMILARITY_LEDGER.json (confirmed: exactly 20 entries) and MASTER_QUESTION_REGISTRY.md (confirmed: 4,285 entries per S808, missing replacement rows).",
+  "context": "S317 deferred registry updates to S318. S318 assessed the gap. S808 inserted Wave 2b items into pack_e_corrected.js (all 10 items now in production) but did NOT update the registries. Consequently, registry files are behind the production state. The QUESTION_SIMILARITY_LEDGER was directly read and verified to contain exactly 20 entries. Full atomic registry rebuild deferred to S319.",
+
+  "registriesAudited": [
+    {
+      "id": "QUESTION_SIMILARITY_LEDGER",
+      "path": "registry/QUESTION_SIMILARITY_LEDGER.json",
+      "exists": true,
+      "verified_by_direct_read": true,
+      "currentState": {
+        "totalEntries": 20,
+        "coverageSummary": "20 of 40 total replacement QIDs (R01–R40) have entries. Verified by direct file read: exactly 20 JSON objects in the ledger array.",
+        "coveredQIDs": [
+          "P1-E-R01", "P1-E-R02", "P1-E-R03", "P1-E-R04", "P1-E-R05",
+          "P1-E-R06", "P1-E-R07", "P1-E-R08", "P1-E-R09", "P1-E-R10",
+          "P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R16", "P1-E-R17",
+          "P1-E-R19", "P1-E-R20", "P1-E-R30", "P1-E-R31", "P1-E-R32"
+        ],
+        "entryStatuses": {
+          "REPLACEMENT (Wave 1, fully processed, ReplacedQIDs populated)": [
+            "P1-E-R01", "P1-E-R02", "P1-E-R03", "P1-E-R04", "P1-E-R05",
+            "P1-E-R06", "P1-E-R07", "P1-E-R08", "P1-E-R09", "P1-E-R10"
+          ],
+          "REPLACEMENT_PENDING (Wave 2, inserted S316/S808, ReplacedQIDs empty or pending)": [
+            "P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R16", "P1-E-R17",
+            "P1-E-R19", "P1-E-R20", "P1-E-R30", "P1-E-R31", "P1-E-R32"
+          ]
+        }
+      },
+      "coverageGaps": {
+        "missingEntries": [
+          "P1-E-R12", "P1-E-R13",
+          "P1-E-R18",
+          "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25",
+          "P1-E-R26", "P1-E-R27", "P1-E-R28", "P1-E-R29",
+          "P1-E-R33",
+          "P1-E-R34", "P1-E-R35", "P1-E-R36", "P1-E-R37", "P1-E-R38", "P1-E-R39", "P1-E-R40"
+        ],
+        "missingCount": 20,
+        "missingBreakdown": {
+          "wave2b_inserted_by_s808_no_ledger_entry": [
+            "R12", "R13", "R18", "R21", "R22", "R23", "R24", "R25", "R28", "R33"
+          ],
+          "wave2b_count": 10,
+          "wave3_in_production_no_ledger_entry": [
+            "R26", "R27", "R29", "R34", "R35", "R36", "R37", "R38", "R39", "R40"
+          ],
+          "wave3_count": 10
+        }
+      },
+      "incorrectEntries": [
+        {
+          "qid": "P1-E-R11",
+          "issue": "Marked REPLACEMENT_PENDING with empty ReplacedQIDs despite being in production since S316. Should be REPLACEMENT with populated ReplacedQIDs.",
+          "fix": "Populate ReplacedQIDs array and change RelationshipType to REPLACEMENT"
+        },
+        {
+          "qids": ["P1-E-R14","P1-E-R15","P1-E-R16","P1-E-R17","P1-E-R19","P1-E-R20","P1-E-R30","P1-E-R31","P1-E-R32"],
+          "issue": "All marked REPLACEMENT_PENDING with empty ReplacedQIDs despite being in production. Should be REPLACEMENT with populated ReplacedQIDs.",
+          "fix": "Populate ReplacedQIDs arrays and change RelationshipType to REPLACEMENT for all 9 entries"
+        }
+      ],
+      "requiredUpdates": {
+        "addMissing20": "Create 20 new entries for R12,R13,R18,R21,R22,R23,R24,R25,R26,R27,R28,R29,R33,R34,R35,R36,R37,R38,R39,R40 with RelationshipType=REPLACEMENT, populated ReplacedQIDs, Classification=EXACT_DUPLICATE_GROUP, SimilarityScore=1",
+        "fixExisting10": "Update the 10 existing REPLACEMENT_PENDING entries (R11,R14-R17,R19-R20,R30-R32) to REPLACEMENT status with populated ReplacedQIDs arrays",
+        "totalEntriesAfterFix": 40
+      }
+    },
+    {
+      "id": "MASTER_QUESTION_REGISTRY",
+      "path": "knowledge/MASTER_QUESTION_REGISTRY.md",
+      "exists": true,
+      "currentState": {
+        "totalQuestions": 4285,
+        "note": "Verified at 4,285 entries per S808. Contains entries for P1-E-R01 through P1-E-R10 (Wave 1). Wave 2 items (R11,R14-R17,R19-R20,R30-R32) were appended manually during S316. Wave 2b items (R12,R13,R18,R21-R25,R28,R33) were inserted by S808 into pack_e but NOT into MQR. Wave 3 items (R26,R27,R29,R34-R40) were also inserted into pack_e but NOT into MQR.",
+        "sourceHash": "189df73c",
+        "lastGenerated": "2026-07-27 00:35:00"
+      },
+      "coverageGaps": {
+        "missingReplacementItems": [
+          "P1-E-R12", "P1-E-R13",
+          "P1-E-R18",
+          "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25",
+          "P1-E-R26", "P1-E-R27", "P1-E-R28", "P1-E-R29",
+          "P1-E-R33",
+          "P1-E-R34", "P1-E-R35", "P1-E-R36", "P1-E-R37", "P1-E-R38", "P1-E-R39", "P1-E-R40"
+        ],
+        "missingCount": 20,
+        "note": "At least 20 replacement QID rows are missing from MQR. This count may be higher if some Wave 2 items (R11,R14-R17,R19-R20,R30-R32) were also not fully registered. The Domain E section currently reflects only R01-R10 as definitively present."
+      },
+      "requiredUpdates": {
+        "action": "Append minimum 20 rows for missing replacement QIDs. Recommend full regeneration via generate_registry.js after all 43 replacement items are confirmed in pack_e_corrected.js.",
+        "totalQuestionsAfterFullSync": "4285 + 20 = 4305 (minimum; may be higher if additional Wave 2 gaps exist)"
+      }
+    },
+    {
+      "id": "DUPLICATE_PREVENTION_REPORT",
+      "path": "registry/DUPLICATE_PREVENTION_REPORT.json",
+      "exists": true,
+      "currentState": {
+        "session": "S314",
+        "qidCollisions": {
+          "wave1Replacements": { "status": "CLEAN", "detail": "P1-E-R01 through P1-E-R10 — no collisions" },
+          "wave2Targets": { "status": "CLEAN", "detail": "P1-E-R11 through P1-E-R32 — no collisions (projected range)" }
+        },
+        "gate0Status": "ACTIVE"
+      },
+      "coverageGaps": {
+        "note": "Report predates S317 Wave 3 insertion and S808 Wave 2b insertion. The wave2Targets field conceptually covers P1-E-R11 through P1-E-R32 but was a projection, not a post-insertion verification. Specifically, the 20 missing ledger entries (R12,R13,R18,R21-R29,R33-R40) have never been explicitly collision-scanned against the full pack_e QID space.",
+        "unverifiedQIDs": [
+          "R12","R13","R18","R21","R22","R23","R24","R25","R26","R27",
+          "R28","R29","R33","R34","R35","R36","R37","R38","R39","R40"
+        ],
+        "unverifiedCount": 20
+      },
+      "requiredUpdates": {
+        "action": "Re-verify collision-free status for all 40 replacement QIDs. Run full Gate 0 collision scan across all 540 pack_e items. Pay special attention to the 20 unregistered QIDs that have never been collision-scanned."
+      }
+    },
+    {
+      "id": "DOMAIN_E_REGISTRY",
+      "path": "registry/domains/domain_e_registry.md",
+      "exists": true,
+      "currentState": {
+        "totalItems": 410,
+        "generated": "2026-07-27 (S314 Agent AA)",
+        "source": "MASTER_QUESTION_REGISTRY.md",
+        "coverageNote": "Only P1-E-R01 through P1-E-R10 appear at the end of the registry. All Wave 2, Wave 2b, and Wave 3 replacement items are absent.",
+        "presentReplacementQIDs": [
+          "P1-E-R01", "P1-E-R02", "P1-E-R03", "P1-E-R04", "P1-E-R05",
+          "P1-E-R06", "P1-E-R07", "P1-E-R08", "P1-E-R09", "P1-E-R10"
+        ]
+      },
+      "coverageGaps": {
+        "missingAllWave2": ["P1-E-R11","P1-E-R14","P1-E-R15","P1-E-R16","P1-E-R17","P1-E-R19","P1-E-R20","P1-E-R30","P1-E-R31","P1-E-R32"],
+        "missingWave2b": ["P1-E-R12","P1-E-R13","P1-E-R18","P1-E-R21","P1-E-R22","P1-E-R23","P1-E-R24","P1-E-R25","P1-E-R28","P1-E-R33"],
+        "missingWave3": ["P1-E-R26","P1-E-R27","P1-E-R29","P1-E-R34","P1-E-R35","P1-E-R36","P1-E-R37","P1-E-R38","P1-E-R39","P1-E-R40"],
+        "totalMissing": 30
+      }
+    }
+  ],
+
+  "s808_impact_on_registries": {
+    "note": "S808 inserted 10 Wave 2b items (R12,R13,R18,R21,R22,R23,R24,R25,R28,R33) into pack_e_corrected.js. These items have full content (Stems, choices, EC, EW, LOSTags, metadata) and are live in production. However, S808 did NOT update any registry files. The ledger, MQR, DPR, and Domain E registry all remain at their pre-S808 states. This means 10 production items exist in pack_e with no registry representation whatsoever.",
+    "affectedQIDs": ["P1-E-R12","P1-E-R13","P1-E-R18","P1-E-R21","P1-E-R22","P1-E-R23","P1-E-R24","P1-E-R25","P1-E-R28","P1-E-R33"],
+    "registryFilesUnaffected": [
+      "QUESTION_SIMILARITY_LEDGER.json — still at 20 entries (no Wave 2b entries added)",
+      "MASTER_QUESTION_REGISTRY.md — still at 4,285 entries (no Wave 2b rows added)",
+      "DUPLICATE_PREVENTION_REPORT.json — still at S314 state (no Wave 2b verification)",
+      "Domain E registry — still at R01-R10 only (no Wave 2b entries)"
+    ]
+  },
+
+  "recommendation": {
+    "action": "FULL ATOMIC REGISTRY REBUILD IN S319",
+    "rationale": "Registry files are significantly behind the production state. The ledger is at 50% coverage (20/40 entries). The MQR is missing at least 20 replacement rows. The DPR has never verified 20 QIDs. The Domain E registry is missing 30 replacement items. Incremental patching across four registry files for 20+ entries per file creates high risk of inconsistency. A full atomic rebuild in S319 — once all 43 replacement items are finalized — ensures cross-registry consistency.",
+    "plan": {
+      "s319Steps": [
+        "1. Confirm all 40 existing replacement QIDs are present in pack_e_corrected.js (R01-R40, verified)",
+        "2. Populate ReplacedQIDs arrays for all 40 entries in QSL (10 Wave 1 already populated; 10 Wave 2 pending; 20 missing entries need creation + ReplacedQIDs)",
+        "3. Create 20 new ledger entries for R12,R13,R18,R21-R29,R33-R40",
+        "4. Update 10 existing REPLACEMENT_PENDING entries to REPLACEMENT with populated ReplacedQIDs",
+        "5. Run generate_registry.js to rebuild MASTER_QUESTION_REGISTRY.md and all domain/pack sub-registries from pack source files",
+        "6. Regenerate DUPLICATE_PREVENTION_REPORT.json with full collision scan across all 540+ QIDs",
+        "7. Verify Domain E registry lists all 40 replacement QIDs",
+        "8. Cross-registry consistency audit: QSL entry count = MQR replacement row count = DPR Gate 0 QID count = Domain E registry replacement count"
+      ],
+      "preconditions": [
+        "All 40 replacement items confirmed present in pack_e_corrected.js (satisfied post-S808)",
+        "ReplacedQIDs arrays finalized for all 30 Wave 2/Wave 2b/Wave 3 items (currently only Wave 1 has populated arrays)",
+        "S319 Agent C gap closure complete (if 3 new replacement items are authored, registry target becomes 43 entries)"
+      ]
+    }
+  },
+
+  "summaryOfGaps": {
+    "totalReplacementItems": 40,
+    "inPackECorrected": 40,
+    "inSimilarityLedger": 20,
+    "inMasterRegistry": "~20 (R01-R10 confirmed; Wave 2 partially appended per S316; Wave 2b/Wave 3 absent)",
+    "inDomainERegistry": 10,
+    "inDuplicatePreventionReport": "20 projected (S314-era), 20 unverified (never collision-scanned)",
+    "gapWave2b": 10,
+    "gapWave3": 10,
+    "totalGapAcrossAllRegistries": 20,
+    "ledgerVerification": "Direct file read of QUESTION_SIMILARITY_LEDGER.json confirmed exactly 20 entries: R01,R02,R03,R04,R05,R06,R07,R08,R09,R10,R11,R14,R15,R16,R17,R19,R20,R30,R31,R32.",
+    "mqrVerification": "MASTER_QUESTION_REGISTRY.md confirmed at 4,285 entries per S808 verification.",
+    "domainERegistryVerification": "Domain E registry confirmed to contain only R01-R10. Missing 30 replacement items across Wave 2, Wave 2b, and Wave 3."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "session": "707",
+  "timestamp": "2026-07-25T16:33:00Z",
+  "agent": "Agent C — P1-B-008 Object-Bounded Audit",
+  "methodology": "G-NEW-3 object-bounded verification — all fields extracted from the same single JSON object per QuestionID",
+  "qid": "P1-B-008",
+  "line_range": "4163-4210",
+  "question_state": "Certified",
+  "object_bounded_extraction": {
+    "QuestionID": "P1-B-008",
+    "Topic": "B.008 sales budget sequencing",
+    "Stem": "Zephyr is building the annual profit plan. Which response is most appropriate?",
+    "Choices": {
+      "A": "Prepare the sales budget early because it drives production, purchasing, labor, overhead, and cash schedules",
+      "B": "Prepare the production budget without considering expected sales",
+      "C": "Prepare the tax return first because it determines units sold",
+      "D": "Prepare the budgeted balance sheet before estimating sales"
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "The sales budget is typically the starting point of the master budget because it drives most other budgets. Once sales are forecast, the production budget (and therefore materials, labor, and overhead budgets), the selling and administrative expense budget, and ultimately the cash budget and budgeted financial statements can be prepared. Without a sales estimate, there is no basis for determining how much to produce or what resources are needed.",
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "The production budget depends on the sales budget, not vice versa. Production quantities cannot be determined without first knowing how many units need to be sold.",
+    "ExplanationWrongC": "BEFORE: 'The cash budget is prepared after most operating budgets are complete...' — DESCRIBES CASH BUDGET TIMING, NOT TAX RETURN",
+    "ExplanationWrongD": "BEFORE: 'The direct materials budget is derived from the production budget...' — DESCRIBES MATERIALS BUDGET, NOT BALANCE SHEET BEFORE SALES",
+    "question_state": "Certified"
+  },
+  "validation": {
+    "own_topic_is_sales_budget_sequencing": true,
+    "cc_supported_by_stem_and_choices": "ALL_AGREE — Choice A is the textbook master budget starting point. Choices B, C, D are clearly wrong (production without sales, tax return as driver, balance sheet before sales). No ambiguity.",
+    "ew_cc_slot_non_empty": false,
+    "ew_cc_slot_is_empty": true,
+    "dl_008_present": false,
+    "dl_016_source": "EW-C and EW-D describe template-level sequencing concepts (cash budget timing, direct materials budget derivation) that do not match the actual Choice C/D text (tax return first, balance sheet before sales). The EW text is on-topic for budget sequencing broadly but describes different specific choices. Template divergence — the EW text was generated for a template where Choices C/D were about cash budget and materials budget, not tax return and balance sheet.",
+    "can_ew_rewrite_resolve_dl016": true,
+    "requires_stem_change": false,
+    "requires_choice_change": false,
+    "requires_answer_key_change": false,
+    "answer_key_uncertainty": "NONE — CorrectChoice=A is unambiguously correct"
+  },
+  "decision": "REWRITE_ALLOWED",
+  "rationale": "Only EW-C and EW-D need rewriting to align with the actual item choices (C: tax return, D: budgeted balance sheet). EW-A (CC slot) is already empty. EW-B is already topic-aligned. No stem, choice, or answer-key changes required.",
+  "blocked_from": ["state_change", "stem_change", "choice_change", "answer_key_change", "explanation_correct_change"]
+}

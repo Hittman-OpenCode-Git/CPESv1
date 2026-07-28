@@ -1,0 +1,1569 @@
+{
+  "session": "059",
+  "timestamp": "2026-07-28",
+  "totals": {
+    "cases_analyzed": 75,
+    "certified": 74,
+    "non_certified": 1,
+    "stakeholder_only": 0,
+    "metadata_only": 2,
+    "explanation_only": 22,
+    "progression_only": 2,
+    "multiple_blockers": 44,
+    "true_content_defect": 0,
+    "no_blockers": 5
+  },
+  "certified_case_ids": [
+    "CBQ-A1",
+    "CBQ-A2",
+    "CBQ-A3",
+    "CBQ-B1",
+    "CBQ-B2",
+    "CBQ-B3",
+    "CBQ-C1",
+    "CBQ-C2",
+    "CBQ-C3",
+    "CBQ-D1",
+    "CBQ-D2",
+    "CBQ-E1",
+    "CBQ-E2",
+    "CBQ-F1",
+    "CBQ-F2",
+    "CBQ2-A2",
+    "CBQ2-A3",
+    "CBQ2-B1",
+    "CBQ2-B2",
+    "CBQ2-B3",
+    "CBQ2-C1",
+    "CBQ2-C2",
+    "CBQ2-C3",
+    "CBQ2-D1",
+    "CBQ2-D2",
+    "CBQ2-D3",
+    "CBQ2-E1",
+    "CBQ2-E2",
+    "CBQ2-F1",
+    "CBQ2-F2",
+    "CBQ3-A1",
+    "CBQ3-A2",
+    "CBQ3-B1",
+    "CBQ3-B2",
+    "CBQ3-B3",
+    "CBQ3-C1",
+    "CBQ3-C2",
+    "CBQ3-C3",
+    "CBQ3-D1",
+    "CBQ3-D2",
+    "CBQ3-D3",
+    "CBQ3-E1",
+    "CBQ3-E2",
+    "CBQ3-F1",
+    "CBQ3-F2",
+    "CBQ4-A1",
+    "CBQ4-A2",
+    "CBQ4-B1",
+    "CBQ4-B2",
+    "CBQ4-C1",
+    "CBQ4-C2",
+    "CBQ4-D1",
+    "CBQ4-D2",
+    "CBQ4-D3",
+    "CBQ4-E1",
+    "CBQ4-E2",
+    "CBQ4-E3",
+    "CBQ4-F1",
+    "CBQ4-F2",
+    "CBQ4-F3",
+    "CBQ5-B1",
+    "CBQ5-B2",
+    "CBQ5-C1",
+    "CBQ5-C2",
+    "CBQ5-C3",
+    "CBQ5-D1",
+    "CBQ5-D2",
+    "CBQ5-D3",
+    "CBQ5-E1",
+    "CBQ5-E2",
+    "CBQ5-E3",
+    "CBQ5-F1",
+    "CBQ5-F2",
+    "CBQ5-F3"
+  ],
+  "non_certified_case_ids": [
+    "CBQ5-A2"
+  ],
+  "blocker_classification": [
+    {
+      "caseID": "CBQ-A1",
+      "file": "scored_cases.js",
+      "blocker_types": [],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "No Blockers"
+    },
+    {
+      "caseID": "CBQ-A2",
+      "file": "scored_cases.js",
+      "blocker_types": [],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "No Blockers"
+    },
+    {
+      "caseID": "CBQ-B1",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "1 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-B2",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-C1",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-C2",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-D1",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-D2",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-E1",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [],
+        "progression": [
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Progression-only"
+    },
+    {
+      "caseID": "CBQ-E2",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [],
+        "progression": [
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Progression-only"
+    },
+    {
+      "caseID": "CBQ-F1",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "1 items boilerplate"
+        ],
+        "progression": [
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ-A3",
+      "file": "scored_cases.js",
+      "blocker_types": [],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "No Blockers"
+    },
+    {
+      "caseID": "CBQ-B3",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-C3",
+      "file": "scored_cases.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ-F2",
+      "file": "scored_cases.js",
+      "blocker_types": [],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "No Blockers"
+    },
+    {
+      "caseID": "CBQ2-A3",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Stakeholder",
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [
+          "Missing CompanyName",
+          "Missing Stakeholder",
+          "Missing BusinessFunction",
+          "Missing Industry",
+          "Missing CompanyType"
+        ],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "1 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-A2",
+      "file": "scored_cases2.js",
+      "blocker_types": [],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "No Blockers"
+    },
+    {
+      "caseID": "CBQ2-B1",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ2-B2",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ2-B3",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ2-C1",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-C2",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type",
+          "All 5 items Moderate (DL-032)"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-C3",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-D1",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-D2",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ2-D3",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-E1",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-E2",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-F1",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ2-F2",
+      "file": "scored_cases2.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-A1",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Stakeholder",
+        "Metadata"
+      ],
+      "details": {
+        "stakeholder": [
+          "Missing CompanyName",
+          "Missing Stakeholder",
+          "Missing BusinessFunction",
+          "Missing Industry",
+          "Missing CompanyType"
+        ],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-A2",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "4 items no standard reference",
+          "All items minimal (1-2 sentences)"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ3-B1",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ3-B2",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ3-B3",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ3-C1",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-C2",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-C3",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-D1",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ3-D2",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ3-D3",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [
+          "All items same type",
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-E1",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-E2",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-F1",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ3-F2",
+      "file": "scored_cases3.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-A1",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Stakeholder",
+        "Metadata"
+      ],
+      "details": {
+        "stakeholder": [
+          "Missing CompanyName",
+          "Missing Stakeholder",
+          "Missing BusinessFunction",
+          "Missing Industry",
+          "Missing CompanyType"
+        ],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-A2",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Metadata-only"
+    },
+    {
+      "caseID": "CBQ4-B1",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "5 items no standard reference",
+          "All items minimal (1-2 sentences)"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ4-C1",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-C2",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-D1",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ4-D2",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "6 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ4-D3",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-E1",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "1 items no standard reference"
+        ],
+        "progression": [
+          "All items same type",
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-E2",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-E3",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-F1",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-F2",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-F3",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ4-B2",
+      "file": "scored_cases4.js",
+      "blocker_types": [
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Explanation-only"
+    },
+    {
+      "caseID": "CBQ5-B2",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Stakeholder",
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [
+          "Missing CompanyName",
+          "Missing Stakeholder",
+          "Missing BusinessFunction",
+          "Missing Industry",
+          "Missing CompanyType"
+        ],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "2 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-A2",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "No items found"
+        ],
+        "explanation": [],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Metadata-only"
+    },
+    {
+      "caseID": "CBQ5-B1",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference",
+          "All items minimal (1-2 sentences)"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-C2",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [
+          "All items same type",
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-D1",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [],
+        "explanation": [
+          "3 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-D2",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified",
+          "1 items with field gaps"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-D3",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-E1",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "Cognitive levels decrease"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-E2",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-E3",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation",
+        "Progression"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [
+          "All items same type"
+        ],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-F1",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "2 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-F2",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "2 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-F3",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "4 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    },
+    {
+      "caseID": "CBQ5-C3",
+      "file": "scored_cases5.js",
+      "blocker_types": [
+        "Metadata",
+        "Explanation"
+      ],
+      "details": {
+        "stakeholder": [],
+        "metadata": [
+          "CONTRADICTION: ProductionStatus=Draft but all 5 items are Certified"
+        ],
+        "explanation": [
+          "5 items no standard reference"
+        ],
+        "progression": [],
+        "content_defect": []
+      },
+      "overall_blocker_class": "Multiple Blockers"
+    }
+  ],
+  "patterns": [
+    "Cross-file: 4 cases missing all stakeholder fields — CBQ2-A3, CBQ3-A1, CBQ4-A1, CBQ5-B2 (one per Pack 2-5)",
+    "Cross-file: 43 cases have ProductionStatus=Draft contradicting all items being Certified (D4 rubrics violation)",
+    "Cross-file: DL-032 uniform Moderate difficulty — 1 case (CBQ2-C2)",
+    "Pack 1 (scored_cases.js): All 15 cases have complete stakeholder metadata, full explanations with ASC references — Gold Standard ti

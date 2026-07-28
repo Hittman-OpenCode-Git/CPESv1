@@ -1,0 +1,110 @@
+{
+  "session": "311",
+  "agent": "P",
+  "title": "Portfolio Priority Update — Post-S310 Re-Ranking",
+  "generated": "2026-07-26",
+
+  "priorityRanking": [
+    {
+      "rank": 1,
+      "item": "Pack A Section E Clone De-Certification",
+      "itemsAffected": 37,
+      "learnerSafety": "CRITICAL — 37 Certified clone items in active learner delivery pool with identical stems",
+      "rationale": "These items provide zero additional pedagogical value and risk answer memorization. Must be de-certified before Domain E replacement begins. S804 P1 scope.",
+      "session": "S804",
+      "phase": 1
+    },
+    {
+      "rank": 2,
+      "item": "Domain E Replacement Authoring",
+      "itemsAffected": 43,
+      "learnerSafety": "MEDIUM — 129 archived items are already excluded from learner pool",
+      "rationale": "Largest remaining content gap (43 replacement items). Domain E (Internal Controls) is a heavily tested CMA Part 1 section. Pack E Section E is educationally thin — replacements improve overall quality.",
+      "sessions": "S805-S807",
+      "phase": 2
+    },
+    {
+      "rank": 3,
+      "item": "Domain F Replacement Authoring",
+      "itemsAffected": 37,
+      "learnerSafety": "MEDIUM — 110 archived items excluded from learner pool",
+      "rationale": "Second largest content gap. Domain F (Technology & Analytics) is a growing CMA Part 1 section. Greenfield authoring is faster than clone repair.",
+      "sessions": "S808-S810",
+      "phase": 3
+    },
+    {
+      "rank": 4,
+      "item": "Domain E Seed Certification",
+      "itemsAffected": 38,
+      "learnerSafety": "LOW — seeds are Unprocessed, not in learner pool",
+      "rationale": "38 retained seeds across Packs C/D Section E. Quick wins — existing items need verification + EW authoring, not full creation.",
+      "sessions": "Parallel with Domain E/F sessions",
+      "phase": "2-3 (parallel)"
+    },
+    {
+      "rank": 5,
+      "item": "Domain F Seed Certification",
+      "itemsAffected": 39,
+      "learnerSafety": "LOW — seeds are Unprocessed",
+      "rationale": "39 retained seeds across Packs C/D Section F. Parallelize with Domain E work.",
+      "sessions": "Parallel with Domain E/F sessions",
+      "phase": "2-3 (parallel)"
+    },
+    {
+      "rank": 6,
+      "item": "DL-008 Remediation — Pack C Section B",
+      "itemsAffected": 54,
+      "learnerSafety": "HIGH — 54 Certified items with non-empty EW[CC] in learner pool, but blocked in May recommendations",
+      "rationale": "Learner-safety concern but lower priority than Domain E/F gap filling. May already blocks these from recommendations. Fix after 800-series completes or in parallel.",
+      "sessions": "Post-800-series",
+      "phase": "Deferred"
+    },
+    {
+      "rank": 7,
+      "item": "DL-026 Remediation — Pack D Section C",
+      "itemsAffected": 50,
+      "learnerSafety": "LOW — items are In Audit, not in learner pool",
+      "rationale": "50 In Audit items with empty distractor slots. Blocks certification but items are already excluded from learners.",
+      "sessions": "Post-800-series",
+      "phase": "Deferred"
+    },
+    {
+      "rank": 8,
+      "item": "Remaining Modernization (DL-013/DL-031/DL-032)",
+      "itemsAffected": 851,
+      "learnerSafety": "LOW — DL-013 affects 0 Certified items",
+      "rationale": "Deferred per S310 decision. DL-013 is non-blocking (0 Certified items affected). DL-031/DL-032 partially remediated for ENHANCED_CASE_BASE. Full sweep deferred to post-certification phase.",
+      "sessions": "Post-800-series",
+      "phase": "Deferred"
+    }
+  ],
+
+  "rationale": "Learner-safety governs priority ordering. Pack A Section E clone de-certification is #1 because those 37 items are actively served to learners with zero pedagogical value. Domain E/F replacement authoring follows because content gaps are the binding constraint on portfolio completeness. DL-008/DL-026 remediation is lower because May already blocks affected items from learner recommendations. Modernization (DL-013 etc.) is deferred — non-blocking.",
+
+  "remainingModernizationInventory": {
+    "dl013": { "fields": 851, "itemsAffected": 0, "status": "DEFERRED — non-blocking" },
+    "dl031": { "items": "~500", "status": "DEFERRED — partially remediated for ENHANCED_CASE_BASE" },
+    "dl032": { "items": "~420", "status": "DEFERRED — partially remediated for ENHANCED_CASE_BASE" },
+    "uncertifiedByPack": {
+      "packA": "Sections B, C, F — 19 items remaining",
+      "packC": "Sections C-F — 150 items (38 E + 19 F addressed by 800-series; 112 remaining)",
+      "packD": "Sections C, E, F — 150 items (39 E + 20 F addressed by 800-series; 111 remaining)"
+    }
+  },
+
+  "comparisonToS310": {
+    "s310Priorities": [
+      "1. Execute Domain E replacement (129 items)",
+      "2. Execute Domain F authoring (149 items)",
+      "3. Deploy EW factory for case banks",
+      "4. Trigger modernization post-cert"
+    ],
+    "s311Changes": [
+      "Pack A Section E clone de-certification elevated to #1 (learner-safety — not identified as separate priority in S310)",
+      "Domain E/F item counts refined: 43+38=81 and 37+39=76 (vs S310's 129 and 149 — post-S803 clone consolidation)",
+      "EW factory downgraded in priority ordering — EW production discipline embedded in quality gates rather than standalone phase",
+      "DL-008/DL-026 remediation explicitly deferred (not in S310 priority list)"
+    ],
+    "deltaRationale": "S310 predated S803 clone archival. Post-S803, the active workload is much smaller (81+76=157 items vs 129+149=278 gap items). Clone group consolidation reduces the count. Pack A learner-pool risk was not surfaced in S310."
+  }
+}

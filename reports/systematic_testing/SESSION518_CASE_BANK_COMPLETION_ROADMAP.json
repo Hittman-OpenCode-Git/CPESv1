@@ -1,0 +1,103 @@
+{
+  "session": "518",
+  "timestamp": "2026-07-26T00:20:00Z",
+  "purpose": "Case-bank completion roadmap — sequenced plan to bring all 75 cases to fully certified",
+  "based_on": "SESSION518_CASE_BANK_COMPLETION_LEDGER.json",
+
+  "current_state": {
+    "certified_arrays": 1,
+    "certified_cases": 56,
+    "certified_items": 290,
+    "uncertified_cases": 19,
+    "uncertified_items": 110,
+    "arrays": [
+      {"name": "MIGRATED_CASE_BASE_A", "status": "WHOLLY_UNPROCESSED", "items": 90},
+      {"name": "MIGRATED_CASE_BASE_B", "status": "FULLY_CERTIFIED", "items": 78},
+      {"name": "MIGRATED_CASE_BASE_C", "status": "1 HOLDBACK", "items": 79},
+      {"name": "MIGRATED_CASE_BASE_D", "status": "3 HOLDBACKS", "items": 78},
+      {"name": "ENHANCED_CASE_BASE5", "status": "1 HOLDBACK", "items": 75}
+    ]
+  },
+
+  "completion_phases": [
+    {
+      "phase": 1,
+      "session": "S518 (THIS SESSION — COMPLETE)",
+      "target": "CBQ2-A3 in ENHANCED_CASE_BASE2",
+      "items": 5,
+      "action": "Explanation uplift + citation + distractor rationale + Difficulty metadata + CAQS certification",
+      "result": "5/5 Certified. ENHANCED_CASE_BASE2 now 78/78 = 100% Certified.",
+      "status": "COMPLETE"
+    },
+    {
+      "phase": 2,
+      "session": "S519",
+      "target": "CBQ3-A1 (5 items) in MIGRATED_CASE_BASE_C",
+      "items": 5,
+      "action": "Fix CASE-C1-Q4 ASC 606 choice-text defect. Run focused CAQS validation. Certify.",
+      "blocker": "Known defect: choice text 'The asset has an alternative use' contradicts ASC 606-10-25-27(c) which requires NO alternative use.",
+      "estimated_effort": "1 session (~30 minutes)",
+      "priority": "HIGHEST — single known defect, 1 case holding back full Base_C certification"
+    },
+    {
+      "phase": 3,
+      "session": "S520",
+      "target": "CBQ4-A1, CBQ4-A2, CBQ4-C1 (15 items) in MIGRATED_CASE_BASE_D",
+      "items": 15,
+      "action": "First CAQS §1.6 review for 3 greenfield cases. Independent answer-key audit. Explanation adequacy check. Certify if passes.",
+      "blocker": "Never reviewed — greenfield. Need full CAQS review.",
+      "estimated_effort": "2 sessions (~1 hour)",
+      "priority": "HIGH — 3 cases / 15 items"
+    },
+    {
+      "phase": 4,
+      "session": "S521",
+      "target": "CBQ5-B2 (5 items) in ENHANCED_CASE_BASE5",
+      "items": 5,
+      "action": "First CAQS §1.6 review. Certify if passes.",
+      "blocker": "Never reviewed — greenfield.",
+      "estimated_effort": "1 session (~30 minutes)",
+      "priority": "MEDIUM — 1 case / 5 items"
+    },
+    {
+      "phase": 5,
+      "session": "S522-S525",
+      "target": "ENHANCED_CASE_BASE / MIGRATED_CASE_BASE_A (90 items)",
+      "items": 90,
+      "action": "Full CAQS §1.6 review in 4 sub-phases: A (18 items) → B (12 items) → C (12 items) → D/E/F (48 items). Includes explanation expansion for 66 items with <100 char explanations. Includes per-item difficulty assignment.",
+      "blocker": "Largest remaining workload. 73% of items have thin explanations. Never reviewed.",
+      "estimated_effort": "3-4 sessions (~2 hours)",
+      "priority": "LOWEST — 0 Certified items, no learner pool impact (Pack 1 not wired into runtime selection)"
+    }
+  ],
+
+  "cross_cutting_enhancements": [
+    {
+      "id": "DL-032-DIFFICULTY",
+      "action": "Per-item Difficulty/DifficultyScore for all 395 remaining items",
+      "approach": "Scripted assignment by CognitiveLevel: Remember/Understand→1-2, Apply→3, Analyze→3-4, Evaluate→3-5. Then manual review of outliers.",
+      "estimated_effort": "4-6 hours",
+      "recommendation": "Run as dedicated session (S530) after all certification waves complete."
+    },
+    {
+      "id": "METADATA",
+      "action": "Case-level metadata completion (Industry, CompanyType, CompanyName, Stakeholder, BusinessFunction)",
+      "approach": "Batch assignment based on scenario analysis.",
+      "estimated_effort": "1-2 hours",
+      "recommendation": "Deferred to S531."
+    },
+    {
+      "id": "PRODUCTION_STATUS",
+      "action": "Update all Certified cases' ProductionStatus from 'Draft' to 'Production'",
+      "approach": "Scripted batch update.",
+      "estimated_effort": "30 minutes",
+      "recommendation": "Run during last certification session."
+    }
+  ],
+
+  "recommended_next_session": {
+    "primary": "S519 — CBQ3-A1 holdback remediation (1 case, 5 items, 1 known defect)",
+    "alternate": "S520 — MIGRATED_CASE_BASE_D greenfield (3 cases, 15 items)",
+    "reasoning": "CBQ3-A1 is the smallest known blocker. Fixing it brings MIGRATED_CASE_BASE_C to 100% Certified. Follow with Base_D for momentum."
+  }
+}

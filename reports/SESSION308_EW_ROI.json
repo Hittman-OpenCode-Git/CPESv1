@@ -1,0 +1,17 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "scenario": "EW-only remediation — no certification, no modernization",
+  "effort": "14 sessions (EW Phase 1-3)",
+  "expectedGains": {
+    "uiqsGain": "+8.2 (68.8 → 77.0)",
+    "ewFillRate": "60% → 88%",
+    "caseEWFillRate": "3.9% → 80%",
+    "p0Resolved": "~30 (EW-only doesn't address all P0 items — uncertified P0 remain)"
+  },
+  "limitations": [
+    "190 uncertified items remain uncertified (can't enter learner pool even with EW)",
+    "P0 items in uncertified Domains E/F blocks not resolved",
+    "No EC enrichment — instruction quality gap persists"
+  ],
+  "verdict": "EW-only has HIGH instructional ROI but leaves certification gaps. Best paired with certification."
+}

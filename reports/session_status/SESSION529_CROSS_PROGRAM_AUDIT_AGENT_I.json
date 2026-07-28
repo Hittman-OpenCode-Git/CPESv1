@@ -1,0 +1,446 @@
+{
+  "report": "SESSION529_CROSS_PROGRAM_AUDIT_AGENT_I",
+  "date": "2026-07-26",
+  "agent": "I",
+  "type": "Cross-Program Consistency Audit — Read-Only Comparison",
+  "target": "ENHANCED_CASE_BASE (scored_cases.js, CBQ-* cases, 90 items, 0 Certified)",
+  "prior_programs_audited": [
+    "ENHANCED_CASE_BASE2 (scored_cases2.js, CBQ2-* cases, 15 cases, 75 items, 100% Certified)",
+    "ENHANCED_CASE_BASE4 (scored_cases4.js, CBQ4-* cases, 15 cases, 75 items, 100% Certified)",
+    "ENHANCED_CASE_BASE5 (scored_cases5.js, CBQ5-* cases, 17 cases, 85 items, 100% Certified)",
+    "MIGRATED_CASE_BASE_D (scored_cases4.js, CASE-D1..D15, 75 items, 100% Certified)"
+  ],
+  "closure_report_source": "reports/session_status/SESSION528_D_PROGRAM_CLOSURE.md",
+
+  "1_EXPLANATION_STANDARDS": {
+    "ENHANCED_CASE_BASE_current_state": {
+      "average_explanation_length_chars": 96,
+      "range_chars": "60–200",
+      "pattern": "Formula-only or single-sentence. No authoritative citations, no distractor rationale, no business interpretation, no common-trap identification.",
+      "sample_CBQ-A1-Q1": "360,000 x 3/12 = 90,000. Cash collected in advance is recognized as revenue only as service is provided. (126 chars)",
+      "sample_CBQ-A1-Q3": "FOB shipping point indicates control transfers at shipment before year-end. (83 chars)",
+      "sample_CBQ-B1-Q3": "January production needs = 18,800 x 2 = 37,600. Desired ending materials = 10% of February production needs (22,600 x 2 x 10%) = 4,520. Purchases = 37,600 + 4,520 - 3,900 = 38,220. A common error is to use the wrong beginning materials balance. (284 chars — longest observed)",
+      "no_distractor_explanations": true,
+      "no_ExplanationWrong_fields": true,
+      "accounting_principle_coverage": "~50% of items have AccountingPrinciple field; ~0% have BusinessInterpretation field"
+    },
+    "prior_programs_comparison": {
+      "ENHANCED_CASE_BASE2": {
+        "average_explanation_length": "120–400 chars",
+        "certified": true,
+        "pattern": "Similar to ENHANCED_CASE_BASE — short, formula-only. No distractor explanations. No ExplanationWrong fields. This is the CLOSEST comparator since BASE2 received minimal expansion before certification.",
+        "quality_gap_vs_D_Program": "7–10x shorter than post-certification D-Program standard"
+      },
+      "ENHANCED_CASE_BASE4": {
+        "average_explanation_length": "500–2000 chars",
+        "certified": true,
+        "pattern": "Detailed with ASC/COSO citations, common-trap warnings, distractor rationale inline in Explanation field. Has BusinessInterpretation and AccountingPrinciple fields.",
+        "sample_CBQ4-A1-Q1": "464 chars — Under ASC 805... Goodwill = $2,500,000 - $2,100,000 = $400,000... A common error is to include the patent or trademark value in the net assets total.",
+        "sample_CBQ4-A1-Q5": "371 chars — Under ASC 350-20... The old two-step process... was eliminated by ASU 2017-04... A candidate selecting... is thinking of the pre-2017 two-step impairment test."
+      },
+      "ENHANCED_CASE_BASE5": {
+        "average_explanation_length": "300–800 chars (mixed)",
+        "certified": true,
+        "pattern": "Mixed quality — some items have detailed explanations (400+, CBQ5-B2), others are short (135 chars, CBQ5-B1-Q5 fill). Has AccountingPrinciple and BusinessInterpretation fields on most items.",
+        "notable": "CBQ5-B1 certified with very short Q5 explanation ('Exponential smoothing is a weighted moving average forecasting technique.' = 73 chars). Lower standard than D-Program."
+      },
+      "MIGRATED_CASE_BASE_D": {
+        "average_explanation_length": 1282,
+        "range": "500–2,055",
+        "growth_from_baseline": "8.0x (+84,162 chars across 75 items)",
+        "citations_rate": "72.0% ASC/COSO/NIST/IIA",
+        "formula_shown": "32.0%",
+        "trap_identified": "18.7%",
+        "distractor_rationale": "16.3% (inline within Explanation — no separate ExplanationWrong fields)",
+        "business_interpretation": "84.0%",
+        "certified": true,
+        "pattern": "Gold standard for case explanations. Detailed, multi-paragraph. Has StudyLinks, distractor rationale inline, authoritative citations, common-trap warnings. ProductionStatus: Production on cases D4+."
+      }
+    },
+    "pre_post_certification_delta": {
+      "D_Program": "8.0x growth (from ~120 chars to 1,282 chars avg). Pre: formula only. Post: principle + formula + substitution + distractor rationale + trap warning + business application.",
+      "CBQ5": "~3-5x growth (from ~100 chars to 300-800 chars). Less consistent than D-Program.",
+      "CBQ4": "~5-10x growth (from ~100 chars to 500-2000 chars). Most consistent post-certification quality.",
+      "CBQ2": "~1-2x growth (minimal expansion before certification). Closest to current ENHANCED_CASE_BASE state.",
+      "recommended_target_for_BASE": "Minimum 8-10x expansion (from ~96 chars avg to 800-1,300 chars avg) to match D-Program standard. Each explanation must grow from single-sentence to multi-paragraph mini-lesson.",
+      "quality_floor_recommendation": "250 chars for Remember/Understand items, 500 chars for Apply, 800+ chars for Analyze/Evaluate — consistent with D-Program Wave 5 ceiling (avg 1,840 chars)."
+    }
+  },
+
+  "2_CERTIFICATION_MET_STANDARDS": {
+    "what_prior_programs_received": {
+      "mandatory_additions": [
+        "Explanation expansion (formula + principle + substitution + business interpretation + trap warning)",
+        "Distractor rationale for all select/multi/match items (inline in Explanation field since no separate ExplanationWrong schema)",
+        "Authoritative citations (ASC, COSO, NIST, IIA, IMA references where applicable)",
+        "CognitiveLevel assignment (all 75 D-Program items received this)",
+        "Difficulty/DifficultyScore calibration (Wave 1 was recalibrated post-hoc — see closure report C2)",
+        "AccountingPrinciple field populated on all items",
+        "BusinessInterpretation field populated on all items",
+        "question_state populated at item and case level"
+      ],
+      "optional_additions_observed": [
+        "StudyLinks (D-Program — IMA LOS URLs + OpenStax textbook links)",
+        "RevisionHistory entries for each certification wave",
+        "Case-level metadata enrichment (Industry, CompanyName, Stakeholder, BusinessFunction — partially present in BASE already)",
+        "CommonTrapReference (present in BASE but not consistently)",
+        "DecisionTreeReference (present in BASE on calculation items)"
+      ],
+      "structural_fixes_applied": [
+        "D-Program Wave 1 difficulty recalibration (4 Difficult/4 items → Moderate-Easy/2 — closure report C2)",
+        "CASE-D15 SectionTags [C,D] enumeration violation documented (not yet fixed — closure report M4)",
+        "CASE-D1/D2/D3 ProductionStatus Draft → Production promotion needed (closure report H1)",
+        "No DL-008 issues (cases use single-block architecture — no ExplanationWrong fields, so DL-008 category does not apply to case-study items)"
+      ]
+    },
+    "what_ENHANCED_CASE_BASE_will_need": {
+      "critical_expansion_needs": [
+        "All 90 item explanations must expand from ~96 chars to 500-1,500 chars",
+        "Add authoritative citations (ASC 606, ASC 230, ASC 740, ASC 470, COSO etc.)",
+        "Add distractor rationale for all select/multi/match items (inline in Explanation)",
+        "Add common-trap identification to every item",
+        "Add business interpretation for every item",
+        "Verify all numeric answer keys independently (9+ numeric items expected)",
+        "Verify all Correct values for select/multi/match items"
+      ],
+      "metadata_normalization_needed": [
+        "Populate AccountingPrinciple field on items that lack it (~50% currently missing)",
+        "Populate BusinessInterpretation field on items that lack it (~95% currently missing)",
+        "Fix CalculationRequired=true on non-calculation items (CBQ-A1-Q6 multi, CBQ-C1-Q4 select, CBQ-C1-Q5 multi, CBQ-C1-Q6 match)",
+        "Fix duplicate LearningObjectives (CBQ-B1 has 'Analyze production budget' listed twice)",
+        "Verify all items have Difficulty/DifficultyScore consistent with CognitiveLevel",
+        "Add StudyLinks or equivalent reference fields",
+        "Populate CommonTrapReference on items where trap is identified but not tagged"
+      ],
+      "structural_risks": [
+        "ENHANCED_CASE_BASE uses single-block architecture (no separate metadata/content blocks) — zero DL-008/DL-016/DL-029 risk",
+        "ENHANCED_CASE_BASE does NOT have ExplanationWrong fields — DL-008/DL-018/DL-021/DL-025/DL-026 defect categories do not apply to case-study items (unless app.js rendering expects ExplanationWrong fields from case items)",
+        "Must verify app.js case-item rendering path for expected fields"
+      ],
+      "difficulty_calibration_needed": [
+        "Most BASE items labeled Moderate(3) but test at Apply(2) level with simple arithmetic — should be Moderate-Easy(2) or Easy(1)",
+        "Select/multi items labeled Difficult(4) without evaluating distractor deceptiveness",
+        "Recommend recalibrating 50-60% of BASE items downward by 1 tier (matches D-Program Wave 1 recalibration pattern)"
+      ]
+    }
+  },
+
+  "3_WAVE_STRUCTURE": {
+    "how_prior_programs_segmented": {
+      "D_Program": {
+        "waves": 5,
+        "items_per_wave": 15,
+        "cases_per_wave": 3,
+        "sessions": "S523–S527",
+        "wave_breakdown": {
+          "W1_S523": "Cases D1-D3 (Sections A,B,C) — 15 items, explanations 500-677, CogLevel: U7/App4/Ana2/Eva2",
+          "W2_S524": "Cases D4-D6 (Sections D,E,F) — 15 items, explanations 804-1,394, CogLevel: U9/App2/Rem4",
+          "W3_S525": "Cases D7-D9 (Sections A,B,C) — 15 items, explanations 1,148-1,552, CogLevel: U9/App2/Ana1/Rem3",
+          "W4_S526": "Cases D10-D12 (Sections D,E,F) — 15 items, explanations 1,235-1,540, CogLevel: U11/App1/Rem3",
+          "W5_S527": "Cases D13-D15 (Sections A,B,C/D) — 15 items, explanations 1,612-2,055, CogLevel: U10/App2/Rem3"
+        },
+        "pattern": "AB-C → DE-F → AB-C → DE-F → AB-CD rotation. Per-session: 3 cases = 15 items. Batch cap: <30 items (governance-guard Rule 5)"
+      },
+      "CBQ2_BASE2_Certification": {
+        "pattern": "Minimal-expansion certification — items were already Certified with short explanations. No wave structure documented.",
+        "lesson": "CBQ2 represents the LOWEST acceptable certification standard. ENHANCED_CASE_BASE should target a higher standard."
+      },
+      "CBQ4_BASE4_Certification": {
+        "pattern": "Pre-certified during authoring — detailed explanations included at creation time. No separate certification wave structure documented.",
+        "lesson": "CBQ4 is closest to the TARGET standard for ENHANCED_CASE_BASE certification."
+      }
+    },
+    "recommended_wave_structure_for_ENHANCED_CASE_BASE": {
+      "rationale": "15 CBQ cases × 6 items = 90 items. At 3 cases/wave (18 items, well under 30-item cap), this requires 5 waves + governance closeout.",
+      "waves": [
+        {
+          "wave": "W1",
+          "cases": "CBQ-A1, CBQ-A2, CBQ-A3",
+          "sections_covered": ["A"],
+          "items": 18,
+          "itemIDs": "CBQ-A1-Q1..Q6, CBQ-A2-Q1..Q6, CBQ-A3-Q1..Q6",
+          "priority": "CRITICAL",
+          "topics": "Revenue recognition, deferred taxes, cash flow, comprehensive income, inventory",
+          "expected_explanation_growth": "80→800 avg chars",
+          "estimated_session_duration": "45-90 minutes",
+          "batch_count": "≤2 batches of ≤28 (Rule 5 cap)"
+        },
+        {
+          "wave": "W2",
+          "cases": "CBQ-B1, CBQ-B2, CBQ-B3",
+          "sections_covered": ["B"],
+          "items": 18,
+          "itemIDs": "CBQ-B1-Q1..Q6, CBQ-B2-Q1..Q6, CBQ-B3-Q1..Q6",
+          "priority": "CRITICAL",
+          "topics": "Production budget, materials budget, cash budget, rolling forecast, regression, forecasting",
+          "expected_explanation_growth": "100→900 avg chars"
+        },
+        {
+          "wave": "W3",
+          "cases": "CBQ-C1, CBQ-C2, CBQ-C3",
+          "sections_covered": ["C"],
+          "items": 18,
+          "itemIDs": "CBQ-C1-Q1..Q6, CBQ-C2-Q1..Q6, CBQ-C3-Q1..Q6",
+          "priority": "CRITICAL",
+          "topics": "Variance analysis, transfer pricing, ROI, residual income, responsibility accounting",
+          "expected_explanation_growth": "100→950 avg chars"
+        },
+        {
+          "wave": "W4",
+          "cases": "CBQ-D1, CBQ-D2, CBQ-E1, CBQ-E2 (2+2 = 24 items recommended; or split to keep ≤3 cases per wave)",
+          "sections_covered": ["D", "E"],
+          "items": 24,
+          "note": "Consider splitting into W4 (CBQ-D1, CBQ-D2 — 12 items) and W4b (CBQ-E1, CBQ-E2 — 12 items) to stay under D-Program's 15-item wave precedent",
+          "priority": "HIGH",
+          "topics": "Cost management, internal controls"
+        },
+        {
+          "wave": "W5",
+          "cases": "CBQ-F1, CBQ-F2",
+          "sections_covered": ["F"],
+          "items": 12,
+          "priority": "HIGH",
+          "topics": "Technology and analytics"
+        },
+        {
+          "wave": "W6",
+          "cases": "Governance closeout (all 15 cases)",
+          "sections_covered": ["All"],
+          "items": 90,
+          "priority": "CRITICAL",
+          "description": "Cross-wave audit: verify all 90 items Certified, 0 answer-key errors, consistent explanation standards across waves, difficulty calibration verified, ProductionStatus promoted, RevisionHistory complete"
+        }
+      ],
+      "total_waves": "5 certification + 1 closeout = 6 waves",
+      "total_items_per_wave_max": 18,
+      "governance_guard_rule5_compliance": "All waves ≤ 28 items (Rule 5 max = 30). W4 at 24 items needs confirmation or split.",
+      "alternative_compact_structure": "If session efficiency is preferred: 5 cases per wave (30 items = exactly at Rule 5 cap). This completes in 3 waves instead of 5.",
+      "session_mapping": "S529 (W1-A), S530 (W2-B), S531 (W3-C), S532 (W4-D/E), S533 (W5-F), S534 (W6-Closeout) — or compact 3-wave mapping: S529 (A,B items=36→2 sessions), S530 (C,D,E), S531 (F+Closeout)"
+    }
+  },
+
+  "4_COMMON_DEFECTS": {
+    "defects_observed_in_ENHANCED_CASE_BASE": {
+      "DL-031_Difficulty_Inflation": {
+        "severity": "High",
+        "affected": "~50-60% of items",
+        "description": "Simple arithmetic items (single-step, formula given) labeled Moderate(3). Definition-match items labeled Moderate(3) when they test Recall/Understand. Example: CBQ-A1-Q5 (50,000 = 200,000 × 25%) labeled Moderate(3) — should be Easy(1) or Moderate-Easy(2).",
+        "precedent": "Same defect identified in D-Program Wave 1 (closure report C2) and in Session 700 MCQ audit (DL-031). Systematic across all 5 packs."
+      },
+      "Explanation_Quality_Gap": {
+        "severity": "Critical",
+        "affected": "100% of items",
+        "description": "Average 96 chars vs. D-Program post-certification 1,282 chars. No mini-lesson structure. No ASC/COSO citations, no distractor rationale, no business interpretation, no trap warnings.",
+        "required_growth": "8-13x expansion"
+      },
+      "CalculationRequired_Mislabeling": {
+        "severity": "Medium",
+        "affected": "~4 items (confirmed: CBQ-A1-Q6, CBQ-C1-Q4, CBQ-C1-Q5, CBQ-C1-Q6)",
+        "description": "Select/multi/match items where no calculation is needed have CalculationRequired: true. This is a metadata accuracy defect."
+      },
+      "Duplicate_LearningObjectives": {
+        "severity": "Low",
+        "affected": "CBQ-B1 case",
+        "description": "\"Analyze production budget\" appears twice in LearningObjectives array."
+      },
+      "Missing_AccountingPrinciple": {
+        "severity": "Medium",
+        "affected": "~50% of items",
+        "description": "Many items lack the AccountingPrinciple field entirely. Present on some but not all calculation items."
+      },
+      "Missing_BusinessInterpretation": {
+        "severity": "High",
+        "affected": "~95% of items",
+        "description": "Almost no items have the BusinessInterpretation field. CBQ-B1-Q3 has it (added in template), most others do not."
+      },
+      "Case_Level_Metadata_Inconsistency": {
+        "severity": "Low",
+        "affected": "~30% of cases",
+        "description": "Some cases (CBQ-A1) lack Industry, CompanyName, Stakeholder fields while others (CBQ-B1) have them. Inconsistent pre-certification metadata completeness."
+      }
+    },
+    "defect_categories_that_do_NOT_apply_to_case_studies": {
+      "DL-008": "Cases use single-block architecture — no ExplanationWrong fields exist. DL-008 is exclusively an MCQ defect.",
+      "DL-018": "No ExplanationWrong fields to be missing. Does not apply.",
+      "DL-021": "No ExplanationWrong fields to be absent. Does not apply.",
+      "DL-025_DL-026": "No ExplanationWrong fields to be empty. Does not apply.",
+      "DL-016": "No dual-block architecture. Does not apply.",
+      "DL-010": "No separate ExplanationWrong fields to be misassigned. Does not apply.",
+      "DL-029": "No CC-offset scanning issue for case items. Does not apply.",
+      "DL-012": "No clone redundancy pattern in case base. Does not apply.",
+      "DL-013": "No template boilerplate in case explanations. Does not apply."
+    },
+    "unique_case_study_defects": {
+      "DL-023_Exhibit_Headers": {
+        "status": "Clean in ENHANCED_CASE_BASE",
+        "description": "All CBQ exhibits use proper Headers+Rows format. No Body-only table exhibits found."
+      },
+      "DL-032_Uniform_Difficulty": {
+        "status": "Partially applicable",
+        "description": "CBQ cases have SOME difficulty variation (3 items are Difficult, rest Moderate) but not enough. Only 2 tiers used (Moderate + Difficult) instead of 5 tiers (Easy through Very Difficult)."
+      }
+    }
+  },
+
+  "5_BLIND_SPOTS": {
+    "what_prior_programs_missed_that_BASE_should_catch": {
+      "BLINDSPOT_1_AnswerKey_Independent_Verification": {
+        "description": "D-Program verified 9/9 numeric items after certification. ENHANCED_CASE_BASE should pre-verify ALL numeric answers BEFORE starting certification waves. Recalculate every Correct value independently from exhibit data.",
+        "estimated_numeric_items": "~30-40 of 90 items",
+        "risk": "If answer-key errors exist (as in DL-030 where 5 MCQs had wrong CC), fixing them after certification creates revision-history complexity."
+      },
+      "BLINDSPOT_2_Exhibit_Data_Consistency": {
+        "description": "D-Program has 0 exhibits across all 15 cases (closure report M2). ENHANCED_CASE_BASE has 1-2 exhibits per case with rich data. Must verify: numbers in exhibits are internally consistent, every exhibit row is consumed by at least one item, subtotals add up.",
+        "risk": "Exhibit data errors were never caught in D-Program because D-Program has no exhibits. This is a new risk class for BASE."
+      },
+      "BLINDSPOT_3_CrossCase_Domain_Coverage": {
+        "description": "D-Program covered all 6 blueprint domains (A-F). BASE already covers A-F. Verify no domain gaps and no inter-domain topic repeats within the same case.",
+        "risk": "CASE-D15 SectionTags [C,D] violation precedent — cross-domain tags E+F only allowed."
+      },
+      "BLINDSPOT_4_Explanation_Wave_Drift": {
+        "description": "D-Program Wave 1 had shorter explanations (500-677 chars) vs. Wave 5 (1,612-2,055 chars). This quality gradient means early waves were certified at a lower standard. BASE should set an explicit quality floor that ALL waves must meet.",
+        "risk": "Wave-1-certified items may pass with minimal expansion while Wave-5 items receive much more thorough treatment. Learners see inconsistent quality.",
+        "recommendation": "Enforce a minimum 500-char explanation floor for ALL items, regardless of wave. Apply retroactive review to Wave 1 cases if needed."
+      },
+      "BLINDSPOT_5_CognitiveLevel_Distribution": {
+        "description": "D-Program has 61% Understand vs. 15% CAQS target. CBQ5 has similar heavy Understand concentration. BASE, with its Apply/Evaluate mix, may provide better distribution — but should be verified before certification.",
+        "risk": "If BASE items are certified with accurate CognitiveLevel assignments but poor distribution, the overall pool still fails CAQS §6.2 psychometric targets."
+      },
+      "BLINDSPOT_6_Difficulty_Recalibration_Deferral": {
+        "description": "D-Program Wave 1 difficulty was recalibrated post-hoc (closure report C2). BASE should calibrate difficulty BEFORE certification to avoid retroactive changes on Certified items.",
+        "risk": "Certifying items with wrong difficulty and fixing later creates governance-guard Rule 4 (answer-key change) alert cascade and REVISION_HISTORY overhead."
+      },
+      "BLINDSPOT_7_Backup_Protocol_Compliance": {
+        "description": "D-Program had 2 backup protocol violations (S525/S526 files in root, not backups/). BASE certification sessions must pre-verify backup paths.",
+        "risk": "Root-level .bak files violate PROJECT_CONSTITUTION.md §11.4. Cumulative governance debt."
+      },
+      "BLINDSPOT_8_ProductionStatus_Promotion": {
+        "description": "D-Program has CASE-D1/D2/D3 ProductionStatus: 'Draft' despite question_state: 'Certified' (closure report H1). BASE should promote ProductionStatus to 'Production' as part of each certification wave.",
+        "risk": "Inconsistent ProductionStatus after certification is a metadata hygiene issue that requires a separate remediation session."
+      }
+    }
+  },
+
+  "CROSS_PROGRAM_COMPARISON_TABLE": {
+    "columns": ["Program", "Items", "Items/Case", "Certified%", "Exhibits/Case", "ExplanationAvg", "DistractorRationale", "ASC_COSO_Citations", "BusinessInterpretation", "ProductionStatus"],
+    "rows": [
+      {
+        "program": "ENHANCED_CASE_BASE (CBQ)",
+        "items": 90,
+        "items_per_case": 6,
+        "certified_pct": "0%",
+        "exhibits_per_case": "1-2",
+        "explanation_avg": "~96 chars",
+        "distractor_rationale": "None",
+        "citations": "None",
+        "business_interpretation": "~5%",
+        "production_status": "Draft"
+      },
+      {
+        "program": "ENHANCED_CASE_BASE2 (CBQ2)",
+        "items": 75,
+        "items_per_case": 5,
+        "certified_pct": "100%",
+        "exhibits_per_case": "1-2",
+        "explanation_avg": "~200 chars",
+        "distractor_rationale": "Minimal",
+        "citations": "Occasional",
+        "business_interpretation": "~20%",
+        "production_status": "Draft item / Production case"
+      },
+      {
+        "program": "ENHANCED_CASE_BASE4 (CBQ4)",
+        "items": 75,
+        "items_per_case": 5,
+        "certified_pct": "100%",
+        "exhibits_per_case": "1-2",
+        "explanation_avg": "~800 chars",
+        "distractor_rationale": "Yes (inline)",
+        "citations": "Consistent",
+        "business_interpretation": "~80%",
+        "production_status": "Draft item"
+      },
+      {
+        "program": "ENHANCED_CASE_BASE5 (CBQ5)",
+        "items": 85,
+        "items_per_case": 5,
+        "certified_pct": "100%",
+        "exhibits_per_case": "1-2",
+        "explanation_avg": "~500 chars",
+        "distractor_rationale": "Mixed",
+        "citations": "Mixed",
+        "business_interpretation": "~50%",
+        "production_status": "Draft item"
+      },
+      {
+        "program": "MIGRATED_CASE_BASE_D (CASE-D)",
+        "items": 75,
+        "items_per_case": 5,
+        "certified_pct": "100%",
+        "exhibits_per_case": 0,
+        "explanation_avg": "1,282 chars",
+        "distractor_rationale": "Yes (inline)",
+        "citations": "72%",
+        "business_interpretation": "84%",
+        "production_status": "Draft (D1-D3) / Production (D4+)"
+      }
+    ]
+  },
+
+  "KEY_FINDINGS": [
+    "ENHANCED_CASE_BASE is the ONLY remaining uncertified case-bank array (0/90 Certified). All four prior programs are 100% Certified.",
+    "Explanation quality gap is the largest deficiency: ~96 chars avg vs. D-Program post-certification 1,282 chars. Requires 8-13x expansion.",
+    "ENHANCED_CASE_BASE has richer exhibit data (1-2 per case) than D-Program (0 exhibits), making it pedagogically superior but requiring additional exhibit-data-consistency verification.",
+    "No DL-008/DL-016/DL-029 risk — case-study single-block architecture means MCQ-specific defect categories do not apply. This simplifies the certification pipeline.",
+    "Difficulty inflation (DL-031) is systematic: most items labeled Moderate(3) but testing at Apply(2) level with simple arithmetic. Recalibrate BEFORE certification to avoid post-hoc fixes.",
+    "Prior programs show quality gradient across waves (D-Program W1: 500-677 → W5: 1,612-2,055). BASE should enforce a uniform quality floor across all waves.",
+    "ENHANCED_CASE_BASE metadata is more complete than pre-certification D-Program items (already has CognitiveLevel, DifficultyDrivers, CalculationComplexity, etc.). Metadata enrichment workload is lower than D-Program.",
+    "ENHANCED_CASE_BASE has 6 items/case vs. 5 in prior programs — certification workload is ~20% higher per case (7.5 cases @ 6 vs. 9 cases @ 5 for 90 items).",
+    "CBQ2 certification standard (short explanations, minimal expansion) represents the lowest acceptable floor. D-Program standard (1,282 avg, detailed) represents the quality ceiling. BASE should target at least CBQ4 quality level.",
+    "Critical pre-certification step not done in prior programs: independent answer-key verification BEFORE any certification waves. DL-030 (5 wrong CCs in MCQ pool) demonstrates why this must be front-loaded."
+  ],
+
+  "RECOMMENDED_EXECUTION_ORDER": [
+    "Step 0 (Pre-Wave): Independent answer-key audit — recalculate all 30-40 numeric items from exhibit data. Flag any mismatches.",
+    "Step 0b (Pre-Wave): Difficulty calibration — reassign Difficulty/DifficultyScore for all 90 items to match CognitiveLevel and actual complexity.",
+    "Step 1: W1 — Cases CBQ-A1/A2/A3 (Section A, 18 items): Expand explanations to 500+ chars, add ASC/COSO citations, business interpretation, distractor rationale.",
+    "Step 2: W2 — Cases CBQ-B1/B2/B3 (Section B, 18 items)",
+    "Step 3: W3 — Cases CBQ-C1/C2/C3 (Section C, 18 items)",
+    "Step 4: W4 — Cases CBQ-D1/D2 + CBQ-E1/E2 (Sections D+E, 24 items or split into two sessions)",
+    "Step 5: W5 — Cases CBQ-F1/F2 (Section F, 12 items)",
+    "Step 6: Governance Closeout (all 90 items): Cross-wave quality consistency audit, ProductionStatus promotion, RevisionHistory consolidation, backup compliance check.",
+    "Each wave: backup-before-write, ≤30 items per governance-guard Rule 5, independent post-wave verification."
+  ],
+
+  "EXPECTED_CHALLENGES": [
+    "CHALLENGE 1 — Time Per Item: Writing 500-1,200 char explanations with ASC citations, trap warnings, and distractor rationale for 90 items will require significant session time. D-Program consumed 5 sessions for 75 items at 15 items/wave. At 18 items/wave, expect 90 minutes+ per wave.",
+    "CHALLENGE 2 — Quality Consistency Across Waves: Prior programs showed quality improvement across waves (later waves had better explanations). Must enforce uniform minimum-char-per-explanation floor and consistent citation style.",
+    "CHALLENGE 3 — Exhibit Data Verification: 15 CBQ cases have ~25 exhibits with varying data. Verify numerical consistency across all exhibit rows before certifying items that depend on them.",
+    "CHALLENGE 4 — Difficulty Calibration Pre-Wave: Recalibrating 90 items before starting waves is a separate workload. Without it, items will be certified with inflated difficulty — same as D-Program Wave 1 issue.",
+    "CHALLENGE 5 — 6-Item Cases: ENHANCED_CASE_BASE has 6 items/case vs. 5 in prior programs. Extra item per case means ~20% more work per case. 18-item waves may need splitting to 2 cases (12 items) per session.",
+    "CHALLENGE 6 — No ExplanationWrong Fields: All distractor rationale must go inline in the Explanation field. The rendering engine must be verified to handle this correctly for case-study items.",
+    "CHALLENGE 7 — Legacy CASE-* Items in Same File: scored_cases.js also contains 15 legacy cases (CASE-A1, CASE-B1, etc.) totaling 120 items. The CBQ cases share the same ENHANCED_CASE_BASE array. Care must be taken to ONLY modify CBQ-* items and leave legacy items untouched.",
+    "CHALLENGE 8 — Backup Protocol for Large File: scored_cases.js is 8,512 lines (~380KB). Each backup copy is ~380KB. 6 waves = ~2.3MB of backup files. Ensure backups/ directory has adequate space."
+  ],
+
+  "RAW_COUNTS_VERIFIED": {
+    "scored_cases_js_ItemID_count": 210,
+    "scored_cases_js_Certified_count": 135,
+    "scored_cases_js_Unprocessed_count": 105,
+    "scored_cases_js_CBQ_estimated_items": 90,
+    "scored_cases_js_CBQ_cases": 15,
+    "scored_cases_js_legacy_cases": 15,
+    "scored_cases2_js_Certified_count": 183,
+    "scored_cases4_js_CBQ4_cases": 15,
+    "scored_cases4_js_CASE_D_cases": 15,
+    "scored_cases5_js_Certified_count": 90,
+    "scored_cases5_js_cases": 17,
+    "explanation_sample_count_BASE": 18,
+    "explanation_sample_count_D_Program": 15,
+    "explanation_sample_count_BASE4": 10,
+    "explanation_sample_count_BASE5": 10,
+    "exhibit_count_BASE": 24,
+    "exhibit_count_D_Program": 0,
+    "legacy_cases_in_ENHANCED_CASE_BASE": ["CASE-A1","CASE-A2","CASE-A-C1","CASE-A-C4","CASE-A-C9","CASE-A-D1","CASE-A-D5","CASE-A-D10","CASE-B1","CASE-B3","CASE-B8","CASE-E6","CASE-EF1","CASE-F7","CASE-F11"]
+  }
+}

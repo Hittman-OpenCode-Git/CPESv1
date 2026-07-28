@@ -1,0 +1,210 @@
+{
+  "session": "724",
+  "type": "Read-Only Governance Strategy",
+  "date": "2026-07-26",
+  "precondition": {
+    "certified_count": 2182,
+    "total_items": 2500,
+    "certified_pct": 87.3,
+    "dl008_remaining": 0,
+    "dl008_confirmed_by": "S723 Function constructor parse",
+    "governance_guard_status": "20/20 PASS",
+    "s309_decision": "DEFER 600-series",
+    "s309_binding_constraint": "Author capacity, not tooling inadequacy"
+  },
+
+  "agent_e_conflict_analysis": {
+    "summary": "600-series overlaps with 300/700/800 on three dimensions: quality judgment (300), governance authority (700), and certification handoff (800). Two overlap risks are LOW; the 800 handoff risk is MEDIUM and the most concerning. The S309 bottleneck analysis already established that author capacity — not tooling — is the binding constraint. Adding a 600-series lane does not address the actual bottleneck and introduces governance overhead that the HYBRID strategy has already eliminated.",
+    
+    "risks": [
+      {
+        "id": "E-001",
+        "overlap_with": "300 (Analytics)",
+        "risk_level": "LOW",
+        "condition": "600 only produces content artifacts (EW text, EC expansions, template libraries) for 800 to consume. 300's analytics are downstream of content — 300 measures quality of what exists. 600 would be upstream, feeding the pool that 300 later measures.",
+        "escalation_trigger": "If 600 starts making quality judgments — assigning difficulty scores, producing difficulty distribution recommendations, flagging items as 'high quality' vs. 'needs work' — this would duplicate 300's function. 300's DQS/EQS/BQS/ExQS/UIQS stack is the sole quality analyst. DCS v1.1 (§7) is the sole difficulty calibration authority. Quality judgments from 600 would create competing analytics signals.",
+        "mitigation": "600 must not produce quality ratings, difficulty scores, or Bloom's classifications. Its output must be limited to content artifacts — raw text, templates, drafted explanations. Quality assessment deferred to 800 (certification review) and 300 (portfolio analytics).",
+        "severity_if_triggered": "MEDIUM — competing quality signals cause contradictory certification recommendations. Example: 600 labels an item 'Ready' with difficulty=3 while 300's UIQS rates it <60 and DCS v1.1 dictates difficulty=2 based on CL. The 800 certifier receives conflicting signals."
+      },
+      {
+        "id": "E-002",
+        "overlap_with": "700 (Governance)",
+        "risk_level": "LOW",
+        "condition": "600 operates as a content-creation lane, never as a governance lane. 700 is in maintenance mode. 600 would NOT govern — it produces content, it does not make rules.",
+        "escalation_trigger": "If 600 independently writes to governance artifacts — DEFECT_LIBRARY.md (new DL entries), REVISION_HISTORY.md (governance changes, not content-change entries), governance-guard.js, CAQS_v1.0.md, or DCS v1.1 — this would fragment governance authority. The governance guard plugin has 5 rules active; none are lane-scoped and none would gate 600-specific governance changes.",
+        "mitigation": "Explicit charter rule: 600-series sessions may write to REVISION_HISTORY.md only for content-change entries (not governance changes). All other governance artifacts are read-only for 600. The governance guard plugin is lane-agnostic — all 5 rules apply to 600's write operations the same as any other lane. Note: governance guard does NOT currently block writes to DEFECT_LIBRARY.md or CAQS — these files aren't in SOURCE_FILE_RE or RULE 3 scope. This is a latent risk.",
+        "severity_if_triggered": "HIGH — governance fragmentation is the single hardest type of defect to undo. Prior governance regressions (DL-019 concurrent-write data loss, DL-028 tooling regression) show that autonomous agents operating on pack files without governance boundaries can silently corrupt the pool."
+      },
+      {
+        "id": "E-003",
+        "overlap_with": "800 (Certification)",
+        "risk_level": "MEDIUM",
+        "condition": "600 prepares items → 800 certifies items. This creates a two-stage pipeline where currently the HYBRID strategy embeds both operations in a single 800-series session (author + certify in one pass). The handoff boundary between 'prepared' and 'certified' needs explicit definition.",
+        "escalation_triggers": [
+          "THROUGHPUT MISMATCH: 600 produces items faster than 800 can certify them. Creates a queue of 'prepared but not certified' items that looks like progress but produces zero pool growth. Currently the binding constraint is author capacity (~50 items/session in factory model). If 600 can prepare >50 items/session but 800 only certifies ~30/session, the queue grows unbounded.",
+          "ANCHORING BIAS: 800 certifiers receive 'pre-certified' items with pre-written EW/EC content. The reviewer may assume correctness because another lane already produced it. This erodes the independence of the CAQS §1.6 six-dimension audit. Prior sessions (S802) revealed that pre-written content often carried undetected errors because reviewers did not independently verify.",
+          "HANDOFF LATENCY: Each handoff (600 → 800) adds session overhead — the 800 certifier must re-familiarize with items that another session produced. Currently, the 800 certifier authors and certifies in the same mental context, eliminating handoff friction."
+        ],
+        "mitigation": "If 600 is launched, the handoff protocol must require: (1) 800 independently re-derives every numerical answer, (2) 800 independently verifies CorrectChoice against stem+choices, (3) 600-prepared items carry a 'prepared_by_600: true' metadata flag that signals to 800 that enhanced scrutiny is required, (4) batch size limits at handoff boundary (≤28 items per 800 review batch).",
+        "severity_if_triggered": "HIGH — the DL-030 CorrectChoice errors (5 items, all in Certified pool, all needing answer-key correction) were produced by exactly this problem: pre-authored content was certified without independent re-derivation."
+      }
+    ],
+
+    "severity": "MEDIUM — the 800 handoff risk is real and costly. The 300 and 700 overlaps are manageable with explicit boundaries but add governance surface area. The core issue is that 600-series does not address the actual bottleneck (author capacity), and its startup cost (3-4 sessions) equals its projected savings (3-4 sessions). Launching 600 is a net-zero investment that adds complexity without throughput gain.",
+
+    "recommendation": "DEFER 600-series. If authoring velocity becomes the binding constraint (demonstrated by repeated 800-series sessions where the certifier is idle waiting for draft content), re-evaluate. The current HYBRID strategy with embedded EW authoring in 800-series certification waves is the Pareto-optimal approach per S307/S308/S309."
+  },
+
+  "agent_j_boundary_rules": {
+    "summary": "The proposed MAY/NOT boundaries are sound and align with the existing governance framework. Seven MAY operations and seven MAY NOT operations are validated against governance guard rules, AGENTS.md, CAQS v1.0, DCS v1.1, and the defect library. Four boundary ambiguities identified — all need resolution before any 600-series launch.",
+
+    "validated_boundaries": {
+      "may": [
+        {
+          "operation": "Draft ExplanationWrong content",
+          "validation": "PASS — Content authoring. Governance guard Rule 2 (BLOCK) gates the write operation for DL-008 compliance. No other rule implicated. Aligns with CAQS §4.2 distractor explanation standards.",
+          "guard_rules": ["RULE 2 (BLOCK) — EW content must not re-contaminate DL-008"]
+        },
+        {
+          "operation": "Author distractor explanations",
+          "validation": "PASS — Same as draft EW. Must comply with CAQS §4.2 (EV1-EV8), CAQS §4.4 (EV8: EW[CC] must be empty). Governance guard Rule 2 enforces this automatically at write time.",
+          "guard_rules": ["RULE 2 (BLOCK)", "RULE 5 (BLOCK) — ≤30 items per batch"]
+        },
+        {
+          "operation": "Prepare items for certification review",
+          "validation": "PASS — Preparation is content authoring, not certification. However 'preparation' must not include assigning question_state, difficulty scores, or making certification judgments (see ambiguity J-A1 below).",
+          "guard_rules": ["RULE 1 (WARN) — if question_state write detected"]
+        },
+        {
+          "operation": "Create template systems and standards libraries",
+          "validation": "PASS — Infrastructure authoring. No pack file modification. Templates and libraries are separate artifacts from the question pool. However, if a template becomes a de facto standard that contradicts DCS v1.1 or CAQS v1.0, ambiguity arises (see J-A2 below).",
+          "guard_rules": ["No guard rules triggered (non-pack file)"]
+        },
+        {
+          "operation": "Expand ExplanationCorrect text",
+          "validation": "PASS — Content authoring. EC expansion must not introduce factual errors (CAQS §3: auto-fail for technical inaccuracy), must not contradict the stored CorrectChoice, and must not introduce DL-008 (EW[CC] non-empty). Same guard rules apply.",
+          "guard_rules": ["RULE 2 (BLOCK)", "RULE 5 (BLOCK)"]
+        }
+      ],
+      "may_not": [
+        {
+          "operation": "Certify items (question_state changes)",
+          "validation": "PASS — 800-series is the sole certifier. Governance guard Rule 1 warns on question_state changes. AGENTS.md §8: 'AI SHALL NOT change answers without justification.' Certification is answer-key determination + six-dimension verification — both are 800 domain exclusively.",
+          "guard_rules": ["RULE 1 (WARN)"]
+        },
+        {
+          "operation": "Recalibrate difficulty scores",
+          "validation": "PASS — DCS v1.1 is the sole difficulty calibration authority (700-series). DCS §7 defines CL classification protocol — this is a governance function, not a content-authoring function. Difficulty assignment requires cognitive-demand assessment, not template-based labeling. S309 confirmed DL-031 (systematic difficulty inflation) as a defect caused by template-based difficulty assignment — exactly the risk if 600 recalibrates.",
+          "guard_rules": ["No guard rule directly blocks difficulty changes — this is a governance gap (see V-005)"]
+        },
+        {
+          "operation": "Govern (change governance rules, defect library entries)",
+          "validation": "PASS — 700-series governance. DEFECT_LIBRARY.md entries must be authored by 700-series sessions with root-cause analysis. 600 discovering a defect must flag it to 700, not file the DL entry itself. AGENTS.md §12: 'Any defect finding... must be logged to DEFECT_LIBRARY.md... before the discovering session closes.' But per the collision matrix, the 600 lane should flag findings to 700 — 700 writes the entry.",
+          "guard_rules": ["No guard rule directly blocks DEFECT_LIBRARY.md writes (outside SOURCE_FILE_RE scope)"]
+        },
+        {
+          "operation": "Modify answer keys (CorrectChoice, Correct)",
+          "validation": "PASS — Governance guard Rule 4 WARNs on answer-key changes. AGENTS.md §8: AI SHALL NOT 'Change answers without justification.' Answer-key modification requires independent re-derivation + REVISION_HISTORY.md entry — 800-series certification function.",
+          "guard_rules": ["RULE 4 (WARN) — answer-key changes must include recomputed verification note"]
+        },
+        {
+          "operation": "Run CAQS §1.6 six-dimension verification",
+          "validation": "PASS — This is the core 800-series certification function. CAQS §1.6 defines build-time AI verification across 6 dimensions. 800-series certifiers perform this. 600-series preparers produce inputs to this process but do not execute it.",
+          "guard_rules": ["No guard rule directly blocks — this is a process boundary enforced by lane charter"]
+        },
+        {
+          "operation": "Publish to learner pool",
+          "validation": "PASS — Same as certification. Learner-pool eligibility is gated by question_state === 'Certified' (CAQS §1.7.1). Only 800-series can change question_state to 'Certified.' Therefore 600 cannot publish.",
+          "guard_rules": ["RULE 1 (WARN)"]
+        },
+        {
+          "operation": "Modify pack file question_state fields",
+          "validation": "PASS — Same as certification and publish. question_state changes are the mechanism by which items enter the learner pool. This is exclusively 800-series authority.",
+          "guard_rules": ["RULE 1 (WARN)"]
+        }
+      ]
+    },
+
+    "boundary_ambiguities": [
+      {
+        "id": "J-A1",
+        "ambiguity": "'Prepare items for certification review' — does this include assigning tentative difficulty, CognitiveLevel, or topic labels?",
+        "detail": "If 600 assigns provisional metadata (difficulty=3, CL=Apply, topic='cash collections') during preparation, this is a quality judgment that enters the 300 (analytics) and 700 (DCS authority) domains. 800 would need to independently verify each label — which is effectively a full CAQS §1.6 audit anyway, negating the 600 division of labor. If 600 does NOT assign provisional labels, what does 'preparation' produce beyond draft text?",
+        "resolution": "Explicit charter clause: 600-prepared items carry a metadata flag 'prepared_by_600: true' but do NOT carry difficulty, CL, or topic labels unless those labels are independently verified by 800 during certification. 600 may suggest labels in a separate metadata artifact but may not write them into pack files."
+      },
+      {
+        "id": "J-A2",
+        "ambiguity": "600-authored template systems vs. DCS v1.1 / CAQS v1.0 authority",
+        "detail": "If 600 creates an 'EW template library' that states 'items of type X should have distractor explanations following pattern Y', and this pattern contradicts CAQS §4.2 (EV3: 'Correct answer must reference the accounting principle by name') or DCS v1.1 difficulty modifiers — which document takes precedence? DCS v1.1 is 700-series Draft. CAQS v1.0 is active. 600-authored libraries are below both in the source hierarchy (PROJECT_CONSTITUTION.md §9). But if operators follow 600 templates without cross-checking CAQS, systematic quality erosion occurs.",
+        "resolution": "Charter clause: 600-authored templates and standards libraries must include a preamble citing the governing CAQS and DCS sections. 800-series certifiers must verify 600-authored content against CAQS/DCS, not against 600's own templates. Templates are productivity aids, not authority substitutes. The source hierarchy (PROJECT_CONSTITUTION.md §9: Tier 1 IMA CSO → Tier 2 COSO → CAQS/DCS → Templates) must be restated in every 600-produced artifact."
+      },
+      {
+        "id": "J-A3",
+        "ambiguity": "Does 600 write directly to pack_*_corrected.js, or produce detached content artifacts?",
+        "detail": "If 600 writes directly to pack files: governance guard Rules 1-5 all apply (DL-008 check, batch cap, question_state tracking). Backup protocol applies. REVISION_HISTORY.md updates required. If 600 produces detached JSON/MD artifacts that 800 later consumes and writes to pack files: 600 operates outside governance guard scope entirely (no Rule 2 BLOCK, no Rule 5 batch cap) — which is both a freedom and a risk, because 600-produced content bypasses validation until 800's session.",
+        "resolution": "Policy recommendation: 600 MUST write detached content artifacts (JSON, not pack files). 800 consumes these artifacts during certification and is responsible for the final pack-file write, which gates through governance guard Rules 1-5. This preserves the single-write-owner discipline (800 writes pack files; 600 writes artifacts). 600-produced artifacts should carry a SHA-256 hash for 800 to verify artifact integrity before consumption."
+      },
+      {
+        "id": "J-A4",
+        "ambiguity": "600-authored EC/EW text that changes the implied reasoning vs. 800's CorrectChoice authority",
+        "detail": "If 600 expands ExplanationCorrect text in a way that changes the reasoning for why the answer is correct (e.g., cites a different ASC section, adds a formula not present in the original, introduces interpretation that differs from the answer key's logic), this is effectively an answer-key change that 800 must detect and resolve. The current governance guard Rule 4 WARNs on CorrectChoice/CorrectAnswer changes but does NOT detect when EC text semantically contradicts the answer key — it only checks for the keyword pattern 'recomputed'/'independently verified'.",
+        "resolution": "800-series certification review must include an EC-CC consistency check: for each 600-expanded EC, verify the reasoning chain in EC supports the stored CorrectChoice and matches the stem's fact pattern. Any EC text that implies a different answer → DL-010 (misassigned explanation) if the EC is factually wrong, or flag for 600 revision if the EC is plausible but mismatched."
+      }
+    ],
+
+    "severity": "LOW — the proposed boundaries are fundamentally sound. The four ambiguities are resolvable with explicit charter language. J-A3 (pack-file write vs. detached artifacts) is the most impactful — a wrong decision here cascades to governance guard scope, backup protocol applicability, and single-write-owner discipline.",
+
+    "recommendation": "If 600-series is launched despite the DEFER recommendation: adopt the MAY/NOT boundaries as the 600-series charter. Resolve all four boundary ambiguities before the first 600-series session. Require 600 to produce detached content artifacts (not pack-file writes). Add an EC-CC consistency check to the 800-series certification protocol."
+  },
+
+  "agent_v_preservation_audit": {
+    "summary": "The proposed 600-series structure preserves governance independence across 4 of 5 dimensions in the worst case and all 5 in the best case. The critical vulnerability is not in the charter design but in the governance guard's lack of lane-awareness — the guard plugin applies Rules 1-5 equally to all lanes, which is good for enforcement but creates no barrier between lanes. Two specific governance gaps are identified: (1) no guard rule blocks difficulty score changes, and (2) no guard rule blocks DEFECT_LIBRARY.md or CAQS writes by non-governance lanes.",
+
+    "risks": [
+      {
+        "id": "V-001",
+        "dimension": "Governance Independence (700-series)",
+        "finding": "PRESERVED but VULNERABLE to erosion over time",
+        "detail": "700-series is in maintenance mode. It is the sole governance authority but has no active sessions planned (only closure at Phase 7). If 600 becomes operational, it would be the only active lane producing content, while 700 passively maintains governance artifacts. Over time, operators may route governance questions to 600 ('Should we change the DL-008 detection standard?' → 600 says yes, 700 is dormant → de facto governance shift). The risk is structural: an active lane naturally accrues authority over a dormant lane, regardless of charter.",
+        "mitigation": "Charter clause: 600-series must not answer governance questions. Any governance question arising during 600 operations must be escalated to 700, and the session must pause until 700 responds. If 700 does not respond within the session, the question is logged as a deferred governance item and the session proceeds under existing rules — no new precedent is set.",
+        "severity": "MEDIUM — active-lane authority drift is a well-documented organizational pattern. The 700 maintenance-only posture is the vulnerability, not the 600 charter."
+      },
+      {
+        "id": "V-002",
+        "dimension": "Certification Independence (800-series)",
+        "finding": "PRESERVED with EXPLICIT HANDOFF PROTOCOL required",
+        "detail": "The 800-series remains the sole certifier. The MAY/NOT boundaries explicitly prohibit 600 from certifying items, changing question_state, publishing to the learner pool, or running CAQS §1.6 verification. However, the independence of 800's review is at risk from anchoring bias: 600-prepared items arrive with pre-written EW/EC content, which may cause 800 certifiers to skip independent verification. The DL-030 answer-key errors (5 Certified items with wrong CorrectChoice) were all pre-authored items that passed certification without independent re-derivation.",
+        "mitigation": "Mandatory 800-series certification protocol for 600-prepared items: (1) Independently solve the question from scratch — do not read 600's EC. (2) Derive the correct answer. (3) Compare to stored CorrectChoice. (4) Only after matching: review 600's EC/EW for quality. Any item where independent derivation disagrees with stored CC must be flagged, not certified. This protocol must be documented in the 800-series runbook before any 600→800 handoff.",
+        "severity": "HIGH — the DAL-030 precedent demonstrates that pre-authored content can contain answer-key errors that certification reviewers miss when they trust the pre-authored material."
+      },
+      {
+        "id": "V-003",
+        "dimension": "Analytics Independence (300-series)",
+        "finding": "PRESERVED but MONITORING GAP exists",
+        "detail": "300-series closes with S310 (Portfolio Operations Dashboard). It produced the full analytics stack (DQS → EQS → BQS → ExQS → UIQS → Risk Register → Forecast Engine → Bottleneck Analysis). After S310, there is no active analytics lane to monitor 600-series performance. If 600 launches and produces lower-quality content than expected, no lane will detect it until the next analytics review cycle — and if 300 is closed, that review may never happen.",
+        "mitigation": "If 600 launches after S310: create a lightweight monitoring protocol within 600 itself (self-measurement, not independent analysis) — throughput (items prepared / session), defect rate (items rejected by 800 / items prepared), rework rate (items returned to 600 for revision). These metrics are operational, not analytical — they measure 600's own performance without making quality judgments about the content pool. If defect rate > 20% or rework rate > 30%, escalate to governance (700) for lane evaluation.",
+        "severity": "LOW while 600 is DEFERRED. Becomes MEDIUM if 600 launches without a monitoring protocol and 300 has already closed."
+      },
+      {
+        "id": "V-004",
+        "dimension": "Guard Integrity (governance-guard.js)",
+        "finding": "PRESERVED — guard rules are lane-agnostic and would apply to 600 writes",
+        "detail": "The governance guard plugin (governance-guard.js, 217 lines, 5 rules) does not distinguish between lanes. Any write/edit operation on a pack file or scored_cases file is subject to: Rule 2 (BLOCK DL-008 re-contamination), Rule 3 (BLOCK MASTER_QUESTION_REGISTRY edits), Rule 5 (BLOCK >30 question objects), Rule 1 (WARN question_state changes), Rule 4 (WARN answer-key changes). All 5 rules would apply to 600-series writes with equal enforcement to any other lane. The 20/20 test suite validates rule enforcement consistently.",
+        "mitigation": "No additional guard rules needed for 600. However, there is one concern: if 600 produces detached content artifacts (not pack-file writes, per J-A3 resolution), the guard plugin's write-time checks never execute on those artifacts. The content is validated only when 800 writes it to pack files. This creates a validation gap: 600-produced content may carry DL-008 violations or other defects that are only detected at 800's write time, when the certifier may not have time to fix them. Recommendation: 600's detached artifacts should undergo the same pattern checks (DL-008, empty-slot, boilerplate) via an offline lint script before being handed off to 800.",
+        "severity": "LOW — the guard rules are intact and enforced. The detached-artifact validation gap is a process risk, not a guard integrity risk."
+      },
+      {
+        "id": "V-005",
+        "dimension": "DCS Integrity (Difficulty Calibration Standard v1.1)",
+        "finding": "PRESERVED but DCS v1.1 is DRAFT — scope does not include 600-series",
+        "detail": "DCS v1.1 (Draft, S720) defines difficulty calibration for 'all lanes (100-series, 500-series, 700-series).' A 600-series lane would not be in scope. The existing standards already define the calibration framework: CAQS §6.1 (target difficulty distribution), CAQS §6.2 (Bloom's distribution), CAQS §2.4 (quality tiers), and DCS v1.1 §3 (CL-to-difficulty mapping). 600 may not recalibrate difficulty per the MAY NOT boundary — but it must reference DCS v1.1 when designing templates or authoring content to ensure consistency with the calibration framework.",
+        "mitigation": "If 600 launches: (1) DCS v1.1 must be finalized and its scope updated to include '600-series' in the lane list, or (2) a separate clause must state that 600 operates within the DCS framework without modification authority. The existing MAY NOT boundary ('600 may not recalibrate difficulty scores') should be reinforced by including DCS §7's CL classification protocol as a mandatory reference in the 600 charter.",
+        "severity": "LOW — the DCS framework itself is robust regardless of lane count. The risk is scope ambiguity, not standard integrity."
+      }
+    ],
+
+    "severity": "MEDIUM — 4 of 5 governance dimensions are preserved with manageable mitigations. V-002 (certification independence from anchoring bias) is the highest-severity risk and requires an explicit protocol change in the 800-series runbook before any 600→800 handoff. The governance guard is intact; the proposal passes the structural preservation test.",
+
+    "recommendation": "The 600-series structure preserves governance independence IF: (1) 600 produces detached content artifacts (not pack-file writes), (2) 800's certification protocol is updated with an independent-re-derivation requirement for 600-prepared items, (3) the four boundary ambiguities from Agent J are resolved in the 600 charter, (4) DCS v1.1 scope is clarified before 600 launch, and (5) a lightweight 600 self-monitoring protocol is established to compensate for 300-series closure."
+  }
+}

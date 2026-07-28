@@ -1,0 +1,40 @@
+{
+  "session": "S603",
+  "agent": "I",
+  "role": "Economic Gate Lock",
+  "generated": "2026-07-26",
+  "decision": "ECONOMIC_GATE_LOCKED",
+  "locked_assumptions": {
+    "startup_cost": { "central": 4.5, "best": 3.0, "worst": 6.0, "sessions": true },
+    "forecast_savings": { "central": 2.0, "best": 3.0, "worst": 1.0, "sessions": true },
+    "net_effect": { "central": -2.5, "best": -1.0, "worst": -4.0, "sessions": true },
+    "breakeven_sessions": 36,
+    "program_horizon_sessions": 20,
+    "certified_pool": 2201,
+    "certified_pct": 88.0,
+    "remaining_items": 299
+  },
+  "assumptions_detail": [
+    {"id": "ASM_1", "label": "Startup cost floor", "locked_value": 4, "flip_threshold": "<3", "note": "4 sessions minimum to establish tooling, workflows, and calibration"},
+    {"id": "ASM_2", "label": "Savings ceiling", "locked_value": 3, "flip_threshold": ">4", "note": "3 sessions maximum benefit over program lifetime"},
+    {"id": "ASM_3", "label": "800-series throughput", "locked_value": 12, "range": "12-15", "note": "Items per session. Higher = faster completion = fewer sessions to amortize across"},
+    {"id": "ASM_4", "label": "EW acceptance rate", "locked_value": "unknown", "estimated": "70-80%", "note": "UNVALIDATED. Lower acceptance = wasted drafting = higher effective cost"},
+    {"id": "ASM_5", "label": "Remaining workload", "locked_value": 299, "note": "Smaller remaining = fewer sessions = harder to amortize startup cost"}
+  ],
+  "future_reevaluation_requirements": [
+    "Independent 300-series re-verification using current data (S724 estimate may NOT be reused)",
+    "Updated 800-series observed throughput data",
+    "Validated EW acceptance rate (not assumed 70-80%)",
+    "Current remaining workload count",
+    "Updated certified pool count"
+  ],
+  "trend": {
+    "s724": { "net": -1.0, "note": "Initial feasibility — best case" },
+    "s601": { "net": -1.0, "note": "No revalidation — S724 estimate reaffirmed" },
+    "s602": { "net": -2.5, "note": "Central estimate — governance overhead increased, savings weakened" },
+    "s603": { "net": -2.5, "note": "LOCKED at S602 values. No new data. Freeze in effect." }
+  },
+  "lock_statement": "The economic assumptions documented herein are LOCKED as the S603 baseline. Any future 600-series activation review MUST commission an independent 300-series re-evaluation using current portfolio data. The S724-era estimates may not be reused. No activation vote may proceed with economic assumptions more favorable than those locked herein without an updated, independently-verified 300-series forecast.",
+  "conclusion": "Economic gate LOCKED at Net -2.5 central estimate. Re-evaluation required before any activation vote.",
+  "version": "1.0"
+}

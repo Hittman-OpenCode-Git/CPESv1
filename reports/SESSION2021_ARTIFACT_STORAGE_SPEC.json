@@ -1,0 +1,191 @@
+{
+  "document": "SESSION2021_ARTIFACT_STORAGE_SPEC",
+  "session": "S202.1",
+  "title": "Artifact Persistence Design — Creation, Versioning, Expiration, Supersession",
+  "series": "200-Series — Framework v2 Architecture Addendum",
+  "date": "2026-07-27",
+  "type": "Engineering Storage Specification — Read-Only",
+  "parent": "SESSION2021_SCAN_ARTIFACT_SCHEMA.json (Board A)",
+  "purpose": "Defines the full lifecycle of a Certification Scan Artifact: how it is created, where it is stored, how it is versioned, when it expires, and what happens when it is superseded. This specification ensures that artifacts are always findable, never lost, and their provenance is always traceable.",
+  "constraints": ["No content changes", "No certification actions", "No governance changes", "Read-only specification"],
+
+  "storage_model_version": "1.0.0",
+
+  "artifact_creation": {
+    "description": "Every new session at T0 produces exactly one Certification Scan Artifact. The artifact is produced by the Scan Orchestrator after completing all pre-flight gates.",
+    "trigger": "Session initialization — after pack file T0 baseline verification, before any board activity",
+    "producer": "scripts/engine/scan/scan_orchestrator.js → generateArtifact()",
+    "artifact_lifecycle": [
+      "1. Orchestrator loads pack files via AM-1 Function Constructor Parse",
+      "2. Runs all mandatory pre-flight gates (Gates -1 through 4) sequentially (gates) / in parallel (scans within gates)",
+      "3. Aggregates per-item results, statistics, defect inventory, and readiness assessment",
+      "4. Computes artifact-level hash (SHA-256 of complete JSON serialization)",
+      "5. Writes certification_scan_artifact.json to scripts/output/",
+      "6. Records artifact_id in session_registry.json",
+      "7. Updates CURRENT_BASELINES.md with pack file hashes (if this is a T0 baseline session)",
+      "8. Artifact is now immutable — no further writes to this artifact for the session"
+    ],
+    "naming": {
+      "primary_file": "scripts/output/certification_scan_artifact.json",
+      "rationale": "Single canonical path. Overwritten each session. Prior artifacts accessible via lineage in the new artifact."
+    },
+    "safety_checks_before_creation": [
+      "Pack file hash stability — two independent AM-1 reads produce identical hashes",
+      "Item count stability — parse count matches expected count (2,500 standard + supplementals)",
+      "Gate -1 completion — all identity keys resolved, zero IDENTITY_BLOCKED for parseable items",
+      "Governance guard check — Rules 1-10 PASS at pre-scan"
+    ]
+  },
+
+  "artifact_versioning": {
+    "description": "Artifacts carry a schema version and a content version. Schema version signals compatibility. Content version is implied by the artifact's timestamp and source session (artifact_id).",
+    "schema_version": {
+      "field": "root.schemaVersion",
+      "current": "1.0.0",
+      "increment_rules": {
+        "patch": "Backward-compatible additions: new optional fields, new array elements in existing arrays. e.g., 1.0.1.",
+        "minor": "New artifact section added. Existing sections unchanged. e.g., 1.1.0.",
+        "major": "Breaking change: required field removed or renamed, section requirement changed, field type changed. e.g., 2.0.0."
+      },
+      "board_compatibility": "Every board declares minimumVersion in the Board Consumption Matrix. A board refuses to consume an artifact with schemaVersion < minimumVersion."
+    },
+    "content_version": {
+      "primary_identifier": "artifactId (e.g., CSA-S322-2026-07-27T05-45-08-670Z)",
+      "secondary_identifier": "hashOfArtifact (SHA-256 of complete artifact JSON)",
+      "chain": "lineage.artifactVersionChain — explicit list of artifacts this one supersedes or continues"
+    },
+    "additional_storage_pattern": {
+      "description": "For critical sessions (T0 baseline, phase gates S830/S900/S910), a timestamped copy is saved in addition to the primary file.",
+      "pattern": "scripts/output/certification_scan_artifact_{sessionId}_{timestamp}.json",
+      "example": "scripts/output/certification_scan_artifact_S322_20260727T054508Z.json",
+      "rule": "Timestamped copy is optional for routine sessions. Mandatory for: session T0 baseline establishment, S830/S900/S910 phase gate sessions, any session that changes CERTIFIED item count by > 10."
+    }
+  },
+
+  "artifact_expiration": {
+    "description": "Artifacts are session-scoped, not time-scoped. An artifact is valid for the session that produced it and stale for all subsequent sessions. Expiration is based on session lifecycle, not elapsed time.",
+    "validity": {
+      "within_session": "Artifact is authoritative for the entire session. All boards consume the same artifact produced at T0.",
+      "across_sessions": "The most recent artifact (highest session number) is the authoritative state. Prior artifacts are historical records."
+    },
+    "staleness": {
+      "definition": "An artifact becomes stale when a new artifact is produced by a subsequent session.",
+      "detection": "Artifact timestamp + sourceSession compared to session_registry.json latest entry",
+      "usage": "Stale artifacts are NEVER consumed by boards. They are preserved for lineage/historical purposes only."
+    },
+    "never_stale_within_session": "A board must never re-read the artifact file mid-session expecting updated content. The artifact is immutable once produced. Mid-session changes use DELTA_LEDGER.json and session-specific working files, not the scan artifact.",
+    "expiration_grace_period": {
+      "description": "For delta review inheritance (CERTIFIED_DELTA), the prior certification artifact is valid as a comparison baseline even though it is technically stale.",
+      "valid_use": "DELTA_LEDGER.json comparison. Prior artifact's contentHash value is used to determine if the item changed.",
+      "invalid_use": "Current readiness decisions. Readiness is always computed from the current session's artifact."
+    }
+  },
+
+  "artifact_supersession": {
+    "description": "When a new session produces a new artifact, the prior artifact is superseded. The new artifact carries the prior artifact's ID in its lineage section. The prior artifact is preserved but marked as historical.",
+    "supersession_protocol": [
+      "1. New artifact produced by current session",
+      "2. New artifact's lineage.priorArtifacts includes the prior artifact's artifactId",
+      "3. New artifact's lineage.artifactVersionChain entry shows relationship: 'SUPERSEDES'",
+      "4. Prior artifact file renamed to add timestamp suffix (if primary path collision)",
+      "5. Prior artifact entry in session_registry.json updated to status: 'superseded_by: {new_artifactId}'",
+      "6. Prior artifact IS NOT DELETED — preserved for historical audit trail"
+    ],
+    "supersession_types": {
+      "SUPERSEDES": "Standard replacement. New session's scan completely replaces old session's scan. Most common type.",
+      "CONTINUES": "The new artifact was produced in the same session (e.g., re-scan after remediation). Extends the prior artifact's chain without replacing it. Rare — most sessions produce one artifact.",
+      "REBASELINES": "The new artifact establishes a new identity baseline (e.g., after CANONICAL_REGISTRY.json migration). All identity keys may have changed. Prior lineage is recorded but not comparable. Occurs at S204 (identity migration)."
+    },
+    "artifact_chain_example": [
+      {"artifactId": "CSA-S204-2026-07-28T00-00-00-000Z", "relationship": "REBASELINES", "supersedes": null, "note": "Identity migration — first compound-key artifact"},
+      {"artifactId": "CSA-S410-2026-07-29T00-00-00-000Z", "relationship": "SUPERSEDES", "supersedes": "CSA-S204-..."},
+      {"artifactId": "CSA-S505-2026-07-30T00-00-00-000Z", "relationship": "SUPERSEDES", "supersedes": "CSA-S410-..."},
+      {"artifactId": "CSA-S811-2026-08-01T00-00-00-000Z", "relationship": "SUPERSEDES", "supersedes": "CSA-S505-..."}
+    ]
+  },
+
+  "artifact_integrity": {
+    "description": "Multiple layers of integrity verification ensure the artifact is trustworthy before any board consumes it.",
+    "layers": [
+      {
+        "layer": "L1 — Structural Validation",
+        "check": "Artifact JSON is parseable. All required root fields present. perItemResults is an array. consumerDigest.sectionsPresent is accurate.",
+        "performed_by": "Scan Orchestrator (before writing)",
+        "failure_action": "Do not write artifact. Pipeline halts. Session cannot proceed."
+      },
+      {
+        "layer": "L2 — Count Reconciliation",
+        "check": "perItemResults.length equals sum of all pack item counts. byGate {passed + blocked} sums equal to byPack totals. byDefectClass counts reconcile with defectFlags aggregation.",
+        "performed_by": "Scan Orchestrator (before writing) + Registry Board (after reading)",
+        "failure_action": "Do not write artifact. Re-run scan. If count still unstable → escalate to governance."
+      },
+      {
+        "layer": "L3 — Artifact Hash",
+        "check": "hashOfArtifact matches SHA-256 of artifact JSON (excluding the hashOfArtifact field itself).",
+        "performed_by": "Governance Board (T0, Tmid, Tend)",
+        "failure_action": "If Tmid hash differs from T0 → drift detected. Halt all agents, reconcile."
+      },
+      {
+        "layer": "L4 — Cross-Artifact Consistency",
+        "check": "Content hashes in current artifact's perItemResults match DELTA_LEDGER.json baselines for unchanged items.",
+        "performed_by": "Delta Review Engine + Registry Board",
+        "failure_action": "Flag mismatch items for delta review. Do not auto-inherit certification."
+      },
+      {
+        "layer": "L5 — Board Consumption Digest",
+        "check": "consumerDigest.consumerCompatibility verifies all boards' minimumVersion requirements are met.",
+        "performed_by": "Governance Board (session authorization)",
+        "failure_action": "Session cannot proceed until artifact is compatible with all boards."
+      }
+    ]
+  },
+
+  "artifact_storage_locations": {
+    "primary": {
+      "path": "scripts/output/certification_scan_artifact.json",
+      "purpose": "Active artifact — consumed by all boards during the current session",
+      "retention": "Overwritten per session. Always contains the latest artifact."
+    },
+    "historical": {
+      "path": "scripts/output/historical/certification_scan_artifact_{sessionId}_{timestamp}.json",
+      "purpose": "Timestamped copies of critical artifacts. Preserved for audit and lineage.",
+      "retention": "Indefinite. Never pruned. Used for cross-session comparison and audit trail."
+    },
+    "backup": {
+      "path": "backups/certification_scan_artifact.json.bak-{YYYYMMDDHHMMSS}",
+      "purpose": "Pre-write backup before overwriting the primary artifact.",
+      "retention": "Per BACKUP_PROTOCOL.md — timestamped, confirmed non-zero, matched against prior hash."
+    },
+    "session_registry": {
+      "path": "scripts/output/session_registry.json",
+      "field": "sessions[].artifactProduced",
+      "purpose": "Cross-reference: which artifact was produced by which session."
+    }
+  },
+
+  "artifact_recovery": {
+    "description": "If the primary artifact is lost (file deletion, corruption, concurrent-overwrite), recovery is from the historical or backup path.",
+    "recovery_priority": [
+      {"priority": 1, "source": "scripts/output/historical/ — most recent historical copy", "confidence": "Highest — exact copy of the primary artifact at write time"},
+      {"priority": 2, "source": "backups/ — most recent .bak file", "confidence": "High — may be stale if artifact was overwritten after backup"},
+      {"priority": 3, "source": "DELTA_LEDGER.json + CANONICAL_REGISTRY.json — reconstruct artifact from identity registry and delta entries", "confidence": "Medium — can reconstruct per-item data from registry; missing aggregateStatistics and scan runtime metadata"},
+      {"priority": 4, "source": "Re-run scan from current pack files — produce a new artifact", "confidence": "Low — produces a new artifact, not a recovery. Use only when all recovery sources fail."}
+    ]
+  },
+
+  "relationship_to_other_files": {
+    "deliversTo": [
+      {"file": "knowledge/CANONICAL_REGISTRY.json", "relationship": "Artifact per-item data populates registry entries"},
+      {"file": "knowledge/DELTA_LEDGER.json", "relationship": "Artifact content_hash values recorded as baselines in delta ledger"},
+      {"file": "reports/_{SESSION_ID}_READINESS_REPORT.json", "relationship": "Artifact sections 3+6 consumed to generate readiness report"},
+      {"file": "reports/_{SESSION_ID}_QUALITY_REPORT.json", "relationship": "Artifact sections 4+5 consumed to scope quality review"},
+      {"file": "reports/_{SESSION_ID}_CERTIFICATION_REPORT.json", "relationship": "Artifact section 4 referenced in certification decisions"},
+      {"file": "reports/_{SESSION_ID}_GOVERNANCE_REPORT.md", "relationship": "Artifact section 8 consumed for governance attestation"}
+    ],
+    "dependentOn": [
+      {"file": "knowledge/CURRENT_BASELINES.md", "relationship": "Artifact packFileHashes must match T0 baselines"},
+      {"file": "scripts/output/session_registry.json", "relationship": "Artifact ID recorded in session registry"},
+      {"file": ".opencode/plugins/governance-guard.js", "relationship": "Artifact production blocked if governance guard rules fail"}
+    ]
+  }
+}

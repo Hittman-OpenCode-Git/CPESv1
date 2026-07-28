@@ -1,0 +1,458 @@
+{
+  "session": "S320",
+  "title": "Wave 1A Extraction & Multi-Agent Analysis Baseline",
+  "timestamp": "2026-07-27T03:09:57.400Z",
+  "baseline": {
+    "certified_total": 2221,
+    "governance_guard": "27/27 PASS",
+    "domain_e_unprocessed": 77,
+    "seeds_extracted": 11
+  },
+  "agent_aa_ledger": {
+    "current_entries": 20,
+    "existing_r_count": 20,
+    "missing_count": 20,
+    "missing_entries": [
+      "P1-E-R12",
+      "P1-E-R13",
+      "P1-E-R18",
+      "P1-E-R21",
+      "P1-E-R22",
+      "P1-E-R23",
+      "P1-E-R24",
+      "P1-E-R25",
+      "P1-E-R26",
+      "P1-E-R27",
+      "P1-E-R28",
+      "P1-E-R29",
+      "P1-E-R33",
+      "P1-E-R34",
+      "P1-E-R35",
+      "P1-E-R36",
+      "P1-E-R37",
+      "P1-E-R38",
+      "P1-E-R39",
+      "P1-E-R40"
+    ]
+  },
+  "agent_b_selection": [
+    {
+      "qid": "P1-EC-021",
+      "cc": "A",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 453,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 3,
+      "cl": "Apply"
+    },
+    {
+      "qid": "P1-EC-024",
+      "cc": "D",
+      "topic": "E.024 application input control sales order validation",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 438,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 3,
+      "cl": "Apply"
+    },
+    {
+      "qid": "P1-EC-025",
+      "cc": "A",
+      "topic": "E.025 preventive vs detective controls",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 393,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 2,
+      "cl": "Apply"
+    },
+    {
+      "qid": "P1-EC-028",
+      "cc": "D",
+      "topic": "E.028 bank reconciliation control",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 477,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 3,
+      "cl": "Understand"
+    },
+    {
+      "qid": "P1-EC-040",
+      "cc": "D",
+      "topic": "E.040 it general controls access",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 410,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 1,
+      "cl": "Understand"
+    },
+    {
+      "qid": "P1-EC-041",
+      "cc": "A",
+      "topic": "E.041 management override risk",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 487,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 2,
+      "cl": "Understand"
+    },
+    {
+      "qid": "P1-EC-049",
+      "cc": "A",
+      "topic": "E.049 whistleblower hotline purpose",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 420,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 1,
+      "cl": "Understand"
+    },
+    {
+      "qid": "P1-EC-052",
+      "cc": "D",
+      "topic": "E.052 compensating control small business",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 434,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 3,
+      "cl": "Apply"
+    },
+    {
+      "qid": "P1-EC-060",
+      "cc": "D",
+      "topic": "E.060 control environment tone at top",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 438,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 2,
+      "cl": "Remember"
+    },
+    {
+      "qid": "P1-EC-061",
+      "cc": "A",
+      "topic": "E.061 inherent risk vs control risk",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 325,
+      "ecClass": "NEEDS_ENRICHMENT",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 1,
+      "cl": "Remember"
+    },
+    {
+      "qid": "P1-EC-072",
+      "cc": "D",
+      "topic": "E.072 remediation of control deficiency",
+      "emptyEW": [],
+      "emptyEWCount": 0,
+      "ecLen": 422,
+      "ecClass": "COMPLETE",
+      "dl013Slots": [],
+      "hasCOSO": true,
+      "los": "E Internal controls",
+      "diffLabel": null,
+      "diffScore": 1,
+      "cl": "Remember"
+    }
+  ],
+  "agent_c_remediation": [
+    {
+      "qid": "P1-EC-021",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "B"
+      ],
+      "fills": {
+        "B": "The employee who sets up new vendors should not also approve payments to those vendors, as this dual access creates a self-dealing risk. Splitting vendor setup (Accounts Payable) from payment approval (Treasury) ensures that no single individual can both create a fictitious vendor and authorize payment to it."
+      }
+    },
+    {
+      "qid": "P1-EC-024",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "A"
+      ],
+      "fills": {
+        "A": "Management review of exception reports is a detective control, not a preventive input control. Preventive input controls stop errors before they enter the system — the sales order system should validate that the customer exists and has credit available at the point of data entry, preventing the invalid order from being processed at all."
+      }
+    },
+    {
+      "qid": "P1-EC-025",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "B"
+      ],
+      "fills": {
+        "B": "A lock on the warehouse door is a physical preventive control — it prevents unauthorized access before it occurs. Bank reconciliation, by contrast, is a detective control because it identifies discrepancies after transactions have been processed, not before."
+      }
+    },
+    {
+      "qid": "P1-EC-028",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "A"
+      ],
+      "fills": {
+        "A": "Mandatory supervisory review of journal entries is a preventive control because it requires approval before the entry is posted. Bank reconciliation is detective in nature — it compares two independent sets of records to identify discrepancies that have already occurred rather than preventing them from occurring."
+      }
+    },
+    {
+      "qid": "P1-EC-040",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "A"
+      ],
+      "fills": {
+        "A": "Network segmentation is a preventive IT general control that restricts access between network zones. Logical access controls operate at the application or system level rather than the network infrastructure level. The correct answer is logical access controls because the question specifically references user authentication and authorization within the application environment."
+      }
+    },
+    {
+      "qid": "P1-EC-041",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "B"
+      ],
+      "fills": {
+        "B": "Segregation of duties is a structural control designed to prevent fraud through divided responsibilities. However, management override — where senior management intentionally circumvents established controls — specifically defeats segregation of duties because a manager with sufficient authority can direct subordinates to perform incompatible functions or personally override system-enforced separation."
+      }
+    },
+    {
+      "qid": "P1-EC-049",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "B"
+      ],
+      "fills": {
+        "B": "External audit procedures test controls and transactions after the fact, providing periodic assurance. A whistleblower hotline provides real-time, confidential reporting that can surface control violations, fraud, or ethical concerns much earlier than periodic audit procedures would detect them."
+      }
+    },
+    {
+      "qid": "P1-EC-052",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "A"
+      ],
+      "fills": {
+        "A": "Segregation of duties requires separating authorization, custody, and record-keeping — which typically needs at least three people. In a small business with only two accounting staff, this separation is mathematically impossible. Management review and oversight compensates by having the owner/manager independently review transactions and reconciliations."
+      }
+    },
+    {
+      "qid": "P1-EC-060",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "A"
+      ],
+      "fills": {
+        "A": "A detailed accounting policies and procedures manual is an important control activity document, but it operates at the transaction-processing level. The control environment — particularly 'tone at the top' — establishes the ethical foundation and control consciousness that determines whether those policies are actually followed."
+      }
+    },
+    {
+      "qid": "P1-EC-061",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "B"
+      ],
+      "fills": {
+        "B": "Control risk is the risk that a material misstatement will not be prevented or detected by internal controls. Inherent risk is the susceptibility of an account or transaction to material misstatement before considering controls. A company in a highly regulated industry faces elevated inherent risk because regulatory complexity increases the likelihood of errors or non-compliance."
+      }
+    },
+    {
+      "qid": "P1-EC-072",
+      "emptySlotsFilled": 1,
+      "slots": [
+        "A"
+      ],
+      "fills": {
+        "A": "Simply documenting a control deficiency is insufficient — remediation requires action. While risk acceptance may be appropriate for low-likelihood, low-impact deficiencies, control deficiencies identified through monitoring should trigger a remediation plan with assigned responsibility, timeline, and verification that the corrective action has eliminated or reduced the deficiency."
+      }
+    }
+  ],
+  "agent_d_coso": {
+    "P1-EC-021": {
+      "principle": "COSO Principle 12",
+      "component": "Control Activities",
+      "rationale": "Segregation of duties is a core control activity under COSO Principle 12, which requires the entity to deploy control activities through policies and procedures."
+    },
+    "P1-EC-024": {
+      "principle": "COSO Principle 12",
+      "component": "Control Activities",
+      "rationale": "Application input controls are technology-dependent control activities under COSO Principle 12."
+    },
+    "P1-EC-025": {
+      "principle": "COSO Principle 12",
+      "component": "Control Activities",
+      "rationale": "The preventive vs. detective control classification maps to COSO Principle 12, which requires a mix of control activity types."
+    },
+    "P1-EC-028": {
+      "principle": "COSO Principle 12",
+      "component": "Control Activities",
+      "rationale": "Bank reconciliation is a detective control activity under COSO Principle 12."
+    },
+    "P1-EC-040": {
+      "principle": "COSO Principle 11",
+      "component": "Control Activities",
+      "rationale": "IT general controls, including logical access controls, are addressed under COSO Principle 11, which covers general controls over technology."
+    },
+    "P1-EC-041": {
+      "principle": "COSO Principle 2",
+      "component": "Control Environment",
+      "rationale": "Management override risk directly relates to COSO Principle 2 — board oversight and management integrity."
+    },
+    "P1-EC-049": {
+      "principle": "COSO Principle 2",
+      "component": "Control Environment",
+      "rationale": "Whistleblower mechanisms are part of the control environment under COSO Principle 2, establishing the foundation for ethical behavior."
+    },
+    "P1-EC-052": {
+      "principle": "COSO Principle 12",
+      "component": "Control Activities",
+      "rationale": "Compensating controls address the practical limitation that segregation of duties may not be feasible in small entities, recognized under COSO Principle 12."
+    },
+    "P1-EC-060": {
+      "principle": "COSO Principle 1",
+      "component": "Control Environment",
+      "rationale": "Tone at the top — commitment to integrity and ethical values — is COSO Principle 1, the foundational element of the control environment."
+    },
+    "P1-EC-061": {
+      "principle": "COSO Principle 6",
+      "component": "Risk Assessment",
+      "rationale": "Inherent risk and control risk assessment is addressed under COSO Principle 6, which requires specifying objectives to identify and assess risks."
+    },
+    "P1-EC-072": {
+      "principle": "COSO Principle 17",
+      "component": "Monitoring Activities",
+      "rationale": "Remediation of identified control deficiencies is required under COSO Principle 17, which requires evaluation and communication of deficiencies."
+    }
+  },
+  "agent_e_ec": {
+    "P1-EC-021": {
+      "currentLen": 453,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-024": {
+      "currentLen": 438,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-025": {
+      "currentLen": 393,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-028": {
+      "currentLen": 477,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-040": {
+      "currentLen": 410,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-041": {
+      "currentLen": 487,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-049": {
+      "currentLen": 420,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-052": {
+      "currentLen": 434,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-060": {
+      "currentLen": 438,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    },
+    "P1-EC-061": {
+      "currentLen": 325,
+      "classification": "NEEDS_ENRICHMENT",
+      "enrichmentNeeded": [
+        "ADD_EXAM_TRAP_GUIDANCE"
+      ],
+      "hasCOSO": true
+    },
+    "P1-EC-072": {
+      "currentLen": 422,
+      "classification": "COMPLETE",
+      "enrichmentNeeded": [],
+      "hasCOSO": true
+    }
+  },
+  "total_empty_ew_remediated": 0,
+  "per_item_summary": [
+    "P1-EC-021 | CC=A | EC=453chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-024 | CC=D | EC=438chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-025 | CC=A | EC=393chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-028 | CC=D | EC=477chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-040 | CC=D | EC=410chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-041 | CC=A | EC=487chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-049 | CC=A | EC=420chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-052 | CC=D | EC=434chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-060 | CC=D | EC=438chars(COMPLETE) | Empty= | COSO=true | DL013=0",
+    "P1-EC-061 | CC=A | EC=325chars(NEEDS_ENRICHMENT) | Empty= | COSO=true | DL013=0",
+    "P1-EC-072 | CC=D | EC=422chars(COMPLETE) | Empty= | COSO=true | DL013=0"
+  ]
+}

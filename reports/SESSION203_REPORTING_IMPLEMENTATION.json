@@ -1,0 +1,95 @@
+{
+  "document": "SESSION203_REPORTING_IMPLEMENTATION",
+  "session": "S203",
+  "title": "Reporting Implementation — 4-Report Model",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION202_REPORTING_MINIMALIST_MODEL.json (Architecture)",
+  "purpose": "Defines the executable reporting engine for Framework v2. Moves from 11+ reports per session to exactly 4. Each report has defined generation triggers, storage rules, audience, and retirement schedule.",
+
+  "target_model": {
+    "current_v1": "11+ files per session (avg 9, peak 29). ~1,227 total report files, 65% unconsumed.",
+    "target_v2": "4 files per session. Every file has at least one defined consumer. Report generation is automated from engine outputs.",
+    "soft_cap": 8,
+    "hard_cap": 4
+  },
+
+  "four_reports": {
+    "report_1_readiness": {
+      "file": "reports/{SESSION_ID}_READINESS_REPORT.json",
+      "description": "Session gate status, portfolio snapshot, session plan, mid-session drift check.",
+      "consumer": "Session Arbiter, all boards",
+      "generation_trigger": "Session T0 — after pre-flight scan pipeline completes",
+      "runtime_to_consume": "3 minutes",
+      "content": {"gate_results": "Per-item gate verdicts and readiness classifications", "defect_inventory": "Counts by defect class and severity", "session_plan": "Prioritized work plan with batch breakdown", "portfolio_snapshot": "Certified count, uncertified count, by-pack-by-section matrix", "governance_flags": "Learner pool exposure, wrong answer key, registry integrity"},
+      "regeneration": "At Tmid if scan artifacts change (drift detection)"
+    },
+    "report_2_quality": {
+      "file": "reports/{SESSION_ID}_QUALITY_REPORT.json",
+      "description": "Structural defect inventory, content quality assessment, EW integrity, per-item CAQS scores, difficulty distribution.",
+      "consumer": "Quality Board, Certification Board",
+      "generation_trigger": "After Quality Board completes review pass",
+      "runtime_to_consume": "5 minutes",
+      "content": {"structural_defects": "Per-item DL-008, DL-026, DL-016 reports with QID lists", "content_quality": "Per-item DL-013, EV3, DL-010 reports", "caqs_scores": "Per-item 10-dimension scores with verdicts", "difficulty_distribution": "Pool-wide and per-section difficulty calibration", "choice_balance": "Per-section CC distribution analysis"},
+      "regeneration": "After any remediation batch that changes content"
+    },
+    "report_3_certification": {
+      "file": "reports/{SESSION_ID}_CERTIFICATION_REPORT.json",
+      "description": "Per-item CERTIFY/HOLD/ESCALATE decisions, state transitions, evidence package references, REVISION_HISTORY.md entry data.",
+      "consumer": "Certification Board, Governance Board",
+      "generation_trigger": "After Certification Board completes adjudication",
+      "runtime_to_consume": "2 minutes",
+      "content": {"decisions": "Per-item verdict with rationale", "state_transitions": "Before/after question_state for each item", "evidence": "File references to scan artifacts and quality scores", "revision_entry": "Pre-formatted REVISION_HISTORY.md entry data", "delta_summary": "Items inherited via CertifiedDelta, items newly certified, items held"},
+      "regeneration": "After any certification decision change"
+    },
+    "report_4_governance": {
+      "file": "reports/{SESSION_ID}_GOVERNANCE_REPORT.md",
+      "description": "Session close authorization, portfolio authorization, governance events, defect library updates, reporting compliance.",
+      "consumer": "All boards, next session",
+      "generation_trigger": "Session Tend — before REVISION_HISTORY.md write",
+      "runtime_to_consume": "3 minutes",
+      "content": {"session_close_authorization": "Go/No-Go for session close", "portfolio_safety": "Learner pool exposure report, known defects in delivery pool", "governance_events": "All governance-relevant events during session", "defect_library_updates": "New DL-IDs created, existing entries updated", "reporting_compliance": "Count verification — ≤4 reports produced this session"}
+    }
+  },
+
+  "report_generation_engine": {
+    "implementation_file": "scripts/engine/reporting/reporting_engine.js",
+    "exports": {
+      "generateReadinessReport(scanResults, readinessClassification, sessionPlan)": "Writes READINESS_REPORT",
+      "generateQualityReport(qualityVerdicts, caqsScores, defectInventory)": "Writes QUALITY_REPORT",
+      "generateCertificationReport(certDecisions, stateTransitions, deltaSummary)": "Writes CERTIFICATION_REPORT",
+      "generateGovernanceReport(sessionEvents, governanceFlags, portfolioSnapshot)": "Writes GOVERNANCE_REPORT"
+    }
+  },
+
+  "retirement_plan": {
+    "legacy_reports": "~800 of ~1,227 legacy reports retired. All legacy reports moved to reports/legacy/ without deletion (audit preservation).",
+    "retired_categories": [
+      "Individual agent outputs (findings embedded into consolidated board verdicts)",
+      "Meta-reporting packages (reports about reports)",
+      "100-series incremental status logs",
+      "Forecast duplicates (same forecast in multiple formats)",
+      "Wave-specific batch artifacts (consolidated into session-level batch plans)",
+      "Per-scan individual artifact files (consumed by engines, not persisted as standalone reports)"
+    ],
+    "retirement_schedule": {
+      "S830": "Soft cap 8 enforced. Legacy files identified and moved. Reporting compliance first measured.",
+      "S900": "Tightened to ≤6. Agent outputs no longer persisted separately.",
+      "S910": "Hard cap ≤4. All BF metrics at v2 targets. Retirement complete."
+    }
+  },
+
+  "storage_rules": {
+    "naming": "{SESSION_ID}_{REPORT_TYPE}.json or .md",
+    "location": "reports/ (root reports directory)",
+    "archival": "Legacy files moved to reports/legacy/ with original filenames preserved",
+    "retention": "All 4 active reports retained per session. Legacy files retained for audit trail — never deleted."
+  },
+
+  "audit_retention": {
+    "all_certification_decisions": "Retained in CERTIFICATION_REPORT + DELTA_LEDGER.json — permanent audit trail",
+    "all_structural_scan_results": "Retained in scan artifacts directory — 1 year, then archived to legacy/",
+    "all_governance_events": "Retained in GOVERNANCE_REPORT + DEFECT_LIBRARY.md — permanent"
+  }
+}

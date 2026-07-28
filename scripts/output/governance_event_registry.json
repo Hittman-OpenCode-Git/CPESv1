@@ -1,0 +1,18 @@
+{
+  "registry": "Governance Event Registry v1.0",
+  "events": [
+    {
+      "id": "GE-0001",
+      "type": "VIOLATION",
+      "summary": "Test event for Session 750 verification",
+      "sourceFile": "unknown",
+      "severity": "MEDIUM",
+      "linkedRule": null,
+      "status": "CLOSED",
+      "created": "2026-07-27T13:49:59.772Z",
+      "updated": "2026-07-27T13:50:06.388Z",
+      "resolution": "Closed at 2026-07-27T13:50:06.393Z"
+    }
+  ],
+  "nextId": 2
+}

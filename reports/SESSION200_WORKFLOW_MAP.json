@@ -1,0 +1,762 @@
+{
+  "session": "S200",
+  "agent": "B",
+  "title": "Workflow Map — CMA Part 1 Certification Pipeline Architecture",
+  "pipeline_version": "v2 (evolved from CAQS §8.1 — 800-series operational)",
+  "pipeline_description": "The certification pipeline has evolved from the 7-gate CAQS §8.1 model into a multi-board, multi-wave architecture with 6 operational boards overseeing 8 distinct gates. Gates 0 and 6/7 were split from CAQS §8.1's model; the 300/800-series introduced Readiness, Learner Safety, QA, Launch, and Governance Boards.",
+  "gates": [
+    {
+      "gate_id": 0,
+      "name": "Pre-Audit Selection / Duplicate Prevention",
+      "caqs_origin": "Implied by §9.1 pipeline — Batch Review Process §9.2. Formalized as Gate 0 in 300-series (S318).",
+      "trigger": "Section or item batch enters the certification pipeline. Triggered by authoring completion (S311-S312) or post-governance-cleanup (S803).",
+      "inputs": [
+        "QID list of candidate items",
+        "Pack file source (target file for insertion)",
+        "Existing MASTER_QUESTION_REGISTRY.md",
+        "DUPLICATE_PREVENTION_REPORT (previous run)",
+        "QUESTION_SIMILARITY_LEDGER (previous run)"
+      ],
+      "review_agents": [
+        "Validator (automated duplicate scan)",
+        "Duplicate Prevention Agent (manual collision review — e.g., S318 Agent J/AA)",
+        "Registry Sync Agent (cross-registry verification — e.g., S318 Agent K)"
+      ],
+      "outputs": [
+        "Collision-check report (0 collisions = PASS)",
+        "Candidate inventory (unique QIDs confirmed)",
+        "Updated MASTER_QUESTION_REGISTRY (Rule 3 compliance — generated, not hand-edited)",
+        "DUPLICATE_PREVENTION_REPORT (regenerated)"
+      ],
+      "decisions": [
+        "PASS: 0 duplicate QIDs, all candidates unique — proceed to Gate 1",
+        "REJECT: Duplicate QID found — item withdrawn, QID reassigned"
+      ],
+      "defect_classes_caught": [
+        "Duplicate QID across packs",
+        "Registry collision (QID already exists in another section)",
+        "G-NEW-3 dual-block verification failure (metadata ChoiceA-D ≠ content Choices.A-D)"
+      ],
+      "session_examples": [
+        "S318 Gate 0: All 40 P1-E-R QIDs unique; 0 collisions; Recertified",
+        "S803 Pre-Flight: All 5 packs at 500 QIDs confirmed; no collisions on clone archivals"
+      ]
+    },
+    {
+      "gate_id": 1,
+      "name": "Technical Review / Draft Completeness (Technical Board)",
+      "caqs_origin": "CAQS §8.1 G1 — 'Technical Review'. Minimum score: 90/100 rubric. Checked By: Accountant. Description: Accounting accuracy, standard references, numerical integrity.",
+      "trigger": "Item passes Gate 0. All mandatory fields must be present and complete (Draft Completeness).",
+      "inputs": [
+        "Full question object (Stem, Choices, CorrectChoice, ExplanationCorrect, ExplanationWrongA-D, Metadata)",
+        "Authoritative accounting standards (ASC, COSO, IFRS, IMA CSO)",
+        "FORMULA_MASTER.md (for calculation items)"
+      ],
+      "review_agents": [
+        "Accountant Agent (per COLLABORATION_MATRIX.md — final authority on accounting)",
+        "Technical Accuracy Auditor (e.g., S318 Agent D)",
+        "Conditional Verification Scanner (automated: DL-008/026/013/010)"
+      ],
+      "outputs": [
+        "Technical accuracy report (per-item: 0 conceptual errors, 0 terminology errors, 0 CMA misalignment)",
+        "Answer-key verification report (stored CorrectChoice matches independently derived answer)",
+        "Draft completeness report (all mandatory fields present)",
+        "DL-008 scan result (ExplanationWrong[CorrectChoice] must be empty)",
+        "DL-010 scan result (EW text must be choice-specific, not misassigned)",
+        "DL-013 scan result (no template boilerplate in EW fields)",
+        "DL-026 scan result (no empty non-CC ExplanationWrong slots)"
+      ],
+      "decisions": [
+        "PASS: All fields complete, 0 accounting errors, all DL structural scans clean — proceed to Gate 2",
+        "FAIL: Accounting error (wrong answer, wrong standard, wrong formula) — REJECT item, return to author",
+        "NEEDS FIX: Structural defect (DL-008/010/013/026) — route to remediation; do not certify until cleared"
+      ],
+      "defect_classes_caught": [
+        "DL-001: Imprecise wording causing mathematical inconsistency",
+        "DL-008: Non-empty ExplanationWrong[CorrectChoice]",
+        "DL-010: Misassigned choice explanations (EW text describes wrong choice)",
+        "DL-013: Template boilerplate distractor explanations",
+        "DL-026: Empty non-CorrectChoice ExplanationWrong slots",
+        "DL-009: Incorrect ASC authority citation",
+        "DL-030: CorrectChoice answer-key errors (stored CC ≠ independently derived answer)",
+        "Conceptual errors (wrong accounting principle, misapplied standard)",
+        "Terminology errors (non-standard or incorrect technical terms)",
+        "G-NEW-2: ExplanationWrong topic mismatch (EW text belongs to different question/topic)",
+        "G-NEW-3: Dual-block Choice mismatch (metadata ≠ content block)"
+      ],
+      "session_examples": [
+        "S313 Gate 1: All 10 Domain E replacement items PASS — 0 conceptual errors, 0 terminology errors, COSO/SOX/IIA/ACFE fidelity confirmed",
+        "S318 Gate 1: S808 10 Wave 2b items — DL-008 PASS, DL-026 PASS, DL-013 PASS, DL-010 PASS",
+        "S801 Agents C/D: DL-029 root cause analysis — 0 Certified DL-008, all prior reports were forward-scan artifacts"
+      ]
+    },
+    {
+      "gate_id": 2,
+      "name": "Psychometric Review (DCS — Difficulty Calibration Standard)",
+      "caqs_origin": "CAQS §8.1 G2 — 'Psychometric Review'. Minimum score: 90/100 rubric. Checked By: Psychometrician. Description: Difficulty, Bloom's, distractor quality, bias check.",
+      "trigger": "Item passes Gate 1 (fields complete, technically accurate).",
+      "inputs": [
+        "Technical review report from Gate 1",
+        "Question metadata: Difficulty, DifficultyScore, CognitiveLevel, LOSTag",
+        "TAXONOMY_REGISTRY.md (permitted enumeration values)",
+        "CAQS §6.1 Target Difficulty Distribution (Easy 15%, Mod-Easy 20%, Mod 30%, Diff 25%, Very Diff 10%)",
+        "CAQS §6.2 Bloom's Taxonomy Distribution (Remember 5%, Understand 15%, Apply 40%, Analyze 25%, Evaluate 15%)",
+        "CAQS §6.3-6.6: Distractor performance, cueing/bias checks, guessability criteria"
+      ],
+      "review_agents": [
+        "Psychometrician Agent (per COLLABORATION_MATRIX.md — final authority on difficulty and exam quality)",
+        "Difficulty Specialist (e.g., S700 Layer 2 — identified systematic DL-031)",
+        "Difficulty Calibration Validator (automated: definition-match detection, DCS compliance)"
+      ],
+      "outputs": [
+        "DCS compliance report (% of items within ±1 of correct difficulty tier)",
+        "Difficulty/CL alignment report (each item's difficulty tier matches Bloom's level expectation)",
+        "Distractor quality assessment (plausibility, distinctness, trap coverage)",
+        "Cueing/bias check report (grammatical, length, position, absolute-language, logical-subset)",
+        "Answer position balance report (22-28% per A/B/C/D position; no streaks >4)"
+      ],
+      "decisions": [
+        "ALIGN: Difficulty and CL match expected values per CAQS §6.1-6.2 — proceed to Gate 3",
+        "RECALIBRATE: Misalignment detected (e.g., DL-031 definition-match inflation) — adjust difficulty label and re-run",
+        "REJECT: Severe misalignment (e.g., Easy item labeled Very Difficult, or CL mismatch beyond ±2 tiers) — return to author"
+      ],
+      "defect_classes_caught": [
+        "DL-031: Definition-match difficulty inflation (stem=textbook definition, answer=defined term; systematically labeled Moderate instead of Easy; estimated ~500 items)",
+        "DL-032: Case bank uniform difficulty (all 420 case items labeled Moderate — zero variance, zero calibration)",
+        "DL-004: Ambiguity (vague qualifiers: 'usually', 'normally', 'generally')",
+        "DL-003: Absolute language ('always', 'never', 'must' in distractors without standard justification)",
+        "DL-005: Distractor similarity (Jaccard >70% between distractor pairs)",
+        "Position bias (answer distribution >28% or <22% per slot)",
+        "Grammatical/length cueing",
+        "Pattern cueing (running same-answer streaks >4)"
+      ],
+      "session_examples": [
+        "S700 Layer 2 Difficulty Specialist: Found systematic DL-031 — 6 of 7 miscalibrations were definition-match pattern",
+        "S700 Layer 1 Case Files Scan: Found DL-032 — all 420 case items labeled 'Moderate'",
+        "S723 calibration_score: 87/100. DCS compliance 92.6%. 174 severe misalignments triggered deduction.",
+        "S318 seeds: DL-031 FAIL on all 38 Unprocessed seeds (difficulty/CL uncalibrated)"
+      ]
+    },
+    {
+      "gate_id": 3,
+      "name": "Numerical Validation",
+      "caqs_origin": "CAQS §8.1 G3 — 'Numerical Validation'. 100% accuracy required. Checked By: Validator. Description: Independent recalculation, rounding check, tolerance check.",
+      "trigger": "Item passes Gate 2 AND is a calculation item (CalculationRequired=true). Conceptual items skip this gate.",
+      "inputs": [
+        "Question stem (fact pattern, numbers, time periods)",
+        "Exhibit data (if exhibits are referenced)",
+        "Stored Correct answer value (not read until independent calculation complete per CAQS §5.1)",
+        "CAQS §5.2 Rounding Policy (dollars→whole, %→XX.XX%, ratios→X.XX, per-unit→4dp interim/2dp final)",
+        "CAQS §5.3 Accepted Tolerance (±$1 for dollars, ±0.01% for percentages, ±0.01 for ratios)",
+        "CAQS §5.4 Formula Verification Checklist",
+        "CAQS §5.5 Financial Statement Impact Verification (for JE/FS questions)"
+      ],
+      "review_agents": [
+        "Validator Agent (automated recalculation engine)",
+        "Accountant Agent (independent manual recalculation per CAQS §5.1 — solve without looking at stored answer first)",
+        "Independent Verifier (second calculation by a different agent for Gold Standard items per §14.4)"
+      ],
+      "outputs": [
+        "Independent recalculation result (formula → substituted values → computed result)",
+        "Comparison vs. stored Correct value (within tolerance? Y/N)",
+        "Rounding compliance report",
+        "Formula verification report (correct formula selected, all inputs trace to exhibits, units consistent)"
+      ],
+      "decisions": [
+        "VERIFIED: Independent result matches stored answer within tolerance — proceed to Gate 4",
+        "ERROR: Result differs from stored answer beyond tolerance — flag as potential DL-030, escalate to Accountant for answer-key correction",
+        "N/A: Not a calculation item (CalculationRequired=false) — gate automatically passed"
+      ],
+      "defect_classes_caught": [
+        "DL-030: CorrectChoice answer-key error (stored answer ≠ independently computed answer)",
+        "Arithmetic errors (wrong operation, wrong order of operations)",
+        "Formula selection errors (wrong formula for the tested concept)",
+        "Input errors (wrong numbers from exhibits, wrong time periods)",
+        "Rounding errors (rounded at wrong step, wrong precision)",
+        "Unit errors (mixing thousands and singles, annual vs. monthly rates)",
+        "Tax-effect application errors (applied at wrong stage)",
+        "Non-cash item errors (depreciation treated as cash outflow, etc.)"
+      ],
+      "session_examples": [
+        "S24 Phase 0B CorrectChoice Ground-Truth Audit: Found 5 DL-030 items — P1B-B-119 (learning curve formula error), P1B-F-084, P1B-F-116, P1B-F-121, P1E-E-037",
+        "P1B-B-119: 8^(-0.3219) should have been 4^(-0.3219). 4th unit time = 100 × 4^(-0.32193) = 64, not 51.2.",
+        "All 5 DL-030 items fixed in S24; CorrectChoice, EW, and EC updated"
+      ]
+    },
+    {
+      "gate_id": 4,
+      "name": "Instructional Review / EQS (Explanation Quality Standard)",
+      "caqs_origin": "CAQS §8.1 G4 — 'Instructional Review'. Minimum score: 90/100 rubric. Checked By: Editor. Description: Explanation quality, writing clarity, educational value.",
+      "trigger": "Item passes Gates 1-3. All ExplanationCorrect and ExplanationWrong fields must be substantive and choice-specific.",
+      "inputs": [
+        "All ExplanationWrong[A-D] fields",
+        "ExplanationCorrect field",
+        "Content-block Choices.{A,B,C,D} (authoritative learner-facing content per G-NEW-1)",
+        "EXPLANATION_STYLE_GUIDE.md",
+        "CAQS §4.1 Required Elements (concept identification, solution steps, business interpretation, exam trap)",
+        "CAQS §4.2 Explanation Templates (calculation item correct/detractor, conceptual item correct/detractor)",
+        "CAQS §4.3 Language Rules (professional tone, no uncertainty, choice-specific, ≥50 chars)",
+        "CAQS §4.4 Explanation Validation Rules (EV1–EV8)",
+        "CAQS §11.2 Learning Science Elements (retrieval practice, error correction, worked examples)",
+        "G-NEW-2 (Explanation Relevance — no cross-item contamination)",
+        "G-NEW-4 (Case explanation sufficiency — one-sentence explanations blocked)"
+      ],
+      "review_agents": [
+        "Editor Agent (per COLLABORATION_MATRIX.md — final authority on language and readability)",
+        "EW Integrity Auditor (e.g., S318 Agent M — automated slot-by-slot scan)",
+        "EQS Scorer (UIQS computation)",
+        "Learning Science Auditor (LS1–LS5 validation)"
+      ],
+      "outputs": [
+        "EW integrity report: per-item per-slot assessment (DL-008/026/021/013/010/027)",
+        "EQS score (0-100): composite of EC quality + EW quality + learning science compliance",
+        "UIQS score (Unified Item Quality Score): aggregate of all quality dimensions, used for cross-pack benchmarking",
+        "EW character stats: per-slot length (min, max, mean, median), % below 50-char minimum",
+        "Boilerplate detection report: % of EW slots containing template text",
+        "Citation coverage: % of items citing ASC/COSO/GAAP/IMA in ExplanationCorrect",
+        "Learning science compliance (LS1-LS5 pass/fail)"
+      ],
+      "decisions": [
+        "SUBSTANTIVE: All EW slots filled with choice-specific text ≥50 chars, 0 boilerplate, 0 topic mismatch, all learning science elements present — proceed to Gate 5",
+        "ENRICH: EW slots present but quality below threshold (short, generic, or missing learning science elements) — flag for editorial enhancement; may certify with warning if all structural gates pass",
+        "REWRITE: EW slots empty (DL-021), boilerplate (DL-013), misassigned (DL-010), or wrong-topic (G-NEW-2) — BLOCK certification until rewritten"
+      ],
+      "defect_classes_caught": [
+        "DL-007/DL-013: Template boilerplate distractor explanations ('represents a plausible misconception...')",
+        "DL-021: Absent distractor ExplanationWrong fields (Pack E Section C — 95 items with no distractor EW)",
+        "DL-025/DL-026: Empty non-CorrectChoice ExplanationWrong slots",
+        "DL-027: Closing-tag boilerplate ('...may misunderstand how the governing standard applies...')",
+        "G-NEW-2: ExplanationWrong topic mismatch (EW text describes a completely different question/topic)",
+        "G-NEW-4: Case explanation insufficiency (one-sentence explanations at Apply/Analyze/Evaluate levels)",
+        "EV1: Explanation <50 characters",
+        "EV2: Placeholder phrases ('This is the correct choice', 'Plausible distractor')",
+        "EV3: Missing accounting principle reference in correct answer explanation",
+        "EV7: Uncertain language ('I think', 'probably', 'maybe')",
+        "LS1-LS5: Missing learning science elements"
+      ],
+      "session_examples": [
+        "S313 EW Integrity Audit: 10/10 DL-008 clean, 30/30 non-CC EW filled (mean 513 chars), 0/40 DL-013 boilerplate, 0/10 DL-010 cross-contamination",
+        "S318 EW Audit: 40 items × 3 non-CC slots = 120 slots ALL populated. EW average 435 chars (min 207, max 722). DL-008: 0, DL-026: 0, DL-013: 0",
+        "S801 Agent I (Pack E Learning-Value): 83.6% definition-match, median EC=67 chars, 92.4% zero citations. Grade: structurally A+, educationally D/F",
+        "S313 Gate 4 scanner: 29 regex-level observations (0% pass rate) — ALL FALSE POSITIVES upon human content review. All items substantively clean.",
+        "Pack E Section C (DL-021): 95 Certified items in learner pool with no distractor explanations — HIGH learner-safety risk"
+      ]
+    },
+    {
+      "gate_id": 5,
+      "name": "Metadata Review",
+      "caqs_origin": "CAQS §8.1 G5 — 'Metadata Review'. Pass all checks required. Checked By: Validator. Description: All required fields present and valid.",
+      "trigger": "Item passes Gates 1-4.",
+      "inputs": [
+        "Full item metadata (all fields per QUESTION_METADATA_STANDARD.md Parts 1-4)",
+        "TAXONOMY_REGISTRY.md (permitted enumeration values)",
+        "EXAM_BLUEPRINT.md (blueprint domain and LOS mapping)",
+        "QUESTION_METADATA_STANDARD.md §5 Validation Rules (field-level, cross-field, exhibit data consumption, cognitive progression)"
+      ],
+      "review_agents": [
+        "Validator Agent (automated: metadata field completeness and type checks)",
+        "Metadata Auditor (manual: blueprint alignment, cognitive progression verification)",
+        "Blueprint Coverage Agent (LOS mapping verification per domain)"
+      ],
+      "outputs": [
+        "Metadata completeness report: % of required fields present",
+        "Field-type validation report: no type mismatches",
+        "Cross-reference validation: all dependencies resolve, all formula/trap references valid",
+        "Taxonomy compliance report: all enumeration values in TAXONOMY_REGISTRY.md",
+        "Blueprint alignment report: item maps to specific IMA CSO LOS",
+        "Cognitive progression report (case items: Apply → Analyze → Evaluate → Understand → Synthesize)",
+        "Metadata quality score (Dimension 10: 0-10 scale per CAQS §2.2)"
+      ],
+      "decisions": [
+        "COMPLETE: All required fields present, all types correct, all references resolve — proceed to Gate 6",
+        "INCOMPLETE: Missing required fields — route to metadata enrichment before certification",
+        "WARN: Non-blocking gaps (e.g., DL-015 cosmetic topic numbering shift) — certify with note"
+      ],
+      "defect_classes_caught": [
+        "Missing required fields (CaseID, Title, SectionTags, BlueprintDomain, etc.)",
+        "Field type mismatches (DifficultyScore as string instead of integer)",
+        "Invalid enumeration values (CognitiveLevel not in TAXONOMY_REGISTRY)",
+        "Blueprint misalignment (item maps to wrong domain or LOS)",
+        "DL-015: Metadata topic numbering shift (cosmetic)",
+        "DL-016: Metadata-block ChoiceA-D +1 offset from content block (learner-safety risk on Certified items)",
+        "DL-023: Exhibit headers missing (Body-instead-of-Headers pattern)",
+        "DL-024: Missing question_state field",
+        "CF1-CF5: Cross-field validation failures (per QUESTION_METADATA_STANDARD.md §5.2)"
+      ],
+      "session_examples": [
+        "S723 metadata_quality_score: 83/100. CL coverage: 100%. DL-008 clean: 0. Taxonomy staleness: true.",
+        "S318 seeds: LOSTag precision CRITICAL (all 'E Internal controls', needs sub-tags). Metadata calibration MODERATE (DL-031).",
+        "S726: DL-016 declared HIGH learner-safety risk — 58 Pack A Section E Certified items with metadata-block shift"
+      ]
+    },
+    {
+      "gate_id": 6,
+      "name": "Final Validation / Governance Guard",
+      "caqs_origin": "CAQS §8.1 G6 — 'Final Validation'. Zero errors required. Checked By: Validator. Description: Automated suite passes with no errors or new warnings.",
+      "trigger": "All preceding gates (0-5) have passed. Item is proposed for certification.",
+      "inputs": [
+        "All gate reports (G0-G5) consolidated into evidence package",
+        "Target pack file (original state, pre-modification)",
+        "Governance guard plugin (.opencode/plugins/governance-guard.js)",
+        "ExplanationValidator (scripts/validators/)",
+        "Validator suite (all modules)",
+        "AGENTS.md rules (batch cap: ≤30 items, backup protocol)",
+        "G-NEW-1 through G-NEW-5 enforcement rules (QUESTION_METADATA_STANDARD.md §9.4)",
+        "BACKUP_PROTOCOL.md"
+      ],
+      "review_agents": [
+        "Validator Agent (automated: full validator suite execution)",
+        "Governance Guard (automated: 5/6 rules, 27 tests)",
+        "Certification Auditor (manual: governance gate verification per S726 specs)",
+        "Independent Verifier (AGENTS.md §5: cross-check all claims against raw file/line evidence)"
+      ],
+      "outputs": [
+        "Validator suite result: 0 errors, 0 new warnings",
+        "Governance guard result: 27/27 PASS (or 20/20 PASS prior to S726 upgrade)",
+        "Rule 2 (BLOCK): 0 non-empty ExplanationWrong[CorrectChoice] on certified items",
+        "Rule 5 (BLOCK): batch size ≤30 items per write",
+        "Rule 1 (WARN): question_state changes paired with REVISION_HISTORY.md entry",
+        "Rule 4 (WARN): CorrectChoice changes include 'recomputed/independently verified' note",
+        "G-NEW-1 through G-NEW-5 compliance: verified or BLOCK",
+        "Backup protocol confirmation: .bak file exists with non-zero size",
+        "Final validation report: overall quality score + PASS/FAIL/NEEDS_FIX"
+      ],
+      "decisions": [
+        "PASS: 0 errors, all governance guard rules pass, all G-NEW rules satisfied — item cleared for Certification Board (Gate 7)",
+        "BLOCK: Governance guard Rule 2 violation (non-empty EW[CC]) — certification denied until cleared",
+        "BLOCK: Governance guard Rule 5 violation (batch >30 items) — split into smaller batches",
+        "BLOCK: G-NEW-2 violation (EW topic mismatch) — certification denied until repaired",
+        "BLOCK: G-NEW-1 violation (dual-block Choice mismatch) — certification denied until metadata aligned with content block",
+        "WARN: Governance guard Rule 1 or Rule 4 warnings — flag for session idle, do not block certification"
+      ],
+      "defect_classes_caught": [
+        "DL-008: Non-empty ExplanationWrong[CorrectChoice] on proposed Certified items (Rule 2 BLOCK)",
+        "G-NEW-1: Dual-block architecture — metadata ChoiceA-D ≠ content Choices.A-D (BLOCK)",
+        "G-NEW-2: ExplanationWrong topic mismatch — cross-item contamination (BLOCK)",
+        "G-NEW-3: Inadequate verification methodology (forward-scan instead of within-object extraction)",
+        "G-NEW-4: Case explanation insufficiency at Apply/Analyze/Evaluate levels (BLOCK)",
+        "G-NEW-5: Missing distractor rationale for select/multi/match case items (BLOCK)",
+        "DL-029: Forward-scan false positives from CC-before-QID architecture (methodology defect)",
+        "DL-019: Concurrent-write data loss (remediation silently overwritten by parallel session)",
+        "DL-022: Null-array crash on corrupted session restore (app.js)",
+        "Batch-size compliance (>30 items per write without BLOCK-AUTHORIZED marker)"
+      ],
+      "session_examples": [
+        "S726 governance guard: 27/27 PASS (upgraded from 20/20). Rule 2 string-aware brace-matching active. DL-029 eliminated.",
+        "S318 governance guard: 27/27 PASS. Dimensions: Duplicate Prevention(6), DL-008(6), DL-026(5), DL-013(4), Blueprint(3), Quality Gates(3).",
+        "S313: governance guard 20/20 PASS (pre and post identical). 10/10 certification proposals.",
+        "S803: Pre-flight governance guard 20/20 PASS. Post-flight 20/20 PASS. 110 items via Node.js script (≤30 per batch). Backup protocol: 3 backups confirmed non-zero.",
+        "S726: G-NEW enforcement NOT OPERATIONALIZED. 4 COND conditions: 2 RESOLVED, 2 OPEN (blocks S803 launch)."
+      ]
+    },
+    {
+      "gate_id": 7,
+      "name": "Certification Board (DQS + UIQS + G-NEW Gate)",
+      "caqs_origin": "CAQS §8.1 G7 — 'Approval'. All gates pass required. Checked By: Release Manager. Description: Final sign-off for production.",
+      "trigger": "All items in a batch have passed Gates 0-6. Evidence packages complete. Certification Board convenes for final review.",
+      "inputs": [
+        "All 7 gate reports (G0-G7) consolidated per item",
+        "Per-item evidence packages (technical review, EQS/UIQS scores, DCS compliance, EW integrity, learner safety)",
+        "DQS score (Difficulty Quality Standard): difficulty calibration per CAQS §6.1-6.2",
+        "UIQS score (Unified Item Quality Score): aggregate across all dimensions",
+        "Portfolio impact analysis (certified count change, learner pool exposure, domain coverage)",
+        "MASTER_QUESTION_REGISTRY (current state, before certification)",
+        "REVISION_HISTORY.md (ready for append)"
+      ],
+      "review_agents": [
+        "Certification Board (multi-agent panel: Accountant + Editor + Psychometrician + Validator + Release Manager per COLLABORATION_MATRIX.md)",
+        "Board Chair (coordinates per-item vote, documents dissent)",
+        "Release Manager (final sign-off authority per COLLABORATION_MATRIX.md override rules)",
+        "UIQS Computation Agent (cross-checks score derivation)",
+        "DQS Auditor (difficulty distribution impact analysis)"
+      ],
+      "outputs": [
+        "Per-item verdict: CERTIFY / HOLD / ESCALATE (with rationale for each)",
+        "Certification Board Results report (e.g., SESSION313_CERTIFICATION_BOARD_RESULTS.json)",
+        "Board vote tally: unanimous/majority with dissenting opinion documented",
+        "Portfolio Impact Analysis (certified count change, domain E/F coverage impact)",
+        "ProductionStatus promotion: 'Draft'/'In Audit' → 'Production'",
+        "question_state transition: 'Unprocessed'/'In Audit' → 'Certified'",
+        "REVISION_HISTORY.md entry (per governance-guard Rule 1)",
+        "MASTER_QUESTION_REGISTRY.md regeneration (per governance-guard Rule 3)"
+      ],
+      "decisions": [
+        "CERTIFY: All 7 gates pass, board unanimous or majority. Item promoted to question_state: 'Certified', ProductionStatus: 'Production'. Immediately eligible for learner delivery pool.",
+        "HOLD: One or more board members identify issues not caught by automated gates. Item held back for specific remediation. Does not enter learner pool.",
+        "ESCALATE: Critical defect discovered during board review (e.g., DL-030 answer-key error, G-NEW-2 topic contamination). Blocked from learner pool. Sent to TIER 1 structural repair."
+      ],
+      "defect_classes_caught": [
+        "Any undetected defect that passed automated gates but fails expert human/content review",
+        "G-NEW-1 through G-NEW-5 compliance failures (final human verification)",
+        "Cross-item consistency issues (items within a rotation group or section that work individually but not together)",
+        "Bluepint coverage gaps (certification of items that leave unintended LOS gaps)",
+        "Difficulty distribution imbalance (too many Easy items certified in a single batch)",
+        "Learner-safety edge cases (items technically correct but potentially misleading)"
+      ],
+      "session_examples": [
+        "S313 Certification Board: 10/10 CERTIFY — UNANIMOUS. 0 HOLD. 0 ESCALATE. All 10 Domain E replacement items certified.",
+        "S313: Board recommends immediate promotion to Production. UIQS: 81.3 (A-) — exceeds Pack B Section E benchmark (77.1, B).",
+        "S313: Certified count 2,181 → 2,191 (+10 upon insertion). Domain E: 208 → 218 certified (58.1%). Clone groups cleared: 10/33 (30.3%).",
+        "S802 Launch Board: S803 CLEARED. 9 batches, 112 items, +1 net Certified. No answer-key changes. No scoring changes.",
+        "S803 Post-Flight: +1 net Certified (P1-E-056). 110 Section F clones archived. Certified: 2,181 → 2,182. Governance guard 20/20 PASS."
+      ]
+    }
+  ],
+  "boards_identified": [
+    {
+      "board_id": "Readiness Board",
+      "also_known_as": "Launch Board (S802), Pre-Flight Board (S803), Start-Up Assessment (S318)",
+      "description": "Pre-execution gate that assesses whether an entire certification wave, batch, or section is ready to proceed. Issues launch authorization or blocks with conditions.",
+      "trigger": "Before any certification execution wave begins. Before any pack-file write is authorized.",
+      "inputs": [
+        "Portfolio health snapshot (certified count, defect status, archived/unprocessed counts)",
+        "Current baseline hashes (CURRENT_BASELINES.md §1 — all 13 runtime-critical files)",
+        "Governance guard status (all rules active, all tests PASS)",
+        "Defect inventory (open DL-008, DL-026, DL-021, DL-030, DL-016 counts)",
+        "Batch plan (item count, pack targets, state transitions proposed)",
+        "Risk register (CRITICAL/HIGH/MEDIUM/LOW items)",
+        "Predecessor session closeout reports",
+        "Ownership matrix (all required roles accepted per Principle 2)"
+      ],
+      "review_agents": [
+        "Readiness Board Panel (typically 3-5 agents: Startup Governance + Portfolio Auditor + Risk Assessor)",
+        "Launch Board Agent (e.g., S802 Agent Y — issues SESSION CLEARED verdict)",
+        "Dashboard Compilation Agent (e.g., S318 Agent I/R — unified session dashboard)"
+      ],
+      "outputs": [
+        "Readiness verdict: READY / CONDITIONAL READY / BLOCKED",
+        "Conditions list (if CONDITIONAL: specific prerequisites that must be met before launch)",
+        "Batch authorization: QID list, per-batch scope, per-batch target state",
+        "Risk acknowledgment: known risks accepted for this wave",
+        "Clear conditions: what must be true post-execution for the wave to be considered complete"
+      ],
+      "decisions": [
+        "READY — NO CONDITIONS: All prerequisites met. Wave authorized for immediate execution.",
+        "CONDITIONAL READY: Prerequisites outstanding. Wave authorized but execution gated on conditions being met first (e.g., 'S803 must not launch until G-NEW operationalized').",
+        "BLOCKED: Critical blocker unresolved (e.g., DL-030 answer-key error in learner pool, DL-029 methodology compromising scan accuracy). Wave must not launch."
+      ],
+      "session_examples": [
+        "S802 Launch Board (Agent Y): S803 CLEARED. Scope: 9 batches, 112 items, +1 net Certified. Conditions: No answer-key changes, no scoring changes, backup protocol mandatory, governance guard Rule 5 compliance (≤28/batch).",
+        "S318 Readiness Board: READY FOR S319 — NO CONDITIONS. Wave 2b blocker removed by S808. All 40 replacement items in production. Critical path unambiguous.",
+        "S801 Launch Board: S800 VETO LIFTED. Three S800 prerequisites refuted (67 Certified DL-008 = DL-029 artifact; FD-045/FD-075 structurally complete). S802 ready for launch.",
+        "S802 Conditions: 4 OPEN (COND-03 G-NEW enforcement, COND-04 ownership acceptances). 2 RESOLVED (COND-01 Rule 2 upgrade, COND-02 phantom cleanup)."
+      ]
+    },
+    {
+      "board_id": "Learner Safety Board",
+      "also_known_as": "Safety Board (S801 Agent G)",
+      "description": "Verifies that Certified items in the active learner delivery pool do not pose educational harm. Catches items that passed structural gates but could mislead, confuse, or provide wrong-direction feedback to learners.",
+      "trigger": "After certification wave completion. Before any new Certified items enter the active learner pool. Also triggered post-fix to verify remediated items.",
+      "inputs": [
+        "Full item objects for all items proposed as Certified or in the delivery pool",
+        "ExplanationCorrect and ExplanationWrong[A-D] field content",
+        "CorrectChoice value",
+        "DL-008 scan results (non-empty EW[CC] = learner sees wrong-answer text for correct answer)",
+        "DL-030 scan results (wrong answer key → learner is told wrong answer is correct)",
+        "Topic-relevance cross-check (does EW text belong to this item's topic?)",
+        "Defect manifest: known-defective QID list from DEFECT_LIBRARY.md and governance/delivery_blocklist.js"
+      ],
+      "review_agents": [
+        "Learner Safety Auditor (e.g., S318 Agent E — per-item safety dimensions check)",
+        "Safety Board Agent (e.g., S801 Agent G — cross-item safety verdict)",
+        "Delivery Pool Filter Agent (ensures only question_state: 'Certified' items are delivered)"
+      ],
+      "outputs": [
+        "Safety verdict: ALL_SAFE / CONDITIONAL / UNSAFE",
+        "Per-item safety dimension report: DL-008 violations, DL-030 errors, CorrectChoice errors, EC errors, EW errors, misleading distractors, ambiguous stems, trick/trap items",
+        "Known-defective QID exclusion list (items to be filtered from delivery pool)"
+      ],
+      "decisions": [
+        "ALL_SAFE: 0 learner-safety risks across all dimensions. Items cleared for learner delivery.",
+        "CONDITIONAL: One or more items flagged for low-severity issues (e.g., thin explanations but not misleading). May enter learner pool with warning.",
+        "UNSAFE: Critical learner-safety risk (DL-030 wrong answer, DL-008 EW misfire, G-NEW-2 topic contamination). Items BLOCKED from learner pool until remediated."
+      ],
+      "session_examples": [
+        "S318 Learner Safety Audit: ALL_SAFE across all 40 production items. 0 DL-008, 0 DL-026, 0 CorrectChoice errors, 0 EC errors, 0 EW errors, 0 misleading distractors, 0 ambiguous stems, 0 trick items.",
+        "S801 Agent G Safety Board: Both FD-045 and FD-075 PASS. FD-046 is the actual 'metadata-only shell' (Archived, correct).",
+        "S802 Learner Pool Safety: 0 Certified DL-008, 0 DL-030 answer-key errors, 0 known defective QIDs in delivery pool. 2,181 Certified items: governance-clean and structurally verified."
+      ]
+    },
+    {
+      "board_id": "QA Board",
+      "also_known_as": "Gate 4 QA Review (S318), Quality Assurance Gate",
+      "description": "Final quality-assurance station before production insertion. Consolidates all gate reports and verifies that quality thresholds are met across all dimensions. Equivalent to Gate 4 in the 300-series 5-gate model but acting as a consolidation board rather than a single-gate pass.",
+      "trigger": "All individual gates (G0-G3 in 300-series, G1-G3 in 800-series) have passed. Items are assembled into a production insertion batch.",
+      "inputs": [
+        "All prior gate reports (Duplicate Prevention, Technical Accuracy, Blueprint Alignment)",
+        "EW integrity audit: 100% non-CC slots substantive, 0 DL-008/026/013/010",
+        "UIQS score per item (minimum threshold ≥88 for certification in 300-series)",
+        "Cross-gate consistency check: do G0-G3 reports agree?",
+        "Authoring Quality Gate methodology validation (S311 methodology)"
+      ],
+      "review_agents": [
+        "QA Reviewer (per COLLABORATION_MATRIX.md — must be independent, not the item's author or primary reviewer)",
+        "EW Integrity Auditor (automated slot-by-slot scan)",
+        "UIQS Computation Agent (cross-checks score against all dimension inputs)",
+        "Quality Gate Certification Agent (e.g., S317 — all 4 gates PASS)"
+      ],
+      "outputs": [
+        "QA PASS / FAIL verdict",
+        "Cross-gate consistency report: all individual gate reports agree; no contradictions",
+        "EW integrity confirmation: 100% CC-slots empty, 100% non-CC slots substantive",
+        "UIQS confirmation: all items ≥88 (or whatever threshold is in force)",
+        "Production insertion authorization: item cleared for write to pack file"
+      ],
+      "decisions": [
+        "QA PASS: All gates pass, EW integrity 100%, UIQS ≥88. Items authorized for production insertion.",
+        "QA FAIL: Any dimension below threshold. Items returned to applicable gate for rework."
+      ],
+      "session_examples": [
+        "S318 Quality Gate Verification: 5/5 PASS. Gate 0 (Duplicate Prevention), Gate 1 (Draft Completeness), Gate 2 (Technical Accuracy), Gate 3 (Blueprint Alignment), Gate 4 (QA Review).",
+        "S318 Gate 4 (QA): EW integrity 100%. UIQS 88-93, all ≥88 threshold. S808 gate_4_insertion: 540 items, all certified.",
+        "S317 Quality Gate Certification: All 4 gates PASS. 10 Wave 3 items certified."
+      ]
+    },
+    {
+      "board_id": "Governance Board",
+      "also_known_as": "Enforcement Certification Board (S726), Closure Acceptance Board",
+      "description": "Highest-level governance board. Oversees the certification infrastructure itself — not individual items but the system that certifies them. Issues enforcement certification (CONDITIONAL PASS / FULLY OPERATIONAL). Manages ownership acceptance, closure gates, and governance debt.",
+      "trigger": "Series closeout (700-series, 800-series). When enforcement conditions (COND-01 through COND-04) are evaluated. When ownership acceptance periods expire.",
+      "inputs": [
+        "Governance guard status (all rules active, all tests PASS)",
+        "Ownership matrix (19 rows, 8 lanes) with acceptance status",
+        "Portfolio Stewardship Framework (5 principles, 4 review cadences)",
+        "Maintenance Trigger Registry (5 cadences M1-M5)",
+        "Enforcement conditions (COND-01 through COND-04)",
+        "Risk register (total risks, breakdown, critical/high/medium/low)",
+        "CURRENT_BASELINES.md (all 13 runtime hashes)",
+        "DEFECT_LIBRARY.md (all open DL-IDs)",
+        "Closure Acceptance Gate (Rule 6 — designed, not yet implemented as of S726)"
+      ],
+      "review_agents": [
+        "Governance Board Panel (multi-agent: Baseline Maintainer + Risk Assessor + Ownership Steward + Enforcement Auditor + Closure Gate Agent)",
+        "Governance Auditor (independent verification of all governance claims)",
+        "S726 agents A-X (25 agents contributing to governance dashboard)"
+      ],
+      "outputs": [
+        "Enforcement certification: CONDITIONAL PASS / FULLY OPERATIONAL (per S726)",
+        "Governance maturity score: Design (23/25) + Activation (17/25) = Overall B+",
+        "Ownership gap analysis: accepted vs. pending, escalation triggered if deadline passed",
+        "Closure attestation: TRANSFER → ACCEPTANCE → APPROVAL → CLOSE chain complete",
+        "Governance debt reclassification: Blocking count trajectory (5→1→0)",
+        "CURRENT_BASELINES.md update (fresh hashes, phantom references removed)"
+      ],
+      "decisions": [
+        "FULLY OPERATIONAL: All 4 enforcement conditions resolved. All 6 Principle 2 acceptances completed. Rule 6 closure gate implemented. G-NEW operationalized in certification pipeline. Governance guard 27/27 PASS.",
+        "CONDITIONAL PASS: Mechanical controls active. 1+ procedural gaps remain. Conditional items listed (e.g., 'CONDITIONALLY CERTIFIED — 4 P0 items prevent FULLY OPERATIONAL certification').",
+        "ESCALATION: Critical enforcement gap (e.g., ownership deadline passed, Rule 2 DL-029 vulnerable). Escalation triggers governance freeze."
+      ],
+      "session_examples": [
+        "S726 Governance Board: CONDITIONALLY CERTIFIED. Design 23/25, Activation 17/25. 4 operational gaps: G-NEW not operationalized, 0/6 ownership acceptances, Rule 6 not implemented, AM-1 Function Constructor parse deferred to S727.",
+        "S726: 6 Principle 2 ownership acceptances ALL PAST S726 T0 DEADLINE (0/6). Escalation triggered per Principle 2: 'Assignment without acceptance is invalid.'",
+        "S726: COND-03 (G-NEW enforcement) OPEN — blocks S803 launch. COND-04 (ownership acceptances) OPEN — Governance Board escalation triggered."
+      ]
+    },
+    {
+      "board_id": "Launch Board",
+      "also_known_as": "Wave Authorization Board (S802 Agent Y), Certification Execution Authorization",
+      "description": "Final authorization gate before a certification wave executes pack-file writes. Issues the specific batch-by-batch authorization with verified scope, confirmed governance guard status, and explicit clear conditions.",
+      "trigger": "Readiness Board has issued READY verdict. All prerequisites met. Wave execution about to begin.",
+      "inputs": [
+        "Readiness Board verdict (READY/CONDITIONAL/BLOCKED)",
+        "Portfolio health snapshot (current certified count, defect status, pool composition)",
+        "Governance guard status (current test count, all PASS)",
+        "Batch plan: per-batch QID lists, per-batch target state changes, per-batch write authorization",
+        "Backup protocol confirmation (target files, backup paths, pre-write verification)",
+        "Post-execution verification plan: governance guard re-run, certified count re-verification, REVISION_HISTORY.md append"
+      ],
+      "review_agents": [
+        "Launch Board Agent (e.g., S802 Agent Y — issues SESSION CLEARED verdict)",
+        "Batch Planner Agent (e.g., S802 Agent K — wave compression, session count estimation)",
+        "Governance Preservation Auditor (e.g., S802 Agent D/V — confirms no unauthorized writes)"
+      ],
+      "outputs": [
+        "SESSION CLEARED verdict (e.g., 'S803 CLEARED')",
+        "Authorized batch list: per-batch scope, items, target pack, target state, anticipated certified count change",
+        "Execution constraints: no answer-key changes, no scoring changes, backup protocol mandatory, ≤28 items per batch",
+        "Post-execution clear conditions: what verified state must hold after all batches complete"
+      ],
+      "decisions": [
+        "CLEARED: Wave authorized. Execute batches in order. No further board review needed per batch.",
+        "CLEARED WITH MONITORING: Wave authorized but specific batches require mid-execution verification (e.g., certified count must not drop below threshold).",
+        "NOT CLEARED: Wave blocked. Specific prerequisites listed for resolution before re-submission."
+      ],
+      "session_examples": [
+        "S802 Launch Board (Agent Y): S803 CLEARED. 9 batches, 112 items, +1 net Certified. Batch 1: P1-E-056 certification restoration (1 item, pack_a). Batches 2-5: Pack C Section F clone archival (56 items, pack_c). Batches 6-9: Pack D Section F clone archival (55 items + 1 orphan, pack_d).",
+        "S803 Execution: 110 items via Node.js script (≤30 per governance-guard Rule 5). 3 backups confirmed non-zero. Post-flight: 2,182/241/77/2,500."
+      ]
+    },
+    {
+      "board_id": "Archival Governance Board",
+      "also_known_as": "Clone Archival Board (S803), Section Governance",
+      "description": "Specialized board for archival operations (clone removal, seed preservation, QID retirement). Ensures blueprint coverage is preserved when items are removed from the active pool.",
+      "trigger": "When clone redundancy is identified (DL-012) and archival action is proposed. Before any items transition from any state to 'Archived'.",
+      "inputs": [
+        "Clone group analysis: stem similarity >90% after removing proper nouns, identical distractor explanations, answer-letter rotation",
+        "Seed identification: which item in each clone group is the unique seed to preserve",
+        "Blueprint coverage overlay: does archival of N clones create LOS coverage gaps?",
+        "QUESTION_SIMILARITY_LEDGER: cross-pack duplication check",
+        "Agent reliability review (per S802 Agent U): any agent QID-list errors?"
+      ],
+      "review_agents": [
+        "Clone Reduction Analyst (e.g., S802 Agent P — original 784-count analysis; corrected by Agent E)",
+        "Seed Inventory Agent (e.g., S318 Agent L — first comprehensive inventory of 38 Pack C/D Domain E seeds)",
+        "Archival Execution Agent (e.g., S803 Agent 2 — Pack C Section F clones; Agent 3 — Pack D Section F clones)",
+        "Post-Flight Verification Agent (e.g., S803 Agent 4 — cross-pack certified/archived/unprocessed count verification)"
+      ],
+      "outputs": [
+        "Clone group status: N/N groups with production replacement, N/N with certified replacement",
+        "Archival authorization: per-clone-group, which items move to Archived, which seed remains",
+        "Blueprint preservation report: all unique micro-topics covered by at least one seed",
+        "Compression ratio: N clones → 1 seed (e.g., 5:1 for DL-012 groups)",
+        "Post-archival pool state: certified/archived/unprocessed counts per pack"
+      ],
+      "decisions": [
+        "ARCHIVE: Clone identified, seed preserved, blueprint coverage maintained. Move clone to question_state: 'Archived'.",
+        "RETAIN: Item is NOT a clone (unique topic, independent stem, non-template distractors). Keep in active pool.",
+        "ESCALATE: Item is ambiguous (DL-016 shift, DL-029 artifact, cross-pack confusion). Requires deeper investigation before archival decision."
+      ],
+      "session_examples": [
+        "S803 Agent 2: Pack C Section F — 56 clones → Archived. 14 seeds retained. 2 unique items (FC-007, FC-025) confirmed non-clone and retained.",
+        "S803 Agent 3: Pack D Section F — 54 clones → Archived. 14 seeds retained. FD-046 already Archived from prior sweep.",
+        "S802 Agent P/E: 784 total clones identified (C:347, D:437). Agent P had QID-list errors — Agent E used as ground truth.",
+        "S803 Section F: Domain F active pool reduced from 75 → 19 (Pack C) and 75 → 21 (Pack D). Zero blueprint gaps."
+      ]
+    }
+  ],
+  "total_review_stages": 14,
+  "review_stages_breakdown": {
+    "gates": 8,
+    "boards": 6,
+    "full_sequence": "Gate 0 (Pre-Audit) → Gate 1 (Technical) → Gate 2 (Psychometric/DCS) → Gate 3 (Numerical) → Gate 4 (Instructional/EQS) → Gate 5 (Metadata) → Gate 6 (Final Validation/Governance Guard) → Gate 7 (Certification Board) → QA Board → Learner Safety Board → (fork: Archival Governance Board OR Launch Board → Readiness Board → Governance Board)",
+    "note": "Gates 0-7 are per-item. Boards are per-wave/section/pool. Boards may convene before gates (Readiness), between gates and execution (Launch), after execution (Learner Safety, QA), or as meta-governance (Governance Board)."
+  },
+  "agent_handoffs": [
+    {
+      "from": "Authoring Agent (300-series: S311-S312)",
+      "to": "Duplicate Prevention Agent (Gate 0)",
+      "trigger": "New items authored, QIDs assigned, candidate inventory produced",
+      "artifact": "Candidate inventory with QID list"
+    },
+    {
+      "from": "Gate 0 (Duplicate Prevention)",
+      "to": "Accountant Agent (Gate 1 — Technical Review)",
+      "trigger": "0 collisions, all QIDs unique",
+      "artifact": "Collision-check report, verified candidate inventory"
+    },
+    {
+      "from": "Gate 1 (Technical Review)",
+      "to": "Psychometrician Agent (Gate 2 — DCS)",
+      "trigger": "All fields complete, 0 accounting errors, DL-008/026/013/010 clean",
+      "artifact": "Technical accuracy report, DL structural scan results"
+    },
+    {
+      "from": "Gate 2 (Psychometric/DCS)",
+      "to": "Validator Agent (Gate 3 — Numerical)",
+      "trigger": "DCS compliance verified. Applies only to calculation items. Conceptual items skip.",
+      "artifact": "DCS compliance report, difficulty/CL alignment report"
+    },
+    {
+      "from": "Gate 3 (Numerical Validation)",
+      "to": "Editor Agent (Gate 4 — Instructional/EQS)",
+      "trigger": "Independent calculation matches stored answer within tolerance (or N/A for conceptual items)",
+      "artifact": "Numerical accuracy report"
+    },
+    {
+      "from": "Gate 4 (Instructional/EQS)",
+      "to": "Metadata Validator Agent (Gate 5 — Metadata Review)",
+      "trigger": "All EW slots substantive, 0 boilerplate, 0 topic mismatch, UIQS ≥ threshold",
+      "artifact": "EW integrity report, EQS score, UIQS score"
+    },
+    {
+      "from": "Gate 5 (Metadata Review)",
+      "to": "Governance Guard + Validator (Gate 6 — Final Validation)",
+      "trigger": "All required metadata fields present, all references resolve, blueprint aligned",
+      "artifact": "Metadata completeness report, field validation report"
+    },
+    {
+      "from": "Gate 6 (Final Validation)",
+      "to": "Certification Board (Gate 7)",
+      "trigger": "0 errors, all governance guard rules pass, all G-NEW rules satisfied",
+      "artifact": "Consolidated evidence package (G0-G6 reports), governance guard attestation"
+    },
+    {
+      "from": "Certification Board (Gate 7)",
+      "to": "QA Board",
+      "trigger": "CERTIFY verdict — items proposed for production",
+      "artifact": "Certification Board Results (per-item CERTIFY/HOLD/ESCALATE), board vote"
+    },
+    {
+      "from": "QA Board",
+      "to": "Learner Safety Board",
+      "trigger": "QA PASS — all gates verified, EW integrity 100%, UIQS confirmed",
+      "artifact": "QA PASS report, cross-gate consistency confirmation"
+    },
+    {
+      "from": "Learner Safety Board",
+      "to": "Launch Board",
+      "trigger": "ALL_SAFE — 0 learner-safety risks across all dimensions",
+      "artifact": "Safety verdict, per-item safety dimension report, delivery pool filter list"
+    },
+    {
+      "from": "Readiness Board",
+      "to": "Launch Board",
+      "trigger": "READY verdict — all prerequisites met for wave execution",
+      "artifact": "Readiness verdict, conditions list, batch authorization"
+    },
+    {
+      "from": "Launch Board",
+      "to": "Execution Agent (Batch Write)",
+      "trigger": "SESSION CLEARED — wave authorized for pack-file writes",
+      "artifact": "Authorized batch list, execution constraints, post-flight clear conditions"
+    },
+    {
+      "from": "Execution Agent (Batch Write)",
+      "to": "Post-Flight Verification Agent",
+      "trigger": "All batches executed, backups confirmed, REVISION_HISTORY.md appended",
+      "artifact": "Post-execution state: certified/archived/unprocessed counts, governance guard re-run"
+    },
+    {
+      "from": "Post-Flight Verification Agent",
+      "to": "Governance Board",
+      "trigger": "Series closeout or enforcement conditions evaluation",
+      "artifact": "Post-series state, enforcement conditions status, ownership matrix"
+    }
+  ],
+  "dqs_uiqs_explanation": {
+    "dqs": "Difficulty Quality Standard — measures how well an item's difficulty label matches its actual cognitive demand per CAQS §6.1-6.2. Tracks severe misalignments (DL-031, DL-032).",
+    "eqs": "Explanation Quality Standard — measures the educational quality of ExplanationCorrect and ExplanationWrong fields per CAQS §4 and §11. Includes EW integrity (DL-008/026/021/013/010/027), learning science compliance (LS1-LS5), and G-NEW-2/G-NEW-4 checks.",
+    "uiqs": "Unified Item Quality Score — aggregate score across all CAQS dimensions (0-100). Used as the single cross-pack benchmarking metric. Threshold ≥88 for 300-series certification. Computed from DCS + EQS + technical accuracy + blueprint alignment + metadata completeness.",
+    "current_benchmarks": {
+      "pack_b_section_e_dqs": 77.1,
+      "pack_b_section_e_uiqs": "B",
+      "s313_wave1_uiqs": "81.3 (A-)",
+      "s318_wave2b_uiqs": "88-93 range",
+      "s312_baseline_domain_e_pre_modernization": "62.5 (C)",
+      "s317_wave3_domain_e_uiqs": "90.0 (A-)",
+      "domain_f_uiqs": "62.4 (C)"
+    }
+  },
+  "documentation_chain": {
+    "authority_documents": [
+      "PROJECT_CONSTITUTION.md (highest authority)",
+      "CAQS_v1.0.md (quality standard — §8 Acceptance Criteria, §9 Audit Workflow)",
+      "QUESTION_METADATA_STANDARD.md (schema + governance states §9)",
+      "COLLABORATION_MATRIX.md (persona authority + RACI)",
+      "TAXONOMY_REGISTRY.md (permitted enumeration values)",
+      "WORKFLOWS.md (standard workflow definitions)"
+    ],
+    "governance_documents": [
+      "GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md (§1-9: board definitions, CAPA, reconciliation)",
+      "CURRENT_BASELINES.md (13 runtime-critical file hashes)",
+      "DEFECT_LIBRARY.md (DL-001 through DL-033 + tracked notes)",
+      "REVISION_HISTORY.md (all session write-ups, certification batches)"
+    ],
+    "session_series_handoff": [
+      "S307 → S801: 300-series risk register → 800-series governance correction",
+      "S801 → S802: DL-029 root cause → baseline correction + Wave 1 planning",
+      "S802 → S803: Launch Board authorization → Wave 1 execution",
+      "S803 → S804: Post-flight → Clone archival + seed certification"
+    ]
+  }
+}

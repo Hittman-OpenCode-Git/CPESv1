@@ -1,0 +1,122 @@
+{
+  "audit_session": "52",
+  "classification_date": "2026-07-28",
+  "source_reports": [
+    "SESSION052_CASE_CERTIFICATION_AUDIT.json",
+    "SESSION052_CASE_QUALITY_SCORECARD.json",
+    "SESSION052_CASE_COMPLIANCE_REPORT.md"
+  ],
+  "rubric_reference": "knowledge/CERTIFICATION_RUBRICS.md §2 (Case-Study Certification Rubric)",
+  "total_cases": 75,
+  "total_items": 400,
+  "total_findings": 19,
+
+  "substantive": {
+    "count": 1,
+    "cases_affected": 1,
+    "items_affected": 1,
+    "findings": [
+      "Incorrect ASC citation — CBQ4-A1-Q2 AccountingPrinciple metadata field cites ASC 360 (long-lived asset impairment) but item tests goodwill impairment under ASC 350-20. Learner-facing Explanation text is correct per audit; only the governance metadata tag is wrong."
+    ],
+    "severity": "HIGH",
+    "blocks_certification": false,
+    "blocking_rationale": "Per Case-Study Rubric §2.3: D1 (Calculation Accuracy) unaffected — answer key and learner-facing explanation are correct. D5 (Explanation Quality) unaffected — the Explanation field contains the correct standard. The error is in the AccountingPrinciple metadata field, which is not a rubric-gated critical field. D4 minimum is 4, and a single metadata value error would cap D4 at 3 only under strict interpretation — all other critical metadata fields are present. The audit labels this P0 critical but the formal rubric does not treat a metadata-only ASC tag error as a certification blocker."
+  },
+
+  "metadata": {
+    "count": 6,
+    "cases_affected": 44,
+    "items_affected": 305,
+    "findings": [
+      "ProductionStatus contradiction — 44 of 75 cases (59%) carry ProductionStatus: 'Draft' despite all 400 items having question_state: 'Certified'. Per CERTIFICATION_RUBRICS.md pre-flight checklist: 'ProductionStatus: Production only if all items are Certified.' The reverse (items Certified but case Draft) is not the example contradiction in the rubric gate table but represents a governance-state inconsistency. 31 Production cases are metadata-complete.",
+      "Item-level ProductionStatus — 305 of 400 items (76%) carry ProductionStatus: 'Draft' vs. 95 Production, despite all 400 items having question_state: 'Certified'.",
+      "Missing CompanyName metadata — 4 cases have no CompanyName field despite having named companies in scenario text (71 of 75 have named companies; these 4 have the names but not the metadata field).",
+      "Missing Industry/CompanyType — same 4 cases lack Industry and CompanyType metadata fields.",
+      "CBQ2-A3 BlueprintObjectives contains incorrect topic 'Inventory valuation' — should be removed or replaced with correct domain mapping.",
+      "Missing certification_date and Version on Draft cases — implied by Draft ProductionStatus; these governance traceability fields are required for certified items per D6 score 5."
+    ],
+    "severity": "MEDIUM",
+    "blocks_certification": true,
+    "blocking_rationale": "Per Case-Study Rubric D4 (Metadata and Difficulty) defect gate: 'ProductionStatus → question_state contradiction: D4 capped at 2.' While the gate example is 'Production + Unprocessed', the mirrored contradiction (Certified + Draft) carries the same governance inconsistency. D4 minimum for certification is 4. With D4 capped at 2, all 44 Draft cases fail D4. Additionally, cases missing critical metadata fields (CompanyName, Industry, CompanyType) would score D4 ≤ 3 even without the contradiction. The 31 Production cases are clean on metadata and are NOT blocked by this category."
+  },
+
+  "presentation": {
+    "count": 4,
+    "cases_affected": 55,
+    "items_affected": 180,
+    "findings": [
+      "ExhibitCount < 2 — 34 cases (45%) have fewer than 2 exhibits, violating CASE_STUDY_GOLD_STANDARD.md §3.4 minimum exhibit requirement. These cases have 0 or 1 exhibits where the Gold Standard requires 2.",
+      "Generic stakeholders — 21 cases use 'Management' or equivalent generic role title instead of a named stakeholder with specific role (e.g., 'CFO Maria Chen', 'Controller James Park'). Per CAQS §3.1 and D2 Score 4: 'Named company and stakeholder.'",
+      "Thin explanations — 27 items have Explanation fields < 100 characters. Per D5 Score 3: 'All items have explanations. Explanations are correct but terse — state the answer without full reasoning.' D5 minimum for certification is 4.",
+      "Low Quality_Realism scores — composite dimension averages: Pack 1: 82/100, Pack 2: 72/100, Pack 3: 65/100. Pack 2 and 3 reflect generic scenario language (textbook-style vs. business-authentic). 16 of 25 Pack 2 cases and 21 of 25 Pack 3 cases carry Draft ProductionStatus with missing realism metadata."
+    ],
+    "severity": "MEDIUM",
+    "blocks_certification": "PARTIAL",
+    "blocking_rationale": "Generic stakeholders BLOCK certification for 21 cases (D2 minimum 4 requires 'named stakeholder'; 'Management' is a role, not a named individual → D2 ≤ 3 → blocked). Thin explanations BLOCK certification for 27 items across an unknown number of cases (D5 minimum 4 requires 'substantive explanation'; <100 chars → D5 ≤ 3 → blocked). ExhibitCount < 2 does NOT block — the rubric D2 scores on exhibit professionalism and realism, not count; the Gold Standard's 2-exhibit minimum is aspirational. Low Quality_Realism scores are composite symptoms of the above issues, not independent blockers."
+  },
+
+  "calibration": {
+    "count": 4,
+    "cases_affected": 17,
+    "items_affected": 214,
+    "findings": [
+      "Uniform difficulty / DL-032 — 17 cases (23%) have all items labeled at the identical difficulty level, indicating template-based labeling with zero cognitive calibration. This is the DL-032 defect class (Open, documented in DEFECT_LIBRARY.md).",
+      "Difficulty distribution imbalance — 214 of 400 items (53.5%) labeled 'Difficult' vs. 25% CAQS §6.1 target. Only 3 items (0.8%) labeled 'Easy' vs. 15% target. Estimated ~114 items over-labeled Difficult and ~57 items under-labeled Easy.",
+      "Difficulty calibration dimension scores — cross-pack average Difficulty_Calibration: 62/100 (Pack 1: 65, Pack 2: 62, Pack 3: 58). Worsening from Pack 1 to Pack 3 reflects increasing template-use density.",
+      "Analyze/Evaluate validity dimension scores — cross-pack average: 61/100 (Pack 1: 68, Pack 2: 60, Pack 3: 55). Indicates systematic cognitive-level mislabeling: definition-match items (Bloom's Remember/Understand) labeled as Analyze or Evaluate. Pack 3 (58% Draft) has the worst miscalibration."
+    ],
+    "severity": "MEDIUM",
+    "blocks_certification": false,
+    "blocking_rationale": "Per Case-Study Rubric D4 (Metadata and Difficulty): D4 minimum for certification is 4, which requires only that 'All items have item-level Difficulty' — calibration accuracy is NOT required at score 4. Score 5 requires 'Case DifficultyScore within ±1 of mean item DifficultyScore' but certification only needs ≥ 4. DL-032 is not listed in the D4 defect-class gates. Difficulty distribution targets (CAQS §6.1) are quality aspirational goals, not certification prerequisites under the formal rubric. ALL 400 items satisfy the minimum requirement (Difficulty field present)."
+  },
+
+  "structural": {
+    "count": 4,
+    "cases_affected": 48,
+    "items_affected": 254,
+    "findings": [
+      "Cognitive progression violations — 48 cases (64%) have items not ordered in the Apply→Analyze→Evaluate sequence required by CAQS §3.5 and CASE_STUDY_GOLD_STANDARD.md. Items within these cases are templated in rotation-group order rather than cognitive-demand order. This is the single largest structural finding.",
+      "CBQ4-A2 CompanyName 'During Year' parse artifact — metadata corruption from the Sprint 5.6B metadata-authoring pipeline. Scenario text identifies company as 'Nova Manufacturing' but the CompanyName metadata field contains the raw parse residue 'During Year'. This is a structural corruption of a metadata field from a tooling defect.",
+      "Legacy scored_cases*.js files in repository root — 5 files (scored_cases.js through scored_cases5.js) remain in root despite being ARCHIVED by S916. Constitution §11.4 prohibits backup/legacy files in root. These files duplicate content now in the case_pack_*_corrected.js architecture. S916 timestamped backups already exist in backups/.",
+      "Documentation staleness — CURRENT_BASELINES.md §2 table shows Pack A at 481 Certified but actual from S892 Final Closure is 500. Drift flag on line 42 partially corrects this but the §2 table was not updated."
+    ],
+    "severity": "HIGH",
+    "blocks_certification": true,
+    "blocking_rationale": "Cognitive progression violations BLOCK certification for 48 cases. Per Case-Study Rubric D6 (Integration Readiness): Score 4 requires 'Items mostly follow progression but one pair is inverted.' Score 3: 'Items don't follow cognitive progression.' D6 minimum for certification is 4. With sequences in full rotation-group (template) order, these 48 cases score D6 ≤ 3 → blocked. CBQ4-A2 'During Year' corruption would score D4 ≤ 2 (corrupted metadata value) → blocked for 1 case (overlaps with cognitive progression set). Legacy files in root and documentation staleness are governance issues affecting repository health, not case-specific certification. The 27 cases WITHOUT cognitive progression violations (75-48=27) pass D6 on this dimension."
+  },
+
+  "blocking_summary": {
+    "description": "Count of findings that would block certification under CERTIFICATION_RUBRICS.md §2 Case-Study Rubric vs. those that would not.",
+    "blocking_findings": 7,
+    "blocking_finding_details": [
+      "ProductionStatus contradiction (44 cases) — D4 gate: 'ProductionStatus → question_state contradiction: D4 capped at 2'",
+      "Missing CompanyName/Industry/CompanyType (4 cases) — D4 Score 4 requires all critical case-level fields present",
+      "CBQ2-A3 BlueprintObjectives wrong topic (1 case) — D4 metadata quality issue",
+      "CBQ4-A2 CompanyName corruption (1 case) — D4 corrupted metadata field, score ≤ 2",
+      "Cognitive progression violations (48 cases) — D6 Score 3 'items don't follow cognitive progression', minimum is 4",
+      "Generic stakeholders (21 cases) — D2 Score 3 'stakeholder identified but not used', minimum requires named stakeholder at Score 4",
+      "Thin explanations <100 chars (27 items) — D5 Score 3 'terse', minimum is 4 for substantive explanation"
+    ],
+    "non_blocking_findings": 12,
+    "non_blocking_finding_details": [
+      "Incorrect ASC citation CBQ4-A1-Q2 (1 item) — learner text correct; metadata tag only; D1/D5 unaffected",
+      "ExhibitCount < 2 (34 cases) — Gold Standard aspirational; rubric D2 scores on quality, not count",
+      "Uniform difficulty DL-032 (17 cases) — D4 minimum 4 only requires Difficulty field presence, not calibration accuracy",
+      "Difficulty distribution imbalance (pool-wide) — CAQS §6.1 is quality aspiration, not rubric gate",
+      "Analyze/Evaluate validity scores low (pool-wide) — cognitive level mislabeling; rubric gates on presence, not accuracy",
+      "Difficulty_Calibration dimension average 62/100 — composite quality score, not individual gate",
+      "Quality_Realism dimension scores (Packs 2-3) — composite symptom of stakeholder/metadata issues already counted",
+      "Low item-level ProductionStatus (305 Draft items) — item-level Draft is symptom of case-level Draft, not independent blocker",
+      "Missing certification_date / Version (44 Draft cases) — implied by Draft status; fixed by ProductionStatus upgrade",
+      "Legacy scored_cases*.js in root — governance/hygiene issue; does not affect case content certification",
+      "Documentation staleness (CURRENT_BASELINES.md) — governance documentation; does not affect case certification",
+      "Section distribution imbalance noted for Pack E (E+F case) — balanced at pool level (11-14 per domain), not a finding"
+    ],
+    "unique_cases_blocked_minimum": 48,
+    "unique_cases_blocked_maximum": 73,
+    "unique_cases_blocked_note": "MINIMUM: 48 cases blocked by cognitive progression violations (D6 ≤ 3). MAXIMUM: 73 cases (all 75 minus 2 borderline-clean Production cases that may have no progression, stakeholder, or metadata issues — if such cases exist). Without per-case evidence, the exact union cannot be determined from these high-level reports alone. The 44 Draft cases overlap heavily with the 48 cognitive-progression cases. The 21 generic-stakeholder cases may overlap with either set. The 31 Production cases are described as 'at or near Gold Standard' but may still carry cognitive progression or stakeholder issues.",
+    "category_with_most_findings": "METADATA (6 findings, 44 cases affected)",
+    "category_with_most_cases_affected": "PRESENTATION (55 cases affected across exhibit count + generic stakeholders, with overlap caveat)",
+    "category_blocking_most_cases": "STRUCTURAL (48 cases blocked by cognitive progression violations — the single largest blocker)"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "session": "518",
+  "agent": "A",
+  "timestamp": "2026-07-25T23:40:00Z",
+  "purpose": "Pre-flight concurrency and target audit for CBQ2-A3 explanation uplift",
+
+  "pre_flight_test_results": {
+    "governance_guard": "20/20 PASS",
+    "session_recovery": "12/12 PASS",
+    "tutoring_safety": "74/74 PASS",
+    "readiness": "37/37 PASS",
+    "calibration": "18/18 PASS",
+    "core_baseline_total": "32/32 PASS",
+    "may_renderer": "60/62 PASS (2 pre-existing failures — NOT 500-series related)",
+    "may_regression_r2": "38/42 PASS (4 pre-existing failures — NOT 500-series related)",
+    "may_stagec": "CRASHED (pre-existing — NOT 500-series related)"
+  },
+
+  "concurrent_lane_protection": {
+    "100_series_may": {
+      "files_checked": ["may-core.js", "may-learner-state.js"],
+      "may_core_hash": "3d4ce2e049e6b7a5...",
+      "may_learner_state_hash": "d22dd189b788e480...",
+      "may_core_size": "238410 bytes",
+      "may_learner_state_size": "73255 bytes",
+      "in_scope": false,
+      "status": "PAUSED — no modifications planned"
+    },
+    "700_series_mcq": {
+      "files_checked": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+      "pack_a_hash": "ffc8bde956ff70f2...",
+      "pack_b_hash": "8253a6e01370caed...",
+      "pack_c_hash": "c74f5dc69ee28906...",
+      "pack_d_hash": "eb7449a087f30342...",
+      "pack_e_hash": "9cae46426cdc1bb7...",
+      "in_scope": false,
+      "status": "FROZEN — no modifications planned"
+    },
+    "500_series_case_bank": {
+      "files_checked": ["scored_cases2.js", "scored_cases.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+      "scored_cases2_hash": "pre-edit",
+      "in_scope": "scored_cases2.js ONLY",
+      "status": "ACTIVE — CBQ2-A3 uplift"
+    },
+    "scoring_runtime": {
+      "files_checked": ["app.js", "index_updated.html"],
+      "app_hash": "5a4338c6251171f2...",
+      "index_html_hash": "586396f940099b00...",
+      "in_scope": false,
+      "status": "PROTECTED"
+    }
+  },
+
+  "target_audit": {
+    "file": "scored_cases2.js",
+    "array": "ENHANCED_CASE_BASE2",
+    "case_id": "CBQ2-A3",
+    "parse_status": "OK (Function constructor)",
+    "enhanced_case_base2_cases": 15,
+    "migrated_case_base_b_cases": 15,
+    "cbq2_a3_items": 5,
+    "cbq2_a3_found_exactly_once": true,
+    "items": [
+      {
+        "itemId": "CBQ2-A3-Q1",
+        "type": "numeric",
+        "cognitiveLevel": "Apply",
+        "correct": 363636,
+        "questionState": "Unprocessed",
+        "explanationLength": 34,
+        "hasDifficulty": false,
+        "answerKeyVerified": true,
+        "calculation": "($400k/$550k)*$500k=$363,636.36 → rounds to $363,636"
+      },
+      {
+        "itemId": "CBQ2-A3-Q2",
+        "type": "numeric",
+        "cognitiveLevel": "Apply",
+        "correct": 43000,
+        "questionState": "Unprocessed",
+        "explanationLength": 65,
+        "hasDifficulty": false,
+        "answerKeyVerified": true,
+        "calculation": "($800k×1%)+($300k×5%)+($100k×20%)=$43,000"
+      },
+      {
+        "itemId": "CBQ2-A3-Q3",
+        "type": "multi",
+        "cognitiveLevel": "Evaluate",
+        "correct": ["Customer can benefit from good/service on its own", "The promise is separately identifiable in the contract"],
+        "questionState": "Unprocessed",
+        "explanationLength": 89,
+        "hasDifficulty": false,
+        "answerKeyVerified": true,
+        "note": "multi-select — needs wrong-choice rationale"
+      },
+      {
+        "itemId": "CBQ2-A3-Q4",
+        "type": "select",
+        "cognitiveLevel": "Analyze",
+        "correct": "$48,000",
+        "questionState": "Unprocessed",
+        "explanationLength": 73,
+        "hasDifficulty": false,
+        "answerKeyVerified": true,
+        "calculation": "$43k target credit + $5k debit offset = $48k",
+        "note": "needs distractor analysis: $38k subtracts debit, $43k ignores debit, $5k is debit alone"
+      },
+      {
+        "itemId": "CBQ2-A3-Q5",
+        "type": "fill",
+        "cognitiveLevel": "Understand",
+        "correct": "balance sheet",
+        "questionState": "Unprocessed",
+        "explanationLength": 55,
+        "hasDifficulty": false,
+        "answerKeyVerified": true,
+        "note": "needs principle naming and income statement approach contrast"
+      }
+    ],
+    "answerKeyVerification": {
+      "Q1": "PASS — $400k/$550k = 72.727%; ×$500k = $363,636.36; rounds to $363,636",
+      "Q2": "PASS — $800k×0.01=$8k; $300k×0.05=$15k; $100k×0.20=$20k; total=$43,000",
+      "Q4": "PASS — Target credit $43k; offset $5k debit; expense = $43k+$5k = $48,000"
+    },
+    "case_level_state": "Unprocessed",
+    "case_production_status": "Draft",
+    "case_difficulty": "Moderate/3"
+  },
+
+  "pre_flight_decision": "PROCEED — all 5 answer keys independently verified. Core baseline 32/32 PASS. No unauthorized diffs in 100-series or 700-series files. CBQ2-A3 confirmed 5 items, parseable, all Unprocessed. Backup created."
+}

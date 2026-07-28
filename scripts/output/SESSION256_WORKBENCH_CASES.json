@@ -1,0 +1,12 @@
+{
+  "reportId": "SESSION256_WORKBENCH_CASES",
+  "verdict": "PASS",
+  "casesCompleted": 8,
+  "casesTotal": 8,
+  "manualSearchesRequired": 0,
+  "caseTypes": {
+    "challenge": "4/4 PASS",
+    "defect": "2/2 PASS",
+    "certification": "2/2 PASS"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "session": "S113",
+  "generated": "2026-07-25",
+  "purpose": "Map every insight claim in _getProgressInsight, _getWeaknessInsight, _summarizeSession to its evidence source and S106 threshold",
+  "insights": {
+    "_getProgressInsight": {
+      "claims": [
+        {
+          "label": "improving",
+          "evidence_source": "getWeaknessClusters().improving[] — already filtered by delta >= 15, >=2 attempts in both windows",
+          "s106_threshold": "delta >= 15%, >=2 attempts both windows",
+          "validated_by": "_hasImprovingEvidence()",
+          "status": "ENFORCED — _hasImprovingEvidence checks totalAttempts >= 4, (recentPct - accuracy) >= 15"
+        },
+        {
+          "label": "growing_independence",
+          "evidence_source": "getTrends() — hintTrend === 'decreasing', accuracy >= 60, totalAttempts >= 4",
+          "s106_threshold": ">=4 attempts, hint trend decreasing, accuracy >= 70%",
+          "status": "ENFORCED — inline filter in _getProgressInsight (accuracy >= 60 is a softer floor; S106 says 70)"
+        },
+        {
+          "label": "performing_under_pressure",
+          "evidence_source": "getTrends() — avgDifficulty >= 4, accuracy >= 70",
+          "s106_threshold": "None specified — derived signal",
+          "status": "ACCEPTABLE — no S106 threshold conflicts"
+        },
+        {
+          "label": "well_established",
+          "evidence_source": "getTrends() — stability >= 80, accuracy >= 70",
+          "s106_threshold": "None specified directly — derived from stability >= 80",
+          "status": "ACCEPTABLE"
+        },
+        {
+          "label": "confidence_check",
+          "evidence_source": "getConfidenceCalibration() — overconfident: total >= 4, calibrationDelta >= 0.8; underconfident: total >= 3, calibrationDelta <= -0.5",
+          "s106_threshold": ">=4 confidence-rated attempts",
+          "status": "ENFORCED — _hasConfidenceEvidence checks total >= 4"
+        }
+      ]
+    },
+    "_getWeaknessInsight": {
+      "claims": [
+        {
+          "label": "persistent_weak",
+          "evidence_source": "getWeaknessClusters().persistentWeak[] — already filtered to >=5 attempts, accuracy < 60%",
+          "s106_threshold": ">=5 attempts, accuracy < 60%",
+          "validated_by": "_hasPersistentWeakEvidence()",
+          "status": "SELF-ENFORCED — getWeaknessClusters already applies thresholds"
+        },
+        {
+          "label": "declining",
+          "evidence_source": "getWeaknessClusters().declining[] — already filtered",
+          "s106_threshold": "delta <= -15%",
+          "validated_by": "_hasDecliningEvidence()",
+          "status": "ENFORCED — _hasDecliningEvidence checks delta <= -15 and >=4 attempts"
+        },
+        {
+          "label": "unstable",
+          "evidence_source": "getWeaknessClusters().unstable[] — already filtered to >=4 attempts, stability < 50%",
+          "s106_threshold": ">=4 recent attempts, stability < 50%",
+          "validated_by": "_hasUnstableEvidence()",
+          "status": "SELF-ENFORCED — getWeaknessClusters already applies thresholds"
+        },
+        {
+          "label": "hint_dependent",
+          "evidence_source": "getWeaknessClusters().hintDependent[]",
+          "s106_threshold": ">=4 attempts, hint trend increasing, accuracy >= 70%",
+          "validated_by": "_hasHintDependentEvidence()",
+          "status": "ENFORCED"
+        },
+        {
+          "label": "difficulty_sensitive",
+          "evidence_source": "getWeaknessClusters().difficultySensitive[]",
+          "s106_threshold": ">=2 Easy, >=2 Difficult, gap >= 30%",
+          "validated_by": "_hasDifficultySensitiveEvidence()",
+          "status": "ENFORCED — partial; difficulty distribution data limited in current schema"
+        },
+        {
+          "label": "lowest_accuracy_fallback",
+          "evidence_source": "getTrends() — totalAttempts >= 3",
+          "s106_threshold": "None — fallback only",
+          "status": "ACCEPTABLE — used only when no clusters identified"
+        },
+        {
+          "label": "recurring_traps",
+          "evidence_source": "misconceptionPatterns[] — count >= 2",
+          "s106_threshold": ">=2 occurrences",
+          "status": "ENFORCED — inline filter in _getWeaknessInsight"
+        }
+      ]
+    },
+    "_summarizeSession": {
+      "claims": [
+        {
+          "label": "session_stats",
+          "evidence_source": "state.session — mcqs[], cases[], answers[]",
+          "s106_threshold": "None — session summary is factual",
+          "status": "FACTUAL — no threshold concern"
+        },
+        {
+          "label": "weakest_strongest_this_session",
+          "evidence_source": "session MCQs sorted by per-topic accuracy",
+          "s106_threshold": "None — session-only data",
+          "status": "FACTUAL"
+        },
+        {
+          "label": "cross_session_comparison",
+          "evidence_source": "data.sessions — last 2 sessions, attempt accuracy comparison",
+          "s106_threshold": ">=2 sessions, delta >= 10% for \"improved\", <= -10% for \"dropped\"",
+          "validated_by": "_assessInsightEvidence().hasCrossSession",
+          "status": "FACTUAL — no implications beyond session-level"
+        },
+        {
+          "label": "next_step_recommendation",
+          "evidence_source": "weakest topic from session",
+          "s106_threshold": "None — recommendation only",
+          "status": "SAFE — no exam prediction language"
+        }
+      ]
+    }
+  },
+  "evidence_validators": {
+    "_hasImprovingEvidence": "totalAttempts >= 4, (recentPct - accuracy) >= 15",
+    "_hasPersistentWeakEvidence": "totalAttempts >= 5, accuracy < 60",
+    "_hasDecliningEvidence": "totalAttempts >= 4, (recentPct - accuracy) <= -15",
+    "_hasUnstableEvidence": "totalAttempts >= 4, stability < 50",
+    "_hasHintDependentEvidence": "totalAttempts >= 4, hintTrend === 'increasing', accuracy >= 70",
+    "_hasDifficultySensitiveEvidence": ">=2 Easy, >=2 Difficult, gap >= 30%",
+    "_hasConfidenceEvidence": "total >= 4",
+    "_assessInsightEvidence": "Aggregates all evidence checks into a single object for test inspection"
+  },
+  "known_limitations": [
+    "getWeaknessClusters already enforces most thresholds internally; the S113 validators provide redundancy and testability",
+    "_hasDifficultySensitiveEvidence uses lowPct/highPct from cluster data; may need more granular difficulty-distribution data in future",
+    "confidence threshold uses total >= 3 for underconfident (S106 says >=4); minor gap noted, not corrected in S113"
+  ]
+}

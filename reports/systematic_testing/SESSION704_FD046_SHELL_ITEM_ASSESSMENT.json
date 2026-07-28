@@ -1,0 +1,61 @@
+{
+  "session": "704",
+  "timestamp": "2026-07-25T16:30:00",
+  "item": "P1-FD-046",
+  "mode": "read-only assessment — no edits applied",
+  "classification": "SHELL_ITEM_CONFIRMED",
+  "recommendation": "CONTENT_POPULATION_RECOMMENDED",
+  "current_state": "Unprocessed",
+  "fields_present": [
+    "SourceDescription",
+    "Part1OnlyFlag",
+    "ReviewNote",
+    "QuestionID",
+    "CalculationItem",
+    "VerifiedChecks",
+    "ExplanationWrongA",
+    "ExplanationWrongB",
+    "ExplanationWrongC",
+    "ExplanationWrongD",
+    "question_state",
+    "DifficultyScore"
+  ],
+  "fields_missing": [
+    "Part",
+    "Section",
+    "SectionName",
+    "Topic",
+    "MicroTopic",
+    "UniqueConceptKey",
+    "LOSTag",
+    "Difficulty",
+    "ItemType",
+    "ItemStyle",
+    "Stem",
+    "Choices",
+    "CorrectChoice",
+    "ExplanationCorrect",
+    "StudyLinks"
+  ],
+  "ew_fields_status": {
+    "ExplanationWrongA": "empty",
+    "ExplanationWrongB": "empty",
+    "ExplanationWrongC": "empty",
+    "ExplanationWrongD": "has text about RPA vs master data governance"
+  },
+  "verifiedChecks_claim_accuracy": {
+    "Mapped to CMA Part 1 LOS": "NO — no LOSTag present",
+    "Screened for Part 2": "UNVERIFIABLE — no content to screen",
+    "Original practice item with micro-topic and stem": "FALSE — no stem present",
+    "Answer key distribution balanced": "FALSE — no choices or CorrectChoice",
+    "Distractors written as plausible traps": "FALSE — no distractors defined (only one EW_D has text)"
+  },
+  "deliverable_as_is": false,
+  "parse_blocker": false,
+  "learner_pool_impact": "None — item is Unprocessed and will not be delivered",
+  "likely_intended_topic": "Section F — Master Data Management or RPA (neighbors FD-045 and FD-047 are about MDM)",
+  "recommended_next_action": "Populate content fields in S705 or S706, or archive if population is deferred indefinitely",
+  "archival_criteria_met": "Not yet — archival is premature without author review",
+  "no_edits_applied": true,
+  "notes": "FD-046 is structurally a well-formed JSON object (not a parse blocker). The VerifiedChecks are boilerplate claims that do not match the actual state (no stem, no choices, no CC). The EW_D text about RPA is consistent with the surrounding MDM rotation group. This appears to be a template-generated shell that was never populated with content."
+}

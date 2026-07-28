@@ -1,0 +1,29 @@
+{
+  "agent": "L",
+  "session": "S301",
+  "phase": 4,
+  "domain": "Remediation Effort Estimation",
+  "total_estimated_sessions_to_full_certification": 12,
+  "by_pack_and_section": {
+    "A_A": { "remaining": 2, "category": "RC-12 (DL-016 offset)", "effort_tier": "low", "estimated_sessions": 1, "notes": "Only 2 archived items — could be resolved in same session as A_E" },
+    "A_E": { "remaining": 17, "category": "RC-12 + RC-11 (DL-016 + clone audit)", "effort_tier": "medium", "estimated_sessions": 2, "notes": "17 archived clone items need DL-016 alignment" },
+    "C_F": { "remaining": 75, "category": "RC-02 (DL-013 boilerplate removal)", "effort_tier": "medium", "estimated_sessions": 2, "notes": "75 unprocessed — largest single block, batchable" },
+    "D_F": { "remaining": 74, "category": "RC-02 + RC-03 (DL-013 + DL-008)", "effort_tier": "medium", "estimated_sessions": 2, "notes": "74 unprocessed — similar to C_F" },
+    "C_E": { "remaining": 75, "category": "RC-11 + RC-03 (DL-012 clones + DL-008)", "effort_tier": "high", "estimated_sessions": 3, "notes": "56 archived clones + 19 unprocessed — high effort" },
+    "D_E": { "remaining": 75, "category": "RC-11 (DL-012 clones)", "effort_tier": "high", "estimated_sessions": 2, "notes": "56 archived clones + 19 unprocessed" },
+    "C_sections_AB": { "remaining": 174, "category": "RC-03 + RC-04 (DL-008 fragmentary + CC audit)", "effort_tier": "high", "estimated_sessions": 3, "notes": "Already Certified but have DL-008; CC audit needed" },
+    "D_sections_ABD": { "remaining": 10, "category": "RC-01 (DL-008 mechanical clear)", "effort_tier": "low", "estimated_sessions": 1, "notes": "10 items in Pack D Sections A/B/D already Certified" },
+    "D_section_C": { "remaining": 50, "category": "RC-10 (DL-026 empty EW slots)", "effort_tier": "high", "estimated_sessions": 2, "notes": "50 In Audit items; must fill before certification" }
+  },
+  "batch_efficiency_multiplier": {
+    "same_defect_same_pack": 1.3,
+    "mixed_defects": 0.9,
+    "expert_review_per_item": 0.7
+  },
+  "calibration_against_pack_b": {
+    "pack_b_actual_sessions": 9,
+    "pack_b_avg_items_per_session": 56,
+    "model_estimate_for_remaining": 12,
+    "confidence": "Medium — Pack B had cleaner starting state. Remaining items have higher defect density."
+  }
+}

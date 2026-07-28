@@ -1,0 +1,845 @@
+{
+  "session": "S130",
+  "title": "Unified Evidence Graph Design — Single Shared Pipeline for S120-S129 Coaching Subsystems",
+  "generatedAt": "2026-01-01T00:00:00.000Z",
+
+  "currentLearnerStateSchema": {
+    "topLevelFields": [
+      { "field": "learnerId", "type": "string", "description": "Unique learner identifier (generated from Date.now)" },
+      { "field": "userName", "type": "string|null", "description": "Learner display name" },
+      { "field": "firstVisit", "type": "ISO string|null", "description": "Timestamp of first interaction" },
+      { "field": "sessions", "type": "Session[]", "description": "All practice sessions (capped at 50)" },
+      { "field": "topicPerformance", "type": "{ [topic]: TopicAggregate }", "description": "Per-topic aggregate statistics" },
+      { "field": "subtopicPerformance", "type": "{ [subtopic]: TopicAggregate }", "description": "Per-subtopic aggregate statistics" },
+      { "field": "misconceptionPatterns", "type": "MisconceptionPattern[]", "description": "Recurring wrong-answer patterns" },
+      { "field": "recommendationLog", "type": "RecommendationLogEntry[]", "description": "QID recommendation delivery log (capped at 200)" },
+      { "field": "recommendationOutcomes", "type": "RecommendationOutcome[]", "description": "S129 — Closed-loop outcome tracking (capped at 200)" },
+      { "field": "sessionSummaries", "type": "SessionSummary[]", "description": "End-of-session snapshots (capped at 30)" },
+      { "field": "lastUpdated", "type": "ISO string|null", "description": "Last save timestamp" },
+      { "field": "examPlan", "type": "object|null", "description": "S117 — Exam scheduling/planning data" },
+      { "field": "challengedQids", "type": "ChallengeEntry[]", "description": "Contested QIDs and their resolution status" },
+      { "field": "preProduction", "type": "boolean", "description": "S115 — Synthetic pre-production flag" },
+      { "field": "synthetic", "type": "boolean", "description": "S115 — Synthetic data flag" },
+      { "field": "historySynthetic", "type": "boolean", "description": "S117 — Seeded history flag" }
+    ],
+
+    "sessionStructure": {
+      "fields": [
+        { "field": "sessionId", "type": "string", "description": "Unique session identifier" },
+        { "field": "date", "type": "ISO string", "description": "Session start timestamp" },
+        { "field": "mode", "type": "string", "description": "practice | full | unknown" },
+        { "field": "totalQuestions", "type": "number", "description": "Total questions in session" },
+        { "field": "correctCount", "type": "number", "description": "Number of correct answers" },
+        { "field": "attempts", "type": "Attempt[]", "description": "Individual question attempts" },
+        { "field": "scaledScore", "type": "number|null", "description": "Scaled score (0-500)" },
+        { "field": "mcqPct", "type": "number|null", "description": "MCQ percentage correct" },
+        { "field": "casePct", "type": "number|null", "description": "Case percentage correct" },
+        { "field": "grade", "type": "string|null", "description": "Grade label" },
+        { "field": "passed", "type": "boolean|null", "description": "Whether passing threshold met" },
+        { "field": "topicSnapshot", "type": "{ [topic]: { n, pct } }", "description": "Per-topic session stats" },
+        { "field": "casePatterns", "type": "CasePatternCounts", "description": "Session-level case miss-pattern counts" }
+      ],
+      "attemptFields": [
+        { "field": "questionId", "type": "string", "description": "QID of the question" },
+        { "field": "section", "type": "string", "description": "CMA Section A-F" },
+        { "field": "topic", "type": "string", "description": "Normalized topic name" },
+        { "field": "subtopic", "type": "string|null", "description": "Micro-topic" },
+        { "field": "difficulty", "type": "string", "description": "Difficulty label" },
+        { "field": "difficultyScore", "type": "number", "description": "1-5 difficulty numeric score" },
+        { "field": "itemType", "type": "string", "description": "MCQ | Case | etc." },
+        { "field": "cognitiveLevel", "type": "string", "description": "Remember | Understand | Apply | Analyze | Evaluate" },
+        { "field": "questionState", "type": "string", "description": "Certified | Draft | etc." },
+        { "field": "correct", "type": "boolean", "description": "Whether answer was correct" },
+        { "field": "hintsUsed", "type": "number", "description": "Number of hints used" },
+        { "field": "explanationRequested", "type": "boolean", "description": "Whether explanation was requested" },
+        { "field": "elapsedMs", "type": "number", "description": "Time spent on question" },
+        { "field": "selectedChoice", "type": "string|null", "description": "Answer letter selected" },
+        { "field": "confidence", "type": "number|null", "description": "1-5 self-rated confidence" },
+        { "field": "timestamp", "type": "ISO string", "description": "When attempt was recorded" }
+      ]
+    },
+
+    "recommendationFields": {
+      "recommendationOutcomes": [
+        { "field": "recommendationId", "type": "string", "description": "Unique ID: rec-{timestamp36}-{count}" },
+        { "field": "deliveredAt", "type": "ISO string", "description": "When recommendation was shown" },
+        { "field": "type", "type": "string", "description": "next_best_step | focus_area | weekly_digest | study_strategy" },
+        { "field": "subType", "type": "string|null", "description": "targeted_practice | high | medium | low | weekly_focus | priority_topic" },
+        { "field": "topic", "type": "string|null", "description": "Target topic" },
+        { "field": "section", "type": "string|null", "description": "Target section" },
+        { "field": "recommendationText", "type": "string", "description": "Truncated at 500 chars" },
+        { "field": "sourceSessionId", "type": "string|null", "description": "Session that triggered recommendation" },
+        { "field": "evidenceAtDelivery", "type": "object", "description": "Snapshot of evidence backing the rec" },
+        { "field": "status", "type": "string", "description": "delivered | acted_on | ignored | superseded" },
+        { "field": "outcome", "type": "string|null", "description": "positive | neutral | insufficient | contradictory" },
+        { "field": "outcomeEvidence", "type": "object|null", "description": "Evidence for outcome classification" },
+        { "field": "outcomeClassifiedAt", "type": "ISO string|null", "description": "When outcome was classified" }
+      ],
+      "recommendationLog": [
+        { "field": "timestamp", "type": "ISO string" },
+        { "field": "sourceTopic", "type": "string|null" },
+        { "field": "sourceDomain", "type": "string|null" },
+        { "field": "reasonType", "type": "string" },
+        { "field": "recommendedQids", "type": "string[]" },
+        { "field": "packPool", "type": "string[]" },
+        { "field": "excludedByDefect", "type": "string[]" },
+        { "field": "excludedByContested", "type": "string[]" },
+        { "field": "excludedByState", "type": "string[]" },
+        { "field": "activeSessionId", "type": "string|null" },
+        { "field": "activeExamMode", "type": "boolean" }
+      ]
+    },
+
+    "outcomeFields": [
+      { "field": "recommendationOutcomes", "description": "The primary outcome tracking store (S129). Outcomes are classified at session-end via classifyPendingOutcomes(). Classifications based on topic accuracy and trend deltas." },
+      { "field": "recommendationLog", "description": "QID-level delivery log. Tracks what was recommended, why, and what was excluded. Used for G2 gating audit." },
+      { "field": "_calibrationMetrics", "description": "S107 — In-memory calibration metrics (not persisted). Logs readiness snapshots for threshold tuning." }
+    ]
+  },
+
+  "dataAccessPoints": {
+    "description": "Every call site where a coaching subsystem reads learner state. Organized by subsystem (S120-S129) with exact function calls and data extracted.",
+    "bySubsystem": {
+      "S120": {
+        "label": "Tutor-Layer Explanation (_explainAnswer, _buildTutorExplanation)",
+        "queries": [
+          { "call": "MayLearnerState._normalizeTopic(q.Topic)", "extracts": "topic name", "location": "may-core.js L1539, L1719, L1701, L1757" },
+          { "call": "MayLearnerState.getTopicProgress()", "extracts": "topic accuracy, totalAttempts for accuracy note", "location": "may-core.js L1701, L1757" },
+          { "call": "MayLearnerState.getQuestionExposureCount(q.QuestionID)", "extracts": "how many times QID seen", "location": "may-core.js L951" },
+          { "call": "MayLearnerState.load().misconceptionPatterns", "extracts": "patterns filtered by topic", "location": "via _identifyLearningPatterns S124, called from _explainAnswer" }
+        ],
+        "fields": ["topicPerformance[topic].accuracy", "topicPerformance[topic].totalAttempts", "topicPerformance[topic].recentPct", "misconceptionPatterns[].pattern", "misconceptionPatterns[].count"]
+      },
+      "S121": {
+        "label": "Wrong-Choice Misconception Coaching (_explainWrongChoices, _buildWrongChoiceCoaching)",
+        "queries": [
+          { "call": "MayLearnerState._normalizeTopic(q.Topic)", "extracts": "topic name", "location": "may-core.js L1815, L2003" },
+          { "call": "state.session.answers[q.QuestionID]", "extracts": "selected answer for gating", "location": "may-core.js L1990-1998" }
+        ],
+        "fields": ["topic"]
+      },
+      "S122": {
+        "label": "Hint System (_provideHint, _metacognitiveHint, _conceptHint, _strategyHint, _eliminationHint)",
+        "queries": [
+          { "call": "MayLearnerState._normalizeTopic(q.Topic)", "extracts": "topic name for hint personalization", "location": "may-core.js L2111, L2183-2190" }
+        ],
+        "fields": ["topic", "Section", "Difficulty"]
+      },
+      "S123": {
+        "label": "Next Best Step (_generateNextBestStep, _appendNextBestStep)",
+        "queries": [
+          { "call": "MayLearnerState.getTopicProgress()", "extracts": "topic accuracy, totalAttempts for contextual advice", "location": "may-core.js L1099-1101" },
+          { "call": "MayLearnerState._normalizeTopic(q.Topic)", "extracts": "topic name", "location": "may-core.js L1084" },
+          { "call": "May._recordRecommendation() → MayLearnerState.recordRecommendationDelivery()", "extracts": "writes to recommendationOutcomes", "location": "may-core.js L1207" }
+        ],
+        "fields": ["topicPerformance[topic].accuracy", "topicPerformance[topic].totalAttempts", "topicPerformance[topic].recentPct"]
+      },
+      "S124": {
+        "label": "Learning Pattern Identification (_identifyLearningPatterns, _appendLearningPatterns)",
+        "queries": [
+          { "call": "MayLearnerState.getTopicProgress()", "extracts": "topic accuracy, attempts, recentPct for threshold checks", "location": "may-core.js L1253, L1259-1284" },
+          { "call": "MayLearnerState.load().misconceptionPatterns", "extracts": "patterns filtered by topic, count >= 2", "location": "may-core.js L1290-1293" },
+          { "call": "MayLearnerState._normalizeTopic(q.Topic)", "extracts": "topic name", "location": "may-core.js L1245" }
+        ],
+        "fields": ["topicPerformance[topic].accuracy", "topicPerformance[topic].totalAttempts", "topicPerformance[topic].recentPct", "misconceptionPatterns[].pattern", "misconceptionPatterns[].count"]
+      },
+      "S125": {
+        "label": "Focus Area Suggestions (_suggestFocusAreas, _appendFocusAreas)",
+        "queries": [
+          { "call": "MayLearnerState.getTopicProgress()", "extracts": "topic accuracy, attempts for priority determination", "location": "may-core.js L1388-1393" },
+          { "call": "MayLearnerState.load().misconceptionPatterns", "extracts": "patterns filtered by topic, count >= 2", "location": "may-core.js L1418-1420" },
+          { "call": "MayLearnerState._normalizeTopic(q.Topic)", "extracts": "topic name", "location": "may-core.js L1381" },
+          { "call": "May._recordRecommendation() → MayLearnerState.recordRecommendationDelivery()", "extracts": "writes focus_area recommendations", "location": "may-core.js L1506-1511" }
+        ],
+        "fields": ["topicPerformance[topic].accuracy", "topicPerformance[topic].totalAttempts", "topicPerformance[topic].recentPct", "misconceptionPatterns[].pattern", "misconceptionPatterns[].count"]
+      },
+      "S126": {
+        "label": "Session Recap (_generateSessionRecap, _summarizeSession)",
+        "queries": [
+          { "call": "MayLearnerState.load()", "extracts": "sessions, attempts, misconceptionPatterns, sessionSummaries", "location": "may-core.js L2942, L3015" },
+          { "call": "MayLearnerState.getTopicProgress()", "extracts": "topic performance for context", "location": "may-core.js L3590" },
+          { "call": "MayLearnerState._normalizeTopic(q.Topic)", "extracts": "topic name", "location": "may-core.js L3644" }
+        ],
+        "fields": ["sessions[].attempts", "sessions[].mcqPct", "sessions[].casePct", "misconceptionPatterns[].pattern", "misconceptionPatterns[].count"]
+      },
+      "S127": {
+        "label": "Weekly Learning Digest (_generateWeeklyDigest, _showWeeklyDigest)",
+        "queries": [
+          { "call": "MayLearnerState.load()", "extracts": "sessions (last 7), attempts, misconceptionPatterns", "location": "may-core.js L3057-3077" },
+          { "call": "MayLearnerState.getTopicProgress()", "extracts": "topic performance context", "location": "may-core.js L3060" },
+          { "call": "May._recordRecommendation() → MayLearnerState.recordRecommendationDelivery()", "extracts": "writes weekly_digest recommendations", "location": "may-core.js L3341-3345" }
+        ],
+        "fields": ["sessions[].attempts[].correct", "sessions[].attempts[].topic", "misconceptionPatterns[].pattern", "misconceptionPatterns[].count"]
+      },
+      "S128": {
+        "label": "Personal Study Strategy (_generateStudyStrategy, _showStudyStrategy)",
+        "queries": [
+          { "call": "MayLearnerState.load()", "extracts": "sessions (last 7), attempts, misconceptionPatterns", "location": "may-core.js L3224-3243" },
+          { "call": "MayLearnerState.getTopicProgress()", "extracts": "topic performance context", "location": "may-core.js L3227" },
+          { "call": "May._recordRecommendation() → MayLearnerState.recordRecommendationDelivery()", "extracts": "writes study_strategy recommendations", "location": "may-core.js L3365-3369" }
+        ],
+        "fields": ["sessions[].attempts[].correct", "sessions[].attempts[].topic", "misconceptionPatterns[].pattern", "misconceptionPatterns[].count"]
+      },
+      "S129": {
+        "label": "Strategy Effectiveness Analytics (_generateStrategyEffectiveness, _showStrategyEffectiveness)",
+        "queries": [
+          { "call": "MayLearnerState.getOutcomeSummary()", "extracts": "outcome counts by type and result", "location": "may-core.js L3387" },
+          { "call": "MayLearnerState.load().recommendationOutcomes", "extracts": "full outcome list", "location": "may-core.js L3388" },
+          { "call": "MayLearnerState.getRecommendationRecurrence()", "extracts": "per-topic recurrence analysis", "location": "may-core.js L3389" },
+          { "call": "MayLearnerState.getLongitudinalAnalytics()", "extracts": "1wk/2wk/4wk windowed stats", "location": "may-core.js L3390" }
+        ],
+        "fields": ["recommendationOutcomes[].type", "recommendationOutcomes[].outcome", "recommendationOutcomes[].topic", "recommendationOutcomes[].outcomeEvidence"]
+      }
+    },
+
+    "crossCuttingQueries": {
+      "description": "Functions called by multiple subsystems — redundancy hotspots",
+      "queries": [
+        { "call": "MayLearnerState.getTopicProgress()", "usedBy": ["S120", "S123", "S124", "S125", "S126", "S127", "S128"], "note": "7 subsystems independently call this. Each filters/extracts slightly differently." },
+        { "call": "MayLearnerState.load()", "usedBy": ["S124", "S125", "S126", "S127", "S128", "S129"], "note": "6 subsystems load the full state. Each independently filters misconceptionPatterns." },
+        { "call": "MayLearnerState._normalizeTopic()", "usedBy": ["S120", "S121", "S122", "S123", "S124", "S125", "S126"], "note": "7 subsystems normalize topic names. Duplicated string parsing." },
+        { "call": "MayLearnerState.getWeaknessClusters()", "usedBy": ["Welcome", "PreExamBriefing", "ProgressInsight", "WeaknessInsight", "RecoverySet", "AdaptivePracticeMix", "ReadinessSummary"], "note": "7 call sites. getWeaknessClusters internally calls getTrends() which internally calls getTopicProgress() — triple computation." },
+        { "call": "MayLearnerState.getTrends()", "usedBy": ["getWeaknessClusters", "getReadinessSummary", "getAdaptivePracticeMix", "_getProgressInsight", "_generateStrategyEffectiveness"], "note": "Called redundantly. Each caller re-derives the same trend signals." }
+      ]
+    }
+  },
+
+  "evidenceGraphDesign": {
+    "description": "A single pipeline that converts raw learner events into effectiveness signals. Every S120-S129 subsystem reads from this graph instead of independently querying learner state. The graph is materialized at session boundaries and incrementally updated on each attempt.",
+    "pipeline": "LearnerEvent → Evidence → Observation → Pattern → Recommendation → Outcome → EffectivenessSignal",
+
+    "layers": {
+      "L1_rawEvents": {
+        "description": "Immutable records of everything the learner does. The single source of truth that all higher layers derive from.",
+        "currentImplementation": "Partially centralized. recordAttempt() creates attempt records within session objects, but there is no unified event log. Session-level events (mode changes, completion, handoff) are implicit in sessionSummaries. Coaching interactions (hint requests, explanation requests) are tracked only as attempt booleans, not as discrete events.",
+        "currentLocation": "may-learner-state.js: recordAttempt() (L98-142), recordSessionSummary() (L159-176)",
+        "proposedSchema": {
+          "eventTypes": [
+            "question_answered",
+            "hint_requested",
+            "explanation_requested",
+            "coaching_action_invoked",
+            "session_started",
+            "session_completed",
+            "review_queue_loaded",
+            "recommendation_delivered",
+            "recommendation_acted_on",
+            "challenge_flagged",
+            "challenge_resolved",
+            "confidence_rated",
+            "confidence_updated",
+            "question_seen"
+          ],
+          "eventNode": {
+            "eventId": "string (UUID)",
+            "eventType": "string (from eventTypes)",
+            "sessionId": "string",
+            "questionId": "string|null",
+            "topic": "string|null",
+            "section": "string|null",
+            "timestamp": "ISO string",
+            "payload": "object (type-specific data)",
+            "provenance": "{ source: string, version: string }"
+          },
+          "storage": "events[] array capped at 2000, with older events rolled into summary aggregates"
+        }
+      },
+
+      "L2_derivedEvidence": {
+        "description": "Computed statistics from raw events — per-topic accuracy, per-session stats, trends, calibration deltas. These are deterministic functions of L1 events. They answer 'what happened' with numbers.",
+        "currentImplementation": "Centralized in MayLearnerState: getTopicProgress(), getTrends(), getConfidenceCalibration(), getCasePatternSummary(), getCasePatternTrends(). However, these are computed on-demand each time, so getWeaknessClusters() → getTrends() → getTopicProgress() creates a 3-deep computation chain that re-scans all sessions every call.",
+        "currentLocation": "may-learner-state.js: _updateTopicAggregate() (L179-191), getTopicProgress() (L226-237), getTrends() (L240-256), getConfidenceCalibration() (L298-311), getCasePatternSummary() (L334-349), getCasePatternTrends() (L351-367)",
+        "proposedSchema": {
+          "topicEvidence": {
+            "topic": "string",
+            "totalAttempts": "number",
+            "correctCount": "number",
+            "accuracy": "number (0-100)",
+            "hintCount": "number",
+            "hintRate": "number (0-100)",
+            "avgDifficulty": "number (1-5)",
+            "recentPct": "number|null (last 5)",
+            "recentTotal": "number",
+            "stability": "number|null (0-100, runs-based)",
+            "delta": "number|null (recentPct - accuracy)",
+            "direction": "string (improving|slightly_improving|stable|slightly_declining|declining)",
+            "hintTrend": "string (increasing|decreasing|stable)",
+            "firstSeen": "ISO string",
+            "lastSeen": "ISO string",
+            "sectionsSeen": "string[]",
+            "difficultyDistribution": "{ [label]: number }",
+            "difficultyWeights": "{ total: number, sum: number }",
+            "computedAt": "ISO string"
+          },
+          "sessionEvidence": {
+            "sessionId": "string",
+            "date": "ISO string",
+            "mode": "string",
+            "totalQuestions": "number",
+            "correctCount": "number",
+            "mcqPct": "number|null",
+            "casePct": "number|null",
+            "scaledScore": "number|null",
+            "grade": "string|null",
+            "passed": "boolean|null",
+            "topicSnapshot": "{ [topic]: { n, c, pct } }",
+            "casePatterns": "{ [pattern]: number }",
+            "hintCount": "number",
+            "avgConfidence": "number|null"
+          },
+          "caseEvidence": {
+            "totalCaseMisses": "number",
+            "sessionsWithCases": "number",
+            "patterns": "{ [pattern]: number }",
+            "dominantPattern": "string|null",
+            "dominantCount": "number",
+            "secondaryPattern": "string|null",
+            "secondaryCount": "number",
+            "trends": "[{ pattern, current, previous, delta, direction, signal }]",
+            "computedAt": "ISO string"
+          },
+          "confidenceEvidence": {
+            "topic": "string",
+            "total": "number",
+            "avgConfidence": "number (1-5)",
+            "accuracy": "number (0-100)",
+            "calibrationDelta": "number (avgConf - accuracy/20)",
+            "overconfidentRate": "number (0-100)",
+            "underconfidentRate": "number (0-100)"
+          },
+          "computationStrategy": "Materialized at session completion + incrementally patched on each attempt. getTopicProgress() result is cached and invalidated per-attempt. Prevents getWeaknessClusters → getTrends → getTopicProgress recomputation chain."
+        }
+      },
+
+      "L3_observations": {
+        "description": "Threshold-gated factual findings derived from L2 evidence. Every observation has a minimum-data gate, is stated in natural language, and cites its supporting evidence. Observations answer 'what does this mean' in factual terms.",
+        "currentImplementation": "DUPLICATED across multiple locations with similar but slightly different threshold logic:\n- May._identifyLearningPatterns() (S124): uses minAttempts=3, accuracy≥85 for 'strong', accuracy<60 with 5+ attempts for 'weak', recentPct≥75 with delta≥10 for 'improving'\n- MayLearnerState.getWeaknessClusters(): identical thresholds (accuracy<60, 5+ attempts for persistentWeak; delta≥15 for improving; delta≤-15 for declining)\n- MayLearnerState.getReadinessSummary(): slightly different thresholds (accuracy≥80 for Ready, accuracy≥75 for Approaching, min 6 attempts for Ready)\n- May._getProgressInsight(): uses getWeaknessClusters() output\n- May._getWeaknessInsight(): uses getWeaknessClusters() output\n\nKEY PROBLEM: S124's _identifyLearningPatterns thresholds (accuracy≥85 for 'strong', delta≥10 for 'improving') are DIFFERENT from getReadinessSummary thresholds (accuracy≥80 for 'Ready', accuracy≥75 for 'Approaching'). Same learner could get 'strong' in one place and 'Developing' in another.",
+        "currentLocation": "may-core.js: _identifyLearningPatterns() (L1243-1358), _getProgressInsight() (L2721-2818), _getWeaknessInsight() (L2824-2938); may-learner-state.js: getWeaknessClusters() (L259-278), getReadinessSummary() (L592-827)",
+        "proposedSchema": {
+          "observationNode": {
+            "observationId": "string (UUID)",
+            "category": "string (topic_strength | persistent_weakness | improving | declining | unstable | hint_dependent | difficulty_sensitive | confidence_miscalibrated | recurring_misconception | case_pattern_dominant | section_readiness)",
+            "topic": "string|null",
+            "section": "string|null",
+            "statement": "string (natural language, safe phrasing)",
+            "gates": {
+              "minAttempts": "number",
+              "accuracyThreshold": "number|null",
+              "deltaThreshold": "number|null",
+              "stabilityThreshold": "number|null",
+              "minPatternCount": "number|null"
+            },
+            "evidenceRefs": ["string (UUIDs of L2 evidence nodes)"],
+            "confidence": "string (high|moderate|low)",
+            "computedAt": "ISO string",
+            "thresholdsApplied": "{ [key]: number }",
+            "overrides": []
+          },
+          "standardThresholds": {
+            "description": "Single source of truth for all threshold values. Any coaching subsystem that makes a claim about a topic must use these thresholds or explicitly declare an override with rationale.",
+            "values": {
+              "minAttemptsTopic": 3,
+              "minAttemptsObservation": 3,
+              "minAttemptsPersistentWeak": 5,
+              "minAttemptsImproving": 4,
+              "minAttemptsReady": 6,
+              "minAttemptsApproaching": 4,
+              "accuracyStrong": 85,
+              "accuracyGood": 75,
+              "accuracyLow": 60,
+              "stabilityHigh": 75,
+              "stabilityGood": 60,
+              "stabilityLow": 50,
+              "recentPctStrong": 80,
+              "recentPctGood": 70,
+              "deltaImproving": 15,
+              "deltaSlightlyImproving": 5,
+              "deltaDeclining": -15,
+              "deltaSlightlyDeclining": -5,
+              "difficultyGapPct": 30,
+              "calibrationOverconfident": 0.8,
+              "calibrationUnderconfident": -0.5,
+              "minCaseMisses": 3,
+              "minCaseSessions": 1
+            }
+          },
+          "derivationRule": "All observations are derived exclusively from L2 evidence nodes. No observation may be created without citing the L2 node(s) that support it. This ensures every coaching claim is traceable."
+        }
+      },
+
+      "L4_patterns": {
+        "description": "Multi-observation patterns that span time, topics, or observations. These answer 'what keeps happening' and connect individual observations into learner narratives.",
+        "currentImplementation": "Partially centralized:\n- MayLearnerState.misconceptionPatterns: tracked in _trackMisconception() — pattern keys derived heuristically from topic name and wrong answer text\n- MayLearnerState.getCasePatternPracticeGuidance(): combines case pattern summary + trends into actionable guidance\n- MayLearnerState.getAdaptivePracticeMix(): combines MCQ signals + case signals + session recency into mode recommendation\n- MayLearnerState.getReadinessSummary(): combines topic readiness + case readiness + section readiness\n\nGap: There is no explicit pattern node. Patterns are implicit in the data — e.g., 'this topic is unstable AND difficulty-sensitive AND the learner is overconfident about it' is never named as a multi-observation pattern.",
+        "currentLocation": "may-learner-state.js: _trackMisconception() (L194-217), getCasePatternPracticeGuidance() (L386-447), getAdaptivePracticeMix() (L450-587), getReadinessSummary() (L592-827); may-core.js: _identifyLearningPatterns() (L1243-1358)",
+        "proposedSchema": {
+          "patternNode": {
+            "patternId": "string (UUID)",
+            "patternType": "string (misconception_recurrence | cross_topic_correlation | difficulty_amplification | hint_escalation | mode_asymmetry | confidence_accuracy_divergence | session_to_session_volatility | case_miss_cluster)",
+            "name": "string (human-readable label)",
+            "observationRefs": ["string (UUIDs of L3 observation nodes)"],
+            "description": "string (natural language description of the multi-observation pattern)",
+            "severity": "string (critical|elevated|monitoring)",
+            "duration": "string (acute|chronic|resolving)",
+            "firstDetected": "ISO string",
+            "lastConfirmed": "ISO string",
+            "occurrenceCount": "number",
+            "relatedTopics": ["string"],
+            "computedAt": "ISO string"
+          },
+          "patternTemplates": [
+            {
+              "templateId": "difficulty_amplification",
+              "definition": "Topic accuracy drops significantly at higher difficulty while being strong at lower difficulty. Combined signal: difficultySensitive observation + topic_strength observation on same topic.",
+              "requires": ["L3 observation: difficultySensitive", "L3 observation: topic_strength (same topic)"]
+            },
+            {
+              "templateId": "confidence_accuracy_divergence",
+              "definition": "Learner is overconfident about a topic they are weak on, or underconfident about a topic they are strong on.",
+              "requires": ["L3 observation: confidence_miscalibrated", "L3 observation: persistent_weakness or topic_strength (same topic)"]
+            },
+            {
+              "templateId": "hint_escalation_with_accuracy",
+              "definition": "Accuracy is adequate but hint usage is rising — suggests growing dependence on scaffolding rather than genuine mastery.",
+              "requires": ["L3 observation: hint_dependent", "L3 observation: topic_strength (same topic)"]
+            },
+            {
+              "templateId": "mode_asymmetry",
+              "definition": "MCQ and case accuracy diverge significantly on the same topics — suggests format-specific skill gap.",
+              "requires": ["L2 evidence: mcqPct vs casePct gap >= 20", "L3 observation: topic_strength or persistent_weakness"]
+            },
+            {
+              "templateId": "cross_topic_misconception",
+              "definition": "Same misconception pattern appears across multiple topics — suggests a fundamental misunderstanding.",
+              "requires": ["L3 observation: recurring_misconception (>=2 topics share the same pattern key)"]
+            }
+          ]
+        }
+      },
+
+      "L5_recommendations": {
+        "description": "Actionable suggestions grounded in L3 observations and L4 patterns. Every recommendation cites the observation/pattern that justifies it. Generated deterministically from the evidence graph.",
+        "currentImplementation": "DUPLICATED across multiple generators:\n- May._generateNextBestStep(): returns action plan based on error category from current question\n- May._suggestFocusAreas(): returns prioritized focus suggestions from topic data + misconceptions\n- May._generateWeeklyDigest(): returns weekly review with weak/strong topics + misconceptions + recommended focus\n- May._generateStudyStrategy(): returns 3-horizon plan (next session, this week, next 2 weeks)\n- May._recommendNext(): returns QID recommendation from weakness clusters\n- May._generateRecoverySet(): returns QID list targeting weak areas\n- MayLearnerState.getAdaptivePracticeMix(): returns mode recommendation (MCQ-first, Case-first, Mixed, Untimed)\n\nKEY PROBLEM: Each generator independently builds its evidence context. A learner could get conflicting recommendations from 'next best step' (say 'practice calculations') and 'focus areas' (say 'review classifications') on the same topic because they use different evidence windows.",
+        "currentLocation": "may-core.js: _generateNextBestStep() (L1081-1199), _suggestFocusAreas() (L1379-1498), _generateWeeklyDigest() (L3056-3217), _generateStudyStrategy() (L3223-3330), _recommendNext() (L3746-3821), _generateRecoverySet() (L3824-3919); may-learner-state.js: getAdaptivePracticeMix() (L450-587)",
+        "proposedSchema": {
+          "recommendationNode": {
+            "recommendationId": "string (UUID)",
+            "type": "string (next_best_step | focus_area | weekly_focus | study_strategy | recovery_set | practice_mode | similar_question)",
+            "priority": "string (high|medium|low)",
+            "topic": "string|null",
+            "section": "string|null",
+            "actionText": "string (the actionable suggestion)",
+            "actionType": "string (targeted_practice | formula_review | concept_review | classification_practice | trap_awareness | stem_re_read | advance | reinforce | recovery_drill | case_practice | mode_shift)",
+            "justification": {
+              "observationRefs": ["string (UUIDs of L3 observations)"],
+              "patternRefs": ["string (UUIDs of L4 patterns)"],
+              "evidenceRefs": ["string (UUIDs of L2 evidence nodes)"]
+            },
+            "recommendedQids": ["string"],
+            "deliveredAt": "ISO string",
+            "sourceSessionId": "string|null",
+            "generatedBy": "string (subsystem name)",
+            "evidenceSnapshot": "object (frozen copy of evidence at generation time)"
+          },
+          "generationRules": [
+            { "rule": "next_best_step", "trigger": "question answered incorrectly", "priority": "high", "evidence": "L2 topicEvidence + error category from current question", "conflictResolution": "If a focus_area for the same topic already exists with priority=high and was delivered this session, suppress next_best_step as redundant" },
+            { "rule": "focus_area", "trigger": "L3 persistent_weakness observation", "priority": "high", "evidence": "L3 observation + L2 topicEvidence", "conflictResolution": "If topic has positive outcome from prior focus_area, deprioritize to medium" },
+            { "rule": "focus_area", "trigger": "L3 recurring_misconception", "priority": "medium", "evidence": "L3 observation + L4 pattern", "conflictResolution": "Combine with persistent_weakness focus_area on same topic" },
+            { "rule": "focus_area", "trigger": "L3 improving observation", "priority": "low", "evidence": "L3 observation", "conflictResolution": "Always lower priority than persistent_weakness" },
+            { "rule": "weekly_focus", "trigger": "session boundary (weekly digest)", "priority": "derived", "evidence": "L2 topicEvidence (last 7 sessions) + L3 observations active that week", "conflictResolution": "Aggregate; max 3 focus topics" },
+            { "rule": "study_strategy", "trigger": "learner request + >= 1 session", "priority": "derived", "evidence": "L2 topicEvidence + L3 observations + L4 patterns", "conflictResolution": "3-horizon plan; next session recommendation must match the highest-priority focus_area" },
+            { "rule": "recovery_set", "trigger": "learner request", "priority": "derived", "evidence": "L3 observations (persistent_weakness, declining, unstable) + L2 topicEvidence", "conflictResolution": "Prioritize topics with L4 patterns that include difficulty_amplification" },
+            { "rule": "practice_mode", "trigger": "session boundary (adaptive mix)", "priority": "derived", "evidence": "L2 topicEvidence + L2 caseEvidence + L4 mode_asymmetry pattern", "conflictResolution": "Mode recommendation must never contradict focus_area priorities" }
+          ]
+        }
+      },
+
+      "L6_outcomes": {
+        "description": "Tracking whether L5 recommendations were followed and what happened to the evidence after delivery. This closes the loop — without it, the system cannot learn which recommendations help.",
+        "currentImplementation": "Centralized in S129 recommendationOutcomes:\n- recordRecommendationDelivery(): creates outcome entry with status='delivered'\n- classifyPendingOutcomes(): runs after session end, classifies each unclassified outcome as positive|neutral|insufficient|contradictory based on current topic accuracy and trend\n- getOutcomeSummary(): aggregates outcomes by type\n- getRecommendationRecurrence(): per-topic recurrence analysis\n\nGap: 'Acted on' detection is implicit — classifyPendingOutcomes sets status='acted_on' when outcome is classified (non-insufficient), but there is no explicit signal of whether the learner actually followed the recommendation. The system cannot distinguish between 'recommendation was followed and didn't help' vs. 'recommendation was ignored and performance changed for other reasons'.",
+        "currentLocation": "may-learner-state.js: recordRecommendationDelivery() (L1220-1244), classifyPendingOutcomes() (L1249-1328), getOutcomeSummary() (L1332-1357), getRecommendationRecurrence() (L1361-1388)",
+        "proposedSchema": {
+          "outcomeNode": {
+            "outcomeId": "string (UUID)",
+            "recommendationRef": "string (UUID of L5 recommendation)",
+            "status": "string (delivered | viewed | acted_on | ignored | superseded | expired)",
+            "outcome": "string (positive | neutral | insufficient | contradictory | pending)",
+            "evidenceDelta": {
+              "metrics": ["string (accuracy, recentPct, delta, stability, hintRate, confidence)"],
+              "before": "object (snapshot at delivery time)",
+              "after": "object (snapshot at classification time)",
+              "window": "string (since_delivery | 1week | 2week)"
+            },
+            "followThroughSignals": {
+              "sameTopicSessionsAfter": "number (sessions on this topic after delivery)",
+              "sameTopicAttemptsAfter": "number (attempts on this topic after delivery)",
+              "recommendationQidsAttempted": "number (how many recommended QIDs were attempted)",
+              "hintsReducedAfter": "boolean|null (hint usage decreased after delivery)"
+            },
+            "classifiedAt": "ISO string",
+            "classifierVersion": "string"
+          },
+          "classificationRules": [
+            { "outcome": "positive", "criteria": "topic accuracy >= 60 AND direction in (improving, slightly_improving) AND delta >= 5 AND attempts >= 5", "confidence": "moderate" },
+            { "outcome": "contradictory", "criteria": "topic accuracy < 50 AND direction in (declining, slightly_declining) AND attempts >= 5", "confidence": "moderate" },
+            { "outcome": "neutral", "criteria": "attempts >= 5 but does not meet positive or contradictory thresholds", "confidence": "moderate" },
+            { "outcome": "insufficient", "criteria": "attempts < 5 OR topic has no data since delivery", "confidence": "high" }
+          ]
+        }
+      },
+
+      "L7_effectivenessSignals": {
+        "description": "Meta-analysis — which recommendation types, action types, and patterns correlate with positive outcomes. These are NOT causal claims. They inform future recommendation priorities. This is the system's self-tuning layer.",
+        "currentImplementation": "Centralized in S129:\n- _generateStrategyEffectiveness(): aggregates outcome data by type, presents positive recommendations, notes contradictory ones.\n- _scoreRecommendationQuality(): internal scoring for recommendation quality (relevance, specificity, evidence strength, recurrence, follow-through).\n\nGap: No feedback loop from L7 back to L5. Effectiveness signals are presented to the learner but not used to adjust future recommendation generation. If 'focus_area, high' consistently produces positive outcomes for a learner, the system should prefer that type; if 'next_best_step' consistently produces contradictory outcomes, it should deprioritize it.",
+        "currentLocation": "may-core.js: _generateStrategyEffectiveness() (L3386-3516), _scoreRecommendationQuality() (L3551-3587)",
+        "proposedSchema": {
+          "effectivenessSignal": {
+            "signalId": "string (UUID)",
+            "recommendationType": "string (next_best_step | focus_area | weekly_digest | study_strategy)",
+            "actionType": "string (targeted_practice | concept_review | recovery_drill | case_practice | mode_shift)",
+            "topicScope": "string (single_topic | section_wide | global)",
+            "outcomeCounts": {
+              "positive": "number",
+              "neutral": "number",
+              "insufficient": "number",
+              "contradictory": "number",
+              "total": "number"
+            },
+            "positiveRate": "number (0-1, positive / total classified)",
+            "minObservations": "number (minimum before signal is reportable)",
+            "trendDirection": "string (improving_effectiveness | stable_effectiveness | declining_effectiveness)",
+            "computedAt": "ISO string",
+            "windows": {
+              "1week": "{ positive, neutral, insufficient, contradictory, total }",
+              "2week": "{ positive, neutral, insufficient, contradictory, total }",
+              "4week": "{ positive, neutral, insufficient, contradictory, total }"
+            }
+          },
+          "feedbackLoop": {
+            "description": "L7 signals feed back into L5 recommendation generation through priority adjustment rules.",
+            "rules": [
+              { "signal": "recommendationType X has positiveRate >= 0.5 with >= 3 observations", "action": "Boost priority of type X recommendations when evidence is comparable" },
+              { "signal": "recommendationType X has contradictory count >= 2 for same topic", "action": "Suppress type X for that topic; try a different actionType" },
+              { "signal": "actionType Y has positiveRate >= 0.66 with >= 3 observations", "action": "Prefer actionType Y when multiple actionTypes are eligible" },
+              { "signal": "topic Z has positive outcome from prior recommendation", "action": "Deprioritize re-recommending same topic unless new evidence (declining, new misconception) appears" },
+              { "signal": "learner has not acted on last 3 recommendations", "action": "Reduce recommendation frequency; switch to lower-friction types (focus_area over study_strategy)" }
+            ]
+          }
+        }
+      }
+    }
+  },
+
+  "evidenceGraphSchema": {
+    "description": "A single data structure — the Evidence Graph — that all S120-S129 subsystems read from. It is materialized as an object store (in-memory or localStorage) and updated atomically at session boundaries.",
+    "topLevelStructure": {
+      "graphId": "string (UUID, regenerated on full rebuild)",
+      "learnerId": "string",
+      "version": "string (semver, e.g. S130-1.0)",
+      "lastMaterializedAt": "ISO string",
+      "events": "EventNode[] (L1, capped at 2000)",
+      "evidence": "{ [topic]: TopicEvidence, sessions: SessionEvidence[], case: CaseEvidence, confidence: { [topic]: ConfidenceEvidence } } (L2)",
+      "observations": "ObservationNode[] (L3, materialized list)",
+      "patterns": "PatternNode[] (L4, materialized list)",
+      "recommendations": "RecommendationNode[] (L5, delivered list)",
+      "outcomes": "OutcomeNode[] (L6)",
+      "effectivenessSignals": "EffectivenessSignal[] (L7)",
+      "thresholds": "{ [key]: number } (standard threshold values applied)"
+    },
+
+    "evidenceNode": {
+      "fields": [
+        { "name": "evidenceId", "type": "string", "description": "UUID" },
+        { "name": "evidenceType", "type": "string", "description": "topic | session | case | confidence" },
+        { "name": "scope", "type": "string", "description": "Identifier (topic name, sessionId, etc.)" },
+        { "name": "data", "type": "object", "description": "Type-specific payload (see layer schemas)" },
+        { "name": "eventRefs", "type": "string[]", "description": "UUIDs of L1 events this evidence derives from" },
+        { "name": "computedAt", "type": "ISO string" },
+        { "name": "computationCost", "type": "string", "description": "full | incremental — whether this was recomputed from scratch or patched" }
+      ]
+    },
+
+    "observationNode": {
+      "fields": [
+        { "name": "observationId", "type": "string", "description": "UUID" },
+        { "name": "category", "type": "string", "description": "See L3 observation categories" },
+        { "name": "topic", "type": "string|null" },
+        { "name": "section", "type": "string|null" },
+        { "name": "statement", "type": "string", "description": "Natural language, safe-phrased" },
+        { "name": "evidenceRefs", "type": "string[]", "description": "UUIDs of L2 evidence nodes" },
+        { "name": "gates", "type": "object", "description": "Threshold values that were checked" },
+        { "name": "gateResults", "type": "object", "description": "Whether each gate passed" },
+        { "name": "confidence", "type": "string", "description": "high|moderate|low" },
+        { "name": "thresholdsApplied", "type": "object", "description": "Snapshot of threshold values used" },
+        { "name": "computedAt", "type": "ISO string" },
+        { "name": "invalidatedAt", "type": "ISO string|null", "description": "When new evidence made this stale" }
+      ]
+    },
+
+    "patternNode": {
+      "fields": [
+        { "name": "patternId", "type": "string", "description": "UUID" },
+        { "name": "patternType", "type": "string", "description": "See L4 pattern types" },
+        { "name": "name", "type": "string", "description": "Human-readable label" },
+        { "name": "observationRefs", "type": "string[]", "description": "UUIDs of L3 observation nodes" },
+        { "name": "description", "type": "string" },
+        { "name": "severity", "type": "string", "description": "critical|elevated|monitoring" },
+        { "name": "duration", "type": "string", "description": "acute|chronic|resolving" },
+        { "name": "firstDetected", "type": "ISO string" },
+        { "name": "lastConfirmed", "type": "ISO string" },
+        { "name": "occurrenceCount", "type": "number" },
+        { "name": "relatedTopics", "type": "string[]" },
+        { "name": "computedAt", "type": "ISO string" }
+      ]
+    },
+
+    "recommendationNode": {
+      "fields": [
+        { "name": "recommendationId", "type": "string", "description": "UUID" },
+        { "name": "type", "type": "string", "description": "next_best_step | focus_area | weekly_focus | study_strategy | recovery_set | practice_mode | similar_question" },
+        { "name": "actionType", "type": "string" },
+        { "name": "priority", "type": "string", "description": "high|medium|low" },
+        { "name": "topic", "type": "string|null" },
+        { "name": "section", "type": "string|null" },
+        { "name": "actionText", "type": "string" },
+        { "name": "justificationRefs", "type": "object", "description": "{ observationRefs: string[], patternRefs: string[], evidenceRefs: string[] }" },
+        { "name": "recommendedQids", "type": "string[]" },
+        { "name": "deliveredAt", "type": "ISO string" },
+        { "name": "sourceSessionId", "type": "string|null" },
+        { "name": "generatedBy", "type": "string" },
+        { "name": "evidenceSnapshot", "type": "object" },
+        { "name": "conflictResolvedWith", "type": "string|null", "description": "UUID of another recommendation this was deduplicated against" }
+      ]
+    },
+
+    "outcomeNode": {
+      "fields": [
+        { "name": "outcomeId", "type": "string", "description": "UUID" },
+        { "name": "recommendationRef", "type": "string", "description": "UUID of L5 recommendation node" },
+        { "name": "status", "type": "string", "description": "delivered | viewed | acted_on | ignored | superseded | expired" },
+        { "name": "outcome", "type": "string", "description": "positive | neutral | insufficient | contradictory | pending" },
+        { "name": "evidenceDelta", "type": "object", "description": "{ before: object, after: object, window: string }" },
+        { "name": "followThroughSignals", "type": "object", "description": "{ sameTopicSessionsAfter, sameTopicAttemptsAfter, recommendationQidsAttempted, hintsReducedAfter }" },
+        { "name": "classifiedAt", "type": "ISO string" },
+        { "name": "classifierVersion", "type": "string" }
+      ]
+    },
+
+    "graphIntegrity": {
+      "constraints": [
+        "Every observation MUST reference at least one evidence node",
+        "Every pattern MUST reference at least two observation nodes",
+        "Every recommendation MUST reference at least one observation or pattern node",
+        "Every outcome MUST reference exactly one recommendation node",
+        "Every effectiveness signal MUST aggregate from at least 3 outcome nodes (minimum observation threshold)",
+        "Threshold values are stored once in graph.thresholds and referenced by observations; changing a threshold invalidates all observations computed under the old value",
+        "When a new attempt is recorded (L1 event), evidence nodes for the affected topic are incrementally updated; observations dependent on that evidence are re-evaluated; patterns dependent on those observations are re-evaluated"
+      ]
+    }
+  },
+
+  "implementationStrategy": {
+    "summary": "Build the Evidence Graph as a new module (may-evidence-graph.js) that wraps MayLearnerState. The graph is materialized at session boundaries and incrementally updated per attempt. Existing subsystems migrate one at a time from direct MayLearnerState calls to Evidence Graph reads.",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Graph Core + L1/L2 Materialization",
+        "tasks": [
+          "Create may-evidence-graph.js with EvidenceGraph namespace",
+          "Implement EventNode recording — intercept recordAttempt() to also push to graph.events[]",
+          "Implement TopicEvidence, SessionEvidence, CaseEvidence, ConfidenceEvidence computation",
+          "Materialize L2 at session completion (handoffCompletedSession)",
+          "Incrementally patch L2 on each recordAttempt() call",
+          "Implement graph serialization to localStorage (key: 'cmaEvidenceGraph')",
+          "Add graph rebuild from existing MayLearnerState data (backfill for existing learners)"
+        ],
+        "deliverable": "Evidence Graph populated alongside existing MayLearnerState. No subsystem changes yet."
+      },
+      {
+        "phase": 2,
+        "name": "L3 Observation Layer + Threshold Unification",
+        "tasks": [
+          "Extract standard threshold values into EvidenceGraph.config.thresholds",
+          "Implement ObservationNode materialization from L2 evidence",
+          "Port _identifyLearningPatterns (S124) to read from graph.observations[] instead of calling getTopicProgress() + load().misconceptionPatterns",
+          "Port getWeaknessClusters() to produce observations[] entries instead of standalone cluster objects",
+          "Port getReadinessSummary() to use graph.observations[] + graph.thresholds",
+          "Audit all threshold values across S120-S129 and unify to single source of truth"
+        ],
+        "deliverable": "All threshold-gated claims (strengths, weaknesses, improving, declining, etc.) read from a single observations[] array. No two subsystems can disagree about whether a topic is 'improving'."
+      },
+      {
+        "phase": 3,
+        "name": "L4 Pattern Engine",
+        "tasks": [
+          "Implement PatternNode materialization from L3 observations using pattern templates",
+          "Port misconceptionPatterns tracking into pattern nodes with observation refs",
+          "Port casePatternSummary/PracticeGuidance into pattern nodes",
+          "Port AdaptivePracticeMix mode-asymmetry detection into pattern nodes",
+          "Implement cross-topic misconception correlation"
+        ],
+        "deliverable": "Multi-observation patterns are explicit nodes with traceable observation refs."
+      },
+      {
+        "phase": 4,
+        "name": "L5 Unified Recommendation Generator",
+        "tasks": [
+          "Create EvidenceGraph.generateRecommendations() as single entry point for all recommendation generation",
+          "Implement conflict resolution rules (priority-based deduplication)",
+          "Port _generateNextBestStep to use graph.observations + graph.patterns",
+          "Port _suggestFocusAreas to use graph.observations + graph.patterns",
+          "Port _generateWeeklyDigest, _generateStudyStrategy, _generateRecoverySet, _recommendNext to use graph",
+          "Implement recommendation deduplication — suppress lower-priority recs that conflict with higher-priority ones"
+        ],
+        "deliverable": "Single recommendation generation pipeline. No contradictory recommendations possible."
+      },
+      {
+        "phase": 5,
+        "name": "L6 Outcome Tracking Refinement",
+        "tasks": [
+          "Add followThroughSignals to outcome nodes (detect whether learner actually followed recommendation)",
+          "Implement acted_on detection: check if recommended QIDs were attempted in subsequent sessions",
+          "Refine classifyPendingOutcomes with evidence deltas (before/after snapshots)",
+          "Link outcomes to graph.observations changes instead of raw topicProgress"
+        ],
+        "deliverable": "Outcomes include explicit follow-through detection, not just accuracy-based classification."
+      },
+      {
+        "phase": 6,
+        "name": "L7 Effectiveness Feedback Loop",
+        "tasks": [
+          "Implement EffectivenessSignal computation from outcome nodes",
+          "Implement recommendation priority boost/suppress rules based on effectiveness signals",
+          "Add learner-level effectiveness tracking (which recommendation types work for THIS learner)",
+          "Wire effectiveness signals back into L5 recommendation generator"
+        ],
+        "deliverable": "Closed-loop learning: the system learns which recommendation types help this learner and adjusts priorities accordingly."
+      }
+    ],
+
+    "architectureDiagram": {
+      "description": "How may-evidence-graph.js sits between MayLearnerState and May subsystems",
+      "layers": [
+        { "layer": "Data Persistence", "component": "MayLearnerState (localStorage)", "role": "Persistent store. Events, sessions, outcomes are written here. Evidence Graph reads from here to materialize." },
+        { "layer": "Evidence Graph", "component": "EvidenceGraph (may-evidence-graph.js)", "role": "In-memory materialized graph. L1-L7 nodes. Updated incrementally. Exposes read API for all subsystems." },
+        { "layer": "Coaching Subsystems", "component": "May._explainAnswer, May._explainWrongChoices, May._getProgressInsight, etc.", "role": "Read from EvidenceGraph only. Never call MayLearnerState.getTopicProgress() or MayLearnerState.load() directly." }
+      ]
+    }
+  },
+
+  "backwardCompatibility": {
+    "strategy": "Incremental adoption with dual-read during migration. No existing subsystem behavior changes until its migration phase is complete and tested.",
+    "principles": [
+      "Evidence Graph is populated alongside existing MayLearnerState — no data loss",
+      "Each subsystem migration is feature-flagged: EvidenceGraph.useGraphFor('S124') returns true only when S124 migration is verified",
+      "During migration, the subsystem reads from Evidence Graph and compares output against existing MayLearnerState call — logs discrepancies without user impact",
+      "When comparison passes for N sessions, flip the flag to read from Evidence Graph exclusively",
+      "MayLearnerState APIs (getTopicProgress, getTrends, etc.) remain available as fallback — deprecated but not removed",
+      "Existing localStorage key 'cmaMayLearnerState' is untouched; Evidence Graph uses separate key 'cmaEvidenceGraph'",
+      "graph rebuild from MayLearnerState data means existing learner progress survives the migration"
+    ],
+    "subsystemMigrationOrder": [
+      { "subsystem": "S124 (Learning Patterns)", "reason": "Lowest risk — observations are additive. Easy to verify with dual-read comparison.", "risk": "low" },
+      { "subsystem": "S125 (Focus Areas)", "reason": "Depends on same observations as S124. Natural next step.", "risk": "low" },
+      { "subsystem": "S123 (Next Best Step)", "reason": "Uses similar evidence (topic data). Mapping error categories to observations is straightforward.", "risk": "low" },
+      { "subsystem": "S120 (Tutor Explanation)", "reason": "Explanation content is question-driven, not evidence-driven. Only the accuracy note and patterns section uses evidence.", "risk": "low" },
+      { "subsystem": "S127 (Weekly Digest)", "reason": "Larger scope — touches multiple evidence types. Test with 2+ week learner data.", "risk": "medium" },
+      { "subsystem": "S128 (Study Strategy)", "reason": "Depends on S127 patterns. Migrate after S127 is stable.", "risk": "medium" },
+      { "subsystem": "S126 (Session Recap)", "reason": "Session-scoped — uses short-lived data. Easy to verify.", "risk": "low" },
+      { "subsystem": "S129 (Effectiveness)", "reason": "Already centralized. Migration mainly adds follow-through detection and feedback loop.", "risk": "medium" },
+      { "subsystem": "Readiness Summary (S102-S104)", "reason": "Highest risk — readiness bands are the most visible output. Needs extensive dual-read validation across all synthetic student archetypes.", "risk": "high" },
+      { "subsystem": "Adaptive Practice Mix (S100)", "reason": "Depends on readiness signals. Migrate after readiness is verified.", "risk": "medium" }
+    ],
+    "rollbackPlan": {
+      "description": "If Evidence Graph produces incorrect observations or recommendations, each subsystem can be individually rolled back to direct MayLearnerState calls by flipping the feature flag.",
+      "mechanism": "EvidenceGraph.useGraphFor = { S120: false, S121: false, ..., S129: false }. Set to false to revert any subsystem instantly."
+    }
+  },
+
+  "designDecisions": [
+    {
+      "decision": "Materialized graph, not on-demand computation",
+      "rationale": "The current architecture re-computes getTopicProgress(), getTrends(), and getWeaknessClusters() on every call. With 50 sessions and 20+ topics, this is acceptable for single calls but wasteful when 7+ subsystems each trigger the chain independently. Materializing at session boundaries means one computation, read by all.",
+      "tradeoff": "Stale data between materializations. Mitigation: incremental patching on each attempt for the affected topic only."
+    },
+    {
+      "decision": "Observation nodes include gate results",
+      "rationale": "Every observation records whether each threshold gate passed. This makes it auditable — you can trace exactly why a topic was classified as 'improving' rather than 'stable'. Currently, the thresholds are implicit in the code and can only be inferred by reading the comparison operators.",
+      "tradeoff": "Larger node size. Mitigation: gates are lightweight boolean/float pairs."
+    },
+    {
+      "decision": "Recommendation conflict resolution via priority ordering",
+      "rationale": "Seven independent recommendation generators currently run in the same coaching output (S123+S124+S125 all fire during _explainAnswer). Without coordination, they can conflict. Priority ordering with deduplication ensures the learner sees a coherent set of suggestions.",
+      "tradeoff": "Slightly fewer recommendations shown. Mitigation: lower-priority recommendations are still stored in the graph for the effectiveness layer to learn from, even if not shown."
+    },
+    {
+      "decision": "Separate localStorage key for Evidence Graph",
+      "rationale": "Keep existing 'cmaMayLearnerState' untouched during migration. Evidence Graph can be rebuilt from it at any time. This means the migration is revertible with zero data loss.",
+      "tradeoff": "Doubles localStorage usage during migration. Mitigation: Evidence Graph is more compact than raw learner state (pre-computed aggregates). After migration is complete, MayLearnerState can be slimmed down to raw events only."
+    },
+    {
+      "decision": "Standard thresholds stored once, referenced everywhere",
+      "rationale": "The biggest source of inconsistency is different threshold values in different subsystems. Storing thresholds in one place and referencing them ensures that when a threshold changes (e.g., minAttemptsReady from 5 to 6), all subsystems reflect the change simultaneously.",
+      "tradeoff": "All subsystems must agree on thresholds. Mitigation: subsystems can declare overrides with explicit rationale recorded in the observation node."
+    }
+  ],
+
+  "risksAndMitigations": [
+    {
+      "risk": "Materialized graph grows stale between session boundaries",
+      "impact": "Medium — during an active session, a learner could answer 10 questions on a topic. The materialized evidence for that topic would be stale until the session ends.",
+      "mitigation": "Incremental patching: on each recordAttempt(), patch the topicEvidence for the affected topic only. Observations and patterns that depend on that evidence are re-evaluated. This is cheap because only one topic changes per attempt."
+    },
+    {
+      "risk": "Graph rebuild from MayLearnerState is lossy for past data",
+      "impact": "Low — existing learner state has all the raw data needed to rebuild L1-L2. L3-L7 are newly materialized and will be empty on first build for existing learners.",
+      "mitigation": "First graph build for existing learners starts with L1+L2 only. L3 observations appear after the next session boundary when classifyPendingOutcomes runs."
+    },
+    {
+      "risk": "Dual-read comparison reveals discrepancies that are hard to reconcile",
+      "impact": "Medium — if Evidence Graph produces different observations than existing code, we need to determine which is correct.",
+      "mitigation": "The standard thresholds are the authority. If existing code uses different implicit thresholds, the graph is correct and existing code is updated. The dual-read comparison log makes discrepancies visible."
+    },
+    {
+      "risk": "localStorage quota with both MayLearnerState and Evidence Graph",
+      "impact": "Low — localStorage typically has 5-10MB. MayLearnerState with 50 sessions is ~200KB. Evidence Graph with L1-L7 is ~100KB. Combined ~300KB.",
+      "mitigation": "Event log capped at 2000 entries. Older events rolled into aggregates. If quota is exceeded, Evidence Graph can drop L1 raw events and keep only L2+."
+    }
+  ],
+
+  "appendix": {
+    "currentThresholdDiscrepancies": [
+      {
+        "location": "S124 _identifyLearningPatterns vs. S102 getReadinessSummary",
+        "discrepancy": "S124 uses accuracy >= 85 for 'topic_strength' observation; getReadinessSummary uses accuracy >= 80 for 'Ready for focused review'. Same learner could be 'strong' in one place and 'Approaching review-ready' in another.",
+        "resolution": "Adopt getReadinessSummary thresholds as standard (they are more conservative and were tuned in S103). S124 must use the same thresholds."
+      },
+      {
+        "location": "S124 _identifyLearningPatterns vs. getWeaknessClusters",
+        "discrepancy": "S124 uses delta >= 10 for 'improving' observation; getWeaknessClusters uses delta >= 15. S124 has a lower bar.",
+        "resolution": "Two distinct observation categories: 'slightly_improving' (delta >= 5, from getTrends) and 'improving' (delta >= 15, from getWeaknessClusters). S124 should align with these existing categories."
+      },
+      {
+        "location": "S102 getReadinessSummary min attempts",
+        "discrepancy": "Ready requires 6 attempts (S103), Approaching requires 4 (S104), but S124 uses minAttempts=3. Observations may fire before readiness bands.",
+        "resolution": "This is intentional — observations can fire earlier (3 attempts) because they are lower-stakes claims. Readiness bands require more evidence. The graph should track both and note the confidence difference."
+      },
+      {
+        "location": "S125 _suggestFocusAreas vs. S123 _generateNextBestStep",
+        "discrepancy": "S125 uses getTopicProgress() for accuracy thresholds; S123 uses error category from current question. Both can recommend different actions for the same topic in the same coaching output.",
+        "resolution": "L5 recommendation generator resolves this: next_best_step is always shown (it's question-specific); focus_area is appended only if it doesn't conflict. If both recommend the same topic, focus_area augments next_best_step rather than repeating it."
+      }
+    ],
+    "duplicatedComputationHotspots": [
+      {
+        "callChain": "getWeaknessClusters() → getTrends() → getTopicProgress() → scan all sessions",
+        "calledBy": ["getWelcomeMessage", "preExamBriefing", "_getProgressInsight", "_getWeaknessInsight", "_recommendNext", "_generateRecoverySet", "getAdaptivePracticeMix", "getReadinessSummary", "renderView (insight cards, readiness panel, section readiness)"],
+        "cost": "O(sessions × topics) per call. With 50 sessions and 20 topics: ~1000 iterations per call. Called 9+ times per renderView() and multiple times per coaching action."
+      },
+      {
+        "callChain": "load() → JSON.parse(localStorage) → scan all sessions",
+        "calledBy": ["_identifyLearningPatterns", "_suggestFocusAreas", "_generateSessionRecap", "_summarizeSession", "_generateWeeklyDigest", "_generateStudyStrategy", "_generateStrategyEffectiveness", "renderView"],
+        "cost": "Full JSON parse of ~200KB each time. Called 8+ times per coaching action."
+      }
+    ]
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "report_metadata": {
+    "agent": "Agent B — Inventory Validation",
+    "session": "S535",
+    "scope": "CBQ-A1 + CBQ-B1 Certification Readiness",
+    "file": "scored_cases.js",
+    "lines_scanned": "1–346 (CBQ-A1), 703–1063 (CBQ-B1)",
+    "timestamp": "2026-07-26",
+    "total_items": 12,
+    "methodology": "Direct file read via scored_cases.js line-level inspection"
+  },
+
+  "case_level": {
+    "CBQ-A1": {
+      "CaseID": "CBQ-A1",
+      "Title": "Revenue Recognition, Cash Flow, and Deferred Tax Review",
+      "SectionTags": ["A"],
+      "BlueprintDomain": "External Financial Reporting Decisions",
+      "BlueprintObjectives": [
+        "Revenue recognition under ASC 606",
+        "Liability recognition and measurement",
+        "Statement of cash flows preparation and analysis"
+      ],
+      "ExhibitCount": 2,
+      "QuestionCount": 6,
+      "ExhibitsMatchQuestionCount": true,
+      "ProductionStatus": "Draft",
+      "question_state": "Unprocessed",
+      "Confidence": 90,
+      "Version": "1.0",
+      "ScenarioText_length": 337,
+      "ScenarioText_quality_notes": "Named company (Northstar Equipment), stakeholder (Controller), business trigger (year-end closing), clear task (evaluate revenue/CF/deferred taxes). Meets CAQS §3.1 requirements. Has executive framing ('before the audit committee meeting'). Not AI-generic.",
+      "metadata_completeness": {
+        "all_required_present": true,
+        "missing_optional_fields": ["Tags", "Reviewer", "QAReviewer"],
+        "present_required_fields": [
+          "CaseID", "Title", "SectionTags", "BlueprintDomain", "BlueprintObjectives",
+          "PrimaryCompetency", "EstimatedMinutes", "Difficulty", "DifficultyScore",
+          "ScenarioText", "Exhibits", "Items", "Industry", "CompanyType", "CompanyName",
+          "Stakeholder", "BusinessFunction", "QuestionCount", "ExhibitCount",
+          "ProductionStatus", "Version", "Confidence", "CreatedDate", "ModifiedDate",
+          "Author", "RevisionHistory", "Dependencies", "LearningObjectives"
+        ]
+      },
+      "lines": {"start": 1, "end": 346}
+    },
+    "CBQ-B1": {
+      "CaseID": "CBQ-B1",
+      "Title": "Integrated Sales, Production, Materials, and Cash Budget",
+      "SectionTags": ["B"],
+      "BlueprintDomain": "Planning, Budgeting, and Forecasting",
+      "BlueprintObjectives": [
+        "Production budget",
+        "Direct materials budget",
+        "Cash budget",
+        "Budgeting judgment"
+      ],
+      "ExhibitCount": 2,
+      "QuestionCount": 6,
+      "ExhibitsMatchQuestionCount": true,
+      "ProductionStatus": "Draft",
+      "question_state": "Unprocessed",
+      "Confidence": 100,
+      "Version": "1.0",
+      "ScenarioText_length": 247,
+      "ScenarioText_quality_notes": "Named company (Apex Controls), stakeholder (CFO), business trigger (Q1 budget prep), clear task. Good. Slightly shorter than A1 but sufficient. No AI-generic patterns.",
+      "metadata_completeness": {
+        "all_required_present": true,
+        "missing_optional_fields": [],
+        "present_required_fields": [
+          "CaseID", "Title", "SectionTags", "BlueprintDomain", "BlueprintObjectives",
+          "PrimaryCompetency", "EstimatedMinutes", "Difficulty", "DifficultyScore",
+          "ScenarioText", "Exhibits", "Items", "Industry", "CompanyType", "CompanyName",
+          "Stakeholder", "BusinessFunction", "QuestionCount", "ExhibitCount",
+          "ProductionStatus", "Version", "Confidence", "CreatedDate", "ModifiedDate",
+          "Author", "Reviewer", "QAReviewer", "RevisionHistory", "Dependencies",
+          "LearningObjectives", "Tags"
+        ]
+      },
+      "lines": {"start": 703, "end": 1063}
+    }
+  },
+
+  "item_level": {
+    "CBQ-A1-Q1": {
+      "ItemID": "CBQ-A1-Q1",
+      "Type": "numeric",
+      "Topic": "Revenue recognition",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "Explanation_chars": 108,
+      "ExplanationWrong": "N/A — numeric type (no ExplanationWrong fields)",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "ASC 606 requires revenue recognition when control transfers to the customer.",
+      "missing_metadata": [],
+      "line_range": "138–166"
+    },
+    "CBQ-A1-Q2": {
+      "ItemID": "CBQ-A1-Q2",
+      "Type": "numeric",
+      "Topic": "Contract liabilities",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "Explanation_chars": 93,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "ASC 606 defines contract liabilities as obligations to transfer goods/services for which consideration has been received.",
+      "missing_metadata": [],
+      "line_range": "167–195"
+    },
+    "CBQ-A1-Q3": {
+      "ItemID": "CBQ-A1-Q3",
+      "Type": "select",
+      "Topic": "Revenue recognition",
+      "CognitiveLevel": "Evaluate",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "Explanation_chars": 437,
+      "ExplanationWrong": {
+        "A": {"status": "empty", "chars": 0, "note": "CorrectChoice slot — DL-008 compliant"},
+        "B": {"status": "content", "chars": 329},
+        "C": {"status": "content", "chars": 363},
+        "D": {"status": "content", "chars": 367}
+      },
+      "ExplanationWrong_coverage": {
+        "total_slots": 4,
+        "slots_with_content": 3,
+        "distractors_with_content": 3,
+        "distractors_without_content": 0,
+        "all_distractors_covered": true
+      },
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": false,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "ASC 606 requires revenue recognition when control transfers to the customer.",
+      "missing_metadata": [],
+      "line_range": "196–236"
+    },
+    "CBQ-A1-Q4": {
+      "ItemID": "CBQ-A1-Q4",
+      "Type": "numeric",
+      "Topic": "Statement of cash flows",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "Explanation_chars": 54,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "ASC 230 requires classification of cash flows into operating, investing, and financing activities.",
+      "missing_metadata": [],
+      "line_range": "237–266"
+    },
+    "CBQ-A1-Q5": {
+      "ItemID": "CBQ-A1-Q5",
+      "Type": "numeric",
+      "Topic": "Deferred taxes",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "Explanation_chars": 69,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "ASC 740 requires recognition of deferred tax liabilities for temporary differences that will result in future taxable amounts.",
+      "missing_metadata": [],
+      "line_range": "267–295"
+    },
+    "CBQ-A1-Q6": {
+      "ItemID": "CBQ-A1-Q6",
+      "Type": "multi",
+      "Topic": "External reporting judgment",
+      "CognitiveLevel": "Evaluate",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "Explanation_chars": 481,
+      "ExplanationWrong": {
+        "A": {"status": "empty", "chars": 0, "note": "Correct choice slot — DL-008 compliant"},
+        "B": {"status": "empty", "chars": 0, "note": "Correct choice slot — DL-008 compliant"},
+        "C": {"status": "content", "chars": 497, "note": "Only distractor — has content"},
+        "D": {"status": "empty", "chars": 0, "note": "Correct choice slot — DL-008 compliant"}
+      },
+      "ExplanationWrong_coverage": {
+        "total_slots": 4,
+        "slots_with_content": 1,
+        "distractors_with_content": 1,
+        "distractors_without_content": 0,
+        "all_distractors_covered": true
+      },
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": false,
+      "AccountingPrinciple_present": false,
+      "AccountingPrinciple_content": null,
+      "missing_metadata": ["AccountingPrinciple (absent — not a QMS §2.1 required field but CAQS §4.3 EV3 requires explanation to reference the governing principle by name; Explanation text does mention ASC 606 but structural field is absent)"],
+      "line_range": "296–339"
+    },
+    "CBQ-B1-Q1": {
+      "ItemID": "CBQ-B1-Q1",
+      "Type": "numeric",
+      "Topic": "Production budget",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "Explanation_chars": 51,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "Production budget formula: Budgeted Sales + Desired Ending Inventory - Beginning Inventory.",
+      "missing_metadata": [],
+      "line_range": "855–886"
+    },
+    "CBQ-B1-Q2": {
+      "ItemID": "CBQ-B1-Q2",
+      "Type": "numeric",
+      "Topic": "Production budget",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "Explanation_chars": 56,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "Production budget formula: Budgeted Sales + Desired Ending Inventory - Beginning Inventory.",
+      "missing_metadata": [],
+      "line_range": "887–918"
+    },
+    "CBQ-B1-Q3": {
+      "ItemID": "CBQ-B1-Q3",
+      "Type": "numeric",
+      "Topic": "Direct materials budget",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "Explanation_chars": 260,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "Direct materials purchases: Materials Needed + Desired Ending Materials - Beginning Materials.",
+      "missing_metadata": [],
+      "line_range": "919–950"
+    },
+    "CBQ-B1-Q4": {
+      "ItemID": "CBQ-B1-Q4",
+      "Type": "numeric",
+      "Topic": "Cash budget",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "Explanation_chars": 94,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "Cash budget: Beginning Cash + Cash Receipts - Cash Disbursements = Ending Cash.",
+      "missing_metadata": [],
+      "line_range": "951–982"
+    },
+    "CBQ-B1-Q5": {
+      "ItemID": "CBQ-B1-Q5",
+      "Type": "numeric",
+      "Topic": "Cash budget",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "Explanation_chars": 119,
+      "ExplanationWrong": "N/A — numeric type",
+      "ExplanationWrong_coverage": {},
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": true,
+      "AccountingPrinciple_present": true,
+      "AccountingPrinciple_content": "Cash budget: Beginning Cash + Cash Receipts - Cash Disbursements = Ending Cash.",
+      "missing_metadata": [],
+      "line_range": "983–1014"
+    },
+    "CBQ-B1-Q6": {
+      "ItemID": "CBQ-B1-Q6",
+      "Type": "multi",
+      "Topic": "Budgeting judgment",
+      "CognitiveLevel": "Evaluate",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "Explanation_chars": 106,
+      "ExplanationWrong": {
+        "A": {"status": "empty", "chars": 0, "note": "Correct choice slot — DL-008 compliant"},
+        "B": {"status": "empty", "chars": 0, "note": "Correct choice slot — DL-008 compliant"},
+        "C": {"status": "empty", "chars": 0, "note": "Correct choice slot — DL-008 compliant"},
+        "D": {"status": "content", "chars": 425, "note": "Only distractor — has content"}
+      },
+      "ExplanationWrong_coverage": {
+        "total_slots": 4,
+        "slots_with_content": 1,
+        "distractors_with_content": 1,
+        "distractors_without_content": 0,
+        "all_distractors_covered": true
+      },
+      "question_state": "Unprocessed",
+      "ProductionStatus": "Draft",
+      "CalculationRequired": false,
+      "AccountingPrinciple_present": false,
+      "AccountingPrinciple_content": null,
+      "missing_metadata": ["AccountingPrinciple (absent — not a QMS §2.1 required field but CAQS §4.3 EV3 requires reference; Explanation text is short and generic)"],
+      "line_range": "1015–1056"
+    }
+  },
+
+  "aggregate_metrics": {
+    "Total_ExplanationCorrect_chars": 1928,
+    "Total_ExplanationCorrect_chars_machine_verified": 1782,
+    "ExplanationCorrect_min_chars": 51,
+    "ExplanationCorrect_max_chars": 481,
+    "ExplanationCorrect_avg_chars": 160.7,
+    "numeric_items": 8,
+    "select_items": 1,
+    "multi_items": 2,
+    "fill_items": 0,
+    "match_items": 0,
+    "items_with_ExplanationWrong": 3,
+    "ExplanationWrong_slots_total": 12,
+    "ExplanationWrong_slots_with_content": 5,
+    "ExplanationWrong_slots_empty": 7,
+    "distractors_total": 5,
+    "distractors_with_explanation": 5,
+    "distractors_without_explanation": 0,
+    "distractor_coverage_pct": "100%",
+    "DL008_compliance": "ALL 12 ITEMS PASS — no non-empty ExplanationWrong[CorrectChoice] found",
+    "DL025_DL026_check": "ALL DISTRACTOR ExplanationWrong SLOTS NON-EMPTY — zero empty distractor slots",
+    "AccountingPrinciple_present": 10,
+    "AccountingPrinciple_absent": 2,
+    "items_with_all_Certification_required_metadata": 10,
+    "items_missing_metadata": 2,
+    "unprocessed_items": 12,
+    "certified_items": 0
+  },
+
+  "certification_blocking_items": [
+    {
+      "ItemID": "CBQ-A1-Q6",
+      "issue": "Missing AccountingPrinciple field. Explanation text references ASC 606 but the structural metadata field is absent. CAQS §4.3 EV3 requires the governing principle to be named — structurally this is a metadata gap.",
+      "severity": "Low"
+    },
+    {
+      "ItemID": "CBQ-B1-Q6",
+      "issue": "Missing AccountingPrinciple field. Explanation text is generic ('cash timing and the required minimum balance') with no ASC/COSO/IMA standard reference. Both structurally absent and textually insufficient.",
+      "severity": "Low"
+    },
+    {
+      "ItemID": "CBQ-A1-Q1",
+      "issue": "Difficulty calibration: 'Moderate-Easy' (2) for a 1-step calculation (360,000 x 3/12). Subjectively Easy (1) per DL-031 pattern — stem is essentially a formula substitution with no conceptual hurdle.",
+      "severity": "Informational — DL-031 pattern"
+    },
+    {
+      "ItemID": "CBQ-B1-Q1",
+      "issue": "Difficulty calibration: 'Moderate-Easy' (2) for production budget formula substitution. Borderline Easy (1).",
+      "severity": "Informational — DL-031 pattern"
+    },
+    {
+      "ItemID": "CBQ-B1-Q2",
+      "issue": "Difficulty calibration: 'Moderate-Easy' (2) — same as Q1, same formula, same complexity. Arguably Easy (1).",
+      "severity": "Informational — DL-031 pattern"
+    },
+    {
+      "ItemID": "CBQ-B1-Q5",
+      "issue": "Difficulty calibration: 'Moderate-Easy' (2) for simple borrowing calc. Mixed — does require understanding minimum cash balance concept.",
+      "severity": "Informational"
+    },
+    {
+      "ItemID": "CBQ-A1-Q4",
+      "issue": "Explanation is formula-substitution-only: '510,000 + 72,000 - 41,000 + 18,000 - 27,000 = 532,000.' No identification of which items are add-backs vs. subtractions per ASC 230 indirect method. CAQS §4.1 requires AccountingConcept + SolutionSteps + WhyCorrect.",
+      "severity": "Medium — educational quality gap"
+    },
+    {
+      "ItemID": "CBQ-A1-Q5",
+      "issue": "Explanation is one sentence: 'Future taxable amount 200,000 x 25% = 50,000 deferred tax liability.' Missing: ASC 740 reference in the Explanation text (though AccountingPrinciple field has it), business interpretation, common exam trap. CAQS §4.1.",
+      "severity": "Medium"
+    },
+    {
+      "ItemID": "CBQ-B1-Q3",
+      "issue": "BusinessInterpretation field contains '0 - 3,900 = 38,220. A common error is to use the wrong beginning materials balance.' — this is calculation residue + trap text, not a business interpretation. CAQS §4.1 BusinessInterpretation requirement.",
+      "severity": "Low"
+    }
+  ],
+
+  "structural_defects": {
+    "DL008_scan": "CLEAN — 0 non-empty ExplanationWrong[CorrectChoice] across all 12 items. For select/multi items, all CC slots are empty ('') and all distractor slots have substantive content.",
+    "DL018_scan": "CLEAN — all 4 ExplanationWrong slots present on select/multi items (A1-Q3, A1-Q6, B1-Q6). No absent fields.",
+    "DL025_scan": "CLEAN — 0 empty distractor ExplanationWrong slots. All 5 distractors have content > 0 chars.",
+    "DL026_scan": "CLEAN — no cross-pool issue. All distractor EW fields have substantive content (min 329 chars).",
+    "DL021_scan": "CLEAN — no absent distractor fields in select/multi items.",
+    "DL016_scan": "CLEAN — single-object architecture. No metadata-block/content-block divergence."
+  },
+
+  "cogntive_progression": {
+    "CBQ-A1": "Q1(Apply/num) → Q2(Apply/num) → Q3(Evaluate/select) → Q4(Apply/num) → Q5(Apply/num) → Q6(Evaluate/multi)",
+    "CBQ-A1_compliance": "PARTIAL — Q4/Q5 are both Apply (flat), Q6 jumps to Evaluate without Analyze step. Would expect: numeric(Apply) → numeric(Apply) → numeric(Apply) → select(Analyze) → multi(Evaluate). Two Evaluate items (Q3 + Q6) is acceptable but Q3 at position 3 is early per CAQS §3.5 cognitive progression (expects Apply → Analyze → Evaluate).",
+    "CBQ-B1": "Q1(Apply/num) → Q2(Apply/num) → Q3(Apply/num) → Q4(Apply/num) → Q5(Apply/num) → Q6(Evaluate/multi)",
+    "CBQ-B1_compliance": "WEAK — 5 consecutive Apply items then 1 Evaluate. No Analyze-level items. Should have at least 1 Analyze in positions 4-5 per CAQS §3.5."
+  },
+
+  "recommendation": "Both cases are STRUCTURALLY CERTIFICATION-READY (0 DL-008/018/021/025/026 defects, all EW slots correctly populated, all metadata present). 2 items need AccountingPrinciple field added (A1-Q6, B1-Q6). 3 items need Explanation enhancement (A1-Q4, A1-Q5 are bare formula-substitutions; B1-Q3 has corrupted BusinessInterpretation). Difficulty calibration should be reviewed per DL-031 patterns (A1-Q1, B1-Q1, B1-Q2 border on Easy). Cognitive progression for B1 is flat (5x Apply → 1x Evaluate). Recommend fixing the 2 missing AccountingPrinciple fields and 3 thin explanations before certification."
+}

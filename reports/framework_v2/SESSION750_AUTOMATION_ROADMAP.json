@@ -1,0 +1,139 @@
+{
+  "deliverable": "SESSION750_AUTOMATION_ROADMAP.json",
+  "session": 750,
+  "board": "J",
+  "title": "Governance Automation Roadmap",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "description": "Maturity model and phased roadmap for governance automation from P0 (current) through P4 (self-healing future state).",
+  "currentPhase": "P0",
+  "phases": [
+    {
+      "phase": "P0",
+      "name": "Automated Detection",
+      "target": "2026-07-27 (Session 750)",
+      "status": "COMPLETE",
+      "description": "All 8 governance rules have automated detection. Four production scripts operational.",
+      "deliverables": [
+        "governance_guard_engine.js — Rules 1-8 validation",
+        "policy_drift_detector.js — 5-dimension drift detection",
+        "certification_audit_builder.js — audit chain generation",
+        "governance_event_registry.js — event lifecycle tracking"
+      ],
+      "gates": {
+        "G1_DETECTION": "All 8 rules detectable by CLI tools",
+        "G2_POLICY_DRIFT": "5 drift dimensions scannable",
+        "G3_AUDIT_CHAINS": "Per-QID audit chains buildable from REVISION_HISTORY.md",
+        "G4_EVENT_LIFECYCLE": "Events creatable, listable, resolvable"
+      }
+    },
+    {
+      "phase": "P1",
+      "name": "Continuous Monitoring",
+      "target": "2026-07-28 (Sessions 751-760)",
+      "status": "PLANNED",
+      "description": "Governance checks run at every session boundary. Dashboard populated with live data. Event registry actively tracking violations.",
+      "deliverables": [
+        "Session startup protocol: run governance_guard_engine.js + policy_drift_detector.js at T0",
+        "Dashboard populated: connect build_dashboard.js to engine output",
+        "Event registry active: auto-ingest from guard engine output",
+        "Drift baseline established: S751 T0 snapshot",
+        "Metrics baseline computed: initial values for all 14 metrics"
+      ],
+      "gates": {
+        "G1_T0_SCAN": "Every session runs governance guard engine at startup",
+        "G2_DASHBOARD": "Dashboard renders live data from engine output",
+        "G3_EVENT_TRACKING": "New violations auto-create events",
+        "G4_METRICS_BASELINE": "All 14 metrics computed at least once"
+      }
+    },
+    {
+      "phase": "P2",
+      "name": "Pre-Commit Gates",
+      "target": "2026-07-29 (Sessions 761-770)",
+      "status": "PLANNED",
+      "description": "Governance checks integrated into CI/CD pipeline. Pull requests blocked on new DL-008 violations. Automated pre-certification gates.",
+      "deliverables": [
+        "Pre-commit hook: governance_guard_engine.js blocks commits with new DL-008",
+        "CI pipeline: governance checks run on PR merge",
+        "Pre-certification gate: automated go/no-go based on drift detector",
+        "Baseline comparison: delta between current scan and T0 baseline triggers alerts",
+        "Automated REVISION_HISTORY.md reminder: Rule 1 enforced at commit time"
+      ],
+      "gates": {
+        "G1_PRECOMMIT": "DL-008 violations block commits",
+        "G2_CI": "Governance checks run in CI pipeline",
+        "G3_PREFLIGHT": "Certification waves have automated pre-flight",
+        "G4_BASELINE": "Drift from baseline auto-flagged"
+      }
+    },
+    {
+      "phase": "P3",
+      "name": "Predictive Governance",
+      "target": "2026-07-30+ (Sessions 771-780)",
+      "status": "PLANNED",
+      "description": "Trend analysis on governance metrics. Early warning on drift patterns. Automated root-cause correlation across defect clusters.",
+      "deliverables": [
+        "Trend dashboard: 30-day metrics visualized with trendlines",
+        "Early warning: alerts when drift patterns accelerate",
+        "Root-cause correlation: linked defects auto-clustered",
+        "Recurrence prediction: QIDs likely to re-violate flagged",
+        "Workload forecasting: estimated sessions to full compliance"
+      ],
+      "gates": {
+        "G1_TRENDS": "Metrics trendlines renderable from event registry data",
+        "G2_EARLY_WARNING": "Accelerating drift auto-triggers alert",
+        "G3_CORRELATION": "Cross-defect pattern detection operational"
+      }
+    },
+    {
+      "phase": "P4",
+      "name": "Self-Healing Governance",
+      "target": "Future (post-780)",
+      "status": "VISION",
+      "description": "Automated remediation of known defect patterns. AI-driven certification support. Closed-loop governance: detect → remediate → verify → close.",
+      "deliverables": [
+        "Auto-remediation: DL-008 clears auto-applied for Bucket 1 (calculation summaries)",
+        "AI certification support: build-time AI runs CAQS §1.6 verification autonomously",
+        "Closed-loop: detect → remediate → verify → close → re-scan",
+        "Adaptive baselines: drift expectations calibrated to development velocity",
+        "Zero-touch governance: routine defects resolved without human intervention"
+      ],
+      "gates": {
+        "G1_AUTO_REMEDIATE": "Bucket 1 DL-008 clears automated",
+        "G2_AI_CERTIFY": "AI verification produces certifiable confidence",
+        "G3_CLOSED_LOOP": "Full detect→close cycle automated for ≥80% of defect classes"
+      }
+    }
+  ],
+  "riskFactors": [
+    {
+      "factor": "Tool drift from plugin",
+      "mitigation": "Shared extraction logic; test parity suite",
+      "severity": "Medium"
+    },
+    {
+      "factor": "Admin Portal not yet built",
+      "mitigation": "Role-based controls are advisory until portal deployed",
+      "severity": "Low"
+    },
+    {
+      "factor": "Event registry adoption",
+      "mitigation": "Auto-ingestion from engine output ensures population",
+      "severity": "Low"
+    },
+    {
+      "factor": "CI/CD integration complexity",
+      "mitigation": "Phased: pre-commit hook first, CI pipeline second",
+      "severity": "Medium"
+    }
+  ],
+  "totalEstimatedSessionsToP4": "~30 sessions (S750-S780)",
+  "estimatedWorkloadReduction": {
+    "P0": "0% (infrastructure built, not yet operationalized)",
+    "P1": "~40% (session startup automated, dashboard live)",
+    "P2": "~60% (pre-commit gates catch defects before review)",
+    "P3": "~80% (predictive catches patterns before they spread)",
+    "P4": "~95% (self-healing resolves routine defects autonomously)"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "agent": "C",
+  "session": "S301",
+  "phase": 1,
+  "packs": {
+    "A": {
+      "total_items": 500,
+      "certified": 481,
+      "archived": 19,
+      "unprocessed": 0,
+      "sections": {
+        "A": { "item_count": 75, "certified": 73, "archived": 2, "unprocessed": 0, "status": "partial", "blockers": ["DL-016: 2 archived items"] },
+        "B": { "item_count": 100, "certified": 100, "archived": 0, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "C": { "item_count": 100, "certified": 100, "archived": 0, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "D": { "item_count": 75, "certified": 75, "archived": 0, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "E": { "item_count": 75, "certified": 58, "archived": 17, "unprocessed": 0, "status": "partial", "blockers": ["DL-016: 17 archived clone items"] },
+        "F": { "item_count": 75, "certified": 75, "archived": 0, "unprocessed": 0, "status": "fully_certified", "blockers": [] }
+      },
+      "blocker_defects": ["DL-016: content-metadata offset in paired-object format affecting some Pack A items"],
+      "remaining_to_100pct": 19,
+      "all_remaining_are_archived": true
+    },
+    "C": {
+      "total_items": 500,
+      "certified": 350,
+      "archived": 56,
+      "unprocessed": 94,
+      "sections": {
+        "A": { "item_count": 75, "certified": 75, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "B": { "item_count": 100, "certified": 100, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "C": { "item_count": 100, "certified": 100, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "D": { "item_count": 75, "certified": 75, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "E": { "item_count": 75, "certified": 0, "unprocessed": 19, "archived": 56, "status": "partial", "blockers": ["DL-012: 56 clone-archived items", "DL-008: CC-rotation artifacts"] },
+        "F": { "item_count": 75, "certified": 0, "unprocessed": 75, "status": "unprocessed", "blockers": ["DL-013: template boilerplate"] }
+      },
+      "blocker_defects": ["DL-008: 174-item cluster discovered 2026-07-23", "DL-013: ~357 template fields remaining", "DL-012: 56 clone-archived items in Section E"],
+      "remaining_to_100pct": 150,
+      "largest_unprocessed_block": "Section F: 75 items"
+    },
+    "D": {
+      "total_items": 500,
+      "certified": 350,
+      "archived": 57,
+      "unprocessed": 93,
+      "sections": {
+        "A": { "item_count": 75, "certified": 75, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "B": { "item_count": 100, "certified": 100, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "C": { "item_count": 100, "certified": 100, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "D": { "item_count": 75, "certified": 75, "unprocessed": 0, "status": "fully_certified", "blockers": [] },
+        "E": { "item_count": 75, "certified": 0, "unprocessed": 19, "archived": 56, "status": "partial", "blockers": ["DL-012: 56 clone-archived items"] },
+        "F": { "item_count": 74, "certified": 0, "unprocessed": 74, "status": "unprocessed", "blockers": ["DL-008: 10 items", "DL-013: ~256 template fields"] },
+        "?": { "item_count": 1, "certified": 0, "archived": 1, "unprocessed": 0, "status": "all_archived", "blockers": ["Unknown: FD-046 structural artifact"] }
+      },
+      "blocker_defects": ["DL-008: 10 Certified items + Section F items", "DL-026: 50 Section C In Audit items with empty non-CC EW slots", "DL-013: ~256 template fields"],
+      "remaining_to_100pct": 150,
+      "largest_unprocessed_block": "Section F: 74 items"
+    }
+  },
+  "portfolio_summary": {
+    "total_certified": 2181,
+    "total_items": 2500,
+    "certified_pct": 87.2,
+    "total_remaining_to_certify": 319,
+    "total_archived": 132,
+    "total_unprocessed": 187,
+    "fully_certified_packs": ["B", "E"],
+    "partially_certified_packs": ["A", "C", "D"],
+    "fully_certified_sections": ["A-B", "A-C", "A-D", "A-F", "B-all", "C-A", "C-B", "C-C", "C-D", "D-A", "D-B", "D-C", "D-D", "E-all"],
+    "partially_certified_sections": ["A-A", "A-E", "C-E", "D-E"],
+    "unprocessed_sections": ["C-F", "D-F"],
+    "key_blockers": {
+      "DL-016": "Pack A Sections A+E: content-metadata offset in paired-object format",
+      "DL-008": "Packs C+D: 67 Certified items blocked + CC-rotation artifacts",
+      "DL-012": "Packs C+D Section E: 112 clone-archived items",
+      "DL-013": "Packs C+D Sections E/F: ~613 template boilerplate fields",
+      "DL-026": "Pack D Section C: 50 items with empty non-CC EW slots"
+    }
+  }
+}

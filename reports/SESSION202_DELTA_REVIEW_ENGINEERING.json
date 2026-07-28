@@ -1,0 +1,896 @@
+{
+  "document": "SESSION202_DELTA_REVIEW_ENGINEERING",
+  "title": "Delta Review Engineering Specification — Review Only What Changed, Inherit the Rest",
+  "session": "S202",
+  "type": "Read-Only Architecture Design",
+  "date": "2026-07-27",
+  "version": "1.0",
+  "authority": "Derived from S200 Delta Review Feasibility Study and S201 Delta Review Architecture. Implements Framework v2 §DELTA_REVIEW and §AUTOMATED_INHERITANCE.",
+  "parent_findings": [
+    "S200: 80% of items unchanged between certification waves, yet every wave re-audits all items",
+    "S200: 77% time savings potential via delta review — typical 150-item wave drops from 7.5 hours to 1.7 hours",
+    "S201: S809→S810.1 chain — 4 sessions, 60 agent-spawns, 0 pack-file writes, 1 genuinely new finding",
+    "S200: 6.2:1 peak duplication ratio — same 38 items examined 56 times across 4 sessions",
+    "S200: 75% of audits per item were redundant after initial certification (S318 evidence)",
+    "DL-019: Concurrent-write overwrites silently undid 432 items of DL-008 remediation",
+    "PHASE0B: 81% of Certified items (707/873) lack primary ledger verification evidence"
+  ],
+
+  "hash_computation_specification": {
+    "description": "Each item's certification-relevant fields are hashed using SHA-256 to produce a content-addressable fingerprint. The hash serves as the delta comparison baseline — any field change produces a different hash.",
+    "hash_algorithm": "SHA-256",
+    "hash_collision_probability": "<< 10^-70 (SHA-256 has 2^256 output space; content strings are <5KB per item)",
+
+    "content_hash_input_fields": {
+      "description": "All learner-facing fields that, if changed, invalidate the prior certification. These fields define the item's content identity for delta-review purposes.",
+      "fields": [
+        {
+          "field": "Stem",
+          "normalization": "Trim leading/trailing whitespace. Collapse multiple consecutive spaces to single space. Preserve internal newlines converted to spaces.",
+          "rationale": "The stem defines the question being asked. Any change to the question text invalidates prior audit."
+        },
+        {
+          "field": "Choices.A",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Learner-facing answer choice text. Changes invalidate distractor analysis."
+        },
+        {
+          "field": "Choices.B",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Same as Choices.A."
+        },
+        {
+          "field": "Choices.C",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Same as Choices.A."
+        },
+        {
+          "field": "Choices.D",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Same as Choices.A."
+        },
+        {
+          "field": "CorrectChoice",
+          "normalization": "Trim whitespace. Uppercase. Must be single letter A-D.",
+          "rationale": "Answer-key change is the highest-risk modification. DL-030: 5 Certified items had wrong CC."
+        },
+        {
+          "field": "ExplanationCorrect",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space. Collapse multiple newlines to single newline.",
+          "rationale": "Correct-answer explanation. Changes may reflect editorial improvement or correctness fix."
+        },
+        {
+          "field": "ExplanationWrongA",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Distractor explanation. Changes may reflect DL-008/DL-013/DL-026 remediation."
+        },
+        {
+          "field": "ExplanationWrongB",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Same as ExplanationWrongA."
+        },
+        {
+          "field": "ExplanationWrongC",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Same as ExplanationWrongA."
+        },
+        {
+          "field": "ExplanationWrongD",
+          "normalization": "Trim whitespace. Collapse multiple spaces to single space.",
+          "rationale": "Same as ExplanationWrongA."
+        }
+      ],
+      "excluded_fields": [
+        "QuestionID — identity field, must not change",
+        "question_state — governance state transitions do not affect content",
+        "pack_state — pack-level governance field",
+        "pedagogical_cluster — metadata grouping field",
+        "Difficulty / DifficultyScore — hashed separately in metadata_hash",
+        "CognitiveLevel — hashed separately in metadata_hash",
+        "LOSTag / Topic / MicroTopic / UniqueConceptKey — metadata fields",
+        "certification_date / certification_batch / certification_session — history fields",
+        "VerifiedChecks / ReviewNote / StudyLinks — authoring artifacts",
+        "Part / Section / SectionName — structural fields",
+        "ItemType / ItemStyle / SourceDescription — display metadata"
+      ],
+      "canonical_serialization_format": {
+        "description": "To ensure deterministic hash output, fields are serialized into a canonical JSON format before hashing.",
+        "rules": [
+          "Object keys are sorted alphabetically (A, B, C-Z)",
+          "String values are whitespace-normalized per field rules above",
+          "Empty strings represented as '\"\"' (not omitted)",
+          "No trailing commas",
+          "Consistent 2-space indentation",
+          "No BOM (byte-order mark)",
+          "UTF-8 encoding"
+        ],
+        "example_canonical_form": "{\n  \"Choices\": {\n    \"A\": \"increase by $540,000\",\n    \"B\": \"decrease by $540,000\",\n    \"C\": \"remain unchanged\",\n    \"D\": \"increase by $600,000\"\n  },\n  \"CorrectChoice\": \"A\",\n  \"ExplanationCorrect\": \"The total cash collections equal cash sales plus credit sales collected in the period. Cash sales: $600,000 × 20% = $120,000. January credit sales collected in January: ($600,000 × 80%) × 50% = $240,000. December credit sales collected in January: ($500,000 × 80%) × 45% = $180,000. Total = $120,000 + $240,000 + $180,000 = $540,000.\",\n  \"ExplanationWrongA\": \"\",\n  \"ExplanationWrongB\": \"Option B incorrectly assumes cash decreases. The cash collections calculations show a net increase of $540,000 for January, not a decrease. This misconception may arise from focusing on the credit sales figure without accounting for the collection timing pattern.\",\n  \"ExplanationWrongC\": \"Option C incorrectly assumes cash remains unchanged. The January cash collections of $540,000 represent a significant change from December's cash position, driven by the collection of prior-period credit sales.\",\n  \"ExplanationWrongD\": \"Option D incorrectly uses total sales instead of applying the collection percentages. The $600,000 figure is total January sales (cash + credit), not total cash collections. Only 20% of sales are cash; the remaining 80% are collected over two months.\",\n  \"Stem\": \"Harbor Medical Supplies estimates that 20% of monthly sales are cash transactions and the remaining 80% are credit sales. Credit sales are collected 50% in the month of sale and 45% in the following month. January budgeted sales are $600,000 and December actual sales were $500,000. Assuming no other cash inflows, what is the effect of cash collections on Harbor's cash balance for January?\"\n}",
+        "hash_computation": "SHA-256(canonical_json_string)"
+      }
+    },
+
+    "metadata_hash_input_fields": {
+      "description": "Separate SHA-256 hash for metadata fields that affect psychometric quality, blueprint alignment, and governance state but do not affect answer-key correctness.",
+      "fields": [
+        { "field": "Difficulty", "normalization": "Trim whitespace." },
+        { "field": "DifficultyScore", "normalization": "Convert to integer string." },
+        { "field": "CognitiveLevel", "normalization": "Trim whitespace." },
+        { "field": "LOSTag", "normalization": "Trim whitespace." },
+        { "field": "Topic", "normalization": "Trim whitespace." },
+        { "field": "AccountingPrinciple", "normalization": "Trim whitespace." },
+        { "field": "PrimaryCompetency", "normalization": "Trim whitespace." }
+      ],
+      "rationale": "Metadata changes (difficulty recalibration, cognitive level reassignment, blueprint remapping) do not affect learner-facing content correctness. They affect psychometric quality and governance reporting. Separate hash allows delta review to route metadata-only changes to a reduced board scope (Psychometric + Certification only, not full Technical + Explanation)."
+    },
+
+    "field_hash_manifest": {
+      "description": "Per-field SHA-256 hashes stored alongside the aggregate content_hash. Enables field-level diffing: on content_hash mismatch, compare field_hashes to identify exactly which field(s) changed.",
+      "field_manifest": [
+        "stem_hash: SHA-256(normalized Stem)",
+        "choices_a_hash: SHA-256(normalized Choices.A)",
+        "choices_b_hash: SHA-256(normalized Choices.B)",
+        "choices_c_hash: SHA-256(normalized Choices.C)",
+        "choices_d_hash: SHA-256(normalized Choices.D)",
+        "correct_choice_hash: SHA-256(CorrectChoice)",
+        "explanation_correct_hash: SHA-256(normalized ExplanationCorrect)",
+        "explanation_wrong_a_hash: SHA-256(normalized ExplanationWrongA)",
+        "explanation_wrong_b_hash: SHA-256(normalized ExplanationWrongB)",
+        "explanation_wrong_c_hash: SHA-256(normalized ExplanationWrongC)",
+        "explanation_wrong_d_hash: SHA-256(normalized ExplanationWrongD)"
+      ],
+      "field_diff_resolution": "On content_hash mismatch: (1) Compare each field_hash against the stored field_hash from CERTIFICATION_LEDGER.json. (2) Identify which specific field(s) changed. (3) Apply change_propagation_rules based on changed field type. (4) If content_hash differs but ALL field_hashes match → hash computation error — escalate to methodology audit."
+    }
+  },
+
+  "change_classification": [
+    {
+      "classification": "CONTENT_CHANGED",
+      "label": "Content Change — Full Review Required",
+      "trigger": "Content hash differs from ledger hash.",
+      "sub_classification": {
+        "full_content_change": {
+          "trigger": "Stem changed OR any Choice text changed OR CorrectChoice changed.",
+          "action": "Full PreFlight + BoardReview pipeline. All 6 CAQS dimensions + all G-NEW conditions re-verified. Prior certification decision retired.",
+          "rationale": "A changed stem means the question being asked is different. A changed choice means prior distractor analysis is invalidated. CorrectChoice change is the highest-risk modification — independent re-derivation required."
+        },
+        "explanation_only_change": {
+          "trigger": "Only ExplanationCorrect changed; Stem, Choices, CC unchanged.",
+          "action": "Targeted re-audit on CAQS Dimensions 1 (correctness prong), 3 (technical accuracy), 6 (numerical integrity), 7 (explanation quality). Skip distractor analysis (Dimension 4). Skip blueprint alignment (Dimension 1 blueprint prong).",
+          "rationale": "EC rewrites are common during editorial passes. Answer key unchanged — only explanation text."
+        },
+        "ew_only_change": {
+          "trigger": "Only ExplanationWrong fields changed; Stem, Choices, CC, EC unchanged.",
+          "action": "Targeted re-audit on CAQS Dimensions 4 (distractor quality), 7 (explanation quality). Skip full re-derivation. Goal: verify new EW text is choice-specific, non-boilerplate, educationally valuable.",
+          "rationale": "EW field rewrites are the most common remediation (DL-008 clears, DL-013 boilerplate replacement, DL-026 empty-slot fills). Forcing full re-audit for EW-only changes caused the bulk of redundant audit cycles in S318."
+        },
+        "ec_plus_ew_change": {
+          "trigger": "Only ExplanationCorrect AND ExplanationWrong fields changed; Stem, Choices, CC unchanged.",
+          "action": "Combined targeted re-audit on CAQS Dimensions 3, 4, 6, 7. Verify accounting accuracy, numerical integrity, distractor quality, explanation quality.",
+          "rationale": "Combined explanation rewrite — likely comprehensive editorial pass or DL-013 remediation. The question itself hasn't changed."
+        }
+      },
+      "board_mapping": {
+        "full_content_change": ["Quality Board A — Technical & Explanation (full)", "Quality Board B — Psychometric & Safety (full)"],
+        "explanation_only_change": ["Quality Board A — Dimensions 1/3/6/7 only", "Quality Board B — Dimensions 4 only (if EC change affects distractor reasoning)"],
+        "ew_only_change": ["Quality Board A — Dimensions 3/7 only", "Quality Board B — Dimension 4 only"],
+        "ec_plus_ew_change": ["Quality Board A — Dimensions 3/6/7", "Quality Board B — Dimension 4"]
+      },
+      "frequency_estimate": "~15% of all write sessions. ~50-150 items per wave.",
+      "examples_from_history": [
+        "DL-030 answer-key fixes (5 items: P1B-B-119, P1B-F-084/116/121, P1E-E-037)",
+        "DL-025 EW distractor authoring (51 Pack A Section D items)",
+        "DL-013 boilerplate replacement (882 QIDs, 2,587 fields)",
+        "New item insertion (S808: +10, S317: +10)"
+      ]
+    },
+    {
+      "classification": "METADATA_CHANGED",
+      "label": "Metadata Change — Partial Review Required",
+      "trigger": "Content hash matches ledger hash BUT metadata hash differs.",
+      "action": "Partial review on affected dimensions only. Route to Psychometric/Difficulty Calibration board + Certification Board (metadata adjudication). Technical content is unchanged — skip Technical and Explanation quality boards.",
+      "affected_fields": [
+        "Difficulty", "DifficultyScore", "CognitiveLevel",
+        "LOSTag", "Topic", "AccountingPrinciple", "PrimaryCompetency"
+      ],
+      "board_mapping": {
+        "psychometric_review": true,
+        "blueprint_review": true,
+        "difficulty_calibration": true,
+        "certification_adjudication": true,
+        "technical_review": false,
+        "ew_integrity_review": false,
+        "learner_safety_review": false
+      },
+      "minimum_boards": ["Psychometric/Difficulty Calibration (1 agent)", "Certification Board (metadata adjudication)"],
+      "estimated_effort_per_batch_28": "15 minutes (2 agents)",
+      "frequency_estimate": "~10% of all write sessions. ~50-500 items per wave (batch state transitions are most common write operation).",
+      "examples_from_history": [
+        "question_state transitions: Unprocessed → Certified (thousands of items across S13-S18 batch waves)",
+        "Difficulty recalibration: DL-031 ~500 items from Moderate→Easy",
+        "CognitiveLevel reassignment: 19/38 seeds overstated (rotation template pattern)",
+        "AccountingPrinciple field addition (absent from all 38 Domain E seeds)"
+      ]
+    },
+    {
+      "classification": "STRUCTURE_ONLY",
+      "label": "Structural Fix — Verification Only, Skip Full Review",
+      "trigger": "Content hash unchanged. Structural field change detected (field presence/absence, empty→filled, corruption repair). No content semantics changed.",
+      "action": "Automated verification only. Re-run the specific defect scan that the fix targeted. Spot-check 10% of fixed items via raw-file line-level inspection. Verify QuestionID count unchanged. If all checks pass, no board review needed.",
+      "affected_fields": [
+        "ExplanationWrong fields (clearing to '' for DL-008, filling empty for DL-026)",
+        "ExplanationWrong fields (field presence — DL-018, DL-021)",
+        "ExplanationCorrect (cosmetic: closing-tag removal DL-027)",
+        "question_state field presence (DL-024: adding missing field)",
+        "JSON structure (DL-017: backtick-newline artifact; DL-020: brace-matcher fix)"
+      ],
+      "board_mapping": {
+        "all_boards": false
+      },
+      "minimum_boards": ["Automated pre-flight scanner only"],
+      "verification_steps": [
+        "1. Re-run the specific defect scan that the fix targeted",
+        "2. Spot-check 10% of fixed items via direct raw-file line-level inspection",
+        "3. Verify QuestionID count unchanged (grep -c '\"QuestionID\"' before and after)",
+        "4. Verify governance guard 27/27 PASS",
+        "5. Log fix in REVISION_HISTORY.md. No board review needed."
+      ],
+      "escalation_rule": "If automated scan finds ANY residual structural defect or new defect introduced → escalate to CONTENT_CHANGED classification (full review required on affected items).",
+      "estimated_effort_per_batch_28": "5 minutes (automated scan + spot-check verification)",
+      "frequency_estimate": "~15% of write sessions (but decreasing — most structural defects are now resolved). 0-50 items per wave.",
+      "examples_from_history": [
+        "DL-008 EW[CC] clearing: 539 occurrences, 22 scan events",
+        "DL-018 missing EW[CC] field: 351 items, Pack E + Pack A Section E",
+        "DL-017 backtick-newline fix: 275 sites, Pack B",
+        "DL-024 missing question_state: 150 items, Pack B Sections A/D",
+        "DL-027 closing-tag removal: 15 items (replaceAll, no content loss)"
+      ]
+    },
+    {
+      "classification": "UNCHANGED",
+      "label": "No Change — Auto-Inherit Prior Certification",
+      "trigger": "Content hash matches ledger hash AND metadata hash matches ledger metadata hash AND all pre-flight scans re-verify PASS AND no governance standard version bump affecting this item AND item's primary_ledger_complete === true (item has been independently verified at least once).",
+      "action": "Item transitions ReadyForBoard → CertifiedDelta. question_state set to 'Certified'. No board review required. Session Pre-Flight Report logs: 'INHERITED — no changes detected.'",
+      "board_mapping": {
+        "all_boards": false
+      },
+      "verification_only": "Pre-flight hash match confirmation logged in session governance attestation.",
+      "estimated_effort": "0 minutes — skip entirely (hash comparison is ~1ms per item, fully automated).",
+      "frequency_estimate": "~80% of items in scope per certification wave. ~400 out of 500 in-scope items.",
+      "examples_from_history": [
+        "80% of items in every certification wave (S200 Agent I finding)",
+        "S809→S810.1: 38 Domain E seeds, 0 pack-file writes across 4 sessions (100% unchanged)",
+        "Pack B Sections B/C/E/F: untouched since original certification"
+      ]
+    },
+    {
+      "classification": "NEW_ITEM",
+      "label": "New Item — No Ledger Entry, Full Review Required",
+      "trigger": "No entry in CERTIFICATION_LEDGER.json for this QuestionID.",
+      "action": "Full PreFlight + BoardReview pipeline. All 6 CAQS dimensions + all G-NEW conditions must be verified. New ledger entry created on certification.",
+      "board_mapping": {
+        "technical_review": true,
+        "ew_integrity_review": true,
+        "psychometric_review": true,
+        "blueprint_review": true,
+        "learner_safety_review": true,
+        "certification_adjudication": true
+      },
+      "minimum_boards": ["Quality Board (full — all 3 sub-agents)", "Certification Board"],
+      "frequency_estimate": "~2% of items per wave (new item insertion batches of 10 items each).",
+      "examples_from_history": [
+        "S808: +10 new items inserted",
+        "S317: +10 items, S316: +10, S314: +10, S312: +10",
+        "First-time certification of Domain E/F items"
+      ]
+    }
+  ],
+
+  "inheritance_rules": [
+    {
+      "rule_id": "IR-001",
+      "name": "Hash-Match Auto-Inheritance",
+      "condition": {
+        "all_of": [
+          "Item content hash matches last-certified hash in CERTIFICATION_LEDGER.json",
+          "Item metadata hash matches last-certified metadata hash in CERTIFICATION_LEDGER.json",
+          "Item's ledger state is 'Certified'",
+          "Item's primary_ledger_complete === true (item has been independently verified at least once)",
+          "All 11 pre-flight scans re-verify PASS on current file state (Gates -1 through 4)",
+          "No governance standard version bump affecting this item's dimensions",
+          "No dependency change (exhibit modified, formula reference updated)"
+        ]
+      },
+      "action": "Item transitions ReadyForBoard → CertifiedDelta. question_state set to 'Certified'. Delta status logged as UNCHANGED. No board review required. No agent involvement.",
+      "governance": "Governance Agent verifies CertifiedDelta count. Release Agent updates CURRENT_BASELINES.md per-item hash entry. REVISION_HISTORY.md entry: 'Delta inheritance — N items re-certified without board review (content hash matches Sxxx baseline).'",
+      "frequency": "~80% of items in a typical wave."
+    },
+    {
+      "rule_id": "IR-002",
+      "name": "Dependency-Change Partial Re-Review",
+      "condition": {
+        "all_of": [
+          "Item content hash matches ledger hash (content unchanged)",
+          "Item's dependencies have changed: exhibit modified, formula reference updated, standard citation updated",
+          "OR governance standard version bump affects a subset of item dimensions",
+          "All pre-flight scans re-verify PASS"
+        ]
+      },
+      "action": "Item transitions ReadyForBoard → BoardReview on AFFECTED DIMENSIONS ONLY. If dependency is an exhibit containing calculation data: Board reviews Technical (Dim 3) + Numerical (Dim 6) dimensions. If dependency is a standard reference update: Board reviews Technical (Dim 3) only. Unaffected dimensions inherit prior PASS scores from CERTIFICATION_LEDGER.json.",
+      "governance": "Board Decision Record documents which dimensions were re-reviewed and which were inherited. Prior dimension scores preserved for inherited dimensions.",
+      "frequency": "~5% of items in a typical wave."
+    },
+    {
+      "rule_id": "IR-003",
+      "name": "Hash-Mismatch Full Review",
+      "condition": {
+        "any_of": [
+          "Item content hash does NOT match ledger hash",
+          "No ledger entry exists (NEW_ITEM)",
+          "Item's primary_ledger_complete === false (never independently verified)"
+        ]
+      },
+      "action": "Full PreFlight + BoardReview pipeline. All 6 CAQS dimensions + all G-NEW conditions re-verified. Prior certification decision retired. New certification decision replaces it in CERTIFICATION_LEDGER.json.",
+      "governance": "Item transitions recorded in REVISION_HISTORY.md. Prior ledger entry preserved with superseded annotation (date + session of supersession). New ledger entry created with updated hash and board scores.",
+      "frequency": "~15-20% of items in a typical wave."
+    },
+    {
+      "rule_id": "IR-004",
+      "name": "Governance-Update Bulk Re-Scan",
+      "condition": {
+        "any_of": [
+          "Governance guard rules changed (new rule added, existing rule criteria modified)",
+          "CAQS standard version bumped",
+          "DCS (Difficulty Calibration Standard) version bumped"
+        ],
+        "additional": "Item is currently Certified."
+      },
+      "action": "Item transitions Certified → PreFlight. All affected dimensions re-scanned. If pre-flight PASS + hash match → CertifiedDelta (auto-inherit). If pre-flight FAIL on new rule checks → BoardReview on affected dimensions. If pre-flight PASS + metadata hash mismatch (DCS bump) → metadata-only BoardReview.",
+      "governance": "Session Arbiter triggers bulk re-scan of ALL affected Certified items. CERTIFICATION_LEDGER.json records governance_version at certification time. Version mismatch triggers this rule. Bulk scan results logged to REVISION_HISTORY.md with affected item count.",
+      "frequency": "~1-2 times per governance version lifecycle."
+    },
+    {
+      "rule_id": "IR-005",
+      "name": "Cross-Pack Rotation Hold",
+      "condition": {
+        "all_of": [
+          "DL-016 pattern detected: metadata-block ChoiceA-D differs from content-block Choices.A-D",
+          "Item is in Certified state",
+          "Difference is beyond trivial whitespace/case normalization"
+        ]
+      },
+      "action": "Item transitions Certified → Hold. Quarantined from learner pool (GOV-001 fix: Hold items hard-excluded from delivery). Board review required to classify: (a) metadata-only shift — ExplanationWrong fields are static but metadata choices are stale (cosmetic, EW text may still be correct for content-block choices), or (b) true answer-key rotation — CorrectChoice itself is wrong and EW text describes neighbor item's distractors. Classification determines BoardReview scope.",
+      "governance": "Governance Agent manages Hold queue. Hold must be time-bounded (resolution target: 2 sessions). DEFECT_LIBRARY.md entry for new DL-016 instances. Hold items excluded from CertifiedDelta auto-inheritance until resolved.",
+      "frequency": "~5-10 items per DL-016 discovery wave. Section-wide when new DL-016 surface area discovered."
+    }
+  ],
+
+  "certification_ledger_schema": {
+    "description": "CERTIFICATION_LEDGER.json is the authoritative record of every item's certification history. Stored in knowledge/ directory. One entry per item per certification event (superseded entries preserved with superseded annotation).",
+    "file_location": "knowledge/CERTIFICATION_LEDGER.json",
+    "entry_fields": [
+      {
+        "field": "QuestionID",
+        "type": "String",
+        "description": "Unique question identifier. Matches item's QuestionID field in pack file."
+      },
+      {
+        "field": "compound_key",
+        "type": "Object",
+        "description": "Compound key per SESSION201_IDENTITY_ARCHITECTURE.json: { QID, CorrectChoice, EW_Pattern, Template_Family, File_Path }. Ensures ledger entry refers to the correct item variant.",
+        "sub_fields": ["QID", "CorrectChoice", "EW_Pattern", "Template_Family", "File_Path"]
+      },
+      {
+        "field": "content_hash",
+        "type": "String (64 hex chars)",
+        "description": "SHA-256 hash of canonical JSON serialization of content fields (Stem, Choices.A-D, CorrectChoice, ExplanationCorrect, ExplanationWrongA-D)."
+      },
+      {
+        "field": "metadata_hash",
+        "type": "String (64 hex chars)",
+        "description": "SHA-256 hash of canonical JSON serialization of metadata fields (Difficulty, DifficultyScore, CognitiveLevel, LOSTag, Topic, AccountingPrinciple, PrimaryCompetency)."
+      },
+      {
+        "field": "field_hashes",
+        "type": "Object",
+        "description": "Per-field SHA-256 hashes for field-level diffing: { stem_hash, choices_A_hash, choices_B_hash, choices_C_hash, choices_D_hash, correct_choice_hash, explanation_correct_hash, explanation_wrong_A_hash, explanation_wrong_B_hash, explanation_wrong_C_hash, explanation_wrong_D_hash }."
+      },
+      {
+        "field": "certified_date",
+        "type": "String (ISO 8601)",
+        "description": "Date of certification. Set on transition to Certified state. Cleared on transition out of Certified."
+      },
+      {
+        "field": "certification_version",
+        "type": "Integer",
+        "description": "Monotonically incrementing certification version number. Starts at 1 on initial certification. Increments on each re-certification (IR-003). Does NOT increment on CertifiedDelta auto-inheritance (IR-001)."
+      },
+      {
+        "field": "board_session",
+        "type": "String",
+        "description": "Session identifier of the board that certified this item. e.g., 'S808', 'S815'."
+      },
+      {
+        "field": "board_dimension_scores",
+        "type": "Object",
+        "description": "CAQS §1.6 six-dimension scores at time of certification: { dimension_1_correctness: score, dimension_2_precision: score, dimension_3_difficulty: score, dimension_4_distractor: score, dimension_5_blueprint: score, dimension_6_cma_relevance: score }. Plus G-NEW certification-blocking condition statuses.",
+        "sub_fields": {
+          "dimension_1_correctness": "0-10 (weight 20%)",
+          "dimension_2_precision": "0-10 (weight 15%)",
+          "dimension_3_difficulty": "0-10 (weight 15%)",
+          "dimension_4_distractor": "0-10 (weight 15%)",
+          "dimension_5_blueprint": "0-10 (weight 10%)",
+          "dimension_6_cma_relevance": "0-10 (weight 10%)",
+          "g_new_1_dual_block_full": "PASS/FAIL",
+          "g_new_2_explanation_relevance": "PASS/FAIL",
+          "g_new_3_within_object_scan": "PASS/FAIL",
+          "g_new_4_case_explanation_sufficiency": "PASS/FAIL",
+          "overall_quality_score": "0-100 (CAQS rubric weighted total)"
+        }
+      },
+      {
+        "field": "prior_version_hash",
+        "type": "String (64 hex chars) | null",
+        "description": "Content hash of the immediately prior certification version. Null if this is the first certification. Enables hash-chain verification for audit trail integrity."
+      },
+      {
+        "field": "certification_version_chain",
+        "type": "Array[Object]",
+        "description": "Chain of all prior certification versions: [{ version: 1, content_hash: '...', certified_date: '...', board_session: '...' }, ...]. Superseded entries preserved for full audit trail.",
+        "sub_fields": ["version", "content_hash", "certified_date", "board_session"]
+      },
+      {
+        "field": "governance_version",
+        "type": "String",
+        "description": "Governance standard version at time of certification (e.g., 'CAQS_v1.0', 'QMDS_v1.1'). Used by IR-004 to detect version bumps requiring re-scan."
+      },
+      {
+        "field": "primary_ledger_complete",
+        "type": "Boolean",
+        "description": "Whether this item has been independently verified at least once (full CAQS §1.6 six-dimension verification completed). Set to false initially. Set to true after first full verification pass. Delta-review skips unchanged items ONLY IF this is true (IR-001 precondition). Prevents permanent skip of never-verified items."
+      },
+      {
+        "field": "reaudit_triggers_applied",
+        "type": "Array[String]",
+        "description": "List of re-audit triggers that have been applied to this item since last certification: e.g., ['content_hash_change', 'governance_bump_v1.1', 'dependency_exhibit_modified']. Used for audit trail and re-audit frequency analysis."
+      },
+      {
+        "field": "superseded",
+        "type": "Boolean",
+        "description": "Whether this ledger entry has been superseded by a newer certification event. Default: false. Set to true when a new entry is created with a higher certification_version. Superseded entries preserved for audit trail."
+      },
+      {
+        "field": "superseded_date",
+        "type": "String (ISO 8601) | null",
+        "description": "Date this entry was superseded. Null if entry is current."
+      },
+      {
+        "field": "superseded_by_session",
+        "type": "String | null",
+        "description": "Session that superseded this entry. Null if entry is current."
+      }
+    ],
+    "example_entry": {
+      "QuestionID": "P1-AD-002",
+      "compound_key": {
+        "QID": "P1-AD-002",
+        "CorrectChoice": "B",
+        "EW_Pattern": "0100",
+        "Template_Family": "AD_factoring_001",
+        "File_Path": "pack_d_corrected.js"
+      },
+      "content_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "metadata_hash": "a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a",
+      "field_hashes": {
+        "stem_hash": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824",
+        "choices_A_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+        "choices_B_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+        "choices_C_hash": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+        "choices_D_hash": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "correct_choice_hash": "b90d3111e9b4f39ff7b60f90e6f9d81eb9f407fbd1a77b1f9c5f45d6b7e46e1a",
+        "explanation_correct_hash": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d",
+        "explanation_wrong_A_hash": "d2d2d665a3f2e6c85c8c5a6a0f6e5c4d3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8",
+        "explanation_wrong_B_hash": "e7f6c011776e8db7fc7f87e8cc6c9e8d7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2",
+        "explanation_wrong_C_hash": "c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1",
+        "explanation_wrong_D_hash": "b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0"
+      },
+      "certified_date": "2026-07-26",
+      "certification_version": 1,
+      "board_session": "S808",
+      "board_dimension_scores": {
+        "dimension_1_correctness": 9,
+        "dimension_2_precision": 8,
+        "dimension_3_difficulty": 7,
+        "dimension_4_distractor": 8,
+        "dimension_5_blueprint": 9,
+        "dimension_6_cma_relevance": 10,
+        "g_new_1_dual_block_full": "PASS",
+        "g_new_2_explanation_relevance": "PASS",
+        "g_new_3_within_object_scan": "PASS",
+        "g_new_4_case_explanation_sufficiency": "N/A",
+        "overall_quality_score": 85
+      },
+      "prior_version_hash": null,
+      "certification_version_chain": [],
+      "governance_version": "CAQS_v1.0/QMDS_v1.1",
+      "primary_ledger_complete": true,
+      "reaudit_triggers_applied": [],
+      "superseded": false,
+      "superseded_date": null,
+      "superseded_by_session": null
+    }
+  },
+
+  "reaudit_triggers": [
+    {
+      "trigger_id": "RT-001",
+      "trigger": "Item content hash change",
+      "dimensions_affected": "ALL (depends on sub-classification — see change_classification.CONTENT_CHANGED.sub_classification)",
+      "priority": "IMMEDIATE — item cannot remain Certified with changed content",
+      "delta_classification": "CONTENT_CHANGED"
+    },
+    {
+      "trigger_id": "RT-002",
+      "trigger": "CorrectChoice re-derived (DL-030 finding)",
+      "dimensions_affected": "Technical (Dim 3), Numerical (Dim 6), Explanation (Dim 7)",
+      "priority": "CRITICAL — learner-safety defect",
+      "delta_classification": "CONTENT_CHANGED (full_content_change)"
+    },
+    {
+      "trigger_id": "RT-003",
+      "trigger": "Dependency exhibit modified",
+      "dimensions_affected": "Technical (Dim 3), Numerical (Dim 6) — if exhibit contains calculation data",
+      "priority": "HIGH — may invalidate item calculations",
+      "delta_classification": "STRUCTURE_ONLY → escalated to partial BoardReview per IR-002"
+    },
+    {
+      "trigger_id": "RT-004",
+      "trigger": "Dependency formula reference updated",
+      "dimensions_affected": "Technical (Dim 3), Numerical (Dim 6)",
+      "priority": "HIGH — may invalidate item calculations",
+      "delta_classification": "STRUCTURE_ONLY → escalated to partial BoardReview per IR-002"
+    },
+    {
+      "trigger_id": "RT-005",
+      "trigger": "Dependency standard reference updated (ASC/COSO/IFRS citation)",
+      "dimensions_affected": "Technical (Dim 3) — verify explanation still cites correct standard",
+      "priority": "MEDIUM — editorial, not correctness",
+      "delta_classification": "STRUCTURE_ONLY → escalated to partial BoardReview per IR-002"
+    },
+    {
+      "trigger_id": "RT-006",
+      "trigger": "CAQS version bump",
+      "dimensions_affected": "ALL — per CAQS §15.2 impact analysis",
+      "priority": "MEDIUM — process-driven, not defect-driven",
+      "delta_classification": "METADATA_CHANGED → bulk re-scan per IR-004"
+    },
+    {
+      "trigger_id": "RT-007",
+      "trigger": "Governance guard new rule or rule change",
+      "dimensions_affected": "Depends on rule: Rule 2 change → Explanation (Dim 7), Rule 4 change → Technical (Dim 3)",
+      "priority": "MEDIUM — compliance-driven",
+      "delta_classification": "METADATA_CHANGED → bulk re-scan per IR-004"
+    },
+    {
+      "trigger_id": "RT-008",
+      "trigger": "DCS version bump",
+      "dimensions_affected": "Difficulty (Dim 3 prong), Cognitive Level (Dim 2 prong)",
+      "priority": "LOW — recalibration, not correctness",
+      "delta_classification": "METADATA_CHANGED → partial BoardReview on psychometric dimensions"
+    },
+    {
+      "trigger_id": "RT-009",
+      "trigger": "Cross-pack rotation detected (DL-016 expansion)",
+      "dimensions_affected": "Explanation (Dim 7), Distractor (Dim 4) — metadata-content mismatch affects learner feedback",
+      "priority": "HIGH — learner-safety risk (learners see wrong-topic explanations)",
+      "delta_classification": "CONTENT_CHANGED → escalated to Hold per IR-005"
+    },
+    {
+      "trigger_id": "RT-010",
+      "trigger": "Content hash collision detected (two different items producing same hash)",
+      "dimensions_affected": "N/A — methodology defect",
+      "priority": "CRITICAL — hash algorithm must be verified. Switch to SHA-512 if collisions found.",
+      "delta_classification": "Methodology escalation — halt delta review, full pool re-audit"
+    },
+    {
+      "trigger_id": "RT-011",
+      "trigger": "Concurrent-write overwrite detected (pack file hash changed outside session scope)",
+      "dimensions_affected": "ALL items in affected pack(s)",
+      "priority": "CRITICAL — delta ledger may be stale for affected items",
+      "delta_classification": "Methodology escalation — re-hash entire affected pack, compare to ledger, re-route changed items"
+    }
+  ],
+
+  "delta_comparison_protocol": {
+    "description": "Step-by-step procedure executed by the Session Arbiter at session startup (T0 checkpoint per AGENTS.md §13.1) to determine which items need which level of review.",
+    "steps": [
+      {
+        "step": 1,
+        "name": "File-Level Integrity Verification",
+        "action": "Compute SHA-256 hash of each target pack file (pack_a through pack_e_corrected.js). Compare to CURRENT_BASELINES.md pack-level hashes from prior session closeout. If pack hash matches → all 500 items in that pack are file-level unchanged. If pack hash differs → items in this pack MAY have changed (or may be victims of concurrent-write noise).",
+        "output": "Per-pack file_hash_status: MATCH | MISMATCH",
+        "runtime": "~1s per pack (SHA-256 of ~1.5MB file)"
+      },
+      {
+        "step": 2,
+        "name": "Extract All QuestionIDs from Target Packs",
+        "action": "For packs with file_hash MISMATCH, run boundary-aware Function constructor parse (AM-1) to extract all QuestionID-bounded objects. Count = expected count (500 per pack). Verify parse success (all objects extract cleanly).",
+        "output": "Per-item parsed object array + QuestionID list",
+        "runtime": "~3s per pack (Function constructor parse + object extraction)"
+      },
+      {
+        "step": 3,
+        "name": "Compute Current Content Hashes",
+        "action": "For each extracted item, compute SHA-256 content hash via canonical JSON serialization of content fields. Also compute metadata hash via canonical JSON serialization of metadata fields. Also compute field_hash manifest (per-field hashes).",
+        "output": "Per-item: { content_hash, metadata_hash, field_hashes }",
+        "runtime": "~1ms per item (SHA-256 of ~2KB canonical JSON) × 500 items = ~0.5s per pack"
+      },
+      {
+        "step": 4,
+        "name": "Look Up Ledger Entries",
+        "action": "For each QuestionID, query CERTIFICATION_LEDGER.json for the most recent non-superseded entry. If found: extract stored content_hash, metadata_hash, field_hashes, certified_date, board_session, primary_ledger_complete, governance_version. If not found: item is NEW_ITEM.",
+        "output": "Per-item ledger lookup result: FOUND (with entry data) | NOT_FOUND",
+        "runtime": "~0.1ms per item (key-value lookup in pre-loaded JSON) × 2,500 items = ~0.25s"
+      },
+      {
+        "step": 5,
+        "name": "Classify Each Item",
+        "action": "Apply change_classification rules to each item: (a) If no ledger entry → NEW_ITEM. (b) If content_hash matches ledger AND metadata_hash matches AND primary_ledger_complete === true AND no governance standard bump → UNCHANGED. (c) If content_hash matches but metadata_hash differs → METADATA_CHANGED. (d) If content_hash differs → CONTENT_CHANGED (and apply sub-classification via field_hash manifest comparison). (e) If content_hash matches but structural scan finds defect on re-verification → STRUCTURE_ONLY (conservative override).",
+        "output": "Per-item delta_classification with sub-classification detail (changed fields list for CONTENT_CHANGED).",
+        "runtime": "~0.1ms per item × 2,500 items = ~0.25s"
+      },
+      {
+        "step": 6,
+        "name": "Apply Inheritance Rules",
+        "action": "For each UNCHANGED item, verify IR-001 preconditions: (a) item's ledger state is 'Certified', (b) primary_ledger_complete === true, (c) no dependency change (cross-reference item's dependencies against change log since last certification), (d) no governance standard version bump affecting this item. If all conditions met → auto-inherit: set delta_status to CertifiedDelta. If any condition not met → re-classify to appropriate change class (STRUCTURE_ONLY or CONTENT_CHANGED per IR-002/IR-003/IR-004).",
+        "output": "Per-item inherited_status: INHERITED | REVIEW_REQUIRED. QID list of auto-inherited items.",
+        "runtime": "~0.5ms per item × check for dependency changes (requires dependency graph lookup) × 2,500 items = ~1.25s"
+      },
+      {
+        "step": 7,
+        "name": "Generate Delta Inventory",
+        "action": "Produce the delta inventory: list of items to review grouped by change classification. Compute: total items processed, items skipped (UNCHANGED/auto-inherited), items to review (CONTENT_CHANGED + METADATA_CHANGED + NEW_ITEM), items needing verification only (STRUCTURE_ONLY). Compile per-change-class QID lists for board allocation.",
+        "output": "Delta inventory: { UNCHANGED: [QIDs], CONTENT_CHANGED: [QIDs], METADATA_CHANGED: [QIDs], STRUCTURE_ONLY: [QIDs], NEW_ITEM: [QIDs], auto_inherited_count: N, review_required_count: N }",
+        "runtime": "~1s (aggregation of step 5 and step 6 results)"
+      },
+      {
+        "step": 8,
+        "name": "Integrate with Pre-Flight Pipeline",
+        "action": "Feed delta inventory into the readiness gate pipeline (SESSION202_READINESS_GATE_ENGINEERING.json). UNCHANGED items skip pre-flight except for hash verification (Gate 0 PF-008 hash stability check). All other items enter full pre-flight pipeline (Gates -1 through 4). Pre-flight results merged with delta classification to produce final readiness classification (READY, MINOR_FIX, REMEDIATE, BLOCKED).",
+        "output": "Final readiness classification per item + board-filtered inventory.",
+        "runtime": "See SESSION202_READINESS_GATE_ENGINEERING.json pipeline runtime (~104s/pack, optimized to ~60-90s with parallelism)"
+      },
+      {
+        "step": 9,
+        "name": "Tend Reconciliation",
+        "action": "At session close (Tend checkpoint per AGENTS.md §13.1), re-hash ALL items in packs that were written to during the session. Compare post-session hashes to pre-session delta inventory. Any item whose hash changed but was NOT in the 'review_required' delta inventory → flag as CONCURRENT_WRITE or METHODOLOGY_ERROR. Escalate per RT-011.",
+        "output": "Tend reconciliation report: items_missing_from_delta_inventory: [QIDs], methodology_errors: [descriptions].",
+        "runtime": "~3s per pack (re-hash + compare)"
+      }
+    ],
+    "total_protocol_runtime": "~10-15 seconds for delta detection on all 5 packs (steps 1-7). Plus ~90 seconds for full pre-flight pipeline on changed items (step 8). Plus ~15 seconds for Tend reconciliation (step 9). Total: ~2 minutes for a full 5-pack delta + pre-flight pipeline startup."
+  },
+
+  "delta_ledger_maintenance": {
+    "description": "CERTIFICATION_LEDGER.json is updated after every certification session. Only items that were reviewed and certified get their hashes updated. Unchanged items retain their prior hash.",
+    "update_rules": [
+      {
+        "event": "New certification (NEW_ITEM → Certified)",
+        "action": "Create new ledger entry with certification_version: 1, prior_version_hash: null, primary_ledger_complete: true, all board dimension scores recorded."
+      },
+      {
+        "event": "Re-certification (CONTENT_CHANGED → Certified)",
+        "action": "Supersede prior entry (set superseded: true, superseded_date, superseded_by_session). Create new entry with certification_version = prior_version + 1, prior_version_hash = prior content_hash, updated board dimension scores. Append prior version to certification_version_chain."
+      },
+      {
+        "event": "Metadata-only re-certification (METADATA_CHANGED → Certified)",
+        "action": "Update metadata_hash and metadata-related board dimension scores (Difficulty, Cognitive Level, Blueprint). Content hash, content-related board scores, and certification_version remain unchanged. Add 'metadata_change' to reaudit_triggers_applied."
+      },
+      {
+        "event": "Auto-inheritance (UNCHANGED → CertifiedDelta)",
+        "action": "No ledger change. Item's existing ledger entry remains current. Session Pre-Flight Report logs inheritance event."
+      },
+      {
+        "event": "Structural fix (STRUCTURE_ONLY → no state change, item was already Certified)",
+        "action": "No ledger change. Structural fix does not create a new certification event. REVISION_HISTORY.md logs the fix."
+      }
+    ],
+    "ledger_seeding": {
+      "description": "Initial population of CERTIFICATION_LEDGER.json for all 2,500 items using current pack file state as baseline (Phase 1 of Delta Review implementation).",
+      "procedure": [
+        "1. Run boundary-aware Function constructor parse on all 5 packs",
+        "2. For each item, compute content_hash + metadata_hash + field_hashes",
+        "3. For currently Certified items (question_state: 'Certified'): create ledger entry with certification_version: 1, primary_ledger_complete: false (unless independently verified via PHASE0B), board_dimension_scores: null (to be backfilled from board records)",
+        "4. For non-Certified items: create ledger placeholder with content_hash but certification_version: 0, certified_date: null, primary_ledger_complete: false",
+        "5. Independent verification: re-extract and re-hash all 2,500 items using a SECOND independent extraction pass. 0 mismatches required.",
+        "6. Cross-validate: for 5% random sample, manually extract fields from raw file and confirm hash matches computed hash",
+        "7. Store CERTIFICATION_LEDGER.json in knowledge/ directory. Record methodology version (AM-1) and date."
+      ],
+      "estimated_effort": "1 session (~2 hours, 2 agents: hasher builder + verifier)"
+    }
+  },
+
+  "risks_and_mitigations": {
+    "risks": [
+      {
+        "risk_id": "DR-001",
+        "title": "False Negative — Changed Item Not Detected",
+        "description": "Item content changes but hash does not change because the change was in a non-hashed field or the hash extraction methodology produced an identical hash for different content.",
+        "severity": "HIGH",
+        "likelihood": "LOW",
+        "mitigations": [
+          "Content hash covers ALL learner-facing fields (Stem, Choices, CC, EC, EW). Any meaningful content change detectable by a human reviewer is also detectable by hash comparison.",
+          "Structural defect detection is separate: automated pre-flight scanners catch DL-008/026/018 even on hash-matching items. Conservative override: if scanner finds defect, escalate.",
+          "Metadata hash (separate) catches Difficulty/CognitiveLevel/LOSTag changes independently.",
+          "SHA-256 collision for strings <5KB is effectively impossible (2^256 output space).",
+          "10% spot-check re-hash at session startup; 5% cross-wave re-hash at Tend."
+        ]
+      },
+      {
+        "risk_id": "DR-002",
+        "title": "Inherited Defect — Undetected Defect in Prior Certification",
+        "description": "An item was certified with a latent defect (e.g., DL-030 answer-key error) that was missed by the certifying board. Delta review skips this item because its hash hasn't changed, perpetuating the latent defect.",
+        "severity": "CRITICAL",
+        "likelihood": "MEDIUM",
+        "mitigations": [
+          "This risk already exists in the current system — it is not introduced by delta review. Same boards that missed the defect would miss it under either system.",
+          "Defect sweeps (DL-008, DL-030, DL-010) scan entire Certified pool regardless of when items were certified — independent of delta review.",
+          "Pre-delivery safety check filters learner pool against known-defective QID list.",
+          "Periodic deep-sampling: every 10th session, randomly select 5% of 'no_change' items for full 6-dimension CAQS verification.",
+          "primary_ledger_complete gate (IR-001 precondition) prevents inheritance on never-verified items (closes the PHASE0B 81% verification gap)."
+        ]
+      },
+      {
+        "risk_id": "DR-003",
+        "title": "Hash Methodology Drift — Different Tools Produce Different Hashes",
+        "description": "Hash extraction methodology differs between the tool that wrote the stored hash and the tool that re-computes it. Different whitespace handling, key ordering, or field extraction boundaries produce different hashes for unchanged items.",
+        "severity": "MEDIUM",
+        "likelihood": "MEDIUM",
+        "mitigations": [
+          "Canonical JSON serialization standard: sorted keys, no trailing commas, consistent whitespace normalization.",
+          "Use AM-1 boundary-aware Function constructor parser for all hash extraction — single methodology mandated.",
+          "Pre-write hash and post-read hash use identical extraction code (same Node.js script, same parameters).",
+          "Store the parser methodology version (AM-1) in CERTIFICATION_LEDGER.json alongside each hash.",
+          "If hash mismatch rate exceeds 5% of items claimed 'unchanged', trigger methodology audit."
+        ]
+      },
+      {
+        "risk_id": "DR-004",
+        "title": "Concurrent-Write Overwrite — Hash Becomes Stale",
+        "description": "Concurrent session modifies items while current session is computing pre-flight hashes. Items have changed but hashes reflect stale state.",
+        "severity": "HIGH",
+        "likelihood": "MEDIUM",
+        "mitigations": [
+          "Session-registry file: before computing pre-flight hashes, lock the pack files (write .lock file). Concurrent sessions detect lock and delay.",
+          "Post-remediation reconciliation (step 9 of delta comparison protocol): re-hash ALL items after writes, compare to pre-flight delta inventory.",
+          "Exclusive session model (recommended): only ONE session at a time operates on any given pack file.",
+          "If exclusive model is impractical: pre-write hash computed immediately before write, post-write hash computed immediately after write."
+        ]
+      },
+      {
+        "risk_id": "DR-005",
+        "title": "Re-review Scope Creep — Verification Requirements Erode Savings",
+        "description": "To mitigate DR-001 through DR-004, verification requirements grow until delta review provides negligible savings over full re-review.",
+        "severity": "LOW",
+        "likelihood": "MEDIUM",
+        "mitigations": [
+          "Verification proportionate to risk: 5-10% spot-check for 'no_change' items. 100% hash re-computation is automated and negligible (<1s per 500 items).",
+          "If false-positive hash mismatch rate exceeds 2% → methodology bug, fix methodology.",
+          "Calibration rule: verification sampling rate = MAX(5%, 2 × false_positive_rate). Hard cap: 15%.",
+          "Track delta review efficiency metrics (actual savings vs. projected) and adjust sampling rate based on historical FP rate."
+        ]
+      }
+    ],
+    "overall_risk_profile": "LOW-MEDIUM. Primary risks (DR-001, DR-004) are mitigated by conservative overrides and concurrent-session locking. DR-002 (inherited defects) is NOT a new risk — it exists in the current system independently. DR-003 (hash drift) is the highest-likelihood operational risk but is mechanical and fixable."
+  },
+
+  "estimated_savings": {
+    "items_reviewed_per_wave_reduction": "500 → ~100 (80% reduction — from all items in pack to only changed items)",
+    "agent_sessions_reduction": "83% (from 4-5 sessions per wave to 1 session)",
+    "report_files_reduction": "87% (from 47 reports across 4 sessions to 6 reports across 2 sessions)",
+    "wall_clock_reduction": "75% (from multi-day to ~5 hours for a full wave)",
+    "typical_wave_savings_breakdown": {
+      "current": "500 items × 3 min full audit = 1,500 min = 25 hours — spread across 4-5 sessions with 15-28 agents",
+      "with_delta": "100 changed items × 3 min + 400 unchanged items × 5 seconds = 300 min + 33 min = ~5.5 hours — in 1-2 sessions with 6-8 agents",
+      "savings_per_wave": "~19.5 hours per wave (77% reduction)"
+    },
+    "break_even_point": "~13 sessions (after ~2 certification programs, delta review savings exceed implementation investment)",
+    "annual_agent_hours_saved": "~60-80 hours (assuming 20 certification sessions/year × 3-4 hours saved per session)"
+  },
+
+  "implementation_phases": {
+    "phase_0": {
+      "name": "Prerequisite — DL-019 File-Lock Protocol",
+      "description": "Implement file-lock protocol and session-registry before any delta-review infrastructure. Without write-coordination, content hashes are untrustworthy.",
+      "deliverables": [
+        ".lock file protocol per pack file",
+        "Session-registry tracking active write sessions per pack",
+        "Pre-write snapshot verification (file hash must match expected baseline before write)"
+      ],
+      "estimated_sessions": 1,
+      "blocking": true
+    },
+    "phase_1": {
+      "name": "Hash Infrastructure & Delta Ledger",
+      "description": "Define canonical serialization format, compute and store content hashes on all 2,500 items, create CERTIFICATION_LEDGER.json.",
+      "deliverables": [
+        "Canonical serialization specification (key order, exclusion list, normalization rules)",
+        "content_hash + metadata_hash + field_hashes on all 2,500 items",
+        "CERTIFICATION_LEDGER.json seeded for all items",
+        "ContentHashValidator module in validator suite",
+        "governance-guard Rule 6 updated to require content_hash update on any content edit",
+        "Independent dual-extraction hash stability verification (0 mismatches required)"
+      ],
+      "estimated_sessions": 2,
+      "blocking": true
+    },
+    "phase_2": {
+      "name": "Per-Item Version + Timestamp Installation",
+      "description": "Add certification_version and certified_date tracking fields. Backfill for all currently Certified items.",
+      "deliverables": [
+        "certification_version field on all items (0 for Unprocessed, >=1 for Certified)",
+        "certified_date field on all Certified items (backfilled from REVISION_HISTORY.md)",
+        "Governance guard: certification transition sets certified_date"
+      ],
+      "estimated_sessions": 1,
+      "blocking": false
+    },
+    "phase_3": {
+      "name": "PHASE0B Primary Ledger Completion",
+      "description": "Complete independent verification of all currently Certified items that lack primary ledger evidence (707 of 873 per PHASE0B). This closes the gap that prevents delta review from auto-inheriting never-verified items.",
+      "deliverables": [
+        "primary_ledger_complete: true on all Certified items",
+        "Per-item derivation evidence (formula + substitution + result for numeric; principle citation for conceptual)",
+        "CorrectChoice vs. independent derivation reconciliation"
+      ],
+      "estimated_sessions": "~10-15 sessions for remaining 707 items (41 batches per PHASE0B plan)",
+      "blocking": true
+    },
+    "phase_4": {
+      "name": "Delta Review Engine Activation",
+      "description": "Integrate content_hash, field_hashes, and ledger lookup into the session startup protocol. Implement full delta comparison protocol (steps 1-9).",
+      "deliverables": [
+        "Pre-flight delta pre-scan: computes current hashes, compares to ledger, produces delta inventory",
+        "Change classifier: maps field_hash changes to change_propagation_rules → audit scope",
+        "Skip-log: records every skipped item with content_hash, baseline reference, and timestamp",
+        "Dry-run validation: run delta pre-flight alongside full review; compare findings"
+      ],
+      "estimated_sessions": 2,
+      "blocking": false
+    },
+    "phase_5": {
+      "name": "Continuous Monitoring & Baseline Recapture",
+      "description": "After each certification wave, recapture content_hash baselines for changed items. Delta review becomes self-maintaining.",
+      "deliverables": [
+        "Per-session baseline update: re-hash only items with changed content",
+        "CURRENT_BASELINES.md extended to include per-pack hash + per-section changed-item-count",
+        "T0/Tmid/Tend checkpoint integration per AGENTS.md §13.1",
+        "Full re-audit scheduler (every 10th session)"
+      ],
+      "estimated_sessions": "Ongoing — integrated into each certification session startup"
+    },
+    "total_to_activation": "16-21 sessions (dominated by Phase 3 PHASE0B primary ledger completion at 10-15 sessions, which is independently valuable regardless of delta review)."
+  },
+
+  "cross_references": {
+    "governing_documents": [
+      "CAQS_v1.0.md §1.7 (Certification State Governance)",
+      "CAQS_v1.0.md §9 (Audit Workflow — versioning requirements)",
+      "QUESTION_METADATA_STANDARD.md §9 (Governance State Fields)",
+      "AGENTS.md §5 (Dual Verification — cross-check hash-based 'no change' classification)",
+      "AGENTS.md §9 (Session Startup Protocol — integration point for delta pre-flight)",
+      "AGENTS.md §13 (Runtime Governance — T0/Tmid/Tend checkpoint integration)"
+    ],
+    "defect_library_entries": [
+      "DL-019 (Concurrent-Write Data Loss — Phase 0 prerequisite)",
+      "DL-029 (Scan False Positives — within-object extraction eliminates CC-offset hash artifacts)",
+      "DL-030 (CC Answer-Key Errors — RT-002 triggers full re-review on CC change)",
+      "DL-016 (Metadata-Content Shift — IR-005 triggers Hold on DL-016 discovery)"
+    ],
+    "companion_documents": [
+      "SESSION202_READINESS_GATE_ENGINEERING.json — Readiness gate pipeline (delta inventory feeds into pre-flight)",
+      "SESSION201_DELTA_REVIEW_ARCHITECTURE.json — S201 delta review architecture (predecessor)",
+      "SESSION200_DELTA_REVIEW_STUDY.json — S200 delta review feasibility study (predecessor)",
+      "SESSION201_IDENTITY_ARCHITECTURE.json — Compound key model (identity required for hash correctness)"
+    ]
+  }
+}

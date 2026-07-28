@@ -1,0 +1,491 @@
+{
+  "session": "514",
+  "agent": "C",
+  "timestamp": "2026-07-25T23:00:00Z",
+  "methodology": {
+    "parsing": "Function constructor (new Function(code + '; return ARRAY_NAME;'))",
+    "sampling": "Full-population item-level analysis + 4-case stratified sample per array (indices 0, 4, 8, 12)",
+    "spot_check_numeric": "1 numeric item from a Certified case per array, verified against Explanation and exhibits",
+    "citation_detection": "Regex: /ASC\\s*\\d/i, /COSO/i, /IFRS/i, /IAS\\s*\\d/i, /\\bIMA\\b/i",
+    "thin_threshold": "Explanation < 100 characters = 'thin'",
+    "multi_sentence_threshold": "2+ sentences (split by [.!?]+ with >10 char trimmed segments)",
+    "arrays_skipped": "MIGRATED_CASE_BASE_A (CASE-A1..CASE-A15 format, 15 cases, 120 items, all Certified, 0 Exhibits — legacy format, out of scope)",
+    "arrays_skipped_2": "MIGRATED_CASE_BASE_B in scored_cases2.js (referenced as 'already certified' in task spec)",
+    "arrays_skipped_3": "MIGRATED_CASE_BASE_C in scored_cases3.js",
+    "arrays_skipped_4": "MIGRATED_CASE_BASE_D in scored_cases4.js"
+  },
+  "candidates": {
+    "ENHANCED_CASE_BASE": {
+      "file": "scored_cases.js",
+      "case_count": 15,
+      "item_count": 90,
+      "item_type_distribution": { "numeric": 37, "select": 19, "multi": 14, "match": 12, "fill": 8 },
+      "explanation_sufficiency": {
+        "avg_length": 80,
+        "with_citations": 0,
+        "multi_sentence_pct": 20,
+        "thin_pct": 73,
+        "thin_at_apply_or_higher": 58,
+        "g_new_4_exposure": "HIGH — 58 items at Apply/Analyze/Evaluate level have <100 char explanations",
+        "score": "INSUFFICIENT"
+      },
+      "distractor_rationale": {
+        "choice_specific_pct": 0,
+        "generic_boilerplate_pct": 0,
+        "note": "Case-study format does not use ExplanationWrong fields. Explanations are correct-answer-only with no distractor analysis.",
+        "score": "ABSENT"
+      },
+      "answer_key_risk": {
+        "numeric_items": 37,
+        "spot_check_items": [
+          {
+            "CaseID": "CBQ-A1",
+            "ItemID": "CBQ-A1-Q1",
+            "Topic": "Revenue recognition",
+            "Correct": "90000",
+            "Explanation": "360,000 x 3/12 = 90,000. Cash collected in advance is recognized as revenue only as service is provided.",
+            "verdict": "PLAUSIBLE — 360,000 annual x 3/12 months = 90,000. Consistent with ASC 606 ratable recognition."
+          },
+          {
+            "CaseID": "CBQ-C1",
+            "ItemID": "CBQ-C1-Q1",
+            "Topic": "Material price variance",
+            "Correct": "N/A (sampled)",
+            "Explanation": "44 chars — very thin, no formula shown",
+            "verdict": "CONCERN — explanation too short to verify independently"
+          }
+        ],
+        "spot_check_concerns": [
+          "37 of 90 items are numeric — highest numeric density of any array",
+          "Thin explanations for numeric items make independent verification difficult",
+          "No standard citations to anchor calculation methodology"
+        ],
+        "score": "HIGH"
+      },
+      "citation_presence": {
+        "with_asc": 0,
+        "with_coso": 0,
+        "with_ifrs": 0,
+        "with_ias": 0,
+        "with_ima": 0,
+        "total_cited": 0,
+        "total_items": 90,
+        "score": "ABSENT"
+      },
+      "case_realism": {
+        "has_exhibits": 15,
+        "has_named_company": 14,
+        "has_stakeholder": 14,
+        "exhibits_with_referenced_by": 0,
+        "note": "100% of exhibits have empty ReferencedBy arrays. CBQ-A1 lacks CompanyName and Stakeholder entirely.",
+        "scenario_text_avg": 217,
+        "score": "MODERATE"
+      },
+      "schema_stability": {
+        "parseable": true,
+        "missing_case_fields": [],
+        "missing_item_fields": ["Difficulty (90/90 items)", "DifficultyScore (90/90 items)"],
+        "exhibit_issues": 0,
+        "note": "All items missing per-item Difficulty/DifficultyScore — only case-level difficulty labels exist (DL-032 pattern)",
+        "score": "MINOR_ISSUES"
+      },
+      "question_state": {
+        "certified": 0,
+        "unprocessed": 15,
+        "in_audit": 0,
+        "editorial_queue": 0,
+        "archived": 0,
+        "missing": 0,
+        "production_status_mismatch": "All cases are ProductionStatus: 'Draft' + question_state: 'Unprocessed' — consistent",
+        "confidence_note": "CBQ-A1 has Confidence=90, all others Confidence=100"
+      },
+      "readiness_classification": "NEEDS_EXPLANATION_UPLIFT",
+      "readiness_rationale": "73% of explanations are under 100 characters with no citations to any authoritative standard (ASC, COSO, IFRS, IAS, IMA). Only 20% of explanations are multi-sentence. 58 items at Apply/Analyze/Evaluate cognitive levels violate G-NEW-4 (one-sentence explanations). 37 numeric items with thin explanations represent the highest arithmetic risk. All 90 items lack per-item Difficulty/DifficultyScore metadata. This is the most critical uplift candidate — it needs explanation expansion, citation injection, numeric verification, and distractor rationale authoring before certification. However, its clean Unprocessed slate and consistent schema make it the best fit for a structured S509-S513 review pipeline."
+    },
+    "ENHANCED_CASE_BASE2": {
+      "file": "scored_cases2.js",
+      "case_count": 15,
+      "item_count": 78,
+      "item_type_distribution": { "numeric": 25, "multi": 14, "select": 18, "fill": 7, "match": 14 },
+      "explanation_sufficiency": {
+        "avg_length": 390,
+        "with_citations": 1,
+        "multi_sentence_pct": 88,
+        "thin_pct": 19,
+        "thin_at_apply_or_higher": 14,
+        "g_new_4_exposure": "MODERATE — 14 items at Apply+ level have <100 char explanations; 3/21 sampled have single-sentence",
+        "score": "ADEQUATE"
+      },
+      "distractor_rationale": {
+        "choice_specific_pct": 0,
+        "generic_boilerplate_pct": 0,
+        "note": "No ExplanationWrong fields. Case format uses single Explanation field for correct-answer reasoning only.",
+        "score": "ABSENT"
+      },
+      "answer_key_risk": {
+        "numeric_items": 25,
+        "spot_check_items": [
+          {
+            "CaseID": "CBQ2-A2",
+            "ItemID": "CBQ2-A2-Q2",
+            "Topic": "Inventory",
+            "Correct": "13",
+            "Explanation": "Cost ($15) vs NRV ($13). Lower is $13.",
+            "verdict": "PLAUSIBLE — LCM application, but explanation is only 31 chars with no standard citation"
+          }
+        ],
+        "spot_check_concerns": [
+          "Several numeric explanations are single-sentence or calculation-only",
+          "CBQ2-A3-Q1: 34 chars — '$400k / $550k * $500k = $363,636' — no ASC 606 reference despite Topic being 'ASC 606'"
+        ],
+        "score": "LOW"
+      },
+      "citation_presence": {
+        "with_asc": 0,
+        "with_coso": 1,
+        "with_ifrs": 0,
+        "with_ias": 0,
+        "with_ima": 0,
+        "total_cited": 1,
+        "total_items": 78,
+        "score": "WEAK"
+      },
+      "case_realism": {
+        "has_exhibits": 15,
+        "has_named_company": 14,
+        "has_stakeholder": 14,
+        "exhibits_with_referenced_by": 0,
+        "note": "100% of exhibits have empty ReferencedBy. CBQ2-A3 lacks CompanyName/Stakeholder (the Unprocessed case).",
+        "scenario_text_avg": 450,
+        "score": "STRONG"
+      },
+      "schema_stability": {
+        "parseable": true,
+        "missing_case_fields": [],
+        "missing_item_fields": ["Difficulty (78/78 items)", "DifficultyScore (78/78 items)"],
+        "exhibit_issues": 1,
+        "score": "MINOR_ISSUES"
+      },
+      "question_state": {
+        "certified": 14,
+        "unprocessed": 1,
+        "in_audit": 0,
+        "editorial_queue": 0,
+        "archived": 0,
+        "missing": 0,
+        "production_status_mismatch": "9 of 14 Certified cases have ProductionStatus: 'Draft' — certification/production status inconsistency",
+        "confidence_note": "All Confidence=100",
+        "certification_basis_concern": "14 Certified cases have zero ExplanationWrong fields, 1 total citation (COSO), and missing per-item Difficulty — certification does not appear CAQS §1.6 compliant"
+      },
+      "readiness_classification": "READY_FOR_CAQS_REVIEW",
+      "readiness_rationale": "Explanations are substantially developed (avg 390 chars, 88% multi-sentence) with strong case realism (named companies, stakeholders, detailed scenarios). Primary uplift needed: (a) add ASC/COSO/IFRS citations to explanations (currently 1/78 items cited), (b) add per-item Difficulty/DifficultyScore metadata, (c) populate Exhibit ReferencedBy arrays, (d) reconcile ProductionStatus mismatch with question_state. The existing certification should be re-verified under CAQS §1.6 six-dimension criteria."
+    },
+    "ENHANCED_CASE_BASE3": {
+      "file": "scored_cases3.js",
+      "case_count": 15,
+      "item_count": 79,
+      "item_type_distribution": { "numeric": 17, "select": 18, "fill": 9, "multi": 15, "match": 20 },
+      "explanation_sufficiency": {
+        "avg_length": 341,
+        "with_citations": 1,
+        "multi_sentence_pct": 89,
+        "thin_pct": 11,
+        "thin_at_apply_or_higher": 7,
+        "g_new_4_exposure": "LOW — 7 items at Apply+ level with thin explanations",
+        "score": "ADEQUATE"
+      },
+      "distractor_rationale": {
+        "choice_specific_pct": 0,
+        "generic_boilerplate_pct": 0,
+        "note": "No ExplanationWrong fields. Match-type items use Explanation for matching rationale but do not address wrong-pair logic.",
+        "score": "ABSENT"
+      },
+      "answer_key_risk": {
+        "numeric_items": 17,
+        "spot_check_items": [
+          {
+            "CaseID": "CBQ3-A2",
+            "ItemID": "CBQ3-A2-Q1",
+            "Topic": "Cash Flows",
+            "Correct": "455000",
+            "Explanation": "NI(450k) + Depr(60k) - Gain(15k) - AR inc(25k) + Inv dec(15k) - AP dec(30k) = 455,000",
+            "verdict": "PLAUSIBLE — indirect method, components reconcile. No exhibit cross-reference to verify inputs though."
+          }
+        ],
+        "spot_check_concerns": [
+          "CBQ3-A1-Q1: '55,000 x 4.212 = 231,660' — no identification of what 4.212 is (PV annuity factor? from which exhibit?)"
+        ],
+        "score": "LOW"
+      },
+      "citation_presence": {
+        "with_asc": 0,
+        "with_coso": 1,
+        "with_ifrs": 0,
+        "with_ias": 0,
+        "with_ima": 0,
+        "total_cited": 1,
+        "total_items": 79,
+        "score": "WEAK"
+      },
+      "case_realism": {
+        "has_exhibits": 15,
+        "has_named_company": 14,
+        "has_stakeholder": 14,
+        "exhibits_with_referenced_by": 4,
+        "note": "4 of 15 cases have exhibits with non-empty ReferencedBy. CBQ3-A1 lacks CompanyName/Stakeholder (Unprocessed).",
+        "scenario_text_avg": 429,
+        "score": "STRONG"
+      },
+      "schema_stability": {
+        "parseable": true,
+        "missing_case_fields": [],
+        "missing_item_fields": ["Difficulty (79/79 items)", "DifficultyScore (79/79 items)"],
+        "exhibit_issues": 1,
+        "score": "MINOR_ISSUES"
+      },
+      "question_state": {
+        "certified": 14,
+        "unprocessed": 1,
+        "in_audit": 0,
+        "editorial_queue": 0,
+        "archived": 0,
+        "missing": 0,
+        "production_status_mismatch": "8 of 14 Certified cases have ProductionStatus: 'Draft'",
+        "confidence_note": "CBQ3-A1 (Unprocessed) has Confidence=70, all others Confidence=100",
+        "certification_basis_concern": "Same as ENHANCED_CASE_BASE2 — Certified without CAQS §1.6 six-dimension evidence"
+      },
+      "readiness_classification": "READY_FOR_CAQS_REVIEW",
+      "readiness_rationale": "Solid explanation quality (avg 341 chars, 89% multi-sentence), good scenario narratives. Highest match-type item count (20) — these have strong matching rationale. Needs: (a) ASC/COSO citation injection (1/79 cited), (b) per-item Difficulty metadata, (c) continue ReferencedBy population (4/15 currently have refs), (d) re-verify existing certification against CAQS §1.6."
+    },
+    "ENHANCED_CASE_BASE4": {
+      "file": "scored_cases4.js",
+      "case_count": 15,
+      "item_count": 78,
+      "item_type_distribution": { "numeric": 20, "match": 17, "multi": 12, "select": 26, "fill": 3 },
+      "explanation_sufficiency": {
+        "avg_length": 333,
+        "with_citations": 6,
+        "multi_sentence_pct": 81,
+        "thin_pct": 15,
+        "thin_at_apply_or_higher": 11,
+        "g_new_4_exposure": "LOW-MODERATE — 11 items at Apply+ level with thin explanations",
+        "score": "ADEQUATE"
+      },
+      "distractor_rationale": {
+        "choice_specific_pct": 0,
+        "generic_boilerplate_pct": 0,
+        "note": "No ExplanationWrong fields. Match-type items (17) have good rationale text but no wrong-pair analysis.",
+        "score": "ABSENT"
+      },
+      "answer_key_risk": {
+        "numeric_items": 20,
+        "spot_check_items": [
+          {
+            "CaseID": "CBQ4-B1",
+            "ItemID": "CBQ4-B1-Q1",
+            "Topic": "High-Low",
+            "Correct": "4",
+            "Explanation": "Change in cost / Change in activity = ($42,000 - $30,000) / (8,000 - 5,000) = $12,000 / 3,000 = $4/hour.",
+            "verdict": "PLAUSIBLE — standard high-low method, calculation shown with substitution"
+          },
+          {
+            "CaseID": "CBQ4-A1",
+            "ItemID": "CBQ4-A1-Q2",
+            "Topic": "Impairment",
+            "Correct": "150000",
+            "Explanation": "Under current US GAAP, the impairment loss is the amount by which the carrying amount ($2.4M) exceeds the fair value ($2.25M), limited to the total amount of goodwill. $2,400,000 - $2,250,000 = $150,000.",
+            "verdict": "CORRECT — references US GAAP impairment rule, calculation shown"
+          }
+        ],
+        "spot_check_concerns": [],
+        "score": "LOW"
+      },
+      "citation_presence": {
+        "with_asc": 1,
+        "with_coso": 5,
+        "with_ifrs": 0,
+        "with_ias": 0,
+        "with_ima": 0,
+        "total_cited": 6,
+        "total_items": 78,
+        "score": "MODERATE"
+      },
+      "case_realism": {
+        "has_exhibits": 15,
+        "has_named_company": 14,
+        "has_stakeholder": 14,
+        "exhibits_with_referenced_by": 6,
+        "note": "6 of 15 cases have exhibits with non-empty ReferencedBy. CBQ4-A1 and CBQ4-A2 lack CompanyName/Stakeholder (both Unprocessed).",
+        "scenario_text_avg": 487,
+        "score": "STRONG"
+      },
+      "schema_stability": {
+        "parseable": true,
+        "missing_case_fields": [],
+        "missing_item_fields": ["Difficulty (78/78 items)", "DifficultyScore (78/78 items)"],
+        "exhibit_issues": 5,
+        "note": "5 exhibits have Body-instead-of-Headers/Rows pattern (DL-023 residual)",
+        "score": "MINOR_ISSUES"
+      },
+      "question_state": {
+        "certified": 12,
+        "unprocessed": 3,
+        "in_audit": 0,
+        "editorial_queue": 0,
+        "archived": 0,
+        "missing": 0,
+        "production_status_mismatch": "7 of 12 Certified cases have ProductionStatus: 'Draft'",
+        "confidence_note": "All Confidence=100",
+        "certification_basis_concern": "Best citation coverage (6 citations) among all arrays but still only 7.7% of items cited"
+      },
+      "readiness_classification": "READY_FOR_CAQS_REVIEW",
+      "readiness_rationale": "Strongest citation presence (1 ASC + 5 COSO — best of all arrays) with solid explanation quality and diverse item types. 3 Unprocessed cases (CBQ4-A1, CBQ4-A2, CBQ4-C1) need full uplift. Needs: (a) expand citations from 6 to target ~50%+ of items, (b) add per-item Difficulty metadata, (c) fix 5 DL-023 exhibit issues, (d) continue ReferencedBy population, (e) add CompanyName/Stakeholder to Unprocessed A1/A2 cases."
+    },
+    "ENHANCED_CASE_BASE5": {
+      "file": "scored_cases5.js",
+      "case_count": 15,
+      "item_count": 75,
+      "item_type_distribution": { "numeric": 18, "select": 23, "multi": 12, "fill": 2, "match": 20 },
+      "explanation_sufficiency": {
+        "avg_length": 433,
+        "with_citations": 0,
+        "multi_sentence_pct": 88,
+        "thin_pct": 12,
+        "thin_at_apply_or_higher": 7,
+        "g_new_4_exposure": "LOW — 7 items at Apply+ level with thin explanations",
+        "score": "ADEQUATE"
+      },
+      "distractor_rationale": {
+        "choice_specific_pct": 0,
+        "generic_boilerplate_pct": 0,
+        "note": "No ExplanationWrong fields. Match-type items (20) provide matching rationale in Explanation but no wrong-pair analysis.",
+        "score": "ABSENT"
+      },
+      "answer_key_risk": {
+        "numeric_items": 18,
+        "spot_check_items": [
+          {
+            "CaseID": "CBQ5-A2",
+            "ItemID": "CBQ5-A2-Q1",
+            "Topic": "Comprehensive Income",
+            "Correct": "510000",
+            "Explanation": "Comprehensive Income = Net Income ($500k) + OCI items. OCI = AFS Gains ($40k) - Translation Losses ($30k) = $10k. Total CI = $510,000. Note: Trading security gains are already in Net Income.",
+            "verdict": "CORRECT — properly distinguishes NI from OCI components, correctly excludes trading gains from OCI"
+          },
+          {
+            "CaseID": "CBQ5-B2",
+            "ItemID": "CBQ5-B2-Q2",
+            "Topic": "Bonds",
+            "Correct": "922768",
+            "Explanation": "PV of Principal: $1,000,000 x 0.6139 = $613,900. PV of Interest: $40,000 x 7.7217 = $308,868. Total = $922,768.",
+            "verdict": "PLAUSIBLE — bond pricing calculation. PV factors 0.6139 and 7.7217 consistent with 5% semi-annual rate, 10 periods. $613,900 + $308,868 = $922,768. No ASC 470 reference though."
+          }
+        ],
+        "spot_check_concerns": [],
+        "score": "LOW"
+      },
+      "citation_presence": {
+        "with_asc": 0,
+        "with_coso": 0,
+        "with_ifrs": 0,
+        "with_ias": 0,
+        "with_ima": 0,
+        "total_cited": 0,
+        "total_items": 75,
+        "note": "Zero citations despite longest average explanations (433 chars). Well-written explanations that use concept names in plain language but never cite the authoritative standard.",
+        "score": "ABSENT"
+      },
+      "case_realism": {
+        "has_exhibits": 15,
+        "has_named_company": 14,
+        "has_stakeholder": 14,
+        "exhibits_with_referenced_by": 8,
+        "note": "8 of 15 cases have exhibits with non-empty ReferencedBy — best coverage. CBQ5-B2 lacks CompanyName (value is 'Granite Corp' which IS a named company — check).",
+        "scenario_text_avg": 759,
+        "score": "STRONG"
+      },
+      "schema_stability": {
+        "parseable": true,
+        "missing_case_fields": [],
+        "missing_item_fields": ["Difficulty (75/75 items)", "DifficultyScore (75/75 items)", "Topic (1/75 items)"],
+        "exhibit_issues": 11,
+        "note": "11 DL-023 exhibit issues — highest among all arrays (Body-instead-of-Headers/Rows). One item missing Topic field.",
+        "score": "MINOR_ISSUES"
+      },
+      "question_state": {
+        "certified": 14,
+        "unprocessed": 1,
+        "in_audit": 0,
+        "editorial_queue": 0,
+        "archived": 0,
+        "missing": 0,
+        "production_status_mismatch": "13 of 14 Certified cases have ProductionStatus: 'Draft' — only CBQ5-D1 has ProductionStatus: 'Production'",
+        "confidence_note": "CBQ5-B2 (Unprocessed) has Confidence=70, all others Confidence=100",
+        "certification_basis_concern": "0 citations, 11 exhibit issues, missing per-item Difficulty — certification appears template-based, not CAQS §1.6 compliant"
+      },
+      "readiness_classification": "READY_FOR_CAQS_REVIEW",
+      "readiness_rationale": "Longest average explanations (433 chars) with best ReferencedBy coverage and most detailed scenario text (avg 759 chars). However, ZERO citations to any standard — the most extreme citation gap. 11 DL-023 exhibit issues need repair. 20 match-type items have strong explanatory text but no distractor rationale. Needs: (a) urgent citation injection (0/75 cited is a blank slate for a full citation pass), (b) fix 11 exhibit issues, (c) add per-item Difficulty metadata, (d) add Topic to 1 missing item."
+    }
+  },
+  "cross_cutting_findings": {
+    "universal_issues": [
+      {
+        "id": "XF-001_NO_EXPLANATION_WRONG",
+        "severity": "Medium",
+        "description": "Zero ExplanationWrong fields exist across all 400 case items in all 75 cases. The case-study format uses a single Explanation field per item for correct-answer reasoning only. No wrong-choice analysis, distractor rationale, or misconception identification is provided.",
+        "impact": "Learners who select wrong answers receive no educational feedback on why their choice was wrong.",
+        "comparison_to_mcq": "MCQ pack files use ExplanationWrongA-D fields (with known DL-008/026/021 defects) — but case files have the inverse problem: no distractor slots at all.",
+        "remediation": "Either (a) extend the case schema to include ExplanationWrong fields per item, or (b) require the single Explanation field to address distractors inline."
+      },
+      {
+        "id": "XF-002_NO_ITEM_DIFFICULTY",
+        "severity": "Medium",
+        "description": "All 400 case items across all 75 cases lack per-item Difficulty and DifficultyScore fields. Only case-level difficulty labels exist.",
+        "impact": "Cannot calibrate per-item difficulty distribution; all items inherit the case-level label. DL-032 pattern (uniform Moderate labeling)."
+      },
+      {
+        "id": "XF-003_CITATION_DESERT",
+        "severity": "High",
+        "description": "Across 400 case items, only 8 total citations to authoritative standards (ASC, COSO, IFRS, IAS, IMA). ENHANCED_CASE_BASE4 has the most (6). ENHANCED_CASE_BASE and ENHANCED_CASE_BASE5 have ZERO.",
+        "impact": "Violates CAQS §4.1 (EV3 — explanations must reference governing accounting principle by name) and CAQS §14.2 (Gold Standard Checklist item: 'Explanation names governing standard')."
+      },
+      {
+        "id": "XF-004_REFERENCED_BY_GAP",
+        "severity": "Low",
+        "description": "Exhibit ReferencedBy arrays are empty for 42 of 75 cases (56%). This degrades from ENHANCED_CASE_BASE (0/15 with refs) to ENHANCED_CASE_BASE5 (8/15 with refs), showing progressive improvement across packs.",
+        "impact": "Schema completeness issue — cannot validate that all exhibits are consumed by items (CAQS §3.4 rule 3: 'No decorative data')."
+      },
+      {
+        "id": "XF-005_PRODUCTION_STATUS_MISMATCH",
+        "severity": "Medium",
+        "description": "37 of 54 Certified cases (68.5%) across Base2-Base5 have question_state: 'Certified' but ProductionStatus: 'Draft'. Only 3 Certified cases have ProductionStatus: 'Production'.",
+        "impact": "State inconsistency — the governance framework has two competing state fields. 'Certified' + 'Draft' is a contradictory combination."
+      },
+      {
+        "id": "XF-006_UNPROCESSED_FIRST_CASE",
+        "severity": "Low",
+        "description": "The first case in each array (CBQ-A1, CBQ2-A3, CBQ3-A1, CBQ4-A1, CBQ5-B2) is Unprocessed while nearly all other cases are Certified. These first cases typically lack CompanyName and Stakeholder metadata.",
+        "impact": "Likely a pipeline artifact — the first case was authored as a template header and never completed."
+      }
+    ],
+    "certification_quality_concern": {
+      "summary": "54 of 75 cases (72%) across Base2-Base5 are marked Certified, but the certification basis is opaque. Certified items have: zero ExplanationWrong fields, 0-5 standard citations per array, missing per-item Difficulty/DifficultyScore, inconsistent ProductionStatus, and DL-023 exhibit issues. This does not meet CAQS §1.6 six-dimension verification requirements.",
+      "recommendation": "Re-verify all 54 Certified cases under CAQS §1.6 before relying on their certification status for learner delivery."
+    }
+  },
+  "s509_s513_pattern_fit": {
+    "analysis": "The S509-S513 'uplift/review/certify' pattern involves explanation enhancement, citation injection, distractor rationale authoring, numeric verification, and metadata completion — followed by CAQS §1.6 six-dimension verification and certification.",
+    "best_fit": "ENHANCED_CASE_BASE",
+    "best_fit_rationale": "ENHANCED_CASE_BASE (scored_cases.js, 15 cases, 90 items) is the strongest fit because: (1) It has the largest quality gap — 73% thin explanations, 0 citations, 0 Certifications, making the uplift impact highest. (2) All 15 cases are cleanly Unprocessed — no re-verification of questionable prior certifications needed. (3) It has 37 numeric items (highest) requiring systematic arithmetic audit. (4) The schema is stable (parseable, no missing case fields, 0 exhibit issues). (5) All cases share the same structural template (consistent schema), enabling batch processing. The S509-S513 pipeline applied to this array would transform the weakest case bank into a certified one with the highest marginal improvement.",
+    "secondary_fit": "ENHANCED_CASE_BASE4",
+    "secondary_rationale": "ENHANCED_CASE_BASE4 is the best secondary target because: (1) It has 3 Unprocessed cases needing full uplift. (2) It has the best existing citation coverage (6 citations) — expanding these is lower effort. (3) The 12 Certified cases need re-verification (lower priority) but the 3 Unprocessed ones could be uplifted alongside Base's cases. (4) 5 DL-023 exhibit issues need repair.",
+    "deferred_scheduling": "ENHANCED_CASE_BASE2, ENHANCED_CASE_BASE3, ENHANCED_CASE_BASE5 — these arrays are already 80-93% Certified. Uplift should focus on re-verifying the existing certification against CAQS §1.6 (adding citations, per-item Difficulty, ReferencedBy) rather than a full greenfield uplift. Their Unprocessed cases (1 each) need targeted uplift and can be fast-followed after Base.",
+    "execution_order_recommendation": [
+      "1. ENHANCED_CASE_BASE — Full S509-S513 uplift/review/certify (15 cases, ~90 items, greenfield)",
+      "2. ENHANCED_CASE_BASE4 — Unprocessed cases uplift (3 cases) + Certified re-verification (12 cases)",
+      "3. ENHANCED_CASE_BASE2 — Unprocessed case uplift (1 case) + Certified re-verification (14 cases)",
+      "4. ENHANCED_CASE_BASE3 — Unprocessed case uplift (1 case) + Certified re-verification (14 cases)",
+      "5. ENHANCED_CASE_BASE5 — Unprocessed case uplift (1 case) + Certified re-verification (14 cases) + fix 11 exhibit issues"
+    ]
+  }
+}

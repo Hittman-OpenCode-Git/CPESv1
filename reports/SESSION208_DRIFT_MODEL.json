@@ -1,0 +1,303 @@
+{
+  "document": "SESSION208_DRIFT_MODEL",
+  "session": "S208",
+  "series": "200-Series Architecture Stewardship",
+  "board": "B",
+  "title": "Architecture Drift Detection Model — First Formal Specification",
+  "status": "ACTIVE",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "authority": "PROJECT_CONSTITUTION.md; S208 Board A Frozen Principles",
+  "depends_on": ["SESSION208_ARCHITECTURAL_PRINCIPLES.json (Board A)"],
+
+  "sources_consumed": [
+    "SESSION208_ARCHITECTURAL_PRINCIPLES.json — 6 frozen principles with violation detection criteria",
+    "knowledge/DEFECT_LIBRARY.md — DL-008, DL-019, DL-029, DL-035, DL-036 as drift case studies",
+    "knowledge/CURRENT_BASELINES.md — 15 runtime file hashes as drift detection baseline",
+    "reports/SESSION202_FRAMEWORK_V2_ARCHITECTURE.json — architecture design",
+    "reports/SESSION201_DUPLICATION_MATRIX.json — 22 DL-008 scan events, 18 DL-026 events",
+    "reports/SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json — conditions C1-C5"
+  ],
+
+  "purpose": "This model defines the 6 categories of architecture drift, their detection signals, automated checks, severity, and response protocols. It is the first formal drift model for the CMA Part 1 Exam Simulator. Its purpose is to detect when Framework v2 principles are being eroded — not to prevent all defects, but to prevent architecture-level regression.",
+
+  "drift_categories": [
+    {
+      "id": "DRIFT-1",
+      "category": "Duplicate Registries",
+      "description": "Two or more files claim authority for the same entity type with divergent data",
+      "principle_violated": "P6 Traceability Everywhere + P2 Scan Once Consume Many",
+      "historical_evidence": {
+        "note": "No confirmed duplicate registry incidents. This is a preventive category defined by the P2 principle (single source of truth).",
+        "near_miss": "DL-033: naming confusion between 'Pack E' (file) and 'Pack A Section E' (section) caused Wave 4 to check wrong file. This was a naming/labeling issue, not a duplicate registry — but demonstrates the risk."
+      },
+      "detection_signals": [
+        {
+          "signal": "Two files in the project contain entity lists for the same entity type with different item counts",
+          "severity": "CRITICAL",
+          "automated_check": "Cross-reference entity-type identifiers across all JSON/MD files in knowledge/, reports/, and scripts/output/ directories. Flag any pair of files with overlapping entity types but divergent counts.",
+          "frequency": "Per session or per certification wave"
+        },
+        {
+          "signal": "A new tool or script generates its own entity list rather than consuming MASTER_QUESTION_REGISTRY.md",
+          "severity": "HIGH",
+          "automated_check": "Audit new scripts for QID extraction logic. If they parse raw pack files independently rather than consuming generated artifacts, flag immediately.",
+          "frequency": "Per new script/tool introduction"
+        }
+      ],
+      "response_protocol": {
+        "immediate": "Halt all operations that consume from the duplicate registry. Cross-reference both sources against raw pack files. Designate the authoritative source per SESSION208_REGISTRY_AUTHORITY.json.",
+        "remediation": "Retire the non-authoritative registry. Update all consumers to reference the authoritative source. Document the incident.",
+        "prevention": "All new registries must be registered in SESSION208_REGISTRY_AUTHORITY.json before use. Registry authority model is the gatekeeper."
+      }
+    },
+    {
+      "id": "DRIFT-2",
+      "category": "Duplicate Scans",
+      "description": "The same structural scan is executed multiple times by different agents or tools within the same session, producing divergent results",
+      "principle_violated": "P2 Scan Once Consume Many + P3 Delta Review",
+      "historical_evidence": {
+        "DL-008_scan_redundancy": {
+          "events": 22,
+          "sessions_span": "15 sessions (S200-S726)",
+          "root_cause": "No scan artifact reuse. Each agent independently re-scanned raw pack files with its own parsing methodology.",
+          "impact": "Divergent DL-008 counts (10 vs 342 vs 539 vs 0) across sessions — each using different scan methodology. The 22nd scan was finally the correct one."
+        },
+        "DL-026_scan_redundancy": {
+          "events": 18,
+          "sessions_span": "S200-S812",
+          "root_cause": "5-agent scoping session (632), Agent 6 boundary-aware re-verification (1,005), enforced-depth autonomous runs (1,056→27→6). Each scan used different methodology.",
+          "impact": "Remediation was delayed while the true scope was debated. The 1,005 count (Agent 6, boundary-aware object-level parse) was authoritative."
+        },
+        "DL-008_phantom_entries": {
+          "events": "CURRENT_BASELINES.md §3 initially listed 67 CRITICAL DL-008 in learner pool — all were DL-029 forward-scan artifacts (CC-before-QID architecture produced ~75% false-positive rate).",
+          "methodology_fix": "Function constructor parse confirmed 0 across all 2,500 items. 8 permanent prevention rules established (S802 Agent C)."
+        }
+      },
+      "detection_signals": [
+        {
+          "signal": "Two agents in the same session report different defect counts for the same defect class on the same pack",
+          "severity": "CRITICAL",
+          "automated_check": "Compare defect counts across agent reports within a session. Any divergence > 0 for the same (defect_class, pack) pair is a scan redundancy flag.",
+          "frequency": "Per multi-agent session"
+        },
+        {
+          "signal": "A session spawns an agent to re-scan for a defect class that was already scanned earlier in the same session",
+          "severity": "HIGH",
+          "automated_check": "Track scan events per (defect_class, session) — flag any duplicate.",
+          "frequency": "Per agent spawn"
+        },
+        {
+          "signal": "Count instability — the same defect count changes between consecutive scans without content changes",
+          "severity": "MEDIUM",
+          "automated_check": "Run the scan twice independently. If counts diverge by > 5%, the methodology is unreliable. Require count stability before any remediation action (AGENTS.md §6).",
+          "frequency": "Before every remediation execution"
+        }
+      ],
+      "response_protocol": {
+        "immediate": "Halt remediation. Do not execute writes based on unstable counts. Run count a third time. Cross-check methodology between runs (AGENTS.md §6).",
+        "remediation": "Designate one scan as authoritative using the most rigorous methodology (boundary-aware object-level parse or Function constructor). Produce a scan artifact. All downstream agents consume artifact, not raw files.",
+        "prevention": "Scan Once principle: the first scan in a session produces the artifact. No re-scanning. Artifact reuse eliminates this entire drift category."
+      }
+    },
+    {
+      "id": "DRIFT-3",
+      "category": "Shadow Queues",
+      "description": "Two or more tools produce different readiness/certification/blocks lists for the same content, using different parsing rules",
+      "principle_violated": "P2 Scan Once Consume Many + P1 Identity Before Trust",
+      "historical_evidence": {
+        "DL-036_pipeline_divergence": {
+          "tools": ["Readiness Scorer (S322)", "Candidate Engine (SESSION850)"],
+          "discrepancy": "242 vs 282 BLOCKED items (40-item divergence)",
+          "root_cause": "Candidate Engine's Pack E QID regex (/^P1E-[A-F]-\\d{3}$/) did not match R-series items (P1-E-R##). Readiness Scorer's regex correctly matched them.",
+          "impact": "40 Certified items misclassified as BLOCKED by one tool. No learner impact but pipeline unreliability.",
+          "resolution": "S813 C2 — pipeline artifact reuse required. Candidate Engine must consume Readiness Scorer artifact, not independently re-scan."
+        },
+        "P1-EC-004_state_inconsistency": {
+          "tools": ["Investigation API", "REVISION_HISTORY.md"],
+          "discrepancy": "Unprocessed vs Certified",
+          "root_cause": "Registry staleness — Investigation API read from stale registry that predated S853 certification.",
+          "impact": "Investigation workbench flagged an anomaly. No learner impact but traceability gap."
+        }
+      },
+      "detection_signals": [
+        {
+          "signal": "Two tools report different BLOCKED/CERTIFY/READY counts for the same pack",
+          "severity": "HIGH",
+          "automated_check": "At each pipeline gate checkpoint, extract per-pack counts from all tools. If counts diverge, flag for reconciliation.",
+          "frequency": "Per pipeline gate transition"
+        },
+        {
+          "signal": "A consumer tool uses a different QID regex or parsing method than the producer tool",
+          "severity": "MEDIUM",
+          "automated_check": "Audit tool QID regex against MASTER_QUESTION_REGISTRY.md QID format. Any mismatch is a shadow queue risk.",
+          "frequency": "Per new tool introduction or QID format change"
+        }
+      ],
+      "response_protocol": {
+        "immediate": "Isolate the divergent tool. Identify QID list difference (which QIDs are in one queue but not the other). Cross-reference against raw file ground truth.",
+        "remediation": "Align the consumer tool to the producer tool's output. If the consumer tool must re-scan, use identical parsing methodology. Better: consume the producer's artifact.",
+        "prevention": "Artifact consumption pipeline — consumer tools never independently re-scan. Single source of truth for QID classification."
+      }
+    },
+    {
+      "id": "DRIFT-4",
+      "category": "Manual Workarounds",
+      "description": "Items certified into the learner pool without passing automated pre-flight gates — human override of automated governance",
+      "principle_violated": "P4 Readiness Before Certification + P5 Governance Automation",
+      "historical_evidence": {
+        "pre_framework_v2_certification": {
+          "items": "All items certified before Framework v2 deployment (pre-S202)",
+          "pattern": "No pre-flight gate existed. Items entered Certified state with DL-008 (539 occurrences), DL-026 (1,005 items), DL-021 (100 items), DL-030 (5 answer-key errors).",
+          "root_cause": "Governance was manual discipline, not automated enforcement."
+        },
+        "post_framework_v2_gap": {
+          "items": "39 Domain F items (S853 WAVE_A)",
+          "pattern": "Certification pipeline checked DL-008 (Rule 2) but not DL-026 (Rule 6 was not yet deployed). Items passed through a partial gate.",
+          "root_cause": "Governance guard coverage gap. Rule 6 deployed S814 — gap closed. 39 items identified for remediation (S813 C3).",
+          "note": "This is a governance coverage gap, not a manual workaround. But it demonstrates the risk: any gate that doesn't check all known defect patterns creates a bypass path."
+        }
+      },
+      "detection_signals": [
+        {
+          "signal": "An item with question_state='Certified' has no corresponding readiness gate PASS record",
+          "severity": "CRITICAL",
+          "automated_check": "Audit: (certified_count_from_packs) vs (certified_count_with_gate_records). Any gap > 0 is a manual workaround or governance gap.",
+          "frequency": "Per certification wave"
+        },
+        {
+          "signal": "A new governance guard rule is added, but items Certified before the rule was deployed still carry the defect",
+          "severity": "HIGH",
+          "automated_check": "After every new rule deployment, re-scan Certified pool for the defect class the rule blocks. Flag any pre-existing occurrences.",
+          "frequency": "Per new rule deployment"
+        },
+        {
+          "signal": "A write to a pack file bypasses governance guard (e.g., direct manual edit outside tool tracking)",
+          "severity": "MEDIUM",
+          "automated_check": "Compare file modification timestamps against session records. Flag writes that occurred outside tracked sessions.",
+          "frequency": "Per session startup (T0 checkpoint)"
+        }
+      ],
+      "response_protocol": {
+        "immediate": "Block the item from learner pool delivery until pre-flight gates re-run and pass. Quarantine any affected QIDs.",
+        "remediation": "Re-run pre-flight gates on affected items. If gates fail, remediate. Document the bypass and close the governance gap.",
+        "prevention": "Governance automation (P5): all certification paths must pass through the same automated gate pipeline. No manual bypass paths. Every defect class with a known pattern must have a BLOCK-level governance guard rule."
+      }
+    },
+    {
+      "id": "DRIFT-5",
+      "category": "Untracked Artifacts",
+      "description": "Report files, scripts, or data artifacts that are produced but never consumed by any downstream tool, registry, or decision process",
+      "principle_violated": "P2 Scan Once Consume Many + P6 Traceability Everywhere",
+      "historical_evidence": {
+        "report_explosion": {
+          "total_files": "~1,227 report files across 178 sessions",
+          "unconsumed_rate": "65% (S201 Board 5 finding)",
+          "trend": "2.7 → 11.7 files per session",
+          "peak": "29 report files in a single session (S726)",
+          "impact": "Report files that are never consumed represent wasted agent effort and create noise that obscures genuinely important findings."
+        },
+        "one_off_patterns": {
+          "examples": [
+            "SESSION301 — 26 agent outputs, many used only within S301 and never referenced subsequently",
+            "SESSION200-207 — architecture design sessions produced ~50+ report files, of which ~15 feed ongoing operations",
+            "Root directory — 848 files in reports/ root, many with SESSION_ prefix indicating they were session-specific outputs"
+          ],
+          "impact": "One-off reports create a discovery problem — finding the authoritative report on any topic requires searching through hundreds of files."
+        }
+      },
+      "detection_signals": [
+        {
+          "signal": "A report file exists in reports/ that is not referenced by any registry, consuming tool, or cross-reference document",
+          "severity": "MEDIUM",
+          "automated_check": "Build a report-consumption graph: for each file in reports/, check if it is referenced by any file in knowledge/ (CURRENT_BASELINES, DEFECT_LIBRARY, REVISION_HISTORY, CAQS), governance/, or scripts/. Unreferenced files are untracked artifacts.",
+          "frequency": "Per session closeout"
+        },
+        {
+          "signal": "New report files are produced without a designated consumer in the session's output manifest",
+          "severity": "LOW",
+          "automated_check": "Session closeout check: every report file produced must have a documented consumer (a tool, a registry, a decision board, or a subsequent session). Files without a consumer are untracked by default.",
+          "frequency": "Per session"
+        }
+      ],
+      "response_protocol": {
+        "immediate": "None — untracked artifacts are not emergency. They are waste, not risk.",
+        "remediation": "Archive one-off reports that have no future consumption path. Catalog remaining reports and link to relevant registries.",
+        "prevention": "Session planning must include output-consumer mapping. No report should be produced without knowing who consumes it and when."
+      }
+    },
+    {
+      "id": "DRIFT-6",
+      "category": "Broken Traceability",
+      "description": "Entities referenced in one registry are absent from another, or registry claims disagree with raw source files",
+      "principle_violated": "P6 Traceability Everywhere",
+      "historical_evidence": {
+        "P1-EC-004_state_inconsistency": {
+          "entities": "P1-EC-004 (Pack C Section E, Domain E)",
+          "discrepancy": "Investigation API reported question_state 'Unprocessed'. REVISION_HISTORY.md recorded certification in S853.",
+          "root_cause": "Registry staleness — Investigation API consumed a pre-S853 registry snapshot.",
+          "status": "Flagged in S254 cross-engine consistency audit. Pending reconciliation.",
+          "learner_impact": "None (question is correctly Certified in raw file, delivery mechanism reads raw file question_state)."
+        },
+        "DL-019_concurrent_write_data_loss": {
+          "entities": "432 items (Pack C: 243, Pack D: 189)",
+          "discrepancy": "DL-008 remediation (Session A: 149 clears) was overwritten by DL-013 certification wave (Session B: wrote from pre-Session-A snapshot).",
+          "root_cause": "No file-lock or session-coordination mechanism. Two sessions operating on same files with different disk snapshots.",
+          "impact": "Had to re-remediate 432 items across 16 batches. No learner impact because items were non-Certified."
+        }
+      },
+      "detection_signals": [
+        {
+          "signal": "A registry reports an entity state that differs from the raw source file's state",
+          "severity": "CRITICAL",
+          "automated_check": "Cross-engine consistency scan (S254 pattern): for each entity type, compare registry claims against raw file values. Flag any mismatch.",
+          "frequency": "Per certification wave or per session with write operations"
+        },
+        {
+          "signal": "A session modifies a pack file but REVISION_HISTORY.md is not updated",
+          "severity": "HIGH",
+          "automated_check": "Governance guard Rule 1 WARN — detected at session idle. question_state changes without REVISION_HISTORY.md update trigger warning.",
+          "frequency": "Per session idle event"
+        },
+        {
+          "signal": "The same pack file is modified by two concurrent sessions",
+          "severity": "CRITICAL",
+          "automated_check": "Before every write to a pack file, verify no other session has written since the T0 hash capture. Hash mismatch at Tend without corresponding REVISION_HISTORY.md entry indicates concurrent write.",
+          "frequency": "Per write operation (Tmid checkpoint)"
+        }
+      ],
+      "response_protocol": {
+        "immediate": "For registry-vs-raw discrepancy: quarantine the registry claim. Trust the raw file. Flag for reconciliation.",
+        "remediation": "Re-run the registry generator from raw files. Update stale consumers. Document the root cause of the staleness.",
+        "prevention": "Traceability Everywhere principle. Every entity must have a single authoritative source. Registries must be re-generated from raw files before any operation that consumes them."
+      }
+    }
+  ],
+
+  "drift_monitoring_schedule": {
+    "t0_checkpoint": {
+      "description": "Session startup — verify all baselines",
+      "checks": ["Runtime file hashes vs CURRENT_BASELINES.md", "Governance guard test suite", "Certified count (direct grep)", "Certified DL-008 count (must be 0)"]
+    },
+    "tmid_checkpoint": {
+      "description": "Mid-session or after 2+ agents complete — verify no drift introduced",
+      "checks": ["Pack parse-count stability", "No new DL-008/DL-026 introduced", "No duplicate scan events detected"]
+    },
+    "tend_checkpoint": {
+      "description": "Session closeout — final drift check and REVISION_HISTORY.md entry",
+      "checks": ["Runtime hashes recaptured", "Certified count verified unchanged (read-only sessions) or documented change (write sessions)", "All 6 drift categories reviewed", "Cross-engine consistency scan", "Report-consumption graph updated"]
+    }
+  },
+
+  "automatic_escalation": {
+    "description": "Drift signals that trigger immediate governance intervention",
+    "signals": [
+      {"signal": "Unexpected hash change in any baseline file", "severity": "CRITICAL", "action": "Halt all agents; spawn governance agent; run G1-G5 reconciliation (Session 31 runbook)"},
+      {"signal": "Pack parse-count change (not equal to 500)", "severity": "CRITICAL", "action": "Halt all pack-write agents; re-parse via Function constructor"},
+      {"signal": "Certified denominator mismatch", "severity": "HIGH", "action": "Spawn ledger-reconciliation agent; verify via direct grep"},
+      {"signal": "Two agents report different defect counts for same (class, pack)", "severity": "HIGH", "action": "Independent third-agent verification; require QID-list evidence"},
+      {"signal": "New governance guard rule deployed but Certified items carry the defect", "severity": "HIGH", "action": "Quarantine affected QIDs; schedule remediation"},
+      {"signal": "Registry authority conflict detected", "severity": "HIGH", "action": "Halt consumers of conflicting registries; reconcile against raw files"}
+    ]
+  }
+}

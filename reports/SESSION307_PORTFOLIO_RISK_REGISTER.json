@@ -1,0 +1,95 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "modelVersion": "S307-1.0",
+  "totalRisks": 8,
+  "risks": [
+    {
+      "id": "S307-R001",
+      "classification": "certification",
+      "severity": "CRITICAL",
+      "domain": "E",
+      "description": "Domain E: 178 uncertified items (59.7% certified). 29 P0 items. Debt intensity: 1.00",
+      "source": "S306 UIQS + S304 BQS + S301 Inventory",
+      "remediation": "Domain E certification wave with EW authoring per CAQS §1.6",
+      "effort": "6-8 certification sessions",
+      "roi": "HIGH — certifies 178 items, addresses 29 P0, adds EW coverage for all"
+    },
+    {
+      "id": "S307-R002",
+      "classification": "certification",
+      "severity": "HIGH",
+      "domain": "F",
+      "description": "Domain F: 150 uncertified items (65.2% certified). 8 P0 items. Debt intensity: 0.88",
+      "source": "S306 UIQS + S304 BQS + S301 Inventory",
+      "remediation": "Domain F certification wave with EW authoring per CAQS §1.6",
+      "effort": "5-7 certification sessions",
+      "roi": "HIGH — certifies 150 items, addresses 8 P0, closes F gap"
+    },
+    {
+      "id": "S307-R003",
+      "classification": "instructional",
+      "severity": "CRITICAL",
+      "domain": "ALL",
+      "description": "Portfolio EW debt: 539 items with <30% ExplanationWrong fill. Case-bank EW fill rate: 3.9% (2,403 of 2,500 slots empty per S303/S305).",
+      "source": "S303 EQS + S305 ExQS + S302 DQS",
+      "remediation": "EW authoring pipeline prioritized by domain certification status",
+      "effort": "~15-20 sessions for full portfolio EW coverage",
+      "roi": "HIGH — direct learner feedback for wrong answers"
+    },
+    {
+      "id": "S307-R004",
+      "classification": "instructional",
+      "severity": "HIGH",
+      "domain": "ALL",
+      "description": "Average ExplanationCorrect length: 213 chars (MCQ). 77.9% of portfolio scores Grade F on instructional quality (S303).",
+      "source": "S303 EQS",
+      "remediation": "EC enrichment during certification waves; not standalone remediation",
+      "effort": "Incorporate into certification sessions",
+      "roi": "MEDIUM — secondary to EW gap"
+    },
+    {
+      "id": "S307-R005",
+      "classification": "governance",
+      "severity": "HIGH",
+      "domain": "A/C/D",
+      "description": "67 Certified items with DL-008 (non-empty ExplanationWrong[CorrectChoice]). Learner pool exposure. Pack C Section B cluster: 54 items.",
+      "source": "S800 Census + CURRENT_BASELINES.md",
+      "remediation": "DL-008 emergency remediation (S801-S803 per 800-series roadmap)",
+      "effort": "3 sessions",
+      "roi": "HIGH — learner safety, removes pool contamination"
+    },
+    {
+      "id": "S307-R006",
+      "classification": "governance",
+      "severity": "MEDIUM",
+      "domain": "D",
+      "description": "DL-026: 50 In Audit items in Pack D Section C with empty distractor EW slots. Blocks certification.",
+      "source": "S800 Census + CURRENT_BASELINES.md",
+      "remediation": "DL-026 authoring (1 per item, 50 total explanations)",
+      "effort": "2-3 sessions",
+      "roi": "MEDIUM — unblocks certification for 50 items"
+    },
+    {
+      "id": "S307-R007",
+      "classification": "modernization",
+      "severity": "MEDIUM",
+      "domain": "C/D",
+      "description": "Pack C/D Sections E/F: 112 clone-archived items with rotation-group artifacts. 86-90% clone rotation rates. ~765 items potentially archivable.",
+      "source": "S800 Census + S302 DQS",
+      "remediation": "Rewrite or archive clone-artifact items during certification waves",
+      "effort": "Integrated into certification sessions",
+      "roi": "MEDIUM — reduces pool noise, improves quality"
+    },
+    {
+      "id": "S307-R008",
+      "classification": "modernization",
+      "severity": "LOW",
+      "domain": "ALL",
+      "description": "DL-031 difficulty inflation: ~500 items with mismatched Difficulty/DifficultyScore vs CognitiveLevel. DL-013 template boilerplate: ~851 fields.",
+      "source": "S800 Census + S715-S716",
+      "remediation": "Deferred to certification wave quality sweeps",
+      "effort": "2-3 sessions",
+      "roi": "LOW — cosmetic, non-blocking"
+    }
+  ]
+}

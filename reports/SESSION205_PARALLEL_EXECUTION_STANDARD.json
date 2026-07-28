@@ -1,0 +1,122 @@
+{
+  "document": "SESSION205_PARALLEL_EXECUTION_STANDARD",
+  "session": "S205",
+  "board": "H — Parallel Execution Standard Activation",
+  "program": "Framework v2 Deployment Authorization",
+  "date": "2026-07-27",
+  "type": "Operational Standard Activation — Read-Only",
+  "status": "ACTIVATED",
+
+  "standard_definition": {
+    "standard_id": "V2-PAR-001",
+    "name": "Parallel By Default",
+    "category": "Operational Governance — Session Execution Protocol",
+    "activation_date": "2026-07-27",
+    "activated_by": "S205 Deployment Authorization Board (J)"
+  },
+
+  "principle": "All Framework v2 boards that do not depend on each other's outputs shall execute in parallel. Sequential execution is the exception, not the default. This applies to: board-level agents within a session, gate-level scans within the pipeline, and per-pack processing within each gate.",
+
+  "rules": [
+    {
+      "id": "PAR-R1",
+      "rule": "Independent boards execute in parallel. Certification Board, Quality Board, and Throughput Board have no mutual dependencies — all three consume different sections of the same Certification Scan Artifact.",
+      "enforcement": "Session orchestrator launches board agents simultaneously. Convergence occurs at the Governance Board, which consumes outputs from all boards."
+    },
+    {
+      "id": "PAR-R2",
+      "rule": "Gates within the scan pipeline execute sequentially (Gate -1 → Gate 0 → Gate 1 → Gate 2 → Gate 3 → Gate 4 → Gate 5). Scans within a gate execute in parallel.",
+      "enforcement": "Scan Orchestrator (S322 Script 3) enforces gate ordering. PG-001 through PG-009 (Gate 1) run in parallel. PG-010 and PG-011 (Gate 4) run in parallel."
+    },
+    {
+      "id": "PAR-R3",
+      "rule": "Per-pack processing within each gate executes in parallel. Pack A through Pack E are independent inputs — scan modules process all 5 packs simultaneously.",
+      "enforcement": "Gate scan modules receive all pack arrays and process them via parallel iteration (Promise.all or equivalent)."
+    },
+    {
+      "id": "PAR-R4",
+      "rule": "Convergence boards are required for independent streams. When boards execute in parallel, a Governance Board convergence step verifies consistency across all outputs before the Deployment Authorization Board (J) issues a decision.",
+      "enforcement": "Governance Board runs G1-G5 reconciliation if any board output disagrees with another board's output on the same item."
+    }
+  ],
+
+  "staffing_tables": {
+    "small_session": {
+      "scope": "A-F (6 boards, single-domain scan or focused remediation)",
+      "parallel_agents": 3,
+      "agent_assignment": [
+        "Agent 1: Scan Orchestrator (Gate -1 through Gate 4, all packs)",
+        "Agent 2: Quality Board + Certification Board (parallel — consume artifact sections 3-6)",
+        "Agent 3: Governance Board + Throughput Board (parallel — consume artifact sections 1-2, 7-9)"
+      ],
+      "convergence": "Agent 3 (Governance) reconciles Quality and Certification outputs",
+      "estimated_runtime": "~15 minutes"
+    },
+    "medium_session": {
+      "scope": "A-L (12 boards, full certification wave or multi-domain audit)",
+      "parallel_agents": 6,
+      "agent_assignment": [
+        "Agent 1: Scan Orchestrator (Gate -1 through Gate 4, all packs)",
+        "Agent 2: Registry Board (artifact generation + delta ledger update)",
+        "Agent 3: Quality Board (content + psychometric review)",
+        "Agent 4: Certification Board (READY items only per R6)",
+        "Agent 5: Throughput Board (metrics + cost analysis)",
+        "Agent 6: Governance Board (convergence verification + rule compliance)"
+      ],
+      "convergence": "Agent 6 (Governance) runs G1-G5 reconciliation across Agents 2-5 outputs",
+      "estimated_runtime": "~30 minutes"
+    },
+    "large_session": {
+      "scope": "A-Z (26 agents, full repository audit or migration event)",
+      "parallel_agents": 12,
+      "agent_assignment": [
+        "Agent 1: Scan Orchestrator (Gate -1 through Gate 4, all 5 packs in parallel)",
+        "Agents 2-3: Registry Board (artifact validation + lineage verification)",
+        "Agents 4-5: Quality Board (parallel — split by pack: A-C, D-E)",
+        "Agents 6-7: Certification Board (parallel — split by section: A-B, C-F)",
+        "Agents 8-9: Throughput Board (metrics + cost + forecast)",
+        "Agent 10: Administration Board (challenge workbench + RBAC validation)",
+        "Agent 11: Recommendation Board (REC-ID lifecycle review)",
+        "Agent 12: Governance Board (convergence + G1-G5 + G-NEW rules compliance)"
+      ],
+      "convergence": "Agent 12 (Governance) reconciles all board outputs. Any discrepancy triggers sub-agent investigation.",
+      "estimated_runtime": "~45 minutes"
+    }
+  },
+
+  "convergence_board_protocol": {
+    "trigger": "Any session with 3+ parallel board agents",
+    "execution": [
+      "Governance Board agent collects all board outputs",
+      "Runs G1 (count audit) — do all boards agree on item counts, certified counts, defect counts?",
+      "Runs G2 (state audit) — do all boards agree on question_state assignments?",
+      "Runs G3 (defect audit) — do all boards agree on defect classifications?",
+      "Runs G4 (hash audit) — do all boards reference the same artifact version?",
+      "Runs G5 (recommendation audit) — do all boards agree on active REC-IDs?"
+    ],
+    "resolution": "If all G1-G5 pass → proceed to Deployment Authorization Board. If any G1-G5 fail → halt and escalate per escalation paths.",
+    "escalation": "Same escalation paths defined in S205 Hybrid Mode Operations (Board D): hash_mismatch (CRITICAL), scan_artifact_corruption (HIGH), readiness_disagreement (MEDIUM), recommendation_conflict (LOW)."
+  },
+
+  "anti_patterns_prohibited": [
+    "Forcing single-agent sequential execution when boards have no mutual dependencies",
+    "Running per-pack scans sequentially when packs are independent inputs",
+    "Skipping convergence step after parallel board execution",
+    "Spawning duplicate agents for the same scan on the same pack (R8 violation)",
+    "Having certification board agents perform their own scans (R8 violation)"
+  ],
+
+  "activation_verdict": {
+    "verdict": "ACTIVATED — V2-PAR-001 Parallel By Default is now the standard execution protocol for all Framework v2 sessions.",
+    "conditions": "None. The standard is immediately effective for S206 and all subsequent sessions.",
+    "confidence": "HIGH — S204 pilot demonstrated correct parallel execution of 9 boards without conflict."
+  },
+
+  "cross_references": {
+    "session_53_runtime_governance": "reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md",
+    "session_31_reconciliation": "reports/SESSION31_RECONCILIATION_EXECUTION.md",
+    "hybrid_ops": "SESSION205_HYBRID_MODE_OPERATIONS.json",
+    "rule_8": "SESSION205_RULE8_DEPLOYMENT.json",
+    "s322_orchestrator": "scripts/scan_orchestrator.js"
+  }
+}

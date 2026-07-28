@@ -1,0 +1,129 @@
+{
+  "session": "S836",
+  "title": "50-Item Pilot Validation Cohort Report",
+  "date": "2026-07-27",
+  "status": "PILOT PLAN — execution pending authorization",
+  "pipeline": "Quality-First Authoring Pipeline (S836 Spec §quality_first_pipeline)",
+
+  "pilot_objectives": [
+    "Validate that the 6-stage quality-first pipeline produces zero defect-class items on first pass",
+    "Demonstrate that per-item authoring eliminates all 19 template-pipeline defect classes",
+    "Establish authoring time-per-item baseline for sprint planning (S837)",
+    "Test the pipeline on all 6 blueprint domains and all 5 cognitive levels",
+    "Verify governance guard catches any residual defects before certification"
+  ],
+
+  "cohort_design": {
+    "total_items": 50,
+    "composition_rationale": "50 items is 1 batch (governance guard Rule 5 permits ≤30 per change-set; split into 2 batches of 25). Covers all 6 domains, all 5 cognitive levels, both MCQ and case-item formats.",
+
+    "by_domain": {
+      "A_External_Financial_Reporting": { "count": 10, "target": "Balance sheet analysis, revenue recognition judgment, cash flow classification, lease vs. buy analysis" },
+      "B_Planning_Budgeting_Forecasting": { "count": 8, "target": "Flexible budget analysis, cash budget gap analysis, forecast accuracy evaluation, master budget interrelationships" },
+      "C_Performance_Management": { "count": 10, "target": "Multi-variance reconciliation, transfer pricing evaluation, ROI decomposition, balanced scorecard measure selection" },
+      "D_Cost_Management": { "count": 10, "target": "Make-or-buy with capacity constraints, CVP multi-product analysis, joint cost allocation comparison, ABC vs traditional comparison" },
+      "E_Internal_Controls": { "count": 7, "target": "Control deficiency severity assessment, COSO component gap analysis, fraud risk factor evaluation, SoD conflict identification" },
+      "F_Technology_Analytics": { "count": 5, "target": "Data visualization effectiveness, ERP control weakness, analytics method selection, system implementation risk" }
+    },
+
+    "by_cognitive_level": {
+      "Remember": { "count": 2, "purpose": "Baseline — verify pipeline handles simple items cleanly" },
+      "Understand": { "count": 5, "purpose": "Verify distractor engineering works for conceptual items" },
+      "Apply": { "count": 15, "purpose": "Core calculation items — verify independent solve + authority citation" },
+      "Analyze": { "count": 18, "purpose": "PRIMARY TARGET — validate pipeline produces authentic Analyze items" },
+      "Evaluate": { "count": 10, "purpose": "SECONDARY TARGET — validate pipeline produces authentic Evaluate items" }
+    },
+
+    "by_type": {
+      "MCQ_select": 35,
+      "MCQ_numeric": 5,
+      "Case_item_scenario": 10
+    },
+
+    "by_difficulty": {
+      "Moderate": 20,
+      "Difficult": 20,
+      "Very_Difficult": 10
+    }
+  },
+
+  "validation_methodology": {
+    "pre_certification_checks": [
+      "Stage 5 Evidence Review: all items must PASS all structural + content checks",
+      "Governance guard Rule 2 scan: 0 DL-008 across all 50 items",
+      "Governance guard Rule 6 scan: 0 DL-026 across all 50 items",
+      "Independent solve verification: CorrectChoice matches independent calculation for 100% of items",
+      "ASC/COSO citation cross-check: all citations verified against known-good standard-to-topic mapping",
+      "Distractor uniqueness: Jaccard similarity < 30% between any two distractor explanations on same item",
+      "Explanation completeness: all non-CC EW slots >= 50 chars, no template language"
+    ],
+
+    "post_certification_checks": [
+      "CAQS §1.6 six-dimension verification: all 50 items must achieve HIGH confidence on all 6 dimensions",
+      "Governance guard full suite: 32/32 PASS",
+      "Item renderability: all 50 items must render correctly in test harness",
+      "Learner review simulation: distractors must show correct feedback text"
+    ],
+
+    "defect_prevention_metrics": {
+      "target_zero_categories": [
+        "DL-008 (Non-empty EW[CC])",
+        "DL-010 (Misassigned explanations)",
+        "DL-013 (Template boilerplate)",
+        "DL-016 (Metadata-content mismatch)",
+        "DL-021 (Missing distractor EW)",
+        "DL-025/DL-026 (Empty non-CC EW)",
+        "DL-027 (Closing-tag boilerplate)",
+        "DL-031 (Definition-match difficulty inflation)"
+      ],
+      "acceptable_residual": [
+        "DL-003 (Absolute language): acceptable if in distractor explanations where 'never'/'always' is the misconception being flagged",
+        "DL-004 (Ambiguity): acceptable if 'generally'/'typically' reflects actual accounting standard language"
+      ]
+    }
+  },
+
+  "success_criteria": {
+    "critical_must_pass": [
+      "0 items with DL-008 (100% required)",
+      "0 items with DL-026 (100% required)",
+      "0 items with missing ExplanationWrong fields (100% required)",
+      "50/50 items pass governance guard Rules 2, 6",
+      "50/50 items achieve HIGH confidence on all 6 CAQS dimensions"
+    ],
+    "target_should_achieve": [
+      ">= 95% of items have < 30% Jaccard similarity between distractor explanations",
+      ">= 90% of items have correct ASC/COSO citation on first pass (pre-Stage 5 fix)",
+      ">= 90% of items have difficulty label matching independent cognitive assessment",
+      "Mean distractor ExplanationWrong length >= 100 characters"
+    ],
+    "pipeline_efficiency": [
+      "Time per item: < 15 minutes for Apply items",
+      "Time per item: < 25 minutes for Analyze items",
+      "Time per item: < 35 minutes for Evaluate items",
+      "Rejection rate at Stage 5: < 20%",
+      "Certification pass rate: >= 95% of items passing Stage 5 reach Stage 6 certification"
+    ]
+  },
+
+  "execution_plan": {
+    "batch_1": {
+      "items": "25 items (5 per domain, mix of Apply + Analyze)",
+      "purpose": "Test pipeline end-to-end on mid-tier items; establish baseline metrics",
+      "estimated_duration": "4-6 hours"
+    },
+    "batch_2": {
+      "items": "25 items (5 per domain, mix of Analyze + Evaluate + 2 Remember + 5 Understand)",
+      "purpose": "Test pipeline on higher-order items; validate Evaluate-level authoring capability",
+      "estimated_duration": "5-8 hours"
+    },
+    "total_estimated_duration": "9-14 hours"
+  },
+
+  "governance": {
+    "batch_cap": "≤30 items per batch (governance guard Rule 5)",
+    "backup_protocol": "Mandatory per BACKUP_PROTOCOL.md before any pack file write",
+    "revision_history": "REVISION_HISTORY.md entry required per batch",
+    "independent_verification": "Required after each batch"
+  }
+}

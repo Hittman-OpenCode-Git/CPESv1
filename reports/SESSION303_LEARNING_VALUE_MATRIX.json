@@ -1,0 +1,14 @@
+{
+  "totalItems": 3125,
+  "gradeDistribution": {
+    "A": 80,
+    "B": 253,
+    "C": 773,
+    "D": 2018,
+    "F": 1
+  },
+  "avgInstructionalUtility": "2.28",
+  "avgCoachingEffectiveness": "1.32",
+  "avgExamPrepValue": "2.07",
+  "avgTransferLearning": "1.64"
+}

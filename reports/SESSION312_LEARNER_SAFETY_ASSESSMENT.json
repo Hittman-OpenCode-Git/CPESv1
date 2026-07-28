@@ -1,0 +1,39 @@
+{
+  "title": "SESSION312_LEARNER_SAFETY_ASSESSMENT",
+  "session": "312",
+  "generated": "2026-07-27T00:04:03.174Z",
+  "itemsEvaluated": 10,
+  "assessmentDimensions": {
+    "ambiguity": {
+      "score": "LOW RISK",
+      "note": "All stems provide complete scenario data without hidden assumptions. No trick wording detected.",
+      "itemsFlagged": 0
+    },
+    "instructionalRisk": {
+      "score": "LOW RISK",
+      "note": "All EC fields provide substantive explanations with framework citations and reasoning. EW fields provide choice-specific feedback correcting specific misconceptions.",
+      "itemsFlagged": 0
+    },
+    "misconceptionRisk": {
+      "score": "LOW RISK",
+      "note": "Distractors represent genuine CMA-style traps based on documented learner error patterns. No 'throwaway' distractors.",
+      "itemsFlagged": 0
+    },
+    "answerMemorization": {
+      "score": "ELIMINATED",
+      "note": "All 10 replacement items use completely new stems and scenarios — no company-name rotation pattern. CorrectChoice distribution is varied.",
+      "itemsImproved": 10
+    },
+    "dl008Compliance": {
+      "score": "PASS",
+      "note": "All 10 items have empty EW[CorrectChoice]",
+      "itemsFlagged": 0
+    }
+  },
+  "comparisonToOriginals": {
+    "originalClonesRisk": "HIGH — identical stems, rotated answers, company-name-only differentiation. Learners could memorize patterns.",
+    "replacementRisk": "LOW — unique scenarios, professionally authored distractors, substantive explanations.",
+    "improvement": "SIGNIFICANT — each replacement eliminates a 1-seed-3-clone group that previously exposed learners to repetitive content."
+  },
+  "overallVerdict": "SAFE FOR LEARNER USE — No ambiguity, instructional risk, or misconception risk identified in exemplar batch."
+}

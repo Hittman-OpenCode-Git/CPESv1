@@ -1,0 +1,90 @@
+{
+  "session": "515",
+  "agent": "B",
+  "target": "CBQ2-A3 (ENHANCED_CASE_BASE2, scored_cases2.js)",
+  "total_items": 5,
+  "items": [
+    {
+      "ItemID": "CBQ2-A3-Q1",
+      "type": "numeric",
+      "cognitive_level": "Apply",
+      "D1_answer_key": "PASS",
+      "D2_explanation": "FAIL",
+      "D3_distractor": "N/A",
+      "D4_references": "FAIL",
+      "D5_realism": "PASS",
+      "D6_metadata": "FAIL",
+      "decision": "HOLD_BACK",
+      "holdback_reason": "Single-line explanation with formula only — no ASC 606 citation, no business interpretation, no common trap. Missing per-item Difficulty/DifficultyScore."
+    },
+    {
+      "ItemID": "CBQ2-A3-Q2",
+      "type": "numeric",
+      "cognitive_level": "Apply",
+      "D1_answer_key": "PASS",
+      "D2_explanation": "FAIL",
+      "D3_distractor": "N/A",
+      "D4_references": "PASS",
+      "D5_realism": "PASS",
+      "D6_metadata": "FAIL",
+      "decision": "HOLD_BACK",
+      "holdback_reason": "Formula correct but single-line only — no accounting principle named (allowance method/ASC 326), no business interpretation. Missing per-item Difficulty/DifficultyScore."
+    },
+    {
+      "ItemID": "CBQ2-A3-Q3",
+      "type": "multi",
+      "cognitive_level": "Evaluate",
+      "D1_answer_key": "PASS",
+      "D2_explanation": "FAIL",
+      "D3_distractor": "FAIL",
+      "D4_references": "FAIL",
+      "D5_realism": "PASS",
+      "D6_metadata": "FAIL",
+      "decision": "HOLD_BACK",
+      "holdback_reason": "Single-sentence for Evaluate-level multi-select — no ASC 606-10-25-19 citation, no wrong-choice rationale, no concept explanation. Missing per-item Difficulty/DifficultyScore."
+    },
+    {
+      "ItemID": "CBQ2-A3-Q4",
+      "type": "select",
+      "cognitive_level": "Analyze",
+      "D1_answer_key": "PASS",
+      "D2_explanation": "FAIL",
+      "D3_distractor": "FAIL",
+      "D4_references": "PASS",
+      "D5_realism": "PASS",
+      "D6_metadata": "FAIL",
+      "decision": "HOLD_BACK",
+      "holdback_reason": "Fragmentary explanation — shows calculation but no distractor analysis ($38k subtracts debit, $5k is debit alone, $43k ignores debit). Missing per-item Difficulty/DifficultyScore."
+    },
+    {
+      "ItemID": "CBQ2-A3-Q5",
+      "type": "fill",
+      "cognitive_level": "Understand",
+      "D1_answer_key": "PASS",
+      "D2_explanation": "FAIL",
+      "D3_distractor": "N/A",
+      "D4_references": "PASS",
+      "D5_realism": "PASS",
+      "D6_metadata": "FAIL",
+      "decision": "HOLD_BACK",
+      "holdback_reason": "Single-sentence without naming the accounting principle or contrasting with income statement approach. Missing per-item Difficulty/DifficultyScore."
+    }
+  ],
+  "summary": {
+    "certify_count": 0,
+    "holdback_count": 5,
+    "d1_pass": 5,
+    "d2_pass": 0,
+    "d3_pass": 0,
+    "d3_na": 3,
+    "d4_pass": 3,
+    "d5_pass": 5,
+    "d6_pass": 0,
+    "calculation_verification": {
+      "Q1": "$363,636 — ($400k/$550k)×$500k = $363,636.36 → rounds to $363,636. CORRECT.",
+      "Q2": "$43,000 — ($800k×1%)+($300k×5%)+($100k×20%) = $8k+$15k+$20k = $43,000. CORRECT.",
+      "Q4": "$48,000 — Target $43k credit, current $5k debit. $43k+$5k=$48k. CORRECT."
+    },
+    "notes": "All calculations independently verified as correct. Content foundation is sound — answers are accurate and case-relevant. The holdbacks are entirely for pedagogical quality (thin explanations, no citations, no distractor rationale, no per-item Difficulty). CBQ2-A3 needs explanation uplift before certification. No D1 answer-key defects found."
+  }
+}

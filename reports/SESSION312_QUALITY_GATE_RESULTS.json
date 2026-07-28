@@ -1,0 +1,330 @@
+{
+  "title": "SESSION312_QUALITY_GATE_RESULTS",
+  "session": "312",
+  "generated": "2026-07-27T00:04:03.671Z",
+  "itemsValidated": 10,
+  "gates": {
+    "gate1_passRate": "100.0%",
+    "gate2_passRate": "100.0%",
+    "gate3_passRate": "100.0%",
+    "gate4_passRate": "0.0%",
+    "allGatesPass": false,
+    "itemsWithIssues": [
+      "P1-E-R01",
+      "P1-E-R02",
+      "P1-E-R03",
+      "P1-E-R04",
+      "P1-E-R05",
+      "P1-E-R06",
+      "P1-E-R07",
+      "P1-E-R08",
+      "P1-E-R09",
+      "P1-E-R10"
+    ]
+  },
+  "issues": [
+    {
+      "qid": "P1-E-R01",
+      "gate": "G4_QA",
+      "issue": "EC may lack substantive reasoning"
+    },
+    {
+      "qid": "P1-E-R01",
+      "gate": "G4_QA",
+      "issue": "EW[C] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R01",
+      "gate": "G4_QA",
+      "issue": "EW[D] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R02",
+      "gate": "G4_QA",
+      "issue": "EC may lack substantive reasoning"
+    },
+    {
+      "qid": "P1-E-R02",
+      "gate": "G4_QA",
+      "issue": "EW[B] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R03",
+      "gate": "G4_QA",
+      "issue": "EC may lack framework/standard citation"
+    },
+    {
+      "qid": "P1-E-R03",
+      "gate": "G4_QA",
+      "issue": "EC may lack substantive reasoning"
+    },
+    {
+      "qid": "P1-E-R03",
+      "gate": "G4_QA",
+      "issue": "EW[B] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R03",
+      "gate": "G4_QA",
+      "issue": "EW[C] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R03",
+      "gate": "G4_QA",
+      "issue": "EW[D] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R04",
+      "gate": "G4_QA",
+      "issue": "EC may lack framework/standard citation"
+    },
+    {
+      "qid": "P1-E-R04",
+      "gate": "G4_QA",
+      "issue": "EC may lack substantive reasoning"
+    },
+    {
+      "qid": "P1-E-R04",
+      "gate": "G4_QA",
+      "issue": "EW[D] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R05",
+      "gate": "G4_QA",
+      "issue": "EC may lack framework/standard citation"
+    },
+    {
+      "qid": "P1-E-R05",
+      "gate": "G4_QA",
+      "issue": "EW[B] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R05",
+      "gate": "G4_QA",
+      "issue": "EW[C] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R05",
+      "gate": "G4_QA",
+      "issue": "EW[D] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R06",
+      "gate": "G4_QA",
+      "issue": "EW[D] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R07",
+      "gate": "G4_QA",
+      "issue": "EC may lack substantive reasoning"
+    },
+    {
+      "qid": "P1-E-R07",
+      "gate": "G4_QA",
+      "issue": "EW[A] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R07",
+      "gate": "G4_QA",
+      "issue": "EW[B] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R07",
+      "gate": "G4_QA",
+      "issue": "EW[C] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R08",
+      "gate": "G4_QA",
+      "issue": "EW[B] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R08",
+      "gate": "G4_QA",
+      "issue": "EW[D] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R09",
+      "gate": "G4_QA",
+      "issue": "EC may lack substantive reasoning"
+    },
+    {
+      "qid": "P1-E-R09",
+      "gate": "G4_QA",
+      "issue": "EW[B] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R10",
+      "gate": "G4_QA",
+      "issue": "EW[A] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R10",
+      "gate": "G4_QA",
+      "issue": "EW[C] may not be choice-specific — doesn't reference choice letter"
+    },
+    {
+      "qid": "P1-E-R10",
+      "gate": "G4_QA",
+      "issue": "EW[D] may not be choice-specific — doesn't reference choice letter"
+    }
+  ],
+  "batchDistribution": {
+    "difficulty": {
+      "Moderate": 7,
+      "Easy": 2,
+      "Moderate-Easy": 1
+    },
+    "cognitiveLevel": {
+      "Apply": 6,
+      "Understand": 3,
+      "Remember": 1
+    }
+  },
+  "ewStats": {
+    "totalSlots": 40,
+    "compliant": 30,
+    "coveragePercent": "75.0%"
+  },
+  "perItemResults": [
+    {
+      "QuestionID": "P1-E-R01",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EC may lack substantive reasoning",
+        "EW[C] may not be choice-specific — doesn't reference choice letter",
+        "EW[D] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R02",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EC may lack substantive reasoning",
+        "EW[B] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R03",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EC may lack framework/standard citation",
+        "EC may lack substantive reasoning",
+        "EW[B] may not be choice-specific — doesn't reference choice letter",
+        "EW[C] may not be choice-specific — doesn't reference choice letter",
+        "EW[D] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R04",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EC may lack framework/standard citation",
+        "EC may lack substantive reasoning",
+        "EW[D] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R05",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EC may lack framework/standard citation",
+        "EW[B] may not be choice-specific — doesn't reference choice letter",
+        "EW[C] may not be choice-specific — doesn't reference choice letter",
+        "EW[D] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R06",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EW[D] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R07",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EC may lack substantive reasoning",
+        "EW[A] may not be choice-specific — doesn't reference choice letter",
+        "EW[B] may not be choice-specific — doesn't reference choice letter",
+        "EW[C] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R08",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EW[B] may not be choice-specific — doesn't reference choice letter",
+        "EW[D] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R09",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EC may lack substantive reasoning",
+        "EW[B] may not be choice-specific — doesn't reference choice letter"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R10",
+      "gate1": "PASS",
+      "gate2": "PASS",
+      "gate3": "PASS",
+      "gate4": "FAIL",
+      "gate2_issues": [],
+      "gate3_issues": [],
+      "gate4_issues": [
+        "EW[A] may not be choice-specific — doesn't reference choice letter",
+        "EW[C] may not be choice-specific — doesn't reference choice letter",
+        "EW[D] may not be choice-specific — doesn't reference choice letter"
+      ]
+    }
+  ]
+}

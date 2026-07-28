@@ -1,0 +1,71 @@
+{
+  "session": "310",
+  "title": "Portfolio Health Index — Composite Quality Score",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "portfolioHealthIndex": "69.7",
+  "grade": "C",
+  "components": {
+    "certificationHealth": {
+      "score": "87.3",
+      "weight": 25,
+      "contribution": "21.8",
+      "status": "NEEDS_ATTENTION"
+    },
+    "qualityHealth": {
+      "score": "68.8",
+      "weight": 25,
+      "contribution": "17.2",
+      "status": "NEEDS_IMPROVEMENT"
+    },
+    "ewHealth": {
+      "score": "75.6",
+      "weight": 25,
+      "contribution": "18.9",
+      "status": "TRANSITIONING"
+    },
+    "modernizationHealth": {
+      "score": "15.0",
+      "weight": 15,
+      "contribution": "2.3",
+      "status": "DEFERRED"
+    },
+    "governanceHealth": {
+      "score": "95.0",
+      "weight": 10,
+      "contribution": "9.5",
+      "status": "STRONG"
+    }
+  },
+  "trend": {
+    "direction": "IMPROVING",
+    "drivers": [
+      "Domain E replacement (projected +16.5 UIQS)",
+      "Domain F authoring (projected +15.5 UIQS)",
+      "Case-bank EW rollout (+76.1% fill improvement)"
+    ],
+    "projectedPost800Series": "82.5 (B+ grade)"
+  },
+  "recommendations": [
+    {
+      "priority": 1,
+      "action": "Execute Domain E replacement (129 items)",
+      "impact": "+4.1 PHI points"
+    },
+    {
+      "priority": 2,
+      "action": "Execute Domain F authoring (149 items)",
+      "impact": "+3.9 PHI points"
+    },
+    {
+      "priority": 3,
+      "action": "Deploy EW factory for case banks",
+      "impact": "+5.6 PHI points"
+    },
+    {
+      "priority": 4,
+      "action": "Trigger modernization post-cert",
+      "impact": "+2.1 PHI points"
+    }
+  ]
+}

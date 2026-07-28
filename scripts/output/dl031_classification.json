@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-07-28T18:40:19.178Z",
+  "total_scanned": 62,
+  "by_classification": {
+    "Calibration": 61,
+    "Rewrite Required": 1
+  },
+  "simple_relabels": [],
+  "calibation": 61,
+  "rewrite_required": 1
+}

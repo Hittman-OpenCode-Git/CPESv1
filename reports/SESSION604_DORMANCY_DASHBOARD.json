@@ -1,0 +1,61 @@
+{
+  "session": "S604",
+  "agent": "H",
+  "role": "Dormancy Dashboard Refresh",
+  "generated": "2026-07-26",
+  "decision": "DASHBOARD_REFRESHED_DORMANCY_STABLE",
+  "activation_dashboard": {
+    "freeze_status": "ACTIVATION_FREEZE_SECURE",
+    "gates_passed": 0,
+    "gates_total": 4,
+    "activation_probability": 0,
+    "all_gates_fail": true,
+    "economic_gate_brightness": "RED — Net -2.5, worsening trend (remaining workload 289 vs. 299)",
+    "board_gate_brightness": "RED — 0/3 lead confirmations",
+    "ownership_gate_brightness": "RED — 3 conflicts blocking (C-001, C-002, C-005)",
+    "baseline_gate_brightness": "RED — no activation authorized",
+    "healthy_dormancy": true
+  },
+  "trigger_dashboard": {
+    "registry_version": "1.0",
+    "registry_certified": true,
+    "triggers_total": 24,
+    "triggers_met": 0,
+    "triggers_flipped_since_S603": 0,
+    "registry_integrity": "INTACT",
+    "prohibited_paths_intact": 7,
+    "prohibited_paths_breached": 0
+  },
+  "ownership_dashboard": {
+    "boundary_integrity": 95,
+    "conflicts_total": 5,
+    "conflicts_open": 1,
+    "conflicts_carry_forward": 2,
+    "conflicts_accepted": 2,
+    "conflicts_resolved": 0,
+    "conflicts_new": 0,
+    "severity_high": 1,
+    "severity_medium": 2,
+    "severity_low": 2
+  },
+  "reserve_lane_status": {
+    "lane": "600-series — Content Operations & Authoring Infrastructure",
+    "status": "DORMANT AND GOVERNED",
+    "charter": "v1.0 (S600, 361 lines, ratified 2026-07-26)",
+    "sessions_since_charter": 4,
+    "active_agents": 0,
+    "content_artifacts": 0,
+    "governance_artifacts": "17 files in reports/ (S601-S604)",
+    "monitoring_cadences": 4,
+    "drift_signals": 6,
+    "drift_signals_active": 0,
+    "portfolio_position": "DORMANT — between 300 (Analytics, ACTIVE) and 800 (Certification, ACTIVE)"
+  },
+  "health_summary": {
+    "dormancy_stability": "GREEN — stable, no drift",
+    "governance_debt": "YELLOW — GAP-3 still OPEN, 0/6 acceptances, 3 missed deadlines",
+    "activation_risk": "GREEN — structurally blocked at 0/4 gates",
+    "cross_lane_boundaries": "GREEN — all boundaries PRESERVED (95/100)",
+    "overall": "GREEN — healthy dormancy with known, non-critical governance debt"
+  }
+}

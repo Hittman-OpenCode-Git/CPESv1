@@ -1,0 +1,25 @@
+{
+  "agent": "K",
+  "session": "S301",
+  "phase": 4,
+  "domain": "Remediation Categories",
+  "categories": [
+    { "id": "RC-01", "name": "Mechanical Clear", "defects": ["DL-008 Bucket 1 (calculation summaries)"], "action": "Set ExplanationWrong[CC] to empty string", "effort_tier": "low", "items_per_session": 75, "batchable": true },
+    { "id": "RC-02", "name": "Template Boilerplate Removal", "defects": ["DL-013"], "action": "Replace generic template EW text with choice-specific explanations", "effort_tier": "medium", "items_per_session": 50, "batchable": false },
+    { "id": "RC-03", "name": "EW[CC] Fragmentary Remediation", "defects": ["DL-008 Bucket 2 (fragmentary conceptual)"], "action": "Editorial review per item — merge into EC, relocate, or remove", "effort_tier": "medium", "items_per_session": 30, "batchable": false },
+    { "id": "RC-04", "name": "CorrectChoice Answer-Key Fix", "defects": ["DL-030"], "action": "Expert review: re-derive answer, rotate CC, adjust EW slots, 20% independent verification", "effort_tier": "high", "items_per_session": 10, "batchable": false },
+    { "id": "RC-05", "name": "Authority Citation Correction", "defects": ["DL-009"], "action": "Cross-check ASC citation against topic → standard mapping, update citation", "effort_tier": "medium", "items_per_session": 40, "batchable": true },
+    { "id": "RC-06", "name": "Missing Field Insertion", "defects": ["DL-024"], "action": "Add question_state field to items without it via mechanical insert", "effort_tier": "low", "items_per_session": 75, "batchable": true },
+    { "id": "RC-07", "name": "Backtick-Newline Corruption Fix", "defects": ["DL-017"], "action": "Replace backtick-newline artifacts with proper JSON separators", "effort_tier": "medium", "items_per_session": 50, "batchable": true },
+    { "id": "RC-08", "name": "Distractor Quality Enhancement", "defects": ["DL-005 identical/similar distractors"], "action": "Rewrite distractors to target distinct misconceptions", "effort_tier": "high", "items_per_session": 15, "batchable": false },
+    { "id": "RC-09", "name": "Absolute Language Reduction", "defects": ["DL-003 always/never in choices"], "action": "Replace absolute terms with qualified language or verify technical justification", "effort_tier": "medium", "items_per_session": 40, "batchable": true },
+    { "id": "RC-10", "name": "Empty EW Slot Fill", "defects": ["DL-026"], "action": "Write choice-specific distractor explanations for empty non-CC EW slots", "effort_tier": "high", "items_per_session": 20, "batchable": false },
+    { "id": "RC-11", "name": "Clone Group Audit", "defects": ["DL-012"], "action": "Audit 56-item clone groups for CC accuracy, then either certify or remediate", "effort_tier": "high", "items_per_session": 15, "batchable": false },
+    { "id": "RC-12", "name": "Content-Metadata Offset Fix", "defects": ["DL-016"], "action": "Realign metadata block with content block in paired-object format", "effort_tier": "high", "items_per_session": 20, "batchable": false }
+  ],
+  "effort_tier_definitions": {
+    "low": "Mechanical fix with zero content judgment. Can batch 75+ items/session.",
+    "medium": "Requires editorial judgment but pattern is consistent. 30-50 items/session.",
+    "high": "Requires expert accounting/psychometric review per item. 10-25 items/session."
+  }
+}

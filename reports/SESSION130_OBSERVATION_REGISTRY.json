@@ -1,0 +1,862 @@
+{
+  "session": "S130",
+  "meta": {
+    "description": "Complete catalog of learner observations produced by the S120–S129 coaching chain across may-core.js (May orchestrator) and may-learner-state.js (learner state persistence).",
+    "sourceFiles": [
+      "may-core.js (6284 lines)",
+      "may-learner-state.js (1501 lines)"
+    ],
+    "analyzedCoachingChain": [
+      "S120 – _buildTutorExplanation / tutor-layer explanation structure",
+      "S121 – _buildWrongChoiceCoaching / wrong-choice misconception coaching",
+      "S122 – _inferMisconception / per-distractor misconception inference",
+      "S123 – _generateNextBestStep / next-best-step action plan with error categories",
+      "S124 – _identifyLearningPatterns / evidence-backed learning pattern observations",
+      "S125 – _suggestFocusAreas / evidence-based focus area suggestions",
+      "S126 – _generateSessionRecap / session recap with strengths/weaknesses/misconceptions",
+      "S127 – _generateWeeklyDigest / weekly learning digest",
+      "S128 – _generateStudyStrategy / personalized study strategy",
+      "S129 – _generateStrategyEffectiveness / strategy effectiveness analytics; recommendation outcome tracking"
+    ]
+  },
+  "observations": [
+    {
+      "category": "strength",
+      "observationType": "topic_strength",
+      "generatingSubsystems": ["S124"],
+      "generatingFunctions": ["May._identifyLearningPatterns ~line 1257–1265"],
+      "evidenceFields": ["topic", "accuracy", "totalAttempts"],
+      "minDataThreshold": { "attempts": 3, "sessions": 0 },
+      "thresholdCondition": "topic accuracy >= 85%",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "topicPerformance[topic].accuracy / totalAttempts"
+    },
+    {
+      "category": "strength",
+      "observationType": "improving_cluster",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getWeaknessClusters ~line 264"],
+      "evidenceFields": ["topic", "accuracy", "recentPct", "delta", "totalAttempts"],
+      "minDataThreshold": { "attempts": 0, "sessions": 1 },
+      "thresholdCondition": "delta >= 15 (recentPct - overallAccuracy >= 15)",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "clusters.improving[]"
+    },
+    {
+      "category": "strength",
+      "observationType": "strongest_areas_session",
+      "generatingSubsystems": ["S126"],
+      "generatingFunctions": ["May._generateSessionRecap ~line 2966–2971"],
+      "evidenceFields": ["topic", "correctCount", "totalCount", "accuracyPct"],
+      "minDataThreshold": { "attempts": 1, "sessions": 1 },
+      "thresholdCondition": "top-2 topics by accuracy within a single session",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.improving_cluster",
+      "sourceFieldInLearnerState": "derived from sessionObj.mcqs answers"
+    },
+    {
+      "category": "strength",
+      "observationType": "strongest_topics_weekly",
+      "generatingSubsystems": ["S127"],
+      "generatingFunctions": ["May._generateWeeklyDigest ~line 3112–3122"],
+      "evidenceFields": ["topic", "correctCount", "totalCount", "accuracyPct"],
+      "minDataThreshold": { "attempts": 3, "sessions": 2 },
+      "thresholdCondition": "topic accuracy >= 70% with >= 3 attempts in last 7 sessions",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.improving_cluster",
+      "sourceFieldInLearnerState": "derived from lookbackSessions attempts"
+    },
+    {
+      "category": "strength",
+      "observationType": "well_established",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getProgressInsight ~line 2770–2774"],
+      "evidenceFields": ["topic", "stability", "accuracy"],
+      "minDataThreshold": { "attempts": 0, "sessions": 0 },
+      "thresholdCondition": "stability >= 80 AND accuracy >= 70",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getTrends() stability / accuracy fields"
+    },
+    {
+      "category": "strength",
+      "observationType": "growing_independence",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getProgressInsight ~line 2751–2758"],
+      "evidenceFields": ["topic", "accuracy", "hintTrend"],
+      "minDataThreshold": { "attempts": 4, "sessions": 0 },
+      "thresholdCondition": "hintTrend === 'decreasing' AND accuracy >= 60",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getTrends() hintTrend / accuracy fields"
+    },
+    {
+      "category": "strength",
+      "observationType": "performing_under_pressure",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getProgressInsight ~line 2762–2766"],
+      "evidenceFields": ["topic", "accuracy", "avgDifficulty"],
+      "minDataThreshold": { "attempts": 0, "sessions": 0 },
+      "thresholdCondition": "avgDifficulty >= 4 AND accuracy >= 70",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getTrends() avgDifficulty / accuracy fields"
+    },
+    {
+      "category": "weakness",
+      "observationType": "persistent_weakness_S124",
+      "generatingSubsystems": ["S124"],
+      "generatingFunctions": ["May._identifyLearningPatterns ~line 1268–1274"],
+      "evidenceFields": ["topic", "accuracy", "attempts"],
+      "minDataThreshold": { "attempts": 5, "sessions": 0 },
+      "thresholdCondition": "topic accuracy < 60% with >= 5 attempts",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.persistentWeak_cluster",
+      "sourceFieldInLearnerState": "topicPerformance[topic].accuracy / totalAttempts"
+    },
+    {
+      "category": "weakness",
+      "observationType": "persistentWeak_cluster",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getWeaknessClusters ~line 263"],
+      "evidenceFields": ["topic", "accuracy", "recentPct", "delta", "direction", "stability", "hintTrend", "totalAttempts"],
+      "minDataThreshold": { "attempts": 5, "sessions": 1 },
+      "thresholdCondition": "accuracy < 60% AND totalAttempts >= 5",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "clusters.persistentWeak[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "declining_cluster",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getWeaknessClusters ~line 265"],
+      "evidenceFields": ["topic", "accuracy", "recentPct", "delta", "direction", "stability", "totalAttempts"],
+      "minDataThreshold": { "attempts": 0, "sessions": 1 },
+      "thresholdCondition": "delta <= -15",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "clusters.declining[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "unstable_cluster",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getWeaknessClusters ~line 266"],
+      "evidenceFields": ["topic", "accuracy", "stability", "totalAttempts"],
+      "minDataThreshold": { "attempts": 4, "sessions": 1 },
+      "thresholdCondition": "stability < 50 AND totalAttempts >= 4",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "clusters.unstable[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "hintDependent_cluster",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getWeaknessClusters ~line 267"],
+      "evidenceFields": ["topic", "accuracy", "hintTrend", "totalAttempts"],
+      "minDataThreshold": { "attempts": 4, "sessions": 1 },
+      "thresholdCondition": "hintTrend === 'increasing' AND accuracy >= 70",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "clusters.hintDependent[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "difficultySensitive_cluster",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getWeaknessClusters ~line 269–274"],
+      "evidenceFields": ["topic", "lowPct", "highPct", "lowDiffAttempts", "highDiffAttempts"],
+      "minDataThreshold": { "attempts": 2, "sessions": 0 },
+      "thresholdCondition": "lowPct - highPct >= 0.3 (30% gap) AND easy >= 2 attempts AND hard >= 2 attempts",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "clusters.difficultySensitive[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "most_frequent_mistakes_session",
+      "generatingSubsystems": ["S126"],
+      "generatingFunctions": ["May._generateSessionRecap ~line 2976–2989"],
+      "evidenceFields": ["topic", "correctCount", "totalCount", "accuracyPct"],
+      "minDataThreshold": { "attempts": 1, "sessions": 1 },
+      "thresholdCondition": "topic accuracy < 60% within a single session",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.persistentWeak_cluster",
+      "sourceFieldInLearnerState": "derived from sessionObj.mcqs answers"
+    },
+    {
+      "category": "weakness",
+      "observationType": "topics_needing_attention_weekly",
+      "generatingSubsystems": ["S127"],
+      "generatingFunctions": ["May._generateWeeklyDigest ~line 3127–3138"],
+      "evidenceFields": ["topic", "correctCount", "totalCount", "accuracyPct"],
+      "minDataThreshold": { "attempts": 3, "sessions": 2 },
+      "thresholdCondition": "topic accuracy < 60% with >= 3 attempts in last 7 sessions",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.persistentWeak_cluster",
+      "sourceFieldInLearnerState": "derived from lookbackSessions attempts"
+    },
+    {
+      "category": "weakness",
+      "observationType": "slipping_accuracy_insight",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getWeaknessInsight ~line 2848–2854"],
+      "evidenceFields": ["topic", "accuracy", "recentPct", "delta"],
+      "minDataThreshold": { "attempts": 0, "sessions": 1 },
+      "thresholdCondition": "cluster type 'declining' (delta <= -15)",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.declining_cluster",
+      "sourceFieldInLearnerState": "clusters.declining[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "inconsistent_performance_insight",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getWeaknessInsight ~line 2858–2864"],
+      "evidenceFields": ["topic", "accuracy", "stability"],
+      "minDataThreshold": { "attempts": 4, "sessions": 1 },
+      "thresholdCondition": "cluster type 'unstable' (stability < 50)",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.unstable_cluster",
+      "sourceFieldInLearnerState": "clusters.unstable[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "hint_dependency_insight",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getWeaknessInsight ~line 2868–2874"],
+      "evidenceFields": ["topic", "accuracy", "hintTrend"],
+      "minDataThreshold": { "attempts": 4, "sessions": 1 },
+      "thresholdCondition": "cluster type 'hintDependent' (hintTrend increasing, accuracy >= 70)",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.hintDependent_cluster",
+      "sourceFieldInLearnerState": "clusters.hintDependent[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "difficulty_gap_insight",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getWeaknessInsight ~line 2878–2884"],
+      "evidenceFields": ["topic", "lowPct", "highPct"],
+      "minDataThreshold": { "attempts": 2, "sessions": 1 },
+      "thresholdCondition": "cluster type 'difficultySensitive' (gap >= 30%)",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.difficultySensitive_cluster",
+      "sourceFieldInLearnerState": "clusters.difficultySensitive[]"
+    },
+    {
+      "category": "weakness",
+      "observationType": "lowest_accuracy_fallback",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getWeaknessInsight ~line 2889–2897"],
+      "evidenceFields": ["topic", "accuracy", "totalAttempts"],
+      "minDataThreshold": { "attempts": 3, "sessions": 1 },
+      "thresholdCondition": "bottom-4 topics by accuracy when no cluster content available",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.persistentWeak_cluster",
+      "sourceFieldInLearnerState": "getTrends() accuracy field"
+    },
+    {
+      "category": "weakness",
+      "observationType": "focus_area_persistent_weak",
+      "generatingSubsystems": ["S125"],
+      "generatingFunctions": ["May._suggestFocusAreas ~line 1395–1402"],
+      "evidenceFields": ["topic", "accuracy", "attempts", "threshold"],
+      "minDataThreshold": { "attempts": 5, "sessions": 0 },
+      "thresholdCondition": "accuracy < 60% with >= 5 attempts, priority 'high'",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.persistentWeak_cluster",
+      "sourceFieldInLearnerState": "topicProgress[topic].accuracy / totalAttempts"
+    },
+    {
+      "category": "weakness",
+      "observationType": "focus_area_calculation_miss",
+      "generatingSubsystems": ["S125"],
+      "generatingFunctions": ["May._suggestFocusAreas ~line 1404–1414"],
+      "evidenceFields": ["topic", "reason"],
+      "minDataThreshold": { "attempts": 1, "sessions": 0 },
+      "thresholdCondition": "current question is a calculation item AND learner answered wrong",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "derived from current question + learner answer"
+    },
+    {
+      "category": "misconception",
+      "observationType": "recurring_misconception_S124",
+      "generatingSubsystems": ["S124"],
+      "generatingFunctions": ["May._identifyLearningPatterns ~line 1288–1313"],
+      "evidenceFields": ["pattern", "count", "_topics"],
+      "minDataThreshold": { "attempts": 2, "sessions": 1 },
+      "thresholdCondition": "misconceptionPatterns entry with count >= 2 and matching topic",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.misconceptionPatterns",
+      "sourceFieldInLearnerState": "data.misconceptionPatterns[]"
+    },
+    {
+      "category": "misconception",
+      "observationType": "misconceptionPatterns_persisted",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState._trackMisconception ~line 194–217", "MayLearnerState.load ~line 65–79"],
+      "evidenceFields": ["pattern", "count", "questionIds", "_topics", "firstSeen", "lastSeen"],
+      "minDataThreshold": { "attempts": 1, "sessions": 1 },
+      "thresholdCondition": "any wrong answer triggered; patternKey derived from topic name heuristics",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "data.misconceptionPatterns[]"
+    },
+    {
+      "category": "misconception",
+      "observationType": "key_misconceptions_session",
+      "generatingSubsystems": ["S126"],
+      "generatingFunctions": ["May._generateSessionRecap ~line 2992–3012"],
+      "evidenceFields": ["patternName", "count"],
+      "minDataThreshold": { "attempts": 2, "sessions": 1 },
+      "thresholdCondition": "misconceptionPatterns entry with count >= 2",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.misconceptionPatterns",
+      "sourceFieldInLearnerState": "data.misconceptionPatterns[]"
+    },
+    {
+      "category": "misconception",
+      "observationType": "most_common_misconceptions_weekly",
+      "generatingSubsystems": ["S127"],
+      "generatingFunctions": ["May._generateWeeklyDigest ~line 3141–3160"],
+      "evidenceFields": ["patternName", "count"],
+      "minDataThreshold": { "attempts": 2, "sessions": 2 },
+      "thresholdCondition": "misconceptionPatterns entry with count >= 2",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.misconceptionPatterns",
+      "sourceFieldInLearnerState": "data.misconceptionPatterns[]"
+    },
+    {
+      "category": "misconception",
+      "observationType": "recurring_traps_insight",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getWeaknessInsight ~line 2901–2922"],
+      "evidenceFields": ["patternName", "count", "topicCount"],
+      "minDataThreshold": { "attempts": 2, "sessions": 1 },
+      "thresholdCondition": "misconceptionPatterns entry with count >= 2",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.misconceptionPatterns",
+      "sourceFieldInLearnerState": "data.misconceptionPatterns[]"
+    },
+    {
+      "category": "misconception",
+      "observationType": "explain_your_mistake_pattern",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._explainYourMistake ~line 2696–2711"],
+      "evidenceFields": ["patternName", "count", "topic"],
+      "minDataThreshold": { "attempts": 2, "sessions": 1 },
+      "thresholdCondition": "misconceptionPatterns entry with count >= 2 matching current topic",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.misconceptionPatterns",
+      "sourceFieldInLearnerState": "data.misconceptionPatterns[]"
+    },
+    {
+      "category": "misconception",
+      "observationType": "per_distractor_misconception",
+      "generatingSubsystems": ["S121", "S122"],
+      "generatingFunctions": ["May._buildWrongChoiceCoaching ~line 1859–1860", "May._inferMisconception ~line 1931–1954"],
+      "evidenceFields": ["choiceLabel", "choiceText", "whyTempting", "whyWrong", "misconception", "avoidNextTime"],
+      "minDataThreshold": { "attempts": 1, "sessions": 0 },
+      "thresholdCondition": "current question has choices and ExplanationWrong text or fallback",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "derived from question ExplanationWrong[] fields"
+    },
+    {
+      "category": "misconception",
+      "observationType": "focus_area_misconception_pattern",
+      "generatingSubsystems": ["S125"],
+      "generatingFunctions": ["May._suggestFocusAreas ~line 1417–1441"],
+      "evidenceFields": ["pattern", "count", "type"],
+      "minDataThreshold": { "attempts": 2, "sessions": 1 },
+      "thresholdCondition": "misconceptionPatterns entry with count >= 2 matching topic, priority 'medium'",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.misconceptionPatterns",
+      "sourceFieldInLearnerState": "data.misconceptionPatterns[]"
+    },
+    {
+      "category": "topic_trend",
+      "observationType": "improving_trend_S124",
+      "generatingSubsystems": ["S124"],
+      "generatingFunctions": ["May._identifyLearningPatterns ~line 1277–1283"],
+      "evidenceFields": ["topic", "recentAccuracy", "overallAccuracy"],
+      "minDataThreshold": { "attempts": 4, "sessions": 1 },
+      "thresholdCondition": "recentPct >= 75 AND delta (recentPct - accuracy) >= 10 AND recentPct > accuracy",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.improving_cluster",
+      "sourceFieldInLearnerState": "topicProgress[topic].recentPct / accuracy"
+    },
+    {
+      "category": "topic_trend",
+      "observationType": "cross_session_trend",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getTrends ~line 240–256"],
+      "evidenceFields": ["topic", "accuracy", "recentPct", "delta", "direction", "stability", "hintTrend", "totalAttempts", "avgDifficulty"],
+      "minDataThreshold": { "attempts": 2, "sessions": 2 },
+      "thresholdCondition": "totalAttempts >= 2 (for delta computation); direction derived from delta thresholds (±15, ±5)",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getTrends() return array"
+    },
+    {
+      "category": "topic_trend",
+      "observationType": "welcome_positive_trend",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._detectPositiveTrend ~line 315–335", "May._buildWelcomeOverview ~line 273–311"],
+      "evidenceFields": ["topic", "delta", "hintTotals", "stableTopics"],
+      "minDataThreshold": { "attempts": 0, "sessions": 2 },
+      "thresholdCondition": "clusters.improving.length > 0 OR hint decreasing trend OR stableTopics >= 2",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.improving_cluster",
+      "sourceFieldInLearnerState": "clusters.improving[] / getTrends() stability"
+    },
+    {
+      "category": "topic_trend",
+      "observationType": "weekly_accuracy_trend",
+      "generatingSubsystems": ["S127"],
+      "generatingFunctions": ["May._generateWeeklyDigest ~line 3089–3106"],
+      "evidenceFields": ["firstPct", "lastPct", "delta"],
+      "minDataThreshold": { "attempts": 1, "sessions": 2 },
+      "thresholdCondition": "first vs last session accuracy delta in lookback window",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.cross_session_trend",
+      "sourceFieldInLearnerState": "derived from lookbackSessions attempts"
+    },
+    {
+      "category": "topic_trend",
+      "observationType": "session_progress_trend",
+      "generatingSubsystems": ["S126"],
+      "generatingFunctions": ["May._generateSessionRecap ~line 3015–3037"],
+      "evidenceFields": ["recentPct", "priorPct", "delta"],
+      "minDataThreshold": { "attempts": 1, "sessions": 2 },
+      "thresholdCondition": "recent vs prior session overall accuracy delta",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.cross_session_trend",
+      "sourceFieldInLearnerState": "derived from sessions[].attempts"
+    },
+    {
+      "category": "topic_trend",
+      "observationType": "focus_area_improving",
+      "generatingSubsystems": ["S125"],
+      "generatingFunctions": ["May._suggestFocusAreas ~line 1478–1485"],
+      "evidenceFields": ["topic", "recentAccuracy", "overallAccuracy", "type"],
+      "minDataThreshold": { "attempts": 4, "sessions": 0 },
+      "thresholdCondition": "recentPct >= 75 AND delta >= 10 AND accuracy < recentPct, priority 'low'",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.improving_cluster",
+      "sourceFieldInLearnerState": "topicProgress[topic].recentPct / accuracy"
+    },
+    {
+      "category": "topic_trend",
+      "observationType": "focus_area_strength_extend",
+      "generatingSubsystems": ["S125"],
+      "generatingFunctions": ["May._suggestFocusAreas ~line 1444–1474"],
+      "evidenceFields": ["strongTopic", "weakTopic", "weakAccuracy", "accuracy", "type"],
+      "minDataThreshold": { "attempts": 3, "sessions": 0 },
+      "thresholdCondition": "accuracy >= 85% AND totalAttempts >= 3, priority 'low'",
+      "isDuplicate": true,
+      "duplicateOf": "S124.topic_strength",
+      "sourceFieldInLearnerState": "topicProgress[topic].accuracy / totalAttempts"
+    },
+    {
+      "category": "calculation_pattern",
+      "observationType": "repeated_calculation_S124",
+      "generatingSubsystems": ["S124"],
+      "generatingFunctions": ["May._identifyLearningPatterns ~line 1317–1343"],
+      "evidenceFields": ["topic", "calcMissCount"],
+      "minDataThreshold": { "attempts": 3, "sessions": 1 },
+      "thresholdCondition": "calculation misses on topic >= 3 in learner state",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "derived from sessions[].results calc misses"
+    },
+    {
+      "category": "calculation_pattern",
+      "observationType": "next_best_step_calculation",
+      "generatingSubsystems": ["S123"],
+      "generatingFunctions": ["May._generateNextBestStep ~line 1109–1114, 1130–1141"],
+      "evidenceFields": ["errorCategory", "actionType", "topic", "learnerAnswer", "isCalculation"],
+      "minDataThreshold": { "attempts": 1, "sessions": 0 },
+      "thresholdCondition": "current question is calculation item AND learner answered wrong; subcategories: calculation, formula, computation_error",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "derived from current question CalculationItem / stem / ExplanationWrong"
+    },
+    {
+      "category": "calculation_pattern",
+      "observationType": "focus_area_calculation_suggestion",
+      "generatingSubsystems": ["S125"],
+      "generatingFunctions": ["May._suggestFocusAreas ~line 1404–1414"],
+      "evidenceFields": ["topic", "reason", "source"],
+      "minDataThreshold": { "attempts": 1, "sessions": 0 },
+      "thresholdCondition": "current question is calculation AND wrong answer, priority 'medium'",
+      "isDuplicate": true,
+      "duplicateOf": "S123.next_best_step_calculation",
+      "sourceFieldInLearnerState": "derived from current question + ctx.selectedChoice"
+    },
+    {
+      "category": "terminology_pattern",
+      "observationType": "next_best_step_terminology",
+      "generatingSubsystems": ["S123"],
+      "generatingFunctions": ["May._generateNextBestStep ~line 1120, 1154–1157"],
+      "evidenceFields": ["errorCategory", "actionType", "topic"],
+      "minDataThreshold": { "attempts": 1, "sessions": 0 },
+      "thresholdCondition": "ExplanationWrong matches 'define|definition|term|terminology'",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "derived from current question ExplanationWrong text"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "confidence_calibration",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getConfidenceCalibration ~line 298–311"],
+      "evidenceFields": ["avgConfidence", "accuracy", "calibrationDelta", "overconfidentRate", "underconfidentRate"],
+      "minDataThreshold": { "attempts": 1, "sessions": 1 },
+      "thresholdCondition": "attempt has confidence rating (non-null, non-zero); topic-level aggregation",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "derived from all session attempts with confidence ratings"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "overconfident_topics",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getProgressInsight ~line 2779–2792"],
+      "evidenceFields": ["topic", "avgConfidence", "accuracy", "calibrationDelta"],
+      "minDataThreshold": { "attempts": 4, "sessions": 1 },
+      "thresholdCondition": "calibrationDelta >= 0.8 AND total >= 4",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.confidence_calibration",
+      "sourceFieldInLearnerState": "getConfidenceCalibration() topic entries"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "underconfident_topics",
+      "generatingSubsystems": ["may-core"],
+      "generatingFunctions": ["May._getProgressInsight ~line 2794–2800"],
+      "evidenceFields": ["topic", "avgConfidence", "accuracy"],
+      "minDataThreshold": { "attempts": 3, "sessions": 1 },
+      "thresholdCondition": "calibrationDelta <= -0.5 AND total >= 3",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.confidence_calibration",
+      "sourceFieldInLearnerState": "getConfidenceCalibration() topic entries"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "hint_trend_detection",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getTrends ~line 249–250"],
+      "evidenceFields": ["hintTrend", "recentHints", "olderHints"],
+      "minDataThreshold": { "attempts": 6, "sessions": 1 },
+      "thresholdCondition": "compares recent 5 vs. earlier attempt hints: 'decreasing', 'increasing', 'stable'",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getTrends() hintTrend field"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "learning_momentum",
+      "generatingSubsystems": ["S127"],
+      "generatingFunctions": ["May._generateWeeklyDigest ~line 3162–3171"],
+      "evidenceFields": ["firstPct", "lastPct", "delta", "strongTopicCount"],
+      "minDataThreshold": { "attempts": 1, "sessions": 2 },
+      "thresholdCondition": "upward trend OR >= 3 strong topics",
+      "isDuplicate": true,
+      "duplicateOf": "may-learner-state.cross_session_trend",
+      "sourceFieldInLearnerState": "derived from lookbackSessions attempts"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "strategy_effectiveness_outcomes",
+      "generatingSubsystems": ["S129"],
+      "generatingFunctions": ["May._generateStrategyEffectiveness ~line 3386–3516", "MayLearnerState.classifyPendingOutcomes ~line 1249–1328"],
+      "evidenceFields": ["outcome", "type", "topic", "outcomeEvidence", "status"],
+      "minDataThreshold": { "attempts": 5, "sessions": 1 },
+      "thresholdCondition": "recommendation has outcome classified (positive/neutral/contradictory/insufficient)",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "data.recommendationOutcomes[]"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "strategy_recurrence_deprioritize",
+      "generatingSubsystems": ["S129"],
+      "generatingFunctions": ["MayLearnerState.getRecommendationRecurrence ~line 1361–1388", "May._generateStrategyEffectiveness ~line 3467–3481"],
+      "evidenceFields": ["topic", "count", "types", "outcomes", "recurrenceAdjustment"],
+      "minDataThreshold": { "attempts": 0, "sessions": 0 },
+      "thresholdCondition": "last outcome positive or contradictory => deprioritize",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getRecommendationRecurrence() byTopic"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "longitudinal_week_window",
+      "generatingSubsystems": ["S129"],
+      "generatingFunctions": ["MayLearnerState.getLongitudinalAnalytics ~line 1393–1443"],
+      "evidenceFields": ["sessionCount", "totalAttempts", "recommendationCount", "recommendationTypes", "recommendationOutcomes", "misconceptionOccurrences"],
+      "minDataThreshold": { "attempts": 0, "sessions": 1 },
+      "thresholdCondition": "at least 1 session within 1wk/2wk/4wk lookback windows",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getLongitudinalAnalytics()[window] entries"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "readiness_band_observation",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getReadinessSummary ~line 592–827"],
+      "evidenceFields": ["band", "rationale", "signals", "confidence", "topicDetails"],
+      "minDataThreshold": { "attempts": 3, "sessions": 1 },
+      "thresholdCondition": "topic-level: >=3 attempts; overall: sessionCount >= 1",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getReadinessSummary() overall.band / topics[].band"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "section_readiness_observation",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getSectionReadinessSummary ~line 833–963"],
+      "evidenceFields": ["section", "label", "band", "rationale", "topicCount", "worstTopic", "signals"],
+      "minDataThreshold": { "attempts": 0, "sessions": 1 },
+      "thresholdCondition": "overall readiness hasEnoughData === true",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getSectionReadinessSummary().sections[]"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "adaptive_practice_mix",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getAdaptivePracticeMix ~line 450–587"],
+      "evidenceFields": ["mode", "reason", "howTo", "badge"],
+      "minDataThreshold": { "attempts": 0, "sessions": 1 },
+      "thresholdCondition": "totalSessions >= 1; decision logic evaluates weakCount, decliningCount, unstableCount, caseWorsening, mcqCaseGap",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getAdaptivePracticeMix() result"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "case_pattern_miss_summary",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getCasePatternSummary ~line 334–349", "MayLearnerState.classifyCaseMissPattern ~line 145–156"],
+      "evidenceFields": ["totalCaseMisses", "sessionsWithCases", "patterns", "dominantPattern", "dominantCount"],
+      "minDataThreshold": { "attempts": 3, "sessions": 1 },
+      "thresholdCondition": "totalCaseMisses >= 3 OR sessionsWithCases >= 1 (for summary existence)",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getCasePatternSummary() result"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "case_pattern_trend",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getCasePatternTrends ~line 351–367"],
+      "evidenceFields": ["pattern", "current", "previous", "delta", "direction", "signal"],
+      "minDataThreshold": { "attempts": 2, "sessions": 4 },
+      "thresholdCondition": ">= 2 sessions with case patterns, >= 2 case sessions in recent/prior windows",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getCasePatternTrends() array"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "case_practice_guidance",
+      "generatingSubsystems": ["may-learner-state"],
+      "generatingFunctions": ["MayLearnerState.getCasePatternPracticeGuidance ~line 386–447"],
+      "evidenceFields": ["dominant", "secondary", "hasEnoughData"],
+      "minDataThreshold": { "attempts": 0, "sessions": 1 },
+      "thresholdCondition": "getCasePatternSummary() returns non-null",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "getCasePatternPracticeGuidance() result"
+    },
+    {
+      "category": "behavior_trend",
+      "observationType": "recommendation_quality_score",
+      "generatingSubsystems": ["S129"],
+      "generatingFunctions": ["May._scoreRecommendationQuality ~line 3551–3587"],
+      "evidenceFields": ["relevance", "specificity", "evidenceStrength", "recurrenceRate", "followThrough", "composite", "maxComposite"],
+      "minDataThreshold": { "attempts": 0, "sessions": 0 },
+      "thresholdCondition": "scored for every recommendation record (internal only, not surfaced to learner)",
+      "isDuplicate": false,
+      "duplicateOf": null,
+      "sourceFieldInLearnerState": "derived from recommendationOutcomes entries"
+    }
+  ],
+  "duplicateObservations": [
+    {
+      "canonical": "may-learner-state.persistentWeak_cluster",
+      "duplicates": [
+        "S124.persistent_weakness_S124",
+        "S126.most_frequent_mistakes_session",
+        "S127.topics_needing_attention_weekly",
+        "may-core.lowest_accuracy_fallback",
+        "S125.focus_area_persistent_weak"
+      ],
+      "note": "All identify low-accuracy topics. Primary source (may-learner-state.getWeaknessClusters) uses >=5 attempts + <60% accuracy. S124 duplicates with identical thresholds. S126/S127 are session/weekly subsets. S125 wraps it for focus-area display. S124's minimum of 5 attempts creates an inconsistency — _identifyLearningPatterns requires >=5 but getWeaknessClusters also requires >=5, making them fully redundant.",
+      "recommendation": "Consolidate all weak-topic observations through getWeaknessClusters as the single source of truth. Remove standalone threshold checks from S124/S125/S126/S127."
+    },
+    {
+      "canonical": "may-learner-state.improving_cluster",
+      "duplicates": [
+        "S124.improving_trend_S124",
+        "may-core.welcome_positive_trend",
+        "S125.focus_area_improving",
+        "S126.strongest_areas_session",
+        "S127.strongest_topics_weekly"
+      ],
+      "note": "Threshold mismatch: getWeaknessClusters uses delta >=15 (conservative). S124 uses delta >=10 AND recentPct >=75 (more sensitive). S127 uses >=70% accuracy with >=3 attempts (independent threshold). S126 finds session-level strongest areas (no historical delta). These all describe the same underlying phenomenon.",
+      "recommendation": "Standardize on a single delta threshold (15) in getWeaknessClusters. Surface-level displays can filter but not re-derive the classification."
+    },
+    {
+      "canonical": "may-learner-state.misconceptionPatterns",
+      "duplicates": [
+        "S124.recurring_misconception_S124",
+        "S126.key_misconceptions_session",
+        "S127.most_common_misconceptions_weekly",
+        "may-core.recurring_traps_insight",
+        "may-core.explain_your_mistake_pattern",
+        "S125.focus_area_misconception_pattern"
+      ],
+      "note": "All read from the same data.misconceptionPatterns array. S124/S125 filter by topic match + count >=2. S126/S127 filter by count >=2 and display top-2/3. Weakness insight and 'my mistake' show the same patterns in different contexts. No new evidence is generated.",
+      "recommendation": "All consumers should query misconceptionPatterns directly. The filtering (by topic, by count threshold) is presentation logic, not evidence generation."
+    },
+    {
+      "canonical": "may-learner-state.declining_cluster",
+      "duplicates": [
+        "may-core.slipping_accuracy_insight"
+      ],
+      "note": "Weakness insight re-displays declining clusters verbatim from getWeaknessClusters without adding new evidence.",
+      "recommendation": "Inline display only — no separate observation needed."
+    },
+    {
+      "canonical": "may-learner-state.unstable_cluster",
+      "duplicates": [
+        "may-core.inconsistent_performance_insight"
+      ],
+      "note": "Same pattern as declining — verbatim display of unstable clusters.",
+      "recommendation": "Inline display only."
+    },
+    {
+      "canonical": "may-learner-state.hintDependent_cluster",
+      "duplicates": [
+        "may-core.hint_dependency_insight"
+      ],
+      "note": "Verbatin display of hintDependent clusters.",
+      "recommendation": "Inline display only."
+    },
+    {
+      "canonical": "may-learner-state.difficultySensitive_cluster",
+      "duplicates": [
+        "may-core.difficulty_gap_insight"
+      ],
+      "note": "Verbatin display of difficultySensitive clusters.",
+      "recommendation": "Inline display only."
+    },
+    {
+      "canonical": "may-learner-state.confidence_calibration",
+      "duplicates": [
+        "may-core.overconfident_topics",
+        "may-core.underconfident_topics"
+      ],
+      "note": "getConfidenceCalibration computes the full calibration stats. Progress insight filters and displays overconfident/underconfident subsets.",
+      "recommendation": "Keep getConfidenceCalibration as the canonical source. Progress insight is a display view, not a separate observation generation."
+    },
+    {
+      "canonical": "may-learner-state.cross_session_trend",
+      "duplicates": [
+        "S127.weekly_accuracy_trend",
+        "S126.session_progress_trend",
+        "S127.learning_momentum"
+      ],
+      "note": "getTrends computes topic-level delta/direction. S126/S127 re-derive session-level delta from raw attempts. Weekly digest and session recap produce overlapping summaries of the same data.",
+      "recommendation": "Session-level trend should be pre-computed in learner state (e.g., a getSessionTrend() function) and consumed by all display paths."
+    },
+    {
+      "canonical": "S123.next_best_step_calculation",
+      "duplicates": [
+        "S125.focus_area_calculation_suggestion"
+      ],
+      "note": "Both detect calculation errors on the current question. S123 produces an action plan, S125 wraps it as a focus-area suggestion. The underlying evidence (isCalculation + wrong answer) is identical.",
+      "recommendation": "S125 should reference S123's error category rather than re-deriving it."
+    }
+  ],
+  "orphanedObservations": [
+    {
+      "observationType": "repeated_calculation_S124",
+      "reason": "Generated by _identifyLearningPatterns (~line 1336) when calcMissCount >= 3 for a topic. However, the data source (checking sessions[].results[] for calc misses with topic match) queries a field path (_learnerState.sessions[].results) that is only populated in synthetic seed data — real attempts are stored in sessions[].attempts[] with 'correct' boolean. This observation will never fire for real learner data because results[] is not populated by recordAttempt()."
+    },
+    {
+      "observationType": "recommendation_quality_score",
+      "reason": "Scored internally by _scoreRecommendationQuality (~line 3551) but never surfaced to any UI path, coaching output, or analytics display. It is computed but not consumed."
+    },
+    {
+      "observationType": "next_best_step_terminology",
+      "reason": "Generated by _generateNextBestStep when errorCategory is 'terminology' but the terminology pattern is not persisted to learner state. Unlike misconception patterns (which are tracked), terminology errors are inferred per-question and discarded after display."
+    }
+  ],
+  "unifiedTaxonomy": {
+    "proposedCanonicalCategories": [
+      {
+        "canonicalName": "topic_strength",
+        "definition": "Topic-level accuracy above a high-confidence threshold, confirmed by sufficient attempt volume and recent performance stability.",
+        "canonicalSource": "MayLearnerState.getTopicProgress (accuracy >= 85%, attempts >= 3)",
+        "consumers": ["S124._identifyLearningPatterns", "S125._suggestFocusAreas", "May._getProgressInsight"],
+        "subtypes": ["high_accuracy", "improving_trend", "stable_high_performance", "well_established"]
+      },
+      {
+        "canonicalName": "topic_weakness",
+        "definition": "Topic-level accuracy below a concern threshold, or showing declining/unstable/hint-dependent/difficulty-sensitive patterns.",
+        "canonicalSource": "MayLearnerState.getWeaknessClusters",
+        "consumers": ["S124._identifyLearningPatterns", "S125._suggestFocusAreas", "S126._generateSessionRecap", "S127._generateWeeklyDigest", "May._getWeaknessInsight"],
+        "subtypes": ["persistent_weak", "declining", "unstable", "hint_dependent", "difficulty_sensitive"]
+      },
+      {
+        "canonicalName": "misconception",
+        "definition": "Recurring wrong-answer patterns classified by error type (classification, variance sign, budget component, etc.).",
+        "canonicalSource": "MayLearnerState._trackMisconception → data.misconceptionPatterns[]",
+        "consumers": ["S124._identifyLearningPatterns", "S125._suggestFocusAreas", "S126._generateSessionRecap", "S127._generateWeeklyDigest", "May._getWeaknessInsight", "May._explainYourMistake", "May._buildWrongChoiceCoaching"],
+        "subtypes": ["misclassification", "variance_sign_confusion", "budget_component_error", "cost_method_confusion", "depreciation_method_error", "cash_flow_classification", "ratio_misapplication", "control_framework_error", "general_error"]
+      },
+      {
+        "canonicalName": "topic_trend",
+        "definition": "Direction and magnitude of accuracy change over sessions, including stability and hint-usage trends.",
+        "canonicalSource": "MayLearnerState.getTrends",
+        "consumers": ["S124._identifyLearningPatterns", "S125._suggestFocusAreas", "S126._generateSessionRecap", "S127._generateWeeklyDigest", "May._getProgressInsight", "May._getWeaknessInsight", "May._buildWelcomeOverview"],
+        "subtypes": ["improving", "declining", "stable", "slightly_improving", "slightly_declining"]
+      },
+      {
+        "canonicalName": "calculation_pattern",
+        "definition": "Recurring calculation errors identified either at the topic level (repeated misses) or per-question level (formula, computation error, sign error).",
+        "canonicalSource": "May._generateNextBestStep (per-question), May._identifyLearningPatterns (topic-level)",
+        "consumers": ["S123._generateNextBestStep", "S124._identifyLearningPatterns", "S125._suggestFocusAreas"],
+        "subtypes": ["calculation_miss", "formula_error", "computation_error", "sign_error"]
+      },
+      {
+        "canonicalName": "terminology_pattern",
+        "definition": "Definition/term confusion detected from wrong-answer explanation text at the per-question level. Not currently persisted across sessions.",
+        "canonicalSource": "May._generateNextBestStep (errorCategory === 'terminology')",
+        "consumers": ["S123._generateNextBestStep"],
+        "subtypes": [],
+        "note": "Currently ephemeral — generated per-question but never persisted to learner state. Consider adding a terminologyPatterns[] array to learner schema."
+      },
+      {
+        "canonicalName": "behavior_trend",
+        "definition": "Session-level patterns covering confidence calibration, hint usage trends, learning momentum, recommendation effectiveness, readiness bands, case miss patterns, and adaptive practice mix recommendations.",
+        "canonicalSource": "MayLearnerState.getConfidenceCalibration, getCasePatternSummary, getCasePatternTrends, getReadinessSummary, getAdaptivePracticeMix, classifyPendingOutcomes, getLongitudinalAnalytics",
+        "consumers": ["May._getProgressInsight", "May._getWeaknessInsight", "S127._generateWeeklyDigest", "S128._generateStudyStrategy", "S129._generateStrategyEffectiveness"],
+        "subtypes": ["confidence_calibration", "hint_trend", "case_pattern_summary", "case_pattern_trend", "readiness_band", "section_readiness", "adaptive_practice_mix", "recommendation_outcome", "recommendation_recurrence", "longitudinal_window"]
+      }
+    ]
+  }
+}

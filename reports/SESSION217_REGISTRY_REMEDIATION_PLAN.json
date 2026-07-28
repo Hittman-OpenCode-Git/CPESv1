@@ -1,0 +1,227 @@
+{
+  "session": "S217",
+  "series": "200-Series — Stewardship Remediation & Re-Certification",
+  "title": "Registry Authority Remediation",
+  "date": "2026-07-27",
+  "orchestrator": "stewardship-orchestrator",
+  "status": "COMPLETE",
+  "phase": "Phase 0 — Plan Refinement & Schema Authoring",
+  "depends_on": [
+    "S208 Registry Authority Model (Board F)",
+    "S210 Registry Integrity Certification (all 7 chains INTACT at S210)",
+    "S214 Registry Stress Test (5/6 duplicate ownership, active conflicts)",
+    "S213 Drift Simulation (categories 1, 3, 5 — registry-related)",
+    "S216 Executive Decision (13 remediation items, items 2-4)"
+  ],
+
+  "objective": "Resolve registry authority failures identified in S214. Restore single-owner-per-entity-class model established in S208 Board F. Eliminate the gap between S210's PASS verdict and S214's CONCERN finding.",
+
+  "s210_to_s214_regression_timeline": {
+    "finding": "S210 (2026-07-27) certified 7/7 registries INTACT with 0 duplicate authority claims. S214 (same date, later) found 5/6 registries with duplicate ownership paths and active authority conflicts.",
+    "root_cause": "S210 verified the S208 authority model as-designed. S214 tested the model against live workspace drift. Between S210 and S214, S371, S853, S826, S829, and other waves created divergent registry artifacts that the authority model did not automatically reconcile.",
+    "gap": "The S208 authority model defines the CHAIN (raw > runtime > generated > reports) but has no automated enforcement of chain consistency. Registries can diverge from raw files without triggering any governance guard rule."
+  },
+
+  "registry_authority_remediation": {
+    "principle": "PER ENTITY CLASS, EXACTLY ONE AUTHORITATIVE SOURCE. All other representations are DERIVED — never independent. Derived representations must carry a NOT_AUTHORITATIVE header. Any script that creates a new derived representation must register it with the primary registry.",
+
+    "registries": [
+      {
+        "entity_class": "Question",
+        "current_state": "5 competing sources (MASTER_QUESTION_REGISTRY.md: 2,995, QUESTION_REGISTRY_INDEX.md: 2,884, CURRENT_BASELINES.md: 2,540, per-pack registries: 10, per-domain registries: 7, MasterQuestionRegistry.csv: 885KB CSV)",
+        "conflicts": [
+          "Count discrepancy spans 1,300 entries (2,540 to 4,285 across sessions)",
+          "MASTER_QUESTION_REGISTRY.md self-contradictory (2,975 vs 2,995)",
+          "CURRENT_BASELINES §2 shows 2,540 / 2,298 certified — must be regenerated after every certification wave or it will always be stale",
+          "Per-pack and per-domain registries are structurally derived but have no NOT_DERIVED guard — they could be hand-edited into divergence"
+        ],
+        "remediation": {
+          "single_authoritative_source": "pack_*_corrected.js + scored_cases*.js (raw source files)",
+          "derived_registry_1": {
+            "file": "knowledge/MASTER_QUESTION_REGISTRY.md",
+            "generation": "scripts/build_master_registry.js — run after every certification wave",
+            "governance_protection": "Rule 3 BLOCK (no hand-editing) — RETAINED",
+            "new_requirement": "Must be regenerated at session startup if source pack hashes changed (add to AGENTS.md §9 T0 protocol)"
+          },
+          "derived_registry_2": {
+            "file": "reports/MasterQuestionRegistry.csv",
+            "generation": "Same generator, CSV output — mark as NOT_AUTHORITATIVE_CSV_EXPORT",
+            "new_requirement": "Add NOT_AUTHORITATIVE header line to CSV file"
+          },
+          "derived_subsidiaries": {
+            "scope": "registry/packs/*.md (10 files), registry/domains/*.md (7 files), registry/cases/*.md (5 files)",
+            "new_requirement": "Add NOT_AUTHORITATIVE — REGENERATE FROM SOURCE header. Regenerate after every certification wave. Never hand-edit."
+          },
+          "current_baselines_section": {
+            "scope": "CURRENT_BASELINES.md §2 (Certified Pool)",
+            "new_requirement": "Add GENERATED FROM RAW FILES note. Add last-regenerated timestamp. Update AGENTS.md §9 to require T0 verification."
+          },
+          "reconciliation_rule": "After every certification wave: (1) regenerate MASTER_QUESTION_REGISTRY.md, (2) regenerate all subsidiary registries, (3) update CURRENT_BASELINES.md §2, (4) verify counts match across all derived registries. Any divergence → halt and reconcile from raw source."
+        }
+      },
+      {
+        "entity_class": "Session",
+        "current_state": "7 competing sources: session_registry.json (40 sessions), session_packages/ (729 files), session_status/ (184 reports), REVISION_HISTORY.md (chronological entries), session_package_index.json, session_intelligence.json, and 192 undocumented scripts",
+        "conflicts": [
+          "729 session_package files — only ~200 registered in session_registry.json",
+          "No cross-consistency validation between JSON packages and MD reports",
+          "192 scripts — many undocumented, no registry entry"
+        ],
+        "remediation": {
+          "single_authoritative_source": "scripts/output/session_registry.json — canonical session ledger",
+          "derived_packages": {
+            "scope": "scripts/output/session_packages/*.json",
+            "new_requirement": "Every session package must be registered in session_registry.json. Registration is MANDATORY — not optional. Add PRE-WRITE gate: script must verify registration entry exists before writing a new package."
+          },
+          "derived_reports": {
+            "scope": "reports/session_status/*.md",
+            "new_requirement": "Every session status report must reference its session_registry.json entry. Status reports are DERIVED — the registry is authoritative for session existence."
+          },
+          "script_catalog": {
+            "scope": "scripts/ — 192 scripts",
+            "new_requirement": "Create scripts/SCRIPT_REGISTRY.json — catalog every script with purpose, authority level, and last execution date. Scripts without registry entries are flagged as UNTRACKED."
+          },
+          "reconciliation_rule": "Every new session must write EXACTLY ONE entry to session_registry.json before any package file is written. Package file write gate checks registry entry exists."
+        }
+      },
+      {
+        "entity_class": "Challenge",
+        "current_state": "2 competing namespaces: CH- (challenge_registry.json, 35 entries) and DL- (DEFECT_LIBRARY.md, 36 entries + 2 tracked notes). Different ID namespaces track the same entity class (content issues).",
+        "conflicts": [
+          "CH- and DL- namespaces are not 1:1 mapped",
+          "Different status models: CH- uses OPEN/TRIAGED/RESOLVED; DL- uses Open/Resolved/In Progress/Superseded",
+          "Different storage: JSON vs Markdown"
+        ],
+        "remediation": {
+          "recommendation": "UNIFY under a single namespace. DL- (DEFECT_LIBRARY.md) is the authoritative defect catalog. CH- (challenge registry) is a user-facing intake form.",
+          "unified_model": {
+            "authoritative_defect_catalog": "knowledge/DEFECT_LIBRARY.md — DL- namespace. All confirmed defects live here.",
+            "challenge_intake": "scripts/output/challenge_registry.json — CH- namespace. User-raised challenges before triage.",
+            "mapping_rule": "Every CH- entry that graduates to a confirmed defect receives a DL-ID. The CH→DL mapping must be recorded in both registries. CH- entries that are dismissed (not defects) remain CH- only.",
+            "conflict_resolution": "When CH- and DL- descriptions of the same issue diverge, the DL- entry is authoritative. CH- is the unverified claim; DL- is the verified finding."
+          }
+        }
+      },
+      {
+        "entity_class": "Recommendation",
+        "current_state": "SINGLE SOURCE — 5 REC-IDs. Cleanest registry. routing.json is derived, not competing.",
+        "conflicts": [
+          "Only 5 records for 180+ sessions — massive under-registration"
+        ],
+        "remediation": {
+          "single_authoritative_source": "scripts/output/recommendation_registry.json — RETAINED as model registry",
+          "registration_gap": "Every session that produces a remediation recommendation must register a REC-ID. The 5 records represent only a fraction of actual recommendations made across 180+ sessions.",
+          "new_requirement": "REC-ID creation is MANDATORY for any session that recommends a remediation action affecting ≥1 QID. The registry must grow proportionally with session count."
+        }
+      },
+      {
+        "entity_class": "Investigation",
+        "current_state": "19 registered (investigation_registry.json) vs 251 actual investigation reports on disk (defect_sweeps/: 30, systematic_testing/: 221).",
+        "conflicts": [
+          "Severe undercount — 92% of investigation-level artifacts not registered",
+          "30 formal investigation reports in defect_sweeps/ vs 19 INV-IDs"
+        ],
+        "remediation": {
+          "single_authoritative_source": "scripts/output/investigation_registry.json — canonical investigation ledger",
+          "backfill_requirement": "Every investigation report in reports/defect_sweeps/ and reports/systematic_testing/ must have a corresponding INV-ID. Backfill the ~232 missing entries over the next 3 certification waves.",
+          "new_requirement": "PRE-WRITE gate: no investigation report file may be written without first registering an INV-ID in investigation_registry.json."
+        }
+      },
+      {
+        "entity_class": "Certification",
+        "current_state": "Active authority conflicts: direct grep (2,298) matches CURRENT_BASELINES.md (2,298) but SESSION_STATUS_2026-07-24.md reports 2,031 (267 behind). DL-036: certification_candidates.json (282 BLOCKED) vs readiness_scoring.json (242 BLOCKED) — 40-item divergence.",
+        "conflicts": [
+          "SESSION_STATUS stale (267 items behind — 3+ days)",
+          "DL-036 pipeline divergence (40 items)",
+          "MASTER_QUESTION_REGISTRY stale (2,270 vs 2,298 — 3 days behind)"
+        ],
+        "remediation": {
+          "single_authoritative_source": "Raw pack files — question_state field. Confirmed by S208 Registry Authority model. All registries derive from this.",
+          "t0_verification_requirement": "Per AGENTS.md §9, every session startup must verify certified count via direct raw-file grep. Add: compare grep result against CURRENT_BASELINES.md §2. Any discrepancy >0 → halt and reconcile.",
+          "derived_registry_staleness_rule": "Any derived registry (SESSION_STATUS, MASTER_QUESTION_REGISTRY, CURRENT_BASELINES §2) that is >24 hours behind raw-file certified count is marked STALE and must not be referenced as current.",
+          "cross_tool_reconciliation": "Readiness Scorer and Candidate Engine must consume the SAME artifact (readiness_scoring.json). Candidate Engine must NOT independently re-scan pack files — this eliminates DL-036 class divergence."
+        }
+      }
+    ]
+  },
+
+  "single_source_recertification": {
+    "pre_remediation": {
+      "registries_with_single_source": 1,
+      "registries_with_duplicate_ownership": 5,
+      "active_conflicts": 4
+    },
+    "post_remediation_target": {
+      "registries_with_single_source": 6,
+      "registries_with_duplicate_ownership": 0,
+      "active_conflicts": 0
+    },
+    "success_criterion": "Exactly 1 authoritative source per entity class. All derived representations traceable to authorative source. Zero independent (non-derived) competing registries.",
+    "entity_owner_assignments": {
+      "Question": {"owner": "Raw pack files (pack_*_corrected.js, scored_cases*.js)", "derived": ["MASTER_QUESTION_REGISTRY.md", "MasterQuestionRegistry.csv", "registry/packs/*.md", "registry/domains/*.md", "registry/cases/*.md", "CURRENT_BASELINES.md §2"]},
+      "Session": {"owner": "scripts/output/session_registry.json", "derived": ["session_packages/*.json", "session_status/*.md", "REVISION_HISTORY.md session entries"]},
+      "Challenge": {"owner": "knowledge/DEFECT_LIBRARY.md — DL- namespace (defect catalog) + scripts/output/challenge_registry.json — CH- namespace (intake form, mapped to DL- on graduation)", "derived": []},
+      "Recommendation": {"owner": "scripts/output/recommendation_registry.json", "derived": ["routing.json"]},
+      "Investigation": {"owner": "scripts/output/investigation_registry.json", "derived": ["reports/defect_sweeps/*.md", "reports/systematic_testing/*.md"]},
+      "Certification": {"owner": "Raw pack files — question_state field", "derived": ["CURRENT_BASELINES.md §2", "readiness_scoring.json", "MASTER_QUESTION_REGISTRY.md (certified column)"]}
+    }
+  },
+
+  "required_governance_changes": {
+    "new_rule_proposal": {
+      "rule_id": "Rule 7 — DERIVED_REGISTRY_NOT_AUTHORITATIVE",
+      "level": "BLOCK",
+      "description": "Any script or agent that creates a file claiming registry-authority over an already-owned entity class is BLOCKED. All derived registries must carry NOT_AUTHORITATIVE header. Any script that writes to a derived registry without regenerating from the authoritative source is BLOCKED.",
+      "detection": "At write time: check whether target file path matches a known derived registry. If yes, verify the write is a regeneration from the authoritative source (not a hand-edit or independent write)."
+    },
+    "existing_rule_upgrades": {
+      "rule_1_upgrade": "Upgrade from WARN to BLOCK — question_state changes without REVISION_HISTORY entry are blocked (per S216 remediation item 1)",
+      "rule_4_upgrade": "Upgrade from WARN to BLOCK — answer-key changes without recomputed/verified note are blocked (per S216 remediation item 1)"
+    },
+    "t0_protocol_extension": "Add to AGENTS.md §9 T0: (1) regenerate MASTER_QUESTION_REGISTRY.md if pack hashes changed, (2) compare certified count across all derived registries, (3) flag any stale registry (>24 hours behind raw-file count), (4) verify session_registry.json vs session_packages/ count"
+  },
+
+  "automatic_stop_conditions": {
+    "registry_authority_conflict": {
+      "pre_remediation": "FAIL — 5/6 registries have duplicate ownership",
+      "post_remediation_target": "PASS — 0/6 duplicate ownership, all derived registries traceable to authoritative source"
+    },
+    "broken_traceability": {
+      "pre_remediation": "FAIL — certification count 267 behind SESSION_STATUS, registry mismatch across 4+ sources",
+      "post_remediation_target": "PASS — all derived registries consistent with authoritative source, T0 verification active"
+    },
+    "governance_guard_pass": {
+      "pre_remediation": "CONDITIONAL — Rules 1/4 WARN-only",
+      "post_remediation_target": "PASS — Rules 1 and 4 upgraded to BLOCK, Rule 7 deployed"
+    }
+  },
+
+  "execution_order": [
+    "1. Upgrade Rules 1 and 4 from WARN to BLOCK (S216 item 1) — enables registry enforcement",
+    "2. Add Registry Authority header comments to all derived registries (NOT_AUTHORITATIVE — REGENERATE FROM SOURCE)",
+    "3. Create scripts/SCRIPT_REGISTRY.json — catalog all 192 scripts",
+    "4. Backfill investigation_registry.json with missing INV-IDs from defect_sweeps/ and systematic_testing/",
+    "5. Unify CH-/DL- namespaces — add CH→DL graduation mapping to both registries",
+    "6. Deploy Rule 7 (DERIVED_REGISTRY_NOT_AUTHORITATIVE BLOCK) to governance guard",
+    "7. Update AGENTS.md §9 T0 protocol with cross-registry reconciliation step",
+    "8. Mark SESSION_STATUS_2026-07-24.md as SUPERSEDED (S216 item 7)",
+    "9. Regenerate CURRENT_BASELINES.md §2 from raw-file grep at S220 T0"
+  ],
+
+  "deliverables": [
+    "SESSION217_REGISTRY_REMEDIATION_PLAN.json (this file)",
+    "SESSION217_SINGLE_SOURCE_RECERTIFICATION.md (companion executive summary)"
+  ],
+
+  "stop_conditions": {
+    "active": [
+      "Principle violation",
+      "Registry authority conflict",
+      "Broken traceability",
+      "Duplicate registry creation",
+      "Governance Guard != PASS",
+      "Identity < 99%"
+    ],
+    "status": "ALL MONITORED — this session is read-only plan authoring. No stop conditions fired."
+  }
+}

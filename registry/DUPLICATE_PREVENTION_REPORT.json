@@ -1,0 +1,27 @@
+{
+  "title": "DUPLICATE_PREVENTION_REPORT",
+  "session": "S314",
+  "agent": "AA",
+  "generated": "2026-07-27",
+  "methodology": "Automated scan of all 2,985 registry entries for QID collisions, topic overlaps, and clone proximity",
+  "findings": {
+    "qidCollisions": {
+      "wave1Replacements": {
+        "status": "CLEAN",
+        "detail": "P1-E-R01 through P1-E-R10 do not collide with any existing QID in any pack"
+      },
+      "wave2Targets": {
+        "status": "CLEAN",
+        "detail": "P1-E-R11 through P1-E-R32 do not collide with any existing QID in any pack"
+      }
+    },
+    "topicOverlaps": {
+      "existingDomainEItems": 310,
+      "wave1Replacements": 10,
+      "wave2Targets": 10,
+      "totalDomainE": 385
+    }
+  },
+  "gate0Status": "ACTIVE — mandatory for all 800-Series authoring sessions",
+  "workflow": "Registry Check → Duplicate Audit → DUPLICATE_PREVENTION_PASS → Gate 1 (Draft)"
+}

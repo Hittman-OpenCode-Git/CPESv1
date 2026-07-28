@@ -1,0 +1,22 @@
+{
+  "total": 583,
+  "inTop100": 62,
+  "clusters": {
+    "ewDeficits": {
+      "count": 62,
+      "description": "EW fill < 30%"
+    },
+    "explanationDeficits": {
+      "count": 15,
+      "description": "EC < 150 chars"
+    },
+    "certificationDeficits": {
+      "count": 62,
+      "description": "Uncertified"
+    },
+    "metadataDeficits": {
+      "count": 62,
+      "description": "D or F grade"
+    }
+  }
+}

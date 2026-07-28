@@ -1,0 +1,126 @@
+{
+  "session": "S810.1",
+  "type": "Read-Only Intelligence Package",
+  "date": "2026-07-26",
+  "generated_by": "Agent L — Reporting Package Compiler",
+  "summary_file": "SESSION8101_SESSION_SUMMARY.md",
+
+  "primary_agent_outputs": [
+    {
+      "file": "agent_a_governance.json",
+      "agent": "A",
+      "role": "Governance Baseline",
+      "size_kb": 1.93,
+      "lines": 16
+    },
+    {
+      "file": "agent_b_dl026_gap_matrix.json",
+      "agent": "B",
+      "role": "DL-026 Gap Inventory",
+      "size_kb": 59.92,
+      "lines": 1150
+    },
+    {
+      "file": "agent_c_coso_citation_map.json",
+      "agent": "C",
+      "role": "COSO Citation Map",
+      "size_kb": 29.61,
+      "lines": 493
+    },
+    {
+      "file": "agent_d_dl013_audit.json",
+      "agent": "D",
+      "role": "DL-013 Boilerplate Audit",
+      "size_kb": 23.82,
+      "lines": 182
+    },
+    {
+      "file": "agent_e_dl010_evidence.json",
+      "agent": "E",
+      "role": "DL-010 Investigation Support",
+      "size_kb": 13.43,
+      "lines": 226
+    },
+    {
+      "file": "agent_f_difficulty_matrix.json",
+      "agent": "F",
+      "role": "Difficulty Calibration Matrix",
+      "size_kb": 40.19,
+      "lines": 590
+    },
+    {
+      "file": "agent_g_cl_matrix.json",
+      "agent": "G",
+      "role": "CognitiveLevel Alignment Matrix",
+      "size_kb": 26.73,
+      "lines": 471
+    },
+    {
+      "file": "agent_h_metadata_audit.json",
+      "agent": "H",
+      "role": "Metadata Completeness Audit",
+      "size_kb": 18.50,
+      "lines": 314
+    },
+    {
+      "file": "agent_i_risk_forecast.json",
+      "agent": "I",
+      "role": "Certification Risk Forecast",
+      "size_kb": 37.43,
+      "lines": 794
+    },
+    {
+      "file": "agent_j_batch_plan.json",
+      "agent": "J",
+      "role": "Remediation Batch Planner",
+      "size_kb": 21.15,
+      "lines": 261
+    },
+    {
+      "file": "agent_k_readiness_forecast.json",
+      "agent": "K",
+      "role": "Post-Remediation Readiness Forecast",
+      "size_kb": 35.72,
+      "lines": 586
+    }
+  ],
+
+  "supplementary_files": [
+    { "file": "SESSION8101_BATCH_PLAN.json", "size_kb": 10.00 },
+    { "file": "SESSION8101_CL_ALIGNMENT_MATRIX.json", "size_kb": 26.73 },
+    { "file": "SESSION8101_COSO_CITATION_MAP.json", "size_kb": 29.61 },
+    { "file": "SESSION8101_DIFFICULTY_MATRIX.json", "size_kb": 40.19 },
+    { "file": "SESSION8101_DL010_EVIDENCE_PACKAGE.json", "size_kb": 9.42 },
+    { "file": "SESSION8101_DL013_AUDIT.json", "size_kb": 23.82 },
+    { "file": "SESSION8101_DL026_GAP_MATRIX.json", "size_kb": 59.92 },
+    { "file": "SESSION8101_METADATA_AUDIT.json", "size_kb": 5.03 },
+    { "file": "SESSION8101_POST_REMEDIATION_FORECAST.json", "size_kb": 35.72 },
+    { "file": "SESSION8101_RISK_FORECAST.json", "size_kb": 37.43 }
+  ],
+
+  "total_files": 21,
+  "total_size_kb": 606.29,
+  "primary_agents": 11,
+  "summary_document": "SESSION8101_SESSION_SUMMARY.md",
+
+  "key_metrics": {
+    "certified_baseline": 2221,
+    "domain_e_seeds": 38,
+    "pack_c_seeds": 19,
+    "pack_d_seeds": 19,
+    "empty_ew_slots_dl026": 53,
+    "dl013_boilerplate_slots": 9,
+    "dl010_confirmed": 0,
+    "coso_citation_needed": 37,
+    "difficulty_overstated": 23,
+    "dl031_items": 12,
+    "cl_misaligned": 26,
+    "difficulty_label_mismatches": 23,
+    "accounting_principle_missing": 38,
+    "cc_discrepancies": 5,
+    "estimated_writes": 83,
+    "post_s810_certified_estimate": 2249,
+    "post_s811_certified_estimate": 2259,
+    "domain_e_post_s811": 266
+  }
+}

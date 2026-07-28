@@ -1,0 +1,84 @@
+{
+  "session": "S850",
+  "title": "Evaluate Pilot Wave Results — 3-Item Wave 1",
+  "date": "2026-07-27",
+  "program": "800-Series Part 2 Pilot Execution Sprint 1 (A-Z Nested Multi-Agent Chain)",
+
+  "evaluate_taxonomy_definition": {
+    "distinction_from_analyze": "Analyze = interpret patterns, decompose systems, explain relationships. Evaluate = make judgments among competing valid options with trade-offs, apply criteria-based decision frameworks, recommend courses of action under constraints.",
+    "evaluate_must_include": [
+      "Judgment among competing valid alternatives",
+      "Trade-off analysis (cost, risk, feasibility)",
+      "Constraint-based recommendation",
+      "Criterion-driven decision justification",
+      "Stem format: recommendation question, not identification/classification"
+    ]
+  },
+
+  "wave_1_items": {
+    "total_planned": 3,
+    "executed": 1,
+    "items": [
+      {
+        "qid": "P1-E-R10",
+        "topic": "Compensating controls — small business",
+        "pack": "E",
+        "section": "E",
+        "status": "COMPLETE",
+        "cognitive_level_before": "Apply",
+        "cognitive_level_after": "Evaluate",
+        "difficulty_before": "Moderate (3)",
+        "difficulty_after": "Difficult (4)",
+        "correct_choice": "B",
+        "correct_choice_changed": false,
+        "stem_transformation": "Classification ('are best described as') → Recommendation ('which recommendation should the owner implement?')",
+        "choice_transformation": "Concept labels → Competing actionable recommendations",
+        "ec_transformation": "Concept definition → COSO-grounded judgment rationale with budget constraint analysis, trade-off assessment, criterion-based decision justification",
+        "distractor_transformation": "Misconception corrections → Competing-recommendation critiques with feasibility, budget, and scope-of-control arguments",
+        "dl_008_after": "CLEAN",
+        "dl_026_after": "CLEAN",
+        "elapsed_minutes": 5.3
+      },
+      {
+        "qid": "P1-E-R17",
+        "topic": "Risk responses — ERM",
+        "status": "QUEUED",
+        "s846_readiness": "HIGH — four concrete board-level options already enumerated. Add constraints (rural hospital, $200K IT budget); pivot to risk response strategy recommendation."
+      },
+      {
+        "qid": "P1-E-R08",
+        "topic": "Tone at the top / control environment",
+        "status": "QUEUED",
+        "s846_readiness": "HIGH — CEO quotes, promotion patterns, board concern. Pivot to board response recommendation."
+      }
+    ]
+  },
+
+  "classification_verification": {
+    "verify_evaluate_not_analyze": true,
+    "evidence": [
+      "Stem changed from identification to recommendation format",
+      "Choices are competing valid recommendations, not concept labels",
+      "EC includes trade-off analysis with explicit budget constraint",
+      "EC weighs alternatives against criteria (cost, feasibility, risk-reduction)",
+      "Distractor explanations critique each alternative's limitations within constraints",
+      "Candidate must exercise judgment — no single choice is obviously wrong on facts alone"
+    ],
+    "confirmed_evaluate": true
+  },
+
+  "governance": {
+    "governance_guard": "32/32 PASS",
+    "dl_008": "0 new, 0 existing in modified items",
+    "dl_026": "0 new, 0 existing in modified items",
+    "correct_choice_changes": 0,
+    "question_state_changes": 0
+  },
+
+  "remaining_wave_items": {
+    "wave_1_remaining": ["P1-E-R17", "P1-E-R08"],
+    "wave_2": ["P1-E-R03", "P1-E-R05", "P1-E-R01", "P1-E-R26"],
+    "total_remaining": 9,
+    "estimated_total_time": "9 items x ~5 min = 45 minutes"
+  }
+}

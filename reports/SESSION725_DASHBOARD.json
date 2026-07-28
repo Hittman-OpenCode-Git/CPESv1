@@ -1,0 +1,643 @@
+{
+  "document_metadata": {
+    "title": "Session 725 Governance Hardening — Unified Dashboard",
+    "session": "725",
+    "agents_contributing": [
+      "B — Governance Detection Standard",
+      "C — Phantom Reference Remediation Ledger",
+      "D — Ownership Matrix",
+      "E — Post-700 Governance Model",
+      "F — Maintenance Trigger Registry",
+      "G — Scan Methodology Standard",
+      "H — False-Positive Regression Audit",
+      "I — Governance Tooling Review",
+      "J — Knowledge Base Update Plan",
+      "K — Historical Governance RCA (10-Class)",
+      "L — Certification Protection Audit",
+      "M — Governance Debt Classification",
+      "N — Series Boundary Audit",
+      "O — Portfolio Stewardship Framework",
+      "P — Maintenance Validation (6-Scenario Simulation)"
+    ],
+    "agent_count": 15,
+    "deliverable_count": 15,
+    "mode": "READ-ONLY — Agent Q synthesis dashboard",
+    "generated": "2026-07-26",
+    "status": "ACTIVE",
+    "authority": "PROJECT_CONSTITUTION.md, S723 Program Closure, S724 Operating Model"
+  },
+
+  "section_1_executive_summary": {
+    "headline": "Governance hardening complete. Post-700 ownership and scan integrity defined. 2,181 Certified, 0 actual DL-008. Six ownership gaps resolved at the design level — all pending acceptance before S726 T0. Four operational gaps remain.",
+    "key_outcomes": [
+      "2,181 Certified MCQ items (87.2%). Zero drift across all 5 packs.",
+      "0 actual DL-008 across all 2,500 items — 67 phantom items in CURRENT_BASELINES.md confirmed as DL-029 forward-scan artifacts.",
+      "DL-008 count saga definitively closed at 0 (539→175→67→1→0 resolved by S722A+S802+S723 convergence).",
+      "DL-016 severity HIGH, 58 Pack A Section E Certified items affected. Unregistered in CURRENT_BASELINES.md §3.",
+      "32 S723 governance debt items reclassified: 6 CLOSED, 2 ACCEPTED, 24 CARRY_FORWARD, 0 BLOCKING.",
+      "6 post-700 ownership gaps resolved at design level — 0 accepted per Agent E Principle 2 protocol. Deadline: S726 T0.",
+      "10 governance standards and frameworks published across 15 deliverables.",
+      "Governance guard Rule 2 still using DL-029-vulnerable ±1200 char window scan — P0 fix required before S726.",
+      "300-series S310 closeout dangling — overdue, no trigger mechanism.",
+      "G-NEW-1 through G-NEW-5 enforcement assigned but not operationalized in 800-series certification pipeline."
+    ],
+    "overall_verdict": "GOVERNANCE_HARDENED — operational activation gated by 4 unfixed P0 items."
+  },
+
+  "section_2_portfolio_status": {
+    "lanes": [
+      {
+        "lane_id": "100",
+        "name": "Platform Maintenance & Runtime",
+        "status": "ACTIVE",
+        "primary_owner": "100-series Lead (Platform Maintainer)",
+        "certified_items": null,
+        "critical_risks": [
+          "May coaching layer ownership unaccepted (Principle 2 pending)",
+          "100-series Lead role provenance unclear"
+        ],
+        "next_action": "Accept May coaching layer ownership before S726 T0"
+      },
+      {
+        "lane_id": "300",
+        "name": "Portfolio Analytics",
+        "status": "ACTIVE — S310 closeout pending",
+        "primary_owner": "300-series Lead (Portfolio Analytics)",
+        "certified_items": null,
+        "critical_risks": [
+          "S310 dangling closeout — no trigger enforces execution",
+          "Analytics consumption paths unconfirmed",
+          "No formal series closure — indefinite 'pending' state"
+        ],
+        "next_action": "Execute S310 Portfolio Operations Dashboard before S726 T0"
+      },
+      {
+        "lane_id": "500",
+        "name": "Case-Bank Certification",
+        "status": "CLOSED — stewardship mode",
+        "primary_owner": "500-series Lead (post-closure stewardship)",
+        "certified_items": "90/90 (100%) — ENHANCED_CASE_BASE",
+        "critical_risks": [
+          "S800 forecast contradicts CURRENT_BASELINES (lists S534-S537 as future work — already complete)"
+        ],
+        "next_action": "File formal ownership disposition report per Principle 3"
+      },
+      {
+        "lane_id": "600",
+        "name": "Content Operations (Candidate)",
+        "status": "DEFERRED — S724 Executive Board unanimous (26/26)",
+        "primary_owner": "Governance Board (deferred lane stewardship)",
+        "certified_items": null,
+        "critical_risks": [
+          "No re-evaluation trigger or owner for deferral decision"
+        ],
+        "next_action": "Annual reactivation criteria review"
+      },
+      {
+        "lane_id": "700",
+        "name": "Governance & Calibration",
+        "status": "MAINTENANCE MODE v1.0",
+        "primary_owner": "Governance Auditor (700-series Maintenance Mode)",
+        "certified_items": "2,181/2,500 (87.2%)",
+        "critical_risks": [
+          "Governance guard DL-029-vulnerable window scan — P0 fix required",
+          "CURRENT_BASELINES.md §3 stale — 67 phantom DL-008 as CRITICAL",
+          "T0 baseline verify script (scripts/t0_baseline_verify.js) not created"
+        ],
+        "next_action": "P0: Fix governance guard + refresh CURRENT_BASELINES.md §3"
+      },
+      {
+        "lane_id": "800",
+        "name": "Certification & Modernization",
+        "status": "ACTIVE — S803 cleared for launch",
+        "primary_owner": "800-series Lead (Certification Auditor)",
+        "certified_items": "2,181 → targeting 2,500 via ~15 sessions",
+        "critical_risks": [
+          "G-NEW-1 through G-NEW-5 NOT operationalized in certification pipeline",
+          "S800 wave plan stale (lists 4 already-completed sessions)",
+          "Governance guard DL-029 vulnerability may block viable certification waves"
+        ],
+        "next_action": "Operationalize G-NEW enforcement before first certification wave"
+      }
+    ],
+    "boundary_transitions_severity": {
+      "100_to_300": "D — two unconfirmed owners, missing analytics delivery",
+      "300_to_700": "D — S310 not executed, no formal handoff",
+      "700_to_800": "C — G-NEW not operational, DL-008 baseline unreliable",
+      "500_to_700": "B+ — well-defined, formal disposition unfiled",
+      "800_to_700": "C+ — model sound, ownership acceptance gap remains"
+    }
+  },
+
+  "section_3_certification_integrity": {
+    "total_certified": 2181,
+    "total_mcq": 2500,
+    "percentage": "87.2%",
+    "drift_detected": false,
+    "duplicate_qids": 0,
+    "per_pack": {
+      "pack_a": {"total": 500, "certified": 481, "non_certified": 19, "sections_certified": ["A","B","C","D"]},
+      "pack_b": {"total": 500, "certified": 500, "non_certified": 0, "sections_certified": ["A","B","C","D","E","F"]},
+      "pack_c": {"total": 500, "certified": 350, "non_certified": 150, "sections_certified": ["A","B","C","D"]},
+      "pack_d": {"total": 500, "certified": 350, "non_certified": 150, "sections_certified": ["A","B","C","D"]},
+      "pack_e": {"total": 500, "certified": 500, "non_certified": 0, "sections_certified": ["A","B","C","D","E","F"]}
+    },
+    "state_distribution": {
+      "Certified": 2181,
+      "Unprocessed": 227,
+      "Archived": 92,
+      "In_Audit": 0,
+      "Editorial_Queue": 0
+    },
+    "verification_method": "Select-String + Function constructor parse (cross-validated at S802 T0)",
+    "baselines_match": true,
+    "baselines_source": "knowledge/CURRENT_BASELINES.md §2",
+    "verdict": "PROTECTED — zero drift, zero duplicates"
+  },
+
+  "section_4_defect_status": {
+    "dl008_summary": {
+      "actual_count": 0,
+      "phantom_count_in_baselines": 67,
+      "phantom_root_cause": "DL-029 forward-scan false positives (CC-before-QID universal in all 5 packs)",
+      "resolution": "Confirming sources: S722A (26-agent Function constructor parse), S802 (26-agent governance correction), S723 (line-level P1-CC-050 CLEAN)",
+      "status": "RESOLVED — 0 actual across all 2,500 items",
+      "remaining_items": 0
+    },
+    "dl016_status": {
+      "severity": "HIGH",
+      "description": "Metadata-block ChoiceA-D +1 offset. ExplanationWrong fields describe previous QID's topic, not the current item's distractors.",
+      "affected": {
+        "pack_a_section_e_certified": 58,
+        "dual_block_packs": "A, C, D — total scope unknown"
+      },
+      "learner_safety_impact": "Learners who select wrong answers on Certified items see ExplanationWrong text about completely unrelated topics.",
+      "in_cbaselines": false,
+      "in_session_status": "LOW (Cosmetic) — misclassified, contradicts DEFECT_LIBRARY HIGH rating",
+      "status": "CARRY_FORWARD — S805 DL-016 EW Remediation scheduled"
+    },
+    "debt_reclassification": {
+      "s723_starting_count": 32,
+      "s725_closed": 6,
+      "s725_accepted": 2,
+      "s725_carry_forward": 24,
+      "s725_blocking": 0,
+      "major_resolutions": [
+        "DL-008 Certified (67 phantom) → CLOSED: 0 actual confirmed",
+        "DL-008 count dispute → CLOSED: authoritative count established at 0",
+        "P1-CC-050 contradiction → CLOSED: line-level verification = CLEAN",
+        "FD-045 missing fields → CLOSED: S802 confirmed structurally complete",
+        "REVISION_HISTORY missing entries → CLOSED: S722A-S804 entries present"
+      ],
+      "largest_remaining_debts": [
+        "Analyze/Evaluate structural content gap — 0 genuine Evaluate, 4 Analyze",
+        "DL-031 difficulty inflation (~500 items)",
+        "DL-032 case uniform difficulty (420 items)",
+        "DL-013 template boilerplate (~851 fields, non-Certified)",
+        "DCS §3 severe misalignments (174 items)"
+      ]
+    }
+  },
+
+  "section_5_ownership_status": {
+    "gaps_from_s724": 6,
+    "gaps_resolved_at_design_level": 6,
+    "gaps_accepted_per_principle_2": 0,
+    "acceptance_deadline": "S726 T0",
+    "gaps_detail": [
+      {
+        "id": "GAP-1/6",
+        "name": "May coaching layer ownership",
+        "assigned_to": "100-series Lead (Platform Maintainer)",
+        "accepted": false,
+        "severity": "HIGH"
+      },
+      {
+        "id": "GAP-2",
+        "name": "300→Maintenance model consumption path",
+        "assigned_to": "Reconciliation Agent + Certification Auditor",
+        "accepted": false,
+        "severity": "HIGH"
+      },
+      {
+        "id": "GAP-3",
+        "name": "G-NEW enforcement in 800-series",
+        "assigned_to": "Certification Auditor (800-series)",
+        "accepted": false,
+        "severity": "CRITICAL"
+      },
+      {
+        "id": "GAP-4",
+        "name": "Defect manifest maintenance",
+        "assigned_to": "Defect Sweeper (700-series)",
+        "accepted": false,
+        "severity": "HIGH"
+      },
+      {
+        "id": "GAP-5",
+        "name": "300-series S310 closeout",
+        "assigned_to": "300-series Lead",
+        "accepted": false,
+        "severity": "HIGH"
+      },
+      {
+        "id": "GAP-6",
+        "name": "CURRENT_BASELINES.md maintenance",
+        "assigned_to": "Baseline Maintainer (700-series)",
+        "accepted": false,
+        "severity": "HIGH"
+      }
+    ],
+    "matrix_published": true,
+    "matrix_reference": "reports/SESSION725_OWNERSHIP_MATRIX.json — 25 rows, 6 gap resolutions, per-series responsibility maps"
+  },
+
+  "section_6_standards_published": {
+    "total_standards": 10,
+    "deliverables": [
+      {
+        "agent": "B",
+        "file": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md",
+        "type": "Standard",
+        "title": "Governance Detection Standard v1.0",
+        "key_content": "Dual-block inventory, canonical field extraction table, 4 mandatory prohibitions (FM-001 through FM-004), 4 approved methodologies (AM-1 through AM-3 + within-record), compliance verification (C1-C6), Pack B gold standard test, governance guard upgrade directive"
+      },
+      {
+        "agent": "C",
+        "file": "reports/SESSION725_PHANTOM_REFERENCE_REMEDIATION_LEDGER.json",
+        "type": "Ledger",
+        "title": "Phantom Reference Remediation Ledger",
+        "key_content": "24 phantom references across 7 documents. 6 HIGH severity, 8 MEDIUM, 10 LOW, 6 phantom_count, 11 stale_text, 5 stale_status, 2 missing_entry"
+      },
+      {
+        "agent": "D",
+        "file": "reports/SESSION725_OWNERSHIP_MATRIX.json",
+        "type": "Matrix",
+        "title": "Portfolio Ownership Matrix v2.0",
+        "key_content": "6 gap resolutions, 25-row ownership matrix, per-series responsibility maps (100/300/500/700/800), transition verification, + Agent E acceptance protocol integration"
+      },
+      {
+        "agent": "E",
+        "file": "reports/SESSION725_POST700_GOVERNANCE_MODEL.md",
+        "type": "Model",
+        "title": "Post-700 Governance Model v1.0",
+        "key_content": "TRANSFER→ACCEPTANCE→APPROVAL→CLOSE rule, ownership transfer review checklist, acceptance requirement (ASSIGNED≠ACCEPTED), retroactive gap analysis (WHO skipped WHAT for each of 6 gaps), maintenance mode governance cadences, 6 agent roles, trigger thresholds"
+      },
+      {
+        "agent": "F",
+        "file": "reports/SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json",
+        "type": "Registry",
+        "title": "Maintenance Trigger Registry v1.0",
+        "key_content": "5 maintenance cadences (M1-M5), 8 trigger thresholds (T-001 through T-008), 6 escalation procedures (ESC-001 through ESC-006), 7 ownership assignments, concrete numerical limits, per-trigger prescribed actions with step-by-step chains"
+      },
+      {
+        "agent": "G",
+        "file": "reports/SESSION725_SCAN_METHODOLOGY_STANDARD.md",
+        "type": "Standard",
+        "title": "Scan Methodology Standard v1.0",
+        "key_content": "3 approved methodologies (AM-1 Function constructor, AM-2 object-bounded + string-aware, AM-3 within-record), 8 forbidden methodologies (FM-001 through FM-008), count divergence hard gate (AUTO ESCALATE), regression test suite (12 tests), governance guard upgrade rules (RULE 6-8 proposed)"
+      },
+      {
+        "agent": "H",
+        "file": "reports/SESSION725_FALSE_POSITIVE_REGRESSION_AUDIT.json",
+        "type": "Audit",
+        "title": "False-Positive Regression Audit",
+        "key_content": "6 historical incidents reviewed, verdict ALL_PREVENTED (5 HIGH confidence, 1 MEDIUM), cross-reference matrix mapping incidents to preventing clauses, 4 remaining gaps (G-NEW-1 through G-NEW-4)"
+      },
+      {
+        "agent": "I",
+        "file": "reports/SESSION725_GOVERNANCE_TOOLING_REVIEW.json",
+        "type": "Review",
+        "title": "Governance Tooling Compatibility Review",
+        "key_content": "6 tools reviewed + 1 manifest + scan scripts. 4 compliant, 4 non-compliant. 5 forbidden methodology instances found. P0: governance guard must be upgraded to Function constructor parse. DEFECT_MANIFEST_DL008_DL026.json contaminated (371 Pack E phantom DL-008)"
+      },
+      {
+        "agent": "J",
+        "file": "reports/SESSION725_KB_UPDATE_PLAN.json",
+        "type": "Plan",
+        "title": "Knowledge Base Update Plan",
+        "key_content": "15 updates across 6 documents (P0: KB-001 through KB-006), 2 superseded documents, 4 missing REVISION_HISTORY entries, 5 obsolete procedures, recommended execution order"
+      },
+      {
+        "agent": "K",
+        "file": "reports/SESSION725_HISTORICAL_GOVERNANCE_RCA.json",
+        "type": "RCA",
+        "title": "Historical Governance Root-Cause Analysis (10 Failure Classes)",
+        "key_content": "FC-001 through FC-010 root cause classes, 8 forbidden methodology catalog (FM-001 through FM-008), 17-incident timeline (2026-07-22 to 2026-07-26), recurrence analysis per failure class"
+      },
+      {
+        "agent": "L",
+        "file": "reports/SESSION725_CERTIFICATION_PROTECTION_AUDIT.json",
+        "type": "Audit",
+        "title": "Certification Protection Audit",
+        "key_content": "2,181 certified verified, zero drift, zero duplicates, all packs 500 QIDs, verdict PROTECTED"
+      },
+      {
+        "agent": "M",
+        "file": "reports/SESSION725_GOVERNANCE_DEBT_CLASSIFICATION.json",
+        "type": "Classification",
+        "title": "Governance Debt Classification (Post-S723 Reclassification)",
+        "key_content": "32→6 CLOSED, 2 ACCEPTED, 24 CARRY_FORWARD, 0 BLOCKING. DL-008 count convergence documented. P1-CC-050 resolved."
+      },
+      {
+        "agent": "N",
+        "file": "reports/SESSION725_SERIES_BOUNDARY_AUDIT.json",
+        "type": "Audit",
+        "title": "Series Boundary Ownership Audit",
+        "key_content": "5 series audited, 5 boundary transitions scored (D to B+), 0 of 6 Principal 2 acceptances complete, 2 cross-cutting findings (CRITICAL: acceptance protocol, HIGH: SESSION_STATUS staleness)"
+      },
+      {
+        "agent": "O",
+        "file": "reports/SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md",
+        "type": "Framework",
+        "title": "Portfolio Stewardship Framework v1.0",
+        "key_content": "8-lane portfolio map, 19-row ownership matrix, 5 stewardship principles, 6 gap resolutions with acceptance criteria, 4 stewardship review cadences"
+      },
+      {
+        "agent": "P",
+        "file": "reports/SESSION725_MAINTENANCE_VALIDATION.json",
+        "type": "Validation",
+        "title": "Maintenance Mode Framework Validation (6-Scenario Simulation)",
+        "key_content": "6 operational scenarios simulated, all 6 PASS. 13 gaps identified (1 CRITICAL, 2 HIGH, 7 MEDIUM, 3 LOW). Cross-cutting: inter-agent communication protocol missing, baseline integrity dependency. Readiness: OPERATIONALLY READY with caveats."
+      }
+    ]
+  },
+
+  "section_7_tooling_compatibility": {
+    "overall_score": "PARTIAL (3 of 6 compliant)",
+    "compliant": [
+      {"tool": "ExplanationValidator.js", "detail": "String-aware brace-matcher, within-record extraction, Function constructor fallback"},
+      {"tool": "scan_s710r_dl026.js", "detail": "Function constructor parse, within-record extraction, QID-list output"},
+      {"tool": "s805_dl016_inventory.js", "detail": "Function constructor parse, dual-block disambiguation, QID-list output"},
+      {"tool": "build_master_registry.js", "detail": "String-aware brace-matcher, object-bounded extraction (minor: eval not Function for cases)"}
+    ],
+    "non_compliant": [
+      {"tool": "governance-guard.js", "severity": "CRITICAL", "issue": "Rule 2 uses DL-029-vulnerable ±1200 char forward-scan. Produces BLOCK enforcement based on phantom findings."},
+      {"tool": "session86_dl8_scan.js", "severity": "CRITICAL", "issue": "QuestionID-split forward-scan — ~75% false positive on Pack B"},
+      {"tool": "session86_dl026_scan.js", "severity": "CRITICAL", "issue": "Same DL-029 vulnerability as dl8_scan"},
+      {"tool": "test_governance_guard.js", "severity": "HIGH", "issue": "Tests validate wrong methodology. No DL-029/016 coverage."}
+    ],
+    "contaminated_artifacts": [
+      {"artifact": "DEFECT_MANIFEST_DL008_DL026.json", "issue": "371 Pack E phantom DL-008, mixed eval/regex methodology"},
+      {"artifact": "governance/delivery_blocklist.js", "issue": "Inherits contaminated manifest data"},
+      {"artifact": "governance/defect_manifest.js", "issue": "Inherits contaminated manifest data"}
+    ],
+    "upgrade_priorities": {
+      "P0": "governance-guard.js — DL-008 detection to Function constructor parse",
+      "P0": "DEFECT_MANIFEST_DL008_DL026.json — regenerate via Function constructor scan",
+      "P1": "session86 scripts — replace with Function constructor",
+      "P1": "test_governance_guard.js — rewrite with DL-029/016/020 coverage"
+    }
+  },
+
+  "section_8_risk_register": {
+    "post_hardening_risks": [
+      {
+        "risk_id": "R-001",
+        "severity": "CRITICAL",
+        "title": "Governance guard DL-008 detection uses DL-029-vulnerable window scan",
+        "impact": "BLOCK enforcement based on phantom findings. May block clean certification waves. P0 fix required.",
+        "mitigation": "Interim safeguard: any BLOCK event from Rule 2 must be independently verified via Function constructor parse before acting."
+      },
+      {
+        "risk_id": "R-002",
+        "severity": "CRITICAL",
+        "title": "No inter-agent halt communication protocol",
+        "impact": "CRITICAL escalations cannot enforce halts across concurrent agents. Gaps in ESC-001, ESC-005, ESC-006.",
+        "mitigation": "Recommended: adopt 'all agents check governance guard before writes' convention."
+      },
+      {
+        "risk_id": "R-003",
+        "severity": "HIGH",
+        "title": "CURRENT_BASELINES.md §3 stale — 67 phantom DL-008 as CRITICAL",
+        "impact": "T0 protocol and Deep Audit gates produce PASS against incorrect reference data. New operators may trigger emergency remediation.",
+        "mitigation": "Scheduled for S726 baseline refresh."
+      },
+      {
+        "risk_id": "R-004",
+        "severity": "HIGH",
+        "title": "DL-016 absent from CURRENT_BASELINES.md §3, understated in SESSION_STATUS",
+        "impact": "HIGH-severity learner-safety defect invisible in authoritative documents. 800-series certification pipeline may certify items without G-NEW GATE.",
+        "mitigation": "Scheduled for documentation fix + S805 DL-016 EW Remediation."
+      },
+      {
+        "risk_id": "R-005",
+        "severity": "HIGH",
+        "title": "G-NEW-1 through G-NEW-5 not operationalized in 800-series",
+        "impact": "Certification waves may certify items with ExplanationWrong topic-mismatch (G-NEW-2), dual-block Choice mismatch (G-NEW-1/G-NEW-3), or case explanation insufficiency (G-NEW-4).",
+        "mitigation": "Must be operationalized before first 800-series certification wave."
+      },
+      {
+        "risk_id": "R-006",
+        "severity": "HIGH",
+        "title": "6 ownership gaps — all 6 pending acceptance (Principle 2 not executed)",
+        "impact": "Resolved owners are proposed, not operational. If assigned owners are unavailable, gaps reopen.",
+        "mitigation": "Deadline S726 T0. Governance Auditor reports gap-closure status."
+      },
+      {
+        "risk_id": "R-007",
+        "severity": "MEDIUM",
+        "title": "No session counter — Deep Audit trigger (mod 20) cannot fire autonomously",
+        "impact": "20-session Deep Audit cadence depends on human awareness or ad-hoc detection. No automated mechanism exists.",
+        "mitigation": "Create SESSION_COUNTER.md; increment at every session start during T0."
+      },
+      {
+        "risk_id": "R-008",
+        "severity": "MEDIUM",
+        "title": "DEFECT_MANIFEST_DL008_DL026.json contaminated with 371 Pack E phantom DL-008",
+        "impact": "Downstream delivery_blocklist.js and defect_manifest.js may block clean items from delivery based on phantom defects.",
+        "mitigation": "Regenerate via Function constructor parse. Rebuild downstream consumers."
+      }
+    ],
+    "false_positive_prevention_verdict": "ALL_PREVENTED — 6/6 historical incidents would be prevented by S725 standards (5 HIGH confidence, 1 MEDIUM)."
+  },
+
+  "section_9_action_items": {
+    "P0_immediate": [
+      {
+        "id": "P0-01",
+        "action": "Upgrade governance guard Rule 2 (DL-008 detection) from DL-029-vulnerable window scan to Function constructor parse",
+        "owner": "Governance Auditor (700-series)",
+        "deadline": "Before S726 T0",
+        "session": "S726"
+      },
+      {
+        "id": "P0-02",
+        "action": "Refresh CURRENT_BASELINES.md §3 — remove 67 phantom DL-008 items, replace with Function-constructor-parse-verified counts (0 actual). Register DL-016 at HIGH severity.",
+        "owner": "Baseline Maintainer (700-series)",
+        "deadline": "Before S726 T0",
+        "session": "S726"
+      },
+      {
+        "id": "P0-03",
+        "action": "Recapture all 15 SHA-256 hashes in CURRENT_BASELINES.md §1 (5 pack files have drifted from S530 T0 baseline through authorized S530-S537-S722A writes)",
+        "owner": "Baseline Maintainer (700-series)",
+        "deadline": "Before S726 T0",
+        "session": "S726"
+      },
+      {
+        "id": "P0-04",
+        "action": "Create scripts/t0_baseline_verify.js for automated T0 protocol execution",
+        "owner": "Governance Auditor (700-series)",
+        "deadline": "Before S726 T0",
+        "session": "S726"
+      },
+      {
+        "id": "P0-05",
+        "action": "Execute all 6 Principle 2 ownership acceptances — every assigned owner must explicitly accept in REVISION_HISTORY.md",
+        "owner": "Governance Auditor (700-series)",
+        "deadline": "S726 T0",
+        "session": "S726"
+      }
+    ],
+    "P1_high": [
+      {
+        "id": "P1-01",
+        "action": "Execute S310 (Portfolio Operations Dashboard) as formal 300-series closeout",
+        "owner": "300-series Lead or Reconciliation Agent",
+        "deadline": "Before S726",
+        "session": "S310/S726"
+      },
+      {
+        "id": "P1-02",
+        "action": "Operationalize G-NEW-1 through G-NEW-5 enforcement in 800-series certification pipeline",
+        "owner": "Certification Auditor (800-series)",
+        "deadline": "Before first 800-series certification wave (S801+)",
+        "session": "S726+/S801"
+      },
+      {
+        "id": "P1-03",
+        "action": "Regenerate DEFECT_MANIFEST_DL008_DL026.json via Function constructor parse; rebuild delivery_blocklist.js and defect_manifest.js",
+        "owner": "Defect Sweeper (700-series)",
+        "deadline": "Before next May coaching deployment",
+        "session": "S726"
+      },
+      {
+        "id": "P1-04",
+        "action": "Update AGENTS.md §9 startup protocol — redirect from stale SESSION_STATUS_2026-07-24.md to CURRENT_BASELINES.md. Correct certified count from ~1,080 to ~2,181.",
+        "owner": "Baseline Maintainer (700-series)",
+        "deadline": "Before next non-S725 session",
+        "session": "S726"
+      }
+    ],
+    "P2_medium": [
+      {
+        "id": "P2-01",
+        "action": "Apply KB updates KB-001 through KB-015 across CURRENT_BASELINES.md, DEFECT_LIBRARY.md, AGENTS.md, CAQS_v1.0.md, QUESTION_METADATA_STANDARD.md, REVISION_HISTORY.md",
+        "owner": "Baseline Maintainer + Defect Sweeper",
+        "deadline": "Within 2 sessions",
+        "session": "S726-S727"
+      },
+      {
+        "id": "P2-02",
+        "action": "Update SESSION800_SESSION_SUMMARY.md §9 Wave 5 — mark S534-S537 as COMPLETED (not Planned). Rebase certification plan: ~15 sessions, not 19.",
+        "owner": "800-series Lead or Baseline Maintainer",
+        "deadline": "Before S801",
+        "session": "S726"
+      },
+      {
+        "id": "P2-03",
+        "action": "Add SUPERSEDED banner to SESSION_STATUS_2026-07-24.md; generate fresh SESSION_STATUS_2026-07-26.md from S802/S803 data",
+        "owner": "Governance Auditor",
+        "deadline": "Within 2 sessions",
+        "session": "S726-S727"
+      },
+      {
+        "id": "P2-04",
+        "action": "Adopt inter-agent halt convention: all pack-write agents check governance guard before every write batch",
+        "owner": "Governance Auditor (700-series)",
+        "deadline": "Within 3 sessions",
+        "session": "S726-S729"
+      },
+      {
+        "id": "P2-05",
+        "action": "Create DEFECTIVE_QID_LIST.json for machine-parseable cross-reference in G5 and PD-CHK-2",
+        "owner": "Defect Sweeper (700-series)",
+        "deadline": "Within 5 sessions",
+        "session": "S726-S730"
+      },
+      {
+        "id": "P2-06",
+        "action": "File 500-series formal ownership disposition report per Principle 3",
+        "owner": "500-series Lead (post-closure)",
+        "deadline": "Before S726",
+        "session": "S726"
+      }
+    ],
+    "P3_low": [
+      {
+        "id": "P3-01",
+        "action": "Define emergency finding template (DL008_EMERGENCY_FINDING.json) for ESC-001 step 1.",
+        "deadline": "Before first DL-008 incident"
+      },
+      {
+        "id": "P3-02",
+        "action": "Create certified_state_snapshot mechanism for T-001 diff (QID→question_state map per session).",
+        "deadline": "Within 3 sessions"
+      },
+      {
+        "id": "P3-03",
+        "action": "Inline Sync Anomaly Playbook procedure from Session 52 into trigger registry.",
+        "deadline": "Within 3 sessions"
+      },
+      {
+        "id": "P3-04",
+        "action": "Create SESSION_COUNTER.md for Deep Audit (mod 20) trigger.",
+        "deadline": "Within 5 sessions"
+      },
+      {
+        "id": "P3-05",
+        "action": "Define dual-clearance protocol (Governance Auditor + Reconciliation Agent disagreement resolution).",
+        "deadline": "Within 5 sessions"
+      },
+      {
+        "id": "P3-06",
+        "action": "Define emergency override path for M4 pre-delivery BLOCK with dual clearance.",
+        "deadline": "Before first emergency deployment"
+      }
+    ]
+  },
+
+  "section_10_synthesis_notes": {
+    "governance_maturity": {
+      "score": "C+ → B- (post-S725 hardening, pre-S726 operational activation)",
+      "improvements": [
+        "10 enforceable standards published (up from 0 pre-700)",
+        "25-row ownership matrix with per-series responsibility maps",
+        "8-tier trigger registry with concrete numerical thresholds and step-by-step escalation chains",
+        "6-scenario simulation validated all escalation paths",
+        "32-item debt register reclassified — 0 blocking items remain",
+        "DL-008 count saga definitively resolved at 0 via 3-source convergence"
+      ],
+      "remaining_gaps": [
+        "Operational activation blocked by 4 unfixed P0 items (governance guard, baselines, T0 script, ownership acceptance)",
+        "No inter-agent communication protocol",
+        "No automated T0 executor",
+        "May coaching layer ownership unaccepted"
+      ]
+    },
+    "cross_document_consistency": {
+      "status": "IMPROVED — but CENTRALIZED",
+      "improvements": "S725 deliverables provide a single authoritative reference stack. All 15 agents cross-referenced AGENTS.md, CAQS, DEFECT_LIBRARY, and CURRENT_BASELINES.",
+      "remaining_inconsistencies": [
+        "CURRENT_BASELINES.md §3: 67 phantom DL-008 (vs. 0 actual)",
+        "SESSION_STATUS_2026-07-24.md: 2,031 certified (vs. 2,181 actual)",
+        "DEFECT_LIBRARY.md DL-008 header: '175 remaining' (vs. 0 actual)",
+        "DEFECT_LIBRARY.md DL-016 severity: HIGH. SESSION_STATUS: LOW (Cosmetic)",
+        "SESSION800 forecast: S534-S537 as Planned (vs. CURRENT_BASELINES: COMPLETED)"
+      ]
+    }
+  },
+
+  "session_closure": {
+    "session": "725",
+    "read_only": true,
+    "pack_files_modified": 0,
+    "certification_state_changed": false,
+    "answer_keys_modified": false,
+    "new_file_created": "reports/SESSION725_DASHBOARD.json",
+    "all_prior_deliverables_referenced": true,
+    "requires_revision_history_entry": true,
+    "next_session": "S726 — P0 activation: governance guard upgrade + baselines refresh + ownership acceptance"
+  }
+}

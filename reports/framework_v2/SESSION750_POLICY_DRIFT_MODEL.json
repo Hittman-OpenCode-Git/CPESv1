@@ -1,0 +1,61 @@
+{
+  "deliverable": "SESSION750_POLICY_DRIFT_MODEL.json",
+  "session": 750,
+  "board": "B",
+  "title": "Policy Drift Detector",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "status": "DEPLOYED",
+  "description": "Automated policy drift detection across five dimensions: missing metadata, missing authority citations, missing distractor explanations, identity anomalies, and readiness bypass attempts.",
+  "sourceFile": "scripts/policy_drift_detector.js",
+  "detectionDimensions": {
+    "MISSING_METADATA": {
+      "description": "Detects questions with absent question_state, Difficulty, DifficultyScore, CognitiveLevel, Topic, or PrimaryCompetency fields",
+      "severity": "HIGH when question_state is missing; MEDIUM otherwise",
+      "fieldsChecked": ["question_state", "Difficulty", "DifficultyScore", "CognitiveLevel", "Topic", "PrimaryCompetency"],
+      "reference": "QUESTION_METADATA_STANDARD.md §2.1"
+    },
+    "MISSING_CITATIONS": {
+      "description": "Detects ExplanationCorrect and ExplanationWrong fields lacking ASC, COSO, IFRS, GAAP, FASB, or IMA Statement references",
+      "severity": "MEDIUM for ExplanationCorrect; LOW for ExplanationWrong",
+      "citationPattern": "ASC\\s+\\d{3}|COSO|IAS\\s+\\d{1,2}|IFRS\\s+\\d{1,2}|GAAP|FASB|IMA\\s+Statement|SSARS|PCAOB|SOX|SEC\\s+Regulation",
+      "reference": "CAQS_v1.0.md §4.3 — EV3: Correct answer must reference accounting principle by name"
+    },
+    "MISSING_EXPLANATIONS": {
+      "description": "Detects absent, empty, or boilerplate distractor ExplanationWrong fields. Covers DL-008, DL-018, DL-021, DL-025, DL-026, DL-013 defect patterns.",
+      "severity": "HIGH for DL-008/021/026; MEDIUM for DL-013; LOW for insufficient length",
+      "patterns": ["DL-008 (non-empty at CC)", "DL-021 (absent distractor)", "DL-026 (empty distractor)", "DL-013 (boilerplate text)"],
+      "reference": "CAQS_v1.0.md §4.4; DEFECT_LIBRARY.md DL-008, DL-021, DL-026, DL-013"
+    },
+    "IDENTITY_ANOMALIES": {
+      "description": "Detects duplicate QuestionIDs, invalid CorrectChoice values, missing CorrectChoice, missing stems, and invalid question_state values",
+      "severity": "CRITICAL for missing/invalid CorrectChoice or Stem; HIGH for duplicates and invalid states",
+      "reference": "QUESTION_METADATA_STANDARD.md §5.1; Gate -1 Identity Validation (PG-011)"
+    },
+    "READINESS_BYPASS": {
+      "description": "Detects Certified items with insufficient ExplanationCorrect (<50 chars), missing distractor explanations, or high-difficulty items with short explanations (<200 chars)",
+      "severity": "HIGH for certified-without-explanation; LOW for short-explanation-on-high-difficulty",
+      "reference": "CAQS_v1.0.md §1.7 — Certification Standard; QUESTION_METADATA_STANDARD.md §9.4"
+    }
+  },
+  "outputFormat": {
+    "detector": "Policy Drift Detector v1.0",
+    "timestamp": "ISO 8601 datetime",
+    "overallStatus": "NO_CRITICAL_DRIFT | DRIFT_DETECTED",
+    "totalCriticalFindings": "integer",
+    "results": "file-keyed object with per-dimension counts and severity summaries"
+  },
+  "CLI": {
+    "usage": "node scripts/policy_drift_detector.js [--json] [--pack <filename>] [--threshold <N>]",
+    "options": {
+      "--json": "Output structured JSON",
+      "--pack": "Run against a single pack file",
+      "--threshold": "Cap findings per dimension at N (default: unlimited)"
+    }
+  },
+  "integrationPoints": [
+    "Pre-certification gate: run before any certification wave",
+    "Session audit: run at session startup to detect new drift",
+    "CI pipeline: drift count must not increase from baseline"
+  ]
+}

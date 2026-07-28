@@ -1,0 +1,39 @@
+{
+  "session": "S831",
+  "agent": "D",
+  "phase": "Discovery",
+  "certified_pool_profile": {
+    "total_certified": 2298,
+    "estimated_difficulty": {
+      "Easy": {"count": "~485", "pct": "~21.1"},
+      "Moderate-Easy": {"count": "~627", "pct": "~27.3"},
+      "Moderate": {"count": "~1,096", "pct": "~47.7"},
+      "Difficult": {"count": "~77", "pct": "~3.4"},
+      "Very_Difficult": {"count": 0, "pct": 0.0}
+    },
+    "note": "242 Archived items include DL-012 clone batch (140 Moderate) and DL-033 items (16 Moderate). Removing these shifts the Certified pool slightly toward Easy/Moderate-Easy."
+  },
+  "learner_pool_risks": [
+    {"risk": "No Very Difficult practice items", "impact": "Learners cannot prepare for hardest exam tier", "severity": "HIGH"},
+    {"risk": "Severe Difficult deficit (~77 items)", "impact": "CMA exam has ~25% Difficult items; our pool has ~3%", "severity": "CRITICAL"},
+    {"risk": "Mid-range plateau", "impact": "~75% of items cluster at Moderate-Easy/Moderate — poor discrimination", "severity": "MEDIUM"}
+  ],
+  "case_study_certification": {
+    "scored_cases_js": {"cases": 15, "items": 90, "certified": 90, "status": "FULLY CERTIFIED"},
+    "scored_cases2_js": {"cases": "~15+15", "items": 153, "certified": "partial", "status": "Case-level certified, items mixed"},
+    "scored_cases3_js": {"cases": "~15+15", "items": 154, "certified": "partial", "status": "Case-level certified, items mixed"},
+    "scored_cases4_js": {"cases": "~15+15", "items": 153, "certified": "partial", "status": "Case-level certified, items mixed"},
+    "scored_cases5_js": {"cases": "~15", "items": 75, "certified": "few", "status": "Minimal certification"},
+    "note": "Case difficulty is better calibrated than MCQ. scored_cases.js has the best calibration (fully remediated S530/S537)."
+  },
+  "combined_pool_estimate": {
+    "total_mcq_plus_cases": "3,285",
+    "difficult_items": "351 (10.7%) — still below 25% target",
+    "very_difficult_items": "0 (0%) — unchanged",
+    "verdict": "Even with case studies, the combined pool is severely underweight on Difficult/Very Difficult items. Content expansion, not just relabeling, is required."
+  },
+  "certification_bandwidth_assessment": {
+    "description": "The certification pipeline can handle ~200 items per wave (S853 certified 77 in one batch). At that rate, expanding by 1,000 new Difficult/Very Difficult items would require ~5 certification waves.",
+    "recommendation": "Prioritize quality over quantity. Target 100-150 high-quality Difficult/Very Difficult items per section (total 600-900) over 3-4 waves."
+  }
+}

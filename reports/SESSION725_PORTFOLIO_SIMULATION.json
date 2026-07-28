@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "session": "725",
+    "agent": "U",
+    "date": "2026-07-26",
+    "mode": "READ-ONLY",
+    "description": "Portfolio Simulation — pass/fail gate for S725 governance hardening. Three scenarios test whether S725 controls would prevent recurrence of historical failure classes.",
+    "sources_consulted": [
+      "SESSION725_POST700_GOVERNANCE_MODEL.md (Agent E — 333 lines)",
+      "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (Agent O — 492 lines)",
+      "SESSION725_GOVERNANCE_DETECTION_STANDARD.md (Agent B — 409 lines)",
+      "SESSION725_SCAN_METHODOLOGY_STANDARD.md (Agent G — 540 lines)",
+      "SESSION725_OWNERSHIP_MATRIX.json (Agent D — 700+ lines)",
+      "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json (Agent F — 807 lines)",
+      "SESSION725_MAINTENANCE_VALIDATION.json (Agent P — 586 lines)",
+      "SESSION725_SERIES_BOUNDARY_AUDIT.json (Agent N — 432 lines)",
+      "SESSION725_HISTORICAL_GOVERNANCE_RCA.json (Agent K — 533 lines)"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "A",
+      "name": "DL-029-Type Artifact",
+      "tests": "Detection Standard, Scan Methodology Standard, Governance Guard, Baseline Maintenance",
+      "prevented": false,
+      "defense_layers": [
+        {
+          "layer": 1,
+          "control": "Detection Standard §3.1 — Forward-Scan Regex Prohibited (FM-001)",
+          "reference": "SESSION725_GOVERNANCE_DETECTION_STANDARD.md §3.1, §5.1-5.3",
+          "result": "EXISTS BUT NOT DISCOVERABLE via AGENTS.md startup protocol. A new operator following only AGENTS.md §9 would never read the Detection Standard.",
+          "holds": false
+        },
+        {
+          "layer": 2,
+          "control": "Scan Methodology Standard §6.2 — Pack B Gold Standard Test",
+          "reference": "SESSION725_SCAN_METHODOLOGY_STANDARD.md §6.2, §6.1 T1",
+          "result": "EXISTS. Any scan reporting DL-008 > 0 on Pack B is non-compliant. But requires someone to independently run AM-1 cross-check — the operator's own forward-scan would not self-detect its error.",
+          "holds": false
+        },
+        {
+          "layer": 3,
+          "control": "Governance Guard Rule 2 (DL-008 BLOCK)",
+          "reference": ".opencode/plugins/governance-guard.js; Detection Standard §7; Scan Methodology Standard §10",
+          "result": "DOES NOT PREVENT. Governance guard still uses DL-029-vulnerable ±1200 character window forward-scan (GAP-5, documented but unresolved). The guard would produce the same ~75% false-positive rate as the operator's script. The automated enforcement mechanism is itself built on the prohibited methodology.",
+          "holds": false
+        },
+        {
+          "layer": 4,
+          "control": "T0 Entry Protocol — T0-CHK-3 (Function Constructor Parse Mandatory)",
+          "reference": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json §M1 — T0-CHK-3",
+          "result": "WOULD CATCH if the Governance Auditor runs T0 properly, but only if the result is cross-checked against the operator's claim. The T0 check validates against CURRENT_BASELINES.md §3 which is itself stale (67 phantom DL-008 items per GAP-6).",
+          "holds": "conditional"
+        },
+        {
+          "layer": 5,
+          "control": "M3 Deep Audit — G2 Defect Inventory Reconciliation (every 20 sessions)",
+          "reference": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json §M3 — DA-CHK-2",
+          "result": "WOULD CATCH at Deep Audit if counts diverge from AM-1 ground truth. But window is up to 20 sessions — an operator's results could circulate as authoritative for weeks before detection.",
+          "holds": "conditional"
+        }
+      ],
+      "undetected_failure_point": "The governance guard's own DL-008 detection (Rule 2 BLOCK) uses the same DL-029-vulnerable forward-scan methodology that produced the operator's false positives (GAP-5, identified by S724 but unresolved). The automated enforcement gate is unreliable. Furthermore, the Detection Standard and Scan Methodology Standard exist as S725 report files but are NOT embedded in AGENTS.md §9 startup protocol — a new operator following standard session startup would never encounter them. CURRENT_BASELINES.md §3 already carries 67 phantom DL-008 entries, so even the T0 protocol validates against incorrect baselines.",
+      "verdict": "GAP_EXPOSED"
+    },
+    {
+      "id": "B",
+      "name": "Ownership Loss",
+      "tests": "Ownership Preservation, Succession Plan, Staleness Detection",
+      "prevented": true,
+      "defense_layers": [
+        {
+          "layer": 1,
+          "control": "Stewardship Framework — Succession Plan for Baseline Maintainer",
+          "reference": "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md §4.6 (Gap 6 resolution); Ownership Matrix row 1 (Secondary: Certification Auditor)",
+          "result": "EXISTS. Clear succession: if Baseline Maintainer unavailable → Certification Auditor (800-series) assumes baseline maintenance. Onboarding checklist documented at §4.6 transition steps.",
+          "holds": true
+        },
+        {
+          "layer": 2,
+          "control": "T0 Entry Protocol — T0-CHK-1 Hash Verification",
+          "reference": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json §M1 — T0-CHK-1",
+          "result": "WOULD CATCH at the FIRST session after writes occur where baseline was not updated. Hash mismatch → CRITICAL → ESC-005 escalation → G1-G5 reconciliation → discover absent maintainer → invoke succession path.",
+          "holds": true
+        },
+        {
+          "layer": 3,
+          "control": "Ownership Matrix — Gap Visibility",
+          "reference": "SESSION725_OWNERSHIP_MATRIX.json §section_2 — row 1",
+          "result": "EXISTS. Row 1 clearly maps CURRENT_BASELINES.md maintenance to Baseline Maintainer (primary) and Certification Auditor (secondary). Anyone consulting the matrix can identify the gap.",
+          "holds": true
+        },
+        {
+          "layer": 4,
+          "control": "Stewardship Framework §5.3 — Owner Departure / Unavailability Protocol",
+          "reference": "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md §5.3",
+          "result": "EXISTS. 'When any primary owner becomes unavailable (no session activity for >2 consecutive Governance Board reviews): Governance Auditor invokes the lane's succession plan.' Transition logged in REVISION_HISTORY.md within same session.",
+          "holds": true
+        },
+        {
+          "layer": 5,
+          "control": "Recovery Path — Certification Auditor Steps In",
+          "reference": "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md §4.6 (Gap 6 resolution); Ownership Matrix row 1 secondary",
+          "result": "EXISTS AND DOCUMENTED. Certification Auditor accepts per Principle 2 protocol. Onboarding: (1) read SESSION_STATUS, (2) run full T0, (3) confirm governance guard 20/20, (4) review S723 Maintenance Framework. Log acceptance in REVISION_HISTORY.md.",
+          "holds": true
+        }
+      ],
+      "undetected_failure_point": "No proactive staleness trigger. If ZERO writes occur for the 3 sessions after the Baseline Maintainer's departure, CURRENT_BASELINES.md isn't stale in the hash-mismatch sense — and no check fires on staleness-by-time. The Maintenance Trigger Registry has no 'T-009: Baseline not refreshed in ≥ N sessions' threshold. Detection is reactive (hash mismatch on first write) or periodic (Governance Board review every ~20 sessions). However, once writes DO occur, detection is immediate at the next T0, and the recovery path is fully documented.",
+      "verdict": "PREVENTED"
+    },
+    {
+      "id": "C",
+      "name": "Series Sunset",
+      "tests": "Series Transition Governance, Ownership Transfer Enforcement",
+      "prevented": false,
+      "defense_layers": [
+        {
+          "layer": 1,
+          "control": "Transfer → Acceptance → Approval → Close Rule",
+          "reference": "SESSION725_POST700_GOVERNANCE_MODEL.md §2.1-2.3",
+          "result": "EXISTS. §2.1: 'Ownership Transfer Review MUST occur BEFORE series closure, not after.' §2.3 prohibits CLOSE → TRANSFER. §2.2 defines required workflow with documented evidence at each step. This rule would have prevented the S723 6-gap outcome had it existed then.",
+          "holds": "design-only"
+        },
+        {
+          "layer": 2,
+          "control": "Acceptance Requirement — ASSIGNED vs. ACCEPTED",
+          "reference": "SESSION725_POST700_GOVERNANCE_MODEL.md §4.1-4.3",
+          "result": "EXISTS. §4.1: 'Closure cannot be declared until Receiving Owner = ACCEPTED is explicitly documented. Assignment alone is insufficient.' §4.2 defines 4 acceptable forms of acceptance evidence. §4.3 defines what does NOT count. Clear standards.",
+          "holds": "design-only"
+        },
+        {
+          "layer": 3,
+          "control": "Ownership Transfer Review Checklist (7 items)",
+          "reference": "SESSION725_POST700_GOVERNANCE_MODEL.md §3.1",
+          "result": "EXISTS. Comprehensive checklist: (i) active responsibilities in Ownership Matrix, (ii) Receiving Owner explicit acceptance, (iii) open items dispositioned, (iv) escalation path defined, (v) maintenance cadence established, (vi) documentation updated, (vii) closure certificate issued. All 7 items must be complete before closure.",
+          "holds": "design-only"
+        },
+        {
+          "layer": 4,
+          "control": "Stewardship Principle 3 — Series Closure Requires Ownership Disposition",
+          "reference": "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md §3",
+          "result": "EXISTS. 'When any series closes, all artifacts and responsibilities owned by that series must have their ownership explicitly disposed — either transferred, retired, or converted to stewardship.' Documented example: 500-series closeout (Principle 3 example, the only complete series closure).",
+          "holds": "design-only"
+        },
+        {
+          "layer": 5,
+          "control": "Governance Auditor Enforcement (Ownership Matrix row 24)",
+          "reference": "SESSION725_OWNERSHIP_MATRIX.json §section_2 — row 24",
+          "result": "EXISTS AS ASSIGNMENT. Row 24: Series transition governance → Primary: Governance Auditor (700-series), Secondary: Governance Board. But this is a role assignment, not an automated enforcement gate. If the Governance Auditor is absent, bypassed, or not spawned for the 800-series closure session, the rule is unenforced.",
+          "holds": false
+        },
+        {
+          "layer": 6,
+          "control": "Governance Guard — Automated BLOCK Rules",
+          "reference": ".opencode/plugins/governance-guard.js Rules 1-5; Scan Methodology Standard §10.3 (proposed Rules 6-8)",
+          "result": "NO RULE EXISTS. Governance guard has 5 rules (DL-008 non-empty BLOCK, Registry hand-edit BLOCK, 30-item cap BLOCK, question_state WARN, answer-key WARN). None of these block unauthorized series closure. Proposed Rules 6-8 (FM-005 totals-only, FM-001/FM-002 scan methodology, FM-008 baseline currency) cover scan and documentation violations but not closure enforcement. No governance guard rule prevents an 800-series lead from declaring CLOSED without completing the Ownership Transfer Review Checklist.",
+          "holds": false
+        },
+        {
+          "layer": 7,
+          "control": "Quarterly Stewardship Review — Portfolio Lane Map Audit",
+          "reference": "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md §5.4",
+          "result": "WOULD CATCH orphaning within ~3 months. Quarterly review audits full Ownership Matrix, all 8 lane statuses, and knowledge base accuracy. But the scenario says 'Six months later' — two quarterly reviews either did not happen or did not catch the gap. This is a detection mechanism (slow), not a prevention mechanism.",
+          "holds": "detection-only"
+        }
+      ],
+      "undetected_failure_point": "The Transfer → Acceptance → Approval → Close rule exists on paper but has NO automated enforcement gate. The governance guard has no rule blocking unauthorized series closure. Ownership Matrix row 24 assigns enforcement to the Governance Auditor, but if the Governance Auditor is absent or the 800-series lead acts unilaterally, the rule is silently bypassed. The rule is only as strong as the Governance Auditor's presence and diligence. This is structurally identical to the S723 failure pattern: S723 had closure prerequisites (7 items from S722A) that covered execution completeness but not ownership transfer. S725 documented the missing rule, but documentation alone does not prevent recurrence. An automated gate (governance guard Rule 9: BLOCK series closure without completed Ownership Transfer Checklist with all 7 items signed off) is needed to close this gap.",
+      "verdict": "GAP_EXPOSED"
+    }
+  ],
+  "overall_verdict": "GAP_EXPOSED",
+  "post_700_governance_hardened": false,
+  "resolution_required": [
+    {
+      "priority": "P0",
+      "gap": "S725-A — Automated DL-008 scan enforcement chain unreliable",
+      "action": "Upgrade governance guard Rule 2 from DL-029-vulnerable forward-scan to Function constructor parse (GAP-5). Embed Detection Standard and Scan Methodology Standard references in AGENTS.md §9 startup protocol.",
+      "blocks": "All DL-008 enforcement. Until resolved, governance guard's primary learner-safety defense is compromised."
+    },
+    {
+      "priority": "P0",
+      "gap": "S725-C — No automated gate for series closure enforcement",
+      "action": "Add governance guard Rule 9 (proposed): BLOCK — series closure declaration without completed Ownership Transfer Review Checklist (all 7 items signed off per Post-700 Governance Model §3.1). Alternately, hard-code the checklist into the closure certificate issuance process so a certificate cannot be generated without all items PASS.",
+      "blocks": "Series closure integrity. Without this, the S723→S724 6-gap pattern can recur at any future series closure."
+    }
+  ],
+  "notes": {
+    "scenario_a_root_cause": "The governance guard's own DL-008 detection methodology is the same class of bug it should prevent. Standards prohibiting forward-scan exist as S725 report files but are not discoverable through AGENTS.md startup protocol. CURRENT_BASELINES.md §3 carries stale phantom counts, so even T0 validation checks against incorrect baselines.",
+    "scenario_b_caveat": "Scenario B is PREVENTED because the succession plan and recovery path are fully documented. However, detection of the Baseline Maintainer's absence is reactive (hash mismatch on first write, or Governance Board review every ~20 sessions) rather than proactive. A 'T-009: Baseline not refreshed in ≥ N sessions' staleness trigger would close this remaining detection gap.",
+    "scenario_c_criticality": "Scenario C is the most dangerous gap because it replicates the exact failure pattern of S723→S724 (closure declared without ownership transfer). All 6 S724 gaps trace to the same root cause. S725 documented the rule that would have prevented it, but documentation alone does not enforce. Without an automated gate, the rule can be silently bypassed.",
+    "convergent_finding": "Both exposed gaps (A and C) share the same meta-defect: S725's governance rules exist as documented standards but lack code-level enforcement. The governance guard is the only automated enforcer, and it doesn't cover these gaps. Rule 2 is unreliable (gap A). No rule covers series closure (gap C). Until the guard is upgraded (gap A) and extended (gap C), governance hardening is design-level only."
+  }
+}

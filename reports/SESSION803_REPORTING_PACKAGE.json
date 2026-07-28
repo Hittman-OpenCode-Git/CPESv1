@@ -1,0 +1,133 @@
+{
+  "report": "SESSION803_REPORTING_PACKAGE",
+  "agent": "Agent X",
+  "session": "803",
+  "generated": "2026-07-26T18:55:00",
+  "summary": {
+    "total_deliverables_found": 14,
+    "required_deliverables": 9,
+    "required_present": 8,
+    "required_missing": 1,
+    "additional_deliverables": 5,
+    "all_required_present": false,
+    "all_valid_json": true,
+    "all_size_valid": true,
+    "overall_status": "INCOMPLETE — 1 required deliverable missing"
+  },
+  "required": {
+    "SESSION803_WAVE_INVENTORY.json": {
+      "agent": "Agent B",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 10931,
+      "last_modified": "2026-07-26T18:31:40"
+    },
+    "SESSION803_CLONE_VALIDATION_AUDIT.json": {
+      "agent": "Agent C",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 11068,
+      "last_modified": "2026-07-26T18:36:50"
+    },
+    "SESSION803_P1E056_REVIEW.json": {
+      "agent": "Agent E",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 9751,
+      "last_modified": "2026-07-26T18:31:18"
+    },
+    "SESSION803_ARCHIVE_GOVERNANCE_AUDIT.json": {
+      "agent": "Agent J",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 8823,
+      "last_modified": "2026-07-26T18:34:16"
+    },
+    "SESSION803_MODERNIZATION_IMPACT_ANALYSIS.json": {
+      "agent": "Agent M",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 15328,
+      "last_modified": "2026-07-26T18:48:43"
+    },
+    "SESSION803_PORTFOLIO_HEALTH_REFRESH.json": {
+      "agent": "Agent P",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 13219,
+      "last_modified": "2026-07-26T18:48:52"
+    },
+    "SESSION803_RISK_REGISTER_UPDATE.json": {
+      "agent": "Agent Q",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 14258,
+      "last_modified": "2026-07-26T18:47:52"
+    },
+    "SESSION803_DASHBOARD.json": {
+      "agent": "Agent S",
+      "present": false,
+      "valid_json": false,
+      "size_bytes": 0,
+      "last_modified": null,
+      "note": "MISSING — file not found in reports/ directory"
+    },
+    "SESSION803_CERTIFICATION_RESULTS.json": {
+      "agent": "Agent N",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 2774,
+      "last_modified": "2026-07-26T18:49:08"
+    }
+  },
+  "additional": {
+    "SESSION803_BLUEPRINT_PRESERVATION_AUDIT.json": {
+      "agent": "Agent K",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 7642,
+      "last_modified": "2026-07-26T18:31:56"
+    },
+    "SESSION803_METADATA_INTEGRITY_AUDIT.json": {
+      "agent": "Agent L",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 5075,
+      "last_modified": "2026-07-26T18:31:49"
+    },
+    "SESSION803_ARCHIVE_QID_LISTS.json": {
+      "agent": "helper",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 7355,
+      "last_modified": "2026-07-26T18:44:21"
+    },
+    "SESSION803_CROSS_PACK_CONSISTENCY_AUDIT.json": {
+      "agent": "Agent O",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 11930,
+      "last_modified": "2026-07-26T18:50:45"
+    },
+    "SESSION803_GOVERNANCE_PRESERVATION_AUDIT.json": {
+      "agent": "Agent V",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 5782,
+      "last_modified": "2026-07-26T18:50:49"
+    },
+    "SESSION803_VALIDATION.json": {
+      "agent": "Agent W",
+      "present": true,
+      "valid_json": true,
+      "size_bytes": 1886,
+      "last_modified": "2026-07-26T18:48:49"
+    }
+  },
+  "validation_notes": {
+    "all_json_valid": true,
+    "minimum_size_check": "All 14 present files exceed 100 bytes (min: 1886 bytes — SESSION803_VALIDATION.json)",
+    "missing_required": ["SESSION803_DASHBOARD.json (Agent S)"],
+    "warnings": []
+  }
+}

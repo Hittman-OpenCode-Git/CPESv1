@@ -1,0 +1,711 @@
+{
+  "report": "SESSION800_REWRITE_FORECAST_AGENT_R",
+  "date": "2026-07-26",
+  "agent": "Agent R — Rewrite Forecast",
+  "status": "READ-ONLY — no files modified",
+  "scope": "Portfolio-wide rewrite workload estimate for stems, explanations, and distractors across 2,500 MCQ items + case bank",
+  "methodology": "Synthesized from Agent D (explanation census), Agent E (distractor census SESSION800_DISTRACTOR_QUALITY_CENSUS.json), Agent I (rewrite categories), Agent O (cross-pack audit), Agent N (metadata audit SESSION800_METADATA_AUDIT_AGENT_N.json), S301 Certification Readiness Framework, S302 Distractor Quality Census — all cross-referenced against raw source files",
+
+  "input_data_sources": {
+    "agent_D_explanation_census": {
+      "items_upgrade_needed": 1574,
+      "items_major_rewrite": 135,
+      "items_ready": 791,
+      "ec_under_50_chars": 24,
+      "dl013_boilerplate_fields_remaining": 184,
+      "pack_E_ec_under_50": 23
+    },
+    "agent_E_distractor_census": {
+      "file": "SESSION800_DISTRACTOR_QUALITY_CENSUS.json",
+      "dl026_items_with_lt_3_nonempty_ew": "~300 (Pack C/D Sections E-F + Pack D Section C)",
+      "pack_A_CC_B_bias_pct": 33.4,
+      "intra_pack_clone_pairs": "~1,040 (452 Pack C + 432 Pack D in DL-012 rotation groups)",
+      "cross_pool_clone_items": 933,
+      "pack_C_clone_pct": 90.4,
+      "pack_D_clone_pct": 86.4
+    },
+    "agent_I_rewrite_categories": {
+      "cat1_stem_glossary": "~400 Pack E items",
+      "cat2_explanation_under_200_chars": "~900 items",
+      "cat3_distractor_empty_slots": "~300 items",
+      "cat5_full_rewrite": "~50 items"
+    },
+    "agent_O_cross_pack_audit": {
+      "pack_E_full_explanation_rewrites": 500,
+      "packs_CD_archivable_clones": "~500 intra-pack",
+      "pack_A_CD_intra_pack_clones": "~150"
+    },
+    "agent_N_metadata_audit": {
+      "file": "SESSION800_METADATA_AUDIT_AGENT_N.json",
+      "total_certified": 2181,
+      "uncertified_remaining": 319,
+      "dual_object_packs": ["B (metadata-first)", "C (metadata-first)", "D (metadata-first)", "E (content-first)"],
+      "single_object_pack": ["A"],
+      "structural_defects": "2 Pack D items missing content blocks (P1-FD-045, P1-FD-075)"
+    },
+    "S301_certification_readiness": {
+      "pack_B_velocity_items_per_session": 56,
+      "pack_E_velocity_items_per_session": 50,
+      "remaining_items_velocity_pct": "60-70% of Pack B due to higher defect density + dual-object format complexity",
+      "effective_remaining_velocity": 35,
+      "sessions_to_2500_certified": 12
+    },
+    "S302_distractor_census": {
+      "total_distractor_slots_analyzed": 7898,
+      "overall_ew_fill_rate_pct": 89.4,
+      "empty_ew_slots": 839,
+      "boilerplate_ew": 184,
+      "total_rewrite_candidates": 1561,
+      "case_bank_ew_fill_rate_enhanced_pct": 0.0,
+      "case_bank_ew_fill_rate_legacy_pct": 8.9,
+      "rewrite_priority_P0_case_bank": 390,
+      "rewrite_priority_P1_boilerplate_certified": 184,
+      "rewrite_priority_P2_pack_CD_EF_empty_ew": 447,
+      "rewrite_priority_P3_absolutist": 12,
+      "rewrite_priority_P4_weak_d4": 528
+    }
+  },
+
+  "key_parameters": {
+    "batch_max_governance_rule_5": 30,
+    "pack_B_historical_velocity_sessions_for_500": 9,
+    "pack_B_historical_velocity_items_per_session": 56,
+    "effective_velocity_complex_rewrites": 35,
+    "effective_velocity_mechanical_simple": 56,
+    "effective_velocity_label_only_fast": 80,
+    "working_hours_per_session": 1.5,
+    "sessions_per_working_day": 2.5,
+    "items_per_hour_simple": 37,
+    "items_per_hour_complex": 23,
+    "minutes_per_stem_rewrite": 4,
+    "minutes_per_full_explanation_rewrite": 12,
+    "minutes_per_distractor_field_authorship": 6,
+    "minutes_per_distractor_field_rewrite": 4,
+    "minutes_per_full_item_rewrite": 25,
+    "minutes_per_difficulty_label_change": 1,
+    "minutes_per_clone_archive_mechanical": 1.5,
+    "batch_overhead_minutes": 10
+  },
+
+  "current_certification_state": {
+    "total_items": 2500,
+    "total_certified": 2181,
+    "total_uncertified": 319,
+    "total_archived": 132,
+    "packs_fully_certified": ["B (500/500)", "E (500/500)"],
+    "packs_partially_certified": ["A (481/500; 19 Archived)", "C (350/500; 56 Archived; 94 Unprocessed)", "D (350/500; 57 Archived; 93 Unprocessed)"],
+    "structure": {
+      "pack_A": "Single-object per QID — simplest to edit",
+      "pack_B": "Dual-object, metadata-first, CC-before-QID — most complex scan surface",
+      "pack_C": "Dual-object, metadata-first — clone-dense (90.4%)",
+      "pack_D": "Dual-object, metadata-first — clone-dense (86.4%); 2 items missing content blocks",
+      "pack_E": "Dual-object, content-first (reversed) — unique architecture, no clones"
+    }
+  },
+
+  "section_inventory": {
+    "pack_A": {
+      "items": 500,
+      "sections": {
+        "A": {"items": 75, "certified": 73, "archived": 0, "unprocessed": 0, "dl013_fields": 5, "notes": "2 uncertified residual"},
+        "B": {"items": 100, "certified": 85, "archived": 0, "unprocessed": 0, "dl013_fields": 111, "notes": "Partial cert; CC B-bias; DL-008 on B-001/B-025"},
+        "C": {"items": 100, "certified": 80, "archived": 0, "unprocessed": 0, "dl013_fields": 94, "notes": "Partial cert; 8 clone groups"},
+        "D": {"items": 75, "certified": 75, "archived": 0, "unprocessed": 0, "dl013_fields": 0, "notes": "Certified clean; CC B-bias residue"},
+        "E": {"items": 75, "certified": 75, "archived": 0, "unprocessed": 0, "dl013_fields": 28, "notes": "Certified; 16 archived clones; metadata shift DL-016"},
+        "F": {"items": 75, "certified": 75, "archived": 0, "unprocessed": 0, "dl013_fields": 0, "notes": "Certified"}
+      }
+    },
+    "pack_B": {
+      "items": 500,
+      "sections": {
+        "A": {"items": 75, "certified": 75, "notes": "Gold standard; no rewrites needed"},
+        "B": {"items": 100, "certified": 100, "notes": "Gold standard"},
+        "C": {"items": 100, "certified": 100, "notes": "Gold standard"},
+        "D": {"items": 75, "certified": 75, "notes": "Gold standard"},
+        "E": {"items": 75, "certified": 75, "notes": "Gold standard; 5 clone items of 75"},
+        "F": {"items": 75, "certified": 75, "notes": "Gold standard"}
+      }
+    },
+    "pack_C": {
+      "items": 500,
+      "clone_groups": 82,
+      "clone_items": 452,
+      "unique_choice_sets": 48,
+      "sections": {
+        "A": {"items": 75, "certified": 75, "dl008_items": 1, "dl013_fields": 0, "notes": "Certified; CC audit needed; AC-001 DL-008"},
+        "B": {"items": 100, "certified": 100, "dl008_items": 54, "dl013_fields": 0, "notes": "Certified; densest DL-008 cluster (BC-001-100)"},
+        "C": {"items": 100, "certified": 100, "dl013_fields": 0, "notes": "Certified clean; Section C remediated S76"},
+        "D": {"items": 75, "certified": 75, "dl013_fields": 131, "notes": "Certified; partial DL-013 remediation"},
+        "E": {"items": 75, "certified": 0, "archived": 56, "unprocessed": 19, "dl013_fields": 125, "notes": "56 cloned; 19 uncertified seeds"},
+        "F": {"items": 75, "certified": 0, "unprocessed": 75, "dl013_fields": 101, "notes": "0% certified; largest uncertified block in pack"}
+      }
+    },
+    "pack_D": {
+      "items": 500,
+      "clone_groups": 77,
+      "clone_items": 432,
+      "sections": {
+        "A": {"items": 75, "certified": 73, "dl008_items": 4, "notes": "AD-047/048/054/055 DL-008"},
+        "B": {"items": 100, "certified": 100, "dl008_items": 5, "notes": "BD-017/021-024 DL-008"},
+        "C": {"items": 100, "certified": 0, "unprocessed": 100, "dl026_items": 50, "notes": "All 100 In Audit; 50 DL-026; 2 items missing content blocks"},
+        "D": {"items": 75, "certified": 75, "dl008_items": 1, "notes": "DD-028/029 DL-008"},
+        "E": {"items": 75, "certified": 0, "archived": 57, "unprocessed": 18, "dl013_fields": 138, "notes": "57 cloned; 18 uncertified seeds"},
+        "F": {"items": 75, "certified": 0, "unprocessed": 74, "dl013_fields": 118, "notes": "0% cert; 74 Unprocessed; 2 items with missing content blocks (FD-045/075)"}
+      }
+    },
+    "pack_E": {
+      "items": 500,
+      "clone_groups": 0,
+      "sections": {
+        "A": {"items": 75, "certified": 75, "ec_under_50": "~5", "notes": "Glossary-level stems + short EC; independent pipeline"},
+        "B": {"items": 100, "certified": 100, "ec_under_50": "~5", "notes": "Glossary-level"},
+        "C": {"items": 100, "certified": 100, "ec_under_50": "~8", "notes": "Worst EC brevity in pack; DL-021 residual distractor gaps"},
+        "D": {"items": 75, "certified": 75, "ec_under_50": "~10", "notes": "Terse distractors (mean 19.3 chars pool-wide)"},
+        "E": {"items": 75, "certified": 75, "ec_under_50": "~2", "notes": "Relatively better, but still glossary-level"},
+        "F": {"items": 75, "certified": 75, "ec_under_50": "~0", "notes": "Best in Pack E; still needs EC upgrades for CAQS compliance"}
+      }
+    }
+  },
+
+  "estimate_1_stem_rewrites": {
+    "overview": "Stem rewrites needed for items where the question text is a textbook definition (glossary-level) rather than a business scenario with a decision context.",
+    "distribution_by_pack_section": {
+      "pack_E": {
+        "total_items_needing_stem_rewrites": 500,
+        "rationale": "All 500 items use glossary-level stems (definition-match format). Explicitly confirmed by Agent O (500 full rewrites) and Agent I (400+ glossary stems). Independent pipeline, no clones.",
+        "by_section": {
+          "A": {"items": 75, "action": "Rewrite stems from 'X is defined as...' to business scenarios"},
+          "B": {"items": 100, "action": "Rewrite to Treasury/FP&A decision contexts"},
+          "C": {"items": 100, "action": "Rewrite to performance review / controller memo format"},
+          "D": {"items": 75, "action": "Rewrite to cost accounting operational scenarios"},
+          "E": {"items": 75, "action": "Rewrite to internal control / audit finding format"},
+          "F": {"items": 75, "action": "Rewrite to technology implementation / data governance context"}
+        }
+      },
+      "pack_A": {
+        "total_items_needing_stem_rewrites": "~100",
+        "rationale": "Sections B/C have rotation-group stems. Sections D/E/F clone-like items with formulaic prompts. Section A mostly acceptable.",
+        "by_section": {
+          "A": {"items": "~5", "action": "Minor refinement — mostly acceptable"},
+          "B": {"items": "~30", "action": "Add business context to formulaic budget stems"},
+          "C": {"items": "~30", "action": "Add scenario context to variance/performance stems"},
+          "D": {"items": "~15", "action": "Add company context to cost accounting stems"},
+          "E": {"items": "~15", "action": "Refine internal control stems"},
+          "F": {"items": "~5", "action": "Minor refinement"}
+        }
+      },
+      "pack_C": {
+        "total_items_needing_stem_rewrites": "~82 (seeds only)",
+        "rationale": "After archiving 370 clone items, ~82 seeds remain. These have rotation-template stems that need business context. Clones are archived — no stem work on discarded items.",
+        "by_section": {
+          "A": {"items": "~12", "action": "Refine seed stems for financial reporting items"},
+          "B": {"items": "~16", "action": "Refine seed stems for budgeting items"},
+          "C": {"items": "~16", "action": "Refine seed stems for performance items"},
+          "D": {"items": "~12", "action": "Refine seed stems for cost items"},
+          "E": {"items": "~12", "action": "Refine seed stems for internal controls items"},
+          "F": {"items": "~14", "action": "Refine seed stems for technology items"}
+        }
+      },
+      "pack_D": {
+        "total_items_needing_stem_rewrites": "~77 (seeds only)",
+        "rationale": "After archiving 355 clone items, ~77 seeds remain. Same pipeline as Pack C.",
+        "by_section": {
+          "A": {"items": "~12", "action": "Refine"},
+          "B": {"items": "~15", "action": "Refine"},
+          "C": {"items": "~15", "action": "Refine"},
+          "D": {"items": "~12", "action": "Refine"},
+          "E": {"items": "~12", "action": "Refine"},
+          "F": {"items": "~11", "action": "Refine (2 items missing content blocks: FD-045, FD-075 need authoring from scratch)"}
+        }
+      },
+      "pack_B": {
+        "total_items_needing_stem_rewrites": "~10",
+        "rationale": "Gold standard pipeline. Minimal stem work needed. 5 clone items can be evaluated for retention or minor upgrade.",
+        "by_section": {
+          "A": {"items": 0, "action": "No action needed"},
+          "B": {"items": "~2", "action": "Minor scenario enrichment"},
+          "C": {"items": "~2", "action": "Minor"},
+          "D": {"items": "~2", "action": "Minor"},
+          "E": {"items": "~2", "action": "Minor; one 5-item clone group"},
+          "F": {"items": "~2", "action": "Minor"}
+        }
+      }
+    },
+    "total_stem_rewrites_pool": 769,
+    "estimated_session_count": 10,
+    "session_calculation": "500 Pack E / 35 items-per-session = 14.3 sessions (stems bundled with EC rewrites — not separate). ~269 non-Pack E / 56 items-per-session = 4.8 sessions for stem-only. Total stem component: ~10 sessions when bundled with EC rewrites."
+  },
+
+  "estimate_2_explanation_rewrites": {
+    "overview": "ExplanationCorrect rewrites needed for items where EC is under 200 chars, boilerplate, glossary-level, or factually incomplete per CAQS §4 standards.",
+    "total_items_explanation_rewrite_needed": "~1,068 (after clone archival)",
+    "pre_archival_total": "~1,709 (1,574 Upgrade Needed + 135 Major Rewrite from Agent D)",
+    "breakdown_by_severity": {
+      "major_rewrite_from_scratch": {"count": 500, "pack": "E", "description": "All 500 Pack E items need full EC rewrites. Current ECs average ~100-150 chars, dictionary-style definitions. Need: principle citation (ASC/COSO), step-by-step solution, business interpretation, exam trap identification."},
+      "substantial_upgrade": {"count": "~350", "pack": "A", "description": "Sections B/C: DL-013 boilerplate + formula-only ECs. Section D/E: ~150 items with terse ECs. Section A: 5 residual DL-013 fields + minor upgrades."},
+      "seed_upgrade": {"count": "~160", "packs": "C + D seeds", "description": "After archiving clones, ~160 seed items across Packs C/D need EC upgrades. Current ECs are rotation-template text (DL-013) or formula-only."},
+      "minor_upgrade": {"count": "~58", "pack": "B", "description": "Pack B has ~58 items with EC under 200 chars. Most are calculation items with formula-only ECs — acceptable but could have business interpretation added."}
+    },
+    "distribution_by_pack_section": {
+      "pack_E": {
+        "total": 500,
+        "by_section": {
+          "A": {"items": 75, "current_ec_quality": "Glossary-level, 80-150 chars avg", "action": "Full rewrite: ASC 606/842 standard references, step-by-step solutions, business context"},
+          "B": {"items": 100, "current_ec_quality": "Glossary-level", "action": "Full rewrite: Budgeting principles, formula traces, FP&A context"},
+          "C": {"items": 100, "current_ec_quality": "Glossary-level; worst brevity (several under 50 chars)", "action": "Full rewrite: Performance management frameworks, variance trace, KPI interpretation. Also needs DL-021 distractor authorship for Section C (300 missing EW fields)"},
+          "D": {"items": 75, "current_ec_quality": "Glossary-level", "action": "Full rewrite: Cost accounting standards, cost flow traces, operational context"},
+          "E": {"items": 75, "current_ec_quality": "Glossary-level but relatively better", "action": "Full rewrite: COSO framework references, internal control rationale"},
+          "F": {"items": 75, "current_ec_quality": "Glossary-level; best in pack", "action": "Full rewrite: Technology governance frameworks, data analytics methodology"}
+        }
+      },
+      "pack_A": {
+        "total": "~350",
+        "by_section": {
+          "A": {"items": "~20", "action": "5 DL-013 residual fields; 15 minor upgrades for EC richness"},
+          "B": {"items": "~100", "action": "111 DL-013 boilerplate fields + formula-only ECs in uncertified items"},
+          "C": {"items": "~100", "action": "94 DL-013 boilerplate fields + rotation-template ECs in partial-cert items"},
+          "D": {"items": "~50", "action": "CC B-bias items; EC upgrades for exam-style completeness"},
+          "E": {"items": "~40", "action": "28 DL-013 boilerplate fields; DL-027 closing-tag residues; DL-016 metadata shift items"},
+          "F": {"items": "~40", "action": "Technology-focused items; EC upgrades for current standards"}
+        }
+      },
+      "pack_C": {
+        "total": "~82 (seeds only; clones archived)",
+        "by_section": {
+          "A": {"items": "~12", "action": "DL-008 (AC-001) + EC upgrade for certification quality"},
+          "B": {"items": "~16", "action": "54 items have DL-008 — highest-priority EC cleanup in pool"},
+          "C": {"items": "~16", "action": "Section C is certified clean post-S76; seed ECs acceptable, minor upgrades"},
+          "D": {"items": "~12", "action": "131 DL-013 fields in Section D — rewrite seed ECs"},
+          "E": {"items": "~12", "action": "56 archived clones; 19 uncertified seeds — 125 DL-013 fields. Rewrite 19 seed ECs"},
+          "F": {"items": "~14", "action": "0% certified; 75 Unprocessed; 101 DL-013 fields. Rewrite 14 seed ECs. Largest uncertified block."}
+        }
+      },
+      "pack_D": {
+        "total": "~77 (seeds only; clones archived)",
+        "by_section": {
+          "A": {"items": "~12", "action": "DL-008 items (AD-047/048/054/055) + seed ECs"},
+          "B": {"items": "~15", "action": "DL-008 items (BD-017/021-024) + seed ECs"},
+          "C": {"items": "~15", "action": "All 100 In Audit; 50 DL-026. Author EC for seeds + fix missing content blocks on FD-045/075"},
+          "D": {"items": "~12", "action": "DL-008 DD-028/029; seed EC upgrades"},
+          "E": {"items": "~12", "action": "57 archived; 18 uncertified seeds. 138 DL-013 fields. Rewrite 18 seed ECs"},
+          "F": {"items": "~11", "action": "0% cert; 74 Unprocessed; 118 DL-013 fields. 2 items missing content blocks. Rewrite 11 seed ECs"}
+        }
+      },
+      "pack_B": {
+        "total": "~58",
+        "by_section": {
+          "A": {"items": "~8", "action": "Minor EC enrichment for exam-style completeness"},
+          "B": {"items": "~15", "action": "Formula-only ECs: add business interpretation"},
+          "C": {"items": "~10", "action": "Minor upgrades"},
+          "D": {"items": "~10", "action": "Minor upgrades"},
+          "E": {"items": "~10", "action": "Minor upgrades; 5 clone items in one group — review and possibly archive 4"},
+          "F": {"items": "~5", "action": "Minor upgrades"}
+        }
+      }
+    },
+    "estimated_session_count_explanation_only": 31,
+    "session_calculation": "Pack E: 500 / 35 = 14.3 sessions (bundled with stem rewrites). Pack A: 350 / 35 = 10 sessions. Pack C seeds: 82 / 35 = 2.3 sessions. Pack D seeds: 77 / 35 = 2.2 sessions. Pack B: 58 / 56 = 1.0 session. Total: ~30 sessions for EC work (some overlap with stem, some with distractor). When stems + EC done together: ~28-31 sessions net.",
+    "note": "DL-013 boilerplate fields are primarily in Pack C/D Sections D/E/F (613 fields out of 851 remaining). After archiving clones, ~200 fields remain in seed items — substantially reducing this work block."
+  },
+
+  "estimate_3_distractor_rewrites": {
+    "overview": "Distractor ExplanationWrong fields that must be authored (empty → non-empty) or rewritten (boilerplate → choice-specific).",
+    "total_distractor_slots_to_author_or_rewrite": 1602,
+    "breakdown_by_priority": {
+      "P0_CASE_BANK": {
+        "count": 390,
+        "description": "Enhanced case banks (scored_cases2-5): 310 items with zero EW fields (0% fill rate). Legacy cases (scored_cases.js): 80 items at 8.9% fill rate. Learners receive NO distractor feedback on case questions. Single largest educational-quality gap in portfolio.",
+        "action": "Author 3 EW fields per case item from scratch (~130 items × 3 = 390 fields)",
+        "estimated_sessions": 6,
+        "calculation": "390 fields / (3 fields per batch-item × 30 batch cap) = 4.3 batches + overhead. ~6 sessions at 35 fields/session (authoring slower than rewriting)."
+      },
+      "P1_DL013_BOILERPLATE_CERTIFIED": {
+        "count": 184,
+        "description": "Template boilerplate EW fields in Certified items (from S302). Learners see 'Option X represents a plausible misconception...' — no instructional value.",
+        "action": "Rewrite with choice-specific text per DL-013 standard",
+        "estimated_sessions": 3,
+        "calculation": "184 fields / 35 = 5.3 batches; 184 items × 6 min/item = ~18 person-hours. ~3 sessions."
+      },
+      "P2_DL026_EMPTY_EW_NONCC": {
+        "count": 447,
+        "description": "Empty EW fields at non-CorrectChoice positions (S302 P2). Pack C/D Sections E-F dominate. After archiving clones, ~200 fields remain in seed items.",
+        "affected_sections": "Pack D Section C (50 items), Pack C Sections E-F (seed items), Pack D Sections E-F (seed items)",
+        "action": "Author choice-specific distractor text for empty slots",
+        "estimated_sessions": 4,
+        "calculation": "~200 fields / 35 = 5.7 batches; ~4 sessions."
+      },
+      "P3_DL005_ABSOLUTIST": {
+        "count": 12,
+        "description": "High-severity absolutist language in distractors (S90 confirmed). ~12 genuine rewriting problems.",
+        "action": "Edit specific absolutist distractors to use qualified language where standards require it",
+        "estimated_sessions": 1,
+        "calculation": "12 items × 5 min = 1 hour; bundled into 1 batch."
+      },
+      "P4_WEAK_D4_DISTRACTORS": {
+        "count": 528,
+        "description": "Items with D4 distractor quality score = 3 (weak). Distractors are present and non-boilerplate but not choice-specific or pedagogically strong.",
+        "action": "Refine and strengthen distractors — add misconception targeting, exam trap references",
+        "estimated_sessions": 8,
+        "calculation": "528 items / 35 = 15.1 batches; but many items only need 1-2 field touch-ups, not full rewrites. ~8 sessions net."
+      },
+      "DL005_IDENTICAL_DUPES": {
+        "count": 28,
+        "description": "Items with 100% identical distractor pairs (from DL-005 entry in DEFECT_LIBRARY). Certification-blocking.",
+        "action": "Rewrite one of each identical pair to create genuine discrimination",
+        "estimated_sessions": 1,
+        "calculation": "28 items × 8 min = 3.7 hours; ~1 session."
+      }
+    },
+    "distribution_by_pack_section": {
+      "case_banks": {
+        "scored_cases2": {"items": "~75", "empty_ew_slots": "~75 × 3 = 225 (estimated)", "notes": "Enhanced cases; 0% EW fill rate"},
+        "scored_cases3": {"items": "~60", "empty_ew_slots": "~60 × 3 = 180 (estimated)", "notes": "Enhanced cases; 0% EW fill rate"},
+        "scored_cases4": {"items": "~60", "empty_ew_slots": "~60 × 3 = 180 (estimated)", "notes": "Enhanced cases; 0% EW fill rate"},
+        "scored_cases5": {"items": "~60", "empty_ew_slots": "~60 × 3 = 180 (estimated)", "notes": "Enhanced cases; 0% EW fill rate"},
+        "scored_cases": {"items": "~80", "empty_ew_slots": "~80 × 3 × 0.911 = 219 (estimated)", "notes": "Legacy cases; 8.9% fill rate → ~91% empty. ~219 empty slots."},
+        "case_total_slots": "~500-600 empty distractor slots across all case files"
+      },
+      "pack_E": {
+        "total_items": 500,
+        "by_section": {
+          "A": {"empty_or_weak_ew_slots": "~30", "action": "Pack E has all EW fields present (unlike C/D), but distractors are very terse (mean 19.3 chars). Need expansion from single-phrase to full misconception explanations."},
+          "B": {"empty_or_weak_ew_slots": "~40", "action": "Expand terse distractors"},
+          "C": {"empty_or_weak_ew_slots": "~60 + 300 MISSING (DL-021)", "action": "Section C has zero distractor EW fields in 100 items (300 slots) — DL-021. Need full authorship from scratch. Included in P2 count."},
+          "D": {"empty_or_weak_ew_slots": "~30", "action": "Expand terse distractors"},
+          "E": {"empty_or_weak_ew_slots": "~25", "action": "Expand terse distractors"},
+          "F": {"empty_or_weak_ew_slots": "~25", "action": "Expand terse distractors"}
+        }
+      },
+      "pack_C": {
+        "total_items": "~82 seeds (after archival)",
+        "by_section": {
+          "A": {"empty_or_weak_ew_slots": "~5", "action": "DL-008 on AC-001; minor distractor refinements"},
+          "B": {"empty_or_weak_ew_slots": "~150 (54 items × ~3 fields DL-008)", "action": "DL-008 cleanup: clear EW[CC] for 54 items. Not distractor authorship — just clearing wrong slot. No new text needed."},
+          "C": {"empty_or_weak_ew_slots": "~10", "action": "Certified clean from S76; minor upgrades"},
+          "D": {"empty_or_weak_ew_slots": "~80 (seed items)", "action": "DL-013 boilerplate rewrite for seed distractor slots"},
+          "E": {"empty_or_weak_ew_slots": "~60 (seed items)", "action": "DL-013 + empty EW (DL-026) for seeds. 125 DL-013 fields in section total."},
+          "F": {"empty_or_weak_ew_slots": "~70 (seed items)", "action": "DL-013 + empty EW for seeds. 101 DL-013 fields. 75% of section items need full distractor authorship."}
+        }
+      },
+      "pack_D": {
+        "total_items": "~77 seeds (after archival)",
+        "by_section": {
+          "A": {"empty_or_weak_ew_slots": "~10", "action": "DL-008 on 4 items; minor distractor refinements"},
+          "B": {"empty_or_weak_ew_slots": "~15 (5 items × 3 fields)", "action": "DL-008 on 5 items"},
+          "C": {"empty_or_weak_ew_slots": "~100 (50 DL-026 × 2 fields avg)", "action": "50 In Audit items with empty non-CC slots. Highest priority distractor block. Also 2 items missing content blocks (FD-045/075)."},
+          "D": {"empty_or_weak_ew_slots": "~8", "action": "DL-008 on DD-028/029; minor upgrades"},
+          "E": {"empty_or_weak_ew_slots": "~78 (seed items × 3)", "action": "138 DL-013 fields — rewrite seed distractor slots"},
+          "F": {"empty_or_weak_ew_slots": "~70 (seed items)", "action": "118 DL-013 fields + empty EW slots. 2 missing items need full content authoring."}
+        }
+      },
+      "pack_A": {
+        "total_items": 500,
+        "by_section": {
+          "A": {"empty_or_weak_ew_slots": "~15 (5 DL-013 + 10 weak)", "action": "5 DL-013 residual fields + minor distractor strength improvements"},
+          "B": {"empty_or_weak_ew_slots": "~111 (DL-013) + ~20 DL-025 residual", "action": "DL-013 boilerplate + DL-025 (P1-B-001/004/006/025). CC B-bias items need distractor review."},
+          "C": {"empty_or_weak_ew_slots": "~94 (DL-013) + clone distractor dups", "action": "DL-013 boilerplate + clone groups have identical distractors across siblings"},
+          "D": {"empty_or_weak_ew_slots": "~30", "action": "DL-025 WAVE 2 residual (P1-D-070); CC B-bias (31/75 CC=B) — audit distractors for position-bias patterns"},
+          "E": {"empty_or_weak_ew_slots": "~28 (DL-013)", "action": "DL-013 boilerplate + DL-016 metadata-content shift items need distractor realignment"},
+          "F": {"empty_or_weak_ew_slots": "~20", "action": "Minor distractor refinements"}
+        }
+      },
+      "pack_B": {
+        "total_items": 500,
+        "by_section": {
+          "all_sections": {"empty_or_weak_ew_slots": "~10", "action": "Pack B is gold standard for distractors. ~10 items may benefit from distractor expansion for exam-style completeness. Otherwise, near-zero distractor work needed."}
+        }
+      }
+    },
+    "estimated_session_count_distractor_only": 23,
+    "session_calculation": "P0 case bank: 6 sessions. P1 DL-013 Certified: 3. P2 DL-026: 4. P3 absolutist: 1. P4 weak D4: 8. DL-005 dupes: 1. Total: 23 sessions for distractor work."
+  },
+
+  "estimate_4_total_effort": {
+    "person_hours": {
+      "stem_rewrites": "~55 hours (769 items × 4 min avg + batch overhead)",
+      "explanation_rewrites": "~215 hours (1,068 items × 12 min avg + batch overhead)",
+      "distractor_authorship_rewrites": "~160 hours (1,602 fields × 6 min avg for new, 4 min for rewrite)",
+      "clone_archival_mechanical": "~20 hours (765 items × 1.5 min avg + batch overhead)",
+      "difficulty_recalibration": "~15 hours (920 items × 1 min avg, label-only)",
+      "other_structural_fixes": "~15 hours (2 missing content blocks, CC rebalances, DL-016 shifts)",
+      "total_person_hours": "~480 hours",
+      "note": "Person-hour estimates include batch overhead (governance-guard compliance, backup protocol, independent verification, revision history entries). Actual working hours vary by agent parallelism."
+    },
+    "sessions": {
+      "clone_archival_program": {
+        "scope": "Archive ~765 cloned items (Pack C: 370, Pack D: 355, Pack A: 36, Pack B: 4)",
+        "sessions": 6,
+        "method": "Mechanical QID tagging — fast. 765 / 30 batch = 26 batches. At 4 batches/session: ~6.5 sessions. Round to 6 with multi-agent parallelism.",
+        "note": "Archival must happen FIRST — it reduces all downstream rewrite workloads by 40-60%."
+      },
+      "certification_blocking_defects": {
+        "scope": "DL-008 (67 Certified) + DL-026 (50 Pack D Section C + residual) + FD-045/075 repair",
+        "sessions": 7,
+        "breakdown": {
+          "dl008_clears": {"items": 67, "sessions": 2, "method": "Mechanical EW[CC] clears. Fast: 56 items/session within 30-item batches."},
+          "dl026_distractor_authoring": {"items": 300, "sessions": 4, "method": "Author 1-3 EW fields per item. ~6 fields/session in complex authoring mode."},
+          "fd045_fd075_repair": {"items": 2, "sessions": 1, "method": "Author missing content blocks or archive both items."}
+        }
+      },
+      "case_bank_distractor_authorship": {
+        "scope": "390 empty EW slots across enhanced + legacy cases",
+        "sessions": 6,
+        "method": "Author 3 choice-specific EW fields per case item. ~65 fields/session. Most complex authoring: requires case-scenario context awareness."
+      },
+      "pack_E_full_rewrite_program": {
+        "scope": "500 items — stems, explanations, and terse distractor expansion. All Certified — learner-facing.",
+        "sessions": 14,
+        "method": "Stems + EC done together per item. 500 / 35 = 14.3 sessions. This is the largest single non-clone block. Pack E's independent pipeline means no clone shortcuts — every item needs individual attention.",
+        "priority_note": "All 500 Pack E items are Certified and in the learner pool. Their glossary-level ECs mean learners see dictionary definitions instead of exam-quality explanations. This is a learner-safety priority (degraded educational feedback) despite no structural defect."
+      },
+      "dl013_explanation_upgrade": {
+        "scope": "851 DL-013 boilerplate fields remaining → ~500 after clone archival (only seeds need rewrite). Plus ~350 Pack A explanation upgrades.",
+        "sessions": 14,
+        "breakdown": {
+          "pack_A_explanation_upgrade": {"items": "~350", "sessions": 7, "method": "DL-013 rewrite + EC enrichment. Covers Sections B/C/D/E."},
+          "pack_CD_seed_explanation_upgrade": {"items": "~160 seeds", "sessions": 4, "method": "DL-013 rewrite for seed items only. Clones archived — no work on discarded items."},
+          "pack_B_minor_upgrade": {"items": "~58", "sessions": 1, "method": "Minor EC enrichment for exam-style completeness."},
+          "dl013_certified_boilerplate": {"fields": 184, "sessions": 2, "method": "Rewrite boilerplate EW in Certified items (P1 per S302)."}
+        }
+      },
+      "distractor_refinement": {
+        "scope": "528 weak D4 (P4) + 12 absolutist (P3) + 28 identical dupes (DL-005) + ~200 DL-026 seed fields",
+        "sessions": 10,
+        "breakdown": {
+          "weak_d4_refinement": {"items": 528, "sessions": 8, "method": "1-2 fields per item. Most just need strengthening, not rewriting from scratch."},
+          "absolutist_rewrites": {"items": 12, "sessions": 1, "method": "Targeted edit of specific absolutist terms."},
+          "identical_dupes": {"items": 28, "sessions": 1, "method": "Rewrite one of each dupe pair."}
+        }
+      },
+      "difficulty_recalibration": {
+        "scope": "DL-031 (500 MCQ difficulty deflation) + DL-032 (420 case bank uniform Moderate)",
+        "sessions": 5,
+        "method": "Label changes only (no content rewrites). 920 items × 1 min. Fast: ~80 items/session in label-change mode.",
+        "breakdown": {
+          "dl031_mcq_recalibration": {"items": 500, "sessions": 3, "method": "Moderate→Easy where definition-match pattern confirmed. Pack E 394 Understand items and Pack C/D 302/314 Moderate labeled items."},
+          "dl032_case_bank_recalibration": {"items": 420, "sessions": 2, "method": "Assign genuine difficulty labels per CAQS §6.1 distribution targets. Currently 100% Moderate — statistically implausible."}
+        }
+      },
+      "CC_rebalance_and_position_audit": {
+        "scope": "Pack A CC B-bias (33.4%), Pack C/D A-bias (47.6% inferred), Pack B Section A/D per-section imbalance",
+        "sessions": 2,
+        "method": "Rotation audit of correct answer positions. For Pack A: shift ~20 items from B to other positions. For Pack C/D: verify A-bias with direct parse."
+      },
+      "other_structural_and_governance": {
+        "scope": "DL-016 Pack A metadata-content shift, pedagogical_cluster population, documentation closeout",
+        "sessions": 3,
+        "method": "Structural alignment + metadata enrichment. DL-016 affects 500 Pack A items — metadata ChoiceA-D differs from content Choices.A-D."
+      },
+      "grand_total_sessions": 67,
+      "sessions_with_parallelism_optimized": 54,
+      "parallelism_note": "Stems + EC are done together per item (not separate passes). Distractor work for same items can be done in the same session. Case bank work can run in parallel with MCQ work (different agents, different files). Clone archival can run as a background batch. With multi-agent parallelism and bundled work, net sessions reduce from raw 67 to optimized ~54."
+    },
+    "projected_timeline": {
+      "sessions_total_optimized": 54,
+      "working_days": "~22 days (at 2.5 sessions/day)",
+      "calendar_weeks": "~4.5 weeks (at 5 working days/week)",
+      "breakdown_by_phase": {
+        "Phase_1_Clone_Archival_and_Criticals": {"sessions": "1-13", "working_days": "~5", "description": "Archive clones (6 sessions) + DL-008 clears (2) + DL-026 Pack D Section C (4) + FD-045/075 repair (1). Unblocks all downstream work by eliminating 765 items from the rewrite pool and clearing the learner-safety risks."},
+        "Phase_2_Pack_E_Full_Rewrite": {"sessions": "14-27", "working_days": "~6", "description": "14 sessions on Pack E stems + EC + distractor expansion. Can run partially in parallel with Phase 3. All 500 items are Certified — learner pool quality improves with every batch."},
+        "Phase_3_DL013_and_Explanation_Upgrades": {"sessions": "28-41", "working_days": "~6", "description": "14 sessions on Pack A/C/D seed EC upgrades + DL-013 boilerplate clearance. After clones archived, only ~660 seed/non-clone items need EC work across Packs A/C/D."},
+        "Phase_4_Distractor_Refinement_and_Calibration": {"sessions": "42-54", "working_days": "~5", "description": "13 sessions: case bank EW (6) + D4 refines (8) + difficulty recalibration (5 overlapping). Some of this can run parallel with Phase 3 (different files, different defect types)."}
+      },
+      "critical_path": "Phase 1 → Phase 2 → Phase 3 → Phase 4. Phase 2 is the longest single phase (14 sessions, ~6 working days). If Pack E and Pack A/DL-013 work can run simultaneously with different agents, total calendar time could reduce from ~22 days to ~16-18 days."
+    }
+  },
+
+  "estimate_5_archive_instead_of_rewrite": {
+    "overview": "Systematically identifying items where rewriting provides zero additional pedagogical value because clone siblings already cover the same concept with identical distractors.",
+    "total_archivable": 765,
+    "breakdown": {
+      "pack_C_DL012_clones": {
+        "count": 370,
+        "description": "452 clone items in 82 groups. Keep 1 seed per group = 82 seeds. Archive remaining 370. Each clone group has 5-7 items with identical stems and distractors, differing only in company name and CC position.",
+        "seed_selection_criterion": "Keep item with best ExplanationCorrect (longest, most substantive). Default: first item in group unless later item has demonstrably better EC.",
+        "verdict": "ARCHIVE — zero pedagogical value from 5+ identical items. One seed per concept is sufficient."
+      },
+      "pack_D_DL012_clones": {
+        "count": 355,
+        "description": "432 clone items in 77 groups. Keep 77 seeds, archive 355. Same pipeline as Pack C.",
+        "verdict": "ARCHIVE."
+      },
+      "pack_A_CD_clones": {
+        "count": 36,
+        "description": "44 clone items in 8 groups. Keep 8 seeds, archive 36. Sections C/D rotation groups. Less severe than Packs C/D but same pattern.",
+        "verdict": "ARCHIVE."
+      },
+      "pack_B_rotation_artifact": {
+        "count": 4,
+        "description": "5 clone items in 1 group (Section E). Keep 1 seed, archive 4. Pack B's single clone group.",
+        "verdict": "ARCHIVE."
+      },
+      "pack_E": {
+        "count": 0,
+        "description": "Zero clones. Pack E independently authored items have genuinely unique stems and concepts. Nothing to archive.",
+        "verdict": "NO ARCHIVAL — all 500 items are unique."
+      }
+    },
+    "post_archival_pool_size": "~1,735 unique items (2,500 - 765)",
+    "savings_from_archival": {
+      "rewrite_items_eliminated": 765,
+      "sessions_saved": "~17 sessions (765 items would need EC + distractor work at 35/session = ~22 sessions; net savings after accounting for 6-session archival program)",
+      "person_hours_saved": "~110 hours (765 items × 9 min avg for EC + distractor work)",
+      "certification_pool_impact": "None — all 765 items are either Unprocessed (not yet in pool) or Archived (already excluded). Pack C Section E: 56 already Archived (verified SESSION_STATUS). Pack C Section F: 75 Unprocessed → Archive. Pack D Section E: 57 already Archived. Pack D Section F: 74 Unprocessed → Archive."
+    },
+    "NOT_archivable_items": {
+      "pack_E_all_500": "Genuinely unique items. Need full rewrite — not archivable.",
+      "pack_B_496": "496 of 500 items are genuinely unique. Gold standard. Not archivable.",
+      "pack_A_464": "464 of 500 are unique enough to keep. Need varying levels of rewrite — not archivable.",
+      "pack_C_CC_audit_items": "Pack C Sections A/B (175 Certified) have CorrectChoice rotation artifacts that may require CC fixes, but items themselves are not clones — stems are distinct. Not archivable.",
+      "pack_D_certified_sections": "Sections A/B/D (250 Certified) have distinct stems. DL-008 items need CC clears, not archival."
+    }
+  },
+
+  "estimate_6_projected_completion_timeline": {
+    "overview": "End-to-end timeline for completing all stem, explanation, distractor, and structural rewrites across the MCQ + case portfolio.",
+    "total_optimized_sessions": 54,
+    "total_working_days": "~22 (at 2.5 sessions per working day)",
+    "total_calendar_weeks": "~4.5 (at 5 working days per week)",
+    "critical_path_sessions": 42,
+    "parallel_sessions": 12,
+    "phase_timeline": {
+      "Week_1": {
+        "days": "Mon-Fri (Days 1-5)",
+        "sessions": "1-13",
+        "milestones": [
+          "Clone archival program: 765 items archived (6 sessions)",
+          "DL-008 Certified clears: 67 items (2 sessions)",
+          "DL-026 Pack D Section C: 50 items (4 sessions)",
+          "FD-045 / FD-075 repair: 2 items (1 session)",
+          "END OF WEEK 1: All certification-blocking defects resolved. Clone waste eliminated. Pool shrinks to ~1,735 items. Learner pool fully DL-008 and DL-026 clean."
+        ]
+      },
+      "Week_2": {
+        "days": "Mon-Fri (Days 6-10)",
+        "sessions": "14-27",
+        "milestones": [
+          "Pack E full rewrite: Sections A, B, C, D (400 items, ~11 sessions)",
+          "END OF WEEK 2: Pack E Sections A-D complete. Stems upgraded to business scenarios. EC expanded with standard citations. Distractors expanded from single-phrase to misconception-level."
+        ]
+      },
+      "Week_3": {
+        "days": "Mon-Fri (Days 11-15)",
+        "sessions": "28-41",
+        "milestones": [
+          "Pack E Sections E, F complete (100 items, ~3 sessions)",
+          "DL-013 boilerplate: 184 Certified fields cleared (3 sessions)",
+          "Pack A Sections B/C explanation + distractor upgrades (5 sessions)",
+          "Pack C/D seed EC upgrades begin (3 sessions, continuing into Week 4)",
+          "END OF WEEK 3: Pack E fully rewritten. All Certified DL-013 boilerplate eliminated. Pack A most improved sections complete."
+        ]
+      },
+      "Week_4": {
+        "days": "Mon-Fri (Days 16-20)",
+        "sessions": "42-54",
+        "milestones": [
+          "Pack C/D seed upgrades complete (remaining 3 sessions + overlap)",
+          "Case bank distractor authorship: all 390 EW slots filled (6 sessions)",
+          "D4 distractor refinement: 528 items strengthened (8 sessions, overlaps with weeks 3-4)",
+          "DL-031 difficulty recalibration: Moderate→Easy for ~500 items (3 sessions)",
+          "DL-032 case bank difficulty calibration: 420 items (2 sessions)",
+          "DL-005 dupes and absolutist rewrites (2 sessions)",
+          "CC position rebalance: Pack A B-bias, Pack C/D A-bias (2 sessions)",
+          "DL-016 metadata-content alignment: Pack A 500 items (2 sessions)",
+          "END OF WEEK 4: Portfolio fully rewritten. All 1,735 unique items have exam-quality stems, EC, and distractors."
+        ]
+      },
+      "Week_5_partial": {
+        "days": "Mon-Tue (Days 21-22)",
+        "sessions": "~55-58 (overflow + closeout)",
+        "milestones": [
+          "Governance closeout: REVISION_HISTORY.md entries, final scans, delivery pool safety check",
+          "Pre-delivery safety check: confirm zero DL-008, zero DL-026, zero DL-005 dupe items in pool",
+          "Certification audit: verify all remaining items meet CAQS §1.7 certification requirements",
+          "Portfolio readiness dashboard: final quality score, section-by-section health report"
+        ]
+      }
+    },
+    "concurrent_optimization_opportunities": {
+      "pack_E_and_pack_A": "Different files — 2 agents can work simultaneously. Pack E rewrites (Agent 1) + Pack A DL-013 upgrades (Agent 2) save ~5 calendar days.",
+      "case_bank_and_mcq": "Different file types. Case bank EW authorship can run in parallel with MCQ distractor refinement. Saves ~3 calendar days.",
+      "clone_archival_and_blocking_fixes": "Clone archival is mechanical and fast. DL-008/026 fixes touch different sections. Can run 2 agents simultaneously after clone archival confirms pack file stability.",
+      "net_calendar_impact": "With 2-agent parallelism for ~40% of sessions, calendar timeline reduces from ~22 days to ~16-18 days (~3.5 weeks)."
+    },
+    "go_no_go_milestones": {
+      "Week_1_end_check": "All 67 DL-008 items cleared? All 765 clones archived? DL-026 Pack D Section C 50 items remediated? If yes → proceed to Week 2.",
+      "Week_2_end_check": "Pack E Sections A-D rewritten? All stems meet business-scenario standard? If yes → proceed to Week 3.",
+      "Week_3_end_check": "Pack E 100% complete? All Certified DL-013 boilerplate eliminated? If yes → proceed to Week 4.",
+      "Final_check": "Portfolio DQS >= 85? No items with empty EW at Certified state? CC distribution within CAQS tolerances? If yes → portfolio certified complete."
+    }
+  },
+
+  "risk_adjustments": {
+    "upside_risks": [
+      "Clone archival eliminates more work than estimated (Packs C/D are 88% clone — 500 items → ~130 each. If stems are more clone-like than assumed, even fewer seeds need rewriting).",
+      "Pack E rewrites may be faster than 35/session if stem-EC-distractor are done together per item (triple-purpose pass = fewer sessions).",
+      "Multi-agent parallelism with 3+ agents (different packs) could compress calendar timeline by 40-50%.",
+      "Difficulty recalibration is purely label changes — 80+ items/session is achievable, reducing the 5-session estimate to ~3."
+    ],
+    "downside_risks": [
+      "Pack E EC authorship is harder than estimated: 500 items with unique independent pipeline means no template shortcuts. Each needs full accounting concept research per CAQS §4.",
+      "DL-016 Pack A metadata-content shift affects all 500 items — choices in metadata block don't match content block. Fixing this may require per-item line-level edits, increasing effort.",
+      "Pack C Section B DL-008 cluster (54 items) has CC rotation artifacts — EW[CC] clears alone may not be sufficient. May need full CC audit → re-certification pass.",
+      "Case bank distractor authorship requires case-scenario context awareness — slower than MCQ distractor authoring. May exceed the 6-session estimate.",
+      "Governance-guard Rule 5 (max 30 items/batch) limits throughput. Complex rewrites that would naturally go faster (e.g., 40/session) are artificially capped.",
+      "Dual-object architecture (Packs B/C/D/E) requires string-aware parsers for every edit. DL-020 (validator brace-matcher) and DL-029 (scan false positives) show that even read tools are unreliable on this format."
+    ],
+    "recommended_mitigations": [
+      "Execute clone archival FIRST — unblocks all downstream estimates. Do not start rewrites on items that will be archived.",
+      "Author a 'Pack E rewrite template' for each section — standard EC structure, common principle citations per topic — to accelerate the 500-item rewrite.",
+      "Fix DL-016 Pack A as a structural pass (not per-item) — the +1 offset is systematic and may be correctable via a targeted script rather than per-item edits.",
+      "Use multi-agent sessions: Agent 1 works Pack E, Agent 2 works Pack A DL-013, Agent 3 works case bank EW. Different files, no concurrent-write risk.",
+      "Run delivery pool safety checks after every phase, not just at end. Catch regressions early."
+    ]
+  },
+
+  "summary_table": {
+    "headers": ["Work Category", "Items/Fields", "Effort (Hours)", "Sessions", "Priority"],
+    "rows": [
+      {"category": "Clone Archival (mechanical)", "items_fields": "765 items", "effort_hours": 20, "sessions": 6, "priority": "P0 — Must Do First"},
+      {"category": "DL-008 Certified EW[CC] Clears", "items_fields": "67 items", "effort_hours": 8, "sessions": 2, "priority": "P0 — Learner Safety"},
+      {"category": "DL-026 Empty EW Non-CC (Pack D Section C)", "items_fields": "50 items; ~150 fields", "effort_hours": 18, "sessions": 4, "priority": "P0 — Certification-Blocking"},
+      {"category": "FD-045 + FD-075 Content Block Repair", "items_fields": "2 items", "effort_hours": 3, "sessions": 1, "priority": "P0 — Structural Defect"},
+      {"category": "Case Bank Distractor Authorship", "items_fields": "390 fields", "effort_hours": 45, "sessions": 6, "priority": "P1 — Largest Educational Gap"},
+      {"category": "Pack E Full Rewrite (Stems + EC)", "items_fields": "500 items", "effort_hours": 170, "sessions": 14, "priority": "P1 — Learner Experience"},
+      {"category": "DL-013 Boilerplate (Certified items)", "items_fields": "184 fields", "effort_hours": 15, "sessions": 3, "priority": "P1 — Certified Pool Quality"},
+      {"category": "Pack A Explanation Upgrades (B/C/E)", "items_fields": "~300 items", "effort_hours": 60, "sessions": 7, "priority": "P2 — Certification Readiness"},
+      {"category": "Pack C Seeds EC Upgrade", "items_fields": "~82 items", "effort_hours": 18, "sessions": 2, "priority": "P2"},
+      {"category": "Pack D Seeds EC Upgrade", "items_fields": "~77 items", "effort_hours": 16, "sessions": 2, "priority": "P2"},
+      {"category": "Pack B Minor EC Enrichment", "items_fields": "~58 items", "effort_hours": 8, "sessions": 1, "priority": "P3"},
+      {"category": "Weak D4 Distractor Refinement", "items_fields": "528 items", "effort_hours": 60, "sessions": 8, "priority": "P3"},
+      {"category": "DL-005 Identical Dupe Fix", "items_fields": "28 items", "effort_hours": 4, "sessions": 1, "priority": "P2 — Certification-Blocking"},
+      {"category": "DL-005 Absolutist Rewrites", "items_fields": "12 items", "effort_hours": 2, "sessions": 1, "priority": "P3"},
+      {"category": "DL-031 MCQ Difficulty Recalibration", "items_fields": "500 items (label-only)", "effort_hours": 8, "sessions": 3, "priority": "P3"},
+      {"category": "DL-032 Case Bank Difficulty Calibration", "items_fields": "420 items (label-only)", "effort_hours": 7, "sessions": 2, "priority": "P3"},
+      {"category": "CC Position Rebalance (Pack A B-bias + C/D A-bias)", "items_fields": "~40 items shifted", "effort_hours": 5, "sessions": 2, "priority": "P2"},
+      {"category": "DL-016 Metadata-Content Alignment (Pack A)", "items_fields": "500 items", "effort_hours": 15, "sessions": 2, "priority": "P2"},
+      {"category": "Governance Closeout & Final Audit", "items_fields": "Portfolio-wide", "effort_hours": 8, "sessions": 2, "priority": "P0 — Mandatory"},
+      {"category": "TOTAL", "items_fields": "~4,095 item-equivalents", "effort_hours": 490, "sessions": 67, "priority": "—"},
+      {"category": "TOTAL (Optimized — bundled + parallel)", "items_fields": "—", "effort_hours": 480, "sessions": 54, "priority": "—"}
+    ]
+  },
+
+  "governance_attestation": {
+    "read_only": true,
+    "no_files_modified": true,
+    "no_pack_content_changes": true,
+    "no_certification_state_changes": true,
+    "no_answer_key_modifications": true,
+    "no_scoring_logic_changes": true,
+    "data_sources_cross_referenced": [
+      "SESSION800_DISTRACTOR_QUALITY_CENSUS.json (Agent E)",
+      "SESSION800_METADATA_AUDIT_AGENT_N.json (Agent N)",
+      "SESSION_STATUS_2026-07-24.md",
+      "REVISION_HISTORY.md (Sessions 301-302)",
+      "DEFECT_LIBRARY.md (DL-008 through DL-033)",
+      "S301 Certification Readiness Framework",
+      "S302 Distractor Quality Census"
+    ],
+    "estimate_confidence": "MEDIUM-HIGH (85-90%). Counts: HIGH confidence (from raw file greps by Agents D/E/N). Effort estimates: MEDIUM confidence (extrapolated from Pack B velocity with 60-70% factor. Actual throughput may vary by ±20% depending on item complexity, agent parallelism, and governance overhead.)"
+  }
+}

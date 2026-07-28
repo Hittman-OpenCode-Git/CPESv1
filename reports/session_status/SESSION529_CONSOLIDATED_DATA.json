@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "title": "Session 529 Consolidated Data Package",
+    "date": "2026-07-26",
+    "prepared_by": "Agent O — Reporting Package (14-agent synthesis)",
+    "target_file": "scored_cases.js (ENHANCED_CASE_BASE)",
+    "source_agents": ["A","B","C","D","E","F","G","H","I","J","K","L","M"]
+  },
+
+  "census": {
+    "total_cases": 15,
+    "total_items": 90,
+    "certified_items": 0,
+    "unprocessed_items": 90,
+    "avg_explanation_chars": 80,
+    "median_explanation_chars": 80,
+    "min_explanation_chars": 21,
+    "max_explanation_chars": 244,
+    "case_ids": [
+      "CBQ-A1","CBQ-A2","CBQ-A3",
+      "CBQ-B1","CBQ-B2","CBQ-B3",
+      "CBQ-C1","CBQ-C2","CBQ-C3",
+      "CBQ-D1","CBQ-D2",
+      "CBQ-E1","CBQ-E2",
+      "CBQ-F1","CBQ-F2"
+    ],
+    "domain_distribution": {"A":18,"B":18,"C":18,"D":12,"E":6,"E,F":12,"F":6},
+    "difficulty_distribution": {"Moderate-Easy":8,"Moderate":38,"Difficult":44},
+    "cognitive_level_distribution": {"Understand":8,"Apply":38,"Analyze":25,"Evaluate":19},
+    "item_type_distribution": {"numeric":37,"select":19,"multi":14,"match":12,"fill":8},
+    "certified_pool": {
+      "pack_a": 481,
+      "pack_b": 500,
+      "pack_c": 350,
+      "pack_d": 350,
+      "pack_e": 500,
+      "total": 2181,
+      "total_questions": 2500,
+      "pct": 87.2
+    }
+  },
+
+  "wave_structure": {
+    "waves": [
+      {"id":"W0","label":"Pre-Certification Audit","sessions":["S530"],"items":90,"writes":false,"hours":13},
+      {"id":"W1","label":"Foundation — Financial Reporting & Budgeting","cases":["CBQ-A1","CBQ-B1"],"items":12,"domains":["A","B"],"risk":"LOW","hours":3,"target_explanation":500},
+      {"id":"W2","label":"Expansion — Inventory, Forecasting & Variance","cases":["CBQ-A3","CBQ-B3","CBQ-C1"],"items":18,"domains":["A","B","C"],"risk":"LOW-MED","hours":4,"target_explanation":500},
+      {"id":"W3","label":"Deepening — Consolidation, Regression & ABC","cases":["CBQ-A2","CBQ-B2","CBQ-D1"],"items":18,"domains":["A","B","D"],"risk":"MEDIUM","hours":4,"target_explanation":600},
+      {"id":"W4","label":"Integration — Transfer Pricing & Process Costing","cases":["CBQ-C2","CBQ-D2"],"items":12,"domains":["C","D"],"risk":"MEDIUM","hours":3.5,"target_explanation":600},
+      {"id":"W5","label":"Technology — Balanced Scorecard & Data Governance","cases":["CBQ-C3","CBQ-F1"],"items":12,"domains":["C","F"],"risk":"MED-HIGH","hours":3.5,"target_explanation":800},
+      {"id":"W6","label":"Capstone — Internal Controls, ITGC & Cybersecurity","cases":["CBQ-E1","CBQ-E2","CBQ-F2"],"items":18,"domains":["E","E,F"],"risk":"HIGH","hours":5,"target_explanation":800},
+      {"id":"W7","label":"Governance Closeout","sessions":["S537"],"items":90,"writes":"metadata-only","hours":3}
+    ],
+    "total_sessions": 8,
+    "total_hours": 39,
+    "total_certification_sessions": 6,
+    "total_items_per_wave_max": 18
+  },
+
+  "readiness_classification": {
+    "READY": 8,
+    "REMEDIATION_NEEDED": 78,
+    "HIGH_RISK": 4,
+    "ESCALATE": 0,
+    "high_risk_items": [
+      {"id":"CBQ-A1-Q4","issue":"Ambiguous prompt — 'before income-tax cash effects not listed'","explanation":54},
+      {"id":"CBQ-A1-Q6","issue":"CalcRequired schema error on multi type","explanation":92},
+      {"id":"CBQ-F1-Q1","issue":"Shortest in pool — 21 chars, zero educational content","explanation":21},
+      {"id":"CBQ-B3-Q3","issue":"Second shortest — 24 chars, ambiguous prompt wording","explanation":24}
+    ],
+    "per_case": {
+      "CBQ-A1":{"READY":1,"REMEDIATION":3,"HIGH_RISK":2},
+      "CBQ-A2":{"READY":1,"REMEDIATION":5,"HIGH_RISK":0},
+      "CBQ-B1":{"READY":2,"REMEDIATION":4,"HIGH_RISK":0},
+      "CBQ-B2":{"READY":2,"REMEDIATION":4,"HIGH_RISK":0},
+      "CBQ-C1":{"READY":0,"REMEDIATION":6,"HIGH_RISK":0},
+      "CBQ-C2":{"READY":1,"REMEDIATION":5,"HIGH_RISK":0},
+      "CBQ-D1":{"READY":1,"REMEDIATION":5,"HIGH_RISK":0},
+      "CBQ-D2":{"READY":0,"REMEDIATION":6,"HIGH_RISK":0},
+      "CBQ-E1":{"READY":0,"REMEDIATION":6,"HIGH_RISK":0},
+      "CBQ-E2":{"READY":0,"REMEDIATION":6,"HIGH_RISK":0},
+      "CBQ-F1":{"READY":0,"REMEDIATION":5,"HIGH_RISK":1},
+      "CBQ-A3":{"READY":0,"REMEDIATION":6,"HIGH_RISK":0},
+      "CBQ-B3":{"READY":0,"REMEDIATION":5,"HIGH_RISK":1},
+      "CBQ-C3":{"READY":0,"REMEDIATION":6,"HIGH_RISK":0},
+      "CBQ-F2":{"READY":0,"REMEDIATION":6,"HIGH_RISK":0}
+    }
+  },
+
+  "board_verdicts": {
+    "CERTIFY": 0,
+    "HOLD": 90,
+    "ESCALATE": 0,
+    "go_gauge": "NO-GO — DELAY REQUIRED",
+    "hold_breakdown": {
+      "HOLD-EXPLANATION": 90,
+      "HOLD-METADATA": 43,
+      "HOLD-STRUCTURAL": 40,
+      "HOLD-ANSWER-KEY": 0
+    }
+  },
+
+  "technical_validation": {
+    "numeric_items_verified": 35,
+    "discrepancies": 0,
+    "answer_key_errors": 0,
+    "formula_errors": 0,
+    "rounding_issues": 0,
+    "exhibit_integrity_issues": 0,
+    "schema_errors": 18,
+    "schema_error_breakdown": {
+      "by_domain": {"A":3,"B":3,"C":5,"D":3,"E":3,"E,F":2,"F":1},
+      "by_type": {"multi":7,"select":5,"fill":3,"match":3},
+      "by_level": {"Apply":1,"Analyze":7,"Evaluate":7,"Understand":3}
+    },
+    "verdict": "PASS — ALL 35 NUMERIC ITEMS TECHNICALLY ACCURATE"
+  },
+
+  "explanation_statistics": {
+    "total_chars": 7180,
+    "avg": 80,
+    "median": 80,
+    "min": 21,
+    "max": 244,
+    "histogram": {"<200":89,"200-500":1,"500-1000":0,"1000-1500":0,"≥1500":0},
+    "classification": {"SUFFICIENT":1,"ADEQUATE":0,"THIN":72,"DEFECTIVE":17},
+    "metrics": {
+      "principle_citation_pct": 61,
+      "business_interpretation_pct": 11,
+      "formula_steps_pct": 39,
+      "exam_trap_pct": 1,
+      "placeholder_pct": 0,
+      "distractor_coverage_pct": 0
+    }
+  },
+
+  "cays_audit": {
+    "items_sampled": 16,
+    "PASS": 0,
+    "CONDITIONAL_PASS": 14,
+    "FAIL": 2,
+    "fail_items": ["CBQ-A1-Q4","CBQ-A1-Q6"],
+    "systemic_defects": [
+      {"id":"SYS-001","name":"Explanation insufficiency","affected":14,"pct":87.5},
+      {"id":"SYS-002","name":"CalcRequired schema errors","affected":7,"pct":43.8},
+      {"id":"SYS-003","name":"Missing ExplanationWrong fields","affected":7,"pct":43.8},
+      {"id":"SYS-004","name":"Difficulty over-labeling (DL-031)","affected":9,"pct":56.3},
+      {"id":"SYS-005","name":"Missing CSO LOS references","affected":16,"pct":100}
+    ]
+  },
+
+  "metadata_gaps": {
+    "universal": ["ExplanationVersion (all 90 items)","Exhibit Purpose (all 28 exhibits)"],
+    "case_level": {
+      "CBQ-A1": ["Industry","CompanyType","CompanyName","Stakeholder","BusinessFunction"]
+    },
+    "item_level": {
+      "accounting_principle_missing_pct": 47,
+      "business_interpretation_missing_pct": 95,
+      "formula_reference_pct": 18,
+      "decision_tree_reference_pct": 28,
+      "common_trap_reference_pct": 29
+    }
+  },
+
+  "governance": {
+    "hash_check": "FAIL — All 13 runtime-critical files drifted from S63 baselines",
+    "governance_guard_tests": "20/20 PASS",
+    "blocking_conditions": [
+      {"id":"BC-001","severity":"CRITICAL","condition":"Hash drift from S63 baselines","action":"Execute G1-G5 reconciliation"},
+      {"id":"BC-002","severity":"CRITICAL","condition":"scored_cases4.js time anomaly (141 min offset)","action":"Investigate DL-019 concurrent-write"},
+      {"id":"BC-003","severity":"HIGH","condition":"Undocumented root files (may-core.js, may-learner-state.js)","action":"Identify provenance"}
+    ],
+    "t0_md5": "C3E4B01ACC70BDEE98F11E31C3CC9F8A",
+    "t0_size": 397461,
+    "backup_protocol": "Operational — backups/ directory with 358 files"
+  },
+
+  "cross_program_comparison": {
+    "target_certification_standard": "D-Program (1,282 avg chars, 72% citation, 84% business interp)",
+    "expansion_factor": 10,
+    "effort_vs_d_program": 4.1,
+    "architectural_risk_vs_d_program": "LOWER (single-block, no DL-008/DL-016)",
+    "blindspots": [
+      "Answer-key pre-verification (DL-030 precedent)",
+      "Exhibit data consistency (D-Program had 0 exhibits)",
+      "Cross-case domain coverage",
+      "Explanation wave drift",
+      "CognitiveLevel distribution",
+      "Difficulty recalibration deferral",
+      "Backup protocol compliance",
+      "ProductionStatus promotion"
+    ]
+  },
+
+  "forecast": {
+    "total_sessions": 8,
+    "total_hours": 41,
+    "earliest_completion": "2026-08-01",
+    "realistic_completion": "2026-08-04",
+    "conservative_completion": "2026-08-07",
+    "go_no_go": "CONDITIONAL GO — 3 prerequisites",
+    "prerequisites": [
+      "Complete Wave 0 pre-cert audit (answer-key verification, difficulty calibration, explanation baseline, metadata inventory)",
+      "Fix 4 HIGH_RISK items (CBQ-A1-Q4, CBQ-A1-Q6, CBQ-F1-Q1, CBQ-B3-Q3)",
+      "Resolve CBQ-D1 Q4/Q6 redundancy (replace one item)"
+    ],
+    "top_risks": [
+      "CBQ-F1-Q1: 21-char placeholder in unfamiliar F-domain",
+      "Systemic DL-031: ~50% of items over-labeled",
+      "CBQ-D1 Q4/Q6 redundancy"
+    ]
+  }
+}

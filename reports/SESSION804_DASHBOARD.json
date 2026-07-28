@@ -1,0 +1,83 @@
+{
+  "session": "S804",
+  "date": "2026-07-26",
+  "title": "CMA Part 1 Exam Simulator — Session 804 Dashboard",
+  "certified_pool": {
+    "total_items": 2500,
+    "certified": 2181,
+    "certified_pct": 87.2,
+    "archived": 242,
+    "archived_pct": 9.7,
+    "unprocessed": 77,
+    "unprocessed_pct": 3.1,
+    "in_audit": 0,
+    "editorial_queue": 0
+  },
+  "pack_breakdown": {
+    "pack_a": {
+      "total": 500,
+      "certified": 480,
+      "certified_pct": 96.0,
+      "note": "S804 de-certified P1-E-051 (Clone → Archived); Net -1 Certified from prior 481"
+    },
+    "pack_b": {
+      "total": 500,
+      "certified": 500,
+      "certified_pct": 100.0
+    },
+    "pack_c": {
+      "total": 500,
+      "certified": 250,
+      "certified_pct": 50.0
+    },
+    "pack_d": {
+      "total": 500,
+      "certified": 300,
+      "certified_pct": 60.0
+    },
+    "pack_e": {
+      "total": 500,
+      "certified": 500,
+      "certified_pct": 100.0
+    }
+  },
+  "clone_rationalization": {
+    "section_e_clones_total": 17,
+    "section_e_clones_archived": 17,
+    "section_e_clones_pct": 100.0,
+    "section_f_clones_total": "~765 (estimated total Sections E+F clone burden)",
+    "section_f_clones_archived": "~655",
+    "section_f_clones_pct": 85.6,
+    "sections_a_d_clone_audit": "Not yet audited",
+    "note": "Sections E+F clone rationalization 85.6% complete. Sections A-D clone audit pending."
+  },
+  "open_defects": {
+    "dl008": {
+      "certified_affected": 67,
+      "risk": "HIGH — learner-safety risk on wrong-answer explanations"
+    },
+    "dl026": {
+      "in_audit_affected": 50,
+      "certified_affected": 0,
+      "risk": "MEDIUM — Pack D Section C only, not in learner pool"
+    },
+    "dl013": {
+      "fields_remaining": 851,
+      "certified_affected": 0,
+      "risk": "LOW — non-blocking, zero Certified items"
+    }
+  },
+  "s804_actions": {
+    "de_certifications": 1,
+    "certifications": 0,
+    "notable": "P1-E-051 (Certified → Archived) — final Section E clone rationalization. All 17 Section E clones now archived."
+  },
+  "build_verification": {
+    "certified_grep_count": 2181,
+    "archived_grep_count": 242,
+    "unprocessed_grep_count": 77,
+    "total": 2500,
+    "method": "Select-String direct raw-file grep on pack_*_corrected.js",
+    "count_stable": true
+  }
+}

@@ -1,0 +1,1190 @@
+{
+  "specId": "SESSION252_INVESTIGATION_REGISTRY_SPEC",
+  "board": "D",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T19:00:00.000Z",
+  "nextId": 20,
+  "investigations": [
+    {
+      "id": "INV-20260727-001",
+      "title": "Challenge investigation: CONTENT ERROR — P1-A-036 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-036"
+      ],
+      "related_challenges": [
+        "CH-CC1ECA89"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.402Z",
+      "updated_date": "2026-07-27T17:47:10.722Z",
+      "assigned_to": "Board D Auditor",
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-CC1ECA89: The correct answer shown doesn't match what I calculated independently.",
+          "severity": "HIGH"
+        },
+        {
+          "timestamp": "2026-07-27T17:47:10.722Z",
+          "author": "User",
+          "finding": "Independent recalculation confirms the stored answer does not match. Investigating root cause in the template-based authoring pipeline.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "content_error"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-CC1ECA89"
+        },
+        {
+          "timestamp": "2026-07-27T17:47:10.721Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "User",
+          "note": "Status updated to INVESTIGATING"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-002",
+      "title": "Challenge investigation: TECHNICAL ISSUE — P1-A-046 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "OPEN",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-046"
+      ],
+      "related_challenges": [
+        "CH-42169D7F"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.402Z",
+      "updated_date": "2026-07-27T17:46:58.402Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-42169D7F: One of the distractor explanations appears to describe the wrong choice.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "technical_issue"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-42169D7F"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-003",
+      "title": "Challenge investigation: ANSWER DISPUTE — P1-A-056 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "OPEN",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-056"
+      ],
+      "related_challenges": [
+        "CH-53D73FDB"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.402Z",
+      "updated_date": "2026-07-27T17:46:58.402Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-53D73FDB: The question stem has a typo — the numbers don't add up.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "answer_dispute"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-53D73FDB"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-004",
+      "title": "Challenge investigation: EXPLANATION ISSUE — P1-A-066 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-066"
+      ],
+      "related_challenges": [
+        "CH-5DEDA52E"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.402Z",
+      "updated_date": "2026-07-27T17:46:58.402Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-5DEDA52E: The explanation references an ASC standard that doesn't apply here.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "explanation_issue"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-5DEDA52E"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-5DEDA52E triaged as LIKELY_DEFECT (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-005",
+      "title": "Challenge investigation: AMBIGUITY — P1-AC-026 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-AC-026"
+      ],
+      "related_challenges": [
+        "CH-73FBA8ED"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.402Z",
+      "updated_date": "2026-07-27T17:46:58.402Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-73FBA8ED: The difficulty label doesn't match the question complexity.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "ambiguity"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.402Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-73FBA8ED"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-73FBA8ED triaged as LIKELY_DEFECT (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-006",
+      "title": "Challenge investigation: AMBIGUITY — P1-EC-006 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-EC-006"
+      ],
+      "related_challenges": [
+        "CH-4A405E18"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-4A405E18: The difficulty label doesn't match the question complexity.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "ambiguity"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-4A405E18"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-4A405E18 triaged as GOVERNANCE_ESCALATION (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-007",
+      "title": "Challenge investigation: OTHER — P1-EC-007 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-EC-007"
+      ],
+      "related_challenges": [
+        "CH-DEB509EA"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-DEB509EA: The application crashed when I submitted this question.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "other"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-DEB509EA"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-DEB509EA triaged as GOVERNANCE_ESCALATION (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-008",
+      "title": "Challenge investigation: CONTENT ERROR — P1-EC-009 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-EC-009"
+      ],
+      "related_challenges": [
+        "CH-DCB4A848"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-DCB4A848: The correct answer shown doesn't match what I calculated independently.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "content_error"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-DCB4A848"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-DCB4A848 triaged as GOVERNANCE_ESCALATION (confidence 80)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-009",
+      "title": "Challenge investigation: TECHNICAL ISSUE — P1-EC-010 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-EC-010"
+      ],
+      "related_challenges": [
+        "CH-4A14030D"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-4A14030D: One of the distractor explanations appears to describe the wrong choice.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "technical_issue"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-4A14030D"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-4A14030D triaged as LIKELY_DEFECT (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-010",
+      "title": "Challenge investigation: ANSWER DISPUTE — P1-EC-011 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-EC-011"
+      ],
+      "related_challenges": [
+        "CH-E129E08E"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-E129E08E: The question stem has a typo — the numbers don't add up.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "answer_dispute"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-E129E08E"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-E129E08E triaged as LIKELY_DEFECT (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-011",
+      "title": "Challenge investigation: ANSWER DISPUTE — P1-EC-018 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-EC-018"
+      ],
+      "related_challenges": [
+        "CH-2A63A075"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-2A63A075: The question stem has a typo — the numbers don't add up.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "answer_dispute"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-2A63A075"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-2A63A075 triaged as GOVERNANCE_ESCALATION (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-012",
+      "title": "Challenge investigation: EXPLANATION ISSUE — P1-EC-019 (DL-008, DL-026)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-EC-019"
+      ],
+      "related_challenges": [
+        "CH-6044F487"
+      ],
+      "related_defects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "related_recommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-6044F487: The explanation references an ASC standard that doesn't apply here.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "explanation_issue"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-6044F487"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-6044F487 triaged as GOVERNANCE_ESCALATION (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-013",
+      "title": "Challenge investigation: CONTENT ERROR — P1-A-003 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "INVESTIGATING",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-003"
+      ],
+      "related_challenges": [
+        "CH-07EF5B50"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-07EF5B50: The correct answer shown doesn't match what I calculated independently.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "content_error"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-07EF5B50"
+        },
+        {
+          "timestamp": "2026-07-27T19:00:00.000Z",
+          "from_status": "OPEN",
+          "to_status": "INVESTIGATING",
+          "author": "S258-AgentD",
+          "note": "Auto-promoted: challenge CH-07EF5B50 triaged as LIKELY_DEFECT (confidence 85)"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-014",
+      "title": "Challenge investigation: CONTENT ERROR — P1-A-009 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "OPEN",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-009"
+      ],
+      "related_challenges": [
+        "CH-DDAE4F96"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S537",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-DDAE4F96: The correct answer shown doesn't match what I calculated independently.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "content_error"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-DDAE4F96"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-015",
+      "title": "Challenge investigation: TECHNICAL ISSUE — P1-A-010 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "OPEN",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-010"
+      ],
+      "related_challenges": [
+        "CH-B5680FAC"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:46:58.403Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-B5680FAC: One of the distractor explanations appears to describe the wrong choice.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "technical_issue"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-B5680FAC"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-016",
+      "title": "Challenge investigation: AMBIGUITY — P1-A-013 (DL-008)",
+      "type": "CHALLENGE",
+      "status": "CLOSED",
+      "priority": 85,
+      "related_qids": [
+        "P1-A-013"
+      ],
+      "related_challenges": [
+        "CH-90E9CA51"
+      ],
+      "related_defects": [
+        "DL-008"
+      ],
+      "related_recommendations": [
+        "REC-1100DF07"
+      ],
+      "related_sessions": [
+        "S89B",
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:46:58.403Z",
+      "updated_date": "2026-07-27T17:47:27.944Z",
+      "assigned_to": null,
+      "findings": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "author": "auto-create",
+          "finding": "Auto-created from challenge CH-90E9CA51: The difficulty label doesn't match the question complexity.",
+          "severity": "HIGH"
+        }
+      ],
+      "resolution": "Challenge CH-90E9CA51 was reviewed. DL-008 remediation already completed for P1-A-013. The difficulty label issue is a documented cosmetic metadata shift (DL-015 pattern). No content defect. Marked NO_ACTION.",
+      "resolution_date": "2026-07-27T17:47:27.943Z",
+      "resolution_type": "NO_ACTION",
+      "resolution_author": "User",
+      "resolution_session": "S252",
+      "metadata": {
+        "source": "auto-create",
+        "tags": [
+          "auto-created",
+          "ambiguity"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:46:58.403Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "auto-create",
+          "note": "Auto-created from challenge CH-90E9CA51"
+        },
+        {
+          "timestamp": "2026-07-27T17:47:27.944Z",
+          "from_status": "OPEN",
+          "to_status": "CLOSED",
+          "author": "User",
+          "note": "NO_ACTION: Challenge CH-90E9CA51 was reviewed. DL-008 remediation already completed for P1-A-013. The difficulty label issue is a documented cosmetic metadata shift (DL-015 pattern). No content defect. Marked NO_ACTION."
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-017",
+      "title": "Defect investigation: DL-035 — Certified items with empty distractor EW slots",
+      "type": "DEFECT",
+      "status": "OPEN",
+      "priority": 95,
+      "related_qids": [],
+      "related_challenges": [],
+      "related_defects": [
+        "DL-035"
+      ],
+      "related_recommendations": [],
+      "related_sessions": [
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:47:11.631Z",
+      "updated_date": "2026-07-27T17:47:11.631Z",
+      "assigned_to": null,
+      "findings": [],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "from-defect",
+        "tags": [
+          "from-defect",
+          "dl-035",
+          "high"
+        ],
+        "estimated_hours": null,
+        "blocking": true
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:47:11.631Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "User",
+          "note": "Created from defect DL-035"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-018",
+      "title": "Governance investigation: Rule 6 enforcement gap — DL-035 certified items passed pipeline without DL-026 check",
+      "type": "GOVERNANCE",
+      "status": "OPEN",
+      "priority": 100,
+      "related_qids": [
+        "P1-FC-001",
+        "P1-FC-006",
+        "P1-FC-007",
+        "P1-FC-010",
+        "P1-FC-015"
+      ],
+      "related_challenges": [],
+      "related_defects": [],
+      "related_recommendations": [],
+      "related_sessions": [
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:47:19.746Z",
+      "updated_date": "2026-07-27T17:47:19.746Z",
+      "assigned_to": null,
+      "findings": [],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "manual",
+        "tags": [
+          "governance",
+          "DL-035",
+          "Rule-6",
+          "governance-gap"
+        ],
+        "estimated_hours": null,
+        "blocking": false
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:47:19.746Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "User",
+          "note": "Investigation created"
+        }
+      ]
+    },
+    {
+      "id": "INV-20260727-019",
+      "title": "Systematic investigation: DL-008/DL-026 cross-pack explanation slot pattern",
+      "type": "SYSTEMATIC",
+      "status": "OPEN",
+      "priority": 80,
+      "related_qids": [
+        "P1-A-036",
+        "P1-A-046",
+        "P1-A-056",
+        "P1-EC-018",
+        "P1-EC-019"
+      ],
+      "related_challenges": [],
+      "related_defects": [],
+      "related_recommendations": [],
+      "related_sessions": [
+        "S252"
+      ],
+      "related_governance_events": [],
+      "created_date": "2026-07-27T17:47:21.789Z",
+      "updated_date": "2026-07-27T17:47:21.789Z",
+      "assigned_to": null,
+      "findings": [],
+      "resolution": null,
+      "resolution_date": null,
+      "resolution_type": null,
+      "resolution_author": null,
+      "resolution_session": null,
+      "metadata": {
+        "source": "manual",
+        "tags": [
+          "systematic",
+          "cross-pack",
+          "DL-008",
+          "DL-026",
+          "template-artifact"
+        ],
+        "estimated_hours": null,
+        "blocking": false
+      },
+      "timeline": [
+        {
+          "timestamp": "2026-07-27T17:47:21.789Z",
+          "from_status": null,
+          "to_status": "OPEN",
+          "author": "User",
+          "note": "Investigation created"
+        }
+      ]
+    }
+  ]
+}

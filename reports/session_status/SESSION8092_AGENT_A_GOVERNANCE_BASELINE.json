@@ -1,0 +1,51 @@
+{
+  "session": "S809.2",
+  "agent": "A",
+  "role": "Governance Baseline Verifier",
+  "compiled_by": "Agent J (from REVISION_HISTORY.md S805 pre-flight + raw-file grep)",
+  "governance_baseline": {
+    "certified_pool_total": 2221,
+    "certified_pool_percentage": "88.8%",
+    "pack_breakdown": {
+      "pack_a": { "total": 500, "certified": 481, "pct": "96.2%", "sections_certified": ["A", "D", "E"], "sections_partial": ["B", "C", "F"] },
+      "pack_b": { "total": 500, "certified": 500, "pct": "100.0%", "sections_certified": ["A", "B", "C", "D", "E", "F"] },
+      "pack_c": { "total": 500, "certified": 350, "pct": "70.0%", "sections_certified": ["A", "B"], "sections_unaudited": ["C", "D", "E", "F"] },
+      "pack_d": { "total": 500, "certified": 350, "pct": "70.0%", "sections_certified": ["A", "B", "D"], "sections_unaudited": ["C", "E", "F"] },
+      "pack_e": { "total": 500, "certified": 540, "pct": "108.0%", "note": "Includes R-series rotation items. Core sections A-F all fully certified." }
+    },
+    "governance_guard": {
+      "test_suite": "27/27 PASS",
+      "rules_active": 5,
+      "rule_2_block_status": "ACTIVE — DL-008 enforcement operational",
+      "rule_5_batch_cap": 28
+    },
+    "domain_e_scope": {
+      "total_domain_e_items": 415,
+      "breakdown": {
+        "pack_a_section_e": 84,
+        "pack_b_section_e": 75,
+        "pack_c_section_e": 75,
+        "pack_d_section_e": 75,
+        "pack_e_section_e": 75,
+        "pack_e_r_series": 31
+      },
+      "s809_seeds": {
+        "total": 38,
+        "pack_c": 19,
+        "pack_d": 19,
+        "seed_states": {
+          "certified": 0,
+          "unprocessed": 11,
+          "archived": 27
+        }
+      }
+    }
+  },
+  "verification": {
+    "method": "Select-String (raw-file grep) on all pack_*_corrected.js",
+    "certified_count_stable": true,
+    "governance_guard_hash": "Confirmed at S805 closure",
+    "last_updated": "2026-07-26 (S805 pre-flight)"
+  },
+  "notes": "Governance baseline extracted from S805 closure entry in REVISION_HISTORY.md + independent raw-file grep. Certified count of 2,221 confirmed stable across two consecutive scans. Pack E has more Certified than total because R-series rotation items are counted separately. Domain E seeds for S809: 19 Pack C (EC-004 through EC-072) + 19 Pack D (ED-001 through ED-075). All 38 are Unprocessed (11) or Archived (27). None are in the learner pool."
+}

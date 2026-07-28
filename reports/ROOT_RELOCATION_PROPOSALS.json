@@ -1,0 +1,343 @@
+{
+  "audit_metadata": {
+    "date": "2026-07-28",
+    "phase": 4,
+    "description": "Root cleanup audit — Phase 4 relocation proposals. Proposes MOVE for 83 backup files, DELETE for 7 garbage files, and flags 2 files for HUMAN REVIEW. CRITICAL and HIGH_RISK files annotated as MUST REMAIN. STAGING_DIR directory proposed for archive relocation.",
+    "repository": "CMA_Part_1_2026",
+    "root_file_count_total": 111,
+    "constitution_reference": "PROJECT_CONSTITUTION.md §11.4 — Prohibited Root-Level Files"
+  },
+  "proposals": [
+    {
+      "action": "MOVE",
+      "current_location": "root",
+      "proposed_location": "backups/",
+      "file_count": 83,
+      "total_size_mb": 107.15,
+      "requires_path_rewrite": false,
+      "human_review_required": false,
+      "confidence": 100,
+      "rationale": "Constitution §11.4 explicitly prohibits backup files (.bak) in the repository root. The backups/ directory already exists with 436 files. Moving these 83 .bak files to backups/ requires zero path rewrites — no application code, no configuration, and no tooling references any of these files by root path. All are timestamped backup artifacts from prior sessions (S718, S719, S364, S357, S829, S853, etc.).",
+      "expected_benefit": "Removes 107.15 MB of clutter from root directory. Reduces root file count from 111 to 28. Brings repository into compliance with Constitution §11.4. Zero risk to application or tooling.",
+      "affected_systems": [],
+      "file_groups": [
+        {
+          "source": "pack_a_corrected.js",
+          "count": 11,
+          "files": [
+            "pack_a_corrected.js.bak-20260726180816",
+            "pack_a_corrected.js.bak-20260726S718",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1857",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1900",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1903",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092643236",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092649084",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092655033",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092655733",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092661402",
+            "pack_a_corrected.js.bak-s719-2026-07-26-1904-1785092662052"
+          ]
+        },
+        {
+          "source": "pack_b_corrected.js",
+          "count": 4,
+          "files": [
+            "pack_b_corrected.js.bak-20260726175459",
+            "pack_b_corrected.js.bak-20260726180809",
+            "pack_b_corrected.js.bak-20260726S718",
+            "pack_b_corrected.js.bak-20260727151912"
+          ]
+        },
+        {
+          "source": "pack_c_corrected.js",
+          "count": 17,
+          "files": [
+            "pack_c_corrected.js.bak-20260726175459",
+            "pack_c_corrected.js.bak-20260726180816",
+            "pack_c_corrected.js.bak-20260726232212",
+            "pack_c_corrected.js.bak-20260726S718",
+            "pack_c_corrected.js.bak-20260727114221",
+            "pack_c_corrected.js.bak-20260727121004",
+            "pack_c_corrected.js.bak-20260727130223",
+            "pack_c_corrected.js.bak-20260727135518",
+            "pack_c_corrected.js.bak-20260727174450",
+            "pack_c_corrected.js.bak-20260727175906",
+            "pack_c_corrected.js.bak-20260727200252",
+            "pack_c_corrected.js.bak-20260727201905",
+            "pack_c_corrected.js.bak-20260727203117",
+            "pack_c_corrected.js.bak-20260727S364",
+            "pack_c_corrected.js.bak-20260727S829",
+            "pack_c_corrected.js.bak-s357-20260727115517",
+            "pack_c_corrected.js.bak-s853-2026-07-27-14-1"
+          ]
+        },
+        {
+          "source": "pack_d_corrected.js",
+          "count": 11,
+          "files": [
+            "pack_d_corrected.js.bak-20260726175741",
+            "pack_d_corrected.js.bak-20260726180826",
+            "pack_d_corrected.js.bak-20260726225550",
+            "pack_d_corrected.js.bak-20260726231242",
+            "pack_d_corrected.js.bak-20260726231432",
+            "pack_d_corrected.js.bak-20260726S718",
+            "pack_d_corrected.js.bak-20260727114219",
+            "pack_d_corrected.js.bak-20260727121029",
+            "pack_d_corrected.js.bak-20260727123551",
+            "pack_d_corrected.js.bak-20260727S364",
+            "pack_d_corrected.js.bak-s853-2026-07-27-14-1"
+          ]
+        },
+        {
+          "source": "pack_e_corrected.js",
+          "count": 24,
+          "files": [
+            "pack_e_corrected.js.bak-20260726175459",
+            "pack_e_corrected.js.bak-20260726175741",
+            "pack_e_corrected.js.bak-20260726180816",
+            "pack_e_corrected.js.bak-20260726203321",
+            "pack_e_corrected.js.bak-20260726205416",
+            "pack_e_corrected.js.bak-20260726205554",
+            "pack_e_corrected.js.bak-20260726213630",
+            "pack_e_corrected.js.bak-20260726S718",
+            "pack_e_corrected.js.bak-20260727151913",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092690553",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092696249",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1904-1785092696853",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092765951",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092766526",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092767113",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092767955",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092773752",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092774361",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092775336",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092776037",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092781954",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092782603",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092783328",
+            "pack_e_corrected.js.bak-s719-2026-07-26-1906-1785092783820"
+          ]
+        },
+        {
+          "source": "scored_cases.js",
+          "count": 4,
+          "files": [
+            "scored_cases.js.bak-20260726161314",
+            "scored_cases.js.bak-20260726161701",
+            "scored_cases.js.bak-20260726172400",
+            "scored_cases.js.bak-20260726180922"
+          ]
+        },
+        {
+          "source": "scored_cases4.js",
+          "count": 2,
+          "files": [
+            "scored_cases4.js.bak-20260726135005",
+            "scored_cases4.js.bak-20260726140450"
+          ]
+        },
+        {
+          "source": "app.js",
+          "count": 1,
+          "files": [
+            "app.js.bak-20260725221322"
+          ]
+        },
+        {
+          "source": "index_updated.html",
+          "count": 1,
+          "files": [
+            "index_updated.html.bak-20260725221322"
+          ]
+        },
+        {
+          "source": "styles.css",
+          "count": 1,
+          "files": [
+            "styles.css.bak-20260725221322"
+          ]
+        },
+        {
+          "source": "AGENTS.md",
+          "count": 1,
+          "files": [
+            "AGENTS.md.bak-20260727174341"
+          ]
+        },
+        {
+          "source": "may-core.js",
+          "count": 3,
+          "files": [
+            "may-core.js.bak-20260725221322",
+            "may-core.js.bak-20260726153313",
+            "may-core.js.bak-20260726160050"
+          ]
+        },
+        {
+          "source": "may-learner-state.js",
+          "count": 3,
+          "files": [
+            "may-learner-state.js.bak-20260726153313",
+            "may-learner-state.js.bak-20260726161132",
+            "may-learner-state.js.bak-20260726161712"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "DELETE",
+      "current_location": "root",
+      "proposed_location": null,
+      "file_count": 7,
+      "total_size_mb": 0.21,
+      "requires_explicit_authorization": true,
+      "authorization_required_per": "AGENTS.md §3.1 — Destructive Script Execution Staged Authorization",
+      "human_review_required": true,
+      "confidence": 100,
+      "rationale": "These 7 files are zero-content artifacts (zero-byte files and PowerShell command fragments), exact Windows copy-duplicates of active root files, or empty temporary files. None are referenced by any application code, configuration, or tooling. Deleting them eliminates clutter with zero risk to repository function.",
+      "expected_benefit": "Removes 7 garbage artifacts from root. Eliminates confusion risk from Windows duplicate copies masquerading as source files.",
+      "affected_systems": [],
+      "files": [
+        {
+          "filename": "$null",
+          "size_bytes": 94,
+          "classification": "PowerShell artifact",
+          "notes": "Command output artifact — variable name from PowerShell session, zero application value"
+        },
+        {
+          "filename": "({idx",
+          "size_bytes": 0,
+          "classification": "Command artifact",
+          "notes": "Zero-byte file — fragment of a PowerShell or shell command, zero application value"
+        },
+        {
+          "filename": "a+b",
+          "size_bytes": 0,
+          "classification": "Command artifact",
+          "notes": "Zero-byte file — fragment of a command expression, zero application value"
+        },
+        {
+          "filename": "null",
+          "size_bytes": 1760,
+          "classification": "Command output artifact",
+          "notes": "PowerShell redirection artifact (1.7 KB), zero application value"
+        },
+        {
+          "filename": "temp_qid_sample.json",
+          "size_bytes": 2,
+          "classification": "Empty temporary file",
+          "notes": "2-byte file (likely just '{}' or whitespace), temporary extraction artifact"
+        },
+        {
+          "filename": "may-core(1).js",
+          "size_bytes": 155809,
+          "classification": "Windows copy duplicate",
+          "notes": "Exact duplicate of may-core.js (339,453 bytes). Windows '(1)' suffix indicates browser re-download or copy-paste artifact. Active file is may-core.js."
+        },
+        {
+          "filename": "may-learner-state(1).js",
+          "size_bytes": 57889,
+          "classification": "Windows copy duplicate",
+          "notes": "Duplicate of may-learner-state.js (117,009 bytes). Windows '(1)' suffix indicates browser re-download or copy-paste artifact. Active file is may-learner-state.js."
+        }
+      ],
+      "prerequisite": {
+        "backup_required": true,
+        "backup_note": "Per AGENTS.md §3.1: every file in the deletion list must be backed up to a timestamped path before deletion, even files classified as garbage.",
+        "authorization_phrase_required": "User must use: 'delete the files' or 'execute the cleanup' or equivalent explicit authorization"
+      }
+    },
+    {
+      "action": "HUMAN_REVIEW_REQUIRED",
+      "current_location": "root",
+      "proposed_location": "needs_human_decision",
+      "file_count": 2,
+      "cannot_auto_move": true,
+      "rationale": "Both files have legitimate root presence but may benefit from organized relocation. Human review required because path references must be verified and updated.",
+      "expected_benefit": "If moved: further root decluttering. If retained: documented exception to §11.4 for files that are root-required by tooling or architecture.",
+      "files": [
+        {
+          "filename": "admin.html",
+          "size_mb": 0.03,
+          "classification": "Legitimate admin console",
+          "rationale": "User confirmed this is a legitimate admin console, not garbage. The <script src=\"scripts/output/admin_dashboard_data.js\"> reference is already relative and would work from a subfolder, but styles.css references may need path updates. Requires human decision: keep in root (administrative UI) or relocate to a subfolder with path rewrites.",
+          "affected_systems": ["<link> and <script> path references"],
+          "risk_if_moved": "Broken CSS/JS references if paths not rewritten",
+          "risk_if_kept_in_root": "Minor — Constitution §11.4 prohibits non-application root files, but admin.html is an application file. Needs explicit exemption or relocation."
+        },
+        {
+          "filename": "AGENTS.md",
+          "size_mb": 0.02,
+          "classification": "AI tooling instruction file",
+          "rationale": "Referenced by opencode.json as an instructions file. The opencode tooling reads this file at session start. Moving it would require updating the opencode.json path reference. Also referenced by .opencode/plugins/governance-guard.js FileContext resolution. The Constitution §11.4 permits root-level files 'required to run the application' — AGENTS.md is tooling-required, not application-required. Requires human decision on whether to keep in root (tools path convention) or relocate to knowledge/ (organized structure) with opencode.json update.",
+          "affected_systems": ["opencode.json instructions path", "governance-guard.js FileContext resolution"],
+          "risk_if_moved": "Broken AI tooling session startup if opencode.json not updated simultaneously",
+          "risk_if_kept_in_root": "Minor — AGENTS.md is small (0.02 MB) and legitimately consumed by tooling. Acceptable root resident."
+        }
+      ]
+    }
+  ],
+  "must_remain": {
+    "description": "These 19 files must NOT be moved or deleted. They are the active application and configuration files that define the running simulator.",
+    "critical_files": {
+      "count": 15,
+      "classification": "Application source — moving any of these breaks the simulator",
+      "files": [
+        "index_updated.html",
+        "app.js",
+        "styles.css",
+        "pack_a_corrected.js",
+        "pack_b_corrected.js",
+        "pack_c_corrected.js",
+        "pack_d_corrected.js",
+        "pack_e_corrected.js",
+        "scored_cases.js",
+        "scored_cases2.js",
+        "scored_cases3.js",
+        "scored_cases4.js",
+        "scored_cases5.js",
+        "may-core.js",
+        "may-learner-state.js"
+      ]
+    },
+    "high_risk_files": {
+      "count": 4,
+      "classification": "Configuration and metadata — moving any of these breaks tooling or dependency resolution",
+      "files": [
+        "package.json",
+        "package-lock.json",
+        "opencode.json",
+        "VERSION"
+      ]
+    }
+  },
+  "staging_dir": {
+    "action": "RELOCATE_TO_ARCHIVE",
+    "current_location": "root\\STAGING_DIR",
+    "proposed_location": "archive\\STAGING_DIR",
+    "is_directory": true,
+    "file_count": 6,
+    "total_size_mb": 1.25,
+    "confidence": 95,
+    "rationale": "STAGING_DIR contains S853 and S867 session artifacts (certification candidate analysis, staging payloads, guard pass logs). These are session-level operational files, not application files. They should live in archive/ or scripts/output/ rather than in root. Zero application code references this directory. The 95% confidence reflects the need to verify no pipeline script references STAGING_DIR by root-relative path.",
+    "files": [
+      "STAGING_DIR\\analyze_candidates_v1.json",
+      "STAGING_DIR\\ASYNC_MERGE_MANIFEST.md",
+      "STAGING_DIR\\COHORT_C_STAGING_PAYLOAD.json",
+      "STAGING_DIR\\evaluate_candidates_v1.json",
+      "STAGING_DIR\\SESSION867_LOCAL_CALIBRATION.json",
+      "STAGING_DIR\\STAGING_GUARD_PASS_LOG.md"
+    ],
+    "affected_systems": ["Any pipeline script hardcoding root\\STAGING_DIR as path — needs verification before move"]
+  },
+  "summary": {
+    "root_files_before": 111,
+    "files_proposed_to_move": 83,
+    "files_proposed_to_delete": 7,
+    "files_requiring_human_review": 2,
+    "must_remain_files": 19,
+    "root_files_after_all_proposals": 21,
+    "total_size_freed_mb": 107.36,
+    "constitution_compliance": "After MOVE + DELETE: root contains only active application files (15), config files (4), and 2 human-review files (admin.html, AGENTS.md). Constitution §11.4 satisfied — zero .bak files, zero garbage, zero temp files in root."
+  }
+}

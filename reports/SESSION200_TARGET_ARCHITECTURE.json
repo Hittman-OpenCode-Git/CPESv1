@@ -1,0 +1,938 @@
+{
+  "session": "S200",
+  "agent": "J",
+  "title": "Certification Framework v2 — Target Architecture",
+  "generated": "2026-07-26",
+  "predecessor_version": "v1 (700-series + 800-series HYBRID model, 10-26 agents/session)",
+
+  "design_principles": [
+    {
+      "principle": "FEWER_AGENTS",
+      "description": "6-8 board reviews per session instead of 10-26. Merge specialists into a single Quality Board with sub-dimensions.",
+      "evidence": "S724 4-agent board proved effective. S309 demonstrated 43% session reduction by removing artificial dependencies. Agent count is the primary cost driver, not tooling."
+    },
+    {
+      "principle": "READINESS_GATING",
+      "description": "Items are proven structurally and content-ready BEFORE reaching the certification board. A mandatory automated pre-flight scan gate must pass. No item enters board review without pre-flight PASS.",
+      "evidence": "DL-029 demonstrated that prior sessions certified items without verified CorrectChoice alignment. DL-013/DL-026/DL-025 remediation cycles (thousands of fields) occurred because items reached certification with unresolved structural defects. Pre-flight gate prevents rework cycles."
+    },
+    {
+      "principle": "DELTA_REVIEWS",
+      "description": "Only items whose content, dependencies, or governing standards have changed get re-audited. Items with unchanged content hashes inherit prior board PASS decisions without re-review.",
+      "evidence": "S320 showed what v1 cannot handle: the S319 seed inventory's CorrectChoice values were stale — live pack files had rotated CC values. Without delta tracking, stale inventories cause remediation errors. With per-item content hashes, stale inventories are detected before remediation begins."
+    },
+    {
+      "principle": "AUTOMATED_INHERITANCE",
+      "description": "Prior board PASS decisions propagate forward automatically. When an item's content hash matches its last-certified hash, the item inherits Certified status without re-entering the board pipeline. Hash-based, not session-based.",
+      "evidence": "S308 HYBRID model required full CAQS §1.6 re-verification for every item in every session. S320 needed a fresh ground-truth audit because prior inventory was stale. Hash-based inheritance eliminates both problems: no re-verification of unchanged items, no stale inventory risk."
+    },
+    {
+      "principle": "SINGLE_QUALITY_BOARD",
+      "description": "Merge Technical (Accountant), Explanation Quality (EQS/Editor), Difficulty Calibration (DCS/Psychometrician), UI Quality (UIQS), and Learner Safety into one Quality & Certification Board with sub-dimensions. Board members cover dimensions, not separate agents per dimension.",
+      "evidence": "S724's Agent U (Strategic Simulation) showed that parallel specialist tracks add governance overhead without proportional throughput gain. Separate Technical/EQS/DCS agents produced 9-11 reports per session with overlapping findings. A single board with dimension tracking eliminates redundant cross-referencing."
+    },
+    {
+      "principle": "PREFLIGHT_GATE",
+      "description": "A mandatory automated scan suite must pass before any human or board review. Scans cover structural defects (DL-008, DL-026, DL-025, DL-016) and content defects (DL-030 CorrectChoice ground-truth, DL-013 boilerplate, EV3 principle citation). PASS = structural clean + CC verified. FAIL = blocked from board. HOLD = correctable by automation.",
+      "evidence": "DL-008 sweeps consumed 3+ sessions to find 539 occurrences — all structural, all machine-detectable. DL-030 found 5 Certified items with wrong answer keys. Pre-flight gate catches both categories before board time is consumed."
+    }
+  ],
+
+  "v2_state_machine": {
+    "states": [
+      {
+        "state": "Unprocessed",
+        "description": "Item has never been audited. No pre-flight scan recorded. No content hash registered.",
+        "learner_pool": "EXCLUDED"
+      },
+      {
+        "state": "PreFlight",
+        "description": "Item is undergoing automated structural and CorrectChoice scans. No board review has occurred. Transient state — cannot persist as PreFlight.",
+        "learner_pool": "EXCLUDED"
+      },
+      {
+        "state": "ReadyForBoard",
+        "description": "All pre-flight scans PASS. Content hash registered. Item is staged for Quality & Certification Board review. Delta check shows either: (a) no prior certification, or (b) content hash changed since last certification.",
+        "learner_pool": "EXCLUDED"
+      },
+      {
+        "state": "BoardReview",
+        "description": "Item is under active Quality & Certification Board review. Sub-dimensions are being scored. Board session is live.",
+        "learner_pool": "EXCLUDED"
+      },
+      {
+        "state": "Certified",
+        "description": "All board sub-dimensions PASS. Content hash locked. Delta baseline established. Item is eligible for learner delivery per CAQS §1.7.1.",
+        "learner_pool": "INCLUDED"
+      },
+      {
+        "state": "CertifiedDelta",
+        "description": "Item was previously Certified. Content hash matches last-certified hash. Pre-flight scans re-verified PASS. No board review required — automatic inheritance.",
+        "learner_pool": "INCLUDED"
+      },
+      {
+        "state": "EditorialQueue",
+        "description": "Pre-flight or board review identified defects requiring structural or content revision. Item is NOT ready for certification. Requires author intervention before re-entering PreFlight.",
+        "learner_pool": "EXCLUDED"
+      },
+      {
+        "state": "Archived",
+        "description": "Item removed from active pool. Content preserved. All question_state history retained. May be restored to Unprocessed or PreFlight with documented justification.",
+        "learner_pool": "EXCLUDED"
+      },
+      {
+        "state": "Hold",
+        "description": "Item is quarantined pending investigation (e.g., DL-016 rotation suspicion, CC uncertainty, dependency change). Cannot enter PreFlight or BoardReview while in Hold. Requires explicit governance decision to resolve.",
+        "learner_pool": "EXCLUDED — governance gap fix (GOV-001 from Phase 0B)"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "Unprocessed",
+        "to": "PreFlight",
+        "trigger": "Session Arbiter initiates pre-flight scan on item(s)",
+        "automatic": false
+      },
+      {
+        "from": "PreFlight",
+        "to": "ReadyForBoard",
+        "trigger": "All pre-flight scans return PASS",
+        "automatic": true
+      },
+      {
+        "from": "PreFlight",
+        "to": "EditorialQueue",
+        "trigger": "Any pre-flight scan returns FAIL (Critical: DL-008, DL-030) or HOLD after 3 retries",
+        "automatic": true
+      },
+      {
+        "from": "ReadyForBoard",
+        "to": "BoardReview",
+        "trigger": "Quality Board Chair opens board session. Item is allocated to board members.",
+        "automatic": false
+      },
+      {
+        "from": "ReadyForBoard",
+        "to": "CertifiedDelta",
+        "trigger": "Delta check: item content hash matches last-certified hash AND all pre-flight scans re-verified PASS AND no dependency change AND no governance standard version bump. Automatic inheritance — no board review required.",
+        "automatic": true
+      },
+      {
+        "from": "BoardReview",
+        "to": "Certified",
+        "trigger": "All board sub-dimensions rated PASS. Board Chair approves certification. Governance Agent verifies governance guard compliance. Release Agent writes certification entry.",
+        "automatic": false
+      },
+      {
+        "from": "BoardReview",
+        "to": "EditorialQueue",
+        "trigger": "Any board sub-dimension rated FAIL. Specific dimension defect logged. Item returned to author for revision.",
+        "automatic": false
+      },
+      {
+        "from": "Certified",
+        "to": "BoardReview",
+        "trigger": "Item content hash changed (stem revised, CC re-derived, choices modified, EC rewritten). Explicit re-verification request documented. Item must re-enter board pipeline.",
+        "automatic": false
+      },
+      {
+        "from": "Certified",
+        "to": "ReadyForBoard",
+        "trigger": "Item content hash unchanged but dependency changed (exhibit modified, standard updated). Pre-flight scans must re-verify. Delta check: if pre-flight PASS + dependencies verified → CertifiedDelta (auto-inherit). If pre-flight FAIL → EditorialQueue.",
+        "automatic": true
+      },
+      {
+        "from": "EditorialQueue",
+        "to": "PreFlight",
+        "trigger": "Defects listed in editorial queue entry are resolved. Author submits item for re-scan. Pre-flight entry logged with revision reference.",
+        "automatic": false
+      },
+      {
+        "from": "Any",
+        "to": "Archived",
+        "trigger": "Explicit archival decision with documented rationale (DL-012 clone redundancy, content consolidation, blueprint re-alignment).",
+        "automatic": false
+      },
+      {
+        "from": "Archived",
+        "to": "Unprocessed",
+        "trigger": "Explicit de-archival decision with documented justification. Item re-enters full pipeline from scratch — no prior certification state preserved.",
+        "automatic": false
+      },
+      {
+        "from": "Any",
+        "to": "Hold",
+        "trigger": "Governance Agent or Session Arbiter quarantines item due to: unresolved DL-016 rotation classification, CC uncertainty, cross-pack contamination suspected, dependency integrity question.",
+        "automatic": false
+      },
+      {
+        "from": "Hold",
+        "to": "PreFlight",
+        "trigger": "Governance Agent resolves Hold. Classification documented. Item cleared for pre-flight re-entry.",
+        "automatic": false
+      }
+    ],
+    "pre_conditions": [
+      {
+        "id": "PC-001",
+        "transition": "Any → PreFlight",
+        "condition": "Item must have a registered QuestionID in MASTER_QUESTION_REGISTRY.md. Item must not be in Hold or Archived."
+      },
+      {
+        "id": "PC-002",
+        "transition": "PreFlight → ReadyForBoard",
+        "condition": "All 8 pre-flight scans (PF-001 through PF-008) must return PASS. No scan may return FAIL. HOLD results must be resolved within 3 retry attempts."
+      },
+      {
+        "id": "PC-003",
+        "transition": "ReadyForBoard → CertifiedDelta",
+        "condition": "Item must have a prior entry in the certification ledger with question_state: 'Certified'. Content hash (SHA-256 of stem+choices+CC+EC+EW fields) must match the hash stored at last certification. Delta baseline comparison must show NO changes. All 8 pre-flight scans must re-verify PASS on current file state."
+      },
+      {
+        "id": "PC-004",
+        "transition": "BoardReview → Certified",
+        "condition": "All board sub-dimensions (CAQS §1.6 dimensions 1-6 plus G-NEW-1 through G-NEW-5 from QUESTION_METADATA_STANDARD.md §9.4) must be rated PASS by the assigned board member. Board Chair must approve. Governance pre-write check must pass (governance guard all rules). Backup must be created before write per BACKUP_PROTOCOL.md."
+      },
+      {
+        "id": "PC-005",
+        "transition": "Certified → Any",
+        "condition": "Any change to Certified item must be documented in REVISION_HISTORY.md before state transition. Content hash must be recomputed after change. New hash must differ from certified hash — if identical, the item enters CertifiedDelta, not BoardReview."
+      },
+      {
+        "id": "PC-006",
+        "transition": "Any → Hold",
+        "condition": "Hold reason must be documented with specific defect/concern reference (e.g., DL-016 rotation suspected, CC unverified per Phase 0B methodology). Hold must log to DEFECT_LIBRARY.md if defect class is new. Hold must be time-bounded — resolution target date required."
+      }
+    ]
+  },
+
+  "v2_board_structure": [
+    {
+      "board": "Quality & Certification Board",
+      "merged_from": [
+        "Technical Quality Specialist (Accountant)",
+        "Explanation Quality Specialist (EQS / Editor)",
+        "Difficulty Calibration Specialist (DCS / Psychometrician)",
+        "UI Quality Specialist (UIQS)",
+        "Learner Safety Specialist"
+      ],
+      "agent_count": 3,
+      "roles": [
+        {
+          "role": "Board Chair — Nexus Agent",
+          "count": 1,
+          "responsibilities": [
+            "Schedules board sessions with Session Arbiter",
+            "Allocates items to board members by dimension",
+            "Reviews and harmonizes sub-dimension scores",
+            "Makes final PASS/FAIL determination per item",
+            "Logs board decisions to Quality Board Decision Record",
+            "Escalates unresolved dimension conflicts to Session Arbiter",
+            "Ensures CAQS §1.6 six-dimension verification is complete"
+          ]
+        },
+        {
+          "role": "Board Member A — Technical & Explanation",
+          "count": 1,
+          "dimensions": [
+            "Technical/Accounting Accuracy (CAQS dimension 3)",
+            "Numerical Integrity (CAQS dimension 6)",
+            "Explanation Quality (CAQS dimension 7)",
+            "Writing Clarity (CAQS dimension 8)",
+            "Correctness (CAQS dimension 1 — correctness prong)",
+            "G-NEW-2: Explanation Relevance — Topic Mismatch (QMDS §9.4.1)",
+            "G-NEW-4: Case Explanation Sufficiency (QMDS §9.4.3)"
+          ],
+          "authority": "FINAL on accounting correctness. May block certification unilaterally for factual errors. Must consult FORMULA_MASTER.md and ACCOUNTING_DECISION_TREES.md."
+        },
+        {
+          "role": "Board Member B — Psychometric & Safety",
+          "count": 1,
+          "dimensions": [
+            "Blueprint Alignment (CAQS dimension 1 — blueprint prong)",
+            "Cognitive Level / Bloom's (CAQS dimension 2)",
+            "Distractor Quality (CAQS dimension 4)",
+            "Difficulty Calibration (CAQS dimension 2 — difficulty prong)",
+            "Business Realism (CAQS dimension 5)",
+            "Accessibility / Fairness (CAQS dimension 9)",
+            "Metadata Completeness (CAQS dimension 10)",
+            "G-NEW-1: Dual-Block Source-of-Truth (QMDS §9.4.2)",
+            "G-NEW-3: within-object scan methodology (QMDS §9.4.2)"
+          ],
+          "authority": "FINAL on psychometric quality. Must consult EXAM_BLUEPRINT.md and TAXONOMY_REGISTRY.md. Unilateral authority on distractor plausibility."
+        }
+      ],
+      "decision_authority": "Board Chair has final certification authority. Board Member A has UNILATERAL BLOCK on accounting correctness (CAQS dimension 3 = 0 → auto-reject regardless of other scores). Board Member B has unilateral authority on blueprint alignment and distractor engineering. Conflicts between members escalate to Session Arbiter for resolution per COLLABORATION_MATRIX.md escalation hierarchy."
+    },
+    {
+      "board": "Pre-Flight Scanner",
+      "merged_from": [
+        "T0 Baseline Verification (manual, 2026-07-23 style)",
+        "DL-008 Block-Window Scanner (DL-029 vulnerable — to be replaced)",
+        "DL-026 Boundary-Aware Scanner",
+        "DL-013 Boilerplate Scanner",
+        "DL-016 Metadata-Content Alignment Scanner",
+        "DL-030 CorrectChoice Ground-Truth Scan",
+        "ExplanationValidator (DL-020 string-awareness fix applied)",
+        "Governance Guard pre-check (Rule 2 pre-write → Rule 2 pre-board)"
+      ],
+      "agent_count": 1,
+      "operations": "FULLY AUTOMATED — no human judgment required",
+      "dimensions": [
+        "PF-001: DL-008 — ExplanationWrong[CorrectChoice] non-empty (governance guard Rule 2). Must be empty string. Detection method: Function constructor parse with QID→CC→EW[CC] object-path (NOT window scan). CRITICAL.",
+        "PF-002: DL-026/DL-025 — Empty ExplanationWrong at non-CorrectChoice positions. Any distractor slot must have >=50 chars of choice-specific text. Detection method: boundary-aware object parse. NON-CRITICAL.",
+        "PF-003: DL-013 — Template boilerplate in ExplanationWrong fields. Pattern: 'represents a plausible misconception' OR 'A candidate may select this option by misapplying'. Detection method: regex pattern match per field. NON-CRITICAL.",
+        "PF-004: DL-016 — Metadata-block ChoiceA-D vs content-block Choices.A-D divergence (dual-block architecture packs only: A, C, D). Detection method: paired-object parse, cross-reference metadata and content blocks. NON-CRITICAL.",
+        "PF-005: DL-030 — Stored CorrectChoice vs independently derived correct answer. Detection method: Item-ledger CorrectChoice extracted from content block, compared against AI-derived answer from stem + choices. CRITICAL.",
+        "PF-006: DL-031 — Definition-match difficulty inflation. Stem-CorrectChoice lexical overlap >50% while difficulty labeled >= Moderate. Detection method: Jaccard similarity + difficulty label check. NON-CRITICAL.",
+        "PF-007: EV3/EV8 — ExplanationCorrect must reference governing accounting principle by name (ASC, COSO, IAS, IMA standard). ExplanationWrong[CC] must be structurally empty. Detection method: regex for standard citation patterns + DL-008 re-check. NON-CRITICAL.",
+        "PF-008: JSON Integrity — Item object must parse cleanly via Function constructor. Detection method: Function('return ' + block)(). CRITICAL."
+      ],
+      "output": "Session Pre-Flight Report with per-item PASS/FAIL/HOLD verdict, affected QID list, scan-level evidence (field name + line number + violation text), and delta-comparison summary for previously Certified items."
+    },
+    {
+      "board": "Governance & Release Board",
+      "merged_from": [
+        "Governance Agent (700-series)",
+        "Validator (scripts/ pipeline)",
+        "Release Manager"
+      ],
+      "agent_count": 2,
+      "roles": [
+        {
+          "role": "Governance Agent",
+          "count": 1,
+          "responsibilities": [
+            "Pre-write governance guard verification (all 5+ rules)",
+            "Post-write governance guard re-verification",
+            "Certified pool count verification (direct grep, per AGENTS.md §9.3)",
+            "Backup protocol enforcement (AGENTS.md §3)",
+            "REVISION_HISTORY.md entry verification",
+            "DEFECT_LIBRARY.md new-entry logging",
+            "MASTER_QUESTION_REGISTRY.md regeneration trigger",
+            "CURRENT_BASELINES.md hash update after certified writes",
+            "Hold/quarantine management (GOV-001 fix: ensure Hold items are hard-excluded)"
+          ]
+        },
+        {
+          "role": "Release Agent",
+          "count": 1,
+          "responsibilities": [
+            "Final certification sign-off",
+            "Session closeout report generation",
+            "Per-item content hash computation and storage",
+            "Delta baseline update (post-certification)",
+            "Backup file confirmation (size, parse-validity)",
+            "Session-to-session handoff log (SESSION_STATUS update)",
+            "Portfolio Health Index (PHI) recomputation",
+            "Session reduction forecast update"
+          ]
+        }
+      ],
+      "decision_authority": "Governance Agent has UNILATERAL BLOCK on any write that violates governance guard rules (Rule 2, Rule 3, Rule 5 are BLOCK level). Release Agent has final sign-off authority. Conflict: release-ready but governance-failing → Governance Agent wins per COLLABORATION_MATRIX.md (Validator > Release Manager for bug/rules violations)."
+    },
+    {
+      "board": "Session Arbiter",
+      "merged_from": [
+        "Session Facilitator (S724-style Nexus Agent)",
+        "Dependency Manager (ad-hoc in v1)",
+        "Conflict Resolution (formerly Release Manager's domain)"
+      ],
+      "agent_count": 1,
+      "responsibilities": [
+        "Session planning: determines which items enter which pipeline stage",
+        "Dependency resolution: identifies items blocked by unresolved dependencies (exhibit changes, standard updates, cross-pack rotations)",
+        "Agent allocation: assigns board members, initiates pre-flight scan, triggers governance board",
+        "Conflict escalation: resolves Board Chair vs Board Member disagreements per COLLABORATION_MATRIX.md",
+        "Session pacing: monitors session duration, enforces batch caps (Rule 5: 30 items max)",
+        "T0/Tmid/Tend checkpoint execution per AGENTS.md §13.1",
+        "Drift detection response per AGENTS.md §13.5",
+        "Session status handoff: writes SESSION_STATUS entry for next session"
+      ],
+      "decision_authority": "FINAL on session structure, item allocation, and agent assignments. May override board scheduling if pre-flight scan reveals widespread FAIL that would make board review non-productive. May escalate to human authority if board conflicts are unresolvable at agent level. Does NOT have authority to override board findings on individual items."
+    }
+  ],
+
+  "v2_preflight_gate": {
+    "description": "Mandatory automated scan gate. Must be passed before any item enters BoardReview or receives CertifiedDelta inheritance. Executed by Pre-Flight Scanner agent.",
+    "scans": [
+      {
+        "id": "PF-001",
+        "name": "DL-008 Structural Check",
+        "severity": "CRITICAL",
+        "method": "Function constructor parse → extract QID → extract CorrectChoice from same object → check ExplanationWrong[CC] === ''",
+        "pass": "ExplanationWrong[CorrectChoice] is present and === '' for all scanned items",
+        "fail": "ExplanationWrong[CorrectChoice] is non-empty (truthy) for any scanned item",
+        "hold": "ExplanationWrong[CorrectChoice] is absent (undefined) — DL-018 pattern. Resolvable by automation (insert '')."
+      },
+      {
+        "id": "PF-002",
+        "name": "DL-026/DL-025 Distractor Empty Check",
+        "severity": "NON_CRITICAL",
+        "method": "Boundary-aware object parse → for each non-CC slot: check length >= 50 chars",
+        "pass": "All non-CorrectChoice ExplanationWrong slots have >= 50 chars",
+        "fail": "Any non-CorrectChoice ExplanationWrong slot is '' (empty) — learner sees no feedback",
+        "hold": "Non-CC slot present but < 50 chars. Content exists but quality insufficient."
+      },
+      {
+        "id": "PF-003",
+        "name": "DL-013 Boilerplate Check",
+        "severity": "NON_CRITICAL",
+        "method": "Regex pattern match per ExplanationWrong field: /represents a plausible misconception|A candidate may select this option by misapplying/",
+        "pass": "0 ExplanationWrong fields contain template boilerplate",
+        "fail": "Any ExplanationWrong field contains template boilerplate (segment 1 — zero educational value)",
+        "hold": "Closing-tag only (DL-027 pattern): substantive text + boilerplate closing tag. Removable by automation."
+      },
+      {
+        "id": "PF-004",
+        "name": "DL-016 Metadata-Content Alignment Check",
+        "severity": "NON_CRITICAL",
+        "method": "For dual-block packs (A, C, D): paired-object parse, compare metadata ChoiceA-D vs content Choices.A-D. For single-block packs (B, E): SKIP.",
+        "pass": "Metadata ChoiceA-D matches content Choices.A-D for all items, OR pack is single-block architecture",
+        "fail": "Metadata ChoiceA-D differs from content Choices.A-D. Learner sees wrong explanation text for wrong-answer choices (DL-016 learner-safety risk).",
+        "hold": "N/A — DL-016 is binary: match or mismatch."
+      },
+      {
+        "id": "PF-005",
+        "name": "DL-030 CorrectChoice Ground-Truth Check",
+        "severity": "CRITICAL",
+        "method": "Extract stem + choices from content block → independent AI derivation of correct answer → compare to stored CorrectChoice. Per Phase 0B Part C methodology.",
+        "pass": "Independently derived answer matches stored CorrectChoice (verdict: ALL_AGREE)",
+        "fail": "Independently derived answer does NOT match stored CorrectChoice. Item has wrong answer key — learner-safety critical defect.",
+        "hold": "AI derivation confidence < 90%. Requires human or secondary AI verification before classification."
+      },
+      {
+        "id": "PF-006",
+        "name": "DL-031 Difficulty Calibration Check",
+        "severity": "NON_CRITICAL",
+        "method": "Compute stem-CorrectChoice Jaccard lexical similarity. If >50% overlap AND DifficultyScore >= 3 → flag.",
+        "pass": "No definition-match inflation detected, OR difficulty recalibration complete",
+        "fail": "N/A — DL-031 is pedagogical, not safety-critical. Never blocks certification.",
+        "hold": "Definition-match pattern detected. Difficulty may be inflated. Flagged for board review."
+      },
+      {
+        "id": "PF-007",
+        "name": "EV3/EV8 Explanation Validation",
+        "severity": "NON_CRITICAL",
+        "method": "EV3: ExplanationCorrect must contain ASC/IAS/COSO/IMA standard reference. EV8: ExplanationWrong[CC] must be empty (redundant with PF-001 but explicit).",
+        "pass": "ExplanationCorrect contains recognizable standard citation. ExplanationWrong[CC] is empty.",
+        "fail": "ExplanationCorrect lacks standard citation AND item cognitive level is Apply/Analyze/Evaluate. ExplanationWrong[CC] is non-empty (covered by PF-001 CRITICAL path).",
+        "hold": "ExplanationCorrect has standard citation but it may be incorrect (DL-009 pattern). Flagged for board review."
+      },
+      {
+        "id": "PF-008",
+        "name": "JSON Structural Integrity",
+        "severity": "CRITICAL",
+        "method": "Extract QuestionID-bounded block → Function('return ' + block)() → verify parse result has required fields.",
+        "pass": "All items parse cleanly. All required fields (QuestionID, Stem, Choices, CorrectChoice, ExplanationCorrect) present.",
+        "fail": "Any item fails to parse. Pack file may have structural corruption (DL-017 pattern: backtick-newline artifact).",
+        "hold": "Item parses but required fields missing or malformed (DL-024 pattern: missing question_state)."
+      }
+    ],
+    "pass_condition": "ALL CRITICAL scans (PF-001, PF-005, PF-008) must return PASS. All NON_CRITICAL scans must return PASS or HOLD. Zero FAIL on any scan. HOLDs on NON_CRITICAL scans are logged but do not block board entry — they are addressed during board review.",
+    "hold_condition": "One or more NON_CRITICAL scans return HOLD. Item may proceed to BoardReview with HOLD items logged. HOLDs must be resolved during board review or explicitly deferred. 3 consecutive HOLD results on the same scan → escalate to FAIL.",
+    "fail_condition": "Any CRITICAL scan (PF-001, PF-005, PF-008) returns FAIL → item is BLOCKED from BoardReview. Item enters EditorialQueue. Any NON_CRITICAL scan returns FAIL after 3 HOLD retries → item enters EditorialQueue. FAIL items must be remediated by author before re-entering PreFlight."
+  },
+
+  "v2_delta_review": {
+    "description": "Mechanism for tracking content changes and propagating prior certification decisions. Eliminates re-audit of unchanged items.",
+    "change_detection": {
+      "method": "Content-addressable hashing. Each item's certification-relevant fields are hashed at certification time and stored in CERTIFICATION_LEDGER.json (new artifact). On subsequent pre-flight, the current hash is compared against the ledger hash.",
+      "hash_input_fields": [
+        "Stem (normalized: trim whitespace, collapse multiple spaces)",
+        "Choices.A / Choices.B / Choices.C / Choices.D (normalized)",
+        "CorrectChoice",
+        "ExplanationCorrect (normalized)",
+        "ExplanationWrongA / ExplanationWrongB / ExplanationWrongC / ExplanationWrongD (normalized)",
+        "Dependencies (exhibit IDs, formula references, standard citations)"
+      ],
+      "hash_algorithm": "SHA-256 of concatenated normalized field values",
+      "hash_storage": "CERTIFICATION_LEDGER.json — one entry per item: { QuestionID, certified_hash, certified_date, board_session, board_dimension_scores }",
+      "change_classification": {
+        "CONTENT_CHANGED": "Hash different from ledger hash. Item requires full PreFlight + BoardReview pipeline.",
+        "STRUCTURE_ONLY": "Hash same as ledger hash but dependency changed (exhibit modified, standard reference updated, governance rule changed). Item requires PreFlight re-scan only (PF-001 through PF-008). If all PASS → CertifiedDelta (auto-inherit).",
+        "UNCHANGED": "Hash matches ledger hash. No dependency changes. All pre-flight scans re-verify PASS. Item inherits CertifiedDelta — no board review required.",
+        "NEW_ITEM": "No ledger entry exists. Item is entering certification for the first time. Full PreFlight + BoardReview pipeline."
+      }
+    },
+    "inheritance_rules": [
+      {
+        "rule": "IR-001 — Hash-Match Inheritance",
+        "condition": "Item content hash matches last-certified hash in CERTIFICATION_LEDGER.json AND item's ledger state is 'Certified' AND all 8 pre-flight scans re-verify PASS on current file state.",
+        "action": "Item transitions ReadyForBoard → CertifiedDelta. question_state set to 'Certified'. No board review required. Session Pre-Flight Report logs: 'INHERITED — no changes detected.'",
+        "governance": "Governance Agent verifies CertifiedDelta count. Release Agent updates CURRENT_BASELINES.md per-item hash entry. REVISION_HISTORY.md entry: 'Delta inheritance — N items re-certified without board review.'"
+      },
+      {
+        "rule": "IR-002 — Dependency-Change Inheritance",
+        "condition": "Item content hash matches ledger hash BUT item's dependencies have changed (exhibit modified, formula reference updated, governance standard version bumped) AND all pre-flight scans re-verify PASS.",
+        "action": "Item transitions ReadyForBoard → BoardReview on AFFECTED DIMENSIONS ONLY. If dependency is an exhibit: Board reviews Technical + Numerical dimensions. If dependency is a standard reference: Board reviews Technical dimension only. Unaffected dimensions inherit prior PASS scores.",
+        "governance": "Board reviews only the dimensions impacted by the dependency change. Board Decision Record documents which dimensions were re-reviewed and which were inherited."
+      },
+      {
+        "rule": "IR-003 — Hash-Mismatch Full Review",
+        "condition": "Item content hash does NOT match ledger hash, OR no ledger entry exists.",
+        "action": "Full PreFlight + BoardReview pipeline. All 6 CAQS dimensions + all G-NEW conditions must be re-verified.",
+        "governance": "Prior certification decision is retired. New certification decision replaces it in CERTIFICATION_LEDGER.json. Item transitions are recorded in REVISION_HISTORY.md."
+      },
+      {
+        "rule": "IR-004 — Governance-Update Review",
+        "condition": "Governance guard rules changed (new rule added, existing rule criteria modified), CAQS standard version bumped, or DCS version bumped, AND item is currently Certified.",
+        "action": "Item transitions Certified → PreFlight. All affected dimensions re-scanned. If pre-flight PASS + hash match → CertifiedDelta (auto-inherit). If pre-flight FAIL on new rule checks → BoardReview on affected dimensions.",
+        "governance": "Session Arbiter triggers bulk re-scan of affected Certified population. CERTIFICATION_LEDGER.json records governance version at certification time. Version mismatch triggers this rule."
+      },
+      {
+        "rule": "IR-005 — Cross-Pack Rotation Hold",
+        "condition": "DL-016 pattern detected: metadata-block ChoiceA-D differs from content-block Choices.A-D. Item is in Certified state.",
+        "action": "Item transitions Certified → Hold. Quarantined from learner pool (GOV-001 fix). Board review required to classify: (a) metadata-only shift (cosmetic, ExplanationWrong fields state but content-block choices are correct), or (b) true answer-key rotation (CorrectChoice itself is wrong). Classification determines BoardReview scope.",
+        "governance": "Governance Agent manages Hold queue. Hold must be time-bounded (resolution target: 2 sessions). DEFECT_LIBRARY.md entry for new DL-016 instances."
+      }
+    ],
+    "reaudit_triggers": [
+      {
+        "trigger": "Item content hash change",
+        "dimensions_affected": "ALL",
+        "priority": "IMMEDIATE — item cannot remain Certified with changed content"
+      },
+      {
+        "trigger": "CorrectChoice re-derived (DL-030 finding)",
+        "dimensions_affected": "Technical (dim 3), Numerical (dim 6), Explanation (dim 7)",
+        "priority": "CRITICAL — learner-safety defect"
+      },
+      {
+        "trigger": "Dependency exhibit modified",
+        "dimensions_affected": "Technical (dim 3), Numerical (dim 6) — if exhibit contains calculation data",
+        "priority": "HIGH — may invalidate item calculations"
+      },
+      {
+        "trigger": "CAQS version bump",
+        "dimensions_affected": "ALL — per CAQS §15.2 impact analysis",
+        "priority": "MEDIUM — process-driven, not defect-driven"
+      },
+      {
+        "trigger": "DCS version bump",
+        "dimensions_affected": "Difficulty (dim 2 prong), Cognitive Level (dim 2 prong)",
+        "priority": "LOW — recalibration, not correctness"
+      },
+      {
+        "trigger": "Governance guard new rule or rule change",
+        "dimensions_affected": "Depends on rule: Rule 2 change → Explanation (dim 7), Rule 4 change → Technical (dim 3)",
+        "priority": "MEDIUM — compliance-driven"
+      },
+      {
+        "trigger": "Cross-pack rotation detected (DL-016 expansion)",
+        "dimensions_affected": "Explanation (dim 7), Distractor (dim 4) — metadata-content mismatch affects learner feedback",
+        "priority": "HIGH — learner-safety risk (learners see wrong-topic explanations)"
+      },
+      {
+        "trigger": "Content hash collision detected (two different items producing same hash)",
+        "dimensions_affected": "N/A — methodology defect",
+        "priority": "CRITICAL — hash algorithm must be verified. Switch to SHA-512 if collisions found."
+      }
+    ]
+  },
+
+  "v2_session_template": {
+    "description": "Standard session structure for v2 certification workflow. Replaces the ad-hoc 10-26 agent model of v1.",
+    "agents": [
+      {
+        "agent_id": 1,
+        "role": "Session Arbiter",
+        "board": "Session Arbiter",
+        "duration_percentage": "15%",
+        "tasks": [
+          "T0 checkpoint: baseline hash verification (AGENTS.md §13.1)",
+          "Select items for this session from ReadyForBoard queue",
+          "Initiate Pre-Flight Scanner on selected items",
+          "Schedule Quality Board session based on pre-flight results",
+          "Monitor Tmid checkpoint at ~30 minutes / after BoardReview",
+          "Resolve agent conflicts if any",
+          "Tend checkpoint: final hash verification, drift detection"
+        ]
+      },
+      {
+        "agent_id": 2,
+        "role": "Pre-Flight Scanner",
+        "board": "Pre-Flight Scanner",
+        "duration_percentage": "20%",
+        "tasks": [
+          "Run PF-001 through PF-008 on all session items",
+          "Compare item hashes against CERTIFICATION_LEDGER.json",
+          "Classify each item: CONTENT_CHANGED / STRUCTURE_ONLY / UNCHANGED / NEW_ITEM",
+          "Pass UNCHANGED items through IR-001 (hash-match inheritance → CertifiedDelta)",
+          "Produce Session Pre-Flight Report with per-item verdicts and QID lists",
+          "Route PASS items to ReadyForBoard. Route FAIL items to EditorialQueue. Route HOLD items with annotations."
+        ]
+      },
+      {
+        "agent_id": 3,
+        "role": "Quality Board Chair — Nexus Agent",
+        "board": "Quality & Certification Board",
+        "duration_percentage": "25%",
+        "tasks": [
+          "Receive ReadyForBoard items from Pre-Flight Scanner",
+          "Allocate items to Board Members A and B by dimension",
+          "Track sub-dimension scores per item",
+          "Harmonize conflicting dimension assessments",
+          "Make PASS/FAIL certification decision per item",
+          "Log all board decisions to Quality Board Decision Record",
+          "Route PASS items to Governance Agent for pre-write check"
+        ]
+      },
+      {
+        "agent_id": 4,
+        "role": "Quality Board Member A — Technical & Explanation",
+        "board": "Quality & Certification Board",
+        "duration_percentage": "15%",
+        "tasks": [
+          "Independently verify accounting correctness (CAQS dimension 3)",
+          "Independently verify numerical integrity (CAQS dimension 6)",
+          "Evaluate explanation quality (CAQS dimension 7)",
+          "Check writing clarity (CAQS dimension 8)",
+          "Verify G-NEW-2: Explanation Relevance (no cross-topic contamination)",
+          "Verify G-NEW-4: Case Explanation Sufficiency",
+          "Report per-item dimension scores to Board Chair"
+        ]
+      },
+      {
+        "agent_id": 5,
+        "role": "Quality Board Member B — Psychometric & Safety",
+        "board": "Quality & Certification Board",
+        "duration_percentage": "10%",
+        "tasks": [
+          "Verify blueprint alignment (CAQS dimension 1)",
+          "Assess cognitive level and difficulty calibration (dimension 2)",
+          "Evaluate distractor quality (dimension 4)",
+          "Check business realism (dimension 5)",
+          "Review accessibility and fairness (dimension 9)",
+          "Verify metadata completeness (dimension 10)",
+          "Verify G-NEW-1: Dual-Block Source-of-Truth alignment",
+          "Verify G-NEW-3: within-object scan methodology applied",
+          "Report per-item dimension scores to Board Chair"
+        ]
+      },
+      {
+        "agent_id": 6,
+        "role": "Governance Agent",
+        "board": "Governance & Release Board",
+        "duration_percentage": "10%",
+        "tasks": [
+          "Pre-write governance guard verification (all rules)",
+          "Enforce backup protocol (BACKUP_PROTOCOL.md §2) before any write",
+          "Verify Certified pool count (direct grep, per AGENTS.md §9.3)",
+          "Trigger MASTER_QUESTION_REGISTRY.md regeneration if certification count changed",
+          "Post-write governance guard re-verification",
+          "Log new defect entries to DEFECT_LIBRARY.md if applicable",
+          "Manage Hold queue: resolve or escalate held items"
+        ]
+      },
+      {
+        "agent_id": 7,
+        "role": "Release Agent",
+        "board": "Governance & Release Board",
+        "duration_percentage": "5%",
+        "tasks": [
+          "Compute and store per-item content hashes in CERTIFICATION_LEDGER.json",
+          "Update CURRENT_BASELINES.md for all modified pack files",
+          "Confirm backup integrity (file size, parse validation, QuestionID count)",
+          "Write Session Closeout Report (certified count delta, QID list, board decisions)",
+          "Write REVISION_HISTORY.md entry (contemporaneous, per AGENTS.md §4)",
+          "Update Portfolio Health Index (PHI) recomputation",
+          "Write SESSION_STATUS handoff log for next session"
+        ]
+      }
+    ],
+    "agent_count": 7,
+    "optional_agent": {
+      "agent_id": 8,
+      "role": "Quality Board Member C — Editorial Reserve",
+      "board": "Quality & Certification Board",
+      "trigger": "Session contains >20 items OR items have complex cross-exhibit dependencies OR prior session had >30% board FAIL rate",
+      "tasks": [
+        "Second-reviewer verification of Board Member A's Technical findings",
+        "Editorial polish: grammar, readability, business language authenticity",
+        "Cross-reference validation: formula references, decision tree references, common trap references"
+      ]
+    },
+    "reports": [
+      {
+        "report": "Session Pre-Flight Report",
+        "produced_by": "Pre-Flight Scanner",
+        "contents": [
+          "Per-item scan verdicts (PASS/FAIL/HOLD) for PF-001 through PF-008",
+          "Delta classification summary (UNCHANGED / CONTENT_CHANGED / STRUCTURE_ONLY / NEW_ITEM)",
+          "Inherited items count (CertifiedDelta transitions)",
+          "FAIL items QID list with violation evidence (field name, line number, violation text)",
+          "HOLD items QID list with annotations",
+          "Pre-flight pass rate (%)"
+        ]
+      },
+      {
+        "report": "Quality Board Decision Record",
+        "produced_by": "Quality Board Chair",
+        "contents": [
+          "Per-item board decision (CERTIFIED / EDITORIAL_QUEUE / DEFERRED)",
+          "Per-item sub-dimension scores (CAQS dimensions 1-10 weighted)",
+          "G-NEW-1 through G-NEW-5 verification status per item",
+          "Agent confidence ratings per dimension per item",
+          "Board member concurrence/disagreement records",
+          "Escalated items (unresolved board conflicts → Session Arbiter)"
+        ]
+      },
+      {
+        "report": "Governance Verification Report",
+        "produced_by": "Governance Agent",
+        "contents": [
+          "Pre-write governance guard check results (all rules, pass/fail per rule)",
+          "Post-write governance guard re-check results",
+          "Backup file inventory (filename, size, timestamp, parse-validity)",
+          "Certified pool count (before → after, direct grep confirmation)",
+          "MASTER_QUESTION_REGISTRY.md regeneration status",
+          "New DEFECT_LIBRARY.md entries (if any)",
+          "Hold queue status (items held, resolution target dates)"
+        ]
+      },
+      {
+        "report": "Session Closeout Report",
+        "produced_by": "Release Agent",
+        "contents": [
+          "Session summary: items processed, certified, failed, deferred",
+          "Certified QID list with delta indicators (NEW / INHERITED / RE-CERTIFIED)",
+          "Content hash ledger changes (new entries, updated entries)",
+          "CURRENT_BASELINES.md update summary",
+          "Portfolio Health Index (PHI) delta from prior session",
+          "SESSION_STATUS handoff log: open risks, blocked files, next-session recommendations",
+          "REVISION_HISTORY.md entry (appended, per AGENTS.md §4)",
+          "Session duration, agent utilization, pre-flight pass rate"
+        ]
+      }
+    ],
+    "report_count": 4,
+    "optional_report": {
+      "report": "Delta Change Ledger",
+      "produced_by": "Release Agent",
+      "trigger": "Session includes >10 CONTENT_CHANGED items OR governance standard version bump occurred",
+      "contents": [
+        "Per-item hash comparison (ledger hash vs. current hash)",
+        "Field-level diff for changed items (which fields changed, old value vs. new value)",
+        "Dependency change log (exhibits modified, standards updated)",
+        "Inheritance propagation: items that auto-inherited CertifiedDelta and why"
+      ]
+    }
+  },
+
+  "migration_path": {
+    "description": "Phased migration from v1 (700-series + 800-series HYBRID, 10-26 agents) to v2 (single Quality Board, 7-8 agents, automated pre-flight + delta inheritance).",
+    "phase1": {
+      "name": "Infrastructure Foundation",
+      "session_range": "S200 — S310",
+      "duration": "~10 sessions (current position: S200 active)",
+      "deliverables": [
+        {
+          "item": "Fix Pre-Flight Scanner methodology (DL-029 resolution)",
+          "detail": "Replace all regex block-window DL-008/DL-026/DL-016 scanners with Function constructor parse. Implement QID→CC→EW[CC] object-path detection. Validate against known Pack B ground truth (0 DL-008).",
+          "priority": "P0 — BLOCKING all other v2 work",
+          "effort": "1-2 sessions"
+        },
+        {
+          "item": "Create CERTIFICATION_LEDGER.json",
+          "detail": "New artifact: one entry per item with { QuestionID, certified_hash, certified_date, board_session, board_dimension_scores }. Seed from current 2,182 Certified items. Compute initial SHA-256 hashes.",
+          "priority": "P0 — prerequisite for delta review",
+          "effort": "1-2 sessions"
+        },
+        {
+          "item": "Extend CURRENT_BASELINES.md to per-item hashes",
+          "detail": "Current baselines cover 13 runtime files. Extend to include per-item content hashes for all 2,500 items. Re-compute on every certification session.",
+          "priority": "P1 — needed for delta comparison",
+          "effort": "1 session"
+        },
+        {
+          "item": "Fix governance guard DL-008 detection",
+          "detail": "Replace governance-guard.js Rule 2's DL-029-vulnerable window scan with Function constructor parse. Verify false-positive rate goes to 0%.",
+          "priority": "P0 — current guard is unreliable per Phase 0B",
+          "effort": "0.5 session"
+        },
+        {
+          "item": "Fix GOV-001: Hold items hard-excluded from learner pool",
+          "detail": "Add 'Hold' to app.js assignTier() hard-exclusion list (currently missing — Hold items served as Tier 2/3). Per Phase 0B §A.4 governance gap.",
+          "priority": "P0 — learner-safety gap",
+          "effort": "0.5 session"
+        },
+        {
+          "item": "Close 300-series (S310 — Portfolio Operations Dashboard)",
+          "detail": "Final 300-series analytics session. Produce PHI and operational readiness metrics. Close 300-series tracking.",
+          "priority": "P1 — cleanup, not blocking",
+          "effort": "1 session"
+        }
+      ],
+      "v1_parallel": "800-series certification continues in parallel during Phase 1. S309's 17-session plan is not interrupted. Pre-flight infrastructure is built while Domain E/F certification proceeds.",
+      "success_criteria": "Pre-flight scanner returns verified DL-008 counts (Pack B = 0, Packs A/C/D/E with authoritative counts). CERTIFICATION_LEDGER.json exists with hashes for all 2,500 items. Governance guard Rule 2 uses Function constructor parse. Hold items hard-excluded."
+    },
+    "phase2": {
+      "name": "Board Integration & Delta Rollout",
+      "session_range": "S311 — S500",
+      "duration": "~8-9 sessions",
+      "deliverables": [
+        {
+          "item": "Launch Quality & Certification Board (v2 structure)",
+          "detail": "First board session under v2: Board Chair + Board Member A (Technical/Explanation) + Board Member B (Psychometric/Safety) + Governance + Release. Run pilot on Pack E Section A (small, already Certified — delta inheritance test).",
+          "priority": "P0 — first v2 certification session",
+          "effort": "1 session (pilot)"
+        },
+        {
+          "item": "Activate delta inheritance (IR-001 through IR-005)",
+          "detail": "Apply hash-match inheritance to all currently Certified items. Any Certified item whose content hash matches CERTIFICATION_LEDGER.json and passes pre-flight re-scan transitions to CertifiedDelta without board review.",
+          "priority": "P0 — immediate throughput gain",
+          "effort": "1 session (bulk inheritance pass)"
+        },
+        {
+          "item": "Merge DCS into Quality Board",
+          "detail": "Board Member B absorbs Difficulty Calibration Specialist role. DL-031/DL-032 recalibration becomes a board sub-dimension, not a separate agent.",
+          "priority": "P1 — structural simplification",
+          "effort": "0 sessions (organizational, not operational)"
+        },
+        {
+          "item": "Merge Learner Safety into Quality Board",
+          "detail": "Board Member B absorbs Learner Safety Specialist role. G-NEW-1 through G-NEW-5 checks become board sub-dimensions.",
+          "priority": "P1 — structural simplification",
+          "effort": "0 sessions (organizational)"
+        },
+        {
+          "item": "Decommission 700-series governance track",
+          "detail": "700-series is already in Maintenance Mode v1.0 (CLOSED per S723). Formally transfer governance to Governance Agent under Governance & Release Board. Archive 700-series session artifacts.",
+          "priority": "P1 — cleanup",
+          "effort": "0.5 session"
+        },
+        {
+          "item": "Run Domain E/F certification under v2 board structure",
+          "detail": "167 Domain E + 149 Domain F items certified through v2 Quality Board. Board operates with 3-4 agents instead of 10+. Delta inheritance reduces re-audit of unchanged items to zero.",
+          "priority": "P0 — critical path to 100% certification",
+          "effort": "6-8 sessions"
+        }
+      ],
+      "v1_parallel": "None — v2 board structure replaces v1 after pilot. 800-series HYBRID model is retired. All certification flows through Quality & Certification Board.",
+      "success_criteria": "Quality Board processes 12-15 items/session with 3-4 agents (vs. v1's 10-15 agents for same throughput). Delta inheritance achieves <15% re-audit rate on previously Certified items. Domain E/F certification completes at or ahead of S309's 17-session plan."
+    },
+    "phase3": {
+      "name": "Full Automation & Modernization",
+      "session_range": "S501 — S700",
+      "duration": "~8-10 sessions",
+      "deliverables": [
+        {
+          "item": "Automated pre-flight + board scheduling pipeline",
+          "detail": "Session Arbiter auto-selects ReadyForBoard items. Pre-Flight Scanner runs without manual initiation. Board Chair receives pre-scored item list. Board members auto-assigned by dimension.",
+          "priority": "P2 — efficiency, not throughput",
+          "effort": "1-2 sessions"
+        },
+        {
+          "item": "Batch DL-013/EC normalization (modernization wave)",
+          "detail": "Post-certification quality polish: rewrite remaining DL-013 boilerplate fields, normalize ExplanationCorrect structure, fill case-bank EW slots. Run in batches with delta review — changed items re-enter board, unchanged items inherit.",
+          "priority": "P1 — quality polish, deferred from v1",
+          "effort": "5-6 sessions"
+        },
+        {
+          "item": "DL-031/DL-032 difficulty recalibration",
+          "detail": "Systematic difficulty label recalibration using DL-031 definition-match detection and DL-032 case-bank uniformity analysis. Board Member B manages recalibration as board sub-dimension.",
+          "priority": "P2 — pedagogical, not safety",
+          "effort": "2-3 sessions"
+        },
+        {
+          "item": "Single-session domain certification target",
+          "detail": "Optimize pipeline to certify an entire domain section (75-100 items) in 1 session: pre-flight takes 20%, board review takes 60%, governance/release takes 20%. Target: 25-30 items/session.",
+          "priority": "P2 — efficiency ceiling",
+          "effort": "Continuous improvement across Phase 3"
+        }
+      ],
+      "v1_parallel": "None — v1 is fully retired.",
+      "success_criteria": "Portfolio Health Index reaches 82.5+ (B+ grade per S310 projection). All 2,500 items Certified with passing pre-flight scans. Case-bank EW fill rate >= 80%. DL-013 boilerplate eliminated. Difficulty distribution meets CAQS §6.1 targets."
+    }
+  },
+
+  "success_metrics_v2": {
+    "target_agent_count": 7,
+    "agent_count_range": "6-8 (7 nominal, 8 with optional Editorial Reserve agent for complex sessions)",
+    "target_report_count": 4,
+    "report_count_range": "3-5 (4 nominal: Pre-Flight Report, Board Decision Record, Governance Verification, Session Closeout; +1 optional Delta Change Ledger)",
+    "target_session_duration": "2-3 hours (vs. 4-8 hours observed in v1 S320/S724-style sessions)",
+    "target_reaudit_rate": "<15%",
+    "reaudit_rate_basis": "Percentage of Certified items requiring full BoardReview vs. inheriting CertifiedDelta. Target: >=85% of previously Certified items pass hash-match inheritance (IR-001) and skip board review. Current v1 rate: 100% (every item re-audited every session).",
+    "target_readiness_pass_rate": ">80%",
+    "readiness_pass_rate_basis": "Percentage of items that pass pre-flight on first attempt (PF-001 through PF-008 all PASS). Current v1 rate: unknown — no pre-flight gate exists. Based on Phase 0B sampling, estimated current pass rate is 60-70% (DL-008, DL-026, DL-016 residual).",
+    "additional_metrics": {
+      "certification_throughput": "12-15 items/session (sustained, per CAQS §1.6 binding constraint)",
+      "session_overhead_ratio": "<30% of session time spent on governance/release (vs. ~40% in v1)",
+      "board_conflict_rate": "<10% of items have unresolved board dimension disagreements",
+      "pre_flight_false_positive_rate": "<2% (items flagged as FAIL that are actually correct)",
+      "pre_flight_false_negative_rate": "<1% (items passed as PASS that have undetected defects)",
+      "delta_inheritance_error_rate": "<0.5% (items that inherited CertifiedDelta but should have been re-audited)",
+      "portfolio_health_index_target": "82.5 (B+ grade) at Phase 3 completion",
+      "certified_pool_target": "2,500 / 2,500 (100%) at Phase 2 completion",
+      "ew_fill_target": ">=88% at Phase 3 completion (per S308 HYBRID forecast)"
+    }
+  },
+
+  "v1_vs_v2_comparison": {
+    "dimensions_compared": [
+      {
+        "dimension": "Agent Count per Session",
+        "v1": "10-26 (variable, ad-hoc specialist allocation)",
+        "v2": "7 (6-8 range)",
+        "reduction": "30-73%"
+      },
+      {
+        "dimension": "Report Count per Session",
+        "v1": "9-11 (separate reports per specialist agent)",
+        "v2": "4 (3-5 range)",
+        "reduction": "55-64%"
+      },
+      {
+        "dimension": "Board Structure",
+        "v1": "Separate Technical, EQS, DCS, UIQS, Learner Safety agents — each producing independent reports with overlapping findings",
+        "v2": "Single Quality & Certification Board — 3 agents with sub-dimensions, harmonized decision record",
+        "change": "MERGED"
+      },
+      {
+        "dimension": "Pre-Flight Gate",
+        "v1": "No automated structural gate before board review. Scans run ad-hoc. DL-029 methodology defect (75% false-positive rate on DL-008).",
+        "v2": "Mandatory automated 8-scan pre-flight gate. Function constructor parse eliminates DL-029. PASS required before board entry.",
+        "change": "NEW"
+      },
+      {
+        "dimension": "Delta Review",
+        "v1": "No delta tracking. Every item re-audited in every session. Stale inventories caused S320 remediation errors.",
+        "v2": "Content-addressable hashing (SHA-256). Hash-match inheritance: unchanged items skip board review. Dependency-change inheritance: only affected dimensions re-reviewed.",
+        "change": "NEW"
+      },
+      {
+        "dimension": "Governance Integration",
+        "v1": "Governance guard runs at session boundaries (T0/Tmid/Tend). Governance Agent operates in separate 700-series track (now CLOSED).",
+        "v2": "Governance Agent embedded in session workflow. Pre-write/post-write checks. Governance & Release Board owns backup protocol, registry updates, and defect library entries.",
+        "change": "INTEGRATED"
+      },
+      {
+        "dimension": "State Machine",
+        "v1": "5 states: Unprocessed, In Audit, Editorial Queue, Certified, Archived",
+        "v2": "9 states: adds PreFlight, ReadyForBoard, BoardReview, CertifiedDelta, Hold. Removes 'In Audit' (replaced by PreFlight→BoardReview pipeline).",
+        "change": "EXPANDED (more precise, fewer ambiguous states)"
+      },
+      {
+        "dimension": "Certification Gating",
+        "v1": "question_state: 'Certified' is manually set by certification agent. No structural verification gate before state change.",
+        "v2": "Pre-flight PASS → Board PASS → Governance pre-write check → Backup → Write → Governance post-write check → Certification entry. Six-gate pipeline before Certified state is written.",
+        "change": "MULTI-GATE (6-stage pipeline vs. 1-stage manual)"
+      },
+      {
+        "dimension": "Session Planning",
+        "v1": "Session Arbiter role does not formally exist. Agent allocation is ad-hoc. S320 showed consequences: remediation attempted with stale inventory.",
+        "v2": "Session Arbiter manages item selection, agent allocation, dependency resolution, checkpoint execution. Formal role with defined responsibilities.",
+        "change": "NEW"
+      },
+      {
+        "dimension": "Hold/Quarantine Management",
+        "v1": "Hold items (P1-AD-047, AD-048) are served to learners as Tier 2/3 (GOV-001 gap). No formal Hold resolution process.",
+        "v2": "Hold items are hard-excluded from learner pool. Hold state has defined resolution triggers and time-bounded targets. Governance Agent manages Hold queue.",
+        "change": "FIXED"
+      }
+    ],
+    "net_assessment": "v2 reduces agent count by 30-73%, reduces report count by 55-64%, eliminates stale-inventory risk via content hashing, adds mandatory structural pre-flight gate, integrates governance into session workflow, and establishes formal session planning. The binding constraint (author capacity for CAQS §1.6 verification and distractor explanation writing) remains unchanged — v2 optimizes everything around it without pretending tools can replace human accounting judgment."
+  }
+}

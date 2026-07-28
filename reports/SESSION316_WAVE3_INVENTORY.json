@@ -1,0 +1,67 @@
+{
+  "title": "SESSION316_WAVE3_INVENTORY",
+  "session": "S316",
+  "generated": "2026-07-27",
+  "targetCount": 10,
+  "authoredCount": 10,
+  "qualityStandard": "S311 Authoring Quality Gate v1.0",
+  "gate1Status": "COMPLETE",
+  "gates2through4": "DEFERRED_TO_S317_CERTIFICATION_REVIEW",
+  "coverage": [
+    {
+      "los": "E.1.a Internal Control Definition",
+      "items": [
+        "P1-E-R21",
+        "P1-E-R22",
+        "P1-E-R23"
+      ],
+      "priorReplacements": 0,
+      "newCount": 3
+    },
+    {
+      "los": "E.1.i Safeguarding Controls",
+      "items": [
+        "P1-E-R24",
+        "P1-E-R25",
+        "P1-E-R26"
+      ],
+      "priorReplacements": 0,
+      "newCount": 3
+    },
+    {
+      "los": "E.1.d Risk Assessment",
+      "items": [
+        "P1-E-R27",
+        "P1-E-R28"
+      ],
+      "priorReplacements": 3,
+      "newCount": 2
+    },
+    {
+      "los": "E.1.h Sarbanes-Oxley Act (SOX)",
+      "items": [
+        "P1-E-R29"
+      ],
+      "priorReplacements": 2,
+      "newCount": 1
+    },
+    {
+      "los": "E.1.b Internal Control Framework (COSO 2013)",
+      "items": [
+        "P1-E-R33"
+      ],
+      "priorReplacements": 1,
+      "newCount": 1
+    }
+  ],
+  "difficultyDistribution": {
+    "Easy": 3,
+    "Moderate": 7
+  },
+  "cognitiveLevelDistribution": {
+    "Understand": 5,
+    "Apply": 5
+  },
+  "ecAvgChars": 1103,
+  "ewAvgChars": 435
+}

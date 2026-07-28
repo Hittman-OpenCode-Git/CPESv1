@@ -1,0 +1,101 @@
+{
+  "generated": "2026-07-26T21:42:16.568Z",
+  "session": "S304",
+  "methodology": "Rewrite candidates identified by EC length <150 chars OR EW fill rate <50%. Estimated at 12 items/hour, 1.5 hour sessions.",
+  "totalRewriteCandidates": 1632,
+  "totalEstimatedSessions": 94,
+  "totalEstimatedHours": 135.9,
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "totalItems": 433,
+      "ecThin": 208,
+      "ecPlaceholder": 4,
+      "ecMissing": 0,
+      "ewLowFill": 54,
+      "ewEmpty": 52,
+      "rewriteCandidates": 250,
+      "ecThinPct": "48.0",
+      "ewLowFillPct": "12.5",
+      "estimatedSessions": 14,
+      "estimatedEffort": 20.8
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "totalItems": 568,
+      "ecThin": 243,
+      "ecPlaceholder": 4,
+      "ecMissing": 0,
+      "ewLowFill": 66,
+      "ewEmpty": 63,
+      "rewriteCandidates": 286,
+      "ecThinPct": "42.8",
+      "ewLowFillPct": "11.6",
+      "estimatedSessions": 16,
+      "estimatedEffort": 23.8
+    },
+    "C - Performance Management": {
+      "totalItems": 798,
+      "ecThin": 178,
+      "ecPlaceholder": 10,
+      "ecMissing": 0,
+      "ewLowFill": 290,
+      "ewEmpty": 287,
+      "rewriteCandidates": 454,
+      "ecThinPct": "22.3",
+      "ewLowFillPct": "36.3",
+      "estimatedSessions": 26,
+      "estimatedEffort": 37.8
+    },
+    "D - Cost Management": {
+      "totalItems": 452,
+      "ecThin": 124,
+      "ecPlaceholder": 4,
+      "ecMissing": 0,
+      "ewLowFill": 70,
+      "ewEmpty": 69,
+      "rewriteCandidates": 192,
+      "ecThinPct": "27.4",
+      "ewLowFillPct": "15.5",
+      "estimatedSessions": 11,
+      "estimatedEffort": 16
+    },
+    "E - Internal Controls": {
+      "totalItems": 443,
+      "ecThin": 121,
+      "ecPlaceholder": 5,
+      "ecMissing": 0,
+      "ewLowFill": 136,
+      "ewEmpty": 59,
+      "rewriteCandidates": 238,
+      "ecThinPct": "27.3",
+      "ewLowFillPct": "30.7",
+      "estimatedSessions": 14,
+      "estimatedEffort": 19.8
+    },
+    "F - Technology & Analytics": {
+      "totalItems": 430,
+      "ecThin": 87,
+      "ecPlaceholder": 13,
+      "ecMissing": 0,
+      "ewLowFill": 124,
+      "ewEmpty": 50,
+      "rewriteCandidates": 211,
+      "ecThinPct": "20.2",
+      "ewLowFillPct": "28.8",
+      "estimatedSessions": 12,
+      "estimatedEffort": 17.6
+    },
+    "Unknown": {
+      "totalItems": 1,
+      "ecThin": 0,
+      "ecPlaceholder": 0,
+      "ecMissing": 1,
+      "ewLowFill": 1,
+      "ewEmpty": 0,
+      "rewriteCandidates": 1,
+      "ecThinPct": "0.0",
+      "ewLowFillPct": "100.0",
+      "estimatedSessions": 1,
+      "estimatedEffort": 0.1
+    }
+  }
+}

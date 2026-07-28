@@ -1,0 +1,334 @@
+{
+  "generated": "2026-07-26T20:00:00.000Z",
+  "agent": "Agent B — Program Segmentation for Session 529",
+  "program": "ENHANCED_CASE_BASE (scored_cases.js)",
+  "methodology": "Domain-mixed wave partitioning respecting case boundaries, risk-progressive ordering per D-Program 5-wave precedent",
+  "inputSource": "SESSION529_CENSUS_AGENT_A.json",
+  "precedent": "SESSION528_D_PROGRAM_CLOSURE.md (5 waves × 15 items, 75/75 Certified)",
+
+  "baselineMetrics": {
+    "totalCases": 15,
+    "totalItems": 90,
+    "certifiedItems": 0,
+    "avgExplanationLength": 80,
+    "minExplanationLength": 21,
+    "maxExplanationLength": 244,
+    "domainDistribution": {"A": 18, "B": 18, "C": 18, "D": 12, "E": 6, "E,F": 12, "F": 6},
+    "difficultyDistribution": {"Moderate": 38, "Difficult": 44, "Moderate-Easy": 8},
+    "cognitiveLevelDistribution": {"Apply": 38, "Analyze": 25, "Evaluate": 19, "Understand": 8},
+    "numericItemCount": 38,
+    "note": "ALL 90 explanations require substantial expansion (avg 80 chars vs CAQS min ~500). Avg is 6.4% of D-Program final quality (avg 1,282 chars)."
+  },
+
+  "wave0_preCertification": {
+    "label": "Wave 0 — Ground-Truth Pre-Certification Audit",
+    "mandatory": true,
+    "blocksAllWaves": true,
+    "description": "Must complete BEFORE Wave 1 certification begins. No question_state changes. Read-only audit.",
+    "tasks": [
+      {
+        "task": "Independent answer-key verification (ALL numeric items)",
+        "scope": "38 items with Type=numeric (Q1+Q2 in most cases, some Q4-Q5). All 90 items independently verify answer keys.",
+        "methodology": "Read stem + exhibits → solve independently → compare to stored Correct value → reconcile differences",
+        "output": "Per-item verdict (ALL_AGREE / DISCREPANCY) catalogued",
+        "estimatedHours": 5
+      },
+      {
+        "task": "Difficulty recalibration audit",
+        "scope": "All 90 items. Verify item-level Difficulty labels against cognitive demand. Special focus: 8 Moderate-Easy items (fill-type/Understand — verify they're not actually Moderate); 11 case-level Difficult labels (verify alignment with item distribution per CAQS §5.3 CF4)",
+        "output": "Per-item difficulty recommendation (KEEP / DOWNGRADE / UPGRADE) with rationale",
+        "estimatedHours": 3
+      },
+      {
+        "task": "Explanation sufficiency baseline audit",
+        "scope": "All 90 items. Flag items below CAQS minimum: <50 chars (EV1), no accounting principle by name (EV3), no formula with substitution (EV5), choice or prompt containing placeholder phrases (EV2)",
+        "output": "Per-item explanation sufficiency score with expansion priority (CRITICAL/HIGH/MEDIUM/LOW)",
+        "estimatedHours": 3
+      },
+      {
+        "task": "Metadata gap inventory",
+        "scope": "All 15 cases + 90 items. Identify missing ProductionStatus at case level, missing Difficulty/DifficultyScore at case level, missing RevisionHistory, missing cognitive metadata fields",
+        "output": "Per-case/per-item metadata gap list",
+        "estimatedHours": 2
+      }
+    ],
+    "estimatedTotalHours": 13,
+    "agentAssignment": {
+      "primary": "Accountant + Psychometrician",
+      "verifier": "Validator (independent)",
+      "approver": "Release Manager"
+    }
+  },
+
+  "waves": [
+    {
+      "wave": 1,
+      "label": "Wave 1 — Foundation: Financial Reporting & Budgeting Fundamentals",
+      "cases": ["CBQ-A1", "CBQ-B1"],
+      "itemCount": 12,
+      "domainCoverage": ["A", "B"],
+      "domainItemCounts": {"A": 6, "B": 6},
+      "difficultyProfile": {"Moderate": 10, "Difficult": 2},
+      "cognitiveLevels": {"Apply": 10, "Evaluate": 2},
+      "explanationLengthRange": {"min": 47, "max": 244, "avg": 90},
+      "riskProfile": "LOW",
+      "rationale": "Both cases Moderate difficulty. A1 (Revenue Recognition, Cash Flow, Deferred Tax) and B1 (Sales/Production/Materials/Cash Budget) are standard CMA topics with well-established GAAP/COSO references. B1 has the longest existing explanation (244 chars on Q3) — nearest to usable. Lowest remediation lift per item. Establishes team workflow, quality standards, and CAQS compliance templates before tackling Difficult cases.",
+      "expectedEffortHours": 3,
+      "keyChallenges": [
+        "ASC 606 revenue recognition (5-step model) requires precise citation in explanations",
+        "Cash flow statement classification (operating vs investing vs financing) — common exam trap",
+        "Deferred tax (ASC 740) — temporary vs permanent differences requires conceptual clarity",
+        "Budget sequence dependencies (sales → production → materials → cash) — explanations must trace the chain",
+        "Establishing quality floor: expanding explanations from 47-244 chars to 500+ chars"
+      ],
+      "domainGaps": "C, D, E, F not represented",
+      "concentrationRisk": "None — good A/B balance",
+      "lessonsFromDProgram": "Wave 1 of D-Program (S523) had similar difficulty calibration (4 items Difficult/4 should have been Moderate-Easy/2). Ensure difficulty labels match cognitive demand BEFORE certification. D-Program Wave 1 also had ProductionStatus:Draft despite certification — promote to Production on completion.",
+      "remediationTargets": {
+        "explanationExpansion": "12 items — expand from avg 90 chars to 500+ chars each",
+        "difficultyRecalibration": "Verify 2 Difficult items (Q3 multi, Q6 multi in A1, Q6 multi in B1) — multi-select at Evaluate level justifies Difficult/4",
+        "answerKeyVerification": "10 numeric items (A1: Q1,Q2,Q4,Q5; B1: Q1-Q5) independently recalculate",
+        "metadataAdditions": "Add RevisionHistory entries for certification pass"
+      }
+    },
+    {
+      "wave": 2,
+      "label": "Wave 2 — Expansion: Inventory, Forecasting & Variance Introduction",
+      "cases": ["CBQ-A3", "CBQ-B3", "CBQ-C1"],
+      "itemCount": 18,
+      "domainCoverage": ["A", "B", "C"],
+      "domainItemCounts": {"A": 6, "B": 6, "C": 6},
+      "difficultyProfile": {"Moderate": 10, "Difficult": 7, "Moderate-Easy": 1},
+      "cognitiveLevels": {"Apply": 10, "Analyze": 4, "Evaluate": 3, "Understand": 1},
+      "explanationLengthRange": {"min": 24, "max": 152, "avg": 78},
+      "riskProfile": "LOW-MEDIUM",
+      "rationale": "Introduces first Difficult case (C1: Flexible Budget & Variance Investigation) alongside two Moderate cases. A3 and B3 continue the financial reporting and budgeting thread from Wave 1, providing continuity. C1 has only 1 exhibit (simpler integration). B3-Q3 has the shortest explanation (24 chars) requiring near-total rewrite. First three-domain wave tests the team's ability to context-switch across domains.",
+      "expectedEffortHours": 4,
+      "keyChallenges": [
+        "A3: Inventory valuation (LCM, FIFO/LIFO), ARO (ASC 410), subsequent events (ASC 855), cash classification — dense topic clustering",
+        "B3: Expected value calculations, scenario forecasting — probability-weighted outcomes need precise formula presentation",
+        "B3: Working capital plan — cash conversion cycle components must be individually explained",
+        "C1: Flexible budget differs from static budget — explanation must contrast both",
+        "C1: Variance investigation thresholds — judgment-based items (Q4-Q5 at Evaluate) require nuanced distractor engineering",
+        "Very short explanations: B3-Q3 (24 chars), B3-Q2 (37 chars) need complete rewrites",
+        "C1 has 1 exhibit — verify all exhibit data is consumed by at least 1 item (CAQS §3.4)"
+      ],
+      "domainGaps": "D, E, F not represented",
+      "concentrationRisk": "C domain enters at Difficult — team is exposed to the most conceptually dense performance management topics early. Moderate A3+B3 provide counterbalance.",
+      "lessonsFromDProgram": "Wave 1→2 transition in D-Program showed explanation quality improvement (500→800 avg). Explanation template consistency should carry forward from Wave 1. CognitiveLevel metadata must be unambiguous — D-Program had a double-count error (S525).",
+      "remediationTargets": {
+        "explanationExpansion": "18 items — expand from avg 78 chars to 500+ chars each",
+        "difficultyRecalibration": "Verify 7 Difficult items (3 in A3: Q3 select, Q4 select, Q6 match; 1 in B3: Q5 select; 3 in C1: Q4 select, Q5 multi, Q6 match). 1 Moderate-Easy (B3-Q5 fill at Understand — verify correct)",
+        "answerKeyVerification": "10 numeric items (A3: Q1,Q2,Q5; B3: Q1-Q4; C1: Q1-Q3) independently recalculate",
+        "metadataAdditions": "Add RevisionHistory, ensure case-level Difficulty/DifficultyScore present"
+      }
+    },
+    {
+      "wave": 3,
+      "label": "Wave 3 — Deepening: Consolidation, Regression & ABC Costing",
+      "cases": ["CBQ-A2", "CBQ-B2", "CBQ-D1"],
+      "itemCount": 18,
+      "domainCoverage": ["A", "B", "D"],
+      "domainItemCounts": {"A": 6, "B": 6, "D": 6},
+      "difficultyProfile": {"Difficult": 12, "Moderate": 4, "Moderate-Easy": 2},
+      "cognitiveLevels": {"Apply": 6, "Analyze": 6, "Evaluate": 4, "Understand": 2},
+      "explanationLengthRange": {"min": 33, "max": 193, "avg": 86},
+      "riskProfile": "MEDIUM",
+      "rationale": "All three cases are Difficult at case level. A2 (Consolidation, Impairment, OCI) and B2 (Rolling Forecast, Regression) require advanced topic knowledge. D1 (ABC, Quality Costs, Process Improvement) introduces cost management — the most calculation-dense domain. This is the team's first all-Difficult wave. D1's ABC topic requires careful cost-driver mapping in explanations. A2 has the longest explanations in the pool (Q2=130, Q5=193) — some may need less expansion.",
+      "expectedEffortHours": 4,
+      "keyChallenges": [
+        "A2: Consolidation (ASC 810 — variable interest entities, voting interest model) is conceptually demanding",
+        "A2: Impairment testing (ASC 350 goodwill, ASC 360 long-lived assets) — two-step vs one-step models",
+        "A2: OCI components (PUFIER: pensions, unrealized gains, foreign currency, instrument-specific credit risk) — requires enumeration",
+        "B2: Regression analysis — R-squared, standard error, coefficient interpretation; statistical concepts unfamiliar to many CMA candidates",
+        "B2: Rolling forecast vs traditional budget — conceptual contrast with process implications",
+        "D1: ABC costing — cost pools, cost drivers, activity rates; multi-step calculation chains",
+        "D1: Quality costs (prevention, appraisal, internal failure, external failure) — COQ categorization",
+        "D1-Q5 (58 chars), B2-Q1 (33 chars) need near-complete rewrites"
+      ],
+      "domainGaps": "C, E, F not represented",
+      "concentrationRisk": "12 of 18 items are Difficult/4. Team fatigue risk — first wave where every case is case-level Difficult. Review cadence should be: 2 cases → quality gate → third case.",
+      "lessonsFromDProgram": "D-Program Wave 3 (S525) was the first to cross-enforce CAQS templates across domains. Same approach should apply here. Watch for CognitiveLevel double-count — inspect A2 Q5 (multi, Evaluate) and A2 Q6 (match, Analyze) separately.",
+      "remediationTargets": {
+        "explanationExpansion": "18 items — expand from avg 86 chars to 600+ chars each (higher target for Difficult). A2-Q2 and A2-Q5 already at 130-193 — review/refine rather than rewrite.",
+        "difficultyRecalibration": "Verify 12 Difficult items. 2 Moderate-Easy (B2-Q5 fill/Understand, D1-Q5 fill/Understand — verify these aren't Moderate). A2 case-level Moderate should be Difficult given item distribution.",
+        "answerKeyVerification": "11 numeric items (A2: Q1-Q3; B2: Q1-Q3,Q5; D1: Q1,Q2,Q5) + 1 multi (A2-Q5 has CalculationRequired=true). Also verify D1-Q6 (match, CalculationRequired=true)",
+        "metadataAdditions": "All 3 cases need ProductionStatus, case-level Difficulty, case-level DifficultyScore added"
+      }
+    },
+    {
+      "wave": 4,
+      "label": "Wave 4 — Performance & Cost Integration: Transfer Pricing, Lean & Process Costing",
+      "cases": ["CBQ-C2", "CBQ-D2"],
+      "itemCount": 12,
+      "domainCoverage": ["C", "D"],
+      "domainItemCounts": {"C": 6, "D": 6},
+      "difficultyProfile": {"Difficult": 8, "Moderate": 2, "Moderate-Easy": 2},
+      "cognitiveLevels": {"Apply": 4, "Analyze": 4, "Evaluate": 2, "Understand": 2},
+      "explanationLengthRange": {"min": 26, "max": 108, "avg": 63},
+      "riskProfile": "MEDIUM",
+      "rationale": "Focused wave: Performance Management + Cost Management integration. C2 (Investment Center Performance, Transfer Pricing) and D2 (Process Costing, Lean Waste, Bottleneck Analysis) are complementary — both deal with cost/performance measurement. Both cases have the shortest average explanations (C2=62, D2=55) — significant expansion lift. C2-Q2 has 26 chars; D2-Q2 has 45 chars. Only 2 cases = 12 items — smaller wave allows deeper per-item quality.",
+      "expectedEffortHours": 3.5,
+      "keyChallenges": [
+        "C2: Transfer pricing methods (market-based, cost-based, negotiated, dual-rate) — each needs distinct treatment",
+        "C2: ROI vs Residual Income — contrasting formulas and when each is appropriate",
+        "C2: Investment center evaluation — distinguishing from cost center and profit center",
+        "D2: FIFO process costing — equivalent units, cost per equivalent unit; multi-step calculation",
+        "D2: Lean waste categories (DOWNTIME: defects, overproduction, waiting, non-utilized talent, transportation, inventory, motion, excess processing)",
+        "D2: Bottleneck analysis / Theory of Constraints — throughput, inventory, operating expense",
+        "Extremely short explanations: C2-Q2 (26 chars), C2-Q1 (37 chars), D2-Q2 (45 chars), D2-Q6 (51 chars)"
+      ],
+      "domainGaps": "A, B, E, F not represented",
+      "concentrationRisk": "Only 2 domains — reviewer monotony risk. Mitigation: C and D are substantively different (C=performance measurement, D=cost accumulation/flow).",
+      "lessonsFromDProgram": "D-Program Wave 4 (S526) also covered D/E/F domains. Key lesson: process costing and lean topics require visual/formula explanations (not purely prose). Use structured formula presentation in explanation expansions.",
+      "remediationTargets": {
+        "explanationExpansion": "12 items — expand from avg 63 chars to 600+ chars each. Highest expansion ratio in the program (63→600 = 9.5×). Budget extra time per item.",
+        "difficultyRecalibration": "Verify 8 Difficult items. 2 Moderate-Easy (C2-Q5 fill/Understand, D2-Q5 fill/Understand). C2 and D2 case-level labels (both Difficult/4) appear correct.",
+        "answerKeyVerification": "6 numeric + 3 calc-linked items (C2: Q1,Q2,Q3; D2: Q1,Q2,Q3). Also verify C2-Q4 (multi, CalcRequired=true) and D2-Q3 (select, CalcRequired=true).",
+        "metadataAdditions": "Both cases need ProductionStatus, case-level Difficulty, case-level DifficultyScore"
+      }
+    },
+    {
+      "wave": 5,
+      "label": "Wave 5 — Technology Frontier: Balanced Scorecard & Data Governance",
+      "cases": ["CBQ-C3", "CBQ-F1"],
+      "itemCount": 12,
+      "domainCoverage": ["C", "F"],
+      "domainItemCounts": {"C": 6, "F": 6},
+      "difficultyProfile": {"Difficult": 9, "Moderate": 2, "Moderate-Easy": 1},
+      "cognitiveLevels": {"Apply": 4, "Analyze": 5, "Evaluate": 2, "Understand": 1},
+      "explanationLengthRange": {"min": 21, "max": 110, "avg": 71},
+      "riskProfile": "MEDIUM-HIGH",
+      "rationale": "First wave with Domain F (Technology & Analytics). C3 (Balanced Scorecard, Operating Performance) is the anchor — well-established CMA topic. F1 (Data Governance, Warranty Analytics) is wholly new territory. F1-Q1 has the shortest explanation in the entire pool (21 chars). F1 tests data governance frameworks, warranty analytics, and predictive analytics — topics where team has least experience. Team should have 4 waves of certification practice before tackling F domain.",
+      "expectedEffortHours": 3.5,
+      "keyChallenges": [
+        "C3: Balanced Scorecard — 4 perspectives (financial, customer, internal process, learning & growth), strategy maps, KPI cascading",
+        "C3: Operating performance review — variance analysis at the organizational level, not just cost center",
+        "F1: Data governance frameworks (DAMA-DMBOK, DGI, CMMI) — terminology must be precise",
+        "F1: Warranty analytics — applying predictive models to warranty claims; distinguish predictive from descriptive/diagnostic",
+        "F1: Dashboard design — appropriate visualization selection for different metrics",
+        "F1-Q1: 21 chars is essentially a placeholder — requires complete conceptual rewrite",
+        "F1 has only 2 non-numeric items (Q3 multi, Q4 match) at Analyze — rest are Apply/Evaluate"
+      ],
+      "domainGaps": "A, B, D, E not represented. Largest domain gap so far (4 domains absent).",
+      "concentrationRisk": "F domain introduced late. Team has no prior F-domain certification experience. Risk: incomplete or imprecise technology citations. Mitigation: pre-wave briefing on data governance and analytics terminology from EXAM_BLUEPRINT.md Domain F.",
+      "lessonsFromDProgram": "D-Program Wave 5 (S527) was the quality ceiling (avg 1,840 chars, 100% citation rate). By this point, team should be producing at that level. Same expectation: Wave 5 explanations should be the quality benchmark for the entire program.",
+      "remediationTargets": {
+        "explanationExpansion": "12 items — expand from avg 71 chars to 800+ chars each (higher quality target for later waves per D-Program precedent). F1 needs special attention — 5 of 6 items have no existing accounting standard citations.",
+        "difficultyRecalibration": "Verify 9 Difficult items. F1 case-level label (Difficult/4) should be verified against items. 1 Moderate-Easy (F1-Q5 fill/Understand).",
+        "answerKeyVerification": "5 numeric + calc-linked items (C3: Q1,Q2; F1: Q1,Q6). Also verify F1-Q2 (select, no calc) and F1-Q3 (multi, no calc) for conceptual correctness.",
+        "metadataAdditions": "Both cases need all missing metadata fields"
+      }
+    },
+    {
+      "wave": 6,
+      "label": "Wave 6 — Governance Capstone: Internal Controls, ITGC & Cybersecurity",
+      "cases": ["CBQ-E1", "CBQ-E2", "CBQ-F2"],
+      "itemCount": 18,
+      "domainCoverage": ["E", "E,F"],
+      "domainItemCounts": {"E": 6, "E,F": 12},
+      "difficultyProfile": {"Difficult": 14, "Moderate": 2, "Moderate-Easy": 2},
+      "cognitiveLevels": {"Apply": 4, "Analyze": 8, "Evaluate": 4, "Understand": 2},
+      "explanationLengthRange": {"min": 27, "max": 120, "avg": 72},
+      "riskProfile": "HIGH",
+      "rationale": "The capstone wave. All cases are Difficult/4 at case level. E1 (AP Controls, SOX Evaluation) — requires detailed COSO 2013 framework knowledge. E2 (ITGC, Change Management, Access Review) — cross-domain E,F requiring both COSO internal control AND technology expertise. F2 (Cybersecurity, RPA, Finance Automation Governance) — cross-domain E,F covering NIST CSF, RPA governance, smart contracts, and automation controls. This is the hardest wave by topic complexity, domain breadth, and explanation requirements. Saved for last when the team has maximum certification experience from Waves 1-5.",
+      "expectedEffortHours": 5,
+      "keyChallenges": [
+        "E1: SOX 404 — management's assessment of internal control over financial reporting (ICFR); auditor attestation (AS 2201)",
+        "E1: COSO 2013 — 5 components (CRIME: Control Environment, Risk Assessment, Information & Communication, Monitoring, Existing Control Activities), 17 principles",
+        "E1: Segregation of duties — authorization, custody, recording, reconciliation; IT-specific SoD conflicts",
+        "E1-Q3: 27 chars — AP control explanation requires complete rewrite with COSO citations",
+        "E2: IT General Controls (ITGC) — access controls (logical, physical), change management (SDLC), computer operations",
+        "E2: Application controls vs ITGC — input, processing, output controls; boundary between ITGC and application controls is a common exam trap",
+        "E2: Cross-domain E,F requires citations from BOTH COSO and technology frameworks (NIST, ISO 27001)",
+        "F2: Cybersecurity frameworks — NIST CSF (identify, protect, detect, respond, recover); COBIT 2019",
+        "F2: RPA governance — bot lifecycle management, access credentials, exception handling, audit logging",
+        "F2: Smart contracts — blockchain-based automation, immutability, control implications",
+        "F2: Finance automation governance — approval workflows, system interfaces, reconciliation controls",
+        "E2 and F2 each have 1 exhibit (simpler) — better focus on explanation quality"
+      ],
+      "domainGaps": "A, B, C, D not represented. Intentional — this is the E/F governance capstone.",
+      "concentrationRisk": "HIGH. 18 items all at Difficult level, all in E/F domains. Team fatigue and domain burnout risk. Also: both cross-domain E,F cases in the same wave means the team must maintain expertise in TWO domains simultaneously. Mitigation: stagger the wave (E1 first → post-E1 quality gate → E2 → post-E2 quality gate → F2). Do not attempt all 3 cases in one pass. 5-hour effort estimate reflects sequential processing.",
+      "lessonsFromDProgram": "D-Program Waves 4-5 covered E and F domains and established strong templates for COSO/NIST citations and IT control explanations. These templates are directly reusable. D-Program CASE-D15 SectionTags issue (C,D violates enumeration rule) — ensure no cross-domain tags use non-E,F pairs here.",
+      "remediationTargets": {
+        "explanationExpansion": "18 items — expand from avg 72 chars to 800+ chars each. E1 and E2 items need COSO citations (COSO Principle #). F2 items need dual citations (COSO + NIST/COBIT). Highest complexity explanations in the program.",
+        "difficultyRecalibration": "Verify 14 Difficult items. E1-Q4 (fill/Understand = Moderate-Easy) — verify this calibration; fill-type doesn't automatically lower difficulty. E2-Q4 (fill/Understand) same. F2-Q5 (fill/Understand) same.",
+        "answerKeyVerification": "5 numeric + calc-linked items (E1: Q3,Q6; E2: Q2; F2: Q1,Q2). All other items are non-numeric conceptual — verify COSO principle mapping and control classification are correct.",
+        "metadataAdditions": "All 3 cases need ProductionStatus, case-level Difficulty, case-level DifficultyScore. E2 and F2 SectionTags must be ['E','F'] per enumeration rules."
+      }
+    }
+  ],
+
+  "waveSummaryMatrix": {
+    "headers": ["Wave", "Cases", "Items", "Domains", "Risk", "Effort (hrs)", "Diff/Mod Ratio", "Avg Expl (chars)"],
+    "rows": [
+      ["W0", "N/A (audit only)", 90, "A-F", "N/A", 13, "—", "80 (baseline)"],
+      ["W1", "A1, B1", 12, "A, B", "LOW", 3, "2/10 = 0.20", "90→500"],
+      ["W2", "A3, B3, C1", 18, "A, B, C", "LOW-MED", 4, "7/10 = 0.70", "78→500"],
+      ["W3", "A2, B2, D1", 18, "A, B, D", "MEDIUM", 4, "12/4 = 3.00", "86→600"],
+      ["W4", "C2, D2", 12, "C, D", "MEDIUM", 3.5, "8/2 = 4.00", "63→600"],
+      ["W5", "C3, F1", 12, "C, F", "MED-HIGH", 3.5, "9/2 = 4.50", "71→800"],
+      ["W6", "E1, E2, F2", 18, "E, E,F", "HIGH", 5, "14/2 = 7.00", "72→800"],
+      ["TOTAL", "15 cases", 90, "A-F (all 6)", "—", "~23 (+13 W0 = 36)", "52/30 = 1.73", "80→~617 avg"]
+    ]
+  },
+
+  "riskProgressionRationale": {
+    "description": "Waves follow a deliberate risk staircase. Each wave introduces 1-2 new elements (new domain, higher difficulty concentration, cross-domain complexity) while maintaining at least one familiar domain for continuity.",
+    "staircase": [
+      {"wave": 1, "newElement": "Team workflow establishment; all Moderate topics; 2 domains"},
+      {"wave": 2, "newElement": "First Difficult case (C1); third domain (C); 3 cases"},
+      {"wave": 3, "newElement": "First all-Difficult wave; fourth domain (D); consolidation/regression topics"},
+      {"wave": 4, "newElement": "Deepest domain concentration (C+D only); shortest explanations; highest expansion ratio"},
+      {"wave": 5, "newElement": "First F-domain case; data governance/analytics; no prior F experience"},
+      {"wave": 6, "newElement": "E-domain; cross-domain E,F cases (2 of 3); SOX/COSO/NIST/RPA; maximum complexity"}
+    ]
+  },
+
+  "domainCoverageHeatmap": {
+    "description": "X = domain covered in that wave. Darker cells = more Domain items.",
+    "matrix": {
+      "Wave 1": {"A": 6, "B": 6, "C": 0, "D": 0, "E": 0, "E,F": 0, "F": 0, "total": 12},
+      "Wave 2": {"A": 6, "B": 6, "C": 6, "D": 0, "E": 0, "E,F": 0, "F": 0, "total": 18},
+      "Wave 3": {"A": 6, "B": 6, "C": 0, "D": 6, "E": 0, "E,F": 0, "F": 0, "total": 18},
+      "Wave 4": {"A": 0, "B": 0, "C": 6, "D": 6, "E": 0, "E,F": 0, "F": 0, "total": 12},
+      "Wave 5": {"A": 0, "B": 0, "C": 6, "D": 0, "E": 0, "E,F": 0, "F": 6, "total": 12},
+      "Wave 6": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 6, "E,F": 12, "F": 0, "total": 18}
+    },
+    "domainTotals": {"A": 18, "B": 18, "C": 18, "D": 12, "E": 6, "E,F": 12, "F": 6},
+    "verificationTotal": 90
+  },
+
+  "qualityTargets": {
+    "explanationLengthFloor": 500,
+    "targetByWave": {"W1": 500, "W2": 500, "W3": 600, "W4": 600, "W5": 800, "W6": 800},
+    "reasoning": "D-Program showed Wave 1 avg 500-677 (minimum viable), Wave 5 avg 1,612-2,055 (quality ceiling). ENHANCED_CASE_BASE starts from much lower baseline (80 avg vs D-Program's ~160). Wave 6 capstone targets 800+ reflecting E/F domain complexity and accumulated team expertise.",
+    "mandatoryElements": [
+      "Accounting principle by name (ASC/COSO/IAS/IMA standard) — EV3",
+      "Formula with substituted values (numeric items) — EV5",
+      "Business interpretation in scenario context — CAQS §4.1",
+      "Distractor rationale — choice-specific (select/multi items) — EV4",
+      "Common exam trap identified (at least 1 per case) — CAQS §4.1",
+      "Minimum 50 characters — EV1",
+      "No placeholder phrases — EV2",
+      "No uncertain language ('I think', 'probably') — EV7"
+    ]
+  },
+
+  "governanceGuardCompliance": {
+    "rule2_dl008": "All 90 items must have empty ExplanationWrong[CorrectChoice] before certification. Audit per Wave 0.",
+    "rule3_registry": "MASTER_QUESTION_REGISTRY.md auto-generated post-certification — never hand-edit",
+    "rule5_batchCap": "Max 18 items per wave (well under 30-item cap). No individual batch exceeds 18.",
+    "backupProtocol": "Backup scored_cases.js before EACH wave's certification write. Timestamped to backups/ directory.",
+    "revisionHistory": "REVISION_HISTORY.md entry required after EACH wave. Include QID lists, before/after counts.",
+    "defectLibrary": "Any newly discovered defects during certification must be logged to DEFECT_LIBRARY.md before wave close."
+  },
+
+  "daemonDeployment": {
+    "description": "Per Session 528 transition recommendation (Agent K): ENHANCED_CASE_BASE is the ONLY remaining Unprocessed array in the 500-series case-bank lane. This roadmap is designed as a daemon-safe execution plan.",
+    "target": "90/90 Certified",
+    "file": "scored_cases.js",
+    "estimatedTotalSessions": "6 certification sessions (W1-W6) + 1 pre-certification audit (W0) = 7 sessions",
+    "sideLanes": "None. The 500-series case-bank lane is exclusively ENHANCED_CASE_BASE. MCQ lanes (700-series DL-008/DL-026 residual) are independent."
+  }
+}

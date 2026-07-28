@@ -1,0 +1,140 @@
+{
+  "session": "803",
+  "agent": "J",
+  "title": "Archive Governance Audit — Section F Clones (Pack C + Pack D)",
+  "date": "2026-07-26",
+  "proposed_archives": {
+    "pack_c_f": {
+      "count": 56,
+      "qid_pattern": "P1-FC-NNN",
+      "total_in_section": 75,
+      "current_states": {
+        "Unprocessed": 75,
+        "Certified": 0,
+        "Archived": 0
+      },
+      "dl008_count": 0,
+      "clone_groups": {
+        "groups_reported_by_agent_b": 14,
+        "groups_found_by_agent_j": 17,
+        "discrepancy": "Agent J found 17 unique stem skeletons (company-name normalized) vs Agent B's 14 clone groups. This discrepancy must be resolved before executing archival. Possible explanations: (a) 3 of the 17 skeletons represent the 5 standalone unique items with related subtopics, (b) Agent B's group-merging methodology differs, (c) some groups have non-standard membership counts.",
+        "resolution_required": "Before executing writes, confirm whether 14 or 15-17 groups exist. The archive count (56 vs 58-60) depends on this."
+      },
+      "clone_pattern_confirmed": true,
+      "rotation_evidence": "Group 1 (001-004): data governance with company names Brightpoint→Cedarline→Driftwood→Emberton, CC rotation B→C→D→A. Identical stem skeleton across all members."
+    },
+    "pack_d_f": {
+      "count": 55,
+      "qid_pattern": "P1-FD-NNN",
+      "total_in_section": 75,
+      "current_states": {
+        "Unprocessed": 74,
+        "Certified": 0,
+        "Archived": 1
+      },
+      "dl008_count": 1,
+      "dl008_detail": "P1-FD-044 (CC=B, EW_B non-empty: 'Choice B is incorrect because digital signatures authenticate the signer\\'s identity...'). This item is proposed for archival — EW_B text describes the correct distractor feedback but is misplaced in the CC slot.",
+      "pre_archived_item": "P1-FD-046 is already Archived (State: Archived, CC=C, Topic: master data management). Agent B identified this as anomalous — it was likely manually archived as a quality-control action rather than part of a batch operation. If 046 is a seed in its clone group, it should be unarchived (→Unprocessed) to serve as the group's active seed."
+    }
+  },
+  "governance_checks": {
+    "archived_valid_state": {
+      "status": "PASS",
+      "evidence": "QUESTION_METADATA_STANDARD.md §9.1: question_state values include 'Archived'. §9.2: 'Any State → Archived: consolidation or removal from active pool'. §9.2 Rule 3: 'Archival preserves content. Archived questions retain full question text and metadata. Only the state field changes.'"
+    },
+    "seeds_preserved": {
+      "status": "CONDITIONAL PASS",
+      "detail": "Per DL-012 pattern: 1 seed per clone group remains active (Unprocessed). For P1-FD-046 (already Archived): either (a) unarchive it to serve as group seed, or (b) designate another QID in the same group (047-050) as the seed. Must be verified per-group before execution."
+    },
+    "no_certified_removed": {
+      "status": "PASS",
+      "evidence": "Pack C Section F: 0/75 Certified. Pack D Section F: 0/75 Certified. All items are Unprocessed (74) or Archived (1). Zero learner-pool impact."
+    },
+    "content_preserved": {
+      "status": "PASS",
+      "evidence": "Archived state preserves all content per §9.2 Rule 3. Only question_state field changes from 'Unprocessed' to 'Archived'. Deletion is not performed."
+    },
+    "batch_plan": {
+      "status": "COMPLIANT",
+      "plan": "4 batches per Agent B proposal: Pack C (2 × 28 = 56), Pack D (28 + 27 = 55). All ≤28 per batch, compliant with governance-guard Rule 5.",
+      "alternative_if_more_groups": "If Agent J's 17-group finding is correct, archives increase to ~58 Pack C + ~59 Pack D = ~117 items → 5 batches (28+28+28+28+5). This is also compliant with Rule 5."
+    },
+    "expected_state_change": "Unprocessed → Archived (or possibly 'Unprocessed → Archived' with P1-FD-046 'Archived → Unprocessed' fix)",
+    "governance_guard_review": {
+      "rule_2_dl008_block": "NO BLOCK — archival writes only change question_state, they do NOT introduce new ExplanationWrong content. P1-FD-044's DL-008 is pre-existing and would be preserved (not introduced by the write). The write operation does not match the findDL008Violations check since it changes state only.",
+      "rule_3_registry_block": "NO BLOCK — not writing to MASTER_QUESTION_REGISTRY.md",
+      "rule_5_batch_block": "COMPLIANT — batches ≤28 items each. BLOCK-AUTHORIZED marker recommended in the write content.",
+      "rule_1_revision_warn": "WILL TRIGGER WARNING (expected) — question_state changes require REVISION_HISTORY.md update. This is WARN only (not BLOCK). The revision entry MUST be written contemporaneously.",
+      "rule_4_answer_key_warn": "NO TRIGGER — no CorrectChoice or answer-key changes."
+    }
+  },
+  "risk_assessment": {
+    "learner_pool_impact": "ZERO — all 111 items are Unprocessed (or already Archived), never delivered to learners",
+    "certification_regression": "NONE — 0 Certified items affected across both packs",
+    "blueprint_gap_risk": "LOW — seeds preserved (1 per clone group). Section F remains represented by unique stem-topics.",
+    "rollback_feasibility": "TRIVIAL — change question_state from 'Archived' back to 'Unprocessed'. No content is lost or altered.",
+    "dl008_risk_on_p1_fd_044": "LOW — P1-FD-044's DL-008 is pre-existing. Archival preserves the defect but does not introduce it. The item was never Certified, so the DL-008 has zero learner exposure. Can be remediated in a future session without urgency."
+  },
+  "verdict": "PROCEED",
+  "verdict_caveats": [
+    "CAVEAT 1: Clone group count discrepancy (14 per Agent B vs 17 stem skeletons per Agent J). Resolve before executing writes — verify the exact group boundaries and seed designations per QID. The archive count may be 56/55 (if 14 groups) or 58/60+ (if 15-17 groups). Either count is ≤28 per batch under Rule 5.",
+    "CAVEAT 2: P1-FD-046 is already Archived. Determine whether it serves as a seed (unarchive it → Unprocessed) or whether another group member should be designated as seed. If unarchiving, add it to the write plan.",
+    "CAVEAT 3: P1-FD-044 has DL-008 (EW_B non-empty when CC=B). Pre-existing defect, not introduced by archival. Document in REVISION_HISTORY.md entry.",
+    "CAVEAT 4: P1-FC-075 stem extraction returned 'undefined' in Agent J's block parser. Verify the item is complete before archiving — its ExplanationWrong fields are present and question_state is 'Unprocessed'.",
+    "CAVEAT 5: REVISION_HISTORY.md entry REQUIRED per governance-guard Rule 1. Write contemporaneously with each batch. Do not batch entries — one entry per batch with QID lists."
+  ],
+  "batch_sequence": [
+    {
+      "batch": 1,
+      "pack": "C",
+      "section": "F",
+      "qid_pattern": "P1-FC-NNN",
+      "qid_list_source": "Agent B inventory — verify group boundaries before execution",
+      "count": 28,
+      "state_change": "Unprocessed → Archived",
+      "backup_required": true,
+      "block_auth_marker": "BLOCK-AUTHORIZED: S803 batch 1/4 — Section F clone archival"
+    },
+    {
+      "batch": 2,
+      "pack": "C",
+      "section": "F",
+      "qid_pattern": "P1-FC-NNN",
+      "qid_list_source": "Agent B inventory",
+      "count": 28,
+      "state_change": "Unprocessed → Archived",
+      "backup_required": true,
+      "block_auth_marker": "BLOCK-AUTHORIZED: S803 batch 2/4 — Section F clone archival"
+    },
+    {
+      "batch": 3,
+      "pack": "D",
+      "section": "F",
+      "qid_pattern": "P1-FD-NNN",
+      "qid_list_source": "Agent B inventory",
+      "count": 28,
+      "state_change": "Unprocessed → Archived",
+      "backup_required": true,
+      "block_auth_marker": "BLOCK-AUTHORIZED: S803 batch 3/4 — Section F clone archival"
+    },
+    {
+      "batch": 4,
+      "pack": "D",
+      "section": "F",
+      "qid_pattern": "P1-FD-NNN",
+      "qid_list_source": "Agent B inventory",
+      "count": 27,
+      "state_change": "Unprocessed → Archived",
+      "backup_required": true,
+      "block_auth_marker": "BLOCK-AUTHORIZED: S803 batch 4/4 — Section F clone archival"
+    }
+  ],
+  "verification_methodology": {
+    "qid_extraction": "Select-String with P1-FC- and P1-FD- patterns → confirmed 75 QIDs per section",
+    "state_verification": "QuestionID-boundary block extraction → regex on question_state per block",
+    "dl008_scan": "Boundary-aware block parse → CorrectChoice extraction → ExplanationWrong[CC] non-empty check",
+    "stem_comparison": "Company-name normalization → unique skeleton count → clone group enumeration",
+    "governance_guard": "Line-level review of governance-guard.js all 5 rules",
+    "archived_state_validity": "QUESTION_METADATA_STANDARD.md §9.1-9.2 read"
+  }
+}

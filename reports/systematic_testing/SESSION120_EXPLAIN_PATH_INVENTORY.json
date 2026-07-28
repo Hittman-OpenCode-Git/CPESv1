@@ -1,0 +1,127 @@
+{
+  "session": 120,
+  "title": "May Explain Path Inventory",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "scope": "100-series May lane only",
+  "methodology": "Direct source-code inspection of may-core.js, test_may_stagec.js, test_tutoring_safety.js",
+  "inventory": {
+    "explainPaths": [
+      {
+        "name": "_explainAnswer",
+        "file": "may-core.js",
+        "lines": "1065-1129",
+        "description": "Primary explain answer method. Called from handleAction('explain') and freeform chat routing.",
+        "currentBehavior": [
+          "Displays correct answer letter and choice text",
+          "If ExplanationCorrect > 30 chars: includes it verbatim as the full explanation",
+          "If ExplanationCorrect is thin/empty: states topic + section context only",
+          "Adds topic progress note if learner has >=2 attempts on the topic",
+          "Adds case-specific coaching notes (whatMattered, approachNote) for case items",
+          "Routes through _guardedSpeak in pilot mode, _speak in non-pilot"
+        ],
+        "gating": {
+          "examMode": "Blocked by isFullTabBlocked() in handleAction",
+          "nullQuestion": "Graceful fallback message, no crash",
+          "activeUnanswered": "No gating — caller is responsible. _explainAnswer does not check if learner attempted answer",
+          "reviewMode": "Full explanation allowed"
+        },
+        "tests": [
+          {
+            "test": "_explainAnswer uses bank ExplanationCorrect verbatim",
+            "file": "test_may_stagec.js",
+            "line": 187,
+            "currentAssertion": "Verifies ExplanationCorrect substring appears verbatim in output",
+            "needsUpdate": true,
+            "updateTo": "Includes bank ExplanationCorrect AND adds tutor-layer insight"
+          },
+          {
+            "test": "_explainAnswer does not fabricate when explanation is thin",
+            "file": "test_may_stagec.js",
+            "line": 205,
+            "currentAssertion": "No ASC/FASB fabrication on thin explanations",
+            "needsUpdate": false,
+            "reason": "Anti-fabrication rule preserved"
+          },
+          {
+            "test": "_explainAnswer handles null question gracefully",
+            "file": "test_may_stagec.js",
+            "line": 386,
+            "currentAssertion": "Graceful null handling",
+            "needsUpdate": false
+          },
+          {
+            "test": "S115-NO-REGRESS-01: S111 _guardedSpeak paths still wired (explain)",
+            "file": "test_may_stagec.js",
+            "line": 1204,
+            "currentAssertion": "Guarded speak path exists for explain",
+            "needsUpdate": false
+          }
+        ]
+      },
+      {
+        "name": "miniExplain",
+        "file": "may-core.js",
+        "lines": "3570-3596",
+        "description": "Mini-panel explain. Called from mini-panel button (exam view).",
+        "currentBehavior": [
+          "Gates: requires learner to have attempted answer (state.session.answers[qid] exists) OR session completed (review mode)",
+          "If not attempted and not review: shows 'Try answering first ...' message",
+          "If attempted or review: reveals correct choice, answer text, and ExplanationCorrect snippet (250-char truncated)"
+        ],
+        "gating": {
+          "examMode": "Not explicitly blocked — but mini panel hidden during full exam",
+          "activeUnanswered": "Gated — must have answer recorded",
+          "reviewMode": "Full explanation allowed"
+        },
+        "tests": [
+          {
+            "test": "miniExplain gates behind answer attempt",
+            "file": "test_may_stagec.js",
+            "line": 450,
+            "needsUpdate": false
+          },
+          {
+            "test": "C-08: miniExplain blocks answer when no attempt recorded",
+            "file": "test_tutoring_safety.js",
+            "line": 179,
+            "needsUpdate": false
+          },
+          {
+            "test": "C-08b: miniExplain blocks answer when session is null",
+            "file": "test_tutoring_safety.js",
+            "line": 204,
+            "needsUpdate": false
+          },
+          {
+            "test": "C-09: miniExplain reveals answer in review mode",
+            "file": "test_tutoring_safety.js",
+            "line": 220,
+            "needsUpdate": false
+          }
+        ]
+      }
+    ],
+    "guardedSpeakIntegration": {
+      "location": "may-core.js lines 3983-4020",
+      "usage": "Called from _explainAnswer, _explainWrongChoices, _provideHint, _simplifyExplanation, and insight methods when pilot mode is active",
+      "tests": "GT-01 through GT-12 in test_tutoring_safety.js"
+    },
+    "safetyLayer": {
+      "ensureSafeTutoringOutput": "may-core.js lines 3732-3779",
+      "checks": [
+        "Exam-prediction language (bannedPhrases)",
+        "Answer leakage in hint context (levels 0-3)",
+        "Hallucinated misconception pattern names",
+        "Exam-mode answer leakage"
+      ]
+    }
+  },
+  "summary": {
+    "primaryTarget": "_explainAnswer (lines 1065-1129)",
+    "secondaryTarget": "miniExplain (lines 3570-3596)",
+    "testsRequiringUpdate": 1,
+    "testsPreserved": 6,
+    "guardedSpeakIntegration": "Preserved — tutor-layer output must route through _guardedSpeak in pilot mode",
+    "note": "miniExplain is intentionally simpler (in-exam view). Primary tutoring enhancement should focus on _explainAnswer for full May tab review mode. miniExplain can receive a light touch — truncated tutor output."
+  }
+}

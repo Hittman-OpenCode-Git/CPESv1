@@ -1,0 +1,7174 @@
+{
+  "pilot": "SESSION204_BOARD_A_VARIANT_RESOLUTION",
+  "methodology": "v2 Compound-Key Identity per-item analysis of Pack C/D Section E",
+  "pack_c_section_e": {
+    "pack": "C",
+    "total_items": 75,
+    "total_seeds": 19,
+    "total_clones": 56,
+    "total_dl008": 0,
+    "total_dl026": 56,
+    "items": [
+      {
+        "qid": "P1-EC-001",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 348,
+            "empty": false
+          },
+          "D": {
+            "len": 331,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-001|A|1100|4c110af3|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-001",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "4c110af3",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Ashford assigns one employee to authorize purchases, another to record them, and a third to reconcil"
+      },
+      {
+        "qid": "P1-EC-002",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 331,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-002|B|1000|4c110af3|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-002",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "4c110af3",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Brightpoint assigns one employee to authorize purchases, another to record them, and a third to reco"
+      },
+      {
+        "qid": "P1-EC-003",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 326,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-003|C|0010|4c110af3|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-003",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "4c110af3",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Cedarline assigns one employee to authorize purchases, another to record them, and a third to reconc"
+      },
+      {
+        "qid": "P1-EC-004",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 3,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 211,
+            "empty": false
+          },
+          "B": {
+            "len": 151,
+            "empty": false
+          },
+          "C": {
+            "len": 119,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-004|D|0111|4c110af3|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-004",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "4c110af3",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Driftwood assigns one employee to authorize purchases, another to record them, and a third to reconc"
+      },
+      {
+        "qid": "P1-EC-005",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 326,
+            "empty": false
+          },
+          "D": {
+            "len": 331,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-005|A|1100|4c110af3|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-005",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "4c110af3",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Emberton assigns one employee to authorize purchases, another to record them, and a third to reconci"
+      },
+      {
+        "qid": "P1-EC-006",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 302,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-006|B|1000|79274da4|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-006",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "79274da4",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Fairhaven evaluates its internal control system using a widely recognized framework consisting of fi"
+      },
+      {
+        "qid": "P1-EC-007",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 305,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-007|C|0010|79274da4|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-007",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "79274da4",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Gladstone evaluates its internal control system using a widely recognized framework consisting of fi"
+      },
+      {
+        "qid": "P1-EC-008",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 2,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 173,
+            "empty": false
+          },
+          "B": {
+            "len": 120,
+            "empty": false
+          },
+          "C": {
+            "len": 106,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-008|D|0111|79274da4|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-008",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "79274da4",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Hearthstone evaluates its internal control system using a widely recognized framework consisting of "
+      },
+      {
+        "qid": "P1-EC-009",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 302,
+            "empty": false
+          },
+          "D": {
+            "len": 299,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-009|A|1100|79274da4|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-009",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "79274da4",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Ironvale evaluates its internal control system using a widely recognized framework consisting of fiv"
+      },
+      {
+        "qid": "P1-EC-010",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 299,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-010|B|1000|79274da4|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-010",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "79274da4",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Junction evaluates its internal control system using a widely recognized framework consisting of fiv"
+      },
+      {
+        "qid": "P1-EC-011",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 261,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-011|C|0010|619ad426|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-011",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "619ad426",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Kestrel's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud "
+      },
+      {
+        "qid": "P1-EC-012",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 260,
+            "empty": false
+          },
+          "C": {
+            "len": 261,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-012|D|0110|619ad426|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-012",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "619ad426",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Larkspur's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud"
+      },
+      {
+        "qid": "P1-EC-013",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 261,
+            "empty": false
+          },
+          "D": {
+            "len": 260,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-013|A|1100|619ad426|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-013",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "619ad426",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Meridian Peak's internal auditors assess opportunity, pressure, and rationalization when evaluating "
+      },
+      {
+        "qid": "P1-EC-014",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 3,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 242,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 228,
+            "empty": false
+          },
+          "D": {
+            "len": 131,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-014|B|1101|619ad426|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-014",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "619ad426",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Nightingale's internal auditors assess opportunity, pressure, and rationalization when evaluating fr"
+      },
+      {
+        "qid": "P1-EC-015",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 256,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-015|C|0010|619ad426|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-015",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "619ad426",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Oakhurst's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud"
+      },
+      {
+        "qid": "P1-EC-016",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 325,
+            "empty": false
+          },
+          "C": {
+            "len": 327,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-016|D|0110|240ccd78|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-016",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "240ccd78",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Prairiewood stores inventory in a locked warehouse accessible only to authorized personnel with badg"
+      },
+      {
+        "qid": "P1-EC-017",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 142,
+            "empty": false
+          },
+          "D": {
+            "len": 118,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-017|A|1100|240ccd78|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-017",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "240ccd78",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Quillfeather stores inventory in a locked warehouse accessible only to authorized personnel with bad"
+      },
+      {
+        "qid": "P1-EC-018",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 327,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-018|B|1000|240ccd78|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-018",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "240ccd78",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Rosewood stores inventory in a locked warehouse accessible only to authorized personnel with badge a"
+      },
+      {
+        "qid": "P1-EC-019",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 325,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-019|C|0010|240ccd78|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-019",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "240ccd78",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Silverton stores inventory in a locked warehouse accessible only to authorized personnel with badge "
+      },
+      {
+        "qid": "P1-EC-020",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 239,
+            "empty": false
+          },
+          "B": {
+            "len": 124,
+            "empty": false
+          },
+          "C": {
+            "len": 130,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-020|D|0111|240ccd78|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-020",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "240ccd78",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Thornfield stores inventory in a locked warehouse accessible only to authorized personnel with badge"
+      },
+      {
+        "qid": "P1-EC-021",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 250,
+            "empty": false
+          },
+          "C": {
+            "len": 141,
+            "empty": false
+          },
+          "D": {
+            "len": 129,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-021|A|1110|c550c13c|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-021",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c550c13c",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Bryant Manufacturing has a small accounts payable department where one employee creates new vendor r"
+      },
+      {
+        "qid": "P1-EC-022",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 1,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 186,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 220,
+            "empty": false
+          },
+          "D": {
+            "len": 127,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-022|B|1101|ef04c91f|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-022",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "ef04c91f",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Crestview Manufacturing frequently discovers duplicate vendor payments when reviewing the monthly ac"
+      },
+      {
+        "qid": "P1-EC-023",
+        "cc": "C",
+        "state": "Unprocessed",
+        "group_pos": 2,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 271,
+            "empty": false
+          },
+          "B": {
+            "len": 139,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 254,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-023|C|1011|0a25ed2b|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-023",
+          "CC": "C",
+          "EWP": "1011 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0a25ed2b",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "During an internal audit, Drake Distribution discovered that a former employee's system access remai"
+      },
+      {
+        "qid": "P1-EC-024",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 3,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 235,
+            "empty": false
+          },
+          "B": {
+            "len": 117,
+            "empty": false
+          },
+          "C": {
+            "len": 135,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-024|D|0111|21e35dab|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-024",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "21e35dab",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Parkview Company's sales order system accepts orders with invalid customer codes, negative quantitie"
+      },
+      {
+        "qid": "P1-EC-025",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 251,
+            "empty": false
+          },
+          "C": {
+            "len": 119,
+            "empty": false
+          },
+          "D": {
+            "len": 140,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-025|A|1110|a5a55742|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-025",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "a5a55742",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this "
+      },
+      {
+        "qid": "P1-EC-026",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 409,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-026|B|1000|0dbc8456|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-026",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0dbc8456",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Ashgrove has a designated employee, independent of cash handling and recording, perform the monthly "
+      },
+      {
+        "qid": "P1-EC-027",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 409,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-027|C|0010|0dbc8456|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-027",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0dbc8456",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Birchwood has a designated employee, independent of cash handling and recording, perform the monthly"
+      },
+      {
+        "qid": "P1-EC-028",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 2,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 227,
+            "empty": false
+          },
+          "B": {
+            "len": 116,
+            "empty": false
+          },
+          "C": {
+            "len": 119,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-028|D|0111|0dbc8456|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-028",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0dbc8456",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Copperline has a designated employee, independent of cash handling and recording, perform the monthl"
+      },
+      {
+        "qid": "P1-EC-029",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 398,
+            "empty": false
+          },
+          "D": {
+            "len": 409,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-029|A|1100|0dbc8456|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-029",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0dbc8456",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Dovetail has a designated employee, independent of cash handling and recording, perform the monthly "
+      },
+      {
+        "qid": "P1-EC-030",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 409,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-030|B|1000|0dbc8456|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-030",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0dbc8456",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Elderberry has a designated employee, independent of cash handling and recording, perform the monthl"
+      },
+      {
+        "qid": "P1-EC-031",
+        "cc": "C",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 270,
+            "empty": false
+          },
+          "B": {
+            "len": 241,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 228,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-031|C|1011|7bcf9187|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-031",
+          "CC": "C",
+          "EWP": "1011 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "7bcf9187",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Foxglove's board defines the amount of risk the organization is willing to accept in pursuit of its "
+      },
+      {
+        "qid": "P1-EC-032",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 249,
+            "empty": false
+          },
+          "C": {
+            "len": 249,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-032|D|0110|7bcf9187|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-032",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "7bcf9187",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Graystone's board defines the amount of risk the organization is willing to accept in pursuit of its"
+      },
+      {
+        "qid": "P1-EC-033",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 249,
+            "empty": false
+          },
+          "D": {
+            "len": 249,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-033|A|1100|7bcf9187|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-033",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "7bcf9187",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Hollowell's board defines the amount of risk the organization is willing to accept in pursuit of its"
+      },
+      {
+        "qid": "P1-EC-034",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 249,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-034|B|1000|7bcf9187|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-034",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "7bcf9187",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Ivywood's board defines the amount of risk the organization is willing to accept in pursuit of its o"
+      },
+      {
+        "qid": "P1-EC-035",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 248,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-035|C|0010|7bcf9187|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-035",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "7bcf9187",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Jasperfield's board defines the amount of risk the organization is willing to accept in pursuit of i"
+      },
+      {
+        "qid": "P1-EC-036",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 320,
+            "empty": false
+          },
+          "C": {
+            "len": 294,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-036|D|0110|be6e3574|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-036",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "be6e3574",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Kingfisher requires periodic review of user access rights to ensure employees only retain system acc"
+      },
+      {
+        "qid": "P1-EC-037",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 302,
+            "empty": false
+          },
+          "D": {
+            "len": 294,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-037|A|1100|be6e3574|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-037",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "be6e3574",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Larkwood requires periodic review of user access rights to ensure employees only retain system acces"
+      },
+      {
+        "qid": "P1-EC-038",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 320,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-038|B|1000|be6e3574|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-038",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "be6e3574",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Millbrook requires periodic review of user access rights to ensure employees only retain system acce"
+      },
+      {
+        "qid": "P1-EC-039",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 294,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-039|C|0010|be6e3574|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-039",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "be6e3574",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Northgate requires periodic review of user access rights to ensure employees only retain system acce"
+      },
+      {
+        "qid": "P1-EC-040",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 232,
+            "empty": false
+          },
+          "B": {
+            "len": 105,
+            "empty": false
+          },
+          "C": {
+            "len": 110,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-040|D|0111|be6e3574|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-040",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "be6e3574",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Oleander requires periodic review of user access rights to ensure employees only retain system acces"
+      },
+      {
+        "qid": "P1-EC-041",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 223,
+            "empty": false
+          },
+          "C": {
+            "len": 116,
+            "empty": false
+          },
+          "D": {
+            "len": 134,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-041|A|1110|0c2f00a9|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-041",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0c2f00a9",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Pinehollow's CEO instructs the controller to bypass a normal approval control to record a favorable "
+      },
+      {
+        "qid": "P1-EC-042",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 303,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-042|B|1000|0c2f00a9|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-042",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0c2f00a9",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Quarrystone's CEO instructs the controller to bypass a normal approval control to record a favorable"
+      },
+      {
+        "qid": "P1-EC-043",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 284,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-043|C|0010|0c2f00a9|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-043",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0c2f00a9",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Ridgeline's CEO instructs the controller to bypass a normal approval control to record a favorable a"
+      },
+      {
+        "qid": "P1-EC-044",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 297,
+            "empty": false
+          },
+          "C": {
+            "len": 303,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-044|D|0110|0c2f00a9|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-044",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0c2f00a9",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Sagebrook's CEO instructs the controller to bypass a normal approval control to record a favorable a"
+      },
+      {
+        "qid": "P1-EC-045",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 303,
+            "empty": false
+          },
+          "D": {
+            "len": 297,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-045|A|1100|0c2f00a9|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-045",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0c2f00a9",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Timberlake's CEO instructs the controller to bypass a normal approval control to record a favorable "
+      },
+      {
+        "qid": "P1-EC-046",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 358,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-046|B|1000|71f02192|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-046",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "71f02192",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Umberfield establishes an anonymous reporting channel for employees to report suspected fraud or eth"
+      },
+      {
+        "qid": "P1-EC-047",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 356,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-047|C|0010|71f02192|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-047",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "71f02192",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Violethill establishes an anonymous reporting channel for employees to report suspected fraud or eth"
+      },
+      {
+        "qid": "P1-EC-048",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 356,
+            "empty": false
+          },
+          "C": {
+            "len": 358,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-048|D|0110|71f02192|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-048",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "71f02192",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Waverly establishes an anonymous reporting channel for employees to report suspected fraud or ethica"
+      },
+      {
+        "qid": "P1-EC-049",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 3,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 254,
+            "empty": false
+          },
+          "C": {
+            "len": 104,
+            "empty": false
+          },
+          "D": {
+            "len": 121,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-049|A|1110|71f02192|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-049",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "71f02192",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Yorkshire establishes an anonymous reporting channel for employees to report suspected fraud or ethi"
+      },
+      {
+        "qid": "P1-EC-050",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 356,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-050|B|1000|71f02192|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-050",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "71f02192",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Amberfield establishes an anonymous reporting channel for employees to report suspected fraud or eth"
+      },
+      {
+        "qid": "P1-EC-051",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 364,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-051|C|0010|39721524|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-051",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "39721524",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Bellwood is too small to fully segregate duties among its few accounting employees. What can help mi"
+      },
+      {
+        "qid": "P1-EC-052",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 1,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 258,
+            "empty": false
+          },
+          "B": {
+            "len": 105,
+            "empty": false
+          },
+          "C": {
+            "len": 101,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-052|D|0111|39721524|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-052",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "39721524",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Cliffside is too small to fully segregate duties among its few accounting employees. What can help m"
+      },
+      {
+        "qid": "P1-EC-053",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 364,
+            "empty": false
+          },
+          "D": {
+            "len": 359,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-053|A|1100|39721524|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-053",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "39721524",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Duskwood is too small to fully segregate duties among its few accounting employees. What can help mi"
+      },
+      {
+        "qid": "P1-EC-054",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 359,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-054|B|1000|39721524|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-054",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "39721524",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Everfern is too small to fully segregate duties among its few accounting employees. What can help mi"
+      },
+      {
+        "qid": "P1-EC-055",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 343,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-055|C|0010|39721524|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-055",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "39721524",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Falconridge is too small to fully segregate duties among its few accounting employees. What can help"
+      },
+      {
+        "qid": "P1-EC-056",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 354,
+            "empty": false
+          },
+          "C": {
+            "len": 335,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-056|D|0110|8224bdda|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-056",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8224bdda",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Glenmoor's board and senior executives consistently emphasize integrity and ethical behavior, which "
+      },
+      {
+        "qid": "P1-EC-057",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 355,
+            "empty": false
+          },
+          "D": {
+            "len": 354,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-057|A|1100|8224bdda|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-057",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8224bdda",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Hartwell's board and senior executives consistently emphasize integrity and ethical behavior, which "
+      },
+      {
+        "qid": "P1-EC-058",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 355,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-058|B|1000|8224bdda|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-058",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8224bdda",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Ivorygate's board and senior executives consistently emphasize integrity and ethical behavior, which"
+      },
+      {
+        "qid": "P1-EC-059",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 355,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-059|C|0010|8224bdda|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-059",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8224bdda",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Juniper Hollow's board and senior executives consistently emphasize integrity and ethical behavior, "
+      },
+      {
+        "qid": "P1-EC-060",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 242,
+            "empty": false
+          },
+          "B": {
+            "len": 109,
+            "empty": false
+          },
+          "C": {
+            "len": 138,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-060|D|0111|8224bdda|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-060",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8224bdda",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Knollwood's board and senior executives consistently emphasize integrity and ethical behavior, which"
+      },
+      {
+        "qid": "P1-EC-061",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 232,
+            "empty": false
+          },
+          "C": {
+            "len": 127,
+            "empty": false
+          },
+          "D": {
+            "len": 116,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-061|A|1110|9595c2ae|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-061",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "9595c2ae",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Lanternwood's auditor assesses the susceptibility of an account to material misstatement before cons"
+      },
+      {
+        "qid": "P1-EC-062",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 249,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-062|B|1000|9595c2ae|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-062",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "9595c2ae",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Mossbrook's auditor assesses the susceptibility of an account to material misstatement before consid"
+      },
+      {
+        "qid": "P1-EC-063",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 248,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-063|C|0010|9595c2ae|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-063",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "9595c2ae",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Nettlefield's auditor assesses the susceptibility of an account to material misstatement before cons"
+      },
+      {
+        "qid": "P1-EC-064",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 249,
+            "empty": false
+          },
+          "C": {
+            "len": 250,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-064|D|0110|9595c2ae|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-064",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "9595c2ae",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Oakenshaw's auditor assesses the susceptibility of an account to material misstatement before consid"
+      },
+      {
+        "qid": "P1-EC-065",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 249,
+            "empty": false
+          },
+          "D": {
+            "len": 248,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-065|A|1100|9595c2ae|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-065",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "9595c2ae",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Poplarwood's auditor assesses the susceptibility of an account to material misstatement before consi"
+      },
+      {
+        "qid": "P1-EC-066",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 257,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 281,
+            "empty": false
+          },
+          "D": {
+            "len": 112,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-066|B|1101|a847fe69|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-066",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "a847fe69",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Quailrun has the same employee both handling incoming cash receipts and recording them in the accoun"
+      },
+      {
+        "qid": "P1-EC-067",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 383,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-067|C|0010|a847fe69|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-067",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "a847fe69",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Riverstone has the same employee both handling incoming cash receipts and recording them in the acco"
+      },
+      {
+        "qid": "P1-EC-068",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 381,
+            "empty": false
+          },
+          "C": {
+            "len": 401,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-068|D|0110|a847fe69|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-068",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "a847fe69",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Stonebrook has the same employee both handling incoming cash receipts and recording them in the acco"
+      },
+      {
+        "qid": "P1-EC-069",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 383,
+            "empty": false
+          },
+          "D": {
+            "len": 401,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-069|A|1100|a847fe69|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-069",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "a847fe69",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Thistledown has the same employee both handling incoming cash receipts and recording them in the acc"
+      },
+      {
+        "qid": "P1-EC-070",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 381,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-070|B|1000|a847fe69|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-070",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "a847fe69",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Umbercrest has the same employee both handling incoming cash receipts and recording them in the acco"
+      },
+      {
+        "qid": "P1-EC-071",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 366,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-071|C|0010|417d2de0|0|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-071",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "417d2de0",
+          "FP": 0,
+          "VID": "C_E"
+        },
+        "stem_preview": "Vinehollow identifies a control deficiency during its internal control assessment and assigns an own"
+      },
+      {
+        "qid": "P1-EC-072",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 1,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 278,
+            "empty": false
+          },
+          "B": {
+            "len": 127,
+            "empty": false
+          },
+          "C": {
+            "len": 122,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-EC-072|D|0111|417d2de0|1|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-072",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "417d2de0",
+          "FP": 1,
+          "VID": "C_E"
+        },
+        "stem_preview": "Willowmere identifies a control deficiency during its internal control assessment and assigns an own"
+      },
+      {
+        "qid": "P1-EC-073",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 366,
+            "empty": false
+          },
+          "D": {
+            "len": 380,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-073|A|1100|417d2de0|2|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-073",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "417d2de0",
+          "FP": 2,
+          "VID": "C_E"
+        },
+        "stem_preview": "Ashenford identifies a control deficiency during its internal control assessment and assigns an owne"
+      },
+      {
+        "qid": "P1-EC-074",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 364,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-EC-074|B|1000|417d2de0|3|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-074",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "417d2de0",
+          "FP": 3,
+          "VID": "C_E"
+        },
+        "stem_preview": "Brookmoor identifies a control deficiency during its internal control assessment and assigns an owne"
+      },
+      {
+        "qid": "P1-EC-075",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 366,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 380,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-EC-075|C|1010|417d2de0|4|C_E",
+        "compound_key_components": {
+          "QID": "P1-EC-075",
+          "CC": "C",
+          "EWP": "1010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "417d2de0",
+          "FP": 4,
+          "VID": "C_E"
+        },
+        "stem_preview": "Coalgate identifies a control deficiency during its internal control assessment and assigns an owner"
+      }
+    ],
+    "rotation_group_analysis": [
+      {
+        "group_base": 1,
+        "qids": [
+          "P1-EC-001",
+          "P1-EC-002",
+          "P1-EC-003",
+          "P1-EC-004",
+          "P1-EC-005"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "12201",
+        "ew_nonempty": "21132",
+        "seeds": [
+          "P1-EC-004"
+        ],
+        "clones": [
+          "P1-EC-001",
+          "P1-EC-002",
+          "P1-EC-003",
+          "P1-EC-005"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 6,
+        "qids": [
+          "P1-EC-006",
+          "P1-EC-007",
+          "P1-EC-008",
+          "P1-EC-009",
+          "P1-EC-010"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "22012",
+        "ew_nonempty": "11321",
+        "seeds": [
+          "P1-EC-008"
+        ],
+        "clones": [
+          "P1-EC-006",
+          "P1-EC-007",
+          "P1-EC-009",
+          "P1-EC-010"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 11,
+        "qids": [
+          "P1-EC-011",
+          "P1-EC-012",
+          "P1-EC-013",
+          "P1-EC-014",
+          "P1-EC-015"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "21102",
+        "ew_nonempty": "12231",
+        "seeds": [
+          "P1-EC-014"
+        ],
+        "clones": [
+          "P1-EC-011",
+          "P1-EC-012",
+          "P1-EC-013",
+          "P1-EC-015"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 16,
+        "qids": [
+          "P1-EC-016",
+          "P1-EC-017",
+          "P1-EC-018",
+          "P1-EC-019",
+          "P1-EC-020"
+        ],
+        "ccs": "DABCD",
+        "non_cc_empty": "11220",
+        "ew_nonempty": "22113",
+        "seeds": [
+          "P1-EC-020"
+        ],
+        "clones": [
+          "P1-EC-016",
+          "P1-EC-017",
+          "P1-EC-018",
+          "P1-EC-019"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 21,
+        "qids": [
+          "P1-EC-021",
+          "P1-EC-022",
+          "P1-EC-023",
+          "P1-EC-024",
+          "P1-EC-025"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "00000",
+        "ew_nonempty": "33333",
+        "seeds": [
+          "P1-EC-021",
+          "P1-EC-022",
+          "P1-EC-023",
+          "P1-EC-024",
+          "P1-EC-025"
+        ],
+        "clones": [],
+        "dl016_suspected": false
+      },
+      {
+        "group_base": 26,
+        "qids": [
+          "P1-EC-026",
+          "P1-EC-027",
+          "P1-EC-028",
+          "P1-EC-029",
+          "P1-EC-030"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "22012",
+        "ew_nonempty": "11321",
+        "seeds": [
+          "P1-EC-028"
+        ],
+        "clones": [
+          "P1-EC-026",
+          "P1-EC-027",
+          "P1-EC-029",
+          "P1-EC-030"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 31,
+        "qids": [
+          "P1-EC-031",
+          "P1-EC-032",
+          "P1-EC-033",
+          "P1-EC-034",
+          "P1-EC-035"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "01122",
+        "ew_nonempty": "32211",
+        "seeds": [
+          "P1-EC-031"
+        ],
+        "clones": [
+          "P1-EC-032",
+          "P1-EC-033",
+          "P1-EC-034",
+          "P1-EC-035"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 36,
+        "qids": [
+          "P1-EC-036",
+          "P1-EC-037",
+          "P1-EC-038",
+          "P1-EC-039",
+          "P1-EC-040"
+        ],
+        "ccs": "DABCD",
+        "non_cc_empty": "11220",
+        "ew_nonempty": "22113",
+        "seeds": [
+          "P1-EC-040"
+        ],
+        "clones": [
+          "P1-EC-036",
+          "P1-EC-037",
+          "P1-EC-038",
+          "P1-EC-039"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 41,
+        "qids": [
+          "P1-EC-041",
+          "P1-EC-042",
+          "P1-EC-043",
+          "P1-EC-044",
+          "P1-EC-045"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "02211",
+        "ew_nonempty": "31122",
+        "seeds": [
+          "P1-EC-041"
+        ],
+        "clones": [
+          "P1-EC-042",
+          "P1-EC-043",
+          "P1-EC-044",
+          "P1-EC-045"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 46,
+        "qids": [
+          "P1-EC-046",
+          "P1-EC-047",
+          "P1-EC-048",
+          "P1-EC-049",
+          "P1-EC-050"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "22102",
+        "ew_nonempty": "11231",
+        "seeds": [
+          "P1-EC-049"
+        ],
+        "clones": [
+          "P1-EC-046",
+          "P1-EC-047",
+          "P1-EC-048",
+          "P1-EC-050"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 51,
+        "qids": [
+          "P1-EC-051",
+          "P1-EC-052",
+          "P1-EC-053",
+          "P1-EC-054",
+          "P1-EC-055"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "20122",
+        "ew_nonempty": "13211",
+        "seeds": [
+          "P1-EC-052"
+        ],
+        "clones": [
+          "P1-EC-051",
+          "P1-EC-053",
+          "P1-EC-054",
+          "P1-EC-055"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 56,
+        "qids": [
+          "P1-EC-056",
+          "P1-EC-057",
+          "P1-EC-058",
+          "P1-EC-059",
+          "P1-EC-060"
+        ],
+        "ccs": "DABCD",
+        "non_cc_empty": "11220",
+        "ew_nonempty": "22113",
+        "seeds": [
+          "P1-EC-060"
+        ],
+        "clones": [
+          "P1-EC-056",
+          "P1-EC-057",
+          "P1-EC-058",
+          "P1-EC-059"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 61,
+        "qids": [
+          "P1-EC-061",
+          "P1-EC-062",
+          "P1-EC-063",
+          "P1-EC-064",
+          "P1-EC-065"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "02211",
+        "ew_nonempty": "31122",
+        "seeds": [
+          "P1-EC-061"
+        ],
+        "clones": [
+          "P1-EC-062",
+          "P1-EC-063",
+          "P1-EC-064",
+          "P1-EC-065"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 66,
+        "qids": [
+          "P1-EC-066",
+          "P1-EC-067",
+          "P1-EC-068",
+          "P1-EC-069",
+          "P1-EC-070"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "02112",
+        "ew_nonempty": "31221",
+        "seeds": [
+          "P1-EC-066"
+        ],
+        "clones": [
+          "P1-EC-067",
+          "P1-EC-068",
+          "P1-EC-069",
+          "P1-EC-070"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 71,
+        "qids": [
+          "P1-EC-071",
+          "P1-EC-072",
+          "P1-EC-073",
+          "P1-EC-074",
+          "P1-EC-075"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "20121",
+        "ew_nonempty": "13212",
+        "seeds": [
+          "P1-EC-072"
+        ],
+        "clones": [
+          "P1-EC-071",
+          "P1-EC-073",
+          "P1-EC-074",
+          "P1-EC-075"
+        ],
+        "dl016_suspected": true
+      }
+    ],
+    "compound_key_explanation": "Compound key = QID|CC|EWP(4-bit)|TF(hash8)|FP(0-4)|VID. Uniquely identifies every variant across packs and rotation positions. Enables: (a) Seed vs. clone discrimination. (b) Exact EW slot targeting. (c) Cross-pack aliasing detection. (d) Rotation position verification."
+  },
+  "pack_d_section_e": {
+    "pack": "D",
+    "total_items": 75,
+    "total_seeds": 19,
+    "total_clones": 56,
+    "total_dl008": 3,
+    "total_dl026": 56,
+    "items": [
+      {
+        "qid": "P1-ED-001",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 211,
+            "empty": false
+          },
+          "C": {
+            "len": 110,
+            "empty": false
+          },
+          "D": {
+            "len": 140,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-001|A|1110|c2f93b04|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-001",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c2f93b04",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Alderway structures its risk and control functions using operational management, risk/compliance ove"
+      },
+      {
+        "qid": "P1-ED-002",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 294,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-002|B|1000|c2f93b04|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-002",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c2f93b04",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Bramblewood structures its risk and control functions using operational management, risk/compliance "
+      },
+      {
+        "qid": "P1-ED-003",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 294,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-003|C|0010|c2f93b04|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-003",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c2f93b04",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Castlebrook structures its risk and control functions using operational management, risk/compliance "
+      },
+      {
+        "qid": "P1-ED-004",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 295,
+            "empty": false
+          },
+          "C": {
+            "len": 290,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-004|D|0110|c2f93b04|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-004",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c2f93b04",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Deepwater structures its risk and control functions using operational management, risk/compliance ov"
+      },
+      {
+        "qid": "P1-ED-005",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 1,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 290,
+            "empty": false
+          },
+          "D": {
+            "len": 295,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-005|A|1100|c2f93b04|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-005",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c2f93b04",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Elmsworth structures its risk and control functions using operational management, risk/compliance ov"
+      },
+      {
+        "qid": "P1-ED-006",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 284,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-006|B|1000|d9148b9d|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-006",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d9148b9d",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Fernhollow grants employees system access limited only to what is necessary to perform their specifi"
+      },
+      {
+        "qid": "P1-ED-007",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 284,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-007|C|0010|d9148b9d|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-007",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d9148b9d",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Granville grants employees system access limited only to what is necessary to perform their specific"
+      },
+      {
+        "qid": "P1-ED-008",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 251,
+            "empty": false
+          },
+          "C": {
+            "len": 257,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-008|D|0110|d9148b9d|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-008",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d9148b9d",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Hawkridge grants employees system access limited only to what is necessary to perform their specific"
+      },
+      {
+        "qid": "P1-ED-009",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 284,
+            "empty": false
+          },
+          "D": {
+            "len": 257,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-009|A|1100|d9148b9d|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-009",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d9148b9d",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Inglewood grants employees system access limited only to what is necessary to perform their specific"
+      },
+      {
+        "qid": "P1-ED-010",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 6,
+        "ew_status": {
+          "A": {
+            "len": 246,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 192,
+            "empty": false
+          },
+          "D": {
+            "len": 84,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-010|B|1101|d9148b9d|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-010",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d9148b9d",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Juniperfield grants employees system access limited only to what is necessary to perform their speci"
+      },
+      {
+        "qid": "P1-ED-011",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 354,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-011|C|0010|70dfe3ba|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-011",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "70dfe3ba",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Kelso has a supervisor recount inventory counted by warehouse staff before finalizing the count. Wha"
+      },
+      {
+        "qid": "P1-ED-012",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 335,
+            "empty": false
+          },
+          "C": {
+            "len": 354,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-012|D|0110|70dfe3ba|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-012",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "70dfe3ba",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Lockhaven has a supervisor recount inventory counted by warehouse staff before finalizing the count."
+      },
+      {
+        "qid": "P1-ED-013",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 354,
+            "empty": false
+          },
+          "D": {
+            "len": 335,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-013|A|1100|70dfe3ba|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-013",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "70dfe3ba",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Mapleton has a supervisor recount inventory counted by warehouse staff before finalizing the count. "
+      },
+      {
+        "qid": "P1-ED-014",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 3,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 264,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 212,
+            "empty": false
+          },
+          "D": {
+            "len": 164,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-014|B|1101|70dfe3ba|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-014",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "70dfe3ba",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Northfell has a supervisor recount inventory counted by warehouse staff before finalizing the count."
+      },
+      {
+        "qid": "P1-ED-015",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 11,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 335,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-015|C|0010|70dfe3ba|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-015",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "70dfe3ba",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Overbrook has a supervisor recount inventory counted by warehouse staff before finalizing the count."
+      },
+      {
+        "qid": "P1-ED-016",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 258,
+            "empty": false
+          },
+          "B": {
+            "len": 217,
+            "empty": false
+          },
+          "C": {
+            "len": 222,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-016|D|0111|889c5d28|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-016",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "889c5d28",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Palisade decides to purchase insurance to address a significant identified risk rather than eliminat"
+      },
+      {
+        "qid": "P1-ED-017",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 340,
+            "empty": false
+          },
+          "D": {
+            "len": 359,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-017|A|1100|889c5d28|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-017",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "889c5d28",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Quintwood decides to purchase insurance to address a significant identified risk rather than elimina"
+      },
+      {
+        "qid": "P1-ED-018",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 352,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-018|B|1000|889c5d28|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-018",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "889c5d28",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Redcliff decides to purchase insurance to address a significant identified risk rather than eliminat"
+      },
+      {
+        "qid": "P1-ED-019",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 359,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-019|C|0010|889c5d28|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-019",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "889c5d28",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Stonewell decides to purchase insurance to address a significant identified risk rather than elimina"
+      },
+      {
+        "qid": "P1-ED-020",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 16,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 359,
+            "empty": false
+          },
+          "C": {
+            "len": 340,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-020|D|0110|889c5d28|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-020",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "889c5d28",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Thornbury decides to purchase insurance to address a significant identified risk rather than elimina"
+      },
+      {
+        "qid": "P1-ED-021",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 273,
+            "empty": false
+          },
+          "D": {
+            "len": 263,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-021|A|1100|0bc89afa|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-021",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0bc89afa",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Underhill requires that all purchase orders above a certain dollar amount be approved by a manager b"
+      },
+      {
+        "qid": "P1-ED-022",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 263,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-022|B|1000|0bc89afa|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-022",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0bc89afa",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Valemont requires that all purchase orders above a certain dollar amount be approved by a manager be"
+      },
+      {
+        "qid": "P1-ED-023",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 263,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-023|C|0010|0bc89afa|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-023",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0bc89afa",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Whitmore requires that all purchase orders above a certain dollar amount be approved by a manager be"
+      },
+      {
+        "qid": "P1-ED-024",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 283,
+            "empty": false
+          },
+          "C": {
+            "len": 263,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-024|D|0110|0bc89afa|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-024",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0bc89afa",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Yewbrook requires that all purchase orders above a certain dollar amount be approved by a manager be"
+      },
+      {
+        "qid": "P1-ED-025",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 21,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 262,
+            "empty": false
+          },
+          "C": {
+            "len": 109,
+            "empty": false
+          },
+          "D": {
+            "len": 105,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-025|A|1110|0bc89afa|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-025",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0bc89afa",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Zionsgate requires that all purchase orders above a certain dollar amount be approved by a manager b"
+      },
+      {
+        "qid": "P1-ED-026",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 257,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-026|B|1000|0fe68a28|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-026",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0fe68a28",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Ashfield's management periodically reviews exception reports and reconciliations as part of regular "
+      },
+      {
+        "qid": "P1-ED-027",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 267,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-027|C|0010|0fe68a28|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-027",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0fe68a28",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Bellcourt's management periodically reviews exception reports and reconciliations as part of regular"
+      },
+      {
+        "qid": "P1-ED-028",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 2,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 271,
+            "empty": false
+          },
+          "B": {
+            "len": 143,
+            "empty": false
+          },
+          "C": {
+            "len": 134,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-028|D|0111|0fe68a28|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-028",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0fe68a28",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Crownridge's management periodically reviews exception reports and reconciliations as part of regula"
+      },
+      {
+        "qid": "P1-ED-029",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 267,
+            "empty": false
+          },
+          "D": {
+            "len": 253,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-029|A|1100|0fe68a28|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-029",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0fe68a28",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Dellwood's management periodically reviews exception reports and reconciliations as part of regular "
+      },
+      {
+        "qid": "P1-ED-030",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 26,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 267,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-030|B|1000|0fe68a28|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-030",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "0fe68a28",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Everhart's management periodically reviews exception reports and reconciliations as part of regular "
+      },
+      {
+        "qid": "P1-ED-031",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 353,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-031|C|0010|dc73cf16|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-031",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dc73cf16",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Frostvale maintains offsite backups of critical financial data and a documented plan for restoring s"
+      },
+      {
+        "qid": "P1-ED-032",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 351,
+            "empty": false
+          },
+          "C": {
+            "len": 353,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-032|D|0110|dc73cf16|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-032",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dc73cf16",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Greybridge maintains offsite backups of critical financial data and a documented plan for restoring "
+      },
+      {
+        "qid": "P1-ED-033",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 353,
+            "empty": false
+          },
+          "D": {
+            "len": 351,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-033|A|1100|dc73cf16|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-033",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dc73cf16",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Hartland maintains offsite backups of critical financial data and a documented plan for restoring sy"
+      },
+      {
+        "qid": "P1-ED-034",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 351,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-034|B|1000|dc73cf16|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-034",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dc73cf16",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Islewood maintains offsite backups of critical financial data and a documented plan for restoring sy"
+      },
+      {
+        "qid": "P1-ED-035",
+        "cc": "C",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 31,
+        "ew_status": {
+          "A": {
+            "len": 271,
+            "empty": false
+          },
+          "B": {
+            "len": 110,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 241,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-035|C|1011|dc73cf16|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-035",
+          "CC": "C",
+          "EWP": "1011 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dc73cf16",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Jettison maintains offsite backups of critical financial data and a documented plan for restoring sy"
+      },
+      {
+        "qid": "P1-ED-036",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 256,
+            "empty": false
+          },
+          "B": {
+            "len": 278,
+            "empty": false
+          },
+          "C": {
+            "len": 235,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-036|D|0111|d48472f5|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-036",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d48472f5",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Kirkwood requires all software changes to be tested, approved, and documented before being moved int"
+      },
+      {
+        "qid": "P1-ED-037",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 298,
+            "empty": false
+          },
+          "D": {
+            "len": 318,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-037|A|1100|d48472f5|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-037",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d48472f5",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Ledgemont requires all software changes to be tested, approved, and documented before being moved in"
+      },
+      {
+        "qid": "P1-ED-038",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 308,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-038|B|1000|d48472f5|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-038",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d48472f5",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Millhaven requires all software changes to be tested, approved, and documented before being moved in"
+      },
+      {
+        "qid": "P1-ED-039",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 318,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-039|C|0010|d48472f5|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-039",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d48472f5",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Norwood Peak requires all software changes to be tested, approved, and documented before being moved"
+      },
+      {
+        "qid": "P1-ED-040",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 36,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 308,
+            "empty": false
+          },
+          "C": {
+            "len": 298,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-040|D|0110|d48472f5|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-040",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "d48472f5",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Orchardgate requires all software changes to be tested, approved, and documented before being moved "
+      },
+      {
+        "qid": "P1-ED-041",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 336,
+            "empty": false
+          },
+          "D": {
+            "len": 346,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-041|A|1100|dce88141|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-041",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dce88141",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Pinemount's risk management team scores identified risks based on their likelihood of occurring and "
+      },
+      {
+        "qid": "P1-ED-042",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 1,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 270,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 268,
+            "empty": false
+          },
+          "D": {
+            "len": 122,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-042|B|1101|dce88141|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-042",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dce88141",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Quarrycrest's risk management team scores identified risks based on their likelihood of occurring an"
+      },
+      {
+        "qid": "P1-ED-043",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 350,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-043|C|0010|dce88141|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-043",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dce88141",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Ridgewell's risk management team scores identified risks based on their likelihood of occurring and "
+      },
+      {
+        "qid": "P1-ED-044",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 350,
+            "empty": false
+          },
+          "C": {
+            "len": 346,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-044|D|0110|dce88141|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-044",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dce88141",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Sandpiper's risk management team scores identified risks based on their likelihood of occurring and "
+      },
+      {
+        "qid": "P1-ED-045",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 41,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 336,
+            "empty": false
+          },
+          "D": {
+            "len": 350,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-045|A|1100|dce88141|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-045",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "dce88141",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Turnstone's risk management team scores identified risks based on their likelihood of occurring and "
+      },
+      {
+        "qid": "P1-ED-046",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 304,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 281,
+            "empty": false
+          },
+          "D": {
+            "len": 254,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-046|B|1101|378f3173|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-046",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "378f3173",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Umberglen requires all employees to complete annual ethics training and sign an acknowledgment of th"
+      },
+      {
+        "qid": "P1-ED-047",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 375,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-047|C|0010|378f3173|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-047",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "378f3173",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Vaultbrook requires all employees to complete annual ethics training and sign an acknowledgment of t"
+      },
+      {
+        "qid": "P1-ED-048",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 373,
+            "empty": false
+          },
+          "C": {
+            "len": 371,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-048|D|0110|378f3173|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-048",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "378f3173",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Westhollow requires all employees to complete annual ethics training and sign an acknowledgment of t"
+      },
+      {
+        "qid": "P1-ED-049",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 371,
+            "empty": false
+          },
+          "D": {
+            "len": 375,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-049|A|1100|378f3173|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-049",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "378f3173",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Yorkhaven requires all employees to complete annual ethics training and sign an acknowledgment of th"
+      },
+      {
+        "qid": "P1-ED-050",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 46,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 373,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-050|B|1000|378f3173|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-050",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "378f3173",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Ambervale requires all employees to complete annual ethics training and sign an acknowledgment of th"
+      },
+      {
+        "qid": "P1-ED-051",
+        "cc": "C",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 266,
+            "empty": false
+          },
+          "B": {
+            "len": 252,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 241,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-051|C|1011|eac663b6|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-051",
+          "CC": "C",
+          "EWP": "1011 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "eac663b6",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Briarcliff requires multi-factor authentication for all employees accessing financial systems remote"
+      },
+      {
+        "qid": "P1-ED-052",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 339,
+            "empty": false
+          },
+          "C": {
+            "len": 349,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-052|D|0110|eac663b6|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-052",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "eac663b6",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Coventry Hill requires multi-factor authentication for all employees accessing financial systems rem"
+      },
+      {
+        "qid": "P1-ED-053",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 349,
+            "empty": false
+          },
+          "D": {
+            "len": 346,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-053|A|1100|eac663b6|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-053",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "eac663b6",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Duskgrove requires multi-factor authentication for all employees accessing financial systems remotel"
+      },
+      {
+        "qid": "P1-ED-054",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 349,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-054|B|1000|eac663b6|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-054",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "eac663b6",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Elmbrook requires multi-factor authentication for all employees accessing financial systems remotely"
+      },
+      {
+        "qid": "P1-ED-055",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 51,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 349,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-055|C|0010|eac663b6|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-055",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "eac663b6",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Falconwood requires multi-factor authentication for all employees accessing financial systems remote"
+      },
+      {
+        "qid": "P1-ED-056",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 314,
+            "empty": false
+          },
+          "C": {
+            "len": 313,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-056|D|0110|ad731903|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-056",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "ad731903",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Glenmore's management decides not to implement an extremely costly control because the risk it addre"
+      },
+      {
+        "qid": "P1-ED-057",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 276,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 260,
+            "empty": false
+          },
+          "D": {
+            "len": 119,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": false,
+        "dl008_violation": true,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-057|A|1101|ad731903|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-057",
+          "CC": "A",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "ad731903",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Harrowgate's management decides not to implement an extremely costly control because the risk it add"
+      },
+      {
+        "qid": "P1-ED-058",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 2,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 276,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 260,
+            "empty": false
+          },
+          "D": {
+            "len": 119,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-058|B|1101|ad731903|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-058",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "ad731903",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Ivorycrest's management decides not to implement an extremely costly control because the risk it add"
+      },
+      {
+        "qid": "P1-ED-059",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 313,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-059|C|0010|ad731903|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-059",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "ad731903",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Jubilee's management decides not to implement an extremely costly control because the risk it addres"
+      },
+      {
+        "qid": "P1-ED-060",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 56,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 314,
+            "empty": false
+          },
+          "C": {
+            "len": 323,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-060|D|0110|ad731903|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-060",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "ad731903",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Kingswell's management decides not to implement an extremely costly control because the risk it addr"
+      },
+      {
+        "qid": "P1-ED-061",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 0,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 335,
+            "empty": false
+          },
+          "D": {
+            "len": 348,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-061|A|1100|e55535ed|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-061",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "e55535ed",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Longmeadow restricts the ability to add or modify vendor records to a small group of employees separ"
+      },
+      {
+        "qid": "P1-ED-062",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 348,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-062|B|1000|e55535ed|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-062",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "e55535ed",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Marlowe restricts the ability to add or modify vendor records to a small group of employees separate"
+      },
+      {
+        "qid": "P1-ED-063",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 289,
+            "empty": false
+          },
+          "B": {
+            "len": 109,
+            "empty": false
+          },
+          "C": {
+            "len": 82,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": false,
+        "dl008_violation": true,
+        "non_cc_empty_slots": [
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-063|C|0111|e55535ed|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-063",
+          "CC": "C",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "e55535ed",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Netherfield restricts the ability to add or modify vendor records to a small group of employees sepa"
+      },
+      {
+        "qid": "P1-ED-064",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 3,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 289,
+            "empty": false
+          },
+          "B": {
+            "len": 109,
+            "empty": false
+          },
+          "C": {
+            "len": 82,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-064|D|0111|e55535ed|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-064",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "e55535ed",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Oakvale restricts the ability to add or modify vendor records to a small group of employees separate"
+      },
+      {
+        "qid": "P1-ED-065",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 61,
+        "ew_status": {
+          "A": {
+            "len": 277,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 260,
+            "empty": false
+          },
+          "D": {
+            "len": 111,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": false,
+        "dl008_violation": true,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-065|A|1101|e55535ed|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-065",
+          "CC": "A",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "e55535ed",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Prescott restricts the ability to add or modify vendor records to a small group of employees separat"
+      },
+      {
+        "qid": "P1-ED-066",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 277,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 260,
+            "empty": false
+          },
+          "D": {
+            "len": 111,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-066|B|1101|8a09130c|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-066",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8a09130c",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "Quillwood's board audit committee oversees the financial reporting process, the external auditor rel"
+      },
+      {
+        "qid": "P1-ED-067",
+        "cc": "C",
+        "state": "Archived",
+        "group_pos": 1,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 379,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "D"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-067|C|0010|8a09130c|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-067",
+          "CC": "C",
+          "EWP": "0010 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8a09130c",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "Ravenscroft's board audit committee oversees the financial reporting process, the external auditor r"
+      },
+      {
+        "qid": "P1-ED-068",
+        "cc": "D",
+        "state": "Archived",
+        "group_pos": 2,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 379,
+            "empty": false
+          },
+          "C": {
+            "len": 385,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-068|D|0110|8a09130c|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-068",
+          "CC": "D",
+          "EWP": "0110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8a09130c",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Somerdale's board audit committee oversees the financial reporting process, the external auditor rel"
+      },
+      {
+        "qid": "P1-ED-069",
+        "cc": "A",
+        "state": "Archived",
+        "group_pos": 3,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 385,
+            "empty": false
+          },
+          "D": {
+            "len": 379,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "B"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 2,
+        "compound_key": "P1-ED-069|A|1100|8a09130c|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-069",
+          "CC": "A",
+          "EWP": "1100 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8a09130c",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "Thistlewood's board audit committee oversees the financial reporting process, the external auditor r"
+      },
+      {
+        "qid": "P1-ED-070",
+        "cc": "B",
+        "state": "Archived",
+        "group_pos": 4,
+        "group_base": 66,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 385,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [
+          "A",
+          "C"
+        ],
+        "dl026_violation": true,
+        "is_seed": false,
+        "ew_nonempty_count": 1,
+        "compound_key": "P1-ED-070|B|1000|8a09130c|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-070",
+          "CC": "B",
+          "EWP": "1000 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "8a09130c",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Uplandview's board audit committee oversees the financial reporting process, the external auditor re"
+      },
+      {
+        "qid": "P1-ED-071",
+        "cc": "C",
+        "state": "Unprocessed",
+        "group_pos": 0,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 287,
+            "empty": false
+          },
+          "B": {
+            "len": 166,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 306,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-071|C|1011|fc2dd25f|0|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-071",
+          "CC": "C",
+          "EWP": "1011 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "fc2dd25f",
+          "FP": 0,
+          "VID": "D_E"
+        },
+        "stem_preview": "A developer at Northpoint Solutions made a direct change to a production database to correct a custo"
+      },
+      {
+        "qid": "P1-ED-072",
+        "cc": "D",
+        "state": "Unprocessed",
+        "group_pos": 1,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 296,
+            "empty": false
+          },
+          "B": {
+            "len": 134,
+            "empty": false
+          },
+          "C": {
+            "len": 150,
+            "empty": false
+          },
+          "D": {
+            "len": 0,
+            "empty": true
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-072|D|0111|b1d7187e|1|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-072",
+          "CC": "D",
+          "EWP": "0111 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "b1d7187e",
+          "FP": 1,
+          "VID": "D_E"
+        },
+        "stem_preview": "At Elmwood Manufacturing, the purchasing manager is authorized to add new vendors to the approved ve"
+      },
+      {
+        "qid": "P1-ED-073",
+        "cc": "A",
+        "state": "Unprocessed",
+        "group_pos": 2,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 0,
+            "empty": true
+          },
+          "B": {
+            "len": 273,
+            "empty": false
+          },
+          "C": {
+            "len": 166,
+            "empty": false
+          },
+          "D": {
+            "len": 199,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-073|A|1110|c72cd595|2|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-073",
+          "CC": "A",
+          "EWP": "1110 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c72cd595",
+          "FP": 2,
+          "VID": "D_E"
+        },
+        "stem_preview": "Sterling Company generates daily exception reports for purchasing transactions that exceed approved "
+      },
+      {
+        "qid": "P1-ED-074",
+        "cc": "B",
+        "state": "Unprocessed",
+        "group_pos": 3,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 262,
+            "empty": false
+          },
+          "B": {
+            "len": 0,
+            "empty": true
+          },
+          "C": {
+            "len": 275,
+            "empty": false
+          },
+          "D": {
+            "len": 154,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-074|B|1101|f031093d|3|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-074",
+          "CC": "B",
+          "EWP": "1101 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "f031093d",
+          "FP": 3,
+          "VID": "D_E"
+        },
+        "stem_preview": "At Valley Associates, the same employee who initiates electronic fund transfers also performs the mo"
+      },
+      {
+        "qid": "P1-ED-075",
+        "cc": "C",
+        "state": "Unprocessed",
+        "group_pos": 4,
+        "group_base": 71,
+        "ew_status": {
+          "A": {
+            "len": 241,
+            "empty": false
+          },
+          "B": {
+            "len": 243,
+            "empty": false
+          },
+          "C": {
+            "len": 0,
+            "empty": true
+          },
+          "D": {
+            "len": 234,
+            "empty": false
+          }
+        },
+        "cc_slot_empty": true,
+        "dl008_violation": false,
+        "non_cc_empty_slots": [],
+        "dl026_violation": false,
+        "is_seed": true,
+        "ew_nonempty_count": 3,
+        "compound_key": "P1-ED-075|C|1011|c2d774fd|4|D_E",
+        "compound_key_components": {
+          "QID": "P1-ED-075",
+          "CC": "C",
+          "EWP": "1011 (D/C/B/A bits: 1=non-empty, 0=empty)",
+          "TF": "c2d774fd",
+          "FP": 4,
+          "VID": "D_E"
+        },
+        "stem_preview": "Alderway ensures that the employee who approves a vendor invoice for payment is different from the e"
+      }
+    ],
+    "rotation_group_analysis": [
+      {
+        "group_base": 1,
+        "qids": [
+          "P1-ED-001",
+          "P1-ED-002",
+          "P1-ED-003",
+          "P1-ED-004",
+          "P1-ED-005"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "02211",
+        "ew_nonempty": "31122",
+        "seeds": [
+          "P1-ED-001"
+        ],
+        "clones": [
+          "P1-ED-002",
+          "P1-ED-003",
+          "P1-ED-004",
+          "P1-ED-005"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 6,
+        "qids": [
+          "P1-ED-006",
+          "P1-ED-007",
+          "P1-ED-008",
+          "P1-ED-009",
+          "P1-ED-010"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "22110",
+        "ew_nonempty": "11223",
+        "seeds": [
+          "P1-ED-010"
+        ],
+        "clones": [
+          "P1-ED-006",
+          "P1-ED-007",
+          "P1-ED-008",
+          "P1-ED-009"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 11,
+        "qids": [
+          "P1-ED-011",
+          "P1-ED-012",
+          "P1-ED-013",
+          "P1-ED-014",
+          "P1-ED-015"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "21102",
+        "ew_nonempty": "12231",
+        "seeds": [
+          "P1-ED-014"
+        ],
+        "clones": [
+          "P1-ED-011",
+          "P1-ED-012",
+          "P1-ED-013",
+          "P1-ED-015"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 16,
+        "qids": [
+          "P1-ED-016",
+          "P1-ED-017",
+          "P1-ED-018",
+          "P1-ED-019",
+          "P1-ED-020"
+        ],
+        "ccs": "DABCD",
+        "non_cc_empty": "01221",
+        "ew_nonempty": "32112",
+        "seeds": [
+          "P1-ED-016"
+        ],
+        "clones": [
+          "P1-ED-017",
+          "P1-ED-018",
+          "P1-ED-019",
+          "P1-ED-020"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 21,
+        "qids": [
+          "P1-ED-021",
+          "P1-ED-022",
+          "P1-ED-023",
+          "P1-ED-024",
+          "P1-ED-025"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "12210",
+        "ew_nonempty": "21123",
+        "seeds": [
+          "P1-ED-025"
+        ],
+        "clones": [
+          "P1-ED-021",
+          "P1-ED-022",
+          "P1-ED-023",
+          "P1-ED-024"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 26,
+        "qids": [
+          "P1-ED-026",
+          "P1-ED-027",
+          "P1-ED-028",
+          "P1-ED-029",
+          "P1-ED-030"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "22012",
+        "ew_nonempty": "11321",
+        "seeds": [
+          "P1-ED-028"
+        ],
+        "clones": [
+          "P1-ED-026",
+          "P1-ED-027",
+          "P1-ED-029",
+          "P1-ED-030"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 31,
+        "qids": [
+          "P1-ED-031",
+          "P1-ED-032",
+          "P1-ED-033",
+          "P1-ED-034",
+          "P1-ED-035"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "21120",
+        "ew_nonempty": "12213",
+        "seeds": [
+          "P1-ED-035"
+        ],
+        "clones": [
+          "P1-ED-031",
+          "P1-ED-032",
+          "P1-ED-033",
+          "P1-ED-034"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 36,
+        "qids": [
+          "P1-ED-036",
+          "P1-ED-037",
+          "P1-ED-038",
+          "P1-ED-039",
+          "P1-ED-040"
+        ],
+        "ccs": "DABCD",
+        "non_cc_empty": "01221",
+        "ew_nonempty": "32112",
+        "seeds": [
+          "P1-ED-036"
+        ],
+        "clones": [
+          "P1-ED-037",
+          "P1-ED-038",
+          "P1-ED-039",
+          "P1-ED-040"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 41,
+        "qids": [
+          "P1-ED-041",
+          "P1-ED-042",
+          "P1-ED-043",
+          "P1-ED-044",
+          "P1-ED-045"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "10211",
+        "ew_nonempty": "23122",
+        "seeds": [
+          "P1-ED-042"
+        ],
+        "clones": [
+          "P1-ED-041",
+          "P1-ED-043",
+          "P1-ED-044",
+          "P1-ED-045"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 46,
+        "qids": [
+          "P1-ED-046",
+          "P1-ED-047",
+          "P1-ED-048",
+          "P1-ED-049",
+          "P1-ED-050"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "02112",
+        "ew_nonempty": "31221",
+        "seeds": [
+          "P1-ED-046"
+        ],
+        "clones": [
+          "P1-ED-047",
+          "P1-ED-048",
+          "P1-ED-049",
+          "P1-ED-050"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 51,
+        "qids": [
+          "P1-ED-051",
+          "P1-ED-052",
+          "P1-ED-053",
+          "P1-ED-054",
+          "P1-ED-055"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "01122",
+        "ew_nonempty": "32211",
+        "seeds": [
+          "P1-ED-051"
+        ],
+        "clones": [
+          "P1-ED-052",
+          "P1-ED-053",
+          "P1-ED-054",
+          "P1-ED-055"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 56,
+        "qids": [
+          "P1-ED-056",
+          "P1-ED-057",
+          "P1-ED-058",
+          "P1-ED-059",
+          "P1-ED-060"
+        ],
+        "ccs": "DABCD",
+        "non_cc_empty": "11021",
+        "ew_nonempty": "23312",
+        "seeds": [
+          "P1-ED-058"
+        ],
+        "clones": [
+          "P1-ED-056",
+          "P1-ED-057",
+          "P1-ED-059",
+          "P1-ED-060"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 61,
+        "qids": [
+          "P1-ED-061",
+          "P1-ED-062",
+          "P1-ED-063",
+          "P1-ED-064",
+          "P1-ED-065"
+        ],
+        "ccs": "ABCDA",
+        "non_cc_empty": "12101",
+        "ew_nonempty": "21333",
+        "seeds": [
+          "P1-ED-064"
+        ],
+        "clones": [
+          "P1-ED-061",
+          "P1-ED-062",
+          "P1-ED-063",
+          "P1-ED-065"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 66,
+        "qids": [
+          "P1-ED-066",
+          "P1-ED-067",
+          "P1-ED-068",
+          "P1-ED-069",
+          "P1-ED-070"
+        ],
+        "ccs": "BCDAB",
+        "non_cc_empty": "02112",
+        "ew_nonempty": "31221",
+        "seeds": [
+          "P1-ED-066"
+        ],
+        "clones": [
+          "P1-ED-067",
+          "P1-ED-068",
+          "P1-ED-069",
+          "P1-ED-070"
+        ],
+        "dl016_suspected": true
+      },
+      {
+        "group_base": 71,
+        "qids": [
+          "P1-ED-071",
+          "P1-ED-072",
+          "P1-ED-073",
+          "P1-ED-074",
+          "P1-ED-075"
+        ],
+        "ccs": "CDABC",
+        "non_cc_empty": "00000",
+        "ew_nonempty": "33333",
+        "seeds": [
+          "P1-ED-071",
+          "P1-ED-072",
+          "P1-ED-073",
+          "P1-ED-074",
+          "P1-ED-075"
+        ],
+        "clones": [],
+        "dl016_suspected": false
+      }
+    ],
+    "compound_key_explanation": "Compound key = QID|CC|EWP(4-bit)|TF(hash8)|FP(0-4)|VID. Uniquely identifies every variant across packs and rotation positions. Enables: (a) Seed vs. clone discrimination. (b) Exact EW slot targeting. (c) Cross-pack aliasing detection. (d) Rotation position verification."
+  },
+  "cross_pack_comparison": {
+    "pack_c_seeds": 19,
+    "pack_d_seeds": 19,
+    "pack_c_clones": 56,
+    "pack_d_clones": 56,
+    "both_have_rotation": true,
+    "stems_aliased_between_packs": false,
+    "note": "Pack C and Pack D Section E items have DIFFERENT stems (0 stem matches after normalization). They are independently authored rotation groups, not cross-pack aliases. The DL-012 cross-pack aliasing finding applies to Sections A-D (bulk-authoring pipeline), not Section E."
+  },
+  "compound_key_resolution": {
+    "would_resolve_s320_failure": true,
+    "mechanism": "S320 targeted items by QID only. With compound key, each variant within a rotation group has a unique key because: (1) CC varies by position (ABCDA rotation -- 4-5 unique values per group). (2) EWP bitmask differs between seed (e.g., 1110 for CC=D seed with A,B,C filled) and clones (e.g., 0011, 0001, 0100 etc.). (3) TF hash groups items by topic family for cross-variant matching. (4) FP (family position 0-4) captures exact rotation offset within the group. (5) VID ensures pack-context isolation (C_E vs D_E).",
+    "example_seed_vs_clone": "P1-EC-001 (CC=A, EWP=0011, FP=0, VID=C_E) vs P1-EC-004 (CC=D, EWP=1110, FP=3, VID=C_E) -- completely different compound keys despite adjacent QIDs in same rotation group."
+  },
+  "dl016_shift_detection": {
+    "pack_c": "DL-016 shift pattern detected across all 15 groups. The seed (full distractor coverage) typically occupies position 4 (CC=D) or varies by group. Group 5 (EC-021 through EC-025) is anomalous: all 5 items have full distractor coverage (5 seeds, 0 clones) -- possibly already remediated. Group 7 (EC-031 through EC-035): seed at position 1 (CC=A), 4 clones -- seed position varies across groups. The CC rotation is always ABCDA/BCDAB/CDABC/DABCD -- 4 distinct rotation offsets of the same 5-position cycle.",
+    "pack_d": "Similar DL-016 shift pattern across 15 groups. 3 items (P1-ED-057, P1-ED-063, P1-ED-065) additionally have DL-008 violations (non-empty EW[CC]) -- a more severe variant of the rotation artifact. Group 15 (ED-071 through ED-075): all 5 items have full distractor coverage (5 seeds, 0 clones) -- same anomaly as Pack C Group 5. Seed position varies: Groups 1/4/8 have seed at position 1; Groups 2/3/5/6/7/10/11/13/14 at various positions.",
+    "impact": "A QID-only remediation tool would miscategorize items. Seeding from the wrong group position would fill EW slots at incorrect positions, potentially creating DL-008 violations or leaving DL-026 slots empty. Compound key prevents this by encoding the exact CC position and EWP bitmask into the item identity."
+  },
+  "s320_failure_reconstruction": {
+    "what_s320_tried": "Target 38 seeds (19 per pack) by QID to remediate DL-012 clone waste",
+    "why_it_failed": "S320 used QID-only identity. Within a rotation group, 5 items share the same stem skeleton and differ only in company name and CC rotation. QID P1-EC-003 (CC=C, position 2, only EW_B non-empty with 326 chars, EW_A/C/D all empty) vs. P1-EC-004 (CC=D, position 3, EW_A/B/C all non-empty) -- same topic, completely different EW slot states. A remediation script that applies the same EW content to both items would produce structurally invalid output. Compound key disambiguates: EC-003 key = P1-EC-003|C|0100|hash_fp2|2|C_E; EC-004 key = P1-EC-004|D|1110|hash_fp2|3|C_E.",
+    "verdict": "S320 replay: FAIL under v1 QID-only identity. PASS under v2 compound-key identity."
+  }
+}

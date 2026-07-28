@@ -1,0 +1,29 @@
+{
+  "title": "SESSION318_PRODUCTION_INSERTION_PACKAGE",
+  "session": "318",
+  "status": "PENDING",
+  "generated": "2026-07-27",
+  "predecessor": "S317 (Wave 3 Certification Review)",
+  "summary": {
+    "certified_items_ready": 10,
+    "qids": ["P1-E-R26","P1-E-R27","P1-E-R29","P1-E-R34","P1-E-R35","P1-E-R36","P1-E-R37","P1-E-R38","P1-E-R39","P1-E-R40"],
+    "already_inserted": true,
+    "already_in_production": true,
+    "note": "S317 already performed production insertion (pack_e 520→530). S318 scope is registry updates, dashboard refresh, and remaining inventory planning for Wave 4."
+  },
+  "deferred_registry_updates": [
+    "MASTER_QUESTION_REGISTRY.md — add 10 Wave 3 rows (2,995→3,005)",
+    "QUESTION_SIMILARITY_LEDGER.json — add 10 Wave 3 entries",
+    "DUPLICATE_PREVENTION_REPORT.json — update Gate 0 status"
+  ],
+  "remaining_inventory": {
+    "replacement_groups": 13,
+    "replacement_qids": ["R12","R13","R18","R21","R22","R23","R24","R25","R28","R33"],
+    "seed_certifications": 38,
+    "seed_sources": "Packs C/D Unprocessed Domain E items",
+    "total_remaining": 51
+  },
+  "domain_e_completion_target": "81 total certifications (43 replacements + 38 seeds). Currently 30/81 (37.0%).",
+  "next_wave": "Wave 4 — 10-13 replacement items covering remaining LOs",
+  "blocked_qids": "R12,R13,R18,R21-R25,R28,R33 — 3 replacement groups remaining after Wave 4"
+}

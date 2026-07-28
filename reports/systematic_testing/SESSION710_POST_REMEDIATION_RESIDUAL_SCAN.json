@@ -1,0 +1,61 @@
+{
+  "session": "710",
+  "type": "Post-remediation residual defect scan",
+  "timestamp": "2026-07-25T21:16:00",
+  "scan_methodology": "Direct Select-String grep on pack files + G-NEW-3 object-bounded extraction",
+  "pack_a": {
+    "qid_count": 500,
+    "certified_count": 481,
+    "dl008": 0,
+    "certified_dl026_remediated": ["P1-B-001"],
+    "certified_dl026_residual": 0,
+    "non_target_ew_changed": false
+  },
+  "pack_c": {
+    "qid_count": 500,
+    "certified_count": 350,
+    "dl008": 0,
+    "certified_dl026_remediated": ["P1-BC-094", "P1-DC-019"],
+    "certified_dl026_residual": 0,
+    "non_target_ew_changed": false
+  },
+  "pack_d": {
+    "qid_count": 500,
+    "certified_count": 350,
+    "dl008": 0,
+    "certified_dl026_remediated": [
+      "P1-AD-047", "P1-AD-048", "P1-AD-054", "P1-AD-055",
+      "P1-CD-002", "P1-CD-003", "P1-CD-006",
+      "P1-CD-022", "P1-CD-023", "P1-CD-034"
+    ],
+    "certified_dl026_residual": 0,
+    "non_target_ew_changed": false
+  },
+  "pack_b": {
+    "modified": false,
+    "certified_dl026": 0
+  },
+  "pack_e": {
+    "modified": false,
+    "certified_dl026": 0
+  },
+  "concurrent_lane_protection": {
+    "may_files_modified": false,
+    "case_bank_files_modified": false,
+    "scoring_runtime_files_modified": false
+  },
+  "governance_attestation": {
+    "no_answer_keys_changed": true,
+    "no_stems_changed": true,
+    "no_choices_changed": true,
+    "no_explanation_correct_changed": true,
+    "no_question_state_changed": true,
+    "no_certification_state_changed": true,
+    "no_non_target_ew_fields_changed": true,
+    "no_pack_b_e_files_changed": true,
+    "no_dl008_introduced": true,
+    "certified_dl026_residual_total": 0,
+    "legacy_issue_p1_bc094_ew_a_cross_topic": "documented, not in scope",
+    "legacy_issue_p1_cd022_ew_swap": "documented, not in scope"
+  }
+}

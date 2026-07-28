@@ -1,0 +1,160 @@
+{
+  "generated": "2026-07-26T21:42:16.542Z",
+  "session": "S304",
+  "methodology": "Actual item count per domain vs CMA Part 1 blueprint expected percentages",
+  "cmaBlueprint": {
+    "A": {
+      "name": "External Financial Reporting Decisions",
+      "weight": 15,
+      "description": "Financial statements, recognition, measurement, valuation, disclosure"
+    },
+    "B": {
+      "name": "Planning, Budgeting & Forecasting",
+      "weight": 20,
+      "description": "Strategic planning, budgeting concepts, forecasting techniques"
+    },
+    "C": {
+      "name": "Performance Management",
+      "weight": 20,
+      "description": "Cost & variance measures, responsibility centers, balanced scorecard"
+    },
+    "D": {
+      "name": "Cost Management",
+      "weight": 15,
+      "description": "Cost concepts, overhead allocation, job/process/activity-based costing"
+    },
+    "E": {
+      "name": "Internal Controls",
+      "weight": 15,
+      "description": "Risk, governance, COSO, SOX, audit, systems controls"
+    },
+    "F": {
+      "name": "Technology & Analytics",
+      "weight": 15,
+      "description": "Information systems, data governance, analytics, cybersecurity"
+    }
+  },
+  "portfolioTotals": {
+    "total": 3125,
+    "mcq": 2500,
+    "caseCount": 625
+  },
+  "distribution": {
+    "A": {
+      "domain": "External Financial Reporting Decisions",
+      "cmaWeight": 15,
+      "actualItems": 433,
+      "actualPct": "13.9",
+      "expectedItems": 469,
+      "delta": -36,
+      "deltaPct": "-1.1",
+      "status": "ALIGNED",
+      "mcqItems": 375,
+      "caseItems": 58
+    },
+    "B": {
+      "domain": "Planning, Budgeting & Forecasting",
+      "cmaWeight": 20,
+      "actualItems": 568,
+      "actualPct": "18.2",
+      "expectedItems": 625,
+      "delta": -57,
+      "deltaPct": "-1.8",
+      "status": "ALIGNED",
+      "mcqItems": 500,
+      "caseItems": 68
+    },
+    "C": {
+      "domain": "Performance Management",
+      "cmaWeight": 20,
+      "actualItems": 798,
+      "actualPct": "25.5",
+      "expectedItems": 625,
+      "delta": 173,
+      "deltaPct": "5.5",
+      "status": "OVERREPRESENTED",
+      "mcqItems": 500,
+      "caseItems": 298
+    },
+    "D": {
+      "domain": "Cost Management",
+      "cmaWeight": 15,
+      "actualItems": 452,
+      "actualPct": "14.5",
+      "expectedItems": 469,
+      "delta": -17,
+      "deltaPct": "-0.5",
+      "status": "ALIGNED",
+      "mcqItems": 375,
+      "caseItems": 77
+    },
+    "E": {
+      "domain": "Internal Controls",
+      "cmaWeight": 15,
+      "actualItems": 443,
+      "actualPct": "14.2",
+      "expectedItems": 469,
+      "delta": -26,
+      "deltaPct": "-0.8",
+      "status": "ALIGNED",
+      "mcqItems": 375,
+      "caseItems": 68
+    },
+    "F": {
+      "domain": "Technology & Analytics",
+      "cmaWeight": 15,
+      "actualItems": 430,
+      "actualPct": "13.8",
+      "expectedItems": 469,
+      "delta": -39,
+      "deltaPct": "-1.2",
+      "status": "ALIGNED",
+      "mcqItems": 374,
+      "caseItems": 56
+    }
+  },
+  "summary": [
+    {
+      "domain": "External Financial Reporting Decisions",
+      "cmaWeight": "15%",
+      "actual": "13.9%",
+      "delta": "-1.1pp",
+      "status": "ALIGNED"
+    },
+    {
+      "domain": "Planning, Budgeting & Forecasting",
+      "cmaWeight": "20%",
+      "actual": "18.2%",
+      "delta": "-1.8pp",
+      "status": "ALIGNED"
+    },
+    {
+      "domain": "Performance Management",
+      "cmaWeight": "20%",
+      "actual": "25.5%",
+      "delta": "5.5pp",
+      "status": "OVERREPRESENTED"
+    },
+    {
+      "domain": "Cost Management",
+      "cmaWeight": "15%",
+      "actual": "14.5%",
+      "delta": "-0.5pp",
+      "status": "ALIGNED"
+    },
+    {
+      "domain": "Internal Controls",
+      "cmaWeight": "15%",
+      "actual": "14.2%",
+      "delta": "-0.8pp",
+      "status": "ALIGNED"
+    },
+    {
+      "domain": "Technology & Analytics",
+      "cmaWeight": "15%",
+      "actual": "13.8%",
+      "delta": "-1.2pp",
+      "status": "ALIGNED"
+    }
+  ]
+}

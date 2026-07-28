@@ -1,0 +1,87 @@
+{
+  "session": "517",
+  "agent": "C",
+  "timestamp": "2026-07-26T02:00:00Z",
+  "purpose": "Prepare May for safe, supportive single-user CMA Part 1 exam-prep support",
+
+  "may_posture": {
+    "role": "Local, pre-production CMA study coach",
+    "persona": "Encouraging tutor that helps organize practice, review trends, and suggest steady progress",
+    "NOT_role": [
+      "Pass/fail predictor",
+      "Replacement for official CMA materials (IMA LOS, Gleim, Hock, Wiley)",
+      "Production learner system",
+      "System that pulls real exam details automatically"
+    ]
+  },
+
+  "exam_onboarding_flow": {
+    "step_1_ask_scheduled": {
+      "prompt": "Do you already have a CMA exam scheduled?",
+      "options": ["Yes, I have a date", "No, I'm still planning"],
+      "purpose": "Understand where the test-taker is in their timeline without pressure"
+    },
+    "step_2a_if_yes": {
+      "which_part": {
+        "prompt": "Which part are you preparing for?",
+        "options": ["Part 1 — Financial Planning, Performance, and Analytics", "Part 2 — Strategic Financial Management", "Both Part 1 and Part 2"],
+        "purpose": "Align May's topic recommendations to the correct CMA blueprint"
+      },
+      "exam_date": {
+        "prompt": "What is your scheduled exam date? (optional)",
+        "input_type": "date or approximate",
+        "purpose": "Help plan study weeks and suggest pacing. Optional — no pressure if not set."
+      }
+    },
+    "step_2b_if_no": {
+      "prompt": "Would you like to set a target month or study window?",
+      "input_type": "month picker or free text",
+      "purpose": "Encourage goal-setting without requiring a real registration"
+    }
+  },
+
+  "encouragement_rules": {
+    "do": [
+      "Celebrate progress: 'You've completed X questions this week — great consistency!'",
+      "Highlight trends: 'Your variance analysis accuracy improved from 60% to 75%'",
+      "Suggest focus areas: 'Section D (Cost Management) could use a few more practice sessions'",
+      "Remind about balance: 'Taking a break between sessions helps retention'",
+      "Show milestone progress: 'You've mastered 8 of 15 Section A topics'"
+    ],
+    "do_not": [
+      "Predict pass/fail: NEVER say 'You're on track to pass' or 'You might not be ready'",
+      "Guarantee readiness: NEVER say 'If you finish all questions, you'll be prepared'",
+      "Create pressure: NEVER say 'You're behind schedule' or use alarmist language",
+      "Compare to others: No percentile rankings, no 'top performer' ratings",
+      "Use absolute language: Never 'You will pass' or 'You will fail'"
+    ]
+  },
+
+  "privacy_rules": {
+    "data_stored_locally": "All learner data stays in localStorage only. No cloud sync, no telemetry endpoints, no external API calls.",
+    "data_types_allowed": ["Practice session scores", "Topic-level accuracy", "Time spent per section", "Question history (local only)", "Self-reported exam date/part (voluntary)"],
+    "data_types_prohibited": ["Real name (use pseudonym or skip)", "Email address", "IMA candidate ID", "Payment information", "Location data", "IP-based tracking"],
+    "data_deletion": "Clear browser localStorage to remove all May data. No server-side copies exist."
+  },
+
+  "local_only_cautions": [
+    "All progress is stored in this browser only. Clearing browser data or switching browsers/devices will reset progress.",
+    "There is no backup or sync. Results are ephemeral.",
+    "This is a development/preview tool, not a licensed exam-prep product.",
+    "Official CMA practice questions from IMA are the authoritative preparation resource."
+  ],
+
+  "study_support_features": {
+    "practice_session_builder": "May can suggest a mix of MCQ and case questions from specific sections or across all topics",
+    "weak_topic_identification": "Based on practice history, May can highlight sections with lower accuracy for focused review",
+    "progress_tracking": "Track questions attempted, accuracy by section, time trends over sessions",
+    "session_planning": "Suggest daily/weekly question targets based on exam date (if provided)",
+    "explanation_review": "Link to detailed explanations after each question — focus on learning, not just scoring"
+  },
+
+  "known_deferred_items": [
+    "Keyboard navigation on student rows (S118 deferred)",
+    "Real-user pilot has not been launched — all testing is simulated",
+    "May thresholds are pre-production defaults — not calibrated for real learner data"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "session": 121,
+  "title": "S121 Wrong Choices Implementation Results",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "scope": "100-series May lane only",
+  "implementation": {
+    "newFunctions": [
+      {
+        "name": "_buildWrongChoiceCoaching(question, context)",
+        "file": "may-core.js",
+        "lines": "1330-1395",
+        "purpose": "Builds structured misconception coaching for each wrong answer using ExplanationWrong + inference",
+        "returns": {
+          "choices": "Array of coaching objects with choiceLabel, choiceText, whyTempting, whyWrong, misconception, avoidNextTime, sourceExplanationIncluded, safeFallbackUsed, isSelectedAnswer",
+          "selectedFirst": "boolean — whether selected wrong answer is prioritized",
+          "allSelectionSafe": "boolean — whether context permits full option reveal",
+          "topic": "string — normalized topic name",
+          "sectionName": "string — section display name",
+          "isCalculation": "boolean"
+        }
+      },
+      {
+        "name": "_inferWhyTempting(q, choiceLetter, choiceText, topic, isCalculation)",
+        "file": "may-core.js",
+        "lines": "1397-1439",
+        "purpose": "Infers why a distractor plausibly looks correct — stem/choice overlap, calculation trap, or common distractor pattern detection"
+      },
+      {
+        "name": "_inferWhyWrongFallback(q, choiceLetter, choiceText, topic, correctText)",
+        "file": "may-core.js",
+        "lines": "1441-1447",
+        "purpose": "Safe fallback for why-wrong when ExplanationWrong is thin — grounded in topic, no fabrication"
+      },
+      {
+        "name": "_inferMisconception(q, choiceLetter, choiceText, topic, wrongExp, isCalculation)",
+        "file": "may-core.js",
+        "lines": "1449-1478",
+        "purpose": "Infers the conceptual error behind choosing this option — extracts from ExplanationWrong signals or uses section-aligned misconception patterns"
+      },
+      {
+        "name": "_inferAvoidNextTime(q, choiceLetter, topic, section, isCalculation)",
+        "file": "may-core.js",
+        "lines": "1480-1500",
+        "purpose": "Section-specific pattern-recognition tip for avoiding this trap in future questions"
+      }
+    ],
+    "modifiedFunctions": [
+      {
+        "name": "_explainWrongChoices()",
+        "file": "may-core.js",
+        "lines": "1502-1602",
+        "changes": [
+          "Added answer-gating: active unanswered question → strategy-only output (no option reveal)",
+          "Added selected-answer detection via state.session.answers",
+          "Added review-mode detection via state.session.completed",
+          "Added coaching output with 4-section per-option structure",
+          "Added selected-answer prioritization (*(your answer)* tag)",
+          "Added review-mode 'Pulling it together' summary",
+          "Preserved _guardedSpeak integration and pilot-mode routing",
+          "Preserved null-question and no-choices graceful fallbacks"
+        ]
+      }
+    ]
+  },
+  "safetyPreserved": {
+    "_guardedSpeak": "Still wraps wrong-choices output in pilot mode",
+    "antiFabrication": "No invented ASC/FASB/COSO citations in temptation or misconception inference",
+    "answerLeakage": "NEW — active unanswered gate: strategy-only output, no option names revealed before attempt",
+    "correctChoiceExclusion": "PRESERVED — correct choice never appears in wrong-choice coaching",
+    "examMode": "PRESERVED — blocked by handleAction gate, no changes",
+    "predictionLanguage": "No pass/fail/exam-ready language in any coaching output"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "session": "S115",
+  "type": "SyntheticStudentRollSpec",
+  "timestamp": "2026-07-25",
+  "totalStudents": 8,
+  "allSynthetic": true,
+  "allPreProduction": true,
+  "deterministicGeneration": true,
+  "generatorFunction": "May._generateSyntheticStudentRoll()",
+  "storageKey": "cmaMayStudentRoll",
+  "students": [
+    {
+      "learnerId": "synth-avery",
+      "displayName": "Avery Pilot",
+      "archetype": "First-time candidate, early study stage",
+      "sessions": 2,
+      "topics": ["Financial statements (55%)", "Planning and budgeting (60%)"],
+      "readinessSnapshot": "Not enough data",
+      "weakAreas": ["Financial statement classification", "Budget components"],
+      "keyTestingValue": "Tests May's 'not enough data' gating — low volume, no readiness bands triggered"
+    },
+    {
+      "learnerId": "synth-jordan",
+      "displayName": "Jordan Sample",
+      "archetype": "Returning candidate with stable improvement",
+      "sessions": 8,
+      "topics": ["Financial statements (78%)", "Variance analysis (82%)", "Cost behavior (76%)", "Internal controls (70%)"],
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": ["Internal controls — COSO components"],
+      "progressSignals": ["Improving on variance analysis (+15%)", "Improving on cost behavior (+12%)"],
+      "keyTestingValue": "Tests improvement-insight and recommendation logic"
+    },
+    {
+      "learnerId": "synth-morgan",
+      "displayName": "Morgan Demo",
+      "archetype": "Persistent weakness in budgeting",
+      "sessions": 6,
+      "topics": ["Planning and budgeting (45%)", "Cost behavior (82%)", "Financial statements (80%)"],
+      "readinessSnapshot": "Developing",
+      "weakAreas": ["Budget preparation order", "Flexible budget calculations", "Cash budget components"],
+      "keyTestingValue": "Tests recovery-set generation and weakness insight for persistent-weak topics"
+    },
+    {
+      "learnerId": "synth-riley",
+      "displayName": "Riley Practice",
+      "archetype": "Cost-management difficulty sensitivity, hint-dependent",
+      "sessions": 5,
+      "topics": ["Cost behavior (62%)", "Standard costing (55%)"],
+      "readinessSnapshot": "Developing",
+      "weakAreas": ["Variance analysis at high difficulty", "Standard costing methods"],
+      "progressSignals": ["Hint-dependent on cost topics", "Difficulty-sensitive (30% gap)"],
+      "keyTestingValue": "Tests S113 difficulty-sensitivity and hint-dependency evidence validators"
+    },
+    {
+      "learnerId": "synth-taylor",
+      "displayName": "Taylor Sandbox",
+      "archetype": "Controls strength, analytics weakness",
+      "sessions": 7,
+      "topics": ["Internal controls (85%)", "COSO framework (88%)", "Technology and analytics (50%)"],
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": ["Data governance", "IT general controls", "Emerging technology in accounting"],
+      "keyTestingValue": "Tests section-level readiness differentiation and asymmetric topic recommendations"
+    },
+    {
+      "learnerId": "synth-casey",
+      "displayName": "Casey Trial",
+      "archetype": "Hint-dependent behavior",
+      "sessions": 4,
+      "topics": ["Performance management (75%)", "Forecasting (72%)"],
+      "readinessSnapshot": "Developing",
+      "progressSignals": ["Hint use increasing (20% → 70%)", "Accuracy stable at 75%"],
+      "keyTestingValue": "Tests S113 hint-dependency evidence validator and recommendation-gate behavior"
+    },
+    {
+      "learnerId": "synth-quinn",
+      "displayName": "Quinn Sim",
+      "archetype": "Unstable recent performance",
+      "sessions": 6,
+      "topics": ["Financial statements (62%)", "Cost behavior (58%)", "Internal controls (68%)"],
+      "readinessSnapshot": "Recovery needed",
+      "progressSignals": ["Unstable performance (stability 35%)", "Wide accuracy swings (40%-85%)"],
+      "keyTestingValue": "Tests S113 instability evidence validator and readiness provenance for unstable profiles"
+    },
+    {
+      "learnerId": "synth-parker",
+      "displayName": "Parker Test",
+      "archetype": "Strong readiness, sparse case practice",
+      "sessions": 10,
+      "topics": ["Financial statements (85%)", "Variance analysis (82%)", "Internal controls (84%)", "Cost behavior (78%)"],
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": ["Case-based practice (only 2 sessions)"],
+      "keyTestingValue": "Tests case-burden degradation logic and practice-mix recommendations"
+    }
+  ],
+  "requiredFieldsPerStudent": [
+    "learnerId", "displayName", "synthetic", "preProduction", "lastActiveAt",
+    "profileSummary", "sessions", "topicStats", "readinessSnapshot",
+    "weakAreas", "progressSignals", "recentTutoringInteractions",
+    "pilotUsageLog", "safetyLog", "gateLog", "notes", "_learnerState"
+  ],
+  "confirmationNoRealData": true
+}

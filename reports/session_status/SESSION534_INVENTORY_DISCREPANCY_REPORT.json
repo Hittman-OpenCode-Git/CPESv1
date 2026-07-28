@@ -1,0 +1,61 @@
+{
+  "report_type": "INVENTORY_DISCREPANCY_REPORT",
+  "session": "S534",
+  "trigger": "Missing Inventory Governance Directive",
+  "timestamp": "2026-07-26",
+  "expected_targets": [
+    { "case_id": "CBQ-G1", "section": "G", "domain": "Unknown", "status_in_roadmap": "Planned" },
+    { "case_id": "CBQ-H1", "section": "H", "domain": "Unknown", "status_in_roadmap": "Planned" }
+  ],
+  "actual_inventory": {
+    "source_file": "scored_cases.js",
+    "total_cases": 15,
+    "cases": [
+      "CBQ-A1", "CBQ-A2", "CBQ-A3",
+      "CBQ-B1", "CBQ-B2", "CBQ-B3",
+      "CBQ-C1", "CBQ-C2", "CBQ-C3",
+      "CBQ-D1", "CBQ-D2",
+      "CBQ-E1", "CBQ-E2",
+      "CBQ-F1", "CBQ-F2"
+    ],
+    "sections_present": ["A", "B", "C", "D", "E", "F"],
+    "sections_absent": ["G", "H", "I", "J", "K", "L"]
+  },
+  "variance": {
+    "missing_cases": [
+      "CBQ-G1", "CBQ-H1",
+      "CBQ-I1", "CBQ-J1",
+      "CBQ-K1", "CBQ-L1"
+    ],
+    "all_roadmapped_but_none_exist": true,
+    "total_missing": 6,
+    "total_planned_in_roadmap_but_missing": 6
+  },
+  "classification": "A — Roadmap Error",
+  "classification_detail": "The ENHANCED_CASE_BASE roadmap was expanded between S529 (original: 6 waves covering A-F) and S532 (expanded: 8 waves covering A-L with new G1-L1 entries). The expanded roadmap added G1 through L1 cases as Planned targets but these cases were never authored. The original S529 roadmap had S534 targeting existing CBQ-C2 + CBQ-D2.",
+  "root_cause": "Roadmap was expanded to include non-existent future cases (G1-L1) without a corresponding authoring phase. The certification pipeline was directed at targets that exist only in a planning document, not in source files.",
+  "recommendation": "Re-route S534 to the deferred S531 target: CBQ-A1 + CBQ-B1. These cases exist in scored_cases.js, are Unprocessed, and were described as 'ready when pipeline validates' by S533. This preserves the 12-item wave size and the proven S532/S533 certification pattern.",
+  "authoring_required": false,
+  "available_existing_cases": {
+    "certified": [
+      "CBQ-C1 (6 items Certified)",
+      "CBQ-D1 (6 items Certified)",
+      "CBQ-E1 (6 items Certified)",
+      "CBQ-F1 (6 items Certified)"
+    ],
+    "unprocessed_ready": [
+      "CBQ-A1 (6 items, deferred S531 target)",
+      "CBQ-B1 (6 items, deferred S531 target)"
+    ],
+    "unprocessed_remaining": [
+      "CBQ-A2", "CBQ-A3",
+      "CBQ-B2", "CBQ-B3",
+      "CBQ-C2", "CBQ-C3",
+      "CBQ-D2",
+      "CBQ-E2",
+      "CBQ-F2"
+    ]
+  },
+  "session_disposition": "BLOCKED — Cannot certify non-existent content. Recommend re-routing to existing Unprocessed cases.",
+  "governance_compliance": "Missing Inventory Governance Directive Rules 1-4 satisfied. Stopped all certification work before any writes. No pack files, case files, or metadata modified."
+}

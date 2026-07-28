@@ -1,0 +1,161 @@
+{
+  "spec_version": "AUTHORING_QUALITY_GATE_v1.0",
+  "session": "311",
+  "agent": "I",
+  "title": "Authoring Quality Gate — Mandatory Workflow for All 800-Series Items",
+  "generated": "2026-07-26",
+  "status": "Active — applies to S804+ execution",
+
+  "workflow": [
+    {
+      "gate": 1,
+      "name": "Draft",
+      "description": "Item is authored with stem, 4 choices (A-D), CorrectChoice, ExplanationCorrect, ExplanationWrong[A-D], DifficultyScore, CognitiveLevel, Topics, LOSTag.",
+      "entryCriteria": "None — all new items start here",
+      "exitCriteria": "All required fields present. Stem and choices are complete. Author self-review complete.",
+      "outputState": "Draft",
+      "who": "Author"
+    },
+    {
+      "gate": 2,
+      "name": "Technical Review",
+      "description": "Automated + human review for structural compliance and defect detection.",
+      "checks": [
+        {
+          "check": "DL-008 Scan",
+          "description": "ExplanationWrong[CorrectChoice] must be empty string",
+          "method": "Automated — verify EW field at CC index is '' or missing",
+          "severity": "BLOCK — item cannot advance with DL-008"
+        },
+        {
+          "check": "DL-026 Scan",
+          "description": "All ExplanationWrong fields for non-CorrectChoice distractors must be non-empty",
+          "method": "Automated — verify EW fields at non-CC indices have content ≥ 50 chars",
+          "severity": "BLOCK"
+        },
+        {
+          "check": "DL-013 Scan",
+          "description": "No template boilerplate in any ExplanationCorrect or ExplanationWrong field",
+          "method": "Automated — scan for '[Explanation of why', '[This is', placeholder brackets",
+          "severity": "BLOCK"
+        },
+        {
+          "check": "DL-010 Scan",
+          "description": "ExplanationCorrect topic matches stem topic (no cross-contamination)",
+          "method": "Human review — compare EC content against stem scenario topic",
+          "severity": "BLOCK"
+        },
+        {
+          "check": "Field Completeness",
+          "description": "All metadata fields present: QuestionID, Topic, DifficultyScore, CognitiveLevel, LOSTag, ProductionStatus",
+          "method": "Automated — verify all required keys exist and are non-null",
+          "severity": "BLOCK"
+        }
+      ],
+      "defectsCaught": ["DL-008", "DL-026", "DL-013", "DL-010", "Missing fields"],
+      "outputState": "Technical Review Passed",
+      "who": "Automated scanner + Technical Reviewer"
+    },
+    {
+      "gate": 3,
+      "name": "Blueprint Review",
+      "description": "Verify alignment with IMA CMA Part 1 Content Specification Outline.",
+      "checks": [
+        {
+          "check": "Topic Accuracy",
+          "description": "Item topic matches a specific Section E or F CSO LOS",
+          "method": "Human review against IMA CSO"
+        },
+        {
+          "check": "LOSTag Precision",
+          "description": "LOSTag references a precise CSO outcome (e.g., 'F.2.a') not generic section label",
+          "method": "Cross-reference against CSO"
+        },
+        {
+          "check": "CognitiveLevel Accuracy",
+          "description": "CognitiveLevel matches the actual cognitive demand of the item",
+          "method": "Independent reviewer classifies against Bloom's taxonomy"
+        },
+        {
+          "check": "Difficulty Calibration",
+          "description": "DifficultyScore matches actual cognitive demand and LOS verb depth",
+          "method": "Independent reviewer — definition-recall = Easy, multi-step = Difficult"
+        },
+        {
+          "check": "Part 1 Relevance",
+          "description": "Item tests CMA Part 1 material, not Part 2 concepts",
+          "method": "Verify topic is in Part 1 CSO, not Part 2"
+        }
+      ],
+      "defectsCaught": ["DL-031 (difficulty inflation)", "Wrong CognitiveLevel", "Imprecise LOSTag", "Part 2 content in Part 1"],
+      "outputState": "Blueprint Review Passed",
+      "who": "Blueprint Reviewer (independent from author)"
+    },
+    {
+      "gate": 4,
+      "name": "QA Review",
+      "description": "Pedagogical quality and learner experience review.",
+      "checks": [
+        {
+          "check": "Stem Clarity",
+          "description": "Stem is unambiguous, contains all needed data, no trick wording",
+          "method": "Human review — can a competent CMA candidate answer without guessing what's being asked?"
+        },
+        {
+          "check": "Distractor Plausibility",
+          "description": "All distractors are plausible alternatives, not obviously wrong",
+          "method": "Human review — would a knowledgeable but imperfect learner plausibly select each distractor?"
+        },
+        {
+          "check": "ExplanationCorrect Quality",
+          "description": "EC ≥ 400 chars. Includes framework citation, substantive reasoning, common exam trap identified",
+          "method": "Human review — is this explanation teaching something or just confirming the answer?"
+        },
+        {
+          "check": "ExplanationWrong Specificity",
+          "description": "Each EW is choice-specific and explains WHY that specific choice is wrong",
+          "method": "Human review — could this EW apply to a different distractor? If yes, it's too generic"
+        },
+        {
+          "check": "Answer Key Correctness",
+          "description": "CorrectChoice is independently verified against authoritative sources",
+          "method": "Independent verification — second reviewer confirms answer without seeing author's CorrectChoice first"
+        }
+      ],
+      "defectsCaught": ["Ambiguous stems", "Implausible distractors", "Thin explanations", "Generic EW", "Wrong answers"],
+      "outputState": "QA Review Passed",
+      "who": "QA Reviewer (independent from author and blueprint reviewer)"
+    },
+    {
+      "gate": 5,
+      "name": "Certification Candidate",
+      "description": "Item has passed all four gates. Ready for batch certification session.",
+      "entryCriteria": "All previous gates PASS",
+      "checks": [
+        "Technical Review: PASS",
+        "Blueprint Review: PASS",
+        "QA Review: PASS",
+        "All reviewer sign-offs documented"
+      ],
+      "outputState": "Certification Candidate",
+      "who": "Session lead — batch promotes Certification Candidate → Certified in certification session"
+    }
+  ],
+
+  "governanceRulesEnforced": {
+    "dl008": "Rule 2 (BLOCK) — EW[CC] must be empty — caught at Technical Review",
+    "dl026": "Empty distractor slots — caught at Technical Review",
+    "dl013": "Template boilerplate — caught at Technical Review",
+    "dl010": "Cross-contaminated explanations — caught at Technical Review",
+    "dl031": "Difficulty inflation — caught at Blueprint Review",
+    "caqs16": "Six-dimension verification — distributed across Technical, Blueprint, and QA Review gates"
+  },
+
+  "integrationWith800Series": {
+    "perSession": "Every 800-series session (S804+) must apply this 5-gate workflow to all new or modified items",
+    "reviewerIndependence": "Author, Technical Reviewer, Blueprint Reviewer, and QA Reviewer must be different individuals (or different sessions for solo operator)",
+    "batchCertification": "Items that reach 'Certification Candidate' state are batched for certification in dedicated certification sessions (max 30 per batch per Rule 5)",
+    "revisionHistory": "Each gate transition → REVISION_HISTORY.md entry per AGENTS.md §4 and Rule 1",
+    "backupProtocol": "Backup-before-write mandatory per AGENTS.md §3 for all write operations"
+  }
+}

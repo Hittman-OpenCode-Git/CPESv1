@@ -1,0 +1,242 @@
+[
+  {
+    "QuestionID": "P1-E-R01",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-001",
+      "P1-EC-002",
+      "P1-EC-003",
+      "P1-EC-004",
+      "P1-EC-005"
+    ],
+    "Topic": "segregation of duties design",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R02",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-006",
+      "P1-EC-007",
+      "P1-EC-008",
+      "P1-EC-009",
+      "P1-EC-010"
+    ],
+    "Topic": "coso internal control framework",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R03",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-011",
+      "P1-EC-012",
+      "P1-EC-013",
+      "P1-EC-014",
+      "P1-EC-015"
+    ],
+    "Topic": "fraud triangle elements",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R04",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-016",
+      "P1-EC-017",
+      "P1-EC-018",
+      "P1-EC-019",
+      "P1-EC-020"
+    ],
+    "Topic": "physical controls over assets",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R05",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-026",
+      "P1-EC-027",
+      "P1-EC-028",
+      "P1-EC-029",
+      "P1-EC-030"
+    ],
+    "Topic": "bank reconciliation control",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R06",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-041",
+      "P1-EC-042",
+      "P1-EC-043",
+      "P1-EC-044",
+      "P1-EC-045"
+    ],
+    "Topic": "management override risk",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R07",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-046",
+      "P1-EC-047",
+      "P1-EC-048",
+      "P1-EC-049",
+      "P1-EC-050"
+    ],
+    "Topic": "whistleblower hotline purpose",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R08",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-056",
+      "P1-EC-057",
+      "P1-EC-058",
+      "P1-EC-059",
+      "P1-EC-060"
+    ],
+    "Topic": "control environment tone at top",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R09",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-ED-001",
+      "P1-ED-002",
+      "P1-ED-003",
+      "P1-ED-004",
+      "P1-ED-005"
+    ],
+    "Topic": "three lines of defense model",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R10",
+    "RelationshipType": "REPLACEMENT",
+    "ReplacedQIDs": [
+      "P1-EC-051",
+      "P1-EC-052",
+      "P1-EC-053",
+      "P1-EC-054",
+      "P1-EC-055"
+    ],
+    "Topic": "compensating control small business",
+    "Classification": "EXACT_DUPLICATE_GROUP",
+    "SimilarityScore": 1,
+    "Notes": "Wave 1 Domain E replacement — consolidates 5-clone group into 1 unique item"
+  },
+  {
+    "QuestionID": "P1-E-R11",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "preventive control examples",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — Replaces clone group for preventive control classification"
+  },
+  {
+    "QuestionID": "P1-E-R14",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "IT general controls",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — Replaces clone group P1-EC-036 through P1-EC-040"
+  },
+  {
+    "QuestionID": "P1-E-R15",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "application controls",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — Replaces clone group for application controls IPO classification"
+  },
+  {
+    "QuestionID": "P1-E-R16",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "risk assessment process",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — New coverage for E.1.d — no direct clone group replacement"
+  },
+  {
+    "QuestionID": "P1-E-R17",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "risk responses",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — New coverage for E.1.d — no direct clone group replacement"
+  },
+  {
+    "QuestionID": "P1-E-R19",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "SOX 302 certification",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — Replaces clone group for SOX sections"
+  },
+  {
+    "QuestionID": "P1-E-R20",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "SOX 404 assessment",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — Replaces clone group for SOX internal control reporting"
+  },
+  {
+    "QuestionID": "P1-E-R30",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "logical access controls",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — Replaces clone group for access controls"
+  },
+  {
+    "QuestionID": "P1-E-R31",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "disaster recovery",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — Replaces clone group for IT continuity controls"
+  },
+  {
+    "QuestionID": "P1-E-R32",
+    "RelationshipType": "REPLACEMENT_PENDING",
+    "ReplacedQIDs": [],
+    "Topic": "vendor risk assessment",
+    "Classification": "UNIQUE_OR_PENDING",
+    "SimilarityScore": 0,
+    "Notes": "Wave 2 Domain E target — New coverage for E.1.d third-party risk"
+  }
+]

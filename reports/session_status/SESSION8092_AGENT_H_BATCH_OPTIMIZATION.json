@@ -1,0 +1,142 @@
+{
+  "session": "S809.2",
+  "agent": "H",
+  "role": "Batch Optimization Planner",
+  "compiled_by": "Agent J (from Agent F certification dependency order + Agent D EW gap distribution + governance-guard Rule 5 constraints)",
+  "batch_optimization": {
+    "design_principles": [
+      "Governance-guard Rule 5: maximum 28 items per batch",
+      "BACKUP_PROTOCOL.md: backup-before-every-edit mandatory",
+      "Independent post-batch verification after each batch",
+      "Pack C and Pack D batches can run in parallel (different pack files)",
+      "CorrectChoice lock required before any EW authoring begins (see Pre-Flight §1)",
+      "EW authoring standard: minimum 50 chars, choice-specific, COSO-principled"
+    ],
+    "wave_plan": {
+      "wave_1": {
+        "name": "Foundation — COSO Framework + Control Environment + Risk Assessment",
+        "total_items": 4,
+        "qids": ["P1-EC-008", "P1-EC-060", "P1-EC-061", "P1-ED-042"],
+        "ew_slots_to_author": 6,
+        "ec_to_enhance": 2,
+        "rationale": "These 4 items provide the conceptual scaffolding for all 34 remaining seeds. EC-008 (COSO framework) is the most foundational — all other Domain E items presuppose familiarity with COSO's five components. EC-060 (control environment/tone at top) and EC-061 (inherent vs control risk) are the first two COSO components. ED-042 (risk assessment likelihood/impact) is prerequisite for ERM items in Wave 2. Small batch (4 items) for quick certification pass and dependency unlocking.",
+        "batch_size_rule5_compliant": true,
+        "parallel_packs": "EC-008, EC-060, EC-061 in Pack C + ED-042 in Pack D — parallel execution possible"
+      },
+      "wave_2": {
+        "name": "Core Concepts — ERM + Segregation of Duties + Limitations",
+        "total_items": 12,
+        "qids": [
+          "P1-EC-031", "P1-ED-016",
+          "P1-EC-004", "P1-EC-021", "P1-EC-066", "P1-ED-074", "P1-ED-075",
+          "P1-EC-041", "P1-ED-058"
+        ],
+        "ew_slots_to_author": 18,
+        "ec_to_enhance": 6,
+        "sub_batches": [
+          {
+            "sub_batch_2a": {
+              "name": "COSO ERM",
+              "items": 2,
+              "qids": ["P1-EC-031", "P1-ED-016"],
+              "rationale": "ERM extends the Risk Assessment foundation from Wave 1. Risk appetite and risk response strategies. ED-016 has 2 DL-013 boilerplate slots + 1 empty — needs full EW re-authoring."
+            }
+          },
+          {
+            "sub_batch_2b": {
+              "name": "Segregation of Duties",
+              "items": 5,
+              "qids": ["P1-EC-004", "P1-EC-021", "P1-EC-066", "P1-ED-074", "P1-ED-075"],
+              "rationale": "Highest CMA exam relevance of any Domain E sub-topic. EC-004 (design principles) should be certified before applied-scenario items. EC-066 is 3-HIGH-risk (only 1/4 EW slots populated). ED-075 has 2 DL-013 boilerplate slots."
+            }
+          },
+          {
+            "sub_batch_2c": {
+              "name": "Internal Control Limitations",
+              "items": 2,
+              "qids": ["P1-EC-041", "P1-ED-058"],
+              "rationale": "Management override and cost-benefit limitation. Bridge the framework concepts (Wave 1) to practical application (Wave 3)."
+            }
+          }
+        ],
+        "batch_size_rule5_compliant": true,
+        "parallel_packs": "Pack C (EC-031, EC-004, EC-021, EC-066, EC-041) and Pack D (ED-016, ED-074, ED-075, ED-058) can run in parallel"
+      },
+      "wave_3": {
+        "name": "Control Activities — Core + IT-Dependent + IT Continuity",
+        "total_items": 15,
+        "qids": {
+          "sub_batch_3a_core_activities": ["P1-EC-025", "P1-EC-020", "P1-EC-028", "P1-EC-052", "P1-ED-014", "P1-ED-025", "P1-ED-064"],
+          "sub_batch_3b_it_dependent": ["P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-040", "P1-ED-010", "P1-ED-051"],
+          "sub_batch_3c_it_continuity": ["P1-ED-035", "P1-ED-036", "P1-ED-071"]
+        },
+        "ew_slots_to_author": 20,
+        "ec_to_enhance": 6,
+        "sub_batches_rationale": [
+          "3a (7 items): Core Control Activities — preventive/detective classification, physical controls, bank rec, compensating, independent verification, authorization, vendor master file. EC-025 (preventive vs detective) should lead this sub-batch since it provides the classification framework for remaining items. EC-020 is P0 priority (2 misaligned DL-010 slots + 1 empty — full re-authoring).",
+          "3b (6 items): IT-Dependent Control Activities — duplicate payment, IT access deprovisioning, application input validation, ITGC access, least privilege, authentication. Depends on preventive/detective distinction from 3a. EC-022 is 3-HIGH-risk (only 1/4 EW slots populated). ED-051 has DL-010 + DL-013 issues.",
+          "3c (3 items): IT Continuity and Change Management — backup/DR, change management (standard + emergency bypass). Depends on IT-dependent controls in 3b."
+        ],
+        "batch_size_rule5_compliant": true,
+        "parallel_packs": "Pack C items (EC-025, EC-020, EC-028, EC-052, EC-022, EC-023, EC-024, EC-040) and Pack D items (ED-014, ED-025, ED-064, ED-010, ED-051, ED-035, ED-036, ED-071) can run in parallel"
+      },
+      "wave_4": {
+        "name": "Capstone — Fraud + Monitoring + I&C + Ethics + Governance",
+        "total_items": 7,
+        "qids": [
+          "P1-EC-014", "P1-ED-072",
+          "P1-EC-072", "P1-ED-028", "P1-ED-073",
+          "P1-EC-049",
+          "P1-ED-046",
+          "P1-ED-001", "P1-ED-066"
+        ],
+        "ew_slots_to_author": 9,
+        "ec_to_enhance": 3,
+        "sub_batches": [
+          {
+            "sub_batch_4a": {
+              "name": "Fraud Prevention",
+              "items": 2,
+              "qids": ["P1-EC-014", "P1-ED-072"],
+              "rationale": "Fraud triangle theory + applied purchasing fraud scenario. EC-014 is 3-HIGH-risk (only 1/4 EW slots populated). Depends on risk assessment (Wave 1) and limitations (Wave 2). EC-014 (fraud triangle) should precede ED-072 (applied scenario)."
+            }
+          },
+          {
+            "sub_batch_4b": {
+              "name": "Monitoring + I&C",
+              "items": 4,
+              "qids": ["P1-EC-072", "P1-ED-028", "P1-ED-073", "P1-EC-049"],
+              "rationale": "Monitoring (ongoing evaluations, exception reports, remediation) + Information & Communication (whistleblower). Depends on control activities foundation (Wave 3). EC-049 is the sole I&C seed."
+            }
+          },
+          {
+            "sub_batch_4c": {
+              "name": "Ethics + Governance",
+              "items": 3,
+              "qids": ["P1-ED-046", "P1-ED-001", "P1-ED-066"],
+              "rationale": "Code of conduct (ethics) + three lines of defense + audit committee oversight. Capstone items integrating all prior waves. ED-046 has 2 empty slots + 1 truncated boilerplate. ED-001 and ED-066 need DL-031 difficulty recalibration (labeled Difficult, actual Understand)."
+            }
+          }
+        ],
+        "batch_size_rule5_compliant": true
+      }
+    },
+    "effort_estimates": {
+      "total_ew_slots": 53,
+      "total_boilerplate_replacements": 9,
+      "total_ec_enhancements": 17,
+      "estimated_batches": 7,
+      "estimated_session_hours": "8–12 (assuming 30-45 min per batch with independent verification)",
+      "parallel_execution_time": "4–6 hours (Pack C and Pack D batches run concurrently where possible)"
+    },
+    "execution_rules": [
+      "Backup before every pack-file edit (BACKUP_PROTOCOL.md)",
+      "Independent post-batch verification required after each batch",
+      "CorrectChoice must not change — this is distractor authoring, not answer-key modification",
+      "CC audit must complete (Pre-Flight §1) before Wave 1 begins",
+      "Governance guard Rule 2 compliance verified for all CorrectChoice slots after each batch",
+      "Pre-delivery safety check after Wave 4 before any certification decisions"
+    ]
+  },
+  "notes": "Batch plan deduplicated from Agent F's 13-wave certification ordering into 4 execution waves with 7 sub-batches. All batches comply with governance-guard Rule 5 (<=28 items). Pack C and Pack D are on separate files — batches can run in parallel within each wave. The 9 DL-013 boilerplate slots (all in Pack D Items ED-016, ED-036, ED-046, ED-051, ED-075) should be replaced during their respective wave execution rather than as a separate boilerplate-specific pass."
+}

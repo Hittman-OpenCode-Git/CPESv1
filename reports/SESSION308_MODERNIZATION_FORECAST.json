@@ -1,0 +1,51 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "currentState": {
+    "cloneRotationRate": "86-90% in Packs C/D Sections E/F",
+    "cloneArchivedItems": 112,
+    "dl013BoilerplateFields": 851,
+    "dl031InflatedItems": 500,
+    "ecMeanLength": 213,
+    "packECDisparity": "Pack A Section E: 986 chars vs Pack E Section E: 68 chars (14.5x ratio per S303)"
+  },
+  "forecast": [
+    {
+      "activity": "Clone reduction audit",
+      "items": "~765 reviewable",
+      "sessions": 2,
+      "uiqsGain": "+1.5",
+      "impact": "Removes rotation noise from the pool"
+    },
+    {
+      "activity": "DL-013 boilerplate cleanup",
+      "items": 851,
+      "sessions": 2,
+      "uiqsGain": "+1.0",
+      "impact": "Template text → choice-specific EW"
+    },
+    {
+      "activity": "DL-031 difficulty recalibration",
+      "items": 500,
+      "sessions": 2,
+      "uiqsGain": "+0.5",
+      "impact": "Difficulty/CognitiveLevel alignment"
+    },
+    {
+      "activity": "Pack E EC uplift",
+      "items": 500,
+      "sessions": 3,
+      "uiqsGain": "+3.0",
+      "impact": "Pack E mean EC from 108 → 400+ chars"
+    },
+    {
+      "activity": "Cross-pack EC normalization",
+      "items": "All packs",
+      "sessions": 1,
+      "uiqsGain": "+0.5",
+      "impact": "Reduce 14.5x intra-section disparity"
+    }
+  ],
+  "totalSessions": 10,
+  "projectedImpact": "UIQS +6.5 points from modernization alone. Improves pool consistency and learner experience.",
+  "priority": "LOW-MEDIUM — modernization is quality-polish, not safety-critical. Can be deferred or integrated into certification waves."
+}

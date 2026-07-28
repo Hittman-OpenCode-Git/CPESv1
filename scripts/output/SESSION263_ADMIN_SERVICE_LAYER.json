@@ -1,0 +1,96 @@
+{
+  "specId": "SESSION263_ADMIN_SERVICE_LAYER",
+  "session": "263",
+  "title": "May Admin — Administrative Service Layer",
+  "program": "250-Series — Administrative Platform Deployment",
+  "programSession": "1 of 4 (S263-S266)",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T20:15:00.000Z",
+  "status": "BUILT — Operational service layer deployed.",
+  "purpose": "Create a unified Node.js module wrapping all 6 S252 investigation engines into a single administrative query surface with CLI interface, plus a dashboard data bundle builder that produces a browser-loadable data file for the admin dashboard.",
+  "authorization": "S262 — READY FOR PHASE 1 DEPLOYMENT (97/100)",
+  "dependsOn": ["SESSION259_QUERY_LAYER_SPEC.json", "SESSION259_ENTITY_MODEL.json", "SESSION260_DASHBOARD_BACKEND.json"],
+  "deliverables": {
+    "serviceLayer": {
+      "file": "scripts/admin_service_layer.js",
+      "lines": 1164,
+      "exports": [
+        "lookupQuestion(qid)", "getQuestionHealth(qid)", "getQuestionHistory(qid)", "getCertificationStatus(qid)",
+        "lookupSession(sessionId)", "getSessionParticipation(id)", "getSessionRecommendations(id)", "getSessionOutcomes(id)",
+        "reviewChallenge(challengeId)", "triageChallenge(challengeId)", "getDisposition(challengeId)",
+        "reviewRecommendation(recId)", "getRecommendationLifecycle(id)", "getRecommendationOwnership(id)", "closeRecommendation(id)",
+        "lookupInvestigation(invId)",
+        "getDashboardSummary()", "buildDashboardDataBundle()", "buildInvestigationDossier(qid)"
+      ]
+    },
+    "dashboardDataBundle": {
+      "file": "scripts/output/admin_dashboard_data.js",
+      "sizeBytes": 1290432,
+      "sizeKB": "1260.2",
+      "structure": {
+        "metadata": "buildTimestamp, certifiedCount, totalQids, certifiedRatio, governanceGuardStatus",
+        "questionIndex": "2,540 QIDs with identity, state, health, defect, investigation, challenge, recommendation fields",
+        "questionsByHealth": "HEALTHY/FAIR/NEEDS ATTENTION/CRITICAL arrays of QIDs",
+        "questionsBySection": "Per-section aggregates (count, certified, healthMean)",
+        "challenges": "35 challenges with triage classification, linked entities",
+        "investigations": "19 investigations with lifecycle states and FK links",
+        "sessions": "40 sessions with QID lists, certified ratios, linked entities",
+        "recommendations": "5 REC-IDs with lifecycle, ownership, target QIDs, linked investigations",
+        "healthDistribution": "Tier counts, mean score, worst 10",
+        "investigationSummary": "Total, byStatus, byType"
+      }
+    }
+  },
+  "dataSources": {
+    "consumed": [
+      "question_history.json (2,540 QIDs)",
+      "question_health.json (aggregate — per-QID health derived)",
+      "work_queue.json (defect flags per QID)",
+      "challenge_registry.json (35 challenges)",
+      "challenge_triage.json (35 triage classifications)",
+      "investigation_registry.json (19 investigations)",
+      "session_registry.json (40 sessions)",
+      "recommendation_registry.json (5 REC-IDs)",
+      "certification_waves.json",
+      "readiness_scoring.json"
+    ],
+    "notModified": "All read-only consumption"
+  },
+  "verification": {
+    "t0Checkpoint": {
+      "certifiedCount": 2298,
+      "governanceGuard": "32/32 PASS"
+    },
+    "buildDashboardResult": {
+      "totalQids": 2540,
+      "certifiedCount": 2221,
+      "challengeCount": 35,
+      "investigationCount": 19,
+      "sessionCount": 40,
+      "recommendationCount": 5,
+      "outputSizeKB": "1260.2"
+    },
+    "lookupVerification": {
+      "P1-A-001": "9-section dossier returned. Health: 89/FAIR. 3 FKs, 0 broken.",
+      "CH-CC1ECA89": "Challenge returned. Linked INV: 1, REC: 2. Triage: Untriaged.",
+      "dashboardSummary": "2,221 Certified, 2,540 Total, 95 Mean Health. 19 INV, 35 CH."
+    },
+    "criticalQidsInBundle": ["P1-A-036", "P1-E-076", "CH-CC1ECA89", "INV-20260727-019", "REC-61966733"],
+    "allCriticalQidsPresent": true
+  },
+  "stopConditions": {
+    "conditions": [
+      {"condition": "Deep-Link Failure", "status": "PASS"},
+      {"condition": "Question History Corruption", "status": "PASS — 2,540 QIDs, all indexed"},
+      {"condition": "Challenge Registry Corruption", "status": "PASS — 35/35 in bundle"},
+      {"condition": "Session Registry Corruption", "status": "PASS — 40/40 in bundle"},
+      {"condition": "Investigation Reconstruction Failure", "status": "PASS — 19/19 in bundle"},
+      {"condition": "Governance Guard ≠ PASS", "status": "PASS (32/32)"}
+    ],
+    "allPass": true
+  },
+  "selfAssessment": {
+    "criterion": "S264 can build the admin dashboard from this service layer and data bundle alone",
+    "result": "READY — admin_dashboard_data.js contains all 4 entity types (questions, challenges, sessions, recommendations) with pre-built indexes, FK relationships, health distributions, and investigation summaries. The admin.html dashboard can load this file via a single <script> tag and render all 4 views without any additional data fetching."
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "specId": "SESSION252_QUESTION_HEALTH",
+  "board": "E",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T18:00:00.000Z",
+  "description": "Question Health Engine — aggregates multiple health signals into a unified 0-100 health score for each CMA Part 1 question.",
+  "dataSources": [
+    {
+      "file": "scripts/output/question_history.json",
+      "purpose": "Primary per-QID source: currentState, defectHistory, challenges, recommendations, sessions, timeline, topic, section, pack, cognitiveLevel, difficulty",
+      "fields": ["questionId", "currentState", "pack", "section", "topic", "cognitiveLevel", "difficulty", "difficultyScore", "timeline.totalSessions", "timeline.totalRecommendations", "timeline.totalChallenges", "timeline.totalDefects", "defectHistory[].defectId", "defectHistory[].severity", "defectHistory[].status", "challenges[].challengeId", "challenges[].status", "challenges[].type", "recommendations[].recommendationId", "recommendations[].status", "recommendations[].type"],
+      "loadStrategy": "Full parse — QID-indexed map"
+    },
+    {
+      "file": "scripts/output/work_queue.json",
+      "purpose": "Per-QID defect_flags for structural signal (DL-008, DL-026, EV3)",
+      "fields": ["lanes.CERTIFY[].qid", "lanes.CERTIFY[].defect_flags", "lanes.BLOCKED[].qid", "lanes.BLOCKED[].defect_flags", "lanes.REMEDIATE[].qid", "lanes.REMEDIATE[].defect_flags"],
+      "loadStrategy": "Lane-flattened QID lookup map"
+    },
+    {
+      "file": "scripts/output/challenge_registry.json",
+      "purpose": "Validates challenge IDs; cross-reference for challenge type/status verification",
+      "fields": ["challenges[].challengeId", "challenges[].status", "challenges[].type"],
+      "loadStrategy": "Optional — primary challenge data comes from question_history.json"
+    },
+    {
+      "file": "scripts/output/recommendation_registry.json",
+      "purpose": "Provides recommendation-level metadata (severity, sourceScan) for the recommendation signal",
+      "fields": ["recommendations[].recommendationId", "recommendations[].severity", "recommendations[].status", "recommendations[].sourceScan"],
+      "loadStrategy": "RecommendationId-indexed map for augmentation"
+    }
+  ],
+  "scoringAlgorithm": {
+    "formula": "health_score = max(0, min(100, round(0.30 * defect_score + 0.20 * challenge_score + 0.15 * recommendation_score + 0.15 * certification_score + 0.10 * structural_score + 0.10 * usage_score)))",
+    "rounding": "Nearest integer",
+    "signals": {
+      "defect": {
+        "weight": 0.30,
+        "label": "Defect Signal",
+        "description": "Aggregates known defect codes from defectHistory. Each defect severity imposes a penalty on a 0-100 baseline. Critical defects are an auto-fail (score = 0).",
+        "baseline": 100,
+        "penalties": {
+          "Critical": -100,
+          "High": -60,
+          "Medium": -30,
+          "Low": -10
+        },
+        "compoundLogic": "Sum all per-defect severity penalties. If any Critical defect exists, the score floors to 0 immediately.",
+        "scoreFormula": "if any defect.severity === 'Critical': defect_score = 0; else: defect_score = max(0, 100 - sum(penalties))",
+        "source": "question_history.json → questions[QID].defectHistory"
+      },
+      "challenge": {
+        "weight": 0.20,
+        "label": "Challenge Signal",
+        "description": "Counts OPEN challenges against the question. Only challenges with status === 'OPEN' are counted.",
+        "source": "question_history.json → questions[QID].challenges",
+        "tiers": [
+          { "openCount": 0, "score": 100 },
+          { "openCount": "1-2", "score": 80 },
+          { "openCount": "3-5", "score": 50 },
+          { "openCount": "6+", "score": 20 }
+        ],
+        "scoreFormula": "openCount = count(challenges where status === 'OPEN'); score = lookupTier(openCount)"
+      },
+      "recommendation": {
+        "weight": 0.15,
+        "label": "Recommendation Signal",
+        "description": "Counts pending (Open status) recommendations. Each pending remediation/review recommendation deducts points.",
+        "baseline": 100,
+        "penaltyPerPending": -15,
+        "scoreFormula": "pendingCount = count(recommendations where status === 'Open'); recommendation_score = max(0, 100 - pendingCount * 15)",
+        "source": "question_history.json → questions[QID].recommendations"
+      },
+      "certification": {
+        "weight": 0.15,
+        "label": "Certification Signal",
+        "description": "Maps the question's governance state (currentState) to a base score.",
+        "stateMap": {
+          "Certified": 100,
+          "In Audit": 85,
+          "Unprocessed": 70,
+          "Archived": 50
+        },
+        "defaultScore": 80,
+        "scoreFormula": "certification_score = stateMap[currentState] || 80",
+        "source": "question_history.json → questions[QID].currentState"
+      },
+      "structural": {
+        "weight": 0.10,
+        "label": "Structural Signal",
+        "description": "Evaluates structural integrity from work_queue defect_flags: DL-008 (non-empty EW[CC]), DL-026 (empty non-CC EW slots), EV3 (missing accounting principle citation).",
+        "baseline": 100,
+        "penalties": {
+          "DL-008": { "pattern": "/DL-008/i", "penalty": -50, "description": "ExplanationWrong[CorrectChoice] non-empty — learner sees wrong-answer text in correct-answer slot" },
+          "DL-026": { "pattern": "/DL-026.*?(\\d+)\\s+empty/", "penaltyPerSlot": -30, "description": "Empty non-CorrectChoice ExplanationWrong slots — missing distractor feedback" },
+          "EV3": { "pattern": "/EV3/i", "penalty": -20, "description": "No accounting principle citation in ExplanationCorrect" },
+          "OTHER": { "penalty": -10, "description": "Unrecognized structural flag — informational deduction" }
+        },
+        "scoreFormula": "Parse each defect_flag string; apply matching penalty; structural_score = max(0, 100 - sum(penalties))",
+        "source": "work_queue.json → QID-indexed lookup → defect_flags[]"
+      },
+      "usage": {
+        "weight": 0.10,
+        "label": "Usage Signal",
+        "description": "Placeholder for student performance analytics. Currently returns a neutral score (100) because per-question accuracy data is not available in the current registries. In future: session count and student accuracy rates will inform this signal. Questions in many sessions with low accuracy would indicate calibration issues.",
+        "baseline": 100,
+        "scoreFormula": "usage_score = 100 (neutral baseline, reserved for future analytics)",
+        "source": "question_history.json → questions[QID].timeline.totalSessions (informational only)"
+      }
+    }
+  },
+  "healthTiers": [
+    { "tier": "HEALTHY", "color": "green", "minScore": 90, "maxScore": 100, "description": "Question is in excellent condition. No significant defects, no open challenges, certified state." },
+    { "tier": "FAIR", "color": "yellow", "minScore": 70, "maxScore": 89, "description": "Question has minor issues. May have 1-2 low-severity defects, 1 open challenge, or pending recommendations." },
+    { "tier": "NEEDS ATTENTION", "color": "orange", "minScore": 40, "maxScore": 69, "description": "Question requires remediation. Multiple medium-severity defects, several open challenges, or not certified." },
+    { "tier": "CRITICAL", "color": "red", "minScore": 0, "maxScore": 39, "description": "Question is in critical condition. High-severity or critical defects, many open challenges, or archived state." }
+  ],
+  "outputSchema": {
+    "healthRecord": {
+      "qid": "string — QuestionID (e.g., P1-A-001)",
+      "section": "string — Section letter A-F",
+      "topic": "string — Topic description",
+      "question_state": "string — Current governance state",
+      "pack": "string — Pack file identifier",
+      "health_score": "number — Rounded integer 0-100",
+      "health_tier": "string — HEALTHY | FAIR | NEEDS ATTENTION | CRITICAL",
+      "component_scores": {
+        "defect": "number — Defect signal score 0-100",
+        "challenge": "number — Challenge signal score 0-100",
+        "recommendation": "number — Recommendation signal score 0-100",
+        "certification": "number — Certification signal score 0-100",
+        "structural": "number — Structural signal score 0-100",
+        "usage": "number — Usage signal score 0-100"
+      },
+      "details": {
+        "defect_codes": "string[] — List of defect IDs (e.g., ['DL-008', 'DL-026'])",
+        "open_challenge_count": "number — Count of OPEN challenges",
+        "pending_recommendation_count": "number — Count of pending (Open) recommendations",
+        "structural_flags": "string[] — Raw defect_flags from work_queue",
+        "total_sessions": "number — Count of sessions this question has appeared in",
+        "cognitive_level": "string — Bloom's cognitive level",
+        "difficulty": "string — Difficulty label"
+      },
+      "diagnosis": "string — Human-readable summary of the primary health concerns"
+    },
+    "summaryReport": {
+      "generated_timestamp": "string — ISO 8601",
+      "total_questions": "number",
+      "tier_distribution": {
+        "HEALTHY": "number",
+        "FAIR": "number",
+        "NEEDS_ATTENTION": "number",
+        "CRITICAL": "number"
+      },
+      "mean_health_score": "number",
+      "median_health_score": "number",
+      "worst_10": "healthRecord[] — Lowest-scoring questions",
+      "best_10": "healthRecord[] — Highest-scoring questions",
+      "by_state": { "Certified": { "count": "number", "mean_health": "number" } },
+      "by_section": { "A": { "count": "number", "mean_health": "number" } }
+    }
+  },
+  "cliInterface": {
+    "flags": [
+      { "flag": "--qid=P1-A-001", "description": "Score a single question by QuestionID" },
+      { "flag": "--all", "description": "Score all 2,540 questions in the pool" },
+      { "flag": "--section=A", "description": "Score all questions in a blueprint section (A-F)" },
+      { "flag": "--pack=A", "description": "Score all questions in a pack (a-e)" },
+      { "flag": "--summary", "description": "Output only aggregate stats (tier distribution, worst 10, best 10)" },
+      { "flag": "--output=<path>", "description": "Override output path (default: scripts/output/question_health.json)" },
+      { "flag": "--help", "description": "Show usage help" }
+    ]
+  }
+}

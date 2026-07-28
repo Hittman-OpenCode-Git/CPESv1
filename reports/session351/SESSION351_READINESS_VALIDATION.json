@@ -1,0 +1,155 @@
+{
+  "document": "SESSION351_READINESS_VALIDATION",
+  "session": "S351",
+  "title": "Readiness Leakage Validation — Board E",
+  "series": "350-Series — Framework v2 Validation Readiness",
+  "date": "2026-07-27",
+  "type": "Read-Only Readiness Validation — No Content Modifications",
+  "authority": "S350 Readiness Scorecard (Board C); S204 Readiness Results (Board E); SESSION_STATUS_2026-07-24.md; CURRENT_BASELINES.md",
+  "purpose": "Compare current readiness distribution against 89.5% v1 baseline. Measure leakage from known-defect QIDs in the Certified pool.",
+
+  "v1_baseline_readiness_failure": {
+    "baseline_value": "89.5%",
+    "source": "SESSION350_V1_BASELINE.json BF-004",
+    "evidence": {
+      "domain_e_seeds": "34 of 38 Domain E seeds arrived at certification with 2+ concurrent defects",
+      "zero_scanned": "38 of 38 seeds had zero pre-certification automated scanning",
+      "leakage_events": "43 leakage events across 14 certification waves",
+      "preventable_pct": "91.5% of leakage events preventable via pre-flight gating"
+    }
+  },
+
+  "current_readiness_distribution": {
+    "source": "S322 live scan (scripts/output/readiness_scoring.json) — most recent operational data",
+    "timestamp": "2026-07-27T05:45:20.382Z",
+    "portfolio_readiness_score": "0.8744 (87.44%)",
+    "readiness_status": "IN_PROGRESS",
+    "by_state": {
+      "BLOCKED": 242,
+      "REMEDIATE": 77,
+      "MINOR_FIX": 0,
+      "READY": 0,
+      "CERTIFY": 2221
+    },
+    "analysis": "Of 2,540 items: 242 are structurally BLOCKED (identity, JSON integrity, or severe structural defects), 77 require REMEDIATION (DL-008, DL-026, DL-016), 2,221 are CERTIFIED. Zero items are in READY state — items bypassed the readiness gate because v2 board visibility rules are not yet active."
+  },
+
+  "per_domain_readiness": {
+    "source": "S322 readiness_scoring.json §per_domain",
+    "domain_a_external_financial_reporting": {
+      "total": 375,
+      "ready": 373,
+      "blocked": 2,
+      "remediate": 0,
+      "readiness_score": "0.9947"
+    },
+    "domain_b_planning_budgeting": {
+      "total": 500,
+      "ready": 500,
+      "blocked": 0,
+      "remediate": 0,
+      "readiness_score": "1.0000"
+    },
+    "domain_c_performance_mgmt": {
+      "total": 500,
+      "ready": 500,
+      "blocked": 0,
+      "remediate": 0,
+      "readiness_score": "1.0000"
+    },
+    "domain_d_cost_mgmt": {
+      "total": 375,
+      "ready": 375,
+      "blocked": 0,
+      "remediate": 0,
+      "readiness_score": "1.0000"
+    },
+    "domain_e_internal_controls": {
+      "total": 415,
+      "ready": 248,
+      "blocked": 129,
+      "remediate": 38,
+      "readiness_score": "0.5976"
+    },
+    "domain_f_technology_analytics": {
+      "total": 374,
+      "ready": 225,
+      "blocked": 110,
+      "remediate": 39,
+      "readiness_score": "0.6016"
+    },
+    "analysis": "Domains B, C, D fully ready. Domain A nearly ready (99.47%). Domains E and F are readiness drag (~60%) — these contain uncertified sections with structural defects holding items in BLOCKED and REMEDIATE states."
+  },
+
+  "certified_pool_defect_leakage": {
+    "description": "Known defects in the active Certified learner pool (2,221 items). These are leakage events — items that reached Certified status with undetected defects.",
+    "defects": {
+      "DL-021_Pack_E_Section_C_absent_EW": {
+        "severity": "HIGH",
+        "certified_items_affected": 95,
+        "scope": "All Pack E Section C items (P1E-C-001 through P1E-C-100). 5 previously remediated in Autonomous Run Part 4. 95 remain.",
+        "learner_impact": "Learners receive no distractor feedback on incorrect answers for Section C items. Degraded educational experience.",
+        "blocking_for_certification_maintenance": true,
+        "leakage_source": "Template pipeline gap — per-section flag suppressed distractor ExplanationWrong generation. Items were certified without distractor explanations."
+      },
+      "DL-016_Pack_A_metadata_offset": {
+        "severity": "HIGH",
+        "certified_items_affected": 58,
+        "scope": "Pack A Section E + all Pack A sections with dual-block architecture. ExplanationWrong fields describe wrong item's distractors.",
+        "learner_impact": "Learners may see distractor explanations about a completely different topic. Learner-safety risk.",
+        "blocking_for_certification_maintenance": true,
+        "leakage_source": "Metadata-block ChoiceA-D +1 offset from rotation-group template. Content blocks internally consistent but EW text describes wrong topic."
+      },
+      "DL-034_P1-E-R33": {
+        "severity": "CRITICAL",
+        "certified_items_affected": 1,
+        "scope": "Single item in Pack E. Missing CorrectChoice and Stem. Has Choices and ExplanationWrong.",
+        "learner_impact": "Cannot render a valid question. Application crash risk.",
+        "leakage_source": "Template-rotation omission — authoring template failed to populate Stem, CC, EC for this one rotation position."
+      }
+    },
+    "total_known_certified_pool_leakage": {
+      "items_affected": 154,
+      "as_pct_of_certified": "6.93% of 2,221",
+      "severity_breakdown": {
+        "CRITICAL": 1,
+        "HIGH": 153,
+        "MEDIUM": 0
+      },
+      "analysis": "The 89.5% v1 baseline measured leakage at certification time (items entering certification with undetected defects). Current leakage of ~6.93% in the Certified pool is lower because: (a) most pack sections have been certified clean; (b) DL-008 (539 items) resolved; (c) DL-026 (1,005 items) mostly resolved on Certified items. The remaining 154 items represent the v1 legacy that Framework v2 pre-flight gates would have caught."
+    }
+  },
+
+  "v2_readiness_target_gap": {
+    "s350_target": "<10% readiness failure rate",
+    "current_certified_pool_leakage_pct": "6.93% (154 of 2,221 Certified items with known defects)",
+    "gap_analysis": {
+      "below_10_target": true,
+      "caveat": "The 6.93% figure includes only known defects. A full Gate -1 through Gate 4 re-scan of all 2,221 Certified items would likely surface additional leakage (e.g., DL-031 difficulty inflation on ~500 items, EV3 citation gaps, DL-016 on non-Section E Pack A items).",
+      "true_readiness_failure_estimate": "Estimated 10-15% if full retro-scan includes pedagogical defects (DL-031, EV3). Hard structural defects (DL-008, DL-026, DL-016) are concentrated in the 154 known items."
+    },
+    "reduction_from_v1_baseline": {
+      "v1_baseline": "89.5%",
+      "current_structural_leakage": "~6.93% (known only)",
+      "estimated_total_leakage": "~10-15% (including pedagogical defects)",
+      "reduction": "-78-85% from v1 baseline",
+      "analysis": "Framework v2 does not yet exist operationally — this reduction is from manual remediation across dozens of sessions (DL-008 clear, DL-026 fills, DL-013 rewrites, certification waves). The reduction demonstrates that effective governance can achieve significant leakage reduction even without automated pre-flight gates."
+    }
+  },
+
+  "s350_s322_readiness_comparison": {
+    "s350_readiness_score": "87.44% (S322 snapshot quoted in S350 Board C)",
+    "s351_readiness_state": "UNCHANGED — S351 is read-only audit. No readiness scores regenerated. S322 snapshot is the most recent operational data.",
+    "verdict": "S322_READINESS_SNAPSHOT_STILL_ACCURATE — no readiness-changing operations have occurred between S322 and S351."
+  },
+
+  "cross_references": {
+    "parent_s350": "reports/SESSION350_READINESS_SCORECARD.json",
+    "s204_inputs": ["reports/SESSION204_READINESS_RESULTS.json"],
+    "s322_data": "scripts/output/readiness_scoring.json (S322 live run)",
+    "sibling_s351": [
+      "reports/session351/SESSION351_BASELINE_AUDIT.json",
+      "reports/session351/SESSION351_IDENTITY_STATE_VALIDATION.json"
+    ]
+  }
+}

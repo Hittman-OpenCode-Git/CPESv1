@@ -1,0 +1,207 @@
+{
+  "session": "804",
+  "agent": "F",
+  "role": "Seed Selection Board — Pack A Section E Clone Groups",
+  "analysis_date": "2026-07-26",
+  "methodology": {
+    "extraction": "Function-constructor parse of MCQ_BANK_A, grouped by QuestionID across dual-block (metadata+content) architecture",
+    "models_referenced": {
+      "DQS": "S302-1.0 — 5 dimensions: plausibility(30%), uniqueness(20%), misconception(20%), instructional(20%), discrimination(10%)",
+      "EQS": "S303-1.0 — 6 dimensions: instructionalValue(25%), reasoningDepth(20%), calculationSupport(15%), standardsIntegration(15%), learningEffectiveness(15%), structure(10%)"
+    },
+    "selection_criteria": [
+      "ExplanationCorrect length and quality (ASC/COSO citations, business interpretation)",
+      "Distractor quality (ExplanationWrong field length, specificity, misconception targeting)",
+      "Metadata accuracy (Difficulty/DifficultyScore vs. CognitiveLevel alignment)",
+      "Structural defect-free status (DL-008, DL-026, DL-016 considerations)"
+    ],
+    "dual_block_caveat": "DL-016 metadata-content offset may cause ExplanationWrong fields in metadata block to describe a different QID's choices. Seed evaluation prioritizes content-block quality (Stem, Choices, CorrectChoice, ExplanationCorrect) over metadata-block EW accuracy."
+  },
+  "pack_a_section_e_overview": {
+    "total_items": 75,
+    "qid_range": "P1-E-001 through P1-E-084",
+    "missing_qids": ["P1-E-059", "P1-E-060", "P1-E-061", "P1-E-064", "P1-E-067", "P1-E-068", "P1-E-069", "P1-E-072", "P1-E-075"],
+    "quality_blocks": {
+      "block_1_high_quality": "001-035: Fully-detailed items, EC 800-1400 chars, COSO citations, all Certified",
+      "block_2_rotation_core": "036-075: 5-topic rotation with 8 iterations, seeds have substantial EC, clones have thin EC (80-90 chars)",
+      "block_3_high_quality": "076-084: Enhanced items with company names, EC 1550-2100 chars, all Certified"
+    },
+    "rotation_pattern": {
+      "template": ["AP duplicate invoice", "Payroll terminated employee", "Inventory-related (varies)", "User access recertification", "Control exception root cause"],
+      "iterations": 8,
+      "note": "Slot 3 (inventory-related) has varying specific topics per rotation, making those items unique rather than clones"
+    }
+  },
+  "groups": [
+    {
+      "group": "G1",
+      "topic": "AP Duplicate Invoice Control",
+      "qids": ["P1-E-038", "P1-E-046", "P1-E-054", "P1-E-062", "P1-E-070"],
+      "seed_recommendation": "P1-E-038",
+      "seed_strength": "strong",
+      "seed_state": "Certified",
+      "seed_ec_length": 888,
+      "seed_cc": "D",
+      "seed_diff": "Moderate-Easy(2)",
+      "seed_cog": "Understand",
+      "clones_to_archive": ["P1-E-046", "P1-E-054", "P1-E-062", "P1-E-070"],
+      "clones_already_archived": 4,
+      "clones_currently_certified": 0,
+      "reasoning": "P1-E-038 EC=888 chars with COSO Principles 10 and 11 citations and thorough duplicate-control explanation. Clones have only 80-char boilerplate ('Automated duplicate checks and independent review reduce duplicate-payment risk.'). CC=D, EW_D=0 (DL-008 clean). All non-CC EW slots have 390+ chars of substantive text. DQS estimated 85/100. Seed strength: strong — the gulf between seed and clone quality is dramatic (888 vs 80 chars).",
+      "defect_status": {
+        "DL_008": "Clean — CC=D, EW_D=0",
+        "DL_026": "Clean — all non-CC EW slots non-empty (469, 390, 401)",
+        "DL_016": "Possible — metadata-content offset applies to all Pack A items"
+      }
+    },
+    {
+      "group": "G2",
+      "topic": "Payroll Terminated Employee Control",
+      "qids": ["P1-E-039", "P1-E-047", "P1-E-055", "P1-E-063", "P1-E-071"],
+      "seed_recommendation": "P1-E-039",
+      "seed_strength": "strong",
+      "seed_state": "Certified",
+      "seed_ec_length": 966,
+      "seed_cc": "C",
+      "seed_diff": "Moderate-Easy(2)",
+      "seed_cog": "Understand",
+      "clones_to_archive": ["P1-E-047", "P1-E-055", "P1-E-063", "P1-E-071"],
+      "clones_already_archived": 4,
+      "clones_currently_certified": 0,
+      "reasoning": "P1-E-039 EC=966 chars with COSO Principle 10 citation and ghost-employee risk analysis. Clones have 82-char boilerplate. CC=C, EW_C=0 (DL-008 clean). All non-CC slots 399+. Seed strength: strong.",
+      "defect_status": {
+        "DL_008": "Clean — CC=C, EW_C=0",
+        "DL_026": "Clean — all non-CC EW slots non-empty (399, 425, 419)",
+        "DL_016": "Possible"
+      }
+    },
+    {
+      "group": "G3",
+      "topic": "User Access Recertification",
+      "qids": ["P1-E-041", "P1-E-049", "P1-E-057", "P1-E-065", "P1-E-073"],
+      "seed_recommendation": "P1-E-041",
+      "seed_strength": "strong",
+      "seed_state": "Certified",
+      "seed_ec_length": 1002,
+      "seed_cc": "B",
+      "seed_diff": "Moderate-Easy(2)",
+      "seed_cog": "Understand",
+      "clones_to_archive": ["P1-E-049", "P1-E-057", "P1-E-065", "P1-E-073"],
+      "clones_already_archived": 4,
+      "clones_currently_certified": 0,
+      "reasoning": "P1-E-041 EC=1002 chars with COSO Principle 11 citation and clear least-privilege explanation. Clones range 73-384 chars with no COSO citations. CC=B, EW_B=0 (DL-008 clean). Seed strength: strong.",
+      "defect_status": {
+        "DL_008": "Clean — CC=B, EW_B=0",
+        "DL_026": "Clean — all non-CC EW slots non-empty (509, 393, 397)",
+        "DL_016": "Possible"
+      }
+    },
+    {
+      "group": "G4",
+      "topic": "Control Exception Root Cause Analysis",
+      "qids": ["P1-E-042", "P1-E-050", "P1-E-058", "P1-E-066", "P1-E-074"],
+      "seed_recommendation": "P1-E-042",
+      "seed_strength": "strong",
+      "seed_state": "Certified",
+      "seed_ec_length": 1017,
+      "seed_cc": "D",
+      "seed_diff": "Moderate-Easy(2)",
+      "seed_cog": "Understand",
+      "clones_to_archive": ["P1-E-050", "P1-E-058", "P1-E-066", "P1-E-074"],
+      "clones_already_archived": 4,
+      "clones_currently_certified": 0,
+      "reasoning": "P1-E-042 EC=1017 chars with COSO Principle 17 citation and design-vs-operating deficiency analysis. Clones have 89-char boilerplate. CC=D, EW_D=0 (DL-008 clean). Seed strength: strong.",
+      "defect_status": {
+        "DL_008": "Clean — CC=D, EW_D=0",
+        "DL_026": "Clean — all non-CC EW slots non-empty (487, 418, 400)",
+        "DL_016": "Possible"
+      }
+    },
+    {
+      "group": "G5",
+      "topic": "Control Evidence Retention / Documentation of Control Performance",
+      "qids": ["P1-E-043", "P1-E-051"],
+      "seed_recommendation": "P1-E-043",
+      "seed_strength": "moderate",
+      "seed_state": "Certified",
+      "seed_ec_length": 957,
+      "seed_cc": "C",
+      "seed_diff": "Moderate-Easy(2)",
+      "seed_cog": "Understand",
+      "clones_to_archive": ["P1-E-051"],
+      "clones_already_archived": 0,
+      "clones_currently_certified": 1,
+      "reasoning": "Both items test the same concept (documenting journal-entry review). P1-E-043 (957 chars) uses company name 'Meridian' and COSO Principle 12 with clear evidentiary-standard analysis. P1-E-051 (956 chars) is near-identical but uses generic 'A manager' and lacks company context. P1-E-043 has slightly better realism via named stakeholder. P1-E-051 is currently Certified and should be Archived to avoid delivery pool dilution. Seed strength: moderate — both items are high quality; selection is marginal.",
+      "defect_status": {
+        "DL_008": "Clean — CC=C, EW_C=0",
+        "DL_026": "Clean — all non-CC EW slots non-empty (413, 429, 405)",
+        "DL_016": "Possible"
+      }
+    }
+  ],
+  "unique_singletons_in_clone_range": [
+    {
+      "qid": "P1-E-040",
+      "topic": "Inventory cycle count investigation",
+      "note": "Rotation slot 3, iteration 1. Unique topic (cycle count shortages vs. perpetual vs. physical count). Certified.",
+      "ec_length": 982
+    },
+    {
+      "qid": "P1-E-044",
+      "topic": "Bank reconciliation control purpose",
+      "note": "Unique singleton between rotations. Certified, EC=1006.",
+      "ec_length": 1006
+    },
+    {
+      "qid": "P1-E-045",
+      "topic": "Three-way match control",
+      "note": "Unique singleton between rotations. Certified, EC=960.",
+      "ec_length": 960
+    },
+    {
+      "qid": "P1-E-048",
+      "topic": "Perpetual vs periodic inventory control",
+      "note": "Rotation slot 3, iteration 2. Unique topic. Certified, EC=1081.",
+      "ec_length": 1081
+    },
+    {
+      "qid": "P1-E-052",
+      "topic": "Lockbox system control benefit",
+      "note": "Unique singleton between rotations. Certified, EC=1028.",
+      "ec_length": 1028
+    },
+    {
+      "qid": "P1-E-053",
+      "topic": "Approved vendor master file control",
+      "note": "Unique singleton between rotations. Certified, EC=1105.",
+      "ec_length": 1105
+    },
+    {
+      "qid": "P1-E-056",
+      "topic": "Independent physical count control",
+      "note": "Rotation slot 3, iteration 3. Unique topic (segregation of duties for physical counts). Certified, EC=804.",
+      "ec_length": 804
+    }
+  ],
+  "metadata_calibration_notes": {
+    "systematic_issue": "All G1-G5 seeds use Diff=Moderate-Easy(2) and Cog=Understand, but these items test application of COSO principles to specific control scenarios. Recommended recalibration: Cog=Apply for all 5 seeds (consistent with DL-031 finding).",
+    "pack_a_section_e_pattern": "Items 001-035 use Cog=Understand uniformly; Items 045/048/052/053 use Cog=Apply. The rotation clones uniformly use Cog=Understand even when the cognitive demand is Apply-level.",
+    "recommendation": "Recalibrate all 5 seed QIDs to Cog=Apply during the next DL-031 difficulty recalibration pass."
+  },
+  "total_seeds_needed": 5,
+  "total_clone_items": 22,
+  "items_already_archived": 16,
+  "items_to_archive": 1,
+  "items_to_archive_qids": ["P1-E-051"],
+  "net_certified_retained": 4,
+  "net_certified_impact": "P1-E-051 changes from Certified → Archived. P1-E-038, 039, 041, 042, 043 remain Certified. Unique singletons (7 items) remain Certified. Net learner pool impact: -1 Certified item (non-loss — P1-E-043 covers the same topic).",
+  "quality_comparison": {
+    "seed_average_ec_length": 923,
+    "clone_average_ec_length": 97,
+    "seed_coso_citation_rate": "100% (5/5)",
+    "clone_coso_citation_rate": "0% (0/17)",
+    "quality_gap": "Seeds vs. clones = 9.5:1 EC length ratio. Clone items provide no pedagogical value beyond what seeds already cover.",
+    "dqs_estimate_seeds": "80-90/100",
+    "dqs_estimate_clones": "15-25/100"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "session": "518",
+  "timestamp": "2026-07-26T00:15:00Z",
+  "purpose": "Focused CAQS §1.6 six-dimension validation and certification action for CBQ2-A3",
+
+  "target": {
+    "case": "CBQ2-A3",
+    "items": 5,
+    "file": "scored_cases2.js",
+    "array": "ENHANCED_CASE_BASE2"
+  },
+
+  "caqs_1_6_dimensions": {
+    "D1_answer_key_accuracy": {
+      "status": "PASS",
+      "details": {
+        "Q1": "($400k/$550k)×$500k = $363,636.36 → rounds to $363,636. CORRECT. Independent recalculation confirmed.",
+        "Q2": "($800k×1%)+($300k×5%)+($100k×20%) = $8k+$15k+$20k = $43,000. CORRECT.",
+        "Q3": "ASC 606-10-25-19 criteria: customer benefit + separately identifiable. Both correct answers selected. CORRECT.",
+        "Q4": "$43k target credit + $5k debit offset = $48k. CORRECT.",
+        "Q5": "balance sheet approach (aging method). CORRECT."
+      },
+      "items_pass": 5,
+      "items_fail": 0
+    },
+    "D2_explanation_sufficiency": {
+      "status": "PASS",
+      "details": {
+        "Q1": "571 chars. Names ASC 606, shows formula+substitution+result, business interpretation, common trap. PASS.",
+        "Q2": "567 chars. Names ASC 326/allowance method, aging schedule breakdown, balance sheet approach, NRV. PASS.",
+        "Q3": "651 chars. ASC 606-10-25-19 citation, both criteria explained, wrong-choice rationale. PASS.",
+        "Q4": "784 chars. Principle+calculation+distractor analysis for all 3 wrong answers. PASS.",
+        "Q5": "611 chars. Balance sheet approach named, income statement approach contrasted, ASC 326 alignment. PASS."
+      },
+      "items_pass": 5,
+      "items_fail": 0
+    },
+    "D3_distractor_rationale": {
+      "status": "PASS",
+      "details": {
+        "Q1": "N/A (numeric) — PASS by applicability",
+        "Q2": "N/A (numeric) — PASS by applicability",
+        "Q3": "PASS — explains why physical delivery and payment received are wrong (confuse timing vs. identification)",
+        "Q4": "PASS — explains $38k (subtracts debit), $43k (ignores debit), $5k (debit balance alone) with accounting reasoning",
+        "Q5": "N/A (fill) — PASS by applicability"
+      },
+      "items_pass": 5,
+      "items_fail": 0
+    },
+    "D4_authoritative_reference_alignment": {
+      "status": "PASS",
+      "details": {
+        "Q1": "ASC 606 — correct for revenue allocation. PASS.",
+        "Q2": "ASC 326 — correct for expected credit loss/allowance method. PASS.",
+        "Q3": "ASC 606-10-25-19 — specific paragraph, correct for distinct P.O. criteria. PASS.",
+        "Q4": "allowance method — appropriate for ADA adjustment. PASS.",
+        "Q5": "ASC 326 + balance sheet approach — correct for aging method. PASS."
+      },
+      "items_pass": 5,
+      "items_fail": 0
+    },
+    "D5_case_realism_exhibit_use": {
+      "status": "PASS",
+      "details": {
+        "Q1": "Uses Vertex Solutions scenario ($500k contract, $400k/$50k/$100k standalone prices). PASS.",
+        "Q2": "Uses specific aging exhibit data ($800k/1%, $300k/5%, $100k/20%). PASS.",
+        "Q3": "Tests ASC 606 criteria — case-relevant conceptual. PASS.",
+        "Q4": "Builds on Q2's $43k + scenario-specific $5k debit. PASS.",
+        "Q5": "Tests terminology from aging method used in case. Scenario present. PASS."
+      },
+      "items_pass": 5,
+      "items_fail": 0
+    },
+    "D6_metadata_schema_readiness": {
+      "status": "PASS",
+      "details": {
+        "per_item_difficulty": "All 5 items have Difficulty + DifficultyScore: Q1-4=Moderate/3, Q5=Moderate-Easy/2. PASS.",
+        "cognitive_level": "All 5 items have CognitiveLevel. PASS.",
+        "question_state": "All 5 items + case-level = Certified. PASS.",
+        "item_id": "All 5 items have ItemID. PASS.",
+        "type": "All 5 items have valid Type. PASS."
+      },
+      "items_pass": 5,
+      "items_fail": 0
+    }
+  },
+
+  "certification_decisions": {
+    "items": [
+      {"ItemID": "CBQ2-A3-Q1", "decision": "CERTIFY", "all_dimensions_pass": true},
+      {"ItemID": "CBQ2-A3-Q2", "decision": "CERTIFY", "all_dimensions_pass": true},
+      {"ItemID": "CBQ2-A3-Q3", "decision": "CERTIFY", "all_dimensions_pass": true},
+      {"ItemID": "CBQ2-A3-Q4", "decision": "CERTIFY", "all_dimensions_pass": true},
+      {"ItemID": "CBQ2-A3-Q5", "decision": "CERTIFY", "all_dimensions_pass": true}
+    ],
+    "case_level": {
+      "CaseID": "CBQ2-A3",
+      "decision": "CERTIFY",
+      "condition": "All 5 child items pass all 6 dimensions",
+      "condition_met": true
+    }
+  },
+
+  "summary": {
+    "items_certified": 5,
+    "items_held_back": 0,
+    "case_certified": true,
+    "d1_pass": 5,
+    "d2_pass": 5,
+    "d3_pass": 5,
+    "d4_pass": 5,
+    "d5_pass": 5,
+    "d6_pass": 5,
+    "answer_keys_unchanged": true,
+    "prompts_unchanged": true,
+    "exhibits_unchanged": true,
+    "choices_unchanged": true
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "session": "512",
+  "agent": "A",
+  "review_type": "structural_and_schema",
+  "timestamp": "2026-07-25",
+  "summary": {
+    "total_cases": 15,
+    "total_items": 75,
+    "case_ids_present": [
+      "CASE-B12",
+      "CASE-B13",
+      "CASE-B14",
+      "CASE-B15",
+      "CASE-B16",
+      "CASE-B17",
+      "CASE-B18",
+      "CASE-B19",
+      "CASE-B20",
+      "CASE-B21",
+      "CASE-B22",
+      "CASE-B23",
+      "CASE-B24",
+      "CASE-B25",
+      "CASE-B26"
+    ],
+    "case_ids_missing": [],
+    "duplicate_item_ids": [],
+    "items_per_case": {
+      "CASE-B12": 5,
+      "CASE-B13": 5,
+      "CASE-B14": 5,
+      "CASE-B15": 5,
+      "CASE-B16": 5,
+      "CASE-B17": 5,
+      "CASE-B18": 5,
+      "CASE-B19": 5,
+      "CASE-B20": 5,
+      "CASE-B21": 5,
+      "CASE-B22": 5,
+      "CASE-B23": 5,
+      "CASE-B24": 5,
+      "CASE-B25": 5,
+      "CASE-B26": 5
+    },
+    "items_by_type": {
+      "select": 74,
+      "numeric": 1
+    },
+    "question_state_distribution": {
+      "Unprocessed": 75
+    },
+    "difficulty_distribution": {
+      "Moderate": 75
+    },
+    "case_b12_q4_status": "VERIFIED_CORRECT",
+    "case_b12_q4_details": {
+      "line": 4214,
+      "prompt": "Alpine Manufacturing purchased equipment for $240,000 with an estimated 8-year useful life and residual value of $24,000 using straight-line depreciation. After 3 years, the useful life was revised to 10 total years with residual value of $18,000. What is the annual depreciation in year 4?",
+      "correct": "$20,143",
+      "choices_include_19286": true,
+      "choices_include_20143": true,
+      "explanation_references_ASC360": true,
+      "explanation_contains_independently_recomputed_2026_07_25": true,
+      "prior_stored_value_21750_acknowledged_as_error": true,
+      "remediation_verified": true
+    },
+    "section_tags_by_case": {
+      "CASE-B12": "A",
+      "CASE-B13": "B",
+      "CASE-B14": "C",
+      "CASE-B15": "D",
+      "CASE-B16": "E",
+      "CASE-B17": "F",
+      "CASE-B18": "A",
+      "CASE-B19": "B",
+      "CASE-B20": "C",
+      "CASE-B21": "D",
+      "CASE-B22": "E",
+      "CASE-B23": "F",
+      "CASE-B24": "A",
+      "CASE-B25": "B",
+      "CASE-B26": "C"
+    }
+  },
+  "schema_completeness": {
+    "items_with_all_required_fields": 75,
+    "items_missing_fields": [],
+    "cases_with_all_required_fields": 15,
+    "cases_missing_fields": [],
+    "notes": [
+      "CASE-B19-Q5 is Type 'numeric' and correctly lacks Choices field (Choices is conditional — required only for select/multi types)",
+      "All 75 items have every required item-level field: Type, Prompt, Correct, Explanation, Topic, question_state, Difficulty, DifficultyScore, ProductionStatus, ItemID",
+      "All 74 select-type items additionally have Choices field",
+      "All 15 cases have every required case-level field: CaseID, Title, SectionTags, BlueprintDomain, EstimatedMinutes, ScenarioText, Items, QuestionCount, ExhibitCount, ProductionStatus, Difficulty, DifficultyScore, Version, CreatedDate, ModifiedDate, Author, Confidence, RevisionHistory",
+      "All cases have question_state at case level (Unprocessed)",
+      "All cases have StudyLinks arrays on items (non-required but present)",
+      "All cases have ExhibitCount: 0 — no exhibits in this migration batch"
+    ]
+  },
+  "field_validation": {
+    "invalid_types": [],
+    "invalid_topics": [],
+    "invalid_difficulty": [],
+    "invalid_difficulty_score": [],
+    "non_unprocessed_states": [],
+    "notes": [
+      "All 75 items have Type 'select' (74) or 'numeric' (1) — both valid",
+      "All 75 items have non-empty Topic strings",
+      "All 75 items have Difficulty 'Moderate' and DifficultyScore 3 — valid values but zero variance across pool",
+      "All 75 items have question_state 'Unprocessed'",
+      "All 75 items have ProductionStatus 'Draft'",
+      "All 15 cases have ProductionStatus 'Draft' and question_state 'Unprocessed'",
+      "All 15 cases have Difficulty 'Moderate' and DifficultyScore 3",
+      "All 15 cases have Confidence 85, Version '1.0', EstimatedMinutes 30",
+      "All 15 cases created by Author 'Migration Agent', CreatedDate '2026-07-24', ModifiedDate '2026-07-24'",
+      "All 15 cases have RevisionHistory with 1 entry: Session 60 Migration on 2026-07-24"
+    ]
+  },
+  "verdict": "PASS",
+  "issues": [
+    {
+      "severity": "informational",
+      "detail": "All 75 items have identical Difficulty (Moderate) and DifficultyScore (3). Zero variance across 15 cases spanning 6 blueprint domains is statistically implausible. CAQS v1.0 §6.1 targets 15% Easy, 20% Moderate-Easy, 30% Moderate, 25% Difficult, 10% Very Difficult. Current distribution: 100% Moderate."
+    },
+    {
+      "severity": "informational",
+      "detail": "All 15 cases have Confidence: 85, indicating Moderate confidence. No case reaches the 90–94 Accept-with-review threshold per COLLABORATION_MATRIX.md. Recommend post-migration content audit before certification."
+    },
+    {
+      "severity": "informational",
+      "detail": "Case-level scenario text follows a uniform template pattern across all 15 cases ('[Company] is preparing for a CMA-style review meeting...'). While structurally consistent, this homogenizes the business realism dimension (CAQS §3.7). Recommendation: vary scenario framing in a future editorial pass."
+    },
+    {
+      "severity": "informational",
+      "detail": "All 15 cases have ExhibitCount: 0. The case object includes Items arrays only — no Exhibits exist. This is acceptable for a 'short business-case flow' design, but the QUESTION_METADATA_STANDARD.md §1.1 states minimum 2 exhibits. This should be either: (a) accepted as an intentional design choice for this migration, or (b) flagged for exhibit enrichment in a future wave."
+    }
+  ]
+}

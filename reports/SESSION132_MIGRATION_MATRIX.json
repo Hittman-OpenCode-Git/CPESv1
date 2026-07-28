@@ -1,0 +1,254 @@
+{
+  "session": "S132",
+  "title": "Migration Matrix — S130 Duplicated Paths → S131 computeEvidenceGraph()",
+  "generatedAt": "2026-07-16T00:00:00.000Z",
+  "sourceAudit": "reports/SESSION130_CONSISTENCY_AUDIT.json",
+  "targetFunction": "MayLearnerState.computeEvidenceGraph() @ may-learner-state.js ~1456",
+
+  "duplicatedPaths": [
+    {
+      "s130Finding": "scan session history for attempts — 12 independent implementations scanning data.sessions[].attempts, topicPerformance aggregates, casePatterns, or per-session mcqs",
+      "severity": "HIGH",
+      "currentImplementations": [
+        "MayLearnerState.getTopicProgress() ~228 (scans topicPerformance aggregates)",
+        "MayLearnerState.getConfidenceCalibration() ~300 (scans data.sessions[].attempts)",
+        "MayLearnerState.getRecentlySeenByOutcome() ~287 (scans data.sessions[].attempts)",
+        "MayLearnerState.getCasePatternSummary() ~339 (scans data.sessions[].casePatterns)",
+        "MayLearnerState.getCasePatternTrends() ~354 (scans data.sessions[].casePatterns)",
+        "MayLearnerState.getLongitudinalAnalytics() ~1408 (scans data.sessions filtered by date)",
+        "May._generateWeeklyDigest() ~3067 (scans sessions.slice(-7)[].attempts — INDEPENDENT)",
+        "May._generateStudyStrategy() ~3234 (scans sessions.slice(-7)[].attempts — INDEPENDENT)",
+        "May._generateSessionRecap() ~2947 (scans sessionObj.mcqs — per-session)",
+        "May._summarizeSession() ~3643 (scans state.session.mcqs — per-session)",
+        "May._identifyLearningPatterns() ~1325 (scans data._learnerState.sessions — edge case)",
+        "May._getProgressInsight() ~2733 (reduces sessions[].attempts.length for total count)"
+      ],
+      "targetEvidenceGraphField": "computeEvidenceGraph() calls getTopicProgress(), getTrends(), getWeaknessClusters() internally — all session scanning is consolidated into a single pre-computation pipeline. Subsystems consume evidence[topic].totalAttempts, evidence[topic].correctCount, and metadata.sessionCount instead of scanning sessions independently.",
+      "migrationType": "direct_replacement",
+      "effort": "medium",
+      "migrationDetail": "Each subsystem replaces its independent sessions.slice(-N).attempts scan with a read from computeEvidenceGraph().evidence[topic].totalAttempts or computeEvidenceGraph().metadata.sessionCount. The 7-session-weekly-window use case is handled by getEvidenceWindows() which partitions the graph by recency."
+    },
+    {
+      "s130Finding": "per-topic accuracy computation — 7 implementations computing accuracy from v.c / v.n * 100, 4 independent and 3 delegated to getTopicProgress()",
+      "severity": "HIGH",
+      "currentImplementations": [
+        "MayLearnerState.getTopicProgress() ~229 (canonical: agg.correctCount / agg.totalAttempts * 100)",
+        "May._generateWeeklyDigest() ~3119 (weekly: Math.round(v.c / v.n * 100) — independent scan)",
+        "May._generateStudyStrategy() ~3270 (weekly: Math.round(v.c / v.n * 100) — independent scan)",
+        "May._generateSessionRecap() ~2969 (per-session: Math.round(v.c / v.n * 100))",
+        "May._summarizeSession() ~3652 (per-session: v.c / Math.max(1, v.n))",
+        "May._identifyLearningPatterns() ~1259 (delegates to getTopicProgress().accuracy)",
+        "May._suggestFocusAreas() ~1397 (delegates to getTopicProgress().accuracy)"
+      ],
+      "targetEvidenceGraphField": "evidence[topic].accuracy (overall), evidence[topic].recentAccuracy (last 5 attempts), evidence[topic].timeWeightedAccuracy (EWMA 14-day half-life). All three are pre-computed by computeEvidenceGraph() from a single call to getTopicProgress() + _computeTimeWeightedAccuracy().",
+      "migrationType": "direct_replacement",
+      "effort": "low",
+      "migrationDetail": "All 7 implementations replace their local Math.round(v.c/v.n*100) with evidence[topic].accuracy, evidence[topic].recentAccuracy, or evidence[topic].timeWeightedAccuracy depending on the desired time horizon. S127/S128 weekly scans use getEvidenceWindows().recent[topic].accuracy for week-scoped data."
+    },
+    {
+      "s130Finding": "classify topic as weak (below threshold) — 8 implementations using 4 different threshold combinations: >=5/<60%, >=3/<60%, per-session <60%, <65% recommended focus",
+      "severity": "HIGH",
+      "currentImplementations": [
+        "MayLearnerState.getWeaknessClusters() ~263 (>=5 attempts, <60% — CANONICAL persistentWeak)",
+        "May._identifyLearningPatterns() S124 ~1268 (>=5 attempts, <60% — delegates to getTopicProgress)",
+        "May._suggestFocusAreas() S125 ~1396 (>=5 attempts, <60% — delegates to getTopicProgress)",
+        "May._generateSessionRecap() S126 ~2978 (session-level: n>0, c/n<0.6 — INDEPENDENT)",
+        "May._generateWeeklyDigest() S127 ~3128 (weekly: n>=3, c/n<60% — INDEPENDENT)",
+        "May._generateStudyStrategy() S128 ~3255 (weekly: n>=3, c/n<60% — INDEPENDENT)",
+        "May._summarizeSession() ~3694 (session-level: c/n<0.6 — INDEPENDENT)",
+        "May._suggestFocusAreas() S125 ~1406 (calculation-miss conditional on current answer)"
+      ],
+      "targetEvidenceGraphField": "observations.weaknesses[] — unified at >=5 attempts AND accuracy <60% in _deriveObservations() line 1564. Each entry carries topic, accuracy, recentAccuracy, timeWeightedAccuracy, totalAttempts, and evidence sub-object.",
+      "migrationType": "threshold_adaptation",
+      "effort": "medium",
+      "migrationDetail": "S127/S128 must change from their independent 7-session >=3/<60% scan to consuming observations.weaknesses (>=5/<60% lifetime). For weekly-digest 'Topics needing attention' that legitimately needs a shorter window, use getEvidenceWindows().recent and filter those with accuracy<60 (without the separate >=3 threshold — recency window provides the lookback). S126's per-session weak (any n>0, <60%) is a different concept (session-level weakness) and should remain per-session but should NOT be conflated with topic-level weakness — use a distinct label like 'struggled_this_session'."
+    },
+    {
+      "s130Finding": "classify topic as strong (above threshold) — 6 implementations using 3 different threshold combinations: >=85%, >=70%, top-2 by session pct",
+      "severity": "MEDIUM",
+      "currentImplementations": [
+        "May._identifyLearningPatterns() S124 ~1259 (>=3 attempts, >=85% — delegates to getTopicProgress)",
+        "May._suggestFocusAreas() S125 ~1445 (>=3 attempts, >=85% — delegates to getTopicProgress)",
+        "May._generateWeeklyDigest() S127 ~3113 (>=3 attempts, >=70% — INDEPENDENT weekly scan)",
+        "May._generateStudyStrategy() S128 ~3256 (>=3 attempts, >=70% — INDEPENDENT weekly scan)",
+        "May._generateSessionRecap() S126 ~2965 (top-2 by pct, any n>0 — INDEPENDENT)",
+        "May._getProgressInsight() ~2770 (stability >= 80 AND accuracy >= 70 — via getTrends)"
+      ],
+      "targetEvidenceGraphField": "observations.strengths[] — unified at >=3 attempts AND accuracy >=85 AND direction NOT declining/slightly_declining in _deriveObservations() line 1554. Each entry carries topic, accuracy, recentAccuracy, timeWeightedAccuracy, totalAttempts, stability, and evidence sub-object.",
+      "migrationType": "threshold_adaptation",
+      "effort": "medium",
+      "migrationDetail": "S127/S128's >=70% threshold creates a 'strong' label for topics that are moderate by the unified >=85% standard. The S130 canonical source proposal recommends adding a 'solid' tier (>=70%) to getTopicStrengthTiers(). Until that is built into computeEvidenceGraph(), S127/S128 should consume observations.strengths at >=85% and separately identify 'solid' topics (>=70%, <85%) from evidence[topic].accuracy if a secondary tier is needed. S126's top-2 strongest-areas is session-level and should remain separate but labeled distinctly."
+    },
+    {
+      "s130Finding": "detect improvement trend — 7 implementations using 4 different delta thresholds: 15%, 10%, 10%, 5%",
+      "severity": "HIGH",
+      "currentImplementations": [
+        "MayLearnerState.getTrends() ~252 (delta >= 15% → 'improving', delta > 5% → 'slightly_improving')",
+        "May._identifyLearningPatterns() S124 ~1277 (delta >= 10% AND recentPct >= 75%)",
+        "May._suggestFocusAreas() S125 ~1478 (delta >= 10% AND recentPct >= 75%)",
+        "May._generateSessionRecap() S126 ~3027 (session-to-session delta >= 10%)",
+        "May._generateWeeklyDigest() S127 ~3097 (first-vs-last session delta >= 10%)",
+        "MayLearnerState.classifyPendingOutcomes() S129 ~1270 (delta >= 5% AND accuracy >= 60% AND direction improving)",
+        "May._detectPositiveTrend() ~315 (uses clusters.improving — inherits 15% from getTrends)"
+      ],
+      "targetEvidenceGraphField": "observations.topicTrends[] — unified at >=4 attempts AND delta >= 10 in _deriveObservations() line 1573-1574. Also evidence[topic].direction (from getTrends with >=15% for 'improving', >5% for 'slightly_improving'). computeEvidenceGraph() layers both: getTrends provides fine-grained direction, _deriveObservations adds the >=10 delta gate for topicTrends observations.",
+      "migrationType": "threshold_adaptation",
+      "effort": "high",
+      "migrationDetail": "This is the most complex migration because getTrends() itself uses delta>=15% for 'improving' while _deriveObservations (S131) uses delta>=10 for topicTrends. S124/S125's additional recentPct>=75% condition is dropped in the unified model. S129 classifyPendingOutcomes already delegates to getTrends().direction (indirectly through trendMap), so its delta>=5 gate becomes: check evidence[topic].direction for 'improving'/'slightly_improving' (from getTrends delta>5%) AND evidence[topic].delta>=10. S126/S127 session-comparison trends are a different concept and should remain but use consistent thresholds — or better, call getTrends() with the relevant data window."
+    },
+    {
+      "s130Finding": "misconception pattern name lookup — identical pattern-name mapping object duplicated 7 times across may-core.js",
+      "severity": "LOW",
+      "currentImplementations": [
+        "May._identifyLearningPatterns() S124 ~1295-1304",
+        "May._suggestFocusAreas() S125 ~1423-1432",
+        "May._explainYourMistake() ~2699-2708",
+        "May._generateSessionRecap() S126 ~2995-3004",
+        "May._generateWeeklyDigest() S127 ~3143-3152",
+        "May._generateStudyStrategy() S128 ~3258-3263",
+        "May._getWeaknessInsight() ~2903-2913 (slightly different labels)"
+      ],
+      "targetEvidenceGraphField": "observations.misconceptions[] — unified misconception aggregation in _deriveObservations() line 1592-1598. However note: S131 _deriveObservations pushes RAW pattern keys (e.g. 'variance_sign_confusion'), not human-readable labels. The pattern-name lookup duplication still exists at S131 — a separate getMisconceptionLabels() canonical function is still needed (proposed in S130 §canonicalSourceProposal.misconceptions).",
+      "migrationType": "restructure_needed",
+      "effort": "low",
+      "migrationDetail": "Step 1: create MayLearnerState.getMisconceptionLabels() returning the single canonical pattern→label mapping. Step 2: replace all 7 inline patternNames objects with calls to getMisconceptionLabels(). Step 3: _deriveObservations() can optionally include labels in observations.misconceptions[] entries. This is low-effort but not yet implemented in S131 — the observations are unified but the label lookup is still duplicated."
+    },
+    {
+      "s130Finding": "recommend next study action — 6 independent recommendation functions using different data windows, thresholds (60% vs 65%), and priority rules (persistentWeak vs declining vs session-weakest)",
+      "severity": "MEDIUM",
+      "currentImplementations": [
+        "May._recommendNextAction() S117 ~338 (uses clusters.persistentWeak, .declining)",
+        "May._generateSessionRecap() S126 ~3041 (uses weakest topic from session)",
+        "May._generateWeeklyDigest() S127 ~3174 (uses weekly weak topics + patterns, <65% threshold)",
+        "May._generateStudyStrategy() S128 ~3266 (uses weekly weak/strong topics, <60% threshold)",
+        "May._recommendNext() ~3746 (uses clusters: persistentWeak > declining > unstable)",
+        "May._summarizeSession() ~3693 (uses session's weakest topic)"
+      ],
+      "targetEvidenceGraphField": "computeEvidenceGraph() provides evidence, observations, and clusters but does NOT yet include a unified getRecommendedActions() function. The S130 canonical source proposal recommends MayLearnerState.getRecommendedActions({ horizon }) as a new function consuming computeEvidenceGraph() output. Currently no direct target field exists.",
+      "migrationType": "restructure_needed",
+      "effort": "high",
+      "migrationDetail": "Requires building a new MayLearnerState.getRecommendedActions({ horizon: 'session'|'week'|'2weeks' }) that consumes computeEvidenceGraph() output (observations.weaknesses, clusters.persistentWeak, clusters.declining, observations.misconceptions) and returns a ranked action list with consistent prioritization rules: (1) persistent weak topics, (2) declining topics, (3) misconception-heavy topics, (4) unstable topics. All 6 current implementations then delegate to this single function with their horizon parameter."
+    }
+  ],
+
+  "classificationConflicts": [
+    {
+      "concept": "weak_topic_classification",
+      "s130Conflict": "S124/S125/getWeaknessClusters() use >=5 attempts/<60% (all-history). S127/S128 use >=3 attempts/<60% (7-day window). S127 also has a separate <65% 'recommended focus' threshold. A topic with 4 attempts at 55% this week is flagged weak by S127/S128 but NOT by S124/S125/getWeaknessClusters().",
+      "s131Resolution": "_deriveObservations() line 1564 unifies on >=5 attempts AND accuracy <60%. All subsystems consume observations.weaknesses[] for topic-level weakness classification. The 7-day window concern is handled via getEvidenceWindows().recent — subsystems filter observations by recency instead of re-scanning data with different attempt thresholds.",
+      "resolved": true
+    },
+    {
+      "concept": "strong_topic_classification",
+      "s130Conflict": "S124/S125 use >=3 attempts/>=85%. S127/S128 use >=3 attempts/>=70%. A topic at 75% with 4 attempts is strong per S127/S128 but not per S124/S125.",
+      "s131Resolution": "_deriveObservations() line 1554 unifies on >=3 attempts AND accuracy >=85 AND direction not declining/slightly_declining. The >=70% tier from S127/S128 can be recovered by reading evidence[topic].accuracy directly for a 'solid' label, or by adding a solidTopic tier to getTopicStrengthTiers() as recommended by S130. All subsystems consume observations.strengths[] for the canonical 'strong' label.",
+      "resolved": true
+    },
+    {
+      "concept": "improving_trend_detection",
+      "s130Conflict": "getTrends() uses delta>=15% for 'improving'. S124/S125 use delta>=10% AND recentPct>=75%. S126 uses session-to-session delta>=10%. S127 uses first-vs-last delta>=10%. S129 uses delta>=5% AND accuracy>=60%. Multiple conflicting signals across subsystems for the same topic.",
+      "s131Resolution": "_deriveObservations() line 1573 unifies on >=4 attempts AND delta >= 10 for observations.topicTrends[].improving. getTrends() still provides fine-grained direction (improving at >=15%, slightly_improving at >5%) in evidence[topic].direction which remains available for subsystems that need more granularity. The two thresholds coexist in a layered model: direction from getTrends (fine-grained), binary improving/declining gate from _deriveObservations (>=10 delta, >=4 attempts). S129 classifyPendingOutcomes already delegates to getTrends().direction and can use evidence[topic].direction from computeEvidenceGraph().",
+      "resolved": true
+    },
+    {
+      "concept": "declining_trend_detection",
+      "s130Conflict": "getTrends() uses delta<=-15% for 'declining'. S126 uses session-to-session delta<=-10%. S127 uses first-vs-last delta<=-10%. A topic with delta=-12% is declining per S126/S127 but only 'slightly_declining' per getTrends().",
+      "s131Resolution": "_deriveObservations() line 1580 unifies on >=4 attempts AND delta <= -10 for observations.topicTrends[].declining. The layered model (getTrends direction for granularity + _deriveObservations gate for binary classification) applies symmetrically to declining.",
+      "resolved": true
+    },
+    {
+      "concept": "misconception_detection",
+      "s130Conflict": "All 5 subsystems read from the same data.misconceptionPatterns source and filter by count>=2, so they CANNOT disagree on which misconceptions exist. However the pattern-names mapping is duplicated in 7 locations creating maintenance risk — a new pattern must be added to 7 separate inline objects.",
+      "s131Resolution": "observations.misconceptions[] in _deriveObservations() centralizes the 'count >= 2' filter and misconception aggregation into one place. However the human-readable pattern name mapping is NOT yet centralized — _deriveObservations stores raw pattern keys. The S130 proposal for a getMisconceptionLabels() canonical function has not yet been implemented in S131. Partially resolved: aggregation unified, label lookup still duplicated.",
+      "resolved": false
+    },
+    {
+      "concept": "topic_priority_for_study",
+      "s130Conflict": "S125 prioritizes based on getTopicProgress() (all history, <60%). S127 recommends from weekly scan with <65% threshold. S128 prioritizes from weekly scan with <60% threshold. A topic at 63% with 6 attempts this week would be recommended by S127 (<65%) but NOT by S125 or S128 (<60%).",
+      "s131Resolution": "computeEvidenceGraph() provides observations.weaknesses[] (unified at <60%) as the canonical weak-topic list. However coarser-grained topic prioritization with different thresholds (like S127's <65% 'recommended focus') is a recommendation-layer concern that computeEvidenceGraph() does not directly address. Resolved for the weak/not-weak binary classification, but the recommendation ranking with variable thresholds still needs the getRecommendedActions() function. Partially resolved.",
+      "resolved": false
+    },
+    {
+      "concept": "cross_session_trend_comparison",
+      "s130Conflict": "S126 compares most-recent session to immediately-prior session. S127 compares first to last session within the 7-session window. Different baselines produce different delta magnitudes and sometimes different directions.",
+      "s131Resolution": "computeEvidenceGraph() uses getTrends() which computes delta as recentPct - accuracy (recent 5 vs overall), a topic-level trend metric, not session-to-session comparison. The S126/S127 session-comparison trends are a different concept (session-over-session performance vs topic trend). S131 resolves the conflict by providing evidence[topic].delta and evidence[topic].direction as the single source for topic trend. Session-to-session comparisons, if still needed, should use a separate, explicitly-labeled sessionDelta field — neither S126 nor S127 should call their session comparisons 'improving'/'declining' as those labels now belong to topic-level trends from getTrends().",
+      "resolved": true
+    }
+  ],
+
+  "migrationSummary": {
+    "directReplacements": 3,
+    "thresholdAdaptations": 3,
+    "restructuresNeeded": 2,
+    "alreadyResolvedByS131": 5,
+    "details": {
+      "directReplacements_detail": [
+        "1. Scan session history (12→1): subsystems read evidence[topic].totalAttempts and metadata.sessionCount instead of scanning sessions independently",
+        "2. Per-topic accuracy (7→1): subsystems read evidence[topic].accuracy, .recentAccuracy, or .timeWeightedAccuracy instead of computing v.c/v.n*100 locally",
+        "3. Misconception labels (7→1): requires creating getMisconceptionLabels() — counted here because the 7 copies are replaced by 1 canonical function call (low-effort restructure)"
+      ],
+      "thresholdAdaptations_detail": [
+        "1. Weak classification (8→1): S127/S128 adapt from >=3/<60% weekly to consuming observations.weaknesses (>=5/<60% lifetime); S126 relabeled as session-level",
+        "2. Strong classification (6→1): S127/S128 adapt from >=70% to consuming observations.strengths (>=85%); optional 'solid' tier (>=70%) from evidence[topic].accuracy",
+        "3. Improvement trend (7→1): all subsystems adapt from varying delta thresholds (15/10/10/5) to observations.topicTrends (delta>=10) with evidence[topic].direction for fine-grained needs"
+      ],
+      "restructuresNeeded_detail": [
+        "1. Recommendations (6→1): requires building getRecommendedActions({horizon}) as a new function consuming computeEvidenceGraph(); all 6 recommendation paths delegate to it",
+        "2. Misconception labels (7→1): requires creating getMisconceptionLabels() and replacing 7 inline patternName maps; observations are unified but labels are not yet (partial S131 coverage)"
+      ],
+      "alreadyResolvedByS131_detail": [
+        "weak_topic_classification: unified >=5/<60%",
+        "strong_topic_classification: unified >=3/>=85%",
+        "improving_trend_detection: unified >=4/delta>=10",
+        "declining_trend_detection: unified >=4/delta<=-10",
+        "cross_session_trend_comparison: getTrends() provides single delta/direction for topic-level trends; session-level comparisons use distinct labeling"
+      ]
+    }
+  },
+
+  "s131ThresholdVerification": {
+    "source": "may-learner-state.js _deriveObservations() lines 1552-1588 and verifyClassificationConsistency() lines 1711-1729",
+    "weak": {
+      "threshold": "totalAttempts >= 5 AND accuracy < 60",
+      "codeRef": "_deriveObservations line 1564",
+      "matchesSpec": true
+    },
+    "strong": {
+      "threshold": "totalAttempts >= 3 AND accuracy >= 85 AND direction NOT declining/slightly_declining",
+      "codeRef": "_deriveObservations line 1554",
+      "matchesSpec": true
+    },
+    "improving": {
+      "threshold": "totalAttempts >= 4 AND delta !== null AND delta >= 10",
+      "codeRef": "_deriveObservations line 1573-1574",
+      "matchesSpec": true
+    },
+    "declining": {
+      "threshold": "totalAttempts >= 4 AND delta !== null AND delta <= -10",
+      "codeRef": "_deriveObservations line 1580",
+      "matchesSpec": true
+    },
+    "note": "getTrends() internal thresholds differ (>=15% for 'improving', <=-15% for 'declining', >5% for 'slightly_improving', <-5% for 'slightly_declining') and feed evidence[topic].direction. _deriveObservations applies a second gate at delta>=10 / delta<=-10 for binary topicTrends observations. This layered design provides both fine-grained direction and binary classification."
+  },
+
+  "gapsInS131Coverage": [
+    {
+      "gap": "No getMisconceptionLabels() canonical function yet",
+      "impact": "7 inline pattern-name map objects still duplicated across may-core.js",
+      "s130Recommendation": "Create MayLearnerState.getMisconceptionLabels() returning the single canonical mapping; _deriveObservations can optionally include labels in observations.misconceptions[] entries",
+      "effort": "low"
+    },
+    {
+      "gap": "No getRecommendedActions() function",
+      "impact": "6 independent recommendation functions still produce conflicting next-study-action advice",
+      "s130Recommendation": "Build MayLearnerState.getRecommendedActions({ horizon }) consuming computeEvidenceGraph() output with consistent prioritization: persistentWeak > declining > misconception-heavy > unstable",
+      "effort": "high"
+    },
+    {
+      "gap": "No getTopicStrengthTiers() for intermediate 'solid' tier (>=70%)",
+      "impact": "S127/S128's >=70% 'strong' label has no equivalent in computeEvidenceGraph(); subsystems needing this tier must compute it from evidence[topic].accuracy independently",
+      "s130Recommendation": "Add solidTopic tier to observations or extend evidence[topic] with a strengthTier field (strong/solid/developing/weak)",
+      "effort": "low"
+    }
+  ]
+}

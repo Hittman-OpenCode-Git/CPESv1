@@ -1,0 +1,3778 @@
+[
+  {
+    "itemID": "CBQ-A1-Q1",
+    "caseID": "CBQ-A1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A1-Q2",
+    "caseID": "CBQ-A1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A1-Q3",
+    "caseID": "CBQ-A1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-A1-Q4",
+    "caseID": "CBQ-A1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A1-Q5",
+    "caseID": "CBQ-A1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A1-Q6",
+    "caseID": "CBQ-A1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-A2-Q1",
+    "caseID": "CBQ-A2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A2-Q2",
+    "caseID": "CBQ-A2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A2-Q3",
+    "caseID": "CBQ-A2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A2-Q4",
+    "caseID": "CBQ-A2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-A2-Q5",
+    "caseID": "CBQ-A2",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-A2-Q6",
+    "caseID": "CBQ-A2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-B1-Q1",
+    "caseID": "CBQ-B1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B1-Q2",
+    "caseID": "CBQ-B1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B1-Q3",
+    "caseID": "CBQ-B1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B1-Q4",
+    "caseID": "CBQ-B1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B1-Q5",
+    "caseID": "CBQ-B1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B1-Q6",
+    "caseID": "CBQ-B1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-B2-Q1",
+    "caseID": "CBQ-B2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B2-Q2",
+    "caseID": "CBQ-B2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B2-Q3",
+    "caseID": "CBQ-B2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-B2-Q4",
+    "caseID": "CBQ-B2",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-B2-Q5",
+    "caseID": "CBQ-B2",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-B2-Q6",
+    "caseID": "CBQ-B2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C1-Q1",
+    "caseID": "CBQ-C1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-C1-Q2",
+    "caseID": "CBQ-C1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-C1-Q3",
+    "caseID": "CBQ-C1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-C1-Q4",
+    "caseID": "CBQ-C1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C1-Q5",
+    "caseID": "CBQ-C1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C1-Q6",
+    "caseID": "CBQ-C1",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C2-Q1",
+    "caseID": "CBQ-C2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-C2-Q2",
+    "caseID": "CBQ-C2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-C2-Q3",
+    "caseID": "CBQ-C2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C2-Q4",
+    "caseID": "CBQ-C2",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C2-Q5",
+    "caseID": "CBQ-C2",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-C2-Q6",
+    "caseID": "CBQ-C2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-D1-Q1",
+    "caseID": "CBQ-D1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-D1-Q2",
+    "caseID": "CBQ-D1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-D1-Q3",
+    "caseID": "CBQ-D1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-D1-Q4",
+    "caseID": "CBQ-D1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-D1-Q5",
+    "caseID": "CBQ-D1",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-D1-Q6",
+    "caseID": "CBQ-D1",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-D2-Q1",
+    "caseID": "CBQ-D2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-D2-Q2",
+    "caseID": "CBQ-D2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-D2-Q3",
+    "caseID": "CBQ-D2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-D2-Q4",
+    "caseID": "CBQ-D2",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-D2-Q5",
+    "caseID": "CBQ-D2",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-D2-Q6",
+    "caseID": "CBQ-D2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E1-Q1",
+    "caseID": "CBQ-E1",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E1-Q2",
+    "caseID": "CBQ-E1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E1-Q3",
+    "caseID": "CBQ-E1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-E1-Q4",
+    "caseID": "CBQ-E1",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-E1-Q5",
+    "caseID": "CBQ-E1",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E1-Q6",
+    "caseID": "CBQ-E1",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E2-Q1",
+    "caseID": "CBQ-E2",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E2-Q2",
+    "caseID": "CBQ-E2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-E2-Q3",
+    "caseID": "CBQ-E2",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E2-Q4",
+    "caseID": "CBQ-E2",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-E2-Q5",
+    "caseID": "CBQ-E2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-E2-Q6",
+    "caseID": "CBQ-E2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-F1-Q1",
+    "caseID": "CBQ-F1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-F1-Q2",
+    "caseID": "CBQ-F1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-F1-Q3",
+    "caseID": "CBQ-F1",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-F1-Q4",
+    "caseID": "CBQ-F1",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-F1-Q5",
+    "caseID": "CBQ-F1",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-F1-Q6",
+    "caseID": "CBQ-F1",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A3-Q1",
+    "caseID": "CBQ-A3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A3-Q2",
+    "caseID": "CBQ-A3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A3-Q3",
+    "caseID": "CBQ-A3",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-A3-Q4",
+    "caseID": "CBQ-A3",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-A3-Q5",
+    "caseID": "CBQ-A3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-A3-Q6",
+    "caseID": "CBQ-A3",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-B3-Q1",
+    "caseID": "CBQ-B3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B3-Q2",
+    "caseID": "CBQ-B3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B3-Q3",
+    "caseID": "CBQ-B3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B3-Q4",
+    "caseID": "CBQ-B3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-B3-Q5",
+    "caseID": "CBQ-B3",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-B3-Q6",
+    "caseID": "CBQ-B3",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C3-Q1",
+    "caseID": "CBQ-C3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-C3-Q2",
+    "caseID": "CBQ-C3",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-C3-Q3",
+    "caseID": "CBQ-C3",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C3-Q4",
+    "caseID": "CBQ-C3",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C3-Q5",
+    "caseID": "CBQ-C3",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-C3-Q6",
+    "caseID": "CBQ-C3",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-F2-Q1",
+    "caseID": "CBQ-F2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-F2-Q2",
+    "caseID": "CBQ-F2",
+    "file": "scored_cases.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ-F2-Q3",
+    "caseID": "CBQ-F2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-F2-Q4",
+    "caseID": "CBQ-F2",
+    "file": "scored_cases.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ-F2-Q5",
+    "caseID": "CBQ-F2",
+    "file": "scored_cases.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ-F2-Q6",
+    "caseID": "CBQ-F2",
+    "file": "scored_cases.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-A3-Q3",
+    "caseID": "CBQ2-A3",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-A3-Q4",
+    "caseID": "CBQ2-A3",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-A2-Q1",
+    "caseID": "CBQ2-A2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-A2-Q2",
+    "caseID": "CBQ2-A2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-A2-Q3",
+    "caseID": "CBQ2-A2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-A2-Q4",
+    "caseID": "CBQ2-A2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-A2-Q5",
+    "caseID": "CBQ2-A2",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-B1-Q1",
+    "caseID": "CBQ2-B1",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B1-Q2",
+    "caseID": "CBQ2-B1",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B1-Q3",
+    "caseID": "CBQ2-B1",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B1-Q4",
+    "caseID": "CBQ2-B1",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B1-Q5",
+    "caseID": "CBQ2-B1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-B2-Q1",
+    "caseID": "CBQ2-B2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B2-Q2",
+    "caseID": "CBQ2-B2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B2-Q3",
+    "caseID": "CBQ2-B2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B2-Q4",
+    "caseID": "CBQ2-B2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B2-Q5",
+    "caseID": "CBQ2-B2",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-B2-Q6",
+    "caseID": "CBQ2-B2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-B3-Q1",
+    "caseID": "CBQ2-B3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B3-Q2",
+    "caseID": "CBQ2-B3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B3-Q3",
+    "caseID": "CBQ2-B3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-B3-Q4",
+    "caseID": "CBQ2-B3",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-B3-Q5",
+    "caseID": "CBQ2-B3",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-B3-Q6",
+    "caseID": "CBQ2-B3",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C1-Q1",
+    "caseID": "CBQ2-C1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C1-Q2",
+    "caseID": "CBQ2-C1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C1-Q3",
+    "caseID": "CBQ2-C1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C1-Q4",
+    "caseID": "CBQ2-C1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C1-Q5",
+    "caseID": "CBQ2-C1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C2-Q1",
+    "caseID": "CBQ2-C2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-C2-Q2",
+    "caseID": "CBQ2-C2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-C2-Q3",
+    "caseID": "CBQ2-C2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-C2-Q4",
+    "caseID": "CBQ2-C2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-C2-Q5",
+    "caseID": "CBQ2-C2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-C3-Q1",
+    "caseID": "CBQ2-C3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-C3-Q2",
+    "caseID": "CBQ2-C3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-C3-Q3",
+    "caseID": "CBQ2-C3",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C3-Q4",
+    "caseID": "CBQ2-C3",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-C3-Q5",
+    "caseID": "CBQ2-C3",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D1-Q1",
+    "caseID": "CBQ2-D1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D1-Q2",
+    "caseID": "CBQ2-D1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D1-Q3",
+    "caseID": "CBQ2-D1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D1-Q4",
+    "caseID": "CBQ2-D1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D1-Q5",
+    "caseID": "CBQ2-D1",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-D2-Q1",
+    "caseID": "CBQ2-D2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-D2-Q2",
+    "caseID": "CBQ2-D2",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-D2-Q3",
+    "caseID": "CBQ2-D2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D2-Q4",
+    "caseID": "CBQ2-D2",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D2-Q5",
+    "caseID": "CBQ2-D2",
+    "file": "scored_cases2.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ2-D2-Q6",
+    "caseID": "CBQ2-D2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-D3-Q1",
+    "caseID": "CBQ2-D3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-D3-Q2",
+    "caseID": "CBQ2-D3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-D3-Q3",
+    "caseID": "CBQ2-D3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-D3-Q4",
+    "caseID": "CBQ2-D3",
+    "file": "scored_cases2.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ2-D3-Q5",
+    "caseID": "CBQ2-D3",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E1-Q1",
+    "caseID": "CBQ2-E1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E1-Q2",
+    "caseID": "CBQ2-E1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E1-Q3",
+    "caseID": "CBQ2-E1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E1-Q4",
+    "caseID": "CBQ2-E1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E1-Q5",
+    "caseID": "CBQ2-E1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E2-Q1",
+    "caseID": "CBQ2-E2",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E2-Q2",
+    "caseID": "CBQ2-E2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E2-Q3",
+    "caseID": "CBQ2-E2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E2-Q4",
+    "caseID": "CBQ2-E2",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-E2-Q5",
+    "caseID": "CBQ2-E2",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F1-Q1",
+    "caseID": "CBQ2-F1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F1-Q2",
+    "caseID": "CBQ2-F1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F1-Q3",
+    "caseID": "CBQ2-F1",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F1-Q4",
+    "caseID": "CBQ2-F1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F1-Q5",
+    "caseID": "CBQ2-F1",
+    "file": "scored_cases2.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F2-Q1",
+    "caseID": "CBQ2-F2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F2-Q2",
+    "caseID": "CBQ2-F2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ2-F2-Q3",
+    "caseID": "CBQ2-F2",
+    "file": "scored_cases2.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ2-F2-Q4",
+    "caseID": "CBQ2-F2",
+    "file": "scored_cases2.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ2-F2-Q5",
+    "caseID": "CBQ2-F2",
+    "file": "scored_cases2.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-A1-Q2",
+    "caseID": "CBQ3-A1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-A1-Q5",
+    "caseID": "CBQ3-A1",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-A2-Q1",
+    "caseID": "CBQ3-A2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-A2-Q2",
+    "caseID": "CBQ3-A2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-A2-Q3",
+    "caseID": "CBQ3-A2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-A2-Q4",
+    "caseID": "CBQ3-A2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-A2-Q5",
+    "caseID": "CBQ3-A2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B1-Q1",
+    "caseID": "CBQ3-B1",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B1-Q2",
+    "caseID": "CBQ3-B1",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B1-Q3",
+    "caseID": "CBQ3-B1",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B1-Q4",
+    "caseID": "CBQ3-B1",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B1-Q5",
+    "caseID": "CBQ3-B1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ3-B2-Q1",
+    "caseID": "CBQ3-B2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B2-Q2",
+    "caseID": "CBQ3-B2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B2-Q3",
+    "caseID": "CBQ3-B2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B2-Q4",
+    "caseID": "CBQ3-B2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B2-Q5",
+    "caseID": "CBQ3-B2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B2-Q6",
+    "caseID": "CBQ3-B2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B3-Q1",
+    "caseID": "CBQ3-B3",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B3-Q2",
+    "caseID": "CBQ3-B3",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B3-Q3",
+    "caseID": "CBQ3-B3",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-B3-Q4",
+    "caseID": "CBQ3-B3",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B3-Q5",
+    "caseID": "CBQ3-B3",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-B3-Q6",
+    "caseID": "CBQ3-B3",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C1-Q1",
+    "caseID": "CBQ3-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C1-Q2",
+    "caseID": "CBQ3-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C1-Q3",
+    "caseID": "CBQ3-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C1-Q4",
+    "caseID": "CBQ3-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C1-Q5",
+    "caseID": "CBQ3-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C2-Q1",
+    "caseID": "CBQ3-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C2-Q2",
+    "caseID": "CBQ3-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C2-Q3",
+    "caseID": "CBQ3-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C2-Q4",
+    "caseID": "CBQ3-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C2-Q5",
+    "caseID": "CBQ3-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C3-Q1",
+    "caseID": "CBQ3-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-C3-Q2",
+    "caseID": "CBQ3-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-C3-Q3",
+    "caseID": "CBQ3-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C3-Q4",
+    "caseID": "CBQ3-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-C3-Q5",
+    "caseID": "CBQ3-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D1-Q1",
+    "caseID": "CBQ3-D1",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-D1-Q2",
+    "caseID": "CBQ3-D1",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-D1-Q3",
+    "caseID": "CBQ3-D1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D1-Q4",
+    "caseID": "CBQ3-D1",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D1-Q5",
+    "caseID": "CBQ3-D1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ3-D1-Q6",
+    "caseID": "CBQ3-D1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D2-Q1",
+    "caseID": "CBQ3-D2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-D2-Q2",
+    "caseID": "CBQ3-D2",
+    "file": "scored_cases3.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ3-D2-Q3",
+    "caseID": "CBQ3-D2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D2-Q4",
+    "caseID": "CBQ3-D2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D2-Q5",
+    "caseID": "CBQ3-D2",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ3-D2-Q6",
+    "caseID": "CBQ3-D2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D3-Q1",
+    "caseID": "CBQ3-D3",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D3-Q2",
+    "caseID": "CBQ3-D3",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D3-Q3",
+    "caseID": "CBQ3-D3",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D3-Q4",
+    "caseID": "CBQ3-D3",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-D3-Q5",
+    "caseID": "CBQ3-D3",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E1-Q1",
+    "caseID": "CBQ3-E1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E1-Q2",
+    "caseID": "CBQ3-E1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E1-Q3",
+    "caseID": "CBQ3-E1",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E1-Q4",
+    "caseID": "CBQ3-E1",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E1-Q5",
+    "caseID": "CBQ3-E1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E2-Q1",
+    "caseID": "CBQ3-E2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E2-Q2",
+    "caseID": "CBQ3-E2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E2-Q3",
+    "caseID": "CBQ3-E2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E2-Q4",
+    "caseID": "CBQ3-E2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-E2-Q5",
+    "caseID": "CBQ3-E2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-F1-Q1",
+    "caseID": "CBQ3-F1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ3-F1-Q2",
+    "caseID": "CBQ3-F1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ3-F1-Q3",
+    "caseID": "CBQ3-F1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ3-F1-Q4",
+    "caseID": "CBQ3-F1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-F1-Q5",
+    "caseID": "CBQ3-F1",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-F2-Q1",
+    "caseID": "CBQ3-F2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-F2-Q2",
+    "caseID": "CBQ3-F2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-F2-Q3",
+    "caseID": "CBQ3-F2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-F2-Q4",
+    "caseID": "CBQ3-F2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ3-F2-Q5",
+    "caseID": "CBQ3-F2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C1-Q1",
+    "caseID": "CASE-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C1-Q2",
+    "caseID": "CASE-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C1-Q4",
+    "caseID": "CASE-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C1-Q5",
+    "caseID": "CASE-C1",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C2-Q1",
+    "caseID": "CASE-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C2-Q3",
+    "caseID": "CASE-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C2-Q4",
+    "caseID": "CASE-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C2-Q5",
+    "caseID": "CASE-C2",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C3-Q1",
+    "caseID": "CASE-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C3-Q3",
+    "caseID": "CASE-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C3-Q4",
+    "caseID": "CASE-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C3-Q5",
+    "caseID": "CASE-C3",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C4-Q1",
+    "caseID": "CASE-C4",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C4-Q3",
+    "caseID": "CASE-C4",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C4-Q4",
+    "caseID": "CASE-C4",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C4-Q5",
+    "caseID": "CASE-C4",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C5-Q1",
+    "caseID": "CASE-C5",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C5-Q2",
+    "caseID": "CASE-C5",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C5-Q3",
+    "caseID": "CASE-C5",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C5-Q4",
+    "caseID": "CASE-C5",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C5-Q5",
+    "caseID": "CASE-C5",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C6-Q1",
+    "caseID": "CASE-C6",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C6-Q2",
+    "caseID": "CASE-C6",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C6-Q3",
+    "caseID": "CASE-C6",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C6-Q4",
+    "caseID": "CASE-C6",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C6-Q5",
+    "caseID": "CASE-C6",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C7-Q1",
+    "caseID": "CASE-C7",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C7-Q2",
+    "caseID": "CASE-C7",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C7-Q3",
+    "caseID": "CASE-C7",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C7-Q4",
+    "caseID": "CASE-C7",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C7-Q5",
+    "caseID": "CASE-C7",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C8-Q1",
+    "caseID": "CASE-C8",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C8-Q3",
+    "caseID": "CASE-C8",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C8-Q4",
+    "caseID": "CASE-C8",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C8-Q5",
+    "caseID": "CASE-C8",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C9-Q1",
+    "caseID": "CASE-C9",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C9-Q3",
+    "caseID": "CASE-C9",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C9-Q4",
+    "caseID": "CASE-C9",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C9-Q5",
+    "caseID": "CASE-C9",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C10-Q1",
+    "caseID": "CASE-C10",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C10-Q3",
+    "caseID": "CASE-C10",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C10-Q4",
+    "caseID": "CASE-C10",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C10-Q5",
+    "caseID": "CASE-C10",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C11-Q1",
+    "caseID": "CASE-C11",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C11-Q2",
+    "caseID": "CASE-C11",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C11-Q3",
+    "caseID": "CASE-C11",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C11-Q4",
+    "caseID": "CASE-C11",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C11-Q5",
+    "caseID": "CASE-C11",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C12-Q1",
+    "caseID": "CASE-C12",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C12-Q2",
+    "caseID": "CASE-C12",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C12-Q3",
+    "caseID": "CASE-C12",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C12-Q4",
+    "caseID": "CASE-C12",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C12-Q5",
+    "caseID": "CASE-C12",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C13-Q1",
+    "caseID": "CASE-C13",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C13-Q2",
+    "caseID": "CASE-C13",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C13-Q3",
+    "caseID": "CASE-C13",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C13-Q4",
+    "caseID": "CASE-C13",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C13-Q5",
+    "caseID": "CASE-C13",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C14-Q1",
+    "caseID": "CASE-C14",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C14-Q2",
+    "caseID": "CASE-C14",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C14-Q4",
+    "caseID": "CASE-C14",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C14-Q5",
+    "caseID": "CASE-C14",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C15-Q1",
+    "caseID": "CASE-C15",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C15-Q2",
+    "caseID": "CASE-C15",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-C15-Q3",
+    "caseID": "CASE-C15",
+    "file": "scored_cases3.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C15-Q4",
+    "caseID": "CASE-C15",
+    "file": "scored_cases3.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-C15-Q5",
+    "caseID": "CASE-C15",
+    "file": "scored_cases3.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-A1-Q3",
+    "caseID": "CBQ4-A1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-A1-Q4",
+    "caseID": "CBQ4-A1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-A1-Q5",
+    "caseID": "CBQ4-A1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-A2-Q4",
+    "caseID": "CBQ4-A2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-A2-Q5",
+    "caseID": "CBQ4-A2",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Easy/1",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-B1-Q1",
+    "caseID": "CBQ4-B1",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B1-Q2",
+    "caseID": "CBQ4-B1",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B1-Q3",
+    "caseID": "CBQ4-B1",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B1-Q4",
+    "caseID": "CBQ4-B1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-B1-Q5",
+    "caseID": "CBQ4-B1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-C1-Q5",
+    "caseID": "CBQ4-C1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-C2-Q1",
+    "caseID": "CBQ4-C2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-C2-Q2",
+    "caseID": "CBQ4-C2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-C2-Q3",
+    "caseID": "CBQ4-C2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-C2-Q4",
+    "caseID": "CBQ4-C2",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-C2-Q5",
+    "caseID": "CBQ4-C2",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D1-Q1",
+    "caseID": "CBQ4-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-D1-Q2",
+    "caseID": "CBQ4-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-D1-Q3",
+    "caseID": "CBQ4-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D1-Q4",
+    "caseID": "CBQ4-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D1-Q5",
+    "caseID": "CBQ4-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-D1-Q6",
+    "caseID": "CBQ4-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D2-Q1",
+    "caseID": "CBQ4-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-D2-Q2",
+    "caseID": "CBQ4-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-D2-Q3",
+    "caseID": "CBQ4-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D2-Q4",
+    "caseID": "CBQ4-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D2-Q5",
+    "caseID": "CBQ4-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-D2-Q6",
+    "caseID": "CBQ4-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D3-Q1",
+    "caseID": "CBQ4-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D3-Q2",
+    "caseID": "CBQ4-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-D3-Q3",
+    "caseID": "CBQ4-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D3-Q4",
+    "caseID": "CBQ4-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-D3-Q5",
+    "caseID": "CBQ4-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E1-Q1",
+    "caseID": "CBQ4-E1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E1-Q2",
+    "caseID": "CBQ4-E1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E1-Q3",
+    "caseID": "CBQ4-E1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E1-Q4",
+    "caseID": "CBQ4-E1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E1-Q5",
+    "caseID": "CBQ4-E1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E2-Q1",
+    "caseID": "CBQ4-E2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E2-Q2",
+    "caseID": "CBQ4-E2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E2-Q3",
+    "caseID": "CBQ4-E2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E2-Q4",
+    "caseID": "CBQ4-E2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E2-Q5",
+    "caseID": "CBQ4-E2",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E3-Q1",
+    "caseID": "CBQ4-E3",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E3-Q2",
+    "caseID": "CBQ4-E3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E3-Q3",
+    "caseID": "CBQ4-E3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E3-Q4",
+    "caseID": "CBQ4-E3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-E3-Q5",
+    "caseID": "CBQ4-E3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F1-Q1",
+    "caseID": "CBQ4-F1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F1-Q2",
+    "caseID": "CBQ4-F1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F1-Q3",
+    "caseID": "CBQ4-F1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F1-Q4",
+    "caseID": "CBQ4-F1",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F1-Q5",
+    "caseID": "CBQ4-F1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F2-Q1",
+    "caseID": "CBQ4-F2",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-F2-Q2",
+    "caseID": "CBQ4-F2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-F2-Q3",
+    "caseID": "CBQ4-F2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F2-Q4",
+    "caseID": "CBQ4-F2",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-F2-Q5",
+    "caseID": "CBQ4-F2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-F3-Q1",
+    "caseID": "CBQ4-F3",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-F3-Q2",
+    "caseID": "CBQ4-F3",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-F3-Q3",
+    "caseID": "CBQ4-F3",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ4-F3-Q4",
+    "caseID": "CBQ4-F3",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-F3-Q5",
+    "caseID": "CBQ4-F3",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B2-Q1",
+    "caseID": "CBQ4-B2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B2-Q2",
+    "caseID": "CBQ4-B2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B2-Q3",
+    "caseID": "CBQ4-B2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B2-Q4",
+    "caseID": "CBQ4-B2",
+    "file": "scored_cases4.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ4-B2-Q5",
+    "caseID": "CBQ4-B2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ4-B2-Q6",
+    "caseID": "CBQ4-B2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-D1-Q1",
+    "caseID": "CASE-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D1-Q2",
+    "caseID": "CASE-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D1-Q4",
+    "caseID": "CASE-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-D1-Q5",
+    "caseID": "CASE-D1",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D2-Q1",
+    "caseID": "CASE-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D2-Q3",
+    "caseID": "CASE-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-D2-Q5",
+    "caseID": "CASE-D2",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D3-Q2",
+    "caseID": "CASE-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-D3-Q3",
+    "caseID": "CASE-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D3-Q4",
+    "caseID": "CASE-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Evaluate",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CASE-D3-Q5",
+    "caseID": "CASE-D3",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D4-Q2",
+    "caseID": "CASE-D4",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D4-Q4",
+    "caseID": "CASE-D4",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D4-Q5",
+    "caseID": "CASE-D4",
+    "file": "scored_cases4.js",
+    "bloom": "Remember",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D5-Q1",
+    "caseID": "CASE-D5",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D5-Q2",
+    "caseID": "CASE-D5",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D5-Q3",
+    "caseID": "CASE-D5",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D5-Q4",
+    "caseID": "CASE-D5",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D5-Q5",
+    "caseID": "CASE-D5",
+    "file": "scored_cases4.js",
+    "bloom": "Remember",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D6-Q1",
+    "caseID": "CASE-D6",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D6-Q2",
+    "caseID": "CASE-D6",
+    "file": "scored_cases4.js",
+    "bloom": "Remember",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D6-Q3",
+    "caseID": "CASE-D6",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D6-Q4",
+    "caseID": "CASE-D6",
+    "file": "scored_cases4.js",
+    "bloom": "Understand",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CASE-D6-Q5",
+    "caseID": "CASE-D6",
+    "file": "scored_cases4.js",
+    "bloom": "Remember",
+    "old": "Moderate/3",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-B2-Q5",
+    "caseID": "CBQ5-B2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "Moderate/3",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-A2-Q1",
+    "caseID": "CBQ5-A2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-A2-Q2",
+    "caseID": "CBQ5-A2",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-A2-Q3",
+    "caseID": "CBQ5-A2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-A2-Q4",
+    "caseID": "CBQ5-A2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-A2-Q5",
+    "caseID": "CBQ5-A2",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-B1-Q1",
+    "caseID": "CBQ5-B1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-B1-Q2",
+    "caseID": "CBQ5-B1",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-B1-Q3",
+    "caseID": "CBQ5-B1",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-B1-Q4",
+    "caseID": "CBQ5-B1",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-B1-Q5",
+    "caseID": "CBQ5-B1",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-C1-Q1",
+    "caseID": "CBQ5-C1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-C1-Q2",
+    "caseID": "CBQ5-C1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-C1-Q3",
+    "caseID": "CBQ5-C1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-C1-Q4",
+    "caseID": "CBQ5-C1",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C1-Q5",
+    "caseID": "CBQ5-C1",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C2-Q1",
+    "caseID": "CBQ5-C2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C2-Q2",
+    "caseID": "CBQ5-C2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-C2-Q3",
+    "caseID": "CBQ5-C2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C2-Q4",
+    "caseID": "CBQ5-C2",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C2-Q5",
+    "caseID": "CBQ5-C2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D1-Q1",
+    "caseID": "CBQ5-D1",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D1-Q2",
+    "caseID": "CBQ5-D1",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D1-Q3",
+    "caseID": "CBQ5-D1",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D1-Q4",
+    "caseID": "CBQ5-D1",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D1-Q5",
+    "caseID": "CBQ5-D1",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D2-Q1",
+    "caseID": "CBQ5-D2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D2-Q2",
+    "caseID": "CBQ5-D2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D2-Q3",
+    "caseID": "CBQ5-D2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-D2-Q4",
+    "caseID": "CBQ5-D2",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D2-Q5",
+    "caseID": "CBQ5-D2",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D3-Q1",
+    "caseID": "CBQ5-D3",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-D3-Q2",
+    "caseID": "CBQ5-D3",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D3-Q3",
+    "caseID": "CBQ5-D3",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-D3-Q4",
+    "caseID": "CBQ5-D3",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-D3-Q5",
+    "caseID": "CBQ5-D3",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-E1-Q1",
+    "caseID": "CBQ5-E1",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-E1-Q2",
+    "caseID": "CBQ5-E1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-E1-Q3",
+    "caseID": "CBQ5-E1",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-E1-Q4",
+    "caseID": "CBQ5-E1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-E1-Q5",
+    "caseID": "CBQ5-E1",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-E2-Q1",
+    "caseID": "CBQ5-E2",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-E2-Q2",
+    "caseID": "CBQ5-E2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-E2-Q3",
+    "caseID": "CBQ5-E2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-E2-Q4",
+    "caseID": "CBQ5-E2",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-E2-Q5",
+    "caseID": "CBQ5-E2",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-E3-Q1",
+    "caseID": "CBQ5-E3",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-E3-Q2",
+    "caseID": "CBQ5-E3",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-E3-Q3",
+    "caseID": "CBQ5-E3",
+    "file": "scored_cases5.js",
+    "bloom": "Remember",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-E3-Q4",
+    "caseID": "CBQ5-E3",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-E3-Q5",
+    "caseID": "CBQ5-E3",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-F1-Q1",
+    "caseID": "CBQ5-F1",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-F1-Q2",
+    "caseID": "CBQ5-F1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-F1-Q3",
+    "caseID": "CBQ5-F1",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-F1-Q4",
+    "caseID": "CBQ5-F1",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-F1-Q5",
+    "caseID": "CBQ5-F1",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-F2-Q1",
+    "caseID": "CBQ5-F2",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-F2-Q2",
+    "caseID": "CBQ5-F2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-F2-Q3",
+    "caseID": "CBQ5-F2",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-F2-Q4",
+    "caseID": "CBQ5-F2",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-F2-Q5",
+    "caseID": "CBQ5-F2",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-F3-Q1",
+    "caseID": "CBQ5-F3",
+    "file": "scored_cases5.js",
+    "bloom": "Understand",
+    "old": "None/0",
+    "new": "Moderate-Easy/2"
+  },
+  {
+    "itemID": "CBQ5-F3-Q2",
+    "caseID": "CBQ5-F3",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-F3-Q3",
+    "caseID": "CBQ5-F3",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-F3-Q4",
+    "caseID": "CBQ5-F3",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-F3-Q5",
+    "caseID": "CBQ5-F3",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C3-Q1",
+    "caseID": "CBQ5-C3",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-C3-Q2",
+    "caseID": "CBQ5-C3",
+    "file": "scored_cases5.js",
+    "bloom": "Analyze",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C3-Q3",
+    "caseID": "CBQ5-C3",
+    "file": "scored_cases5.js",
+    "bloom": "Apply",
+    "old": "None/0",
+    "new": "Moderate/3"
+  },
+  {
+    "itemID": "CBQ5-C3-Q4",
+    "caseID": "CBQ5-C3",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  },
+  {
+    "itemID": "CBQ5-C3-Q5",
+    "caseID": "CBQ5-C3",
+    "file": "scored_cases5.js",
+    "bloom": "Evaluate",
+    "old": "None/0",
+    "new": "Difficult/4"
+  }
+]

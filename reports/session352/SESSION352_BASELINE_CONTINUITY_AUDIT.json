@@ -1,0 +1,219 @@
+{
+  "document": "SESSION352_BASELINE_CONTINUITY_AUDIT",
+  "session": "S352",
+  "title": "Baseline Preservation Audit — Board A",
+  "series": "350-Series — Framework v2 Operational Analytics (Wave 1)",
+  "date": "2026-07-27",
+  "type": "Read-Only Measurement — No Content Modifications",
+  "authority": "SESSION350_V1_BASELINE.json (IMMUTABLE); knowledge/CURRENT_BASELINES.md (S726); SESSION351_BASELINE_AUDIT.json (S351 anchor)",
+  "purpose": "Validate S350 baseline unchanged since S351. Confirm all 15 runtime file hashes match S351 operational anchor. Verify certified pool count stability. Governance guard continuity check.",
+
+  "s350_immutability_verification": {
+    "clause": "IMMUTABLE",
+    "s350_v1_baseline_file": "reports/SESSION350_V1_BASELINE.json",
+    "s350_baseline_last_modified": "2026-07-27 (frozen at S350 authoring)",
+    "s351_verification": "INTACT — confirmed by S351 Board A",
+    "s352_verification": "INTACT — confirmed by S352 Board A. SESSION350_V1_BASELINE.json unchanged since S350 authoring. No S350-BOARD-A-AMENDMENT executed.",
+    "all_10_bf_metrics_preserved": true,
+    "all_8_op_metrics_preserved": true,
+    "all_5_cq_metrics_preserved": true,
+    "all_5_rb_metrics_preserved": true,
+    "all_5_defect_entries_preserved": true,
+    "all_5_te_metrics_preserved": true
+  },
+
+  "s351_baseline_continuity": {
+    "description": "S351 baseline audit established the operational anchor (2026-07-27). All S351 file hashes were captured at that time. S352 must validate zero drift from S351 for unmodified files.",
+    "s351_anchor_hash_source": "reports/session351/SESSION351_BASELINE_AUDIT.json §hash_verification — 15 files hashed via Get-FileHash SHA256",
+    "s352_re_verification_timestamp": "2026-07-27T09:55:00Z",
+    "method": "Get-FileHash -Algorithm SHA256 on all 15 runtime-critical files. Compared against S351 anchor hashes."
+  },
+
+  "hash_verification_results": {
+    "total_files_hashed": 15,
+    "continuous_match_s351": 15,
+    "drifted_from_s351": 0,
+    "match_rate": "100.00%",
+
+    "by_category": {
+      "application_core": {
+        "files": ["app.js", "index_updated.html", "styles.css"],
+        "matches": 3,
+        "drifts": 0,
+        "details": [
+          {
+            "file": "app.js",
+            "s351_hash": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A",
+            "s352_hash": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A",
+            "match": true,
+            "size": 209937
+          },
+          {
+            "file": "index_updated.html",
+            "s351_hash": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755",
+            "s352_hash": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755",
+            "match": true,
+            "size": 6090
+          },
+          {
+            "file": "styles.css",
+            "s351_hash": "F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6",
+            "s352_hash": "F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6",
+            "match": true,
+            "size": 68696
+          }
+        ]
+      },
+      "may_coaching_layer": {
+        "files": ["may-core.js", "may-learner-state.js"],
+        "matches": 2,
+        "drifts": 0,
+        "details": [
+          {
+            "file": "may-core.js",
+            "s351_hash": "183D2E6BECBEF3103DA42FB7B1B0B7E0610DE94E4E36FDE80B77122B89B0DD13",
+            "s352_hash": "183D2E6BECBEF3103DA42FB7B1B0B7E0610DE94E4E36FDE80B77122B89B0DD13",
+            "match": true,
+            "size": 344883
+          },
+          {
+            "file": "may-learner-state.js",
+            "s351_hash": "BEE72B86A97D88CC5C98805EC41D37DCC89795044817ECEADC29A95328841EBC",
+            "s352_hash": "BEE72B86A97D88CC5C98805EC41D37DCC89795044817ECEADC29A95328841EBC",
+            "match": true,
+            "size": 110240
+          }
+        ]
+      },
+      "mcq_pack_files": {
+        "files": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+        "matches": 5,
+        "drifts": 0,
+        "authorized_post_s726_drift_packs": ["pack_a", "pack_c", "pack_d", "pack_e"],
+        "details": [
+          {
+            "file": "pack_a_corrected.js",
+            "s351_hash": "E237FEAC9DCFC432640633906539DD88CCA52BF028C5720CEF27FF629A3E5F85",
+            "s352_hash": "E237FEAC9DCFC432640633906539DD88CCA52BF028C5720CEF27FF629A3E5F85",
+            "match": true,
+            "size": 1721131,
+            "drift_classification": "AUTHORIZED_DRIFT (post-S726 development) — stable since S351"
+          },
+          {
+            "file": "pack_b_corrected.js",
+            "s351_hash": "8A641309BBF0DE8B5D1D4C747AE092C2EF514D8EB0A8A3374D96C3056204DB3B",
+            "s352_hash": "8A641309BBF0DE8B5D1D4C747AE092C2EF514D8EB0A8A3374D96C3056204DB3B",
+            "match": true,
+            "size": 1386746,
+            "drift_classification": "NONE — Hash stable since S726"
+          },
+          {
+            "file": "pack_c_corrected.js",
+            "s351_hash": "9E3A954EFF9E39FF13F2719596C65F56B9510ABD1DAAD3A22604C54DACDA6C0B",
+            "s352_hash": "9E3A954EFF9E39FF13F2719596C65F56B9510ABD1DAAD3A22604C54DACDA6C0B",
+            "match": true,
+            "size": 1725704,
+            "drift_classification": "AUTHORIZED_DRIFT (post-S726 development) — stable since S351"
+          },
+          {
+            "file": "pack_d_corrected.js",
+            "s351_hash": "A0618314B2EE83A67E26ED785A7C9B40B4DCFAFC6831B99241DAD6FBDE9E1322",
+            "s352_hash": "A0618314B2EE83A67E26ED785A7C9B40B4DCFAFC6831B99241DAD6FBDE9E1322",
+            "match": true,
+            "size": 1775184,
+            "drift_classification": "AUTHORIZED_DRIFT (post-S726 development) — stable since S351"
+          },
+          {
+            "file": "pack_e_corrected.js",
+            "s351_hash": "A98B27B15D99CC4AB261E78A011D4194BCBEEA78CDC6CE10A6B226EDF660DAED",
+            "s352_hash": "A98B27B15D99CC4AB261E78A011D4194BCBEEA78CDC6CE10A6B226EDF660DAED",
+            "match": true,
+            "size": 1603012,
+            "drift_classification": "AUTHORIZED_DRIFT (post-S726 development) — stable since S351"
+          }
+        ]
+      },
+      "scored_case_files": {
+        "files": ["scored_cases.js", "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+        "matches": 5,
+        "drifts": 0,
+        "details": [
+          {
+            "file": "scored_cases.js",
+            "s351_hash": "3997284429CA4B8DA6A3577441F3B74AEEDD80839EB360E4387932D2428C0EEA",
+            "s352_hash": "3997284429CA4B8DA6A3577441F3B74AEEDD80839EB360E4387932D2428C0EEA",
+            "match": true,
+            "size": 457390
+          },
+          {
+            "file": "scored_cases2.js",
+            "s351_hash": "C32F25808D9F64309A7EFAFEAD55F19CC2C4F4F01A3AADDB604EE695BB491110",
+            "s352_hash": "C32F25808D9F64309A7EFAFEAD55F19CC2C4F4F01A3AADDB604EE695BB491110",
+            "match": true,
+            "size": 438676
+          },
+          {
+            "file": "scored_cases3.js",
+            "s351_hash": "EB5B28D9BB370C29EF3B9DA20EEB332452DAD93C29106879C028A8ACA924EE62",
+            "s352_hash": "EB5B28D9BB370C29EF3B9DA20EEB332452DAD93C29106879C028A8ACA924EE62",
+            "match": true,
+            "size": 444754
+          },
+          {
+            "file": "scored_cases4.js",
+            "s351_hash": "158CBEFC43F16148CD961E58AB32ED856EE46005E199F375B419F9F6F2F2D3B3",
+            "s352_hash": "158CBEFC43F16148CD961E58AB32ED856EE46005E199F375B419F9F6F2F2D3B3",
+            "match": true,
+            "size": 534846
+          },
+          {
+            "file": "scored_cases5.js",
+            "s351_hash": "6F70E589B21A1FAC5D2F1A5B3E8799616962192405BF8498D2100BB57D71E307",
+            "s352_hash": "6F70E589B21A1FAC5D2F1A5B3E8799616962192405BF8498D2100BB57D71E307",
+            "match": true,
+            "size": 333161
+          }
+        ]
+      }
+    }
+  },
+
+  "certified_pool_continuity": {
+    "s350_baseline_s202": "2,031 / 2,500 (81.2%)",
+    "s322_snapshot": "2,221 / 2,540 (87.44%) — 2,540 includes scored_cases items",
+    "s351_count": "2,221 — direct grep, stable across two scans",
+    "s352_count": "2,221 — direct grep, stable across two scans. Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' = 2,221",
+    "drift_from_s351": 0,
+    "count_stability": "STABLE — identical across S351, S207, and S352 independent greps",
+    "by_pack": {
+      "pack_a": {"certified": 481, "total": 500, "pct": "96.2%"},
+      "pack_b": {"certified": 500, "total": 500, "pct": "100.0%"},
+      "pack_c": {"certified": 350, "total": 500, "pct": "70.0%"},
+      "pack_d": {"certified": 350, "total": 500, "pct": "70.0%"},
+      "pack_e": {"certified": 540, "total": 540, "pct": "100.0%"}
+    }
+  },
+
+  "governance_guard_continuity": {
+    "s351_status": "27/27 PASS — all 5 rules active; Rules 9-10 active (FM-001 through FM-008)",
+    "s352_status": "27/27 PASS — unchanged. Zero governance drift between S351 and S352.",
+    "rules_active": [1, 2, 3, 4, 5, 9, 10],
+    "rules_inactive": [6, 7, 8],
+    "test_suite": "20/20 PASS — unchanged"
+  },
+
+  "session_chain_baseline_integrity": {
+    "chain": ["S350 (V1_BASELINE frozen)", "S351 (Validation Readiness — read-only)", "S207 (Operational Certification — read-only)", "S206 (v2 Activation — read-only)", "S352 (Operational Analytics Wave 1 — read-only)"],
+    "integrity": "UNBROKEN — all 4 intermediate sessions were read-only. Zero content modifications between S350 and S352.",
+    "verdict": "BASELINE_CONTINUITY_PRESERVED — 15/15 hash matches. 2,221 certified count stable. Governance guard 27/27 stable. S350 immutability clause intact."
+  },
+
+  "cross_references": {
+    "s350_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "s351_audit": "reports/session351/SESSION351_BASELINE_AUDIT.json",
+    "s207_baseline": "reports/SESSION207_EXECUTIVE_SUMMARY.md",
+    "s206_data": "reports/SESSION206_V2_ACTIVATION_REPORT.json",
+    "current_baselines": "knowledge/CURRENT_BASELINES.md",
+    "revision_history": "knowledge/REVISION_HISTORY.md"
+  }
+}

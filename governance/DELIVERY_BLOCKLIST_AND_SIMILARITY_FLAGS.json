@@ -1,0 +1,182 @@
+{
+  "description": "Session 88 — Delivery blocklist and similarity-family manifest. Loaded by app.js at session assembly and by may-core.js for recommendation gating.",
+  "generated": "2026-07-24T23:30:00Z",
+  "session": "88",
+  "blocked": [
+    {"qid":"P1-B-001","pack":"A","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — DL-008 + DL-010 co-occurrence"},
+    {"qid":"P1-B-025","pack":"A","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — DL-008 + DL-010 co-occurrence"},
+    {"qid":"P1-AC-001","pack":"C","section":"A","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — rotation-group signature"},
+    {"qid":"P1-BC-001","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — static vs flexible budget cluster"},
+    {"qid":"P1-BC-002","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — static vs flexible budget cluster"},
+    {"qid":"P1-BC-003","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — static vs flexible budget cluster"},
+    {"qid":"P1-BC-004","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — static vs flexible budget cluster"},
+    {"qid":"P1-BC-005","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — static vs flexible budget cluster"},
+    {"qid":"P1-BC-006","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — static vs flexible budget cluster"},
+    {"qid":"P1-BC-007","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — static vs flexible budget cluster"},
+    {"qid":"P1-BC-009","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — sales forecasting regression cluster"},
+    {"qid":"P1-BC-010","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — sales forecasting regression cluster"},
+    {"qid":"P1-BC-013","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — sales forecasting regression cluster"},
+    {"qid":"P1-BC-016","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — rolling forecast cluster"},
+    {"qid":"P1-BC-017","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — rolling forecast cluster"},
+    {"qid":"P1-BC-020","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — rolling forecast cluster"},
+    {"qid":"P1-BC-021","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — rolling forecast cluster"},
+    {"qid":"P1-BC-024","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — zero-based budgeting cluster"},
+    {"qid":"P1-BC-025","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — zero-based budgeting cluster"},
+    {"qid":"P1-BC-028","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — zero-based budgeting cluster"},
+    {"qid":"P1-BC-029","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — sales budget starting point cluster"},
+    {"qid":"P1-BC-032","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — sales budget starting point cluster"},
+    {"qid":"P1-BC-033","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — sales budget starting point cluster"},
+    {"qid":"P1-BC-037","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — cash budget financing needs cluster"},
+    {"qid":"P1-BC-041","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — production budget cluster"},
+    {"qid":"P1-BC-045","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — production budget cluster"},
+    {"qid":"P1-BC-049","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — participative budgeting cluster"},
+    {"qid":"P1-BC-053","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — top-down budgeting cluster"},
+    {"qid":"P1-BC-057","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — top-down budgeting cluster"},
+    {"qid":"P1-BC-058","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — top-down budgeting cluster"},
+    {"qid":"P1-BC-059","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — learning curve forecasting cluster"},
+    {"qid":"P1-BC-061","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — learning curve forecasting cluster"},
+    {"qid":"P1-BC-065","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — high-low method cluster"},
+    {"qid":"P1-BC-069","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — high-low method cluster"},
+    {"qid":"P1-BC-073","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budgetary control feedback loop cluster"},
+    {"qid":"P1-BC-074","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budgetary control feedback loop cluster"},
+    {"qid":"P1-BC-075","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budgetary control feedback loop cluster"},
+    {"qid":"P1-BC-076","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budgetary control feedback loop cluster"},
+    {"qid":"P1-BC-077","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — kaizen budgeting cluster"},
+    {"qid":"P1-BC-078","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — kaizen budgeting cluster"},
+    {"qid":"P1-BC-079","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — kaizen budgeting cluster"},
+    {"qid":"P1-BC-080","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — kaizen budgeting cluster"},
+    {"qid":"P1-BC-081","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — kaizen budgeting cluster"},
+    {"qid":"P1-BC-082","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — kaizen budgeting cluster"},
+    {"qid":"P1-BC-083","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — moving average forecast cluster"},
+    {"qid":"P1-BC-084","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — moving average forecast cluster"},
+    {"qid":"P1-BC-088","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — moving average forecast cluster"},
+    {"qid":"P1-BC-094","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — MISSING-state; CC artifact"},
+    {"qid":"P1-BC-095","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget slack detection cluster"},
+    {"qid":"P1-BC-096","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget slack detection cluster"},
+    {"qid":"P1-BC-097","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget slack detection cluster"},
+    {"qid":"P1-BC-098","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget slack detection cluster"},
+    {"qid":"P1-BC-099","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget slack detection cluster"},
+    {"qid":"P1-BC-100","pack":"C","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget slack detection cluster"},
+    {"qid":"P1-AD-047","pack":"D","section":"A","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — inventory consignment cluster"},
+    {"qid":"P1-AD-048","pack":"D","section":"A","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — inventory consignment cluster"},
+    {"qid":"P1-AD-054","pack":"D","section":"A","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — basic EPS cluster"},
+    {"qid":"P1-AD-055","pack":"D","section":"A","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — diluted EPS cluster"},
+    {"qid":"P1-BD-017","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — capital expenditure budget cluster"},
+    {"qid":"P1-BD-021","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — capital expenditure budget cluster"},
+    {"qid":"P1-BD-022","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — direct labor budget cluster"},
+    {"qid":"P1-BD-023","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — direct labor budget cluster"},
+    {"qid":"P1-BD-024","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — direct labor budget cluster"},
+    {"qid":"P1-BD-057","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget committee role cluster"},
+    {"qid":"P1-BD-058","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget committee role cluster"},
+    {"qid":"P1-BD-059","pack":"D","section":"B","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — budget committee role cluster"},
+    {"qid":"P1-DD-028","pack":"D","section":"D","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — margin of safety cluster"},
+    {"qid":"P1-DD-029","pack":"D","section":"D","defect_code":"DL-008","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"QUALITY_DEFECT: Non-empty ExplanationWrong[CorrectChoice] — margin of safety cluster"},
+    {"qid":"P1B-B-119","pack":"B","section":"B","defect_code":"DL-030","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"ANSWER_KEY_RISK: CorrectChoice was B, should be C — learning curve 4th unit (Session 68 fix, but re-verified as having dual-bank risk per Phase 6)"},
+    {"qid":"P1B-F-084","pack":"B","section":"F","defect_code":"DL-030","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"ANSWER_KEY_RISK: CorrectChoice was A (3D pie), should be D (appropriate chart) — Session 68"},
+    {"qid":"P1B-F-116","pack":"B","section":"F","defect_code":"DL-030","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"ANSWER_KEY_RISK: CorrectChoice was C (SoD irrelevant), should be A (access controls) — Session 68"},
+    {"qid":"P1B-F-121","pack":"B","section":"F","defect_code":"DL-030","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"ANSWER_KEY_RISK: CorrectChoice was C (paper-based), should be B (self-executing) — Session 68"},
+    {"qid":"P1E-E-037","pack":"E","section":"E","defect_code":"DL-030","state":"Certified","block_from_delivery":true,"block_from_recommendation":true,"reason":"ANSWER_KEY_RISK: CorrectChoice was D (all personnel), should be B (external parties) — Session 68"}
+  ],
+  "similarity_families": {
+    "_description": "Groups of QIDs that share the same structural template. No session should serve more than ONE member of a family. The deriveSimilarityKey() fingerprint handles these automatically for items with detectable stem skeletons; this list is a safety net for items where the fingerprint may not fully distinguish.",
+    "families": [
+      {
+        "family_id": "SF-BUDGET-STATICFLEX",
+        "label": "Static vs. flexible budget — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-BC-001","P1-BC-002","P1-BC-003","P1-BC-004","P1-BC-005","P1-BC-006","P1-BC-007"]
+      },
+      {
+        "family_id": "SF-BUDGET-ROLLINGFORECAST",
+        "label": "Rolling forecast — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-BC-016","P1-BC-017","P1-BC-020","P1-BC-021"]
+      },
+      {
+        "family_id": "SF-BUDGET-ZEROBASED",
+        "label": "Zero-based budgeting — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-BC-024","P1-BC-025","P1-BC-028"]
+      },
+      {
+        "family_id": "SF-BUDGET-KAIZEN",
+        "label": "Kaizen budgeting — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-BC-077","P1-BC-078","P1-BC-079","P1-BC-080","P1-BC-081","P1-BC-082"]
+      },
+      {
+        "family_id": "SF-BUDGET-SLACK",
+        "label": "Budget slack detection — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-BC-095","P1-BC-096","P1-BC-097","P1-BC-098","P1-BC-099","P1-BC-100"]
+      },
+      {
+        "family_id": "SF-FCAST-MOVINGAVG",
+        "label": "Moving average forecasting — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-BC-083","P1-BC-084","P1-BC-088"]
+      },
+      {
+        "family_id": "SF-DLABOR-BUDGET",
+        "label": "Direct labor budget — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-BD-022","P1-BD-023","P1-BD-024"]
+      },
+      {
+        "family_id": "SF-EPS-BASICDILUTED",
+        "label": "Basic/Diluted EPS — 5-item rotation group",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-AD-054","P1-AD-055"]
+      },
+      {
+        "family_id": "SF-COST-NORMAL-COSTING",
+        "label": "Normal costing definition — 5-item rotation group (DD-001-005)",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-DD-001","P1-DD-002","P1-DD-003","P1-DD-004","P1-DD-005"]
+      },
+      {
+        "family_id": "SF-COST-FIFO-PROCESS",
+        "label": "FIFO process costing — 5-item rotation group (DD-006-010)",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-DD-006","P1-DD-007","P1-DD-008","P1-DD-009","P1-DD-010"]
+      },
+      {
+        "family_id": "SF-COST-OVERAPPLIED-OH",
+        "label": "Overapplied overhead disposition — 5-item rotation group (DD-011-015)",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-DD-011","P1-DD-012","P1-DD-013","P1-DD-014","P1-DD-015"]
+      },
+      {
+        "family_id": "SF-COST-STEP-DOWN",
+        "label": "Step-down method service allocation — 5-item rotation group (DD-016-020)",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-DD-016","P1-DD-017","P1-DD-018","P1-DD-019","P1-DD-020"]
+      },
+      {
+        "family_id": "SF-COST-ABC-DRIVER",
+        "label": "ABC cost driver selection — 5-item rotation group (DD-021-025)",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-DD-021","P1-DD-022","P1-DD-023","P1-DD-024","P1-DD-025"]
+      },
+      {
+        "family_id": "SF-MARGIN-OF-SAFETY",
+        "label": "Margin of Safety — 5-item rotation group (DD-026-030)",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-DD-026","P1-DD-027","P1-DD-028","P1-DD-029","P1-DD-030"]
+      },
+      {
+        "family_id": "SF-PERFC-BSC-SC",
+        "label": "Cost Management — rotation artifact items",
+        "reason": "QUALITY_DUPLICATE_CLUSTER",
+        "qids": ["P1-CD-002","P1-CD-003","P1-CD-006","P1-CD-007","P1-CD-010","P1-CD-011","P1-CD-014","P1-CD-015","P1-CD-018","P1-CD-019","P1-CD-022","P1-CD-023","P1-CD-026","P1-CD-027","P1-CD-030","P1-CD-031","P1-CD-034","P1-CD-035","P1-CD-038","P1-CD-039","P1-CD-042","P1-CD-043","P1-CD-046","P1-CD-047","P1-CD-050","P1-CD-051","P1-CD-054","P1-CD-055","P1-CD-058","P1-CD-059","P1-CD-062","P1-CD-063","P1-CD-066","P1-CD-067","P1-CD-070","P1-CD-071","P1-CD-074","P1-CD-075","P1-CD-078","P1-CD-079","P1-CD-082","P1-CD-083","P1-CD-086","P1-CD-087","P1-CD-090","P1-CD-091","P1-CD-094","P1-CD-095","P1-CD-098","P1-CD-099"]
+      }
+    ]
+  },
+  "stats": {
+    "total_blocked_for_delivery": 72,
+    "dl008_blocked": 67,
+    "dl030_answer_key_risk": 5,
+    "similarity_families": 15,
+    "largest_family": "SF-PERFC-BSC-SC (50 QIDs)"
+  }
+}

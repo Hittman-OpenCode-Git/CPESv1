@@ -1,0 +1,225 @@
+{
+  "session": "S131",
+  "title": "Provenance Completion Audit",
+  "timestamp": "2026-07-26T14:00:00.000Z",
+  "beforeS131": {
+    "totalRecommendationFunctions": 10,
+    "withProvenance": 7,
+    "withoutProvenance": 3,
+    "coveragePercent": 70,
+    "missingFunctions": [
+      "_recommendNextAction",
+      "_generateSessionRecap",
+      "preExamBriefing"
+    ],
+    "missingDetails": [
+      {
+        "function": "_recommendNextAction",
+        "line": 338,
+        "subsystem": "S117",
+        "issue": "Generated recommended next action for welcome screen but no provenance record was written"
+      },
+      {
+        "function": "_generateSessionRecap",
+        "line": 2965,
+        "subsystem": "S126",
+        "issue": "Computed recommended next step at lines 3063-3077 but never called _recordRecommendation or recordRecommendationDelivery"
+      },
+      {
+        "function": "preExamBriefing",
+        "line": 856,
+        "subsystem": "S117",
+        "issue": "Computed review topics from weakness clusters at lines 893-898 but never recorded provenance"
+      }
+    ],
+    "alreadyCoveredFunctions": [
+      "_generateNextBestStep",
+      "_suggestFocusAreas",
+      "_generateStudyStrategy",
+      "_generateWeeklyDigest",
+      "_recommendNext",
+      "_recommendSimilar",
+      "_generateRecoverySet"
+    ]
+  },
+  "afterS131": {
+    "totalRecommendationFunctions": 10,
+    "withProvenance": 10,
+    "withoutProvenance": 0,
+    "coveragePercent": 100,
+    "allFunctions": [
+      {
+        "function": "_generateNextBestStep",
+        "subsystem": "S123",
+        "provenanceType": "next_best_step",
+        "defLine": 1105,
+        "callSiteLine": 1231,
+        "callSiteMethod": "_recordRecommendation",
+        "callSiteFunction": "_appendNextBestStep",
+        "newlyAdded": false,
+        "provenancePath": "_appendNextBestStep → _recordRecommendation('next_best_step', ...) → MayLearnerState.recordRecommendationDelivery()"
+      },
+      {
+        "function": "_suggestFocusAreas",
+        "subsystem": "S125",
+        "provenanceType": "focus_area",
+        "defLine": 1403,
+        "callSiteLine": 1532,
+        "callSiteMethod": "_recordRecommendation",
+        "callSiteFunction": "_appendFocusAreas",
+        "newlyAdded": false,
+        "provenancePath": "_appendFocusAreas → _recordRecommendation('focus_area', ...) → MayLearnerState.recordRecommendationDelivery()"
+      },
+      {
+        "function": "_generateStudyStrategy",
+        "subsystem": "S128",
+        "provenanceType": "study_strategy",
+        "defLine": 3262,
+        "callSiteLine": 3405,
+        "callSiteMethod": "_recordRecommendation",
+        "callSiteFunction": "_showStudyStrategy",
+        "newlyAdded": false,
+        "provenancePath": "_showStudyStrategy → _recordRecommendation('study_strategy', ...) → MayLearnerState.recordRecommendationDelivery()"
+      },
+      {
+        "function": "_generateWeeklyDigest",
+        "subsystem": "S127",
+        "provenanceType": "weekly_digest",
+        "defLine": 3095,
+        "callSiteLine": 3381,
+        "callSiteMethod": "_recordRecommendation",
+        "callSiteFunction": "_showWeeklyDigest",
+        "newlyAdded": false,
+        "provenancePath": "_showWeeklyDigest → _recordRecommendation('weekly_digest', ...) → MayLearnerState.recordRecommendationDelivery()"
+      },
+      {
+        "function": "_recommendNext",
+        "subsystem": "S115",
+        "provenanceType": "recommendationLog",
+        "defLine": 3785,
+        "callSiteLine": 3849,
+        "callSiteMethod": "logRecommendation",
+        "callSiteFunction": "_recommendNext",
+        "newlyAdded": false,
+        "provenancePath": "_recommendNext → MayLearnerState.logRecommendation() — QID-level recommendation log (separate from coaching-path recommendationOutcomes)"
+      },
+      {
+        "function": "_recommendSimilar",
+        "subsystem": "S115",
+        "provenanceType": "recommendationLog",
+        "defLine": 3750,
+        "callSiteLine": 3772,
+        "callSiteMethod": "logRecommendation",
+        "callSiteFunction": "_recommendSimilar",
+        "newlyAdded": false,
+        "provenancePath": "_recommendSimilar → MayLearnerState.logRecommendation() — QID-level recommendation log"
+      },
+      {
+        "function": "_generateRecoverySet",
+        "subsystem": "S115",
+        "provenanceType": "recommendationLog",
+        "defLine": 3863,
+        "callSiteLine": 3947,
+        "callSiteMethod": "logRecommendation",
+        "callSiteFunction": "_generateRecoverySet",
+        "newlyAdded": false,
+        "provenancePath": "_generateRecoverySet → MayLearnerState.logRecommendation() — QID-level recommendation log"
+      },
+      {
+        "function": "_recommendNextAction",
+        "subsystem": "S117",
+        "provenanceType": "welcome_action",
+        "defLine": 338,
+        "callSiteLine": 355,
+        "callSiteMethod": "recordRecommendationDelivery",
+        "callSiteFunction": "_recommendNextAction",
+        "newlyAdded": true,
+        "provenancePath": "_recommendNextAction → MayLearnerState.recordRecommendationDelivery({type:'welcome_action', ...}) — DIRECT call at line 355",
+        "evidenceRecorded": {
+          "condition": ["insufficient_sessions", "persistent_weak", "declining", "no_urgent_weakness"],
+          "sessionCount": true,
+          "topics": true
+        }
+      },
+      {
+        "function": "_generateSessionRecap",
+        "subsystem": "S126",
+        "provenanceType": "session_recap",
+        "defLine": 2965,
+        "callSiteLine": 3080,
+        "callSiteMethod": "recordRecommendationDelivery",
+        "callSiteFunction": "_generateSessionRecap",
+        "newlyAdded": true,
+        "provenancePath": "_generateSessionRecap → MayLearnerState.recordRecommendationDelivery({type:'session_recap', ...}) — DIRECT call at line 3080",
+        "evidenceRecorded": {
+          "mcqPct": true,
+          "totalAnswered": true,
+          "sessionsCompared": 2,
+          "subTypes": ["targeted_practice", "case_stretch", "explain_every_miss"]
+        }
+      },
+      {
+        "function": "preExamBriefing",
+        "subsystem": "S117",
+        "provenanceType": "pre_exam_briefing",
+        "defLine": 856,
+        "callSiteLine": 904,
+        "callSiteMethod": "recordRecommendationDelivery",
+        "callSiteFunction": "preExamBriefing",
+        "newlyAdded": true,
+        "provenancePath": "preExamBriefing → MayLearnerState.recordRecommendationDelivery({type:'pre_exam_briefing', ...}) — DIRECT call at line 904 (in forEach loop for up to 4 review topics)",
+        "evidenceRecorded": {
+          "topic": true,
+          "accuracy": true,
+          "clusterFlags": ["persistentWeak", "declining", "unstable"]
+        }
+      }
+    ]
+  },
+  "provenanceFieldsPerRecord": [
+    "recommendationId",
+    "deliveredAt",
+    "type",
+    "subType",
+    "topic",
+    "section",
+    "recommendationText",
+    "sourceSessionId",
+    "evidenceAtDelivery",
+    "status",
+    "outcome",
+    "outcomeEvidence",
+    "outcomeClassifiedAt"
+  ],
+  "storageLimit": 200,
+  "verification": {
+    "method": "Source-code grep for all recordRecommendationDelivery call sites in may-core.js",
+    "totalCallSitesInMayCore": 4,
+    "callSites": [
+      { "line": 355, "function": "_recommendNextAction", "type": "welcome_action" },
+      { "line": 904, "function": "preExamBriefing", "type": "pre_exam_briefing" },
+      { "line": 3080, "function": "_generateSessionRecap", "type": "session_recap" },
+      { "line": 3578, "function": "_recordRecommendation", "type": "(wrapper for all coaching-path types)" }
+    ],
+    "indirectCallSitesViaRecordRecommendation": [
+      { "line": 1231, "caller": "_appendNextBestStep", "type": "next_best_step" },
+      { "line": 1532, "caller": "_appendFocusAreas", "type": "focus_area" },
+      { "line": 3381, "caller": "_showWeeklyDigest", "type": "weekly_digest" },
+      { "line": 3405, "caller": "_showStudyStrategy", "type": "study_strategy" }
+    ],
+    "logRecommendationCallSitesSeparateSystem": [
+      { "line": 3772, "function": "_recommendSimilar", "type": "similar_question" },
+      { "line": 3849, "function": "_recommendNext", "type": "persistent_weak/declining_or_unstable" },
+      { "line": 3947, "function": "_generateRecoverySet", "type": "recovery_set" }
+    ],
+    "confirmedGrepResults": "All 4 direct recordRecommendationDelivery call sites in may-core.js account for all 10 functions. The 3 previously-missing functions (_recommendNextAction at L355, preExamBriefing at L904, _generateSessionRecap at L3080) each now have a DIRECT recordRecommendationDelivery call with full evidence payloads.",
+    "conclusion": "100% provenance coverage achieved. All 10 recommendation-generating functions now produce trackable provenance records."
+  },
+  "s130CrossReference": {
+    "sourceReport": "reports/SESSION130_PROVENANCE_SYSTEM_RESULTS.json",
+    "originalFinding": "3 of 10 recommendation generator functions had zero provenance coverage: _recommendNextAction (line ~338), _generateSessionRecap (line ~2952), preExamBriefing (line ~856)",
+    "remediatedIn": "S131 (this session)",
+    "remediationApproach": "Each of the 3 functions now calls MayLearnerState.recordRecommendationDelivery() directly at the point where the recommendation is generated, with type-specific evidence payloads",
+    "note": "The S115 functions (_recommendNext, _recommendSimilar, _generateRecoverySet) continue to use MayLearnerState.logRecommendation() for QID-level tracking rather than recordRecommendationDelivery(). These two provenance systems (recommendationLog vs recommendationOutcomes) remain separate per the S130 architecture analysis."
+  }
+}

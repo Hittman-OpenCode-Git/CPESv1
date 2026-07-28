@@ -1,0 +1,28 @@
+{
+  "session": "511",
+  "date": "2026-07-25",
+  "item": "CASE-B12-Q4",
+  "classification": "ANSWER_KEY_CORRECTION_REQUIRED",
+  "independent_recomputation": {
+    "formula": "($159,000 - $18,000) / 7",
+    "exact_result": "$20,142.857142...",
+    "rounded_result": "$20,143",
+    "stored_before": "$21,750",
+    "stored_after": "$20,143",
+    "governing_standard": "ASC 360 — changes in accounting estimates applied prospectively",
+    "confidence": 100
+  },
+  "verification_methods": [
+    "Manual calculation: $240,000 - $24,000 = $216,000 / 8 = $27,000 x 3 = $81,000 accum",
+    "Book value: $240,000 - $81,000 = $159,000",
+    "Remaining: 10 - 3 = 7 years",
+    "Annual: ($159,000 - $18,000) / 7 = $141,000 / 7 = $20,142.86"
+  ],
+  "root_cause": "Arithmetic error in authoring template. The formula in the explanation was correct (($159,000 - $18,000) / 7) but the stated result ($21,750) was wrong. $21,750 x 7 = $152,250, implying a residual of $6,750 instead of $18,000 — consistent with a mis-keyed subtraction or template bug.",
+  "distractor_validation": {
+    "A_$22,200": {"formula": "($240,000 - $18,000) / 10", "concept": "Ignores accumulated depreciation, uses original cost over new total life", "valid": true},
+    "B_$27,000": {"formula": "($240,000 - $24,000) / 8", "concept": "Original annual depreciation, ignores revision entirely", "valid": true},
+    "C_$19,286": {"formula": "($159,000 - $24,000) / 7", "concept": "Uses original residual instead of revised residual", "valid": true},
+    "D_$20,143": {"formula": "($159,000 - $18,000) / 7", "concept": "Correct — ASC 360 prospective treatment", "valid": true}
+  }
+}

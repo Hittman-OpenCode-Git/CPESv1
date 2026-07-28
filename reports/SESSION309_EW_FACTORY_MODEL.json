@@ -1,0 +1,57 @@
+{
+  "session": "309",
+  "agent": "O",
+  "title": "EW Production Factory Model",
+  "generated": "2026-07-26",
+
+  "process": {
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Draft",
+        "description": "Author initial ExplanationWrong text for each distractor. Choice-specific, concept-driven, trap-name-labeled.",
+        "perItemTime": "15 minutes (3 distractors × 5 min each for MCQ; 30 min for case items with more complex distractors)",
+        "qualityGate": "Non-empty, not boilerplate, references specific concept tested"
+      },
+      {
+        "stage": 2,
+        "name": "Review",
+        "description": "Peer review for accuracy, choice-specificity, instructional value. Verify the explanation actually addresses WHY this choice is wrong.",
+        "perItemTime": "5 minutes per item",
+        "qualityGate": "No template text, contains domain-specific reasoning, different from other distractor EWs"
+      },
+      {
+        "stage": 3,
+        "name": "Technical QA",
+        "description": "Automated scan: DL-008 check (empty EW[CC]), empty-slot check, boilerplate check, minimum-length check (>=50 chars).",
+        "perItemTime": "30 seconds per item (automated)",
+        "qualityGate": "All automated checks pass"
+      },
+      {
+        "stage": 4,
+        "name": "Certification Candidate",
+        "description": "Promote item to certification-ready. EW is now complete and QA-passed. Item is ready for full CAQS §1.6 certification review.",
+        "perItemTime": "N/A (batch promotion)",
+        "qualityGate": "All prior stages complete"
+      }
+    ],
+    "batchSize": "25 items per factory cycle",
+    "cycleTime": "~8.5 hours per batch (6.25 hrs drafting + 2 hrs review + 0.25 hrs QA)",
+    "batchesPerSession": "~2 batches per session (50 items)",
+    "throughputVsAdHoc": "Factory model: 50 items/session. Ad-hoc (current): ~39 items/session per S308. 28% throughput improvement."
+  },
+
+  "comparisonToCurrent": {
+    "currentApproach": "EW authoring embedded in certification waves. Authors produce EW as part of cert review. No dedicated factory pipeline.",
+    "advantage": "Factory decouples EW authoring from certification — authors specialize, reviewers specialize, QA is automated.",
+    "disadvantage": "Requires upfront process design investment (1 session to set up factory templates and QA scripts)."
+  },
+
+  "implementation": {
+    "setup": "1 session to create: EW template library (common trap patterns), QA automation script, review checklist, batch tracking manifest",
+    "rollout": "Pilot with 1 batch (25 items) to validate cycle time and quality. Then scale to full production.",
+    "recommendedFirstTarget": "Case-bank Domain C items (298 items, near-zero EW). Highest learner impact — transforms case practice from zero feedback to full coaching."
+  },
+
+  "sessionsSaved": "2-3 sessions across the EW program (from reduced rework and higher throughput)"
+}

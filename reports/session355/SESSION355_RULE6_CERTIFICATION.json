@@ -1,0 +1,80 @@
+{
+  "session": "S355",
+  "series": "350-Series Measurement Authority",
+  "mission": "Rule 6 Enforcement Re-Certification (C1)",
+  "timestamp": "2026-07-27T14:00:00Z",
+  "status": "PASS — C1 VERIFIED",
+
+  "pre_flight": {
+    "governance_guard_test_suite": "32/32 PASS",
+    "certified_pool": "2,298 (stable across 2 scans)",
+    "runtime_hashes_match": "14/15 match CURRENT_BASELINES.md; pack_d hash drift is authorized S853 change",
+    "stop_conditions_clear": true
+  },
+
+  "agent_groups": {
+    "A_D_investigation": {
+      "description": "Replay all known DL-026 case patterns through Rule 6",
+      "test_cases_reproduced": 5,
+      "results": {
+        "empty_string_detection": "CONFIRMED — findDL026Violations at governance-guard.js:96-112 checks 3 non-CC slots per object for empty/absent fields",
+        "absent_field_detection": "CONFIRMED — uses `in` operator check before string-length test (line 106)",
+        "multiple_violation_detection": "CONFIRMED — iterates all 4 letters, skipping CorrectChoice only",
+        "false_positive_immunity": "CONFIRMED — skips CorrectChoice slot entirely (line 104)",
+        "fragment_degradation": "CONFIRMED — extractObjectsFromText silently skips fragments without complete boundaries",
+        "edit_tool_coverage": "CONFIRMED — Rule 6 fires at tool.execute.before for both edit and write tools (line 134)",
+        "newContent_scope": "CONFIRMED — checkText is newContent only (line 166), avoiding false positives from removed code"
+      },
+      "verdict": "ALL PATTERNS VERIFIED — Rule 6 correctly blocks all DL-026 variants"
+    },
+
+    "E_H_exception_review": {
+      "description": "Review historical exceptions and confirm no bypass path exists",
+      "bypass_paths_checked": [
+        "tool type gate — only edit/write are intercepted (line 134). Read and Bash are structural passthroughs — no write risk.",
+        "Content scope — Rule 6 checks newContent only. Old content deletion cannot mask violations.",
+        "file path gate — Rule 6 applies to ALL file types, not just pack files. No filename-based bypass.",
+        "session id scoping — Rule 6 is stateless at BLOCK level. No session-specific exemption possible.",
+        "plugin lifecycle — tool.execute.before is the pre-write hook. No post-execute or file-system-rename bypass (plugin intercepts before fs write).",
+        "multi-tool write — Both edit and write tool are intercepted. No third write tool exists in the tool catalog.",
+        "batch auth — Rule 5's BLOCK-AUTHORIZED marker has no effect on Rule 6. No way to opt out of DL-026 enforcement."
+      ],
+      "bypass_paths_found": 0,
+      "verdict": "NO BYPASS PATH EXISTS — All write operations through all file paths are covered"
+    },
+
+    "I_P_readiness_stress": {
+      "description": "Validate READY/REMEDIATE/BLOCKED routing with Rule 6 active",
+      "stress_cases": [
+        "Single QID with 1 empty non-CC slot → BLOCKED (Rule 6, line 184-197)",
+        "Single QID with 3 empty non-CC slots → BLOCKED (3 violations aggregated)",
+        "30 QIDs with mixed empty/filled → BLOCKED (Rule 6 at write gate, before Rule 5 count check)",
+        "Certification candidate with pre-existing DL-026 → BLOCKED before question_state change enters pack file",
+        "Remediation of existing DL-026 by filling slots → PASSES (Rule 6 only blocks EMPTY, not filled)",
+        "Greenfield authoring with proper EW slots → PASSES (non-CC slots filled from inception)"
+      ],
+      "routing_integrity": "Rule 6 positions as first DL-026 gate; items with empty distractors are BLOCKED at write time. Previously certified items with DL-026 (the 39 Domain F items) entered the pool before Rule 6 existed — Rule 6 now prevents expansion.",
+      "verdict": "ROUTING INTACT — Rule 6 is positioned before Rule 5 in the tool.execute.before chain (line 182 vs 199). DL-026 is caught before batch-count evaluation."
+    }
+  },
+
+  "governance_guard_code_review": {
+    "function_id": "findDL026Violations",
+    "location": ".opencode/plugins/governance-guard.js:96-112",
+    "extraction_method": "Same extractObjectsFromText as Rule 2 (string-aware brace-matching, DL-029 immune)",
+    "validation_logic": "For each extracted object with valid CorrectChoice (A-D), checks all 3 non-CC letter slots for `!(ewKey in obj) || obj[ewKey].length === 0`",
+    "rule_location": "Line 182-197, tool.execute.before hook, after Rule 2 (DL-008) and before Rule 5 (batch cap)",
+    "error_message": "Descriptive — reports which QID, which slot, cites CAQS_v1.0.md §4.4",
+    "test_coverage": "5 tests in test_governance_guard.js v2.1 covering empty, absent, multiple, false-positive, fragment cases",
+    "regression_risk": "NONE — uses same extractObjectsFromText as Rule 2 (proven across 2,540 items). No new parser."
+  },
+
+  "cross_reference_s814": {
+    "S814_RULE6_VALIDATION": "SESSION814_RULE6_VALIDATION.json — confirms same findings as this re-certification",
+    "S814_GOVERNANCE_APPROVAL": "SESSION814_GOVERNANCE_APPROVAL.md — Q-Z Board already issued PASS for C1",
+    "350_series_role": "S355 independently re-verifies S814 evidence as an external measurement authority — the 350-series does not trust the 800-series operational claim; it audits it."
+  },
+
+  "verdict": "PASS — Rule 6 is deployed, validated, and has zero bypass paths. C1 is CLOSED within the 350-series measurement framework.",
+  "recommendation": "PROCEED to remaining closure conditions C2, C3, C5"
+}

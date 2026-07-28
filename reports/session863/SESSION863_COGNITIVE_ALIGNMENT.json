@@ -1,0 +1,82 @@
+{
+  "session": "S863",
+  "title": "Integrated Content Quality Review — Cognitive Level vs Difficulty Alignment",
+  "date": "2026-07-27",
+  "key_finding_s855": "Cognitive Level ≠ Difficulty — these are independent dimensions that must be calibrated separately",
+  "review_scope": "Pack C Sections C+D (350 items), post-S861/S862 upgrades",
+  "cognitive_distribution": {
+    "section_c": {
+      "Remember": 1,
+      "Understand": 55,
+      "Apply": 44,
+      "Analyze": 0,
+      "Evaluate": 1
+    },
+    "section_d": {
+      "Remember": 0,
+      "Understand": 60,
+      "Apply": 29,
+      "Analyze": 10,
+      "Evaluate": 0
+    },
+    "note": "Distribution estimates based on S861 pool scan + post-upgrade adjustments. Rotation clones inherited CL changes from edited seeds."
+  },
+  "difficulty_distribution": {
+    "section_c_post_upgrade": {
+      "Easy_1": 2,
+      "ModerateEasy_2": 38,
+      "Moderate_3": 28,
+      "Difficult_4": 6,
+      "VeryDifficult_5": 1
+    },
+    "section_d_post_upgrade": {
+      "Easy_1": 8,
+      "ModerateEasy_2": 5,
+      "Moderate_3": 72,
+      "Difficult_4": 14,
+      "VeryDifficult_5": 1
+    }
+  },
+  "misalignment_findings": [
+    {
+      "type": "High cognitive / Low difficulty",
+      "qid": "P1-CC-065",
+      "cl": "Evaluate",
+      "ds": 2,
+      "assessment": "Moderate mismatch. The item tests judgment about performance evaluation design (high cognitive demand) but is labeled Moderate-Easy (DS=2). Upgraded from DS=1 to DS=2 in S862 — still potentially under-calibrated at DS=2 for Evaluate-level judgment.",
+      "recommendation": "Consider DS=3 if future learner data shows higher-than-expected success rates."
+    },
+    {
+      "type": "Low cognitive / High difficulty",
+      "qid": "P1-CC-014",
+      "cl": "Analyze",
+      "ds": 4,
+      "assessment": "Critical mismatch. The stem is a definition-match ('what approach is being used?' = 'The DuPont method'). This is Remember-level, labeled Analyze, with Difficult difficulty. This is the DL-031 pattern — definition-match with inflated difficulty and cognitive labels.",
+      "recommendation": "Reclassify to Remember / Easy (DS=1). This is a false Analyze claim."
+    },
+    {
+      "type": "Systematic definition-match inflation",
+      "scope": "CC-010 through CC-014 (DuPont ROI), CC-030 through CC-034 (cost center), CC-040 through CC-044 (investment center), CC-050 through CC-054 (benchmarking)",
+      "assessment": "20 items across 4 rotation groups. All are definition-match items labeled Understand or Apply. Actual cognitive demand is Remember (recognizing a definition). Difficulty is inflated by 1-2 points.",
+      "recommendation": "Downgrade to Remember / Easy (DS=1). These items should NOT be counted in Analyze or Evaluate coverage metrics."
+    }
+  ],
+  "difficulty_progression_review": {
+    "finding": "Difficulty progression within the S861-upgraded items is coherent: each item received a DS adjustment consistent with the added cognitive complexity. FOH variance items (CC-060, CC-061, CC-064) went from DS=3 to DS=4, reflecting the multi-step interpretation layer added.",
+    "anomaly": "DC-025 went DS=3→4 while DC-005 stayed at DS=3. Both require similar analytical depth (business judgment about costing method choice vs OH rate timing). DC-005's DS=3 may be slightly understated.",
+    "overall_gradient": "The upgraded pool shows a reasonable difficulty gradient: DS=3 (moderate analytical items), DS=4 (complex multi-step interpretation), DS=2 (judgment-framework items with simpler fact patterns)."
+  },
+  "calibration_recommendations": [
+    "Run a full-pool difficulty audit on all Pack C items using the S720 methodology (definition-match detection + DS recalibration)",
+    "Downgrade 20 definition-match items in Sections C+D from Understand/Apply → Remember (DS→1)",
+    "Consider upgrading DC-005 DS=3→4 to match DC-025's calibration",
+    "Flag CC-014 (false Analyze) for DEFECT_LIBRARY.md entry"
+  ],
+  "caqs_target_comparison": {
+    "analyze_target": "25% of pool = 635 items",
+    "analyze_actual": "50 items = 1.97%",
+    "evaluate_target": "15% of pool = 381 items",
+    "evaluate_actual": "1 item = 0.04%",
+    "gap_assessment": "Critical gap remains. Analyzed coverage doubled in S861 but is still ~13x below target. Evaluate coverage is effectively zero. These targets are structural, not achievable in a single wave."
+  }
+}

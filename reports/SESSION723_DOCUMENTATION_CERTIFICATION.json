@@ -1,0 +1,321 @@
+{
+  "title": "S723 Documentation Certification",
+  "date": "2026-07-26",
+  "agent": "Agent L — Documentation Certification (READ-ONLY)",
+  "documents_audited": [
+    {
+      "name": "AGENTS.md",
+      "path": "AGENTS.md",
+      "exists": true,
+      "line_count_approx": 158,
+      "declared_version": null,
+      "last_modified": "2026-07-24",
+      "status": "STALE",
+      "issues": [
+        "§8 Key File Locations table references ~1,080 certified vs 2,031 certified (parenthetical). Actual certified count is 2,181 per CURRENT_BASELINES.md §2 (2026-07-26).",
+        "§9 Session Startup Protocol references 'currently ~1,080 certified' — stale by 1,101 items.",
+        "§8 line 120: parenthetical '1,080 vs. 2,031 certified' — even the 'current' 2,031 is stale; actual is 2,181.",
+        "AGENTS.md has no declared version number, making version tracking impossible."
+      ]
+    },
+    {
+      "name": "00_PROJECT_CONSTITUTION.md",
+      "path": "knowledge/00_PROJECT_CONSTITUTION.md",
+      "exists": true,
+      "line_count_approx": 362,
+      "declared_version": "2.0 / 2.1",
+      "last_modified": "2026-07-22",
+      "status": "CURRENT",
+      "issues": [
+        "File is named '00_PROJECT_CONSTITUTION.md' but ALL other governance documents reference it as 'PROJECT_CONSTITUTION.md' (11 documents, 49+ references). This is a pervasive cross-reference naming error.",
+        "§11.2 Prohibited Root-Level Files references '.bak' and temp files — check if 'may-core.js' and 'may-learner-state.js' in root are now authorized exceptions (permitted by CURRENT_BASELINES.md as 'authorized runtime exception')."
+      ]
+    },
+    {
+      "name": "CAQS_v1.0.md",
+      "path": "knowledge/CAQS_v1.0.md",
+      "exists": true,
+      "line_count_approx": 916,
+      "declared_version": "1.0",
+      "last_modified": "2026-07-22",
+      "status": "STALE",
+      "issues": [
+        "Version frozen at 1.0 since July 22, 2026 — despite Session 508 additions (§9.4 Certification-Blocking Conditions, G-NEW-1 through G-NEW-5) documented in QUESTION_METADATA_STANDARD.md §9.4.",
+        "§15.2 references 'Current Baseline: 42/100' Repository Health Score and 'Validation Warnings: 1,062' — both stale metrics from initial Phase 1 assessment.",
+        "References 'PROJECT_CONSTITUTION.md' (should be '00_PROJECT_CONSTITUTION.md').",
+        "Dependency lists 'EXAM_BLUEPRINT.md' which does not exist.",
+        "Dependency list includes '05_COMMON_EXAM_TRAPS.md' — verified as 'knowledge/05_COMMON_EXAM_TRAPS.md' (exists)."
+      ]
+    },
+    {
+      "name": "QUESTION_METADATA_STANDARD.md",
+      "path": "knowledge/QUESTION_METADATA_STANDARD.md",
+      "exists": true,
+      "line_count_approx": 582,
+      "declared_version": "1.0 / 1.1",
+      "last_modified": "2026-07-25",
+      "status": "CURRENT",
+      "issues": [
+        "§7 Migration Plan references '~400 items' and '~150 exhibits' — corresponds to the original 75-case scope, not the current 2,500 MCQ + 420 case-item pool.",
+        "Dependencies list 'CASE_STUDY_GOLD_STANDARD.md' — file not found.",
+        "Dependencies list 'CASE_STUDY_SCORING_RUBRIC.md' — file not found.",
+        "Dependencies list 'EXAM_BLUEPRINT.md' — file not found.",
+        "References 'PROJECT_CONSTITUTION.md' (should be '00_PROJECT_CONSTITUTION.md').",
+        "§9.4 Certification-Blocking Conditions (Session 508) is current and well-documented."
+      ]
+    },
+    {
+      "name": "TAXONOMY_REGISTRY.md",
+      "path": "knowledge/TAXONOMY_REGISTRY.md",
+      "exists": true,
+      "line_count_approx": 384,
+      "declared_version": "1.0",
+      "last_modified": "2026-07-21",
+      "status": "STALE",
+      "issues": [
+        "§1 CognitiveLevel: 'Current coverage: 400/400 items (100%)' — stale. Actual pool is 2,500 items.",
+        "§2 CalculationComplexity: 'Current coverage: 400/400 items (100%)' — stale.",
+        "§3 ReadingComplexity: 'Current coverage: 400/400 items (100%)' — stale.",
+        "§4 DecisionComplexity: 'Current coverage: 400/400 items (100%)' — stale.",
+        "§5 DifficultyDrivers: 'Current coverage: 400/400 items (100%)' — stale.",
+        "§9 Competencies: 'Current coverage: 75/400 items (18.8%)' — stale scope reference.",
+        "Dependencies list 'EXAM_BLUEPRINT.md' — file not found.",
+        "References 'PROJECT_CONSTITUTION.md' (should be '00_PROJECT_CONSTITUTION.md').",
+        "§8 BlueprintDomain Topics section effectively replaces EXAM_BLUEPRINT.md — the missing file may be intentionally superseded."
+      ]
+    },
+    {
+      "name": "DEFECT_LIBRARY.md",
+      "path": "knowledge/DEFECT_LIBRARY.md",
+      "exists": true,
+      "line_count_approx": 2650,
+      "declared_version": null,
+      "last_modified": "2026-07-25",
+      "status": "CURRENT",
+      "issues": [
+        "No declared version. Entries DL-001 through DL-033 cover full defect lifecycle.",
+        "DL-008 entry header says 'OPEN — 175 remaining in Pack C' but detailed timeline shows extensive remediation. Mixed currency within entry — header block status is stale relative to detailed timeline.",
+        "DL-012 and DL-013 entries reference remediation proposals that may or may not have been executed — status is 'Open' for DL-012 clones, 'In Progress' for DL-013 boilerplate."
+      ]
+    },
+    {
+      "name": "REVISION_HISTORY.md",
+      "path": "knowledge/REVISION_HISTORY.md",
+      "exists": true,
+      "line_count_approx": 16750,
+      "declared_version": null,
+      "last_modified": "2026-07-26",
+      "status": "CURRENT",
+      "issues": [
+        "File is extremely large (1,015,892 bytes) — ~16,750 lines. Searchability is reduced. Consider annual archiving of entries older than 30 days.",
+        "Most recent entry (Session 309, 2026-07-26) confirms certified count = 2,181 — authoritative."
+      ]
+    },
+    {
+      "name": "CURRENT_BASELINES.md",
+      "path": "knowledge/CURRENT_BASELINES.md",
+      "exists": true,
+      "line_count_approx": 125,
+      "declared_version": null,
+      "last_modified": "2026-07-26",
+      "status": "CURRENT",
+      "issues": [
+        "§2 Certified Pool reports 2,181 Certified / 2,500 total — matches the most recent REVISION_HISTORY.md entries.",
+        "§2 ENHANCED_CASE_BASE: 15 cases, 90 items Certified — current.",
+        "§3 DL-008 CRITICAL section lists 67 items (55+10+2) — cross-check needed against S309 report which says 0 actual DL-008 after DL-029 false-positive resolution.",
+        "This is the most current document in the governance stack. Hash baselines updated 2026-07-26.",
+        "References 'PROJECT_CONSTITUTION.md' (should be '00_PROJECT_CONSTITUTION.md')."
+      ]
+    },
+    {
+      "name": "BACKUP_PROTOCOL.md",
+      "path": "knowledge/BACKUP_PROTOCOL.md",
+      "exists": true,
+      "line_count_approx": 28,
+      "declared_version": null,
+      "last_modified": "2026-07-22",
+      "status": "CURRENT",
+      "issues": [
+        "Stable hard rule — no changes since enactment. Referenced by AGENTS.md §3."
+      ]
+    },
+    {
+      "name": "DIFFICULTY_CALIBRATION_STANDARD.md (DCS v1.1)",
+      "path": "knowledge/DIFFICULTY_CALIBRATION_STANDARD.md",
+      "exists": true,
+      "line_count_approx": 677,
+      "declared_version": "1.1",
+      "last_modified": "2026-07-26",
+      "status": "CURRENT",
+      "issues": [
+        "DCS v1.1 is comprehensive and well-structured. 17 sections + Appendix A.",
+        "References 'PROJECT_CONSTITUTION.md' (should be '00_PROJECT_CONSTITUTION.md').",
+        "§16 Implementation History is complete through S721 (2026-07-26).",
+        "§15.2 designates Pack B as calibration benchmark — clear and useful governance decision."
+      ]
+    },
+    {
+      "name": "BUILD_TIME_VERIFICATION_STANDARD.md",
+      "path": "knowledge/BUILD_TIME_VERIFICATION_STANDARD.md",
+      "exists": true,
+      "line_count_approx": 192,
+      "declared_version": "1.0",
+      "last_modified": "2026-07-22",
+      "status": "CURRENT",
+      "issues": [
+        "Stable — defined per-question verification output format and confidence thresholds.",
+        "References CAQS_v1.0.md which itself has stale references (see CAQS entry above)."
+      ]
+    },
+    {
+      "name": "COLLABORATION_MATRIX.md",
+      "path": "ai/COLLABORATION_MATRIX.md",
+      "exists": true,
+      "line_count_approx": 381,
+      "declared_version": "1.0",
+      "last_modified": "2026-07-20",
+      "status": "CURRENT",
+      "issues": [
+        "References 'Project Constitution' (informal) — should reference '00_PROJECT_CONSTITUTION.md'.",
+        "No stale certified counts. Persona and authority definitions remain valid."
+      ]
+    },
+    {
+      "name": "WORKFLOWS.md",
+      "path": "ai/WORKFLOWS.md",
+      "exists": true,
+      "line_count_approx": 539,
+      "declared_version": "1.0",
+      "last_modified": "2026-07-20",
+      "status": "CURRENT",
+      "issues": [
+        "References 'PROJECT_CONSTITUTION.md' (should be '00_PROJECT_CONSTITUTION.md').",
+        "Eight workflows defined — all remain valid for current governance model."
+      ]
+    }
+  ],
+  "dcs_v11_verification": {
+    "decision_trees_present": true,
+    "decision_trees_detail": "§9 Boundary Decision Trees (9.1 Remember vs Understand, 9.2 Understand vs Apply, 9.3 Apply vs Analyze, 9.4 Analyze vs Evaluate). §12 Reviewer Quick-Reference Decision Trees (R1-R4). All 4 CL boundary zones covered with formal black-letter rules, operator tests, and pool examples.",
+    "escalation_paths_present": true,
+    "escalation_paths_detail": "§11.2 Disagreement Escalation table with 4 scenarios: majority wins, 3-way split → human tiebreak, CL=Evaluate → automatic escalation, >1 CL span → re-run decision tree. §11.1 formal 5-step resolution process.",
+    "forbidden_triggers_present": true,
+    "forbidden_triggers_detail": "§8 Forbidden CL Triggers: template-position CL, 'which response is most appropriate?' pattern (168 false Evaluate items), same-domain distractors as Remember (284 Pack E items), Analyze@Easy and Evaluate@Easy logical contradictions, DL-012 clone-pattern items, DL-016 dual-block CL divergence. Catalog is extensive and evidence-backed.",
+    "reviewer_guidance_present": true,
+    "reviewer_guidance_detail": "§10 Pre-Certification Checklist (16 items). §12 Reviewer Quick-Reference Decision Trees (R1-R4). §13 Confidence Gate Protocol with thresholds, template-default detection, and cross-clue (low conf + high CL = overassignment). §14 Drift Detection Process for quarterly alignment scans.",
+    "line_count": 677,
+    "file_size_bytes": 49459,
+    "sections": "§1-§17 + Appendix A (S720 Reliability Data)",
+    "adoption_path": "PATH A (S721 Agent O finalization). Decision trees PASSED by Agent D Validation Board. Example library removed pending re-verification (74% QID mismatch)."
+  },
+  "cross_reference_consistency": false,
+  "cross_reference_issues": [
+    {
+      "severity": "HIGH",
+      "type": "Widespread naming error",
+      "detail": "11+ governance documents reference 'PROJECT_CONSTITUTION.md' but the actual file is '00_PROJECT_CONSTITUTION.md'. Affected: CAQS_v1.0.md, QUESTION_METADATA_STANDARD.md, TAXONOMY_REGISTRY.md, CURRENT_BASELINES.md, DIFFICULTY_CALIBRATION_STANDARD.md, QUESTION_PACK_STRUCTURAL_STANDARD.md, CERTIFICATION_RUBRICS.md, AI_Router.md, SESSION_BOOTSTRAP.md, ALIGNMENT_MAINTENANCE_GUIDE.md, MCQ_CERTIFICATION_STANDARD_v1.0.md, PROMPT_GOVERNANCE_TEMPLATES.md, WORKFLOWS.md. Fix: either rename the file or update all references."
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Missing dependency — EXAM_BLUEPRINT.md",
+      "detail": "Referenced by QUESTION_METADATA_STANDARD.md (3 times), TAXONOMY_REGISTRY.md (4 times), CAQS_v1.0.md (dependency list). File does not exist at any path. TAXONOMY_REGISTRY.md §8 partially replaces it with inline BlueprintDomain Topics. May have been intentionally superseded by TAXONOMY_REGISTRY.md."
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Missing dependency — CASE_STUDY_GOLD_STANDARD.md",
+      "detail": "Referenced by QUESTION_METADATA_STANDARD.md. File not found. May have been superseded by CAQS_v1.0.md §3 (Case Study Standards)."
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Missing dependency — CASE_STUDY_SCORING_RUBRIC.md",
+      "detail": "Referenced by QUESTION_METADATA_STANDARD.md. File not found. May have been superseded by CAQS_v1.0.md §2 (Question Quality Rubric)."
+    },
+    {
+      "severity": "LOW",
+      "type": "Stale certified count in AGENTS.md",
+      "detail": "AGENTS.md §8 and §9 reference ~1,080 certified. CURRENT_BASELINES.md and REVISION_HISTORY.md both confirm 2,181 certified as of 2026-07-26. The AGENTS.md itself acknowledges this staleness in parenthetical notes (lines 120, 133) but the body text remains unupdated."
+    },
+    {
+      "severity": "LOW",
+      "type": "Stale pool-size references in TAXONOMY_REGISTRY.md",
+      "detail": "TAXONOMY_REGISTRY.md lists 'Current coverage: 400/400 items (100%)' in 5 sections — reflects the original 400-item scope, not the current 2,500-item pool."
+    },
+    {
+      "severity": "LOW",
+      "type": "Stale scope references in QUESTION_METADATA_STANDARD.md",
+      "detail": "Migration Plan (§7) references '~400 items, ~150 exhibits' — original 75-case scope, not current 2,500+420 pool."
+    },
+    {
+      "severity": "LOW",
+      "type": "CAQS v1.0 frozen version",
+      "detail": "CAQS_v1.0.md last modified 2026-07-22 with version still at 1.0. Session 508 (2026-07-25) added §9.4 Certification-Blocking Conditions to QUESTION_METADATA_STANDARD.md, which cross-references CAQS. CAQS itself has not been version-bumped to reflect these governance additions."
+    }
+  ],
+  "stale_references_found": [
+    "AGENTS.md §8: 'currently ~1,080 certified' (actual: 2,181)",
+    "AGENTS.md §9: 'currently ~1,080 certified' (actual: 2,181)",
+    "AGENTS.md §8 line 120: '1,080 vs. 2,031 certified' parenthetical (actual: 2,181 — both numbers in the comparison are stale)",
+    "TAXONOMY_REGISTRY.md: '400/400 items (100%)' in §1-§5, §9 (actual: ~2,500 items)",
+    "QUESTION_METADATA_STANDARD.md §7: 'All 75 cases', '~400 items', '~150 exhibits' — original scope, not current 2,500+420 pool",
+    "CAQS_v1.0.md §9.2: batch scope '~100 MCQs + ~15 cases' per section — Phase 1 estimate, not current distribution",
+    "CAQS_v1.0.md §15.1: 'Repository Health Score: 42/100', 'Validation Warnings: 1,062' — stale baseline metrics from initial assessment",
+    "Multiple documents reference 'PROJECT_CONSTITUTION.md' (should be '00_PROJECT_CONSTITUTION.md') — pervasive across 11+ governance files",
+    "Multiple documents reference 'EXAM_BLUEPRINT.md' which does not exist — QUESTION_METADATA_STANDARD.md, TAXONOMY_REGISTRY.md, CAQS_v1.0.md"
+  ],
+  "missing_documents": [
+    "EXAM_BLUEPRINT.md — referenced by QUESTION_METADATA_STANDARD.md (3x), TAXONOMY_REGISTRY.md (4x), CAQS_v1.0.md (dependency list). Not found in knowledge/ or foundation/.",
+    "CASE_STUDY_GOLD_STANDARD.md — referenced by QUESTION_METADATA_STANDARD.md. Not found.",
+    "CASE_STUDY_SCORING_RUBRIC.md — referenced by QUESTION_METADATA_STANDARD.md. Not found."
+  ],
+  "overall_completeness_score": 82,
+  "scoring_rationale": "Base 100. -5 for stale certified count in primary governance doc (AGENTS.md). -5 for pervasive cross-reference naming error (PROJECT_CONSTITUTION.md vs 00_PROJECT_CONSTITUTION.md — affects 11+ documents). -3 for 3 missing dependency documents (EXAM_BLUEPRINT.md, CASE_STUDY_GOLD_STANDARD.md, CASE_STUDY_SCORING_RUBRIC.md — though likely superseded by CAQS and TAXONOMY_REGISTRY sections). -3 for stale pool-size metadata in TAXONOMY_REGISTRY.md (5 sections). -2 for stale scope in QUESTION_METADATA_STANDARD.md and CAQS_v1.0.md migration/baseline sections. Core governance framework (DCS v1.1, CAQS, DEFECT_LIBRARY, CURRENT_BASELINES, REVISION_HISTORY, BACKUP_PROTOCOL) is robust and actively maintained.",
+  "documentation_ready_for_closure": false,
+  "blocking_issues": [
+    "AGENTS.md §8 and §9 contain stale certified count (~1,080 vs actual 2,181) — this is the primary governance document for all AI sessions. The stale count perpetuates across every new session's startup protocol.",
+    "CURRENT_BASELINES.md §3 DL-008 section lists 67 items but S309 Bottleneck Analysis (2026-07-26) concluded DL-008 = 0 actual items (all were DL-029 false positives). This discrepancy must be resolved.",
+    "Pervasive cross-reference naming: 11+ documents reference 'PROJECT_CONSTITUTION.md' but no such file exists — the Constitution is at '00_PROJECT_CONSTITUTION.md'. This causes every dependency resolution to fail silently."
+  ],
+  "verdict": "GAPS_FOUND",
+  "recommended_remediation": [
+    {
+      "priority": "P0 — BLOCKING",
+      "action": "Update AGENTS.md §8 and §9 certified count from ~1,080 to 2,181. Align with CURRENT_BASELINES.md §2.",
+      "effort": "2 line edits"
+    },
+    {
+      "priority": "P0 — BLOCKING",
+      "action": "Resolve CURRENT_BASELINES.md §3 DL-008 count discrepancy (lists 67 items CRITICAL, S309 says 0 actual). Update or add explanatory note.",
+      "effort": "1 edit + investigation"
+    },
+    {
+      "priority": "P1",
+      "action": "Update all governance document Authority/Dependencies fields to reference '00_PROJECT_CONSTITUTION.md' (or rename the Constitution file to 'PROJECT_CONSTITUTION.md'). Affects 11+ files.",
+      "effort": "Global search-and-replace across knowledge/*.md"
+    },
+    {
+      "priority": "P1",
+      "action": "Update TAXONOMY_REGISTRY.md coverage counts from '400/400' to '~2,500' across §1-§5 and §9.",
+      "effort": "6 line edits"
+    },
+    {
+      "priority": "P2",
+      "action": "Update QUESTION_METADATA_STANDARD.md §7 migration plan to reflect current 2,500 MCQ + 420 case-item pool (or annotate as completed).",
+      "effort": "Section annotation"
+    },
+    {
+      "priority": "P2",
+      "action": "Update or remove CAQS_v1.0.md §15.1 stale baseline metrics (Repository Health Score 42/100, Validation Warnings 1,062).",
+      "effort": "Section update"
+    },
+    {
+      "priority": "P2",
+      "action": "Either create EXAM_BLUEPRINT.md or update QUESTION_METADATA_STANDARD.md and TAXONOMY_REGISTRY.md to remove the dependency (TAXONOMY_REGISTRY.md §8 already contains blueprint domain topics inline).",
+      "effort": "File creation or 2 dependency-list edits"
+    },
+    {
+      "priority": "P3",
+      "action": "Bump CAQS_v1.0.md version to 1.1 to reflect Session 508 §9.4 Certification-Blocking Conditions, G-NEW-1 through G-NEW-5 amendments.",
+      "effort": "Version bump + changelog"
+    }
+  ]
+}

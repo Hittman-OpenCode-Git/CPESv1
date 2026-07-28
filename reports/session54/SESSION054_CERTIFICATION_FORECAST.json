@@ -1,0 +1,258 @@
+{
+  "session": 54,
+  "title": "Session 54 — Certification Forecast Under Hybrid Framework",
+  "date": "2026-07-28",
+  "framework": {
+    "primary_gate": "CERTIFICATION_RUBRICS.md §2 (Case-Study Rubric)",
+    "hybrid_decision": "OPTION C (Session 53)",
+    "scoring_method": "Per-case D1-D6 rubric scoring estimated from metadata extraction + Session 53 findings"
+  },
+  "current_state": {
+    "total_cases": 75,
+    "certified_under_rubric": 39,
+    "pct_certified": 52,
+    "needs_revision": 36,
+    "retire_hold": 0,
+    "note": "D1=5 and D3=4 presumed for all cases per Session 53 verification. D2/D5/D6 scored from actual file extraction."
+  },
+  "blocker_distribution": {
+    "d6_progression_only": 10,
+    "d2_stakeholder_only": 17,
+    "d5_explanations_only": 5,
+    "two_blockers": 4,
+    "three_blockers": 0,
+    "d6_total": 12,
+    "d2_total": 21,
+    "d5_total": 7
+  },
+  "remediation_by_dimension": {
+    "progression_reorder": {
+      "cases_affected": 49,
+      "effort": "LOW — re-order Items array by cognitive level (no content changes)",
+      "time_per_case": "3-5 minutes",
+      "total_time": "196 minutes",
+      "certification_unlocks": "46 cases move toward Certified"
+    },
+    "stakeholder_rename": {
+      "cases_affected": 17,
+      "effort": "TRIVIAL — single field text replacement",
+      "time_per_case": "1 minute",
+      "total_time": "17 minutes",
+      "certification_unlocks": "17 cases move toward Certified"
+    },
+    "explanation_expansion": {
+      "cases_affected": 7,
+      "items_affected": 27,
+      "effort": "MEDIUM — editorial expansion of explanation text",
+      "time_per_case": "10-15 minutes",
+      "total_time": "84 minutes",
+      "certification_unlocks": "7 cases move toward Certified"
+    }
+  },
+  "forecast": {
+    "after_wave_1": {
+      "certified_count": 69,
+      "certified_pct": 92,
+      "improvement": "+30 cases",
+      "still_needs_revision": 6
+    },
+    "remaining_blockers": {
+      "cases_with_remaining_issues": 6,
+      "breakdown": {
+        "d2_only": 0,
+        "d5_only": 0,
+        "d6_only": 3,
+        "multiple_remaining": 0
+      }
+    }
+  },
+  "top_remediation_targets": [
+    {
+      "CaseID": "CBQ2-A2",
+      "Title": "Inventory Valuation and LCM",
+      "BlockerCount": 2,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 3,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ5-C1",
+      "Title": "Direct Materials Mix and Yield Variances",
+      "BlockerCount": 2,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 3,
+      "D6Score": 5
+    },
+    {
+      "CaseID": "CBQ2-A3",
+      "Title": "Revenue Recognition and Receivables Valuation",
+      "BlockerCount": 2,
+      "CanCertify": false,
+      "D2Score": 2,
+      "D5Score": 5,
+      "D6Score": 3
+    },
+    {
+      "CaseID": "CBQ5-A2",
+      "Title": "Comprehensive Income and Stockholders' Equity",
+      "BlockerCount": 2,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 3
+    },
+    {
+      "CaseID": "CBQ-A2",
+      "Title": "Consolidation, Impairment, OCI, and Disclosure Package",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 5,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ-C2",
+      "Title": "Investment Center Performance and Transfer Pricing",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 5,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ-C3",
+      "Title": "Balanced Scorecard and Operating Performance Review",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ3-A1",
+      "Title": "Lease Accounting and Classification",
+      "BlockerCount": 1,
+      "CanCertify": false,
+      "D2Score": 2,
+      "D5Score": 5,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ3-C2",
+      "Title": "Transfer Pricing",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ3-C3",
+      "Title": "Flexible Budget Variances",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 5
+    },
+    {
+      "CaseID": "CBQ3-E2",
+      "Title": "Business Continuity and Disaster Recovery",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ3-F2",
+      "Title": "Data Visualization",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ4-A1",
+      "Title": "Intangible Assets and Goodwill Impairment",
+      "BlockerCount": 1,
+      "CanCertify": false,
+      "D2Score": 2,
+      "D5Score": 5,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ4-A2",
+      "Title": "Contingencies and Warranty Liabilities",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 2,
+      "D5Score": 5,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ4-C1",
+      "Title": "Standard Costing: 3-Way and 4-Way Overhead Variances",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 5
+    },
+    {
+      "CaseID": "CBQ4-D3",
+      "Title": "Capacity Management Concepts",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 4
+    },
+    {
+      "CaseID": "CBQ4-E2",
+      "Title": "Application IT Controls",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 5
+    },
+    {
+      "CaseID": "CBQ4-E3",
+      "Title": "Foreign Corrupt Practices Act (FCPA)",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 5
+    },
+    {
+      "CaseID": "CBQ4-F1",
+      "Title": "Cloud Computing Models",
+      "BlockerCount": 1,
+      "CanCertify": true,
+      "D2Score": 3,
+      "D5Score": 4,
+      "D6Score": 5
+    },
+    {
+      "CaseID": "CBQ5-B2",
+      "Title": "Bonds Payable and Effective Interest Amortization",
+      "BlockerCount": 1,
+      "CanCertify": false,
+      "D2Score": 2,
+      "D5Score": 5,
+      "D6Score": 5
+    }
+  ],
+  "answer": "After Wave 1 remediation (cognitive progression reorder + stakeholder renaming + explanation expansion), approximately **69 of 75 cases (92%)** could achieve Certified status under the CERTIFICATION_RUBRICS.md §2 hybrid framework adopted in Session 53. This represents a 40% improvement from the current baseline of 39/75.",
+  "caveats": [
+    "D1 and D3 scores are presumed from Session 53 verification — per-case independent D1 verification is recommended before final certification",
+    "D4 metadata is presumed 4 based on structural analysis — some cases may have D4=3 due to missing per-item Difficulty/DifficultyScore fields",
+    "Cases still blocked after Wave 1 require multi-dimensional remediation (combining 2+ fix types across D2, D5, D6)",
+    "Estimated effort totals assume sequential processing; parallel remediation would reduce wall-clock time significantly"
+  ]
+}

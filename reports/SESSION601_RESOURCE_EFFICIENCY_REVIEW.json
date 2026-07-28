@@ -1,0 +1,60 @@
+{
+  "session": "S601",
+  "agent": "G",
+  "role": "Resource Efficiency Review",
+  "generated": "2026-07-26",
+  "type": "Read-Only Governance Validation",
+  "reassessed_from": "S724 (2026-07-26 — 26-agent unanimous DEFER)",
+
+  "s724_assumptions_still_valid": true,
+
+  "assumption_changes": [
+    {
+      "assumption": "Certified pool at 2,182 (87.3%)",
+      "changed": true,
+      "detail": "Certified pool now ~2,201 (88.0%). Growth: +19. Remaining: ~299 items. Marginal growth REDUCES remaining work volume — fewer sessions to recover 4-session deficit."
+    },
+    {
+      "assumption": "Binding constraint is author capacity",
+      "changed": false,
+      "detail": "No 800-series certification waves executed. No empirical bottleneck data. Constraint remains theoretical but unchallenged."
+    },
+    {
+      "assumption": "Governance guard at 20 tests",
+      "changed": true,
+      "detail": "Upgraded to AM-2 in S726: 27 tests, Rule 2 DL-029-safe certified. Detection-reliability improvement, not throughput enhancer."
+    },
+    {
+      "assumption": "Governance overhead ~0.6 sessions per wave",
+      "changed": true,
+      "detail": "S725/S726/S727 added governance ceremony (Closure Gate, Ownership Registry, Stewardship Framework) — 600 integration would be MORE expensive than S724 estimate."
+    },
+    {
+      "assumption": "EW acceptance rate 70-80%",
+      "changed": false,
+      "detail": "No data — no pre-authored EW batches have been produced or rejected."
+    },
+    {
+      "assumption": "S309 expected 17 sessions to completion",
+      "changed": false,
+      "detail": "At 299 remaining and 12-15 items/session: ~20-25 sessions remain. Consistent with S309 conservative range."
+    }
+  ],
+
+  "binding_constraint_shifted": false,
+  "binding_constraint_evidence": "Zero 800-series sessions executed. S726/S727 hardening addressed scan reliability and ownership, not throughput. CAQS §1.6 audit per item is invariant to tooling.",
+
+  "startup_cost_estimate": {"sessions": 4, "changed": false, "note": "4-session floor; governance integration may be UNDERESTIMATED given post-S724 framework complexity."},
+  "savings_estimate": {"sessions": 3, "changed": false, "note": "Projection only — no empirical validation possible without 600 infrastructure."},
+
+  "net_effect": -1,
+  "net_effect_range": "0 (breakeven, best case) to +3 (worse). Central estimate: -1.",
+  "breakeven_sessions": 36,
+  "program_sessions": 20,
+  "breakeven_reached": false,
+
+  "governance_overhead_changed": true,
+  "governance_overhead_detail": "S725/S726/S727 have significantly increased governance complexity. 600-series integration would need to integrate into a formal Stewardship Framework (lane definitions, ownership boundaries, reactivation criteria), Ownership Matrix (25-row), Closure Gate (773-line spec), and governance guard upgrades (27 tests). The original 1-session governance integration estimate assumed pre-S725 simplicity. Current environment would require 1.5-2 sessions.",
+
+  "recommendation": "DEFER — no assumption changes alter the -1 net effect. Governance overhead has increased, not decreased, since S724. The 4-session startup estimate is a floor. The binding constraint has not shifted. Breakeven at 36 sessions remains unreachable within the 20-session program horizon."
+}

@@ -1,0 +1,73 @@
+{
+  "session": "724",
+  "title": "Session 724 Dashboard — Governance Maintenance & 600-Series Assessment",
+  "generated": "2026-07-26",
+  "agents": ["T", "All A-Z"],
+
+  "portfolio_baseline": {
+    "certified_count": 2182,
+    "total_items": 2500,
+    "certified_pct": 87.3,
+    "dl008_status": 0,
+    "governance_guard": "20/20 PASS",
+    "governance_score": "A- (86.3)"
+  },
+
+  "600_series_decision": {
+    "verdict": "DEFER",
+    "consensus": "26/26 agents (100%)",
+    "rationale": "Startup cost (4 sessions) > projected savings (3 sessions). Net: +1 session worse than S309 plan. Binding constraint is author capacity, not tooling."
+  },
+
+  "operating_model_summary": {
+    "100_series": {"status": "ACTIVE", "scope": "Runtime maintenance"},
+    "300_series": {"status": "ACTIVE — S310 pending", "scope": "Portfolio analytics (8/10 sessions)", "remaining": "S310 closeout"},
+    "600_series": {"status": "DEFERRED", "recommendation": "Re-evaluate post-certification"},
+    "800_series": {"status": "ACTIVE — S803 cleared", "scope": "Certification + modernization"},
+    "governance": {"status": "MAINTENANCE MODE", "framework": "v1.0 active"}
+  },
+
+  "throughput_comparison": {
+    "metric": ["Sessions to 100% Cert", "EW Fill at Completion", "Governance Risk", "Quality Risk", "Portfolio Complexity"],
+    "option_a_no_600": [17, "88%", "LOW", "LOW", "LOW (4 tracks)"],
+    "option_b_600": [19, "92%", "HIGH", "HIGH", "HIGH (5 tracks)"]
+  },
+
+  "risk_heatmap": {
+    "option_a": {
+      "certification_risk": "LOW",
+      "governance_risk": "LOW",
+      "quality_risk": "LOW",
+      "timeline_risk": "MEDIUM (17 sessions expected, 22 conservative)",
+      "aggregate": "LOW-MEDIUM (1.63/3.0)"
+    },
+    "option_b": {
+      "certification_risk": "MEDIUM (anchoring bias, handoff rework)",
+      "governance_risk": "HIGH (dilution, scope creep)",
+      "quality_risk": "HIGH (DL-013 repeat pattern)",
+      "timeline_risk": "HIGH (startup delay + rework overhead)",
+      "aggregate": "HIGH (2.50/3.0)"
+    }
+  },
+
+  "key_findings": [
+    "All 26 agents independently converge on DEFER — zero dissenting opinions",
+    "S309's 17-session plan remains the optimal path to 100% certification",
+    "The binding constraint (author capacity) is not addressed by 600-series tooling",
+    "Pre-authoring EW without CAQS §1.6 context recreates DL-013 patterns (2,587 boilerplate fields)",
+    "Two P0 governance items required before any 600-series launch (framework update + guard Rule 6)",
+    "Governance guard's DL-029-vulnerable window scan needs Function-constructor conversion",
+    "CURRENT_BASELINES.md §3 is stale (67 phantom DL-008 items from S802 refutation)",
+    "6 post-700 ownership gaps identified — May coaching layer, baseline maintenance, defect manifest updates"
+  ],
+
+  "next_actions": [
+    {"action": "S310 — Portfolio Operations Dashboard (300-series closeout)", "priority": "P0"},
+    {"action": "Fix governance guard DL-008 detection to Function constructor parse", "priority": "P0"},
+    {"action": "Update CURRENT_BASELINES.md §3 to remove phantom DL-008 items", "priority": "P0"},
+    {"action": "Create scripts/t0_baseline_verify.js for automated T0 protocol", "priority": "P1"},
+    {"action": "Execute S309 17-session certification plan (Domain E/F → Pack A → Case-bank EW → Governance)", "priority": "P0"},
+    {"action": "Assign May coaching layer ownership to 100-series", "priority": "P1"},
+    {"action": "Close 300-series with S310 formal execution", "priority": "P1"}
+  ]
+}

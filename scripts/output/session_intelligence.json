@@ -1,0 +1,274 @@
+{
+  "specId": "SESSION252_SESSION_INTELLIGENCE_SPEC",
+  "mode": "summary",
+  "totalSessions": 40,
+  "summary": {
+    "totalSessions": 40,
+    "sessionsByMode": {
+      "IMPLEMENTATION": 13,
+      "UNKNOWN": 16,
+      "READ-ONLY": 11
+    },
+    "sessionsBySeries": {
+      "Early Content Audit": 28,
+      "700-Series — Governance & Enforcement": 5,
+      "900+": 1,
+      "500-Series — Certification Waves": 4,
+      "600-Series — Content Operations": 1,
+      "800-Series — Execution Lane": 1
+    },
+    "totalUniqueQidsAcrossAllSessions": 535,
+    "sessionsByCertifiedExposure": {
+      "highCertified": 22,
+      "mixedCertified": 3,
+      "lowCertified": 4
+    },
+    "mostTestedQids": [
+      {
+        "qid": "P1-AC-001",
+        "sessionCount": 7,
+        "currentState": "Certified",
+        "section": "A"
+      },
+      {
+        "qid": "P1-BC-001",
+        "sessionCount": 6,
+        "currentState": "Certified",
+        "section": "B"
+      },
+      {
+        "qid": "P1E-E-020",
+        "sessionCount": 6,
+        "currentState": "Certified",
+        "section": "E"
+      },
+      {
+        "qid": "P1-E-046",
+        "sessionCount": 5,
+        "currentState": "Archived",
+        "section": "E"
+      },
+      {
+        "qid": "P1-E-058",
+        "sessionCount": 5,
+        "currentState": "Archived",
+        "section": "E"
+      },
+      {
+        "qid": "P1-E-056",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "E"
+      },
+      {
+        "qid": "P1-AD-047",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "A"
+      },
+      {
+        "qid": "P1-AD-048",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "A"
+      },
+      {
+        "qid": "P1-AC-033",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "A"
+      },
+      {
+        "qid": "P1-CD-002",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "C"
+      },
+      {
+        "qid": "P1-B-001",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "B"
+      },
+      {
+        "qid": "P1-B-025",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "B"
+      },
+      {
+        "qid": "P1-AD-075",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "A"
+      },
+      {
+        "qid": "P1B-B-119",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "B"
+      },
+      {
+        "qid": "P1-BC-100",
+        "sessionCount": 5,
+        "currentState": "Certified",
+        "section": "B"
+      },
+      {
+        "qid": "P1-EC-001",
+        "sessionCount": 4,
+        "currentState": "Archived",
+        "section": "E"
+      },
+      {
+        "qid": "P1-E-076",
+        "sessionCount": 4,
+        "currentState": "Certified",
+        "section": "E"
+      },
+      {
+        "qid": "P1-A-005",
+        "sessionCount": 4,
+        "currentState": "Certified",
+        "section": "A"
+      },
+      {
+        "qid": "P1B-B-153",
+        "sessionCount": 4,
+        "currentState": "Certified",
+        "section": "B"
+      },
+      {
+        "qid": "P1-A-004",
+        "sessionCount": 4,
+        "currentState": "Certified",
+        "section": "A"
+      }
+    ],
+    "sessionsByDefectExposure": {
+      "highDefect": 8,
+      "mediumDefect": 12,
+      "noDefect": 9
+    },
+    "sessionsByChallengeExposure": {
+      "highChallenge": 1,
+      "mediumChallenge": 15,
+      "noChallenge": 13
+    },
+    "topOverlappingSessions": [
+      {
+        "sessionId": "S89B",
+        "overlapCount": 26,
+        "title": "Pool-Wide Difficulty Distribution (Post-S89B + S89C)"
+      },
+      {
+        "sessionId": "3",
+        "overlapCount": 18,
+        "title": "Critical Certified Defects Repaired"
+      },
+      {
+        "sessionId": "4",
+        "overlapCount": 18,
+        "title": "-Item Certification Block"
+      },
+      {
+        "sessionId": "39",
+        "overlapCount": 16,
+        "title": "In Audit QIDs (Topic Groups)"
+      },
+      {
+        "sessionId": "S17B",
+        "overlapCount": 14,
+        "title": "**ALL 5 GATES PASS â€” NO PACK-FILE WRITES REQUIRED â€” SESSION 31 RECONCILIATION COMPLETE.** G1: Pack D 500/500, FD-045 holding. G2: BCDE denominator verified 874. G3: app.js adopted, 4 scoring functions identical to S17B, governance guard 20/20. G4: index_updated.html adopted, +64 B = Session 26. G5: 4 governance documents updated. Phase 6: All 13 hashes re-verified; zero drift; cross-document agreement confirmed."
+      },
+      {
+        "sessionId": "6",
+        "overlapCount": 13,
+        "title": "-Agent DL-026 Cross-Pool Scoping Session â€” Independent Verification + Governance Consolidation (2026-07-23)"
+      },
+      {
+        "sessionId": "7.",
+        "overlapCount": 13,
+        "title": "Files"
+      },
+      {
+        "sessionId": "38",
+        "overlapCount": 12,
+        "title": "Off-Topic Items (DL-010 Component)"
+      },
+      {
+        "sessionId": "2026",
+        "overlapCount": 11,
+        "title": "-07-25 â€” Session 89C/89D: Overnight Autonomous Loop â€” Durable Queue Difficulty Calibration"
+      },
+      {
+        "sessionId": "S537",
+        "overlapCount": 11,
+        "title": "**This Session's Action:** Removed 7 duplicate RevisionHistory entries (one per case). Each case had two identical S537 certification entries â€” the second was a copy-paste artifact from the prior wave. After de-duplication: 7 cases Ã— 1 S537 entry = 7 total."
+      }
+    ],
+    "seriesCrossReference": {
+      "Early Content Audit": [
+        "500-Series — Certification Waves",
+        "600-Series — Content Operations",
+        "700-Series — Governance & Enforcement",
+        "800-Series — Execution Lane",
+        "900+"
+      ],
+      "700-Series — Governance & Enforcement": [
+        "500-Series — Certification Waves",
+        "900+",
+        "Early Content Audit"
+      ],
+      "900+": [
+        "500-Series — Certification Waves",
+        "700-Series — Governance & Enforcement",
+        "Early Content Audit"
+      ],
+      "500-Series — Certification Waves": [
+        "700-Series — Governance & Enforcement",
+        "900+",
+        "Early Content Audit"
+      ],
+      "600-Series — Content Operations": [
+        "800-Series — Execution Lane",
+        "Early Content Audit"
+      ],
+      "800-Series — Execution Lane": [
+        "600-Series — Content Operations",
+        "Early Content Audit"
+      ]
+    },
+    "qidFrequencyDistribution": {
+      "touchedOnce": 83,
+      "touched2to5": 449,
+      "touched6to10": 3,
+      "touched11to20": 0,
+      "touched21plus": 0
+    },
+    "challengeToSessionRatio": 1.5,
+    "certifiedItemSessionCoverage": 20.6,
+    "defectLibraryCoverageInSessions": {
+      "DL-016": 7,
+      "DL-018": 6,
+      "DL-033": 6,
+      "DL-009": 3,
+      "DL-010": 2,
+      "DL-007": 2,
+      "DL-013": 3,
+      "DL-024": 4,
+      "DL-005": 2,
+      "DL-021": 4,
+      "DL-029": 3,
+      "DL-027": 7,
+      "DL-008": 7,
+      "DL-015": 4,
+      "DL-017": 4,
+      "DL-025": 5,
+      "DL-026": 8,
+      "DL-030": 7,
+      "DL-031": 4
+    }
+  },
+  "generatedTimestamp": "2026-07-27T19:13:29.304Z"
+}

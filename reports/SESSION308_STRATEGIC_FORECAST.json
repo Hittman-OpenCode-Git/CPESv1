@@ -1,0 +1,41 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "scenarios": {
+    "optimistic": {
+      "assumption": "Maximum parallelism, no blockers, sustained 20 items/session velocity",
+      "sessions": 24,
+      "finalUIQS": 84,
+      "finalCertPct": 100,
+      "finalEWPct": 92,
+      "risks": [
+        "Requires zero rework",
+        "Assumes all FD-045/046/075 resolved without session cost",
+        "Assumes no new defects discovered"
+      ]
+    },
+    "expected": {
+      "assumption": "HYBRID capacity model, moderate parallelism, ~18 items/session cert velocity",
+      "sessions": 30,
+      "finalUIQS": 82.5,
+      "finalCertPct": 100,
+      "finalEWPct": 88,
+      "risks": [
+        "1-2 sessions for unexpected rework",
+        "Moderate defect discovery rate"
+      ]
+    },
+    "conservative": {
+      "assumption": "Sequential execution, lower velocity (15 items/session cert), some rework",
+      "sessions": 38,
+      "finalUIQS": 80,
+      "finalCertPct": 98,
+      "finalEWPct": 82,
+      "risks": [
+        "DL-008 may have 2-3 residual items requiring second pass",
+        "Clone rotation audit may uncover more than 112 items",
+        "Case-bank EW velocity may be lower (zero-start)"
+      ]
+    }
+  },
+  "recommendation": "Plan for EXPECTED (30 sessions). Reserve capacity for CONSERVATIVE (38 sessions). Celebrate if OPTIMISTIC (24 sessions) achieved."
+}

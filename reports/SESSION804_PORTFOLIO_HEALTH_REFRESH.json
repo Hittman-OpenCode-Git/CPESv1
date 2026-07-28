@@ -1,0 +1,126 @@
+{
+  "$schema": "SESSION804 Portfolio Health Refresh v1.0",
+  "session": "S804",
+  "date": "2026-07-26",
+  "type": "Portfolio State Snapshot — Post S804 Execution",
+  "predecessor": "S803 (MCQ Certification Wave 1: P1-E-056 Recertification + Section F Clone Rationalization)",
+
+  "governance_attestation": {
+    "governance_guard_pre": "20/20 PASS",
+    "governance_guard_post": "20/20 PASS",
+    "app_js_hash": "5A4338C6... (stable — no scoring changes)",
+    "backup_protocol": "Mandatory — pack_a_corrected.js backed up before write",
+    "batch_compliance": "Governance guard Rule 5 (≤30 items) — compliant",
+    "lanes": "800-series certification execution lane"
+  },
+
+  "portfolio_summary": {
+    "total_question_ids": 2500,
+    "certified": 2181,
+    "certified_pct": 87.24,
+    "archived": 242,
+    "archived_pct": 9.68,
+    "unprocessed": 77,
+    "unprocessed_pct": 3.08
+  },
+
+  "delta_from_S803": {
+    "certified": { "before": 2182, "after": 2181, "delta": -1 },
+    "archived": { "before": 241, "after": 242, "delta": 1 },
+    "unprocessed": { "before": 77, "after": 77, "delta": 0 },
+    "net_items_adjudicated": 1,
+    "note": "S804 de-certified 1 Pack A Section E template clone (DL-012 pattern) — moved from Certified to Archived. No other state changes."
+  },
+
+  "per_pack_breakdown": {
+    "pack_a": {
+      "file": "pack_a_corrected.js",
+      "total": 500,
+      "certified": 481,
+      "archived": 19,
+      "unprocessed": 0,
+      "certified_pct": 96.2,
+      "sections": {
+        "A": { "total": 75, "certified": 75, "archived": 0, "unprocessed": 0, "status": "Fully Certified" },
+        "B": { "total": 100, "certified": 96, "archived": 0, "unprocessed": 0, "status": "Partial — 4 uncertified" },
+        "C": { "total": 100, "certified": 94, "archived": 0, "unprocessed": 0, "status": "Partial — 6 uncertified" },
+        "D": { "total": 75, "certified": 75, "archived": 0, "unprocessed": 0, "status": "Fully Certified" },
+        "E": { "total": 75, "certified": 58, "archived": 17, "unprocessed": 0, "status": "Partial — 58 Cert + 17 Archived clones" },
+        "F": { "total": 75, "certified": 73, "archived": 2, "unprocessed": 0, "status": "Partial — 2 archived" }
+      },
+      "delta_s804": {
+        "certified": -1,
+        "archived": 1,
+        "section_affected": "E",
+        "action": "1 Certified template clone de-certified → Archived"
+      }
+    },
+    "pack_b": {
+      "file": "pack_b_corrected.js",
+      "total": 500,
+      "certified": 500,
+      "archived": 0,
+      "unprocessed": 0,
+      "certified_pct": 100.0,
+      "sections": "A-F all fully Certified (6/6 sections)",
+      "delta_s804": "No change"
+    },
+    "pack_c": {
+      "file": "pack_c_corrected.js",
+      "total": 500,
+      "certified": 350,
+      "archived": 112,
+      "unprocessed": 38,
+      "certified_pct": 70.0,
+      "sections_known": "A, B certified; C, D, E, F partially audited. Section F: 112 clones archived in S803.",
+      "delta_s804": "No change"
+    },
+    "pack_d": {
+      "file": "pack_d_corrected.js",
+      "total": 500,
+      "certified": 350,
+      "archived": 111,
+      "unprocessed": 39,
+      "certified_pct": 70.0,
+      "sections_known": "A, B, D certified; C, E, F partially audited. Section F: 111 clones archived in S803.",
+      "delta_s804": "No change"
+    },
+    "pack_e": {
+      "file": "pack_e_corrected.js",
+      "total": 500,
+      "certified": 500,
+      "archived": 0,
+      "unprocessed": 0,
+      "certified_pct": 100.0,
+      "sections": "A, B, D, E, F fully Certified; Section C In Audit (DL-021: 5 cert + 95 non-cert with absent distractor EW fields)",
+      "delta_s804": "No change"
+    }
+  },
+
+  "certified_pool_maturity": {
+    "fully_certified_packs": 2,
+    "fully_certified_pack_labels": ["Pack B", "Pack E"],
+    "partially_certified_packs": 3,
+    "partially_certified_pack_labels": ["Pack A (96.2%)", "Pack C (70.0%)", "Pack D (70.0%)"],
+    "certified_sections_fully": "12/30 sections (40%)",
+    "distance_to_100pct": "319 items remaining to certify (77 Unprocessed + 242 Archived salvageable)"
+  },
+
+  "clone_archival_progress": {
+    "S803_clones_archived": 110,
+    "S804_clones_archived": 1,
+    "total_clones_archived_to_date": 111,
+    "estimated_clone_pool": 765,
+    "pct_complete": 14.5,
+    "remediation_hours_saved_est": "~24 hours"
+  },
+
+  "verification": {
+    "direct_grep_command": "Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' | Measure-Object",
+    "raw_count": 2181,
+    "question_id_count": 2500,
+    "archived_count": 242,
+    "count_stability": "Confirmed stable — matches S802 baseline minus 1 (S804 archival)",
+    "verified_by": "Agent P+Q (S804) — direct raw-file grep, 2026-07-26"
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "document": "SESSION204_INVESTIGATION_WORKBENCH_SPEC",
+  "session": "S204",
+  "board": "G — Navigation & Investigation Workbench",
+  "title": "Investigation Workbench — Design Specification",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Design Specification (NOT implementation)",
+  "purpose": "Defines the Investigation Workbench — a search-and-navigate interface for the CMA Part 1 Exam Simulator's content operations team. Enables deep-linking into questions, sessions, defects, recommendations, and certification history. Designed as a companion tool for content governance, defect remediation, learner support, and certification workflow.",
+  "authority": "S203 Navigation Model, AGENTS.md §2 (Read-Only by Default)",
+  "dependencies": [
+    "SESSION203_NAVIGATION_MODEL.json (entity relationship graph)",
+    "SESSION203_CANONICAL_REGISTRY_SCHEMA.json (question identity model)",
+    "SESSION203_RECOMMENDATION_PIPELINE.json (recommendation schema)",
+    "SESSION204_NAVIGATION_VALIDATION.json (walked paths)"
+  ],
+
+  "design_philosophy": {
+    "audience": "Content operations team (Author, Accountant, Editor, Psychometrician, Validator, Release Manager, Student Support)",
+    "primary_goals": [
+      "Instant question lookup by QID, topic, defect class, session, or recommendation ID",
+      "Complete question detail view: stem, choices, correct answer, all explanations, metadata, governance state",
+      "Cross-referencing: which sessions touched a question, which recommendations target it, which defects apply",
+      "Challenge-resolution workflow: track learner challenges from filing to closure",
+      "Export investigation findings for handoff to remediation sessions"
+    ],
+    "non_goals": [
+      "Learner-facing — this is for operations staff",
+      "Exam simulation — not a practice exam interface",
+      "Content authoring — this is search/navigate, not write (though it may launch a write session)"
+    ],
+    "access_control": "All operations staff roles. Read access to all entity types. Write access deferred to dedicated session agents (governed by governance-guard).",
+    "data_freshness": "Rebuild index at session T0 from CANONICAL_REGISTRY + RECOMMENDATION_REGISTRY + SESSION_REGISTRY. Incremental rebuild after each batch remediation."
+  },
+
+  "ui_layout": {
+    "overview": "The Workbench is a split-pane interface: left panel = search/navigate, right panel = detail view.",
+    "modes": {
+      "search_browse_mode": "Default. Left panel shows search bar with multi-faceted filters. Right panel shows results list.",
+      "detail_mode": "After selecting an entity. Left panel shows entity tree/relationships. Right panel shows full detail view.",
+      "investigation_mode": "After opening a challenge or recommendation. Clock tracks investigation time. Findings are recorded into a notebook pane."
+    },
+
+    "left_panel_components": {
+      "search_bar": {
+        "placeholder": "Search by QID, topic, defect class, session ID, recommendation ID, keyword...",
+        "autocomplete": "Powershell-like prefix matching. Type 'P1-EC-' to see all Pack C Section E items. Type 'DL-0' to see all defect classes. Type 'S80' to see 800-series sessions.",
+        "supported_queries": [
+          "QID exact: P1-EC-024",
+          "QID prefix: P1-EC- (all Pack C Section E)",
+          "Topic substring: 'application input control'",
+          "Defect class: DL-026",
+          "Session ID: S809",
+          "Recommendation ID: REC-0810-014",
+          "Challenge ID: CHG-20260727-001",
+          "Domain: domain:E",
+          "Pack: pack:C",
+          "CognitiveLevel: Apply",
+          "question_state: Certified",
+          "Compound queries: 'DL-026 domain:E question_state:Unprocessed'"
+        ]
+      },
+      "filter_facets": {
+        "domain": ["A", "B", "C", "D", "E", "F"],
+        "pack": ["A", "B", "C", "D", "E"],
+        "question_state": ["Unprocessed", "In Audit", "Editorial Queue", "Certified", "Archived"],
+        "defect_class": ["DL-008", "DL-013", "DL-016", "DL-021", "DL-025", "DL-026", "DL-030", "DL-031", "DL-032"],
+        "cognitive_level": ["Remember", "Understand", "Apply", "Analyze", "Evaluate"],
+        "difficulty": ["Easy", "Moderate-Easy", "Moderate", "Difficult", "Very Difficult"],
+        "certification_status": ["Certified", "In Audit", "Unprocessed", "READY", "HOLD", "BLOCKED"],
+        "has_open_recommendations": ["Yes", "No"]
+      },
+      "search_results_list": {
+        "render_each_result": {
+          "icon": "Entity type icon: Q for question, S for session, R for recommendation, D for defect, C for challenge",
+          "primary_line": "QID: P1-EC-024 — Application Input Control (Domain E, Pack C, Unprocessed)",
+          "secondary_line": "1 empty EW (A) | 0 DL-008 | 0 DL-013 | MEDIUM risk | Wave 3, Sub-batch 3b",
+          "meta_tags": "Domain:E | Pack:C | CL:Apply | Difficulty:Moderate | Risk:MEDIUM"
+        },
+        "sort_options": ["Relevance", "QID (ascending)", "Risk (HIGH→LOW)", "Session Date (newest first)", "Certification Date"]
+      },
+      "entity_tree": {
+        "description": "When a question is selected, the left panel switches to entity tree mode showing all relationships:",
+        "tree_structure": {
+          "P1-EC-024": {
+            "defects": ["DL-026 (1 empty non-CC EW)"],
+            "sessions": {
+              "S809": {"type": "Assessment", "date": "2026-07-26", "verdict": "HOLD"},
+              "S809.1": {"type": "Readiness", "date": "2026-07-26"},
+              "S809.2": {"type": "Risk Matrix", "date": "2026-07-26", "risk": "MEDIUM"},
+              "S810": {"type": "Remediation", "date": "2026-07-26", "verdict": "READY"},
+              "S810.1": {"type": "Intelligence", "date": "2026-07-26"},
+              "S811": {"type": "Certification (planned)", "date": "TBD"}
+            },
+            "recommendations": ["REC-S810-014 (status: PLANNED)"],
+            "challenges": [],
+            "reports": [
+              "SESSION809_CERTIFICATION_RESULTS.json",
+              "SESSION810_CERTIFICATION_READINESS.json",
+              "agent_c_ew_assessment.json (S809.2)"
+            ]
+          }
+        }
+      }
+    },
+
+    "right_panel_components": {
+      "question_detail_view": {
+        "header": "QID + topic + domain badge + certification state badge + risk badge",
+        "tabs": [
+          {
+            "tab": "Overview",
+            "content": {
+              "identity": "QID, compound_key, identity_key, file_path, line_number",
+              "stem": "Full question stem text",
+              "choices": "A/B/C/D with CC marker (maskable: show/hide correct answer toggle)",
+              "governance": "question_state, pack_state, pedagogical_cluster",
+              "metadata": "Topic, Domain, CognitiveLevel, Difficulty, DifficultyScore, LOSTag, BlueprintObjective",
+              "quality_scores": "CAQS 10-dimension scores (when available)"
+            }
+          },
+          {
+            "tab": "Explanations",
+            "content": {
+              "explanation_correct": "Full text with word count, COSO/ASC citation detection, score",
+              "explanation_wrong_a": "Full text + status (COMPLETE/MISSING/BOILERPLATE/MISALIGNED/CC_SLOT_EMPTY)",
+              "explanation_wrong_b": "Full text + status",
+              "explanation_wrong_c": "Full text + status",
+              "explanation_wrong_d": "Full text + status",
+              "ew_coverage_summary": "Slots complete: 2/3 | Missing: A | Boilerplate: 0"
+            }
+          },
+          {
+            "tab": "Sessions",
+            "content": "Timeline of all sessions referencing this question. Each entry: session ID, date, type, verdict, deliverable link. Click to open session detail."
+          },
+          {
+            "tab": "Defects",
+            "content": "All defect library entries referencing this QID. Each entry: DL-ID, severity, status (Open/Resolved), description, root cause, remediation."
+          },
+          {
+            "tab": "Recommendations",
+            "content": "All recommendations linked. Each: REC-ID, status, priority, description, target session, closure evidence."
+          },
+          {
+            "tab": "Challenges",
+            "content": "All learner challenges on this question. Each: CHG-ID, status, learner description, resolution."
+          },
+          {
+            "tab": "History",
+            "content": "DELTA_LEDGER entries. Version chain. State transitions with timestamps. Prior CorrectChoice values. EC revision history."
+          }
+        ]
+      },
+      "session_detail_view": {
+        "header": "Session ID + type badge + date + status",
+        "tabs": [
+          {"tab": "Summary", "content": "Session type, date, status, pre/post-flight checklists, certifications affected"},
+          {"tab": "Questions", "content": "Table of all QIDs referenced. Each row links to question detail."},
+          {"tab": "Findings", "content": "Defects discovered. Gate results. Per-item verdicts."},
+          {"tab": "Recommendations", "content": "Created/executed recommendations with status."},
+          {"tab": "Deliverables", "content": "List of produced report files with links."}
+        ]
+      },
+      "defect_detail_view": {
+        "header": "Defect ID + class badge + severity badge + status badge",
+        "tabs": [
+          {"tab": "Details", "content": "Full defect description, root cause, pattern, detection rule, correction pattern"},
+          {"tab": "Affected Questions", "content": "Table of QIDs with defect. Each row links to question detail. Color-coded by Certified/Unprocessed."},
+          {"tab": "Remediation Progress", "content": "Progress bar: 38/38 seeds assessed, 28/38 remediated, 18/38 certified. Per-QID status."}
+        ]
+      },
+      "challenge_detail_view": {
+        "header": "Challenge ID + status badge + priority badge",
+        "tabs": [
+          {"tab": "Challenge", "content": "Learner description, investigation type, filing date, linked QID"},
+          {"tab": "Investigation", "content": "Findings, linked defects, linked recommendations, assigned sessions"},
+          {"tab": "Resolution", "content": "Resolution type, closure evidence, closed date"}
+        ]
+      }
+    }
+  },
+
+  "data_model_design": {
+    "search_index": {
+      "description": "In-memory search index rebuilt at session T0 from CANONICAL_REGISTRY + RECOMMENDATION_REGISTRY + SESSION_REGISTRY.",
+      "index_structure": {
+        "by_qid": "Map<String, QuestionIndexEntry> — O(1) QID lookup",
+        "by_topic": "Inverted index: tokenized Topic → Set<QID>",
+        "by_defect": "Map<String, Set<QID>> — DL-ID → affected QIDs",
+        "by_session": "Map<String, SessionIndexEntry> — SessionID → session with all linked QIDs",
+        "by_recommendation": "Map<String, RecommendationIndexEntry>",
+        "by_domain": "Map<String, Set<QID>> — domain letter → QIDs",
+        "by_pack": "Map<String, Set<QID>>",
+        "by_question_state": "Map<String, Set<QID>>",
+        "by_cognitive_level": "Map<String, Set<QID>>",
+        "full_text": "Inverted word index across Stem, Prompt, Topic, ExplanationCorrect fields"
+      },
+      "question_index_entry": {
+        "qid": "String",
+        "compound_key": "String",
+        "identity_key": "String",
+        "topic": "String",
+        "domain": "String",
+        "pack": "String",
+        "file": "String",
+        "question_state": "String",
+        "correct_choice": "String",
+        "cognitive_level": "String",
+        "difficulty": "String",
+        "difficulty_score": "Number",
+        "defects": "Array<{defect_id: String, status: String}>",
+        "sessions": "Array<{session_id: String, role: String, date: String}>",
+        "recommendations": "Array<{rec_id: String, status: String}>",
+        "ew_empty_count": "Number",
+        "ew_boilerplate_count": "Number",
+        "dl008": "Boolean",
+        "stem_preview": "String (first 200 chars)"
+      },
+      "rebuild_frequency": "At session T0 (full rebuild). Incremental after each batch write to a pack file."
+    },
+    "export_format": {
+      "description": "Export investigation findings for handoff to remediation sessions.",
+      "formats": [
+        "JSON — direct handoff to session agents (batch plan input)",
+        "CSV — for spreadsheet analysis of defect clusters",
+        "Markdown report — for governance board review",
+        "QID list — plain text, one QID per line, for batch remediation scripts"
+      ],
+      "export_example": {
+        "investigation_id": "INV-20260727-001",
+        "topic": "Domain E DL-026 gap investigation — Wave 3 IT-Dependent Control Activities",
+        "qids": ["P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-040", "P1-ED-010", "P1-ED-051"],
+        "empty_slots_per_item": {"P1-EC-024": ["A"], "P1-EC-022": ["A", "C"], "P1-EC-023": ["A", "D"]},
+        "recommended_batches": [{"batch": 1, "qids": ["P1-EC-024", "P1-EC-040"], "slots_to_fill": 2}],
+        "target_session": "S811",
+        "exported_by": "Agent G (Investigation Workbench)",
+        "exported_at": "2026-07-27T12:00:00Z"
+      }
+    }
+  },
+
+  "navigation_flows": {
+    "flow_search_for_question": {
+      "steps": [
+        "1. User types 'P1-EC-024' in search bar → autocomplete confirms QID",
+        "2. Question detail opens in right panel: stem, choices, CC hidden",
+        "3. User toggles 'Show CC' → D highlighted as correct answer",
+        "4. User switches to Explanations tab → sees EW_A is empty (highlighted in red)",
+        "5. User switches to Defects tab → sees DL-026 entry with 1 empty slot",
+        "6. User switches to Sessions tab → sees timeline: S319(HOLD)→S809(HOLD)→S810(READY)→S811(planned)",
+        "7. User clicks S810 session → session detail opens with all 38 seeds listed"
+      ]
+    },
+    "flow_investigate_defect_cluster": {
+      "steps": [
+        "1. User filters: defect_class=DL-026, domain=E, question_state=Unprocessed",
+        "2. Results: 38 items (19 Pack C + 19 Pack D)",
+        "3. User sorts by risk (HIGH→LOW). EC-014 at top (1/4 EW slots populated)",
+        "4. User clicks EC-014 → opens question detail",
+        "5. User expands entity tree → sees all 9 sessions referencing this QID",
+        "6. User clicks 'Export Investigation' → exports QID list + empty slot map as JSON",
+        "7. JSON handoff to S811 remediation session"
+      ]
+    },
+    "flow_resolve_learner_challenge": {
+      "steps": [
+        "1. New challenge CHG-20260727-001 appears in dashboard",
+        "2. User opens challenge → learner complaint: 'No feedback shown when I selected A on P1-EC-024'",
+        "3. User clicks QID link → opens question detail in right panel",
+        "4. Explanation tab confirms: EW_A is empty (status: MISSING)",
+        "5. Sessions tab shows: S810 already remediated EW_A (ew_empty=0 per readiness scan)",
+        "6. User checks that the fix is in the current pack file → confirms via file evidence",
+        "7. User resolves challenge: CHG-20260727-001 → CLOSED with explanation to learner",
+        "8. Resolution recorded in Challenge Registry. Learner notified."
+      ]
+    },
+    "flow_session_handoff": {
+      "steps": [
+        "1. S809 completed → HOLD for all 38 seeds. Remediation plan published: 53 empty slots across 38 seeds.",
+        "2. S810 agent opens Workbench → searches session=S809 → sees all 38 QIDs + per-item verdicts",
+        "3. Agent filters by defect: EW_MISSING → sees 53 slots to author",
+        "4. Agent filters by risk: HIGH→LOW → sees remediation order",
+        "5. Agent clicks 'Export as Batch Plan' → exports 4-wave batch plan JSON",
+        "6. S810 executes remediation per batch plan → writes new EW content to pack files",
+        "7. Post-remediation: agent re-opens Workbench → searches QIDs → verifies ew_empty=0",
+        "8. Agent updates readiness → exports certification candidate list for S811"
+      ]
+    }
+  },
+
+  "component_inventory": {
+    "search_engine": "In-memory full-text + structured field index. Rebuilt from CANONICAL_REGISTRY at T0.",
+    "entity_resolver": "Resolves compound keys to full entity records. Handles dual-block vs single-object architecture for Pack C/D items.",
+    "relationship_resolver": "Walks navigation graph: QID → sessions, QID → defects, session → QIDs, defect → QIDs, recommendation → QIDs.",
+    "detail_renderer": "Renders question, session, defect, recommendation, and challenge detail views. Handles CC masking, EW status coloring, certification state badges.",
+    "export_engine": "JSON, CSV, Markdown, and plain-text QID list export formats.",
+    "challenge_tracker": "Manages challenge lifecycle: OPEN → TRIAGE → INVESTIGATING → REMEDIATED → VERIFIED → CLOSED.",
+    "cross_reference_validator": "At each rebuild, validates: all QIDs in session reports exist in registry, all recommendations link to valid QIDs and sessions, no orphan references."
+  },
+
+  "implementation_phases": {
+    "phase_1_core_search_and_view": {
+      "status": "Design spec (this document)",
+      "features": ["QID search", "Question detail view (Overview + Explanations tabs)", "Basic filter facets", "Session search and detail view"],
+      "depends_on": "CANONICAL_REGISTRY population (S203 deliverable)"
+    },
+    "phase_2_cross_referencing": {
+      "status": "Design spec",
+      "features": ["Question → Sessions tab", "Question → Defects tab", "Session → Questions tab", "Export investigation findings"],
+      "depends_on": "SESSION_REGISTRY and DEFECT_LIBRARY index"
+    },
+    "phase_3_recommendations_and_workflow": {
+      "status": "Design spec",
+      "features": ["Recommendation registry integration", "Challenge Registry", "Session handoff export", "Certification history timeline"],
+      "depends_on": "RECOMMENDATION_REGISTRY population"
+    },
+    "phase_4_full_workbench": {
+      "status": "Design spec",
+      "features": ["Investigation notebook", "Time tracking", "Batch plan generation", "Dashboard with open challenges and blocked items"],
+      "depends_on": "All Phase 1-3 complete"
+    }
+  },
+
+  "current_state_summary": {
+    "questions_indexed_in_registry": "2,500 (QUESTION_REGISTRY_INDEX.md + MASTER_QUESTION_REGISTRY.md)",
+    "sessions_discoverable": "~200 across reports/ and reports/session_status/",
+    "defects_cataloged": "34 entries in DEFECT_LIBRARY.md",
+    "challenges_tracked": "0 (Challenge Registry not yet implemented)",
+    "recommendations_defined": "Schema only (RECOMMENDATION_REGISTRY.json not yet populated)",
+    "navigation_model_validated": "Yes — SESSION204_NAVIGATION_VALIDATION.json confirms all six relationship types walkable with real data",
+    "ready_for_implementation": "Phase 1 can begin once CANONICAL_REGISTRY is populated at end of S203"
+  },
+
+  "governance_notes": {
+    "read_only_by_default": "Workbench operates read-only. No content modification capability. Edits are launched as separate governed sessions.",
+    "backup_before_any_launch": "If Workbench launches a remediation session, that session follows BACKUP_PROTOCOL.md. Workbench itself never writes pack files.",
+    "governance_guard": "Applies to launched sessions, not to Workbench browsing. Searching and viewing are always permitted.",
+    "session_handoff_protocol": "Investigation export → session agent receives batch plan → agent executes ≤28 items/batch → agent reports back → Workbench re-verifies"
+  }
+}

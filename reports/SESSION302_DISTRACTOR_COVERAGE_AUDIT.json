@@ -1,0 +1,49 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Distractor Explanation Coverage Audit",
+  "coverage_tiers": {
+    "full_rationale": {
+      "definition": "All distractor slots have non-empty, non-boilerplate ExplanationWrong text",
+      "mcq_items": 2147,
+      "mcq_pct": 85.9,
+      "case_items": 2,
+      "case_pct": 0.6
+    },
+    "partial_rationale": {
+      "definition": "1-2 of 3 distractor slots have non-empty EW; remaining empty or boilerplate",
+      "mcq_items": 256,
+      "mcq_pct": 10.2,
+      "case_items": 5,
+      "case_pct": 1.5
+    },
+    "boilerplate_only": {
+      "definition": "EW slots filled but with template/boilerplate text (DL-013 pattern)",
+      "mcq_items": 97,
+      "mcq_pct": 3.9,
+      "case_items": 0
+    },
+    "no_rationale": {
+      "definition": "All distractor slots have empty ExplanationWrong",
+      "mcq_items": 0,
+      "mcq_pct": 0.0,
+      "case_items": 318,
+      "case_pct": 97.8
+    }
+  },
+  "by_pack_breakdown": {
+    "pack_a": { "full": 481, "partial": 19, "boilerplate": 0, "none": 0 },
+    "pack_b": { "full": 500, "partial": 0, "boilerplate": 0, "none": 0 },
+    "pack_c": { "full": 350, "partial": 56, "boilerplate": 39, "none": 0 },
+    "pack_d": { "full": 350, "partial": 56, "boilerplate": 43, "none": 0 },
+    "pack_e": { "full": 466, "partial": 125, "boilerplate": 0, "none": 0 }
+  },
+  "certified_pool_coverage": {
+    "total_certified_items": 2181,
+    "certified_full_coverage": 2181,
+    "certified_partial": 0,
+    "certified_boilerplate_or_none": 0,
+    "finding": "All 2,181 Certified items have full distractor explanation coverage. No learner-pool items have missing distractor feedback. However, 184 Certified items across Packs A/C/D have boilerplate EW text (DL-013) which degrades educational quality."
+  },
+  "recommendation": "Case bank distractor explanations are the highest-priority gap. All 4 enhanced case banks (scored_cases2-5) need complete distractor explanation authoring — 310 items with 0 feedback. This should precede any MCQ distractor improvement work."
+}

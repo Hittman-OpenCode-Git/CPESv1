@@ -1,0 +1,172 @@
+{
+  "session": "S362",
+  "title": "Expansion Program Economics Board — Gate/Aggregation",
+  "timestamp": "2026-07-28T00:00:00Z",
+  "status": "COMPLETE",
+  "mode": "READ-ONLY",
+  "predecessor_sessions": {
+    "S359": "Content Sustainability Analysis",
+    "S360": "Expansion Risk Analysis",
+    "S361": "Operational Sustainability Audit"
+  },
+  "decision": "SUSTAINABLE WITH RISKS",
+  "overall_score": 51,
+
+  "areas": {
+    "content_production_rate": {
+      "score": 55,
+      "weight": 25,
+      "weighted": 13.75,
+      "assessment": "Needs Attention",
+      "evidence": {
+        "items_per_session": "7.5 (plateaued since S864)",
+        "net_new_per_day": "5.6 items/day across 7-day measurement period",
+        "yield_rate": "100% — zero defects introduced across 113 content edits",
+        "s899_best": "20 items/session, zero defects — model proven but not sustained",
+        "readiness_score": "Stalled at 75 since S864, no improvement in 4+ waves",
+        "estimated_sessions_to_close_all_gaps": "~202 sessions (~100 days at 2 sessions/day)",
+        "bottleneck": "Content design capacity — label-change pipeline exhausted. Stem rewrites required.",
+        "strength": "Perfect yield rate and governance guard enforcement at scale",
+        "weakness": "Throughput too low to close cognitive/difficulty gaps within any reasonable timeframe"
+      }
+    },
+    "quality": {
+      "score": 38,
+      "weight": 25,
+      "weighted": 9.50,
+      "assessment": "At Risk",
+      "evidence": {
+        "cognitive_distribution": {
+          "analyze_evaluate_actual": "5.8% (148 items)",
+          "analyze_evaluate_target": "40% (1016 items)",
+          "gap": "-34.2 pp — catastrophic"
+        },
+        "difficulty_distribution": {
+          "difficult_plus_actual": "7.1% (178 items)",
+          "difficult_plus_target": "35% (889 items)",
+          "gap": "-27.9 pp"
+        },
+        "fd075_critical": "P1-FD-075: Certified item in active learner pool with ZERO renderable content — blank Stem, CC, EC, Choices. CRITICAL learner-safety defect.",
+        "dl021_certified": "95 Certified Pack E Section C items with empty distractor EW slots. Documentation conflict: CURRENT_BASELINES says OPEN, DEFECT_LIBRARY says RESOLVED. Status uncertain — learner safety can't be confirmed.",
+        "dl035_certified": "39 Certified Domain F items (28 Pack C + 11 Pack D) with ~117 empty distractor EW slots. Rule 6 deployed (prevention) but content remediation not yet executed.",
+        "dl031_inflation": "~500 items (19.7% of pool) with inflated difficulty labels — labeled Moderate, testing Remember/Understand",
+        "dl010_misassignment": "Open HIGH — misassigned choice explanations (P1-A-029 prototype). Full-pool semantic scan not completed.",
+        "dl009_citations": "Open HIGH — incorrect ASC authority citations (P1-A-012, P1-BC-065 area). Learners learn wrong authorities.",
+        "pack_e_explanation_quality": "Weakest pack: avg 192 chars EC, min 30 chars. Pack A avg 417 chars for comparison.",
+        "strength": "Structural completeness at 99.96% (1 broken item out of 2,540). Zero DL-008 in current certified pool.",
+        "weakness": "FD-075 blank item is a CRITICAL unaddressed risk. Cognitive distribution is catastrophically below target. Multiple HIGH-severity open defects degrade educational quality for learners in active certified pool."
+      }
+    },
+    "maturity_velocity": {
+      "score": 52,
+      "weight": 15,
+      "weighted": 7.80,
+      "assessment": "Needs Attention",
+      "evidence": {
+        "readiness_trajectory": "54 → 60 → 65 → 72 → 75 → STALLED (no improvement since S864)",
+        "defect_resolution_rate": "1.6 resolved/day",
+        "defect_detection_rate": "4.2 detected/day",
+        "net_defect_growth": "+2.6 open/day — detection outpaces resolution",
+        "governance_guard_expansion": "5 rules → 9 rules (all BLOCK). 51/51 tests PASS. Strong positive signal.",
+        "analyze_evaluate_growth_rate": "~5.9 items/session — need ~147 more sessions at this rate",
+        "label_change_pipeline": "EXHAUSTED — all non-DL-031 items already corrected",
+        "avg_passes_to_certification": "2.5 passes per item",
+        "strength": "Governance guard is expanding and hardening. Defect library is comprehensive. Certification integrity is maintained.",
+        "weakness": "Readiness plateau at 75 is the clearest signal of stalled maturity. Defect backlog growing. Future growth requires more expensive operations (stem rewrites, not label changes)."
+      }
+    },
+    "administration": {
+      "score": 58,
+      "weight": 15,
+      "weighted": 8.70,
+      "assessment": "Needs Attention",
+      "evidence": {
+        "governance_guard": "95/100 — 51/51 PASS, 9 BLOCK rules, zero regressions",
+        "master_question_registry": "CRITICALLY STALE — 36.6h old, 1,245 entries missing, no Certified column, references obsolete scored_cases*.js architecture",
+        "baselines_accuracy": "Pack D certified count: 392 (actual) vs 389 (CURRENT_BASELINES.md) — +3 discrepancy. index_updated.html hash: table has stale hash (586396F9) vs verification log (E0B7BBAA) — internal inconsistency.",
+        "documentation_conflicts": "DL-021 status: CURRENT_BASELINES.md §3 says 'OPEN — 95 Certified items affected.' DEFECT_LIBRARY.md says 'Resolved — 0 DL-021 remaining (S828).' Learner pool safety cannot be confirmed from documentation.",
+        "certification_provenance": "0 of 2,500 MCQ items in Packs A-D carry certification_session metadata. 98.4% of certified items have no machine-readable certification provenance.",
+        "revision_history_size": "25,581 lines — navigability concern",
+        "editorial_queue_tracking": "No mechanism to track entry-to-exit duration. 38 mentions, unknown stall duration.",
+        "strength": "Governance guard and test suite are excellent. REVISION_HISTORY.md is comprehensive.",
+        "weakness": "Registry is the single largest operational risk. Documentation conflicts undermine trust in reported metrics. Baselines are drifting from reality."
+      }
+    },
+    "automation": {
+      "score": 48,
+      "weight": 10,
+      "weighted": 4.80,
+      "assessment": "At Risk",
+      "evidence": {
+        "scripts_total": 252 (224 in root, 28 in subdirectories)",
+        "scripts_uncategorized": "119 of 224 (53.1%) — significant hygiene issue",
+        "automation_estimate": "~55% — governance guard and test suite automated; content authoring, calibration, documentation sync all manual",
+        "manual_intervention_points": 9,
+        "tooling_regressions": [
+          "DL-028: DL-013 remediation script creates empty distractor slots. Tooling fix documented, not implemented.",
+          "DL-029: Regex block-window scan produces ~75% false-positive rate on DL-008. Scan scripts need CC-position-aware parsing."
+        ],
+        "ci_cd": "None — no automated pipeline. Registry regeneration requires manual invocation. Baselines updates are manual.",
+        "strength": "Governance guard provides reliable automated pre-write enforcement. Test suite is automated.",
+        "weakness": "53% uncategorized scripts indicate operational sprawl. Tooling regressions (DL-028, DL-029) are open — automation can't be trusted to produce reliable data. No CI/CD pipeline."
+      }
+    },
+    "expansion_capacity": {
+      "score": 60,
+      "weight": 10,
+      "weighted": 6.00,
+      "assessment": "Needs Attention",
+      "evidence": {
+        "sections_below_50_pct_certified": 4,
+        "uncertified_sections": [
+          "Pack C Section EC: 19/75 (25.3%)",
+          "Pack C Section FC: 19/75 (25.3%)",
+          "Pack D Section ED: 19/75 (25.3%)",
+          "Pack D Section FD: 23/75 (30.7%)"
+        ],
+        "archived_clone_slots": "203 slots available for replacement (103 Pack C + 100 Pack D)",
+        "case_pool": "100% certified — 75 cases, 400 items across 3 case packs. Expansion-ready.",
+        "s899_model_proven": "20 items/session, zero defects, Analyze/Evaluate quality. Expansion model validated.",
+        "content_gap": "~200 items needed to close Sections E+F. At 5.6 items/day: ~36 days. At S899 throughput (20/session): ~10 sessions.",
+        "strength": "The S899 model works. Case bank is ready. 203 archived slots provide structural capacity for expansion.",
+        "weakness": "Throughput is the binding constraint. All 4 low-certified sections are DL-012 clone zones — the content to fill them doesn't exist yet. Requires sustained authoring commitment."
+      }
+    }
+  },
+
+  "critical_risks": [
+    "FD-075: P1-FD-075 is a Certified item in the active learner delivery pool with zero renderable content (missing Stem, CorrectChoice, ExplanationCorrect, Choices). Every learner who draws this item gets a blank/broken question. Needs immediate structural repair or pool removal.",
+    "DL-021 Status Conflict: CURRENT_BASELINES.md says 95 Certified Pack E Section C items have no distractor explanations (OPEN). DEFECT_LIBRARY.md says 0 DL-021 remaining (RESOLVED). Learner pool safety cannot be confirmed until this conflict is resolved — independent boundary-aware scan of Pack E Section C required.",
+    "DL-035: 39 Certified Domain F items in active learner pool with ~117 empty distractor ExplanationWrong slots. Rule 6 prevents new instances but existing items are unremediated.",
+    "DL-031 Systematic Difficulty Inflation: ~500 Certified items labeled Moderate that test Bloom's Remember/Understand. Distorts difficulty distribution metrics, analytics reporting, and any future adaptive testing.",
+    "MASTER_QUESTION_REGISTRY.md: 36.6 hours stale, 1,245 entries missing, references obsolete architecture. Any tool consuming this registry produces incorrect results. No Certified column exists — certification data is untracked in the official registry.",
+    "Cognitive Distribution Gap: 5.8% Analyze+Evaluate vs 40% CAQS target. Pool is dominated by low-Bloom's items (91% Understand+Apply). Not a learner-safety issue but a fundamental blueprint non-compliance gap."
+  ],
+
+  "conditions_for_sustainability": [
+    "1. IMMEDIATE (24h): Repair or downgrade FD-075 from Certified pool. A blank Certified item is the single most severe learner-facing defect.",
+    "2. IMMEDIATE (24h): Resolve DL-021 documentation conflict via independent boundary-aware scan of Pack E Section C. Establish authoritative status: are 95 Certified items missing distractor explanations or not?",
+    "3. IMMEDIATE (24h): Remediate DL-035 — author ~117 distractor explanations for 39 Certified Domain F items (S816-S818 already scheduled).",
+    "4. SHORT-TERM (1 week): Regenerate MASTER_QUESTION_REGISTRY.md — bring within 24h staleness threshold. Update to case_pack_* architecture. Add Certified column.",
+    "5. SHORT-TERM (1 week): Fix CURRENT_BASELINES.md §1 index_updated.html hash and Pack D certified count (+3 discrepancy). Resolve all baseline drift.",
+    "6. SHORT-TERM (1 week): Begin DL-031 difficulty recalibration for ~500 definition-match items. Label-only fix (~17 hours).",
+    "7. SHORT-TERM (1 week): Fix DL-029 scan methodology — migrate all scan scripts to CC-position-aware object-boundary parsing.",
+    "8. MEDIUM-TERM (2-4 weeks): Close Sections E+F certification gap via S900 Phase 2 program (10 batches of 20 items each). Target: 100% certified across all 30 sections.",
+    "9. ONGOING: Sustain authoring throughput at S899-proven rate (20 items/session) for Analyze/Evaluate content. Close the 866-item cognitive gap.",
+    "10. ONGOING: Categorize 119 uncategorized scripts. Archive deprecated tools. Fix DL-028 tooling regression."
+  ],
+
+  "sources": [
+    "S359 — Content Sustainability Analysis (items/day throughput, cognitive distribution, DL-031 exposure, pipeline plateau)",
+    "S360 — Expansion Risk Analysis (FD-075, DL-021, DL-035, bottleneck classification, non-certified inventory)",
+    "S361 — Operational Sustainability Audit (registry staleness, governance coverage, baseline drift, documentation conflicts, script hygiene)"
+  ],
+
+  "trajectory": {
+    "s358_score": 86,
+    "s358_note": "S358 was Operational Value Realization — scored the platform's existing value, not its expansion readiness",
+    "s362_score": 51,
+    "delta": -35,
+    "delta_explanation": "S358 measured what works NOW. S362 measures readiness to GROW. The 35-point gap reflects the distance between 'functional at current scale' and 'capable of sustained expansion at CAQS quality targets.' The platform delivers value (86/100) but its expansion economics are significantly constrained (51/100)."
+  }
+}

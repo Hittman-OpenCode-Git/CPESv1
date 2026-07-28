@@ -1,0 +1,152 @@
+{
+  "document": "SESSION351_GATE_NEG1_RESULTS",
+  "session": "S351",
+  "title": "Gate -1 Operational Validation — Board C",
+  "series": "350-Series — Framework v2 Validation Readiness",
+  "date": "2026-07-27",
+  "type": "Read-Only Gate Validation — No Content Modifications",
+  "authority": "S204 Gate -1 Validation (Board B); S204 Identity Block Report; S205 Infrastructure Verification (Board E)",
+  "purpose": "Validate PG-011 execution, PASS/FAIL/BLOCKED outcomes, and S320-prevention capability.",
+
+  "pg011_execution_summary": {
+    "source": "S204 Board B shadow-mode pilot — raw-file line-level grep methodology",
+    "execution_date": "2026-07-27",
+    "pg011_spec_authority": "SESSION321_GATE_NEG1_SPEC.json",
+    "methodology": "Line-level extraction from raw pack file content. No Function constructor, no brace-matcher. Avoids DL-020 and DL-029 class errors. S204 scope: steps 1-3 only (QID validation, CC validation, pack attribution). Steps 4-5 deferred.",
+    "gate_neg1_implementation_version": "Shadow-Mode Pilot — advisory only. Not yet active enforcement."
+  },
+
+  "pg011_step_execution": {
+    "step_1_qid_validation": {
+      "description": "Validate QID format matches pack-specific regex",
+      "status": "EXECUTED",
+      "results": {
+        "pack_a": {"regex": "^P1-[A-F]-\\d{3}$", "items": 500, "pass": 500, "fail": 0},
+        "pack_b": {"regex": "^P1B-[A-F]-\\d{3}$", "items": 500, "pass": 500, "fail": 0},
+        "pack_c": {"regex": "^P1-[A-F]C?-\\d{3}$", "items": 500, "pass": 500, "fail": 0},
+        "pack_d": {"regex": "^P1-[A-F]D-\\d{3}$", "items": 500, "pass": 500, "fail": 0},
+        "pack_e": {"regex": "^P1E-[A-F]-\\d{3}$", "items": 540, "pass": 500, "fail": 40, "fail_pattern": "P1-E-R\\d{2}"}
+      }
+    },
+    "step_2_cc_validation": {
+      "description": "Validate CorrectChoice field presence and single-character A-D format",
+      "status": "EXECUTED",
+      "results": {
+        "total_cc_extracted": 2539,
+        "cc_valid_format": 2539,
+        "cc_invalid_format": 0,
+        "cc_missing": 1,
+        "cc_missing_item": "P1-E-R33",
+        "cc_missing_severity": "CRITICAL — item is Certified in learner pool"
+      }
+    },
+    "step_3_pack_attribution": {
+      "description": "Cross-pack collision scan — verify no QID appears in multiple packs",
+      "status": "EXECUTED",
+      "results": {
+        "total_unique_qids": 2540,
+        "cross_pack_collisions": 0,
+        "verdict": "CLEAN — zero QID collisions. Pack A Section E (P1-E-) and Pack E (P1E-) are distinct namespaces."
+      }
+    },
+    "step_4_template_family": {
+      "description": "TemplateFamily classification via Jaccard stem similarity",
+      "status": "DEFERRED — requires AM-1 parse + Jaccard computation on all 2,540 stems. Shadow-mode pilot does not perform this.",
+      "s206_target": "Deploy via full PG-011 implementation in S206 Gate 2 + Gate 4 deployment."
+    },
+    "step_5_compound_key": {
+      "description": "Compound key resolution (QID|CC|EWP|TF|FP|VID)",
+      "status": "DEFERRED — requires TemplateFamily from step 4. Shadow-mode pilot cannot construct compound keys.",
+      "s206_target": "Deploy via full PG-011 implementation."
+    }
+  },
+
+  "pass_fail_blocked_outcomes": {
+    "aggregate": {
+      "total_items_scanned": 2540,
+      "identity_valid_full": 2500,
+      "identity_blocked": 40,
+      "identity_valid_pct": 98.43,
+      "identity_blocked_pct": 1.57
+    },
+    "by_verdict": {
+      "IDENTITY_VALID": {
+        "count": 2500,
+        "packs": ["pack_a (500)", "pack_b (500)", "pack_c (500)", "pack_d (500)", "pack_e (500 standard)"],
+        "include_certified": true,
+        "description": "Items that pass all 3 operational PG-011 steps. Eligible for downstream gates."
+      },
+      "IDENTITY_BLOCKED": {
+        "count": 40,
+        "packs": ["pack_e (40 P1-E-R* items)"],
+        "certified_blocked": 40,
+        "by_block_reason": {
+          "QID_INVALID_FORMAT_ONLY": 39,
+          "QID_INVALID_FORMAT_PLUS_CC_MISSING": 1
+        }
+      }
+    },
+    "per_pack_pass_fail": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 500,
+      "pack_d": 500,
+      "pack_e": 500
+    },
+    "certified_pool_impact": {
+      "certified_items_blocked": 40,
+      "certified_items_blocked_pct_of_pack_e": "7.41%",
+      "certified_items_blocked_pct_of_pool": "1.80% (of 2,221 Certified)",
+      "severity_of_blocking_false_positives": "97.5% of blocked items are structurally complete — regex update would clear 39 of 40 blocks"
+    }
+  },
+
+  "s320_prevention_capability": {
+    "description": "Assess whether current Gate -1 implementation would have prevented the S320 wrong-variant remediation failure.",
+    "s320_context": "S320 executed a DL-026 remediation script targeting Unprocessed canonical seeds in Pack C/D. QID-only targeting matched rotation-group variants instead of canonical seeds. Result: 0 correct fills, both packs restored from backups, zero certification progress.",
+    "prevention_assessment": {
+      "would_gate_neg1_block_s320_today": "YES — but with limitations.",
+      "operational_prevention": "Steps 1-3 prevent wrong-pack targeting and blank-CC items from entering remediation. These alone would NOT have prevented S320 because the S320 items had valid QID formats, valid CC, and correct pack attribution. Steps 4-5 (TemplateFamily + compound key) are required to distinguish canonical seeds from rotation variants.",
+      "governance_prevention": "Rules 9-10 (FM-001 through FM-008 forbidden methodologies) would have blocked QID-only targeting regardless of Gate -1 implementation status. Any S320-class remediation script must use compound-key targeting — this is HARD_BLOCK enforced.",
+      "full_prevention_when": "When steps 4-5 are deployed (S206/S207), S320-class failures are architecturally impossible. Until then, Rules 9-10 provide a governance-layer prevention that blocks QID-only targeting scripts."
+    },
+    "confidence": "HIGH — the governance layer (Rules 9-10) is sufficient to block S320-class scripts. The identity layer (steps 4-5) provides machine-enforced prevention on top of governance enforcement."
+  },
+
+  "gate_neg1_readiness_assessment": {
+    "operational_status": "PARTIALLY_OPERATIONAL — Steps 1-3 validated via shadow-mode pilot. Steps 4-5 deferred.",
+    "blocking_conditions": [
+      {
+        "condition": "Pack E regex update to accept P1-E-R\\d{2}",
+        "status": "RESOLVED in S205",
+        "impact": "Would clear 39 false-positive blocks"
+      },
+      {
+        "condition": "P1-E-R33 remediation (missing CC, Stem)",
+        "status": "OPEN — DL-034. Blocking 800-Series reactivation per S205.",
+        "impact": "Single remaining true-positive block"
+      },
+      {
+        "condition": "Steps 4-5 deployment (TemplateFamily + compound key)",
+        "status": "DEFERRED to S206/S207",
+        "impact": "Required for machine-enforced S320 prevention"
+      }
+    ],
+    "verdict": "READY for step 1-3 activation (post-regex update). NOT READY for step 4-5 activation (deferred to S206). Governance layer (Rules 9-10) provides interim S320 prevention."
+  },
+
+  "cross_references": {
+    "parent_s350": "reports/SESSION350_IDENTITY_SCORECARD.json",
+    "s204_inputs": [
+      "reports/SESSION204_GATE_NEG1_VALIDATION.json",
+      "reports/SESSION204_IDENTITY_BLOCK_REPORT.json"
+    ],
+    "s205_inputs": [
+      "reports/SESSION205_DEPLOYMENT_DECISION.md",
+      "reports/SESSION205_RULE7_DEPLOYMENT.json"
+    ],
+    "sibling_s351": [
+      "reports/session351/SESSION351_IDENTITY_STATE_VALIDATION.json"
+    ]
+  }
+}

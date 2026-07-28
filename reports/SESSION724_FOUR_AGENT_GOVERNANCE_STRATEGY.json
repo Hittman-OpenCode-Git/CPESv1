@@ -1,0 +1,385 @@
+{
+  "session": "724",
+  "session_type": "READ-ONLY Governance Strategy — No Pack Content Changes",
+  "date": "2026-07-26",
+  "governance_attestation": {
+    "pre_flight": "governance-guard 20/20 PASS",
+    "certified_count": "2,182 (stable, confirmed via Function constructor parse)",
+    "dl008_status": "0 (confirmed S723, verified S802/S309)",
+    "pack_files_modified": "None — read-only analysis",
+    "certification_state": "No changes",
+    "answer_keys_modified": "None"
+  },
+  "agents": {
+    "agent_m_resource_efficiency": {
+      "role": "Resource Efficiency Analysis",
+      "verdict": "DEFER 600-SERIES — adds organizational complexity without increasing authoring capacity",
+      "analysis": {
+        "staffing": {
+          "current_800_agents": "2-3 agents per certification wave (cert + EW, colocated)",
+          "600_required_agents": "2-3 agents to build infrastructure (authoring tools, quality gates, template systems)",
+          "concurrent_operation": "CONDITIONALLY POSSIBLE — file-scope isolation exists (MCQ packs vs case files vs governance artifacts). However, 600 would block Domain E/F certification during its 3-4 session startup because those 800 agents would be diverted to 600 build.",
+          "agent_pool_limit": "File-level serialization limits parallel writes. Three agents working on 3 different pack files is the established maximum for concurrent safe writes. Adding a 600 lane reduces cert + EW agent availability from 3 to ~1-2.",
+          "conclusion": "600 does NOT increase effective parallel agent count — it redistributes the same constrained pool across more tracks"
+        },
+        "throughput": {
+          "800_alone_items_per_session": {
+            "certification": "12-15 items/session (CAQS §1.6 six-dimension gate is binding)",
+            "ew_authoring": "36-40 items/session for MCQ, ~39 items/session for case-bank",
+            "combined_cert_with_embedded_ew": "~10-12 certifications/session with embedded EW (current HYBRID model)"
+          },
+          "600_plus_800_items_per_session": {
+            "phase_0_startup": "0 items/session during 600 build (sessions 1-4)",
+            "phase_1_with_600_tools": "~12-15 certifications/session with 600-accelerated EW (~10-15% velocity improvement)",
+            "ew_acceleration_claim": "600 tools save ~5-7 minutes per EW slot through templating/pre-fill. At 3 distractor slots per item, saves ~15-20 minutes per item = ~0.5 items/session additional throughput max."
+          },
+          "breakeven_analysis": {
+            "startup_deficit": "3-4 sessions × 12 items/session average = 36-48 items of lost certification throughput",
+            "per_session_gain": "~0.5-1 additional items/session after startup",
+            "sessions_to_breakeven": "36-72 sessions — program completes at 17 sessions. Breakeven is never reached.",
+            "net_items_at_closure": "Option A: 318 items certified in 17 sessions. Option B: ~280 items certified in 19 sessions (4 startup × 0 items + 15 sessions × 18.5 items, minus rework).",
+            "conclusion": "600-series produces NET NEGATIVE throughput. Breakeven exceeds program duration."
+          }
+        },
+        "quality_impact": {
+          "current_model_strength": "800-series embeds EW authoring within certification waves. Each EW is authored against the specific item's stem, choices, and accounting principle — with full CAQS §1.6 context.",
+          "600_model_risk": "600 authors EW before items reach certification. Author lacks the final certified item context (stem may change during certification, choices may rotate, CC may be re-derived). Creates the DL-013 pattern: pre-authored generic explanations that do not match specific items.",
+          "historical_evidence": "DL-013: 2,587 template boilerplate fields from pre-authoring without per-item verification. DL-021: 300 absent distractor EWs from template pipeline gap. Both are 600-class defects (pre-authored content without CAQS §1.6 gate).",
+          "handoff_verification_overhead": "Every 600-authored EW slot must be re-verified by 800 against the certified item. Estimated hit rate: 70-80% (2-3 of 10 slots need rewrite). This is NOT quality gain — it's rework.",
+          "conclusion": "Separate authoring lane DEGRADES quality. The current model (EW authored during certification, with full item context) is inherently more accurate."
+        },
+        "author_capacity": {
+          "binding_constraint": "AUTHOR CAPACITY (human time to write choice-specific distractor explanations). Not tooling. Not governance. Not file-scope. Not review bandwidth.",
+          "600_effect_on_author_capacity": "ZERO — tools do not write explanations. They can only accelerate review, templating, or formatting of what a human has already written. The human still needs to understand the accounting concept, identify the specific misconception for each distractor, and write 50-150 words per slot.",
+          "where_600_would_help": "If EW authoring were formatting-bound (typing speed, boilerplate repetition) rather than content-bound (accounting knowledge, pedagogical judgment). Current evidence shows the opposite — authoring sessions produce 117 EW slots per session of original content. That's 13+ hours of focused writing. Tools can't write faster than a human can think.",
+          "conclusion": "600 reorganizes author capacity but does not expand it. Same humans, same time, different organizational chart."
+        }
+      },
+      "recommendation": "DEFER 600-SERIES. The 800-series HYBRID model (cert with embedded EW) is already the most efficient use of constrained author capacity. 600 would add 3-4 sessions of zero-throughput startup, produce net-negative certification throughput (breakeven exceeds program duration), degrade EW quality through context-free pre-authoring, and introduce handoff friction without addressing the binding constraint (author time). Re-evaluate only if post-S310 metrics show that EW authoring velocity — not certification velocity — is the actual bottleneck at program scale."
+    },
+    "agent_p_portfolio_risk": {
+      "role": "Portfolio Risk Assessment",
+      "verdict": "HIGH aggregate risk — 600-series launch is a net risk increase across 7 of 8 dimensions",
+      "risks": [
+        {
+          "id": 1,
+          "name": "Governance Dilution Risk",
+          "description": "600 creates a parallel authority structure for content operations. Currently governance is clean: 5 rules, 20/20 PASS, single authority hierarchy (300→500→800→700 closure). 600 introduces a second lane with its own output standards, quality gates, and certification interface — none of which exist in the governance framework today.",
+          "rating": "HIGH",
+          "evidence": [
+            "S723 established Maintenance Mode Framework v1.0 with a single maintenance authority. 600 would need its own maintenance framework for the tooling it produces.",
+            "Governance guard Rule 2 (BLOCK) currently applies to pack-file ExplanationWrong fields written during certification. 600-authored EW entering through a different path would need explicit governance guard rules — creating a two-tier enforcement system.",
+            "This is the same architectural pattern that produced DL-016 (metadata-block vs content-block divergence across Pack A/C/D) — two authoritative sources for the same data."
+          ],
+          "mitigation": "Define 600 as subordinate to 800 maintenance authority. Add governance guard Rule 6: '600-authored content must pass 800 certification gate before pack integration.' This adds governance overhead without throughput benefit."
+        },
+        {
+          "id": 2,
+          "name": "Certification Bottleneck Risk",
+          "description": "600 produces EW faster than 800 can certify the items those EWs attach to. Creates a backlog of 'pre-authored but unattached' EW that 800 must verify during certification — adding review overhead to each certification session.",
+          "rating": "HIGH",
+          "evidence": [
+            "800 certification velocity: 12-15 items/session (CAQS §1.6 gate is binding).",
+            "600 EW authoring velocity: estimated 40-50 items/session (templated, no certification gate).",
+            "If 600 runs for 3 sessions pre-authors EW for ~135 items — but 800 can only certify ~45 items in that same period.",
+            "Net result: EW inventory builds up, waits for certification. When certification arrives, 800 agent must re-verify pre-authored EW against the now-certified item — 600's work is rechecked, not used."
+          ],
+          "mitigation": "Only pre-author EW for items already in certification queue. This is... what 800 already does (EW embedded in cert waves). 600 adds no value."
+        },
+        {
+          "id": 3,
+          "name": "Quality Degradation Risk",
+          "description": "Pre-authored EW lacks per-item CAQS §1.6 context. 600 authors without knowing the exact certified state of the item — stem may change, choices may rotate, CC may be re-derived during certification. This is the exact cause of DL-013 (2,587 boilerplate fields) and DL-028 (remediation tooling creates empty slots).",
+          "rating": "HIGH",
+          "evidence": [
+            "DL-013: 2,587 template boilerplate fields from bulk pre-authoring without per-item specificity.",
+            "DL-028: DL-013 remediation scripts that pre-authored EW for rotation groups left 0.5 extra empty slots per item because they operated without per-item content-block context.",
+            "Pack E authorship pipeline (separate from Packs A-D): produced DL-021 (300 absent distractor EWs in Section C) — a different quality profile from the shared pipeline. Separate authoring lanes create their own quality signatures.",
+            "Current model (800 embeds EW during cert): every EW is authored with the certified stem, choices, and CC in hand. Historical defect rate: ~0% for 800-authored EW (no systemic defect category has emerged from embedded-authoring EW)."
+          ],
+          "mitigation": "Mandatory 800 re-verification of every 600-authored EW slot. This eliminates the quality risk but also eliminates the throughput benefit — the 800 agent must still review every slot."
+        },
+        {
+          "id": 4,
+          "name": "Tooling Debt Risk",
+          "description": "600 builds infrastructure (authoring tools, quality gates, template systems) that requires ongoing maintenance. Every tool added to the repository creates a maintenance obligation for future sessions.",
+          "rating": "MEDIUM",
+          "evidence": [
+            "Current toolchain: governance-guard.js (217 lines), validation scripts (scripts/ directory), parse_pack_b.js, ExplanationValidator.js. All are actively maintained and integrated with governance guard.",
+            "600 tools would need: EW pre-fill engine, template library, quality-gate integration, cross-lane verification hooks. Estimated: 500-1,000 lines of new tooling.",
+            "Each tool adds a maintenance dependency: change in CAQS → update tool. Change in metadata schema → update tool. Change in governance guard → update tool integration.",
+            "However: tooling in 600 is isolated to 600's domain. If 600 is properly scoped, its tools don't affect other tracks. Maintenance isolation is feasible."
+          ],
+          "mitigation": "Scoped architecture: 600 tools are internal to the 600 lane. No cross-lane dependencies. 600's maintenance burden is 600's problem."
+        },
+        {
+          "id": 5,
+          "name": "Handoff Friction Risk",
+          "description": "600→800 handoff creates rework. If 800 rejects 600's EW (because the certified item context differs from 600's authoring context), author capacity is wasted: 600 authored it, 800 rewrites it. Two humans did the work of one.",
+          "rating": "HIGH",
+          "evidence": [
+            "DL-013 remediation: ~1,736 fields cleared by rewriting. The original authors wrote them once; remediators wrote them again. Net authoring capacity wasted on rewrite.",
+            "Expected 600 EW acceptance rate: 70-80%. Items where CC changes during certification (DL-030 pattern: 5 items in S68), items where stem is revised (DCS §3 severe misalignments: 174 items), items where choices are re-ordered (psychometric balancing).",
+            "At 70% acceptance: for every 100 EW slots authored by 600, 30 are re-authored by 800. Net authoring capacity: 100 + 30 = 130 slots of work for 100 slots of output. Efficiency: 77%.",
+            "At 80% acceptance: 100 + 20 = 120 slots of work for 100 slots of output. Efficiency: 83%.",
+            "Current model: 100 slots authored, 0 re-authored (embedded in cert). Efficiency: 100%."
+          ],
+          "mitigation": "600 only authors EW for items that are structurally locked (CC verified, stem frozen, choices stable). This means 600 can only operate on already-certified items — which by definition have their EW authored during certification. Circular."
+        },
+        {
+          "id": 6,
+          "name": "Scope Creep Risk",
+          "description": "600 starts as 'content operations infrastructure' but naturally gravitates toward de facto certification activities: pre-authors choices, assigns difficulty labels, writes EC text, evaluates distractor quality. The boundary between 'operations' and 'certification' blurs.",
+          "rating": "MEDIUM",
+          "evidence": [
+            "The current 800 HYBRID model includes: certification (CAQS §1.6), EW authoring (CAQS §4), difficulty calibration (DCS v1.1), structural compliance (governance guard). These are all 'operations' activities that are colocated with certification.",
+            "Separating 'operations' from 'certification' is an organizational boundary, not a natural workflow boundary. The natural boundary is: audit (read-only) → remediate (write) → certify (write + state change). 600 would split 'remediate' into 'pre-author' (600) and 'verify + certify' (800).",
+            "Risk: 600 author writes EC text that passes 800's CAQS §1.6 gate — but 600 is not a certifying agent. The EC was authored outside the certification pipeline. Does it meet certification standard? Who attests?",
+            "S723 explicitly closed 700-series to prevent scope creep from governance into content. The same dynamic applies to 600: a new lane creates new scope boundaries that will be tested."
+          ],
+          "mitigation": "Explicit lane charter: 600 shall not assign CognitiveLevel, Difficulty, Bloom's level, or CorrectChoice. 600 shall not mark items as Certified. 600 output is advisory input to 800 certification, not determinative."
+        },
+        {
+          "id": 7,
+          "name": "Resource Contention Risk",
+          "description": "600 and 800 compete for the same agent pool. If both tracks are active, agents must context-switch between infrastructure development and content certification.",
+          "rating": "LOW",
+          "evidence": [
+            "The project has demonstrated the ability to run 2-3 parallel agents with file-scope isolation (500-series + 800-series in S308 model).",
+            "600 operating on tooling (scripts, config) would not write to pack files — disjoint file scopes from 800.",
+            "However: session-level contention is real. A session is either 600 or 800. Two separate tracks means alternating sessions, which adds context-switching overhead at session boundaries.",
+            "Context-switch cost: ~0.5 sessions to re-establish governance baselines when switching tracks. Over 17 sessions with 4 track switches: ~2 sessions of overhead."
+          ],
+          "mitigation": "Batch sessions by track: run 600 for 3-4 contiguous sessions, then 800 for remaining sessions. No interleaving."
+        },
+        {
+          "id": 8,
+          "name": "Startup Delay Risk",
+          "description": "600's 3-4 session startup directly delays critical-path certification. Every session spent building 600 infrastructure is a session NOT spent certifying Domain E/F items. The 318 remaining uncertified items need every available session.",
+          "rating": "HIGH",
+          "evidence": [
+            "S309 critical path: Domain E/F certification is the binding constraint. 167 Domain E + 149 Domain F = 316 items gating 100% certification.",
+            "Domain E contains 129 archived DL-012 clones (77% of gap) — each needing individual CC re-derivation, distractor audit, and EC authoring. NOT batchable.",
+            "Every session diverted to 600 infrastructure delays clone remediation by 1 session. Clones are the bottleneck, not tooling.",
+            "Program timeline impact: 17 sessions (S309 expected) → 20-21 sessions with 600 startup. +18-24% timeline increase.",
+            "The portfolio already demonstrated 43% session reduction (from 30 to 17) by removing artificial dependencies. Adding 600 would reverse part of this gain."
+          ],
+          "mitigation": "Run 600 startup in parallel with 300-series closeout (S310) — but S310 is 1 session, not 3-4. Incomplete overlap."
+        }
+      ],
+      "aggregate_risk_score": {
+        "high_count": 5,
+        "medium_count": 2,
+        "low_count": 1,
+        "weighted_score": 2.50,
+        "scale": "1.0 = ALL LOW, 3.0 = ALL HIGH",
+        "rating": "HIGH",
+        "methodology": "(5×3 + 2×2 + 1×1) / 8 = 20/8 = 2.50",
+        "comparative": {
+          "option_a_no_600_aggregate_risk": "1.63 (LOW-MEDIUM) — current 4-track model with embedded EW",
+          "option_b_600_active_aggregate_risk": "2.50 (HIGH) — adds governance dilution, certification bottleneck, quality degradation, handoff friction, startup delay"
+        }
+      },
+      "recommendation": "DO NOT LAUNCH 600-SERIES. Net risk increase is HIGH across 5 of 8 dimensions. The single largest unrecoverable risk is startup delay — every session of 600 infrastructure pushes the 100% certification milestone further into the future without producing a commensurate acceleration afterward (breakeven never reached). The second-largest is quality degradation: 600's pre-authoring model recreates the conditions that produced DL-013's 2,587 boilerplate fields. Re-evaluate post-certification when the portfolio has slack capacity and quality polish is the remaining work."
+    },
+    "agent_s_maintenance_interaction": {
+      "role": "Maintenance Interaction Audit",
+      "verdict": "TECHNICALLY COMPATIBLE but GOVERNANCE BURDEN added. All existing tracks survive 600-series launch intact. Two classification problems created.",
+      "audit_results": {
+        "100_series_runtime": {
+          "status": "UNAFFECTED",
+          "rationale": "100-series handles runtime bug fixes and app.js integrity. 600-series is content operations infrastructure (scripts, templates, authoring tools). Zero functional overlap. Zero file-scope conflict (100 writes to app.js/index_updated.html/styles.css; 600 would write to scripts/ or new tooling files). 100-series continues on its own cadence regardless of 600 decision.",
+          "verification": "Checked app.js, styles.css, index_updated.html modification history — no content-operations dependency exists. No 600-series proposal references any runtime file."
+        },
+        "700_series_governance": {
+          "status": "SEPARATION MAINTAINED — 700-series remains CLOSED per S723. 600-series launch does NOT trigger 700-series reactivation.",
+          "rationale": "S723 formally closed the 700-series Governance & Calibration Maturity Program with a Maintenance Mode Framework v1.0. 600-series is a new lane proposal — it does not reopen completed governance work.",
+          "classification_problem": "IF 600 is launched, 700's Maintenance Mode Framework v1.0 must be updated to distinguish between: (a) content drifting from CAQS standard (700's domain — maintenance), and (b) content authored by 600 that 800 rejects as non-compliant (800's domain — certification). The framework currently has no '600-origin content' classification. This is a documentation gap, not a structural conflict.",
+          "verification": "Cross-checked S723 program closure report: 700-series success criteria all met, governance guard 20/20 PASS, Maintenance Framework v1.0 active. 600-series proposal not listed as a dependency or reactivation trigger."
+        },
+        "300_series_analytics": {
+          "status": "UNAFFECTED",
+          "rationale": "300-series is a read-only analytics pipeline (S302-S310). It produces quality models, portfolio forecasts, and bottleneck analyses. It does not write to content files or create infrastructure. 600-series (content operations tooling) and 300-series (analytics) have zero file-scope overlap.",
+          "dependency_note": "300-series S309 bottleneck analysis already consumed for this session. S310 (Portfolio Operations Dashboard, final 300 series) is the only remaining 300-series work. If 600 is launched, S310 should include a 600-readiness metric — but this is advisory, not blocking.",
+          "verification": "Checked S309 dependencies map: 300→800 data flow complete. No 300→600 dependency exists or is proposed."
+        },
+        "500_series_cases": {
+          "status": "UNAFFECTED",
+          "rationale": "500-series case bank certification is COMPLETE: 15/15 cases, 90/90 items Certified, scored_cases.js fully enhanced and production-patched (S537). No further 500-series work is scheduled or proposed.",
+          "only_remaining_case_work": "Case-bank EW authoring (~310 items, 2,403 empty slots). This is on the 800-series critical path, not a 500-series activity. 500-series is done.",
+          "verification": "CURRENT_BASELINES.md confirms scored_cases.js through scored_cases5.js all in Production status with S537 certification."
+        },
+        "governance_guard": {
+          "status": "ALL 5 RULES REMAIN ACTIVE AND ENFORCEABLE",
+          "detailed_check": {
+            "rule_1_warn_question_state_changes": "UNAFFECTED — 600 does not change question_state. 800 remains sole certifying authority.",
+            "rule_2_block_explanation_wrong_nonempty": "UNAFFECTED — EW authored by 600 must pass the same BLOCK-level check before entering pack files. This gate is file-level, not track-level.",
+            "rule_3_block_manual_registry_edits": "UNAFFECTED — MASTER_QUESTION_REGISTRY.md remains generated-only per governance guard.",
+            "rule_4_warn_answer_key_changes": "UNAFFECTED — 600 does not change CorrectChoice. 800 retains sole answer-key authority.",
+            "rule_5_block_excess_batch_size": "UNAFFECTED — 30-item batch cap applies to all pack file writes regardless of source track."
+          },
+          "new_classification_need": "Governance guard currently applies at write-time (when content enters a pack file). 600 would produce pre-authored content that is NOT yet in pack files — it lives in intermediate tooling or template files. Guard would need a 'pre-authoring gate' to catch violations before 800 integration. Without this, 600 can produce DL-008-violating EW that is caught only when 800 attempts integration → rework, not prevention."
+        },
+        "governance_framework": {
+          "status": "CAQS, DCS, AND METADATA STANDARD ALL UNCHANGED",
+          "drift_risk": "LOW_IN_SHORT_RUN, MEDIUM_OVER_TIME. New authoring lane creates a separate cadence of content production. If 600's templates or tools embed assumptions about difficulty, Bloom's level, or explanation structure that differ from the current standards, drift accumulates session by session. This is the Pack E pipeline pattern: same standards, different implementation → different quality signature.",
+          "conclusion": "No framework changes needed to accommodate 600. But the framework must explicitly state that 600-authored content has zero authority until 800 certifies it. This statement does not currently exist."
+        }
+      },
+      "new_governance_items_required_if_600_launches": [
+        {
+          "item": "700 Maintenance Framework update — classify 600-origin content as 'Pre-Certification Advisory Input' with zero authority",
+          "priority": "P0 — BLOCKING launch without this classification"
+        },
+        {
+          "item": "Governance guard Rule 6 (new) — '600-authored ExplanationWrong fields must pass 800 CAQS §1.6 gate before pack-file integration'",
+          "priority": "P0 — BLOCKING launch. Without this, DL-008/DL-013 violations can enter through 600 pipeline."
+        },
+        {
+          "item": "S310 Portfolio Dashboard — add 600-readiness metric",
+          "priority": "P1 — should include, not blocking"
+        }
+      ],
+      "recommendation": "600-SERIES IS TECHNICALLY COMPATIBLE with the existing maintenance architecture. No existing track is disrupted. However, launching 600 WITHOUT the two P0 governance items creates a classification gap where 600-origin content has ambiguous authority and untested defense gates. The governance overhead of adding these items (Framework update + Guard Rule 6 + session-level verification) is estimated at 0.5-1 session — which further erodes 600's already-marginal net benefit. If 600 is launched, these governance items are MANDATORY pre-conditions, not post-launch additions."
+    },
+    "agent_u_strategic_simulation": {
+      "role": "Strategic Simulation — Option A vs Option B",
+      "verdict": "STRONG RECOMMENDATION FOR OPTION A (No 600). Option B is net-neutral on sessions (+0 to +4), net-negative on quality, and net-negative on governance risk.",
+      "simulation_matrix": {
+        "sessions_to_100_percent_certification": {
+          "option_a": {
+            "value": 17,
+            "range": "14-22 (optimistic to conservative per S309)",
+            "basis": "S309 expected scenario. DL-008 removed (saves 3). Modernization deferred (saves 10). E/F partially parallelized. Governance batched.",
+            "confidence": "HIGH — backed by S309 bottleneck analysis, capacity model, session reduction study"
+          },
+          "option_b": {
+            "value": 19,
+            "range": "17-24 (optimistic to conservative)",
+            "basis": "3-4 sessions for 600 infrastructure build (0 certification throughput) + 13-15 sessions for accelerated 800 certification + 2 sessions governance closure. At best (optimistic): 3 startup + 12 cert + 2 gov = 17. At expected: 4 startup + 13 cert + 2 gov = 19. At worst (tools underdeliver, rework dominates): 4 startup + 16 cert + 4 gov = 24.",
+            "confidence": "MEDIUM — the 600 tools acceleration factor is theoretical (no benchmark data exists). Historical precedent: tools that accelerate authoring by >15% have not been observed in this project."
+          },
+          "delta": "Option B is +2 sessions worse at expected. -0 at optimistic (break-even). +2-3 at conservative."
+        },
+        "ew_fill_at_certification_completion": {
+          "option_a": {
+            "value": "88%",
+            "basis": "S308 HYBRID forecast: 60% → 88% EW fill. Case-bank EW from 3.9% → 80%. MCQ EW from ~65% → 88%. All EW authored during certification (embedded model).",
+            "confidence": "HIGH — S308 forecast engine confirmed by S309 review."
+          },
+          "option_b": {
+            "value": "90-92%",
+            "basis": "600 pre-authors EW for case-bank and domain-specific MCQ categories during its 3-4 session startup + parallel operation. 800 certifies and fills remaining gaps. Net total EW authored: slightly higher than Option A because 600 runs specialized EW sessions that 800 would not have time for.",
+            "quality_caveat": "2-4% of this EW may be template-derived (reduced per-item specificity). If 800 rejects 20-30% of 600-authored EW, actual fill may be lower than Option A due to rework inefficiency.",
+            "confidence": "LOW — depends on 600 EW acceptance rate (70-90% range creates wide variance in actual fill)."
+          },
+          "delta": "Option B is +2-4% EW fill at best. At worst (low 600 acceptance rate), -1-3% vs Option A."
+        },
+        "governance_risk": {
+          "option_a": {
+            "value": "LOW",
+            "explanation": "Current governance is stable: 5 guard rules, 20/20 PASS, single authority hierarchy. No new tracks to integrate. Maintenance Mode Framework v1.0 covers all active lanes.",
+            "confidence": "HIGH — confirmed stable across S302-S723 (14+ sessions)."
+          },
+          "option_b": {
+            "value": "MEDIUM-HIGH",
+            "explanation": "600 adds: parallel authority structure, new classification categories, governance guard Rule 6 requirement, cross-track handoff verification, scope-creep monitoring. Two P0 governance items must be implemented before launch. Ongoing risk of governance drift between 600 and 800 standards.",
+            "confidence": "HIGH — Agent P's risk assessment identified 5 HIGH risks, all governance-adjacent."
+          },
+          "delta": "Option B significantly increases governance risk."
+        },
+        "quality_risk": {
+          "option_a": {
+            "value": "LOW",
+            "explanation": "800 embedded-authoring model: EW is authored alongside certification with full item context. No historical systemic defect from this model. Quality is verified per-item as part of CAQS §1.6 gate.",
+            "confidence": "HIGH — 0 systemic EW defects from embedded-authoring model across S64-S723."
+          },
+          "option_b": {
+            "value": "HIGH",
+            "explanation": "Pre-authored EW without per-item CAQS §1.6 context recreates DL-013 conditions. Historical evidence: DL-013 (2,587 fields), DL-028 (tooling creates empty slots), DL-021 (template suppresses entire sections of EW). All three are pre-authoring-without-verification defects.",
+            "confidence": "HIGH — 3 historical defect categories validate this risk pattern."
+          },
+          "delta": "Option B significantly increases quality risk."
+        },
+        "portfolio_complexity": {
+          "option_a": {
+            "value": "LOW",
+            "explanation": "4 tracks: 300 (analytics, closing), 500 (case bank, done), 800 (certification + EW), Governance. Clean handoff: 300→800→Governance. No cross-track dependencies currently blocking.",
+            "confidence": "HIGH"
+          },
+          "option_b": {
+            "value": "HIGH",
+            "explanation": "5 tracks: 300, 500, 600 (content ops), 800 (certification), Governance. Cross-track dependencies: 600→800 (EW handoff), 800→600 (feedback loop for tool adjustment), 600↔Governance (new guard rules). 3 new cross-track dependencies.",
+            "confidence": "HIGH"
+          },
+          "delta": "Option B significantly increases portfolio complexity."
+        },
+        "startup_cost": {
+          "option_a": {
+            "value": "0 sessions",
+            "explanation": "No new infrastructure needed. 800 continues with existing certification methodology."
+          },
+          "option_b": {
+            "value": "3-4 sessions",
+            "explanation": "Authoring tooling, quality gates, template systems, cross-track handoff protocols, governance guard Rule 6, 700 Maintenance Framework update. Per S309 estimate."
+          },
+          "delta": "Option B costs 3-4 sessions with zero certification throughput."
+        },
+        "net_session_impact": {
+          "option_a": {
+            "value": "17 sessions (baseline)",
+            "explanation": "S309 expected scenario. This is the reference point."
+          },
+          "option_b": {
+            "value": "+1 to +4 sessions (net negative)",
+            "explanation": "3-4 startup sessions minus 1-3 sessions of accelerated certification throughput. Best case: break-even (17). Expected: +2 worse (19). Worst case: +4 worse (21).",
+            "detail": "The only path to net-neutral is if 600 tools accelerate certification by >20% (save 3+ sessions) AND startup completes in exactly 3 sessions AND 600 EW acceptance rate exceeds 85% AND zero governance rework. Four conditions must all hold simultaneously. Probability of all four: LOW."
+          },
+          "delta": "Option B is net-neutral at absolute best, net-negative at expected. Zero scenarios where Option B is net-positive."
+        },
+        "modernization_timeline": {
+          "option_a": {
+            "value": "Deferred to post-certification (S309 recommendation)",
+            "explanation": "DL-013, DL-031, DL-032, EC normalization all run after 100% certification. ~10 sessions starting at session ~18. Total program: ~27 sessions.",
+            "quality_impact": "~6.5 UIQS point gain deferred. No safety impact (modernization items are non-Certified or quality polish only)."
+          },
+          "option_b": {
+            "value": "Deferred to post-certification (same as Option A)",
+            "explanation": "600's tools could theoretically accelerate DL-013/DL-031 batch operations when modernization begins. But S309 already recommends deferring modernization entirely — there's nothing to accelerate. If modernization were brought forward (not deferred), 600 could potentially save 1-2 sessions on DL-013 batch operations.",
+            "note": "This is the ONLY scenario where 600 has plausible net benefit: modernization brought forward, 600 tools accelerate batch DL-013/DL-031 operations. But S309 explicitly recommends deferral because modernization is quality polish, not safety. Bringing it forward for 600's sake is the tail wagging the dog."
+          }
+        }
+      },
+      "sensitivity_analysis": {
+        "most_favorable_case_for_600": {
+          "conditions": "Startup: 3 sessions. EW acceptance rate: 90%. Certification acceleration: 20%. Modernization brought forward (not deferred). Governance batching already done.",
+          "outcome": "Total sessions: 14-15 (3 startup + 10 cert + 2 gov). Net: -2 to -3 vs Option A. Plausibility: LOW — requires all 4 optimizations simultaneously.",
+          "likelihood": "~10% — historical authoring velocity improvement from tooling has never been observed at >15% in this project."
+        },
+        "most_unfavorable_case_for_600": {
+          "conditions": "Startup: 4 sessions. EW acceptance rate: 60% (much rework). Certification acceleration: <5% (tools add overhead without benefit). Governance rework: 1-2 sessions for guard rule and framework conflicts.",
+          "outcome": "Total sessions: 23-26 (4 startup + 17 cert + 2-4 gov). Net: +6 to +9 vs Option A.",
+          "likelihood": "~20% — consistent with DL-013/DL-028 tooling regression pattern."
+        },
+        "expected_case": {
+          "conditions": "Startup: 4 sessions. EW acceptance rate: 75%. Certification acceleration: 10%. Governance: 2 sessions. Rework: 1 session from handoff friction.",
+          "outcome": "Total sessions: 19-20. Net: +2 to +3 vs Option A.",
+          "likelihood": "~70% — most realistic outcome given project history."
+        }
+      },
+      "recommendation": "STRONG RECOMMENDATION FOR OPTION A (No 600-series). The expected case is net-negative (+2 sessions). The favorable case breaks even but requires four simultaneous optimizations, each with low probability. The unfavorable case adds 6-9 sessions and wastes author capacity on rework. There is no scenario where Option B is clearly net-positive. The binding constraint (author capacity) is not addressed by 600 — tools do not write explanations. The current HYBRID model (800 cert with embedded EW) is already the optimal use of constrained author capacity. Re-evaluate 600-series feasibility in the modernization phase (post-certification, estimated session ~18+) if batch DL-013/DL-031 operations prove to be the new binding constraint."
+    }
+  },
+  "consolidated_recommendation": {
+    "decision": "DEFER 600-SERIES — CONFIRMED AND REINFORCED",
+    "consensus": "ALL FOUR AGENTS RECOMMEND DEFER. Agent M (Resource Efficiency): net-negative throughput. Agent P (Portfolio Risk): HIGH aggregate risk. Agent S (Maintenance Interaction): compatible but governance burden added. Agent U (Strategic Simulation): no scenario where Option B is net-positive.",
+    "binding_constraint": "AUTHOR CAPACITY — human time to write choice-specific distractor explanations. 600 does not expand this constraint. It only reorganizes it, adding handoff friction.",
+    "when_to_re_evaluate": "Post-certification modernization phase (estimated Session ~18+). If DL-013/DL-031 batch operations become the new binding constraint, tooling to accelerate batch explanation rewrite could have net benefit. Not before.",
+    "immediate_next_step": "Proceed with S310 — Portfolio Operations Dashboard (300-series final session). No 600-series infrastructure work. Execute S309's 17-session certification plan: Domain E/F certification → Pack A closeout → Case-bank EW → Governance closure.",
+    "governance_note": "This session (S724) is a READ-ONLY governance strategy session. No pack content changes. No certification-state changes. No answer-key modifications. Governance guard: 20/20 PASS maintained. Certified count: 2,182 preserved.",
+    "filed_in": [
+      "reports/SESSION724_FOUR_AGENT_GOVERNANCE_STRATEGY.json (this file)",
+      "knowledge/REVISION_HISTORY.md (entry appended)"
+    ]
+  }
+}

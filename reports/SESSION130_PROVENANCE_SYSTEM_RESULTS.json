@@ -1,0 +1,557 @@
+{
+  "session": "S130",
+  "title": "Recommendation Provenance System — Full Audit & Design",
+  "generatedAt": "2026-07-25T00:00:00.000Z",
+  "filesAudited": [
+    "may-core.js (5998+ lines)",
+    "may-learner-state.js (1501 lines)"
+  ],
+  "currentRecommendationFunctions": [
+    {
+      "function": "_generateNextBestStep",
+      "line": 1081,
+      "subsystem": "S123",
+      "recommendationType": "next_best_step",
+      "storesProvenance": true,
+      "provenanceProxy": "_appendNextBestStep (line 1207)",
+      "provenanceFields": [
+        "type", "subType", "topic", "section", "text", "evidence"
+      ],
+      "missingProvenanceFields": [
+        "SourceEvidence (full observation set)",
+        "SourceSessions (contributing sessions)",
+        "TriggeringRule (function + condition)",
+        "ObservationChain (evidence → recommendation path)",
+        "TopicScope (multi-topic coverage)",
+        "RecommendationTimestamp (deduplicated from deliveredAt)"
+      ],
+      "notes": "Provenance recorded in _appendNextBestStep wrapper via May._recordRecommendation → MayLearnerState.recordRecommendationDelivery. The generate function returns a structured object but provenance is bolted on at display time."
+    },
+    {
+      "function": "_suggestFocusAreas",
+      "line": 1379,
+      "subsystem": "S125",
+      "recommendationType": "focus_area",
+      "storesProvenance": true,
+      "provenanceProxy": "_appendFocusAreas (line 1508)",
+      "provenanceFields": [
+        "type", "subType (priority)", "topic", "section", "text", "evidence"
+      ],
+      "missingProvenanceFields": [
+        "SourceEvidence (full observation set with accuracy/trends/misconceptions)",
+        "SourceSessions",
+        "TriggeringRule (which condition triggered the focus area)",
+        "ObservationChain",
+        "TopicScope",
+        "RecommendationTimestamp"
+      ],
+      "notes": "One _recordRecommendation call per suggestion (up to 3). Evidence object is passed but is minimal — accuracy/attempts/pattern fields only, not the full observation."
+    },
+    {
+      "function": "_generateStudyStrategy",
+      "line": 3223,
+      "subsystem": "S128",
+      "recommendationType": "study_strategy",
+      "storesProvenance": true,
+      "provenanceProxy": "_showStudyStrategy (line 3366)",
+      "provenanceFields": [
+        "type", "subType", "topic", "text"
+      ],
+      "missingProvenanceFields": [
+        "SourceEvidence (evidence object is empty {})",
+        "SourceSessions",
+        "TriggeringRule",
+        "ObservationChain",
+        "TopicScope",
+        "RecommendationTimestamp",
+        "Section"
+      ],
+      "notes": "Only weakTopics are recorded — strongTopics and pattern-based recommendations are NOT recorded. Evidence passed is empty {}. Section is null."
+    },
+    {
+      "function": "_generateWeeklyDigest",
+      "line": 3056,
+      "subsystem": "S127",
+      "recommendationType": "weekly_digest",
+      "storesProvenance": true,
+      "provenanceProxy": "_showWeeklyDigest (line 3342)",
+      "provenanceFields": [
+        "type", "subType", "topic", "text"
+      ],
+      "missingProvenanceFields": [
+        "SourceEvidence (evidence object is empty {})",
+        "SourceSessions",
+        "TriggeringRule",
+        "ObservationChain",
+        "TopicScope",
+        "RecommendationTimestamp",
+        "Section"
+      ],
+      "notes": "Only weakTopics are recorded. The digest's strongest-topics, misconceptions, learning-momentum, and weekly-focus sections are not provenance-tracked. Evidence is empty {}."
+    },
+    {
+      "function": "_generateSessionRecap",
+      "line": 2941,
+      "subsystem": "S126",
+      "recommendationType": "session_recap",
+      "storesProvenance": false,
+      "provenanceFields": [],
+      "missingProvenanceFields": [
+        "ALL — no provenance recorded whatsoever",
+        "ProvenanceID",
+        "SourceEvidence",
+        "SourceSessions",
+        "TriggeringRule",
+        "ObservationChain",
+        "RecommendationTimestamp",
+        "OutcomeHistory",
+        "TopicScope",
+        "RecommendationType"
+      ],
+      "notes": "CRITICAL GAP: _generateSessionRecap returns a recommended next step (lines 3041-3048) that is displayed to the learner but NEVER recorded via _recordRecommendation. The recap is generated inside _summarizeSession (line 3664) and spoken directly."
+    },
+    {
+      "function": "_recommendNextAction",
+      "line": 338,
+      "subsystem": "S117",
+      "recommendationType": "next_action",
+      "storesProvenance": false,
+      "provenanceFields": [],
+      "missingProvenanceFields": [
+        "ALL — no provenance recorded whatsoever"
+      ],
+      "notes": "CRITICAL GAP: Called in _buildWelcomeOverview (line 307) when a returning student is selected. Returns a string. Never recorded. This is the first recommendation a returning learner sees."
+    },
+    {
+      "function": "preExamBriefing",
+      "line": 845,
+      "subsystem": "S088",
+      "recommendationType": "pre_exam_briefing",
+      "storesProvenance": false,
+      "provenanceFields": [],
+      "missingProvenanceFields": [
+        "ALL — no provenance recorded whatsoever"
+      ],
+      "notes": "CRITICAL GAP: Pre-exam briefing includes topic review suggestions based on weakness clusters (lines 879-888). These review-topic recommendations are spoken directly with no provenance recording."
+    },
+    {
+      "function": "_recommendNext",
+      "line": 3746,
+      "subsystem": "S089D",
+      "recommendationType": "qid_recommendation",
+      "storesProvenance": false,
+      "provenanceProxy": "MayLearnerState.logRecommendation (line 3810) — SEPARATE SYSTEM",
+      "provenanceFields": [
+        "sourceTopic", "sourceDomain", "reasonType", "recommendedQids",
+        "packPool", "excludedByDefect", "excludedByContested",
+        "activeSessionId", "activeExamMode"
+      ],
+      "missingProvenanceFields": [
+        "RecommendationTimestamp (timestamps exist but not in unified format)",
+        "OutcomeHistory (not linked to recommendationOutcomes)",
+        "SourceEvidence (no accuracy/trend evidence stored with recommendation)",
+        "ObservationChain",
+        "TriggeringRule"
+      ],
+      "notes": "Uses logRecommendation instead of recordRecommendationDelivery. These two systems are NOT unified. recommendationLog stores QID-level data; recommendationOutcomes stores coaching-path data. No cross-referencing."
+    },
+    {
+      "function": "_recommendSimilar",
+      "line": 3711,
+      "subsystem": "S089D",
+      "recommendationType": "similar_question",
+      "storesProvenance": false,
+      "provenanceProxy": "MayLearnerState.logRecommendation (line 3733) — SEPARATE SYSTEM",
+      "provenanceFields": [
+        "sourceTopic", "sourceDomain", "reasonType", "recommendedQids",
+        "packPool", "excludedByDefect", "excludedByContested",
+        "activeSessionId", "activeExamMode"
+      ],
+      "missingProvenanceFields": [
+        "ALL outcome/provenance fields from recommendationOutcomes system",
+        "SourceEvidence",
+        "ObservationChain",
+        "TriggeringRule",
+        "RecommendationTimestamp (unified)"
+      ],
+      "notes": "Uses logRecommendation. No outcome tracking. No linkage to recommendationOutcomes."
+    },
+    {
+      "function": "_generateRecoverySet",
+      "line": 3824,
+      "subsystem": "S089D",
+      "recommendationType": "recovery_set",
+      "storesProvenance": false,
+      "provenanceProxy": "MayLearnerState.logRecommendation (line 3908) — SEPARATE SYSTEM",
+      "provenanceFields": [
+        "sourceTopic", "sourceDomain", "reasonType", "recommendedQids",
+        "packPool", "excludedByDefect", "excludedByContested",
+        "activeSessionId", "activeExamMode"
+      ],
+      "missingProvenanceFields": [
+        "ALL outcome/provenance fields from recommendationOutcomes system",
+        "SourceEvidence (weakness clusters used to build the set are lost)",
+        "ObservationChain",
+        "TriggeringRule",
+        "RecommendationTimestamp (unified)"
+      ],
+      "notes": "Uses logRecommendation. Evidence about which clusters/priorities drove each allocation is lost — only the aggregated sourceTopic string is stored."
+    }
+  ],
+  "currentRecommendationStorage": {
+    "system1_recommendationOutcomes": {
+      "description": "Coaching-path recommendations (next_best_step, focus_area, weekly_digest, study_strategy). Stored via recordRecommendationDelivery().",
+      "schema": {
+        "recommendationId": { "type": "string", "description": "Unique ID: 'rec-' + timestamp(36) + '-' + existingCount" },
+        "deliveredAt": { "type": "ISO8601 string", "description": "When the recommendation was generated/spoken" },
+        "type": { "type": "string enum", "description": "next_best_step | focus_area | weekly_digest | study_strategy" },
+        "subType": { "type": "string|null", "description": "E.g. targeted_practice, high, weekly_focus, priority_topic" },
+        "topic": { "type": "string|null", "description": "Single topic name (no multi-topic support)" },
+        "section": { "type": "string|null", "description": "CMA section letter A-F" },
+        "recommendationText": { "type": "string (max 500)", "description": "Truncated recommendation text" },
+        "sourceSessionId": { "type": "string|null", "description": "Active session when recommendation was generated" },
+        "evidenceAtDelivery": { "type": "object", "description": "Minimal evidence snapshot — varies by recommendation type" },
+        "status": { "type": "string enum", "description": "delivered | acted_on | ignored | superseded" },
+        "outcome": { "type": "string|null", "description": "positive | neutral | insufficient | contradictory" },
+        "outcomeEvidence": { "type": "object|null", "description": "Populated when classifyPendingOutcomes() runs" },
+        "outcomeClassifiedAt": { "type": "ISO8601 string|null", "description": "When outcome was classified" }
+      },
+      "existingProvenanceFields": [
+        "recommendationId (ProvenanceID equivalent)",
+        "deliveredAt (RecommendationTimestamp)",
+        "type/subType (partial RecommendationType)",
+        "topic/section (partial TopicScope — single topic only)",
+        "evidenceAtDelivery (partial SourceEvidence)",
+        "sourceSessionId (partial SourceSessions — single session only)",
+        "outcome/outcomeEvidence/outcomeClassifiedAt (partial OutcomeHistory)"
+      ],
+      "missingProvenanceFields": [
+        "SourceEvidence: evidenceAtDelivery is minimal and inconsistent across types. For next_best_step it has accuracy/attempts/isCorrect/errorCategory. For focus_area it has evidence from the suggestion. For weekly_digest/study_strategy it is empty {}.",
+        "SourceSessions: Only sourceSessionId (single session). No array of all contributing sessions. No way to trace which practice sessions informed this recommendation.",
+        "TriggeringRule: No field recording which function + which condition + which threshold generated this. E.g., 'suggestFocusAreas → persistent_weakness → accuracy < 60% && attempts >= 5'.",
+        "ObservationChain: No chain from raw data → observations → recommendation. The _identifyLearningPatterns observations that fed into the recommendation are not stored.",
+        "TopicScope: Only single topic. _suggestFocusAreas can recommend adjacent weak topics, but only the primary topic is stored.",
+        "provenanceStore: No dedicated provenance container. Fields are scattered across the recommendation entry."
+      ]
+    },
+    "system2_recommendationLog": {
+      "description": "QID-level recommendation events (recommendSimilar, recommendNext, recovery set). Stored via logRecommendation().",
+      "schema": {
+        "timestamp": { "type": "ISO8601 string", "description": "When the recommendation was generated" },
+        "sourceTopic": { "type": "string|null", "description": "Topic that triggered the recommendation" },
+        "sourceDomain": { "type": "string|null", "description": "Section" },
+        "reasonType": { "type": "string", "description": "similar_question | persistent_weak | declining_or_unstable | recovery_set" },
+        "recommendedQids": { "type": "string[]", "description": "QIDs recommended" },
+        "packPool": { "type": "string[]", "description": "Packs searched" },
+        "excludedByDefect": { "type": "string[]", "description": "QIDs excluded by defect manifest" },
+        "excludedByContested": { "type": "string[]", "description": "QIDs excluded by learner challenge" },
+        "excludedByState": { "type": "string[]", "description": "QIDs excluded by state rules" },
+        "activeSessionId": { "type": "string|null", "description": "Active session" },
+        "activeExamMode": { "type": "boolean", "description": "Whether exam mode was active" }
+      },
+      "existingProvenanceFields": [
+        "timestamp (RecommendationTimestamp)",
+        "sourceTopic/sourceDomain (partial TopicScope)",
+        "reasonType (partial TriggeringRule)",
+        "activeSessionId (partial SourceSessions)",
+        "recommendedQids (what was recommended)",
+        "excludedByDefect/excludedByContested/excludedByState (gate compliance audit trail)"
+      ],
+      "missingProvenanceFields": [
+        "ProvenanceID: No unique identifier — entries are anonymous array items",
+        "SourceEvidence: No accuracy/trend data stored. The weakness clusters used to drive _recommendNext are not recorded.",
+        "ObservationChain: No trace from weakness clusters → recommendation",
+        "OutcomeHistory: recommendationLog has NO outcome tracking. No way to know if the learner followed the QID recommendation or whether it helped.",
+        "TopicScope: Single sourceTopic string, no multi-topic support",
+        "Cross-reference to recommendationOutcomes: No bridge between the two systems"
+      ]
+    },
+    "unifiedGaps": [
+      "Two separate storage systems with no cross-referencing: recommendationOutcomes (coaching) and recommendationLog (QID-level)",
+      "No single view of all recommendations across both systems",
+      "No shared ProvenanceID format",
+      "No outcome tracking for QID-level recommendations",
+      "No QID-level detail for coaching recommendations",
+      "Evidence fidelity varies dramatically: empty {} for weekly_digest/study_strategy vs. rich evidence for next_best_step"
+    ]
+  },
+  "provenanceDesign": {
+    "designNotes": "The provenance record below is designed to be a unified superset. Every recommendation — regardless of type — would use this single schema. Existing fields from both systems are mapped into it. New fields fill the gaps.",
+    "provenanceRecord": {
+      "fields": [
+        {
+          "name": "ProvenanceID",
+          "type": "string",
+          "description": "Universally unique identifier: 'prov-' + timestamp(36) + '-' + hash(topic+type+session). Replaces recommendationId (recommendationOutcomes) and adds IDs to recommendationLog entries which currently have none.",
+          "source": "NEW — unifies recommendationId from Outcomes; adds to Log"
+        },
+        {
+          "name": "RecommendationType",
+          "type": "string enum",
+          "description": "next_best_step | focus_area | study_strategy | weekly_digest | session_recap | pre_exam_briefing | similar_question | qid_recommendation | recovery_set | next_action",
+          "source": "EXTENDED — adds session_recap, pre_exam_briefing, next_action, qid_recommendation, similar_question, recovery_set"
+        },
+        {
+          "name": "RecommendationSubType",
+          "type": "string|null",
+          "description": "Granular classification: targeted_practice, formula_review, concept_review, high/medium/low (for focus_area), weekly_focus, priority_topic, persistent_weak, declining_or_unstable, similar_question, recovery_set",
+          "source": "EXISTING — mapped from subType/reasonType"
+        },
+        {
+          "name": "RecommendationTimestamp",
+          "type": "ISO8601 string",
+          "description": "When the recommendation was generated and delivered to the learner",
+          "source": "EXISTING — mapped from deliveredAt (Outcomes) / timestamp (Log)"
+        },
+        {
+          "name": "RecommendationText",
+          "type": "string",
+          "description": "Full text of the recommendation as shown to the learner (not truncated to 500 chars)",
+          "source": "EXTENDED — remove 500-char truncation from recommendationText"
+        },
+        {
+          "name": "SourceEvidence",
+          "type": "array of objects",
+          "description": "Complete evidence objects that triggered this recommendation. Each object has: { category, description, data (accuracy, attempts, trends, patterns, clusters), sourceSessionIds }.",
+          "source": "NEW — supersedes the inconsistent evidenceAtDelivery field. Aggregates evidence from: topicProgress, trend data, misconception patterns, weakness clusters, difficulty distributions, hint usage trends, confidence calibration."
+        },
+        {
+          "name": "SourceSessions",
+          "type": "string[]",
+          "description": "All session IDs whose data contributed evidence to this recommendation. Currently only sourceSessionId (single session) is stored.",
+          "source": "NEW — extends sourceSessionId/activeSessionId to an array"
+        },
+        {
+          "name": "TriggeringRule",
+          "type": "object",
+          "description": "Which function, which condition, and which threshold generated this recommendation. E.g., { function: '_suggestFocusAreas', condition: 'persistent_weakness', threshold: 'accuracy < 60% && attempts >= 5', decisiveFactors: ['accuracy=42%', 'attempts=7'] }",
+          "source": "NEW — no equivalent in either existing system"
+        },
+        {
+          "name": "ObservationChain",
+          "type": "array of objects",
+          "description": "Ordered chain from raw observations → recommendation. Each link: { observationId, category, evidence, recommendationID }. Captures the full reasoning path: e.g., topicProgress[topic].accuracy=42 → persistent_weakness observation → focus_area recommendation.",
+          "source": "NEW — _identifyLearningPatterns results are not currently stored"
+        },
+        {
+          "name": "TopicScope",
+          "type": "array of objects",
+          "description": "All topics this recommendation covers, with per-topic evidence. Each: { topic, section, accuracy, attempts, priority, reason }. Currently only single topic is stored.",
+          "source": "EXTENDED — replaces single topic/section with multi-topic array"
+        },
+        {
+          "name": "RecommendedQids",
+          "type": "string[]|null",
+          "description": "QIDs recommended (for QID-level recommendations). Null for coaching/text recommendations.",
+          "source": "EXISTING — from recommendationLog, added to coaching recommendations when applicable"
+        },
+        {
+          "name": "GateCompliance",
+          "type": "object",
+          "description": "Audit trail of gate checks: { defectManifestBlocked: string[], contestedExcluded: string[], nonCertifiedQids: string[], packPool: string[], gateCheckedAt: ISO8601 }",
+          "source": "EXTENDED — unifies excludedByDefect/Contested from Log, adds gate timestamp"
+        },
+        {
+          "name": "OutcomeHistory",
+          "type": "array of objects",
+          "description": "What happened after delivery. Each entry: { timestamp, event (delivered|acted_on|ignored|superseded|classified), outcome (positive|neutral|insufficient|contradictory|null), evidence (accuracy delta, trend direction, attempt count), classifiedAt }",
+          "source": "EXTENDED — enriches existing status/outcome/outcomeEvidence fields with a timeline"
+        },
+        {
+          "name": "LearnerFollowed",
+          "type": "boolean|null",
+          "description": "Whether the learner took action consistent with the recommendation. null = unknown. Determined by: did they start a session on the recommended topic? Did they review the recommended QID?",
+          "source": "NEW — no equivalent in either system. Requires session-intent matching."
+        },
+        {
+          "name": "FollowUpEvidence",
+          "type": "object|null",
+          "description": "Evidence gathered after the recommendation: { sessionsCompleted: N, topicAccuracyAfter: N, trendAfter: string, attemptsAfter: N }. Populated asynchronously when new session data arrives.",
+          "source": "NEW — extends outcomeEvidence with structured before/after comparison"
+        },
+        {
+          "name": "ProvenanceModelVersion",
+          "type": "string",
+          "description": "Model version of the provenance system itself. E.g., 'S130-1.0'. Enables forward/backward compatibility of provenance records.",
+          "source": "NEW"
+        },
+        {
+          "name": "ParentRecommendationId",
+          "type": "string|null",
+          "description": "If this recommendation supersedes or refines an earlier one, link to its ProvenanceID. Enables recommendation lineage tracking (e.g., focus_area refined after more sessions).",
+          "source": "NEW"
+        }
+      ],
+      "unifiedStorage": {
+        "fieldName": "provenanceRecords",
+        "location": "MayLearnerState._default() schema",
+        "cap": "500 entries (rolling window)",
+        "migration": "recommendationOutcomes and recommendationLog remain as legacy fields; provenanceRecords becomes the single source of truth for all new recommendations. A migration script can backfill provenanceRecords from existing recommendationOutcomes + recommendationLog."
+      }
+    }
+  },
+  "provenanceCoverage": {
+    "totalRecommendationFunctions": 10,
+    "functionsWithFullProvenance": 4,
+    "functionsWithPartialProvenance": 3,
+    "functionsWithNoProvenance": 3,
+    "coveragePercent": 40,
+    "detail": {
+      "fullProvenance": [
+        "_generateNextBestStep (via _appendNextBestStep → recordRecommendationDelivery)",
+        "_suggestFocusAreas (via _appendFocusAreas → recordRecommendationDelivery)",
+        "_generateStudyStrategy (via _showStudyStrategy → recordRecommendationDelivery, partial — only weak topics)",
+        "_generateWeeklyDigest (via _showWeeklyDigest → recordRecommendationDelivery, partial — only weak topics)"
+      ],
+      "partialProvenance": [
+        "_recommendNext (via logRecommendation — separate system, no outcome tracking, no unified ID)",
+        "_recommendSimilar (via logRecommendation — separate system, no outcome tracking)",
+        "_generateRecoverySet (via logRecommendation — separate system, no outcome tracking)"
+      ],
+      "noProvenance": [
+        "_generateSessionRecap — returns recommended next step but never recorded",
+        "_recommendNextAction — first recommendation a returning learner sees, never recorded",
+        "preExamBriefing — review topic suggestions based on weakness clusters, never recorded"
+      ]
+    },
+    "storageUnification": {
+      "systemsInUse": 2,
+      "systems": [
+        "recommendationOutcomes (recordRecommendationDelivery) — coaching-path recommendations",
+        "recommendationLog (logRecommendation) — QID-level recommendations"
+      ],
+      "areUnified": false,
+      "crossReferencesExist": false,
+      "unifiedViewPossible": false,
+      "note": "These two systems operate independently. recommendationLog has no outcome tracking. recommendationOutcomes has no QID-level detail. No single query can show all recommendations with outcomes."
+    }
+  },
+  "implementationPlan": {
+    "step1": {
+      "title": "Unify the two storage systems into a single provenanceRecords array",
+      "description": "Create a new provenanceRecords field in MayLearnerState._default(). All recommendations — coaching and QID-level — write to this single array using the unified ProvenanceRecord schema.",
+      "file": "may-learner-state.js",
+      "changes": [
+        "Add provenanceRecords: [] to _default() schema",
+        "Create recordProvenance(provenanceRecord) method as single entry point",
+        "Deprecate recordRecommendationDelivery() — redirect to recordProvenance()",
+        "Deprecate logRecommendation() — redirect to recordProvenance()"
+      ],
+      "estimatedLines": 50
+    },
+    "step2": {
+      "title": "Add ProvenanceID generation to all recommendation-generating functions",
+      "description": "Every function that produces a recommendation generates a ProvenanceID before delivering it. The ID format: 'prov-' + Date.now().toString(36) + '-' + crypto.randomUUID().slice(0,8).",
+      "file": "may-core.js",
+      "changes": [
+        "Add _generateProvenanceID() helper to May",
+        "Wire into _recordRecommendation (line 3538) to auto-generate IDs",
+        "Wire into logRecommendation calls in _recommendNext, _recommendSimilar, _generateRecoverySet"
+      ],
+      "estimatedLines": 15
+    },
+    "step3": {
+      "title": "Add provenance recording to the three functions with NO provenance",
+      "description": "_generateSessionRecap, _recommendNextAction, and preExamBriefing currently generate recommendations with zero provenance.",
+      "file": "may-core.js",
+      "changes": [
+        "_generateSessionRecap (line 2941): After computing the recommended next step (lines 3041-3048), call _recordRecommendation with type='session_recap' including the full topicEntries as SourceEvidence.",
+        "_recommendNextAction (line 338): Call _recordRecommendation with type='next_action' including clusters and sessionCount as SourceEvidence.",
+        "preExamBriefing (line 845): After computing review topics from weakness clusters (lines 879-888), call _recordRecommendation for each review topic with type='pre_exam_briefing'."
+      ],
+      "estimatedLines": 40
+    },
+    "step4": {
+      "title": "Enrich evidence fidelity — populate SourceEvidence, ObservationChain, TriggeringRule",
+      "description": "Currently evidenceAtDelivery is minimal or empty. Each recommendation function must pass the full observation set.",
+      "file": "may-core.js",
+      "changes": [
+        "_generateStudyStrategy: Pass full weakTopics, strongTopics, patterns arrays as evidence (not empty {})",
+        "_generateWeeklyDigest: Pass full topicEntries, patterns, firstPct/lastPct as evidence (not empty {})",
+        "_generateNextBestStep: Already has rich evidence; add ObservationChain linking _identifyLearningPatterns results",
+        "_suggestFocusAreas: Add TriggeringRule recording which condition (persistent_weakness, calculation_miss, misconception, topic_strength, improving) triggered each suggestion",
+        "All functions: Add ObservationChain showing the data → observation → recommendation path"
+      ],
+      "estimatedLines": 80
+    },
+    "step5": {
+      "title": "Add SourceSessions tracking — record all contributing sessions",
+      "description": "Currently only sourceSessionId (single session) is stored. Change to an array of all sessions whose data informed the recommendation.",
+      "file": "may-core.js + may-learner-state.js",
+      "changes": [
+        "In _recordRecommendation: Accept sourceSessions array parameter",
+        "In each recommendation function: Collect session IDs from the data used. E.g., _generateWeeklyDigest uses lookbackSessions — pass their IDs.",
+        "In recordProvenance: Store sourceSessions array",
+        "Update recordRecommendationDelivery to accept sourceSessions"
+      ],
+      "estimatedLines": 30
+    },
+    "step6": {
+      "title": "Implement LearnerFollowed detection",
+      "description": "After each new session completes, check if the learner acted on prior recommendations. Did they practice the recommended topic? Did they review the recommended QID?",
+      "file": "may-learner-state.js",
+      "changes": [
+        "Add detectRecommendationFollowThrough() method",
+        "Call from handoffCompletedSession() after classifyPendingOutcomes()",
+        "Match: recommended topic → session topic coverage; recommended QID → session attempts",
+        "Set LearnerFollowed = true/false based on evidence"
+      ],
+      "estimatedLines": 50
+    },
+    "step7": {
+      "title": "Add provenance viewer to May UI — 'Why this recommendation?' toggle",
+      "description": "Parallel to the existing 'Why this snapshot?' debug toggle for readiness (line 4828). Add a provenance toggle in the chat view that shows the evidence chain behind each recommendation.",
+      "file": "may-core.js (renderView)",
+      "changes": [
+        "Add _renderRecommendationProvenance() method",
+        "When a recommendation is displayed in chat, attach a 'Why this?' expandable section",
+        "Show: SourceEvidence summary, TriggeringRule, contributing sessions, outcome if known"
+      ],
+      "estimatedLines": 40
+    },
+    "step8": {
+      "title": "Backfill provenance from existing recommendationOutcomes + recommendationLog",
+      "description": "One-time migration script that reads existing recommendationOutcomes and recommendationLog entries and creates provenanceRecords entries with as much data as can be inferred.",
+      "file": "scripts/migrate_to_provenance.js (new)",
+      "changes": [
+        "Read existing recommendationOutcomes → map to ProvenanceRecord schema",
+        "Read existing recommendationLog → map to ProvenanceRecord schema",
+        "Cross-reference by timestamp and topic where possible",
+        "Generate ProvenanceIDs for all entries",
+        "Mark backfilled entries with ProvenanceModelVersion: 'S130-backfill'"
+      ],
+      "estimatedLines": 100
+    }
+  },
+  "provenanceCoverageAfterImplementation": {
+    "totalRecommendationFunctions": 10,
+    "withProvenance": 10,
+    "withoutProvenance": 0,
+    "coveragePercent": 100,
+    "unifiedStorageSystems": 1,
+    "crossReferencedRecommendations": true,
+    "note": "After full implementation, all 10 recommendation-generating functions write to the unified provenanceRecords array. The two legacy systems (recommendationOutcomes, recommendationLog) are deprecated but preserved for backward compatibility."
+  },
+  "riskRegister": [
+    {
+      "risk": "Breaking existing tests that rely on recommendationOutcomes or recommendationLog schema",
+      "mitigation": "Keep legacy fields; add provenanceRecords alongside them. Deprecate, don't delete. Update test assertions to check both old and new fields.",
+      "severity": "medium"
+    },
+    {
+      "risk": "Storage quota — each provenance record is larger than current entries",
+      "mitigation": "Cap provenanceRecords at 500 entries (vs current 200). Use rolling window. Compress SourceEvidence to summary statistics for older entries.",
+      "severity": "low"
+    },
+    {
+      "risk": "Inconsistent data between legacy and new provenance fields during transition",
+      "mitigation": "recordProvenance() writes to both old and new fields during a transition period. Run reconciliation checks.",
+      "severity": "medium"
+    },
+    {
+      "risk": "Performance impact of ObservationChain construction on every recommendation",
+      "mitigation": "ObservationChain is built from in-memory data already loaded for the recommendation; no additional I/O. Estimated <1ms overhead.",
+      "severity": "low"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "scenario": "Certification-only — no standalone EW remediation",
+  "effort": "21 sessions (800-series Waves 1-5 + 500-series + governance)",
+  "expectedGains": {
+    "uiqsGain": "+9.5 (68.8 → 78.3)",
+    "certifiedCount": "2,181 → 2,500 (100%)",
+    "ewFillRate": "~75% (gains only from EW authored during certification)",
+    "p0Resolved": "~40 (all P0 except uncertified case-bank ones with still-insufficient EW)"
+  },
+  "limitations": [
+    "Case-bank EW gap persists (EW not part of certification pipeline for already-certified cases)",
+    "Certified items with existing EW<30% remain unfixed (EM-only is deferred)",
+    "DL-008 lingers until Wave 3 if Wave 1 not prioritized"
+  ],
+  "verdict": "Certification-only achieves 100% certification fastest but leaves instructional gaps. Best paired with EW."
+}

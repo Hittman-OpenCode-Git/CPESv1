@@ -1,0 +1,39 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Distractor Portfolio Census",
+  "scope": {
+    "mcq_packs": { "pack_a": 500, "pack_b": 500, "pack_c": 500, "pack_d": 500, "pack_e": 500, "total_mcq": 2500 },
+    "case_files": { "scored_cases": 15, "scored_cases2": 15, "scored_cases3": 15, "scored_cases4": 15, "scored_cases5": 15, "total_cases": 75 },
+    "case_items": { "scored_cases": 15, "scored_cases2": 78, "scored_cases3": 79, "scored_cases4": 78, "scored_cases5": 75, "total_case_items": 325 },
+    "total_items_analyzed": 2825
+  },
+  "distractor_volume": {
+    "total_distractor_slots": 7898,
+    "total_explanationwrong_filled": 7059,
+    "total_explanationwrong_empty": 839,
+    "total_explanationwrong_boilerplate": 184,
+    "overall_fill_rate_pct": 89.4
+  },
+  "by_source": {
+    "pack_a": { "total": 1500, "filled": 1500, "empty": 0, "fill_rate": 100.0, "boilerplate": 15, "notes": "All EW slots filled. 15 boilerplate from Pack A Section A DL-013 residuals." },
+    "pack_b": { "total": 1500, "filled": 1500, "empty": 0, "fill_rate": 100.0, "boilerplate": 0, "notes": "Gold standard — 100% filled, 0 boilerplate. Independent authoring pipeline." },
+    "pack_c": { "total": 1500, "filled": 1276, "empty": 224, "fill_rate": 85.1, "boilerplate": 78, "notes": "224 empty slots concentrated in Sections E-F (archived + unprocessed). 78 DL-013 boilerplate fields." },
+    "pack_d": { "total": 1498, "filled": 1275, "empty": 223, "fill_rate": 85.1, "boilerplate": 91, "notes": "223 empty slots + 91 boilerplate. Worst boilerplate concentration (91 fields)." },
+    "pack_e": { "total": 1500, "filled": 1500, "empty": 0, "fill_rate": 100.0, "boilerplate": 0, "notes": "100% filled, 0 boilerplate. Different authorship pipeline." },
+    "scored_cases": { "total": 90, "filled": 8, "empty": 82, "fill_rate": 8.9, "boilerplate": 0, "notes": "Nearly all EW slots empty in legacy case bank." },
+    "scored_cases2": { "total": 78, "filled": 0, "empty": 78, "fill_rate": 0.0, "notes": "NO distractor explanations — all slots empty." },
+    "scored_cases3": { "total": 79, "filled": 0, "empty": 79, "fill_rate": 0.0, "notes": "NO distractor explanations." },
+    "scored_cases4": { "total": 78, "filled": 0, "empty": 78, "fill_rate": 0.0, "notes": "NO distractor explanations." },
+    "scored_cases5": { "total": 75, "filled": 0, "empty": 75, "fill_rate": 0.0, "notes": "NO distractor explanations." }
+  },
+  "by_section": {
+    "A": { "total": 1183, "filled": 1125, "empty": 58, "fill_rate": 95.1 },
+    "B": { "total": 1568, "filled": 1500, "empty": 68, "fill_rate": 95.7 },
+    "C": { "total": 1572, "filled": 1505, "empty": 67, "fill_rate": 95.7 },
+    "D": { "total": 1175, "filled": 1125, "empty": 50, "fill_rate": 95.7 },
+    "E": { "total": 1545, "filled": 1135, "empty": 410, "fill_rate": 73.5 },
+    "F": { "total": 855, "filled": 669, "empty": 186, "fill_rate": 78.2 }
+  },
+  "case_bank_critical_finding": "Enhanced case banks (scored_cases2-5) have ZERO distractor explanations across 310 item slots. Learners who select wrong answers during case study practice receive no feedback. This is the single largest distractor quality gap in the portfolio — higher priority than any MCQ distractor issue."
+}

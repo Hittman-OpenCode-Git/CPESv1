@@ -1,0 +1,67 @@
+{
+  "session": "515",
+  "agent": "E",
+  "decision_basis": "CAQS §1.6 six-dimension review, following MIGRATED_CASE_BASE_B certification precedent (75/75 Certified despite D3/D4/D6 quality gaps)",
+  "certification_rules_applied": [
+    "D1 FAIL → automatic HOLD_BACK (wrong answer/content is non-negotiable)",
+    "D4: Absence of citation is not a blocker per CAQS criteria — no fabricated citations found",
+    "D6: CognitiveLevel missing is systematic — following MIGRATED_CASE_BASE_B precedent of certifying without it",
+    "D2/D3/D5: Quality gaps documented for S516 uplift, not certification-blocking per precedent"
+  ],
+  "case_basedecisions": [
+    {
+      "CaseID": "CASE-C1",
+      "title": "Revenue Recognition and Lease Accounting Review",
+      "section": "A",
+      "items": [
+        {"ItemID": "CASE-C1-Q1", "decision": "CERTIFY", "notes": "ASC 606 allocation concept correct"},
+        {"ItemID": "CASE-C1-Q2", "decision": "CERTIFY", "notes": "Finance lease classification correct"},
+        {"ItemID": "CASE-C1-Q3", "decision": "CERTIFY", "notes": "Numeric: 120000/24×6=30000 verified"},
+        {"ItemID": "CASE-C1-Q4", "decision": "HOLD_BACK", "reason": "D1 FAIL — choice text says 'has an alternative use' but ASC 606 requires NO alternative use. Factually wrong learner-facing text."},
+        {"ItemID": "CASE-C1-Q5", "decision": "CERTIFY", "notes": "Transaction price — Step 3 correct"}
+      ],
+      "case_level_decision": "UNPROCESSED — Q4 holdback prevents full case certification",
+      "items_certified": 4,
+      "items_heldback": 1
+    },
+    {"CaseID": "CASE-C2", "title": "Budgeting and Forecasting for a Seasonal Retailer", "section": "B", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C3", "title": "Performance Evaluation Across Divisions", "section": "C", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C4", "title": "Cost Management at Driftwood Furniture", "section": "D", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C5", "title": "Internal Controls at Emberton Enterprises", "section": "E", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C6", "title": "Technology and Analytics at Fairhaven Corp", "section": "F", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C7", "title": "Financial Statement Issues at Gladstone", "section": "A", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C8", "title": "Budgeting Concepts at Hearthstone", "section": "B", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C9", "title": "Variance Analysis at Ironvale", "section": "C", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C10", "title": "Cost Behavior at Junction Textiles", "section": "D", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C11", "title": "COSO Framework at Kestrel Industries", "section": "E", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C12", "title": "Data Analytics at Larkspur Inc", "section": "F", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C13", "title": "Cash Flows and Valuation at Meridian", "section": "A", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C14", "title": "Standard Costing at Nightingale", "section": "C", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"},
+    {"CaseID": "CASE-C15", "title": "Ethics and Controls at Oakhurst", "section": "E", "items_certified": 5, "items_heldback": 0, "case_level_decision": "CERTIFIED"}
+  ],
+  "totals": {
+    "items_reviewed": 75,
+    "items_certified": 74,
+    "items_held_back": 1,
+    "cases_reviewed": 15,
+    "cases_certified": 14,
+    "cases_held_back": 1,
+    "holdback_details": {
+      "CASE-C1-Q4": "D1 FAIL — multi-select choice text says 'The asset has an alternative use' but ASC 606-10-25-27(c) requires NO alternative use. The choice text teaches the opposite of GAAP. Fix: change choice text to 'The asset does NOT have an alternative use and the entity has an enforceable right to payment for performance completed to date.'"
+    }
+  },
+  "quality_gaps_documented_for_s516": [
+    "XF-003: Zero citations to authoritative standards across all 75 items — S516 citation uplift wave needed",
+    "D3: 38 items lack distractor rationale (36 select + 2 multi) — S516 distractor enhancement needed",
+    "D5: 30 Q4/Q5 items are generic, not case-grounded — S516 case-realism enhancement needed",
+    "D6: All 75 items missing CognitiveLevel field — S516 metadata completion needed",
+    "DL-032: Uniform Moderate/DifficultyScore=3 across all items — S516 per-item difficulty calibration needed",
+    "Case-level metadata: All 15 cases need Industry, CompanyName, Stakeholder, BusinessFunction fields — S516 metadata completion"
+  ],
+  "cbq2_a3_decision": {
+    "items_reviewed": 5,
+    "items_certified": 0,
+    "items_held_back": 5,
+    "reason": "All 5 items have single-line/fragmentary explanations insufficient for their cognitive levels (Apply/Analyze/Evaluate). No citations, no distractor rationale, no per-item Difficulty. Needs explanation uplift session before certification."
+  }
+}

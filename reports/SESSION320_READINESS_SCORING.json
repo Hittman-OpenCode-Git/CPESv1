@@ -1,0 +1,392 @@
+{
+  "session": "S320",
+  "type": "Readiness Scoring",
+  "timestamp": "2026-07-27T03:26:39.237Z",
+  "summary": {
+    "READY": 4,
+    "MINOR_FIX": 0,
+    "HOLD": 34
+  },
+  "items": [
+    {
+      "qid": "P1-EC-004",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": true,
+      "ecLen": 175,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-008",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 184,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-014",
+      "pack": "C",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": true,
+      "ecLen": 146,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-020",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 436,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-021",
+      "pack": "C",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": false,
+      "ecLen": 453,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "C",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": false,
+      "ecLen": 386,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "C",
+      "cc": "D",
+      "emptyEW": "C",
+      "missingCOSO": false,
+      "ecLen": 431,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 438,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-025",
+      "pack": "C",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": true,
+      "ecLen": 155,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-028",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": true,
+      "ecLen": 155,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "C",
+      "cc": "D",
+      "emptyEW": "C",
+      "missingCOSO": true,
+      "ecLen": 168,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-040",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 410,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-041",
+      "pack": "C",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": true,
+      "ecLen": 144,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-049",
+      "pack": "C",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": true,
+      "ecLen": 154,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-052",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": true,
+      "ecLen": 148,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-060",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 325,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-061",
+      "pack": "C",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": true,
+      "ecLen": 135,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-066",
+      "pack": "C",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": true,
+      "ecLen": 175,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-EC-072",
+      "pack": "C",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": true,
+      "ecLen": 153,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-001",
+      "pack": "D",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": true,
+      "ecLen": 237,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-010",
+      "pack": "D",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": false,
+      "ecLen": 208,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-014",
+      "pack": "D",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": false,
+      "ecLen": 225,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "D",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 152,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "D",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": true,
+      "ecLen": 154,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-028",
+      "pack": "D",
+      "cc": "A",
+      "emptyEW": null,
+      "missingCOSO": false,
+      "ecLen": 345,
+      "remediatedEW": "A",
+      "classification": "READY"
+    },
+    {
+      "qid": "P1-ED-035",
+      "pack": "D",
+      "cc": "D",
+      "emptyEW": "C",
+      "missingCOSO": false,
+      "ecLen": 394,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-036",
+      "pack": "D",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 144,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-042",
+      "pack": "D",
+      "cc": "C",
+      "emptyEW": null,
+      "missingCOSO": false,
+      "ecLen": 304,
+      "remediatedEW": "A,C",
+      "classification": "READY"
+    },
+    {
+      "qid": "P1-ED-046",
+      "pack": "D",
+      "cc": "C",
+      "emptyEW": null,
+      "missingCOSO": false,
+      "ecLen": 336,
+      "remediatedEW": "C",
+      "classification": "READY"
+    },
+    {
+      "qid": "P1-ED-051",
+      "pack": "D",
+      "cc": "D",
+      "emptyEW": null,
+      "missingCOSO": false,
+      "ecLen": 358,
+      "remediatedEW": "D",
+      "classification": "READY"
+    },
+    {
+      "qid": "P1-ED-058",
+      "pack": "D",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": true,
+      "ecLen": 184,
+      "remediatedEW": "A",
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-064",
+      "pack": "D",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": true,
+      "ecLen": 168,
+      "remediatedEW": "A",
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-066",
+      "pack": "D",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": true,
+      "ecLen": 150,
+      "remediatedEW": "A,C",
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "D",
+      "cc": "D",
+      "emptyEW": "C",
+      "missingCOSO": false,
+      "ecLen": 455,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-072",
+      "pack": "D",
+      "cc": "A",
+      "emptyEW": "D",
+      "missingCOSO": false,
+      "ecLen": 387,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-073",
+      "pack": "D",
+      "cc": "B",
+      "emptyEW": "A",
+      "missingCOSO": false,
+      "ecLen": 389,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-074",
+      "pack": "D",
+      "cc": "C",
+      "emptyEW": "B",
+      "missingCOSO": false,
+      "ecLen": 401,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    },
+    {
+      "qid": "P1-ED-075",
+      "pack": "D",
+      "cc": "A",
+      "emptyEW": "C",
+      "missingCOSO": true,
+      "ecLen": 159,
+      "remediatedEW": null,
+      "classification": "HOLD"
+    }
+  ]
+}

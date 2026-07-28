@@ -1,0 +1,111 @@
+{
+  "session": "713",
+  "timestamp": "2026-07-26T02:00:00",
+  "type": "DL-031 behavior simulation — sampled item difficulty recalibration rationale",
+  "sample_size": 12,
+  "items": [
+    {
+      "qid": "P1B-B-120",
+      "stem": "Which time series component represents long-term direction in data?",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Textbook-definition match. Candidate reads stem, identifies 'trend' from choices. Bloom's Remember level. Requires no calculation, no analysis, no multi-step reasoning. Moderate-Easy/2 reflects that distractors (seasonal, cyclical, irregular) test basic terminology discrimination.",
+      "blooms": "Remember"
+    },
+    {
+      "qid": "P1E-A-001",
+      "stem": "What is the primary purpose of the balance sheet?",
+      "old_diff": "Difficult/4",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Previously Difficult/4 for a fundamental accounting definition. Every CMA candidate knows this. The question asks for the purpose of a basic financial statement. Moderate-Easy/2 reflects the need to distinguish between statement purposes (balance sheet vs. income statement vs. cash flow), which is more nuanced than pure recall.",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1E-B-017",
+      "stem": "Rolling budgets are also called:",
+      "old_diff": "Difficult/4",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Previously Difficult/4 for a terminology question with no calculation or analysis. The candidate matches 'rolling' to 'continuous' — a vocabulary question testing at Bloom's Remember level. Distractors (static, flexible, zero-based) test basic budget-type discrimination.",
+      "blooms": "Remember"
+    },
+    {
+      "qid": "P1E-C-001",
+      "stem": "Standard costs are:",
+      "old_diff": "Difficult/4",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Previously Difficult/4 for a pure definition question. Candidate must recall that standard costs are predetermined target costs, not actual or historical costs. Basic cost accounting terminology that every candidate should know before taking the exam. Moderate-Easy/2 accounts for the fact that all 4 options are plausible cost descriptions.",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1B-B-101",
+      "stem": "Which is typically the first budget prepared in a master budget?",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Tests the budget sequence concept. Candidate must know the sales budget drives all other budgets. The sequence is a fundamental budgeting concept. Moderate-Easy/2 reflects that discriminating between sales, production, cash, and materials budgets requires understanding of budget dependencies, not just recall.",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1B-B-142",
+      "stem": "A cost that changes in total in proportion to changes in activity level is a:",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Classic definition-match. Stem defines 'variable cost' behavior. Candidate matches definition to term. Distractors (fixed, mixed, step) test cost behavior classification — fundamental cost management knowledge. Moderate-Easy/2 reflects the discrimination needed between variable, fixed, and mixed costs.",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1E-F-005",
+      "stem": "Big data volume refers to:",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Three Vs of big data is a core terminology concept. Candidate must distinguish volume (data quantity) from velocity (speed) and variety (different formats). Moderate-Easy/2 because the three Vs have similar-sounding names and candidates must discriminate between them.",
+      "blooms": "Remember"
+    },
+    {
+      "qid": "P1B-B-152",
+      "stem": "Which sales forecasting method relies on expert judgment rather than quantitative data?",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Tests the qualitative vs. quantitative forecasting distinction. Candidate must know that Delphi method is judgment-based. Moderate-Easy/2 because distractors (regression, moving average, exponential smoothing) are all quantitative methods, requiring understanding of the qualitative/quantitative boundary.",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1-AC-047",
+      "stem": "Violethill classifies a long-lived asset as held for sale. How should it be measured?",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Tests a specific ASC 360 rule: assets held for sale are measured at lower of carrying amount or fair value less cost to sell. This is a procedural recall question with a clear rule. Moderate-Easy/2 because multiple measurement bases (carrying amount, fair value, recoverable amount) create plausible distractors.",
+      "blooms": "Apply"
+    },
+    {
+      "qid": "P1E-A-016",
+      "stem": "Held-to-maturity securities are measured at:",
+      "old_diff": "Difficult/4",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Previously Difficult/4 for a direct rule-recall question. ASC 320 is explicit: held-to-maturity = amortized cost. Candidate must distinguish between 3 classification types (HTM, AFS, trading). Moderate-Easy/2 because the distinction between amortized cost, fair value, and lower of cost or market requires classification knowledge.",
+      "blooms": "Remember"
+    },
+    {
+      "qid": "P1B-B-170",
+      "stem": "Which is an example of a quantitative forecasting method?",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Tests quantitative vs. qualitative method classification. Moving average is the canonical quantitative method; Delphi and jury of executive opinion are qualitative. Moderate-Easy/2 because candidates must understand what makes a method 'quantitative' (mathematical/statistical) vs. 'qualitative' (judgment-based).",
+      "blooms": "Understand"
+    },
+    {
+      "qid": "P1E-B-003",
+      "stem": "Which cost changes in total proportionally with activity?",
+      "old_diff": "Moderate/3",
+      "new_diff": "Moderate-Easy/2",
+      "rationale": "Variable cost definition. Classic cost behavior question. Candidate identifies the cost type that varies directly with activity level. Moderate-Easy/2 because fixed, variable, mixed, and step costs all have distinct patterns that candidates must discriminate between.",
+      "blooms": "Understand"
+    }
+  ],
+  "summary": {
+    "most_common_bloom_level": "Remember / Understand",
+    "most_common_old_label": "Moderate/3 (9/12) or Difficult/4 (3/12)",
+    "consistent_new_label": "Moderate-Easy/2 (12/12)",
+    "rationale_pattern": "All 12 items test recall or basic comprehension of accounting/finance terminology. None require multi-step analysis, evaluation, or calculation. The Moderate-Easy/2 label reflects that distractors test basic concept discrimination (not pure rote recall) while not inflating difficulty beyond the actual cognitive demand.",
+    "no_items_retained_at_original_difficulty": "All 12 items had clear over-inflation — the cognitive demand (Remember/Understand) was inconsistent with Moderate/3 or Difficult/4 labels."
+  }
+}

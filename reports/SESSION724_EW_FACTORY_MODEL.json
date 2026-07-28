@@ -1,0 +1,53 @@
+{
+  "session": "724",
+  "title": "EW Factory Model v1.0 — Design Reference (Not Activated)",
+  "generated": "2026-07-26",
+  "agents": ["F", "K", "O"],
+  "status": "DESIGN REFERENCE — Not activated per S724 DEFER decision",
+  "note": "This model is retained as reference architecture for future re-evaluation.",
+
+  "current_state": {
+    "mcq_ew_debt": "539 items with <30% ExplanationWrong fill",
+    "case_bank_ew_gap": "2,403 empty EW slots across 420 case items (3.9% fill rate)",
+    "dl013_boilerplate": "~851 fields (non-Certified, non-blocking)",
+    "dl026_empty_slots": "50 In Audit items in Pack D Section C",
+    "dl021_absent_slots": "95 non-Certified Pack E Section C items"
+  },
+
+  "factory_lifecycle": {
+    "stage_1_draft": {
+      "description": "Author choice-specific distractor explanations",
+      "quality_gates": ["EW ≥50 chars per slot", "No boilerplate patterns", "Choice-specific text", "References domain concept"],
+      "batch_cap": 28,
+      "time_per_item": "~8-12 minutes"
+    },
+    "stage_2_review": {
+      "description": "Peer review for accounting accuracy and misconception targeting",
+      "quality_gates": ["EW describes correct distractor choice", "Misconception is realistic", "Correction contrasts with correct approach"],
+      "acceptance_rate": "85-90%"
+    },
+    "stage_3_qa": {
+      "description": "Automated scans: DL-008 check, empty-slot check, boilerplate detection, minimum-length check",
+      "quality_gates": ["EW[CC] empty (DL-008)", "3 non-CC slots all non-empty", "No DL-013 patterns", "EW ≥50 chars", "EW uniqueness across slots"],
+      "rejection_rate": "5-10% (structural issues, sent back to Draft)"
+    },
+    "stage_4_certification_candidate": {
+      "description": "Ready for 800-series CAQS §1.6 audit + certification",
+      "quality_gates": ["All pre-cert QA gates PASS", "EC ≥150 chars with principle reference", "Metadata complete"],
+      "handoff": "800-series certification review"
+    }
+  },
+
+  "throughput_estimate": {
+    "items_per_session": 50,
+    "comparison_to_embedded": "28% improvement vs. embedded EW (39 items/session)",
+    "sessions_to_close_mcq_debt": "~11 sessions (539 items)",
+    "sessions_to_close_case_bank_ew": "~6 sessions (310 items)"
+  },
+
+  "binding_constraint": "AUTHOR CAPACITY — human time to write per CAQS §4 standards. Factory tools reduce boilerplate and formatting time (~20%) but core authoring time (accounting knowledge + pedagogical judgment) is invariant.",
+
+  "minimal_viable_playbook": {
+    "recommendation": "Create EW Authoring Playbook (1 session) instead of full factory infrastructure. Includes: 3-4 EW templates by question type, misconception seed library for top 20 tested concepts, automated pre-cert QA lint script. Investment: 1-2 sessions for ~40% of factory's velocity improvement at 25% of the cost."
+  }
+}

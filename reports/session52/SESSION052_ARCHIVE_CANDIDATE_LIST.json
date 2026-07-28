@@ -1,0 +1,57 @@
+{
+  "session": "52",
+  "title": "Archive Candidate List",
+  "date": "2026-07-28",
+  "archive_candidates": [
+    {
+      "type": "legacy_file",
+      "file": "scored_cases.js",
+      "path": "root",
+      "size_bytes": "~457,390",
+      "last_modified": "2026-07-26",
+      "status": "Already ARCHIVED by S916 — but file still present in root. S916 backup exists at backups/scored_cases.js.bak-s916-20260728T1619.",
+      "action": "Remove from root (move to backups/ or delete). Content is fully consolidated into case_pack files."
+    },
+    {
+      "type": "legacy_file",
+      "file": "scored_cases2.js",
+      "path": "root",
+      "size_bytes": "~438,676",
+      "last_modified": "2026-07-26",
+      "status": "Already ARCHIVED by S916 — but file still present in root. S916 backup exists.",
+      "action": "Remove from root."
+    },
+    {
+      "type": "legacy_file",
+      "file": "scored_cases3.js",
+      "path": "root",
+      "size_bytes": "~444,754",
+      "last_modified": "2026-07-26",
+      "status": "Already ARCHIVED by S916 — but file still present in root. S916 backup exists.",
+      "action": "Remove from root."
+    },
+    {
+      "type": "legacy_file",
+      "file": "scored_cases4.js",
+      "path": "root",
+      "size_bytes": "~534,846",
+      "last_modified": "2026-07-26",
+      "status": "Already ARCHIVED by S916 — but file still present in root. S916 backup exists.",
+      "action": "Remove from root."
+    },
+    {
+      "type": "legacy_file",
+      "file": "scored_cases5.js",
+      "path": "root",
+      "size_bytes": "~333,161",
+      "last_modified": "2026-07-26",
+      "status": "Already ARCHIVED by S916 — but file still present in root. S916 backup exists.",
+      "action": "Remove from root."
+    }
+  ],
+  "case_archive_candidates": [],
+  "case_archive_note": "Zero cases recommended for archival. No case has critical data errors. The two P0 defects (CBQ4-A2 CompanyName corruption, CBQ4-A1-Q2 ASC citation error) are metadata-only — learner-facing content is correct. Archival would deny learners access to educationally sound content.",
+  "total_archive_candidates": 5,
+  "all_are_legacy_files": true,
+  "constitution_reference": "Constitution §11.4: 'Backup files (.bak, .bakN) shall never reside in the repository root.' By extension, legacy duplicated files that have been replaced by the case_pack architecture also violate §11.4."
+}

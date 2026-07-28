@@ -1,0 +1,71 @@
+{
+  "session": "700",
+  "date": "2026-07-25",
+  "mode": "read-only",
+  "summary": {
+    "total_items_reviewed": 84,
+    "mcq_count": 62,
+    "case_item_count": 22,
+    "key_confirmed": 84,
+    "key_suspect": 0,
+    "key_ambiguous": 0,
+    "certification_ready": 60,
+    "needs_remediation": 24,
+    "needs_key_review": 0,
+    "distractor_strong": 33,
+    "distractor_adequate": 16,
+    "distractor_weak": 3,
+    "distractor_broken": 7,
+    "difficulty_aligned": 74,
+    "difficulty_too_easy": 8,
+    "difficulty_too_hard": 0,
+    "section_aligned": 82,
+    "section_partial": 2,
+    "section_misaligned": 0
+  },
+  "critical_findings": [
+    {
+      "item": "P1E-F-001",
+      "pack": "pack_e_corrected.js",
+      "section": "F",
+      "state": "Certified",
+      "defect": "DL-010",
+      "severity": "Critical",
+      "description": "All 3 ExplanationWrong slots contain labor efficiency variance text from a different question"
+    },
+    {
+      "item": "P1-DC-020",
+      "pack": "pack_c_corrected.js", 
+      "section": "D",
+      "state": "Certified",
+      "defect": "DL-010/DL-016",
+      "severity": "High",
+      "description": "EW-B and EW-C describe variable costing vs. absorption costing — unrelated to joint cost allocation question"
+    },
+    {
+      "item": "P1-DC-040",
+      "pack": "pack_c_corrected.js",
+      "section": "D", 
+      "state": "Certified",
+      "defect": "DL-010/DL-016",
+      "severity": "High",
+      "description": "EW-A describes correct TOC answer; EW-B/C describe cost-of-quality prevention/appraisal concepts"
+    }
+  ],
+  "recommended_next_sessions": [
+    {"session": "701", "title": "High-Confidence Certification-Ready MCQ Wave", "scope": "~1,500 items across Packs A/B/D/E"},
+    {"session": "702", "title": "Key-Review and Ambiguity Queue", "scope": "3 Critical DL-010 items"},
+    {"session": "703", "title": "Distractor Remediation Wave", "scope": "~30 items with broken EW fields"},
+    {"session": "704", "title": "Difficulty/Section/Metadata Recalibration", "scope": "~200 items"},
+    {"session": "705", "title": "Case-Bank Certification Readiness Wave", "scope": "~300 case items"}
+  ],
+  "defect_summary": {
+    "DL-010_misassigned": 4,
+    "DL-012_clones": 6,
+    "DL-013_boilerplate": 5,
+    "DL-016_metadata_shift": 4,
+    "metadata_cognitive_inflation": 5,
+    "metadata_calc_required_mismatch": 4,
+    "UNCLASSIFIED": 2
+  }
+}

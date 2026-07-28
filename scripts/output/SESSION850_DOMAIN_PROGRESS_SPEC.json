@@ -1,0 +1,86 @@
+{
+  "specId": "SESSION850_DOMAIN_PROGRESS_SPEC",
+  "board": "D",
+  "title": "Domain Progress Engine",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Track Certified, READY, REMEDIATE, BLOCKED, and Archived counts per Domain, Pack, and Section. Provides real-time modernization progress without manual reporting.",
+  "scriptFile": "scripts/domain_progress_engine.js",
+  "outputFile": "scripts/output/domain_progress.json",
+  "inputs": {
+    "packFiles": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+    "candidateEngineOutput": "scripts/output/certification_candidates.json"
+  },
+  "trackedDimensions": {
+    "perDomain": ["Certified", "READY", "REMEDIATE", "BLOCKED", "Archived", "Total", "Coverage%"],
+    "perPack": ["Certified", "READY", "REMEDIATE", "BLOCKED", "Archived", "Total", "Coverage%"],
+    "perSection": ["Pack", "Section", "Certified", "READY", "REMEDIATE", "BLOCKED", "Archived", "Total"]
+  },
+  "states": {
+    "certified": { "label": "Certified", "color": "green", "description": "Passed all 6 CAQS dimensions at HIGH confidence" },
+    "ready": { "label": "READY", "color": "blue", "description": "All gates pass — eligible for certification" },
+    "remediate": { "label": "REMEDIATE", "color": "yellow", "description": "Has known defects requiring fix" },
+    "blocked": { "label": "BLOCKED", "color": "red", "description": "Failed identity validation or has critical defects" },
+    "archived": { "label": "Archived", "color": "gray", "description": "Removed from active pool" },
+    "unprocessed": { "label": "Unprocessed", "color": "white", "description": "Not yet audited" }
+  },
+  "output": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "overall": {
+        "totalItems": "integer",
+        "certified": "integer",
+        "ready": "integer",
+        "remediate": "integer",
+        "blocked": "integer",
+        "archived": "integer",
+        "unprocessed": "integer",
+        "coveragePct": "float"
+      },
+      "byDomain": {
+        "A": {
+          "domainName": "string",
+          "certified": "integer",
+          "ready": "integer",
+          "remediate": "integer",
+          "blocked": "integer",
+          "archived": "integer",
+          "total": "integer",
+          "coveragePct": "float",
+          "remainingToCertify": "integer"
+        }
+      },
+      "byPack": {
+        "pack_a": {
+          "certified": "integer",
+          "ready": "integer",
+          "remediate": "integer",
+          "blocked": "integer",
+          "archived": "integer",
+          "total": "integer",
+          "coveragePct": "float"
+        }
+      },
+      "bySection": [
+        {
+          "pack": "string",
+          "section": "string",
+          "certified": "integer",
+          "ready": "integer",
+          "remediate": "integer",
+          "blocked": "integer",
+          "archived": "integer",
+          "total": "integer"
+        }
+      ]
+    }
+  },
+  "usage": "node scripts/domain_progress_engine.js",
+  "dependencies": {
+    "engine": ["scripts/engine/pack_reader.js"]
+  }
+}

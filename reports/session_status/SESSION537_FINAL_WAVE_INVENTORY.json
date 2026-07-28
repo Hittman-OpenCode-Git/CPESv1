@@ -1,0 +1,952 @@
+{
+  "BLOCK-AUTHORIZED": "Session 537 Agent B — read-only inventory verification report, no pack file modifications",
+  "session": "537",
+  "agent": "B",
+  "task": "Final Inventory Verification",
+  "file": "scored_cases.js",
+  "total_items": 42,
+  "cases": [
+    {
+      "caseId": "CBQ-C2",
+      "title": "Investment Center Performance and Transfer Pricing",
+      "sectionTags": ["C"],
+      "blueprintDomain": "Performance Management",
+      "difficulty": "Difficult",
+      "difficultyScore": 4,
+      "question_state": "Unprocessed",
+      "pack_state": "Draft",
+      "productionStatus": "Draft",
+      "version": "1.0",
+      "itemCount": 6,
+      "exhibitCount": 2,
+      "explanationCharLengths": {
+        "Q1": 47,
+        "Q2": 35,
+        "Q3": 147,
+        "Q4": 96,
+        "Q5": 64,
+        "Q6": 58
+      },
+      "items": [
+        {
+          "itemId": "CBQ-C2-Q1",
+          "type": "numeric",
+          "topic": "Residual income",
+          "correct": "84000",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 47,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C2-Q2",
+          "type": "numeric",
+          "topic": "ROI",
+          "correct": "15",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 35,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C2-Q3",
+          "type": "select",
+          "topic": "Transfer pricing",
+          "correct": "70 variable cost",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 147,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 455, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 474, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 477, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C2-Q4",
+          "type": "multi",
+          "topic": "Performance measurement",
+          "correct": [
+            "It can encourage accepting projects above the required return",
+            "It charges divisions for assets employed",
+            "It avoids rejecting investments that lower ROI but exceed the required return"
+          ],
+          "cognitiveLevel": "Evaluate",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 96,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWC": {"present": true, "empty": false, "content_length": 558, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C2-Q5",
+          "type": "fill",
+          "topic": "Transfer pricing",
+          "correct": "congruence",
+          "cognitiveLevel": "Understand",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 64,
+          "explanationWrongPresence": "N/A (fill item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C2-Q6",
+          "type": "match",
+          "topic": "Performance management",
+          "correct": {
+            "ROI": "Operating income divided by assets",
+            "Residual income": "Income after required asset charge",
+            "Minimum transfer price with idle capacity": "Variable cost plus opportunity cost",
+            "Market price": "External benchmark when available"
+          },
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 58,
+          "explanationWrongPresence": "N/A (match item — no EW fields present)",
+          "issues": []
+        }
+      ]
+    },
+    {
+      "caseId": "CBQ-D2",
+      "title": "Process Costing, Lean Waste, and Bottleneck Analysis",
+      "sectionTags": ["D"],
+      "blueprintDomain": "Cost Management",
+      "difficulty": "Difficult",
+      "difficultyScore": 4,
+      "question_state": "Unprocessed",
+      "pack_state": "Draft",
+      "productionStatus": "Draft",
+      "version": "1.0",
+      "itemCount": 6,
+      "exhibitCount": 2,
+      "explanationCharLengths": {
+        "Q1": 88,
+        "Q2": 55,
+        "Q3": 69,
+        "Q4": 69,
+        "Q5": 72,
+        "Q6": 56
+      },
+      "items": [
+        {
+          "itemId": "CBQ-D2-Q1",
+          "type": "numeric",
+          "topic": "Process costing",
+          "correct": "20400",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 88,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-D2-Q2",
+          "type": "numeric",
+          "topic": "Process costing",
+          "correct": "12.5",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 55,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-D2-Q3",
+          "type": "select",
+          "topic": "Theory of constraints",
+          "correct": "Welding",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 69,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 486, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 505, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 494, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-D2-Q4",
+          "type": "multi",
+          "topic": "Lean operations",
+          "correct": [
+            "Reduce waiting time before welding",
+            "Investigate rework causes",
+            "Simplify material movement"
+          ],
+          "cognitiveLevel": "Evaluate",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 69,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 482, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWD": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-D2-Q5",
+          "type": "fill",
+          "topic": "Process costing",
+          "correct": "complete",
+          "cognitiveLevel": "Understand",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 72,
+          "explanationWrongPresence": "N/A (fill item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-D2-Q6",
+          "type": "match",
+          "topic": "Cost management",
+          "correct": {
+            "Partially complete WIP": "Equivalent units",
+            "Lowest capacity resource": "Bottleneck analysis",
+            "Unnecessary movement": "Lean waste review",
+            "Continuous homogeneous output": "Process costing"
+          },
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 56,
+          "explanationWrongPresence": "N/A (match item — no EW fields present)",
+          "issues": [
+            {
+              "severity": "HIGH — CROSS-CASE CONTAMINATION",
+              "description": "Item CBQ-D2-Q6 has CaseID: \"CBQ-C2\" and Section: \"C\" instead of CaseID: \"CBQ-D2\" and Section: \"D\". This is a cross-case metadata contamination (likely DL-016 pattern — template rotation artifact). The item structurally belongs to CBQ-D2 (surrounded by CBQ-D2 items) but its CaseID and Section point to CBQ-C2. The learner-facing content (Prompt, Choices, Match items) appears correct for CBQ-D2's topics."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "caseId": "CBQ-E2",
+      "title": "IT General Controls, Change Management, and Access Review",
+      "sectionTags": ["E", "F"],
+      "blueprintDomain": "Internal Controls",
+      "difficulty": "Difficult",
+      "difficultyScore": 4,
+      "question_state": "Unprocessed",
+      "pack_state": "Draft",
+      "productionStatus": "Draft",
+      "version": "1.0",
+      "itemCount": 6,
+      "exhibitCount": 1,
+      "explanationCharLengths": {
+        "Q1": 147,
+        "Q2": 41,
+        "Q3": 125,
+        "Q4": 79,
+        "Q5": 69,
+        "Q6": 375
+      },
+      "items": [
+        {
+          "itemId": "CBQ-E2-Q1",
+          "type": "select",
+          "topic": "Access controls",
+          "correct": "Unique privileged IDs with MFA and periodic access review",
+          "cognitiveLevel": "Evaluate",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 147,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 419, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 403, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 474, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-E2-Q2",
+          "type": "numeric",
+          "topic": "Access review",
+          "correct": "3.5",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 41,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-E2-Q3",
+          "type": "multi",
+          "topic": "IT controls",
+          "correct": [
+            "Logical access controls",
+            "Change-management controls",
+            "Computer operations/interface monitoring"
+          ],
+          "cognitiveLevel": "Evaluate",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 125,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWC": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWD": {"present": true, "empty": false, "content_length": 499, "status": "OK (substantive distractor text)"}
+          },
+          "issues": [
+            {
+              "severity": "MEDIUM — DL-025/DL-026 candidate",
+              "description": "Multi-select item: EWA, EWB, EWC are all empty AND are correct-answer slots. EWD is the only distractor and has substantive text. However, all 3 correct-choice slots being empty is DL-008-compliant. No missing distractor explanations for this multi-select since all non-correct choices have text."
+            }
+          ]
+        },
+        {
+          "itemId": "CBQ-E2-Q4",
+          "type": "fill",
+          "topic": "Change management",
+          "correct": "approval",
+          "cognitiveLevel": "Understand",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 79,
+          "explanationWrongPresence": "N/A (fill item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-E2-Q5",
+          "type": "match",
+          "topic": "ITGC risk",
+          "correct": {
+            "Shared administrator IDs": "Lack of accountability",
+            "Terminated users active": "Unauthorized access",
+            "Unapproved emergency changes": "Unauthorized or erroneous report logic",
+            "Failed interface reconciliation": "Incomplete or inaccurate data transfer"
+          },
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 69,
+          "explanationWrongPresence": "N/A (match item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-E2-Q6",
+          "type": "select",
+          "topic": "Monitoring",
+          "correct": "It may prevent investigation of issues discovered after logs are overwritten",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 375,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 407, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 429, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 407, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "caseId": "CBQ-A3",
+      "title": "Inventory, ARO, Subsequent Events, and Cash Classification",
+      "sectionTags": ["A"],
+      "blueprintDomain": "External Financial Reporting Decisions",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "question_state": "Unprocessed",
+      "pack_state": "Draft",
+      "productionStatus": "Draft",
+      "version": "1.0",
+      "itemCount": 6,
+      "exhibitCount": 2,
+      "explanationCharLengths": {
+        "Q1": 95,
+        "Q2": 128,
+        "Q3": 113,
+        "Q4": 113,
+        "Q5": 179,
+        "Q6": 50
+      },
+      "items": [
+        {
+          "itemId": "CBQ-A3-Q1",
+          "type": "numeric",
+          "topic": "Inventory measurement",
+          "correct": "24000",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 95,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-A3-Q2",
+          "type": "numeric",
+          "topic": "Asset retirement obligations",
+          "correct": "75000",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 128,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-A3-Q3",
+          "type": "select",
+          "topic": "Subsequent events",
+          "correct": "Recognized subsequent event requiring adjustment",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 113,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 534, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 506, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 516, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-A3-Q4",
+          "type": "select",
+          "topic": "Cash classification",
+          "correct": "Cash equivalent",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 113,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 441, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 420, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 452, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-A3-Q5",
+          "type": "numeric",
+          "topic": "Statement of cash flows",
+          "correct": "691000",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 179,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-A3-Q6",
+          "type": "match",
+          "topic": "External reporting",
+          "correct": {
+            "FIFO inventory below NRV": "Write down inventory",
+            "ARO present value": "Record liability and add to asset cost",
+            "88-day Treasury bill": "Classify as cash equivalent",
+            "Equipment purchase": "Classify as investing cash outflow"
+          },
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 50,
+          "explanationWrongPresence": "N/A (match item — no EW fields present)",
+          "issues": []
+        }
+      ]
+    },
+    {
+      "caseId": "CBQ-B3",
+      "title": "Scenario Forecast, Expected Value, and Working Capital Plan",
+      "sectionTags": ["B"],
+      "blueprintDomain": "Planning, Budgeting, and Forecasting",
+      "difficulty": "Moderate",
+      "difficultyScore": 3,
+      "question_state": "Unprocessed",
+      "pack_state": "Draft",
+      "productionStatus": "Draft",
+      "version": "1.0",
+      "itemCount": 6,
+      "exhibitCount": 2,
+      "explanationCharLengths": {
+        "Q1": 66,
+        "Q2": 46,
+        "Q3": 35,
+        "Q4": 123,
+        "Q5": 83,
+        "Q6": 104
+      },
+      "items": [
+        {
+          "itemId": "CBQ-B3-Q1",
+          "type": "numeric",
+          "topic": "Expected value",
+          "correct": "11300",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 66,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-B3-Q2",
+          "type": "numeric",
+          "topic": "Forecasting",
+          "correct": "904000",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 46,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-B3-Q3",
+          "type": "numeric",
+          "topic": "Cash collections",
+          "correct": "361600",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 35,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-B3-Q4",
+          "type": "numeric",
+          "topic": "Cash budget",
+          "correct": "852600",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 123,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-B3-Q5",
+          "type": "select",
+          "topic": "Cash budget",
+          "correct": "2,400 borrowing required",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 83,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 465, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 465, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 472, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-B3-Q6",
+          "type": "multi",
+          "topic": "Forecast assumptions",
+          "correct": [
+            "Scenario probabilities",
+            "Collection percentages",
+            "Minimum cash policy"
+          ],
+          "cognitiveLevel": "Evaluate",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 104,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWC": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWD": {"present": true, "empty": false, "content_length": 457, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "caseId": "CBQ-C3",
+      "title": "Balanced Scorecard and Operating Performance Review",
+      "sectionTags": ["C"],
+      "blueprintDomain": "Performance Management",
+      "difficulty": "Difficult",
+      "difficultyScore": 4,
+      "question_state": "Unprocessed",
+      "pack_state": "Draft",
+      "productionStatus": "Draft",
+      "version": "1.0",
+      "itemCount": 6,
+      "exhibitCount": 2,
+      "explanationCharLengths": {
+        "Q1": 68,
+        "Q2": 60,
+        "Q3": 67,
+        "Q4": 112,
+        "Q5": 63,
+        "Q6": 275
+      },
+      "items": [
+        {
+          "itemId": "CBQ-C3-Q1",
+          "type": "numeric",
+          "topic": "Performance variance",
+          "correct": "60000",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Easy",
+          "difficultyScore": 1,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 68,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C3-Q2",
+          "type": "numeric",
+          "topic": "Nonfinancial measures",
+          "correct": "5",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Easy",
+          "difficultyScore": 1,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 60,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C3-Q3",
+          "type": "select",
+          "topic": "Balanced scorecard",
+          "correct": "Training hours per employee",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 67,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 498, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 480, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 498, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C3-Q4",
+          "type": "multi",
+          "topic": "Leading indicators",
+          "correct": [
+            "Defect rate",
+            "On-time delivery",
+            "Training hours per employee"
+          ],
+          "cognitiveLevel": "Evaluate",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 112,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWC": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWD": {"present": true, "empty": false, "content_length": 495, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C3-Q5",
+          "type": "match",
+          "topic": "Balanced scorecard",
+          "correct": {
+            "Financial": "Operating income",
+            "Customer": "On-time delivery",
+            "Internal process": "Defect rate",
+            "Learning and growth": "Training hours per employee"
+          },
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 63,
+          "explanationWrongPresence": "N/A (match item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-C3-Q6",
+          "type": "select",
+          "topic": "Responsibility accounting",
+          "correct": "Machine setup errors",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 275,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 439, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 417, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 468, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        }
+      ]
+    },
+    {
+      "caseId": "CBQ-F2",
+      "title": "Cybersecurity, RPA, and Finance Automation Governance",
+      "sectionTags": ["E", "F"],
+      "blueprintDomain": "Internal Controls",
+      "difficulty": "Difficult",
+      "difficultyScore": 4,
+      "question_state": "Unprocessed",
+      "pack_state": "Draft",
+      "productionStatus": "Draft",
+      "version": "1.0",
+      "itemCount": 6,
+      "exhibitCount": 2,
+      "explanationCharLengths": {
+        "Q1": 119,
+        "Q2": 45,
+        "Q3": 98,
+        "Q4": 112,
+        "Q5": 72,
+        "Q6": 60
+      },
+      "items": [
+        {
+          "itemId": "CBQ-F2-Q1",
+          "type": "numeric",
+          "topic": "RPA benefits",
+          "correct": "1350",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 119,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-F2-Q2",
+          "type": "numeric",
+          "topic": "Exception analytics",
+          "correct": "630",
+          "cognitiveLevel": "Apply",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 45,
+          "explanationWrongPresence": "N/A (numeric item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-F2-Q3",
+          "type": "select",
+          "topic": "Cybersecurity controls",
+          "correct": "One shared service account",
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 98,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice_slot": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": false, "content_length": 476, "status": "OK (substantive distractor text)"},
+            "EWC": {"present": true, "empty": false, "content_length": 453, "status": "OK (substantive distractor text)"},
+            "EWD": {"present": true, "empty": false, "content_length": 497, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-F2-Q4",
+          "type": "multi",
+          "topic": "Automation governance",
+          "correct": [
+            "Unique bot/service credentials with monitored access",
+            "Change approval for exception rules",
+            "Vendor master-data cleanup"
+          ],
+          "cognitiveLevel": "Evaluate",
+          "difficulty": "Difficult",
+          "difficultyScore": 4,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 112,
+          "explanationWrong": {
+            "EWA": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWB": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWC": {"present": true, "empty": true, "content_length": 0, "is_correct_choice": true, "status": "DL-008-compliant (empty CC slot)"},
+            "EWD": {"present": true, "empty": false, "content_length": 496, "status": "OK (substantive distractor text)"}
+          },
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-F2-Q5",
+          "type": "fill",
+          "topic": "Analytics governance",
+          "correct": "monitoring",
+          "cognitiveLevel": "Understand",
+          "difficulty": "Moderate-Easy",
+          "difficultyScore": 2,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 72,
+          "explanationWrongPresence": "N/A (fill item — no EW fields present)",
+          "issues": []
+        },
+        {
+          "itemId": "CBQ-F2-Q6",
+          "type": "match",
+          "topic": "Technology controls",
+          "correct": {
+            "Shared bot account": "Unique credentials and access logging",
+            "Unapproved rule changes": "Change management",
+            "Duplicate vendor IDs": "Master-data governance",
+            "No false-positive review": "Model monitoring"
+          },
+          "cognitiveLevel": "Analyze",
+          "difficulty": "Moderate",
+          "difficultyScore": 3,
+          "question_state": "Unprocessed",
+          "explanationLengthChars": 60,
+          "explanationWrongPresence": "N/A (match item — no EW fields present)",
+          "issues": [
+            {
+              "severity": "HIGH — CROSS-CASE CONTAMINATION",
+              "description": "Item CBQ-F2-Q6 has CaseID: \"CBQ-D2\" and Section: \"D\" instead of CaseID: \"CBQ-F2\" and Section: \"E\" (or \"F\"). This is a cross-case metadata contamination (DL-016 template rotation artifact). The item structurally belongs to CBQ-F2 (last item in the case) but its CaseID and Section point to CBQ-D2. The learner-facing content (Prompt, Choices, Match items) appears correct for CBQ-F2's RPA/automation topics."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalCaseCount": 7,
+    "totalItemCount": 42,
+    "stateDistribution": {
+      "Unprocessed": 42,
+      "In_Audit": 0,
+      "Editorial_Queue": 0,
+      "Certified": 0,
+      "Archived": 0
+    },
+    "caseLevelStates": {
+      "Unprocessed": 7,
+      "Certified": 0
+    },
+    "itemTypeDistribution": {
+      "numeric": 16,
+      "select": 12,
+      "multi": 6,
+      "fill": 4,
+      "match": 4
+    },
+    "sectionDistribution": {
+      "A": 6,
+      "B": 6,
+      "C": 12,
+      "D": 6,
+      "E_F_cross": 12
+    },
+    "difficultyDistribution": {
+      "Easy": 2,
+      "Moderate-Easy": 16,
+      "Moderate": 8,
+      "Difficult": 16,
+      "Very_Difficult": 0
+    },
+    "cognitiveLevelDistribution": {
+      "Apply": 16,
+      "Analyze": 18,
+      "Evaluate": 6,
+      "Understand": 2,
+      "Remember": 0
+    },
+    "structuralIssues": {
+      "critical_cross_case_contamination": [
+        {
+          "itemId": "CBQ-D2-Q6",
+          "storedCaseId": "CBQ-C2",
+          "storedSection": "C",
+          "actualCaseIs": "CBQ-D2",
+          "actualSectionShouldBe": "D",
+          "type": "metadata contamination — likely DL-016 template rotation artifact"
+        },
+        {
+          "itemId": "CBQ-F2-Q6",
+          "storedCaseId": "CBQ-D2",
+          "storedSection": "D",
+          "actualCaseIs": "CBQ-F2",
+          "actualSectionShouldBe": "E or F",
+          "type": "metadata contamination — likely DL-016 template rotation artifact"
+        }
+      ],
+      "dl008_scan": "ALL CLEAN — All select/multi items have empty ExplanationWrong[CorrectChoice] slots (DL-008 compliant). Zero DL-008 violations.",
+      "dl025_dl026_scan": "ALL CLEAN — All non-CorrectChoice ExplanationWrong slots for select/multi items have substantive text (no empty distractor explanations).",
+      "dl018_scan": "ALL CLEAN — No missing ExplanationWrong[CorrectChoice] slots (all present and empty where applicable).",
+      "explanationLengthIssues": [
+        {
+          "severity": "LOW",
+          "description": "Multiple numeric and conceptual items have very short Explanation text (<100 chars). Items: CBQ-C2-Q1 (47), CBQ-C2-Q2 (35), CBQ-C2-Q6 (58), CBQ-D2-Q2 (55), CBQ-D2-Q6 (56), CBQ-E2-Q2 (41), CBQ-A3-Q6 (50), CBQ-B3-Q3 (35), CBQ-C3-Q1 (68), CBQ-C3-Q5 (63), CBQ-F2-Q2 (45), CBQ-F2-Q6 (60). These are all Unprocessed — would need explanation expansion before certification.",
+          "affectedCount": 12
+        }
+      ],
+      "certificationReadiness": "0 of 42 items are Certified. All 42 items are Unprocessed. All 7 cases are Unprocessed. All items require full CAQS six-dimension verification before certification."
+    },
+    "crossReferences": {
+      "knownDefectPatterns": "DL-016 (metadata-content cross-case shift) observed in 2 of 42 items (4.8%) — CBQ-D2-Q6 and CBQ-F2-Q6. This is consistent with the template rotation artifact documented in DEFECT_LIBRARY.md.",
+      "relatedDefects": "DL-008: zero. DL-018: zero. DL-025/DL-026: zero. DL-013: not assessed (case-study items typically have short-form explanations; would need scan for 'represents a plausible misconception' pattern).",
+      "packsCompared": "These items are in scored_cases.js (Pack 1 cases). The DL-016 cross-case contamination mirrors the same pattern seen in pack_a_corrected.js dual-block architecture."
+    }
+  }
+}

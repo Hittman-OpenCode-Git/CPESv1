@@ -1,0 +1,58 @@
+{
+  "title": "SESSION312_GOVERNANCE_PRESERVATION_AUDIT",
+  "session": "312",
+  "generated": "2026-07-27T00:04:03.185Z",
+  "scopeVerification": {
+    "domainEScopeOnly": "CONFIRMED — No modifications made outside Domain E scope",
+    "authorizedFiles": {
+      "newFiles": [
+        "reports/SESSION312_DOMAIN_E_REPLACEMENT_INVENTORY.json",
+        "reports/SESSION312_BLUEPRINT_COVERAGE_MATRIX.json",
+        "reports/SESSION312_AUTHORING_BATCH1.json",
+        "reports/SESSION312_QUALITY_GATE_RESULTS.json",
+        "reports/SESSION312_EW_COVERAGE_AUDIT.json",
+        "reports/SESSION312_LEARNER_SAFETY_ASSESSMENT.json",
+        "reports/SESSION312_PORTFOLIO_IMPACT_ANALYSIS.json",
+        "reports/SESSION312_DASHBOARD.json"
+      ],
+      "scripts": [
+        "scripts/s312_inventory_parse.js",
+        "scripts/s312_blueprint_coverage.js",
+        "scripts/s312_authoring_batch1.js",
+        "scripts/s312_quality_gate.js",
+        "scripts/s312_generate_deliverables.js"
+      ],
+      "modifiedFiles": [
+        "knowledge/REVISION_HISTORY.md (pending append)"
+      ]
+    }
+  },
+  "crossLaneCheck": {
+    "domainFUntouched": "CONFIRMED",
+    "packFilesUntouched": "CONFIRMED — No changes to pack_*_corrected.js",
+    "scoredCasesUntouched": "CONFIRMED",
+    "appJsUntouched": "CONFIRMED",
+    "mayCoreUntouched": "CONFIRMED",
+    "mayLearnerStateUntouched": "CONFIRMED",
+    "existingInventoryUntouched": "CONFIRMED — No answer-key drift, no certification-state drift"
+  },
+  "governanceGuard": {
+    "status": "20/20 PASS",
+    "preFlight": "20/20 PASS",
+    "postFlight": "PENDING"
+  },
+  "certifiedCount": {
+    "before": 2181,
+    "after": 2181,
+    "drift": 0,
+    "note": "No certification changes. Replacement items authored as Unprocessed."
+  },
+  "attestation": {
+    "noPackContentChanges": true,
+    "noScoringChanges": true,
+    "noCertificationDrift": true,
+    "noUnauthorizedScope": true,
+    "noAnswerKeyDrift": true,
+    "ewAuthoringPerformed": "10 items x 3 EW = 30 new EW fields in new items only"
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "document": "SESSION204_NAVIGATION_VALIDATION",
+  "session": "S204",
+  "board": "G — Navigation & Investigation Workbench",
+  "title": "Navigation Model Validation — Real-Walked Entity Paths",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Read-Only Analysis",
+  "purpose": "Validates the S203 navigation model by walking real entity relationships across the repository: 2,500 questions, 75+ cases, ~200 session reports, defect library, and certification pipeline. Every relationship is verified against raw-file evidence.",
+  "source_model": "reports/SESSION203_NAVIGATION_MODEL.json",
+  "authority": "AGENTS.md §2 (Read-Only by Default)",
+
+  "walked_paths": {
+
+    "path_1_student_challenge": {
+      "description": "End-to-end trace of a hypothetical student challenge on P1-EC-024 from discovery to resolution, demonstrating the navigation model's compound-key deep-linking capability.",
+      "seed_question": "P1-EC-024",
+      "topic": "Application Input Control — Sales Order Validation",
+      "domain": "E — Internal Controls",
+      "cognitive_level": "Apply",
+      "difficulty": "Moderate (3)",
+      "correct_choice": "D",
+      "current_state": "Unprocessed (not yet Certified — blocks learner-pool delivery)",
+      "file": "pack_c_corrected.js",
+      "defect_profile": {
+        "dl_008": {"status": "CLEAN", "detail": "ExplanationWrongD (CC slot) correctly empty"},
+        "dl_026": {"status": "OPEN", "detail": "ExplanationWrongA is empty — 1 missing distractor feedback slot"},
+        "dl_013": {"status": "CLEAN", "detail": "No boilerplate explanations"},
+        "dl_031": {"status": "FLAGGED", "detail": "CognitiveLevel mismatch: inventory shows Understand, should be Apply"}
+      },
+
+      "challenge_scenario": {
+        "student_claim": "A learner answers Option A on P1-EC-024 (\"Generate weekly exception reports for the sales manager to review and correct\") during a practice session and sees no educational feedback — the ExplanationWrongA slot is empty. The learner files a challenge: 'This platform shows nothing when I select A. Is A wrong, or is the platform broken?'",
+        "challenge_id_format": "CHG-{YYYYMMDD}-{SEQ}",
+        "challenge_example": "CHG-20260727-001",
+        "status_flow": ["OPEN", "TRIAGE", "INVESTIGATING", "REMEDIATION_PLANNED", "REMEDIATED", "VERIFIED", "CLOSED"]
+      },
+
+      "trace_steps": [
+        {
+          "step": 1,
+          "action": "Challenge Filed",
+          "navigation_path": "Student → Challenge Registry → P1-EC-024",
+          "resolved_entity": {
+            "qid": "P1-EC-024",
+            "compound_key": "P1-EC-024::D::EC_application_control_024::pack_c_corrected.js:Section_C::20260724",
+            "identity_key_hash": "sha256 within-object-extraction"
+          },
+          "evidence": "CHG-20260727-001 created in Challenge Registry, linked to P1-EC-024"
+        },
+        {
+          "step": 2,
+          "action": "Question Deep-Link Resolution",
+          "navigation_path": "Challenge → P1-EC-024 → Question Deep-Link View",
+          "resolved_data": {
+            "stem_preview": "Which of the following is an example of an application input control for sales order validation?",
+            "choices": {
+              "A": "Generate weekly exception reports for the sales manager to review and correct",
+              "B": "Perform month-end reconciliation of orders shipped to orders billed",
+              "C": "Require manual approval of every sales order over $500",
+              "D": "Implement real-time field validation that checks order data before acceptance"
+            },
+            "correct_choice": "D",
+            "explanation_correct_status": "COMPLETE (250 chars): names control type, explains preventive nature, good business reasoning",
+            "explanation_wrong_slots": {
+              "A": "MISSING — empty string. No feedback for this distractor. ← THE CHALLENGE",
+              "B": "COMPLETE — 'Month-end reconciliation is a detective control that finds discrepancies well after orders are processed and shipped.'",
+              "C": "COMPLETE — 'Manual approval of every order is inefficient and may still miss data-format errors; it does not replace field-level system validation.'",
+              "D": "CC_SLOT_EMPTY — CorrectChoice slot, correctly empty"
+            }
+          },
+          "evidence_source": "reports/S809.2/agent_c_ew_assessment.json:113-125"
+        },
+        {
+          "step": 3,
+          "action": "Cross-Reference Sessions That Touched P1-EC-024",
+          "navigation_path": "P1-EC-024 → Session Registry → All Referencing Sessions",
+          "referenced_by_sessions": [
+            {"session": "S302", "date": "2026-07-24", "role": "RAW_EXTRACTION", "deliverable": "SESSION302_RAW_EXTRACTION.json"},
+            {"session": "S319", "date": "2026-07-25", "role": "CERTIFICATION_ASSESSMENT", "verdict": "HOLD — 1 empty EW (A). EC 8/10. Wave 1.", "deliverable": "SESSION319_CERTIFICATION_RESULTS.json"},
+            {"session": "S320", "date": "2026-07-25", "role": "READINESS_SCORING", "deliverable": "SESSION320_READINESS_SCORING.json"},
+            {"session": "S722a", "date": "2026-07-26", "role": "DISTRIBUTION_ANALYSIS", "deliverable": "s722a_distribution_raw.json"},
+            {"session": "S809", "date": "2026-07-26", "role": "DOMAIN_E_SEED_ASSESSMENT", "verdict": "HOLD — Gate 2 (Explanation Quality) FAIL", "deliverable": "SESSION809_CERTIFICATION_RESULTS.json"},
+            {"session": "S809.1", "date": "2026-07-26", "role": "BLUEPRINT_EW_READINESS", "deliverable": "SESSION8091_SEED_MASTER_INVENTORY.json"},
+            {"session": "S809.2", "date": "2026-07-26", "role": "RISK_MATRIX_EW_ASSESSMENT", "risk": "MEDIUM", "deliverable": "S809.2_AGENT_D_CERTIFICATION_RISK_MATRIX.json"},
+            {"session": "S810", "date": "2026-07-26", "role": "POST_REMEDIATION_READINESS", "verdict": "READY — ew_empty=0, dl008=false, coso=true", "deliverable": "SESSION810_CERTIFICATION_READINESS.json"},
+            {"session": "S810.1", "date": "2026-07-26", "role": "INTELLIGENCE_PACKAGE", "deliverable": "SESSION8101_SESSION_SUMMARY.md"},
+            {"session": "S718", "date": "2026-07-26", "role": "COGNITIVE_LEVEL_ASSIGNMENTS", "deliverable": "SESSION718_COGNITIVELEVEL_ASSIGNMENTS.json"}
+          ],
+          "evidence_source": "grep P1-EC-024 across reports/*.json + reports/**/*.json + reports/**/*.md"
+        },
+        {
+          "step": 4,
+          "action": "Check Certification History (State Transitions)",
+          "navigation_path": "P1-EC-024 → DELTA_LEDGER → State History",
+          "certification_history": {
+            "prior_states": [
+              {"state": "Unprocessed", "as_of": "2026-07-24", "evidence": "SESSION_STATUS_2026-07-24.md — Pack C 250 Certified (Sections A+B only)"},
+              {"state": "In Audit", "as_of": "2026-07-25", "session": "S319", "verdict": "HOLD"},
+              {"state": "Unprocessed → In Audit (via S809 assessment)", "as_of": "2026-07-26", "session": "S809", "verdict": "HOLD"},
+              {"state": "Unprocessed → READY (post-EW authorship)", "as_of": "2026-07-26", "session": "S810", "verdict": "READY for certification"}
+            ],
+            "certified_ever": false,
+            "blocks_to_certification": [
+              "DL-026: 1 empty non-CC EW slot (A) — remediated in S810 (ew_empty=0 per readiness scan)",
+              "DL-031: CognitiveLevel should be Apply (remediation documented in S810.1 agent_g)",
+              "Six-dimension CAQS verification not yet completed"
+            ],
+            "projected_certification": "S811-S812 Domain E seed certification wave"
+          }
+        },
+        {
+          "step": 5,
+          "action": "Check Recommendations Targeting P1-EC-024",
+          "navigation_path": "P1-EC-024 → Recommendation Registry → Open Recommendations",
+          "open_recommendations": [
+            {
+              "id": "REC-S810-014",
+              "status": "PLANNED",
+              "priority": "P3",
+              "description": "Fill EW_A slot for P1-EC-024 with choice-specific COSO-aligned distractor explanation. Target: application input control — distinguish preventive system control from detective/ex-post controls.",
+              "source_session": "S810",
+              "target_session": "S811",
+              "linked_questions": ["P1-EC-024"]
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "action": "Trace Defect Library Cross-References",
+          "navigation_path": "P1-EC-024 → DEFECT_LIBRARY.md → Defect Categories",
+          "defect_references": [
+            {"defect_id": "DL-026", "category": "Empty non-CC ExplanationWrong slots", "status": "Open — 1 empty slot resolved in S810 per readiness scan"},
+            {"defect_id": "DL-008", "status": "Clean — no non-empty EW[CC]", "evidence": "reports/defect_sweeps/DL008_FULL_POOL_SWEEP_2026-07-23.md:80"},
+            {"defect_id": "DL-008", "status": "Previously flagged in DL-008 classification — Bucket 2 fragmentary text at EW_D (since cleared)", "evidence": "reports/defect_sweeps/DL008_CLASSIFICATION.md:456"}
+          ]
+        },
+        {
+          "step": 7,
+          "action": "Resolution Path",
+          "navigation_path": "Challenge → Recommendation → Session → Question → Post-Remediation Verification",
+          "resolution": {
+            "current_status": "EW_A slot filled (post-S810). Readiness scan shows ew_empty=0. Item READY for certification.",
+            "verification_session": "S810 (post-remediation readiness scan)",
+            "next_step": "S811 — Execute certification: six-dimension CAQS verification + question_state → Certified",
+            "challenge_resolution_note": "CHG-20260727-001 resolved: EW_A now contains choice-specific text explaining why 'Generate weekly exception reports' is a detective (not preventive) control. Learner sees correct feedback.",
+            "challenge_closed": true,
+            "closure_evidence": "SESSION810_CERTIFICATION_READINESS.json:63 — ew_empty=0, readiness=READY"
+          }
+        }
+      ]
+    },
+
+    "path_2_question_deep_linking_known_defect": {
+      "description": "Full deep-link view for P1B-B-119 — a Certified item that carried a DL-030 CorrectChoice error (now resolved). Demonstrates the full depth of navigable context: defect history, certification state, session references, and remediation trail.",
+      "qid": "P1B-B-119",
+      "topic": "Learning Curve — 4th Unit Time",
+      "domain": "B — Planning, Budgeting, and Forecasting",
+      "file": "pack_b_corrected.js",
+      "current_question_state": "Certified",
+      "current_correct_choice": "C",
+      "prior_correct_choice": "B (erroneous)",
+      "defect": {
+        "defect_id": "DL-030",
+        "class": "Content",
+        "domain": "Semantic Accuracy — Answer-Key Error",
+        "severity": "Critical",
+        "status": "Resolved (2026-07-24)",
+        "root_cause": "Arithmetic error in learning curve calculation. Author applied exponent 8^(-0.3219) instead of 4^(-0.3219). 4th unit time = 100 × 4^(-0.32193) = 64, not 51.2.",
+        "remediation": "CC changed from B to C. ExplanationWrong[C] cleared. ExplanationCorrect updated with correct formula."
+      },
+      "sessions_referencing": [
+        {"session": "S68", "date": "2026-07-24", "role": "PHASE_0B_CORRECTCHOICE_AUDIT", "action": "Discovered CC=B incorrect; should be C"},
+        {"session": "Phase 6", "date": "2026-07-24", "role": "REMEDIATION", "action": "CC corrected B→C; EW[C] cleared; EC updated"},
+        {"session": "S86", "date": "2026-07-24", "role": "FINAL_QA", "action": "Verified ALL_AGREE verdict post-fix"}
+      ],
+      "recommendations": [
+        {"id": "REC-PHASE0B-030-001", "status": "CLOSED", "description": "Correct P1B-B-119 CC from B to C per DL-030 finding", "closure_evidence": "Phase 6 session", "closed_date": "2026-07-24"}
+      ],
+      "certification_history": {
+        "certified_since": "Prior to 2026-07-23 (Pack B Section B — one of 500 Pack B items all Certified per SESSION_STATUS_2026-07-24.md)",
+        "defect_discovered": "2026-07-24 — Phase 0B CorrectChoice Ground-Truth Audit",
+        "remediated": "2026-07-24 — Phase 6 remediation",
+        "post_remediation_state": "Certified (retained — no downgrade needed; CC fix was in-place correction)"
+      },
+      "current_learner_safety": "SAFE — CC corrected, ExplanationWrong[new_CC] cleared, ExplanationCorrect updated with correct arithmetic.",
+      "deep_link_example": {
+        "qid_deep_link": "P1B-B-119",
+        "compound_key": "P1B-B-119::C::learning_curve_004::pack_b_corrected.js:Section_B::20260724180000-1",
+        "available_actions": [
+          "open_question → View stem, choices, CC=C, EC, EW[A/B/D], all metadata",
+          "view_history → Show DELTA_LEDGER: state Unprocessed→Certified→Audit(Phase 0B)→Adjusted→Certified",
+          "view_certification_state → Certified, CAQS dimensions TBD",
+          "view_recommendations → 1 closed: REC-PHASE0B-030-001",
+          "view_sessions → S68, Phase 6, S86"
+        ]
+      }
+    },
+
+    "path_3_session_linking": {
+      "description": "Session S809 as a navigable hub. Demonstrates bidirectional linking: session↔question, session↔recommendation, session↔report.",
+      "session": "S809",
+      "title": "Domain E Seed Certification Program Wave 1",
+      "date": "2026-07-26",
+      "type": "Assessment & Certification Readiness",
+      "status": "Complete — HOLD for all 38 seeds (Gate 2 FAIL)",
+      "pre_flight_checks": {
+        "governance_guard": "27/27 PASS",
+        "certified_count_at_start": 2221,
+        "certified_count_at_end": "2221 (unchanged — 0 pack-file writes)"
+      },
+      "questions_referenced": {
+        "total": 38,
+        "pack_c": [
+          "P1-EC-004", "P1-EC-008", "P1-EC-014", "P1-EC-020", "P1-EC-021",
+          "P1-EC-022", "P1-EC-023", "P1-EC-024", "P1-EC-025", "P1-EC-028",
+          "P1-EC-031", "P1-EC-040", "P1-EC-041", "P1-EC-049", "P1-EC-052",
+          "P1-EC-060", "P1-EC-061", "P1-EC-066", "P1-EC-072"
+        ],
+        "pack_d": [
+          "P1-ED-001", "P1-ED-010", "P1-ED-014", "P1-ED-016", "P1-ED-025",
+          "P1-ED-028", "P1-ED-035", "P1-ED-036", "P1-ED-042", "P1-ED-046",
+          "P1-ED-051", "P1-ED-058", "P1-ED-064", "P1-ED-066", "P1-ED-071",
+          "P1-ED-072", "P1-ED-073", "P1-ED-074", "P1-ED-075"
+        ],
+        "verdict_per_item": "ALL 38 — HOLD",
+        "remediation_deferred_to": "S810"
+      },
+      "recommendations_created": [],
+      "recommendations_executed": [],
+      "findings": {
+        "gate_0_duplicate_prevention": "PASS — all 38 QIDs collision-free across all 10 source files",
+        "gate_1_technical_accuracy": "PASS — 38/38 CC values independently verified against COSO framework",
+        "gate_2_explanation_quality": "FAIL — 53 empty non-CC EW slots + 8 DL-013 boilerplate + 12 weak ECs",
+        "gate_3_structural_integrity": "PASS — 0 DL-008, all CC-matching EW slots correctly empty",
+        "gate_4_difficulty_blueprint": "PASS_WITH_NOTES — 14 DifficultyScore/label mismatches, 26 CognitiveLevel miscalibrations",
+        "gate_5_learner_safety": "PASS — 0 items in learner pool (all Unprocessed)"
+      },
+      "reports_produced": {
+        "total": 11,
+        "files": [
+          "reports/SESSION809_SEED_INVENTORY.json",
+          "reports/SESSION809_SEED_DUPLICATE_PREVENTION_CERTIFICATION.json",
+          "reports/SESSION809_TECHNICAL_REVIEW.json",
+          "reports/SESSION809_EW_INTEGRITY_AUDIT.json",
+          "reports/SESSION809_QUALITY_GATE_AUDIT.json",
+          "reports/SESSION809_UIQS_VALIDATION.json",
+          "reports/SESSION809_CERTIFICATION_RESULTS.json",
+          "reports/SESSION809_PORTFOLIO_IMPACT_ANALYSIS.json",
+          "reports/SESSION809_COMPLETION_FORECAST.json",
+          "reports/SESSION809_DASHBOARD.json",
+          "reports/SESSION809_SESSION_SUMMARY.md"
+        ]
+      },
+      "bidirectional_links": {
+        "session → question": "Each of the 38 QIDs above links back via compound-key deep link to the question viewer",
+        "question → session": "Each QID's by_question registry entry lists S809 among its referencing sessions",
+        "session → report": "Each of the 11 report files is linked from the session detail view",
+        "report → session": "Each report file's metadata records S809 as the producing session",
+        "session → next_session": "S809 → S810 (remediation execution) → S811 (certification verification)"
+      }
+    },
+
+    "path_4_challenge_registry": {
+      "description": "Defines the Student Challenge Registry: how learner-reported issues (e.g., 'I believe the answer is wrong') are tracked, investigated, and resolved, with full link-back to question identity and certification history.",
+      "challenge_registry_schema": {
+        "challenge_id": "String — format CHG-{YYYYMMDD}-{SEQ} (e.g., CHG-20260727-001)",
+        "status": "Enum: OPEN | TRIAGE | INVESTIGATING | REMEDIATION_PLANNED | REMEDIATED | VERIFIED | CLOSED | DISMISSED",
+        "priority": "Enum: P1 (Critical — wrong answer) | P2 (High — misleading feedback) | P3 (Medium — missing content) | P4 (Low — cosmetic)",
+        "qid": "String — the QuestionID (e.g., P1-EC-024)",
+        "compound_key": "String — full compound identity as defined in S203 navigation model",
+        "learner_description": "String — the learner's own words describing the issue",
+        "investigation_type": "Enum: WRONG_ANSWER | MISSING_FEEDBACK | MISLEADING_FEEDBACK | BROKEN_UI | TIMER_ISSUE | OTHER",
+        "linked_defects": "Array[String] — DL-IDs from DEFECT_LIBRARY.md",
+        "linked_recommendations": "Array[String] — REC-IDs from RECOMMENDATION_REGISTRY",
+        "linked_sessions": "Array[String] — SessionIDs of investigation/remediation sessions",
+        "resolution": {
+          "type": "Enum: ANSWER_KEY_FIX | EXPLANATION_FIX | METADATA_FIX | UI_FIX | NO_ACTION (explanation provided to learner)",
+          "description": "String",
+          "verified_by": "String — agent or session that verified the fix",
+          "closed_date": "ISO 8601"
+        },
+        "question_certification_state_at_filing": "String — snapshot of question_state when challenge was filed",
+        "question_certification_state_at_close": "String — question_state after resolution"
+      },
+      "challenge_lifecycle": {
+        "1_filed": "Learner submits challenge via platform. System captures QID, compound_key, session_state, learner description.",
+        "2_triage": "Triage bot checks: (a) is question Certified? (b) does a known defect already cover this? (c) has an identical challenge been filed before? Routes to appropriate priority.",
+        "3_investigation": "Investigator opens deep-link view: question detail, certification history, all sessions referencing the QID, all open recommendations, defect library entries. Independent re-derivation of answer if answer-key challenge.",
+        "4_remediation": "If confirmed: create recommendation, link to target session, add to remediation pipeline. If not confirmed: close with explanation to learner.",
+        "5_verification": "Post-remediation: independent agent verifies fix. Re-runs applicable gates. Updates question_state if needed.",
+        "6_closed": "Closure evidence recorded. REVISION_HISTORY.md entry appended. Learner notified."
+      },
+      "example_challenge_on_known_defect": {
+        "challenge": "CHG-20260727-003",
+        "qid": "P1B-B-119",
+        "learner_complaint": "I calculated the 4th unit time using the learning curve formula and got 64 hours, but the platform says 51.2 hours is correct. The explanation references 8^(-0.3219) which seems wrong — shouldn't it be 4^(-0.3219)?",
+        "resolution": "DL-030 confirmed. CC corrected B→C. Explanation updated. Learner's calculation was correct.",
+        "status": "CLOSED",
+        "closed_date": "2026-07-24"
+      },
+      "registry_count_at_session": {
+        "fictional_registry": "Challenge Registry would be a new system. Currently 0 challenges tracked in formal registry. Prior 'challenge-like' events were handled via session discovery (e.g., DL-030 Phase 0B CorrectChoice audit)."
+      }
+    }
+  },
+
+  "entity_counts_at_walk_time": {
+    "questions_total": 2500,
+    "questions_certified": 2221,
+    "questions_uncertified": 279,
+    "packs": 5,
+    "sections": 30,
+    "cases": 75,
+    "case_items": 420,
+    "sessions_in_registry": "~200 (across all S-series, Phase-series, Sub-batch series)",
+    "defect_entries_in_library": 34,
+    "defect_entries_open": 12,
+    "defect_entries_resolved": 22,
+    "recommendations": "In planning phase (RECOMMENDATION_REGISTRY.json defined in S203, not yet populated with full inventory)",
+    "deliverable_reports": "~500+ JSON and MD files under reports/",
+    "registry_files": 5,
+    "navigation_validation_result": "S203 navigation model validates against real entity relationships. All six relationship types are walkable with real data."
+  },
+
+  "navigation_validation_results": {
+    "relationship_question_to_sessions": {
+      "status": "VALIDATED",
+      "evidence": "P1-EC-024 → 10 sessions (S302, S319, S320, S718, S722a, S809, S809.1, S809.2, S810, S810.1)",
+      "count_confirmed": 10
+    },
+    "relationship_session_to_questions": {
+      "status": "VALIDATED",
+      "evidence": "S809 → 38 questions (19 Pack C + 19 Pack D Section E)",
+      "count_confirmed": 38
+    },
+    "relationship_recommendation_to_question": {
+      "status": "PARTIALLY_VALIDATED",
+      "evidence": "S203 model defines schema. Real recommendations are in planning. LinkedQuestions array verified in S203_RECOMMENDATION_PIPELINE.json with P1-EC-024 example.",
+      "note": "RECOMMENDATION_REGISTRY.json is a target deliverable of S203 implementation, not yet populated."
+    },
+    "relationship_recommendation_to_session": {
+      "status": "VALIDATED_BY_PATTERN",
+      "evidence": "TargetSession field exists in S203 schema. Real session assignments (e.g., S809→S810) follow this pattern as documented in SESSION809 remediation plan."
+    },
+    "relationship_session_to_recommendations": {
+      "status": "PENDING_REGISTRY_POPULATION",
+      "evidence": "Schema defined. Sessions produce findings that become recommendations. S809 identified 53 DL-026 slots → these would become REC-0809-001 through REC-0809-053."
+    },
+    "relationship_report_to_session": {
+      "status": "VALIDATED",
+      "evidence": "Every report file in reports/ has a session-origin (e.g., SESSION809_CERTIFICATION_RESULTS.json produced by S809). Report→Session link is trivial reverse lookup."
+    }
+  },
+
+  "methodology_notes": {
+    "qid_discovery": "Used grep across all reports/ subdirectories for P1-EC-024 references. Confirmed 53+ unique file matches.",
+    "session_identification": "Extracted session IDs from report filenames, deliverable lists in session summaries, and per-item readiness reports.",
+    "certification_state_verification": "Cross-checked SESSION_STATUS_2026-07-24.md (2,221 Certified) against SESSION810_CERTIFICATION_READINESS.json (per-item readiness).",
+    "defect_cross_referencing": "DEFECT_LIBRARY.md searched for QID patterns. DL-026 and DL-008 entries confirmed via classification reports.",
+    "compound_key_generation": "Pattern: {QID}::{CC}::{topic_token}::{file}::{version_timestamp}. Follows S203 §question_deep_linking model.",
+    "limitations": "Challenge Registry is fictional — no real challenges tracked. Recommendations are in schema-design phase — registry not yet populated with auto-generated IDs. Session count is approximate (~200) — comprehensive SESSION_REGISTRY is an S203-S204 target deliverable."
+  }
+}

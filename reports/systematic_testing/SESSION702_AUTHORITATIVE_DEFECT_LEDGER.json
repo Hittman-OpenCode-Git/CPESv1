@@ -1,0 +1,302 @@
+{
+  "session": "702",
+  "timestamp": "2026-07-25",
+  "synthesizing_agent": "E",
+  "source_reports": [
+    "SESSION702_PACK_A_BOUNDARY_QC.json (Agent A)",
+    "SESSION702_PACK_C_DL008_RECONCILIATION.json (Agent B)",
+    "SESSION702_PACK_D_PARSE_AND_DL008_RECONCILIATION.json (Agent C)",
+    "SESSION702_CROSS_PACK_STATE_AUDIT.json (Agent D)"
+  ],
+  "methodology": {
+    "pack_a": "Direct line-level inspection, content-block-only CorrectChoice extraction (G-NEW-3 compliant)",
+    "pack_c": "Function-constructor parse with within-object CorrectChoice extraction",
+    "pack_d": "String-aware brace-matched object extraction (Function-constructor blocked by BD-095 missing comma)",
+    "cross_pack": "Select-String + state-field grep across all 5 packs"
+  },
+  "summary_counts": {
+    "total_qids_cross_pack": 2500,
+    "total_certified": 2179,
+    "total_editorial_queue": 2,
+    "total_archived": 131,
+    "total_unprocessed": 188,
+    "confirmed_dl008_certified": {
+      "pack_a": 1,
+      "pack_c": 52,
+      "pack_d": 20,
+      "total": 73
+    },
+    "confirmed_dl016_shift": {
+      "pack_a_section_b_group1": 4
+    },
+    "parse_blockers": {
+      "pack_d": 1
+    },
+    "missing_required_fields": {
+      "pack_d": 1
+    },
+    "confirmed_false_positives": {
+      "pack_a": 2,
+      "pack_c": 0,
+      "pack_d": 3
+    }
+  },
+  "entries": {
+    "pack_a": [
+      {
+        "qid": "P1-B-001",
+        "pack": "A",
+        "section": "B",
+        "state": "Editorial Queue",
+        "defect_type": "DL-008_PLUS_DL-016",
+        "classification": "CONFIRMED_DEFECT",
+        "finding_agent": "A",
+        "recommended_session": "S705",
+        "cw_cc_nonempty": true,
+        "notes": "Content CC=D but EW_D non-empty (389 chars about top-down budgeting). Metadata authored for CC=B (EW_B empty). All EWs describe B-002's top-down-budgeting topic, not B-001's mission-to-tactical-planning. Needs EW rewrite + CC audit."
+      },
+      {
+        "qid": "P1-B-002",
+        "pack": "A",
+        "section": "B",
+        "state": "Certified",
+        "defect_type": "DL-016_SHIFT",
+        "classification": "CONFIRMED_DEFECT",
+        "finding_agent": "A",
+        "recommended_session": "S705",
+        "cw_cc_nonempty": false,
+        "notes": "CC=B matches EW_B empty. But EWs describe B-003's participative-budgeting topic, not B-002's top-down budgeting. Needs EW rewrite."
+      },
+      {
+        "qid": "P1-B-003",
+        "pack": "A",
+        "section": "B",
+        "state": "Certified",
+        "defect_type": "DL-016_SHIFT",
+        "classification": "CONFIRMED_DEFECT",
+        "finding_agent": "A",
+        "recommended_session": "S705",
+        "cw_cc_nonempty": false,
+        "notes": "CC=B matches EW_B empty. But EWs describe B-004's rolling-budget topic, not B-003's participative budgeting. Needs EW rewrite."
+      },
+      {
+        "qid": "P1-B-004",
+        "pack": "A",
+        "section": "B",
+        "state": "Certified",
+        "defect_type": "CLEAN",
+        "classification": "CLEAN",
+        "finding_agent": "A",
+        "recommended_session": null,
+        "cw_cc_nonempty": false,
+        "notes": "Only clean item in Rotation Group 1. All EWs topically aligned and choice-specific to rolling budget. CC=B, EW_B empty."
+      },
+      {
+        "qid": "P1-B-005",
+        "pack": "A",
+        "section": "B",
+        "state": "Certified",
+        "defect_type": "DL-016_SHIFT",
+        "classification": "CONFIRMED_DEFECT",
+        "finding_agent": "A",
+        "recommended_session": "S705",
+        "cw_cc_nonempty": false,
+        "notes": "EW_C empty, content CC presumed C. EWs describe B-006's ABB topic, not B-005's zero-based budgeting. Needs EW rewrite."
+      },
+      {
+        "qid": "P1-B-025",
+        "pack": "A",
+        "section": "B",
+        "state": "Editorial Queue",
+        "defect_type": "FALSE_POSITIVE",
+        "classification": "FALSE_POSITIVE",
+        "finding_agent": "A",
+        "recommended_session": "S705",
+        "cw_cc_nonempty": false,
+        "notes": "S701 demotion was a false positive. All EW fields are choice-specific and topically aligned to forecast error analysis. Topic label 'B.026' is a DL-015 cosmetic numbering artifact. Item should be re-Certified."
+      },
+      {
+        "qid": "P1E-F-001",
+        "pack": "A",
+        "section": "F",
+        "state": "Certified",
+        "defect_type": "FALSE_POSITIVE",
+        "classification": "FALSE_POSITIVE",
+        "finding_agent": "A",
+        "recommended_session": null,
+        "cw_cc_nonempty": false,
+        "notes": "S700 DL-010 flag was a definite false positive. All EW fields describe analytics concepts (diagnostic, predictive, prescriptive). Zero labor-efficiency text. DL-029 scan artifact from regex-window overscan."
+      }
+    ],
+    "pack_c": [
+      {"qid": "P1-AC-001", "pack": "C", "section": "A", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty (bond premium text). EW topic mismatch. Needs CC audit before EW clear."},
+      {"qid": "P1-BC-001", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW describes incremental budgeting, not flexible budgeting. Needs CC audit."},
+      {"qid": "P1-BC-002", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty but EW topic matches stem. Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-003", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-004", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-005", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-006", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty but EW topic matches stem. Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-007", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty but EW topic matches stem. Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-009", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-010", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty. EW topic mismatch (regression analysis text, not item's topic). Needs CC audit."},
+      {"qid": "P1-BC-013", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-016", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-017", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-020", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-021", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-024", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty but EW topic matches stem (ZBB vs incremental). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-025", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (regression text). Needs CC audit."},
+      {"qid": "P1-BC-028", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty but EW topic matches stem. Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-029", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch. Needs CC audit."},
+      {"qid": "P1-BC-032", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty but EW topic matches stem (sales budget foundation). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-033", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (regression text). Needs CC audit."},
+      {"qid": "P1-BC-037", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (regression text). Needs CC audit."},
+      {"qid": "P1-BC-041", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (rolling forecast text). Needs CC audit."},
+      {"qid": "P1-BC-045", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (rolling forecast text). Needs CC audit."},
+      {"qid": "P1-BC-049", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (ZBB vs rolling). Needs CC audit."},
+      {"qid": "P1-BC-053", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (rolling forecast text). Needs CC audit."},
+      {"qid": "P1-BC-057", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty but EW topic matches stem (top-down budgeting). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-058", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty. EW topic mismatch (high-low method text). Needs CC audit."},
+      {"qid": "P1-BC-059", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty but EW topic matches stem (learning curve). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-061", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (rolling forecast text). Needs CC audit."},
+      {"qid": "P1-BC-065", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (rolling forecast text). Needs CC audit."},
+      {"qid": "P1-BC-069", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (ABB vs ZBB text). Needs CC audit."},
+      {"qid": "P1-BC-073", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty. EW topic mismatch (kaizen vs ZBB). Needs CC audit."},
+      {"qid": "P1-BC-074", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty but EW topic matches stem (capital vs operational budgeting). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-075", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty but EW topic matches stem (budgetary control vs external reporting). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-076", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty. EW topic mismatch (incremental vs kaizen). Needs CC audit."},
+      {"qid": "P1-BC-077", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty but EW topic matches stem (kaizen vs ZBB). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-078", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty but EW topic matches stem (incremental vs kaizen). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-079", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty but EW topic matches stem (ABB vs kaizen). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-080", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty but EW topic matches stem (incremental vs kaizen). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-081", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty but EW topic matches stem (incremental vs kaizen). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-082", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty. EW topic mismatch (moving average text). Needs CC audit."},
+      {"qid": "P1-BC-083", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty. EW topic mismatch (moving average text). Needs CC audit."},
+      {"qid": "P1-BC-084", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty but EW topic matches stem (moving average). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-088", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty. EW topic mismatch (responsibility accounting vs sensitivity). Needs CC audit."},
+      {"qid": "P1-BC-095", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty but EW topic matches stem (budgetary slack). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-096", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty but EW topic matches stem (budgetary slack). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-097", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty but EW topic matches stem (budgetary slack). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-098", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty but EW topic matches stem (budgetary slack). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-099", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty but EW topic matches stem (budgetary slack). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BC-100", "pack": "C", "section": "B", "state": "Certified", "defect_type": "DL-008_PLUS_DL-016", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty. EW topic mismatch (ROI dashboard vs BSC). Needs CC audit."},
+      {"qid": "P1-DC-019", "pack": "C", "section": "D", "state": "Certified", "defect_type": "DL-008_ONLY", "classification": "CONFIRMED_DEFECT", "finding_agent": "B", "recommended_session": "S703", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty but EW topic matches stem (physical units joint cost). Safe for simple EW[CC] clear. Section D outlier — likely missed by S700."}
+    ],
+    "pack_d": [
+      {"qid": "P1-AD-047", "pack": "D", "section": "A", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty (ASC 330 inventory text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-AD-048", "pack": "D", "section": "A", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty (consigned goods text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-AD-054", "pack": "D", "section": "A", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty (basic EPS calculation text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-AD-055", "pack": "D", "section": "A", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty (straight-line depreciation text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-017", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty (direct materials budget text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-021", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty (direct labor budget text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-022", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty (direct labor budget text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-023", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty (direct labor budget text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-024", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty (direct labor budget text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-057", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty (sales forecast elimination text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-058", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty (sales forecast cornerstone text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-059", "pack": "D", "section": "B", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty (budgetary slack elimination text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-CD-002", "pack": "D", "section": "C", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty (hours/rate deviation text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-CD-003", "pack": "D", "section": "C", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty (rate variance to standard hours text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-CD-006", "pack": "D", "section": "C", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty (rate variance to standard hours text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-CD-022", "pack": "D", "section": "C", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty (revenue center vs profit center text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-CD-023", "pack": "D", "section": "C", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=C, EW_C non-empty (cost center vs profit center text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-CD-034", "pack": "D", "section": "C", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=B, EW_B non-empty (dual-rate transfer pricing text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-DD-028", "pack": "D", "section": "D", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=D, EW_D non-empty (unit conversion error text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-DD-029", "pack": "D", "section": "D", "state": "Certified", "defect_type": "DL-008", "classification": "CONFIRMED_DEFECT", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": true, "notes": "CC=A, EW_A non-empty (unit conversion error text). Safe for simple EW[CC] clear."},
+      {"qid": "P1-BD-001", "pack": "D", "section": "B", "state": "Certified", "defect_type": "FALSE_POSITIVE", "classification": "FALSE_POSITIVE", "finding_agent": "C", "recommended_session": null, "cw_cc_nonempty": false, "notes": "Governance register incorrectly flagged as DL-008. CC=A, EW_A=\"\" confirmed at line 3871. Structurally clean."},
+      {"qid": "P1-BD-095", "pack": "D", "section": "B", "state": "Certified", "defect_type": "PARSE_BLOCKER", "classification": "PARSE_BLOCKER", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": false, "notes": "Missing comma between ExplanationWrongD and question_state at line 8537. Blocks all JavaScript parse methods (require, Function, eval). CC=C, EW_C=\"\" once comma is fixed — DL-008 clean. Repair before S704 remediation."},
+      {"qid": "P1-FD-045", "pack": "D", "section": "F", "state": "Unprocessed", "defect_type": "FALSE_POSITIVE", "classification": "FALSE_POSITIVE", "finding_agent": "C", "recommended_session": null, "cw_cc_nonempty": false, "notes": "Claimed 'missing CorrectChoice' by S701. FALSE — CorrectChoice=B is present and valid at line 23210. EW_B=\"\" clean. A structurally complete item. AGENTS.md §13.2 CAPA controls can proceed."},
+      {"qid": "P1-FD-046", "pack": "D", "section": "F", "state": "Unprocessed", "defect_type": "MISSING_REQUIRED_FIELD", "classification": "MISSING_REQUIRED_FIELD", "finding_agent": "C", "recommended_session": "S704", "cw_cc_nonempty": false, "notes": "Shell item at lines 23242-23261. Only metadata fields present. MISSING: Part, Section, SectionName, Topic, Stem, Choices, CorrectChoice, ExplanationCorrect. Not a parse blocker (JSON is well-formed) but structurally incomplete for delivery. This is the actual missing-CC item, not FD-045."},
+      {"qid": "P1-FD-075", "pack": "D", "section": "F", "state": "Unprocessed", "defect_type": "FALSE_POSITIVE", "classification": "FALSE_POSITIVE", "finding_agent": "C", "recommended_session": null, "cw_cc_nonempty": false, "notes": "Claimed 'missing CorrectChoice' by S701. FALSE — CorrectChoice=C is present and valid at line 24652. EW_C=\"\" clean. Structurally complete."}
+    ]
+  },
+  "discrepancy_resolution": {
+    "pack_c_dl008_certified": {
+      "s700_claim": 51,
+      "session_status_claim": 55,
+      "governance_register_claim": 174,
+      "s702_authoritative": 52,
+      "root_cause": "S700 was essentially correct (51 vs 52 — missed P1-DC-019 Section D outlier). SESSION_STATUS was close (55 vs 52 — may have included 3 DL-018 items). Governance register (174) was massively wrong — likely counted via DL-029 forward-scan or included all Pack C items rather than just those with DL-008."
+    },
+    "pack_d_dl008_certified": {
+      "s700_claim": 342,
+      "session_status_claim": 10,
+      "governance_register_claim": 1,
+      "s702_authoritative": 20,
+      "root_cause": "S700 ~342 was a DL-029 forward-scan artifact. In Pack D, CorrectChoice is positioned BEFORE QuestionID in the JSON object. Forward-scan from QID systematically grabs the NEXT item's CC, producing ~75% false-positive rate × 500 items ≈ 340-375 false positives. SESSION_STATUS was directionally correct (found 11 of 20) but undercounted Sections A/C. Governance register BD-001 flag was a false positive."
+    },
+    "pack_a_dl008_certified": {
+      "s700_claim": 2,
+      "s702_authoritative": 1,
+      "root_cause": "P1-B-001 confirmed, P1-B-025 was a false positive. B-025's EW fields are choice-specific and topically aligned; the DL-015 topic-label numbering artifact (B.026 vs expected B.025) likely triggered the false finding."
+    },
+    "fd045_missing_cc": {
+      "s701_claim": "CRITICAL — missing CorrectChoice",
+      "s702_authoritative": "FALSE — CC=B present and valid",
+      "root_cause": "S701 claim was incorrect. FD-045 is structurally complete."
+    },
+    "fd075_missing_cc": {
+      "s701_claim": "CRITICAL — missing CorrectChoice",
+      "s702_authoritative": "FALSE — CC=C present and valid",
+      "root_cause": "S701 claim was incorrect. FD-075 is structurally complete."
+    },
+    "bd095_parse_error": {
+      "s701_claim": "Yes — parse error",
+      "s702_authoritative": "TRUE — missing comma at line 8537",
+      "root_cause": "S701 correctly identified this. Confirmed by Agent C."
+    },
+    "fd046_missing_cc": {
+      "prior_claims": "Not flagged in prior sessions",
+      "s702_authoritative": "TRUE — shell item with no CorrectChoice",
+      "root_cause": "FD-046 is the actual item with missing content fields. Was not flagged by S701. FD-045 was incorrectly flagged instead."
+    }
+  },
+  "remediation_roadmap": {
+    "session_description_order": "S703/S704/S705 describe the work to be done, not the order it must be done in",
+    "s703": {
+      "title": "Pack C DL-008 Remediation",
+      "items": 52,
+      "batches_estimated": 4,
+      "strategy": "Batch 1: 22 DL-008_ONLY (simple EW[CC] clear, no CC audit needed). Batches 2-4: 30 DL-008_PLUS_DL-016 (CC audit first, then EW[CC] clear or CC correction).",
+      "critical_warning": "For 30 items with DL-016 shift, clearing EW[CC] without auditing CC risks clearing the wrong slot. The metadata block's EW alignment may not match the content block's CorrectChoice. Use G-NEW-3 within-object extraction."
+    },
+    "s704": {
+      "title": "Pack D Parse Repair + DL-008 Remediation",
+      "items": "1 parse repair (BD-095) + 21 structural (20 DL-008 + 1 FD-046 shell)",
+      "batches_estimated": 3,
+      "strategy": "Step 1: Fix BD-095 missing comma (mechanical, 1 edit). Step 2: Clear EW[CC] on 20 DL-008 items (all DL-008_ONLY — simple clear). Step 3: Assess FD-046 (shell item — either populate content fields or set to Archived).",
+      "critical_warning": "Do not edit FD-045 or FD-075 — both are structurally complete. AGENTS.md §13.2 FD-045 CAPA can proceed."
+    },
+    "s705": {
+      "title": "Pack A DL-016 Remediation + State Corrections",
+      "items": "4 DL-016 shifts + 1 re-certification + 1 demotion upheld",
+      "batches_estimated": 1,
+      "strategy": "Step 1: Rewrite EWs for B-002, B-003, B-005 to match their actual Stems. Step 2: Re-Certify B-025 (false positive demotion). Step 3: Keep B-001 in Editorial Queue (genuine DL-008+DL-016, needs EW rewrite).",
+      "critical_warning": "B-001 needs BOTH DL-008 fix AND DL-016 fix. Most complex single item in this ledger."
+    },
+    "s706_optional": {
+      "title": "Difficulty Recalibration",
+      "items": "DL-031 (~500 items across all packs) + DL-032 (420 case items)",
+      "strategy": "Non-blocking pedagogical improvements. No rush."
+    }
+  },
+  "defect_counts_by_classification": {
+    "confirmed_defect": 77,
+    "false_positive": 6,
+    "scan_artifact": 0,
+    "count_discrepancy": 0,
+    "parse_blocker": 1,
+    "missing_required_field": 1,
+    "manual_review": 0,
+    "deferred_remediation": 0,
+    "clean": 1
+  },
+  "governance_attestation": {
+    "all_agents_object_bounded": true,
+    "zero_content_edits": true,
+    "zero_answer_key_edits": true,
+    "zero_certification_state_edits": true,
+    "preflight_304_of_304_pass": true,
+    "methodology_compliant_g_new_3": true
+  }
+}

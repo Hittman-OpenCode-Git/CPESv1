@@ -1,0 +1,471 @@
+﻿{
+  "title": "SESSION312_DOMAIN_E_REPLACEMENT_INVENTORY",
+  "session": "312",
+  "generated": "2026-07-26T23:57:30.172Z",
+  "methodology": "JSON parse of all 5 pack files, Section E filter, clone-group analysis by MicroTopic",
+  "packSummaries": {
+    "a": {
+      "total": 75,
+      "byState": {
+        "Certified": 58,
+        "Archived": 17
+      }
+    },
+    "b": {
+      "total": 75,
+      "byState": {
+        "Certified": 75
+      }
+    },
+    "c": {
+      "total": 75,
+      "byState": {
+        "Archived": 56,
+        "Unprocessed": 19
+      }
+    },
+    "d": {
+      "total": 75,
+      "byState": {
+        "Unprocessed": 19,
+        "Archived": 56
+      }
+    },
+    "e": {
+      "total": 75,
+      "byState": {
+        "Certified": 75
+      }
+    }
+  },
+  "totalDomainE": 375,
+  "distributions": {
+    "cognitiveLevel": {
+      "Understand": 278,
+      "Apply": 91,
+      "Remember": 4,
+      "Analyze": 2
+    },
+    "difficulty": {
+      "Moderate-Easy": 90,
+      "Easy": 97,
+      "Moderate": 178,
+      "Difficult": 10
+    },
+    "difficultyScore": {
+      "1": 93,
+      "2": 126,
+      "3": 153,
+      "4": 3,
+      "5": 0
+    }
+  },
+  "cloneGroupCount": 33,
+  "cloneGroups_top15": [
+    {
+      "microTopic": "management override risk",
+      "count": 6,
+      "packs": [
+        "a",
+        "c"
+      ],
+      "states": [
+        "Certified",
+        "Unprocessed",
+        "Archived"
+      ],
+      "qids": [
+        "P1-E-021",
+        "P1-EC-041",
+        "P1-EC-042",
+        "P1-EC-043",
+        "P1-EC-044",
+        "P1-EC-045"
+      ],
+      "topics": [
+        "E.021 management override risk",
+        "E.041 management override risk",
+        "E.042 management override risk"
+      ]
+    },
+    {
+      "microTopic": "it general controls access",
+      "count": 6,
+      "packs": [
+        "a",
+        "c"
+      ],
+      "states": [
+        "Certified",
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-E-077",
+        "P1-EC-036",
+        "P1-EC-037",
+        "P1-EC-038",
+        "P1-EC-039",
+        "P1-EC-040"
+      ],
+      "topics": [
+        "E.077 it general controls access",
+        "E.036 it general controls access",
+        "E.037 it general controls access"
+      ]
+    },
+    {
+      "microTopic": "inherent risk vs control risk",
+      "count": 6,
+      "packs": [
+        "a",
+        "c"
+      ],
+      "states": [
+        "Certified",
+        "Unprocessed",
+        "Archived"
+      ],
+      "qids": [
+        "P1-E-078",
+        "P1-EC-061",
+        "P1-EC-062",
+        "P1-EC-063",
+        "P1-EC-064",
+        "P1-EC-065"
+      ],
+      "topics": [
+        "E.078 inherent risk vs control risk",
+        "E.061 inherent risk vs control risk",
+        "E.062 inherent risk vs control risk"
+      ]
+    },
+    {
+      "microTopic": "segregation of duties design",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-001",
+        "P1-EC-002",
+        "P1-EC-003",
+        "P1-EC-004",
+        "P1-EC-005"
+      ],
+      "topics": [
+        "E.001 segregation of duties design",
+        "E.002 segregation of duties design",
+        "E.003 segregation of duties design"
+      ]
+    },
+    {
+      "microTopic": "coso internal control framework",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-006",
+        "P1-EC-007",
+        "P1-EC-008",
+        "P1-EC-009",
+        "P1-EC-010"
+      ],
+      "topics": [
+        "E.006 coso internal control framework",
+        "E.007 coso internal control framework",
+        "E.008 coso internal control framework"
+      ]
+    },
+    {
+      "microTopic": "fraud triangle elements",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-011",
+        "P1-EC-012",
+        "P1-EC-013",
+        "P1-EC-014",
+        "P1-EC-015"
+      ],
+      "topics": [
+        "E.011 fraud triangle elements",
+        "E.012 fraud triangle elements",
+        "E.013 fraud triangle elements"
+      ]
+    },
+    {
+      "microTopic": "physical controls over assets",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-016",
+        "P1-EC-017",
+        "P1-EC-018",
+        "P1-EC-019",
+        "P1-EC-020"
+      ],
+      "topics": [
+        "E.016 physical controls over assets",
+        "E.017 physical controls over assets",
+        "E.018 physical controls over assets"
+      ]
+    },
+    {
+      "microTopic": "bank reconciliation control",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-026",
+        "P1-EC-027",
+        "P1-EC-028",
+        "P1-EC-029",
+        "P1-EC-030"
+      ],
+      "topics": [
+        "E.026 bank reconciliation control",
+        "E.027 bank reconciliation control",
+        "E.028 bank reconciliation control"
+      ]
+    },
+    {
+      "microTopic": "erm risk appetite",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Unprocessed",
+        "Archived"
+      ],
+      "qids": [
+        "P1-EC-031",
+        "P1-EC-032",
+        "P1-EC-033",
+        "P1-EC-034",
+        "P1-EC-035"
+      ],
+      "topics": [
+        "E.031 erm risk appetite",
+        "E.032 erm risk appetite",
+        "E.033 erm risk appetite"
+      ]
+    },
+    {
+      "microTopic": "whistleblower hotline purpose",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-046",
+        "P1-EC-047",
+        "P1-EC-048",
+        "P1-EC-049",
+        "P1-EC-050"
+      ],
+      "topics": [
+        "E.046 whistleblower hotline purpose",
+        "E.047 whistleblower hotline purpose",
+        "E.048 whistleblower hotline purpose"
+      ]
+    },
+    {
+      "microTopic": "compensating control small business",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-051",
+        "P1-EC-052",
+        "P1-EC-053",
+        "P1-EC-054",
+        "P1-EC-055"
+      ],
+      "topics": [
+        "E.051 compensating control small business",
+        "E.052 compensating control small business",
+        "E.053 compensating control small business"
+      ]
+    },
+    {
+      "microTopic": "control environment tone at top",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-056",
+        "P1-EC-057",
+        "P1-EC-058",
+        "P1-EC-059",
+        "P1-EC-060"
+      ],
+      "topics": [
+        "E.056 control environment tone at top",
+        "E.057 control environment tone at top",
+        "E.058 control environment tone at top"
+      ]
+    },
+    {
+      "microTopic": "segregation cash custody recording",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Unprocessed",
+        "Archived"
+      ],
+      "qids": [
+        "P1-EC-066",
+        "P1-EC-067",
+        "P1-EC-068",
+        "P1-EC-069",
+        "P1-EC-070"
+      ],
+      "topics": [
+        "E.066 segregation cash custody recording",
+        "E.067 segregation cash custody recording",
+        "E.068 segregation cash custody recording"
+      ]
+    },
+    {
+      "microTopic": "remediation of control deficiency",
+      "count": 5,
+      "packs": [
+        "c"
+      ],
+      "states": [
+        "Archived",
+        "Unprocessed"
+      ],
+      "qids": [
+        "P1-EC-071",
+        "P1-EC-072",
+        "P1-EC-073",
+        "P1-EC-074",
+        "P1-EC-075"
+      ],
+      "topics": [
+        "E.071 remediation of control deficiency",
+        "E.072 remediation of control deficiency",
+        "E.073 remediation of control deficiency"
+      ]
+    },
+    {
+      "microTopic": "three lines of defense model",
+      "count": 5,
+      "packs": [
+        "d"
+      ],
+      "states": [
+        "Unprocessed",
+        "Archived"
+      ],
+      "qids": [
+        "P1-ED-001",
+        "P1-ED-002",
+        "P1-ED-003",
+        "P1-ED-004",
+        "P1-ED-005"
+      ],
+      "topics": [
+        "E.001 three lines of defense model",
+        "E.002 three lines of defense model",
+        "E.003 three lines of defense model"
+      ]
+    }
+  ],
+  "ewCoverage": {
+    "a": {
+      "totalItems": 75,
+      "ewComplete": 0,
+      "ewPartial": 75,
+      "ewNone": 0
+    },
+    "b": {
+      "totalItems": 75,
+      "ewComplete": 0,
+      "ewPartial": 75,
+      "ewNone": 0
+    },
+    "c": {
+      "totalItems": 75,
+      "ewComplete": 0,
+      "ewPartial": 75,
+      "ewNone": 0
+    },
+    "d": {
+      "totalItems": 75,
+      "ewComplete": 0,
+      "ewPartial": 75,
+      "ewNone": 0
+    },
+    "e": {
+      "totalItems": 75,
+      "ewComplete": 0,
+      "ewPartial": 75,
+      "ewNone": 0
+    }
+  },
+  "actionableItems": {
+    "archivedCount": 129,
+    "unprocessedCount": 38,
+    "certifiedCount": 208,
+    "archivedByPack": {
+      "a": 17,
+      "b": 0,
+      "c": 56,
+      "d": 56,
+      "e": 0
+    },
+    "unprocessedByPack": {
+      "a": 0,
+      "b": 0,
+      "c": 19,
+      "d": 19,
+      "e": 0
+    }
+  }
+}

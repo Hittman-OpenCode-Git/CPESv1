@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "session": "515",
+    "agent": "A (orchestrator)",
+    "timestamp": "2026-07-25T22:00:00Z",
+    "mode": "PRE-FLIGHT — READ-ONLY",
+    "working_directory": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026",
+    "git_available": false
+  },
+  "pre_flight_test_suites": [
+    { "suite": "test_governance_guard.js", "passed": 20, "failed": 0, "result": "PASS" },
+    { "suite": "test_session_recovery.js", "passed": 12, "failed": 0, "result": "PASS" }
+  ],
+  "pre_flight_total": "32/32 PASS",
+  "count_reconciliation": {
+    "MIGRATED_CASE_BASE_B": {
+      "file": "scored_cases2.js",
+      "cases": 15,
+      "items": 75,
+      "certified_items": 75,
+      "unprocessed_items": 0,
+      "method": "Function constructor parse",
+      "verified": true,
+      "note": "S513/S514 claim of 75/75 Certified confirmed. CBQ2-A3 is in ENHANCED_CASE_BASE2 (sibling array in same file), NOT in MIGRATED_CASE_BASE_B.",
+      "discrepancy_resolved": "The S515 prompt referenced 'CBQ2-A3 discrepancy in MIGRATED_CASE_BASE_B' — this was a naming confusion. CBQ2-A3 is in ENHANCED_CASE_BASE2 (73/78 Certified). MIGRATED_CASE_BASE_B is fully certified."
+    },
+    "CBQ2_A3_ENHANCED_CASE_BASE2": {
+      "file": "scored_cases2.js",
+      "array": "ENHANCED_CASE_BASE2",
+      "cases": 1,
+      "items": 5,
+      "certified_items": 0,
+      "unprocessed_items": 5,
+      "item_ids": ["CBQ2-A3-Q1", "CBQ2-A3-Q2", "CBQ2-A3-Q3", "CBQ2-A3-Q4", "CBQ2-A3-Q5"],
+      "note": "Prelude target confirmed — 5 Unprocessed items as reported by S514."
+    },
+    "MIGRATED_CASE_BASE_C": {
+      "file": "scored_cases3.js",
+      "cases": 15,
+      "items": 75,
+      "certified_items": 0,
+      "unprocessed_items": 75,
+      "method": "Function constructor parse",
+      "verified": true,
+      "discrepancy_resolved": "Prior summaries reported 84 items. The correct count is 75 items (15 cases × 5 items each). The 84-item count was from ENHANCED_CASE_BASE3 (79 items), not MIGRATED_CASE_BASE_C. CONFIRMED: 15 cases, 75 items, all Unprocessed."
+    }
+  },
+  "concurrency_guard": {
+    "may_files_checked": true,
+    "may_files_in_scope": false,
+    "pack_a_e_files_checked": true,
+    "pack_files_in_scope": false,
+    "scored_cases1_4_5_checked": true,
+    "scored_cases1_4_5_in_scope": false,
+    "app_js_checked": true,
+    "app_js_in_scope": false,
+    "status": "CLEAN — no 100-series or 700-series files in working scope"
+  },
+  "parse_status": {
+    "scored_cases2_js": "PARSE OK — 2 arrays (ENHANCED_CASE_BASE2: 15 cases/78 items; MIGRATED_CASE_BASE_B: 15 cases/75 items)",
+    "scored_cases3_js": "PARSE OK — 2 arrays (ENHANCED_CASE_BASE3: 15 cases/79 items; MIGRATED_CASE_BASE_C: 15 cases/75 items)"
+  }
+}

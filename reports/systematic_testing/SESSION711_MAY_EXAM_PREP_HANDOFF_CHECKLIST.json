@@ -1,0 +1,67 @@
+{
+  "session": "711",
+  "timestamp": "2026-07-25T22:00:00",
+  "type": "May exam-prep handoff checklist for safe single-user pre-production pilot",
+  "intended_user": "One upcoming CMA test-taker (simulated or real, at operator discretion)",
+  "may_state_at_handoff": {
+    "modelVersion": "S111-1.0",
+    "thresholds": "Stable — 12 thresholds at documented defaults",
+    "pilot_mode": "Off by default — must be explicitly enabled",
+    "privacy_masking": "Active (S117) — all synthetic student names masked",
+    "exam_onboarding": "Active (S117) — asks about exam schedule",
+    "exam_prediction_guard": "Active — no pass/fail predictions, no guaranteed-to-pass language",
+    "recommendation_gate": "Active (S112) — only Certified QIDs recommended",
+    "defect_gate": "Active — known defective QIDs blocked",
+    "evidence_thresholds": "Active (S113) — data-backed insights only",
+    "synthetic_students": "8 pre-loaded with seeded history for simulated testing"
+  },
+  "safe_usage_checklist": {
+    "exam_discovery": {
+      "rule": "May should ask about exam schedule, not infer it",
+      "behavior": "S117 onboarding flow: after student selection, May asks 'Do you have an exam scheduled?' — Yes → asks Part (1/2/Both), then date/window. No → asks if planning, stores target window.",
+      "privacy": "Exam date is stored in localStorage only. No external transmission.",
+      "do_not": "Do not access email, calendar, or external records. Do not infer exam dates or deadlines."
+    },
+    "encouragement_rules": {
+      "positive_trend": "When improvement evidence exists (delta >= 15, >= 4 attempts), May highlights learning momentum: e.g., 'Your accuracy in Section A has improved from 62% to 78% over your last 4 sessions.'",
+      "framing": "All messages should frame gaps as learning opportunities, never as failures.",
+      "do_not": "Never use 'exam ready,' 'guaranteed to pass,' 'will pass,' or any pass/fail prediction language."
+    },
+    "practical_goals": {
+      "rule": "Suggest concrete, achievable next actions based on actual performance data",
+      "examples": [
+        "Focus on 10 Cost Management questions this session — your accuracy there is 58%",
+        "Review the variance analysis concept — you've missed it in 3 of 4 attempts",
+        "Try a full 30-minute case study to build integrated reasoning stamina"
+      ]
+    },
+    "privacy_rules": {
+      "data_storage": "All learner data stored in localStorage only. No server upload, no cloud sync, no external API calls.",
+      "student_names": "Masked after selection — only shown when actively selected. Privacy masking active per S117.",
+      "do_not": "Do not enter real names, email addresses, phone numbers, or identifying information into the app unless explicitly authorized in a later pilot session."
+    },
+    "no_prediction_rules": {
+      "active_guards": [
+        "S113 evidence thresholds — insights only with sufficient data",
+        "S112 recommendation gates — only Certified QIDs",
+        "S108 guarded tutoring — no banned phrases",
+        "Hallucination detection — exam prediction, answer leakage, fabricated statistics blocked"
+      ],
+      "do_not": "Never predict pass/fail. Never guarantee readiness. Never create alarm or pressure. Never say 'you are exam-ready' or 'you need X more weeks.'"
+    },
+    "broad_rollout": {
+      "status": "OFF",
+      "do_not": "Do not enable broad rollout. Do not add external telemetry endpoints. Do not connect to real LMS or SCORM endpoints without explicit authorization."
+    }
+  },
+  "recommended_restart_flow": {
+    "step_1": "Open index_updated.html in a browser",
+    "step_2": "Open May panel — May will greet and ask if you're a returning student",
+    "step_3": "Select 'Yes' — choose a synthetic student from the roll (masked names)",
+    "step_4": "May asks about exam schedule — answer as appropriate for the test-taker",
+    "step_5": "May provides evidence-backed insights based on seeded or accumulated history",
+    "step_6": "Use May for practice: ask for explanations, hints, similar questions, or progress summaries",
+    "step_7": "May's recommendations, hints, and explanations are all guarded: no exam predictions, only Certified QIDs, no answer leakage in exam mode"
+  },
+  "restart_session_recommendation": "S119 — May single-user pre-production pilot readiness review. Confirm all May guards, thresholds, and gates are operational. Simulated students can be used as-is or new synthetic profiles created."
+}

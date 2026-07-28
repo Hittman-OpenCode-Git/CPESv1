@@ -1,0 +1,475 @@
+{
+  "title": "SESSION808_WAVE2B_AUTHORING",
+  "session": "808",
+  "generated": "2026-07-26",
+  "batchDescription": "Wave 2b Domain E replacement items — re-authored from S807 metadata due to dwImported unavailability. 10 items targeting E.1.e Control Activities (3), E.1.g Monitoring (2), E.1.i External Audit/Committee (2), E.1.a Governance (1), E.1.c Entity-Level Controls (1), E.1.f Information & Communication (1)",
+  "qualityStandard": "S311 Authoring Quality Gate v1.0 — EC 400+ chars, EW[A-D] choice-specific 100+ chars, DL-008/026/013/010 compliant",
+  "authoringNote": "Re-authored in S808 from S807 certification metadata. Original items stored via dwImported in S806 and were not available locally. All CorrectChoice, Topic, LOS, and standard references match S807 certification specifications. DL-031 difficulty recalibrations applied.",
+  "items": [
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R12 detective control — classification and examples",
+      "MicroTopic": "detective controls classification monitoring",
+      "UniqueConceptKey": "E-R12-detective-control-classification",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Northland Insurance Company's internal audit team is cataloging the control activities in the claims processing cycle. Which of the following is best classified as a detective control?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Under COSO Principle 12 (Control Activities), detective controls are designed to identify errors or irregularities after they have occurred — they detect, rather than prevent. A reconciliation of processed claims to the claims register compares two independently maintained data sources to identify discrepancies, making it a classic detective control. The key distinction: preventive controls stop problems before they occur (e.g., approval requirements, segregation of duties, access restrictions), while detective controls find problems after the fact (e.g., reconciliations, exception reports, audits, physical inventory counts, analytical reviews). The CMA exam frequently tests this classification by presenting operational examples and asking the candidate to correctly categorize them. Note that COSO does not use 'detective' as a formal category label but describes controls by timing — before (preventive), during (concurrent), or after (detective) the transaction. In practice, many frameworks, including the CMA exam, use the term 'detective controls' following common professional usage from auditing standards.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for detective control classification coverage.",
+      "QuestionID": "P1-E-R12",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review control activity classifications: preventive (stop before occurrence), detective (identify after occurrence), and corrective (remedy after detection).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Requiring supervisory approval before claims exceeding $10,000 are processed for payment",
+        "B": "Reconciling the daily processed claims total to the claims register at the end of each business day",
+        "C": "Restricting access to the claims processing system to authorized personnel via unique user credentials",
+        "D": "Providing annual ethics training to all claims department employees on fraud awareness and reporting obligations"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — detective control classification per COSO Principle 12",
+        "Distractors test common confusions: preventive controls (approval, access restriction) and entity-level/general controls (ethics training)"
+      ],
+      "ExplanationWrongA": "Requiring supervisory approval before a transaction is processed is a preventive control — it stops unauthorized transactions from occurring by requiring sign-off before execution. The defining characteristic is the timing: the control acts before the payment is made. A candidate selecting this option may be correctly identifying an authorization control but misclassifying it as detective rather than preventive.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "Restricting system access through unique user credentials is an access control, which is a type of preventive control. It prevents unauthorized individuals from entering transactions in the first place — the control acts before any transaction can occur. System access restrictions are preventive because they block, not detect. A candidate may incorrectly associate 'detection' with the system's ability to log who accessed it, but the primary classification of the access restriction itself is preventive.",
+      "ExplanationWrongD": "Annual ethics training is an entity-level control related to the Control Environment component, not a transaction-level detective control. While training may help employees recognize and report fraud (which facilitates detection), the training activity itself is a general/preventive measure aimed at creating awareness — not a specific mechanism that identifies errors after they occur. Entity-level controls differ from process-level detective controls in scope, timing, and mechanism."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R13 corrective control — remediation actions after detection",
+      "MicroTopic": "corrective controls error remediation",
+      "UniqueConceptKey": "E-R13-corrective-control-remediation",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Apex Manufacturing discovered through a monthly inventory reconciliation that 200 units of raw material valued at $15,000 were recorded in the perpetual inventory system but were not physically present in the warehouse. Management immediately: (1) adjusted the inventory records to reflect the physical count, (2) investigated the discrepancy and determined that a receiving clerk had been entering fictitious receipts, and (3) implemented a requirement that all receiving reports be matched to purchase orders before inventory records are updated. Which of these actions is best classified as a corrective control?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Corrective controls are actions taken to remedy a problem after it has been detected. Under COSO Principle 12, the full control lifecycle involves: preventive controls (stop problems before they occur), detective controls (identify problems after they occur), and corrective controls (fix the problems and address the root cause to prevent recurrence). In this scenario, action (3) — implementing a purchase-order-to-receiving-report matching requirement — is a corrective control because it addresses the root cause of the fictitious receipt problem by adding a preventive check. Action (1), the inventory adjustment, is a correction (fixing the specific error) but not a 'corrective control' in the formal internal control sense — the distinction is between a one-time fix and a structural control change. Action (2) is investigation (part of detection/follow-up). The CMA exam distinguishes between: (a) correcting an error (making the adjustment) and (b) implementing a corrective control (changing the system to prevent recurrence). The latter — addressing the root cause through structural change — is the proper classification.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for corrective control remediation coverage.",
+      "QuestionID": "P1-E-R13",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between correction (fixing the specific error) and corrective control (implementing structural change to prevent recurrence). Corrective controls address root causes.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Adjusting the perpetual inventory records to match the physical count of raw materials",
+        "B": "Implementing a purchase-order-to-receiving-report matching requirement before inventory records are updated",
+        "C": "Investigating the inventory discrepancy to determine that a receiving clerk had been entering fictitious receipts",
+        "D": "Conducting the monthly inventory reconciliation that compared perpetual records to the physical count"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — corrective control classification per COSO Principle 12",
+        "Distractors test confusion between correction (fixing the specific error), investigation (detection follow-up), and the detecting mechanism itself"
+      ],
+      "ExplanationWrongA": "Adjusting the inventory records to match the physical count corrects the specific error — it fixes the discrepancy itself. However, this is a correction, not a corrective control. The formal distinction in internal control theory is that a correction remedies the specific instance, while a corrective control changes the system to prevent future occurrences. A candidate selecting this option may be interpreting 'corrective' in its everyday meaning (to fix) rather than its technical internal control meaning (to structurally prevent recurrence).",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "Investigating the cause of the discrepancy is part of the follow-up to detection — it identifies the root cause (the clerk's fictitious receipts) but does not, by itself, remedy or prevent the problem. Investigation is a reactive activity that supports corrective action but is not itself a corrective control. Without the subsequent structural change (the matching requirement), investigation alone leaves the system vulnerable to the same failure mode.",
+      "ExplanationWrongD": "The monthly inventory reconciliation is a detective control — it identified the discrepancy in the first place. This is what triggered the chain of events (detection → investigation → correction → structural corrective control). The reconciliation does not correct or prevent anything — it simply identifies. A candidate may be confusing the detection mechanism with the corrective response it enables."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R18 monitoring activities — ongoing vs separate evaluations",
+      "MicroTopic": "monitoring activities ongoing evaluations separate evaluations COSO Principle 16",
+      "UniqueConceptKey": "E-R18-ongoing-vs-separate-evaluations",
+      "LOSTag": "E.1.g Monitoring Activities",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Under COSO Principle 16, management evaluates whether the components of internal control are present and functioning. These evaluations take two distinct forms. Ongoing evaluations differ from separate evaluations primarily because ongoing evaluations are:",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Under COSO Principle 16 (Monitoring Activities), ongoing evaluations are built into the entity's recurring operating activities — they are continuous, real-time, and performed by the people responsible for the process as part of their regular duties. Examples include: supervisory reviews of daily transaction reports, exception reporting from automated systems, and regular management review of key performance indicators. Separate evaluations, by contrast, are conducted periodically by objective parties not directly involved in the process — such as internal audit engagements, quality assurance reviews, and external assessments. The key distinction tested on the CMA exam is temporal integration: ongoing evaluations are continuous and embedded in operations (they happen during the process), while separate evaluations occur after the fact at discrete intervals. Both forms are necessary — ongoing evaluations provide timely, continuous feedback, while separate evaluations offer independent, objective assessment. The mix and frequency depend on the nature of risks and the rate of change in the business environment.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for monitoring activities — ongoing vs separate evaluations coverage.",
+      "QuestionID": "P1-E-R18",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review COSO Principle 16: ongoing evaluations are continuous and embedded in daily operations; separate evaluations are periodic and performed by independent parties such as internal audit.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Performed by internal audit or other independent assessors who are not part of the process being evaluated",
+        "B": "Scheduled at predetermined intervals, typically annually or on a rotational basis across business units",
+        "C": "Built into routine operations, continuous in nature, and performed by personnel responsible for the process as part of their daily duties",
+        "D": "Focused exclusively on control deficiencies that have been reported to the board of directors"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.g Monitoring Activities — COSO Principle 16 ongoing vs separate evaluations",
+        "DL-031 applied: difficulty recalibrated Moderate→Easy (understanding-level definition match)"
+      ],
+      "ExplanationWrongA": "This describes separate evaluations, not ongoing evaluations. Internal audit and independent assessors conduct separate evaluations because they provide objective, third-party assessment of the control system. Ongoing evaluations, by contrast, are performed by line personnel embedded in the process — not by independent parties. A candidate selecting this option has correctly identified a monitoring activity but assigned it to the wrong evaluation type.",
+      "ExplanationWrongB": "Scheduling at predetermined intervals is characteristic of separate evaluations, not ongoing evaluations. Separate evaluations (such as annual internal audit reviews or rotational quality assessments) occur at planned, discrete points in time. Ongoing evaluations are continuous — they happen as part of daily operations, not on a calendar schedule.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "While evaluating and communicating control deficiencies is part of COSO Principle 17 (the second monitoring principle), it applies to both ongoing and separate evaluations and is not the defining characteristic of ongoing evaluations. Furthermore, deficiencies may be reported to management, not exclusively to the board — the level of escalation depends on severity. The description captures only a subset of monitoring activity and misidentifies it as a distinguishing feature."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R21 external audit opinions — types under GAAS",
+      "MicroTopic": "external audit opinions unqualified qualified adverse disclaimer AU-C 705",
+      "UniqueConceptKey": "E-R21-external-audit-opinion-types",
+      "LOSTag": "E.1.i External Auditing",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Remember",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Under Generally Accepted Auditing Standards (GAAS), an auditor issues an opinion indicating that the financial statements contain material misstatements that are both material and pervasive to the financial statements as a whole. This type of audit opinion is a(n):",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Under AU-C Section 705, there are three types of modified audit opinions: (1) qualified opinion — the financial statements are fairly presented except for a specific matter that is material but not pervasive; (2) adverse opinion — the financial statements contain misstatements that are both material and pervasive, meaning the statements as a whole are not fairly presented; and (3) disclaimer of opinion — the auditor cannot obtain sufficient appropriate audit evidence and the possible effects are both material and pervasive. An adverse opinion is the most severe type of opinion because it communicates that the financial statements should not be relied upon — they do not present fairly the financial position, results of operations, or cash flows in conformity with the applicable financial reporting framework. The distinction between 'material' and 'material and pervasive' is critical: materiality relates to magnitude (could a user's decision be affected?), while pervasiveness relates to scope (does the issue affect the financial statements as a whole or is it confined to specific accounts or disclosures?). The CMA exam tests knowledge of audit opinion types because management accountants interact with external auditors and must understand what each opinion type communicates to stakeholders.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for external audit opinion types coverage.",
+      "QuestionID": "P1-E-R21",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If memorizing audit opinion types, remember: unmodified = clean; qualified = 'except for' (material but not pervasive); adverse = material AND pervasive (statements not fairly presented); disclaimer = cannot form opinion (scope limitation, material and pervasive).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Unmodified (unqualified) opinion, because the auditor has identified the issue and provided additional explanatory language",
+        "B": "Qualified opinion, because the misstatements are material and the auditor has appropriately disclosed them",
+        "C": "Disclaimer of opinion, because the material misstatements prevent the auditor from forming a reliable conclusion",
+        "D": "Adverse opinion, because the financial statements contain misstatements that are both material and pervasive"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.i External Auditing — GAAS audit opinion types per AU-C 705",
+        "DL-031 applied: difficulty recalibrated Moderate→Easy (pure recall of audit opinion taxonomy)"
+      ],
+      "ExplanationWrongA": "An unmodified (unqualified) opinion is issued when the financial statements are fairly presented in all material respects — the clean opinion. The presence of material and pervasive misstatements is fundamentally incompatible with an unmodified opinion. The auditor may add explanatory language to an unmodified opinion (emphasis-of-matter or other-matter paragraphs) for matters that do not rise to the level of misstatement, but when material and pervasive misstatements exist, the opinion itself must be modified.",
+      "ExplanationWrongB": "A qualified opinion is issued when misstatements are material but not pervasive — the financial statements are fairly presented except for the specific matter. The key missing element is pervasiveness. When misstatements are both material AND pervasive (as in this scenario), the auditor must issue an adverse opinion because the financial statements as a whole are unreliable. The distinction between 'material' and 'material and pervasive' is the grade boundary between qualified and adverse.",
+      "ExplanationWrongC": "A disclaimer of opinion is issued when the auditor cannot obtain sufficient appropriate audit evidence and the possible effects of the undetected misstatements are both material and pervasive — it is a scope limitation issue, not a known misstatement issue. In this scenario, the auditor HAS identified the misstatements (there is no scope limitation) — the problem is that what they found is both material and pervasive, which requires an adverse opinion, not a disclaimer.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R22 audit committee — composition and independence requirements",
+      "MicroTopic": "audit committee independence financial expert SOX 301 SOX 407 SEC 10A-3 NYSE 303A.02",
+      "UniqueConceptKey": "E-R22-audit-committee-composition",
+      "LOSTag": "E.1.i External Auditing",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Under the Sarbanes-Oxley Act of 2002 and related SEC and stock exchange rules, which of the following individuals serving on a listed company's audit committee would most likely violate independence requirements?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "SOX Section 301 (codified in SEC Rule 10A-3) requires that each member of the audit committee be independent, meaning they cannot: (1) accept any consulting, advisory, or other compensatory fee from the issuer, other than director compensation; or (2) be an affiliated person of the issuer or any subsidiary. NYSE Listing Standard 303A.02 further requires that audit committee members meet heightened independence standards and that all members be 'financially literate' (as determined by the board), with at least one member qualifying as an 'audit committee financial expert' as defined by SOX Section 407 and SEC rules. The individual in Choice D — an officer who receives a salary and bonus from the company — is an affiliated person (an executive officer) and therefore cannot serve on the audit committee. Independence means no material relationship with the company beyond the director role. Outside directors (A), retired partners with no ongoing relationship (B), and academics/professors (C) are all potentially eligible provided they meet the independence criteria. Accepting compensation for employment (beyond director fees) is an automatic disqualifier under the SEC and exchange independence rules.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for audit committee composition and independence coverage.",
+      "QuestionID": "P1-E-R22",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review SOX Section 301 audit committee independence requirements, SEC Rule 10A-3 (no consulting fees, no affiliated persons), NYSE 303A.02 (financial literacy requirement), and SOX 407 (audit committee financial expert).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "A retired investment banker who has not been employed by or had any business relationship with the company for five years",
+        "B": "A certified public accountant who was an audit partner on the company's engagement eight years ago and has since retired from the firm",
+        "C": "A university accounting professor who receives standard director compensation and no other payments from the company",
+        "D": "A senior vice president of finance at the company who receives a base salary, annual bonus, and equity compensation"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.i External Auditing — audit committee composition per SOX 301/407, SEC 10A-3, NYSE 303A.02",
+        "DL-031 applied: difficulty recalibrated Moderate→Moderate-Easy (Understand-level, multiple standards tested)"
+      ],
+      "ExplanationWrongA": "A retired investment banker with no business relationship with the company for five years would likely satisfy independence requirements. The cooling-off period for former employees or business relationships is typically much shorter than five years, and the key test is current relationships and compensation. Past relationships that have been severed are generally not disqualifying, provided the individual was never an employee or affiliate of the company. A candidate selecting this option may be overestimating the reach of the independence rules or confusing the one-year cooling-off period for former audit engagement team members with a broader restriction.",
+      "ExplanationWrongB": "A CPA who was the audit partner on the engagement eight years ago and has since retired from the firm would generally satisfy independence requirements. SEC rules require a one-year cooling-off period before a former audit engagement team member can serve in a financial reporting oversight role at the audit client. Eight years well exceeds this requirement, and retirement from the firm removes any ongoing relationship with the auditor. The candidate may be applying the cooling-off rule too broadly or for too long a period.",
+      "ExplanationWrongC": "A university accounting professor receiving only standard director compensation meets the independence standard. Director fees are explicitly permitted compensation under SEC Rule 10A-3 — the prohibition is against 'consulting, advisory, or other compensatory fees' beyond director compensation. An academic receiving only board fees has no disqualifying financial relationship. This individual could also qualify as an 'audit committee financial expert' under SOX 407, making them an ideal committee member.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R23 board governance — oversight responsibilities under COSO",
+      "MicroTopic": "board governance oversight COSO Principle 2 control environment",
+      "UniqueConceptKey": "E-R23-board-governance-oversight",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "COSO Principle 2 and the Sarbanes-Oxley Act both address the role of the board of directors in internal control. Which of the following most accurately describes the board's oversight responsibility under the COSO Internal Control—Integrated Framework?",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "COSO Principle 2 (Control Environment) states that the board of directors demonstrates independence from management and exercises oversight responsibility for the development and performance of internal control. The board's role is oversight, not operations — it governs and monitors, but does not design, implement, or operate the internal control system. Specific oversight responsibilities include: (1) setting expectations regarding the tone at the top and integrity/ethical values, (2) reviewing and approving the overall internal control structure and key policies, (3) evaluating whether management has designed and implemented effective controls, (4) understanding the major risks facing the organization, and (5) ensuring that monitoring mechanisms — including internal audit and external auditor communications — provide timely, relevant information about control effectiveness. Under SOX, these responsibilities are particularly acute for the audit committee, which must establish procedures for handling complaints about accounting and internal control matters (SOX 301.4). The board oversees; management executes. Confusing the two is a common CMA exam trap.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for board governance and oversight responsibilities coverage.",
+      "QuestionID": "P1-E-R23",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review COSO Principle 2 — the board oversees internal control, management designs and operates it. The board does not design controls, perform control procedures, or manage day-to-day risk.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The board is responsible for designing and implementing specific control procedures across all business processes",
+        "B": "The board replaces the internal audit function by directly testing the operating effectiveness of key controls",
+        "C": "The board exercises oversight of the internal control system, including evaluating whether management has designed and implemented effective controls",
+        "D": "The board delegates all internal control responsibilities to the external auditor to maintain independence and objectivity"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.a Internal Control Definition — board oversight per COSO Principle 2 + SOX",
+        "DL-031 applied: difficulty recalibrated Moderate→Moderate-Easy (Understand-level concept, tests governance vs operations distinction)"
+      ],
+      "ExplanationWrongA": "Designing and implementing specific control procedures is management's responsibility, not the board's. The board does not operate the internal control system — it oversees and evaluates management's design and operation of controls. COSO Principle 2 is clear that the board 'exercises oversight responsibility' — a governance and monitoring role, not an operational execution role. A candidate selecting this option may be conflating the responsibility-to-oversee with the responsibility-to-execute.",
+      "ExplanationWrongB": "The board does not replace the internal audit function. Internal audit is a separate monitoring mechanism that provides independent assurance to the board and management. While the board (specifically the audit committee) oversees internal audit, it does not perform internal audit work. Testing operating effectiveness of controls is an internal audit or external auditor activity — the board reviews the results but does not perform the testing. The board's role is governance and decision-making based on the information provided by these functions.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Internal control responsibilities cannot be delegated to the external auditor. Under SOX and COSO, management is responsible for internal control, the board oversees it, and the external auditor provides an independent opinion on its effectiveness. The external auditor's independence would be impaired if it assumed management's control responsibilities. Furthermore, SOX Section 404 explicitly assigns ICFR assessment to management and prohibits the auditor from serving in a management role. There is no mechanism by which the board can transfer its governance obligation."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R24 entity-level controls — scope and application vs transaction controls",
+      "MicroTopic": "entity-level controls transaction-level controls COSO Principle 2 control environment",
+      "UniqueConceptKey": "E-R24-entity-level-vs-transaction-controls",
+      "LOSTag": "E.1.c Control Environment",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Entity-level controls are a critical component of the COSO framework because they establish the foundation upon which all other controls operate. Which of the following is the best example of an entity-level control?",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "Entity-level controls, anchored in COSO Principle 2, are broad controls that operate across the entire organization and create the foundation for effective internal control. They influence the control consciousness of the organization — the 'tone at the top.' Examples include: the code of ethics/conduct, board oversight and independence, human resources policies (hiring, training, evaluation, promotion), management's philosophy and operating style, organizational structure and assignment of authority, and the overall commitment to competence. Unlike transaction-level controls, which are specific to particular processes (e.g., requiring a purchase order for all purchases over $500), entity-level controls affect the entire organization and indirectly influence all other controls. If entity-level controls are weak, process-level controls are less reliable because the overall control environment is compromised. The board-approved company-wide code of ethics is a quintessential entity-level control because it sets behavioral expectations for every employee, in every function, across every process — establishing the ethical foundation that makes transaction-level controls meaningful.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for entity-level vs transaction controls coverage.",
+      "QuestionID": "P1-E-R24",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between entity-level controls (broad, organization-wide, tone-setting) and transaction-level controls (specific to particular processes or transaction types). Weak entity-level controls weaken ALL downstream controls.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "A board-approved company-wide code of ethics that applies to all employees, officers, and directors",
+        "B": "A requirement that all purchase orders exceeding $500 receive dual manager approval before processing",
+        "C": "A monthly bank reconciliation performed by an accountant independent of cash receipts and disbursements",
+        "D": "A password policy requiring system users to change their credentials every 90 days"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.c Control Environment — entity-level controls per COSO Principle 2",
+        "DL-031 applied: difficulty recalibrated Moderate→Easy (understand-level definition match with clear anchors)"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "A purchase order approval threshold is a transaction-level control — it applies to a specific process (purchasing) and a specific transaction type (purchase orders). It does not affect the behavior of employees in other functions such as sales, accounting, or human resources. Entity-level controls are distinguished by their breadth — they apply across the entire organization — and by their function — they establish the control consciousness or 'tone' rather than prescribing specific transactional steps.",
+      "ExplanationWrongC": "A monthly bank reconciliation is a process-level detective control — it is specific to the cash management process, performed at a defined frequency, and targets a specific reconciliation objective. While bank reconciliations are important internal controls, they operate at the process/transaction level rather than the entity level. The fact that it is performed by someone 'independent of cash receipts and disbursements' reflects segregation of duties, which is a principle applied at the process level.",
+      "ExplanationWrongD": "A password policy requiring credential changes is an IT general control — it is broader than a single transaction but narrower than entity-level. IT general controls support the overall control environment in technology-dependent processes but are not entity-level because they primarily affect technology systems rather than setting the foundational behavioral and governance framework for the entire organization. Entity-level controls are about people, values, and governance — not system configuration rules."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R25 information quality — timeliness characteristic",
+      "MicroTopic": "information quality characteristics timeliness COSO Principle 13",
+      "UniqueConceptKey": "E-R25-information-quality-timeliness",
+      "LOSTag": "E.1.f Information and Communication",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Remember",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "COSO Principle 13 requires that the organization obtain or generate and use relevant, quality information to support the functioning of internal control. The quality characteristic that addresses whether information is available to decision-makers before it loses its capacity to influence decisions is:",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Under COSO Principle 13 (Information and Communication), information must possess certain quality characteristics to support effective internal control. These characteristics include: (1) accessibility — information must be readily available to those who need it; (2) correctness — information must be accurate and reliable; (3) currency — information must be sufficiently up-to-date; (4) protection — information must be safeguarded against unauthorized access; (5) retention — information must be preserved for an appropriate period; and (6) sufficiency — enough information of the right level of detail must be available. Timeliness (or currency) addresses the temporal dimension: information that arrives after a decision has been made has no value for that decision. The CMA exam tests these dimensions because poor-quality information undermines every other component of internal control — risk assessments based on stale data, control activities that operate on incorrect inputs, and monitoring that uses outdated metrics all fail regardless of how well those components are designed.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for information quality — timeliness characteristic coverage.",
+      "QuestionID": "P1-E-R25",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If memorizing COSO Principle 13 information quality characteristics, remember: accessibility, correctness, currency (timeliness), protection, retention, and sufficiency. Timeliness = available when needed, before the information loses relevance.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Completeness — information that includes all material facts and does not omit data relevant to the decision",
+        "B": "Verifiability — information that can be independently confirmed through documentation, audit trails, or third-party corroboration",
+        "C": "Consistency — information prepared using the same methods and assumptions across periods and across business units",
+        "D": "Timeliness — information that is available to decision-makers before it loses its capacity to influence the decision"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.f Information and Communication — COSO Principle 13 information quality characteristics",
+        "DL-031 applied: difficulty recalibrated Moderate→Easy (pure recall of information quality taxonomy; stem defines the concept, CC names it)"
+      ],
+      "ExplanationWrongA": "Completeness is an important information quality characteristic — information should include all material facts — but the stem specifically describes temporal availability ('before it loses its capacity to influence decisions'), which maps to timeliness. Completeness addresses whether all necessary data is present, not when it becomes available. A candidate may be conflating different dimensions of information quality; the question's specific language about timing eliminates completeness as a match.",
+      "ExplanationWrongB": "Verifiability is the characteristic that information can be confirmed through independent means — it addresses reliability and auditability, not temporal availability. While important for internal control (audit trails, documentary evidence), verifiability does not answer the question of when the information reaches the decision-maker. A candidate selecting this may be associating 'before' with the verification process rather than understanding that the question is about timing.",
+      "ExplanationWrongC": "Consistency refers to the use of uniform methods and assumptions across time periods and business units — it enables comparability, not timely availability. Consistent information can still be late; timely information can still be inconsistent. The stem's focus on the temporal dimension ('before it loses its capacity to influence decisions') points directly to timeliness, not consistency.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R28 manual controls — characteristics, strengths, and limitations",
+      "MicroTopic": "manual controls vs automated controls COSO Principle 12 Principle 16",
+      "UniqueConceptKey": "E-R28-manual-vs-automated-controls",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Coastal State Bank is evaluating its internal control design for the commercial loan approval process. The chief risk officer notes that loan applications below $250,000 are reviewed by a single credit analyst using a checklist, while applications above $250,000 require committee review. The CRO is considering replacing the checklist review with an automated scoring model that applies consistent decision rules to all applications regardless of dollar amount. When comparing manual controls (current checklist review) to automated controls (proposed scoring model), which of the following is an inherent limitation of manual controls that automated controls specifically address?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "The fundamental trade-off between manual and automated controls addresses several dimensions. Manual controls rely on human judgment and diligence, which introduces specific limitations: (1) inconsistency — different individuals apply the same checklist differently, or the same individual applies it inconsistently across time due to fatigue, distraction, or interpretation differences; (2) skill dependency — effectiveness depends on the individual's training, experience, and attention to detail on a given day; (3) scalability constraints — manual review processes become bottlenecked as transaction volumes increase. Automated controls address inconsistency directly by applying identical programmed logic to every transaction without variation. Under COSO Principle 12 (Control Activities) and Principle 16 (Monitoring), an effective control system typically combines both types, leveraging automated controls for consistency and volume handling while relying on manual controls for judgment-intensive decisions and anomaly detection. The CMA exam expects candidates to understand the strengths and limitations of each type rather than viewing automation as universally superior — automated controls introduce their own risks, including: programming errors that propagate across all transactions, susceptibility to unauthorized code changes, and inability to exercise professional judgment in unusual situations.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for manual vs automated controls coverage.",
+      "QuestionID": "P1-E-R28",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the strengths and limitations of manual controls (flexibility, judgment, but inconsistent and skill-dependent) vs automated controls (consistent, scalable, but rigid and subject to programming errors). Most effective systems use a combination.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Manual controls are more expensive to operate than automated controls, regardless of transaction volume",
+        "B": "Manual controls produce inconsistent application of decision rules due to variability in human judgment, fatigue, and interpretation",
+        "C": "Manual controls cannot be evaluated for operating effectiveness by internal or external auditors",
+        "D": "Manual controls are inherently preventive, while automated controls are inherently detective"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — manual vs automated controls per COSO Principles 12 and 16",
+        "Distractors test overgeneralizations about cost, auditability, and timing classification"
+      ],
+      "ExplanationWrongA": "While automated controls often have higher upfront development costs and lower per-transaction costs, making them more cost-effective at high volumes, this is not universally true. For low-volume, high-judgment processes, manual controls may be both cheaper and more appropriate. The cost comparison depends on transaction volume, complexity, and the nature of the decision. More importantly, cost is an economic consideration, not an inherent limitation of manual controls. The inherent limitation of manual controls specifically addressed by automation is inconsistency — cost is a secondary factor.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "Manual controls can absolutely be evaluated for operating effectiveness by both internal and external auditors. Auditors use techniques including inquiry, observation, inspection of documentation, and reperformance to evaluate manual controls — just as they would for automated controls. The evaluation methodology may differ (manual controls require larger sample sizes for testing because of the inconsistency risk), but manual controls are not immune from audit assessment. This is a distractingly incorrect statement.",
+      "ExplanationWrongD": "Both manual and automated controls can be preventive or detective — the manual/automated distinction describes the mechanism of execution, not the timing of the control's effect. An automated three-way match (purchase order, receiving report, invoice) is a preventive control; an automated exception report listing unmatched transactions is a detective control. Similarly, a manual supervisor approval is a preventive control while a manual account reconciliation is a detective control. The classification depends on when the control acts, not on whether a person or system executes it."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R33 internal audit — organizational placement and reporting structure",
+      "MicroTopic": "internal audit independence reporting structure CAE IIA 1110 1110.A1 1130",
+      "UniqueConceptKey": "E-R33-internal-audit-reporting-structure",
+      "LOSTag": "E.1.g Monitoring Activities",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "The IIA's International Standards for the Professional Practice of Internal Auditing require that the chief audit executive (CAE) report to a level within the organization that allows the internal audit activity to fulfill its responsibilities. Which reporting relationship best supports internal audit independence and objectivity under IIA Standard 1110?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "IIA Standard 1110 (Organizational Independence) requires that the chief audit executive report to a level within the organization that allows the internal audit activity to fulfill its responsibilities. The CAE must confirm organizational independence to the board at least annually. IIA Standard 1110.A1 further specifies that the internal audit activity must be free from interference in determining the scope of internal auditing, performing work, and communicating results. The most effective reporting structure for supporting independence is dual reporting: functional reporting to the board (specifically the audit committee) for strategic direction, authority, and independence, and administrative reporting to the CEO for day-to-day operations, budgeting, and human resources. IIA Standard 1130 (Impairment to Independence or Objectivity) addresses situations where independence or objectivity is impaired in fact or appearance — if the CAE reports to the CFO (Choice A), independence is potentially impaired because internal audit is reviewing financial reporting processes that the CFO is responsible for. The CMA exam tests the principle that internal audit should be positioned high enough in the organization to be objective about the functions it audits.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for internal audit organizational placement and reporting structure coverage.",
+      "QuestionID": "P1-E-R33",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review IIA Standard 1110 and 1130 — internal audit independence requires functional reporting to the board/audit committee, not to the operating managers whose work is being audited.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The CAE reports directly to the chief financial officer to ensure close coordination on financial reporting matters",
+        "B": "The CAE reports to the general counsel to ensure alignment with legal and regulatory compliance priorities",
+        "C": "The CAE reports to the chief operating officer to integrate audit activities with operational improvement initiatives",
+        "D": "The CAE reports functionally to the audit committee of the board of directors and administratively to the chief executive officer"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.g Monitoring Activities — internal audit organizational placement per IIA Standards 1110, 1110.A1, 1130",
+        "DL-031 applied: difficulty recalibrated Moderate→Moderate-Easy (Understand-level concept; best-practice recall with clear IIA framework)"
+      ],
+      "ExplanationWrongA": "Reporting to the CFO creates an independence impairment (IIA Standard 1130). Internal audit must be able to independently evaluate the financial reporting processes, controls, and disclosures for which the CFO is responsible. If the CAE reports to the CFO, internal audit is effectively auditing its own boss — a conflict of interest that undermines objectivity in both fact and appearance. This is the most common incorrect organizational placement and the one the CMA exam most frequently flags as a governance weakness.",
+      "ExplanationWrongB": "Reporting to the general counsel similarly creates a reporting line within a function that internal audit may need to evaluate. Legal and compliance functions are subject to audit, and the CAE should not report to managers whose areas are within the audit scope. While coordination with legal and compliance is important, organizational independence requires that the CAE not be organizationally subordinate to the head of a function under audit.",
+      "ExplanationWrongC": "Reporting to the COO subordinates internal audit to a member of management responsible for operations — the very activities that internal audit evaluates. Operational improvement recommendations are a valuable output of internal audit work, but the independence of those recommendations depends on the CAE not being beholden to the COO for performance evaluations, compensation, and career advancement. The dual-reporting model to the board (functional) and CEO (administrative) preserves independence while providing operational resources.",
+      "ExplanationWrongD": ""
+    }
+  ],
+  "gate0Status": "PENDING_VERIFICATION",
+  "gate1Status": "COMPLETE",
+  "gates2through4": "DEFERRED_TO_S808_VERIFICATION_AGENTS",
+  "dl031Applied": {
+    "P1-E-R18": "Moderate→Easy (Understand-level definition match)",
+    "P1-E-R21": "Moderate→Easy (Remember-level recall)",
+    "P1-E-R22": "Moderate→Moderate-Easy (Understand-level, multiple standards)",
+    "P1-E-R23": "Moderate→Moderate-Easy (Understand-level governance concept)",
+    "P1-E-R24": "Moderate→Easy (Understand-level definition match)",
+    "P1-E-R25": "Moderate→Easy (Remember-level recall)",
+    "P1-E-R33": "Moderate→Moderate-Easy (Understand-level IIA framework)"
+  },
+  "correctChoiceVerification": {
+    "note": "All CorrectChoice values match S807 certification specifications. Independently re-derived in S808 based on standards knowledge (COSO, SOX, AU-C 705, IIA).",
+    "P1-E-R12": {"cc": "B", "verified": true, "rationale": "Reconciliation is the only detective control among the four options"},
+    "P1-E-R13": {"cc": "B", "verified": true, "rationale": "PO-receiving-report matching is a structural corrective control addressing root cause"},
+    "P1-E-R18": {"cc": "C", "verified": true, "rationale": "Ongoing evaluations are continuous, built into routine operations"},
+    "P1-E-R21": {"cc": "D", "verified": true, "rationale": "Material AND pervasive misstatements require an adverse opinion per AU-C 705"},
+    "P1-E-R22": {"cc": "D", "verified": true, "rationale": "SVP receives salary/bonus/equity — is an affiliated person, violating independence"},
+    "P1-E-R23": {"cc": "C", "verified": true, "rationale": "Board exercises oversight, not operations — COSO Principle 2"},
+    "P1-E-R24": {"cc": "A", "verified": true, "rationale": "Code of ethics is the quintessential entity-level control"},
+    "P1-E-R25": {"cc": "D", "verified": true, "rationale": "Timeliness = information available before losing capacity to influence decisions"},
+    "P1-E-R28": {"cc": "B", "verified": true, "rationale": "Inconsistency from human variability is the key limitation addressed by automation"},
+    "P1-E-R33": {"cc": "D", "verified": true, "rationale": "Functional reporting to audit committee + administrative to CEO = IIA 1110 best practice"}
+  }
+}

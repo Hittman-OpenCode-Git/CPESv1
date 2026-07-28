@@ -1,0 +1,46 @@
+{
+  "specId": "SESSION851_ORCHESTRATOR_MANIFEST",
+  "timestamp": "2026-07-27T14:08:01.793Z",
+  "sourceSession": "S851",
+  "generatedSessions": [
+    "S852",
+    "S853",
+    "S854"
+  ],
+  "truthCheck": {
+    "method": "direct-object-parse",
+    "dl008Real": 3,
+    "dl008Certified": 0,
+    "dl026Real": 261,
+    "dl026Certified": 0,
+    "manifestFalsePositives": 351,
+    "manifestStale": true
+  },
+  "dashboard": {
+    "S852": {
+      "type": "GOVERNANCE",
+      "priority": "CRITICAL",
+      "description": "Regenerate stale defect manifest (351 false positives)"
+    },
+    "S853": {
+      "type": "CERTIFICATION",
+      "priority": "HIGH",
+      "description": "Certify 77 READY items (Domains E+F)"
+    },
+    "S854": {
+      "type": "GOVERNANCE",
+      "priority": "HIGH",
+      "description": "Post-change integrity sweep — 10 checks"
+    }
+  },
+  "executionOrder": [
+    "S852"
+  ],
+  "parallel": [
+    "S853"
+  ],
+  "postExecution": [
+    "S854"
+  ],
+  "note": "S852 regenerates the manifest first (DL-029 artifact cleanup). S853 can run in parallel. S854 runs after both complete."
+}

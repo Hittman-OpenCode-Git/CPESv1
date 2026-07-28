@@ -1,0 +1,35 @@
+{
+  "session": "516",
+  "agent": "E",
+  "timestamp": "2026-07-26T01:00:00Z",
+  "post_flight_tests": {
+    "governance_guard": { "passed": 20, "failed": 0, "result": "PASS" },
+    "session_recovery": { "passed": 12, "failed": 0, "result": "PASS" },
+    "total": "32/32 PASS"
+  },
+  "file_validation": {
+    "scored_cases3_parse": "OK — both ENHANCED_CASE_BASE3 (15 cases) and MIGRATED_CASE_BASE_C (15 cases, 75 items) parse correctly",
+    "migrated_case_base_c_state": {
+      "cases": 15, "items": 75,
+      "certified_items": 75, "unprocessed_items": 0,
+      "certified_cases": 15, "unprocessed_cases": 0
+    }
+  },
+  "quality_gap_deltas": {
+    "cognitive_level": { "before": "0/75", "after": "75/75", "resolved": true },
+    "citations": { "before": "0/75", "after": "75/75", "resolved": true },
+    "distractor_rationale": { "before": "~1/37 select", "after": "37/37 select", "resolved": true },
+    "generic_q4_q5": { "before": "30/30", "after": "30/30", "resolved": "DEFERRED — structural design pattern" },
+    "case_level_metadata": { "before": "0/15 cases", "after": "0/15 cases", "resolved": "DEFERRED — convention unclear" },
+    "uniform_difficulty": { "before": "75/75 DL-032", "after": "75/75", "resolved": "DEFERRED — calibration needed" }
+  },
+  "unauthorized_diff_check": {
+    "may_files": "NOT IN SCOPE",
+    "pack_files": "NOT IN SCOPE",
+    "app_js": "NOT IN SCOPE",
+    "scored_cases_except_3": "NOT IN SCOPE",
+    "status": "CLEAN"
+  },
+  "backup": "backups/scored_cases3.js.bak-20260726S516 (394,018 bytes)",
+  "file_size": "411,383 bytes (up from 394,018 — citations + rationale + CognitiveLevel addition)"
+}

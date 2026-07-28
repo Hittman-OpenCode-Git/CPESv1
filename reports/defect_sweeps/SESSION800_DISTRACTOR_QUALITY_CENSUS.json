@@ -1,0 +1,400 @@
+{
+  "report": "SESSION800_DISTRACTOR_QUALITY_CENSUS",
+  "date": "2026-07-26",
+  "agent": "Agent E",
+  "scope": "All 5 MCQ packs — 2,500 items total",
+  "methodology": "Function-constructor object extraction from const MCQ_BANK_X arrays; Choices.{A,B,C,D} + CorrectChoice per item; string-aware analysis",
+  "status": "READ-ONLY — no files modified",
+
+  "per_pack": {
+    "PACK_A": {
+      "totalItems": 500,
+      "itemType": "100% single-select MCQ",
+      "itemsWithLessThan3Distractors": 0,
+      "itemsWithMoreThan3Distractors": 0,
+      "correctChoiceDistribution": {
+        "A": {"count": 115, "pct": "23.0%"},
+        "B": {"count": 167, "pct": "33.4%"},
+        "C": {"count": 108, "pct": "21.6%"},
+        "D": {"count": 110, "pct": "22.0%"}
+      },
+      "perSection_CC_distribution": {
+        "Section_A": {"A": 18, "B": 15, "C": 19, "D": 23},
+        "Section_B": {"A": 24, "B": 35, "C": 20, "D": 21},
+        "Section_C": {"A": 22, "B": 33, "C": 26, "D": 19},
+        "Section_D": {"A": 18, "B": 31, "C": 10, "D": 16},
+        "Section_E": {"A": 17, "B": 27, "C": 18, "D": 13},
+        "Section_F": {"A": 16, "B": 26, "C": 15, "D": 18}
+      },
+      "B_bias_verdict": "SYSTEMATIC — All sections B dominates (31-41%) except Section A",
+      "distractorCounts": {"3_distractors": 500, "<3": 0, ">3": 0},
+      "DL_005_identical_dupes": {"items": 0, "pct": "0.0%"},
+      "DL_005_high_similarity_Jaccard_gt0_7": {"items": 18, "pct": "3.6%"},
+      "nakedNumberDistractors": {
+        "total_distractor_slots_with_bare_numbers": 382,
+        "items_where_ALL_distractors_are_bare_numbers": 126,
+        "pctItemsAllBareNumbers": "25.2%"
+      },
+      "distractorLength": {
+        "mean_chars": 37.4,
+        "median_chars": 41,
+        "p5": 5,
+        "p95": 74
+      },
+      "dollarDistractors": {
+        "itemsWithAnyDollarDistractor": 186,
+        "itemsWithAllDollarDistractors": 177,
+        "pctItemsAnyDollar": "37.2%",
+        "pctItemsAllDollar": "35.4%"
+      },
+      "absoluteLanguage_DL003": {
+        "slotCounts": {"always": 22, "never": 4, "must": 1, "impossible": 0},
+        "itemsWithAbsolute": 25,
+        "pctItemsWithAbsolute": "5.0%",
+        "note": "Most uses are in intentionally-wrong distractor choices (e.g., 'always produces more accurate forecasts') — pedagogically legitimate"
+      },
+      "vagueQualifiers_DL004": {
+        "slotCounts": {"usually": 0, "normally": 0, "generally": 0, "typically": 0},
+        "itemsWithVague": 0,
+        "pctItemsWithVague": "0.0%"
+      },
+      "rotationCloneGroups_DL012": {"groups_gte5": 8, "items_in_groups": 44, "pctOfPack": "8.8%"}
+    },
+    "PACK_B": {
+      "totalItems": 500,
+      "itemType": "100% single-select MCQ",
+      "itemsWithLessThan3Distractors": 0,
+      "itemsWithMoreThan3Distractors": 0,
+      "correctChoiceDistribution": {
+        "A": {"count": 129, "pct": "25.8%"},
+        "B": {"count": 123, "pct": "24.6%"},
+        "C": {"count": 122, "pct": "24.4%"},
+        "D": {"count": 126, "pct": "25.2%"}
+      },
+      "perSection_CC_distribution": {
+        "Section_A": {"A": 17, "B": 27, "C": 18, "D": 13},
+        "Section_B": {"A": 21, "B": 28, "C": 28, "D": 23},
+        "Section_C": {"A": 30, "B": 20, "C": 17, "D": 33},
+        "Section_D": {"A": 21, "B": 13, "C": 24, "D": 17},
+        "Section_E": {"A": 20, "B": 20, "C": 18, "D": 17},
+        "Section_F": {"A": 20, "B": 15, "C": 17, "D": 23}
+      },
+      "CC_balance_verdict": "ACCEPTABLE — within CAQS §6.4 tolerances (22-28%) at pack level; minor per-section variation",
+      "distractorCounts": {"3_distractors": 500, "<3": 0, ">3": 0},
+      "DL_005_identical_dupes": {"items": 0, "pct": "0.0%"},
+      "DL_005_high_similarity_Jaccard_gt0_7": {"items": 33, "pct": "6.6%"},
+      "nakedNumberDistractors": {
+        "total_distractor_slots_with_bare_numbers": 309,
+        "items_where_ALL_distractors_are_bare_numbers": 98,
+        "pctItemsAllBareNumbers": "19.6%"
+      },
+      "distractorLength": {
+        "mean_chars": 30.6,
+        "median_chars": 22,
+        "p5": 5,
+        "p95": 61
+      },
+      "dollarDistractors": {
+        "itemsWithAnyDollarDistractor": 199,
+        "itemsWithAllDollarDistractors": 192,
+        "pctItemsAnyDollar": "39.8%",
+        "pctItemsAllDollar": "38.4%"
+      },
+      "absoluteLanguage_DL003": {
+        "slotCounts": {"always": 14, "never": 10, "must": 12, "impossible": 0},
+        "itemsWithAbsolute": 26,
+        "pctItemsWithAbsolute": "5.2%"
+      },
+      "vagueQualifiers_DL004": {
+        "slotCounts": {"usually": 0, "normally": 0, "generally": 0, "typically": 0},
+        "itemsWithVague": 0,
+        "pctItemsWithVague": "0.0%"
+      },
+      "rotationCloneGroups_DL012": {"groups_gte5": 1, "items_in_groups": 5, "pctOfPack": "1.0%"}
+    },
+    "PACK_C": {
+      "totalItems": 500,
+      "itemType": "single-select MCQ",
+      "itemsWithLessThan3Distractors": 0,
+      "itemsWithMoreThan3Distractors": 0,
+      "correctChoiceDistribution": {
+        "A": {"count": 126, "pct": "25.2%"},
+        "B": {"count": 126, "pct": "25.2%"},
+        "C": {"count": 126, "pct": "25.2%"},
+        "D": {"count": 122, "pct": "24.4%"}
+      },
+      "CC_balance_verdict": "EXCELLENT — near-perfect 25% distribution across A/B/C/D",
+      "distractorCounts": {"3_distractors": 500, "<3": 0, ">3": 0},
+      "DL_005_identical_dupes": {"items": 0, "pct": "0.0%"},
+      "DL_005_high_similarity_Jaccard_gt0_7": {"items": 18, "pct": "3.6%"},
+      "nakedNumberDistractors": {
+        "total_distractor_slots_with_bare_numbers": 249,
+        "items_where_ALL_distractors_are_bare_numbers": 82,
+        "pctItemsAllBareNumbers": "16.4%"
+      },
+      "distractorLength": {
+        "mean_chars": 42.1,
+        "median_chars": 47,
+        "p5": 12,
+        "p95": 68
+      },
+      "dollarDistractors": {
+        "itemsWithAnyDollarDistractor": 23,
+        "itemsWithAllDollarDistractors": 20,
+        "pctItemsAnyDollar": "4.6%",
+        "pctItemsAllDollar": "4.0%"
+      },
+      "absoluteLanguage_DL003": {
+        "slotCounts": {"always": 18, "never": 15, "must": 0, "impossible": 1},
+        "itemsWithAbsolute": 34,
+        "pctItemsWithAbsolute": "6.8%"
+      },
+      "vagueQualifiers_DL004": {
+        "slotCounts": {"usually": 0, "normally": 0, "generally": 0, "typically": 0},
+        "itemsWithVague": 0,
+        "pctItemsWithVague": "0.0%"
+      },
+      "rotationCloneGroups_DL012": {
+        "groups_gte5": 82,
+        "items_in_groups": 452,
+        "pctOfPack": "90.4%",
+        "verdict": "CRITICAL — 452 of 500 items are rotation-group clones (DL-012 confirmed). Only 48 unique choice sets in the entire pack. The clone groups use 6-7 item rotation groups with CC cycling A-B-C-D-A-B-C. Distractors are identical across all items in each group, only CC position rotates."
+      }
+    },
+    "PACK_D": {
+      "totalItems": 500,
+      "itemType": "single-select MCQ (499), unknown (1)",
+      "itemsWithLessThan3Distractors": 0,
+      "itemsWithMoreThan3Distractors": 0,
+      "correctChoiceDistribution": {
+        "A": {"count": 125, "pct": "25.1%"},
+        "B": {"count": 126, "pct": "25.3%"},
+        "C": {"count": 126, "pct": "25.3%"},
+        "D": {"count": 122, "pct": "24.4%"}
+      },
+      "CC_balance_verdict": "EXCELLENT — near-perfect 25% distribution",
+      "distractorCounts": {"3_distractors": 499, "<3": 0, ">3": 0},
+      "DL_005_identical_dupes": {"items": 0, "pct": "0.0%"},
+      "DL_005_high_similarity_Jaccard_gt0_7": {"items": 23, "pct": "4.6%"},
+      "nakedNumberDistractors": {
+        "total_distractor_slots_with_bare_numbers": 98,
+        "items_where_ALL_distractors_are_bare_numbers": 32,
+        "pctItemsAllBareNumbers": "6.4%"
+      },
+      "distractorLength": {
+        "mean_chars": 41.0,
+        "median_chars": 45,
+        "p5": 7,
+        "p95": 71
+      },
+      "dollarDistractors": {
+        "itemsWithAnyDollarDistractor": 28,
+        "itemsWithAllDollarDistractors": 25,
+        "pctItemsAnyDollar": "5.6%",
+        "pctItemsAllDollar": "5.0%"
+      },
+      "absoluteLanguage_DL003": {
+        "slotCounts": {"always": 15, "never": 5, "must": 0, "impossible": 0},
+        "itemsWithAbsolute": 20,
+        "pctItemsWithAbsolute": "4.0%"
+      },
+      "vagueQualifiers_DL004": {
+        "slotCounts": {"usually": 0, "normally": 0, "generally": 0, "typically": 0},
+        "itemsWithVague": 0,
+        "pctItemsWithVague": "0.0%"
+      },
+      "rotationCloneGroups_DL012": {
+        "groups_gte5": 77,
+        "items_in_groups": 432,
+        "pctOfPack": "86.4%",
+        "verdict": "CRITICAL — 432 of 500 items are rotation-group clones (DL-012 confirmed). 76 of 77 groups are consecutive. Same pipeline as Pack C."
+      }
+    },
+    "PACK_E": {
+      "totalItems": 500,
+      "itemType": "100% single-select MCQ",
+      "itemsWithLessThan3Distractors": 0,
+      "itemsWithMoreThan3Distractors": 0,
+      "correctChoiceDistribution": {
+        "A": {"count": 125, "pct": "25.0%"},
+        "B": {"count": 126, "pct": "25.2%"},
+        "C": {"count": 125, "pct": "25.0%"},
+        "D": {"count": 124, "pct": "24.8%"}
+      },
+      "CC_balance_verdict": "EXCELLENT — near-perfect 25% distribution",
+      "distractorCounts": {"3_distractors": 500, "<3": 0, ">3": 0},
+      "DL_005_identical_dupes": {"items": 0, "pct": "0.0%"},
+      "DL_005_high_similarity_Jaccard_gt0_7": {"items": 17, "pct": "3.4%"},
+      "nakedNumberDistractors": {
+        "total_distractor_slots_with_bare_numbers": 43,
+        "items_where_ALL_distractors_are_bare_numbers": 13,
+        "pctItemsAllBareNumbers": "2.6%"
+      },
+      "distractorLength": {
+        "mean_chars": 19.3,
+        "median_chars": 19,
+        "p5": 7,
+        "p95": 33
+      },
+      "dollarDistractors": {
+        "itemsWithAnyDollarDistractor": 14,
+        "itemsWithAllDollarDistractors": 14,
+        "pctItemsAnyDollar": "2.8%",
+        "pctItemsAllDollar": "2.8%"
+      },
+      "absoluteLanguage_DL003": {
+        "slotCounts": {"always": 10, "never": 5, "must": 1, "impossible": 0},
+        "itemsWithAbsolute": 13,
+        "pctItemsWithAbsolute": "2.6%"
+      },
+      "vagueQualifiers_DL004": {
+        "slotCounts": {"usually": 0, "normally": 0, "generally": 0, "typically": 0},
+        "itemsWithVague": 0,
+        "pctItemsWithVague": "0.0%"
+      },
+      "rotationCloneGroups_DL012": {"groups_gte5": 0, "items_in_groups": 0, "pctOfPack": "0.0%", "verdict": "CLEAN — Pack E has genuinely unique items (different authoring pipeline)"}
+    }
+  },
+
+  "cross_pool": {
+    "totalItems": 2500,
+    "itemsWith3Distractors": 2499,
+    "itemsWithLt3Distractors": 0,
+    "itemsWithGt3Distractors": 0,
+    "oneItemWith0Choices": "Pack D has 1 item with no choice object (P1-FD-046 area)",
+    "correctChoiceDistribution": {
+      "A": {"count": 620, "pct": "24.8%"},
+      "B": {"count": 668, "pct": "26.7%"},
+      "C": {"count": 607, "pct": "24.3%"},
+      "D": {"count": 604, "pct": "24.2%"}
+    },
+    "CC_balance_verdict": "ACCEPTABLE at pool level (B at 26.7% is slightly above target 25%, but within ±2% bound). Pool-level B-bias entirely attributable to Pack A (167/500 = 33.4%)",
+    "DL_005_exactDupeDistractors": {"items": 0, "pct": "0.00%"},
+    "DL_005_highSimilarity_Jaccard_gt0_7": {"items": 109, "pct": "4.36%"},
+    "nakedNumberDistractors": {
+      "totalBareNumberSlots": 872,
+      "itemsWithAllBareNumberDistractors": 285,
+      "pct": "11.4%"
+    },
+    "dollarDistractors": {
+      "itemsWithAnyDollarDistractor": 411,
+      "itemsWithAllDollarDistractors": 378,
+      "pctAnyDollar": "16.4%",
+      "pctAllDollar": "15.1%"
+    },
+    "absoluteLanguage_DL003": {
+      "slotCounts": {"always": 78, "never": 39, "must": 11, "impossible": 1},
+      "totalSlots": 129,
+      "itemsWithAbsolute": 118,
+      "pctItemsWithAbsolute": "4.7%",
+      "note": "Most uses intentional — e.g., 'always produces more accurate forecasts' as a wrong distractor is legitimate CMA pedagogy. Only 1 'impossible' and 11 'must' found pool-wide — low risk."
+    },
+    "vagueQualifiers_DL004": {
+      "slotCounts": {"usually": 0, "normally": 0, "generally": 0, "typically": 0},
+      "itemsWithVague": 0,
+      "pct": "0.0%",
+      "verdict": "ESSENTIALLY NONEXISTENT — 0 items have vague qualifiers in distractors across all 2,500 items"
+    },
+    "rotationCloneGroups_DL012": {
+      "summary": {
+        "Pack_A": {"items": 44, "pct": "8.8%"},
+        "Pack_B": {"items": 5, "pct": "1.0%"},
+        "Pack_C": {"items": 452, "pct": "90.4%"},
+        "Pack_D": {"items": 432, "pct": "86.4%"},
+        "Pack_E": {"items": 0, "pct": "0.0%"},
+        "total": {"items": 933, "pct": "37.3%"}
+      },
+      "verdict": "933 items across the pool share identical non-correct-choice sets with at least 4 other items — the same distractors rotated among A/B/C/D. Packs C and D account for 94.7% of all clone items."
+    }
+  },
+
+  "identified_issues": {
+    "severity_HIGH": [
+      {
+        "issue": "Pack A CorrectChoice B-bias (33.4%)",
+        "detail": "167/500 items have CC=B. All sections A-F except Section A show B dominating at 31-41%. CAQS §6.4 target is 22-28% per position. Systematic template rotation artifact.",
+        "affected_QIDs": "All Pack A items with CC=B",
+        "recommendation": "Audit Pack A section-level CC distribution and rebalance during next certification wave"
+      },
+      {
+        "issue": "Pack C DL-012 — 90.4% clone items",
+        "detail": "452 of 500 items are rotation-group clones. 82 groups where 5-7 items share the identical 4 choices, only the CC letter rotates. Zero item discrimination within groups.",
+        "affected_QIDs": "452 Pack C items (all sections)",
+        "recommendation": "Per DL-012 remediation proposal — archive 112 clones per DL-012 plan (not yet executed)"
+      },
+      {
+        "issue": "Pack D DL-012 — 86.4% clone items",
+        "detail": "432 of 500 items are rotation-group clones. 77 groups (76 consecutive). Same pipeline as Pack C.",
+        "affected_QIDs": "432 Pack D items (all sections)",
+        "recommendation": "Per DL-012 remediation proposal"
+      }
+    ],
+    "severity_MEDIUM": [
+      {
+        "issue": "Pack B Section A/D per-section CC imbalance",
+        "detail": "Section A: B=27/75(36%), D=13/75(17%). Section D: B=13/75(17%), C=24/75(32%). Not severe at pack level but per-section variation exceeds CAQS target.",
+        "recommendation": "Review Section A and D item sequence during next certification pass"
+      },
+      {
+        "issue": "Pack A — 25.2% items have all-naked-number distractors",
+        "detail": "126 items where all distractors are bare dollar amounts (e.g., '$225,000', '$211,000', '$172,000'). These are calculation items where distractors are undifferentiated numbers — candidates must compute to distinguish. Pedagogically valid for calculation items.",
+        "recommendation": "Accept for calculation-heavy items; review for conceptual items where this pattern appears"
+      },
+      {
+        "issue": "Pack B — 19.6% items have all-naked-number distractors",
+        "detail": "98 items with all-naked-number distractors. Section A (financial reporting) and Section B (budgeting) dominate. Calculation items.",
+        "recommendation": "Accept — consistent with calculation-focused nature of Sections A/B"
+      }
+    ],
+    "severity_LOW": [
+      {
+        "issue": "DL-005 high-similarity pairs (Jaccard >0.7)",
+        "detail": "109 items have at least one pair of distractors with >70% word overlap. Most are calculation items with dollar amounts that differ only by the final digit (e.g., $51,000 vs $42,000). 3 items have all 3 distractor pairs above 0.7 (complete redundancy).",
+        "example_QIDs": "P1-BD-050 through 056 (7 consecutive items, identical choices rotated — pound amounts), P1-BC-041-046 (unit amounts)"
+      },
+      {
+        "issue": "Pack E distractor brevity risk",
+        "detail": "Mean distractor length 19.3 chars (vs 37.4 for Pack A, 42.1 for Pack C). Pack E items frequently have single-phrase distractors (e.g., '10', '15', '20', '30%').",
+        "recommendation": "Review Pack E distractors during next certification wave — some may be too terse for effective learning"
+      },
+      {
+        "issue": "Absolute language in distractors — false-positive caution",
+        "detail": "129 total absolute term hits. Most are intentionally wrong distractors: e.g., 'always produces more accurate forecasts', 'budgets can never change', 'variances are never investigated'. These are legitimate pedagogical tools that teach candidates to reject absolutist claims in accounting.",
+        "recommendation": "No action needed — most uses are in wrong-answer choices, not correct answers"
+      }
+    ],
+    "severity_CLEAN": [
+      {
+        "issue": "DL-005 exact duplicate distractors — 0 across all 2,500 items",
+        "detail": "No item has two distractors that are text-identical. Excellent result."
+      },
+      {
+        "issue": "DL-004 vague qualifiers — 0 items affected pool-wide",
+        "detail": "No distractors contain 'usually', 'normally', 'generally', or 'typically'. The pack authors have systematically avoided vague language."
+      },
+      {
+        "issue": "All items have exactly 4 choices (A/B/C/D)",
+        "detail": "No items have <3 or >3 distractors. 100% conform to the expected select-item format. One Pack D item (P1-FD-046 area) has no Choices object."
+      }
+    ]
+  },
+
+  "pipeline_quality_assessment": {
+    "Pack_A_pipeline": "Good educational quality but systematic CC B-bias. Rotation-clone patterns in Sections C/D/E (44 items). Best distractor length balance (mean 37 chars).",
+    "Pack_B_pipeline": "Strongest educational quality. Minimal rotation clones (1 group, 5 items). Best per-pack CC distribution at aggregate. Good distractor length. 100% Certified.",
+    "Pack_C_pipeline": "Massive clone problem (90.4%). Authoring pipeline produced rotation groups instead of unique items. Distractors are adequate length but undifferentiated across clone siblings.",
+    "Pack_D_pipeline": "Same pipeline as Pack C — 86.4% clones. Identical structural patterns.",
+    "Pack_E_pipeline": "Separate, better pipeline. Zero rotation clones. Well-balanced CC distribution. Very short distractors (most terse pack). Genuinely unique items."
+  },
+
+  "files_analyzed": [
+    "pack_a_corrected.js (const MCQ_BANK_A, 500 items)",
+    "pack_b_corrected.js (const MCQ_BANK_B, 500 items)",
+    "pack_c_corrected.js (const MCQ_BANK_C, 500 items)",
+    "pack_d_corrected.js (const MCQ_BANK_D, 500 items)",
+    "pack_e_corrected.js (const MCQ_BANK_E, 500 items)"
+  ],
+
+  "tool_used": "scripts/agent_e_census_v2.js + supplementary inline scripts",
+  "all_tools_read_only": true
+}

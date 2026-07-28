@@ -1,0 +1,46 @@
+{
+  "session": "S206",
+  "board": "J",
+  "title": "800-Series Readiness Reassessment",
+  "status": {
+    "overall": "CONDITIONALLY_READY",
+    "reason": "Single blocker (DL-034 P1-E-R33) remains; all other readiness conditions met"
+  },
+  "blockers": [
+    {
+      "id": "PRE-205-01",
+      "description": "DL-034: P1-E-R33 missing Stem, CorrectChoice, ExplanationCorrect",
+      "status": "OPEN",
+      "resolution": "Archive P1-E-R33 to remove from learner delivery pool",
+      "session": "S205"
+    }
+  ],
+  "frameworkV2Readiness": {
+    "identityEngine": "OPERATIONAL — 99.96% resolution, 9/9 gate checks PASS",
+    "readinessEngine": "OPERATIONAL — 0.8744 portfolio readiness, 5-state machine validated",
+    "deltaLedger": "OPERATIONAL — 100% deterministic, SHA-256 verified",
+    "scanOrchestrator": "OPERATIONAL — 0.7s full-pool pipeline, 6 gates",
+    "recommendationPipeline": "OPERATIONAL — 4 REC-IDs, 2,105 questions linked"
+  },
+  "capacityToCertify": {
+    "remainingToTarget": 319,
+    "breakdown": {
+      "BLOCKED": 242,
+      "REMEDIATE": 77
+    },
+    "primaryBottlenecks": [
+      {
+        "domain": "E",
+        "items": 167,
+        "readiness": "0.5976"
+      },
+      {
+        "domain": "F",
+        "items": 149,
+        "readiness": "0.6016"
+      }
+    ],
+    "estimatedSessionsAtP1Pace": "~5 sessions (63 items/session)"
+  },
+  "decision": "800-Series CONDITIONALLY READY — may resume upon DL-034 archive execution. All Framework v2 infrastructure is operational and validated for the certification pipeline under Hybrid Mode."
+}

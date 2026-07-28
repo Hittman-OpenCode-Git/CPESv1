@@ -1,0 +1,164 @@
+﻿{
+  "session": "S363",
+  "title": "Certified Pool Integrity Audit — Structural Field Completeness & Delivery Safety",
+  "timestamp": "2026-07-28T19:00:00Z",
+  "status": "COMPLETE",
+  "mode": "READ-ONLY",
+  "methodology": "Function constructor parse (boundary-aware, CC-position-independent, string-aware)",
+  "packs_parsed": 5,
+  "total_qids_parsed": 2540,
+  "total_certified": 2337,
+
+  "fd075_verdict": {
+    "qid": "P1-FD-075",
+    "pack": "Pack D (Section F)",
+    "question_state": "Certified",
+    "stem": "PRESENT (182 chars)",
+    "choices": "PRESENT (4 options: A,B,C,D)",
+    "correct_choice": "C",
+    "explanation_correct": "PRESENT (141 chars)",
+    "explanation_wrong_a": "PRESENT (choice-specific, 639 chars)",
+    "explanation_wrong_b": "PRESENT (choice-specific, 498 chars)",
+    "explanation_wrong_c": "EMPTY (correct — DL-008 compliant, CC=C)",
+    "explanation_wrong_d": "PRESENT (choice-specific, 734 chars)",
+    "dl_008": "CLEAN — EW[CC] empty",
+    "dl_026": "CLEAN — all 3 non-CC EW slots populated",
+    "structural_status": "FULLY INTACT AND RENDERABLE",
+    "s362_claim": "FALSE — S362 reported blank/missing Stem, CorrectChoice, ExplanationCorrect, Choices",
+    "s362_root_cause": "DL-029 forward-scan artifact — identical to S800/S801/S802 prior refutations",
+    "confidence": 100
+  },
+
+  "fd046_finding": {
+    "qid": "P1-FD-046",
+    "pack": "Pack D (Section UNDEFINED)",
+    "question_state": "Active (NON-STANDARD — not in QUESTION_METADATA_STANDARD.md §9.1 taxonomy)",
+    "stem": "MISSING",
+    "choices": "MISSING",
+    "correct_choice": "MISSING",
+    "explanation_correct": "MISSING",
+    "explanation_wrong_a": "PRESENT (1030 chars — MDM/master data management topic)",
+    "explanation_wrong_b": "PRESENT (966 chars)",
+    "explanation_wrong_c": "PRESENT (918 chars)",
+    "explanation_wrong_d": "EMPTY (0 chars)",
+    "difficulty_score": "PRESENT",
+    "cognitive_level": "Evaluate",
+    "upgrade_note": "S899 Phase 1 — SCRATCH AUTHOR: Evaluate/Very Difficult replacement for archived...",
+    "renderable": false,
+    "classification": "TEMPLATE SHELL — placeholder created for S899 Phase 1 authoring, never completed. Has metadata + EW text but no question body.",
+    "learner_risk_current": "NONE — app.js getMCQPool line 1267 filters by continue when !copy.Stem || !copy.CorrectChoice",
+    "learner_risk_latent": "HIGH — state=Active is NOT hard-excluded by assignTier (only Archived/In Audit/Editorial Queue are). If the line 1267 safety gate is removed or bypassed, FD-046 would score tier 2-3 and enter the delivery pool as a broken item.",
+    "recommendation": "Either complete content authoring (add Stem, Choices, CC, EC) or change question_state to Archived for formal exclusion."
+  },
+
+  "blank_certified_scan": {
+    "total_checked": 2337,
+    "packs_checked": 5,
+    "blank_found": 0,
+    "finding": "ZERO blank Certified items across all 5 packs. No Certified item is missing Stem, Choices, CorrectChoice, or ExplanationCorrect."
+  },
+
+  "certified_count_reconciliation": {
+    "actual_counts": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 398,
+      "pack_d": 399,
+      "pack_e": 540,
+      "total": 2337
+    },
+    "baseline_claims": {
+      "source": "CURRENT_BASELINES.md §1 DRIFT FLAG and §2 S811 T0 snapshot",
+      "pack_c": 388,
+      "pack_d": 389,
+      "total": 2317
+    },
+    "delta": {
+      "pack_c": "+10 (388→398)",
+      "pack_d": "+10 (389→399)",
+      "total": "+20 (2317→2337)"
+    },
+    "reconciliation": "The +10 in each pack corresponds to Active-state items (9 Pack C + 11 Pack D) that were likely certified after the S811 T0 snapshot was captured. Pack C has 398 Certified (= sections A-D: 350 + E: 24 + F: 24). Pack D has 399 Certified (= A-D: 350 + E: 24 + F: 25). The baseline may have counted Active items as non-Certified or the items were recently certified via S853 WAVE_A or a subsequent wave.",
+    "select_string_cross_check": "Select-String also counted 398 (Pack C) and 399 (Pack D) — methodology-independent confirmation"
+  },
+
+  "section_level_certification": {
+    "pack_a": {"A":75,"B":100,"C":100,"D":75,"E":75,"F":75},
+    "pack_b": {"A":75,"B":100,"C":100,"D":75,"E":75,"F":75},
+    "pack_c": {"A":75,"B":100,"C":100,"D":75,"E":24,"F":24},
+    "pack_d": {"A":75,"B":100,"C":100,"D":75,"E":24,"F":25},
+    "pack_e": {"A":75,"B":100,"C":100,"D":75,"E":115,"F":75},
+    "note": "Pack E has 115 Section E items (75 standard + 40 R-series P1-E-R01–R40). Packs A-D each have 75 per section except B/C=100."
+  },
+
+  "non_standard_states": {
+    "active_items": {
+      "total": 20,
+      "pack_c": 9,
+      "pack_d": 11,
+      "renderable": 19,
+      "broken_shell": 1,
+      "broken_qid": "P1-FD-046",
+      "governance_note": "Active is not a defined state in QUESTION_METADATA_STANDARD.md §9.1 (valid: Unprocessed, In Audit, Editorial Queue, Certified, Archived). All 19 renderable Active items are structurally complete and would deliver correctly, but their state is non-standard.",
+      "recommendation": "Normalize all 20 Active items to standard states: 19 renderable ones to Certified or Unprocessed; P1-FD-046 to Archived or complete the content."
+    }
+  },
+
+  "archived_contamination": {
+    "total_archived": 183,
+    "pack_c": 93,
+    "pack_d": 90,
+    "pack_c_sections": {"E":46,"F":47},
+    "pack_d_sections": {"E":46,"F":44},
+    "hard_exclusion_verified": true,
+    "delivery_risk": "NONE — assignTier sets _tier=-1 for Archived (line 175-178). getMCQPool filters _tier>=1 (line 1275)."
+  },
+
+  "dl021_pack_e_section_c": {
+    "status": "RESOLVED — 0 items with absent/empty distractor EW",
+    "certified_in_section": 100,
+    "items_with_issue": 0,
+    "documentation_status": {
+      "defect_library": "CORRECT — DL-021 marked Resolved (S828, 2026-07-27)",
+      "current_baselines": "STALE AND INCORRECT — §3 DL-021 says OPEN with 95 Certified items affected",
+      "recommendation": "Update CURRENT_BASELINES.md §3 to reflect RESOLVED status with S363 evidence."
+    }
+  },
+
+  "delivery_pool_safety_gates": {
+    "get_mcq_pool_line_1267": "if (!copy.Stem || !copy.CorrectChoice) continue; — SKIPS items without renderable body BEFORE assignTier",
+    "assign_tier_lines_175_178": "Archived/In Audit/Editorial Queue → _tier=-1 (hard-excluded)",
+    "get_mcq_pool_line_1275": "let active = allItems.filter(q => q._tier >= 1); — only tier 1-3 reach session selection",
+    "defect_manifest": "Additional blocklist for known-defective QIDs by QuestionID",
+    "tier_fill_order": "Tier 1 (Certified) first → Tier 2 (best Unprocessed) → Tier 3 (remaining) — tiers 2-3 included when tier 1 exhausted or for difficulty distribution",
+    "residual_risk": "Active state items (20) are NOT formally hard-excluded. Protected only by line 1267 safety gate. If that gate is removed, FD-046 (broken shell) and 19 renderable Active items would enter the pool at tier 2-3."
+  },
+
+  "s362_claims_rebuttal": [
+    {"claim":"FD-075 is a blank Certified question","verdict":"FALSE","evidence":"All 7 structural fields present. DL-029 forward-scan false positive."},
+    {"claim":"DL-021: 95 Certified Pack E Section C lack distractor EW","verdict":"FALSE","evidence":"0 items with empty/absent distractor EW. All 100 populated."},
+    {"claim":"99.96% structural completeness (1 broken / 2,540)","verdict":"INCORRECT — the 1 broken item is FD-046 (Active, not Certified). 100% of Certified items are structurally complete.","evidence":"0/2337 blank Certified items. 1/2540 items broken (FD-046, state=Active, non-Certified)."},
+    {"claim":"Certified pool: 2,320 items","verdict":"INCORRECT","evidence":"Actual: 2,337 Certified via Function constructor parse. Baseline: 2,317."},
+    {"claim":"CURRENT_BASELINES.md says DL-021 OPEN","verdict":"STALE — should read RESOLVED","evidence":"Pack E Section C: 100/100 Certified items have all EW slots populated."}
+  ],
+
+  "executive_summary": {
+    "certified_pool_status": "HEALTHY — 2,337 Certified items, 0 blank, 0 structural defects",
+    "fd075": "FULLY INTACT — S362 claim categorically FALSE",
+    "fd046": "BROKEN SHELL — NOT Certified, NOT in delivery pool (safety gate at app.js:1267)",
+    "total_items_checked": "2,540 across 5 packs",
+    "blank_certified": "0",
+    "shell_items": "1 (FD-046, non-Certified Active state)",
+    "archived_safety": "VERIFIED — 183 Archived items correctly hard-excluded",
+    "dl021_status": "RESOLVED — Pack E Section C fully populated",
+    "baseline_drift": "+20 certified vs documented (Pack C: +10, Pack D: +10)",
+    "recommendations": [
+      "Update CURRENT_BASELINES.md: correct Pack C certified to 398 (not 388), Pack D to 399 (not 389)",
+      "Update CURRENT_BASELINES.md §3 DL-021: change from OPEN to RESOLVED",
+      "Normalize 20 Active-state items to standard governance states",
+      "Complete FD-046 content authoring or archive it",
+      "Document the 10-item certification delta per pack in REVISION_HISTORY.md",
+      "Consider adding 'Active' to assignTier hard-exclusion list as defense-in-depth"
+    ]
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "session": "S720",
+  "agent": "A",
+  "title": "S719 Outcome Reconciliation",
+  "generated": "2026-07-26T23:45:00Z",
+  "methodology": "Direct grep (Select-String) on all 5 pack files for CognitiveLevel, Difficulty, DifficultyScore, question_state, and QuestionID. Cross-checked against S719 analytics package, session summary, misalignment census, distribution analytics, reliability retest results, final verification, and governance audit. B/C/D unchanged status verified via Agent M hash comparison and file modification timestamps.",
+
+  "verification_summary": {
+    "claim_244_misalignments": {
+      "claimed": "244 severe misalignments eliminated (244→0)",
+      "claimed_by": "REVISION_HISTORY.md lines 13615-13741; SESSION719_SESSION_SUMMARY.md §1",
+      "verified": "PARTIALLY_VERIFIED",
+      "evidence": "Pack A: 156 Evaluate→Understand CL changes + concurrent Easy→Moderate-Easy difficulty changes = all S718-flagged Pack A items resolved. Pack E: 76 Difficult@Remember→Moderate-Easy@Understand (Agent C Block-C) + all 386 Remember→Understand = all S718-flagged Pack E items resolved. However, S719 Distribution Analytics (Agent I) and Analytics Package (Agent K) both projected 12 additional changes in Packs B/C/D (B:3, C:6, D:3 Evaluate→Understand) that were NEVER EXECUTED. SESSION_SUMMARY §'Files NOT Modified' line confirms B/C/D untouched. Agent M hash verification confirms B/C/D hashes unchanged from T0. Additionally, Agent A's misalignment census identified 1,604 total DCS §3 misalignments; S719 addressed only the 244 severe S718-blocklist subset. The remaining ~1,360 moderate misalignments in B/C/D remain. Verdict: 232 of 244 severe items actually fixed (Packs A+E); 12 B/C/D items counted in reports but not executed on disk.",
+      "raw_evidence_commands": [
+        "Pack A Evaluate: Select-String pack_a_corrected.js '\"CognitiveLevel\": \"Evaluate\"' = 2 (was 158 pre-S719 → 156 items changed)",
+        "Pack E Difficulty Difficult: Select-String pack_e_corrected.js '\"Difficulty\": \"Difficult\"' = 26 (was 102 pre-S719 → 76 items changed)",
+        "Pack B/C/D hashes unchanged per SESSION719_FINAL_VERIFICATION.json §hashes"
+      ]
+    },
+    "claim_542_items_modified": {
+      "claimed": 542,
+      "claimed_by": "REVISION_HISTORY.md; SESSION719_SESSION_SUMMARY.md §Key Metrics",
+      "verified": true,
+      "evidence": "Pack A: 156 items (Evaluate: 158→2, delta -156; Understand: 59→215, delta +156; Difficulty Easy: 261→105, delta -156; ME: 57→213, delta +156). Pack E: 386 items (Remember: 386→0, delta -386; Understand: 14→400, delta +386; Difficulty Difficult: 102→26, delta -76 for subset). Total: 156+386=542. INCONSISTENCY NOTE: S719 Analytics Package (Agent K §7.1) reports cross-pack total of 554 (156+3+6+3+386) but SESSION_SUMMARY and REVISION_HISTORY correctly report 542. The 12 B/C/D items (Agent C's 3+6+3) were projected but never executed — files remain unchanged.",
+      "raw_evidence_commands": [
+        "Pack A CL shifts confirmed via grep per-CognitiveLevel on pack_a_corrected.js",
+        "Pack E CL shifts confirmed via grep per-CognitiveLevel on pack_e_corrected.js"
+      ]
+    },
+    "claim_72_pct_agreement": {
+      "claimed": "72% reviewer agreement (CognitiveLevel reliability)",
+      "claimed_by": "REVISION_HISTORY.md; SESSION719_SESSION_SUMMARY.md §Reliability",
+      "verified": true,
+      "evidence": "Agent H's reliability retest reports: recalibrated items = 72.0% CL agreement vs 46.0% for controls (+26pp improvement). However, this was measured by a mechanical DCS §3 classifier (stem-only, no distractor visibility), NOT by blinded human reviewers. The SESSION_SUMMARY misleadingly states '72% CL agreement' without noting this is a computational classifier, not human judgment. Manual review of 39 items with full choices visible achieved 84.6% CL agreement with the file. The 72% figure is conservative (underestimates actual human agreement due to distractor-blind methodology). The +26pp gap between recalibrated and control items supports that S719 improved calibration consistency.",
+      "raw_evidence_commands": [
+        "Source: SESSION719_RELIABILITY_RETEST_RESULTS.json §agreement_rates.recalibrated_only.cognitive_level = '72.0%'",
+        "Source: SESSION719_RELIABILITY_RETEST_RESULTS.json §agreement_rates.controls_only.cognitive_level = '46.0%'",
+        "Manual review agreement: 84.6% CL (39 items with full choices visible)"
+      ]
+    },
+    "claim_2500_cl_coverage": {
+      "claimed": 2500,
+      "claimed_by": "REVISION_HISTORY.md; SESSION_SUMMARY §CognitiveLevel Distribution Shift",
+      "verified": true,
+      "evidence": "Select-String -Path pack_*_corrected.js -Pattern '\"CognitiveLevel\"' | Measure-Object = 2,500. Per-pack breakdown: Pack A: 500, Pack B: 500, Pack C: 500, Pack D: 500, Pack E: 500. All items have a CognitiveLevel value — 0 missing. Also confirms 2,500 QuestionIDs and 2,500 DifficultyScore fields.",
+      "raw_evidence_commands": [
+        "Select-String -Path pack_*_corrected.js -Pattern '\"CognitiveLevel\"' | Measure-Object → 2500",
+        "Select-String -Path pack_*_corrected.js -Pattern '\"QuestionID\"' | Measure-Object → 2500",
+        "Select-String -Path pack_*_corrected.js -Pattern '\"DifficultyScore\"' | Measure-Object → 2500"
+      ]
+    },
+    "claim_168_eval_to_understand": {
+      "claimed": 168,
+      "claimed_by": "REVISION_HISTORY.md as 'Block-001: 168 Evaluate@Easy items'",
+      "verified": "PARTIALLY_VERIFIED",
+      "evidence": "Total pool Evaluate delta: 223 (pre-S719) → 67 (actual post-S719 grep) = -156, NOT -168. The 168 count was the S719 target (all evaluate@easy items across ALL five packs). However, only 156 items were actually changed — the 12 B/C/D items projected by Agent C (B:3 Evaluate→Understand, C:6, D:3) were never executed. Pack A alone accounts for all 156 actual changes (Evaluate: 158→2). B/C/D Evaluate counts are unchanged: Pack B=8, Pack C=21, Pack D=34. The Analytics Package is internally inconsistent: it claims 168 Evaluate→Understand but the actual pool delta is only -156.",
+      "raw_evidence_commands": [
+        "Pack A Evaluate pre-S719: 158 (per S719_DISTRIBUTION_ANALYTICS.json §pre_s719.by_pack.pack_a.cl.Evaluate)",
+        "Pack A Evaluate post-S719: 2 (grep confirmed)",
+        "Total pool Evaluate post-S719: 67 (grep confirmed: 2+8+21+34+2)"
+      ]
+    },
+    "claim_386_rem_to_understand": {
+      "claimed": 386,
+      "claimed_by": "REVISION_HISTORY.md; SESSION_SUMMARY as 'Pack E Remember→Understand (386 items)'",
+      "verified": true,
+      "evidence": "Pack E Remember: 386 (pre-S719) → 0 (post-S719 grep) = -386. Pack E Understand: 14→400 = +386. Total pool Remember: 436→50 (-386), pool Understand: 614→1156 (+542 = 386 from Remember + 156 from Evaluate). Net pool Remember delta of -386 matches claim. All 386 Pack E items shifted — executor went beyond Agent D's 284 recommendation + Agent C's 76, shifting all 386. Agent D identified ~102 where Remember may be justified; executor overran this by 26.",
+      "raw_evidence_commands": [
+        "Select-String pack_e_corrected.js '\"CognitiveLevel\": \"Remember\"' → 0",
+        "Select-String pack_e_corrected.js '\"CognitiveLevel\": \"Understand\"' → 400",
+        "Total pool Remember: Select-String pack_*_corrected.js '\"CognitiveLevel\": \"Remember\"' → 50"
+      ]
+    },
+    "claim_pack_a_156_modified": {
+      "claimed": 156,
+      "claimed_by": "REVISION_HISTORY.md §Pack A items modified; SESSION_SUMMARY §Key Metrics",
+      "verified": true,
+      "evidence": "Pack A Evaluate: 158→2 (delta -156), Understand: 59→215 (delta +156), Difficulty Easy: 261→105 (delta -156), ME: 57→213 (delta +156). All 156 items were Certified (481 Certified pre and post — no governance state downgrade). Backup exists: backups/pack_a_corrected.js.bak-SESSION719-20260726145300 (1,818,532 bytes pre-fix, 1,820,248 bytes post-fix). Hash changed per Agent M. Parse integrity: 500/500 items confirmed.",
+      "raw_evidence_commands": [
+        "Select-String pack_a_corrected.js '\"Difficulty\": \"Easy\"' → 105 (was 261 pre-S719)",
+        "Select-String pack_a_corrected.js '\"Difficulty\": \"Moderate-Easy\"' → 213 (was 57 pre-S719)",
+        "Select-String pack_a_corrected.js '\"question_state\": \"Certified\"' → 481"
+      ]
+    },
+    "claim_governance_guard_20": {
+      "claimed": "20/20 PASS",
+      "claimed_by": "REVISION_HISTORY.md; SESSION_SUMMARY §Governance Verification",
+      "verified": true,
+      "evidence": "Direct execution: node scripts/test_governance_guard.js → 'RESULTS: 20 PASS, 0 FAIL'. All 5 rules tested: Rule 2 (5 tests), Rule 5 (6 tests), Rule 3 (2 tests), Rule 4 (5 tests), Read-only passthrough (2 tests). Pre-flight and post-flight both confirmed 20/20 by Agent M.",
+      "raw_evidence_commands": [
+        "node scripts/test_governance_guard.js → 20 PASS, 0 FAIL"
+      ]
+    },
+    "claim_certified_481_500": {
+      "claimed": [481, 500],
+      "claimed_by": "REVISION_HISTORY.md; SESSION_SUMMARY §Governance Verification",
+      "verified": true,
+      "evidence": "Select-String -Path pack_a_corrected.js -Pattern '\"question_state\": \"Certified\"' = 481. Select-String pack_e_corrected.js = 500. Cross-pack totals: Pack B=500, Pack C=350, Pack D=350, Pack E=500. Grand total pool: 2,181 Certified. No governance state changes (no Certified→Unprocessed downgrades) from S719. All 542 modified items retained their Certified state. 19 Pack A items remain Archived (unchanged).",
+      "raw_evidence_commands": [
+        "Select-String pack_a_corrected.js '\"question_state\": \"Certified\"' → 481",
+        "Select-String pack_e_corrected.js '\"question_state\": \"Certified\"' → 500",
+        "Select-String pack_b_corrected.js '\"question_state\": \"Certified\"' → 500",
+        "Select-String pack_c_corrected.js '\"question_state\": \"Certified\"' → 350",
+        "Select-String pack_d_corrected.js '\"question_state\": \"Certified\"' → 350"
+      ]
+    },
+    "claim_pack_bcd_unchanged": {
+      "claimed": true,
+      "claimed_by": "REVISION_HISTORY.md; SESSION_SUMMARY §Files NOT Modified",
+      "verified": true,
+      "evidence": "Agent M hash verification: pack_b T0 hash = current hash (DF219E3... = DF219E3...), pack_c (D5EC28E... = D5EC28E...), pack_d (C2F16CF... = C2F16CF...). File timestamps: B/C/D all LastWriteTime = 7/26/2026 2:11:02 PM (pre-S719). Pack A/E timestamps: 3:04:22 PM and 3:06:23 PM (post-S719). No S719 backup files exist for B/C/D. CognitiveLevel and Difficulty distributions in B/C/D match pre-S719 values exactly. INCONSISTENCY NOTE: Both the Analytics Package and Distribution Analytics project 'post-S719' B/C/D distributions that do not match reality — they include Agent C's projected 12 changes (3+6+3) that were never executed. This is a S719 report quality issue.",
+      "raw_evidence_commands": [
+        "Agent M hash comparison: B/C/D T0 = current (SESSION719_FINAL_VERIFICATION.json §hashes)",
+        "File timestamps: B/C/D 2:11 PM vs A/E 3:04-3:06 PM",
+        "No S719 backup files for B/C/D in backups/",
+        "B CL: grep = 41/111/325/15/8 = pre-S719 values",
+        "C CL: grep = 5/221/230/23/21 = pre-S719 values",
+        "D CL: grep = 1/209/233/23/34 = pre-S719 values"
+      ]
+    }
+  },
+
+  "current_certified_count": {
+    "pack_a": 481,
+    "pack_b": 500,
+    "pack_c": 350,
+    "pack_d": 350,
+    "pack_e": 500,
+    "total": 2181,
+    "note": "Plus 19 Pack A Archived items. Total items: 500+500+500+500+500 = 2,500. 2,181 Certified + 19 Archived + 300 Unprocessed (Packs C/D) = 2,500."
+  },
+
+  "current_cl_distribution": {
+    "Remember": 50,
+    "Understand": 1156,
+    "Apply": 1161,
+    "Analyze": 66,
+    "Evaluate": 67,
+    "total": 2500,
+    "per_pack": {
+      "pack_a": { "Remember": 3, "Understand": 215, "Apply": 278, "Analyze": 2, "Evaluate": 2 },
+      "pack_b": { "Remember": 41, "Understand": 111, "Apply": 325, "Analyze": 15, "Evaluate": 8 },
+      "pack_c": { "Remember": 5, "Understand": 221, "Apply": 230, "Analyze": 23, "Evaluate": 21 },
+      "pack_d": { "Remember": 1, "Understand": 209, "Apply": 233, "Analyze": 23, "Evaluate": 34 },
+      "pack_e": { "Remember": 0, "Understand": 400, "Apply": 95, "Analyze": 3, "Evaluate": 2 }
+    },
+    "caqs_target_gaps": {
+      "Remember": "2.0% actual vs 5% target (-3.0pp)",
+      "Understand": "46.2% actual vs 15% target (+31.2pp — MAJOR overcorrection per S719 own warning)",
+      "Apply": "46.4% actual vs 40% target (+6.4pp)",
+      "Analyze": "2.6% actual vs 25% target (-22.4pp — critical deficit)",
+      "Evaluate": "2.7% actual vs 15% target (-12.3pp)"
+    }
+  },
+
+  "current_difficulty_distribution": {
+    "Easy_1": 543,
+    "ModerateEasy_2": 571,
+    "Moderate_3": 1253,
+    "Difficult_4": 132,
+    "VeryDifficult_5": 0,
+    "total": 2499,
+    "empty_string": 1,
+    "per_pack_difficulty_field": {
+      "pack_a": { "Easy": 105, "ME": 213, "Moderate": 182, "Difficult": 0 },
+      "pack_b": { "Easy": 140, "ME": 84, "Moderate": 248, "Difficult": 28 },
+      "pack_c": { "Easy": 99, "ME": 79, "Moderate": 303, "Difficult": 19 },
+      "pack_d": { "Easy": 99, "ME": 28, "Moderate": 313, "Difficult": 59, "empty": 1 },
+      "pack_e": { "Easy": 100, "ME": 167, "Moderate": 207, "Difficult": 26 }
+    },
+    "caqs_s62_target_gaps": {
+      "Easy": "21.7% actual vs 15% target (+6.7pp)",
+      "Moderate-Easy": "22.8% actual vs 20% target (+2.8pp)",
+      "Moderate": "50.1% actual vs 30% target (+20.1pp — dominant over-representation)",
+      "Difficult": "5.3% actual vs 25% target (-19.7pp — critical deficit)",
+      "Very_Difficult": "0.0% actual vs 10% target (-10.0pp — zero items)"
+    }
+  },
+
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "HIGH",
+      "claim": "244 severe misalignments eliminated (244→0 pool-wide)",
+      "finding": "232 of 244 actually fixed. 12 items in B/C/D (Agent C projected changes) were NEVER EXECUTED. S719 Distribution Analytics and Analytics Package both contain 'post-S719' projections for B/C/D that do not match actual file state. The SESSION_SUMMARY correctly notes B/C/D were NOT modified, creating an internal S719 reporting inconsistency.",
+      "evidence": "Agent M hash verification confirms B/C/D unchanged. B/C/D Evaluate counts unchanged from pre-S719. Agent C recommended 3+6+3 Evaluate→Understand changes that were incorporated into analytics projections but never applied to disk.",
+      "magnitude": "12 items (5% of 244 claim) — minor in absolute terms but indicates a process gap where analytics projections included changes that were never executed."
+    },
+    {
+      "id": "D2",
+      "severity": "MEDIUM",
+      "claim": "542 items modified across 21 batches",
+      "finding": "The S719 Analytics Package (Agent K) reports a cross-pack total of 554 (156+3+6+3+386), contradicting the REVISION_HISTORY.md and SESSION_SUMMARY claim of 542. The 542 count is correct (verified by actual file state). The 554 count includes 12 B/C/D items that were approved by Agent C but never executed. This is a report-vs-reality discrepancy within S719's own deliverables.",
+      "evidence": "Analytics Package §7.1: cross_pack_total = 554. REVISION_HISTORY: 542 items. Actual file evidence: 542.",
+      "magnitude": "+12 vs. actual — the 12-item B/C/D spillover from Agent C was counted in one report but not executed."
+    },
+    {
+      "id": "D3",
+      "severity": "HIGH",
+      "claim": "Pool-wide post-S719 CL distribution: Understand=1,168, Evaluate=55",
+      "finding": "S719 Analytics Package projects post-S719: Understand=1,168, Evaluate=55. Actual grep: Understand=1,156 (-12), Evaluate=67 (+12). The ±12 offset exactly matches the unexecuted B/C/D changes. The distribution analytics used the PRE-B/C-D EXECUTION projections. This means S719 reports contain incorrect pool-wide distribution numbers.",
+      "evidence": "grep on pack_*_corrected.js for all 5 CognitiveLevel values sums to 50+1156+1161+66+67=2500. Analytics Package claims 50+1168+1161+66+55=2500. Discrepancy: 12 items shifted from Evaluate→Understand that never happened in B/C/D.",
+      "magnitude": "12 items (0.5% of pool) — small absolute but the Analytics Package, Distribution Analytics, and SESSION_SUMMARY all use these incorrect pool-wide numbers."
+    },
+    {
+      "id": "D4",
+      "severity": "MEDIUM",
+      "claim": "168 Evaluate→Understand (Block-001)",
+      "finding": "The 168 count is the S719 TARGET for Attack Vector 1 (Evaluate@Easy). Actual execution: 156 items in Pack A only. The 12-item B/C/D gap means the '168 Evaluate→Understand downgrades' claim overstates by 12. The actual pool Evaluate delta is -156, not -168.",
+      "evidence": "Pre-S719 Evaluate pool: 223. Post-S719 actual: 67. Delta: -156, not -168.",
+      "magnitude": "12 items — 7.1% of target not achieved in execution."
+    },
+    {
+      "id": "D5",
+      "severity": "LOW",
+      "claim": "72% reviewer agreement — 'reviewer' implies human judgment",
+      "finding": "The 72% figure is from a mechanical stem-only DCS §3 classifier, not from blinded human reviewers. The SESSION_SUMMARY states '72% CL agreement' without disclosing the computational methodology. The actual human agreement on full-context review (39 items with choices visible) was 84.6%. This is a presentation concern, not a data integrity issue. However, the phrasing in REVISION_HISTORY.md ('72% reviewer agreement') is misleading — it was algorithmic, not reviewer-based.",
+      "evidence": "SESSION719_RELIABILITY_RETEST_RESULTS.json §methodology: 'stem-only classification'; §manual_review_39_items: 84.6% human CL agreement vs. 72.0% machine.",
+      "magnitude": "Semantic — not a content defect, but a reporting accuracy concern per AGENTS.md §5 (dual verification standard)."
+    },
+    {
+      "id": "D6",
+      "severity": "LOW",
+      "claim": "DifficultyScore distribution: Pool has 1 item with empty string",
+      "finding": "Confirmed. 1 item in Pack D has an empty Difficulty field (not an integer score). The S719 Analytics Package notes this (pre-existing anomaly, not in S719 scope). This was also noted in the pre-S719 Distribution Analytics at pack_d.diff['']:1.",
+      "evidence": "DifficultyScore count = 2,500 but Difficulty (string) sum = 2,499 due to 1 empty string in Pack D.",
+      "magnitude": "1 item — pre-existing, not introduced by S719."
+    },
+    {
+      "id": "D7",
+      "severity": "HIGH",
+      "claim": "Analyze deficit: 2.6% vs 25% CAQS target (not S719's fault — structural content deficit)",
+      "finding": "Pool has only 66 Analyze items (2.6%). S719 did not increase Analyze — it was out of scope. Pack A has 2 Analyze items (0 after S719 — none added), Pack E has 3. The CAQS target of 25% requires ~625 Analyze items. Current deficit: ~559 items. This requires NEW content creation, not recalibration.",
+      "evidence": "grep Analyze = 66 across all packs. SESSION_SUMMARY §Remaining Gaps §3 documents this.",
+      "magnitude": "559-item deficit — structural, not calibration error. Beyond S719 scope."
+    }
+  ],
+
+  "overall_verdict": "DISCREPANCIES_FOUND",
+  "verdict_detail": "9 of 10 claims are VERIFIED or PARTIALLY VERIFIED. The 10th claim (B/C/D unchanged) is VERIFIED. The core S719 execution was sound: 542 items correctly modified across Packs A and E. CognitiveLevel coverage confirmed at 2,500/2,500. Governance guard confirmed 20/20 PASS. Certification states preserved (2,181 total). However, S719's internal reporting contains systematic errors: the Analytics Package and Distribution Analytics both project B/C/D changes that were never executed, inflating pool-wide totals by 12 items (0.5%). The '72% reviewer agreement' claim is algorithmically derived (stem-only classifier), not human reviewer agreement (which was actually 84.6%). The '244→0 severe misalignments' claim is accurate for modified files (Packs A+E) but not pool-wide (12 B/C/D items still carry their pre-S719 misalignments). Additionally, the pool now has ~93% Understand+Apply cognitive spread — a 31.2pp Understand overcorrection above the 15% CAQS target flagged by S719's own analytics.",
+  "recommended_actions": [
+    "S720 Wave 2: Restore ~102 Pack E items to Remember (per Agent D's justified-exception analysis)",
+    "S720 Wave 2: Evaluate whether B/C/D 12 items should receive their projected Agent C changes",
+    "S720 Wave 2: Re-execute pool-wide distribution census with actual post-S719 grep, not projection-based analytics",
+    "S720 Wave 2: Clarify in any S719 artifacts that the 72% CL agreement is algorithmic, not human reviewer",
+    "S720 Wave 2: Resolve the 554 vs 542 discrepancy across all S719 deliverables",
+    "Future: Address Analyze and Difficult content deficits via new item authoring (out of 700-series calibration scope)"
+  ],
+  "read_only_attestation": "Zero files modified. All evidence from direct grep, S719 report files, and governance guard test execution."
+}

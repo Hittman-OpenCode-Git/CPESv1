@@ -1,0 +1,126 @@
+{
+  "document": "SESSION350_ADMIN_METRICS_FRAMEWORK",
+  "session": "S350",
+  "title": "Administration Metrics Framework — Future Measurement Preparation",
+  "board": "J — Administration Metrics",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Forward-Looking Measurement Framework",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION203_ADMIN_PLATFORM_SPEC.json; SESSION203_ROLE_MODEL.json",
+  "purpose": "Prepare the measurement model for May Administration Portal metrics. The admin platform is a P0-P2 deliverable (S830-S910). This framework defines what will be measured once the platform is operational, preventing ad-hoc metric design later.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "platform_readiness": {
+    "status": "NOT_YET_OPERATIONAL",
+    "description": "The May Administration Portal (7 modules, 5 roles) is specified in SESSION203_ADMIN_PLATFORM_SPEC.json and SESSION203_ROLE_MODEL.json but is not yet built. S350 establishes the measurement framework so that when the platform goes live (P0 at S830), metrics collection has a pre-defined schema.",
+    "target_live_date": "S830 (Phase 2 authorization — Shadow Mode)",
+    "p0_modules": ["Question Management", "Recommendation Registry", "Session Registry", "Certification Operations Console", "Admin Auth"],
+    "p1_modules": ["Student Management", "Test Results", "Modernization Dashboard"],
+    "p2_modules": ["Workflow Automation"],
+    "roles": ["Student", "Content Admin", "Certification Reviewer", "Governance Admin", "System Admin"]
+  },
+
+  "metric_categories": {
+    "AM-001_student_challenges": {
+      "label": "Student Challenge Metrics",
+      "description": "When students challenge question content, the platform must track the challenge lifecycle.",
+      "platform_module": "P1 — Student Management",
+      "status": "PLACEHOLDER — platform not yet operational",
+      "metrics_to_measure": {
+        "challenge_count": "Total challenges submitted, by question, by domain, by challenge type",
+        "challenge_types": ["Answer Correctness Dispute", "Explanation Clarity Issue", "Difficulty Mismatch", "Distractor Confusion", "Technical Rendering Issue"],
+        "challenge_resolution_time": "Time from challenge submission to resolution. p50, p95, p99 by challenge type.",
+        "challenge_outcomes": ["UPHELD — Answer corrected", "PARTIALLY_UPHELD — Explanation clarified", "DISMISSED — Answer confirmed correct", "DUPLICATE — Already known/fixed"],
+        "backlog": "Open challenges by age bucket: <1 week, 1-4 weeks, 1-3 months, >3 months",
+        "v2_target": "<7 days average resolution time for UPHELD challenges. <30 days for all challenges."
+      }
+    },
+    "AM-002_question_investigations": {
+      "label": "Question Investigation Metrics",
+      "description": "When a question is flagged for investigation (by student challenge, scan finding, or agent escalation), the platform tracks the investigation lifecycle.",
+      "platform_module": "P0 — Question Management",
+      "status": "PLACEHOLDER — platform not yet operational",
+      "metrics_to_measure": {
+        "investigations_opened": "Count of investigations opened per session, by trigger source (scan, student, agent)",
+        "investigations_closed": "Count of investigations closed per session",
+        "mean_resolution_time": "Average time from investigation opened to closed, by trigger source",
+        "escalation_rate": "Rate at which investigations escalate from Content Admin to Certification Reviewer to Governance Admin",
+        "recurrence_rate": "Rate at which closed investigations are re-opened for the same question",
+        "v2_target": "Investigations resolved within 1 session for HIGH severity, 3 sessions for MEDIUM, 5 sessions for LOW"
+      }
+    },
+    "AM-003_session_navigation": {
+      "label": "Session Navigation Metrics",
+      "description": "The Session Registry module provides bidirectional navigation (Question→Session→Recommendation). Track how users navigate this graph.",
+      "platform_module": "P0 — Session Registry",
+      "status": "PLACEHOLDER — platform not yet operational",
+      "metrics_to_measure": {
+        "page_views": "Total page views by module, by role",
+        "search_queries": "Search query volume, by type (QID, compound-key, domain, session, recommendation)",
+        "drill_down_depth": "Average navigation depth — how many linked objects does a user traverse in one session? (e.g., Question → 3 Sessions → 2 Recommendations = depth 3)",
+        "most_common_navigation_paths": "Top navigation path sequences (e.g., Session → Recommendation → Question → Session)",
+        "v2_target": "Navigation paths of 2+ hops should be common — the deep-linking is the feature"
+      }
+    },
+    "AM-004_resolution_times": {
+      "label": "Resolution Time Metrics",
+      "description": "End-to-end resolution time for various platform workflows. Tracked by issue type and severity.",
+      "platform_module": "Cross-module",
+      "status": "PLACEHOLDER — platform not yet operational",
+      "metrics_to_measure": {
+        "by_issue_type": {
+          "student_challenge": "p50, p95, p99 resolution time in calendar days",
+          "question_investigation": "p50, p95, p99 resolution time in sessions",
+          "recommendation_execution": "p50, p95, p99 time from OPEN to CLOSED in sessions",
+          "certification_batch": "Time from READY to CERTIFIED per batch in sessions",
+          "defect_remediation": "Time from REMEDIATE to READY per item in sessions"
+        },
+        "by_severity": ["CRITICAL", "HIGH", "MEDIUM", "LOW"],
+        "v2_target": "CRITICAL: ≤1 session. HIGH: ≤2 sessions. MEDIUM: ≤5 sessions. LOW: ≤10 sessions."
+      }
+    },
+    "AM-005_admin_workload": {
+      "label": "Administrative Workload Metrics",
+      "description": "Track the human/machine workload of administering the certification pipeline. Framework v2 should reduce admin workload.",
+      "platform_module": "P2 — Workflow Automation (when built)",
+      "status": "PLACEHOLDER — platform not yet operational",
+      "metrics_to_measure": {
+        "actions_per_role_per_session": "Number of admin actions performed by each role in each session",
+        "role_breakdown": {
+          "Content Admin": ["Question edits", "Investigation triage", "Distractor authoring", "Explanation revision"],
+          "Certification Reviewer": ["Certification batch approvals", "Quality spot-checks", "Challenge adjudication"],
+          "Governance Admin": ["Session authorization", "Escalation handling", "Defect library updates", "Phase gate checks"],
+          "System Admin": ["Registry maintenance", "Backup verification", "Role assignment"]
+        },
+        "automated_vs_manual_ratio": "Actions performed automatically by platform vs. actions requiring human input",
+        "v2_target": "Administrative workload should decrease as automation increases through Phase 1→2→3. Target: 50% reduction in manual admin actions by Phase 3."
+      }
+    }
+  },
+
+  "measurement_implementation": {
+    "label": "Implementation Guidance",
+    "description": "These metrics are placeholders until the May Administration Platform is operational. When the platform goes live at S830, the measurement infrastructure must:",
+    "requirements": [
+      "Log every admin action with: timestamp, acting_user_role, action_type, target_object_id (QID/REC-ID/session), outcome",
+      "Aggregate logs per session in the GOVERNANCE_REPORT administration section",
+      "Compute AM-001 through AM-005 metrics at every session Tend",
+      "Trend metrics across sessions to detect workload changes as Framework v2 phases progress",
+      "Compare v2 admin workload against v1 baseline (estimated from session summaries and agent spawn counts)"
+    ],
+    "v1_baseline_note": "Framework v1 has no administration platform — all admin work is manual through agent-spawn operations. The v1 admin workload can be estimated retrospectively from session summaries: average ~19 agent-spawns per session, of which ~30-40% were administrative (governance checks, backup verification, session coordination) rather than content review."
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_RECOMMENDATION_ANALYTICS.json",
+      "reports/SESSION350_REPORTING_SCORECARD.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/SESSION203_ADMIN_PLATFORM_SPEC.json",
+      "reports/SESSION203_ROLE_MODEL.json"
+    ]
+  }
+}

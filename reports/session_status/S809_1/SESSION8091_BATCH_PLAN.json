@@ -1,0 +1,134 @@
+{
+  "session": "S809.1",
+  "title": "S810 Remediation Batch Plan — Domain E Certification",
+  "generated_by": "Agent G — Batch Planner",
+  "date": "2026-07-26",
+  "prerequisite_step0": {
+    "title": "CorrectChoice Audit on 5 Discrepant Seeds",
+    "rationale": "5 seeds flagged in Agent AA collision audit with CC uncertainty due to DL-016 EW rotation artifact",
+    "QIDs": ["P1-EC-004", "P1-EC-008", "P1-EC-021", "P1-EC-028", "P1-EC-066"],
+    "action": "Independently derive correct answer for each of these 5 seeds before any EW remediation begins",
+    "blocking": "All 4 waves"
+  },
+  "batch_schedule": {
+    "total_waves": 4,
+    "total_batches": 8,
+    "total_items": 38,
+    "total_EW_slots": 50,
+    "total_DL013_slots": 9
+  },
+  "waves": [
+    {
+      "wave": "A",
+      "label": "Highest Priority P1 — Apply + Difficult Seeds",
+      "batches": [
+        {
+          "batch": "A1",
+          "items": 5,
+          "QIDs": ["P1-EC-024", "P1-EC-061", "P1-ED-073", "P1-EC-072", "P1-ED-028"],
+          "EW_slots": 7,
+          "DL013_slots": 0,
+          "notes": "Apply/Difficult seeds. All have 1 empty EW slot + 1-2 full-text slots that may need DL-016-aware verification"
+        },
+        {
+          "batch": "A2",
+          "items": 5,
+          "QIDs": ["P1-EC-025", "P1-ED-025", "P1-ED-072", "P1-EC-021", "P1-ED-064"],
+          "EW_slots": 6,
+          "DL013_slots": 0,
+          "notes": "Mixed Apply/Difficult seeds. EC-021 is CC-discrepant — verify per Step 0"
+        }
+      ],
+      "total_items": 10,
+      "total_EW_slots": 13
+    },
+    {
+      "wave": "B",
+      "label": "P1 Priority Seeds — Core Internal Control Concepts",
+      "batches": [
+        {
+          "batch": "B1",
+          "items": 6,
+          "QIDs": ["P1-EC-028", "P1-ED-066", "P1-EC-041", "P1-ED-058", "P1-EC-008", "P1-ED-001"],
+          "EW_slots": 10,
+          "DL013_slots": 0,
+          "notes": "EC-028 and EC-008 are CC-discrepant — verify per Step 0. ED-066/ED-058 are Difficult Apply"
+        },
+        {
+          "batch": "B2",
+          "items": 6,
+          "QIDs": ["P1-EC-004", "P1-ED-042", "P1-ED-014", "P1-ED-010", "P1-EC-023", "P1-ED-035"],
+          "EW_slots": 9,
+          "DL013_slots": 0,
+          "notes": "EC-004 is CC-discrepant — verify per Step 0"
+        }
+      ],
+      "total_items": 12,
+      "total_EW_slots": 19
+    },
+    {
+      "wave": "C",
+      "label": "P1+P2 Seeds — Standard Remediation",
+      "batches": [
+        {
+          "batch": "C1",
+          "items": 6,
+          "QIDs": ["P1-EC-040", "P1-EC-060", "P1-EC-052", "P1-EC-020", "P1-EC-049", "P1-EC-022"],
+          "EW_slots": 4,
+          "DL013_slots": 0,
+          "notes": "Lower priority P1+P2 Pack C seeds. EC-066 CC check needed"
+        },
+        {
+          "batch": "C2",
+          "items": 6,
+          "QIDs": ["P1-ED-074", "P1-ED-071", "P1-EC-014", "P1-EC-066", "P1-EC-031", "P1-ED-016"],
+          "EW_slots": 4,
+          "DL013_slots": 9,
+          "notes": "Pack D seeds with DL-013 boilerplate (ED-016). ED-046 has boilerplate (deferred to Wave D). EC-066 CC-discrepant"
+        }
+      ],
+      "total_items": 12,
+      "total_EW_slots": 8,
+      "total_DL013_slots": 9
+    },
+    {
+      "wave": "D",
+      "label": "P2 Seeds — Lowest Priority + Boilerplate Cleanup",
+      "batches": [
+        {
+          "batch": "D1",
+          "items": 2,
+          "QIDs": ["P1-ED-046", "P1-ED-051"],
+          "EW_slots": 5,
+          "DL013_slots": 0,
+          "notes": "DL-013 boilerplate already flagged in ED-046. ED-051 has boilerplate. Both need EW authoring + DL-013 cleanup"
+        },
+        {
+          "batch": "D2",
+          "items": 2,
+          "QIDs": ["P1-ED-036", "P1-ED-075"],
+          "EW_slots": 5,
+          "DL013_slots": 0,
+          "notes": "Lowest priority. DL-013 boilerplate cleanup + remaining EW slots"
+        }
+      ],
+      "total_items": 4,
+      "total_EW_slots": 10
+    }
+  ],
+  "governance_compliance": {
+    "per_batch_cap": 28,
+    "max_batch_size": 6,
+    "compliance": "All batches are <=6 items — well under the 28-item governance limit",
+    "backup_required": true,
+    "REVISION_HISTORY_required": true,
+    "independent_verification_required": true
+  },
+  "estimated_effort": {
+    "per_EW_slot_min": 2,
+    "per_EW_slot_max": 4,
+    "total_min_minutes": 100,
+    "total_max_minutes": 200,
+    "total_min_batches": 8
+  }
+}

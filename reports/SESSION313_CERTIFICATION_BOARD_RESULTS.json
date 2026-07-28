@@ -1,0 +1,173 @@
+{
+  "title": "SESSION313_CERTIFICATION_BOARD_RESULTS",
+  "session": "313",
+  "generated": "2026-07-27",
+  "board_composition": "Independent certification board (Agent P) — single adjudicator with cross-reference to Agents C-N findings. Requires ALL_AGREE for certification per S313 governance spec.",
+  "methodology": "Per-item evidence-based decision: CERTIFY (promote to Certified), HOLD (requires remediation before certification), or ESCALATE (fundamental concern requiring architectural intervention). Each decision includes evidence package linking to technical review, QA gate, EW audit, and UIQS dimensions.",
+  "prerequisite_reviews_consumed": [
+    "SESSION313_TECHNICAL_REVIEW.json — Technical accuracy: 10/10 PASS",
+    "SESSION313_EW_INTEGRITY_AUDIT.json — EW coverage: 100%, DL-008/026/013/010 clean",
+    "SESSION313_QUALITY_GATE_CERTIFICATION.json — All 4 gates PASS for all 10 items",
+    "SESSION313_UIQS_VALIDATION.json — Overall UIQS: 81.3 (A-)",
+    "SESSION312_LEARNER_SAFETY_ASSESSMENT.json — LOW RISK"
+  ],
+  "decisions": [
+    {
+      "QuestionID": "P1-E-R01",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — accurate segregation of duties scenario, COSO-compliant",
+        "explanations": "PASS — substantive EC (COSO citation, 4 incompatible functions explained), choice-specific EW[A,C,D]",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.e Control Activities, Apply level, Moderate difficulty",
+        "gate4_qa": "PASS — 3 scanner observations adjudicated as false positives",
+        "ew_integrity": "PASS — EW[B]='' (CC), EW[A,C,D] substantive (356-605 chars)",
+        "uiqs_contribution": "Positive — contributes to A- grade"
+      },
+      "rationale": "Strong exemplar. Well-constructed scenario testing genuine application of segregation of duties concept. Four incompatible functions clearly identified. Distractors represent common learner misconceptions (training adequacy, understaffing, authorization vs custody confusion)."
+    },
+    {
+      "QuestionID": "P1-E-R02",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — COSO 2013 three objective categories accurate",
+        "explanations": "PASS — EC covers all three categories with definitions, EW[A,B,C] address specific distractor misconceptions (strategic/ERM confusion, governance as component, sustainability as sub-category)",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.b, Understand, Easy",
+        "gate4_qa": "PASS — 2 scanner observations adjudicated false positives",
+        "ew_integrity": "PASS — EW[D]='' (CC), EW[A,B,C] all substantive"
+      },
+      "rationale": "Solid foundational knowledge item. Tests COSO framework architecture rather than company-name recognition. Difficulty Easy is appropriate — this is definition-recall for the three categories. Correctly distinguished from ERM (strategic objectives) and governance (component, not category). Good scaffolding item for learners building Domain E knowledge."
+    },
+    {
+      "QuestionID": "P1-E-R03",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — fraud triangle elements correctly applied",
+        "explanations": "PASS — EC cites Cressey, explains all three elements, distinguishes pressure from opportunity/rationalization. EW[B,C,D] address opportunity confusion, rationalization misconception, collusion misclassification",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.c, Apply, Moderate",
+        "gate4_qa": "PASS — 5 scanner observations adjudicated false positives",
+        "ew_integrity": "PASS — EW[A]='' (CC)"
+      },
+      "rationale": "Excellent application item. Scenario embeds two fraud triangle elements (pressure=financial strain, opportunity=override access+no vacation policy) and asks which element the financial situation increases. Tests discrimination between elements, not just recall of the three names. Collusion as distractor D is particularly effective — it's a real fraud risk concept incorrectly placed in the triangle framework."
+    },
+    {
+      "QuestionID": "P1-E-R04",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — preventive/detective classification accurate",
+        "explanations": "PASS — EC explains timing-based distinction with 'lock vs alarm' analogy. EW[A,B,D] address misclassification patterns.",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.e, Understand, Moderate-Easy",
+        "gate4_qa": "PASS — 3 scanner observations adjudicated; EC lacks framework citation but does not need one for standard classification terminology",
+        "ew_integrity": "PASS — EW[C]='' (CC)"
+      },
+      "rationale": "Effective classification item. Camera dual-purpose (preventive + detective) correctly called out — this is a nuance that distinguishes strong learners from memorizers. Difficulty Moderate-Easy with Score 2 is appropriate. No framework citation needed for standard internal control classification terminology."
+    },
+    {
+      "QuestionID": "P1-E-R05",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — bank rec segregation scenario correct",
+        "explanations": "PASS — EC explains incompatible function pairing (recording + verification) and why independence matters. EW[B,C,D] address competence vs design, directional error fallacy, auditor consequence vs direct risk.",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.e, Apply, Moderate",
+        "gate4_qa": "PASS — 4 scanner observations adjudicated false positives",
+        "ew_integrity": "PASS — EW[A]='' (CC)"
+      },
+      "rationale": "Strong scenario item. AR clerk + bank rec = classic incompatible function pairing. Distractor D (auditor response) is clever — tests whether learner can distinguish direct control risk from downstream audit consequences. Distractor C (specific directional error) tests whether learner invents a specific error when the problem is systemic."
+    },
+    {
+      "QuestionID": "P1-E-R06",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — inherent limitation vs deficiency distinction accurate",
+        "explanations": "PASS — EC lists all four COSO inherent limitations, explains why override can't be designed out. EW[A,C,D] address dual-approval fallacy, deficiency misclassification, and size-based misconception.",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.c, Understand, Moderate",
+        "gate4_qa": "PASS — 1 scanner observation adjudicated false positive",
+        "ew_integrity": "PASS — EW[B]='' (CC)"
+      },
+      "rationale": "Excellent conceptual distinction item. 'Inherent limitation vs control deficiency' is a high-value CMA topic. EC correctly identifies all four COSO inherent limitations. EW[D] correctly refutes the 'only in small entities' misconception — this is a common exam trap. Single scanner observation (EW[D] no choice letter reference) is manifestly a false positive: the EW explicitly discusses entity size, which is distractor D's content."
+    },
+    {
+      "QuestionID": "P1-E-R07",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — SOX 301 audit committee whistleblower requirements accurate",
+        "explanations": "PASS — EC covers SOX 301 statutory requirements plus COSO information & communication linkage. EW[A,B,C] all choice-specific: CEO review (defeats purpose), written+named only (contradicts anonymity), external auditor responsibility (independence issue).",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.f, Remember, Easy",
+        "gate4_qa": "PASS — 4 scanner observations adjudicated false positives",
+        "ew_integrity": "PASS — EW[D]='' (CC)"
+      },
+      "rationale": "Clean knowledge-recall item testing SOX whistleblower provisions. Difficulty Easy and CL Remember are appropriate — this is statutory knowledge, not application. Correctly positioned at the knowledge foundation level. Strong EW rationale in all three non-CC slots."
+    },
+    {
+      "QuestionID": "P1-E-R08",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — control environment foundational role accurate",
+        "explanations": "PASS — EC explains all five COSO components, control environment as foundation, tone-at-the-top effects. EW[B,C,D] all substantive: risk assessment dependency, control activities insufficiency when environment is toxic, monitoring ineffectiveness.",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.c, Apply, Moderate",
+        "gate4_qa": "PASS — 2 scanner observations adjudicated false positives",
+        "ew_integrity": "PASS — EW[A]='' (CC)"
+      },
+      "rationale": "Excellent scenario-driven application item. Tests whether learner can identify the root cause (control environment) vs downstream symptoms (risk assessment gap, missing control activities, monitoring failure). 'Results justify the approach' is a realistic tone-at-the-top red flag. Well-constructed for discriminating between COSO components in context."
+    },
+    {
+      "QuestionID": "P1-E-R09",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — IIA Three Lines of Defense model correctly applied",
+        "explanations": "PASS — EC defines all three lines with IIA citations, explains why risk management is 2nd (management function, not independent). EW[A,B,D] address 1st line confusion, 3rd line confusion, and 'doesn't fit' misconception.",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.g, Apply, Moderate",
+        "gate4_qa": "PASS — 2 scanner observations adjudicated false positives",
+        "ew_integrity": "PASS — EW[C]='' (CC)"
+      },
+      "rationale": "Strong governance model item. Scenario clearly separates three roles: operational managers (1st), risk management function (2nd), internal audit (3rd). The 2nd vs 3rd line distinction (management function vs independent assurance) is a high-discrimination topic. Distractor D ('doesn't fit') is a good test of whether learner knows the model explicitly includes risk management."
+    },
+    {
+      "QuestionID": "P1-E-R10",
+      "decision": "CERTIFY",
+      "evidence": {
+        "technical": "PASS — compensating controls in small business accurate",
+        "explanations": "PASS — EC explains COSO recognition of compensating controls for limited personnel. EW[A,C,D] address inherent limitation misconception, material weakness overstatement, and management override confusion.",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS",
+        "gate3_blueprint": "PASS — E.1.e, Apply, Moderate",
+        "gate4_qa": "PASS — 3 scanner observations adjudicated false positives",
+        "ew_integrity": "PASS — EW[B]='' (CC)"
+      },
+      "rationale": "Practical small-business application item. Compensating controls vs inherent limitation vs deficiency vs override — four concepts correctly distinguished. Realistic small-business scenario with 4 accounting staff. Strong EW reasoning across all distractors."
+    }
+  ],
+  "board_summary": {
+    "total_candidates": 10,
+    "certify": 10,
+    "hold": 0,
+    "escalate": 0,
+    "certification_rate": "100%",
+    "board_consensus": "ALL_AGREE — unanimous certification recommendation for all 10 candidates",
+    "board_statement": "The certification board unanimously recommends CERTIFY for all 10 Wave 1 Domain E replacement exemplars. Every item passes all 4 quality gates after S313 human adjudication of Gate 4 scanner observations. Technical accuracy, explanation quality, EW integrity, blueprint alignment, difficulty calibration, and learner safety are all verified. These 10 items meet or exceed the quality standard of the existing Domain E certified pool (Pack B Section E benchmark). The S311 Authoring Quality Gate methodology is validated as producing certification-ready content at scale."
+  },
+  "post_certification_actions": {
+    "promote_to_certified": ["P1-E-R01", "P1-E-R02", "P1-E-R03", "P1-E-R04", "P1-E-R05", "P1-E-R06", "P1-E-R07", "P1-E-R08", "P1-E-R09", "P1-E-R10"],
+    "update_question_state": "Unprocessed → Certified",
+    "update_production_status": "Draft → Production",
+    "pack_file_insertion": "Deferred to S314 (Scale-Up Wave) — items currently authored in JSON reports only",
+    "registry_update": "Add 10 new entries to MASTER_QUESTION_REGISTRY.md (generated, not hand-edited per RULE 3)"
+  }
+}

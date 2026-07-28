@@ -1,0 +1,108 @@
+{
+  "session": "725",
+  "board": "Agent Y (Governance Board Chair, Session 725 Governance Hardening & Post-700 Ownership Transition)",
+  "date": "2026-07-26",
+  "authority": "PROJECT_CONSTITUTION.md, S723 Program Closure Report, S724 Executive Board Directive",
+  "evidence_summary": {
+    "standards_created": 6,
+    "standards_detail": [
+      "SESSION725_POST700_GOVERNANCE_MODEL.md (Agent E) — Series Transition Governance, Transfer→Accept→Approve→Close workflow, retroactive gap analysis",
+      "SESSION725_GOVERNANCE_DETECTION_STANDARD.md (Agent B) — Dual-block inventory, canonical field extraction table, 4 mandatory prohibitions, 3 approved extraction methodologies",
+      "SESSION725_SCAN_METHODOLOGY_STANDARD.md (Agent G) — 3 approved methodologies (AM-1/AM-2/AM-3), 8 forbidden methodologies (FM-001 through FM-008), hard gate on count divergence, governance guard upgrade directive",
+      "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (Agent O) — 8-lane portfolio map, 19-row ownership matrix, 5 stewardship principles, 6 gap resolutions with acceptance criteria",
+      "SESSION725_HISTORICAL_GOVERNANCE_RCA.json (Agent K) — 10 failure classes (FC-001 through FC-010), 8 forbidden methodologies mapped to failure classes",
+      "Agent F maintenance trigger registry — 8 trigger thresholds with severity, immediate action, and escalation paths"
+    ],
+    "deliverables_complete": "10/10",
+    "agents_convergent": "23/23 internally consistent (Agent S: A-/95 confidence)",
+    "simulation_gaps": 2,
+    "simulation_gaps_detail": [
+      "Scenario A — Governance guard DL-008 detection still uses FM-001-prohibited forward-scan (DL-029 vulnerable). Guard is P0-critical per Agent I tool compliance audit.",
+      "Scenario C — No automated series closure enforcement gate. Transfer→Accept→Approve→Close workflow is documented but not programmatically enforced."
+    ],
+    "historical_incidents_prevented_by_standards": "6/6",
+    "historical_incidents_prevented_by_enforcement": "2/6",
+    "enforcement_gap_detail": "Standards document the rules. Enforcement requires: (1) governance guard code upgrade from regex forward-scan to Function constructor parse, (2) series closure gate automation. Until these two items complete, the standards prevent recurrence at the governance-documentation layer but not at the code-enforcement layer."
+  },
+  "determination": "POST_700_GOVERNANCE_HARDENED",
+  "rationale": "The Governance Board finds that the POST-700 governance framework is HARDENED at the documentation-and-standards layer. The HARDENING charter's primary objective — 'Prevent Recurrence — Not Correct Symptoms' — has been achieved at the governance design level. All 8 root cause failure classes documented by Agent K (FC-001 through FC-010) have corresponding prohibitions in the Scan Methodology Standard (FM-001 through FM-008), field extraction rules in the Governance Detection Standard (Section 3 mandatory prohibitions), or ownership safeguards in the Portfolio Stewardship Framework (Principle 2 acceptance requirement, Principle 3 closure disposition).\n\nThe Board draws a critical distinction between HARDENED (the governance framework, rules, standards, and prohibitions are published, binding, and sufficient to prevent recurrence if followed) and FULLY OPERATIONAL (every enforcement mechanism in the codebase has been upgraded to comply with the new standards). This session's charter was HARDENING, not COMPLETION. The deliverables — 6 standards, 8 forbidden-methodology prohibitions, 5 stewardship principles, transfer-accept-approve-close workflow, maintenance cadences, escalation paths — constitute a hardened governance framework.\n\nHowever, the Board acknowledges two enforcement gaps identified by Agent U's simulation (Scenario A: governance guard forward-scan; Scenario C: no automated series closure gate) and 4 additional operational gaps (Agent I: 3 non-compliant tools; Agent N: 0/6 ownership acceptances; Agent C: 24 phantom references; Agent J: 4 P0 knowledge base updates). These gaps do not prevent the framework from being HARDENED — the rules exist and are binding — but they MUST be closed before the framework can be declared FULLY OPERATIONAL. The governance guard upgrade is the single highest-priority action because it bridges the gap between documented standards and runtime enforcement.\n\nPrecedent: This decision mirrors the 700-series MAINTENANCE MODE declaration at S723 — a framework was established and declared active, with operational upgrades (governance guard DL-029 fix, CURRENT_BASELINES §3 refresh) deferred to subsequent sessions. The maintenance framework operated successfully for 4+ sessions before S724 identified the ownership gaps that S725 is now closing.\n\nThe Board declares: THE FRAMEWORK IS HARDENED. The rules are published. The prohibitions are binding. The ownership is assigned. Now execute the operational upgrades.",
+  "required_remediation": [
+    {
+      "id": "COND-01",
+      "priority": "P0 — MUST complete before any 800-series certification wave",
+      "description": "Governance guard Rule 2 upgrade from FM-001-prohibited forward-scan to AM-1 Function constructor parse.",
+      "owner": "Governance Guard Maintainer (700-series Maintenance Mode)",
+      "deadline": "Before S803 launch",
+      "evidence_required": "Updated governance-guard.js, 12/12 test suite maintaining 20/20 PASS, Pack B DL-008 = 0 verified by upgraded guard, CURRENT_BASELINES.md updated with new governance guard hash",
+      "blocking_condition": "Until complete, all certification decisions must be independently verified via AM-1 Function constructor parse before accepting governance guard BLOCK events"
+    },
+    {
+      "id": "COND-02",
+      "priority": "P0 — MUST complete before S726 T0",
+      "description": "CURRENT_BASELINES.md §3 refresh: remove 67 phantom Certified DL-008 items, replace with AM-1 Function constructor parse verified counts.",
+      "owner": "Baseline Maintainer (700-series Maintenance Mode)",
+      "deadline": "S726 T0",
+      "evidence_required": "CURRENT_BASELINES.md §3 showing 0 Certified DL-008 or listing actual items with their QIDs, AM-1 parse verified against all 5 packs"
+    },
+    {
+      "id": "COND-03",
+      "priority": "P1 — 800-series certification pipeline must include G-NEW gate",
+      "description": "G-NEW-1 through G-NEW-5 enforcement in 800-series certification pipeline. Every certification wave must pass G-NEW verification before marking items Certified.",
+      "owner": "Certification Auditor (800-series)",
+      "deadline": "Before next 800-series certification wave",
+      "evidence_required": "Certification wave REVISION_HISTORY.md entry documenting G-NEW pass/fail per wave, dual-block Choice mismatch check, EW topic mismatch check"
+    },
+    {
+      "id": "COND-04",
+      "priority": "P1 — ownership acceptance completion",
+      "description": "Complete acceptance protocol for all 6 S724 ownership gaps. Current state: 6/6 assigned (by S725 Agents D, E, O), 0/6 accepted (per Agent N verification). Assignment without acceptance is insufficient per the framework's own Principle 2.",
+      "owner": "Governance Auditor (700-series)",
+      "deadline": "Before S726 T0",
+      "evidence_required": "REVISION_HISTORY.md entries documenting each of the 6 acceptances with receiving owner confirmation, per TRANSFER→ACCEPTANCE→APPROVAL→CLOSE protocol",
+      "gap_status": {
+        "GAP-1": "May coaching layer — assigned to 100-series Lead (Agent O), NOT accepted (Agent N)",
+        "GAP-2": "300-series S310 closeout — assigned to 300-series Lead (Agent O), NOT accepted (Agent N)",
+        "GAP-3": "600-series deferral — assigned to Governance Board (Agent O), NOT accepted (Agent N)",
+        "GAP-4": "G-NEW enforcement — assigned to Certification Auditor (Agent O), NOT accepted (Agent N)",
+        "GAP-5": "Governance guard upgrade — assigned to Governance Guard Maintainer (Agent E), NOT accepted (Agent N)",
+        "GAP-6": "CURRENT_BASELINES refresh — assigned to Baseline Maintainer (Agent E), NOT accepted (Agent N)"
+      }
+    },
+    {
+      "id": "COND-05",
+      "priority": "P2 — knowledge base currency",
+      "description": "Update the 4 stale knowledge base artifacts identified by Agent J: CURRENT_BASELINES.md §3 (phantom DL-008), SESSION_STATUS (certified count undercount), DEFECT_LIBRARY.md DL-029 (status update), and AGENTS.md §9-13 (new governance standards cross-references).",
+      "owner": "Baseline Maintainer (700-series Maintenance Mode)",
+      "deadline": "Before S726 T0",
+      "evidence_required": "All 4 artifacts updated with current data, verified by independent third-agent cross-check"
+    },
+    {
+      "id": "COND-06",
+      "priority": "P2 — phantom reference cleanup",
+      "description": "Remediate 24 phantom cross-references identified by Agent C's document graph analysis. All cross-references in governance documents must resolve to existing files or be removed.",
+      "owner": "Baseline Maintainer (700-series Maintenance Mode)",
+      "deadline": "Before S728 Deep Audit",
+      "evidence_required": "Agent C re-scan showing 0 unresolved phantom references"
+    },
+    {
+      "id": "COND-07",
+      "priority": "P3 — ESC-005 revision",
+      "description": "Revise escalation condition ESC-005 (Agent R finding: logical contradiction — triggers on own guard. Must not self-reference the guard it enforces).",
+      "owner": "Governance Auditor (700-series Maintenance Mode)",
+      "deadline": "Before S728 Deep Audit",
+      "evidence_required": "Revised ESC-005 text with contradiction removed, verified by Agent R or equivalent logical-consistency auditor"
+    },
+    {
+      "id": "COND-08",
+      "priority": "P3 — scan tool compliance certification",
+      "description": "Agent I identified 3 non-compliant tools (governance-guard.js DL-008 detection, scan_dl026.js, pack_c_dl008_scanner.js). All 3 must be upgraded to AM-1 or AM-2 methodologies and re-certified per Scan Methodology Standard §6.1 compliance checklist. Governance guard is P0; the other two are P3.",
+      "owner": "Governance Guard Maintainer + Defect Sweeper (700-series)",
+      "deadline": "Governance guard: before S803 (P0). scan_dl026.js + pack_c_dl008_scanner.js: before S728 (P3).",
+      "evidence_required": "Tool passes all 7 compliance tests (T1-T7) per Scan Methodology Standard §6.1. Pack B DL-008 = 0 must be confirmed for all 3 tools."
+    }
+  ],
+  "hardened_declared": true,
+  "conditions": "HARDENED with 8 conditions (2 P0, 2 P1, 3 P2, 1 P3). The governance framework is hardened at the standards and documentation layer. The operational enforcement layer requires 6 remediation actions before the framework is fully operational. Conditions COND-01 (governance guard upgrade) and COND-02 (CURRENT_BASELINES refresh) are P0 and must be completed before any certification activity resumes. Conditions COND-03 (G-NEW enforcement) and COND-04 (ownership acceptance) are P1 and must be completed before the next series boundary transition. The 4 remaining conditions (COND-05 through COND-08) are P2/P3 and must be completed before S728 Deep Audit.",
+  "governance_guard_interim_safeguard": "Until COND-01 is complete, the governance guard Rule 2 (DL-008 BLOCK) must be independently verified via AM-1 Function constructor parse before any certification-blocking decision is acted upon. The guard's regex forward-scan results are inadmissible for governance purposes per Scan Methodology Standard §3 (FM-001) and Governance Detection Standard §3.1 (Forward-Scan Regex prohibition). No certification may be blocked or items decertified based solely on the current governance guard's DL-008 detection output.",
+  "next_review": "S726 T0 — Governance Auditor must verify COND-01 through COND-06 status. Any unresolved P0 or P1 condition escalates to Governance Board."
+}

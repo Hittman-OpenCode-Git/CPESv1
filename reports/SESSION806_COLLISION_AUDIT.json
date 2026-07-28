@@ -1,0 +1,152 @@
+{
+  "session": "806",
+  "type": "Registry Collision Audit",
+  "audit_scope": "Wave 2 Replacement QIDs P1-E-R11 through P1-E-R32 (22 QIDs)",
+  "timestamp": "2026-07-26T00:00:00Z",
+  "overall_result": "PASS",
+
+  "checks": {
+    "1_pack_file_collision": {
+      "result": "PASS",
+      "description": "Verify R11–R32 don't collide with any existing QuestionID in pack_a through pack_e corrected.js files",
+      "findings": {
+        "existing_in_pack_e_only": ["P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R16", "P1-E-R17", "P1-E-R19", "P1-E-R20", "P1-E-R30", "P1-E-R31", "P1-E-R32"],
+        "not_found_in_any_pack": ["P1-E-R12", "P1-E-R13", "P1-E-R18", "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25", "P1-E-R26", "P1-E-R27", "P1-E-R28", "P1-E-R29"],
+        "duplicates_across_packs": 0,
+        "cross_pack_collisions": 0
+      }
+    },
+
+    "2_similarity_ledger": {
+      "result": "PASS",
+      "description": "Verify no collision with QUESTION_SIMILARITY_LEDGER.json",
+      "findings": {
+        "in_ledger": ["P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R16", "P1-E-R17", "P1-E-R19", "P1-E-R20", "P1-E-R30", "P1-E-R31", "P1-E-R32"],
+        "not_in_ledger": ["P1-E-R12", "P1-E-R13", "P1-E-R18", "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25", "P1-E-R26", "P1-E-R27", "P1-E-R28", "P1-E-R29"],
+        "note": "10 existing QIDs already registered in ledger (expected). 12 new QIDs not yet present — no collision risk."
+      }
+    },
+
+    "3_archived_clone_collision": {
+      "result": "PASS",
+      "description": "Verify P1-E-Rxx doesn't collide with archived clone P1-EC-* / P1-ED-* QIDs",
+      "findings": {
+        "structural_collision_possible": false,
+        "rationale": "R-prefix replacement QIDs have no overlap with EC/ED clone prefix naming convention. No string-subset collision possible."
+      }
+    },
+
+    "4_existing_replacement_collision": {
+      "result": "PASS",
+      "description": "Verify R11–R32 don't collide with existing replacement QIDs P1-E-R01–R10",
+      "findings": {
+        "existing_R01_R10_count": 10,
+        "all_in_pack_e_only": true,
+        "overlap_with_R11_R32": 0,
+        "total_replacement_qids_in_pack_e": 20
+      }
+    },
+
+    "5_case_study_collision": {
+      "result": "PASS",
+      "description": "Verify no collision with case study ItemIDs (CBQ* pattern)",
+      "findings": {
+        "matches_in_scored_cases_files": 0,
+        "note": "Zero P1-E-R pattern found in any scored_cases*.js file. No collision."
+      }
+    },
+
+    "6_master_question_registry": {
+      "result": "PASS",
+      "description": "Verify no collision with MASTER_QUESTION_REGISTRY.md (generated file)",
+      "findings": {
+        "matches": 0,
+        "note": "Zero P1-E-R pattern found in registry."
+      }
+    }
+  },
+
+  "clone_group_certified_check": {
+    "result": "PASS — 0 Certified items found",
+    "description": "Verify clone groups being replaced contain no Certified items (blocker for replacement)",
+    "groups": [
+      {
+        "group_label": "R14 targets",
+        "qids": ["P1-EC-036", "P1-EC-037", "P1-EC-038", "P1-EC-039", "P1-EC-040"],
+        "pack": "pack_c_corrected.js",
+        "states": {
+          "Archived": 4,
+          "Unprocessed": 1,
+          "Certified": 0
+        },
+        "unprocessed_items": ["P1-EC-040"],
+        "blocker": false
+      },
+      {
+        "group_label": "R17 targets",
+        "qids": ["P1-ED-016", "P1-ED-017", "P1-ED-018", "P1-ED-019", "P1-ED-020"],
+        "pack": "pack_d_corrected.js",
+        "states": {
+          "Archived": 4,
+          "Unprocessed": 1,
+          "Certified": 0
+        },
+        "unprocessed_items": ["P1-ED-016"],
+        "blocker": false
+      },
+      {
+        "group_label": "R16 targets",
+        "qids": ["P1-ED-041", "P1-ED-042", "P1-ED-043", "P1-ED-044", "P1-ED-045"],
+        "pack": "pack_d_corrected.js",
+        "states": {
+          "Archived": 4,
+          "Unprocessed": 1,
+          "Certified": 0
+        },
+        "unprocessed_items": ["P1-ED-042"],
+        "blocker": false
+      },
+      {
+        "group_label": "R30 targets",
+        "qids": ["P1-ED-006", "P1-ED-007", "P1-ED-008", "P1-ED-009", "P1-ED-010"],
+        "pack": "pack_d_corrected.js",
+        "states": {
+          "Archived": 4,
+          "Unprocessed": 1,
+          "Certified": 0
+        },
+        "unprocessed_items": ["P1-ED-010"],
+        "blocker": false
+      },
+      {
+        "group_label": "R31 targets",
+        "qids": ["P1-ED-031", "P1-ED-032", "P1-ED-033", "P1-ED-034", "P1-ED-035"],
+        "pack": "pack_d_corrected.js",
+        "states": {
+          "Archived": 4,
+          "Unprocessed": 1,
+          "Certified": 0
+        },
+        "unprocessed_items": ["P1-ED-035"],
+        "blocker": false
+      }
+    ],
+    "summary": {
+      "total_items": 25,
+      "archived": 20,
+      "unprocessed": 5,
+      "certified": 0,
+      "blocked_by_certified": false,
+      "advisory": "5 clone items remain 'Unprocessed' (not 'Archived'). These are NOT Certified so they do NOT block replacement by the Certified-only delivery rule. However, they are still in the non-Certified pool and will be superseded by replacement QIDs. Consider archiving them as part of the replacement write."
+    }
+  },
+
+  "replacement_qid_inventory": {
+    "total_planned": 22,
+    "already_authored_in_pack_e": 10,
+    "not_yet_in_any_pack": 12,
+    "already_authored": ["P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R16", "P1-E-R17", "P1-E-R19", "P1-E-R20", "P1-E-R30", "P1-E-R31", "P1-E-R32"],
+    "not_yet_authored": ["P1-E-R12", "P1-E-R13", "P1-E-R18", "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25", "P1-E-R26", "P1-E-R27", "P1-E-R28", "P1-E-R29"],
+    "note": "The 10 already-authored QIDs were created in Sessions 314/315 and are Certified per SESSION315_SESSION_SUMMARY.md. The 12 not-yet-authored QIDs have no collisions and are safe to write."
+  }
+}

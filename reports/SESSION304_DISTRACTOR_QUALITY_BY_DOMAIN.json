@@ -1,0 +1,109 @@
+{
+  "generated": "2026-07-26T21:42:16.558Z",
+  "session": "S304",
+  "portfolioAvgDQS": 70,
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "total": 433,
+      "avgDQS": 80,
+      "avgEWFillRate": "87.4%",
+      "dqsGradeDistribution": {
+        "A": 314,
+        "B": 61,
+        "C": 0,
+        "D": 0,
+        "F": 58
+      },
+      "mcqDQS": 92,
+      "caseDQS": 7
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "total": 568,
+      "avgDQS": 80,
+      "avgEWFillRate": "88.4%",
+      "dqsGradeDistribution": {
+        "A": 408,
+        "B": 92,
+        "C": 0,
+        "D": 0,
+        "F": 68
+      },
+      "mcqDQS": 90,
+      "caseDQS": 6
+    },
+    "C - Performance Management": {
+      "total": 798,
+      "avgDQS": 58,
+      "avgEWFillRate": "63.5%",
+      "dqsGradeDistribution": {
+        "A": 472,
+        "B": 28,
+        "C": 0,
+        "D": 0,
+        "F": 298
+      },
+      "mcqDQS": 90,
+      "caseDQS": 6
+    },
+    "D - Cost Management": {
+      "total": 452,
+      "avgDQS": 75,
+      "avgEWFillRate": "84.1%",
+      "dqsGradeDistribution": {
+        "A": 311,
+        "B": 64,
+        "C": 0,
+        "D": 0,
+        "F": 77
+      },
+      "mcqDQS": 89,
+      "caseDQS": 7
+    },
+    "E - Internal Controls": {
+      "total": 443,
+      "avgDQS": 66,
+      "avgEWFillRate": "69.0%",
+      "dqsGradeDistribution": {
+        "A": 153,
+        "B": 113,
+        "C": 78,
+        "D": 32,
+        "F": 67
+      },
+      "mcqDQS": 76,
+      "caseDQS": 7
+    },
+    "F - Technology & Analytics": {
+      "total": 430,
+      "avgDQS": 64,
+      "avgEWFillRate": "70.9%",
+      "dqsGradeDistribution": {
+        "A": 155,
+        "B": 105,
+        "C": 72,
+        "D": 45,
+        "F": 53
+      },
+      "mcqDQS": 73,
+      "caseDQS": 8
+    },
+    "Unknown": {
+      "total": 1,
+      "avgDQS": 45,
+      "avgEWFillRate": "25.0%",
+      "dqsGradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1,
+        "F": 0
+      },
+      "mcqDQS": 45,
+      "caseDQS": 0
+    }
+  },
+  "mcqVsCase": {
+    "mcqAvgDQS": 86,
+    "caseAvgDQS": 6
+  }
+}

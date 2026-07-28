@@ -1,0 +1,32 @@
+{
+  "sampleSize": 50,
+  "misclassified": 8,
+  "misclassRate": "16.0",
+  "extrapolatedTotal": 132,
+  "ci95Range": "48 to 216",
+  "patterns": [
+    {
+      "name": "Calculation Easy",
+      "count": 4,
+      "pct": 50,
+      "cause": "Scenario-based numeric extraction",
+      "remedy": "Upgrade to Moderate-Easy/2"
+    },
+    {
+      "name": "Short definitional",
+      "count": 3,
+      "pct": 37.5,
+      "cause": "Plausible same-domain distractors not accounted for",
+      "remedy": "Upgrade to Moderate-Easy/2"
+    },
+    {
+      "name": "Thin explanation",
+      "count": 1,
+      "pct": 12.5,
+      "cause": "Explanation <100 chars",
+      "remedy": "Upgrade to Moderate-Easy/2 or expand explanation"
+    }
+  ],
+  "conclusion": "16% misclassification. Targeted recalibration of ~130 items recommended. The 84% correctly labeled Easy items are a content-composition characteristic, not a calibration error.",
+  "recommendation": "S715 — Targeted Easy-to-Moderate-Easy recalibration of ~130 scenario-calculation and definitional-discrimination items."
+}

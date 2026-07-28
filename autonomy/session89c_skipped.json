@@ -1,0 +1,11 @@
+﻿{
+    "skipped":  [
+                    {
+                        "timestamp":  "2026-07-25T00:14:04Z",
+                        "status":  "deferred",
+                        "task_id":  "89C-007",
+                        "reason":  "Distractor quality review requires deep content knowledge. Unsafe for autonomous edits without per-item SME verification. Retry in dedicated distractor-quality session."
+                    }
+                ],
+    "description":  "Session 89D — Items/tasks requiring human review. Must not be retried this run."
+}

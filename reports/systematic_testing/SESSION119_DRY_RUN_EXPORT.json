@@ -1,0 +1,70 @@
+{
+  "session": "S119",
+  "timestamp": "2026-07-26T17:30:00Z",
+  "exportSchema": {
+    "learnerId": { "type": "string", "example": "synth-nearreal-s119", "description": "Unique learner identifier" },
+    "displayName": { "type": "string", "example": "Pilot Candidate S119", "description": "Learner display name (may be synthetic)" },
+    "preProduction": { "type": "boolean", "example": true, "description": "Pre-production pilot marker" },
+    "synthetic": { "type": "boolean", "example": true, "description": "Synthetic data marker" },
+    "consentContext": { "type": "string", "example": "single-user-local-pilot-dry-run", "description": "Consent context for pilot data" },
+    "modelVersion": { "type": "string", "example": "S111-1.0", "description": "Readiness model version" },
+    "exportedAt": { "type": "string", "format": "ISO8601", "example": "2026-07-26T17:30:00Z", "description": "Export timestamp" },
+    "examPlan": {
+      "type": "object",
+      "fields": {
+        "hasScheduledExam": { "type": "boolean" },
+        "examPart": { "type": "string", "enum": ["Part 1", "Part 2", "Both", null] },
+        "examDate": { "type": "string", "format": "YYYY-MM-DD", "nullable": true },
+        "planningExam": { "type": "boolean", "nullable": true },
+        "plannedExamPart": { "type": "string", "nullable": true },
+        "targetDateOrWindow": { "type": "string", "nullable": true },
+        "capturedAt": { "type": "string", "format": "ISO8601" },
+        "preProduction": { "type": "boolean" }
+      }
+    },
+    "readinessSummary": {
+      "type": "object",
+      "fields": {
+        "overall": { "type": "object", "fields": { "band": "string", "rationale": "string", "signals": "string[]", "confidence": "string" } },
+        "topics": { "type": "array", "items": { "topic": "string", "band": "string", "accuracy": "number", "attempts": "number" } },
+        "caseReadiness": { "type": "object", "nullable": true },
+        "hasEnoughData": { "type": "boolean" },
+        "_provenance": { "type": "object", "fields": { "modelVersion": "string", "thresholdsApplied": "object", "dataContext": "object" } }
+      }
+    },
+    "topicPerformance": {
+      "type": "object",
+      "description": "Per-topic aggregates: accuracy, recentPct, totalAttempts, stability, direction"
+    },
+    "sessionTelemetry": {
+      "type": "array",
+      "items": { "event": "string", "timestamp": "ISO8601", "learnerId": "string", "data": "object" },
+      "description": "Session lifecycle events (greeting, selection, onboarding steps, tutoring actions)"
+    },
+    "pilotUsageLog": {
+      "type": "array",
+      "items": { "timestamp": "ISO8601", "sourceLabel": "string", "section": "string", "topic": "string", "qid": "string", "pilotActive": "boolean", "safetySafe": "boolean", "safetyViolations": "string[]" },
+      "description": "Per-behavior tutoring usage log"
+    },
+    "safetyLog": {
+      "type": "array",
+      "items": { "timestamp": "ISO8601", "sourceLabel": "string", "text": "string", "safe": "boolean", "violations": "string[]" },
+      "description": "Per-utterance safety check results"
+    },
+    "gateLog": {
+      "type": "array",
+      "items": { "timestamp": "ISO8601", "sourceLabel": "string", "qids": "string[]", "defectSafe": "boolean", "certSafe": "boolean", "blockedQidsFound": "string[]", "nonCertifiedQids": "string[]" },
+      "description": "Per-recommendation gate check results"
+    },
+    "studentRoll": {
+      "type": "array",
+      "items": { "learnerId": "string", "displayName": "string", "synthetic": "boolean", "preProduction": "boolean", "sessions": "number", "topicStats": "object" },
+      "description": "Available student profiles in roll"
+    }
+  },
+  "exportMethod": "may-core.js — exportMayPilotData()",
+  "deliveryMechanism": "Browser Blob download (JSON file). No external endpoint.",
+  "expectedPayloadSize": "157KB–175KB (comparable to S118 exports)",
+  "malformationRate": "0/8 (S118 baseline)",
+  "agent": "C"
+}

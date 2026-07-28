@@ -1,0 +1,146 @@
+{
+  "session": "512",
+  "review_type": "CAQS_SECTION_1_6_CERTIFICATION_DECISION",
+  "timestamp": "2026-07-25",
+  "target": "MIGRATED_CASE_BASE_B",
+  "target_file": "scored_cases2.js",
+  "source_sessions": ["S509", "S510", "S511"],
+  "summary": {
+    "total_cases_reviewed": 15,
+    "total_items_reviewed": 75,
+    "items_certified": 73,
+    "items_held_back": 2,
+    "cases_fully_certified": 13,
+    "cases_partially_certified": 2,
+    "certification_rate_items": "97.3%",
+    "certification_rate_cases": "86.7%"
+  },
+  "dimension_results": {
+    "d1_answer_key_accuracy": {
+      "pass": 75,
+      "fail": 0,
+      "notes": "25 calculation items independently recomputed and verified. 50 qualitative items verified against authoritative accounting/control/analytics principles. CASE-B12-Q4 confirmed corrected ($20,143)."
+    },
+    "d2_explanation_sufficiency": {
+      "pass": 75,
+      "fail": 0,
+      "notes": "All 75 items have multi-sentence explanations with accounting/control/analytics principles named. G5.3 compliant."
+    },
+    "d3_distractor_rationale": {
+      "pass": 72,
+      "fail": 2,
+      "na": 1,
+      "notes": "2 failures: CASE-B13-Q3 (missing Option B rationale) and CASE-B18-Q4 (missing Option C rationale). CASE-B19-Q5 is numeric type (N/A for distractor rationale)."
+    },
+    "d4_authoritative_reference_alignment": {
+      "pass": 75,
+      "fail": 0,
+      "notes": "All 41 explicit standard citations are real, correctly attributed, and topically relevant. Zero fabricated or irrelevant citations. 34 items lack explicit citations but do not require them (managerial accounting topics without governing ASC/IFRS/COSO standards)."
+    },
+    "d5_case_realism_exhibit_use": {
+      "pass": 75,
+      "fail": 0,
+      "notes": "All items PASS on per-item criteria (company name referenced, calculation inputs traceable, no ambiguous wording, no conflicting data). Design-level limitation: all 15 cases use templated ScenarioText, have zero exhibits (ExhibitCount=0), and lack named stakeholders with business trigger events."
+    },
+    "d6_metadata_schema_readiness": {
+      "pass": 75,
+      "fail": 0,
+      "notes": "All items and cases have complete required fields. No duplicate ItemIDs. All question_state values valid. CASE-B12-Q4 remediation verified."
+    }
+  },
+  "item_decisions": [
+    {"case_id": "CASE-B12", "item_id": "CASE-B12-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B12", "item_id": "CASE-B12-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B12", "item_id": "CASE-B12-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B12", "item_id": "CASE-B12-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B12", "item_id": "CASE-B12-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B13", "item_id": "CASE-B13-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B13", "item_id": "CASE-B13-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B13", "item_id": "CASE-B13-Q3", "d1": "PASS", "d2": "PASS", "d3": "FAIL", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "HOLDBACK", "holdback_reason": "G5.4 failure — missing distractor rationale for Option B ($30,000 minimum cash). Explanation omits explanation for why the minimum cash balance choice is wrong."},
+    {"case_id": "CASE-B13", "item_id": "CASE-B13-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B13", "item_id": "CASE-B13-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B14", "item_id": "CASE-B14-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B14", "item_id": "CASE-B14-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B14", "item_id": "CASE-B14-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B14", "item_id": "CASE-B14-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B14", "item_id": "CASE-B14-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B15", "item_id": "CASE-B15-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B15", "item_id": "CASE-B15-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B15", "item_id": "CASE-B15-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B15", "item_id": "CASE-B15-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B15", "item_id": "CASE-B15-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B16", "item_id": "CASE-B16-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B16", "item_id": "CASE-B16-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B16", "item_id": "CASE-B16-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B16", "item_id": "CASE-B16-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B16", "item_id": "CASE-B16-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B17", "item_id": "CASE-B17-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B17", "item_id": "CASE-B17-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B17", "item_id": "CASE-B17-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B17", "item_id": "CASE-B17-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B17", "item_id": "CASE-B17-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B18", "item_id": "CASE-B18-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B18", "item_id": "CASE-B18-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B18", "item_id": "CASE-B18-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B18", "item_id": "CASE-B18-Q4", "d1": "PASS", "d2": "PASS", "d3": "FAIL", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "HOLDBACK", "holdback_reason": "G5.4 failure — missing distractor rationale for Option C (1.18 quick ratio). Only Options A (2.18) and D (0.55) are explained. Learner selecting Option C receives no educational feedback."},
+    {"case_id": "CASE-B18", "item_id": "CASE-B18-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B19", "item_id": "CASE-B19-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B19", "item_id": "CASE-B19-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B19", "item_id": "CASE-B19-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B19", "item_id": "CASE-B19-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B19", "item_id": "CASE-B19-Q5", "d1": "PASS", "d2": "PASS", "d3": "NA", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B20", "item_id": "CASE-B20-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B20", "item_id": "CASE-B20-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B20", "item_id": "CASE-B20-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B20", "item_id": "CASE-B20-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B20", "item_id": "CASE-B20-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B21", "item_id": "CASE-B21-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B21", "item_id": "CASE-B21-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B21", "item_id": "CASE-B21-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B21", "item_id": "CASE-B21-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B21", "item_id": "CASE-B21-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B22", "item_id": "CASE-B22-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B22", "item_id": "CASE-B22-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B22", "item_id": "CASE-B22-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B22", "item_id": "CASE-B22-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B22", "item_id": "CASE-B22-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B23", "item_id": "CASE-B23-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B23", "item_id": "CASE-B23-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B23", "item_id": "CASE-B23-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B23", "item_id": "CASE-B23-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B23", "item_id": "CASE-B23-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B24", "item_id": "CASE-B24-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B24", "item_id": "CASE-B24-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B24", "item_id": "CASE-B24-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B24", "item_id": "CASE-B24-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B24", "item_id": "CASE-B24-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B25", "item_id": "CASE-B25-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B25", "item_id": "CASE-B25-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B25", "item_id": "CASE-B25-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B25", "item_id": "CASE-B25-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B25", "item_id": "CASE-B25-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B26", "item_id": "CASE-B26-Q1", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B26", "item_id": "CASE-B26-Q2", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B26", "item_id": "CASE-B26-Q3", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B26", "item_id": "CASE-B26-Q4", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null},
+    {"case_id": "CASE-B26", "item_id": "CASE-B26-Q5", "d1": "PASS", "d2": "PASS", "d3": "PASS", "d4": "PASS", "d5": "PASS", "d6": "PASS", "decision": "CERTIFY", "holdback_reason": null}
+  ],
+  "state_changes": {
+    "before": {
+      "Unprocessed": 75,
+      "Certified": 0
+    },
+    "after": {
+      "Certified": 73,
+      "Unprocessed": 2
+    },
+    "case_level_before": {
+      "Unprocessed": 15,
+      "Certified": 0
+    },
+    "case_level_after": {
+      "Certified": 13,
+      "Unprocessed": 2
+    }
+  }
+}

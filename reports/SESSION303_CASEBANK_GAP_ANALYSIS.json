@@ -1,0 +1,58 @@
+{
+  "totalCaseEC": 625,
+  "ecPresent": 625,
+  "ecMissing": 0,
+  "ecAvgLen": 714,
+  "ewTotal": 2500,
+  "ewPresent": 97,
+  "ewEmpty": 2403,
+  "ewFillRate": "3.9",
+  "byFile": {
+    "scored_cases": {
+      "total": 90,
+      "ecPresent": 90,
+      "ecAvgLen": 1257,
+      "ewTotal": 360,
+      "ewPresent": 97,
+      "ecFillRate": "100.0",
+      "ewFillRate": "26.9"
+    },
+    "scored_cases2": {
+      "total": 153,
+      "ecPresent": 153,
+      "ecAvgLen": 742,
+      "ewTotal": 612,
+      "ewPresent": 0,
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    },
+    "scored_cases3": {
+      "total": 154,
+      "ecPresent": 154,
+      "ecAvgLen": 350,
+      "ewTotal": 616,
+      "ewPresent": 0,
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    },
+    "scored_cases4": {
+      "total": 153,
+      "ecPresent": 153,
+      "ecAvgLen": 849,
+      "ewTotal": 612,
+      "ewPresent": 0,
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    },
+    "scored_cases5": {
+      "total": 75,
+      "ecPresent": 75,
+      "ecAvgLen": 477,
+      "ewTotal": 300,
+      "ewPresent": 0,
+      "ecFillRate": "100.0",
+      "ewFillRate": "0.0"
+    }
+  },
+  "ecFillRate": "100.0"
+}

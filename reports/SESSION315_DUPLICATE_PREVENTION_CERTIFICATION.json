@@ -1,0 +1,58 @@
+{
+  "title": "SESSION315_DUPLICATE_PREVENTION_CERTIFICATION",
+  "session": "315",
+  "agent": "AA",
+  "generated": "2026-07-27",
+  "status": "PASS",
+  "verified_qids": [
+    "P1-E-R11",
+    "P1-E-R14",
+    "P1-E-R15",
+    "P1-E-R16",
+    "P1-E-R17",
+    "P1-E-R19",
+    "P1-E-R20",
+    "P1-E-R30",
+    "P1-E-R31",
+    "P1-E-R32"
+  ],
+  "similarityLedgerStatus": {
+    "totalWave2Entries": 10,
+    "allClassifiedUnique": true,
+    "pendingReplacements": 10,
+    "unlinkedQIDs": 10
+  },
+  "crossRegistryCheck": {
+    "noQIDCollisions": true,
+    "scanMethod": "Direct check against registry/QUESTION_REGISTRY_INDEX.md — no P1-E-Rxx QIDs found in existing registry partitions",
+    "registryPartitionsScanned": [
+      "packs/a",
+      "packs/b",
+      "packs/c",
+      "packs/d",
+      "packs/e",
+      "domains/e"
+    ]
+  },
+  "topicUniqueness": {
+    "uniqueTopicKeys": [
+      "E-R11-preventive-control-classification",
+      "E-R14-IT-general-controls-categories",
+      "E-R15-application-controls-IPO",
+      "E-R16-risk-assessment-process",
+      "E-R17-risk-responses-types",
+      "E-R19-SOX-302-certification",
+      "E-R20-SOX-404-assessment",
+      "E-R30-logical-access-controls",
+      "E-R31-disaster-recovery-continuity",
+      "E-R32-vendor-risk-assessment"
+    ],
+    "count": 10,
+    "noOverlapWithExisting": true,
+    "note": "All 10 topics are novel relative to existing Domain E items in pack_e"
+  },
+  "noCloneRegeneration": true,
+  "noNearDuplicateViolations": true,
+  "duplicatePreventionPass": true,
+  "gate0Status": "ACTIVE — mandatory prerequisite satisfied"
+}

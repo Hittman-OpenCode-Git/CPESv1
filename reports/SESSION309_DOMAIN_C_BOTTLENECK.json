@@ -1,0 +1,32 @@
+{
+  "session": "309",
+  "agent": "G",
+  "title": "Domain C Rewrite Constraint Analysis",
+  "generated": "2026-07-26",
+  "methodology": "Pack file parse. S307/S308 artifact cross-reference. REVISION_HISTORY velocity analysis.",
+
+  "baseline": {
+    "domainC_certified": "500/500 (100%)",
+    "uiqs": 74.1,
+    "grade": "B",
+    "rewriteCandidates_s308": 454,
+    "uncertified_s307_claim": 10,
+    "uncertified_actual": 0
+  },
+
+  "finding": "DOMAIN C IS 100% CERTIFIED. S307's claim of 10 uncertified Domain C items is stale — the pack parse shows all 500 Domain C items across all 5 packs are Certified. 454 rewrite candidates represent QUALITY POLISH, not certification debt.",
+
+  "rewriteBreakdown": {
+    "caseStudyEW_gap": { "items": 298, "pct": 65.6, "note": "Domain C case items across scored_cases2-5 have near-zero EW fill. This is the dominant rewrite driver." },
+    "lowECLength": { "items": 87, "pct": 19.2, "note": "Pack E Section C items with thin explanations (mean 68 chars per S303)." },
+    "cloneRotation_noise": { "items": 69, "pct": 15.2, "note": "Pack C/D Section C items with rotation-group artifacts affecting distractor distinctiveness." }
+  },
+
+  "actualBlockers": [
+    "Case-bank EW authoring: 298 case-study items in Domain C have near-zero wrong-answer feedback. This is the only learner-facing quality deficit.",
+    "No certification blockers exist — Domain C is 100% certified."
+  ],
+
+  "minimumSessions": 5,
+  "note": "Domain C rewrite is a case-bank EW problem, not a certification problem. It can be deferred entirely or addressed through the EW factory model. No urgency — Domain C learners already get correct-answer explanations (EC is adequate), they just lack detailed wrong-answer feedback."
+}

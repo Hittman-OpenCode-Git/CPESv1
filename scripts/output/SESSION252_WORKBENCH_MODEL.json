@@ -1,0 +1,2024 @@
+{
+  "$schema": "https://cma-simulator.internal/schemas/investigation-workbench/v1",
+  "document": {
+    "title": "Question Investigation Workbench — Workflow Model",
+    "version": "1.0.0",
+    "session": "S252",
+    "board": "I",
+    "status": "Active",
+    "created": "2026-07-27",
+    "author": "Board I — Investigation Workbench Prototype",
+    "purpose": "Define the complete investigation workflow experienced by a human investigator resolving question-quality issues in the CMA Part 1 Exam Simulator.",
+    "dependencies": {
+      "Board_A": "Question Investigation API — full dossier generation",
+      "Board_C": "Challenge Triage Engine — incoming challenge categorization",
+      "Board_D": "Investigation Registry — lifecycle tracking and persistence",
+      "Board_E": "Question Health Engine — severity and impact assessment",
+      "Board_F": "Session Intelligence — exposure tracing and learner impact analysis",
+      "Board_H": "Admin Data Contract — permission enforcement and role definitions",
+      "GovernanceGuard": "Pre-write validation rules (DL-008, DL-026, Rule 2, Rule 6)"
+    }
+  },
+
+  "stateMachine": {
+    "id": "investigation-lifecycle",
+    "initialState": "TRIGGERED",
+    "description": "The master state machine governing the lifecycle of every question-quality investigation from student challenge to final resolution.",
+
+    "states": {
+
+      "TRIGGERED": {
+        "ordinal": 0,
+        "label": "Triggered",
+        "description": "A new investigation has been created from a student challenge, automated sweep, or manual flag.",
+        "badge": "info",
+        "entryCriteria": [
+          "Valid ChallengeRecord submitted via Challenge API with non-empty QID",
+          "Or: automated defect-sweep scan produces a finding with confidence ≥ 80%",
+          "Or: manual investigator flag on a question via admin dashboard",
+          "Challenge must reference a valid QuestionID in an existing pack file",
+          "Duplicate-detection: if an OPEN investigation already exists for the same QID, merge rather than duplicate"
+        ],
+        "exitCriteria": [
+          "Triage classification assigned (severity, type, priority)",
+          "Registry record created with unique InvestigationID",
+          "Investigation linked to at least one QuestionID"
+        ],
+        "availableActions": [
+          {
+            "actionId": "RUN_INITIAL_TRIAGE",
+            "label": "Run Initial Triage",
+            "description": "Invoke the Challenge Triage Engine (Board C) to auto-classify the incoming challenge by severity, type, and priority.",
+            "preconditions": ["Investigation exists in TRIGGERED state", "At least one QID linked"],
+            "postconditions": ["TriageResult populated", "severity, type, and priority fields set", "State transitions to TRIAGED if auto-classification confidence ≥ 70%; otherwise remains TRIGGERED for manual triage"],
+            "dataInputs": ["ChallengeRecord", "raw student challenge text", "QID"],
+            "dataOutputs": ["TriageResult { severity, type, priority, confidence }", "autoClassificationNotes"],
+            "uiComponent": "button (auto-trigger on creation or manual re-run)",
+            "timeout": "immediate (synchronous API call)"
+          },
+          {
+            "actionId": "MANUAL_TRIAGE",
+            "label": "Manual Triage",
+            "description": "Investigator manually classifies the challenge when auto-triage confidence is below threshold.",
+            "preconditions": ["TriageResult.confidence < 70% OR investigator overrides auto-classification"],
+            "postconditions": ["severity, type, priority manually set", "State transitions to TRIAGED"],
+            "dataInputs": ["ChallengeRecord", "QID", "question dossier summary"],
+            "dataOutputs": ["manualTriageResult { severity, type, priority }", "triageNotes"],
+            "uiComponent": "form (modal)",
+            "timeout": null
+          },
+          {
+            "actionId": "MERGE_INVESTIGATION",
+            "label": "Merge with Existing",
+            "description": "Merge this challenge into an existing OPEN investigation for the same QID.",
+            "preconditions": ["Another investigation with same QID exists and is in a non-terminal state"],
+            "postconditions": ["Current challenge appended to parent investigation's challenge list", "This investigation marked MERGED → CLOSED"],
+            "dataInputs": ["targetInvestigationId", "mergeNotes"],
+            "dataOutputs": ["updated parent investigation challenge list"],
+            "uiComponent": "button (confirmation modal)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "challengeId": "string — unique identifier of the triggering challenge",
+          "qidList": "string[] — one or more QuestionIDs under investigation",
+          "triggerType": "enum: STUDENT_CHALLENGE | AUTOMATED_SWEEP | MANUAL_FLAG",
+          "triggerTimestamp": "ISO 8601",
+          "triggerSource": "string — student ID, sweep script name, or investigator ID",
+          "rawChallengeText": "string — verbatim challenge text from student or sweep output"
+        },
+        "sla": {
+          "standard": "4 hours from trigger",
+          "critical": "2 hours from trigger",
+          "escalationIfExceeded": "Notify lead investigator via dashboard alert"
+        }
+      },
+
+      "TRIAGED": {
+        "ordinal": 1,
+        "label": "Triaged",
+        "description": "The investigation has been classified by severity, type, and priority. Awaiting assignment to an investigator.",
+        "badge": "warning",
+        "entryCriteria": [
+          "TriageResult populated with severity, type, priority",
+          "Investigation record created in Registry (Board D)",
+          "All required TRIGGERED data fields populated"
+        ],
+        "exitCriteria": [
+          "AssignedInvestigator field populated (user ID or team)",
+          "assignmentTimestamp recorded"
+        ],
+        "availableActions": [
+          {
+            "actionId": "ASSIGN_INVESTIGATOR",
+            "label": "Assign Investigator",
+            "description": "Assign this investigation to a specific investigator or team based on workload, expertise, and severity.",
+            "preconditions": ["Investigation is in TRIAGED state", "Caller has ASSIGN permission (Board H)"],
+            "postconditions": ["AssignedInvestigator populated", "State transitions to ASSIGNED"],
+            "dataInputs": ["investigatorUserId", "teamId (optional)", "assignmentNotes"],
+            "dataOutputs": ["assignmentRecord { investigatorUserId, teamId, timestamp }"],
+            "uiComponent": "dropdown + confirmation button",
+            "timeout": null
+          },
+          {
+            "actionId": "AUTO_ASSIGN",
+            "label": "Auto-Assign",
+            "description": "Let the system auto-assign based on investigator workload, domain expertise, and current queue depth.",
+            "preconditions": ["Investigation is in TRIAGED state", "At least one investigator is available"],
+            "postconditions": ["AssignedInvestigator populated by workload-balancing algorithm", "State transitions to ASSIGNED"],
+            "dataInputs": [],
+            "dataOutputs": ["autoAssignmentDecision { investigatorUserId, reasoning }"],
+            "uiComponent": "button",
+            "timeout": null
+          },
+          {
+            "actionId": "ESCALATE_IMMEDIATE",
+            "label": "Escalate Immediately",
+            "description": "Bypass normal workflow — escalate directly to governance team. Used for CRITICAL severity items requiring immediate attention.",
+            "preconditions": ["severity === 'CRITICAL' OR investigator judgment"],
+            "postconditions": ["State transitions to ESCALATED", "Governance team notified"],
+            "dataInputs": ["escalationReason", "urgencyNotes"],
+            "dataOutputs": ["escalationRecord"],
+            "uiComponent": "button (confirmation modal with required reason field)",
+            "timeout": null
+          },
+          {
+            "actionId": "RUN_FULL_DOSSIER",
+            "label": "Run Full Dossier",
+            "description": "Invoke Question Investigation API (Board A) to generate a complete dossier for all linked QIDs.",
+            "preconditions": ["At least one QID linked"],
+            "postconditions": ["dossierCache populated with full question data, metadata, explanations, history"],
+            "dataInputs": ["qidList"],
+            "dataOutputs": ["fullDossier { qid, packFile, section, topic, questionState, correctChoice, choices, explanations, metadata, revisionHistory }"],
+            "uiComponent": "button (async — shows progress indicator)",
+            "timeout": "30 seconds"
+          },
+          {
+            "actionId": "DISMISS_FALSE_POSITIVE",
+            "label": "Dismiss as False Positive",
+            "description": "Mark the challenge as a false positive — e.g., student error, not a question defect.",
+            "preconditions": ["Investigator confirms no question defect exists", "Caller has DISMISS permission (Board H)"],
+            "postconditions": ["State transitions to DISMISSED", "dismissalReason recorded"],
+            "dataInputs": ["dismissalReason", "dismissalEvidence (optional)"],
+            "dataOutputs": ["dismissalRecord"],
+            "uiComponent": "button (modal with reason + optional attachment)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "triageResult": {
+            "severity": "enum: CRITICAL | HIGH | MEDIUM | LOW | INFORMATIONAL",
+            "type": "enum: CORRECTNESS | EXPLANATION | STRUCTURAL | METADATA | PEDAGOGICAL | DUPLICATE | OTHER",
+            "priority": "integer 1-5 (1 = highest)",
+            "confidence": "integer 0-100",
+            "autoClassified": "boolean",
+            "classifiedBy": "string — 'system' or investigator ID",
+            "classificationTimestamp": "ISO 8601"
+          },
+          "affectedPacks": "string[] — pack files containing the affected QID(s)",
+          "affectedSections": "string[] — blueprint sections (A-F)"
+        },
+        "sla": {
+          "standard": "24 hours from TRIGGERED",
+          "critical": "12 hours from TRIGGERED",
+          "escalationIfExceeded": "Auto-escalate to team lead if not assigned within SLA window"
+        }
+      },
+
+      "ASSIGNED": {
+        "ordinal": 2,
+        "label": "Assigned",
+        "description": "An investigator has been assigned and has acknowledged the investigation. Work has not yet begun.",
+        "badge": "warning",
+        "entryCriteria": [
+          "AssignedInvestigator field populated",
+          "assignmentTimestamp recorded",
+          "Investigator has acknowledged assignment (optional: configurable per team)"
+        ],
+        "exitCriteria": [
+          "Investigator transitions state to INVESTIGATING via Accept Investigation action",
+          "Or: reassigned to another investigator (remains ASSIGNED)",
+          "Or: escalated"
+        ],
+        "availableActions": [
+          {
+            "actionId": "ACCEPT_INVESTIGATION",
+            "label": "Accept Investigation",
+            "description": "The assigned investigator formally accepts the investigation and begins work. Transitions to INVESTIGATING.",
+            "preconditions": ["Investigation is in ASSIGNED state", "Caller is the assigned investigator or has ADMIN role"],
+            "postconditions": ["State transitions to INVESTIGATING", "investigationStartTimestamp recorded"],
+            "dataInputs": [],
+            "dataOutputs": ["acceptanceRecord { investigatorUserId, timestamp }"],
+            "uiComponent": "button (prominent, primary CTA)",
+            "timeout": null
+          },
+          {
+            "actionId": "REASSIGN",
+            "label": "Reassign",
+            "description": "Reassign this investigation to a different investigator or team.",
+            "preconditions": ["Caller has REASSIGN permission (Board H)"],
+            "postconditions": ["AssignedInvestigator updated", "reassignment recorded in audit log"],
+            "dataInputs": ["newInvestigatorUserId", "reassignmentReason"],
+            "dataOutputs": ["reassignmentRecord"],
+            "uiComponent": "dropdown + confirmation button",
+            "timeout": null
+          },
+          {
+            "actionId": "REQUEST_MORE_INFO",
+            "label": "Request More Info",
+            "description": "Request additional information from the challenge originator before proceeding.",
+            "preconditions": ["Investigation triggerType === 'STUDENT_CHALLENGE'"],
+            "postconditions": ["State transitions to TRIAGED (re-opens triage)", "infoRequest sent to student"],
+            "dataInputs": ["infoRequestText", "requestedFields"],
+            "dataOutputs": ["infoRequestRecord"],
+            "uiComponent": "form (modal with text area and field picker)",
+            "timeout": null
+          },
+          {
+            "actionId": "RUN_FULL_DOSSIER",
+            "label": "Run Full Dossier",
+            "description": "Invoke Question Investigation API (Board A) to generate a complete dossier.",
+            "preconditions": ["At least one QID linked"],
+            "postconditions": ["dossierCache populated"],
+            "dataInputs": ["qidList"],
+            "dataOutputs": ["fullDossier"],
+            "uiComponent": "button (async — shows progress indicator)",
+            "timeout": "30 seconds"
+          }
+        ],
+        "requiredData": {
+          "assignedInvestigator": {
+            "userId": "string",
+            "displayName": "string",
+            "teamId": "string (optional)",
+            "assignedTimestamp": "ISO 8601"
+          }
+        },
+        "sla": {
+          "standard": "48 hours from ASSIGNED to INVESTIGATING",
+          "critical": "24 hours from ASSIGNED to INVESTIGATING",
+          "escalationIfExceeded": "Flag investigation as overdue; notify team lead; auto-reassign if no response in +24h"
+        }
+      },
+
+      "INVESTIGATING": {
+        "ordinal": 3,
+        "label": "Investigating",
+        "description": "Active investigation in progress. Investigator is analyzing data, running tools, and recording findings.",
+        "badge": "primary",
+        "entryCriteria": [
+          "Investigator has accepted the investigation",
+          "investigationStartTimestamp recorded"
+        ],
+        "exitCriteria": [
+          "At least one FindingRecord exists",
+          "Investigator transitions state to FINDINGS_DRAFT or ESCALATED"
+        ],
+        "availableActions": [
+          {
+            "actionId": "RUN_FULL_DOSSIER",
+            "label": "Run Full Dossier",
+            "description": "Refresh the full question dossier from Board A API.",
+            "preconditions": ["At least one QID linked"],
+            "postconditions": ["dossierCache refreshed"],
+            "dataInputs": ["qidList", "forceRefresh (boolean)"],
+            "dataOutputs": ["fullDossier"],
+            "uiComponent": "button (async)",
+            "timeout": "30 seconds"
+          },
+          {
+            "actionId": "RUN_HEALTH_ASSESSMENT",
+            "label": "Run Health Assessment",
+            "description": "Invoke Question Health Engine (Board E) to assess severity, learner-pool impact, and certification risk.",
+            "preconditions": ["At least one QID linked"],
+            "postconditions": ["healthAssessment cached"],
+            "dataInputs": ["qidList"],
+            "dataOutputs": ["healthAssessment { overallScore, dimensions, learnerExposure, certRisk }"],
+            "uiComponent": "button (async)",
+            "timeout": "15 seconds"
+          },
+          {
+            "actionId": "TRACE_SESSION_IMPACT",
+            "label": "Trace Session Impact",
+            "description": "Invoke Session Intelligence (Board F) to trace how many learner sessions have been exposed to the affected QID.",
+            "preconditions": ["At least one QID linked"],
+            "postconditions": ["sessionTrace cached"],
+            "dataInputs": ["qidList", "timeRange (optional)"],
+            "dataOutputs": ["sessionTrace { totalExposures, uniqueLearners, exposureWindow, affectedSessions }"],
+            "uiComponent": "button (async — may take longer for large data)",
+            "timeout": "60 seconds"
+          },
+          {
+            "actionId": "ADD_FINDING",
+            "label": "Add Finding",
+            "description": "Record a specific finding discovered during investigation. Each finding captures evidence, severity, and links to known defect patterns.",
+            "preconditions": ["Investigation is in INVESTIGATING state"],
+            "postconditions": ["New FindingRecord appended to findings array"],
+            "dataInputs": {
+              "findingType": "enum: ANSWER_ERROR | EXPLANATION_DEFECT | STRUCTURAL_DEFECT | METADATA_ISSUE | DISTRACTOR_QUALITY | PEDAGOGICAL_ISSUE | OTHER",
+              "severity": "enum: CRITICAL | HIGH | MEDIUM | LOW | INFORMATIONAL",
+              "title": "string — one-line summary (max 120 chars)",
+              "description": "string — detailed description",
+              "evidence": "string[] — file references or inline evidence",
+              "affectedFields": "string[] — e.g., ['CorrectChoice', 'ExplanationWrongB', 'Difficulty']",
+              "confirmationMethod": "enum: INDEPENDENT_RECALCULATION | STANDARD_REFERENCE | AUTOMATED_SCAN | MANUAL_REVIEW | EXPERT_CONSULTATION",
+              "confidence": "integer 0-100"
+            },
+            "dataOutputs": ["FindingRecord { findingId, timestamp, authorUserId }"],
+            "uiComponent": "form (slide-out panel or modal, rich text)",
+            "timeout": null
+          },
+          {
+            "actionId": "LINK_DEFECT",
+            "label": "Link Defect",
+            "description": "Link this finding to a known defect entry in DEFECT_LIBRARY.md (e.g., DL-008, DL-026).",
+            "preconditions": ["At least one FindingRecord exists"],
+            "postconditions": ["FindingRecord.linkedDefects updated"],
+            "dataInputs": ["findingId", "defectId (e.g., 'DL-008')", "relationshipType: EXACT_MATCH | VARIANT | RELATED"],
+            "dataOutputs": ["updated FindingRecord with defect link"],
+            "uiComponent": "searchable dropdown + confirm button (inline on finding card)",
+            "timeout": null
+          },
+          {
+            "actionId": "LINK_QID",
+            "label": "Link Additional QID",
+            "description": "Add another affected QuestionID to this investigation (e.g., clone group, rotation artifact).",
+            "preconditions": ["Investigation is in INVESTIGATING state"],
+            "postconditions": ["qidList updated", "dossierCache invalidated (needs refresh)"],
+            "dataInputs": ["newQid", "linkageReason"],
+            "dataOutputs": ["updated qidList"],
+            "uiComponent": "form (inline add with autocomplete QID search)",
+            "timeout": null
+          },
+          {
+            "actionId": "ATTACH_EVIDENCE",
+            "label": "Attach Evidence",
+            "description": "Upload or link supporting evidence — screenshots, calculation workpapers, standard references, scan outputs.",
+            "preconditions": ["Investigation is in INVESTIGATING state"],
+            "postconditions": ["Evidence record appended to investigation"],
+            "dataInputs": ["file (upload) OR externalUrl", "evidenceType: SCREENSHOT | CALC_WORKPAPER | STANDARD_CITATION | SCAN_OUTPUT | COMMUNICATION | OTHER", "description", "linkedFindingId (optional)"],
+            "dataOutputs": ["EvidenceRecord { evidenceId, timestamp, uploaderUserId }"],
+            "uiComponent": "drag-and-drop zone + URL input (modal)",
+            "timeout": null
+          },
+          {
+            "actionId": "REQUEST_PEER_REVIEW",
+            "label": "Request Peer Review",
+            "description": "Request a second investigator to review a specific finding.",
+            "preconditions": ["At least one FindingRecord exists"],
+            "postconditions": ["PeerReviewRequest created", "finding marked as 'under peer review'"],
+            "dataInputs": ["findingId", "reviewerUserId", "reviewInstructions"],
+            "dataOutputs": ["peerReviewRequest { requestId, status }"],
+            "uiComponent": "button on finding card → modal with reviewer selector",
+            "timeout": null
+          },
+          {
+            "actionId": "TRANSITION_TO_FINDINGS_DRAFT",
+            "label": "Complete Investigation — Draft Findings",
+            "description": "Move the investigation to findings drafting phase. All findings should be recorded.",
+            "preconditions": ["At least one FindingRecord exists", "All linked QIDs have been analyzed"],
+            "postconditions": ["State transitions to FINDINGS_DRAFT"],
+            "dataInputs": ["investigationSummary", "outstandingQuestions (optional)"],
+            "dataOutputs": [],
+            "uiComponent": "button (primary CTA — confirmation modal with summary field)",
+            "timeout": null
+          },
+          {
+            "actionId": "ESCALATE",
+            "label": "Escalate to Governance",
+            "description": "Escalate to the governance team — used when the defect has systemic implications, requires policy change, or exceeds investigator authority.",
+            "preconditions": ["Investigator determines escalation is necessary"],
+            "postconditions": ["State transitions to ESCALATED"],
+            "dataInputs": ["escalationReason", "governanceConcern", "recommendedAction (optional)"],
+            "dataOutputs": ["escalationRecord"],
+            "uiComponent": "button (confirmation modal with required fields, styled as destructive action)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "investigationStartTimestamp": "ISO 8601",
+          "dossierCache": "object — Board A full dossier for all linked QIDs",
+          "healthAssessment": "object — Board E health assessment",
+          "sessionTrace": "object (optional) — Board F session impact data",
+          "findings": "FindingRecord[]"
+        },
+        "sla": {
+          "standard": "7 days from INVESTIGATING to FINDINGS_DRAFT",
+          "critical": "3.5 days from INVESTIGATING to FINDINGS_DRAFT",
+          "escalationIfExceeded": "Auto-notify team lead; flag in overdue queue; escalate if no progress in +3 days"
+        }
+      },
+
+      "FINDINGS_DRAFT": {
+        "ordinal": 4,
+        "label": "Findings Draft",
+        "description": "Findings have been documented. Awaiting review before action planning.",
+        "badge": "info",
+        "entryCriteria": [
+          "At least one FindingRecord exists",
+          "Investigator has submitted findings for review"
+        ],
+        "exitCriteria": [
+          "All findings reviewed (self-review or peer review)",
+          "Investigation transitions to FINDINGS_REVIEW or back to INVESTIGATING if more work needed"
+        ],
+        "availableActions": [
+          {
+            "actionId": "REVIEW_FINDINGS",
+            "label": "Review Findings",
+            "description": "Self-review or peer-review the draft findings for completeness, accuracy, and clarity.",
+            "preconditions": ["Investigation is in FINDINGS_DRAFT state"],
+            "postconditions": ["FindingRecords marked as reviewed with reviewer ID and timestamp"],
+            "dataInputs": ["findingIdList", "reviewOutcome: APPROVED | NEEDS_REVISION | REJECTED", "reviewNotes"],
+            "dataOutputs": ["reviewRecord per finding"],
+            "uiComponent": "form per finding (approve/reject/notes, inline or accordion)",
+            "timeout": null
+          },
+          {
+            "actionId": "REQUEST_EXTERNAL_REVIEW",
+            "label": "Request External Review",
+            "description": "Request review from a domain expert (Accountant, Psychometrician per COLLABORATION_MATRIX.md).",
+            "preconditions": ["At least one FindingRecord exists"],
+            "postconditions": ["ExternalReviewRequest created"],
+            "dataInputs": ["reviewerUserId", "expertRole: ACCOUNTANT | PSYCHOMETRICIAN | EDITOR | GOVERNANCE", "reviewScope", "deadline"],
+            "dataOutputs": ["externalReviewRequest { requestId, status, reviewer, deadline }"],
+            "uiComponent": "form (modal with role selector, scope, and deadline picker)",
+            "timeout": null
+          },
+          {
+            "actionId": "AMEND_FINDING",
+            "label": "Amend Finding",
+            "description": "Edit an existing finding based on review feedback.",
+            "preconditions": ["Finding exists and is in DRAFT or NEEDS_REVISION status"],
+            "postconditions": ["FindingRecord updated with amendment history"],
+            "dataInputs": ["findingId", "updated fields", "amendmentReason"],
+            "dataOutputs": ["updated FindingRecord with amendmentVersion incremented"],
+            "uiComponent": "edit form (inline or modal)",
+            "timeout": null
+          },
+          {
+            "actionId": "TRANSITION_TO_REVIEW",
+            "label": "Submit for Final Review",
+            "description": "Submit draft findings for formal review before action planning.",
+            "preconditions": ["All findings have been reviewed (self or peer)", "No findings in NEEDS_REVISION status"],
+            "postconditions": ["State transitions to FINDINGS_REVIEW"],
+            "dataInputs": [],
+            "dataOutputs": [],
+            "uiComponent": "button (primary CTA with confirmation)",
+            "timeout": null
+          },
+          {
+            "actionId": "RETURN_TO_INVESTIGATING",
+            "label": "Return to Investigating",
+            "description": "Go back to active investigation — more analysis needed.",
+            "preconditions": ["Investigator identifies gaps in findings"],
+            "postconditions": ["State transitions back to INVESTIGATING"],
+            "dataInputs": ["returnReason"],
+            "dataOutputs": ["stateTransitionRecord"],
+            "uiComponent": "button (secondary, with confirmation and reason field)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "findings": "FindingRecord[] — all findings in reviewed status",
+          "investigationSummary": "string — comprehensive summary of investigation",
+          "reviewHistory": "ReviewRecord[]"
+        },
+        "sla": {
+          "standard": "Part of the 14-day FINDINGS_DRAFT → RESOLVED window",
+          "critical": "Part of the 7-day FINDINGS_DRAFT → RESOLVED window",
+          "escalationIfExceeded": null
+        }
+      },
+
+      "FINDINGS_REVIEW": {
+        "ordinal": 5,
+        "label": "Findings Review",
+        "description": "Findings are under formal review. Decision point: proceed to action, dismiss, or escalate.",
+        "badge": "info",
+        "entryCriteria": [
+          "All findings marked as reviewed",
+          "Investigation in FINDINGS_DRAFT and transitioned to FINDINGS_REVIEW"
+        ],
+        "exitCriteria": [
+          "Decision made: ACTION_PLANNED (remediation needed), DISMISSED (no action), or ESCALATED (governance)"
+        ],
+        "availableActions": [
+          {
+            "actionId": "APPROVE_AND_PLAN_ACTION",
+            "label": "Approve & Plan Action",
+            "description": "Approve findings and proceed to action planning. At least one defect requires remediation.",
+            "preconditions": ["At least one finding has severity ≥ CRITICAL or HIGH that requires remediation", "Reviewer has APPROVE permission (Board H)"],
+            "postconditions": ["State transitions to ACTION_PLANNED"],
+            "dataInputs": ["approvalNotes"],
+            "dataOutputs": ["approvalRecord"],
+            "uiComponent": "button (primary CTA with notes field)",
+            "timeout": null
+          },
+          {
+            "actionId": "DISMISS_INVESTIGATION",
+            "label": "Dismiss Investigation",
+            "description": "Findings do not warrant action. Investigation is dismissed. (e.g., finding is informational-only, false positive confirmed, or out of scope.)",
+            "preconditions": ["No findings require remediation (all INFORMATIONAL or LOW with accepted risk)", "Reviewer has DISMISS permission (Board H)"],
+            "postconditions": ["State transitions to DISMISSED"],
+            "dataInputs": ["dismissalReason", "dismissalType: FALSE_POSITIVE | INFORMATIONAL_ONLY | OUT_OF_SCOPE | ACCEPTED_RISK | DUPLICATE"],
+            "dataOutputs": ["dismissalRecord"],
+            "uiComponent": "button (warning-styled, confirmation modal with required reason and type)",
+            "timeout": null
+          },
+          {
+            "actionId": "ESCALATE_TO_GOVERNANCE",
+            "label": "Escalate to Governance",
+            "description": "Findings have systemic implications requiring governance review — policy changes, certification block-listing, or pack-wide remediation.",
+            "preconditions": ["At least one finding is systemic (affects multiple QIDs, packs, or policy)"],
+            "postconditions": ["State transitions to ESCALATED"],
+            "dataInputs": ["escalationReason", "governanceImpact: CERTIFICATION | POLICY | PACK_WIDE | SCHEMA", "recommendedAction"],
+            "dataOutputs": ["escalationRecord"],
+            "uiComponent": "button (warning-styled, modal with comprehensive escalation form)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "reviewDecision": "enum: ACTION_PLANNED | DISMISSED | ESCALATED",
+          "reviewerUserId": "string",
+          "reviewTimestamp": "ISO 8601"
+        },
+        "sla": {
+          "standard": "Part of the 14-day FINDINGS_DRAFT → RESOLVED window",
+          "critical": "Part of the 7-day FINDINGS_DRAFT → RESOLVED window",
+          "escalationIfExceeded": null
+        }
+      },
+
+      "ACTION_PLANNED": {
+        "ordinal": 6,
+        "label": "Action Planned",
+        "description": "A remediation plan has been drafted. Awaiting approval and execution.",
+        "badge": "primary",
+        "entryCriteria": [
+          "At least one ActionItem in the remediation plan",
+          "Approval obtained from reviewer (unless self-approved per role)"
+        ],
+        "exitCriteria": [
+          "All ActionItems approved",
+          "Execution begins with first EXECUTE_REMEDIATION action"
+        ],
+        "availableActions": [
+          {
+            "actionId": "CREATE_REMEDIATION_PLAN",
+            "label": "Create Remediation Plan",
+            "description": "Build a remediation plan with one or more action items, each linked to specific findings.",
+            "preconditions": ["Investigation is in ACTION_PLANNED state"],
+            "postconditions": ["RemediationPlan created with ActionItems"],
+            "dataInputs": {
+              "actionItems": [
+                {
+                  "actionType": "enum: CLEAR_FIELD | REWRITE_EXPLANATION | CORRECT_ANSWER | ADD_FIELD | REMOVE_BOILERPLATE | RECALIBRATE_DIFFICULTY | ARCHIVE_QID | MARK_STATE | OTHER",
+                  "targetQid": "string",
+                  "targetField": "string (e.g., 'ExplanationWrongB', 'CorrectChoice', 'Difficulty')",
+                  "oldValue": "string",
+                  "newValue": "string",
+                  "linkedFindingId": "string",
+                  "governanceRuleImplicated": "string[] — e.g., ['Rule 2', 'Rule 6']",
+                  "estimatedEffort": "enum: TRIVIAL | MINOR | MODERATE | MAJOR | COMPLEX",
+                  "requiresBackup": "boolean",
+                  "requiresPeerReview": "boolean"
+                }
+              ]
+            },
+            "dataOutputs": ["RemediationPlan { planId, actionItems[], totalEstimatedEffort }"],
+            "uiComponent": "builder UI (drag-and-drop action items, inline editing, linked finding cards)",
+            "timeout": null
+          },
+          {
+            "actionId": "VALIDATE_PLAN_GOVERNANCE",
+            "label": "Validate Against Governance Guard",
+            "description": "Pre-flight check: run the remediation plan against governance guard rules to predict blocking issues.",
+            "preconditions": ["RemediationPlan exists with at least one ActionItem"],
+            "postconditions": ["GovernanceValidationResult populated"],
+            "dataInputs": ["remediationPlan"],
+            "dataOutputs": ["GovernanceValidationResult { passedActions: string[], blockedActions: string[], warnings: string[] }"],
+            "uiComponent": "button (async — shows pass/block/warning summary)",
+            "timeout": "10 seconds"
+          },
+          {
+            "actionId": "REQUEST_ACTION_APPROVAL",
+            "label": "Request Action Approval",
+            "description": "Submit the remediation plan for approval by a reviewer or governance officer.",
+            "preconditions": ["RemediationPlan exists", "Governance guard validation passed for all actions"],
+            "postconditions": ["ApprovalRequest created"],
+            "dataInputs": ["approverUserId", "approvalNotes"],
+            "dataOutputs": ["ApprovalRequest { requestId, status: PENDING }"],
+            "uiComponent": "button → modal with approver selector",
+            "timeout": null
+          },
+          {
+            "actionId": "EXECUTE_REMEDIATION",
+            "label": "Execute Remediation",
+            "description": "Begin executing the remediation plan. Each ActionItem is processed sequentially or in parallel (batch).",
+            "preconditions": ["RemediationPlan is approved", "All governance guard pre-checks passed"],
+            "postconditions": ["State transitions to ACTION_EXECUTING", "ActionItem execution begins"],
+            "dataInputs": [],
+            "dataOutputs": [],
+            "uiComponent": "button (primary CTA — starts execution wizard)",
+            "timeout": null
+          },
+          {
+            "actionId": "RETURN_TO_FINDINGS_REVIEW",
+            "label": "Return to Findings Review",
+            "description": "Go back — findings need revision before action planning.",
+            "preconditions": [],
+            "postconditions": ["State transitions back to FINDINGS_REVIEW"],
+            "dataInputs": ["returnReason"],
+            "dataOutputs": [],
+            "uiComponent": "button (secondary)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "remediationPlan": {
+            "planId": "string",
+            "actionItems": "ActionItem[]",
+            "totalEstimatedEffort": "enum: TRIVIAL | MINOR | MODERATE | MAJOR | COMPLEX",
+            "governanceValidation": "GovernanceValidationResult",
+            "approvalStatus": "enum: DRAFT | PENDING_APPROVAL | APPROVED | REJECTED"
+          }
+        },
+        "sla": {
+          "standard": "Part of the 14-day FINDINGS_DRAFT → RESOLVED window",
+          "critical": "Part of the 7-day FINDINGS_DRAFT → RESOLVED window",
+          "escalationIfExceeded": null
+        }
+      },
+
+      "ACTION_EXECUTING": {
+        "ordinal": 7,
+        "label": "Action Executing",
+        "description": "Remediation actions are being executed. Backups are being made. Pack files are being modified.",
+        "badge": "primary",
+        "entryCriteria": [
+          "RemediationPlan approved",
+          "EXECUTE_REMEDIATION action triggered"
+        ],
+        "exitCriteria": [
+          "All ActionItems executed",
+          "Backup files created for all modified pack files",
+          "Investigation transitions to ACTION_VERIFIED"
+        ],
+        "availableActions": [
+          {
+            "actionId": "EXECUTE_SINGLE_ACTION",
+            "label": "Execute Single Action Item",
+            "description": "Execute one action item from the remediation plan. For batch actions, execute the entire batch.",
+            "preconditions": ["ActionItem is in PENDING status"],
+            "postconditions": ["ActionItem status updated to EXECUTED or FAILED", "Backup file created if pack file modified", "Governance guard post-write check passed"],
+            "dataInputs": ["actionItemId"],
+            "dataOutputs": ["ExecutionResult { status, backupFilePath, governanceCheckResult, warnings }"],
+            "uiComponent": "button per action item (with progress indicator, backup confirmation, governance check result)",
+            "timeout": "varies per action type"
+          },
+          {
+            "actionId": "EXECUTE_ALL_ACTIONS",
+            "label": "Execute All Actions",
+            "description": "Execute all pending action items sequentially. Batch-aware — respects governance guard Rule 5 (max 30 items per change-set).",
+            "preconditions": ["All ActionItems approved", "No blocking governance guard pre-checks"],
+            "postconditions": ["All ActionItems EXECUTED or FAILED", "Backup files created", "State transitions to ACTION_VERIFIED (if all succeeded)"],
+            "dataInputs": [],
+            "dataOutputs": ["batchExecutionResult { successful: ActionItem[], failed: ActionItem[], backupFiles: string[] }"],
+            "uiComponent": "button (primary CTA — shows batch progress bar, per-item status)",
+            "timeout": "varies — up to 5 minutes for large batches"
+          },
+          {
+            "actionId": "ROLLBACK_ACTION",
+            "label": "Rollback Action",
+            "description": "Restore a pack file from its pre-execution backup. Action item status reverted to PENDING.",
+            "preconditions": ["Backup file exists for the affected pack file", "ActionItem status is EXECUTED or FAILED"],
+            "postconditions": ["Pack file restored from backup", "ActionItem status reverted to PENDING"],
+            "dataInputs": ["actionItemId", "rollbackReason"],
+            "dataOutputs": ["RollbackResult { restoredFilePath, rollbackTimestamp }"],
+            "uiComponent": "button per action item (confirmation modal)",
+            "timeout": "10 seconds"
+          },
+          {
+            "actionId": "SKIP_ACTION",
+            "label": "Skip Action",
+            "description": "Skip an action item — used when execution is blocked or the action is no longer needed.",
+            "preconditions": ["ActionItem is in PENDING status"],
+            "postconditions": ["ActionItem status set to SKIPPED", "skipReason recorded"],
+            "dataInputs": ["actionItemId", "skipReason"],
+            "dataOutputs": ["skipRecord"],
+            "uiComponent": "button per action item (confirmation with required reason)",
+            "timeout": null
+          },
+          {
+            "actionId": "PAUSE_EXECUTION",
+            "label": "Pause Execution",
+            "description": "Pause batch execution — used when an issue is detected mid-batch.",
+            "preconditions": ["Batch execution in progress"],
+            "postconditions": ["Execution paused at current action item"],
+            "dataInputs": ["pauseReason"],
+            "dataOutputs": ["pauseRecord { pausedAtActionItemId, completedCount, remainingCount }"],
+            "uiComponent": "button (visible during batch execution)",
+            "timeout": null
+          },
+          {
+            "actionId": "RESUME_EXECUTION",
+            "label": "Resume Execution",
+            "description": "Resume a paused batch execution.",
+            "preconditions": ["Execution was paused"],
+            "postconditions": ["Execution resumes from next pending action item"],
+            "dataInputs": [],
+            "dataOutputs": [],
+            "uiComponent": "button (visible when execution is paused)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "executionLog": "ExecutionRecord[] — per action item",
+          "backupFiles": "string[] — paths to created backup files",
+          "governanceCheckResults": "GovernanceCheckResult[] — per action item",
+          "executionStartedAt": "ISO 8601",
+          "executionCompletedAt": "ISO 8601 (if complete)"
+        },
+        "sla": {
+          "standard": "Part of the 14-day FINDINGS_DRAFT → RESOLVED window",
+          "critical": "Part of the 7-day FINDINGS_DRAFT → RESOLVED window",
+          "escalationIfExceeded": null
+        }
+      },
+
+      "ACTION_VERIFIED": {
+        "ordinal": 8,
+        "label": "Action Verified",
+        "description": "All remediation actions have been executed. Verification is in progress — confirming fixes, running validators, checking for regressions.",
+        "badge": "success",
+        "entryCriteria": [
+          "All ActionItems in EXECUTED or SKIPPED status",
+          "No ActionItems in FAILED status (or failed items acknowledged and skipped)"
+        ],
+        "exitCriteria": [
+          "All verification checks passed",
+          "Investigation transitions to RESOLVED",
+          "Or: returned to ACTION_EXECUTING if verification fails"
+        ],
+        "availableActions": [
+          {
+            "actionId": "RUN_VALIDATOR_SUITE",
+            "label": "Run Validator Suite",
+            "description": "Run the full automated validator suite on affected pack files. Check for zero new errors and zero regressions.",
+            "preconditions": ["All remediation actions executed"],
+            "postconditions": ["ValidatorResult populated"],
+            "dataInputs": ["affectedPackFiles"],
+            "dataOutputs": ["ValidatorResult { errors: string[], warnings: string[], regressions: string[], beforeAfterComparison }"],
+            "uiComponent": "button (async — shows pass/fail/warning summary)",
+            "timeout": "60 seconds"
+          },
+          {
+            "actionId": "VERIFY_FIX",
+            "label": "Verify Fix",
+            "description": "Independently verify a specific fix — re-derive answer, check explanation quality, confirm DL-### resolution.",
+            "preconditions": ["At least one ActionItem executed"],
+            "postconditions": ["VerificationRecord created per finding"],
+            "dataInputs": {
+              "findingId": "string",
+              "verificationMethod": "enum: INDEPENDENT_RECALCULATION | EXPLANATION_REVIEW | STRUCTURAL_CHECK | DIFF_COMPARISON | GOVERNANCE_GUARD_PASS",
+              "verdict": "enum: PASS | FAIL | CONDITIONAL_PASS",
+              "verificationNotes": "string"
+            },
+            "dataOutputs": ["VerificationRecord"],
+            "uiComponent": "form per finding (pass/fail toggle, method dropdown, notes)",
+            "timeout": null
+          },
+          {
+            "actionId": "VERIFY_DL_RESOLUTION",
+            "label": "Verify DL-### Resolution",
+            "description": "Run the specific defect-class scan (e.g., DL-008 EW[CC] sweep) to confirm the defect class is resolved for all affected items.",
+            "preconditions": ["At least one ActionItem targeted a known DL-### defect class"],
+            "postconditions": ["DefectVerificationRecord populated"],
+            "dataInputs": ["defectId (e.g., 'DL-008')", "affectedQids"],
+            "dataOutputs": ["DefectVerificationResult { defectId, preScanCount, postScanCount, resolvedQids, remainingQids }"],
+            "uiComponent": "button (async — shows before/after count comparison)",
+            "timeout": "30 seconds"
+          },
+          {
+            "actionId": "VERIFY_NO_REGRESSION",
+            "label": "Verify No Regression",
+            "description": "Confirm that fixes did not introduce new defects — run cross-defect scan for DL-008, DL-026, DL-013, DL-010 on modified items.",
+            "preconditions": ["At least one pack file modified"],
+            "postconditions": ["RegressionCheckResult populated"],
+            "dataInputs": ["modifiedQids"],
+            "dataOutputs": ["RegressionCheckResult { newDefects: DefectRecord[], crossContamination: boolean }"],
+            "uiComponent": "button (async — shows regression summary)",
+            "timeout": "30 seconds"
+          },
+          {
+            "actionId": "TRANSITION_TO_RESOLVED",
+            "label": "Resolve Investigation",
+            "description": "All verification checks passed. Investigation is resolved.",
+            "preconditions": [
+              "All ActionItems verified (PASS or CONDITIONAL_PASS)",
+              "Validator suite shows zero new errors",
+              "No open regression issues",
+              "All DL-### defect verifications show 0 remaining for targeted defect classes"
+            ],
+            "postconditions": ["State transitions to RESOLVED"],
+            "dataInputs": ["resolutionSummary"],
+            "dataOutputs": [],
+            "uiComponent": "button (primary CTA — confirmation with summary field)",
+            "timeout": null
+          },
+          {
+            "actionId": "RETURN_TO_EXECUTING",
+            "label": "Return to Executing",
+            "description": "Verification failed — go back to execute additional fixes.",
+            "preconditions": ["At least one verification check FAILED"],
+            "postconditions": ["State transitions back to ACTION_EXECUTING"],
+            "dataInputs": ["returnReason", "additionalActionsNeeded"],
+            "dataOutputs": [],
+            "uiComponent": "button (secondary)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "verificationRecords": "VerificationRecord[]",
+          "validatorResult": "ValidatorResult",
+          "defectVerificationResults": "DefectVerificationResult[]",
+          "regressionCheckResult": "RegressionCheckResult"
+        },
+        "sla": {
+          "standard": "Part of the 14-day FINDINGS_DRAFT → RESOLVED window",
+          "critical": "Part of the 7-day FINDINGS_DRAFT → RESOLVED window",
+          "escalationIfExceeded": null
+        }
+      },
+
+      "RESOLVED": {
+        "ordinal": 9,
+        "label": "Resolved",
+        "description": "Investigation is resolved — all fixes applied, verified, and documented. Awaiting closure or archival.",
+        "badge": "success",
+        "entryCriteria": [
+          "All verification checks passed",
+          "Resolution summary recorded",
+          "REVISION_HISTORY.md entry created (per AGENTS.md §4)"
+        ],
+        "exitCriteria": [
+          "Investigation closed via CLOSE_INVESTIGATION action",
+          "Or: re-opened to INVESTIGATING if new information surfaces"
+        ],
+        "availableActions": [
+          {
+            "actionId": "CLOSE_INVESTIGATION",
+            "label": "Close Investigation",
+            "description": "Formally close the investigation. The resolution is final.",
+            "preconditions": [
+              "Resolution summary recorded",
+              "REVISION_HISTORY.md entry created",
+              "Caller has CLOSE permission (Board H)"
+            ],
+            "postconditions": [
+              "State transitions to CLOSED",
+              "closedTimestamp recorded",
+              "Investigation archived (remains queryable but read-only)"
+            ],
+            "dataInputs": ["closingNotes"],
+            "dataOutputs": ["closureRecord { closedBy, closedTimestamp }"],
+            "uiComponent": "button (primary CTA — confirmation with optional closing notes)",
+            "timeout": null
+          },
+          {
+            "actionId": "GENERATE_RESOLUTION_REPORT",
+            "label": "Generate Resolution Report",
+            "description": "Generate a comprehensive resolution report summarizing the investigation from trigger to resolution.",
+            "preconditions": ["Investigation is in RESOLVED state"],
+            "postconditions": ["ResolutionReport generated"],
+            "dataInputs": [],
+            "dataOutputs": ["ResolutionReport { investigationSummary, findings, actions, beforeAfterComparisons, verificationEvidence, timeline }"],
+            "uiComponent": "button (async — generates downloadable report)",
+            "timeout": "15 seconds"
+          },
+          {
+            "actionId": "REOPEN_INVESTIGATION",
+            "label": "Reopen Investigation",
+            "description": "Reopen a resolved investigation — e.g., new information surfaced, fix was incomplete, or regression detected.",
+            "preconditions": ["Caller has REOPEN permission (Board H)"],
+            "postconditions": ["State transitions to INVESTIGATING", "reopenReason recorded"],
+            "dataInputs": ["reopenReason", "newEvidence (optional)"],
+            "dataOutputs": ["reopenRecord"],
+            "uiComponent": "button (warning-styled — confirmation with required reason)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "resolutionSummary": "string — comprehensive summary of resolution",
+          "beforeAfterComparison": {
+            "defectClassesResolved": "string[] — e.g., ['DL-008', 'DL-026']",
+            "questionsFixed": "number",
+            "fieldsModified": "number",
+            "backupFilesCreated": "string[]",
+            "certificationImpact": "string — e.g., '3 items re-certified', 'no certification impact'"
+          },
+          "revisionHistoryEntry": "string — REVISION_HISTORY.md entry content",
+          "defectLibraryUpdates": "string[] — DEFECT_LIBRARY.md entry updates (if applicable)"
+        },
+        "sla": {
+          "standard": "7 days from RESOLVED to CLOSED",
+          "critical": "3.5 days from RESOLVED to CLOSED",
+          "escalationIfExceeded": "Flag for archival review"
+        }
+      },
+
+      "CLOSED": {
+        "ordinal": 10,
+        "label": "Closed",
+        "description": "Investigation is closed. Terminal state — no further actions possible (except reopen with permission).",
+        "badge": "secondary",
+        "entryCriteria": [
+          "CLOSE_INVESTIGATION action executed",
+          "Closed timestamp recorded"
+        ],
+        "exitCriteria": [
+          "None (terminal state). Only REOPEN_INVESTIGATION can exit this state (transitions to INVESTIGATING)."
+        ],
+        "availableActions": [
+          {
+            "actionId": "VIEW_ARCHIVE",
+            "label": "View Archive",
+            "description": "View the full investigation record (read-only). All data is preserved.",
+            "preconditions": ["Investigation is CLOSED"],
+            "postconditions": [],
+            "dataInputs": [],
+            "dataOutputs": ["full investigation record (read-only rendering)"],
+            "uiComponent": "read-only view (all actions disabled)",
+            "timeout": null
+          },
+          {
+            "actionId": "REOPEN_INVESTIGATION",
+            "label": "Reopen Investigation",
+            "description": "Reopen a closed investigation. Requires REOPEN permission.",
+            "preconditions": ["Caller has REOPEN permission (Board H)"],
+            "postconditions": ["State transitions to INVESTIGATING", "reopenReason recorded", "reopenCount incremented"],
+            "dataInputs": ["reopenReason", "newEvidence (optional)"],
+            "dataOutputs": ["reopenRecord"],
+            "uiComponent": "button (warning-styled — confirmation with required reason)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "closedTimestamp": "ISO 8601",
+          "closedBy": "string — user ID",
+          "resolutionReport": "object (optional — generated report)"
+        },
+        "sla": null
+      },
+
+      "DISMISSED": {
+        "ordinal": 11,
+        "label": "Dismissed",
+        "description": "Investigation dismissed — no defect found, or finding is informational only with no remediation required.",
+        "badge": "secondary",
+        "entryCriteria": [
+          "DISMISS_INVESTIGATION action executed from FINDINGS_REVIEW or TRIAGED state",
+          "Dismissal reason and type recorded"
+        ],
+        "exitCriteria": [
+          "None (terminal state). Reopen via REOPEN_INVESTIGATION only."
+        ],
+        "availableActions": [
+          {
+            "actionId": "VIEW_DISMISSAL",
+            "label": "View Dismissal Record",
+            "description": "View the full dismissal record (read-only).",
+            "preconditions": ["Investigation is DISMISSED"],
+            "postconditions": [],
+            "dataInputs": [],
+            "dataOutputs": ["dismissalRecord (read-only)"],
+            "uiComponent": "read-only view",
+            "timeout": null
+          },
+          {
+            "actionId": "REOPEN_INVESTIGATION",
+            "label": "Reopen Investigation",
+            "description": "Reopen a dismissed investigation.",
+            "preconditions": ["Caller has REOPEN permission (Board H)"],
+            "postconditions": ["State transitions to INVESTIGATING"],
+            "dataInputs": ["reopenReason"],
+            "dataOutputs": ["reopenRecord"],
+            "uiComponent": "button (warning-styled — confirmation modal)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "dismissalReason": "string",
+          "dismissalType": "enum: FALSE_POSITIVE | INFORMATIONAL_ONLY | OUT_OF_SCOPE | ACCEPTED_RISK | DUPLICATE",
+          "dismissedBy": "string — user ID",
+          "dismissedTimestamp": "ISO 8601"
+        },
+        "sla": null
+      },
+
+      "ESCALATED": {
+        "ordinal": 12,
+        "label": "Escalated",
+        "description": "Escalated to governance team. Investigation is now owned by governance — requires policy decision, certification block-listing, or systemic remediation.",
+        "badge": "danger",
+        "entryCriteria": [
+          "ESCALATE action executed from any non-terminal state",
+          "Escalation reason and governance impact recorded"
+        ],
+        "exitCriteria": [
+          "Governance team accepts escalation (remains ESCALATED until resolved)",
+          "Governance team creates derivative investigation(s) and closes this one",
+          "Or: governance team returns to INVESTIGATING with instructions"
+        ],
+        "availableActions": [
+          {
+            "actionId": "ACCEPT_ESCALATION",
+            "label": "Accept Escalation (Governance)",
+            "description": "Governance team formally accepts the escalation and assumes ownership.",
+            "preconditions": ["Caller has GOVERNANCE role (Board H)"],
+            "postconditions": ["Escalation marked as ACCEPTED", "assignedGovernanceOfficer populated"],
+            "dataInputs": ["governanceOfficerUserId", "acceptanceNotes"],
+            "dataOutputs": ["escalationAcceptanceRecord"],
+            "uiComponent": "button (governance role only — with notes field)",
+            "timeout": null
+          },
+          {
+            "actionId": "GOVERNANCE_RESOLVE",
+            "label": "Resolve (Governance Decision)",
+            "description": "Governance team makes a final decision — may spawn derivative investigations, issue policy changes, or mark as no-action.",
+            "preconditions": ["Caller has GOVERNANCE role (Board H)", "Escalation accepted"],
+            "postconditions": [
+              "GovernanceDecision recorded",
+              "State transitions to CLOSED",
+              "DerivativeInvestigationIds linked (if applicable)"
+            ],
+            "dataInputs": {
+              "decision": "enum: NO_ACTION | POLICY_CHANGE | CERTIFICATION_BLOCK | PACK_WIDE_REMEDIATION | DERIVATIVE_INVESTIGATION | OTHER",
+              "decisionRationale": "string",
+              "derivativeInvestigationIds": "string[] (optional)",
+              "policyChangeReference": "string (optional)"
+            },
+            "dataOutputs": ["GovernanceDecisionRecord"],
+            "uiComponent": "form (modal — governance role only, comprehensive decision form)",
+            "timeout": null
+          },
+          {
+            "actionId": "RETURN_FROM_ESCALATION",
+            "label": "Return to Investigator",
+            "description": "Governance returns the investigation to the original investigator with instructions.",
+            "preconditions": ["Caller has GOVERNANCE role (Board H)"],
+            "postconditions": ["State transitions to INVESTIGATING", "governanceInstructions recorded"],
+            "dataInputs": ["returnInstructions", "governanceGuidance"],
+            "dataOutputs": ["returnRecord"],
+            "uiComponent": "button (modal with instructions field)",
+            "timeout": null
+          }
+        ],
+        "requiredData": {
+          "escalationReason": "string",
+          "governanceImpact": "enum: CERTIFICATION | POLICY | PACK_WIDE | SCHEMA | SYSTEMIC",
+          "escalatedBy": "string — user ID",
+          "escalatedTimestamp": "ISO 8601"
+        },
+        "sla": {
+          "standard": "72 hours for governance acceptance",
+          "critical": "24 hours for governance acceptance",
+          "escalationIfExceeded": "Notify governance lead; auto-escalate to project lead"
+        }
+      }
+
+    },
+
+    "transitions": [
+      { "from": "TRIGGERED", "to": "TRIAGED", "trigger": "RUN_INITIAL_TRIAGE or MANUAL_TRIAGE" },
+      { "from": "TRIGGERED", "to": "CLOSED", "trigger": "MERGE_INVESTIGATION (merged)" },
+      { "from": "TRIAGED", "to": "ASSIGNED", "trigger": "ASSIGN_INVESTIGATOR or AUTO_ASSIGN" },
+      { "from": "TRIAGED", "to": "ESCALATED", "trigger": "ESCALATE_IMMEDIATE" },
+      { "from": "TRIAGED", "to": "DISMISSED", "trigger": "DISMISS_FALSE_POSITIVE" },
+      { "from": "TRIAGED", "to": "TRIGGERED", "trigger": "REQUEST_MORE_INFO (optional backflow)" },
+      { "from": "ASSIGNED", "to": "INVESTIGATING", "trigger": "ACCEPT_INVESTIGATION" },
+      { "from": "ASSIGNED", "to": "ASSIGNED", "trigger": "REASSIGN (self-loop)" },
+      { "from": "ASSIGNED", "to": "ESCALATED", "trigger": "ESCALATE" },
+      { "from": "INVESTIGATING", "to": "FINDINGS_DRAFT", "trigger": "TRANSITION_TO_FINDINGS_DRAFT" },
+      { "from": "INVESTIGATING", "to": "ESCALATED", "trigger": "ESCALATE" },
+      { "from": "FINDINGS_DRAFT", "to": "FINDINGS_REVIEW", "trigger": "TRANSITION_TO_REVIEW" },
+      { "from": "FINDINGS_DRAFT", "to": "INVESTIGATING", "trigger": "RETURN_TO_INVESTIGATING" },
+      { "from": "FINDINGS_REVIEW", "to": "ACTION_PLANNED", "trigger": "APPROVE_AND_PLAN_ACTION" },
+      { "from": "FINDINGS_REVIEW", "to": "DISMISSED", "trigger": "DISMISS_INVESTIGATION" },
+      { "from": "FINDINGS_REVIEW", "to": "ESCALATED", "trigger": "ESCALATE_TO_GOVERNANCE" },
+      { "from": "FINDINGS_REVIEW", "to": "FINDINGS_DRAFT", "trigger": "RETURN_TO_FINDINGS_REVIEW (via ACTION_PLANNED backflow)" },
+      { "from": "ACTION_PLANNED", "to": "ACTION_EXECUTING", "trigger": "EXECUTE_REMEDIATION" },
+      { "from": "ACTION_PLANNED", "to": "FINDINGS_REVIEW", "trigger": "RETURN_TO_FINDINGS_REVIEW" },
+      { "from": "ACTION_EXECUTING", "to": "ACTION_VERIFIED", "trigger": "EXECUTE_ALL_ACTIONS (all succeeded)" },
+      { "from": "ACTION_EXECUTING", "to": "ACTION_EXECUTING", "trigger": "ROLLBACK_ACTION (self-loop)" },
+      { "from": "ACTION_VERIFIED", "to": "RESOLVED", "trigger": "TRANSITION_TO_RESOLVED" },
+      { "from": "ACTION_VERIFIED", "to": "ACTION_EXECUTING", "trigger": "RETURN_TO_EXECUTING" },
+      { "from": "RESOLVED", "to": "CLOSED", "trigger": "CLOSE_INVESTIGATION" },
+      { "from": "RESOLVED", "to": "INVESTIGATING", "trigger": "REOPEN_INVESTIGATION" },
+      { "from": "CLOSED", "to": "INVESTIGATING", "trigger": "REOPEN_INVESTIGATION" },
+      { "from": "DISMISSED", "to": "INVESTIGATING", "trigger": "REOPEN_INVESTIGATION" },
+      { "from": "ESCALATED", "to": "CLOSED", "trigger": "GOVERNANCE_RESOLVE" },
+      { "from": "ESCALATED", "to": "INVESTIGATING", "trigger": "RETURN_FROM_ESCALATION" }
+    ],
+
+    "terminalStates": ["CLOSED", "DISMISSED"],
+
+    "concurrentStateRules": {
+      "maxParallelInvestigationsPerQid": 1,
+      "duplicateBehavior": "MERGE — new challenges for an already-investigated QID are appended to the OPEN investigation",
+      "allowReopenFrom": ["RESOLVED", "CLOSED", "DISMISSED"]
+    }
+  },
+
+  "dashboardLayout": {
+    "description": "Three-panel + bottom toolbar layout for the investigation workbench.",
+    "panels": {
+      "left": {
+        "id": "investigation-queue",
+        "width": "320px (collapsible to 48px)",
+        "title": "Investigation Queue",
+        "content": {
+          "toolbar": [
+            {
+              "component": "searchField",
+              "label": "Search investigations...",
+              "searchableFields": ["InvestigationID", "QID", "investigatorUserId", "challenge text"]
+            },
+            {
+              "component": "filterBar",
+              "filters": [
+                { "field": "state", "type": "multiSelect", "options": ["TRIGGERED", "TRIAGED", "ASSIGNED", "INVESTIGATING", "FINDINGS_DRAFT", "FINDINGS_REVIEW", "ACTION_PLANNED", "ACTION_EXECUTING", "ACTION_VERIFIED", "RESOLVED", "CLOSED", "DISMISSED", "ESCALATED"] },
+                { "field": "severity", "type": "multiSelect", "options": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFORMATIONAL"] },
+                { "field": "type", "type": "multiSelect", "options": ["CORRECTNESS", "EXPLANATION", "STRUCTURAL", "METADATA", "PEDAGOGICAL", "DUPLICATE", "OTHER"] },
+                { "field": "assignedTo", "type": "checkbox", "label": "Assigned to me" },
+                { "field": "overdue", "type": "checkbox", "label": "Overdue only" },
+                { "field": "priority", "type": "range", "min": 1, "max": 5 }
+              ]
+            },
+            {
+              "component": "sortSelector",
+              "options": ["Priority (highest first)", "Created (newest first)", "SLA deadline (closest first)", "Last updated"]
+            }
+          ],
+          "list": {
+            "component": "investigationList",
+            "itemTemplate": {
+              "compactView": {
+                "fields": ["state badge", "InvestigationID (truncated)", "primaryQID", "severity icon", "priority indicator", "SLA countdown timer", "assignedTo avatar"],
+                "height": "56px per item"
+              },
+              "expandedView": {
+                "fields": ["full InvestigationID", "all linked QIDs", "severity + type", "trigger description (2-line truncation)", "assignedTo + team", "SLA detailed (created, deadline, remaining)", "finding count", "action count"],
+                "height": "auto"
+              }
+            },
+            "pagination": {
+              "pageSize": 50,
+              "infiniteScroll": true
+            }
+          },
+          "statsBar": {
+            "component": "statsSummary",
+            "fields": [
+              { "label": "Open", "count": "dynamic", "color": "primary" },
+              { "label": "Overdue", "count": "dynamic", "color": "danger" },
+              { "label": "My Queue", "count": "dynamic", "color": "info" },
+              { "label": "Critical", "count": "dynamic", "color": "danger" }
+            ]
+          }
+        }
+      },
+
+      "center": {
+        "id": "investigation-detail",
+        "width": "flex (1fr)",
+        "title": "Investigation Detail",
+        "content": {
+          "header": {
+            "component": "detailHeader",
+            "fields": [
+              { "label": "InvestigationID", "value": "string" },
+              { "label": "State", "component": "stateBadge" },
+              { "label": "Phase", "component": "progressStepper" }
+            ]
+          },
+          "tabbedContent": {
+            "tabs": [
+              {
+                "id": "overview",
+                "label": "Overview",
+                "content": "See §investigationDetailViews below — content varies by state"
+              },
+              {
+                "id": "findings",
+                "label": "Findings",
+                "badge": "findingCount",
+                "content": "Finding cards with inline evidence, linked defects, peer review status"
+              },
+              {
+                "id": "actions",
+                "label": "Action Plan",
+                "badge": "actionCount",
+                "content": "Remediation plan with action items, execution status, governance check results"
+              },
+              {
+                "id": "evidence",
+                "label": "Evidence",
+                "badge": "evidenceCount",
+                "content": "Evidence gallery — screenshots, workpapers, citations, scan outputs"
+              },
+              {
+                "id": "activity",
+                "label": "Activity Log",
+                "content": "Chronological log of all state transitions, actions, and user interactions"
+              },
+              {
+                "id": "dependencies",
+                "label": "Dependencies",
+                "content": "Related investigations, linked QIDs, parent/child investigation relationships"
+              }
+            ]
+          }
+        }
+      },
+
+      "right": {
+        "id": "context-panel",
+        "width": "360px (collapsible to 48px)",
+        "title": "Context",
+        "content": {
+          "sections": [
+            {
+              "id": "question-dossier",
+              "label": "Question Dossier",
+              "collapsed": false,
+              "content": "Board A dossier summary — QID, pack file, section, topic, question_state, CorrectChoice, brief stem preview, health score badge",
+              "actionButtons": [
+                { "label": "Open Full Dossier", "action": "RUN_FULL_DOSSIER" },
+                { "label": "Open in Pack Viewer", "action": "EXTERNAL_NAVIGATE", "target": "pack file at QID line" }
+              ]
+            },
+            {
+              "id": "health-assessment",
+              "label": "Health Assessment",
+              "collapsed": true,
+              "content": "Board E health score — severity gauge, learner exposure count, certification risk indicator, dimension scores"
+            },
+            {
+              "id": "session-trace",
+              "label": "Session Trace",
+              "collapsed": true,
+              "content": "Board F impact data — total exposures, unique learners, date range, affected session count"
+            },
+            {
+              "id": "related-investigations",
+              "label": "Related Investigations",
+              "collapsed": true,
+              "content": "List of related investigations — same QID, same defect class, same pack, parent/child",
+              "actionButtons": [
+                { "label": "Link Investigation", "action": "LINK_RELATED_INVESTIGATION" }
+              ]
+            },
+            {
+              "id": "defect-library",
+              "label": "Defect Library",
+              "collapsed": true,
+              "content": "Relevant DL entries — linked defects from findings, suggested matches based on finding type",
+              "actionButtons": [
+                { "label": "Search Defect Library", "action": "SEARCH_DEFECT_LIBRARY" }
+              ]
+            },
+            {
+              "id": "governance-status",
+              "label": "Governance Guard",
+              "collapsed": true,
+              "content": "Governance guard rules status — which rules are implicated, pre-write validation results, certification blocks"
+            }
+          ]
+        }
+      }
+    },
+
+    "bottom": {
+      "id": "action-toolbar",
+      "height": "64px",
+      "description": "Context-sensitive action toolbar. Buttons change based on current state and user role.",
+      "component": "actionToolbar",
+      "behavior": {
+        "primaryActions": "1-2 prominent buttons for the most likely next action in the current state",
+        "secondaryActions": "dropdown menu with all available actions for the current state",
+        "utilityActions": "always-available actions: RUN_FULL_DOSSIER, REFRESH, EXPORT, SHARE",
+        "stateIndicator": "shows current state badge + SLA countdown",
+        "roleGating": "actions are shown/hidden based on user role permissions (Board H)"
+      },
+      "perStateActions": {
+        "TRIGGERED": { "primary": ["RUN_INITIAL_TRIAGE"], "secondary": ["MANUAL_TRIAGE", "MERGE_INVESTIGATION"] },
+        "TRIAGED": { "primary": ["ASSIGN_INVESTIGATOR", "AUTO_ASSIGN"], "secondary": ["RUN_FULL_DOSSIER", "DISMISS_FALSE_POSITIVE", "ESCALATE_IMMEDIATE"] },
+        "ASSIGNED": { "primary": ["ACCEPT_INVESTIGATION"], "secondary": ["RUN_FULL_DOSSIER", "REASSIGN"] },
+        "INVESTIGATING": { "primary": ["ADD_FINDING", "TRANSITION_TO_FINDINGS_DRAFT"], "secondary": ["RUN_FULL_DOSSIER", "RUN_HEALTH_ASSESSMENT", "TRACE_SESSION_IMPACT", "LINK_DEFECT", "LINK_QID", "ATTACH_EVIDENCE", "REQUEST_PEER_REVIEW", "ESCALATE"] },
+        "FINDINGS_DRAFT": { "primary": ["REVIEW_FINDINGS", "TRANSITION_TO_REVIEW"], "secondary": ["REQUEST_EXTERNAL_REVIEW", "AMEND_FINDING", "RETURN_TO_INVESTIGATING"] },
+        "FINDINGS_REVIEW": { "primary": ["APPROVE_AND_PLAN_ACTION"], "secondary": ["DISMISS_INVESTIGATION", "ESCALATE_TO_GOVERNANCE"] },
+        "ACTION_PLANNED": { "primary": ["EXECUTE_REMEDIATION"], "secondary": ["CREATE_REMEDIATION_PLAN", "VALIDATE_PLAN_GOVERNANCE", "REQUEST_ACTION_APPROVAL", "RETURN_TO_FINDINGS_REVIEW"] },
+        "ACTION_EXECUTING": { "primary": ["EXECUTE_SINGLE_ACTION", "EXECUTE_ALL_ACTIONS"], "secondary": ["ROLLBACK_ACTION", "SKIP_ACTION", "PAUSE_EXECUTION", "RESUME_EXECUTION"] },
+        "ACTION_VERIFIED": { "primary": ["TRANSITION_TO_RESOLVED"], "secondary": ["RUN_VALIDATOR_SUITE", "VERIFY_FIX", "VERIFY_DL_RESOLUTION", "VERIFY_NO_REGRESSION", "RETURN_TO_EXECUTING"] },
+        "RESOLVED": { "primary": ["CLOSE_INVESTIGATION"], "secondary": ["GENERATE_RESOLUTION_REPORT", "REOPEN_INVESTIGATION"] },
+        "CLOSED": { "primary": [], "secondary": ["VIEW_ARCHIVE", "REOPEN_INVESTIGATION"] },
+        "DISMISSED": { "primary": [], "secondary": ["VIEW_DISMISSAL", "REOPEN_INVESTIGATION"] },
+        "ESCALATED": { "primary": [], "secondary": ["ACCEPT_ESCALATION", "GOVERNANCE_RESOLVE", "RETURN_FROM_ESCALATION"] }
+      }
+    }
+  },
+
+  "investigationDetailViews": {
+    "description": "Content shown in the Overview tab of the center panel for each state.",
+    "states": {
+      "TRIGGERED": {
+        "sections": [
+          {
+            "heading": "Challenge Details",
+            "fields": [
+              { "label": "Challenge ID", "value": "challengeId" },
+              { "label": "Trigger Type", "value": "triggerType", "component": "badge" },
+              { "label": "Trigger Source", "value": "triggerSource" },
+              { "label": "Received", "value": "triggerTimestamp", "component": "timestamp" }
+            ]
+          },
+          {
+            "heading": "Affected Question",
+            "fields": [
+              { "label": "Question ID", "value": "primaryQid", "component": "linkToPackViewer" },
+              { "label": "Pack File", "value": "packFile" },
+              { "label": "Section", "value": "section" },
+              { "label": "Topic", "value": "topic (if known)" }
+            ]
+          },
+          {
+            "heading": "Challenge Content",
+            "component": "richTextBlock",
+            "value": "rawChallengeText",
+            "maxHeight": "200px (expandable)"
+          },
+          {
+            "heading": "Student Context (if applicable)",
+            "fields": [
+              { "label": "Student ID", "value": "studentId (anonymized)" },
+              { "label": "Session ID", "value": "sessionId" },
+              { "label": "Selected Answer", "value": "studentAnswer" },
+              { "label": "Time Spent", "value": "timeSpentOnQuestion" }
+            ]
+          },
+          {
+            "heading": "SLA",
+            "component": "slaCountdown",
+            "deadline": "4 hours from triggerTimestamp"
+          }
+        ]
+      },
+
+      "TRIAGED": {
+        "extends": "TRIGGERED",
+        "additionalSections": [
+          {
+            "heading": "Triage Classification",
+            "fields": [
+              { "label": "Severity", "value": "triageResult.severity", "component": "severityBadge" },
+              { "label": "Type", "value": "triageResult.type", "component": "badge" },
+              { "label": "Priority", "value": "triageResult.priority", "component": "priorityIndicator" },
+              { "label": "Auto-Classified", "value": "triageResult.autoClassified", "component": "booleanIcon" },
+              { "label": "Confidence", "value": "triageResult.confidence", "component": "confidenceGauge" },
+              { "label": "Classified By", "value": "triageResult.classifiedBy" },
+              { "label": "Classified At", "value": "triageResult.classificationTimestamp", "component": "timestamp" }
+            ]
+          },
+          {
+            "heading": "Affected Scope",
+            "fields": [
+              { "label": "Affected Packs", "value": "affectedPacks", "component": "tagList" },
+              { "label": "Affected Sections", "value": "affectedSections", "component": "sectionTagList" }
+            ]
+          }
+        ]
+      },
+
+      "ASSIGNED": {
+        "extends": "TRIAGED",
+        "additionalSections": [
+          {
+            "heading": "Assignment",
+            "fields": [
+              { "label": "Assigned To", "value": "assignedInvestigator.displayName", "component": "userAvatar" },
+              { "label": "Team", "value": "assignedInvestigator.teamId" },
+              { "label": "Assigned At", "value": "assignedInvestigator.assignedTimestamp", "component": "timestamp" },
+              { "label": "Assignment Method", "value": "assignmentMethod: MANUAL | AUTO" }
+            ]
+          }
+        ]
+      },
+
+      "INVESTIGATING": {
+        "extends": "ASSIGNED",
+        "additionalSections": [
+          {
+            "heading": "Investigation Progress",
+            "fields": [
+              { "label": "Started At", "value": "investigationStartTimestamp", "component": "timestamp" },
+              { "label": "Findings Recorded", "value": "findings.length" },
+              { "label": "Evidence Attached", "value": "evidenceCount" },
+              { "label": "Linked QIDs", "value": "qidList.length" }
+            ]
+          },
+          {
+            "heading": "Question Dossier Summary",
+            "component": "dossierSummaryCard",
+            "source": "Board A API",
+            "fields": [
+              { "label": "Question State", "value": "question_state", "component": "stateBadge" },
+              { "label": "Correct Choice", "value": "CorrectChoice" },
+              { "label": "Explanation Length", "value": "explanationCharCount" },
+              { "label": "Known Defects", "value": "linkedDefects[]", "component": "defectTagList" },
+              { "label": "Revision History", "value": "revisionCount" }
+            ],
+            "expandAction": "Open full dossier in right panel"
+          },
+          {
+            "heading": "Health & Impact",
+            "component": "healthImpactSummary",
+            "layout": "two-column grid",
+            "leftColumn": {
+              "heading": "Question Health (Board E)",
+              "fields": [
+                { "label": "Health Score", "value": "overallScore", "component": "gauge (0-100)" },
+                { "label": "Learner Exposure", "value": "learnerExposure", "component": "countBadge" },
+                { "label": "Certification Risk", "value": "certRisk", "component": "riskBadge" }
+              ]
+            },
+            "rightColumn": {
+              "heading": "Session Impact (Board F)",
+              "fields": [
+                { "label": "Total Exposures", "value": "totalExposures" },
+                { "label": "Unique Learners", "value": "uniqueLearners" },
+                { "label": "Exposure Window", "value": "exposureWindow" }
+              ]
+            }
+          }
+        ]
+      },
+
+      "FINDINGS_DRAFT": {
+        "extends": "INVESTIGATING",
+        "additionalSections": [
+          {
+            "heading": "Findings Summary",
+            "component": "findingsSummaryTable",
+            "columns": ["#", "Title", "Type", "Severity", "Linked Defect", "Confidence", "Review Status", "Actions"],
+            "rowActions": ["Edit", "Link Defect", "Request Review", "Delete (draft only)"]
+          },
+          {
+            "heading": "Investigation Summary",
+            "component": "richTextBlock",
+            "value": "investigationSummary"
+          }
+        ]
+      },
+
+      "FINDINGS_REVIEW": {
+        "extends": "FINDINGS_DRAFT",
+        "additionalSections": [
+          {
+            "heading": "Review Status",
+            "fields": [
+              { "label": "Reviewed By", "value": "reviewerUserId" },
+              { "label": "Reviewed At", "value": "reviewTimestamp", "component": "timestamp" },
+              { "label": "Findings Approved", "value": "approvedFindingCount / totalFindingCount" },
+              { "label": "Decision Pending", "value": "true until action taken" }
+            ]
+          }
+        ]
+      },
+
+      "ACTION_PLANNED": {
+        "extends": "FINDINGS_REVIEW",
+        "additionalSections": [
+          {
+            "heading": "Remediation Plan",
+            "component": "remediationPlanView",
+            "summary": {
+              "fields": [
+                { "label": "Total Actions", "value": "actionItems.length" },
+                { "label": "Estimated Effort", "value": "totalEstimatedEffort", "component": "effortBadge" },
+                { "label": "Governance Validation", "value": "governanceValidation", "component": "passFailBadge" },
+                { "label": "Approval Status", "value": "approvalStatus", "component": "statusBadge" }
+              ]
+            },
+            "actionItemList": {
+              "component": "actionItemCards",
+              "cardFields": ["#", "Action Type", "Target QID", "Target Field", "Old → New Value", "Effort", "Governance Rule", "Status"],
+              "expandableDetails": ["Linked Finding", "Requires Backup", "Requires Peer Review", "Execution Notes"]
+            }
+          }
+        ]
+      },
+
+      "ACTION_EXECUTING": {
+        "extends": "ACTION_PLANNED",
+        "additionalSections": [
+          {
+            "heading": "Execution Progress",
+            "component": "executionProgressBar",
+            "fields": [
+              { "label": "Executed", "value": "executedCount / totalActionCount" },
+              { "label": "Succeeded", "value": "succeededCount", "component": "successCount" },
+              { "label": "Failed", "value": "failedCount", "component": "dangerCount" },
+              { "label": "Skipped", "value": "skippedCount" },
+              { "label": "Remaining", "value": "pendingCount" }
+            ]
+          },
+          {
+            "heading": "Execution Log",
+            "component": "executionLogTimeline",
+            "entries": "ExecutionRecord[] with timestamp, action, result, backupFile, governanceCheck"
+          }
+        ]
+      },
+
+      "ACTION_VERIFIED": {
+        "extends": "ACTION_EXECUTING",
+        "additionalSections": [
+          {
+            "heading": "Verification Results",
+            "fields": [
+              { "label": "Validator Suite", "value": "validatorResult", "component": "passFailBadge with error/warning counts" },
+              { "label": "Regression Check", "value": "regressionCheckResult", "component": "passFailBadge" },
+              { "label": "Defect Verifications", "value": "defectVerificationResults", "component": "perDefectPassFailList" }
+            ]
+          }
+        ]
+      },
+
+      "RESOLVED": {
+        "extends": "ACTION_VERIFIED",
+        "additionalSections": [
+          {
+            "heading": "Resolution Summary",
+            "component": "richTextBlock",
+            "value": "resolutionSummary"
+          },
+          {
+            "heading": "Before / After Comparison",
+            "layout": "two-column comparison table",
+            "columns": ["Metric", "Before", "After"],
+            "rows": [
+              { "metric": "Defect Classes Resolved", "before": "defectClassesResolved (count)", "after": "0" },
+              { "metric": "Questions Fixed", "before": "questionsFixed", "after": "N/A" },
+              { "metric": "Fields Modified", "before": "fieldsModified", "after": "N/A" },
+              { "metric": "Backup Files Created", "before": "0", "after": "backupFilesCreated.length" },
+              { "metric": "Certification Impact", "before": "certificationImpact", "after": "N/A" }
+            ]
+          },
+          {
+            "heading": "Documentation",
+            "fields": [
+              { "label": "Revision History Entry", "component": "codeBlock", "value": "revisionHistoryEntry", "language": "markdown" },
+              { "label": "Defect Library Updates", "component": "codeBlock list", "value": "defectLibraryUpdates" }
+            ]
+          }
+        ]
+      },
+
+      "CLOSED": {
+        "extends": "RESOLVED",
+        "additionalSections": [
+          {
+            "heading": "Closure Details",
+            "fields": [
+              { "label": "Closed By", "value": "closedBy" },
+              { "label": "Closed At", "value": "closedTimestamp", "component": "timestamp" },
+              { "label": "Closure Notes", "value": "closingNotes" }
+            ]
+          },
+          {
+            "heading": "Resolution Report",
+            "component": "reportPreview",
+            "action": "Download full report"
+          }
+        ]
+      },
+
+      "DISMISSED": {
+        "sections": [
+          {
+            "heading": "Dismissal Details",
+            "fields": [
+              { "label": "Dismissed By", "value": "dismissedBy" },
+              { "label": "Dismissed At", "value": "dismissedTimestamp", "component": "timestamp" },
+              { "label": "Dismissal Type", "value": "dismissalType", "component": "badge" },
+              { "label": "Reason", "value": "dismissalReason", "component": "richTextBlock" }
+            ]
+          }
+        ]
+      },
+
+      "ESCALATED": {
+        "sections": [
+          {
+            "heading": "Escalation Details",
+            "fields": [
+              { "label": "Escalated By", "value": "escalatedBy" },
+              { "label": "Escalated At", "value": "escalatedTimestamp", "component": "timestamp" },
+              { "label": "Governance Impact", "value": "governanceImpact", "component": "badge" },
+              { "label": "Reason", "value": "escalationReason", "component": "richTextBlock" }
+            ]
+          },
+          {
+            "heading": "Governance Response",
+            "conditionalRender": "show only if escalation accepted",
+            "fields": [
+              { "label": "Governance Officer", "value": "governanceOfficerUserId" },
+              { "label": "Decision", "value": "decision", "component": "badge" },
+              { "label": "Rationale", "value": "decisionRationale", "component": "richTextBlock" },
+              { "label": "Derivative Investigations", "value": "derivativeInvestigationIds", "component": "linkList" }
+            ]
+          }
+        ]
+      }
+    }
+  },
+
+  "integrationPoints": {
+    "description": "How the Workbench connects to S252 backend engines and existing infrastructure.",
+
+    "boardA_QuestionInvestigationAPI": {
+      "purpose": "Generate full question dossier on demand.",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/api/v1/investigation/dossier",
+          "request": { "qidList": "string[]", "includeOptions": "enum[]: METADATA | EXPLANATIONS | HISTORY | HEALTH | SESSIONS" },
+          "response": { "dossier": "DossierRecord[]", "generatedAt": "ISO 8601" },
+          "cacheStrategy": "Cache per QID, TTL 5 minutes, invalidated on any pack file modification"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/investigation/dossier/{investigationId}",
+          "request": {},
+          "response": { "cachedDossier": "DossierRecord[]", "cachedAt": "ISO 8601", "stale": "boolean" }
+        }
+      ],
+      "uiIntegration": "Button 'Run Full Dossier' in right panel and bottom toolbar. Results populate right panel §question-dossier section. Cached per investigation."
+    },
+
+    "boardC_ChallengeTriageEngine": {
+      "purpose": "Auto-classify incoming challenges by severity, type, and priority.",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/api/v1/triage/classify",
+          "request": { "challengeText": "string", "qid": "string", "challengeType": "enum" },
+          "response": { "triageResult": "TriageResult", "similarChallenges": "ChallengeRecord[]" }
+        },
+        {
+          "method": "POST",
+          "path": "/api/v1/triage/batch-classify",
+          "request": { "challenges": "ChallengeRecord[]" },
+          "response": { "results": "TriageResult[]" }
+        }
+      ],
+      "uiIntegration": "Auto-triggered on investigation creation. Manual re-run via 'Run Initial Triage' button. Results displayed in TRIGGERED/TRIAGED detail views."
+    },
+
+    "boardD_InvestigationRegistry": {
+      "purpose": "Persist investigation state, lifecycle tracking, and audit trail.",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/api/v1/registry/investigations",
+          "request": { "InvestigationRecord": "object" },
+          "response": { "investigationId": "string", "createdAt": "ISO 8601" }
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/registry/investigations/{investigationId}",
+          "request": {},
+          "response": { "investigation": "InvestigationRecord" }
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/v1/registry/investigations/{investigationId}",
+          "request": { "state": "enum (optional)", "assignedTo": "string (optional)", "finding": "FindingRecord (optional)", "action": "ActionRecord (optional)" },
+          "response": { "investigation": "InvestigationRecord", "updatedAt": "ISO 8601", "version": "integer (optimistic locking)" }
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/registry/investigations",
+          "request": { "filters": "object", "sort": "string", "page": "integer", "pageSize": "integer" },
+          "response": { "investigations": "InvestigationRecord[]", "totalCount": "integer", "page": "integer" }
+        },
+        {
+          "method": "GET",
+          "path": "/api/v1/registry/investigations/{investigationId}/audit-log",
+          "request": {},
+          "response": { "auditEntries": "AuditEntry[]" }
+        }
+      ],
+      "uiIntegration": "All state transitions write through the Registry. Left panel list loads from Registry GET /investigations with filters. Activity log tab reads from audit-log endpoint."
+    },
+
+    "boardE_QuestionHealthEngine": {
+      "purpose": "Assess question health — severity, learner-pool impact, certification risk.",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/api/v1/health/assess",
+          "request": { "qidList": "string[]" },
+          "response": { "assessments": "HealthAssessment[]" }
+        }
+      ],
+      "uiIntegration": "Button 'Run Health Assessment' in bottom toolbar (INVESTIGATING+). Results populate right panel §health-assessment section."
+    },
+
+    "boardF_SessionIntelligence": {
+      "purpose": "Trace learner session exposure to affected questions.",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/api/v1/sessions/trace",
+          "request": { "qidList": "string[]", "timeRange": { "start": "ISO 8601 (optional)", "end": "ISO 8601 (optional)" } },
+          "response": { "traces": "SessionTrace[]" }
+        }
+      ],
+      "uiIntegration": "Button 'Trace Session Impact' in bottom toolbar (INVESTIGATING+). Results populate right panel §session-trace section."
+    },
+
+    "boardH_AdminDataContract": {
+      "purpose": "Enforce role-based permissions for all workbench actions.",
+      "integration": {
+        "authentication": "JWT-based — all API calls include Authorization header",
+        "authorization": "Per-action permission checks against role definitions",
+        "roles": [
+          {
+            "role": "INVESTIGATOR",
+            "permissions": [
+              "READ:investigation", "CREATE:finding", "EDIT:finding:draft",
+              "EXECUTE:action", "TRANSITION:state:investigator",
+              "LINK:defect", "ATTACH:evidence", "REQUEST:peer-review"
+            ]
+          },
+          {
+            "role": "SENIOR_INVESTIGATOR",
+            "extends": "INVESTIGATOR",
+            "permissions": [
+              "ASSIGN:investigation", "REASSIGN:investigation",
+              "APPROVE:findings", "DISMISS:investigation",
+              "TRANSITION:state:senior", "APPROVE:action-plan"
+            ]
+          },
+          {
+            "role": "GOVERNANCE",
+            "extends": "SENIOR_INVESTIGATOR",
+            "permissions": [
+              "ESCALATE:accept", "ESCALATE:resolve", "ESCALATE:return",
+              "TRANSITION:state:governance", "MODIFY:policy",
+              "BLOCK:certification", "ARCHIVE:investigation"
+            ]
+          },
+          {
+            "role": "ADMIN",
+            "extends": "GOVERNANCE",
+            "permissions": [
+              "MANAGE:users", "MANAGE:roles", "MANAGE:teams",
+              "DELETE:investigation", "CONFIGURE:sla", "CONFIGURE:workflow"
+            ]
+          },
+          {
+            "role": "READONLY",
+            "permissions": [
+              "READ:investigation", "READ:finding", "READ:evidence",
+              "READ:activity-log", "EXPORT:report"
+            ]
+          }
+        ]
+      },
+      "uiIntegration": "All action buttons gated by role. Unauthorized actions are hidden or disabled with tooltip explaining required role."
+    },
+
+    "governanceGuard": {
+      "purpose": "Pre-write and post-write validation for all pack-file modifications.",
+      "integration": {
+        "preWriteGate": "Before any EXECUTE_REMEDIATION action writes to a pack file, run governance guard pre-write check. BLOCK if Rule 2, Rule 5, or Rule 6 violation detected.",
+        "postWriteGate": "After every EXECUTE_REMEDIATION action, run governance guard post-write scan. Flag any regressions.",
+        "rules": {
+          "rule2": "DL-008 BLOCK — non-empty ExplanationWrong[CorrectChoice]",
+          "rule5": "Batch cap BLOCK — max 30 question objects per change-set without BLOCK-AUTHORIZED marker",
+          "rule6": "DL-026 BLOCK — empty/absent non-CC ExplanationWrong slots (deployed S814)"
+        }
+      },
+      "uiIntegration": "Governance guard status shown in right panel §governance-status section. VALIDATE_PLAN_GOVERNANCE action runs pre-flight check. Execution buttons disabled if any BLOCK-level rule would be violated. Post-write results shown in execution log."
+    }
+  },
+
+  "slaDefinitions": {
+    "description": "Service Level Agreements for each investigation workflow stage.",
+    "standardSLA": {
+      "TRIGGERED_to_TRIAGED": { "duration": "4 hours", "unit": "business hours", "startsOn": "triggerTimestamp", "measurement": "triageResult.classificationTimestamp - triggerTimestamp" },
+      "TRIAGED_to_ASSIGNED": { "duration": "24 hours", "unit": "business hours", "startsOn": "triageResult.classificationTimestamp", "measurement": "assignmentTimestamp - classificationTimestamp" },
+      "ASSIGNED_to_INVESTIGATING": { "duration": "48 hours", "unit": "business hours", "startsOn": "assignmentTimestamp", "measurement": "investigationStartTimestamp - assignmentTimestamp" },
+      "INVESTIGATING_to_FINDINGS_DRAFT": { "duration": "7 days", "unit": "calendar days", "startsOn": "investigationStartTimestamp", "measurement": "findingsDraftTimestamp - investigationStartTimestamp" },
+      "FINDINGS_DRAFT_to_RESOLVED": { "duration": "14 days", "unit": "calendar days", "startsOn": "findingsDraftTimestamp", "measurement": "resolvedTimestamp - findingsDraftTimestamp", "note": "Covers FINDINGS_DRAFT → FINDINGS_REVIEW → ACTION_PLANNED → ACTION_EXECUTING → ACTION_VERIFIED → RESOLVED" },
+      "RESOLVED_to_CLOSED": { "duration": "7 days", "unit": "calendar days", "startsOn": "resolvedTimestamp", "measurement": "closedTimestamp - resolvedTimestamp" },
+      "ESCALATED_to_ACCEPTED": { "duration": "72 hours", "unit": "business hours", "startsOn": "escalatedTimestamp", "measurement": "escalationAcceptanceTimestamp - escalatedTimestamp" }
+    },
+    "criticalSLA": {
+      "description": "All durations halved for CRITICAL severity investigations.",
+      "multiplier": 0.5,
+      "TRIGGERED_to_TRIAGED": "2 hours",
+      "TRIAGED_to_ASSIGNED": "12 hours",
+      "ASSIGNED_to_INVESTIGATING": "24 hours",
+      "INVESTIGATING_to_FINDINGS_DRAFT": "3.5 days",
+      "FINDINGS_DRAFT_to_RESOLVED": "7 days",
+      "RESOLVED_to_CLOSED": "3.5 days",
+      "ESCALATED_to_ACCEPTED": "24 hours"
+    },
+    "escalationRules": {
+      "TRIGGERED_overdue": { "at": "SLA deadline exceeded", "action": "Notify lead investigator via dashboard alert and email", "autoEscalate": false },
+      "TRIAGED_overdue": { "at": "SLA deadline exceeded", "action": "Auto-escalate to team lead; re-queue with elevated priority", "autoEscalate": true },
+      "ASSIGNED_overdue": { "at": "SLA deadline exceeded", "action": "Flag as overdue; notify team lead; auto-reassign if no acknowledgement in +24h", "autoEscalate": false },
+      "INVESTIGATING_overdue": { "at": "SLA deadline exceeded", "action": "Auto-notify team lead; add to overdue queue; escalate to senior investigator if no progress in +3 days", "autoEscalate": true },
+      "ESCALATED_overdue": { "at": "SLA deadline exceeded", "action": "Notify governance lead; auto-escalate to project lead if no response in +24h", "autoEscalate": true }
+    },
+    "businessHours": {
+      "timezone": "America/New_York",
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "hours": "09:00–17:00",
+      "holidaysExcluded": true
+    },
+    "slaMonitoring": {
+      "component": "SLA Watcher (background service)",
+      "interval": "Check every 15 minutes",
+      "actions": [
+        "Update countdown timers in dashboard",
+        "Trigger overdue notifications per escalation rules",
+        "Log SLA breach events to investigation audit log",
+        "Generate weekly SLA compliance report"
+      ]
+    }
+  },
+
+  "universalActions": [
+    {
+      "actionId": "RUN_FULL_DOSSIER",
+      "label": "Run Full Dossier",
+      "description": "Available in every state. Refreshes the question dossier from Board A.",
+      "availability": "Any state with linked QIDs",
+      "uiComponent": "button in right panel + bottom toolbar"
+    },
+    {
+      "actionId": "REFRESH",
+      "label": "Refresh",
+      "description": "Refresh the current view — re-fetch investigation data from Registry.",
+      "availability": "All states",
+      "uiComponent": "icon button in header"
+    },
+    {
+      "actionId": "EXPORT",
+      "label": "Export Investigation",
+      "description": "Export the full investigation record as JSON or PDF.",
+      "availability": "All states",
+      "uiComponent": "dropdown button in header"
+    },
+    {
+      "actionId": "SHARE",
+      "label": "Share Investigation",
+      "description": "Generate a shareable link to this investigation (read-only).",
+      "availability": "All states",
+      "uiComponent": "button in header"
+    },
+    {
+      "actionId": "ADD_NOTE",
+      "label": "Add Note",
+      "description": "Add an internal note to the investigation (not a finding).",
+      "availability": "All non-terminal states",
+      "uiComponent": "inline text area + submit button"
+    },
+    {
+      "actionId": "VIEW_AUDIT_LOG",
+      "label": "View Audit Log",
+      "description": "View the complete audit trail for this investigation.",
+      "availability": "All states",
+      "uiComponent": "tab in center panel (Activity Log)"
+    }
+  ],
+
+  "entityModel": {
+    "InvestigationRecord": {
+      "investigationId": "string (UUID v4)",
+      "state": "enum (from stateMachine.states keys)",
+      "qidList": "string[]",
+      "primaryQid": "string",
+      "triggerType": "enum: STUDENT_CHALLENGE | AUTOMATED_SWEEP | MANUAL_FLAG",
+      "triggerTimestamp": "ISO 8601",
+      "triggerSource": "string",
+      "rawChallengeText": "string",
+      "triageResult": "TriageResult | null",
+      "assignedInvestigator": "AssignmentRecord | null",
+      "investigationStartTimestamp": "ISO 8601 | null",
+      "investigationEndTimestamp": "ISO 8601 | null",
+      "dossierCache": "DossierRecord[] | null",
+      "healthAssessment": "HealthAssessment | null",
+      "sessionTrace": "SessionTrace | null",
+      "findings": "FindingRecord[]",
+      "remediationPlan": "RemediationPlan | null",
+      "executionLog": "ExecutionRecord[]",
+      "verificationRecords": "VerificationRecord[]",
+      "resolutionSummary": "string | null",
+      "beforeAfterComparison": "object | null",
+      "revisionHistoryEntry": "string | null",
+      "defectLibraryUpdates": "string[] | null",
+      "dismissalReason": "string | null",
+      "dismissalType": "enum | null",
+      "escalationReason": "string | null",
+      "governanceImpact": "enum | null",
+      "governanceDecision": "GovernanceDecision | null",
+      "closedTimestamp": "ISO 8601 | null",
+      "closedBy": "string | null",
+      "createdAt": "ISO 8601",
+      "updatedAt": "ISO 8601",
+      "version": "integer (optimistic locking)",
+      "auditLog": "AuditEntry[]",
+      "linkedInvestigations": "string[] — related InvestigationIDs",
+      "tags": "string[]"
+    },
+
+    "TriageResult": {
+      "severity": "enum: CRITICAL | HIGH | MEDIUM | LOW | INFORMATIONAL",
+      "type": "enum: CORRECTNESS | EXPLANATION | STRUCTURAL | METADATA | PEDAGOGICAL | DUPLICATE | OTHER",
+      "priority": "integer 1-5",
+      "confidence": "integer 0-100",
+      "autoClassified": "boolean",
+      "classifiedBy": "string",
+      "classificationTimestamp": "ISO 8601"
+    },
+
+    "FindingRecord": {
+      "findingId": "string (UUID v4)",
+      "findingType": "enum",
+      "severity": "enum",
+      "title": "string (max 120 chars)",
+      "description": "string (rich text)",
+      "evidence": "string[]",
+      "affectedFields": "string[]",
+      "confirmationMethod": "enum",
+      "confidence": "integer 0-100",
+      "linkedDefects": [{ "defectId": "string", "relationshipType": "enum: EXACT_MATCH | VARIANT | RELATED" }],
+      "reviewStatus": "enum: DRAFT | NEEDS_REVISION | UNDER_REVIEW | APPROVED | REJECTED",
+      "reviewerUserId": "string | null",
+      "reviewNotes": "string | null",
+      "amendmentVersion": "integer (starts at 1)",
+      "createdBy": "string",
+      "createdAt": "ISO 8601",
+      "updatedAt": "ISO 8601"
+    },
+
+    "RemediationPlan": {
+      "planId": "string",
+      "actionItems": "ActionItem[]",
+      "totalEstimatedEffort": "enum: TRIVIAL | MINOR | MODERATE | MAJOR | COMPLEX",
+      "governanceValidation": "GovernanceValidationResult",
+      "approvalStatus": "enum: DRAFT | PENDING_APPROVAL | APPROVED | REJECTED",
+      "approvedBy": "string | null",
+      "approvedAt": "ISO 8601 | null"
+    },
+
+    "ActionItem": {
+      "actionItemId": "string",
+      "actionType": "enum: CLEAR_FIELD | REWRITE_EXPLANATION | CORRECT_ANSWER | ADD_FIELD | REMOVE_BOILERPLATE | RECALIBRATE_DIFFICULTY | ARCHIVE_QID | MARK_STATE | OTHER",
+      "targetQid": "string",
+      "targetField": "string",
+      "oldValue": "string",
+      "newValue": "string",
+      "linkedFindingId": "string",
+      "governanceRuleImplicated": "string[]",
+      "estimatedEffort": "enum: TRIVIAL | MINOR | MODERATE | MAJOR | COMPLEX",
+      "requiresBackup": "boolean",
+      "requiresPeerReview": "boolean",
+      "status": "enum: PENDING | EXECUTING | EXECUTED | FAILED | SKIPPED",
+      "backupFilePath": "string | null",
+      "governanceCheckResult": "object | null",
+      "executedBy": "string | null",
+      "executedAt": "ISO 8601 | null"
+    }
+  },
+
+  "designNotes": [
+    "This is a design document (Board I, S252). No executable code is produced.",
+    "The state machine defines 13 states with 28 defined transitions plus self-loops.",
+    "49 investigator actions are defined across all states plus 6 universal actions.",
+    "The dashboard uses a three-panel + bottom toolbar layout familiar to enterprise investigation tools.",
+    "All actions are role-gated via Board H (Admin Data Contract) permission enforcement.",
+    "All remediation writes are gated by governance guard pre-write and post-write validation.",
+    "SLA definitions are dual-track: standard and critical (halved durations).",
+    "The entity model defines 5 core record types for persistence via Board D (Investigation Registry).",
+    "Integration points connect to all 5 S252 backend boards plus governance guard.",
+    "This model is intended to guide UI implementation for a future investigation workbench."
+  ]
+}

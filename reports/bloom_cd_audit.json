@@ -1,0 +1,3765 @@
+﻿{
+  "generated": "2026-07-28T14:36:43.045Z",
+  "methodology": "Function-constructor parse, direct field inspection",
+  "per_pack": {
+    "pack_a_corrected": {
+      "Section_C": {
+        "count": 100,
+        "bloom_distribution": {
+          "Remember": 1,
+          "Understand": 34,
+          "Apply": 65,
+          "Analyze": 0,
+          "Evaluate": 0
+        },
+        "difficulty_distribution": {
+          "Easy": 9,
+          "Moderate-Easy": 29,
+          "Moderate": 62,
+          "Difficult": 0,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [],
+        "dl008_count": 0,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1-C-016",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 283,
+            "Topic": "C.016 direct material price variance 1"
+          },
+          {
+            "QuestionID": "P1-C-017",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 281,
+            "Topic": "C.017 direct material quantity variance 2"
+          },
+          {
+            "QuestionID": "P1-C-018",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 246,
+            "Topic": "C.018 direct labor rate variance 3"
+          },
+          {
+            "QuestionID": "P1-C-019",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 248,
+            "Topic": "C.019 direct labor efficiency variance 4"
+          },
+          {
+            "QuestionID": "P1-C-020",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 267,
+            "Topic": "C.020 flexible budget variance spending 5"
+          },
+          {
+            "QuestionID": "P1-C-021",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 228,
+            "Topic": "C.021 ROI investment center measure 6"
+          },
+          {
+            "QuestionID": "P1-C-022",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 219,
+            "Topic": "C.022 residual income investment charge 7"
+          },
+          {
+            "QuestionID": "P1-C-023",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 262,
+            "Topic": "C.023 sales volume versus flexible budget variance 8"
+          },
+          {
+            "QuestionID": "P1-C-028",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 252,
+            "Topic": "C.028 direct material price variance 13"
+          },
+          {
+            "QuestionID": "P1-C-034",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 237,
+            "Topic": "C.034 residual income investment charge 19"
+          },
+          {
+            "QuestionID": "P1-C-035",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 265,
+            "Topic": "C.035 sales volume versus flexible budget variance 20"
+          },
+          {
+            "QuestionID": "P1-C-037",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 246,
+            "Topic": "C.037 transfer price at market price with excess capacity"
+          },
+          {
+            "QuestionID": "P1-C-040",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 221,
+            "Topic": "C.040 direct material price variance 25"
+          },
+          {
+            "QuestionID": "P1-C-041",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 225,
+            "Topic": "C.041 direct material quantity variance 26"
+          },
+          {
+            "QuestionID": "P1-C-042",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 246,
+            "Topic": "C.042 direct labor rate variance 27"
+          },
+          {
+            "QuestionID": "P1-C-043",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 239,
+            "Topic": "C.043 direct labor efficiency variance 28"
+          },
+          {
+            "QuestionID": "P1-C-044",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 267,
+            "Topic": "C.044 flexible budget variance spending 29"
+          },
+          {
+            "QuestionID": "P1-C-048",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 225,
+            "Topic": "C.048 lag vs lead indicator distinction"
+          },
+          {
+            "QuestionID": "P1-C-061",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 209,
+            "Topic": "C.061 dual transfer pricing rationale"
+          },
+          {
+            "QuestionID": "P1-C-084",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate",
+            "StemLength": 260,
+            "Topic": "C.084 strategy map cause-and-effect logic"
+          },
+          {
+            "QuestionID": "P1-C-085",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 204,
+            "Topic": "C.085 goal congruence in transfer pricing"
+          },
+          {
+            "QuestionID": "P1-C-097",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 218,
+            "Topic": "C.097 transfer price with no excess capacity"
+          }
+        ],
+        "stem_candidate_count": 22
+      },
+      "Section_D": {
+        "count": 75,
+        "bloom_distribution": {
+          "Remember": 0,
+          "Understand": 23,
+          "Apply": 52,
+          "Analyze": 0,
+          "Evaluate": 0
+        },
+        "difficulty_distribution": {
+          "Easy": 5,
+          "Moderate-Easy": 22,
+          "Moderate": 48,
+          "Difficult": 0,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [],
+        "dl008_count": 0,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1-D-004",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 207,
+            "Topic": "D.004 overhead overapplied underapplied calculation"
+          },
+          {
+            "QuestionID": "P1-D-028",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 245,
+            "Topic": "D.028 ABC facility-level cost allocation"
+          },
+          {
+            "QuestionID": "P1-D-038",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 206,
+            "Topic": "D.038 batch-level activity classification"
+          },
+          {
+            "QuestionID": "P1-D-048",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 245,
+            "Topic": "D.048 ABC product-level cost allocation"
+          },
+          {
+            "QuestionID": "P1-D-068",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 371,
+            "Topic": "D.068 ABC versus traditional overhead cost comparison"
+          }
+        ],
+        "stem_candidate_count": 5
+      }
+    },
+    "pack_b_corrected": {
+      "Section_C": {
+        "count": 100,
+        "bloom_distribution": {
+          "Remember": 6,
+          "Understand": 17,
+          "Apply": 72,
+          "Analyze": 4,
+          "Evaluate": 1
+        },
+        "difficulty_distribution": {
+          "Easy": 33,
+          "Moderate-Easy": 8,
+          "Moderate": 45,
+          "Difficult": 14,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [],
+        "dl008_count": 0,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1B-C-101",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 245,
+            "Topic": "B-C.101 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-102",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 235,
+            "Topic": "B-C.102 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-103",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 215,
+            "Topic": "B-C.103 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-104",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 221,
+            "Topic": "B-C.104 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-105",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 268,
+            "Topic": "B-C.105 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-106",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 263,
+            "Topic": "B-C.106 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-107",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 325,
+            "Topic": "B-C.107 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-109",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 419,
+            "Topic": "B-C.109 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-110",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 363,
+            "Topic": "B-C.110 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-111",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 254,
+            "Topic": "B-C.111 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-112",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 295,
+            "Topic": "B-C.112 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-113",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 203,
+            "Topic": "B-C.113 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-114",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 252,
+            "Topic": "B-C.114 variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-120",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 259,
+            "Topic": "B-C.120 sales variance analysis"
+          },
+          {
+            "QuestionID": "P1B-C-126",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Easy",
+            "StemLength": 233,
+            "Topic": "B-C.126 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-127",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Easy",
+            "StemLength": 262,
+            "Topic": "B-C.127 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-128",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Easy",
+            "StemLength": 281,
+            "Topic": "B-C.128 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-129",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Easy",
+            "StemLength": 293,
+            "Topic": "B-C.129 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-130",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Easy",
+            "StemLength": 307,
+            "Topic": "B-C.130 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-131",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 238,
+            "Topic": "B-C.131 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-132",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 265,
+            "Topic": "B-C.132 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-133",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 260,
+            "Topic": "B-C.133 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-134",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 266,
+            "Topic": "B-C.134 responsibility centers"
+          },
+          {
+            "QuestionID": "P1B-C-140",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 268,
+            "Topic": "B-C.140 ROI and residual income"
+          },
+          {
+            "QuestionID": "P1B-C-144",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 212,
+            "Topic": "B-C.144 ROI and residual income"
+          },
+          {
+            "QuestionID": "P1B-C-145",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 213,
+            "Topic": "B-C.145 ROI and residual income"
+          },
+          {
+            "QuestionID": "P1B-C-146",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 262,
+            "Topic": "B-C.146 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-147",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 273,
+            "Topic": "B-C.147 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-148",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 238,
+            "Topic": "B-C.148 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-149",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 221,
+            "Topic": "B-C.149 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-150",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 227,
+            "Topic": "B-C.150 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-151",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 239,
+            "Topic": "B-C.151 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-152",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 231,
+            "Topic": "B-C.152 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-154",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 288,
+            "Topic": "B-C.154 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-155",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 205,
+            "Topic": "B-C.155 transfer pricing"
+          },
+          {
+            "QuestionID": "P1B-C-164",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Easy",
+            "StemLength": 204,
+            "Topic": "B-C.164 benchmarking"
+          },
+          {
+            "QuestionID": "P1B-C-168",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 339,
+            "Topic": "B-C.168 segment performance evaluation"
+          },
+          {
+            "QuestionID": "P1B-C-169",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 286,
+            "Topic": "B-C.169 segment performance evaluation"
+          },
+          {
+            "QuestionID": "P1B-C-171",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 407,
+            "Topic": "B-C.171 product profitability analysis"
+          },
+          {
+            "QuestionID": "P1B-C-172",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 247,
+            "Topic": "B-C.172 product profitability analysis"
+          },
+          {
+            "QuestionID": "P1B-C-173",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 376,
+            "Topic": "B-C.173 customer profitability analysis"
+          },
+          {
+            "QuestionID": "P1B-C-176",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 232,
+            "Topic": "B-C.176 product profitability analysis"
+          },
+          {
+            "QuestionID": "P1B-C-177",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 216,
+            "Topic": "B-C.177 customer profitability analysis"
+          },
+          {
+            "QuestionID": "P1B-C-178",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 233,
+            "Topic": "B-C.178 product profitability analysis"
+          },
+          {
+            "QuestionID": "P1B-C-179",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 320,
+            "Topic": "B-C.179 product profitability analysis"
+          },
+          {
+            "QuestionID": "P1B-C-180",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 282,
+            "Topic": "B-C.180 variance investigation"
+          },
+          {
+            "QuestionID": "P1B-C-181",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 357,
+            "Topic": "B-C.181 variance investigation"
+          },
+          {
+            "QuestionID": "P1B-C-183",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 209,
+            "Topic": "B-C.183 variance investigation"
+          },
+          {
+            "QuestionID": "P1B-C-184",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 300,
+            "Topic": "B-C.184 variance investigation"
+          },
+          {
+            "QuestionID": "P1B-C-188",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 264,
+            "Topic": "B-C.188 standard costing"
+          },
+          {
+            "QuestionID": "P1B-C-190",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 347,
+            "Topic": "B-C.190 standard costing"
+          },
+          {
+            "QuestionID": "P1B-C-194",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 205,
+            "Topic": "B-C.194 standard costing"
+          },
+          {
+            "QuestionID": "P1B-C-196",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 212,
+            "Topic": "B-C.196 standard costing vs actual costing"
+          }
+        ],
+        "stem_candidate_count": 53
+      },
+      "Section_D": {
+        "count": 75,
+        "bloom_distribution": {
+          "Remember": 2,
+          "Understand": 1,
+          "Apply": 71,
+          "Analyze": 1,
+          "Evaluate": 0
+        },
+        "difficulty_distribution": {
+          "Easy": 14,
+          "Moderate-Easy": 14,
+          "Moderate": 40,
+          "Difficult": 7,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [],
+        "dl008_count": 0,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1B-D-080",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 307,
+            "Topic": "B-D.080 cost behavior"
+          },
+          {
+            "QuestionID": "P1B-D-081",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 309,
+            "Topic": "B-D.081 cost behavior"
+          },
+          {
+            "QuestionID": "P1B-D-089",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 249,
+            "Topic": "B-D.089 job order costing"
+          },
+          {
+            "QuestionID": "P1B-D-090",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 240,
+            "Topic": "B-D.090 job order costing"
+          },
+          {
+            "QuestionID": "P1B-D-094",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 223,
+            "Topic": "B-D.094 process costing"
+          },
+          {
+            "QuestionID": "P1B-D-095",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 250,
+            "Topic": "B-D.095 process costing"
+          },
+          {
+            "QuestionID": "P1B-D-097",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 272,
+            "Topic": "B-D.097 process costing"
+          },
+          {
+            "QuestionID": "P1B-D-098",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 261,
+            "Topic": "B-D.098 process costing"
+          },
+          {
+            "QuestionID": "P1B-D-099",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 340,
+            "Topic": "B-D.099 process costing"
+          },
+          {
+            "QuestionID": "P1B-D-100",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 229,
+            "Topic": "B-D.100 process costing"
+          },
+          {
+            "QuestionID": "P1B-D-102",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 246,
+            "Topic": "B-D.102 activity-based costing"
+          },
+          {
+            "QuestionID": "P1B-D-103",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 261,
+            "Topic": "B-D.103 activity-based costing"
+          },
+          {
+            "QuestionID": "P1B-D-104",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 296,
+            "Topic": "B-D.104 activity-based costing"
+          },
+          {
+            "QuestionID": "P1B-D-105",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 203,
+            "Topic": "B-D.105 activity-based costing"
+          },
+          {
+            "QuestionID": "P1B-D-108",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 231,
+            "Topic": "B-D.108 activity-based costing"
+          },
+          {
+            "QuestionID": "P1B-D-109",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 247,
+            "Topic": "B-D.109 joint product costing"
+          },
+          {
+            "QuestionID": "P1B-D-110",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 213,
+            "Topic": "B-D.110 joint product costing"
+          },
+          {
+            "QuestionID": "P1B-D-111",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 296,
+            "Topic": "B-D.111 joint product costing"
+          },
+          {
+            "QuestionID": "P1B-D-112",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 269,
+            "Topic": "B-D.112 joint product costing"
+          },
+          {
+            "QuestionID": "P1B-D-113",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 217,
+            "Topic": "B-D.113 joint product costing"
+          },
+          {
+            "QuestionID": "P1B-D-114",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 221,
+            "Topic": "B-D.114 byproduct costing"
+          },
+          {
+            "QuestionID": "P1B-D-115",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 226,
+            "Topic": "B-D.115 cost allocation"
+          },
+          {
+            "QuestionID": "P1B-D-117",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 267,
+            "Topic": "B-D.117 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-118",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 330,
+            "Topic": "B-D.118 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-119",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 283,
+            "Topic": "B-D.119 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-120",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 283,
+            "Topic": "B-D.120 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-122",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 221,
+            "Topic": "B-D.122 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-123",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 264,
+            "Topic": "B-D.123 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-124",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 240,
+            "Topic": "B-D.124 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-125",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 228,
+            "Topic": "B-D.125 overhead allocation"
+          },
+          {
+            "QuestionID": "P1B-D-126",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 275,
+            "Topic": "B-D.126 variable vs absorption costing"
+          },
+          {
+            "QuestionID": "P1B-D-127",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 286,
+            "Topic": "B-D.127 variable vs absorption costing"
+          },
+          {
+            "QuestionID": "P1B-D-130",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 278,
+            "Topic": "B-D.130 variable vs absorption costing"
+          },
+          {
+            "QuestionID": "P1B-D-138",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 207,
+            "Topic": "B-D.138 CVP analysis"
+          },
+          {
+            "QuestionID": "P1B-D-139",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 208,
+            "Topic": "B-D.139 CVP analysis"
+          },
+          {
+            "QuestionID": "P1B-D-141",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 330,
+            "Topic": "B-D.141 relevant costing"
+          },
+          {
+            "QuestionID": "P1B-D-142",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 236,
+            "Topic": "B-D.142 relevant costing"
+          },
+          {
+            "QuestionID": "P1B-D-143",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 253,
+            "Topic": "B-D.143 relevant costing"
+          },
+          {
+            "QuestionID": "P1B-D-145",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 212,
+            "Topic": "B-D.145 relevant costing"
+          },
+          {
+            "QuestionID": "P1B-D-147",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 240,
+            "Topic": "B-D.147 relevant costing"
+          },
+          {
+            "QuestionID": "P1B-D-148",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 221,
+            "Topic": "B-D.148 mfg vs non-mfg costs"
+          }
+        ],
+        "stem_candidate_count": 41
+      }
+    },
+    "pack_c_corrected": {
+      "Section_C": {
+        "count": 100,
+        "bloom_distribution": {
+          "Remember": 19,
+          "Understand": 34,
+          "Apply": 43,
+          "Analyze": 3,
+          "Evaluate": 1
+        },
+        "difficulty_distribution": {
+          "Easy": 26,
+          "Moderate-Easy": 6,
+          "Moderate": 68,
+          "Difficult": 0,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [
+          {
+            "QuestionID": "P1-CC-071",
+            "Section": "C",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Evaluate",
+            "Difficulty": "Moderate",
+            "Topic": "C.071 gross margin variance analysis"
+          }
+        ],
+        "dl008_count": 1,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1-CC-053",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 223,
+            "Topic": "C.052 benchmarking"
+          },
+          {
+            "QuestionID": "P1-CC-054",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 210,
+            "Topic": "C.054 sales price variance"
+          },
+          {
+            "QuestionID": "P1-CC-055",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 212,
+            "Topic": "C.055 sales price variance"
+          },
+          {
+            "QuestionID": "P1-CC-063",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 256,
+            "Topic": "C.063 fixed overhead volume variance calculation"
+          }
+        ],
+        "stem_candidate_count": 4
+      },
+      "Section_D": {
+        "count": 75,
+        "bloom_distribution": {
+          "Remember": 0,
+          "Understand": 35,
+          "Apply": 29,
+          "Analyze": 11,
+          "Evaluate": 0
+        },
+        "difficulty_distribution": {
+          "Easy": 15,
+          "Moderate-Easy": 7,
+          "Moderate": 53,
+          "Difficult": 0,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [],
+        "dl008_count": 0,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1-DC-014",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 216,
+            "Topic": "D.014 support department cost allocation machine hours"
+          },
+          {
+            "QuestionID": "P1-DC-021",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 223,
+            "Topic": "D.021 variable costing vs absorption costing"
+          },
+          {
+            "QuestionID": "P1-DC-022",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 251,
+            "Topic": "D.022 variable costing vs absorption costing"
+          },
+          {
+            "QuestionID": "P1-DC-024",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 251,
+            "Topic": "D.024 variable costing vs absorption costing"
+          },
+          {
+            "QuestionID": "P1-DC-031",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 202,
+            "Topic": "D.031 target costing approach"
+          },
+          {
+            "QuestionID": "P1-DC-032",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 203,
+            "Topic": "D.032 target costing approach"
+          },
+          {
+            "QuestionID": "P1-DC-033",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 203,
+            "Topic": "D.033 target costing approach"
+          },
+          {
+            "QuestionID": "P1-DC-034",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 201,
+            "Topic": "D.034 target costing approach"
+          },
+          {
+            "QuestionID": "P1-DC-056",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 201,
+            "Topic": "D.056 cost allocation direct method"
+          },
+          {
+            "QuestionID": "P1-DC-057",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 201,
+            "Topic": "D.057 cost allocation direct method"
+          },
+          {
+            "QuestionID": "P1-DC-058",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 202,
+            "Topic": "D.058 cost allocation direct method"
+          },
+          {
+            "QuestionID": "P1-DC-059",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 207,
+            "Topic": "D.059 cost allocation direct method"
+          },
+          {
+            "QuestionID": "P1-DC-060",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 202,
+            "Topic": "D.060 cost allocation direct method"
+          },
+          {
+            "QuestionID": "P1-DC-066",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 247,
+            "Topic": "D.066 contribution margin break even"
+          },
+          {
+            "QuestionID": "P1-DC-067",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 222,
+            "Topic": "D.067 contribution margin break even"
+          },
+          {
+            "QuestionID": "P1-DC-069",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 230,
+            "Topic": "D.069 contribution margin break even"
+          }
+        ],
+        "stem_candidate_count": 16
+      }
+    },
+    "pack_d_corrected": {
+      "Section_C": {
+        "count": 100,
+        "bloom_distribution": {
+          "Remember": 0,
+          "Understand": 31,
+          "Apply": 56,
+          "Analyze": 13,
+          "Evaluate": 0
+        },
+        "difficulty_distribution": {
+          "Easy": 13,
+          "Moderate-Easy": 13,
+          "Moderate": 48,
+          "Difficult": 26,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [
+          {
+            "QuestionID": "P1-CD-015",
+            "Section": "C",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate",
+            "Topic": "C.015 sales mix variance concept"
+          },
+          {
+            "QuestionID": "P1-CD-017",
+            "Section": "C",
+            "CorrectChoice": "A",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate",
+            "Topic": "C.017 sales mix variance concept"
+          },
+          {
+            "QuestionID": "P1-CD-043",
+            "Section": "C",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate",
+            "Topic": "C.043 customer profitability analysis"
+          },
+          {
+            "QuestionID": "P1-CD-057",
+            "Section": "C",
+            "CorrectChoice": "A",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Difficult",
+            "Topic": "C.057 common size financial statement analysis"
+          },
+          {
+            "QuestionID": "P1-CD-061",
+            "Section": "C",
+            "CorrectChoice": "A",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Difficult",
+            "Topic": "C.061 common size financial statement analysis"
+          },
+          {
+            "QuestionID": "P1-CD-064",
+            "Section": "C",
+            "CorrectChoice": "D",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate-Easy",
+            "Topic": "C.064 variance investigation cost benefit"
+          },
+          {
+            "QuestionID": "P1-CD-067",
+            "Section": "C",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Difficult",
+            "Topic": "C.067 variance investigation cost benefit"
+          },
+          {
+            "QuestionID": "P1-CD-071",
+            "Section": "C",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate",
+            "Topic": "C.071 total quality management philosophy"
+          },
+          {
+            "QuestionID": "P1-CD-074",
+            "Section": "C",
+            "CorrectChoice": "B",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate",
+            "Topic": "C.074 total quality management philosophy"
+          },
+          {
+            "QuestionID": "P1-CD-092",
+            "Section": "C",
+            "CorrectChoice": "D",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Difficult",
+            "Topic": "C.092 value based management EVA linkage"
+          }
+        ],
+        "dl008_count": 10,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1-CD-016",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 473,
+            "Topic": "C.016 sales mix variance two-product calculation"
+          },
+          {
+            "QuestionID": "P1-CD-018",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 566,
+            "Topic": "C.018 sales mix variance three-product analysis"
+          },
+          {
+            "QuestionID": "P1-CD-019",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 262,
+            "Topic": "C.019 sales mix variance calculation"
+          },
+          {
+            "QuestionID": "P1-CD-020",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 237,
+            "Topic": "C.020 sales mix variance calculation"
+          },
+          {
+            "QuestionID": "P1-CD-021",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 267,
+            "Topic": "C.021 sales mix variance calculation"
+          },
+          {
+            "QuestionID": "P1-CD-029",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 211,
+            "Topic": "C.029 dual rate transfer pricing"
+          },
+          {
+            "QuestionID": "P1-CD-030",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 211,
+            "Topic": "C.030 dual rate transfer pricing"
+          },
+          {
+            "QuestionID": "P1-CD-031",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 212,
+            "Topic": "C.031 dual rate transfer pricing"
+          },
+          {
+            "QuestionID": "P1-CD-032",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Easy",
+            "StemLength": 213,
+            "Topic": "C.032 dual rate transfer pricing"
+          },
+          {
+            "QuestionID": "P1-CD-033",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 211,
+            "Topic": "C.033 dual rate transfer pricing"
+          },
+          {
+            "QuestionID": "P1-CD-034",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 211,
+            "Topic": "C.034 dual rate transfer pricing"
+          },
+          {
+            "QuestionID": "P1-CD-035",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 211,
+            "Topic": "C.035 dual rate transfer pricing"
+          },
+          {
+            "QuestionID": "P1-CD-044",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 735,
+            "Topic": "C.044 customer profitability analysis multi-customer"
+          },
+          {
+            "QuestionID": "P1-CD-045",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 208,
+            "Topic": "C.045 customer profitability analysis"
+          },
+          {
+            "QuestionID": "P1-CD-046",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 208,
+            "Topic": "C.046 customer profitability analysis"
+          },
+          {
+            "QuestionID": "P1-CD-048",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 734,
+            "Topic": "C.048 customer profitability ratio ranking"
+          },
+          {
+            "QuestionID": "P1-CD-049",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Easy",
+            "StemLength": 208,
+            "Topic": "C.049 customer profitability analysis"
+          },
+          {
+            "QuestionID": "P1-CD-051",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 563,
+            "Topic": "C.051 performance measurement goal congruence ROI conflict"
+          },
+          {
+            "QuestionID": "P1-CD-058",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 512,
+            "Topic": "C.058 common-size analysis margin compression"
+          },
+          {
+            "QuestionID": "P1-CD-062",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate",
+            "StemLength": 581,
+            "Topic": "C.062 common-size multi-period trend analysis"
+          },
+          {
+            "QuestionID": "P1-CD-065",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 881,
+            "Topic": "C.065 variance investigation dual-threshold cost-benefit"
+          },
+          {
+            "QuestionID": "P1-CD-068",
+            "Section": "C",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 756,
+            "Topic": "C.068 variance investigation multi-variance dual-threshold"
+          },
+          {
+            "QuestionID": "P1-CD-072",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 520,
+            "Topic": "C.072 cost of quality profile quality management approach"
+          },
+          {
+            "QuestionID": "P1-CD-075",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate",
+            "StemLength": 600,
+            "Topic": "C.075 cost of quality maturity assessment"
+          },
+          {
+            "QuestionID": "P1-CD-090",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate",
+            "StemLength": 315,
+            "Topic": "C.090 value based management EVA calculation"
+          },
+          {
+            "QuestionID": "P1-CD-093",
+            "Section": "C",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 699,
+            "Topic": "C.093 EVA NOPAT components and adjustments"
+          }
+        ],
+        "stem_candidate_count": 26
+      },
+      "Section_D": {
+        "count": 75,
+        "bloom_distribution": {
+          "Remember": 0,
+          "Understand": 19,
+          "Apply": 42,
+          "Analyze": 9,
+          "Evaluate": 5
+        },
+        "difficulty_distribution": {
+          "Easy": 13,
+          "Moderate-Easy": 9,
+          "Moderate": 38,
+          "Difficult": 15,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [
+          {
+            "QuestionID": "P1-DD-003",
+            "Section": "D",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate",
+            "Topic": "D.003 normal costing overhead application"
+          },
+          {
+            "QuestionID": "P1-DD-021",
+            "Section": "D",
+            "CorrectChoice": "A",
+            "CognitiveLevel": "Evaluate",
+            "Difficulty": "Moderate",
+            "Topic": "D.021 cost driver selection abc pool"
+          },
+          {
+            "QuestionID": "P1-DD-043",
+            "Section": "D",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate",
+            "Topic": "D.043 cost behavior mixed cost analysis"
+          },
+          {
+            "QuestionID": "P1-DD-046",
+            "Section": "D",
+            "CorrectChoice": "B",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Moderate-Easy",
+            "Topic": "D.046 service department reciprocal method"
+          },
+          {
+            "QuestionID": "P1-DD-050",
+            "Section": "D",
+            "CorrectChoice": "B",
+            "CognitiveLevel": "Evaluate",
+            "Difficulty": "Moderate",
+            "Topic": "D.050 service department reciprocal method"
+          },
+          {
+            "QuestionID": "P1-DD-051",
+            "Section": "D",
+            "CorrectChoice": "A",
+            "CognitiveLevel": "Evaluate",
+            "Difficulty": "Difficult",
+            "Topic": "D.051 step method service department allocation hierarchy"
+          },
+          {
+            "QuestionID": "P1-DD-063",
+            "Section": "D",
+            "CorrectChoice": "C",
+            "CognitiveLevel": "Analyze",
+            "Difficulty": "Difficult",
+            "Topic": "D.063 cvp analysis multiple products"
+          }
+        ],
+        "dl008_count": 7,
+        "stem_length_candidates": [
+          {
+            "QuestionID": "P1-DD-002",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 507,
+            "Topic": "D.002 normal costing predetermined overhead rate calculation"
+          },
+          {
+            "QuestionID": "P1-DD-004",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 548,
+            "Topic": "D.004 overhead disposition proration material underapplied"
+          },
+          {
+            "QuestionID": "P1-DD-005",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 201,
+            "Topic": "D.005 normal costing overhead application"
+          },
+          {
+            "QuestionID": "P1-DD-022",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 652,
+            "Topic": "D.022 ABC cost driver selection correlation analysis"
+          },
+          {
+            "QuestionID": "P1-DD-024",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 225,
+            "Topic": "D.024 ABC cost assignment from activity rate"
+          },
+          {
+            "QuestionID": "P1-DD-034",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 219,
+            "Topic": "D.034 degree of operating leverage"
+          },
+          {
+            "QuestionID": "P1-DD-037",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 354,
+            "Topic": "D.037 kaizen costing periodic compound reduction"
+          },
+          {
+            "QuestionID": "P1-DD-040",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 416,
+            "Topic": "D.040 kaizen costing multi-component reduction"
+          },
+          {
+            "QuestionID": "P1-DD-042",
+            "Section": "D",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate",
+            "StemLength": 371,
+            "Topic": "D.042 cost estimation high-low method variable rate"
+          },
+          {
+            "QuestionID": "P1-DD-044",
+            "Section": "D",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Moderate",
+            "StemLength": 242,
+            "Topic": "D.044 cost estimation high-low prediction"
+          },
+          {
+            "QuestionID": "P1-DD-047",
+            "Section": "D",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 294,
+            "Topic": "D.047 service department reciprocal method computation"
+          },
+          {
+            "QuestionID": "P1-DD-049",
+            "Section": "D",
+            "CognitiveLevel": "Understand",
+            "Difficulty": "Difficult",
+            "StemLength": 686,
+            "Topic": "D.049 service department method comparison reciprocal vs direct"
+          },
+          {
+            "QuestionID": "P1-DD-052",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 763,
+            "Topic": "D.052 contribution margin income statement CVP projection"
+          },
+          {
+            "QuestionID": "P1-DD-053",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate-Easy",
+            "StemLength": 228,
+            "Topic": "D.053 contribution margin income statement format"
+          },
+          {
+            "QuestionID": "P1-DD-054",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 299,
+            "Topic": "D.054 contribution margin income statement format"
+          },
+          {
+            "QuestionID": "P1-DD-056",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 245,
+            "Topic": "D.056 ABC multi-pool cost assignment"
+          },
+          {
+            "QuestionID": "P1-DD-057",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 237,
+            "Topic": "D.057 multiple cost driver activity hierarchy"
+          },
+          {
+            "QuestionID": "P1-DD-058",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 232,
+            "Topic": "D.058 multiple cost driver activity hierarchy"
+          },
+          {
+            "QuestionID": "P1-DD-059",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 209,
+            "Topic": "D.059 fixed overhead volume variance calculation"
+          },
+          {
+            "QuestionID": "P1-DD-060",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 252,
+            "Topic": "D.060 variable overhead efficiency variance calculation"
+          },
+          {
+            "QuestionID": "P1-DD-062",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 629,
+            "Topic": "D.062 multi-product break-even weighted average CM"
+          },
+          {
+            "QuestionID": "P1-DD-064",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Difficult",
+            "StemLength": 352,
+            "Topic": "D.064 multi-product target profit volume"
+          },
+          {
+            "QuestionID": "P1-DD-067",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 222,
+            "Topic": "D.067 direct materials quantity variance calculation"
+          },
+          {
+            "QuestionID": "P1-DD-069",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 220,
+            "Topic": "D.069 direct labor efficiency variance calculation"
+          },
+          {
+            "QuestionID": "P1-DD-070",
+            "Section": "D",
+            "CognitiveLevel": "Apply",
+            "Difficulty": "Moderate",
+            "StemLength": 215,
+            "Topic": "D.070 variable overhead spending variance calculation"
+          }
+        ],
+        "stem_candidate_count": 25
+      }
+    },
+    "pack_e_corrected": {
+      "Section_C": {
+        "count": 100,
+        "bloom_distribution": {
+          "Remember": 0,
+          "Understand": 68,
+          "Apply": 32,
+          "Analyze": 0,
+          "Evaluate": 0
+        },
+        "difficulty_distribution": {
+          "Easy": 23,
+          "Moderate-Easy": 27,
+          "Moderate": 43,
+          "Difficult": 7,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [],
+        "dl008_count": 0,
+        "stem_length_candidates": [],
+        "stem_candidate_count": 0
+      },
+      "Section_D": {
+        "count": 75,
+        "bloom_distribution": {
+          "Remember": 0,
+          "Understand": 61,
+          "Apply": 14,
+          "Analyze": 0,
+          "Evaluate": 0
+        },
+        "difficulty_distribution": {
+          "Easy": 13,
+          "Moderate-Easy": 28,
+          "Moderate": 32,
+          "Difficult": 2,
+          "Very Difficult": 0
+        },
+        "dl008_analyze_evaluate": [],
+        "dl008_count": 0,
+        "stem_length_candidates": [],
+        "stem_candidate_count": 0
+      }
+    }
+  },
+  "cross_pack_totals": {
+    "bloom": {
+      "Remember": 28,
+      "Understand": 323,
+      "Apply": 476,
+      "Analyze": 41,
+      "Evaluate": 7
+    },
+    "difficulty": {
+      "Easy": 164,
+      "Moderate-Easy": 163,
+      "Moderate": 477,
+      "Difficult": 71,
+      "Very Difficult": 0
+    },
+    "dl008_analyze_evaluate": [
+      {
+        "QuestionID": "P1-CC-071",
+        "Section": "C",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Moderate",
+        "Topic": "C.071 gross margin variance analysis"
+      },
+      {
+        "QuestionID": "P1-CD-015",
+        "Section": "C",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate",
+        "Topic": "C.015 sales mix variance concept"
+      },
+      {
+        "QuestionID": "P1-CD-017",
+        "Section": "C",
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate",
+        "Topic": "C.017 sales mix variance concept"
+      },
+      {
+        "QuestionID": "P1-CD-043",
+        "Section": "C",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate",
+        "Topic": "C.043 customer profitability analysis"
+      },
+      {
+        "QuestionID": "P1-CD-057",
+        "Section": "C",
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "Topic": "C.057 common size financial statement analysis"
+      },
+      {
+        "QuestionID": "P1-CD-061",
+        "Section": "C",
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "Topic": "C.061 common size financial statement analysis"
+      },
+      {
+        "QuestionID": "P1-CD-064",
+        "Section": "C",
+        "CorrectChoice": "D",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate-Easy",
+        "Topic": "C.064 variance investigation cost benefit"
+      },
+      {
+        "QuestionID": "P1-CD-067",
+        "Section": "C",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "Topic": "C.067 variance investigation cost benefit"
+      },
+      {
+        "QuestionID": "P1-CD-071",
+        "Section": "C",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate",
+        "Topic": "C.071 total quality management philosophy"
+      },
+      {
+        "QuestionID": "P1-CD-074",
+        "Section": "C",
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate",
+        "Topic": "C.074 total quality management philosophy"
+      },
+      {
+        "QuestionID": "P1-CD-092",
+        "Section": "C",
+        "CorrectChoice": "D",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "Topic": "C.092 value based management EVA linkage"
+      },
+      {
+        "QuestionID": "P1-DD-003",
+        "Section": "D",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate",
+        "Topic": "D.003 normal costing overhead application"
+      },
+      {
+        "QuestionID": "P1-DD-021",
+        "Section": "D",
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Moderate",
+        "Topic": "D.021 cost driver selection abc pool"
+      },
+      {
+        "QuestionID": "P1-DD-043",
+        "Section": "D",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate",
+        "Topic": "D.043 cost behavior mixed cost analysis"
+      },
+      {
+        "QuestionID": "P1-DD-046",
+        "Section": "D",
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Moderate-Easy",
+        "Topic": "D.046 service department reciprocal method"
+      },
+      {
+        "QuestionID": "P1-DD-050",
+        "Section": "D",
+        "CorrectChoice": "B",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Moderate",
+        "Topic": "D.050 service department reciprocal method"
+      },
+      {
+        "QuestionID": "P1-DD-051",
+        "Section": "D",
+        "CorrectChoice": "A",
+        "CognitiveLevel": "Evaluate",
+        "Difficulty": "Difficult",
+        "Topic": "D.051 step method service department allocation hierarchy"
+      },
+      {
+        "QuestionID": "P1-DD-063",
+        "Section": "D",
+        "CorrectChoice": "C",
+        "CognitiveLevel": "Analyze",
+        "Difficulty": "Difficult",
+        "Topic": "D.063 cvp analysis multiple products"
+      }
+    ]
+  },
+  "stem_length_candidates": [
+    {
+      "QuestionID": "P1-C-016",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 283,
+      "Topic": "C.016 direct material price variance 1"
+    },
+    {
+      "QuestionID": "P1-C-017",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 281,
+      "Topic": "C.017 direct material quantity variance 2"
+    },
+    {
+      "QuestionID": "P1-C-018",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 246,
+      "Topic": "C.018 direct labor rate variance 3"
+    },
+    {
+      "QuestionID": "P1-C-019",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 248,
+      "Topic": "C.019 direct labor efficiency variance 4"
+    },
+    {
+      "QuestionID": "P1-C-020",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 267,
+      "Topic": "C.020 flexible budget variance spending 5"
+    },
+    {
+      "QuestionID": "P1-C-021",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 228,
+      "Topic": "C.021 ROI investment center measure 6"
+    },
+    {
+      "QuestionID": "P1-C-022",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 219,
+      "Topic": "C.022 residual income investment charge 7"
+    },
+    {
+      "QuestionID": "P1-C-023",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 262,
+      "Topic": "C.023 sales volume versus flexible budget variance 8"
+    },
+    {
+      "QuestionID": "P1-C-028",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 252,
+      "Topic": "C.028 direct material price variance 13"
+    },
+    {
+      "QuestionID": "P1-C-034",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 237,
+      "Topic": "C.034 residual income investment charge 19"
+    },
+    {
+      "QuestionID": "P1-C-035",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 265,
+      "Topic": "C.035 sales volume versus flexible budget variance 20"
+    },
+    {
+      "QuestionID": "P1-C-037",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 246,
+      "Topic": "C.037 transfer price at market price with excess capacity"
+    },
+    {
+      "QuestionID": "P1-C-040",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 221,
+      "Topic": "C.040 direct material price variance 25"
+    },
+    {
+      "QuestionID": "P1-C-041",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 225,
+      "Topic": "C.041 direct material quantity variance 26"
+    },
+    {
+      "QuestionID": "P1-C-042",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 246,
+      "Topic": "C.042 direct labor rate variance 27"
+    },
+    {
+      "QuestionID": "P1-C-043",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 239,
+      "Topic": "C.043 direct labor efficiency variance 28"
+    },
+    {
+      "QuestionID": "P1-C-044",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 267,
+      "Topic": "C.044 flexible budget variance spending 29"
+    },
+    {
+      "QuestionID": "P1-C-048",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 225,
+      "Topic": "C.048 lag vs lead indicator distinction"
+    },
+    {
+      "QuestionID": "P1-C-061",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 209,
+      "Topic": "C.061 dual transfer pricing rationale"
+    },
+    {
+      "QuestionID": "P1-C-084",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate",
+      "StemLength": 260,
+      "Topic": "C.084 strategy map cause-and-effect logic"
+    },
+    {
+      "QuestionID": "P1-C-085",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 204,
+      "Topic": "C.085 goal congruence in transfer pricing"
+    },
+    {
+      "QuestionID": "P1-C-097",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 218,
+      "Topic": "C.097 transfer price with no excess capacity"
+    },
+    {
+      "QuestionID": "P1-D-004",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 207,
+      "Topic": "D.004 overhead overapplied underapplied calculation"
+    },
+    {
+      "QuestionID": "P1-D-028",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 245,
+      "Topic": "D.028 ABC facility-level cost allocation"
+    },
+    {
+      "QuestionID": "P1-D-038",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 206,
+      "Topic": "D.038 batch-level activity classification"
+    },
+    {
+      "QuestionID": "P1-D-048",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 245,
+      "Topic": "D.048 ABC product-level cost allocation"
+    },
+    {
+      "QuestionID": "P1-D-068",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 371,
+      "Topic": "D.068 ABC versus traditional overhead cost comparison"
+    },
+    {
+      "QuestionID": "P1B-C-101",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 245,
+      "Topic": "B-C.101 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-102",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 235,
+      "Topic": "B-C.102 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-103",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 215,
+      "Topic": "B-C.103 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-104",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 221,
+      "Topic": "B-C.104 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-105",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 268,
+      "Topic": "B-C.105 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-106",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 263,
+      "Topic": "B-C.106 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-107",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 325,
+      "Topic": "B-C.107 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-109",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 419,
+      "Topic": "B-C.109 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-110",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 363,
+      "Topic": "B-C.110 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-111",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 254,
+      "Topic": "B-C.111 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-112",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 295,
+      "Topic": "B-C.112 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-113",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 203,
+      "Topic": "B-C.113 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-114",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 252,
+      "Topic": "B-C.114 variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-120",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 259,
+      "Topic": "B-C.120 sales variance analysis"
+    },
+    {
+      "QuestionID": "P1B-C-126",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Easy",
+      "StemLength": 233,
+      "Topic": "B-C.126 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-127",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Easy",
+      "StemLength": 262,
+      "Topic": "B-C.127 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-128",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Easy",
+      "StemLength": 281,
+      "Topic": "B-C.128 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-129",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Easy",
+      "StemLength": 293,
+      "Topic": "B-C.129 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-130",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Easy",
+      "StemLength": 307,
+      "Topic": "B-C.130 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-131",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 238,
+      "Topic": "B-C.131 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-132",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 265,
+      "Topic": "B-C.132 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-133",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 260,
+      "Topic": "B-C.133 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-134",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 266,
+      "Topic": "B-C.134 responsibility centers"
+    },
+    {
+      "QuestionID": "P1B-C-140",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 268,
+      "Topic": "B-C.140 ROI and residual income"
+    },
+    {
+      "QuestionID": "P1B-C-144",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 212,
+      "Topic": "B-C.144 ROI and residual income"
+    },
+    {
+      "QuestionID": "P1B-C-145",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 213,
+      "Topic": "B-C.145 ROI and residual income"
+    },
+    {
+      "QuestionID": "P1B-C-146",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 262,
+      "Topic": "B-C.146 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-147",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 273,
+      "Topic": "B-C.147 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-148",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 238,
+      "Topic": "B-C.148 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-149",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 221,
+      "Topic": "B-C.149 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-150",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 227,
+      "Topic": "B-C.150 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-151",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 239,
+      "Topic": "B-C.151 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-152",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 231,
+      "Topic": "B-C.152 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-154",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 288,
+      "Topic": "B-C.154 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-155",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 205,
+      "Topic": "B-C.155 transfer pricing"
+    },
+    {
+      "QuestionID": "P1B-C-164",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Easy",
+      "StemLength": 204,
+      "Topic": "B-C.164 benchmarking"
+    },
+    {
+      "QuestionID": "P1B-C-168",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 339,
+      "Topic": "B-C.168 segment performance evaluation"
+    },
+    {
+      "QuestionID": "P1B-C-169",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 286,
+      "Topic": "B-C.169 segment performance evaluation"
+    },
+    {
+      "QuestionID": "P1B-C-171",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 407,
+      "Topic": "B-C.171 product profitability analysis"
+    },
+    {
+      "QuestionID": "P1B-C-172",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 247,
+      "Topic": "B-C.172 product profitability analysis"
+    },
+    {
+      "QuestionID": "P1B-C-173",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 376,
+      "Topic": "B-C.173 customer profitability analysis"
+    },
+    {
+      "QuestionID": "P1B-C-176",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 232,
+      "Topic": "B-C.176 product profitability analysis"
+    },
+    {
+      "QuestionID": "P1B-C-177",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 216,
+      "Topic": "B-C.177 customer profitability analysis"
+    },
+    {
+      "QuestionID": "P1B-C-178",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 233,
+      "Topic": "B-C.178 product profitability analysis"
+    },
+    {
+      "QuestionID": "P1B-C-179",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 320,
+      "Topic": "B-C.179 product profitability analysis"
+    },
+    {
+      "QuestionID": "P1B-C-180",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 282,
+      "Topic": "B-C.180 variance investigation"
+    },
+    {
+      "QuestionID": "P1B-C-181",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 357,
+      "Topic": "B-C.181 variance investigation"
+    },
+    {
+      "QuestionID": "P1B-C-183",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 209,
+      "Topic": "B-C.183 variance investigation"
+    },
+    {
+      "QuestionID": "P1B-C-184",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 300,
+      "Topic": "B-C.184 variance investigation"
+    },
+    {
+      "QuestionID": "P1B-C-188",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 264,
+      "Topic": "B-C.188 standard costing"
+    },
+    {
+      "QuestionID": "P1B-C-190",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 347,
+      "Topic": "B-C.190 standard costing"
+    },
+    {
+      "QuestionID": "P1B-C-194",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 205,
+      "Topic": "B-C.194 standard costing"
+    },
+    {
+      "QuestionID": "P1B-C-196",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 212,
+      "Topic": "B-C.196 standard costing vs actual costing"
+    },
+    {
+      "QuestionID": "P1B-D-080",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 307,
+      "Topic": "B-D.080 cost behavior"
+    },
+    {
+      "QuestionID": "P1B-D-081",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 309,
+      "Topic": "B-D.081 cost behavior"
+    },
+    {
+      "QuestionID": "P1B-D-089",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 249,
+      "Topic": "B-D.089 job order costing"
+    },
+    {
+      "QuestionID": "P1B-D-090",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 240,
+      "Topic": "B-D.090 job order costing"
+    },
+    {
+      "QuestionID": "P1B-D-094",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 223,
+      "Topic": "B-D.094 process costing"
+    },
+    {
+      "QuestionID": "P1B-D-095",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 250,
+      "Topic": "B-D.095 process costing"
+    },
+    {
+      "QuestionID": "P1B-D-097",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 272,
+      "Topic": "B-D.097 process costing"
+    },
+    {
+      "QuestionID": "P1B-D-098",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 261,
+      "Topic": "B-D.098 process costing"
+    },
+    {
+      "QuestionID": "P1B-D-099",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 340,
+      "Topic": "B-D.099 process costing"
+    },
+    {
+      "QuestionID": "P1B-D-100",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 229,
+      "Topic": "B-D.100 process costing"
+    },
+    {
+      "QuestionID": "P1B-D-102",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 246,
+      "Topic": "B-D.102 activity-based costing"
+    },
+    {
+      "QuestionID": "P1B-D-103",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 261,
+      "Topic": "B-D.103 activity-based costing"
+    },
+    {
+      "QuestionID": "P1B-D-104",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 296,
+      "Topic": "B-D.104 activity-based costing"
+    },
+    {
+      "QuestionID": "P1B-D-105",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 203,
+      "Topic": "B-D.105 activity-based costing"
+    },
+    {
+      "QuestionID": "P1B-D-108",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 231,
+      "Topic": "B-D.108 activity-based costing"
+    },
+    {
+      "QuestionID": "P1B-D-109",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 247,
+      "Topic": "B-D.109 joint product costing"
+    },
+    {
+      "QuestionID": "P1B-D-110",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 213,
+      "Topic": "B-D.110 joint product costing"
+    },
+    {
+      "QuestionID": "P1B-D-111",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 296,
+      "Topic": "B-D.111 joint product costing"
+    },
+    {
+      "QuestionID": "P1B-D-112",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 269,
+      "Topic": "B-D.112 joint product costing"
+    },
+    {
+      "QuestionID": "P1B-D-113",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 217,
+      "Topic": "B-D.113 joint product costing"
+    },
+    {
+      "QuestionID": "P1B-D-114",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 221,
+      "Topic": "B-D.114 byproduct costing"
+    },
+    {
+      "QuestionID": "P1B-D-115",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 226,
+      "Topic": "B-D.115 cost allocation"
+    },
+    {
+      "QuestionID": "P1B-D-117",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 267,
+      "Topic": "B-D.117 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-118",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 330,
+      "Topic": "B-D.118 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-119",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 283,
+      "Topic": "B-D.119 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-120",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 283,
+      "Topic": "B-D.120 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-122",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 221,
+      "Topic": "B-D.122 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-123",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 264,
+      "Topic": "B-D.123 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-124",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 240,
+      "Topic": "B-D.124 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-125",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 228,
+      "Topic": "B-D.125 overhead allocation"
+    },
+    {
+      "QuestionID": "P1B-D-126",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 275,
+      "Topic": "B-D.126 variable vs absorption costing"
+    },
+    {
+      "QuestionID": "P1B-D-127",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 286,
+      "Topic": "B-D.127 variable vs absorption costing"
+    },
+    {
+      "QuestionID": "P1B-D-130",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 278,
+      "Topic": "B-D.130 variable vs absorption costing"
+    },
+    {
+      "QuestionID": "P1B-D-138",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 207,
+      "Topic": "B-D.138 CVP analysis"
+    },
+    {
+      "QuestionID": "P1B-D-139",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 208,
+      "Topic": "B-D.139 CVP analysis"
+    },
+    {
+      "QuestionID": "P1B-D-141",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 330,
+      "Topic": "B-D.141 relevant costing"
+    },
+    {
+      "QuestionID": "P1B-D-142",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 236,
+      "Topic": "B-D.142 relevant costing"
+    },
+    {
+      "QuestionID": "P1B-D-143",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 253,
+      "Topic": "B-D.143 relevant costing"
+    },
+    {
+      "QuestionID": "P1B-D-145",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 212,
+      "Topic": "B-D.145 relevant costing"
+    },
+    {
+      "QuestionID": "P1B-D-147",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 240,
+      "Topic": "B-D.147 relevant costing"
+    },
+    {
+      "QuestionID": "P1B-D-148",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 221,
+      "Topic": "B-D.148 mfg vs non-mfg costs"
+    },
+    {
+      "QuestionID": "P1-CC-053",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 223,
+      "Topic": "C.052 benchmarking"
+    },
+    {
+      "QuestionID": "P1-CC-054",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 210,
+      "Topic": "C.054 sales price variance"
+    },
+    {
+      "QuestionID": "P1-CC-055",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 212,
+      "Topic": "C.055 sales price variance"
+    },
+    {
+      "QuestionID": "P1-CC-063",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 256,
+      "Topic": "C.063 fixed overhead volume variance calculation"
+    },
+    {
+      "QuestionID": "P1-DC-014",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 216,
+      "Topic": "D.014 support department cost allocation machine hours"
+    },
+    {
+      "QuestionID": "P1-DC-021",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 223,
+      "Topic": "D.021 variable costing vs absorption costing"
+    },
+    {
+      "QuestionID": "P1-DC-022",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 251,
+      "Topic": "D.022 variable costing vs absorption costing"
+    },
+    {
+      "QuestionID": "P1-DC-024",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 251,
+      "Topic": "D.024 variable costing vs absorption costing"
+    },
+    {
+      "QuestionID": "P1-DC-031",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 202,
+      "Topic": "D.031 target costing approach"
+    },
+    {
+      "QuestionID": "P1-DC-032",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 203,
+      "Topic": "D.032 target costing approach"
+    },
+    {
+      "QuestionID": "P1-DC-033",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 203,
+      "Topic": "D.033 target costing approach"
+    },
+    {
+      "QuestionID": "P1-DC-034",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 201,
+      "Topic": "D.034 target costing approach"
+    },
+    {
+      "QuestionID": "P1-DC-056",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 201,
+      "Topic": "D.056 cost allocation direct method"
+    },
+    {
+      "QuestionID": "P1-DC-057",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 201,
+      "Topic": "D.057 cost allocation direct method"
+    },
+    {
+      "QuestionID": "P1-DC-058",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 202,
+      "Topic": "D.058 cost allocation direct method"
+    },
+    {
+      "QuestionID": "P1-DC-059",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 207,
+      "Topic": "D.059 cost allocation direct method"
+    },
+    {
+      "QuestionID": "P1-DC-060",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 202,
+      "Topic": "D.060 cost allocation direct method"
+    },
+    {
+      "QuestionID": "P1-DC-066",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 247,
+      "Topic": "D.066 contribution margin break even"
+    },
+    {
+      "QuestionID": "P1-DC-067",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 222,
+      "Topic": "D.067 contribution margin break even"
+    },
+    {
+      "QuestionID": "P1-DC-069",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 230,
+      "Topic": "D.069 contribution margin break even"
+    },
+    {
+      "QuestionID": "P1-CD-016",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 473,
+      "Topic": "C.016 sales mix variance two-product calculation"
+    },
+    {
+      "QuestionID": "P1-CD-018",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 566,
+      "Topic": "C.018 sales mix variance three-product analysis"
+    },
+    {
+      "QuestionID": "P1-CD-019",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 262,
+      "Topic": "C.019 sales mix variance calculation"
+    },
+    {
+      "QuestionID": "P1-CD-020",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 237,
+      "Topic": "C.020 sales mix variance calculation"
+    },
+    {
+      "QuestionID": "P1-CD-021",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 267,
+      "Topic": "C.021 sales mix variance calculation"
+    },
+    {
+      "QuestionID": "P1-CD-029",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 211,
+      "Topic": "C.029 dual rate transfer pricing"
+    },
+    {
+      "QuestionID": "P1-CD-030",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 211,
+      "Topic": "C.030 dual rate transfer pricing"
+    },
+    {
+      "QuestionID": "P1-CD-031",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 212,
+      "Topic": "C.031 dual rate transfer pricing"
+    },
+    {
+      "QuestionID": "P1-CD-032",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Easy",
+      "StemLength": 213,
+      "Topic": "C.032 dual rate transfer pricing"
+    },
+    {
+      "QuestionID": "P1-CD-033",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 211,
+      "Topic": "C.033 dual rate transfer pricing"
+    },
+    {
+      "QuestionID": "P1-CD-034",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 211,
+      "Topic": "C.034 dual rate transfer pricing"
+    },
+    {
+      "QuestionID": "P1-CD-035",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 211,
+      "Topic": "C.035 dual rate transfer pricing"
+    },
+    {
+      "QuestionID": "P1-CD-044",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 735,
+      "Topic": "C.044 customer profitability analysis multi-customer"
+    },
+    {
+      "QuestionID": "P1-CD-045",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 208,
+      "Topic": "C.045 customer profitability analysis"
+    },
+    {
+      "QuestionID": "P1-CD-046",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 208,
+      "Topic": "C.046 customer profitability analysis"
+    },
+    {
+      "QuestionID": "P1-CD-048",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 734,
+      "Topic": "C.048 customer profitability ratio ranking"
+    },
+    {
+      "QuestionID": "P1-CD-049",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Easy",
+      "StemLength": 208,
+      "Topic": "C.049 customer profitability analysis"
+    },
+    {
+      "QuestionID": "P1-CD-051",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 563,
+      "Topic": "C.051 performance measurement goal congruence ROI conflict"
+    },
+    {
+      "QuestionID": "P1-CD-058",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 512,
+      "Topic": "C.058 common-size analysis margin compression"
+    },
+    {
+      "QuestionID": "P1-CD-062",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate",
+      "StemLength": 581,
+      "Topic": "C.062 common-size multi-period trend analysis"
+    },
+    {
+      "QuestionID": "P1-CD-065",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 881,
+      "Topic": "C.065 variance investigation dual-threshold cost-benefit"
+    },
+    {
+      "QuestionID": "P1-CD-068",
+      "Section": "C",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 756,
+      "Topic": "C.068 variance investigation multi-variance dual-threshold"
+    },
+    {
+      "QuestionID": "P1-CD-072",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 520,
+      "Topic": "C.072 cost of quality profile quality management approach"
+    },
+    {
+      "QuestionID": "P1-CD-075",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate",
+      "StemLength": 600,
+      "Topic": "C.075 cost of quality maturity assessment"
+    },
+    {
+      "QuestionID": "P1-CD-090",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate",
+      "StemLength": 315,
+      "Topic": "C.090 value based management EVA calculation"
+    },
+    {
+      "QuestionID": "P1-CD-093",
+      "Section": "C",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 699,
+      "Topic": "C.093 EVA NOPAT components and adjustments"
+    },
+    {
+      "QuestionID": "P1-DD-002",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 507,
+      "Topic": "D.002 normal costing predetermined overhead rate calculation"
+    },
+    {
+      "QuestionID": "P1-DD-004",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 548,
+      "Topic": "D.004 overhead disposition proration material underapplied"
+    },
+    {
+      "QuestionID": "P1-DD-005",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 201,
+      "Topic": "D.005 normal costing overhead application"
+    },
+    {
+      "QuestionID": "P1-DD-022",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 652,
+      "Topic": "D.022 ABC cost driver selection correlation analysis"
+    },
+    {
+      "QuestionID": "P1-DD-024",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 225,
+      "Topic": "D.024 ABC cost assignment from activity rate"
+    },
+    {
+      "QuestionID": "P1-DD-034",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 219,
+      "Topic": "D.034 degree of operating leverage"
+    },
+    {
+      "QuestionID": "P1-DD-037",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 354,
+      "Topic": "D.037 kaizen costing periodic compound reduction"
+    },
+    {
+      "QuestionID": "P1-DD-040",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 416,
+      "Topic": "D.040 kaizen costing multi-component reduction"
+    },
+    {
+      "QuestionID": "P1-DD-042",
+      "Section": "D",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate",
+      "StemLength": 371,
+      "Topic": "D.042 cost estimation high-low method variable rate"
+    },
+    {
+      "QuestionID": "P1-DD-044",
+      "Section": "D",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Moderate",
+      "StemLength": 242,
+      "Topic": "D.044 cost estimation high-low prediction"
+    },
+    {
+      "QuestionID": "P1-DD-047",
+      "Section": "D",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 294,
+      "Topic": "D.047 service department reciprocal method computation"
+    },
+    {
+      "QuestionID": "P1-DD-049",
+      "Section": "D",
+      "CognitiveLevel": "Understand",
+      "Difficulty": "Difficult",
+      "StemLength": 686,
+      "Topic": "D.049 service department method comparison reciprocal vs direct"
+    },
+    {
+      "QuestionID": "P1-DD-052",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 763,
+      "Topic": "D.052 contribution margin income statement CVP projection"
+    },
+    {
+      "QuestionID": "P1-DD-053",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate-Easy",
+      "StemLength": 228,
+      "Topic": "D.053 contribution margin income statement format"
+    },
+    {
+      "QuestionID": "P1-DD-054",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 299,
+      "Topic": "D.054 contribution margin income statement format"
+    },
+    {
+      "QuestionID": "P1-DD-056",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 245,
+      "Topic": "D.056 ABC multi-pool cost assignment"
+    },
+    {
+      "QuestionID": "P1-DD-057",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 237,
+      "Topic": "D.057 multiple cost driver activity hierarchy"
+    },
+    {
+      "QuestionID": "P1-DD-058",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 232,
+      "Topic": "D.058 multiple cost driver activity hierarchy"
+    },
+    {
+      "QuestionID": "P1-DD-059",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 209,
+      "Topic": "D.059 fixed overhead volume variance calculation"
+    },
+    {
+      "QuestionID": "P1-DD-060",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 252,
+      "Topic": "D.060 variable overhead efficiency variance calculation"
+    },
+    {
+      "QuestionID": "P1-DD-062",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 629,
+      "Topic": "D.062 multi-product break-even weighted average CM"
+    },
+    {
+      "QuestionID": "P1-DD-064",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Difficult",
+      "StemLength": 352,
+      "Topic": "D.064 multi-product target profit volume"
+    },
+    {
+      "QuestionID": "P1-DD-067",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 222,
+      "Topic": "D.067 direct materials quantity variance calculation"
+    },
+    {
+      "QuestionID": "P1-DD-069",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 220,
+      "Topic": "D.069 direct labor efficiency variance calculation"
+    },
+    {
+      "QuestionID": "P1-DD-070",
+      "Section": "D",
+      "CognitiveLevel": "Apply",
+      "Difficulty": "Moderate",
+      "StemLength": 215,
+      "Topic": "D.070 variable overhead spending variance calculation"
+    }
+  ],
+  "summary": {
+    "total_items": 875,
+    "bloom_percentages": {
+      "Remember": {
+        "count": 28,
+        "pct": "3.2%"
+      },
+      "Understand": {
+        "count": 323,
+        "pct": "36.9%"
+      },
+      "Apply": {
+        "count": 476,
+        "pct": "54.4%"
+      },
+      "Analyze": {
+        "count": 41,
+        "pct": "4.7%"
+      },
+      "Evaluate": {
+        "count": 7,
+        "pct": "0.8%"
+      }
+    },
+    "difficulty_percentages": {
+      "Easy": {
+        "count": 164,
+        "pct": "18.7%"
+      },
+      "Moderate-Easy": {
+        "count": 163,
+        "pct": "18.6%"
+      },
+      "Moderate": {
+        "count": 477,
+        "pct": "54.5%"
+      },
+      "Difficult": {
+        "count": 71,
+        "pct": "8.1%"
+      },
+      "Very Difficult": {
+        "count": 0,
+        "pct": "0.0%"
+      }
+    },
+    "total_dl008_analyze_evaluate": 18,
+    "total_stem_candidates": 192,
+    "caqs_targets": {
+      "Remember": "5%",
+      "Understand": "15%",
+      "Apply": "40%",
+      "Analyze": "25%",
+      "Evaluate": "15%"
+    },
+    "caqs_difficulty_targets": {
+      "Easy": "15%",
+      "Moderate-Easy": "20%",
+      "Moderate": "30%",
+      "Difficult": "25%",
+      "Very Difficult": "10%"
+    },
+    "per_section_bloom": {
+      "pack_a_corrected/Section_C": {
+        "count": 100,
+        "bloom": {
+          "Remember": 1,
+          "Understand": 34,
+          "Apply": 65
+        }
+      },
+      "pack_a_corrected/Section_D": {
+        "count": 75,
+        "bloom": {
+          "Understand": 23,
+          "Apply": 52
+        }
+      },
+      "pack_b_corrected/Section_C": {
+        "count": 100,
+        "bloom": {
+          "Remember": 6,
+          "Understand": 17,
+          "Apply": 72,
+          "Analyze": 4,
+          "Evaluate": 1
+        }
+      },
+      "pack_b_corrected/Section_D": {
+        "count": 75,
+        "bloom": {
+          "Remember": 2,
+          "Understand": 1,
+          "Apply": 71,
+          "Analyze": 1
+        }
+      },
+      "pack_c_corrected/Section_C": {
+        "count": 100,
+        "bloom": {
+          "Remember": 19,
+          "Understand": 34,
+          "Apply": 43,
+          "Analyze": 3,
+          "Evaluate": 1
+        }
+      },
+      "pack_c_corrected/Section_D": {
+        "count": 75,
+        "bloom": {
+          "Understand": 35,
+          "Apply": 29,
+          "Analyze": 11
+        }
+      },
+      "pack_d_corrected/Section_C": {
+        "count": 100,
+        "bloom": {
+          "Understand": 31,
+          "Apply": 56,
+          "Analyze": 13
+        }
+      },
+      "pack_d_corrected/Section_D": {
+        "count": 75,
+        "bloom": {
+          "Understand": 19,
+          "Apply": 42,
+          "Analyze": 9,
+          "Evaluate": 5
+        }
+      },
+      "pack_e_corrected/Section_C": {
+        "count": 100,
+        "bloom": {
+          "Understand": 68,
+          "Apply": 32
+        }
+      },
+      "pack_e_corrected/Section_D": {
+        "count": 75,
+        "bloom": {
+          "Understand": 61,
+          "Apply": 14
+        }
+      }
+    }
+  }
+}

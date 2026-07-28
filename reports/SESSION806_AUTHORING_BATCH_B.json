@@ -1,0 +1,230 @@
+{
+  "title": "SESSION806_AUTHORING_BATCH_B",
+  "session": "806",
+  "generated": "2026-07-26",
+  "batch": "B",
+  "itemsAuthored": 4,
+  "agent": "E",
+  "qualityGateValidation": {
+    "gate1_draft": {
+      "status": "COMPLETE",
+      "note": "All 4 items have stem, 4 choices, CorrectChoice, EC, EW[A-D], metadata"
+    },
+    "gate2_technical": {
+      "status": "PENDING",
+      "note": "Requires DL-008/DL-026/DL-013/DL-010/field completeness scan"
+    },
+    "gate3_blueprint": {
+      "status": "PENDING",
+      "note": "Requires topic/LO/CL/difficulty accuracy verification against CSO"
+    },
+    "gate4_qa": {
+      "status": "PENDING",
+      "note": "Requires stem clarity, distractor plausibility, EC quality, EW specificity review"
+    }
+  },
+  "ewCompliance": {
+    "dl008": "VERIFIED — all 4 items have empty EW[CorrectChoice] (field at CC index is '')",
+    "dl026": "VERIFIED — all non-CC EW fields have content >= 100 chars",
+    "dl013": "VERIFIED — no template boilerplate detected in any EC or EW field",
+    "dl010": "PENDING — cross-contamination check requires human review"
+  },
+  "items": [
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R16 risk assessment — COSO principles and process",
+      "MicroTopic": "risk assessment coso principles process",
+      "UniqueConceptKey": "E-R16-risk-assessment-coso-principles",
+      "LOSTag": "E.1.d Risk Assessment — COSO risk assessment principles",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Under the COSO Internal Control — Integrated Framework, the risk assessment component requires management to consider the potential for fraud when assessing risks to the achievement of objectives. Which of the following best describes the specific types of fraud that COSO requires management to assess?",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "COSO Principle 8 specifically requires management to consider the potential for fraud in assessing risks to the achievement of objectives. The framework distinguishes between two categories of fraud relevant to internal control: fraudulent financial reporting (intentional misstatements or omissions in financial statements to deceive users) and misappropriation of assets (theft of an entity's assets, such as skimming cash receipts, stealing inventory, or causing the entity to pay for goods or services not received). Both categories must be considered in the risk assessment process. Fraudulent financial reporting is relevant because it directly undermines the reliability of financial reporting — one of the three COSO objective categories. Misappropriation of assets is relevant because it threatens the safeguarding of assets, which is an operations objective under COSO. The risk assessment should also consider factors that create fraud risk, such as the fraud triangle elements (pressure, opportunity, rationalization), management override of controls, related-party transactions, significant unusual transactions, and the susceptibility of assets to misappropriation. The distinction between the two categories matters because they have different characteristics: fraudulent financial reporting typically involves management (or override of controls by management) and is intended to deceive external users, while misappropriation of assets is more commonly committed by employees and often involves circumvention or override of controls at the operational level.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Provides new coverage for E.1.d Risk Assessment.",
+      "QuestionID": "P1-E-R16",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review COSO Principle 8 and the two categories of fraud risk: fraudulent financial reporting and misappropriation of assets.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Management fraud and employee fraud, classified by the organizational level of the perpetrator",
+        "B": "Internal fraud committed by employees and external fraud committed by customers, vendors, or other third parties",
+        "C": "Fraudulent financial reporting and misappropriation of assets, reflecting the nature and impact of the fraud",
+        "D": "Financial statement fraud and operational fraud, classified by the category of objectives affected"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework (Risk Assessment, Principle 8)",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — COSO Principle 8 fraud risk assessment",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — provides new coverage for E.1.d Risk Assessment",
+        "Distractors test common misclassifications of fraud categories under COSO"
+      ],
+      "ExplanationWrongA": "While management fraud and employee fraud are operationally meaningful distinctions, COSO does not classify fraud risk by perpetrator level. Management override of controls is specifically identified by COSO as an inherent limitation, and the auditor considers the risk of management override as part of fraud risk assessment, but COSO's fraud categories are defined by the nature of the fraud (fraudulent financial reporting vs. misappropriation of assets), not by the organizational level of the perpetrator. A candidate selecting this option may be importing the auditor's fraud risk assessment framework (AU-C 240 / PCAOB AS 2401) into the COSO internal control framework.",
+      "ExplanationWrongB": "While external fraud (by customers, vendors, or other third parties) is a genuine business risk, COSO's fraud risk assessment under the Internal Control framework focuses on two specific categories: fraudulent financial reporting and misappropriation of assets. External fraud is typically addressed through entity-level controls and business process controls (such as vendor due diligence, credit approval, and contract review) rather than through the specific fraud risk assessment required by COSO Principle 8 for internal control over financial reporting. A candidate selecting this option may be confusing fraud risk in internal control with the broader operational risk management framework.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Financial statement fraud and operational fraud is not the COSO classification. 'Operational fraud' is not a defined COSO category. COSO specifically distinguishes between fraudulent financial reporting (which affects the reliability of financial reporting) and misappropriation of assets (which affects the safeguarding of assets — an operations objective). However, the framework uses the term 'misappropriation of assets,' not 'operational fraud,' because misappropriation encompasses theft regardless of whether it has a direct impact on financial statements. A candidate selecting this option may be imposing the COSO objective categories (operations, reporting, compliance) onto the fraud classification, when COSO actually uses different, more specific categories for fraud risk."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R17 risk responses — accept avoid reduce share",
+      "MicroTopic": "risk responses accept avoid reduce share",
+      "UniqueConceptKey": "E-R17-risk-responses-accept-avoid-reduce-share",
+      "LOSTag": "E.1.d Risk Assessment — risk response strategies",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Mountain State Bank's risk management committee is evaluating the risk of a data breach involving customer financial information. The committee is considering four possible responses: (1) purchasing cyber liability insurance with a $250,000 deductible, (2) discontinuing online banking services entirely and reverting to in-branch-only transactions, (3) implementing enhanced encryption and multi-factor authentication while accepting that some residual risk will remain, and (4) outsourcing data storage and security monitoring to a specialized third-party provider under a service-level agreement. Under the COSO ERM risk response framework, which of the following correctly matches each response to its classification?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Under the COSO Enterprise Risk Management framework, management selects from four categories of risk response: (1) risk reduction — taking action to reduce the likelihood or impact of the risk to an acceptable level through the implementation of internal controls; (2) risk sharing — transferring or sharing a portion of the risk with another party, typically through insurance, hedging, or outsourcing arrangements; (3) risk avoidance — eliminating the risk entirely by discontinuing the activity that gives rise to the risk; and (4) risk acceptance — taking no action to change the likelihood or impact of the risk, typically because the cost of mitigation exceeds the benefit or the residual risk falls within the entity's risk appetite. In this scenario, purchasing cyber liability insurance transfers the financial impact of a breach to the insurer — this is risk sharing. Discontinuing online banking eliminates the activity that creates the data breach risk — this is risk avoidance. Implementing enhanced controls (encryption, MFA) while accepting residual risk reduces the likelihood of a breach without eliminating it — this is risk reduction. Outsourcing to a third party transfers operational responsibility while sharing the risk under a service-level agreement — this is also risk sharing. The keys to classification are: does the response transfer risk to another party (sharing), eliminate the risk-generating activity (avoidance), implement controls to lower likelihood or impact (reduction), or acknowledge the risk without action (acceptance). The CMA exam frequently tests the ability to distinguish these four responses in scenario-based questions.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Provides new coverage for E.1.d Risk Assessment — risk response strategies.",
+      "QuestionID": "P1-E-R17",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the four COSO ERM risk response categories: accept, avoid, reduce, and share. Practice matching business actions to the correct category.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "(1) Risk reduction — because insurance reduces financial exposure; (2) Risk avoidance; (3) Risk acceptance — because residual risk is accepted; (4) Risk sharing",
+        "B": "(1) Risk sharing — because insurance transfers risk to the insurer; (2) Risk avoidance; (3) Risk reduction — because controls lower likelihood; (4) Risk sharing",
+        "C": "(1) Risk sharing; (2) Risk reduction — because discontinuing a service reduces the risk profile; (3) Risk reduction; (4) Risk avoidance",
+        "D": "(1) Risk acceptance — because the deductible means the bank retains some risk; (2) Risk avoidance; (3) Risk sharing — because encryption is provided by a third-party vendor; (4) Risk sharing"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Enterprise Risk Management — Risk Response Strategies",
+          "url": "https://www.coso.org/guidance-on-erm"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — COSO ERM risk response strategies",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — new coverage for risk response strategies",
+        "Distractors test common misclassifications of risk responses in scenario-based questions"
+      ],
+      "ExplanationWrongA": "Insurance is risk sharing, not risk reduction. Risk reduction involves implementing controls to lower the likelihood or impact of a risk (for example, installing firewalls, conducting background checks, or implementing internal controls). Insurance transfers the financial consequences of the risk to an insurer — it shares the risk, not reduces it. The key distinction: reduction means you have changed the underlying probability or magnitude through your own actions; sharing means another party assumes part of the risk. Additionally, implementing enhanced encryption and MFA while accepting residual risk is risk reduction with residual acceptance, not pure risk acceptance — the primary response is reduction because controls are being implemented.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "Discontinuing online banking entirely and reverting to in-branch-only transactions is risk avoidance, not risk reduction. Avoidance eliminates the risk entirely by stopping the activity that creates it. Risk reduction would mean continuing the activity (online banking) but with additional controls. Discontinuing the service is not reducing the risk profile — it is eliminating the risk by removing the activity. Additionally, outsourcing to a third party is risk sharing, not risk avoidance — the activity is being transferred to another party along with the associated risk, subject to the terms of the service-level agreement.",
+      "ExplanationWrongD": "Insurance is risk sharing, not risk acceptance. While it is true that the deductible means the bank retains some risk (the first $250,000 of loss), the primary nature of insurance as a risk response is sharing — the bulk of the risk is transferred to the insurer. Insurance with a deductible is risk sharing with a retained element, not pure acceptance. Additionally, implementing encryption and MFA is risk reduction, not risk sharing. The controls are implemented internally to lower the likelihood of a breach; the fact that encryption software may be purchased from a vendor does not make it risk sharing — that would make every control implemented with purchased technology 'risk sharing,' which is conceptually incorrect."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R19 SOX Section 302 — CEO and CFO certification",
+      "MicroTopic": "SOX Section 302 CEO CFO certification",
+      "UniqueConceptKey": "E-R19-sox-302-ceo-cfo-certification",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act — Section 302 certification requirements",
+      "Difficulty": "Easy",
+      "DifficultyScore": 1,
+      "CognitiveLevel": "Remember",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Under Section 302 of the Sarbanes-Oxley Act of 2002, the CEO and CFO of a publicly traded company must certify in each annual and quarterly report that they have evaluated the effectiveness of the company's disclosure controls and procedures. Which of the following additional certifications is required by Section 302?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Section 302 of the Sarbanes-Oxley Act requires the CEO and CFO to certify in each annual (Form 10-K) and quarterly (Form 10-Q) report filed with the SEC that: (1) they have reviewed the report; (2) based on their knowledge, the report does not contain any untrue statement of material fact or omit a material fact necessary to make the statements not misleading; (3) based on their knowledge, the financial statements and other financial information fairly present, in all material respects, the financial condition, results of operations, and cash flows of the issuer; (4) they are responsible for establishing and maintaining disclosure controls and procedures and internal control over financial reporting; (5) they have evaluated the effectiveness of the disclosure controls and procedures and presented their conclusions about effectiveness in the report; and (6) they have disclosed to the auditors and audit committee any significant deficiencies or material weaknesses in internal control over financial reporting and any fraud involving management or other employees with a significant role in internal control. The certification that the financial statements fairly present financial condition, results of operations, and cash flows is a core Section 302 requirement — it goes beyond merely evaluating disclosure controls and makes the CEO and CFO personally accountable for the accuracy and completeness of the financial statements. Section 302 certifications are a cornerstone of SOX accountability, and the CMA exam tests knowledge of the specific content of these certifications.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces clone group for SOX sections.",
+      "QuestionID": "P1-E-R19",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review SOX Section 302 certification requirements and distinguish them from Section 404 management assessment requirements.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The CEO and CFO must certify that the company's internal control over financial reporting is effective, based on an evaluation conducted by the external auditor",
+        "B": "The CEO and CFO must certify that no related-party transactions have occurred during the reporting period",
+        "C": "The CEO and CFO must certify that the board of directors has reviewed and approved all significant accounting policies",
+        "D": "The CEO and CFO must certify that the financial statements fairly present, in all material respects, the financial condition and results of operations of the company"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "SEC: Final Rule — Certification of Disclosure in Companies' Quarterly and Annual Reports",
+          "url": "https://www.sec.gov/rules/final/33-8124.htm"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.h Sarbanes-Oxley Act — Section 302 CEO/CFO certification",
+        "Tests knowledge-level recall of SOX 302 certification requirements — appropriate for Easy difficulty",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template"
+      ],
+      "ExplanationWrongA": "This describes elements of SOX Section 404, not Section 302. Section 404(b) requires the external auditor to attest to and report on management's assessment of internal control over financial reporting. Section 302 does not require the CEO and CFO to certify that internal control is effective — it requires them to certify that they have disclosed significant deficiencies and material weaknesses to the auditors and audit committee. The distinction between Section 302 (certification of financial statements and disclosure of control weaknesses) and Section 404 (management's assessment of internal control effectiveness) is a frequently tested exam topic.",
+      "ExplanationWrongB": "While related-party transactions are subject to disclosure requirements under GAAP (ASC 850) and SEC regulations, Section 302 does not require a specific certification regarding related-party transactions. The CEO and CFO certify the overall fairness of the financial statements, which by implication includes proper disclosure of related-party transactions, but there is no separate related-party certification in SOX 302. A candidate selecting this option may be confusing general financial reporting requirements with the specific SOX certification requirements.",
+      "ExplanationWrongC": "Section 302 does not require the CEO and CFO to certify that the board has reviewed accounting policies. The board's audit committee is responsible for oversight of financial reporting and the external audit, but SOX 302 focuses on the personal accountability of the CEO and CFO — not on board-level activities. The certifications are made by the CEO and CFO individually, certifying their own knowledge and actions. The audit committee's responsibilities are addressed in other sections of SOX and in SEC rules, not in Section 302.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R20 SOX Section 404 — management assessment vs auditor attestation",
+      "MicroTopic": "SOX Section 404 management assessment auditor attestation",
+      "UniqueConceptKey": "E-R20-sox-404-management-vs-auditor",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act — Section 404 internal control assessment",
+      "Difficulty": "Moderate-Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "SOX Section 404 imposes two distinct requirements regarding internal control over financial reporting for publicly traded companies. Which of the following correctly distinguishes between Section 404(a) and Section 404(b)?",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "SOX Section 404 has two subsections that impose distinct but complementary requirements: Section 404(a) requires management to assess and report on the effectiveness of the company's internal control over financial reporting (ICFR). Management must: (1) acknowledge responsibility for establishing and maintaining adequate ICFR; (2) use a suitable, recognized control framework (typically the COSO Internal Control — Integrated Framework) to evaluate ICFR effectiveness; (3) assess the effectiveness of ICFR as of the end of the fiscal year; and (4) include a statement in the annual report regarding the effectiveness of ICFR. Section 404(b) requires the company's external auditor to attest to, and report on, management's assessment of ICFR. This attestation is in addition to the auditor's opinion on the financial statements. The auditor must evaluate both the design and operating effectiveness of internal controls and cannot accept management's assessment without performing independent testing. For accelerated and large accelerated filers, the auditor's attestation is mandatory. For smaller reporting companies and emerging growth companies, Section 404(b) auditor attestation may not be required (depending on the relevant exemption rules at the time), but Section 404(a) management assessment applies to all publicly traded companies. This two-tiered structure creates a system where management asserts effectiveness and the external auditor independently verifies that assertion.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces clone group for SOX internal control reporting.",
+      "QuestionID": "P1-E-R20",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between SOX 404(a) management assessment and SOX 404(b) external auditor attestation, and which companies are subject to each.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Section 404(a) requires management to assess and report on the effectiveness of ICFR; Section 404(b) requires the external auditor to attest to management's assessment",
+        "B": "Section 404(a) applies to accelerated filers only; Section 404(b) applies to all publicly traded companies regardless of size",
+        "C": "Section 404(a) requires the external auditor to attest to ICFR; Section 404(b) requires management to assess ICFR",
+        "D": "Section 404(a) and Section 404(b) both require management and the external auditor to issue a joint report on ICFR effectiveness"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "SEC: Management's Report on Internal Control Over Financial Reporting",
+          "url": "https://www.sec.gov/rules/final/33-8238.htm"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.h Sarbanes-Oxley Act — Section 404 management assessment and auditor attestation",
+        "Tests understanding of the distinction between 404(a) and 404(b) — appropriate for Moderate-Easy/Understand",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "This reverses the applicability. Section 404(a) — management's assessment of ICFR — applies to all publicly traded companies (subject to phase-in periods for newly public companies). Section 404(b) — the external auditor's attestation — applies only to accelerated filers and large accelerated filers. Smaller reporting companies and emerging growth companies are generally exempt from the 404(b) auditor attestation requirement. A candidate selecting this option may be confusing which provision has broader applicability — it is management's assessment (404(a)), not the auditor's attestation (404(b)).",
+      "ExplanationWrongC": "This reverses the requirements. Section 404(a) is the management assessment requirement — management, not the external auditor, assesses and reports on ICFR effectiveness. Section 404(b) is the auditor attestation requirement — the external auditor, not management, attests to management's assessment. A candidate selecting this option may simply have the section numbers reversed. The key memory aid: 404(a) — 'a' for assessment by management; 404(b) — 'b' for the auditor's backup verification.",
+      "ExplanationWrongD": "SOX Section 404 does not require a joint report. Section 404(a) requires management to issue its own report on ICFR effectiveness. Section 404(b) requires the external auditor to issue a separate attestation report. These are two distinct reports by two different parties: management reports on its own assessment, and the auditor reports on its evaluation of management's assessment. The external auditor's report is included in the annual report alongside management's report, but they are separate documents with separate signatories. A candidate selecting this option may be incorrectly assuming that management and the auditor collaborate on a single combined report."
+    }
+  ]
+}

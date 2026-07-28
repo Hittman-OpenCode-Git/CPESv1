@@ -1,0 +1,115 @@
+{
+  "document": "SESSION203_CHANGE_CLASSIFICATION",
+  "session": "S203",
+  "title": "Change Classification Matrix — Delta Review Routing",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION203_DELTA_ENGINE_SPEC.json",
+  "purpose": "Defines the complete change-to-review routing matrix. Every possible field-level change is mapped to its required review scope, board assignment, and estimated effort. Used by the Delta Review Engine to determine which items can skip re-review and which require full re-verification.",
+
+  "change_types": {
+    "CONTENT_CHANGE": {
+      "description": "Any change to learner-facing content fields (Stem, Choices, CorrectChoice, ExplanationCorrect, ExplanationWrong). These fields directly affect what the learner sees.",
+      "sub_classifications": {
+        "FULL_CONTENT": {
+          "trigger_fields": ["Stem", "Choices.A", "Choices.B", "Choices.C", "Choices.D", "CorrectChoice"],
+          "routing": "Full CAQS 10-dimension re-verification. All boards.",
+          "effort": "8 min/item",
+          "priority": "HIGHEST",
+          "risk": "Answer-key validity potentially affected. Distractor analysis invalidated. Blueprint alignment may have shifted.",
+          "examples": ["DL-030 CC fix (5 items: B-119, F-84/116/121, E-037)", "Stem rewrite for clarity", "Choice revision to eliminate ambiguity"]
+        },
+        "EXPLANATION_CHANGE": {
+          "trigger_fields": ["ExplanationCorrect", "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD"],
+          "sub_types": {
+            "EC_ONLY": {"trigger": "Only ExplanationCorrect changed", "routing": "CAQS D1(correctness), D3(technical), D6(numerical), D7(explanation)", "effort": "3 min/item", "examples": ["EC expanded with ASC citation", "EC arithmetic corrected"]},
+            "EW_ONLY": {"trigger": "Only ExplanationWrong fields changed", "routing": "CAQS D4(distractor), D7(explanation)", "effort": "2 min/item", "examples": ["DL-008 EW[CC] cleared", "DL-026 empty slot filled", "DL-013 boilerplate → choice-specific text"]},
+            "EC_PLUS_EW": {"trigger": "Both EC and EW changed", "routing": "CAQS D3, D4, D6, D7", "effort": "4 min/item", "examples": ["Comprehensive DL-013 remediation pass", "Full explanation rewrite"]}
+          }
+        }
+      }
+    },
+    "METADATA_CHANGE": {
+      "description": "Changes to metadata fields that affect psychometric quality, blueprint alignment, and governance state — but not answer-key correctness.",
+      "trigger_fields": ["Difficulty", "DifficultyScore", "CognitiveLevel", "LOSTag", "Topic", "AccountingPrinciple", "PrimaryCompetency", "pedagogical_cluster"],
+      "routing": "Quality Board B — psychometric + blueprint review only. No technical re-verification.",
+      "effort": "2 min/item",
+      "priority": "LOW",
+      "risk": "No learner-facing correctness impact. Psychometric quality may shift.",
+      "examples": ["DL-031 difficulty recalibrated Moderate→Easy", "CognitiveLevel reassigned Remember→Apply", "Blueprint LOSTag updated to align with IMA CSO revision"]
+    },
+    "PRESENTATION_CHANGE": {
+      "description": "Changes that affect display but not content or metadata. Typo fixes, whitespace normalization, encoding corrections.",
+      "trigger_fields": ["StudyLinks format", "SourceDescription wording", "ItemStyle adjustments"],
+      "routing": "No review required. Governance Board logs the change.",
+      "effort": "0 min/item",
+      "priority": "INFORMATIONAL",
+      "risk": "Zero correctness impact. Zero educational impact.",
+      "examples": ["HTML entity encoding fix", "Whitespace normalization in StudyLinks", "ItemStyle reformatting"]
+    },
+    "CERTIFICATION_CHANGE": {
+      "description": "Changes to governance state fields only. No content, metadata, or presentation changed.",
+      "trigger_fields": ["question_state", "pack_state", "certification_batch", "certification_date"],
+      "routing": "Governance Board — state transition validation only. No board review.",
+      "effort": "0.5 min/item",
+      "priority": "INFORMATIONAL",
+      "risk": "Zero correctness impact. Governance hygiene only.",
+      "examples": ["question_state: Unprocessed → In Audit (entering pipeline)", "question_state: Certified → In Audit (re-verification requested)", "question_state: any → Archived (clone deprecation)"]
+    }
+  },
+
+  "field_to_change_type_map": {
+    "Stem": "CONTENT_CHANGE → FULL_CONTENT",
+    "Choices.A": "CONTENT_CHANGE → FULL_CONTENT",
+    "Choices.B": "CONTENT_CHANGE → FULL_CONTENT",
+    "Choices.C": "CONTENT_CHANGE → FULL_CONTENT",
+    "Choices.D": "CONTENT_CHANGE → FULL_CONTENT",
+    "CorrectChoice": "CONTENT_CHANGE → FULL_CONTENT",
+    "ExplanationCorrect": "CONTENT_CHANGE → EXPLANATION_CHANGE",
+    "ExplanationWrongA": "CONTENT_CHANGE → EXPLANATION_CHANGE",
+    "ExplanationWrongB": "CONTENT_CHANGE → EXPLANATION_CHANGE",
+    "ExplanationWrongC": "CONTENT_CHANGE → EXPLANATION_CHANGE",
+    "ExplanationWrongD": "CONTENT_CHANGE → EXPLANATION_CHANGE",
+    "Difficulty": "METADATA_CHANGE",
+    "DifficultyScore": "METADATA_CHANGE",
+    "CognitiveLevel": "METADATA_CHANGE",
+    "LOSTag": "METADATA_CHANGE",
+    "Topic": "METADATA_CHANGE",
+    "AccountingPrinciple": "METADATA_CHANGE",
+    "PrimaryCompetency": "METADATA_CHANGE",
+    "pedagogical_cluster": "METADATA_CHANGE",
+    "question_state": "CERTIFICATION_CHANGE",
+    "pack_state": "CERTIFICATION_CHANGE",
+    "certification_batch": "CERTIFICATION_CHANGE",
+    "StudyLinks": "PRESENTATION_CHANGE",
+    "SourceDescription": "PRESENTATION_CHANGE",
+    "ItemStyle": "PRESENTATION_CHANGE"
+  },
+
+  "review_routing_matrix": {
+    "no_review": ["PRESENTATION_CHANGE", "CERTIFICATION_CHANGE", "UNCHANGED"],
+    "partial_review": ["METADATA_CHANGE", "EXPLANATION_CHANGE (EW_ONLY)", "EXPLANATION_CHANGE (EC_ONLY)"],
+    "full_review": ["FULL_CONTENT_CHANGE", "EXPLANATION_CHANGE (EC_PLUS_EW)", "NEW_ITEM"]
+  },
+
+  "effort_calibration": {
+    "baseline_v1": "80% of items re-reviewed without change. Average 5-7 min/item across all boards.",
+    "projected_v2": "20% of items re-reviewed. 77% reduction in review effort per wave.",
+    "breakdown_per_100_items": {
+      "unchanged_skip": {"count": 80, "effort_per_item": 0, "total_effort": 0},
+      "ew_only_fix": {"count": 10, "effort_per_item": 2, "total_effort": 20},
+      "ec_only": {"count": 3, "effort_per_item": 3, "total_effort": 9},
+      "metadata": {"count": 4, "effort_per_item": 2, "total_effort": 8},
+      "full_content": {"count": 3, "effort_per_item": 8, "total_effort": 24},
+      "total": {"count": 100, "total_effort_minutes": 61}
+    },
+    "comparison": "v1: 100 items × 6 min = 600 min. v2: 61 min. Savings: 539 min (−90%)."
+  },
+
+  "implementation_notes": {
+    "field_hash_diff": "When content_hash differs, compare per-field hashes (from field_hashes manifest in registry entry) to identify exactly which fields changed. This enables precise change classification rather than 'content changed → full review' catch-all.",
+    "change_aggregation": "Multiple simultaneous field changes are aggregated. If both Stem and EW_A changed → FULL_CONTENT takes precedence over EXPLANATION_CHANGE. The most-restrictive classification wins.",
+    "delta_ledger_append": "Every content or metadata change produces a DELTA_LEDGER entry recording old hash → new hash for each field. Enables field-level auditing and rollback capability."
+  }
+}

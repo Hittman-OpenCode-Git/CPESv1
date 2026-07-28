@@ -1,0 +1,147 @@
+{
+  "session": "310",
+  "title": "Certification KPI Dashboard",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "summary": {
+    "totalMCQ": 2500,
+    "certifiedMCQ": 2182,
+    "certificationRate": "87.3",
+    "remainingMCQ": 318,
+    "caseItems": 400,
+    "caseCertified": 90,
+    "caseCertRate": "22.5",
+    "totalPortfolio": 2900,
+    "totalCertified": 2272,
+    "totalCertRate": "78.3"
+  },
+  "byPack": {
+    "A": {
+      "total": 500,
+      "certified": 482,
+      "sections": {
+        "A": "Certified",
+        "B": "Partial",
+        "C": "Partial",
+        "D": "Certified",
+        "E": "Certified",
+        "F": "Partial"
+      }
+    },
+    "B": {
+      "total": 500,
+      "certified": 500,
+      "sections": {
+        "A": "Certified",
+        "B": "Certified",
+        "C": "Certified",
+        "D": "Certified",
+        "E": "Certified",
+        "F": "Certified"
+      }
+    },
+    "C": {
+      "total": 500,
+      "certified": 350,
+      "sections": {
+        "A": "Certified",
+        "B": "Certified",
+        "C": "In Audit",
+        "D": "In Audit",
+        "E": "Unprocessed",
+        "F": "Unprocessed"
+      }
+    },
+    "D": {
+      "total": 500,
+      "certified": 350,
+      "sections": {
+        "A": "Certified",
+        "B": "Certified",
+        "C": "In Audit",
+        "D": "Certified",
+        "E": "Unprocessed",
+        "F": "Unprocessed"
+      }
+    },
+    "E": {
+      "total": 500,
+      "certified": 500,
+      "sections": {
+        "A": "Certified",
+        "B": "Certified",
+        "C": "In Audit",
+        "D": "Certified",
+        "E": "Certified",
+        "F": "Certified"
+      }
+    }
+  },
+  "byDomain": {
+    "A": {
+      "items": 433,
+      "certified": 425,
+      "rate": "98.2%",
+      "status": "LOW_DEBT"
+    },
+    "B": {
+      "items": 568,
+      "certified": 562,
+      "rate": "98.9%",
+      "status": "LOW_DEBT"
+    },
+    "C": {
+      "items": 798,
+      "certified": 786,
+      "rate": "98.5%",
+      "status": "LOW_DEBT",
+      "note": "454 rewrite candidates are quality polish only"
+    },
+    "D": {
+      "items": 452,
+      "certified": 446,
+      "rate": "98.7%",
+      "status": "LOW_DEBT"
+    },
+    "E": {
+      "items": 443,
+      "certified": 264,
+      "rate": "59.6%",
+      "status": "HIGH_DEBT",
+      "bottleneck": "129 archived DL-012 clones (77% of gap)"
+    },
+    "F": {
+      "items": 430,
+      "certified": 281,
+      "rate": "65.3%",
+      "status": "HIGH_DEBT",
+      "bottleneck": "149 greenfield items need authoring"
+    }
+  },
+  "pendingItems": {
+    "domainE": {
+      "count": 167,
+      "composition": {
+        "archived": 129,
+        "unprocessed": 38
+      },
+      "strategy": "REPLACE"
+    },
+    "domainF": {
+      "count": 149,
+      "composition": {
+        "greenfield": 149
+      },
+      "strategy": "AUTHOR"
+    },
+    "packA": {
+      "count": 19,
+      "sections": [
+        "B",
+        "C",
+        "F"
+      ],
+      "strategy": "CERTIFY"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "session": "708",
+  "timestamp": "2026-07-25",
+  "analysis_only": true,
+  "dl026_definition": {
+    "source": "knowledge/DEFECT_LIBRARY.md, line 1781",
+    "found": true,
+    "detection_criteria": "For item Q: extract Q.CorrectChoice; for L in {A,B,C,D}: if L != CC AND Q['ExplanationWrong'+L] is empty/undefined, flag DL-026.",
+    "severity": "High (educational quality). Not a certification blocker per §9.4.",
+    "prior_count_reliability": "DEFECT_LIBRARY.md 1,005-item count was OVERCOUNTED. DEFINITIVE_PARSER_VALIDATION_2026-07-23.md found 656 items. S708 G-NEW-3 scan found 312 — the decrease is consistent with S703-S707 remediation clearing affected items."
+  },
+  "audit_method": "G-NEW-3 within-object via Function constructor parse",
+  "counts": {
+    "total_items_with_empty_non_cc_distractors": 312,
+    "certified_items": 13,
+    "by_pack": {
+      "pack_a": {
+        "total": 1,
+        "certified": 1
+      },
+      "pack_b": {
+        "total": 0,
+        "certified": 0
+      },
+      "pack_c": {
+        "total": 152,
+        "certified": 2
+      },
+      "pack_d": {
+        "total": 159,
+        "certified": 10
+      },
+      "pack_e": {
+        "total": 0,
+        "certified": 0
+      }
+    }
+  },
+  "certified_qid_list": [
+    {
+      "pack": "A",
+      "qid": "P1-B-001",
+      "cc": "D",
+      "emptySlots": [
+        "ExplanationWrongB"
+      ]
+    },
+    {
+      "pack": "C",
+      "qid": "P1-BC-094",
+      "cc": "B",
+      "emptySlots": [
+        "ExplanationWrongD"
+      ]
+    },
+    {
+      "pack": "C",
+      "qid": "P1-DC-019",
+      "cc": "C",
+      "emptySlots": [
+        "ExplanationWrongD"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-AD-047",
+      "cc": "C",
+      "emptySlots": [
+        "ExplanationWrongB"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-AD-052",
+      "cc": "D",
+      "emptySlots": [
+        "ExplanationWrongA"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-BD-014",
+      "cc": "C",
+      "emptySlots": [
+        "ExplanationWrongD"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-BD-042",
+      "cc": "A",
+      "emptySlots": [
+        "ExplanationWrongB"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-BD-047",
+      "cc": "D",
+      "emptySlots": [
+        "ExplanationWrongA"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-CD-002",
+      "cc": "B",
+      "emptySlots": [
+        "ExplanationWrongD"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-CD-012",
+      "cc": "A",
+      "emptySlots": [
+        "ExplanationWrongB"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-CD-031",
+      "cc": "D",
+      "emptySlots": [
+        "ExplanationWrongA"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-DD-006",
+      "cc": "D",
+      "emptySlots": [
+        "ExplanationWrongA"
+      ]
+    },
+    {
+      "pack": "D",
+      "qid": "P1-DD-025",
+      "cc": "C",
+      "emptySlots": [
+        "ExplanationWrongA"
+      ]
+    }
+  ]
+}

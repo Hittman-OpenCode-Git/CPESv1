@@ -1,0 +1,619 @@
+{
+  "generatedAt": "2026-07-25T20:16:07.699Z",
+  "environment": "pre-production",
+  "syntheticData": true,
+  "selectedLearnerId": "synth-riley",
+  "studentRoll": [
+    {
+      "learnerId": "synth-avery",
+      "displayName": "Avery Pilot",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-03T00:00:00.000Z",
+      "profileSummary": "First-time CMA candidate. Early study stage — 2 short sessions completed. Still exploring the exam structure and building baseline topic coverage.",
+      "sessions": 2,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 55,
+          "attempts": 4
+        },
+        "Planning and budgeting": {
+          "accuracy": 60,
+          "attempts": 3
+        }
+      },
+      "readinessSnapshot": "Not enough data",
+      "weakAreas": [
+        "Financial statement classification",
+        "Budget components"
+      ],
+      "progressSignals": [
+        "First session completed"
+      ],
+      "recentTutoringInteractions": [],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: first-time candidate, early study stage. Low data volume — tests May's \"not enough data\" gating."
+    },
+    {
+      "learnerId": "synth-jordan",
+      "displayName": "Jordan Sample",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-09T00:00:00.000Z",
+      "profileSummary": "Returning CMA candidate with 8 sessions. Showing steady improvement across 3 topics. Accuracy trending upward from 65% to 78%.",
+      "sessions": 8,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 78,
+          "attempts": 12
+        },
+        "Variance analysis": {
+          "accuracy": 82,
+          "attempts": 10
+        },
+        "Cost behavior": {
+          "accuracy": 76,
+          "attempts": 8
+        },
+        "Internal controls": {
+          "accuracy": 70,
+          "attempts": 7
+        }
+      },
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": [
+        "Internal controls — COSO components"
+      ],
+      "progressSignals": [
+        "Improving on variance analysis (+15%)",
+        "Improving on cost behavior (+12%)",
+        "Stable on financial statements"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1A-FS-003-Q8",
+          "topic": "Financial statements",
+          "action": "explain",
+          "timestamp": "2026-06-08T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: returning candidate with stable improvement. Tests May's improvement-insight and recommendation logic."
+    },
+    {
+      "learnerId": "synth-morgan",
+      "displayName": "Morgan Demo",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-11T00:00:00.000Z",
+      "profileSummary": "6 sessions completed. Strong performance on cost management and financial reporting, but persistent weakness in budgeting topics (45% accuracy).",
+      "sessions": 6,
+      "topicStats": {
+        "Planning and budgeting": {
+          "accuracy": 45,
+          "attempts": 14
+        },
+        "Cost behavior": {
+          "accuracy": 82,
+          "attempts": 10
+        },
+        "Financial statements": {
+          "accuracy": 80,
+          "attempts": 8
+        }
+      },
+      "readinessSnapshot": "Developing",
+      "weakAreas": [
+        "Budget preparation order",
+        "Flexible budget calculations",
+        "Cash budget components"
+      ],
+      "progressSignals": [
+        "Persistent weakness on budgeting (-5% recent trend)",
+        "Strong on cost behavior"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1B-BG-005-Q2",
+          "topic": "Planning and budgeting",
+          "action": "recovery",
+          "timestamp": "2026-06-10T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: candidate with persistent weakness in budgeting. Tests May's recovery-set generation and weakness insight."
+    },
+    {
+      "learnerId": "synth-riley",
+      "displayName": "Riley Practice",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-13T00:00:00.000Z",
+      "profileSummary": "5 sessions. Struggles with cost management topics when difficulty increases. High hint usage (avg 2.3 hints per question). Easy questions: 80%; difficult questions: 45%.",
+      "sessions": 5,
+      "topicStats": {
+        "Cost behavior": {
+          "accuracy": 62,
+          "attempts": 15
+        },
+        "Standard costing": {
+          "accuracy": 55,
+          "attempts": 10
+        }
+      },
+      "readinessSnapshot": "Developing",
+      "weakAreas": [
+        "Variance analysis at high difficulty",
+        "Standard costing methods"
+      ],
+      "progressSignals": [
+        "Hint-dependent on cost topics",
+        "Difficulty-sensitive (30% gap)"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1D-CM-002-Q2",
+          "topic": "Cost behavior",
+          "action": "hint",
+          "timestamp": "2026-06-12T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: cost-management difficulty sensitivity, hint-dependent. Tests S113 difficulty-sensitivity and hint-dependency evidence validators."
+    },
+    {
+      "learnerId": "synth-taylor",
+      "displayName": "Taylor Sandbox",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-16T00:00:00.000Z",
+      "profileSummary": "7 sessions. Strong performance on Internal Controls (85% accuracy across COSO, SOX, internal audit topics). Weak on Technology & Analytics (50%). Asymmetric topic profile.",
+      "sessions": 7,
+      "topicStats": {
+        "Internal controls": {
+          "accuracy": 85,
+          "attempts": 12
+        },
+        "COSO framework": {
+          "accuracy": 88,
+          "attempts": 8
+        },
+        "Technology and analytics": {
+          "accuracy": 50,
+          "attempts": 10
+        }
+      },
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": [
+        "Data governance",
+        "IT general controls",
+        "Emerging technology in accounting"
+      ],
+      "progressSignals": [
+        "Section E at 85% — near Ready",
+        "Section F declining (-12%)"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1E-IC-005-Q4",
+          "topic": "Internal controls",
+          "action": "progress",
+          "timestamp": "2026-06-15T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: controls strength, analytics weakness. Tests section-level readiness differentiation and asymmetric topic recommendations."
+    },
+    {
+      "learnerId": "synth-casey",
+      "displayName": "Casey Trial",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-07T00:00:00.000Z",
+      "profileSummary": "4 sessions. Overall accuracy 75% but hint usage is rapidly increasing (from 20% to 70% of attempts). May be developing over-reliance on hints.",
+      "sessions": 4,
+      "topicStats": {
+        "Performance management": {
+          "accuracy": 75,
+          "attempts": 10
+        },
+        "Forecasting": {
+          "accuracy": 72,
+          "attempts": 6
+        }
+      },
+      "readinessSnapshot": "Developing",
+      "weakAreas": [
+        "Forecasting techniques — regression"
+      ],
+      "progressSignals": [
+        "Hint use increasing (20% → 70%)",
+        "Accuracy stable at 75%"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1C-PM-004-Q6",
+          "topic": "Performance management",
+          "action": "hint",
+          "timestamp": "2026-06-06T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: hint-dependent behavior. Tests S113 hint-dependency evidence validator and recommendation-gate behavior for hint-heavy profiles."
+    },
+    {
+      "learnerId": "synth-quinn",
+      "displayName": "Quinn Sim",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-15T00:00:00.000Z",
+      "profileSummary": "6 sessions. Very unstable performance — accuracy swings from 40% to 85% between sessions. Stability score of 35%. Inconsistent study pattern.",
+      "sessions": 6,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 62,
+          "attempts": 12
+        },
+        "Cost behavior": {
+          "accuracy": 58,
+          "attempts": 10
+        },
+        "Internal controls": {
+          "accuracy": 68,
+          "attempts": 8
+        }
+      },
+      "readinessSnapshot": "Recovery needed",
+      "weakAreas": [
+        "Cost behavior (unstable)",
+        "Financial statement classification"
+      ],
+      "progressSignals": [
+        "Unstable performance (stability 35%)",
+        "Wide accuracy swings (40%-85%)"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1A-FS-003-Q2",
+          "topic": "Financial statements",
+          "action": "summary",
+          "timestamp": "2026-06-14T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: unstable recent performance. Tests S113 instability evidence validator and readiness provenance for unstable profiles."
+    },
+    {
+      "learnerId": "synth-parker",
+      "displayName": "Parker Test",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-21T00:00:00.000Z",
+      "profileSummary": "10 sessions — most experienced synthetic student. 3 topics at Ready level but only 2 case practice sessions. Strong MCQ readiness, sparse case experience.",
+      "sessions": 10,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 85,
+          "attempts": 18
+        },
+        "Variance analysis": {
+          "accuracy": 82,
+          "attempts": 15
+        },
+        "Internal controls": {
+          "accuracy": 84,
+          "attempts": 14
+        },
+        "Cost behavior": {
+          "accuracy": 78,
+          "attempts": 12
+        }
+      },
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": [
+        "Case-based practice (only 2 sessions)"
+      ],
+      "progressSignals": [
+        "3 topics at Ready",
+        "Sparse case practice — degradation risk"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1A-FS-003-Q5",
+          "topic": "Financial statements",
+          "action": "similar",
+          "timestamp": "2026-06-20T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": null,
+      "notes": "Archetype: strong readiness, sparse case practice. Tests May's case-burden degradation logic and practice-mix recommendations."
+    }
+  ],
+  "pilotUsageLog": [
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "explain",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": false,
+      "safetyViolations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice B"
+      ],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "hint",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": true,
+      "safetyViolations": [],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "wrong-choices",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": true,
+      "safetyViolations": [],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "simplify",
+      "section": "A",
+      "topic": "Financial statements",
+      "qid": "P1A-FS-001-SIM",
+      "pilotActive": true,
+      "safetySafe": false,
+      "safetyViolations": [
+        "ANSWER_LEAKAGE_HINT: hint level 1 reveals correct choice B"
+      ],
+      "gateSafe": null
+    }
+  ],
+  "safetyLog": [
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "explain",
+      "textLength": 176,
+      "safe": false,
+      "violations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice B"
+      ],
+      "hintLevel": 0,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "hint",
+      "textLength": 256,
+      "safe": true,
+      "violations": [],
+      "hintLevel": 1,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "wrong-choices",
+      "textLength": 377,
+      "safe": true,
+      "violations": [],
+      "hintLevel": 1,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "sourceLabel": "simplify",
+      "textLength": 328,
+      "safe": false,
+      "violations": [
+        "ANSWER_LEAKAGE_HINT: hint level 1 reveals correct choice B"
+      ],
+      "hintLevel": 1,
+      "examMode": false,
+      "pilotActive": true
+    }
+  ],
+  "gateLog": [],
+  "sessionTelemetry": [
+    {
+      "event": "greeting_flow_started",
+      "timestamp": "2026-07-25T20:16:07.697Z",
+      "learnerId": null,
+      "data": {
+        "state": "ASK_RETURNING"
+      }
+    },
+    {
+      "event": "greeting_response",
+      "timestamp": "2026-07-25T20:16:07.697Z",
+      "learnerId": null,
+      "data": {
+        "response": "yes"
+      }
+    },
+    {
+      "event": "student_selected",
+      "timestamp": "2026-07-25T20:16:07.698Z",
+      "learnerId": "synth-riley",
+      "data": {
+        "learnerId": "synth-riley",
+        "displayName": "Riley Practice"
+      }
+    }
+  ],
+  "calibrationExport": {
+    "thresholdSnapshot": {
+      "accuracyHigh": 80,
+      "accuracyGood": 75,
+      "accuracyLow": 60,
+      "stabilityHigh": 75,
+      "stabilityGood": 60,
+      "stabilityLow": 50,
+      "recentPctHigh": 80,
+      "recentPctGood": 70,
+      "minAttemptsReady": 6,
+      "minAttemptsApproaching": 4,
+      "minAttemptsTopic": 3,
+      "caseBurdenDegradeMisses": 4,
+      "modelVersion": "S111-1.0",
+      "dataContext": {
+        "sessionCount": 0,
+        "topicsWithData": 0,
+        "recoveryCount": 0,
+        "readyCount": 0,
+        "caseSessions": 0,
+        "caseMissesTotal": 0
+      }
+    },
+    "readinessSummary": {
+      "overall": {
+        "band": "Not enough data",
+        "rationale": "No practice sessions recorded yet.",
+        "signals": [
+          "no_sessions"
+        ],
+        "confidence": "high"
+      },
+      "topics": [],
+      "caseReadiness": {
+        "band": "Not enough data",
+        "rationale": "No case miss data yet — complete at least one case session.",
+        "signals": [
+          "no_case_data"
+        ],
+        "dominantPattern": null,
+        "dominantTrend": null,
+        "totalCaseMisses": 0,
+        "sessionsWithCases": 0
+      },
+      "hasEnoughData": false,
+      "dataNote": "No practice data yet. Complete at least one session to begin readiness tracking.",
+      "_provenance": {
+        "modelVersion": "S111-1.0",
+        "computedAt": "2026-07-25T20:16:07.699Z",
+        "triggerSignals": [
+          "no_sessions"
+        ],
+        "decisiveFactors": [
+          "Zero sessions"
+        ],
+        "thresholdsApplied": {
+          "minAttemptsReady": 6,
+          "minAttemptsApproaching": 4,
+          "minAttemptsTopic": 3,
+          "accuracyHigh": 80,
+          "accuracyGood": 75,
+          "accuracyLow": 60,
+          "stabilityHigh": 75,
+          "stabilityGood": 60,
+          "stabilityLow": 50,
+          "recentPctHigh": 80,
+          "recentPctGood": 70,
+          "caseBurdenDegrade": false
+        },
+        "dataContext": {
+          "sessionCount": 0,
+          "topicsWithData": 0,
+          "recoveryCount": 0,
+          "readyCount": 0,
+          "caseSessions": 0,
+          "caseMissesTotal": 0
+        }
+      }
+    },
+    "sectionReadiness": null,
+    "trends": [],
+    "clusters": {
+      "persistentWeak": [],
+      "improving": [],
+      "declining": [],
+      "unstable": [],
+      "hintDependent": [],
+      "difficultySensitive": []
+    },
+    "calibration": {},
+    "calibrationMetrics": [],
+    "casePatternSummary": null,
+    "casePatternTrends": [],
+    "adaptivePracticeMix": {
+      "mode": "Insufficient Data",
+      "reason": "Complete at least one practice session before optimization is available.",
+      "badge": "NEED_DATA"
+    },
+    "exportedAt": "2026-07-25T20:16:07.699Z"
+  },
+  "thresholdSnapshot": {
+    "accuracyHigh": 80,
+    "accuracyGood": 75,
+    "accuracyLow": 60,
+    "stabilityHigh": 75,
+    "stabilityGood": 60,
+    "stabilityLow": 50,
+    "recentPctHigh": 80,
+    "recentPctGood": 70,
+    "minAttemptsReady": 6,
+    "minAttemptsApproaching": 4,
+    "minAttemptsTopic": 3,
+    "caseBurdenDegradeMisses": 4,
+    "modelVersion": "S111-1.0",
+    "dataContext": {
+      "sessionCount": 0,
+      "topicsWithData": 0,
+      "recoveryCount": 0,
+      "readyCount": 0,
+      "caseSessions": 0,
+      "caseMissesTotal": 0
+    }
+  },
+  "modelVersion": "S111-1.0",
+  "learnerState": {
+    "learnerId": "synth-riley",
+    "userName": "Riley Practice",
+    "firstVisit": "2026-06-13T00:00:00.000Z",
+    "sessions": [],
+    "topicPerformance": {},
+    "subtopicPerformance": {},
+    "misconceptionPatterns": [],
+    "recommendationLog": [],
+    "sessionSummaries": [],
+    "lastUpdated": "2026-07-25T20:16:07.698Z",
+    "synthetic": true,
+    "preProduction": true
+  }
+}

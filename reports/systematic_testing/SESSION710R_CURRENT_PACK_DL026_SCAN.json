@@ -1,0 +1,164 @@
+{
+  "session": "710R",
+  "timestamp": "2026-07-25T18:00:00",
+  "methodology": "Function constructor parse with G-NEW-3 within-object CorrectChoice extraction. No forward-scan.",
+  "tool": "tools/qc/analyze_s708_cross_pack_residuals.js",
+  "independent_verification": "Two agents ran the same tool independently — identical results.",
+  "pack_a": {
+    "qid_count": 500,
+    "state_counts": { "Certified": 481, "Editorial Queue": 0, "Archived": 19, "Unprocessed": 0 },
+    "dl008_total": 0,
+    "dl025_total_items": 1,
+    "dl026_total_items": 1,
+    "certified_dl026_items": [
+      {
+        "qid": "P1-B-001",
+        "section": "B",
+        "state": "Certified",
+        "correct_choice": "D",
+        "empty_slots": ["ExplanationWrongB"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      }
+    ]
+  },
+  "pack_c": {
+    "qid_count": 500,
+    "state_counts": { "Certified": 350, "Editorial Queue": 0, "Archived": 56, "Unprocessed": 94 },
+    "dl008_total": 0,
+    "dl025_total_items": 152,
+    "dl026_total_items": 152,
+    "certified_dl026_items": [
+      {
+        "qid": "P1-BC-094",
+        "section": "B",
+        "state": "Certified",
+        "correct_choice": "B",
+        "empty_slots": ["ExplanationWrongD"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-DC-019",
+        "section": "D",
+        "state": "Certified",
+        "correct_choice": "C",
+        "empty_slots": ["ExplanationWrongD"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      }
+    ]
+  },
+  "pack_d": {
+    "qid_count": 500,
+    "state_counts": { "Certified": 350, "Editorial Queue": 0, "Archived": 56, "Unprocessed": 93 },
+    "missing_cc": 1,
+    "dl008_total": 0,
+    "dl025_total_items": 159,
+    "dl026_total_items": 159,
+    "certified_dl026_items": [
+      {
+        "qid": "P1-AD-047",
+        "section": "A",
+        "state": "Certified",
+        "correct_choice": "C",
+        "empty_slots": ["ExplanationWrongD"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-AD-048",
+        "section": "A",
+        "state": "Certified",
+        "correct_choice": "D",
+        "empty_slots": ["ExplanationWrongA"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-AD-054",
+        "section": "A",
+        "state": "Certified",
+        "correct_choice": "B",
+        "empty_slots": ["ExplanationWrongC"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-AD-055",
+        "section": "A",
+        "state": "Certified",
+        "correct_choice": "C",
+        "empty_slots": ["ExplanationWrongD"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-CD-002",
+        "section": "C",
+        "state": "Certified",
+        "correct_choice": "B",
+        "empty_slots": ["ExplanationWrongC"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-CD-003",
+        "section": "C",
+        "state": "Certified",
+        "correct_choice": "C",
+        "empty_slots": ["ExplanationWrongD"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-CD-006",
+        "section": "C",
+        "state": "Certified",
+        "correct_choice": "B",
+        "empty_slots": ["ExplanationWrongC"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-CD-022",
+        "section": "C",
+        "state": "Certified",
+        "correct_choice": "B",
+        "empty_slots": ["ExplanationWrongC"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-CD-023",
+        "section": "C",
+        "state": "Certified",
+        "correct_choice": "C",
+        "empty_slots": ["ExplanationWrongD"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      },
+      {
+        "qid": "P1-CD-034",
+        "section": "C",
+        "state": "Certified",
+        "correct_choice": "B",
+        "empty_slots": ["ExplanationWrongC"],
+        "dl008_clean": true,
+        "validation_status": "AUTHORITATIVE_TARGET — exactly 1 empty non-CC distractor slot"
+      }
+    ]
+  },
+  "pack_b": { "certified_dl026_items": [], "dl008_total": 0 },
+  "pack_e": { "certified_dl026_items": [], "dl008_total": 0 },
+  "cross_pack_summary": {
+    "total_certified_dl026": 13,
+    "pack_a": 1,
+    "pack_c": 2,
+    "pack_d": 10,
+    "all_dl008_clean": true,
+    "all_single_empty_slot": true,
+    "all_empty_slots_are_non_cc": true,
+    "note": "All 13 items have exactly one empty non-CorrectChoice ExplanationWrong slot. All are DL-008 clean. All are currently Certified. All are valid remediation targets."
+  }
+}

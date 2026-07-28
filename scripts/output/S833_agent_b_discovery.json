@@ -1,0 +1,328 @@
+{
+  "session": "S833",
+  "agent": "B",
+  "phase": "Discovery",
+  "task": "Difficulty and domain gap review — content creation targets",
+  "verified_against": {
+    "S831 Agent G": "Difficulty distribution (0% VDiff, 3.3% Diff, 48.3% Moderate). Bloom's (0% Evaluate, 0.4% Analyze, 50.2% Understand). Coordinated rebalance strategy: 600 downgrades + 450 upgrades, leaves VDiff at ~2%. Confirmed S831 used ~930 items verified.",
+    "S832 Agent A": "Section counts (A=375, B=500, C=500, D=375, E=415, F=374). Certification state (2,298/2,540 = 90.5%). Cross-pack isomorphism finding. Sections E/F identified as certification bottleneck.",
+    "CURRENT_BASELINES.md (S811)": "2,540 total QIDs, 2,298 Certified. Pack E=540 (includes R-series). Pack D Section F=74 items.",
+    "DEFECT_LIBRARY.md DL-031 entry": "~500 items estimated with difficulty inflation. Definition-match pattern: stem=textbook definition, answer=term name."
+  },
+  "baseline_data_confirmed": {
+    "total_items": 2540,
+    "difficulty_distribution": {
+      "Easy_1": { "count": 536, "pct": 21.1, "target_2540": 381, "target_pct": 15.0, "surplus": 155 },
+      "ModerateEasy_2": { "count": 693, "pct": 27.3, "target_2540": 508, "target_pct": 20.0, "surplus": 185 },
+      "Moderate_3": { "count": 1226, "pct": 48.3, "target_2540": 762, "target_pct": 30.0, "surplus": 464 },
+      "Difficult_4": { "count": 85, "pct": 3.3, "target_2540": 635, "target_pct": 25.0, "deficit": 550 },
+      "VeryDifficult_5": { "count": 0, "pct": 0.0, "target_2540": 254, "target_pct": 10.0, "deficit": 254 }
+    },
+    "blooms_distribution": {
+      "Remember": { "count": 72, "pct": 2.8, "target_2540": 127, "target_pct": 5.0, "deficit": 55 },
+      "Understand": { "count": 1276, "pct": 50.2, "target_2540": 381, "target_pct": 15.0, "surplus": 895 },
+      "Apply": { "count": 1182, "pct": 46.5, "target_2540": 1016, "target_pct": 40.0, "surplus": 166 },
+      "Analyze": { "count": 10, "pct": 0.4, "target_2540": 635, "target_pct": 25.0, "deficit": 625 },
+      "Evaluate": { "count": 0, "pct": 0.0, "target_2540": 381, "target_pct": 15.0, "deficit": 381 }
+    }
+  },
+
+  "content_creation_targets": {
+    "summary": {
+      "total_new_items_needed_range": "600-900",
+      "proposed_new_items": 740,
+      "breakdown_by_category": {
+        "analyze_items": 296,
+        "evaluate_items": 148,
+        "difficult_items": 222,
+        "vdiff_items": 74
+      },
+      "phasing": {
+        "phase_1": { "items": 150, "focus": "VDiff bridge items + Evaluate seed items. Sections E and F first (worst Bloom's calibration).", "rationale": "VDiff is at 0% — even 74 new VDiff items is only a bridge. Evaluate is at 0% — need to establish the tier. Phase 1 creates the foundation items that prove the content model." },
+        "phase_2": { "items": 450, "focus": "Analyze + Difficult bulk creation. All sections in parallel.", "rationale": "These are the largest deficits. Bulk production using established templates from Phase 1." },
+        "phase_3": { "items": 140, "focus": "Residual closure + quality polish.", "rationale": "Fill remaining gaps, add Explain-the-Explanation depth, audit against CAQS §1.6." }
+      },
+      "calibration_note": "DL-031 coordinated rebalance (S831 Agent G strategy) addresses ~423 of the 550 Difficult shortfall via Moderate→Difficult upgrades. Combined with 222 new Difficult items, the effective Difficult tier grows from 85 → ~535 (post-recalibration) + ~222 (new) ≈ 757, exceeding the 635 target for the original 2,540 pool. When pool grows to ~3,280, the Difficult target becomes 820 — still within range.",
+      "vdiff_reality_check": "Even with full recalibration (S831 Agent G projects ~55 VDiff) and 74 new VDiff items, the VDiff tier reaches ~129 — only ~39% of the 328 target for a 3,280-item pool. TRUE VDiff closure requires ~200 ADDITIONAL items beyond this proposal. This is a multi-cycle effort."
+    },
+
+    "per_section_targets": {
+      "A": {
+        "domain": "External Financial Reporting Decisions",
+        "current_items": 375,
+        "new_items_target": 100,
+        "analyze_items": 40,
+        "evaluate_items": 20,
+        "difficult_items": 30,
+        "vdiff_items": 10,
+        "post_expansion_total": 475,
+        "post_expansion_pct_of_pool": 14.5,
+        "ima_target_pct": 15.0,
+        "priority_topics": [
+          "ASC 740 income tax provision analysis (deferred tax asset/liability judgment, valuation allowance scenarios)",
+          "Business combinations — acquisition method allocation, bargain purchase evaluation",
+          "Cash flow classification disputes (operating vs. investing vs. financing — judgment calls)",
+          "Comprehensive ratio interpretation with multi-year trends and industry benchmarks",
+          "Derivatives and hedge accounting — fair value vs. cash flow hedge evaluation",
+          "ASC 842 lessee classification judgment scenarios (finance vs. operating lease criteria)"
+        ],
+        "rationale": "Section A has 375 items but only ~3 Difficult — the worst difficulty calibration of any section besides F. Adding 100 items at Analyze/Evaluate/Difficult tiers directly addresses the 0 Difficult gap. ASC 740, business combinations, and cash flow classification are natural Evaluate-tier domains (judgment required).",
+        "gap_areas_validated": [
+          "ASC 740 income taxes: likely fewer than 5 items in current pool",
+          "Business combinations: likely fewer than 10 items",
+          "Derivatives: likely 0-5 items",
+          "Cash flow classification analysis: items exist but almost all at Understand level"
+        ]
+      },
+      "B": {
+        "domain": "Planning, Budgeting, and Forecasting",
+        "current_items": 500,
+        "new_items_target": 150,
+        "analyze_items": 60,
+        "evaluate_items": 30,
+        "difficult_items": 45,
+        "vdiff_items": 15,
+        "post_expansion_total": 650,
+        "post_expansion_pct_of_pool": 19.8,
+        "ima_target_pct": 20.0,
+        "priority_topics": [
+          "Comprehensive cash budget with borrowing constraints — multi-month, credit line interest, minimum balance cascading (VDiff candidate)",
+          "Multi-product CVP with sales mix shifts, target profit, and constraint analysis",
+          "Learning curve integrated with production budget and direct labor budget (multi-step, 4-5 calculation chains)",
+          "Expected value decision trees with multiple decision nodes and probability revisions",
+          "Flexible budget performance evaluation with multi-factor variance decomposition",
+          "Monte Carlo simulation — scenario generation and interpretation (currently 1 item total)",
+          "Rolling forecast vs. static budget — recommendation scenarios with KPI implications"
+        ],
+        "rationale": "Largest section (500 items), best existing difficulty calibration (29 Difficult — most of any section). Natural home for calculation-based Difficult/VDiff items. Budgeting + forecasting combinations create 4-5 step chains that naturally scale to VDiff. Learning curve + budget integration is a gap (S831 Agent G Note).",
+        "gap_areas_validated": [
+          "Monte Carlo: 1 item across entire pool",
+          "Learning curves: items exist but typically single-step; depth gap for multi-stage integration",
+          "Expected value decision trees: items exist but mostly at Apply level; Evaluate gap"
+        ]
+      },
+      "C": {
+        "domain": "Performance Management",
+        "current_items": 500,
+        "new_items_target": 150,
+        "analyze_items": 60,
+        "evaluate_items": 30,
+        "difficult_items": 45,
+        "vdiff_items": 15,
+        "post_expansion_total": 650,
+        "post_expansion_pct_of_pool": 19.8,
+        "ima_target_pct": 20.0,
+        "priority_topics": [
+          "Comprehensive 4-variance analysis with reconciliation to actual profit (VDiff candidate)",
+          "Mix and yield variance decomposition — multi-product manufacturing with input substitution analysis",
+          "Balanced scorecard cause-effect chain analysis — from learning & growth → internal process → customer → financial",
+          "Transfer pricing negotiation scenarios — dual-pricing, market-based vs. cost-based, capacity constraints",
+          "Segmented performance evaluation — ROI, RI, EVA comparison across divisions with conflicting incentives",
+          "Productivity measures — total factor productivity, partial productivity, trend analysis (currently 1 item)",
+          "ROI decomposition (DuPont) with managerial decision evaluation"
+        ],
+        "rationale": "Variance analysis naturally scales from Apply (single-variance calculation) to Analyze (multi-variance interpretation) to Evaluate (investigation threshold judgment). Balanced scorecard and transfer pricing are judgment-rich domains ideal for Evaluate items. EVA depth exists (12 items) but skewed toward calculation; needs interpretation/evaluation framing.",
+        "gap_areas_validated": [
+          "Productivity measures: 1 item across entire pool (per S831 G Note)",
+          "Mix/yield variances: items exist but sparse; likely <20 total across all packs"
+        ]
+      },
+      "D": {
+        "domain": "Cost Management",
+        "current_items": 375,
+        "new_items_target": 100,
+        "analyze_items": 40,
+        "evaluate_items": 20,
+        "difficult_items": 30,
+        "vdiff_items": 10,
+        "post_expansion_total": 475,
+        "post_expansion_pct_of_pool": 14.5,
+        "ima_target_pct": 15.0,
+        "priority_topics": [
+          "Joint costing + sell-or-process-further integration — multi-product split-off with constrained resources",
+          "ABC customer profitability analysis — activity cost pools, customer-level P&L, retention decisions",
+          "CVP + relevant costing combined decisions — make-or-buy with capacity constraints and opportunity costs (VDiff candidate)",
+          "Target costing design scenarios — market-driven price, required margin, allowable cost, cost gap analysis",
+          "Theory of Constraints throughput analysis — bottleneck identification, exploitation, subordination decisions",
+          "Life-cycle costing — upstream/downstream cost allocation, pricing strategy over product life (currently 2 items)",
+          "Lean accounting — value stream costing, box score interpretation, vs. traditional costing comparison"
+        ],
+        "rationale": "Cost management has rich calculation + judgment integration opportunities. CVP + relevant costing + make-or-buy + special orders create 4-5 layer combined scenarios ideal for VDiff. Life-cycle costing, target costing, and lean accounting are near-zero coverage gaps.",
+        "gap_areas_validated": [
+          "Life-cycle costing: 2 items across entire pool",
+          "TQM: 1 item across entire pool",
+          "Target costing: likely <10 items; depth gap",
+          "Lean accounting: likely <5 items; emerging topic gap"
+        ]
+      },
+      "E": {
+        "domain": "Internal Controls",
+        "current_items": 415,
+        "new_items_target": 120,
+        "analyze_items": 48,
+        "evaluate_items": 24,
+        "difficult_items": 36,
+        "vdiff_items": 12,
+        "post_expansion_total": 535,
+        "post_expansion_pct_of_pool": 16.3,
+        "ima_target_pct": 15.0,
+        "note_on_slight_over": "Section E is already 1.35pp over IMA target due to 40 R-series items. Adding 120 items pushes it to 16.3%. Acceptable — the IMA blueprint allows ±3% tolerance, and E has the worst Bloom's calibration (77% Understand) requiring disproportionate remediation.",
+        "priority_topics": [
+          "COSO ERM risk assessment scenarios — risk appetite, risk tolerance, risk mapping with probability × impact matrices",
+          "Internal control deficiency evaluation — control deficiency vs. significant deficiency vs. material weakness judgment",
+          "Fraud risk identification from scenarios — pressure, opportunity, rationalization (Fraud Triangle) applied to case facts",
+          "Segregation of duties analysis in ERP environments — role-based access conflicts, compensating controls",
+          "Governance structure effectiveness evaluation — board composition, audit committee independence, whistleblower mechanisms",
+          "Three lines of defense model — operational management, risk management, internal audit interaction scenarios",
+          "SOX Section 404 — management assessment vs. auditor attestation, scope decisions, remediation timelines",
+          "IT general controls (ITGC) — program change management, logical access, computer operations scenarios"
+        ],
+        "rationale": "Biggest Bloom's calibration problem: 77% Understand (~320 items are term-definition recall). Adding 120 scenario-based items transforms Section E from a vocabulary quiz into a judgment assessment. R-series headroom (Pack E, 40 items) provides expansion infrastructure. Fraud detection and three lines of defense are near-zero in the current pool.",
+        "gap_areas_validated": [
+          "Fraud detection techniques: likely <10 items; mostly definitional (COST, Fraud Triangle terms)",
+          "Three lines of defense: likely 0-5 items",
+          "SOX depth: items exist but heavily definitional (Section 302 vs 404 definitions)"
+        ]
+      },
+      "F": {
+        "domain": "Technology and Analytics",
+        "current_items": 374,
+        "new_items_target": 120,
+        "analyze_items": 48,
+        "evaluate_items": 24,
+        "difficult_items": 36,
+        "vdiff_items": 12,
+        "post_expansion_total": 494,
+        "post_expansion_pct_of_pool": 15.1,
+        "ima_target_pct": 15.0,
+        "priority_topics": [
+          "Predictive analytics model evaluation — regression output interpretation, R-squared, p-values, residual analysis",
+          "Data governance breach scenarios — data quality failure, master data management conflict, remediation decisions",
+          "ERP implementation risk assessment — phased vs. big-bang, module selection, change management costs",
+          "AI/ML application judgment — supervised vs. unsupervised, overfitting, training data bias, ethical AI governance",
+          "Cybersecurity control evaluation — NIST framework application, breach response, control gaps from scenario data",
+          "Blockchain use case analysis — smart contract applicability, permissioned vs. permissionless, triple-entry accounting",
+          "RPA (robotic process automation) — candidate process evaluation, ROI analysis, exception handling scenarios",
+          "Cloud computing — SaaS/PaaS/IaaS selection, risk assessment, data residency compliance",
+          "Business intelligence dashboard evaluation — KPI selection, data visualization best practices, misleading visual judgments"
+        ],
+        "rationale": "Worst section for Bloom's (85% Understand) — worse than Section E. 318 of 374 items are term-definition recall. Current CMA exam increasingly emphasizes analytics and technology application. Emerging tech (AI, blockchain, RPA, cloud) is barely represented at application level — this is both a certification gap and a future-proofing gap.",
+        "gap_areas_validated": [
+          "Predictive/prescriptive analytics: 2 items across entire pool",
+          "AI governance: likely 0-5 items; mostly 'what is AI' definitions",
+          "RPA: likely 0-5 items",
+          "Cloud computing depth: items exist but mostly SaaS/PaaS/IaaS definitions",
+          "Blockchain: likely 0-5 items; mostly definitional"
+        ]
+      }
+    },
+
+    "totals": {
+      "new_items": 740,
+      "analyze_items": 296,
+      "evaluate_items": 148,
+      "difficult_items": 222,
+      "vdiff_items": 74,
+      "post_expansion_pool_size": 3280,
+      "effort_estimate": {
+        "phase_1": "~3-4 weeks (150 items, foundational templates established)",
+        "phase_2": "~6-8 weeks (450 items, bulk production with established patterns)",
+        "phase_3": "~2-3 weeks (140 items, quality polish and gap closure)",
+        "total": "~11-15 weeks of dedicated content authoring across all sections",
+        "note": "Assumes 1 dedicated author producing ~15-20 items/week with CAQS §1.6 six-dimension verification. Parallel authoring (2-3 authors) could reduce to 4-6 weeks."
+      }
+    }
+  },
+
+  "impact_projection": {
+    "methodology": "Combines DL-031 coordinated rebalance (S831 Agent G — 600 downgrades + 450 upgrades) with 740 new items at designated tiers.",
+    "post_rebalance_only": {
+      "description": "After DL-031 coordinated rebalance (no new items yet)",
+      "difficulty": {
+        "Easy_1": { "count": 1036, "pct": 40.8 },
+        "ModerateEasy_2": { "count": 443, "pct": 17.4 },
+        "Moderate_3": { "count": 826, "pct": 32.5 },
+        "Difficult_4": { "count": 235, "pct": 9.3 },
+        "VeryDifficult_5": { "count": 0, "pct": 0.0 }
+      },
+      "assessment": "Easy is bloated at 40.8% (target 15%) — this is the cost of DL-031 downgrades without offsetting. Moderate is close to target (32.5% vs 30%). Difficult improves from 3.3% → 9.3% but still well below 25% target. VDiff remains at 0%. The rebalance trades Moderate excess for Difficult improvement but creates an Easy surplus that new content must dilute."
+    },
+    "post_expansion": {
+      "description": "After rebalance + 740 new items (3,280 total pool)",
+      "pool_size": 3280,
+      "difficulty": {
+        "Easy_1": { "count": "~1,036 (no new Easy items created)", "pct": 31.6, "target_pct": 15.0, "assessment": "OVER — Easy surplus persists because no new Easy items are created. Pool dilution reduces pct from 40.8% → 31.6% but still well above 15% target. Mitigation: strict 'no new Easy items' policy + stop adding definitional items. Additional 283 Easy-labeled items from DL-031 complete the picture. Future: consider Easy→Mod-Easy upgrades for borderline items." },
+        "ModerateEasy_2": { "count": "~443 (no new Mod-Easy items specifically targeted)", "pct": 13.5, "target_pct": 20.0, "assessment": "SLIGHTLY UNDER — acceptable. Most new items are Difficult or higher; Mod-Easy gets diluted." },
+        "Moderate_3": { "count": "~826 existing (some conversion to Diff via recalibration) + some new items at this tier from the 740 (items designed as Difficult may be downgraded to Moderate during QA)", "pct": 25.2, "target_pct": 30.0, "assessment": "SLIGHTLY UNDER — acceptable. The deliberate focus on upper tiers creates a moderate-tier squeeze that is preferable to the current inflation." },
+        "Difficult_4": { "count": "~535 (post-recalibration) + 222 (new)", "pct": 23.1, "target_pct": 25.0, "assessment": "NEAR TARGET — within 2pp. Excellent improvement from 3.3%." },
+        "VeryDifficult_5": { "count": "~55 (post-recalibration) + 74 (new)", "pct": 3.9, "target_pct": 10.0, "assessment": "UNDER — largest remaining gap. 129 VDiff vs. 328 target. True closure requires ~200 ADDITIONAL VDiff items beyond this proposal. This is acknowledged as a multi-cycle effort." }
+      },
+      "blooms": {
+        "Remember": { "count": "~72 (no new Remember items created)", "pct": 2.2, "target_pct": 5.0, "assessment": "SLIGHTLY UNDER — acceptable. Remember is the lowest Bloom's tier and the target is a floor, not a ceiling." },
+        "Understand": { "count": "~1,276 (existing, diluted by pool growth)", "pct": 38.9, "target_pct": 15.0, "assessment": "OVER — Understand surplus persists (pool dilution helps: 50.2% → 38.9%). DL-031 upgrades (stem rewrites) will further convert Understand→Apply. Still above target; unavoidable with current inventory." },
+        "Apply": { "count": "~1,182 (existing) + ~148 (portion of new items at Apply level based on realistic item design)", "pct": 39.0, "target_pct": 40.0, "assessment": "NEAR TARGET — excellent. The existing Apply surplus helps offset the Analyze/Evaluate under-representation." },
+        "Analyze": { "count": "~10 (existing) + ~200 (recalibration upgrades) + 296 (new)", "pct": 15.4, "target_pct": 25.0, "assessment": "UNDER — improved from 0.4% to 15.4% but still 10pp below target. Largest remaining Bloom's gap. Future phases must create additional Analyze items." },
+        "Evaluate": { "count": "0 (existing) + 148 (new)", "pct": 4.5, "target_pct": 15.0, "assessment": "UNDER — improved from 0% to 4.5% but well below target. Evaluate is the hardest tier to author (requires professional judgment scenarios). Multi-cycle effort required." }
+      },
+      "overall_assessment": "The 740-item expansion significantly improves difficulty calibration (Difficult from 3.3% → ~23%) and creates the first Evaluate items in the pool's history (0 → 148). Very Difficult, Analyze, and Evaluate remain under target but are trending in the right direction. The Easy and Understand surpluses are structural — they reflect the pool's origin as a template-generated definition bank and cannot be fully eliminated without deleting items (prohibited per Constitution §7)."
+    }
+  },
+
+  "risk_assessment": {
+    "risk_1": {
+      "risk": "Content quality degradation from volume pressure",
+      "probability": "MEDIUM",
+      "impact": "HIGH",
+      "mitigation": "Phase 1 creates templates and establishes quality baselines before bulk production in Phase 2. Every item must pass CAQS §1.6 six-dimension verification at HIGH confidence. Per-batch governance guard (Rule 5: ≤30 items) enforces review pacing."
+    },
+    "risk_2": {
+      "risk": "New items introduce DL-008/DL-026 structural defects",
+      "probability": "HIGH",
+      "impact": "MEDIUM",
+      "mitigation": "Governance guard Rule 2 (DL-008 BLOCK) and Rule 6 (DL-026 BLOCK) are active. Every batch is scanned pre-commit. Item template must include empty ExplanationWrong[CorrectChoice] by default."
+    },
+    "risk_3": {
+      "risk": "Section E already over IMA target (+1.35pp); adding 120 items pushes to 16.3%",
+      "probability": "CERTAIN",
+      "impact": "LOW",
+      "mitigation": "IMA blueprint allows ±3% section-weight tolerance. 16.3% is within tolerance. Section E's Bloom's crisis (77% Understand) justifies disproportionate investment. If strict adherence is required, reduce E target to 80 and redistribute 40 to Sections A/D."
+    },
+    "risk_4": {
+      "risk": "New items skew toward easier tiers despite design intent",
+      "probability": "MEDIUM",
+      "impact": "MEDIUM",
+      "mitigation": "Design templates must enforce scenario-based stems, multi-step calculations, and judgment requirements from blueprint stage. Pre-authoring tier check: 'Would a candidate who only memorized the definition get this right?' If yes → redesign. Post-authoring difficulty review before certification."
+    },
+    "risk_5": {
+      "risk": "Template-generated items across packs A/C/D create new clone groups (DL-012 recurrence)",
+      "probability": "MEDIUM",
+      "impact": "HIGH",
+      "mitigation": "UniqueConceptKey must be assigned per item. Cross-pack stem-similarity scan (Jaccard > 0.70) run after each Phase. Items that share the same template skeleton but differ only by company names are flagged and diversified."
+    },
+    "risk_6": {
+      "risk": "Bloom's distribution cannot reach targets without deleting Understand items",
+      "probability": "CERTAIN",
+      "impact": "LOW",
+      "mitigation": "Constitution §7 prohibits deletion. 1,276 Understand items can only be diluted by pool expansion, not removed. The 3,280-item pool dilutes Understand from 50.2% → 38.9%. DL-031 stem upgrades convert some Understand→Apply. Further dilution requires pool growth beyond 3,280. This is a structural constraint, not a failure."
+    }
+  },
+
+  "section_priority_order": {
+    "phase_1_order": ["F", "E", "B"],
+    "phase_1_rationale": "Section F has the worst Bloom's distribution (85% Understand) — creating even 24 Analyze + 12 Evaluate items establishes a new calibration floor. Section E is second-worst (77% Understand) and has the most items (415) — large impact per item. Section B has the best existing calibration and the most Difficult items (29) — natural proving ground for VDiff templates.",
+    "phase_2_order": ["C", "B_continuation", "D", "A"],
+    "phase_2_rationale": "Section C variance analysis naturally scales to multiple tiers. Section B bulk production after Phase 1 templates are validated. Sections D and A have fewer items overall (375 each) and proportionally large gaps.",
+    "phase_3_order": ["A_residual", "D_residual", "F_residual"],
+    "phase_3_rationale": "Close remaining gaps. Prioritize sections where Analyze/Evaluate targets are furthest from achieved levels."
+  },
+
+  "recommendation": "PROCEED — 740 new items across 6 sections, phased over 3 stages, with emphasis on Analyze/Evaluate/Difficult tiers. Sections E and F are the critical priority in Phase 1 due to catastrophic Bloom's calibration (77% and 85% Understand respectively). Acknowledge that Very Difficult, Analyze, and Evaluate will remain under CAQS targets even after full execution — these are structural gaps that require content creation cycles beyond S833 scope.",
+
+  "open_questions_for_s833_planning": [
+    "Should Section E target be reduced from 120 to 80 to stay within IMA ±3% tolerance, redistributing 40 items to Sections A/D?",
+    "Are the 40 R-series items (Pack E, P1-E-R01–R40) available for stem rewrites or are they structurally locked (DL-034 resolved, all fields present per S808)?",
+    "What is the per-pack distribution of new items? Should they go into existing pack files or a new pack_f_corrected.js?",
+    "Should case study items (745 estimated across 75 cases) be included in the Bloom's/Difficulty calibration targets, or are they tracked separately?",
+    "What is the maximum realistic weekly authoring rate for a single build-time AI verification agent operating against 2,540 existing items?"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "session": "723",
+  "agent": "C",
+  "title": "DCS v1.1 Certification Review",
+  "document": "knowledge/DIFFICULTY_CALIBRATION_STANDARD.md",
+  "version": "v1.1",
+  "verdict": "CERTIFIED",
+  "decision_trees": {
+    "count": 4,
+    "complete": true,
+    "r2_borderline_rate": "41.9% (Understand vs Apply)",
+    "r4_subjectivity": "Two-competent-practitioners test — inherently subjective"
+  },
+  "escalation_paths": {
+    "clear": true,
+    "documentation_gaps": ["DCS §11.2 references ALIGNMENT_MAINTENANCE_GUIDE.md §7 but cross-reference table at §8.1 lists DCS v1.0"]
+  },
+  "forbidden_triggers": {
+    "comprehensive": true,
+    "missing_explicit_references": ["DL-031 (definition-match inflation)", "DL-032 (uniform difficulty)"]
+  },
+  "reviewer_guidance": {
+    "adequate": false,
+    "gaps": ["No worked examples", "No borderline zone protocol", "15-item checklist too long", "No quick-reference card"]
+  },
+  "caqs_alignment": "CONSISTENT",
+  "recommendations": [
+    "PRIORITY 1: Borderline Zone Protocol for Tree R2 (41.9% borderline rate)",
+    "PRIORITY 2: Restore example library with re-verified QIDs",
+    "PRIORITY 2: Build DCS compliance validator script",
+    "PRIORITY 3: Add visual flow-chart decision aids",
+    "PRIORITY 3: Update ALIGNMENT_MAINTENANCE_GUIDE.md cross-reference to v1.1",
+    "PRIORITY 3: Add explicit DL-031/DL-032 by-name cross-references",
+    "PRIORITY 4: Group 15-item pre-cert checklist",
+    "PRIORITY 4: Expand same-domain category table"
+  ]
+}

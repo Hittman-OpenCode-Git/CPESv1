@@ -1,0 +1,65 @@
+{
+  "session": "309",
+  "agent": "J",
+  "title": "Dependency Bottleneck Map",
+  "generated": "2026-07-26",
+
+  "dependencies": {
+    "300_to_800": {
+      "type": "DATA — 300-series analytics feed 800-series certification priorities",
+      "status": "MOSTLY COMPLETE — S302-S308 provide full analytics stack. S309 bottleneck analysis is final input.",
+      "handoffRisk": "LOW — all 800-series dependencies satisfied"
+    },
+    "800_to_500": {
+      "type": "FILE-SCOPE — 800-series touches pack files, 500-series touches case files. No direct conflict.",
+      "status": "CAN PARALLELIZE — disjoint file scopes",
+      "handoffRisk": "NONE"
+    },
+    "800_wave1_to_wave2": {
+      "type": "SEQUENCING (removed)",
+      "status": "REMOVED — DL-008 Wave 1 confirmed 0 items. Wave 2 can start immediately.",
+      "impact": "Critical path shortened by 3 sessions"
+    },
+    "800_DomainE_to_DomainF": {
+      "type": "METHODOLOGY — Domain E certification establishes the pattern for Domain F",
+      "status": "PARTIALLY PARALLELIZABLE — after first 2 Domain E cert sessions establish methodology, remaining E and all F sessions can run in parallel across different pack files",
+      "handoffRisk": "MEDIUM — methodology transfer quality must be verified"
+    },
+    "800_to_EW": {
+      "type": "CONTENT — certification certifies items; EW authoring fills distractor explanations. Should be co-located.",
+      "status": "ALREADY CO-LOCATED in HYBRID strategy — certification waves include EW authoring",
+      "handoffRisk": "LOW"
+    },
+    "700_to_closure": {
+      "type": "SEQUENCING — 700-series governance closure must happen after all certification",
+      "status": "DEFERRED to Phase 7",
+      "handoffRisk": "LOW — standard governance closure"
+    }
+  },
+
+  "artificialDependencies_removable": [
+    {
+      "dependency": "DL-008 Wave 1 before Domain E/F certification",
+      "status": "REMOVED — DL-008 = 0 items. No Wave 1 needed."
+    },
+    {
+      "dependency": "Domain E complete before Domain F starts",
+      "status": "WEAKENED — can partially parallelize after methodology baseline"
+    },
+    {
+      "dependency": "Modernization before certification closure",
+      "status": "REMOVED — modernization can be deferred to post-certification. Only affects quality polish, not safety."
+    }
+  ],
+
+  "realDependencies_mustPreserve": [
+    "CAQS §1.6 certification audit gate — each item must pass six-dimension review before certification",
+    "File-scope discipline — pack files cannot be concurrently written by different sessions",
+    "Governance guard — 20/20 PASS required before any write operation",
+    "Certified count stability — 2,181 baseline must be preserved through all operations"
+  ],
+
+  "criticalPath_updated": "300-series closeout (S309-S310) → Domain E Section E certification (Packs C/D, ~167 items) → Domain F Section F authoring + certification (Packs C/D, ~149 items, parallel with later E stages) → Pack A closeout (19 items) → Case-bank EW (310 items, parallel with cert waves) → Governance closure (700-series)",
+  
+  "totalCriticalPathLength": "22 sessions (down from 30 in S308)"
+}

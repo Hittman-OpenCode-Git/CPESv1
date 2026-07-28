@@ -1,0 +1,85 @@
+{
+  "sessionId": "S854",
+  "title": "Governance Cross-Verification — Post-S852/S853 Integrity Sweep",
+  "type": "GOVERNANCE",
+  "priority": "HIGH",
+  "generatedFrom": "S851 → S852/S853 — Session Orchestrator (Truth-Verified)",
+  "timestamp": "2026-07-27T14:08:01.788Z",
+  "summary": {
+    "totalChecks": 10,
+    "predecessorSessions": [
+      "S852",
+      "S853"
+    ],
+    "successCriteria": "All 10 governance checks PASS. Zero drift. Manifest reconciled. Work queue regenerated.",
+    "preFlightChecks": [
+      "S852 complete (manifest regenerated)",
+      "S853 complete (77 items certified)",
+      "All backups confirmed"
+    ]
+  },
+  "checks": [
+    {
+      "checkId": "GOV-01",
+      "name": "Certified Count Stability",
+      "command": "Select-String pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' | Measure-Object",
+      "expected": "stable_across_2_scans"
+    },
+    {
+      "checkId": "GOV-02",
+      "name": "Identity Validator",
+      "command": "node scripts/identity_validator.js",
+      "expected": ">=99.9% pass"
+    },
+    {
+      "checkId": "GOV-03",
+      "name": "Governance Guard Suite",
+      "command": "node scripts/test_governance_guard.js",
+      "expected": "27/27 PASS"
+    },
+    {
+      "checkId": "GOV-04",
+      "name": "Delta Ledger Zero Drift",
+      "command": "node scripts/delta_ledger_builder.js",
+      "expected": "NO_CHANGE only"
+    },
+    {
+      "checkId": "GOV-05",
+      "name": "DL-008 Direct Scan",
+      "command": "direct object-parse scan",
+      "expected": "0 Certified items",
+      "current": "0 certified"
+    },
+    {
+      "checkId": "GOV-06",
+      "name": "DL-026 Direct Scan",
+      "command": "direct object-parse scan",
+      "expected": "0 Certified items",
+      "current": "0 certified"
+    },
+    {
+      "checkId": "GOV-07",
+      "name": "Question Count Integrity",
+      "command": "Select-String pack_*_corrected.js -Pattern '\"QuestionID\"' | Measure-Object",
+      "expected": 2540
+    },
+    {
+      "checkId": "GOV-08",
+      "name": "Manifest Freshness",
+      "command": "Compare manifest generation timestamp to pack file modification times",
+      "expected": "manifest <= 5 min older than packs"
+    },
+    {
+      "checkId": "GOV-09",
+      "name": "Work Queue Rebuild",
+      "command": "node scripts/work_queue_manager.js",
+      "expected": "lanes populated, 0 BLOCKED Certified"
+    },
+    {
+      "checkId": "GOV-10",
+      "name": "Recommendation Router Run",
+      "command": "node scripts/recommendation_auto_router.js",
+      "expected": "routes assigned, 0 orphaned recs"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "tracks": {
+    "300-series": {
+      "sessions": "S301-S310",
+      "status": "S301-S306 COMPLETE, S307 IN PROGRESS",
+      "outputs": [
+        "Risk register",
+        "EW debt registry",
+        "Certification debt registry",
+        "Remediation sequencing"
+      ],
+      "consumers": [
+        "500-series certification",
+        "700-series remediation",
+        "800-series modernization"
+      ],
+      "blockers": []
+    },
+    "500-series": {
+      "sessions": "S518-S537+",
+      "status": "Case-bank certification — 8/15 ENHANCED cases certified, MIGRATED_BASE_A/D remaining",
+      "dependencies": [
+        "300-series: remediation priorities",
+        "300-series: EW debt registry",
+        "300-series: certification debt registry"
+      ],
+      "blockers": [
+        "ENHANCED_CASE_BASE: 7 cases, 42 items remaining (C2/D2/E2/F2/A3/B3/C3)",
+        "MIGRATED_CASE_BASE_D: 75 items wholly unprocessed"
+      ],
+      "reusableAssets": [
+        "CAQS §1.6",
+        "S518-S536 certification methodology",
+        "Certification board framework"
+      ]
+    },
+    "700-series": {
+      "sessions": "S710-S717",
+      "status": "DL-008 remaining (67 items), DL-026 remediated (CERTIFIED=0), DL-031/DL-032 complete, 700-series paused",
+      "dependencies": [
+        "300-series: P0 priority list",
+        "300-series: risk register"
+      ],
+      "blockers": [],
+      "reusableAssets": [
+        "DL-026 remediation methodology",
+        "DL-013 boilerplate cleanup scripts",
+        "Difficulty calibration standard v1.0"
+      ]
+    },
+    "800-series": {
+      "sessions": "S800-S819",
+      "status": "MCQ Certification Program — LAUNCHED (S800), Waves 1-5 planned",
+      "dependencies": [
+        "300-series: UIQS rankings",
+        "300-series: remediation sequencing",
+        "300-series: certification debt registry"
+      ],
+      "blockers": [
+        "PR-1: 67 Certified DL-008 items (learner pool safety)",
+        "PR-2: DL-016 metadata-content shift",
+        "PR-3: FD-045 + FD-075 missing content blocks"
+      ],
+      "reusableAssets": [
+        "MCQ_CERTIFICATION_STANDARD_v1.0.md",
+        "S800 portfolio census",
+        "S800 wave roadmap"
+      ]
+    }
+  },
+  "criticalPath": "300-series → 800-series Wave 1 (DL-008) → 800-series Wave 2/3 (Pack C/D cert) → 500-series (remaining cases)",
+  "parallelWorkstreams": [
+    "800-series Wave 1 (DL-008) || 500-series ENHANCED_CASE_BASE remaining cases",
+    "800-series Wave 3 (Domain E/F certification) → feeds into 300-series remediation targets"
+  ]
+}

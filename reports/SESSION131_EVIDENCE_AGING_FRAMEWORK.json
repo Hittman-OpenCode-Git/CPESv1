@@ -1,0 +1,93 @@
+{
+  "session": "S131",
+  "title": "Evidence Aging Framework — Time-Weighted Accuracy, Recency Windows, and Freshness Filtering",
+  "timestamp": "2026-07-26T16:30:00.000Z",
+  "beforeS131": {
+    "agingMethod": "NONE — all-time aggregate accuracy with equal weight",
+    "pruningMethod": "COUNT-BASED ONLY — sessions capped at 50, recommendations at 200",
+    "staleDataRisk": "HIGH — answers from week 1 equal weight to yesterday",
+    "timeWeighting": "Not present before S131; topicPerformance.accuracy was a simple correctCount/totalAttempts ratio across the entire session history",
+    "recencyClassification": "No evidence windowing existed; all topics treated as equally current regardless of lastSeen"
+  },
+  "afterS131": {
+    "primaryMethod": "EWMA with 14-day half-life",
+    "formula": "weightedSum / weightTotal where weight = exp(-lambda * age), lambda = ln(2) / (14 * 86400000)",
+    "formulaDerivation": {
+      "lambda": "ln(2) / (14 * 24 * 3600 * 1000) = ln(2) / 1,209,600,000",
+      "weight": "exp(-lambda * ageMs) — exponential decay, halving every 14 days",
+      "weightedSum": "Σ (correct ? 1 : 0) * weight for all attempts on the topic",
+      "weightTotal": "Σ weight for all attempts on the topic",
+      "result": "Math.round(weightedSum / weightTotal * 100) — percentage, 0-100 integer scale"
+    },
+    "windows": {
+      "recent": { "maxAge": "7 days", "cutoffMs": "7 * 24 * 3600 * 1000 = 604,800,000", "description": "Most relevant evidence — lastSeen within past week" },
+      "active": { "maxAge": "14 days", "cutoffMs": "14 * 24 * 3600 * 1000 = 1,209,600,000", "description": "Still relevant, slightly discounted — lastSeen between 7 and 14 days ago" },
+      "historical": { "maxAge": "28 days", "cutoffMs": "28 * 24 * 3600 * 1000 = 2,419,200,000", "description": "Contextual, significantly discounted — lastSeen between 14 and 28 days ago" },
+      "archived": { "maxAge": ">28 days", "description": "Preserved for audit, minimal weight — lastSeen more than 28 days ago" }
+    },
+    "freshnessCheck": "getFreshObservations(maxAgeDays) filters observations to those with evidence within the specified window (default 28 days). Strengths, weaknesses, misconceptions, and topicTrends are filtered by lastSeen timestamp; behaviorTrends are passed through unfiltered.",
+    "ageProperties": {
+      "noDataLoss": true,
+      "olderEvidenceVisible": true,
+      "newerEvidenceWeightedHigher": true,
+      "auditability": "All raw data preserved in session history — every attempt with its timestamp remains in localStorage under the learner state object. The aging framework layers on top without mutating underlying data."
+    }
+  },
+  "functions": [
+    {
+      "name": "_computeTimeWeightedAccuracy",
+      "file": "may-learner-state.js",
+      "lineRange": "1510-1535",
+      "signature": "_computeTimeWeightedAccuracy(topic, data)",
+      "description": "Computes EWMA accuracy with 14-day half-life for a given topic. Iterates all sessions and attempts, filtering by topic match, then applies exponential decay weighting based on attempt age. Returns null if no attempts exist, otherwise a 0-100 integer percentage.",
+      "keyDetails": [
+        "Topic matching: (a.topic || 'Unclassified') === topic",
+        "Timestamp fallback: a.timestamp || s.date",
+        "Age clamped at zero: Math.max(0, now - timestamp) prevents negative age",
+        "Returns null (not 0) when no attempts exist — callers must handle null"
+      ],
+      "consumedBy": "computeEvidenceGraph() — stored as evidence[topic].timeWeightedAccuracy alongside overall accuracy and recent accuracy"
+    },
+    {
+      "name": "getEvidenceWindows",
+      "file": "may-learner-state.js",
+      "lineRange": "1647-1663",
+      "signature": "getEvidenceWindows()",
+      "description": "Classifies all topic evidence into four recency tiers based on lastSeen timestamp. Calls computeEvidenceGraph() internally, then partitions evidence into recent/active/historical/archived buckets.",
+      "keyDetails": [
+        "Computes a fresh evidence graph each call (no caching)",
+        "Uses evidence[topic].lastSeen as the partition key",
+        "Cutoffs computed at call time from Date.now()",
+        "Returns: { recent: {}, active: {}, historical: {}, archived: {} }",
+        "Each bucket value is a topic-indexed object of the full evidence entry"
+      ]
+    },
+    {
+      "name": "getFreshObservations",
+      "file": "may-learner-state.js",
+      "lineRange": "1667-1706",
+      "signature": "getFreshObservations(maxAgeDays)",
+      "description": "Filters the observation registry to only include observations where the underlying topic evidence is within maxAgeDays (default 28). Strengths, weaknesses, and topicTrends are filtered by topic's lastSeen; misconceptions by their own lastSeen; behaviorTrends pass through unfiltered.",
+      "keyDetails": [
+        "Default maxAgeDays: 28",
+        "Pre-builds an evidenceAge lookup map keyed by topic",
+        "Topic-based observations (strengths, weaknesses, topicTrends): filtered by evidenceAge[topic] >= cutoff",
+        "Misconceptions: filtered by m.lastSeen >= cutoff",
+        "Behavior trends: passed through unfiltered (no topic linkage)",
+        "Returns: { strengths, weaknesses, misconceptions, topicTrends, behaviorTrends } — same shape as observation registry"
+      ]
+    }
+  ],
+  "integrationPoints": {
+    "computeEvidenceGraph": {
+      "lineRange": "1456-1508",
+      "role": "Central evidence hub — calls _computeTimeWeightedAccuracy for every topic and stores timeWeightedAccuracy alongside overall accuracy and recent accuracy in the evidence map",
+      "consumers": ["getEvidenceWindows", "getFreshObservations", "verifyClassificationConsistency", "all coaching subsystems"]
+    },
+    "_deriveObservations": {
+      "lineRange": "1541-1630",
+      "role": "Converts evidence map into classified observations (strengths/weaknesses/misconceptions/etc.), consumed by getFreshObservations for recency filtering"
+    }
+  },
+  "safetyNote": "Older evidence remains visible and auditable. Weighting affects interpretation only — no evidence is lost. The EWMA produces a recency-aware summary; raw correctCount/totalAttempts remain accessible via evidence[topic].accuracy and evidence[topic].recentAccuracy. This is NOT prediction; it is a recency-aware summary of past performance. All raw data is preserved in session history within localStorage."
+}

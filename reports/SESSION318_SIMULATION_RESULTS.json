@@ -1,0 +1,226 @@
+{
+  "report_metadata": {
+    "report_id": "SESSION318_SIMULATION_RESULTS",
+    "generated_utc": "2026-07-27T12:00:00Z",
+    "assessment_type": "Conceptual Educational Simulation",
+    "domain": "E — Internal Controls",
+    "item_count_analyzed": 30,
+    "total_domain_e_items_in_pack": 115,
+    "simulation_mode": "conceptual (direct programmatic simulation not feasible — app.js is browser-based, no Node-compatible simulation API in may-core.js)",
+    "validation_step_pack_e_syntax": "PASSED — pack_e_corrected.js parses as valid JavaScript (node require test returned SYNTAX_OK)"
+  },
+
+  "methodology": {
+    "approach": "Since app.js is browser-only (depends on localStorage/DOM) and may-core.js has no programmatic simulation API — only coaching/tutoring chat-based functions — a conceptual simulation was performed based on detailed item-level analysis of the first 30 Domain E items in pack_e_corrected.js.",
+    "item_extraction": "pack_e_corrected.js contains MCQ_BANK_E with 540 total items, 115 tagged Section='E'. First 30 Domain E items (P1E-E-001 through P1E-E-030) were extracted and analyzed.",
+    "learner_profiles": [
+      {
+        "profile": "Strong Learner (90th percentile)",
+        "expected_score": "30/30",
+        "error_pattern": "None — correctly answers all items",
+        "ec_utility": "Reinforces and deepens existing knowledge"
+      },
+      {
+        "profile": "Average Learner (50th percentile)",
+        "expected_score": "22–24/30",
+        "error_pattern": "Struggles on Moderate items (Score=3); typical errors on nuanced COSO principle mappings, SOX section distinctions, audit function classifications",
+        "ew_utility": "EW explanations should target these conceptual confusions"
+      },
+      {
+        "profile": "Misconception-Prone Learner (25th percentile)",
+        "expected_score": "16–18/30",
+        "error_pattern": "Systematic errors on segregation of duties, risk assessment (inherent vs residual vs risk appetite vs tolerance), COSO component mapping, preventive vs detective control classification",
+        "ew_utility": "EW explanations must explicitly address the exact misconception behind each wrong choice"
+      }
+    ]
+  },
+
+  "item_catalog_first_30": {
+    "difficulty_distribution": {
+      "Easy": { "count": 7, "expected": 10, "delta": -3, "items": ["E-001","E-003","E-004","E-007","E-010","E-012","E-013"] },
+      "Moderate-Easy": { "count": 12, "expected": 8, "delta": 4, "items": ["E-002","E-005","E-006","E-008","E-009","E-011","E-014","E-015","E-018","E-020","E-022","E-028"] },
+      "Moderate": { "count": 11, "expected": 12, "delta": -1, "items": ["E-016","E-017","E-019","E-021","E-023","E-024","E-025","E-026","E-027","E-029","E-030"] }
+    },
+    "score_distribution": { "1": 7, "2": 12, "3": 11 },
+    "answer_key_distribution": { "A": 10, "B": 10, "C": 4, "D": 6 },
+    "cognitive_levels": { "Remember": 1, "Understand": 29 },
+    "ec_explanation_coverage": "30/30 (100%) — all items have ExplanationCorrect",
+    "ew_explanation_coverage": "30/30 — all items have 3 EW explanations (1 per wrong choice, correct choice has empty EW by design — this is expected and correct behavior)",
+    "avg_ec_length_chars": "Approximately 60–120 characters — concise, identifies the core concept",
+    "avg_ew_length_chars": "Approximately 80–160 characters — each distractor explanation names the wrong choice and explains why it is incorrect"
+  },
+
+  "per_profile_assessment": {
+    "strong_learner_90th": {
+      "score_simulation": "30/30 correct",
+      "distractor_plausibility": {
+        "rating": "ADEQUATE",
+        "analysis": "Strong learners will not be misled by distractors. However, on Easy items (E-001, E-003, E-010, E-012, etc.), the correct answer is immediately obvious and the distractors are implausibly far from the correct domain — e.g., E-001 offers 'Three', 'Seven', 'Eight' for 'how many COSO components?' A strong learner in CMA prep knows COSO IC = 5 and COSO ERM = 8. The 'Seven' distractor is a random number with no anchoring concept. For strong learners this is fine — these are warm-up items — but they provide no calibration challenge.",
+        "concern_items": ["E-001 (three/seven/eight distractors for 'five' components — two are arbitrary numbers)", "E-012 (fraud triangle components — distractors are unrelated lists rather than close-but-wrong fraud concepts)"]
+      },
+      "ec_explanation_depth": {
+        "rating": "ADEQUATE_BUT_BRIEF",
+        "analysis": "EC explanations are correct and concise (avg ~80 chars). For strong learners this is sufficient as reinforcement. However, on Moderate items (e.g., E-016 Internal Audit Independence, E-019 Material Weakness, E-023 SOX 404), the EC explanations provide the 'what' but not the 'why it matters' or 'how it connects to other COSO components.' A strong learner would benefit from slightly deeper context on Moderate items — e.g., linking material weakness to SOX 404 reporting requirements, or connecting internal audit independence to the three-lines-of-defense model.",
+        "example": "E-023 SOX 404: EC says 'SOX 404 requires management to assess and report on internal control.' A strong learner might benefit from: 'SOX 404(a) requires management's assessment; 404(b) requires the external auditor's attestation on that assessment.'"
+      },
+      "overall_adequacy": "EDUCATIONALLY_SOUND — ECs reinforce correctly; Easy items are trivially easy for this profile but that's acceptable for a mixed-difficulty bank"
+    },
+
+    "average_learner_50th": {
+      "score_simulation": "22–24 correct out of 30",
+      "expected_errors": [6, 7, 8],
+      "error_categories": [
+        {
+          "category": "COSO Principle Mapping",
+          "affected_items": ["E-028 (Principle 1)", "E-029 (Principle 13)"],
+          "analysis": "Average learners may confuse which principle number maps to which concept. EW explanations for these items helpfully describe why each wrong answer is incorrect, but do not provide a mnemonic or framework for distinguishing principles.",
+          "ew_adequacy": "ADEQUATE — each EW names the wrong principle and distinguishes it"
+        },
+        {
+          "category": "SOX Section Distinctions",
+          "affected_items": ["E-023 (SOX 404)", "E-024 (SOX 302)"],
+          "analysis": "Average learners commonly confuse SOX 302 (CEO/CFO certification) with SOX 404 (internal control assessment). The EW explanations correctly distinguish these, e.g., EW for 302 says 'internal control assessment is 404, not 302.' This directly addresses the common confusion.",
+          "ew_adequacy": "STRONG — EWs directly target the most common SOX section confusion"
+        },
+        {
+          "category": "Audit Function Classification",
+          "affected_items": ["E-016 (Internal audit independence)", "E-017 (Internal audit purpose)"],
+          "analysis": "The EW explanations correctly differentiate internal audit from external audit, board oversight, and management functions. However, the distinction between 'independence' (E-016) and 'purpose' (E-017) could be confusing — both have similar-looking distractors about 'reporting structure' and 'board reporting.'",
+          "ew_adequacy": "ADEQUATE — explanations are clear but the two items together might create cross-item confusion"
+        },
+        {
+          "category": "Risk Terminology (inherent vs residual vs appetite vs tolerance)",
+          "affected_items": ["E-009", "E-010", "E-011"],
+          "analysis": "This is a classic CMA confusion zone. The three items cover risk appetite (E-009), inherent risk (E-010), and residual risk (E-011). Each EW correctly cross-references the other concepts (e.g., 'residual risk is what remains after controls' vs 'inherent risk is before controls'). However, E-009's distractor A ('Risk after controls') is residual risk — an average learner who has these terms jumbled might not untangle them from just the EW text. A table or compare/contrast framing would help more.",
+          "ew_adequacy": "ADEQUATE — EWs are accurate but could benefit from cross-item reinforcement"
+        }
+      ],
+      "distractor_plausibility": {
+        "rating": "MOSTLY_ADEQUATE",
+        "analysis": "For the average learner, most distractors are plausible enough to require thought. Moderate-Easy items have distractors that are wrong-but-related concepts (e.g., E-002 'Physical controls' as a distractor for 'Control environment' — both are COSO-related, so the learner must know the taxonomy). However, some Easy items have distractors that are too obviously wrong for anyone who has studied at all (e.g., E-013 Preventive control: distractor D 'ignore risks' is patently absurd). For the average learner, ~4-5 of the 30 items (Easy ones) provide no discrimination value.",
+        "weak_items": ["E-001 (random number distractors)", "E-013 (absurd distractor D)", "E-004 (too obvious — 'segregation of duties' jumps out from 'board oversight' and 'code of conduct')"]
+      },
+      "ec_explanation_depth": {
+        "rating": "ADEQUATE",
+        "analysis": "EC explanations confirm the correct answer for average learners. On Moderate items where the average learner is more likely to err, the EC provides a concise factual statement. Good enough for reinforcement but could be slightly richer for the Moderate items where this profile has gaps."
+      },
+      "overall_adequacy": "EDUCATIONALLY_SOUND — explanations adequately support the average learner's typical error patterns"
+    },
+
+    "misconception_prone_learner_25th": {
+      "score_simulation": "16–18 correct out of 30",
+      "expected_errors": [12, 13, 14],
+      "systematic_error_patterns": [
+        {
+          "pattern": "Segregation of Duties Confusion",
+          "affected_items": ["E-005"],
+          "analysis": "The misconception-prone learner may know segregation of duties is important but not recall the three specific incompatible functions (authorization, custody, recordkeeping). EW-B says 'Accounting and finance are departmental labels, not the three incompatible functions' — this is accurate but doesn't actively teach the correct triplet. A struggling learner might read this and still not memorize authorization/custody/recordkeeping. The EW is factually correct but pedagogically thin for this profile.",
+          "ew_pedagogical_gap": "EW tells what's wrong but doesn't reinforce the correct triplet with a memorable framing"
+        },
+        {
+          "pattern": "Risk Assessment — Inherent/Residual/Appetite/Tolerance Blending",
+          "affected_items": ["E-003", "E-009", "E-010", "E-011"],
+          "analysis": "These four related concepts are frequently muddled by struggling learners. While each item's EWs correctly cross-reference the other terms, the explanations are siloed within each item — there's no cumulative 'compare these four terms' reinforcement. A struggling learner who gets E-009 wrong (risk appetite) and reads the EW may still conflate it with risk tolerance when they reach E-050 (not in this 30-item set, but relevant for the full bank).",
+          "ew_pedagogical_gap": "Risk terminology EWs are accurate per-item but lack cross-concept synthesis; a misconception-prone learner needs the terms contrasted side-by-side"
+        },
+        {
+          "pattern": "COSO Component Mapping",
+          "affected_items": ["E-002", "E-004", "E-006", "E-007"],
+          "analysis": "The four COSO components beyond control environment (risk assessment, control activities, information & communication, monitoring) are often confused. E-004 (Control activities) has distractors that are all control environment items. The EW says 'Board oversight is part of the control environment, which sets the governance structure' — accurate but the struggling learner may not understand WHY board oversight is control environment vs. control activities. The conceptual boundary between these components needs more explicit demarcation for this profile.",
+          "ew_pedagogical_gap": "EWs distinguish components by name but not by conceptual boundary logic — e.g., 'this is about tone/culture (environment) vs. this is about specific procedures (activities)'"
+        },
+        {
+          "pattern": "Preventive vs Detective vs Corrective Control Classification",
+          "affected_items": ["E-013", "E-014"],
+          "analysis": "E-013 (Preventive) and E-014 (Detective) have EWs that correctly classify each distractor. However, the misconception-prone learner needs the TIMING-based heuristic: preventive = before the event, detective = during/after. The EWs hint at this but don't state it as an explicit rule. The average learner infers the rule; the struggling learner may not.",
+          "ew_pedagogical_gap": "Missing explicit heuristic: 'Preventive controls STOP problems before they happen; detective controls FIND problems after they occur; corrective controls FIX problems after detection'"
+        }
+      ],
+      "distractor_plausibility": {
+        "rating": "ADEQUATE_FOR_MOST_ITEMS_WITH_SOME_GAPS",
+        "analysis": "For the misconception-prone learner, distractors are appropriately challenging on Moderate items — they present genuinely close alternatives that force the learner to distinguish concepts. However, on Easy items, even this profile would not be challenged by the most simplistic distractors (e.g., E-013 distractor D 'ignore risks'). Additionally, some Moderate-Easy items have one or two distractors that are obviously wrong even to a struggling learner, reducing the effective discrimination from 4 choices to 2-3 choices. The 'VerifiedChecks' claim of 'distractors written as plausible CMA-style traps' is overstated for Easy items.",
+        "weak_items_detail": [
+          "E-001: Only 'Eight' (ERM) is a plausible distractor; 'Three' and 'Seven' are arbitrary",
+          "E-013: 'Ignore risks' is obviously wrong — no CMA candidate would select this",
+          "E-004: 'Board oversight' and 'Code of conduct' both clearly belong to control environment, leaving only D as plausible",
+          "E-012: Fraud triangle — distractors are unrelated lists rather than close fraud-concept alternatives"
+        ]
+      },
+      "ec_explanation_depth": {
+        "rating": "INSUFFICIENT_DEPTH_FOR_STRUGGLING_LEARNERS",
+        "analysis": "EC explanations for this profile are too brief. A struggling learner who gets an item wrong needs the EC to not just state the fact but to build a conceptual bridge. For example, E-019 Material Weakness EC says: 'Material weakness is a deficiency with a reasonable possibility of material misstatement.' A struggling learner needs to know: how is this different from a significant deficiency? What's the SOX 404 reporting implication? The EC states the WHAT but not the SO-WHAT or the HOW-TO-REMEMBER."
+      },
+      "ew_explanation_targeting": {
+        "rating": "PARTIALLY_TARGETED",
+        "analysis": "EW explanations are factually accurate and correctly identify why each distractor is wrong. However, they are written from the perspective of 'here is why this choice is incorrect' rather than 'here is the misconception you probably had, and here is how to correct your mental model.' For the misconception-prone learner, the EW should anticipate the exact reasoning error — e.g., for E-005 EW-B: instead of just 'Accounting and finance are departmental labels,' a more targeted EW would say: 'You may have thought segregation means separating the accounting department from finance. It doesn't. Segregation of duties separates three specific FUNCTIONS regardless of department: authorization, custody, and recordkeeping.' This 'you may have thought X, but actually Y' framing is missing from most EWs.",
+        "gap_summary": "EWs are accurate but not misconception-targeted — they explain facts rather than diagnose and correct reasoning errors"
+      },
+      "overall_adequacy": "MINOR_IMPROVEMENTS_NEEDED — EWs are factually sound but lack the pedagogical framing (misconception diagnosis, explicit heuristics, cross-concept synthesis) that struggling learners require for effective remediation"
+    }
+  },
+
+  "cross_cutting_assessment": {
+    "difficulty_distribution_adequacy": {
+      "rating": "MINOR_MISALIGNMENT",
+      "target": "Easy(10), Moderate-Easy(8), Moderate(12)",
+      "actual": "Easy(7), Moderate-Easy(12), Moderate(11)",
+      "analysis": "The distribution is shifted toward more Moderate-Easy items and fewer Easy items than designed. This means the item bank is slightly harder than intended, which could inflate the difficulty for weaker learners. The Moderate count is approximately correct. The shift of 3 items from Easy to Moderate-Easy means the 'on-ramp' for struggling learners has fewer confidence-building items.",
+      "recommendation": "Consider reclassifying 3 of the current Moderate-Easy items to Easy (candidates: E-008 COSO ERM strategy, E-009 Risk appetite, E-014 Detective control — these have clear, unambiguous correct answers that most learners would get right) OR adding 3 new Easy items to reach the target of 10."
+    },
+    "answer_key_balance": {
+      "rating": "ADEQUATE",
+      "distribution": { "A": 10, "B": 10, "C": 4, "D": 6 },
+      "analysis": "Answer key distribution is reasonably balanced for A, B, and D. Choice C is underrepresented (4 vs expected ~7.5). This imbalance is noticeable across 30 items — a test-wise learner who 'guesses C when uncertain' would be penalized. The broader 115-item bank shows better balance (A=29, B=31, C=25, D=30), so this is a minor issue specific to the first-30 subset.",
+      "recommendation": "For the 30-item subset, consider swapping 1-2 items to increase C-correct items. The full bank balance is acceptable."
+    },
+    "distractor_quality_summary": {
+      "overall_rating": "ADEQUATE_WITH_ROOM_FOR_IMPROVEMENT",
+      "by_difficulty": {
+        "Easy": "Several items have 2+ distractors that are trivially wrong — effective discrimination is closer to 2-choice than 4-choice for 4 of 7 Easy items",
+        "Moderate-Easy": "Generally good — distractors are wrong-but-related concepts that require distinguishing knowledge",
+        "Moderate": "Strong — distractors present genuinely close alternatives that test nuanced understanding"
+      },
+      "concern": "The VerifiedChecks claim 'Distractors written as plausible CMA-style traps' is uniformly applied but not uniformly true. Easy items (E-001, E-004, E-012, E-013) have distractors that are implausible for any learner who has done even minimal CMA study. This inflates the perceived quality of the item bank."
+    },
+    "ec_explanation_quality": {
+      "overall_rating": "ADEQUATE_FOR_KNOWLEDGEABLE_LEARNERS",
+      "analysis": "EC explanations are universally present, factually correct, and concise. They serve as effective answer confirmation. For strong and average learners, this is sufficient. For struggling learners, the explanations lack the depth and connective tissue needed to build lasting understanding.",
+      "strength": "100% coverage, no factual errors observed",
+      "weakness": "Brevity over depth — ECs are ~60-120 chars and cover 'what' but rarely 'why it matters' or 'how to remember'"
+    },
+    "ew_explanation_quality": {
+      "overall_rating": "FACTUALLY_SOUND_BUT_PEDAGOGICALLY_THIN",
+      "analysis": "All 30 items have EW explanations for all 3 wrong choices that correctly identify what the distractor is and why it is wrong. However, EWs are written in a uniform 'X is Y, not Z' explanatory style that works for learners who already have a conceptual framework but need fact-checking. For learners who genuinely hold the misconception, the EW doesn't diagnose their reasoning error — it just states a fact. Effective misconception remediation requires: (1) naming the probable error, (2) explaining why it's wrong, and (3) providing the correct mental model. Most EWs do only (2).",
+      "pattern_analysis": "EWs follow template: '[Distractor concept] is [correct classification], not [what the stem asks].' This is factually adequate but doesn't address: 'You probably picked this because you confused A with B. Here's how to tell them apart.'"
+    }
+  },
+
+  "final_verdict": {
+    "verdict": "MINOR_IMPROVEMENTS_NEEDED",
+    "rationale": [
+      "STRENGTHS: All 30 items have complete EC and EW explanations. Answer key is adequately balanced. EC explanations are factually correct and appropriate for strong/average learners. EW explanations correctly identify why each distractor is wrong. Moderate items have genuinely plausible distractors. The item catalog is well-structured with clear metadata (LOS tags, cognitive levels, difficulty scores).",
+      "GAPS (MINOR): Difficulty distribution is shifted from the Easy(10)/Moderate-Easy(8)/Moderate(12) target to Easy(7)/Moderate-Easy(12)/Moderate(11). Easy items have distractors that are implausibly easy to eliminate, reducing diagnostic value for those items. EW explanations lack misconception-diagnosis framing needed by struggling learners. EC explanations are too brief for struggling learners — they confirm facts but don't build conceptual bridges. Choice C is underrepresented in the first-30 subset (4 vs expected 7-8).",
+      "RECOMMENDATIONS: (1) Reclassify 3 Moderate-Easy items to Easy to meet the target distribution. (2) Strengthen distractors on Easy items — replace arbitrary/absurd options with close-but-wrong alternatives that test real misconceptions. (3) Add 'you may have thought X, but actually Y' framing to EW explanations for items targeting common misconceptions (segregation of duties, risk terminology, COSO mapping, preventive vs detective). (4) Expand EC explanations on Moderate items by 1-2 sentences to provide 'why this matters' context. (5) Rebalance answer key in the 30-item subset to increase C-correct items."
+    ],
+    "verdict_options": ["EDUCATIONALLY_SOUND", "MINOR_IMPROVEMENTS_NEEDED", "SIGNIFICANT_GAPS"],
+    "confidence": "HIGH — based on systematic item-level analysis of all 30 items with cross-validation against three learner profiles"
+  },
+
+  "validation_results": {
+    "pack_e_corrected_js_syntax": {
+      "test": "node -e \"require('./pack_e_corrected.js')\" parse test",
+      "result": "PASSED — SYNTAX_OK",
+      "detail": "The file parses cleanly as valid JavaScript. No syntax errors detected. The MCQ_BANK_E constant is properly defined as an array of 540 item objects."
+    },
+    "app_js_loadability": {
+      "test": "node -e \"const app = require('./app.js')\"",
+      "result": "FAILED — browser-only (localStorage dependency)",
+      "detail": "app.js cannot be loaded in Node.js because it references localStorage at module scope (line 7). This is expected — the app is designed as a browser-based SPA. No simulation API is exposed for programmatic use."
+    },
+    "may_core_js_simulation_capability": {
+      "test": "Grep for simulation/test_mode/assessment/run_assessment functions",
+      "result": "NO PROGRAMMATIC SIMULATION API",
+      "detail": "may-core.js has coaching functions (hint levels, chat-based tutoring, session analysis) but no function that takes a set of items and simulates learner responses. The 'simulation' references in may-core.js refer to the CMA exam-mode simulation UI feature, not an item-assessment simulation engine."
+    }
+  }
+}

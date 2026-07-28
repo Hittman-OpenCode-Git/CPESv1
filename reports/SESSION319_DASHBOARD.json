@@ -1,0 +1,119 @@
+{
+  "dashboard": "SESSION319_DASHBOARD",
+  "session": "S319",
+  "title": "CMA Part 1 Exam Simulator — Domain E Seed Certification Wave 1 Dashboard",
+  "generated": "2026-07-27",
+  "analyst": "Agent U — Dashboard Refresh",
+
+  "overall_portfolio_health": {
+    "total_pool": 2540,
+    "total_certified": 2221,
+    "certified_pct": 87.4,
+    "total_uncertified": 319,
+    "total_archived": 93,
+    "status": "GREEN — 87.4% certified, governance guard 27/27 PASS",
+    "trend": "STABLE — S319 read-only planning session, 0 certification gain"
+  },
+
+  "domain_e_dashboard": {
+    "section_header": "Domain E — Internal Controls",
+    "progress": {
+      "total_items": 359,
+      "certified": 238,
+      "uncertified_seeds": 38,
+      "archived_clones": 93,
+      "progress_pct": 66.3,
+      "target": "76.9% post S319 seed program (S327 terminal)",
+      "remaining_to_target": "38 seed certifications + 3 replacement groups = 41 items"
+    },
+    "pack_breakdown": [
+      {"pack": "A", "section_e_items": 75, "certified": 58, "uncertified": 17, "pct": 77.3, "status": "YELLOW"},
+      {"pack": "B", "section_e_items": 75, "certified": 75, "uncertified": 0, "pct": 100.0, "status": "GREEN — Gold Standard"},
+      {"pack": "C", "section_e_items": 75, "certified": 0, "seeds_unprocessed": 19, "clones_archived": 56, "pct": 0.0, "status": "RED — 19 seeds in S320-S322 remediation pipeline"},
+      {"pack": "D", "section_e_items": 75, "certified": 0, "seeds_unprocessed": 19, "clones_archived": 56, "pct": 0.0, "status": "RED — 19 seeds in S320-S325 remediation pipeline"},
+      {"pack": "E", "section_e_items": 115, "certified": 95, "uncertified": 20, "pct": 82.6, "status": "YELLOW"}
+    ]
+  },
+
+  "seed_certification_dashboard": {
+    "total_seeds": 38,
+    "pipeline": {
+      "unprocessed": 38,
+      "in_remediation": 0,
+      "certified": 0
+    },
+    "wave_status": {
+      "wave_1": {"label": "Quick Wins", "seeds": 14, "ew_slots_to_fill": 14, "dl013_to_rewrite": 0, "ec_enrich": 0, "session": "S320-S321", "status": "QUEUED"},
+      "wave_2": {"label": "Moderate Remediation", "seeds": 14, "ew_slots_to_fill": 26, "dl013_to_rewrite": 0, "ec_enrich": 2, "session": "S322-S323", "status": "QUEUED"},
+      "wave_3": {"label": "Deep Remediation", "seeds": 10, "ew_slots_to_fill": 17, "dl013_to_rewrite": 8, "ec_enrich": 4, "session": "S324-S325", "status": "QUEUED"}
+    },
+    "remediation_totals": {
+      "empty_ew_slots": 53,
+      "dl013_boilerplate_slots": 8,
+      "ec_enrichment_needed": 12,
+      "difficulty_fixes": 14,
+      "cl_recalibrations": 26,
+      "estimated_batches": 5,
+      "projected_certification_gain": "+38 (Domain E 238→276)"
+    },
+    "quality_gates": {
+      "gate_0_duplicate_prevention": "PASS",
+      "gate_1_technical_accuracy": "PASS",
+      "gate_2_explanation_quality": "FAIL — 53 empty EW + 8 DL-013 boilerplate + 12 weak ECs",
+      "gate_3_structural_integrity": "PASS",
+      "gate_4_difficulty_blueprint": "PASS_WITH_NOTES",
+      "gate_5_learner_safety": "PASS"
+    }
+  },
+
+  "completion_dashboard": {
+    "domain_e": {
+      "current": 238,
+      "target": 276,
+      "remaining": 38,
+      "pct_complete": 63.5,
+      "projected_pct": 76.9,
+      "projected_completion_session": "S327",
+      "critical_path": "Wave 3 DL-013 rewrites (ED-016, ED-036, ED-046, ED-051, ED-075)"
+    },
+    "portfolio": {
+      "current": 2221,
+      "target": 2500,
+      "remaining": 279,
+      "pct_complete": 88.8,
+      "projected_post_seed": 2259,
+      "projected_pct_post_seed": 90.4
+    },
+    "modernization_program": {
+      "replacements_certified": "40/43 (93.0%)",
+      "seeds_unprocessed": "38/38 (0% certified)",
+      "clone_groups_cleared": "33/33 (100%)",
+      "program_completion_pct": 49.4
+    }
+  },
+
+  "risk_indicators": {
+    "critical": [],
+    "high": [
+      {"risk": "Wave 3 DL-013 rewrites", "detail": "5 Pack D seeds require complete EW rewrites — highest per-item effort, highest quality risk"},
+      {"risk": "Seed remediation effort validation", "detail": "S318 estimated 1.5-2.5 hrs/seed. Wave 1 actuals (S320) will calibrate the model for Waves 2-3"}
+    ],
+    "moderate": [
+      {"risk": "Blueprint thin spots", "detail": "Info & Communication (1 seed), Internal Auditing (0 seeds) — coverage gaps persist after seed cert"},
+      {"risk": "Similarity ledger sync", "detail": "20 missing entries from R12-R40. Must be resolved in S320 before seed certification begins"}
+    ],
+    "low": [
+      {"risk": "Pack C/D seed cross-pack duplication", "detail": "S318 flagged possible symmetric clones — not yet audited. If confirmed, seed workload reduces from 38 to ~19"}
+    ]
+  },
+
+  "governance_status": {
+    "guard_test_suite": "27/27 PASS",
+    "rule_2_dl008_block": "ACTIVE — 0 violations",
+    "rule_3_registry_block": "ACTIVE — no registry writes",
+    "rule_5_30_item_cap": "ACTIVE — 0 pack modifications",
+    "rule_1_question_state_warn": "ACTIVE — no state changes",
+    "rule_4_answer_key_warn": "ACTIVE — no answer-key changes",
+    "protected_hashes": "13/15 match (pack_a pre-existing S805 drift, pack_e S808 authorized)"
+  }
+}

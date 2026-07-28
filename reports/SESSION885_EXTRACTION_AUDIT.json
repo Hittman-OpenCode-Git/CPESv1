@@ -1,0 +1,77 @@
+{
+  "session": "S885",
+  "title": "Section C/D Target Extraction & Audit",
+  "date": "2026-07-28",
+  "status": "COMPLETE",
+  "mode": "READ-ONLY",
+  "operational_state": {
+    "certified_pool": 2298,
+    "governance_guard": "51/51 PASS",
+    "drift_flags": "ALL_CLEARED"
+  },
+  "population": {
+    "section_c_items": 500,
+    "section_d_items": 375,
+    "total_scanned": 875,
+    "certified": 866,
+    "missing_state": 9,
+    "certification_rate": "99.0%"
+  },
+  "section_c_per_pack": {
+    "pack_a": { "items": 100, "certified": 100, "qid_pattern": "P1-C-001..100", "dl008": 0, "dl026": 0, "dl037": 0 },
+    "pack_b": { "items": 100, "certified": 100, "qid_pattern": "P1B-C-101..200", "dl008": 0, "dl026": 0, "dl037": 0 },
+    "pack_c": { "items": 100, "certified": 100, "qid_pattern": "P1-CC-001..100", "dl008": 15, "dl026": 0, "dl037": 0 },
+    "pack_d": { "items": 100, "certified": 100, "qid_pattern": "P1-CD-001..100", "dl008": 18, "dl026": 0, "dl037": 0 },
+    "pack_e": { "items": 100, "certified": 96, "qid_pattern": "P1E-C-001..100", "dl008": 0, "dl026": 9, "dl037": 0, "missing_state": ["P1E-C-054","P1E-C-055","P1E-C-074","P1E-C-083"] }
+  },
+  "section_d_per_pack": {
+    "pack_a": { "items": 75, "certified": 75, "qid_pattern": "P1-D-001..075", "dl008": 0, "dl026": 0, "dl037": 0 },
+    "pack_b": { "items": 75, "certified": 75, "qid_pattern": "P1B-D-076..150", "dl008": 0, "dl026": 0, "dl037": 0 },
+    "pack_c": { "items": 75, "certified": 75, "qid_pattern": "P1-DC-001..075", "dl008": 0, "dl026": 0, "dl037": 0 },
+    "pack_d": { "items": 75, "certified": 75, "qid_pattern": "P1-DD-001..075", "dl008": 15, "dl026": 0, "dl037": 0 },
+    "pack_e": { "items": 75, "certified": 70, "qid_pattern": "P1E-D-001..075", "dl008": 0, "dl026": 0, "dl037": 0, "missing_state": ["P1E-D-009","P1E-D-032","P1E-D-058","P1E-D-062","P1E-D-073"] }
+  },
+  "total_dl008": 48,
+  "total_dl008_certified": 48,
+  "dl008_breakdown": {
+    "pack_c_section_c": 15,
+    "pack_d_section_c": 18,
+    "pack_d_section_d": 15
+  },
+  "dl008_verified_samples": [
+    { "qid": "P1-CC-011", "cc": "C", "ew_len": 230, "first_100": "Zero-based budgeting requires managers to justify all expenses from zero each period, focusing on cost control rather th..." },
+    { "qid": "P1-CD-015", "cc": "C", "ew_len": 344, "first_100": "$8,800 unfavorable uses the difference between actual and standard contribution margins per unit for each product..." },
+    { "qid": "P1-DD-002", "cc": "A", "ew_len": 278, "first_100": "Standard costing is a broad performance-measurement system that presets standards for all manufacturing inputs..." }
+  ],
+  "blooms_distribution": {
+    "remember": { "count": 28, "pct": 3.2, "target": 5 },
+    "understand": { "count": 323, "pct": 36.9, "target": 15 },
+    "apply": { "count": 476, "pct": 54.4, "target": 40 },
+    "analyze": { "count": 41, "pct": 4.7, "target": 25 },
+    "evaluate": { "count": 7, "pct": 0.8, "target": 15 }
+  },
+  "difficulty_distribution": {
+    "easy": { "count": 164, "pct": 18.7 },
+    "moderate_easy": { "count": 163, "pct": 18.6 },
+    "moderate": { "count": 477, "pct": 54.5 },
+    "difficult": { "count": 71, "pct": 8.1 },
+    "very_difficult": { "count": 0, "pct": 0 }
+  },
+  "psychometric_flags": {
+    "pack_a_section_d_cc_bias": "B at 41.3% (31/75), C at 13.3% (10/75) — 2.9σ from expected 25%",
+    "pack_e_missing_state": "9 items lack question_state entirely (DL-024 pattern)",
+    "zero_very_difficult": "0 of 875 items rated Very Difficult — violates CAQS §6.1"
+  },
+  "governance_discrepancy": {
+    "baseline_claim": "CURRENT_BASELINES.md §3: 0 DL-008 (all packs)",
+    "actual_finding": "48 DL-008 items in Packs C+D, all Certified",
+    "verification_method": "Function constructor parse (method called 'authoritative' by CURRENT_BASELINES.md itself)",
+    "severity": "HIGH — learner-facing defect in 48 Certified items"
+  },
+  "remediation_priority": [
+    { "rank": 1, "scope": "48 DL-008 items in Packs C+D", "severity": "HIGH", "learner_pool": true },
+    { "rank": 2, "scope": "9 Pack E MISSING question_state items", "severity": "MEDIUM", "learner_pool": false },
+    { "rank": 3, "scope": "Bloom's diversity gap (5.5% Analyze/Evaluate vs 40% target)", "severity": "MEDIUM", "learner_pool": true },
+    { "rank": 4, "scope": "Difficulty calibration (54.5% Moderate, 0% Very Difficult)", "severity": "MEDIUM", "learner_pool": true }
+  ]
+}

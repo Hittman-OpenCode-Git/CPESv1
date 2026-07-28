@@ -1,0 +1,133 @@
+{
+  "session": "702",
+  "agent": "C",
+  "mode": "read-only",
+  "parse_status": {
+    "questionid_count": 500,
+    "certified_count": 350,
+    "parse_method": "String-aware brace-matched object extraction (500 objects extracted, 500 unique QIDs) — Node require/Function constructor/eval ALL FAIL due to BD-095 missing comma",
+    "parse_result": "FAIL_WITH_KNOWN_ISSUES",
+    "parse_blockers": [
+      {
+        "qid": "P1-BD-095",
+        "line": 8537,
+        "issue": "Missing comma between ExplanationWrongD and question_state fields. This blocks all JavaScript parse methods (require, Function(), vm.runInContext, eval). Object extraction via string-aware brace matching works but JSON.parse on the object text also fails.",
+        "severity": "HIGH — blocks all scripting tools"
+      }
+    ],
+    "architecture_note": "Pack D uses SINGLE-OBJECT architecture (NOT dual-block like Pack A/C). Each QID has exactly one JSON object containing all fields: Stem, Choices, CorrectChoice, ExplanationCorrect, ExplanationWrongA-D, question_state, etc. CorrectChoice is positioned BEFORE QuestionID in the object layout."
+  },
+  "critical_items": {
+    "P1-FD-045": {
+      "correctChoice_present": true,
+      "correctChoice_value": "B",
+      "question_state": "Unprocessed",
+      "classification": "STRUCTURALLY_COMPLETE",
+      "dl008_status": "CLEAN — ExplanationWrongB is empty string",
+      "stem": "Umberglen maintains a single, authoritative source of core customer and product information used consistently across multiple systems. What practice does this describe?",
+      "topic": "F.046 master data management concept",
+      "evidence": "line 23210: CorrectChoice=B, line 23235: ExplanationWrongB=\"\"",
+      "note": "S701 'missing CorrectChoice' claim for FD-045 is FALSE. CorrectChoice exists and is valid."
+    },
+    "P1-FD-046": {
+      "correctChoice_present": false,
+      "correctChoice_value": null,
+      "question_state": "Unprocessed",
+      "classification": "MISSING_REQUIRED_FIELD",
+      "dl008_status": "N/A — no CorrectChoice to check against",
+      "stem": null,
+      "topic": null,
+      "evidence": "lines 23242-23261: Shell item — has QuestionID, question_state, ExplanationWrongA-D, VerifiedChecks, Part1OnlyFlag, SourceDescription, ReviewNote, DifficultyScore. MISSING: Part, Section, SectionName, Topic, MicroTopic, UniqueConceptKey, LOSTag, Difficulty, ItemType, ItemStyle, Stem, Choices, CorrectChoice, ExplanationCorrect, StudyLinks",
+      "note": "This is a SHELL ITEM — metadata-only. It is NOT a parse blocker (JSON is well-formed), but structurally incomplete for delivery. Not the item referenced in AGENTS.md §13.2 — that's FD-045."
+    },
+    "P1-FD-075": {
+      "correctChoice_present": true,
+      "correctChoice_value": "C",
+      "question_state": "Unprocessed",
+      "classification": "STRUCTURALLY_COMPLETE",
+      "dl008_status": "CLEAN — ExplanationWrongC is empty string",
+      "stem": "Alderway establishes a policy defining how long different categories of financial and customer data must be retained before secure disposal. What is a primary purpose of this policy?",
+      "topic": "F.075 data retention policy compliance",
+      "evidence": "line 24652: CorrectChoice=C, line 24678: ExplanationWrongC=\"\"",
+      "note": "S701 'missing CorrectChoice' claim for FD-075 is FALSE. CorrectChoice exists and is valid."
+    },
+    "P1-BD-095": {
+      "parse_error": true,
+      "parse_error_description": "Missing comma between ExplanationWrongD and question_state fields at line 8537. The text reads: \"...differences fundamentally...}\" \"question_state\": \"Certified\" — there should be a comma between the closing quote of EW_D and the opening quote of question_state.",
+      "classification": "PARSE_BLOCKER",
+      "correctChoice_present": true,
+      "correctChoice_value": "C",
+      "question_state": "Certified",
+      "dl008_status": "CLEAN — ExplanationWrongC is empty string (once comma is fixed, DL-008 scan is clean)",
+      "stem": "Underhill's board sets a five-year strategic plan, while department managers prepare detailed annual operating budgets. How do these two planning levels differ?",
+      "evidence": "line 8510: CorrectChoice=C, line 8536: ExplanationWrongC=\"\" (content correct). Line 8537: EW_D text ends without comma separator before line 8538 question_state."
+    }
+  },
+  "dl008_count_resolution": {
+    "methodology": "String-aware brace-matched object extraction (500 objects → 500 unique QIDs). For each object, CorrectChoice extracted from within the same object as ExplanationWrong fields. No forward-scan/back-scan offset — within-object extraction is immune to CC-position variation.",
+    "items_sampled": 500,
+    "confirmed_dl008_in_sample": 20,
+    "estimated_total_dl008": 20,
+    "estimated_certified_dl008": 20,
+    "dl008_by_section": {
+      "A": 4,
+      "B": 8,
+      "C": 6,
+      "D": 2,
+      "E": 0,
+      "F": 0
+    },
+    "discrepancy_explanation": {
+      "s700_claim_342": "OVERCOUNT — DL-029 forward-scan artifact. In Pack D, CorrectChoice is positioned BEFORE QuestionID in the JSON object. S700 used Select-String with forward-scan (searching from QuestionID forward to find CorrectChoice), which systematically grabs the NEXT item's CC instead of the current item's (since forward-scan misses the CC that precedes the QID). With 500 items and CC distributed A/B/C/D approximately evenly, the error rate is ~75%, producing ~340-375 false positives. This mechanism was independently confirmed: Agent C's v1 scan (forward-scan from QID) also produced 327 results before the methodology was corrected to within-object extraction.",
+      "session_status_claim_10": "UNDERCOUNT — SESSION_STATUS was directionally correct for the items it checked but missed 10 additional DL-008 items. Specifically, SESSION_STATUS correctly identified 11 of 20 DL-008 items (AD-047/048/054/055, BD-017/021/022/023/024, DD-028/029, and flagged BD-057/058/059) but missed Section C items (CD-002/003/006/022/023/034) and some Section B items (BD-057/058/059 were flagged but 3 escaped). Section-wise, SESSION_STATUS had 0 Section C coverage and only partial Section B coverage. Additionally flagged BD-001 as DL-008 but BD-001 is CLEAN (CC=A, EW_A=\"\").",
+      "governance_register_claim_1": "FALSE POSITIVE — BD-001 is structurally CLEAN. CorrectChoice=A, ExplanationWrongA=\"\". Line 3871 confirms EW_A is empty string. The governance register incorrectly flagged this item."
+    },
+    "root_cause_of_discrepancy": "Pack D stores CorrectChoice BEFORE QuestionID in the JSON object — the inverse of Packs A/C/E where CC follows QID. All forward-scan tools (Select-String searching from QID forward) that don't account for this order systematically grab the next item's CC, producing a ~75% false-positive DL-008 count. Only within-object extraction (brace-matched boundaries) or backward-scan yields correct results. The BD-095 missing comma additionally blocks all JavaScript parse methods (require/Function/eval), making Pack D uniquely difficult to scan with traditional tools."
+  },
+  "findings": [
+    {"qid": "P1-AD-047", "section": "A", "state": "Certified", "content_correctChoice": "C", "ew_cc_nonempty": true, "ew_cc_preview": "Under ASC 330, the same physical goods cannot be included in the inventory of two different entities", "classification": "DL-008"},
+    {"qid": "P1-AD-048", "section": "A", "state": "Certified", "content_correctChoice": "D", "ew_cc_nonempty": true, "ew_cc_preview": "Consigned goods ARE inventory — they just belong to a specific party. Under ASC 330, the consignor r", "classification": "DL-008"},
+    {"qid": "P1-AD-054", "section": "A", "state": "Certified", "content_correctChoice": "B", "ew_cc_nonempty": true, "ew_cc_preview": "$2.16 is basic EPS calculated as ($600,000 - $60,000) / 250,000 = $2.16. Basic EPS ignores the dilut", "classification": "DL-008"},
+    {"qid": "P1-AD-055", "section": "A", "state": "Certified", "content_correctChoice": "C", "ew_cc_nonempty": true, "ew_cc_preview": "$6,000 is the full annual straight-line depreciation: ($54,000 - $6,000) / 8 years = $6,000 per year", "classification": "DL-008"},
+    {"qid": "P1-BD-017", "section": "B", "state": "Certified", "content_correctChoice": "A", "ew_cc_nonempty": true, "ew_cc_preview": "Short-term inventory purchase needs are addressed by the direct materials budget, which is part of t", "classification": "DL-008"},
+    {"qid": "P1-BD-021", "section": "B", "state": "Certified", "content_correctChoice": "A", "ew_cc_nonempty": true, "ew_cc_preview": "This amount double-counts the labor hours or the wage rate. The direct labor budget formula is: Unit", "classification": "DL-008"},
+    {"qid": "P1-BD-022", "section": "B", "state": "Certified", "content_correctChoice": "B", "ew_cc_nonempty": true, "ew_cc_preview": "This figure double-counts the labor hours or the hourly rate. The correct calculation is 8,000 × 2 ×", "classification": "DL-008"},
+    {"qid": "P1-BD-023", "section": "B", "state": "Certified", "content_correctChoice": "C", "ew_cc_nonempty": true, "ew_cc_preview": "This is the number of direct labor hours required (8,000 units × 2 hours = 16,000 hours), not the bu", "classification": "DL-008"},
+    {"qid": "P1-BD-024", "section": "B", "state": "Certified", "content_correctChoice": "D", "ew_cc_nonempty": true, "ew_cc_preview": "This figure multiplies 8,000 units by $18 per hour but omits the 2 direct labor hours required per u", "classification": "DL-008"},
+    {"qid": "P1-BD-057", "section": "B", "state": "Certified", "content_correctChoice": "A", "ew_cc_nonempty": true, "ew_cc_preview": "Eliminating the need for a sales forecast would remove the foundational input for the entire budget ", "classification": "DL-008"},
+    {"qid": "P1-BD-058", "section": "B", "state": "Certified", "content_correctChoice": "B", "ew_cc_nonempty": true, "ew_cc_preview": "The sales forecast is the cornerstone of the master budget -- without it, production volumes, materi", "classification": "DL-008"},
+    {"qid": "P1-BD-059", "section": "B", "state": "Certified", "content_correctChoice": "C", "ew_cc_nonempty": true, "ew_cc_preview": "No budgeting structure can guarantee the complete elimination of budgetary slack. Managers inherentl", "classification": "DL-008"},
+    {"qid": "P1-CD-002", "section": "C", "state": "Certified", "content_correctChoice": "B", "ew_cc_nonempty": true, "ew_cc_preview": "Reflects only the joint interaction of the hours deviation and rate deviation: (2,100 - 2,000) x ($1", "classification": "DL-008"},
+    {"qid": "P1-CD-003", "section": "C", "state": "Certified", "content_correctChoice": "C", "ew_cc_nonempty": true, "ew_cc_preview": "Applies the $1 rate difference to standard hours (2,000) rather than actual hours (2,100). Rate vari", "classification": "DL-008"},
+    {"qid": "P1-CD-006", "section": "C", "state": "Certified", "content_correctChoice": "B", "ew_cc_nonempty": true, "ew_cc_preview": "Applies the $1 rate difference to standard hours (2,000) rather than actual hours (2,100). Rate vari", "classification": "DL-008"},
+    {"qid": "P1-CD-022", "section": "C", "state": "Certified", "content_correctChoice": "B", "ew_cc_nonempty": true, "ew_cc_preview": "A revenue center ignores cost control. The manager controls both pricing and costs, so a profit cent", "classification": "DL-008"},
+    {"qid": "P1-CD-023", "section": "C", "state": "Certified", "content_correctChoice": "C", "ew_cc_nonempty": true, "ew_cc_preview": "A cost center ignores revenue responsibility. The manager controls pricing decisions in addition to ", "classification": "DL-008"},
+    {"qid": "P1-CD-034", "section": "C", "state": "Certified", "content_correctChoice": "B", "ew_cc_nonempty": true, "ew_cc_preview": "Dual-rate pricing does not eliminate the need for transfer pricing; it establishes two prices for th", "classification": "DL-008"},
+    {"qid": "P1-DD-028", "section": "D", "state": "Certified", "content_correctChoice": "D", "ew_cc_nonempty": true, "ew_cc_preview": "This figure likely results from a unit conversion error or from using contributed capital instead of", "classification": "DL-008"},
+    {"qid": "P1-DD-029", "section": "D", "state": "Certified", "content_correctChoice": "A", "ew_cc_nonempty": true, "ew_cc_preview": "This figure likely results from a unit conversion error or from using contributed capital instead of", "classification": "DL-008"},
+    {"qid": "P1-BD-001", "section": "B", "state": "Certified", "content_correctChoice": "A", "ew_cc_nonempty": false, "classification": "CLEAN — governance register false positive. EW_A=\"\" confirmed line 3871."},
+    {"qid": "P1-AD-048", "section": "A", "state": "Certified", "content_correctChoice": "D", "ew_cc_nonempty": true, "classification": "DL-008 — SESSION_STATUS correct"},
+    {"qid": "P1-FD-046", "section": "F", "state": "Unprocessed", "content_correctChoice": null, "ew_cc_nonempty": false, "classification": "MISSING_CORRECTCHOICE — Shell item with no content fields. Not a parse blocker."}
+  ],
+  "no_stem_analysis": {
+    "total_no_stem": 74,
+    "certified_no_stem": 53,
+    "no_stem_with_choices": 73,
+    "no_stem_true_shells": 1,
+    "explanation": "74 items are rotation-group shell objects that lack a Stem field but have ExplanationWrong fields, Choices, and CorrectChoice. These are valid objects within the Pack D rotation group template — the content (Stem) is implicitly shared across members of the rotation group. 53 of these are Certified. The 1 true shell (FD-046) has no Part, Section, Stem, or Choices — only metadata fields."
+  },
+  "summary": {
+    "confirmed_defects": 21,
+    "dl008_items": 20,
+    "parse_blockers": 1,
+    "missing_required_fields": 1,
+    "false_positives_from_prior_reports": 330,
+    "scan_artifacts": "S700 ~342 count was a DL-029 forward-scan artifact — CorrectChoice precedes QuestionID in Pack D objects. Forward-scan systematically grabs the next item's CC.",
+    "session_status_accuracy": "11 of 15 flagged items were correct DL-008. 1 was a false positive (BD-001). 3 BD-057/058/059 were correctly flagged but required deeper validation.",
+    "governance_register_accuracy": "BD-001 flagged but is CLEAN — false positive.",
+    "s701_s701_fd045_claim": "FALSE — FD-045 has CorrectChoice=B present and valid.",
+    "s701_fd075_claim": "FALSE — FD-075 has CorrectChoice=C present and valid.",
+    "s701_bd095_claim": "TRUE — BD-095 has a missing comma at line 8537, blocking all JavaScript parse methods."
+  },
+  "agented_section_13_2_note": "AGENTS.md §13.2 references FD-045 with CAPA controls. FD-045 is STRUCTURALLY COMPLETE (CC=B present, EW_B=\"\" clean, state=Unprocessed). It is NOT a parse blocker and has no missing fields. The shell item FD-046 is the one missing CorrectChoice but it is NOT referenced in AGENTS.md. FD-045 is safe — the CAPA controls can proceed."
+}

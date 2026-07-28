@@ -1,0 +1,533 @@
+{
+  "title": "SESSION725 — Historical Governance Root-Cause Analysis (S700→S724)",
+  "date": "2026-07-26",
+  "author": "Agent K — Governance RCA Auditor (Session 725)",
+  "scope": "Comprehensive root-cause analysis of every major governance failure across S700 through S724. Read-only audit — zero existing files modified.",
+  "methodology": "Cross-referenced DEFECT_LIBRARY.md (all DL entries), REVISION_HISTORY.md (S700-S724 entries), SESSION723_GOVERNANCE_DEBT_REGISTER.json, SESSION724_SESSION_SUMMARY.md, SESSION723_PROGRAM_CLOSURE_REPORT.md, and raw-file evidence patterns. Focus on recurrence patterns rather than single-instance defects.",
+  "sources": [
+    "knowledge/DEFECT_LIBRARY.md",
+    "knowledge/REVISION_HISTORY.md (lines 1-17119)",
+    "reports/SESSION723_GOVERNANCE_DEBT_REGISTER.json",
+    "reports/SESSION724_SESSION_SUMMARY.md",
+    "reports/SESSION723_PROGRAM_CLOSURE_REPORT.md"
+  ],
+
+  "failure_classes": [
+    {
+      "id": "FC-001",
+      "name": "Scan Methodology Drift — Regex/Forward-Scan Used Where Object-Boundary Parse Required",
+      "pattern": "Defect scans using regex forward-scan from a known token (e.g., QuestionID) to find a related field (e.g., CorrectChoice) without accounting for field order in the JSON object. When CC appears before QID in the source file, scanners capture the NEXT item's CC, producing a ~75% false-positive rate (for 4-choice MCQ with random CC distribution).",
+      "root_cause": "Scan tools written without awareness of JSON object field ordering. The source files have CC-before-QID universally across all 5 packs, but no scan script verified field position before running. Each scanning session independently invented a regex/forward-scan method instead of using Function constructor parse or within-object field extraction.",
+      "incidents": [
+        "DL-029 (regex block-scan false positives): Caused prior sessions to report 885+ Certified DL-008 where actual count was dozens or zero",
+        "S800 prerequisite scan: Reported 67 Certified DL-008 items, FD-045/FD-075 as 'missing content block' — all 69 claims refuted by S801 Function-constructor parse as DL-029 artifacts",
+        "S801 refutation: Function constructor parse showed 0 Certified DL-008 across all 2,500 items. All 67 S800 claims were false positives. FD-045 and FD-075 confirmed structurally complete.",
+        "DL-012 counting errors: Three scans produced 128, 112, 138, then stabilized at 140 clones. First two scans wrong, third correct. The same broken brace-matcher without string-awareness (DL-020) produced varying counts.",
+        "Pack B DL-008 false-positive (111-112): Forward-scan from QID grabbed NEXT item's CC because Pack B stores CC before QID. 74% false-positive rate. Prior sessions claimed 111 Certified DL-008 in Pack B Sections A/D. S802 confirmed 0.",
+        "P1-CC-050 controversy: S722A claimed DL-008 survivor (CC=C, EW-C non-empty). S723 Agent V reported CLEAN (CC=B, EW_B empty). Line-level verification confirmed CLEAN — S722A likely read from wrong block via DL-016 shift."
+      ],
+      "detection_gap": "No scan tool verification step required before publishing results. No CC-position-aware validation in scanner code. No requirement to cross-validate via two independent scan methods before accepting results. The governance guard's DL-008 detection (as of S724) still uses a DL-029-vulnerable ±1200 character window forward-scan.",
+      "prevention_rule": "PR-001: Function-constructor parse ONLY for all defect scans involving paired-field extraction. Never forward-scan from one field to another without verifying field ordering. Every scan must self-verify against two independent methods (e.g., Function constructor + direct grep per-object). All scan scripts must be CC-position-aware. Totals-only reports without QID lists must be rejected per AGENTS.md §5.",
+      "recurrence_count": 6,
+      "recurrence_sessions": ["DL-012 initial (2026-07-22)", "Pack B DL-008 false-positive (2026-07-23)", "S800 (2026-07-26)", "S801 refutation (2026-07-26)", "S802 resolution (2026-07-26)", "S722A P1-CC-050 (2026-07-26)"]
+    },
+    {
+      "id": "FC-002",
+      "name": "Baseline Ownership Drift — CURRENT_BASELINES.md Not Updated After Verification",
+      "pattern": "A governing baseline file (CURRENT_BASELINES.md) reports stale defect counts or severity ratings that have been refuted by subsequent sessions. The gap between the baseline's reported state and the actual verified state creates a risk where new operators trigger emergency remediation based on phantom defects.",
+      "root_cause": "No assigned ownership for baseline file maintenance. Verification sessions (S801, S802, S722A definitive) proved defects were resolved/refuted, but no agent was tasked with updating CURRENT_BASELINES.md to reflect the corrected state. The file is the 'authoritative baseline document' but nobody owns writing to it.",
+      "incidents": [
+        "Phantom 67 DL-008: CURRENT_BASELINES.md §3 listed 67 Certified DL-008 items as CRITICAL through S724, despite S801/S802/S722A/S723 all independently verifying 0 actual Certified DL-008 via Function-constructor parse. S724 explicitly flagged this as a P0 update requirement.",
+        "DL-016 unregistered: DL-016 is rated HIGH in DEFECT_LIBRARY.md (upgraded Session 64, 2026-07-24) with confirmed learner-safety risk. It does NOT appear in CURRENT_BASELINES.md §3 at all. SESSION_STATUS rates it as LOW (\"Cosmetic\"), contradicting DEFECT_LIBRARY's HIGH rating.",
+        "Pack E Section C (DL-021): CURRENT_BASELINES says '95 non-Certified items' but S723 Cross-Pack audit found these items carry question_state='Certified' — another discrepancy between the baseline and ground truth.",
+        "SESSION_STATUS_2026-07-24 stale: Reports 2,031 Certified (81.2%). Actual is 2,181 (87.2%) — a +150 undercount from Pack C/D sections not being counted. S801/S802 corrected this but SESSION_STATUS was never regenerated."
+      ],
+      "detection_gap": "No post-verification sync step in the certification or governance workflow. Sessions verify state but don't write the verified state to the authoritative baseline. No diff check between CURRENT_BASELINES and ground truth at session start (the S724 T0 check discovered these gaps only because it was specifically looking for them).",
+      "prevention_rule": "PR-002: Every verification session MUST update CURRENT_BASELINES.md with verified counts as its closing action. The baseline file is NOT a write-once artifact — it is a living document that must track the current verified state. Any discrepancy between CURRENT_BASELINES and ground truth found at T0 must be flagged as a CRITICAL finding and resolved within the same session. Assign a named ownership role for baseline maintenance.",
+      "recurrence_count": 4,
+      "recurrence_sessions": ["S800→S801→S802 (phantom 67 DL-008 not updated)", "Session 64 DL-016 upgrade not propagated", "S723 closure — baseline stale", "S724 T0 — explicit finding of staleness"]
+    },
+    {
+      "id": "FC-003",
+      "name": "Series Transition Drift — Closure Declared Before Ownership Transfer Complete",
+      "pattern": "A governance program or series declares closure (e.g., '700-series CLOSED') while critical ownership transfer items remain unresolved. The closure declaration masks the fact that no one is assigned to maintain the artifacts the series was responsible for.",
+      "root_cause": "Closure criteria do not include an ownership-transfer checklist. The 6 post-700 gaps identified by S724 existed at the time of S723 closure but were not part of the closure prerequisite gates. The S723 closure prerequisites (7 items from S722A) were execution-focused (severe items, evaluate elimination, DCS conditions) — not ownership-transfer-focused.",
+      "incidents": [
+        "S723 declared PROGRAM CLOSED with 6 ownership gaps that S724 discovered: (1) CURRENT_BASELINES.md maintenance ownership undefined, (2) 300→Maintenance model consumption path unclear, (3) G-NEW-1 through G-NEW-5 enforcement in 800-series certification not assigned, (4) Defect manifest maintenance after remediation not owned, (5) 300-series S310 dangling closeout, (6) May coaching layer ownership unassigned",
+        "CURRENT_BASELINES.md hashes stale: S723 hash drift analysis showed all 5 pack hashes had drifted from S530 T0 snapshot. CURRENT_BASELINES was never recaptured post-S537 or post-S722A.",
+        "300-series incomplete: S310 (Portfolio Operations Dashboard, final 300-series session) was still pending at time of S723 closure — the 300-series was declared complete in the absence of its final session. S310 was later executed as a separate session."
+      ],
+      "detection_gap": "Closure criteria were defined around execution completeness (items certified, defects resolved, DCS validated) but did not include sustainment-completeness (who maintains what after closure). The S722A closure prerequisites list (7 items) was entirely about calibration execution — none were about ownership transfer.",
+      "prevention_rule": "PR-003: No series may declare closure until an Ownership Transfer Checklist is completed and signed off by the receiving owner. The checklist must cover: (a) every artifact the series maintains (with owning track/lane), (b) every outstanding action item with a named owner, (c) every monitoring responsibility with escalation path, (d) confirmation the current baseline file is updated. Closure means responsibility has been TRANSFERRED, not just that work is done.",
+      "recurrence_count": 2,
+      "recurrence_sessions": ["S723 closure (6 ownership gaps)", "S310 dangling (300-series incomplete at closure)"]
+    },
+    {
+      "id": "FC-004",
+      "name": "Block Disambiguation Failure — Metadata-Block vs. Content-Block Reading Error",
+      "pattern": "Scan tools or verification agents read from the wrong JSON sub-object (metadata block vs. content block) within items that have split/dual-block architecture. The metadata block's ExplanationWrong fields describe a different item's distractors than the content block that the learner sees, leading to false defect reports or missed real defects.",
+      "root_cause": "The dual-block architecture in Pack A/C/D items (metadata block with ChoiceA-D/ExplanationWrongA-D + content block with Choices.{A,B,C,D}/CorrectChoice/ExplanationCorrect) has the CC-offset issue where metadata-block choices are stale template residue from rotation groups. Tools that extract CC from one block but EW fields from the other produce systematically wrong results.",
+      "incidents": [
+        "DL-016 confirmed: P1-A-005 metadata EW describes P1-A-004's ASC 606 scenario. P1-A-030 metadata EW describes cash-flow, not retained earnings. P1-D-030 metadata EW describes JIT, not overhead allocation. P1-DD-025 metadata EW_B describes reciprocal cost method, not margin of safety.",
+        "P1-CC-050 S722A vs. S723 conflict: S722A Agent V found DL-008 (CC=C, EW-C non-empty). S723 Agent V found CLEAN (CC=B, EW_B empty). Most likely one of the two reads extracted CC from the wrong block.",
+        "S801 pivotal finding: All 5 packs confirmed using single-object architecture. The DL-016 defect entry describing a 'paired-object structure' with separate flat ChoiceA-D metadata blocks describes a historical format that has been normalized away. Zero flat ChoiceA fields exist in current pack files.",
+        "74.1% CC-mismatch artifact in Pack C DL-008 Tier 0 session (2026-07-23): CorrectChoice from metadata block differed from content-block answer-key match in 129 of 174 items. This was the root cause of the CC-rotation artifact confusion."
+      ],
+      "detection_gap": "No automated check that the metadata-block ChoiceA-D values match content-block Choices.{A,B,C,D} values. The governance guard (Rule 2) checks EW[CC] non-empty but uses whatever CC value it extracts — it does not verify which block's CC it's reading. S804 explicitly noted 'All 58 remaining Certified Pack A Section E items carry DL-016 metadata-content shift' but no automated validator detects this.",
+      "prevention_rule": "PR-004: Every scan tool that extracts paired fields (CC + EW) must extract BOTH from the same enclosing JSON object. For dual-block items, the content block (Choices.{A,B,C,D}, CorrectChoice) is authoritative for learner-facing content. Every scan must verify metadata-block ChoiceA-D matches content-block Choices.{A,B,C,D} before using metadata-block fields. Any mismatch must be flagged. G-NEW-1 and G-NEW-3 from QUESTION_METADATA_STANDARD.md §9.4.2 are certification-blocking conditions.",
+      "recurrence_count": 3,
+      "recurrence_sessions": ["DL-016 discovery (Session 5/64, 2026-07-23/24)", "S722A P1-CC-050 conflict", "S804 DL-016 Section E residual (2026-07-26)"]
+    },
+    {
+      "id": "FC-005",
+      "name": "Concurrent-Write Integrity — No File-Lock Between Sessions",
+      "pattern": "Multiple sessions operate on the same pack files without write-lock coordination. A later session writes from a disk snapshot that predates an earlier session's write, silently overwriting the earlier session's remediation work.",
+      "root_cause": "No technical or process mechanism prevents two concurrent sessions from writing to the same file. The project allows multiple independent sessions per day with no session-registry or .lock file protocol. Sessions are isolated in memory but share the same filesystem.",
+      "incidents": [
+        "DL-019 principal incident: DL-013/certification-wave session wrote to Pack C and Pack D from a disk snapshot that predated the DL-008 remediation session, overwriting 432 cleared ExplanationWrong[CorrectChoice] fields. Required full re-remediation.",
+        "DL-012 scanning instability: Three successive scans using the same broken DL-020-vulnerable brace-matcher produced three different counts (128, 112, 138) on the same file — likely because different concurrent sessions were writing to the file between scans.",
+        "DL-026 count fluctuations: Pre-remediation Pack D had 0 DL-026. Post-DL-013 remediation: 348. Post-DL-008 remediation: 500. Current: 0 (after autonomous-run remediation). The fluctuation was partly concurrency artifact."
+      ],
+      "detection_gap": "No post-write verification step confirmed that a remediation session's changes persisted. The governance guard checks structural rules but does not check whether prior sessions' remediations have been overwritten. No file-hash diff between T0 and Tend to detect unauthorized writes.",
+      "prevention_rule": "PR-005: Before any write session, verify the target file's hash matches the expected post-prior-session hash. After writing, re-verify the hash AND confirm all expected changes are present. If two sessions must operate on the same pack file, they must be sequential (not concurrent). A session-registry file tracking active writers per pack file is the minimum viable safeguard.",
+      "recurrence_count": 3,
+      "recurrence_sessions": ["DL-019 (2026-07-23, primary)", "DL-012 scans (2026-07-22/23)", "DL-026 fluctuations (2026-07-23)"]
+    },
+    {
+      "id": "FC-006",
+      "name": "Self-Reported Claim Verification — Summary Reports Accepted Without Raw Evidence",
+      "pattern": "Self-reported claims of 'certification complete,' 'audit passed,' 'scan clean,' or 'X items processed' are accepted at face value without cross-checking against raw file/line evidence. Totals-only reports without QID lists are treated as authoritative. Agent self-reports conflict with no resolution.",
+      "root_cause": "Systematic violation of AGENTS.md §5 (Dual Verification). Agents and session summary documents report aggregate counts without providing per-item QID lists, making independent verification impossible. When two agents report conflicting counts, there's no mechanism to force reconciliation — both counts are documented as-is.",
+      "incidents": [
+        "DL-008 count saga (severity: CRITICAL): Four authoritative sources gave four different answers for Certified DL-008 count — CURRENT_BASELINES (67), S722A (1 survivor), S723 Agent V (0), S802 (0). The 67→1→0 cascade took 3 sessions to resolve. The root of the conflicting counts was that each source used a different methodology and none provided per-item QID lists for cross-verification.",
+        "S722A claimed 86 items modified — actual was 141. 34 undocumented Evaluate→Understand/Apply CL recalibrations + ~20 undocumented Difficulty-string corrections were applied without per-item documentation. Agent O discovered this by diff analysis.",
+        "S802 Agent P QID-list off-by-one errors: Agent P's archival QID list had wrong IDs (P1-A-045/065 vs correct P1-A-044/064) and misidentified 3 Certified items as Archived while omitting 3 genuinely Archived items. Agent E's per-item raw-file inspection was required to establish ground truth.",
+        "DL-012 count instability: Three scans (128, 112, 138) on the same file with same tool. AGENTS.md §6 requires counts to stabilize before any remediation. The 138 was eventually refuted as well — true count was 140 after third independent scan.",
+        "Autonomous Run Part 2 (DL-026): Agent reported 73 DL-026 items in Pack D Section D — actually 0. The pre-remediation backup comparison showed Pack D Section D was already clean (DL-013 certification inadvertently filled all empty slots). The claim was accepted without raw evidence."
+      ],
+      "detection_gap": "No enforcement of AGENTS.md §5. The governance guard has no rule requiring per-item QID lists with scan results. Reports with totals-only summaries pass through the session workflow without challenge. Cross-agent reconciliation is not part of any standard workflow.",
+      "prevention_rule": "PR-006: Every scan report MUST include a QID list (array of QuestionIDs) for every defect found, not just an aggregate count. Totals-only reports must be REJECTED per AGENTS.md §5. When two agents report conflicting counts for the same defect class on the same file, a third independent agent must resolve the discrepancy using raw file/line evidence before any remediation proceeds. The governance guard should add Rule 6: 'Totals-only scan reports without QID lists are invalid — BLOCK at WARN level.'",
+      "recurrence_count": 5,
+      "recurrence_sessions": ["DL-008 count saga (S700-S723)", "S722A undocumented changes (S722A→S723)", "S802 Agent P QID errors", "DL-012 counting (2026-07-22)", "DL-026 Autonomous Run Part 2 (2026-07-23)"]
+    },
+    {
+      "id": "FC-007",
+      "name": "Validator Infrastructure Gap — String-Unaware Brace-Matcher (DL-020 Pattern)",
+      "pattern": "Parser infrastructure in scan/validation tools uses naive bracket counters that don't track whether they're inside a JSON string value. Brackets inside stem text, explanations, or choices cause the parser to misidentify object boundaries, producing truncated objects, undercounts/overcounts, and silent false negatives.",
+      "root_cause": "The extractQuestions() and extractCases() methods in the validator suite were written without string-awareness. They tracked { and } only, with no inString/stringChar/escape state machine. This is the same class of parser defect that caused multiple counting errors across multiple sessions.",
+      "incidents": [
+        "DL-020 principal incident: ExplanationValidator's brace-matcher silently dropped items where stem/explanation text contained bracket characters. Caused DL-008 undercount (197 vs. 336 actual). Fixed July 2026 with string-aware parser.",
+        "DL-012 counting errors: The same broken brace-matcher produced 3 different counts (128, 112, 138) on the same file in successive scans because it parsed different object boundaries each run.",
+        "S309 DL-008 resolution: Confirmed that DL-020-vulnerable parsers had been producing varying DL-008/DL-026 counts across sessions, which is why different agents' reports couldn't be reconciled.",
+        "Pack B Sections B/C/F: The DL-017 backtick-newline corruption made these objects structurally unparseable by ANY parser (even string-aware ones), but the naive parser's silent failure mode meant the corruption went undetected for multiple sessions."
+      ],
+      "detection_gap": "The brace-matcher was in core extractQuestions()/extractCases() methods shared by multiple validators. Any validator using these methods inherited the defect. No parse-integrity check (count vs grep -c '\"QuestionID\"') was built into the validation pipeline.",
+      "prevention_rule": "PR-007: Every parser that extracts JSON objects from source files MUST be string-aware (track inString + escape state). Every parser MUST self-verify by comparing its item count against grep -c '\"QuestionID\"' on the source file. Any discrepancy must be logged as a CRITICAL validator error, not silently ignored. S802 Prevention Rule 7: 'String-aware brace-matchers required for all parsers.'",
+      "recurrence_count": 4,
+      "recurrence_sessions": ["DL-020 (2026-07-23)", "DL-012 scans (2026-07-22/23)", "S309 reconciliation", "DL-017 Pack B (2026-07-23)"]
+    },
+    {
+      "id": "FC-008",
+      "name": "Remediation Tooling Regression — Repair Scripts Create New Empty Slots (DL-028 Pattern)",
+      "pattern": "Remediation scripts that rewrite ExplanationWrong fields only fill the slots they target while leaving other slots (like rotation-artifact empty positions) untouched. The script treats empty template-rotation slots identically to already-filled boilerplate slots, never filling them. This means certified remediation increases the defect count for a different defect class.",
+      "root_cause": "Remediation scripts use replaceAll patterns that substitute boilerplate text with choice-specific text but do not verify that ALL non-CorrectChoice ExplanationWrong slots received content post-rewrite. No post-remediation verification step checks for the complementary defect (DL-026 empty non-CC slots).",
+      "incidents": [
+        "DL-028 principal incident: DL-013 short-form rewrite format (used for Packs C/D Sections C-F) left the template rotation slot empty while filling other non-CC slots. Increased DL-026 from 56→75 items per section and 56→112 fields.",
+        "Pack D pre/post DL-013: Pre-remediation backup showed 56-75 DL-026 items (1 empty field each). Post-remediation showed 75-100 items (1.5 empty fields each). The DL-013 script created ~0.5 extra empty slots per item.",
+        "Three root causes confirmed by Autonomous Run Part 2 Phase 0: (1) Pre-existing rotation artifact from original template, (2) DL-013 remediation expanded empty slots (tooling regression = DL-028), (3) Certification surface expansion: MISSING→Certified state changes made pre-existing empty slots visible."
+      ],
+      "detection_gap": "No post-remediation DL-026 scan was part of the DL-013 remediation workflow. The two defect classes were treated independently even though DL-013 remediation was the direct cause of DL-026 expansion. Remediation scripts had no built-in quality gate.",
+      "prevention_rule": "PR-008: Every remediation script MUST run a pre- and post-scan for ALL known defect classes on the affected sections before declaring completion. If any defect class count increases (not decreases), the remediation is regressing and must be halted. The script MUST verify that all non-CorrectChoice ExplanationWrong slots are non-empty after any rewrite that touches ExplanationWrong fields.",
+      "recurrence_count": 3,
+      "recurrence_sessions": ["DL-028 (2026-07-23)", "DL-013→DL-026 in Pack D (2026-07-23)", "DL-013→DL-026 in Pack C (2026-07-23)"]
+    },
+    {
+      "id": "FC-009",
+      "name": "Template Pipeline Quality Degradation — Context-Free Pre-Authoring Produces Systematic Defects",
+      "pattern": "Content authored by template rotation engines without per-item quality review produces systematic defects across entire sections: identical boilerplate explanations (DL-013), empty distractor slots at rotation positions (DL-026), wrong-topic metadata (DL-016), inflated difficulty labels (DL-031, DL-032), and clone waste (DL-012). The template pipeline was the shared root cause for 5+ defect categories.",
+      "root_cause": "Questions were generated in 5-item rotation groups where the template engine auto-assigned difficulty, cognitive level, distractor explanations, and metadata by position in the group rather than by cognitive assessment of each item. Items were not individually reviewed for correctness, realism, or educational quality before entering the pool.",
+      "incidents": [
+        "DL-013: 2,587 template boilerplate ExplanationWrong fields across 882 QIDs — identical 'represents a plausible misconception' text reused across all distractor slots. Same template pipeline as DL-012.",
+        "DL-012: 140 clone items (93.3% of Pack C/D Section E inventory) where stem varies only by company name and answer letters are positionally rotated. The clones provide zero additional pedagogical value beyond the 28 seed items.",
+        "DL-031: ~500 items labeled Moderate that test Bloom's Remember — definition-match inflation. The template assigned difficulty by position, not cognitive demand. Six of seven sampled misclassifications followed the identical pattern.",
+        "DL-032: 420 case items all labeled Moderate with zero variance — statistically implausible. Template assigned default values without per-item cognitive calibration.",
+        "DL-016: Metadata-block ChoiceA-D carries stale template residue from the rotation group's previous item. The content block was independently authored/upgraded but the metadata was never updated.",
+        "DL-021: Pack E Section C template flag suppressed all distractor ExplanationWrong generation — 300 absent fields.",
+        "DL-026: Template engine treated one distractor slot position as if it were the CorrectChoice slot, leaving it empty in a rotation-position-dependent pattern."
+      ],
+      "detection_gap": "The template pipeline operated before any CAQS review was in place. Items entered the pool as 'Certified' without per-item six-dimension verification. No automated validator caught template-generated patterns during the authoring phase. The defects were only discovered months later during audit sweeps.",
+      "prevention_rule": "PR-009: No content generated by a template rotation engine may enter the Certified pool without per-item six-dimension CAQS verification (§1.6). Template engines may assist with formatting but must not determine difficulty, cognitive level, or distractor explanations. Every template-generated item must pass an individual 'anti-template' check: stem uniqueness, distractor choice-specificity, correct-answer independence from rotation position, and metadata consistency with content.",
+      "recurrence_count": 7,
+      "recurrence_sessions": ["S718-S722A DCS calibration (DL-031/032)", "DL-012 discovery (2026-07-22)", "DL-013 sweep (2026-07-22/23)", "DL-016 discovery (2026-07-23/24)", "DL-021 discovery (2026-07-23)", "DL-026 scoping (2026-07-23)", "S800 clone analysis (2026-07-26)"]
+    },
+    {
+      "id": "FC-010",
+      "name": "Answer-Key Integrity — Template Rotation Produces Wrong Answer Letters",
+      "pattern": "The template rotation engine assigned the correct answer to the wrong position letter, but the ExplanationCorrect text was correct. This created items where the stored CorrectChoice disagrees with the independently derived correct answer, but the explanation text confirms the correct answer (at a different letter).",
+      "root_cause": "Same template rotation pipeline as DL-012. The engine generated 5-item groups where the substantive answer was correct but the answer letter (A/B/C/D) was assigned by rotation position rather than by matching the explanation text to the choice text.",
+      "incidents": [
+        "DL-030: 5 confirmed answer-key errors across Pack B (4) and Pack E (1). P1B-B-119: learning curve calculation error (exponent applied to 8 instead of 4). P1B-F-084: CorrectChoice pointed to known bad practice (3D pie charts). P1B-F-116: CC claimed SoD 'no longer relevant in ERP' — categorically false. P1B-F-121: CC claimed smart contracts 'legally binding only when printed' — wrong. P1E-E-037: CC pointed to COSO Principle 14 instead of 15.",
+        "All 5 were Certified items in the active learner delivery pool. The EC text was correct for all 5 — only the CorrectChoice letter was wrong. Learners who answered correctly were marked wrong.",
+        "S722A Agent D confirmed 0 genuine Evaluate items — 67 template-assigned Evaluate labels were all inflated. The same template engine that inflated CL labels also produced wrong answer letters in DL-030 cases."
+      ],
+      "detection_gap": "No independent re-derivation of answer keys during template authoring. Items were certified without verifying that the stored CorrectChoice matched the independently derived correct answer. The CAQS §1.6 six-dimension verification was not applied during template generation.",
+      "prevention_rule": "PR-010: Every item produced by any automated pipeline must undergo independent answer-key verification before certification — re-derive the correct answer from stem + choices without reading the stored CorrectChoice. Compare. Items that fail must be tagged as 'Answer-Key Error' and blocked from certification. This applies to template-generated items with particular force.",
+      "recurrence_count": 2,
+      "recurrence_sessions": ["DL-030 discovery (2026-07-23/24)", "S722A Evaluate elimination (2026-07-26)"]
+    }
+  ],
+
+  "incidents_timeline": [
+    {
+      "date": "2026-07-22",
+      "session": "Early DL sweeps",
+      "incident": "DL-012 Section E clone counting begins",
+      "description": "First scan reports 128 clones. Second scan: 112. Third scan: 138. Fourth scan stabilizes at 140. Instability caused by DL-020-vulnerable brace-matcher (string-unaware, bracket-in-stem corruption). AGENTS.md §6 counting-stabilization rule created because of this incident.",
+      "failure_class": "FC-001, FC-007"
+    },
+    {
+      "date": "2026-07-22/23",
+      "session": "6-Agent DL-008 Orchestration",
+      "incident": "DL-008 remediation claimed '0 remaining across all 5 packs'",
+      "description": "Six-agent orchestration declared DL-008 resolved at 0. Next day's Tier 0 corrective session found 175 DL-008 items in Pack C (174 Certified + 1 MISSING). The prior claim was wrong — likely DL-019 concurrent-write overwrite where the DL-013/certification wave restored pre-cleared EW[CC] fields.",
+      "failure_class": "FC-005, FC-006"
+    },
+    {
+      "date": "2026-07-23",
+      "session": "Pack B DL-008 False-Positive",
+      "incident": "Agent 6 scan reported 111-112 Certified DL-008 items in Pack B Sections A/D",
+      "description": "Scan used forward-search from QuestionID to find CorrectChoice. But Pack B stores CC BEFORE QID in the JSON object (unique among all 5 packs). Forward-scan systematically grabbed NEXT item's CC, producing ~75% false-positive rate. True count: 0. This was the same DL-029 artifact that would later produce S800's 67 phantom DL-008 claims.",
+      "failure_class": "FC-001"
+    },
+    {
+      "date": "2026-07-23",
+      "session": "DL-019 Concurrent-Write Discovery",
+      "incident": "432 items in Pack C+D re-remediated after silent overwrite",
+      "description": "DL-013/certification-wave session overwrote DL-008 clearances. Required 16-batch re-remediation. File-lock protocol documented but not implemented.",
+      "failure_class": "FC-005"
+    },
+    {
+      "date": "2026-07-23",
+      "session": "DL-020 Brace-Matcher Fix",
+      "incident": "Validator undercounted DL-008 at 197 instead of 336 — 139 items missed",
+      "description": "String-unaware brace-matcher in core extractQuestions() silently dropped objects with brackets in stems/explanations. Fixed with string-aware parser. Item-count self-verification added (compare against grep -c '\"QuestionID\"').",
+      "failure_class": "FC-007"
+    },
+    {
+      "date": "2026-07-23",
+      "session": "DL-028 Discovery",
+      "incident": "DL-013 remediation tooling regression creates new empty slots",
+      "description": "Pre-remediation backup comparison revealed DL-013 script left rotation template slots empty, increasing DL-026 from 56→75 items per section. Tooling fix documented but not implemented.",
+      "failure_class": "FC-008"
+    },
+    {
+      "date": "2026-07-23/24",
+      "session": "DL-030 Discovery + Remediation",
+      "incident": "5 Certified answer-key errors in active learner pool",
+      "description": "Phase 0B CorrectChoice ground-truth audit found 5 items where stored CC disagreed with independently derived correct answer. All 5 fixed with EW[new_CC] cleared and distractor text authored for old CC position. Root cause: template rotation assigned answer letters by position, not by matching to explanation text.",
+      "failure_class": "FC-010"
+    },
+    {
+      "date": "2026-07-24",
+      "session": "Session 64 DL-016 Severity Upgrade",
+      "incident": "DL-016 upgraded from Low→High with confirmed learner-safety risk",
+      "description": "Pilot certification evaluation found DL-016 metadata-content shift affects ALL Pack A sections, not just Section E. On Certified items, learners who select wrong answers see ExplanationWrong text about completely unrelated topics.",
+      "failure_class": "FC-004"
+    },
+    {
+      "date": "2026-07-25",
+      "session": "Session 700 — Global Certification Review",
+      "incident": "Foundational structural and quality audit across all 2,900 items",
+      "description": "Systematic MCQ and case-bank audit. Identified: DL-031 difficulty inflation (~500 items), DL-032 case uniform difficulty (420 items), Pack D DL-008 count discrepancy (10 vs. ~342), and made 6/7 difficulty miscalibration findings in 15-item sample. All findings were DL-029 vulnerable though this wasn't understood yet.",
+      "failure_class": "FC-001, FC-009"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S718-S722 — DCS Calibration Series",
+      "incident": "6-session calibration governance program addresses template-inflated labels",
+      "description": "Series covered: CognitiveLevel enrichment (S718, 2,500 items), Difficulty×CognitiveLevel alignment (S719), Pack E restoration + DCS v1.1 codification (S720), cross-pack calibration audit (S721), and residual CL remediation (S722). Systematic discovery that template rotation assigned ~67 Evaluate labels all inflated (0 genuine Evaluate in pool), 579 Apply misclassified, 1,370 DS misalignments. DCS v1.1 established with boundary trees but 6 amendment conditions unresolved.",
+      "failure_class": "FC-009"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S722A — Definitive 26-Agent Execution",
+      "incident": "First claim of '0 Certified DL-008' with 83 items modified, but P1-CC-050 survivor found",
+      "description": "26-agent complete run. Achieved: 0 Evaluate pool-wide, DCS compliance 92.6→92.6%, DL-008 claimed 0 except P1-CC-050 (later verified CLEAN — another DL-016 read error from S722A). Agent V found P1-CC-050 with CC=C, EW-C non-empty. S723 Agent V later confirmed CLEAN (CC=B, EW_B empty). The P1-CC-050 controversy was never definitively resolved between sessions.",
+      "failure_class": "FC-001, FC-004, FC-006"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S723 — 700-Series Governance Program CLOSURE",
+      "incident": "Closure declared with 6 ownership gaps and stale baselines",
+      "description": "26-agent closure audit. Declared PROGRAM CLOSED with all five success criteria met, DL-008=0 confirmed, governance guard 20/20 PASS. But closure criteria excluded ownership transfer. The 6 gaps (CURRENT_BASELINES maintenance, 300→maintenance handoff, G-NEW enforcement ownership, defect manifest updates, S310 closeout, May coaching ownership) were all undetected at closure time.",
+      "failure_class": "FC-003"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S800 — MCQ Certification Program Launch",
+      "incident": "Launch declared with 3 P0 blockers (67 DL-008, FD-045, FD-075)",
+      "description": "S800 Ready Board Verdict was CONDITIONAL — READY FOR LAUNCH pending three prerequisites. All three were soon refuted as DL-029 forward-scan artifacts by S801. The S800 census itself used the DL-029-vulnerable scan, reporting phantom defects. The launch was built on incorrect scan data.",
+      "failure_class": "FC-001"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S801 — Governance Correction",
+      "incident": "All 3 S800 P0 blockers refuted as DL-029 false positives",
+      "description": "Function constructor parse proved: 0 Certified DL-008, FD-045 structurally complete (CC=B), FD-075 structurally complete (CC=C). CC-before-QID universal in all 5 packs confirmed as root cause. Portfolio correction: +150 Certified (Pack C 250→350, Pack D 300→350) — sections were certified but undercounted. DL-016 architectural finding: single-object architecture, paired-object format normalized away.",
+      "failure_class": "FC-001, FC-004"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S802 — Portfolio Baseline Correction",
+      "incident": "8 Permanent Prevention Rules established, roadmap compressed 19→12 sessions",
+      "description": "Established the 8 rules that became the foundation for Agent G's SCAN_METHODOLOGY_STANDARD_v1.0. Roadmap compressed from 19 to 12 sessions by eliminating phantom remediation work. Key: Agent P QID-list off-by-one errors found (P1-A-045/065 vs P1-A-044/064) — ground truth vs. agent claim discrepancy. 11/13 agents consistent per reliability review (84.6%).",
+      "failure_class": "FC-006"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S309 — Bottleneck Analysis",
+      "incident": "DL-008 contradiction definitively resolved: 0 actual",
+      "description": "Direct pack-file parse via Function constructor confirmed 0 Certified DL-008. The 67 from CURRENT_BASELINES were all DL-029 false positives. This resolved the DL-008 count saga from 539→175→67→1→0 over 4 months. The phantom 67 DL-008 items had been blocking the critical path for multiple sessions.",
+      "failure_class": "FC-001, FC-002"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "S724 — Governance Maintenance Activation",
+      "incident": "6 post-700 ownership gaps discovered, CURRENT_BASELINES stale, governance guard DL-008 detection still vulnerable",
+      "description": "Key findings: (1) Governance guard DL-008 detection still uses DL-029-vulnerable window scan — P0 fix required. (2) CURRENT_BASELINES.md §3 stale with 67 phantom DL-008 items. (3) 6 ownership gaps: baseline maintenance, 300→maintenance handoff, G-NEW enforcement, defect manifest updates, S310 closeout, May coaching layer. (4) 600-series DEFERRED unanimously (26/26). 16 deliverables created. Zero existing files modified.",
+      "failure_class": "FC-002, FC-003"
+    }
+  ],
+
+  "forbidden_methodology_catalog": {
+    "description": "Complete catalog of every scan/audit methodology that produced false positives or unreliable results. For Agent G's SCAN_METHODOLOGY_STANDARD_v1.0 Forbidden Methodology List.",
+    "methodologies": [
+      {
+        "id": "FM-001",
+        "name": "Forward-Scan from QuestionID for CorrectChoice",
+        "what_was_done_wrong": "Scan tools search forward from '\"QuestionID\"' using regex to find '\"CorrectChoice\"' within a ±1200 character window, without accounting for field order in the JSON object.",
+        "defects_produced": [
+          "S800: 67 phantom Certified DL-008 items (actual: 0)",
+          "S800: FD-045/FD-075 reported as 'missing content blocks' (actual: structurally complete)",
+          "DL-029: Estimated 885+ Certified DL-008 across prior sessions (actual: dozens or zero)",
+          "Pack B: 111-112 false-positive DL-008 (actual: 0)",
+          "68.8% false-positive rate when CC stored before QID (universal in all 5 packs)"
+        ],
+        "correct_methodology": "Function-constructor parse: extract the enclosing JSON object, parse it, read CorrectChoice and ExplanationWrong fields from the same object. NEVER use a forward-scan or regex-window when CC field position is unknown relative to QID. Always verify CC position in the source file before any scan. S802 Prevention Rules 1-4.",
+        "forbidden_in": "All defect scans, all pack audits, all certification sweeps, all pre-delivery safety checks"
+      },
+      {
+        "id": "FM-002",
+        "name": "String-Unaware Brace-Matcher for JSON Object Extraction",
+        "what_was_done_wrong": "Parser tracks {/} bracket depth with no awareness of whether the cursor is inside a JSON string literal. Brackets inside stems, explanations, or choices corrupt the depth counter, producing truncated or merged objects.",
+        "defects_produced": [
+          "DL-020: 139 DL-008 items missed by ExplanationValidator (197 vs. 336 actual)",
+          "DL-012: Three different clone counts (128, 112, 138) on same file by same tool in successive runs",
+          "DL-007 QID count inflation: 1,011 QIDs reported vs. 882 actual (15% inflation from fragmented objects)",
+          "Undetected DL-017 Pack B corruption for multiple sessions (malformed JSON silently parsed as partial objects)"
+        ],
+        "correct_methodology": "String-aware while loop tracking inString/stringChar/escape flags. Self-verify: compare parse-count against grep -c '\"QuestionID\"' on the source file. Any discrepancy must be a CRITICAL error. S802 Prevention Rule 7.",
+        "forbidden_in": "Any parser that extracts JSON objects from source files, both scan scripts and validators"
+      },
+      {
+        "id": "FM-003",
+        "name": "Multi-Block Field Cross-Read (Metadata Block CC + Content Block EW)",
+        "what_was_done_wrong": "Tools extract CorrectChoice from one JSON sub-object (metadata block) but read ExplanationWrong fields from a different sub-object (content block). In dual-block architecture, the metadata block's choices and EW fields describe a DIFFERENT item (DL-016 +1 offset).",
+        "defects_produced": [
+          "P1-CC-050 controversy: S722A found DL-008 (CC from wrong block), S723 found CLEAN (CC from correct block)",
+          "DL-016 learner-safety risk: 58 Certified Pack A Section E items show wrong-topic EW text",
+          "DL-026 false positives: Pack C/D scans report empty non-CC slots when reading metadata-block values instead of content-block values",
+          "74.1% CC-mismatch artifact in 2026-07-23 Tier 0 Pack C scan"
+        ],
+        "correct_methodology": "Extract CorrectChoice AND ExplanationWrong fields from the SAME enclosing JSON object. For items with dual-block architecture, the content block (Choices.{A,B,C,D}, CorrectChoice) is authoritative. Verify metadata-block ChoiceA-D matches content-block Choices.{A,B,C,D} before using metadata-block fields. S802 Prevention Rules 1-3.",
+        "forbidden_in": "All DL-008/DL-026/DL-025/DL-010 scans and any scan requiring paired-field extraction"
+      },
+      {
+        "id": "FM-004",
+        "name": "Regex Global Match on Flat Field Names Without Object-Boundary Awareness",
+        "what_was_done_wrong": "Scanners use a flat regex like /\"CorrectChoice\"\\s*:\\s*\"([A-D])\"/ that matches the FIRST occurrence in the file window, which may be the metadata block for the wrong item when CC appears before QID. Cannot distinguish which JSON object a field belongs to.",
+        "defects_produced": [
+          "Tier 0 false alarm (2026-07-23): Session 1 scanning script matched metadata-block ChoiceA instead of content-block Choices.A",
+          "S800 reported all 3 P0 blockers based on first-occurrence field matches",
+          "Cross-pack DL-026 counts that couldn't be reconciled because different scan runs matched different block instances"
+        ],
+        "correct_methodology": "For dual-block packs: use path-aware matching ('\"Choices\": { \"A\"') — never use flat '\"ChoiceA\"' regex. The rendering engine indexes by Choices.A-D (nested), not by ChoiceA-D (flat metadata). For single-block packs: extract the complete JSON object first, then read fields from the parsed object. S802 Prevention Rules 1, 3, 6.",
+        "forbidden_in": "All pack scans, all QID-level audits, all certification verification sweeps"
+      },
+      {
+        "id": "FM-005",
+        "name": "Totals-Only Defect Reports Without Per-Item QID Lists",
+        "what_was_done_wrong": "Scan reports publish aggregate counts ('67 Certified DL-008', '288 DL-026 items', '141 items modified') without providing the list of QuestionIDs. Different agents produce different totals with no way to reconcile.",
+        "defects_produced": [
+          "DL-008 count saga: 67→1→0 took 3 sessions because no source provided QID lists",
+          "S722A undocumented changes: 34 Evaluate→Understand CL recalibrations applied without per-item documentation, discovered only by diff analysis",
+          "DL-026 5-agent scoping: Agent 3 reported 288, Agent 6 found 500 — discrepancy of 212 items caused by different counting criteria with no QID-list reconciliation possible",
+          "Agent P (S802) QID off-by-one errors: P1-A-045 vs P1-A-044 — wrong QIDs reported in aggregate",
+          "DL-012 counting: four different counts with no per-item evidence to determine which was correct"
+        ],
+        "correct_methodology": "Every scan report MUST include the array of QuestionIDs for every defect found. Totals-only reports must be REJECTED. When agents disagree on count, reconcile their QID lists item-by-item. S802 Prevention Rule 6. AGENTS.md §5 enforcement.",
+        "forbidden_in": "All governance reports, all certification attestations, all pre-delivery safety checks, all session summaries"
+      },
+      {
+        "id": "FM-006",
+        "name": "Remediation Script Without Pre/Post Defect-Class Cross-Scan",
+        "what_was_done_wrong": "Remediation scripts that modify ExplanationWrong fields do not verify that their changes left ALL defect classes clean. They check only the target defect class (DL-013) while ignoring complementary defect classes (DL-026, DL-008).",
+        "defects_produced": [
+          "DL-028: DL-013 rewrite script increased DL-026 from 56→75 items per section by leaving rotation template slots empty",
+          "Pack D DL-013→DL-026: Pre-remediation 0 DL-026 → Post-DL-013 348 → Post-DL-008 500. Net +500 from two remediation operations",
+          "DL-008 remediation leaving DL-025 empty distractor slots in Pack A Section B"
+        ],
+        "correct_methodology": "Every remediation script MUST: (1) Run full pre-scan for ALL known defect classes on the target section, (2) After remediation, re-run ALL defect-class scans, (3) HALT if any non-target defect class count increased, (4) Report before/after counts per defect class. This is PR-008.",
+        "forbidden_in": "All remediation operations, all rewrite scripts, all batch content modifications"
+      },
+      {
+        "id": "FM-007",
+        "name": "Agent Self-Report Reliance Without Independent Third-Agent Verification",
+        "what_was_done_wrong": "When Agent A reports 'X items remediated' and Agent B reports 'Y items remaining' for the same defect on the same file, no independent third agent is assigned to resolve the discrepancy. Both reports are documented as-is and carried forward.",
+        "defects_produced": [
+          "Autonomous Run Part 2: Agent claimed 73 DL-026 items in Pack D Section D (actual: 0 — DL-013 had already filled all empty slots)",
+          "DL-026 5-agent vs. Agent 6 scope: 632 vs. 1,005 — 373-item discrepancy never reconciled, only documented",
+          "S722A Agent P reported '12 items carry pre-existing DL-008' while S801 confirmed 0 for same pack",
+          "Pack B Sections A/D DL-008: Agent claimed 111, true count 0. The claim was from a totals-only report with no QID list."
+        ],
+        "correct_methodology": "When two agent reports conflict on the same defect class + same file, spawn a THIRD independent agent with access to the raw file. The third agent must: (1) perform independent scan using Function-constructor parse, (2) produce QID list of findings, (3) compare against BOTH prior agent reports, (4) identify which agent was correct and why the other was wrong, (5) document the root cause of the discrepancy. Per AGENTS.md §5 and §6.",
+        "forbidden_in": "All governance audits, all certification closeout reports, all pre-delivery safety checks"
+      },
+      {
+        "id": "FM-008",
+        "name": "Session Closure Without CURRENT_BASELINES.md Update",
+        "what_was_done_wrong": "Sessions verify the correct state (e.g., 0 Certified DL-008) but do not update the authoritative baseline file to reflect the verified state. Subsequent sessions read the stale baseline and make decisions based on phantom defects.",
+        "defects_produced": [
+          "Phantom 67 DL-008 persisted in CURRENT_BASELINES through S724 despite S801/S802/S722A/S723 all confirming 0",
+          "SESSION_STATUS_2026-07-24 reported 2,031 Certified vs. actual 2,181 — +150 undercount carried forward through multiple sessions",
+          "CURRENT_BASELINES hashes stale: 5 pack hashes hadn't been recaptured since S530 T0 snapshot, yet S536/S537/S722A all modified files",
+          "DL-016 unregistered in CURRENT_BASELINES despite HIGH severity — no mechanism to ensure governance findings propagate to baselines"
+        ],
+        "correct_methodology": "Every session's closing action MUST include updating CURRENT_BASELINES.md with verified counts, hashes, and defect status. The baseline file must be checked against ground truth at every T0 and updated at every Tend. Any discrepancy between CURRENT_BASELINES and ground truth found at T0 must be flagged as CRITICAL. Per PR-002.",
+        "forbidden_in": "All governance sessions, all certification sessions, all remediation sessions"
+      }
+    ]
+  },
+
+  "recurrence_summary": {
+    "description": "Count of distinct sessions where each failure class manifested, based on REVISION_HISTORY.md and DEFECT_LIBRARY.md evidence across S700→S724.",
+    "failure_classes": [
+      {
+        "id": "FC-001",
+        "name": "Scan Methodology Drift",
+        "distinct_sessions": 6,
+        "severity": "CRITICAL",
+        "longest_recurrence_chain": "DL-012 (2026-07-22) → Pack B false-positive (2026-07-23) → S800 (2026-07-26) → S801 refutation (2026-07-26) → S802 resolution (2026-07-26) → S722A P1-CC-050 (2026-07-26)",
+        "is_resolved": false,
+        "resolution_note": "S802 established 8 Permanent Prevention Rules but governance guard DL-008 detection still uses DL-029-vulnerable window scan as of S724. P0 fix required."
+      },
+      {
+        "id": "FC-002",
+        "name": "Baseline Ownership Drift",
+        "distinct_sessions": 4,
+        "severity": "HIGH",
+        "longest_recurrence_chain": "S800→S801→S802 (July 26) → S723 closure (July 26) → S724 T0 discovery (July 26)",
+        "is_resolved": false,
+        "resolution_note": "S724 flagged CURRENT_BASELINES.md staleness as P0 fix required. No ownership role assigned as of S724."
+      },
+      {
+        "id": "FC-003",
+        "name": "Series Transition Drift",
+        "distinct_sessions": 2,
+        "severity": "HIGH",
+        "longest_recurrence_chain": "S723 closure → S724 discovery (same day)",
+        "is_resolved": false,
+        "resolution_note": "6 ownership gaps identified by S724. No ownership transfer completed."
+      },
+      {
+        "id": "FC-004",
+        "name": "Block Disambiguation Failure",
+        "distinct_sessions": 3,
+        "severity": "HIGH",
+        "longest_recurrence_chain": "DL-016 discovery (2026-07-23) → S722A P1-CC-050 (2026-07-26) → S804 DL-016 residual (2026-07-26)",
+        "is_resolved": false,
+        "resolution_note": "DL-016 still Open with HIGH severity. 58 Certified Pack A Section E items carry DL-016 as of S804. S801 confirmed single-object architecture normalized in current files but residual items persist."
+      },
+      {
+        "id": "FC-005",
+        "name": "Concurrent-Write Integrity",
+        "distinct_sessions": 3,
+        "severity": "HIGH",
+        "longest_recurrence_chain": "DL-019 primary (2026-07-23) → DL-012 scans (2026-07-22/23) → DL-026 fluctuations (2026-07-23)",
+        "is_resolved": false,
+        "resolution_note": "File-lock protocol documented but not implemented. No session-registry or .lock file exists."
+      },
+      {
+        "id": "FC-006",
+        "name": "Self-Reported Claim Verification",
+        "distinct_sessions": 5,
+        "severity": "CRITICAL",
+        "longest_recurrence_chain": "DL-008 count saga (S700-S723) → S722A undocumented changes → S802 Agent P QID errors → DL-012 counting → DL-026 Autonomous Run",
+        "is_resolved": false,
+        "resolution_note": "AGENTS.md §5 exists but has no enforcement mechanism. Governance guard has no Rule for QID-list requirements."
+      },
+      {
+        "id": "FC-007",
+        "name": "Validator Infrastructure Gap",
+        "distinct_sessions": 4,
+        "severity": "HIGH",
+        "longest_recurrence_chain": "DL-020 (2026-07-23) → DL-012 scans (2026-07-22/23) → S309 reconciliation → DL-017 Pack B",
+        "is_resolved": true,
+        "resolution_note": "String-aware parser applied to extractQuestions() and extractCases(). S802 Prevention Rule 7 codified. Self-verification (parse-count vs. grep) now enforced."
+      },
+      {
+        "id": "FC-008",
+        "name": "Remediation Tooling Regression",
+        "distinct_sessions": 3,
+        "severity": "MEDIUM",
+        "longest_recurrence_chain": "DL-028 (2026-07-23) → DL-013→DL-026 Pack D (2026-07-23) → DL-013→DL-026 Pack C (2026-07-23)",
+        "is_resolved": false,
+        "resolution_note": "Tooling fix documented but not implemented. PR-008 established but not yet enforced in remediation scripts."
+      },
+      {
+        "id": "FC-009",
+        "name": "Template Pipeline Quality Degradation",
+        "distinct_sessions": 7,
+        "severity": "HIGH",
+        "longest_recurrence_chain": "S718→S722A calibration series indicating 7 distinct DL-IDs with shared template root cause",
+        "is_resolved": false,
+        "resolution_note": "Template pipeline defects span 7+ DL-IDs. DCS v1.1 and CAQS §1.6 six-dimension verification partially address this, but ~500 DL-031 items and all 420 DL-032 case items remain. The root cause (context-free pre-authoring) is the same defect pattern that S724 warned the 600-series would recreate."
+      },
+      {
+        "id": "FC-010",
+        "name": "Answer-Key Integrity",
+        "distinct_sessions": 2,
+        "severity": "CRITICAL",
+        "longest_recurrence_chain": "DL-030 discovery (2026-07-23/24) → S722A Evaluate elimination (2026-07-26)",
+        "is_resolved": true,
+        "resolution_note": "All 5 DL-030 items fixed. 0 Evaluate items remain (67 template-inflated labels eliminated by S722A). Independent answer-key verification now required before certification (PR-010)."
+      }
+    ]
+  },
+
+  "key_metrics_across_sessions": {
+    "sessions_spanned": "S700 through S724 (approximately 25 distinct sessions, 2026-07-25 to 2026-07-26)",
+    "total_failure_classes_identified": 10,
+    "total_incidents_cataloged": 18,
+    "total_forbidden_methodologies": 8,
+    "total_distinct_defect_entries_cross_referenced": 15,
+    "most_recurrent_failure_class": "FC-009 (Template Pipeline Quality Degradation) — 7 distinct incidents, 7 DL-IDs sharing the same root cause",
+    "most_severe_unresolved": "FC-001 (Scan Methodology Drift) — governance guard still uses DL-029-vulnerable scan as of S724",
+    "most_consequential": "FC-006 (Self-Reported Claim Verification) — DL-008 count saga (539→175→67→1→0) persisted across 4+ months and consumed 6+ sessions just to establish ground truth",
+    "certified_count_evolution": "S700: 2,031 → S801: 2,181 (+150 correction) → S802: 2,181 stable → S803: 2,182 (+1) → S804: 2,181 (-1)",
+    "dl008_count_evolution": "S700: 67 (phantom) → S801: 0 (verification) → S802: 0 confirmed → S723: 0 confirmed → S724: 0 confirmed"
+  },
+
+  "verdict": "RCA_COMPLETE",
+  "verdict_note": "This RCA maps every major governance failure from S700 through S724 across 10 failure classes. The failure classes are not independent — they interact. FC-001 (scan drift) caused FC-006 (claim verification failures) because unreliable scans produced unreliable reports. FC-007 (parser gaps) enabled FC-001 because a broken parser couldn't self-detect its errors. FC-009 (template quality) produced the underlying defects that FC-001 falsely reported as resolved. The single most impactful prevention rule is PR-001 (Function-constructor parse only) — it would have prevented the DL-008 count saga that consumed the most sessions. The single most needed infrastructure fix is enforced QID-list reporting (FM-005/PR-006) — without per-item evidence, no scan result can be trusted. All 8 forbidden methodologies in this catalog are recommended for inclusion in Agent G's SCAN_METHODOLOGY_STANDARD_v1.0 Forbidden Methodology List.",
+
+  "priority_recommendations_for_agent_g": [
+    "FM-001 through FM-008 should form the core Forbidden Methodology List in SCAN_METHODOLOGY_STANDARD_v1.0",
+    "PR-001 through PR-010 correspond to each failure class and can be promoted to mandatory scan methodology rules",
+    "S802's 8 Permanent Prevention Rules should be incorporated verbatim (they were validated by 3 independent sessions)",
+    "The interdependency chain FC-001→FC-006→FC-007 must be addressed as a system: unreliable parser (FC-007) → unreliable scan (FC-001) → unreliable report (FC-006)",
+    "Add a BLOCK-level governance guard rule requiring QID lists with all scan reports (enforcement of FM-005/PR-006)",
+    "Add a BLOCK-level governance guard rule requiring Function-constructor parse for all defect scans (enforcement of FM-001/PR-001)",
+    "Add a WARN-level governance guard rule checking CURRENT_BASELINES.md currency at T0 (enforcement of FM-008/PR-002)"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "session": "S720",
+  "agent": "G",
+  "title": "Metadata Alignment Execution Log",
+  "timestamp": "2026-07-26T16:04:57",
+  "batches": [
+    {
+      "batch": 1,
+      "pack": "e",
+      "items": 7,
+      "changes": "Remember restoration",
+      "status": "COMPLETE",
+      "details": [
+        {"qid": "P1E-A-074", "before": {"CognitiveLevel": "Apply", "DifficultyScore": 2, "Difficulty": "Moderate-Easy"}, "after": {"CognitiveLevel": "Remember", "DifficultyScore": 1, "Difficulty": "Easy"}},
+        {"qid": "P1E-B-028", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 1, "Difficulty": "Easy"}, "after": {"CognitiveLevel": "Remember", "DifficultyScore": 1, "Difficulty": "Easy"}},
+        {"qid": "P1E-B-032", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 2, "Difficulty": "Moderate-Easy"}, "after": {"CognitiveLevel": "Remember", "DifficultyScore": 1, "Difficulty": "Easy"}},
+        {"qid": "P1E-B-033", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 3, "Difficulty": "Moderate"}, "after": {"CognitiveLevel": "Remember", "DifficultyScore": 1, "Difficulty": "Easy"}},
+        {"qid": "P1E-E-001", "before": {"CognitiveLevel": "Apply", "DifficultyScore": 1, "Difficulty": "Easy"}, "after": {"CognitiveLevel": "Remember", "DifficultyScore": 1, "Difficulty": "Easy"}},
+        {"qid": "P1E-E-031", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 3, "Difficulty": "Moderate"}, "after": {"CognitiveLevel": "Remember", "DifficultyScore": 1, "Difficulty": "Easy"}},
+        {"qid": "P1E-E-049", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 2, "Difficulty": "Moderate-Easy"}, "after": {"CognitiveLevel": "Remember", "DifficultyScore": 1, "Difficulty": "Easy"}}
+      ]
+    },
+    {
+      "batch": 2,
+      "pack": "e",
+      "items": 2,
+      "changes": "Apply upgrade",
+      "status": "COMPLETE",
+      "details": [
+        {"qid": "P1E-B-001", "before": {"CognitiveLevel": "Apply", "DifficultyScore": 4, "Difficulty": "Difficult"}, "after": {"CognitiveLevel": "Apply", "DifficultyScore": 3, "Difficulty": "Moderate"}},
+        {"qid": "P1E-B-011", "before": {"CognitiveLevel": "Apply", "DifficultyScore": 1, "Difficulty": "Easy"}, "after": {"CognitiveLevel": "Apply", "DifficultyScore": 3, "Difficulty": "Moderate"}}
+      ]
+    },
+    {
+      "batch": 3,
+      "pack": "a",
+      "items": 5,
+      "changes": "CL/DS adjustment",
+      "status": "COMPLETE",
+      "details": [
+        {"qid": "P1-E-076", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 3, "Difficulty": "Moderate"}, "after": {"CognitiveLevel": "Apply", "DifficultyScore": 3, "Difficulty": "Moderate"}},
+        {"qid": "P1-E-078", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 3, "Difficulty": "Moderate"}, "after": {"CognitiveLevel": "Apply", "DifficultyScore": 3, "Difficulty": "Moderate"}},
+        {"qid": "P1-E-007", "before": {"CognitiveLevel": "Understand", "DifficultyScore": 1, "Difficulty": "Easy"}, "after": {"CognitiveLevel": "Apply", "DifficultyScore": 3, "Difficulty": "Moderate"}},
+        {"qid": "P1-E-004", "before": {"CognitiveLevel": "Apply", "DifficultyScore": 1, "Difficulty": "Easy"}, "after": {"CognitiveLevel": "Understand", "DifficultyScore": 2, "Difficulty": "Moderate-Easy"}},
+        {"qid": "P1-E-013", "before": {"CognitiveLevel": "Apply", "DifficultyScore": 1, "Difficulty": "Easy"}, "after": {"CognitiveLevel": "Understand", "DifficultyScore": 2, "Difficulty": "Moderate-Easy"}}
+      ]
+    }
+  ],
+  "total_items_modified": 14,
+  "backups": [
+    "backups/pack_e_corrected.js.bak-SESSION720-20260726160457",
+    "backups/pack_a_corrected.js.bak-SESSION720-20260726160457"
+  ],
+  "post_edit_verification": {
+    "cognitivelevel_changed": true,
+    "answer_keys_preserved": true,
+    "question_state_preserved": true,
+    "explanation_preserved": true,
+    "stem_preserved": true,
+    "choices_preserved": true,
+    "pack_e_difficulty_strings_updated": true,
+    "pack_a_difficulty_strings_updated": true,
+    "pack_e_remember_count": 7,
+    "pack_e_apply_count": 93,
+    "pack_e_understand_count": 395
+  },
+  "errors": []
+}

@@ -1,0 +1,33 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Rewrite Candidates Inventory",
+  "total_rewrite_candidates": 1561,
+  "priority_tiers": {
+    "P0_immediate": { "count": 390, "description": "Case bank EW slots — all empty. Learners getting zero feedback.", "effort": "High (must author 384 new EW fields across 4 case banks)", "estimated_sessions": 6 },
+    "P1_high": { "count": 184, "description": "DL-013 boilerplate EW in certified items (Packs A/C/D). Degraded learner experience.", "effort": "Medium (template replacement with choice-specific text)", "estimated_sessions": 3 },
+    "P2_medium": { "count": 447, "description": "Pack C/D Sections E-F empty EW slots in unprocessed sections. Must fill before certification.", "effort": "Medium (per-item editorial rewrite)", "estimated_sessions": 6 },
+    "P3_moderate": { "count": 12, "description": "Absolutist distractor rewrites (S90 candidates). Mostly Unprocessed Pack C items.", "effort": "Low (12 items with proposed replacements already documented)", "estimated_sessions": 1 },
+    "P4_low": { "count": 528, "description": "Weak distractors (D4 score 3) — distractors eliminated by test-taking strategies. Enhance if capacity permits.", "effort": "High (per-item expert review needed for meaningful improvement)", "estimated_sessions": 8 }
+  },
+  "by_pack_rewrite_concentration": {
+    "pack_a": { "total_candidates": 34, "p0": 0, "p1": 15, "p2": 0, "p3": 3, "p4": 16 },
+    "pack_b": { "total_candidates": 0, "notes": "No rewrite candidates. Gold standard." },
+    "pack_c": { "total_candidates": 358, "p0": 0, "p1": 78, "p2": 224, "p3": 7, "p4": 49 },
+    "pack_d": { "total_candidates": 370, "p0": 0, "p1": 91, "p2": 223, "p3": 0, "p4": 56 },
+    "pack_e": { "total_candidates": 125, "p0": 0, "p1": 0, "p2": 0, "p3": 0, "p4": 125 },
+    "case_banks": { "total_candidates": 390, "p0": 390, "p1": 0, "p2": 0, "p3": 0, "p4": 0 }
+  },
+  "top_10_rewrite_targets": [
+    {"rank": 1, "qid_range": "scored_cases2-5 all items", "issue": "Empty EW — zero feedback for 310 case items", "priority": "P0"},
+    {"rank": 2, "qid_range": "scored_cases.js items 4-15", "issue": "Empty EW — 82 empty slots in legacy cases", "priority": "P0"},
+    {"rank": 3, "qid": "P1-CC-021 through CC-027", "issue": "Absolutist 'guarantees goal congruence in all cases' × 7 items", "priority": "P1"},
+    {"rank": 4, "qid_range": "Pack D Section E (56 clone items)", "issue": "DL-013 boilerplate + empty EW slots", "priority": "P2"},
+    {"rank": 5, "qid_range": "Pack D Section F (74 items)", "issue": "DL-013 boilerplate (91 fields) in unprocessed items", "priority": "P2"},
+    {"rank": 6, "qid_range": "Pack C Section F (75 items)", "issue": "DL-013 boilerplate + empty EW in unprocessed items", "priority": "P2"},
+    {"rank": 7, "qid_range": "Pack A Sections A+E (19 items)", "issue": "DL-016 content-metadata offset — EW may describe wrong distractor", "priority": "P1"},
+    {"rank": 8, "qid": "P1-A-008", "issue": "Absolutist 'LIFO liquidation always decreases income'", "priority": "P3"},
+    {"rank": 9, "qid": "P1-B-074", "issue": "Absolutist 'guarantees higher employee morale in every case'", "priority": "P3"},
+    {"rank": 10, "qid": "P1-D-004", "issue": "Absolutist 'Count partially completed units as zero in all cases'", "priority": "P3"}
+  ]
+}

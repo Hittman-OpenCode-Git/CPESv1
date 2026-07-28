@@ -1,0 +1,83 @@
+{
+  "session": "S812",
+  "series": "800-series Modernization",
+  "title": "Framework v2 Operational Metrics — Wave 1 vs Wave 2 Comparison",
+  "timestamp": "2026-07-27T15:40:00Z",
+  "infrastructure_performance": {
+    "governance_guard": {"w1_ms": 101, "w2_ms": 142, "delta": "+40.6%"},
+    "identity_validator": {"w1_ms": 349, "w2_ms": 330, "delta": "-5.4%"},
+    "scan_orchestrator": {"w1_ms": 1104, "w2_ms": 1255, "delta": "+13.7%"},
+    "pipeline_effective_throughput_w1": "3,175 items/sec",
+    "pipeline_effective_throughput_w2": "2,024 items/sec",
+    "throughput_parity": false
+  },
+  "certification_pool": {
+    "total_items": 2540,
+    "certified": 2298,
+    "certified_rate": "90.47%",
+    "blocked": 282,
+    "blocked_rate": "11.10%",
+    "archived": 242,
+    "per_domain_certification": {
+      "A": "746/375 (engine double-count — actual ~373/375 = 99.5%)",
+      "B": "500/500 (100%)",
+      "C": "500/500 (100%)",
+      "D": "375/375 (100%)",
+      "E": "246/415 (59.3%)",
+      "F": "264/375 (70.4%)"
+    }
+  },
+  "certification_velocity": {
+    "pool_growth_timeline": [
+      {"date": "2026-07-23", "count": 1080, "pct": "42.5%", "milestone": "Initial AGENTS.md baseline"},
+      {"date": "2026-07-24", "count": 2031, "pct": "80.0%", "milestone": "SESSION_STATUS_2026-07-24"},
+      {"date": "2026-07-25", "count": 2181, "pct": "85.9%", "milestone": "S709 700-series freeze"},
+      {"date": "2026-07-26", "count": 2221, "pct": "87.4%", "milestone": "S808 production insertion"},
+      {"date": "2026-07-27", "count": 2298, "pct": "90.5%", "milestone": "S853 WAVE_A + S811 retroactive"}
+    ],
+    "total_events": 30,
+    "time_span_days": 4,
+    "items_per_day": 304.5,
+    "growth_rate_pct_per_day": 12.0
+  },
+  "governance_overhead": {
+    "guard_suite_per_run_ms": 142,
+    "identity_per_run_ms": 330,
+    "orchestrator_per_run_ms": 1255,
+    "total_per_full_scan_ms": 1727,
+    "items_per_scan": 2540,
+    "ms_per_item": 0.68
+  },
+  "automation_coverage": {
+    "engines_deployed": 7,
+    "modules_count": 12,
+    "artifacts_generated": 4,
+    "artifact_reuse_consumers": 0,
+    "artifact_reuse_rate": "0% — scan artifact not consumed by downstream artifacts"
+  },
+  "remediation_efficiency": {
+    "wave_a_items_remediated_to_certified": 77,
+    "conversion_rate": "100%",
+    "domains_served": ["E", "F"],
+    "packs_served": ["C", "D"],
+    "avg_items_per_batch": 19.25,
+    "batches_completed": 4
+  },
+  "documentation_velocity": {
+    "revision_history_lines": 15188,
+    "revision_history_growth": "+57 lines",
+    "defect_library_lines": 1859,
+    "defect_library_growth": "0 lines (frozen)",
+    "current_baselines_lines": 132,
+    "current_baselines_updated": true,
+    "audit_reports_generated": 5
+  },
+  "quality_gaps": {
+    "dl026_on_newly_certified": 39,
+    "dl026_affected_domain": "F",
+    "dl008_on_certified": 0,
+    "learner_pool_structural_safety": "SECURE",
+    "learner_pool_educational_quality": "DEGRADED — 39 Domain F items have empty distractor explanations"
+  },
+  "verdict": "FRAMEWORK V2 OPERATIONAL — with documented infrastructure inconsistencies and 1 educational-quality gap"
+}

@@ -1,0 +1,49 @@
+{
+  "session": "309",
+  "agent": "F",
+  "title": "Domain F Constraint Analysis",
+  "generated": "2026-07-26",
+  "methodology": "Function constructor parse of all 5 pack files. Section F state distribution across packs.",
+
+  "baseline": {
+    "totalDomainF": 374,
+    "certified": 225,
+    "gap": 149,
+    "uiqs": 62.4,
+    "grade": "C",
+    "p0Count": 8
+  },
+
+  "gapBreakdown": {
+    "packA_sectionF": { "total": 75, "certified": 75, "note": "Fully certified." },
+    "packB_sectionF": { "total": 75, "certified": 75, "note": "Gold standard." },
+    "packC_sectionF": { "total": 75, "certified": 0, "unprocessed": 75, "note": "ALL 75 items unprocessed. Never seen any audit. Section F in Pack C is a greenfield." },
+    "packD_sectionF": { "total": 74, "certified": 0, "unprocessed": 74, "note": "74 unprocessed. Note: FD-046 is the single missing item (archived per CURRENT_BASELINES)." },
+    "packE_sectionF": { "total": 75, "certified": 75, "note": "Fully certified but educationally thin." }
+  },
+
+  "bottleneckDiagnosis": {
+    "primaryBottleneck": "GREENFIELD — unlike Domain E (77% archived clones), Domain F is nearly all unprocessed (149/149 = 100%). No clone rotation artifacts. No archived items to rescue. Pure content-authoring challenge: author 149 new Section F items and certify them from scratch.",
+    "structuralVsContent": "CONTENT bottleneck, not structural. Domain F items don't exist in Packs C/D Section F — they need to be AUTHORED, not repaired.",
+    "ewSituation": "130 EW debt items per S307 — but these are on the 225 certified items (Pack A/B/E). The 149 unprocessed items will need EW as part of creation."
+  },
+
+  "dependencyValidation": {
+    "s308_claim": "Domain E must precede Domain F",
+    "analysis": "PARTIALLY CORRECT. Domain E Section E items are archived clones needing repair. Domain F Section F items are greenfield needing authoring. They touch DIFFERENT sections in the same pack files. They CAN run partially parallel as long as: (1) Pack C Sections E and F are not modified in the same session, (2) Pack D Sections E and F are not modified in the same session.",
+    "parallelizationStrategy": "Session A: Pack C Section E certification. Session B: Pack D Section F authoring (parallel, different files). Session C: Pack D Section E certification. Session D: Pack C Section F authoring (parallel, different files). This achieves 2x throughput on the critical bottleneck path.",
+    "strictlySequentialPortion": "The first 2 sessions must establish the certification methodology for Domain E before it can be replicated for Domain F. After methodology is established, remaining sessions can parallelize."
+  },
+
+  "highestLeverageAction": "AUTHOR Pack C/D Section F items as NEW items (not repairs). Use Pack B Section F (75 certified items) as the quality benchmark template. Author 149 new Technology & Analytics items using the 800-series certification pipeline.",
+
+  "sessionImpact": {
+    "currentEstimate": 9,
+    "optimizedEstimate": 6,
+    "savingsLevers": [
+      "Greenfield authoring is faster than clone repair (no re-rotation needed)",
+      "Parallel E/F certification after methodology baseline (sessions 3+)",
+      "Batch EW  authoring as part of item creation"
+    ]
+  }
+}

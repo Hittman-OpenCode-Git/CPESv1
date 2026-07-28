@@ -1,0 +1,2337 @@
+[
+  {
+    "pack": "A",
+    "total": 500,
+    "certified": 481,
+    "flagged": 13,
+    "items": [
+      {
+        "qid": "P1-A-006",
+        "topic": "A.006 contract liability for advance collections",
+        "diff": "Moderate/3",
+        "stem": "Vantage received annual service fees in advance before performing the services. Which response is most appropriate?",
+        "cc": "D",
+        "correctChoiceText": "Record a contract liability for the unearned portion of the consideration receiv",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-A-008",
+        "topic": "A.008 inventory lower of cost and NRV",
+        "diff": "Moderate/3",
+        "stem": "Yukon has FIFO inventory whose replacement value fell below selling price less completion and selling costs. Which respo",
+        "cc": "C",
+        "correctChoiceText": "Write inventory down to the lower of cost and net realizable value when NRV is b",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-B-023",
+        "topic": "B.023 learning curve average time after doubling 7",
+        "diff": "Moderate/3",
+        "stem": "Yukon has an 85% cumulative average-time learning curve. The first batch averaged 160 labor hours. What average hours ar",
+        "cc": "D",
+        "correctChoiceText": "136.0 hours",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-B-035",
+        "topic": "B.035 learning curve incremental unit time",
+        "diff": "Moderate/3",
+        "stem": "Solstice uses an 80% cumulative average-time learning curve. The first unit took 50 direct labor hours. What is the incr",
+        "cc": "B",
+        "correctChoiceText": "30.0 hours",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-B-038",
+        "topic": "B.038 moving average forecast calculation",
+        "diff": "Moderate/3",
+        "stem": "Redcliff uses a 3-month moving average to forecast demand. The last three months' actual sales were 400, 460, and 520 un",
+        "cc": "A",
+        "correctChoiceText": "460 units",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-B-075",
+        "topic": "B.075 participative budgeting drawback",
+        "diff": "Moderate/3",
+        "stem": "Oakhaven uses participative budgeting, allowing department managers to set their own targets. Beyond budgetary slack, wh",
+        "cc": "B",
+        "correctChoiceText": "The budgeting process can take significantly longer due to negotiation across mu",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-B-076",
+        "topic": "B.076 contingency planning for supply disruption",
+        "diff": "Moderate/3",
+        "stem": "Stonebridge's single supplier for a critical component unexpectedly announces a 90-day shutdown. The annual budget assum",
+        "cc": "B",
+        "correctChoiceText": "Develop a contingency plan and revise near-term budget assumptions to reflect th",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-C-060",
+        "topic": "C.060 scorecard measure overload risk",
+        "diff": "Moderate/3",
+        "stem": "Northfield's balanced scorecard has grown to include 45 separate metrics across all four perspectives. What is the prima",
+        "cc": "B",
+        "correctChoiceText": "Employees may lose focus on the most critical strategic drivers among too many c",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-D-027",
+        "topic": "D.027 process improvement learning effect cost 7",
+        "diff": "Moderate/3",
+        "stem": "Crescent tracks continuous improvement with an 80% learning relationship. If average hours are 100 initially, what avera",
+        "cc": "B",
+        "correctChoiceText": "64.0 hours",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-D-037",
+        "topic": "D.037 process improvement learning effect cost 17",
+        "diff": "Moderate/3",
+        "stem": "Meridian tracks continuous improvement with an 80% learning relationship. If average hours are 100 initially, what avera",
+        "cc": "A",
+        "correctChoiceText": "64.0 hours",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-D-047",
+        "topic": "D.047 process improvement learning effect cost 27",
+        "diff": "Moderate/3",
+        "stem": "Willow tracks continuous improvement with an 80% learning relationship. If average hours are 100 initially, what average",
+        "cc": "A",
+        "correctChoiceText": "64.0 hours",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-D-057",
+        "topic": "D.057 process improvement learning effect cost 37",
+        "diff": "Moderate/3",
+        "stem": "Harbor tracks continuous improvement with an 80% learning relationship. If average hours are 100 initially, what average",
+        "cc": "A",
+        "correctChoiceText": "64.0 hours",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-D-067",
+        "topic": "D.067 process improvement learning effect cost 47",
+        "diff": "Moderate/3",
+        "stem": "Riverview tracks continuous improvement with an 80% learning relationship. If average hours are 100 initially, what aver",
+        "cc": "B",
+        "correctChoiceText": "64.0 hours",
+        "overlap": 1
+      }
+    ]
+  },
+  {
+    "pack": "B",
+    "total": 500,
+    "certified": 500,
+    "flagged": 21,
+    "items": [
+      {
+        "qid": "P1B-A-085",
+        "topic": "B-A.085 intangible assets classification",
+        "diff": "Moderate/3",
+        "stem": "Harbor Tech acquires a patent (20-year legal, 12-year useful life) and incurs $200,000 internal costs developing a trade",
+        "cc": "C",
+        "correctChoiceText": "Patent intangible; trademark expensed",
+        "overlap": 2
+      },
+      {
+        "qid": "P1B-A-105",
+        "topic": "B-A.105 dividends and interest classification",
+        "diff": "Moderate/3",
+        "stem": "Under GAAP, how are dividends received and interest paid classified on the cash flow statement?",
+        "cc": "B",
+        "correctChoiceText": "Dividends received operating; interest paid operating",
+        "overlap": 3
+      },
+      {
+        "qid": "P1B-A-111",
+        "topic": "B-A.111 sale and leaseback",
+        "diff": "Moderate/3",
+        "stem": "Highland Properties sells a building for $5,000,000 (fair value, carrying value $3,500,000) and leases it back for 15 ye",
+        "cc": "A",
+        "correctChoiceText": "Gain recognized only on the portion not leased back; remainder deferred",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-A-116",
+        "topic": "B-A.116 net operating loss carryforward",
+        "diff": "Moderate/3",
+        "stem": "Sandpiper has an NOL of $500,000 in 2025. Tax rate 25%. Future taxable income is expected to be sufficient to realize th",
+        "cc": "C",
+        "correctChoiceText": "Recognize DTA of $125,000 with corresponding reduction of income tax expense",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-A-126",
+        "topic": "B-A.126 noncontrolling interest",
+        "diff": "Moderate/3",
+        "stem": "Peak Holdings acquires 80% of SubCo for $4,000,000. SubCo's net identifiable assets have a fair value of $4,500,000. How",
+        "cc": "A",
+        "correctChoiceText": "Reported as a separate component of equity at $900,000",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-A-128",
+        "topic": "B-A.128 intercompany eliminations",
+        "diff": "Moderate/3",
+        "stem": "ParentCo sells inventory costing $200,000 to SubCo for $300,000. SubCo still holds the inventory at year-end. What conso",
+        "cc": "D",
+        "correctChoiceText": "Debit Sales $300,000; Credit Cost of Sales $200,000; Credit Inventory $100,000",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-A-129",
+        "topic": "B-A.129 accounting changes - change in estimate",
+        "diff": "Moderate/3",
+        "stem": "Cedar Corp revises the useful life of a machine from 10 years to 8 years. How is this change accounted for?",
+        "cc": "C",
+        "correctChoiceText": "Prospectively, making the change in current and future periods only",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-A-136",
+        "topic": "B-A.136 balance sheet - debt covenant compliance disclosure",
+        "diff": "Moderate/3",
+        "stem": "Riverbend Corp has a debt covenant requiring a current ratio of at least 1.5. At year-end, the current ratio is 1.3, and",
+        "cc": "B",
+        "correctChoiceText": "Disclose the covenant violation and its impact on the classification of long-ter",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-A-147",
+        "topic": "B-A.147 accounting changes - change in depreciation method",
+        "diff": "Moderate/3",
+        "stem": "Pine Ridge changes from double-declining balance to straight-line depreciation. Under GAAP, how is this change reported?",
+        "cc": "D",
+        "correctChoiceText": "As a change in accounting estimate effected by a change in principle, applied pr",
+        "overlap": 2
+      },
+      {
+        "qid": "P1B-B-101",
+        "topic": "B-B.101 master budget components",
+        "diff": "Moderate/3",
+        "stem": "Which is typically the first budget prepared in a master budget?",
+        "cc": "D",
+        "correctChoiceText": "Sales budget",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-B-102",
+        "topic": "B-B.102 operating budgets",
+        "diff": "Moderate/3",
+        "stem": "Which is an operating budget?",
+        "cc": "B",
+        "correctChoiceText": "Direct materials purchases budget",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-B-120",
+        "topic": "B-B.120 time series components",
+        "diff": "Moderate/3",
+        "stem": "Which time series component represents long-term direction in data?",
+        "cc": "B",
+        "correctChoiceText": "Trend component",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-B-146",
+        "topic": "B-B.146 static budget definition",
+        "diff": "Moderate/3",
+        "stem": "A static budget is:",
+        "cc": "A",
+        "correctChoiceText": "A budget prepared for a single level of activity",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-B-164",
+        "topic": "B-B.164 regression - standard error",
+        "diff": "Moderate/3",
+        "stem": "In regression analysis, the standard error of the estimate measures:",
+        "cc": "C",
+        "correctChoiceText": "The typical prediction error of the regression model",
+        "overlap": 2
+      },
+      {
+        "qid": "P1B-B-193",
+        "topic": "B-B.193 regression - t-statistic",
+        "diff": "Moderate/3",
+        "stem": "In regression analysis, a t-statistic greater than 2 for a coefficient indicates:",
+        "cc": "B",
+        "correctChoiceText": "The coefficient is likely statistically significant at the 95% confidence level",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-B-199",
+        "topic": "B-B.199 learning curve - practical application",
+        "diff": "Difficult/4",
+        "stem": "Apex Defense has a 90% learning curve. The first unit took 1,000 hours. Under cumulative average-time model, what is the",
+        "cc": "A",
+        "correctChoiceText": "5,832 hours",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-C-137",
+        "topic": "B-C.137 ROI and residual income",
+        "diff": "Moderate/3",
+        "stem": "Eastside Division has sales of $2,000,000, operating income of $300,000, and total assets of $1,500,000. Using the DuPon",
+        "cc": "D",
+        "correctChoiceText": "Profit margin 15%, Asset turnover 1.33",
+        "overlap": 4
+      },
+      {
+        "qid": "P1B-D-133",
+        "topic": "B-D.133 CVP analysis",
+        "diff": "Moderate/3",
+        "stem": "Alpha Company sells a product for $50 per unit. Variable costs are $30 per unit, and total fixed costs are $200,000. Wha",
+        "cc": "D",
+        "correctChoiceText": "10,000 units",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-D-135",
+        "topic": "B-D.135 CVP analysis",
+        "diff": "Moderate/3",
+        "stem": "Gamma Corporation sells its product for $80 per unit. Variable costs are $50 per unit, and fixed costs are $210,000. How",
+        "cc": "A",
+        "correctChoiceText": "10,000 units",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-F-089",
+        "topic": "B-F.089 blockchain",
+        "diff": "Moderate/3",
+        "stem": "Emerald BioTech is exploring blockchain technology for tracking pharmaceutical supply chain transactions. Which characte",
+        "cc": "B",
+        "correctChoiceText": "Transactions are recorded in an immutable, tamper-evident ledger distributed acr",
+        "overlap": 1
+      },
+      {
+        "qid": "P1B-F-125",
+        "topic": "B-F.125 privacy regulations",
+        "diff": "Moderate/3",
+        "stem": "A customer of Silverline Corp has submitted a request under GDPR asking for a copy of all personal data the company hold",
+        "cc": "A",
+        "correctChoiceText": "Data subject access request (DSAR)",
+        "overlap": 1
+      }
+    ]
+  },
+  {
+    "pack": "C",
+    "total": 500,
+    "certified": 350,
+    "flagged": 119,
+    "items": [
+      {
+        "qid": "P1-AC-016",
+        "topic": "A.016 goodwill impairment testing",
+        "diff": "Moderate/3",
+        "stem": "Prairiewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curren",
+        "cc": "D",
+        "correctChoiceText": "Compare the reporting unit's fair value to its carrying amount and recognize an ",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-AC-017",
+        "topic": "A.017 goodwill impairment testing",
+        "diff": "Moderate/3",
+        "stem": "Quillfeather performs its annual goodwill impairment test for a reporting unit. What is the correct approach under curre",
+        "cc": "A",
+        "correctChoiceText": "Compare the reporting unit's fair value to its carrying amount and recognize an ",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-AC-018",
+        "topic": "A.018 goodwill impairment testing",
+        "diff": "Moderate/3",
+        "stem": "Rosewood performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current g",
+        "cc": "B",
+        "correctChoiceText": "Compare the reporting unit's fair value to its carrying amount and recognize an ",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-AC-019",
+        "topic": "A.019 goodwill impairment testing",
+        "diff": "Moderate/3",
+        "stem": "Silverton performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current ",
+        "cc": "C",
+        "correctChoiceText": "Compare the reporting unit's fair value to its carrying amount and recognize an ",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-AC-020",
+        "topic": "A.020 goodwill impairment testing",
+        "diff": "Moderate/3",
+        "stem": "Thornfield performs its annual goodwill impairment test for a reporting unit. What is the correct approach under current",
+        "cc": "D",
+        "correctChoiceText": "Compare the reporting unit's fair value to its carrying amount and recognize an ",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-AC-051",
+        "topic": "A.051 interim reporting income tax",
+        "diff": "Moderate/3",
+        "stem": "Bellwood prepares interim financial statements and must estimate income tax expense. What approach is used?",
+        "cc": "C",
+        "correctChoiceText": "Apply an estimated annual effective tax rate to year-to-date pretax income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-AC-052",
+        "topic": "A.052 interim reporting income tax",
+        "diff": "Moderate/3",
+        "stem": "Cliffside prepares interim financial statements and must estimate income tax expense. What approach is used?",
+        "cc": "D",
+        "correctChoiceText": "Apply an estimated annual effective tax rate to year-to-date pretax income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-AC-053",
+        "topic": "A.053 interim reporting income tax",
+        "diff": "Moderate/3",
+        "stem": "Duskwood prepares interim financial statements and must estimate income tax expense. What approach is used?",
+        "cc": "A",
+        "correctChoiceText": "Apply an estimated annual effective tax rate to year-to-date pretax income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-AC-054",
+        "topic": "A.054 interim reporting income tax",
+        "diff": "Moderate/3",
+        "stem": "Everfern prepares interim financial statements and must estimate income tax expense. What approach is used?",
+        "cc": "B",
+        "correctChoiceText": "Apply an estimated annual effective tax rate to year-to-date pretax income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-008",
+        "topic": "B.008 sales forecasting regression",
+        "diff": "Moderate/3",
+        "stem": "Hearthstone uses regression analysis on five years of historical sales to project next year's demand. What is a primary ",
+        "cc": "D",
+        "correctChoiceText": "It quantifies the relationship between sales and identified independent variable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-010",
+        "topic": "B.010 sales forecasting regression",
+        "diff": "Moderate/3",
+        "stem": "Junction uses regression analysis on five years of historical sales to project next year's demand. What is a primary ben",
+        "cc": "B",
+        "correctChoiceText": "It quantifies the relationship between sales and identified independent variable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-011",
+        "topic": "B.011 sales forecasting regression",
+        "diff": "Moderate/3",
+        "stem": "Kestrel uses regression analysis on five years of historical sales to project next year's demand. What is a primary bene",
+        "cc": "C",
+        "correctChoiceText": "It quantifies the relationship between sales and identified independent variable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-012",
+        "topic": "B.012 sales forecasting regression",
+        "diff": "Moderate/3",
+        "stem": "Larkspur uses regression analysis on five years of historical sales to project next year's demand. What is a primary ben",
+        "cc": "D",
+        "correctChoiceText": "It quantifies the relationship between sales and identified independent variable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-014",
+        "topic": "B.014 sales forecasting regression",
+        "diff": "Difficult/4",
+        "stem": "Nightingale uses regression analysis on five years of historical sales to project next year's demand. What is a primary ",
+        "cc": "B",
+        "correctChoiceText": "It quantifies the relationship between sales and identified independent variable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-015",
+        "topic": "B.015 rolling forecast",
+        "diff": "Moderate/3",
+        "stem": "Oakhurst updates its 12-month forecast every month by adding a new month as the oldest month drops off. What is this app",
+        "cc": "C",
+        "correctChoiceText": "A rolling forecast, which keeps planning horizons current and responsive to chan",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-016",
+        "topic": "B.016 rolling forecast",
+        "diff": "Moderate/3",
+        "stem": "Prairiewood updates its 12-month forecast every month by adding a new month as the oldest month drops off. What is this ",
+        "cc": "D",
+        "correctChoiceText": "A rolling forecast, which keeps planning horizons current and responsive to chan",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-017",
+        "topic": "B.017 rolling forecast",
+        "diff": "Moderate/3",
+        "stem": "Quillfeather updates its 12-month forecast every month by adding a new month as the oldest month drops off. What is this",
+        "cc": "A",
+        "correctChoiceText": "A rolling forecast, which keeps planning horizons current and responsive to chan",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-031",
+        "topic": "B.031 sales budget starting point",
+        "diff": "Moderate/3",
+        "stem": "Foxglove begins its annual master budget process. Which budget is typically prepared first because other budgets depend ",
+        "cc": "C",
+        "correctChoiceText": "The sales budget",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-032",
+        "topic": "B.032 sales budget starting point",
+        "diff": "Moderate/3",
+        "stem": "Graystone begins its annual master budget process. Which budget is typically prepared first because other budgets depend",
+        "cc": "D",
+        "correctChoiceText": "The sales budget",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-053",
+        "topic": "B.053 top down budgeting characteristic",
+        "diff": "Moderate/3",
+        "stem": "Duskwood's senior executives set budget targets and impose them on department managers with minimal input. What is a key",
+        "cc": "A",
+        "correctChoiceText": "Lower manager buy-in and potentially unrealistic targets due to limited operatio",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-054",
+        "topic": "B.054 top down budgeting characteristic",
+        "diff": "Difficult/4",
+        "stem": "Everfern's senior executives set budget targets and impose them on department managers with minimal input. What is a key",
+        "cc": "B",
+        "correctChoiceText": "Lower manager buy-in and potentially unrealistic targets due to limited operatio",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-055",
+        "topic": "B.055 top down budgeting characteristic",
+        "diff": "Moderate/3",
+        "stem": "Falconridge's senior executives set budget targets and impose them on department managers with minimal input. What is a ",
+        "cc": "C",
+        "correctChoiceText": "Lower manager buy-in and potentially unrealistic targets due to limited operatio",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-057",
+        "topic": "B.057 top down budgeting characteristic",
+        "diff": "Moderate/3",
+        "stem": "Hartwell's senior executives set budget targets and impose them on department managers with minimal input. What is a key",
+        "cc": "A",
+        "correctChoiceText": "Lower manager buy-in and potentially unrealistic targets due to limited operatio",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-058",
+        "topic": "B.058 top down budgeting characteristic",
+        "diff": "Moderate/3",
+        "stem": "Ivorygate's senior executives set budget targets and impose them on department managers with minimal input. What is a ke",
+        "cc": "B",
+        "correctChoiceText": "Lower manager buy-in and potentially unrealistic targets due to limited operatio",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-059",
+        "topic": "B.059 learning curve forecasting",
+        "diff": "Difficult/4",
+        "stem": "Juniper Hollow is forecasting labor hours for a new product where workers are expected to become more efficient with rep",
+        "cc": "C",
+        "correctChoiceText": "The learning curve, which projects declining average labor time per unit as cumu",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-060",
+        "topic": "B.060 learning curve forecasting",
+        "diff": "Difficult/4",
+        "stem": "Knollwood is forecasting labor hours for a new product where workers are expected to become more efficient with repetiti",
+        "cc": "D",
+        "correctChoiceText": "The learning curve, which projects declining average labor time per unit as cumu",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-061",
+        "topic": "B.061 learning curve forecasting",
+        "diff": "Moderate/3",
+        "stem": "Lanternwood is forecasting labor hours for a new product where workers are expected to become more efficient with repeti",
+        "cc": "A",
+        "correctChoiceText": "The learning curve, which projects declining average labor time per unit as cumu",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-062",
+        "topic": "B.062 learning curve forecasting",
+        "diff": "Moderate/3",
+        "stem": "Mossbrook is forecasting labor hours for a new product where workers are expected to become more efficient with repetiti",
+        "cc": "B",
+        "correctChoiceText": "The learning curve, which projects declining average labor time per unit as cumu",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-063",
+        "topic": "B.063 learning curve forecasting",
+        "diff": "Moderate/3",
+        "stem": "Nettlefield is forecasting labor hours for a new product where workers are expected to become more efficient with repeti",
+        "cc": "C",
+        "correctChoiceText": "The learning curve, which projects declining average labor time per unit as cumu",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-066",
+        "topic": "B.066 high low method cost estimation",
+        "diff": "Moderate/3",
+        "stem": "Quailrun has highest activity of 8,000 machine hours costing 62,000 and lowest activity of 5,000 machine hours costing 4",
+        "cc": "B",
+        "correctChoiceText": "5.00 per machine hour",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-067",
+        "topic": "B.067 high low method cost estimation",
+        "diff": "Moderate/3",
+        "stem": "Riverstone has highest activity of 8,000 machine hours costing 62,000 and lowest activity of 5,000 machine hours costing",
+        "cc": "C",
+        "correctChoiceText": "5.00 per machine hour",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-068",
+        "topic": "B.068 high low method cost estimation",
+        "diff": "Difficult/4",
+        "stem": "Stonebrook has highest activity of 8,000 machine hours costing 62,000 and lowest activity of 5,000 machine hours costing",
+        "cc": "D",
+        "correctChoiceText": "5.00 per machine hour",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-069",
+        "topic": "B.069 high low method cost estimation",
+        "diff": "Difficult/4",
+        "stem": "Thistledown has highest activity of 8,000 machine hours costing 62,000 and lowest activity of 5,000 machine hours costin",
+        "cc": "A",
+        "correctChoiceText": "5.00 per machine hour",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-070",
+        "topic": "B.070 high low method cost estimation",
+        "diff": "Moderate/3",
+        "stem": "Umbercrest has highest activity of 8,000 machine hours costing 62,000 and lowest activity of 5,000 machine hours costing",
+        "cc": "B",
+        "correctChoiceText": "5.00 per machine hour",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-077",
+        "topic": "B.077 continuous improvement kaizen budget",
+        "diff": "Moderate/3",
+        "stem": "Brightpoint sets budget targets that assume ongoing incremental cost reductions throughout the year based on continuous ",
+        "cc": "A",
+        "correctChoiceText": "Kaizen budgeting",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-078",
+        "topic": "B.078 continuous improvement kaizen budget",
+        "diff": "Difficult/4",
+        "stem": "Cedarline sets budget targets that assume ongoing incremental cost reductions throughout the year based on continuous im",
+        "cc": "B",
+        "correctChoiceText": "Kaizen budgeting",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-079",
+        "topic": "B.079 continuous improvement kaizen budget",
+        "diff": "Difficult/4",
+        "stem": "Driftwood sets budget targets that assume ongoing incremental cost reductions throughout the year based on continuous im",
+        "cc": "C",
+        "correctChoiceText": "Kaizen budgeting",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-080",
+        "topic": "B.080 continuous improvement kaizen budget",
+        "diff": "Difficult/4",
+        "stem": "Emberton sets budget targets that assume ongoing incremental cost reductions throughout the year based on continuous imp",
+        "cc": "D",
+        "correctChoiceText": "Kaizen budgeting",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-081",
+        "topic": "B.081 continuous improvement kaizen budget",
+        "diff": "Moderate/3",
+        "stem": "Fairhaven sets budget targets that assume ongoing incremental cost reductions throughout the year based on continuous im",
+        "cc": "A",
+        "correctChoiceText": "Kaizen budgeting",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-083",
+        "topic": "B.083 moving average forecast smoothing",
+        "diff": "Moderate/3",
+        "stem": "Hearthstone calculates a three-month moving average of sales to smooth out short-term fluctuations before forecasting th",
+        "cc": "C",
+        "correctChoiceText": "It reduces the effect of random short-term fluctuations to reveal the underlying",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-084",
+        "topic": "B.084 moving average forecast smoothing",
+        "diff": "Moderate/3",
+        "stem": "Ironvale calculates a three-month moving average of sales to smooth out short-term fluctuations before forecasting the n",
+        "cc": "D",
+        "correctChoiceText": "It reduces the effect of random short-term fluctuations to reveal the underlying",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-086",
+        "topic": "B.086 moving average forecast smoothing",
+        "diff": "Difficult/4",
+        "stem": "Kestrel calculates a three-month moving average of sales to smooth out short-term fluctuations before forecasting the ne",
+        "cc": "B",
+        "correctChoiceText": "It reduces the effect of random short-term fluctuations to reveal the underlying",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-087",
+        "topic": "B.087 moving average forecast smoothing",
+        "diff": "Moderate/3",
+        "stem": "Larkspur calculates a three-month moving average of sales to smooth out short-term fluctuations before forecasting the n",
+        "cc": "C",
+        "correctChoiceText": "It reduces the effect of random short-term fluctuations to reveal the underlying",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-088",
+        "topic": "B.088 moving average forecast smoothing",
+        "diff": "Moderate/3",
+        "stem": "Meridian Peak calculates a three-month moving average of sales to smooth out short-term fluctuations before forecasting ",
+        "cc": "D",
+        "correctChoiceText": "It reduces the effect of random short-term fluctuations to reveal the underlying",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BC-089",
+        "topic": "B.089 what if sensitivity analysis budgeting",
+        "diff": "Moderate/3",
+        "stem": "Nightingale models several scenarios in its budget by changing key assumptions such as sales volume and material cost. W",
+        "cc": "A",
+        "correctChoiceText": "Sensitivity (what-if) analysis, which shows how outcomes change with different a",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-090",
+        "topic": "B.090 what if sensitivity analysis budgeting",
+        "diff": "Moderate/3",
+        "stem": "Oakhurst models several scenarios in its budget by changing key assumptions such as sales volume and material cost. What",
+        "cc": "B",
+        "correctChoiceText": "Sensitivity (what-if) analysis, which shows how outcomes change with different a",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-091",
+        "topic": "B.091 what if sensitivity analysis budgeting",
+        "diff": "Moderate/3",
+        "stem": "Prairiewood models several scenarios in its budget by changing key assumptions such as sales volume and material cost. W",
+        "cc": "C",
+        "correctChoiceText": "Sensitivity (what-if) analysis, which shows how outcomes change with different a",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-092",
+        "topic": "B.092 what if sensitivity analysis budgeting",
+        "diff": "Moderate/3",
+        "stem": "Quillfeather models several scenarios in its budget by changing key assumptions such as sales volume and material cost. ",
+        "cc": "D",
+        "correctChoiceText": "Sensitivity (what-if) analysis, which shows how outcomes change with different a",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-093",
+        "topic": "B.093 what if sensitivity analysis budgeting",
+        "diff": "Difficult/4",
+        "stem": "Rosewood models several scenarios in its budget by changing key assumptions such as sales volume and material cost. What",
+        "cc": "A",
+        "correctChoiceText": "Sensitivity (what-if) analysis, which shows how outcomes change with different a",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BC-094",
+        "topic": "B.094 what if sensitivity analysis budgeting",
+        "diff": "Difficult/4",
+        "stem": "Silverton models several scenarios in its budget by changing key assumptions such as sales volume and material cost. Wha",
+        "cc": "B",
+        "correctChoiceText": "Sensitivity (what-if) analysis, which shows how outcomes change with different a",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-001",
+        "topic": "C.001 balanced scorecard perspectives",
+        "diff": "Moderate/3",
+        "stem": "Ashford wants to link strategy to financial and nonfinancial performance measures across the organization. Which framewo",
+        "cc": "A",
+        "correctChoiceText": "The balanced scorecard, using financial, customer, internal process, and learnin",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-003",
+        "topic": "C.003 balanced scorecard perspectives",
+        "diff": "Moderate/3",
+        "stem": "Cedarline wants to link strategy to financial and nonfinancial performance measures across the organization. Which frame",
+        "cc": "C",
+        "correctChoiceText": "The balanced scorecard, using financial, customer, internal process, and learnin",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-004",
+        "topic": "C.004 balanced scorecard perspectives",
+        "diff": "Moderate/3",
+        "stem": "Driftwood wants to link strategy to financial and nonfinancial performance measures across the organization. Which frame",
+        "cc": "D",
+        "correctChoiceText": "The balanced scorecard, using financial, customer, internal process, and learnin",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-005",
+        "topic": "C.005 balanced scorecard perspectives",
+        "diff": "Moderate/3",
+        "stem": "Emberton wants to link strategy to financial and nonfinancial performance measures across the organization. Which framew",
+        "cc": "A",
+        "correctChoiceText": "The balanced scorecard, using financial, customer, internal process, and learnin",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-006",
+        "topic": "C.006 balanced scorecard perspectives",
+        "diff": "Moderate/3",
+        "stem": "Fairhaven wants to link strategy to financial and nonfinancial performance measures across the organization. Which frame",
+        "cc": "B",
+        "correctChoiceText": "The balanced scorecard, using financial, customer, internal process, and learnin",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-007",
+        "topic": "C.007 balanced scorecard perspectives",
+        "diff": "Moderate/3",
+        "stem": "Gladstone wants to link strategy to financial and nonfinancial performance measures across the organization. Which frame",
+        "cc": "C",
+        "correctChoiceText": "The balanced scorecard, using financial, customer, internal process, and learnin",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-008",
+        "topic": "C.008 return on investment dupont",
+        "diff": "Moderate/3",
+        "stem": "Hearthstone wants to analyze ROI by breaking it into profit margin and asset turnover components. What approach is being",
+        "cc": "D",
+        "correctChoiceText": "The DuPont method, decomposing ROI into margin and turnover",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-009",
+        "topic": "C.009 return on investment dupont",
+        "diff": "Moderate/3",
+        "stem": "Ironvale wants to analyze ROI by breaking it into profit margin and asset turnover components. What approach is being us",
+        "cc": "A",
+        "correctChoiceText": "The DuPont method, decomposing ROI into margin and turnover",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-010",
+        "topic": "C.010 return on investment dupont",
+        "diff": "Moderate/3",
+        "stem": "Junction wants to analyze ROI by breaking it into profit margin and asset turnover components. What approach is being us",
+        "cc": "B",
+        "correctChoiceText": "The DuPont method, decomposing ROI into margin and turnover",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-011",
+        "topic": "C.011 return on investment dupont",
+        "diff": "Moderate/3",
+        "stem": "Kestrel wants to analyze ROI by breaking it into profit margin and asset turnover components. What approach is being use",
+        "cc": "C",
+        "correctChoiceText": "The DuPont method, decomposing ROI into margin and turnover",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-013",
+        "topic": "C.013 return on investment dupont",
+        "diff": "Moderate/3",
+        "stem": "Meridian Peak wants to analyze ROI by breaking it into profit margin and asset turnover components. What approach is bei",
+        "cc": "A",
+        "correctChoiceText": "The DuPont method, decomposing ROI into margin and turnover",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CC-022",
+        "topic": "C.022 transfer pricing negotiated",
+        "diff": "Moderate/3",
+        "stem": "Vesper's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is",
+        "cc": "B",
+        "correctChoiceText": "It preserves divisional autonomy while allowing managers to reach a mutually acc",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-024",
+        "topic": "C.024 transfer pricing negotiated",
+        "diff": "Moderate/3",
+        "stem": "Yarrow's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is",
+        "cc": "D",
+        "correctChoiceText": "It preserves divisional autonomy while allowing managers to reach a mutually acc",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-025",
+        "topic": "C.025 transfer pricing negotiated",
+        "diff": "Moderate/3",
+        "stem": "Zenith Bay's divisions negotiate a transfer price between the market price and the selling division's variable cost. Wha",
+        "cc": "A",
+        "correctChoiceText": "It preserves divisional autonomy while allowing managers to reach a mutually acc",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-026",
+        "topic": "C.026 transfer pricing negotiated",
+        "diff": "Moderate/3",
+        "stem": "Ashgrove's divisions negotiate a transfer price between the market price and the selling division's variable cost. What ",
+        "cc": "B",
+        "correctChoiceText": "It preserves divisional autonomy while allowing managers to reach a mutually acc",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-027",
+        "topic": "C.027 transfer pricing negotiated",
+        "diff": "Moderate/3",
+        "stem": "Birchwood's divisions negotiate a transfer price between the market price and the selling division's variable cost. What",
+        "cc": "C",
+        "correctChoiceText": "It preserves divisional autonomy while allowing managers to reach a mutually acc",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-028",
+        "topic": "C.028 transfer pricing negotiated",
+        "diff": "Moderate/3",
+        "stem": "Copperline's divisions negotiate a transfer price between the market price and the selling division's variable cost. Wha",
+        "cc": "D",
+        "correctChoiceText": "It preserves divisional autonomy while allowing managers to reach a mutually acc",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-030",
+        "topic": "C.030 responsibility center cost center",
+        "diff": "Moderate/3",
+        "stem": "Elderberry's production supervisor is evaluated only on the costs incurred in the department, with no control over reven",
+        "cc": "B",
+        "correctChoiceText": "A cost center",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-032",
+        "topic": "C.032 responsibility center cost center",
+        "diff": "Moderate/3",
+        "stem": "Graystone's production supervisor is evaluated only on the costs incurred in the department, with no control over revenu",
+        "cc": "D",
+        "correctChoiceText": "A cost center",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-033",
+        "topic": "C.033 responsibility center cost center",
+        "diff": "Moderate/3",
+        "stem": "Hollowell's production supervisor is evaluated only on the costs incurred in the department, with no control over revenu",
+        "cc": "A",
+        "correctChoiceText": "A cost center",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-035",
+        "topic": "C.035 investment center evaluation",
+        "diff": "Moderate/3",
+        "stem": "Jasperfield's division manager controls revenue, costs, and the level of assets invested in the division. What type of r",
+        "cc": "C",
+        "correctChoiceText": "An investment center, using measures like ROI or residual income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-036",
+        "topic": "C.036 investment center evaluation",
+        "diff": "Moderate/3",
+        "stem": "Kingfisher's division manager controls revenue, costs, and the level of assets invested in the division. What type of re",
+        "cc": "D",
+        "correctChoiceText": "An investment center, using measures like ROI or residual income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-038",
+        "topic": "C.038 investment center evaluation",
+        "diff": "Moderate/3",
+        "stem": "Millbrook's division manager controls revenue, costs, and the level of assets invested in the division. What type of res",
+        "cc": "B",
+        "correctChoiceText": "An investment center, using measures like ROI or residual income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-039",
+        "topic": "C.039 investment center evaluation",
+        "diff": "Moderate/3",
+        "stem": "Northgate's division manager controls revenue, costs, and the level of assets invested in the division. What type of res",
+        "cc": "C",
+        "correctChoiceText": "An investment center, using measures like ROI or residual income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-040",
+        "topic": "C.040 investment center evaluation",
+        "diff": "Moderate/3",
+        "stem": "Oleander's division manager controls revenue, costs, and the level of assets invested in the division. What type of resp",
+        "cc": "D",
+        "correctChoiceText": "An investment center, using measures like ROI or residual income",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-066",
+        "topic": "C.066 controllability principle",
+        "diff": "Moderate/3",
+        "stem": "Quailrun's regional manager is charged with a corporate overhead allocation over which the manager has no control or inf",
+        "cc": "B",
+        "correctChoiceText": "The controllability principle, which holds managers accountable only for items t",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-067",
+        "topic": "C.067 controllability principle",
+        "diff": "Moderate/3",
+        "stem": "Riverstone's regional manager is charged with a corporate overhead allocation over which the manager has no control or i",
+        "cc": "C",
+        "correctChoiceText": "The controllability principle, which holds managers accountable only for items t",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-068",
+        "topic": "C.068 controllability principle",
+        "diff": "Moderate/3",
+        "stem": "Stonebrook's regional manager is charged with a corporate overhead allocation over which the manager has no control or i",
+        "cc": "D",
+        "correctChoiceText": "The controllability principle, which holds managers accountable only for items t",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-069",
+        "topic": "C.069 controllability principle",
+        "diff": "Moderate/3",
+        "stem": "Thistledown's regional manager is charged with a corporate overhead allocation over which the manager has no control or ",
+        "cc": "A",
+        "correctChoiceText": "The controllability principle, which holds managers accountable only for items t",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-070",
+        "topic": "C.070 controllability principle",
+        "diff": "Moderate/3",
+        "stem": "Umbercrest's regional manager is charged with a corporate overhead allocation over which the manager has no control or i",
+        "cc": "B",
+        "correctChoiceText": "The controllability principle, which holds managers accountable only for items t",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-083",
+        "topic": "C.083 management by exception",
+        "diff": "Moderate/3",
+        "stem": "Hearthstone's controller reviews only variances that exceed a set dollar or percentage threshold, rather than investigat",
+        "cc": "C",
+        "correctChoiceText": "Management by exception, focusing attention on significant deviations",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-084",
+        "topic": "C.084 management by exception",
+        "diff": "Moderate/3",
+        "stem": "Ironvale's controller reviews only variances that exceed a set dollar or percentage threshold, rather than investigating",
+        "cc": "D",
+        "correctChoiceText": "Management by exception, focusing attention on significant deviations",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-085",
+        "topic": "C.085 management by exception",
+        "diff": "Moderate/3",
+        "stem": "Junction's controller reviews only variances that exceed a set dollar or percentage threshold, rather than investigating",
+        "cc": "A",
+        "correctChoiceText": "Management by exception, focusing attention on significant deviations",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-086",
+        "topic": "C.086 management by exception",
+        "diff": "Moderate/3",
+        "stem": "Kestrel's controller reviews only variances that exceed a set dollar or percentage threshold, rather than investigating ",
+        "cc": "B",
+        "correctChoiceText": "Management by exception, focusing attention on significant deviations",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-087",
+        "topic": "C.087 management by exception",
+        "diff": "Moderate/3",
+        "stem": "Larkspur's controller reviews only variances that exceed a set dollar or percentage threshold, rather than investigating",
+        "cc": "C",
+        "correctChoiceText": "Management by exception, focusing attention on significant deviations",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-088",
+        "topic": "C.088 management by exception",
+        "diff": "Moderate/3",
+        "stem": "Meridian Peak's controller reviews only variances that exceed a set dollar or percentage threshold, rather than investig",
+        "cc": "D",
+        "correctChoiceText": "Management by exception, focusing attention on significant deviations",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-089",
+        "topic": "C.089 nonfinancial performance measures",
+        "diff": "Moderate/3",
+        "stem": "Nightingale tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the prima",
+        "cc": "A",
+        "correctChoiceText": "They provide leading indicators of future financial performance and a more compl",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-091",
+        "topic": "C.091 nonfinancial performance measures",
+        "diff": "Moderate/3",
+        "stem": "Prairiewood tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the prima",
+        "cc": "C",
+        "correctChoiceText": "They provide leading indicators of future financial performance and a more compl",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-092",
+        "topic": "C.092 nonfinancial performance measures",
+        "diff": "Moderate/3",
+        "stem": "Quillfeather tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the prim",
+        "cc": "D",
+        "correctChoiceText": "They provide leading indicators of future financial performance and a more compl",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-093",
+        "topic": "C.093 nonfinancial performance measures",
+        "diff": "Moderate/3",
+        "stem": "Rosewood tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the primary ",
+        "cc": "A",
+        "correctChoiceText": "They provide leading indicators of future financial performance and a more compl",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-094",
+        "topic": "C.094 nonfinancial performance measures",
+        "diff": "Moderate/3",
+        "stem": "Silverton tracks on-time delivery rate and customer satisfaction scores alongside financial results. What is the primary",
+        "cc": "B",
+        "correctChoiceText": "They provide leading indicators of future financial performance and a more compl",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CC-095",
+        "topic": "C.095 market based transfer price",
+        "diff": "Moderate/3",
+        "stem": "Thornfield sets transfer prices for a product with an active external market equal to the prevailing market price. What ",
+        "cc": "C",
+        "correctChoiceText": "It approximates an arm's-length price and preserves goal congruence when a compe",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-097",
+        "topic": "C.097 market based transfer price",
+        "diff": "Moderate/3",
+        "stem": "Vesper sets transfer prices for a product with an active external market equal to the prevailing market price. What is t",
+        "cc": "A",
+        "correctChoiceText": "It approximates an arm's-length price and preserves goal congruence when a compe",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-099",
+        "topic": "C.099 market based transfer price",
+        "diff": "Moderate/3",
+        "stem": "Yarrow sets transfer prices for a product with an active external market equal to the prevailing market price. What is t",
+        "cc": "C",
+        "correctChoiceText": "It approximates an arm's-length price and preserves goal congruence when a compe",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CC-100",
+        "topic": "C.100 market based transfer price",
+        "diff": "Moderate/3",
+        "stem": "Zenith Bay sets transfer prices for a product with an active external market equal to the prevailing market price. What ",
+        "cc": "D",
+        "correctChoiceText": "It approximates an arm's-length price and preserves goal congruence when a compe",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-DC-016",
+        "topic": "D.016 joint cost allocation method",
+        "diff": "Moderate/3",
+        "stem": "Prairiewood produces two joint products from a common process and wants to allocate joint costs based on the relative sa",
+        "cc": "D",
+        "correctChoiceText": "The sales value at split-off method",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-DC-017",
+        "topic": "D.017 joint cost allocation method",
+        "diff": "Moderate/3",
+        "stem": "Quillfeather produces two joint products from a common process and wants to allocate joint costs based on the relative s",
+        "cc": "A",
+        "correctChoiceText": "The sales value at split-off method",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-DC-023",
+        "topic": "D.023 variable costing vs absorption costing",
+        "diff": "Moderate/3",
+        "stem": "Westbrook uses variable costing for internal reports. Production managers ask why fixed manufacturing overhead is not as",
+        "cc": "C",
+        "correctChoiceText": "Fixed manufacturing overhead is expensed in the period incurred instead of being",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-DC-027",
+        "topic": "D.027 relevant range cost behavior",
+        "diff": "Moderate/3",
+        "stem": "Birchwood's fixed costs are expected to remain constant only within a specified band of activity. What term describes th",
+        "cc": "C",
+        "correctChoiceText": "The relevant range",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DC-028",
+        "topic": "D.028 relevant range cost behavior",
+        "diff": "Moderate/3",
+        "stem": "Copperline's fixed costs are expected to remain constant only within a specified band of activity. What term describes t",
+        "cc": "D",
+        "correctChoiceText": "The relevant range",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DC-030",
+        "topic": "D.030 relevant range cost behavior",
+        "diff": "Moderate/3",
+        "stem": "Elderberry's fixed costs are expected to remain constant only within a specified band of activity. What term describes t",
+        "cc": "B",
+        "correctChoiceText": "The relevant range",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DC-036",
+        "topic": "D.036 theory of constraints throughput",
+        "diff": "Moderate/3",
+        "stem": "Kingfisher identifies a bottleneck machine that limits overall factory output and focuses improvement efforts there firs",
+        "cc": "D",
+        "correctChoiceText": "The theory of constraints, which focuses on maximizing throughput at the identif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-037",
+        "topic": "D.037 theory of constraints throughput",
+        "diff": "Moderate/3",
+        "stem": "Larkwood identifies a bottleneck machine that limits overall factory output and focuses improvement efforts there first.",
+        "cc": "A",
+        "correctChoiceText": "The theory of constraints, which focuses on maximizing throughput at the identif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-038",
+        "topic": "D.038 theory of constraints throughput",
+        "diff": "Moderate/3",
+        "stem": "Millbrook identifies a bottleneck machine that limits overall factory output and focuses improvement efforts there first",
+        "cc": "B",
+        "correctChoiceText": "The theory of constraints, which focuses on maximizing throughput at the identif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-040",
+        "topic": "D.040 theory of constraints throughput",
+        "diff": "Moderate/3",
+        "stem": "Oleander identifies a bottleneck machine that limits overall factory output and focuses improvement efforts there first.",
+        "cc": "D",
+        "correctChoiceText": "The theory of constraints, which focuses on maximizing throughput at the identif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-041",
+        "topic": "D.041 cost of quality external failure",
+        "diff": "Moderate/3",
+        "stem": "Pinehollow incurs significant costs for warranty repairs and product recalls after products have been shipped to custome",
+        "cc": "A",
+        "correctChoiceText": "External failure costs",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DC-042",
+        "topic": "D.042 cost of quality external failure",
+        "diff": "Moderate/3",
+        "stem": "Quarrystone incurs significant costs for warranty repairs and product recalls after products have been shipped to custom",
+        "cc": "B",
+        "correctChoiceText": "External failure costs",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DC-043",
+        "topic": "D.043 cost of quality external failure",
+        "diff": "Moderate/3",
+        "stem": "Ridgeline incurs significant costs for warranty repairs and product recalls after products have been shipped to customer",
+        "cc": "C",
+        "correctChoiceText": "External failure costs",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DC-045",
+        "topic": "D.045 cost of quality external failure",
+        "diff": "Moderate/3",
+        "stem": "Timberlake incurs significant costs for warranty repairs and product recalls after products have been shipped to custome",
+        "cc": "A",
+        "correctChoiceText": "External failure costs",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DC-046",
+        "topic": "D.046 byproduct accounting treatment",
+        "diff": "Moderate/3",
+        "stem": "Umberfield produces a minor byproduct alongside its main products from a joint process. How is the byproduct's net reali",
+        "cc": "B",
+        "correctChoiceText": "As a reduction of the joint cost allocated to the main products",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-047",
+        "topic": "D.047 byproduct accounting treatment",
+        "diff": "Moderate/3",
+        "stem": "Violethill produces a minor byproduct alongside its main products from a joint process. How is the byproduct's net reali",
+        "cc": "C",
+        "correctChoiceText": "As a reduction of the joint cost allocated to the main products",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-049",
+        "topic": "D.049 byproduct accounting treatment",
+        "diff": "Moderate/3",
+        "stem": "Yorkshire produces a minor byproduct alongside its main products from a joint process. How is the byproduct's net realiz",
+        "cc": "A",
+        "correctChoiceText": "As a reduction of the joint cost allocated to the main products",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-050",
+        "topic": "D.050 byproduct accounting treatment",
+        "diff": "Moderate/3",
+        "stem": "Amberfield produces a minor byproduct alongside its main products from a joint process. How is the byproduct's net reali",
+        "cc": "B",
+        "correctChoiceText": "As a reduction of the joint cost allocated to the main products",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DC-061",
+        "topic": "D.061 lean manufacturing waste reduction",
+        "diff": "Moderate/3",
+        "stem": "Lanternwood implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels",
+        "cc": "A",
+        "correctChoiceText": "Eliminating waste and non-value-added activities throughout the production proce",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-DC-062",
+        "topic": "D.062 lean manufacturing waste reduction",
+        "diff": "Moderate/3",
+        "stem": "Mossbrook implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. ",
+        "cc": "B",
+        "correctChoiceText": "Eliminating waste and non-value-added activities throughout the production proce",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-DC-063",
+        "topic": "D.063 lean manufacturing waste reduction",
+        "diff": "Moderate/3",
+        "stem": "Nettlefield implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels",
+        "cc": "C",
+        "correctChoiceText": "Eliminating waste and non-value-added activities throughout the production proce",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-DC-064",
+        "topic": "D.064 lean manufacturing waste reduction",
+        "diff": "Moderate/3",
+        "stem": "Oakenshaw implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels. ",
+        "cc": "D",
+        "correctChoiceText": "Eliminating waste and non-value-added activities throughout the production proce",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-DC-065",
+        "topic": "D.065 lean manufacturing waste reduction",
+        "diff": "Moderate/3",
+        "stem": "Poplarwood implements lean manufacturing principles to eliminate non-value-added activities and reduce inventory levels.",
+        "cc": "A",
+        "correctChoiceText": "Eliminating waste and non-value-added activities throughout the production proce",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-DC-070",
+        "topic": "D.070 contribution margin break even",
+        "diff": "Moderate/3",
+        "stem": "Umbercrest is evaluating a recurring maintenance contract. Each contract sells for $95, variable cost is $57, and annual",
+        "cc": "B",
+        "correctChoiceText": "8,000 contracts",
+        "overlap": 1
+      }
+    ]
+  },
+  {
+    "pack": "D",
+    "total": 500,
+    "certified": 350,
+    "flagged": 74,
+    "items": [
+      {
+        "qid": "P1-AD-041",
+        "topic": "A.041 comprehensive income statement presentation",
+        "diff": "Moderate/3",
+        "stem": "Pinemount wants to present net income and other comprehensive income items. What are the acceptable presentation formats",
+        "cc": "A",
+        "correctChoiceText": "A single continuous statement of comprehensive income, or two separate but conse",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BD-057",
+        "topic": "B.057 budget committee role",
+        "diff": "Moderate/3",
+        "stem": "Harrowgate forms a budget committee composed of senior managers from each functional area to review and approve departme",
+        "cc": "A",
+        "correctChoiceText": "It provides cross-functional review and coordination to align departmental budge",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-BD-058",
+        "topic": "B.058 budget committee role",
+        "diff": "Moderate/3",
+        "stem": "Ivorycrest forms a budget committee composed of senior managers from each functional area to review and approve departme",
+        "cc": "B",
+        "correctChoiceText": "It provides cross-functional review and coordination to align departmental budge",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-BD-059",
+        "topic": "B.059 budget committee role",
+        "diff": "Moderate/3",
+        "stem": "Jubilee forms a budget committee composed of senior managers from each functional area to review and approve departmenta",
+        "cc": "C",
+        "correctChoiceText": "It provides cross-functional review and coordination to align departmental budge",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-BD-060",
+        "topic": "B.060 budget committee role",
+        "diff": "Moderate/3",
+        "stem": "Kingswell forms a budget committee composed of senior managers from each functional area to review and approve departmen",
+        "cc": "D",
+        "correctChoiceText": "It provides cross-functional review and coordination to align departmental budge",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-BD-061",
+        "topic": "B.061 budget committee role",
+        "diff": "Moderate/3",
+        "stem": "Longmeadow forms a budget committee composed of senior managers from each functional area to review and approve departme",
+        "cc": "A",
+        "correctChoiceText": "It provides cross-functional review and coordination to align departmental budge",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-BD-062",
+        "topic": "B.062 budget committee role",
+        "diff": "Moderate/3",
+        "stem": "Marlowe forms a budget committee composed of senior managers from each functional area to review and approve departmenta",
+        "cc": "B",
+        "correctChoiceText": "It provides cross-functional review and coordination to align departmental budge",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-BD-063",
+        "topic": "B.063 budget committee role",
+        "diff": "Moderate/3",
+        "stem": "Netherfield forms a budget committee composed of senior managers from each functional area to review and approve departm",
+        "cc": "C",
+        "correctChoiceText": "It provides cross-functional review and coordination to align departmental budge",
+        "overlap": 4
+      },
+      {
+        "qid": "P1-BD-071",
+        "topic": "B.071 forecast accuracy measurement",
+        "diff": "Moderate/3",
+        "stem": "Vantage Ridge evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute",
+        "cc": "C",
+        "correctChoiceText": "To assess the accuracy and reliability of the forecasting method used",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-072",
+        "topic": "B.072 forecast accuracy measurement",
+        "diff": "Moderate/3",
+        "stem": "Whitfield evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute per",
+        "cc": "D",
+        "correctChoiceText": "To assess the accuracy and reliability of the forecasting method used",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-073",
+        "topic": "B.073 forecast accuracy measurement",
+        "diff": "Moderate/3",
+        "stem": "Ashvale evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute perce",
+        "cc": "A",
+        "correctChoiceText": "To assess the accuracy and reliability of the forecasting method used",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-074",
+        "topic": "B.074 forecast accuracy measurement",
+        "diff": "Moderate/3",
+        "stem": "Brookline evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute per",
+        "cc": "B",
+        "correctChoiceText": "To assess the accuracy and reliability of the forecasting method used",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-075",
+        "topic": "B.075 forecast accuracy measurement",
+        "diff": "Moderate/3",
+        "stem": "Alderway evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute perc",
+        "cc": "C",
+        "correctChoiceText": "To assess the accuracy and reliability of the forecasting method used",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-076",
+        "topic": "B.076 forecast accuracy measurement",
+        "diff": "Moderate/3",
+        "stem": "Bramblewood evaluates its sales forecasting model by comparing forecasted values to actual results using mean absolute p",
+        "cc": "D",
+        "correctChoiceText": "To assess the accuracy and reliability of the forecasting method used",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-080",
+        "topic": "B.080 expected value forecast",
+        "diff": "Moderate/3",
+        "stem": "A demand forecast has three scenarios: 8,000 units with 25% probability, 10,000 units with 50% probability, and 13,000 u",
+        "cc": "D",
+        "correctChoiceText": "10,250 units",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-082",
+        "topic": "B.082 production budget units to produce calculation",
+        "diff": "Moderate/3",
+        "stem": "Summit Corporation expects to sell 12,000 units in the first quarter. The desired ending inventory is 3,000 units, and t",
+        "cc": "B",
+        "correctChoiceText": "13,200 units",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-BD-083",
+        "topic": "B.083 budget revision mid year",
+        "diff": "Moderate/3",
+        "stem": "Inglewood experiences a significant unexpected change in raw material prices mid-year and revises its budget accordingly",
+        "cc": "C",
+        "correctChoiceText": "Update the budget or use variance analysis to explain the impact, since a signif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BD-084",
+        "topic": "B.084 budget revision mid year",
+        "diff": "Moderate/3",
+        "stem": "Juniperfield experiences a significant unexpected change in raw material prices mid-year and revises its budget accordin",
+        "cc": "D",
+        "correctChoiceText": "Update the budget or use variance analysis to explain the impact, since a signif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BD-085",
+        "topic": "B.085 budget revision mid year",
+        "diff": "Moderate/3",
+        "stem": "Kelso experiences a significant unexpected change in raw material prices mid-year and revises its budget accordingly. Wh",
+        "cc": "A",
+        "correctChoiceText": "Update the budget or use variance analysis to explain the impact, since a signif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BD-086",
+        "topic": "B.086 budget revision mid year",
+        "diff": "Moderate/3",
+        "stem": "Lockhaven experiences a significant unexpected change in raw material prices mid-year and revises its budget accordingly",
+        "cc": "B",
+        "correctChoiceText": "Update the budget or use variance analysis to explain the impact, since a signif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BD-087",
+        "topic": "B.087 budget revision mid year",
+        "diff": "Moderate/3",
+        "stem": "Mapleton experiences a significant unexpected change in raw material prices mid-year and revises its budget accordingly.",
+        "cc": "C",
+        "correctChoiceText": "Update the budget or use variance analysis to explain the impact, since a signif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-BD-088",
+        "topic": "B.088 budget revision mid year",
+        "diff": "Moderate/3",
+        "stem": "Northfell experiences a significant unexpected change in raw material prices mid-year and revises its budget accordingly",
+        "cc": "D",
+        "correctChoiceText": "Update the budget or use variance analysis to explain the impact, since a signif",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-022",
+        "topic": "C.022 profit center evaluation appropriateness",
+        "diff": "Moderate/3",
+        "stem": "Valemont's division manager controls pricing and costs but has no authority over the level of assets invested in the div",
+        "cc": "B",
+        "correctChoiceText": "A profit center, evaluated on operating income rather than ROI or residual incom",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-023",
+        "topic": "C.023 profit center evaluation appropriateness",
+        "diff": "Difficult/4",
+        "stem": "Whitmore's division manager controls pricing and costs but has no authority over the level of assets invested in the div",
+        "cc": "C",
+        "correctChoiceText": "A profit center, evaluated on operating income rather than ROI or residual incom",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-025",
+        "topic": "C.025 profit center evaluation appropriateness",
+        "diff": "Moderate/3",
+        "stem": "Zionsgate's division manager controls pricing and costs but has no authority over the level of assets invested in the di",
+        "cc": "A",
+        "correctChoiceText": "A profit center, evaluated on operating income rather than ROI or residual incom",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-026",
+        "topic": "C.026 profit center evaluation appropriateness",
+        "diff": "Moderate/3",
+        "stem": "Ashfield's division manager controls pricing and costs but has no authority over the level of assets invested in the div",
+        "cc": "B",
+        "correctChoiceText": "A profit center, evaluated on operating income rather than ROI or residual incom",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-027",
+        "topic": "C.027 profit center evaluation appropriateness",
+        "diff": "Moderate/3",
+        "stem": "Bellcourt's division manager controls pricing and costs but has no authority over the level of assets invested in the di",
+        "cc": "C",
+        "correctChoiceText": "A profit center, evaluated on operating income rather than ROI or residual incom",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-028",
+        "topic": "C.028 profit center evaluation appropriateness",
+        "diff": "Difficult/4",
+        "stem": "Crownridge's division manager controls pricing and costs but has no authority over the level of assets invested in the d",
+        "cc": "D",
+        "correctChoiceText": "A profit center, evaluated on operating income rather than ROI or residual incom",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-036",
+        "topic": "C.036 cost center variance responsibility",
+        "diff": "Difficult/4",
+        "stem": "Kirkwood's production department reports an unfavorable material quantity variance for the month. Which manager is typic",
+        "cc": "D",
+        "correctChoiceText": "The production manager, who controls the efficient use of materials in the proce",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-038",
+        "topic": "C.038 cost center variance responsibility",
+        "diff": "Moderate/3",
+        "stem": "Millhaven's production department reports an unfavorable material quantity variance for the month. Which manager is typi",
+        "cc": "B",
+        "correctChoiceText": "The production manager, who controls the efficient use of materials in the proce",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-039",
+        "topic": "C.039 cost center variance responsibility",
+        "diff": "Moderate/3",
+        "stem": "Norwood Peak's production department reports an unfavorable material quantity variance for the month. Which manager is t",
+        "cc": "C",
+        "correctChoiceText": "The production manager, who controls the efficient use of materials in the proce",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-040",
+        "topic": "C.040 cost center variance responsibility",
+        "diff": "Moderate/3",
+        "stem": "Orchardgate's production department reports an unfavorable material quantity variance for the month. Which manager is ty",
+        "cc": "D",
+        "correctChoiceText": "The production manager, who controls the efficient use of materials in the proce",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-041",
+        "topic": "C.041 cost center variance responsibility",
+        "diff": "Moderate/3",
+        "stem": "Pinemount's production department reports an unfavorable material quantity variance for the month. Which manager is typi",
+        "cc": "A",
+        "correctChoiceText": "The production manager, who controls the efficient use of materials in the proce",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-042",
+        "topic": "C.042 cost center variance responsibility",
+        "diff": "Difficult/4",
+        "stem": "Quarrycrest's production department reports an unfavorable material quantity variance for the month. Which manager is ty",
+        "cc": "B",
+        "correctChoiceText": "The production manager, who controls the efficient use of materials in the proce",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-064",
+        "topic": "C.064 variance investigation cost benefit",
+        "diff": "Moderate/3",
+        "stem": "Oakvale's controller decides not to investigate a small unfavorable variance because the cost of investigation would exc",
+        "cc": "D",
+        "correctChoiceText": "Cost-benefit analysis in variance investigation decisions",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CD-065",
+        "topic": "C.065 variance investigation cost benefit",
+        "diff": "Moderate/3",
+        "stem": "Prescott's controller decides not to investigate a small unfavorable variance because the cost of investigation would ex",
+        "cc": "A",
+        "correctChoiceText": "Cost-benefit analysis in variance investigation decisions",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CD-066",
+        "topic": "C.066 variance investigation cost benefit",
+        "diff": "Moderate/3",
+        "stem": "Quillwood's controller decides not to investigate a small unfavorable variance because the cost of investigation would e",
+        "cc": "B",
+        "correctChoiceText": "Cost-benefit analysis in variance investigation decisions",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CD-067",
+        "topic": "C.067 variance investigation cost benefit",
+        "diff": "Difficult/4",
+        "stem": "Ravenscroft's controller decides not to investigate a small unfavorable variance because the cost of investigation would",
+        "cc": "C",
+        "correctChoiceText": "Cost-benefit analysis in variance investigation decisions",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CD-069",
+        "topic": "C.069 variance investigation cost benefit",
+        "diff": "Moderate/3",
+        "stem": "Thistlewood's controller decides not to investigate a small unfavorable variance because the cost of investigation would",
+        "cc": "A",
+        "correctChoiceText": "Cost-benefit analysis in variance investigation decisions",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CD-070",
+        "topic": "C.070 variance investigation cost benefit",
+        "diff": "Moderate/3",
+        "stem": "Uplandview's controller decides not to investigate a small unfavorable variance because the cost of investigation would ",
+        "cc": "B",
+        "correctChoiceText": "Cost-benefit analysis in variance investigation decisions",
+        "overlap": 3
+      },
+      {
+        "qid": "P1-CD-071",
+        "topic": "C.071 total quality management philosophy",
+        "diff": "Moderate/3",
+        "stem": "Vantage Ridge adopts a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the respo",
+        "cc": "C",
+        "correctChoiceText": "Total quality management (TQM)",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-072",
+        "topic": "C.072 total quality management philosophy",
+        "diff": "Moderate/3",
+        "stem": "Whitfield adopts a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsib",
+        "cc": "D",
+        "correctChoiceText": "Total quality management (TQM)",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-073",
+        "topic": "C.073 total quality management philosophy",
+        "diff": "Moderate/3",
+        "stem": "Ashvale adopts a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsibil",
+        "cc": "A",
+        "correctChoiceText": "Total quality management (TQM)",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-074",
+        "topic": "C.074 total quality management philosophy",
+        "diff": "Moderate/3",
+        "stem": "Brookline adopts a company-wide philosophy emphasizing continuous improvement and customer satisfaction as the responsib",
+        "cc": "B",
+        "correctChoiceText": "Total quality management (TQM)",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-CD-077",
+        "topic": "C.077 segment margin reporting",
+        "diff": "Moderate/3",
+        "stem": "Castlebrook prepares a segmented income statement showing each division's segment margin after deducting only costs trac",
+        "cc": "A",
+        "correctChoiceText": "To evaluate the profitability of a segment before allocating common, untraceable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-078",
+        "topic": "C.078 segment margin reporting",
+        "diff": "Difficult/4",
+        "stem": "Deepwater prepares a segmented income statement showing each division's segment margin after deducting only costs tracea",
+        "cc": "B",
+        "correctChoiceText": "To evaluate the profitability of a segment before allocating common, untraceable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-079",
+        "topic": "C.079 segment margin reporting",
+        "diff": "Difficult/4",
+        "stem": "Elmsworth prepares a segmented income statement showing each division's segment margin after deducting only costs tracea",
+        "cc": "C",
+        "correctChoiceText": "To evaluate the profitability of a segment before allocating common, untraceable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-080",
+        "topic": "C.080 segment margin reporting",
+        "diff": "Moderate/3",
+        "stem": "Fernhollow prepares a segmented income statement showing each division's segment margin after deducting only costs trace",
+        "cc": "D",
+        "correctChoiceText": "To evaluate the profitability of a segment before allocating common, untraceable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-081",
+        "topic": "C.081 segment margin reporting",
+        "diff": "Moderate/3",
+        "stem": "Granville prepares a segmented income statement showing each division's segment margin after deducting only costs tracea",
+        "cc": "A",
+        "correctChoiceText": "To evaluate the profitability of a segment before allocating common, untraceable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-082",
+        "topic": "C.082 segment margin reporting",
+        "diff": "Moderate/3",
+        "stem": "Hawkridge prepares a segmented income statement showing each division's segment margin after deducting only costs tracea",
+        "cc": "B",
+        "correctChoiceText": "To evaluate the profitability of a segment before allocating common, untraceable",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-083",
+        "topic": "C.083 total variable overhead variance decomposition",
+        "diff": "Difficult/4",
+        "stem": "Inglewood's total variable overhead variance can be broken into two components for analysis. What are these two componen",
+        "cc": "C",
+        "correctChoiceText": "The variable overhead spending variance and the variable overhead efficiency var",
+        "overlap": 6
+      },
+      {
+        "qid": "P1-CD-084",
+        "topic": "C.084 total variable overhead variance decomposition",
+        "diff": "Difficult/4",
+        "stem": "Juniperfield's total variable overhead variance can be broken into two components for analysis. What are these two compo",
+        "cc": "D",
+        "correctChoiceText": "The variable overhead spending variance and the variable overhead efficiency var",
+        "overlap": 6
+      },
+      {
+        "qid": "P1-CD-085",
+        "topic": "C.085 total variable overhead variance decomposition",
+        "diff": "Moderate/3",
+        "stem": "Kelso's total variable overhead variance can be broken into two components for analysis. What are these two components?",
+        "cc": "A",
+        "correctChoiceText": "The variable overhead spending variance and the variable overhead efficiency var",
+        "overlap": 6
+      },
+      {
+        "qid": "P1-CD-086",
+        "topic": "C.086 total variable overhead variance decomposition",
+        "diff": "Moderate/3",
+        "stem": "Lockhaven's total variable overhead variance can be broken into two components for analysis. What are these two componen",
+        "cc": "B",
+        "correctChoiceText": "The variable overhead spending variance and the variable overhead efficiency var",
+        "overlap": 6
+      },
+      {
+        "qid": "P1-CD-087",
+        "topic": "C.087 total variable overhead variance decomposition",
+        "diff": "Difficult/4",
+        "stem": "Mapleton's total variable overhead variance can be broken into two components for analysis. What are these two component",
+        "cc": "C",
+        "correctChoiceText": "The variable overhead spending variance and the variable overhead efficiency var",
+        "overlap": 6
+      },
+      {
+        "qid": "P1-CD-088",
+        "topic": "C.088 total variable overhead variance decomposition",
+        "diff": "Moderate/3",
+        "stem": "Northfell's total variable overhead variance can be broken into two components for analysis. What are these two componen",
+        "cc": "D",
+        "correctChoiceText": "The variable overhead spending variance and the variable overhead efficiency var",
+        "overlap": 6
+      },
+      {
+        "qid": "P1-CD-089",
+        "topic": "C.089 value based management EVA linkage",
+        "diff": "Moderate/3",
+        "stem": "Overbrook ties executive compensation to economic value added to encourage long-term value creation rather than short-te",
+        "cc": "A",
+        "correctChoiceText": "Value-based management",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-090",
+        "topic": "C.090 value based management EVA linkage",
+        "diff": "Moderate/3",
+        "stem": "Palisade ties executive compensation to economic value added to encourage long-term value creation rather than short-ter",
+        "cc": "B",
+        "correctChoiceText": "Value-based management",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-091",
+        "topic": "C.091 value based management EVA linkage",
+        "diff": "Moderate/3",
+        "stem": "Quintwood ties executive compensation to economic value added to encourage long-term value creation rather than short-te",
+        "cc": "C",
+        "correctChoiceText": "Value-based management",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-092",
+        "topic": "C.092 value based management EVA linkage",
+        "diff": "Difficult/4",
+        "stem": "Redcliff ties executive compensation to economic value added to encourage long-term value creation rather than short-ter",
+        "cc": "D",
+        "correctChoiceText": "Value-based management",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-CD-094",
+        "topic": "C.094 value based management EVA linkage",
+        "diff": "Moderate/3",
+        "stem": "Thornbury ties executive compensation to economic value added to encourage long-term value creation rather than short-te",
+        "cc": "B",
+        "correctChoiceText": "Value-based management",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DD-001",
+        "topic": "D.001 normal costing overhead application",
+        "diff": "Moderate/3",
+        "stem": "Alderway applies manufacturing overhead using a predetermined rate based on budgeted overhead and budgeted activity, the",
+        "cc": "A",
+        "correctChoiceText": "Normal costing",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-012",
+        "topic": "D.012 overapplied overhead disposition",
+        "diff": "Moderate/3",
+        "stem": "Lockhaven applies more manufacturing overhead to production than it actually incurs during the year, resulting in overap",
+        "cc": "D",
+        "correctChoiceText": "Closed to cost of goods sold, reducing the amount reported",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-014",
+        "topic": "D.014 overapplied overhead disposition",
+        "diff": "Moderate/3",
+        "stem": "Northfell applies more manufacturing overhead to production than it actually incurs during the year, resulting in overap",
+        "cc": "B",
+        "correctChoiceText": "Closed to cost of goods sold, reducing the amount reported",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-015",
+        "topic": "D.015 overapplied overhead disposition",
+        "diff": "Moderate/3",
+        "stem": "Overbrook applies more manufacturing overhead to production than it actually incurs during the year, resulting in overap",
+        "cc": "C",
+        "correctChoiceText": "Closed to cost of goods sold, reducing the amount reported",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-036",
+        "topic": "D.036 kaizen costing continuous improvement",
+        "diff": "Moderate/3",
+        "stem": "Kirkwood sets ongoing cost reduction targets for an existing product already in production, expecting gradual efficiency",
+        "cc": "D",
+        "correctChoiceText": "Kaizen costing",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-039",
+        "topic": "D.039 kaizen costing continuous improvement",
+        "diff": "Difficult/4",
+        "stem": "Norwood Peak sets ongoing cost reduction targets for an existing product already in production, expecting gradual effici",
+        "cc": "C",
+        "correctChoiceText": "Kaizen costing",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-046",
+        "topic": "D.046 service department reciprocal method",
+        "diff": "Moderate/3",
+        "stem": "Umberglen allocates service department costs using simultaneous equations that fully recognize services provided between",
+        "cc": "B",
+        "correctChoiceText": "The reciprocal method",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-047",
+        "topic": "D.047 service department reciprocal method",
+        "diff": "Moderate/3",
+        "stem": "Vaultbrook allocates service department costs using simultaneous equations that fully recognize services provided betwee",
+        "cc": "C",
+        "correctChoiceText": "The reciprocal method",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-048",
+        "topic": "D.048 service department reciprocal method",
+        "diff": "Moderate/3",
+        "stem": "Westhollow allocates service department costs using simultaneous equations that fully recognize services provided betwee",
+        "cc": "D",
+        "correctChoiceText": "The reciprocal method",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-049",
+        "topic": "D.049 service department reciprocal method",
+        "diff": "Moderate/3",
+        "stem": "Yorkhaven allocates service department costs using simultaneous equations that fully recognize services provided between",
+        "cc": "A",
+        "correctChoiceText": "The reciprocal method",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-050",
+        "topic": "D.050 service department reciprocal method",
+        "diff": "Moderate/3",
+        "stem": "Ambervale allocates service department costs using simultaneous equations that fully recognize services provided between",
+        "cc": "B",
+        "correctChoiceText": "The reciprocal method",
+        "overlap": 1
+      },
+      {
+        "qid": "P1-DD-052",
+        "topic": "D.052 contribution margin income statement format",
+        "diff": "Difficult/4",
+        "stem": "Coventry Hill prepares an internal income statement that separates costs by behavior (variable versus fixed) rather than",
+        "cc": "D",
+        "correctChoiceText": "A contribution margin income statement, useful for cost-volume-profit analysis a",
+        "overlap": 2
+      },
+      {
+        "qid": "P1-DD-055",
+        "topic": "D.055 contribution margin income statement format",
+        "diff": "Moderate/3",
+        "stem": "Falconwood is reviewing draft internal income statements. Which presentation follows contribution-margin format?",
+        "cc": "C",
+        "correctChoiceText": "Sales minus variable costs equals contribution margin, then fixed costs are dedu",
+        "overlap": 3
+      }
+    ]
+  },
+  {
+    "pack": "E",
+    "total": 500,
+    "certified": 500,
+    "flagged": 28,
+    "items": [
+      {
+        "qid": "P1E-A-034",
+        "topic": "E-A.034 AR net realizable value",
+        "diff": "Moderate/3",
+        "stem": "Net realizable value of accounts receivable is:",
+        "cc": "A",
+        "correctChoiceText": "Gross AR minus allowance for doubtful accounts",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-A-037",
+        "topic": "E-A.037 Factoring without recourse",
+        "diff": "Moderate/3",
+        "stem": "Factoring receivables without recourse is recorded as:",
+        "cc": "D",
+        "correctChoiceText": "A sale of receivables",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-A-052",
+        "topic": "E-A.052 Depreciation method change",
+        "diff": "Moderate/3",
+        "stem": "Under U.S. GAAP, a change in depreciation method is accounted for:",
+        "cc": "A",
+        "correctChoiceText": "Prospectively as a change in estimate",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-A-058",
+        "topic": "E-A.058 Restructuring liability",
+        "diff": "Moderate/3",
+        "stem": "Under U.S. GAAP, a restructuring liability is recognized when:",
+        "cc": "B",
+        "correctChoiceText": "The liability is incurred and can be reasonably estimated",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-017",
+        "topic": "E-B.017 Rolling budgets",
+        "diff": "Difficult/4",
+        "stem": "Rolling budgets are also called:",
+        "cc": "B",
+        "correctChoiceText": "Continuous budgets",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-024",
+        "topic": "E-B.024 Mean absolute deviation",
+        "diff": "Moderate/3",
+        "stem": "Mean absolute deviation measures:",
+        "cc": "D",
+        "correctChoiceText": "Average absolute forecast error",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-032",
+        "topic": "E-B.032 Controllable costs",
+        "diff": "Difficult/4",
+        "stem": "Controllable costs are:",
+        "cc": "B",
+        "correctChoiceText": "Costs manager can directly influence",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-038",
+        "topic": "E-B.038 Transfer price full capacity",
+        "diff": "Moderate/3",
+        "stem": "At full capacity, the best transfer price is:",
+        "cc": "A",
+        "correctChoiceText": "Market price",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-C-001",
+        "topic": "E-C.001 Standard cost definition",
+        "diff": "Difficult/4",
+        "stem": "Standard costs are:",
+        "cc": "B",
+        "correctChoiceText": "Budgeted costs for a single unit",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-C-007",
+        "topic": "E-C.007 VOH efficiency variance",
+        "diff": "Moderate/3",
+        "stem": "Variable overhead efficiency variance is caused by:",
+        "cc": "D",
+        "correctChoiceText": "Efficiency in using the allocation base",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-C-020",
+        "topic": "E-C.020 Customer perspective BSC",
+        "diff": "Difficult/4",
+        "stem": "Customer perspective measures include:",
+        "cc": "A",
+        "correctChoiceText": "Customer satisfaction and retention",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-D-023",
+        "topic": "E-D.023 Joint cost allocation",
+        "diff": "Moderate/3",
+        "stem": "Joint costs are allocated to:",
+        "cc": "A",
+        "correctChoiceText": "Joint products for inventory valuation",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-D-026",
+        "topic": "E-D.026 Relevant costs",
+        "diff": "Difficult/4",
+        "stem": "Relevant costs are:",
+        "cc": "C",
+        "correctChoiceText": "Future costs differing among alternatives",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-E-016",
+        "topic": "E-E.016 Internal audit independence",
+        "diff": "Moderate/3",
+        "stem": "Internal audit independence is enhanced by:",
+        "cc": "D",
+        "correctChoiceText": "Reporting to the audit committee",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-077",
+        "topic": "E-B.077 ABB vs traditional",
+        "diff": "Moderate/3",
+        "stem": "ABC budgeting is more detailed than:",
+        "cc": "A",
+        "correctChoiceText": "Traditional budgeting",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-078",
+        "topic": "E-B.078 Budget cycle time",
+        "diff": "Difficult/4",
+        "stem": "Budget cycle time is the:",
+        "cc": "B",
+        "correctChoiceText": "Time to prepare the budget",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-088",
+        "topic": "E-B.088 Variable cost behavior",
+        "diff": "Difficult/4",
+        "stem": "If volume increases by 15% and total variable cost increases by 15%, the cost is:",
+        "cc": "A",
+        "correctChoiceText": "Variable",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-098",
+        "topic": "E-B.098 Financial vs operating budget",
+        "diff": "Difficult/4",
+        "stem": "Which budget is NOT an operating budget?",
+        "cc": "C",
+        "correctChoiceText": "Cash budget",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-B-099",
+        "topic": "E-B.099 Cost-plus transfer price",
+        "diff": "Difficult/4",
+        "stem": "Transfer price set at full cost plus markup is:",
+        "cc": "D",
+        "correctChoiceText": "Cost-based transfer price",
+        "overlap": 2
+      },
+      {
+        "qid": "P1E-C-048",
+        "topic": "E-C.048 Quality cost index",
+        "diff": "Moderate/3",
+        "stem": "Quality cost index is calculated as:",
+        "cc": "B",
+        "correctChoiceText": "Total quality cost / sales",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-D-047",
+        "topic": "E-D.047 Transferred-in costs",
+        "diff": "Moderate/3",
+        "stem": "In process costing, transferred-in costs are:",
+        "cc": "C",
+        "correctChoiceText": "Costs from prior departments",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-D-050",
+        "topic": "E-D.050 Practical capacity",
+        "diff": "Moderate/3",
+        "stem": "Practical capacity is:",
+        "cc": "D",
+        "correctChoiceText": "Theoretical capacity less unavoidable downtime",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-D-051",
+        "topic": "E-D.051 Practical capacity overhead",
+        "diff": "Difficult/4",
+        "stem": "When practical capacity is used for overhead rate:",
+        "cc": "B",
+        "correctChoiceText": "Unused capacity cost is expensed",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-D-059",
+        "topic": "E-D.059 Activity driver",
+        "diff": "Difficult/4",
+        "stem": "Activity driver in ABC measures:",
+        "cc": "D",
+        "correctChoiceText": "Frequency and intensity of activity use",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-F-044",
+        "topic": "E-F.044 Analytics maturity",
+        "diff": "Moderate/3",
+        "stem": "Data analytics maturity model level 1 is:",
+        "cc": "B",
+        "correctChoiceText": "Descriptive analytics",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-F-065",
+        "topic": "E-F.065 Maximum tolerable downtime",
+        "diff": "Moderate/3",
+        "stem": "Maximum tolerable downtime (MTD) is:",
+        "cc": "C",
+        "correctChoiceText": "Maximum time a system can be unavailable",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-F-069",
+        "topic": "E-F.069 Smart contracts",
+        "diff": "Moderate/3",
+        "stem": "Smart contracts are:",
+        "cc": "C",
+        "correctChoiceText": "Self-executing contracts on blockchain",
+        "overlap": 1
+      },
+      {
+        "qid": "P1E-C-099",
+        "topic": "E-C.099 Favorable revenue variance",
+        "diff": "Difficult/4",
+        "stem": "Revenue variance is favorable when:",
+        "cc": "A",
+        "correctChoiceText": "Actual revenue exceeds budgeted revenue",
+        "overlap": 2
+      }
+    ]
+  }
+]

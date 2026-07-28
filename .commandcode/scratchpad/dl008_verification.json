@@ -1,0 +1,90 @@
+[
+  {
+    "qid": "P1-FC-001",
+    "pack": "pack_c_corrected.js",
+    "section": "F",
+    "state": "?",
+    "cc": "A",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 21495
+  },
+  {
+    "qid": "P1-FD-043",
+    "pack": "pack_d_corrected.js",
+    "section": "?",
+    "state": "?",
+    "cc": "C",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 23593
+  },
+  {
+    "qid": "P1-FD-049",
+    "pack": "pack_d_corrected.js",
+    "section": "F",
+    "state": "Archived",
+    "cc": "A",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 23864
+  },
+  {
+    "qid": "P1-FD-054",
+    "pack": "pack_d_corrected.js",
+    "section": "?",
+    "state": "?",
+    "cc": "B",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 24114
+  },
+  {
+    "qid": "P1-FD-059",
+    "pack": "pack_d_corrected.js",
+    "section": "F",
+    "state": "?",
+    "cc": "C",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 24364
+  },
+  {
+    "qid": "P1-FD-064",
+    "pack": "pack_d_corrected.js",
+    "section": "F",
+    "state": "Archived",
+    "cc": "D",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 24614
+  },
+  {
+    "qid": "P1-FD-069",
+    "pack": "pack_d_corrected.js",
+    "section": "?",
+    "state": "?",
+    "cc": "A",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 24864
+  },
+  {
+    "qid": "P1-FD-073",
+    "pack": "pack_d_corrected.js",
+    "section": "F",
+    "state": "?",
+    "cc": "A",
+    "ewCC_length": 17,
+    "ewCC_preview": "(field not found)",
+    "isDL008": true,
+    "lineNum": 25064
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "session": "723",
+  "agent": "N",
+  "title": "Governance Scorecard — 700-Series Final",
+  "overall_grade": "A-",
+  "composite_score": 86.3,
+  "components": {
+    "calibration_score": { "score": 87, "dcs_compliance": "92.6%", "severe_misalignments": 174 },
+    "reliability_score": { "score": 90, "dcs_agreement": "95.0%", "adjusted_agreement": "91.0%" },
+    "metadata_quality_score": { "score": 83, "cl_coverage": "100%", "dl008_clean": 0, "taxonomy_staleness": true },
+    "governance_maturity_score": { "score": 85, "guard_pass": "20/20", "defect_library": "33 entries" }
+  },
+  "deductions": [
+    "174 severe DCS §3 misalignments (-7 calibration)",
+    "TAXONOMY_REGISTRY.md stale coverage stats (-5 metadata)",
+    "CURRENT_BASELINES.md stale hashes (-5 governance)",
+    "0 Very Difficult / 0 Evaluate items — content gap (-5 calibration)"
+  ],
+  "trajectory": "DCS compliance: 89.3% (S720) → 92.6% (S722A). Reliability: 52% (S721) → 95% (S722A)"
+}

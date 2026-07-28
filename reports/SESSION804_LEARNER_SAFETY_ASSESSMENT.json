@@ -1,0 +1,106 @@
+{
+  "session": "804",
+  "agent": "D",
+  "title": "Pack A Section E Clone Learner-Safety Assessment",
+  "date": "2026-07-26",
+  "severity": "HIGH",
+  "collision_probability": "~14% chance a learner sees 2+ items from same clone group in a 100-item session (Pack A Section E clones only; pool-wide clone collision is 98.4% per S802)",
+  "methodology": {
+    "pool": "482 Certified Pack A items (direct grep 2026-07-26)",
+    "draw_weight": "22% of 100-item session = ~22 Pack A items (per S802 simulation weights)",
+    "clone_population": "~37 Certified Section E items across ~8 template-rotation clone groups (~4.6 items per group)",
+    "clone_pct_of_pack_a": "7.7% (37/482)",
+    "hypergeometric_model": "Without-replacement draw, 22 from 482, 8 groups of ~4.6 items each",
+    "per_group_expected": "0.210 draws from a single clone group in a 22-item Pack A draw",
+    "per_group_p2plus": "~0.0193 (Poisson approximation for rare-event hypergeometric)",
+    "any_group_collision": "1 - (1 - 0.0193)^8 ≈ 0.144 = ~14.4%"
+  },
+  "clone_architecture": {
+    "root_cause": "5-item template rotation pipeline. Each concept appears 5 times with only company-name substitution (alphabetical rotation: Harbor → Iris → Juniper → Keystone → Lumen → ...) and correct-answer position rotation (A→B→C→D→A). Distractor explanations were template-filled — identical within each clone group.",
+    "confirmed_groups": [
+      {
+        "concept": "Duplicate payment control (paid two invoices with same vendor/invoice number/amount)",
+        "certified_items": ["P1-E-037 (Harbor, CC=D)", "P1-E-045 (Pioneer, CC=B)", "P1-E-053 (Yukon, CC=A)"],
+        "archived_items": ["P1-E-058 (Granite)", "P1-E-066 (Orion)"],
+        "certified_count": 3
+      },
+      {
+        "concept": "Terminated employee still on payroll",
+        "certified_items": ["P1-E-038 (Iris, CC=C)"],
+        "archived_items": ["P1-E-046 (Quartz)", "P1-E-054 (Zephyr)", "P1-E-062 (Harbor)", "P1-E-070 (Pioneer)"],
+        "certified_count": 1
+      },
+      {
+        "concept": "User access recertification (employees retain access after department change)",
+        "certified_items": ["P1-E-040 (Keystone, CC=B)", "P1-E-048 (Summit, CC=D)", "P1-E-056 (Beacon, CC=D)"],
+        "archived_items": ["P1-E-063 (Juniper)", "P1-E-071 (Riverview)"],
+        "certified_count": 3
+      },
+      {
+        "concept": "Control exception root cause (recurring invoice approval exceptions in one region)",
+        "certified_items": ["P1-E-041 (Lumen, CC=D)"],
+        "archived_items": ["P1-E-049 (Titan)", "P1-E-057 (Crescent)", "P1-E-065 (Keystone)", "P1-E-073 (Summit)"],
+        "certified_count": 1
+      }
+    ],
+    "confirmed_certified_clones": 8,
+    "additional_suspected_groups": "Items E-042-E-044, E-051-E-052, E-076-E-083 lack stem data in scan; user estimate of ~37 total clones suggests 3-5 additional clone groups with 1-3 Certified siblings each",
+    "unique_items_in_section_e": "E-001 through E-034: 34 items testing distinct internal control topics (risk assessment, monitoring, segregation of duties, corrective controls, physical safeguards, IT general controls, input validation, three-way match, vendor master file, blank check custody, credit approval, shipping prenumbering, reconciliation, management override, fraud reduction, SOX assessment, deficiency severity, compensating controls, audit independence, external audit reliance, documentation, continuous monitoring, backup recovery, disaster recovery, privacy, whistleblower, board oversight, remediation tracking). These are NOT clones — each tests a unique concept with a unique company name and genuinely distinct answer choices.",
+    "archival_status": "16 Section E items are Archived (confirmed from direct grep). The archive pattern follows clone groups: of the 20 template-rotation items in 4 confirmed groups, 12 remain Archived and 8 are Certified."
+  },
+  "dl_016_confirmation": {
+    "status": "CONFIRMED via raw-source inspection",
+    "evidence": "P1-E-036 metadata block (lines 19507-19525): ExplanationWrong fields describe cash-receipts/custody controls matching P1-E-035's topic (segregation of duties — 'one employee opening mail, recording receipts, depositing checks'). P1-E-036's actual content-block stem (line 19537): 'Granite notices managers split purchases to avoid approval limits' — a purchase authorization topic. The metadata-block QuestionID says P1-E-036 but the EW text describes E-035's distractor set. This is the +1 offset pattern.",
+    "scope": "DL-016 (DEFECT_LIBRARY.md) — Session 64 finding: metadata-block ExplanationWrong fields are shifted +1 position, describing the previous QID's choices. Confirmed to span ALL Pack A sections per Session 64 pilot. All dual-block items in Pack A Section E (every item from E-001 to E-084) are affected.",
+    "learner_impact": "When a learner selects a wrong answer on a DL-016-affected item, the distractor explanation displayed describes a COMPLETELY DIFFERENT topic's wrong choices. Example: learner answers wrong on duplicate payment control (P1-E-037), sees feedback about purchase authorization thresholds (P1-E-036's topic). This is educationally misleading — the learner cannot learn from their mistake because the feedback addresses a different concept entirely.",
+    "certified_surface": "59 Certified Section E items × 3 distractor EW slots each = 177 distractor explanation slots, all potentially describing the PREVIOUS item's topic. For the 8 confirmed clone-group Certified items, this means wrong-answer feedback is always about a different concept.",
+    "block_structure": "Pack A uses dual-block architecture: Block 1 (metadata) = QuestionID, question_state, ExplanationWrongA-D, ChoiceA-D (template residuals). Block 2 (content) = Part, Section, Topic, Stem, Choices.A-D, CorrectChoice, ExplanationCorrect. The rendering engine reads ExplanationWrong from Block 1 but displays Choices from Block 2. When Block 1's QuestionID is shifted +1 (DL-016 defect), the ExplanationWrong fields describe the wrong item's choices.",
+    "caqs_violation": "CAQS §4.3 Rule EV4: Distractor explanations must be choice-specific. DL-016 renders this impossible — the EW text doesn't describe the item's own choices. CAQS §4.2: Explanations must identify the specific misconception. DL-016 learners receive the wrong misconception entirely."
+  },
+  "risk_breakdown": {
+    "redundancy": {
+      "rating": "MEDIUM",
+      "detail": "7.7% of Pack A's 482 Certified items are template-rotation clones. In a 100-item session, ~1.7 clone items are drawn from Pack A (~1.7 items out of 22 Pack A draws). ~14% of sessions see 2+ items from the same clone group. When collision occurs, the learner sees the same concept tested twice with only company-name substitution and answer-letter rotation. For strong candidates this wastes ~1 item slot; for borderline candidates the repetition may provide a second chance (neutral or slightly positive). However, the clone waste compounds with Pack C/D clone collision (98.4% pool-wide per S802), so Pack A's contribution is marginal. Overall Pack A Section E redundancy is limited — 34 unique-topic items provide genuine content diversity in the same section.",
+      "certified_items_affected": "37 of 482 (7.7% of Pack A Certified pool)",
+      "session_impact": "~14% chance of any Section E clone collision; expected ~1.7 clone items per 22-item Pack A draw"
+    },
+    "misinformation": {
+      "rating": "HIGH",
+      "detail": "100% of Pack A Section E dual-block items carry DL-016 metadata-block EW shift. Confirmed by raw-source inspection of P1-E-036/P1-E-037: metadata block EW fields describe the PREVIOUS QID's topic, not the current QID's. A learner who selects a wrong answer on any Section E clone-group item receives a distractor explanation about a completely unrelated control concept. This violates CAQS §4.3 EV4 (choice-specific distractor explanations) and §11.2 LS2 (error correction — identify the specific misconception). The pedagogical consequence: the learner cannot self-correct because the feedback addresses the wrong concept. This is not a theoretical risk — DL-016 was independently verified during Session 64 pilot certification (2026-07-24) and confirmed in this session via raw-source inspection.",
+      "certified_items_affected": "59 of 59 Section E Certified items (100%) have DL-016",
+      "wrong_answer_exposure": "If a learner answers 30 of 100 items wrong (average profile), ~7 are Pack A items, ~1.5 are Section E items. Of those ~1.5 wrong Section E answers, the learner sees wrong-topic distractor feedback every time. For the misconception-prone candidate (~50 wrong answers, ~3.5 Pack A wrong, ~1 Section E wrong), every Section E wrong answer provides educationally useless feedback."
+    },
+    "confusion": {
+      "rating": "MEDIUM",
+      "detail": "Learners who draw 2+ sibling items from the same clone group see: (1) identical stems with only company-name and answer-letter changed, (2) identical distractor explanation templates, (3) the correct answer rotating through A→B→C→D positions in a detectable pattern. A pattern-aware learner could deduce that 'this topic = pick the rotated answer position' without understanding the underlying accounting concept. This undermines the psychometric validity of these items. However, the probability of drawing enough siblings to detect the pattern is low (~14% chance of even 2 siblings; 3+ siblings is ~2%). The 34 unique-topic items in the same section provide a counterbalance — even if a learner detects the pattern on one clone group, the other Section E items test unrelated concepts.",
+      "pattern_detectability": "Low probability (requires 3+ siblings from same group, ~2% chance). However, a single pair reveals the company-name substitution pattern."
+    }
+  },
+  "cross_reference_s802": {
+    "pool_wide_clone_collision": "98.4% (Pack C/D clones primary driver)",
+    "pack_a_contribution": "Marginal — Pack A Section E clones add ~14% to an already ~98% collision baseline. The pool-wide redundancy is dominated by Pack D (~10 items per unique concept) and Pack C (~4.7 items per concept). Pack A's ~4.6 items per clone concept is comparable to Pack C but represents only 7.7% of Pack A's Certified pool versus Pack C/D Sections E/F where clones dominate.",
+    "pack_a_section_e_uniqueness": "34 of 59 Certified Section E items (58%) are unique-topic items. This is significantly better than Pack C/D Section E where ~93% of items are clones (per DL-012). Pack A Section E has genuine content diversity — the clone problem is concentrated in the second half of the section (E-035 onwards)."
+  },
+  "recommendation": "SELECTIVE_ARCHIVE",
+  "recommendation_detail": {
+    "action": "Do NOT decertify ALL Section E clones. Instead: (1) Archive 29 of 37 clone siblings across all 8 groups, keeping 1 seed per concept (8 seeds retained). This follows the DL-012 remediation model for Pack C/D Section E. (2) Fix DL-016 metadata-block EW shift on the retained 8 seed items — align Block 1 ExplanationWrong fields to match Block 2 Choices. (3) The 34 unique-topic items (E-001 through E-034) are high-quality, diverse content — retain all as Certified.",
+    "rationale": "Full decertification would remove 37 items from the learner pool but only 8 unique concepts. Selective archive preserves concept coverage while eliminating collision risk and reducing DL-016 surface area by 78% (29 of 37 clone items removed). The 34 unique-topic items have genuine educational value with distinct stems, choices, and COSO-cited explanations — these should be protected.",
+    "estimated_pool_impact": "Pack A would go from 482 Certified to ~453 (removing 29 clone siblings). Collision probability drops from ~14% to ~0% for Pack A Section E. DL-016 surface drops from 177 distractor slots to ~24 (8 seeds × 3 distractor slots).",
+    "blockers": "DL-016 on retained seeds must be fixed — currently, ALL 8 seed items will display wrong-topic distractor feedback. This is the condition that makes Selective Archive viable: the 8 seeds must have functional (not just structurally compliant) distractor explanations.",
+    "coordination": "Coordinating with S802 recommendation P2 (Pack A closeout): the 19 Archived items and 2 Editorial Queue items (B-001, B-025) are separate workstreams. Section E clone archival is additive to the S802 plan."
+  },
+  "evidence": {
+    "certified_grep": "Select-String -Path pack_a_corrected.js -Pattern '\"question_state\": \"Certified\"' = 482",
+    "section_e_items": "75 total, 59 Certified, 16 Archived",
+    "clone_confirmation": "P1-E-037 (Harbor duplicate payment, CC=D) vs P1-E-045 (Pioneer duplicate payment, CC=B) vs P1-E-053 (Yukon duplicate payment, CC=A) — identical stems except company name, identical choices, positional CC rotation",
+    "dl016_confirmation": "P1-E-036 metadata block lines 19519-19522: EW fields describe cash-receipts custody controls (matching P1-E-035 topic 'Frontier has one employee opening mail, recording receipts, depositing checks'). P1-E-036 content block line 19537: Stem = 'Granite notices managers split purchases.' +1 offset confirmed.",
+    "unique_topic_count": "34 items (E-001 through E-034) with genuinely distinct stems, unique answer choices, and COSO-cited explanations — confirmed via raw-source scan"
+  },
+  "disclaimers": [
+    "Clone group count (~8 groups, ~4.6 items each) is based on user estimate and partial-stem scan. Items E-042-E-044, E-051-E-052, E-076-E-083 have blank stems in scan output and may contain additional clone groups or unique items. The 8-confirmed-clone minimum is the conservative floor.",
+    "Collision probability assumes random uniform sampling from the Pack A pool. The actual exam engine may have selection logic (e.g., avoiding adjacent QIDs) that changes real-world collision rates.",
+    "DL-016 shift = +1 is confirmed for at least E-035→E-036→E-037 adjacency. The exact offset may vary at group boundaries (every 5th item). Session 64 found the shift is systematic across all Pack A sections.",
+    "This assessment covers Pack A Section E ONLY. Pack C/D Section E clones (DL-012: 140 items) and Pack C/D Sections C-F clones (DL-026 scope) are separate and more severe.",
+    "S802 simulation weights (A=22%, B=23%, C=16%, D=16%, E=23%) are used for the 100-item draw composition estimate."
+  ]
+}

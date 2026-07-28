@@ -1,0 +1,159 @@
+{
+  "specId": "SESSION850_REMEDIATION_QUEUE_SPEC",
+  "board": "B",
+  "title": "Remediation Queue Manager",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Build prioritized remediation queues grouped by defect type, priority level, domain, batch size, and owner. Automates the remediation planning process that was previously manual per session.",
+  "scriptFile": "scripts/remediation_queue_manager.js",
+  "outputFile": "scripts/output/remediation_queue.json",
+  "inputs": {
+    "packFiles": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+    "candidateEngineOutput": "scripts/output/certification_candidates.json",
+    "defectLibrary": "knowledge/DEFECT_LIBRARY.md",
+    "defectManifest": "governance/DEFECT_MANIFEST_DL008_DL026.json"
+  },
+  "defectTypes": {
+    "DL-008": {
+      "name": "ExplanationWrong[CorrectChoice] Non-Empty",
+      "severity": "High",
+      "priority": 1,
+      "description": "EV8 violation — correct-answer ExplanationWrong slot is non-empty",
+      "blocksCertification": true,
+      "maxBatchSize": 28
+    },
+    "DL-013": {
+      "name": "Template Boilerplate Distractor Explanations",
+      "severity": "High",
+      "priority": 3,
+      "description": "Generic template text in distractor explanations",
+      "blocksCertification": false,
+      "maxBatchSize": 28
+    },
+    "DL-025": {
+      "name": "Empty Non-CorrectChoice ExplanationWrong",
+      "severity": "High",
+      "priority": 2,
+      "description": "Distractor ExplanationWrong field is present-but-empty",
+      "blocksCertification": true,
+      "maxBatchSize": 28
+    },
+    "DL-026": {
+      "name": "Empty Non-CorrectChoice ExplanationWrong (Cross-Pool)",
+      "severity": "High",
+      "priority": 2,
+      "description": "Cross-pool expansion of DL-025",
+      "blocksCertification": true,
+      "maxBatchSize": 28
+    },
+    "DL-021": {
+      "name": "Missing Distractor ExplanationWrong Fields",
+      "severity": "High",
+      "priority": 3,
+      "description": "Distractor ExplanationWrong fields structurally absent",
+      "blocksCertification": true,
+      "maxBatchSize": 28
+    },
+    "DL-030": {
+      "name": "CorrectChoice Answer-Key Errors",
+      "severity": "Critical",
+      "priority": 0,
+      "description": "Stored CorrectChoice disagrees with independently derived answer",
+      "blocksCertification": true,
+      "maxBatchSize": 5
+    },
+    "DL-031": {
+      "name": "Difficulty Inflation (Systematic)",
+      "severity": "High",
+      "priority": 4,
+      "description": "Moderate-labeled items that should be Easy",
+      "blocksCertification": false,
+      "maxBatchSize": 50
+    },
+    "DL-032": {
+      "name": "Case Bank Uniform Difficulty",
+      "severity": "Medium",
+      "priority": 5,
+      "description": "All case items labeled Moderate",
+      "blocksCertification": false,
+      "maxBatchSize": 50
+    }
+  },
+  "priorityTiers": {
+    "TIER_0_CRITICAL": {
+      "label": "T0 — Critical (Learner Pool)",
+      "criteria": "DL-030 Certified items or DL-008 on Certified items",
+      "action": "Immediate remediation — blocks learner safety"
+    },
+    "TIER_1_HIGH": {
+      "label": "T1 — High (Certification Blocking)",
+      "criteria": "DL-008, DL-025, DL-026 on In Audit items",
+      "action": "Remediate before certification"
+    },
+    "TIER_2_MEDIUM": {
+      "label": "T2 — Medium (Quality)",
+      "criteria": "DL-013 boilerplate, DL-031 difficulty",
+      "action": "Remediate during certification waves"
+    },
+    "TIER_3_LOW": {
+      "label": "T3 — Low (Deferred)",
+      "criteria": "Cosmetic metadata shifts, formatting issues",
+      "action": "Remediate when convenient"
+    }
+  },
+  "output": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "summary": {
+        "totalDefectiveItems": "integer",
+        "totalQueues": "integer",
+        "byTier": {
+          "TIER_0_CRITICAL": "integer",
+          "TIER_1_HIGH": "integer",
+          "TIER_2_MEDIUM": "integer",
+          "TIER_3_LOW": "integer"
+        },
+        "byDefectType": {
+          "DL-008": "integer",
+          "DL-013": "integer",
+          "DL-025": "integer"
+        },
+        "byDomain": {
+          "A": "integer",
+          "B": "integer"
+        }
+      },
+      "queues": [
+        {
+          "queueId": "string",
+          "defectType": "string",
+          "tier": "string",
+          "priority": "integer",
+          "domain": "string",
+          "itemCount": "integer",
+          "batchSize": "integer",
+          "numBatches": "integer",
+          "items": ["qid strings"],
+          "suggestedOwner": "string",
+          "blockingCertification": "boolean",
+          "notes": "string"
+        }
+      ]
+    }
+  },
+  "batchRules": {
+    "maxBatchSize": 28,
+    "blockAuthorizedThreshold": 30,
+    "backupRequired": true,
+    "revisionHistoryRequired": true
+  },
+  "usage": "node scripts/remediation_queue_manager.js",
+  "dependencies": {
+    "engine": ["scripts/engine/pack_reader.js"],
+    "optional": ["scripts/output/certification_candidates.json"]
+  }
+}

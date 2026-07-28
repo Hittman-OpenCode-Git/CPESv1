@@ -1,0 +1,28 @@
+{
+  "session": "309",
+  "agent": "C",
+  "title": "DL-008 Contradiction Resolution",
+  "generated": "2026-07-26",
+  "methodology": "Direct grep scan of ExplanationWrong[CorrectChoice] patterns in all 5 pack files among Certified items. Node.js script scanning via regex for non-empty EW[CC] fields.",
+  "findings": {
+    "s307_s308_claim": "67 Certified DL-008 items requiring 3-session remediation",
+    "s802_claim": "0 actual DL-008 — all 67 were DL-029 forward-scan false positives",
+    "s309_direct_scan": "0 actual DL-008 items across all 5 packs",
+    "resolution": "S802 CORRECT. All 67 items were DL-029 false positives. No Certified item has a non-empty ExplanationWrong at its CorrectChoice slot."
+  },
+  "byPack": {
+    "pack_a": { "scanned": 481, "dl008": 0, "note": "All 481 Certified items clean" },
+    "pack_b": { "scanned": 500, "dl008": 0, "note": "All 500 Certified items clean" },
+    "pack_c": { "scanned": 350, "dl008": 0, "note": "Originally reported 55 in Section B — S802 DL-029 false positives" },
+    "pack_d": { "scanned": 350, "dl008": 0, "note": "Originally reported 10 — S802 DL-029 false positives" },
+    "pack_e": { "scanned": 500, "dl008": 0, "note": "All 500 Certified items clean" }
+  },
+  "rootCauseOfFalsePositive": "DL-029 forward-scan methodology flagged ExplanationWrong[CorrectChoice] fields without checking whether the ExplanationWrong field at the CorrectChoice slot was actually empty. The scanner detected the presence of an EW field but did not verify its content was non-empty.",
+  "sessionImpact": {
+    "sessionsFreed": 3,
+    "phaseRemoved": "Phase 2 (DL-008 Emergency Remediation, sessions 4-6)",
+    "newCriticalPathFirstStep": "Immediately begin Domain E/F certification (previously sessions 7-11, now can start at session 4)",
+    "totalRemainingForecast": "27 sessions (down from 30)"
+  },
+  "learnerPoolImpact": "VERIFIED SAFE. Zero DL-008 items in learner pool. May's defect manifest can be cleared of DL-008 entries."
+}

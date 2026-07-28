@@ -1,0 +1,3742 @@
+{
+  "enhanced_summary": {
+    "agent": "D",
+    "task": "Explanation Review - 38 Domain E Seed Items (Pack C: 19, Pack D: 19)",
+    "scope": "READ-ONLY audit - no modifications made",
+    "files_scanned": [
+      "pack_c_corrected.js",
+      "pack_d_corrected.js"
+    ],
+    "total_seeds": 38,
+    "found": 38,
+    "not_found": 0,
+    "all_unprocessed": true,
+    "verdict_distribution": {
+      "HOLD": 38,
+      "PASS": 0,
+      "PASS_WITH_NOTES": 0,
+      "FAIL": 0
+    },
+    "blocking_conditions": [
+      "53 empty distractor ExplanationWrong slots (DL-026 rotation artifact)",
+      "All EC scores < 14/20 - need COSO citations and business context enrichment",
+      "No item meets CAQS section 4 mini-lesson standard"
+    ],
+    "dl008_violations": 0,
+    "cc_distribution": {
+      "D": 14,
+      "B": 10,
+      "A": 8,
+      "C": 6
+    },
+    "empty_distractor_slots": 53,
+    "non_empty_distractor_slots": 61,
+    "avg_ec_score": 9,
+    "avg_ew_slot_score": 5.5,
+    "ec_length_distribution": {
+      "ge300": 2,
+      "200to299": 29,
+      "150to199": 6,
+      "lt150": 1
+    },
+    "ec_common_findings": {
+      "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation": 37,
+      "EC_NO_JUSTIFICATION: Does not explain why the answer is correct": 32,
+      "EC_NO_BUSINESS_CONTEXT: Missing business interpretation": 25,
+      "EC_NO_TEACHING: Does not actively teach the concept": 38,
+      "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle": 18
+    },
+    "ew_nonempty_common_findings": {
+      "EW_NO_WHY_WRONG: Does not explain why this choice is wrong": 59,
+      "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception": 60,
+      "EW_MODERATE: 84 chars (<100 recommended)": 1,
+      "EW_MODERATE: 82 chars (<100 recommended)": 1
+    },
+    "items_with_standard_citation": 1,
+    "items_without_standard_citation": 37,
+    "rotation_artifact_pattern": {
+      "CC=A (8 items)": "EW_B empty: 8/8 (100%)",
+      "CC=B (10 items)": "EW_A empty: 10/10, EW_C empty: 10/10 (100% each)",
+      "CC=C (6 items)": "EW_A empty: 6/6 (100%), EW_D empty: 5/6 (83%)",
+      "CC=D (14 items)": "EW_A empty: 14/14 (100%)",
+      "root_cause": "Template engine treated one distractor slot as CC-equivalent during answer-position rotation in the 5-item pack generation pipeline."
+    },
+    "remediation_tiers": {
+      "tier_1": {
+        "description": "1 empty EW slot - fill 1 distractor explanation per item",
+        "count": 23,
+        "qids": [
+          "P1-EC-004",
+          "P1-EC-008",
+          "P1-EC-020",
+          "P1-EC-021",
+          "P1-EC-024",
+          "P1-EC-025",
+          "P1-EC-028",
+          "P1-EC-040",
+          "P1-EC-041",
+          "P1-EC-049",
+          "P1-EC-052",
+          "P1-EC-060",
+          "P1-EC-061",
+          "P1-EC-072",
+          "P1-ED-001",
+          "P1-ED-016",
+          "P1-ED-025",
+          "P1-ED-028",
+          "P1-ED-036",
+          "P1-ED-064",
+          "P1-ED-072",
+          "P1-ED-073",
+          "P1-ED-075"
+        ]
+      },
+      "tier_2": {
+        "description": "2 empty EW slots - fill 2 distractor explanations per item",
+        "count": 15,
+        "qids": [
+          "P1-EC-014",
+          "P1-EC-022",
+          "P1-EC-023",
+          "P1-EC-031",
+          "P1-EC-066",
+          "P1-ED-010",
+          "P1-ED-014",
+          "P1-ED-035",
+          "P1-ED-042",
+          "P1-ED-046",
+          "P1-ED-051",
+          "P1-ED-058",
+          "P1-ED-066",
+          "P1-ED-071",
+          "P1-ED-074"
+        ]
+      },
+      "estimated_total_fields_to_author": 53,
+      "recommended_batch_size": 28,
+      "recommended_execution_order": "Tier 1 first (23 items, faster progress), then Tier 2 (15 items)"
+    },
+    "quality_assessment": {
+      "explanation_correct": {
+        "strengths": "Technically accurate across all 38 items. Content correctly identifies the control concept and explains why the answer is correct. No factual errors detected.",
+        "weaknesses": [
+          "COSO standard citation missing on 38/38 items (needed: e.g. 'Under COSO Principle 3...' or 'COSO Control Activities component...')",
+          "Business context framing absent - explanations read as textbook answers not scenario-embedded analysis.",
+          "Mini-lesson structure incomplete - most EC fields state the concept plus reason but lack exam-trap identification and cross-topic connections.",
+          "Length adequate (avg 232 chars) but content depth varies - some are single-sentence that merely restate the stem."
+        ]
+      },
+      "explanation_wrong": {
+        "strengths": [
+          "Choice-specific - every non-empty slot describes why that specific distractor is wrong.",
+          "No DL-013 generic boilerplate detected (no 'represents a plausible misconception' / 'Option X is incorrect' templates).",
+          "Content is instructional, not dismissive."
+        ],
+        "weaknesses": [
+          "53 of 114 distractor positions are empty (DL-026 rotation artifact).",
+          "Existing explanations lack explicit misconception identification (e.g. 'A candidate might select this after confusing...').",
+          "Many are concise (80-150 chars) - adequate but not rich."
+        ]
+      },
+      "dl008_status": "ALL CLEAN - 38/38 CC slots are EMPTY_OK. Zero DL-008 violations.",
+      "certification_blockers": [
+        "DL-026: 53 empty distractor EW slots (must be filled with choice-specific explanations)",
+        "EC enrichment: Add COSO component/principle citations to all 38 EC fields",
+        "EC enrichment: Add business context framing to all 38 EC fields",
+        "EW enrichment: Add misconception identification language to non-empty slots",
+        "EC enrichment: Expand to CAQS section 4 mini-lesson standard (concept -> solution -> error analysis -> business application)"
+      ]
+    }
+  },
+  "items": [
+    {
+      "qid": "P1-EC-004",
+      "pack": "PackC",
+      "stem": "Driftwood assigns one employee to authorize purchases, another to record them, and a third to reconcile the vendor accounts. What internal control concept does this reflect?",
+      "topic": "E.004 segregation of duties design",
+      "cc": "D",
+      "choices": {
+        "A": "Risk acceptance, which tolerates a known exposure",
+        "B": "Cost-benefit analysis, which weighs control costs against benefits",
+        "C": "Management override, which bypasses controls",
+        "D": "Segregation of duties, reducing the risk of undetected errors or fraud"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "Segregation of duties separates authorization, recordkeeping, and reconciliation so one employee cannot both initiate, record, and conceal an improper purchase or vendor-account error. The stem assigns those incompatible responsibilities to different employees, reducing undetected error or fraud risk.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 302,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Risk acceptance, which tolerates a known exposure",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Cost-benefit analysis may influence control design, but it is not the control concept shown by separating authorization,...",
+          "choice_text": "Cost-benefit analysis, which weighs control costs against benefits",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 151,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Management override is a bypass of controls by someone with authority; here, duties are separated rather than bypassed.",
+          "choice_text": "Management override, which bypasses controls",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 119,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 29,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-008",
+      "pack": "PackC",
+      "stem": "Hearthstone evaluates its internal control system using a widely recognized framework consisting of five integrated components. What framework is this?",
+      "topic": "E.008 coso internal control framework",
+      "cc": "D",
+      "choices": {
+        "A": "The Six Sigma DMAIC framework",
+        "B": "The Balanced Scorecard framework",
+        "C": "The Theory of Constraints framework",
+        "D": "The COSO Internal Control - Integrated Framework"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "The COSO Internal Control - Integrated Framework is the recognized framework built around five integrated components: control environment, risk assessment, control activities, information and communication, and monitoring. Those components are the foundation for evaluating internal-control design and operation.",
+        "score": 13,
+        "findings": [
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 312,
+        "hasStandard": true,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The Six Sigma DMAIC framework",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The Balanced Scorecard is a performance measurement framework, not the internal-control framework described in the stem.",
+          "choice_text": "The Balanced Scorecard framework",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 120,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The Theory of Constraints focuses on operational bottlenecks, not entity-wide internal-control components.",
+          "choice_text": "The Theory of Constraints framework",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 106,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 34,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-014",
+      "pack": "PackC",
+      "stem": "Nightingale's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud risk in a department. What model are they applying?",
+      "topic": "E.014 fraud triangle elements",
+      "cc": "B",
+      "choices": {
+        "A": "The five forces model",
+        "B": "The fraud triangle",
+        "C": "The balanced scorecard",
+        "D": "The COSO ERM cube"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "The fraud triangle frames fraud risk around pressure, opportunity, and rationalization. Internal auditors use these factors to assess where fraud could occur and which controls should reduce opportunity or improve detection.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 224,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The five forces model",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The balanced scorecard",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "COSO ERM addresses enterprise risk management broadly, but the specific three-factor fraud model in the stem is the frau...",
+          "choice_text": "The COSO ERM cube",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 131,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 18,
+      "max_possible_score": 65,
+      "avg_ew_score": 4,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-020",
+      "pack": "PackC",
+      "stem": "Thornfield stores inventory in a locked warehouse accessible only to authorized personnel with badge access. What type of control is this?",
+      "topic": "E.020 physical controls over assets",
+      "cc": "D",
+      "choices": {
+        "A": "An entity-level control unrelated to specific assets",
+        "B": "A detective control performed after the fact only",
+        "C": "A compensating control for a segregation of duties gap",
+        "D": "A physical control that restricts access to assets"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Locked warehouse storage with badge access is a physical safeguarding control over inventory. It limits custody and handling of assets to authorized personnel, helping prevent unauthorized removal, damage, or use of inventory before any after-the-fact review is needed.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 269,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "An entity-level control unrelated to specific assets",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The control is not only detective after the fact; restricted access helps prevent unauthorized physical handling or remo...",
+          "choice_text": "A detective control performed after the fact only",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 124,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "A compensating control offsets another weakness, such as limited segregation; the stem describes a direct physical acces...",
+          "choice_text": "A compensating control for a segregation of duties gap",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 130,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 27,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-021",
+      "pack": "PackC",
+      "stem": "Bryant Manufacturing has a small accounts payable department where one employee creates new vendor records, enters invoices from those vendors, and approves payments for processing. Management wants t",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "cc": "A",
+      "choices": {
+        "A": "Require a second employee to approve new vendor additions and review a monthly vendor-master change report",
+        "B": "Require the same employee to also perform the monthly bank reconciliation",
+        "C": "Have an internal auditor review all payments above a threshold quarterly",
+        "D": "Raise the dollar threshold for requiring supervisory approval of payments"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "Segregating vendor-setup approval from payment processing prevents a single employee from creating a fictitious vendor and then authorizing payments to it. This is a preventive authorization control that addresses the incompatible-duties conflict.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 247,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Require the same employee to also perform the monthly bank reconciliation",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Quarterly detective review may catch errors after the fact but does not prevent fictitious vendor payments from being in...",
+          "choice_text": "Have an internal auditor review all payments above a threshold quarterly",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 141,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Raising the threshold reduces oversight and increases, rather than decreases, the risk of unauthorized payments going un...",
+          "choice_text": "Raise the dollar threshold for requiring supervisory approval of payments",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 129,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 29,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "PackC",
+      "stem": "Crestview Manufacturing frequently discovers duplicate vendor payments when reviewing the monthly accounts payable aging report. Management wants to implement a control that will best prevent duplicat",
+      "topic": "E.022 preventive vs detective duplicate payment control",
+      "cc": "B",
+      "choices": {
+        "A": "Require the controller to review and approve a check register weekly",
+        "B": "Configure the accounts payable system to reject invoices with duplicate vendor-invoice-date combinations before payment",
+        "C": "Perform quarterly reconciliations of vendor statements to the accounts payable subledger",
+        "D": "Review a monthly accounts payable aging report for unusual activity"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "A system-imposed duplicate-check control that blocks payment when the vendor, invoice number, and date already exist in the system is preventive because it stops the duplicate before cash is disbursed, rather than detecting it afterward.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 237,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": true,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Require the controller to review and approve a check register weekly",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Perform quarterly reconciliations of vendor statements to the accounts payable subledger",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Monthly aging report review is a detective control that identifies issues after payment has occurred, not a preventive c...",
+          "choice_text": "Review a monthly accounts payable aging report for unusual activity",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 127,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 21,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "PackC",
+      "stem": "During an internal audit, Drake Distribution discovered that a former employee's system access remained active for 18 days after termination. No unauthorized transactions occurred during that period. ",
+      "topic": "E.023 IT access control terminated employee deprovisioning",
+      "cc": "C",
+      "choices": {
+        "A": "Accept the risk since no actual fraud or data loss occurred during the gap",
+        "B": "Require stronger password complexity standards for all system users",
+        "C": "Implement automated access deprovisioning triggered by termination in the HR system and require quarterly user access recertification by managers",
+        "D": "Convert all terminated employees to read-only access instead of removing access entirely"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "An automated deprovisioning process linked to HR termination status closes the timing gap between departure and access removal. Periodic recertification ensures active access remains appropriate for current roles.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 213,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Accept the risk since no actual fraud or data loss occurred during the gap",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Stronger passwords address authentication strength but do not address the failure to revoke access for former employees ...",
+          "choice_text": "Require stronger password complexity standards for all system users",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 139,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Convert all terminated employees to read-only access instead of removing access entirely",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 17,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_D: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "PackC",
+      "stem": "Parkview Company's sales order system accepts orders with invalid customer codes, negative quantities, and missing ship-to addresses. These errors are discovered only when invoices fail to process day",
+      "topic": "E.024 application input control sales order validation",
+      "cc": "D",
+      "choices": {
+        "A": "Generate weekly exception reports for the sales manager to review and correct",
+        "B": "Reconcile the sales order file to the invoice register at month-end",
+        "C": "Require a sales supervisor to manually approve every sales order before entry",
+        "D": "Implement real-time field validation in the order entry system to reject entries with invalid customer codes, negative quantities, or missing ship-to addresses"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Real-time field validation is an application input control that checks data for completeness, validity, and reasonableness before the system accepts the entry. It is preventive because it blocks errors at the point of entry rather than detecting them afterward.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 261,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": true,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Generate weekly exception reports for the sales manager to review and correct",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Month-end reconciliation is a detective control that finds discrepancies well after orders are processed and shipped.",
+          "choice_text": "Reconcile the sales order file to the invoice register at month-end",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 117,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Manual approval of every order is inefficient and may still miss data-format errors; it does not replace field-level sys...",
+          "choice_text": "Require a sales supervisor to manually approve every sales order before entry",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 135,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 31,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-025",
+      "pack": "PackC",
+      "stem": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?",
+      "topic": "E.025 preventive vs detective controls",
+      "cc": "A",
+      "choices": {
+        "A": "A preventive control, because it stops an unauthorized payment before it occurs",
+        "B": "A compensating control used only when segregation is impossible",
+        "C": "A corrective control, because it fixes problems after they occur",
+        "D": "A detective control, because it identifies errors after the fact"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "Dual signatures before check release are a preventive authorization control. The control objective is to stop unauthorized or inappropriate disbursements before cash leaves the organization, not merely detect them later.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 220,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A compensating control used only when segregation is impossible",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "A corrective control fixes problems after they occur, while dual signatures are applied before the payment is released.",
+          "choice_text": "A corrective control, because it fixes problems after they occur",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 119,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "A detective control identifies errors after the fact; this control is timed before disbursement and is designed to preve...",
+          "choice_text": "A detective control, because it identifies errors after the fact",
+          "score": 12,
+          "findings": [
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 140,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 33,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-028",
+      "pack": "PackC",
+      "stem": "Copperline has a designated employee, independent of cash handling and recording, perform the monthly bank reconciliation. Why is independence important here?",
+      "topic": "E.028 bank reconciliation control",
+      "cc": "D",
+      "choices": {
+        "A": "It guarantees no bank fees will ever be charged",
+        "B": "It removes the need for management review of cash balances",
+        "C": "It eliminates the need to compare the bank statement to the general ledger",
+        "D": "It ensures the reconciliation can objectively detect errors or irregularities without being influenced by the preparer's own transactions"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "An independent bank reconciliation is a detective cash control. Independence matters because someone outside cash handling and recording can objectively compare bank activity to the general ledger and identify omissions, errors, or irregularities without reviewing their own work.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 280,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": true,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "It guarantees no bank fees will ever be charged",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Management review may still be needed; independence strengthens, but does not eliminate, oversight of cash balances.",
+          "choice_text": "It removes the need for management review of cash balances",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 116,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The reconciliation still requires comparing bank records to accounting records; independence does not remove that step.",
+          "choice_text": "It eliminates the need to compare the bank statement to the general ledger",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 119,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 31,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "PackC",
+      "stem": "Foxglove's board defines the amount of risk the organization is willing to accept in pursuit of its objectives. What enterprise risk management concept is being defined?",
+      "topic": "E.031 erm risk appetite",
+      "cc": "C",
+      "choices": {
+        "A": "Risk transfer",
+        "B": "Inherent risk",
+        "C": "Risk appetite",
+        "D": "Control risk"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Risk appetite is the amount and type of risk an organization is willing to accept in pursuit of its strategic objectives, as defined by the board and senior management.",
+        "score": 8,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 168,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Risk transfer",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Inherent risk is the susceptibility of an assertion to material misstatement before considering controls. Risk appetite ...",
+          "choice_text": "Inherent risk",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 241,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Control risk",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 18,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_D: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-040",
+      "pack": "PackC",
+      "stem": "Oleander requires periodic review of user access rights to ensure employees only retain system access appropriate to their current role. What category of control is this?",
+      "topic": "E.040 it general controls access",
+      "cc": "D",
+      "choices": {
+        "A": "An application control embedded in transaction processing only",
+        "B": "A budgetary control over IT spending",
+        "C": "A physical control over the data center only",
+        "D": "An IT general control over logical access"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Periodic review of user access is an IT general control over logical access. It supports least privilege by confirming that access rights still match current job responsibilities and removing obsolete or excessive permissions.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 226,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "An application control embedded in transaction processing only",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "A budgetary control over IT spending does not validate whether users have appropriate system permissions.",
+          "choice_text": "A budgetary control over IT spending",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 105,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Physical data-center controls restrict physical entry; the stem concerns logical access rights inside systems.",
+          "choice_text": "A physical control over the data center only",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 110,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 27,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-041",
+      "pack": "PackC",
+      "stem": "Pinehollow's CEO instructs the controller to bypass a normal approval control to record a favorable adjusting entry near year-end. What internal control limitation does this illustrate?",
+      "topic": "E.041 management override risk",
+      "cc": "A",
+      "choices": {
+        "A": "Management override of controls",
+        "B": "Segregation of duties working exactly as designed",
+        "C": "An IT general control weakness",
+        "D": "A cost-benefit limitation of control design"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "Management override occurs when someone with authority bypasses established controls, such as a CEO directing the controller to skip normal approval for a favorable year-end adjustment. It is an inherent limitation because controls can be overridden by senior management pressure.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 280,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": true,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Segregation of duties working exactly as designed",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The facts describe a human override of approval controls, not a logical-access or other IT general-control weakness.",
+          "choice_text": "An IT general control weakness",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 116,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Cost-benefit limitations concern whether a control is worth implementing; the issue here is intentional bypass of an exi...",
+          "choice_text": "A cost-benefit limitation of control design",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 134,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 31,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-049",
+      "pack": "PackC",
+      "stem": "Yorkshire establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations without fear of retaliation. What internal control objective does this serve?",
+      "topic": "E.049 whistleblower hotline purpose",
+      "cc": "A",
+      "choices": {
+        "A": "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported",
+        "B": "Guaranteeing that no fraud will ever occur",
+        "C": "Replacing the need for a code of conduct",
+        "D": "Eliminating the need for an external audit"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "An anonymous hotline supports fraud-risk monitoring and timely detection by giving employees a safe channel to report suspected misconduct. It strengthens information and communication around ethics issues but does not guarantee prevention or replace other controls.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 266,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Guaranteeing that no fraud will ever occur",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "A hotline complements a code of conduct; it does not replace the need for standards of ethical behavior.",
+          "choice_text": "Replacing the need for a code of conduct",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 104,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "External audits may still be required or useful; an internal reporting channel does not eliminate independent audit work...",
+          "choice_text": "Eliminating the need for an external audit",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 121,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 29,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-052",
+      "pack": "PackC",
+      "stem": "Cliffside is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
+      "topic": "E.052 compensating control small business",
+      "cc": "D",
+      "choices": {
+        "A": "Ignoring the risk since fraud is unlikely in small companies",
+        "B": "Outsourcing all accounting with no oversight",
+        "C": "Eliminating internal controls entirely since the company is small",
+        "D": "Increased owner or management review and oversight as a compensating control"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "When full segregation is not practical in a small company, active owner or management review can be a compensating control. The review should target the same risks caused by limited staffing, such as unauthorized transactions, cash misappropriation, or recording errors.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 270,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Ignoring the risk since fraud is unlikely in small companies",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Outsourcing without oversight does not remove management responsibility or ensure controls are operating.",
+          "choice_text": "Outsourcing all accounting with no oversight",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 105,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Small companies still need internal controls; the issue is designing practical compensating controls.",
+          "choice_text": "Eliminating internal controls entirely since the company is small",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 101,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 31,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-060",
+      "pack": "PackC",
+      "stem": "Knollwood's board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee attitudes toward compliance. What COSO component does this describe?",
+      "topic": "E.060 control environment tone at top",
+      "cc": "D",
+      "choices": {
+        "A": "Monitoring activities, which evaluate control effectiveness over time",
+        "B": "Risk assessment, which identifies specific threats",
+        "C": "Information and communication, which relays data throughout the entity",
+        "D": "The control environment, often summarized as tone at the top"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "The control environment is the foundation of internal control and includes integrity, ethical values, board oversight, and management philosophy. The board and executives setting expectations for integrity is tone at the top, which shapes employee attitudes toward compliance.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 276,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Monitoring activities, which evaluate control effectiveness over time",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Risk assessment identifies and analyzes specific threats; tone at the top is part of the control environment.",
+          "choice_text": "Risk assessment, which identifies specific threats",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 109,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Information and communication concerns how relevant information is captured and shared; the stem describes ethical leade...",
+          "choice_text": "Information and communication, which relays data throughout the entity",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 138,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 31,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-061",
+      "pack": "PackC",
+      "stem": "Lanternwood's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is being assessed?",
+      "topic": "E.061 inherent risk vs control risk",
+      "cc": "A",
+      "choices": {
+        "A": "Inherent risk",
+        "B": "Detection risk",
+        "C": "Control risk",
+        "D": "Business risk"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Inherent risk is the susceptibility of an account or assertion to material misstatement before considering related controls. The stem explicitly says the assessment occurs before controls, which distinguishes inherent risk from control risk.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 241,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Detection risk",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Control risk considers whether controls fail to prevent or detect misstatement; the stem excludes controls from the asse...",
+          "choice_text": "Control risk",
+          "score": 12,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong"
+          ],
+          "length": 127,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Business risk is broader operating or strategic risk, not the audit-risk component tied to assertion susceptibility.",
+          "choice_text": "Business risk",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 116,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 29,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-066",
+      "pack": "PackC",
+      "stem": "Quailrun has the same employee both handling incoming cash receipts and recording them in the accounting records. What control weakness does this create?",
+      "topic": "E.066 segregation cash custody recording",
+      "cc": "B",
+      "choices": {
+        "A": "A physical access control weakness only",
+        "B": "A lack of segregation of duties between asset custody and recordkeeping, increasing the risk of concealed theft or errors",
+        "C": "An IT general control deficiency only",
+        "D": "An overly strong control environment with too many checks"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Easy",
+      "difficulty_score": 1,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Cash handling is asset custody and recording cash receipts is recordkeeping. Combining those duties lets an employee take cash and alter records to hide the shortage, creating a classic segregation-of-duties weakness.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 217,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A physical access control weakness only",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "An IT general control deficiency only",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The control environment is not overly strong; the described arrangement weakens control by enabling concealment.",
+          "choice_text": "An overly strong control environment with too many checks",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 112,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 19,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-EC-072",
+      "pack": "PackC",
+      "stem": "Willowmere identifies a control deficiency during its internal control assessment and assigns an owner, a corrective action plan, and a target completion date. What internal control process is being f",
+      "topic": "E.072 remediation of control deficiency",
+      "cc": "D",
+      "choices": {
+        "A": "External audit sign-off, which requires no internal follow-up",
+        "B": "Control environment assessment, which is unrelated to specific deficiencies",
+        "C": "Risk acceptance, which tolerates the deficiency permanently",
+        "D": "Remediation tracking, ensuring identified deficiencies are corrected and verified"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Remediation tracking turns an identified control deficiency into a managed corrective-action process. Assigning an owner, action plan, and target date creates accountability and supports follow-up verification that the deficiency was corrected.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 244,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "External audit sign-off, which requires no internal follow-up",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Control environment assessment is broad and entity-level; the stem describes tracking a specific deficiency through corr...",
+          "choice_text": "Control environment assessment, which is unrelated to specific deficiencies",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 127,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Risk acceptance would tolerate the deficiency; assigning a corrective plan and deadline shows remediation, not acceptanc...",
+          "choice_text": "Risk acceptance, which tolerates the deficiency permanently",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 122,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 29,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-001",
+      "pack": "PackD",
+      "stem": "Alderway structures its risk and control functions using operational management, risk/compliance oversight, and internal audit as distinct layers. What model is this?",
+      "topic": "E.001 three lines of defense model",
+      "cc": "A",
+      "choices": {
+        "A": "The three lines of defense (or three lines) model",
+        "B": "The fraud triangle",
+        "C": "The balanced scorecard",
+        "D": "The COSO ERM cube alone"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "The three lines model assigns control responsibilities across operational management, risk/compliance oversight, and internal audit. This structure clarifies who owns controls, who provides oversight, and who gives independent assurance.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 237,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The fraud triangle",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The balanced scorecard is a performance measurement tool, not a governance model for control responsibilities.",
+          "choice_text": "The balanced scorecard",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 110,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "COSO ERM is broader risk-management guidance; the distinct operational, oversight, and internal-audit layers describe th...",
+          "choice_text": "The COSO ERM cube alone",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 140,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 30,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-010",
+      "pack": "PackD",
+      "stem": "Juniperfield grants employees system access limited only to what is necessary to perform their specific job duties. What security principle is being applied?",
+      "topic": "E.010 access control least privilege",
+      "cc": "B",
+      "choices": {
+        "A": "The principle of maximum access for efficiency",
+        "B": "The principle of least privilege",
+        "C": "Risk transfer",
+        "D": "Management override"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Least privilege limits each user to the access needed for current job duties. This access-control principle reduces unauthorized processing, data exposure, and misuse by avoiding excessive system permissions.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 208,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The principle of maximum access for efficiency",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Risk transfer",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Management override is bypassing controls, not a principle for limiting user access.",
+          "choice_text": "Management override",
+          "score": 10,
+          "findings": [
+            "EW_MODERATE: 84 chars (<100 recommended)",
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 84,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 19,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_MODERATE: 84 chars (<100 recommended)",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-014",
+      "pack": "PackD",
+      "stem": "Northfell has a supervisor recount inventory counted by warehouse staff before finalizing the count. What type of control activity is this?",
+      "topic": "E.014 independent verification control activity",
+      "cc": "B",
+      "choices": {
+        "A": "A physical control over inventory storage only",
+        "B": "Independent verification, checking the accuracy of work performed by others",
+        "C": "A preventive control that stops errors before they occur",
+        "D": "Segregation of duties, since only one person performs the recount"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "A supervisor recounting inventory counted by warehouse staff is independent verification. It is a detective control activity that checks the accuracy and completeness of work performed by others before the count is finalized.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 225,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A physical control over inventory storage only",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A preventive control that stops errors before they occur",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Segregation of duties separates incompatible responsibilities; a one-person recount by a supervisor is independent verif...",
+          "choice_text": "Segregation of duties, since only one person performs the recount",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 164,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 19,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "PackD",
+      "stem": "Palisade decides to purchase insurance to address a significant identified risk rather than eliminate the underlying activity. What enterprise risk management response is this?",
+      "topic": "E.016 erm risk response strategies",
+      "cc": "D",
+      "choices": {
+        "A": "Risk appetite, defining the amount of risk tolerated",
+        "B": "Risk avoidance, eliminating the risk entirely",
+        "C": "Risk acceptance, taking no action",
+        "D": "Risk transfer (sharing), shifting some financial impact of the risk to a third party"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Purchasing insurance is a form of risk transfer (or sharing), shifting some of the financial consequences of a risk to a third party such as an insurer.",
+        "score": 6,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 152,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Risk appetite, defining the amount of risk tolerated",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of erm risk response strategies. The choice \"Risk avoidance, eliminating the ris...",
+          "choice_text": "Risk avoidance, eliminating the risk entirely",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 327,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of erm risk response strategies. The choice \"Risk acceptance, taking no action\" ...",
+          "choice_text": "Risk acceptance, taking no action",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 315,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 28,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "PackD",
+      "stem": "Zionsgate requires that all purchase orders above a certain dollar amount be approved by a manager before the order is placed. What type of control activity is this?",
+      "topic": "E.025 control activities authorization",
+      "cc": "A",
+      "choices": {
+        "A": "An authorization control",
+        "B": "A monitoring activity performed after the fact",
+        "C": "A segregation of duties control only",
+        "D": "A risk assessment activity"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Manager approval before placing high-dollar purchase orders is a preventive authorization control. It ensures purchase commitments are properly sanctioned before the organization becomes obligated.",
+        "score": 10,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 197,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A monitoring activity performed after the fact",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Segregation may support purchasing controls, but the specific activity described is management authorization.",
+          "choice_text": "A segregation of duties control only",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 109,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Risk assessment identifies and analyzes risk; it is not the transaction-level approval control described.",
+          "choice_text": "A risk assessment activity",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 105,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 30,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-028",
+      "pack": "PackD",
+      "stem": "Crownridge's management periodically reviews exception reports and reconciliations as part of regular operations to assess whether controls are functioning as intended. What COSO component does this r",
+      "topic": "E.028 monitoring ongoing evaluations",
+      "cc": "D",
+      "choices": {
+        "A": "Risk assessment",
+        "B": "Information and communication",
+        "C": "Control environment",
+        "D": "Monitoring activities"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 4,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "Periodic review of exception reports and reconciliations is monitoring. Management is evaluating whether controls are present and functioning over time, rather than executing a single transaction-level control.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 210,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Risk assessment",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Information and communication supports reporting relevant information, but the periodic review of exceptions and reconci...",
+          "choice_text": "Information and communication",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 143,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Control environment concerns tone, structure, and accountability; the stem focuses on evaluating whether controls contin...",
+          "choice_text": "Control environment",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 134,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 31,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-035",
+      "pack": "PackD",
+      "stem": "Jettison maintains offsite backups of critical financial data and a documented plan for restoring systems after a disruption. What control objective does this address?",
+      "topic": "E.035 data backup disaster recovery",
+      "cc": "C",
+      "choices": {
+        "A": "Segregation of duties within the IT department",
+        "B": "Authorization controls over transaction approval",
+        "C": "Availability of information systems and data in the event of a disruption",
+        "D": "Confidentiality of customer data only"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Offsite backups and a disaster recovery plan address system and data availability. The control objective is to restore financial systems and critical data after a disruption so processing and reporting can continue.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 215,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Segregation of duties within the IT department",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Transaction authorization controls approve business transactions; they do not restore systems after an outage.",
+          "choice_text": "Authorization controls over transaction approval",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 110,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Confidentiality of customer data only",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 17,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_D: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-036",
+      "pack": "PackD",
+      "stem": "Kirkwood requires all software changes to be tested, approved, and documented before being moved into the production environment. What type of control is this?",
+      "topic": "E.036 change management control it systems",
+      "cc": "D",
+      "choices": {
+        "A": "A segregation of duties control unrelated to IT",
+        "B": "An application control embedded in a specific transaction",
+        "C": "A physical control over hardware only",
+        "D": "An IT general control over change management"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate-Easy",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Change management controls, requiring testing, approval, and documentation before system changes go live, are a category of IT general controls.",
+        "score": 8,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 144,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A segregation of duties control unrelated to IT",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of change management control it systems. The choice \"An application control embe...",
+          "choice_text": "An application control embedded in a specific transaction",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 347,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of change management control it systems. The choice \"A physical control over har...",
+          "choice_text": "A physical control over hardware only",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 327,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 30,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-042",
+      "pack": "PackD",
+      "stem": "Quarrycrest's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do. What process is this?",
+      "topic": "E.042 risk assessment likelihood impact",
+      "cc": "B",
+      "choices": {
+        "A": "Control activities, which are the specific policies implemented",
+        "B": "Risk assessment, prioritizing risks based on likelihood and impact",
+        "C": "Risk transfer, which shifts risk to third parties",
+        "D": "Monitoring, which evaluates control effectiveness over time"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Risk assessment identifies and analyzes risks so management can prioritize responses. Scoring risks by likelihood and impact ranks which exposures deserve the most attention before selecting controls, accepting risk, or transferring risk.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 238,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Control activities, which are the specific policies implemented",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Risk transfer, which shifts risk to third parties",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Monitoring evaluates whether controls continue to function; the stem is about assessing risk before deciding on response...",
+          "choice_text": "Monitoring, which evaluates control effectiveness over time",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 122,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 21,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-046",
+      "pack": "PackD",
+      "stem": "Umberglen requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+      "topic": "E.046 code of conduct ethics program",
+      "cc": "B",
+      "choices": {
+        "A": "Information and communication, limited to external reporting only",
+        "B": "The control environment, by reinforcing the organization's commitment to ethical values",
+        "C": "Risk assessment, since it identifies specific financial risks",
+        "D": "Monitoring activities, since it evaluates control effectiveness"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "An ethics program and code of conduct reinforce the control environment, which reflects the organization's overall commitment to integrity and ethical values.",
+        "score": 12,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 158,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": true,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Information and communication, limited to external reporting only",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Risk assessment, since it identifies specific financial risks",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of code of conduct ethics program. The choice \"Monitoring activities, since it e...",
+          "choice_text": "Monitoring activities, since it evaluates control effectiveness",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 344,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 23,
+      "max_possible_score": 65,
+      "avg_ew_score": 4,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-051",
+      "pack": "PackD",
+      "stem": "Briarcliff requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+      "topic": "E.051 password access authentication control",
+      "cc": "C",
+      "choices": {
+        "A": "To replace the need for segregation of duties",
+        "B": "To ensure compliance with balanced scorecard metrics",
+        "C": "To reduce the risk of unauthorized access to financial systems and data",
+        "D": "To eliminate the need for any other IT general controls"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "Multi-factor authentication strengthens access security by requiring more than one form of verification, reducing the risk of unauthorized access to financial systems.",
+        "score": 6,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 167,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "To replace the need for segregation of duties",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of password access authentication control. The choice \"To ensure compliance with...",
+          "choice_text": "To ensure compliance with balanced scorecard metrics",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 344,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "To eliminate the need for any other IT general controls",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 17,
+      "max_possible_score": 65,
+      "avg_ew_score": 4,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_D: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-058",
+      "pack": "PackD",
+      "stem": "Ivorycrest's management decides not to implement an extremely costly control because the risk it addresses is low and infrequent. What limitation of internal control does this illustrate?",
+      "topic": "E.058 internal control cost benefit limitation",
+      "cc": "B",
+      "choices": {
+        "A": "A control environment weakness",
+        "B": "The inherent cost-benefit limitation of internal control design",
+        "C": "Management override of existing controls",
+        "D": "A segregation of duties failure"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Internal control has an inherent cost-benefit limitation: controls should provide reasonable, not absolute, assurance. Declining an extremely costly control for a low and infrequent risk reflects a judgment that the control cost exceeds the expected risk-reduction benefit.",
+        "score": 11,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 273,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": true,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A control environment weakness",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Management override of existing controls",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "A segregation-of-duties failure combines incompatible duties; the issue is not task assignment but cost versus benefit.",
+          "choice_text": "A segregation of duties failure",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 119,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 21,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-064",
+      "pack": "PackD",
+      "stem": "Oakvale restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments. What risk does this control primarily address?",
+      "topic": "E.064 vendor master file controls",
+      "cc": "D",
+      "choices": {
+        "A": "The risk of foreign currency translation errors",
+        "B": "The risk of incorrect revenue recognition timing",
+        "C": "The risk of inventory obsolescence",
+        "D": "The risk of fictitious vendor fraud or unauthorized changes to payment details"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 4,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "Restricting vendor-master maintenance and separating it from invoice-payment approval reduces fictitious-vendor and payment-diversion risk. The control limits who can create or change vendor records and prevents the same person from both setting up vendors and approving payments.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 280,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The risk of foreign currency translation errors",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Revenue recognition timing is a revenue-cycle issue; the stem concerns vendor records and cash disbursements.",
+          "choice_text": "The risk of incorrect revenue recognition timing",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 109,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Inventory obsolescence is not addressed by restricting vendor-master-file changes.",
+          "choice_text": "The risk of inventory obsolescence",
+          "score": 9,
+          "findings": [
+            "EW_MODERATE: 82 chars (<100 recommended)",
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 82,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 26,
+      "max_possible_score": 65,
+      "avg_ew_score": 6,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_MODERATE: 82 chars (<100 recommended)",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-066",
+      "pack": "PackD",
+      "stem": "Quillwood's board audit committee oversees the financial reporting process, the external auditor relationship, and the internal audit function. What is the primary purpose of this oversight?",
+      "topic": "E.066 audit committee oversight role",
+      "cc": "B",
+      "choices": {
+        "A": "To replace the need for external audits entirely",
+        "B": "To provide independent oversight of financial reporting integrity and the effectiveness of internal controls",
+        "C": "To set employee compensation for all departments",
+        "D": "To prepare the company's financial statements directly"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "difficulty_score": 4,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "An audit committee provides independent board-level oversight of financial reporting integrity, external auditor relationships, internal audit, and internal-control effectiveness. The control objective is governance and oversight, not direct transaction processing.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 265,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "To replace the need for external audits entirely",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "To set employee compensation for all departments",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Management prepares the financial statements; the audit committee oversees integrity and control effectiveness.",
+          "choice_text": "To prepare the company's financial statements directly",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 111,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 19,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "PackD",
+      "stem": "A developer at Northpoint Solutions made a direct change to a production database to correct a customer billing error. No change request was submitted, and the modification was not tested or reviewed ",
+      "topic": "E.071 change management control direct production change",
+      "cc": "C",
+      "choices": {
+        "A": "Application input validation for customer billing data",
+        "B": "Segregation of duties between the billing and collections departments",
+        "C": "A formal change management process requiring documented approval, testing, and migration procedures before production changes",
+        "D": "Physical access controls limiting entry to the data center facility"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "A formal change management process governs how changes move from development to production, requiring documented approval, testing, and controlled migration. The absence of this process allowed an untested, unauthorized production database change.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 247,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": true
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Application input validation for customer billing data",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Segregation between billing and collections addresses revenue-cycle conflicts but does not address the lack of change ov...",
+          "choice_text": "Segregation of duties between the billing and collections departments",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 166,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Physical access controls limiting entry to the data center facility",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 19,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_D: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-072",
+      "pack": "PackD",
+      "stem": "At Elmwood Manufacturing, the purchasing manager is authorized to add new vendors to the approved vendor master file and also selects the winning bidder for contract awards. Which control would best a",
+      "topic": "E.072 fraud risk purchasing conflict of interest",
+      "cc": "D",
+      "choices": {
+        "A": "Require the purchasing manager to document the rationale for vendor selection in writing",
+        "B": "Eliminate competitive bidding to simplify the purchasing process",
+        "C": "Allow the purchasing manager to also approve payment of vendor invoices",
+        "D": "Require an independent manager or committee to approve new vendor additions and review bid awards"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Requiring independent approval of new vendor setups and bid awards removes the conflict of interest where a single person could create a vendor and award contracts to that vendor without independent review.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 206,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "Require the purchasing manager to document the rationale for vendor selection in writing",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Eliminating competitive bidding removes an important control and would increase the risk of inflated pricing or undisclo...",
+          "choice_text": "Eliminate competitive bidding to simplify the purchasing process",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 134,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "Adding payment approval to the same role further concentrates incompatible duties rather than addressing the conflict of...",
+          "choice_text": "Allow the purchasing manager to also approve payment of vendor invoices",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 150,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 27,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_C: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-073",
+      "pack": "PackD",
+      "stem": "Sterling Company generates daily exception reports for purchasing transactions that exceed approved limits. The reports are produced automatically but no employee is assigned to review them, and excep",
+      "topic": "E.073 monitoring exception reports not reviewed",
+      "cc": "A",
+      "choices": {
+        "A": "Exception reports are generated but nobody is assigned to review or act on them, rendering the detective control ineffective",
+        "B": "The exception reports are generated too frequently to be useful",
+        "C": "The purchasing approval limits are set too high for the organization",
+        "D": "The purchasing system should prevent all exceptions rather than report them after the fact"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "explanation_correct": {
+        "text": "A detective control is only effective if the exceptions it identifies are reviewed and acted upon. Generating reports without assigning responsibility for review and remediation is a monitoring failure that leaves control deficiencies unresolved.",
+        "score": 9,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 246,
+        "hasStandard": false,
+        "hasPrinciple": true,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The exception reports are generated too frequently to be useful",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The limits may be appropriate; the documented weakness is that violations of those limits are reported but not investiga...",
+          "choice_text": "The purchasing approval limits are set too high for the organization",
+          "score": 12,
+          "findings": [
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 166,
+          "quality": "ADEQUATE"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "While some controls can prevent exceptions proactively, practical systems rely on a mix of preventive and detective cont...",
+          "choice_text": "The purchasing system should prevent all exceptions rather than report them after the fact",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 199,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 31,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_B: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_B: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-074",
+      "pack": "PackD",
+      "stem": "At Valley Associates, the same employee who initiates electronic fund transfers also performs the monthly bank reconciliation. What is the primary control weakness created by this arrangement?",
+      "topic": "E.074 reconciliation incompatible duties EFT and bank rec",
+      "cc": "B",
+      "choices": {
+        "A": "The employee may take unauthorized cash discounts on early payments",
+        "B": "The employee could conceal unauthorized transfers by adjusting the reconciliation to hide discrepancies",
+        "C": "The bank reconciliation is performed too infrequently to be effective",
+        "D": "Wire transfers require dual authorization, which this employee cannot provide alone"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "When the same person initiates electronic payments and reconciles the bank account, they can conceal unauthorized or erroneous transfers by manipulating the reconciliation. Separating these duties provides an independent check.",
+        "score": 7,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 227,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The employee may take unauthorized cash discounts on early payments",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "C": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "The bank reconciliation is performed too infrequently to be effective",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "The stem does not describe a dual-authorization requirement; the primary weakness is the incompatible combination of ini...",
+          "choice_text": "Wire transfers require dual authorization, which this employee cannot provide alone",
+          "score": 10,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 154,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 2,
+      "generic_distractor_count": 0,
+      "overall_score": 17,
+      "max_possible_score": 65,
+      "avg_ew_score": 3,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_C: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing",
+        "EW_C: EMPTY_DL026 — distractor explanation missing"
+      ]
+    },
+    {
+      "qid": "P1-ED-075",
+      "pack": "PackD",
+      "stem": "Alderway ensures that the employee who approves a vendor invoice for payment is different from the employee who reconciles the accounts payable subledger to the general ledger. What does this separati",
+      "topic": "E.075 segregation approval reconciliation",
+      "cc": "C",
+      "choices": {
+        "A": "A reduction in accounts payable turnover ratio",
+        "B": "A violation of revenue recognition timing rules",
+        "C": "Errors or fraud in the payment approval process from going undetected through the reconciliation function",
+        "D": "An increase in cash discounts taken on early payments"
+      },
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Understand",
+      "explanation_correct": {
+        "text": "Separating payment approval from reconciliation ensures an independent check exists, reducing the risk that errors or fraudulent approvals go undetected.",
+        "score": 6,
+        "findings": [
+          "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+          "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+          "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+          "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+          "EC_NO_TEACHING: Does not actively teach the concept"
+        ],
+        "length": 153,
+        "hasStandard": false,
+        "hasPrinciple": false,
+        "hasWhy": false,
+        "hasBusiness": false
+      },
+      "explanation_wrong": {
+        "A": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "EMPTY_DL026",
+          "value_preview": "",
+          "choice_text": "A reduction in accounts payable turnover ratio",
+          "score": 0,
+          "findings": [
+            "EW_EMPTY: Field is empty — DL-026/025"
+          ],
+          "length": 0,
+          "quality": "EMPTY"
+        },
+        "B": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of segregation approval reconciliation. The choice \"A violation of revenue recog...",
+          "choice_text": "A violation of revenue recognition timing rules",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 336,
+          "quality": "ADEQUATE"
+        },
+        "C": {
+          "type": "CORRECT_CHOICE_SLOT",
+          "status": "EMPTY_OK",
+          "value_preview": ""
+        },
+        "D": {
+          "type": "DISTRACTOR_SLOT",
+          "status": "NON_EMPTY",
+          "value_preview": "This option reflects a misunderstanding of segregation approval reconciliation. The choice \"An increase in cash discount...",
+          "choice_text": "An increase in cash discounts taken on early payments",
+          "score": 11,
+          "findings": [
+            "EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+            "EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception"
+          ],
+          "length": 342,
+          "quality": "ADEQUATE"
+        }
+      },
+      "empty_distractor_count": 1,
+      "generic_distractor_count": 0,
+      "overall_score": 28,
+      "max_possible_score": 65,
+      "avg_ew_score": 7,
+      "verdict": "HOLD",
+      "remediation_notes": [
+        "EC_NO_STANDARD_REFERENCE: No COSO/ASC/IAS/GAAP/IMA/FASB citation",
+        "EC_NO_PRINCIPLE: Does not name a specific COSO/internal control principle",
+        "EC_NO_JUSTIFICATION: Does not explain why the answer is correct",
+        "EC_NO_BUSINESS_CONTEXT: Missing business interpretation",
+        "EC_NO_TEACHING: Does not actively teach the concept",
+        "EW_A: EW_EMPTY: Field is empty — DL-026/025",
+        "EW_B: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_B: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_D: EW_NO_WHY_WRONG: Does not explain why this choice is wrong",
+        "EW_D: EW_NO_MISCONCEPTION: Does not identify the likely candidate misconception",
+        "EW_A: EMPTY_DL026 — distractor explanation missing"
+      ]
+    }
+  ]
+}

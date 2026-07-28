@@ -1,0 +1,44 @@
+{
+  "session": "704",
+  "timestamp": "2026-07-25T16:30:00",
+  "total_targets": 20,
+  "cleared": 20,
+  "held_back": 0,
+  "not_found": 0,
+  "methodology": "G-NEW-3 within-object extraction via Function constructor parse. Surgical string replacement (reverse-order, index-safe).",
+  "results": [
+    {"qid":"P1-DD-029","section":"D","state":"Certified","cc":"A","field":"ExplanationWrongA","beforeLen":236,"beforePreview":"This figure likely results from a unit conversion error or f","status":"CLEARED"},
+    {"qid":"P1-DD-028","section":"D","state":"Certified","cc":"D","field":"ExplanationWrongD","beforeLen":236,"beforePreview":"This figure likely results from a unit conversion error or f","status":"CLEARED"},
+    {"qid":"P1-CD-034","section":"C","state":"Certified","cc":"B","field":"ExplanationWrongB","beforeLen":222,"beforePreview":"Dual-rate pricing does not eliminate the need for transfer p","status":"CLEARED"},
+    {"qid":"P1-CD-023","section":"C","state":"Certified","cc":"C","field":"ExplanationWrongC","beforeLen":199,"beforePreview":"A cost center ignores revenue responsibility. The manager co","status":"CLEARED"},
+    {"qid":"P1-CD-022","section":"C","state":"Certified","cc":"B","field":"ExplanationWrongB","beforeLen":198,"beforePreview":"A revenue center ignores cost control. The manager controls ","status":"CLEARED"},
+    {"qid":"P1-CD-006","section":"C","state":"Certified","cc":"B","field":"ExplanationWrongB","beforeLen":195,"beforePreview":"Applies the $1 rate difference to standard hours (2,000) rat","status":"CLEARED"},
+    {"qid":"P1-CD-003","section":"C","state":"Certified","cc":"C","field":"ExplanationWrongC","beforeLen":195,"beforePreview":"Applies the $1 rate difference to standard hours (2,000) rat","status":"CLEARED"},
+    {"qid":"P1-CD-002","section":"C","state":"Certified","cc":"B","field":"ExplanationWrongB","beforeLen":226,"beforePreview":"Reflects only the joint interaction of the hours deviation a","status":"CLEARED"},
+    {"qid":"P1-BD-059","section":"B","state":"Certified","cc":"C","field":"ExplanationWrongC","beforeLen":396,"beforePreview":"No budgeting structure can guarantee the complete eliminatio","status":"CLEARED"},
+    {"qid":"P1-BD-058","section":"B","state":"Certified","cc":"B","field":"ExplanationWrongB","beforeLen":366,"beforePreview":"The sales forecast is the cornerstone of the master budget -","status":"CLEARED"},
+    {"qid":"P1-BD-057","section":"B","state":"Certified","cc":"A","field":"ExplanationWrongA","beforeLen":331,"beforePreview":"Eliminating the need for a sales forecast would remove the f","status":"CLEARED"},
+    {"qid":"P1-BD-024","section":"B","state":"Certified","cc":"D","field":"ExplanationWrongD","beforeLen":291,"beforePreview":"This figure multiplies 8,000 units by $18 per hour but omits","status":"CLEARED"},
+    {"qid":"P1-BD-023","section":"B","state":"Certified","cc":"C","field":"ExplanationWrongC","beforeLen":260,"beforePreview":"This is the number of direct labor hours required (8,000 uni","status":"CLEARED"},
+    {"qid":"P1-BD-022","section":"B","state":"Certified","cc":"B","field":"ExplanationWrongB","beforeLen":252,"beforePreview":"This figure double-counts the labor hours or the hourly rate","status":"CLEARED"},
+    {"qid":"P1-BD-021","section":"B","state":"Certified","cc":"A","field":"ExplanationWrongA","beforeLen":305,"beforePreview":"This amount double-counts the labor hours or the wage rate. ","status":"CLEARED"},
+    {"qid":"P1-BD-017","section":"B","state":"Certified","cc":"A","field":"ExplanationWrongA","beforeLen":254,"beforePreview":"Short-term inventory purchase needs are addressed by the dir","status":"CLEARED"},
+    {"qid":"P1-AD-055","section":"A","state":"Certified","cc":"C","field":"ExplanationWrongC","beforeLen":335,"beforePreview":"$6,000 is the full annual straight-line depreciation: ($54,0","status":"CLEARED"},
+    {"qid":"P1-AD-054","section":"A","state":"Certified","cc":"B","field":"ExplanationWrongB","beforeLen":401,"beforePreview":"$2.16 is basic EPS calculated as ($600,000 - $60,000) / 250,","status":"CLEARED"},
+    {"qid":"P1-AD-048","section":"A","state":"Certified","cc":"D","field":"ExplanationWrongD","beforeLen":364,"beforePreview":"Consigned goods ARE inventory — they just belong to a specif","status":"CLEARED"},
+    {"qid":"P1-AD-047","section":"A","state":"Certified","cc":"C","field":"ExplanationWrongC","beforeLen":403,"beforePreview":"Under ASC 330, the same physical goods cannot be included in","status":"CLEARED"}
+  ],
+  "section_breakdown": {
+    "A": 4,
+    "B": 8,
+    "C": 6,
+    "D": 2
+  },
+  "post_remediation_parse": "500 items OK (Function constructor)",
+  "post_remediation_dl008_residual": 0,
+  "post_remediation_states": {
+    "Certified": 350,
+    "Unprocessed": 94,
+    "Archived": 56
+  }
+}

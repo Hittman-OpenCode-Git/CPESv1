@@ -1,0 +1,408 @@
+{
+  "document": "SESSION203_IDENTITY_ENGINE_SPEC",
+  "session": "S203",
+  "title": "Identity Engine v2 — Implementation Specification",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION202_IDENTITY_MODEL_V2.json (Architecture)",
+  "status": "Draft — implementation-ready; no deployment authorized",
+  "purpose": "Defines the executable implementation of the compound-key identity model. Converts S202 architecture into buildable components: identity key resolution, registry CRUD operations, template family clustering, lineage tracking, and migration from QID-only identity.",
+  "constraints": ["No content changes", "No certification activity", "No governance changes", "No deployment"],
+
+  "executive_summary": {
+    "what_this_spec_defines": "Five executable engines that implement the compound-key identity model specified in S202 Board A. Each engine is a standalone module with defined inputs, outputs, algorithm, and test gates.",
+    "engines": [
+      "IdentityKeyResolver — Constructs and validates compound keys from raw questions",
+      "CanonicalRegistryEngine — CRUD operations on the canonical item registry",
+      "TemplateFamilyClassifier — Jaccard-based rotation group identification",
+      "LineageTracker — Version chains, remastering, and replacement provenance",
+      "IdentityMigrationEngine — QID-only → compound-key migration with backward-compatibility shim"
+    ],
+    "runtime_estimate": "~15s for all 2,500 items (identity resolution + family classification + registry insertion)",
+    "implementation_files": [
+      "scripts/engine/identity/identity_key_resolver.js",
+      "scripts/engine/identity/canonical_registry_engine.js",
+      "scripts/engine/identity/template_family_classifier.js",
+      "scripts/engine/identity/lineage_tracker.js",
+      "scripts/engine/identity/identity_migration_engine.js",
+      "knowledge/CANONICAL_REGISTRY.json",
+      "knowledge/DELTA_LEDGER.json"
+    ]
+  },
+
+  "engine_1_identity_key_resolver": {
+    "file": "scripts/engine/identity/identity_key_resolver.js",
+    "description": "Constructs, validates, and normalizes compound identity keys for every item in the question pool. The resolver is the entry point for all identity operations — every downstream scan, registry lookup, and remediation script uses the resolver to obtain an item's canonical identity.",
+    "exports": {
+      "resolveIdentityKey(item, filePath)": "Returns { identityKey, compoundKey, components, valid, errors }",
+      "validateQidFormat(qid, packName)": "Returns { valid, expectedPattern, matches }",
+      "computeEWPattern(item)": "Returns 4-char binary string (e.g., '1011')",
+      "extractTemplateFamilyId(item, stemSkeleton)": "Returns familyId string",
+      "hashIdentityKey(compoundKey)": "Returns SHA-256 hex string (identityKey)",
+      "normalizeCorrectChoice(cc)": "Returns uppercase single-letter string A-D"
+    },
+
+    "identity_key_construction": {
+      "fields": ["QID", "CorrectChoice", "EW_Pattern", "Template_Family", "File_Path", "VersionID"],
+      "order": "Positional. Fields are pipe-delimited for hashable string; double-colon-delimited for canonical string.",
+      "hashable_string_format": "QID|CC|EWP|TF|FP|VID",
+      "canonical_string_format": "QID::CC::EWP::TF::FP::VID",
+      "separators": {
+        "hashable": "|",
+        "canonical": "::",
+        "rationale": "Double-colon chosen because single-colon may appear in File_Path on Windows. Pipe is unambiguous for hashing."
+      },
+      "example": {
+        "compound": {
+          "QID": "P1-AD-002",
+          "CC": "B",
+          "EW_Pattern": "1011",
+          "Template_Family": "AD_factoring_001",
+          "File_Path": "pack_d_corrected.js:Section_A",
+          "VersionID": "20260724144500-1"
+        },
+        "hashable": "P1-AD-002|B|1011|AD_factoring_001|pack_d_corrected.js:Section_A|20260724144500-1",
+        "canonical": "P1-AD-002::B::1011::AD_factoring_001::pack_d_corrected.js:Section_A::20260724144500-1",
+        "identity_key": "a3f8c2d1e4b5f6a7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1"
+      }
+    },
+
+    "validation_rules": {
+      "qid_validation": {
+        "pack_a": {"pattern": "^P1-[A-F]-\\d{3}$", "example": "P1-E-038", "note": "Section letters are uppercase A-F. NNN is 001-150."},
+        "pack_b": {"pattern": "^P1B-[A-F]-\\d{3}$", "example": "P1B-B-101", "note": "Prefix 'P1B' distinguishes from Pack A."},
+        "pack_c": {"pattern": "^P1-[A-F]C?-\\d{3}$", "example": "P1-EC-001", "note": "Section letter + optional 'C' suffix."},
+        "pack_d": {"pattern": "^P1-[A-F]D-\\d{3}$", "example": "P1-AD-001", "note": "Section letter + 'D' suffix."},
+        "pack_e": {"pattern": "^P1E-[A-F]-\\d{3}$", "example": "P1E-B-079", "note": "Prefix 'P1E' distinguishes from Pack A."}
+      },
+      "correct_choice_validation": "Must be exactly one of: A, B, C, D. Case-sensitive — must be uppercase. Empty string, null, undefined, or multi-character strings are invalid.",
+      "ew_pattern_validation": "Must be exactly 4 characters. Each character must be '0' or '1'. Position 0 = EW_A, Position 1 = EW_B, Position 2 = EW_C, Position 3 = EW_D.",
+      "template_family_validation": "Must be non-empty string. Format: {SectionPrefix}_{concept}_{NNN}. SectionPrefix maps to pack section (e.g., AD = Pack D Section A). concept is a snake_case descriptor. NNN is a zero-padded integer starting at 001.",
+      "file_path_validation": "Must be one of: pack_a_corrected.js, pack_b_corrected.js, pack_c_corrected.js, pack_d_corrected.js, pack_e_corrected.js.",
+      "version_id_validation": "Must match YYYYMMDDHHMMSS-{increment} pattern. Increment is a non-negative integer. For items not yet versioned, use 'UNVERSIONED' with creation timestamp."
+    },
+
+    "ew_pattern_computation": {
+      "algorithm": "For each letter L in [A, B, C, D]: if item['ExplanationWrong' + L] exists && item['ExplanationWrong' + L] !== '' → bit = '1'. else → bit = '0'. Concatenate bits in A-B-C-D order.",
+      "pseudocode": "function computeEWPattern(item) { return ['A','B','C','D'].map(L => item['ExplanationWrong' + L] && item['ExplanationWrong' + L] !== '' ? '1' : '0').join(''); }",
+      "absent_vs_empty": "Both absent (undefined) and empty ('') produce '0' bit. A separate field-presence audit distinguishes DL-018 (absent CC slot) from DL-008 (non-empty CC slot) and DL-021 (absent non-CC slot) from DL-026 (empty non-CC slot). The identity system treats both as '0' for structural identity — the defect-detection system differentiates them."
+    },
+
+    "template_family_classification": {
+      "algorithm": "See Engine 3 (TemplateFamilyClassifier) for full implementation. The IdentityKeyResolver calls the classifier as a dependency.",
+      "standalone_items": "Items with <70% stem Jaccard similarity to all other items in their section are classified as STANDALONE. Template_Family is set to 'STANDALONE_{QID}'.",
+      "unclassifiable_items": "Items with 70-90% stem Jaccard similarity (boundary clusters) receive Template_Family = 'UNCLASSIFIED_{Section}_{hash}' and are flagged IDENTITY_WARN for human review."
+    },
+
+    "error_handling": {
+      "missing_qid": "Return valid: false, error: 'QID_MISSING', item excluded from all downstream operations.",
+      "missing_cc": "Return valid: false, error: 'CC_MISSING', item excluded from all downstream operations.",
+      "invalid_cc_format": "Return valid: false, error: 'CC_INVALID_FORMAT', item excluded.",
+      "invalid_qid_format": "Return valid: false, error: 'QID_INVALID_FORMAT', item excluded.",
+      "unclassifiable_family": "Return valid: true, warning: 'FAMILY_UNCLASSIFIED', item proceeds with IDENTITY_WARN flag.",
+      "ew_field_extraction_error": "Return valid: true, warning: 'EW_EXTRACTION_ERROR', EW_Pattern set to '????'."
+    },
+
+    "test_gates": [
+      {"test": "PG-011 idempotency: resolveIdentityKey(item, fp).identityKey === resolveIdentityKey(item, fp).identityKey", "expected": true},
+      {"test": "EW_Pattern for CC=A item with EW_A='', EW_B='text', EW_C='text', EW_D='text' → '0111'", "expected": true},
+      {"test": "Identity key collision: two items with different QIDs produce different identity_keys", "expected": true},
+      {"test": "Pack A QID 'P1-E-038' → pack_a_corrected.js format valid", "expected": true},
+      {"test": "Pack B QID 'P1B-B-101' → pack_b_corrected.js format valid", "expected": true},
+      {"test": "Pack B QID 'P1-E-038' → pack_b_corrected.js format INVALID", "expected": false},
+      {"test": "CC=null → CC_INVALID_FORMAT", "expected": true},
+      {"test": "CC='E' → CC_INVALID_FORMAT", "expected": true}
+    ]
+  },
+
+  "engine_2_canonical_registry_engine": {
+    "file": "scripts/engine/identity/canonical_registry_engine.js",
+    "description": "Manages the canonical item registry (CANONICAL_REGISTRY.json) — the single source of truth for item identity, content hashes, metadata hashes, and governance state. Provides O(1) lookup by identity_key, QID+File_Path, and Template_Family.",
+    "storage_file": "knowledge/CANONICAL_REGISTRY.json",
+    "delta_ledger_file": "knowledge/DELTA_LEDGER.json",
+
+    "registry_schema": {
+      "registry_version": "2.0",
+      "generated_by": "SESSION203 Identity Engine",
+      "generated_at": "ISO 8601 timestamp",
+      "total_items": 2500,
+      "indexes": {
+        "by_identity_key": "HashMap: identity_key → entry",
+        "by_qid_filepath": "HashMap: QID|File_Path → [identity_keys]",
+        "by_template_family": "HashMap: Template_Family → [identity_keys]"
+      },
+      "entries": {
+        "schema": {
+          "identity_key": "SHA-256 hex string (64 chars)",
+          "compound_key": "{QID}::{CC}::{EWP}::{TF}::{FP}::{VID}",
+          "components": {"QID": "str", "CC": "str(A-D)", "EW_Pattern": "str(4 bits)", "Template_Family": "str", "File_Path": "str", "VersionID": "str"},
+          "content_hash": "SHA-256 of canonical content fields",
+          "metadata_hash": "SHA-256 of metadata fields",
+          "ew_profile": {"pattern": "str", "A_nonempty": "bool", "B_nonempty": "bool", "C_nonempty": "bool", "D_nonempty": "bool", "A_boilerplate": "bool", "B_boilerplate": "bool", "C_boilerplate": "bool", "D_boilerplate": "bool"},
+          "question_state": "str (Unprocessed|In Audit|Editorial Queue|Certified|Archived)",
+          "parent_version_id": "str|null",
+          "replacement_of": "str|null (QID of item this replaces)",
+          "replaced_by": "str|null (QID of item that replaces this)",
+          "quality_verdict": "str|null (CERTIFY|HOLD|ESCALATE)",
+          "dimension_scores": {"D1_BP": "int|null", "D2_Cog": "int|null", "D3_Tech": "int|null", "D4_Dist": "int|null", "D5_Real": "int|null", "D6_Num": "int|null", "D7_Exp": "int|null", "D8_Clarity": "int|null", "D9_Acc": "int|null", "D10_Meta": "int|null"},
+          "certification_date": "ISO 8601|null",
+          "certification_batch": "str|null",
+          "registered_at": "ISO 8601",
+          "registered_by": "str (session ID)",
+          "last_updated": "ISO 8601",
+          "last_updated_by": "str (session ID)"
+        }
+      }
+    },
+
+    "exports": {
+      "initialize(dataDirectory)": "Loads or creates CANONICAL_REGISTRY.json and DELTA_LEDGER.json. Returns { registry, deltaLedger, initialized }.",
+      "registerItem(item, filePath, questionState)": "Computes compound key + content hash + metadata hash. Inserts into registry. Returns { identity_key, success, collision }.",
+      "lookupByIdentityKey(identityKey)": "O(1) hash-map lookup. Returns registry entry or null.",
+      "lookupByQID(qid, filePath)": "O(1) lookup via qid_filepath index. Returns array of entries (all rotation variants).",
+      "lookupByTemplateFamily(familyId)": "O(1) lookup via template_family index. Returns array of entries (including cross-pack siblings).",
+      "updateItem(identityKey, updates)": "Updates content_hash, metadata_hash, question_state, VersionID. Appends to DELTA_LEDGER. Returns { success, newVersionId }.",
+      "getStats()": "Returns { totalItems, certifiedCount, byPack, bySection, byState, byFamily, dl008Count, dl026Count }.",
+      "verifyIntegrity()": "Regenerates registry from pack files, compares identity_key counts. Returns { match, discrepancies }.",
+      "exportFull()": "Returns complete registry as JSON array.",
+      "findCollisions()": "Scans all entries for duplicate identity_keys. Returns { collisionFound, collisions }."
+    },
+
+    "crud_operations": {
+      "insert": {
+        "preconditions": ["compound_key globally unique (no duplicate identity_key)", "content_hash computed via AM-1 within-object extraction", "EW_Pattern verified against direct field-level inspection", "QID format matches expected pack format"],
+        "collision_handling": "If identity_key collision → check File_Path. If same File_Path → duplicate insertion (reject with DUPLICATE_KEY). If different File_Path but same QID+CC+EWP → cross-pack collision (escalate to governance with CROSS_PACK_COLLISION).",
+        "post_insert_verification": ["Re-extract identity_key from pack file → compare to stored", "Verify QID in pack file matches stored QID", "Confirm identity_key appears in all 3 indexes"]
+      },
+      "query": {
+        "by_identity_key": "O(1) hash-map lookup. Primary query method for all engines.",
+        "by_qid_in_file": "O(1) via qid_filepath index → returns all rotation variants. Used for template family audits and canonical seed selection.",
+        "by_family": "O(1) via template_family index → returns all family members including cross-pack. Used for rotation integrity checks and DL-030 family sweeps.",
+        "by_state": "Filter scan: iterate all entries, filter by question_state. Used for learner-pool eligibility verification."
+      },
+      "update": {
+        "preconditions": ["identity_key exists in registry", "new content_hash differs from stored (otherwise skip)", "EW_Pattern post-write confirmed", "Backup protocol completed per BACKUP_PROTOCOL.md"],
+        "version_bump": "New VersionID = YYYYMMDDHHMMSS-{last_increment + 1}. Increment is monotonically increasing within the QID namespace.",
+        "ledger_append": "DELTA_LEDGER.json receives new entry: { identity_key, old_version_id, new_version_id, old_content_hash, new_content_hash, change_type, changed_fields, session_id, timestamp }.",
+        "parent_tracking": "New entry's parent_version_id = old VersionID."
+      }
+    },
+
+    "index_maintenance": {
+      "description": "All three indexes (by_identity_key, by_qid_filepath, by_template_family) are maintained automatically on insert/update/delete. Indexes are rebuilt from scratch on load for integrity.",
+      "build_on_load": "On initialize(): load CANONICAL_REGISTRY.json → rebuild all 3 hash-map indexes → verify entry count matches index counts → if mismatch, log warning with discrepancy details."
+    },
+
+    "test_gates": [
+      {"test": "registerItem + lookupByIdentityKey: round-trip identity", "expected": "registered entry matches lookup result"},
+      {"test": "lookupByQID returns all rotation variants for P1-AD-001 (2 variants: CC=A and CC=A)", "expected": "array length >= 1"},
+      {"test": "lookupByTemplateFamily('AD_factoring_001') returns 5 items", "expected": "array length = 5"},
+      {"test": "updateItem: new content_hash triggers VersionID increment", "expected": "new_version_id > old_version_id"},
+      {"test": "insert collision: same identity_key twice → DUPLICATE_KEY error", "expected": true},
+      {"test": "verifyIntegrity: regenerated counts match stored counts", "expected": "match = true"}
+    ]
+  },
+
+  "engine_3_template_family_classifier": {
+    "file": "scripts/engine/identity/template_family_classifier.js",
+    "description": "Identifies rotation groups (template families) using stem Jaccard similarity clustering. Groups items that share the same stem skeleton, choice texts, and CC rotation pattern into template families. Identifies canonical seeds within families for clone archival decisions.",
+
+    "exports": {
+      "classifySectionItems(items, sectionLabel)": "Returns { families, standaloneItems, unclassifiedItems, stats }",
+      "identifyCanonicalSeed(familyItems)": "Returns canonical seed entry or null",
+      "computeStemJaccard(stemA, stemB)": "Returns similarity score 0-1",
+      "extractStemSkeleton(stem)": "Returns stem with proper nouns replaced by {COMPANY} placeholders",
+      "identifyClones(seedItem, familyItems)": "Returns { clones, nonClones }"
+    },
+
+    "jaccard_clustering": {
+      "algorithm": {
+        "step_1_stem_normalization": "For each item in the section: extract Stem → convert to lowercase → remove proper nouns (Alderway, Bramblewood, Castlebrook, Deepwater, Elmsworth, Ashford, Brightpoint, Cedarline, Driftwood, Emberton, Ridgeway, Harbor, Meridian, Northstar, Holt, etc.) → collapse multiple spaces → trim.",
+        "step_2_pairwise_similarity": "Compute Jaccard similarity for all item pairs in the section: J(A,B) = |A ∩ B| / |A ∪ B|. Use word-level tokens (split on whitespace). Exclude stop words: a, an, the, is, of, in, on, at, to, for, by, with, has, have, its, and.",
+        "step_3_threshold_clustering": "Group items where stem Jaccard > 0.90 (rotation group threshold). Items with < 0.70 similarity to all others → STANDALONE. Items at 0.70-0.90 → UNCLASSIFIED (IDENTITY_WARN).",
+        "step_4_choice_verification": "Within each rotation-group cluster: verify all items share the same FOUR choice texts (only positionally rotated). Extract canonical choice set: for each letter, what text appears across all family members? If choice texts differ → split cluster.",
+        "step_5_cc_rotation_verification": "Verify CorrectChoice cycles through A, B, C, D, (A) across family members. A 5-item family should have CC distribution: e.g., A+B+C+D+A or B+C+D+A+B. If rotation pattern is broken → flag FAMILY_CC_ANOMALY.",
+        "step_6_company_name_verification": "Verify company names follow a fixed alphabetical progression across family members. If progression is broken → flag FAMILY_COMPANY_ANOMALY (non-blocking, informational).",
+        "step_7_family_id_assignment": "Assign canonical family ID: {SectionPrefix}_{concept_keyword}_{NNN}. concept_keyword derived from the most frequent topic term in the family's stem skeletons. NNN is sequential within the section."
+      },
+      "complexity": "O(n²) pairwise comparisons per section. For 100 items: ~5,000 comparisons. Each comparison is O(w) where w ≈ 20-50 words. Total: ~2,500-12,500 word comparisons per section. Acceptable for build-time operation."
+    },
+
+    "canonical_seed_selection": {
+      "criteria": [
+        {"criterion": "question_state", "preference": "'Unprocessed' or 'In Audit' (not Archived, not already Certified)", "weight": "EXCLUDE if violated"},
+        {"criterion": "ec_standard_citation", "preference": "ExplanationCorrect contains ASC, COSO, IAS, IFRS, or IMA standard citation", "weight": 30},
+        {"criterion": "ew_quality", "preference": "All 3 non-CC EW slots have non-empty, choice-specific text (no DL-013 boilerplate, no DL-010 misassignment, no DL-026 empty slots)", "weight": 30},
+        {"criterion": "dl008_compliant", "preference": "EW[CC] is empty or ''", "weight": "EXCLUDE if violated"},
+        {"criterion": "ec_length", "preference": "Longer ExplanationCorrect (indicating richer educational content)", "weight": 20},
+        {"criterion": "difficulty_accurate", "preference": "DifficultyScore matches cognitive demand of the item (not inflated per DL-031)", "weight": 20}
+      ],
+      "scoring": "Score = Σ(preference_met ? weight : 0). Candidate with highest score is the canonical seed. If tie → item with highest EC length wins. If still tie → first item by QID sort order.",
+      "no_viable_seed": "If no family member meets ALL exclusion criteria (Unprocessed/In Audit + DL-008 clean) → the family has no viable seed. Flag FAMILY_NO_SEED. Family requires re-authoring."
+    },
+
+    "clone_identification": {
+      "definition": "An item is a clone if: (a) stem differs from seed only by company name, (b) all 4 choice texts are identical to seed's (positionally rotated), (c) ExplanationCorrect is Jaccard > 0.95 with seed's EC, (d) not designated as canonical seed.",
+      "archival_recommendation": "Clones should be Archived unless they offer genuine pedagogical differentiation. The DL-012 precedent: 140 clones in Section E provided zero additional testing value beyond the 28 seeds."
+    },
+
+    "edge_cases": {
+      "families_of_size_1": "Single-item families: item is both seed and sole member. Not a clone. Template_Family = 'STANDALONE_{QID}'.",
+      "cross_pack_families": "Items in Pack C and Pack D that share the same template family (e.g., 'A_factoring_001' in both packs) receive the same Template_Family ID. The File_Path component disambiguates.",
+      "dual_block_packs": "Pack A/C/D items that have both flat ChoiceA-D and nested Choices.{A-D}: the classifier uses Choices.{A-D} (content block) for choice text comparison. Flat ChoiceA-D (metadata block) may be stale/rotated."
+    },
+
+    "test_gates": [
+      {"test": "AD_factoring_001 family: 5 items with CC rotation A/B/C/D/A, EW_Patterns 0111/1011/1101/1110/0111", "expected": "family_id assigned, 5 members, 1 seed (AD-001), 4 clones identified"},
+      {"test": "Items with completely different stems (< 50% Jaccard) → classified as STANDALONE", "expected": true},
+      {"test": "Boundary items (75% Jaccard) → classified as UNCLASSIFIED with IDENTITY_WARN", "expected": true},
+      {"test": "Family with all items having DL-008 → FAMILY_NO_SEED", "expected": true}
+    ]
+  },
+
+  "engine_4_lineage_tracker": {
+    "file": "scripts/engine/identity/lineage_tracker.js",
+    "description": "Tracks version chains, remastering provenance, and replacement lineage. Enables delta review by maintaining the parent_version_id chain and supports cross-item replacement tracing.",
+
+    "exports": {
+      "trackVersionUpdate(identityKey, oldVersionId, newVersionId, changeType)": "Appends to DELTA_LEDGER with parent_version_id. Returns ledger entry.",
+      "trackReplacement(oldQID, newQID, oldVersionId)": "Links old item to new item via replacement_of / replaced_by fields. Archives old item. Returns { success, oldEntryStatus, newEntryStatus }.",
+      "getVersionChain(identityKey)": "Walks parent_version_id chain from current entry to origin. Returns ordered array of all versions.",
+      "getReplacementChain(qid)": "Walks replacement lineage forward (replaced_by chain). Returns array of all replacement QIDs in order.",
+      "isDeltaCandidate(identityKey, currentContentHash)": "Compares current content_hash to registry hash. Returns { isDelta, changed, hashMatch }.",
+      "getCertificationHistory(identityKey)": "Returns all certification events in DELTA_LEDGER for this identity_key."
+    },
+
+    "lineage_types": {
+      "remastering": {
+        "description": "Existing item content changed. QID stays the same. VersionID increments. Parent tracks previous version.",
+        "example": "P1-AD-002: CC=B → CC=C (DL-030 answer-key fix). Old entry Archived, new entry with parent_version_id = old VersionID.",
+        "registry_update": "New entry with same identity_key (minus VersionID). Old entry's question_state → 'Archived'. New entry's parent_version_id = old VersionID."
+      },
+      "replacement": {
+        "description": "Item completely replaced by new item with different QID. Old item Archived. New item inherits lineage reference.",
+        "example": "P1-X-099 replaced by P1-X-200 (new QID, new content). P1-X-099.replaced_by = 'P1-X-200'. P1-X-200.replacement_of = 'P1-X-099@20260724144500-1'.",
+        "registry_update": "Old item: question_state → 'Archived', replaced_by = new_QID. New item: replacement_of = old_QID@old_VersionID."
+      },
+      "certification_renewal": {
+        "description": "Same content re-certified. No content hash change. Same VersionID. New DELTA_LEDGER entry with RECERTIFY tag.",
+        "example": "Item certified at wave N, recertified at wave N+1 with identical content. New DELTA_LEDGER entry records the recertification but content_hash unchanged.",
+        "registry_update": "No registry entry change. DELTA_LEDGER appends new entry with same identity_key + same VersionID + same content_hash + RECERTIFY flag."
+      }
+    },
+
+    "delta_ledger_schema": {
+      "entries": {
+        "schema": {
+          "identity_key": "SHA-256 hex string",
+          "old_version_id": "str (VersionID at prior checkpoint)",
+          "new_version_id": "str (VersionID after change)",
+          "old_content_hash": "SHA-256 (null for first registration)",
+          "new_content_hash": "SHA-256",
+          "change_type": "CONTENT_CHANGED | METADATA_CHANGED | EW_ONLY | RECERTIFY | REPLACEMENT | REGISTRATION",
+          "changed_fields": ["field names that changed"],
+          "session_id": "str (session that produced the change)",
+          "timestamp": "ISO 8601",
+          "quality_verdict": "str|null (CERTIFY|HOLD|ESCALATE)",
+          "evidence_package": "str|null (session report file reference)"
+        }
+      }
+    },
+
+    "test_gates": [
+      {"test": "trackVersionUpdate: parent_version_id correctly links to old VersionID", "expected": true},
+      {"test": "getVersionChain returns ordered array from current to origin", "expected": "length >= 1, descending VersionID"},
+      {"test": "trackReplacement: old item Archived, new item has replacement_of", "expected": true},
+      {"test": "isDeltaCandidate: same content_hash → isDelta=false, hashMatch=true", "expected": true},
+      {"test": "isDeltaCandidate: different content_hash → isDelta=true, hashMatch=false, changed='content'", "expected": true}
+    ]
+  },
+
+  "engine_5_identity_migration_engine": {
+    "file": "scripts/engine/identity/identity_migration_engine.js",
+    "description": "Executes the QID-only → compound-key migration for all 2,500 items. Generates initial CANONICAL_REGISTRY.json, DELTA_LEDGER.json, and Template_Family assignments. Provides backward-compatibility shim during transition.",
+
+    "exports": {
+      "migrateAll(registryEngine, classifierEngine)": "Phase 1 migration: registers all 2,500 items with compound keys. Returns { success, registered, failed, warnings }.",
+      "verifyMigration(registryEngine)": "Independent verification: re-extract all items, verify identity_key stability. Returns { verified, mismatches }.",
+      "getBackwardCompatShim(qid)": "QID-only lookup shim. Returns all active (non-Archived) entries matching QID, sorted by VersionID desc.",
+      "generateInitialDeltaLedger(registryEngine)": "Computes baseline hashes for all 2,500 items. Writes DELTA_LEDGER.json.",
+      "generateMigrationReport()": "Returns detailed migration report with per-pack counts, collision detection, and warning summaries."
+    },
+
+    "migration_steps": {
+      "step_1_extract_all": "Using AM-1 Function Constructor Parse, extract all 2,500 items from 5 pack files. Verify extract count: Pack A=500, Pack B=500, Pack C=500, Pack D=500, Pack E=500. If mismatch → HALT with PARSE_COUNT_MISMATCH.",
+      "step_2_build_compound_keys": "For each item: resolve QID → validate format → extract CorrectChoice → compute EW_Pattern → assign File_Path. This produces a preliminary compound key (without Template_Family or VersionID).",
+      "step_3_classify_families": "For each section in each pack: run TemplateFamilyClassifier.classifySectionItems(). Assign Template_Family to each item.",
+      "step_4_assign_version_ids": "For each item: if no VersionID exists → assign '20260727000000-0' (UNVERSIONED baseline). If item has prior certification history → derive VersionID from certification_batch (increment 1 for each batch).",
+      "step_5_compute_hashes": "For each item: compute content_hash (SHA-256 of canonical content fields), compute metadata_hash (SHA-256 of metadata fields). Store in registry entry.",
+      "step_6_insert_registry": "For each item: construct full registry entry. Insert via CanonicalRegistryEngine.registerItem(). Log collisions, warnings, and failures.",
+      "step_7_independent_verification": "After all 2,500 items registered: re-extract all items via independent AM-1 parse. Compare identity_keys between passes. Zero mismatches required. If mismatch → investigate and resolve before accepting migration.",
+      "step_8_generate_delta_ledger": "For all 2,500 items: insert baseline DELTA_LEDGER entry with change_type = 'REGISTRATION', old_content_hash = null, new_content_hash = computed_hash.",
+      "step_9_write_files": "Write CANONICAL_REGISTRY.json and DELTA_LEDGER.json to knowledge/. Compute file hashes → update CURRENT_BASELINES.md."
+    },
+
+    "backward_compatibility_shim": {
+      "description": "During Phase 1 transition (S202-S830), all existing tools that use QID-only identity continue to function via this shim. The shim resolves QID-only queries to the current active compound key.",
+      "shim_behavior": "A QID-only query (e.g., 'P1-AD-002') returns the first active (non-Archived) entry for that QID, ordered by VersionID desc. If multiple active variants exist (same QID, different CC) → returns all matching variants with SHIM_WARNING: 'QID-only lookup returned multiple compound keys. Require CC or EW_Pattern to disambiguate.'",
+      "deprecation_schedule": "Active during Phase 1 (S202-S830). Deprecated warning issued at S830. Hard deprecation at S900 — all tools must use compound-key identity post-S900."
+    },
+
+    "test_gates": [
+      {"test": "Migration produces 2,500 registered entries", "expected": true},
+      {"test": "Independent re-extraction produces identical identity_keys for all 2,500 items", "expected": "0 mismatches"},
+      {"test": "DELTA_LEDGER has 2,500 baseline entries with change_type='REGISTRATION'", "expected": true},
+      {"test": "Backward-compat shim resolves 'P1-AD-002' to correct entry", "expected": true},
+      {"test": "Cross-pack QID collision detection: no two items in different packs produce same identity_key", "expected": true}
+    ]
+  },
+
+  "governance_integration": {
+    "rules_extended": [
+      {
+        "rule": "RULE 9 (NEW — HARD_BLOCK)",
+        "id": "GOV-GUARD-RULE-9",
+        "description": "Compound-Key Identity Required. No remediation script, certification entry, or question_state change may reference an item by QID alone from S830 onward. All item-level operations must use the full compound key or identity_key.",
+        "implementation": "governance-guard.js: intercept all item-level write operations, verify target identity includes CC + EW_Pattern + File_Path. Block QID-only operations with error 'GOV-R9: Compound-key identity required. QID alone is insufficient.'"
+      },
+      {
+        "rule": "RULE 10 (NEW — HARD_BLOCK)",
+        "id": "GOV-GUARD-RULE-10",
+        "description": "Registry Integrity. At session T0 and Tend, the registry must be regenerated from pack files and its item count must match dual-verified grep. Any discrepancy halts the session until resolved.",
+        "implementation": "governance-guard.js: at session startup (T0 checkpoint), run CanonicalRegistryEngine.verifyIntegrity(). If mismatch → HALT_SESSION with REGISTRY_INTEGRITY_FAILURE. Re-run after any pack-file write (Tmid). Re-run at session close (Tend) before REVISION_HISTORY.md entry."
+      }
+    ],
+    "gate_integration": {
+      "gate": "Gate -1 — Identity Validation",
+      "trigger": "Pre-flight pipeline initiation at session T0",
+      "checks": ["QID present and format-valid", "CorrectChoice present and format-valid", "Pack attribution confirmed", "TemplateFamily classifiable (IDENTITY_VALID or IDENTITY_WARN)", "Compound key globally unique"],
+      "verdict": "IDENTITY_VALID per item. IDENTITY_BLOCKED items excluded from all downstream gates."
+    }
+  },
+
+  "implementation_roadmap": {
+    "phase": "Phase 1 of Framework v2 migration (S202-S207)",
+    "estimated_engineering_effort": "~650 lines of JavaScript across 5 modules",
+    "dependencies": ["Function constructor parse capability (AM-1)", "SHA-256 hashing library (crypto.subtle or Node crypto)", "CANONICAL_REGISTRY.json write path (knowledge/)", "DELTA_LEDGER.json write path (knowledge/)"],
+    "next_sessions": {
+      "S203": "This session — engineering specifications (READ-ONLY)",
+      "S204": "Identity Engine implementation — write 5 JS modules, generate CANONICAL_REGISTRY.json, generate DELTA_LEDGER.json",
+      "S205": "Identity validation testing — verify all 2,500 items registered, identity_key stability, backward-compat shim operational",
+      "S830": "Phase 1 gate — identity ambiguity eliminated (BF-007), backward-compat shim deprecated"
+    }
+  },
+
+  "deliverables_produced": [
+    "SESSION203_IDENTITY_ENGINE_SPEC.json (this file)",
+    "SESSION203_CANONICAL_REGISTRY_SCHEMA.json (detailed registry schema)"
+  ],
+
+  "verification_checks": [
+    "Identity key construction is deterministic (same input → same identity_key every time)",
+    "EW_Pattern computation is unambiguous (absent = '0', empty = '0', non-empty = '1')",
+    "TemplateFamily Jaccard clustering thresholds (90% group, 70% standalone) produce clean separation on known families",
+    "Lineage tracker correctly chains parent_version_id across remastering operations",
+    "Migration engine handles all 2,500 items without loss or collision"
+  ]
+}

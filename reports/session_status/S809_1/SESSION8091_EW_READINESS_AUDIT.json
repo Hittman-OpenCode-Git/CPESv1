@@ -1,0 +1,135 @@
+{
+  "session": "S809.1",
+  "title": "ExplanationWrong Readiness Audit — Domain E Seeds",
+  "generated_by": "Agent D — EW Readiness Auditor",
+  "date": "2026-07-26",
+  "overall_status": {
+    "COMPLETE": 0,
+    "PARTIAL": 38,
+    "MISSING": 0
+  },
+  "dl013_boilerplate": {
+    "count": 8,
+    "affected_QIDs": [
+      {
+        "QID": "P1-ED-016",
+        "topic": "ERM risk response",
+        "boilerplate_slot": "EW_A",
+        "boilerplate_text_pattern": "does not align with COSO ERM... represents a plausible misconception"
+      },
+      {
+        "QID": "P1-ED-036",
+        "topic": "change management",
+        "boilerplate_slot": "EW_A",
+        "boilerplate_text_pattern": "does not align with COSO... represents a plausible misconception"
+      },
+      {
+        "QID": "P1-ED-046",
+        "topic": "code of conduct ethics",
+        "boilerplate_slot": "EW_A",
+        "boilerplate_text_pattern": "does not align with COSO... represents a plausible misconception"
+      },
+      {
+        "QID": "P1-ED-051",
+        "topic": "password auth",
+        "boilerplate_slot": "EW_A",
+        "boilerplate_text_pattern": "does not align with COSO... represents a plausible misconception"
+      },
+      {
+        "QID": "P1-ED-075",
+        "topic": "segregation approval",
+        "boilerplate_slot": "EW_A",
+        "boilerplate_text_pattern": "does not align with COSO... represents a plausible misconception"
+      },
+      {
+        "QID": "P1-ED-016",
+        "topic": "ERM risk response",
+        "boilerplate_slot": "EW_B",
+        "boilerplate_text_pattern": "does not align with COSO ERM... represents a plausible misconception"
+      },
+      {
+        "QID": "P1-ED-036",
+        "topic": "change management",
+        "boilerplate_slot": "EW_B",
+        "boilerplate_text_pattern": "does not align with COSO... represents a plausible misconception"
+      },
+      {
+        "QID": "P1-ED-046",
+        "topic": "code of conduct ethics",
+        "boilerplate_slot": "EW_B",
+        "boilerplate_text_pattern": "does not align with COSO... represents a plausible misconception"
+      }
+    ]
+  },
+  "empty_slots": {
+    "count": 53,
+    "breakdown": {
+      "Pack_C": 19,
+      "Pack_D": 34
+    },
+    "note": "All 38 seeds have 1 empty slot from template rotation artifact; 5 additional seeds have 2 empty slots (DL-013 remediation residue)"
+  },
+  "dl008_status": {
+    "total_checked": 38,
+    "clean": 38,
+    "violations": 0,
+    "status": "ALL_CLEAN"
+  },
+  "ec_quality": {
+    "min_length": 144,
+    "max_length": 312,
+    "mean_length": 231.6,
+    "coso_reference_rate_percent": 2.6,
+    "note": "Only 1 of 38 seeds explicitly references a COSO principle by number in ExplanationCorrect text",
+    "coso_reference_QIDs": [
+      {
+        "QID": "P1-EC-008",
+        "reference": "COSO Principle 1"
+      }
+    ]
+  },
+  "by_seed_EW_detail": {
+    "Pack_C": {
+      "P1-EC-004": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-008": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-014": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-EC-020": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-021": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-022": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "B", "CC_slot_clean": true },
+      "P1-EC-023": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-EC-024": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-EC-025": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-028": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-EC-031": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-EC-040": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-EC-041": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-049": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-052": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-EC-060": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-EC-061": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-EC-066": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "B", "CC_slot_clean": true },
+      "P1-EC-072": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true }
+    },
+    "Pack_D": {
+      "P1-ED-001": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-ED-010": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-ED-014": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-ED-016": { "nonempty": 1, "empty": 2, "DL013": 1, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-ED-025": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-ED-028": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-ED-035": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-ED-036": { "nonempty": 1, "empty": 2, "DL013": 1, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-ED-042": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "B", "CC_slot_clean": true },
+      "P1-ED-046": { "nonempty": 1, "empty": 2, "DL013": 1, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-ED-051": { "nonempty": 1, "empty": 2, "DL013": 1, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-ED-058": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "B", "CC_slot_clean": true },
+      "P1-ED-064": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-ED-066": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "B", "CC_slot_clean": true },
+      "P1-ED-071": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "C", "CC_slot_clean": true },
+      "P1-ED-072": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "D", "CC_slot_clean": true },
+      "P1-ED-073": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "A", "CC_slot_clean": true },
+      "P1-ED-074": { "nonempty": 2, "empty": 1, "DL013": 0, "CC_slot": "B", "CC_slot_clean": true },
+      "P1-ED-075": { "nonempty": 1, "empty": 2, "DL013": 1, "CC_slot": "C", "CC_slot_clean": true }
+    }
+  }
+}

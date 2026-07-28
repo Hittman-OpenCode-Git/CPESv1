@@ -1,0 +1,362 @@
+{
+  "generatedTimestamp": "2026-07-27T13:46:35.630Z",
+  "overall": {
+    "totalItems": 2540,
+    "certified": 2221,
+    "unprocessed": 77,
+    "archived": 242,
+    "remaining": 77,
+    "blockingDefects": 0,
+    "certifiedPct": 87.4,
+    "domainCoverage": 85.7
+  },
+  "byDomain": {
+    "A": {
+      "total": 375,
+      "certified": 373,
+      "unprocessed": 0,
+      "archived": 2,
+      "other": 0,
+      "pct": 99.5
+    },
+    "B": {
+      "total": 500,
+      "certified": 500,
+      "unprocessed": 0,
+      "archived": 0,
+      "other": 0,
+      "pct": 100
+    },
+    "C": {
+      "total": 500,
+      "certified": 500,
+      "unprocessed": 0,
+      "archived": 0,
+      "other": 0,
+      "pct": 100
+    },
+    "D": {
+      "total": 375,
+      "certified": 375,
+      "unprocessed": 0,
+      "archived": 0,
+      "other": 0,
+      "pct": 100
+    },
+    "E": {
+      "total": 415,
+      "certified": 248,
+      "unprocessed": 38,
+      "archived": 129,
+      "other": 0,
+      "pct": 59.8
+    },
+    "F": {
+      "total": 374,
+      "certified": 225,
+      "unprocessed": 39,
+      "archived": 110,
+      "other": 0,
+      "pct": 60.2
+    },
+    "?": {
+      "total": 1,
+      "certified": 0,
+      "unprocessed": 0,
+      "archived": 1,
+      "other": 0,
+      "pct": 0
+    }
+  },
+  "bySection": {
+    "pack_a-A": {
+      "pack": "pack_a",
+      "section": "A",
+      "total": 75,
+      "certified": 73,
+      "unprocessed": 0,
+      "archived": 2
+    },
+    "pack_a-B": {
+      "pack": "pack_a",
+      "section": "B",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_a-C": {
+      "pack": "pack_a",
+      "section": "C",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_a-D": {
+      "pack": "pack_a",
+      "section": "D",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_a-E": {
+      "pack": "pack_a",
+      "section": "E",
+      "total": 75,
+      "certified": 58,
+      "unprocessed": 0,
+      "archived": 17
+    },
+    "pack_a-F": {
+      "pack": "pack_a",
+      "section": "F",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_b-A": {
+      "pack": "pack_b",
+      "section": "A",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_b-B": {
+      "pack": "pack_b",
+      "section": "B",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_b-C": {
+      "pack": "pack_b",
+      "section": "C",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_b-D": {
+      "pack": "pack_b",
+      "section": "D",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_b-E": {
+      "pack": "pack_b",
+      "section": "E",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_b-F": {
+      "pack": "pack_b",
+      "section": "F",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_c-A": {
+      "pack": "pack_c",
+      "section": "A",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_c-B": {
+      "pack": "pack_c",
+      "section": "B",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_c-C": {
+      "pack": "pack_c",
+      "section": "C",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_c-D": {
+      "pack": "pack_c",
+      "section": "D",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_c-E": {
+      "pack": "pack_c",
+      "section": "E",
+      "total": 75,
+      "certified": 0,
+      "unprocessed": 19,
+      "archived": 56
+    },
+    "pack_c-F": {
+      "pack": "pack_c",
+      "section": "F",
+      "total": 75,
+      "certified": 0,
+      "unprocessed": 19,
+      "archived": 56
+    },
+    "pack_d-A": {
+      "pack": "pack_d",
+      "section": "A",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_d-B": {
+      "pack": "pack_d",
+      "section": "B",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_d-C": {
+      "pack": "pack_d",
+      "section": "C",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_d-D": {
+      "pack": "pack_d",
+      "section": "D",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_d-E": {
+      "pack": "pack_d",
+      "section": "E",
+      "total": 75,
+      "certified": 0,
+      "unprocessed": 19,
+      "archived": 56
+    },
+    "pack_d-F": {
+      "pack": "pack_d",
+      "section": "F",
+      "total": 74,
+      "certified": 0,
+      "unprocessed": 20,
+      "archived": 54
+    },
+    "pack_d-?": {
+      "pack": "pack_d",
+      "section": "?",
+      "total": 1,
+      "certified": 0,
+      "unprocessed": 0,
+      "archived": 1
+    },
+    "pack_e-A": {
+      "pack": "pack_e",
+      "section": "A",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_e-B": {
+      "pack": "pack_e",
+      "section": "B",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_e-C": {
+      "pack": "pack_e",
+      "section": "C",
+      "total": 100,
+      "certified": 100,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_e-D": {
+      "pack": "pack_e",
+      "section": "D",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_e-E": {
+      "pack": "pack_e",
+      "section": "E",
+      "total": 115,
+      "certified": 115,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_e-F": {
+      "pack": "pack_e",
+      "section": "F",
+      "total": 75,
+      "certified": 75,
+      "unprocessed": 0,
+      "archived": 0
+    }
+  },
+  "byPack": {
+    "pack_a": {
+      "total": 500,
+      "certified": 481,
+      "unprocessed": 0,
+      "archived": 19
+    },
+    "pack_b": {
+      "total": 500,
+      "certified": 500,
+      "unprocessed": 0,
+      "archived": 0
+    },
+    "pack_c": {
+      "total": 500,
+      "certified": 350,
+      "unprocessed": 38,
+      "archived": 112
+    },
+    "pack_d": {
+      "total": 500,
+      "certified": 350,
+      "unprocessed": 39,
+      "archived": 111
+    },
+    "pack_e": {
+      "total": 540,
+      "certified": 540,
+      "unprocessed": 0,
+      "archived": 0
+    }
+  },
+  "blockers": [],
+  "trend": {
+    "previousCertified": 2221,
+    "currentCertified": 2221,
+    "delta": 0,
+    "previousPct": 87.4,
+    "currentPct": 87.4,
+    "pctDelta": 0
+  }
+}

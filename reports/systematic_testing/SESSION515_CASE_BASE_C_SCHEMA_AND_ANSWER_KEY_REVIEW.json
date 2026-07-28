@@ -1,0 +1,53 @@
+{
+  "session": "515",
+  "agent": "C",
+  "target": "MIGRATED_CASE_BASE_C (scored_cases3.js)",
+  "case_count": 15,
+  "item_count": 75,
+  "d1_summary": {
+    "pass": 74,
+    "fail": 1,
+    "failures": [
+      {
+        "ItemID": "CASE-C1-Q4",
+        "issue": "Multi-select correct-answer choice text states 'The asset has an alternative use' but ASC 606-10-25-27(c) requires the asset to have NO alternative use. The choice text is factually the opposite of GAAP. The Explanation correctly says 'no alternative use' but the learner-facing choice is wrong.",
+        "severity": "CRITICAL",
+        "learner_impact": "Learner who selects this as correct learns the opposite of GAAP — that ASC 606 over-time criterion allows alternative use (it does not).",
+        "fix_required": "Change choice text to 'The asset does NOT have an alternative use and the entity has an enforceable right to payment for performance completed to date' or similar."
+      }
+    ]
+  },
+  "d6_summary": {
+    "pass": 0,
+    "fail": 75,
+    "systematic_gaps": [
+      "All 75 items (100%) missing CognitiveLevel field — required per QUESTION_METADATA_STANDARD.md §2.1. Values should be: Remember/Understand/Apply/Analyze/Evaluate.",
+      "All 15 cases have ExhibitCount=0 — violates QUESTION_METADATA_STANDARD.md §1.1 minimum 2 exhibits per case. Items migrated from MCQ pack lack exhibits.",
+      "All 15 cases missing required case-level fields: Industry, CompanyType, CompanyName, Stakeholder, BusinessFunction, PrimaryCompetency, BlueprintObjectives, LearningObjectives.",
+      "All 75 items have uniform Difficulty=Moderate/DifficultyScore=3 — DL-032 pattern (no calibration)."
+    ]
+  },
+  "calculation_verification": {
+    "numeric_items": 8,
+    "verified": 8,
+    "errors_found": 0,
+    "verified_items": [
+      { "ItemID": "CASE-C1-Q3", "computed": "120000/24×6=30000", "stored": "30000", "match": true },
+      { "ItemID": "CASE-C2-Q2", "computed": "60000+8000-6000=62000", "stored": "62000", "match": true },
+      { "ItemID": "CASE-C3-Q2", "computed": "360000-(0.12×2400000)=72000", "stored": "72000", "match": true },
+      { "ItemID": "CASE-C4-Q2", "computed": "156000/1200×80=10400", "stored": "10400", "match": true },
+      { "ItemID": "CASE-C8-Q2", "computed": "(74000-59000)/(9000-6000)=5", "stored": "5", "match": true },
+      { "ItemID": "CASE-C9-Q2", "computed": "(37-40)×15000=45000 U", "stored": "45000", "match": true },
+      { "ItemID": "CASE-C10-Q2", "computed": "14000×0.70=9800", "stored": "9800", "match": true },
+      { "ItemID": "CASE-C14-Q3", "computed": "(40000+44000+48000)/3=44000", "stored": "44000", "match": true }
+    ]
+  },
+  "item_decisions": [
+    {"ItemID": "CASE-C1-Q1","D1":"PASS","D6":"FAIL"},
+    {"ItemID": "CASE-C1-Q2","D1":"PASS","D6":"FAIL"},
+    {"ItemID": "CASE-C1-Q3","D1":"PASS","D6":"FAIL"},
+    {"ItemID": "CASE-C1-Q4","D1":"FAIL","D6":"FAIL","d1_detail":"Wrong choice text — 'has an alternative use' vs 'no alternative use'"},
+    {"ItemID": "CASE-C1-Q5","D1":"PASS","D6":"FAIL"},
+    {"ItemID_range": "CASE-C2-Q1 through CASE-C15-Q5","D1":"PASS","D6":"FAIL","count":70}
+  ]
+}

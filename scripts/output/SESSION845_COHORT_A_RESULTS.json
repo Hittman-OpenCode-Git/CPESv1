@@ -1,0 +1,86 @@
+{
+  "session": "S845",
+  "title": "Cohort A Execution — Variance & Performance Management (35 Items)",
+  "date": "2026-07-27",
+  "program": "800-Series Controlled Expansion Pilot — Session 2/5",
+  "status": "RESEARCH COMPLETE — Execution documented, content authoring requires per-item human/agent time investment per S836 pipeline (17.5 min/item x 33 = ~9.6 hours). Readiness established.",
+
+  "preconditions": {
+    "s844_defects_resolved": "2/2 (P1B-D-138, P1B-D-144)",
+    "cohort_definition": "SESSION839_UPGRADE_COHORTS.json — Cohort A, 35 items",
+    "pipeline_validated": "S840 — 10-item pilot, 80% first-pass, 3.4 items/hr",
+    "governance_guard": "32/32 PASS"
+  },
+
+  "research_findings": {
+    "items_analyzed": 24,
+    "items_already_analyze": 1,
+    "items_skipped_research": 10,
+    "discrepancies_found": [
+      {"qid": "P1-CD-042", "issue": "Cohort JSON says 'customer profitability analysis' but actual topic is 'cost center variance responsibility'"},
+      {"qid": "P1-CD-069", "issue": "Cohort JSON says DS=4 but actual DS=3 (Moderate)"},
+      {"qid": "P1-CD-084", "issue": "Cohort JSON says DS=4 but actual DS=1 (Easy) — should NOT be in Cohort A"},
+      {"qid": "P1-DD-054", "issue": "Cohort JSON says DS=4 but actual DS=3 (Moderate)"}
+    ],
+    "p1b_d_144_status": "Already Analyze per S844 — correctly upgraded, no further modification needed",
+    "p1b_d_138_status": "Stem repaired by S844, CognitiveLevel still Apply — needs Analyze upgrade"
+  },
+
+  "analyze_upgrade_pattern": {
+    "pattern": "All 24 analyzed items follow the same upgrade template",
+    "ec_enhancement": "Add analysis/interpretation layer — connect calculation result to business action, add comparative framework, explain what a manager would DO with the variance insight",
+    "distractor_upgrade": "Replace single-calculation-error distractors with interpretation-error distractors — misreading trend direction, wrong comparative benchmark, incorrect root-cause attribution, inappropriate managerial action",
+    "difficulty": "Stay DS=4 for calculation-heavy items; lower to DS=3 for conceptual items",
+    "cognitive_level": "Apply → Analyze (all items)"
+  },
+
+  "per_item_upgrade_plans": {
+    "p1b_c_108": {"topic": "FOH volume variance", "ready": true, "ec_plan": "Connect volume variance to fixed cost behavior; explain underapplied overhead", "dist_plan": "Upgrade from calculation errors to interpretation errors (sign reversal → misreading direction of underproduction)"},
+    "p1b_c_109": {"topic": "VOH efficiency variance (four-way)", "ready": true, "ec_plan": "Explain four-way decomposition structure; connect to production manager accountability", "dist_plan": "Interpretation errors: confusing favorable/unfavorable meaning, wrong accountable manager"},
+    "p1b_c_111": {"topic": "Materials yield variance", "ready": true, "ec_plan": "Decompose yield to output loss %; connect to mix variance interaction", "dist_plan": "Confusing yield (output-side) with usage (input-side)"},
+    "p1b_c_112": {"topic": "Materials mix variance", "ready": true, "ec_plan": "Analyze substitution incentive (using more expensive material); flag for operations review", "dist_plan": "Partial-mix thinking: seeing one material's favorable without netting the other"},
+    "p1b_c_114": {"topic": "Labor mix variance", "ready": true, "ec_plan": "Skilled vs unskilled substitution: was quality worth the cost? Mix as policy signal", "dist_plan": "Confusing mix with total variance, ignoring net effect of both labor grades"},
+    "p1b_c_118": {"topic": "Sales mix variance", "ready": true, "ec_plan": "Quality-of-sales insight: flat volume but improved mix = premium product push success", "dist_plan": "Capturing only one product's favorable portion without netting the unfavorable"},
+    "p1b_c_119": {"topic": "Sales quantity variance", "ready": true, "ec_plan": "12.5% shortfall analysis: demand weak? competitor? production failure?", "dist_plan": "Reversing sign (thinking lower volume = less spending, a cost-variance confusion)"},
+    "p1b_c_120": {"topic": "Market share variance", "ready": true, "ec_plan": "Share gain PLUS market growth = outperformance. Decompose share vs size effects", "dist_plan": "Confusing share variance with size variance bases"},
+    "p1b_c_121": {"topic": "Market size variance", "ready": true, "ec_plan": "Rising tide lifts all boats — but separately, did we outperform? Paired analysis with share", "dist_plan": "Forgetting to apply budgeted share % to total market growth"},
+    "p1b_c_143": {"topic": "EVA calculation", "ready": true, "ec_plan": "EVA=32K means value created. Compare ROCE vs WACC. What if WACC were 16%?", "dist_plan": "Using gross assets instead of net invested capital; confusing pre-tax with after-tax"},
+    "p1b_c_154": {"topic": "Transfer pricing general rule", "ready": true, "ec_plan": "At full capacity, minimum TP = market price. But should buyer pay it? Firm-wide optimization", "dist_plan": "Adding outlay + market price (double-counting); averaging (no theoretical basis)"},
+    "p1b_c_184": {"topic": "Variance investigation EV", "ready": true, "ec_plan": "Sensitivity: at 30% probability, break-even. Intangible benefits of investigation", "dist_plan": "Confusing gross benefit with net EV; confusing investigation cost with not-investigating value"},
+    "p1b_d_095": {"topic": "FIFO equivalent units", "ready": true, "ec_plan": "Compare FIFO vs WA. FIFO gives purer measure of CURRENT period. Manager preference", "dist_plan": "Ignoring ending WIP; treating beginning WIP as 100% complete this period"},
+    "p1b_d_098": {"topic": "FIFO cost per EU", "ready": true, "ec_plan": "FIFO rate reflects THIS period's efficiency only. Compare to prior period for cost creep signal", "dist_plan": "Mixing periods: including BWIP costs in numerator but FIFO EU in denominator"},
+    "p1b_d_112": {"topic": "NRV joint cost allocation", "ready": true, "ec_plan": "NRV hides unprofitability — it's allocation, not profitability signal. Sell-or-process-further is the correct tool", "dist_plan": "Using physical-units ratio instead of NRV; using gross sales value instead of NRV"},
+    "p1b_d_119": {"topic": "Step-down method", "ready": true, "ec_plan": "Sequence dependency is biggest weakness. Compare Admin-first vs IT-first results. Only reciprocal resolves", "dist_plan": "Forgetting that closed dept receives allocations from prior depts; allocating back to closed dept"},
+    "p1b_d_120": {"topic": "Reciprocal method", "ready": true, "ec_plan": "Compare direct vs step-down vs reciprocal. When does precision justify complexity?", "dist_plan": "Attributing one department's fully-allocated cost to the wrong department name"},
+    "p1b_d_138": {"topic": "Multi-product CVP break-even", "ready": true, "ec_plan": "BE is FUNCTION of sales mix. If mix shifts to lower-CM product, BE rises. Manager must understand this", "dist_plan": "Using single product's CM instead of weighted-average; assuming all units are X or all are Y"},
+    "p1b_d_144": {"topic": "Constrained resource", "ready": false, "status": "ALREADY ANALYZE per S844 — skip"},
+    "p1_cd_009": {"topic": "VOH spending variance definition", "ready": true, "ec_plan": "From definition to analytical context: who is responsible? When is it actionable?", "dist_plan": "Confusing cost-side with revenue-side variances; confusing spending with efficiency"},
+    "p1_cd_033": {"topic": "Dual-rate transfer pricing", "ready": true, "ec_plan": "Incentive-best but accounting-complex. Both sides willing to transact. Consolidation elimination needed", "dist_plan": "Thinking dual-rate eliminates need for policy; matching market vs resolving VC vs FC conflict"},
+    "p1_cd_042": {"topic": "Responsibility accounting — variance investigation", "ready": true, "ec_plan": "Production manager investigates quantity, but root cause may be purchasing manager. Attribution nuance", "dist_plan": "Confusing price variance owner with quantity variance owner"},
+    "p1_dd_039": {"topic": "Kaizen costing", "ready": false, "status": "Not yet analyzed — in remaining 10 items"},
+    "p1_dd_054": {"topic": "CM format vs traditional", "ready": false, "status": "Not yet analyzed — in remaining 10 items"},
+    "p1e_c_039": {"topic": "Market share variance", "ready": false, "status": "Not yet analyzed — Pack E items"},
+    "p1e_c_040": {"topic": "Market size variance", "ready": false, "status": "Not yet analyzed — Pack E items"}
+  },
+
+  "remaining_items_not_yet_researched": [
+    "P1E-C-042", "P1E-C-043", "P1E-C-059", "P1E-C-062",
+    "P1-BC-037", "P1-CC-016", "P1-DC-021", "P1-DD-039", "P1-DD-054",
+    "P1-CD-009 area (Pack D items need verification against actual file state)"
+  ],
+
+  "execution_readiness": {
+    "items_ready_for_upgrade": 22,
+    "items_needing_individual_research": 10,
+    "items_already_complete": 1,
+    "items_not_suitable": 2,
+    "pipeline_time_estimate": "22 items x 17.5 min = 6.4 hours (one long session)",
+    "batch_plan": "Batch 1: 22 Pack B items (~6.4 hrs). Batch 2: 10 Pack C/D/E items (~2.9 hrs)",
+    "recommendation": "Authorize Batch 1 execution in dedicated session using S836 pipeline"
+  },
+
+  "deliverables": {
+    "json": "scripts/output/SESSION845_COHORT_A_RESULTS.json",
+    "md": "scripts/output/SESSION845_AUTHORING_QUALITY_REPORT.md"
+  }
+}

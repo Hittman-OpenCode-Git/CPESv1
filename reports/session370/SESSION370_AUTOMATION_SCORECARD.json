@@ -1,0 +1,259 @@
+{
+  "session": "S370",
+  "date": "2026-07-28",
+  "type": "sustainability-closure-board",
+  "mode": "read-only",
+  "predecessors": ["S367", "S368", "S367A", "S369"],
+  "prior_board": {
+    "session": "S366",
+    "verdict": "SUSTAINABLE WITH RISKS",
+    "score": 57,
+    "confidence": 85
+  },
+
+  "inputs_summary": {
+    "s367_remediation_automation": {
+      "automation_ratio_pct": 30.7,
+      "total_automatable_hours": 24.5,
+      "total_manual_hours_remaining": 79.8,
+      "biggest_win": "DL-031 calibration (10.0 hours saved)",
+      "automation_dev_effort_hours": 8.0,
+      "roi_ratio": 3.06,
+      "verdict": "69.3% of remediation labor is irreducible content work. Automation can eliminate the 30.7% verification/scanning overhead."
+    },
+    "s368_throughput_simulation": {
+      "current_sustained_rate": "5.6 items/day",
+      "s899_peak_rate": "20 items/session",
+      "automation_assisted_rate": "12 items/session",
+      "sessions_to_40pct_current": 144,
+      "sessions_to_40pct_peak": 99,
+      "sessions_to_40pct_automated": 153,
+      "full_certification_sessions": 21,
+      "binding_constraint": "Content design capacity — confirmed. Evaluate is the irreducible long pole (74 sessions even at peak)."
+    },
+    "s367a_standards_adequacy": {
+      "sample": "15 cases, 82 items across all 6 domains",
+      "legacy_pass_rate": "15/15 (100%)",
+      "framework_2026_pass_rate": "5/15 (33%)",
+      "conditional_2026": 9,
+      "fail_2026": 1,
+      "recommendation": "Two-tier certification: Tier 1 (correctness gate, all 75 cases pass) + Tier 2 (educational quality target, aspirational)",
+      "biggest_quality_gap": "Explanation depth — 5.8x difference between Production (2,000+ chars) and Draft cases (380 chars)"
+    },
+    "s369_automation_roadmap": {
+      "current_score": 48,
+      "minimum_package_to_55": {
+        "components": 5,
+        "effort_hours": 10.0,
+        "projected_score": 55,
+        "monthly_savings_hours": 12.5,
+        "roi_break_even_months": 0.8
+      },
+      "package_to_60": {
+        "components": 10,
+        "effort_hours": 27.5,
+        "projected_score": 60
+      },
+      "verdict": "55 is achievable without architectural changes. All components are additive (new scripts + 1 guard rule extension)."
+    }
+  },
+
+  "updated_scorecard": {
+    "content_production_rate": {
+      "s366": 55,
+      "s370": 55,
+      "delta": 0,
+      "rationale": "Throughput unchanged. Automation improvements reduce overhead but do not increase creative authoring speed. S899 model proven but not sustained."
+    },
+    "quality": {
+      "s366": 55,
+      "s370": 65,
+      "delta": "+10",
+      "rationale": "S367A standards adequacy audit confirms zero accounting errors across sampled cases. Two-tier certification model (recommended) protects learners while enabling continuous improvement. DL-021 resolved (S364). FD-075 refuted (S363). DL-035 remains the only HIGH Certified pool defect. Quality score rises on confidence, not on defect count change."
+    },
+    "maturity_velocity": {
+      "s366": 58,
+      "s370": 63,
+      "delta": "+5",
+      "rationale": "S367-S369+S367A represents a 4-session planning cycle with measurable deliverables. The governance verification chain (board claim → independent audit → per-session synthesis → board aggregation) has been demonstrated end-to-end. Cross-session artifact reuse is strong: S369 consumed S367 findings, S370 consumes all four. The program is learning."
+    },
+    "administration": {
+      "s366": 65,
+      "s370": 70,
+      "delta": "+5",
+      "rationale": "Standards conflict resolved: S367A provides evidence-based answer to whether CAQS v1.0 is adequate (MIXED — keep correctness gates, add quality targets). This eliminates the documentation ambiguity that S366 flagged. Certification model recommendation (two-tier) is specific and actionable."
+    },
+    "automation": {
+      "s366": 48,
+      "s370": 48,
+      "delta": 0,
+      "rationale": "Score unchanged — this was a planning cycle, not an implementation cycle. The roadmap (S369) is validated. The time-loss analysis (S367) quantifies the opportunity. The score will move when S370-A executes Quick Wins 1-3."
+    },
+    "expansion_capacity": {
+      "s366": 60,
+      "s370": 60,
+      "delta": 0,
+      "rationale": "183 archived DL-012 clone slots provide structural capacity. S368 throughput model confirms the slots exist and the S899 model works. No new capacity created or consumed."
+    },
+    "overall": {
+      "s366": 57,
+      "s370": 60,
+      "delta": "+3",
+      "scores_by_area": {
+        "Content Production Rate": { "score": 55, "weighted": 13.75 },
+        "Quality": { "score": 65, "weighted": 16.25 },
+        "Maturity Velocity": { "score": 63, "weighted": 9.45 },
+        "Administration": { "score": 70, "weighted": 10.50 },
+        "Automation": { "score": 48, "weighted": 4.80 },
+        "Expansion Capacity": { "score": 60, "weighted": 6.00 }
+      },
+      "raw_total": 60.75,
+      "confidence": 88
+    }
+  },
+
+  "s366_conditions_status": {
+    "condition_1_fd075_resolved": { "status": "MET", "note": "FD-075 refuted S363 — DL-029 forward-scan artifact. 0 CRITICAL defects in Certified pool." },
+    "condition_2_dl021_resolved": { "status": "MET", "note": "DL-021 confirmed resolved S364. 100/100 Pack E Section C items have fully authored distractor EW fields. Documentation conflict closed." },
+    "condition_3_dl035_remediated": { "status": "NOT MET", "note": "39 Certified Domain F items still carry ~117 empty distractor EW slots. S816-S818 scheduled but not executed. Rule 6 blocks new instances." },
+    "condition_4_dl031_begun": { "status": "NOT MET", "note": "DL-031 recalibration not started. S369 scan_dl031.js is designed (1.5 hour build) but not implemented. ~500 items remain uncalibrated." },
+    "condition_5_registry_regenerated": { "status": "NOT MET", "note": "MASTER_QUESTION_REGISTRY.md remains 2+ days stale with broken section mapping (I/P/T/U). S369 includes Fix generate_registry.js as Quick Win #1." },
+    "condition_6_baselines_reconciled": { "status": "PARTIALLY MET", "note": "CURRENT_BASELINES.md §2 now authoritative (S811 T0). Some §1 entries carry TBD placeholders for MD5/size. Hash values are current and verified." },
+    "condition_7_scan_methodology_fixed": { "status": "PARTIALLY MET", "note": "All active production scanners use Function constructor (DL-029 resolved). Three legacy scripts (check_ew.js, session86_*.js) still carry forward-scan regex — marked candidate_archive." },
+    "condition_8_throughput_sustained": { "status": "NOT MET", "note": "No authoring sessions since S362. The 350-series was a planning cycle. S899 model validated but not executed." },
+    "summary": "2 of 8 fully met (+0 from S366). 2 partially met (+0). 4 not met (+0). The S366 conditions were designed for an execution cycle, not a planning cycle. The four NOT MET conditions remain as the execution agenda for S371+."
+  },
+
+  "automation_trajectory": {
+    "current": 48,
+    "post_quick_wins": {
+      "score": 51,
+      "components": ["Fix generate_registry.js", "DL-021 Rule 10", "scan_dl031.js"],
+      "effort_hours": 3.0,
+      "sessions": "S370-A"
+    },
+    "post_phase_1": {
+      "score": 55,
+      "components": ["pre_delivery_safety_check.js", "rebuild_baselines.js", "post_change_qc.js"],
+      "effort_hours": 8.0,
+      "total_with_quick_wins_hours": 11.0,
+      "sessions": "S370-A + S371 + S372"
+    },
+    "post_phase_2": {
+      "score": 60,
+      "components": ["CI/CD pipeline", "clone_replacement_scaffolder.js", "script hygiene catalog"],
+      "effort_hours": 16.0,
+      "total_cumulative_hours": 27.0,
+      "sessions": "S373-S376"
+    }
+  },
+
+  "executive_board": {
+    "verdict": "SUSTAINABLE WITH RISKS",
+    "score": 60,
+    "confidence": 88,
+    "can_automation_move_to_sustainable": true,
+    "smallest_package_to_sustainable": {
+      "automation": {
+        "components": [
+          "Fix generate_registry.js section mapping (1h)",
+          "DL-021 Governance Guard Rule 10 (0.5h)",
+          "pre_delivery_safety_check.js (3h)",
+          "rebuild_baselines.js full regeneration (2h)",
+          "post_change_qc.js automated QC pipeline (3h)"
+        ],
+        "total_hours": 10.0,
+        "automation_score": "48 → 55"
+      },
+      "content": {
+        "actions": [
+          "Resume S899 clone replacement at 20 items/session — target 183 archived DL-012 slots in Pack C+D Sections E+F",
+          "DL-035 remediation (S816-S818) — author ~117 distractor explanations for 39 Certified Domain F items",
+          "DL-031 recalibration — run scan_dl031.js once built; downgrade ~500 definition-match items from Moderate → Easy"
+        ],
+        "total_sessions_estimate": "~15 authoring sessions + 3 remediation batches + 1 calibration session"
+      },
+      "standards": {
+        "actions": [
+          "Adopt S367A two-tier model: Tier 1 (correctness + structure) = delivery gate; Tier 2 (explanation depth + exhibits + cognitive progression) = quality target",
+          "Upgrade ProductionStatus Draft → Production for 44 cases meeting Tier 1 (1 hour, string-change only)",
+          "Begin Tier 2 explanation depth expansion for highest-priority Draft cases — focus on sections with highest learner volume (B, C, D)"
+        ]
+      }
+    },
+    "why_not_just_sustainable": [
+      "DL-035 (39 items, ~117 empty distractor EW) remains in Certified pool — degraded educational feedback for Domain F learners",
+      "DL-031 (~500 inflated difficulty labels) distorts analytics — no recalibration begun",
+      "S899 throughput model validated but not sustained — zero authoring sessions since S362",
+      "Cognitive distribution gap at 5.8% Analyze+Evaluate vs 40% CAQS target — this is a ~100 session gap even at peak velocity",
+      "MASTER_QUESTION_REGISTRY.md stale and broken — tools consuming it produce unreliable data",
+      "No CI/CD pipeline — T0/Tmid/Tend checkpoints remain fully manual (AGENTS.md §13.1)"
+    ],
+    "what_upgrade_requires": [
+      "Execute S369 Phase 1 automation package (10 hours, scores 55)",
+      "Remediate DL-035 within 1 week (S816-S818, ~6 hours of authoring)",
+      "Sustain 2+ sessions of S899-rate authoring to prove the model at scale",
+      "Begin DL-031 recalibration (scan_dl031.js + label downgrade, ~3 hours total)",
+      "Regenerate MASTER_QUESTION_REGISTRY.md (1 hour fix + regeneration)",
+      "Adopt two-tier certification model for case studies (governance change, not code change)"
+    ]
+  },
+
+  "binding_constraint_reassessment": {
+    "s366_assessment": "Bifurcated: content design throughput + automation infrastructure are joint constraints",
+    "s370_assessment": "REFINED. Automation is a SOLVABLE constraint (10 hours, no architectural changes). Content design throughput is the IRREDUCIBLE constraint — it cannot be automated away. The correct framing: automation is a cost-of-doing-business reduction, not a constraint removal.",
+    "implication": "After Phase 1 automation (48→55), the binding constraint simplifies back to a single constraint: content design throughput. This is the constraint S362 identified. The 350-series validated this — automation makes it cheaper to do the work, but the work itself (authoring stems, designing distractors, writing explanations) remains creative, judgment-based, and irreducible."
+  },
+
+  "answer_to_final_question": {
+    "question": "Can automation realistically move the program from SUSTAINABLE WITH RISKS to SUSTAINABLE without requiring major architectural changes?",
+    "answer": "YES",
+    "rationale": "The smallest automation package (5 components, 10 hours) raises the automation score from 48→55 and eliminates the automation-as-constraint. All five components are additive — new scripts and one guard rule extension — with zero architectural changes. The governance guard plugin architecture supports additional rules without refactoring. The pack_reader.js engine provides reliable Function constructor parsing for all new scripts.",
+    "caveats": [
+      "Automation alone does NOT achieve SUSTAINABLE. The non-automatable conditions must also be met: DL-035 remediation, sustained authoring throughput, DL-031 recalibration, and registry regeneration.",
+      "The two-tier certification model (S367A recommendation) must be adopted as a governance change to prevent standards inflation from becoming a new bottleneck.",
+      "The S899 model (20 items/session, 0 defects) must be sustained for 2+ sessions to prove the expansion model at scale. This is a commitment test, not a capability test.",
+      "Even at peak throughput, closing the Evaluate gap alone requires 74 sessions — the cognitive gap is a ~3-5 month program regardless of automation investment."
+    ],
+    "smallest_automation_package": {
+      "components": [
+        "Fix generate_registry.js section mapping — restore A-F section labels (1.0h)",
+        "DL-021 Governance Guard Rule 10 — BLOCK absent distractor EW fields (0.5h)",
+        "pre_delivery_safety_check.js — automated delivery pool verification (3.0h)",
+        "rebuild_baselines.js — full regeneration from source, no regex hacks (2.0h)",
+        "post_change_qc.js — automated post-change QC pipeline, chains 10 manual steps (3.0h)"
+      ],
+      "total_effort": "10.0 hours (3 sessions: S370-A, S371, S372)",
+      "automation_score_impact": "48 → 55 (+7)",
+      "monthly_hours_saved": 12.5,
+      "roi_break_even": "< 1 month"
+    }
+  },
+
+  "recommended_session_sequence": {
+    "s370a": { "action": "Execute Quick Wins 1-3: Fix generate_registry.js + Rule 10 + scan_dl031.js. Automation: 48→51.", "effort_hours": 3.0 },
+    "s371": { "action": "Implement pre_delivery_safety_check.js. Automation: 51→53.", "effort_hours": 3.0 },
+    "s372": { "action": "Implement rebuild_baselines.js + post_change_qc.js. Automation: 53→55.", "effort_hours": 5.0 },
+    "s816_s818": { "action": "DL-035 remediation — author ~117 distractor explanations for 39 Certified Domain F items.", "effort_hours": 6.0 },
+    "s373": { "action": "Regenerate MASTER_QUESTION_REGISTRY.md. Begin DL-031 recalibration via scan_dl031.js.", "effort_hours": 3.0 },
+    "s374+": { "action": "Resume S899 clone replacement at 20 items/session. Target 183 archived DL-012 slots. Begin closing cognitive gap.", "effort_hours": "~15+ sessions" }
+  },
+
+  "data_sources": [
+    "reports/session367/SESSION367_REMEDIATION_AUTOMATION.json",
+    "reports/session367/SESSION367_TIME_LOSS_ANALYSIS.md",
+    "reports/session368/SESSION368_THROUGHPUT_MODEL.json",
+    "reports/session368/SESSION368_EXPANSION_FORECAST.md",
+    "reports/session367a/SESSION367A_STANDARDS_ADEQUACY_AUDIT.json",
+    "reports/session367a/SESSION367A_SAMPLE_REVIEW.md",
+    "reports/session367a/SESSION367A_GAP_ANALYSIS.md",
+    "reports/session369/SESSION369_AUTOMATION_ROADMAP.json",
+    "reports/session369/SESSION369_IMPLEMENTATION_PLAN.md",
+    "reports/sustainability/SESSION366_EXECUTIVE_DECISION.md",
+    "reports/sustainability/SESSION365_AUTOMATION_GAP_REPORT.md",
+    "reports/sustainability/SESSION362_EXECUTIVE_DECISION.md",
+    "knowledge/CURRENT_BASELINES.md",
+    "knowledge/DEFECT_LIBRARY.md",
+    "knowledge/CAQS_v1.0.md"
+  ]
+}

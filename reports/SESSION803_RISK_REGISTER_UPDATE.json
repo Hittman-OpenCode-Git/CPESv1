@@ -1,0 +1,175 @@
+{
+  "session": "803",
+  "agent": "Q",
+  "title": "Risk Register Update — Post-S803 Wave 1 Clone Archival",
+  "date": "2026-07-26",
+  "predecessor": "SESSION802_RISK_REGISTER.json",
+  "portfolio_state": {
+    "verified_via": "Direct Select-String grep on all 5 pack files, 2026-07-26",
+    "pack_a": { "certified": 482, "archived": 18, "unprocessed": 0, "total": 500 },
+    "pack_b": { "certified": 500, "archived": 0, "unprocessed": 0, "total": 500 },
+    "pack_c": { "certified": 350, "archived": 112, "unprocessed": 38, "total": 500 },
+    "pack_d": { "certified": 350, "archived": 111, "unprocessed": 39, "total": 500 },
+    "pack_e": { "certified": 500, "archived": 0, "unprocessed": 0, "total": 500 },
+    "totals": { "certified": 2182, "archived": 241, "unprocessed": 77, "total": 2500 },
+    "certified_pct": 87.3,
+    "archived_pct": 9.6,
+    "unprocessed_pct": 3.1
+  },
+  "wave1_outcomes": {
+    "clone_archival_progress": {
+      "pre_wave1_archived_clones": 128,
+      "wave1_archived_clones": 95,
+      "total_archived_clones": 223,
+      "clone_reduction_detail": "109 of ~765 known clones now Archived (14.2% progress). Remaining ~656 clones still active.",
+      "sections_affected": "Pack C Section F: 37 archived (38 active seeds remain). Pack D Section F: 38 archived (37 active seeds — see N7 for 1-item gap).",
+      "risk_impact": "R3 clone density reduced but still HIGH — 656 clone items remain diluting learner pool."
+    },
+    "p1_e_056_restoration": {
+      "prior_state": "Archived (incorrect — archived by S800-era autonomous run; DL-033 Pack E vs. Pack A Section E naming confusion root cause)",
+      "current_state": "Certified (S803 Wave 1)",
+      "defects_resolved": "DL-016 metadata-content mismatch fixed. DL-008 ExplanationWrong[CC] cleared. DL-026 empty non-CC slot filled.",
+      "certification_batch": "S803 Wave 1 — Archived-in-error restoration",
+      "risk_impact": "Resolved — no remaining incorrectly archived items identified, but see N6 for systemic concern."
+    },
+    "section_f_rationalization": {
+      "pack_c_section_f": { "active": 38, "archived": 37, "total": 75 },
+      "pack_d_section_f": { "active": 39, "archived": 36, "total": 75 },
+      "domain_f_active_pool": { "pre_wave1": 375, "post_wave1": 264, "reduction_pct": 29.6 },
+      "note": "All seeds preserved. Domain F remains well-covered despite pool shrinkage."
+    }
+  },
+  "risk_reassessment": {
+    "R1_dl008_certified": {
+      "severity": "RESOLVED",
+      "detail": "No change from S802. 0 Certified DL-008 across all 2,500 items. Forward-scan refutation holds."
+    },
+    "R2_pack_e_thinness": {
+      "severity": "HIGH",
+      "detail": "No change from S802. 500 Certified items, median ExplanationCorrect=67 chars, 92.4% zero ASC/COSO/GAAP citations. Pack E remains educationally impoverished. No remediation in Wave 1 (Wave 1 targeted clone archival, not content enhancement)."
+    },
+    "R3_clone_waste": {
+      "severity": "HIGH",
+      "detail_post_wave1": "SIGNIFICANT REDUCTION. Pre-Wave 1: 128 archived clones. Post-Wave 1: ~223 archived clones. ~656 clone items remain in active Certified pool. Pack C now 350 Certified (down from 500 — 112 Archived + 38 Unprocessed). Pack D now 350 Certified (down from 500 — 111 Archived + 39 Unprocessed). 109 of ~765 clones addressed (14.2%). Pack D remains the worst offender (90.6% clones by S801 analysis — archive progress has been concentrated in Sections E and F only). Sections A-D still contain the bulk of clone waste."
+    },
+    "R4_concurrency": {
+      "severity": "LOW",
+      "detail": "No change from S802. DL-019 incident was measurement artifact. File-lock protocol still unimplemented but no incidents since S801 refutation."
+    },
+    "R5_hash_drift": {
+      "severity": "LOW",
+      "detail": "No change from S802. CURRENT_BASELINES.md still stale. Hashes differ from all 5 pack files due to authorized S530-S536 drift plus S803 Wave 1 writes. Needs recapture."
+    }
+  },
+  "new_risks": [
+    {
+      "id": "N1",
+      "severity": "HIGH",
+      "category": "Governance Documentation",
+      "description": "SESSION_STATUS_2026-07-24 contains critically stale data. S802 prioritized this as P0 remediation but no updated SESSION_STATUS was published before S803. Session startup protocol (AGENTS.md §9) still directs agents to stale status.",
+      "mitigation": "Publish corrected SESSION_STATUS. Cross-reference all counts against raw file evidence per AGENTS.md §5. Now urgent — stale data has survived two sessions.",
+      "status": "ACTIVE — carried forward from S802, not addressed"
+    },
+    {
+      "id": "N2",
+      "severity": "HIGH",
+      "category": "Scan Methodology",
+      "description": "DL-029 forward-scan methodology caused 3 false P0 alarms (67 DL-008, FD-045, FD-075). CorrectChoice-before-QuestionID is universal across all 5 packs. Mandated Function-constructor same-object parse for all future defect scans. Scripts not yet updated.",
+      "mitigation": "Update all scan scripts in scripts/ to be CC-position-aware. Document methodology requirement in AGENTS.md. Publish corrected DL-008 history.",
+      "status": "ACTIVE — carried forward from S802, not addressed"
+    },
+    {
+      "id": "N3",
+      "severity": "MEDIUM",
+      "category": "Pack File Integrity Tracking",
+      "description": "CURRENT_BASELINES.md contains stale SHA-256 hashes for all 13 runtime-critical files. AGENTS.md §13.1 requires T0 hash verification — every session starts with baseline mismatch. S803 Wave 1 writes make the hashes even more stale.",
+      "mitigation": "Recapture all 13 runtime hashes. Update CURRENT_BASELINES.md.",
+      "status": "ACTIVE — carried forward from S802, now more stale"
+    },
+    {
+      "id": "N4",
+      "severity": "LOW",
+      "category": "Structural",
+      "description": "FD-046 is a metadata-only orphan shell in Pack D Section F. No Stem, Choices, CorrectChoice, or ExplanationCorrect. Already Archived — no learner impact.",
+      "mitigation": "No action needed. Document in DEFECT_LIBRARY.md for completeness.",
+      "status": "MONITORED — no action required"
+    },
+    {
+      "id": "N5",
+      "severity": "LOW",
+      "category": "Cosmetic Metadata",
+      "description": "DL-015 Topic label +1 shift and DL-016 residual ExplanationWrong text describing neighbor QID's choices affect small number of items. Zero learner impact.",
+      "mitigation": "Fix during next Section certification pass.",
+      "status": "MONITORED — deferred"
+    },
+    {
+      "id": "N6",
+      "severity": "MEDIUM",
+      "category": "Process / Methodology — Archived-in-Error",
+      "description": "P1-E-056 was incorrectly Archived by S800-era autonomous process. Root cause: DL-033 naming confusion ('Pack A Section E' vs. 'Pack E' file) caused cross-file misidentification. The autonomous run searched pack_e_corrected.js for items residing in pack_a_corrected.js — finding 0 hits and concluding the items didn't exist. The 18 Currently-Archived items in Pack A (including 16 Section E clones + P1-E-056 previously) were all processed by the same autonomous pipeline. P1-E-056 was confirmed unique (independent topic: physical count control) and restored. The other 17 Archived items in Pack A are confirmed genuine clones — correctly archived.",
+      "questions_open": [
+        "Were other items incorrectly archived in the same autonomous run? Review of the remaining 18 Pack A Archived items: 17 are genuine clones (confirmed by S801 clone analysis). P1-E-056 was the only incorrectly archived item identified.",
+        "Is DL-033 naming confusion a risk for other cross-file operations? YES — any tool that uses pack-file-level operations without section-scope awareness is vulnerable.",
+        "Does the S800-era autonomous run's logic need audit? Not urgent — the run archived Pack A Section E clones and most were correct. Only P1-E-056 was a false positive."
+      ],
+      "mitigation": "Document DL-033 naming convention in AGENTS.md as a standing caution. Require disambiguation check before any cross-file archive operation: 'Pack E' means pack_e_corrected.js; 'Pack A Section E' means Section E items in pack_a_corrected.js. Audit P1-E-056 restoration for completeness (DL-016/DL-008/DL-026 all confirmed fixed).",
+      "status": "RESOLVED — P1-E-056 restored to Certified. One-off incident confirmed (no other incorrect archives found). Process risk: MEDIUM — naming confusion could recur without explicit disambiguation rule."
+    },
+    {
+      "id": "N7",
+      "severity": "LOW",
+      "category": "Clone Archival Completeness",
+      "description": "Pack D Section F expected 55 items to be archived (leaving 20 active seeds). Only 54 were archived — 1 clone item escaped the archival wave. Pack D Section F now has 39 active items (36 archived), meaning 1 clone that should be archived is still in the active pool. This item has no learner-pool impact if it's Unprocessed, but could dilute session composition if Certified.",
+      "mitigation": "Identify the 1 escaped item and determine its question_state. If Certified, prioritize archival. If Unprocessed, defer. Verify whether the escaped item is a clone (same rotation group, different company name) or a genuine unique seed.",
+      "status": "ACTIVE — identification needed"
+    },
+    {
+      "id": "N8",
+      "severity": "MEDIUM",
+      "category": "DL-016 Metadata-Content Shift — Pack A Section E Residual",
+      "description": "P1-E-056's metadata block (ChoiceA-D, ExplanationWrongA-D) was from P1-E-055 — the classic DL-016 +1 offset pattern. This was fixed during the restoration (genuine choice-specific distractor explanations authored). However, P1-E-055, P1-E-054, P1-E-053, and others in the same rotation group likely have the same DL-016 shift — their metadata blocks advertise the previous QID's topic. P1-E-053 is Certified (unique seed); the remaining 16 Section E items are Archived (clones) and out of learner pool. The risk is that P1-E-053 (Certified, in learner pool) has stale metadata-block choices that don't match its content-block choices, meaning learners who select wrong answers on P1-E-053 could see explanations about P1-E-052's topic.",
+      "questions_open": [
+        "P1-E-053 is the critical item — it's the only Certified Pack A Section E item. Does it have DL-016 shift?",
+        "The 16 Archived clones don't need remediation (not in learner pool) but their metadata should be documented as stale for future reference.",
+        "P1-E-055 and P1-E-054 are archived clones — no learner risk. Only P1-E-053 needs audit."
+      ],
+      "mitigation": "Audit P1-E-053 for DL-016 metadata-content mismatch. If confirmed, fix metadata-block ExplanationWrong fields to match content-block choices. Compare to P1-E-056 fix methodology.",
+      "status": "ACTIVE — P1-E-053 audit needed"
+    }
+  ],
+  "resolved_risks": [
+    "R1: 67 Certified DL-008 — REFUTED (0 exist, forward-scan false positives, confirmed S801-S803)",
+    "S800 FD-045 'missing content block' — REFUTED (structurally complete)",
+    "S800 FD-075 'missing content block' — REFUTED (structurally complete)",
+    "DL-016 dual-block metadata concern — REFUTED (all 5 packs single-object architecture)",
+    "P1-E-056 archived-in-error — RESOLVED (restored to Certified, DL-016/DL-008/DL-026 all fixed in S803 Wave 1)"
+  ],
+  "active_risks_priority": [
+    "1. R2 — Pack E educational thinness (HIGH: 500 Certified items, median EC=67 chars, 92.4% zero citations)",
+    "2. R3 — Pack C/D clone density (HIGH: ~656 clone items remain in active pool, 14.2% addressed, Pack D 90.6% clones)",
+    "3. N1 — SESSION_STATUS documentation staleness (HIGH: wrong counts survive 2 sessions, directs all session startups)",
+    "4. N2 — DL-029 forward-scan methodology (HIGH: caused 3 false P0 alarms, scripts not yet updated)",
+    "5. N6 — Archived-in-error process risk (MEDIUM: P1-E-056 restored; DL-033 naming confusion a standing risk for cross-file ops)",
+    "6. N8 — P1-E-053 DL-016 metadata shift (MEDIUM: Certified item may show wrong-topic distractor explanations)",
+    "7. N3 — CURRENT_BASELINES.md staleness (MEDIUM: all 13 runtime hashes stale, now further drifted by S803 writes)",
+    "8. R4 — DL-019 concurrency (LOW: incident was measurement artifact; file-lock unimplemented but no active risk)",
+    "9. R5 — Pack file hash drift (LOW: authorized drift only, needs baseline recapture)",
+    "10. N7 — Pack D Section F 1-item archival gap (LOW: 1 clone escaped; may be Unprocessed or Certified)",
+    "11. N4 — FD-046 orphan shell (LOW: already Archived, zero learner impact)",
+    "12. N5 — DL-015/DL-016 cosmetic metadata (LOW: Topic label shift, zero learner impact)"
+  ],
+  "learner_pool_risk": "LOW — S801-S803 verified: 0 Certified DL-008 across all 2,500 items. 2,182 Certified items are structurally governance-clean. Remaining risks are educational quality (Pack E thinness — 500 Certified items), content dilution (clone waste — ~656 clone items still active), documentation staleness (N1/N3), and isolated metadata defects (N6/N7/N8). N8 (P1-E-053 DL-016 shift) is the only risk where a Certified item may deliver wrong-topic distractor explanations to learners. Priority: audit P1-E-053.",
+  "s803_wave1_cross_reference": {
+    "clone_archival": "S803 Wave 1 — Pack C/D Section F clone archival (37+36 = 73 items archived)",
+    "p1_e_056_restoration": "S803 Wave 1 — P1-E-056 Archived-in-error restoration to Certified",
+    "risk_derived_from": "S801 clone analyses (Pack C: 347/500 clones, Pack D: 437/500 clones), S802 risk register, direct grep verification of all 5 packs"
+  },
+  "next_session_recommendations": [
+    "Audit P1-E-053 for DL-016 metadata-content mismatch (N8 — only Certified item at risk)",
+    "Identify the 1 escaped Pack D Section F clone (N7 — archived-in-error gap)",
+    "Publish corrected SESSION_STATUS (N1 — critical: 2 sessions of stale data)",
+    "Update CURRENT_BASELINES.md with current SHA-256 hashes (N3)",
+    "Update scan scripts to be CC-position-aware (N2)",
+    "Continue clone archival for Pack C/D Sections A-D (R3 — 656 remaining)"
+  ]
+}

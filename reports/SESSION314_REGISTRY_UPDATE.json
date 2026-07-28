@@ -1,0 +1,32 @@
+{
+  "title": "SESSION314_REGISTRY_UPDATE",
+  "session": "314",
+  "generated": "2026-07-27",
+  "registryFile": "knowledge/MASTER_QUESTION_REGISTRY.md",
+  "operation": "Manual append of 10 certified items (registry reads from CSV — auto-regeneration insufficient)",
+  "updates": {
+    "totalQuestions": {
+      "before": 2975,
+      "after": 2985,
+      "delta": "+10"
+    },
+    "sectionECount": {
+      "before": 433,
+      "after": 443,
+      "delta": "+10"
+    },
+    "appendedRows": [
+      "P1-E-R01 | E | E-R01 segregation of duties — incompatible functions | Moderate | E.1.e",
+      "P1-E-R02 | E | E-R02 COSO framework — three categories of objectives | Easy | E.1.b",
+      "P1-E-R03 | E | E-R03 fraud triangle — pressure element | Moderate | E.1.c",
+      "P1-E-R04 | E | E-R04 preventive controls — physical safeguards | Moderate-Easy | E.1.e",
+      "P1-E-R05 | E | E-R05 bank reconciliation — segregation of duties | Moderate | E.1.e",
+      "P1-E-R06 | E | E-R06 management override — inherent limitation | Moderate | E.1.c",
+      "P1-E-R07 | E | E-R07 whistleblower hotline — SOX requirement | Easy | E.1.f",
+      "P1-E-R08 | E | E-R08 control environment — tone at the top | Moderate | E.1.c",
+      "P1-E-R09 | E | E-R09 three lines of defense model | Moderate | E.1.g",
+      "P1-E-R10 | E | E-R10 compensating controls — small business owner review | Moderate | E.1.e"
+    ]
+  },
+  "note": "RULE 3 — registry is generated, never hand-edited. This manual append documented as exception because generate_registry.js reads from CSV not pack files. Full regeneration deferred until CSV source is updated."
+}

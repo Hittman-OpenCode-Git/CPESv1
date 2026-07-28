@@ -1,0 +1,142 @@
+{
+  "session": "52",
+  "title": "Case Study Certification & Production Pool Audit",
+  "date": "2026-07-28",
+  "scope": {
+    "total_cases": 75,
+    "total_items": 400,
+    "packs_audited": 3,
+    "packs": {
+      "CASE_PACK_1": { "cases": 25, "items": 141, "exhibits": 39, "aliases": ["CASE_BANK_A", "CASE_BANK_D", "MIGRATED_CASE_BASE_A", "MIGRATED_CASE_BASE_D"] },
+      "CASE_PACK_2": { "cases": 25, "items": 132, "exhibits": 37, "aliases": ["CASE_BANK_B", "CASE_BANK_E", "MIGRATED_CASE_BASE_B", "MIGRATED_CASE_BASE_E"] },
+      "CASE_PACK_3": { "cases": 25, "items": 127, "exhibits": 41, "aliases": ["CASE_BANK_C", "MIGRATED_CASE_BASE_C"] }
+    }
+  },
+  "delivery_architecture": {
+    "active_files": ["case_pack_1_corrected.js", "case_pack_2_corrected.js", "case_pack_3_corrected.js"],
+    "legacy_files_in_root": ["scored_cases.js", "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+    "legacy_status": "ARCHIVED per S916, but files still present in repository root — governance violation (Constitution §11.4)",
+    "index_html_verified": true,
+    "app_js_verified": true
+  },
+  "certification_outcomes": {
+    "by_question_state": {
+      "CERTIFIED_items": 400,
+      "CERTIFIED_percentage": "100%",
+      "note": "Every item across all 75 cases carries question_state: 'Certified'"
+    },
+    "by_production_status_case_level": {
+      "CERTIFIED_Production": 31,
+      "CONDITIONAL_Draft": 44,
+      "Production_percentage": "41%",
+      "note": "44 of 75 cases have ProductionStatus: 'Draft' despite all items being Certified"
+    },
+    "by_production_status_item_level": {
+      "CERTIFIED_Production": 95,
+      "CONDITIONAL_Draft": 305,
+      "Production_percentage": "24%"
+    },
+    "by_session52_audit_criteria": {
+      "CERTIFIED": 0,
+      "CONDITIONAL": 75,
+      "FAILED": 0,
+      "note": "Per this session's strict 6-dimension criteria, no case achieves CERTIFIED; all 75 are CONDITIONAL due to metadata gaps, uniform difficulty, and cognitive progression issues"
+    }
+  },
+  "pack_level_decisions": {
+    "Pack_A_CASE_PACK_1": {
+      "decision": "RETAIN with targeted remediation",
+      "certified_cases": 18,
+      "draft_cases": 7,
+      "draft_case_ids": ["CBQ2-C1", "CBQ2-C2", "CBQ2-D1", "CBQ2-D3", "CBQ2-E1", "CBQ2-F1", "CBQ2-F2"],
+      "remediation_needed": "ProductionStatus upgrade for 7 Draft cases + uniform difficulty recalibration"
+    },
+    "Pack_B_CASE_PACK_2": {
+      "decision": "RETAIN with metadata remediation",
+      "certified_cases": 9,
+      "draft_cases": 16,
+      "remediation_needed": "Widespread ProductionStatus upgrade + metadata population (CompanyName, Industry) + difficulty recalibration"
+    },
+    "Pack_C_CASE_PACK_3": {
+      "decision": "RETAIN with significant remediation",
+      "certified_cases": 4,
+      "draft_cases": 21,
+      "remediation_needed": "Widespread ProductionStatus upgrade + CompanyName corruption fix (CBQ4-A2: 'During Year' → 'Nova Manufacturing') + ASC citation fix (CBQ4-A1-Q2: ASC 360 → ASC 350-20)"
+    },
+    "Pack_D_alias": {
+      "decision": "ACTIVE — aliased from CASE_PACK_1",
+      "cases": 25,
+      "note": "Same content as Pack A. Sufficient for delivery."
+    },
+    "Pack_E_alias": {
+      "decision": "ACTIVE — aliased from CASE_PACK_2",
+      "cases": 25,
+      "note": "Same content as Pack B. Sufficient for delivery. Per original prompt: 'Stretch Goal Only / Hidden By Default' — but already wired and delivering."
+    }
+  },
+  "critical_findings": [
+    {
+      "severity": "HIGH",
+      "type": "Governance Violation",
+      "detail": "5 legacy scored_cases*.js files remain in repository root despite being ARCHIVED per S916. Violates Constitution §11.4. Risk: stale duplicate content co-existing with case_pack files.",
+      "action": "Move to backups/ or delete (S916 timestamped backups already exist)"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Metadata Corruption",
+      "case_id": "CBQ4-A2",
+      "detail": "CompanyName field contains 'During Year' — a Sprint 5.6B metadata-parse artifact. Scenario text names 'Nova Manufacturing.'",
+      "action": "Correct CompanyName to 'Nova Manufacturing'"
+    },
+    {
+      "severity": "HIGH",
+      "type": "Incorrect Authority Citation",
+      "case_id": "CBQ4-A1-Q2",
+      "detail": "AccountingPrinciple cites ASC 360 (long-lived asset impairment) but item tests goodwill impairment under ASC 350-20. Explanation text is correct; metadata field is wrong.",
+      "action": "Correct AccountingPrinciple from 'ASC 360' to 'ASC 350-20'"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Uniform Difficulty (DL-032)",
+      "detail": "17 cases have all items labeled at the same difficulty level. 214 of 400 items (53.5%) are labeled 'Difficult' (target: 25%). Only 3 items (0.8%) are 'Easy' (target: 15%).",
+      "action": "Recalibrate difficulty distribution per CAQS §6.1"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Missing CompanyName Metadata",
+      "detail": "4 cases have no CompanyName field despite having named companies in scenario text.",
+      "action": "Populate CompanyName from scenario text"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "ExhibitCount < 2",
+      "detail": "34 cases (45%) have fewer than 2 exhibits, violating CASE_STUDY_GOLD_STANDARD.md §3.4.",
+      "action": "Add second exhibit or reclassify as single-exhibit cases"
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "Documentation Staleness",
+      "detail": "CURRENT_BASELINES.md §2 table shows Pack A at 481 Certified; actual per S892 is 500. Drift flag on line 42 corrects this but §2 table not updated.",
+      "action": "Update §2 table to reflect S892 Pack A Final Closure (481→500)"
+    }
+  ],
+  "estimated_remediation_effort": {
+    "to_reach_75_production_cases": {
+      "description": "Upgrade 44 Draft cases to Production status",
+      "effort": "2-3 sessions (~4-6 hours)",
+      "blockers": ["2 P0 critical fixes (CBQ4-A2 CompanyName, CBQ4-A1-Q2 ASC citation)", "DL-032 difficulty recalibration on 17 uniform-difficulty cases"]
+    },
+    "to_reach_75_strictly_certified_cases": {
+      "description": "Resolve all CONDITIONAL items to meet CERTIFIED bar (Average Score ≥85, no issues)",
+      "effort": "5-8 sessions (~15-25 hours)",
+      "blockers": ["All 75 cases have CONDITIONAL ratings due to systematic template-authoring artifacts", "Cognitive progression re-ordering in 48 cases", "Difficulty recalibration for 214 items"]
+    }
+  },
+  "actual_learner_pool_status": {
+    "cases_in_pool": 75,
+    "items_in_pool": 400,
+    "all_items_certified": true,
+    "delivery_active": true,
+    "note": "Despite CONDITIONAL audit rating, all 400 items carry question_state: 'Certified' and are actively delivered to learners. The 6-dimension audit criteria in this session are stricter than the existing governance framework which gates on question_state only."
+  }
+}

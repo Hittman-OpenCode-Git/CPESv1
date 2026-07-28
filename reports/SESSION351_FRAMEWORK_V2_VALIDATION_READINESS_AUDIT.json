@@ -1,0 +1,521 @@
+{
+  "document": "SESSION351_FRAMEWORK_V2_VALIDATION_READINESS_AUDIT",
+  "session": "S351",
+  "title": "Framework v2 Validation Readiness Audit — Identity, Ledger, Investigation, Throughput Gap",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "READ-ONLY — Validation Readiness Audit",
+  "status": "COMPLETE — 4 Boards executed with amendments. 0 content changes, 0 certification actions, 0 governance changes.",
+  "authority": "SESSION350_V1_BASELINE.json (frozen v1 baseline); SESSION350_THROUGHPUT_METRICS.json (Board B); SESSION350_IDENTITY_SCORECARD.json (Board D); SESSION350_DELTA_REVIEW_SCORECARD.json (Board F); SESSION350_RECOMMENDATION_ANALYTICS.json (Board I)",
+  "supersedes": "SESSION350 §§ Boards B, D, F, I — measurement authority claims replaced by amended validation observations",
+  "purpose": "Validate that Framework v2 infrastructure is operational at P0 (pre-Hybrid) and measure the gap between current state and the targets defined by S350's frozen baselines. This is a Validation Readiness Audit, not a Performance Verification — it measures what is observable today without claiming outcomes that require operational history.",
+  "depends_on": "SESSION350_V1_BASELINE.json; SESSION350_THROUGHPUT_METRICS.json; SESSION350_IDENTITY_SCORECARD.json; SESSION350_DELTA_REVIEW_SCORECARD.json",
+
+  "pre_flight": {
+    "certified_baseline": 2221,
+    "certified_verification": "Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' | Measure-Object → 2,221. Stable across two consecutive scans.",
+    "governance_guard": "27/27 PASS (unchanged from S350)",
+    "pack_file_hashes": "Unchanged from CURRENT_BASELINES.md §1 (S726 recapture). No pack files modified this session.",
+    "mode": "READ-ONLY — 0 content changes, 0 certification actions, 0 governance changes"
+  },
+
+  "amendments_applied": {
+    "label": "All four amendments accepted and applied from the pre-session analysis",
+    "board_b": "Identity State Validation — measures resolution rate, compound-key coverage, construction success, blocked-item root causes, gap to 100%. Does NOT claim Variant Resolution Accuracy or Targeting Accuracy (requires operational history).",
+    "board_f": "Delta Ledger Baseline Establishment — establishes Reference Baseline Ledger. Validates hash correctness, determinism, classification logic, baseline integrity. Does NOT claim review savings (requires comparison history).",
+    "board_h": "Investigation Infrastructure Audit — produces current-state navigation inventory and future-state gap analysis. Does NOT claim an operational investigation workflow exists.",
+    "board_i": "v1→v2 Throughput Gap Analysis — calculates Distance to Target using frozen v1 baselines and v2 P1/P2/P3 targets. Does NOT claim Observed Throughput Achievement."
+  },
+
+  "board_b_identity_state_validation": {
+    "label": "Board B — Identity State Validation (Amended per pre-session analysis)",
+    "measurement_scope": "IS: identity_resolution_rate, compound_key_coverage, identity_construction_success, blocked_item_root_causes, gap_to_100pct. IS NOT: variant_resolution_accuracy, targeting_accuracy (requires operational certification wave history).",
+    "authority": "SESSION350_IDENTITY_SCORECARD.json (Board D — IM-001 through IM-006); scripts/identity_validator.js; scripts/output/identity_validation_report.json",
+
+    "fresh_scan_results": {
+      "scan_date": "2026-07-27",
+      "scan_script": "scripts/identity_validator.js --root .",
+      "total_items": 2540,
+      "passed": 2539,
+      "blocked": 1,
+      "resolution_rate": "99.96%",
+      "blocked_packs": ["pack_d"],
+      "most_common_block_reason": "FAIL — CorrectChoice \"\" not in {A,B,C,D}",
+      "stability": "IDENTICAL to S322 baseline (2,539/2,540). Identity validator produces deterministic results across independent runs."
+    },
+
+    "identity_metrics_observed": {
+      "IM-001_identity_resolution_rate": {
+        "value": "99.96% (2,539/2,540)",
+        "v2_target": "100%",
+        "gap": "1 item (0.04%) — Pack D item with empty CorrectChoice",
+        "status": "INFRASTRUCTURE_OPERATIONAL — 1 known blocked item outstanding"
+      },
+      "IM-002_compound_key_coverage": {
+        "description": "Percentage of items for which a valid 6-field compound key (QID|CC|EWP|TF|FP|VID) can be computed via AM-1 within-object Function Constructor parse.",
+        "value": "99.96% (2,539/2,540)",
+        "v2_target": "100%",
+        "gap": "1 item — same Pack D empty-CC item",
+        "status": "NEARLY_COMPLETE"
+      },
+      "IM-003_identity_construction_success": {
+        "description": "All 6 compound key fields present and non-null with valid values. CC ∈ {A,B,C,D}. EWP is 4-bit binary with CC-bit=0. TemplateFamily resolves or is UNGROUPED.",
+        "value": "2,539 items pass all 9 Gate -1 checks (GV-N1-01 through GV-N1-08)",
+        "checks_active": "9 of 9 GV-N1 checks operational",
+        "status": "OPERATIONAL"
+      },
+      "IM-004_blocked_item_root_cause": {
+        "blocked_item": "Pack D item with empty CorrectChoice field",
+        "root_cause": "Data defect — item object has missing/empty CorrectChoice property. Not a parsing error (AM-1 Function Constructor parse correctly extracts empty value). Not a forward-scan artifact (within-object extraction guaranteed).",
+        "remediation_path": "Author the CorrectChoice value for this item. Once CC is populated, Gate -1 will pass at 2,540/2,540.",
+        "governance_note": "This item is also blocked at Gate 0 (structural parse) — it cannot reach any downstream gate until CC is present."
+      },
+      "IM-005_cross_pack_collision_rate": {
+        "description": "Compound key FilePath field resolves cross-pack QID collisions. Known collision suffixes (A.001-A.100, B.001-B.100, E.001-E.100) appear across Packs A, C, D.",
+        "status": "RESOLVED — 0 unidentified collisions. FilePath differentiation operational."
+      },
+      "IM-006_compound_key_stability": {
+        "description": "Same pack file, same AM-1 parse, same compound key — across independent runs.",
+        "verification": "S322 identity_validator run (July 27) vs. S351 identity_validator run (July 27): identical compound keys for all 2,539 passing items. Same 1 blocked item.",
+        "status": "VERIFIED — 100% stable"
+      },
+      "NOT_MEASURED_variant_resolution_accuracy": {
+        "reason": "Requires TemplateFamily computation on all 2,540 items plus operational history of certification waves to measure correct vs. incorrect variant targeting.",
+        "status": "DEFERRED to S352 (Hybrid Operations Metrics) — will be measured after first live Framework v2 certification wave."
+      },
+      "NOT_MEASURED_targeting_accuracy": {
+        "reason": "Requires post-operation verification of remediation targeting correctness. No remediation operations have been performed under Framework v2 yet.",
+        "status": "DEFERRED to S352 (Hybrid Operations Metrics)."
+      }
+    },
+
+    "gate_neg1_status": {
+      "total_checked": 2540,
+      "passed": 2539,
+      "blocked": 1,
+      "pass_rate": "99.96%",
+      "all_9_checks_operational": true,
+      "blocking_item": "1 Pack D item — empty CorrectChoice. Blocks BF-007 (Identity Ambiguity ELIMINATED) at S830 phase gate.",
+      "gap_to_100pct": "1 item. Single remediation action required."
+    },
+
+    "verdict": "IDENTITY_INFRASTRUCTURE_VALIDATED — 2,539/2,540 PASS. Compound-key identity is deterministic, stable, and operational. The 1 blocked item is a data defect (empty CC), not an infrastructure defect. Identity infrastructure is ready for hybrid certification operations."
+  },
+
+  "board_f_delta_ledger_baseline": {
+    "label": "Board F — Delta Ledger Baseline Establishment (Amended per pre-session analysis)",
+    "measurement_scope": "IS: Reference_Baseline_Ledger establishment, hash_correctness, determinism, classification_logic, baseline_integrity. IS NOT: review_savings, skip_rate, re_review_reduction (requires comparison history — second certification wave).",
+    "authority": "SESSION350_DELTA_REVIEW_SCORECARD.json (Board F); scripts/delta_ledger_builder.js; knowledge/DELTA_LEDGER.json; scripts/output/delta_ledger.json",
+
+    "current_ledger_state": {
+      "ledger_location": "knowledge/DELTA_LEDGER.json (authoritative); scripts/output/delta_ledger.json (latest build)",
+      "total_entries": 2540,
+      "first_baseline_session": "S322",
+      "baseline_ref": "NONE (initial baseline)",
+      "ledger_status": "REFERENCE_BASELINE_ESTABLISHED — This is the first and only Delta Ledger run. It serves as the T0 reference baseline for all future delta comparisons."
+    },
+
+    "fresh_build_results": {
+      "build_date": "2026-07-27",
+      "build_script": "scripts/delta_ledger_builder.js --root .",
+      "total_hashed": 2540,
+      "change_summary": {
+        "CONTENT_CHANGE": 0,
+        "METADATA_CHANGE": 0,
+        "PRESENTATION_CHANGE": 0,
+        "NO_CHANGE": 2540,
+        "UNCLASSIFIED": 0
+      },
+      "review_routing": {
+        "fullReview": 0,
+        "partialReview": 0,
+        "noReview": 2540
+      },
+      "scanner_override_applied": 0,
+      "note": "Loaded baseline from knowledge/DELTA_LEDGER.json (2,540 entries). All 2,540 items classified as NO_CHANGE because pack files are unchanged since S322/S350 baseline. This is expected — no certification waves have occurred between S322 and S351.",
+      "historical_baseline_available": true,
+      "history_note": "The S322 baseline was the first ledger run. Because pack files have not changed since S322, all items hash-match and receive NO_CHANGE classification. This is correct behavior for a stable codebase — but it means delta review cannot yet demonstrate skip-rate improvements. The first post-change ledger run (after a certification wave modifies content) will produce the first CONTENT_CHANGE and METADATA_CHANGE classifications."
+    },
+
+    "baseline_integrity_checks": {
+      "hash_correctness": {
+        "description": "All 2,540 items have SHA-256 content_hash, metadata_hash, and identity_hash computed via canonical serialization (keys sorted, whitespace normalized, fields trimmed).",
+        "verification": "delta_ledger_builder.js passes --self-test (10/10 PASS). hash_engine.js produces deterministic output.",
+        "status": "VERIFIED"
+      },
+      "determinism": {
+        "description": "Two consecutive Delta Ledger builds on identical pack files must produce identical hashes.",
+        "verification": "S322 build (July 27) → S351 build (July 27): 2,540/2,540 items match. All classified NO_CHANGE vs. the S322 baseline. 0 hash mismatches.",
+        "status": "VERIFIED — 100% deterministic"
+      },
+      "classification_logic": {
+        "description": "5-way classification (CONTENT_CHANGE / METADATA_CHANGE / PRESENTATION_CHANGE / NO_CHANGE / UNCLASSIFIED) per SESSION203_DELTA_ENGINE_SPEC.json.",
+        "verification": "Current run: 2,540 NO_CHANGE (expected, no pack changes). With no baseline (first run): all 2,540 UNCLASSIFIED (correct — S322 behavior). With baseline + unchanged files: all 2,540 NO_CHANGE (correct — S351 behavior).",
+        "status": "VERIFIED — classification logic correct for all edge cases tested"
+      },
+      "ledger_coverage": {
+        "metric": "DLM-001 — Delta Ledger Coverage",
+        "value": "100% (2,540/2,540 items have ledger entries)",
+        "v2_target": "100%",
+        "status": "AT_TARGET"
+      },
+      "hash_stability": {
+        "metric": "DLM-002 — Hash Stability",
+        "value": "100% (2,540/2,540 items have identical content_hash across two independent builds)",
+        "v2_target": "100%",
+        "status": "AT_TARGET"
+      },
+      "ledger_freshness": {
+        "metric": "DLM-003 — Ledger Freshness",
+        "value": "<1 session (rebuilt at S351 T0)",
+        "v2_target": "<1 session",
+        "status": "AT_TARGET"
+      }
+    },
+
+    "what_is_not_yet_measurable": {
+      "inherited_reviews": "DR-003 — 0 inherited (CertifiedDelta) reviews because no certification wave has modified items since baseline. First post-change ledger run will produce the first CONTENT_CHANGE items that can then delta-skip on subsequent waves.",
+      "skipped_reviews": "DR-004 — 0 skipped reviews for same reason.",
+      "workload_reduction": "90% per-100-items model (600 min → 61 min) is a S203 engineering estimate — NOT a measured value. Cannot measure until at least one certification wave under v2.",
+      "skip_rate": "TH-008 — 0% current (no items to skip — all unchanged vs. baseline). First meaningful skip rate measurement at S830 after first v2 certification wave.",
+      "re_review_ratio": "TH-007 — 0% current (no re-reviews — no changes to re-review)."
+    },
+
+    "verdict": "DELTA_LEDGER_BASELINE_ESTABLISHED — Reference Baseline Ledger is built, deterministic, and integrity-verified for all 2,540 items. Hash engine is correct. Classification logic is correct. Ledger coverage, stability, and freshness are all at target. Delta review infrastructure is ready — activation requires operational history (at least one certification wave under Framework v2) to begin measuring skip rates and review savings."
+  },
+
+  "board_h_investigation_infrastructure_audit": {
+    "label": "Board H — Investigation Infrastructure Audit (Amended per pre-session analysis)",
+    "measurement_scope": "IS: current_state_navigation_inventory, question_session_links, registry_references, recommendation_references, script_outputs, future_state_gap_analysis. IS NOT: operational investigation workflow (Student→Attempt→Question→Certification History not yet implemented).",
+    "authority": "SESSION350_RECOMMENDATION_ANALYTICS.json (Board I); scripts/session_linker.js; scripts/session_registry_gen.js; scripts/registry_search.js; scripts/output/",
+
+    "current_state_navigation_inventory": {
+      "session_registry": {
+        "source": "scripts/output/session_registry.json",
+        "generator": "scripts/session_registry_gen.js",
+        "total_sessions": 98,
+        "source_document": "knowledge/REVISION_HISTORY.md",
+        "series_classified": ["Early Content Audit", "300-Series", "350-Series", "500-Series", "700-Series", "800-Series"],
+        "linkage_completeness": "98 sessions parsed from REVISION_HISTORY.md. Covers S3 through S350."
+      },
+      "question_to_session_index": {
+        "source": "scripts/output/question_to_session_index.json",
+        "generator": "scripts/session_linker.js",
+        "total_questions_linked": 732,
+        "linkage_method": "QID regex extraction from REVISION_HISTORY.md session entries. Bidirectional: question→sessions + session→questions.",
+        "coverage_note": "732 questions linked out of 2,540 total (28.8%). Coverage limited to QIDs explicitly mentioned in REVISION_HISTORY.md entries — sessions that did not enumerate QIDs are absent from the index. This is a documentation trace, not a database join."
+      },
+      "session_to_question_index": {
+        "source": "scripts/output/session_to_question_index.json",
+        "generator": "scripts/session_linker.js",
+        "linkage_direction": "Bidirectional — session→[qids] and qid→[sessions]"
+      },
+      "registry_search": {
+        "source": "scripts/registry_search.js",
+        "capability": "CLI search by QID, domain, or question_state with --json flag. Searches readiness_scoring.json output.",
+        "operational_since": "S322"
+      },
+      "recommendation_registry": {
+        "source": "scripts/output/recommendation_registry.json",
+        "generator": "scripts/recommendation_registry.js",
+        "total_recommendations": 4,
+        "active_recs": [
+          {"id": "REC-61966733", "type": "REMEDIATE", "source": "DL-008", "severity": "CRITICAL", "count": 3, "status": "Open"},
+          {"id": "REC-5B1E489D", "type": "REMEDIATE", "source": "DL-026", "severity": "HIGH", "count": 274, "status": "Open"},
+          {"id": "REC-D3660912", "type": "REVIEW", "source": "DL-013", "severity": "MEDIUM", "count": 31, "status": "Open"},
+          {"id": "REC-1100DF07", "type": "REVIEW", "source": "EV3", "severity": "LOW", "count": 2074, "status": "Open"}
+        ],
+        "lifecycle_model": "5-state: Finding→Recommendation→Assignment→Execution→Closure",
+        "transition_tracking": "Not yet operational — all 4 REC-IDs remain 'Open' with no assignment or execution history."
+      }
+    },
+
+    "script_output_artifacts": {
+      "total_artifacts": 10,
+      "artifacts": [
+        {"file": "identity_validation_report.json", "generator": "identity_validator.js", "purpose": "Gate -1 identity validation results"},
+        {"file": "delta_ledger.json", "generator": "delta_ledger_builder.js", "purpose": "Content/metadata/identity SHA-256 hashes"},
+        {"file": "certification_scan_artifact.json", "generator": "scan_orchestrator.js", "purpose": "Gate -1→Gate 4 pipeline results"},
+        {"file": "QUALITY_VERDICT.json", "generator": "report_reducer.js", "purpose": "Merged quality report from EQS/DQS/UIQS"},
+        {"file": "recommendation_registry.json", "generator": "recommendation_registry.js", "purpose": "Auto-generated REC-IDs from scan findings"},
+        {"file": "question_to_session_index.json", "generator": "session_linker.js", "purpose": "Question→Session traceability"},
+        {"file": "session_to_question_index.json", "generator": "session_linker.js", "purpose": "Session→Question traceability"},
+        {"file": "readiness_scoring.json", "generator": "readiness_scorer.js", "purpose": "4-state readiness scores by domain/pack"},
+        {"file": "session_registry.json", "generator": "session_registry_gen.js", "purpose": "98 sessions from REVISION_HISTORY.md"},
+        {"file": "modernization_progress.json", "generator": "modernization_tracker.js", "purpose": "Per-domain certification progress"}
+      ],
+      "all_self_tests_pass": true
+    },
+
+    "what_is_measurable_today": {
+      "question_to_session_links": "732 questions linked to sessions via QID extraction from REVISION_HISTORY.md. Bidirectional index operational.",
+      "registry_lookup": "CLI search by QID, domain, state via registry_search.js.",
+      "recommendation_references": "4 REC-IDs linking scan findings to target sessions and QID lists.",
+      "script_navigation": "10 operational scripts in scripts/ with self-tests passing. All outputs are valid JSON."
+    },
+
+    "future_state_gap_analysis": {
+      "target_workflow": "Student → Attempt → Question → Certification History",
+      "current_gaps": [
+        {
+          "gap": "No Student/Attempt linkage",
+          "description": "Current infrastructure links questions to sessions (certification/remediation history), not to student attempts. The May Coaching Layer (may-core.js, may-learner-state.js) handles runtime student state but does not produce a persistent certification-history artifact.",
+          "blocker": "Student-attempt tracking requires the live exam engine integration. Not in scope for Framework v2 certification infrastructure."
+        },
+        {
+          "gap": "No Certification History artifact",
+          "description": "Items have certification state (question_state: 'Certified') but no timestamped certification history log recording when/who/why an item was certified.",
+          "blocker": "Requires Delta Ledger integration + certification event logging. The DELTA_LEDGER.json currently tracks content hashes but not certification events."
+        },
+        {
+          "gap": "Recommendation lifecycle not operational",
+          "description": "4 REC-IDs exist but the Finding→Recommendation→Assignment→Execution→Closure lifecycle is not active. No assignments have been made. No executions tracked. All 4 remain 'Open'.",
+          "blocker": "Framework v2 P1 authorization at S830 needed to activate recommendation execution workflows."
+        },
+        {
+          "gap": "Session registry is documentation-derived, not database-derived",
+          "description": "98 sessions parsed from REVISION_HISTORY.md regex patterns. Coverage depends on the quality and completeness of human-authored REVISION_HISTORY entries. Not all sessions enumerate QIDs.",
+          "blocker": "A structured session database would require migrating REVISION_HISTORY.md to a machine-readable format or maintaining a parallel structured registry."
+        }
+      ],
+      "path_to_operational_investigation_workflow": "S352 (Hybrid Operations Metrics) → S353 (Delta Review Metrics) → S354 (Framework v2 Adoption Scorecard). The investigation workflow becomes operational once recommendation execution and certification event logging are active."
+    },
+
+    "reporting_snapshot": {
+      "reports_directory": {
+        "total_files": 1300,
+        "markdown_files": 383,
+        "json_files": 917,
+        "note": "Count includes S350's 11 JSON scorecards + 1 MD summary. 1,300 total artifacts in reports/ directory."
+      }
+    },
+
+    "verdict": "INVESTIGATION_INFRASTRUCTURE_AUDITED — Current-state navigation inventory is complete: 10 script output artifacts, 98 sessions indexed, 732 questions linked, 4 REC-IDs with QID lists. The future-state gap is clearly defined: Student→Attempt→Question→Certification History workflow requires recommendation lifecycle activation and certification event logging, both gated on S830 P1 authorization."
+  },
+
+  "board_i_throughput_gap_analysis": {
+    "label": "Board I — v1→v2 Throughput Gap Analysis (Amended per pre-session analysis)",
+    "measurement_scope": "IS: distance_to_target, current_pool_state, per_domain_bottlenecks, required_sessions_at_v2_targets, gap_to_P1_exit. IS NOT: observed_throughput_achievement (no Framework v2 certification waves have been executed).",
+    "authority": "SESSION350_V1_BASELINE.json (frozen v1 baseline); SESSION350_THROUGHPUT_METRICS.json (Board B — TH-001 through TH-011); scripts/output/readiness_scoring.json; scripts/output/modernization_progress.json",
+
+    "current_pool_state": {
+      "certified": {
+        "count": 2221,
+        "percentage": "87.44% of 2,540 total items",
+        "verification": "Direct raw-file grep: Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' → 2,221"
+      },
+      "blocked": {
+        "count": 242,
+        "description": "Items that cannot proceed to certification — structural defects, DL-008 violations, missing fields, or Archived status."
+      },
+      "remediate": {
+        "count": 77,
+        "description": "Items with known defects that are actively being remediated."
+      },
+      "ready": {
+        "count": 0,
+        "description": "Items that have passed all gates and are awaiting certification board review. NONE currently in this state — all uncertified items are either BLOCKED or REMEDIATE."
+      },
+      "uncertified_gap": {
+        "total_uncertified": 319,
+        "composed_of": "242 BLOCKED + 77 REMEDIATE",
+        "ready_for_certification": 0,
+        "distance_to_2500": "Need 2,500 - 2,221 = 279 more certifications (max pool is 2,540; 40 items may be permanently uncertifiable or duplicates)"
+      }
+    },
+
+    "per_pack_gap": {
+      "pack_a": {"total": 500, "certified": 481, "blocked": 19, "remediate": 0, "gap": 19},
+      "pack_b": {"total": 500, "certified": 500, "blocked": 0, "remediate": 0, "gap": 0},
+      "pack_c": {"total": 500, "certified": 350, "blocked": 112, "remediate": 38, "gap": 150},
+      "pack_d": {"total": 500, "certified": 350, "blocked": 111, "remediate": 39, "gap": 150},
+      "pack_e": {"total": 540, "certified": 540, "blocked": 0, "remediate": 0, "gap": 0}
+    },
+
+    "per_domain_gap": {
+      "domain_a": {"total": 375, "ready": 373, "blocked": 2, "remediate": 0, "readiness": "99.47%", "gap": 2},
+      "domain_b": {"total": 500, "ready": 500, "blocked": 0, "remediate": 0, "readiness": "100.00%", "gap": 0},
+      "domain_c": {"total": 500, "ready": 500, "blocked": 0, "remediate": 0, "readiness": "100.00%", "gap": 0},
+      "domain_d": {"total": 375, "ready": 375, "blocked": 0, "remediate": 0, "readiness": "100.00%", "gap": 0},
+      "domain_e": {"total": 415, "ready": 248, "blocked": 129, "remediate": 38, "readiness": "59.76%", "gap": 167, "note": "BOTTLENECK — lowest readiness domain"},
+      "domain_f": {"total": 374, "ready": 225, "blocked": 110, "remediate": 39, "readiness": "60.16%", "gap": 149, "note": "BOTTLENECK — second lowest readiness domain"},
+      "unknown": {"total": 1, "ready": 0, "blocked": 1, "remediate": 0, "gap": 1, "note": "Pack D empty-CC item — domain unclassifiable"}
+    },
+
+    "v1_baseline_reference": {
+      "source": "SESSION350_V1_BASELINE.json (FROZEN — no future session may modify)",
+      "items_per_session": "42 (TH-002 v1 baseline, range 30-50)",
+      "cycle_time": "4-5 sessions per wave (TH-003 v1 baseline)",
+      "agents_per_session": "19 (range 15-28)",
+      "duplication_ratio": "2.5:1 (peak 6.2:1 S809)",
+      "cost_per_item": "0.305 agent-spawns per certified item",
+      "waste_ratio": "50%"
+    },
+
+    "v2_target_reference": {
+      "source": "SESSION350_THROUGHPUT_METRICS.json (phase-conditional targets)",
+      "p1_targets": {
+        "TH-001_items_per_hour": "5-8",
+        "TH-002_items_per_session": "63 (50-75 range)",
+        "TH-003_cycle_time": "2-3 sessions per wave",
+        "TH-009_throughput_multiplier": "1.5-2.0×",
+        "TH-010_cost_per_item": "<0.15",
+        "TH-011_waste_ratio": "<30%"
+      },
+      "p2_targets": {
+        "TH-002_items_per_session": "95 (75-120 range)",
+        "TH-008_skip_rate": ">75%",
+        "TH-009_throughput_multiplier": "2.5-3.0×"
+      },
+      "p3_targets": {
+        "TH-002_items_per_session": "135 (120-150 range)",
+        "TH-009_throughput_multiplier": "3.8×",
+        "TH-010_cost_per_item": "<0.07"
+      }
+    },
+
+    "distance_to_target": {
+      "label": "How many sessions would it take to close the gap at v2 target throughput? (Theoretical — not yet demonstrated.)",
+      "scenarios": {
+        "at_v1_throughput": {
+          "items_per_session": 42,
+          "uncertified_items": 319,
+          "blocked_items_needing_remediation": 319,
+          "sessions_required": "7.6 sessions (~8 sessions at v1 pace)",
+          "note": "This is the v1 baseline pace. Does NOT account for delta review skip rate (0% in v1 — everything re-reviewed)."
+        },
+        "at_v2_P1_throughput": {
+          "items_per_session": 63,
+          "uncertified_items": 319,
+          "sessions_required": "5.1 sessions (~5 sessions at P1 pace)",
+          "throughput_multiplier_vs_v1": "1.5×",
+          "note": "P1 target assumes pre-flight gating reduces per-item review time but does NOT include delta review skip rate (skip rate requires operational history)."
+        },
+        "at_v2_P2_throughput": {
+          "items_per_session": 95,
+          "sessions_required": "3.4 sessions (~3-4 sessions at P2 pace)",
+          "throughput_multiplier_vs_v1": "2.3×",
+          "note": "P2 target assumes delta review active with >75% skip rate. Not achievable until after first certification wave establishes change baseline."
+        },
+        "at_v2_P3_throughput": {
+          "items_per_session": 135,
+          "sessions_required": "2.4 sessions (~2-3 sessions at P3 pace)",
+          "throughput_multiplier_vs_v1": "3.2×",
+          "note": "P3 assumes full Framework v2 with automation. Aspirational — requires P1+P2 exit gates to be met first."
+        }
+      },
+      "bottleneck_analysis": {
+        "primary_bottleneck": "Domain E (59.76% readiness, 167 items gap) — Pack C Sections E/F + Pack D Sections E/F",
+        "secondary_bottleneck": "Domain F (60.16% readiness, 149 items gap) — Pack C Section F + Pack D Section F",
+        "tertiary": "Pack A Sections B/C/F (19 items gap — small but blocked on DL-016 metadata offset)"
+      }
+    },
+
+    "what_is_not_yet_measurable": {
+      "TH-001_items_per_hour_actual": "No v2 certification wave executed — cannot measure actual items/hour.",
+      "TH-006_duplication_ratio_actual": "No v2 review cycles completed — cannot measure actual duplication.",
+      "TH-007_re_review_ratio_actual": "No delta review activated — cannot measure actual re-review rate.",
+      "TH-008_skip_rate_actual": "0% — no items eligible for delta-skip until after first certification wave.",
+      "TH-009_throughput_multiplier_actual": "Cannot compute — numerator (v2 throughput) is undefined without operational data."
+    },
+
+    "verdict": "THROUGHPUT_GAP_ANALYZED — 319 uncertified items remain (242 BLOCKED + 77 REMEDIATE). At v2 P1 target throughput (63 items/session), closing the gap requires ~5 sessions. Primary bottlenecks are Domain E (167 items, 59.76% readiness) and Domain F (149 items, 60.16% readiness). All throughput metrics (TH-001 through TH-011) remain at v1 baseline levels until the first Framework v2 certification wave produces operational data. The gap analysis is defensible because it uses frozen v1 baselines and S350-defined v2 targets without claiming observed throughput improvement."
+  },
+
+  "cross_board_verdict": {
+    "label": "Framework v2 Validation Readiness — Consolidated Verdict",
+    "boards": {
+      "board_b_identity": "IDENTITY_INFRASTRUCTURE_VALIDATED — 99.96% resolution rate. 1 known blocked item (data defect, not infrastructure defect).",
+      "board_f_delta_ledger": "DELTA_LEDGER_BASELINE_ESTABLISHED — Reference baseline for all 2,540 items. Deterministic, correct, coverage-complete. Ready for operational use.",
+      "board_h_investigation": "INVESTIGATION_INFRASTRUCTURE_AUDITED — Navigation inventory complete. Future-state gap analysis documented. Recommendation lifecycle infrastructure built but not yet operational.",
+      "board_i_throughput": "THROUGHPUT_GAP_ANALYZED — 319 item gap (87.44% → 100%). ~5 sessions at v2 P1 pace. Domain E/F are the bottlenecks."
+    },
+
+    "what_is_validated": {
+      "identity_infrastructure": "Works. Gate -1 operational. 9/9 checks active. Compound-key deterministic. Cross-pack collision resolved.",
+      "delta_ledger": "Works. SHA-256 hashing deterministic. Classification logic correct. Baseline established. Coverage 100%.",
+      "scan_artifact": "Works. 7-gate pipeline executes in 0.7s. Gate -1→Gate 4 all operational. Defect classification by DL-ID functional.",
+      "recommendation_traceability": "Works. 4 REC-IDs generated from scan findings. QID lists accurate. Lifecycle model defined.",
+      "navigation_foundations": "Works. 98 sessions indexed. 732 questions linked. Bidirectional indexes operational. CLI search functional.",
+      "throughput_targets": "Achievable on paper. 319-item gap at 63 items/session P1 pace = ~5 sessions. Bottlenecks are Domain E/F."
+    },
+
+    "what_is_not_yet_validated": {
+      "throughput_gains": "No v2 certification wave executed. Cannot claim actual items/hour improvement over v1 baseline.",
+      "review_savings": "Delta review has no operational history. Skip rate = 0%. Cannot claim 90% workload reduction.",
+      "variant_resolution_effectiveness": "TemplateFamily computation not yet executed on all items. Cannot claim variant-resolution accuracy.",
+      "admin_workflow_improvement": "Recommendation lifecycle not yet operational. 4 REC-IDs remain Open. No execution history.",
+      "reporting_consumption": "No v2 reporting cadence established. v1 burden (1,300 files) unchanged.",
+      "operational_investigation_workflow": "Student→Attempt→Question→Certification History not yet implemented."
+    },
+
+    "s352_s353_s354_readiness": {
+      "s352_hybrid_ops_metrics": "BLOCKED until first Framework v2 certification wave produces operational throughput data.",
+      "s353_delta_review_metrics": "BLOCKED until second certification wave establishes change baseline (need CONTENT_CHANGE items to measure skip rate).",
+      "s354_framework_v2_adoption": "BLOCKED until S830 P1 exit gate is met and P2 Shadow Mode begins producing comparative v1-vs-v2 data."
+    }
+  },
+
+  "governance_attestation": {
+    "certified_pool": "2,221 (unchanged — no certification actions this session)",
+    "governance_guard": "27/27 PASS (unchanged — no governance changes)",
+    "pack_file_writes": 0,
+    "question_state_changes": 0,
+    "correct_choice_changes": 0,
+    "governance_changes": 0,
+    "mode": "READ-ONLY — Validation Readiness Audit. 0 content modifications across all 4 Boards.",
+    "agreements_compliance": {
+      "agreements_md_s12": "All findings logged contemporaneously in this artifact and REVISION_HISTORY.md entry.",
+      "agreements_md_s4": "Backup created before REVISION_HISTORY.md edit.",
+      "agreements_md_s6": "Cross-checked all self-reported claims against raw file/line evidence (certified count, identity validator output, delta ledger output, readiness scoring)."
+    }
+  },
+
+  "cross_references": {
+    "parent_measurement_authority": "reports/SESSION350_V1_BASELINE.json (FROZEN)",
+    "s350_sibling_artifacts": [
+      "reports/SESSION350_THROUGHPUT_METRICS.json",
+      "reports/SESSION350_IDENTITY_SCORECARD.json",
+      "reports/SESSION350_DELTA_REVIEW_SCORECARD.json",
+      "reports/SESSION350_RECOMMENDATION_ANALYTICS.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json",
+      "reports/SESSION350_EXECUTIVE_SUMMARY.md"
+    ],
+    "operational_data": [
+      "scripts/output/identity_validation_report.json",
+      "scripts/output/delta_ledger.json",
+      "scripts/output/certification_scan_artifact.json",
+      "scripts/output/readiness_scoring.json",
+      "scripts/output/recommendation_registry.json",
+      "scripts/output/session_registry.json",
+      "scripts/output/question_to_session_index.json",
+      "scripts/output/session_to_question_index.json",
+      "scripts/output/modernization_progress.json",
+      "scripts/output/QUALITY_VERDICT.json"
+    ],
+    "specifications": [
+      "reports/framework_v2/s321/SESSION321_IDENTITY_SCHEMA_V2.json",
+      "reports/framework_v2/s321/SESSION321_GATE_NEG1_SPEC.json",
+      "reports/SESSION203_DELTA_ENGINE_SPEC.json",
+      "reports/SESSION202_DELTA_REVIEW_ENGINEERING.json",
+      "reports/SESSION202_THROUGHPUT_MODEL.json",
+      "reports/SESSION203_THROUGHPUT_VALIDATION.json"
+    ],
+    "knowledge_base": [
+      "knowledge/CURRENT_BASELINES.md",
+      "knowledge/DELTA_LEDGER.json",
+      "knowledge/REVISION_HISTORY.md"
+    ],
+    "successor_sessions": {
+      "s352": "Hybrid Operations Metrics — first measurement of actual v2 throughput after one certification wave. Board B (Variant Resolution Accuracy, Targeting Accuracy) becomes measurable.",
+      "s353": "Delta Review Metrics — first measurement of skip rate and review savings after second certification wave establishes change baseline.",
+      "s354": "Framework v2 Adoption Scorecard — comparative v1-vs-v2 metrics after multiple certification waves."
+    }
+  },
+
+  "immutability_clause": {
+    "frozen_references": "SESSION350_V1_BASELINE.json values are FROZEN and referenced as-is. This S351 artifact does not modify any frozen baselines.",
+    "governance_note": "This artifact establishes the P0 (pre-Hybrid) Framework v2 state. Future sessions (S352+) will measure deltas against the baselines validated here. The S351 measurements are observational — they verify infrastructure readiness without claiming operational performance outcomes.",
+    "amendment_history": "All four Boards applied with amendments per pre-session analysis. Amendments documented in the 'amendments_applied' section above."
+  }
+}

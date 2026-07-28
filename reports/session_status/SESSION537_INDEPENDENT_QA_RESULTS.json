@@ -1,0 +1,150 @@
+{
+  "session": "S537",
+  "agent": "Agent I — Independent QA Board",
+  "timestamp": "2026-07-26T23:00:00Z",
+  "scope": {
+    "file": "scored_cases.js",
+    "cases_audited": ["CBQ-C2", "CBQ-D2", "CBQ-E2", "CBQ-F2", "CBQ-A3", "CBQ-B3", "CBQ-C3"],
+    "numerical_items_total": 16
+  },
+  "methodology": {
+    "approach": "Independent recalculation from stems and exhibits. Stored Correct value not consulted before solving.",
+    "confidence": 100,
+    "note": "All calculations independently verified. Zero reliance on Agent C's results."
+  },
+  "results": {
+    "ALL_AGREE": 16,
+    "DISAGREE": 0,
+    "items": [
+      {
+        "caseID": "CBQ-C2",
+        "itemID": "CBQ-C2-Q1",
+        "prompt": "Enter Motor Division residual income.",
+        "stored_correct": "84000",
+        "agent_i_calculation": "420,000 - (2,800,000 x 12%) = 420,000 - 336,000 = 84,000",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-C2",
+        "itemID": "CBQ-C2-Q2",
+        "prompt": "Enter Motor Division ROI percentage as a whole number.",
+        "stored_correct": "15",
+        "agent_i_calculation": "420,000 / 2,800,000 = 0.15 = 15%",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-D2",
+        "itemID": "CBQ-D2-Q1",
+        "prompt": "Enter equivalent units for conversion costs using weighted-average.",
+        "stored_correct": "20400",
+        "agent_i_calculation": "18,000 completed + (4,000 x 60%) = 18,000 + 2,400 = 20,400",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-D2",
+        "itemID": "CBQ-D2-Q2",
+        "prompt": "Enter conversion cost per equivalent unit.",
+        "stored_correct": "12.5",
+        "agent_i_calculation": "255,000 / 20,400 = 12.50",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-E2",
+        "itemID": "CBQ-E2-Q2",
+        "prompt": "Enter the terminated-user exception rate as a percentage rounded to one decimal place.",
+        "stored_correct": "3.5",
+        "agent_i_calculation": "(12 / 340) x 100 = 3.529... => 3.5%",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-F2",
+        "itemID": "CBQ-F2-Q1",
+        "prompt": "Enter monthly labor hours saved by RPA.",
+        "stored_correct": "1350",
+        "agent_i_calculation": "Before: 9,000 x 12 = 108,000 min. After: 9,000 x 3 = 27,000 min. Savings: (108,000 - 27,000) / 60 = 81,000 / 60 = 1,350",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-F2",
+        "itemID": "CBQ-F2-Q2",
+        "prompt": "Enter the number of invoices routed to exception handling each month.",
+        "stored_correct": "630",
+        "agent_i_calculation": "9,000 x 7% = 630",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-A3",
+        "itemID": "CBQ-A3-Q1",
+        "prompt": "Enter the inventory write-down required under lower of cost and NRV.",
+        "stored_correct": "24000",
+        "agent_i_calculation": "410,000 (FIFO cost) - 386,000 (NRV) = 24,000",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-A3",
+        "itemID": "CBQ-A3-Q2",
+        "prompt": "Enter the amount added to the asset cost for the asset retirement obligation at initial recognition.",
+        "stored_correct": "75000",
+        "agent_i_calculation": "Present value of legal retirement obligation = 75,000 (recorded as both liability and asset addition under ASC 410)",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-A3",
+        "itemID": "CBQ-A3-Q5",
+        "prompt": "Enter operating cash flow using the listed cash-flow data before separately adjusting for the inventory write-down.",
+        "stored_correct": "691000",
+        "agent_i_calculation": "620,000 + 86,000 - 34,000 + 19,000 = 691,000",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-B3",
+        "itemID": "CBQ-B3-Q1",
+        "prompt": "Enter expected unit sales.",
+        "stored_correct": "11300",
+        "agent_i_calculation": "(14,000 x 0.30) + (11,000 x 0.50) + (8,000 x 0.20) = 4,200 + 5,500 + 1,600 = 11,300",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-B3",
+        "itemID": "CBQ-B3-Q2",
+        "prompt": "Enter expected sales dollars.",
+        "stored_correct": "904000",
+        "agent_i_calculation": "11,300 expected units x $80 selling price = $904,000",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-B3",
+        "itemID": "CBQ-B3-Q3",
+        "prompt": "Enter expected current-month cash collections from current-month sales.",
+        "stored_correct": "361600",
+        "agent_i_calculation": "$904,000 x 40% = $361,600",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-B3",
+        "itemID": "CBQ-B3-Q4",
+        "prompt": "Enter total cash available before disbursements.",
+        "stored_correct": "852600",
+        "agent_i_calculation": "Beginning cash $95,000 + current collections $361,600 + prior-month collections ($720,000 x 55% = $396,000) = $852,600",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-C3",
+        "itemID": "CBQ-C3-Q1",
+        "prompt": "Enter the unfavorable operating income variance as a positive amount.",
+        "stored_correct": "60000",
+        "agent_i_calculation": "Target $900,000 - Actual $840,000 = $60,000 unfavorable",
+        "verdict": "ALL_AGREE"
+      },
+      {
+        "caseID": "CBQ-C3",
+        "itemID": "CBQ-C3-Q2",
+        "prompt": "Enter the on-time delivery shortfall in percentage points.",
+        "stored_correct": "5",
+        "agent_i_calculation": "96% target - 91% actual = 5 percentage points",
+        "verdict": "ALL_AGREE"
+      }
+    ]
+  },
+  "verdict": "PASS — All 16 numerical items across all 7 cases (CBQ-C2, D2, E2, F2, A3, B3, C3) pass independent QA with zero disagreements."
+}

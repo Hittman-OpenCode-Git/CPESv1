@@ -1,0 +1,116 @@
+{
+  "title": "S723 Difficulty Governance Audit",
+  "date": "2026-07-26",
+  "agent": "Agent F — Difficulty Governance Auditor",
+  "coverage": {
+    "total_items": 2500,
+    "items_with_difficulty_score": 2500,
+    "items_with_difficulty_label": 2512,
+    "difficulty_label_anomalies": {
+      "pack_a": { "expected": 500, "actual": 503, "delta": "+3" },
+      "pack_b": { "expected": 500, "actual": 500, "delta": "0" },
+      "pack_c": { "expected": 500, "actual": 500, "delta": "0" },
+      "pack_d": { "expected": 500, "actual": 499, "delta": "-1" },
+      "pack_e": { "expected": 500, "actual": 510, "delta": "+10" }
+    },
+    "coverage_pct": 100.0,
+    "note": "QuestionID count verified at 2500 across all 5 packs. DifficultyScore count also 2500. Difficulty label count is 2512 (12 extra — Packs A/E have extras in explanation/stem text; Pack D has 1 missing Difficulty field)."
+  },
+  "distribution": {
+    "by_difficulty_label": {
+      "Easy": 540,
+      "Moderate-Easy": 612,
+      "Moderate": 1234,
+      "Difficult": 126,
+      "Very Difficult": 0
+    },
+    "by_difficulty_score": {
+      "1": 520,
+      "2": 683,
+      "3": 1209,
+      "4": 88,
+      "5": 0
+    },
+    "actual_pct": {
+      "Easy (Score 1)": "20.80%",
+      "Moderate-Easy (Score 2)": "27.32%",
+      "Moderate (Score 3)": "48.36%",
+      "Difficult (Score 4)": "3.52%",
+      "Very Difficult (Score 5)": "0.00%"
+    },
+    "target_per_caqs": {
+      "Easy": "15% (375 items)",
+      "Moderate-Easy": "20% (500 items)",
+      "Moderate": "30% (750 items)",
+      "Difficult": "25% (625 items)",
+      "Very Difficult": "10% (250 items)"
+    },
+    "delta_from_target": {
+      "Easy": { "delta_pct": "+5.80pp", "delta_items": "+145" },
+      "Moderate-Easy": { "delta_pct": "+7.32pp", "delta_items": "+183" },
+      "Moderate": { "delta_pct": "+18.36pp", "delta_items": "+459" },
+      "Difficult": { "delta_pct": "-21.48pp", "delta_items": "-537" },
+      "Very Difficult": { "delta_pct": "-10.00pp", "delta_items": "-250" }
+    }
+  },
+  "difficultyscore_distribution": {
+    "1": 520,
+    "2": 683,
+    "3": 1209,
+    "4": 88,
+    "5": 0
+  },
+  "dcs_label_score_mapping_drift": {
+    "description": "Difficulty label should map 1:1 to DifficultyScore (Easy=1, Moderate-Easy=2, Moderate=3, Difficult=4, Very Difficult=5). The following drift was detected:",
+    "Easy_vs_Score1_delta": -20,
+    "ModerateEasy_vs_Score2_delta": 71,
+    "Moderate_vs_Score3_delta": -25,
+    "Difficult_vs_Score4_delta": -38,
+    "VeryDifficult_vs_Score5_delta": 0,
+    "root_cause": "Difficulty label count (2512) exceeds DifficultyScore count (2500) by 12, and there are label-vs-score mismatches. 20 items labeled 'Easy' have a DifficultyScore other than 1. 71 items with DifficultyScore=2 have a Difficulty label other than 'Moderate-Easy'. These mismatches plus the 12 extra label hits produce the observed drift."
+  },
+  "open_defects": {
+    "DL-031 (difficulty inflation)": "Open — scoped, not remediated. ~500 items across all 5 packs systematically labeled Moderate that test Bloom's Remember/Understand (definition-match pattern). Root cause: template-rotation authoring pipeline assigned difficulty labels by position rather than by cognitive demand.",
+    "DL-032 (case uniform difficulty)": "Open — scoped, not remediated. 420 items across 75 cases in all 5 scored_cases files labeled uniformly 'Moderate' with zero variance. Zero items are Easy, Difficult, or Very Difficult. Statistically implausible for a 420-item pool spanning 6 blueprint domains."
+  },
+  "dcs_compliance": "noncompliant",
+  "dcs_compliance_detail": {
+    "label_score_alignment": "FAIL — 129 items have Difficulty-to-DifficultyScore mismatches (see drift analysis above). ~20 Easy items with wrong score, ~71 Score-2 items with wrong label, ~25 Moderate items with wrong score, ~38 Difficult items with wrong score.",
+    "caqs_distribution": "FAIL — Distribution is severely skewed. Moderate over-represented by 18.4pp. Difficult under-represented by 21.5pp. Very Difficult completely absent (0 items vs 10% target).",
+    "pack_d_missing_field": "WARN — Pack D is missing 1 Difficulty field (499 vs 500 expected).",
+    "pack_e_extra_hits": "WARN — Pack E has 10 extra Difficulty: hits (510 vs 500 expected), likely from Difficulty appearing in explanation/stem text."
+  },
+  "metadata_integrity": false,
+  "metadata_integrity_detail": {
+    "difficultyscore_integrity": true,
+    "difficulty_label_integrity": false,
+    "reason": "Pack D missing 1 Difficulty field. Packs A (+3) and E (+10) have extra Difficulty hits from non-metadata text (explanations, stems). DCS label-score mismatch affects ~129 items."
+  },
+  "governance_stability": "NEEDS_REVIEW",
+  "governance_stability_detail": {
+    "dq_governance": "STABLE — DifficultyScore count matches item count (2500). All items have a numeric DifficultyScore.",
+    "dcs_governance": "UNSTABLE — 129 items have Difficulty-to-DifficultyScore mismatches. The two-field governance model is not enforcing consistency.",
+    "defect_tracking": "STABLE — DL-031 and DL-032 are properly documented in DEFECT_LIBRARY.md with detailed scoping, root cause analysis, and detection rules.",
+    "remediation_status": "STALE — Both DL-031 and DL-032 are Open with no remediation executed. Estimated scope: ~500 DL-031 items + 420 DL-032 case items. No batch plan or execution timeline documented.",
+    "distribution_governance": "CRITICAL — 0 Very Difficult items in a pool of 2,500. This is a psychometric defect. The CAQS §6.1 target of 10% Very Difficult is completely unmet."
+  },
+  "verdict": "ISSUES_FOUND",
+  "issues_summary": [
+    "CRITICAL: 0 Very Difficult items across entire 2,500-item MCQ pool (CAQS target: 10% / 250 items)",
+    "CRITICAL: Distribution severely skewed toward Moderate (48.4% vs 30% target); Difficult at 3.5% vs 25% target",
+    "HIGH: 129 items have Difficulty-to-DifficultyScore label/score mismatches (DCS non-compliance)",
+    "HIGH: DL-031 Open — ~500 items with template-based difficulty inflation, no remediation executed",
+    "HIGH: DL-032 Open — 420 case items with uniform Moderate labeling, no calibration performed",
+    "MEDIUM: Pack D missing 1 Difficulty field (metadata integrity gap)",
+    "MEDIUM: Pack E has 10 extra Difficulty: text hits in non-metadata content",
+    "MEDIUM: Pack A has 3 extra Difficulty: text hits in non-metadata content"
+  ],
+  "recommendations": [
+    "P0: Author 250 Very Difficult items to meet CAQS §6.1 minimum threshold",
+    "P1: Remediate DL-031 (~500 items): recalibrate definition-match items from Moderate to Easy",
+    "P1: Remediate DL-032 (420 case items): assign genuine difficulty labels based on cognitive level, calculation complexity, and distractor deceptiveness",
+    "P2: Fix Difficulty-to-DifficultyScore mapping drift (129 items) — align labels with scores",
+    "P3: Fill missing Difficulty field in Pack D (1 item) and remove extraneous Difficulty text from Packs A/E stems/explanations",
+    "P4: Add DCS consistency validation to automated validator suite to prevent future drift"
+  ]
+}

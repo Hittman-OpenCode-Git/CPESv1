@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "session": "726",
+    "agent": "F",
+    "task": "Cross-Reference Verification — DL-008, DL-029, phantom references across governance documents",
+    "generated": "2026-07-26",
+    "ground_truth": {
+      "dl008_certified": 0,
+      "dl008_total": 0,
+      "certified_pool_mcq": 2181,
+      "dl029_root_cause": true,
+      "source": "S722A + S802 via Function constructor parse"
+    }
+  },
+  "documents_scanned": [
+    "knowledge/CURRENT_BASELINES.md",
+    "knowledge/DEFECT_LIBRARY.md (DL-008 entry + DL-029 entry)",
+    "reports/session_status/SESSION_STATUS_2026-07-24.md",
+    "knowledge/REVISION_HISTORY.md (last ~500 lines)",
+    ".opencode/plugins/governance-guard.js"
+  ],
+  "total_references_found": 25,
+  "by_status": {
+    "correct": 16,
+    "stale": 8,
+    "ambiguous": 1
+  },
+  "stale_references": [
+    {
+      "document": "knowledge/DEFECT_LIBRARY.md",
+      "line_or_section": "DL-008 header Status field (line 359)",
+      "stale_claim": "Status: ***Open — 175 remaining in Pack C***. Prior 6-agent orchestration claimed \"0 remaining\" but Tier 0 corrective session found 175 DL-008 items.",
+      "ground_truth": "Status: ***Resolved — 0 remaining across all 5 packs*** (confirmed S722A + S802 via Function constructor parse). All 175 Pack C items from the Tier 0 corrective session (2026-07-23) were resolved in subsequent autonomous runs."
+    },
+    {
+      "document": "knowledge/DEFECT_LIBRARY.md",
+      "line_or_section": "DL-008 Learner-Safety Status section (line 445)",
+      "stale_claim": "***OPEN for Pack C.*** 175 items (174 Certified + 1 MISSING: P1-BC-094) carry DL-008. All 174 Certified Pack C items are in the active learner delivery pool with non-empty EW[CC]. Pack C items are quarantined (Tier 1) pending a CorrectChoice audit.",
+      "ground_truth": "***SECURED.*** 0 DL-008 across all 5 packs. The quarantine is lifted. No learner-pool exposure. S722A + S802 independently confirmed 0 Certified DL-008 via Function constructor parse."
+    },
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "line_or_section": "§1 Certified Pool table (lines 7-16)",
+      "stale_claim": "Certified pool: 2,031 / 2,500 (81.2%). Pack C: 250 Certified (A,B only). Pack D: 300 Certified (A,B,D). Pack E: 500 Certified.",
+      "ground_truth": "Certified pool: 2,181 / 2,500 (87.2%). Pack C: 350 Certified (A,B,C,D). Pack D: 350 Certified (A,B,C,D). Pack E: 500 Certified (all 6 sections). Confirmed by S802 + raw-file grep."
+    },
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "line_or_section": "§3 DL-008 table (lines 38-46)",
+      "stale_claim": "DL-008 — ExplanationWrong[CorrectChoice] Non-Empty: 67 Certified items. Pack A: 2 (B-001, B-025), Pack C: 55 (AC-001 + BC-001 through BC-100), Pack D: 10. All 67 items blocked in May's defect manifest.",
+      "ground_truth": "0 Certified DL-008 items. All 67 were DL-029 forward-scan false positives (CC-before-QID architecture → ~75% FP rate). S802 verified 0 via Function constructor same-object parse. May's DEFECT_MANIFEST_DL008_DL026.json is built on phantom data and should be regenerated or retired."
+    },
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "line_or_section": "§6 CRITICAL risks table (lines 107-110)",
+      "stale_claim": "67 Certified DL-008 items | Non-empty ExplanationWrong[CorrectChoice] visible to learners. Blocked in May recommendations but not in exam engine.",
+      "ground_truth": "0 Certified DL-008 items. All 67 were DL-029 false positives. Learner-pool confirmed safe (S802). P0 queue: EMPTY."
+    },
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "line_or_section": "§6 LOW risks table (lines 129-130)",
+      "stale_claim": "DL-015/016 (metadata numbering shifts) | Cosmetic — fix during next cert wave",
+      "ground_truth": "DL-016 severity is HIGH (upgraded Session 64, 2026-07-24). Not cosmetic — learner-safety risk: ExplanationWrong fields describe wrong item's distractors on Certified items. G-NEW-1/G-NEW-3 block certification. Must be listed at HIGH severity, split from DL-015 (which is genuinely cosmetic)."
+    },
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "line_or_section": "§8 Next Session Recommended Sequence, item 1 (line 145)",
+      "stale_claim": "1. ***DL-008 remediation*** — Clear 67 Certified items (highest learner-safety priority). Pack C Section B cluster first.",
+      "ground_truth": "DL-008 = 0. No remediation required. The 67 items were DL-029 false positives. Priority should be actual open work per S803: governance cleanup + Pack A closeout + Pack C/D Section E/F clone rationalization."
+    },
+    {
+      "document": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "line_or_section": "Title and §1 header (lines 1-3)",
+      "stale_claim": "Title: 'Session Status Log — 2026-07-24 (Final Sweep)'. §1: 'Consolidated end-of-cycle status capturing state after Sessions 86-87.' Supersedes SESSION_STATUS_2026-07-23.md.",
+      "ground_truth": "This document is superseded by S802 (certified count 2,031→2,181, DL-008 67→0) and by CURRENT_BASELINES.md (now fully remediated by S726). Should carry a SUPERSEDED banner or be replaced by a fresh SESSION_STATUS_2026-07-26.md."
+    }
+  ],
+  "cross_document_consistency": "INCONSISTENT for 2 documents, CONSISTENT for 3 documents",
+  "consistency_detail": {
+    "CURRENT_BASELINES.md": "CONSISTENT — Fully remediated by S726. §3 DL-008 phantom rows removed, replaced with RESOLVED entry citing S722A/S802/S726. §1 hashes recaptured. §2 pack counts corrected. §3 HIGH table updated with DL-016, DL-021 (corrected state), DL-026 (corrected scope).",
+    "DEFECT_LIBRARY.md": "PARTIALLY INCONSISTENT — DL-008 header Status (line 359) and Learner-Safety Status (line 445) remain stale since 2026-07-23, claiming 'Open — 175 remaining in Pack C'. The Affected table (lines 362-368) within the same entry correctly shows '539 identified — 539 resolved = 0 remaining' and 'Learner pool fully secured'. This is an internal contradiction: the body text is correct but the header and learner-safety section contradict it. The DL-029 entry (lines 2272-2326) is fully CORRECT — accurately documents the root cause of phantom counts.",
+    "SESSION_STATUS_2026-07-24.md": "INCONSISTENT — Wholly stale. 8 phantom/stale references found. Certified count (2,031) is 150 below ground truth (2,181). DL-008 count (67) is entirely phantom (0 actual). DL-016 severity understated (LOW/Cosmetic instead of HIGH). §8 recommends remediation of non-existent defects. Title claims 'Final Sweep' but document is 5 sessions behind ground truth (S802, S723, S725, S726 all postdate it).",
+    "REVISION_HISTORY.md": "CONSISTENT — All recent entries (S722A, S802, S723, S725, S803, S804, S537) accurately document 0 DL-008, 2,181 Certified, and the DL-029 root cause of phantom counts. S725 entry correctly catalogues 24 phantom references across 7 documents.",
+    "governance-guard.js": "CONSISTENT — Rule 2 BLOCK correctly enforces DL-008 prohibition. All 4 references to DL-008 are for the rule enforcement mechanism. NOTE: the findDL008Violations() function uses a ±1200-character window forward-scan that is DL-029-vulnerable per S725 Detection Standard. This does not make the references stale — the rule intent is correct — but the implementation methodology has a known scan reliability gap."
+  },
+  "most_critical_stale": "SESSION_STATUS_2026-07-24.md — the primary session handoff document reports 67 Certified DL-008 as CRITICAL (0 actual), undercounts Certified pool by 150 items, understates DL-016 as LOW/Cosmetic (should be HIGH), and recommends DL-008 remediation as the #1 next step (a non-existent task). Any agent following SESSION_STATUS alone would waste effort on phantom remediation and miss actual HIGH-severity defects (DL-016). CURRENT_BASELINES.md is now the authoritative document — SESSION_STATUS should be superseded.",
+  "phantom_ledger_cross_reference": {
+    "total_in_ledger": 24,
+    "remediated_by_s726": 9,
+    "remediated_details": [
+      "PHANTOM-001: CURRENT_BASELINES §3 DL-008 Pack C row → REMOVED",
+      "PHANTOM-002: CURRENT_BASELINES §3 DL-008 Pack D row → REMOVED",
+      "PHANTOM-003: CURRENT_BASELINES §3 DL-008 Pack A row → REMOVED",
+      "PHANTOM-004: Not yet remediated (SESSION_STATUS)",
+      "PHANTOM-005: Not yet remediated (SESSION_STATUS)",
+      "PHANTOM-006: Not yet remediated (DEFECT_LIBRARY DL-008 header)",
+      "PHANTOM-007: Not yet remediated (DEFECT_LIBRARY DL-008 Learner-Safety)",
+      "PHANTOM-008: CURRENT_BASELINES §2 Pack C section notes → CORRECTED",
+      "PHANTOM-009: CURRENT_BASELINES §2 Pack D section notes → CORRECTED",
+      "PHANTOM-010: CURRENT_BASELINES §3 DL-016 absent → ADDED (HIGH table, line 81)",
+      "PHANTOM-011: Not yet remediated (SESSION_STATUS DL-016 as Cosmetic)",
+      "PHANTOM-012: Not yet remediated (SESSION_STATUS §8)",
+      "PHANTOM-013: CURRENT_BASELINES §3 DL-013 851→163 → CORRECTED",
+      "PHANTOM-014: CURRENT_BASELINES §3 DL-021 '95 non-Certified' → CORRECTED to '95 Certified'",
+      "PHANTOM-015: CURRENT_BASELINES §3 DL-026 → CORRECTED (0 DL-026, state-labeling artifact noted)",
+      "PHANTOM-016: CURRENT_BASELINES §2 Pack E section notes → CORRECTED (acknowledged nuance)",
+      "PHANTOM-017: Not yet remediated (SESSION_STATUS supersession)",
+      "PHANTOM-018: Not yet remediated (SESSION_STATUS §6 CRITICAL)",
+      "PHANTOM-019-024: In S723/S724/S723-Closure/S723-Baseline documents — not within S726 scope"
+    ],
+    "remaining_unremediated": 15,
+    "remaining_in_governance_docs": {
+      "SESSION_STATUS_2026-07-24.md": 8,
+      "DEFECT_LIBRARY.md DL-008": 2,
+      "other_documents": 5
+    }
+  },
+  "confidence": 95
+}

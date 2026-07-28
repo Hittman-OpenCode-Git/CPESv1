@@ -1,0 +1,96 @@
+{
+  "deliverable": "SESSION750_DASHBOARD_MODEL.json",
+  "session": 750,
+  "board": "E",
+  "title": "Governance Dashboard Model",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "description": "Defines the governance dashboard display model: what metrics, status indicators, and health scores are presented to governance administrators. Consumed by build_dashboard.js for rendering.",
+  "dashboardPanels": [
+    {
+      "panel": "RULE_COMPLIANCE",
+      "title": "Rules 1-8 Compliance Status",
+      "refresh": "Per session",
+      "metrics": [
+        { "id": "R2_DL008", "label": "DL-008 Violations (Active)", "source": "governance_guard_engine.js Rule 2", "target": 0, "unit": "count", "alertAt": 1 },
+        { "id": "R6_IDENTITY", "label": "Identity Pass Rate", "source": "governance_guard_engine.js Rule 6", "target": "100%", "unit": "percentage" },
+        { "id": "R7_CERTIFIED", "label": "Certified Items", "source": "governance_guard_engine.js Rule 7", "target": 2500, "unit": "count" },
+        { "id": "R8_STRUCTURAL", "label": "Parse-Gap Count", "source": "governance_guard_engine.js Rule 8", "target": 0, "unit": "count", "alertAt": 1 }
+      ]
+    },
+    {
+      "panel": "DRIFT_STATUS",
+      "title": "Policy Drift by Dimension",
+      "refresh": "Per session",
+      "metrics": [
+        { "id": "DRIFT_META", "label": "Missing Metadata", "source": "policy_drift_detector.js", "target": 0, "unit": "count" },
+        { "id": "DRIFT_CITE", "label": "Missing Citations", "source": "policy_drift_detector.js", "target": 0, "unit": "count" },
+        { "id": "DRIFT_EXPL", "label": "Missing Explanations", "source": "policy_drift_detector.js", "target": 0, "unit": "count" },
+        { "id": "DRIFT_ID", "label": "Identity Anomalies", "source": "policy_drift_detector.js", "target": 0, "unit": "count", "alertAt": 1 },
+        { "id": "DRIFT_BYPASS", "label": "Readiness Bypasses", "source": "policy_drift_detector.js", "target": 0, "unit": "count", "alertAt": 1 }
+      ]
+    },
+    {
+      "panel": "OPEN_VIOLATIONS",
+      "title": "Open Governance Events",
+      "refresh": "Real-time",
+      "metrics": [
+        { "id": "EV_OPEN", "label": "Open Violations", "source": "governance_event_registry.js", "filter": "status:OPEN type:VIOLATION", "unit": "count" },
+        { "id": "EV_CRITICAL", "label": "Critical Open", "source": "governance_event_registry.js", "filter": "status:OPEN severity:CRITICAL", "unit": "count", "alertAt": 1 },
+        { "id": "EV_AGED", "label": "Open > 30 Days", "source": "governance_event_registry.js", "filter": "status:OPEN age>30d", "unit": "count", "alertAt": 5 }
+      ]
+    },
+    {
+      "panel": "OPEN_WAIVERS",
+      "title": "Active Exceptions & Waivers",
+      "refresh": "Per session",
+      "metrics": [
+        { "id": "WV_ACTIVE", "label": "Active Waivers", "source": "governance_event_registry.js", "filter": "type:WAIVER status:APPROVED", "unit": "count" },
+        { "id": "WV_EXPIRING", "label": "Expiring Soon", "source": "governance_event_registry.js", "filter": "type:WAIVER expires<14d", "unit": "count" },
+        { "id": "EX_ACTIVE", "label": "Active Exceptions", "source": "governance_event_registry.js", "filter": "type:EXCEPTION status:APPROVED", "unit": "count" }
+      ]
+    },
+    {
+      "panel": "AUDIT_HEALTH",
+      "title": "Certification Audit Health",
+      "refresh": "Per session",
+      "metrics": [
+        { "id": "CHAIN_COVERAGE", "label": "Questions with Audit Chains", "source": "certification_audit_builder.js", "unit": "percentage", "target": "100%" },
+        { "id": "CHAIN_CLOSED", "label": "Closed Audit Chains", "source": "certification_audit_builder.js", "unit": "percentage" },
+        { "id": "CHAIN_UNPROCESSED", "label": "Unprocessed Questions", "source": "certification_audit_builder.js", "unit": "count" }
+      ]
+    },
+    {
+      "panel": "IDENTITY_HEALTH",
+      "title": "Identity Validation Scorecard",
+      "refresh": "Per session",
+      "metrics": [
+        { "id": "ID_PASS_RATE", "label": "Gate -1 Pass Rate", "source": "governance_guard_engine.js Rule 6", "target": "100%", "unit": "percentage" },
+        { "id": "ID_DUPES", "label": "Duplicate QuestionIDs", "source": "governance_guard_engine.js Rule 6", "target": 0, "unit": "count", "alertAt": 1 },
+        { "id": "ID_MISSING", "label": "Missing Required Fields", "source": "governance_guard_engine.js Rule 6", "target": 0, "unit": "count", "alertAt": 1 }
+      ]
+    },
+    {
+      "panel": "METRICS_OVERVIEW",
+      "title": "Governance Metrics at a Glance",
+      "refresh": "Per session",
+      "metrics": [
+        { "id": "M_DETECTION_TIME", "label": "Mean Time to Detect (MTTD)", "source": "SESSION750_GOVERNANCE_METRICS.json", "unit": "hours" },
+        { "id": "M_RESOLUTION_TIME", "label": "Mean Time to Resolve (MTTR)", "source": "SESSION750_GOVERNANCE_METRICS.json", "unit": "hours" },
+        { "id": "M_REPEAT_RATE", "label": "Repeat Violation Rate", "source": "SESSION750_GOVERNANCE_METRICS.json", "unit": "percentage" },
+        { "id": "M_EXCEPTION_RATE", "label": "Exception Volume (30d)", "source": "SESSION750_GOVERNANCE_METRICS.json", "unit": "count" }
+      ]
+    }
+  ],
+  "overallStatusLogic": {
+    "GREEN": "All alertAt thresholds at zero; all panels at target",
+    "YELLOW": "Any non-critical alertAt exceeded; no CRITICAL open violations",
+    "RED": "Any CRITICAL open violation or alertAt on R2_DL008, DRIFT_ID, or ID_MISSING"
+  },
+  "refreshCadence": {
+    "enginePanels": "Per session — run governance_guard_engine.js",
+    "driftPanels": "Per session — run policy_drift_detector.js",
+    "eventPanels": "Real-time — read governance_event_registry.json",
+    "auditPanels": "Per certification wave — run certification_audit_builder.js"
+  }
+}

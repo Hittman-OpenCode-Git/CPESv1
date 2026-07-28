@@ -1,0 +1,55 @@
+{
+  "session": "522",
+  "timestamp": "2026-07-26T11:50:00Z",
+  "purpose": "Post-audit priority ranking of remaining 500-series work per selection rules",
+
+  "selection_rules_applied": {
+    "rule_1": "Prefer partially completed inventories before untouched: N/A — no partially completed arrays remain. All arrays are either 100% Certified or 0% Certified.",
+    "rule_2": "Prefer certification completion before calibration: APPLIED — remaining uncertified ENHANCED_CASE_BASE and MIGRATED_CASE_BASE_D prioritized over DL-032 difficulty calibration.",
+    "rule_3": "Prefer smallest gap first: APPLIED — MIGRATED_CASE_BASE_D (75 items) < ENHANCED_CASE_BASE (90 items).",
+    "rule_4": "Do not reopen already-certified arrays: APPLIED — all 7 fully-certified arrays excluded."
+  },
+
+  "priority_ranking": [
+    {
+      "rank": 1,
+      "target": "MIGRATED_CASE_BASE_D",
+      "file": "scored_cases4.js",
+      "items": 75,
+      "cases": 15,
+      "certified": 0,
+      "status": "WHOLLY_UNPROCESSED",
+      "has_difficulty_metadata": true,
+      "expected_sessions": 3,
+      "rationale": "Smallest remaining block (75 vs 90). Has per-item Difficulty metadata already. CASE-D* CaseIDs suggest prior migration quality — explanations, citations, and rationale likely present. Only needs CAQS verification + certification, not full uplift. Recommended S523–S525."
+    },
+    {
+      "rank": 2,
+      "target": "ENHANCED_CASE_BASE",
+      "file": "scored_cases.js",
+      "items": 90,
+      "cases": 15,
+      "certified": 0,
+      "status": "WHOLLY_UNPROCESSED",
+      "has_difficulty_metadata": false,
+      "expected_sessions": 4,
+      "rationale": "Larger block (90 items). No per-item Difficulty. 66/90 items have Explanation < 100 chars (full uplift needed). Legacy CBQ-* CaseIDs, not in runtime delivery pool. Recommended S527–S530."
+    }
+  ],
+
+  "excluded": [
+    {
+      "target": "DL-032 Difficulty Calibration",
+      "reason": "Rule 2 — calibration deferred until certification complete",
+      "scope": "370 items across 5 ENHANCED arrays",
+      "estimated_sessions": 2
+    },
+    {
+      "target": "ENHANCED_CASE_BASE3",
+      "reason": "Rule 4 — already 79/79 Certified. Fully complete.",
+      "note": "S518 inventory error listed this as having residual items. S522 verified 79/79."
+    }
+  ],
+
+  "recommended_s523_target": "MIGRATED_CASE_BASE_D Wave 1 — CASE-D1, CASE-D2, CASE-D3 (15 items, 3 cases)"
+}

@@ -1,0 +1,422 @@
+{
+  "session": "S831",
+  "agent": "H",
+  "phase": "Analysis",
+  "task": "Pack-specific recalibration plans — corrected arithmetic",
+  "caqs_target_per_500": {
+    "Easy": 75,
+    "ModerateEasy": 100,
+    "Moderate": 150,
+    "Difficult": 125,
+    "VeryDifficult": 50
+  },
+  "phase_1_intermediate_target_per_500": {
+    "Easy": 100,
+    "ModerateEasy": 100,
+    "Moderate": 175,
+    "Difficult": 100,
+    "VeryDifficult": 25
+  },
+  "note": "USER DRAFT HAD ARITHMETIC ERRORS. This plan corrects all counts with independent delta verification. Each pack's moves balance to target (sum of deltas = 0).",
+  "user_draft_errors": {
+    "pack_A": "ModEasy→Moderate should be 117 not 119; missing ModEasy→Easy of 2. Net: Moderate ends at 177 not 175, Easy at 98 not 100.",
+    "pack_B": "Moderate→ModEasy of 7 OVERshoots ModEasy to 132 (target 100). Correct path: Easy→ModEasy(32), ModEasy→Moderate(25) — total 153 not 135.",
+    "pack_C": "ModEasy→Moderate(8) + Moderate→ModEasy(8) net cancel (churn). Missing ME→E(1). E=99 and ME=108 miss targets. Correct total: 119 not 127.",
+    "pack_D": "Easy→ModEasy direction reversed — Easy is 98 (below target 100). Correct: Moderate→Easy(2) + Moderate→ModEasy(2).",
+    "pack_E": "ModEasy→Moderate(67) + Moderate→ModEasy(67) net cancel (churn). Correct: ME→M(68) not 67. Correct total: 182 not 248."
+  },
+  "pack_plans": [
+    {
+      "pack": "A",
+      "total": 500,
+      "current": {
+        "Easy": 98,
+        "ModerateEasy": 219,
+        "Moderate": 183,
+        "Difficult": 0,
+        "VeryDifficult": 0
+      },
+      "phase1_target": {
+        "Easy": 100,
+        "ModerateEasy": 100,
+        "Moderate": 175,
+        "Difficult": 100,
+        "VeryDifficult": 25
+      },
+      "delta_to_target": {
+        "Easy": "+2",
+        "ModerateEasy": "-119",
+        "Moderate": "-8",
+        "Difficult": "+100",
+        "VeryDifficult": "+25"
+      },
+      "moves": [
+        {
+          "from": "ModerateEasy",
+          "to": "Easy",
+          "count": 2,
+          "rationale": "Top Easy from 98 to 100 using marginal ModEasy items"
+        },
+        {
+          "from": "ModerateEasy",
+          "to": "Moderate",
+          "count": 117,
+          "rationale": "Normalize inflated ModEasy band (219). Extract 119 total: 2 to Easy, 117 to Moderate."
+        },
+        {
+          "from": "Moderate",
+          "to": "Difficult",
+          "count": 100,
+          "rationale": "Create Difficult band — Pack A has zero Difficult items. All 100 come from Moderate (which absorbs 117 from ModEasy net)."
+        },
+        {
+          "from": "Moderate",
+          "to": "VeryDifficult",
+          "count": 25,
+          "rationale": "Create VDiff band from most complex Moderate items."
+        }
+      ],
+      "balanced_trace": {
+        "step1_ME_to_E": "E: 98+2=100, ME: 219-2=217, M: 183, D: 0, VD: 0",
+        "step2_ME_to_M": "E: 100, ME: 217-117=100, M: 183+117=300, D: 0, VD: 0",
+        "step3_M_to_D": "E: 100, ME: 100, M: 300-100=200, D: 100, VD: 0",
+        "step4_M_to_VD": "E: 100, ME: 100, M: 200-25=175, D: 100, VD: 25",
+        "final_match": "ALL TARGETS MATCH"
+      },
+      "total_recalibrations": 244,
+      "pct_of_pack": 48.8,
+      "feasibility": "MUST SPLIT into 2 sweeps — 48.8% exceeds 30% governance guard. Sweep 1: ME→M(117)+M→D(50)=167 (33.4%). Sweep 2: ME→E(2)+M→D(50)+M→VD(25)=77 (15.4%).",
+      "sweep_recommendation": "2 sweeps",
+      "certified_impact": "481 of 500 items are Certified. All 244 moves affect Certified items. REVISION_HISTORY entries required for every moved item."
+    },
+    {
+      "pack": "B",
+      "total": 500,
+      "current": {
+        "Easy": 132,
+        "ModerateEasy": 93,
+        "Moderate": 246,
+        "Difficult": 29,
+        "VeryDifficult": 0
+      },
+      "phase1_target": {
+        "Easy": 100,
+        "ModerateEasy": 100,
+        "Moderate": 175,
+        "Difficult": 100,
+        "VeryDifficult": 25
+      },
+      "delta_to_target": {
+        "Easy": "-32",
+        "ModerateEasy": "+7",
+        "Moderate": "-71",
+        "Difficult": "+71",
+        "VeryDifficult": "+25"
+      },
+      "moves": [
+        {
+          "from": "Easy",
+          "to": "ModerateEasy",
+          "count": 32,
+          "rationale": "Easy is inflated at 132 (26.4%). Shift 32 marginal Easy items to ModEasy — lowers Easy to 100 exactly."
+        },
+        {
+          "from": "ModerateEasy",
+          "to": "Moderate",
+          "count": 25,
+          "rationale": "After absorbing 32 from Easy, ModEasy = 125. Need to trim 25 to reach 100 target."
+        },
+        {
+          "from": "Moderate",
+          "to": "Difficult",
+          "count": 71,
+          "rationale": "Moderate absorbs 25 from ModEasy (246+25=271), then releases 71 to Difficult and 25 to VDiff. Difficult goes from 29 to 100."
+        },
+        {
+          "from": "Moderate",
+          "to": "VeryDifficult",
+          "count": 25,
+          "rationale": "Create VDiff band from most complex Moderate items."
+        }
+      ],
+      "balanced_trace": {
+        "step1_E_to_ME": "E: 132-32=100, ME: 93+32=125, M: 246, D: 29, VD: 0",
+        "step2_ME_to_M": "E: 100, ME: 125-25=100, M: 246+25=271, D: 29, VD: 0",
+        "step3_M_to_D": "E: 100, ME: 100, M: 271-71=200, D: 29+71=100, VD: 0",
+        "step4_M_to_VD": "E: 100, ME: 100, M: 200-25=175, D: 100, VD: 25",
+        "final_match": "ALL TARGETS MATCH"
+      },
+      "total_recalibrations": 153,
+      "pct_of_pack": 30.6,
+      "feasibility": "BORDERLINE — 30.6% is just over 30%. Can execute as single sweep or split into 2 micro-sweeps (153→100+53). Recommended: single sweep with BLOCK-AUTHORIZED marker.",
+      "sweep_recommendation": "1 sweep with authorization; OR 2 sweeps (100+53) for strict compliance",
+      "certified_impact": "500 of 500 items are Certified. All 153 moves require REVISION_HISTORY entries.",
+      "user_draft_correction": "User's plan had Moderate→ModEasy of 7 overshooting ModEasy to 132. Corrected: Easy→ModEasy(32), ModEasy→Moderate(25). Same net deltas, correct routing."
+    },
+    {
+      "pack": "C",
+      "total": 500,
+      "current": {
+        "Easy": 99,
+        "ModerateEasy": 108,
+        "Moderate": 279,
+        "Difficult": 14,
+        "VeryDifficult": 0
+      },
+      "phase1_target": {
+        "Easy": 100,
+        "ModerateEasy": 100,
+        "Moderate": 175,
+        "Difficult": 100,
+        "VeryDifficult": 25
+      },
+      "delta_to_target": {
+        "Easy": "+1",
+        "ModerateEasy": "-8",
+        "Moderate": "-104",
+        "Difficult": "+86",
+        "VeryDifficult": "+25"
+      },
+      "moves": [
+        {
+          "from": "ModerateEasy",
+          "to": "Easy",
+          "count": 1,
+          "rationale": "Top Easy from 99 to 100."
+        },
+        {
+          "from": "ModerateEasy",
+          "to": "Moderate",
+          "count": 7,
+          "rationale": "Trim ModEasy from 108 to 100. Total reduction: 8 (1 to Easy, 7 to Moderate)."
+        },
+        {
+          "from": "Moderate",
+          "to": "Difficult",
+          "count": 86,
+          "rationale": "Moderate absorbs 7 from ModEasy (279+7=286), releases 86 to Difficult and 25 to VDiff. Difficult: 14+86=100."
+        },
+        {
+          "from": "Moderate",
+          "to": "VeryDifficult",
+          "count": 25,
+          "rationale": "Create VDiff band from most complex Moderate items."
+        }
+      ],
+      "balanced_trace": {
+        "step1_ME_to_E": "E: 99+1=100, ME: 108-1=107, M: 279, D: 14, VD: 0",
+        "step2_ME_to_M": "E: 100, ME: 107-7=100, M: 279+7=286, D: 14, VD: 0",
+        "step3_M_to_D": "E: 100, ME: 100, M: 286-86=200, D: 14+86=100, VD: 0",
+        "step4_M_to_VD": "E: 100, ME: 100, M: 200-25=175, D: 100, VD: 25",
+        "final_match": "ALL TARGETS MATCH"
+      },
+      "total_recalibrations": 119,
+      "pct_of_pack": 23.8,
+      "feasibility": "HIGH — 23.8% well within 30% governance limit. Single sweep safe.",
+      "sweep_recommendation": "1 sweep",
+      "certified_impact": "388 of 500 items are Certified. 112 non-Certified items provide headroom for less oversight. Max 119 moves; some may target non-Certified items.",
+      "user_draft_correction": "User's plan had ME→M(8) + M→ME(8) canceling (churn) and E=99 missed target. Corrected: ME→E(1), ME→M(7). Total 119 not 127."
+    },
+    {
+      "pack": "D",
+      "total": 500,
+      "current": {
+        "Easy": 98,
+        "ModerateEasy": 98,
+        "Moderate": 284,
+        "Difficult": 20,
+        "VeryDifficult": 0
+      },
+      "phase1_target": {
+        "Easy": 100,
+        "ModerateEasy": 100,
+        "Moderate": 175,
+        "Difficult": 100,
+        "VeryDifficult": 25
+      },
+      "delta_to_target": {
+        "Easy": "+2",
+        "ModerateEasy": "+2",
+        "Moderate": "-109",
+        "Difficult": "+80",
+        "VeryDifficult": "+25"
+      },
+      "moves": [
+        {
+          "from": "Moderate",
+          "to": "Easy",
+          "count": 2,
+          "rationale": "Top Easy from 98 to 100 using borderline Moderate items."
+        },
+        {
+          "from": "Moderate",
+          "to": "ModerateEasy",
+          "count": 2,
+          "rationale": "Top ModEasy from 98 to 100 using borderline Moderate items."
+        },
+        {
+          "from": "Moderate",
+          "to": "Difficult",
+          "count": 80,
+          "rationale": "Moderate releases 109 total: 2 to Easy, 2 to ModEasy, 80 to Difficult, 25 to VDiff. Difficult: 20+80=100."
+        },
+        {
+          "from": "Moderate",
+          "to": "VeryDifficult",
+          "count": 25,
+          "rationale": "Create VDiff band from most complex Moderate items."
+        }
+      ],
+      "balanced_trace": {
+        "step1_M_to_E": "E: 98+2=100, ME: 98, M: 284-2=282, D: 20, VD: 0",
+        "step2_M_to_ME": "E: 100, ME: 98+2=100, M: 282-2=280, D: 20, VD: 0",
+        "step3_M_to_D": "E: 100, ME: 100, M: 280-80=200, D: 20+80=100, VD: 0",
+        "step4_M_to_VD": "E: 100, ME: 100, M: 200-25=175, D: 100, VD: 25",
+        "final_match": "ALL TARGETS MATCH"
+      },
+      "total_recalibrations": 109,
+      "pct_of_pack": 21.8,
+      "feasibility": "HIGH — 21.8% well within 30% limit. Simplest plan of all 5 packs. Certified density moderate (389/500). Most Moderate→Diff/VDiff moves will target non-Certified deep Moderate pool.",
+      "sweep_recommendation": "1 sweep",
+      "certified_impact": "389 of 500 items are Certified. 111 non-Certified provide headroom. Prefer non-Certified items for Diff/VDiff moves where possible.",
+      "user_draft_correction": "User's plan had Easy→ModEasy direction reversed (Easy is 98, below target 100). Corrected to Moderate→Easy(2) + Moderate→ModEasy(2)."
+    },
+    {
+      "pack": "E",
+      "total": 540,
+      "current": {
+        "Easy": 109,
+        "ModerateEasy": 175,
+        "Moderate": 234,
+        "Difficult": 22,
+        "VeryDifficult": 0
+      },
+      "phase1_target": {
+        "Easy": 108,
+        "ModerateEasy": 108,
+        "Moderate": 189,
+        "Difficult": 108,
+        "VeryDifficult": 27
+      },
+      "delta_to_target": {
+        "Easy": "-1",
+        "ModerateEasy": "-67",
+        "Moderate": "-45",
+        "Difficult": "+86",
+        "VeryDifficult": "+27"
+      },
+      "moves": [
+        {
+          "from": "Easy",
+          "to": "ModerateEasy",
+          "count": 1,
+          "rationale": "Trim Easy from 109 to 108."
+        },
+        {
+          "from": "ModerateEasy",
+          "to": "Moderate",
+          "count": 68,
+          "rationale": "ModEasy is at 175+1(from Easy)=176. Need to release 68 to reach 108 target. All 68 go to Moderate."
+        },
+        {
+          "from": "Moderate",
+          "to": "Difficult",
+          "count": 86,
+          "rationale": "Moderate absorbs 68 from ModEasy (234+68=302), releases 86 to Difficult and 27 to VDiff. Difficult: 22+86=108."
+        },
+        {
+          "from": "Moderate",
+          "to": "VeryDifficult",
+          "count": 27,
+          "rationale": "Create VDiff band (27 for 540-item pack = 5% scaled from 25/500)."
+        }
+      ],
+      "balanced_trace": {
+        "step1_E_to_ME": "E: 109-1=108, ME: 175+1=176, M: 234, D: 22, VD: 0",
+        "step2_ME_to_M": "E: 108, ME: 176-68=108, M: 234+68=302, D: 22, VD: 0",
+        "step3_M_to_D": "E: 108, ME: 108, M: 302-86=216, D: 22+86=108, VD: 0",
+        "step4_M_to_VD": "E: 108, ME: 108, M: 216-27=189, D: 108, VD: 27",
+        "final_match": "ALL TARGETS MATCH"
+      },
+      "total_recalibrations": 182,
+      "pct_of_pack": 33.7,
+      "feasibility": "MUST SPLIT into 2 sweeps — 33.7% exceeds 30%. Sweep 1: ME→M(68)+M→D(50)=118 (21.9%). Sweep 2: E→ME(1)+M→D(36)+M→VD(27)=64 (11.9%).",
+      "sweep_recommendation": "2 sweeps",
+      "certified_impact": "540 of 540 items are Certified (100%). Every move affects learner-facing items directly. Highest risk pack — no non-Certified headroom.",
+      "user_draft_correction": "User's plan had ME→M(67) + M→ME(67) canceling (134 items of churn) and ME→M should be 68 not 67. Correct total: 182 not 248."
+    }
+  ],
+  "cross_pack_summary": {
+    "total_recalibrations": 807,
+    "breakdown": {
+      "pack_A": 244,
+      "pack_B": 153,
+      "pack_C": 119,
+      "pack_D": 109,
+      "pack_E": 182
+    },
+    "by_direction": {
+      "moderate_to_difficult": 423,
+      "moderate_to_verydifficult": 127,
+      "modeasy_to_moderate": 217,
+      "easy_to_moderateeasy": 33,
+      "modeasy_to_easy": 3,
+      "moderate_to_easy": 2,
+      "moderate_to_moderateeasy": 2
+    },
+    "sweep_requirements": {
+      "single_sweep_packs": ["C", "D"],
+      "borderline_packs": ["B (30.6%)"],
+      "double_sweep_packs": ["A (48.8%)", "E (33.7%)"],
+      "total_sweeps": "7-8 sweeps (C:1, D:1, B:1-2, A:2, E:2)"
+    },
+    "certified_impact": {
+      "total_certified_items_affected": "~99.7% of all moves affect Certified items",
+      "revision_history_entries_needed": 807,
+      "highest_risk": "Pack E — 100% Certified, zero non-Certified headroom"
+    }
+  },
+  "post_phase1_pool_distribution": {
+    "total_items": 2540,
+    "Easy": "508 (20.0%)",
+    "ModerateEasy": "508 (20.0%)",
+    "Moderate": "889 (35.0%)",
+    "Difficult": "508 (20.0%)",
+    "VeryDifficult": "127 (5.0%)",
+    "verification": "508+508+889+508+127 = 2540"
+  },
+  "risks": [
+    "Pack A (48.8%) and Pack E (33.7%) exceed 30% per-sweep governance guard — must split",
+    "Pack B at 30.6% is borderline — recommend BLOCK-AUTHORIZED marker or 2 micro-sweeps",
+    "No per-item cognitive assessment performed — items moved to Diff/VDiff may not actually warrant higher difficulty (DL-031 definition-match inflation means some current Moderate items are actually Easy)",
+    "807 REVISION_HISTORY entries required — each must document old/new difficulty, no content changes",
+    "Case studies not addressed (420 items, all Moderate per DL-032) — separate workstream needed",
+    "If DL-031 definition-match Easy items are first recalibrated to Easy BEFORE this sweep, the Moderate pool shrinks and the Diff/VDiff pool becomes harder to source"
+  ],
+  "recommendation": "ACCEPT with modifications: (1) Execute Packs C and D first (simplest, safe). (2) Execute Pack B as single sweep with BLOCK-AUTHORIZED. (3) Split Pack A into 2 sweeps, Pack E into 2 sweeps. (4) Address DL-031 definition-match recalibration FIRST to avoid sourcing Diff/VDiff from items that should be Easy. Total: 7-8 sweeps, estimated 4-6 hours.",
+  "decision": "RECOMMEND ACCEPT WITH MODIFICATION",
+  "execution_order": [
+    {
+      "phase": 0,
+      "description": "DL-031 definition-match fix: recalibrate ~500 inflate Moderate→Easy items across all packs BEFORE difficulty redistribution. This ensures the Moderate pool isn't diluted with Easy items."
+    },
+    {
+      "phase": 1,
+      "packs": ["D", "C"],
+      "description": "Simplest plans (21.8%, 23.8%). Single sweeps each. Low risk.",
+      "items": 228
+    },
+    {
+      "phase": 2,
+      "pack": "B",
+      "description": "Borderline 30.6%. Single sweep with BLOCK-AUTHORIZED or 2 micro-sweeps.",
+      "items": 153
+    },
+    {
+      "phase": 3,
+      "packs": ["A", "E"],
+      "description": "High recalibration rates. 2 sweeps each (governance-compliant). Highest risk.",
+      "items": 426
+    }
+  ]
+}

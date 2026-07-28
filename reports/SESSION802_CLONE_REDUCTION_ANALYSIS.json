@@ -1,0 +1,144 @@
+{
+  "session": "802",
+  "agent": "P",
+  "title": "Clone Reduction Analysis",
+  "date": "2026-07-26",
+  "methodology": {
+    "current_archived": "grep '\"question_state\": \"Archived\"' per pack file",
+    "section_breakdown": "regex: Section + QuestionID + question_state per pack",
+    "stem_comparison": "regex extraction of Stem fields in Sections E/F",
+    "qid_verification": "Direct Select-String per pack format pattern"
+  },
+  "raw_counts": {
+    "pack_a_archived": 19,
+    "pack_b_archived": 0,
+    "pack_c_archived": 56,
+    "pack_d_archived": 57,
+    "pack_e_archived": 0,
+    "total_archived": 132
+  },
+  "section_detail": {
+    "pack_A": {
+      "sections": {
+        "A": { "total": 75, "archived": 2, "certified": 73, "unprocessed": 0, "note": "2 anomalous archives: P1-A-045, P1-A-065" },
+        "B": { "total": 100, "archived": 0, "certified": 100, "unprocessed": 0 },
+        "C": { "total": 100, "archived": 0, "certified": 100, "unprocessed": 0 },
+        "D": { "total": 75, "archived": 0, "certified": 75, "unprocessed": 0 },
+        "E": { "total": 75, "archived": 17, "certified": 58, "unprocessed": 0, "archived_qids": ["P1-E-047","P1-E-048","P1-E-050","P1-E-051","P1-E-055","P1-E-056","P1-E-057","P1-E-058","P1-E-062","P1-E-063","P1-E-065","P1-E-066","P1-E-070","P1-E-071","P1-E-073","P1-E-074","P1-E-076"], "note": "17 of 75 archived. DL-012 pattern: 14 clones × 4 archived per group = 56 needed. Currently 17 archived means 39 more should be archived. But 58 are Certified — these CANNOT be archived without de-certification." },
+        "F": { "total": 75, "archived": 0, "certified": 75, "unprocessed": 0 }
+      },
+      "clone_sections": ["E"],
+      "seeds_remaining": 14
+    },
+    "pack_B": {
+      "archived": 0,
+      "notes": "No clones — Gold standard pipeline. All 500 items structurally clean with distinct stems and choice-specific distractor explanations."
+    },
+    "pack_C": {
+      "sections": {
+        "A": { "total": 75, "archived": 0, "certified": 75, "unprocessed": 0 },
+        "B": { "total": 100, "archived": 0, "certified": 100, "unprocessed": 0 },
+        "C": { "total": 100, "archived": 0, "certified": 100, "unprocessed": 0 },
+        "D": { "total": 75, "archived": 0, "certified": 75, "unprocessed": 0 },
+        "E": { "total": 75, "archived": 56, "certified": 0, "unprocessed": 19, "note": "14 clone groups × 4 archived + 14 seeds + 5 standalones = 75. Currently 56 archived, 19 unprocessed." },
+        "F": { "total": 75, "archived": 0, "certified": 0, "unprocessed": 75, "note": "SAME rotation template pattern confirmed by stem comparison. 75 items, 0 archived, all Unprocessed. 14 clone groups × 5 = 70 clones + 5 standalones." }
+      },
+      "clone_sections": ["E", "F"],
+      "archivable_total": 70,
+      "archivable_pct": 70.0,
+      "pct_of_pack": 14.0,
+      "s801_claim": { "agent": "J", "archivable": 347, "pct": 78.6, "discrepancy_note": "347/500 = 69.4% not 78.6%. S801 figure includes Sections A-D which is UNVERIFIED. My verified clone scope is Sections E+F only (150 items). The 347 means S801 claims ~197 additional clones in A-D sections that are currently Certified." }
+    },
+    "pack_D": {
+      "sections": {
+        "A": { "total": 75, "archived": 0, "certified": 75, "unprocessed": 0 },
+        "B": { "total": 100, "archived": 0, "certified": 100, "unprocessed": 0 },
+        "C": { "total": 100, "archived": 0, "certified": 100, "unprocessed": 0 },
+        "D": { "total": 75, "archived": 0, "certified": 75, "unprocessed": 0 },
+        "E": { "total": 75, "archived": 56, "certified": 0, "unprocessed": 19, "note": "14 clone groups × 4 archived + 14 seeds + 5 standalones = 75." },
+        "F": { "total": 75, "archived": 1, "certified": 0, "unprocessed": 74, "note": "SAME rotation template pattern confirmed. P1-FD-046 is the single archived item (master data management). 74 items Unprocessed, 55 more to archive for DL-012 pattern completion." }
+      },
+      "clone_sections": ["E", "F"],
+      "archivable_total": 70,
+      "archivable_pct": 70.0,
+      "pct_of_pack": 14.0,
+      "s801_claim": { "agent": "K", "archivable": 437, "pct": 90.6, "discrepancy_note": "437/500 = 87.4% not 90.6%. S801 figure includes Sections A-D which is UNVERIFIED. My verified clone scope is Sections E+F only (150 items). The 437 means S801 claims ~287 additional clones in A-D sections that are currently Certified." }
+    },
+    "pack_E": {
+      "archived": 0,
+      "notes": "Different authoring pipeline. No template rotation pattern. Section C has DL-021 (absent distractor explanations) but no clone redundancy."
+    }
+  },
+  "s801_claim_analysis": {
+    "total_s801_archivable": 784,
+    "breakdown": {
+      "pack_C": 347,
+      "pack_D": 437
+    },
+    "verified_e_f_only": 300,
+    "verified_a_e_only": 70,
+    "total_verified": 370,
+    "unverified_a_d_sections": 414,
+    "assessment": "S801 archivable figures of 347+437=784 are UNVERIFIED. They include Sections A-D which are all Certified. My stem-comparison verification covers only Sections E/F (confirmed rotation template) and Pack A Section E (confirmed DL-012 pattern). The ~784 figure implies ~414 clone items in Certified A-D sections across Packs C and D. This has NOT been independently verified and may be inflated by scan methodology artifacts (DL-016 metadata-content shift, DL-029 block-window false positives).",
+    "s801_pct_errors": "Both agents report incorrect percentages: 347/500=69.4% (not 78.6%), 437/500=87.4% (not 90.6%). This undermines confidence in the raw counts."
+  },
+  "stem_rotation_pattern_confirmation": {
+    "sections_verified": ["Pack C Section E", "Pack C Section F", "Pack D Section E", "Pack D Section F"],
+    "pattern": "Items appear in pairs (odd/even QIDs within each micro-topic) with identical stem skeleton. Only the fictional company name varies in alphabetical progression (Bramblewood → Deepwater → Fernhollow → Hawkridge, etc.). Answer choices are the same four options, positionally rotated so the correct answer lands in each letter position exactly once per 5-item group. Distractor explanations are verbatim identical within each group (DL-013 boilerplate).",
+    "confirming_examples": [
+      "P1-ED-001 ('Bramblewood structures its risk and control functions...') vs P1-ED-003 ('Deepwater structures its risk and control functions...')",
+      "P1-FD-001 ('Bramblewood uses application programming interfaces...') vs P1-FD-003 ('Deepwater uses application programming interfaces...')"
+    ],
+    "pack_d_section_f_anomaly": "P1-FD-046 is the only archived item in Pack D Section F. It's a master data management question with substantive distractor explanations, suggesting it was manually archived as a quality-control action rather than as part of a systematic batch operation."
+  },
+  "certification_impact": {
+    "currently_blocked": 187,
+    "blocked_breakdown": {
+      "pack_C_E_unprocessed": 19,
+      "pack_D_E_unprocessed": 19,
+      "pack_C_F_unprocessed": 75,
+      "pack_D_F_unprocessed": 74
+    },
+    "additional_archives_needed": {
+      "pack_C_F": 56,
+      "pack_D_F": 55,
+      "total": 111,
+      "note": "To match DL-012 pattern (14 clone groups × 4 archived per group). Pack D already has 1 archived (P1-FD-046), so 55 more needed."
+    },
+    "certifiable_if_archives_confirmed": 66,
+    "certifiable_breakdown": {
+      "pack_C_E_seeds_standalone": 19,
+      "pack_D_E_seeds_standalone": 19,
+      "pack_C_F_seeds_standalone": 19,
+      "pack_D_F_seeds_standalone": 19,
+      "note": "Each section yields: 14 seeds (1 per clone group) + 5 standalone unique items = 19 certifiable items"
+    },
+    "pack_A_section_E_deferred": "17 currently archived, 58 Certified. Cannot archive the 58 Certified items without de-certification. DL-012 states 14 clone groups × 4 = 56 should be archived. Currently only 17 archived. The remaining 39 clones are Certified and in the learner pool — HIGH PRIORITY but requires de-certification.",
+    "modernization_potential": "HIGH",
+    "modernization_note": "Sections E/F across Packs C/D are ideal candidates for modernization: all items are Unprocessed (no learner-pool impact from archival), rotation template makes seed identification trivial, and DL-013 boilerplate is pervasive. The 66 seeds + standalones can be certified immediately after archival of 111 clones. Sections A-D clone claims require independent verification before acting on them."
+  },
+  "s800_estimate_assessment": {
+    "s800_estimate": "~765 clone items",
+    "currently_archived": 132,
+    "verified_clone_scope_sections_e_f": "Pack C (150) + Pack D (150) + Pack A Section E (75) = 375 potentially clone-affected items across Sections E/F",
+    "verified_clone_scope_active_clones": "Pack C E(56 archived) + Pack C F(75 Unprocessed) + Pack D E(56 archived) + Pack D F(75 total, 1 archived) = 243 clones in E/F (archived + unprocessed)",
+    "clones_needing_archival": "Pack C F(56) + Pack D F(55) = 111 additional archives needed to complete E/F cleanup",
+    "post_archive_total": "132 current + 111 new = 243 total archived in clone sections",
+    "still_short_of_s800_estimate": "243 << ~765. The ~765 estimate implicitly includes ~522 clone items in Sections A-D across Packs A/C/D, which is UNVERIFIED. My recommendation is to defer assessment of A-D sections until after Wave 1 (E/F archival + seed certification)."
+  },
+  "recommendations": [
+    "PRIORITY 1: Archive clones in Pack C Section F (56) and Pack D Section F (55) — these are all Unprocessed, zero learner-pool exposure, zero de-certification required. 111 items, 4 batches of ≤28 per Rule 5.",
+    "PRIORITY 2: Identify and certify the 66 seeds + standalones (19 per section × 4 sections) that will remain active after E/F archival. These are the unique pedagogical items.",
+    "PRIORITY 3: Do NOT act on S801 claims of 347/437 archivable items in Sections A-D. These are unverified, involve Certified items, and may be inflated by scan methodology artifacts (DL-016, DL-029). Require independent stem-comparison verification before any A-D archival action.",
+    "Pack A Section E: 58 Certified items in the clone section need de-certification before archival. Defer to a future session — higher risk, requires user authorization.",
+    "Pack D anomaly P1-FD-046: Already archived. Verify it was intentional (substantive distractor text suggests manual action, not batch).",
+    "Scan methodology caution: S801 agents' percentage errors (78.6% vs 69.4%, 90.6% vs 87.4%) suggest the underlying scan tools may have systematic biases. Use boundary-aware object parsing, not regex window-scanning, for any A-D clone verification.",
+    "The ~765 S800 estimate is reconcilable as: 132 currently archived + 111 E/F clones needing archival + ~522 unverified A-D clone claims. The E/F portion (243) is verified; the A-D portion (~522) requires independent confirmation."
+  ],
+  "disclaimers": [
+    "S801 figures for Sections A-D are NOT independently verified by this agent. They may be correct, partially correct (inflated by DL-016/DL-029 artifacts), or incorrect.",
+    "The 14-clone-group-per-section model for Section F is assumed (not proven) based on the rotation pattern observed in sampled stems. Actual clone group count may differ.",
+    "Pack A Section E has 58 Certified items that are likely clones — this is a learner-safety concern but archival requires de-certification which this agent cannot perform."
+  ],
+  "next_actions": "Forward to S802 governance agent: confirm clone counts vs S801, authorize E/F archival batches, schedule seed certification session."
+}

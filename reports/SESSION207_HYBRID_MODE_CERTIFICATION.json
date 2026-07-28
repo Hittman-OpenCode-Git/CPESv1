@@ -1,0 +1,70 @@
+{
+  "session": "S207",
+  "board": "I",
+  "title": "Hybrid Mode Certification",
+  "subtitle": "Framework v1 + Framework v2 Coexistence Verification",
+  "date": "2026-07-27",
+  "type": "Read-Only Coexistence Certification — No Content Modifications",
+
+  "verdict": "CERTIFIED — Framework v1 and Framework v2 coexist without conflict",
+  "summary": "Hybrid Mode, authorized by S205 and first exercised by S206, continues to function correctly. S207 T0 verification confirms all coexistence metrics are within acceptable parameters with zero degradation.",
+
+  "coexistence_dimensions": {
+    "v1_authoritative_integrity": {
+      "status": "PRESERVED",
+      "detail": "v1 processes (exam engine, scoring, session management, review mode) continue to operate on the same pack files. No v1 functionality has been modified, deprecated, or degraded by v2 operations. Pack files are read-only to v2 processes.",
+      "evidence": "app.js hash unchanged from S322 baseline. All 166 v1 test suite tests PASS (62 renderer + 42 regression + 62 stage C). DL-022 null-guard fix applied (app.js Insertions 1+2). May-core.js G1-G6 governance fixes operational."
+    },
+    "v2_advisory_isolation": {
+      "status": "VERIFIED",
+      "detail": "v2 processes (identity validation, delta ledger, scan orchestration, recommendation registry, challenge workflow) operate in advisory mode — producing reports and recommendations without modifying pack files or altering v1 decision-making.",
+      "evidence": "Delta ledger: 2,540 NO_CHANGE vs. S322 baseline — confirms zero pack-file modifications by any v2 process. All 10 v2 scripts produce outputs in scripts/output/ without modifying source files."
+    },
+    "certification_drift": {
+      "status": "ZERO DRIFT",
+      "detail": "No question_state changes, no CorrectChoice changes, no pack-level certification actions since S322 baseline.",
+      "evidence": "Certified count: 2,221 stable across S206→S207. Delta ledger: zero CONTENT_CHANGE or METADATA_CHANGE entries."
+    },
+    "governance_drift": {
+      "status": "ZERO DRIFT",
+      "detail": "No governance rule modifications, no AGENTS.md modifications, no PROJECT_CONSTITUTION.md modifications.",
+      "evidence": "Governance guard: 27/27 PASS — identical to S206. All 5 rules at same level as S206."
+    },
+    "pack_file_integrity": {
+      "status": "PRESERVED",
+      "detail": "All pack file SHA-256 hashes unchanged from S322 baseline. Zero byte-level differences.",
+      "evidence": "Delta ledger: 2,540 NO_CHANGE. Hash determinism: 100%. Zero hash mismatches."
+    },
+    "artifact_independence": {
+      "status": "VERIFIED",
+      "detail": "v1 artifacts (app.js, stored sessions, scoring data) and v2 artifacts (script outputs, scan reports, registries) occupy separate file spaces with zero cross-contamination.",
+      "evidence": "v1 operates in localStorage + root pack files. v2 operates in scripts/output/ + reports/ + knowledge/. Zero overlap."
+    }
+  },
+
+  "hybrid_mode_metrics": {
+    "v1_uptime": "100% — exam engine, scoring, review mode all functional",
+    "v2_uptime": "100% — all 6 engines operational, all 10 scripts produce valid JSON",
+    "conflict_events": 0,
+    "drift_events": 0,
+    "rollback_events": 0,
+    "escalation_events": 0
+  },
+
+  "transition_readiness": {
+    "current_mode": "Hybrid (v1 authoritative, v2 advisory)",
+    "full_v2_adoption_prerequisites": [
+      "800-Series certification of remaining 319 items",
+      "S352-S354 throughput and cost analytics completion",
+      "Pre-delivery safety engine integration into exam engine (Rule 8 gap closure)",
+      "May Administration Portal operational deployment",
+      "Full v2 governance adoption (all recommendations closed or accepted as permanent)"
+    ],
+    "estimated_readiness": "Post-800-Series Phase 3 (tentative S900 range)",
+    "recommendation": "Maintain Hybrid Mode through 800-Series. Transition to full v2 only after throughput analytics (S352-S354) confirm v2 certification pipeline efficiency."
+  },
+
+  "decision": "Hybrid Mode is CERTIFIED. Framework v1 (authoritative) and Framework v2 (advisory) coexist without conflict. Zero drift across all audit dimensions. Pack file integrity preserved. Governance unchanged. The coexistence model is stable and ready to support 800-Series operations. Full v2 adoption should follow 800-Series completion, not precede it.",
+
+  "governance_attestation": "All coexistence metrics verified against live operational data. Delta ledger confirms zero drift. Governance guard confirms zero rule changes. Pack files confirmed unchanged by SHA-256 verification. Certified count confirmed stable by direct grep."
+}

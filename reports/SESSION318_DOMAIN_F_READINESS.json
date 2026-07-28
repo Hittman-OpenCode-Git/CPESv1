@@ -1,0 +1,437 @@
+{
+  "readiness_review_id": "SESSION318_DOMAIN_F_READINESS",
+  "title": "Domain F Readiness Review — Technology & Analytics Pre-Activation Assessment",
+  "domain": "F — Technology & Analytics",
+  "review_date": "2026-07-27",
+  "review_context": "Conducted from S318 vantage point. Domain E modernization is at 37.0% (30/81), with Wave 2b insertion and 38-seed certification pipeline remaining. Domain F is the next major domain after Domain E closure.",
+  "document_type": "Readiness Assessment — Current State, Authoring Requirements, Replacement Requirements, Prerequisites, Timeline",
+
+  "1_EXECUTIVE_SUMMARY": {
+    "readiness_verdict": "NOT_STARTED",
+    "verdict_rationale": "Domain F has NOT begun any active modernization work. No Domain F certifications, replacements, or seed remediations have been executed in any session. The S803 archival wave removed 110 clone items, leaving 39 seeds retained. The S311 authoring specification defined 37 replacement items and 39 seed certifications (76 total items). However, Domain E must reach closure before Domain F can begin per the dependency constraint established in S307-S309. Domain F is fully inventoried, scoped, and specced — but NOT started.",
+    "readiness_level": "PLANNING_COMPLETE — inventory known, spec written, effort estimated. Execution blocked by Domain E dependency.",
+    "estimated_activation_session": "S332 or later (post-S331 Domain E closure)",
+    "overall_status": "READY_FOR_ACTIVATION — all pre-work complete. Awaiting Domain E closure handoff."
+  },
+
+  "2_DOMAIN_F_CURRENT_STATE": {
+    "title": "Domain F Current State — Post-S803 Archival Baseline",
+    "data_confidence": "HIGH — All numbers cross-validated across SESSION311_DOMAIN_F_INVENTORY.json, SESSION309_DOMAIN_F_BOTTLENECK.json, SESSION308_DOMAIN_F_FORECAST.json, SESSION307_DOMAIN_F_REMEDIATION_PLAN.json, and direct pack file grep verification.",
+    "source_of_truth": "SESSION311_DOMAIN_F_INVENTORY.json (post-S803) — reconciled against SESSION309 (pre-S803 gap analysis) and direct pack file Topic/LOSTag counts.",
+
+    "total_domain_f_items": 374,
+    "total_derivation": "75 (Pack A) + 75 (Pack B) + 75 (Pack C) + 74 (Pack D) + 75 (Pack E) = 374",
+    "certified": 225,
+    "certified_breakdown": {
+      "pack_a_section_f": { "total": 75, "certified": 75, "archived": 0, "unprocessed": 0, "status": "FULLY_CERTIFIED", "note": "All 75 items confirmed Certified via direct pack_a_corrected.js inspection. Topics F.001–F.075. LOSTag='F Technology and analytics'. Quality: EC ~400-600 chars, EW partially filled. Benchmark quality: MODERATE." },
+      "pack_b_section_f": { "total": 75, "certified": 75, "archived": 0, "unprocessed": 0, "status": "FULLY_CERTIFIED", "note": "Gold standard benchmark. 100% certified. All 75 items are quality exemplars. Confirmed via grep: 7 LOSTag='F' matches (Pack B uses Section-level LOSTags). Quality: EC >=400 chars, EW comprehensive, precise LOSTags. Primary quality reference for Domain F authoring." },
+      "pack_c_section_f": { "total": 75, "certified": 0, "archived": 56, "unprocessed": 19, "status": "UNPROCESSED_SEEDS", "note": "Post-S803 archival: 56 clone-rotated items archived. 19 seeds retained. Confirmed via grep: 75 Topic='F.' matches in pack_c_corrected.js. All items carry question_state='Unprocessed'." },
+      "pack_d_section_f": { "total": 74, "certified": 0, "archived": 54, "unprocessed": 20, "status": "UNPROCESSED_SEEDS", "note": "Post-S803 archival: 54 clone-rotated items archived. 20 seeds retained. FD-046 is the single missing item (pre-archived). Confirmed via grep: 74 Topic='F.' matches in pack_d_corrected.js." },
+      "pack_e_section_f": { "total": 75, "certified": 75, "archived": 0, "unprocessed": 0, "status": "FULLY_CERTIFIED", "note": "Fully certified but educationally thin. Not suitable as quality benchmark per SESSION311. Confirmed via grep: 0 Topic='F.' matches in pack_e_corrected.js (uses different Section structure)." }
+    },
+
+    "archived": 110,
+    "archived_breakdown": {
+      "pack_c": 56,
+      "pack_d": 54,
+      "archival_session": "S803",
+      "archival_criterion": "Clone-rotated items (template-generated with company-name rotation, predictable CC rotation, boilerplate EC/EW)",
+      "note": "Unlike Domain E (where archived clones could potentially be rescued), Domain F clones are 100% template-rotated — same stem concept, different fictional company name, rotated CC letter. No rescue value. All 110 must be replaced with unique authored items."
+    },
+
+    "unprocessed_seeds": 39,
+    "seed_breakdown": {
+      "pack_c": { "count": 19, "qid_prefix": "P1-FC-", "note": "14 seeds + 2 unique + 3 special/escalated per S803 classification" },
+      "pack_d": { "count": 20, "qid_prefix": "P1-FD-", "note": "14 seeds + 2 unique + 3 special + FD-046 already archived" }
+    },
+
+    "gap": 149,
+    "gap_derivation": "374 total - 225 certified = 149 uncertified. Of these 149: 39 are retained seeds (require remediation + certification), 110 are archived clones (require replacement items).",
+    "certification_rate_pct": 60.2,
+    "uiqs_current": 62.4,
+    "uiqs_grade": "C",
+    "p0_items": 8,
+    "ew_debt_count": 130,
+
+    "reconciliation_note": "SESSION308/SESSION307 reported 431 total Domain F items (281 certified, 150 uncertified). These numbers are PRE-S803. SESSION311 reconciled to 374 post-S803. The delta of 57 items (431-374=57) represents items that were double-counted or reclassified during S803. The SESSION311 post-S803 numbers (374 total, 225 certified, 39 unprocessed, 110 archived) are authoritative."
+  },
+
+  "3_AUTHORING_REQUIREMENTS": {
+    "title": "Domain F Authoring Requirements — Items Needing Creation vs. Remediation",
+    "total_items_requiring_work": 76,
+    "breakdown": {
+      "new_authoring_replacements": {
+        "count": 37,
+        "description": "37 unique replacement items must be authored from scratch to replace 110 archived clone-rotated items. Each replacement covers ~3 template-rotated clones (compression ratio ~3:1). These are GREENFIELD — they do not exist in any form. Must be authored using the S311 Domain F Authoring Specification with Pack B Section F as quality benchmark.",
+        "effort": "HIGH — full authoring pipeline: research topics, draft stems/choices/EC/EW, quality gate review, certification. Estimated 1.5-2.0 hours per replacement item (less than Domain E replacements because Domain F topics are more structured/technical).",
+        "total_hours_estimate": "55-75 hours",
+        "sessions_estimate": "5-7 sessions at 5-7 items/session"
+      },
+      "seed_remediation": {
+        "count": 39,
+        "description": "39 retained seeds (19 Pack C + 20 Pack D) require full remediation before CAQS §1.6 certification. Seeds are 'retained' (not archived) because they cover unique topics or have special/escalated status, but they still carry template-generation artifacts: thin EC, partial EW, coarse LOSTags, uncalibrated difficulty.",
+        "remediation_dimensions": {
+          "ec_expansion": "Expand EC from 80-120 chars to 400+ chars. Add technology framework citations (COBIT, NIST, ISO 27001, ITIL), business interpretation, and common exam traps.",
+          "ew_gap_fill": "Author choice-specific ExplanationWrong for ~78 empty slots (estimated ~2 empties per seed). Minimum 100 chars per slot per S311 Authoring Quality Gate.",
+          "stem_rewrite": "Rewrite stems from concept-identification format to application-level business scenarios involving technology decisions.",
+          "distractor_rewrite": "Rewrite distractors for CMA-style plausibility. Base on common IT audit findings, cybersecurity incident patterns, and technology implementation failures.",
+          "lostag_recalibration": "Replace coarse 'F Technology and analytics' with fine-grained LOSTags (F.1.a, F.1.b, F.2.a, etc.) matching the IMA CMA Part 1 CSO.",
+          "metadata_calibration": "Recalibrate Difficulty from uniform 'Moderate' to realistic distribution. Align CognitiveLevel with actual cognitive demand.",
+          "dl_compliance": "Verify DL-008 (CC-slot EW empty), DL-013 (no template boilerplate), DL-026 (all non-CC EW filled), DL-031 (difficulty calibration)."
+        },
+        "effort": "HIGH — 1.5-2.5 hours per seed (comparable to Domain E seeds). EC expansion and EW authoring are the largest effort components.",
+        "total_hours_estimate": "58-98 hours",
+        "sessions_estimate": "5-8 sessions at 5-8 items/session"
+      }
+    },
+    "combined_effort": {
+      "total_items": 76,
+      "total_hours_estimate": "113-173 hours",
+      "total_sessions_estimate": "10-15 sessions for Domain F modernization",
+      "note": "This is comparable to Domain E modernization (81 items: 43 replacements + 38 seeds). Domain F is slightly smaller (76 vs 81 items) but the authoring complexity may be higher due to the technical nature of Technology & Analytics topics."
+    }
+  },
+
+  "4_REPLACEMENT_REQUIREMENTS": {
+    "title": "Domain F Replacement Requirements — Clone Group Analysis",
+    "known_clone_groups": {
+      "status": "INFERRED_NOT_CATALOGUED",
+      "description": "Unlike Domain E (which had a fully catalogued clone group structure with 33 groups across 150+ clones), Domain F clone groups have NOT been formally enumerated. The S803 archival wave identified 110 clone-rotated items across Packs C/D Section F and archived them as a bulk operation. The exact clone group count (estimated at 37 groups per SESSION311) is based on the 3:1 compression ratio observed in Domain E, not on a formal Domain F clone group audit.",
+      "estimated_clone_groups": 37,
+      "estimation_method": "110 archived clones ÷ ~3 clones per group = ~37 replacement groups. This is a planning estimate, not a verified count.",
+      "risk": "MODERATE — without a formal clone group audit, the actual number of replacement items needed could range from 30 to 45. A pre-authoring clone group audit (1 session) is recommended before beginning replacement authoring."
+    },
+    "clone_characteristics": {
+      "rotation_pattern": "Same as Domain E: identical stem concept, different fictional company name, rotated CorrectChoice letter, template-generated EC (80-120 chars), partial EW fill with boilerplate.",
+      "rescue_value": "NONE — Domain F clones are 100% template-rotated. The conceptual content is too thin to rescue. Unlike Domain E (which had some substantively authored clones worth retaining as seeds), Domain F clones are purely template artifacts.",
+      "replacement_strategy": "Author 37 unique replacement items from scratch, each covering the topic span of ~3 archived clones. Use Pack B Section F (75 certified items) as the quality benchmark. Target even distribution across 10 Domain F topic areas.",
+      "compression_ratio": "~3:1 (3 clones → 1 unique replacement)"
+    },
+    "replacement_qid_prefix": "P1-F-R## (consistent with Domain E P1-E-R## prefix convention)"
+  },
+
+  "5_SEED_CROSS_REFERENCE_RISK": {
+    "title": "Pack C/D Seed Symmetry Risk — Same Pattern as Domain E",
+    "assessment": "HIGH_PROBABILITY — The Pack C/D Section F seed population almost certainly exhibits the same cross-pack symmetry pattern found in Domain E: Pack C seed for Topic X is conceptually identical to Pack D seed for Topic X (same underlying concept, different fictional company name, different CC letter).",
+    "rationale": [
+      "Both Pack C and Pack D Section F were generated from the same template rotation engine",
+      "The archival pattern is symmetric: 56 archived (Pack C) + 54 archived (Pack D) — near-identical counts suggesting mirrored clone groups",
+      "The retained seed pattern is also near-symmetric: 19 (Pack C) + 20 (Pack D)",
+      "Domain E cross-pack audit (planned for S320) will validate this pattern; findings will directly inform Domain F seed scoping"
+    ],
+    "impact_if_confirmed": "If Pack C and Pack D Section F seeds are symmetric clones of each other, the 39-seed pool consolidates to ~20 unique seeds (one per topic across both packs). This reduces Domain F seed certification workload by ~50%, saving 4-6 sessions.",
+    "recommendation": "A formal Domain F cross-reference audit (modeled on the Domain E S320 audit) should be the FIRST Domain F session after activation. Do not begin seed remediation until cross-pack duplication is assessed."
+  },
+
+  "6_READINESS_ASSESSMENT": {
+    "title": "Domain F Readiness Assessment — 6 Dimensions",
+    "overall_readiness": "NOT_STARTED — All pre-work complete but execution has not begun. Domain E dependency blocks activation.",
+
+    "dimensions": {
+      "inventory_completeness": {
+        "status": "COMPLETE",
+        "score": "9/10",
+        "detail": "Domain F items are fully inventoried post-S803. Pack-level counts verified by direct file grep: 75 (Pack A), 75 (Pack B), 75 (Pack C), 74 (Pack D), 75 (Pack E) = 374 total. Certified/unprocessed/archived distribution confirmed across SESSION311, SESSION309, and direct pack inspection. The only gap is item-level QID lists for the 39 seeds — unlike Domain E (which has per-QID lists in SESSION318_SEED_INVENTORY.json), Domain F seed QIDs have not been individually enumerated. This is a pre-activation task, not a blocking gap."
+      },
+      "authoring_specification": {
+        "status": "COMPLETE",
+        "score": "9/10",
+        "detail": "SESSION311_DOMAIN_F_AUTHORING_SPEC.json provides a comprehensive authoring specification: 37 replacements + 39 seed certifications = 76 total items. Spec covers topic mix (10 topic areas), blueprint targets (CSO-precise LOSTags), difficulty distribution (20/50/25/5%), cognitive level targets, quality standards (EC >=400 chars, EW >=100 chars, Pack B benchmark), and governance compliance (DL-008/013/026/031, CAQS §1.6). The spec is implementation-ready."
+      },
+      "remediation_planning": {
+        "status": "COMPLETE",
+        "score": "8/10",
+        "detail": "SESSION307_DOMAIN_F_REMEDIATION_PLAN.json defines a 3-phase remediation plan: Phase 1 (bulk certification + EW, 150 items, 5-7 sessions), Phase 2 (EW gap closure for certified items, 60 items, 2-3 sessions), Phase 3 (quality sweep, 281 items, 1 session). Total: 9 sessions. However, this plan is PRE-S803 and assumes 150 uncertified items. Post-S803, the plan needs updating to reflect the 76-item scope (37 replacements + 39 seeds). The updated plan should target ~12-16 sessions for full Domain F modernization."
+      },
+      "forecast_modeling": {
+        "status": "COMPLETE",
+        "score": "7/10",
+        "detail": "SESSION308_DOMAIN_F_FORECAST.json provides a 9-session forecast (7+2+1 phases) with cumulative impact projections (certified 281→431, UIQS 62.4→77.9). However, this forecast is also PRE-S803 and assumes 150 uncertified items. Post-S803, the forecast needs recalibration to the 76-item scope. The forecast correctly identifies the Domain E dependency and UIQS trajectory."
+      },
+      "bottleneck_analysis": {
+        "status": "COMPLETE",
+        "score": "9/10",
+        "detail": "SESSION309_DOMAIN_F_BOTTLENECK.json correctly diagnoses Domain F as a GREENFIELD content-authoring challenge (not structural repair). It identifies: (1) 100% unprocessed in Packs C/D Section F, (2) no clone rotation artifacts to rescue, (3) content bottleneck requiring pure authoring, (4) partial parallelization potential with Domain E. The parallelization analysis is nuanced and actionable."
+      },
+      "clone_group_cataloguing": {
+        "status": "INCOMPLETE",
+        "score": "3/10",
+        "detail": "Unlike Domain E (which has a fully enumerated clone group structure with 33 groups and per-group QID lists), Domain F clone groups are estimated at 37 based on the 3:1 compression ratio but have NOT been formally audited. A pre-authoring clone group audit is needed to: (1) confirm the actual clone group count, (2) enumerate which topics each group covers, (3) identify the 37 replacement item specifications, (4) detect any cross-pack clone symmetry between Pack C and Pack D seeds. This is the single largest pre-execution gap."
+      }
+    }
+  },
+
+  "7_PREREQUISITES": {
+    "title": "Prerequisites Before Domain F Can Begin",
+    "blocking_prerequisites": [
+      {
+        "id": "PRE-F-001",
+        "prerequisite": "Domain E Modernization Closure",
+        "status": "NOT_MET",
+        "detail": "Domain E modernization must reach closure (81/81 or documented ceiling) before Domain F can begin active sessions. Per SESSION318_COMPLETION_FORECAST.json, Domain E closure is projected at S331 (governance closure + attestation). The dependency is sequential: the same pack files (pack_c_corrected.js, pack_d_corrected.js) hold both Domain E (Section E) and Domain F (Section F) items, and concurrent modification risks corruption.",
+        "estimated_resolution": "S331",
+        "blocking": true
+      },
+      {
+        "id": "PRE-F-002",
+        "prerequisite": "Domain F Clone Group Audit",
+        "status": "NOT_STARTED",
+        "detail": "A formal Domain F clone group audit (1 session) must enumerate all 37 estimated clone groups, produce per-group QID lists, and define the 37 replacement item specifications. This is the Domain F equivalent of the Domain E S312 clone group closure audit.",
+        "estimated_resolution": "First Domain F session after activation",
+        "blocking": false,
+        "note": "Not blocking activation, but MUST complete before replacement authoring begins."
+      },
+      {
+        "id": "PRE-F-003",
+        "prerequisite": "Domain F Seed QID Enumeration",
+        "status": "NOT_STARTED",
+        "detail": "The 39 Domain F seed QIDs must be individually enumerated (equivalent to the Domain E SESSION318_SEED_INVENTORY.json QID lists). Currently, only pack-level counts (19 Pack C + 20 Pack D) are known — individual QIDs have not been listed.",
+        "estimated_resolution": "First Domain F session after activation",
+        "blocking": false
+      },
+      {
+        "id": "PRE-F-004",
+        "prerequisite": "Domain F Cross-Reference Audit",
+        "status": "NOT_STARTED",
+        "detail": "Pack C/D seed cross-reference audit (modeled on the Domain E S320 audit) to determine if Pack C and Pack D Section F seeds are symmetric clones. If confirmed, consolidate 39 seeds to ~20 unique seeds, reducing seed certification workload by ~50%.",
+        "estimated_resolution": "Second Domain F session after activation",
+        "blocking": false,
+        "note": "Must complete before seed remediation begins. The Domain E S320 audit will provide methodology that can be directly replicated for Domain F."
+      },
+      {
+        "id": "PRE-F-005",
+        "prerequisite": "Domain F Remediation Plan Update (Post-S803)",
+        "status": "NOT_STARTED",
+        "detail": "SESSION307_DOMAIN_F_REMEDIATION_PLAN.json and SESSION308_DOMAIN_F_FORECAST.json are pre-S803 and assume 150 uncertified items. Both need updating to reflect the post-S803 scope: 76 items (37 replacements + 39 seeds). The updated plan should define session allocation, agent staffing, gate criteria, and phase schedule.",
+        "estimated_resolution": "Can be done in parallel with Domain E closure (S319-S331 window)",
+        "blocking": false
+      }
+    ],
+    "non_blocking_preparation": [
+      "Domain F seed readiness assessment (EC/EW quality audit, DL defect scan) — can run during Domain E seed pipeline (S321-S330)",
+      "Domain F authoring template preparation (Pack B Section F exemplar extraction)",
+      "Domain F topic-to-LOS mapping (10 topic areas → CSO F.1-F.5 sub-tags)",
+      "Domain F registry slot reservation (QID range P1-F-R01 through P1-F-R37 for replacements)"
+    ]
+  },
+
+  "8_ESTIMATED_TIMELINE": {
+    "title": "Domain F Estimated Timeline",
+    "dependency_chain": "Domain E closure (S331) → Domain F activation (S332)",
+    "estimated_activation": "S332",
+    "estimated_completion": "S347-S352 (12-16 sessions after S332, projecting to ~S344-S348 for the minimum scope of 76 items)",
+
+    "phase_schedule_estimate": {
+      "phase_0_pre_activation": {
+        "sessions": "S319-S331",
+        "label": "Domain E Execution Window",
+        "domain_f_work": [
+          "Update Domain F remediation plan to post-S803 scope (S319 window)",
+          "Domain F seed QID enumeration (can run during S321-S330)",
+          "Domain F authoring template preparation",
+          "Domain F clone group audit pre-work"
+        ],
+        "note": "All Domain F pre-activation work can be done in parallel with Domain E execution. None of it modifies production files."
+      },
+      "phase_1_activation": {
+        "sessions": "S332",
+        "label": "Domain F Activation — Clone Group Audit + Seed Enumeration",
+        "items": 0,
+        "description": "Formal Domain F activation session. Complete clone group audit (enumerate all 37 groups, produce replacement specifications). Complete seed QID enumeration (39 QIDs with per-item metadata extraction). Produce S332 Domain F baseline dashboard.",
+        "deliverables": [
+          "Domain F clone group catalogue (37 groups with per-group QID lists)",
+          "Domain F seed QID inventory (39 QIDs with metadata extraction)",
+          "Domain F activation dashboard"
+        ]
+      },
+      "phase_2_cross_reference": {
+        "sessions": "S333",
+        "label": "Domain F Cross-Reference Audit",
+        "items": 0,
+        "description": "Audit Pack C vs Pack D Section F seed symmetry. Identify duplicate topic pairs. Produce consolidated seed list (19-39 seeds depending on duplication finding).",
+        "deliverables": [
+          "Domain F cross-reference audit report",
+          "Consolidated seed list (19-39 seeds)",
+          "Revised replacement count (may adjust if seed duplication reveals additional clone groups)"
+        ]
+      },
+      "phase_3_replacement_authoring": {
+        "sessions": "S334-S340",
+        "label": "Domain F Replacement Authoring (37 items)",
+        "sessions_count": 7,
+        "items": 37,
+        "description": "Author 37 replacement items using S311 Domain F Authoring Specification. 5-6 items per session. Full quality gate pipeline: Gate 1 (draft quality) → Gate 2 (technical compliance) → Gate 3 (blueprint alignment) → Gate 4 (QA review) → CAQS §1.6 certification.",
+        "note": "This phase can potentially run in parallel with Phase 4 (seed remediation) if different pack sections are targeted per session — same parallelization logic from SESSION309."
+      },
+      "phase_4_seed_remediation": {
+        "sessions": "S341-S348",
+        "label": "Domain F Seed Remediation + Certification (19-39 seeds)",
+        "sessions_count": 8,
+        "items": "19-39 (depending on cross-reference audit)",
+        "description": "Full remediation pipeline: EW gap fill, EC expansion, stem/distractor rewrite, LOSTag recalibration, metadata calibration, CAQS §1.6 certification. 5 seeds per session average.",
+        "note": "If cross-reference audit confirms symmetry (Path A: 19 seeds), this phase takes 4-5 sessions (S341-S345). If no symmetry (Path B: 39 seeds), this phase takes 7-8 sessions (S341-S348)."
+      },
+      "phase_5_closure": {
+        "sessions": "S349",
+        "label": "Domain F Closure — Reconciliation + Attestation",
+        "items": 0,
+        "description": "Final reconciliation: Domain F certification count update, registry synchronization, governance attestation, Domain F closure report, handoff to next domain.",
+        "deliverables": [
+          "Domain F closure report",
+          "Domain F certification count: 225 baseline + 76 modernization = 301 certified (80.5%)",
+          "Updated portfolio certification dashboard"
+        ]
+      }
+    },
+
+    "total_domain_f_sessions": "17-19 sessions (S332-S349)",
+    "domain_f_completion_projection": {
+      "baseline_certified": 225,
+      "modernization_items": 76,
+      "projected_certified": 301,
+      "projected_rate_pct": 80.5,
+      "projected_uiqs": "77.9 (B+) — per S308 forecast model",
+      "portfolio_impact": "Portfolio certification advances from ~2,292 (post-Domain E at S331) to ~2,368 (post-Domain F at S349)"
+    }
+  },
+
+  "9_COMPARISON_TO_DOMAIN_E": {
+    "title": "Domain F vs. Domain E — Structural Comparison",
+    "comparison_table": {
+      "scope": { "domain_e": "81 items (43 replacements + 38 seeds)", "domain_f": "76 items (37 replacements + 39 seeds)", "delta": "Domain F is 5 items smaller" },
+      "certified_baseline": { "domain_e": "238/359 (66.3%)", "domain_f": "225/374 (60.2%)", "delta": "Domain F has slightly lower starting certification rate" },
+      "clone_archival": { "domain_e": "~250 clones across all packs, 150 in production displaced", "domain_f": "110 clones (Pack C/D only), all archived in S803", "delta": "Domain F clone burden is significantly smaller" },
+      "clone_groups": { "domain_e": "33 groups fully catalogued", "domain_f": "~37 groups estimated, NOT formally catalogued", "delta": "Domain F needs a clone group audit before authoring" },
+      "seed_state": { "domain_e": "38 seeds fully inventoried with per-QID lists, readiness scores, DL defect status", "domain_f": "39 seeds counted at pack level only, no per-QID enumeration, no readiness scores", "delta": "Domain F seed inventory is one step behind Domain E" },
+      "authoring_complexity": { "domain_e": "Internal Controls — concepts (COSO, segregation of duties, control activities)", "domain_f": "Technology & Analytics — technical concepts (IT controls, cybersecurity, data governance, SDLC, emerging tech)", "delta": "Domain F topics are more technical and may require more specialized authoring knowledge" },
+      "benchmark_quality": { "domain_e": "Pack B Section E — 75/75 Certified, gold standard", "domain_f": "Pack B Section F — 75/75 Certified, gold standard", "delta": "Equivalent benchmark quality" },
+      "methodology_maturity": { "domain_e": "Methodology developed and validated across 3 waves (S312-S318)", "domain_f": "Methodology can be directly replicated from Domain E", "delta": "Domain F benefits from proven Domain E methodology — lower methodology risk" }
+    }
+  },
+
+  "10_RISK_REGISTER": {
+    "title": "Domain F Pre-Activation Risk Register",
+    "risks": [
+      {
+        "id": "RISK-F-001",
+        "risk": "Domain E Closure Delay Cascades into Domain F",
+        "severity": "HIGH",
+        "probability": "MODERATE",
+        "description": "Domain E closure is projected at S331. If seed remediation effort exceeds estimates (risk identified in SESSION318_COMPLETION_FORECAST.json), Domain E closure could slip to S333-S336, delaying Domain F activation to S334-S337.",
+        "mitigation": "Domain E pilot of first 5 seeds to calibrate actual per-item effort. Early rebaseline if effort exceeds 2.5 hrs/seed.",
+        "contingency": "Begin Domain F pre-activation work (seed QID enumeration, clone group audit pre-work) during Domain E slip window so Domain F can start immediately upon Domain E closure."
+      },
+      {
+        "id": "RISK-F-002",
+        "risk": "Domain F Clone Group Count Underestimation",
+        "severity": "MODERATE",
+        "probability": "MODERATE",
+        "description": "The 37-group estimate is based on a 3:1 compression ratio from Domain E. If Domain F clone groups are smaller (e.g., 2.5:1), the actual group count could be 44 (110/2.5). This would increase replacement authoring from 37 to 44 items (+7 items, +1-2 sessions).",
+        "mitigation": "Conduct formal Domain F clone group audit as the FIRST activation session. Do not begin authoring until actual group count is confirmed.",
+        "contingency": "Adjust phase schedule. Additional 1-2 sessions for replacement authoring is within planning tolerance."
+      },
+      {
+        "id": "RISK-F-003",
+        "risk": "Domain F Technical Complexity Exceeds Authoring Capacity",
+        "severity": "MODERATE",
+        "probability": "LOW",
+        "description": "Domain F topics (cybersecurity frameworks, IT general controls, SDLC methodologies, emerging technologies) are more technical than Domain E topics (COSO, internal controls). Authoring high-quality items may require deeper subject-matter expertise than Domain E required.",
+        "mitigation": "Pack B Section F (75 certified items) provides a complete set of quality exemplars for all 10 Domain F topic areas. Authors can model directly on Pack B exemplars.",
+        "contingency": "If certain Domain F sub-topics prove too technical, prioritize items that map to commonly-tested CMA Part 1 Technology & Analytics LOS and defer niche topics."
+      },
+      {
+        "id": "RISK-F-004",
+        "risk": "Cross-Pack Seed Duplication Undetected Until Late Stage",
+        "severity": "MODERATE",
+        "probability": "MODERATE",
+        "description": "If the Domain F cross-reference audit is deferred or skipped, Pack C and Pack D seeds that are symmetric clones could both enter the certification pipeline, wasting 19 certifications on duplicate coverage.",
+        "mitigation": "Domain F cross-reference audit (S333 in proposed schedule) is a MANDATORY gate before seed remediation begins. The Domain E S320 audit will provide a proven methodology.",
+        "contingency": "If duplication is discovered late, decertify the duplicate set and document the overcount. This is a recoverable error but wastes session time."
+      },
+      {
+        "id": "RISK-F-005",
+        "risk": "Domain F Pre-Activation Artifacts Become Stale",
+        "severity": "LOW",
+        "probability": "LOW",
+        "description": "SESSION307 remediation plan, SESSION308 forecast, and SESSION311 authoring spec were generated in S307-S311 (mid-Domain E execution). By the time Domain F activates at ~S332, these artifacts will be ~25 sessions old. Quality standards or methodologies may have evolved.",
+        "mitigation": "Review and refresh all Domain F planning artifacts during the S319-S331 window as part of non-blocking pre-activation work.",
+        "contingency": "Artifact staleness is a LOW risk — the core standards (CAQS §1.6, S311 Quality Gate, DL-008/013/026/031) are stable across sessions."
+      }
+    ]
+  },
+
+  "11_RECOMMENDATIONS": {
+    "title": "Domain F Pre-Activation Recommendations",
+    "recommendations": [
+      {
+        "priority": "HIGH",
+        "recommendation": "Complete Domain E before starting Domain F",
+        "rationale": "The sequential dependency is well-founded. Same pack files, same registry entries, same certification pipeline. Domain E methodology validation will directly reduce Domain F risk."
+      },
+      {
+        "priority": "HIGH",
+        "recommendation": "Conduct Domain F clone group audit as activation session #1 (S332)",
+        "rationale": "The 37-group estimate needs formal validation. Without a clone group audit, replacement authoring is targeting an unverified scope. The Domain E experience showed that clone group enumeration is essential for scoping accuracy."
+      },
+      {
+        "priority": "HIGH",
+        "recommendation": "Conduct Domain F cross-reference audit as activation session #2 (S333)",
+        "rationale": "The symmetry pattern between Pack C and Pack D seeds is too strong to ignore. Confirming duplication before remediation could save 4-6 sessions."
+      },
+      {
+        "priority": "MEDIUM",
+        "recommendation": "Update Domain F remediation plan and forecast to post-S803 scope during Domain E execution window",
+        "rationale": "S307/S308 plans assume 150 uncertified items; post-S803 scope is 76 items. Updated plans will provide accurate effort estimates before activation."
+      },
+      {
+        "priority": "MEDIUM",
+        "recommendation": "Enumerate Domain F seed QIDs during Domain E execution window",
+        "rationale": "This is a read-only operation (extract QIDs from pack_c_corrected.js and pack_d_corrected.js). It can be done in parallel with Domain E seed remediation without file modification conflicts."
+      },
+      {
+        "priority": "LOW",
+        "recommendation": "Extract Pack B Section F exemplar items as authoring templates",
+        "rationale": "Having pre-extracted quality exemplars for each of the 10 Domain F topic areas will accelerate replacement authoring when Domain F activates."
+      }
+    ]
+  },
+
+  "12_CROSS_REFERENCES": {
+    "domain_f_artifacts": [
+      "SESSION311_DOMAIN_F_INVENTORY.json — Post-S803 Domain F inventory (374 items, 225 certified, 39 seeds, 110 archived)",
+      "SESSION311_DOMAIN_F_AUTHORING_SPEC.json — Domain F authoring specification (37 replacements + 39 seeds, quality standards, topic mix)",
+      "SESSION309_DOMAIN_F_BOTTLENECK.json — Domain F bottleneck analysis (GREENFIELD, content authoring challenge)",
+      "SESSION308_DOMAIN_F_FORECAST.json — Domain F 9-session forecast (pre-S803, needs update)",
+      "SESSION307_DOMAIN_F_REMEDIATION_PLAN.json — Domain F 3-phase remediation plan (pre-S803, needs update)"
+    ],
+    "domain_e_comparison_artifacts": [
+      "SESSION318_DASHBOARD.json — Domain E current state (30/81, 37.0%)",
+      "SESSION318_COMPLETION_FORECAST.json — Domain E completion projection (S319-S331, 13 sessions)",
+      "SESSION318_SEED_INVENTORY.json — Domain E seed inventory (38 seeds with per-QID lists, readiness scores)",
+      "SESSION319_PLANNING_PACKAGE.json — S319 planning package (Wave 2b insertion + seed pipeline authorization)"
+    ],
+    "pack_files": [
+      "pack_a_corrected.js — Section F items F.001-F.075, all Certified (confirmed via grep: 75 Topic='F.' matches)",
+      "pack_b_corrected.js — Section F items, all Certified (gold standard benchmark, 7 LOSTag='F' matches)",
+      "pack_c_corrected.js — Section F items, 19 Unprocessed seeds + 56 Archived (75 Topic='F.' matches)",
+      "pack_d_corrected.js — Section F items, 20 Unprocessed seeds + 54 Archived (74 Topic='F.' matches)",
+      "pack_e_corrected.js — Section F items, all Certified (0 Topic='F.' matches — uses different Section structure)"
+    ],
+    "quality_standards": [
+      "CAQS §1.6 — Certification and Quality Standard (six-dimension verification)",
+      "S311 Authoring Quality Gate v1.0 — EC >=400 chars, EW >=100 chars per slot",
+      "DL-008 — No ExplanationWrong for CorrectChoice slot",
+      "DL-013 — No template boilerplate in explanations",
+      "DL-026 — All non-CC ExplanationWrong slots filled",
+      "DL-031 — Difficulty and CognitiveLevel calibration"
+    ]
+  },
+
+  "notes": {
+    "pre_s803_vs_post_s803": "SESSION307 and SESSION308 use pre-S803 numbers (431 total, 281 certified, 150 uncertified). SESSION311 reconciled to post-S803 numbers (374 total, 225 certified, 39 unprocessed, 110 archived). The post-S803 SESSION311 numbers are authoritative. All Domain F planning should use the 374-item baseline, not the 431-item baseline.",
+    "pack_e_structure": "pack_e_corrected.js does not use the same Section/Topic structure as packs A-D. The grep for 'Topic: F.' returned 0 results for pack_e. Pack E Section F items are counted at 75 per SESSION311 but their internal structure differs. This is a known cross-pack structural variation and does not affect Domain F scoping.",
+    "pack_b_lostag_format": "Pack B uses Section-level LOSTags ('F Technology and analytics') rather than CSO-precise sub-tags. The grep returned only 7 LOSTag='F' matches for pack_b_corrected.js. This is consistent with Pack B's structure (items reference Section rather than individual LOSTags). For Domain F replacements, the S311 spec mandates CSO-precise LOSTags (F.1.a, F.1.b, etc.).",
+    "domain_f_activation_readiness": "Domain F is ready for activation from a planning perspective — the inventory is known, the spec is written, and the methodology is proven (via Domain E). The only blocker is the Domain E dependency. Domain F should NOT be activated before Domain E closure, but all pre-activation preparation (seed enumeration, plan updates, template extraction) can proceed during the Domain E execution window (S319-S331).",
+    "methodology_reuse": "Domain F will benefit significantly from Domain E methodology. The 4-agent governance model, quality gate pipeline (G0-G4), Wave-based insertion pattern, registry atomicity protocol, and CAQS §1.6 certification workflow are all directly transferable. Domain F execution should be faster and lower-risk than Domain E because the methodology is now proven rather than being developed in-flight."
+  }
+}

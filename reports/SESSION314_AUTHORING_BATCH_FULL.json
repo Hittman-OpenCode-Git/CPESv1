@@ -1,0 +1,517 @@
+{
+  "title": "SESSION314_WAVE2_AUTHORING",
+  "session": "314",
+  "generated": "2026-07-27",
+  "batchDescription": "Wave 2 Domain E replacement items — 10 items targeting E.1.d (Risk Assessment), E.1.h (SOX), E.1.j (Systems Controls), plus foundation gap closure",
+  "qualityStandard": "S311 Authoring Quality Gate v1.0 — EC 400+ chars, EW[A-D] choice-specific 100+ chars, DL-008/026/013/010 compliant",
+  "batches": {
+    "batchA": {
+      "agent": "F",
+      "title": "E.1.d Risk Assessment",
+      "items": ["P1-E-R16", "P1-E-R17", "P1-E-R32"],
+      "count": 3
+    },
+    "batchB": {
+      "agent": "G",
+      "title": "E.1.h SOX Requirements",
+      "items": ["P1-E-R19", "P1-E-R20"],
+      "count": 2
+    },
+    "batchC": {
+      "agent": "H",
+      "title": "E.1.j Systems Controls + Foundation",
+      "items": ["P1-E-R11", "P1-E-R14", "P1-E-R15", "P1-E-R30", "P1-E-R31"],
+      "count": 5
+    }
+  },
+  "items": [
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R11 preventive control examples — application to scenarios",
+      "MicroTopic": "preventive control classification scenarios",
+      "UniqueConceptKey": "E-R11-preventive-control-classification",
+      "LOSTag": "E.1.e Control Activities",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Northern Plains Manufacturing has implemented the following controls: (1) all purchase orders over $10,000 require dual signatures, (2) the accounts payable system automatically matches invoices to purchase orders and receiving reports before payment, and (3) the IT system locks user accounts after three failed login attempts. Which of the following correctly classifies these controls?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Preventive controls are designed to deter errors or fraud before they occur by making undesirable events difficult or impossible. All three controls described in the scenario are preventive: dual signatures on large purchase orders prevent unauthorized commitments by requiring a second approval before the order is placed; three-way matching (invoice to PO to receiving report) prevents payment for goods not ordered or not received by blocking the payment before it is processed; account lockout after failed login attempts prevents unauthorized system access by stopping brute-force attacks before they succeed. These differ from detective controls, which identify errors after they occur (e.g., bank reconciliations, exception reports), and corrective controls, which fix problems after detection (e.g., backup restoration, error correction procedures). The CMA exam frequently tests the ability to classify controls by their timing relative to the error event. A useful framework: preventive = before the error, detective = after the error but before correction, corrective = fixing the error's consequences.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for preventive control examples.",
+      "QuestionID": "P1-E-R11",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the classification of internal controls as preventive, detective, or corrective based on when they act relative to an error or irregularity.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "All three are detective controls because they identify discrepancies in the purchasing and payment cycle",
+        "B": "All three are preventive controls because each stops an undesirable event before it occurs",
+        "C": "Dual signatures are detective, three-way matching is preventive, and account lockout is corrective",
+        "D": "Dual signatures and three-way matching are preventive; account lockout is detective"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — preventive vs detective vs corrective classification",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template",
+        "Distractors test common classification errors including timing confusion and hybrid classification"
+      ],
+      "ExplanationWrongA": "This classification is incorrect because none of the three controls is primarily detective. Detective controls identify errors or irregularities after they occur (e.g., reconciliation, review of exception reports). Dual signatures prevent unauthorized orders before they are placed, three-way matching prevents improper payments before they are disbursed, and account lockout prevents unauthorized access before it succeeds. A candidate selecting this option may be confusing the verification aspect of three-way matching (which compares documents) with detective control timing, but verification performed before payment is preventive in nature.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "Dual signatures are preventive, not detective — they stop unauthorized orders before they occur, not after. Account lockout is preventive, not corrective — it prevents access before a breach occurs rather than fixing the consequences of a breach. Three-way matching is correctly classified as preventive. A candidate selecting this option may be incorrectly applying a 'approval = detective' mental model. The distinction depends on timing: if the control blocks the event before it occurs, it is preventive; if it flags it after, it is detective.",
+      "ExplanationWrongD": "Account lockout is preventive, not detective, because it prevents the third (and subsequent) login attempts from succeeding. A detective control would log the failed attempts but allow them to continue, or alert an administrator after the fact. The lockout mechanism proactively stops the undesirable event (unauthorized access), making it preventive by definition. The candidate may be incorrectly associating lockout with detection because it requires failed-attempt detection logic to trigger, but the control action itself (locking the account) occurs before access is granted — the definitional test for preventive classification."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R14 IT general controls — categories and scope",
+      "MicroTopic": "IT general controls categories",
+      "UniqueConceptKey": "E-R14-IT-general-controls-categories",
+      "LOSTag": "E.1.j Systems Controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "A company's IT audit team is evaluating controls over the information systems environment. They review data center physical security, logical access controls, program change management procedures, and backup and recovery processes. Under the COSO framework, these controls are best categorized as:",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "IT general controls (ITGCs) are controls that apply to all or many IT systems and support the effective functioning of application controls. They create the environment in which application controls operate. Common categories of IT general controls include: (1) data center and physical security — controls over physical access to IT facilities and hardware; (2) logical access controls — controls over electronic access to systems, programs, and data, including authentication, authorization, and user provisioning; (3) program change management — controls over the development, testing, and implementation of system changes to ensure only authorized and tested changes are moved to production; and (4) backup and recovery — controls to ensure data can be restored and operations resumed after a disruption. All four areas under review fit squarely within the IT general controls domain because they apply broadly across the IT environment rather than to specific business process transactions. Application controls, by contrast, are embedded within specific software applications and address the completeness, accuracy, validity, and authorization of individual transactions.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R14",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between IT general controls (entity-wide IT environment) and application controls (transaction-level within specific systems).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "IT general controls, because they establish the overall IT control environment across all systems",
+        "B": "Application controls, because each control area addresses a specific business risk category",
+        "C": "Entity-level controls, because data center security and access controls apply to the entire organization",
+        "D": "A mix of general and application controls — data center security is entity-level while program change management is application-level"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls — IT general controls",
+        "Distractors test common misclassifications between ITGCs and application/entity-level controls"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Application controls are embedded within specific software applications and operate at the individual transaction level — for example, an input validation check that rejects an invoice without a matching purchase order number, or an automated calculation of sales tax on an invoice. The controls in this scenario (data center security, logical access, change management, backup/recovery) are not transaction-specific but apply broadly across the IT environment. All four are classic examples of IT general controls. A candidate selecting this option may be confusing the fact that some ITGCs support application controls with the idea that they are application controls themselves.",
+      "ExplanationWrongC": "Entity-level controls are part of the control environment component and relate to the tone at the top, organizational structure, and governance — examples include the code of conduct, board oversight, and management's philosophy. While IT general controls can be considered entity-wide in their scope, they are a distinct category of controls within the COSO framework, specifically under control activities and systems controls. Classifying data center security as an entity-level control conflates two different COSO classification axes: the component (control environment vs. control activities) and the scope (entity-level vs. transaction-level).",
+      "ExplanationWrongD": "All four areas are IT general controls. Program change management is a classic IT general control because it governs how changes to any system in the production environment are authorized, tested, and implemented — it applies across the IT environment, not to a specific application transaction. Data center security is an IT general control, not an entity-level control, because it protects IT infrastructure rather than setting the organization's governance tone. The candidate may be trying to apply a hybrid classification, but ITGCs are a well-established category that encompasses all four reviewed areas."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R15 application controls — input processing output",
+      "MicroTopic": "application controls IPO categories",
+      "UniqueConceptKey": "E-R15-application-controls-IPO",
+      "LOSTag": "E.1.j Systems Controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Lakestone Corporation's order entry system performs the following: it rejects any sales order where the customer number does not exist in the master file, calculates the order total as quantity × unit price, and generates a daily report of all orders exceeding the customer's credit limit. When the system transmits orders to the warehouse for fulfillment, it requires a confirmation code before releasing the pick list. Under the input-processing-output classification of application controls, these four activities are, respectively:",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Application controls are categorized by where they operate in the transaction processing cycle — input, processing, or output. Input controls ensure that data entering the system is authorized, accurate, and complete. Customer number validation (rejecting orders with invalid customer IDs) is an input control because it validates data at the point of entry before the transaction proceeds. Processing controls ensure that data is processed accurately during system operations. The calculation of order totals (quantity × unit price) is a processing control because it verifies the accuracy of computations performed by the system. Output controls ensure that system outputs are accurate, complete, and distributed to authorized recipients. The daily credit-limit-exceeded report is an output control because it produces a report of transactions for management review after processing. The confirmation code requirement before pick-list release is an output control at the boundary between the order entry system and the warehouse system — it ensures that data transmitted to another system is authorized and complete. The correct sequence is: validation of customer number (input), order total calculation (processing), daily credit report (output), and transmission confirmation (output).",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R15",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the input-processing-output classification of application controls and practice identifying which phase of processing each control belongs to.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Processing, input, output, and input — respectively",
+        "B": "Input, processing, processing, and output — respectively",
+        "C": "Input, processing, output, and output — respectively",
+        "D": "Input, output, processing, and input — respectively"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls — application controls IPO classification",
+        "Distractors test common misclassification of processing vs output controls and transmission boundary controls"
+      ],
+      "ExplanationWrongA": "Customer number validation is an input control, not a processing control — it validates data at the point of entry before processing begins. The calculation (quantity × unit price) is correctly classified as processing. The transmission confirmation code is an output control (it controls data leaving the system after processing is complete), not an input control. A candidate selecting this option is likely confusing the 'input' classification for the confirmation code — while the warehouse system receives it as input, from the order entry system's perspective it is an output control because it governs the transmission of processed data out of the system.",
+      "ExplanationWrongB": "The daily credit-limit-exceeded report is an output control, not a processing control. Processing controls verify the accuracy of computations and data manipulations during system processing. The credit report is generated after processing is complete and provides management with information to review — this is the definition of an output control. The candidate may be confusing the fact that the report relates to processing results with the idea that generating it is a processing activity, but output controls specifically include reports, reconciliations, and distribution controls.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "The calculation of order totals (quantity × unit price) is a processing control, not an output control. Processing controls operate during data manipulation to verify computational accuracy. The transmission confirmation code is an output control, not an input control — it governs data leaving the order entry system after processing is complete. The candidate is correctly identifying customer number validation as input but has misclassified the remaining three controls, suggesting uncertainty about the boundaries between processing and output phases in the IPO model."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R16 risk assessment — COSO process and steps",
+      "MicroTopic": "risk assessment process COSO",
+      "UniqueConceptKey": "E-R16-risk-assessment-process",
+      "LOSTag": "E.1.d Risk Assessment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Under the COSO Internal Control — Integrated Framework, the risk assessment component involves which of the following?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Risk assessment is the second component of the COSO Internal Control framework and involves a dynamic and iterative process for identifying and analyzing risks to the achievement of the entity's objectives. This process forms the basis for determining how risks should be managed. COSO emphasizes that risk assessment includes: (1) establishing clear objectives at the entity and sub-entity levels to enable risk identification; (2) identifying risks to the achievement of those objectives across the entity; (3) analyzing risks to estimate their significance and likelihood; (4) assessing fraud risk, which includes considering incentives and pressures, opportunities, and attitudes and rationalizations; and (5) identifying and assessing changes in the external environment, business model, and leadership that could significantly affect the system of internal control. Risk assessment is not a one-time event but an ongoing process that responds to changes in operating conditions, regulatory requirements, technology, and organizational structure. The assessment of risk is foundational — it determines which control activities are necessary, where monitoring should focus, and what information needs to flow through the communication channels. Without effective risk assessment, the entity cannot target its control resources efficiently.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R16",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the COSO risk assessment component and its role in identifying and analyzing risks that may prevent the organization from achieving its objectives.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Designing control activities, such as approvals and reconciliations, that mitigate identified risks to an acceptable level",
+        "B": "Establishing a code of conduct and setting the ethical tone at the top of the organization",
+        "C": "Performing ongoing monitoring to ensure that controls are operating as designed over time",
+        "D": "Identifying and analyzing risks to the achievement of objectives, including the assessment of fraud risk and changes that could affect internal control"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — COSO risk assessment process",
+        "Distractors test common confusion between the five COSO components"
+      ],
+      "ExplanationWrongA": "Designing control activities is part of the Control Activities component — the third COSO component — not Risk Assessment. Control activities are the policies and procedures that help ensure management's directives to mitigate risks are carried out. They are the response to identified risks, not the identification process itself. Risk assessment comes before control activities in both the logical sequence and the COSO cube structure. A candidate selecting this option may be conflating risk assessment with risk response, but these are separate components in the COSO framework.",
+      "ExplanationWrongB": "Establishing a code of conduct and setting the ethical tone at the top are elements of the Control Environment — the first COSO component and the foundation for all other components. While a strong control environment is critical for effective risk assessment (management integrity affects the willingness to identify risks honestly), the Control Environment and Risk Assessment are distinct components with different purposes. The candidate is confusing the foundational component (Control Environment) with the analytical component (Risk Assessment).",
+      "ExplanationWrongC": "Ongoing monitoring of controls is part of the Monitoring Activities component — the fifth COSO component. Monitoring evaluates whether each of the five components of internal control, including risk assessment, is present and functioning. While risk assessment should be monitored, the act of monitoring is not itself risk assessment. The candidate may be mixing up the assessment of risk (Risk Assessment component) with the assessment of controls (Monitoring component).",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R17 risk responses — avoidance reduction sharing acceptance",
+      "MicroTopic": "risk responses types",
+      "UniqueConceptKey": "E-R17-risk-responses-types",
+      "LOSTag": "E.1.d Risk Assessment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Eastgate Hospital is evaluating its data security risks. The board considers the following options: (1) discontinuing the online patient portal and reverting to paper records, (2) purchasing cybersecurity insurance with a $50,000 deductible, (3) implementing multi-factor authentication and encryption for all patient data, and (4) accepting that no system is perfectly secure and budgeting for potential breach notification costs. Under the standard risk response framework, these options represent, respectively:",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The four standard risk responses under the COSO ERM framework (which also apply to internal control risk assessment) are: (1) Risk avoidance — eliminating the activity that gives rise to the risk. Discontinuing the online patient portal entirely avoids the data security risk by removing the source of the risk, though it also eliminates the benefits of the portal. (2) Risk sharing/transfer — shifting some portion of the risk to another party, typically through insurance, outsourcing, or hedging. Purchasing cybersecurity insurance transfers the financial impact of a breach to the insurer in exchange for premiums and the deductible. (3) Risk reduction/mitigation — implementing controls that reduce either the likelihood or the impact of the risk. Multi-factor authentication and encryption reduce the likelihood of unauthorized access and the impact if a breach occurs. (4) Risk acceptance — acknowledging that residual risk remains after other responses are applied, and budgeting for the consequences. Accepting the reality of imperfect security and budgeting for breach notification costs is risk acceptance. The distinction between these four responses is tested frequently on the CMA exam — candidates must be able to classify a described action into the correct response category.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R17",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the four categories of risk response — avoidance, reduction, sharing, and acceptance — and practice applying them to scenario-based questions.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Avoidance, sharing, reduction, and acceptance — respectively",
+        "B": "Reduction, acceptance, avoidance, and sharing — respectively",
+        "C": "Avoidance, reduction, sharing, and acceptance — respectively",
+        "D": "Sharing, avoidance, reduction, and acceptance — respectively"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — risk response strategies",
+        "Distractors test confusion between risk sharing (insurance/transfer) and risk reduction (control implementation)"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Discontinuing the online portal is risk avoidance (eliminating the activity), not risk reduction. Insurance is correctly classified as sharing but is listed second in this option, whereas the scenario lists it second — but avoidance and reduction are swapped. Multi-factor authentication is risk reduction (mitigation), not avoidance. The candidate may be confusing avoidance with reduction by treating the portal discontinuation as a 'reduction' of the risk footprint, but avoidance specifically means eliminating the risky activity entirely.",
+      "ExplanationWrongC": "Cybersecurity insurance is risk sharing/transfer, not risk reduction. Risk reduction involves implementing controls to lower the likelihood or impact (such as encryption and authentication), while risk sharing transfers the financial consequences to another party through insurance, outsourcing, or contractual arrangements. The candidate may be incorrectly treating insurance as a form of risk reduction because it reduces the financial impact on the entity, but the risk itself is transferred, not reduced — the categorization framework treats transfer/sharing as a distinct response strategy.",
+      "ExplanationWrongD": "Discontinuing the online portal is risk avoidance, not risk sharing. Risk sharing involves transferring risk to another party while continuing the activity — the entity still operates the portal but transfers the financial consequences. Avoidance eliminates the activity entirely. The candidate is essentially misclassifying avoidance as sharing. Insurance is correctly classified as sharing for item (2), but avoidance is mislabeled as sharing for item (1)."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R19 SOX Section 302 — CEO/CFO certification requirements",
+      "MicroTopic": "SOX 302 CEO CFO certification",
+      "UniqueConceptKey": "E-R19-SOX-302-certification",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Under Section 302 of the Sarbanes-Oxley Act, the CEO and CFO of a publicly traded company must certify in each annual and quarterly report that:",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "Section 302 of the Sarbanes-Oxley Act requires the CEO and CFO to personally certify the financial statements in each annual (10-K) and quarterly (10-Q) report filed with the SEC. The certification must state that: (1) the signing officers have reviewed the report; (2) based on their knowledge, the report does not contain any untrue statement of material fact or omit a material fact; (3) based on their knowledge, the financial statements fairly present the financial condition, results of operations, and cash flows; (4) the signing officers are responsible for establishing and maintaining disclosure controls and procedures and internal control over financial reporting; (5) they have evaluated the effectiveness of disclosure controls and procedures; and (6) they have disclosed any significant deficiencies or material weaknesses in internal control to the auditors and audit committee, and any fraud involving management or employees with a significant role in internal control. Section 302 certifications carry personal liability — willful false certification can result in criminal penalties under Section 906 of up to $5 million in fines and 20 years imprisonment. This contrasts with Section 404, which requires management's assessment of internal control effectiveness and an external auditor attestation.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R19",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review SOX Section 302 certification requirements and the distinction between Section 302 (officer certifications) and Section 404 (internal control assessment).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "They have personally audited the financial statements and verified every transaction recorded during the period",
+        "B": "The external auditor has confirmed that the company has no material weaknesses in internal control over financial reporting",
+        "C": "Based on their knowledge, the financial statements fairly present the financial condition and they have disclosed any significant deficiencies in internal control to the auditors and audit committee",
+        "D": "The company's internal control over financial reporting is effective and the external auditor has attested to that effectiveness without qualification"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "SEC: Sarbanes-Oxley Act Section 302",
+          "url": "https://www.sec.gov/rules/final/33-8124.htm"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.h Sarbanes-Oxley Act — Section 302 certifications",
+        "Distractors test confusion between SOX 302 and SOX 404 requirements, and the role of CEO/CFO vs external auditor"
+      ],
+      "ExplanationWrongA": "SOX Section 302 does not require the CEO and CFO to personally audit the financial statements or verify each transaction. The certification is based on their knowledge after reviewing the report and establishing appropriate disclosure controls and procedures. The external auditor, not management, performs the audit. The CEO and CFO certify based on information provided by their disclosure controls and internal control systems, not through personal verification of every transaction — which would be impractical for any company of meaningful size.",
+      "ExplanationWrongB": "This describes an outcome that could result from a clean SOX 404(b) audit, but it is not a requirement of Section 302 certifications. Section 302 focuses on the CEO's and CFO's personal certifications about the accuracy of disclosures, the fair presentation of financial statements, and the disclosure of control deficiencies they know about. Section 404 addresses the external auditor's attestation on internal control effectiveness. The candidate is conflating Section 302 certification requirements with Section 404 external audit requirements.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "This describes the ideal outcome of SOX Section 404 compliance (both 404(a) management assessment and 404(b) auditor attestation), not the requirements of Section 302. Section 302 requires officers to certify the accuracy of their reports and disclose known control deficiencies — it does not require an affirmative statement that internal control is effective, nor does it involve external auditor attestation. The candidate is confusing the two SOX sections, mistaking the internal control reporting requirements of Section 404 for the officer certification requirements of Section 302."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R20 SOX Section 404 — internal control assessment and auditor attestation",
+      "MicroTopic": "SOX 404 internal control assessment",
+      "UniqueConceptKey": "E-R20-SOX-404-assessment",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Which of the following correctly describes the dual requirements of Section 404 of the Sarbanes-Oxley Act?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Section 404 of the Sarbanes-Oxley Act has two distinct sub-sections with different requirements. Section 404(a) requires management to assess and report on the effectiveness of the company's internal control over financial reporting (ICFR) in each annual report. Management must state their responsibility for establishing and maintaining adequate ICFR, identify the framework used to evaluate ICFR effectiveness (typically COSO), and provide their assessment of ICFR effectiveness as of the fiscal year-end. Management cannot conclude that ICFR is effective if one or more material weaknesses exist. Section 404(b) requires the company's external auditor to attest to and report on management's assessment of ICFR. The auditor must express an opinion on the effectiveness of ICFR and evaluate both the design and operating effectiveness of controls. Section 404(b) applies to accelerated and large accelerated filers; non-accelerated filers are exempt from the auditor attestation requirement under the Dodd-Frank Act. The key distinction tested on the CMA exam is that 404(a) is management's responsibility while 404(b) is the external auditor's responsibility — both are required for larger public companies.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R20",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review SOX Section 404(a) management assessment and Section 404(b) auditor attestation requirements, and which companies are subject to each.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Section 404 requires the CEO and CFO to personally certify the financial statements, while the external auditor verifies those certifications are not materially false",
+        "B": "Section 404(a) requires management to assess and report on internal control effectiveness; Section 404(b) requires the external auditor to attest to management's assessment",
+        "C": "Section 404 requires the audit committee to hire an independent consultant to evaluate internal control, replacing the external auditor's role in control evaluation",
+        "D": "Section 404 requires management to disclose all fraud to the SEC within four business days of discovery, regardless of materiality"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "SEC: Management's Report on Internal Control Over Financial Reporting",
+          "url": "https://www.sec.gov/rules/final/33-8238.htm"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.h Sarbanes-Oxley Act — Section 404(a) and 404(b) requirements",
+        "Distractors test confusion with SOX 302 certifications and SOX 806 fraud disclosure requirements"
+      ],
+      "ExplanationWrongA": "This describes SOX Section 302 (CEO/CFO certification of financial statements), not Section 404. Section 302 requires the CEO and CFO to certify the accuracy of financial reports and disclosure of control deficiencies. Section 404 specifically addresses management's assessment of internal control effectiveness (404a) and the external auditor's attestation on that assessment (404b). The candidate is conflating the two sections by describing Section 302 certification requirements and labeling them as Section 404.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "SOX Section 404 does not replace or diminish the external auditor's role — it actually adds to it by requiring the external auditor's attestation under 404(b). The audit committee oversees the process but does not hire an independent consultant to replace the auditor. Additionally, an independent consultant cannot replace the statutory role of the external auditor under SOX. The candidate may be confusing SOX requirements with general corporate governance practices.",
+      "ExplanationWrongD": "This distractor mixes elements of SOX Section 806 (whistleblower protection) with accelerated disclosure requirements. SOX Section 409 requires disclosure of material changes in financial condition or operations on a rapid and current basis, but not all fraud within four business days regardless of materiality. Fraud disclosure is part of Section 302 certifications (disclosure of fraud to auditors and audit committee) but does not have a four-day SEC filing requirement for all fraud. The candidate is incorrectly attributing an accelerated fraud disclosure requirement to Section 404."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R30 logical access controls — principles and implementation",
+      "MicroTopic": "logical access controls principles",
+      "UniqueConceptKey": "E-R30-logical-access-controls",
+      "LOSTag": "E.1.j Systems Controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "A financial services company requires that: (1) each employee is granted access only to the specific systems and data needed for their job function, (2) access rights are reviewed quarterly by department managers, and (3) when an employee transfers to a different department, their prior access rights are automatically revoked before new rights are granted. These three controls collectively implement which fundamental information security principles?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "These three controls collectively implement the core principles of logical access control: (1) Least privilege — granting each employee access only to the specific systems and data needed for their job function. This minimizes the potential damage from errors, misuse, or compromised credentials by limiting what each user can access. (2) Periodic access review — quarterly review of access rights by department managers ensures that access remains appropriate as job responsibilities change. Access rights tend to accumulate over time (\"privilege creep\") as employees change roles, take on temporary projects, or cover for absent colleagues — periodic review is essential to detect and remove unnecessary access. (3) Segregation of duties in access administration — the \"clean sweep\" approach of revoking old access before granting new access during a transfer prevents the accumulation of incompatible access rights across roles. This is a specific application of segregation of duties at the IT access level. Together, these three controls address the fundamental objectives of logical access security: users should have only the access they need (least privilege), that access should be regularly validated (review), and role transitions should not create back doors or accumulated privileges (clean transfer).",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R30",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the principles of logical access controls including least privilege, need-to-know, segregation of duties in IT, and periodic access reviews.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Role-based access control, mandatory access control, and discretionary access control — respectively",
+        "B": "Segregation of duties, authorization, and authentication — respectively",
+        "C": "Physical access control, logical access control, and administrative control — respectively",
+        "D": "Least privilege, periodic access review, and segregation of duties in access administration — respectively"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls — logical access controls and information security principles",
+        "Distractors test confusion between access control models (RBAC/MAC/DAC) and access control principles (least privilege, review, segregation)"
+      ],
+      "ExplanationWrongA": "Role-based access control (RBAC), mandatory access control (MAC), and discretionary access control (DAC) are types of access control models — frameworks for how access decisions are structured — not the specific principles being applied. The scenario describes least privilege (need-to-know based on job function), periodic review, and segregation in access administration. While the company may use RBAC to implement least privilege, the three specific controls align with access control principles, not access control model types. The candidate is confusing the mechanism (RBAC) with the principle (least privilege).",
+      "ExplanationWrongB": "While segregation of duties and authorization concepts are present, this pairing is too generic. The first control (job-specific access) is least privilege, not segregation of duties. Segregation of duties is specifically represented by the third control — revoking prior access before granting new access. The second control (quarterly review) is better described as periodic access review, not 'authorization' — authorization is the act of granting access, while periodic review validates that previously authorized access is still appropriate.",
+      "ExplanationWrongC": "Physical access control, logical access control, and administrative control are categories of controls across a broad information security framework. All three controls in the scenario are logical access controls (they govern electronic access to systems and data). The scenario does not describe physical access (locks, badges, biometrics) or purely administrative controls (policies, training, background checks). The candidate has substituted broad control categories for the specific access control principles being demonstrated.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R31 disaster recovery and business continuity — key concepts",
+      "MicroTopic": "disaster recovery business continuity",
+      "UniqueConceptKey": "E-R31-disaster-recovery-continuity",
+      "LOSTag": "E.1.j Systems Controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "In the context of IT controls, which of the following correctly distinguishes a disaster recovery plan (DRP) from a business continuity plan (BCP)?",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The disaster recovery plan (DRP) and the business continuity plan (BCP) are related but distinct components of organizational resilience. The DRP focuses specifically on the restoration of IT infrastructure, systems, applications, and data after a disruptive event. It addresses technical recovery procedures such as restoring servers from backups, failing over to alternate data centers, recovering databases, and reestablishing network connectivity. The DRP defines recovery time objectives (RTO — how quickly systems must be restored) and recovery point objectives (RPO — how much data loss is acceptable). The BCP is broader in scope — it addresses the continuity of all critical business operations, including IT-dependent processes but also manual workarounds, alternate facilities, communication with stakeholders, and the decision-making framework for declaring a disaster and activating recovery procedures. The BCP encompasses the DRP as a subset; the DRP is the IT-focused component within the broader business continuity framework. A common exam trap is to reverse this relationship — treating the BCP as a subset of the DRP — which is incorrect because business continuity includes non-IT functions (personnel, facilities, supply chain) that disaster recovery does not address.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R31",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between disaster recovery planning (IT infrastructure restoration) and business continuity planning (all critical business operations).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The BCP is a subset of the DRP — business continuity is one component of the broader disaster recovery framework",
+        "B": "The DRP and BCP are interchangeable terms that describe the same process of restoring operations after a disruption",
+        "C": "The DRP focuses on restoring IT infrastructure and systems, while the BCP addresses continuity of all critical business operations, including IT and non-IT functions",
+        "D": "The DRP is focused on prevention of disasters, while the BCP focuses on the response after a disaster has occurred"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls — disaster recovery and business continuity",
+        "Distractors test reversal of DRP/BCP scope relationship and confusion with incident response"
+      ],
+      "ExplanationWrongA": "This reverses the correct relationship. The BCP is broader than the DRP — business continuity encompasses all critical business operations including IT (covered by the DRP), facilities, personnel, supply chain, customer communications, and regulatory reporting. The DRP is the IT-focused component within the business continuity framework. A candidate selecting this option has the scope relationship backwards, which is a common exam trap.",
+      "ExplanationWrongB": "The DRP and BCP are not interchangeable. While they overlap in the IT domain, the BCP addresses the continuity of all critical business functions — including manual processes, alternate work locations, crisis communication, and supply chain management — that fall outside the DRP's scope. Treating them as identical would leave significant gaps in organizational resilience planning, particularly in non-IT operational areas.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "The DRP is not primarily about prevention — it is about recovery after a disruptive event. DRP elements like data backups and redundant infrastructure may have preventive aspects (reducing the impact of a disaster), but the core purpose of the DRP is recovery and restoration. Prevention of disasters is typically addressed through risk assessment, physical security, and environmental controls, not the DRP itself. Additionally, the BCP includes preparedness (before), response (during), and recovery (after) phases — it is not limited to post-disaster response."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R32 vendor risk assessment — third-party controls and due diligence",
+      "MicroTopic": "vendor risk assessment third party",
+      "UniqueConceptKey": "E-R32-vendor-risk-assessment",
+      "LOSTag": "E.1.d Risk Assessment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Bayside Bank is selecting a cloud service provider to host its customer loan processing system. Before signing the contract, the bank's risk management team reviews the provider's SOC 2 Type II report, requires evidence of the provider's own disaster recovery testing, and negotiates a right-to-audit clause in the service agreement. Under the risk assessment component of COSO, these activities are best described as:",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Vendor (third-party) risk assessment is an integral part of the COSO risk assessment component, particularly when an entity outsources critical business functions or relies on external service providers. The activities described represent due diligence and ongoing risk management of third-party relationships: (1) Reviewing the SOC 2 Type II report — a SOC 2 Type II report is an independent auditor's examination of a service organization's controls over a period of time (typically 6-12 months), providing evidence that the provider's controls are suitably designed and operating effectively. This is a standard tool for assessing third-party control environments. (2) Requiring evidence of disaster recovery testing — this assesses the provider's operational resilience and ability to maintain service continuity, directly addressing the risk that the bank's operations could be disrupted by a failure at the provider. (3) Negotiating a right-to-audit clause — this preserves the bank's ability to independently verify the provider's controls on an ongoing basis, rather than relying solely on the provider's representations or third-party reports. Under COSO, entity-level risk assessment must extend to outsourced service providers because the entity retains ultimate responsibility for internal control even when operations are performed by third parties.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R32",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the role of vendor risk assessment in the COSO framework and the use of SOC reports and audit rights in third-party risk management.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Control activities, because the bank is implementing specific procedures — SOC 2 review, DR test evidence, and audit rights — to address identified risks",
+        "B": "Risk assessment activities, specifically third-party due diligence to identify and analyze risks associated with outsourcing a critical business function",
+        "C": "Monitoring activities, because the bank is establishing ongoing oversight of the service provider through the right-to-audit clause",
+        "D": "Information and communication, because the bank is gathering information about the service provider's control environment through the SOC 2 report"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "AICPA: SOC 2 Reports on Controls at a Service Organization",
+          "url": "https://www.aicpa.org/soc4so"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — vendor and third-party risk assessment",
+        "Distractors test the distinction between risk identification/analysis (Risk Assessment) and risk response (Control Activities)"
+      ],
+      "ExplanationWrongA": "These activities are part of risk assessment — specifically, identifying and analyzing risks related to third-party service providers — not control activities. Control activities are the policies and procedures implemented in response to identified risks (e.g., the controls embedded in the loan processing system itself, such as input validation or authorization workflows). Reviewing a SOC 2 report and negotiating audit rights are information-gathering and risk analysis activities that occur before control design, not the controls themselves. The candidate is conflating the analytical step (risk assessment) with the response step (control activities).",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "While the right-to-audit clause enables future monitoring, the primary purpose of the described activities is risk assessment — evaluating the provider's control environment to determine whether the outsourcing arrangement presents unacceptable risk. Monitoring activities evaluate whether controls are present and functioning over time; the activities described are part of the upfront due diligence process that informs the risk assessment before the relationship begins. The candidate is focusing on one element (the right-to-audit clause) and extrapolating to the entire set of activities, but the pre-contract review of SOC 2 reports and DR testing is fundamentally risk assessment.",
+      "ExplanationWrongD": "While reviewing a SOC 2 report involves gathering information, labeling this as Information & Communication misses the purpose of the activity. The Information & Communication component ensures that relevant information flows throughout the organization to support the functioning of other control components. The bank is not merely communicating — it is assessing the risk posed by a potential vendor. The information gathered (SOC 2 report, DR test results) serves the risk assessment process, which is the correct COSO component classification for these activities."
+    }
+  ],
+  "qualityGateValidation": {
+    "gate1_draft": {
+      "status": "COMPLETE",
+      "note": "All 10 items have stem, 4 choices (A-D), CorrectChoice, ExplanationCorrect, ExplanationWrong[A-D], DifficultyScore, CognitiveLevel, Topics, LOSTag, metadata."
+    },
+    "gate2_technical": {
+      "status": "PENDING",
+      "note": "Requires S315 certification review — DL-008/DL-026/DL-013/DL-010/field completeness scan"
+    },
+    "gate3_blueprint": {
+      "status": "PENDING",
+      "note": "Requires S315 verification — topic/LO/CL/difficulty accuracy against IMA CSO"
+    },
+    "gate4_qa": {
+      "status": "PENDING",
+      "note": "Requires S315 review — stem clarity, distractor plausibility, EC quality, EW specificity"
+    }
+  },
+  "ewCompliance": {
+    "dl008": "VERIFIED at authoring — all 10 items have empty ExplanationWrong[CorrectChoice] = ''",
+    "dl026": "VERIFIED at authoring — all non-CC EW fields have content >= 100 chars",
+    "dl013": "VERIFIED at authoring — no template boilerplate detected",
+    "dl010": "PENDING — cross-contamination check requires independent review at S315"
+  },
+  "blueprintCoverage": {
+    "E.1.d Risk Assessment": ["P1-E-R16", "P1-E-R17", "P1-E-R32"],
+    "E.1.h SOX": ["P1-E-R19", "P1-E-R20"],
+    "E.1.j Systems Controls": ["P1-E-R14", "P1-E-R15", "P1-E-R30", "P1-E-R31"],
+    "E.1.e Control Activities": ["P1-E-R11"]
+  }
+}

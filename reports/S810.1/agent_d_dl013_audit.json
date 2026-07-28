@@ -1,0 +1,182 @@
+{
+  "agent": "D",
+  "session": "S810.1",
+  "scope": "DL-013 Boilerplate Audit — 5 Pack D Section E seeds",
+  "timestamp": "2026-07-26",
+  "authoritative_sources": [
+    "reports/SESSION809_EW_INTEGRITY_AUDIT.json",
+    "reports/SESSION809_DQS_REVIEW.json (packD_seeds section)",
+    "reports/session_status/SESSION8092_AGENT_B_DEFECT_MANIFEST.json"
+  ],
+  "total_dl013_seeds": 5,
+  "total_boilerplate_slots": 8,
+  "classification": {
+    "rewrite_required": 8,
+    "partial_rewrite": 0,
+    "reference_update": 0
+  },
+  "classification_notes": "All 8 boilerplate slots are 'Rewrite Required' — the text is entirely generic, providing zero choice-specific educational feedback. The template pattern 'This option reflects a misunderstanding of [topic]. The choice [restated] is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.' contains no explanation of WHY the specific choice is wrong, names no governing standard, and identifies no specific misconception. CAQS §4.2 Distractor Explanation standard requires each EW slot to (1) identify the specific error, (2) state the misconception the candidate likely held, and (3) contrast with the correct approach. These slots satisfy none of the three requirements.",
+  "template_pattern": {
+    "signature": "This option reflects a misunderstanding of [topic-slug]. The choice '[restated choice text]' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+    "problems": [
+      "Zero choice-specific content beyond restating the choice text verbatim",
+      "References 'costing standard or framework' even on non-costing topics (ERM, change management, ethics, MFA)",
+      "No identification of the specific error or misconception",
+      "No explanation of why the correct answer differs from the distractor",
+      "No reference to the governing framework by name (COSO, COBIT, NIST)",
+      "Generic enough to be copy-pasted across unrelated topics",
+      "ED-046: text is truncated mid-word ('effectiven'), suggesting write-tool defect",
+      "ED-051: text references 'balanced scorecard metrics' (Choice A) but assigned to slot B ('replace segregation of duties') — DL-010 misattribution compound defect"
+    ]
+  },
+  "items": [
+    {
+      "qid": "P1-ED-016",
+      "topic": "ERM risk response strategies (COSO ERM)",
+      "subtopic": "Risk transfer vs. risk avoidance vs. risk acceptance vs. risk appetite",
+      "cc": "D",
+      "stem": "Palisade decides to purchase insurance to address a significant identified risk rather than eliminate the underlying activity. What enterprise risk management response is this?",
+      "choices": {
+        "A": "Risk appetite, defining the amount of risk tolerated",
+        "B": "Risk avoidance, eliminating the risk entirely",
+        "C": "Risk acceptance, taking no action",
+        "D": "Risk transfer (sharing), shifting some financial impact of the risk to a third party"
+      },
+      "slots_affected": ["B", "C"],
+      "category": "Rewrite Required",
+      "current_text_EW_B": "This option reflects a misunderstanding of erm risk response strategies. The choice 'Risk avoidance, eliminating the risk entirely' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+      "current_text_EW_C": "This option reflects a misunderstanding of erm risk response strategies. The choice 'Risk acceptance, taking no action' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+      "ec_length": 152,
+      "ec_score": 5,
+      "ec_text": "Purchasing insurance is a form of risk transfer (or sharing), shifting some of the financial consequences of a risk to a third party such as an insurer.",
+      "replacement_requirement": "For EW_B: Explain why purchasing insurance is NOT risk avoidance — risk avoidance means discontinuing the activity entirely, but Palisade keeps the activity and transfers the financial consequence. Distinguish the two with the specific stem fact (company continues activity while offloading financial risk). For EW_C: Explain why purchasing insurance is NOT risk acceptance — risk acceptance means consciously retaining the risk without transfer, whereas Palisade is actively shifting risk via insurance premiums. Distinguish self-retention from risk transfer with the stem's insurance-purchase signal.",
+      "topic_guidance": "The four classic COSO ERM risk responses are: Avoid (eliminate), Reduce (mitigate), Share/Transfer (insurance, hedging, outsourcing), Accept (retain). The stem explicitly signals 'purchase insurance' = risk transfer, and 'rather than eliminate the underlying activity' is a trap pointing at avoidance. EW_B must explain that avoidance requires exiting the activity, not insuring it. EW_C must explain that acceptance requires no action (or establishing a reserve), not purchasing insurance. The distinction between 'acceptance with a reserve' and 'transfer via insurance' is a documented CMA exam trap.",
+      "also_has_dl026": "EW_A is empty",
+      "dqs_total": 31,
+      "dqs_assessment": "Good choices — all three distractors are actual ERM response strategies. DQS=31 (Tier B)."
+    },
+    {
+      "qid": "P1-ED-036",
+      "topic": "Change management — IT general control (COSO / COBIT)",
+      "subtopic": "ITGC vs. application controls vs. physical controls",
+      "cc": "D",
+      "stem": "Kirkwood requires all software changes to be tested, approved, and documented before being moved into the production environment. What type of control is this?",
+      "choices": {
+        "A": "A segregation of duties control unrelated to IT",
+        "B": "An application control embedded in a specific transaction",
+        "C": "A physical control over hardware only",
+        "D": "An IT general control over change management"
+      },
+      "slots_affected": ["B", "C"],
+      "category": "Rewrite Required",
+      "current_text_EW_B": "This option reflects a misunderstanding of change management control it systems. The choice 'An application control embedded in a specific transaction' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+      "current_text_EW_C": "This option reflects a misunderstanding of change management control it systems. The choice 'A physical control over hardware only' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+      "ec_length": 144,
+      "ec_score": 3,
+      "ec_text": "Change management controls, requiring testing, approval, and documentation before system changes go live, are a category of IT general controls.",
+      "replacement_requirement": "For EW_B: Explain why change management is NOT an application control — application controls are embedded in specific transaction-processing applications (input validation, file checks, etc.) and operate at the transaction level, while change management governs the entire system development lifecycle across all applications. This is the key ITGC vs. application control distinction tested on the CMA exam. For EW_C: Explain why change management is NOT a physical control — physical controls protect tangible assets (locks, cameras, badge readers) and have no bearing on whether software changes follow a documented approval path. The stem describes a policy/process control over system development, not a physical safeguard.",
+      "topic_guidance": "IT General Controls (ITGCs) apply across the entire IT environment: change management, logical access, program development, computer operations. Application controls are specific to one application: input authorization, data validation, file checks, balancing. Physical controls protect physical assets: locks, guards, environmental controls. The ITGC vs. application control distinction is a frequently tested CMA concept. EW_B should explain that the testing/approval/documentation process applies to ALL system changes (general), not a single transaction type (application-specific). EW_C should explain that change management is a procedural/policy control, not a physical asset safeguard.",
+      "also_has_dl026": "EW_A is empty",
+      "dqs_total": 31,
+      "dqs_assessment": "Good choice structure — B tests the key ITGC vs. application control distinction. DQS=31 (Tier B). Labeled Difficult (4) which is appropriate for this distinction."
+    },
+    {
+      "qid": "P1-ED-046",
+      "topic": "Code of conduct / ethics program — Control environment (COSO Principle 1)",
+      "subtopic": "COSO component mapping — ethics training maps to control environment",
+      "cc": "B",
+      "stem": "Umberglen requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+      "choices": {
+        "A": "Information and communication, limited to external reporting only",
+        "B": "The control environment, by reinforcing the organization's commitment to ethical values",
+        "C": "Risk assessment, since it identifies specific financial risks",
+        "D": "Monitoring activities, since it evaluates control effectiveness"
+      },
+      "slots_affected": ["D"],
+      "category": "Rewrite Required",
+      "current_text_EW_D": "This option reflects a misunderstanding of code of conduct ethics program. The choice 'Monitoring activities, since it evaluates control effectiven' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+      "ec_length": 158,
+      "ec_score": 5,
+      "ec_text": "An ethics program and code of conduct reinforce the control environment, which reflects the organization's overall commitment to integrity and ethical values.",
+      "replacement_requirement": "Explain why ethics training and code-of-conduct acknowledgment is NOT monitoring. Monitoring evaluates whether existing controls are operating effectively over time (ongoing evaluations, separate evaluations, deficiency reporting). Ethics training is about establishing the foundation of integrity and values — a control environment activity (COSO Principle 1). The stem describes a training program that sets expectations, not a process that evaluates whether those expectations are being met. Monitoring would be testing whether employees actually follow the code of conduct, not training them on it.",
+      "topic_guidance": "COSO Internal Control — Integrated Framework (2013) has 5 components. The control environment (Principle 1) includes integrity, ethical values, board oversight, organizational structure, assignment of authority, HR policies, and accountability. Ethics training and codes of conduct are classic control-environment attributes. Monitoring (Principles 16-17) involves ongoing evaluations and separate evaluations to assess whether the other four components are present and functioning. The distinction: environment = setting the ethical foundation; monitoring = checking whether the foundation is working. This is a documented CMA exam trap — candidates confuse 'activities that promote ethics' (control environment) with 'activities that check on controls' (monitoring).",
+      "also_has_dl026": "EW_A and EW_C are empty",
+      "dl013_note": "EW_D text is truncated mid-word at 'effectiven' — suggests a write-tool defect during original authoring that cut off the template text before it completed the word 'effectiveness'",
+      "dqs_total": 28,
+      "dqs_assessment": "Decent choices but explanation quality is poor. DQS=28 (Tier C)."
+    },
+    {
+      "qid": "P1-ED-051",
+      "topic": "Multi-factor authentication — access control (COSO Control Activities / IT General Controls)",
+      "subtopic": "MFA purpose — preventing unauthorized access",
+      "cc": "C",
+      "stem": "Briarcliff requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+      "choices": {
+        "A": "To replace the need for segregation of duties",
+        "B": "To ensure compliance with balanced scorecard metrics",
+        "C": "To reduce the risk of unauthorized access to financial systems and data",
+        "D": "To eliminate the need for any other IT general controls"
+      },
+      "slots_affected": ["B"],
+      "category": "Rewrite Required",
+      "current_text_EW_B": "This option reflects a misunderstanding of password access authentication control. The choice 'To ensure compliance with balanced scorecard metrics' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+      "ec_length": 167,
+      "ec_score": 6,
+      "ec_text": "Multi-factor authentication strengthens access security by requiring more than one form of verification, reducing the risk of unauthorized access to financial systems.",
+      "replacement_requirement": "Explain why MFA has nothing to do with balanced scorecard compliance — the balanced scorecard is a strategic performance management framework (Kaplan & Norton) that tracks financial, customer, internal process, and learning/growth metrics. It has no bearing on authentication controls. MFA is an IT access control designed to verify identity, not a performance measurement tool. The candidate confusing these is likely mixing up Domain F (Technology) with Domain C (Performance Management) concepts — a common CMA exam trap.",
+      "topic_guidance": "Multi-factor authentication (MFA) is a logical access control requiring 2+ verification factors: something you know (password), something you have (token/phone), something you are (biometric). It falls under IT general controls > access security. The balanced scorecard is a Domain C performance management tool. The 'compliance with balanced scorecard metrics' distractor is a non-sequitur designed to catch candidates who see a management accounting term and assume relevance. The EW_B explanation should explicitly state that BSC belongs to Performance Management (Section C), not Internal Controls (Section E), and that MFA's purpose is access security, not strategic performance measurement.",
+      "also_has_dl026": "EW_A and EW_D are empty",
+      "also_has_dl010": "True — EW_B text references 'balanced scorecard metrics' (Choice A's content) but is assigned to slot B ('replace segregation of duties'). This is a text-to-slot misattribution within the template: the boilerplate text describes Choice A while annotated to slot B. A learner who chooses B would see feedback about a different topic entirely.",
+      "dqs_total": 21,
+      "dqs_assessment": "Very weak. B is a non-sequitur. A and D are exaggerated claims. DQS=21 (Tier D). Complete redesign of distractors and explanations recommended."
+    },
+    {
+      "qid": "P1-ED-075",
+      "topic": "Control environment — board independence and oversight (COSO Principle 2)",
+      "subtopic": "COSO component mapping — independent board = control environment, not monitoring",
+      "cc": "C",
+      "cc_discrepancy_note": "SESSION809_EW_INTEGRITY_AUDIT records CC=C for this item. SESSION809_DQS_REVIEW records CC=A. This discrepancy affects which slot is the CorrectChoice slot (C vs. A) and therefore which slots require DL-013 remediation vs. CC-slot-emptying. The DQS review found substantive text in EW_D ('Monitoring evaluations test whether controls are working; board independence is a foundational control-environment attribute.') — this text may be in a different slot depending on the authoritative CC. Resolution: independent CC audit required before EW authoring; use boundary-aware object parsing per METHODOLOGY_c_.md.",
+      "stem": "A company's board has a majority of independent directors and an audit committee composed entirely of independent members. Which COSO principle does this primarily support?",
+      "choices": {
+        "A": "The control environment — board independence and oversight",
+        "B": "Risk assessment — fraud risk identification",
+        "C": "Information and communication — external reporting",
+        "D": "Monitoring — ongoing evaluations"
+      },
+      "slots_affected": ["B", "D"],
+      "category": "Rewrite Required",
+      "current_text_EW_B": "[Per SESSION809_EW_INTEGRITY_AUDIT: DL-013 boilerplate — 'This option reflects a misunderstanding of segregation approval reconciliation. The choice [restated] is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.']",
+      "current_text_EW_D": "[Per SESSION809_EW_INTEGRITY_AUDIT: DL-013 boilerplate — same template pattern. NOTE: SESSION809_DQS_REVIEW found SUBSTANTIVE text in EW_D under different CC assignment: 'Monitoring evaluations test whether controls are working; board independence is a foundational control-environment attribute.' This may be a dual-block content overlap — verify which block's EW_D is authoritative before replacing.]",
+      "ec_length": 153,
+      "ec_score": 4,
+      "ec_text": "Separating payment approval from reconciliation ensures an independent check exists, reducing the risk that errors or fraudulent approvals go undetected.",
+      "ec_note": "CRITICAL: The ExplanationCorrect text describes payment approval and reconciliation controls — this is a segregation-of-duties explanation, NOT a board independence/control environment explanation. This is a DL-016 / DL-010 compound defect: the EC text belongs to a different item (likely the segregation-approval-reconciliation topic listed as E.075 in the Topic field). The stem tests COSO control environment/board independence, but the EC explains payment segregation. The explanation is topically wrong for the question the learner sees. This item needs EC re-authoring in addition to EW remediation.",
+      "replacement_requirement": "For EW_B: Explain why an independent board with an independent audit committee is NOT risk assessment. Risk assessment (COSO Principles 6-9) involves identifying, analyzing, and responding to risks — it specifies objectives, identifies risks to achieving those objectives, assesses fraud risk, and evaluates changes. Board composition is a governance structure question, not a risk identification process. For EW_D: Explain why an independent board is NOT monitoring. Monitoring (COSO Principles 16-17) evaluates whether controls are present and functioning. Board independence is about the governance structure that OVERSIGHT is built on — the foundation, not the evaluation. The control environment houses principles about board independence (Principle 2) and oversight responsibilities. A common CMA error is confusing 'board oversight of controls' (monitoring function) with 'board independence and composition' (control environment attribute).",
+      "topic_guidance": "COSO Internal Control — Integrated Framework, Principle 2: 'The board of directors demonstrates independence from management and exercises oversight of the development and performance of internal control.' This is a control environment principle. Board independence (majority independent directors, independent audit committee) is a governance structure attribute that falls under the control environment. The key distinction for CMA candidates: the control environment is about WHO exercises oversight and WHAT the oversight structure looks like. Monitoring is about WHAT the oversight activities ARE (ongoing evaluations, separate evaluations). An independent board is the structure (environment); reviewing exception reports is the activity (monitoring). This exact distinction is tested on CMA exams.",
+      "also_has_dl026": "EW_A is empty",
+      "critical_defect_note": "ExplanationCorrect field (153 chars, EC_score=4) describes payment segregation — entirely wrong topic for a board independence question. The EC must be re-authored to explain COSO Principle 2 and the board independence concept. This is a DL-010 / DL-016 cross-item contamination where the EC from a different rotation-group item was placed on this QID.",
+      "dqs_total": 31,
+      "dqs_assessment": "Good governance topic. All distractors are COSO components. DQS=31 (Tier B). But EC is topically wrong — critical defect."
+    }
+  ],
+  "ideal_example": {
+    "qid": "P1-ED-016",
+    "slot": "EW_B",
+    "distractor_text": "Risk avoidance, eliminating the risk entirely",
+    "correct_choice": "D — Risk transfer (sharing), shifting some financial impact of the risk to a third party",
+    "ideal_text": "Risk avoidance eliminates the risk by discontinuing or not undertaking the activity that creates the exposure. Palisade, however, is continuing the underlying activity and purchasing insurance to cover potential losses from it — this is risk transfer (sharing), not avoidance. Under the COSO ERM framework, risk avoidance and risk transfer are distinct risk response strategies: avoidance removes the exposure by exiting the activity entirely, while transfer shifts the financial impact to a third party such as an insurer without abandoning the underlying business activity. The stem explicitly states Palisade intends to continue the activity — the 'rather than eliminate' language is the key signal that distinguishes transfer from avoidance. A candidate selecting this option may have fixated on the phrase 'rather than eliminate' and concluded Palisade is deliberately not eliminating, therefore the opposite (avoidance) must be occurring. The correct interpretation is that Palisade rejected avoidance in favor of transfer, keeping the activity while offloading the financial consequence."
+  },
+  "cross_reference_notes": {
+    "dl013_boilerplate_qids": ["P1-ED-016", "P1-ED-036", "P1-ED-046", "P1-ED-051", "P1-ED-075"],
+    "dl013_boilerplate_slots_count": 8,
+    "all_pack_d": true,
+    "zero_pack_c_dl013": "Pack C seeds have no DL-013 boilerplate per SESSION809_EW_INTEGRITY_AUDIT (the 19 Pack C seeds have empty slots but no template boilerplate in existing slots). Pack D is the sole repository of DL-013 boilerplate in Domain E seeds.",
+    "companion_defects": {
+      "dl026": "Total 53 empty non-CC slots across all 38 seeds. These 5 items contribute 10 empty slots (2+2+1+2+2=9, plus ED-075 CC-A discrepancy = 10). EW authoring for these 5 items must address BOTH empty slots and boilerplate slots.",
+      "dl010": "ED-051 has text-to-slot mismatch — EW_B boilerplate references Choice A's topic (balanced scorecard). Text must be rewritten for the actual slot B distractor.",
+      "ed075_cc_discrepancy": "EW Integrity Audit says CC=C; DQS Review says CC=A. Independent CC audit required. The EC field is also topically wrong (payment segregation text on a board independence question). ED-075 has the most defects of any seed.",
+      "ed075_ec_wrong": "ED-075 ExplanationCorrect describes payment approval/reconciliation — completely unrelated to the board independence stem. This is a DL-010 cross-item contamination defect where the EC from a different rotation-group QID was placed on this item."
+    },
+    "remediation_sequencing": "Resolve ED-075 CC discrepancy first (independent boundary-aware CC audit). Then fix ED-075 EC (topically wrong — re-author from scratch). Then remediate all 8 DL-013 boilerplate slots across the 5 seeds. Then address the 10 DL-026 empty slots on these same seeds. Recommended batch cap: ≤28 items per governance-guard Rule 5."
+  }
+}

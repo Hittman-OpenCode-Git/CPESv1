@@ -1,0 +1,434 @@
+{
+    "session":  "514",
+    "agent":  "B",
+    "timestamp":  "2026-07-25T20:35:58.460Z",
+    "files_found":  [
+                        "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\scored_cases.js",
+                        "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\scored_cases2.js",
+                        "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\scored_cases3.js",
+                        "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\scored_cases4.js",
+                        "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026\\scored_cases5.js"
+                    ],
+    "arrays":  {
+                   "ENHANCED_CASE_BASE":  {
+                                              "file":  "scored_cases.js",
+                                              "line_range":  "5-4181",
+                                              "case_count":  15,
+                                              "item_count":  90,
+                                              "item_types":  {
+                                                                 "numeric":  37,
+                                                                 "select":  19,
+                                                                 "multi":  14,
+                                                                 "match":  12,
+                                                                 "fill":  8
+                                                             },
+                                              "exhibits":  {
+                                                               "2_exhibits":  13,
+                                                               "1_exhibits":  2
+                                                           },
+                                              "question_state_distribution":  {
+                                                                                  "Certified":  0,
+                                                                                  "Unprocessed":  90,
+                                                                                  "In Audit":  0,
+                                                                                  "Editorial Queue":  0,
+                                                                                  "Archived":  0,
+                                                                                  "MISSING":  0
+                                                                              },
+                                              "production_status_distribution":  {
+                                                                                     "Draft":  15
+                                                                                 },
+                                              "section_tags":  [
+                                                                   "A",
+                                                                   "B",
+                                                                   "C",
+                                                                   "D",
+                                                                   "E",
+                                                                   "F"
+                                                               ],
+                                              "difficulty_distribution":  {
+                                                                              "Moderate":  4,
+                                                                              "Difficult":  11
+                                                                          },
+                                              "structural_notes":  "15 cases, 4177 lines",
+                                              "fully_certified":  false
+                                          },
+                   "MIGRATED_CASE_BASE_A":  {
+                                                "file":  "scored_cases.js",
+                                                "line_range":  "4197-7551",
+                                                "case_count":  15,
+                                                "item_count":  120,
+                                                "item_types":  {
+                                                                   "numeric":  19,
+                                                                   "select":  58,
+                                                                   "multi":  15,
+                                                                   "fill":  13,
+                                                                   "match":  15
+                                                               },
+                                                "exhibits":  {
+                                                                 "0_exhibits":  15
+                                                             },
+                                                "question_state_distribution":  {
+                                                                                    "Certified":  120,
+                                                                                    "Unprocessed":  0,
+                                                                                    "In Audit":  0,
+                                                                                    "Editorial Queue":  0,
+                                                                                    "Archived":  0,
+                                                                                    "MISSING":  0
+                                                                                },
+                                                "production_status_distribution":  {
+                                                                                       "Production":  15
+                                                                                   },
+                                                "section_tags":  [
+                                                                     "A",
+                                                                     "B",
+                                                                     "C",
+                                                                     "D",
+                                                                     "E",
+                                                                     "F"
+                                                                 ],
+                                                "difficulty_distribution":  {
+                                                                                "Moderate":  15
+                                                                            },
+                                                "structural_notes":  "15 cases, 3355 lines; 120 Certified items present",
+                                                "fully_certified":  true
+                                            },
+                   "ENHANCED_CASE_BASE2":  {
+                                               "file":  "scored_cases2.js",
+                                               "line_range":  "5-4107",
+                                               "case_count":  15,
+                                               "item_count":  78,
+                                               "item_types":  {
+                                                                  "numeric":  25,
+                                                                  "multi":  14,
+                                                                  "select":  18,
+                                                                  "fill":  7,
+                                                                  "match":  14
+                                                              },
+                                               "exhibits":  {
+                                                                "1_exhibits":  12,
+                                                                "2_exhibits":  3
+                                                            },
+                                               "question_state_distribution":  {
+                                                                                   "Certified":  73,
+                                                                                   "Unprocessed":  5,
+                                                                                   "In Audit":  0,
+                                                                                   "Editorial Queue":  0,
+                                                                                   "Archived":  0,
+                                                                                   "MISSING":  0
+                                                                               },
+                                               "production_status_distribution":  {
+                                                                                      "Draft":  10,
+                                                                                      "Production":  5
+                                                                                  },
+                                               "section_tags":  [
+                                                                    "A",
+                                                                    "B",
+                                                                    "C",
+                                                                    "D",
+                                                                    "E",
+                                                                    "F"
+                                                                ],
+                                               "difficulty_distribution":  {
+                                                                               "Moderate":  11,
+                                                                               "Easy":  1,
+                                                                               "Difficult":  3
+                                                                           },
+                                               "structural_notes":  "15 cases, 4103 lines; 73 Certified items present",
+                                               "fully_certified":  false,
+                                               "production_status_mismatch":  "Items certified but case ProductionStatus is Draft"
+                                           },
+                   "MIGRATED_CASE_BASE_B":  {
+                                                "file":  "scored_cases2.js",
+                                                "line_range":  "4129-6389",
+                                                "case_count":  15,
+                                                "item_count":  75,
+                                                "item_types":  {
+                                                                   "select":  74,
+                                                                   "numeric":  1
+                                                               },
+                                                "exhibits":  {
+                                                                 "0_exhibits":  15
+                                                             },
+                                                "question_state_distribution":  {
+                                                                                    "Certified":  75,
+                                                                                    "Unprocessed":  0,
+                                                                                    "In Audit":  0,
+                                                                                    "Editorial Queue":  0,
+                                                                                    "Archived":  0,
+                                                                                    "MISSING":  0
+                                                                                },
+                                                "production_status_distribution":  {
+                                                                                       "Draft":  15
+                                                                                   },
+                                                "section_tags":  [
+                                                                     "A",
+                                                                     "B",
+                                                                     "C",
+                                                                     "D",
+                                                                     "E",
+                                                                     "F"
+                                                                 ],
+                                                "difficulty_distribution":  {
+                                                                                "Moderate":  15
+                                                                            },
+                                                "structural_notes":  "15 cases, 2261 lines; 75 Certified items present",
+                                                "fully_certified":  true,
+                                                "production_status_mismatch":  "Items certified but case ProductionStatus is Draft"
+                                            },
+                   "ENHANCED_CASE_BASE3":  {
+                                               "file":  "scored_cases3.js",
+                                               "line_range":  "5-4257",
+                                               "case_count":  15,
+                                               "item_count":  79,
+                                               "item_types":  {
+                                                                  "numeric":  17,
+                                                                  "select":  18,
+                                                                  "fill":  9,
+                                                                  "multi":  15,
+                                                                  "match":  20
+                                                              },
+                                               "exhibits":  {
+                                                                "1_exhibits":  7,
+                                                                "2_exhibits":  8
+                                                            },
+                                               "question_state_distribution":  {
+                                                                                   "Certified":  74,
+                                                                                   "Unprocessed":  5,
+                                                                                   "In Audit":  0,
+                                                                                   "Editorial Queue":  0,
+                                                                                   "Archived":  0,
+                                                                                   "MISSING":  0
+                                                                               },
+                                               "production_status_distribution":  {
+                                                                                      "Draft":  9,
+                                                                                      "Production":  6
+                                                                                  },
+                                               "section_tags":  [
+                                                                    "A",
+                                                                    "B",
+                                                                    "C",
+                                                                    "D",
+                                                                    "E",
+                                                                    "F"
+                                                                ],
+                                               "difficulty_distribution":  {
+                                                                               "Moderate":  10,
+                                                                               "Difficult":  4,
+                                                                               "Easy":  1
+                                                                           },
+                                               "structural_notes":  "15 cases, 4253 lines; 74 Certified items present",
+                                               "fully_certified":  false,
+                                               "production_status_mismatch":  "Items certified but case ProductionStatus is Draft"
+                                           },
+                   "MIGRATED_CASE_BASE_C":  {
+                                                "file":  "scored_cases3.js",
+                                                "line_range":  "4279-6768",
+                                                "case_count":  15,
+                                                "item_count":  75,
+                                                "item_types":  {
+                                                                   "select":  37,
+                                                                   "numeric":  8,
+                                                                   "multi":  15,
+                                                                   "fill":  15
+                                                               },
+                                                "exhibits":  {
+                                                                 "0_exhibits":  15
+                                                             },
+                                                "question_state_distribution":  {
+                                                                                    "Certified":  0,
+                                                                                    "Unprocessed":  75,
+                                                                                    "In Audit":  0,
+                                                                                    "Editorial Queue":  0,
+                                                                                    "Archived":  0,
+                                                                                    "MISSING":  0
+                                                                                },
+                                                "production_status_distribution":  {
+                                                                                       "Draft":  15
+                                                                                   },
+                                                "section_tags":  [
+                                                                     "A",
+                                                                     "B",
+                                                                     "C",
+                                                                     "D",
+                                                                     "E",
+                                                                     "F"
+                                                                 ],
+                                                "difficulty_distribution":  {
+                                                                                "Moderate":  15
+                                                                            },
+                                                "structural_notes":  "15 cases, 2490 lines",
+                                                "fully_certified":  false
+                                            },
+                   "ENHANCED_CASE_BASE4":  {
+                                               "file":  "scored_cases4.js",
+                                               "line_range":  "5-4347",
+                                               "case_count":  15,
+                                               "item_count":  78,
+                                               "item_types":  {
+                                                                  "numeric":  20,
+                                                                  "match":  17,
+                                                                  "multi":  12,
+                                                                  "select":  26,
+                                                                  "fill":  3
+                                                              },
+                                               "exhibits":  {
+                                                                "1_exhibits":  6,
+                                                                "2_exhibits":  9
+                                                            },
+                                               "question_state_distribution":  {
+                                                                                   "Certified":  63,
+                                                                                   "Unprocessed":  15,
+                                                                                   "In Audit":  0,
+                                                                                   "Editorial Queue":  0,
+                                                                                   "Archived":  0,
+                                                                                   "MISSING":  0
+                                                                               },
+                                               "production_status_distribution":  {
+                                                                                      "Draft":  11,
+                                                                                      "Production":  4
+                                                                                  },
+                                               "section_tags":  [
+                                                                    "A",
+                                                                    "B",
+                                                                    "C",
+                                                                    "D",
+                                                                    "E",
+                                                                    "F"
+                                                                ],
+                                               "difficulty_distribution":  {
+                                                                               "Moderate":  11,
+                                                                               "Easy":  2,
+                                                                               "Difficult":  2
+                                                                           },
+                                               "structural_notes":  "15 cases, 4343 lines; 63 Certified items present",
+                                               "fully_certified":  false,
+                                               "production_status_mismatch":  "Items certified but case ProductionStatus is Draft"
+                                           },
+                   "MIGRATED_CASE_BASE_D":  {
+                                                "file":  "scored_cases4.js",
+                                                "line_range":  "4369-6831",
+                                                "case_count":  15,
+                                                "item_count":  75,
+                                                "item_types":  {
+                                                                   "select":  35,
+                                                                   "numeric":  11,
+                                                                   "multi":  14,
+                                                                   "fill":  15
+                                                               },
+                                                "exhibits":  {
+                                                                 "0_exhibits":  15
+                                                             },
+                                                "question_state_distribution":  {
+                                                                                    "Certified":  0,
+                                                                                    "Unprocessed":  75,
+                                                                                    "In Audit":  0,
+                                                                                    "Editorial Queue":  0,
+                                                                                    "Archived":  0,
+                                                                                    "MISSING":  0
+                                                                                },
+                                                "production_status_distribution":  {
+                                                                                       "Draft":  15
+                                                                                   },
+                                                "section_tags":  [
+                                                                     "A",
+                                                                     "B",
+                                                                     "C",
+                                                                     "D",
+                                                                     "E",
+                                                                     "F"
+                                                                 ],
+                                                "difficulty_distribution":  {
+                                                                                "Moderate":  15
+                                                                            },
+                                                "structural_notes":  "15 cases, 2463 lines",
+                                                "fully_certified":  false
+                                            },
+                   "ENHANCED_CASE_BASE5":  {
+                                               "file":  "scored_cases5.js",
+                                               "line_range":  "5-4180",
+                                               "case_count":  15,
+                                               "item_count":  75,
+                                               "item_types":  {
+                                                                  "numeric":  18,
+                                                                  "select":  23,
+                                                                  "multi":  12,
+                                                                  "fill":  2,
+                                                                  "match":  20
+                                                              },
+                                               "exhibits":  {
+                                                                "2_exhibits":  9,
+                                                                "1_exhibits":  6
+                                                            },
+                                               "question_state_distribution":  {
+                                                                                   "Certified":  70,
+                                                                                   "Unprocessed":  5,
+                                                                                   "In Audit":  0,
+                                                                                   "Editorial Queue":  0,
+                                                                                   "Archived":  0,
+                                                                                   "MISSING":  0
+                                                                               },
+                                               "production_status_distribution":  {
+                                                                                      "Draft":  14,
+                                                                                      "Production":  1
+                                                                                  },
+                                               "section_tags":  [
+                                                                    "A",
+                                                                    "B",
+                                                                    "C",
+                                                                    "D",
+                                                                    "E",
+                                                                    "F"
+                                                                ],
+                                               "difficulty_distribution":  {
+                                                                               "Moderate":  15
+                                                                           },
+                                               "structural_notes":  "15 cases, 4176 lines; 70 Certified items present",
+                                               "fully_certified":  false,
+                                               "production_status_mismatch":  "Items certified but case ProductionStatus is Draft"
+                                           }
+               },
+    "summary":  {
+                    "total_arrays":  9,
+                    "total_cases":  135,
+                    "total_items":  745,
+                    "total_certified_items":  475,
+                    "total_certified_cases":  30,
+                    "already_fully_certified_arrays":  [
+                                                           "MIGRATED_CASE_BASE_A",
+                                                           "MIGRATED_CASE_BASE_B"
+                                                       ],
+                    "candidate_arrays":  [
+                                             "ENHANCED_CASE_BASE2",
+                                             "ENHANCED_CASE_BASE3",
+                                             "ENHANCED_CASE_BASE4",
+                                             "ENHANCED_CASE_BASE5"
+                                         ]
+                },
+    "derived_arrays":  [
+                           "ENHANCED_CASE_BANK_A|B|C|D|E|F (scored_cases.js:7553-7559) — runtime .map() clones of ENHANCED_CASE_BASE, NOT separate base arrays",
+                           "ENHANCED_CASE_BANK2_A|B|C|D|E|F (scored_cases2.js:4120-4125) — runtime .map() clones of ENHANCED_CASE_BASE2",
+                           "ENHANCED_CASE_BANK3_A|B|C|D|E|F — runtime .map() clones of ENHANCED_CASE_BASE3",
+                           "ENHANCED_CASE_BANK4_A|B|C|D|E|F — runtime .map() clones of ENHANCED_CASE_BASE4",
+                           "ENHANCED_CASE_BANK5_A|B|C|D|E|F (scored_cases5.js:4193-4198) — runtime .map() clones of ENHANCED_CASE_BASE5"
+                       ],
+    "format_comparison":  {
+                              "ENHANCED":  {
+                                               "item_state":  "question_state on each item (unquoted key: question_state:)",
+                                               "exhibits":  "1-2 per case",
+                                               "key_style":  "Unquoted (CaseID:, Title:, etc.)",
+                                               "production_status":  "Case-level only",
+                                               "item_types":  "Mixed (numeric, select, multi, fill, match)",
+                                               "avg_items_per_case":  -1,
+                                               "certification":  "Partial: 73/78 (BASE2), 74/79 (BASE3), 63/78 (BASE4), 70/75 (BASE5)"
+                                           },
+                              "MIGRATED":  {
+                                               "item_state":  "question_state on each item (quoted key: \"question_state\")",
+                                               "exhibits":  "0 per case (items are self-contained)",
+                                               "key_style":  "Quoted (\"CaseID\", \"Title\", etc.)",
+                                               "production_status":  "Both case-level AND item-level",
+                                               "item_types":  "Predominantly select (74/75 for BASE_B)",
+                                               "avg_items_per_case":  "5 (B/C/D) or 8 (A)",
+                                               "certification":  "Fully: 120/120 (BASE_A), 75/75 (BASE_B); None: 0/75 (BASE_C/D)"
+                                           }
+                          }
+}

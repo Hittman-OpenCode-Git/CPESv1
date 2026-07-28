@@ -1,0 +1,37 @@
+{
+  "session": "S801",
+  "date": "2026-07-26",
+  "title": "DL-016 Interference Audit — Scan Reliability Risk Assessment",
+  "finding": "DL-016 dual-block architecture does NOT exist in current files. All packs are single-object. However, CC-before-QID position creates identical DL-029 forward-scan vulnerability on ALL packs.",
+  "architecture": {
+    "current": "ALL 5 packs use SINGLE-OBJECT architecture. Each QuestionID has exactly one JSON object. All content and metadata fields coexist in the same object.",
+    "historical": "The DL-016 entry in DEFECT_LIBRARY.md describes a paired-object structure (metadata block with flat ChoiceA-D + content block with nested Choices.{A-D}). This historical format has been normalized away. 0 'ChoiceA' flat fields exist in any current pack file.",
+    "cc_position": "CorrectChoice appears BEFORE QuestionID in ALL 5 packs without exception. Average CC-to-QID distance: ~1,058 characters.",
+    "object_size": "Average JSON object size between consecutive CC fields: 3,639 chars (min 2,851, max 7,321)"
+  },
+  "forward_scan_false_positive_rate": {
+    "mechanism": "Scanner finds 'QuestionID' → searches forward for 'CorrectChoice' → finds NEXT QID's CC (since CC is before QID, not after)",
+    "rate": "~75% across ALL 5 packs. With uniform CC distribution (A/B/C/D at ~25% each), probability that adjacent QIDs share same CC ≈ 25%.",
+    "prior_scoping_error": "DL-029 originally stated the forward-scan problem only affects Pack B. This is incorrect — it affects ALL packs equally."
+  },
+  "governance_guard_rule2_analysis": {
+    "method": "±1200 character window scan around each ExplanationWrong match, searching in BOTH directions",
+    "reliability": "Partially immune — direction-agnostic and edit-scoped. But vulnerable on large objects (>2,400 chars) where CC-EW distance exceeds window.",
+    "verdict": "More reliable than forward-scan but not fully safe on packs C/D where objects average 3,639 chars"
+  },
+  "current_dl008_count_reliability": {
+    "session_status_67": "STALE — produced by forward-scan methodology. All 67 items individually verified CLEAN via Function constructor same-object parse.",
+    "session_92_672": "ALSO STALE — produced by window-scan methodology with DL-020 (brace-matcher string-unawareness) artifacts. All items verified CLEAN per S801 authoritative parse.",
+    "s801_authoritative": "0 Certified DL-008 items across all 5 packs. Function constructor parse, same-object CC+EW extraction. 100% confidence."
+  },
+  "recommended_scanning_methodology": [
+    {"method": "Function constructor parse", "reliability": "100%", "description": "Parse pack file to actual JS objects. Extract CC and EW from exact same object. Immune to field-ordering and cross-QID artifacts."},
+    {"method": "Reverse-scan (find CC, backward to QID)", "reliability": "95%", "description": "Since CC is always before QID, scanning backward links CC to correct QID reliably."},
+    {"method": "Within-object brace extraction", "reliability": "95%", "description": "Find object boundaries via string-aware brace tracking. Extract CC and EW from same body."}
+  ],
+  "avoid": [
+    "Forward-scan from QuestionID to CorrectChoice",
+    "Separate regex passes for CC and EW that rely on positional indexing",
+    "Totals-only reports without QID lists (per AGENTS.md §5)"
+  ]
+}

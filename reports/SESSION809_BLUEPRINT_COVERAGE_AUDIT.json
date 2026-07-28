@@ -1,0 +1,1186 @@
+{
+  "audit": {
+    "id": "S809_AGENT_I_BLUEPRINT_COVERAGE_AUDIT",
+    "date": "2026-07-26",
+    "scope": "38 Domain E seed QIDs (Pack C: 19, Pack D: 19)",
+    "totalSeeds": 38,
+    "allUnprocessed": true
+  },
+  "seed_items": [
+    {
+      "QID": "P1-EC-004",
+      "Pack": "C",
+      "Topic": "E.004 segregation of duties design",
+      "Stem": "Driftwood assigns one employee to authorize purchases, another to record them, and a third to reconcile the vendor accounts. What internal control concept does this reflect?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P10-P12 (Control Activities)",
+      "Subtopic": "SoD design principles"
+    },
+    {
+      "QID": "P1-EC-008",
+      "Pack": "C",
+      "Topic": "E.008 coso internal control framework",
+      "Stem": "Hearthstone evaluates its internal control system using a widely recognized framework consisting of five integrated components. What framework is this?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a",
+      "COSO_Principle": "Framework-level (all 5 components)",
+      "Subtopic": "COSO Framework overview"
+    },
+    {
+      "QID": "P1-EC-014",
+      "Pack": "C",
+      "Topic": "E.014 fraud triangle elements",
+      "Stem": "Nightingale's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud risk in a department. What model are they applying?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.a Fraud Risk",
+      "COSO_Principle": "P8 (Fraud risk)",
+      "Subtopic": "Fraud triangle elements"
+    },
+    {
+      "QID": "P1-EC-020",
+      "Pack": "C",
+      "Topic": "E.020 physical controls over assets",
+      "Stem": "Thornfield stores inventory in a locked warehouse accessible only to authorized personnel with badge access. What type of control is this?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a Control Activities (COSO P10-P12)",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Physical controls over assets"
+    },
+    {
+      "QID": "P1-EC-021",
+      "Pack": "C",
+      "Topic": "E.021 segregation of duties vendor setup and payment",
+      "Stem": "Bryant Manufacturing has a small accounts payable department where one employee creates new vendor records, enters invoices from those vendors, and approves payments for processing. Management wants to reduce the risk of fraudulent payments without adding staff. Which control improvement is most effective?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "SoD vendor setup and payment"
+    },
+    {
+      "QID": "P1-EC-022",
+      "Pack": "C",
+      "Topic": "E.022 preventive vs detective duplicate payment control",
+      "Stem": "Crestview Manufacturing frequently discovers duplicate vendor payments when reviewing the monthly accounts payable aging report. Management wants to implement a control that will best prevent duplicates from occurring. Which one of the following controls is preventive?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 Application Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Preventive system controls (duplicate payment)"
+    },
+    {
+      "QID": "P1-EC-023",
+      "Pack": "C",
+      "Topic": "E.023 IT access control terminated employee deprovisioning",
+      "Stem": "During an internal audit, Drake Distribution discovered that a former employee's system access remained active for 18 days after termination. No unauthorized transactions occurred during that period. Management wants to prevent recurrence. Which remediation is most appropriate?",
+      "CorrectChoice": "C",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 IT General Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Access deprovisioning for terminated employees"
+    },
+    {
+      "QID": "P1-EC-024",
+      "Pack": "C",
+      "Topic": "E.024 application input control sales order validation",
+      "Stem": "Parkview Company's sales order system accepts orders with invalid customer codes, negative quantities, and missing ship-to addresses. These errors are discovered only when invoices fail to process days later. Which application control would best address this issue?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 Application Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Input validation controls (sales order)"
+    },
+    {
+      "QID": "P1-EC-025",
+      "Pack": "C",
+      "Topic": "E.025 preventive vs detective controls",
+      "Stem": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.2.a Control Activities (COSO P10-P12)",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Preventive vs. detective classification"
+    },
+    {
+      "QID": "P1-EC-028",
+      "Pack": "C",
+      "Topic": "E.028 bank reconciliation control",
+      "Stem": "Copperline has a designated employee, independent of cash handling and recording, perform the monthly bank reconciliation. Why is independence important here?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.2.a Monitoring Activities (COSO P16-P17)",
+      "COSO_Principle": "P16-P17",
+      "Subtopic": "Bank reconciliation independence"
+    },
+    {
+      "QID": "P1-EC-031",
+      "Pack": "C",
+      "Topic": "E.031 erm risk appetite",
+      "Stem": "Foxglove's board defines the amount of risk the organization is willing to accept in pursuit of its objectives. What enterprise risk management concept is being defined?",
+      "CorrectChoice": "C",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.b COSO ERM Framework",
+      "COSO_Principle": "ERM",
+      "Subtopic": "Risk appetite definition"
+    },
+    {
+      "QID": "P1-EC-040",
+      "Pack": "C",
+      "Topic": "E.040 it general controls access",
+      "Stem": "Oleander requires periodic review of user access rights to ensure employees only retain system access appropriate to their current role. What category of control is this?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 IT General Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "ITGC access review / recertification"
+    },
+    {
+      "QID": "P1-EC-041",
+      "Pack": "C",
+      "Topic": "E.041 management override risk",
+      "Stem": "Pinehollow's CEO instructs the controller to bypass a normal approval control to record a favorable adjusting entry near year-end. What internal control limitation does this illustrate?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.5.c Control Limitations",
+      "COSO_Principle": "Framework-level",
+      "Subtopic": "Management override of controls"
+    },
+    {
+      "QID": "P1-EC-049",
+      "Pack": "C",
+      "Topic": "E.049 whistleblower hotline purpose",
+      "Stem": "Yorkshire establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations without fear of retaliation. What internal control objective does this serve?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.a Fraud Risk",
+      "COSO_Principle": "P13-P15 (Info & Comm)",
+      "Subtopic": "Whistleblower hotline / reporting channel"
+    },
+    {
+      "QID": "P1-EC-052",
+      "Pack": "C",
+      "Topic": "E.052 compensating control small business",
+      "Stem": "Cliffside is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.c Control Limitations",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Compensating controls for small entities"
+    },
+    {
+      "QID": "P1-EC-060",
+      "Pack": "C",
+      "Topic": "E.060 control environment tone at top",
+      "Stem": "Knollwood's board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee attitudes toward compliance. What COSO component does this describe?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a Control Environment (COSO P1-P5)",
+      "COSO_Principle": "P1",
+      "Subtopic": "Tone at the top / integrity"
+    },
+    {
+      "QID": "P1-EC-061",
+      "Pack": "C",
+      "Topic": "E.061 inherent risk vs control risk",
+      "Stem": "Lanternwood's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is being assessed?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a Risk Assessment (COSO P6-P9)",
+      "COSO_Principle": "P6-P9",
+      "Subtopic": "Inherent risk vs. control risk"
+    },
+    {
+      "QID": "P1-EC-066",
+      "Pack": "C",
+      "Topic": "E.066 segregation cash custody recording",
+      "Stem": "Quailrun has the same employee both handling incoming cash receipts and recording them in the accounting records. What control weakness does this create?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Easy",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "SoD cash custody vs. recording"
+    },
+    {
+      "QID": "P1-EC-072",
+      "Pack": "C",
+      "Topic": "E.072 remediation of control deficiency",
+      "Stem": "Willowmere identifies a control deficiency during its internal control assessment and assigns an owner, a corrective action plan, and a target completion date. What internal control process is being followed?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a Monitoring Activities (COSO P16-P17)",
+      "COSO_Principle": "P16-P17",
+      "Subtopic": "Remediation of control deficiencies"
+    },
+    {
+      "QID": "P1-ED-001",
+      "Pack": "D",
+      "Topic": "E.001 three lines of defense model",
+      "Stem": "Alderway structures its risk and control functions using operational management, risk/compliance oversight, and internal audit as distinct layers. What model is this?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.1 Corporate Governance",
+      "COSO_Principle": "Framework-level",
+      "Subtopic": "Three lines of defense model"
+    },
+    {
+      "QID": "P1-ED-010",
+      "Pack": "D",
+      "Topic": "E.010 access control least privilege",
+      "Stem": "Juniperfield grants employees system access limited only to what is necessary to perform their specific job duties. What security principle is being applied?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 IT General Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Least privilege access principle"
+    },
+    {
+      "QID": "P1-ED-014",
+      "Pack": "D",
+      "Topic": "E.014 independent verification control activity",
+      "Stem": "Northfell has a supervisor recount inventory counted by warehouse staff before finalizing the count. What type of control activity is this?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Independent verification / supervisory review"
+    },
+    {
+      "QID": "P1-ED-016",
+      "Pack": "D",
+      "Topic": "E.016 erm risk response strategies",
+      "Stem": "Palisade decides to purchase insurance to address a significant identified risk rather than eliminate the underlying activity. What enterprise risk management response is this?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.b COSO ERM Framework",
+      "COSO_Principle": "ERM",
+      "Subtopic": "Risk response strategies (insurance/transfer)"
+    },
+    {
+      "QID": "P1-ED-025",
+      "Pack": "D",
+      "Topic": "E.025 control activities authorization",
+      "Stem": "Zionsgate requires that all purchase orders above a certain dollar amount be approved by a manager before the order is placed. What type of control activity is this?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a Control Activities (COSO P10-P12)",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Authorization controls (purchase approval)"
+    },
+    {
+      "QID": "P1-ED-028",
+      "Pack": "D",
+      "Topic": "E.028 monitoring ongoing evaluations",
+      "Stem": "Crownridge's management periodically reviews exception reports and reconciliations as part of regular operations to assess whether controls are functioning as intended. What COSO component does this represent?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.2.a Monitoring Activities (COSO P16-P17)",
+      "COSO_Principle": "P16-P17",
+      "Subtopic": "Ongoing monitoring evaluations"
+    },
+    {
+      "QID": "P1-ED-035",
+      "Pack": "D",
+      "Topic": "E.035 data backup disaster recovery",
+      "Stem": "Jettison maintains offsite backups of critical financial data and a documented plan for restoring systems after a disruption. What control objective does this address?",
+      "CorrectChoice": "C",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 IT General Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Data backup and disaster recovery"
+    },
+    {
+      "QID": "P1-ED-036",
+      "Pack": "D",
+      "Topic": "E.036 change management control it systems",
+      "Stem": "Kirkwood requires all software changes to be tested, approved, and documented before being moved into the production environment. What type of control is this?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate-Easy",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 IT General Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Change management controls (IT systems)"
+    },
+    {
+      "QID": "P1-ED-042",
+      "Pack": "D",
+      "Topic": "E.042 risk assessment likelihood impact",
+      "Stem": "Quarrycrest's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do. What process is this?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a Risk Assessment (COSO P6-P9)",
+      "COSO_Principle": "P6-P9",
+      "Subtopic": "Risk scoring (likelihood x impact)"
+    },
+    {
+      "QID": "P1-ED-046",
+      "Pack": "D",
+      "Topic": "E.046 code of conduct ethics program",
+      "Stem": "Umberglen requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.2.a Control Environment (COSO P1-P5)",
+      "COSO_Principle": "P1",
+      "Subtopic": "Code of conduct and ethics program"
+    },
+    {
+      "QID": "P1-ED-051",
+      "Pack": "D",
+      "Topic": "E.051 password access authentication control",
+      "Stem": "Briarcliff requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+      "CorrectChoice": "C",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.4 IT General Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Multi-factor authentication"
+    },
+    {
+      "QID": "P1-ED-058",
+      "Pack": "D",
+      "Topic": "E.058 internal control cost benefit limitation",
+      "Stem": "Ivorycrest's management decides not to implement an extremely costly control because the risk it addresses is low and infrequent. What limitation of internal control does this illustrate?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.c Control Limitations",
+      "COSO_Principle": "Framework-level",
+      "Subtopic": "Cost-benefit limitation"
+    },
+    {
+      "QID": "P1-ED-064",
+      "Pack": "D",
+      "Topic": "E.064 vendor master file controls",
+      "Stem": "Oakvale restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments. What risk does this control primarily address?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Vendor master file SoD"
+    },
+    {
+      "QID": "P1-ED-066",
+      "Pack": "D",
+      "Topic": "E.066 audit committee oversight role",
+      "Stem": "Quillwood's board audit committee oversees the financial reporting process, the external auditor relationship, and the internal audit function. What is the primary purpose of this oversight?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Difficult",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.1 Corporate Governance",
+      "COSO_Principle": "P1-P5",
+      "Subtopic": "Audit committee oversight role"
+    },
+    {
+      "QID": "P1-ED-071",
+      "Pack": "D",
+      "Topic": "E.071 change management control direct production change",
+      "Stem": "A developer at Northpoint Solutions made a direct change to a production database to correct a customer billing error. No change request was submitted, and the modification was not tested or reviewed by anyone else. Which IT general control is most clearly missing?",
+      "CorrectChoice": "C",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.4 IT General Controls",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "Change management violation (direct prod change)"
+    },
+    {
+      "QID": "P1-ED-072",
+      "Pack": "D",
+      "Topic": "E.072 fraud risk purchasing conflict of interest",
+      "Stem": "At Elmwood Manufacturing, the purchasing manager is authorized to add new vendors to the approved vendor master file and also selects the winning bidder for contract awards. Which control would best address the conflict-of-interest risk in this arrangement?",
+      "CorrectChoice": "D",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P8 (Fraud)",
+      "Subtopic": "Fraud risk in purchasing / SoD"
+    },
+    {
+      "QID": "P1-ED-073",
+      "Pack": "D",
+      "Topic": "E.073 monitoring exception reports not reviewed",
+      "Stem": "Sterling Company generates daily exception reports for purchasing transactions that exceed approved limits. The reports are produced automatically but no employee is assigned to review them, and exceptions accumulate without follow-up. What monitoring weakness does this reveal?",
+      "CorrectChoice": "A",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "LOS": "E.2.a Monitoring Activities (COSO P16-P17)",
+      "COSO_Principle": "P16-P17",
+      "Subtopic": "Exception reports not reviewed"
+    },
+    {
+      "QID": "P1-ED-074",
+      "Pack": "D",
+      "Topic": "E.074 reconciliation incompatible duties EFT and bank rec",
+      "Stem": "At Valley Associates, the same employee who initiates electronic fund transfers also performs the monthly bank reconciliation. What is the primary control weakness created by this arrangement?",
+      "CorrectChoice": "B",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "SoD EFT initiation vs. bank reconciliation"
+    },
+    {
+      "QID": "P1-ED-075",
+      "Pack": "D",
+      "Topic": "E.075 segregation approval reconciliation",
+      "Stem": "Alderway ensures that the employee who approves a vendor invoice for payment is different from the employee who reconciles the accounts payable subledger to the general ledger. What does this separation help prevent?",
+      "CorrectChoice": "C",
+      "question_state": "Unprocessed",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "LOS": "E.5.b Segregation of Duties",
+      "COSO_Principle": "P10-P12",
+      "Subtopic": "SoD approval vs. reconciliation"
+    }
+  ],
+  "los_coverage_summary": [
+    {
+      "LOS": "E.1 Corporate Governance",
+      "description": "Principles of corporate governance, including board oversight, audit committee roles, and governance structure",
+      "seedCount": 2,
+      "percentageOf38": "5.3%",
+      "seeds": [
+        {
+          "QID": "P1-ED-001",
+          "Pack": "D",
+          "Topic": "E.001 three lines of defense model",
+          "Subtopic": "Three lines of defense model",
+          "COSO_Principle": "Framework-level"
+        },
+        {
+          "QID": "P1-ED-066",
+          "Pack": "D",
+          "Topic": "E.066 audit committee oversight role",
+          "Subtopic": "Audit committee oversight role",
+          "COSO_Principle": "P1-P5"
+        }
+      ],
+      "status": "THIN"
+    },
+    {
+      "LOS": "E.2.a Control Environment (COSO P1-P5)",
+      "description": "Tone at the top, integrity, ethics, board independence, competence, accountability",
+      "seedCount": 2,
+      "percentageOf38": "5.3%",
+      "seeds": [
+        {
+          "QID": "P1-EC-060",
+          "Pack": "C",
+          "Topic": "E.060 control environment tone at top",
+          "Subtopic": "Tone at the top / integrity",
+          "COSO_Principle": "P1"
+        },
+        {
+          "QID": "P1-ED-046",
+          "Pack": "D",
+          "Topic": "E.046 code of conduct ethics program",
+          "Subtopic": "Code of conduct and ethics program",
+          "COSO_Principle": "P1"
+        }
+      ],
+      "status": "THIN"
+    },
+    {
+      "LOS": "E.2.a Risk Assessment (COSO P6-P9)",
+      "description": "Risk identification, analysis, fraud risk, change management impact",
+      "seedCount": 2,
+      "percentageOf38": "5.3%",
+      "seeds": [
+        {
+          "QID": "P1-EC-061",
+          "Pack": "C",
+          "Topic": "E.061 inherent risk vs control risk",
+          "Subtopic": "Inherent risk vs. control risk",
+          "COSO_Principle": "P6-P9"
+        },
+        {
+          "QID": "P1-ED-042",
+          "Pack": "D",
+          "Topic": "E.042 risk assessment likelihood impact",
+          "Subtopic": "Risk scoring (likelihood x impact)",
+          "COSO_Principle": "P6-P9"
+        }
+      ],
+      "status": "THIN"
+    },
+    {
+      "LOS": "E.2.a Control Activities (COSO P10-P12)",
+      "description": "Selection and development of control activities, policies and procedures",
+      "seedCount": 3,
+      "percentageOf38": "7.9%",
+      "seeds": [
+        {
+          "QID": "P1-EC-020",
+          "Pack": "C",
+          "Topic": "E.020 physical controls over assets",
+          "Subtopic": "Physical controls over assets",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-EC-025",
+          "Pack": "C",
+          "Topic": "E.025 preventive vs detective controls",
+          "Subtopic": "Preventive vs. detective classification",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-025",
+          "Pack": "D",
+          "Topic": "E.025 control activities authorization",
+          "Subtopic": "Authorization controls (purchase approval)",
+          "COSO_Principle": "P10-P12"
+        }
+      ],
+      "status": "COVERED"
+    },
+    {
+      "LOS": "E.2.a Information & Communication (COSO P13-P15)",
+      "description": "Quality information, internal communication, external communication",
+      "seedCount": 0,
+      "percentageOf38": "0.0%",
+      "seeds": [],
+      "status": "GAP"
+    },
+    {
+      "LOS": "E.2.a Monitoring Activities (COSO P16-P17)",
+      "description": "Ongoing and separate evaluations, deficiency communication",
+      "seedCount": 4,
+      "percentageOf38": "10.5%",
+      "seeds": [
+        {
+          "QID": "P1-EC-028",
+          "Pack": "C",
+          "Topic": "E.028 bank reconciliation control",
+          "Subtopic": "Bank reconciliation independence",
+          "COSO_Principle": "P16-P17"
+        },
+        {
+          "QID": "P1-EC-072",
+          "Pack": "C",
+          "Topic": "E.072 remediation of control deficiency",
+          "Subtopic": "Remediation of control deficiencies",
+          "COSO_Principle": "P16-P17"
+        },
+        {
+          "QID": "P1-ED-028",
+          "Pack": "D",
+          "Topic": "E.028 monitoring ongoing evaluations",
+          "Subtopic": "Ongoing monitoring evaluations",
+          "COSO_Principle": "P16-P17"
+        },
+        {
+          "QID": "P1-ED-073",
+          "Pack": "D",
+          "Topic": "E.073 monitoring exception reports not reviewed",
+          "Subtopic": "Exception reports not reviewed",
+          "COSO_Principle": "P16-P17"
+        }
+      ],
+      "status": "COVERED"
+    },
+    {
+      "LOS": "E.2.b COSO ERM Framework",
+      "description": "Enterprise risk management components and principles",
+      "seedCount": 2,
+      "percentageOf38": "5.3%",
+      "seeds": [
+        {
+          "QID": "P1-EC-031",
+          "Pack": "C",
+          "Topic": "E.031 erm risk appetite",
+          "Subtopic": "Risk appetite definition",
+          "COSO_Principle": "ERM"
+        },
+        {
+          "QID": "P1-ED-016",
+          "Pack": "D",
+          "Topic": "E.016 erm risk response strategies",
+          "Subtopic": "Risk response strategies (insurance/transfer)",
+          "COSO_Principle": "ERM"
+        }
+      ],
+      "status": "THIN"
+    },
+    {
+      "LOS": "E.3 Internal Auditing",
+      "description": "Internal audit function, reporting relationships, audit planning",
+      "seedCount": 0,
+      "percentageOf38": "0.0%",
+      "seeds": [],
+      "status": "GAP"
+    },
+    {
+      "LOS": "E.4 IT General Controls",
+      "description": "Access controls, change management, business continuity, disaster recovery, data backup",
+      "seedCount": 7,
+      "percentageOf38": "18.4%",
+      "seeds": [
+        {
+          "QID": "P1-EC-023",
+          "Pack": "C",
+          "Topic": "E.023 IT access control terminated employee deprovisioning",
+          "Subtopic": "Access deprovisioning for terminated employees",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-EC-040",
+          "Pack": "C",
+          "Topic": "E.040 it general controls access",
+          "Subtopic": "ITGC access review / recertification",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-010",
+          "Pack": "D",
+          "Topic": "E.010 access control least privilege",
+          "Subtopic": "Least privilege access principle",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-035",
+          "Pack": "D",
+          "Topic": "E.035 data backup disaster recovery",
+          "Subtopic": "Data backup and disaster recovery",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-036",
+          "Pack": "D",
+          "Topic": "E.036 change management control it systems",
+          "Subtopic": "Change management controls (IT systems)",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-051",
+          "Pack": "D",
+          "Topic": "E.051 password access authentication control",
+          "Subtopic": "Multi-factor authentication",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-071",
+          "Pack": "D",
+          "Topic": "E.071 change management control direct production change",
+          "Subtopic": "Change management violation (direct prod change)",
+          "COSO_Principle": "P10-P12"
+        }
+      ],
+      "status": "COVERED"
+    },
+    {
+      "LOS": "E.4 Application Controls",
+      "description": "Input controls, processing controls, output controls",
+      "seedCount": 2,
+      "percentageOf38": "5.3%",
+      "seeds": [
+        {
+          "QID": "P1-EC-022",
+          "Pack": "C",
+          "Topic": "E.022 preventive vs detective duplicate payment control",
+          "Subtopic": "Preventive system controls (duplicate payment)",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-EC-024",
+          "Pack": "C",
+          "Topic": "E.024 application input control sales order validation",
+          "Subtopic": "Input validation controls (sales order)",
+          "COSO_Principle": "P10-P12"
+        }
+      ],
+      "status": "THIN"
+    },
+    {
+      "LOS": "E.5.a Fraud Risk",
+      "description": "Fraud triangle, fraud prevention, fraud detection, whistleblower programs",
+      "seedCount": 2,
+      "percentageOf38": "5.3%",
+      "seeds": [
+        {
+          "QID": "P1-EC-014",
+          "Pack": "C",
+          "Topic": "E.014 fraud triangle elements",
+          "Subtopic": "Fraud triangle elements",
+          "COSO_Principle": "P8 (Fraud risk)"
+        },
+        {
+          "QID": "P1-EC-049",
+          "Pack": "C",
+          "Topic": "E.049 whistleblower hotline purpose",
+          "Subtopic": "Whistleblower hotline / reporting channel",
+          "COSO_Principle": "P13-P15 (Info & Comm)"
+        }
+      ],
+      "status": "THIN"
+    },
+    {
+      "LOS": "E.5.b Segregation of Duties",
+      "description": "Authorization, recordkeeping, custody separation; cross-functional SoD",
+      "seedCount": 8,
+      "percentageOf38": "21.1%",
+      "seeds": [
+        {
+          "QID": "P1-EC-004",
+          "Pack": "C",
+          "Topic": "E.004 segregation of duties design",
+          "Subtopic": "SoD design principles",
+          "COSO_Principle": "P10-P12 (Control Activities)"
+        },
+        {
+          "QID": "P1-EC-021",
+          "Pack": "C",
+          "Topic": "E.021 segregation of duties vendor setup and payment",
+          "Subtopic": "SoD vendor setup and payment",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-EC-066",
+          "Pack": "C",
+          "Topic": "E.066 segregation cash custody recording",
+          "Subtopic": "SoD cash custody vs. recording",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-014",
+          "Pack": "D",
+          "Topic": "E.014 independent verification control activity",
+          "Subtopic": "Independent verification / supervisory review",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-064",
+          "Pack": "D",
+          "Topic": "E.064 vendor master file controls",
+          "Subtopic": "Vendor master file SoD",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-072",
+          "Pack": "D",
+          "Topic": "E.072 fraud risk purchasing conflict of interest",
+          "Subtopic": "Fraud risk in purchasing / SoD",
+          "COSO_Principle": "P8 (Fraud)"
+        },
+        {
+          "QID": "P1-ED-074",
+          "Pack": "D",
+          "Topic": "E.074 reconciliation incompatible duties EFT and bank rec",
+          "Subtopic": "SoD EFT initiation vs. bank reconciliation",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-075",
+          "Pack": "D",
+          "Topic": "E.075 segregation approval reconciliation",
+          "Subtopic": "SoD approval vs. reconciliation",
+          "COSO_Principle": "P10-P12"
+        }
+      ],
+      "status": "COVERED"
+    },
+    {
+      "LOS": "E.5.c Control Limitations",
+      "description": "Management override, compensating controls, cost-benefit, human error",
+      "seedCount": 3,
+      "percentageOf38": "7.9%",
+      "seeds": [
+        {
+          "QID": "P1-EC-041",
+          "Pack": "C",
+          "Topic": "E.041 management override risk",
+          "Subtopic": "Management override of controls",
+          "COSO_Principle": "Framework-level"
+        },
+        {
+          "QID": "P1-EC-052",
+          "Pack": "C",
+          "Topic": "E.052 compensating control small business",
+          "Subtopic": "Compensating controls for small entities",
+          "COSO_Principle": "P10-P12"
+        },
+        {
+          "QID": "P1-ED-058",
+          "Pack": "D",
+          "Topic": "E.058 internal control cost benefit limitation",
+          "Subtopic": "Cost-benefit limitation",
+          "COSO_Principle": "Framework-level"
+        }
+      ],
+      "status": "COVERED"
+    }
+  ],
+  "coso_principle_coverage": [
+    {
+      "principle": "P1",
+      "description": "Demonstrates commitment to integrity and ethical values",
+      "seedCount": 8,
+      "seeds": [
+        "P1-EC-028",
+        "P1-EC-049",
+        "P1-EC-060",
+        "P1-EC-072",
+        "P1-ED-028",
+        "P1-ED-046",
+        "P1-ED-066",
+        "P1-ED-073"
+      ]
+    },
+    {
+      "principle": "P2",
+      "description": "Exercises oversight responsibility (board independence)",
+      "seedCount": 0,
+      "seeds": []
+    },
+    {
+      "principle": "P3",
+      "description": "Establishes structure, authority, and responsibility",
+      "seedCount": 0,
+      "seeds": []
+    },
+    {
+      "principle": "P4",
+      "description": "Demonstrates commitment to competence",
+      "seedCount": 0,
+      "seeds": []
+    },
+    {
+      "principle": "P5",
+      "description": "Enforces accountability",
+      "seedCount": 0,
+      "seeds": []
+    },
+    {
+      "principle": "P6",
+      "description": "Specifies suitable objectives",
+      "seedCount": 2,
+      "seeds": [
+        "P1-EC-061",
+        "P1-ED-042"
+      ]
+    },
+    {
+      "principle": "P7",
+      "description": "Identifies and analyzes risk",
+      "seedCount": 2,
+      "seeds": [
+        "P1-EC-061",
+        "P1-ED-042"
+      ]
+    },
+    {
+      "principle": "P8",
+      "description": "Assesses fraud risk",
+      "seedCount": 2,
+      "seeds": [
+        "P1-EC-014",
+        "P1-ED-072"
+      ]
+    },
+    {
+      "principle": "P9",
+      "description": "Identifies and analyzes significant change",
+      "seedCount": 2,
+      "seeds": [
+        "P1-EC-061",
+        "P1-ED-042"
+      ]
+    },
+    {
+      "principle": "P10",
+      "description": "Selects and develops control activities",
+      "seedCount": 20,
+      "seeds": [
+        "P1-EC-004",
+        "P1-EC-020",
+        "P1-EC-021",
+        "P1-EC-022",
+        "P1-EC-023",
+        "P1-EC-024",
+        "P1-EC-025",
+        "P1-EC-040",
+        "P1-EC-052",
+        "P1-EC-066",
+        "P1-ED-010",
+        "P1-ED-014",
+        "P1-ED-025",
+        "P1-ED-035",
+        "P1-ED-036",
+        "P1-ED-051",
+        "P1-ED-064",
+        "P1-ED-071",
+        "P1-ED-074",
+        "P1-ED-075"
+      ]
+    },
+    {
+      "principle": "P11",
+      "description": "Selects and develops general controls over technology",
+      "seedCount": 20,
+      "seeds": [
+        "P1-EC-004",
+        "P1-EC-020",
+        "P1-EC-021",
+        "P1-EC-022",
+        "P1-EC-023",
+        "P1-EC-024",
+        "P1-EC-025",
+        "P1-EC-040",
+        "P1-EC-052",
+        "P1-EC-066",
+        "P1-ED-010",
+        "P1-ED-014",
+        "P1-ED-025",
+        "P1-ED-035",
+        "P1-ED-036",
+        "P1-ED-051",
+        "P1-ED-064",
+        "P1-ED-071",
+        "P1-ED-074",
+        "P1-ED-075"
+      ]
+    },
+    {
+      "principle": "P12",
+      "description": "Deploys through policies and procedures",
+      "seedCount": 20,
+      "seeds": [
+        "P1-EC-004",
+        "P1-EC-020",
+        "P1-EC-021",
+        "P1-EC-022",
+        "P1-EC-023",
+        "P1-EC-024",
+        "P1-EC-025",
+        "P1-EC-040",
+        "P1-EC-052",
+        "P1-EC-066",
+        "P1-ED-010",
+        "P1-ED-014",
+        "P1-ED-025",
+        "P1-ED-035",
+        "P1-ED-036",
+        "P1-ED-051",
+        "P1-ED-064",
+        "P1-ED-071",
+        "P1-ED-074",
+        "P1-ED-075"
+      ]
+    },
+    {
+      "principle": "P13",
+      "description": "Uses relevant information",
+      "seedCount": 1,
+      "seeds": [
+        "P1-EC-049"
+      ]
+    },
+    {
+      "principle": "P14",
+      "description": "Communicates internally",
+      "seedCount": 1,
+      "seeds": [
+        "P1-EC-049"
+      ]
+    },
+    {
+      "principle": "P15",
+      "description": "Communicates externally",
+      "seedCount": 1,
+      "seeds": [
+        "P1-EC-049"
+      ]
+    },
+    {
+      "principle": "P16",
+      "description": "Conducts ongoing and/or separate evaluations",
+      "seedCount": 4,
+      "seeds": [
+        "P1-EC-028",
+        "P1-EC-072",
+        "P1-ED-028",
+        "P1-ED-073"
+      ]
+    },
+    {
+      "principle": "P17",
+      "description": "Evaluates and communicates deficiencies",
+      "seedCount": 4,
+      "seeds": [
+        "P1-EC-028",
+        "P1-EC-072",
+        "P1-ED-028",
+        "P1-ED-073"
+      ]
+    }
+  ],
+  "gaps_identified": [
+    {
+      "area": "E.3 Internal Auditing",
+      "severity": "CRITICAL",
+      "description": "Zero seeds across 38 items. Internal audit function, reporting relationships, audit planning, and follow-up are completely unrepresented.",
+      "recommendation": "Add 3-4 seeds covering internal audit charter, reporting independence, audit plan development, and follow-up on audit findings."
+    },
+    {
+      "area": "COSO Principle 2 — Board oversight / independence",
+      "severity": "HIGH",
+      "description": "Zero seeds testing board independence or oversight responsibility. ED-066 tests audit committee role but not from P2 perspective.",
+      "recommendation": "Add 1-2 seeds specifically on board composition, independence requirements, and oversight duties."
+    },
+    {
+      "area": "COSO Principle 3 — Structure, authority, responsibility",
+      "severity": "MEDIUM",
+      "description": "Zero seeds on organizational structure, reporting lines, or delegation of authority.",
+      "recommendation": "Add 1 seed on reporting structure and authority assignment."
+    },
+    {
+      "area": "COSO Principle 4 — Competence",
+      "severity": "MEDIUM",
+      "description": "Zero seeds on commitment to competence, training, or skill assessment.",
+      "recommendation": "Add 1 seed on competence assessment or professional development requirements."
+    },
+    {
+      "area": "COSO Principles 13-15 — Information & Communication",
+      "severity": "HIGH",
+      "description": "Only 1 seed (EC-049 whistleblower) among 38. Principles 13 (relevant info), 14 (internal communication), and 15 (external communication) have near-zero coverage.",
+      "recommendation": "Add 3-4 seeds covering information quality, internal reporting flows, and external stakeholder communication."
+    },
+    {
+      "area": "Application Controls — Processing & Output",
+      "severity": "MEDIUM",
+      "description": "Only input controls covered (EC-024). Processing controls and output controls have zero coverage.",
+      "recommendation": "Add 1-2 seeds on processing controls (e.g., run-to-run totals) and output controls (e.g., report distribution)."
+    },
+    {
+      "area": "COSO ERM — Full Framework",
+      "severity": "MEDIUM",
+      "description": "Only risk appetite (EC-031) and risk response (ED-016) covered. Other ERM components (objective setting, event identification, risk assessment within ERM, risk culture) are absent.",
+      "recommendation": "Add 2-3 seeds covering ERM objective setting, event identification, and risk culture."
+    },
+    {
+      "area": "Fraud Detection (beyond hotline)",
+      "severity": "MEDIUM",
+      "description": "Only fraud triangle theory (EC-014) and whistleblower (EC-049). Proactive fraud detection techniques (data analytics, anomaly detection, surprise audits) are absent.",
+      "recommendation": "Add 1-2 seeds on data-analytics-based fraud detection or management review procedures."
+    }
+  ],
+  "redundancy_findings": [
+    {
+      "microTopic": "Segregation of Duties (various contexts)",
+      "seedCount": 8,
+      "items": [
+        "P1-EC-004",
+        "P1-EC-021",
+        "P1-EC-066",
+        "P1-ED-014",
+        "P1-ED-064",
+        "P1-ED-072",
+        "P1-ED-074",
+        "P1-ED-075"
+      ],
+      "risk": "HIGH — 8 of 38 seeds (21%) test SoD in slightly different contexts. This is the dominant micro-topic. While SoD is a Core E concept, the concentration leaves other areas thin.",
+      "is5ItemGroupArtifact": false
+    },
+    {
+      "microTopic": "IT General Controls — access",
+      "seedCount": 5,
+      "items": [
+        "P1-EC-023",
+        "P1-EC-040",
+        "P1-ED-010",
+        "P1-ED-051",
+        "P1-ED-071"
+      ],
+      "risk": "MODERATE — 5 seeds on IT access/change controls. EC-040 and ED-010 both test least privilege. ED-036 and ED-071 both test change management.",
+      "is5ItemGroupArtifact": true
+    },
+    {
+      "microTopic": "Monitoring and detective controls",
+      "seedCount": 4,
+      "items": [
+        "P1-EC-028",
+        "P1-EC-072",
+        "P1-ED-028",
+        "P1-ED-073"
+      ],
+      "risk": "MODERATE — 4 seeds on monitoring/evaluation. EC-072 and ED-073 overlap (remediation vs. unreviewed reports).",
+      "is5ItemGroupArtifact": false
+    }
+  ],
+  "coverage_balance_score": {
+    "totalLOSAreas": 13,
+    "areasCovered": 12,
+    "areasWithZeroSeeds": 1,
+    "coveragePercentage": "92.3%",
+    "note": "Coverage looks good at the LOS-area level, but drill-down reveals significant thinness within areas"
+  },
+  "veredict": "Domain E has broad topic coverage across the 38 seeds but suffers from (1) SoD over-concentration (21% of seeds), (2) COSO Control Environment thinness (only P1 covered, P2-P5 absent), (3) Information & Communication near-absence (1 seed), (4) complete Internal Auditing gap, (5) ERM only partially covered. The 5-item rotation group artifact is visible in IT General Controls where Pack C and Pack D seeds mirror the same micro-topics. Recommended action: supplement with 10-15 additional seeds targeting gaps before certification."
+}

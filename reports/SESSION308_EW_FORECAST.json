@@ -1,0 +1,80 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "modelVersion": "S308-EW-1.0",
+  "currentState": {
+    "totalMissingEWSlots": 2403,
+    "caseEWFillPct": 3.9,
+    "mcqEWFillPct": 89.4,
+    "itemsWithLowEW": 539,
+    "ewDebtByDomain": {
+      "E": {
+        "items": 141,
+        "p0Overlap": 29,
+        "note": "Certification wave addresses most — EW built into cert pipeline"
+      },
+      "F": {
+        "items": 130,
+        "p0Overlap": 8,
+        "note": "Certification wave addresses most"
+      },
+      "A": {
+        "items": 58,
+        "p0Overlap": 3,
+        "note": "Mostly certified — EW-only work"
+      },
+      "B": {
+        "items": 68,
+        "p0Overlap": 0,
+        "note": "Certified — EW-only work"
+      },
+      "C": {
+        "items": 70,
+        "p0Overlap": 4,
+        "note": "98.3% certified — EW-only work"
+      },
+      "D": {
+        "items": 72,
+        "p0Overlap": 2,
+        "note": "98.7% certified — EW-only work"
+      }
+    }
+  },
+  "phasedRoadmap": [
+    {
+      "phase": "EW-1",
+      "name": "Case-Bank EW Authoring (Certified Cases)",
+      "items": 310,
+      "sessions": 8,
+      "itemsPerSession": "~39",
+      "description": "Author EW for certified case items (A1-F2). Current fill 3.9% → target 80%. Highest learner impact: case practice currently has zero wrong-answer feedback.",
+      "startSession": "S814",
+      "endSession": "S821",
+      "roi": "HIGH — transforms case practice from zero feedback to full distractor coaching"
+    },
+    {
+      "phase": "EW-2",
+      "name": "MCQ EW Gap Closure (P0/P1 Certified)",
+      "items": 120,
+      "sessions": 3,
+      "itemsPerSession": "~40",
+      "description": "Author missing EW slots for the highest-priority certified MCQ items (by UIQS). Focus on items learners encounter in active practice.",
+      "startSession": "S822",
+      "endSession": "S824",
+      "roi": "HIGH — targeted highest-impact items first"
+    },
+    {
+      "phase": "EW-3",
+      "name": "MCQ EW Gap Closure (Remaining)",
+      "items": 109,
+      "sessions": 3,
+      "itemsPerSession": "~36",
+      "description": "Complete EW coverage for remaining sub-30% items.",
+      "startSession": "S825",
+      "endSession": "S827",
+      "roi": "MEDIUM — lower-priority items, diminishing returns"
+    }
+  ],
+  "totalSessions": 14,
+  "projectedEWFillAfter": "88% (up from current ~60% portfolio-wide)",
+  "projectedCaseEWFillAfter": "80% (up from 3.9%)"
+}

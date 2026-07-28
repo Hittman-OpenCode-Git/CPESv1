@@ -1,0 +1,133 @@
+{
+  "session": "S114",
+  "timestamp": "2026-07-25",
+  "real_learner_data": {
+    "exists": false,
+    "source": "No real learner has ever used the system. All calibration, readiness, and pilot analyses across S106-S113 use synthetic learner profiles generated in scripts (analyze_calibration_S110.js, run_calibration_sample_S108.js, test_calibration.js). The may-learner-state.js STORAGE_KEY ('cmaMayLearnerState') persists learner data to browser localStorage but no browser session with a real learner has been recorded. The project is a development-stage exam simulator with 2,031 certified MCQ items and 400 certified case items but no production deployment or user-facing launch.",
+    "count": 0
+  },
+  "pilot_usage_logs": {
+    "exists": false,
+    "location": "In-memory only: May.context._pilotUsageLog[] in may-core.js (L3040-3056). Capped at 200 entries. Populated by _logPilotUsage() which is called from _guardedSpeak() (L3104). NOT persisted to localStorage. No export files exist.",
+    "entries": 0
+  },
+  "safety_logs": {
+    "exists": false,
+    "location": "In-memory only: May.context._safetyLog[] in may-core.js (L3099-3101). Capped at 50 entries. Populated programmatically by _guardedSpeak() during runtime tutoring calls. Accessible via _getSafetyLog() (L3152-3154). Cleared by _clearSafetyLogs() (L3162-3164). NOT persisted to localStorage.",
+    "entries": 0
+  },
+  "gate_logs": {
+    "exists": false,
+    "location": "In-memory only: May.context._gateLog[] in may-core.js (L3134-3136). Capped at 50 entries. Populated programmatically by _guardedRecommend() during runtime recommendation gate checks. Accessible via _getGateLog() (L3157-3159). Cleared by _clearSafetyLogs() (L3164). NOT persisted to localStorage.",
+    "entries": 0
+  },
+  "calibration_sessions": {
+    "accumulated": 0,
+    "is_synthetic": true,
+    "detail": "may-learner-state.js _liveCalibrationEnabled defaults to false (L984). _liveCalibrationSessions is an empty array (L987). The only calibration data generated has been through synthetic scripts (analyze_calibration_S110.js with 5 profiles/29 topics, run_calibration_sample_S108.js with 4 profiles, test_calibration.js with test scenarios). No real learner has triggered a calibration snapshot via recordAttempt(). The S110 analysis explicitly states: 'Live calibration infrastructure... exists but has not yet collected real learner data — this analysis uses synthetic data to establish the planning framework.'"
+  },
+  "localStorage_keys_inventory": {
+    "cmaMayLearnerState": {"purpose": "Learner profile, sessions, topic performance, recommendation log", "source": "may-learner-state.js L6"},
+    "cmaP1SessionState": {"purpose": "Active exam session persistence", "source": "app.js L701"},
+    "cmaP1SessionCheckpoints": {"purpose": "Exam session checkpoints", "source": "app.js L702"},
+    "cmaP1SessionJournal": {"purpose": "Session event journal", "source": "app.js L703"},
+    "cmaP1History2026": {"purpose": "Question history (100 cap)", "source": "app.js L704"},
+    "cmaP1SeenQuestions2026": {"purpose": "Seen question tracking", "source": "app.js L705"},
+    "cmaP1Dashboard": {"purpose": "Learner dashboard data", "source": "app.js L706"},
+    "cma-theme": {"purpose": "UI theme preference", "source": "app.js L7"},
+    "cmaDefectManifest_DL008_DL026": {"purpose": "Cached defect manifest for gate checks", "source": "may-core.js L1362"}
+  },
+  "monitoring_gaps": [
+    "NO persistence of pilot usage logs to localStorage or any durable store — _pilotUsageLog is in-memory only and lost on page unload",
+    "NO persistence of safety logs or gate logs to localStorage — both are in-memory only, capped at 50 entries",
+    "NO export mechanism for pilot/safety/gate logs — _getPilotUsageLog(), _getSafetyLog(), _getGateLog() exist but have no corresponding export/download facility",
+    "NO external telemetry endpoint — no fetch/post to an analytics server or monitoring backend",
+    "NO admin dashboard or monitoring panel for observing pilot outcomes in real time",
+    "NO error/exception telemetry — JavaScript console errors and unhandled rejections are not captured or reported",
+    "NO performance monitoring hooks — page load time, rendering time, API call latency are not measured",
+    "NO session recording or replay capability for debugging real-user issues",
+    "NO A/B testing or feature-flag infrastructure beyond the single isPilotEnvironment() boolean",
+    "NO real-user data for any threshold validation — all 12 readiness thresholds (now 11 after S111 stabilityHigh 80→75) calibrated against synthetic profiles only",
+    "NO browser localStorage export files exist in the repository — no dumps of any real or test browser sessions",
+    "NO CRM or user-identity integration — learnerId is auto-generated from Date.now() and tied only to a single browser's localStorage",
+    "liveCalibration throttling (5 min / 20 attempts) may be too coarse for detecting rapid degradation during intensive study sessions",
+    "_pilotUsageLog cap of 200 and safety/gate log cap of 50 are adequate for short pilot sessions but insufficient for multi-day or multi-learner analysis without export",
+    "No mechanism to correlate pilot usage data across learners (all data is single-browser, single-user by design)"
+  ],
+  "telemetry_readiness": "PARTIAL",
+  "telemetry_assessment": {
+    "what_exists": [
+      "Pilot usage logging (_logPilotUsage, _getPilotUsageLog) — in-memory, structured, per-call logging of behavior/section/topic/QID/safety/gate outcomes",
+      "Safety logging (_guardedSpeak → _safetyLog) — in-memory, per-call safety validation with violations",
+      "Gate logging (_guardedRecommend → _gateLog) — in-memory, per-recommendation defect/cert gate results",
+      "Calibration snapshotting (_commitCalibrationSnapshot → _liveCalibrationSessions) — throttled, in-memory readiness snapshots",
+      "Calibration metrics (logReadinessMetrics → _calibrationMetrics) — in-memory, full band/distribution/boundary data",
+      "Calibration export (exportCalibrationData) — aggregates all learner data into a single exportable object",
+      "Recommendation logging (logRecommendation) — persisted to localStorage cmaMayLearnerState.recommendationLog, capped 200",
+      "Session persistence (SessionPersistence in app.js) — saves/loads exam sessions with checkpoints and journal",
+      "isPilotEnvironment() — dual-source gating (config flag + CMA_MAY_PILOT env var) for controlled rollout"
+    ],
+    "what_is_missing": [
+      "Persistent storage for pilot usage, safety, and gate logs",
+      "Export/download mechanism for logs",
+      "External telemetry/analytics endpoint",
+      "Admin dashboard for pilot monitoring",
+      "Error/exception capture and reporting",
+      "Performance monitoring",
+      "A/B testing infrastructure",
+      "Cross-learner data aggregation capability",
+      "Real-user validation of any thresholds"
+    ],
+    "verdict": "The monitoring infrastructure has good in-memory collection hooks but zero persistence and zero external reporting. Adequate for a single-session pilot with manual inspection via browser console, but inadequate for a gated expansion involving multiple learners over multiple sessions without adding at minimum: (a) localStorage persistence for logs, (b) an export/download button, and (c) periodic calibration export capability."
+  },
+  "evidence_limitations": [
+    "Cannot verify that safety filters work correctly with real learner questions (all testing uses synthetic QuestionID clones of pack_a items)",
+    "Cannot verify that readiness bands match real CMA exam outcomes (no real exam results to correlate against)",
+    "Cannot verify that stabilityHigh 80→75 adjustment (S111) improves Ready classification for real learners — synthetic borderline profile showed 16 near-boundary topics, but real learner stability distributions are unknown",
+    "Cannot verify that tutoring safety filters avoid false positives with real learner language patterns (synthetic scenarios use crafted violation text like 'The correct answer is B')",
+    "Cannot verify that calibration throttling (5min/20attempts) captures meaningful change points in real study sessions",
+    "Cannot verify that recommendation gates (defect + certified) behave correctly when the full 117-entry defect manifest and 2,031 certified items are in play simultaneously",
+    "Cannot verify localStorage quota behavior with real multi-session data accumulation (current caps prevent overflow but may truncate useful data)",
+    "Cannot verify that isPilotEnvironment() dual-gating works correctly in all browser environments (env var check relies on Node.js process.env which is undefined in browser; the try/catch handles this but has never been tested in production)",
+    "Cannot verify that the tutoring pilot's dead-man switch (tutoringPilotEnabled=false by default) prevents all pilot behavior in a real deployment — only unit-tested, never integration-tested with actual browser load",
+    "Cannot assess real learner engagement, drop-off, or satisfaction with tutoring features — no analytics, no feedback collection, no NPS/survey mechanism"
+  ],
+  "recommendation": "PILOT_ONLY",
+  "recommendation_rationale": "The project has zero real learner data. All calibration, safety, and readiness validation is synthetic. The monitoring infrastructure is in-memory only with no persistence or external reporting. Before any gated expansion, the project needs: (1) at least one real pilot session with CMA_MAY_PILOT=1 to validate runtime behavior in a real browser; (2) localStorage persistence added for pilot usage, safety, and gate logs; (3) an export mechanism for calibration data and logs; (4) confirmation that thresholds calibrated on synthetic data produce reasonable classifications for real learners. The dual-gating (isPilotEnvironment returning false by default) is well-designed for safe piloting — a single user can be enabled without affecting others. Default-on would be irresponsible without any real-user validation.",
+  "files_audited": {
+    "may-core.js": "Inspected _logPilotUsage, _getPilotUsageLog, _clearPilotUsageLog (L3040-3067); _guardedSpeak, _safetyLog (L3082-3118); _guardedRecommend, _gateLog (L3121-3149); _getSafetyLog, _getGateLog, _clearSafetyLogs (L3151-3165); isPilotEnvironment (L19-25); tutoringPilotEnabled config (L13); init() with _initSafetyVocab (L53-55)",
+    "may-learner-state.js": "Inspected STORAGE_KEY (L6); load/save (L49-75); _liveCalibrationEnabled default false (L984); _liveCalibrationSessions empty array (L987); _commitCalibrationSnapshot throttling (L1139-1156); enableLiveCalibration/disableLiveCalibration/getLiveCalibrationData/clearLiveCalibration (L1159-1195); logReadinessMetrics (L1001-1044); _calibrationMetrics (L997); exportCalibrationData (L1130 area)",
+    "app.js": "Inspected all localStorage keys (SAVE_KEY/CHECKPOINT_KEY/JOURNAL_KEY/HISTORY_KEY/SEEN_KEY/DASHBOARD_KEY at L701-706); SessionPersistence save/load/clear; cma-theme storage (L7, L17)",
+    "scripts/analyze_tutoring_pilot_S110.js": "Read in full — confirms synthetic-only usage simulation with 9 scenarios across 5 behaviors; no real data input",
+    "scripts/analyze_calibration_S110.js": "Read in full — confirms synthetic-only calibration with 5 profiles across 29 topics; explicitly states no real learner data collected",
+    "scripts/test_calibration.js": "Read in full — S109-01 through S109-07 test live calibration infrastructure with synthetic seeds; all tests use seedTopic() helpers, not real data",
+    "scripts/run_calibration_sample_S108.js": "Read in full — 4 synthetic profiles (strong, borderline, weak, spiky); no real data",
+    "reports/session_status/": "Scanned all 73 files for 'real learner', 'pilot usage', 'production data', 'browser session', 'localStorage export' — consistent confirmation that no real data exists (see SESSION105, SESSION109, SESSION110, SESSION111, SESSION112, SESSION113 reports)"
+  },
+  "data_source_matrix": {
+    "real_learner_sessions": {"exists": false, "count": 0, "evidence": "No browser localStorage dumps, no export files, no session recordings in repository"},
+    "synthetic_calibration_profiles": {"exists": true, "count": 5, "source": "scripts/analyze_calibration_S110.js (Strong, Borderline, Weak, Spiky, High-Attempt Borderline) + scripts/run_calibration_sample_S108.js (4 profiles). All use seedTopic() and seedCasePatterns() helpers to inject fabricated attempt data."},
+    "synthetic_pilot_scenarios": {"exists": true, "count": 9, "source": "scripts/analyze_tutoring_pilot_S110.js — 5 behaviors (explain, hint, wrong-choices, simplify, progress) with safe/unsafe variants plus gate check simulation for similar/next/recovery"},
+    "unit_test_data": {"exists": true, "count": "106 tests across 3 suites", "source": "test_readiness.js (37), test_calibration.js (18), test_tutoring_safety.js (51) — all use synthetic seed data"},
+    "production_data": {"exists": false, "count": 0, "evidence": "No deployment, no user-facing URL, no analytics backend, no CRM integration"}
+  },
+  "threshold_validation_status": {
+    "modelVersion": "S111-1.0",
+    "thresholds": {
+      "accuracyHigh": {"value": 80, "validated_with_real_data": false},
+      "accuracyGood": {"value": 75, "validated_with_real_data": false},
+      "accuracyLow": {"value": 60, "validated_with_real_data": false},
+      "stabilityHigh": {"value": 75, "validated_with_real_data": false, "note": "Adjusted from 80→75 in S111 based on synthetic boundary proximity analysis (16 near-boundary topics across 5 profiles). Most impactful threshold — real validation is highest priority."},
+      "stabilityGood": {"value": 60, "validated_with_real_data": false},
+      "stabilityLow": {"value": 50, "validated_with_real_data": false},
+      "recentPctHigh": {"value": 80, "validated_with_real_data": false},
+      "recentPctGood": {"value": 70, "validated_with_real_data": false},
+      "minAttemptsReady": {"value": 6, "validated_with_real_data": false},
+      "minAttemptsApproaching": {"value": 4, "validated_with_real_data": false},
+      "minAttemptsTopic": {"value": 3, "validated_with_real_data": false},
+      "caseBurdenDegradeMisses": {"value": 4, "validated_with_real_data": false}
+    },
+    "all_synthetic": true,
+    "real_validation_required": "All 12 thresholds. Priority: stabilityHigh (75), minAttemptsReady (6), accuracyGood (75) — identified as highest boundary proximity in synthetic analysis."
+  }
+}

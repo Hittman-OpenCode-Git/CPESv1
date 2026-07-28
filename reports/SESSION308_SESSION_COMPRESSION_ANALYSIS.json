@@ -1,0 +1,73 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "baseEstimate": 41,
+  "optimizedEstimate": 30,
+  "compressionLevers": [
+    {
+      "lever": "Parallel execution (disjoint file scopes)",
+      "sessionsSaved": 11,
+      "detail": "500-series + EW run alongside 800-series certification"
+    },
+    {
+      "lever": "EW built into certification waves",
+      "sessionsSaved": 4,
+      "detail": "Domain E/F cert inherently includes EW — no separate EW sessions needed for those items"
+    },
+    {
+      "lever": "Merged governance into wave closeouts",
+      "sessionsSaved": 2,
+      "detail": "Attestation and REVISION_HISTORY entries written as part of each wave, not standalone"
+    },
+    {
+      "lever": "Batch processing velocity",
+      "sessionsSaved": 1,
+      "detail": "~45 items/session for EW authoring, ~20 items/session for certification"
+    }
+  ],
+  "compressionMap": [
+    {
+      "activity": "S308-S310 (300-series closure)",
+      "was": 3,
+      "compressed": 3,
+      "note": "Cannot compress — sequential dependency"
+    },
+    {
+      "activity": "DL-008 Remediation",
+      "was": 3,
+      "compressed": 3,
+      "note": "Cannot compress — quality-critical QA per item"
+    },
+    {
+      "activity": "800-series Wave 2 (structural)",
+      "was": 5,
+      "compressed": 5,
+      "note": "Moderate compression possible if combined with 500-series"
+    },
+    {
+      "activity": "Domain E/F Certification",
+      "was": 15,
+      "compressed": 8,
+      "note": "BIGGEST SAVING — parallel, batch velocity, EW built-in"
+    },
+    {
+      "activity": "Case-bank EW + MCQ EW",
+      "was": 14,
+      "compressed": 10,
+      "note": "Parallel with cert waves, batch velocity"
+    },
+    {
+      "activity": "Pack A closeout + modernization",
+      "was": 6,
+      "compressed": 4,
+      "note": "Combined sessions"
+    },
+    {
+      "activity": "Governance + 700-series closure",
+      "was": 5,
+      "compressed": 3,
+      "note": "Merged governance into wave closeouts"
+    }
+  ],
+  "totalCompressed": 30,
+  "compressionPct": "26.8% reduction from base 41-session estimate"
+}

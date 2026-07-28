@@ -1,0 +1,115 @@
+{
+  "session": "S809",
+  "agent": "AA",
+  "gate": "Gate 0 — Seed Duplicate Prevention Verification",
+  "date": "2026-07-26",
+  "seeds_verified": 38,
+  "methodology": {
+    "cross_pack_scan": "Select-String across pack_a/b/c/d/e_corrected.js + scored_cases1-5.js for each seed QID",
+    "registry_scan": "QUESTION_REGISTRY_INDEX.md + QUESTION_SIMILARITY_LEDGER.json + DUPLICATE_PREVENTION_REPORT.json",
+    "state_check": "question_state extracted from pack file for each seed QID",
+    "replacement_check": "P1-E-R01 through R10 verified in pack_e for dual-presence conflict"
+  },
+  "qid_collisions": [],
+  "qid_presence": {
+    "pack_c_seeds": [
+      "P1-EC-004", "P1-EC-008", "P1-EC-014", "P1-EC-020",
+      "P1-EC-021", "P1-EC-022", "P1-EC-023", "P1-EC-024",
+      "P1-EC-025", "P1-EC-028", "P1-EC-031", "P1-EC-040",
+      "P1-EC-041", "P1-EC-049", "P1-EC-052", "P1-EC-060",
+      "P1-EC-061", "P1-EC-066", "P1-EC-072"
+    ],
+    "pack_d_seeds": [
+      "P1-ED-001", "P1-ED-010", "P1-ED-014", "P1-ED-016",
+      "P1-ED-025", "P1-ED-028", "P1-ED-035", "P1-ED-036",
+      "P1-ED-042", "P1-ED-046", "P1-ED-051", "P1-ED-058",
+      "P1-ED-064", "P1-ED-066", "P1-ED-071", "P1-ED-072",
+      "P1-ED-073", "P1-ED-074", "P1-ED-075"
+    ],
+    "cross_pack_duplicates": 0,
+    "missing_in_source": 0,
+    "total_occurrences": 38
+  },
+  "collisions": [
+    {
+      "type": "DUAL_PRESENCE_REPLACEMENT_CONFLICT",
+      "severity": "HIGH",
+      "description": "10 seed QIDs are listed as ReplacedQIDs in the QUESTION_SIMILARITY_LEDGER.json under completed REPLACEMENT entries (R01-R10). The replacement items P1-E-R01 through P1-E-R10 are Certified and active in pack_e_corrected.js. These seeds coexist with their replacements in the delivery pool.",
+      "affected_seeds": [
+        { "seed": "P1-EC-004", "replacement": "P1-E-R01", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "segregation of duties design" },
+        { "seed": "P1-EC-008", "replacement": "P1-E-R02", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "COSO internal control framework" },
+        { "seed": "P1-EC-014", "replacement": "P1-E-R03", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "fraud triangle elements" },
+        { "seed": "P1-EC-020", "replacement": "P1-E-R04", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "physical controls over assets" },
+        { "seed": "P1-EC-028", "replacement": "P1-E-R05", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "bank reconciliation control" },
+        { "seed": "P1-EC-041", "replacement": "P1-E-R06", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "management override risk" },
+        { "seed": "P1-EC-049", "replacement": "P1-E-R07", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "whistleblower hotline purpose" },
+        { "seed": "P1-EC-052", "replacement": "P1-E-R10", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "compensating control small business" },
+        { "seed": "P1-EC-060", "replacement": "P1-E-R08", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "control environment tone at top" },
+        { "seed": "P1-ED-001", "replacement": "P1-E-R09", "replacement_state": "Certified", "replacement_file": "pack_e_corrected.js", "topic": "three lines of defense model" }
+      ]
+    },
+    {
+      "type": "PENDING_REPLACEMENT_RISK",
+      "severity": "MEDIUM",
+      "description": "P1-EC-040 is referenced in the PENDING replacement entry R14 (QUESTION_SIMILARITY_LEDGER.json). R14 notes state 'Replaces clone group P1-EC-036 through P1-EC-040'. If R14 is completed, P1-EC-040 would have dual-presence with a replacement item.",
+      "affected_seeds": [
+        { "seed": "P1-EC-040", "replacement": "P1-E-R14", "replacement_state": "REPLACEMENT_PENDING", "topic": "IT general controls" }
+      ]
+    },
+    {
+      "type": "DUPLICATE_PREVENTION_REPORT_GAP",
+      "severity": "LOW",
+      "description": "DUPLICATE_PREVENTION_REPORT.json (S314) tracks only replacement QIDs (P1-E-R01 through P1-E-R32). None of the 38 seed QIDs appear. The report should include seed QID tracking to prevent future clone regeneration during subsequent authoring sessions.",
+      "affected_seeds": "ALL 38 seeds",
+      "gap_detail": "Seeds are not registered in the duplicate prevention report, creating a risk that future batch authoring could regenerate clones from the same groups."
+    }
+  ],
+  "clone_regeneration_risk": [
+    {
+      "type": "CLONE_GROUP_RESIDUAL",
+      "severity": "MEDIUM",
+      "description": "Total P1-EC-* items in pack_c: 75. Total P1-ED-* items in pack_d: 75. With 38 seeds selected, 112 items across 28 clone groups will need archival. The clone regeneration risk is MEDIUM — 4 non-seed clones per group remain in the source files and could be inadvertently re-activated if archival is not enforced.",
+      "pack_c_domain_e_total": 150,
+      "seeds_selected": 38,
+      "remaining_to_archive": 112,
+      "clone_groups": 28
+    }
+  ],
+  "registry_conflicts": [
+    {
+      "type": "SIMILARITY_LEDGER_STALE",
+      "severity": "HIGH",
+      "description": "QUESTION_SIMILARITY_LEDGER.json lists 10 seeds as ReplacedQIDs in completed REPLACEMENT entries. If the S809 workflow treats these as active seeds, the similarity ledger entries need updating or the seeds need to be removed from the seed list.",
+      "resolution_option_A": "Update similarity ledger — change 10 entries from REPLACEMENT to REPLACED_BY_SEED, removing the seed QIDs from ReplacedQIDs arrays and noting the surviving seed.",
+      "resolution_option_B": "Remove 10 seeds from seed list — use P1-E-R01 through R10 as the replacements instead of the seeds. This would reduce seeds from 38 to 28 for these 10 clone groups.",
+      "resolution_option_C": "Dual-retain both seed AND replacement — requires similarity ledger update to mark seeds as SURVIVING_SEED and replacements as ADDITIONAL_COVERAGE rather than REPLACEMENT."
+    }
+  ],
+  "verdict": "PASS_WITH_NOTES",
+  "verdict_rationale": [
+    "PASS: All 38 seeds verified exactly 1 occurrence each across all 10 pack/case files — zero QID collisions",
+    "PASS: All 38 seeds registered in QUESTION_REGISTRY_INDEX.md with correct pack locations",
+    "PASS: All 38 seeds are question_state 'Unprocessed' — no premature certification",
+    "PASS: Governance guard plugin loads OK — Rule 2 (DL-008 BLOCK) and Rule 5 (30-item batch cap) active",
+    "NOTE: 10 seeds have dual-presence with Certified P1-E-Rxx replacements in pack_e — requires SIMILARITY_LEDGER resolution before Gate 1",
+    "NOTE: 1 seed (P1-EC-040) has pending replacement (R14) — future collision risk",
+    "NOTE: DUPLICATE_PREVENTION_REPORT.json lacks seed tracking — documentation gap",
+    "NOTE: 112 non-seed clones remaining in source files — archivable but not yet archived"
+  ],
+  "governance_guard_status": "ACTIVE — Rule 2 (DL-008 BLOCK) + Rule 5 (30-item batch cap) + Rule 3 (no hand-edit registry). All 5 rules loaded.",
+  "next_actions": [
+    "Resolve 10 dual-presence conflicts: either update SIMILARITY_LEDGER entries or use R01-R10 as replacements instead of seeds",
+    "Add 38 seed QIDs to DUPLICATE_PREVENTION_REPORT.json for future clone-regeneration prevention",
+    "Mark P1-EC-040 as AT_RISK in seed list until R14 resolution",
+    "Proceed to Gate 1 only after dual-presence conflicts are resolved"
+  ],
+  "verification_methods": {
+    "pack_scan": "Select-String across 10 files (5 pack + 5 scored_cases) — 38 matches, all single-occurrence",
+    "registry_index": "QUESTION_REGISTRY_INDEX.md — 38/38 seeds found, correct locations",
+    "similarity_ledger": "QUESTION_SIMILARITY_LEDGER.json — 11/38 seeds referenced, 10 in completed REPLACEMENT entries",
+    "duplicate_prevention": "DUPLICATE_PREVENTION_REPORT.json — 0/38 seeds tracked (gap)",
+    "replacement_scan": "P1-E-R01 through R10 verified in pack_e_corrected.js — all Certified",
+    "question_state": "All 38 seeds = 'Unprocessed' — confirmed via direct file grep",
+    "governance_guard": "governance-guard.js — 5 rules loaded, no errors"
+  }
+}

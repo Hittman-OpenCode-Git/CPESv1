@@ -1,0 +1,252 @@
+[
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.005 three lines of defense dual reporting",
+    "MicroTopic": "Three Lines model dual reporting",
+    "UniqueConceptKey": "E-D005-three-lines-model-dual-reporting",
+    "LOSTag": "E Internal controls",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Shoreline Regional Bank employs the Three Lines model for risk governance. Patricia Okonkwo, the compliance officer for the bank's consumer lending division, reports administratively to David Crane, the regional operations head (first line), and functionally to Margaret Sullivan, the group chief risk officer (second line). Internal audit's annual review found that 14 operational risk incidents — including unauthorized fee waivers and circumvention of credit approval limits — went unreported to the CRO over a nine-month period. The audit report noted that Crane had discouraged Okonkwo from escalating these incidents, characterizing them as 'within acceptable operational discretion.' Okonkwo did not escalate independently. Under the Three Lines model, which line of defense failed, and what structural reporting weakness enabled the failure?",
+    "Choices": {
+      "A": "The first line of defense (operations management) failed — David Crane bore primary responsibility for self-identifying and reporting operational risk incidents to the CRO. The structural weakness was the absence of an anonymous whistleblower reporting mechanism for employees who observe risk suppression by their managers.",
+      "B": "The second line of defense (risk management and compliance) failed — Patricia Okonkwo's administrative reporting relationship to David Crane, a first-line manager whose activities she was responsible for monitoring, compromised her functional independence. The structural weakness is dual reporting where the second line reports administratively to the business unit it oversees, creating a conflict between operational loyalty and independent risk escalation.",
+      "C": "The third line of defense (internal audit) failed — internal audit should have detected the unreported incidents through its own risk-based audit procedures sooner than nine months. The structural weakness was inadequate audit coverage of the compliance function's escalation reporting channels and reliance on self-reported data from the first and second lines.",
+      "D": "Both the first and second lines of defense failed concurrently — Crane should not have suppressed incidents and Okonkwo should have escalated independently regardless of management pressure. The structural weakness was the bank's failure to mandate periodic joint certifications from both the administrative and functional reporting lines confirming that all material risk incidents had been escalated."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under the Three Lines model, the second line of defense — comprising risk management, compliance, and related oversight functions — is responsible for monitoring risk, providing guidance, and independently escalating issues to senior management and the board. The second line must maintain functional independence from the first line (operational management), whose activities it oversees. When the compliance officer (second line) reports administratively to the operations head (first line), the administrative reporting relationship introduces a conflict: the operations head controls the compliance officer's performance evaluation, compensation, and career progression, creating pressure to avoid escalating incidents that reflect poorly on operations. In this scenario, the operations head's discouragement of escalation succeeded because the compliance officer's dual reporting structure placed her administrative loyalty in tension with her functional duty to the CRO. The second line failed in its core duty — independent risk monitoring and escalation — because the administrative reporting line compromised its independence. The correct structural remedy is not a whistleblower hotline (which addresses first-line or employee reporting) but rather restructuring the administrative reporting so that the compliance officer reports to an independent second-line executive, not to the operational manager whose activities are being monitored.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "COSO Internal Control Framework",
+        "url": "https://www.coso.org/guidance-on-ic"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-ED-005",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "The first line (operations management) owns and manages risk, but the scenario centers on the compliance officer's failure to independently escalate — a quintessential second-line breakdown. The operations head's discouragement of reporting is a first-line behavioral failure, but the compliance function's core duty is to provide independent oversight of precisely that behavior. An anonymous whistleblower hotline addresses employee-level reporting but does not resolve the structural defect: the compliance officer's administrative reporting line runs to the very manager whose activities she monitors, creating an inherent conflict that no hotline can cure.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Internal audit (the third line) provides independent assurance, not continuous real-time monitoring of risk escalations. The fact that internal audit identified the 14 unreported incidents demonstrates that the third line functioned as designed — it detected the control failure. The third line is not expected to discover suppressed escalations in real time; that is the second line's continuous monitoring responsibility. The structural weakness is not audit coverage but rather the second line's compromised independence due to its administrative subordination to the business unit it oversees.",
+    "ExplanationWrongD": "This answer divides accountability between the first and second lines but misses the structural root cause. Crane's discouragement of escalation is a symptom, not the defect. The structural condition that enabled 14 incidents to go unreported over nine months is the compliance officer's dual reporting relationship: administrative reporting to a first-line manager creates an inherent conflict between operational loyalty and the independent risk oversight duty. Joint certifications would not resolve this conflict — the same manager who suppressed reports could pressure the compliance officer to sign the certification, replicating the same dynamic in a different document.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.009 coso principle 12 access control erp exceptions",
+    "MicroTopic": "COSO Principle 12 — access control ERP exceptions",
+    "UniqueConceptKey": "E-D009-coso-principle-12-access-control-erp-exceptions",
+    "LOSTag": "E Internal controls",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Kestrel Manufacturing implemented a new ERP system in January. During the go-live period, the IT project team granted temporary elevated system access to 31 users — including accounts payable clerks, inventory analysts, and production schedulers — to resolve transaction errors and complete data migration validations. The controller, Elisa Vance, expected these elevated privileges to be revoked within 60 days of go-live. In July, a routine internal audit revealed that 19 of the 31 users still retained their elevated access, including an accounts payable clerk whose elevated privileges allowed both vendor master file maintenance and invoice payment approval. The clerk had created a fictitious vendor, 'Meridian Industrial Supply,' and approved three invoices totaling $87,400 to that vendor. The controller's review confirmed that no user access recertification had been performed since go-live and that the ERP's role-based access controls did not prevent a single user from both creating a vendor record and approving payments to that vendor. Under COSO Principle 12 (deploys control activities through policies and procedures), which two IT general control failures directly enabled this fraud?",
+    "Choices": {
+      "A": "Failure to perform periodic user access reviews that would have identified and revoked the 19 stale elevated-privilege accounts, and failure to enforce segregation of duties — the AP clerk's retained elevated access permitted the same individual to create a vendor record and approve payment to that vendor, combining incompatible functions that should reside with different individuals.",
+      "B": "Failure to complete a post-implementation review of the ERP project that would have assessed whether access controls were functioning as designed, and failure to maintain an immutable audit log of all privileged-user activity during and after the go-live period.",
+      "C": "Failure to terminate temporary access upon ERP stabilization within the controller's expected 60-day window, and failure to configure the ERP's role-based access controls to prohibit AP clerks from accessing the vendor master file maintenance module.",
+      "D": "Failure to require the controller's written approval for each individual elevated-access grant, and failure to reconcile the approved vendor master file against an authorized vendor listing before releasing any payment to a newly created vendor record."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "COSO Principle 12 requires management to deploy control activities — the policies and procedures that ensure management's directives to mitigate risks are carried out — through IT general controls (ITGCs) and application controls. Two ITGC failures are evident in this scenario. First, the failure to perform periodic user access reviews (access recertification): ITGCs require that user access rights be periodically reviewed and validated against current job responsibilities. The 19 users still holding elevated access six months after go-live, with zero recertification performed, constitutes an access management control failure. Had a quarterly access review been conducted, the stale elevated privileges would have been identified, and the AP clerk's inappropriate access would have been revoked before the fraud occurred. Second, the failure to enforce segregation of duties (SoD) through access controls: ITGCs must enforce SoD rules that prevent a single user from performing incompatible functions. The AP clerk's elevated access permitted both vendor master file creation and invoice payment approval — two duties that must be segregated to prevent an employee from creating a fictitious vendor and then approving payments to it. The ERP's role-based access controls should have been configured to detect and prevent this SoD conflict, but they were not. Together, these two ITGC failures — no access recertification and no SoD enforcement — created the control gap that the AP clerk exploited. The controller's awareness that elevated access should be temporary does not substitute for the ITGCs that should have operationalized that policy.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "COSO Internal Control Framework",
+        "url": "https://www.coso.org/guidance-on-ic"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-ED-009",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "A post-implementation review assesses whether the ERP project met its objectives, timeline, and budget — it is a project-governance activity, not a recurring IT general control. While such a review might note access control deficiencies, it would not have prevented the fraud, which occurred months after go-live due to ongoing failures in access management. Audit logging of privileged user activity is a detective control useful for forensic investigation, but the scenario describes preventive failures: access that should not have existed was neither identified nor removed, and incompatible duties were not segregated. Audit logs cannot prevent a fraud that occurs because access controls were never configured to block it.",
+    "ExplanationWrongC": "This option identifies the correct proximate cause — temporary access was not terminated — but substitutes an operational expectation (the controller's 60-day window) for the systemic ITGC failure. COSO Principle 12 requires formal, recurring access reviews as a control activity, not reliance on an ad hoc expectation that temporary access will be removed. Furthermore, the suggestion that the ERP's role-based access controls should simply block AP clerks from the vendor master module addresses the symptom but not the principle: the core SoD failure is that one individual could both create a vendor and approve its payment, regardless of which specific system module enabled each function.",
+    "ExplanationWrongD": "Requiring the controller's written approval for each elevated-access grant is a manual compensating control that does not address the systemic ITGC gaps. At scale, 31 individual approvals become administrative overhead without ensuring timely revocation. More critically, the suggestion to reconcile the vendor master file to an authorized listing is a detective control that operates after payment — the fraud had already occurred. A stronger control design would prevent a single user from executing both sides of an incompatible transaction in the first place, rather than detecting the result afterward. Both proposals treat symptoms rather than the root ITGC failures.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.023 coso principle 12 authorization fraud",
+    "MicroTopic": "COSO Principle 12 — authorization fraud evaluation",
+    "UniqueConceptKey": "E-D023-coso-principle-12-authorization-fraud",
+    "LOSTag": "E Internal controls",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Ridgeline Construction Company's purchasing policy authorizes the purchasing manager, Marcus Webb, to approve purchase orders up to $50,000 without secondary review. During an external audit, the engagement team identified eight purchase orders — each for exactly $49,500 — issued over an 18-month period to 'Summit Building Materials,' a vendor that Webb had registered six weeks before the first PO was issued. The total disbursed to Summit Building Materials was $340,000. Investigation revealed that Webb controlled Summit Building Materials, the invoices were for fictitious construction materials, and no goods were ever received. Ridgeline's ERP system recorded each PO as a separate transaction and did not flag the pattern of near-threshold purchases from a single initiator. Under COSO Principle 12, which control failed — the preventive threshold design or detective monitoring — and what structural change would most effectively have prevented the $340,000 fraud?",
+    "Choices": {
+      "A": "The segregation of duties control failed — the purchasing manager could both requisition materials and approve the resulting purchase orders, creating an incompatible duties conflict. Structurally separating the requisition function from the PO approval function between two different individuals would have prevented the manager from processing self-initiated purchases to a vendor he controlled.",
+      "B": "The preventive authorization threshold design failed because a $50,000 single-transaction limit is inherently excessive for a purchasing manager at a construction company. Reducing the threshold to $15,000 and requiring dual signatures from the CFO or controller for all purchase orders above that amount would have prevented the fraud by forcing each transaction into secondary review.",
+      "C": "The preventive and detective controls both functioned as designed — the individual POs were below the $50,000 threshold, and the ERP correctly recorded each transaction. The root failure is that management did not eliminate individual approval limits and route all purchases through a centralized procurement committee regardless of dollar amount, the only structural change that prevents threshold-based structuring.",
+      "D": "The detective monitoring control failed — no mechanism aggregated purchase orders by initiator or vendor to identify structuring patterns. A periodic management review summarizing all purchase orders within 10% of any approval threshold, grouped by requestor and by vendor, would have flagged the eight near-identical $49,500 transactions to a single vendor, enabling investigation before the total loss reached $340,000."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under COSO Principle 12, control activities include both preventive controls (designed to deter errors or fraud before they occur) and detective controls (designed to identify errors or fraud after they occur but before losses accumulate). The $50,000 preventive threshold functioned as designed — it prevented any single PO from exceeding the limit. However, preventive thresholds alone are insufficient when an individual can structure transactions to evade them. The detective monitoring control failed because no system-level or management-level process aggregated transactions to detect structuring — a pattern where an individual divides a large fraudulent amount into multiple transactions just below an approval threshold. The structural change recommended is a periodic management review that groups near-threshold transactions by requestor and vendor. This detective control would have revealed that a single purchasing manager issued eight POs of nearly identical dollar amounts (all $49,500, or 99% of the $50,000 threshold) to a single vendor over 18 months — a pattern that cannot be explained by legitimate procurement activity. This review would have triggered investigation long before the cumulative loss reached $340,000. A candidate who blames the threshold amount itself misunderstands that any threshold — whether $15,000 or $50,000 — can be circumvented by structuring unless complementary detective monitoring exists to identify the pattern.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "COSO Internal Control Framework",
+        "url": "https://www.coso.org/guidance-on-ic"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-ED-023",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "Segregation of duties is a fundamental control principle, but it is not the primary failure in this scenario. The purchasing manager's authorization authority was within the scope of his role — the POs were under the $50,000 limit. Separating requisition from approval would not have prevented the fraud if both roles remained subject to the same $50,000 single-transaction threshold without aggregate monitoring: a colluding pair or a manager controlling both roles in a shell-company scheme could still structure transactions just below the limit. The missing control is aggregate-pattern detection, not separation of a single transaction into two sequential steps that the same fraudster could manipulate.",
+    "ExplanationWrongB": "Reducing the threshold from $50,000 to $15,000 shifts the structuring target but does not eliminate the vulnerability — the same manager could issue 23 POs of $14,800 each instead of 8 POs of $49,500 each, and the cumulative fraud would still reach $340,000. The structural weakness is not the dollar amount of the threshold but the absence of a detective control that aggregates and reviews transaction patterns. A lower threshold with dual signatures increases administrative cost and processing time for legitimate transactions without addressing the root cause: no one was looking at the pattern of who was buying what, from whom, at what frequency, and at what proximity to approval limits.",
+    "ExplanationWrongC": "This option correctly identifies that individual thresholds can be circumvented by structuring but prescribes an extreme and operationally impractical remedy. Routing all purchase orders — regardless of dollar amount — through a centralized procurement committee would paralyze a construction company's operations, where hundreds of routine material purchases occur weekly. COSO Principle 12 does not mandate the elimination of all delegation; it requires that control activities be designed to address the assessed risk. A targeted detective monitoring control — aggregate review of near-threshold transactions by initiator — addresses the specific structuring risk without eliminating the efficiency of delegated purchasing authority for routine, legitimate transactions.",
+    "ExplanationWrongD": "",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.033 coso principle 11 rto rpo adequacy",
+    "MicroTopic": "COSO Principle 11 — RTO RPO adequacy",
+    "UniqueConceptKey": "E-D033-coso-principle-11-rto-rpo-adequacy",
+    "LOSTag": "E Internal controls",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Apex Pharmaceutical Distributors maintains a disaster recovery plan for its order management system specifying a recovery time objective (RTO) of 48 hours and a recovery point objective (RPO) of 24 hours. In March, a regional power grid failure caused a 52-hour outage affecting Apex's primary data center. The company could not process any customer orders during the full 52-hour outage period. When systems were restored, Apex discovered that 1.5 days of order data — representing orders received but not yet replicated to the backup site before the power failure — had been lost and required manual reconstruction from paper shipping logs and customer email confirmations. CFO Rebecca Tran has asked the internal audit team to evaluate whether the RTO and RPO targets were adequate and whether they were met. Under COSO Principle 11 (identifies and assesses changes that could significantly impact the system of internal control), which conclusion should the internal audit team reach?",
+    "Choices": {
+      "A": "Only the RTO of 48 hours was exceeded because actual downtime reached 52 hours. The RPO was met because the 1.5 days of data loss includes the acceptable 24-hour window plus only 12 hours of excess data loss, which is within a reasonable operational tolerance for a pharmaceutical distributor whose primary records remain available through alternative manual sources.",
+      "B": "Both the RTO and RPO were exceeded — actual recovery took 52 hours versus the 48-hour RTO, and data loss of 1.5 days exceeded the 24-hour RPO. The RPO requires the more urgent revision because losing 1.5 days of order data creates inventory allocation errors, potential regulatory compliance issues with controlled-substance tracking, and customer service failures that outweigh the additional four hours of system downtime.",
+      "C": "Both the RTO and RPO were exceeded. The RTO requires the most urgent revision because the inability to process any orders for 52 hours represents a complete revenue interruption for a distributor whose business model depends entirely on order fulfillment. The 12-hour excess data loss beyond the 24-hour RPO, while significant for inventory accuracy and regulatory compliance, can be partially mitigated through reconstruction from shipping records, customer purchase orders, and supplier confirmations.",
+      "D": "Neither the RTO nor the RPO was exceeded because a regional power grid failure constitutes a force majeure event outside the scope of standard disaster recovery commitments. The DR plan's stated RTO and RPO apply only to internally caused disruptions — such as server hardware failure or application errors — not to external infrastructure failures beyond the company's control."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under COSO Principle 11, management must identify and assess changes in the external environment, business model, and leadership that could significantly affect the system of internal control — and must update business continuity parameters accordingly. Both the RTO and RPO were objectively exceeded: actual system downtime was 52 hours (versus a 48-hour RTO, a 4-hour or 8.3% gap), and actual data loss was 36 hours or 1.5 days (versus a 24-hour RPO, a 12-hour or 50% gap). While both parameters failed, the RTO merits the more urgent revision because the business impact is categorically more severe. For a pharmaceutical distributor, the order management system is the revenue engine — every order, every shipment, and every customer interaction depends on it. Fifty-two hours of complete order-processing incapacity means two full business days of zero revenue generation, disrupted supply chains for hospital and pharmacy customers, and potential breach of service-level agreements with healthcare providers. By contrast, the 12 hours of excess data loss beyond the 24-hour RPO — while operationally significant — can be partially mitigated: the orders themselves are known to customers who can re-confirm them, to shipping departments that maintain paper logs, and to suppliers who track shipped quantities. The RTO gap means the business stops; the RPO gap means some data must be reconstructed. The RTO revision should address whether the recovery infrastructure (backup data center, redundant power, failover mechanisms) can realistically meet a 48-hour target given the region's power-grid reliability profile.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "COSO Internal Control Framework",
+        "url": "https://www.coso.org/guidance-on-ic"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-ED-033",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This option incorrectly concludes that the RPO was met despite 1.5 days of data loss against a 24-hour objective — a 50% exceedance. RPO is measured in absolute time, not with a tolerance band. The fact that manual reconstruction sources exist does not mean the RPO was met; it means the business found a costly and time-consuming workaround. Additionally, characterizing a 12-hour excess data loss as 'within reasonable operational tolerance' for a pharmaceutical distributor ignores the regulatory implications: controlled-substance distribution records have chain-of-custody requirements that manual reconstruction from paper logs may not satisfy under DEA compliance standards.",
+    "ExplanationWrongB": "This option correctly identifies that both RTO and RPO were exceeded but incorrectly prioritizes the RPO revision. While losing 1.5 days of order data creates inventory accuracy problems and potential regulatory concerns, these are secondary effects. The primary business interruption — the complete cessation of order processing for 52 hours — is binary: the company generated zero revenue from order fulfillment for more than two business days. No amount of data reconstruction can recover the revenue lost during 52 hours of operational paralysis, making the RTO the parameter with the more severe business consequence.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "This option misstates the scope of disaster recovery commitments. COSO Principle 11 requires management to assess the impact of external events — including infrastructure failures — on the system of internal control. A DR plan that excludes external events like regional power grid failures fails to address precisely the type of high-impact, low-probability events that business continuity planning exists to mitigate. Characterizing a power grid failure as force majeure and outside DR scope would render the DR plan irrelevant for the most consequential disruption scenarios the business faces, contradicting the principle's requirement that control activities address risks from changes in the external environment.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.069 coso principle 2 audit committee independence",
+    "MicroTopic": "COSO Principle 2 — audit committee independence",
+    "UniqueConceptKey": "E-D069-coso-principle-2-audit-committee-independence",
+    "LOSTag": "E Internal controls",
+    "Difficulty": "Difficult",
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Meridian Biosciences, a publicly traded life sciences company listed on NASDAQ, has a three-member audit committee: (1) Alan Hirsch, the committee chair, who retired as Meridian's CFO two years ago after serving in that role for 11 years; (2) Cynthia Voss, a current board member who serves as CEO of LabCore Supply, a major supplier to Meridian accounting for approximately 18% of the company's annual procurement expenditures; and (3) Dr. James Okafor, a university dean with no prior employment, consulting, or business relationship with Meridian. During the most recent audit cycle, the external auditor identified a material weakness in internal control over financial reporting related to revenue recognition for multi-element licensing arrangements. Under COSO Principle 2 (the board demonstrates independence from management and exercises oversight of the development and performance of internal control) and applicable SEC rules, does this audit committee composition meet independence requirements, and what is the governance implication for the material weakness disclosure?",
+    "Choices": {
+      "A": "The composition does not meet independence requirements. Alan Hirsch is within the three-year cooling-off period for former employees under SEC Rule 10A-3, and Cynthia Voss has a material business relationship through LabCore Supply, leaving only one of three members — Dr. Okafor — independent. The governance implication is that management must disclose the material weakness in its internal control assessment and note that the audit committee's lack of independence represents a deficiency in the control environment, the foundational component of the COSO Internal Control — Integrated Framework.",
+      "B": "The composition meets independence requirements. The SEC's cooling-off period for former employees serving on the audit committee is two years, not three, so Alan Hirsch is independent. Cynthia Voss's supplier relationship is an operational matter that does not impair her objectivity with respect to financial reporting oversight. The material weakness disclosure is required under Section 404 of the Sarbanes-Oxley Act but the report should state that the audit committee was properly constituted throughout the period under review.",
+      "C": "The composition does not meet independence requirements because a majority of members (two of three) are affiliated with the company or a significant business partner. However, the governance implication extends beyond disclosure: under PCAOB auditing standards, the external auditor cannot rely on the representations and oversight of a non-independent audit committee, creating an unresolvable scope limitation that requires the auditor to withdraw from the engagement or issue a disclaimer of opinion on internal control over financial reporting.",
+      "D": "The composition meets minimum listing requirements because at least one audit committee member (Dr. Okafor) is independent and qualifies as an audit committee financial expert under SEC rules. While fully independent audit committees represent best practice under COSO Principle 2, the material weakness in revenue recognition is an accounting-policy matter unrelated to audit committee composition, and the governance implication is limited to disclosure of the material weakness without reference to the committee's independence status."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under COSO Principle 2, the board of directors must demonstrate independence from management and exercise oversight of internal control — and the audit committee is the board's primary mechanism for financial reporting oversight. SEC Rule 10A-3, adopted under Section 301 of the Sarbanes-Oxley Act, requires that all audit committee members of a listed issuer be independent. The SEC defines independence to include, among other criteria: (a) the member cannot be an affiliated person of the issuer, and (b) the member cannot accept any consulting, advisory, or other compensatory fee from the issuer. Alan Hirsch fails the independence test because he was an employee (CFO) of Meridian, and the SEC's cooling-off period is three years — his two-year separation is insufficient. Cynthia Voss fails because LabCore Supply's 18% revenue relationship with Meridian constitutes a material business relationship that impairs her objectivity. Only Dr. Okafor qualifies as independent. With only one of three members independent, the audit committee fails to meet SEC and COSO Principle 2 independence requirements. The governance implication is significant: the lack of audit committee independence is itself a control environment deficiency — the control environment is the foundation of the COSO framework, setting the tone at the top. When management discloses the revenue-recognition material weakness, it should also note that the audit committee's composition impairs the oversight function, compounding the severity of the control deficiency. This cascading governance failure means the board lacks an independent body to oversee remediation of the material weakness, elevating the overall risk profile.",
+    "StudyLinks": [
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      },
+      {
+        "label": "COSO Internal Control Framework",
+        "url": "https://www.coso.org/guidance-on-ic"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-ED-069",
+    "question_state": "Certified",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "This option contains two factual errors concerning SEC independence requirements. First, the cooling-off period for former employees under SEC Rule 10A-3 is three years, not two years — Alan Hirsch, who retired as CFO only two years ago, remains within the prohibited look-back period and is therefore not independent. Second, Cynthia Voss's role as CEO of a supplier representing 18% of Meridian's procurement is not merely an 'operational matter' — it is a material business relationship that creates a conflict between her fiduciary duty to LabCore Supply's shareholders and her oversight duty to Meridian's shareholders. An audit committee member who runs a major supplier cannot objectively evaluate financial reporting risks that may involve that supplier relationship, such as related-party transaction disclosures or procurement accruals.",
+    "ExplanationWrongC": "While this option correctly identifies that the audit committee composition fails independence requirements, it overstates the PCAOB implication. An external auditor encountering a non-independent audit committee is not required to resign or disclaim an opinion. The auditor must assess whether the lack of audit committee independence creates a scope limitation that prevents the auditor from obtaining sufficient appropriate audit evidence. In practice, the auditor communicates the independence deficiency to the board, documents it in the audit file, and evaluates whether other oversight mechanisms (such as the full board or a designated independent director) can fulfill the audit committee's responsibilities sufficient to allow the auditor to complete the engagement. Mandatory resignation is not the prescribed response.",
+    "ExplanationWrongD": "This option incorrectly asserts that one independent member satisfies listing requirements. Under SEC Rule 10A-3 and NASDAQ listing rules, all audit committee members must be independent — there is no 'one independent member is sufficient' standard. The rule that at least one audit committee member must be an 'audit committee financial expert' is a separate requirement concerning financial literacy, not independence. Additionally, the argument that the material weakness in revenue recognition is 'unrelated' to audit committee composition ignores the COSO control environment principle: an audit committee lacking independence cannot provide effective oversight of management's accounting judgments, including the complex revenue recognition treatment for multi-element licensing arrangements that gave rise to the material weakness.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Evaluate"
+  }
+]

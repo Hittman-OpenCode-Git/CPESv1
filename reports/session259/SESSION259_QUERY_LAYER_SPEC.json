@@ -1,0 +1,121 @@
+{
+  "specId": "SESSION259_QUERY_LAYER_SPEC",
+  "session": "259",
+  "title": "May Admin — Unified Administrative Query Layer Specification",
+  "program": "250-Series — Administrative Operations Platform",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T19:20:00.000Z",
+  "status": "DESIGN — Specification only. Implementation deferred to Phase 1 Build.",
+  "purpose": "Define a single administrative lookup interface that wraps all 6 S252 investigation engines, replacing fragmented access across question_history, challenge_registry, investigation_registry, session_registry, and recommendation_registry with a unified admin query surface.",
+  "authority": "Derived from S252-S258 certified infrastructure. Real field names and data shapes verified against live registries.",
+
+  "queryInterface": {
+    "entryPoint": "Question Investigation API (question_investigation_api.js)",
+    "signature": "node scripts/question_investigation_api.js --qid=<QuestionID>",
+    "output": "9-section dossier written to scripts/output/question_investigation.json",
+    "sectionsReturned": [
+      "1_identity — QID, pack, section, domain, topic, difficulty, cognitive level, state, certification dates",
+      "2_content — Stem, choices (A-D), correct choice, explanation (correct + distractor)",
+      "3_defects — Defect history, active defect flags, blocked-by-defects status",
+      "4_recommendations — Linked REC-IDs with type, severity, status, source scan",
+      "5_sessions — Linked sessions with ID, date, mode, title, series, activity",
+      "6_challenges — Linked challenges with ID, status, type, resolution",
+      "7_certificationHistory — Certification events with batch, session, date",
+      "8_readiness — Readiness score, tier, quality verdict from readiness_scoring.json",
+      "9_healthSummary — Health score, tier, component breakdown, diagnosis"
+    ],
+    "integratedRegistries": [
+      "question_history.json (2,540 QIDs)",
+      "pack_*_corrected.js (live content, correct answers, explanations)",
+      "recommendation_registry.json (5 REC-IDs, 2,482 QID links)",
+      "challenge_registry.json (35 challenges, 35/35 triaged)",
+      "session_registry.json (40 sessions, 535 unique QIDs linked)",
+      "readiness_scoring.json (readiness scores and tiers)",
+      "work_queue.json (defect flags)",
+      "certification_waves.json (certification batches)"
+    ]
+  },
+
+  "supportingQueries": {
+    "sessionLookup": {
+      "engine": "session_intelligence_engine.js",
+      "commands": [
+        "node scripts/session_intelligence_engine.js --session=SESSION_ID — Full single-session intelligence",
+        "node scripts/session_intelligence_engine.js --all — All 40 sessions with cross-references",
+        "node scripts/session_intelligence_engine.js --summary — Aggregate session statistics"
+      ],
+      "dataReturned": "Session identity, linked QIDs, certified exposure ratios, challenge/recommendation links, investigation references"
+    },
+    "challengeLookup": {
+      "engine": "challenge_triage_engine.js",
+      "commands": [
+        "node scripts/challenge_triage_engine.js --challenge=CH-ID — Single challenge triage",
+        "node scripts/challenge_triage_engine.js --all — Full 35-challenge triage pass"
+      ],
+      "dataReturned": "Challenge classification (LIKELY_DEFECT/GOVERNANCE_ESCALATION/NEEDS_REVIEW), confidence score, defect code mapping, priority score, routing recommendation"
+    },
+    "recommendationLookup": {
+      "dataSource": "recommendation_registry.json (pre-computed)",
+      "access": "Direct read or node -e filter on questionIds[]",
+      "dataReturned": "REC-ID, type (REMEDIATE/REVIEW/CERTIFY), severity, status, target QID list, source defect code"
+    },
+    "investigationLookup": {
+      "engine": "investigation_registry.js",
+      "commands": [
+        "node scripts/investigation_registry.js --get=INV-ID — Full investigation record",
+        "node scripts/investigation_registry.js --list — Filtered investigation list",
+        "node scripts/investigation_registry.js --summary — Aggregate statistics",
+        "node scripts/investigation_registry.js --stats — Detailed statistics"
+      ],
+      "dataReturned": "Investigation lifecycle (OPEN→INVESTIGATING→ACTION_REQUIRED→RESOLVED→CLOSED), linked QIDs/challenges/defects/recommendations/sessions, findings array, resolution details"
+    },
+    "healthLookup": {
+      "engine": "question_health_engine.js",
+      "commands": [
+        "node scripts/question_health_engine.js --qid=QID — Single question health",
+        "node scripts/question_health_engine.js --all — All 2,540 health scores",
+        "node scripts/question_health_engine.js --section=A — Domain health summary"
+      ],
+      "dataReturned": "Health score (0-100), tier (HEALTHY/FAIR/NEEDS ATTENTION/CRITICAL), component breakdown (defect/challenge/recommendation/certification/structural/usage), diagnosis"
+    }
+  },
+
+  "unifiedAdminQueryPattern": {
+    "description": "A future S262+ admin dashboard would present a single search box accepting any entity identifier (QID, CH-ID, INV-ID, REC-ID, sessionId) and routing to the appropriate engine. This specification defines the routing rules.",
+    "routingRules": {
+      "ifPrefixIsP1": "Route to question_investigation_api.js — return full 9-section dossier",
+      "ifPrefixIsCH": "Route to challenge_triage_engine.js --challenge=<ID> — return triage + linked QID dossier",
+      "ifPrefixIsINV": "Route to investigation_registry.js --get=<ID> — return investigation + linked entities",
+      "ifPrefixIsREC": "Route to recommendation_registry.json lookup — return REC-ID record + linked QID health summary",
+      "ifPrefixIsS_orNumeric": "Route to session_intelligence_engine.js --session=<ID> — return session intelligence",
+      "otherwise": "Error: unknown entity type"
+    },
+    "crossReferenceBehavior": "Every response includes backlinks: a challenge response includes the linked QID's identity section; a session response includes linked QID states; a recommendation response includes target QID health summaries."
+  },
+
+  "validationResults": {
+    "verified": true,
+    "reference": "SESSION259_LOOKUP_VALIDATION.json",
+    "summary": {
+      "questionRetrieval": "100% (26/26 QIDs across all 5 packs)",
+      "sessionRetrieval": "100% (40/40 sessions, 0 orphan QID references)",
+      "challengeRetrieval": "100% (35/35 challenges, all linked QIDs valid)",
+      "triageCoverage": "100% (35/35 triaged, post-S258)",
+      "recommendationLinks": "2,482 (0 orphan QID references)",
+      "totalOrphanLookups": 0
+    },
+    "verdict": "PASS — 100% entity retrieval, 0 orphan lookups"
+  },
+
+  "stopConditions": {
+    "autoStopConditionsFromS257": "ALL 6 STILL PASS",
+    "conditions": [
+      {"number": 1, "condition": "Deep-Link Failure", "status": "PASS"},
+      {"number": 2, "condition": "Question History Corruption", "status": "PASS"},
+      {"number": 3, "condition": "Challenge Registry Corruption", "status": "PASS"},
+      {"number": 4, "condition": "Session Registry Corruption", "status": "PASS"},
+      {"number": 5, "condition": "Investigation Reconstruction Failure", "status": "PASS"},
+      {"number": 6, "condition": "Governance Guard ≠ PASS", "status": "PASS (32/32)"}
+    ]
+  }
+}

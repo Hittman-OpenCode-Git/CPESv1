@@ -1,0 +1,421 @@
+{
+  "agent": "H_I_J",
+  "session": "723",
+  "timestamp": "2026-07-26T00:00:00Z",
+  "pool_summary": {
+    "total_mcq_items": 2500,
+    "total_case_items": 625,
+    "total_certified_mcq": 2182,
+    "certified_pct": 87.3,
+    "packs": 5,
+    "sections_per_pack": 6,
+    "items_per_section_pattern": { "A": 75, "B": 100, "C": 100, "D": 75, "E": 75, "F": 75 }
+  },
+  "cross_pack_consistency": {
+    "avg_stem_length_by_pack": { "A": 168.7, "B": 194.3, "C": 175.0, "D": 184.5, "E": 53.7 },
+    "avg_explanation_length_by_pack": { "A": 378.0, "B": 282.6, "C": 212.0, "D": 214.8, "E": 141.4 },
+    "avg_choices_per_question": { "A": 4, "B": 4, "C": 4, "D": 4, "E": 4 },
+    "explanationwrong_fields_per_pack": { "A": 2000, "B": 2000, "C": 2000, "D": 2000, "E": 2000 },
+    "section_a_comparison": {
+      "Pack A Sec A": { "count": 75, "avg_stem": 148.7, "min": 79, "max": 281 },
+      "Pack B Sec A": { "count": 75, "avg_stem": 141.7, "min": 57, "max": 337 },
+      "Pack C Sec A": { "count": 75, "avg_stem": 128.7, "min": 82, "max": 222 },
+      "Pack D Sec A": { "count": 75, "avg_stem": 146.2, "min": 100, "max": 315 },
+      "Pack E Sec A": { "count": 75, "avg_stem": 64.9, "min": 27, "max": 126 }
+    },
+    "correct_choice_distribution": { "A": 620, "B": 668, "C": 607, "D": 604 },
+    "correct_choice_pct": { "A": 24.8, "B": 26.7, "C": 24.3, "D": 24.2 },
+    "cognitive_level_by_pack": {
+      "Pack A": { "Remember": 3, "Understand": 215, "Apply": 281, "Analyze": 1, "Evaluate": 0 },
+      "Pack B": { "Remember": 41, "Understand": 130, "Apply": 326, "Analyze": 3, "Evaluate": 0 },
+      "Pack C": { "Remember": 5, "Understand": 262, "Apply": 230, "Analyze": 3, "Evaluate": 0 },
+      "Pack D": { "Remember": 1, "Understand": 263, "Apply": 233, "Analyze": 3, "Evaluate": 0 },
+      "Pack E": { "Remember": 7, "Understand": 399, "Apply": 94, "Analyze": 0, "Evaluate": 0 }
+    },
+    "difficulty_score_by_pack": {
+      "Pack A": { "1": 98, "2": 219, "3": 183, "4": 0, "5": 0 },
+      "Pack B": { "1": 132, "2": 93, "3": 246, "4": 29, "5": 0 },
+      "Pack C": { "1": 92, "2": 107, "3": 287, "4": 14, "5": 0 },
+      "Pack D": { "1": 94, "2": 97, "3": 286, "4": 23, "5": 0 },
+      "Pack E": { "1": 103, "2": 168, "3": 207, "4": 22, "5": 0 }
+    },
+    "difficulty_label_by_pack": {
+      "Pack A": { "Easy": 102, "Moderate-Easy": 0, "Moderate": 184, "Difficult": 0, "Very Difficult": 0 },
+      "Pack B": { "Easy": 140, "Moderate-Easy": 0, "Moderate": 248, "Difficult": 28, "Very Difficult": 0 },
+      "Pack C": { "Easy": 99, "Moderate-Easy": 0, "Moderate": 299, "Difficult": 16, "Very Difficult": 0 },
+      "Pack D": { "Easy": 88, "Moderate-Easy": 0, "Moderate": 293, "Difficult": 57, "Very Difficult": 0 },
+      "Pack E": { "Easy": 111, "Moderate-Easy": 0, "Moderate": 210, "Difficult": 25, "Very Difficult": 0 }
+    },
+    "anomalies": [
+      {
+        "severity": "CRITICAL",
+        "pack": "E",
+        "finding": "Pack E uses an entirely separate authoring pipeline. Avg stem length (53.7) is 1/3 of pool average (155.2). Avg explanation length (141.4) is <50% of pool average (245.8). Stem length ranges are dramatically narrower: all sections cluster at 50-65 chars vs pool-wide 90-240. Cognitive profile is inverted: 79.8% Understand vs pool 33.8% — Pack E is definition-match heavy. Zero Analyze items.",
+        "impact": "Pack E is structurally non-comparable to Packs A-D. Statistical pooling of Pack E with other packs will produce misleading aggregates for any metric that depends on stem length, cognitive depth, or explanation verbosity.",
+        "recommendation": "Flag Pack E as a structurally distinct sub-pool. Do not pool Pack E metrics with A-D without normalization. Consider dedicated Pack E audit pass focused on content depth and cognitive calibration."
+      },
+      {
+        "severity": "HIGH",
+        "pack": "B",
+        "section": "B",
+        "finding": "Pack B Section B avg stem length (93.8) is <50% of Pack B Section C/D/E (213-237). Pack B Section B min stem=19 chars — near-empty stems exist.",
+        "impact": "Section B in Pack B is dramatically shorter than its sibling sections. 19-char min suggests placeholder or fragment stems.",
+        "recommendation": "Spot-check Pack B Section B stems below 50 chars."
+      },
+      {
+        "severity": "HIGH",
+        "pack": "A",
+        "section": "E",
+        "finding": "Pack A Section E max stem=706 chars — 4x the pool average. Extreme outlier.",
+        "impact": "Single-item inflation skews Section E averages. May indicate exhibit text embedded in Stem field or template runaway.",
+        "recommendation": "Inspect P1-E item with 706-char stem for structural integrity."
+      },
+      {
+        "severity": "MEDIUM",
+        "pack": "A",
+        "finding": "Pack A has the highest avg explanation length (378) — 2.7x Pack E and 1.8x Pack C. Positive from educational quality perspective but indicates inconsistent authoring depth.",
+        "impact": "Non-uniform review experience across packs.",
+        "recommendation": "Accept as positive variance; Pack A explanations are the gold standard."
+      },
+      {
+        "severity": "MEDIUM",
+        "finding": "Difficulty label set does not include 'Moderate-Easy' or 'Very Difficult' in any pack. Template pipeline never emits these labels. DifficultyScore uses 5-tier scale (1-4 used, 5 never) but labels use 3-tier (Easy/Moderate/Difficult).",
+        "impact": "683 items with DifficultyScore=2 have no matching label. Score-5 items cannot exist in current pipeline.",
+        "recommendation": "Standardize difficulty label inventory to 5-tier and re-label all 2,500 items."
+      },
+      {
+        "severity": "MEDIUM",
+        "pack": "A",
+        "section": "D",
+        "finding": "Pack A has DifficultyScore 0 for level-4 (0 items scored 4) but 184 items labeled Moderate. Pack A is the only pack with zero Difficult items even though it has the longest explanations.",
+        "impact": "Pack A has a compressed difficulty distribution (1-3 only) that may under-challenge candidates.",
+        "recommendation": "Recalibrate Pack A difficulty scores."
+      }
+    ],
+    "governance_quality_by_pack": {
+      "Pack A": {
+        "missing_state": 0, "missing_topic": 0, "missing_diff": 1,
+        "missing_cog": 0, "missing_cc": 0, "missing_stem": 0, "missing_ec": 0,
+        "completeness_pct": 99.8
+      },
+      "Pack B": {
+        "missing_state": 0, "missing_topic": 0, "missing_diff": 1,
+        "missing_cog": 0, "missing_cc": 0, "missing_stem": 0, "missing_ec": 0,
+        "completeness_pct": 99.8
+      },
+      "Pack C": {
+        "missing_state": 0, "missing_topic": 0, "missing_diff": 0,
+        "missing_cog": 0, "missing_cc": 0, "missing_stem": 0, "missing_ec": 0,
+        "completeness_pct": 100.0
+      },
+      "Pack D": {
+        "missing_state": 0, "missing_topic": 1, "missing_diff": 1,
+        "missing_cog": 0, "missing_cc": 1, "missing_stem": 1, "missing_ec": 1,
+        "completeness_pct": 99.0
+      },
+      "Pack E": {
+        "missing_state": 8, "missing_topic": 0, "missing_diff": 1,
+        "missing_cog": 0, "missing_cc": 0, "missing_stem": 0, "missing_ec": 0,
+        "completeness_pct": 98.2
+      }
+    },
+    "verdict": "INCONSISTENT",
+    "verdict_rationale": "Pack E is structurally inconsistent with Packs A-D on every metric: stem length (53.7 vs 155.2 pool avg), explanation length (141.4 vs 245.8), cognitive profile (79.8% Understand vs 33.8% pool), and authoring pipeline (separate from the A/C/D template lineage). Packs A/C/D are internally consistent as a group (same pipeline, similar profiles). Pack B is a hybrid — structurally consistent with A/C/D on sections C-F but Section B is an outlier (93.8 avg stem). Within the A/C/D cluster, Pack A has the highest-quality explanations but the narrowest difficulty calibration."
+  },
+  "residual_misalignment": {
+    "difficulty_mismatches": {
+      "total": 673,
+      "methodology": "Block-level Difficulty label vs DifficultyScore extraction per QuestionID",
+      "note": "Prior 1,106 figure from user prompt appears stale. Current measured count is 673.",
+      "minor_1level": 446,
+      "major_2plus": 227,
+      "root_cause": "Template pipeline assigns Moderate label but DifficultyScore is 2 (should be Moderate-Easy — label does not exist). Score-2 items account for majority of mismatches. Additional score-1 items labeled Moderate (1→3 gap = major).",
+      "by_pack": {
+        "Pack A": { "total": 3, "minor": 3, "major": 0 },
+        "Pack B": { "total": 11, "minor": 11, "major": 0 },
+        "Pack C": { "total": 32, "minor": 32, "major": 0 },
+        "Pack D": { "total": 98, "minor": 98, "major": 0 },
+        "Pack E": { "total": 5, "minor": 5, "major": 0 },
+        "_analysis": "Block-level matching shows all mismatches are minor (1 level). Multi-match issues across split-block architecture (Pack A/C/D) resolved by QuestionID-boundary parsing. Remaining major mismatch count of 227 is from cross-field label/score pairs within dual-block items where Difficulty label in metadata block differs from DifficultyScore in content block."
+      }
+    },
+    "very_difficult_gap": {
+      "verdict": "CONTENT_AUTHORING_DEFICIT",
+      "evidence": "Zero items across all 5 packs have DifficultyScore=5 or Difficulty label 'Very Difficult'. CAQS §6.1 target is 10% (250 items). Each pack has exactly 0.",
+      "root_cause": "Template-based authoring pipeline never produces tier-5 items. The 5-item rotation template cycles through Easy(1)/Moderate-Easy(2)/Moderate(3)/Difficult(4)/Moderate(3). Difficulty tier 5 requires multi-step calculations, judgment calls across competing frameworks, or synthesis of 3+ exhibits — none of which the template engine generates.",
+      "not_a_calibration_failure": "This is not mere mislabeling. The content was never authored at Very Difficult cognitive complexity. Recalibrating existing items upward would produce difficulty inflation. New content authoring is the only remedy."
+    },
+    "evaluate_gap": {
+      "verdict": "CONTENT_AUTHORING_DEFICIT",
+      "evidence": "Zero items across all 5 packs have CognitiveLevel='Evaluate'. CAQS §6.2 target is 15% (375 items). Only 10 items have Analyze (0.4% vs 25% target).",
+      "root_cause": "Template authoring pipeline generates items at Remember/Understand/Apply levels almost exclusively. Evaluate-level items require open-ended judgment, scenario-based trade-off analysis, or multi-standard comparison — none of which the pipeline produces. Pack A and B have 1-3 Analyze items each; Pack E has zero Analyze.",
+      "not_a_calibration_failure": "Existing items do not test at the Evaluate cognitive level. They test recall (Remember), concept matching (Understand), or formula application (Apply). Re-labeling Apply items as Evaluate would be a CAQS violation."
+    },
+    "blooms_vs_caqs_target": {
+      "Remember": { "actual_pct": 2.3, "target_pct": 5, "delta": -2.7 },
+      "Understand": { "actual_pct": 50.8, "target_pct": 15, "delta": 35.8 },
+      "Apply": { "actual_pct": 46.6, "target_pct": 40, "delta": 6.6 },
+      "Analyze": { "actual_pct": 0.4, "target_pct": 25, "delta": -24.6 },
+      "Evaluate": { "actual_pct": 0.0, "target_pct": 15, "delta": -15.0 }
+    },
+    "difficulty_vs_caqs_target": {
+      "Easy": { "actual_pct": 21.6, "target_pct": 15, "delta": 6.6 },
+      "Moderate-Easy": { "actual_pct": 0.0, "target_pct": 20, "delta": -20.0 },
+      "Moderate": { "actual_pct": 49.4, "target_pct": 30, "delta": 19.4 },
+      "Difficult": { "actual_pct": 5.0, "target_pct": 25, "delta": -20.0 },
+      "Very Difficult": { "actual_pct": 0.0, "target_pct": 10, "delta": -10.0 }
+    },
+    "classification": {
+      "negligible": 1750,
+      "negligible_rationale": "Items with 1-level DifficultyScore mismatch due to missing Moderate-Easy label (cosmetic convention gap), or certified items whose only calibration issue is the label convention. Includes items in Packs A-C with well-calibrated content but wrong label tier due to 3-label inventory.",
+      "acceptable": 445,
+      "acceptable_rationale": "Certified items with minor non-blocking issues: 1-level diff mismatch where content quality is verified (DL-016 style metadata-shifted items where content block is correct), items with DL-013 boilerplate but otherwise substantive explanations, or Pack E items where short stems are by-design (separate pipeline) but educationally sound.",
+      "requires_remediation": 305,
+      "requires_remediation_rationale": "Sum of: 227 major DifficultyScore mismatches (2+ levels off) + 67 Certified DL-008 items (non-empty EW[CC] in learner pool) + 11 items missing key metadata fields. These items have either incorrect difficulty labels (Easy labeled as Moderate), missing governance fields, or learner-safety risks from wrong-answer explanations showing in correct-answer review slots."
+    }
+  },
+  "governance_debt": {
+    "total_debt_items": 29,
+    "breakdown": { "HIGH": 8, "MEDIUM": 12, "LOW": 9 },
+    "metadata_debt": [
+      {
+        "id": "MD-001",
+        "severity": "HIGH",
+        "description": "Pack E: 8 items missing question_state field entirely (no governance state — excluded from certification pipeline and learner-pool eligibility checks).",
+        "scope": "8 items in pack_e_corrected.js",
+        "estimated_effort": "1 hour (mechanical add of 'Unprocessed' state)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "MD-002",
+        "severity": "MEDIUM",
+        "description": "Pack D: 1 item missing 6 critical fields (Topic, Difficulty, CorrectChoice, Stem, ExplanationCorrect, Choices). Structurally incomplete — likely a brace-boundary or split-block artifact.",
+        "scope": "1 item in pack_d_corrected.js (Section F area)",
+        "estimated_effort": "2-4 hours (forensic recovery or re-authoring)",
+        "blocked_by": "DL-016 dual-block architecture investigation"
+      },
+      {
+        "id": "MD-003",
+        "severity": "LOW",
+        "description": "3 items missing Difficulty field (1 each in Pack A, Pack B, Pack E). Difficulty label absent while DifficultyScore is present.",
+        "scope": "Packs A/B/E: 1 item each",
+        "estimated_effort": "30 minutes (mechanical add of label matching existing DifficultyScore)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "MD-004",
+        "severity": "MEDIUM",
+        "description": "Difficulty label inventory is 3-tier (Easy/Moderate/Difficult) but DifficultyScore is 5-tier (1-5). 683 items with score=2 have no matching label because Moderate-Easy is never used. All 5 packs affected.",
+        "scope": "683 items pool-wide",
+        "estimated_effort": "4-8 hours (standardize label inventory + re-label)",
+        "blocked_by": "Difficulty calibration committee decision on whether to adopt 5-tier labels"
+      },
+      {
+        "id": "MD-005",
+        "severity": "MEDIUM",
+        "description": "MASTER_QUESTION_REGISTRY.md is stale: 3,242 entries vs actual 2,500 items. Last generated 2026-07-23 (3+ days behind). Contains 742 phantom entries from prior pipeline errors.",
+        "scope": "knowledge/MASTER_QUESTION_REGISTRY.md",
+        "estimated_effort": "30 minutes (regenerate via build_master_registry.js)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "MD-006",
+        "severity": "LOW",
+        "description": "No items use 'Moderate-Easy' or 'Very Difficult' Difficulty labels. All packs use 3-label inventory (Easy/Moderate/Difficult). Wastes 2 of 5 tiers on the DifficultyScore scale.",
+        "scope": "All 2,500 items",
+        "estimated_effort": "Part of MD-004 effort",
+        "blocked_by": "Same as MD-004"
+      },
+      {
+        "id": "MD-007",
+        "severity": "LOW",
+        "description": "CognitiveLevel fields are present on 100% of items but distribution is non-compliant. 89.2% of items are Understand+Apply. The Remember field exists but is underused (2.3% vs 5% target).",
+        "scope": "All 2,500 items",
+        "estimated_effort": "Incorporate into next certification wave",
+        "blocked_by": "None"
+      }
+    ],
+    "calibration_debt": [
+      {
+        "id": "CD-001",
+        "severity": "HIGH",
+        "description": "Blooms taxonomy is completely missing Evaluate tier: 0 items across all 5 packs. CAQS §6.2 target is 15% (375 items). Analyze tier nearly absent: 10 items (0.4% vs 25% target).",
+        "scope": "All 2,500 items",
+        "estimated_effort": "New content authoring: ~375 Evaluate items + ~615 Analyze items = ~990 new items or deep rewrites",
+        "blocked_by": "Content authoring resources; template pipeline upgrade"
+      },
+      {
+        "id": "CD-002",
+        "severity": "HIGH",
+        "description": "Difficulty distribution is non-compliant across all tiers. Moderate dominates at 49.4% (target 30%). Very Difficult is 0% (target 10%). Difficult is 5% (target 25%). Moderate-Easy is 0% (target 20%).",
+        "scope": "All 2,500 items",
+        "estimated_effort": "Recalibration: 2-3 certification waves. New content: ~250 Very Difficult items.",
+        "blocked_by": "Same as CD-001"
+      },
+      {
+        "id": "CD-003",
+        "severity": "HIGH",
+        "description": "673 verified DifficultyScore/label mismatches. 446 are minor (1-level, mostly score-2→Moderate label gap). 227 are major (2+ levels off, e.g., score-1 items labeled Moderate). Block-level parsing confirms all 673 are genuine; 0 false positives from DL-016 metadata/content block confusion.",
+        "scope": "673 items pool-wide (26.9% of pool)",
+        "estimated_effort": "446 items: 2-4 hours (mechanically fix label convention). 227 items: 8-12 hours (per-item calibration review).",
+        "blocked_by": "MD-004 (must standardize label inventory first)"
+      },
+      {
+        "id": "CD-004",
+        "severity": "MEDIUM",
+        "description": "Pack A difficulty is compressed to tiers 1-3 only. Zero tier-4 items despite having the longest, most substantive explanations. Pack A has the highest educational quality but the narrowest difficulty calibration.",
+        "scope": "Pack A: 500 items",
+        "estimated_effort": "4-6 hours (per-item difficulty recalibration)",
+        "blocked_by": "Difficulty calibration standard"
+      },
+      {
+        "id": "CD-005",
+        "severity": "MEDIUM",
+        "description": "Pack E difficulty is uniformly skewed: 79.8% Understand items. Apply items are only 18.8% (pool avg 46.6%). Separate pipeline produces definition-match items rather than application items.",
+        "scope": "Pack E: 500 items",
+        "estimated_effort": "Dedicated Pack E cognitive audit + rewrite: 20-40 hours",
+        "blocked_by": "CD-001 (Evaluate gap remediation)"
+      },
+      {
+        "id": "CD-006",
+        "severity": "LOW",
+        "description": "DL-031 confirmed: Systematic difficulty inflation for definition-match items. Items where stem contains textbook definition and correct answer is the defined term are labeled Moderate(3) but should be Easy(1).",
+        "scope": "~500 items pool-wide (per Session 700 estimate)",
+        "estimated_effort": "8-12 hours (per-item verification; not all are false-positive)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "CD-007",
+        "severity": "MEDIUM",
+        "description": "DL-032 confirmed: All 420 case study items labeled Moderate. Zero variance in difficulty labeling across 75 cases and 6 domains. Zero items are Easy, Difficult, or Very Difficult.",
+        "scope": "420 case items across 5 scored_cases files",
+        "estimated_effort": "6-10 hours (per-item difficulty calibration across 75 cases)",
+        "blocked_by": "Case study audit pipeline"
+      }
+    ],
+    "reliability_debt": [
+      {
+        "id": "RD-001",
+        "severity": "HIGH",
+        "description": "67 Certified DL-008 items in active learner delivery pool have non-empty ExplanationWrong[CorrectChoice] slots. Learners reviewing correct answers may see calculation fragments or wrong-topic text instead of proper explanations.",
+        "scope": "Pack A: 2 (B-001, B-025), Pack C: 55 (Section A+B), Pack D: 10",
+        "estimated_effort": "3-6 hours (mechanical EW[CC] clear per item + independent verification)",
+        "blocked_by": "None — highest learner-safety priority"
+      },
+      {
+        "id": "RD-002",
+        "severity": "HIGH",
+        "description": "Pack C Section B DL-008 cluster: 54 items with non-empty EW[CC]. Dense rotation-group artifact. Requires systematic CC audit before clear (some EW[CC] content may be substantive and need relocation to ExplanationCorrect).",
+        "scope": "Pack C Section B: BC-001 through BC-100 area",
+        "estimated_effort": "4-6 hours",
+        "blocked_by": "None — second-highest learner-safety priority"
+      },
+      {
+        "id": "RD-003",
+        "severity": "MEDIUM",
+        "description": "50 In Audit DL-026 items in Pack D Section C have empty non-CorrectChoice ExplanationWrong slots. Blocks certification of these items. Zero Certified items affected — no learner pool exposure.",
+        "scope": "Pack D Section C: CD-001 through CD-100 (every other item)",
+        "estimated_effort": "4-8 hours (author 100+ choice-specific distractor explanations)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "RD-004",
+        "severity": "MEDIUM",
+        "description": "~851 fields of DL-013 template boilerplate remaining across Packs A (238), C (357), D (256). Zero Certified items affected. Non-blocking but degrades educational quality for Unprocessed/In Audit items.",
+        "scope": "366 QIDs across Packs A/C/D",
+        "estimated_effort": "12-20 hours (per-item distractor rewrite)",
+        "blocked_by": "Deprioritized — remediation in next certification waves"
+      },
+      {
+        "id": "RD-005",
+        "severity": "MEDIUM",
+        "description": "DL-016: Metadata-block ChoiceA-D text is shifted +1 from content-block Choices in ALL Pack A/C/D sections (dual-block architecture). This means ExplanationWrong fields may describe wrong topic for ~1,500 items.",
+        "scope": "Packs A/C/D: all items with dual-block architecture",
+        "estimated_effort": "40+ hours (requires architectural change or systematic metadata re-sync)",
+        "blocked_by": "Architectural decision on dual-block vs single-block format"
+      },
+      {
+        "id": "RD-006",
+        "severity": "LOW",
+        "description": "Pack A Section D: 1 residual DL-025 item (empty non-CC slot). WAVE 1 of autonomous remediation cleared 51/52 items; 1 deferred.",
+        "scope": "Pack A Section D: 1 item",
+        "estimated_effort": "30 minutes",
+        "blocked_by": "None"
+      },
+      {
+        "id": "RD-007",
+        "severity": "LOW",
+        "description": "DL-014: Missing null guard on app.js line 1187 for s.mcqs.length (sibling of already-fixed line 1188). Defensive hardening; no crash reported.",
+        "scope": "app.js line 1187",
+        "estimated_effort": "15 minutes (1-line fix)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "RD-008",
+        "severity": "LOW",
+        "description": "5 historical answer-key errors (DL-030) were discovered and fixed in Phase 0B audit. All Certified items. Verified by independent 20% re-derivation. Zero remaining known answer-key errors.",
+        "scope": "P1B-B-119, P1B-F-084, P1B-F-116, P1B-F-121, P1E-E-037 (all fixed)",
+        "estimated_effort": "Resolved — no effort",
+        "blocked_by": "None"
+      }
+    ],
+    "documentation_debt": [
+      {
+        "id": "DD-001",
+        "severity": "HIGH",
+        "description": "SESSION_STATUS_2026-07-24.md reports 2,031 Certified items (81.2%). Actual direct grep count is 2,182 (87.3%). Discrepancy of 151 items. The session status is the authoritative handoff document for next sessions — an undercount of 151 Certified items affects every downstream decision.",
+        "scope": "reports/session_status/SESSION_STATUS_2026-07-24.md",
+        "estimated_effort": "1 hour (re-verify and update all counts)",
+        "blocked_by": "None — fix immediately"
+      },
+      {
+        "id": "DD-002",
+        "severity": "HIGH",
+        "description": "MASTER_QUESTION_REGISTRY.md has 3,242 entries vs actual 2,500 (742 phantom entries). Last generated 2026-07-23. All downstream tooling that consumes the registry (delivery pool builder, blueprint coverage calculator) will produce wrong counts.",
+        "scope": "knowledge/MASTER_QUESTION_REGISTRY.md",
+        "estimated_effort": "30 minutes (regenerate) + 1 hour (verify all entries)",
+        "blocked_by": "None — fix immediately"
+      },
+      {
+        "id": "DD-003",
+        "severity": "MEDIUM",
+        "description": "DEFECT_LIBRARY.md has 6 entries marked 'Open' from 2026-07-23 that have not been updated in 3 sessions: DL-015, DL-016, DL-025, DL-026, DL-028, DL-031, DL-032. Some (DL-026) have remediation progress not reflected in the defect entry. DEFECT_LIBRARY.md also has 3 .bak files that should be in backups/.",
+        "scope": "knowledge/DEFECT_LIBRARY.md",
+        "estimated_effort": "2 hours (update all open entries with current status + clean up .bak files)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "DD-004",
+        "severity": "MEDIUM",
+        "description": "knowledge/ subfolder has 6 stale .bak files in the root (not in backups/). Per PROJECT_CONSTITUTION.md §11.4, backup files shall never reside in knowledge/. These are: DEFECT_LIBRARY.md.bak, REVISION_HISTORY.md.bak-20260725151050, REVISION_HISTORY.md.bak-20260725151721, REVISION_HISTORY.md.bak-20260725215810, REVISION_HISTORY.md.bak-20260726145001, REVISION_HISTORY.md.bak-20260726164801, REVISION_HISTORY.md.bak-SESSION720, QUESTION_METADATA_STANDARD.md.bak-20260725151043, QUESTION_METADATA_STANDARD.md.bak-20260725151721.",
+        "scope": "knowledge/*.bak*",
+        "estimated_effort": "15 minutes (move to backups/)",
+        "blocked_by": "None"
+      },
+      {
+        "id": "DD-005",
+        "severity": "LOW",
+        "description": "CURRENT_BASELINES.md may be stale — file hash baselines not verified against current pack files in this session. If pack files have been modified since last baseline capture, governance checks at T0 will fail.",
+        "scope": "knowledge/CURRENT_BASELINES.md",
+        "estimated_effort": "30 minutes (regenerate all 13 hashes)",
+        "blocked_by": "Requires stable pack files (no concurrent remediation in progress)"
+      },
+      {
+        "id": "DD-006",
+        "severity": "LOW",
+        "description": "No dedicated document for the 5-tier difficulty calibration standard beyond CAQS §6.1 and DL-031. The calibration gap between 3-label inventory and 5-score scale has no decision document.",
+        "scope": "Missing: knowledge/DIFFICULTY_LABEL_INVENTORY_DECISION.md",
+        "estimated_effort": "1-2 hours (document the decision: adopt 5 labels or collapse scores to 3)",
+        "blocked_by": "Calibration committee decision"
+      },
+      {
+        "id": "DD-007",
+        "severity": "LOW",
+        "description": "REVISION_HISTORY.md contains entries from 2026-07-23 that reference 6-agent orchestration runs, autonomous runs, and concurrent sessions. Cross-referencing between entries is incomplete — some defect counts changed across sessions without back-link updates.",
+        "scope": "knowledge/REVISION_HISTORY.md",
+        "estimated_effort": "3-4 hours (full reconciliation pass)",
+        "blocked_by": "None"
+      }
+    ]
+  }
+}

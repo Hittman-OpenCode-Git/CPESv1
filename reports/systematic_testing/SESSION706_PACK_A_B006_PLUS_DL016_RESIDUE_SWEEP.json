@@ -1,0 +1,386 @@
+{
+  "session": "706",
+  "timestamp": "2026-07-25T00:00:00Z",
+  "agent": "Agent D — DL-016 Residue Sweep",
+  "range": "P1-B-006 through P1-B-030",
+  "scope": "Pack A Section B, 25 items",
+  "methodology": "Direct file read — content block (Part, Section, Topic, Stem, Choices.{A,B,C,D}, CorrectChoice, ExplanationCorrect) compared against metadata block (ExplanationWrongA-D, question_state) within same JSON object per QuestionID. Each EW field evaluated for topic alignment (does EW text describe this item's concept area?) and choice specificity (does EW text address the specific Choice.{letter} text?).",
+  "dual_block_note": "Pack A uses single-object-per-QID architecture (not dual-block like Pack C/D). Content fields (Topic, Stem, Choices, CC, EC) and metadata fields (EW-A-D, question_state) are in the SAME JSON object. DL-016 in this context means EW text within the object describes a different item's topic or template-level choices that diverge from the actual Choices.{letter} values.",
+  "items": [
+    {
+      "qid": "P1-B-006",
+      "topic": "B.006 activity-based budgeting drivers",
+      "state": "Certified",
+      "CC": "C",
+      "analysis_notes": "All EW fields correctly describe ABB/direct labor hours/cost drivers/incremental budgeting concepts matching the item's own Choices. Every distractor EW addresses the specific choice letter's text.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes direct labor hours as sole cost allocation base ignoring ABB premise — matches Choice A 'Use only direct labor hours for every cost pool'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes cost drivers as ABB mechanism, not financial accounting only — matches Choice B 'Ignore cost drivers because they are used only in financial accounting'" },
+        { "slot": "C", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes single growth-rate multiplier as incremental (not ABB) — matches Choice D 'Budget by multiplying last year total cost by the sales growth rate'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-007",
+      "topic": "B.007 flexible budget purpose",
+      "state": "Certified",
+      "CC": "B",
+      "analysis_notes": "EW-A/D/C all correctly describe flexible budget, static budget, and master budget concepts matching the item's own Choices. Each EW is choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes eliminating volume effects and needing flexible budget adjustment — matches Choice A 'Eliminate all volume effects by ignoring output'" },
+        { "slot": "B", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes static budget limitation when volume differs — matches Choice C 'Compare actual results only with the static budget'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes master budget unchanged limitation identical to static budget — matches Choice D 'Use the master budget unchanged for all variance analysis'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-008",
+      "topic": "B.008 sales budget sequencing",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "EW-B is correct (production budget depends on sales budget). BUT EW-C describes cash budget position in master budget sequence — Choice C is about preparing tax return first. EW-D describes direct materials budget derivation — Choice D is about preparing budgeted balance sheet first. The EW-C and EW-D texts describe plausible sequencing errors (cash budget before sales, materials before production) that do NOT match the actual Choice C/D text. DL-016 residue: these EW texts were written for template-level choices that differ from the actual choices on this item.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes production budget depending on sales budget — matches Choice B 'Prepare the production budget without considering expected sales'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": false, "choice_specific": false, "notes": "DL-016 RESIDUE: EW-C says 'The cash budget is prepared after most operating budgets are complete, as it depends on cash inflows from sales and cash outflows from production, purchasing, and operating expenses.' Choice C is 'Prepare the tax return first because it determines units sold.' EW describes cash budget sequencing, not tax return. Template-level choice mismatch." },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": false, "choice_specific": false, "notes": "DL-016 RESIDUE: EW-D says 'The direct materials budget is derived from the production budget, which in turn depends on the sales budget. Materials cannot be planned without knowing production volumes.' Choice D is 'Prepare the budgeted balance sheet before estimating sales.' EW describes materials budget, not balance sheet. Template-level choice mismatch." }
+      ],
+      "classification": "DL016_RESIDUE_CONFIRMED"
+    },
+    {
+      "qid": "P1-B-009",
+      "topic": "B.009 cash budget minimum balance",
+      "state": "Certified",
+      "CC": "D",
+      "analysis_notes": "All EW fields correctly address borrowing vs. revenue, accrual income vs. cash, and profitability vs. cash availability — all matching the cash budget/borrowing topic and the item's own Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes recording borrowing as revenue violating accounting principles — matches Choice A 'Record planned borrowing as sales revenue'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes profitable income statement not guaranteeing cash — matches Choice B 'Ignore the shortfall if the income statement is profitable'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes accrual income vs. cash availability as different concepts — matches Choice C 'Use only accrual income to decide cash availability'" },
+        { "slot": "D", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-010",
+      "topic": "B.010 forecasting causal model",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "All EW fields correctly address responsibility-center reports, reciprocal cost allocation, and exponential smoothing vs. causal forecasting — all matching the forecasting topic and the item's own Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes responsibility-center report as internal control tool, not forecasting — matches Choice B 'Treat the relation as a responsibility-center report'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes reciprocal cost allocation as service dept method, not forecasting — matches Choice C 'Use reciprocal cost allocation'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes simple exponential smoothing using only historical values — matches Choice D 'Use simple exponential smoothing without any explanatory variables'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-011",
+      "topic": "B.011 time-series trend",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "All EW fields correctly address capital lease, static budget variance, and direct service allocation vs. trend-aware forecasting — all matching the time-series topic and item Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes capital lease as financing classification, not forecasting — matches Choice B 'Treat the trend as a capital lease'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes static budget variance as performance evaluation, not forecasting — matches Choice C 'Use only a static budget variance'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes direct method of service allocation as cost accounting, not forecasting — matches Choice D 'Use the direct method of service allocation'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-012",
+      "topic": "B.012 expected value decision planning",
+      "state": "Certified",
+      "CC": "D",
+      "analysis_notes": "All EW fields correctly address best-case selection, expected value as revenue recognition, and ignoring probabilities — all matching the expected value topic and item Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes selecting only best-case ignoring probability — matches Choice A 'Select only the best-case outcome because it is possible'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes expected value as planning tool, not revenue recognition — matches Choice B 'Record the expected value as guaranteed revenue'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes ignoring probabilities and relying on most recent outcome — matches Choice C 'Ignore probabilities and use the most recent actual outcome'" },
+        { "slot": "D", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-013",
+      "topic": "B.013 learning curve budgeting",
+      "state": "Certified",
+      "CC": "B",
+      "analysis_notes": "All EW fields correctly address constant labor time, learning effect as financing cost, and inventory valuation — all matching the learning curve topic and item Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes learning curve model decreasing labor time, not constant — matches Choice A 'Assume each unit always takes the same time regardless of experience'" },
+        { "slot": "B", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes learning effect as operational efficiency, not financing cost — matches Choice C 'Classify the learning effect as a financing cost'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes learning curves for labor budgeting, not inventory valuation only — matches Choice D 'Use learning curves only for finished goods inventory valuation'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-014",
+      "topic": "B.014 sensitivity analysis budget",
+      "state": "Certified",
+      "CC": "D",
+      "analysis_notes": "All EW fields correctly address internal control vs. price change, timing of sensitivity analysis, and budget revision — all matching the sensitivity analysis topic and item Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes material price change as cost assumption, not internal control deficiency — matches Choice A 'Treat the price change as an internal control deficiency'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes sensitivity analysis as prospective planning, not after-the-fact — matches Choice B 'Use sensitivity analysis only after the fiscal year is closed'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes budgets can and should be revised — matches Choice C 'Ignore the assumption because budgets cannot be revised'" },
+        { "slot": "D", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-015",
+      "topic": "B.015 pro forma financial statements",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "All EW fields correctly address historical-only, post-audit timing, and external audit evidence — all matching the pro forma statements topic and item Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes historical statements lacking forward-looking information — matches Choice B 'Use only historical financial statements with no assumptions'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes pro forma prepared during budget development, not deferred — matches Choice C 'Prepare pro forma statements only after audit completion'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes projected statements as internal planning, not external audit evidence — matches Choice D 'Classify projected statements as external audit evidence'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-016",
+      "topic": "B.016 project budgeting distinction",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "All EW fields correctly address milestones in budgets, permanent vs. project budgets, and cash receipts-only budgets — all matching the project budgeting topic and item Choices.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes project budgets including milestones/timelines, not just dollars — matches Choice B 'Exclude milestones because budgets contain only dollars'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes project budget distinct from permanent responsibility center budget — matches Choice C 'Treat the project as a permanent responsibility center budget only'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes cash receipts schedule as one component, not entire project budget — matches Choice D 'Use a cash receipts schedule as the entire project budget'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-017",
+      "topic": "B.017 production budget units 1",
+      "state": "Certified",
+      "CC": "C",
+      "analysis_notes": "Numerical item. All EW fields trace exact calculation paths that produce the specific numeric values in Choices A/B/D. Topic-aligned (production budget) and choice-specific (each describes the exact calculation error yielding that choice's number).",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A: sales - beg inv = 9,710, omits ending inv. Exact calc matching Choice A '9,710 units'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: sales + ending inv = 15,054, omits beg inv. Exact calc matching Choice B '15,054 units'" },
+        { "slot": "C", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: sales + beg inv = 14,550, incorrectly adding. Exact calc matching Choice D '14,550 units'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-018",
+      "topic": "B.018 direct materials purchases budget 2",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "Numerical item. All EW fields correctly trace calculation paths yielding specific numeric distractors. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: adds ending inv but not subtract beg inv = 50,620. Exact calc matching Choice B '50,620 pounds'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: production needs only = 45,800. Exact calc matching Choice C '45,800 pounds'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: subtracts beg inv but not add ending inv = 43,280. Exact calc matching Choice D '43,280 pounds'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-019",
+      "topic": "B.019 cash collections schedule 3",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "Numerical item. EW-B is slightly generic ('overstates collections by using the wrong timing or collection percentages') but correctly identifies the direction of error and references the correct collection percentages (35%, 60%). EW-C and EW-D correctly trace specific calculation errors. All topic-aligned.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: states amount 'overstates collections by using the wrong timing or collection percentages' — identifies error direction and references correct percentages (35%, 60%). Specific to this choice but less precise than other calc items. Still CLEAN." },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: adds current and prior-month sales — $186,600 + $155,400 = $342,000. Matches Choice C '$342,000'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: current-month only, $186,600 x 35% — matches Choice D '$65,309'. Minor rounding note: $186,600 x 35% = $65,310 vs. $65,309 shown. Approximate match." }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-020",
+      "topic": "B.020 flexible budget cost 4",
+      "state": "Certified",
+      "CC": "D",
+      "analysis_notes": "Numerical item. All EW fields correctly trace calculation paths. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A: variable only, $12 x 11,360 = $136,320, omits fixed. Matches Choice A '$136,320'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: fixed only ($47,600), omits variable. Matches Choice B '$47,600'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: includes extra $10,000 over correct total. $47,600 + $136,320 + $10,000 ≈ $193,920. Matches Choice C '$193,920'" },
+        { "slot": "D", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-021",
+      "topic": "B.021 expected value budget scenario 5",
+      "state": "Certified",
+      "CC": "C",
+      "analysis_notes": "Numerical item. All EW fields correctly identify each choice as representing a single demand scenario. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A: high-demand contribution only ($81,500). Matches Choice A '$81,500'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: low-demand contribution only ($45,000). Matches Choice B '$45,000'" },
+        { "slot": "C", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: base-case contribution only ($61,000). Matches Choice D '$61,000'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-022",
+      "topic": "B.022 regression forecast cost equation 6",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "Numerical item. All EW fields identify specific calculation errors. EW-C is slightly generic ('overstates...by using an incorrect variable amount') but still identifies the error direction. Topic-aligned.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: variable only, $13 x 3,300 = $42,900, omits fixed. Matches Choice B '$42,900'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: overstates by incorrect variable amount. Identifies error direction. Matches Choice C '$116,600'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: fixed only ($72,400), ignores variable. Matches Choice D '$72,400'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-023",
+      "topic": "B.023 learning curve average time after doubling 7",
+      "state": "Certified",
+      "CC": "D",
+      "analysis_notes": "Numerical item. All EW fields correctly trace calculation paths. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A: divides 160/85% = 188.2 instead of multiplying. Matches Choice A '188.2 hours'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: reduction (160-136=24), not new average. Matches Choice B '24.0 hours'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: uses original average without learning curve. Matches Choice C '160.0 hours'" },
+        { "slot": "D", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-024",
+      "topic": "B.024 cash budget borrowing need 8",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "Numerical item. All EW fields correctly trace calculation paths. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: net cash outflow ($-7,600), not borrowing need. Matches Choice B '$7,600'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: ending cash before financing ($25,200), not borrowing. Matches Choice C '$25,200'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: minimum balance requirement ($25,000), not borrowing. Matches Choice D '$25,000'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-025",
+      "topic": "B.025 budgetary slack incentive design 9",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "MAJOR DL-016 RESIDUE. Item topic is budgetary slack / incentive design. ALL THREE distractor EW fields describe FORECASTING ERROR ANALYSIS (P1-B-026's topic), not budgetary slack at all. EW-A talks about 'abandoning forecasting because actual results differ from forecasts' — this describes forecast error analysis, not budgetary slack. EW-B describes 'Not every forecast error indicates fraud' — forecasting, not budgetary slack. EW-C describes 'Selecting only the best-performing month discards the other 11 months' — forecasting evaluation, not budgetary slack. The EW texts are near-verbatim copies of P1-B-026's EW fields (with slightly different wording). This is the classic DL-016 +1 shift: the metadata block was written for P1-B-026's topic but placed in P1-B-025's object.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": false, "choice_specific": false, "notes": "DL-016 RESIDUE: CC=A, so EW-A should be empty. It is NOT empty. EW-A says 'Abandoning forecasting because actual results differ from forecasts misunderstands the fundamental purpose of forecasting in management accounting. All forecasts inherently contain error...' This is about forecasting, NOT budgetary slack. Choice A is 'Revise incentives and review assumptions to discourage slack while preserving accountability.' Complete topic mismatch. Additionally, this slot should be EMPTY (CC slot), confirming a DL-008 violation as well." },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": false, "choice_specific": false, "notes": "DL-016 RESIDUE: EW-B says 'Not every forecast error indicates fraud. Errors arise from many legitimate sources: changes in market conditions, data limitations, model misspecification, or random variation.' This is about forecasting, NOT budgetary slack. Choice B is 'Eliminate all variance analysis from the budget process.' Complete topic mismatch." },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": false, "choice_specific": false, "notes": "DL-016 RESIDUE: EW-C says 'Selecting only the best-performing month discards the other 11 months of data, creating a cherry-picked and unreliable assessment of forecast performance.' This is about forecast error evaluation, NOT budgetary slack. Choice C is 'Classify slack as a cash equivalent.' Complete topic mismatch." },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D is empty (''). This is the CC slot that should be empty — but CorrectChoice IS A, not D. So EW-D empty while EW-A should be empty. This confirms the EW fields are shifted: they belong to P1-B-026 (CC=D) where EW-D is the correct empty CC slot." }
+      ],
+      "classification": "DL016_RESIDUE_CONFIRMED"
+    },
+    {
+      "qid": "P1-B-026",
+      "topic": "B.026 forecast error analysis 10",
+      "state": "Certified",
+      "CC": "D",
+      "analysis_notes": "All EW fields correctly address forecast error analysis concepts — stopping forecasting, fraud indicators, cherry-picking months. Topic-aligned and choice-specific. Item is clean; the prior item (P1-B-025) carries this item's EW text as residue.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes abandoning forecasting as misunderstanding its purpose — matches Choice A 'Stop forecasting because actual demand differs from forecasts'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes forecast errors as normal, not automatic fraud — matches Choice B 'Treat every error as a fraud indicator'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes cherry-picking lowest-error month ignores distribution — matches Choice C 'Use only the month with the lowest error and ignore the rest'" },
+        { "slot": "D", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-027",
+      "topic": "B.027 budget committee coordination 11",
+      "state": "Certified",
+      "CC": "B",
+      "analysis_notes": "All EW fields correctly address cash budget sequencing, external financial statements, and unrelated departmental assumptions within the budget committee coordination context. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes cash budget as last in sequence, needs sales first — matches Choice A 'Prepare the cash budget before resolving sales quantities'" },
+        { "slot": "B", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C describes external statements as historical, not forward-looking — matches Choice C 'Use only external financial statements to set operating targets'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes unrelated assumptions producing incoherent budget — matches Choice D 'Let each department use unrelated assumptions'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-028",
+      "topic": "B.028 continuous planning update trigger 12",
+      "state": "Certified",
+      "CC": "C",
+      "analysis_notes": "All EW fields correctly address recording constraints as revenue, waiting for year-end, and immutable budgets — all within the continuous planning update context. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A describes supplier constraint as operational risk, not revenue — matches Choice A 'Record the supplier constraint as revenue'" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B describes waiting for year-end as leaving management unable to respond — matches Choice B 'Ignore operational constraints unless year-end financial statements are issued'" },
+        { "slot": "C", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D describes budgets as planning tools, not immutable — matches Choice D 'Keep all original assumptions because budgets can never change'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-029",
+      "topic": "B.029 production budget units 13",
+      "state": "Certified",
+      "CC": "A",
+      "analysis_notes": "Numerical item. All EW fields correctly trace calculation paths yielding specific numeric distractors. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "B", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-B: sales + ending inv, omits beg inv = 16,902. Matches Choice B '16,902 units'" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: sales - beg inv, omits ending inv = 11,030. Matches Choice C '11,030 units'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: adds beginning inv instead of subtracting = 16,350. Matches Choice D '16,350 units'" }
+      ],
+      "classification": "CLEAN"
+    },
+    {
+      "qid": "P1-B-030",
+      "topic": "B.030 direct materials purchases budget 14",
+      "state": "Certified",
+      "CC": "B",
+      "analysis_notes": "Numerical item. All EW fields correctly trace calculation paths. Topic-aligned and choice-specific.",
+      "ew_fields_check": [
+        { "slot": "A", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-A: adds ending but not subtract beginning = 55,840. Matches Choice A '55,840 pounds'" },
+        { "slot": "B", "is_cc_slot": true, "topic_aligned": true, "choice_specific": true, "notes": "CC slot — empty (correct)" },
+        { "slot": "C", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-C: subtracts beginning but not add ending = 47,960. Matches Choice C '47,960 pounds'" },
+        { "slot": "D", "is_cc_slot": false, "topic_aligned": true, "choice_specific": true, "notes": "EW-D: production needs only = 50,600. Matches Choice D '50,600 pounds'" }
+      ],
+      "classification": "CLEAN"
+    }
+  ],
+  "summary": {
+    "total_items_scanned": 25,
+    "clean_count": 23,
+    "residue_count": 2,
+    "suspect_count": 0,
+    "limitation_count": 0,
+    "residue_items": [
+      {
+        "qid": "P1-B-008",
+        "topic": "B.008 sales budget sequencing",
+        "pattern": "EW-C and EW-D describe budget sequencing concepts (cash budget timing, direct materials budget) that do not match the actual Choices C (tax return first) or D (budgeted balance sheet first). EW texts appear to originate from template-level choices that were changed in the final item."
+      },
+      {
+        "qid": "P1-B-025",
+        "topic": "B.025 budgetary slack incentive design 9",
+        "pattern": "All three distractor EW fields (A, B, C) describe P1-B-026's forecast error analysis topic, not P1-B-025's budgetary slack topic. Classic DL-016 +1 shift: the metadata block EW text was written for P1-B-026 and placed in P1-B-025. Additionally, EW-A is non-empty despite CorrectChoice=A — this is also a DL-008 violation (non-empty EW at CC slot)."
+      }
+    ],
+    "findings": {
+      "P1_B_008": "EW-C and EW-D describe template-level choices (cash budget positioning, direct materials budget sequencing) that do not match the actual item choices (tax return first, budgeted balance sheet first). The EW text is on-topic for budget sequencing but describes different specific choices than what the item renders. Template divergence.",
+      "P1_B_025": "Complete +1 shift: all EW fields belong to P1-B-026 (forecast error analysis). Items B-025 and B-026 appear to share the same rotation group. P1-B-025 is the CC=A item with EW fields from the CC=D template slot. The empty EW-D in B-025 (should be empty since CC=A) confirms the shift — D is the correct empty slot for P1-B-026 (CC=D). P1-B-025 also carries a DL-008 violation: EW-A is non-empty while CorrectChoice=A."
+    },
+    "rotation_group_analysis": "Items B-021 through B-025 form a 5-item rotation group (expected value, regression, learning curve, cash budget borrowing, budgetary slack). P1-B-025 is the last seed in this group. Items B-026 through B-030 form the next 5-item group (forecast error, budget committee, continuous planning, production budget 13, materials purchases 14). P1-B-026 is the first seed in its group. The DL-016 shift at B-025→B-026 boundary suggests the rotation template assigned EW text across group boundaries.",
+    "certified_impact": "Both DL-016 residue items (P1-B-008, P1-B-025) are Certified and in the learner delivery pool. P1-B-025 additionally has a DL-008 violation (non-empty EW-A at CC=A slot). Educational impact: learners who select wrong answers on B-008 choices C/D and B-025 choices A/B/C see feedback about unrelated topics."
+  }
+}

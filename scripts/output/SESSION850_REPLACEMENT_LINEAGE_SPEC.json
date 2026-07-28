@@ -1,0 +1,61 @@
+{
+  "specId": "SESSION850_REPLACEMENT_LINEAGE_SPEC",
+  "board": "E",
+  "title": "Replacement Lineage Tracker",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Track original→replacement→certification→promotion lineage for every modernized item. Supports full auditability of the modernization process.",
+  "scriptFile": "scripts/replacement_lineage_tracker.js",
+  "outputFile": "scripts/output/replacement_lineage.json",
+  "inputs": {
+    "packFiles": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+    "seedOperationsOutput": "scripts/output/seed_operations.json",
+    "archivalLogs": "reports/"
+  },
+  "lineageFields": {
+    "originalQID": "The QID that was replaced",
+    "replacementQID": "The QID of the replacement item",
+    "replacementDate": "ISO 8601 date of replacement",
+    "replacementType": "clone_archival | rewrite | seed_promotion | de_novo",
+    "certificationStatus": "Certified | In Audit | Unprocessed | Archived",
+    "certificationDate": "ISO 8601 date of certification",
+    "seedFlag": "boolean — true if this item is a DL-012 seed",
+    "clusterId": "DL-012 cluster identifier or TF-xxxx template family"
+  },
+  "output": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "summary": {
+        "totalLineages": "integer",
+        "totalReplacements": "integer",
+        "totalSeeds": "integer",
+        "certifiedReplacements": "integer",
+        "pendingReplacements": "integer"
+      },
+      "lineages": [
+        {
+          "lineageId": "string",
+          "originalQID": "string",
+          "replacementQID": "string",
+          "replacementDate": "string",
+          "replacementType": "string",
+          "certificationStatus": "string",
+          "certificationDate": "string or null",
+          "seedFlag": "boolean",
+          "pack": "string",
+          "section": "string",
+          "domain": "string",
+          "notes": "string"
+        }
+      ]
+    }
+  },
+  "usage": "node scripts/replacement_lineage_tracker.js",
+  "dependencies": {
+    "engine": ["scripts/engine/pack_reader.js", "scripts/engine/template_family.js"]
+  }
+}

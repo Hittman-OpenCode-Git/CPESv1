@@ -1,0 +1,74 @@
+{
+  "session": "708",
+  "timestamp": "2026-07-25",
+  "analysis_only": true,
+  "methodology": "G-NEW-3 within-object CorrectChoice extraction via Function constructor parse",
+  "dl008": {
+    "total": 0,
+    "certified": 0,
+    "by_pack": {
+      "pack_a": 0,
+      "pack_b": 0,
+      "pack_c": 0,
+      "pack_d": 0,
+      "pack_e": 0
+    },
+    "verdict": "CROSS-PACK DL-008 = 0. All ExplanationWrong[CorrectChoice] slots empty across 2,500 items."
+  },
+  "dl016": {
+    "pack_a_section_b_residual": 0,
+    "pack_c_residual": 0,
+    "notes": "Rotation Group 1 remediated (S705). B-008/B-025 remediated (S707). Pack C 30 DL-008_PLUS_DL-016 items all cleared in S703."
+  },
+  "dl025": {
+    "total_certified_with_empty_distractors": 13,
+    "by_pack": {
+      "pack_a": {
+        "count": 1,
+        "qids": [
+          "P1-B-001"
+        ]
+      },
+      "pack_b": {
+        "count": 0
+      },
+      "pack_c": {
+        "count": 2,
+        "qids": [
+          "P1-BC-094",
+          "P1-DC-019"
+        ]
+      },
+      "pack_d": {
+        "count": 10,
+        "qids": [
+          "P1-AD-047",
+          "P1-AD-052",
+          "P1-BD-014",
+          "P1-BD-042",
+          "P1-BD-047",
+          "P1-CD-002",
+          "P1-CD-012",
+          "P1-CD-031",
+          "P1-DD-006",
+          "P1-DD-025"
+        ]
+      },
+      "pack_e": {
+        "count": 0
+      }
+    }
+  },
+  "known_remediation_confirmations": {
+    "pack_a_post_s707_clean": true,
+    "pack_c_post_s703_dl008_zero": true,
+    "pack_d_post_s704_dl008_zero": true,
+    "p1_b_001_dl008_clean": true,
+    "p1_b_008_clean": true,
+    "p1_b_025_clean": true,
+    "bd_095_parse_repair_present": true,
+    "fd_046_archived": true,
+    "fd_045_unchanged": true,
+    "fd_075_unchanged": true
+  }
+}

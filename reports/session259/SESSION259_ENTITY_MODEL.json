@@ -1,0 +1,228 @@
+{
+  "specId": "SESSION259_ENTITY_MODEL",
+  "session": "259",
+  "title": "May Admin Query Layer — Canonical Entity Models",
+  "program": "250-Series — Administrative Operations Platform",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T19:20:00.000Z",
+  "purpose": "Define canonical entity schemas for Question, Session, Challenge, and Recommendation lookups. All field names are drawn from existing registry schemas. Each entity model defines the minimal complete representation an admin query must return.",
+  "authority": "Derived from 6 S252 engines and 5 registration data files in scripts/output/",
+
+  "entities": {
+
+    "Question": {
+      "description": "Complete question entity with identity, content, health, history, and cross-references.",
+      "lookupKey": "questionId (QID)",
+      "derivedFrom": [
+        "question_history.json (identity, timeline, sessions, challenges, defects, recommendations, certifications)",
+        "question_health.json (health_score, health_tier, component_scores, structural_flags)",
+        "pack_*_corrected.js (Stem, Choices, CorrectChoice, ExplanationCorrect, ExplanationWrong[A-D], question_state)",
+        "investigation_registry.json (INV-IDs linked to QID)"
+      ],
+      "schema": {
+        "identity": {
+          "questionId": "string — e.g. P1-A-001",
+          "pack": "string — pack_a | pack_b | pack_c | pack_d | pack_e",
+          "section": "string — A | B | C | D | E | F",
+          "sectionName": "string — e.g. External Financial Reporting Decisions",
+          "topic": "string — e.g. A.001 balance sheet current classification",
+          "cognitiveLevel": "string — Remember | Understand | Apply | Analyze | Evaluate",
+          "difficulty": "string — Easy | Moderate | Difficult",
+          "difficultyScore": "integer — 1-5"
+        },
+        "state": {
+          "questionState": "string — Certified | In Audit | Unprocessed | Archived",
+          "certificationDate": "string | null",
+          "certificationBatch": "string | null",
+          "losTag": "string — e.g. A.1 Financial statements"
+        },
+        "content": {
+          "stem": "string — full question text",
+          "choices": { "A": "string", "B": "string", "C": "string", "D": "string" },
+          "correctChoice": "string — A | B | C | D",
+          "explanationCorrect": "string — trimmed to 2000 chars",
+          "distractorExplanations": { "A": "string", "B": "string", "C": "string", "D": "string" },
+          "itemType": "string — MCQ",
+          "calculationItem": "boolean"
+        },
+        "health": {
+          "healthScore": "integer 0-100",
+          "healthTier": "string — HEALTHY | FAIR | NEEDS ATTENTION | CRITICAL",
+          "componentScores": {
+            "defect": "integer 0-100",
+            "challenge": "integer 0-100",
+            "recommendation": "integer 0-100",
+            "certification": "integer 0-100",
+            "structural": "integer 0-100",
+            "usage": "integer 0-100"
+          },
+          "diagnosis": "string — human-readable summary"
+        },
+        "history": {
+          "sessions": "[{ sessionId, activity, date, mode, title, series }]",
+          "challenges": "[{ challengeId, status, type, reportedDate, resolution }]",
+          "recommendations": "[{ recommendationId, type, sourceScan, severity, status, description }]",
+          "defects": "[{ defectId, severity, status, class, domain, description }]",
+          "certifications": "[{ sessionId, type, date, title }]"
+        },
+        "investigations": "[{ investigationId, status, type, priority, severity }]",
+        "readiness": {
+          "readinessScore": "integer 0-100",
+          "readinessTier": "string — READY | REMEDIATE | BLOCKED",
+          "qualityVerdict": "string — SAFE | WARN | DANGER"
+        }
+      }
+    },
+
+    "Session": {
+      "description": "Complete session entity with linked questions, outcomes, and recommendations.",
+      "lookupKey": "sessionId",
+      "derivedFrom": [
+        "session_registry.json (identity, questions, mode, series)",
+        "session_intelligence_engine.js (cross-references, certified exposure ratios)",
+        "investigation_registry.json (INV-IDs opened/closed in session)",
+        "recommendation_registry.json (REC-IDs created or acted upon in session)"
+      ],
+      "schema": {
+        "identity": {
+          "sessionId": "string — e.g. '3', 'S89B', 'S254'",
+          "title": "string — e.g. Critical Certified Defects Repaired",
+          "series": "string — e.g. Early Content Audit",
+          "date": "string — ISO date or empty",
+          "mode": "string — IMPLEMENTATION | READ-ONLY | UNKNOWN"
+        },
+        "questions": {
+          "totalQuestions": "integer",
+          "certifiedCount": "integer",
+          "certifiedRatio": "float 0-1",
+          "uniqueQids": "[string — QID list]"
+        },
+        "challenges": {
+          "totalChallenges": "integer",
+          "challengeIds": "[string — CH-ID list]"
+        },
+        "recommendations": {
+          "recommendationsGenerated": "[{ recommendationId, type, severity }]",
+          "recommendationsActedUpon": "[{ recommendationId, action }]"
+        },
+        "investigations": {
+          "investigationsOpened": "[{ investigationId, type }]",
+          "investigationsClosed": "[{ investigationId, resolution_type }]"
+        },
+        "outcomes": {
+          "certificationDecisions": "[string]",
+          "defectsFound": "[string — defect codes]",
+          "defectsRepaired": "[string — defect codes]",
+          "questionsCertified": "[string — QIDs]"
+        }
+      }
+    },
+
+    "Challenge": {
+      "description": "Complete challenge entity with triage classification and resolution history.",
+      "lookupKey": "challengeId",
+      "derivedFrom": [
+        "challenge_registry.json (identity, status, linked entities)",
+        "challenge_triage.json (classification, confidence, defect codes, priority)",
+        "challenge_triage_engine.js (triage logic and routing)",
+        "investigation_registry.json (INV-IDs from challenge)"
+      ],
+      "schema": {
+        "identity": {
+          "challengeId": "string — e.g. CH-CC1ECA89",
+          "type": "string — CONTENT_ERROR | TECHNICAL_ISSUE | ANSWER_DISPUTE | EXPLANATION_ISSUE | AMBIGUITY | OTHER",
+          "status": "string — OPEN | INVESTIGATING | RESOLVED | CLOSED | DISMISSED",
+          "questionId": "string — linked QID",
+          "studentId": "string — synthetic seed data",
+          "reportedDate": "string — ISO date",
+          "studentDescription": "string",
+          "priority": "string — HIGH | MEDIUM | LOW"
+        },
+        "triage": {
+          "assignedCategory": "string — LIKELY_DEFECT | GOVERNANCE_ESCALATION | NEEDS_REVIEW",
+          "confidence": "integer 0-100",
+          "reasoning": "string — classification rationale",
+          "recommendedAction": "string",
+          "relatedDefectCodes": "[string — DL-xxx codes]",
+          "priorityScore": "integer 0-100"
+        },
+        "linkedEntities": {
+          "linkedSessions": "[string — session IDs]",
+          "linkedRecommendations": "[string — REC-IDs]",
+          "linkedDefects": "[string — defect codes]"
+        },
+        "resolution": {
+          "resolutionType": "string | null — CONFIRMED_DEFECT | CONFIRMED_VALID | INCONCLUSIVE | DUPLICATE | NO_ACTION",
+          "resolutionDate": "string | null",
+          "resolutionAuthor": "string | null",
+          "resolutionSession": "string | null",
+          "resolutionNotes": "string | null"
+        },
+        "investigations": "[{ investigationId, status, type }]"
+      }
+    },
+
+    "Recommendation": {
+      "description": "Complete recommendation entity with origin, impact, status, and closure.",
+      "lookupKey": "recommendationId",
+      "derivedFrom": [
+        "recommendation_registry.json (identity, QID targets, severity, status)",
+        "recommendation_auto_router.js (routing logic)",
+        "question_history.json (QID existence validation)"
+      ],
+      "schema": {
+        "identity": {
+          "recommendationId": "string — e.g. REC-5B1E489D",
+          "type": "string — REMEDIATE | REVIEW | CERTIFY",
+          "sourceScan": "string — e.g. DL-008, DL-026",
+          "severity": "string — CRITICAL | HIGH | MEDIUM | LOW",
+          "status": "string — Open | Resolved | Closed",
+          "description": "string"
+        },
+        "impact": {
+          "questionIds": "[string — target QIDs]",
+          "count": "integer — number of target QIDs",
+          "targetSession": "string — planned remediation session"
+        },
+        "origin": {
+          "createdSession": "string — session that generated recommendation",
+          "createdTimestamp": "string — ISO timestamp",
+          "scanArtifactSource": "string"
+        },
+        "closure": {
+          "resolutionSession": "string | null",
+          "resolutionTimestamp": "string | null",
+          "resolutionHistory": "[string — narrative entries]",
+          "verifiedBy": "string | null — session that verified resolution"
+        }
+      }
+    }
+
+  },
+
+  "crossEntityRelationships": {
+    "question→challenge": "One-to-many: question_history.challenges[].challengeId ↔ challenge_registry.challenges[].challengeId",
+    "question→session": "Many-to-many: question_history.sessions[].sessionId ↔ session_registry.sessions[].sessionId",
+    "question→recommendation": "Many-to-many: recommendation_registry.recommendations[].questionIds[] ↔ question_history.questions[questionId]",
+    "question→defect": "One-to-many: question_history.defectHistory[].defectId ↔ DEFECT_LIBRARY.md",
+    "question→certification": "One-to-many: question_history.certificationHistory[].sessionId ↔ REVISION_HISTORY.md, certification_waves.json",
+    "challenge→investigation": "One-to-one: challenge_registry.challenges[].challengeId ↔ investigation_registry.investigations[].related_challenges[]",
+    "challenge→session": "Many-to-many: challenge_registry.challenges[].linkedSessions[] ↔ session_registry.sessions[].sessionId",
+    "challenge→recommendation": "Many-to-many: challenge_registry.challenges[].linkedRecommendations[] ↔ recommendation_registry.recommendations[].recommendationId",
+    "investigation→recommendation": "Many-to-many: investigation_registry.investigations[].related_recommendations[] ↔ recommendation_registry.recommendations[].recommendationId"
+  },
+
+  "cardinalitySummary": {
+    "totalQuestions": 2540,
+    "totalSessions": 40,
+    "totalChallenges": 35,
+    "totalRecommendations": 5,
+    "totalInvestigations": 19,
+    "totalDefectClassesKnown": 36,
+    "questionSessionLinks": 564,
+    "questionRecommendationLinks": 2482,
+    "questionChallengeLinks": 35,
+    "sessionQuestionLinks": 1163,
+    "challengeTriageComplete": 35
+  }
+}

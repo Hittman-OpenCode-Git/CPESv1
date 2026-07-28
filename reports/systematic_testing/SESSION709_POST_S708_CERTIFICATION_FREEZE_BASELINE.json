@@ -1,0 +1,93 @@
+{
+  "baseline_name": "Post-S708 Remediation Wave Baseline",
+  "session": "S709",
+  "date": "2026-07-25",
+  "freeze_rationale": "The S703-S708 remediation wave eliminated DL-008, DL-016, and DL-025 across all 2,500 QIDs. The 700-series certification state is stable with 2,181 Certified items, 0 Editorial Queue items. DL-026 (13 Certified items) is a non-blocking pedagogical quality gap. This baseline freezes the certification state to prevent drift while the 100-series May and 500-series case-bank lanes proceed concurrently.",
+  "what_is_frozen": {
+    "certification_state": "All question_state values frozen as documented below. No state transitions permitted without a new 700-series session.",
+    "certification_blocking_defects": "DL-008, DL-016, DL-025 are at zero and must not regress.",
+    "learner_pool": "2,181 Certified items constitute the learner delivery pool.",
+    "certification_governance": "Governance guard Rule 2 (DL-008 BLOCK), Rule 3 (registry generation), Rule 5 (30-item batch cap) remain active."
+  },
+  "what_is_not_frozen": {
+    "dl026_remediation": "Optional — can proceed in S710 if user authorizes.",
+    "dl031_dl032_difficulty": "Optional — can proceed in S711 if user authorizes.",
+    "non_certified_dl026": "Optional — can proceed in S712 if user authorizes.",
+    "100_series_may_lane": "Active concurrently — not in 700-series scope.",
+    "500_series_case_bank_lane": "Active concurrently — not in 700-series scope."
+  },
+  "state_counts": {
+    "total_qids": 2500,
+    "total_certified": 2181,
+    "total_editorial_queue": 0,
+    "total_archived": 132,
+    "total_unprocessed": 187,
+    "pack_a": { "qids": 500, "certified": 481, "editorial_queue": 0, "archived": 19, "unprocessed": 0 },
+    "pack_b": { "qids": 500, "certified": 500, "editorial_queue": 0, "archived": 0, "unprocessed": 0 },
+    "pack_c": { "qids": 500, "certified": 350, "editorial_queue": 0, "archived": 56, "unprocessed": 94 },
+    "pack_d": { "qids": 500, "certified": 350, "editorial_queue": 0, "archived": 57, "unprocessed": 93 },
+    "pack_e": { "qids": 500, "certified": 500, "editorial_queue": 0, "archived": 0, "unprocessed": 0 }
+  },
+  "residual_defect_counts": {
+    "dl008": 0,
+    "dl016": 0,
+    "dl025": 0,
+    "dl026_certified": 13,
+    "dl026_non_certified": 299
+  },
+  "dl026_treatment": {
+    "classification": "Minor pedagogical quality gap — not a certification blocker",
+    "certified_items": 13,
+    "description": "Each affected Certified item has exactly one empty distractor ExplanationWrong slot. Learners selecting that specific distractor see no educational feedback. All items are DL-008 clean (empty ExplanationWrong[CorrectChoice]). Correct answers, stems, and choices are unaffected.",
+    "remediation": "Optional. If authorized, S710 would add choice-specific distractor explanations without changing answer keys, stems, choices, or certification states.",
+    "certification_impact": "None — all 13 items remain Certified. The empty distractor slot is a quality-of-feedback gap, not an accuracy defect."
+  },
+  "optional_follow_ons": {
+    "s710_certified_dl026": {
+      "scope": "13 Certified DL-026 items",
+      "goal": "Add missing distractor explanations",
+      "risk": "Low — no answer key, stem, choice, or state changes",
+      "status": "Not started"
+    },
+    "s711_difficulty_recalibration": {
+      "scope": "DL-031 (definition-match MCQs) + DL-032 (case uniform difficulty)",
+      "goal": "Recalibrate difficulty metadata",
+      "risk": "Medium — metadata-only, no content changes, but scope is ~500 items",
+      "status": "Not started"
+    },
+    "s712_non_certified_dl026": {
+      "scope": "299 non-Certified DL-026 items in Unprocessed/Archived pools",
+      "goal": "Prepare items for future certification",
+      "risk": "Low — outside learner pool, no urgency",
+      "status": "Not started"
+    }
+  },
+  "source_reports": [
+    "reports/session_status/SESSION708_CROSS_PACK_CERTIFICATION_STATE_AND_RESIDUAL_DEFECT_AUDIT.md",
+    "reports/systematic_testing/SESSION708_PREFLIGHT_CONCURRENCY_AND_STATE_AUDIT.json",
+    "reports/systematic_testing/SESSION708_CROSS_PACK_STATE_COUNT_AUDIT.json",
+    "reports/systematic_testing/SESSION708_RESIDUAL_DL008_DL016_DL025_AUDIT.json",
+    "reports/systematic_testing/SESSION708_DL026_DEFINITION_AND_RESIDUAL_AUDIT.json",
+    "reports/systematic_testing/SESSION708_CROSS_PACK_RESIDUAL_DEFECT_LEDGER.json"
+  ],
+  "scan_tools_used": [
+    "tools/qc/analyze_s708_cross_pack_residuals.js (Function constructor parse, within-object CC extraction)",
+    "Select-String grep (direct pattern matching for state counts)",
+    "scripts/test_governance_guard.js (20-test matrix)"
+  ],
+  "no_change_attestation": {
+    "pack_files_changed": false,
+    "case_bank_files_changed": false,
+    "may_files_changed": false,
+    "scoring_runtime_files_changed": false,
+    "certification_states_changed": false,
+    "answer_keys_changed": false,
+    "stems_changed": false,
+    "choices_changed": false,
+    "explanations_changed": false,
+    "dl026_remediated": false,
+    "dl031_remediated": false,
+    "dl032_remediated": false
+  },
+  "freeze_statement": "As of S709, the 700-series certification baseline is frozen at 2,500 QIDs, 2,181 Certified, 0 Editorial Queue, 132 Archived, and 187 Unprocessed. Certification-blocking defects DL-008, DL-016, and DL-025 are zero across the certified learner pool and the full 2,500-QID inventory."
+}

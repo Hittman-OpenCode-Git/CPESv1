@@ -1,0 +1,1029 @@
+{
+  "session": "S201",
+  "agent": "G",
+  "task": "Board 6: Board Consolidation Study",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY",
+  "sources": [
+    "knowledge/CAQS_v1.0.md §8 (7-gate pipeline), §9 (audit workflow)",
+    "knowledge/QUESTION_METADATA_STANDARD.md §9 (governance states)",
+    "knowledge/DEFECT_LIBRARY.md (DL-001 through DL-033)",
+    "ai/WORKFLOWS.md (8 standard workflows)",
+    "ai/COLLABORATION_MATRIX.md (persona authority)",
+    "reports/SESSION200_BOARD_CONSOLIDATION.json (Agent H: 9→4 proposal)",
+    "reports/SESSION200_OVERLAP_ANALYSIS.json (Agent D: DR-001–DR-008)",
+    "reports/SESSION201_DUPLICATION_MATRIX.json (Agent D: 22-scan DL-008 history)",
+    "reports/SESSION201_IDENTITY_ARCHITECTURE.json (Agent E: compound key)"
+  ],
+
+  "current_boards": [
+    {
+      "id": "BOARD_01",
+      "name": "Technical Review Board",
+      "caqs_gate": "G1 — Technical Review",
+      "checked_by": "Accountant persona",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "TECH-01", "check": "Accounting accuracy — correct treatment under GAAP/COSO/IFRS", "dimension": "CAQS Dimension 3 (15%)"},
+        {"id": "TECH-02", "check": "Standard/framework reference correctness (ASC section match, COSO principle accuracy)", "dimension": "Dimension 3"},
+        {"id": "TECH-03", "check": "Numerical integrity — independent recalculation of stored answers", "dimension": "CAQS Dimension 6 (10%)"},
+        {"id": "TECH-04", "check": "Business realism — named company, realistic scenario, authentic business context", "dimension": "CAQS Dimension 5 (10%)"},
+        {"id": "TECH-05", "check": "Formula correctness — correct formula selection, correct variable substitution", "dimension": "Dimension 6"},
+        {"id": "TECH-06", "check": "Correct answer verification — stored CorrectChoice matches independently derived answer", "dimension": "Dimensions 3+6"},
+        {"id": "TECH-07", "check": "Conceptual correctness — terminology, framework hierarchy, principle application", "dimension": "Dimension 3"},
+        {"id": "TECH-08", "check": "DL-030 detection: answer-key errors (wrong CC, displaced rotation-group CC)", "dimension": "Cross-cutting"}
+      ],
+      "fields_examined": [
+        "Stem", "Choices.{A,B,C,D}", "CorrectChoice", "ExplanationCorrect",
+        "ExplanationWrong{A,B,C,D}", "Topic", "AccountingPrinciple", "FormulaReference",
+        "DifficultyScore", "CognitiveLevel", "LOSTag"
+      ],
+      "decisions": ["PASS (technically accurate)", "FAIL (accounting error)", "ESCALATE (uncertain — requires human review)"],
+      "outputs": [
+        "Technical Review Report",
+        "Item-level score on CAQS Dimensions 2, 3, 5",
+        "CorrectChoice verification record"
+      ],
+      "unique_scope_pct": 80,
+      "overlap_score": {
+        "G4_EQS": 55,
+        "G2_DQS": 30,
+        "Learner_Safety": 50,
+        "QA_Board": 10,
+        "average_cross_board_overlap": 36.3
+      },
+      "false_positive_rate": "LOW — accounting rules have binary truth values",
+      "false_negative_rate": "LOW-MEDIUM — DL-030 (5 CC errors) + DL-009 (2 ASC citation errors) escaped",
+      "consolidation_candidate": "YES — highest-overlap board. 55% overlap with EQS on same ExplanationCorrect text.",
+      "essentially_replaces": []
+    },
+    {
+      "id": "BOARD_02",
+      "name": "DQS (Distractor Quality Score)",
+      "caqs_gate": "G2 — Psychometric Review",
+      "checked_by": "Psychometrician persona",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "DQS-01", "check": "Blueprint alignment — maps to specific IMA Learning Outcome Statement", "dimension": "CAQS Dimension 1 (20%)"},
+        {"id": "DQS-02", "check": "Distractor quality — each distractor targets a distinct, realistic misconception", "dimension": "CAQS Dimension 4 (15%)"},
+        {"id": "DQS-03", "check": "Accessibility/fairness/bias — no cueing, culturally neutral", "dimension": "CAQS Dimension 9 (5%)"},
+        {"id": "DQS-04", "check": "Difficulty calibration — matches Bloom's taxonomy level and LOS depth", "dimension": "Dimension 1+2"},
+        {"id": "DQS-05", "check": "Bloom's taxonomy alignment — cognitive level drives question design", "dimension": "CAQS Dimension 2 (15%)"},
+        {"id": "DQS-06", "check": "Cueing and pattern analysis — grammatical, length, position bias checks", "dimension": "Dimension 9"},
+        {"id": "DQS-07", "check": "Answer-position balance — 22-28% per A/B/C/D slot", "dimension": "Dimension 4"},
+        {"id": "DQS-08", "check": "DL-031 detection: definition-match difficulty inflation (stem≈answer choice)", "dimension": "Dimension 2"}
+      ],
+      "fields_examined": [
+        "Stem", "Choices.{A,B,C,D}", "CorrectChoice", "ExplanationCorrect",
+        "ExplanationWrong{A,B,C,D}", "Difficulty", "DifficultyScore", "CognitiveLevel",
+        "BloomLevel", "LOSTag", "BlueprintDomain"
+      ],
+      "decisions": ["PASS (psychometrically sound)", "RECALIBRATE (difficulty/level mismatch)", "FAIL (cueing/bias/flawed design)"],
+      "outputs": [
+        "Psychometric Review Report",
+        "Item-level score on CAQS Dimensions 1, 4, 9",
+        "Difficulty recalibration recommendations"
+      ],
+      "unique_scope_pct": 55,
+      "overlap_score": {
+        "G1_Technical": 30,
+        "G4_EQS": 70,
+        "UIQS": 40,
+        "Learner_Safety": 15,
+        "average_cross_board_overlap": 38.8
+      },
+      "false_positive_rate": "LOW — psychometric rules are well-defined",
+      "false_negative_rate": "HIGH — DL-031 (~500 items systematically mislabeled Moderate when Easy). DL-032 (all 420 case items uniformly Moderate). 0 items labeled Very Difficult or Evaluate.",
+      "consolidation_candidate": "YES — 70% overlap with EQS on same EW field review. Both read every ExplanationWrong[A-D] slot.",
+      "essentially_replaces": []
+    },
+    {
+      "id": "BOARD_03",
+      "name": "EQS (Explanation Quality Score)",
+      "caqs_gate": "G4 — Instructional Review",
+      "checked_by": "Editor persona",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "EQS-01", "check": "Explanation quality — mini-lesson standard: concept + solution + business interpretation + exam trap", "dimension": "CAQS Dimension 7 (10%)"},
+        {"id": "EQS-02", "check": "Writing clarity — professional business tone, active voice, no grammatical errors", "dimension": "CAQS Dimension 8 (5%)"},
+        {"id": "EQS-03", "check": "EV1-EV8 compliance — 50-char minimum, no placeholder, ASC citation present, no uncertain language", "dimension": "§4.4"},
+        {"id": "EQS-04", "check": "Distractor explanation distinctness — each EW field is choice-specific, not reused text", "dimension": "Dimension 7"},
+        {"id": "EQS-05", "check": "Educational value — LS1-LS5 learning science compliance", "dimension": "Dimension 7"},
+        {"id": "EQS-06", "check": "ExplanationCorrect depth — formula with substitution, business interpretation, exam trap present", "dimension": "Dimension 7"},
+        {"id": "EQS-07", "check": "COSO/framework citation presence — governing standard named in explanation", "dimension": "Dimension 7"},
+        {"id": "EQS-08", "check": "Choice-specificity — each EW field text addresses its specific choice letter, not the +1 neighbor", "dimension": "Dimension 7"}
+      ],
+      "fields_examined": [
+        "ExplanationCorrect", "ExplanationWrong{A,B,C,D}", "Choices.{A,B,C,D}",
+        "CorrectChoice", "Stem", "AccountingPrinciple"
+      ],
+      "decisions": ["PASS (explanation meets instructional standard)", "REWRITE (one or more EW/EC fields need revision)", "FAIL (explanation is missing/generic)"],
+      "outputs": [
+        "Instructional Review Report",
+        "Item-level score on CAQS Dimensions 7, 8",
+        "Explanation revision requirements (specific slots, issues)"
+      ],
+      "unique_scope_pct": 45,
+      "overlap_score": {
+        "G1_Technical": 60,
+        "G2_DQS": 70,
+        "Learner_Safety": 40,
+        "QA_Board": 40,
+        "average_cross_board_overlap": 52.5
+      },
+      "false_positive_rate": "MEDIUM-HIGH — scanner EV flags produce false positives on legitimate content. S313: 26 scanner observations across 10 items, ALL adjudicated false positives.",
+      "false_negative_rate": "MEDIUM — DL-013 boilerplate (2,587 fields) escaped initial authoring. DL-025/026 empty distractor slots only caught in later sweeps.",
+      "consolidation_candidate": "YES — lowest unique scope (45%). 70% overlap with DQS. 60% overlap with Technical. Both read EW and EC fields.",
+      "essentially_replaces": []
+    },
+    {
+      "id": "BOARD_04",
+      "name": "UIQS (User Interface Quality Score)",
+      "caqs_gate": "N/A — not in CAQS 7-gate pipeline",
+      "checked_by": "Application-layer reviewer",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "UIQS-01", "check": "Question rendering correctness — choices displayed match content-block values (no DL-016 shift)", "dimension": "Rendering"},
+        {"id": "UIQS-02", "check": "Screen-reader compatibility — ARIA labels, heading hierarchy, alt text", "dimension": "Accessibility"},
+        {"id": "UIQS-03", "check": "Keyboard-only navigation — tab order, focus indicators, Enter/Space activation", "dimension": "Accessibility"},
+        {"id": "UIQS-04", "check": "Color independence — no information conveyed by color alone", "dimension": "Accessibility"},
+        {"id": "UIQS-05", "check": "Responsive scaling — usable at 150% zoom, no horizontal scrolling", "dimension": "Rendering"},
+        {"id": "UIQS-06", "check": "Focus indicators — visible on all interactive elements", "dimension": "Accessibility"},
+        {"id": "UIQS-07", "check": "Tab order — follows logical reading order", "dimension": "Navigation"}
+      ],
+      "fields_examined": [
+        "Choices.{A,B,C,D} (rendering layer only — NOT content correctness)"
+      ],
+      "decisions": ["PASS (UI compliant)", "FAIL (rendering/accessibility defect)"],
+      "outputs": [
+        "UI Quality Validation Report",
+        "Accessibility compliance score"
+      ],
+      "unique_scope_pct": 95,
+      "overlap_score": {
+        "QA_Board": 15,
+        "average_cross_board_overlap": 15
+      },
+      "false_positive_rate": "VERY LOW — rendering is binary (correct/incorrect display)",
+      "false_negative_rate": "UNKNOWN — no documented UI defects in DEFECT_LIBRARY",
+      "consolidation_candidate": "CONDITIONAL — highest unique scope (95%). Fundamentally different competency (front-end vs. content). Consolidation risk: Quality Board agents lack UI expertise.",
+      "essentially_replaces": []
+    },
+    {
+      "id": "BOARD_05",
+      "name": "Learner Safety Review",
+      "caqs_gate": "N/A — cross-cutting governance concern",
+      "checked_by": "Governance Auditor",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "LS-01", "check": "DL-008: non-empty ExplanationWrong[CorrectChoice] in Certified items", "dimension": "Structural safety"},
+        {"id": "LS-02", "check": "DL-030: answer-key errors in Certified items", "dimension": "Content safety"},
+        {"id": "LS-03", "check": "DL-016: metadata-content Choice shift (wrong-topic feedback)", "dimension": "Structural safety"},
+        {"id": "LS-04", "check": "DL-021: absent distractor explanations (no feedback on wrong answers)", "dimension": "Structural safety"},
+        {"id": "LS-05", "check": "DL-026: empty distractor slots in active items", "dimension": "Structural safety"},
+        {"id": "LS-06", "check": "DL-010: misassigned choice explanations (wrong topic in feedback)", "dimension": "Content safety"},
+        {"id": "LS-07", "check": "Known-defective QID exclusion from delivery pool", "dimension": "Delivery safety"},
+        {"id": "LS-08", "check": "G-NEW-1 through G-NEW-5 certification-blocking conditions", "dimension": "Governance safety"}
+      ],
+      "fields_examined": [
+        "ExplanationWrong{A,B,C,D}", "ExplanationCorrect", "CorrectChoice",
+        "Choices.{A,B,C,D}", "Stem", "question_state"
+      ],
+      "decisions": ["SAFE (delivery pool eligible)", "QUARANTINE (defect present — exclude from delivery)", "HOLD (certification blocked)"],
+      "outputs": [
+        "Learner Safety Audit Report",
+        "Delivery Pool Exclusion List",
+        "Per-defect-class severity assessment"
+      ],
+      "unique_scope_pct": 20,
+      "overlap_score": {
+        "G1_Technical": 25,
+        "G4_EQS": 40,
+        "G2_DQS": 15,
+        "Certification_Board": 30,
+        "QA_Board": 70,
+        "average_cross_board_overlap": 36
+      },
+      "false_positive_rate": "HIGH — DL-029 forward-scan produced hundreds of phantom DL-008 hits (S800: 67 phantom, Pack B: 257 FPs)",
+      "false_negative_rate": "HIGH — DL-008 (539 occurrences) undetected until Build-Time AI sweep. 175 Pack C items with DL-008 in Certified pool.",
+      "consolidation_candidate": "YES — lowest unique scope (20%). Nearly all findings come from other boards' structural scan results. Delivery pool exclusion is automatable via governance guard rule.",
+      "essentially_replaces": []
+    },
+    {
+      "id": "BOARD_06",
+      "name": "QA Review Board",
+      "caqs_gate": "G5 — Metadata Review + G6 — Final Validation",
+      "checked_by": "Validator persona",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "QA-01", "check": "Automated validation suite pass/fail — run all validators", "dimension": "G6"},
+        {"id": "QA-02", "check": "Scanner observation adjudication — triage false positives from true defects", "dimension": "G5+G6"},
+        {"id": "QA-03", "check": "ExplanationValidator — EV1-EV8 rule compliance", "dimension": "§4.4"},
+        {"id": "QA-04", "check": "MetadataValidator — field presence, type checking, range validation", "dimension": "§5.1-5.2"},
+        {"id": "QA-05", "check": "Governance guard rule compliance — Rules 2, 3, 4, 5 enforcement", "dimension": "Governance"},
+        {"id": "QA-06", "check": "Structural defect detection — DL-008, DL-018, DL-025, DL-026", "dimension": "Structural"},
+        {"id": "QA-07", "check": "Duplicate QuestionID detection", "dimension": "G6"},
+        {"id": "QA-08", "check": "Count-of-QuestionID parity vs. registry", "dimension": "G6"}
+      ],
+      "fields_examined": [
+        "ALL metadata fields (QUESTION_METADATA_STANDARD.md)",
+        "ExplanationWrong{A,B,C,D}", "ExplanationCorrect", "CorrectChoice",
+        "QuestionID", "CaseID", "ItemID", "Difficulty", "DifficultyScore",
+        "CognitiveLevel", "Type", "Choices", "LOSTag", "Topic"
+      ],
+      "decisions": ["PASS (structurally compliant)", "FLAGGED (observations requiring adjudication)", "BLOCKED (governance guard violation)"],
+      "outputs": [
+        "QA Validation Report",
+        "Metadata Completeness Report",
+        "Scanner Observation Log (with adjudication status)"
+      ],
+      "unique_scope_pct": 75,
+      "overlap_score": {
+        "G4_EQS": 40,
+        "Learner_Safety": 70,
+        "Certification_Board": 15,
+        "average_cross_board_overlap": 41.7
+      },
+      "false_positive_rate": "HIGH — S313: 26/26 scanner observations = false positives. S803 GC-803-001: phantom DL-008 false alarm.",
+      "false_negative_rate": "MEDIUM — DL-020 (brace-matcher string-unawareness undercounted items). scan_dl008_dl026.js still DL-029-vulnerable.",
+      "consolidation_candidate": "YES — primary function is automated scanner operation + false-positive triage. Scanner output consumed by Learner Safety, EQS, Certification. Triaging function merges logically with Governance or Quality.",
+      "essentially_replaces": []
+    },
+    {
+      "id": "BOARD_07",
+      "name": "Certification Board",
+      "caqs_gate": "G7 — Approval (Release Manager)",
+      "checked_by": "Certification Board",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "CERT-01", "check": "Per-item CERTIFY/HOLD/ESCALATE decision", "dimension": "§9.2 state transitions"},
+        {"id": "CERT-02", "check": "Evidence synthesis from ALL prerequisite reviews", "dimension": "G1-G6"},
+        {"id": "CERT-03", "check": "Gate-by-gate pass/fail adjudication per item", "dimension": "§8.1"},
+        {"id": "CERT-04", "check": "Scanner observation adjudication (false-positive triage on structural findings)", "dimension": "G5+G6"},
+        {"id": "CERT-05", "check": "Board consensus — ALL_AGREE requirement across all evidence dimensions", "dimension": "Governance"},
+        {"id": "CERT-06", "check": "Post-certification actions — promote to state, update question_state, registry refresh", "dimension": "§9.2"},
+        {"id": "CERT-07", "check": "G-NEW-1 through G-NEW-5 enforcement validation", "dimension": "§9.4"}
+      ],
+      "fields_examined": [
+        "ALL fields — synthesis of all prior reviews",
+        "question_state (ONLY board authorized to change this field)"
+      ],
+      "decisions": ["CERTIFY (promote to Certified)", "HOLD (block until conditions met)", "ESCALATE (requires human adjudication)"],
+      "outputs": [
+        "Certification Board Results",
+        "question_state transitions",
+        "REVISION_HISTORY.md entries",
+        "Registry update triggers"
+      ],
+      "unique_scope_pct": 85,
+      "overlap_score": {
+        "All_boards": "Consumes evidence from ALL other boards. This is hierarchical (sequential dependency), not duplication. However, the board re-verifies findings rather than trusting prior board outputs — creating a full second review pass.",
+        "average_cross_board_overlap": "N/A — hierarchical, not parallel overlap"
+      },
+      "false_positive_rate": "VERY LOW — per-item evidence-based with cross-reference to raw file",
+      "false_negative_rate": "MEDIUM — DL-030 (5 answer-key errors in Certified pool) and DL-008 (539 occurrences, 175 Certified) suggest earlier certification lacked equivalent rigor. S313's 10-item pilot had 100% certification rate.",
+      "consolidation_candidate": "NO — irreplaceable governance function. ONLY board with question_state authority. Governance separation requires this to remain independent from quality review boards.",
+      "essentially_replaces": []
+    },
+    {
+      "id": "BOARD_08",
+      "name": "Readiness Review Board",
+      "caqs_gate": "N/A — session-level meta-board",
+      "checked_by": "Readiness Adjudicator",
+      "agents_typical": 1,
+      "checks": [
+        {"id": "READY-01", "check": "Pre-session Go/No-Go determination — is prerequisite pipeline complete?", "dimension": "Session gate"},
+        {"id": "READY-02", "check": "Governance attestation — guard test suite pass (27/27), no rule violations", "dimension": "Governance"},
+        {"id": "READY-03", "check": "Cross-gate prerequisite verification — all prior boards completed", "dimension": "Pipeline"},
+        {"id": "READY-04", "check": "Portfolio state confirmation — certified counts stable, no unexpected drift", "dimension": "Portfolio"},
+        {"id": "READY-05", "check": "Scoring integrity — app.js hash matches CURRENT_BASELINES.md", "dimension": "Application"},
+        {"id": "READY-06", "check": "Certification preservation — no decertification drift", "dimension": "Governance"},
+        {"id": "READY-07", "check": "pre-delivery-safety-check: 0 known-defective QIDs in delivery pool", "dimension": "Safety"}
+      ],
+      "fields_examined": [
+        "ALL metadata-level fields — certified counts, hashes, governance guard status, app.js hash"
+      ],
+      "decisions": ["READY (proceed with next session)", "CONDITIONAL (specific actions required before proceeding)", "BLOCKED (critical blocker — halt)"],
+      "outputs": [
+        "Readiness Assessment",
+        "Go/No-Go Decision",
+        "Session Conditions List",
+        "Pre-flight Verification Report"
+      ],
+      "unique_scope_pct": 90,
+      "overlap_score": {
+        "Launch_Board": 60,
+        "Certification_Board": 30,
+        "average_cross_board_overlap": 45
+      },
+      "false_positive_rate": "VERY LOW — Go/No-Go is binary with defined conditions",
+      "false_negative_rate": "LOW — conditions are linked to concrete blockers",
+      "consolidation_candidate": "YES — overlaps 60% with Launch Board. Both perform Go/No-Go authorization at different scopes (session vs. portfolio). Merging with Launch Board creates a unified 'Governance Board' with tiered authorization.",
+      "essentially_replaces": []
+    }
+  ],
+
+  "overlap_matrix": {
+    "source": "Derived from S200 Agent D (DR-001–DR-008) + S200 Agent H overlap pct + S201 Agent D field_touch_map",
+    "highest_overlap_pairs": [
+      {
+        "pair": "EQS ↔ DQS",
+        "overlap_pct": 70,
+        "shared_dimensions": "Both read every ExplanationWrong[A-D] slot per item. EQS checks clarity/completeness; DQS checks trap-engineering. Same text, overlapping criteria. DQS is essentially a specialized subset of EQS focused on distractor engineering.",
+        "combine_recommendation": "FULLY — merge into one review pass with two sub-scores (Clarity + Psychometric validity)"
+      },
+      {
+        "pair": "Learner Safety ↔ QA Board",
+        "overlap_pct": 70,
+        "shared_dimensions": "Both detect structural defects (DL-008, DL-026). QA runs scanners; Learner Safety interprets for pool exclusion. The same scan output drives both.",
+        "combine_recommendation": "FULLY — unified structural compliance + safety adjudication in one pass"
+      },
+      {
+        "pair": "Readiness ↔ Launch Board (not in current 8 but noted for completeness)",
+        "overlap_pct": 60,
+        "shared_dimensions": "Both are Go/No-Go gates. Readiness gates session transitions; Launch gates portfolio delivery.",
+        "combine_recommendation": "FULLY — merge into single Governance Board with tiered authorization"
+      },
+      {
+        "pair": "Technical ↔ EQS",
+        "overlap_pct": 55,
+        "shared_dimensions": "Both evaluate ExplanationCorrect text. Technical checks accounting correctness; EQS checks educational quality. Same text, different lens.",
+        "combine_recommendation": "PARTIALLY — unified EC review with correctness + quality sub-scores"
+      },
+      {
+        "pair": "Technical ↔ Learner Safety",
+        "overlap_pct": 50,
+        "shared_dimensions": "DL-030 (wrong answer) = both technical defect and learner-safety risk. Same defect detected independently.",
+        "combine_recommendation": "FULLY — single correctness check serves both functions"
+      }
+    ],
+    "lowest_overlap_pairs": [
+      {
+        "pair": "UIQS ↔ Technical Review",
+        "overlap_pct": 5,
+        "shared_dimensions": "UIQS checks rendering layer; Technical checks content layer. Completely different competencies.",
+        "combine_recommendation": "DO NOT combine — distinct expertise required"
+      },
+      {
+        "pair": "Certification ↔ QA Board",
+        "overlap_pct": 15,
+        "shared_dimensions": "Certification consumes QA output; QA does not make certification decisions. Sequential, not overlapping.",
+        "combine_recommendation": "DO NOT combine — governance separation is essential"
+      }
+    ],
+    "all_board_overlap_summary": {
+      "most_multiply_audited_field": "ExplanationWrong[A-D] — examined by 6 of 8 boards (Technical, EQS, DQS, Learner Safety, QA, Certification) each session, 4-7 agents independently reaching identical conclusions 95%+ of the time",
+      "most_duplicated_scan": "DL-008 — 22 scanning events across 15+ sessions, ~80-110 agent-level examinations, 2.75x redundancy ratio",
+      "most_duplicated_decision": "CERTIFY vs. not — Technical, EQS, DQS, Learner Safety, QA, and Certification ALL independently determine whether an item is certification-worthy, then Certification synthesizes and re-verifies",
+      "overall_weighted_duplication_ratio": "2.5:1 — for every genuinely needed review pass, 2.5 passes are performed"
+    }
+  },
+
+  "proposed_consolidation": {
+    "target_structure": "4 boards per task specification",
+    "rationale": "The 8-board structure has ~40% genuine unique signal and ~60% cross-board overlap. Five boards (Technical, DQS, EQS, Learner Safety, QA) review the same items through overlapping lenses. Two boards (QA, Learner Safety) are consuming the same structural scans. The CAQS v1.0 §8.1 already defines a unified 7-gate pipeline. The S200 Agent H analysis and S201 Agent D Duplication Matrix both confirm 2.5:1 duplication ratio.",
+
+    "boards": [
+      {
+        "board_name": "Registry Board",
+        "board_id": "CONSOLIDATED_01",
+        "merges_from": [
+          "NONE (new board — fills a structural gap in the current architecture)"
+        ],
+        "entry_criteria": [
+          "Pack files exist and are parseable via Function constructor",
+          "MASTER_QUESTION_REGISTRY.md exists (auto-generated per governance guard Rule 3)",
+          "Compound-key identity model adopted (QID + CorrectChoice + EW_Pattern + Template_Family + File_Path per S201 Identity Architecture)"
+        ],
+        "exit_criteria": [
+          "Registry is current — all 2,500 items inventoried with compound keys",
+          "Template family map complete — all rotation groups identified with canonical seeds",
+          "Delivery pool inventory current — exact list of Certified QIDs with compound keys",
+          "Defect cross-reference — each QID mapped to applicable DL-IDs from DEFECT_LIBRARY.md",
+          "Registry hash stable — no drift between regeneration passes"
+        ],
+        "automated_checks": [
+          {"id": "REG-AUTO-01", "check": "Build MASTER_QUESTION_REGISTRY.md via Function-constructor parse (governance guard Rule 3 enforcement — never hand-edit)",
+           "tooling": "build_master_registry.js, boundary-aware within-object extraction"},
+          {"id": "REG-AUTO-02", "check": "question_state distribution — count by state (Unprocessed/In Audit/Editorial Queue/Certified/Archived) per pack, per section",
+           "tooling": "Select-String + within-object parse"},
+          {"id": "REG-AUTO-03", "check": "QuestionID uniqueness — no duplicate QIDs across packs or within pack",
+           "tooling": "dedup scan"},
+          {"id": "REG-AUTO-04", "check": "Template family detection — Jaccard stem similarity >90% after company-name substitution",
+           "tooling": "template_family_scanner.js"},
+          {"id": "REG-AUTO-05", "check": "Compound key generation — per-item (QID, CC, EW_Pattern, Template_Family, File_Path) fingerprint",
+           "tooling": "compound_key_builder.js"},
+          {"id": "REG-AUTO-06", "check": "Known-defective QID list cross-reference — every QID checked against DEFECT_LIBRARY.md active defect entries",
+           "tooling": "defect_crossref.js"},
+          {"id": "REG-AUTO-07", "check": "Delivery pool eligibility — only question_state: Certified AND not on known-defective list",
+           "tooling": "delivery_pool_filter.js"}
+        ],
+        "human_steward_decisions": [
+          "Seed vs. clone designation in template families (which 1 of 5 items is the canonical seed?)",
+          "New QID allocation (when authoring new items, what prefix receives the next sequence?)",
+          "Archival authorization (moving items to Archived state with rollback log)",
+          "Registry format evolution (compound key field changes)"
+        ],
+        "agent_produces": [
+          "MASTER_QUESTION_REGISTRY.md (auto-generated, per-session refresh)",
+          "Template Family Map (per-pack, per-section rotation groups)",
+          "Delivery Pool Inventory (active QIDs + compound keys + safety status)",
+          "Defect Cross-Reference Index (QID → applicable DL-IDs)",
+          "Registry Delta Report (what changed since last session)"
+        ],
+        "replaces_current_boards": [
+          "New function — no existing board performs registry management",
+          "Takes over the inventory/pool management currently fragmented across:",
+          "  - Learner Safety Board (delivery pool exclusion list maintenance)",
+          "  - QA Board (QuestionID uniqueness, count-of-items parity)",
+          "  - Certification Board (question_state tracking across packs)",
+          "  - Ad-hoc per-session Select-String counts by every board"
+        ],
+        "rationale": "The current architecture has NO board responsible for the canonical inventory. Every board runs its own Select-String to count items, producing inconsistent counts (DL-029 CC-offset, DL-020 brace-matcher undercount). Per S201 Agent E's Identity Architecture analysis, QID alone is insufficient — items need compound keys. The Registry Board addresses the foundational identity problem that caused S320 remediation failure (QID-first-match grabbed wrong rotation position) and DL-029 scan contamination (CC from neighbor item). This board is the single source of truth that every other board consumes."
+      },
+      {
+        "board_name": "Quality Board",
+        "board_id": "CONSOLIDATED_02",
+        "merges_from": [
+          "Technical Review Board (BOARD_01)",
+          "DQS — Distractor Quality Score (BOARD_02)",
+          "EQS — Explanation Quality Score (BOARD_03)",
+          "UIQS — User Interface Quality Score (BOARD_04) — as sub-function",
+          "Learner Safety Board (BOARD_05) — content safety checks",
+          "QA Board (BOARD_06) — structural compliance checks"
+        ],
+        "entry_criteria": [
+          "Item exists in Registry with compound key",
+          "Item question_state is 'Unprocessed' or 'In Audit' or 'Editorial Queue'",
+          "Content block (Stem, Choices, CorrectChoice, ExplanationCorrect) present and non-empty",
+          "Metadata block (ExplanationWrong{A,B,C,D}, question_state) present",
+          "No P0 blockers (file corruption DL-017, missing question_state DL-024)"
+        ],
+        "exit_criteria": [
+          "Six-dimension AI verification produces HIGH confidence across ALL dimensions (CAQS §1.6)",
+          "All 20 Gold Standard Checklist items pass (CAQS §14.2)",
+          "All structural defect classes resolved per item context:",
+          "  - DL-008: ExplanationWrong[CorrectChoice] is empty",
+          "  - DL-026: all non-CorrectChoice EW slots are non-empty",
+          "  - DL-021: no structurally absent distractor EW fields",
+          "  - DL-010: no misassigned EW text (each EW describes its own choice)",
+          "  - DL-016: no metadata-content Choice shift (EW text topic-aligned with content block)",
+          "  - DL-013: no template boilerplate in EW fields",
+          "All EV1-EV8 rules satisfied",
+          "All G-NEW-1 through G-NEW-5 conditions satisfied",
+          "10-dimension CAQS rubric score ≥ 90 (Exam-Ready tier)",
+          "UI rendering compliance: choices display correctly, no DL-016 rendering shift",
+          "Quality verdict: CERTIFIABLE / NEEDS_REVISION / REJECT"
+        ],
+        "automated_checks": [
+          {"id": "QUAL-AUTO-01", "check": "DL-008 scan — within-object EW[CC] emptiness check", "tooling": "AM-1 Function Constructor Parse per DEFINITIVE_PARSER_VALIDATION"},
+          {"id": "QUAL-AUTO-02", "check": "DL-026 scan — non-CC EW emptiness check", "tooling": "same within-object parse"},
+          {"id": "QUAL-AUTO-03", "check": "DL-018 scan — field-presence check for all 4 EW slots", "tooling": "same within-object parse"},
+          {"id": "QUAL-AUTO-04", "check": "DL-013 scan — regex for 'represents a plausible misconception' template text", "tooling": "string match"},
+          {"id": "QUAL-AUTO-05", "check": "EV1-EV8 rule compliance — 50-char min, no placeholder, no uncertain language", "tooling": "ExplanationValidator (DL-020-fixed, string-aware)"},
+          {"id": "QUAL-AUTO-06", "check": "Metadata field presence + type validation — per QUESTION_METADATA_STANDARD.md §5.1-5.2", "tooling": "MetadataValidator"},
+          {"id": "QUAL-AUTO-07", "check": "DL-031 detection — stem-answer lexical overlap >50% + difficulty ≥ Moderate = flag", "tooling": "difficulty_inflation_scanner.js"},
+          {"id": "QUAL-AUTO-08", "check": "DL-016 detection — metadata ChoiceA-D vs. content Choices.A-D comparison", "tooling": "dual_block_comparator.js"},
+          {"id": "QUAL-AUTO-09", "check": "Governance guard Rule 2 compliance — BLOCK if EW[CC] non-empty", "tooling": "governance-guard.js (existing)"},
+          {"id": "QUAL-AUTO-10", "check": "QuestionID count vs. Registry parity", "tooling": "count comparator"}
+        ],
+        "human_steward_decisions": [
+          "Per-item CERTIFIABLE verdict confirmation (ACCEPT AI recommendation)",
+          "Low-confidence dimension override (AI confidence <80% → human reviews that dimension)",
+          "Distractor tier map (A/B/C/D) selection per item",
+          "Explanation revision authorization (what to rewrite, how)",
+          "Difficulty recalibration decision (DL-031: accept AI recommendation to downgrade Moderate→Easy?)",
+          "UI rendering edge-case adjudication"
+        ],
+        "agent_produces": [
+          "Quality Verdict per item: CERTIFIABLE / NEEDS_REVISION / REJECT",
+          "10-dimension CAQS rubric score per item",
+          "Per-dimension confidence flag (HIGH/MEDIUM/LOW) with specific issue descriptions",
+          "Structural defect inventory (DL-008/026/018/013/016/010/025 counts)",
+          "Revision requirements: specific EW[A/B/C/D] slots needing rewrite, specific issues to address",
+          "UI rendering compliance report",
+          "Aggregated section-level quality dashboard"
+        ],
+        "agent_architecture": {
+          "description": "3-4 agents operating in parallel per item batch, producing a unified quality verdict",
+          "agents": [
+            {
+              "role": "Agent 1 — Technical & Numerical",
+              "covers": "Accounting accuracy (Dimension 3), Numerical integrity (Dimension 6), Business realism (Dimension 5), Formula correctness, Correct answer verification, ASC/COSO citation accuracy, DL-030 detection",
+              "from": "Technical Review Board + Numerical Validation (G3)"
+            },
+            {
+              "role": "Agent 2 — Psychometric & Instructional",
+              "covers": "Blueprint alignment (Dimension 1), Cognitive level (Dimension 2), Distractor quality (Dimension 4), Explanation quality (Dimension 7), Writing clarity (Dimension 8), EV1-EV8 compliance, DL-013/DL-031/DL-007 detection, Difficulty calibration, Bloom's alignment, Cueing/bias analysis",
+              "from": "DQS + EQS"
+            },
+            {
+              "role": "Agent 3 — Structural & Safety",
+              "covers": "DL-008/026/018/021/025/016/010 detection, Metadata completeness (Dimension 10), Accessibility/fairness (Dimension 9), Governance guard compliance, G-NEW-1 through G-NEW-5 enforcement, Scanner observation adjudication",
+              "from": "QA Board + Learner Safety Board"
+            },
+            {
+              "role": "Agent 4 — UI & Rendering (optional, per-batch)",
+              "covers": "Question rendering correctness, DL-016 metadata-content shift rendering verification, Screen-reader compatibility, Keyboard navigation, Color independence, Responsive scaling, Focus indicators",
+              "from": "UIQS Board",
+              "note": "Agent 4 is activated only when items have changed their Choices or CorrectChoice (which could cause rendering divergence). Unchanged items inherit prior UIQS verdict. Agent 4 may be merged into Agent 3 if batch size is small."
+            }
+          ],
+          "consensus": "ALL_AGREE required for CERTIFIABLE verdict (2 of 3 agents must agree, or 3 of 4 if UI agent active). Single-agent disagreement on specific dimensions triggers HOLD with per-dimension resolution path."
+        },
+        "replaces_current_boards": [
+          "BOARD_01: Technical Review Board — Agent 1",
+          "BOARD_02: DQS Board — Agent 2 (psychometric sub-score)",
+          "BOARD_03: EQS Board — Agent 2 (instructional sub-score)",
+          "BOARD_04: UIQS Board — Agent 4 (optional, rendering compliance)",
+          "BOARD_05: Learner Safety Board — Agent 3 (structural safety checks)",
+          "BOARD_06: QA Board — Agent 3 (structural compliance)"
+        ]
+      },
+      {
+        "board_name": "Governance Board",
+        "board_id": "CONSOLIDATED_03",
+        "merges_from": [
+          "Readiness Review Board (BOARD_08)",
+          "Launch Board (identified in S200 Agent H analysis as distinct from Readiness)",
+          "Learner Safety Board (BOARD_05) — delivery pool gate function",
+          "QA Board (BOARD_06) — governance guard enforcement function"
+        ],
+        "entry_criteria": [
+          "Registry is current (MASTER_QUESTION_REGISTRY.md generated this session)",
+          "Quality Board has completed review of current batch",
+          "Pre-flight governance guard test suite: 27/27 PASS (or documented exceptions)",
+          "T0 baseline verification: all 13 runtime hashes match CURRENT_BASELINES.md (per AGENTS.md §13.1)"
+        ],
+        "exit_criteria": [
+          "Session gate:",
+          "  - Certified count stable (2 independent verifications, per AGENTS.md §5)",
+          "  - No unexpected question_state drift (no decertification without REVISION_HISTORY entry)",
+          "  - All P0 blockers resolved (0 file corruption, 0 missing state fields)",
+          "  - Governance guard test suite: 27/27 PASS",
+          "  - app.js hash unchanged from baseline",
+          "  - REVISION_HISTORY.md entry prepared for session closeout",
+          "  - Decision: SESSION_READY / SESSION_BLOCKED",
+          "",
+          "Portfolio gate:",
+          "  - All Session gate conditions met",
+          "  - Delivery pool: 0 Certified items with active DL-008, DL-030, DL-016, DL-021",
+          "  - Known-defective QID exclusion list current (cross-referenced against Registry)",
+          "  - Portfolio health thresholds met (certified % ≥ target, no critical risks)",
+          "  - Learner pool safety: pre-delivery-safety-check PASS (per AGENTS.md §7)",
+          "  - Decision: PORTFOLIO_READY / PORTFOLIO_QUARANTINED",
+          "",
+          "Session closeout:",
+          "  - Tend baseline verification: all 13 hashes match T0 (or G1-G5 reconciliation executed per AGENTS.md §13.2)",
+          "  - REVISION_HISTORY.md entry written (per AGENTS.md §4)",
+          "  - Backup protocol verified (all modified files have timestamped backups per AGENTS.md §3)",
+          "  - DEFECT_LIBRARY.md updated (any new defects discovered per AGENTS.md §12)",
+          "  - MASTER_QUESTION_REGISTRY.md regenerated (per governance guard Rule 3)"
+        ],
+        "automated_checks": [
+          {"id": "GOV-AUTO-01", "check": "Governance guard test suite — all 5 rules (Rules 1-5) per-session pre/post", "tooling": "governance-guard.js test suite"},
+          {"id": "GOV-AUTO-02", "check": "T0 baseline hash verification — all 13 runtime-critical files vs. CURRENT_BASELINES.md", "tooling": "baseline_hash_check.js"},
+          {"id": "GOV-AUTO-03", "check": "Tmid checkpoint — Pack D CAPA (hash, parse-count, FD-045/FD-046, AD-075) + app.js hash", "tooling": "midpoint_checkpoint.js (per AGENTS.md §13.2)"},
+          {"id": "GOV-AUTO-04", "check": "Certified count stability — 2 independent verifications via Select-String + Function constructor parse", "tooling": "dual_verify_certified.js"},
+          {"id": "GOV-AUTO-05", "check": "Delivery pool safety — intersection of Certified QIDs ∩ known-defective QID list (must be empty)", "tooling": "pre_delivery_safety_check.js (per skill at .opencode/skills/)"},
+          {"id": "GOV-AUTO-06", "check": "question_state drift detection — compare pre-session vs. post-session state distribution", "tooling": "state_drift_detector.js"},
+          {"id": "GOV-AUTO-07", "check": "Portfolio health metrics — certified %, archived %, quality tier distribution vs. CAQS §6.1 targets", "tooling": "portfolio_health.js"},
+          {"id": "GOV-AUTO-08", "check": "app.js hash integrity — pre/post hash comparison, Sync Anomaly Playbook on mismatch", "tooling": "hash_comparator.js (per AGENTS.md §13.3)"},
+          {"id": "GOV-AUTO-09", "check": "BACKUP_PROTOCOL compliance — all modified files have timestamped .bak copies with non-zero size", "tooling": "backup_verifier.js"},
+          {"id": "GOV-AUTO-10", "check": "REVISION_HISTORY.md write verification — entry exists with required fields (QuestionIDs, before/after counts, date, author)", "tooling": "revision_entry_validator.js"}
+        ],
+        "human_steward_decisions": [
+          "SESSION_READY vs. SESSION_BLOCKED — final authorization to proceed",
+          "PORTFOLIO_READY vs. PORTFOLIO_QUARANTINED — authorization for learner delivery",
+          "P0 blocker resolution priority — which blocking issues to fix first",
+          "Risk register updates — new critical/high risks, mitigation approval",
+          "Cross-agent discrepancy adjudication — when two agents produce conflicting portfolio metrics",
+          "Governance guard rule exception authorization (if any rule must be temporarily relaxed)",
+          "Session closure acceptance — final sign-off before REVISION_HISTORY.md write"
+        ],
+        "agent_produces": [
+          "Session Gate Decision: SESSION_READY / SESSION_BLOCKED (with conditions list)",
+          "Portfolio Gate Decision: PORTFOLIO_READY / PORTFOLIO_QUARANTINED (with quarantined items list)",
+          "Pre-flight Baseline Verification Report (T0: 13 hashes)",
+          "Mid-session Checkpoint Report (Tmid)",
+          "Closeout Verification Report (Tend: 13 hashes, G1-G5 reconciliation if drift detected)",
+          "Delivery Pool Safety Certificate (0 known-defective QIDs)",
+          "Portfolio Health Dashboard (certified %, section-level readiness, risk register status)",
+          "Session Governance Attestation (guard pass, backup protocol, REVISION_HISTORY entry)"
+        ],
+        "decision_tiers": {
+          "tier_1": {
+            "name": "SESSION_READY",
+            "description": "Authorization to begin next session. Prerequisite: all prior sessions closed with REVISION_HISTORY entries, current session's T0 baselines pass, no P0 blockers.",
+            "gated_by": ["Registry current", "T0 hashes match", "Governance guard 27/27 PASS", "P0 blockers = 0"]
+          },
+          "tier_2": {
+            "name": "SESSION_CLOSE",
+            "description": "Authorization to close current session. Prerequisite: all modifications have backups, REVISION_HISTORY entry written, DEFECT_LIBRARY updated if new defects found.",
+            "gated_by": ["Tend hashes match T0 (or G1-G5 reconciled)", "Backup protocol verified", "REVISION_HISTORY entry exists", "No staged findings (AGENTS.md §12)"]
+          },
+          "tier_3": {
+            "name": "PORTFOLIO_READY",
+            "description": "Authorization for learner-facing content delivery. Prerequisite: SESSION_READY + delivery pool safety + portfolio health thresholds met.",
+            "gated_by": ["SESSION_READY", "Delivery pool: 0 known-defective QIDs", "Portfolio health: certified % ≥ target", "Risk register: 0 critical active risks"]
+          }
+        },
+        "replaces_current_boards": [
+          "BOARD_08: Readiness Review Board — Tier 1 (SESSION_READY)",
+          "S200 LAUNCH: Launch Board — Tier 3 (PORTFOLIO_READY)",
+          "BOARD_05: Learner Safety Board — delivery pool gate function (Tier 3 safety check)",
+          "BOARD_06: QA Board — governance guard enforcement function (Tier 1 pre-flight)"
+        ]
+      },
+      {
+        "board_name": "Certification Board",
+        "board_id": "CONSOLIDATED_04",
+        "merges_from": [
+          "Certification Board (BOARD_07) — retained standalone, scope refocused"
+        ],
+        "entry_criteria": [
+          "Quality Board has produced CERTIFIABLE verdict for the item",
+          "Governance Board has authorized SESSION_CLOSE (or current session is authorized)",
+          "Registry Board has provided compound key for the item",
+          "All prerequisite evidence available:",
+          "  - Quality Board: 10-dimension rubric score + per-dimension verdict",
+          "  - Governance Board: session authorization + portfolio health status",
+          "  - Registry Board: item compound key + defect cross-reference"
+        ],
+        "exit_criteria": [
+          "Per-item decision: CERTIFY / HOLD / ESCALATE",
+          "CERTIFY requires:",
+          "  - ALL_AGREE consensus across all evidence dimensions (no agent dissents)",
+          "  - Quality Board verdict: CERTIFIABLE with ≥ 90 rubric score",
+          "  - Governance Board: no portfolio-level blockers",
+          "  - Registry Board: item not on known-defective list",
+          "  - question_state transition from 'In Audit' → 'Certified'",
+          "  - REVISION_HISTORY.md entry with QuestionIDs, verification results, before/after counts",
+          "  - Registry refresh triggered (MASTER_QUESTION_REGISTRY.md regenerated)",
+          "",
+          "HOLD requires:",
+          "  - Specific conditions documented (which dimension, what remediation needed)",
+          "  - Remediation owner assigned (routed back to Quality Board for revision)",
+          "  - Re-review path specified (which Quality Board agent(s) must re-verify)",
+          "",
+          "ESCALATE requires:",
+          "  - Human steward notified with full evidence package",
+          "  - No autonomous action taken — human decides CERTIFY/HOLD/removal"
+        ],
+        "automated_checks": [
+          {"id": "CERT-AUTO-01", "check": "ALL_AGREE consensus — verify all Quality Board sub-agents (Technical, Psychometric, Structural) concur on CERTIFIABLE", "tooling": "consensus_verifier.js"},
+          {"id": "CERT-AUTO-02", "check": "G-NEW-1 through G-NEW-5 enforcement — certification is blocked if any G-NEW condition violated", "tooling": "gnew_enforcer.js"},
+          {"id": "CERT-AUTO-03", "check": "Governance guard Rule 2 — BLOCK certification if EW[CC] non-empty", "tooling": "governance-guard.js (Rule 2)"},
+          {"id": "CERT-AUTO-04", "check": "Governance guard Rule 5 — BLOCK if batch exceeds 30 items without BLOCK-AUTHORIZED marker", "tooling": "governance-guard.js (Rule 5)"},
+          {"id": "CERT-AUTO-05", "check": "Registry cross-reference — item compound key matches Registry entry, not on known-defective list", "tooling": "registry_crossref.js"},
+          {"id": "CERT-AUTO-06", "check": "REVISION_HISTORY.md entry completeness — QuestionIDs, verification results, before/after counts, distractor tier map", "tooling": "revision_entry_validator.js"},
+          {"id": "CERT-AUTO-07", "check": "question_state transition validity — from In Audit → Certified per §9.2 state transition rules (Certified → In Audit requires explicit re-verification request)", "tooling": "state_transition_validator.js"},
+          {"id": "CERT-AUTO-08", "check": "DL-029 avoidance — all scans used within-object extraction (not forward-scan), CorrectChoice from same object as EW fields", "tooling": "methodology_verifier.js"}
+        ],
+        "human_steward_decisions": [
+          "FINAL CERTIFY/HOLD/ESCALATE decision per item (AI recommends, human approves)",
+          "CERTIFY → HOLD override (human disagrees with AI recommendation and blocks)",
+          "HOLD → CERTIFY exception authorization (human overrides AI with documented rationale)",
+          "question_state downgrade authorization (Certified → In Audit requires per §9.2 explicit re-verification request)",
+          "Batch certification authorization (when >30 items, human must insert BLOCK-AUTHORIZED marker per Rule 5)",
+          "Gold Standard designation (100/100 rubric + all checklist items — requires human sign-off)"
+        ],
+        "agent_produces": [
+          "Per-item: CERTIFY / HOLD / ESCALATE decision with evidence package",
+          "question_state transitions applied to pack files (ONLY this board writes question_state)",
+          "REVISION_HISTORY.md entries (per AGENTS.md §4: QuestionIDs, verification results, before/after counts, distractor tier map)",
+          "Certification batch summary: certified QIDs, before/after certified count, any HOLD items with conditions",
+          "Registry update trigger (notifies Registry Board to regenerate MASTER_QUESTION_REGISTRY.md)"
+        ],
+        "replaces_current_boards": [
+          "BOARD_07: Certification Board — refocused from re-verifying all evidence to consuming Quality/Governance/Registry evidence and making the final adjudication"
+        ],
+        "scope_reduction_from_current": "In the current architecture, Certification Board re-verifies every other board's findings (creating a full second review pass). In the consolidated model, Certification Board trusts Quality Board's verdict, Governance Board's authorization, and Registry Board's inventory. It performs a governance-sufficiency check (is all evidence present and self-consistent?) rather than re-performing the review. This eliminates the 1.7:1 duplication ratio at the certification level."
+      }
+    ]
+  },
+
+  "mapping": {
+    "description": "Every check from every current board mapped to its consolidated board + sub-agent",
+    "by_current_board": {
+      "BOARD_01_Technical": {
+        "destination": "Quality Board — Agent 1 (Technical & Numerical)",
+        "checks_mapped": {
+          "TECH-01_accounting_accuracy": "QUAL-Agent1",
+          "TECH-02_standard_references": "QUAL-Agent1",
+          "TECH-03_numerical_integrity": "QUAL-Agent1",
+          "TECH-04_business_realism": "QUAL-Agent1",
+          "TECH-05_formula_correctness": "QUAL-Agent1",
+          "TECH-06_correct_answer_verification": "QUAL-Agent1",
+          "TECH-07_conceptual_correctness": "QUAL-Agent1",
+          "TECH-08_DL030_detection": "QUAL-Agent1 ↔ QUAL-Agent3 (structural verification)"
+        }
+      },
+      "BOARD_02_DQS": {
+        "destination": "Quality Board — Agent 2 (Psychometric & Instructional)",
+        "checks_mapped": {
+          "DQS-01_blueprint_alignment": "QUAL-Agent2",
+          "DQS-02_distractor_quality": "QUAL-Agent2",
+          "DQS-03_accessibility_fairness": "QUAL-Agent2 ↔ QUAL-Agent4 (UI rendering)",
+          "DQS-04_difficulty_calibration": "QUAL-Agent2",
+          "DQS-05_blooms_alignment": "QUAL-Agent2",
+          "DQS-06_cueing_patterns": "QUAL-Agent2",
+          "DQS-07_answer_position_balance": "QUAL-Agent2 (aggregate analysis, not per-item)",
+          "DQS-08_DL031_detection": "QUAL-Agent2"
+        }
+      },
+      "BOARD_03_EQS": {
+        "destination": "Quality Board — Agent 2 (Psychometric & Instructional)",
+        "checks_mapped": {
+          "EQS-01_explanation_quality": "QUAL-Agent2",
+          "EQS-02_writing_clarity": "QUAL-Agent2",
+          "EQS-03_EV1_EV8": "QUAL-Agent3 (automated) + QUAL-Agent2 (qualitative)",
+          "EQS-04_distractor_distinctness": "QUAL-Agent2",
+          "EQS-05_educational_value": "QUAL-Agent2",
+          "EQS-06_EC_depth": "QUAL-Agent2",
+          "EQS-07_COSO_citation": "QUAL-Agent1 (correctness) + QUAL-Agent2 (presence)",
+          "EQS-08_choice_specificity": "QUAL-Agent3 (DL-010/DL-016 checks)"
+        }
+      },
+      "BOARD_04_UIQS": {
+        "destination": "Quality Board — Agent 4 (UI & Rendering, optional) OR Governance Board (accessibility compliance gate)",
+        "checks_mapped": {
+          "UIQS-01_rendering_correctness": "QUAL-Agent4 (or GOV-AUTO-05 delivery pool safety)",
+          "UIQS-02_screen_reader": "QUAL-Agent4 (application-layer check)",
+          "UIQS-03_keyboard_navigation": "QUAL-Agent4",
+          "UIQS-04_color_independence": "QUAL-Agent4",
+          "UIQS-05_responsive_scaling": "QUAL-Agent4",
+          "UIQS-06_focus_indicators": "QUAL-Agent4",
+          "UIQS-07_tab_order": "QUAL-Agent4"
+        },
+        "note": "UIQS is the most uniquely-scoped board (95%). If front-end expertise cannot be adequately provided by a Quality Board sub-agent, recommend retaining UIQS as a standalone 5th board feeding into Certification as a prerequisite gate."
+      },
+      "BOARD_05_LearnerSafety": {
+        "destination": "Split — content safety → Quality Board Agent 3; delivery pool safety → Governance Board Tier 3",
+        "checks_mapped": {
+          "LS-01_DL008": "QUAL-Agent3 (structural scan) + GOV-AUTO-05 (delivery pool safety)",
+          "LS-02_DL030": "QUAL-Agent1 (content correctness) + GOV-AUTO-05",
+          "LS-03_DL016": "QUAL-Agent3 (structural scan) + GOV-AUTO-05",
+          "LS-04_DL021": "QUAL-Agent3 (structural scan) + GOV-AUTO-05",
+          "LS-05_DL026": "QUAL-Agent3 (structural scan) + GOV-AUTO-05",
+          "LS-06_DL010": "QUAL-Agent3 (semantic verification)",
+          "LS-07_known_defective_exclusion": "GOV-AUTO-05 (delivery pool safety check, automated)",
+          "LS-08_G_NEW_enforcement": "CERT-AUTO-02 (certification gate)"
+        }
+      },
+      "BOARD_06_QA": {
+        "destination": "Split — structural scans → Quality Board Agent 3; governance guard → Governance Board; metadata → across all 3 Quality Agents",
+        "checks_mapped": {
+          "QA-01_automated_suite": "QUAL-Agent3 (structural scans)",
+          "QA-02_scanner_adjudication": "QUAL-Agent3 (FP triage integrated into structural review)",
+          "QA-03_EV_validator": "QUAL-Agent3 (automated) + QUAL-Agent2 (qualitative adjudication)",
+          "QA-04_metadata_validator": "QUAL-Agent1 (AccountingPrinciple), QUAL-Agent2 (Difficulty/CL), QUAL-Agent3 (field presence)",
+          "QA-05_governance_guard": "GOV-AUTO-01 (governance guard test suite, pre/post)",
+          "QA-06_structural_defects": "QUAL-Agent3",
+          "QA-07_duplicate_ID": "REG-AUTO-03 (Registry Board)",
+          "QA-08_count_parity": "REG-AUTO-02 (Registry Board)"
+        }
+      },
+      "BOARD_07_Certification": {
+        "destination": "Certification Board (retained standalone, refocused)",
+        "checks_mapped": "ALL 7 checks retained. Certification Board refocused from re-verifying other boards' evidence to performing governance-sufficiency review: is the evidence package complete, self-consistent, and sufficient for certification?"
+      },
+      "BOARD_08_Readiness": {
+        "destination": "Governance Board — Tier 1 (SESSION_READY) + Tier 2 (SESSION_CLOSE)",
+        "checks_mapped": {
+          "READY-01_go_nogo": "GOV Tier 1 SESSION_READY",
+          "READY-02_governance_attestation": "GOV-AUTO-01 (guard test suite)",
+          "READY-03_cross_gate_prerequisites": "GOV Tier 1 prerequisite chain",
+          "READY-04_portfolio_state": "GOV-AUTO-07 (portfolio health)",
+          "READY-05_scoring_integrity": "GOV-AUTO-08 (app.js hash)",
+          "READY-06_certification_preservation": "GOV-AUTO-06 (state drift detector)",
+          "READY-07_pre_delivery_safety": "GOV-AUTO-05 (delivery pool safety)"
+        }
+      }
+    }
+  },
+
+  "signal_analysis": {
+    "lost": [
+      {
+        "signal": "Independent cross-board verification — second pair of eyes on the same fields",
+        "current_value": "5-6 agents independently verifying the same EW fields per session, reaching identical conclusions 95%+ of the time. Provides genuine (if massively redundant) verification that a novel finding (e.g., CC discrepancy on 5 seeds in S809.2) gets caught.",
+        "why_lost": "Quality Board's 3-agent architecture checks each item once per dimension. There is no second independent review pass.",
+        "mitigation": "Agent 3 (Structural & Safety) and Agent 2 (Psychometric & Instructional) both read EW fields — providing two independent reads of the same slots. ALL_AGREE consensus requirement ensures disagreement is escalated. S809.2's CC discrepancy was found because a second agent did the EW analysis with a different methodology — this pattern can be replicated within the Quality Board by having Agent 1 and Agent 2 independently derive CorrectChoice.",
+        "severity": "LOW — 95%+ redundant findings were identical. The 1 novel finding in 56 agent-spawns was the CC discrepancy, which is caught by Agent 1's independent derivation."
+      },
+      {
+        "signal": "Per-board focus — an agent dedicated solely to learner safety may catch safety issues a general quality agent misses",
+        "current_value": "Learner Safety Board with 1 dedicated agent whose sole remit is safety (DL-008, DL-030, DL-016)",
+        "why_lost": "Quality Board Agent 3 must cover structural compliance + safety + metadata + scanner adjudication. A dedicated learner-safety focus is diluted across multiple structural responsibilities.",
+        "mitigation": "Governance Board Tier 3 PORTFOLIO_READY includes an explicit pre-delivery-safety-check (GOV-AUTO-05) that flags 0 known-defective QIDs as a hard gate. This is automated and cannot be diluted.",
+        "severity": "LOW — safety checks become automated gates rather than a dedicated agent's judgment call. This is arguably an improvement (less human error, faster detection)."
+      },
+      {
+        "signal": "UI-specific expertise — front-end rendering evaluation by a content-quality reviewer",
+        "current_value": "UIQS Board with 1 dedicated agent who evaluates screen-reader compatibility, keyboard navigation, color independence",
+        "why_lost": "Quality Board Agent 4 (UI & Rendering) is labeled optional. If it is not activated for batches where content hasn't changed, rendering defects from application-layer changes may go undetected.",
+        "mitigation": "Agent 4 activation rule: mandatory activation once per pack per session (not per batch). Governance Board PORTFOLIO_READY gate includes rendering compliance attestation. If UI-specific expertise is critical, retain UIQS as a standalone 5th board (see recommendation).",
+        "severity": "MEDIUM — 95% unique scope makes UIQS the strongest case against consolidation."
+      },
+      {
+        "signal": "Granular per-dimension reporting — each board currently produces independent dimension scores",
+        "current_value": "Technical produces Dimensions 2, 3, 5. DQS produces Dimensions 1, 4, 9. EQS produces Dimensions 7, 8. QA produces Dimension 10. 4 separate score reports per item.",
+        "why_lost": "Quality Board produces a single 10-dimension rubric score. The individual dimension breakdown is still present but comes from one source rather than multiple independent sources.",
+        "mitigation": "The 10-dimension rubric is preserved — scores are still per-dimension. The change is which agent scores which dimension: Agent 1 scores 3,5,6; Agent 2 scores 1,2,4,7,8; Agent 3 scores 9,10. This is cleaner than the current distribution.",
+        "severity": "NONE — this is signal gained (unified rubric), not lost."
+      }
+    ],
+    "gained": [
+      {
+        "signal": "Single-source-of-truth for quality verdict — one unified quality report per item",
+        "current_value": "4-5 separate reports (Technical, EQS, DQS, QA) per item, each repeating the same EW/EC/CC field analysis with different framing",
+        "gained_value": "Downstream consumers (Governance Board, Certification Board) read one quality verdict per item. No synthesizing 5 reports to determine if an item is CERTIFIABLE. Eliminates the 4-7 report files per session redundantly reporting EW integrity metrics.",
+        "impact": "HIGH — single largest efficiency gain. DR-001 (4-7 agents per session on EW) eliminated. DR-006 (2 agents on already-derived safety audit) eliminated."
+      },
+      {
+        "signal": "End-to-end defect visibility — a structural defect discovered by Agent 3 is immediately visible to Agent 1 and Agent 2",
+        "current_value": "QA Board discovers DL-008 → reports to Learner Safety → Learner Safety interprets → Certification Board adjudicates. 3-board handoff chain for a structural defect that a regex scan detects in milliseconds.",
+        "gained_value": "Quality Board Agent 3 runs the structural scan in the same pass as Agent 1 and Agent 2's quality review. If Agent 3 finds DL-008 on an item, Agent 1 and Agent 2 see it immediately — no handoff delay.",
+        "impact": "MEDIUM — eliminates cross-board handoff latency but structural defects were already fast to detect."
+      },
+      {
+        "signal": "Compound-key identity model — every board uses the same item identity",
+        "current_value": "Each board independently determines 'Which item is P1-E-038?' using different scan methodologies (forward-scan, regex-window, brace-matched parse). This produced DL-029 (257 Pack B false positives) and S320 (wrong variants targeted).",
+        "gained_value": "Registry Board provides the canonical compound key (QID + CC + EW_Pattern + Template_Family + File_Path). All other boards reference the Registry's identity. No board ever runs its own QID→CC lookup. Eliminates DL-029 at root.",
+        "impact": "HIGH — eliminates the single largest source of false-positive contamination (DL-029 forward-scan) and remediation targeting failures (S320)."
+      },
+      {
+        "signal": "Reduced concurrent-write risk — fewer boards writing to fewer pack files",
+        "current_value": "6+ boards independently writing to pack files (Technical writes EC revisions, EQS writes EW revisions, Certification writes question_state, Learner Safety writes EW clears). DL-019 (432 items overwritten by concurrent certification wave) was caused by this.",
+        "gained_value": "Quality Board is the only board that modifies content fields (Stem, Choices, CC, EC, EW). Certification Board is the only board that modifies question_state. Governance Board is read-only. Registry Board is auto-generated. 2 write sources instead of 6+.",
+        "impact": "HIGH — DL-019 (concurrent-write data loss on 432 items) structurally eliminated."
+      },
+      {
+        "signal": "Automated safety gates replace redundant manual audits",
+        "current_value": "Learner Safety Board runs manual DL-008/DL-026/DL-021 scans in every session (22 DL-008 scan events, ~80-110 agent-level examinations). QA Board runs the same scans independently (18 DL-026 scan events).",
+        "gained_value": "Governance Board GOV-AUTO-05 (pre-delivery-safety-check) runs a single automated structural scan per session. The output gates PORTFOLIO_READY. No manual re-scanning by 4-7 agents per session.",
+        "impact": "HIGH — 22+ manual scan events reduced to 1 automated scan per session (95% reduction). ~20-30 agent hours reclaimed."
+      }
+    ],
+    "unchanged": [
+      {
+        "signal": "Certification Board authority — question_state transition power remains sole and exclusive",
+        "unchanged_value": "ONLY Certification Board can write question_state: 'Certified'. ALL_AGREE consensus requirement preserved. Per-item evidence-based adjudication with human authorization retained."
+      },
+      {
+        "signal": "Governance guard enforcement — Rules 1-5 remain active with identical BLOCK/WARN levels",
+        "unchanged_value": "governance-guard.js test suite (27/27 checks per S726) unchanged. Rule 2 BLOCK on non-empty EW[CC] enforced at Quality Board Agent 3 pre-certification. Rule 5 BLOCK on >30 items enforced at Certification Board."
+      },
+      {
+        "signal": "CAQS 7-gate pipeline — the underlying quality standard is unchanged",
+        "unchanged_value": "G1-G7 gates still apply. The consolidation changes WHICH board performs each gate, not WHETHER each gate is performed. G3 Numerical Validation still happens (Quality Board Agent 1). G6 Final Validation still happens (Quality Board Agent 3)."
+      },
+      {
+        "signal": "BACKUP_PROTOCOL — mandatory backup before every write unchanged",
+        "unchanged_value": "Per AGENTS.md §3 (hard rule, no exceptions). Enforced at governance guard level."
+      }
+    ]
+  },
+
+  "recommendation": {
+    "target_board_count": 4,
+    "preferred_mapping": "Registry · Quality · Governance · Certification",
+    "rationale": "4 boards is the optimal number. Arguments for each alternative:",
+
+    "why_not_3_boards": "Merging Registry into Governance (3 boards: Quality + Governance + Certification) creates a board with too many responsibilities: inventory management (Registry), session authorization (Governance), delivery pool management (Governance), structural scans (Governance), and portfolio health (Governance). The Registry's function (maintaining canonical inventory with compound keys) is fundamentally different from Governance's function (authorizing session and portfolio transitions). The S201 Agent E Identity Architecture established that the Identity Model gap is severe enough to warrant its own board — the compound-key problem caused DL-029, DL-008 false counts, and S320 remediation failure. Shoehorning this into Governance dilutes the Governance Board's focus on authorization decisions. Additionally, Registry is an auto-generation function (governance guard Rule 3: MASTER_QUESTION_REGISTRY.md is generated, never hand-edited) while Governance is an authorization function. Mixing auto-generation and authorization in one board blurs the build-time vs. runtime boundary.",
+
+    "why_not_5_boards": "Adding UIQS as a standalone 5th board increases agent count from 6 to 7 and adds 1 more cross-board handoff. While UIQS has 95% unique scope, its checks are application-layer (screen rendering, keyboard navigation) — a fundamentally different competency from content review. However: (a) UIQS checks are highly automatable (binary pass/fail on rendering correctness, unlike content quality which requires professional judgment), (b) UIQS only needs to run once per pack per session (not per item batch), (c) the Quality Board's Agent 4 (UI & Rendering) can be activated per-pack rather than per-batch, making it a lightweight addition rather than a full-time agent. Recommendation: start with UIQS as Quality Board Agent 4. If UI-specific expertise proves insufficient when handled by content-quality agents, escalate to a standalone 5th board at the next series boundary.",
+
+    "why_4_boards": "4 boards provides the cleanest separation of concerns: (1) Registry manages the canonical inventory (WHAT items exist). (2) Quality evaluates content fitness (HOW good are the items). (3) Governance authorizes pipeline progression (WHEN can we proceed). (4) Certification makes per-item state decisions (WHICH items are learner-ready). This maps cleanly to the CAQS 7-gate pipeline: Registry feeds into Quality (G1-G6). Quality feeds into Governance (session/portfolio gates). Governance feeds into Certification (G7 final approval). Each board has a distinct output that no other board produces, eliminating the 2.5:1 duplication ratio. Agent count: 6-7 (Registry: auto-generated with periodic manual review; Quality: 3-4 agents; Governance: 1 agent; Certification: 1 agent).",
+
+    "edge_case_5_boards": "If S201 Agent E's Identity Architecture analysis is adopted as the standard but UI-specific expertise proves critical, the 5-board structure is: Registry · Quality · UI Quality · Governance · Certification. This preserves the Registry → Quality → Governance → Certification flow while giving UI rendering a dedicated board. This is the safest option if the team values UI expertise above headcount reduction. The S200 Agent H analysis also recommended UIQS as standalone, with the 4-board structure being Quality · UI Quality · Session Gate · Certification — which is this exact 5-board structure if Registry is added. Implementation: start at 4 boards with UIQS as Quality Board sub-agent. Monitor after 3 certification waves. If UI defects slip through, transition to 5 boards at the S920 boundary."
+  },
+
+  "implementation_sequence": {
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Registry Board Activation",
+        "description": "Build the compound-key infrastructure before merging boards. The Registry is the foundation every other board consumes.",
+        "prerequisites": [
+          "Function-constructor parse methodology adopted as standard (AM-1)",
+          "Within-object extraction ready for all 5 packs (DL-020 fix applied, DL-029 methodology documented)",
+          "Template family detection algorithm defined (Jaccard stem similarity >90%)",
+          "Compound key field schema finalized: QID + CorrectChoice + EW_Pattern + Template_Family + File_Path",
+          "Defect cross-reference index built (QID → applicable DL-IDs)"
+        ],
+        "implementation_steps": [
+          "Build MASTER_QUESTION_REGISTRY.md via within-object Function constructor parse (per governance guard Rule 3 — auto-generated, never hand-edited)",
+          "Generate template family map for all 2,500 items — identify all rotation groups and canonical seeds",
+          "Generate delivery pool inventory — all Certified QIDs with compound keys, cross-referenced against DEFECT_LIBRARY.md",
+          "Validate: certified count from Registry matches independent Select-String + Function constructor parse (dual verification per AGENTS.md §5)",
+          "Validate: Registry hash stable across 2 independent regeneration passes (no drift)",
+          "Board activation: Registry Board is LIVE when MASTER_QUESTION_REGISTRY.md is the canonical inventory consumed by all other boards"
+        ],
+        "current_session_dependencies": ["S202-S207 (per S201 Agent E Identity Architecture recommendations)"],
+        "metrics_for_success": [
+          "Registry certified count matches dual-verified count (0 discrepancy)",
+          "0 duplicate QIDs detected",
+          "Template family map complete (all 2,500 items classified)",
+          "Registry hash stable (2 passes identical)"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Quality Board Consolidation",
+        "description": "Merge Technical + DQS + EQS + Learner Safety (content checks) + QA (structural checks) into the 3-agent Quality Board.",
+        "prerequisites": [
+          "Registry Board is LIVE and producing canonical inventory",
+          "AM-1 Function Constructor Parse adopted for all structural scans (no DL-029 forward-scan)",
+          "All DL-029-vulnerable scan tools (scan_dl008_dl026.js, scan_dl013sweep.js) upgraded to within-object extraction",
+          "S726 governance guard 27/27 test suite confirmed PASS on consolidated Quality Board tooling"
+        ],
+        "implementation_steps": [
+          "Define Quality Board agent prompt templates for Agent 1 (Technical & Numerical), Agent 2 (Psychometric & Instructional), Agent 3 (Structural & Safety)",
+          "Run certification wave with 3-agent Quality Board in parallel with existing boards on a subset (dual-run validation)",
+          "Compare Quality Board verdicts against current board verdicts — verify agreement >95%",
+          "Adjudicate discrepancies — if Quality Board catches defects current boards miss, update Quality Board prompts; if current boards catch defects Quality Board misses, add to prompts",
+          "Transition: after 3 successful dual-run certification waves with >95% agreement, retire boards 1-6",
+          "Publish board transition guide: old board → Quality Board sub-agent mapping"
+        ],
+        "current_session_dependencies": ["S208-S210 (Quality Board design and validation)", "S211-S213 (dual-run certification waves)"],
+        "metrics_for_success": [
+          "Quality Board verdict agreement with current boards >95% across 3 dual-run waves",
+          "Agent 3 structural scan produces identical DL-008/DL-026 inventory to current QA + Learner Safety scans",
+          "10-dimension rubric scores within 5 points of current multi-board scores (or better if Quality Board catches more defects)",
+          "0 items passed by Quality Board that Certification Board later HOLDs for issues Quality Board should have caught"
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Governance Board Activation",
+        "description": "Merge Readiness + Launch + Learner Safety (delivery pool) + QA (governance guard) into the tiered Governance Board.",
+        "prerequisites": [
+          "Quality Board is LIVE and producing unified quality verdicts",
+          "Registry Board is LIVE and providing delivery pool inventory",
+          "All 10 GOV-AUTO automated checks implemented and validated"
+        ],
+        "implementation_steps": [
+          "Implement GOV-AUTO-01 through GOV-AUTO-10 automated checks",
+          "Run Governance Board in shadow mode (reads Quality Board output, produces SESSION_READY/PORTFOLIO_READY decisions, but does not block current session flow)",
+          "Compare Governance Board decisions against current Readiness + Launch Board decisions across 3 sessions",
+          "Validate Tier 3 PORTFOLIO_READY delivery pool safety check catches all known-defective QIDs",
+          "Transition: after 3 shadow-mode sessions with matching decisions, make Governance Board the authoritative gate"
+        ],
+        "current_session_dependencies": ["S214-S216 (Governance Board tooling build)", "S217-S219 (shadow-mode validation)"],
+        "metrics_for_success": [
+          "Governance Board SESSION_READY/PORTFOLIO_READY decisions match current Readiness + Launch decisions 100%",
+          "GOV-AUTO-05 delivery pool safety check produces 0 false-positive quarantines",
+          "GOV-AUTO-05 delivery pool safety check produces 0 false-negative passes (no known-defective QID allowed through)",
+          "Tend baseline verification (G1-G5 reconciliation) functional on drift detection"
+        ]
+      },
+      {
+        "phase": 4,
+        "name": "Certification Board Refocus",
+        "description": "Refocus Certification Board from re-verifying all evidence to consuming Registry + Quality + Governance evidence and making the final adjudication.",
+        "prerequisites": [
+          "Quality Board LIVE and producing CERTIFIABLE verdicts",
+          "Governance Board LIVE and producing PORTFOLIO_READY authorization",
+          "Registry Board LIVE and producing delivery pool inventory",
+          "ALL_AGREE consensus model adopted (per S313 pilot)"
+        ],
+        "implementation_steps": [
+          "Refocus Certification Board agent prompt: consume Quality Verdict, Governance Authorization, Registry Compound Key — perform governance-sufficiency review (is all evidence present and self-consistent?) rather than re-reviewing content",
+          "Run refocused Certification Board in dual-run with current model on 1 batch (10-30 items)",
+          "Compare: refocused board produces same CERTIFY/HOLD/ESCALATE decisions as current board?",
+          "If agreement is 100%, transition to refocused model permanently",
+          "If agreement is <100%, identify gaps and iterate Certification Board prompt"
+        ],
+        "current_session_dependencies": ["S220-S222 (Certification Board refocus and validation)"],
+        "metrics_for_success": [
+          "Certification Board CERTIFY/HOLD/ESCALATE decisions match dual-run current model 100%",
+          "question_state transitions applied correctly (0 wrong states, 0 missed transitions)",
+          "REVISION_HISTORY.md entries complete and accurate",
+          "Registry refresh triggered automatically on certification completion"
+        ]
+      }
+    ],
+    "series_boundary": "Implement Phase 1 at S830 closeout → Phase 2 at S900 → Phase 3 at S910 → Phase 4 at S920. All 800-series sessions operate under the current 8-board structure to avoid mid-series disruption (per S200 Agent H recommendation).",
+    "rollback_plan": "Each phase is independently reversible. If Quality Board consolidation produces worse outcomes than the current multi-board structure, revert to 8 boards. The Registry Board and Governance Board automated checks are infrastructure additions that do not remove existing boards — they can coexist with the current structure indefinitely while the Quality Board consolidation is validated.",
+    "total_estimated_sessions_for_full_transition": "20-22 sessions (S202-S222), representing approximately 4-5 weeks of session velocity."
+  },
+
+  "evidence_references": {
+    "CAQS": "knowledge/CAQS_v1.0.md §8.1 (7-gate pipeline), §14.2 (Gold Standard Checklist), §1.6 (six-dimension verification), §2.2 (10-dimension rubric)",
+    "METADATA_STANDARD": "knowledge/QUESTION_METADATA_STANDARD.md §9 (governance states, G-NEW-1 through G-NEW-5)",
+    "DEFECT_LIBRARY": "knowledge/DEFECT_LIBRARY.md — DL-008 through DL-033 (all defect classes affecting board scope)",
+    "WORKFLOWS": "ai/WORKFLOWS.md (8 standard workflows mapped to current board structure)",
+    "COLLABORATION_MATRIX": "ai/COLLABORATION_MATRIX.md (persona authority boundaries, escalation rules)",
+    "SESSION200_H": "reports/SESSION200_BOARD_CONSOLIDATION.json — Agent H's 9→4 consolidation proposal with agent reduction analysis",
+    "SESSION200_D": "reports/SESSION200_OVERLAP_ANALYSIS.json — Agent D's DR-001–DR-008 duplicate review catalog",
+    "SESSION201_D": "reports/SESSION201_DUPLICATION_MATRIX.json — Agent D's field_touch_map, 22-scan DL-008 history, 2.5:1 duplication ratio",
+    "SESSION201_E": "reports/SESSION201_IDENTITY_ARCHITECTURE.json — Agent E's compound-key identity model, S320 failure analysis, template family model",
+    "S313": "reports/SESSION313_CERTIFICATION_BOARD_RESULTS.json — 10-item pilot: 100% CERTIFY, ALL_AGREE unanimous, 4 prerequisite reviews consumed",
+    "S318": "reports/SESSION318_READINESS_BOARD.json — 3-condition Go/No-Go, 5-agent DL-008 redundancy, governance attestation",
+    "S726": "reports/SESSION726_GOVERNANCE_DASHBOARD.json — 27/27 governance guard PASS, 23/25 design vs. 17/25 activation gap",
+    "S809_CHAIN": "DR-007 finding: 4 sessions (S809→S809.1→S809.2→S810.1), 56 agent-spawns, 39 report files, 0 writes — the most egregious single redundancy chain",
+    "DEFINITIVE_PARSER": "reports/DEFINITIVE_PARSER_VALIDATION_2026-07-23.md — AM-1 Function Constructor Parse 0 FPs, 0 FNs across ground truth"
+  }
+}

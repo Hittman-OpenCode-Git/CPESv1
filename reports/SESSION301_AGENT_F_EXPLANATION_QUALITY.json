@@ -1,0 +1,24 @@
+{
+  "agent": "F",
+  "session": "S301",
+  "phase": 2,
+  "domain": "Explanation Quality",
+  "defect_classes": {
+    "DL-007_TemplateExplanations": { "status": "Superseded by DL-013", "original_scope": "2,587 occurrences across 882 QIDs in Packs A/C/D", "current_remediation": "Deferred — 0 Certified items affected" },
+    "DL-013_BoilerplateFields": { "remaining_fields": 851, "details": "Pack A: 238, Pack C: 357, Pack D: 256. Pattern: generic template text in EW slots. Non-blocking.", "effort_tier": "medium" },
+    "DL-026_EmptyNonCCSlots": { "count": "50 items in Pack D Section C", "status": "In Audit (not Certified — no learner pool exposure)", "effort_tier": "medium" }
+  },
+  "explanation_length_profile": {
+    "very_short": "Items with ExplanationCorrect <50 chars — flag for D5 scoring",
+    "template_pattern": "Items matching /represents a plausible misconception.*candidate may select/ — DL-013 signature",
+    "adequate": "Items with ExplanationCorrect >200 chars with principle + calculation + interpretation — strong D5 candidates"
+  },
+  "caqs_alignment": {
+    "D5_minimum_certification": "Score >= 4 with computation shown and concept named",
+    "D7_minimum_certification": "Score >= 4 with principle, calculation, business interpretation"
+  },
+  "section_readiness": {
+    "pack_c_sections_d_f": "Template boilerplate affects all non-certified items — must remediate before certification",
+    "pack_d_section_c": "DL-026: 50 items need blank non-CC ExplanationWrong slots filled"
+  }
+}

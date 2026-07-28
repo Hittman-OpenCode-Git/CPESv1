@@ -1,0 +1,180 @@
+{
+  "board": "SESSION358_PORTFOLIO_VALUE_SCORECARD",
+  "version": "1.0",
+  "date": "2026-07-28",
+  "session": "358",
+  "series": "350-Series — Operational Value Realization",
+  "status": "FINAL",
+  "decision": "VALUE REALIZED WITH RISKS",
+
+  "inputs": {
+    "S355_CONTENT_ECONOMICS": {
+      "verdict": "Pipeline proven, output plateaued",
+      "artifacts": [
+        "reports/SESSION358_EXECUTIVE_SUMMARY.md §S355"
+      ]
+    },
+    "S356_ADMIN_ROI": {
+      "verdict": "Platform deployed, 97/100 readiness, 7,054 automated references",
+      "artifacts": [
+        "reports/SESSION358_EXECUTIVE_SUMMARY.md §S356"
+      ]
+    },
+    "S357_GOVERNANCE_IMPACT": {
+      "verdict": "Measurably effective — 9 BLOCK rules, zero structural defects in certified pool",
+      "artifacts": [
+        "reports/SESSION358_EXECUTIVE_SUMMARY.md §S357"
+      ]
+    }
+  },
+
+  "dimensions": {
+    "content": {
+      "score": 75,
+      "max": 100,
+      "trend": "UP (+21 from S838 baseline of 54)",
+      "evidence": {
+        "itemsAuthored": 39,
+        "itemsUpgraded": 80,
+        "analyzeGrowth": "0.4% → 2.6% (+560%)",
+        "evaluateGrowth": "0% → 1.14% (from zero)",
+        "certifiedPoolGrowth": "2,298 → 2,317",
+        "authoringVelocity": "21.9 items/hr (Analyze), 11.3 items/hr (Evaluate)",
+        "defectsIntroduced": 0,
+        "bottleneck": "Content design capacity — label-change pipeline exhausted at 75. Genuine higher-order items require stem rewrites or net-new authoring."
+      }
+    },
+    "operations": {
+      "score": 97,
+      "max": 100,
+      "trend": "STABLE (platform deployed and verified)",
+      "evidence": {
+        "platformBuilt": "15-session program (S252-S266), single day",
+        "deliverableFiles": 35,
+        "adminModules": "6 engines, 4 dashboard views, 18 service layer exports",
+        "automatedReferences": 7054,
+        "workflowSuccessRate": "30/30 cases (100%), zero manual searches",
+        "lookupSpeed": "<100ms per QID",
+        "verificationPasses": 9,
+        "governanceIntegration": "Zero regressions across all 15 sessions"
+      }
+    },
+    "governance": {
+      "score": 85,
+      "max": 100,
+      "trend": "UP (+55 from S216 recertification denial of 30)",
+      "evidence": {
+        "rulesActive": 9,
+        "rulesBlockLevel": 9,
+        "testCount": 51,
+        "testsPassing": "51/51",
+        "certifiedPoolDefects": 0,
+        "defectResolutionRate": "18/36 (50%)",
+        "avgResolutionLatency": "1.8 days for High/Critical",
+        "stewardshipScore": "85+ (from 30 at S216)",
+        "technicalDebtTrajectory": "DECREASING (S211 verified)"
+      }
+    },
+    "administration": {
+      "score": 97,
+      "max": 100,
+      "trend": "STABLE (MVP deployed and verified)",
+      "evidence": {
+        "compositeReadiness": "97/100 (S262)",
+        "dashboardQIDs": 2540,
+        "investigationsTracked": 19,
+        "challengesTriaged": 35,
+        "fkIntegrity": "3,793/3,793 (0 broken)",
+        "deploymentCertified": "S266 verified"
+      }
+    },
+    "sustainability": {
+      "score": 75,
+      "max": 100,
+      "trend": "UP but PLATEAUING",
+      "evidence": {
+        "expansionReadiness": 75,
+        "thresholdTarget": "80+ for large-scale expansion",
+        "plateauReason": "Content design bottleneck (Understand items are definition-match rotation artifacts — cannot be upgraded via label change alone)",
+        "remainingGaps": {
+          "DL_035_content": "39 Domain F items lack distractor explanations",
+          "DL_031_difficulty": "~500 items with inflated difficulty labels",
+          "DL_032_case_difficulty": "330 case items with uniform Moderate",
+          "DL_012_clones": "28 Pack C/D Section E seeds need content authoring"
+        }
+      }
+    }
+  },
+
+  "netValueRealized": {
+    "authoringThroughput": "Quality-First Pipeline: 39 net-new items + 80 upgrades, zero defects introduced",
+    "platformAdoption": "May Admin deployed (97/100), 7,054 automated cross-references, 30/30 workflows automated",
+    "stewardshipHealth": "9 BLOCK rules (51/51 PASS), zero structural defects in certified pool, stewardship score 85+",
+    "contentMaturity": "Analyze: 0.4%→2.6%, Evaluate: 0%→1.14%, Certified pool: 2,298→2,317",
+    "governanceSavings": "539 DL-008→0, 1,005 DL-026→0 Certified, 18/36 defects resolved, avg 1.8-day resolution"
+  },
+
+  "risksRequiringAttention": [
+    {
+      "risk": "DL-035 Certified content debt",
+      "impact": "39 Domain F items in active learner pool with empty distractor explanations",
+      "mitigation": "Rule 6 BLOCKS new introductions; S816-S818 scheduled for remediation"
+    },
+    {
+      "risk": "DL-031 Systematic difficulty inflation",
+      "impact": "~500 items across all packs overstate difficulty (Moderate vs Easy)",
+      "mitigation": "Scoped; recalibration plan exists but not executed"
+    },
+    {
+      "risk": "Expansion plateau at score 75",
+      "impact": "Label-change pipeline exhausted — further cognitive growth requires stem rewrites or net-new authoring",
+      "mitigation": "S899 Phase 1 proved net-new authoring pipeline (20 items, zero defects)"
+    },
+    {
+      "risk": "DL-032 Case difficulty calibration",
+      "impact": "330 case items labeled uniform Moderate — statistically implausible",
+      "mitigation": "Partial (ENHANCED_CASE_BASE done); remainder deferred"
+    },
+    {
+      "risk": "CLI bypass vulnerability",
+      "impact": "No JS guard can prevent direct node script writes bypassing governance",
+      "mitigation": "T0/Tmid/Tend hash monitoring per AGENTS.md §13"
+    }
+  ],
+
+  "expansionEconomics": {
+    "currentRate": {
+      "analyze": "21.9 items/hr",
+      "evaluate": "11.3 items/hr",
+      "netNew": "19.5 items/session"
+    },
+    "candidateInventory": {
+      "understandItemsAvailable": 1218,
+      "genuinelyUpgradableViaLabel": 0,
+      "requireStemRewrites": "~1,200",
+      "requireNetNewAuthoring": "~625 Analyze + 352 Evaluate = 977 items for CAQS targets"
+    },
+    "estimatedEffortToCAQSTargets": {
+      "atCurrentVelocity": "~45 hours for Analyze targets + ~31 hours for Evaluate targets ≈ 76 hours",
+      "note": "Pipeline velocity proven; constraint is content design, not methodology"
+    }
+  },
+
+  "executiveDecision": "VALUE REALIZED WITH RISKS",
+
+  "rationale": "The investment in Framework v2, Governance Guard, May Admin, and Content Expansion has produced measurable operational value across all four dimensions. Content production velocity is proven at 21.9 items/hr with zero defects. The admin platform eliminates 7,054 manual cross-references across 30 workflow cases. Governance has achieved zero structural defects in the certified pool (2,317 items) with 9 BLOCK-level rules. However, systematic quality debt (DL-031 difficulty inflation on ~500 items, DL-035 distractor gaps on 39 items) and a content design bottleneck (expansion plateau at score 75) mean the trajectory cannot continue large-scale expansion without addressing these risks. The platform is operationally ready; content quality is the binding constraint.",
+
+  "authoredBy": "S358 Portfolio Value Board (aggregating S355 + S356 + S357 findings)",
+  "supersedes": null,
+  "successCriteria": {
+    "measuredActualBenefits": true,
+    "quantifiedAuthoringThroughput": true,
+    "quantifiedGovernanceSavings": true,
+    "quantifiedAdministrativeSavings": true,
+    "quantifiedContentMaturityGains": true,
+    "establishedExpansionEconomicsBaseline": true,
+    "zeroContentModifications": true,
+    "zeroCertificationChanges": true,
+    "readOnlyAnalysis": true
+  }
+}

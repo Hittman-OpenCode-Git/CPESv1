@@ -1,0 +1,58 @@
+{
+  "session": "310",
+  "title": "Modernization Dashboard — Clone Reduction & Archive Activity",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "status": "DEFERRED to post-cert phase",
+  "rationale": "Modernization tasks (DL-013 boilerplate removal, DL-031 difficulty normalization, DL-032 case uniformity, EC normalization) are quality-enhancing but not certification-blocking. Deferring saves 10 sessions on critical path.",
+  "deferredItems": {
+    "DL013": {
+      "fields": 851,
+      "packs": [
+        "A (238)",
+        "C (357)",
+        "D (256)"
+      ],
+      "severity": "Medium",
+      "estimatedSessions": 3
+    },
+    "DL031": {
+      "items": "~500",
+      "description": "Difficulty inflation across packs",
+      "severity": "Medium",
+      "estimatedSessions": 2
+    },
+    "DL032": {
+      "items": 420,
+      "description": "Case uniform difficulty (ENHANCED_CASE_BASE partially remediated)",
+      "severity": "Medium",
+      "estimatedSessions": 2
+    },
+    "ECNormalization": {
+      "items": "~1,500",
+      "description": "Cross-pack EC length normalization",
+      "severity": "Low",
+      "estimatedSessions": 3
+    }
+  },
+  "cloneReduction": {
+    "domainE": {
+      "count": 129,
+      "status": "REPLACE strategy — 129 new unique items to be authored"
+    },
+    "totalClonesFixed": 0,
+    "totalClonesRemaining": 129
+  },
+  "archiveActivity": {
+    "domainEArchives": 129,
+    "itemsArchived": 0,
+    "itemsRestored": 0
+  },
+  "postCertPlan": {
+    "trigger": "2,500/2,500 certification achieved",
+    "phase1": "DL-013 boilerplate removal (3 sessions)",
+    "phase2": "DL-031 difficulty normalization (2 sessions)",
+    "phase3": "EC cross-pack normalization (3 sessions)",
+    "phase4": "DL-032 case difficulty uniformity (2 sessions)"
+  }
+}

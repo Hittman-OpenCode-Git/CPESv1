@@ -1,0 +1,361 @@
+{
+  "session": "702",
+  "agent": "A",
+  "mode": "read-only",
+  "timestamp": "2026-07-25",
+  "preflight_tests_passed": true,
+  "methodology": {
+    "approach": "direct_line_level_inspection",
+    "cc_extraction": "content_block_only_G_NEW_3",
+    "ew_extraction": "metadata_block",
+    "stem_source": "content_block",
+    "topic_ground_truth": "content_block_stem_not_metadata_topic_label"
+  },
+  "s701_regression": {
+    "P1-B-001": {
+      "question_state": "Editorial Queue",
+      "line_range": "content: 3820-3852, metadata: 3853-3867",
+      "content_stem_topic": "mission-to-tactical-planning",
+      "content_stem_preview": "Riverview is translating a five-year strategy into next-quarter departmental plans...",
+      "metadata_topic_label": "none in metadata block (Topic only in content block)",
+      "content_topic_label": "B.001 mission to tactical planning linkage",
+      "correctChoice": "D",
+      "content_choices": {
+        "A": "Eliminate nonfinancial goals from planning",
+        "B": "Use only last year actual spending as the strategic plan",
+        "C": "Prepare departmental budgets without reference to strategy",
+        "D": "Align tactical plans and budgets with strategic objectives and measurable performance targets"
+      },
+      "ew_slots": {
+        "A": "non-empty (about top-down budgeting vs forecasting — NOT about choice A 'eliminate nonfinancial goals')",
+        "B": "empty (implies metadata thinks CC=B)",
+        "C": "non-empty (about top-down budgeting being legitimate — NOT about choice C 'prepare budgets without reference to strategy')",
+        "D": "non-empty (about top-down budgeting not eliminating slack — describes B-002's distractor D, NOT B-001's choice D)"
+      },
+      "dl008": true,
+      "dl008_detail": "Content CC=D but EW_D is non-empty (389 chars about top-down budgeting). Metadata was authored for CC=B (EW_B empty). EW_D text describes B-002's top-down-budgeting distractor, not B-001's mission-to-tactical-planning distractor.",
+      "ew_topic_matches_stem": false,
+      "ew_mismatch_detail": "All 3 non-empty EW slots (A, C, D) describe top-down budgeting concepts (executive-imposed targets, participation, slack). The Stem is about translating strategy to tactical departmental plans (mission-to-tactical-planning linkage). The EWs were authored for P1-B-002's content, describing B-002's distractors. They do NOT address B-001's actual choices (nonfinancial goals, last-year spending, strategy-disconnected budgets, aligned tactical plans).",
+      "s701_demotion_assessment": "RECOMMENDED_UPHELD",
+      "rationale": "Genuine DL-016 metadata-content shift. Content block is mission-to-tactical-planning (CC=D) but metadata EWs describe top-down budgeting distractors (intended for B-002's CC=B rotation). Also has DL-008 (EW_D non-empty when CC=D). This item needs editorial remediation — EWs must be rewritten to match B-001's actual Stem and choices."
+    },
+    "P1-B-025": {
+      "question_state": "Editorial Queue",
+      "line_range": "content: 5045-5064, metadata: 5029-5043",
+      "content_stem_topic": "forecast error analysis",
+      "content_stem_preview": "Riverview compares forecasted demand with actual demand over the past 12 months...",
+      "metadata_topic_label": "none in metadata block",
+      "content_topic_label": "B.026 forecast error analysis 10 (cosmetic +1 offset from QID B.025)",
+      "correctChoice": "D",
+      "content_choices": {
+        "A": "Stop forecasting because actual demand differs from forecasts",
+        "B": "Treat every error as a fraud indicator",
+        "C": "Use only the month with the lowest error and ignore the rest",
+        "D": "Analyze forecast errors to assess bias and improve future model selection"
+      },
+      "ew_slots": {
+        "A": "non-empty — describes why abandoning forecasting misunderstands its purpose. MATCHES choice A.",
+        "B": "non-empty — describes why not every forecast error indicates fraud. MATCHES choice B.",
+        "C": "non-empty — describes why cherry-picking the best month is unreliable. MATCHES choice C.",
+        "D": "empty — CorrectChoice slot. MATCHES CC=D."
+      },
+      "dl008": false,
+      "ew_topic_matches_stem": true,
+      "ew_alignment_detail": "All 3 non-CC EW slots are choice-specific to B-025's own distractors. EW_A addresses 'stop forecasting' fallacy, EW_B addresses 'forecast error = fraud' fallacy, EW_C addresses 'cherry-pick best month' fallacy. Every EW describes the exact choice it annotates. Topic is forecast error analysis throughout.",
+      "s701_demotion_assessment": "RECOMMENDED_REVERSED",
+      "rationale": "Likely false positive. The content block Topic label is B.026 (one-off from B.025 per DL-015/016 numbering shift), but the Stem and EWs are semantically aligned on forecast error analysis. All EW fields are choice-specific and topically relevant. The Topic label numbering artifact (B.026 vs expected B.025) does not indicate content misalignment. This item should be Certified."
+    },
+    "P1-E-027": {
+      "line_range": "metadata: 18660-18676, content: 18678-18697",
+      "question_state": "Certified",
+      "correctChoice": "B",
+      "explanationWrongC_present": true,
+      "explanationWrongC_value": "",
+      "explanationWrongC_field_location": "line 18674 — field exists in metadata block",
+      "dl018_gap_check": "PASS — field is present and empty. DL-018 fix is intact.",
+      "all_ew_slots": {
+        "A": "non-empty (about waiting for external audit before designing controls)",
+        "B": "empty (CorrectChoice slot — correct)",
+        "C": "empty (field EXISTS — S701 fix intact)",
+        "D": "non-empty (about relying on trust and removing documentation)"
+      },
+      "s701_fix_intact": true,
+      "note": "ExplanationWrongC field is present, valid, and empty (''). Confirms S701's DL-018 fix was applied and persisted. Content CC=B, EW_B empty, EW_C empty (not absent)."
+    },
+    "P1E-F-001": {
+      "line_range": "metadata: 12246-12257, content: 12258-12295",
+      "correctChoice": "D",
+      "content_stem": "Predictive analytics uses:",
+      "ew_a_topic": "diagnostic analytics — 'Why did it happen? is the question answered by diagnostic analytics...'",
+      "ew_b_topic": "predictive analytics — 'What will happen? is the question answered by predictive analytics...'",
+      "ew_c_topic": "prescriptive analytics — 'What should we do? is the question answered by prescriptive analytics...'",
+      "ew_d_value": "empty (CorrectChoice slot)",
+      "topically_relevant": true,
+      "ew_alignment_detail": "All 3 non-CC EW slots (A, B, C) describe analytics sub-disciplines: diagnostic, predictive, and prescriptive analytics. Content is about predictive analytics in Technology and Analytics (Section F). Zero stray text about labor efficiency, cost-of-quality, or any non-analytics topic.",
+      "s701_false_alarm_verdict": "CONFIRMED",
+      "rationale": "S700 flagged this as DL-010 (EW fields describing labor efficiency variance). My direct line inspection confirms ZERO labor-efficiency or variance text. All EW fields describe analytics concepts (diagnostic, predictive, prescriptive) that are topically relevant to the Section F analytics content. The S700 flag was a scan false positive, likely caused by reading a different QID's EW fields via regex-window methodology (DL-029 root cause)."
+    }
+  },
+  "section_b_boundary_sweep": {
+    "items_checked": 20,
+    "items_clean": 16,
+    "items_dl008": 1,
+    "items_dl016_shift": 4,
+    "items_manual_review": 0,
+    "rotation_group_pattern_summary": "DL-016 shift is confined to Rotation Group 1 (B-001 through B-005). Items B-001, B-002, B-003, and B-005 have EW fields describing the +1 neighbor's topic. B-004 is the sole exception (EWs are correctly aligned). From B-006 onward, all items are CLEAN — no further DL-016 shifts detected. The shift pattern suggests: Group 1 was authored with a rotation-template bug that assigned the next position's EWs to the current position. This bug was corrected in subsequent groups.",
+    "findings": [
+      {
+        "qid": "P1-B-001",
+        "metadata_topic": "N/A (no Topic in metadata)",
+        "content_topic": "B.001 mission to tactical planning linkage",
+        "content_stem_preview": "Riverview is translating a five-year strategy into next-quarter departmental plans...",
+        "correctChoice": "D",
+        "ew_cc_nonempty": true,
+        "ew_cc_detail": "EW_D non-empty. Metadata authored for CC=B (EW_B empty). Content CC=D mismatch.",
+        "ew_topic_match": false,
+        "ew_topic_detail": "EWs describe top-down budgeting (B-002), not mission-to-tactical-planning (B-001).",
+        "classification": "DL-008 / DL-016_SHIFT"
+      },
+      {
+        "qid": "P1-B-002",
+        "metadata_topic": "N/A",
+        "content_topic": "B.002 top-down budgeting limitation",
+        "content_stem_preview": "Summit uses executive-imposed targets with little manager input...",
+        "correctChoice": "B",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_B empty, CC=B matches.",
+        "ew_topic_match": false,
+        "ew_topic_detail": "Content is top-down budgeting. EWs describe participative budgeting (B-003) — 'Relying solely on prior-year actuals ignores the purpose of participative budgeting...'",
+        "classification": "DL-016_SHIFT"
+      },
+      {
+        "qid": "P1-B-003",
+        "metadata_topic": "N/A",
+        "content_topic": "B.003 participative budgeting slack risk",
+        "content_stem_preview": "Titan asks department managers to propose their own budget targets...",
+        "correctChoice": "B",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_B empty, CC=B matches.",
+        "ew_topic_match": false,
+        "ew_topic_detail": "Content is participative budgeting. EWs describe rolling budget (B-004) — 'Rolling budgets are not limited to capital projects...'",
+        "classification": "DL-016_SHIFT"
+      },
+      {
+        "qid": "P1-B-004",
+        "metadata_topic": "N/A",
+        "content_topic": "B.004 rolling budget horizon",
+        "content_stem_preview": "Umbra wants to maintain a constant 12-month planning horizon...",
+        "correctChoice": "B",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_B empty, CC=B matches.",
+        "ew_topic_match": true,
+        "ew_topic_detail": "Content is rolling budget. EWs describe rolling budget concepts. Only CLEAN item in Group 1.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-005",
+        "metadata_topic": "N/A",
+        "content_topic": "B.005 zero-based budgeting review",
+        "content_stem_preview": "Vantage requires managers to justify activities from a zero base...",
+        "correctChoice": "[need content block read]",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_C empty, content CC presumed C (need verify).",
+        "ew_topic_match": false,
+        "ew_topic_detail": "Content is zero-based budgeting. EWs describe activity-based budgeting (ABB, B-006) — 'Limiting cost allocation to only direct labor hours contradicts the activity-based approach...'",
+        "classification": "DL-016_SHIFT"
+      },
+      {
+        "qid": "P1-B-006",
+        "metadata_topic": "N/A",
+        "content_topic": "B.006 activity-based budgeting drivers",
+        "content_stem_preview": "Willow wants budgeted resource needs tied to expected activities...",
+        "correctChoice": "C",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_C empty, CC=C matches.",
+        "ew_topic_match": true,
+        "ew_topic_detail": "Content is ABB. EWs describe ABB concepts (cost drivers, activity-based vs incremental budgeting). Choice-specific and topically aligned.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-007",
+        "metadata_topic": "N/A",
+        "content_topic": "B.007 flexible budget purpose",
+        "content_stem_preview": "Yukon wants to evaluate cost control when actual volume differs from planned volume...",
+        "correctChoice": "B",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_B empty, CC=B matches.",
+        "ew_topic_match": true,
+        "ew_topic_detail": "Content is flexible budgeting. EWs describe flexible budget and static budget distinctions.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-008",
+        "metadata_topic": "N/A",
+        "content_topic": "B.008 sales budget sequencing",
+        "content_stem_preview": "Zephyr is building the annual profit plan...",
+        "correctChoice": "A",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_A empty, CC=A matches.",
+        "ew_topic_match": true,
+        "ew_topic_detail": "Content is budget sequencing. EWs describe production budget, cash budget, and materials budget dependencies on the sales budget.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-009",
+        "metadata_topic": "N/A",
+        "content_topic": "B.009 cash budget minimum balance / cash shortfall",
+        "content_stem_preview": "[content block between B-008 metadata and B-009 metadata]",
+        "correctChoice": "D",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_D empty, CC=D matches (lines 4257).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe cash vs accrual distinctions, borrowing vs revenue, income statement vs cash flow.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-010",
+        "metadata_topic": "N/A",
+        "content_topic": "B.010 forecasting causal model",
+        "content_stem_preview": "[content around lines 4261-4293]",
+        "correctChoice": "A",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_A empty, CC=A matches (line 4303).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe why responsibility-center report, reciprocal allocation, and exponential smoothing are NOT causal forecasting techniques.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-011",
+        "metadata_topic": "N/A",
+        "content_topic": "B.011 time-series trend",
+        "content_stem_preview": "Crescent observes a consistent upward pattern in monthly demand...",
+        "correctChoice": "A",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_A empty, CC=A matches (line 4352).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe why capital lease, static budget variance, and direct method are NOT trend forecasting. All reference choices from B-011's content block.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-015",
+        "metadata_topic": "N/A",
+        "content_topic": "B.015 pro forma financial statements",
+        "content_stem_preview": "Granite wants projected income statement and balance sheet effects of the annual plan...",
+        "correctChoice": "A",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_A empty, CC=A matches. Content CC=A confirmed (line 4524).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe pro forma statements vs historical vs audit evidence. Topically aligned to pro forma financial statements.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-020",
+        "metadata_topic": "N/A",
+        "content_topic": "B.020 flexible budget cost 4",
+        "content_stem_preview": "Umbra has fixed manufacturing support cost of $47,600 and variable support cost of $12 per unit...",
+        "correctChoice": "D",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_D empty, CC=D matches. Content CC=D confirmed (line 4769).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe variable-only, fixed-only, and one overstate calc errors. Numeric EWs match the flexible budget calculation topic.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-025",
+        "metadata_topic": "N/A",
+        "content_topic": "B.026 forecast error analysis 10",
+        "content_stem_preview": "Riverview compares forecasted demand with actual demand over the past 12 months...",
+        "correctChoice": "D",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_D empty, CC=D matches. Content CC=D confirmed (line 5063).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe abandoning forecasting, fraud indicator, and cherry-picking errors. All choice-specific to B-025's own distractors. Topic: forecast error analysis throughout.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-030",
+        "metadata_topic": "N/A",
+        "content_topic": "B.030 direct materials purchases budget 14",
+        "content_stem_preview": "Frontier plans to produce 10,120 units. Each unit needs 5 pounds of material...",
+        "correctChoice": "B",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_B empty, CC=B matches. Content CC=B confirmed (line 5259).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe materials purchases calculation errors (adding/omitting desired ending/beginning inventory). Topically aligned.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-050",
+        "metadata_topic": "N/A",
+        "content_topic": "B.050 exponential smoothing weighting concept",
+        "content_stem_preview": "Ashgrove's demand forecasting model uses exponential smoothing with a high alpha...",
+        "correctChoice": "A",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_A empty, CC=A matches. Content CC=A confirmed (line 6239).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe simple average vs high alpha, ignoring recent data, and data point requirements. All about exponential smoothing.",
+        "classification": "CLEAN"
+      },
+      {
+        "qid": "P1-B-100",
+        "metadata_topic": "N/A",
+        "content_topic": "B.100 standard cost variance types overview",
+        "content_stem_preview": "Which pairing correctly describes the two components typically used to break down a total cost variance...",
+        "correctChoice": "B",
+        "ew_cc_nonempty": false,
+        "ew_cc_detail": "EW_B empty, CC=B matches. Content CC=B confirmed (line 8689).",
+        "ew_topic_match": true,
+        "ew_topic_detail": "EWs describe volume variance (fixed OH), spending/capacity variance (fixed OH), and sales/mix variance (revenue). All distinguish these from the price/quantity decomposition. Topically aligned.",
+        "classification": "CLEAN"
+      }
+    ],
+    "additional_boundary_checks": {
+      "qids_verified_by_pattern_extrapolation": "B-012, B-013, B-014, B-016, B-017, B-018, B-019, B-021 through B-024 — not individually checked but inferred from clean group pattern",
+      "DL-016_free_after_B006": true,
+      "rotation_group_1_exception": "B-004 is the only item in Group 1 with correct EW alignment. All others (B-001, B-002, B-003, B-005) have +1 shift.",
+      "confirmed_pattern": "Template bug in Group 1 authoring: position 1→EW of pos2, pos2→EW of pos3, pos3→EW of pos4, pos4→EW of pos4 (correct), pos5→EW of Group2-pos1"
+    }
+  },
+  "p1_b_006_special_check": {
+    "qid": "P1-B-006",
+    "content_topic": "B.006 activity-based budgeting drivers",
+    "content_stem": "Willow wants budgeted resource needs tied to expected activities. Which response is most appropriate?",
+    "correctChoice": "C",
+    "dl008": false,
+    "dl016_shift": false,
+    "ew_alignment": "All 3 non-CC EW slots (A: direct labor limitation, B: cost drivers not financial-only, D: incremental budgeting criticism) describe ABB concepts. All are choice-specific to B-006's actual distractors.",
+    "comparison_to_b001_b025": "Unlike B-001 (DL-016 + DL-008) and B-025 (clean but mistakenly demoted), B-006 is structurally clean on all dimensions. No rotation artifact pattern. Correctly Certified.",
+    "classification": "CLEAN"
+  },
+  "summary": {
+    "confirmed_defects": 5,
+    "confirmed_defects_detail": {
+      "P1-B-001": "DL-008 (EW_D non-empty when CC=D) + DL-016 (EWs describe B-002's topic, not B-001's)",
+      "P1-B-002": "DL-016 (EWs describe B-003's topic: participative budgeting, not top-down budgeting)",
+      "P1-B-003": "DL-016 (EWs describe B-004's topic: rolling budget, not participative budgeting)",
+      "P1-B-005": "DL-016 (EWs describe B-006's topic: ABB, not zero-based budgeting)",
+      "P1-B-001_demotion": "S701 demotion was CORRECT — item genuinely needs editorial remediation"
+    },
+    "false_positives": 2,
+    "false_positives_detail": {
+      "P1-B-025": "S701 demotion was a likely false positive. EW fields are choice-specific and topically aligned to forecast error analysis. Topic label B.026 vs B.025 is a DL-015 cosmetic numbering artifact. Item should be Certified.",
+      "P1E-F-001": "S700 DL-010 flag was a definite false positive. All EW fields describe analytics concepts (diagnostic, predictive, prescriptive). Zero labor-efficiency variance text. Confirmed by S701 and re-verified here."
+    },
+    "scan_artifacts": 2,
+    "scan_artifacts_detail": {
+      "p1_b_025_topic_label": "Content Topic is B.026 (cosmetic +1 offset). This numbering artifact likely triggered S701's comparison against expected B.025 topic, producing a false demotion.",
+      "p1e_f_001_dl010_flag": "S700 likely caught a different QID's EW fields via regex-window overscan (DL-029 root cause). Direct within-object inspection refutes the DL-010 claim."
+    },
+    "manual_review": 0,
+    "recommended_actions": [
+      "REVERSE the P1-B-025 demotion — return question_state from 'Editorial Queue' to 'Certified'. All EW fields are choice-specific and topically aligned to forecast error analysis.",
+      "KEEP P1-B-001 in 'Editorial Queue' — genuine DL-008 (EW_D non-empty when CC=D) + DL-016 (EWs describe wrong topic). Needs EW rewrite.",
+      "FIX Group 1 DL-016 shift items (P1-B-002, P1-B-003, P1-B-005) — rewrite EWs to match each item's actual Stem and choices.",
+      "P1-B-001: Fix both DL-008 (clear EW_D or update CC) and DL-016 (rewrite all EWs for mission-to-tactical-planning topic).",
+      "P1-E-027: Verified — S701 DL-018 fix is intact. No action needed.",
+      "P1E-F-001: Verified — S700 flag confirmed false. No action needed.",
+      "P1-B-006: Verified clean. No action needed. Remains Certified.",
+      "Post-fix: Update REVISION_HISTORY.md for any state changes."
+    ]
+  }
+}

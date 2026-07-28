@@ -1,0 +1,39 @@
+{
+  "scannedAt": "2026-07-28T13:11:11.668Z",
+  "totalItems": 2214,
+  "totalInversions": 0,
+  "packResults": {
+    "pack_a_corrected.js": {
+      "itemsScanned": 500,
+      "inversions": 0,
+      "hits": []
+    },
+    "pack_b_corrected.js": {
+      "itemsScanned": 500,
+      "inversions": 0,
+      "hits": []
+    },
+    "pack_c_corrected.js": {
+      "itemsScanned": 175,
+      "inversions": 0,
+      "hits": []
+    },
+    "pack_d_corrected.js": {
+      "itemsScanned": 499,
+      "inversions": 0,
+      "hits": []
+    },
+    "pack_e_corrected.js": {
+      "itemsScanned": 540,
+      "inversions": 0,
+      "hits": []
+    },
+    "scored_cases.js": {
+      "itemsScanned": 0,
+      "inversions": 0,
+      "hits": []
+    }
+  },
+  "allInversions": [],
+  "summary": "CLEAN — No logic inversion mismatches found across any pack."
+}

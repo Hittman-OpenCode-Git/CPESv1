@@ -1,0 +1,753 @@
+{
+  "session": "S809",
+  "agent": "Agent O",
+  "task": "Cross-Pack Consistency Review — Domain E Seeds",
+  "date": "2026-07-26",
+  "status": "READ-ONLY COMPLETE",
+  "summary": {
+    "seeds_reviewed": 38,
+    "pack_c_seeds": 19,
+    "pack_d_seeds": 19,
+    "pack_b_benchmark_items": 75,
+    "pack_a_certified_domain_e": 84,
+    "pack_e_domain_e_r_series": 0,
+    "seeds_with_certified_pack_a_counterpart": 18,
+    "seeds_with_empty_ew_non_cc": 28,
+    "seeds_dl008_clean": 38,
+    "clone_pairs_identified": 6,
+    "clone_pairs_confirmed_as_true_clones": 0
+  },
+  "methodology": {
+    "pack_b_benchmark": "Pack B Domain E (P1B-E-076 through P1B-E-150), all 75 items Certified, single-object architecture, ZERO empty non-CC EW slots",
+    "pack_a_certified": "Pack A Section E (P1-E-001 through P1-E-084), all Certified as of S805, comprehensive COSO-principled distractor explanations",
+    "pack_e_r_series": "Pack E has zero Domain E topics — R-series replacement items exist for other sections only",
+    "extraction_method": "Per-QID string-aware content-block extraction handling dual-block (Packs C/D) and single-block (Packs A/B) formats"
+  },
+  "global_findings": {
+    "dl025_dl026_severity": {
+      "finding": "28 of 38 seeds (73.7%) have at least one empty non-CorrectChoice ExplanationWrong slot",
+      "severity": "HIGH — educational quality gap",
+      "pack_b_comparison": "Pack B benchmark has ZERO empty non-CC EW slots across all 75 Domain E items",
+      "pack_a_comparison": "Pack A Section E certified items have ZERO empty non-CC EW slots (remediated in S805)",
+      "breakdown": {
+        "seeds_with_1_empty_non_cc": 18,
+        "seeds_with_2_empty_non_cc": 7,
+        "seeds_with_3_empty_non_cc": 3,
+        "seeds_clean_all_filled": 10
+      }
+    },
+    "explanation_depth_gap": {
+      "finding": "Pack C/D seed explanations are 2-5x shorter than Pack A certified counterparts for same topics",
+      "examples": [
+        {
+          "topic": "management override risk",
+          "seed": "EC-041: EC=280 chars, no COSO principle references",
+          "certified": "P1-E-021: EC=1,250+ chars, COSO Principles 1,2,8,12, SOX 404"
+        },
+        {
+          "topic": "IT general controls access",
+          "seed": "EC-040: EC=226 chars, generic ITGC description",
+          "certified": "P1-E-077: EC extensive, COSO Principle 11, detailed scenario walkthrough"
+        },
+        {
+          "topic": "inherent risk vs control risk",
+          "seed": "EC-061: EC=241 chars",
+          "certified": "P1-E-078: EC=2,000+ chars, COSO Principle 7, full distractor analysis"
+        }
+      ]
+    },
+    "standard_authority_citations": {
+      "finding": "Most Pack C/D seeds lack explicit COSO principle references in ExplanationCorrect",
+      "pack_a_comparison": "Pack A certified items explicitly cite specific COSO Principles (1-17) by number",
+      "risk": "Learners on Pack C/D items receive less structured feedback on which COSO framework element is being tested"
+    },
+    "difficulty_calibration": {
+      "finding": "Difficulty labels inconsistent across packs for same topics",
+      "examples": [
+        {
+          "topic": "IT general controls access",
+          "seed_ec040": "Moderate(3), Understand",
+          "certified_p1e077": "Easy(1), Understand"
+        },
+        {
+          "topic": "inherent risk vs control risk",
+          "seed_ec061": "Moderate(3), Understand",
+          "certified_p1e078": "Moderate, extended Apply-level scenario"
+        },
+        {
+          "topic": "management override risk",
+          "seed_ec041": "Moderate(3), Apply",
+          "certified_p1e021": "Moderate-Easy(2), Understand"
+        }
+      ],
+      "recommendation": "Recalibrate during certification pass. Certified Pack A items are the authoritative reference for difficulty."
+    },
+    "stem_quality": {
+      "finding": "Pack C/D seeds use named fictional companies consistently — good for realism",
+      "weakness": "Many stems are simple identification questions (e.g., 'Hearthstone evaluates... What framework is this?') rather than scenario-based decision-oriented questions",
+      "pack_a_comparison": "Pack A certified items use realistic business scenarios with named stakeholders, specific dollar amounts, and decision context",
+      "pack_b_comparison": "Pack B items vary — some are scenario-based (Titan Industries implementing COSO) and some are simple identification"
+    }
+  },
+  "clone_group_analysis": {
+    "note": "The 6 pairs listed in the task description are THEMATICALLY ADJACENT but NOT true DL-012-style clones. Examination of stems and topics confirms each item tests a distinct concept. However, the content block generation is derived from the same rotation template, creating superficial structural similarity.",
+    "pairs": [
+      {
+        "pair_id": 1,
+        "items": ["P1-EC-025", "P1-EC-028"],
+        "listed_as": "bank reconciliation independence",
+        "actual": {
+          "EC-025": "E.025 'preventive vs detective controls' — dual signatures before check release",
+          "EC-028": "E.028 'bank reconciliation control' — independent bank rec independence"
+        },
+        "verdict": "DIFFERENT TOPICS — no duplication. EC-025 tests control classification (preventive vs detective), EC-028 tests segregation of duties in bank reconciliation.",
+        "recommendation": "Retain both"
+      },
+      {
+        "pair_id": 2,
+        "items": ["P1-EC-040", "P1-EC-041"],
+        "listed_as": "management override",
+        "actual": {
+          "EC-040": "E.040 'it general controls access' — periodic user access review",
+          "EC-041": "E.041 'management override risk' — CEO bypasses approval control"
+        },
+        "verdict": "DIFFERENT TOPICS — EC-040 tests IT general controls (logical access/least privilege), EC-041 tests management override as an internal control limitation.",
+        "recommendation": "Retain both. EC-041 has a Pack A certified counterpart (P1-E-021) — use Pack A version as benchmark during certification."
+      },
+      {
+        "pair_id": 3,
+        "items": ["P1-EC-060", "P1-EC-061"],
+        "listed_as": "inherent risk",
+        "actual": {
+          "EC-060": "E.060 'control environment tone at top' — board/senior executives emphasizing integrity",
+          "EC-061": "E.061 'inherent risk vs control risk' — susceptibility before considering controls"
+        },
+        "verdict": "DIFFERENT TOPICS — EC-060 tests the control environment component, EC-061 tests risk assessment concepts. No duplication.",
+        "recommendation": "Retain both"
+      },
+      {
+        "pair_id": 4,
+        "items": ["P1-ED-010", "P1-ED-014"],
+        "listed_as": "independent verification",
+        "actual": {
+          "ED-010": "E.010 'access control least privilege' — employees granted only necessary system access",
+          "ED-014": "E.014 'independent verification control activity' — supervisor recounting inventory"
+        },
+        "verdict": "DIFFERENT TOPICS — ED-010 is IT security principle (least privilege), ED-014 is control activity (independent verification).",
+        "recommendation": "Retain both"
+      },
+      {
+        "pair_id": 5,
+        "items": ["P1-ED-025", "P1-ED-028"],
+        "listed_as": "monitoring",
+        "actual": {
+          "ED-025": "E.025 'control activities authorization' — purchase order approval thresholds",
+          "ED-028": "E.028 'monitoring ongoing evaluations' — management reviewing exception reports"
+        },
+        "verdict": "DIFFERENT TOPICS — ED-025 is authorization control activity, ED-028 is the monitoring COSO component. Distinct concepts.",
+        "recommendation": "Retain both"
+      },
+      {
+        "pair_id": 6,
+        "items": ["P1-ED-035", "P1-ED-036"],
+        "listed_as": "change management",
+        "actual": {
+          "ED-035": "E.035 'data backup disaster recovery' — offsite backups and DR plan",
+          "ED-036": "E.036 'change management control it systems' — testing and approval before production"
+        },
+        "verdict": "DIFFERENT TOPICS — ED-035 is business continuity/disaster recovery, ED-036 is IT change management.",
+        "recommendation": "Retain both. Pack A has certified counterparts for both (P1-E-030 for DR, P1-E-082 for change management)."
+      }
+    ]
+  },
+  "pack_a_cross_reference": {
+    "summary": "18 of 38 seeds (47.4%) have a directly corresponding Pack A Section E Certified item testing the same topic. These Pack A items are the authoritative quality benchmark.",
+    "matches": [
+      {"seed": "EC-004", "seed_topic": "segregation of duties design", "pack_a": "P1-E-006", "pack_a_topic": "E.006 segregation authorization custody recording"},
+      {"seed": "EC-008", "seed_topic": "coso internal control framework", "pack_a": "P1-E-001", "pack_a_topic": "E.001 control environment tone at the top"},
+      {"seed": "EC-028", "seed_topic": "bank reconciliation control", "pack_a": "P1-E-044", "pack_a_topic": "E.044 bank reconciliation control purpose"},
+      {"seed": "EC-040", "seed_topic": "it general controls access", "pack_a": "P1-E-077", "pack_a_topic": "E.077 it general controls access"},
+      {"seed": "EC-041", "seed_topic": "management override risk", "pack_a": "P1-E-021", "pack_a_topic": "E.021 management override risk"},
+      {"seed": "EC-049", "seed_topic": "whistleblower hotline purpose", "pack_a": "P1-E-033", "pack_a_topic": "E.033 whistleblower channel"},
+      {"seed": "EC-052", "seed_topic": "compensating control small business", "pack_a": "P1-E-025", "pack_a_topic": "E.025 compensating controls small office"},
+      {"seed": "EC-060", "seed_topic": "control environment tone at top", "pack_a": "P1-E-001", "pack_a_topic": "E.001 control environment tone at the top"},
+      {"seed": "EC-061", "seed_topic": "inherent risk vs control risk", "pack_a": "P1-E-078", "pack_a_topic": "E.078 inherent risk vs control risk"},
+      {"seed": "EC-066", "seed_topic": "segregation cash custody recording", "pack_a": "P1-E-080", "pack_a_topic": "E.080 segregation of duties cash custody and recording"},
+      {"seed": "EC-072", "seed_topic": "remediation of control deficiency", "pack_a": "P1-E-081", "pack_a_topic": "E.081 remediation of control deficiency prioritization"},
+      {"seed": "ED-028", "seed_topic": "monitoring ongoing evaluations", "pack_a": "P1-E-079", "pack_a_topic": "E.079 coso monitoring activities ongoing vs separate"},
+      {"seed": "ED-035", "seed_topic": "data backup disaster recovery", "pack_a": "P1-E-030", "pack_a_topic": "E.030 data backup recovery control"},
+      {"seed": "ED-064", "seed_topic": "vendor master file controls", "pack_a": "P1-E-083", "pack_a_topic": "E.083 vendor master file segregation"},
+      {"seed": "ED-066", "seed_topic": "audit committee oversight role", "pack_a": "P1-E-084", "pack_a_topic": "E.084 audit committee oversight independence"},
+      {"seed": "ED-071", "seed_topic": "change management control direct production change", "pack_a": "P1-E-082", "pack_a_topic": "E.082 it change management emergency bypass"},
+      {"seed": "ED-074", "seed_topic": "reconciliation incompatible duties EFT and bank rec", "pack_a": "P1-E-006", "pack_a_topic": "E.006 segregation authorization custody recording"},
+      {"seed": "ED-075", "seed_topic": "segregation approval reconciliation", "pack_a": "P1-E-006", "pack_a_topic": "E.006 segregation authorization custody recording"}
+    ]
+  },
+  "seed_by_seed_quality_matrix": {
+    "pack_c_seeds": [
+      {
+        "qid": "P1-EC-004",
+        "topic": "segregation of duties design",
+        "stem_preview": "Driftwood assigns one employee to authorize purchases, another to record them, and a third to reconcile the vendor accounts. What internal control concept does this reflect?",
+        "cognitive": "Apply",
+        "difficulty": "Moderate(3)",
+        "ec_length": 302,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-006)",
+        "quality_rating": "FAIR — stem is good (named company, specific duties), EC describes the concept but lacks COSO principle citations. DL-026 must be remediated before certification."
+      },
+      {
+        "qid": "P1-EC-008",
+        "topic": "coso internal control framework",
+        "stem_preview": "Hearthstone evaluates its internal control system using a widely recognized framework consisting of five integrated components. What framework is this?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(2)",
+        "ec_length": 312,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-001 covers COSO)",
+        "quality_rating": "FAIR — stem is basic knowledge-recall (definition-match); should be Difficulty Easy(1). EC enumerates five components. EW_A empty slot needs filling."
+      },
+      {
+        "qid": "P1-EC-014",
+        "topic": "fraud triangle elements",
+        "stem_preview": "Nightingale's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud risk... What model are they referencing?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 224,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — Only 1 of 3 distractor slots has content. Explanation lacks COSO Principle 8 (fraud risk assessment) reference. Remediation priority: HIGH."
+      },
+      {
+        "qid": "P1-EC-020",
+        "topic": "physical controls over assets",
+        "stem_preview": "Thornfield stores inventory in a locked warehouse accessible only to authorized personnel with badge access. What type of control is this?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 269,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-010 covers physical safeguards)",
+        "quality_rating": "FAIR — stem with named company and specific scenario. EC adequately describes physical safeguarding. One empty EW slot."
+      },
+      {
+        "qid": "P1-EC-021",
+        "topic": "segregation of duties vendor setup and payment",
+        "stem_preview": "Bryant Manufacturing has a small accounts payable department where one employee creates new vendor records, enters invoices from those vendors, and initiates payments...",
+        "cognitive": "Apply",
+        "difficulty": "Moderate(3)",
+        "ec_length": 247,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-083 covers vendor master file segregation)",
+        "quality_rating": "GOOD — realistic scenario (Bryant Manufacturing, AP department). Stem has detail about the control weakness. EC identifies preventive authorization control. One empty EW slot."
+      },
+      {
+        "qid": "P1-EC-022",
+        "topic": "preventive vs detective duplicate payment control",
+        "stem_preview": "Crestview Manufacturing frequently discovers duplicate vendor payments when reviewing the monthly AP aging report. Management wants to prevent duplicates from occurring...",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 237,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Partial (P1-E-062/070 cover AP duplicate invoice control)",
+        "quality_rating": "BELOW STANDARD — Good stem with realistic scenario. But 2/3 EW slots empty. Only one distractor has a filled explanation. Remediation priority: HIGH."
+      },
+      {
+        "qid": "P1-EC-023",
+        "topic": "IT access control terminated employee deprovisioning",
+        "stem_preview": "Drake Distribution discovered that a former employee's system access remained active for 18 days after termination... Management wants to prevent recurrence.",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 213,
+        "ew_empty_non_cc": ["A", "D"],
+        "ew_filled_non_cc": ["B"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Partial (P1-E-039/047/055/063 cover terminated employee control)",
+        "quality_rating": "BELOW STANDARD — Realistic scenario with specific details (18 days), but only 1 distractor slot filled. Significant educational quality gap."
+      },
+      {
+        "qid": "P1-EC-024",
+        "topic": "application input control sales order validation",
+        "stem_preview": "Parkview Company's sales order system accepts orders with invalid customer codes, negative quantities, and missing ship-to addresses...",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 261,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-014 covers input validation edit checks)",
+        "quality_rating": "GOOD — Strong stem with specific examples of input errors. EC correctly categorizes as preventive application input control. One empty EW slot."
+      },
+      {
+        "qid": "P1-EC-025",
+        "topic": "preventive vs detective controls",
+        "stem_preview": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?",
+        "cognitive": "Apply",
+        "difficulty": "Moderate(3)",
+        "ec_length": 220,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "No direct match (generic control classification)",
+        "quality_rating": "GOOD — Clear scenario with decision required (classify preventive vs detective). EC correctly identifies preventive authorization control. DL-026 present."
+      },
+      {
+        "qid": "P1-EC-028",
+        "topic": "bank reconciliation control",
+        "stem_preview": "Copperline has a designated employee, independent of cash handling and recording, perform the monthly bank reconciliation. Why is independence important?",
+        "cognitive": "Apply",
+        "difficulty": "Moderate(3)",
+        "ec_length": 280,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-044 covers bank reconciliation control purpose)",
+        "quality_rating": "GOOD — Clear segregation scenario. EC covers detective control and independence concept well. DL-026 present. Compare with P1-E-044 for depth."
+      },
+      {
+        "qid": "P1-EC-031",
+        "topic": "erm risk appetite",
+        "stem_preview": "Foxglove's board defines the amount of risk the organization is willing to accept in pursuit of its objectives. What enterprise risk management concept is this?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 168,
+        "ew_empty_non_cc": ["A", "D"],
+        "ew_filled_non_cc": ["B"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — Shortest EC in the seed set (168 chars). 2/3 EW slots empty. Definition-match style (Bloom's Remember, not Understand). Will need significant enhancement."
+      },
+      {
+        "qid": "P1-EC-040",
+        "topic": "it general controls access",
+        "stem_preview": "Oleander requires periodic review of user access rights to ensure employees only retain system access appropriate to their current role. What type of IT control is this?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 226,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-077 — EXACT topic match)",
+        "quality_rating": "FAIR — Good stem. But Pack A certified counterpart (P1-E-077) has 4x deeper EC with COSO Principle 11, 200+ char distractor explanations each. Significant quality gap vs certified benchmark."
+      },
+      {
+        "qid": "P1-EC-041",
+        "topic": "management override risk",
+        "stem_preview": "Pinehollow's CEO instructs the controller to bypass a normal approval control to record a favorable adjusting entry near year-end. What internal control limitation...",
+        "cognitive": "Apply",
+        "difficulty": "Moderate(3)",
+        "ec_length": 280,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-021 — EXACT topic match)",
+        "quality_rating": "GOOD stem but INSUFFICIENT explanation. Pack A certified counterpart (P1-E-021) has 1,250+ char EC citing COSO Principles 1,2,8,12, SOX Section 404, board oversight, and audit committee review. Seed's 280-char EC should be expanded to match Pack A benchmark depth."
+      },
+      {
+        "qid": "P1-EC-049",
+        "topic": "whistleblower hotline purpose",
+        "stem_preview": "Yorkshire establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations without fear of retaliation...",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(2)",
+        "ec_length": 266,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-033 covers whistleblower channel)",
+        "quality_rating": "GOOD — Realistic scenario. EC addresses fraud-risk monitoring and info/communication component. One empty EW slot."
+      },
+      {
+        "qid": "P1-EC-052",
+        "topic": "compensating control small business",
+        "stem_preview": "Cliffside is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 270,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-025 — compensating controls small office)",
+        "quality_rating": "GOOD — Practical scenario for small businesses. EC describes management review as compensating control. One empty EW slot."
+      },
+      {
+        "qid": "P1-EC-060",
+        "topic": "control environment tone at top",
+        "stem_preview": "Knollwood's board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee attitudes toward compliance...",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(2)",
+        "ec_length": 276,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-001 — control environment tone at the top)",
+        "quality_rating": "GOOD — COSO Principle 1 content. EC mentions control environment as foundation. Should reference COSO Principle 1 explicitly like Pack A benchmark. One empty EW slot."
+      },
+      {
+        "qid": "P1-EC-061",
+        "topic": "inherent risk vs control risk",
+        "stem_preview": "Lanternwood's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is this?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 241,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-078 — EXACT topic match)",
+        "quality_rating": "BELOW STANDARD vs benchmark — Pack A counterpart (P1-E-078) is 2,000+ chars with COSO Principle 7, residual risk analysis, and detailed distractor explanations. Seed is 241 chars of basic definition. Massive quality gap."
+      },
+      {
+        "qid": "P1-EC-066",
+        "topic": "segregation cash custody recording",
+        "stem_preview": "Quailrun has the same employee both handling incoming cash receipts and recording them in the accounting records. What control weakness does this create?",
+        "cognitive": "Understand",
+        "difficulty": "Easy(1)",
+        "ec_length": 217,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Yes (P1-E-080 — EXACT topic match)",
+        "quality_rating": "BELOW STANDARD — Only seed correctly calibrated as Easy(1). But 2/3 EW slots empty. Pack A counterpart (P1-E-080) has comprehensive COSO-aligned explanations."
+      },
+      {
+        "qid": "P1-EC-072",
+        "topic": "remediation of control deficiency",
+        "stem_preview": "Willowmere identifies a control deficiency and assigns an owner, a corrective action plan, and a target completion date. What element of COSO does this represent?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 244,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-081 — EXACT topic match)",
+        "quality_rating": "GOOD — Specific remediation scenario. EC ties to monitoring and accountability. Should reference COSO Principle 17 (monitoring) explicitly. One empty EW slot."
+      }
+    ],
+    "pack_d_seeds": [
+      {
+        "qid": "P1-ED-001",
+        "topic": "three lines of defense model",
+        "stem_preview": "Alderway structures its risk and control functions using operational management, risk/compliance oversight, and internal audit as distinct layers. What model is this?",
+        "cognitive": "Understand",
+        "difficulty": "Difficult(2)",
+        "ec_length": 237,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "No direct match",
+        "quality_rating": "FAIR — Difficulty label mismatch: labeled Difficult but score is 2 (Moderate-Easy) and cognitive is Understand. Definition-match style. DL-026 present."
+      },
+      {
+        "qid": "P1-ED-010",
+        "topic": "access control least privilege",
+        "stem_preview": "Juniperfield grants employees system access limited only to what is necessary to perform their specific job duties. What security principle does this describe?",
+        "cognitive": "Understand",
+        "difficulty": "Difficult(2)",
+        "ec_length": 208,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Partial (P1-E-011 covers payroll access controls)",
+        "quality_rating": "BELOW STANDARD — Difficulty label claims 'Difficult' but definition-match style = Easy. 2/3 EW slots empty. EC=208 chars with no COSO Principle reference."
+      },
+      {
+        "qid": "P1-ED-014",
+        "topic": "independent verification control activity",
+        "stem_preview": "Northfell has a supervisor recount inventory counted by warehouse staff before finalizing the count. What type of control activity is this?",
+        "cognitive": "Understand",
+        "difficulty": "Difficult(2)",
+        "ec_length": 225,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — Difficulty label mismatch (should be Moderate/Easy). 2/3 EW slots empty. Good stem with practical inventory scenario."
+      },
+      {
+        "qid": "P1-ED-016",
+        "topic": "erm risk response strategies",
+        "stem_preview": "Palisade decides to purchase insurance to address a significant identified risk rather than eliminate the underlying activity. What enterprise risk management strategy is this?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(2)",
+        "ec_length": 152,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — Shortest EC in all seeds (152 chars). Should cite COSO ERM framework explicitly. One empty EW slot."
+      },
+      {
+        "qid": "P1-ED-025",
+        "topic": "control activities authorization",
+        "stem_preview": "Zionsgate requires that all purchase orders above a certain dollar amount be approved by a manager before the order is placed. What type of control is this?",
+        "cognitive": "Understand",
+        "difficulty": "Difficult(2)",
+        "ec_length": 197,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-037 covers purchasing authorization threshold)",
+        "quality_rating": "FAIR — Difficulty label mismatch (Difficult for authorization classification). EC under 200 chars. COSO Principle 10 (control activities) should be cited."
+      },
+      {
+        "qid": "P1-ED-028",
+        "topic": "monitoring ongoing evaluations",
+        "stem_preview": "Crownridge's management periodically reviews exception reports and reconciliations as part of regular operations to assess whether controls remain effective. What COSO component is this?",
+        "cognitive": "Apply",
+        "difficulty": "Difficult(4)",
+        "ec_length": 210,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-079 — COSO monitoring activities ongoing vs separate)",
+        "quality_rating": "GOOD — Correctly calibrated as Apply-level with specific monitoring scenario. EC distinguishes between monitoring and control activities. DL-026 present. Pack A counterpart P1-E-079 provides deeper COSO Principle 16 reference."
+      },
+      {
+        "qid": "P1-ED-035",
+        "topic": "data backup disaster recovery",
+        "stem_preview": "Jettison maintains offsite backups of critical financial data and a documented plan for restoring systems after a disruption. What control objective does this serve?",
+        "cognitive": "Understand",
+        "difficulty": "Difficult(2)",
+        "ec_length": 215,
+        "ew_empty_non_cc": ["A", "D"],
+        "ew_filled_non_cc": ["B"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Partial (P1-E-030 covers data backup recovery control)",
+        "quality_rating": "BELOW STANDARD — Difficulty label mismatch. 2/3 EW slots empty. EC under 250 chars. DR is an important CMA topic needing robust explanation."
+      },
+      {
+        "qid": "P1-ED-036",
+        "topic": "change management control it systems",
+        "stem_preview": "Kirkwood requires all software changes to be tested, approved, and documented before being moved into the production environment. What type of IT control is this?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate-Easy(3)",
+        "ec_length": 144,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-082 covers IT change management emergency bypass)",
+        "quality_rating": "BELOW STANDARD — Second shortest EC (144 chars). Difficulty mislabeled: Moderate-Easy label but DifficultyScore=3 (Moderate). EC doesn't reference COSO Principle 11."
+      },
+      {
+        "qid": "P1-ED-042",
+        "topic": "risk assessment likelihood impact",
+        "stem_preview": "Quarrycrest's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do...",
+        "cognitive": "Understand",
+        "difficulty": "Difficult(2)",
+        "ec_length": 238,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — Difficulty label mismatch. 2/3 EW slots empty. Should reference COSO Principle 7 (risk assessment)."
+      },
+      {
+        "qid": "P1-ED-046",
+        "topic": "code of conduct ethics program",
+        "stem_preview": "Umberglen requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct...",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(2)",
+        "ec_length": 158,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — Third shortest EC (158 chars). 2/3 EW slots empty. Ethics/control environment is a foundational COSO concept needing deeper treatment."
+      },
+      {
+        "qid": "P1-ED-051",
+        "topic": "password access authentication control",
+        "stem_preview": "Briarcliff requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose...",
+        "cognitive": "Apply",
+        "difficulty": "Moderate(3)",
+        "ec_length": 167,
+        "ew_empty_non_cc": ["A", "D"],
+        "ew_filled_non_cc": ["B"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — EC=167 chars for an Apply-level item. 2/3 EW slots empty. COSO Principle 11 (technology general controls) should be cited."
+      },
+      {
+        "qid": "P1-ED-058",
+        "topic": "internal control cost benefit limitation",
+        "stem_preview": "Ivorycrest's management decides not to implement an extremely costly control because the risk it addresses is low and infrequent. What limitation of internal control...",
+        "cognitive": "Understand",
+        "difficulty": "Difficult(2)",
+        "ec_length": 273,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "No direct match",
+        "quality_rating": "BELOW STANDARD — Reasonable EC but difficulty label mismatch. 2/3 EW slots empty. Should reference COSO limitation statement (reasonable assurance, not absolute)."
+      },
+      {
+        "qid": "P1-ED-064",
+        "topic": "vendor master file controls",
+        "stem_preview": "Oakvale restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments...",
+        "cognitive": "Apply",
+        "difficulty": "Difficult(4)",
+        "ec_length": 280,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Yes (P1-E-083 — EXACT topic match)",
+        "quality_rating": "GOOD — Correctly calibrated as Apply(4). EC identifies fictitious-vendor risk and prevention. Compare with Pack A P1-E-083 for depth and COSO citations. One empty EW slot."
+      },
+      {
+        "qid": "P1-ED-066",
+        "topic": "audit committee oversight role",
+        "stem_preview": "Quillwood's board audit committee oversees the financial reporting process, the external auditor relationship, and the internal audit function...",
+        "cognitive": "Apply",
+        "difficulty": "Difficult(4)",
+        "ec_length": 265,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Yes (P1-E-084 — EXACT topic match)",
+        "quality_rating": "BELOW STANDARD — Correctly calibrated as Apply/Difficult but 2/3 EW slots empty. EC mentions independence and SOX but needs COSO Principle 2 (board oversight). Pack A certified P1-E-084 is the benchmark."
+      },
+      {
+        "qid": "P1-ED-071",
+        "topic": "change management control direct production change",
+        "stem_preview": "A developer at Northpoint Solutions made a direct change to a production database to correct a customer billing error. No change request was submitted...",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 247,
+        "ew_empty_non_cc": ["A", "D"],
+        "ew_filled_non_cc": ["B"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Partial (P1-E-082 covers IT change management)",
+        "quality_rating": "BELOW STANDARD — Strong scenario (direct production change) but 2/3 EW slots empty. EC correctly identifies missing change management controls. COSO Principle 11 citation needed."
+      },
+      {
+        "qid": "P1-ED-072",
+        "topic": "fraud risk purchasing conflict of interest",
+        "stem_preview": "At Elmwood Manufacturing, the purchasing manager is authorized to add new vendors and selects the winning bidders for contracts. What internal control risk exists?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 206,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "C"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-016 covers vendor master file maintenance, P1-E-022 fraud opportunity)",
+        "quality_rating": "FAIR — Good practical fraud scenario. EC identifies conflict of interest and segregation needed. One empty EW slot. Should cite COSO Principle 8 (fraud risk)."
+      },
+      {
+        "qid": "P1-ED-073",
+        "topic": "monitoring exception reports not reviewed",
+        "stem_preview": "Sterling Company generates daily exception reports for purchasing transactions exceeding approved limits. The reports are produced automatically, but no one has been assigned to review or investigate exceptions...",
+        "cognitive": "Apply",
+        "difficulty": "Moderate(3)",
+        "ec_length": 246,
+        "ew_empty_non_cc": ["B"],
+        "ew_filled_non_cc": ["C", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-073 covers monitoring separate evaluations)",
+        "quality_rating": "GOOD — Excellent practical scenario showing the review gap. Correctly identifies that detective controls require action post-detection. One empty EW slot."
+      },
+      {
+        "qid": "P1-ED-074",
+        "topic": "reconciliation incompatible duties EFT and bank rec",
+        "stem_preview": "At Valley Associates, the same employee who initiates electronic fund transfers also performs the monthly bank reconciliation. What is the primary risk?",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 227,
+        "ew_empty_non_cc": ["A", "C"],
+        "ew_filled_non_cc": ["D"],
+        "ew_status": "2/3 non-CC slots empty — severe DL-026",
+        "pack_a_match": "Partial (P1-E-006 covers segregation authorization custody recording)",
+        "quality_rating": "BELOW STANDARD — Good scenario for segregation of duties but 2/3 EW slots empty. EC identifies concealment risk but should be expanded."
+      },
+      {
+        "qid": "P1-ED-075",
+        "topic": "segregation approval reconciliation",
+        "stem_preview": "Alderway ensures that the employee who approves a vendor invoice for payment is different from the employee who reconciles the AP subsidiary ledger...",
+        "cognitive": "Understand",
+        "difficulty": "Moderate(3)",
+        "ec_length": 153,
+        "ew_empty_non_cc": ["A"],
+        "ew_filled_non_cc": ["B", "D"],
+        "ew_status": "1/3 non-CC slots empty — DL-026 present",
+        "pack_a_match": "Partial (P1-E-006 covers segregation authorization custody recording)",
+        "quality_rating": "BELOW STANDARD — 153-char EC (one of the shortest). Good segregation scenario but insufficient explanation depth. Pack A certified items on same topic have 3-5x deeper ECS."
+      }
+    ]
+  },
+  "top_5_remediation_priority": [
+    {
+      "rank": 1,
+      "qid": "P1-EC-061",
+      "reason": "Certified Pack A counterpart (P1-E-078) has 8x deeper explanation. Topic is fundamental to CMA Domain E risk assessment. 1 empty EW slot. Highest quality gap vs benchmark.",
+      "action": "Expand EC to match P1-E-078 depth: cite COSO Principle 7, distinguish inherent/control/residual risk with examples."
+    },
+    {
+      "rank": 2,
+      "qid": "P1-EC-041",
+      "reason": "Certified Pack A counterpart (P1-E-021) has 4x deeper explanation with COSO Principles 1,2,8,12 and SOX 404. Management override is a core governance topic.",
+      "action": "Expand EC to comprehensive COSO/SOX treatment. Fix DL-026 empty EW_B slot."
+    },
+    {
+      "rank": 3,
+      "qid": "P1-ED-066",
+      "reason": "Certified Pack A counterpart (P1-E-084). Audit committee oversight is critical CMA topic. 2/3 EW slots empty. Apply-level item needs corresponding explanation depth.",
+      "action": "Expand EC with COSO Principle 2 (board oversight), SOX audit committee requirements. Fill 2 empty EW slots."
+    },
+    {
+      "rank": 4,
+      "qid": "P1-ED-064",
+      "reason": "Certified Pack A counterpart (P1-E-083). Vendor master file controls test segregation of duties at the system level. Apply(4) calibration is correct but needs EW completion.",
+      "action": "Fill empty EW_A slot. Expand EC with system-level control framework references."
+    },
+    {
+      "rank": 5,
+      "qid": "P1-EC-040",
+      "reason": "Identical topic to certified P1-E-077. IT general controls access is a key CMA Part 1 Section F/E crossover topic.",
+      "action": "Align EC with P1-E-077 standard: cite COSO Principle 11, provide specific scenario analysis. Fill empty EW_A slot."
+    }
+  ],
+  "difficulty_recalibration_recommendations": [
+    {"qid": "P1-EC-008", "current": "Moderate(2)", "recommended": "Easy(1)", "reason": "Definition-match: identify COSO framework from five components description"},
+    {"qid": "P1-ED-001", "current": "Difficult(2)", "recommended": "Easy(1)", "reason": "Difficulty label 'Difficult' contradicts DifficultyScore=2. Definition-match style (identify three lines model)"},
+    {"qid": "P1-ED-010", "current": "Difficult(2)", "recommended": "Easy(1)", "reason": "Definition-match: identify least privilege"},
+    {"qid": "P1-ED-014", "current": "Difficult(2)", "recommended": "Moderate(3)", "reason": "Requires classification (control activity type), some analysis needed"},
+    {"qid": "P1-ED-025", "current": "Difficult(2)", "recommended": "Moderate(3)", "reason": "Difficulty label/schema mismatch"},
+    {"qid": "P1-ED-035", "current": "Difficult(2)", "recommended": "Moderate(3)", "reason": "Difficulty label/schema mismatch"},
+    {"qid": "P1-ED-036", "current": "Moderate-Easy(3)", "recommended": "Moderate(3)", "reason": "Label/schema inconsistency (M-E with DS=3)"},
+    {"qid": "P1-ED-042", "current": "Difficult(2)", "recommended": "Moderate(3)", "reason": "Difficulty label/schema mismatch"},
+    {"qid": "P1-ED-058", "current": "Difficult(2)", "recommended": "Moderate(3)", "reason": "Difficulty label/schema mismatch"}
+  ],
+  "recommendations": {
+    "short_term": [
+      "Prioritize remediation of 28 seeds with empty non-CC EW slots (DL-025/DL-026) using Pack A certified items as content benchmarks",
+      "For the 18 seeds with Pack A certified counterparts, use those counterparts as the authoritative quality benchmark for EC depth, COSO principle citations, and distractor explanations",
+      "Fix the 9 difficulty label/schema mismatches identified in Pack D seeds (label contradicts DifficultyScore)",
+      "Remediate in batches of ≤28 items per governance-guard Rule 5"
+    ],
+    "medium_term": [
+      "During certification pass, cross-reference each seed against its Pack A or Pack B counterpart for explanation depth parity",
+      "Add explicit COSO Principle references (1-17) to all ExplanationCorrect fields in seeds lacking them",
+      "Recalibrate all seeds where cognitive demand is definition-match (Bloom's Remember/Understand) but difficulty is labeled ≥Moderate",
+      "Consider the Pack A Section E certified items as the superior benchmark for most topics — the Pack C/D seeds should reach this standard before certification"
+    ],
+    "clone_groups": [
+      "NONE of the 6 listed 'clone pairs' are true DL-012-style clones — each pair tests distinct concepts",
+      "Retain all 38 seeds as unique items (no archiving needed for duplication reasons)",
+      "However, 18 of these seeds overlap topically with certified Pack A items — during certification, ensure content is complementary not contradictory"
+    ],
+    "delivery_consideration": [
+      "Pack B Domain E (75 Certified items) and Pack A Section E (84 Certified items) provide comprehensive Domain E coverage",
+      "The 38 Pack C/D seeds would fill remaining gaps in the rotation pool but should NOT enter the learner pool without completing DL-025/DL-026 remediation",
+      "Pack E has zero Domain E items — no R-series supplement available for Domain E"
+    ]
+  }
+}

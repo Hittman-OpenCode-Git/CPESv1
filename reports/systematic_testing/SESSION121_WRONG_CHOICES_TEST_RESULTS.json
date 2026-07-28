@@ -1,0 +1,61 @@
+{
+  "session": 121,
+  "title": "S121 Wrong Choices Test Results",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "suites": {
+    "stageC": {
+      "file": "scripts/test_may_stagec.js",
+      "preFlight": "119/119 PASS",
+      "postFlight": "119/119 PASS",
+      "testsUpdated": [
+        {
+          "oldName": "_explainWrongChoices uses bank ExplanationWrong fields",
+          "newName": "_explainWrongChoices provides misconception coaching with bank ExplanationWrong content",
+          "change": "Test now verifies coaching structure (Why it is tempting, Why it is not correct, Misconception to watch, How to avoid it next time) and ExplanationWrong preservation in coaching output"
+        }
+      ],
+      "testsPreserved": 118,
+      "testEnvironmentFixes": []
+    },
+    "tutoringSafety": {
+      "file": "scripts/test_tutoring_safety.js",
+      "preFlight": "86/86 PASS",
+      "postFlight": "98/98 PASS",
+      "testsUpdated": [
+        {
+          "oldName": "F-04b: _explainWrongChoices includes all wrong choices",
+          "newName": "F-04b: _explainWrongChoices includes all wrong choices with coaching",
+          "change": "Test now verifies coaching structure and ExplanationWrong preservation in addition to correct-choice exclusion"
+        }
+      ],
+      "newTests": 12,
+      "newTestsList": [
+        "S121-01: _buildWrongChoiceCoaching returns structured array with coaching fields",
+        "S121-02: _buildWrongChoiceCoaching includes ExplanationWrong when available",
+        "S121-03: _buildWrongChoiceCoaching uses safe fallback when ExplanationWrong is thin",
+        "S121-04: _explainWrongChoices provides strategy-only guidance when question is unanswered",
+        "S121-05: _explainWrongChoices prioritizes selected wrong answer in post-answer mode",
+        "S121-06: _explainWrongChoices provides full coaching in review mode",
+        "S121-07: wrong-choice coaching contains no prediction language",
+        "S121-08: _buildWrongChoiceCoaching handles null question gracefully",
+        "S121-09: _explainWrongChoices routes through _guardedSpeak in pilot mode",
+        "S121-10: _explainWrongChoices handles items with no choices gracefully",
+        "S121-11: _inferWhyTempting does not fabricate facts not in the item",
+        "S121-12: _inferMisconception uses ExplanationWrong signal when available"
+      ]
+    },
+    "governanceGuard": {
+      "file": "scripts/test_governance_guard.js",
+      "result": "20/20 PASS (unchanged)"
+    }
+  },
+  "totalPostFlight": "237/237 PASS (119 Stage C + 98 tutoring safety + 20 governance guard)",
+  "thresholdVerification": {
+    "accuracyHigh": 80,
+    "accuracyGood": 75,
+    "stabilityHigh": 75,
+    "stabilityGood": 60,
+    "unchanged": true
+  },
+  "modelVersion": "S111-1.0 (unchanged)"
+}

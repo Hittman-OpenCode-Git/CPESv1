@@ -1,0 +1,60 @@
+{
+  "generated": "2026-07-26T21:49:14.762Z",
+  "session": "S305",
+  "totalItems": 625,
+  "itemsWithExhibitReferences": 99,
+  "casesWithReferencing": 22,
+  "casesWithoutReferencing": 53,
+  "dependencyRate": "15.8%",
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "cases": 11,
+      "items": 58,
+      "exhibitReferencedItems": 8,
+      "dependencyRate": "13.8%",
+      "casesWithReferences": 2
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "cases": 12,
+      "items": 68,
+      "exhibitReferencedItems": 5,
+      "dependencyRate": "7.4%",
+      "casesWithReferences": 1
+    },
+    "C - Performance Management": {
+      "cases": 14,
+      "items": 73,
+      "exhibitReferencedItems": 13,
+      "dependencyRate": "17.8%",
+      "casesWithReferences": 3
+    },
+    "D - Cost Management": {
+      "cases": 14,
+      "items": 77,
+      "exhibitReferencedItems": 13,
+      "dependencyRate": "16.9%",
+      "casesWithReferences": 3
+    },
+    "E - Internal Controls": {
+      "cases": 13,
+      "items": 68,
+      "exhibitReferencedItems": 26,
+      "dependencyRate": "38.2%",
+      "casesWithReferences": 6
+    },
+    "F - Technology & Analytics": {
+      "cases": 11,
+      "items": 56,
+      "exhibitReferencedItems": 34,
+      "dependencyRate": "60.7%",
+      "casesWithReferences": 7
+    },
+    "Unknown": {
+      "cases": 45,
+      "items": 225,
+      "exhibitReferencedItems": 0,
+      "dependencyRate": "0.0%",
+      "casesWithReferences": 0
+    }
+  }
+}

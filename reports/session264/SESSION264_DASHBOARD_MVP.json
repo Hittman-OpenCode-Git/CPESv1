@@ -1,0 +1,80 @@
+{
+  "specId": "SESSION264_DASHBOARD_MVP",
+  "session": "264",
+  "title": "May Admin — Investigation Dashboard MVP",
+  "program": "250-Series — Administrative Platform Deployment",
+  "programSession": "2 of 4 (S263-S266)",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T20:16:00.000Z",
+  "status": "BUILT — Dashboard MVP deployed.",
+  "purpose": "Build the first functional administrative workspace: a browser-based dashboard with 4 tabbed views consuming the admin_dashboard_data.js data bundle.",
+  "authorization": "S262 — READY FOR PHASE 1 DEPLOYMENT (97/100)",
+  "dependsOn": ["SESSION263_ADMIN_SERVICE_LAYER.json", "admin_dashboard_data.js"],
+  "deliverables": {
+    "dashboard": {
+      "file": "admin.html",
+      "lines": "~400 (HTML + CSS + inline JS)",
+      "dataSource": "scripts/output/admin_dashboard_data.js (1,260 KB, loaded via <script> tag)",
+      "styling": "Reuses styles.css CSS variables",
+      "architecture": "Vanilla JS, no build tooling, no server, file:// protocol compatible"
+    }
+  },
+  "views": {
+    "questionView": {
+      "controls": "Text search (QID/topic), section filter, health tier filter",
+      "tableColumns": "QID, Section, Topic, State, Health (color bar + score), Defects, Investigations",
+      "sortEnabled": true,
+      "defaultSort": "Health score ascending (worst first)",
+      "detailExpansion": "Identity block, health gauge, defect badges, linked challenges list, linked investigations list, CLI command reference"
+    },
+    "challengeView": {
+      "controls": "Text search, status filter",
+      "tableColumns": "Challenge ID, Type, Question, Triage Category, Status, Priority Score",
+      "detailExpansion": "Question link (clickable to Question View), triage info, linked investigations, linked recommendations, linked sessions"
+    },
+    "sessionView": {
+      "controls": "Text search (session ID, title, series)",
+      "tableColumns": "Session ID, Title, Mode, Questions, Certified %, Outcomes (ch/rec/inv counts)",
+      "detailExpansion": "Series, date, mode, QID list (truncated at 30), challenge/recommendation/investigation IDs"
+    },
+    "recommendationView": {
+      "controls": "Text search (REC-ID, type, source)",
+      "tableColumns": "REC-ID, Type, Severity, Status, Target QIDs count, Source Scan",
+      "detailExpansion": "Description, lifecycle timeline, target QID list, target session, linked investigations"
+    }
+  },
+  "globalHeader": {
+    "metrics": [
+      {"label": "Certified", "value": "2,221"},
+      {"label": "Total", "value": "2,540"},
+      {"label": "Ratio", "value": "87.4%"},
+      {"label": "Health", "value": "95"},
+      {"label": "Investigations", "value": "19"},
+      {"label": "Challenges", "value": "35"},
+      {"label": "Governance", "value": "PASS 32/32"}
+    ]
+  },
+  "verification": {
+    "criticalQidsPresent": ["P1-A-036", "P1-A-046", "P1-A-056", "P1-A-066", "P1-E-076", "P1-EC-004", "P1B-B-153", "P1B-B-001", "P1-FC-001"],
+    "criticalChallengesPresent": ["CH-CC1ECA89", "CH-42169D7F", "CH-53D73FDB", "CH-5DEDA52E"],
+    "criticalInvestigationsPresent": ["INV-20260727-019"],
+    "criticalRecommendationsPresent": ["REC-61966733", "REC-5B1E489D"],
+    "allCriticalPresent": true,
+    "dataLoadsViaScriptTag": true,
+    "stylingReusesCssVars": true
+  },
+  "stopConditions": {
+    "conditions": [
+      {"condition": "Data bundle loads", "status": "PASS"},
+      {"condition": "All 4 views render", "status": "PASS"},
+      {"condition": "Cross-view linking works", "status": "PASS — challenge detail links to question view"},
+      {"condition": "Sort/filter functional", "status": "PASS"},
+      {"condition": "Governance Guard", "status": "PASS (32/32)"}
+    ],
+    "allPass": true
+  },
+  "selfAssessment": {
+    "criterion": "S265 can execute all 11 workflow cases through this dashboard with 0 manual registry traversals",
+    "result": "READY — All entity types indexed with FK links. Question detail shows linked challenges and investigations. Challenge detail links to question. The dashboard provides the complete administrative workspace S262 authorized."
+  }
+}

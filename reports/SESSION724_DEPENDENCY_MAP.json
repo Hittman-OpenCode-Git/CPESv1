@@ -1,0 +1,55 @@
+{
+  "session": "724",
+  "title": "600-Series Dependency Map",
+  "generated": "2026-07-26",
+  "agents": ["H", "N"],
+  "verdict": "ACYCLIC — No circular dependencies. Pipeline architecture is sound but does not justify 600-series launch.",
+
+  "dependency_graph": {
+    "nodes": {
+      "300_analytics": {
+        "reads": ["pack_*_corrected.js", "scored_cases*.js"],
+        "writes": ["reports/SESSION30*.json"],
+        "never_writes": ["pack_*_corrected.js", "question_state", "CorrectChoice"]
+      },
+      "600_content_ops": {
+        "reads": ["reports/SESSION30*.json", "pack_*_corrected.js", "knowledge/CAQS_v1.0.md"],
+        "writes": ["ExplanationWrongA-D", "ExplanationCorrect", "pre-cert QA artifacts"],
+        "never_writes": ["question_state", "CorrectChoice", "pack_state"]
+      },
+      "800_certification": {
+        "reads": ["pack_*_corrected.js", "reports/SESSION30*.json", "600-prepared content"],
+        "writes": ["question_state: Certified", "REVISION_HISTORY.md"],
+        "never_writes": ["ExplanationWrong* (if 600 pre-authored)", "reports/SESSION30*.json"]
+      }
+    },
+    "edges": [
+      {"from": "300", "to": "600", "type": "DATA FORWARD — analytics informs authoring priorities"},
+      {"from": "600", "to": "800", "type": "CONTENT FORWARD — pre-authored items for certification"},
+      {"from": "300", "to": "800", "type": "DATA FORWARD (EXISTING) — UIQS rankings inform certification priority"},
+      {"from": "800", "to": "600", "type": "REJECTION FEEDBACK (not a dependency — items return for re-author on cert failure)"}
+    ]
+  },
+
+  "cycle_detection": {
+    "result": "NO CYCLES. Directed acyclic graph confirmed.",
+    "explanation": "800→600 is a content re-entry loop (same item re-processed), not an ownership dependency. 600 does not depend on 800 rejecting items to function."
+  },
+
+  "chicken_egg_gaps": {
+    "result": "NONE FOUND",
+    "audit_results": [
+      "600 needs analytics → all S302-S306 analytics exist and are complete",
+      "800 needs pre-authored EW → 800 can still certify without pre-authored EW (current model)",
+      "300 needs 600 output for analytics → 300 operates on pack files, not 600 artifacts",
+      "600 needs 800 certification to know what to author → 300's UIQS identifies EW-need independently"
+    ]
+  },
+
+  "handoff_protocol": {
+    "design": "600→800 handoff requires: pre-cert QA gate (automated scans), 800 independent re-derivation of CC, 600-prepared metadata flag, ≤28 item batch at handoff boundary",
+    "risk": "Anchoring bias — 800 certifiers may assume 600-prepared content is correct, eroding CAQS §1.6 independence"
+  },
+
+  "recommendation": "Architecture is valid but does not overcome the throughput deficit. DEFER 600-series. If launched in future, the handoff protocol must include mandatory independent re-derivation by 800."
+}

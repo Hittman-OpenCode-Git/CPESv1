@@ -1,0 +1,525 @@
+{
+  "document": "SESSION201_FRAMEWORK_V2_VISION",
+  "board": 9,
+  "title": "Certification Framework v2 — High-Level Vision & Transformation Roadmap",
+  "agent": "Agent J (Synthesis)",
+  "session": "S201",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "sources": [
+    "reports/SESSION201_WORKFLOW_ARCHITECTURE.json (Board 1: 4 gate systems, 72 agents, 6 operational boards + 2 meta boards)",
+    "reports/SESSION201_READINESS_LEAKAGE.json (Board 2: 43 leakage events, 91.5% preventable, 78.3% automatable, 5 root causes)",
+    "reports/SESSION201_DUPLICATION_MATRIX.json (Board 3: 2.5:1 overall duplication, 22 DL-008 scans, 8 review categories with overlapping scope)",
+    "reports/SESSION201_IDENTITY_ARCHITECTURE.json (Board 4: QID-based model broken, compound key required, S320 failure, dual-block architecture)",
+    "reports/SESSION201_REPORTING_BURDEN.json (Board 5: 1,227 report files, 65% unconsumed, 3.5:1 report-level duplication, ~8 files per metric)",
+    "reports/SESSION201_CONSOLIDATION_MODEL.json (Board 6: 4-board target, 3-agent Quality Board, per-check mapping, signal analysis)",
+    "reports/SESSION201_PREFLIGHT_GATE_MODEL.json (Board 7: 10 scans across 5 gates, 89.5%→12-15% readiness reduction, Rules 6-8, ~8min full pipeline)",
+    "reports/SESSION201_DELTA_REVIEW_ARCHITECTURE.json (Board 8: SHA-256 hashing, 80% unchanged, 4 change types, S809 case study: 60→10 agents)",
+    "knowledge/CAQS_v1.0.md (7-gate pipeline, 10-dimension rubric, certification standards)",
+    "knowledge/DEFECT_LIBRARY.md (DL-001 through DL-033 defect catalog)",
+    "reports/session_status/SESSION_STATUS_2026-07-24.md (2,031 Certified, 67 DL-008, 50 DL-026)"
+  ],
+
+  "current_state": {
+    "label": "Framework v1 — Organic Growth with Systemic Overlaps",
+    "architecture": {
+      "documented_pipeline": "CAQS §8.1 sequential 7-gate pipeline (Accountant → Editor → Psychometrician → Validator → Release Manager) — NEVER operated as designed",
+      "operational_pipeline": "6 operational gates (Gate 0–5) executed in parallel by 10+ agents across 8 boards, plus 5 reconciliation gates (G1–G5) for runtime infrastructure governance",
+      "boards": [
+        {"name": "Technical Review Board", "unique_scope_pct": 80, "top_overlap": "EQS (55%)"},
+        {"name": "DQS — Distractor Quality Score", "unique_scope_pct": 55, "top_overlap": "EQS (70%)"},
+        {"name": "EQS — Explanation Quality Score", "unique_scope_pct": 45, "top_overlap": "DQS (70%), Technical (60%)"},
+        {"name": "UIQS — User Interface Quality Score", "unique_scope_pct": 95, "top_overlap": "QA Board (15%)"},
+        {"name": "Learner Safety Review", "unique_scope_pct": 20, "top_overlap": "QA Board (70%)"},
+        {"name": "QA Review Board", "unique_scope_pct": 75, "top_overlap": "Learner Safety (70%)"},
+        {"name": "Certification Board", "unique_scope_pct": 85, "top_overlap": "All boards (hierarchical)"},
+        {"name": "Readiness Review Board", "unique_scope_pct": 90, "top_overlap": "Launch Board (60%)"}
+      ],
+      "agents_cataloged": 72,
+      "certification_sessions_completed": 14,
+      "runtime_governance": "Session 31 G1–G5 reconciliation gates (infrastructure integrity) + T0→Tmid→Tend checkpoint sequence (AGENTS.md §13)"
+    },
+    "key_metrics": {
+      "certified_pool": "2,031 / 2,500 (81.2%). Pack B: 500, Pack E: 500 fully certified. Pack A: 481. Pack C: 250. Pack D: 300.",
+      "readiness_failure_rate": "89.5% (34 of 38 Domain E seeds arrived at certification with 2+ concurrent defects per S200)",
+      "duplication_ratio": "2.5:1 — for every genuinely needed review pass, 2.5 passes are performed. Peak: 6.2:1 (S809 chain with 56 agent-spawns, 0 writes).",
+      "reports": "1,227 files (843 JSON, 372 MD) across 178 sessions. 65% one-off/unconsumed. Trend: 2.7→11.7 files/session.",
+      "reports_per_certification_session": "Average 11 (peak: 29 in S726). Core 15 metrics spread across 5.3 files each.",
+      "agents_per_certification_wave": "15–28 typical (peak: 28 in S809). 4–7 agents per session examine same EW fields.",
+      "ew_field_review_redundancy": "4–7 agents re-audit same ExplanationWrong fields per session, reaching identical conclusions 95%+ of the time.",
+      "items_re_reviewed_per_wave": "~500 per wave (all items). 80% unchanged, yet all are re-examined from scratch.",
+      "scan_redundancy": "22 DL-008 scan events, 18 DL-026 events, 12 DL-013 events, 25+ certified count verifications. 3–12x redundancy.",
+      "concurrent_overwrite_events": "2 confirmed (DL-019: 432 items; DL-028: ~200 empty slots). No file-lock or session coordination exists.",
+      "s809_chain_cost": "4 sessions, 60 agent-spawns, 47 report files, 0 pack-file writes. 1 genuinely new finding (CC discrepancy on 5 seeds)."
+    },
+    "root_problems": [
+      {
+        "rank": 1,
+        "problem": "No pre-certification automated structural scan",
+        "evidence": "89.5% readiness failure rate. Items entered 'Certified' without detection of DL-008 (539 occurrences), DL-026 (1,005 items), DL-013 (2,587 fields), DL-021 (100 items), DL-030 (5 answer-key errors). The ExplanationValidator had line-173/180 gaps that silently skipped these defects. The governance guard Rule 2 BLOCK was activated after thousands of items were already Certified.",
+        "fix_target": "Mandatory pre-flight gate (Board 7: Gates 0–4, 10 automated scans, ~8min pipeline)"
+      },
+      {
+        "rank": 2,
+        "problem": "QID-based identity model is broken — no stable item identity",
+        "evidence": "One QID = template group identifier, not unique item. Template rotation creates 5 variants with different CC values. Pack B stores CC BEFORE QID (unique to one pack). DL-029 forward-scan from QID grabs neighbor's CC (~75% false positives). S320 remediation targeted wrong variants because QID-first-match doesn't guarantee the canonical seed.",
+        "fix_target": "Compound-key identity model (QID + CC + EW_Pattern + Template_Family + File_Path) managed by Registry Board (Board 4 + Board 6)"
+      },
+      {
+        "rank": 3,
+        "problem": "Massive cross-board duplication — 2.5:1 review redundancy",
+        "evidence": "EW fields examined 4–7x per session. EQS↔DQS overlap = 70% (highest board-pair). Learner Safety↔QA Board overlap = 70%. 22 DL-008 scans across 15 sessions. 5–6 agents independently verify same CorrectChoice values per session. 7 report files redundantly report same portfolio metrics.",
+        "fix_target": "4 consolidated boards (Registry, Quality, Governance, Certification) with scan-once/consume-many model (Board 3 + Board 6)"
+      },
+      {
+        "rank": 4,
+        "problem": "No delta review — 80% of items unchanged between waves but all are re-reviewed",
+        "evidence": "S809→S810.1 chain: 38 seeds, 4 sessions, 60 agent-spawns, 0 writes. S200 Agent I: 80% unchanged per wave. DR-002: 3–4 duplicate EC analyses per session. 6.2:1 peak duplication ratio on the S809 chain — the same 38 items examined 56 times.",
+        "fix_target": "SHA-256 content hashing + delta ledger. Only changed items reviewed (Board 8)."
+      },
+      {
+        "rank": 5,
+        "problem": "Runaway reporting — 65% of files never consumed",
+        "evidence": "1,227 files averaging 11.7/session (up from 2.7 early). 7 files per session redundantly report certified count. 5 files report Domain E count. 6 files report EW integrity metrics. Core 15 metrics spread across 5.3 files each. S809 chain: 47 report files for items with 0 writes.",
+        "fix_target": "4 reports per session: DASHBOARD.json (all metrics), SESSION_SUMMARY.md (narrative), QUALITY_BOARD_VERDICT.json, CERTIFICATION_RESULTS.json (Board 5)"
+      },
+      {
+        "rank": 6,
+        "problem": "Scan methodology fragility — DL-029 forward-scan false positives",
+        "evidence": "67 phantom Certified DL-008 (0 actual per S801). Pack B: 257 DL-008 false positives from CC-before-QID ordering. The 67, 672, and 885+ counts across sessions were all DL-029 artifacts. ~12 phantom remediation events consumed ~8 sessions on defect classes that didn't exist.",
+        "fix_target": "Within-object extraction mandated for all scans. AM-1 Function Constructor Parse as authoritative method (Board 4)."
+      },
+      {
+        "rank": 7,
+        "problem": "Template engine injected systemic defects at authoring time",
+        "evidence": "The 5-item rotation template systematically produced DL-008 (all 4 EW slots filled), DL-025/026 (secondary CC slot left empty), DL-013 (boilerplate text), DL-016 (+1 metadata-content offset), DL-030 (CC assigned by position not verification), and DL-031 (difficulty by position). ~25 sessions consumed on remediation of template-injected defects.",
+        "fix_target": "S311 'EW Factory' standard for all new content. Pre-flight gate catches template defects before certification."
+      },
+      {
+        "rank": 8,
+        "problem": "No concurrent-session coordination — DL-019 overwrite risk",
+        "evidence": "DL-013 certification wave wrote to Pack C/D from pre-DL-008-remediation snapshot, silently overwriting 432 cleared items. DL-028: DL-013 tooling created ~200 new empty slots while other agents were certifying same sections. Session 53 acknowledged this risk but no file-lock protocol deployed.",
+        "fix_target": "Session-level exclusive file access. Pre-write + post-write hash reconciliation. Post-remediation reconciliation gates (Board 6 + AGENTS.md §13)."
+      }
+    ]
+  },
+
+  "target_state": {
+    "label": "Framework v2 — Consolidated, Automated, Identity-Aware, Delta-Driven",
+    "vision": "A certification pipeline where every item that reaches a board for human review is structurally clean, correctly identified, and genuinely changed since the last review wave. Boards exist to exercise professional judgment — not to re-discover what scanners already know.",
+
+    "boards": {
+      "total": 4,
+      "rationale": "8 boards → 4: Registry (WHAT items exist), Quality (HOW good are they), Governance (WHEN can we proceed), Certification (WHICH items are ready). Each board produces a distinct output no other board produces. Eliminates the 2.5:1 duplication ratio.",
+      "list": [
+        {
+          "name": "Registry Board",
+          "function": "Canonical inventory management — the single source of truth for item identity and delivery pool eligibility",
+          "merges_from": ["NEW — fills a structural gap. Replaces fragmented inventory management currently done by every board independently."],
+          "key_outputs": [
+            "MASTER_QUESTION_REGISTRY.md (auto-generated, per-session refresh, governance guard Rule 3)",
+            "Template Family Map (all rotation groups + canonical seeds)",
+            "Delivery Pool Inventory (all Certified QIDs with compound keys + safety status)",
+            "Defect Cross-Reference Index (QID → applicable DL-IDs)",
+            "Registry Delta Report (what changed since last session)"
+          ],
+          "automated_checks": 7,
+          "agent_count": "Auto-generated with periodic manual review (1 agent equivalent)"
+        },
+        {
+          "name": "Quality Board",
+          "function": "Content evaluation — all 10 CAQS dimensions in a single unified pass by 3 parallel sub-agents",
+          "merges_from": ["Technical Review (BOARD_01)", "DQS (BOARD_02)", "EQS (BOARD_03)", "UIQS — as sub-function (BOARD_04)", "Learner Safety — content checks (BOARD_05)", "QA — structural checks (BOARD_06)"],
+          "sub_agents": [
+            {"role": "Agent 1 — Technical & Numerical", "covers": "CAQS Dimensions 3, 5, 6. Accounting accuracy, numerical integrity, business realism, formula correctness, correct answer verification, ASC/COSO citation accuracy, DL-030 detection."},
+            {"role": "Agent 2 — Psychometric & Instructional", "covers": "CAQS Dimensions 1, 2, 4, 7, 8. Blueprint alignment, cognitive level, distractor quality, explanation quality, writing clarity, EV1-EV8 compliance, DL-013/DL-031 detection, difficulty calibration."},
+            {"role": "Agent 3 — Structural & Safety", "covers": "CAQS Dimensions 9, 10. DL-008/026/018/021/025/016/010 detection, metadata completeness, governance guard compliance, G-NEW-1 through G-NEW-5 enforcement, accessibility, scanner adjudication."},
+            {"role": "Agent 4 — UI & Rendering (optional per-pack)", "covers": "Question rendering correctness, DL-016 shift rendering, screen-reader, keyboard nav, color independence, responsive scaling, focus indicators. Activated per-pack, not per-batch."}
+          ],
+          "consensus": "ALL_AGREE required for CERTIFIABLE verdict (2 of 3 agents must agree, or 3 of 4 if UI agent active). Single-agent disagreement triggers HOLD with per-dimension resolution path."
+        },
+        {
+          "name": "Governance Board",
+          "function": "Pipeline authorization — three-tier decision gate (Session Ready, Session Close, Portfolio Ready)",
+          "merges_from": ["Readiness Review (BOARD_08)", "Launch Board", "Learner Safety — delivery pool gate (BOARD_05)", "QA — governance guard enforcement (BOARD_06)"],
+          "decision_tiers": {
+            "Tier 1 — SESSION_READY": "Authorization to begin next session. Gates: Registry current, T0 hashes match, governance guard 27/27 PASS, P0 blockers = 0.",
+            "Tier 2 — SESSION_CLOSE": "Authorization to close current session. Gates: Tend hashes match T0 (or G1-G5 reconciled), backup protocol verified, REVISION_HISTORY entry exists, no staged findings.",
+            "Tier 3 — PORTFOLIO_READY": "Authorization for learner delivery. Gates: SESSION_READY, delivery pool 0 known-defective QIDs, portfolio health thresholds met, risk register 0 critical active risks, pre-delivery-safety-check PASS."
+          },
+          "governance_guard_rules_extended": [
+            {"rule": "RULE 6 (NEW — HARD_BLOCK)", "description": "Pre-Flight Gate Passage Required. No item may transition to 'In Audit' or 'Certified' without a current same-session pre-flight gate PASS report."},
+            {"rule": "RULE 7 (NEW — HARD_BLOCK)", "description": "ExplanationWrong Distractor Completeness. All non-CorrectChoice EW slots must be present and non-empty (min 50 chars). Extends Rule 2 to cover DL-026/DL-021/DL-025."},
+            {"rule": "RULE 8 (NEW — WARN)", "description": "Template Boilerplate Prohibition. No EW field may contain boilerplate patterns. Warns at write time; certification blocked by Gate 2 SOFT_BLOCK."}
+          ],
+          "agent_count": 1
+        },
+        {
+          "name": "Certification Board",
+          "function": "Final adjudication — CERTIFY/HOLD/ESCALATE decisions. ONLY board authorized to change question_state.",
+          "merges_from": ["Certification Board (BOARD_07) — retained standalone, scope refocused"],
+          "scope_change": "Refocused from re-verifying all other boards' evidence to performing governance-sufficiency review: is the evidence package complete, self-consistent, and sufficient for certification? Currently re-verifies every finding, creating a full second review pass (1.7:1 duplication at certification level). v2 trusts Quality verdict, Governance authorization, and Registry inventory — performing evidence-consistency checks rather than re-performing the review.",
+          "agent_count": 1
+        }
+      ],
+      "total_agents_per_certification_wave": "6–7 (down from 15–28)",
+      "scan_once_consume_many": "Single pre-flight scan runs all 10 defect scans across 5 gates. All 4 boards consume this shared scan output. No board re-runs independent scans. Eliminates 3–12x redundancy."
+    },
+
+    "identity_model": {
+      "principle": "A QID is a template group identifier, not a unique item instance. Uniqueness requires a compound key.",
+      "compound_key": {
+        "fields": [
+          {"field": "QID", "type": "String", "purpose": "Base template group identifier (e.g., 'P1-AD-001')"},
+          {"field": "CorrectChoice", "type": "String (A|B|C|D)", "purpose": "Distinguishes rotation positions. CC cycles A→B→C→D→A within 5-item groups."},
+          {"field": "EW_Pattern", "type": "4-bit signature (e.g., '0100')", "purpose": "Binary fingerprint of EW slot emptiness — the most reliable structural identifier."},
+          {"field": "Template_Family", "type": "String", "purpose": "Rotation group identifier. Items in a family share same stem skeleton and choice texts (positionally rotated)."},
+          {"field": "File_Path", "type": "String", "purpose": "Pack file + section. QID format alone is NOT globally unique (e.g., 'A.001' appears in Packs A, C, D)."}
+        ]
+      },
+      "per_pack_handling": {
+        "Pack A": {"cc_placement": "After QID (standard)", "qid_format": "P1-{Section}-{NNN}", "dl_016_status": "RESOLVED Section E (S805). POTENTIAL Sections B/C/D/F."},
+        "Pack B": {"cc_placement": "BEFORE QID — unique to Pack B", "qid_format": "P1B-{Section}-{NNN}", "critical": "All forward-scan tools produce 100% false positives on Pack B. Within-object extraction only."},
+        "Pack C": {"cc_placement": "After QID", "qid_format": "P1-{Section}C-{NNN} or P1-{Section}-{NNN}", "dl_016_status": "POTENTIAL Sections A/B. DL-012 clone groups in Section E."},
+        "Pack D": {"cc_placement": "After QID", "qid_format": "P1-{Section}D-{NNN}", "dl_016_status": "CONFIRMED Sections A/D. Phase 0B verified content-block CC correct."},
+        "Pack E": {"cc_placement": "After QID", "qid_format": "P1E-{Section}-{NNN}", "dl_016_status": "CLEAN — different authorship pipeline."}
+      }
+    },
+
+    "pre_flight_gate": {
+      "description": "Mandatory automated scan pipeline that runs BEFORE any item enters certification. Items are structurally clean before human review begins.",
+      "execution_time": "~8 minutes for all 5 packs + case files. Fast enough to run at every certification board meeting.",
+      "gates": [
+        {"gate": "Gate 0 — JSON Integrity", "scans": 1, "blocking": "HARD_BLOCK", "runtime": "5s", "checks": "Parseability, field presence, type consistency, corruption detection, QuestionID count"},
+        {"gate": "Gate 1 — Structural Scan", "scans": 4, "blocking": "HARD_BLOCK", "runtime": "10s", "checks": "DL-008, EV8, DL-026, DL-016 structural divergence"},
+        {"gate": "Gate 2 — Content Scan", "scans": 3, "blocking": "SOFT_BLOCK", "runtime": "12s", "checks": "DL-013 boilerplate, EV3 principle citation, DL-010 screening (WARN)"},
+        {"gate": "Gate 3 — Identity Reconciliation", "scans": 0, "blocking": "HARD_BLOCK", "runtime": "20s", "checks": "Compound key uniqueness, template family identification, canonical seed viability, cross-pack QID collision, QID format validation"},
+        {"gate": "Gate 4 — Calculation Validation", "scans": 2, "blocking": "SOFT_BLOCK", "runtime": "50s", "checks": "DL-030 CC verification (Tier 1 numeric + Tier 3 EC-CC consistency), DL-031 difficulty inflation detection"}
+      ],
+      "total_scans": 10,
+      "projected_readiness_failure_rate": "12–15% (down from 89.5%). ~77% reduction. 6.6× fewer defective items reaching certification boards."
+    },
+
+    "delta_review": {
+      "description": "Only re-review items whose content hash changed from the last certified baseline. Unchanged items inherit prior certification verdict.",
+      "mechanism": "SHA-256 content hashing on all learner-facing fields (Stem, Choices, CC, EC, EW[A-D]). Separate metadata hash for Difficulty/CognitiveLevel/LOSTag changes.",
+      "delta_ledger": "DELTA_LEDGER.json stored in knowledge/. Updated after every certification wave. Pre-flight hash comparison at session startup.",
+      "change_classifications": [
+        {"type": "content_change", "review": "Full Quality Board (3 agents) + Certification Board", "pct_of_wave": "~2%"},
+        {"type": "metadata_change", "review": "Psychometric/Difficulty Calibration (1 agent) + Certification Board", "pct_of_wave": "~8%"},
+        {"type": "structural_fix", "review": "Automated pre-flight scanner only (0 agents) + spot-check verification", "pct_of_wave": "~10%"},
+        {"type": "no_change", "review": "None — skip entirely, inherit prior verdict", "pct_of_wave": "~80%"}
+      ],
+      "savings": "77% fewer items reviewed per wave (500→~100). 83% agent reduction. 87% report reduction. 75% wall-clock reduction. S809 chain collapses from 4 sessions/60 agents to 2 sessions/10 agents."
+    },
+
+    "reporting": {
+      "target_files_per_session": 4,
+      "files": [
+        "SESSION_SUMMARY.md — executive narrative, all session decisions, next-session conditions",
+        "SESSION_DASHBOARD.json — all portfolio-level metrics (certified count, domain %s, defect counts, governance guard status, portfolio health index)",
+        "QUALITY_BOARD_VERDICT.json — per-item quality report with 10-dimension rubric scores (only items that changed)",
+        "CERTIFICATION_RESULTS.json — per-item CERTIFY/HOLD/ESCALATE decisions + REVISION_HISTORY.md entry data"
+      ],
+      "eliminated": [
+        "Individual agent outputs (120+ files) — embed into QUALITY_BOARD_VERDICT.json",
+        "Duplicate dashboard variants (6–7 per session) — merge to single DASHBOARD.json",
+        "Meta-reporting packages — reports about reports, zero downstream value",
+        "Legacy naming variants (S809.2_AGENT_*, s116_pilot_*) — standardize to SESSIONXXX_ prefix",
+        "Cross-file metric duplication — 7 files per metric → 2 files (DASHBOARD + SUMMARY)"
+      ]
+    },
+
+    "operating_model": {
+      "agents_per_certification_wave": "6–7 (down from 15–28)",
+      "agent_breakdown": [
+        {"board": "Registry", "agents": "Auto-generated (0 agents active)"},
+        {"board": "Quality", "agents": "3 (parallel sub-agents) + 1 (optional UI)"},
+        {"board": "Governance", "agents": 1},
+        {"board": "Certification", "agents": 1}
+      ],
+      "reports_per_session": "4–6 (down from 7–17, peak: 29)",
+      "sessions_per_certification_wave": "1–2 (down from 4–5). 1 audit session + 1 execution session (or 1 if no content changes).",
+      "read_only_chain_elimination": "Multi-session read-only chains (S809→S810.1: 4 sessions, 0 writes) are structurally eliminated by delta review. If no items changed, session is detected at pre-flight and skipped.",
+      "pre_flight_scan_runs": "Once per session at T0. All 4 boards consume single scan output. No board runs independent scans.",
+      "cross_board_handoffs": "3 (Registry→Quality→Governance→Certification) instead of 15+ current. Sequential, not parallel-duplicated."
+    }
+  },
+
+  "transition_state": {
+    "label": "Three-Phase Migration from v1 to v2 — Certification Continuity Preserved",
+    "guiding_principles": [
+      "Existing certifications survive transition — no mass re-certification",
+      "Each phase independently reversible — can roll back any phase without losing the other two",
+      "All phases `no_op` in read-only sessions — agents detect 'nothing to do' and return immediately",
+      "Series boundaries respected — Phase 1 at S830 closeout, Phase 2 at S900, Phase 3 at S910",
+      "Every phase includes pre/post metrics comparison gate"
+    ],
+
+    "phase_1_foundation": {
+      "label": "Phase 1 — Foundation: Identity + Pre-Flight + Delta Ledger",
+      "timeline": "S202–S207 (implementation) + S830 closeout (activation)",
+      "description": "Build the three infrastructure pillars that everything else depends on: compound-key identity model, mandatory automated pre-flight gate, and SHA-256 delta ledger. No boards are changed — existing 8-board structure continues to operate. This phase makes the existing system safer without restructuring it.",
+      "deliverables": [
+        {"task": "P1.1 — Compound-Key Registry", "sessions": "S202–S203", "description": "Build MASTER_QUESTION_REGISTRY.md with within-object Function constructor parse. Generate template family map for all 2,500 items. Implement compound key field schema. Validate: certified count matches dual-verified count (0 discrepancy), registry hash stable across 2 passes."},
+        {"task": "P1.2 — Pre-Flight Gate (Gates 0–2)", "sessions": "S204–S205", "description": "Implement Gate 0 JSON Integrity (parse all packs, field presence, corruption detection). Implement Gate 1 Structural Scan (DL-008, DL-026, DL-016 automated detection). Implement Gate 2 Content Scan (DL-013 boilerplate, EV3 principle citation). Add governance guard Rules 6 and 7."},
+        {"task": "P1.3 — Delta Ledger", "sessions": "S206–S207", "description": "Implement SHA-256 content hashing on canonical JSON serialization. Generate initial DELTA_LEDGER.json for all 2,500 items. Re-extract and re-hash all 2,500 items via independent second pass — 0 mismatches required. Cross-validate 5% sample with manual field extraction."}
+      ],
+      "decision_checkpoint": "S830: Independent audit confirms: (a) Registry compound keys resolve to correct items, (b) pre-flight gate catches all known defect classes with <5% false-positive rate, (c) delta ledger hash stability confirmed. If all PASS, authorize Phase 2.",
+      "reversibility": "All three artifacts coexist alongside the current 8-board structure. If Foundational quality is insufficient: (a) disable pre-flight gate enforcement (items proceed without it), (b) continue using QID-based identity for current boards while fixing compound-key edge cases, (c) delta ledger can be updated or discarded — no board uses it yet. Rollback: zero impact on current certification pipeline.",
+      "certified_pool_impact": "Zero — no question_state changes. Pre-flight gate only scans items; it does not re-certify anything. Delta ledger is read-only. Registered items preserve their current question_state."
+    },
+
+    "phase_2_consolidation": {
+      "label": "Phase 2 — Consolidation: Board Merge + Delta Review Integration",
+      "timeline": "S208–S215 (implementation) + S900 closeout (activation)",
+      "description": "Merge 8 boards into 4. Activate the Quality Board's 3-agent unified review model. Integrate delta review so only changed items reach the Quality Board. Governance Board goes LIVE in shadow mode.",
+      "deliverables": [
+        {"task": "P2.1 — Quality Board Consolidation", "sessions": "S208–S213", "description": "Merge Technical + DQS + EQS + Learner Safety (content) + QA (structural) into 3-agent Quality Board. Run 3 dual-run certification waves: Quality Board in parallel with existing boards. Verify agreement >95%. Adjudicate discrepancies. Retire boards 1–6 after 3 successful waves."},
+        {"task": "P2.2 — Delta Review Activation", "sessions": "S210–S213 (parallel with P2.1)", "description": "Integrate delta pre-flight into session startup protocol (AGENTS.md §9). Classify items as no_change/metadata_change/content_change/structural_fix at session T0. Quality Board only reviews items routed to non-skip change types. Dry-run alongside full review on 1 certification wave — compare findings."},
+        {"task": "P2.3 — Governance Board Shadow Mode", "sessions": "S214–S215", "description": "Implement GOV-AUTO-01 through GOV-AUTO-10 automated checks. Run Governance Board in shadow mode for 3 sessions — reads Quality Board output, produces decisions, but does not block current flow. Validate decisions match current Readiness + Launch board decisions 100%."}
+      ],
+      "decision_checkpoint": "S900: Independent audit confirms: (a) Quality Board verdicts match current multi-board verdicts >95%, (b) delta review correctly classifies items (0 false-negative 'no_change' on genuinely changed items), (c) Governance Board shadow decisions match current gates. If all PASS, activate Governance Board as authoritative."},
+      "reversibility": "Quality Board can be rolled back to 6 separate boards if agreement rate <95% or if a critical defect escapes. Delta review can be suspended by disabling the pre-flight hash comparison — all items route to 'content_change' (full review). Governance Board is shadow-mode only; rollback = stop consuming its decisions.",
+      "certified_pool_impact": "Items certified during Phase 2 are verified by Quality Board under the same CAQS standards. Board consolidation changes WHO reviews, not WHAT is reviewed. Delta review reduces items reviewed but does not lower the review standard for reviewed items. 0 mass re-certification."
+    },
+
+    "phase_3_optimization": {
+      "label": "Phase 3 — Optimization: Reporting Reduction + Full Automation + Continuous Improvement",
+      "timeline": "S216–S222 (implementation) + S910–S920 (validation and hardening)",
+      "description": "Reduce reporting to 4 files per session. Implement Pre-Flight Gates 3 (Identity Reconciliation) and 4 (Calculation Validation). Refocus Certification Board from evidence re-verification to governance-sufficiency review. Add governance guard Rule 8. Enter continuous improvement cycle.",
+      "deliverables": [
+        {"task": "P3.1 — Reporting Consolidation", "sessions": "S216–S217", "description": "Merge all dashboard variants into single DASHBOARD.json per session. Eliminate agent-standalone outputs (embed into Quality Board verdict). Standardize file naming to SESSIONXXX_ prefix. Legacy reports retained as archive — no data loss. Target: ≤4 files per non-certification session, ≤6 per certification session."},
+        {"task": "P3.2 — Advanced Pre-Flight Gates 3–4", "sessions": "S218–S220", "description": "Implement Gate 3 Identity Reconciliation: compound key uniqueness, template family map, canonical seed viability scoring, cross-pack QID collision detection. Implement Gate 4 Calculation Validation: DL-030 Tier 3 (EC-CC consistency), DL-031 Jaccard-based difficulty inflation, DL-030 Tier 1 (numeric formula verification with FORMULA_MASTER.md)."},
+        {"task": "P3.3 — Certification Board Refocus + Rule 8", "sessions": "S221–S222", "description": "Refocus Certification Board agent prompt: consume Quality Verdict + Governance Authorization + Registry Compound Key → perform governance-sufficiency review rather than re-reviewing content. Run dual-batch comparison. Add governance guard Rule 8 (Template Boilerplate Prohibition — WARN level)."},
+        {"task": "P3.4 — Continuous Improvement Cycle", "sessions": "S910+ (ongoing)", "description": "Track metrics: per-wave items_skipped_pct, agents_used, defects_escaped, false_positive_hash_mismatch_rate. After 3 waves: if defect escape rate <1% and FP mismatch rate <2%, declare delta review operational. After 5 waves: reduce deep-sampling from 5% to 2%. Regular pattern-update cycle for new boilerplate variants and corruption artifacts."}
+      ],
+      "decision_checkpoint": "S920: Full operational validation across 5 certification waves. Confirm: (a) defect escape rate <1%, (b) FP hash mismatch rate <2%, (c) agents per certification wave ≤7, (d) reports per session ≤6, (e) wall clock per wave ≤8 hours, (f) 0 items incorrectly classified 'no_change' after 3 waves.",
+      "reversibility": "Reporting consolidation is informational — old files retained as archive. Pre-flight Gates 3–4 can be toggled to WARN-only. Certification Board refocus can be rolled back to full evidence re-verification. Continuous improvement metrics trigger methodology fixes, not rollbacks.",
+      "certified_pool_impact": "Reporting changes have zero content impact. Calculation Validation catches DL-030 answer-key errors before certification — improves certified pool quality. Certification Board refocus changes adjudication methodology but not quality bar."
+    },
+
+    "transition_sequencing_rationale": {
+      "phase_1_first": "Compound-key identity and pre-flight scanning are prerequisites for everything else. You cannot merge boards if boards can't find their items. You cannot do delta review without stable item identity and pre-session hash baselines. Foundation first.",
+      "phase_2_after_foundation": "Board consolidation requires stable identity (Phase 1 Registry) and automated structural scanning (Phase 1 Pre-Flight). Delta review requires hash infrastructure (Phase 1 Delta Ledger). None of Phase 2 can work without Phase 1.",
+      "phase_3_last": "Reporting reduction and advanced gates are optimization, not structural changes. They can be phased in gradually without risk to Phase 1–2 operations. Certification Board refocus is the highest-risk Phase 3 item and runs last to maximize operational experience with Quality Board verdicts."
+    }
+  },
+
+  "migration_risks": [
+    {
+      "risk_id": "MR-01",
+      "title": "Quality Board misses defects current multi-board structure catches (false-negative increase)",
+      "severity": "HIGH",
+      "likelihood": "LOW-MEDIUM (current 6 boards overlap 55–70% — genuine novel findings are rare: 1 in 56 agent-spawns on S809 chain)",
+      "mitigation": "Phase 2 dual-run validation: Quality Board runs in parallel with existing boards for 3 certification waves. Same items, same agents, comparison of findings. Must achieve >95% agreement. If Quality Board misses any DL-008/DL-030 class defect that current boards catch, fix prompts and re-validate.",
+      "rollback": "If >95% agreement cannot be achieved after 3 waves with prompt fixes → revert to 8-board structure. Quality Board design was wrong."
+    },
+    {
+      "risk_id": "MR-02",
+      "title": "Delta review false-negative — changed item classified as 'no_change' and skips review with undetected content error",
+      "severity": "CRITICAL",
+      "likelihood": "LOW (SHA-256 collision probability <<10^-70; hash covers all learner-facing fields; 5–10% spot-check sampling detects methodology errors)",
+      "mitigation": "Conservative override: if pre-flight structural scanner finds A SINGLE defect on a 'no_change' item, reclassify to 'content_change' (full review). 10% random spot-check hash verification per wave. If ANY item's hash is wrong → full re-audit of the entire pack. Cross-wave re-hashing of 5% sample at session T0.",
+      "rollback": "If defect escape rate exceeds 3% OR 3+ DL-030 class defects appear in delta-reviewed Certified items → suspend delta review → revert to full review for next wave → investigate root cause → fix methodology → dry-run before re-enabling."
+    },
+    {
+      "risk_id": "MR-03",
+      "title": "Concurrent-write overwrite during transition — Phase 1/2/3 agents modifying same pack file as legacy certification agents",
+      "severity": "HIGH",
+      "likelihood": "MEDIUM (DL-019: 432 items overwritten during prior transitions)",
+      "mitigation": "Phase 1 tools are read-only (Registry is auto-generated from pack files; pre-flight gate scans without writing; delta ledger reads hashes). No Phase 1 tool writes to packs. Phase 2 writes are gated by pre-write hash reconciliation. Session-registry.lock protocol implemented. Post-remediation reconciliation: re-hash ALL items after writes → compare to pre-flight → flag any item whose hash changed but was NOT in delta inventory.",
+      "rollback": "If concurrent overwrite detected: halt all write agents, restore from backups, reconcile via G1-G5 gates, restart with exclusive session access."
+    },
+    {
+      "risk_id": "MR-04",
+      "title": "Governance guard rules 6–8 produce false-positive blocks — gate incorrectly halts certification",
+      "severity": "MEDIUM",
+      "likelihood": "MEDIUM (Rule 6: gate report timestamp window edge cases; Rule 7: field-presence check on items with valid reasons for empty fields; Rule 8: legitimate uses of 'does not align with' phrasing)",
+      "mitigation": "Rules 6–7 operate as HARD_BLOCK but include an override mechanism: documented exception marker in session metadata + human authorization. Rule 8 is WARN only — does not block writes. 3-wave shadow deployment before rules become authoritative. Track false-positive rate per rule and recalibrate threshold patterns.",
+      "rollback": "Any rule can be temporarily relaxed by inserting a documented exception in session governance attestation. If FP rate >5% for any rule after 3 waves, recalibrate or retire that rule."
+    },
+    {
+      "risk_id": "MR-05",
+      "title": "Registry Board drift — compound key registry falls out of sync with actual pack file content",
+      "severity": "MEDIUM",
+      "likelihood": "LOW-MEDIUM (DL-019 demonstrates registry desync is possible if concurrent writes occur while registry is generated)",
+      "mitigation": "Registry is auto-generated at session T0 from pack files using within-object Function constructor parse. Never hand-edited (governance guard Rule 3). Mid-session re-generation if any pack-file write occurs. Post-session re-generation at Tend. Per-item registry entry includes the session ID of last generation. Governance Board Tier 2 SESSION_CLOSE requires registry hash match.",
+      "rollback": "If registry desync detected (certified count in registry ≠ certified count from dual-verified grep): re-generate registry from pack files. Registry is a derived artifact — the pack files are canonical."
+    },
+    {
+      "risk_id": "MR-06",
+      "title": "Agent exhaustion during Phase 2 dual-run validation — running two review systems in parallel doubles workload",
+      "severity": "MEDIUM",
+      "likelihood": "MEDIUM (dual-run requires agents to review items for both Quality Board AND existing boards)",
+      "mitigation": "Dual-run operates on subsets (1 batch per wave, ≤28 items per Rule 5). Not full-pack dual reviews. After 3 subset dual-runs that show >95% agreement, transition to Quality Board-only with shadow monitoring for 1 additional wave. If agreement holds, fully retire old boards.",
+      "rollback": "Reduce dual-run load from 3 subsets to 1 subset. If 1 subset shows >95% agreement → skip remaining dual-runs → proceed to transition. The risk of transition without exhaustive dual-run validation is lower than the risk of agent exhaustion from dual-run workload."
+    }
+  ],
+
+  "key_metric_targets": {
+    "metrics": [
+      {
+        "metric": "Readiness Failure Rate",
+        "description": "% of items reaching certification boards with 2+ concurrent detectable defects",
+        "v1_baseline": "89.5% (S200: 34/38 Domain E seeds)",
+        "v2_target": "<10% (projected: 12–15% post pre-flight gate; <10% with S311 EW Factory standard for new content)",
+        "measurement": "Per-wave: count items flagged by pre-flight gate vs. items that arrive clean"
+      },
+      {
+        "metric": "Duplication Ratio",
+        "description": "Ratio of actual review passes to genuinely unique review passes per item",
+        "v1_baseline": "2.5:1 (peak: 6.2:1 S809 chain. EW fields: 4–7:1 within single session.)",
+        "v2_target": "<1.3:1 (Quality Board 3 agents cover 10 dimensions with no duplicate passes. Certification re-verification replaced by governance-sufficiency check.)",
+        "measurement": "Per-wave: count agent examinations per item vs. 10 CAQS dimensions"
+      },
+      {
+        "metric": "Reports Per Certification Session",
+        "description": "Number of distinct report files generated per session",
+        "v1_baseline": "11 average (peak: 29 in S726). 3.5:1 report-level metric duplication.",
+        "v2_target": "4–6 (DASHBOARD.json, SESSION_SUMMARY.md, QUALITY_BOARD_VERDICT.json, CERTIFICATION_RESULTS.json + domain-specific reports)",
+        "measurement": "Per-session: count files in reports/ directory written that session"
+      },
+      {
+        "metric": "Agents Per Certification Wave",
+        "description": "Total agent spawns across a complete certification wave (audit + execution)",
+        "v1_baseline": "15–28 (peak: 28 in S809 for 38-item audit with 0 writes)",
+        "v2_target": "6–7 (Registry: 0 active, Quality: 3–4, Governance: 1, Certification: 1)",
+        "measurement": "Per-wave: count agent invocations (tasks, not background delegates)"
+      },
+      {
+        "metric": "Items Re-Reviewed Unnecessarily",
+        "description": "% of items that are re-examined by multiple boards/agents without having changed",
+        "v1_baseline": "80% unchanged items re-audited every wave (S200 Agent I). EW fields: 4–7 agents per session reach identical conclusions 95%+ of the time.",
+        "v2_target": "0% — unchanged items skip review entirely via delta hash verification. Only genuinely changed items reach any board.",
+        "measurement": "Per-wave: items_reviewed / items_in_scope. Target ratio: ~0.20 (only the ~20% that changed)"
+      },
+      {
+        "metric": "Sessions Per Certification Wave",
+        "description": "Number of separate sessions needed to complete one certification wave (audit → decision → execution)",
+        "v1_baseline": "4–5 (audit + prep + scoping + intelligence + execution). S809 chain: 4 sessions, 0 writes.",
+        "v2_target": "1–2 (single audit session + single execution session; 1 session if fully automated / no content changes)",
+        "measurement": "Per-wave: count REVISION_HISTORY.md entries with QuestionIDs for that wave"
+      },
+      {
+        "metric": "Scan Redundancy (DL-008 equivalent)",
+        "description": "Number of times the same defect class is independently scanned per certification wave",
+        "v1_baseline": "DL-008: 22 events, 4–5 agents each. DL-026: 18 events. DL-013: 12 events. Certified count: 25+ events.",
+        "v2_target": "1 per defect class per session — single pre-flight scan output consumed by all 4 boards",
+        "measurement": "Per-session: count scan invocations per defect class across all boards"
+      },
+      {
+        "metric": "Defect Escape Rate (post-v2 certification)",
+        "description": "% of newly Certified items found to have undetected defects in subsequent independent sweeps",
+        "v1_baseline": "DL-008: 539 occurrences in Certified pool. DL-030: 5 answer-key errors. DL-016: systemic across Pack A Sections A-D. DL-021: 5 Certified items with 0 distractor explanations.",
+        "v2_target": "<1% of newly Certified items having any structural defect (DL-008/026/018/021) or content defect (DL-030/016) detectable by pre-flight gate",
+        "measurement": "Per-wave: post-certification spot-check audit of 5% randomly sampled newly Certified items → count defects missed"
+      },
+      {
+        "metric": "Report Consumption Rate",
+        "description": "% of report files cross-referenced from governance documents (REVISION_HISTORY.md, DEFECT_LIBRARY.md)",
+        "v1_baseline": "35% (432 of 1,227 files consumed. 65% one-off/unconsumed.)",
+        "v2_target": ">90% (4 files per session, all consumed by downstream governance processes)",
+        "measurement": "Per-series: cross-reference all report files against REVISION_HISTORY.md and DEFECT_LIBRARY.md"
+      }
+    ]
+  },
+
+  "dependent_decisions": {
+    "description": "What must be decided before S202 can begin redesign. These decisions set the scope and methodology for all subsequent v2 implementation sessions.",
+    "decisions": [
+      {
+        "decision_id": "D-01",
+        "title": "Adopt Compound-Key Identity Model",
+        "context": "Board 4 (Identity Architecture) demonstrated that QID-alone identity caused DL-029 (257 Pack B false positives), S320 (wrong variants targeted), DL-008 phantom counts (67→0 actual), and DL-026 count instability (632→1,005). The compound key (QID + CC + EW_Pattern + Template_Family + File_Path) is the required fix.",
+        "options": [
+          "A) Adopt compound-key model as the single standard for all tooling (scan scripts, remediation scripts, certification records, registry).",
+          "B) Maintain QID-only identity but require within-object extraction for all scans (partial fix — addresses DL-029 but not S320).",
+          "C) Defer identity redesign — continue QID-based with manual verification (status quo)."
+        ],
+        "recommended": "A — compound-key model. This is the foundational dependency for Registry Board, Pre-Flight Gate 3, and delta review. Without it, the v2 identity pillars remain broken. S320 demonstrated that remediation cannot safely target items by QID alone.",
+        "blocks": ["Registry Board (P1.1)", "Pre-Flight Gate 3 (P3.2)", "All delta review phases", "All remediation sessions"]
+      },
+      {
+        "decision_id": "D-02",
+        "title": "Adopt AM-1 Function Constructor Parse as Authoritative Scan Methodology",
+        "context": "Board 4 + Board 3: DL-029 forward-scan produced systematic false positives across all defect classes. DL-020 brace-matcher undercounted items. The DEFINITIVE_PARSER_VALIDATION_2026-07-23.md confirms AM-1 Function Constructor Parse as 0 false positives, 0 false negatives across ground truth.",
+        "options": [
+          "A) Mandate AM-1 Function Constructor Parse for all scan scripts. Forbid all forward-scan, regex-window, and flat-field matching methods (per S725: 3 approved, 8 forbidden).",
+          "B) Allow both within-object and forward-scan methods with a 'prefer within-object' guidance. (Risk: DL-029 artifacts continue to contaminate counts.)",
+          "C) No methodology mandate — each tool chooses its own approach (status quo)."
+        ],
+        "recommended": "A — mandate AM-1. DL-029 is the costliest single methodology defect — ~8 sessions wasted on phantom remediations. The cost is in updating existing scan scripts (1 session), not in ongoing risk.",
+        "blocks": ["Pre-Flight Gate (all scans)", "Registry Board (QID extraction)", "Delta review (hash extraction)", "Governance Board (certified count verification)"]
+      },
+      {
+        "decision_id": "D-03",
+        "title": "Approve 4-Board Consolidation Target",
+        "context": "Board 6 (Consolidation Model) and Board 3 (Duplication Matrix) both independently converged on 4 boards (Registry, Quality, Governance, Certification) as the optimal structure. The analysis evaluated 3 boards (inadequate separation of concerns), 4 boards (optimal), and 5 boards (adds UIQS standalone — unnecessary if Agent 4 handles UI).",
+        "options": [
+          "A) Approve 4-board target. UIQS as Quality Board sub-function (Agent 4). Start implementation in Phase 2.",
+          "B) Approve 5-board target. UIQS standalone. Add 1 agent, preserves 95% unique scope.",
+          "C) Reject board consolidation — maintain current 8-board structure with process improvements only."
+        ],
+        "recommended": "A — 4 boards with UIQS as Quality Board Agent 4. The cost of adding a standalone UIQS board (1 extra agent, 1 extra cross-board handoff) exceeds the benefit given UI checks are per-pack (not per-batch) and highly automatable. If after 3 certification waves UI defects slip through, escalate to 5 boards at S920 boundary.",
+        "blocks": ["Phase 2 Quality Board consolidation", "Governance Board design", "Certification Board refocus", "Agent staffing plans for all v2 sessions"]
+      },
+      {
+        "decision_id": "D-04",
+        "title": "Commit to Delta Review with Phased Adoption",
+        "context": "Board 8 (Delta Review): 80% items unchanged between waves. S809 chain: 4 sessions, 60 agents, 0 writes. SHA-256 hashing infrastructure costs 1 session to build and saves ~60–80 agent-hours per year. Primary risk: inherited defects (DR-002) — exists in current system, not introduced by delta review.",
+        "options": [
+          "A) Full delta review — unchanged items auto-inherit prior verdict without any board review. 5–10% deep-sampling verification. Conservative scanner override (any structural defect on 'no_change' item → reclassify to content_change).",
+          "B) Conservative delta review — unchanged items undergo automated pre-flight scan only (Gate 1 structural + Gate 2 content). Only items passing scans skip board review. Higher assurance, lower savings (~65% vs. 80% skip rate).",
+          "C) No delta review — continue full re-audit of all items every wave (status quo)."
+        ],
+        "recommended": "A — full delta review with conservative overrides. The delta review proposal (Board 8) was designed with 5 explicit risk mitigations (DR-001 through DR-005). The 5–10% deep-sampling verification catches methodology errors. The scanner override catches structural defects on hash-unchanged items. The cost of B (reduced savings without proportionally reduced risk) doesn't justify the 15–20% delta review volume increase.",
+        "blocks": ["Phase 1 Delta Ledger (P1.3)", "Phase 2 Pre-Flight Delta Integration (P2.2)", "Agent staffing per wave (down to 6–7 from 15–28)", "Session Go/No-Go authorization (0 changed items → skip session)"]
+      },
+      {
+        "decision_id": "D-05",
+        "title": "Approve Reporting Reduction Targets",
+        "context": "Board 5 (Reporting Burden): 1,227 files, 65% unconsumed, 3.5:1 metric duplication, trend 2.7→11.7 files/session. Board 3: 7 files per session redundantly report certified count. Target: 4 files per session.",
+        "options": [
+          "A) Enforce 4-file target immediately in S202 — new sessions generate only DASHBOARD + SUMMARY + domain-specific reports.",
+          "B) Soft cap: max 8 files per session. Exceeding 8 requires BLOCK-AUTHORIZED marker. Phase down to 4 by S910.",
+          "C) No cap — continue current reporting (status quo)."
+        ],
+        "recommended": "B — soft cap of 8 with BLOCK-AUTHORIZED marker, phasing to 4 by S910. Immediate enforcement of 4 would require retrofitting all existing agent output formats which is disruptive. The 8-file cap immediately stops the runaway 29-file sessions (S726) while allowing gradual transition. By Phase 3, all agents output to consolidated formats.",
+        "blocks": ["Session governance: BLOCK-AUTHORIZED marker mechanism for >8 file sessions", "Agent output templates for v2 sessions", "Archive plan for existing 1,227 legacy files"]
+      },
+      {
+        "decision_id": "D-06",
+        "title": "Authorize Session-Level File Lock Protocol",
+        "context": "DL-019: 432 items overwritten by concurrent DL-013 certification wave. DL-028: ~200 empty slots created by concurrent DL-013 tooling. AGENTS.md §13 (Session 53) documented the need but no lock protocol was deployed. The risk is existential for delta review — concurrent writes invalidate hash baselines.",
+        "options": [
+          "A) Exclusive session model: only 1 session at a time may modify any given pack file. Implement via .lock files. Session startup checks for active locks and delays.",
+          "B) Optimistic concurrency: allow concurrent sessions but enforce pre-write/post-write hash reconciliation. If hash changed on items not in delta inventory → escalate (G1-G5).",
+          "C) No lock protocol — continue status quo (risk accepted)."
+        ],
+        "recommended": "A (mandatory) + B (belt-and-suspenders). Exclusive sessions prevent DL-019 structurally. Post-remediation hash reconciliation catches any edge case where a lock was bypassed. The cost is negligible (~50 lines of JavaScript for lock management). The cost of NOT implementing is another DL-019 event.",
+        "blocks": ["All Phase 2/3 write operations", "Delta ledger integrity", "Registry Board re-generation", "Governance Board Tier 2 SESSION_CLOSE"]
+      },
+      {
+        "decision_id": "D-07",
+        "title": "Set S311 EW Factory as Standard for All New Content",
+        "context": "Board 2 (Readiness Leakage) root cause RC-4: the template-based bulk authoring pipeline injected DL-008, DL-013, DL-016, DL-025/026, DL-030, and DL-031 systematically into every section it touched. ~25 sessions consumed on remediation. The S311 'EW Factory' approach (explanations authored at creation time with quality gates: EC ≥400 chars, EW ≥100 chars, DL-008/026/013 compliance) was the explicit response.",
+        "options": [
+          "A) Adopt S311 EW Factory as mandatory standard for all new QIDs. Pre-flight gate enforces compliance at certification. Retrofitted to existing non-Certified sections during their certification wave.",
+          "B) Allow S311 EW Factory as recommended but not mandatory. Depends on authoring tooling quality.",
+          "C) No standard — each authoring pipeline self-governs (status quo)."
+        ],
+        "recommended": "A — mandatory S311 standard. This is the single most effective root-cause fix in the v2 roadmap. Every defect class (DL-008 through DL-031) traces to the template engine without quality gates. The EW Factory standard makes these defects impossible at creation time, eliminating the need for downstream detection and remediation.",
+        "blocks": ["All new QID authoring sessions", "DL-012 clone archiving strategy", "Pre-flight gate calibration (fewer defects to catch → lower readiness failure rate)"]
+      }
+    ]
+  },
+
+  "path_to_json": "reports/SESSION201_FRAMEWORK_V2_VISION.json",
+
+  "summary": {
+    "one_paragraph": "Certification Framework v2 transforms the current 8-board, 72-agent, 89.5%-readiness-failure system into a 4-board, 6-7-agent, <10%-readiness-failure architecture. The transformation runs in three independently reversible phases: Phase 1 (Foundation) establishes compound-key identity, mandatory automated pre-flight scanning, and SHA-256 delta ledger — fixing the identity, detection, and redundancy root causes without changing any board. Phase 2 (Consolidation) merges 8 boards into 4 (Registry → Quality → Governance → Certification), activates delta review so only genuinely changed items reach boards, and eliminates the 2.5:1 duplication ratio. Phase 3 (Optimization) reduces reporting from 11 to 4 files per session, implements advanced calculation validation, and enters continuous improvement. Every existing certification survives the transition — 0 mass re-certification. Every phase is reversible — Phase 1 tools are read-only, Phase 2 boards shadow-run alongside current boards for 3 waves before activation, Phase 3 is informational. The path from the current state (S809 chain: 4 sessions, 60 agents, 47 reports, 0 writes) to the target state (2 sessions, 10 agents, 6 reports, 38 writes) is 20–22 sessions, achievable within 4–5 weeks.",
+    "three_phases": "Phase 1 (Foundation) = Identity + Pre-Flight + Delta Ledger. Phase 2 (Consolidation) = Board Merge + Delta Review. Phase 3 (Optimization) = Reporting Reduction + Advanced Gates + Continuous Improvement.",
+    "seven_dependent_decisions": "D-01: Compound-key identity. D-02: AM-1 parse mandate. D-03: 4-board target. D-04: Delta review adoption. D-05: Reporting reduction cap. D-06: File-lock protocol. D-07: S311 EW Factory standard. All must be decided before S202 begins redesign."
+  }
+}

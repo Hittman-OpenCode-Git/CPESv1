@@ -1,0 +1,126 @@
+{
+  "session": "SESSION056",
+  "phase": 5,
+  "description": "Phase 5 Item Authoring — Packs C+D Section E (20-Item Batch 4)",
+  "total_slots": 20,
+  "packs_affected": ["pack_c_corrected.js", "pack_d_corrected.js"],
+  "sections_affected": ["E"],
+  "domains_covered": ["COSO Internal Controls", "COSO ERM", "Technology Governance"],
+  "bloom_target": {"Analyze": 10, "Evaluate": 10},
+  "difficulty_target": {"Difficult": 14, "Very_Difficult": 6},
+  "question_state": "Certified",
+  "prerequisite": "Sessions S899 (Phase 1: 20 items), S50 (Phase 2: 20 items), S51 (Phase 3: 20 items)",
+  "remaining_after_phase5": 52,
+  "slots": [
+    {
+      "index": 61, "qid": "P1-EC-027", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 4 — board oversight — evaluating board commitment to competence and director qualifications"
+    },
+    {
+      "index": 62, "qid": "P1-EC-032", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 5 — accountability — evaluating performance measure and incentive structure misalignment"
+    },
+    {
+      "index": 63, "qid": "P1-EC-033", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 8 — fraud risk assessment — evaluating opportunity and rationalization factors in fraud triangle"
+    },
+    {
+      "index": 64, "qid": "P1-EC-036", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 13 — information quality — evaluating data governance and information integrity after acquisition"
+    },
+    {
+      "index": 65, "qid": "P1-EC-037", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 14 — internal communication — evaluating whistleblower hotline effectiveness and reporting culture"
+    },
+    {
+      "index": 66, "qid": "P1-ED-019", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO ERM — risk appetite vs. strategy — evaluating strategic misalignment when risk appetite exceeds execution capacity"
+    },
+    {
+      "index": 67, "qid": "P1-ED-022", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO Principle 7 — risk severity — evaluating likelihood and impact assessment bias in risk ranking"
+    },
+    {
+      "index": 68, "qid": "P1-ED-024", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO Principle 12 — control activities — evaluating IT general control deficiencies after a system migration"
+    },
+    {
+      "index": 69, "qid": "P1-ED-027", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO Principle 15 — external communication — evaluating SOC report reliance and third-party assurance scope"
+    },
+    {
+      "index": 70, "qid": "P1-ED-029", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "Three Lines of Defense — evaluating assurance mapping gaps and coordination failures"
+    },
+    {
+      "index": 71, "qid": "P1-EC-042", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 1 — integrity and ethics — evaluating tone at the top after a compliance program failure"
+    },
+    {
+      "index": 72, "qid": "P1-EC-043", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 3 — authority and responsibility — evaluating matrix reporting structure conflicts"
+    },
+    {
+      "index": 73, "qid": "P1-EC-045", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 9 — risk response — evaluating control design adequacy after risk identification"
+    },
+    {
+      "index": 74, "qid": "P1-EC-046", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 16 — monitoring — evaluating continuous monitoring design vs. point-in-time evaluation trade-offs"
+    },
+    {
+      "index": 75, "qid": "P1-EC-047", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 17 — deficiency evaluation — evaluating severity classification of control deficiencies"
+    },
+    {
+      "index": 76, "qid": "P1-ED-030", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 2 — board independence — evaluating related-party transaction governance and oversight"
+    },
+    {
+      "index": 77, "qid": "P1-ED-032", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 6 — risk identification — evaluating emerging technology risk assessment at a financial institution"
+    },
+    {
+      "index": 78, "qid": "P1-ED-034", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO ERM — risk culture — evaluating risk-aware decision making maturity"
+    },
+    {
+      "index": 79, "qid": "P1-ED-037", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 11 — technology controls — evaluating system implementation control design during ERP rollout"
+    },
+    {
+      "index": 80, "qid": "P1-ED-039", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 10 — control activities — evaluating compensating control adequacy after a key control failure"
+    }
+  ],
+  "batch_plan": [
+    {"batch": 1, "qids": ["P1-EC-027","P1-EC-032","P1-EC-033","P1-EC-036","P1-EC-037"], "pack": "C", "section": "E", "description": "COSO Governance & Environment (Principles 4,5,8,13,14)"},
+    {"batch": 2, "qids": ["P1-ED-019","P1-ED-022","P1-ED-024","P1-ED-027","P1-ED-029"], "pack": "D", "section": "E", "description": "COSO ERM, Risk & Control Activities (ERM, P7, P12, P15, 3LoD)"},
+    {"batch": 3, "qids": ["P1-EC-042","P1-EC-043","P1-EC-045","P1-EC-046","P1-EC-047"], "pack": "C", "section": "E", "description": "COSO Control Environment & Monitoring (P1, P3, P9, P16, P17)"},
+    {"batch": 4, "qids": ["P1-ED-030","P1-ED-032","P1-ED-034","P1-ED-037","P1-ED-039"], "pack": "D", "section": "E", "description": "COSO Board, Technology & ERM (P2, P6, ERM, P11, P10)"}
+  ],
+  "bloom_distribution": {"Analyze": 10, "Evaluate": 10},
+  "difficulty_distribution": {"Difficult": 14, "Very_Difficult": 6},
+  "created": "2026-07-28",
+  "session": "SESSION056"
+}

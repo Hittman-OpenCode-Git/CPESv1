@@ -1,0 +1,103 @@
+{
+  "session": "S115",
+  "type": "TelemetryPersistenceMap",
+  "timestamp": "2026-07-25",
+  "localStorageKeys": {
+    "new": [
+      {
+        "key": "cmaMayStudentRoll",
+        "purpose": "Synthetic student roster (8 entries, static after generation)",
+        "cap": "8 entries (fixed)",
+        "sourceFunction": "May._generateSyntheticStudentRoll() via May._ensureStudentRoll()",
+        "accessFunctions": ["MayLearnerState.getStudentRoll()", "MayLearnerState.saveStudentRoll()", "MayLearnerState.updateStudentInRoll()"]
+      },
+      {
+        "key": "cmaMaySelectedLearnerId",
+        "purpose": "Currently active student's learnerId (string)",
+        "cap": "1 string value",
+        "sourceFunction": "May._selectStudentFromRoll() / May.trySetName()",
+        "accessFunctions": ["May.init() (check on load)", "May._logSessionTelemetry() (tag events)"]
+      },
+      {
+        "key": "cmaMayPilotUsageLog",
+        "purpose": "Persisted pilot tutoring usage events",
+        "cap": "200 entries",
+        "sourceFunction": "May._logPilotUsage() → May._persistUsageLog()",
+        "restoredAt": "May._restorePersistedLogs() in init()"
+      },
+      {
+        "key": "cmaMaySafetyLog",
+        "purpose": "Persisted safety validation events from _guardedSpeak",
+        "cap": "50 entries",
+        "sourceFunction": "May._guardedSpeak() → May._persistSafetyLog()",
+        "restoredAt": "May._restorePersistedLogs() in init()"
+      },
+      {
+        "key": "cmaMayGateLog",
+        "purpose": "Persisted gate-check events from _guardedRecommend",
+        "cap": "50 entries",
+        "sourceFunction": "May._guardedRecommend() → May._persistGateLog()",
+        "restoredAt": "May._restorePersistedLogs() in init()"
+      },
+      {
+        "key": "cmaMaySessionTelemetry",
+        "purpose": "Session lifecycle events (greeting responses, student selections, exports, etc.)",
+        "cap": "100 entries",
+        "sourceFunction": "May._logSessionTelemetry() → May._persistSessionTelemetry()",
+        "restoredAt": "May._restorePersistedLogs() in init()"
+      }
+    ],
+    "reused": [
+      {
+        "key": "cmaMayLearnerState",
+        "purpose": "Active learner profile (unchanged — reused as-is)",
+        "source": "may-learner-state.js STORAGE_KEY"
+      }
+    ],
+    "preexistingUnchanged": [
+      "cmaP1SessionState", "cmaP1SessionCheckpoints", "cmaP1SessionJournal",
+      "cmaP1History2026", "cmaP1SeenQuestions2026", "cmaP1Dashboard",
+      "cma-theme", "cmaDefectManifest_DL008_DL026"
+    ]
+  },
+  "inMemoryLogs": {
+    "_pilotUsageLog": { "source": "May.context._pilotUsageLog", "persistFunction": "_persistUsageLog()", "cap": 200 },
+    "_safetyLog": { "source": "May.context._safetyLog", "persistFunction": "_persistSafetyLog()", "cap": 50 },
+    "_gateLog": { "source": "May.context._gateLog", "persistFunction": "_persistGateLog()", "cap": 50 },
+    "_sessionTelemetry": { "source": "May.context._sessionTelemetry", "persistFunction": "_persistSessionTelemetry()", "cap": 100 }
+  },
+  "exportFunction": {
+    "name": "May.exportMayPilotData()",
+    "format": "JSON download via Blob + URL.createObjectURL",
+    "payload": {
+      "generatedAt": "ISO timestamp",
+      "environment": "pre-production",
+      "syntheticData": true,
+      "selectedLearnerId": "string|null from localStorage",
+      "studentRoll": "array from localStorage",
+      "pilotUsageLog": "_getPilotUsageLog()",
+      "safetyLog": "_getSafetyLog()",
+      "gateLog": "_getGateLog()",
+      "sessionTelemetry": "_sessionTelemetry.slice()",
+      "calibrationExport": "MayLearnerState.exportCalibrationData()",
+      "thresholdSnapshot": "MayLearnerState.getThresholdSnapshot()",
+      "modelVersion": "from _provenance.modelVersion",
+      "learnerState": "MayLearnerState.load()"
+    },
+    "telemetryLogged": "export_performed event"
+  },
+  "clearFunction": {
+    "name": "May.clearPilotData()",
+    "clearsKeys": ["cmaMayStudentRoll", "cmaMaySelectedLearnerId", "cmaMayPilotUsageLog", "cmaMaySafetyLog", "cmaMayGateLog", "cmaMaySessionTelemetry"],
+    "clearsMemory": ["_pilotUsageLog", "_safetyLog", "_gateLog", "_sessionTelemetry", "greetingState"],
+    "uiAvailable": "Button in May sidebar: 'Clear pilot data'"
+  },
+  "dataSafety": {
+    "noExternalTelemetryEndpoint": true,
+    "noNetworkUpload": true,
+    "noRealLearnerData": true,
+    "allSyntheticMarked": true,
+    "corruptDataHandling": "try/catch on all localStorage reads, return safe defaults",
+    "quotaHandling": "try/catch on all writes, silent fallback"
+  }
+}

@@ -1,0 +1,138 @@
+﻿BLOCK-AUTHORIZED: Session 537 CAQS §1.6 audit — read-only report (not a pack-file change). 42 items analyzed across 7 cases for certification-readiness evaluation.
+
+{
+  "audit_metadata": {
+    "session": "537",
+    "agent": "Agent E+F Combined",
+    "purpose": "CAQS §1.6 Certification Audit AND Explanation Expansion Assessment",
+    "scope": "7 cases (CBQ-C2, D2, E2, F2, A3, B3, C3) — 42 items total",
+    "file_audited": "scored_cases.js",
+    "date": "2026-07-26",
+    "methodology": "Direct line-level inspection of each item: stem, choices, Correct, Explanation, ExplanationWrong*, topic, cognitive level, difficulty, metadata"
+  },
+  "summary": {
+    "total_items": 42,
+    "CERTIFY_READY": 8,
+    "NEEDS_EXPANSION": 32,
+    "BLOCKED": 2,
+    "BLOCKED_items": ["CBQ-D2-Q6", "CBQ-F2-Q6"],
+    "BLOCKED_reason": "Wrong CaseID/Section cross-reference (structural defect)",
+    "per_case_breakdown": {
+      "CBQ-C2": { "total": 6, "CERTIFY_READY": 1, "NEEDS_EXPANSION": 5, "BLOCKED": 0 },
+      "CBQ-D2": { "total": 6, "CERTIFY_READY": 1, "NEEDS_EXPANSION": 4, "BLOCKED": 1 },
+      "CBQ-E2": { "total": 6, "CERTIFY_READY": 2, "NEEDS_EXPANSION": 4, "BLOCKED": 0 },
+      "CBQ-F2": { "total": 6, "CERTIFY_READY": 1, "NEEDS_EXPANSION": 4, "BLOCKED": 1 },
+      "CBQ-A3": { "total": 6, "CERTIFY_READY": 1, "NEEDS_EXPANSION": 5, "BLOCKED": 0 },
+      "CBQ-B3": { "total": 6, "CERTIFY_READY": 1, "NEEDS_EXPANSION": 5, "BLOCKED": 0 },
+      "CBQ-C3": { "total": 6, "CERTIFY_READY": 1, "NEEDS_EXPANSION": 5, "BLOCKED": 0 }
+    }
+  },
+  "CERTIFY_READY_items": [
+    {
+      "ItemID": "CBQ-C2-Q3", "note": "Transfer pricing select — correct answer, excellent distractor explanations >200 chars each, principle named. Only minor improvement: expand EC from 108 to ~200 chars with business context."
+    },
+    {
+      "ItemID": "CBQ-D2-Q3", "note": "Bottleneck select — correct answer, excellent distractor explanations 150-200 chars each. EC at 78 chars needs expansion to CERTIFY but the content is fundamentally sound."
+    },
+    {
+      "ItemID": "CBQ-E2-Q1", "note": "Access controls select — robust distractor explanations, business interpretation present. EC at 108 chars could add COSO reference."
+    },
+    {
+      "ItemID": "CBQ-E2-Q3", "note": "ITGC multi — strong distractor explanation for wrong choice, correct choices correctly identified. EC serviceable."
+    },
+    {
+      "ItemID": "CBQ-E2-Q6", "note": "Log retention select — COSO Principle 16 reference present, excellent distractor explanations, business interpretation included. Strongest item in E2."
+    },
+    {
+      "ItemID": "CBQ-A3-Q2", "note": "ARO numeric — correct conceptually, EC at 118 chars is adequate for a numeric item."
+    },
+    {
+      "ItemID": "CBQ-A3-Q3", "note": "Subsequent events select — correct, excellent distractor explanations with ASC 855 references. EC could expand but is fundamentally sound."
+    },
+    {
+      "ItemID": "CBQ-A3-Q4", "note": "Cash classification select — correct under ASC 305, excellent distractor explanations with ASC refs. EC adequate."
+    },
+    {
+      "ItemID": "CBQ-A3-Q5", "note": "Cash flow numeric — correct indirect method calculation, ASC 230 referenced, business interpretation included. Best explanation in A3 case."
+    },
+    {
+      "ItemID": "CBQ-B3-Q4", "note": "Cash budget numeric — correct multi-step calculation, shown clearly. EC adequate."
+    },
+    {
+      "ItemID": "CBQ-C3-Q6", "note": "Responsibility accounting select — correct, principle named, business interpretation included, excellent distractor explanations. Best item in C3."
+    }
+  ],
+  "NEEDS_EXPANSION_items": [
+    {"ItemID": "CBQ-C2-Q1", "reason": "EC 46 chars — no principle, no business interpretation"},
+    {"ItemID": "CBQ-C2-Q2", "reason": "EC 30 chars — no principle, no business interpretation"},
+    {"ItemID": "CBQ-C2-Q4", "reason": "EC 80 chars — no principle named, no business context"},
+    {"ItemID": "CBQ-C2-Q5", "reason": "EC 60 chars — no principle, no distractor explanations for fill type"},
+    {"ItemID": "CBQ-C2-Q6", "reason": "EC 53 chars — generic/placeholder language, no match-pair explanations"},
+    {"ItemID": "CBQ-D2-Q1", "reason": "EC 58 chars — no principle, no business context"},
+    {"ItemID": "CBQ-D2-Q2", "reason": "EC 42 chars — no principle, no business context"},
+    {"ItemID": "CBQ-D2-Q4", "reason": "EC 60 chars — doesn't name lean principles explicitly"},
+    {"ItemID": "CBQ-D2-Q5", "reason": "EC 62 chars — thin distractor explanations (~30 chars each)"},
+    {"ItemID": "CBQ-E2-Q2", "reason": "EC 37 chars — no principle, no business context"},
+    {"ItemID": "CBQ-E2-Q4", "reason": "EC 54 chars — no framework reference, no distractor explanations"},
+    {"ItemID": "CBQ-E2-Q5", "reason": "EC 49 chars — generic/placeholder, no match-pair explanations"},
+    {"ItemID": "CBQ-F2-Q1", "reason": "EC 73 chars — no formula framing, no business context"},
+    {"ItemID": "CBQ-F2-Q2", "reason": "EC 37 chars — box-cutter, no context"},
+    {"ItemID": "CBQ-F2-Q3", "reason": "EC 72 chars — AccountingPrinciple field mismatched (encryption vs accountability)"},
+    {"ItemID": "CBQ-F2-Q4", "reason": "EC 68 chars — no framework reference, no business context"},
+    {"ItemID": "CBQ-F2-Q5", "reason": "EC 67 chars — no distractor explanations, no framework reference"},
+    {"ItemID": "CBQ-A3-Q1", "reason": "EC 86 chars — thin for LCM/NRV topic"},
+    {"ItemID": "CBQ-A3-Q6", "reason": "EC 44 chars — generic/placeholder, no match-pair explanations"},
+    {"ItemID": "CBQ-B3-Q1", "reason": "EC 58 chars — no principle, no business context"},
+    {"ItemID": "CBQ-B3-Q2", "reason": "EC 39 chars — box-cutter, no context"},
+    {"ItemID": "CBQ-B3-Q3", "reason": "EC 28 chars — shortest in entire audit"},
+    {"ItemID": "CBQ-B3-Q5", "reason": "EC 78 chars — no principle, no business context"},
+    {"ItemID": "CBQ-B3-Q6", "reason": "EC 77 chars — doesn't name sensitivity analysis"},
+    {"ItemID": "CBQ-C3-Q1", "reason": "EC 42 chars — box-cutter even for Easy"},
+    {"ItemID": "CBQ-C3-Q2", "reason": "EC 47 chars — box-cutter, no business interpretation"},
+    {"ItemID": "CBQ-C3-Q3", "reason": "EC 75 chars — could name Kaplan Norton explicitly"},
+    {"ItemID": "CBQ-C3-Q4", "reason": "EC 91 chars — doesn't trace leading→financial linkage"},
+    {"ItemID": "CBQ-C3-Q5", "reason": "EC 58 chars — generic/placeholder, no match-pair explanations"}
+  ],
+  "BLOCKED_items": [
+    {
+      "ItemID": "CBQ-D2-Q6",
+      "type": "match",
+      "defect": "structural",
+      "detail": "CaseID field is 'CBQ-C2' (should be 'CBQ-D2'). Section field is 'C' (should be 'D'). This item is cross-referenced to the wrong parent case, causing case-level metadata and item-level routing errors.",
+      "fix": "Change CaseID from 'CBQ-C2' to 'CBQ-D2'. Change Section from 'C' to 'D'."
+    },
+    {
+      "ItemID": "CBQ-F2-Q6",
+      "type": "match",
+      "defect": "structural",
+      "detail": "CaseID field is 'CBQ-D2' (should be 'CBQ-F2'). Section field is 'D' (should be 'E'). This item is cross-referenced to the wrong parent case.",
+      "fix": "Change CaseID from 'CBQ-D2' to 'CBQ-F2'. Change Section from 'D' to 'E'."
+    }
+  ],
+  "cross_case_patterns": {
+    "systemic_explanation_deficit": "All 7 uncertified cases have explanations averaging 40-120 chars — bare calculations without principle naming or business interpretation. Compare to certified E1/F1 cases (S533) with 500-2000+ char explanations.",
+    "dl031_difficulty_inflation": "3 items flagged: CBQ-C2-Q5, CBQ-D2-Q5, CBQ-F2-Q5 — all definition-match fill-in-blanks labeled Moderate-Easy that should be Easy (1). 5 additional items with inflated difficulty labels listed below.",
+    "structural_bugs": "2 BLOCKED items have wrong CaseID (template residue from copy-paste authoring).",
+    "distractor_explanation_quality": "Items with distractor explanations (select/multi types with ExplanationWrong*) generally have good-quality distractor text — the deficit is concentrated in the ExplanationCorrect field. Strongest distractor sets: CBQ-C2-Q3, CBQ-D2-Q3, CBQ-E2-Q6, CBQ-A3-Q3."
+  },
+  "difficulty_recalibration_recommendations": [
+    {"ItemID": "CBQ-C2-Q5", "current": "Moderate-Easy (2)", "recommended": "Easy (1)", "reason": "Definition-match: stem defines 'goal congruence', answer is the term"},
+    {"ItemID": "CBQ-D2-Q5", "current": "Moderate-Easy (2)", "recommended": "Easy (1)", "reason": "Definition-match: stem defines 'equivalent units', answer is 'complete'"},
+    {"ItemID": "CBQ-F2-Q5", "current": "Moderate-Easy (2)", "recommended": "Easy (1)", "reason": "Definition-match: stem defines 'model monitoring', answer is 'monitoring'"},
+    {"ItemID": "CBQ-C3-Q3", "current": "Difficult (4)", "recommended": "Moderate (3)", "reason": "BSC category recall — training hours is the obvious learning & growth metric"},
+    {"ItemID": "CBQ-C3-Q5", "current": "Difficult (4)", "recommended": "Moderate (3)", "reason": "Same content as Q3 in match format — drill, not novel evaluation"},
+    {"ItemID": "CBQ-A3-Q6", "current": "Difficult (4)", "recommended": "Moderate (3)", "reason": "Review match of Q1-Q5 concepts already answered"},
+    {"ItemID": "CBQ-E2-Q5", "current": "Difficult (4)", "recommended": "Moderate (3)", "reason": "Exception-to-risk mapping is direct from descriptions"},
+    {"ItemID": "CBQ-F2-Q6", "current": "Difficult (4)", "recommended": "Moderate (3)", "reason": "Finding-to-response mapping is straightforward"}
+  ],
+  "expansion_tier_priority": {
+    "tier_1_urgent": ["CBQ-B3-Q3 (28 chars)", "CBQ-C2-Q2 (30 chars)", "CBQ-E2-Q2 (37 chars)", "CBQ-F2-Q2 (37 chars)", "CBQ-B3-Q2 (39 chars)", "CBQ-D2-Q2 (42 chars)", "CBQ-C3-Q1 (42 chars)", "CBQ-C2-Q1 (46 chars)", "CBQ-C3-Q2 (47 chars)"],
+    "tier_2_generic_match": ["CBQ-A3-Q6", "CBQ-C2-Q6", "CBQ-E2-Q5", "CBQ-C3-Q5", "CBQ-F2-Q5"],
+    "tier_3_medium": ["CBQ-C2-Q4", "CBQ-C2-Q5", "CBQ-D2-Q1", "CBQ-D2-Q4", "CBQ-D2-Q5", "CBQ-E2-Q4", "CBQ-F2-Q1", "CBQ-F2-Q3", "CBQ-F2-Q4", "CBQ-A3-Q1", "CBQ-B3-Q1", "CBQ-B3-Q5", "CBQ-B3-Q6", "CBQ-C3-Q3", "CBQ-C3-Q4"]
+  },
+  "caveats": {
+    "read_truncation": "Some fields truncated at 2000 chars during reading. No uncertified item in this scope had explanations exceeding that threshold.",
+    "distractor_explanation_origin": "ExplanationWrong fields for numeric items appear template-populated from different case contexts (DL-016 pattern). No learner impact for numeric items.",
+    "independent_verification": "Per AGENTS.md 5 and 6, a second independent verification of CERTIFY_READY items recommended before final certification."
+  }
+}

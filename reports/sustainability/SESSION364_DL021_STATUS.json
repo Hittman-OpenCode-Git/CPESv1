@@ -1,0 +1,3417 @@
+{
+  "audit_session": "S364",
+  "date": "2026-07-28T17:23:29.570Z",
+  "pack": "pack_e_corrected.js",
+  "section": "C",
+  "total_items": 100,
+  "certified": 100,
+  "items_with_all_distractor_EW_present": 100,
+  "items_with_DL021_classic_all_absent": 0,
+  "total_absent_fields": 0,
+  "total_empty_non_CC_fields": 0,
+  "total_empty_CC_fields": 100,
+  "total_non_empty_distractor_EW": 300,
+  "expected_distractor_fields_if_clean": 300,
+  "per_item": [
+    {
+      "QID": "P1E-C-001",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 134,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 137,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-002",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 143,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-003",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 133,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 149,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-004",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 147,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 140,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-005",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 145,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 140,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-006",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-007",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 155,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 130,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-008",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 151,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 154,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 153,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-009",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 145,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-010",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 146,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-011",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 357,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 380,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 312,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-012",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 196,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 257,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 180,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-013",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 317,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 216,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 277,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-014",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 164,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-015",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 146,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 129,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 138,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-016",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 136,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 146,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-017",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 150,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-018",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 119,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 146,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-019",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 147,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 134,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-020",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 157,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-021",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 153,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 155,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-022",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-023",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 147,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 145,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-024",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 160,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 154,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-025",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 128,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 122,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 124,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-026",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 146,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 145,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 153,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-027",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 133,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 123,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-028",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 127,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 136,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 138,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-029",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 130,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 136,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-030",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 126,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-031",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 154,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 130,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-032",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 116,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 115,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 110,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-033",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 128,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 110,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-034",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 154,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 161,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 150,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-035",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 161,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 137,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-036",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 147,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 137,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-037",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 140,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-038",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 138,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 137,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-039",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 140,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 130,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-040",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 212,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 204,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 217,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-041",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 372,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 244,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 339,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-042",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 274,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 261,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 210,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-043",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 252,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 248,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 252,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-044",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 380,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 334,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 323,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-045",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 121,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 143,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-046",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 165,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-047",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 154,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 153,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-048",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 147,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-049",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 126,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 150,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-050",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 131,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 118,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 131,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-051",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 121,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 129,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 138,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-052",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 129,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 123,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-053",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 127,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 130,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 129,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-054",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 422,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 307,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 321,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-055",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 345,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 304,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 340,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-056",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 131,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-057",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 119,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 126,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 125,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-058",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 131,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 118,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 126,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-059",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 318,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 354,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 354,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-060",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 129,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 134,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-061",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 131,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 129,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 133,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-062",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 128,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 116,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 120,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-063",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 124,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 119,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-064",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 136,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 125,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-065",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 135,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 128,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 127,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-066",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 128,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 130,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 135,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-067",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 135,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-068",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 138,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 141,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-069",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 128,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 140,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-070",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 130,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-071",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 142,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 134,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 143,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-072",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 155,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 135,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-073",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 136,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 124,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 135,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-074",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 435,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 391,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 407,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-075",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 133,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 120,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 126,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-076",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 168,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-077",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 161,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 163,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 162,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-078",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 127,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 162,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 155,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-079",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 159,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 177,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 166,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-080",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 160,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 132,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-081",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 167,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 145,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-082",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 157,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 157,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 164,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-083",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 399,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 350,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 410,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-084",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 151,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 157,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 151,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-085",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 163,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 146,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 152,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-086",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 163,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 160,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-087",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 168,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 160,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 143,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-088",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 178,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 161,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 174,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-089",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 164,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 164,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 145,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-090",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 167,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 160,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 171,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-091",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-092",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 164,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 150,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 158,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-093",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 156,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 162,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-094",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 162,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 164,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 151,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-095",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 168,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 150,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 149,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-096",
+      "CorrectChoice": "B",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 153,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 159,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 139,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-097",
+      "CorrectChoice": "D",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 158,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 151,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-098",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 157,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 150,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 148,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-099",
+      "CorrectChoice": "A",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 144,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 127,
+          "status": "NON-EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 146,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    },
+    {
+      "QID": "P1E-C-100",
+      "CorrectChoice": "C",
+      "question_state": "Certified",
+      "EW": {
+        "A": {
+          "present": true,
+          "length": 164,
+          "status": "NON-EMPTY"
+        },
+        "B": {
+          "present": true,
+          "length": 173,
+          "status": "NON-EMPTY"
+        },
+        "C": {
+          "present": true,
+          "length": 0,
+          "status": "EMPTY"
+        },
+        "D": {
+          "present": true,
+          "length": 181,
+          "status": "NON-EMPTY"
+        }
+      },
+      "present": 4,
+      "nonEmpty": 3,
+      "emptyNonCC": 0,
+      "absent": 0,
+      "emptyCCslots": 1,
+      "DL021": false,
+      "allDistractorPresent": true
+    }
+  ]
+}

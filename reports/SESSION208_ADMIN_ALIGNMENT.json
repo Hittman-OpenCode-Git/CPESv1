@@ -1,0 +1,245 @@
+{
+  "document": "SESSION208_ADMIN_ALIGNMENT",
+  "session": "S208",
+  "series": "200-Series Architecture Stewardship",
+  "board": "E",
+  "title": "May Admin Architecture Alignment — Framework v2 Compliance Review",
+  "status": "COMPLETE",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — assessment only",
+  "authority": "PROJECT_CONSTITUTION.md; S208 Board A Frozen Principles; May Admin (S252-S262)",
+  "depends_on": ["SESSION208_ARCHITECTURAL_PRINCIPLES.json (Board A)", "SESSION208_REGISTRY_AUTHORITY.json (Board F)"],
+
+  "sources_consumed": [
+    "reports/session254/SESSION254_PLATFORM_RELIABILITY.json — engine-by-engine scorecard",
+    "reports/session255/SESSION255_STUDENT_DATA_BRIDGE.json — canonical student record design",
+    "reports/session256/SESSION256_WORKBENCH_VALIDATION.json — 8/8 investigation cases PASS",
+    "reports/session257/ — May Admin MVP Readiness Board",
+    "knowledge/REVISION_HISTORY.md S254-S257 — reliability hardening and MVP readiness",
+    "may-core.js — coaching layer core engine",
+    "may-learner-state.js — learner state management",
+    "reports/SESSION207_OPERATIONAL_HEALTH_REPORT.json — operational certification",
+    "reports/SESSION813_FRAMEWORK_V2_ADOPTION_REVIEW.json — conditional adoption at 92%",
+    "SESSION208_ARCHITECTURAL_PRINCIPLES.json — 6 frozen principles",
+    "SESSION208_REGISTRY_AUTHORITY.json — authoritative registry sources"
+  ],
+
+  "verdict": "ALIGNED",
+  "overall_score": 93,
+  "summary": "May Admin (S252-S262) is well-aligned with Framework v2 architectural principles. All modules consume from authoritative registries, maintain traceability chains, and integrate with governance guard. Operational gaps (student data, challenge triage) are deployment issues, not architectural misalignment.",
+
+  "module_evaluation": [
+
+    {
+      "module": "Investigation Platform",
+      "sessions": "S252 (infrastructure), S254 (reliability audit)",
+      "score": 100,
+      "status": "ALIGNED",
+      "description": "Provides QID-based investigation capability with 7-section reports per queried item.",
+      "framework_v2_alignment": {
+        "p1_identity": "Uses QID-based identity resolution via compound-key aware lookup — correct identification of items across pack-specific formats",
+        "p2_scan_once": "Consumes from investigation registry, not raw pack files — single source of truth",
+        "p6_traceability": "19 investigations with valid state transitions, 0 orphaned references — full traceability",
+        "governance": "Read-only — no governance guard risk"
+      },
+      "evidence": {
+        "reliability": "26/26 valid QIDs return 7-section report. Error handling correct for all edge cases (invalid QID, empty arg, R-series, QID not found).",
+        "investigation_chains": "S256: 4 challenge investigations completed end-to-end, 2 defect investigations, 2 certification history investigations — 8/8 PASS"
+      },
+      "gaps": []
+    },
+
+    {
+      "module": "Question Lookup",
+      "sessions": "S252 (infrastructure), S256 (workbench certification)",
+      "score": 100,
+      "status": "ALIGNED",
+      "description": "Enables QID-based question lookup returning structural and content data.",
+      "framework_v2_alignment": {
+        "p1_identity": "Identity-based lookups — resolves QID to correct item across all packs including R-series",
+        "p2_scan_once": "Consumes from MASTER_QUESTION_REGISTRY.md (generated registry) — not raw pack files",
+        "p6_traceability": "Lookup results include question_state, certification history, and defect linkage",
+        "governance": "Read-only — no risk"
+      },
+      "evidence": {
+        "validation": "26/26 QIDs validated across all packs in S256 workbench certification",
+        "edge_cases": "R-series items (P1-E-R##) correctly resolved despite format difference"
+      },
+      "gaps": []
+    },
+
+    {
+      "module": "Challenge Workbench",
+      "sessions": "S256 (workbench certification)",
+      "score": 83,
+      "status": "PARTIALLY_ALIGNED",
+      "description": "Manages user-raised challenges to question content. Links challenges to investigations, defects, and recommendations.",
+      "framework_v2_alignment": {
+        "p1_identity": "Challenge→QID linkage uses registry-based identity resolution — correct",
+        "p6_traceability": "Challenge→defect→recommendation→session→certification chains verified in 8/8 cases",
+        "p5_governance": "Challenge-driven investigations produce recommendations that feed remediation queue (≤30 items per Rule 5)"
+      },
+      "evidence": {
+        "investigation_integrity": "8/8 cases PASS — 0 manual searches required",
+        "chain_verification": "Full 5-touchpoint timeline reconstruction for P1-E-076"
+      },
+      "gaps": [
+        {
+          "id": "MA-GAP-1",
+          "severity": "MEDIUM",
+          "title": "Challenge triage at 34% coverage",
+          "description": "Only 12 of 35 challenges triaged. 23 challenges unattended. Classification is reasonably consistent for triaged items but the backlog reduces the platform's investigative value.",
+          "not_blocking": true,
+          "remediation": "Complete triage of remaining 23 challenges. This is operational backlog, not architectural misalignment."
+        }
+      ]
+    },
+
+    {
+      "module": "Session Intelligence",
+      "sessions": "S254 (reliability audit)",
+      "score": 100,
+      "status": "ALIGNED",
+      "description": "Tracks learner practice/exam sessions with QID exposure data.",
+      "framework_v2_alignment": {
+        "p6_traceability": "40 sessions, 535 unique QIDs linked, 0 duplicate/phantom/orphan references post-S253 deep-link repair",
+        "p2_scan_once": "Consumes from session registry — single source of truth for session data",
+        "governance": "Read-only analysis — no content modification risk"
+      },
+      "evidence": {
+        "link_integrity": "0 broken QID references across all 40 sessions",
+        "deep_link_repair": "S253 resolved all deep-link defects → 5/5 PASS"
+      },
+      "gaps": [
+        {
+          "id": "MA-GAP-2",
+          "severity": "LOW",
+          "title": "16/40 sessions have UNKNOWN mode",
+          "description": "Session mode classification is incomplete for 40% of sessions. Does not affect traceability but limits analytics usefulness.",
+          "not_blocking": true
+        }
+      ]
+    },
+
+    {
+      "module": "Student Data Bridge",
+      "sessions": "S255 (student data bridge design)",
+      "score": 80,
+      "status": "DESIGN_READY — NO OPERATIONAL DATA",
+      "description": "Designed canonical student record schema, data source inventory, import/export contracts, and privacy controls. Zero operational student performance data exists.",
+      "framework_v2_alignment": {
+        "p6_traceability": "Design includes FK relationships to all existing registries (question_history, session_registry, challenge_registry)",
+        "p2_scan_once": "Design consumes from registries, not raw files",
+        "p4_readiness": "Design is architecturally complete — ready for implementation when data exists"
+      },
+      "evidence": {
+        "design_completeness": "Canonical student record schema v1.0.0 complete. Student→Attempt→QuestionExposure→Result→Challenge relationships defined. Privacy controls (PII classification, RBAC, retention policy) specified.",
+        "data_inventory": "4 structural data sources exist. 0 operational student data exists. Bridge is architecturally ready but cannot be operationally validated."
+      },
+      "gaps": [
+        {
+          "id": "MA-GAP-3",
+          "severity": "MEDIUM",
+          "title": "Zero operational student data",
+          "description": "Student Exposure Index (S254: 80/100, DATA_GAP) and Student Data Bridge (S255: PARTIAL) are architecturally complete but have no data to process. The bridge is ready for implementation but cannot be operationally validated until students use the platform.",
+          "not_blocking": true,
+          "note": "This is a deployment gap, not an architectural gap. The bridge design is complete and architecturally sound. It awaits production deployment."
+        }
+      ]
+    },
+
+    {
+      "module": "Cross-Engine Consistency",
+      "sessions": "S254 (cross-engine audit)",
+      "score": 95,
+      "status": "ALIGNED",
+      "description": "Validates registry consistency across all May Admin engines.",
+      "framework_v2_alignment": {
+        "p6_traceability": "7 registries validated. 1 anomaly identified (P1-EC-004) — traceability working as designed because anomaly was detected",
+        "p2_scan_once": "Cross-engine audit confirms all engines consume from consistent registry sources"
+      },
+      "evidence": {
+        "registries_validated": 7,
+        "anomaly": "P1-EC-004 state inconsistency between registry and raw file — flagged and tracked. The fact that this was detected is evidence of traceability, not failure of it."
+      },
+      "gaps": [
+        {
+          "id": "MA-GAP-4",
+          "severity": "LOW",
+          "title": "P1-EC-004 state inconsistency unresolved",
+          "description": "Investigation API reports 'Unprocessed'. REVISION_HISTORY.md records certification in S853. Raw file question_state (authoritative) should resolve this. Pending reconciliation.",
+          "not_blocking": true
+        }
+      ]
+    }
+  ],
+
+  "principle_alignment_matrix": {
+    "p1_identity_before_trust": {
+      "alignment": "ALIGNED",
+      "evidence": "All modules use QID-based identity resolution through registry lookups. No module trusts QID alone without cross-referencing registry context.",
+      "score": 100
+    },
+    "p2_scan_once_consume_many": {
+      "alignment": "ALIGNED",
+      "evidence": "All modules consume from registries, not raw pack files. Investigation API, Question Lookup, and Session Intelligence use generated artifacts. The only exception is the delivery mechanism (app.js) which reads raw packs for rendering — this is the design intent (runtime authority).",
+      "score": 95,
+      "note": "Delivery mechanism (app.js) reads raw pack files for rendering — this is by design (CAQS §1.4: runtime AI never determines correctness; scoring authority lives with the application). The read is from raw files but is read-only and functionally necessary."
+    },
+    "p3_delta_review": {
+      "alignment": "NOT_APPLICABLE",
+      "evidence": "May Admin tools are not in the certification pipeline. Delta review applies to content certification waves, not administrative tooling.",
+      "score": null
+    },
+    "p4_readiness_before_certification": {
+      "alignment": "ALIGNED",
+      "evidence": "S257 MVP Readiness Board evaluated all 5 modules against 6 automatic stop conditions before recommending Phase 1 implementation. All 6 stop conditions PASS. Readiness gating applied to admin tools.",
+      "score": 100
+    },
+    "p5_governance_automation": {
+      "alignment": "ALIGNED",
+      "evidence": "May Admin tools integrate with governance guard. Investigation creation, recommendation generation, and challenge resolution write through governance guard paths. All 6 rules apply to admin-initiated writes.",
+      "score": 95
+    },
+    "p6_traceability_everywhere": {
+      "alignment": "ALIGNED",
+      "evidence": "All 5 core modules maintain traceability through registries. Investigation chains (challenge→defect→recommendation→session→certification) verified across 8/8 cases with 0 manual report traversal. 1 anomaly (P1-EC-004) detected and tracked — traceability is working.",
+      "score": 95,
+      "anomaly": "P1-EC-004 state inconsistency — detection proves traceability, resolution pending"
+    }
+  },
+
+  "may_admin_readiness": {
+    "s257_readiness_board": {
+      "verdict": "PHASE 1 AUTHORIZED",
+      "conditions": "4 conditions (C1-C4 per S257), all non-blocking for Phase 1 start",
+      "blocked_modules": []
+    },
+    "operational_gaps": [
+      {
+        "gap": "Challenge triage at 34%",
+        "impact": "23 challenges unattended — reduces investigative value but doesn't block platform operation",
+        "remediation": "Triage backlog clearing session"
+      },
+      {
+        "gap": "Zero student performance data",
+        "impact": "Student Exposure Index and adaptive learning features cannot operate",
+        "remediation": "Requires production deployment. Not a May Admin architectural issue."
+      },
+      {
+        "gap": "16/40 sessions UNKNOWN mode",
+        "impact": "Analytics completeness reduced but traceability intact",
+        "remediation": "Session mode classification update"
+      }
+    ],
+    "architectural_gaps": [],
+    "note": "All identified gaps are operational, not architectural. May Admin is well-aligned with Framework v2 principles."
+  },
+
+  "integration_with_framework_v2": {
+    "certification_pipeline": "May Admin does not feed into content certification — it consumes certification decisions retroactively. Investigation findings feed into the governance process via defect library updates, not directly into certification.",
+    "governance_guard": "May Admin write paths (investigation creation, recommendation generation) pass through governance guard. Admin tools are not exempt from structural rules.",
+    "registry_consumption": "All modules are registered as consumers in SESSION208_REGISTRY_AUTHORITY.json. No unregistered consumption paths.",
+    "future_integration": "S208 Board C expansion rule MA-R1 requires all new admin features to consume from authoritative registries. MA-R4 requires governance guard integration on all write paths."
+  }
+}

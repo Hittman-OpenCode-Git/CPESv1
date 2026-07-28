@@ -1,0 +1,385 @@
+{
+  "meta": {
+    "generated": "2026-07-26T22:11:26.584Z",
+    "agent": "Agent Q+S+T Combined - Session 537",
+    "file": "scored_cases.js",
+    "casesParsed": 15,
+    "totalItems": 90
+  },
+  "preflight": {
+    "pass": true,
+    "errors": [],
+    "checks": {
+      "parse": {
+        "pass": true,
+        "count": 15,
+        "expected": 15
+      },
+      "caseIDs": {
+        "pass": true,
+        "unique": 15,
+        "total": 15
+      },
+      "itemIDs": {
+        "pass": true,
+        "unique": 90,
+        "total": 90
+      },
+      "types": {
+        "pass": true,
+        "invalid": 0,
+        "errors": []
+      },
+      "correctValues": {
+        "pass": true,
+        "missing": 0,
+        "items": []
+      },
+      "questionState": {
+        "pass": true,
+        "itemInvalid": 0,
+        "caseInvalid": 0
+      },
+      "dl008Rule2": {
+        "pass": true,
+        "violations": 0,
+        "items": []
+      }
+    }
+  },
+  "analytics": {
+    "explanationLengthByType": {
+      "numeric": {
+        "count": 37,
+        "avgChars": 2159,
+        "minChars": 1032,
+        "maxChars": 5152
+      },
+      "select": {
+        "count": 19,
+        "avgChars": 1915,
+        "minChars": 1044,
+        "maxChars": 3530
+      },
+      "multi": {
+        "count": 14,
+        "avgChars": 2327,
+        "minChars": 1176,
+        "maxChars": 5186
+      },
+      "match": {
+        "count": 12,
+        "avgChars": 2059,
+        "minChars": 1138,
+        "maxChars": 3016
+      },
+      "fill": {
+        "count": 8,
+        "avgChars": 1811,
+        "minChars": 1050,
+        "maxChars": 2826
+      }
+    },
+    "explanationWrongCoverage": {
+      "totalDistractorSlots": 73,
+      "filledDistractorSlots": 72,
+      "coveragePercent": 99,
+      "partialCoverageItems": 1,
+      "zeroCoverageItems": 0,
+      "zeroCoverageIDs": []
+    },
+    "metadataCompletion": {
+      "itemLevel": {
+        "ItemID": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "Type": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "Prompt": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "Correct": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "Explanation": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "Topic": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "CognitiveLevel": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "question_state": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "Difficulty": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        },
+        "DifficultyScore": {
+          "present": 90,
+          "total": 90,
+          "percent": 100
+        }
+      },
+      "caseLevel": {
+        "CaseID": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "Title": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "SectionTags": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "BlueprintDomain": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "BlueprintObjectives": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "PrimaryCompetency": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "EstimatedMinutes": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "Difficulty": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "DifficultyScore": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "ScenarioText": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "Industry": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "CompanyType": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "CompanyName": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "Stakeholder": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "BusinessFunction": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "QuestionCount": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "ExhibitCount": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "ProductionStatus": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "Version": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "CreatedDate": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "ModifiedDate": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "Author": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "Confidence": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        },
+        "LearningObjectives": {
+          "present": 15,
+          "total": 15,
+          "percent": 100
+        }
+      },
+      "overallPercent": 100
+    },
+    "difficultyDistribution": {
+      "Moderate-Easy": 35,
+      "Moderate": 18,
+      "Difficult": 34,
+      "Easy": 3
+    },
+    "caseDifficultyDistribution": {
+      "Moderate": 4,
+      "Difficult": 11
+    },
+    "cognitiveLevelDistribution": {
+      "Apply": 38,
+      "Analyze": 26,
+      "Evaluate": 18,
+      "Understand": 8
+    },
+    "explanationStats": {
+      "min": 1032,
+      "p25": 1234,
+      "p50": 2047,
+      "p75": 2652,
+      "p90": 3133,
+      "max": 5186,
+      "shortCount": 0
+    }
+  },
+  "closure": {
+    "certificationStatus": {
+      "certifiedCases": 15,
+      "totalCases": 15,
+      "certifiedItems": 90,
+      "totalItems": 90,
+      "totalCertifiedEntries": 105,
+      "nonCertifiedCases": []
+    },
+    "programCompletion": {
+      "caseCompletionPercent": 100,
+      "itemCompletionPercent": 100,
+      "remainingCases": 0,
+      "remainingItems": 0
+    },
+    "blueprintCoverage": {
+      "A": {
+        "cases": {
+          "total": 3,
+          "certified": 3
+        },
+        "items": {
+          "total": 18,
+          "certified": 18
+        }
+      },
+      "B": {
+        "cases": {
+          "total": 3,
+          "certified": 3
+        },
+        "items": {
+          "total": 18,
+          "certified": 18
+        }
+      },
+      "C": {
+        "cases": {
+          "total": 3,
+          "certified": 3
+        },
+        "items": {
+          "total": 18,
+          "certified": 18
+        }
+      },
+      "D": {
+        "cases": {
+          "total": 2,
+          "certified": 2
+        },
+        "items": {
+          "total": 12,
+          "certified": 12
+        }
+      },
+      "E": {
+        "cases": {
+          "total": 2,
+          "certified": 2
+        },
+        "items": {
+          "total": 17,
+          "certified": 17
+        }
+      },
+      "F": {
+        "cases": {
+          "total": 2,
+          "certified": 2
+        },
+        "items": {
+          "total": 7,
+          "certified": 7
+        }
+      }
+    },
+    "governance": {
+      "dl008Violations": 0,
+      "dl008Items": [],
+      "ewCoveragePercent": 99,
+      "metadataCompletenessPercent": 100,
+      "typeDistribution": {
+        "numeric": 37,
+        "select": 19,
+        "multi": 14,
+        "match": 12,
+        "fill": 8
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "session": "712",
+  "batch": 2,
+  "qid": "P1-CD-022",
+  "pack": "D",
+  "timestamp": "2026-07-25T23:00:00",
+  "type": "P1-CD-022 DL-010 feedback remediation",
+  "defect_class": "DL-010 — ExplanationWrongA / ExplanationWrongD swap",
+  "verification_method": "G-NEW-3 object-bounded extraction via Function constructor",
+  "item_topic": "Profit center evaluation appropriateness",
+  "stem": "Valemont's division manager controls pricing and costs but has no authority over the level of assets invested in the division. What type of responsibility center is most appropriate for evaluation?",
+  "choices": {
+    "A": "A cost center, evaluated only on cost variances",
+    "B": "A profit center, evaluated on operating income rather than ROI or residual income",
+    "C": "A revenue center, evaluated only on sales dollars",
+    "D": "An investment center, evaluated on ROI"
+  },
+  "correct_choice": "B",
+  "question_state_before": "Certified",
+  "question_state_after": "Certified",
+  "swap_analysis": {
+    "confirmed": true,
+    "before_ew_a_described": "Choice D (investment center): 'An investment center requires authority over asset investment levels...'",
+    "before_ew_d_described": "Choice A (cost center): 'A cost center evaluates only cost performance and ignores the manager's pricing authority...'",
+    "after_ew_a_describes": "Choice A (cost center): correct after swap",
+    "after_ew_d_describes": "Choice D (investment center): correct after swap"
+  },
+  "remediation": {
+    "method": "3-step swap (temp marker) to avoid ambiguous matches with P1-CD-023's similar text",
+    "fields_changed": ["ExplanationWrongA", "ExplanationWrongD"],
+    "ew_a_before": "An investment center requires authority over asset investment levels. Since this manager lacks control over invested assets, ROI evaluation is not appropriate. A profit center using operating income better matches the manager's span of control.",
+    "ew_a_after": "A cost center evaluates only cost performance and ignores the manager's pricing authority. Since this manager controls both pricing decisions and costs, a profit center based on operating income better captures the full scope of responsibility.",
+    "ew_d_before": "A cost center evaluates only cost performance and ignores the manager's pricing authority. Since this manager controls both pricing decisions and costs, a profit center based on operating income better captures the full scope of responsibility.",
+    "ew_d_after": "An investment center requires authority over asset investment levels. Since this manager lacks control over invested assets, ROI evaluation is not appropriate. A profit center using operating income better matches the manager's span of control.",
+    "no_lead_in_wording_changes_needed": true,
+    "reason": "Both texts are self-contained and do not reference specific choice letters or 'Option X' lead-ins — a pure swap is sufficient."
+  },
+  "fields_preserved": {
+    "correct_choice_unchanged": true,
+    "explanation_correct_unchanged": true,
+    "stems_unchanged": true,
+    "choices_unchanged": true,
+    "explanation_wrong_b_unchanged": true,
+    "explanation_wrong_c_unchanged": true,
+    "question_state_unchanged": true,
+    "no_dl008_introduced": true
+  },
+  "post_remediation_parse": "Pack D parses: 500 items OK",
+  "post_remediation_state": "P1-CD-022 remains Certified, CC=B, EW_B empty"
+}

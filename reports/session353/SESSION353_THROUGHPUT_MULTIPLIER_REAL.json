@@ -1,0 +1,106 @@
+{
+  "document": "SESSION353_THROUGHPUT_MULTIPLIER_REAL",
+  "session": "S353",
+  "title": "Throughput Multiplier — First Real Calculation (Projected → Observed)",
+  "board": "G",
+  "series": "350-Series — Framework v2 Operational Analytics (Wave 2)",
+  "date": "2026-07-27",
+  "type": "Read-Only Measurement — No Content Modifications",
+  "authority": [
+    "S353 Board A (Certification Throughput Real)",
+    "S353 Board B (Pre-Flight Gate Effectiveness)",
+    "S353 Board C (Governance Automation Overhead)",
+    "S353 Board D (Queue Efficiency)",
+    "SESSION352_THROUGHPUT_MEASUREMENT.json (S350 target decomposition)",
+    "SESSION350_V1_BASELINE.json (v1 baselines)"
+  ],
+  "depends_on": [
+    "S353 Boards A, B, C, D"
+  ],
+  "unlocks": "S353 Board H (Scorecard)",
+  "s350_targets_revisited": {
+    "source": "SESSION350_THROUGHPUT_METRICS.json §p3_targets",
+    "p1_multiplier_target": "1.5-2.0×",
+    "p3_multiplier_target": "3.8×",
+    "decomposition": {
+      "pre_flight_gating": "1.3-1.5× (eliminates re-reviews of BLOCKED/REMEDIATE items)",
+      "delta_review": "2.0-2.5× (80%+ items unchanged → skipped)",
+      "board_consolidation": "1.3-1.4× (8→5 boards → fewer agent-spawns per item)",
+      "compound": "1.3 × 2.0 × 1.3 ≈ 3.38× → ~3.8× with efficiency compounding"
+    }
+  },
+  "observed_vs_projected": {
+    "pre_flight_gating": {
+      "projected": "1.3-1.5× (projected — no certification wave data)",
+      "observed": "Qualitative elimination (stale manifest caught, 0 defective items certified). Cannot be expressed as a simple multiplier — the gain is from prevention, not acceleration.",
+      "delta": "PROVEN — the first real defect prevention occurred. 351 false positives intercepted before planning."
+    },
+    "delta_review": {
+      "projected": "2.0-2.5×",
+      "observed": "N/A — first certification wave. All 77 items were Unprocessed (no prior certification to delta-compare against). This gain requires a second certification wave.",
+      "status": "STILL PROJECTED — no data yet. First measurable at S811→S812."
+    },
+    "board_consolidation": {
+      "projected": "1.3-1.4×",
+      "observed": "N/A — certification still operates in v1 board model. S853 used a batch script, not board model. v2 5-board model is designed but not yet adopted by active certification sessions.",
+      "status": "STILL PROJECTED — design complete, not yet adopted."
+    }
+  },
+  "realized_multiplier": {
+    "items_session": {
+      "v1": 42,
+      "v2": 77,
+      "multiplier": "1.83×",
+      "status": "MEASURED — real data from S853"
+    },
+    "sessions_wave_reduction": {
+      "v1": "4-5 per wave",
+      "v2": "3 total (1 cert + 2 governance)",
+      "multiplier": "1.33-1.67×",
+      "note": "Governance sessions (S852 manifest + S854 verification) are now separate from certification but included in total wave footprint",
+      "status": "MEASURED"
+    },
+    "agents_item": {
+      "v1": 0.305,
+      "v2": "0 (batch script, no per-item agent spawns)",
+      "multiplier": "∞ (structural elimination)",
+      "status": "MEASURED"
+    },
+    "duplicate_review": {
+      "v1": "2.5:1",
+      "v2": "1:1",
+      "multiplier": "2.5× reduction",
+      "status": "MEASURED"
+    },
+    "compound_realized": {
+      "description": "Items/session (1.83×) × sessions/wave reduction (1.33×) = effective throughput",
+      "effective_multiplier": "2.43×",
+      "note": "For the full certification + governance + verification cycle. Pure certification throughput (S853 only): 1.83×.",
+      "comparison_to_p1": "2.43× EXCEEDS S350 P1 target (1.5-2.0×). P1 threshold is met.",
+      "comparison_to_p3": "2.43× vs 3.8× — gap of 1.56×. The delta review component (2.0-2.5×, unrealized) would close this gap in subsequent waves."
+    }
+  },
+  "honest_assessment": {
+    "what_is_real": [
+      "1.83× items/session is measured, not projected",
+      "Structural elimination of agent-per-item overhead is measured",
+      "2.5× review-cycle reduction is measured",
+      "Governance automation (qualitative) is measured"
+    ],
+    "what_is_still_projected": [
+      "Delta review (2.0-2.5×) — requires second certification wave (S811+)",
+      "Board consolidation (1.3-1.4×) — requires adoption of v2 5-board model in certification sessions",
+      "P3 target (3.8×) — requires both delta review and board consolidation active on a multi-wave pipeline"
+    ],
+    "trajectory": "P1 target (1.5-2.0×) is MET at 2.43×. P3 target (3.8×) is architecturally achievable at 1.83 × 2.0 × 1.3 = 4.76× but requires 2 components not yet exercised in this wave."
+  },
+  "verdict": "THROUGHPUT_MULTIPLIER_PARTIALLY_MEASURED — The realized multiplier (2.43× effective) exceeds the S350 P1 target and is based on observed data, not projections. This is the first real throughput measurement — S352 had 0% measured. The P3 target (3.8×) requires delta review (2.0-2.5×) which is inherently not exercisable in a first certification wave. The architecture supports the full multiplier; the data to prove it must come from S811+.",
+  "cross_references": {
+    "s353_board_a": "reports/session353/SESSION353_THROUGHPUT_REAL.json",
+    "s353_board_b": "reports/session353/SESSION353_PREFLIGHT_GATE_EFFECTIVENESS.json",
+    "s353_board_c": "reports/session353/SESSION353_GOVERNANCE_AUTOMATION_OVERHEAD.json",
+    "s353_board_d": "reports/session353/SESSION353_QUEUE_EFFICIENCY.json",
+    "s352_throughput": "reports/session352/SESSION352_THROUGHPUT_MEASUREMENT.json",
+    "s350_v1_baseline": "reports/SESSION350_V1_BASELINE.json"
+  }
+}

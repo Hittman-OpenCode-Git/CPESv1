@@ -1,0 +1,60 @@
+{
+  "session": "520",
+  "timestamp": "2026-07-26T09:55:00Z",
+  "purpose": "First CAQS review for CBQ4-A1, CBQ4-A2, CBQ4-C1 in ENHANCED_CASE_BASE4",
+
+  "scope_correction": {
+    "prompt_target": "MIGRATED_CASE_BASE_D / CBQ4-*",
+    "actual_target": "ENHANCED_CASE_BASE4 — CBQ4-A1, CBQ4-A2, CBQ4-C1 (not MIGRATED_CASE_BASE_D which uses CASE-D* CaseIDs)",
+    "s518_inventory_error": "ENHANCED_CASE_BASE4 (CBQ4-*, 78 items, 63 Certified) was confused with MIGRATED_CASE_BASE_D (CASE-D*, 75 items, 0 Certified)"
+  },
+
+  "cases_reviewed": 3,
+  "items_reviewed": 15,
+  "items_certified": 15,
+  "items_held_back": 0,
+
+  "cases": [
+    {
+      "caseId": "CBQ4-A1",
+      "title": "Intangible Assets and Goodwill Impairment",
+      "items": 5,
+      "pre_explanation_avg": 112,
+      "post_explanation_avg": 670,
+      "key_citations": "ASC 805, ASC 350, ASC 350-20, ASC 730",
+      "result": "5/5 Certified"
+    },
+    {
+      "caseId": "CBQ4-A2",
+      "title": "Contingencies and Warranty Liabilities",
+      "items": 5,
+      "pre_explanation_avg": 85,
+      "post_explanation_avg": 546,
+      "key_citations": "ASC 460, ASC 450, ASU 2015-01",
+      "result": "5/5 Certified"
+    },
+    {
+      "caseId": "CBQ4-C1",
+      "title": "Standard Costing: 3-Way and 4-Way Overhead Variances",
+      "items": 5,
+      "pre_explanation_avg": 110,
+      "post_explanation_avg": 645,
+      "key_citations": "standard costing, VOH/FOH variance analysis",
+      "result": "5/5 Certified"
+    }
+  ],
+
+  "caqs_dimensions": {
+    "D1_answer_key": "15/15 PASS — all numeric items independently verified",
+    "D2_explanation": "15/15 PASS — all expanded from thin (57-203c) to substantive (491-780c)",
+    "D3_distractor": "15/15 PASS — rationale added for all select/multi/match items",
+    "D4_references": "15/15 PASS — ASC citations added where appropriate",
+    "D5_realism": "15/15 PASS — case facts and exhibits used throughout",
+    "D6_metadata": "15/15 PASS — Difficulty/DifficultyScore added; all items now have per-item difficulty"
+  },
+
+  "pre_flight": "32/32 PASS",
+  "post_flight": "32/32 PASS",
+  "files_changed": ["scored_cases4.js"],
+  "unauthorized_changes": 0
+}

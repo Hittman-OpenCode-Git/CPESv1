@@ -1,0 +1,24 @@
+{
+  "session": "S320",
+  "timestamp": "2026-07-27T03:26:39.237Z",
+  "executive_summary": "S320 ground-truth discovery revealed S319 inventory was stale (CC values rotated). Pack D: 10 EW fills + 8 COSO on 7 items. Pack C: 19 seeds require similar remediation (deferred to S321). Remaining: 28 EW + 20 COSO across 26 items.",
+  "certified_pool": 2221,
+  "governance_guard": "27/27 PASS",
+  "remediation": {
+    "pack_d_fills": 10,
+    "pack_d_coso": 8,
+    "pack_c_remaining": 19,
+    "total_remaining_ew": 28,
+    "total_remaining_coso": 20
+  },
+  "readiness": {
+    "ready": 0,
+    "minor_fix": 2,
+    "hold": 36
+  },
+  "next_session": "S321 — Pack C seed remediation",
+  "risks": [
+    "Pack C template rotation produced stale CC values in S319 inventory",
+    "ED-025/ED-058/ED-064/ED-066/ED-075 still need COSO + EW after partial fills"
+  ]
+}

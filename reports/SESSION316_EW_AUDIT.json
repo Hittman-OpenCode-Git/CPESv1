@@ -1,0 +1,29 @@
+{
+  "title": "SESSION316_EW_AUDIT",
+  "session": "S316",
+  "generated": "2026-07-27",
+  "scope": "Wave 3 authored items (P1-E-R21–R33)",
+  "results": {
+    "totalItems": 10,
+    "totalDistractorSlots": 30,
+    "ewCoverage": "100%",
+    "ccSlotsEmpty": "10/10 (DL-008 compliant)",
+    "nonCcSlotsFilled": "30/30 (DL-026 compliant)",
+    "avgEwCharsPerDistractor": 435,
+    "minEwChars": 207,
+    "maxEwChars": 722,
+    "integrityStatus": "INTEGRITY_CLEAN"
+  },
+  "items": [
+    "P1-E-R21",
+    "P1-E-R22",
+    "P1-E-R23",
+    "P1-E-R24",
+    "P1-E-R25",
+    "P1-E-R26",
+    "P1-E-R27",
+    "P1-E-R28",
+    "P1-E-R29",
+    "P1-E-R33"
+  ]
+}

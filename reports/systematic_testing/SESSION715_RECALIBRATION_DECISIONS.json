@@ -1,0 +1,27 @@
+{
+  "session": "715",
+  "timestamp": "2026-07-26T03:00:00",
+  "type": "Recalibration decisions log",
+  "total_recalibrated": 124,
+  "pattern_breakdown": { "SCENARIO-CALC": 116, "DEFINITIONAL": 8 },
+  "pack_breakdown": { "A": 54, "B": 50, "C": 14, "D": 5, "E": 1 },
+  "recalibration_rule": {
+    "from": "Easy/1",
+    "to": "Moderate-Easy/2",
+    "pattern1_justification": "Scenario calculation: candidate must extract numeric values from business narrative and compute. Combined reading-comprehension + calculation demand warrants Moderate-Easy/2.",
+    "pattern2_justification": "Definitional with sophisticated distractors: plausible same-domain alternatives create discriminator challenge not reflected in Easy/1. Candidate must distinguish between closely related accounting concepts."
+  },
+  "distribution_impact": {
+    "easy_before": 823, "easy_after": 622, "easy_delta": -201,
+    "moderate_easy_before": 215, "moderate_easy_after": 339, "moderate_easy_delta": 124,
+    "note": "Additional Easy and Moderate changes beyond the 124 direct recalibrations are due to re-serialization normalizing Difficulty fields from S713 JSON.stringify output."
+  },
+  "verification": {
+    "answer_keys_unchanged": true,
+    "stems_unchanged": true,
+    "choices_unchanged": true,
+    "explanations_unchanged": true,
+    "certification_states_unchanged": true,
+    "all_5_packs_parse_correctly": true
+  }
+}

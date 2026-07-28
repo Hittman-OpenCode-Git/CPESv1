@@ -1,0 +1,172 @@
+original_path,archive_path,category,origin_session,notes
+app.js.bak-20260724232411,archive/root_baks/app.js.bak-20260724232411,root_backup,pre-S93,"app.js session backup, timestamp 2026-07-24"
+app.js.bak-s93-20260725094538,archive/root_baks/app.js.bak-s93-20260725094538,root_backup,S93,"app.js pre-S93 edits backup"
+app.js.bak-s94-20260725095348,archive/root_baks/app.js.bak-s94-20260725095348,root_backup,S94,"app.js pre-S94 edits backup"
+app.js.bak-s96-20260725095811,archive/root_baks/app.js.bak-s96-20260725095811,root_backup,S96,"app.js pre-S96 edits backup"
+,archive/root_baks/file_0_binary,binary_artifact,unknown,2-byte binary artifact found at root; no references
+index_updated.html.bak-20260724232411,archive/root_baks/index_updated.html.bak-20260724232411,root_backup,pre-S93,"index_updated.html session backup"
+index_updated.html.bak-s101-20260725113016,archive/root_baks/index_updated.html.bak-s101-20260725113016,root_backup,S101,"index_updated.html pre-S101 edits backup"
+index_updated.html.bak-s102-20260725114432,archive/root_baks/index_updated.html.bak-s102-20260725114432,root_backup,S102,"index_updated.html pre-S102 edits backup"
+index_updated.html.bak-s103-20260725121307,archive/root_baks/index_updated.html.bak-s103-20260725121307,root_backup,S103,"index_updated.html pre-S103 edits backup"
+index_updated.html.bak-s104-20260725131755,archive/root_baks/index_updated.html.bak-s104-20260725131755,root_backup,S104,"index_updated.html pre-S104 edits backup"
+index_updated.html.bak-s93-20260725094538,archive/root_baks/index_updated.html.bak-s93-20260725094538,root_backup,S93,"index_updated.html pre-S93 edits backup"
+index_updated.html.bak-s94-20260725095348,archive/root_baks/index_updated.html.bak-s94-20260725095348,root_backup,S94,"index_updated.html pre-S94 edits backup"
+index_updated.html.bak-s96-20260725095811,archive/root_baks/index_updated.html.bak-s96-20260725095811,root_backup,S96,"index_updated.html pre-S96 edits backup"
+index_updated.html.bak-s99-20260725111914,archive/root_baks/index_updated.html.bak-s99-20260725111914,root_backup,S99,"index_updated.html pre-S99 edits backup"
+may-core.js.bak-20260724232411,archive/root_baks/may-core.js.bak-20260724232411,root_backup,pre-S93,"may-core.js session backup"
+may-core.js.bak-s100-20260725112525,archive/root_baks/may-core.js.bak-s100-20260725112525,root_backup,S100,"may-core.js pre-S100 edits backup"
+may-core.js.bak-s101-20260725113016,archive/root_baks/may-core.js.bak-s101-20260725113016,root_backup,S101,"may-core.js pre-S101 edits backup"
+may-core.js.bak-s102-20260725114432,archive/root_baks/may-core.js.bak-s102-20260725114432,root_backup,S102,"may-core.js pre-S102 edits backup"
+may-core.js.bak-s103-20260725121307,archive/root_baks/may-core.js.bak-s103-20260725121307,root_backup,S103,"may-core.js pre-S103 edits backup"
+may-core.js.bak-s104-20260725131755,archive/root_baks/may-core.js.bak-s104-20260725131755,root_backup,S104,"may-core.js pre-S104 edits backup"
+may-core.js.bak-s93-20260725094538,archive/root_baks/may-core.js.bak-s93-20260725094538,root_backup,S93,"may-core.js pre-S93 edits backup"
+may-core.js.bak-s94-20260725095348,archive/root_baks/may-core.js.bak-s94-20260725095348,root_backup,S94,"may-core.js pre-S94 edits backup"
+may-core.js.bak-s96-20260725095811,archive/root_baks/may-core.js.bak-s96-20260725095811,root_backup,S96,"may-core.js pre-S96 edits backup"
+may-core.js.bak-s98-20260725110255,archive/root_baks/may-core.js.bak-s98-20260725110255,root_backup,S98,"may-core.js pre-S98 edits backup"
+may-core.js.bak-s99-20260725111914,archive/root_baks/may-core.js.bak-s99-20260725111914,root_backup,S99,"may-core.js pre-S99 edits backup"
+may-learner-state.js.bak-s100-20260725112525,archive/root_baks/may-learner-state.js.bak-s100-20260725112525,root_backup,S100,"may-learner-state.js pre-S100 edits backup"
+may-learner-state.js.bak-s101-20260725113016,archive/root_baks/may-learner-state.js.bak-s101-20260725113016,root_backup,S101,"may-learner-state.js pre-S101 edits backup"
+may-learner-state.js.bak-s102-20260725114432,archive/root_baks/may-learner-state.js.bak-s102-20260725114432,root_backup,S102,"may-learner-state.js pre-S102 edits backup"
+may-learner-state.js.bak-s103-20260725121307,archive/root_baks/may-learner-state.js.bak-s103-20260725121307,root_backup,S103,"may-learner-state.js pre-S103 edits backup"
+may-learner-state.js.bak-s104-20260725131755,archive/root_baks/may-learner-state.js.bak-s104-20260725131755,root_backup,S104,"may-learner-state.js pre-S104 edits backup"
+may-learner-state.js.bak-s93-20260725094538,archive/root_baks/may-learner-state.js.bak-s93-20260725094538,root_backup,S93,"may-learner-state.js pre-S93 edits backup"
+may-learner-state.js.bak-s94-20260725095348,archive/root_baks/may-learner-state.js.bak-s94-20260725095348,root_backup,S94,"may-learner-state.js pre-S94 edits backup"
+may-learner-state.js.bak-s96-20260725095811,archive/root_baks/may-learner-state.js.bak-s96-20260725095811,root_backup,S96,"may-learner-state.js pre-S96 edits backup"
+may-learner-state.js.bak-s98-20260725110255,archive/root_baks/may-learner-state.js.bak-s98-20260725110255,root_backup,S98,"may-learner-state.js pre-S98 edits backup"
+may-learner-state.js.bak-s99-20260725111914,archive/root_baks/may-learner-state.js.bak-s99-20260725111914,root_backup,S99,"may-learner-state.js pre-S99 edits backup"
+pack_c_corrected.js.bak-s89c-20260724233917,archive/root_baks/pack_c_corrected.js.bak-s89c-20260724233917,pack_backup,S89C,Pack C pre-boilerplate remediation backup
+pack_c_corrected.js.bak-s89c-diffcal-20260725132459,archive/root_baks/pack_c_corrected.js.bak-s89c-diffcal-20260725132459,pack_backup,S89C,Pack C pre-difficulty calibration backup
+styles.css.bak-20260724232411,archive/root_baks/styles.css.bak-20260724232411,root_backup,pre-S93,"styles.css session backup"
+styles.css.bak-s100-20260725112525,archive/root_baks/styles.css.bak-s100-20260725112525,root_backup,S100,"styles.css pre-S100 edits backup"
+styles.css.bak-s101-20260725113016,archive/root_baks/styles.css.bak-s101-20260725113016,root_backup,S101,"styles.css pre-S101 edits backup"
+styles.css.bak-s102-20260725114432,archive/root_baks/styles.css.bak-s102-20260725114432,root_backup,S102,"styles.css pre-S102 edits backup"
+styles.css.bak-s103-20260725121307,archive/root_baks/styles.css.bak-s103-20260725121307,root_backup,S103,"styles.css pre-S103 edits backup"
+styles.css.bak-s104-20260725131755,archive/root_baks/styles.css.bak-s104-20260725131755,root_backup,S104,"styles.css pre-S104 edits backup"
+styles.css.bak-s93-20260725094538,archive/root_baks/styles.css.bak-s93-20260725094538,root_backup,S93,"styles.css pre-S93 edits backup"
+styles.css.bak-s94-20260725095348,archive/root_baks/styles.css.bak-s94-20260725095348,root_backup,S94,"styles.css pre-S94 edits backup"
+styles.css.bak-s96-20260725095811,archive/root_baks/styles.css.bak-s96-20260725095811,root_backup,S96,"styles.css pre-S96 edits backup"
+styles.css.bak-s98-20260725110255,archive/root_baks/styles.css.bak-s98-20260725110255,root_backup,S98,"styles.css pre-S98 edits backup"
+styles.css.bak-s99-20260725111914,archive/root_baks/styles.css.bak-s99-20260725111914,root_backup,S99,"styles.css pre-S99 edits backup"
+knowledge/REVISION_HISTORY.md.bak-s102-20260725114432,archive/knowledge/REVISION_HISTORY.md.bak-s102-20260725114432,knowledge_backup,S102,"REVISION_HISTORY.md pre-S102 backup"
+knowledge/REVISION_HISTORY.md.bak-s103-20260725121307,archive/knowledge/REVISION_HISTORY.md.bak-s103-20260725121307,knowledge_backup,S103,"REVISION_HISTORY.md pre-S103 backup"
+knowledge/REVISION_HISTORY.md.bak-s104-20260725131755,archive/knowledge/REVISION_HISTORY.md.bak-s104-20260725131755,knowledge_backup,S104,"REVISION_HISTORY.md pre-S104 backup"
+knowledge/REVISION_HISTORY.md.bak-s96-20260725095811,archive/knowledge/REVISION_HISTORY.md.bak-s96-20260725095811,knowledge_backup,S96,"REVISION_HISTORY.md pre-S96 backup"
+scripts/_check_dl013.js,archive/scripts/_check_dl013.js,scratch_script,DL-013 era,DL-013 compliance check script
+scripts/_debug_pack_b.js,archive/scripts/_debug_pack_b.js,scratch_script,unknown,Debug script for Pack B parsing/issues
+scripts/_debug_pack_b2.js,archive/scripts/_debug_pack_b2.js,scratch_script,unknown,Second debug script for Pack B
+scripts/_final_dl013_check.js,archive/scripts/_final_dl013_check.js,scratch_script,DL-013 era,Final DL-013 compliance verification
+scripts/_find_case.js,archive/scripts/_find_case.js,scratch_script,unknown,Scratch script to locate case objects across files
+scripts/_pack_b_cleaned.js,archive/scripts/_pack_b_cleaned.js,scratch_script,unknown,Pack B cleaned/intermediate output artifact
+scripts/_tmp_scanner.js,archive/scripts/_tmp_scanner.js,scratch_script,unknown,Temporary scanning utility
+scripts/analyze_explanations.js,archive/scripts/analyze_explanations.js,scratch_script,unknown,Analysis script for explanation fields
+scripts/audit_analyze.js,archive/scripts/audit_analyze.js,scratch_script,unknown,Audit analysis helper
+scripts/audit_pack_b_rotation.js,archive/scripts/audit_pack_b_rotation.js,scratch_script,unknown,Script to audit Pack B rotation-defect items
+scripts/cert_pack_a.js,archive/scripts/cert_pack_a.js,scratch_script,prior certification,Batch certification script for Pack A
+scripts/cert_pack_e.js,archive/scripts/cert_pack_e.js,scratch_script,prior certification,Batch certification script for Pack E
+scripts/check_case2_lo.js,archive/scripts/check_case2_lo.js,scratch_script,unknown,Check script for case2.js loading issues
+scripts/check_cases.js,archive/scripts/check_cases.js,scratch_script,unknown,Case structure validation script
+scripts/check_metadata_diff.js,archive/scripts/check_metadata_diff.js,scratch_script,unknown,Metadata diff comparison utility
+scripts/check_registry.js,archive/scripts/check_registry.js,scratch_script,unknown,Registry consistency checker
+scripts/check_source_data.js,archive/scripts/check_source_data.js,scratch_script,unknown,Source data integrity check
+scripts/classify_dl008.js,archive/scripts/classify_dl008.js,scratch_script,DL-008 era,DL-008 classification pass 1
+scripts/classify_dl008_pass2.js,archive/scripts/classify_dl008_pass2.js,scratch_script,DL-008 era,DL-008 classification pass 2
+scripts/classify_dl008_refine.js,archive/scripts/classify_dl008_refine.js,scratch_script,DL-008 era,DL-008 refined classification pass
+scripts/classify_s90_hits.js,archive/scripts/classify_s90_hits.js,scratch_script,S90 era,Classifier for S90 distractor quality hits
+scripts/config.js.bak6,archive/scripts/config.js.bak6,scripts_backup,unknown,config.js backup - 6th copy
+scripts/corrected_ew_parser.js,archive/scripts/corrected_ew_parser.js,scratch_script,DL-008 era,Parser for ExplanationWrong fields with corrections
+scripts/debug_array_end.js,archive/scripts/debug_array_end.js,scratch_script,unknown,Debug script for array boundary parsing issues
+scripts/debug_case2.js,archive/scripts/debug_case2.js,scratch_script,unknown,Debug script for case2.js
+scripts/debug_extract.js,archive/scripts/debug_extract.js,scratch_script,unknown,Debug script for QID extraction
+scripts/debug_extract2.js,archive/scripts/debug_extract2.js,scratch_script,unknown,Debug script for QID extraction v2
+scripts/debug_extract3.js,archive/scripts/debug_extract3.js,scratch_script,unknown,Debug script for QID extraction v3
+scripts/debug_extract4.js,archive/scripts/debug_extract4.js,scratch_script,unknown,Debug script for QID extraction v4
+scripts/debug_parse.js,archive/scripts/debug_parse.js,scratch_script,unknown,Debug script for pack file parsing
+scripts/debug_parse2.js,archive/scripts/debug_parse2.js,scratch_script,unknown,Debug script for pack file parsing v2
+scripts/debug_step.js,archive/scripts/debug_step.js,scratch_script,unknown,Step-through debug script
+scripts/debug_step4.js,archive/scripts/debug_step4.js,scratch_script,unknown,Step 4 debug script
+scripts/diagnose_pack_b.js,archive/scripts/diagnose_pack_b.js,scratch_script,unknown,Pack B diagnostic script
+scripts/dl008_debug.js,archive/scripts/dl008_debug.js,scratch_script,DL-008 era,DL-008 debug investigation
+scripts/dl008_exhaustive.js,archive/scripts/dl008_exhaustive.js,scratch_script,DL-008 era,DL-008 exhaustive scan
+scripts/dl008_scan_pack_cd.js,archive/scripts/dl008_scan_pack_cd.js,scratch_script,DL-008 era,DL-008 scan for Packs C and D
+scripts/dl008_spotcheck.js,archive/scripts/dl008_spotcheck.js,scratch_script,DL-008 era,DL-008 spot-check verification
+scripts/dl012_archive.js,archive/scripts/dl012_archive.js,scratch_script,DL-012 era,DL-012 clone archival script
+scripts/dl012_archive.py,archive/scripts/dl012_archive.py,scratch_script,DL-012 era,DL-012 clone archival script in Python
+scripts/dl013_scan.js,archive/scripts/dl013_scan.js,scratch_script,DL-013 era,DL-013 template-text scan
+scripts/dl018_check_cd.js,archive/scripts/dl018_check_cd.js,scratch_script,DL-018 era,DL-018 check for Packs C and D
+scripts/enrich_and_validate.js,archive/scripts/enrich_and_validate.js,scratch_script,unknown,Metadata enrichment + validation pipeline
+scripts/enrich_final.js,archive/scripts/enrich_final.js,scratch_script,unknown,Final metadata enrichment run
+scripts/enrich_metadata.js,archive/scripts/enrich_metadata.js,scratch_script,unknown,Metadata enrichment utility
+scripts/enrich_v2.js,archive/scripts/enrich_v2.js,scratch_script,unknown,Metadata enrichment v2
+scripts/extract_insert_cases.js,archive/scripts/extract_insert_cases.js,scratch_script,unknown,Case extraction and insertion utility
+scripts/extract_qid.js,archive/scripts/extract_qid.js,scratch_script,unknown,QID extraction from pack files
+scripts/final-recover.js,archive/scripts/final-recover.js,scratch_script,unknown,Final data recovery attempt script
+scripts/finalize_s90.js,archive/scripts/finalize_s90.js,scratch_script,S90 era,S90 distractor rewrite finalization
+scripts/find_all_doubled.js,archive/scripts/find_all_doubled.js,scratch_script,unknown,Find all doubled/repeated QIDs
+scripts/find_numeric_keys.js,archive/scripts/find_numeric_keys.js,scratch_script,unknown,Find numeric-keyed objects in pack files
+scripts/find_stray_commas.js,archive/scripts/find_stray_commas.js,scratch_script,unknown,Find stray/trailing commas causing parse errors
+scripts/find_subbatch_2a.js,archive/scripts/find_subbatch_2a.js,scratch_script,2A certification,Find sub-batch 2A items for certification
+scripts/fix-corruption.js,archive/scripts/fix-corruption.js,scratch_script,unknown,Pack file corruption repair script
+scripts/fix-missing-commas.js,archive/scripts/fix-missing-commas.js,scratch_script,unknown,Fix missing commas in pack files
+scripts/fix_explanations_batch1.js,archive/scripts/fix_explanations_batch1.js,scratch_script,unknown,Batch explanation fix script v1
+scripts/fix_explanations_batch1_v2.js,archive/scripts/fix_explanations_batch1_v2.js,scratch_script,unknown,Batch explanation fix script v2
+scripts/fix_titles.js,archive/scripts/fix_titles.js,scratch_script,unknown,Fix missing/incorrect question titles
+scripts/inspect_source.js,archive/scripts/inspect_source.js,scratch_script,unknown,Raw source inspection utility
+scripts/investigate_parse_errors.js,archive/scripts/investigate_parse_errors.js,scratch_script,unknown,Parse error investigation script
+scripts/migrate-metadata.js,archive/scripts/migrate-metadata.js,scratch_script,unknown,Metadata migration utility
+scripts/migrate-wave1.js,archive/scripts/migrate-wave1.js,scratch_script,early waves,Migration wave 1 script
+scripts/migrate-wave2.js,archive/scripts/migrate-wave2.js,scratch_script,early waves,Migration wave 2 script
+scripts/migrate-wave3.js,archive/scripts/migrate-wave3.js,scratch_script,early waves,Migration wave 3 script
+scripts/parse_pack_b.js,archive/scripts/parse_pack_b.js,scratch_script,unknown,Pack B parsing utility
+scripts/parse_source.js,archive/scripts/parse_source.js,scratch_script,unknown,Source file parsing utility
+scripts/phase0b_extract.js,archive/scripts/phase0b_extract.js,scratch_script,Phase 0B,Phase 0B QID extraction
+scripts/phase0b_extract_certified.js,archive/scripts/phase0b_extract_certified.js,scratch_script,Phase 0B,Phase 0B certified QID extraction
+scripts/phase0b_extract_pack_c.js,archive/scripts/phase0b_extract_pack_c.js,scratch_script,Phase 0B,Phase 0B Pack C-specific extraction
+scripts/phase0b_extract_v2.js,archive/scripts/phase0b_extract_v2.js,scratch_script,Phase 0B,Phase 0B extraction v2
+scripts/phase0b_investigate_c.js,archive/scripts/phase0b_investigate_c.js,scratch_script,Phase 0B,Phase 0B Pack C investigation
+scripts/phase0b_investigate_c2.js,archive/scripts/phase0b_investigate_c2.js,scratch_script,Phase 0B,Phase 0B Pack C investigation v2
+scripts/phase0b_investigate_c3.js,archive/scripts/phase0b_investigate_c3.js,scratch_script,Phase 0B,Phase 0B Pack C investigation v3
+scripts/phase0b_reconcile.js,archive/scripts/phase0b_reconcile.js,scratch_script,Phase 0B,Phase 0B reconciliation script
+scripts/phase0b_reconcile_population.js,archive/scripts/phase0b_reconcile_population.js,scratch_script,Phase 0B,Phase 0B population reconciliation
+scripts/phase0b_reconciliation.js,archive/scripts/phase0b_reconciliation.js,scratch_script,Phase 0B,Phase 0B full reconciliation
+scripts/preflight_subbatch_2a.js,archive/scripts/preflight_subbatch_2a.js,scratch_script,2A certification,Pre-flight check for sub-batch 2A
+scripts/raw_text_verification.js,archive/scripts/raw_text_verification.js,scratch_script,unknown,Raw text content verification
+scripts/reconstruct-all.js,archive/scripts/reconstruct-all.js,scratch_script,unknown,Bulk file reconstruction script
+scripts/reconstruct-clean.js,archive/scripts/reconstruct-clean.js,scratch_script,unknown,Clean reconstruction attempt
+scripts/recover-files.js,archive/scripts/recover-files.js,scratch_script,unknown,General file recovery utility
+scripts/recover2.js,archive/scripts/recover2.js,scratch_script,unknown,File recovery attempt 2
+scripts/recover3.js,archive/scripts/recover3.js,scratch_script,unknown,File recovery attempt 3
+scripts/recover4.js,archive/scripts/recover4.js,scratch_script,unknown,File recovery attempt 4
+scripts/repair-duplicate-ids.js,archive/scripts/repair-duplicate-ids.js,scratch_script,unknown,Duplicate QID repair script
+scripts/restructure_pool.js,archive/scripts/restructure_pool.js,scratch_script,unknown,Question pool restructuring script
+scripts/safe_rebuild.js,archive/scripts/safe_rebuild.js,scratch_script,unknown,Safe rebuild / re-serialization utility
+scripts/scan_cases.js,archive/scripts/scan_cases.js,scratch_script,unknown,Case object scanning utility
+scripts/scan_difficulty_packb.js,archive/scripts/scan_difficulty_packb.js,scratch_script,unknown,Pack B difficulty distribution scanner
+scripts/scan_distractor_quality_s90.js,archive/scripts/scan_distractor_quality_s90.js,scratch_script,S90 era,S90 distractor quality scan
+scripts/scan_distractor_quality_s90_v2.js,archive/scripts/scan_distractor_quality_s90_v2.js,scratch_script,S90 era,S90 distractor quality scan v2
+scripts/scan_dl008.js,archive/scripts/scan_dl008.js,scratch_script,DL-008 era,DL-008 global scan
+scripts/scan_dl008_pack_e.js,archive/scripts/scan_dl008_pack_e.js,scratch_script,DL-008 era,DL-008 Pack E scan
+scripts/scan_dl010.js,archive/scripts/scan_dl010.js,scratch_script,DL-010 era,DL-010 misassigned explanation scan
+scripts/scan_dl026.js,archive/scripts/scan_dl026.js,scratch_script,DL-026 era,DL-026 scan utility
+scripts/scan_pack_d_dl008.js,archive/scripts/scan_pack_d_dl008.js,scratch_script,DL-008 era,DL-008 Pack D specific scan
+scripts/simple-recover.js,archive/scripts/simple-recover.js,scratch_script,unknown,Simple recovery attempt
+scripts/structural_audit.js,archive/scripts/structural_audit.js,scratch_script,unknown,Pack file structural audit
+scripts/sweep_dl008_bucket1a.js,archive/scripts/sweep_dl008_bucket1a.js,scratch_script,DL-008 era,DL-008 Bucket 1A bulk sweep
+scripts/temp_audit_cases.mjs,archive/scripts/temp_audit_cases.mjs,scratch_script,unknown,Temporary case audit as ESM
+scripts/temp_audit_cases2.mjs,archive/scripts/temp_audit_cases2.mjs,scratch_script,unknown,Temporary case audit v2
+scripts/temp_audit_final.mjs,archive/scripts/temp_audit_final.mjs,scratch_script,unknown,Temporary final audit
+scripts/temp_audit_final2.mjs,archive/scripts/temp_audit_final2.mjs,scratch_script,unknown,Temporary final audit v2
+scripts/temp_audit_partial.mjs,archive/scripts/temp_audit_partial.mjs,scratch_script,unknown,Temporary partial audit
+scripts/temp_audit_v3.mjs,archive/scripts/temp_audit_v3.mjs,scratch_script,unknown,Temporary audit v3
+scripts/temp_audit_v4.mjs,archive/scripts/temp_audit_v4.mjs,scratch_script,unknown,Temporary audit v4
+scripts/temp_audit_v5.mjs,archive/scripts/temp_audit_v5.mjs,scratch_script,unknown,Temporary audit v5
+scripts/temp_audit_v6.mjs,archive/scripts/temp_audit_v6.mjs,scratch_script,unknown,Temporary audit v6
+scripts/test_parse2.js,archive/scripts/test_parse2.js,scratch_script,unknown,Parse test utility
+scripts/test_readiness.js.bak-s103-20260725121307,archive/scripts/test_readiness.js.bak-s103-20260725121307,scripts_backup,S103,test_readiness.js pre-S103 backup
+scripts/test_readiness.js.bak-s104-20260725131755,archive/scripts/test_readiness.js.bak-s104-20260725131755,scripts_backup,S104,test_readiness.js pre-S104 backup
+scripts/test_recover.js,archive/scripts/test_recover.js,scratch_script,unknown,Recovery test utility
+scripts/test_recover2.js,archive/scripts/test_recover2.js,scratch_script,unknown,Recovery test utility v2
+scripts/test_regex_exact.js,archive/scripts/test_regex_exact.js,scratch_script,unknown,Regex pattern test utility
+scripts/test_step4.js,archive/scripts/test_step4.js,scratch_script,unknown,Step 4 test utility
+scripts/validate_pack_a.js,archive/scripts/validate_pack_a.js,scratch_script,unknown,Pack A specific validator
+scripts/validate_pack_a.py,archive/scripts/validate_pack_a.py,scratch_script,unknown,Pack A specific validator - Python
+scripts/validate_source.js,archive/scripts/validate_source.js,scratch_script,unknown,Source validation utility

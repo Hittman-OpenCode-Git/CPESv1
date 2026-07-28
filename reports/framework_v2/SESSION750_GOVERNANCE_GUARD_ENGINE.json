@@ -1,0 +1,97 @@
+{
+  "deliverable": "SESSION750_GOVERNANCE_GUARD_ENGINE.json",
+  "session": 750,
+  "board": "A",
+  "title": "Governance Guard Engine",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "status": "DEPLOYED",
+  "description": "Standalone CLI engine that automates validation of Governance Rules 1-8 across all MCQ packs and scored-case files. Mirrors and extends the governance-guard.js plugin logic into a pre-commit / CI-compatible tool.",
+  "sourceFile": "scripts/governance_guard_engine.js",
+  "rulesAutomated": {
+    "RULE_1": {
+      "name": "question_state → REVISION_HISTORY.md pairing",
+      "automation": "TRACKED",
+      "description": "Reports question_state distribution per pack. Flags when Certified or In-Audit state exists without a REVISION_HISTORY.md entry.",
+      "humanReviewRequired": true,
+      "escalationPath": "Governance Admin"
+    },
+    "RULE_2": {
+      "name": "ExplanationWrong[CorrectChoice] must be empty",
+      "automation": "FULL",
+      "description": "String-aware brace-matching extraction detects all DL-008 violations. Returns QID, slot letter, and content snippet.",
+      "humanReviewRequired": false,
+      "escalationPath": "BLOCK — Content Admin"
+    },
+    "RULE_3": {
+      "name": "MASTER_QUESTION_REGISTRY.md must not be hand-edited",
+      "automation": "TRACKED",
+      "description": "Verifies registry file existence and reports that it is generated-only.",
+      "humanReviewRequired": false,
+      "escalationPath": "BLOCK"
+    },
+    "RULE_4": {
+      "name": "CorrectChoice changes must include recomputed/verified note",
+      "automation": "TRACKED",
+      "description": "Reports ExplanationCorrect coverage rate per pack. Flags when CorrectChoice fields exist without substantive ExplanationCorrect.",
+      "humanReviewRequired": true,
+      "escalationPath": "Governance Admin"
+    },
+    "RULE_5": {
+      "name": "Max 30 question objects per change-set",
+      "automation": "TRACKED",
+      "description": "Reports per-pack object count and estimates batches needed. Does not block writes — that enforcement lives in governance-guard.js.",
+      "humanReviewRequired": true,
+      "escalationPath": "BLOCK — Content Admin"
+    },
+    "RULE_6": {
+      "name": "Identity Validation",
+      "automation": "FULL",
+      "description": "Verifies QuestionID uniqueness, CorrectChoice validity (A-D), Stem presence, and ExplanationCorrect presence.",
+      "humanReviewRequired": false,
+      "escalationPath": "Governance Admin"
+    },
+    "RULE_7": {
+      "name": "Certification Pool Census",
+      "automation": "FULL",
+      "description": "Counts Certified items per pack and computes certification rate. Cross-references against CURRENT_BASELINES.md.",
+      "humanReviewRequired": false,
+      "escalationPath": "Governance Admin"
+    },
+    "RULE_8": {
+      "name": "Structural Readiness",
+      "automation": "FULL",
+      "description": "Checks parse-gap: compares QuestionID/ItemID marker count against extracted object count. Flags structurally incomplete files.",
+      "humanReviewRequired": true,
+      "escalationPath": "Governance Admin"
+    }
+  },
+  "outputFormat": {
+    "schema": {
+      "engine": "string",
+      "ruleResults": "object — file-keyed results with per-rule violation arrays",
+      "overallSummary": "object — total files, violations, certified count, PASS/FAIL"
+    }
+  },
+  "CLI": {
+    "usage": "node scripts/governance_guard_engine.js [--json] [--pack <filename>]",
+    "options": {
+      "--json": "Output structured JSON instead of console summary",
+      "--pack": "Run against a single pack file only"
+    }
+  },
+  "dependencies": {
+    "governance_guard.js": "Reference implementation — plugin-level enforcement",
+    "test_governance_guard.js": "Test suite (27 tests) — validates detection logic",
+    "CURRENT_BASELINES.md": "Authoritative SHA-256 and certified-count reference",
+    "policy_drift_detector.js": "Board B — consumed for policy drift detection",
+    "governance_event_registry.js": "Board D — auto-ingest of VIOLATION events"
+  },
+  "integrationPoints": [
+    "Pre-commit hook: run before any pack file commit",
+    "CI pipeline: run on PR merge to verify zero new DL-008",
+    "Session startup (AGENTS.md §9): verify certified count matches baseline",
+    "Cross-check against governance-guard.js plugin: result parity audit"
+  ],
+  "testCoverage": "All detection functions exported as CommonJS module. Can be tested with: node -e \"const G = require('./scripts/governance_guard_engine.js'); const r = G.runEngine(); console.log(r.overallSummary.status);\""
+}

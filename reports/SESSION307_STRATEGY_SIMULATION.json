@@ -1,0 +1,53 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "strategies": {
+    "certificationFirst": {
+      "description": "Prioritize all certification work before any standalone EW remediation",
+      "projectedCertified24Sessions": "2,500 (100%)",
+      "projectedUIQS24Sessions": "80.2",
+      "projectedEWFill24Sessions": "78%",
+      "strengths": [
+        "Fastest path to 100% certification",
+        "All new cert items get EW during certification"
+      ],
+      "weaknesses": [
+        "Certified items with existing EW gaps wait 18+ sessions for remediation",
+        "Case-bank EW gap persists through Wave 3",
+        "DL-008 sits in learner pool until Wave 3"
+      ]
+    },
+    "ewFirst": {
+      "description": "Prioritize EW authoring for all items before any certification",
+      "projectedCertified24Sessions": "2,310",
+      "projectedUIQS24Sessions": "80.8",
+      "projectedEWFill24Sessions": "95%",
+      "strengths": [
+        "Fastest EW coverage improvement",
+        "Best learner experience soonest",
+        "DL-008 remediated in first sessions"
+      ],
+      "weaknesses": [
+        "Certification stalls at 2,310 — 190 items remain uncertified",
+        "EW-authored uncertified items still blocked from learner pool"
+      ]
+    },
+    "hybrid": {
+      "description": "Certify E/F blocks (with EW authoring) + standalone EW for certified deficit items",
+      "projectedCertified24Sessions": "2,500 (100%)",
+      "projectedUIQS24Sessions": "82.5",
+      "projectedEWFill24Sessions": "88%",
+      "strengths": [
+        "100% certification achieved",
+        "EW coverage near-complete",
+        "DL-008 resolved early",
+        "Domain E/F quality gaps closed during certification",
+        "No items wait 18+ sessions for EW"
+      ],
+      "weaknesses": [
+        "Requires parallel workstream discipline",
+        "Higher coordination overhead"
+      ]
+    }
+  },
+  "recommendedStrategy": "HYBRID — balances certification velocity with EW coverage. The key insight: Domains E/F certification inherently includes EW authoring, so \"certification-first\" IS \"EW-first\" for the highest-debt domains."
+}

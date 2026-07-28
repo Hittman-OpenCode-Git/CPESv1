@@ -1,0 +1,437 @@
+{
+  "specId": "SESSION850_DOMAIN_PROGRESS_SPEC",
+  "board": "D",
+  "generatedTimestamp": "2026-07-27T13:50:24.531Z",
+  "overall": {
+    "totalItems": 2540,
+    "certified": 2221,
+    "ready": 38,
+    "remediate": 39,
+    "blocked": 0,
+    "archived": 242,
+    "unprocessed": 0,
+    "coveragePct": 87.4
+  },
+  "byDomain": {
+    "A": {
+      "domainName": "External Financial Reporting Decisions",
+      "certified": 373,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 2,
+      "total": 375,
+      "coveragePct": 99.5,
+      "remainingToCertify": 0
+    },
+    "B": {
+      "domainName": "Planning, Budgeting, and Forecasting",
+      "certified": 500,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 500,
+      "coveragePct": 100,
+      "remainingToCertify": 0
+    },
+    "C": {
+      "domainName": "Performance Management",
+      "certified": 500,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 500,
+      "coveragePct": 100,
+      "remainingToCertify": 0
+    },
+    "D": {
+      "domainName": "Cost Management",
+      "certified": 375,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 375,
+      "coveragePct": 100,
+      "remainingToCertify": 0
+    },
+    "E": {
+      "domainName": "Internal Controls",
+      "certified": 248,
+      "ready": 38,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 129,
+      "total": 415,
+      "coveragePct": 59.8,
+      "remainingToCertify": 38
+    },
+    "F": {
+      "domainName": "Technology and Analytics",
+      "certified": 225,
+      "ready": 0,
+      "remediate": 39,
+      "blocked": 0,
+      "archived": 110,
+      "total": 374,
+      "coveragePct": 60.2,
+      "remainingToCertify": 39
+    }
+  },
+  "byPack": {
+    "pack_a": {
+      "certified": 481,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 19,
+      "unprocessed": 0,
+      "total": 500,
+      "coveragePct": 96.2
+    },
+    "pack_b": {
+      "certified": 500,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "unprocessed": 0,
+      "total": 500,
+      "coveragePct": 100
+    },
+    "pack_c": {
+      "certified": 350,
+      "ready": 19,
+      "remediate": 19,
+      "blocked": 0,
+      "archived": 112,
+      "unprocessed": 0,
+      "total": 500,
+      "coveragePct": 70
+    },
+    "pack_d": {
+      "certified": 350,
+      "ready": 19,
+      "remediate": 20,
+      "blocked": 0,
+      "archived": 111,
+      "unprocessed": 0,
+      "total": 500,
+      "coveragePct": 70
+    },
+    "pack_e": {
+      "certified": 540,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "unprocessed": 0,
+      "total": 540,
+      "coveragePct": 100
+    }
+  },
+  "bySection": [
+    {
+      "pack": "pack_a",
+      "section": "A",
+      "certified": 73,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 2,
+      "total": 75
+    },
+    {
+      "pack": "pack_a",
+      "section": "B",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_a",
+      "section": "C",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_a",
+      "section": "D",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_a",
+      "section": "E",
+      "certified": 58,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 17,
+      "total": 75
+    },
+    {
+      "pack": "pack_a",
+      "section": "F",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_b",
+      "section": "A",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_b",
+      "section": "B",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_b",
+      "section": "C",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_b",
+      "section": "D",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_b",
+      "section": "E",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_b",
+      "section": "F",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_c",
+      "section": "A",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_c",
+      "section": "B",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_c",
+      "section": "C",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_c",
+      "section": "D",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_c",
+      "section": "E",
+      "certified": 0,
+      "ready": 19,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 56,
+      "total": 75
+    },
+    {
+      "pack": "pack_c",
+      "section": "F",
+      "certified": 0,
+      "ready": 0,
+      "remediate": 19,
+      "blocked": 0,
+      "archived": 56,
+      "total": 75
+    },
+    {
+      "pack": "pack_d",
+      "section": "A",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_d",
+      "section": "B",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_d",
+      "section": "C",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_d",
+      "section": "D",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_d",
+      "section": "E",
+      "certified": 0,
+      "ready": 19,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 56,
+      "total": 75
+    },
+    {
+      "pack": "pack_d",
+      "section": "F",
+      "certified": 0,
+      "ready": 0,
+      "remediate": 20,
+      "blocked": 0,
+      "archived": 54,
+      "total": 74
+    },
+    {
+      "pack": "pack_e",
+      "section": "A",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_e",
+      "section": "B",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_e",
+      "section": "C",
+      "certified": 100,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 100
+    },
+    {
+      "pack": "pack_e",
+      "section": "D",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    },
+    {
+      "pack": "pack_e",
+      "section": "E",
+      "certified": 115,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 115
+    },
+    {
+      "pack": "pack_e",
+      "section": "F",
+      "certified": 75,
+      "ready": 0,
+      "remediate": 0,
+      "blocked": 0,
+      "archived": 0,
+      "total": 75
+    }
+  ]
+}

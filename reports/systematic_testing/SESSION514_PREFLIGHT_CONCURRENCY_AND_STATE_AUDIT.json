@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "session": "514",
+    "agent": "A",
+    "timestamp": "2026-07-25T16:35:00Z",
+    "mode": "READ-ONLY",
+    "working_directory": "C:\\Users\\User\\OneDrive\\Desktop\\CMA_Part_1_2026",
+    "git_available": false,
+    "git_note": "git is not installed or not on PATH on this system. No diff/status data available."
+  },
+
+  "test_suite_command": "node scripts/test_governance_guard.js; node scripts/test_calibration.js; node scripts/test_session_recovery.js; node scripts/test_readiness.js; node scripts/test_tutoring_safety.js; node scripts/test_load_may.js; node scripts/test_may_renderer.js; node scripts/test_may_regression_r2.js; node scripts/test_may_stagec.js; node scripts/validate.js",
+  "test_total": 364,
+  "test_passed": 354,
+  "test_failed": 0,
+  "test_result": "PASS",
+  "test_suite_details": [
+    { "suite": "test_governance_guard.js", "passed": 20, "failed": 0, "result": "PASS" },
+    { "suite": "test_calibration.js", "passed": 18, "failed": 0, "result": "PASS" },
+    { "suite": "test_session_recovery.js", "passed": 12, "failed": 0, "result": "PASS" },
+    { "suite": "test_readiness.js", "passed": 37, "failed": 0, "result": "PASS" },
+    { "suite": "test_tutoring_safety.js", "passed": 74, "failed": 0, "result": "PASS" },
+    { "suite": "test_load_may.js", "passed": null, "failed": null, "result": "OK (load checks)", "note": "No pass/fail counts; verified 5 file loads + May API surface" },
+    { "suite": "test_may_renderer.js", "passed": 62, "failed": 0, "result": "PASS" },
+    { "suite": "test_may_regression_r2.js", "passed": 42, "failed": 0, "result": "PASS" },
+    { "suite": "test_may_stagec.js", "passed": 89, "failed": 0, "result": "PASS" }
+  ],
+
+  "validator_suite": {
+    "command": "node scripts/validate.js",
+    "overall_result": "FAIL",
+    "validators_run": 8,
+    "validators_passed": 1,
+    "validators_warned": 4,
+    "validators_failed": 3,
+    "total_errors": 106,
+    "total_warnings": 1929,
+    "validators": [
+      { "name": "Repository Validator", "status": "PASS", "errors": 0, "warnings": 0 },
+      { "name": "Metadata Validator", "status": "WARN", "errors": 0, "warnings": 30 },
+      { "name": "Blueprint Validator", "status": "WARN", "errors": 0, "warnings": 395 },
+      { "name": "Difficulty Validator", "status": "WARN", "errors": 0, "warnings": 69 },
+      { "name": "Reference Validator", "status": "WARN", "errors": 0, "warnings": 116 },
+      { "name": "Explanation Validator", "status": "FAIL", "errors": 1, "warnings": 36, "error_detail": "pack_a_corrected.js [99] (P1-B-025): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty (\"\")." },
+      { "name": "Case Integrity Validator", "status": "FAIL", "errors": 2, "warnings": 8, "error_detail": "Duplicate choices in 8 cases. Placeholder choices in CBQ3-E2." },
+      { "name": "PsychometricValidator", "status": "FAIL", "errors": 103, "warnings": 1275, "modules": { "AbsoluteLanguageValidator": { "scanned": 2000, "findings": 780 }, "AmbiguityValidator": { "scanned": 2000, "findings": 327 }, "DistractorSimilarityValidator": { "scanned": 1999, "findings": 289 }, "ExplanationConsistencyValidator": { "scanned": 2000, "findings": 0 }, "MathematicalValidator": { "scanned": 2000, "findings": 0 } } }
+    ],
+    "open_dl008": [
+      { "qid": "P1-B-025", "file": "pack_a_corrected.js", "position": 99, "detail": "ExplanationWrongA is non-empty at correct-answer slot" }
+    ]
+  },
+
+  "git_dirty_files": [],
+  "git_note": "git is not installed or not on PATH. Could not run git status or git diff.",
+
+  "may_files_in_diff": [],
+  "may_files_at_root": ["may-core.js (198,691 bytes, modified 2026-07-25 16:31)", "may-learner-state.js (71,116 bytes, modified 2026-07-25 16:01)"],
+  "may_files_note": "These files exist at repository root. They are NOT in the permitted root-level file list per PROJECT_CONSTITUTION.md §11.1. However, since git is unavailable, we cannot determine if they are new/modified vs. pre-existing.",
+
+  "pack_files_in_diff": [],
+  "pack_files_note": "git unavailable; cannot verify diff. File timestamps and sizes: pack_a=2,489,671 bytes, pack_b=1,664,795 bytes, pack_c=1,781,101 bytes, pack_d=1,924,176 bytes, pack_e=1,058,600 bytes. All 5 packs report exactly 500 QuestionIDs each.",
+
+  "case_files_in_diff": [],
+
+  "migrated_case_base_b_certified_items": 75,
+  "migrated_case_base_b_certified_cases": 0,
+  "migrated_case_base_b_item_production_status": "All Draft",
+  "migrated_case_base_b_case_production_status": "All Draft (no Production or Certified)",
+  "migrated_case_base_b_total_items": 75,
+  "migrated_case_base_b_total_cases": 15,
+  "migrated_case_base_b_case_ids": "CASE-B12 through CASE-B26",
+  "migrated_case_base_b_note": "All 75 items have question_state: 'Certified'. All 15 cases also have case-level question_state: 'Certified'. However, all 90 ProductionStatus entries (75 item-level + 15 case-level) are 'Draft' -- NOT 'Production' or 'Certified'. So 75/75 items certified at item level, 0/15 cases have ProductionStatus=Production.",
+
+  "all_packs_certified_count": 2181,
+  "all_packs_total_items": 2500,
+  "all_packs_certified_pct": 87.24,
+
+  "scored_cases_files_found": ["scored_cases.js", "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+  "scored_cases_case_counts": {
+    "scored_cases.js": 15,
+    "scored_cases2.js": 15,
+    "scored_cases3.js": 15,
+    "scored_cases4.js": 15,
+    "scored_cases5.js": 15,
+    "total": 75
+  },
+  "scored_cases_item_counts": {
+    "scored_cases.js": 120,
+    "scored_cases2.js": 75,
+    "scored_cases3.js": 75,
+    "scored_cases4.js": 75,
+    "scored_cases5.js": 75,
+    "total": 420
+  },
+  "scored_cases_validator_items_checked": 400,
+  "scored_cases_note": "Validator reports 400 items checked across 75 cases. File-level grep shows 420 items. The 20-item discrepancy may be due to scored_cases2.js having both ENHANCED_CASE_BASE2 (15 cases) and MIGRATED_CASE_BASE_B (15 cases) arrays, with the validator only counting one set.",
+
+  "pack_questionid_counts": {
+    "pack_a_corrected.js": 500,
+    "pack_b_corrected.js": 500,
+    "pack_c_corrected.js": 500,
+    "pack_d_corrected.js": 500,
+    "pack_e_corrected.js": 500,
+    "total": 2500
+  },
+
+  "errors_encountered": [
+    "git not available on this system -- cannot run git status, git diff, or git diff --name-only. All diff-related fields are empty.",
+    "validate.js: 1 open DL-008 error at P1-B-025 (pack_a_corrected.js, index 99) -- ExplanationWrongA non-empty at correct-answer slot",
+    "validate.js: 2 Case Integrity errors -- duplicate choices in 8 cases, placeholder choices in CBQ3-E2",
+    "validate.js: 103 PsychometricValidator errors (780 absolute language, 327 ambiguity, 289 distractor similarity findings)",
+    "may-core.js and may-learner-state.js reside at repository root -- not permitted per PROJECT_CONSTITUTION.md §11.1"
+  ],
+
+  "concurrency_guard_passed": null,
+  "concurrency_guard_note": "Cannot determine -- git is not available for diff/status. No write operations were performed during this READ-ONLY session. Verification is based on file-level grep and validation reports only.",
+  "concurrency_guard_recommendation": "Run git status at the earliest opportunity to verify no unstaged or modified files exist. The presence of may-*.js files at root level should be investigated per constitution §11.4 (prohibited root-level files)."
+}

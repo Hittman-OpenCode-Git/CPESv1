@@ -1,0 +1,14 @@
+{
+  "agent": "N",
+  "session": "S301",
+  "phase": 5,
+  "domain": "Structural Risk Factors",
+  "risks": [
+    { "id": "SR-01", "name": "DL-016 Paired-Object Content-Metadata Offset", "pack": "A", "sections": ["A", "E"], "severity": "High", "likelihood": "Certain — already confirmed", "impact": "Metadata block EW fields describe a different item's choices", "mitigation": "Expand DL-016 scan to all Pack A sections; realign or document offset", "effort": "High — requires per-item verification" },
+    { "id": "SR-02", "name": "DL-008 CC-Rotation Artifact in Pack C", "pack": "C", "sections": ["A", "B"], "severity": "High", "likelihood": "Certain — 129 of 174 items affected", "impact": "Simple EW[CC] clear unsafe — may clear wrong slot if CC is incorrect", "mitigation": "CC audit before any EW[CC] remediation in Pack C", "effort": "High — 174 items" },
+    { "id": "SR-03", "name": "Paired-Object Format Fragility", "packs": ["A", "C", "D"], "sections": "All", "severity": "Medium", "likelihood": "High — has caused DL-016, CC-rotation artifacts", "impact": "Structural format makes defect detection unreliable (metadata-block describes different content than content-block)", "mitigation": "Standardize to single-object format or rebuild delivery engine to use content-block only" },
+    { "id": "SR-04", "name": "DL-019 Concurrent-Write Data Loss", "packs": ["C"], "sections": ["A", "B"], "severity": "Medium", "likelihood": "Occurred once — DL-013/certification wave restored pre-cleared EW[CC]", "impact": "Remediation progress can be silently reverted by parallel sessions", "mitigation": "OneDrive sync pause during sessions; sequential session locking" },
+    { "id": "SR-05", "name": "FD-045/FD-046 Structural Boundary", "pack": "D", "sections": ["F"], "severity": "Low", "likelihood": "Low — repaired in Session 28 and holding", "impact": "Object separator corruption causes parse failures (prevents loading)", "mitigation": "Anti-reversion safeguards documented; OneDrive sync pause recommended" },
+    { "id": "SR-06", "name": "Inter-Object Artifacts (DL-017 pattern)", "pack": "B", "sections": ["B", "C", "F"], "severity": "Low", "likelihood": "Low — resolved in Pack B, not seen in other packs", "impact": "Backtick-newline corruption between objects", "mitigation": "Two-pattern mechanical fix validated and applied", "status": "RESOLVED" }
+  ]
+}

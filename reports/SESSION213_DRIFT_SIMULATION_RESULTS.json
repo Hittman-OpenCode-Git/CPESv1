@@ -1,0 +1,160 @@
+{
+  "session": "S213",
+  "title": "Drift Simulation Audit",
+  "date": "2026-07-27",
+  "orchestrator": "stewardship-orchestrator",
+  "status": "HALTED",
+  "stop_condition": "Broken traceability + Duplicate registry creation",
+  "stop_conditions_fired": [
+    {
+      "condition": "Broken traceability",
+      "detected_in": "Scenario 5 — REVISION_HISTORY claims UNCHANGED but 28 items certified between Jul 24-27",
+      "severity": "HIGH"
+    },
+    {
+      "condition": "Duplicate registry creation",
+      "detected_in": "Scenario 1 — Multiple registries tracking same entity with divergent counts (2,884 / 2,975 / 2,995 / 2,540)",
+      "severity": "HIGH"
+    }
+  ],
+  "real_artifact_drift_audit": {
+    "source": "stewardship-inspector",
+    "categories": [
+      {
+        "category": "1 — Duplicate Registries",
+        "present": true,
+        "severity": "HIGH",
+        "evidence": [
+          "MASTER_QUESTION_REGISTRY.md (2,995 entries) vs registry/QUESTION_REGISTRY_INDEX.md (2,884 entries) vs CURRENT_BASELINES.md (2,540 entries)",
+          "reports/MasterQuestionRegistry.csv — third CSV-format registry",
+          "SESSION_STATUS reports 2,031 Certified; REVISION_HISTORY reports 2,298 Certified",
+          "Registry count swing from 2,985 to 4,285 across sessions — 1,300-entry variance"
+        ]
+      },
+      {
+        "category": "2 — Shadow Queues",
+        "present": true,
+        "severity": "MEDIUM",
+        "evidence": [
+          "scripts/output/session_packages/ — 729 JSON files, many uncatalogued",
+          "192 scripts in scripts/ directory, many with direct pack-file write capability",
+          "No automated registration requirement for new output artifacts"
+        ]
+      },
+      {
+        "category": "3 — Duplicate Scans",
+        "present": true,
+        "severity": "HIGH",
+        "evidence": [
+          "Multiple independent DL-008 scan scripts (session86, s861, scan_orchestrator) producing divergent counts",
+          "Pack D DL-008: 10 vs 342 vs 32 from three tools — documented in Tracked Note",
+          "No automated cross-tool count reconciliation gate"
+        ]
+      },
+      {
+        "category": "4 — Manual Workarounds",
+        "present": true,
+        "severity": "MEDIUM",
+        "evidence": [
+          "DL-020 brace-matcher fix — string-awareness patch applied to extractQuestions/extractCases but no parser redesign",
+          "ExplanationValidator.js line-180 gap fix — validator-level patch without corresponding governance guard update",
+          "Stale SESSION_STATUS referenced as current by AGENTS.md §9 despite being 3+ days old"
+        ]
+      },
+      {
+        "category": "5 — Broken Traceability",
+        "present": true,
+        "severity": "HIGH",
+        "evidence": [
+          "REVISION_HISTORY S263-S266 entry claims 'UNCHANGED' but count increased by 28 (S853 WAVE_A certifications)",
+          "MASTER_QUESTION_REGISTRY.md stale — 3 days behind (2,270 vs actual 2,298)",
+          "DL-019: 432 items silently overwritten — remediation work lost with no trace"
+        ]
+      },
+      {
+        "category": "6 — Untracked Artifacts",
+        "present": true,
+        "severity": "MEDIUM",
+        "evidence": [
+          "scripts/output/session_packages/ — 729 files, only ~200 registered in session_registry.json",
+          "SESSION950_UNCERTAIN_SCRIPTS_INDEX.md explicitly flags untracked artifact count",
+          "No filesystem-level artifact tracking or reverse registration audit",
+          "192 scripts — many with no documentation, no registry entry, no governance trace"
+        ]
+      }
+    ],
+    "summary": {
+      "categories_present": 6,
+      "categories_clean": 0,
+      "overall_drift_risk": "HIGH"
+    }
+  },
+  "controlled_drift_simulation": {
+    "source": "drift-detector",
+    "scenarios": [
+      {
+        "scenario": "1 — Duplicate Registries",
+        "injected_condition": "Two pipeline scripts produce 242 vs 282 BLOCKED from same source (DL-036 pattern)",
+        "detected": true,
+        "severity_assigned": "MEDIUM",
+        "severity_correct": true,
+        "response_quality": 2,
+        "notes": "Detected by S812 Repeatability Review but only because two boards compared numbers. No systematic cross-tool reconciliation gate."
+      },
+      {
+        "scenario": "2 — Shadow Queues",
+        "injected_condition": "CLI-level Node.js script certifies 28 items bypassing governance guard entirely",
+        "detected": false,
+        "severity_assigned": "CRITICAL",
+        "severity_correct": true,
+        "response_quality": 1,
+        "notes": "MOST DANGEROUS. Governance guard has zero visibility into Node.js scripts executed from CLI. 192 scripts with direct pack-file write capability exist."
+      },
+      {
+        "scenario": "3 — Duplicate Scans",
+        "injected_condition": "Three independent scan scripts produce 10, 342, and 32 DL-008 counts for same pack file",
+        "detected": true,
+        "severity_assigned": "HIGH",
+        "severity_correct": true,
+        "response_quality": 3,
+        "notes": "Detection is manual. No automated reconciliation gate. Admin dashboard may display whichever JSON was written last."
+      },
+      {
+        "scenario": "4 — Manual Workarounds",
+        "injected_condition": "Developer patches ExplanationValidator to weaken DL-008 gate, 83 items certified through weakened gate",
+        "detected": false,
+        "severity_assigned": "HIGH",
+        "severity_correct": true,
+        "response_quality": 1,
+        "notes": "CURRENT_BASELINES does not include validators. No hash comparison for validator source. Policy drift detector misses this class."
+      },
+      {
+        "scenario": "5 — Broken Traceability",
+        "injected_condition": "REVISION_HISTORY 'UNCHANGED' claim is false — 28-item delta hidden in separate session",
+        "detected": true,
+        "severity_assigned": "HIGH",
+        "severity_correct": true,
+        "response_quality": 2,
+        "notes": "Detectable via AGENTS.md §5 cross-check but requires manual auditor action. No automated count-delta validation."
+      },
+      {
+        "scenario": "6 — Untracked Artifacts",
+        "injected_condition": "45 new session packages written without registration — 22 of them invisible to admin dashboard",
+        "detected": false,
+        "severity_assigned": "MEDIUM",
+        "severity_correct": true,
+        "response_quality": 1,
+        "notes": "Zero filesystem-level artifact tracking. Admin dashboard queries registries, not filesystem. Orphaned artifacts invisible."
+      }
+    ],
+    "metrics": {
+      "scenarios_detected": 4,
+      "scenarios_total": 6,
+      "detection_rate": "66.7%",
+      "severity_correct": 6,
+      "severity_rate": "100%",
+      "mean_response_quality": 1.67,
+      "overall_readiness": "CONCERN"
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "title": "SESSION806_DIFFICULTY_CL_LEARNING_REVIEW",
+  "session": "806",
+  "generated": "2026-07-26",
+  "agents": "I (Difficulty), J (CognitiveLevel), K (Learning Value) — combined read-only review",
+  "batchesReviewed": ["A", "B", "C"],
+  "itemsReviewed": 10,
+  "summary": {
+    "difficultyFlags": 2,
+    "cognitiveLevelFlags": 2,
+    "dl031Flags": 2,
+    "learningValueMean": 4.4,
+    "overallVerdict": "PASS_WITH_FLAGS — 8/10 items accurate on both dimensions; 2 items (R14, R16) flagged for DL-031 difficulty inflation; 2 items (R16, R31) flagged for CognitiveLevel mismatch"
+  },
+  "items": [
+    {
+      "QuestionID": "P1-E-R11",
+      "Topic": "Preventive controls — classification and examples",
+      "Batch": "A",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Apply",
+      "AgentI_Difficulty": {
+        "verdict": "PASS",
+        "recommendedDifficulty": "Moderate (3)",
+        "rationale": "Three controls to classify in a novel business scenario (Cascade Technologies). Requires application of preventive/detective/corrective framework to three distinct control descriptions. Appropriately demanding for Moderate — the three-way match classification (preventive vs. detective) is subtle enough to challenge candidates who confuse timing distinctions. No DL-031 pattern (not a definition-match — scenario-based application).",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS",
+        "recommendedCL": "Apply",
+        "rationale": "Stem presents a novel scenario (named company, three specific controls described). Candidate must apply the preventive/detective/corrective classification framework to three new instances. This is textbook 'Apply' — knowledge of the framework is prerequisite, but the task requires using it on unseen cases."
+      },
+      "AgentK_LearningValue": {
+        "score": 5,
+        "maxScore": 5,
+        "coachingValue": "Excellent. EC names all three control categories, explains each definitionally, maps each to the scenario controls with reasoning, and identifies the three-way match as a frequently tested exam trap. Functions as a self-contained mini-lesson.",
+        "instructionalValue": "Strong. Builds transferable skill in distinguishing preventive vs. detective vs. corrective by timing — applicable to any control classification question. The exam-trap callout (three-way match) provides durable test-taking strategy.",
+        "remediationQuality": "Excellent. EW_B explains why reconciliation is detective not preventive (timing: after transactions recorded). EW_C explains three-way match as preventive not detective (prevents incorrect payment vs. discovers after fact) and addresses the confusion source. EW_D addresses the conflation of detective function with corrective follow-up actions — each distinguishes a specific misconception with precise correction."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R14",
+      "Topic": "IT general controls — categories and scope",
+      "Batch": "A",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Understand",
+      "AgentI_Difficulty": {
+        "verdict": "FLAG — DL-031 pattern: likely overstated",
+        "recommendedDifficulty": "Easy (1) or Moderate-Easy (2)",
+        "rationale": "The stem recites the four ITGC domains verbatim ('program development, program changes, computer operations, and access to programs and data') and asks 'which category of IT controls do these represent?' The correct answer is 'IT general controls' — the term being defined by the stem's own description. The candidate needs only to recognize that the listed domains match ITGCs. No application, no scenario analysis, no subtlety. This is a DL-031 pattern: stem contains textbook definition, correct answer is the defined term. The distractors do add some difficulty by requiring the candidate to distinguish ITGCs from application controls, but the stem itself flags the correct answer. If the stem omitted the four-domain enumeration and relied on the business context alone (Atlas Financial Services, core banking system, 'across the entire IT environment'), Moderate-Easy (2) would be defensible. With the four-domain enumeration present, Easy (1) is more appropriate.",
+        "dl031Flag": true
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS (borderline)",
+        "recommendedCL": "Understand (borderline Remember)",
+        "rationale": "Assigned CL is Understand, which is defensible because the candidate must interpret the span description ('across the entire IT environment') and distinguish ITGCs from application controls — requiring conceptual understanding beyond pure recall. However, the stem reciting the four ITGC domains as part of the description makes the item close to Remember — the candidate is essentially matching the listed domains to the category name. If the author intends this as Understand, recommend removing the four-domain enumeration from the stem and letting the candidate infer the category from the scope description alone. Borderline case — currently passes but with a note."
+      },
+      "AgentK_LearningValue": {
+        "score": 4,
+        "maxScore": 5,
+        "coachingValue": "Good. EC clearly distinguishes ITGCs from application controls, lists all four ITGC domains with explanations, and explains foundational dependency (application controls depend on ITGCs). Solid mini-lesson on ITGC scope.",
+        "instructionalValue": "Moderate. Builds knowledge of ITGC domains and the ITGC-vs-application-control distinction, but the stem's self-contained definition limits transfer value — the candidate doesn't need to synthesize, just match.",
+        "remediationQuality": "Good. EW_A explains scope distinction (IT-wide vs. single application) and dependency. EW_B distinguishes entity-level controls (COSO control environment) from IT-specific governance. EW_C distinguishes business process controls from infrastructure-level controls. All specific and choice-targeted."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R15",
+      "Topic": "Application controls — input processing output",
+      "Batch": "A",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Apply",
+      "AgentI_Difficulty": {
+        "verdict": "PASS",
+        "recommendedDifficulty": "Moderate (3)",
+        "rationale": "Three procedures to classify under the IPO framework in a novel business scenario (Northpoint Distribution order entry system). Requires application of IPO definitions to three distinct control examples. The customer-file validation vs. calculation vs. supervisor-reconciliation mapping has genuine classification challenges — the candidate must reason about when each control operates in the transaction flow. Appropriately Moderate.",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS",
+        "recommendedCL": "Apply",
+        "rationale": "Novel scenario with named company and three specific procedures described. Candidate must apply the IPO classification framework to three new instances. Textbook Apply — knowledge of input/processing/output categories is prerequisite, but the task is using them on unseen case descriptions."
+      },
+      "AgentK_LearningValue": {
+        "score": 5,
+        "maxScore": 5,
+        "coachingValue": "Excellent. EC defines each IPO category, maps all three procedures with reasoning, explains timing-based classification logic, and notes the IPO framework's importance on the CMA exam. Self-contained mini-lesson.",
+        "instructionalValue": "Strong. Builds transferable IPO classification skill — the timing-based reasoning (when in the transaction flow does the control operate?) generalizes to any application control question. The exam-strategy note adds practical value.",
+        "remediationQuality": "Excellent. EW_A explains why not all are input controls and distinguishes entry vs. processing vs. output timing. EW_C addresses the confusion between control purpose and control timing, mapping all three procedures with corrected classifications. EW_D explains that document type (physical vs. digital) does not determine classification — timing relative to transaction flow does. Each EW addresses a distinct misclassification pattern."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R16",
+      "Topic": "Risk assessment — COSO fraud categories",
+      "Batch": "B",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Understand",
+      "AgentI_Difficulty": {
+        "verdict": "FLAG — DL-031 pattern: overstated",
+        "recommendedDifficulty": "Easy (1)",
+        "rationale": "This is a textbook DL-031 definition-match. The stem asks: 'Which of the following best describes the specific types of fraud that COSO requires management to assess?' The correct answer is the standard COSO fraud categories (fraudulent financial reporting and misappropriation of assets). No scenario, no application, no interpretation required — pure recall of COSO Principle 8's fraud classification. The candidate either knows the two COSO fraud categories or doesn't. The distractors are plausible but this is fundamentally a recall item testing memorized terminology. Should be Easy (1), not Moderate (3). Equivalent to asking 'What are the two types of fraud under COSO?' — a Remember-level definition-recall question.",
+        "dl031Flag": true
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "FLAG — mismatch",
+        "recommendedCL": "Remember",
+        "rationale": "Assigned CL is Understand, but the item tests pure factual recall: 'What are the two COSO fraud categories?' No interpretation, no explanation of why those categories matter, no distinction between them beyond naming them. The candidate retrieves memorized terminology ('fraudulent financial reporting and misappropriation of assets') from memory. This is Remember, not Understand. To be Understand, the stem would need to ask something like 'Why does COSO distinguish between fraudulent financial reporting and misappropriation of assets?' — requiring explanation of the rationale."
+      },
+      "AgentK_LearningValue": {
+        "score": 4,
+        "maxScore": 5,
+        "coachingValue": "Good. EC provides thorough coverage of COSO Principle 8, both fraud categories with definitions, fraud triangle elements, and practical distinctions between the two categories. Teaches the concept well even for candidates who answered correctly.",
+        "instructionalValue": "Moderate. Builds durable knowledge of COSO fraud categories and the fraud triangle, but the item itself is definition-recall — candidates who memorize the two categories pass without deeper understanding. The EC compensates somewhat by providing the 'why' that the stem doesn't demand.",
+        "remediationQuality": "Good. EW_A explains why perpetrator-level classification (management vs. employee) is not COSO's framework and cites the relevant audit standard source. EW_B explains why external fraud is not a COSO fraud assessment category. EW_D explains why 'operational fraud' is not a COSO term and addresses the objective-category conflation. All specific and educational."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R17",
+      "Topic": "Risk responses — accept avoid reduce share",
+      "Batch": "B",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Apply",
+      "AgentI_Difficulty": {
+        "verdict": "PASS",
+        "recommendedDifficulty": "Moderate (3)",
+        "rationale": "Four risk responses to classify in a novel scenario (Mountain State Bank data breach). Requires application of all four COSO ERM risk response categories to concrete business actions. The insurance-with-deductible nuance (sharing with retained element) and outsourcing-to-third-party classification add genuine cognitive demand. Appropriately Moderate — the four-way classification task is more demanding than the three-way classifications in R11/R15 but not so complex as to warrant Difficult.",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS",
+        "recommendedCL": "Apply",
+        "rationale": "Novel scenario with named company, specific risk context (data breach), and four concrete risk responses described. Candidate must apply the COSO ERM risk response framework (accept/avoid/reduce/share) to four new instances. Textbook Apply."
+      },
+      "AgentK_LearningValue": {
+        "score": 5,
+        "maxScore": 5,
+        "coachingValue": "Excellent. EC defines all four risk response categories, maps each to the scenario with reasoning, provides classification keys, and notes the CMA exam frequency of this topic. Mini-lesson quality.",
+        "instructionalValue": "Strong. Builds transferable risk-response classification skill with clear decision rules (does it transfer to another party? eliminate the activity? implement controls? accept without action?). The classification keys are durable and reusable.",
+        "remediationQuality": "Excellent. EW_A explains insurance as sharing not reduction and distinguishes the retention element (deductible) from the primary classification. EW_C explains discontinuation as avoidance not reduction — eliminating the risk-generating activity is fundamentally different from reducing its likelihood. EW_D explains that purchasing technology from a vendor does not make it risk sharing — a subtle but important distinction. Each EW addresses a specific, plausible classification error."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R19",
+      "Topic": "SOX Section 302 — CEO and CFO certification",
+      "Batch": "B",
+      "AssignedDifficulty": "Easy (1)",
+      "AssignedCL": "Remember",
+      "AgentI_Difficulty": {
+        "verdict": "PASS",
+        "recommendedDifficulty": "Easy (1)",
+        "rationale": "Pure recall of SOX 302 certification requirements. The candidate either knows which certifications are in Section 302 or doesn't. No scenario, no application, no interpretation. Easy (1) is correct. The VerifiedChecks note confirms this self-assessment: 'Tests knowledge-level recall of SOX 302 certification requirements — appropriate for Easy difficulty.'",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS",
+        "recommendedCL": "Remember",
+        "rationale": "Pure factual recall: 'What does SOX 302 require the CEO and CFO to certify?' The candidate retrieves memorized content of Section 302 certification requirements. No interpretation, no scenario application, no conceptual distinction task. Appropriate for Remember."
+      },
+      "AgentK_LearningValue": {
+        "score": 4,
+        "maxScore": 5,
+        "coachingValue": "Good. EC lists all six Section 302 certification requirements comprehensively, identifies Section 302 as a 'cornerstone of SOX accountability,' and connects to exam relevance. Functions as a well-structured reference on SOX 302.",
+        "instructionalValue": "Moderate. Builds knowledge of SOX 302 certification content, which is exam-relevant and professionally relevant. Limited by the Remember cognitive level — no deeper conceptual understanding is tested or built beyond memorization.",
+        "remediationQuality": "Good. EW_A clearly contrasts Section 302 with Section 404 (a frequently tested distinction) and explains what 302 does NOT require. EW_B addresses related-party transaction misconceptions with ASC 850 reference. EW_C addresses board oversight vs. CEO/CFO personal accountability — an important distinction. All specific and educational."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R20",
+      "Topic": "SOX Section 404 — management assessment vs auditor attestation",
+      "Batch": "B",
+      "AssignedDifficulty": "Moderate-Easy (2)",
+      "AssignedCL": "Understand",
+      "AgentI_Difficulty": {
+        "verdict": "PASS",
+        "recommendedDifficulty": "Moderate-Easy (2)",
+        "rationale": "Requires distinguishing between two SOX 404 subsections — more than pure recall (which would be Easy) but not a full scenario application (which would be Moderate). The candidate must understand who does what under 404(a) vs. 404(b) and recognize correct vs. reversed descriptions. The VerifiedChecks note confirms: 'Tests understanding of the distinction... appropriate for Moderate-Easy/Understand.' Appropriately calibrated.",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS",
+        "recommendedCL": "Understand",
+        "rationale": "Requires interpreting the distinction between 404(a) and 404(b) — not just recalling isolated facts, but understanding the relationship between management assessment and auditor attestation. The candidate must recognize which parties are responsible under which subsection. Textbook Understand — explaining and distinguishing between concepts."
+      },
+      "AgentK_LearningValue": {
+        "score": 4,
+        "maxScore": 5,
+        "coachingValue": "Good. EC provides thorough treatment of both 404(a) and 404(b), including management's responsibilities, auditor's responsibilities, applicable frameworks, and filer-type applicability. Covers the two-tier structure clearly.",
+        "instructionalValue": "Good. Builds durable knowledge of SOX 404's dual structure — a concept that appears frequently on the CMA exam and is professionally relevant. The filer-type applicability note (accelerated vs. smaller reporting companies) adds practical real-world context.",
+        "remediationQuality": "Good. EW_B corrects the applicability reversal with the note that 404(a) is broader than 404(b). EW_C provides a memory aid (404(a) = 'a' for assessment by management; 404(b) = 'b' for backup by auditor) — pedagogically useful. EW_D explains that the reports are separate, not joint — a subtle but important distinction. All specific and instructive."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R30",
+      "Topic": "Logical access controls — authentication authorization review",
+      "Batch": "C",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Apply",
+      "AgentI_Difficulty": {
+        "verdict": "PASS",
+        "recommendedDifficulty": "Moderate (3)",
+        "rationale": "Three access controls to classify in a novel scenario (Summit Health System, HIPAA context). Requires application of authentication/authorization/access-review framework to three distinct controls. The multi-factor authentication description and role-based permission nuance add genuine classification challenge. Appropriately Moderate.",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS",
+        "recommendedCL": "Apply",
+        "rationale": "Novel scenario with named company, specific regulatory context (HIPAA), and three controls described. Candidate must apply the logical access control framework to three new instances. Textbook Apply."
+      },
+      "AgentK_LearningValue": {
+        "score": 5,
+        "maxScore": 5,
+        "coachingValue": "Excellent. EC defines all three access control categories with the core question each answers (who are you? what can you do? still correct?), maps to scenario controls, and adds context on privileged account reviews. Self-contained mini-lesson.",
+        "instructionalValue": "Strong. Builds transferable framework for access control classification with memorable question-based definitions. The HIPAA context and privileged-account emphasis add real-world relevance.",
+        "remediationQuality": "Excellent. EW_A addresses the sequence confusion (authentication must precede authorization). EW_C addresses framework confusion — applying preventive/detective/corrective to a question asking for access-control classification. EW_D addresses the ITGC vs. access-review confusion and the authentication-vs-authorization distinction between controls 1 and 2. Each EW targets a specific, plausible error."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R31",
+      "Topic": "Disaster recovery — business continuity RTO RPO",
+      "Batch": "C",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Understand",
+      "AgentI_Difficulty": {
+        "verdict": "PASS (upper bound of acceptable)",
+        "recommendedDifficulty": "Moderate-Easy (2) or Moderate (3)",
+        "rationale": "The stem gives specific numbers (4 hours, 15 minutes, 50,000 transactions/day) in a business scenario. The candidate must match '4 hours' to RTO (time-based) and '15 minutes' to RPO (data-loss-based). This is largely a definition-application task — if the candidate knows RTO=time/RPO=data loss, the mapping is straightforward. The scenario context adds realism but the mapping itself is simple. Moderate-Easy (2) is the better fit — this is one step above pure definition recall but the mapping is essentially one-to-one. However, Moderate (3) is defensible given that the distractors reverse and confuse the definitions, requiring careful discrimination. No DL-031 pattern — scenario application present.",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "FLAG — mismatch (mild)",
+        "recommendedCL": "Apply",
+        "rationale": "Assigned CL is Understand, but the item requires application of RTO/RPO definitions to specific numerical values in a novel scenario. The candidate must take the conceptual knowledge (RTO = time to restore, RPO = tolerable data loss) and apply it to concrete data points (4 hours, 15 minutes) from an e-commerce company context. This is Apply, not Understand — the candidate is not merely explaining what RTO/RPO mean but using those definitions to classify specific recovery objectives. The distinction matters: Understand would ask 'Define RTO and RPO'; Apply asks 'Given this scenario, identify the RTO and RPO.' This item does the latter."
+      },
+      "AgentK_LearningValue": {
+        "score": 4,
+        "maxScore": 5,
+        "coachingValue": "Good. EC thoroughly defines RTO and RPO, maps both to the scenario with reasoning, explains cost implications and solution-design connections. Provides practical business context for both metrics.",
+        "instructionalValue": "Good. Builds durable knowledge of RTO/RPO and their practical implications for disaster recovery design. The connection between RPO and backup frequency/cost is professionally valuable beyond exam prep.",
+        "remediationQuality": "Good. EW_A addresses the definition reversal and provides a useful memory aid (RTO = Time, RPO = Point). EW_B addresses unit-of-measurement confusion (time vs. transaction count). EW_C addresses the conflation of two distinct metrics and explains the different solution-design implications each drives. All specific and educational."
+      }
+    },
+    {
+      "QuestionID": "P1-E-R32",
+      "Topic": "Vendor third-party risk assessment",
+      "Batch": "C",
+      "AssignedDifficulty": "Moderate (3)",
+      "AssignedCL": "Apply",
+      "AgentI_Difficulty": {
+        "verdict": "PASS",
+        "recommendedDifficulty": "Moderate (3)",
+        "rationale": "Novel scenario (Apex Manufacturing outsourcing payroll to PayServe) requiring application of third-party risk management principles under COSO. The candidate must understand that outsourcing does not transfer control responsibility and distinguish between SOC 1 reliance, complementary controls, and contractual indemnification. The distractors are genuinely plausible — each represents a real-world misconception about outsourcing and control responsibility. Appropriately Moderate.",
+        "dl031Flag": false
+      },
+      "AgentJ_CognitiveLevel": {
+        "verdict": "PASS",
+        "recommendedCL": "Apply",
+        "rationale": "Novel scenario with named companies and specific outsourcing context. Candidate must apply COSO Principle 9 and third-party risk management concepts to determine the correct responsibility allocation. Textbook Apply — taking conceptual knowledge about service organization controls, SOC reports, and complementary user entity controls and applying it to a specific business situation."
+      },
+      "AgentK_LearningValue": {
+        "score": 5,
+        "maxScore": 5,
+        "coachingValue": "Excellent. EC thoroughly covers COSO Principle 9, SOC 1 Type 1/Type 2 reports, complementary user entity controls, and ongoing monitoring responsibilities. The explanation functions as a comprehensive reference on third-party risk management under COSO.",
+        "instructionalValue": "Strong. Builds professionally durable knowledge about third-party risk management — a concept that applies across audit, compliance, and management accounting roles. The SOC reporting framework and complementary controls concepts are directly applicable in practice.",
+        "remediationQuality": "Excellent. EW_A addresses the critical misconception that outsourcing transfers control responsibility — a real-world error with significant consequences. EW_B explains the SOC reporting framework as the efficient alternative to duplicate audits. EW_D distinguishes legal risk transfer (indemnification) from statutory control responsibility under SOX/COSO — a subtle but important dimension. All three address genuine, professionally relevant misconceptions."
+      }
+    }
+  ],
+  "flagsSummary": {
+    "difficultyOverstated": [
+      {
+        "QuestionID": "P1-E-R14",
+        "issue": "DL-031 pattern — stem recites ITGC domains verbatim; answer is the defined term. Recommend Easy (1) or Moderate-Easy (2).",
+        "remediation": "Option A: Remove the four-domain enumeration from the stem; let candidate infer ITGC from scope description only — keeps Moderate difficulty. Option B: Keep stem as-is, recalibrate to Easy (1)."
+      },
+      {
+        "QuestionID": "P1-E-R16",
+        "issue": "DL-031 pattern — pure recall of COSO fraud categories (fraudulent financial reporting and misappropriation of assets). Recommend Easy (1).",
+        "remediation": "Recalibrate Difficulty to Easy (1) and DifficultyScore to 1. Item tests Remember, not Understand. No stem revision needed — the item is correct as a knowledge-recall item; the difficulty label simply overstates the cognitive demand."
+      }
+    ],
+    "cognitiveLevelMismatch": [
+      {
+        "QuestionID": "P1-E-R16",
+        "issue": "Assigned CL is Understand; actual demand is Remember (pure definition recall).",
+        "remediation": "Recalibrate CognitiveLevel to 'Remember'. Alternatively, revise stem to ask 'why' COSO distinguishes the two categories to elevate to Understand."
+      },
+      {
+        "QuestionID": "P1-E-R31",
+        "issue": "Assigned CL is Understand; actual demand is Apply (candidate must use RTO/RPO concepts on specific numerical values in novel scenario).",
+        "remediation": "Recalibrate CognitiveLevel to 'Apply'."
+      }
+    ],
+    "difficultyBorderline": [
+      {
+        "QuestionID": "P1-E-R31",
+        "issue": "Difficulty Moderate (3) is at the upper bound. Recommend Moderate-Easy (2) given the straightforward one-to-one mapping task.",
+        "remediation": "Consider recalibrating to Moderate-Easy (2) if the CL is corrected to Apply — an Apply item at Moderate-Easy (2) is a reasonable combination for this task complexity."
+      }
+    ],
+    "noIssues": [
+      "P1-E-R11",
+      "P1-E-R15",
+      "P1-E-R17",
+      "P1-E-R19",
+      "P1-E-R20",
+      "P1-E-R30",
+      "P1-E-R32"
+    ]
+  },
+  "learningValueDistribution": {
+    "5_excellent": ["P1-E-R11", "P1-E-R15", "P1-E-R17", "P1-E-R30", "P1-E-R32"],
+    "4_good": ["P1-E-R14", "P1-E-R16", "P1-E-R19", "P1-E-R20", "P1-E-R31"],
+    "3_adequate": [],
+    "2_weak": [],
+    "1_poor": [],
+    "mean": 4.4
+  },
+  "crossCuttingObservations": {
+    "explanationQuality": "All 10 items have choice-specific, misconception-targeted EW fields with no boilerplate. DL-008 compliant (all CC slots empty). DL-013 clean (no template language detected). DL-026 clean (all non-CC slots have substantive content >= 100 chars). EC fields are uniformly thorough with standard references, business context, and exam preparation notes.",
+    "distractorEngineering": "Across all 10 items, the 30 distractor slots (3 per item) represent genuinely distinct misconceptions. No overlap, no template reuse, no placeholder text. Each distractor teaches something specific. Exemplary quality.",
+    "batchConsistency": "All three authors (D, E, F) maintained consistent quality standards across their batches. No batch-level quality variance. The two DL-031 flags (R14 from Batch A, R16 from Batch B) represent isolated miscalibrations, not systematic author errors.",
+    "scenarioRealism": "All scenario-based items (R11, R15, R17, R30, R31, R32) use named companies in plausible business contexts. R31 (e-commerce, 50K transactions/day, 4-hr RTO, 15-min RPO) is particularly well-calibrated to real-world disaster recovery planning."
+  },
+  "recommendations": [
+    {
+      "priority": "High",
+      "item": "P1-E-R16",
+      "action": "Recalibrate Difficulty to Easy (1) and CognitiveLevel to Remember. Both are clear mismatches. No content change needed — item is correct quality, just mislabeled."
+    },
+    {
+      "priority": "Medium",
+      "item": "P1-E-R14",
+      "action": "Either (a) remove four-domain enumeration from stem to keep Moderate difficulty, or (b) recalibrate Difficulty to Easy (1) or Moderate-Easy (2). Recommend option (a) — the stem would be stronger without giving away the answer."
+    },
+    {
+      "priority": "Medium",
+      "item": "P1-E-R31",
+      "action": "Recalibrate CognitiveLevel from Understand to Apply. Consider recalibrating Difficulty from Moderate (3) to Moderate-Easy (2) to reflect the straightforward one-to-one mapping."
+    },
+    {
+      "priority": "Low",
+      "item": "All items",
+      "action": "Consider adding a 'CommonTrapReference' field to link EW content to specific trap entries in knowledge/05_COMMON_EXAM_TRAPS.md (e.g., three-way match classification trap for R11). Currently none of the 10 items include this optional metadata field."
+    }
+  ]
+}

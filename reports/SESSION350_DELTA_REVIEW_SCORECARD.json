@@ -1,0 +1,214 @@
+{
+  "document": "SESSION350_DELTA_REVIEW_SCORECARD",
+  "session": "S350",
+  "title": "Delta Review Scorecard — Inheritance Rules, Workload Reduction, and Review Classification",
+  "board": "F — Delta Review Metrics",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Scorecard — Delta Review Tracking",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION203_DELTA_ENGINE_SPEC.json; SESSION202_DELTA_REVIEW_ENGINEERING.json",
+  "purpose": "Measure the effectiveness of delta review — the Framework v2 mechanism that skips unchanged items using SHA-256 content hashing. Framework v1 re-reviewed 100% of items every wave, even though 80% were unchanged. Framework v2 targets a 77% workload reduction by inheriting certification decisions for unchanged items.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "delta_review_architecture": {
+    "authority": "SESSION203_DELTA_ENGINE_SPEC.json",
+    "description": "Delta review uses SHA-256 content hashing to determine whether an item has changed since its last certification. Unchanged items inherit their prior certification decision (CertifiedDelta) with zero re-review time. Only changed items receive full or partial review.",
+    "hash_types": {
+      "content_hash": "SHA-256 over Stem + Choices[A-D] + CorrectChoice + ExplanationCorrect + ExplanationWrong[A-D] (trimmed, whitespace-normalized, keys sorted)",
+      "metadata_hash": "SHA-256 over Difficulty + DifficultyScore + CognitiveLevel + LOSTag + Topic + Section + SectionName",
+      "identity_hash": "SHA-256 over the 6-field compound key string"
+    },
+    "change_classifications": {
+      "CONTENT_CHANGE": "content_hash differs from baseline → requires full re-audit",
+      "METADATA_CHANGE": "metadata_hash differs, content_hash same → requires psychometric review only",
+      "PRESENTATION_CHANGE": "identity fields changed, content same → rare, usually path changes",
+      "NO_CHANGE": "all hashes match baseline → CertifiedDelta, no review needed",
+      "UNCLASSIFIED": "item not in baseline → requires full audit (new item)"
+    }
+  },
+
+  "inheritance_rules": {
+    "authority": "SESSION203_DELTA_ENGINE_SPEC.json §inheritance_rules",
+    "description": "Five inheritance rules (IR-001 through IR-005) determine the review scope for each change classification. These rules encode the delta review decision logic.",
+    "rules": [
+      {
+        "id": "IR-001",
+        "name": "Unchanged → CertifiedDelta",
+        "condition": "content_hash matches baseline. Delta classification = NO_CHANGE. No new scan findings on this item.",
+        "action": "Inherit prior certification decision. Zero review time. Item retains 'Certified' status without re-examination.",
+        "review_type": "NONE",
+        "target_volume": "80% of items (typical certification wave)"
+      },
+      {
+        "id": "IR-002",
+        "name": "EW-Only Change → Targeted Review",
+        "condition": "content_hash differs but only ExplanationWrong fields changed. Stem, Choices, CorrectChoice, ExplanationCorrect unchanged.",
+        "action": "Quality Board reviews only the changed EW fields. Structural integrity (DL-008/DL-026) verified on changed slots only. ~2 minutes per item.",
+        "review_type": "PARTIAL",
+        "target_volume": "~10% of items"
+      },
+      {
+        "id": "IR-003",
+        "name": "Metadata Change → Psychometric Review",
+        "condition": "metadata_hash differs but content_hash same. Difficulty, CognitiveLevel, or LOSTag changed.",
+        "action": "Review the metadata change for psychometric consistency. Verify difficulty calibration. ~2 minutes per item.",
+        "review_type": "PARTIAL",
+        "target_volume": "~4% of items"
+      },
+      {
+        "id": "IR-004",
+        "name": "Content Changed → Full Re-Audit",
+        "condition": "content_hash differs. Stem, Choices, CorrectChoice, or ExplanationCorrect changed.",
+        "action": "Full re-audit: all CAQS dimensions, all structural gates, all content-quality scans. ~8 minutes per item.",
+        "review_type": "FULL",
+        "target_volume": "~3% of items"
+      },
+      {
+        "id": "IR-005",
+        "name": "Conservative Override — New Scan Finding on Unchanged Item",
+        "condition": "content_hash matches baseline but a new defect scanner (added after the item was certified) flags a finding.",
+        "action": "Review the new scan finding only. Do not re-open the full item audit. If finding is confirmed, item moves to REMEDIATE. If false positive, reject the finding and retain CertifiedDelta status. ~3 minutes per item.",
+        "review_type": "TARGETED",
+        "target_volume": "~1-2% of items (rare — only when new defect scanners are added)"
+      }
+    ]
+  },
+
+  "review_classification_metrics": {
+    "DR-001_full_reviews": {
+      "metric": "Full Reviews Required",
+      "description": "Items requiring full re-audit (IR-004: content changed). These are the most expensive review type.",
+      "formula": "full_reviews = items with CONTENT_CHANGE delta classification",
+      "v1_baseline": "100% of items (all 500 per wave received full review)",
+      "v2_target": "<5% of items in scope",
+      "rationale": "IR-004 handles content-changed items (expected ~3%) plus a buffer for edge cases"
+    },
+    "DR-002_partial_reviews": {
+      "metric": "Partial Reviews Required",
+      "description": "Items requiring targeted review of specific changed fields (IR-002: EW-only, IR-003: metadata).",
+      "formula": "partial_reviews = items with METADATA_CHANGE or EW-only CONTENT_CHANGE",
+      "v1_baseline": "0% (Framework v1 had no partial review — everything was full review)",
+      "v2_target": "<15% of items in scope",
+      "rationale": "IR-002 (~10% EW-only changes) + IR-003 (~4% metadata changes) + buffer"
+    },
+    "DR-003_inherited_reviews": {
+      "metric": "Inherited (CertifiedDelta) Reviews",
+      "description": "Items that retain CertifiedDelta status with zero review time (IR-001: unchanged).",
+      "formula": "inherited = items with NO_CHANGE delta classification that pass IR-001",
+      "v1_baseline": "0% (delta review did not exist in v1)",
+      "v2_target": ">80% of items in scope",
+      "rationale": "80% of items are unchanged between waves per S200 Agent I assessment"
+    },
+    "DR-004_skipped_reviews": {
+      "metric": "Skipped Reviews (New Scan Finding Override)",
+      "description": "Items where unchanged content has a new scan finding requiring targeted review (IR-005).",
+      "formula": "skipped_but_reviewed = items with NO_CHANGE content but new scan finding",
+      "v1_baseline": "N/A (no delta review existed)",
+      "v2_target": "<2% of items (rare — only when new scanners deploy)"
+    }
+  },
+
+  "workload_reduction": {
+    "label": "Workload Reduction — v1 vs. v2 Review Effort",
+    "description": "The primary value proposition of delta review: reducing the per-wave review workload by skipping unchanged items. Framework v1 spent 600 minutes per 100 items. Framework v2 targets 61 minutes — a 90% reduction per the S203 engineering estimate. The S202 architecture target is a 77% overall workload reduction.",
+    "per_100_items_model": {
+      "source": "SESSION203_THROUGHPUT_VALIDATION.json §re_review_rate_target",
+      "breakdown": {
+        "v1_effort": {
+          "unchanged_items": "80 items × 8 min = 640 min (but v1 re-reviewed all 100)",
+          "changed_items": "20 items × 8 min = 160 min (v1 full review)",
+          "total": "100 items × 8 min = 800 min (but practical average ~600 min per S203 estimate — some items reviewed faster)"
+        },
+        "v2_effort": {
+          "unchanged_skipped": "80 items × 0 min = 0 min (IR-001 CertifiedDelta)",
+          "ew_only_partial": "10 items × 2 min = 20 min (IR-002 targeted EW review)",
+          "metadata_partial": "4 items × 2 min = 8 min (IR-003 psychometric review)",
+          "content_full": "3 items × 8 min = 24 min (IR-004 full re-audit)",
+          "conservative_override": "3 items × 3 min = 9 min (IR-005 targeted)",
+          "total": "61 min per 100 items"
+        }
+      },
+      "reduction_pct": "90% (600 min → 61 min per 100 items, per S203 engineering estimate)",
+      "framework_target": "77% overall workload reduction (S202 target — includes board consolidation savings beyond delta review alone)"
+    },
+    "formula": "workload_reduction_pct = (1 - v2_effort_minutes / v1_effort_minutes) × 100",
+    "measurement_points": {
+      "per_wave_delta_review_reduction": "Compare review minutes spent vs. what v1 would have spent on the same items",
+      "per_wave_total_reduction": "Delta review reduction + board consolidation reduction + pre-flight reduction",
+      "cumulative_reduction": "Running total from S202 baseline through current phase"
+    }
+  },
+
+  "delta_ledger_metrics": {
+    "label": "Delta Ledger Operational Metrics",
+    "description": "The DELTA_LEDGER.json stores content/metadata/identity hashes for every item. These metrics track ledger health.",
+    "DLM-001_ledger_coverage": {
+      "metric": "Delta Ledger Coverage",
+      "formula": "ledger_coverage = items_with_delta_entry / total_items × 100",
+      "v2_target": "100% — every item must have a delta ledger entry"
+    },
+    "DLM-002_hash_stability": {
+      "metric": "Hash Stability",
+      "description": "Percentage of items whose content_hash is identical across two consecutive Delta Ledger builds on the same pack file. Non-deterministic hashing breaks delta review.",
+      "formula": "hash_stability = items_with_identical_hash_across_builds / total_items × 100",
+      "v2_target": "100% — canonical serialization must produce deterministic hashes"
+    },
+    "DLM-003_ledger_freshness": {
+      "metric": "Ledger Freshness",
+      "description": "Age of the most recent Delta Ledger build. Stale ledgers cannot accurately classify changes.",
+      "formula": "freshness = current_timestamp - latest_ledger_build_timestamp",
+      "v2_target": "<1 session — ledger must be rebuilt at every session T0"
+    }
+  },
+
+  "current_operational_status": {
+    "label": "Delta Review at S322/S350",
+    "status": "INFRASTRUCTURE_BUILT — Delta Ledger Builder (scripts/delta_ledger_builder.js) operational. Baseline hashes computed for all 2,540 items. No historical baseline to compare against yet — all items classified as UNCLASSIFIED.",
+    "delta_ledger_location": "scripts/output/delta_ledger.json",
+    "first_baseline": "S322 delta ledger serves as the T0 baseline. Future sessions will detect changes vs. this baseline.",
+    "readiness_for_phase_2": "Delta review infrastructure is built and self-test passing. Activation requires: (1) at least one completed certification wave to establish a change baseline, (2) Phase 2 Shadow Mode authorization at S830."
+  },
+
+  "trend_tracking": {
+    "label": "Delta Review Effectiveness Trend",
+    "measurements": [
+      {
+        "session": "S322",
+        "phase": "P0",
+        "ledger_built": true,
+        "baseline_established": true,
+        "items_skipped": 0,
+        "skip_rate": "0% (no historical comparison available — first baseline)",
+        "notes": "Delta ledger baseline established. All 2,540 items classified as UNCLASSIFIED. No inheritance possible until second certification wave."
+      },
+      {
+        "session": "S830",
+        "phase": "P1 Exit",
+        "target": "Skip rate >50%, re-review rate <50%",
+        "notes": "First measurement of delta review effectiveness after at least one certification wave under Framework v2."
+      },
+      {
+        "session": "S900",
+        "phase": "P2 Exit",
+        "target": "Skip rate >75%, re-review rate <25%, workload reduction >77%",
+        "notes": "Full delta review effectiveness. 80% of items should be CertifedDelta, zero re-review."
+      }
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_THROUGHPUT_METRICS.json",
+      "reports/SESSION350_SCAN_PERFORMANCE.json",
+      "reports/SESSION350_BOARD_EFFICIENCY_MODEL.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/SESSION203_DELTA_ENGINE_SPEC.json",
+      "reports/SESSION202_DELTA_REVIEW_ENGINEERING.json",
+      "reports/framework_v2/s321/SESSION321_DELTA_ENGINE_SPEC.json"
+    ],
+    "operational_data": "scripts/output/delta_ledger.json"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "registry_metadata": {
+    "version": "1.0",
+    "created_session": "S726",
+    "created_date": "2026-07-26",
+    "created_by": "Agent I — Ownership Acceptance Registry",
+    "status": "ACTIVE",
+    "governing_standard": "SESSION725_POST700_GOVERNANCE_MODEL.md §4 (Acceptance Requirement)",
+    "authoritative_sources": [
+      "SESSION725_OWNERSHIP_MATRIX.json (Agent D — 6 gap resolutions, 25-row Ownership Matrix v2.0)",
+      "SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md (Agent O — §4 Gap Resolution, §3 Stewardship Principles)",
+      "SESSION725_POST700_GOVERNANCE_MODEL.md (Agent E — §4 Acceptance Requirement, §5 Retroactive Acceptance)",
+      "SESSION725_SCAN_METHODOLOGY_STANDARD.md (Agent G — scan methodology authority)",
+      "SESSION725_SERIES_BOUNDARY_AUDIT.json (Agent N — 0/6 Principle 2 acceptances confirmed)",
+      "SESSION725_SESSION_SUMMARY.md (Agent X — 6 gaps resolved at design level, 0 accepted)"
+    ],
+    "state_confirmed_by": [
+      "Agent A (S725 P0 Action Plan — confirmed all 6 gaps assigned, none accepted)",
+      "Agent G (S725 Scan Methodology Standard — confirmed governance detection framework for ownership verification)",
+      "Agent N (S725 Series Boundary Audit — 0/6 acceptances complete per §3.1 checklist item 2)",
+      "Agent X (S725 Session Summary — '6 gaps resolved (design level, 0 accepted)')"
+    ]
+  },
+
+  "governance_rule": "TRANSFER → ACCEPTANCE → APPROVAL → CLOSE. No step may be skipped. ASSIGNED ≠ ACCEPTED. Per Agent E Post-700 Governance Model §2.2 and §4.1.",
+
+  "acceptance_evidence_standards": {
+    "reference": "Agent E Post-700 Governance Model §4.2 (Evidence of Acceptance) and §4.3 (What Does NOT Count as Acceptance)",
+    "valid_forms": [
+      "Explicit 'I accept responsibility for [X]' statement by the receiving owner in a session transcript or dedicated acceptance session report",
+      "Governance Board or Executive Board resolution formally voting to accept the transferred responsibility",
+      "Signed entry in REVISION_HISTORY.md documenting the acceptance by the receiving owner",
+      "Entry in this registry (SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json) with accepted_by, accepted_date, and acceptance_evidence fields populated"
+    ],
+    "invalid_forms": [
+      "Naming a series or agent in a planning document without explicit acceptance statement",
+      "'Recommended assignment' or 'proposed owner' language — not accepted",
+      "'TBD', 'pending', or 'PENDING' in the Ownership Matrix or any acceptance field",
+      "Silence after transfer documentation — absence of objection is not acceptance",
+      "Assignment in SESSION725_OWNERSHIP_MATRIX.json alone (ASSIGNED ≠ ACCEPTED per Agent E §4.1)"
+    ],
+    "acceptance_logged_when": "Any valid form of acceptance is recorded → populate accepted_by, accepted_date, acceptance_evidence in this registry → update acceptance_status from PENDING to ACCEPTED."
+  },
+
+  "gaps": [
+    {
+      "gap_id": "GAP-1",
+      "s725_reference": "S725 section_1_gap_resolution.gaps[0]",
+      "responsibility": "May coaching layer ownership — may-core.js (344,883 bytes, SHA-256: 183D2E6B...) and may-learner-state.js (110,240 bytes, SHA-256: BEE72B86...). Runtime dependency integrated with app.js and consuming Certified pool data. Both files tracked in CURRENT_BASELINES.md §1.",
+      "primary_owner": "100-series Lead (Platform Maintainer)",
+      "secondary_owner": "Governance Auditor (700-series Maintenance Mode)",
+      "escalation_owner": "Governance Board",
+      "assigned_date": "2026-07-26",
+      "assigned_in_session": "S725 (Agent D — Ownership Matrix v2.0, Agent O — Portfolio Stewardship Framework §4.6)",
+      "acceptance_status": "PENDING",
+      "accepted_by": null,
+      "accepted_date": null,
+      "acceptance_evidence": null,
+      "approved_by": null,
+      "approval_date": null,
+      "close_date": null,
+      "blocking": true,
+      "deadline": "S726 T0",
+      "notes": "Deadline passed — escalates to Governance Board at S726 T0 if not accepted. Per Agent O Stewardship Principle 2: receiving owner must explicitly accept. Acceptance criteria: (1) 100-series Lead explicitly accepts May coaching layer ownership, (2) May coaching files included in 100-series T0 hash verification, (3) coaching-layer bug fixes follow 100-series boundary rules (MAY: fix runtime bugs; MAY NOT: create new coaching content or modify pack content).",
+      "stewardship_framework_ref": "Agent O Portfolio Stewardship Framework §1 — May Coaching Layer lane (primary owner: 100-series Lead)",
+      "ownership_matrix_row": 6
+    },
+    {
+      "gap_id": "GAP-2",
+      "s725_reference": "S725 section_1_gap_resolution.gaps[1]",
+      "responsibility": "300→Maintenance model consumption path — who acts on the analytics? 300-series produced DQS, EQS, BQS, ExQS, UIQS, Risk Register, Forecast Engine, and Bottleneck Analysis (S301-S309). No mechanism exists for consuming these analytics. Consumption is split: Reconciliation Agent (700-series) consumes DQS/EQS/BQS/ExQS/UIQS and Risk Register for G1-G5 reconciliation gates. Certification Auditor (800-series) consumes Forecast Engine and Bottleneck Analysis for certification planning.",
+      "primary_owner": "Reconciliation Agent (700-series) + Certification Auditor (800-series) — dual consumption path",
+      "secondary_owner": "300-series Lead (Portfolio Analytics) — responsible for executing S310 as the formal closeout trigger",
+      "escalation_owner": "Governance Board",
+      "assigned_date": "2026-07-26",
+      "assigned_in_session": "S725 (Agent D — Ownership Matrix v2.0, Agent O — Portfolio Stewardship Framework §4.4)",
+      "acceptance_status": "PENDING",
+      "accepted_by": null,
+      "accepted_date": null,
+      "acceptance_evidence": null,
+      "approved_by": null,
+      "approval_date": null,
+      "close_date": null,
+      "blocking": true,
+      "deadline": "S726 T0",
+      "notes": "Deadline passed — escalates to Governance Board at S726 T0 if not accepted. Two accepting entities: Reconciliation Agent must confirm access to all 300-series analytics models and readiness to consume them in G1-G5 gates. Certification Auditor must confirm consumption of Forecast Engine and Bottleneck Analysis for 800-series planning. S310 (Portfolio Operations Dashboard) is the formal 300-series closeout trigger. Consumption path activation at S726 T0.",
+      "stewardship_framework_ref": "Agent O Portfolio Stewardship Framework §4.4 — 300→Maintenance consumption path. Ownership Matrix rows 20 (Reconciliation Agent consumption) and 21 (Certification Auditor consumption).",
+      "ownership_matrix_row": [20, 21]
+    },
+    {
+      "gap_id": "GAP-3",
+      "s725_reference": "S725 section_1_gap_resolution.gaps[2]",
+      "responsibility": "G-NEW-1 through G-NEW-5 enforcement in 800-series certification pipeline. G-NEW-1 through G-NEW-5 are certification-blocking conditions defined in QUESTION_METADATA_STANDARD.md §9.4 (effective Session 508, 2026-07-25). They block certification when: (G-NEW-1) dual-block Choice mismatch, (G-NEW-2) ExplanationWrong topic mismatch, (G-NEW-3) dual-block source-of-truth verification gap, (G-NEW-4) case explanation insufficiency, (G-NEW-5) within-object CorrectChoice extraction. The 800-series certification pipeline currently does not programmatically enforce these rules at scale.",
+      "primary_owner": "Certification Auditor (800-series)",
+      "secondary_owner": "Defect Sweeper (700-series) — secondary auditor detecting G-NEW violations in Certified items during Rapid Pulse and Deep Audits",
+      "escalation_owner": "Governance Board",
+      "assigned_date": "2026-07-26",
+      "assigned_in_session": "S725 (Agent D — Ownership Matrix v2.0, Agent O — Portfolio Stewardship Framework §4.5)",
+      "acceptance_status": "PENDING",
+      "accepted_by": null,
+      "accepted_date": null,
+      "acceptance_evidence": null,
+      "approved_by": null,
+      "approval_date": null,
+      "close_date": null,
+      "blocking": true,
+      "deadline": "Before next 800-series certification wave (S803+); acceptance deadline S726 T0 per Agent O Framework §4 Gap Resolution Summary",
+      "notes": "Acceptance deadline S726 T0; enforcement activation deadline before S803+. Both Certification Auditor and Defect Sweeper must accept. CRITICAL severity — certification without G-NEW enforcement risks certifying items with topic-mismatched or dual-block-contradicted explanations (learner-safety risk per DL-016 HIGH severity upgrade). Any G-NEW violation found in a Certified item escalates as CRITICAL.",
+      "stewardship_framework_ref": "Agent O Portfolio Stewardship Framework §4.5 — G-NEW enforcement. Ownership Matrix row 11 — G-NEW-1 through G-NEW-5 enforcement. QUESTION_METADATA_STANDARD.md §9.4 cross-referenced.",
+      "ownership_matrix_row": 11
+    },
+    {
+      "gap_id": "GAP-4",
+      "s725_reference": "S725 section_1_gap_resolution.gaps[3]",
+      "responsibility": "Defect manifest maintenance after remediation — who updates DEFECT_LIBRARY.md? DEFECT_LIBRARY.md catalogs 33 defect entries (DL-001 through DL-033). Multiple remediation sessions across different lanes modify pack files to fix defects. But DEFECT_LIBRARY.md updates are inconsistent — some remediations documented in REVISION_HISTORY.md but the defect library entry's 'Status' and 'Resolved' sections are not contemporaneously updated.",
+      "primary_owner": "Defect Sweeper (700-series)",
+      "secondary_owner": "Certification Auditor (800-series) — cross-checking defect status during certification waves",
+      "escalation_owner": "Governance Board",
+      "assigned_date": "2026-07-26",
+      "assigned_in_session": "S725 (Agent D — Ownership Matrix v2.0, Agent O — Portfolio Stewardship Framework §4.2)",
+      "acceptance_status": "PENDING",
+      "accepted_by": null,
+      "accepted_date": null,
+      "acceptance_evidence": null,
+      "approved_by": null,
+      "approval_date": null,
+      "close_date": null,
+      "blocking": true,
+      "deadline": "S726 T0",
+      "notes": "Deadline passed — escalates to Governance Board at S726 T0 if not accepted. Upon acceptance, Defect Sweeper must: (1) audit all 33 DL entries against current pack-file state, (2) flag any discrepancy between documented status and actual state, (3) establish protocol: remediation agents append status-change note to DEFECT_LIBRARY.md before session close (per AGENTS.md §12 'No Staged Findings'). Inconsistent defect status tracking misleads governance decisions and certification wave planning.",
+      "stewardship_framework_ref": "Agent O Portfolio Stewardship Framework §4.2 — Defect manifest maintenance. Ownership Matrix rows 2 (defect library maintenance) and 10 (defect manifest updates).",
+      "ownership_matrix_row": [2, 10]
+    },
+    {
+      "gap_id": "GAP-5",
+      "s725_reference": "S725 section_1_gap_resolution.gaps[4]",
+      "responsibility": "300-series S310 dangling closeout — no trigger enforces execution. 300-series completed Sessions S302-S309 (8 of 10 planned), producing DQS, EQS, BQS, ExQS, UIQS, Risk Register, Forecast Engine, and Bottleneck Analysis. S309 recommended S310 (Portfolio Operations Dashboard) as the formal 300-series closeout. S724 confirmed S310 as 'Recommended Next: P0.' But no trigger enforces its execution — it is a dangling commitment with no owner.",
+      "primary_owner": "300-series Lead (Portfolio Analytics)",
+      "secondary_owner": "Reconciliation Agent (700-series) — responsible for triggering S310 if the 300-series Lead is unavailable",
+      "escalation_owner": "Governance Board",
+      "assigned_date": "2026-07-26",
+      "assigned_in_session": "S725 (Agent D — Ownership Matrix v2.0, Agent O — Portfolio Stewardship Framework §4.3)",
+      "acceptance_status": "PENDING",
+      "accepted_by": null,
+      "accepted_date": null,
+      "acceptance_evidence": null,
+      "approved_by": null,
+      "approval_date": null,
+      "close_date": null,
+      "blocking": true,
+      "deadline": "S726 T0",
+      "notes": "Deadline passed — escalates to Governance Board at S726 T0 if not executed. 300-series cannot remain indefinitely in 'pending closeout.' S310 must minimally produce a Portfolio Operations Dashboard aggregating all 300-series analytics. Upon S310 completion, 300-series ownership disposition must be documented per Agent O Principle 3. If 300-series Lead unavailable, Reconciliation Agent triggers S310 per succession plan. If both unavailable, Governance Board decides: spawn new 300-series agent or declare CLOSED with S310 waived.",
+      "stewardship_framework_ref": "Agent O Portfolio Stewardship Framework §4.3 — S310 closeout. Stewardship Principle 3: Series Closure Requires Ownership Disposition. Ownership Matrix row 12 — 300-series S310 closeout.",
+      "ownership_matrix_row": 12
+    },
+    {
+      "gap_id": "GAP-6",
+      "s725_reference": "S725 section_1_gap_resolution.gaps[5]",
+      "responsibility": "CURRENT_BASELINES.md maintenance — who updates after pack writes? CURRENT_BASELINES.md was generated Session 20 (2026-07-24). Updated by Session 530, Session 535, Session 536. No named maintainer. §3 is stale — lists 67 phantom DL-008 items as CRITICAL when Function constructor parse confirms 0 actual (DL-029 forward-scan artifacts). The document tracks 15 file SHA-256 hashes, Certified pool snapshot, defect & risk status, and governance guard status. Five pack-file hashes have drifted from S530 T0 baseline through authorized S530-S537-S722A writes — scheduled for refresh.",
+      "primary_owner": "Baseline Maintainer (700-series Maintenance Mode)",
+      "secondary_owner": "Certification Auditor (800-series) — cross-checking baseline accuracy during certification waves",
+      "escalation_owner": "Governance Board",
+      "assigned_date": "2026-07-26",
+      "assigned_in_session": "S725 (Agent D — Ownership Matrix v2.0, Agent O — Portfolio Stewardship Framework §4.7)",
+      "acceptance_status": "PENDING",
+      "accepted_by": null,
+      "accepted_date": null,
+      "acceptance_evidence": null,
+      "approved_by": null,
+      "approval_date": null,
+      "close_date": null,
+      "blocking": true,
+      "deadline": "S726 T0",
+      "notes": "Deadline passed — escalates to Governance Board at S726 T0 if not accepted. P0 fix: remove 67 phantom DL-008 entries from CURRENT_BASELINES.md §3 and replace with Function-constructor-parse-verified counts (Pack A: 2, Pack B: 0, Pack C: ~6, Pack D: TBD-disputed, Pack E: ~1). P1: automate hash recapture via scripts/t0_baseline_verify.js. After acceptance: re-verify all 15 SHA-256 hashes against current disk files. Enforce baseline refresh cadence: after any ≥3-file write session (M5_BASELINE_REFRESH). Stale baselines mislead all governance sessions — phantom 67 DL-008 items create risk of unnecessary emergency remediation.",
+      "stewardship_framework_ref": "Agent O Portfolio Stewardship Framework §4.7 — CURRENT_BASELINES.md maintenance. Ownership Matrix row 1 — CURRENT_BASELINES.md maintenance.",
+      "ownership_matrix_row": 1
+    }
+  ],
+
+  "acceptance_log": [],
+
+  "acceptance_summary": {
+    "total_gaps": 6,
+    "assigned": 6,
+    "accepted": 0,
+    "pending": 6,
+    "deadline_passed": 6,
+    "governance_board_escalation_triggered": false,
+    "escalation_reason": "ALL 6 gaps have passed their S726 T0 deadline without acceptance. Per Agent O Stewardship Framework §4 Gap Resolution Summary: 'Deadline S726: All 6 gaps must be resolved (owner accepted, transition steps complete) by Session 726's T0. The Governance Auditor reports gap-closure status at S726 T0. Any unresolved gap escalates to the Governance Board.'",
+    "next_action": "Governance Auditor (700-series) must escalate all 6 unaccepted gaps to Governance Board at S726 T0, per Agent O Framework §4 and Agent E Post-700 Governance Model §5.1."
+  },
+
+  "stewardship_principles_referenced": {
+    "principle_1": "No Orphaned Responsibility — Every asset, file, process, and governance responsibility has exactly one named primary owner. Enforced by the Ownership Matrix as authoritative registry.",
+    "principle_2": "Ownership Transfers Require Acceptance — Ownership cannot be transferred by assignment alone. Receiving party must explicitly accept. Unilateral assignment without acceptance is invalid. Original owner retains ownership until acceptance confirmed.",
+    "principle_3": "Series Closure Requires Ownership Disposition — When any series closes, all artifacts and responsibilities must be explicitly disposed: transferred, retired, or converted to stewardship.",
+    "principle_4": "Ownership Is Reviewable at Every Series Boundary Transition — At every transition between active portfolio lanes, the Ownership Matrix is reviewed for correctness.",
+    "principle_5": "Single Point of Accountability per Responsibility — Every responsibility has exactly one primary owner. No responsibility is owned by a committee, shared between equals, or left to 'all lane owners' collectively.",
+    "source": "Agent O Portfolio Stewardship Framework v1.0 §3"
+  },
+
+  "series_transition_governance_referenced": {
+    "rule": "TRANSFER → ACCEPTANCE → APPROVAL → CLOSE. Each step must produce documented evidence before the next step can begin.",
+    "prohibited": "CLOSE → TRANSFER (creates ownership gaps — this is what happened at S723, producing the 6 gaps S724 discovered)",
+    "source": "Agent E Post-700 Governance Model v1.0 §2"
+  },
+
+  "cross_references": {
+    "ownership_matrix_v2": "reports/SESSION725_OWNERSHIP_MATRIX.json",
+    "stewardship_framework": "reports/SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md",
+    "post700_governance_model": "reports/SESSION725_POST700_GOVERNANCE_MODEL.md",
+    "scan_methodology_standard": "reports/SESSION725_SCAN_METHODOLOGY_STANDARD.md",
+    "series_boundary_audit": "reports/SESSION725_SERIES_BOUNDARY_AUDIT.json",
+    "session_summary": "reports/SESSION725_SESSION_SUMMARY.md",
+    "governance_attestation": "reports/SESSION725_GOVERNANCE_ATTESTATION.md",
+    "defect_library": "knowledge/DEFECT_LIBRARY.md",
+    "revision_history": "knowledge/REVISION_HISTORY.md",
+    "question_metadata_standard": "knowledge/QUESTION_METADATA_STANDARD.md §9.4",
+    "current_baselines": "knowledge/CURRENT_BASELINES.md",
+    "agents_md": "AGENTS.md §12"
+  },
+
+  "revision_history": [
+    {
+      "version": "1.0",
+      "date": "2026-07-26",
+      "author": "Agent I — Ownership Acceptance Registry (Session 726)",
+      "summary": "Initial creation. Formal registry established per S726 mandate. All 6 S724 carry-forward ownership gaps documented with full primary/secondary/escalation owner chains, acceptance evidence standards per Agent E §4.2-4.3, and PENDING status confirmed (0 of 6 accepted). Populated from authoritative S725 sources: Ownership Matrix v2.0 (Agent D), Portfolio Stewardship Framework v1.0 (Agent O), Post-700 Governance Model v1.0 (Agent E). All 6 gaps past S726 T0 deadline — Governance Board escalation pending."
+    }
+  ]
+}

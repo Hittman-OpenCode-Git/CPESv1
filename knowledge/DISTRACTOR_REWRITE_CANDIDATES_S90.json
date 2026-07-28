@@ -1,0 +1,549 @@
+{
+  "_metadata": {
+    "session": 90,
+    "title": "Distractor Quality Review — Absolutist / Low-Quality Signals",
+    "date": "2026-07-25",
+    "version": "2.0 (corrected)",
+    "scope": "All 5 packs (2,500 questions). Choices and ExplanationWrong fields scanned for absolutist language patterns.",
+    "total_questions_scanned": 2500,
+    "total_fields_scanned": 15204,
+    "total_raw_hits": 987,
+    "classification_summary": {
+      "KEEP_AS_IS": 977,
+      "CANDIDATE_REWRITE": 10,
+      "REQUIRES_SME": 0
+    },
+    "by_pack": {
+      "A": 227,
+      "B": 130,
+      "C": 231,
+      "D": 190,
+      "E": 209
+    },
+    "by_pack_classification": {
+      "A|KEEP_AS_IS": 224,
+      "A|CANDIDATE_REWRITE": 3,
+      "B|KEEP_AS_IS": 130,
+      "C|KEEP_AS_IS": 224,
+      "C|CANDIDATE_REWRITE": 7,
+      "D|KEEP_AS_IS": 190,
+      "E|KEEP_AS_IS": 209
+    },
+    "corrections_applied": [
+      "Pack B \"all of the above\" items (P1B-E-087, P1B-E-150, P1B-F-100): reclassified KEEP_AS_IS — these are correct answers, not distractors",
+      "P1-E-058 EW C: reclassified KEEP_AS_IS — false positive (\"without exception reports\" = COSO term, not absolutist)",
+      "Pack A items (P1-A-008, P1-B-074, P1-D-004): DL-016 metadata-content mismatch may affect QID association",
+      "Pack C CC-021 through CC-027: confirmed DL-012 clone group with absolutist distractor text"
+    ],
+    "note": "All proposed distractor rewrites are read-only staging. No pack files have been modified. Actual edits require a separate \"apply approved changes\" session after SME review."
+  },
+  "candidates": [
+    {
+      "qid": "P1-A-008",
+      "pack": "A",
+      "section": "A",
+      "question_state": "Certified",
+      "difficulty": "Easy",
+      "topic": "A.009 LIFO liquidation effect",
+      "stem_excerpt": "Zephyr reduced inventory quantities below older LIFO layers during a period of rising costs. Which response is most appr",
+      "choice_label": "Choice A",
+      "is_correct_slot": false,
+      "original_distractor": "Assume LIFO liquidation always decreases income",
+      "classification": "CANDIDATE_REWRITE",
+      "proposed_distractor": "Consider whether the decline in replacement cost is temporary",
+      "rationale": "Replace absolute claim with a more nuanced alternative that a rushed candidate might select. Original: \"Assume LIFO liquidation always decreases income.\"",
+      "dl016_caveat": true,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "always"
+      ]
+    },
+    {
+      "qid": "P1-B-074",
+      "pack": "A",
+      "section": "B",
+      "question_state": "Certified",
+      "difficulty": "Moderate",
+      "topic": "B.075 participative budgeting drawback",
+      "stem_excerpt": "Oakhaven uses participative budgeting, allowing department managers to set their own targets. Beyond budgetary slack, wh",
+      "choice_label": "Choice D",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees higher employee morale in every case",
+      "classification": "CANDIDATE_REWRITE",
+      "proposed_distractor": "It consistently leads to higher employee satisfaction with the budget process",
+      "rationale": "Replace \"guarantees higher employee morale in every case\" with a softened version that still acknowledges the participative budgeting benefit without absolutist language.",
+      "dl016_caveat": true,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_every_case"
+      ]
+    },
+    {
+      "qid": "P1-D-004",
+      "pack": "A",
+      "section": "D",
+      "question_state": "Certified",
+      "difficulty": "Easy",
+      "topic": "D.005 equivalent units concept",
+      "stem_excerpt": "Yukon has partially completed units at period-end. Which response is most appropriate?",
+      "choice_label": "Choice B",
+      "is_correct_slot": false,
+      "original_distractor": "Count partially completed units as zero in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "proposed_distractor": "Exclude partially completed units from the equivalent unit calculation",
+      "rationale": "Replace \"Count partially completed units as zero in all cases\" with a more technically accurate distractor that a candidate confusing process costing with job costing might select.",
+      "dl016_caveat": true,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    },
+    {
+      "qid": "P1-CC-021",
+      "pack": "C",
+      "section": "C",
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "topic": "C.022 transfer pricing negotiated",
+      "stem_excerpt": "Vesper's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is",
+      "choice_label": "Choice D",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees goal congruence in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "issue_tags": [
+        "absolutist_in_all_cases",
+        "dl012_clone_group"
+      ],
+      "proposed_distractor": "It eliminates all transfer pricing disputes between divisions",
+      "rationale": "More nuanced: negotiated pricing may reduce but cannot eliminate all disputes. This is plausible to a candidate who overestimates negotiation benefits.",
+      "risk_level": "LOW",
+      "dl016_caveat": false,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    },
+    {
+      "qid": "P1-CC-022",
+      "pack": "C",
+      "section": "C",
+      "question_state": "Unprocessed",
+      "difficulty": "Easy",
+      "topic": "C.023 transfer pricing negotiated",
+      "stem_excerpt": "Westbrook's divisions negotiate a transfer price between the market price and the selling division's variable cost. What",
+      "choice_label": "Choice D",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees goal congruence in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "issue_tags": [
+        "absolutist_in_all_cases",
+        "dl012_clone_group"
+      ],
+      "proposed_distractor": "It automatically aligns divisional goals with corporate objectives",
+      "rationale": "More realistic: negotiated transfer prices can help align goals but do not do so automatically. Requires ongoing negotiation and may break down under capacity constraints.",
+      "risk_level": "LOW",
+      "dl016_caveat": false,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    },
+    {
+      "qid": "P1-CC-023",
+      "pack": "C",
+      "section": "C",
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "topic": "C.024 transfer pricing negotiated",
+      "stem_excerpt": "Yarrow's divisions negotiate a transfer price between the market price and the selling division's variable cost. What is",
+      "choice_label": "Choice C",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees goal congruence in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "issue_tags": [
+        "absolutist_in_all_cases",
+        "dl012_clone_group"
+      ],
+      "proposed_distractor": "It eliminates the need for top management intervention in transfer pricing",
+      "rationale": "Plausible to a candidate who confuses negotiation with autonomy. Top management may still need to intervene when divisions cannot agree.",
+      "risk_level": "LOW",
+      "dl016_caveat": false,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    },
+    {
+      "qid": "P1-CC-024",
+      "pack": "C",
+      "section": "C",
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "topic": "C.025 transfer pricing negotiated",
+      "stem_excerpt": "Zenith Bay's divisions negotiate a transfer price between the market price and the selling division's variable cost. Wha",
+      "choice_label": "Choice C",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees goal congruence in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "issue_tags": [
+        "absolutist_in_all_cases",
+        "dl012_clone_group"
+      ],
+      "proposed_distractor": "It automatically results in the same transfer price as market-based pricing",
+      "rationale": "Plausible to a candidate who doesn't recognize that negotiated prices can deviate from market when cost structures differ.",
+      "risk_level": "LOW",
+      "dl016_caveat": false,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    },
+    {
+      "qid": "P1-CC-025",
+      "pack": "C",
+      "section": "C",
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "topic": "C.026 transfer pricing negotiated",
+      "stem_excerpt": "Ashgrove's divisions negotiate a transfer price between the market price and the selling division's variable cost. What ",
+      "choice_label": "Choice A",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees goal congruence in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "issue_tags": [
+        "absolutist_in_all_cases",
+        "dl012_clone_group"
+      ],
+      "proposed_distractor": "It prevents all suboptimization by selling divisions",
+      "rationale": "More realistic: negotiation helps but cannot prevent all suboptimization, especially when external market prices fluctuate.",
+      "risk_level": "LOW",
+      "dl016_caveat": false,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    },
+    {
+      "qid": "P1-CC-026",
+      "pack": "C",
+      "section": "C",
+      "question_state": "Unprocessed",
+      "difficulty": "Difficult",
+      "topic": "C.027 transfer pricing negotiated",
+      "stem_excerpt": "Birchwood's divisions negotiate a transfer price between the market price and the selling division's variable cost. What",
+      "choice_label": "Choice D",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees goal congruence in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "issue_tags": [
+        "absolutist_in_all_cases",
+        "dl012_clone_group"
+      ],
+      "proposed_distractor": "It makes the transfer price irrelevant to divisional performance evaluation",
+      "rationale": "Plausible to a candidate who mistakenly thinks negotiation makes the price neutral to both divisions.",
+      "risk_level": "LOW",
+      "dl016_caveat": false,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    },
+    {
+      "qid": "P1-CC-027",
+      "pack": "C",
+      "section": "C",
+      "question_state": "Unprocessed",
+      "difficulty": "Moderate",
+      "topic": "C.028 transfer pricing negotiated",
+      "stem_excerpt": "Copperline's divisions negotiate a transfer price between the market price and the selling division's variable cost. Wha",
+      "choice_label": "Choice C",
+      "is_correct_slot": false,
+      "original_distractor": "It guarantees goal congruence in all cases",
+      "classification": "CANDIDATE_REWRITE",
+      "issue_tags": [
+        "absolutist_in_all_cases",
+        "dl012_clone_group"
+      ],
+      "proposed_distractor": null,
+      "rationale": null,
+      "risk_level": "LOW",
+      "dl016_caveat": false,
+      "notes_for_sme": null,
+      "pattern_hits": [
+        "in_all_cases"
+      ]
+    }
+  ],
+  "keep_as_is_samples": [
+    {
+      "qid": "P1-A-001",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice C",
+      "text_excerpt": "Report it only in footnotes because the sale is future-oriented",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-004",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice D",
+      "text_excerpt": "Recognize revenue only when all cash is collected",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-009",
+      "pack": "A",
+      "section": "A",
+      "field": "EW A",
+      "text_excerpt": "Option A (Assume LIFO liquidation always decreases income) is incorrect. Under CMA Part 1 accounting principles, the correct treatment requires recognize that older low-cost layers may flow into cost ...",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-010",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice B",
+      "text_excerpt": "Recognize impairment only when management plans to expand use",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-011",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice A",
+      "text_excerpt": "Disclose only; never accrue litigation losses",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-012",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice A",
+      "text_excerpt": "Never adjust financial statements for information received after year-end",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-012",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice D",
+      "text_excerpt": "Recognize it only in the next fiscal year because notice came later",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-013",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice C",
+      "text_excerpt": "Record rent only when paid with no liability",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-013",
+      "pack": "A",
+      "section": "A",
+      "field": "EW A",
+      "text_excerpt": "Under ASC 855, Type I subsequent events (conditions that existed at the balance sheet date) require adjustment of the financial statements. The customer's bankruptcy existed at year-end, so adjustment...",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-015",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice C",
+      "text_excerpt": "Consolidate only if the subsidiary pays dividends",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-016",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice D",
+      "text_excerpt": "Eliminate only the cash collected from the subsidiary",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-019",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice C",
+      "text_excerpt": "Use it only to calculate taxable income",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-019",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice D",
+      "text_excerpt": "Limit the report to inventory costing schedules only",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-020",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice A",
+      "text_excerpt": "Disclose only policies that changed during the year",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-020",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice B",
+      "text_excerpt": "Put all accounting policies only in the audit engagement letter",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-021",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice C",
+      "text_excerpt": "Assume U.S. GAAP always capitalizes research costs",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-021",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice D",
+      "text_excerpt": "Assume both frameworks always expense all development costs",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-033",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice B",
+      "text_excerpt": "Recognize the loss only when customers file claims",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-043",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice C",
+      "text_excerpt": "Recognize the loss only when customers file claims",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-063",
+      "pack": "A",
+      "section": "A",
+      "field": "Choice C",
+      "text_excerpt": "Recognize the loss only when customers file claims",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-A-075",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice B",
+      "text_excerpt": "Use only last year actual spending as the strategic plan",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-001",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice D",
+      "text_excerpt": "Assume top-down budgeting always eliminates slack",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-002",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice A",
+      "text_excerpt": "Use only prior-year actuals as the budget",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-002",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice C",
+      "text_excerpt": "Ban participation because it always creates fraud",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-002",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice D",
+      "text_excerpt": "Accept all submitted budgets because managers are always unbiased",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-002",
+      "pack": "A",
+      "section": "B",
+      "field": "EW D",
+      "text_excerpt": "Managers are not always unbiased; they have incentives to build slack into budgets to make targets easier to achieve. Under sound participative budgeting, submitted proposals should be reviewed and ad...",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-003",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice A",
+      "text_excerpt": "Use rolling budgets only for capital projects",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-003",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice C",
+      "text_excerpt": "Replace the budget only after a recession",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-004",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice A",
+      "text_excerpt": "Budget only variable costs and ignore fixed costs",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    },
+    {
+      "qid": "P1-B-004",
+      "pack": "A",
+      "section": "B",
+      "field": "Choice B",
+      "text_excerpt": "Increase every line item by inflation only",
+      "classification": "KEEP_AS_IS",
+      "notes": null
+    }
+  ]
+}

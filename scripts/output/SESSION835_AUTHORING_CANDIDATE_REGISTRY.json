@@ -1,0 +1,159 @@
+{
+  "session": "S835",
+  "title": "Analyze/Evaluate Authoring Candidate Registry",
+  "date": "2026-07-27",
+  "methodology": "Structural scan of 2,540 items across 5 packs. Candidates identified by CognitiveLevel (Apply/Understand) + DifficultyScore (>=3) + analysis-oriented topic patterns.",
+
+  "upgrade_pool_summary": {
+    "total_items": 2540,
+    "apply_items": 1182,
+    "understand_items": 1276,
+    "moderate_plus_items": 1341,
+    "estimated_viable_candidates": "250-300",
+    "selection_criteria": [
+      "Apply or Understand cognitive level (96.8% of pool)",
+      "DifficultyScore >= 3 (Moderate/Difficult, 52.8% of pool)",
+      "Topic contains analysis-oriented keywords (variance, ratio, trend, comparison, etc.)",
+      "Certified state preferred (ready for upgrade without first-pass audit)",
+      "Multi-step calculation or interpretation requirement in stem"
+    ]
+  },
+
+  "candidate_clusters_by_domain": {
+    "Section_A_Financial_Reporting": {
+      "candidate_topics": [
+        "Financial ratio analysis and interpretation",
+        "Cash flow statement classification judgment",
+        "Revenue recognition — performance obligation identification",
+        "Inventory valuation method comparison",
+        "Impairment assessment and measurement",
+        "Lease classification under ASC 842"
+      ],
+      "estimated_candidates": "40-50 items",
+      "pack_distribution": "Packs A, B, C, D (Sections A)"
+    },
+    "Section_B_Planning_Budgeting": {
+      "candidate_topics": [
+        "Cash budget variance reconciliation",
+        "Flexible budget performance evaluation",
+        "Sales forecast accuracy analysis",
+        "Budget variance investigation triggers",
+        "Master budget interrelationship analysis",
+        "Sensitivity analysis for budget assumptions"
+      ],
+      "estimated_candidates": "50-60 items",
+      "pack_distribution": "Packs A, B, C, D (Sections B)"
+    },
+    "Section_C_Performance_Management": {
+      "candidate_topics": [
+        "Material/Labor/OH variance root cause analysis",
+        "Transfer pricing method comparison",
+        "ROI vs Residual Income evaluation",
+        "Balanced scorecard measure selection",
+        "Segment profitability analysis",
+        "Contribution margin analysis by segment",
+        "Sales mix variance interpretation"
+      ],
+      "estimated_candidates": "60-70 items",
+      "pack_distribution": "Packs A, B, C, D (Sections C)"
+    },
+    "Section_D_Cost_Management": {
+      "candidate_topics": [
+        "Cost-volume-profit multi-product break-even analysis",
+        "Make-or-buy differential analysis",
+        "Special order profitability assessment",
+        "Joint cost allocation method comparison",
+        "Activity-based vs traditional costing comparison",
+        "Process costing — FIFO vs weighted average comparison",
+        "Sell-or-process-further decision analysis",
+        "Relevant cost identification in complex scenarios"
+      ],
+      "estimated_candidates": "60-70 items",
+      "pack_distribution": "Packs A, B, C, D (Sections D)"
+    },
+    "Section_E_Internal_Controls": {
+      "candidate_topics": [
+        "Control deficiency severity classification",
+        "COSO component gap analysis",
+        "Segregation of duties conflict identification",
+        "Fraud risk factor assessment",
+        "Control activity effectiveness evaluation",
+        "ERM risk response strategy selection"
+      ],
+      "estimated_candidates": "30-40 items",
+      "pack_distribution": "Packs A, B, C, D, E (Sections E)"
+    },
+    "Section_F_Technology_Analytics": {
+      "candidate_topics": [
+        "Data visualization effectiveness assessment",
+        "ERP control weakness identification",
+        "Data quality issue root cause analysis",
+        "Cybersecurity control evaluation",
+        "System implementation risk assessment",
+        "Analytics method selection for business problem"
+      ],
+      "estimated_candidates": "20-30 items",
+      "pack_distribution": "Packs B, C, D, E (Sections F)"
+    }
+  },
+
+  "ten_analyze_items": {
+    "count": 10,
+    "all_certified": true,
+    "concerns": [
+      "3 of 10 labeled Easy — possible miscategorization (P1-A-001, P1-AC-001, P1-AD-001)",
+      "Only 1 Analyze item in 540 Pack E items",
+      "Pack A has only 1 Analyze item in 500 items",
+      "Section E (Internal Controls) has 0 Analyze items despite being ripe for analysis-level questioning",
+      "Section F (Technology) has 0 Analyze items"
+    ],
+    "items": [
+      {"QID": "P1-A-001", "Pack": "A", "Topic": "Discontinued operation presentation", "Difficulty": "Easy", "Status": "Verified Analyze"},
+      {"QID": "P1B-A-076", "Pack": "B", "Topic": "Transaction price allocation", "Difficulty": "Moderate", "Status": "Verified Analyze"},
+      {"QID": "P1B-C-175", "Pack": "B", "Topic": "Product profitability analysis", "Difficulty": "Moderate", "Status": "Verified Analyze"},
+      {"QID": "P1B-C-176", "Pack": "B", "Topic": "Customer profitability analysis", "Difficulty": "Moderate", "Status": "Verified Analyze"},
+      {"QID": "P1-AC-001", "Pack": "C", "Topic": "Bond premium amortization", "Difficulty": "Easy", "Status": "Possible miscat"},
+      {"QID": "P1-CC-015", "Pack": "C", "Topic": "Residual income calculation", "Difficulty": "Moderate", "Status": "Verified Analyze"},
+      {"QID": "P1-DC-021", "Pack": "C", "Topic": "Variable vs absorption costing", "Difficulty": "Moderate", "Status": "Verified Analyze"},
+      {"QID": "P1-AD-001", "Pack": "D", "Topic": "Accounts receivable factoring", "Difficulty": "Easy", "Status": "Possible miscat"},
+      {"QID": "P1-BD-050", "Pack": "D", "Topic": "Direct materials purchases budget", "Difficulty": "Moderate-Easy", "Status": "Possible miscat"},
+      {"QID": "P1-CD-018", "Pack": "D", "Topic": "Sales mix variance calculation", "Difficulty": "Moderate", "Status": "Verified Analyze"}
+    ]
+  },
+
+  "priority_upgrade_batches": {
+    "batch_1_variance_analysis": {
+      "count": "~25 items",
+      "description": "Existing variance calculation items (Section C/D) → upgrade to Analyze: add root-cause interpretation, multi-variance reconciliation, investigation triggers",
+      "effort": "Medium — explanations need expansion, stems may need scenario update"
+    },
+    "batch_2_ratio_interpretation": {
+      "count": "~25 items",
+      "description": "Ratio calculation items (Section A) → upgrade to Analyze: add trend comparison, industry benchmark comparison, inter-ratio relationship analysis",
+      "effort": "Medium — add comparative data, expand explanations"
+    },
+    "batch_3_decision_analysis": {
+      "count": "~30 items",
+      "description": "Make-or-buy, special order, sell-or-process items (Section D) → upgrade to Analyze/Evaluate: add qualitative factors, capacity constraints, opportunity cost analysis",
+      "effort": "High — requires new distractors, expanded scenarios"
+    },
+    "batch_4_control_assessment": {
+      "count": "~20 items",
+      "description": "Internal control identification items (Section E) → upgrade to Analyze: add deficiency severity assessment, compensating control evaluation",
+      "effort": "Medium — add control scenario complexity"
+    },
+    "batch_5_net_new_evaluate": {
+      "count": "150 items (Phase 1-4 target)",
+      "description": "Net-new Evaluate items built via S836 quality-first pipeline. Cannot upgrade from existing pool — Evaluate requires judgment under ambiguity.",
+      "effort": "Maximum — full authoring from the S836 pipeline"
+    }
+  },
+
+  "rejected_candidates": {
+    "definition_match_items": "~500 items (DL-031 pattern) — stem is definition, answer is term. Not upgradeable without complete rewrite.",
+    "simple_calculation_items": "~400 items — single-step arithmetic. Not viable for Analyze/Evaluate upgrade.",
+    "pack_e_understand_items": "416 items — Pack E's 77% Understand concentration is mostly definitional. Low upgrade potential without full stem rewrite."
+  },
+
+  "governance_note": "All items in this registry are Certified. Upgrading cognitive level requires Explanation + metadata changes only; CorrectChoice must not change unless independently verified per CAQS §5.1. Governance guard Rule 4 (answer-key WARN) applies to any difficulty recalibration."
+}

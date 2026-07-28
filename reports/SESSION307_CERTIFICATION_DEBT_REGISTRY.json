@@ -1,0 +1,77 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "modelVersion": "S307-CERT-1.0",
+  "summary": {
+    "totalUncertified": 358,
+    "totalCertified": 2181,
+    "totalMCQ": 2500,
+    "pctCertified": "87.2",
+    "uncertifiedDetail": {
+      "Unprocessed": 187,
+      "Archived": 132,
+      "InAudit": 39
+    }
+  },
+  "byPack": {
+    "Pack A": {
+      "total": 500,
+      "cert": 481,
+      "sections": {
+        "B": "partial",
+        "C": "partial",
+        "F": "partial"
+      }
+    },
+    "Pack B": {
+      "total": 500,
+      "cert": 500,
+      "sections": {}
+    },
+    "Pack C": {
+      "total": 500,
+      "cert": 350,
+      "sections": {
+        "C": "In Audit",
+        "D": "In Audit",
+        "E": "In Audit/Unprocessed",
+        "F": "In Audit/Unprocessed"
+      }
+    },
+    "Pack D": {
+      "total": 500,
+      "cert": 350,
+      "sections": {
+        "C": "In Audit (DL-026)",
+        "E": "In Audit/Unprocessed",
+        "F": "In Audit/Unprocessed"
+      }
+    },
+    "Pack E": {
+      "total": 500,
+      "cert": 500,
+      "sections": {
+        "C": "In Audit/Unprocessed"
+      }
+    }
+  },
+  "modernizationCandidates": [
+    {
+      "scope": "Pack C/D Sections E/F",
+      "items": 112,
+      "reason": "Clone rotation artifacts (86-90%)",
+      "effort": "3-4 sessions"
+    },
+    {
+      "scope": "Pack E Section C",
+      "items": 95,
+      "reason": "DL-021 — zero distractor EW, 78.8% Understand",
+      "effort": "2-3 sessions"
+    },
+    {
+      "scope": "Pack A Sections B/C/F",
+      "items": 19,
+      "reason": "Partial certification, last block before 100%",
+      "effort": "1-2 sessions"
+    }
+  ]
+}

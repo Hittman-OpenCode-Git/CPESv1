@@ -1,0 +1,11 @@
+{
+  "reportId": "SESSION255_DATA_SOURCE_INVENTORY",
+  "verdict": "PARTIAL",
+  "sources": {
+    "operational": 0,
+    "structural": 4,
+    "aspirational": 1
+  },
+  "structuralSources": ["may-learner-state.js", "student_exposure_index.js", "scored_cases.js (x5)", "app.js + may-core.js"],
+  "aspirationalSources": ["challenge_registry.json (synthetic seed)"]
+}

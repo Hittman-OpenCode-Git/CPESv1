@@ -1,0 +1,136 @@
+{
+  "session": "310",
+  "title": "Domain Status Dashboard — A through F",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "domains": {
+    "A": {
+      "label": "External Financial Reporting",
+      "certification": {
+        "rate": "98.2%",
+        "debt": "LOW",
+        "remaining": 8
+      },
+      "quality": {
+        "uiqs": 70.3,
+        "dqs": 74,
+        "eqs": 27
+      },
+      "rewriteDebt": 250,
+      "status": "HEALTHY — Quality polish only"
+    },
+    "B": {
+      "label": "Planning, Budgeting & Forecasting",
+      "certification": {
+        "rate": "98.9%",
+        "debt": "LOW",
+        "remaining": 6
+      },
+      "quality": {
+        "uiqs": 71.3,
+        "dqs": 71,
+        "eqs": 23
+      },
+      "rewriteDebt": 286,
+      "status": "HEALTHY — Quality polish only"
+    },
+    "C": {
+      "label": "Performance Management",
+      "certification": {
+        "rate": "98.3%",
+        "debt": "LOW",
+        "remaining": 12
+      },
+      "quality": {
+        "uiqs": 74.1,
+        "dqs": 70,
+        "eqs": 27
+      },
+      "rewriteDebt": 454,
+      "status": "HEALTHY — Quality polish only"
+    },
+    "D": {
+      "label": "Cost Management",
+      "certification": {
+        "rate": "98.7%",
+        "debt": "LOW",
+        "remaining": 6
+      },
+      "quality": {
+        "uiqs": 70.1,
+        "dqs": 76,
+        "eqs": 29
+      },
+      "rewriteDebt": 192,
+      "status": "HEALTHY — Quality polish only"
+    },
+    "E": {
+      "label": "Internal Controls",
+      "certification": {
+        "rate": "59.6%",
+        "debt": "HIGH",
+        "remaining": 167
+      },
+      "quality": {
+        "uiqs": 62.5,
+        "dqs": 58,
+        "eqs": 30
+      },
+      "rewriteDebt": 238,
+      "status": "CRITICAL — Active bottleneck"
+    },
+    "F": {
+      "label": "Technology & Analytics",
+      "certification": {
+        "rate": "65.3%",
+        "debt": "HIGH",
+        "remaining": 149
+      },
+      "quality": {
+        "uiqs": 62.4,
+        "dqs": 55,
+        "eqs": 24
+      },
+      "rewriteDebt": 211,
+      "status": "CRITICAL — Active bottleneck"
+    }
+  },
+  "domainRanking": [
+    {
+      "rank": 1,
+      "domain": "C",
+      "uiqs": 74.1,
+      "status": "Best — fully certified, quality polish only"
+    },
+    {
+      "rank": 2,
+      "domain": "B",
+      "uiqs": 71.3,
+      "status": "Strong — 98.9% certified, low debt"
+    },
+    {
+      "rank": 3,
+      "domain": "A",
+      "uiqs": 70.3,
+      "status": "Good — 98.2% certified, EC length issues"
+    },
+    {
+      "rank": 4,
+      "domain": "D",
+      "uiqs": 70.1,
+      "status": "Good — 98.7% certified, cost topics strong"
+    },
+    {
+      "rank": 5,
+      "domain": "E",
+      "uiqs": 62.5,
+      "status": "Bottleneck — 59.6% certified, 129 clone artifacts"
+    },
+    {
+      "rank": 6,
+      "domain": "F",
+      "uiqs": 62.4,
+      "status": "Bottleneck — 65.3% certified, 149 greenfield"
+    }
+  ]
+}

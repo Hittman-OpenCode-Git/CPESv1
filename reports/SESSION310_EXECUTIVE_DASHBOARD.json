@@ -1,0 +1,103 @@
+{
+  "session": "310",
+  "title": "Executive Status Dashboard — Unified Portfolio View",
+  "generated": "2026-07-26T23:32:45.887Z",
+  "version": "S310-1.0",
+  "laneStatus": {
+    "lane100": {
+      "label": "100-Series (Foundation)",
+      "status": "CLOSED",
+      "sessions": 0,
+      "description": "Foundation established; maintenance triggers only"
+    },
+    "lane300": {
+      "label": "300-Series (Analytics)",
+      "status": "CLOSING",
+      "sessions": "S302-S310",
+      "description": "Foundational analytics program completing with S310 dashboard"
+    },
+    "lane500": {
+      "label": "500-Series (Cases)",
+      "status": "CLOSED",
+      "sessions": 0,
+      "description": "ENHANCED_CASE_BASE 100% certified (S537)"
+    },
+    "lane700": {
+      "label": "700-Series (Governance)",
+      "status": "CLOSED",
+      "sessions": 0,
+      "description": "Governance remediation complete; maintenance triggers only"
+    },
+    "lane800": {
+      "label": "800-Series (Modernization)",
+      "status": "ACTIVE",
+      "sessions": "17 expected",
+      "description": "Primary execution program; Domain E replacement + Domain F authoring + case-bank EW"
+    }
+  },
+  "programStatus": {
+    "certificationProgram": {
+      "status": "87.3%",
+      "target": "100%",
+      "remaining": "319 items",
+      "estimatedSessions": 17
+    },
+    "modernizationProgram": {
+      "status": "DEFERRED",
+      "target": "Post-cert",
+      "savings": "10 sessions on critical path"
+    },
+    "ewProgram": {
+      "status": "17% fill",
+      "target": "88% fill",
+      "remaining": "~2,942 slots",
+      "estimatedSessions": "6-8"
+    },
+    "series600": {
+      "status": "DEFERRED",
+      "rationale": "Startup cost equals projected savings (3-4 sessions each)"
+    }
+  },
+  "portfolioAtAGlance": {
+    "totalItems": 2900,
+    "certified": 2272,
+    "certificationPct": "78.3",
+    "portfolioUIQS": 68.8,
+    "domainsAbove80": 0,
+    "domainsBelow70": 2,
+    "criticalRisks": 1,
+    "openDefects": 4
+  },
+  "decisionRegistry": {
+    "DL-008 Closed": {
+      "decision": "CONFIRMED 0 items. DL-029 false positive. No remediation needed.",
+      "source": "S309 Agent B",
+      "status": "CLOSED"
+    },
+    "Domain E Strategy": {
+      "decision": "REPLACE 129 archived clones rather than repair. Author 129 new unique items.",
+      "source": "S309 Agent D",
+      "status": "ACCEPTED"
+    },
+    "Domain F Strategy": {
+      "decision": "Greenfield author 149 items. Pack B Section F benchmark.",
+      "source": "S309 Agent E",
+      "status": "ACCEPTED"
+    },
+    "600-Series Deferral": {
+      "decision": "DEFER. Startup cost = projected savings. No net benefit.",
+      "source": "S309 Agent J",
+      "status": "ACCEPTED"
+    },
+    "Modernization Deferral": {
+      "decision": "DEFER modernization to post-cert phase. Saves 10 sessions.",
+      "source": "S309 Agent I",
+      "status": "ACCEPTED"
+    },
+    "EW Factory Model": {
+      "decision": "ADOPT. 28% throughput improvement.",
+      "source": "S309 Agent N",
+      "status": "ACCEPTED"
+    }
+  }
+}

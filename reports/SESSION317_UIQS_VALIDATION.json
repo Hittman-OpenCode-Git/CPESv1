@@ -1,0 +1,119 @@
+{
+  "title": "SESSION317_UIQS_VALIDATION",
+  "session": "317",
+  "generated": "2026-07-27",
+  "validator": "S317 Agent M — UIQS Validation",
+  "specification": "S306 UIQS (as embedded in S311 execution spec)",
+  "methodology": "Scored each item across 5 dimensions (1-100): Stem Quality (clarity, precision), Distractor Quality (plausibility, instructional value), Explanation Quality (coaching depth, misconception correction), Technical Accuracy (framework alignment, citations), Learner Safety (ambiguity risk, misleading feedback risk).",
+  "overall_score": 90,
+  "grade": "A-",
+  "item_scores": [
+    {
+      "QuestionID": "P1-E-R34",
+      "LO": "E.1.a",
+      "Stem": 88,
+      "Distractor": 85,
+      "Explanation": 92,
+      "Technical": 95,
+      "Safety": 90,
+      "ItemAvg": 90
+    },
+    {
+      "QuestionID": "P1-E-R35",
+      "LO": "E.1.a",
+      "Stem": 90,
+      "Distractor": 82,
+      "Explanation": 88,
+      "Technical": 93,
+      "Safety": 88,
+      "ItemAvg": 88
+    },
+    {
+      "QuestionID": "P1-E-R36",
+      "LO": "E.1.a",
+      "Stem": 92,
+      "Distractor": 88,
+      "Explanation": 90,
+      "Technical": 95,
+      "Safety": 89,
+      "ItemAvg": 91
+    },
+    {
+      "QuestionID": "P1-E-R26",
+      "LO": "E.1.i",
+      "Stem": 89,
+      "Distractor": 90,
+      "Explanation": 93,
+      "Technical": 96,
+      "Safety": 91,
+      "ItemAvg": 92
+    },
+    {
+      "QuestionID": "P1-E-R27",
+      "LO": "E.1.i",
+      "Stem": 87,
+      "Distractor": 86,
+      "Explanation": 91,
+      "Technical": 94,
+      "Safety": 88,
+      "ItemAvg": 89
+    },
+    {
+      "QuestionID": "P1-E-R29",
+      "LO": "E.1.i",
+      "Stem": 85,
+      "Distractor": 84,
+      "Explanation": 87,
+      "Technical": 92,
+      "Safety": 90,
+      "ItemAvg": 88
+    },
+    {
+      "QuestionID": "P1-E-R37",
+      "LO": "E.1.d",
+      "Stem": 91,
+      "Distractor": 92,
+      "Explanation": 95,
+      "Technical": 96,
+      "Safety": 93,
+      "ItemAvg": 93
+    },
+    {
+      "QuestionID": "P1-E-R38",
+      "LO": "E.1.d",
+      "Stem": 93,
+      "Distractor": 89,
+      "Explanation": 93,
+      "Technical": 97,
+      "Safety": 92,
+      "ItemAvg": 93
+    },
+    {
+      "QuestionID": "P1-E-R39",
+      "LO": "E.1.h",
+      "Stem": 88,
+      "Distractor": 87,
+      "Explanation": 91,
+      "Technical": 95,
+      "Safety": 90,
+      "ItemAvg": 90
+    },
+    {
+      "QuestionID": "P1-E-R40",
+      "LO": "E.1.b",
+      "Stem": 86,
+      "Distractor": 88,
+      "Explanation": 90,
+      "Technical": 94,
+      "Safety": 87,
+      "ItemAvg": 89
+    }
+  ],
+  "dimension_averages": {
+    "Stem": 89,
+    "Distractor": 87,
+    "Explanation": 91,
+    "Technical": 95,
+    "Safety": 90
+  }
+}

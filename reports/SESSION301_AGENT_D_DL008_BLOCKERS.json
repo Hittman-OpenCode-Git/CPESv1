@@ -1,0 +1,35 @@
+{
+  "agent": "D",
+  "session": "S301",
+  "phase": 2,
+  "defect": "DL-008",
+  "scope": {
+    "currently_blocking_certified_items": 67,
+    "affected_packs": {
+      "A": { "qids": ["P1-B-001", "P1-B-025"], "count": 2, "sections": ["B"] },
+      "C": { "qids": "174-item cluster (CC-rotation artifact)", "count": 55, "sections": ["A", "B"] },
+      "D": { "qids": "AD-047/048/054/055, BD-017/021-024/057-059, DD-028-029 area", "count": 10, "sections": ["A", "B", "D"] }
+    },
+    "largest_cluster": {
+      "pack": "C",
+      "sections": ["A", "B"],
+      "items": 174,
+      "special_condition": "CC-rotation artifact: 129 of 174 have CorrectChoice != ExplanationCorrect best match, making simple EW[CC] clear unsafe",
+      "requires": "CorrectChoice audit before EW[CC] remediation"
+    }
+  },
+  "buckets": {
+    "calculation_summary": { "estimated_pct": 46, "action": "Mechanical clear — safe, zero content loss" },
+    "fragmentary_conceptual": { "estimated_pct": 54, "action": "Editorial review — merge into EC, relocate, or remove" },
+    "misattributed_distractor": { "estimated_pct": 0, "action": "Re-attribute to correct ExplanationWrong slot" }
+  },
+  "remediation_effort": {
+    "bucket_1_sessions": 1,
+    "bucket_2_sessions": 2,
+    "cc_audit_sessions": 1,
+    "total_estimated_sessions": 4,
+    "notes": "Pack C CC audit is prerequisite — cannot safely clear EW[CC] until CorrectChoice is verified"
+  },
+  "learner_pool_exposure": true,
+  "governance_gate": "RULE 2 BLOCK active in governance-guard.js"
+}

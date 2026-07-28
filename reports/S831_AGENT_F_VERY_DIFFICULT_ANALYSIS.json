@@ -1,0 +1,378 @@
+{
+  "session": "S831",
+  "agent": "F",
+  "phase": "Analysis",
+  "task": "Very Difficult gap analysis and creation/recalibration pathways",
+  "timestamp": "2026-07-27",
+  "methodology": {
+    "scan_tools": [
+      "String-aware brace-matched parser for all 5 pack files",
+      "Direct field extraction: CognitiveLevel, DifficultyScore, question_state, ExplanationCorrect length",
+      "R-series independent pipeline analysis (Pack E, 40 supplemental items)"
+    ],
+    "files_scanned": [
+      "pack_a_corrected.js (500 items)",
+      "pack_b_corrected.js (500 items)",
+      "pack_c_corrected.js (500 items)",
+      "pack_d_corrected.js (500 items)",
+      "pack_e_corrected.js (540 items)"
+    ],
+    "total_mcq_inventory": 2540
+  },
+  "current_state": {
+    "very_difficult_count": 0,
+    "very_difficult_pct": 0.0,
+    "target_count": 254,
+    "target_pct": 10.0,
+    "shortfall": 254,
+    "difficult_count": 85,
+    "difficult_pct": 3.35,
+    "difficult_shortfall_vs_target": 466,
+    "analyze_count": 10,
+    "analyze_pct": 0.39,
+    "evaluate_count": 0,
+    "evaluate_pct": 0.0,
+    "root_cause": "Template rotation pipeline produced items overwhelmingly at Understand/Apply levels (97%). Only 10 Analyze items exist (0.39%), and 0 Evaluate items. Very Difficult items require Analyze/Evaluate cognitive design that the pipeline never produced. The existing 85 'Difficult' items earn their label through calculation complexity, not cognitive complexity — 81/85 (95.3%) are at Apply level.",
+    "cognitive_distribution": {
+      "Remember": 72,
+      "Understand": 1251,
+      "Apply": 1177,
+      "Analyze": 10,
+      "Evaluate": 0
+    },
+    "per_pack_cognitive": {
+      "pack_a": {"Remember": 3, "Understand": 215, "Apply": 281, "Analyze": 1, "Evaluate": 0},
+      "pack_b": {"Remember": 41, "Understand": 130, "Apply": 326, "Analyze": 3, "Evaluate": 0},
+      "pack_c": {"Remember": 11, "Understand": 230, "Apply": 226, "Analyze": 3, "Evaluate": 0},
+      "pack_d": {"Remember": 7, "Understand": 260, "Apply": 230, "Analyze": 3, "Evaluate": 0},
+      "pack_e": {"Remember": 10, "Understand": 416, "Apply": 114, "Analyze": 0, "Evaluate": 0}
+    },
+    "per_pack_difficult": {
+      "pack_a": 0,
+      "pack_b": 29,
+      "pack_c": 14,
+      "pack_d": 20,
+      "pack_e": 22
+    },
+    "difficult_items_by_section": {
+      "A": 5,
+      "B": 27,
+      "C": 37,
+      "D": 13,
+      "E": 0,
+      "F": 3
+    }
+  },
+  "phase_1_emergency_bridge": {
+    "target": "15-20 recalibrated items to reach ~0.6-0.8% Very Difficult (not the optimistic 2% previously estimated)",
+    "feasibility": "LOW — only 4 of 85 Difficult items are at Analyze cognitive level. Recalibrating Apply-level calculation items to Very Difficult would be a psychometric fraud — they lack multi-concept integration, professional judgment, and ambiguous fact patterns required for score 5.",
+    "feasibility_rationale": "CAQS v1.0 §1.6 Dimension 3 (Difficulty Calibration) requires that 'the cognitive demand implied by the LOS is consistent with the question's stated difficulty and Bloom's level.' An Apply-level item with a single calculation path cannot be cognitively consistent with Very Difficult, regardless of calculation length.",
+    "candidate_pool": {
+      "tier_1_best_fit": {
+        "description": "Analyze-level Difficult items (4 items). These are the ONLY items with cognitive level that plausibly supports Very Difficult.",
+        "items": [
+          {
+            "qid": "P1B-C-174",
+            "pack": "pack_b",
+            "section": "C",
+            "cognitive": "Analyze",
+            "difficulty": "Easy",
+            "difficulty_score": 4,
+            "ec_length": 310,
+            "topic": "Customer profitability analysis",
+            "rationale": "Cost-to-serve analysis requiring identification of cost drivers across multiple service dimensions. Genuinely analytical — not just calculation. Difficulty label inconsistency (Easy but DS=4) should be fixed in same pass."
+          },
+          {
+            "qid": "P1B-C-175",
+            "pack": "pack_b",
+            "section": "C",
+            "cognitive": "Analyze",
+            "difficulty": "Difficult",
+            "difficulty_score": 4,
+            "ec_length": 209,
+            "topic": "Product profitability analysis (ABC)",
+            "rationale": "Multi-step ABC calculation with batch-level cost drivers. Requires analysis of cost hierarchy (batch vs unit)."
+          },
+          {
+            "qid": "P1-CC-014",
+            "pack": "pack_c",
+            "section": "C",
+            "cognitive": "Analyze",
+            "difficulty": "Easy",
+            "difficulty_score": 4,
+            "ec_length": 154,
+            "topic": "ROI DuPont decomposition",
+            "rationale": "Requires understanding of how profit margin and asset turnover interact. Difficulty label inconsistency (Easy but DS=4)."
+          },
+          {
+            "qid": "P1-DC-020",
+            "pack": "pack_c",
+            "section": "D",
+            "cognitive": "Analyze",
+            "difficulty": "Easy",
+            "difficulty_score": 4,
+            "ec_length": 169,
+            "topic": "Joint cost allocation method selection",
+            "rationale": "Requires analytical judgment about which allocation method fits the scenario. Difficulty label inconsistency."
+          }
+        ]
+      },
+      "tier_2_marginal": {
+        "description": "Apply-level Difficult items with long explanations. Marginally defensible if they involve genuine multi-step reasoning with business interpretation, but recalibration is a stretch.",
+        "count": 15,
+        "best_candidates": [
+          {"qid": "P1B-D-144", "topic": "Relevant costing", "ec_length": 476, "rationale": "Longest EC among all Difficult items — suggests deep scenario. Relevant costing decisions inherently involve judgment about which costs matter."},
+          {"qid": "P1E-B-079", "topic": "Cost function / fixed cost", "ec_length": 426, "rationale": "Long EC suggesting complex cost behavior analysis."},
+          {"qid": "P1B-C-111", "topic": "Variance analysis", "ec_length": 420, "rationale": "Multi-step variance decomposition."},
+          {"qid": "P1E-B-065", "topic": "Production budget calculation", "ec_length": 407, "rationale": "Multi-step budget cascade."},
+          {"qid": "P1E-B-044", "topic": "Moving average calculation", "ec_length": 402, "rationale": "Multi-period forecast with smoothing."},
+          {"qid": "P1B-C-184", "topic": "Variance investigation", "ec_length": 393, "rationale": "Requires judgment about WHEN to investigate — not just calculation."},
+          {"qid": "P1B-C-108", "topic": "Variance analysis", "ec_length": 387, "rationale": "Comprehensive variance."},
+          {"qid": "P1B-C-114", "topic": "Variance analysis", "ec_length": 384, "rationale": "Comprehensive variance."},
+          {"qid": "P1B-C-120", "topic": "Sales variance analysis", "ec_length": 381, "rationale": "Revenue-side variance decomposition."},
+          {"qid": "P1B-C-143", "topic": "ROI and residual income", "ec_length": 264, "rationale": "Dual metric analysis requiring business interpretation."},
+          {"qid": "P1B-A-139", "topic": "Equity method — investee losses", "ec_length": 258, "rationale": "Complex GAAP rule with threshold application."},
+          {"qid": "P1B-A-149", "topic": "EPS — treasury stock method", "ec_length": 221, "rationale": "Diluted EPS is inherently complex."},
+          {"qid": "P1B-B-199", "topic": "Learning curve — practical application", "ec_length": 200, "rationale": "Requires understanding logarithmic vs linear application."},
+          {"qid": "P1B-C-154", "topic": "Transfer pricing", "ec_length": 309, "rationale": "Requires multi-party economic analysis."},
+          {"qid": "P1B-D-138", "topic": "CVP analysis", "ec_length": 209, "rationale": "Multi-product CVP with sensitivity."}
+        ]
+      },
+      "tier_3_r_series": {
+        "description": "Pack E R-series items (40 items). Authored independently of template pipeline. All currently Moderate or below. Long EC lengths (900-1450 chars) suggest rich content. Could be upgraded with supplemental multi-exhibit scenarios.",
+        "count": 40,
+        "current_state": "All Moderate/Easy/Moderate-Easy. 0 Difficult. 0 Analyze cognitive level. All Certified.",
+        "upgrade_potential": "10-15 items could be upgraded to Very Difficult if enriched with multi-exhibit scenarios, additional distractor analysis, and professional judgment components."
+      }
+    },
+    "realistic_phase_1_yield": {
+      "tier_1_confirmed": 4,
+      "tier_2_stretch": 10,
+      "tier_3_with_enhancement": 8,
+      "total_plausible": 22,
+      "post_phase_1_pct": 0.87,
+      "recommendation": "Recalibrate the 4 Tier 1 items (Analyze-level) to Very Difficult as a bridge. Select up to 10 Tier 2 items for upgrade after content enhancement. The 22-item yield reaches ~0.87%, far short of the 2% target. Phase 1 alone cannot close the gap — content creation is mandatory."
+    }
+  },
+  "phase_2_content_creation": {
+    "target": "125-254 new Very Difficult items to reach 5-10%",
+    "strategy": "Author new items at Analyze and Evaluate cognitive levels. These items MUST integrate 3+ concepts, require professional judgment, and employ plausible distractors targeting specific misconceptions.",
+    "per_section_allocation": {
+      "A__External_Financial_Reporting": {
+        "count": 40,
+        "rationale": "15% of 254 items. Financial reporting has the richest multi-standard integration opportunities.",
+        "best_topics": [
+          "Comprehensive EPS calculation (basic + diluted + treasury stock + contingently issuable shares)",
+          "Multi-standard revenue recognition scenario (ASC 606 5-step with multiple performance obligations, variable consideration, significant financing component)",
+          "Statement of cash flows: indirect method with 8+ reconciling items + non-cash disclosure judgment",
+          "Comprehensive financial ratio analysis: calculate 5+ ratios from a full set of financial statements, identify which ratios signal which problems, recommend action",
+          "Inventory + LCM + purchase commitments: combined scenario requiring multiple GAAP applications",
+          "Long-lived assets: impairment testing (ASC 360) + depreciation change in estimate + asset retirement obligation in one scenario",
+          "Equity method + OCI + fair value option: scenario where candidate identifies correct classification for multiple investments",
+          "Income tax: deferred tax asset valuation allowance + uncertain tax position + rate change in one scenario"
+        ]
+      },
+      "B__Planning_Budgeting_Forecasting": {
+        "count": 50,
+        "rationale": "20% of 254 items. Budgeting is inherently multi-step and integrative — ideal for Very Difficult.",
+        "best_topics": [
+          "Comprehensive master budget cascade: sales → production → DM → DL → OH → COGS → S&A → cash budget → pro forma statements (multi-item set)",
+          "Cash budget with: collections pattern + disbursements timing + minimum balance + line of credit + interest calculation + sensitivity to 20% sales drop",
+          "Flexible budget performance report: parse 3 columns (static, flexible, actual), identify all variances, isolate volume vs. price vs. efficiency",
+          "Zero-based budgeting implementation scenario: evaluate 4 decision packages with cost-benefit, rank by strategic priority",
+          "Probabilistic budgeting: expected value with 3 scenarios, sensitivity to probability changes, identify key assumption risk",
+          "Rolling forecast vs. traditional annual budget: evaluate scenario where candidate identifies which approach fits the business context",
+          "Learning curve + production budget + staffing: combined scenario where learning curve affects labor hours which affects production budget which affects hiring",
+          "Kaizen budgeting + variance analysis: continuous improvement targets with variance investigation thresholds"
+        ]
+      },
+      "C__Performance_Management": {
+        "count": 50,
+        "rationale": "20% of 254 items. Performance management has the richest existing Difficult cluster (37 items in Section C at DS=4).",
+        "best_topics": [
+          "Comprehensive 4-variance analysis: spending + efficiency + budget + volume for both variable and fixed OH on one scenario",
+          "Mix + yield variance: 3-product sales mix variance with market size + market share decomposition",
+          "Transfer pricing with capacity constraint: 3 divisions, one at capacity, negotiate transfer price considering opportunity cost + market price + variable cost + dual rate",
+          "ROI vs. Residual Income conflict: division manager rejects project that's good for company but hurts division ROI — candidate evaluates decision",
+          "Balanced scorecard: given 4 perspectives with 12 metrics, identify which 2 metrics show performance gap, recommend strategic initiative",
+          "Customer profitability analysis (multi-dimensional): cost-to-serve + product mix + pricing strategy",
+          "Segment reporting: contribution margin format with traceable vs. common fixed costs, make-or-drop decision with segment margin analysis",
+          "Productivity + efficiency + effectiveness: integrated scenario with OEE, labor productivity, material yield"
+        ]
+      },
+      "D__Cost_Management": {
+        "count": 40,
+        "rationale": "15% of 254 items. Cost management has natural multi-concept integration opportunities.",
+        "best_topics": [
+          "Comprehensive CVP: 3 products with different CM ratios + tax rate + target after-tax income + sensitivity to 10% price change + operating leverage calculation",
+          "Relevant costing decision matrix: make-or-buy + special order + drop-segment + product-mix-constraint (4 decisions, one scenario)",
+          "Joint product: 3 products, allocate via NRV + physical measures + constant GM%, then sell-or-process-further decision for each",
+          "ABC vs. traditional costing: same company, compare product costs under both methods, identify which products are over/under-costed, recommend pricing change",
+          "Service department cost allocation: 3 service departments, 2 production departments, use direct + step + reciprocal methods, compare results",
+          "Process costing with spoilage: weighted average + FIFO, normal vs. abnormal spoilage, transferred-in costs",
+          "Theory of Constraints: identify bottleneck, calculate throughput per constraint unit, determine optimal product mix, evaluate capacity expansion"
+        ]
+      },
+      "E__Internal_Controls": {
+        "count": 40,
+        "rationale": "15% of 254 items. Internal controls currently has 0 Difficult items and 0 Analyze items — the most severe gap. Rich opportunity for scenario-based evaluation items.",
+        "best_topics": [
+          "COSO ERM scenario evaluation: 5-component analysis of a company's risk management, identify missing components, recommend improvements",
+          "Fraud triangle analysis: scenario with pressure, opportunity, rationalization indicators — candidate identifies which element is most acute and recommends control",
+          "Segregation of duties in ERP: 4 roles, 8 transactions, candidate identifies SoD conflicts and proposes role reconfiguration",
+          "Control deficiency classification: 3 deficiencies in one scenario — classify each as deficiency/significant deficiency/material weakness, explain threshold",
+          "COSO Internal Control evaluation: assess control environment + risk assessment + control activities + information/communication + monitoring from a narrative scenario",
+          "IT general controls vs. application controls: 6 controls in a scenario, classify each, identify control gaps",
+          "Foreign Corrupt Practices Act compliance: scenario with international operations, identify FCPA risks, recommend compliance controls",
+          "Whistleblower + ethics + governance: scenario where candidate evaluates whether the control environment supports ethical reporting"
+        ]
+      },
+      "F__Technology_and_Analytics": {
+        "count": 34,
+        "rationale": "13% of 254 items. Technology items tend to be definitional — need scenario-based evaluation to reach Very Difficult.",
+        "best_topics": [
+          "Data analytics interpretation: given regression output + correlation matrix + trend data, candidate diagnoses business problem and recommends action",
+          "ERP implementation risk assessment: 4 modules, 3 business units, identify implementation risks, recommend phased rollout",
+          "Cybersecurity control evaluation: incident scenario, candidate classifies attack type, identifies control failure, recommends remediation",
+          "Business intelligence dashboard design: 6 candidate KPIs, only 4 slots — candidate selects the 4 most decision-relevant metrics and justifies exclusion",
+          "AI/automation governance: scenario where candidate evaluates whether an automated decision system has appropriate human oversight",
+          "Data governance maturity assessment: evaluate a company's data management practices against a maturity model, identify gaps",
+          "Blockchain/smart contract: scenario evaluating whether blockchain adds value for a specific supply chain use case"
+        ]
+      }
+    },
+    "item_type_specifications": {
+      "multi_select_with_subtle_distinctions": {
+        "description": "Items where 3 of 5-6 choices are correct. Distractors are not 'obviously wrong' — they represent plausible but incorrect applications. Tests ability to distinguish between similar but distinct concepts.",
+        "example": "A company shows declining gross margin but rising net income. Which 3 of the following 5 explanations are plausible? (A) Increased volume offset margin decline (B) SG&A as % of revenue decreased (C) COGS increased in absolute dollars (D) Other income increased significantly (E) Tax rate decreased from 25% to 21%. Answer: B, D, E."
+      },
+      "numeric_with_multi_exhibit_dependency": {
+        "description": "Items requiring data from 2-3 exhibits (e.g., P&L + balance sheet + footnote) to compute a result. Candidate must identify which data is relevant and discard which is not. Ambiguous fact pattern.",
+        "example": "Given (Exhibit 1) Income Statement, (Exhibit 2) Balance Sheet, and (Exhibit 3) Footnote on operating leases: Calculate the company's adjusted debt-to-equity ratio after capitalizing operating leases. Include only leases with terms > 12 months."
+      },
+      "scenario_based_evaluation": {
+        "description": "Items presenting a business scenario where the candidate must evaluate competing recommendations. All options are defensible — only one is optimal given the specific constraints.",
+        "example": "Division A is at capacity. Division B wants to buy internally at variable cost. Division A can sell externally at market price. Which transfer pricing approach maximizes company-wide profit while maintaining divisional autonomy?"
+      },
+      "select_with_judgment_component": {
+        "description": "Single-best-answer items where all distractors represent legitimate approaches, and the candidate must apply professional judgment to select the best one given nuanced criteria.",
+        "example": "A company has 3 capital projects with NPV of $500K, $450K, and $400K respectively, but only $800K in available capital. The $400K project has strategic importance for entering a new market. What is the BEST recommendation?"
+      },
+      "fill_in_blank_with_judgment": {
+        "description": "Open-response items requiring numeric answer derived from multi-step calculation with judgment about which inputs to use.",
+        "example": "Given a scenario with both absorption and variable costing income statements, a special order, and a capacity constraint: What is the minimum acceptable price for the special order? [no answer choices provided — candidate computes independently]"
+      }
+    },
+    "item_creation_specification": {
+      "very_difficult_definition": {
+        "criteria": [
+          "Integrates 3+ distinct CMA Part 1 concepts (not just multi-step of same concept)",
+          "Requires professional judgment — not just mechanical calculation",
+          "Has ambiguous fact pattern where candidate must identify what is relevant and discard distractors",
+          "Multi-exhibit dependency (2-3 exhibits minimum)",
+          "Takes 3-4 minutes to solve (time pressure component)",
+          "Distractors are highly plausible — each represents a documented misconception or plausible alternative approach",
+          "At least one distractor is the result of a common but incorrect calculation path",
+          "Explanation must be a mini-lesson: concept, solution, distractor analysis, exam trap, business application"
+        ],
+        "blooms_level": "Analyze or Evaluate (never Apply)",
+        "difficulty_label": "Very Difficult",
+        "difficulty_score": 5,
+        "cognitive_level_required": ["Analyze", "Evaluate"]
+      },
+      "authoring_standards": {
+        "must_not": [
+          "Single-step calculation with large numbers (does not make it Very Difficult)",
+          "Definition-matching with obscure terms",
+          "Generic scenario with no business context",
+          "Distractors that are obviously wrong",
+          "Explanation that only states the formula"
+        ],
+        "must": [
+          "Named company with realistic business scenario",
+          "At least 2 exhibits providing data the candidate must interpret",
+          "At least 1 piece of data in exhibits that is NOT needed (tests relevance filtering)",
+          "At least 2 distractors that are the result of genuine calculation paths a candidate might follow",
+          "Mini-lesson explanation style per CAQS §4.2"
+        ]
+      }
+    }
+  },
+  "special_considerations": {
+    "r_series_opportunity": {
+      "description": "Pack E's 40 R-series items (P1-E-R01 through P1-E-R40) were authored independently of the template rotation pipeline. They have exceptionally long ExplanationCorrect fields (900-1450 chars vs. pool average ~150) suggesting rich educational content. However, they are all currently labeled Moderate or below with no Analyze cognitive level. KEY OPPORTUNITY: These items have deep explanations but were never assigned appropriate difficulty. Upgrading the most complex 8-10 R-series items with additional multi-exhibit scenarios and judgment components could produce high-quality Very Difficult items with less effort than creating new items from scratch.",
+      "current_distribution": {"Easy": 9, "Moderate-Easy": 4, "Moderate": 27, "Difficult": 0, "Very Difficult": 0},
+      "cognitive_distribution": {"Remember": 3, "Understand": 17, "Apply": 20, "Analyze": 0, "Evaluate": 0},
+      "recommendation": "Target 8-10 R-series items for enhancement to Very Difficult level as part of Phase 1 bridge."
+    },
+    "section_e_emergency": {
+      "description": "Section E (Internal Controls) across all 5 packs has ZERO Difficult items, ZERO Very Difficult items, and only 1 Analyze item (P1B-E-117). This is the most severe per-section gap — Internal Controls represents a full 15%+ of the CMA Part 1 exam and has no high-difficulty items at all.",
+      "recommendation": "Prioritize Pack E Section E in Phase 2 content creation. The COSO ERM and fraud assessment topics are naturally suited to Evaluate-level items."
+    },
+    "pack_a_gap": {
+      "description": "Pack A has 0 DifficultyScore 4 items and only 1 Analyze item (P1-F-013). It is the most severely under-leveled pack.",
+      "recommendation": "Pack A needs the most Phase 2 creation. The financial reporting domain (Section A) has the richest multi-standard integration opportunities."
+    }
+  },
+  "phase_implementation_roadmap": {
+    "phase_1a_immediate": {
+      "actions": [
+        "Recalibrate 4 Tier 1 Analyze-level items to Very Difficult (DS=5, difficulty='Very Difficult')",
+        "Fix difficulty label inconsistencies on P1B-C-174, P1-CC-014, P1-DC-020 (labeled 'Easy' but DS=4)",
+        "Document each recalibration with rationale in REVISION_HISTORY.md",
+        "Yield: 4 items → 0.16% Very Difficult"
+      ],
+      "risk": "Low. These items are already at Analyze level with DS=4. Upgrade is a 1-point adjustment."
+    },
+    "phase_1b_enhanced_calibration": {
+      "actions": [
+        "Select 10 Tier 2 items for content enhancement + recalibration",
+        "For each: enrich stem with business context, add second exhibit, rewrite one distractor to be more plausible",
+        "Recalibrate to Very Difficult (DS=5)",
+        "Yield: +10 items → cumulative 14 items → 0.55% Very Difficult"
+      ],
+      "risk": "Medium. Requires content authoring (not just metadata change). Each item needs ~15-20 minutes of editing."
+    },
+    "phase_1c_r_series_upgrade": {
+      "actions": [
+        "Select 8 most complex R-series items based on EC length and topic",
+        "Add multi-exhibit dependency",
+        "Upgrade cognitive level from Apply/Understand to Analyze",
+        "Recalibrate to Very Difficult (DS=5)",
+        "Yield: +8 items → cumulative 22 items → 0.87% Very Difficult"
+      ],
+      "risk": "Medium-High. R-series items may require significant rewriting to achieve genuine Very Difficult quality."
+    },
+    "phase_2a_critical_sections": {
+      "actions": [
+        "Author 40 Section E items (Internal Controls) — highest priority per-section gap",
+        "Author 50 Section B items (Budgeting) — richest existing foundation",
+        "Author 50 Section C items (Performance Management) — largest existing Difficult cluster",
+        "Yield: +140 items → cumulative 162 → 6.38% Very Difficult"
+      ],
+      "risk": "High. Requires dedicated authoring sprint. Estimate 3-4 weeks for 140 items at ~30 minutes each."
+    },
+    "phase_2b_remaining_sections": {
+      "actions": [
+        "Author 40 Section A items (Financial Reporting)",
+        "Author 40 Section D items (Cost Management)",
+        "Author 34 Section F items (Technology & Analytics)",
+        "Yield: +114 items → cumulative 276 → 10.87% Very Difficult (exceeds target)"
+      ],
+      "risk": "High. Second sprint. Total authoring time for Phase 2: 6-8 weeks for 254 items."
+    }
+  },
+  "cross_reference_analysis": {
+    "relationship_to_dl031": "DL-031 (Definition-Match Difficulty Inflation) found ~500 items systemically over-labeled as Moderate. The same template pipeline that inflated Moderate items also failed to produce any Analyze/Evaluate items. Both defects share the same root cause: template-based labeling without cognitive assessment.",
+    "relationship_to_dl032": "DL-032 (Case Bank Uniform Difficulty) found 0/745 case items above Moderate. Case studies are naturally suited to Very Difficult — they inherently have multi-exhibit dependency and scenario-based evaluation. Case study difficulty recalibration should be a parallel workstream.",
+    "relationship_to_dl030": "DL-030 (CorrectChoice Answer-Key Errors) found 5 Certified items with wrong answers. Any Phase 1 recalibration must include an independent answer-key verification for each upgraded item — ensuring we don't promote items with unknown correctness defects.",
+    "relationship_to_dl035": "DL-035 (Governance Guard DL-026 Coverage Gap) found 39 Certified items with empty distractor EW slots. Very Difficult items require robust distractor explanations — empty slots at this difficulty level would be catastrophic for learner experience."
+  },
+  "final_recommendation": {
+    "summary": "The Very Difficult gap (0 of 254 target) is the most severe calibration deficit in the entire inventory. It CANNOT be closed through recalibration alone — there are fewer than 10 items at the Analyze cognitive level that could plausibly support a Very Difficult label. Full remediation requires a dedicated content authoring sprint creating ~250 new items at Analyze/Evaluate cognitive levels with multi-concept integration, multi-exhibit dependency, and professional judgment components.",
+    "phase_1_decision": "IMMEDIATELY EXECUTE — recalibrate 4 Analyze-level items, enhance 10 Tier 2 items, upgrade 8 R-series items. These 22 items provide a bridge to ~0.9% while Phase 2 content creation ramps up.",
+    "phase_2_decision": "COMMISSION — authorize a dedicated Very Difficult content authoring sprint. The 254-item target requires 6-8 weeks of dedicated authoring. Prioritize Section E (Internal Controls, worst gap) and Section B/C (richest topic foundation).",
+    "minimum_acceptable_bridge": "For the CMA exam simulator to have any Very Difficult presence, Phase 1a-b MUST be completed before any learner uses the simulator in a timed full-length exam mode. 0% Very Difficult means the difficulty distribution is completely unrepresentative of the actual CMA exam.",
+    "quality_warning": "Under no circumstances should Apply-level calculation items be recalibrated to Very Difficult as a 'numbers game' to hit the 10% target. Psychometric integrity requires that the difficulty label reflects genuine cognitive demand. A pool of 254 'Very Difficult' items that are all just long calculations will not prepare candidates for the judgment-intensive questions on the actual CMA Part 1 exam."
+  }
+}

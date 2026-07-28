@@ -1,0 +1,51 @@
+{
+  "sessionId": "S250-INVE-FA628F",
+  "sessionType": "INVESTIGATION_SESSION",
+  "generatedTimestamp": "2026-07-27T14:06:52.291Z",
+  "status": "PENDING",
+  "qid": "P1-ED-017",
+  "pack": "pack_d",
+  "domain": "E",
+  "blockReason": "Readiness state: BLOCKED",
+  "defectFlags": [
+    "DL-026: FAIL — 1 empty EW slots"
+  ],
+  "governanceEvents": [],
+  "preExecutionChecks": [
+    {
+      "step": "READ_ONLY",
+      "description": "Investigation is read-only — no content writes",
+      "required": true
+    },
+    {
+      "step": "NO_WRITES",
+      "description": "Do not modify pack files during investigation",
+      "required": true
+    }
+  ],
+  "investigationSteps": [
+    {
+      "step": 1,
+      "action": "Direct file inspection of the item's JSON object"
+    },
+    {
+      "step": 2,
+      "action": "Identify root cause of block"
+    },
+    {
+      "step": 3,
+      "action": "Determine if block is genuine or a scan false positive (DL-016/029)"
+    },
+    {
+      "step": 4,
+      "action": "Produce investigation report with findings and recommended disposition"
+    }
+  ],
+  "postExecutionChecks": [
+    {
+      "step": "DEFECT_LIBRARY_UPDATE",
+      "description": "Log finding to DEFECT_LIBRARY.md if new defect discovered",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "session": "723",
+  "agent": "D",
+  "title": "Reliability Certification Board",
+  "verdict": "CONDITIONAL",
+  "dcs_agreement": { "rate": "95.0%", "sample_size": 300, "adjusted_human_agreement": "91.0%" },
+  "reviewer_consistency": { "control_group": "100%", "boundary_group": "100%", "treatment_group_excluded": true },
+  "methodology_trace": {
+    "stable": true,
+    "issues": [
+      "Tree R2 41.9% borderline rate — most critical boundary is least automatable",
+      "No automated DCS compliance test harness",
+      "S720 reconciliation found 7 S719 internal-reporting discrepancies",
+      "CURRENT_BASELINES.md stale"
+    ]
+  },
+  "regression_check": { "certifications_lost": 0, "items_downgraded": 0 },
+  "conditions": [
+    "174 severe DCS §3 items unresolved (target <20)",
+    "CURRENT_BASELINES.md stale",
+    "Tree R2 borderline zone protocol needed",
+    "4 DL-012 Certified Analyze→Understand clones retain inflated CL labels",
+    "No automated DCS compliance test harness"
+  ],
+  "repeatability": "VERIFIABLE — DCS boundary trees produce identical classification for same structural pattern across all 5 packs"
+}

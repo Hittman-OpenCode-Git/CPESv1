@@ -1,0 +1,627 @@
+{
+  "session": 54,
+  "title": "Session 54 — Case Study Certification Remediation Wave 1 — Remediation Targets",
+  "date": "2026-07-28",
+  "framework": "CERTIFICATION_RUBRICS.md §2 (Case-Study Rubric) via Session 53 OPTION C Hybrid",
+  "total_cases_analyzed": 75,
+  "cases_needing_remediation": 36,
+  "targets_selected": 20,
+  "selection_method": "Top 20 by PriorityScore (D2=3=12pts + D5=3=10pts + D6=3=8pts + multi-blocker bonus)",
+  "targets": [
+    {
+      "CaseID": "CBQ2-A2",
+      "Title": "Inventory Valuation and LCM",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases2.js",
+      "ItemCount": 5,
+      "PriorityScore": 22,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\"",
+        "D5: 5/5 thin explanations (avg 52 chars)"
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 3,
+      "D6": 4,
+      "TotalRubricScore": 23,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 2:CBQ2-A2-Q2(Apply) > 3:CBQ2-A2-Q3(Apply) > 1:CBQ2-A2-Q1(Analyze) > 4:CBQ2-A2-Q4(Analyze) > 5:CBQ2-A2-Q5(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"Controller\"",
+        "explanations": "5 thin items (avg 52 chars) - CBQ2-A2-Q1, CBQ2-A2-Q2, CBQ2-A2-Q3, CBQ2-A2-Q4, CBQ2-A2-Q5"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"Controller\"",
+        "EXPAND 5 thin explanations to >=150 chars with standard reference, formula, and business interpretation"
+      ]
+    },
+    {
+      "CaseID": "CBQ5-C1",
+      "Title": "Direct Materials Mix and Yield Variances",
+      "SectionTags": [
+        "C"
+      ],
+      "File": "scored_cases5.js",
+      "ItemCount": 5,
+      "PriorityScore": 22,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\"",
+        "D5: 2/5 thin explanations (avg 90 chars)"
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 3,
+      "D6": 5,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "OK",
+        "stakeholder": "Replace \"Management\" with \"Controller\"",
+        "explanations": "2 thin items (avg 90 chars) - CBQ5-C1-Q2, CBQ5-C1-Q3"
+      },
+      "RemediationSteps": [
+        "RENAME Stakeholder from \"Management\" to \"Controller\"",
+        "EXPAND 2 thin explanations to >=150 chars with standard reference, formula, and business interpretation"
+      ]
+    },
+    {
+      "CaseID": "CBQ2-A3",
+      "Title": "Revenue Recognition and Receivables Valuation",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases2.js",
+      "ItemCount": 5,
+      "PriorityScore": 20,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"\"",
+        "D6: 2 cognitive progression violations (Apply > Apply > Evaluate > Analyze > Understand)"
+      ],
+      "CanCertifyAfterWave1": false,
+      "D1": 5,
+      "D2": 2,
+      "D3": 4,
+      "D4": 4,
+      "D5": 5,
+      "D6": 3,
+      "TotalRubricScore": 23,
+      "KeyIssues": {
+        "progression": "2 declines - reorder to 5:CBQ2-A3-Q5(Understand) > 1:CBQ2-A3-Q1(Apply) > 2:CBQ2-A3-Q2(Apply) > 4:CBQ2-A3-Q4(Analyze) > 3:CBQ2-A3-Q3(Evaluate)",
+        "stakeholder": "OK",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)"
+      ]
+    },
+    {
+      "CaseID": "CBQ5-A2",
+      "Title": "Comprehensive Income and Stockholders' Equity",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases5.js",
+      "ItemCount": 5,
+      "PriorityScore": 20,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\"",
+        "D6: 2 cognitive progression violations (Apply > Evaluate > Apply > Analyze > Understand)"
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 3,
+      "TotalRubricScore": 23,
+      "KeyIssues": {
+        "progression": "2 declines - reorder to 5:CBQ5-A2-Q5(Understand) > 1:CBQ5-A2-Q1(Apply) > 3:CBQ5-A2-Q3(Apply) > 4:CBQ5-A2-Q4(Analyze) > 2:CBQ5-A2-Q2(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"Chief Information Officer\"",
+        "explanations": "1 thin items (avg 138 chars) - CBQ5-A2-Q5"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"Chief Information Officer\"",
+        "EXPAND 1 thin explanation to >=100 chars"
+      ]
+    },
+    {
+      "CaseID": "CBQ-A2",
+      "Title": "Consolidation, Impairment, OCI, and Disclosure Package",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases.js",
+      "ItemCount": 6,
+      "PriorityScore": 14,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 5,
+      "D6": 4,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 1:CBQ-A2-Q1(Apply) > 2:CBQ-A2-Q2(Apply) > 3:CBQ-A2-Q3(Apply) > 4:CBQ-A2-Q4(Analyze) > 6:CBQ-A2-Q6(Analyze) > 5:CBQ-A2-Q5(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"Controller\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"Controller\""
+      ]
+    },
+    {
+      "CaseID": "CBQ-C2",
+      "Title": "Investment Center Performance and Transfer Pricing",
+      "SectionTags": [
+        "C"
+      ],
+      "File": "scored_cases.js",
+      "ItemCount": 6,
+      "PriorityScore": 14,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 5,
+      "D6": 4,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 5:CBQ-C2-Q5(Understand) > 1:CBQ-C2-Q1(Apply) > 2:CBQ-C2-Q2(Apply) > 3:CBQ-C2-Q3(Analyze) > 6:CBQ-C2-Q6(Analyze) > 4:CBQ-C2-Q4(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"CFO\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"CFO\""
+      ]
+    },
+    {
+      "CaseID": "CBQ-C3",
+      "Title": "Balanced Scorecard and Operating Performance Review",
+      "SectionTags": [
+        "C"
+      ],
+      "File": "scored_cases.js",
+      "ItemCount": 6,
+      "PriorityScore": 14,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 1:CBQ-C3-Q1(Apply) > 2:CBQ-C3-Q2(Apply) > 3:CBQ-C3-Q3(Analyze) > 5:CBQ-C3-Q5(Analyze) > 6:CBQ-C3-Q6(Analyze) > 4:CBQ-C3-Q4(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"CFO\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"CFO\""
+      ]
+    },
+    {
+      "CaseID": "CBQ3-A1",
+      "Title": "Lease Accounting and Classification",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases3.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"\""
+      ],
+      "CanCertifyAfterWave1": false,
+      "D1": 5,
+      "D2": 2,
+      "D3": 4,
+      "D4": 4,
+      "D5": 5,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 3:CBQ3-A1-Q3(Understand) > 1:CBQ3-A1-Q1(Apply) > 4:CBQ3-A1-Q4(Apply) > 2:CBQ3-A1-Q2(Analyze) > 5:CBQ3-A1-Q5(Evaluate)",
+        "stakeholder": "OK",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)"
+      ]
+    },
+    {
+      "CaseID": "CBQ3-C2",
+      "Title": "Transfer Pricing",
+      "SectionTags": [
+        "C"
+      ],
+      "File": "scored_cases3.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 2:CBQ3-C2-Q2(Analyze) > 3:CBQ3-C2-Q3(Analyze) > 1:CBQ3-C2-Q1(Evaluate) > 4:CBQ3-C2-Q4(Evaluate) > 5:CBQ3-C2-Q5(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"CFO\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"CFO\""
+      ]
+    },
+    {
+      "CaseID": "CBQ3-C3",
+      "Title": "Flexible Budget Variances",
+      "SectionTags": [
+        "C"
+      ],
+      "File": "scored_cases3.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 5,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "OK",
+        "stakeholder": "Replace \"Management\" with \"CFO\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "RENAME Stakeholder from \"Management\" to \"CFO\""
+      ]
+    },
+    {
+      "CaseID": "CBQ3-E2",
+      "Title": "Business Continuity and Disaster Recovery",
+      "SectionTags": [
+        "E"
+      ],
+      "File": "scored_cases3.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 2:CBQ3-E2-Q2(Analyze) > 3:CBQ3-E2-Q3(Analyze) > 1:CBQ3-E2-Q1(Evaluate) > 4:CBQ3-E2-Q4(Evaluate) > 5:CBQ3-E2-Q5(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"Chief Information Officer\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"Chief Information Officer\""
+      ]
+    },
+    {
+      "CaseID": "CBQ3-F2",
+      "Title": "Data Visualization",
+      "SectionTags": [
+        "F"
+      ],
+      "File": "scored_cases3.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 1:CBQ3-F2-Q1(Analyze) > 2:CBQ3-F2-Q2(Analyze) > 4:CBQ3-F2-Q4(Analyze) > 3:CBQ3-F2-Q3(Evaluate) > 5:CBQ3-F2-Q5(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"Chief Information Officer\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"Chief Information Officer\""
+      ]
+    },
+    {
+      "CaseID": "CBQ4-A1",
+      "Title": "Intangible Assets and Goodwill Impairment",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases4.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"\""
+      ],
+      "CanCertifyAfterWave1": false,
+      "D1": 5,
+      "D2": 2,
+      "D3": 4,
+      "D4": 4,
+      "D5": 5,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 1:CBQ4-A1-Q1(Apply) > 2:CBQ4-A1-Q2(Apply) > 3:CBQ4-A1-Q3(Analyze) > 5:CBQ4-A1-Q5(Analyze) > 4:CBQ4-A1-Q4(Evaluate)",
+        "stakeholder": "OK",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)"
+      ]
+    },
+    {
+      "CaseID": "CBQ4-A2",
+      "Title": "Contingencies and Warranty Liabilities",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases4.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 2,
+      "D3": 4,
+      "D4": 4,
+      "D5": 5,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 5:CBQ4-A2-Q5(Understand) > 1:CBQ4-A2-Q1(Apply) > 2:CBQ4-A2-Q2(Apply) > 3:CBQ4-A2-Q3(Apply) > 4:CBQ4-A2-Q4(Analyze)",
+        "stakeholder": "Replace \"Management\" with \"Chief Information Officer\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"Chief Information Officer\""
+      ]
+    },
+    {
+      "CaseID": "CBQ4-C1",
+      "Title": "Standard Costing: 3-Way and 4-Way Overhead Variances",
+      "SectionTags": [
+        "C"
+      ],
+      "File": "scored_cases4.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 5,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "OK",
+        "stakeholder": "Replace \"Management\" with \"Operations Manager\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "RENAME Stakeholder from \"Management\" to \"Operations Manager\""
+      ]
+    },
+    {
+      "CaseID": "CBQ4-D3",
+      "Title": "Capacity Management Concepts",
+      "SectionTags": [
+        "D"
+      ],
+      "File": "scored_cases4.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 4,
+      "TotalRubricScore": 24,
+      "KeyIssues": {
+        "progression": "1 declines - reorder to 2:CBQ4-D3-Q2(Apply) > 3:CBQ4-D3-Q3(Analyze) > 1:CBQ4-D3-Q1(Evaluate) > 4:CBQ4-D3-Q4(Evaluate) > 5:CBQ4-D3-Q5(Evaluate)",
+        "stakeholder": "Replace \"Management\" with \"Chief Information Officer\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "REORDER Items array by cognitive level ascending (Apply->Analyze->Evaluate)",
+        "RENAME Stakeholder from \"Management\" to \"Chief Information Officer\""
+      ]
+    },
+    {
+      "CaseID": "CBQ4-E2",
+      "Title": "Application IT Controls",
+      "SectionTags": [
+        "E"
+      ],
+      "File": "scored_cases4.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 5,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "OK",
+        "stakeholder": "Replace \"Management\" with \"Director of Internal Audit\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "RENAME Stakeholder from \"Management\" to \"Director of Internal Audit\""
+      ]
+    },
+    {
+      "CaseID": "CBQ4-E3",
+      "Title": "Foreign Corrupt Practices Act (FCPA)",
+      "SectionTags": [
+        "E"
+      ],
+      "File": "scored_cases4.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 5,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "OK",
+        "stakeholder": "Replace \"Management\" with \"Director of Internal Audit\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "RENAME Stakeholder from \"Management\" to \"Director of Internal Audit\""
+      ]
+    },
+    {
+      "CaseID": "CBQ4-F1",
+      "Title": "Cloud Computing Models",
+      "SectionTags": [
+        "F"
+      ],
+      "File": "scored_cases4.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"Management\""
+      ],
+      "CanCertifyAfterWave1": true,
+      "D1": 5,
+      "D2": 3,
+      "D3": 4,
+      "D4": 4,
+      "D5": 4,
+      "D6": 5,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "OK",
+        "stakeholder": "Replace \"Management\" with \"Chief Information Officer\"",
+        "explanations": "OK"
+      },
+      "RemediationSteps": [
+        "RENAME Stakeholder from \"Management\" to \"Chief Information Officer\""
+      ]
+    },
+    {
+      "CaseID": "CBQ5-B2",
+      "Title": "Bonds Payable and Effective Interest Amortization",
+      "SectionTags": [
+        "A"
+      ],
+      "File": "scored_cases5.js",
+      "ItemCount": 5,
+      "PriorityScore": 12,
+      "CurrentDecision": "Needs Revision",
+      "Blockers": [
+        "D2: Generic stakeholder \"\""
+      ],
+      "CanCertifyAfterWave1": false,
+      "D1": 5,
+      "D2": 2,
+      "D3": 4,
+      "D4": 4,
+      "D5": 5,
+      "D6": 5,
+      "TotalRubricScore": 25,
+      "KeyIssues": {
+        "progression": "OK",
+        "stakeholder": "OK",
+        "explanations": "OK"
+      },
+      "RemediationSteps": []
+    }
+  ]
+}

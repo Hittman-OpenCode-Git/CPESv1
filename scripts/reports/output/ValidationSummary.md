@@ -1,0 +1,2843 @@
+# Validation Report Summary
+
+**Generated:** 2026-07-28T00:31:08.756Z
+**Project:** CMA Part 1 Exam Simulator v2.0
+
+## Results
+
+| Validator | Status | Errors | Warnings | Duration |
+|-----------|--------|--------|----------|----------|
+| Repository Validator | PASS | 0 | 0 | 1ms |
+| Metadata Validator | FAIL | 65 | 9 | 184ms |
+| Blueprint Validator | WARN | 0 | 395 | 122ms |
+| Difficulty Validator | FAIL | 65 | 69 | 116ms |
+| Reference Validator | WARN | 0 | 116 | 114ms |
+| Explanation Validator | FAIL | 59 | 43 | 149ms |
+| Case Integrity Validator | FAIL | 2 | 8 | 29ms |
+| PsychometricValidator | FAIL | 119 | 1750 | 915ms |
+
+**Total Errors:** 310
+**Total Warnings:** 2390
+**Overall Status:** FAIL
+
+## Details
+
+### Repository Validator
+**Status:** PASS
+**Duration:** 1ms
+**Statistics:**
+- Question Packs: 5
+- Case Banks: 5
+
+### Metadata Validator
+**Status:** FAIL
+**Duration:** 184ms
+**Statistics:**
+- Cases Checked: 75
+**Errors:**
+- scored_cases.js[0] item[0] (CBQ-A1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[0] item[1] (CBQ-A1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[0] item[4] (CBQ-A1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[1] item[0] (CBQ-A2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[1] item[2] (CBQ-A2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[0] (CBQ-B1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[1] (CBQ-B1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[3] (CBQ-B1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[4] (CBQ-B1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[3] item[0] (CBQ-B2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[3] item[4] (CBQ-B2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[4] item[0] (CBQ-C1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[4] item[1] (CBQ-C1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[4] item[2] (CBQ-C1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[5] item[0] (CBQ-C2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[5] item[1] (CBQ-C2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[5] item[4] (CBQ-C2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[6] item[1] (CBQ-D1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[6] item[4] (CBQ-D1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[7] item[0] (CBQ-D2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[7] item[1] (CBQ-D2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[7] item[4] (CBQ-D2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[8] item[2] (CBQ-E1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[8] item[3] (CBQ-E1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[9] item[1] (CBQ-E2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[9] item[3] (CBQ-E2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[10] item[0] (CBQ-F1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[10] item[4] (CBQ-F1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[11] item[0] (CBQ-A3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[12] item[0] (CBQ-B3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[12] item[1] (CBQ-B3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[12] item[2] (CBQ-B3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[14] item[0] (CBQ-F2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[14] item[1] (CBQ-F2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[14] item[4] (CBQ-F2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[0] item[4] (CBQ2-A3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[9] item[4] (CBQ2-D2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[14] item[2] (CBQ2-F2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[14] item[3] (CBQ2-F2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[0] item[2] (CBQ3-A1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[2] item[4] (CBQ3-B1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[8] item[4] (CBQ3-D1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[9] item[4] (CBQ3-D2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[13] item[0] (CBQ3-F1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[13] item[1] (CBQ3-F1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[13] item[2] (CBQ3-F1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[1] item[4] (CBQ4-A2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[5] item[4] (CBQ4-D1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[6] item[4] (CBQ4-D2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[12] item[0] (CBQ4-F2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[13] item[0] (CBQ4-F3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[13] item[1] (CBQ4-F3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[13] item[2] (CBQ4-F3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[1] item[4] (CBQ5-A2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[2] item[4] (CBQ5-B1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[7] item[3] (CBQ5-D3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[8] item[0] (CBQ5-E1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[8] item[2] (CBQ5-E1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[8] item[4] (CBQ5-E1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[9] item[0] (CBQ5-E2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[10] item[2] (CBQ5-E3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[10] item[3] (CBQ5-E3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[11] item[0] (CBQ5-F1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[12] item[0] (CBQ5-F2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[13] item[0] (CBQ5-F3): Invalid item Difficulty "Moderate-Easy"
+**Warnings:**
+- scored_cases2.js[1] item[0] (CBQ2-A2): Explanation too short (38 chars, minimum 50)
+- scored_cases2.js[1] item[1] (CBQ2-A2): Explanation too short (38 chars, minimum 50)
+- scored_cases2.js[1] item[2] (CBQ2-A2): Explanation too short (37 chars, minimum 50)
+- scored_cases2.js[2] item[3] (CBQ2-B1): Explanation too short (27 chars, minimum 50)
+- scored_cases2.js[12] item[2] (CBQ2-E2): Choices length 7 outside recommended 3-6
+- scored_cases3.js[2] item[4] (CBQ3-B1): Explanation too short (45 chars, minimum 50)
+- scored_cases5.js[3] item[1] (CBQ5-C1): Explanation too short (47 chars, minimum 50)
+- scored_cases5.js[3] item[2] (CBQ5-C1): Explanation too short (46 chars, minimum 50)
+- scored_cases5.js[6] item[4] (CBQ5-D2): Missing or empty Topic
+
+### Blueprint Validator
+**Status:** WARN
+**Duration:** 122ms
+**Statistics:**
+- Cases Checked: 75
+- Cross-Domain Cases: 2
+- Domain: Cost Management: 14
+- Domain: External Financial Reporting Decisions: 11
+- Domain: Internal Controls: 13
+- Domain: Performance Management: 14
+- Domain: Planning, Budgeting, and Forecasting: 12
+- Domain: Technology and Analytics: 11
+**Warnings:**
+- scored_cases.js[0] (CBQ-A1) item[0] (CBQ-A1-Q1): Topic "Revenue recognition" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[0] (CBQ-A1) item[1] (CBQ-A1-Q2): Topic "Contract liabilities" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[0] (CBQ-A1) item[2] (CBQ-A1-Q3): Topic "Revenue recognition" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[0] (CBQ-A1) item[3] (CBQ-A1-Q4): Topic "Statement of cash flows" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[0] (CBQ-A1) item[4] (CBQ-A1-Q5): Topic "Deferred taxes" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[0] (CBQ-A1) item[5] (CBQ-A1-Q6): Topic "External reporting judgment" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[1] (CBQ-A2) item[0] (CBQ-A2-Q1): Topic "Consolidations" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[1] (CBQ-A2) item[1] (CBQ-A2-Q2): Topic "Impairment" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[1] (CBQ-A2) item[2] (CBQ-A2-Q3): Topic "OCI" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[1] (CBQ-A2) item[3] (CBQ-A2-Q4): Topic "Consolidations" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[1] (CBQ-A2) item[4] (CBQ-A2-Q5): Topic "Financial reporting effects" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[1] (CBQ-A2) item[5] (CBQ-A2-Q6): Topic "External reporting" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[2] (CBQ-B1) item[0] (CBQ-B1-Q1): Topic "Production budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[2] (CBQ-B1) item[1] (CBQ-B1-Q2): Topic "Production budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[2] (CBQ-B1) item[2] (CBQ-B1-Q3): Topic "Direct materials budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[2] (CBQ-B1) item[3] (CBQ-B1-Q4): Topic "Cash budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[2] (CBQ-B1) item[4] (CBQ-B1-Q5): Topic "Cash budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[2] (CBQ-B1) item[5] (CBQ-B1-Q6): Topic "Budgeting judgment" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[3] (CBQ-B2) item[0] (CBQ-B2-Q1): Topic "Forecasting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[3] (CBQ-B2) item[1] (CBQ-B2-Q2): Topic "Sensitivity analysis" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[3] (CBQ-B2) item[2] (CBQ-B2-Q3): Topic "Forecasting indicators" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[3] (CBQ-B2) item[3] (CBQ-B2-Q4): Topic "Regression" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[3] (CBQ-B2) item[4] (CBQ-B2-Q5): Topic "Rolling forecast" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[3] (CBQ-B2) item[5] (CBQ-B2-Q6): Topic "Forecasting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[4] (CBQ-C1) item[0] (CBQ-C1-Q1): Topic "Material price variance" not in domain topic list for "Performance Management"
+- scored_cases.js[4] (CBQ-C1) item[1] (CBQ-C1-Q2): Topic "Material quantity variance" not in domain topic list for "Performance Management"
+- scored_cases.js[4] (CBQ-C1) item[2] (CBQ-C1-Q3): Topic "Labor efficiency variance" not in domain topic list for "Performance Management"
+- scored_cases.js[4] (CBQ-C1) item[3] (CBQ-C1-Q4): Topic "Labor rate variance" not in domain topic list for "Performance Management"
+- scored_cases.js[4] (CBQ-C1) item[4] (CBQ-C1-Q5): Topic "Flexible budgeting" not in domain topic list for "Performance Management"
+- scored_cases.js[4] (CBQ-C1) item[5] (CBQ-C1-Q6): Topic "Responsibility accounting" not in domain topic list for "Performance Management"
+- scored_cases.js[5] (CBQ-C2) item[0] (CBQ-C2-Q1): Topic "Residual income" not in domain topic list for "Performance Management"
+- scored_cases.js[5] (CBQ-C2) item[1] (CBQ-C2-Q2): Topic "ROI" not in domain topic list for "Performance Management"
+- scored_cases.js[5] (CBQ-C2) item[2] (CBQ-C2-Q3): Topic "Transfer pricing" not in domain topic list for "Performance Management"
+- scored_cases.js[5] (CBQ-C2) item[3] (CBQ-C2-Q4): Topic "Performance measurement" not in domain topic list for "Performance Management"
+- scored_cases.js[5] (CBQ-C2) item[4] (CBQ-C2-Q5): Topic "Transfer pricing" not in domain topic list for "Performance Management"
+- scored_cases.js[5] (CBQ-C2) item[5] (CBQ-C2-Q6): Topic "Performance management" not in domain topic list for "Performance Management"
+- scored_cases.js[6] (CBQ-D1) item[0] (CBQ-D1-Q1): Topic "Activity-based costing" not in domain topic list for "Cost Management"
+- scored_cases.js[6] (CBQ-D1) item[1] (CBQ-D1-Q2): Topic "Quality costs" not in domain topic list for "Cost Management"
+- scored_cases.js[6] (CBQ-D1) item[2] (CBQ-D1-Q3): Topic "ABC distortion" not in domain topic list for "Cost Management"
+- scored_cases.js[6] (CBQ-D1) item[3] (CBQ-D1-Q4): Topic "Quality costs" not in domain topic list for "Cost Management"
+- scored_cases.js[6] (CBQ-D1) item[4] (CBQ-D1-Q5): Topic "ABC" not in domain topic list for "Cost Management"
+- scored_cases.js[6] (CBQ-D1) item[5] (CBQ-D1-Q6): Topic "Quality costs" not in domain topic list for "Cost Management"
+- scored_cases.js[7] (CBQ-D2) item[0] (CBQ-D2-Q1): Topic "Process costing" not in domain topic list for "Cost Management"
+- scored_cases.js[7] (CBQ-D2) item[1] (CBQ-D2-Q2): Topic "Process costing" not in domain topic list for "Cost Management"
+- scored_cases.js[7] (CBQ-D2) item[2] (CBQ-D2-Q3): Topic "Theory of constraints" not in domain topic list for "Cost Management"
+- scored_cases.js[7] (CBQ-D2) item[3] (CBQ-D2-Q4): Topic "Lean operations" not in domain topic list for "Cost Management"
+- scored_cases.js[7] (CBQ-D2) item[4] (CBQ-D2-Q5): Topic "Process costing" not in domain topic list for "Cost Management"
+- scored_cases.js[7] (CBQ-D2) item[5] (CBQ-D2-Q6): Topic "Cost management" not in domain topic list for "Cost Management"
+- scored_cases.js[8] (CBQ-E1) item[0] (CBQ-E1-Q1): Topic "Segregation of duties" not in domain topic list for "Internal Controls"
+- scored_cases.js[8] (CBQ-E1) item[1] (CBQ-E1-Q2): Topic "Control activities" not in domain topic list for "Internal Controls"
+- scored_cases.js[8] (CBQ-E1) item[2] (CBQ-E1-Q3): Topic "Deficiency evaluation" not in domain topic list for "Internal Controls"
+- scored_cases.js[8] (CBQ-E1) item[3] (CBQ-E1-Q4): Topic "COSO limitations" not in domain topic list for "Internal Controls"
+- scored_cases.js[8] (CBQ-E1) item[4] (CBQ-E1-Q5): Topic "Control classification" not in domain topic list for "Internal Controls"
+- scored_cases.js[8] (CBQ-E1) item[5] (CBQ-E1-Q6): Topic "SOX evidence" not in domain topic list for "Internal Controls"
+- scored_cases.js[9] (CBQ-E2) item[0] (CBQ-E2-Q1): Topic "Access controls" not in domain topic list for "Internal Controls"
+- scored_cases.js[9] (CBQ-E2) item[1] (CBQ-E2-Q2): Topic "Access review" not in domain topic list for "Internal Controls"
+- scored_cases.js[9] (CBQ-E2) item[2] (CBQ-E2-Q3): Topic "IT controls" not in domain topic list for "Internal Controls"
+- scored_cases.js[9] (CBQ-E2) item[3] (CBQ-E2-Q4): Topic "Change management" not in domain topic list for "Internal Controls"
+- scored_cases.js[9] (CBQ-E2) item[4] (CBQ-E2-Q5): Topic "ITGC risk" not in domain topic list for "Internal Controls"
+- scored_cases.js[10] (CBQ-F1) item[0] (CBQ-F1-Q1): Topic "Data quality" not in domain topic list for "Technology and Analytics"
+- scored_cases.js[10] (CBQ-F1) item[1] (CBQ-F1-Q2): Topic "Data governance" not in domain topic list for "Technology and Analytics"
+- scored_cases.js[10] (CBQ-F1) item[2] (CBQ-F1-Q3): Topic "Data quality" not in domain topic list for "Technology and Analytics"
+- scored_cases.js[10] (CBQ-F1) item[3] (CBQ-F1-Q4): Topic "Analytics types" not in domain topic list for "Technology and Analytics"
+- scored_cases.js[10] (CBQ-F1) item[4] (CBQ-F1-Q5): Topic "Data lineage" not in domain topic list for "Technology and Analytics"
+- scored_cases.js[10] (CBQ-F1) item[5] (CBQ-F1-Q6): Topic "Analytics governance" not in domain topic list for "Technology and Analytics"
+- scored_cases.js[11] (CBQ-A3) item[0] (CBQ-A3-Q1): Topic "Inventory measurement" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[11] (CBQ-A3) item[1] (CBQ-A3-Q2): Topic "Asset retirement obligations" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[11] (CBQ-A3) item[2] (CBQ-A3-Q3): Topic "Subsequent events" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[11] (CBQ-A3) item[3] (CBQ-A3-Q4): Topic "Cash classification" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[11] (CBQ-A3) item[4] (CBQ-A3-Q5): Topic "Statement of cash flows" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[11] (CBQ-A3) item[5] (CBQ-A3-Q6): Topic "External reporting" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases.js[12] (CBQ-B3) item[0] (CBQ-B3-Q1): Topic "Expected value" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[12] (CBQ-B3) item[1] (CBQ-B3-Q2): Topic "Forecasting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[12] (CBQ-B3) item[2] (CBQ-B3-Q3): Topic "Cash collections" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[12] (CBQ-B3) item[3] (CBQ-B3-Q4): Topic "Cash budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[12] (CBQ-B3) item[4] (CBQ-B3-Q5): Topic "Cash budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[12] (CBQ-B3) item[5] (CBQ-B3-Q6): Topic "Forecast assumptions" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases.js[13] (CBQ-C3) item[0] (CBQ-C3-Q1): Topic "Performance variance" not in domain topic list for "Performance Management"
+- scored_cases.js[13] (CBQ-C3) item[1] (CBQ-C3-Q2): Topic "Nonfinancial measures" not in domain topic list for "Performance Management"
+- scored_cases.js[13] (CBQ-C3) item[2] (CBQ-C3-Q3): Topic "Balanced scorecard" not in domain topic list for "Performance Management"
+- scored_cases.js[13] (CBQ-C3) item[3] (CBQ-C3-Q4): Topic "Leading indicators" not in domain topic list for "Performance Management"
+- scored_cases.js[13] (CBQ-C3) item[4] (CBQ-C3-Q5): Topic "Balanced scorecard" not in domain topic list for "Performance Management"
+- scored_cases.js[13] (CBQ-C3) item[5] (CBQ-C3-Q6): Topic "Responsibility accounting" not in domain topic list for "Performance Management"
+- scored_cases.js[14] (CBQ-F2) item[0] (CBQ-F2-Q1): Topic "RPA benefits" not in domain topic list for "Internal Controls"
+- scored_cases.js[14] (CBQ-F2) item[1] (CBQ-F2-Q2): Topic "Exception analytics" not in domain topic list for "Internal Controls"
+- scored_cases.js[14] (CBQ-F2) item[2] (CBQ-F2-Q3): Topic "Cybersecurity controls" not in domain topic list for "Internal Controls"
+- scored_cases.js[14] (CBQ-F2) item[3] (CBQ-F2-Q4): Topic "Automation governance" not in domain topic list for "Internal Controls"
+- scored_cases.js[14] (CBQ-F2) item[4] (CBQ-F2-Q5): Topic "Analytics governance" not in domain topic list for "Internal Controls"
+- scored_cases.js[14] (CBQ-F2) item[5] (CBQ-F2-Q6): Topic "Technology controls" not in domain topic list for "Internal Controls"
+- scored_cases2.js[0] (CBQ2-A3) item[0] (CBQ2-A3-Q1): Topic "ASC 606" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[0] (CBQ2-A3) item[1] (CBQ2-A3-Q2): Topic "Receivables" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[0] (CBQ2-A3) item[2] (CBQ2-A3-Q3): Topic "Revenue" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[0] (CBQ2-A3) item[3] (CBQ2-A3-Q4): Topic "Receivables" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[0] (CBQ2-A3) item[4] (CBQ2-A3-Q5): Topic "Receivables" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[1] (CBQ2-A2) item[0] (CBQ2-A2-Q1): Topic "Inventory" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[1] (CBQ2-A2) item[1] (CBQ2-A2-Q2): Topic "Inventory" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[1] (CBQ2-A2) item[2] (CBQ2-A2-Q3): Topic "Inventory" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[1] (CBQ2-A2) item[3] (CBQ2-A2-Q4): Topic "Inventory" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[1] (CBQ2-A2) item[4] (CBQ2-A2-Q5): Topic "Inventory" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases2.js[2] (CBQ2-B1) item[2] (CBQ2-B1-Q3): Topic "Materials Budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[2] (CBQ2-B1) item[3] (CBQ2-B1-Q4): Topic "Materials Budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[2] (CBQ2-B1) item[4] (CBQ2-B1-Q5): Topic "Budget sequence" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[3] (CBQ2-B2) item[0] (CBQ2-B2-Q1): Topic "Cash collections" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[3] (CBQ2-B2) item[1] (CBQ2-B2-Q2): Topic "Cash disbursements" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[3] (CBQ2-B2) item[2] (CBQ2-B2-Q3): Topic "Cash budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[3] (CBQ2-B2) item[3] (CBQ2-B2-Q4): Topic "Cash budget financing" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[3] (CBQ2-B2) item[4] (CBQ2-B2-Q5): Topic "Cash budget analysis" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[3] (CBQ2-B2) item[5] (CBQ2-B2-Q6): Topic "Cash budget management" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[4] (CBQ2-B3) item[0] (CBQ2-B3-Q1): Topic "Sales forecasting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[4] (CBQ2-B3) item[1] (CBQ2-B3-Q2): Topic "Sales forecasting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[4] (CBQ2-B3) item[2] (CBQ2-B3-Q3): Topic "Revenue budgeting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[4] (CBQ2-B3) item[3] (CBQ2-B3-Q4): Topic "Forecasting methods" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[4] (CBQ2-B3) item[4] (CBQ2-B3-Q5): Topic "Cash collection analysis" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[4] (CBQ2-B3) item[5] (CBQ2-B3-Q6): Topic "Forecasting methods" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases2.js[5] (CBQ2-C1) item[0] (CBQ2-C1-Q1): Topic "Flexible budget variance decomposition" not in domain topic list for "Performance Management"
+- scored_cases2.js[5] (CBQ2-C1) item[1] (CBQ2-C1-Q2): Topic "Variance interpretation and investigation" not in domain topic list for "Performance Management"
+- scored_cases2.js[5] (CBQ2-C1) item[2] (CBQ2-C1-Q3): Topic "Flexible budget formulas" not in domain topic list for "Performance Management"
+- scored_cases2.js[5] (CBQ2-C1) item[3] (CBQ2-C1-Q4): Topic "Variance-driven management decisions" not in domain topic list for "Performance Management"
+- scored_cases2.js[5] (CBQ2-C1) item[4] (CBQ2-C1-Q5): Topic "Variance responsibility accounting" not in domain topic list for "Performance Management"
+- scored_cases2.js[6] (CBQ2-C2) item[0] (CBQ2-C2-Q1): Topic "Direct materials price variance" not in domain topic list for "Performance Management"
+- scored_cases2.js[6] (CBQ2-C2) item[1] (CBQ2-C2-Q2): Topic "Direct materials quantity variance" not in domain topic list for "Performance Management"
+- scored_cases2.js[6] (CBQ2-C2) item[2] (CBQ2-C2-Q3): Topic "Direct labor rate variance" not in domain topic list for "Performance Management"
+- scored_cases2.js[6] (CBQ2-C2) item[3] (CBQ2-C2-Q4): Topic "Direct labor efficiency variance" not in domain topic list for "Performance Management"
+- scored_cases2.js[6] (CBQ2-C2) item[4] (CBQ2-C2-Q5): Topic "Variable overhead efficiency variance" not in domain topic list for "Performance Management"
+- scored_cases2.js[7] (CBQ2-C3) item[0] (CBQ2-C3-Q1): Topic "Return on investment computation" not in domain topic list for "Performance Management"
+- scored_cases2.js[7] (CBQ2-C3) item[1] (CBQ2-C3-Q2): Topic "Residual income computation" not in domain topic list for "Performance Management"
+- scored_cases2.js[7] (CBQ2-C3) item[2] (CBQ2-C3-Q3): Topic "ROI impact of new investments" not in domain topic list for "Performance Management"
+- scored_cases2.js[7] (CBQ2-C3) item[3] (CBQ2-C3-Q4): Topic "Residual income and goal congruence" not in domain topic list for "Performance Management"
+- scored_cases2.js[7] (CBQ2-C3) item[4] (CBQ2-C3-Q5): Topic "Divisional performance comparison" not in domain topic list for "Performance Management"
+- scored_cases2.js[8] (CBQ2-D1) item[0] (CBQ2-D1-Q1): Topic "ABC cost pool identification" not in domain topic list for "Cost Management"
+- scored_cases2.js[8] (CBQ2-D1) item[1] (CBQ2-D1-Q2): Topic "Traditional costing limitations" not in domain topic list for "Cost Management"
+- scored_cases2.js[8] (CBQ2-D1) item[2] (CBQ2-D1-Q3): Topic "ABC cost driver selection" not in domain topic list for "Cost Management"
+- scored_cases2.js[8] (CBQ2-D1) item[3] (CBQ2-D1-Q4): Topic "ABC implementation challenges" not in domain topic list for "Cost Management"
+- scored_cases2.js[8] (CBQ2-D1) item[4] (CBQ2-D1-Q5): Topic "Traditional cost allocation with plantwide rate" not in domain topic list for "Cost Management"
+- scored_cases2.js[9] (CBQ2-D2) item[0] (CBQ2-D2-Q1): Topic "Joint cost allocation — NRV method" not in domain topic list for "Cost Management"
+- scored_cases2.js[9] (CBQ2-D2) item[1] (CBQ2-D2-Q2): Topic "Joint cost allocation — physical-units method" not in domain topic list for "Cost Management"
+- scored_cases2.js[9] (CBQ2-D2) item[2] (CBQ2-D2-Q3): Topic "Sell-or-process-further analysis" not in domain topic list for "Cost Management"
+- scored_cases2.js[9] (CBQ2-D2) item[3] (CBQ2-D2-Q4): Topic "Joint cost concepts" not in domain topic list for "Cost Management"
+- scored_cases2.js[9] (CBQ2-D2) item[4] (CBQ2-D2-Q5): Topic "Joint costing terminology" not in domain topic list for "Cost Management"
+- scored_cases2.js[9] (CBQ2-D2) item[5] (CBQ2-D2-Q6): Topic "Joint cost allocation methods" not in domain topic list for "Cost Management"
+- scored_cases2.js[10] (CBQ2-D3) item[0] (CBQ2-D3-Q1): Topic "Weighted-average equivalent units" not in domain topic list for "Cost Management"
+- scored_cases2.js[10] (CBQ2-D3) item[1] (CBQ2-D3-Q2): Topic "FIFO equivalent units" not in domain topic list for "Cost Management"
+- scored_cases2.js[10] (CBQ2-D3) item[2] (CBQ2-D3-Q3): Topic "Weighted-average cost per equivalent unit" not in domain topic list for "Cost Management"
+- scored_cases2.js[10] (CBQ2-D3) item[3] (CBQ2-D3-Q4): Topic "Cost allocation to completed units" not in domain topic list for "Cost Management"
+- scored_cases2.js[10] (CBQ2-D3) item[4] (CBQ2-D3-Q5): Topic "Method comparison — weighted-average vs FIFO" not in domain topic list for "Cost Management"
+- scored_cases2.js[11] (CBQ2-E1) item[0] (CBQ2-E1-Q1): Topic "IT general control categories" not in domain topic list for "Internal Controls"
+- scored_cases2.js[11] (CBQ2-E1) item[1] (CBQ2-E1-Q2): Topic "IT control remediation" not in domain topic list for "Internal Controls"
+- scored_cases2.js[11] (CBQ2-E1) item[2] (CBQ2-E1-Q3): Topic "IT control types" not in domain topic list for "Internal Controls"
+- scored_cases2.js[11] (CBQ2-E1) item[3] (CBQ2-E1-Q4): Topic "Application controls vs IT general controls" not in domain topic list for "Internal Controls"
+- scored_cases2.js[11] (CBQ2-E1) item[4] (CBQ2-E1-Q5): Topic "IT segregation of duties" not in domain topic list for "Internal Controls"
+- scored_cases2.js[12] (CBQ2-E2) item[0] (CBQ2-E2-Q1): Topic "Segregation of duties — fraud risk identification" not in domain topic list for "Internal Controls"
+- scored_cases2.js[12] (CBQ2-E2) item[1] (CBQ2-E2-Q2): Topic "Preventive vs detective controls" not in domain topic list for "Internal Controls"
+- scored_cases2.js[12] (CBQ2-E2) item[2] (CBQ2-E2-Q3): Topic "COSO internal control framework components" not in domain topic list for "Internal Controls"
+- scored_cases2.js[12] (CBQ2-E2) item[3] (CBQ2-E2-Q4): Topic "Fraud risk indicators in procurement" not in domain topic list for "Internal Controls"
+- scored_cases2.js[12] (CBQ2-E2) item[4] (CBQ2-E2-Q5): Topic "Control activity design and implementation" not in domain topic list for "Internal Controls"
+- scored_cases2.js[13] (CBQ2-F1) item[0] (CBQ2-F1-Q1): Topic "Analytics maturity levels" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[13] (CBQ2-F1) item[1] (CBQ2-F1-Q2): Topic "Diagnostic analytics" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[13] (CBQ2-F1) item[2] (CBQ2-F1-Q3): Topic "Predictive analytics" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[13] (CBQ2-F1) item[3] (CBQ2-F1-Q4): Topic "Prescriptive analytics" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[13] (CBQ2-F1) item[4] (CBQ2-F1-Q5): Topic "Data governance and analytics readiness" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[14] (CBQ2-F2) item[0] (CBQ2-F2-Q1): Topic "Master data management" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[14] (CBQ2-F2) item[1] (CBQ2-F2-Q2): Topic "Data quality dimensions" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[14] (CBQ2-F2) item[2] (CBQ2-F2-Q3): Topic "Metadata management" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[14] (CBQ2-F2) item[3] (CBQ2-F2-Q4): Topic "Data privacy and regulatory compliance" not in domain topic list for "Technology and Analytics"
+- scored_cases2.js[14] (CBQ2-F2) item[4] (CBQ2-F2-Q5): Topic "Data lifecycle management" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[0] (CBQ3-A1) item[0] (CBQ3-A1-Q1): Topic "Leases" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[0] (CBQ3-A1) item[1] (CBQ3-A1-Q2): Topic "Lease Classification" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[0] (CBQ3-A1) item[2] (CBQ3-A1-Q3): Topic "Lease Accounting" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[0] (CBQ3-A1) item[3] (CBQ3-A1-Q4): Topic "Lease Amortization" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[0] (CBQ3-A1) item[4] (CBQ3-A1-Q5): Topic "Lease Criteria" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[1] (CBQ3-A2) item[0] (CBQ3-A2-Q1): Topic "Cash Flows" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[1] (CBQ3-A2) item[1] (CBQ3-A2-Q2): Topic "Cash Flows" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[1] (CBQ3-A2) item[2] (CBQ3-A2-Q3): Topic "Cash Flows" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[1] (CBQ3-A2) item[3] (CBQ3-A2-Q4): Topic "Cash Flows" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[1] (CBQ3-A2) item[4] (CBQ3-A2-Q5): Topic "Cash Flows" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases3.js[2] (CBQ3-B1) item[0] (CBQ3-B1-Q1): Topic "Cash Budgeting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[2] (CBQ3-B1) item[1] (CBQ3-B1-Q2): Topic "Cash Budgeting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[2] (CBQ3-B1) item[3] (CBQ3-B1-Q4): Topic "Working Capital Management" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[2] (CBQ3-B1) item[4] (CBQ3-B1-Q5): Topic "Budget Types" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[3] (CBQ3-B2) item[0] (CBQ3-B2-Q1): Topic "Direct labor budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[3] (CBQ3-B2) item[1] (CBQ3-B2-Q2): Topic "Manufacturing overhead budget" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[3] (CBQ3-B2) item[2] (CBQ3-B2-Q3): Topic "Overhead application rate" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[3] (CBQ3-B2) item[3] (CBQ3-B2-Q4): Topic "Overhead cost behavior" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[3] (CBQ3-B2) item[4] (CBQ3-B2-Q5): Topic "Overhead application" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[3] (CBQ3-B2) item[5] (CBQ3-B2-Q6): Topic "Budget formulas" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[4] (CBQ3-B3) item[0] (CBQ3-B3-Q1): Topic "Contribution margin" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[4] (CBQ3-B3) item[1] (CBQ3-B3-Q2): Topic "Break-even analysis" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[4] (CBQ3-B3) item[2] (CBQ3-B3-Q3): Topic "Margin of safety" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[4] (CBQ3-B3) item[3] (CBQ3-B3-Q4): Topic "Target profit analysis" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[4] (CBQ3-B3) item[4] (CBQ3-B3-Q5): Topic "CVP assumptions" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[4] (CBQ3-B3) item[5] (CBQ3-B3-Q6): Topic "CVP formulas" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases3.js[5] (CBQ3-C1) item[0] (CBQ3-C1-Q1): Topic "Balanced scorecard — financial perspective" not in domain topic list for "Performance Management"
+- scored_cases3.js[5] (CBQ3-C1) item[1] (CBQ3-C1-Q2): Topic "Balanced scorecard — customer perspective" not in domain topic list for "Performance Management"
+- scored_cases3.js[5] (CBQ3-C1) item[2] (CBQ3-C1-Q3): Topic "Balanced scorecard — internal business process perspective" not in domain topic list for "Performance Management"
+- scored_cases3.js[5] (CBQ3-C1) item[3] (CBQ3-C1-Q4): Topic "Balanced scorecard — learning and growth perspective" not in domain topic list for "Performance Management"
+- scored_cases3.js[5] (CBQ3-C1) item[4] (CBQ3-C1-Q5): Topic "Leading vs lagging indicators in balanced scorecard" not in domain topic list for "Performance Management"
+- scored_cases3.js[6] (CBQ3-C2) item[0] (CBQ3-C2-Q1): Topic "Transfer pricing method selection — market-based" not in domain topic list for "Performance Management"
+- scored_cases3.js[6] (CBQ3-C2) item[1] (CBQ3-C2-Q2): Topic "Goal congruence failure — external sourcing cost impact" not in domain topic list for "Performance Management"
+- scored_cases3.js[6] (CBQ3-C2) item[2] (CBQ3-C2-Q3): Topic "Transfer pricing policy design factors" not in domain topic list for "Performance Management"
+- scored_cases3.js[6] (CBQ3-C2) item[3] (CBQ3-C2-Q4): Topic "Transfer pricing method selection — scenario matching" not in domain topic list for "Performance Management"
+- scored_cases3.js[6] (CBQ3-C2) item[4] (CBQ3-C2-Q5): Topic "Goal congruence and divisional performance evaluation" not in domain topic list for "Performance Management"
+- scored_cases3.js[7] (CBQ3-C3) item[0] (CBQ3-C3-Q1): Topic "Sales volume variance for operating income" not in domain topic list for "Performance Management"
+- scored_cases3.js[7] (CBQ3-C3) item[1] (CBQ3-C3-Q2): Topic "Flexible budget variance computation — direct materials" not in domain topic list for "Performance Management"
+- scored_cases3.js[7] (CBQ3-C3) item[2] (CBQ3-C3-Q3): Topic "Interpreting flexible budget variances" not in domain topic list for "Performance Management"
+- scored_cases3.js[7] (CBQ3-C3) item[3] (CBQ3-C3-Q4): Topic "Variance analysis formulas and classification" not in domain topic list for "Performance Management"
+- scored_cases3.js[7] (CBQ3-C3) item[4] (CBQ3-C3-Q5): Topic "Performance evaluation using flexible budgets" not in domain topic list for "Performance Management"
+- scored_cases3.js[8] (CBQ3-D1) item[0] (CBQ3-D1-Q1): Topic "Absorption costing unit cost" not in domain topic list for "Cost Management"
+- scored_cases3.js[8] (CBQ3-D1) item[1] (CBQ3-D1-Q2): Topic "Variable costing unit cost" not in domain topic list for "Cost Management"
+- scored_cases3.js[8] (CBQ3-D1) item[2] (CBQ3-D1-Q3): Topic "Income reconciliation" not in domain topic list for "Cost Management"
+- scored_cases3.js[8] (CBQ3-D1) item[3] (CBQ3-D1-Q4): Topic "Costing method comparison" not in domain topic list for "Cost Management"
+- scored_cases3.js[8] (CBQ3-D1) item[4] (CBQ3-D1-Q5): Topic "Variable costing classification" not in domain topic list for "Cost Management"
+- scored_cases3.js[8] (CBQ3-D1) item[5] (CBQ3-D1-Q6): Topic "Cost classification" not in domain topic list for "Cost Management"
+- scored_cases3.js[9] (CBQ3-D2) item[0] (CBQ3-D2-Q1): Topic "Predetermined overhead rate" not in domain topic list for "Cost Management"
+- scored_cases3.js[9] (CBQ3-D2) item[1] (CBQ3-D2-Q2): Topic "Job cost sheet" not in domain topic list for "Cost Management"
+- scored_cases3.js[9] (CBQ3-D2) item[2] (CBQ3-D2-Q3): Topic "Overhead variance" not in domain topic list for "Cost Management"
+- scored_cases3.js[9] (CBQ3-D2) item[3] (CBQ3-D2-Q4): Topic "Overhead disposition" not in domain topic list for "Cost Management"
+- scored_cases3.js[9] (CBQ3-D2) item[4] (CBQ3-D2-Q5): Topic "Costing system types" not in domain topic list for "Cost Management"
+- scored_cases3.js[9] (CBQ3-D2) item[5] (CBQ3-D2-Q6): Topic "Job-order costing terminology" not in domain topic list for "Cost Management"
+- scored_cases3.js[10] (CBQ3-D3) item[0] (CBQ3-D3-Q1): Topic "Service department cost allocation methods" not in domain topic list for "Cost Management"
+- scored_cases3.js[10] (CBQ3-D3) item[1] (CBQ3-D3-Q2): Topic "Allocation base selection" not in domain topic list for "Cost Management"
+- scored_cases3.js[10] (CBQ3-D3) item[2] (CBQ3-D3-Q3): Topic "Step-down allocation method — sequence and mechanics" not in domain topic list for "Cost Management"
+- scored_cases3.js[10] (CBQ3-D3) item[3] (CBQ3-D3-Q4): Topic "Dual-rate versus single-rate cost allocation" not in domain topic list for "Cost Management"
+- scored_cases3.js[10] (CBQ3-D3) item[4] (CBQ3-D3-Q5): Topic "Purpose and justification of cost allocations" not in domain topic list for "Cost Management"
+- scored_cases3.js[11] (CBQ3-E1) item[0] (CBQ3-E1-Q1): Topic "COSO ERM 2017 — five components" not in domain topic list for "Internal Controls"
+- scored_cases3.js[11] (CBQ3-E1) item[1] (CBQ3-E1-Q2): Topic "COSO ERM 2017 — applying components to implementation" not in domain topic list for "Internal Controls"
+- scored_cases3.js[11] (CBQ3-E1) item[2] (CBQ3-E1-Q3): Topic "Risk response strategies — ERM Performance component" not in domain topic list for "Internal Controls"
+- scored_cases3.js[11] (CBQ3-E1) item[3] (CBQ3-E1-Q4): Topic "COSO ERM — Review and Revision component" not in domain topic list for "Internal Controls"
+- scored_cases3.js[11] (CBQ3-E1) item[4] (CBQ3-E1-Q5): Topic "COSO ERM — benefits by component" not in domain topic list for "Internal Controls"
+- scored_cases3.js[12] (CBQ3-E2) item[0] (CBQ3-E2-Q1): Topic "Disaster recovery site selection" not in domain topic list for "Internal Controls"
+- scored_cases3.js[12] (CBQ3-E2) item[1] (CBQ3-E2-Q2): Topic "BC/DR governance and testing requirements" not in domain topic list for "Internal Controls"
+- scored_cases3.js[12] (CBQ3-E2) item[2] (CBQ3-E2-Q3): Topic "Essential BCP components" not in domain topic list for "Internal Controls"
+- scored_cases3.js[12] (CBQ3-E2) item[3] (CBQ3-E2-Q4): Topic "Matching recovery strategies to business requirements" not in domain topic list for "Internal Controls"
+- scored_cases3.js[12] (CBQ3-E2) item[4] (CBQ3-E2-Q5): Topic "BC/DR governance, fiduciary duty, and regulatory compliance" not in domain topic list for "Internal Controls"
+- scored_cases3.js[13] (CBQ3-F1) item[0] (CBQ3-F1-Q1): Topic "SDLC phases — Analysis" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[13] (CBQ3-F1) item[1] (CBQ3-F1-Q2): Topic "SDLC — testing phases" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[13] (CBQ3-F1) item[2] (CBQ3-F1-Q3): Topic "SDLC methodologies — Agile vs Waterfall" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[13] (CBQ3-F1) item[3] (CBQ3-F1-Q4): Topic "Change management in SDLC" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[13] (CBQ3-F1) item[4] (CBQ3-F1-Q5): Topic "Environment segregation in SDLC" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[14] (CBQ3-F2) item[0] (CBQ3-F2-Q1): Topic "Chart type selection based on data relationships" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[14] (CBQ3-F2) item[1] (CBQ3-F2-Q2): Topic "Avoiding misleading visualizations — 3D chart distortion" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[14] (CBQ3-F2) item[2] (CBQ3-F2-Q3): Topic "Dashboard design principles and best practices" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[14] (CBQ3-F2) item[3] (CBQ3-F2-Q4): Topic "Cognitive perception and pre-attentive processing in data visualization" not in domain topic list for "Technology and Analytics"
+- scored_cases3.js[14] (CBQ3-F2) item[4] (CBQ3-F2-Q5): Topic "Data storytelling — matching visualization to communication goal" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[0] (CBQ4-A1) item[0] (CBQ4-A1-Q1): Topic "Goodwill" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[0] (CBQ4-A1) item[1] (CBQ4-A1-Q2): Topic "Impairment" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[0] (CBQ4-A1) item[2] (CBQ4-A1-Q3): Topic "Intangibles" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[0] (CBQ4-A1) item[3] (CBQ4-A1-Q4): Topic "Intangibles" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[0] (CBQ4-A1) item[4] (CBQ4-A1-Q5): Topic "Impairment" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[1] (CBQ4-A2) item[0] (CBQ4-A2-Q1): Topic "Warranties" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[1] (CBQ4-A2) item[1] (CBQ4-A2-Q2): Topic "Warranties" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[1] (CBQ4-A2) item[2] (CBQ4-A2-Q3): Topic "Contingencies" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[1] (CBQ4-A2) item[3] (CBQ4-A2-Q4): Topic "Contingencies" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[1] (CBQ4-A2) item[4] (CBQ4-A2-Q5): Topic "Contingencies" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases4.js[2] (CBQ4-B1) item[0] (CBQ4-B1-Q1): Topic "High-Low" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[2] (CBQ4-B1) item[1] (CBQ4-B1-Q2): Topic "High-Low" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[2] (CBQ4-B1) item[2] (CBQ4-B1-Q3): Topic "Regression" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[2] (CBQ4-B1) item[3] (CBQ4-B1-Q4): Topic "Regression" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[2] (CBQ4-B1) item[4] (CBQ4-B1-Q5): Topic "Cost Behavior" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[3] (CBQ4-C1) item[0] (CBQ4-C1-Q1): Topic "VOH Variances" not in domain topic list for "Performance Management"
+- scored_cases4.js[3] (CBQ4-C1) item[1] (CBQ4-C1-Q2): Topic "VOH Variances" not in domain topic list for "Performance Management"
+- scored_cases4.js[3] (CBQ4-C1) item[2] (CBQ4-C1-Q3): Topic "FOH Variances" not in domain topic list for "Performance Management"
+- scored_cases4.js[3] (CBQ4-C1) item[3] (CBQ4-C1-Q4): Topic "FOH Variances" not in domain topic list for "Performance Management"
+- scored_cases4.js[3] (CBQ4-C1) item[4] (CBQ4-C1-Q5): Topic "Overhead Variances" not in domain topic list for "Performance Management"
+- scored_cases4.js[4] (CBQ4-C2) item[0] (CBQ4-C2-Q1): Topic "ABC cost hierarchy — activity classification" not in domain topic list for "Performance Management"
+- scored_cases4.js[4] (CBQ4-C2) item[1] (CBQ4-C2-Q2): Topic "Cost driver identification in ABC" not in domain topic list for "Performance Management"
+- scored_cases4.js[4] (CBQ4-C2) item[2] (CBQ4-C2-Q3): Topic "Allocation base selection for customer profitability" not in domain topic list for "Performance Management"
+- scored_cases4.js[4] (CBQ4-C2) item[3] (CBQ4-C2-Q4): Topic "Customer profitability analysis — interpreting results" not in domain topic list for "Performance Management"
+- scored_cases4.js[4] (CBQ4-C2) item[4] (CBQ4-C2-Q5): Topic "Strategic actions from customer profitability analysis" not in domain topic list for "Performance Management"
+- scored_cases4.js[5] (CBQ4-D1) item[0] (CBQ4-D1-Q1): Topic "Throughput contribution" not in domain topic list for "Cost Management"
+- scored_cases4.js[5] (CBQ4-D1) item[1] (CBQ4-D1-Q2): Topic "Optimal product mix — TOC" not in domain topic list for "Cost Management"
+- scored_cases4.js[5] (CBQ4-D1) item[2] (CBQ4-D1-Q3): Topic "TOC priority ranking" not in domain topic list for "Cost Management"
+- scored_cases4.js[5] (CBQ4-D1) item[3] (CBQ4-D1-Q4): Topic "Throughput accounting concepts" not in domain topic list for "Cost Management"
+- scored_cases4.js[5] (CBQ4-D1) item[4] (CBQ4-D1-Q5): Topic "TOC five focusing steps" not in domain topic list for "Cost Management"
+- scored_cases4.js[5] (CBQ4-D1) item[5] (CBQ4-D1-Q6): Topic "TOC terminology" not in domain topic list for "Cost Management"
+- scored_cases4.js[6] (CBQ4-D2) item[0] (CBQ4-D2-Q1): Topic "Inventory carrying cost — JIT" not in domain topic list for "Cost Management"
+- scored_cases4.js[6] (CBQ4-D2) item[1] (CBQ4-D2-Q2): Topic "JIT cost savings" not in domain topic list for "Cost Management"
+- scored_cases4.js[6] (CBQ4-D2) item[2] (CBQ4-D2-Q3): Topic "Setup reduction — SMED" not in domain topic list for "Cost Management"
+- scored_cases4.js[6] (CBQ4-D2) item[3] (CBQ4-D2-Q4): Topic "JIT system characteristics" not in domain topic list for "Cost Management"
+- scored_cases4.js[6] (CBQ4-D2) item[4] (CBQ4-D2-Q5): Topic "Kanban" not in domain topic list for "Cost Management"
+- scored_cases4.js[6] (CBQ4-D2) item[5] (CBQ4-D2-Q6): Topic "Lean terminology" not in domain topic list for "Cost Management"
+- scored_cases4.js[7] (CBQ4-D3) item[0] (CBQ4-D3-Q1): Topic "Capacity denominator level selection for fixed overhead allocation" not in domain topic list for "Cost Management"
+- scored_cases4.js[7] (CBQ4-D3) item[1] (CBQ4-D3-Q2): Topic "Fixed overhead volume variance under different denominator levels" not in domain topic list for "Cost Management"
+- scored_cases4.js[7] (CBQ4-D3) item[2] (CBQ4-D3-Q3): Topic "Capacity measure implications on financial reporting" not in domain topic list for "Cost Management"
+- scored_cases4.js[7] (CBQ4-D3) item[3] (CBQ4-D3-Q4): Topic "Capacity management strategies — theory of constraints" not in domain topic list for "Cost Management"
+- scored_cases4.js[7] (CBQ4-D3) item[4] (CBQ4-D3-Q5): Topic "Capacity policy — balancing accounting accuracy with stakeholder communication" not in domain topic list for "Cost Management"
+- scored_cases4.js[8] (CBQ4-E1) item[0] (CBQ4-E1-Q1): Topic "COSO — Control Environment component" not in domain topic list for "Internal Controls"
+- scored_cases4.js[8] (CBQ4-E1) item[1] (CBQ4-E1-Q2): Topic "COSO — Risk Assessment component and change assessment" not in domain topic list for "Internal Controls"
+- scored_cases4.js[8] (CBQ4-E1) item[2] (CBQ4-E1-Q3): Topic "COSO — Control Activities component design" not in domain topic list for "Internal Controls"
+- scored_cases4.js[8] (CBQ4-E1) item[3] (CBQ4-E1-Q4): Topic "COSO — Information and Communication component" not in domain topic list for "Internal Controls"
+- scored_cases4.js[8] (CBQ4-E1) item[4] (CBQ4-E1-Q5): Topic "COSO — Monitoring Activities component" not in domain topic list for "Internal Controls"
+- scored_cases4.js[9] (CBQ4-E2) item[0] (CBQ4-E2-Q1): Topic "Input control matching to data entry scenarios" not in domain topic list for "Internal Controls"
+- scored_cases4.js[9] (CBQ4-E2) item[1] (CBQ4-E2-Q2): Topic "Management override of controls and control effectiveness" not in domain topic list for "Internal Controls"
+- scored_cases4.js[9] (CBQ4-E2) item[2] (CBQ4-E2-Q3): Topic "Processing controls — types and applications" not in domain topic list for "Internal Controls"
+- scored_cases4.js[9] (CBQ4-E2) item[3] (CBQ4-E2-Q4): Topic "Classifying application controls by category" not in domain topic list for "Internal Controls"
+- scored_cases4.js[9] (CBQ4-E2) item[4] (CBQ4-E2-Q5): Topic "Segregation of duties in automated systems" not in domain topic list for "Internal Controls"
+- scored_cases4.js[10] (CBQ4-E3) item[0] (CBQ4-E3-Q1): Topic "FCPA facilitating payments exception" not in domain topic list for "Internal Controls"
+- scored_cases4.js[10] (CBQ4-E3) item[1] (CBQ4-E3-Q2): Topic "Third-party intermediary risk under FCPA" not in domain topic list for "Internal Controls"
+- scored_cases4.js[10] (CBQ4-E3) item[2] (CBQ4-E3-Q3): Topic "FCPA compliance program strengthening" not in domain topic list for "Internal Controls"
+- scored_cases4.js[10] (CBQ4-E3) item[3] (CBQ4-E3-Q4): Topic "FCPA compliance responses by risk scenario" not in domain topic list for "Internal Controls"
+- scored_cases4.js[10] (CBQ4-E3) item[4] (CBQ4-E3-Q5): Topic "FCPA accounting provisions and internal control requirements" not in domain topic list for "Internal Controls"
+- scored_cases4.js[11] (CBQ4-F1) item[0] (CBQ4-F1-Q1): Topic "Cloud service model selection — shared responsibility" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[11] (CBQ4-F1) item[1] (CBQ4-F1-Q2): Topic "Cloud economics and cost-benefit analysis" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[11] (CBQ4-F1) item[2] (CBQ4-F1-Q3): Topic "Cloud security, compliance, and vendor risk management" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[11] (CBQ4-F1) item[3] (CBQ4-F1-Q4): Topic "Cloud computing accounting — capitalization vs expense" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[11] (CBQ4-F1) item[4] (CBQ4-F1-Q5): Topic "Cloud deployment models — public, private, community, hybrid" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[12] (CBQ4-F2) item[0] (CBQ4-F2-Q1): Topic "Artificial Intelligence & ML" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[12] (CBQ4-F2) item[1] (CBQ4-F2-Q2): Topic "Artificial Intelligence & ML" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[12] (CBQ4-F2) item[2] (CBQ4-F2-Q3): Topic "Artificial Intelligence & ML" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[12] (CBQ4-F2) item[3] (CBQ4-F2-Q4): Topic "Artificial Intelligence & ML" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[12] (CBQ4-F2) item[4] (CBQ4-F2-Q5): Topic "Artificial Intelligence & ML" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[13] (CBQ4-F3) item[0] (CBQ4-F3-Q1): Topic "Data Privacy & Cryptography" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[13] (CBQ4-F3) item[1] (CBQ4-F3-Q2): Topic "Data Privacy & Cryptography" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[13] (CBQ4-F3) item[2] (CBQ4-F3-Q3): Topic "Data Privacy & Cryptography" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[13] (CBQ4-F3) item[3] (CBQ4-F3-Q4): Topic "Data Privacy & Cryptography" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[13] (CBQ4-F3) item[4] (CBQ4-F3-Q5): Topic "Data Privacy & Cryptography" not in domain topic list for "Technology and Analytics"
+- scored_cases4.js[14] (CBQ4-B2) item[0] (CBQ4-B2-Q1): Topic "Inventory budgeting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[14] (CBQ4-B2) item[1] (CBQ4-B2-Q2): Topic "Receivables budgeting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[14] (CBQ4-B2) item[2] (CBQ4-B2-Q3): Topic "Payables budgeting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[14] (CBQ4-B2) item[3] (CBQ4-B2-Q4): Topic "Cash budgeting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[14] (CBQ4-B2) item[4] (CBQ4-B2-Q5): Topic "Financial budget relationships" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases4.js[14] (CBQ4-B2) item[5] (CBQ4-B2-Q6): Topic "Financial budget preparation" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases5.js[0] (CBQ5-B2) item[0] (CBQ5-B2-Q1): Topic "Bonds" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[0] (CBQ5-B2) item[1] (CBQ5-B2-Q2): Topic "Bonds" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[0] (CBQ5-B2) item[2] (CBQ5-B2-Q3): Topic "Bonds" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[0] (CBQ5-B2) item[3] (CBQ5-B2-Q4): Topic "Bonds" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[0] (CBQ5-B2) item[4] (CBQ5-B2-Q5): Topic "Bonds" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[1] (CBQ5-A2) item[0] (CBQ5-A2-Q1): Topic "Comprehensive Income" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[1] (CBQ5-A2) item[1] (CBQ5-A2-Q2): Topic "OCI" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[1] (CBQ5-A2) item[2] (CBQ5-A2-Q3): Topic "Treasury Stock" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[1] (CBQ5-A2) item[3] (CBQ5-A2-Q4): Topic "Treasury Stock" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[1] (CBQ5-A2) item[4] (CBQ5-A2-Q5): Topic "Comprehensive Income" not in domain topic list for "External Financial Reporting Decisions"
+- scored_cases5.js[2] (CBQ5-B1) item[0] (CBQ5-B1-Q1): Topic "Forecasting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases5.js[2] (CBQ5-B1) item[1] (CBQ5-B1-Q2): Topic "Strategic Management" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases5.js[2] (CBQ5-B1) item[2] (CBQ5-B1-Q3): Topic "Budgeting Methodologies" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases5.js[2] (CBQ5-B1) item[3] (CBQ5-B1-Q4): Topic "Strategic Management" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases5.js[2] (CBQ5-B1) item[4] (CBQ5-B1-Q5): Topic "Forecasting" not in domain topic list for "Planning, Budgeting, and Forecasting"
+- scored_cases5.js[3] (CBQ5-C1) item[0] (CBQ5-C1-Q1): Topic "Mix Variance" not in domain topic list for "Performance Management"
+- scored_cases5.js[3] (CBQ5-C1) item[1] (CBQ5-C1-Q2): Topic "Mix Variance" not in domain topic list for "Performance Management"
+- scored_cases5.js[3] (CBQ5-C1) item[2] (CBQ5-C1-Q3): Topic "Mix Variance" not in domain topic list for "Performance Management"
+- scored_cases5.js[3] (CBQ5-C1) item[3] (CBQ5-C1-Q4): Topic "Yield Variance" not in domain topic list for "Performance Management"
+- scored_cases5.js[3] (CBQ5-C1) item[4] (CBQ5-C1-Q5): Topic "Sales Mix Variance" not in domain topic list for "Performance Management"
+- scored_cases5.js[4] (CBQ5-C2) item[0] (CBQ5-C2-Q1): Topic "Responsibility center classification" not in domain topic list for "Performance Management"
+- scored_cases5.js[4] (CBQ5-C2) item[1] (CBQ5-C2-Q2): Topic "ROI, margin, turnover, and residual income calculations" not in domain topic list for "Performance Management"
+- scored_cases5.js[4] (CBQ5-C2) item[2] (CBQ5-C2-Q3): Topic "ROI vs Residual Income — advantages and disadvantages" not in domain topic list for "Performance Management"
+- scored_cases5.js[4] (CBQ5-C2) item[3] (CBQ5-C2-Q4): Topic "Goal congruence — ROI vs Residual Income decision example" not in domain topic list for "Performance Management"
+- scored_cases5.js[4] (CBQ5-C2) item[4] (CBQ5-C2-Q5): Topic "Balanced scorecard — linking metrics to performance dimensions" not in domain topic list for "Performance Management"
+- scored_cases5.js[5] (CBQ5-D1) item[0] (CBQ5-D1-Q1): Topic "Porter's value chain — primary activities" not in domain topic list for "Cost Management"
+- scored_cases5.js[5] (CBQ5-D1) item[1] (CBQ5-D1-Q2): Topic "Porter's value chain — support activities" not in domain topic list for "Cost Management"
+- scored_cases5.js[5] (CBQ5-D1) item[2] (CBQ5-D1-Q3): Topic "Process improvement initiatives by value chain activity" not in domain topic list for "Cost Management"
+- scored_cases5.js[5] (CBQ5-D1) item[3] (CBQ5-D1-Q4): Topic "Process improvement methodologies — Six Sigma, BPR, Kaizen, Benchmarking" not in domain topic list for "Cost Management"
+- scored_cases5.js[5] (CBQ5-D1) item[4] (CBQ5-D1-Q5): Topic "Core competency identification and strategic implications" not in domain topic list for "Cost Management"
+- scored_cases5.js[6] (CBQ5-D2) item[0] (CBQ5-D2-Q1): Topic "DMAIC phases and their application in manufacturing" not in domain topic list for "Cost Management"
+- scored_cases5.js[6] (CBQ5-D2) item[1] (CBQ5-D2-Q2): Topic "Cost of quality - prevention, appraisal, internal failure, external failure" not in domain topic list for "Cost Management"
+- scored_cases5.js[6] (CBQ5-D2) item[2] (CBQ5-D2-Q3): Topic "Six Sigma financial justification - net savings calculation" not in domain topic list for "Cost Management"
+- scored_cases5.js[6] (CBQ5-D2) item[3] (CBQ5-D2-Q4): Topic "Cost of quality - prevention vs. failure cost trade-off" not in domain topic list for "Cost Management"
+- scored_cases5.js[7] (CBQ5-D3) item[0] (CBQ5-D3-Q1): Topic "Transfer Pricing (Dual Pricing)" not in domain topic list for "Cost Management"
+- scored_cases5.js[7] (CBQ5-D3) item[1] (CBQ5-D3-Q2): Topic "Transfer Pricing (Dual Pricing)" not in domain topic list for "Cost Management"
+- scored_cases5.js[7] (CBQ5-D3) item[2] (CBQ5-D3-Q3): Topic "Transfer Pricing (Dual Pricing)" not in domain topic list for "Cost Management"
+- scored_cases5.js[7] (CBQ5-D3) item[3] (CBQ5-D3-Q4): Topic "Transfer Pricing (Dual Pricing)" not in domain topic list for "Cost Management"
+- scored_cases5.js[7] (CBQ5-D3) item[4] (CBQ5-D3-Q5): Topic "Transfer Pricing (Dual Pricing)" not in domain topic list for "Cost Management"
+- scored_cases5.js[8] (CBQ5-E1) item[0] (CBQ5-E1-Q1): Topic "Internal Auditing Standards" not in domain topic list for "Internal Controls"
+- scored_cases5.js[8] (CBQ5-E1) item[1] (CBQ5-E1-Q2): Topic "Internal Auditing Standards" not in domain topic list for "Internal Controls"
+- scored_cases5.js[8] (CBQ5-E1) item[2] (CBQ5-E1-Q3): Topic "Internal Auditing Standards" not in domain topic list for "Internal Controls"
+- scored_cases5.js[8] (CBQ5-E1) item[3] (CBQ5-E1-Q4): Topic "Internal Auditing Standards" not in domain topic list for "Internal Controls"
+- scored_cases5.js[8] (CBQ5-E1) item[4] (CBQ5-E1-Q5): Topic "Internal Auditing Standards" not in domain topic list for "Internal Controls"
+- scored_cases5.js[9] (CBQ5-E2) item[0] (CBQ5-E2-Q1): Topic "Cybersecurity and Malware" not in domain topic list for "Internal Controls"
+- scored_cases5.js[9] (CBQ5-E2) item[1] (CBQ5-E2-Q2): Topic "Cybersecurity and Malware" not in domain topic list for "Internal Controls"
+- scored_cases5.js[9] (CBQ5-E2) item[2] (CBQ5-E2-Q3): Topic "Cybersecurity and Malware" not in domain topic list for "Internal Controls"
+- scored_cases5.js[9] (CBQ5-E2) item[3] (CBQ5-E2-Q4): Topic "Cybersecurity and Malware" not in domain topic list for "Internal Controls"
+- scored_cases5.js[9] (CBQ5-E2) item[4] (CBQ5-E2-Q5): Topic "Cybersecurity and Malware" not in domain topic list for "Internal Controls"
+- scored_cases5.js[10] (CBQ5-E3) item[0] (CBQ5-E3-Q1): Topic "Data Privacy Frameworks" not in domain topic list for "Internal Controls"
+- scored_cases5.js[10] (CBQ5-E3) item[1] (CBQ5-E3-Q2): Topic "Data Privacy Frameworks" not in domain topic list for "Internal Controls"
+- scored_cases5.js[10] (CBQ5-E3) item[2] (CBQ5-E3-Q3): Topic "Data Privacy Frameworks" not in domain topic list for "Internal Controls"
+- scored_cases5.js[10] (CBQ5-E3) item[3] (CBQ5-E3-Q4): Topic "Data Privacy Frameworks" not in domain topic list for "Internal Controls"
+- scored_cases5.js[10] (CBQ5-E3) item[4] (CBQ5-E3-Q5): Topic "Data Privacy Frameworks" not in domain topic list for "Internal Controls"
+- scored_cases5.js[11] (CBQ5-F1) item[0] (CBQ5-F1-Q1): Topic "Big Data Characteristics" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[11] (CBQ5-F1) item[1] (CBQ5-F1-Q2): Topic "Big Data Characteristics" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[11] (CBQ5-F1) item[2] (CBQ5-F1-Q3): Topic "Big Data Characteristics" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[11] (CBQ5-F1) item[3] (CBQ5-F1-Q4): Topic "Big Data Characteristics" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[11] (CBQ5-F1) item[4] (CBQ5-F1-Q5): Topic "Big Data Characteristics" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[12] (CBQ5-F2) item[0] (CBQ5-F2-Q1): Topic "Robotic Process Automation (RPA)" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[12] (CBQ5-F2) item[1] (CBQ5-F2-Q2): Topic "Robotic Process Automation (RPA)" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[12] (CBQ5-F2) item[2] (CBQ5-F2-Q3): Topic "Robotic Process Automation (RPA)" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[12] (CBQ5-F2) item[3] (CBQ5-F2-Q4): Topic "Robotic Process Automation (RPA)" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[12] (CBQ5-F2) item[4] (CBQ5-F2-Q5): Topic "Robotic Process Automation (RPA)" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[13] (CBQ5-F3) item[0] (CBQ5-F3-Q1): Topic "Blockchain and Distributed Ledgers" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[13] (CBQ5-F3) item[1] (CBQ5-F3-Q2): Topic "Blockchain and Distributed Ledgers" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[13] (CBQ5-F3) item[2] (CBQ5-F3-Q3): Topic "Blockchain and Distributed Ledgers" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[13] (CBQ5-F3) item[3] (CBQ5-F3-Q4): Topic "Blockchain and Distributed Ledgers" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[13] (CBQ5-F3) item[4] (CBQ5-F3-Q5): Topic "Blockchain and Distributed Ledgers" not in domain topic list for "Technology and Analytics"
+- scored_cases5.js[14] (CBQ5-C3) item[0] (CBQ5-C3-Q1): Topic "Sales Volume Variance" not in domain topic list for "Performance Management"
+- scored_cases5.js[14] (CBQ5-C3) item[1] (CBQ5-C3-Q2): Topic "Sales variance decomposition — mix, quantity, market size, and market share" not in domain topic list for "Performance Management"
+- scored_cases5.js[14] (CBQ5-C3) item[2] (CBQ5-C3-Q3): Topic "Market Share Variance" not in domain topic list for "Performance Management"
+- scored_cases5.js[14] (CBQ5-C3) item[3] (CBQ5-C3-Q4): Topic "Performance evaluation — choosing the right variance metric" not in domain topic list for "Performance Management"
+- scored_cases5.js[14] (CBQ5-C3) item[4] (CBQ5-C3-Q5): Topic "Variance interpretation and management action" not in domain topic list for "Performance Management"
+
+### Difficulty Validator
+**Status:** FAIL
+**Duration:** 116ms
+**Statistics:**
+- Cases Checked: 75
+- Items Checked: 400
+- Difficulty: Difficult: 20
+- Difficulty: Easy: 4
+- Difficulty: Moderate: 51
+- Difficulty: Very Difficult: 0
+- Cognitive: Analyze: 126
+- Cognitive: Apply: 138
+- Cognitive: Evaluate: 98
+- Cognitive: Remember: 1
+- Cognitive: Understand: 37
+**Errors:**
+- scored_cases.js[0] item[0] (CBQ-A1/CBQ-A1-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[0] item[1] (CBQ-A1/CBQ-A1-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[0] item[4] (CBQ-A1/CBQ-A1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[1] item[0] (CBQ-A2/CBQ-A2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[1] item[2] (CBQ-A2/CBQ-A2-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[0] (CBQ-B1/CBQ-B1-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[1] (CBQ-B1/CBQ-B1-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[3] (CBQ-B1/CBQ-B1-Q4): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[2] item[4] (CBQ-B1/CBQ-B1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[3] item[0] (CBQ-B2/CBQ-B2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[3] item[4] (CBQ-B2/CBQ-B2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[4] item[0] (CBQ-C1/CBQ-C1-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[4] item[1] (CBQ-C1/CBQ-C1-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[4] item[2] (CBQ-C1/CBQ-C1-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[5] item[0] (CBQ-C2/CBQ-C2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[5] item[1] (CBQ-C2/CBQ-C2-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[5] item[4] (CBQ-C2/CBQ-C2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[6] item[1] (CBQ-D1/CBQ-D1-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[6] item[4] (CBQ-D1/CBQ-D1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[7] item[0] (CBQ-D2/CBQ-D2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[7] item[1] (CBQ-D2/CBQ-D2-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[7] item[4] (CBQ-D2/CBQ-D2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[8] item[2] (CBQ-E1/CBQ-E1-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[8] item[3] (CBQ-E1/CBQ-E1-Q4): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[9] item[1] (CBQ-E2/CBQ-E2-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[9] item[3] (CBQ-E2/CBQ-E2-Q4): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[10] item[0] (CBQ-F1/CBQ-F1-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[10] item[4] (CBQ-F1/CBQ-F1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[11] item[0] (CBQ-A3/CBQ-A3-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[12] item[0] (CBQ-B3/CBQ-B3-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[12] item[1] (CBQ-B3/CBQ-B3-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[12] item[2] (CBQ-B3/CBQ-B3-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[14] item[0] (CBQ-F2/CBQ-F2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[14] item[1] (CBQ-F2/CBQ-F2-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases.js[14] item[4] (CBQ-F2/CBQ-F2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[0] item[4] (CBQ2-A3/CBQ2-A3-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[9] item[4] (CBQ2-D2/CBQ2-D2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[14] item[2] (CBQ2-F2/CBQ2-F2-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases2.js[14] item[3] (CBQ2-F2/CBQ2-F2-Q4): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[0] item[2] (CBQ3-A1/CBQ3-A1-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[2] item[4] (CBQ3-B1/CBQ3-B1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[8] item[4] (CBQ3-D1/CBQ3-D1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[9] item[4] (CBQ3-D2/CBQ3-D2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[13] item[0] (CBQ3-F1/CBQ3-F1-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[13] item[1] (CBQ3-F1/CBQ3-F1-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases3.js[13] item[2] (CBQ3-F1/CBQ3-F1-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[1] item[4] (CBQ4-A2/CBQ4-A2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[5] item[4] (CBQ4-D1/CBQ4-D1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[6] item[4] (CBQ4-D2/CBQ4-D2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[12] item[0] (CBQ4-F2/CBQ4-F2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[13] item[0] (CBQ4-F3/CBQ4-F3-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[13] item[1] (CBQ4-F3/CBQ4-F3-Q2): Invalid item Difficulty "Moderate-Easy"
+- scored_cases4.js[13] item[2] (CBQ4-F3/CBQ4-F3-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[1] item[4] (CBQ5-A2/CBQ5-A2-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[2] item[4] (CBQ5-B1/CBQ5-B1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[7] item[3] (CBQ5-D3/CBQ5-D3-Q4): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[8] item[0] (CBQ5-E1/CBQ5-E1-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[8] item[2] (CBQ5-E1/CBQ5-E1-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[8] item[4] (CBQ5-E1/CBQ5-E1-Q5): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[9] item[0] (CBQ5-E2/CBQ5-E2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[10] item[2] (CBQ5-E3/CBQ5-E3-Q3): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[10] item[3] (CBQ5-E3/CBQ5-E3-Q4): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[11] item[0] (CBQ5-F1/CBQ5-F1-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[12] item[0] (CBQ5-F2/CBQ5-F2-Q1): Invalid item Difficulty "Moderate-Easy"
+- scored_cases5.js[13] item[0] (CBQ5-F3/CBQ5-F3-Q1): Invalid item Difficulty "Moderate-Easy"
+**Warnings:**
+- scored_cases.js[0] (CBQ-A1): EstimatedMinutes 30 but items sum to 29 (expected ~41 with reading time)
+- scored_cases.js[1] (CBQ-A2): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases.js[2] (CBQ-B1): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases.js[3] (CBQ-B2): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases.js[4] (CBQ-C1): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases.js[5] (CBQ-C2): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases.js[6] (CBQ-D1): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases.js[7] (CBQ-D2): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases.js[8] (CBQ-E1): EstimatedMinutes 30 but items sum to 27 (expected ~39 with reading time)
+- scored_cases.js[9] (CBQ-E2): EstimatedMinutes 30 but items sum to 27 (expected ~39 with reading time)
+- scored_cases.js[10] (CBQ-F1): EstimatedMinutes 30 but items sum to 27 (expected ~39 with reading time)
+- scored_cases.js[11] (CBQ-A3): EstimatedMinutes 30 but items sum to 29 (expected ~41 with reading time)
+- scored_cases.js[12] (CBQ-B3): EstimatedMinutes 30 but items sum to 29 (expected ~41 with reading time)
+- scored_cases.js[13] (CBQ-C3): EstimatedMinutes 30 but items sum to 29 (expected ~41 with reading time)
+- scored_cases.js[14] (CBQ-F2): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases2.js[1] (CBQ2-A2): EstimatedMinutes 30 but items sum to 25 (expected ~36 with reading time)
+- scored_cases2.js[2] (CBQ2-B1): EstimatedMinutes 25 but items sum to 24 (expected ~34 with reading time)
+- scored_cases2.js[3] (CBQ2-B2): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases2.js[4] (CBQ2-B3): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases2.js[5] (CBQ2-C1): EstimatedMinutes 30 but items sum to 29 (expected ~41 with reading time)
+- scored_cases2.js[6] (CBQ2-C2): EstimatedMinutes 30 but items sum to 25 (expected ~36 with reading time)
+- scored_cases2.js[7] (CBQ2-C3): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases2.js[8] (CBQ2-D1): EstimatedMinutes 30 but items sum to 25 (expected ~36 with reading time)
+- scored_cases2.js[9] (CBQ2-D2): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases2.js[10] (CBQ2-D3): EstimatedMinutes 35 but items sum to 29 (expected ~41 with reading time)
+- scored_cases2.js[13] (CBQ2-F1): EstimatedMinutes 20 but items sum to 24 (expected ~34 with reading time)
+- scored_cases2.js[14] (CBQ2-F2): EstimatedMinutes 25 but items sum to 23 (expected ~33 with reading time)
+- scored_cases3.js[0] (CBQ3-A1): EstimatedMinutes 25 but items sum to 22 (expected ~31 with reading time)
+- scored_cases3.js[1] (CBQ3-A2): EstimatedMinutes 30 but items sum to 25 (expected ~36 with reading time)
+- scored_cases3.js[2] (CBQ3-B1): EstimatedMinutes 25 but items sum to 22 (expected ~31 with reading time)
+- scored_cases3.js[3] (CBQ3-B2): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases3.js[4] (CBQ3-B3): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases3.js[5] (CBQ3-C1): EstimatedMinutes 20 but items sum to 30 (expected ~43 with reading time)
+- scored_cases3.js[6] (CBQ3-C2): EstimatedMinutes 35 but items sum to 35 (expected ~50 with reading time)
+- scored_cases3.js[7] (CBQ3-C3): EstimatedMinutes 30 but items sum to 34 (expected ~49 with reading time)
+- scored_cases3.js[8] (CBQ3-D1): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases3.js[9] (CBQ3-D2): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases3.js[10] (CBQ3-D3): EstimatedMinutes 20 but items sum to 30 (expected ~43 with reading time)
+- scored_cases3.js[11] (CBQ3-E1): EstimatedMinutes 20 but items sum to 32 (expected ~46 with reading time)
+- scored_cases3.js[12] (CBQ3-E2): EstimatedMinutes 30 but items sum to 34 (expected ~49 with reading time)
+- scored_cases3.js[13] (CBQ3-F1): EstimatedMinutes 20 but items sum to 20 (expected ~29 with reading time)
+- scored_cases3.js[14] (CBQ3-F2): EstimatedMinutes 30 but items sum to 34 (expected ~49 with reading time)
+- scored_cases4.js[0] (CBQ4-A1): EstimatedMinutes 30 but items sum to 25 (expected ~36 with reading time)
+- scored_cases4.js[1] (CBQ4-A2): EstimatedMinutes 25 but items sum to 22 (expected ~31 with reading time)
+- scored_cases4.js[2] (CBQ4-B1): EstimatedMinutes 20 but items sum to 24 (expected ~34 with reading time)
+- scored_cases4.js[4] (CBQ4-C2): EstimatedMinutes 20 but items sum to 32 (expected ~46 with reading time)
+- scored_cases4.js[5] (CBQ4-D1): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases4.js[6] (CBQ4-D2): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases4.js[7] (CBQ4-D3): EstimatedMinutes 35 but items sum to 37 (expected ~53 with reading time)
+- scored_cases4.js[8] (CBQ4-E1): EstimatedMinutes 20 but items sum to 25 (expected ~36 with reading time)
+- scored_cases4.js[9] (CBQ4-E2): EstimatedMinutes 30 but items sum to 34 (expected ~49 with reading time)
+- scored_cases4.js[10] (CBQ4-E3): EstimatedMinutes 30 but items sum to 37 (expected ~53 with reading time)
+- scored_cases4.js[11] (CBQ4-F1): EstimatedMinutes 30 but items sum to 36 (expected ~51 with reading time)
+- scored_cases4.js[12] (CBQ4-F2): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases4.js[13] (CBQ4-F3): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases4.js[14] (CBQ4-B2): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases5.js[1] (CBQ5-A2): EstimatedMinutes 25 but items sum to 22 (expected ~31 with reading time)
+- scored_cases5.js[2] (CBQ5-B1): EstimatedMinutes 20 but items sum to 23 (expected ~33 with reading time)
+- scored_cases5.js[4] (CBQ5-C2): EstimatedMinutes 20 but items sum to 33 (expected ~47 with reading time)
+- scored_cases5.js[5] (CBQ5-D1): EstimatedMinutes 20 but items sum to 31 (expected ~44 with reading time)
+- scored_cases5.js[6] (CBQ5-D2): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- scored_cases5.js[7] (CBQ5-D3): EstimatedMinutes 30 but items sum to 32 (expected ~46 with reading time)
+- scored_cases5.js[8] (CBQ5-E1): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases5.js[9] (CBQ5-E2): EstimatedMinutes 30 but items sum to 32 (expected ~46 with reading time)
+- scored_cases5.js[11] (CBQ5-F1): EstimatedMinutes 30 but items sum to 30 (expected ~43 with reading time)
+- scored_cases5.js[12] (CBQ5-F2): EstimatedMinutes 30 but items sum to 32 (expected ~46 with reading time)
+- scored_cases5.js[13] (CBQ5-F3): EstimatedMinutes 30 but items sum to 33 (expected ~47 with reading time)
+- scored_cases5.js[14] (CBQ5-C3): EstimatedMinutes 30 but items sum to 28 (expected ~40 with reading time)
+- Difficulty "Moderate": 51/75 (68.0%) deviates from target 45.0% by more than 10%
+
+### Reference Validator
+**Status:** WARN
+**Duration:** 114ms
+**Statistics:**
+- Cases Checked: 75
+- Total References: 0
+- Orphan Exhibits (unreferenced): 115
+- Orphan References (missing exhibits): 0
+**Warnings:**
+- scored_cases.js[0] (CBQ-A1) exhibit "CBQ-A1-E1": Exhibit is never referenced by any item
+- scored_cases.js[0] (CBQ-A1) exhibit "CBQ-A1-E2": Exhibit is never referenced by any item
+- scored_cases.js[1] (CBQ-A2) exhibit "CBQ-A2-E1": Exhibit is never referenced by any item
+- scored_cases.js[1] (CBQ-A2) exhibit "CBQ-A2-E2": Exhibit is never referenced by any item
+- scored_cases.js[2] (CBQ-B1) exhibit "CBQ-B1-E1": Exhibit is never referenced by any item
+- scored_cases.js[2] (CBQ-B1) exhibit "CBQ-B1-E2": Exhibit is never referenced by any item
+- scored_cases.js[3] (CBQ-B2) exhibit "CBQ-B2-E1": Exhibit is never referenced by any item
+- scored_cases.js[3] (CBQ-B2) exhibit "CBQ-B2-E2": Exhibit is never referenced by any item
+- scored_cases.js[4] (CBQ-C1) exhibit "CBQ-C1-E1": Exhibit is never referenced by any item
+- scored_cases.js[5] (CBQ-C2) exhibit "CBQ-C2-E1": Exhibit is never referenced by any item
+- scored_cases.js[5] (CBQ-C2) exhibit "CBQ-C2-E2": Exhibit is never referenced by any item
+- scored_cases.js[6] (CBQ-D1) exhibit "CBQ-D1-E1": Exhibit is never referenced by any item
+- scored_cases.js[6] (CBQ-D1) exhibit "CBQ-D1-E2": Exhibit is never referenced by any item
+- scored_cases.js[7] (CBQ-D2) exhibit "CBQ-D2-E1": Exhibit is never referenced by any item
+- scored_cases.js[7] (CBQ-D2) exhibit "CBQ-D2-E2": Exhibit is never referenced by any item
+- scored_cases.js[8] (CBQ-E1) exhibit "CBQ-E1-E1": Exhibit is never referenced by any item
+- scored_cases.js[8] (CBQ-E1) exhibit "CBQ-E1-E2": Exhibit is never referenced by any item
+- scored_cases.js[9] (CBQ-E2) exhibit "CBQ-E2-E1": Exhibit is never referenced by any item
+- scored_cases.js[10] (CBQ-F1) exhibit "CBQ-F1-E1": Exhibit is never referenced by any item
+- scored_cases.js[10] (CBQ-F1) exhibit "CBQ-F1-E2": Exhibit is never referenced by any item
+- scored_cases.js[11] (CBQ-A3) exhibit "CBQ-A3-E1": Exhibit is never referenced by any item
+- scored_cases.js[11] (CBQ-A3) exhibit "CBQ-A3-E2": Exhibit is never referenced by any item
+- scored_cases.js[12] (CBQ-B3) exhibit "CBQ-B3-E1": Exhibit is never referenced by any item
+- scored_cases.js[12] (CBQ-B3) exhibit "CBQ-B3-E2": Exhibit is never referenced by any item
+- scored_cases.js[13] (CBQ-C3) exhibit "CBQ-C3-E1": Exhibit is never referenced by any item
+- scored_cases.js[13] (CBQ-C3) exhibit "CBQ-C3-E2": Exhibit is never referenced by any item
+- scored_cases.js[14] (CBQ-F2) exhibit "CBQ-F2-E1": Exhibit is never referenced by any item
+- scored_cases.js[14] (CBQ-F2) exhibit "CBQ-F2-E2": Exhibit is never referenced by any item
+- scored_cases2.js[0] (CBQ2-A3) exhibit "CBQ2-A3-E1": Exhibit is never referenced by any item
+- scored_cases2.js[1] (CBQ2-A2) exhibit "CBQ2-A2-E1": Exhibit is never referenced by any item
+- scored_cases2.js[2] (CBQ2-B1) exhibit "CBQ2-B1-E1": Exhibit is never referenced by any item
+- scored_cases2.js[3] (CBQ2-B2) exhibit "CBQ2-B2-E1": Exhibit is never referenced by any item
+- scored_cases2.js[3] (CBQ2-B2) exhibit "CBQ2-B2-E2": Exhibit is never referenced by any item
+- scored_cases2.js[4] (CBQ2-B3) exhibit "CBQ2-B3-E1": Exhibit is never referenced by any item
+- scored_cases2.js[4] (CBQ2-B3) exhibit "CBQ2-B3-E2": Exhibit is never referenced by any item
+- scored_cases2.js[5] (CBQ2-C1) exhibit "CBQ2-C1-E1": Exhibit is never referenced by any item
+- scored_cases2.js[6] (CBQ2-C2) exhibit "CBQ2-C2-E1": Exhibit is never referenced by any item
+- scored_cases2.js[7] (CBQ2-C3) exhibit "CBQ2-C3-E1": Exhibit is never referenced by any item
+- scored_cases2.js[8] (CBQ2-D1) exhibit "CBQ2-D1-E1": Exhibit is never referenced by any item
+- scored_cases2.js[9] (CBQ2-D2) exhibit "CBQ2-D2-E1": Exhibit is never referenced by any item
+- scored_cases2.js[9] (CBQ2-D2) exhibit "CBQ2-D2-E2": Exhibit is never referenced by any item
+- scored_cases2.js[10] (CBQ2-D3) exhibit "CBQ2-D3-E1": Exhibit is never referenced by any item
+- scored_cases2.js[11] (CBQ2-E1) exhibit "CBQ2-E1-E1": Exhibit is never referenced by any item
+- scored_cases2.js[12] (CBQ2-E2) exhibit "CBQ2-E2-E1": Exhibit is never referenced by any item
+- scored_cases2.js[13] (CBQ2-F1) exhibit "CBQ2-F1-E1": Exhibit is never referenced by any item
+- scored_cases2.js[14] (CBQ2-F2) exhibit "CBQ2-F2-E1": Exhibit is never referenced by any item
+- scored_cases3.js[0] (CBQ3-A1) exhibit "CBQ3-A1-E1": Exhibit is never referenced by any item
+- scored_cases3.js[1] (CBQ3-A2) exhibit "CBQ3-A2-E1": Exhibit is never referenced by any item
+- scored_cases3.js[2] (CBQ3-B1) exhibit "CBQ3-B1-E1": Exhibit is never referenced by any item
+- scored_cases3.js[3] (CBQ3-B2) exhibit "CBQ3-B2-E1": Exhibit is never referenced by any item
+- scored_cases3.js[3] (CBQ3-B2) exhibit "CBQ3-B2-E2": Exhibit is never referenced by any item
+- scored_cases3.js[4] (CBQ3-B3) exhibit "CBQ3-B3-E1": Exhibit is never referenced by any item
+- scored_cases3.js[4] (CBQ3-B3) exhibit "CBQ3-B3-E2": Exhibit is never referenced by any item
+- scored_cases3.js[5] (CBQ3-C1) exhibit "CBQ3-C1-E1": Exhibit is never referenced by any item
+- scored_cases3.js[6] (CBQ3-C2) exhibit "CBQ3-C2-E1": Exhibit is never referenced by any item
+- scored_cases3.js[6] (CBQ3-C2) exhibit "CBQ3-C2-E2": Exhibit is never referenced by any item
+- scored_cases3.js[7] (CBQ3-C3) exhibit "CBQ3-C3-E1": Exhibit is never referenced by any item
+- scored_cases3.js[7] (CBQ3-C3) exhibit "CBQ3-C3-E2": Exhibit is never referenced by any item
+- scored_cases3.js[8] (CBQ3-D1) exhibit "CBQ3-D1-E1": Exhibit is never referenced by any item
+- scored_cases3.js[8] (CBQ3-D1) exhibit "CBQ3-D1-E2": Exhibit is never referenced by any item
+- scored_cases3.js[9] (CBQ3-D2) item[0] (CBQ3-D2-Q1): DecisionTreeReference "Job Order Costing" not found in ACCOUNTING_DECISION_TREES.md
+- scored_cases3.js[9] (CBQ3-D2) exhibit "CBQ3-D2-E1": Exhibit is never referenced by any item
+- scored_cases3.js[9] (CBQ3-D2) exhibit "CBQ3-D2-E2": Exhibit is never referenced by any item
+- scored_cases3.js[10] (CBQ3-D3) exhibit "CBQ3-D3-E1": Exhibit is never referenced by any item
+- scored_cases3.js[11] (CBQ3-E1) exhibit "CBQ3-E1-E1": Exhibit is never referenced by any item
+- scored_cases3.js[12] (CBQ3-E2) exhibit "CBQ3-E2-E1": Exhibit is never referenced by any item
+- scored_cases3.js[12] (CBQ3-E2) exhibit "CBQ3-E2-E2": Exhibit is never referenced by any item
+- scored_cases3.js[13] (CBQ3-F1) exhibit "CBQ3-F1-E1": Exhibit is never referenced by any item
+- scored_cases3.js[14] (CBQ3-F2) exhibit "CBQ3-F2-E1": Exhibit is never referenced by any item
+- scored_cases3.js[14] (CBQ3-F2) exhibit "CBQ3-F2-E2": Exhibit is never referenced by any item
+- scored_cases4.js[0] (CBQ4-A1) exhibit "CBQ4-A1-E1": Exhibit is never referenced by any item
+- scored_cases4.js[1] (CBQ4-A2) exhibit "CBQ4-A2-E1": Exhibit is never referenced by any item
+- scored_cases4.js[2] (CBQ4-B1) exhibit "CBQ4-B1-E1": Exhibit is never referenced by any item
+- scored_cases4.js[3] (CBQ4-C1) exhibit "CBQ4-C1-E1": Exhibit is never referenced by any item
+- scored_cases4.js[4] (CBQ4-C2) exhibit "CBQ4-C2-E1": Exhibit is never referenced by any item
+- scored_cases4.js[5] (CBQ4-D1) exhibit "CBQ4-D1-E1": Exhibit is never referenced by any item
+- scored_cases4.js[5] (CBQ4-D1) exhibit "CBQ4-D1-E2": Exhibit is never referenced by any item
+- scored_cases4.js[6] (CBQ4-D2) exhibit "CBQ4-D2-E1": Exhibit is never referenced by any item
+- scored_cases4.js[6] (CBQ4-D2) exhibit "CBQ4-D2-E2": Exhibit is never referenced by any item
+- scored_cases4.js[7] (CBQ4-D3) exhibit "CBQ4-D3-E1": Exhibit is never referenced by any item
+- scored_cases4.js[7] (CBQ4-D3) exhibit "CBQ4-D3-E2": Exhibit is never referenced by any item
+- scored_cases4.js[8] (CBQ4-E1) exhibit "CBQ4-E1-E1": Exhibit is never referenced by any item
+- scored_cases4.js[9] (CBQ4-E2) exhibit "CBQ4-E2-E1": Exhibit is never referenced by any item
+- scored_cases4.js[9] (CBQ4-E2) exhibit "CBQ4-E2-E2": Exhibit is never referenced by any item
+- scored_cases4.js[10] (CBQ4-E3) exhibit "CBQ4-E3-E1": Exhibit is never referenced by any item
+- scored_cases4.js[10] (CBQ4-E3) exhibit "CBQ4-E3-E2": Exhibit is never referenced by any item
+- scored_cases4.js[11] (CBQ4-F1) exhibit "CBQ4-F1-E1": Exhibit is never referenced by any item
+- scored_cases4.js[11] (CBQ4-F1) exhibit "CBQ4-F1-E2": Exhibit is never referenced by any item
+- scored_cases4.js[12] (CBQ4-F2) exhibit "CBQ4-F2-E1": Exhibit is never referenced by any item
+- scored_cases4.js[12] (CBQ4-F2) exhibit "CBQ4-F2-E2": Exhibit is never referenced by any item
+- scored_cases4.js[13] (CBQ4-F3) exhibit "CBQ4-F3-E1": Exhibit is never referenced by any item
+- scored_cases4.js[13] (CBQ4-F3) exhibit "CBQ4-F3-E2": Exhibit is never referenced by any item
+- scored_cases4.js[14] (CBQ4-B2) exhibit "CBQ4-B2-E1": Exhibit is never referenced by any item
+- scored_cases4.js[14] (CBQ4-B2) exhibit "CBQ4-B2-E2": Exhibit is never referenced by any item
+- scored_cases5.js[0] (CBQ5-B2) exhibit "CBQ5-B2-E1": Exhibit is never referenced by any item
+- scored_cases5.js[0] (CBQ5-B2) exhibit "CBQ5-B2-E2": Exhibit is never referenced by any item
+- scored_cases5.js[1] (CBQ5-A2) exhibit "CBQ5-A2-E1": Exhibit is never referenced by any item
+- scored_cases5.js[2] (CBQ5-B1) exhibit "CBQ5-B1-E1": Exhibit is never referenced by any item
+- scored_cases5.js[3] (CBQ5-C1) exhibit "CBQ5-C1-E1": Exhibit is never referenced by any item
+- scored_cases5.js[6] (CBQ5-D2) exhibit "CBQ5-D2-E1": Exhibit is never referenced by any item
+- scored_cases5.js[6] (CBQ5-D2) exhibit "CBQ5-D2-E2": Exhibit is never referenced by any item
+- scored_cases5.js[7] (CBQ5-D3) exhibit "CBQ5-D3-E1": Exhibit is never referenced by any item
+- scored_cases5.js[7] (CBQ5-D3) exhibit "CBQ5-D3-E2": Exhibit is never referenced by any item
+- scored_cases5.js[8] (CBQ5-E1) exhibit "CBQ5-E1-E1": Exhibit is never referenced by any item
+- scored_cases5.js[8] (CBQ5-E1) exhibit "CBQ5-E1-E2": Exhibit is never referenced by any item
+- scored_cases5.js[9] (CBQ5-E2) exhibit "CBQ5-E2-E1": Exhibit is never referenced by any item
+- scored_cases5.js[9] (CBQ5-E2) exhibit "CBQ5-E2-E2": Exhibit is never referenced by any item
+- scored_cases5.js[10] (CBQ5-E3) exhibit "CBQ5-E3-E1": Exhibit is never referenced by any item
+- scored_cases5.js[11] (CBQ5-F1) exhibit "CBQ5-F1-E1": Exhibit is never referenced by any item
+- scored_cases5.js[11] (CBQ5-F1) exhibit "CBQ5-F1-E2": Exhibit is never referenced by any item
+- scored_cases5.js[12] (CBQ5-F2) exhibit "CBQ5-F2-E1": Exhibit is never referenced by any item
+- scored_cases5.js[12] (CBQ5-F2) exhibit "CBQ5-F2-E2": Exhibit is never referenced by any item
+- scored_cases5.js[13] (CBQ5-F3) exhibit "CBQ5-F3-E1": Exhibit is never referenced by any item
+- scored_cases5.js[13] (CBQ5-F3) exhibit "CBQ5-F3-E2": Exhibit is never referenced by any item
+- scored_cases5.js[14] (CBQ5-C3) exhibit "CBQ5-C3-E1": Exhibit is never referenced by any item
+- scored_cases5.js[14] (CBQ5-C3) exhibit "CBQ5-C3-E2": Exhibit is never referenced by any item
+
+### Explanation Validator
+**Status:** FAIL
+**Duration:** 149ms
+**Statistics:**
+- MCQ Questions Checked: 2540
+- Case Items Checked: 400
+- Questions with Placeholder Explanations: 0
+- Fields with Placeholder Text: 0
+- Short Explanations (<50 chars): 42
+- Correct Explanation Avg Length: 249
+- Wrong Explanation Avg Length: 217
+**Errors:**
+- pack_c_corrected.js [185] (P1-CC-011): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [186] (P1-CC-012): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [188] (P1-CC-014): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [204] (P1-CC-030): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [205] (P1-CC-031): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [206] (P1-CC-032): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [208] (P1-CC-034): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [214] (P1-CC-040): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [216] (P1-CC-042): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [217] (P1-CC-043): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [218] (P1-CC-044): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [224] (P1-CC-050): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [225] (P1-CC-051): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [226] (P1-CC-052): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [245] (P1-CC-071): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [371] (P1-EC-022): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [372] (P1-EC-023): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [373] (P1-EC-024): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [424] (P1-EC-075): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [430] (P1-FC-006): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [449] (P1-FC-025): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_c_corrected.js [497] (P1-FC-073): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [189] (P1-CD-015): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [191] (P1-CD-017): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [192] (P1-CD-018): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [217] (P1-CD-043): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [218] (P1-CD-044): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [222] (P1-CD-048): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [225] (P1-CD-051): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [231] (P1-CD-057): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [232] (P1-CD-058): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [235] (P1-CD-061): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [238] (P1-CD-064): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [241] (P1-CD-067): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [242] (P1-CD-068): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [245] (P1-CD-071): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [248] (P1-CD-074): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [264] (P1-CD-090): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [266] (P1-CD-092): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [267] (P1-CD-093): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [276] (P1-DD-002): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [277] (P1-DD-003): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [295] (P1-DD-021): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [311] (P1-DD-037): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [314] (P1-DD-040): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [316] (P1-DD-042): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [317] (P1-DD-043): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [318] (P1-DD-044): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [320] (P1-DD-046): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [323] (P1-DD-049): ExplanationWrongD is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [324] (P1-DD-050): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [325] (P1-DD-051): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [326] (P1-DD-052): ExplanationWrongB is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [336] (P1-DD-062): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [337] (P1-DD-063): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [406] (P1-ED-057): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [412] (P1-ED-063): ExplanationWrongC is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [414] (P1-ED-065): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+- pack_d_corrected.js [425] (P1-FD-001): ExplanationWrongA is non-empty at the correct-answer slot (EV8 / DL-008 violation). Must be empty ("").
+**Warnings:**
+- pack_a_corrected.js [35] (P1-A-036): ExplanationWrongC is short (44 chars)
+- pack_a_corrected.js [45] (P1-A-046): ExplanationWrongB is short (38 chars)
+- pack_a_corrected.js [55] (P1-A-056): ExplanationWrongA is short (44 chars)
+- pack_a_corrected.js [65] (P1-A-066): ExplanationWrongA is short (44 chars)
+- pack_c_corrected.js [25] (P1-AC-026): ExplanationWrongD is short (41 chars)
+- pack_c_corrected.js [27] (P1-AC-028): ExplanationWrongC is short (48 chars)
+- pack_e_corrected.js [19] (P1E-A-020): ExplanationWrongB is short (48 chars)
+- pack_e_corrected.js [23] (P1E-A-024): ExplanationWrongA is short (49 chars)
+- pack_e_corrected.js [30] (P1E-A-031): ExplanationWrongC is short (48 chars)
+- pack_e_corrected.js [183] (P1E-C-044): ExplanationCorrect is short (42 chars)
+- pack_e_corrected.js [200] (P1E-D-016): ExplanationWrongB is short (46 chars)
+- pack_e_corrected.js [218] (P1E-D-034): ExplanationCorrect is short (31 chars)
+- pack_e_corrected.js [225] (P1E-E-004): ExplanationCorrect is short (48 chars)
+- pack_e_corrected.js [231] (P1E-E-010): ExplanationCorrect is short (47 chars)
+- pack_e_corrected.js [257] (P1E-F-006): ExplanationCorrect is short (42 chars)
+- pack_e_corrected.js [257] (P1E-F-006): ExplanationWrongC is short (43 chars)
+- pack_e_corrected.js [258] (P1E-F-007): ExplanationWrongD is short (42 chars)
+- pack_e_corrected.js [260] (P1E-F-009): ExplanationCorrect is short (49 chars)
+- pack_e_corrected.js [261] (P1E-F-010): ExplanationCorrect is short (48 chars)
+- pack_e_corrected.js [264] (P1E-F-013): ExplanationCorrect is short (44 chars)
+- pack_e_corrected.js [265] (P1E-F-014): ExplanationCorrect is short (46 chars)
+- pack_e_corrected.js [267] (P1E-F-016): ExplanationCorrect is short (48 chars)
+- pack_e_corrected.js [270] (P1E-F-019): ExplanationCorrect is short (47 chars)
+- pack_e_corrected.js [272] (P1E-F-021): ExplanationCorrect is short (49 chars)
+- pack_e_corrected.js [275] (P1E-F-024): ExplanationCorrect is short (40 chars)
+- pack_e_corrected.js [328] (P1E-C-050): ExplanationCorrect is short (45 chars)
+- pack_e_corrected.js [348] (P1E-D-043): ExplanationCorrect is short (45 chars)
+- pack_e_corrected.js [399] (P1E-E-064): ExplanationCorrect is short (42 chars)
+- pack_e_corrected.js [407] (P1E-F-044): ExplanationCorrect is short (38 chars)
+- pack_e_corrected.js [421] (P1E-F-058): ExplanationCorrect is short (30 chars)
+- pack_e_corrected.js [428] (P1E-F-065): ExplanationCorrect is short (44 chars)
+- pack_e_corrected.js [429] (P1E-F-066): ExplanationCorrect is short (47 chars)
+- pack_e_corrected.js [443] (P1E-C-069): ExplanationCorrect is short (49 chars)
+- pack_e_corrected.js [497] (P1E-C-098): ExplanationCorrect is short (47 chars)
+- pack_e_corrected.js [498] (P1E-C-099): ExplanationCorrect is short (47 chars)
+- scored_cases2.js[1] item[0] (CBQ2-A2): Explanation is short (38 chars)
+- scored_cases2.js[1] item[1] (CBQ2-A2): Explanation is short (38 chars)
+- scored_cases2.js[1] item[2] (CBQ2-A2): Explanation is short (37 chars)
+- scored_cases2.js[2] item[3] (CBQ2-B1): Explanation is short (27 chars)
+- scored_cases3.js[2] item[4] (CBQ3-B1): Explanation is short (45 chars)
+- scored_cases5.js[3] item[1] (CBQ5-C1): Explanation is short (47 chars)
+- scored_cases5.js[3] item[2] (CBQ5-C1): Explanation is short (46 chars)
+- 42 explanations are shorter than the recommended 50-character minimum.
+
+### Case Integrity Validator
+**Status:** FAIL
+**Duration:** 29ms
+**Statistics:**
+- Total Cases Checked: 75
+- Total Items Checked: 400
+- Cases with Duplicate Stems: 0
+- Cases with Duplicate Choices: 8
+- Cases with Placeholder Choices: 1
+- Cases with Empty Prompts: 0
+- Items with Missing Choices: 0
+- Items with Missing Explanations: 0
+- Duplicate ItemIDs Found: 0
+- Cases with Duplicate Explanations: 0
+- Cases with Missing Exhibits: 0
+**Errors:**
+- Duplicate choices found in cases: CBQ-B1, CBQ2-B1, CBQ2-D3, CBQ3-A2, CBQ4-A2, CBQ4-C1, CBQ4-B2, CBQ5-B2
+- Placeholder choices found in cases: CBQ3-E2
+**Warnings:**
+- scored_cases.js[2] CBQ-B1: All items have identical choices
+- scored_cases2.js[2] CBQ2-B1: All items have identical choices
+- scored_cases2.js[10] CBQ2-D3: All items have identical choices
+- scored_cases3.js[1] CBQ3-A2: All items have identical choices
+- scored_cases4.js[1] CBQ4-A2: All items have identical choices
+- scored_cases4.js[3] CBQ4-C1: All items have identical choices
+- scored_cases4.js[14] CBQ4-B2: All items have identical choices
+- scored_cases5.js[0] CBQ5-B2: All items have identical choices
+
+### PsychometricValidator
+**Status:** FAIL
+**Duration:** 915ms
+**Statistics:**
+- AbsoluteLanguageValidator.questionsScanned: 2540
+- AbsoluteLanguageValidator.findings: 987
+- AbsoluteLanguageValidator.pattern.only/exclusively: 829
+- AbsoluteLanguageValidator.pattern.always: 80
+- AbsoluteLanguageValidator.pattern.never: 39
+- AbsoluteLanguageValidator.pattern.exactly: 15
+- AbsoluteLanguageValidator.pattern.no-other/exception/alternative: 3
+- AbsoluteLanguageValidator.pattern.must: 20
+- AbsoluteLanguageValidator.pattern.impossible: 1
+- AmbiguityValidator.questionsScanned: 2540
+- AmbiguityValidator.findings: 432
+- AmbiguityValidator.vagueQualifierHits: 125
+- DistractorSimilarityValidator.questionsScanned: 2539
+- DistractorSimilarityValidator.highSimilarityPairs: 140
+- DistractorSimilarityValidator.moderateSimilarityPairs: 329
+- DistractorSimilarityValidator.totalFlagged: 469
+- ExplanationConsistencyValidator.questionsScanned: 2540
+- ExplanationConsistencyValidator.findings: 0
+- MathematicalValidator.questionsScanned: 2540
+- MathematicalValidator.findings: 0
+- MathematicalValidator.falsePositiveRate: 0%
+- modules: 5
+- totalErrors: 119
+- totalWarnings: 1750
+**Errors:**
+- [AbsoluteLanguageValidator] P1-A-009 Choice A: "Assume LIFO liquidation always decreases income" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-A-012 Choice A: "Disclose only; never accrue litigation losses" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-A-013 Choice A: "Never adjust financial statements for information received after year-end" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-A-022 Choice C: "Assume U.S. GAAP always capitalizes research costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-A-022 Choice D: "Assume both frameworks always expense all development costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-B-002 Choice D: "Assume top-down budgeting always eliminates slack" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-B-003 Choice C: "Ban participation because it always creates fraud" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-B-003 Choice D: "Accept all submitted budgets because managers are always unbiased" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-B-013 Choice A: "Assume each unit always takes the same time regardless of experience" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-B-028 Choice D: "Keep all original assumptions because budgets can never change" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-B-075 Choice A: "It always produces more accurate forecasts than top-down budgeting" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-B-095 Choice B: "The budget will always understate expected costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-002 Choice D: "Ignore favorable variances because they are always good" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-011 Choice C: "Always use a zero transfer price" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-027 Choice A: "Ignore recurring small variances because they are always immaterial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-039 Choice B: "Ignore recurring small variances because they are always immaterial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-048 Choice A: "Leading indicators are always more accurate than lagging indicators" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-051 Choice B: "Ignore recurring small variances because they are always immaterial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-063 Choice B: "Ignore recurring small variances because they are always immaterial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-073 Choice A: "It always maximizes overall company profit" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-075 Choice A: "Ignore recurring small variances because they are always immaterial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-087 Choice D: "Ignore recurring small variances because they are always immaterial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-C-099 Choice A: "Ignore recurring small variances because they are always immaterial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-D-011 Choice C: "Use the direct method because it is always most accurate" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-E-044 Choice A: "It guarantees that fraud will never occur" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-E-056 Choice C: "The count will always be more accurate than an independent count" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-B-112 Choice A: "Never changes" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-B-132 Choice D: "Budgets that never change once approved" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-B-133 Choice B: "The budget is never changed regardless of conditions" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-B-172 Choice D: "Always covers the same time horizon by adding periods as current ones expire" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-B-192 Choice C: "Variances are never investigated if they are favorable" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-C-145 Choice C: "It encourages replacement because net book value is always lower than gross book value" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-161 Choice A: "Lagging indicators are always financial measures and leading indicators are always nonfinancial measures" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-166 Choice C: "It always improves competitive advantage" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-167 Choice D: "Best practices are always more expensive than benchmarking" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-174 Choice D: "Customer A always has higher gross margin than Customer B" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-183 Choice A: "Favorable variances should never be investigated because they improve profitability" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-C-183 Choice B: "Favorable variances are always caused by random chance" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-195 Choice B: "Tight standards always lead to higher productivity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-C-198 Choice D: "Never revise standards after the beginning of the period" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-D-121 Choice D: "Predetermined rates are always lower than actual rates" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-E-083 Choice B: "Automated controls are always more reliable than manual controls" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-E-129 Choice C: "File the plan with the SEC and never modify it" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-E-150 Choice D: "Management override of established controls is always possible" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-F-091 Choice A: "Cloud systems never experience downtime or security incidents" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-F-097 Choice D: "Segregation of duties controls are automatically configured and never require adjustment" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-F-113 Choice B: "Blockchain, because reconciliation always requires distributed ledger technology" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-F-120 Choice D: "Machine learning models never make errors" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1B-F-122 Choice C: "Accept all vendor terms without review since cloud providers are always secure" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1B-F-135 Choice A: "Generative AI always produces perfectly accurate financial information" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-AC-016 Choice C: "Never test goodwill unless it is sold" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-017 Choice D: "Never test goodwill unless it is sold" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-018 Choice A: "Never test goodwill unless it is sold" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-019 Choice D: "Never test goodwill unless it is sold" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-020 Choice C: "Never test goodwill unless it is sold" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-071 Choice D: "Never amortize intangible assets with finite lives" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-072 Choice C: "Never amortize intangible assets with finite lives" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-073 Choice D: "Never amortize intangible assets with finite lives" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-074 Choice A: "Never amortize intangible assets with finite lives" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-AC-075 Choice D: "Never amortize intangible assets with finite lives" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-CC-022 Choice A: "It always maximizes overall company profit regardless of capacity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-023 Choice B: "It always maximizes overall company profit regardless of capacity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-024 Choice B: "It always maximizes overall company profit regardless of capacity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-025 Choice B: "It always maximizes overall company profit regardless of capacity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-026 Choice D: "It always maximizes overall company profit regardless of capacity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-027 Choice B: "It always maximizes overall company profit regardless of capacity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-028 Choice B: "It always maximizes overall company profit regardless of capacity" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-095 Choice D: "It always minimizes the buying division's reported costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-096 Choice B: "It always minimizes the buying division's reported costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-097 Choice C: "It always minimizes the buying division's reported costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-098 Choice A: "It always minimizes the buying division's reported costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-099 Choice D: "It always minimizes the buying division's reported costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CC-100 Choice B: "It always minimizes the buying division's reported costs" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DC-001 Choice C: "To comply with a rule that actual costs can never be used" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DC-002 Choice D: "To comply with a rule that actual costs can never be used" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DC-003 Choice D: "To comply with a rule that actual costs can never be used" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DC-004 Choice A: "To comply with a rule that actual costs can never be used" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DC-005 Choice D: "To comply with a rule that actual costs can never be used" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DC-051 Choice A: "They guarantee actual costs will always equal the standard" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DC-052 Choice C: "They guarantee actual costs will always equal the standard" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DC-053 Choice B: "They guarantee actual costs will always equal the standard" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DC-054 Choice C: "They guarantee actual costs will always equal the standard" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DC-055 Choice A: "They guarantee actual costs will always equal the standard" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-029 Choice B: "To always match the external market price exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-030 Choice C: "To always match the external market price exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-031 Choice B: "To always match the external market price exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-032 Choice C: "To always match the external market price exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-033 Choice C: "To always match the external market price exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-034 Choice A: "To always match the external market price exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-CD-035 Choice A: "To always match the external market price exactly" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-016 Choice A: "It only allocates costs to other service departments, never to production" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-017 Choice C: "It only allocates costs to other service departments, never to production" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-018 Choice D: "It only allocates costs to other service departments, never to production" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-019 Choice A: "It only allocates costs to other service departments, never to production" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-020 Choice A: "It only allocates costs to other service departments, never to production" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-DD-032 Choice B: "A guarantee that the company will always be profitable" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-033 Choice B: "A guarantee that the company will always be profitable" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-DD-035 Choice A: "A guarantee that the company will always be profitable" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-FD-001 Choice D: "It guarantees the data will always be completely accurate" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-FD-002 Choice C: "It guarantees the data will always be completely accurate" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-FD-003 Choice D: "It guarantees the data will always be completely accurate" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-FD-004 Choice C: "It guarantees the data will always be completely accurate" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1-FD-005 Choice C: "It guarantees the data will always be completely accurate" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-A-070 Choice A: "Never" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-A-078 Choice A: "Never" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-B-004 Choice A: "Is always zero" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-021 Choice B: "More accurate always" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-034 Choice D: "Always variable" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-041 Choice A: "Costs are always linear" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-042 Choice A: "Is always fixed" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-B-042 Choice B: "Is always variable" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-C-035 Choice D: "Never changed" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-D-027 Choice A: "Always relevant" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-E-026 Choice B: "Is always detected" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-C-073 Choice A: "Always positive" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-C-073 Choice C: "Never investigated" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1E-C-073 Choice D: "Always beneficial" — contains absolute language "always"
+- [AbsoluteLanguageValidator] P1E-C-092 Choice B: "Never" — contains absolute language "never"
+- [AbsoluteLanguageValidator] P1-E-R06 Choice A: "Management override can always be prevented by implementing a second level of approval for all transactions above a materiality threshold" — contains absolute language "always"
+**Warnings:**
+- [AbsoluteLanguageValidator] P1-A-001 Choice B: "Classify it as noncurrent solely because management expects renewal" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-002 Choice C: "Report it only in footnotes because the sale is future-oriented" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-005 Choice D: "Recognize revenue only when all cash is collected" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-011 Choice B: "Recognize impairment only when management plans to expand use" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-012 Choice A: "Disclose only; never accrue litigation losses" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-013 Choice D: "Recognize it only in the next fiscal year because notice came later" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-014 Choice C: "Record rent only when paid with no liability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-015 Choice A: "Consolidate solely because ownership exceeds 20%" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-016 Choice C: "Consolidate only if the subsidiary pays dividends" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-017 Choice D: "Eliminate only the cash collected from the subsidiary" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-020 Choice C: "Use it only to calculate taxable income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-020 Choice D: "Limit the report to inventory costing schedules only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-021 Choice A: "Disclose only policies that changed during the year" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-021 Choice B: "Put all accounting policies only in the audit engagement letter" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-034 Choice B: "Recognize the loss only when customers file claims" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-044 Choice C: "Recognize the loss only when customers file claims" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-A-064 Choice C: "Recognize the loss only when customers file claims" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-001 Choice B: "Use only last year actual spending as the strategic plan" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-003 Choice A: "Use only prior-year actuals as the budget" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-004 Choice A: "Use rolling budgets only for capital projects" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-004 Choice C: "Replace the budget only after a recession" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-005 Choice A: "Budget only variable costs and ignore fixed costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-005 Choice B: "Increase every line item by inflation only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-005 Choice D: "Use zero-based budgeting only when sales are zero" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-006 Choice A: "Use only direct labor hours for every cost pool" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-006 Choice B: "Ignore cost drivers because they are used only in financial accounting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-007 Choice C: "Compare actual results only with the static budget" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-009 Choice C: "Use only accrual income to decide cash availability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-011 Choice C: "Use only a static budget variance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-012 Choice A: "Select only the best-case outcome because it is possible" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-013 Choice D: "Use learning curves only for finished goods inventory valuation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-014 Choice B: "Use sensitivity analysis only after the fiscal year is closed" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-015 Choice B: "Use only historical financial statements with no assumptions" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-015 Choice C: "Prepare pro forma statements only after audit completion" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-016 Choice B: "Exclude milestones because budgets contain only dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-016 Choice C: "Treat the project as a permanent responsibility center budget only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-025 Choice D: "Reward only managers who submit the lowest sales forecasts" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-026 Choice C: "Use only the month with the lowest error and ignore the rest" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-027 Choice C: "Use only external financial statements to set operating targets" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-040 Choice D: "Yes, but only if it recurs for two consecutive periods" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-049 Choice C: "Budget the entire year's sales in Q4 only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-049 Choice D: "Use only the prior year's Q4 actuals to set the full annual budget" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-062 Choice B: "Learning curves apply only to direct labor while experience curves apply to all costs including overhead and materials as cumulative volume grows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-062 Choice C: "Experience curves apply only to service industries" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-087 Choice A: "To ensure only the finance department has final approval authority" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-088 Choice C: "To show only cash inflows and outflows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-B-100 Choice C: "Spending variance and capacity variance only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-001 Choice C: "Use standards only to prepare tax returns" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-002 Choice A: "Investigate only variances caused by accounting staff" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-003 Choice B: "Evaluate only company-wide net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-004 Choice B: "Use residual income as the only measure" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-005 Choice A: "Exclude revenue because profit centers manage only costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-005 Choice C: "Evaluate only asset turnover" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-006 Choice B: "Evaluate only direct labor efficiency" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-006 Choice C: "Use cash collections as the only performance measure" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-007 Choice B: "Include only measures required by tax law" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-007 Choice D: "Use only stock price changes" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-008 Choice D: "Use it only after defects occur" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-009 Choice B: "Use benchmarking solely to calculate depreciation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-009 Choice C: "Benchmark only against the lowest-performing unit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-010 Choice A: "Use only gross profit from external statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-011 Choice B: "Use transfer prices only for tax reporting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-012 Choice C: "Evaluate only sales volume" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-012 Choice D: "Use gross margin percentage as the only investment center measure" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-013 Choice A: "Measure productivity only with financial ratios" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-015 Choice B: "Praise purchasing solely for a favorable price variance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-024 Choice A: "Use only the easiest measures to collect" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-026 Choice A: "Measure only consolidated net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-027 Choice C: "Investigate based only on whether the variance is caused by price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-027 Choice D: "Investigate only favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-038 Choice B: "Measure only consolidated net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-039 Choice C: "Investigate based only on whether the variance is caused by price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-039 Choice D: "Investigate only favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-049 Choice A: "Below $18 only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-049 Choice C: "Above $30 only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-050 Choice A: "Measure only consolidated net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-051 Choice A: "Investigate based only on whether the variance is caused by price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-051 Choice C: "Investigate only favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-062 Choice B: "Measure only consolidated net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-063 Choice A: "Investigate based only on whether the variance is caused by price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-063 Choice C: "Investigate only favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-074 Choice C: "Measure only consolidated net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-075 Choice B: "Investigate based only on whether the variance is caused by price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-075 Choice C: "Investigate only favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-084 Choice C: "Financial performance is the only perspective that matters" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-086 Choice C: "Measure only consolidated net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-087 Choice A: "Investigate only favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-087 Choice C: "Investigate based only on whether the variance is caused by price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-097 Choice A: "$30 (variable cost only)" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-098 Choice D: "Measure only consolidated net income" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-099 Choice B: "Investigate based only on whether the variance is caused by price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-C-099 Choice C: "Investigate only favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-001 Choice D: "Use only sales value allocation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-003 Choice B: "Apply only direct material and ignore overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-005 Choice C: "Use equivalent units only for service departments" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-006 Choice D: "Use only completed units as equivalent units" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-009 Choice C: "Use direct method only for revenue recognition" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-009 Choice D: "Allocate service costs only to corporate equity" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-010 Choice C: "Use only market prices for service department cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-013 Choice A: "Include only direct materials and direct labor" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-013 Choice D: "Include only costs recorded after product launch" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-014 Choice A: "Use kaizen only to set initial product design cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-016 Choice B: "Classify testing as prevention only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-019 Choice A: "Increase batch sizes solely to build inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-019 Choice B: "Measure only accounting depreciation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-029 Choice B: "Study only direct labor efficiency variance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-039 Choice C: "Study only direct labor efficiency variance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-049 Choice C: "Study only direct labor efficiency variance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-059 Choice A: "Study only direct labor efficiency variance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-069 Choice C: "Study only direct labor efficiency variance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-D-070 Choice C: "Quality inspections should only occur at the final stage of production" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-036 Choice A: "Record receipts only when customers complain" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-038 Choice B: "Have payment preparers reconcile their own work only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-039 Choice B: "Review terminations only during the annual audit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-039 Choice D: "Let payroll learn of terminations through informal emails only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-043 Choice D: "Rely solely on oral statements after year-end" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-044 Choice D: "It is required only for public companies" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-046 Choice C: "Have payment preparers reconcile their own work only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-047 Choice A: "Let payroll learn of terminations through informal emails only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-047 Choice D: "Review terminations only during the annual audit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-054 Choice C: "Have payment preparers reconcile their own work only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-055 Choice B: "Let payroll learn of terminations through informal emails only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-055 Choice D: "Review terminations only during the annual audit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-062 Choice C: "Have payment preparers reconcile their own work only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-063 Choice B: "Let payroll learn of terminations through informal emails only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-063 Choice D: "Review terminations only during the annual audit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-070 Choice B: "Have payment preparers reconcile their own work only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-071 Choice A: "Let payroll learn of terminations through informal emails only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-071 Choice D: "Review terminations only during the annual audit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-079 Choice A: "Neither — monitoring only applies to financial reporting controls, not to system configuration" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-079 Choice B: "The internal audit every two years — only independent evaluations can reliably detect control design flaws" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-080 Choice D: "COSO Principle 13 — use only automated cash application software to eliminate manual posting entirely" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-081 Choice A: "Remediate based on dollar impact — the late payment fees ($180) are the only deficiency with a quantifiable financial cost and should be addressed first" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-082 Choice C: "This is solely a management override issue — the controller abused authority and should be reported to the audit committee" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-084 Choice D: "The CEO's attendance at meetings is the only issue — removing the CEO from meetings would resolve all governance concerns" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-001 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-003 Choice A: "A dashboard that summarizes only final monthly totals" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-004 Choice C: "Correct duplicate vendor records only when a payment error is found" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-006 Choice C: "Applying controls only while data are used in active dashboards" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-012 Choice C: "Referential integrity, because relationships between related tables must remain valid" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-F-013 Choice A: "An online transaction-processing table used only to enter current sales orders" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-022 Choice D: "Referential integrity, because customer IDs must match records in related tables" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-F-023 Choice D: "Outlier detection, because it only flags unusual months for later investigation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-025 Choice B: "Visualization risk, because survey results can only be shown in tables" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-027 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-028 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-029 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-030 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-031 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-032 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-033 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-034 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-034 Choice D: "Least privilege gives users only the access needed for their roles" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-035 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-036 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-037 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-038 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-039 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-040 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-041 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-042 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-043 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-044 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-045 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-046 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-047 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-048 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-049 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-050 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-051 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-052 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-053 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-054 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-055 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-056 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-057 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-058 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-059 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-060 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-061 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-062 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-063 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-064 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-065 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-066 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-067 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-068 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-069 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-070 Choice D: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-071 Choice C: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-072 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-073 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-074 Choice B: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-F-075 Choice A: "It should be documented only after an audit exception occurs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-082 Choice C: "15% commission only as revenue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-104 Choice C: "As an investing activity only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-104 Choice D: "As a financing activity only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-108 Choice C: "Only when lease payments are made" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-111 Choice A: "Gain recognized only on the portion not leased back; remainder deferred" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-116 Choice B: "Recognize benefit only when realized" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-120 Choice B: "Only the stock issuance requires adjustment" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-120 Choice D: "Only the customer bankruptcy requires adjustment" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-124 Choice A: "Yes, but only for private companies" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-124 Choice C: "No, fair value option is only for financial assets at FV" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-129 Choice C: "Prospectively, making the change in current and future periods only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-130 Choice B: "Prospectively only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-131 Choice C: "Include the correction in 2025 income only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-142 Choice B: "Capitalized only if technological feasibility is established" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-A-144 Choice A: "Use pushdown accounting only if the target remains a separate legal entity" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-112 Choice B: "Includes only fixed costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-126 Choice A: "Only costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-126 Choice C: "Only revenues" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-126 Choice D: "Only revenues and costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-130 Choice D: "Uses only fixed costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-139 Choice D: "Uses only historical data without adjustments" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-149 Choice B: "Focus only on areas where actual results deviate significantly from budget" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-149 Choice C: "Only investigate favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-157 Choice D: "Using zero-based budgeting only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-161 Choice C: "Industry benchmarks only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-165 Choice C: "Only direct material costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-165 Choice D: "Only costs the manager can control or significantly influence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-169 Choice A: "Is used only in service industries" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-172 Choice A: "Is prepared only once at the beginning of the year" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-173 Choice A: "Standards set by external consultants only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-175 Choice A: "Using only historical averages to predict the future" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-192 Choice A: "Only the dollar amount" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-192 Choice D: "Only the percentage deviation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-195 Choice A: "Uses only historical averages" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-196 Choice C: "Variance calculations only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-B-200 Choice C: "The CFO only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-130 Choice A: "Only direct labor costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-130 Choice B: "Direct materials, direct labor, and departmental overhead only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-130 Choice D: "Direct materials and direct labor only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-135 Choice A: "Managers should be evaluated only on costs and revenues over which they have control" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-153 Choice B: "Transfer pricing only affects cost centers, not profit centers" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-161 Choice D: "The balanced scorecard only uses lagging indicators" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-163 Choice A: "It focuses exclusively on financial performance measures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-166 Choice A: "It focuses on external comparisons only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-167 Choice B: "Benchmarking is only used in manufacturing, while best practices apply to all industries" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-182 Choice B: "Managers only investigate favorable variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-182 Choice D: "Management by exception requires investigating variances only at year-end" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-183 Choice C: "Only unfavorable variances exceeding 10% of standard should be investigated" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-186 Choice A: "Investigate only unfavorable labor variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-186 Choice D: "Investigate only variances that affect gross margin" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-189 Choice B: "Standard costing uses only actual costs, eliminating estimation errors" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-192 Choice B: "Normal costing is only used in service industries" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-192 Choice C: "Normal costing uses standards only for overhead; standard costing uses actual costs for all inputs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-196 Choice A: "Backflush costing records costs only when materials are purchased" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-197 Choice B: "Kaizen costing uses only actual costs, while standard costing uses predetermined costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-197 Choice D: "Kaizen costing applies only to direct materials, while standard costing covers all costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-198 Choice C: "Only revise standards at year-end regardless of changes" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-C-199 Choice C: "Only direct materials costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-101 Choice C: "Only variable costs should be traced to products" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-106 Choice A: "ABC can only be used in manufacturing companies" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-109 Choice D: "Only the direct materials costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-125 Choice C: "It is only used for tax reporting purposes" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-D-142 Choice C: "No, because fixed costs must be covered" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-D-145 Choice C: "No, because joint costs must be considered" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-094 Choice B: "Internal auditors focus primarily on detecting fraud, while external auditors only review tax compliance" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-095 Choice A: "All members must be certified public accountants" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-095 Choice B: "The audit committee chair must be the CEO" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-095 Choice C: "All members must be independent of management" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-095 Choice D: "The audit committee must include at least one government representative" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-105 Choice B: "Granting new employees full system access by default and removing access only upon termination" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-114 Choice A: "The CEO and CFO must certify the financial statements" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-114 Choice B: "Management must assess and report on the effectiveness of internal control over financial reporting, and the external auditor must attest to that assessment" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-114 Choice C: "The company must establish a whistleblower hotline" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-114 Choice D: "The company must rotate its external audit firm every five years" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-E-115 Choice D: "A civil penalty only, with no criminal liability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-117 Choice A: "Reviewing the credit policy documentation only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-119 Choice C: "Only external consultants should perform system migrations" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-127 Choice A: "Ensure that only authorized customers can place orders" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-129 Choice D: "Rely solely on the plan's documentation without testing since testing is too disruptive" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-141 Choice A: "Is only a concern if the DBA also prepares financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-E-150 Choice B: "Internal control costs must not exceed expected benefits" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-F-094 Choice B: "Relying solely on a strong firewall for all security needs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-094 Choice C: "Using only antivirus software to protect all systems" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-098 Choice D: "Only the database administrator to access any data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-104 Choice A: "Data governance is only about data security, while data management covers everything else" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-116 Choice A: "The ERP system's configuration and access controls must be carefully designed and tested to ensure proper segregation of duties is maintained" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-F-121 Choice A: "Can only be used for cryptocurrency transactions" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-121 Choice C: "Are legally binding only when printed and signed in paper form" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-122 Choice B: "Only use free cloud services to minimize risk" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-122 Choice D: "Store all data with a single provider only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-127 Choice D: "Testing occurs only at the end of the project" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-135 Choice C: "Generative AI may produce plausible-sounding but factually incorrect statements (hallucinations), and outputs must be carefully reviewed and validated by humans" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1B-F-139 Choice C: "Only senior managers should have any system access" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-139 Choice D: "Users are granted only the minimum levels of access necessary to perform their job functions" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1B-F-142 Choice B: "Reviewing the control only during the annual audit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-011 Choice A: "Use the cost method and recognize dividends only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-012 Choice C: "Use the cost method and recognize dividends only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-013 Choice C: "Use the cost method and recognize dividends only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-014 Choice D: "Use the cost method and recognize dividends only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-015 Choice D: "Use the cost method and recognize dividends only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-021 Choice B: "Record only a footnote disclosure with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-021 Choice C: "Record the asset only, with no liability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-022 Choice C: "Record the asset only, with no liability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-022 Choice D: "Record only a footnote disclosure with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-023 Choice A: "Record only a footnote disclosure with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-023 Choice B: "Record the asset only, with no liability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-024 Choice A: "Record only a footnote disclosure with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-024 Choice B: "Record the asset only, with no liability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-025 Choice C: "Record only a footnote disclosure with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-025 Choice D: "Record the asset only, with no liability" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-031 Choice A: "Translate only revenue accounts and ignore the balance sheet" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-032 Choice C: "Translate only revenue accounts and ignore the balance sheet" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-033 Choice D: "Translate only revenue accounts and ignore the balance sheet" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-034 Choice A: "Translate only revenue accounts and ignore the balance sheet" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-035 Choice D: "Translate only revenue accounts and ignore the balance sheet" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-041 Choice B: "Recognize expense only when options are exercised" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-041 Choice D: "Record the grant as a reduction of retained earnings only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-042 Choice C: "Recognize expense only when options are exercised" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-042 Choice D: "Record the grant as a reduction of retained earnings only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-043 Choice A: "Record the grant as a reduction of retained earnings only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-043 Choice B: "Recognize expense only when options are exercised" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-044 Choice B: "Record the grant as a reduction of retained earnings only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-044 Choice C: "Recognize expense only when options are exercised" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-045 Choice B: "Recognize expense only when options are exercised" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-045 Choice D: "Record the grant as a reduction of retained earnings only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-051 Choice B: "Apply the statutory rate to interim revenue only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-052 Choice B: "Apply the statutory rate to interim revenue only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-053 Choice B: "Apply the statutory rate to interim revenue only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-054 Choice C: "Apply the statutory rate to interim revenue only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-055 Choice D: "Apply the statutory rate to interim revenue only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-056 Choice A: "At replacement cost only for inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-057 Choice B: "At replacement cost only for inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-058 Choice D: "At replacement cost only for inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-059 Choice B: "At replacement cost only for inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-060 Choice A: "At replacement cost only for inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-061 Choice C: "Report pension plans only in footnotes with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-061 Choice D: "Report the accumulated benefit obligation only, ignoring plan assets" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-062 Choice C: "Report pension plans only in footnotes with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-062 Choice D: "Report the accumulated benefit obligation only, ignoring plan assets" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-063 Choice B: "Report pension plans only in footnotes with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-063 Choice D: "Report the accumulated benefit obligation only, ignoring plan assets" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-064 Choice A: "Report pension plans only in footnotes with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-064 Choice C: "Report the accumulated benefit obligation only, ignoring plan assets" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-065 Choice B: "Report pension plans only in footnotes with no balance sheet impact" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AC-065 Choice C: "Report the accumulated benefit obligation only, ignoring plan assets" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-008 Choice B: "It only works when sales are perfectly stable" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-009 Choice D: "It only works when sales are perfectly stable" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-010 Choice A: "It only works when sales are perfectly stable" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-011 Choice B: "It only works when sales are perfectly stable" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-012 Choice B: "It only works when sales are perfectly stable" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-013 Choice B: "It only works when sales are perfectly stable" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-014 Choice A: "It only works when sales are perfectly stable" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-035 Choice D: "To ignore the shortfall since it is only a forecast" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-036 Choice A: "To ignore the shortfall since it is only a forecast" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-037 Choice B: "To ignore the shortfall since it is only a forecast" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-038 Choice A: "To ignore the shortfall since it is only a forecast" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-039 Choice A: "To ignore the shortfall since it is only a forecast" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-040 Choice C: "To ignore the shortfall since it is only a forecast" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-071 Choice D: "Strategic planning, which sets long-term goals only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-072 Choice C: "Strategic planning, which sets long-term goals only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-073 Choice C: "Strategic planning, which sets long-term goals only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-074 Choice A: "Strategic planning, which sets long-term goals only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-075 Choice A: "Strategic planning, which sets long-term goals only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BC-076 Choice B: "Strategic planning, which sets long-term goals only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-001 Choice C: "A cash flow statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-002 Choice A: "A cash flow statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-003 Choice A: "A cash flow statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-004 Choice C: "A cash flow statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-005 Choice C: "A cash flow statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-006 Choice D: "A cash flow statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-007 Choice A: "A cash flow statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-035 Choice A: "A revenue center, using only sales figures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-035 Choice B: "A cost center, using only cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-035 Choice D: "A discretionary expense center, using budget compliance only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-036 Choice A: "A revenue center, using only sales figures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-036 Choice B: "A cost center, using only cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-036 Choice C: "A discretionary expense center, using budget compliance only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-037 Choice B: "A revenue center, using only sales figures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-037 Choice C: "A discretionary expense center, using budget compliance only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-037 Choice D: "A cost center, using only cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-038 Choice A: "A revenue center, using only sales figures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-038 Choice C: "A cost center, using only cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-038 Choice D: "A discretionary expense center, using budget compliance only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-039 Choice A: "A discretionary expense center, using budget compliance only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-039 Choice B: "A cost center, using only cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-039 Choice D: "A revenue center, using only sales figures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-040 Choice A: "A discretionary expense center, using budget compliance only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-040 Choice B: "A revenue center, using only sales figures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-040 Choice C: "A cost center, using only cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-065 Choice A: "The controllability principle, which holds managers accountable only for items they can influence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-066 Choice B: "The controllability principle, which holds managers accountable only for items they can influence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-067 Choice C: "The controllability principle, which holds managers accountable only for items they can influence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-068 Choice D: "The controllability principle, which holds managers accountable only for items they can influence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-069 Choice A: "The controllability principle, which holds managers accountable only for items they can influence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-070 Choice B: "The controllability principle, which holds managers accountable only for items they can influence" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-089 Choice C: "They are required only for external regulatory reporting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-090 Choice D: "They are required only for external regulatory reporting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-091 Choice D: "They are required only for external regulatory reporting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-092 Choice C: "They are required only for external regulatory reporting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-093 Choice B: "They are required only for external regulatory reporting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CC-094 Choice C: "They are required only for external regulatory reporting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DC-016 Choice C: "The net realizable value method applied to further processing costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DC-017 Choice B: "The net realizable value method applied to further processing costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DC-018 Choice D: "The net realizable value method applied to further processing costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DC-019 Choice B: "The net realizable value method applied to further processing costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DC-020 Choice B: "The net realizable value method applied to further processing costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DC-021 Choice C: "As an inventory cost assigned only to finished goods" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DC-022 Choice C: "It assigns fixed overhead only to finished goods, not to units sold" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-016 Choice A: "A detective control performed after the fact only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-017 Choice D: "A detective control performed after the fact only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-018 Choice A: "A detective control performed after the fact only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-019 Choice A: "A detective control performed after the fact only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-020 Choice B: "A detective control performed after the fact only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-023 Choice D: "Convert all terminated employees to read-only access instead of removing access entirely" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-025 Choice B: "A compensating control used only when segregation is impossible" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-036 Choice A: "A physical control over the data center only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-036 Choice B: "An application control embedded in transaction processing only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-037 Choice B: "An application control embedded in transaction processing only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-037 Choice C: "A physical control over the data center only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-038 Choice A: "A physical control over the data center only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-038 Choice D: "An application control embedded in transaction processing only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-039 Choice A: "An application control embedded in transaction processing only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-039 Choice D: "A physical control over the data center only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-040 Choice A: "An application control embedded in transaction processing only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-040 Choice C: "A physical control over the data center only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-066 Choice A: "A physical access control weakness only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-066 Choice C: "An IT general control deficiency only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-067 Choice B: "A physical access control weakness only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-067 Choice D: "An IT general control deficiency only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-068 Choice A: "A physical access control weakness only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-068 Choice B: "An IT general control deficiency only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-069 Choice B: "An IT general control deficiency only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-069 Choice C: "A physical access control weakness only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-070 Choice A: "A physical access control weakness only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-EC-070 Choice D: "An IT general control deficiency only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-006 Choice C: "Prescriptive analytics, which recommends a specific action only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-007 Choice D: "Prescriptive analytics, which recommends a specific action only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-009 Choice D: "Prescriptive analytics, which recommends a specific action only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-010 Choice D: "Prescriptive analytics, which recommends a specific action only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-031 Choice A: "Only volume, since size is the sole defining feature" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-031 Choice B: "Only cost, since storage expense is the primary issue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-031 Choice D: "Only accuracy, since data quality is the sole concern" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-032 Choice A: "Only volume, since size is the sole defining feature" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-032 Choice B: "Only cost, since storage expense is the primary issue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-032 Choice C: "Only accuracy, since data quality is the sole concern" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-033 Choice B: "Only volume, since size is the sole defining feature" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-033 Choice C: "Only accuracy, since data quality is the sole concern" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-033 Choice D: "Only cost, since storage expense is the primary issue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-034 Choice A: "Only accuracy, since data quality is the sole concern" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-034 Choice C: "Only volume, since size is the sole defining feature" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-034 Choice D: "Only cost, since storage expense is the primary issue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-035 Choice A: "Only volume, since size is the sole defining feature" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-035 Choice B: "Only accuracy, since data quality is the sole concern" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-035 Choice D: "Only cost, since storage expense is the primary issue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-041 Choice C: "A method for automating repetitive manual keystrokes only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-041 Choice D: "A tool used exclusively for data visualization" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-042 Choice C: "A tool used exclusively for data visualization" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-042 Choice D: "A method for automating repetitive manual keystrokes only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-043 Choice B: "A method for automating repetitive manual keystrokes only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-043 Choice D: "A tool used exclusively for data visualization" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-044 Choice A: "A method for automating repetitive manual keystrokes only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-044 Choice B: "A tool used exclusively for data visualization" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-045 Choice C: "A method for automating repetitive manual keystrokes only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-045 Choice D: "A tool used exclusively for data visualization" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-046 Choice A: "Only file storage capacity" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-046 Choice C: "Only network bandwidth" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-046 Choice D: "Only software licensing costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-047 Choice A: "Only software licensing costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-047 Choice B: "Only network bandwidth" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-047 Choice D: "Only file storage capacity" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-048 Choice A: "Only network bandwidth" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-048 Choice B: "Only software licensing costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-048 Choice C: "Only file storage capacity" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-049 Choice B: "Only file storage capacity" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-049 Choice C: "Only software licensing costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-049 Choice D: "Only network bandwidth" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-050 Choice A: "Only file storage capacity" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-050 Choice C: "Only network bandwidth" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-050 Choice D: "Only software licensing costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-066 Choice C: "A relational database used only for transaction processing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-067 Choice A: "A relational database used only for transaction processing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-068 Choice C: "A relational database used only for transaction processing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-069 Choice D: "A relational database used only for transaction processing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FC-070 Choice A: "A relational database used only for transaction processing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-011 Choice D: "As a noncash adjustment only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-012 Choice C: "As a noncash adjustment only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-013 Choice C: "As a noncash adjustment only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-014 Choice D: "As a noncash adjustment only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-015 Choice A: "As a noncash adjustment only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-016 Choice C: "Recognize revenue only for units definitely not returned" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-017 Choice D: "Recognize revenue only for units definitely not returned" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-018 Choice D: "Recognize revenue only for units definitely not returned" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-019 Choice B: "Recognize revenue only for units definitely not returned" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-020 Choice B: "Recognize revenue only for units definitely not returned" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-026 Choice C: "Record the obligation only in the notes with no balance sheet recognition" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-027 Choice A: "Record the obligation only in the notes with no balance sheet recognition" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-028 Choice B: "Record the obligation only in the notes with no balance sheet recognition" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-029 Choice B: "Record the obligation only in the notes with no balance sheet recognition" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-030 Choice D: "Record the obligation only in the notes with no balance sheet recognition" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-031 Choice D: "As a nonrecognized subsequent event requiring disclosure only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-032 Choice C: "As a nonrecognized subsequent event requiring disclosure only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-033 Choice B: "As a nonrecognized subsequent event requiring disclosure only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-034 Choice C: "As a nonrecognized subsequent event requiring disclosure only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-035 Choice A: "As a nonrecognized subsequent event requiring disclosure only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-041 Choice B: "Only within the statement of retained earnings" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-041 Choice C: "Only combined with the statement of cash flows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-041 Choice D: "Only as a footnote disclosure with no statement presentation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-042 Choice A: "Only within the statement of retained earnings" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-042 Choice C: "Only combined with the statement of cash flows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-042 Choice D: "Only as a footnote disclosure with no statement presentation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-043 Choice A: "Only as a footnote disclosure with no statement presentation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-043 Choice B: "Only combined with the statement of cash flows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-043 Choice D: "Only within the statement of retained earnings" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-044 Choice A: "Only combined with the statement of cash flows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-044 Choice B: "Only as a footnote disclosure with no statement presentation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-044 Choice C: "Only within the statement of retained earnings" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-045 Choice B: "Only combined with the statement of cash flows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-045 Choice C: "Only as a footnote disclosure with no statement presentation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-045 Choice D: "Only within the statement of retained earnings" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-051 Choice D: "Treat conversion as a financing cash inflow only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-052 Choice B: "Treat conversion as a financing cash inflow only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-053 Choice D: "Treat conversion as a financing cash inflow only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-057 Choice A: "Prospectively, adjusting depreciation expense in the current and future periods only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-058 Choice B: "Prospectively, adjusting depreciation expense in the current and future periods only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-059 Choice C: "Prospectively, adjusting depreciation expense in the current and future periods only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-060 Choice D: "Prospectively, adjusting depreciation expense in the current and future periods only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-071 Choice D: "As a change in accounting estimate, applied prospectively only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-072 Choice B: "As a change in accounting estimate, applied prospectively only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-073 Choice B: "As a change in accounting estimate, applied prospectively only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-074 Choice D: "As a change in accounting estimate, applied prospectively only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-AD-075 Choice D: "As a change in accounting estimate, applied prospectively only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-036 Choice A: "The operating budget only covers capital expenditures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-036 Choice B: "The financial budget only covers payroll costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-037 Choice B: "The financial budget only covers payroll costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-037 Choice D: "The operating budget only covers capital expenditures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-038 Choice C: "The operating budget only covers capital expenditures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-038 Choice D: "The financial budget only covers payroll costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-039 Choice B: "The financial budget only covers payroll costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-039 Choice D: "The operating budget only covers capital expenditures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-040 Choice B: "The operating budget only covers capital expenditures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-040 Choice C: "The financial budget only covers payroll costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-041 Choice B: "The financial budget only covers payroll costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-041 Choice D: "The operating budget only covers capital expenditures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-042 Choice A: "The operating budget only covers capital expenditures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-042 Choice D: "The financial budget only covers payroll costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-095 Choice A: "Operating budgets are prepared only once every five years" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-095 Choice B: "Strategic plans are prepared by external auditors only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-096 Choice A: "Operating budgets are prepared only once every five years" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-096 Choice B: "Strategic plans are prepared by external auditors only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-097 Choice C: "Operating budgets are prepared only once every five years" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-097 Choice D: "Strategic plans are prepared by external auditors only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-098 Choice A: "Strategic plans are prepared by external auditors only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-098 Choice C: "Operating budgets are prepared only once every five years" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-099 Choice B: "Operating budgets are prepared only once every five years" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-099 Choice D: "Strategic plans are prepared by external auditors only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-100 Choice A: "Operating budgets are prepared only once every five years" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-BD-100 Choice B: "Strategic plans are prepared by external auditors only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-008 Choice C: "The difference caused solely by using more or fewer labor hours than standard" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-009 Choice D: "The difference caused solely by using more or fewer labor hours than standard" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-010 Choice A: "The difference caused solely by using more or fewer labor hours than standard" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-011 Choice D: "The difference caused solely by using more or fewer labor hours than standard" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-012 Choice B: "The difference caused solely by using more or fewer labor hours than standard" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-013 Choice D: "The difference caused solely by using more or fewer labor hours than standard" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-014 Choice D: "The difference caused solely by using more or fewer labor hours than standard" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-022 Choice A: "A cost center, evaluated only on cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-022 Choice C: "A revenue center, evaluated only on sales dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-023 Choice B: "A revenue center, evaluated only on sales dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-023 Choice D: "A cost center, evaluated only on cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-024 Choice B: "A revenue center, evaluated only on sales dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-024 Choice C: "A cost center, evaluated only on cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-025 Choice C: "A cost center, evaluated only on cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-025 Choice D: "A revenue center, evaluated only on sales dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-026 Choice A: "A revenue center, evaluated only on sales dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-026 Choice D: "A cost center, evaluated only on cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-027 Choice A: "A cost center, evaluated only on cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-027 Choice B: "A revenue center, evaluated only on sales dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-028 Choice A: "A revenue center, evaluated only on sales dollars" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-028 Choice C: "A cost center, evaluated only on cost variances" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-036 Choice B: "The controller, who only prepares the financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-037 Choice C: "The controller, who only prepares the financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-038 Choice D: "The controller, who only prepares the financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-039 Choice B: "The controller, who only prepares the financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-040 Choice A: "The controller, who only prepares the financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-041 Choice B: "The controller, who only prepares the financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-042 Choice D: "The controller, who only prepares the financial statements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-044 Choice C: "Gamma is the least profitable with a customer-level profit of only $14,270; Hightower should focus growth efforts on Alpha and Beta because they generate higher gross revenue." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-057 Choice C: "Horizontal trend analysis only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-059 Choice D: "Horizontal trend analysis only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-060 Choice A: "Horizontal trend analysis only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-061 Choice D: "Horizontal trend analysis only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-063 Choice B: "Horizontal trend analysis only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-065 Choice C: "DM price ($6,200U, 7.1%) and DL rate ($9,100U, 9.4%) only; total investigation cost = $3,000." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-065 Choice D: "DL rate ($9,100U, 9.4%) and DL efficiency ($4,500U, 5.2%) only; total investigation cost = $3,200." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-068 Choice B: "Direct materials price ($6,200U, 7.1%) and direct labor rate ($9,100U, 9.4%) only, because only these two variances satisfy both the >$5,000 and the >5% conditions." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-CD-075 Choice C: "A mature TQM organization with a well-developed prevention infrastructure, where dominant prevention spending (67.0% of total COQ) has systematically driven down failure costs to only 11.8% of total quality costs." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-001 Choice B: "Standard costing applied only to overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-003 Choice A: "Standard costing applied only to overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-005 Choice C: "Standard costing applied only to overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-011 Choice B: "Prorated only to raw materials inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-012 Choice B: "Prorated only to raw materials inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-013 Choice C: "Prorated only to raw materials inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-014 Choice A: "Prorated only to raw materials inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-015 Choice B: "Prorated only to raw materials inventory" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-016 Choice A: "It only allocates costs to other service departments, never to production" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-017 Choice C: "It only allocates costs to other service departments, never to production" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-018 Choice D: "It only allocates costs to other service departments, never to production" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-019 Choice A: "It only allocates costs to other service departments, never to production" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-020 Choice A: "It only allocates costs to other service departments, never to production" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-031 Choice B: "It has no effect because operating leverage depends only on selling price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-032 Choice A: "No effect on operating leverage since it depends only on sales price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-033 Choice C: "No effect on operating leverage since it depends only on sales price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-035 Choice D: "No effect on operating leverage since it depends only on sales price" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-040 Choice D: "$81.76, by applying each component's reduction for only one quarter: $42.00 x 0.95 + $28.00 x 0.97 + $15.00 x 0.98." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-041 Choice C: "A step cost only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-043 Choice B: "A step cost only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-045 Choice C: "A step cost only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-049 Choice C: "$3,361 more under the reciprocal method, representing approximately half the actual difference due to only one service department's allocation being compared." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-062 Choice B: "Total break-even = 11,143 units of Product X only, because dividing total fixed costs by Product X's higher unit CM of $42 produces the most conservative estimate." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-062 Choice C: "Total break-even = 14,182 units of Product Y only, because using the lower-CM product ensures the company covers fixed costs even under the worst-case product mix." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-DD-064 Choice B: "4,818 total units (X: 2,891; Y: 1,927), by dividing only the target profit of $185,000 by the weighted-average CM of $38.40." — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-011 Choice A: "A physical control over inventory storage only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-011 Choice B: "Segregation of duties, since only one person performs the recount" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-012 Choice B: "A physical control over inventory storage only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-012 Choice C: "Segregation of duties, since only one person performs the recount" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-013 Choice C: "Segregation of duties, since only one person performs the recount" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-013 Choice D: "A physical control over inventory storage only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-014 Choice A: "A physical control over inventory storage only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-014 Choice D: "Segregation of duties, since only one person performs the recount" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-015 Choice B: "A physical control over inventory storage only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-015 Choice D: "Segregation of duties, since only one person performs the recount" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-021 Choice C: "A segregation of duties control only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-022 Choice A: "A segregation of duties control only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-023 Choice D: "A segregation of duties control only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-024 Choice A: "A segregation of duties control only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-025 Choice C: "A segregation of duties control only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-031 Choice D: "Confidentiality of customer data only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-032 Choice A: "Confidentiality of customer data only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-033 Choice B: "Confidentiality of customer data only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-034 Choice A: "Confidentiality of customer data only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-035 Choice D: "Confidentiality of customer data only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-036 Choice C: "A physical control over hardware only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-037 Choice C: "A physical control over hardware only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-038 Choice C: "A physical control over hardware only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-039 Choice D: "A physical control over hardware only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-040 Choice C: "A physical control over hardware only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-046 Choice A: "Information and communication, limited to external reporting only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-047 Choice B: "Information and communication, limited to external reporting only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-048 Choice A: "Information and communication, limited to external reporting only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-049 Choice D: "Information and communication, limited to external reporting only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-ED-050 Choice C: "Information and communication, limited to external reporting only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-026 Choice D: "A traditional relational database only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-027 Choice A: "A traditional relational database only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-028 Choice A: "A traditional relational database only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-029 Choice C: "A traditional relational database only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-030 Choice D: "A traditional relational database only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-032 Choice B: "To satisfy only internal audit documentation requirements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-033 Choice D: "To satisfy only internal audit documentation requirements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-035 Choice D: "To satisfy only internal audit documentation requirements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-036 Choice C: "Metadata, which only describes other data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-037 Choice C: "Metadata, which only describes other data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-038 Choice C: "Metadata, which only describes other data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-039 Choice D: "Metadata, which only describes other data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-040 Choice B: "Metadata, which only describes other data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-061 Choice B: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-062 Choice C: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-063 Choice A: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-064 Choice B: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-FD-065 Choice D: "The COSO ERM cube exclusively" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-024 Choice A: "Only common shares" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-024 Choice B: "Only preferred stock" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-028 Choice C: "Net income only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-029 Choice D: "Depreciated only if used in operations" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-032 Choice A: "Disclose only if SEC regulations explicitly require the disclosure" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-048 Choice B: "Only if total loss" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-052 Choice D: "Only when asset is sold" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-055 Choice A: "Permanent differences only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-055 Choice C: "Only taxable temporary differences" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-063 Choice A: "Disclosed only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-063 Choice D: "Prospective only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-A-069 Choice A: "A liability only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-005 Choice A: "Only fixed elements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-005 Choice D: "Only variable elements" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-010 Choice B: "Only cash sales" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-010 Choice C: "Only credit sales" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-012 Choice A: "Budgeting only for new activities" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-029 Choice C: "Costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-029 Choice D: "Revenues only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-030 Choice B: "Revenues only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-030 Choice D: "Costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-032 Choice A: "Variable costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-032 Choice D: "Fixed costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-039 Choice B: "Only cost-based prices" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-039 Choice D: "Only market prices" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-054 Choice A: "Only variable overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-054 Choice C: "Only fixed overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-054 Choice D: "Only indirect materials" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-058 Choice B: "Only cash flows" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-058 Choice C: "Only expenses" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-058 Choice D: "Only revenue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-010 Choice A: "Unfavorable variances only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-010 Choice B: "Favorable variances only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-010 Choice D: "Significant variances only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-019 Choice A: "What must we excel at?" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1E-D-004 Choice B: "Beginning WIP costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-004 Choice C: "Ending WIP only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-004 Choice D: "Current period costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-005 Choice A: "Beginning WIP only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-005 Choice B: "Current period work only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-005 Choice C: "Ending WIP only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-013 Choice C: "Machine hours only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-013 Choice D: "Direct labor only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-014 Choice C: "Direct costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-020 Choice A: "During manufacturing only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-020 Choice C: "During production only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-020 Choice D: "During R&D only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-023 Choice B: "By-products only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-026 Choice A: "Variable costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-006 Choice A: "Only financial information" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-006 Choice B: "Only external communications" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-006 Choice D: "Communication to board only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-007 Choice A: "Only annual audits" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-023 Choice D: "External audit of controls only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-010 Choice B: "Current transactions only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-010 Choice C: "Only external data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-012 Choice A: "External vendors only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-012 Choice B: "Only accounting" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-012 Choice D: "Only manufacturing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-015 Choice A: "Only physical servers" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-016 Choice A: "Only firewalls" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-016 Choice B: "Only passwords" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-016 Choice D: "Only encryption" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-018 Choice B: "Only a password" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-018 Choice C: "Fingerprint only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-018 Choice D: "Hardware token only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-024 Choice D: "Only financial data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-025 Choice A: "Security rules only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-025 Choice B: "Retention schedules only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-025 Choice D: "Storage policies only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-027 Choice A: "Risk management only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-030 Choice B: "Only IT recovery" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-030 Choice C: "Only data backup" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-030 Choice D: "Offsite storage only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-032 Choice B: "Manual accounting only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-035 Choice A: "Demographic data only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-035 Choice B: "Only advertising metrics" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-069 Choice A: "Only variable items" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-069 Choice D: "Only fixed items" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-076 Choice B: "Only past sales" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-076 Choice C: "Only time series data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-076 Choice D: "Only expert opinions" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-085 Choice B: "Investment only in high-ROI projects" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-087 Choice B: "Only when variances occur" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-B-087 Choice D: "Annually only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-049 Choice A: "Industry average only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-049 Choice C: "Internal standards only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-051 Choice C: "Financial statement only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-038 Choice B: "Using actual costs only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-045 Choice B: "Only variable costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-045 Choice C: "Only fixed costs" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-048 Choice B: "As equivalent units only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-055 Choice D: "Only to production based on usage" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-056 Choice B: "Allocates only to production" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-057 Choice D: "Allocates directly to production departments only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-060 Choice C: "Only one product is made" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-037 Choice A: "Only the board" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-037 Choice B: "Only external parties" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-037 Choice C: "Only senior management" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-038 Choice C: "Annual evaluations only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-041 Choice B: "Only logical access" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-041 Choice D: "Only physical access" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-045 Choice C: "The CFO only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-047 Choice C: "Accounting standards only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-051 Choice A: "Is a preventive control only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-057 Choice A: "Only the internal auditors" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-057 Choice C: "Only the external auditors" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-057 Choice D: "Only the CFO" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-039 Choice B: "Physical assets only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-039 Choice D: "Financial statements only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-048 Choice A: "Only structured data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-048 Choice B: "Only processed data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-048 Choice D: "Only transactional data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-055 Choice A: "Only recovery time" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-055 Choice C: "Only frequency" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-055 Choice D: "Only storage location" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-056 Choice A: "Only external data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-056 Choice B: "Only operational data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-056 Choice C: "Only financial reports" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-062 Choice D: "Only data backup" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-068 Choice A: "Only cryptocurrency" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-070 Choice B: "Only public and private" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-070 Choice C: "Only SaaS and IaaS" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-070 Choice D: "Only software and hardware" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-071 Choice D: "Storage only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-075 Choice A: "Only timeliness" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-075 Choice B: "Only accuracy" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-F-075 Choice D: "Only completeness" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-067 Choice A: "Only customer satisfaction" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-067 Choice C: "Only financial measures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-067 Choice D: "Only shareholder returns" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-074 Choice A: "Only dollar amount" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-074 Choice B: "Only percentage" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-074 Choice C: "Only direction" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-078 Choice B: "Only customer measures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-078 Choice C: "Only financial measures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-078 Choice D: "Only internal measures" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-085 Choice B: "Based only on industry averages" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-089 Choice A: "Only quality improvement" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-089 Choice B: "Only production time" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-089 Choice C: "Only cost reduction" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-064 Choice B: "Only one product is produced" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-064 Choice D: "Labor is the only cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-065 Choice B: "Products are made only when demanded" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-067 Choice B: "Speed only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-067 Choice D: "Cost reduction only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-069 Choice A: "Only high-low" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-069 Choice B: "Only regression" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-069 Choice D: "Only account analysis" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-070 Choice B: "Only product or period" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-070 Choice C: "Only controllable or not" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-070 Choice D: "Only direct or indirect" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-072 Choice B: "Only direct labor" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-072 Choice C: "Only direct materials" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-072 Choice D: "Only overhead" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-075 Choice B: "Only direct tracing" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-075 Choice C: "Only estimating" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-D-075 Choice D: "Only allocation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-069 Choice B: "Communication with regulators only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-069 Choice C: "Only external communication" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-069 Choice D: "Only internal communication" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-072 Choice B: "Only IT systems" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-072 Choice C: "Only management reports" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-E-072 Choice D: "Only financial records" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-090 Choice B: "Residual income only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-090 Choice D: "ROI only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-091 Choice B: "Only segment revenue" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-091 Choice C: "Only segment liabilities" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-091 Choice D: "Only segment profit" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-092 Choice A: "Only if profit also exceeds threshold" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-093 Choice D: "Annual only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-094 Choice D: "Strategic planning only" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-095 Choice A: "Only budgeted cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-095 Choice C: "Only total cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-095 Choice D: "Only actual cost" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-100 Choice A: "Only historical data" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-100 Choice B: "Only cost calculation" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1E-C-100 Choice D: "Only revenue projection" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-R05 Choice D: "The external auditors will be unable to rely on the reconciliation and must perform additional substantive procedures" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-E-R06 Choice D: "Management override is only an inherent limitation in small entities where management has concentrated authority" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-R07 Choice A: "The chief executive officer must personally review all whistleblower complaints before they are escalated to the audit committee" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-E-R07 Choice B: "Whistleblower complaints may only be submitted in writing and must include the employee's name and department" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-R07 Choice B: "Whistleblower complaints may only be submitted in writing and must include the employee's name and department" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-E-R07 Choice D: "The audit committee must establish procedures for the confidential, anonymous submission of concerns regarding accounting or auditing matters" — contains absolute language "must"
+- [AbsoluteLanguageValidator] P1-E-R36 Choice B: "Auditor responsibility depends on whether the audit is integrated or financial-statement-only; integrated audits shift partial control responsibility to the auditor" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-R26 Choice C: "The assignment violates the principle of independent verification because only one person reviews each vendor account" — contains absolute language "only/exclusively"
+- [AbsoluteLanguageValidator] P1-E-R18 Choice D: "Focused exclusively on control deficiencies that have been reported to the board of directors" — contains absolute language "only/exclusively"
+- [AmbiguityValidator] P1-A-009 Choice C: "Recognize that older low-cost layers may flow into cost of goods sold and increase current income" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-A-011 Choice D: "Test for impairment when indicators suggest the carrying amount may not be recoverable" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-A-022 Choice B: "Recognize that IFRS may permit capitalization of qualifying development costs, while U.S. GAAP is generally more restrictive" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-A-022 Choice B: "Recognize that IFRS may permit capitalization of qualifying development costs, while U.S. GAAP is generally more restrictive" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-B-002 Choice B: "Recognize that top-down budgeting may be fast but can reduce buy-in and local information quality" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-B-035: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-035: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-035: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-035: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-035: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-035: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-038: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-038: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-038: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-038: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-038: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-038: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-B-095 Choice A: "Targets may be unrealistic and reduce manager buy-in and motivation" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-C-008 Choice A: "Classify training hours as a leading indicator because it may drive future performance" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-C-014 Choice A: "Recognize that efficiency improved but effectiveness may be poor if objectives are not met" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-C-025 Choice C: "A transfer price near variable cost may promote company-wide use of idle capacity while preserving relevant cost logic" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-C-060 Choice B: "Employees may lose focus on the most critical strategic drivers among too many competing metrics" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-C-073 Choice B: "It provides the selling division no profit incentive and may not reflect true opportunity cost" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-D-027: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-027: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-027: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-037: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-037: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-037: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-047: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-047: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-047: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-057: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-057: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-057: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-067: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-067: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-D-067: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-013 Choice B: "Recognize that IT general controls support the environment in which application controls operate" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-E-027 Choice C: "Well-designed and operating controls may affect the nature, timing, and extent of audit testing" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-038 Choice A: "Disable invoice-number validation because vendors may reuse numbers" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-046 Choice D: "Disable invoice-number validation because vendors may reuse numbers" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-054 Choice D: "Disable invoice-number validation because vendors may reuse numbers" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-062 Choice A: "Disable invoice-number validation because vendors may reuse numbers" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-070 Choice D: "Disable invoice-number validation because vendors may reuse numbers" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-077 Choice B: "Principle 11 — general controls over technology, including access rights aligned to user roles" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-E-077: Choices C and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-084 Choice A: "The committee meets too frequently — quarterly meetings create excessive administrative burden without improving oversight" — contains vague qualifier matching /\bfrequently\b/
+- [AmbiguityValidator] P1-F-007 Choice A: "Accuracy, because recorded amounts may not match source documents" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-007 Choice D: "Authorization, because access rights may not match job responsibilities" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-008 Choice D: "Authorization, because dashboard users may have broader access than needed" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-009 Choice B: "Accuracy, because recorded amounts may not match the source documents" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-009 Choice D: "Validity, because transaction codes may fail format and range checks" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-024 Choice C: "Conclude no follow-up is needed when the dashboard total agrees to the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-F-024 Choice D: "Investigate flagged observations because outliers may be errors, fraud signals, or valid unusual events" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-025 Choice A: "Correlation risk, because satisfaction and support usage may move together" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-025 Choice D: "Sampling bias, because the sample may not represent the full customer population" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-F-046 Choice B: "Legal hold requirements can override normal retention and disposal schedules" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-A-085: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-090: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-092: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-100: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-101: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-101: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-101: Choices B and C have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-105: Choices A and C have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-105: Choices A and D have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-105: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-105: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-105: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-107: Choices A and B have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-107: Choices C and D have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-110: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-110: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-110: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-110: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-110: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-110: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-112: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-112: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-112: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-112: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-112: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-112: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-113: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-114: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-114: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-114: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-117: Choices A and B have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-122: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-128: Choices A and C have high word overlap (86%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-128: Choices A and D have high word overlap (70%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-128: Choices B and D have high word overlap (70%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-128: Choices C and D have high word overlap (70%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-140: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-143: Choices A and B have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-143: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-A-143: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-114: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-151: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-151: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-151: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-151: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-151: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-151: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-155: Choices A and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-155: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-156 Choice C: "Include allowances for normal inefficiencies such as downtime and waste" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-B-164 Choice C: "The typical prediction error of the regression model" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [AmbiguityValidator] P1B-B-173 Choice C: "Practical standards that include normal inefficiencies" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-B-176: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-176: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-176: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-176: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-176: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-176: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-191: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-B-197: Choices A and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-110: Choices A and C have high word overlap (86%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-110: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-113: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-122: Choices A and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-130: Choices B and D have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-137: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-137: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-137: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-137: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-137: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-137: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-139: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-139: Choices B and D have high word overlap (86%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-142 Choice B: "ROI may encourage managers to reject projects that earn more than the required rate of return but lower than the current division ROI" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-C-144 Choice C: "ROI, because it is the most commonly used measure" — contains vague qualifier matching /\bcommonly\b/
+- [AmbiguityValidator] P1B-C-148: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-148: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-148: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-148: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-148: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-148: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-149: Choices C and D have high word overlap (78%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-161 Choice C: "Leading indicators drive future performance and are often found in the learning and growth and internal process perspectives" — contains vague qualifier matching /\boften\b/
+- [AmbiguityValidator] P1B-C-162: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-162: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-162: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-162: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-162: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-162: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-166 Choice D: "It may lead to copycat behavior rather than true innovation" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-C-168: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-168: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-168: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-168: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-168: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-168: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-169: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-169: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-171: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-173: Choices A and B have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-173: Choices A and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-173: Choices A and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-173: Choices B and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-173: Choices B and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-173: Choices C and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-178: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-183 Choice D: "Favorable variances may warrant investigation if they result from using inferior materials that could harm quality or lead to future unfavorable usage variances" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-C-191: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-192 Choice B: "Normal costing is only used in service industries" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-C-192 Choice C: "Normal costing uses standards only for overhead; standard costing uses actual costs for all inputs" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-C-192 Choice D: "Normal costing uses actual direct materials and direct labor with applied overhead; standard costing uses predetermined standards for all manufacturing costs" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1B-C-194: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-194: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-194: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-C-195 Choice A: "Employees may become frustrated and demotivated if standards are perceived as unattainable" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-C-195 Choice D: "Employees may be motivated to exceed the standards consistently" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-D-090: Choices A and C have high word overlap (78%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-090: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-092: Choices A and B have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-092: Choices A and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-092: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-092: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-092: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-092: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-107: Choices B and C have high word overlap (78%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-113: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-113: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-113: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-136: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-139: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-144: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-149: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-149: Choices A and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-149: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-149: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-149: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-149: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-D-150: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1B-E-087 Choice C: "Preparing journal entries and reconciling the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1B-E-089 Choice B: "The risk that unauthorized transactions could be processed without detection" — contains vague qualifier matching /\bcould be\b/
+- [AmbiguityValidator] P1B-E-091 Choice B: "General controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1B-E-093 Choice A: "The internal auditors may lack objectivity and independence because they report within the operational chain of command they audit" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-E-093 Choice C: "The internal auditors may lack sufficient auditing technical skills" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-E-106 Choice A: "General controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1B-E-108 Choice B: "General controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1B-E-113 Choice D: "The chief operating officer and the general counsel" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1B-E-115: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-E-115: Choices A and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-E-115: Choices B and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-F-090 Choice A: "Guaranteeing that all transactions are accurately classified in the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1B-F-091 Choice C: "Data may be stored in multiple jurisdictions, potentially affecting data privacy compliance and sovereignty" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-F-114: Choices A and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-F-114: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1B-F-114: Choices B and C have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1B-F-114: Choices C and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1B-F-120 Choice C: "The model may produce biased or incorrect classifications if trained on inaccurate or non-representative data, and its decisions may be difficult to explain or audit" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1B-F-135 Choice C: "Generative AI may produce plausible-sounding but factually incorrect statements (hallucinations), and outputs must be carefully reviewed and validated by humans" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-BC-065: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-065: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-065: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-065: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-065: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-065: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-066: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-066: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-066: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-066: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-066: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-066: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-067: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-067: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-067: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-067: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-067: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-067: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-068: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-068: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-068: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-068: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-068: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-068: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-069: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-069: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-069: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-069: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-069: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-069: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-070: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-070: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-070: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-070: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-070: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-BC-070: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-024: Choices A and D have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-024: Choices C and D have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-025: Choices A and B have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-025: Choices A and D have high word overlap (83%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-069: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-069: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-069: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-069: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-069: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-069: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DC-071 Choice A: "As normal spoilage, added to the cost of good units produced" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DC-072 Choice A: "As normal spoilage, added to the cost of good units produced" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DC-073 Choice C: "As normal spoilage, added to the cost of good units produced" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DC-074 Choice A: "As normal spoilage, added to the cost of good units produced" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DC-075 Choice D: "As normal spoilage, added to the cost of good units produced" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-026 Choice C: "It eliminates the need to compare the bank statement to the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-027 Choice A: "It eliminates the need to compare the bank statement to the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-028 Choice C: "It eliminates the need to compare the bank statement to the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-029 Choice B: "It eliminates the need to compare the bank statement to the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-030 Choice C: "It eliminates the need to compare the bank statement to the general ledger" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-036 Choice D: "An IT general control over logical access" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-037 Choice A: "An IT general control over logical access" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-038 Choice B: "An IT general control over logical access" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-039 Choice C: "An IT general control over logical access" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-040 Choice D: "An IT general control over logical access" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-041 Choice C: "An IT general control weakness" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-042 Choice C: "An IT general control weakness" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-043 Choice B: "An IT general control weakness" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-044 Choice A: "An IT general control weakness" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-045 Choice B: "An IT general control weakness" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-046 Choice B: "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported" — contains vague qualifier matching /\bmight\b/
+- [AmbiguityValidator] P1-EC-047 Choice C: "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported" — contains vague qualifier matching /\bmight\b/
+- [AmbiguityValidator] P1-EC-048 Choice D: "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported" — contains vague qualifier matching /\bmight\b/
+- [AmbiguityValidator] P1-EC-049 Choice A: "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported" — contains vague qualifier matching /\bmight\b/
+- [AmbiguityValidator] P1-EC-050 Choice B: "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported" — contains vague qualifier matching /\bmight\b/
+- [AmbiguityValidator] P1-EC-056 Choice D: "The control environment, often summarized as tone at the top" — contains vague qualifier matching /\boften\b/
+- [AmbiguityValidator] P1-EC-057 Choice A: "The control environment, often summarized as tone at the top" — contains vague qualifier matching /\boften\b/
+- [AmbiguityValidator] P1-EC-058 Choice B: "The control environment, often summarized as tone at the top" — contains vague qualifier matching /\boften\b/
+- [AmbiguityValidator] P1-EC-059 Choice C: "The control environment, often summarized as tone at the top" — contains vague qualifier matching /\boften\b/
+- [AmbiguityValidator] P1-EC-060 Choice D: "The control environment, often summarized as tone at the top" — contains vague qualifier matching /\boften\b/
+- [AmbiguityValidator] P1-EC-066 Choice C: "An IT general control deficiency only" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-067 Choice D: "An IT general control deficiency only" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-068 Choice B: "An IT general control deficiency only" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-069 Choice B: "An IT general control deficiency only" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-EC-070 Choice D: "An IT general control deficiency only" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-AD-061: Choices B and C have high word overlap (78%) — may fail to discriminate
+- [AmbiguityValidator] P1-AD-065: Choices C and D have high word overlap (78%) — may fail to discriminate
+- [AmbiguityValidator] P1-AD-066: Choices B and C have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-AD-067: Choices A and C have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-AD-068: Choices A and D have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-AD-069: Choices A and B have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-AD-070: Choices A and B have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-048: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-048: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-048: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-048: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-048: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-048: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-065: Choices A and C have high word overlap (70%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-065: Choices A and D have high word overlap (70%) — may fail to discriminate
+- [AmbiguityValidator] P1-CD-068: Choices A and C have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-DD-001 Choice A: "Normal costing" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-003 Choice C: "Normal costing" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-005 Choice A: "Normal costing" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-042: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DD-051: Choices A and B have high word overlap (71%) — may fail to discriminate
+- [AmbiguityValidator] P1-DD-067: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-DD-071 Choice D: "Absorbed into the cost of good units produced as normal spoilage" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-072 Choice A: "Absorbed into the cost of good units produced as normal spoilage" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-073 Choice D: "Absorbed into the cost of good units produced as normal spoilage" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-074 Choice D: "Absorbed into the cost of good units produced as normal spoilage" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-DD-075 Choice A: "Absorbed into the cost of good units produced as normal spoilage" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-036 Choice D: "An IT general control over change management" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-037 Choice A: "An IT general control over change management" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-038 Choice B: "An IT general control over change management" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-039 Choice C: "An IT general control over change management" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-040 Choice D: "An IT general control over change management" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-051 Choice D: "To eliminate the need for any other IT general controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-052 Choice C: "To eliminate the need for any other IT general controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-053 Choice C: "To eliminate the need for any other IT general controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-054 Choice D: "To eliminate the need for any other IT general controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-055 Choice B: "To eliminate the need for any other IT general controls" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-ED-073 Choice B: "The exception reports are generated too frequently to be useful" — contains vague qualifier matching /\bfrequently\b/
+- [AmbiguityValidator] P1-ED-074 Choice A: "The employee may take unauthorized cash discounts on early payments" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-FD-031 Choice D: "Continue normal operations and document the activity for next month's report" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1E-A-008: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-A-015: Choices C and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1E-A-017 Choice C: "Significant influence (typically 20-50%)" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [AmbiguityValidator] P1E-A-020: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-A-030: Choices B and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1E-A-040: Choices B and C have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1E-A-071: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-006: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-033: Choices A and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-041 Choice D: "Cost behavior is linear within a normal activity range" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1E-B-043: Choices A and B have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-043: Choices A and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-043: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-043: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-043: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-043: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-002: Choices A and B have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-002: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-003: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-003: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-003: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-003: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-003: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-003: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-004: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-004: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-004: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-004: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-004: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-006: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-006: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-011: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-011: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-026: Choices B and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-032: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-032: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-032: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-032: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-032: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-032: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-033: Choices A and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-036 Choice B: "Normal operating conditions" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1E-C-038: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-038: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-039: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-040: Choices C and D have high word overlap (86%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-042: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-042: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-D-004: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-D-012: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-D-037: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-E-016: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-F-004: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-071: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-B-082 Choice C: "Typical distance of data points from regression line" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [AmbiguityValidator] P1E-B-086: Choices C and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-048: Choices B and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-052: Choices A and B have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-052: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-052: Choices A and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-052: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-052: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-D-052: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-E-035 Choice C: "General controls over technology" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1E-E-055: Choices A and B have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-D-073: Choices C and D have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-D-074: Choices A and B have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-D-074: Choices A and C have high word overlap (75%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-096 Choice C: "Normal standards" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1E-C-097 Choice D: "Normal downtime and waste" — contains vague qualifier matching /\bnormal(?:ly)?\b/
+- [AmbiguityValidator] P1E-C-098: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1E-C-099: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R03 Choice C: "Rationalization — the controller may believe the company is profitable enough to absorb any loss" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-R04: Choices B and C have high word overlap (73%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R04: Choices B and D have high word overlap (80%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R04: Choices C and D have high word overlap (82%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R07 Choice B: "Whistleblower complaints may only be submitted in writing and must include the employee's name and department" — contains vague qualifier matching /\bmay\b/
+- [AmbiguityValidator] P1-E-R11: Choices C and D have high word overlap (89%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R14 Choice A: "IT general controls, because they establish the overall IT control environment across all systems" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-E-R14 Choice D: "A mix of general and application controls — data center security is entity-level while program change management is application-level" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-E-R15: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R15: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R15: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R15: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R15: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R15: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R17: Choices A and B have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R17: Choices A and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R17: Choices A and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R17: Choices B and C have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R17: Choices B and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R17: Choices C and D have high word overlap (100%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R30: Choices A and C have high word overlap (70%) — may fail to discriminate
+- [AmbiguityValidator] P1-E-R27 Choice A: "Authorization controls, combining both general authorization (routine purchases within limits) and specific authorization (large purchases requiring individual approval)" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [AmbiguityValidator] P1-E-R18 Choice B: "Scheduled at predetermined intervals, typically annually or on a rotational basis across business units" — contains vague qualifier matching /\btypical(?:ly)?\b/
+- [AmbiguityValidator] P1-E-R33 Choice B: "The CAE reports to the general counsel to ensure alignment with legal and regulatory compliance priorities" — contains vague qualifier matching /\bgeneral(?:ly)?\b/
+- [DistractorSimilarityValidator] P1-A-018: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-A-025: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-A-025: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-A-054: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-D-017: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-E-077: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-080: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-085: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-090: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-092: Choices C and D (distractor-distractor) share high similarity (71%)
+- [DistractorSimilarityValidator] P1B-A-100: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-101: Choices A and B (distractor-distractor) share high similarity (83%)
+- [DistractorSimilarityValidator] P1B-A-101: Choices A and C (distractor-distractor) share high similarity (83%)
+- [DistractorSimilarityValidator] P1B-A-101: Choices B and C (distractor-distractor) share high similarity (71%)
+- [DistractorSimilarityValidator] P1B-A-105: Choices A and B (distractor-distractor) share moderate similarity (57%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-105: Choices A and C (distractor-distractor) share high similarity (71%)
+- [DistractorSimilarityValidator] P1B-A-105: Choices A and D (distractor-distractor) share high similarity (71%)
+- [DistractorSimilarityValidator] P1B-A-105: Choices B and C (distractor-distractor) share high similarity (83%)
+- [DistractorSimilarityValidator] P1B-A-105: Choices B and D (distractor-distractor) share high similarity (83%)
+- [DistractorSimilarityValidator] P1B-A-105: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-107: Choices A and B (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-A-107: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-110: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-110: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-110: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-110: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-110: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-110: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-112: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-112: Choices A and C (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-A-112: Choices A and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-A-112: Choices B and C (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-A-112: Choices B and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-A-112: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-114: Choices B and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-114: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-114: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-117: Choices A and B (distractor-distractor) share high similarity (78%)
+- [DistractorSimilarityValidator] P1B-A-118: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-118: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-118: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-128: Choices A and B (distractor-distractor) share moderate similarity (57%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-128: Choices A and C (distractor-distractor) share high similarity (83%)
+- [DistractorSimilarityValidator] P1B-A-128: Choices A and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-A-128: Choices B and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-128: Choices C and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-140: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-A-143: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-143: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-143: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-146: Choices A and D (distractor-distractor) share moderate similarity (57%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-A-147: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-114: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-B-126: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-126: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-126: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-138: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-151: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-B-151: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-B-151: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-B-151: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-B-151: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-B-151: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-B-155: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-155: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-191: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-193: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-197: Choices A and B (distractor-distractor) share moderate similarity (57%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-197: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-B-197: Choices B and C (distractor-distractor) share moderate similarity (57%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-110: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-110: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-113: Choices A and C (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-113: Choices A and D (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-113: Choices B and C (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-113: Choices B and D (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-113: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-122: Choices A and C (distractor-distractor) share high similarity (73%)
+- [DistractorSimilarityValidator] P1B-C-122: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-122: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-122: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-130: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-130: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-137: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-137: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-137: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-137: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-137: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-137: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-139: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-139: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-149: Choices C and D (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-150: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-162: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-162: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-162: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-162: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-162: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-162: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-168: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-168: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-168: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-168: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-168: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-168: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-169: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-169: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-171: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-173: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-173: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-173: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-173: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-173: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-173: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-174: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-178: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-182: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-191: Choices A and B (distractor-distractor) share high similarity (71%)
+- [DistractorSimilarityValidator] P1B-C-191: Choices A and C (distractor-distractor) share high similarity (88%)
+- [DistractorSimilarityValidator] P1B-C-191: Choices B and C (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-191: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-191: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-192: Choices C and D (distractor-distractor) share moderate similarity (53%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-194: Choices B and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-194: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-C-194: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-C-199: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-088: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-088: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-088: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-088: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-088: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-088: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-090: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-090: Choices A and D (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-090: Choices C and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-092: Choices A and B (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-092: Choices A and C (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-092: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-D-092: Choices B and C (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-092: Choices B and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-092: Choices C and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-103: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-103: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-103: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-103: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-103: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-103: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-107: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-109: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-113: Choices B and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-113: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-113: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-116: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-116: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-116: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-116: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-116: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-116: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-122: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-122: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-122: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-122: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-122: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-122: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-136: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-D-139: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-141: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-141: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-141: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-141: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-144: Choices A and B (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-D-144: Choices A and C (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-D-144: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-144: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-D-144: Choices B and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-D-144: Choices C and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1B-D-149: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-D-149: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-149: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-149: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-149: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-149: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-D-150: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-E-115: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-E-115: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-E-115: Choices B and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-E-121: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-F-079: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-F-108: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-F-114: Choices A and B (distractor-distractor) share moderate similarity (57%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-F-114: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-F-114: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1B-F-114: Choices B and C (distractor-distractor) share high similarity (83%)
+- [DistractorSimilarityValidator] P1B-F-114: Choices B and D (distractor-distractor) share moderate similarity (57%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1B-F-114: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-006: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-007: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-008: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-009: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-010: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-021: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-022: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-023: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-024: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AC-025: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-065: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-065: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-065: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-065: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-065: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-065: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-066: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-066: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-066: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-066: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-066: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-066: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-067: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-067: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-067: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-067: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-067: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-067: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-068: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-068: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-068: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-068: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-068: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-068: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-069: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-069: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-069: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-069: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-069: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-069: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-070: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-070: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-070: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-070: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-070: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-BC-070: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-053: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-053: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-077: Choices B and D (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-078: Choices C and D (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-079: Choices A and D (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-080: Choices A and B (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-081: Choices B and C (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CC-082: Choices C and D (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-024: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-024: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-025: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-025: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-041: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-042: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-043: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-044: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-045: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DC-069: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-DC-069: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-DC-069: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-DC-069: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-DC-069: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-DC-069: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-AD-021: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-022: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-023: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-024: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-025: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-061: Choices B and C (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-062: Choices A and C (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-063: Choices B and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-064: Choices A and C (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-065: Choices C and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-066: Choices B and C (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-067: Choices A and C (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-068: Choices A and D (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-069: Choices A and B (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-AD-070: Choices A and B (distractor-distractor) share moderate similarity (63%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-015: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-017: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-048: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-CD-048: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-CD-048: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-CD-048: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-CD-048: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-CD-048: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-CD-065: Choices A and C (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-065: Choices A and D (distractor-distractor) share moderate similarity (64%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-068: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-CD-090: Choices A and C (distractor-distractor) share moderate similarity (53%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-027: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-041: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-042: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-042: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-042: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-042: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-042: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-042: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-043: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-045: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1-DD-051: Choices A and B (distractor-distractor) share moderate similarity (56%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-005: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-008: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-A-012: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-015: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-017: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-020: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-A-025: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-028: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-029: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-030: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-036: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-036: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-036: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-040: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-044: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-045: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-054: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-055: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-055: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-A-071: Choices A and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-B-001: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-002: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-004: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-005: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-005: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-006: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-B-006: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-006: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-010: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-010: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-012: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-015: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-024: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-029: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-029: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-029: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-030: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-030: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-033: Choices A and C (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-B-033: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-043: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-043: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-043: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-043: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-043: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-043: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-054: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-054: Choices B and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-002: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-002: Choices A and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-002: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-002: Choices C and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-003: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-003: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-003: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-003: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-003: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-003: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-004: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-004: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-004: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-004: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-004: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-004: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-006: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-006: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-007: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-009: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-010: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-010: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-010: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-014: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-026: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-032: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-032: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-032: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-032: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-032: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-032: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-033: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-037: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-038: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-038: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-039: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-040: Choices B and C (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-C-040: Choices B and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-C-040: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-D-004: Choices A and B (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-004: Choices A and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-008: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-009: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-012: Choices A and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-033: Choices B and D (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-034: Choices A and B (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-034: Choices A and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-034: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-D-034: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-034: Choices B and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-034: Choices C and D (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-037: Choices C and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-E-010: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-E-011: Choices B and C (distractor-distractor) share moderate similarity (67%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-F-004: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-071: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-B-078: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-078: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-078: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-086: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-086: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-B-086: Choices A and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-B-086: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-086: Choices C and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-B-097: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-099: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-099: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-099: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-099: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-099: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-B-099: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-048: Choices B and C (distractor-distractor) share moderate similarity (60%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-052: Choices A and B (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-C-052: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-052: Choices A and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-C-052: Choices B and C (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-C-052: Choices B and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-052: Choices C and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-C-054: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-054: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-055: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-055: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-063: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-045: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-052: Choices C and D (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-D-054: Choices B and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-E-055: Choices A and B (distractor-distractor) share high similarity (75%)
+- [DistractorSimilarityValidator] P1E-F-050: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-F-065: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-F-070: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-076: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-078: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-069: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-073: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-073: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-073: Choices C and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-D-074: Choices A and B (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-E-069: Choices A and C (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-E-069: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-091: Choices A and D (distractor-distractor) share moderate similarity (50%) — may reduce discrimination
+- [DistractorSimilarityValidator] P1E-C-098: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1E-C-099: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R04: Choices B and C (distractor-distractor) share high similarity (80%)
+- [DistractorSimilarityValidator] P1-E-R04: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R04: Choices C and D (distractor-distractor) share high similarity (80%)
+- [DistractorSimilarityValidator] P1-E-R11: Choices C and D (distractor-distractor) share high similarity (89%)
+- [DistractorSimilarityValidator] P1-E-R15: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R15: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R15: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R15: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R15: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R15: Choices C and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R17: Choices A and B (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R17: Choices A and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R17: Choices A and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R17: Choices B and C (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R17: Choices B and D (distractor-distractor) share high similarity (100%)
+- [DistractorSimilarityValidator] P1-E-R17: Choices C and D (distractor-distractor) share high similarity (100%)

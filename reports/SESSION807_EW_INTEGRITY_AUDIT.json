@@ -1,0 +1,61 @@
+{
+  "session": "S807",
+  "title": "ExplanationWrong Integrity Audit — Domain E Wave 3 Certification",
+  "date": "2026-07-26",
+  "scope": "10 Wave 2b Domain E replacement items (P1-E-R12 through P1-E-R33)",
+  "integrity_status": "ATTESTED_NOT_VERIFIED",
+  "attestation_source": {
+    "session": "S806",
+    "agent": "Agent G",
+    "claim": "100% EW integrity — all 10 items pass DL-008, DL-026, DL-013, DL-010 checks",
+    "confidence": "Reported as HIGH"
+  },
+  "s807_verification_limitation": {
+    "reason": "Full item JSON was stored via dwImported in S806 and is not available in local batch files or pack archives accessible to S807 agents.",
+    "impact": "Agents P, W, and X cannot independently verify the following structural integrity dimensions:",
+    "unverified_dimensions": [
+      {
+        "defect": "DL-008",
+        "description": "ExplanationWrong[CorrectChoice] non-empty",
+        "requirement": "EW[CC] must be empty string (\"\") for all 10 items",
+        "governance_rule": "Rule 2 BLOCK"
+      },
+      {
+        "defect": "DL-026",
+        "description": "Empty non-CorrectChoice ExplanationWrong slots",
+        "requirement": "All non-CC EW slots must contain >= 100 characters of choice-specific text",
+        "governance_rule": "Certification-blocking per CAQS §4.4"
+      },
+      {
+        "defect": "DL-013",
+        "description": "Template boilerplate distractor explanations",
+        "requirement": "Zero occurrences of 'represents a plausible misconception' or 'does not align with' template patterns",
+        "governance_rule": "Certification-blocking per CAQS §4.2"
+      },
+      {
+        "defect": "DL-010",
+        "description": "Misassigned choice explanations",
+        "requirement": "Each EW slot must semantically describe the specific distractor it annotates; no cross-contamination between slots",
+        "governance_rule": "Content quality — learner-safety risk"
+      }
+    ]
+  },
+  "pre_insertion_verification_requirements": {
+    "session": "S808",
+    "required_checks": [
+      "Retrieve full item JSON for all 10 items from dwImported",
+      "Independently verify DL-008: EW[CC] === '' for all 10 items",
+      "Independently verify DL-026: all non-CC EW slots >= 100 chars",
+      "Independently verify DL-013: zero template boilerplate in any EW slot",
+      "Independently verify DL-010: each EW slot is semantically aligned with its annotated choice",
+      "Re-derive all 10 answer keys independently (CorrectChoice ground-truth audit)",
+      "Verify governance guard Rule 2 compliance before any write"
+    ],
+    "governance_gate": "BLOCK — no write to pack_e_corrected.js until all pre-insertion checks pass with documented evidence"
+  },
+  "certified_baseline": {
+    "note": "This audit examines only the 10 replacement items. Existing Domain E certified items (228) are not in scope.",
+    "existing_certified_domain_e": 228,
+    "new_items_under_review": 10
+  }
+}

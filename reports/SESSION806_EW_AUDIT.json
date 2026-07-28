@@ -1,0 +1,440 @@
+{
+  "auditTitle": "SESSION806_EW_COVERAGE_AUDIT",
+  "auditSession": "806",
+  "auditAgent": "G",
+  "auditTimestamp": "2026-07-26",
+  "auditType": "READ-ONLY structural verification",
+  "sourceFiles": [
+    "SESSION806_AUTHORING_BATCH_A.json",
+    "SESSION806_AUTHORING_BATCH_B.json",
+    "SESSION806_AUTHORING_BATCH_C.json"
+  ],
+  "summary": {
+    "totalItems": 10,
+    "totalEWFields": 40,
+    "totalDL008Violations": 0,
+    "totalDL026Violations": 0,
+    "totalDL013Violations": 0,
+    "totalDL010Violations": 0,
+    "totalFieldCompletenessViolations": 0,
+    "totalECLengthViolations": 0,
+    "totalECStandardRefViolations": 5,
+    "ccExpectationMismatches": 1,
+    "overallVerdict": "PASS_WITH_NOTES — 0 structural violations (DL-008/DL-026/DL-013/DL-010/fields all PASS). 5 items need EC standard-reference enrichment. 1 item has CC expectation mismatch (R11 file=CC:A vs user-expected=CC:B — file CC:A is accounting-correct)."
+  },
+  "perItemAudit": [
+    {
+      "itemId": "P1-E-R11",
+      "batch": "A",
+      "agent": "D",
+      "correctChoice": "A",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=A → EWA='' (0 chars) ✓"
+      },
+      "dl008_userExpectation": {
+        "status": "MISMATCH",
+        "detail": "User expected CC=B. Per user expectation, EWB would be the CC slot and is 629 chars (non-empty) — FAIL. But item's actual CC=A is accounting-correct (controls 1+2=preventive, 3=detective). EWA='' is correct for actual CC=A."
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: B=629, C=682, D=697 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWB addresses 'all three controls are preventive', EWC addresses the three-way match/reconciliation reversal, EWD addresses three-way-match=detective + reconciliation=corrective"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1516,
+        "lengthStatus": "PASS",
+        "standardRef": false,
+        "standardRefStatus": "FAIL",
+        "standardRefDetail": "EC describes preventive/detective/corrective classification but does not cite COSO by name. Recommended: add 'Under the COSO Internal Control — Integrated Framework, controls are classified as...'"
+      }
+    },
+    {
+      "itemId": "P1-E-R14",
+      "batch": "A",
+      "agent": "D",
+      "correctChoice": "D",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=D → EWD='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=626, B=637, C=562 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses application controls vs ITGC scope, EWB addresses entity-level vs IT-specific, EWC addresses business process controls vs IT infrastructure"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1413,
+        "lengthStatus": "PASS",
+        "standardRef": false,
+        "standardRefStatus": "FAIL",
+        "standardRefDetail": "EC thoroughly describes ITGC domains but does not cite COSO or ISACA by name. Regex `-match 'IMA'` returned True on parsed JSON but manual inspection and IndexOf('IMA')=-1 suggest a false-positive substring artifact. No explicit standard reference found. Recommended: add 'Under COSO, IT general controls encompass...' or reference ISACA COBIT."
+      }
+    },
+    {
+      "itemId": "P1-E-R15",
+      "batch": "A",
+      "agent": "D",
+      "correctChoice": "B",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=B → EWB='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=689, C=717, D=661 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses 'all three are input controls', EWC addresses reversed classification of all three procedures, EWD addresses 'file matching = processing' and 'physical docs = input'"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1518,
+        "lengthStatus": "PASS",
+        "standardRef": false,
+        "standardRefStatus": "FAIL",
+        "standardRefDetail": "EC describes IPO classification thoroughly but does not cite COSO, ISACA, or any framework. Recommended: add 'Under COSO and ISACA guidance, application controls are classified using the input-processing-output (IPO) model...'"
+      }
+    },
+    {
+      "itemId": "P1-E-R16",
+      "batch": "B",
+      "agent": "E",
+      "correctChoice": "C",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=C → EWC='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=676, B=697, D=788 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses perpetrator-level classification (management vs employee), EWB addresses internal vs external fraud, EWD addresses 'financial statement vs operational fraud'"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1577,
+        "lengthStatus": "PASS",
+        "standardRef": true,
+        "standardRefStatus": "PASS",
+        "standardRefDetail": "Explicitly cites COSO Principle 8"
+      }
+    },
+    {
+      "itemId": "P1-E-R17",
+      "batch": "B",
+      "agent": "E",
+      "correctChoice": "B",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=B → EWB='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=757, C=634, D=731 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses insurance=reduction (not sharing), EWC addresses discontinuation=reduction (not avoidance), EWD addresses insurance=acceptance and encryption=sharing"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1685,
+        "lengthStatus": "PASS",
+        "standardRef": true,
+        "standardRefStatus": "PASS",
+        "standardRefDetail": "Explicitly cites 'COSO Enterprise Risk Management framework'"
+      }
+    },
+    {
+      "itemId": "P1-E-R19",
+      "batch": "B",
+      "agent": "E",
+      "correctChoice": "D",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=D → EWD='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=660, B=565, C=534 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses SOX 404 confusion, EWB addresses related-party transaction confusion, EWC addresses board review vs CEO/CFO certification confusion"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1595,
+        "lengthStatus": "PASS",
+        "standardRef": true,
+        "standardRefStatus": "PASS",
+        "standardRefDetail": "Explicitly cites 'Section 302 of the Sarbanes-Oxley Act' and 'SEC'"
+      }
+    },
+    {
+      "itemId": "P1-E-R20",
+      "batch": "B",
+      "agent": "E",
+      "correctChoice": "A",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=A → EWA='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: B=614, C=504, D=672 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWB addresses applicability reversal, EWC addresses section-number reversal, EWD addresses joint-report misconception"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1495,
+        "lengthStatus": "PASS",
+        "standardRef": true,
+        "standardRefStatus": "PASS",
+        "standardRefDetail": "Explicitly cites 'SOX Section 404', 'COSO Internal Control — Integrated Framework', and 'SEC'"
+      }
+    },
+    {
+      "itemId": "P1-E-R30",
+      "batch": "C",
+      "agent": "F",
+      "correctChoice": "B",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=B → EWB='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=582, C=652, D=692 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses auth-vs-auth reversal, EWC addresses preventive/detective/corrective framework vs access control framework, EWD addresses authentication-vs-authorization conflation + ITGC misclassification"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1691,
+        "lengthStatus": "PASS",
+        "standardRef": false,
+        "standardRefStatus": "FAIL",
+        "standardRefDetail": "EC describes authentication/authorization/access-review thoroughly but does not cite COSO, ISACA, or NIST. Regex `-match` returned True for 'NIST' and 'SEC' on parsed JSON but IndexOf = -1 on same string, suggesting false-positive substring artifacts. No explicit standard reference found. Recommended: add 'Under COSO and ISACA guidance, logical access controls encompass...'"
+      }
+    },
+    {
+      "itemId": "P1-E-R31",
+      "batch": "C",
+      "agent": "F",
+      "correctChoice": "D",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=D → EWD='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=519, B=605, C=600 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses RTO/RPO reversal, EWB addresses units-of-measurement confusion (time vs transaction count), EWC addresses 'both are RTO' misconception"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1537,
+        "lengthStatus": "PASS",
+        "standardRef": false,
+        "standardRefStatus": "FAIL",
+        "standardRefDetail": "EC describes RTO/RPO thoroughly but does not cite NIST (SP 800-34), COSO, or any framework. StudyLinks correctly references NIST SP 800-34 but EC text itself does not. Recommended: add 'As defined in NIST SP 800-34 and industry disaster recovery standards...'"
+      }
+    },
+    {
+      "itemId": "P1-E-R32",
+      "batch": "C",
+      "agent": "F",
+      "correctChoice": "C",
+      "dl008": {
+        "status": "PASS",
+        "detail": "CC=C → EWC='' (0 chars) ✓"
+      },
+      "dl026": {
+        "status": "PASS",
+        "detail": "Non-CC EWs: A=647, B=634, D=699 — all >= 100 chars ✓"
+      },
+      "dl013": {
+        "status": "PASS",
+        "detail": "No template boilerplate in any EC or EW field"
+      },
+      "dl010": {
+        "status": "PASS",
+        "detail": "All EWs are choice-specific: EWA addresses outsourcing=delegation-of-responsibility fallacy, EWB addresses full-audit-requirement vs SOC 1, EWD addresses indemnification vs control responsibility"
+      },
+      "fieldCompleteness": {
+        "status": "PASS",
+        "detail": "All 25 fields present"
+      },
+      "ecSufficiency": {
+        "length": 1714,
+        "lengthStatus": "PASS",
+        "standardRef": true,
+        "standardRefStatus": "PASS",
+        "standardRefDetail": "Explicitly cites 'COSO Principle 9', 'AICPA's attestation standards (SSAE 18 / AT-C Section 320)', and 'SEC'"
+      }
+    }
+  ],
+  "violationDetails": {
+    "dl008": {
+      "count": 0,
+      "items": [],
+      "note": "All 10 items have empty ExplanationWrong[CorrectChoice]. PASS."
+    },
+    "dl026": {
+      "count": 0,
+      "items": [],
+      "note": "All 30 non-CC ExplanationWrong fields have substantive text >= 100 chars. Minimum observed: 504 chars (R20 EWC). PASS."
+    },
+    "dl013": {
+      "count": 0,
+      "items": [],
+      "note": "Zero instances of 'represents a plausible misconception', 'A candidate may select this option by misapplying', 'does not align with', 'Option X is incorrect', or 'The correct approach involves' in any EC or EW field across all 10 items. PASS."
+    },
+    "dl010": {
+      "count": 0,
+      "items": [],
+      "note": "Every EW field references the specific distractor choice content it annotates. Cross-item keyword overlap scan produced false positives from common internal-controls domain vocabulary (controls, management, assessment, etc.) — all semantically benign. PASS."
+    },
+    "fieldCompleteness": {
+      "count": 0,
+      "items": [],
+      "note": "All 10 items have all 25 required fields present and non-null. PASS."
+    },
+    "ecLength": {
+      "count": 0,
+      "items": [],
+      "note": "All 10 ECs >= 400 chars. Range: 1413–1714 chars. PASS."
+    },
+    "ecStandardRef": {
+      "count": 5,
+      "items": [
+        "P1-E-R11 — no COSO/SOX cited (preventive/detective/corrective classification)",
+        "P1-E-R14 — no COSO/ISACA cited (ITGC vs application controls)",
+        "P1-E-R15 — no COSO/ISACA cited (IPO classification)",
+        "P1-E-R30 — no COSO/ISACA/NIST cited (logical access controls)",
+        "P1-E-R31 — no NIST/COSO cited (RTO/RPO)"
+      ],
+      "severity": "Medium — educational quality note, not certification-blocking. CAQS §4.3 EV3 recommends but does not mandate standard references in EC text. Recommended remediation: add one sentence per EC naming the governing framework."
+    },
+    "ccExpectationMismatch": {
+      "count": 1,
+      "items": [
+        {
+          "itemId": "P1-E-R11",
+          "expectedCC": "B",
+          "actualCC": "A",
+          "actualCCCorrect": true,
+          "detail": "User stated 'R11: CC=B → EWB must be \"\"'. File has CC=A (accounting-correct: controls 1+2=preventive, 3=detective). EWA='' is correct for actual CC=A. If CC were B, EWB (629 chars) would be a DL-008 violation. The user's CC expectation is incorrect; the author's CC=A is the correct answer. No structural action required — this is a metadata alignment note."
+        }
+      ]
+    }
+  },
+  "ecStandardReferenceSummary": {
+    "pass": [
+      "P1-E-R16 — COSO Principle 8",
+      "P1-E-R17 — COSO ERM framework",
+      "P1-E-R19 — SOX Section 302, SEC",
+      "P1-E-R20 — SOX Section 404, COSO, SEC",
+      "P1-E-R32 — COSO Principle 9, AICPA, SEC"
+    ],
+    "fail": [
+      "P1-E-R11 — missing COSO reference for control classification",
+      "P1-E-R14 — missing COSO/ISACA reference for ITGC domains",
+      "P1-E-R15 — missing COSO/ISACA reference for IPO classification",
+      "P1-E-R30 — missing COSO/ISACA/NIST reference for logical access controls",
+      "P1-E-R31 — missing NIST/COSO reference for RTO/RPO"
+    ]
+  },
+  "methodologyNotes": {
+    "dl008Check": "Extracted CorrectChoice letter from each item; verified corresponding ExplanationWrong[letter] === ''",
+    "dl026Check": "Verified all non-CorrectChoice ExplanationWrong fields have length >= 100 chars",
+    "dl013Check": "Regex scan for 5 boilerplate patterns across all EC and EW fields; 0 matches",
+    "dl010Check": "Manual semantic verification: each EW text references the specific distractor choice it annotates. Cross-item keyword overlap flagged 100+ shared domain-vocabulary tokens — all false positives (items share Section E domain).",
+    "ecStandardRefCheck": "Regex /COSO|SOX|GAAP|IFRS|FASB|ASC|IMA|ISACA|NIST|AICPA|SEC/ on ExplanationCorrect text, cross-verified with manual inspection. R14 and R30 showed regex True but IndexOf=-1 — classified as FAIL after manual verification confirmed no meaningful framework citation.",
+    "fieldCompleteness": "Verified 25 fields per item: Part, Section, SectionName, Topic, MicroTopic, UniqueConceptKey, LOSTag, Difficulty, DifficultyScore, CognitiveLevel, ItemType, ItemStyle, Stem, CorrectChoice, ExplanationCorrect, QuestionID, question_state, Choices.A/B/C/D (4), ExplanationWrongA/B/C/D (4), StudyLinks, VerifiedChecks"
+  }
+}

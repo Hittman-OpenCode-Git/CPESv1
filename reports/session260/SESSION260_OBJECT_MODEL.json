@@ -1,0 +1,197 @@
+{
+  "specId": "SESSION260_OBJECT_MODEL",
+  "session": "260",
+  "title": "Unified Investigation Object — Canonical Schema",
+  "program": "250-Series — Administrative Operations Platform",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T19:25:00.000Z",
+  "purpose": "Define the single canonical JSON object that represents a question with all administrative metadata — the complete view an investigator needs to understand any question's state, history, defects, challenges, recommendations, and resolution path.",
+  "authority": "Derived from real field names in question_history.json, investigation_registry.json, challenge_registry.json, challenge_triage.json, recommendation_registry.json, session_registry.json, question_health.json, and pack_*_corrected.js.",
+  "depends_on": ["SESSION259_ENTITY_MODEL.json", "SESSION260_DASHBOARD_BACKEND.json"],
+
+  "unifiedInvestigationObject": {
+    "$schema": "https://cma-simulator.internal/schemas/unified-investigation-object/v1",
+    "description": "Complete administrative view of a single CMA Part 1 question. Every field and sub-object has a defined data source (registry file or engine API). FK references are strings that resolve within their respective registries.",
+
+    "question": {
+      "description": "Top-level question identity and state. Source: question_history.json + pack file.",
+      "questionId": "string — e.g. P1-A-001",
+      "pack": "string — pack_a | pack_b | pack_c | pack_d | pack_e",
+      "section": "string — A | B | C | D | E | F",
+      "sectionName": "string — e.g. External Financial Reporting Decisions",
+      "topic": "string — e.g. A.001 balance sheet current classification",
+      "cognitiveLevel": "string — Remember | Understand | Apply | Analyze | Evaluate",
+      "difficulty": "string — Easy | Moderate | Difficult | Very Difficult",
+      "difficultyScore": "integer — 1-5",
+      "currentState": "string — Certified | In Audit | Unprocessed | Archived",
+      "certificationDate": "string | null — ISO date",
+      "certificationBatch": "string | null — e.g. WAVE_A_BATCH1"
+    },
+
+    "content": {
+      "description": "Full question content. Source: pack_*_corrected.js (authoritative for CC, EC, EW, Stem, Choices).",
+      "stem": "string — full question text",
+      "choices": { "A": "string", "B": "string", "C": "string", "D": "string" },
+      "correctChoice": "string — A | B | C | D | ? (unknown/unparseable)",
+      "explanationCorrectFull": "string — truncated to 2000 chars",
+      "explanationCorrectSummary": "string — truncated to 200 chars",
+      "distractorExplanations": { "A": "string", "B": "string", "C": "string", "D": "string" },
+      "itemType": "string — MCQ",
+      "calculationItem": "boolean | null",
+      "losTag": "string | null — e.g. A.1 Financial statements"
+    },
+
+    "health": {
+      "description": "Aggregated health assessment. Source: question_health.json (question_health_engine.js).",
+      "healthScore": "integer 0-100",
+      "healthTier": "string — HEALTHY | FAIR | NEEDS ATTENTION | CRITICAL",
+      "componentScores": {
+        "defect": "integer 0-100 — penalty from defect history",
+        "challenge": "integer 0-100 — penalty from open challenges",
+        "recommendation": "integer 0-100 — penalty from pending recommendations",
+        "certification": "integer 0-100 — score from certification state",
+        "structural": "integer 0-100 — penalty from structural flags (DL-008, DL-026, EV3, etc.)",
+        "usage": "integer 0-100 — penalty from exposure frequency"
+      },
+      "diagnosis": "string — human-readable summary of health factors",
+      "structuralFlags": ["string — e.g. DL-026: FAIL — 2 empty EW slots"]
+    },
+
+    "history": {
+      "description": "Historical timeline. Source: question_history.json.",
+
+      "sessions": {
+        "total": "integer",
+        "items": [
+          {
+            "sessionId": "string — FK to session_registry.json",
+            "activity": "string",
+            "date": "string — ISO or empty",
+            "mode": "string | null — resolved from session_registry",
+            "title": "string | null — resolved from session_registry",
+            "series": "string | null — resolved from session_registry"
+          }
+        ]
+      },
+
+      "challenges": {
+        "total": "integer",
+        "items": [
+          {
+            "challengeId": "string — FK to challenge_registry.json",
+            "status": "string — OPEN | INVESTIGATING | RESOLVED | CLOSED | DISMISSED",
+            "type": "string — CONTENT_ERROR | ANSWER_DISPUTE | TECHNICAL_ISSUE | etc.",
+            "reportedDate": "string",
+            "resolution": "string | null",
+            "triage": {
+              "assignedCategory": "string | null — LIKELY_DEFECT | GOVERNANCE_ESCALATION | NEEDS_REVIEW",
+              "confidence": "integer | null",
+              "defectCodes": ["string"],
+              "priorityScore": "integer | null"
+            }
+          }
+        ]
+      },
+
+      "recommendations": {
+        "total": "integer",
+        "items": [
+          {
+            "recommendationId": "string — FK to recommendation_registry.json",
+            "type": "string — REMEDIATE | REVIEW | CERTIFY",
+            "sourceScan": "string — e.g. DL-008",
+            "severity": "string — CRITICAL | HIGH | MEDIUM | LOW",
+            "status": "string — Open | Resolved | Closed",
+            "description": "string"
+          }
+        ]
+      },
+
+      "defects": {
+        "total": "integer",
+        "items": [
+          {
+            "defectId": "string — e.g. DL-008",
+            "severity": "string — Critical | High | Medium | Low",
+            "status": "string — Known defect status",
+            "class": "string | null",
+            "domain": "string | null",
+            "description": "string | null"
+          }
+        ]
+      },
+
+      "certifications": {
+        "total": "integer",
+        "items": [
+          {
+            "sessionId": "string — session where certification occurred",
+            "type": "string — IMPLEMENTATION | READ-ONLY | etc.",
+            "date": "string — ISO or empty",
+            "title": "string — session title"
+          }
+        ]
+      }
+    },
+
+    "investigations": {
+      "total": "integer",
+      "items": [
+        {
+          "investigationId": "string — e.g. INV-20260727-001",
+          "type": "string — CHALLENGE | DEFECT | GOVERNANCE | SYSTEMATIC",
+          "status": "string — OPEN | INVESTIGATING | ACTION_REQUIRED | RESOLVED | CLOSED",
+          "priority": "integer 0-100",
+          "severity": "string — CRITICAL | HIGH | MEDIUM | LOW",
+          "findings": [
+            {
+              "timestamp": "string",
+              "author": "string",
+              "finding": "string",
+              "severity": "string"
+            }
+          ],
+          "resolution": {
+            "resolution_type": "string | null — CONFIRMED_DEFECT | CONFIRMED_VALID | DUPLICATE | etc.",
+            "resolution_date": "string | null",
+            "resolution_summary": "string | null"
+          }
+        }
+      ]
+    },
+
+    "readiness": {
+      "description": "Operational readiness assessment. Source: readiness_scoring.json, QUALITY_VERDICT.json.",
+      "readinessScore": "integer 0-100 | null",
+      "readinessTier": "string | null — READY | REMEDIATE | BLOCKED",
+      "qualityVerdict": "string | null — SAFE | WARN | DANGER",
+      "eligibleForCertification": "boolean | null",
+      "blockingDefects": ["string — active DL codes preventing certification"]
+    },
+
+    "outcome": {
+      "description": "Synthesized view combining current_state, health tier, defect status, and readiness into a single administrative verdict.",
+      "currentState": "string — Certified | In Audit | Unprocessed | Archived",
+      "healthTier": "string",
+      "isBlocked": "boolean — true if any blocking defect or unmet certification gate",
+      "activeDefects": ["string"],
+      "resolutionPath": "string — human-readable recommendation for admin action",
+      "readyForLearnerPool": "boolean",
+      "requiresAction": "boolean"
+    }
+  },
+
+  "dataSourceMap": {
+    "question": "question_history.json + pack_*_corrected.js",
+    "content": "pack_*_corrected.js (Stem, Choices, CorrectChoice, ExplanationCorrect, ExplanationWrong[A-D])",
+    "health": "question_health.json (generated by question_health_engine.js --all)",
+    "history.sessions": "question_history.json → resolved via session_registry.json for mode/title/series",
+    "history.challenges": "question_history.json → resolved via challenge_registry.json + challenge_triage.json",
+    "history.recommendations": "recommendation_registry.json (filtered by questionIds[] containing this QID)",
+    "history.defects": "question_history.json → resolved via DEFECT_LIBRARY.md",
+    "history.certifications": "question_history.json → certification_waves.json + REVISION_HISTORY.md",
+    "investigations": "investigation_registry.json (filtered by related_qids[] containing this QID)",
+    "readiness": "readiness_scoring.json + QUALITY_VERDICT.json",
+    "outcome": "Computed: currentState + healthTier + activeDefectFlags → synthesized verdict"
+  }
+}

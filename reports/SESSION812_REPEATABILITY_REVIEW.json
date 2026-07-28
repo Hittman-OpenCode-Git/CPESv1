@@ -1,0 +1,75 @@
+{
+  "session": "S812",
+  "series": "800-series Modernization",
+  "title": "Framework v2 Certification Wave 2 — Repeatability Verification",
+  "timestamp": "2026-07-27T15:40:00Z",
+  "wave1_session": "S811",
+  "boards": {
+    "A-F Registry + Quality": {
+      "verdict": "FAIL",
+      "repeatability_confirmed": true,
+      "issues": [
+        {
+          "severity": "MEDIUM",
+          "detail": "CSA-S322 artifact not regenerated with new S812 ID. Same artifactId reused."
+        },
+        {
+          "severity": "MEDIUM",
+          "detail": "Readiness routing inconsistency: readiness_scoring BLOCKED=242 vs certification_candidates BLOCKED=282 (40-item gap). Tool classification divergence."
+        }
+      ],
+      "identity_w1": "2539/2540 (99.96%)",
+      "identity_w2": "2539/2540 (99.96%)",
+      "hash_drift_w1_to_w2": "ZERO — all 5 packs match CURRENT_BASELINES.md"
+    },
+    "G-L Governance + Certification": {
+      "verdict": "PASS",
+      "repeatability_confirmed": true,
+      "critical_finding": {
+        "title": "39 Domain F certified items carry pre-existing DL-026",
+        "detail": "S853 WAVE_A certified 39 Domain F items that have empty distractor ExplanationWrong slots. Governance guard Rule 2 does not block DL-026 — certification is technically valid. S853's claim of 'Zero items had DL-026' was incorrect. Learners on these items see no feedback for ~30%+ of wrong answers.",
+        "affected_packs": ["C", "D"],
+        "affected_domain": "F",
+        "affected_count": 39,
+        "security_impact": "Medium — degraded educational quality, not wrong-answer display"
+      },
+      "governance_w1": "27/27 PASS",
+      "governance_w2": "27/27 PASS",
+      "identity_w1": "2539/2540",
+      "identity_w2": "2539/2540",
+      "dl008_w1": 0,
+      "dl008_w2": 0
+    },
+    "M-P Analytics Capture": {
+      "verdict": "DIVERGENT",
+      "repeatability_confirmed": false,
+      "throughput_w1_ms": {"governance_guard": 101, "identity": 349, "orchestrator": 1104},
+      "throughput_w2_ms": {"governance_guard": 142, "identity": 330, "orchestrator": 1255},
+      "throughput_degradation_pct": "13.7% (orchestrator: 1,104→1,255ms)",
+      "artifact_reuse_consumers": 0,
+      "blocked_to_ready_conversion": "100% (77/77 REMEDIATE→Certified)",
+      "certified_rate_w1": "90.47%",
+      "certified_rate_w2": "90.47%",
+      "revision_history_growth": "+57 lines (+0.38%)",
+      "defect_library_growth": "0 lines (frozen at 1,859)"
+    }
+  },
+  "wave1_vs_wave2_parity_matrix": {
+    "governance_guard": {"w1": "27/27", "w2": "27/27", "parity": true},
+    "identity_pass": {"w1": "99.96%", "w2": "99.96%", "parity": true},
+    "certified_rate": {"w1": "90.47%", "w2": "90.47%", "parity": true},
+    "dl008_certified": {"w1": 0, "w2": 0, "parity": true},
+    "dl026_certified": {"w1": 0, "w2": 0, "parity": true},
+    "pipeline_throughput": {"w1": "~3175 items/s", "w2": "~2024 items/s", "parity": false},
+    "artifact_reuse": {"w1": 3, "w2": 0, "parity": false},
+    "registry_verdict": {"w1": "PASS", "w2": "FAIL", "parity": false}
+  },
+  "exit_gate_assessment": {
+    "core_metrics_parity": true,
+    "infrastructure_regression": true,
+    "regression_detail": "Pipeline timing +13.7%. Artifact ID not regenerated. Readiness routing tools diverge on BLOCKED count by 40 items.",
+    "content_regression": false,
+    "content_regression_detail": "39 Domain F items certified with pre-existing DL-026 — a quality gap, not a regression (was pre-existing). Governance guard does not enforce DL-026.",
+    "proceed_to_s813": "APPROVED — WITH CAVEATS"
+  }
+}

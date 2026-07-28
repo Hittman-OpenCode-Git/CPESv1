@@ -1,0 +1,407 @@
+{
+  "specId": "SESSION252_INVESTIGATION_API_SPEC",
+  "board": "A",
+  "session": "S252",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T20:00:00.000Z",
+  "endpoint": {
+    "signature": "node scripts/question_investigation_api.js --qid=<QuestionID>",
+    "description": "Single-query investigation endpoint for CMA Part 1 exam questions. Returns a complete 9-section dossier for any QID in the repository.",
+    "method": "CLI (stdout JSON)",
+    "outputFile": "scripts/output/question_investigation.json"
+  },
+  "inputParameters": {
+    "qid": {
+      "type": "string",
+      "required": true,
+      "description": "Question identifier matching one of the five pack QID formats",
+      "examples": [
+        "P1-A-001  (Pack A, single-letter section)",
+        "P1B-A-076 (Pack B)",
+        "P1-AC-001 (Pack C, two-char section)",
+        "P1-AD-001 (Pack D, two-char section)",
+        "P1E-A-001 (Pack E, standard)",
+        "P1-E-R01  (Pack E, R-series supplemental)"
+      ]
+    }
+  },
+  "qidParsingRules": {
+    "packA": {
+      "pattern": "^P1-([A-F])-(\\d+)$",
+      "sectionFrom": "captureGroup1",
+      "description": "Single-letter section: P1-A-001 through P1-F-075"
+    },
+    "packB": {
+      "pattern": "^P1B-([A-F])-(\\d+)$",
+      "sectionFrom": "captureGroup1",
+      "description": "P1B-A-076 through P1B-F-150"
+    },
+    "packC": {
+      "pattern": "^P1-([A-F])(C)-(\\d+)$",
+      "sectionFrom": "captureGroup1",
+      "description": "Two-char section ending in C: P1-AC-001 through P1-FC-075"
+    },
+    "packD": {
+      "pattern": "^P1-([A-F])(D)-(\\d+)$",
+      "sectionFrom": "captureGroup1",
+      "description": "Two-char section ending in D: P1-AD-001 through P1-FD-075"
+    },
+    "packE": {
+      "pattern": "^P1E-([A-F])-(\\d+)$",
+      "sectionFrom": "captureGroup1",
+      "description": "P1E-A-001 through P1E-F-100"
+    },
+    "packE_RSeries": {
+      "pattern": "^P1-E-R(\\d+)$",
+      "fixedSection": "E",
+      "description": "P1-E-R01 through P1-E-R40"
+    }
+  },
+  "sectionNames": {
+    "A": "External Financial Reporting Decisions",
+    "B": "Planning, Budgeting, and Forecasting",
+    "C": "Performance Management",
+    "D": "Cost Management",
+    "E": "Internal Controls",
+    "F": "Technology and Analytics"
+  },
+  "outputSchema": {
+    "investigationId": {
+      "type": "string",
+      "format": "INV-{timestamp}-{qid}",
+      "description": "Unique investigation identifier"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "ISO 8601",
+      "description": "Investigation generation timestamp"
+    },
+    "requestedQid": {
+      "type": "string",
+      "description": "The QID requested by the caller"
+    },
+    "sourcesUsed": {
+      "type": "array<string>",
+      "description": "List of data source files successfully loaded"
+    },
+    "sections": {
+      "1_identity": {
+        "type": "object",
+        "properties": {
+          "questionId": { "type": "string" },
+          "part": { "type": "integer", "description": "CMA Part (always 1)" },
+          "section": { "type": "string", "enum": ["A","B","C","D","E","F"] },
+          "sectionName": { "type": "string", "description": "Full blueprint domain name" },
+          "pack": { "type": "string", "enum": ["pack_a","pack_b","pack_c","pack_d","pack_e"] },
+          "topic": { "type": "string" },
+          "microTopic": { "type": "string" },
+          "difficulty": { "type": "string", "enum": ["Easy","Moderate-Easy","Moderate","Difficult","Very Difficult"] },
+          "difficultyScore": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "cognitiveLevel": { "type": "string", "enum": ["Remember","Understand","Apply","Analyze","Evaluate"] },
+          "questionState": { "type": "string", "enum": ["Unprocessed","In Audit","Editorial Queue","Certified","Archived"] },
+          "certificationDate": { "type": "string", "format": "date", "nullable": true },
+          "certificationBatch": { "type": "string", "nullable": true },
+          "losTag": { "type": "string", "nullable": true },
+          "itemType": { "type": "string", "nullable": true },
+          "itemStyle": { "type": "string", "nullable": true },
+          "calculationItem": { "type": "boolean", "nullable": true },
+          "uniqueConceptKey": { "type": "string", "nullable": true }
+        }
+      },
+      "2_content": {
+        "type": "object",
+        "properties": {
+          "stem": { "type": "string", "description": "Full question stem text" },
+          "choices": {
+            "type": "object",
+            "properties": {
+              "A": { "type": "string" },
+              "B": { "type": "string" },
+              "C": { "type": "string" },
+              "D": { "type": "string" }
+            }
+          },
+          "correctChoice": { "type": "string", "pattern": "^[A-D]$" },
+          "explanationCorrectSummary": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "First 200 characters of ExplanationCorrect"
+          },
+          "explanationCorrectFull": {
+            "type": "string",
+            "description": "Full explanation correct text (truncated at 2000 chars for display)"
+          },
+          "distractorExplanations": {
+            "type": "object",
+            "properties": {
+              "A": { "type": "string", "description": "Why choice A is wrong (empty if A is correct)" },
+              "B": { "type": "string" },
+              "C": { "type": "string" },
+              "D": { "type": "string" }
+            }
+          }
+        }
+      },
+      "3_defects": {
+        "type": "object",
+        "properties": {
+          "totalDefects": { "type": "integer" },
+          "defectHistory": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "defectId": { "type": "string", "pattern": "^DL-\\d{3}$" },
+                "severity": { "type": "string", "enum": ["Critical","High","Medium","Low","Informational"] },
+                "status": { "type": "string" },
+                "class": { "type": "string", "nullable": true },
+                "domain": { "type": "string", "nullable": true },
+                "description": { "type": "string", "nullable": true }
+              }
+            }
+          },
+          "defectFlags": {
+            "type": "array<string>",
+            "description": "Active defect flags from work queue"
+          },
+          "blockedByDefects": {
+            "type": "boolean",
+            "description": "True if any active defect blocks this question"
+          }
+        }
+      },
+      "4_recommendations": {
+        "type": "object",
+        "properties": {
+          "totalRecommendations": { "type": "integer" },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "recommendationId": { "type": "string", "pattern": "^REC-[A-F0-9]{8}$" },
+                "type": { "type": "string", "enum": ["REMEDIATE","REVIEW","REWRITE","ARCHIVE","CERTIFY"] },
+                "sourceScan": { "type": "string", "description": "Defect code or scan source" },
+                "severity": { "type": "string", "enum": ["CRITICAL","HIGH","MEDIUM","LOW","INFORMATIONAL"] },
+                "status": { "type": "string" },
+                "description": { "type": "string" },
+                "targetSession": { "type": "string", "nullable": true }
+              }
+            }
+          }
+        }
+      },
+      "5_sessions": {
+        "type": "object",
+        "properties": {
+          "totalSessions": { "type": "integer" },
+          "sessions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sessionId": { "type": "string" },
+                "date": { "type": "string" },
+                "mode": { "type": "string", "nullable": true },
+                "title": { "type": "string", "nullable": true },
+                "series": { "type": "string", "nullable": true },
+                "activity": { "type": "string", "description": "What happened to this question in this session" }
+              }
+            }
+          }
+        }
+      },
+      "6_challenges": {
+        "type": "object",
+        "properties": {
+          "totalChallenges": { "type": "integer" },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "challengeId": { "type": "string", "pattern": "^CH-[A-F0-9]{8}$" },
+                "status": { "type": "string", "enum": ["OPEN","INVESTIGATING","RESOLVED","CLOSED","DISMISSED"] },
+                "type": { "type": "string", "enum": ["CONTENT_ERROR","TECHNICAL_ISSUE","ANSWER_DISPUTE","EXPLANATION_ISSUE","AMBIGUITY","OTHER"] },
+                "priority": { "type": "string", "enum": ["HIGH","MEDIUM","LOW"] },
+                "studentDescription": { "type": "string" },
+                "reportedDate": { "type": "string" },
+                "resolution": { "type": "string", "nullable": true },
+                "linkedDefects": { "type": "array<string>" }
+              }
+            }
+          }
+        }
+      },
+      "7_certificationHistory": {
+        "type": "object",
+        "properties": {
+          "totalCertifications": { "type": "integer" },
+          "certifications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sessionId": { "type": "string" },
+                "type": { "type": "string" },
+                "date": { "type": "string" },
+                "title": { "type": "string" }
+              }
+            }
+          },
+          "stateTransitions": {
+            "type": "array<string>",
+            "description": "List of state transitions (e.g., Unprocessed → In Audit → Certified)"
+          }
+        }
+      },
+      "8_readiness": {
+        "type": "object",
+        "properties": {
+          "readinessState": { "type": "string", "enum": ["CERTIFY","BLOCKED","REMEDIATE","READY"] },
+          "blockReason": { "type": "string", "description": "Reason if BLOCKED" },
+          "transitionPath": { "type": "string" },
+          "eligibleForCertification": { "type": "boolean" },
+          "domainReadiness": {
+            "type": "object",
+            "properties": {
+              "domain": { "type": "string" },
+              "readinessScore": { "type": "string", "description": "0-1 scale" },
+              "totalInDomain": { "type": "integer" },
+              "readyInDomain": { "type": "integer" }
+            }
+          },
+          "waveAssignment": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "waveId": { "type": "string" },
+              "waveTier": { "type": "string" },
+              "waveLabel": { "type": "string" }
+            }
+          },
+          "workQueue": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "lane": { "type": "string", "enum": ["CERTIFY","BLOCKED","REMEDIATE","ARCHIVE"] },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      },
+      "9_healthSummary": {
+        "type": "object",
+        "properties": {
+          "verdict": {
+            "type": "string",
+            "enum": ["HEALTHY","NEEDS_REVIEW","DEFECTIVE"],
+            "description": "Aggregated health verdict"
+          },
+          "verdictReason": {
+            "type": "string",
+            "description": "Concise explanation of the verdict"
+          },
+          "signals": {
+            "type": "object",
+            "properties": {
+              "certified": { "type": "boolean" },
+              "activeDefects": { "type": "integer" },
+              "criticalDefects": { "type": "integer" },
+              "openChallenges": { "type": "integer" },
+              "pendingRecommendations": { "type": "integer" },
+              "blockedReadiness": { "type": "boolean" },
+              "inCertificationWave": { "type": "boolean" },
+              "explanationQuality": { "type": "string", "enum": ["COMPLETE","PARTIAL","MISSING"] }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dataSourceDependencies": {
+    "primary": {
+      "file": "scripts/output/question_history.json",
+      "schemaVersion": "2.0",
+      "fields": [
+        "questionId", "currentState", "pack", "section", "topic", "cognitiveLevel",
+        "difficulty", "difficultyScore", "timeline", "sessions", "certificationHistory",
+        "recommendations", "challenges", "defectHistory", "versions"
+      ]
+    },
+    "content": {
+      "files": [
+        "pack_a_corrected.js",
+        "pack_b_corrected.js",
+        "pack_c_corrected.js",
+        "pack_d_corrected.js",
+        "pack_e_corrected.js"
+      ],
+      "globalVars": [
+        "MCQ_BANK_A",
+        "MCQ_BANK_B",
+        "MCQ_BANK_C",
+        "MCQ_BANK_D",
+        "MCQ_BANK_E"
+      ],
+      "fields": [
+        "QuestionID", "Stem", "Choices", "CorrectChoice", "ExplanationCorrect",
+        "ExplanationWrongA", "ExplanationWrongB", "ExplanationWrongC", "ExplanationWrongD",
+        "Section", "SectionName", "Topic", "MicroTopic", "Difficulty", "DifficultyScore",
+        "CognitiveLevel", "question_state", "certification_date", "certification_batch",
+        "Part", "LOSTag", "ItemType", "ItemStyle", "CalculationItem", "UniqueConceptKey"
+      ]
+    },
+    "recommendations": {
+      "file": "scripts/output/recommendation_registry.json",
+      "fields": ["recommendationId", "type", "sourceScan", "questionIds", "severity", "targetSession", "status", "description"]
+    },
+    "challenges": {
+      "file": "scripts/output/challenge_registry.json",
+      "fields": ["challengeId", "status", "type", "questionId", "priority", "studentDescription", "reportedDate", "resolution", "linkedDefects", "linkedSessions"]
+    },
+    "sessions": {
+      "file": "scripts/output/session_registry.json",
+      "fields": ["sessionId", "series", "title", "date", "mode"]
+    },
+    "readiness": {
+      "file": "scripts/output/readiness_scoring.json",
+      "fields": ["qid", "readinessState", "blockReason", "transitionPath", "eligibleForCertification"]
+    },
+    "workQueue": {
+      "file": "scripts/output/work_queue.json",
+      "fields": ["qid", "lane", "reason", "defect_flags", "readiness_state"]
+    },
+    "certificationWaves": {
+      "file": "scripts/output/certification_waves.json",
+      "fields": ["waveId", "waveTier", "label", "items"]
+    },
+    "challengeToQuestion": {
+      "file": "scripts/output/challenge_to_question.json",
+      "mapping": "QID → [challengeId, ...]"
+    }
+  },
+  "errorHandling": {
+    "qidNotFound": {
+      "exitCode": 1,
+      "output": { "error": "QID_NOT_FOUND", "message": "Question ID not found in any pack file or history", "requestedQid": "<qid>" }
+    },
+    "invalidFormat": {
+      "exitCode": 2,
+      "output": { "error": "INVALID_QID_FORMAT", "message": "QID does not match any known format", "requestedQid": "<qid>", "validFormats": ["P1-{S}-{NNN}","P1B-{S}-{NNN}","P1-{S}{C|D}-{NNN}","P1E-{S}-{NNN}","P1-E-R{NN}"] }
+    },
+    "missingArg": {
+      "exitCode": 3,
+      "output": { "error": "MISSING_ARGUMENT", "message": "Usage: node scripts/question_investigation_api.js --qid=<QuestionID>" }
+    },
+    "sourceUnavailable": {
+      "behavior": "Partial results returned with missingSections array",
+      "output": { "warning": "SOURCE_UNAVAILABLE", "missingSections": ["..."] }
+    }
+  },
+  "healthVerdictRules": {
+    "DEFECTIVE": "Any Critical-severity active defect OR CorrectChoice answer-key error (DL-030) OR question_state is Archived",
+    "NEEDS_REVIEW": "Any active defect (non-Critical) OR open challenges OR readinessState is BLOCKED OR pending recommendations",
+    "HEALTHY": "question_state is Certified AND zero active defects AND zero open challenges AND zero pending recommendations AND readinessState is CERTIFY"
+  }
+}

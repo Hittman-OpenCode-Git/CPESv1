@@ -1,0 +1,45 @@
+{
+  "session": "309",
+  "agent": "E",
+  "title": "Domain E Constraint Analysis",
+  "generated": "2026-07-26",
+  "methodology": "Function constructor parse of all 5 pack files. Section E state distribution across packs.",
+
+  "baseline": {
+    "totalDomainE": 375,
+    "certified": 208,
+    "gap": 167,
+    "uiqs": 62.5,
+    "grade": "C",
+    "p0Count": 29
+  },
+
+  "gapBreakdown": {
+    "packA_sectionE": { "total": 75, "certified": 58, "archived": 17, "unprocessed": 0, "note": "17 archived DL-012 clones. 58 certified — the only certified Section E in the portfolio." },
+    "packC_sectionE": { "total": 75, "certified": 0, "archived": 56, "unprocessed": 19, "note": "75% archived clones. 25% never-audited seeds." },
+    "packD_sectionE": { "total": 75, "certified": 0, "archived": 56, "unprocessed": 19, "note": "Mirrors Pack C pattern. Clone rotation between C and D." },
+    "packE_sectionE": { "total": 75, "certified": 75, "note": "Fully certified. Pack E Section E is educationally thin (108 chars EC mean per S308) but structurally clean." },
+    "packB_sectionE": { "total": 75, "certified": 75, "note": "Gold standard — full certification." }
+  },
+
+  "bottleneckDiagnosis": {
+    "primaryBottleneck": "ARCHIVED DL-012 CLONES (129 items = 77% of gap). Each archived clone must be: (1) re-rotated to a non-Pack C/D correct choice, (2) independently audited for distractor quality, (3) have EC authored from scratch, (4) have EW authored for all 3 distractors. This is not batchable — each item requires ~15-20 minutes of individual attention.",
+    "secondaryBottleneck": "UNPROCESSED SEEDS (38 items). 19 each in Packs C/D. Never seen any audit. Need full CAQS §1.6 certification pipeline.",
+    "tertiaryBottleneck": "EW AUTHORING — 141 Domain E items have EW debt (S307). Even certified Pack E Section E items (75) have thin EW.",
+    "structuralIssue": "Packs C/D Sections E have near-identical clone rotation structure. 56 archived items each with the same pattern — this is a clone-pair relationship between the two packs."
+  },
+
+  "highestLeverageAction": "REPLACE rather than REPAIR archived clone rotation items. For the 129 archived clones: use Pack A Section E's 58 certified items as the quality template, author 129 new unique Domain E items to replace the rotation-group, and batch-certify them. This is faster than individually re-rotating and re-auditing 129 archived items.",
+
+  "sessionImpact": {
+    "currentEstimate": 11,
+    "optimizedEstimate": 7,
+    "savingsLevers": [
+      "Replace archived clones rather than repair (saves 2 sessions)",
+      "Run Pack C and Pack D Section E certification in parallel (different file scopes — same-section but different files = no write conflict)",
+      "EW authoring built into replacement item creation"
+    ]
+  },
+
+  "eFParallelizationPotential": "HIGH — Pack C Section E and Pack D Section E are in different files. Pack C Section F and Pack D Section F are in different files. Domain E and F can run in parallel within each pack as long as a single session doesn't write to both packs simultaneously. Strategic pairing: Session A → Pack C Section E || Session B → Pack D Section F. Different files, no write conflict."
+}

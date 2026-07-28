@@ -1,0 +1,382 @@
+{
+  "document": "SESSION350_THROUGHPUT_METRICS",
+  "session": "S350",
+  "title": "Throughput Measurement Framework — Formulas, Standards, and Reporting",
+  "board": "B — Throughput Measurement Framework",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Framework — Measurement Standards",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION202_THROUGHPUT_MODEL.json; SESSION203_THROUGHPUT_VALIDATION.json",
+  "purpose": "Define the standardized measurement formulas, reporting cadence, and phase-conditional targets for all throughput metrics. Every Framework v2 session must measure and report throughput using these exact formulas to ensure comparability across the S322→S325→S910 measurement timeline.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "measurement_standards": {
+    "standard_1_reporting_cadence": {
+      "id": "MS-001",
+      "name": "Per-Session Measurement",
+      "description": "Every session must compute and report throughput metrics at T0 (start) and Tend (close). The Tmid checkpoint (for sessions >30min or >3 agents) must also report. Measurements are recorded in the session's GOVERNANCE_REPORT and contribute to the rolling throughput baseline.",
+      "checkpoints": {
+        "T0": "Baseline measurement before any review work begins. Captures state of all BF metrics at session start.",
+        "Tmid": "Mid-session measurement (sessions >30min or >3 agent-spawns only). Detects intra-session drift and enables course correction.",
+        "Tend": "Closing measurement. Captures final state of all BF metrics and computes session delta vs. T0."
+      }
+    },
+    "standard_2_measurement_window": {
+      "id": "MS-002",
+      "name": "Rolling Measurement Windows",
+      "description": "In addition to per-session measurements, throughput is tracked in rolling windows for trend analysis: per-wave (group of related sessions), per-phase (P1/P2/P3), cumulative (S202→present).",
+      "windows": {
+        "per_session": "Single session measurement — detailed per-item throughput tracking",
+        "per_wave": "Aggregate of all sessions in a certification wave (typically 1-2 sessions in v2, 4-5 in v1)",
+        "per_phase": "Aggregate of all sessions in a migration phase (P1 Foundation S202-S207, P2 Consolidation S208-S215, P3 Optimization S216-S222)",
+        "cumulative": "Running total from S202 baseline through current session"
+      }
+    },
+    "standard_3_measurement_units": {
+      "id": "MS-003",
+      "name": "Standardized Measurement Units",
+      "description": "All throughput metrics use standard units to ensure cross-session comparability. Agent spawns are the atomic unit of work. Session-hours are standardized to 1 hour = 1 session of focused review (excluding setup/teardown).",
+      "units": {
+        "work": "agent-spawns (one agent invocation regardless of scope)",
+        "time": "session-hours (1 session-hour = 60 minutes of active review time)",
+        "items": "individual question objects (not template families, not rotation groups)",
+        "cost": "agent-spawns per item (total spawns ÷ items processed)",
+        "velocity": "items per session-hour (items reviewed ÷ active review hours)"
+      }
+    }
+  },
+
+  "measurement_formulas": {
+    "section_1_core_throughput": {
+      "label": "Core Throughput Metrics — Formula Definitions",
+
+      "TH-001_items_reviewed_per_hour": {
+        "metric": "Items Reviewed per Hour",
+        "formula": "items_reviewed_per_hour = items_completed / (total_agent_spawns_in_session × average_agent_duration_hours)",
+        "formula_explanation": "Total items that received at least one review pass divided by total agent-time. Agent duration standardized to 15 minutes (0.25h) for scan agents, 30 minutes (0.5h) for quality review agents, 15 minutes (0.25h) for certification agents.",
+        "inputs": {
+          "items_completed": "Count of unique items that received at least one review pass during the session",
+          "total_agent_spawns_in_session": "Total number of agent invocations during the session",
+          "average_agent_duration_hours": "Standardized: 0.25h for scan/automated agents, 0.5h for quality review agents, 0.25h for certification/governance agents"
+        },
+        "measurement_frequency": "Per session at Tend. Rolling average per wave and per phase.",
+        "v1_baseline": "3-5 items per hour (S202 sec6)",
+        "v2_target_p1": "5-8 items per hour (Phase 1 Foundation)",
+        "v2_target_p2": "8-12 items per hour (Phase 2 Consolidation)",
+        "v2_target_p3": "12-15 items per hour (Phase 3 Optimization)",
+        "notes": "This formula standardizes agent time to eliminate variability in agent session lengths. Real-world sessions may vary, but the standardized formula produces comparable measurements."
+      },
+
+      "TH-002_items_certified_per_session": {
+        "metric": "Items Certified per Session",
+        "formula": "items_certified_per_session = count(item.question_state changed from non-'Certified' to 'Certified' during session)",
+        "formula_explanation": "Count of items whose question_state transitioned to 'Certified' during the session. Only first-time certifications count — re-certifications of previously Certified items (CertifiedDelta) are tracked separately.",
+        "inputs": {
+          "pre_session_certified_count": "Count of items with question_state='Certified' at T0",
+          "post_session_certified_count": "Count of items with question_state='Certified' at Tend",
+          "certified_delta_count": "Count of items that retained 'Certified' status via CertifiedDelta inheritance (no change)"
+        },
+        "measurement_frequency": "Per session at Tend.",
+        "v1_baseline": "42 items per session average (30-50 range)",
+        "v2_target_p1": "63 items per session (50-75 range)",
+        "v2_target_p2": "95 items per session (75-120 range)",
+        "v2_target_p3": "135 items per session (120-150 range)",
+        "notes": "Distinguishes between newly certified items and CertifiedDelta items (unchanged, inherited). Only newly certified items count toward throughput velocity."
+      },
+
+      "TH-003_cycle_time": {
+        "metric": "Certification Cycle Time",
+        "formula": "cycle_time = sessions_elapsed between item entering pipeline (first review) and reaching question_state='Certified'",
+        "formula_explanation": "Measured per-item as the number of sessions from first review activity to certification. Transactional items that appear and are certified in the same session have cycle_time=1. Items spanning multiple sessions have cycle_time=N.",
+        "inputs": {
+          "first_review_session": "Session ID where item first appeared in a review pipeline (Gate 0 or higher)",
+          "certification_session": "Session ID where question_state was set to 'Certified'"
+        },
+        "measurement_frequency": "Per-item at certification time. Aggregate distribution per wave (min, p50, p95, max, mean).",
+        "v1_baseline": "4-5 sessions per wave average (entire wave cycle time)",
+        "v2_target": "1-2 sessions per wave average",
+        "notes": "In Framework v1, items typically went through 4-5 sessions: initial review → quality deep-dive → remediation → re-review → certification. Framework v2 pre-flight eliminates the first 1-2 rounds."
+      },
+
+      "TH-004_board_utilization": {
+        "metric": "Board Utilization",
+        "formula": "board_utilization = items_processed_by_board / total_items_in_scope",
+        "formula_explanation": "Measure of how many items each board touches. High utilization on Quality and Certification boards is desirable (every Certified item should pass through them). High utilization on Governance Board for triage indicates leaky pre-flight.",
+        "inputs": {
+          "items_processed_by_board": "Unique items that appeared in the board's review queue during the session",
+          "total_items_in_scope": "Total items in the session's work scope (typically the uncertified pool for the target domains)"
+        },
+        "boards_assessed": ["Registry Board", "Quality Board", "Governance Board", "Certification Board", "Throughput Board"],
+        "measurement_frequency": "Per session at Tend. Per-board utilization rates.",
+        "v1_baseline": "Varies by board. Technical Review: ~100% (saw everything). Learner Safety: ~100%. DQS/EQS: ~60-80% (partial overlap). Readiness: ~20% (only escalated items).",
+        "v2_target": "Quality Board: >95% of READY items. Certification Board: 100% of CERTIFIABLE items. Governance Board: <5% of total (low triage — pre-flight should catch issues)."
+      },
+
+      "TH-005_agent_utilization": {
+        "metric": "Agent Utilization",
+        "formula": "agent_utilization = unique_items_reviewed_by_agent / total_agent_spawns_for_that_role",
+        "formula_explanation": "Measures how much new work each agent type performs vs. re-verifying already-reviewed items. High agent utilization (>80% unique items) means agents are doing new work. Low utilization (<40%) means agents are re-verifying — indicating duplication.",
+        "inputs": {
+          "unique_items_reviewed_by_agent": "Count of distinct items the agent provided a review verdict on",
+          "total_agent_spawns_for_that_role": "Total agent invocations for that role type during the session"
+        },
+        "agent_roles": ["Scan Agent", "Quality Agent A", "Quality Agent B", "Quality Agent C", "Certification Agent", "Governance Agent"],
+        "measurement_frequency": "Per session at Tend.",
+        "v1_baseline": "~35% unique (65% of agent-spawns were re-verifying items already reviewed by another agent)",
+        "v2_target": ">80% unique (most agents see items for the first time — pre-flight ensures items are clean, delta review skips unchanged items)"
+      }
+    },
+
+    "section_2_efficiency_ratios": {
+      "label": "Efficiency Ratios — Waste and Overhead Measurement",
+
+      "TH-006_duplication_ratio": {
+        "metric": "Review Duplication Ratio",
+        "formula": "duplication_ratio = total_review_passes / unique_items_reviewed",
+        "formula_explanation": "For every 1 item that genuinely needs review, how many review passes are performed? Ratio of 1.0 means one-pass-per-item (ideal). Ratio of 2.5 means 2.5 review passes per item (v1 baseline).",
+        "inputs": {
+          "total_review_passes": "Sum of all review verdicts issued across all boards and agents during the session",
+          "unique_items_reviewed": "Count of distinct items that received at least one review pass"
+        },
+        "measurement_frequency": "Per session at Tend.",
+        "v1_baseline": "2.5:1 average, 6.2:1 peak (S809 chain)",
+        "v2_target_p1": "<1.5:1",
+        "v2_target_p2": "<1.3:1",
+        "v2_target_p3": "<1.2:1"
+      },
+
+      "TH-007_re_review_ratio": {
+        "metric": "Unchanged Re-Review Ratio",
+        "formula": "re_review_ratio = items_re_reviewed_despite_no_change / total_items_in_scope",
+        "formula_explanation": "Percentage of items that were re-reviewed from scratch even though their content had not changed since the last review pass. This is the primary target of delta review — items that haven't changed should inherit their prior verdict.",
+        "inputs": {
+          "items_re_reviewed_despite_no_change": "Items with delta classification NO_CHANGE or CertifiedDelta that still received a full review pass",
+          "total_items_in_scope": "Total items in the session's work scope"
+        },
+        "measurement_frequency": "Per session at Tend. Requires delta ledger comparison.",
+        "v1_baseline": "80% (80% of items unchanged between waves but all re-reviewed)",
+        "v2_target_p1": "<50%",
+        "v2_target_p2": "<25%",
+        "v2_target_p3": "<20%"
+      },
+
+      "TH-008_skip_rate": {
+        "metric": "Delta Review Skip Rate",
+        "formula": "skip_rate = items_skipped_via_delta / total_items_in_scope",
+        "formula_explanation": "Percentage of items that were skipped (no review needed) because delta review determined they are unchanged (CertifiedDelta via IR-001). This is the inverse of the re-review ratio.",
+        "inputs": {
+          "items_skipped_via_delta": "Items with delta classification NO_CHANGE that received CertifiedDelta verdict and zero review time",
+          "total_items_in_scope": "Total items in the session's work scope"
+        },
+        "measurement_frequency": "Per session at Tend.",
+        "v1_baseline": "0% (no delta review existed)",
+        "v2_target_p1": ">50%",
+        "v2_target_p2": ">75%",
+        "v2_target_p3": ">80%"
+      }
+    },
+
+    "section_3_throughput_multiplier": {
+      "label": "Throughput Multiplier — Aggregate Productivity Measure",
+
+      "TH-009_throughput_multiplier": {
+        "metric": "Throughput Multiplier",
+        "formula": "throughput_multiplier = items_certified_per_session_hour_v2 / items_certified_per_session_hour_v1_baseline",
+        "formula_explanation": "How many times faster is Framework v2 at certifying items compared to Framework v1? Uses standardized session-hours. v1 baseline items_per_hour = 42 items / (19 agents × 0.5h) = 4.4 items/hour. Phase 3 target: 135 items / (6 agents × 0.5h) = 45 items/hour → 10.2×. But practical target accounts for real-world overhead.",
+        "inputs": {
+          "items_certified_per_session_hour_v2": "Current v2 items_per_session_hour computed via TH-001",
+          "items_certified_per_session_hour_v1_baseline": "4.4 items/hour (42 items, 19 agents, 0.5h standardized)"
+        },
+        "measurement_frequency": "Per phase. Not meaningful per-session due to batch-size variance.",
+        "v1_baseline": "1.0× (reference baseline)",
+        "v2_target_p1": "1.5-2.0×",
+        "v2_target_p2": "2.5-3.0×",
+        "v2_target_p3": "3.8× (S202 projected)",
+        "notes": "The 3.8× target from S202 is a phase 3 aspiration. Phase 1 achieves 1.5-2.0× via pre-flight gating alone. Phase 2 adds delta review (2.5-3.0×). Phase 3 with full automation reaches 3.8×."
+      }
+    },
+
+    "section_4_cost_efficiency": {
+      "label": "Cost Efficiency — Agent-Spawn Economics",
+
+      "TH-010_cost_per_item": {
+        "metric": "Agent-Spawns per Certified Item",
+        "formula": "cost_per_item = total_agent_spawns / items_newly_certified",
+        "formula_explanation": "How many agent-spawns does it take to certify one item? Includes all spawns (scan, quality, certification, governance) divided by only newly certified items (not CertifiedDelta). Lower is better. The v1 baseline of 0.305 includes ~50% waste.",
+        "inputs": {
+          "total_agent_spawns": "All agent invocations across all boards during the session",
+          "items_newly_certified": "Count of items whose question_state changed to 'Certified' during the session (per TH-002)"
+        },
+        "measurement_frequency": "Per session at Tend. Rolling average per wave and per phase.",
+        "v1_baseline": "0.305 agent-spawns per item (50% waste-adjusted: 0.153 productive)",
+        "v2_target_p1": "<0.15 agent-spawns per item",
+        "v2_target_p2": "<0.10 agent-spawns per item",
+        "v2_target_p3": "<0.07 agent-spawns per item",
+        "notes": "70% cost reduction target from S202: 0.305 → 0.092. Phase 1 achieves ~50% reduction via pre-flight. Phase 2 adds delta review. Phase 3 reaches full target."
+      },
+
+      "TH-011_waste_ratio": {
+        "metric": "Waste Ratio",
+        "formula": "waste_ratio = wasted_agent_spawns / total_agent_spawns",
+        "formula_explanation": "Percentage of agent-spawns that did not contribute to certification. Wasted spawns include: duplicate reviews (same item, same check, same conclusion), phantom investigations (pursuing non-existent defects), template-remediation spawns (DL-013 waves), and governance-only spawns (scanning without content action).",
+        "inputs": {
+          "wasted_agent_spawns": "Agent-spawns classified as duplicate, phantom, or non-productive by post-session audit",
+          "total_agent_spawns": "All agent invocations during the session"
+        },
+        "classification_rules": {
+          "duplicate": "Agent reviewed an item already reviewed by another agent, reached same conclusion",
+          "phantom": "Agent investigated a defect that did not actually exist (DL-029 false positives)",
+          "template_remediation": "Agent remediated DL-013 boilerplate that could have been auto-removed",
+          "governance_only": "Agent performed governance checks without any content action"
+        },
+        "measurement_frequency": "Per session at Tend via post-session audit.",
+        "v1_baseline": "50% waste ratio",
+        "v2_target_p1": "<30%",
+        "v2_target_p2": "<15%",
+        "v2_target_p3": "<10%"
+      }
+    }
+  },
+
+  "phase_conditional_targets": {
+    "label": "Phase-Conditional Throughput Targets",
+    "source": "SESSION202_THROUGHPUT_MODEL.json §sec6; SESSION203_THROUGHPUT_VALIDATION.json",
+    "phases": {
+      "phase_1_foundation": {
+        "label": "P1 Foundation — Hybrid Mode (S202-S207 → S830)",
+        "description": "Framework v2 engines built alongside v1. Pre-flight operational. Boards still v1. Measurement shows first gains from automated pre-flight gating.",
+        "expected_sessions": "S202-S207 (6 sessions)",
+        "targets": {
+          "TH-001_items_per_hour": "5-8",
+          "TH-002_items_per_session": "63 (50-75 range)",
+          "TH-003_cycle_time": "2-3 sessions per wave",
+          "TH-006_duplication_ratio": "<1.5:1",
+          "TH-007_re_review_ratio": "<50%",
+          "TH-009_throughput_multiplier": "1.5-2.0×",
+          "TH-010_cost_per_item": "<0.15",
+          "TH-011_waste_ratio": "<30%"
+        },
+        "exit_gate": "S830 authorization — all 10 BF metrics ≥20% improved from v1 baseline"
+      },
+      "phase_2_consolidation": {
+        "label": "P2 Consolidation — Shadow Mode (S208-S215 → S900)",
+        "description": "Framework v2 authoritative certification pipeline. Delta review active. 80% of items skipped. Boards consolidated to 5.",
+        "expected_sessions": "S208-S215 (8 sessions)",
+        "targets": {
+          "TH-001_items_per_hour": "8-12",
+          "TH-002_items_per_session": "95 (75-120 range)",
+          "TH-003_cycle_time": "1-2 sessions per wave",
+          "TH-006_duplication_ratio": "<1.3:1",
+          "TH-007_re_review_ratio": "<25%",
+          "TH-008_skip_rate": ">75%",
+          "TH-009_throughput_multiplier": "2.5-3.0×",
+          "TH-010_cost_per_item": "<0.10",
+          "TH-011_waste_ratio": "<15%"
+        },
+        "exit_gate": "S900 authorization — readiness failure <10%, duplicate review <1.3:1, re-review <25%, cycle ≤2 sessions"
+      },
+      "phase_3_optimization": {
+        "label": "P3 Optimization — Framework v2 Full Operation (S216-S222 → S910)",
+        "description": "v2 sole pipeline. v1 fully retired. S311 EW Factory standard. Full automation. All BF metrics at v2 targets.",
+        "expected_sessions": "S216-S222 (7 sessions)",
+        "targets": {
+          "TH-001_items_per_hour": "12-15",
+          "TH-002_items_per_session": "135 (120-150 range)",
+          "TH-003_cycle_time": "1 session per wave",
+          "TH-006_duplication_ratio": "<1.2:1",
+          "TH-007_re_review_ratio": "<20%",
+          "TH-008_skip_rate": ">80%",
+          "TH-009_throughput_multiplier": "3.8×",
+          "TH-010_cost_per_item": "<0.07",
+          "TH-011_waste_ratio": "<10%"
+        },
+        "exit_gate": "S910 authorization — hard cap ≤4 reports/session, consumption >90%, all BF at v2 targets"
+      }
+    }
+  },
+
+  "measurement_infrastructure": {
+    "label": "Measurement Infrastructure — How Measurements Are Collected",
+    "collection_methods": {
+      "automated": {
+        "description": "Scripts in scripts/ directory collect automated metrics",
+        "scripts": [
+          {"script": "scripts/identity_validator.js", "metrics_collected": ["Gate -1 pass/block counts", "identity validation rate", "compound key uniqueness"]},
+          {"script": "scripts/scan_orchestrator.js", "metrics_collected": ["Gate 0-4 pass/block/warn counts", "pipeline runtime per gate", "defect class counts"]},
+          {"script": "scripts/readiness_scorer.js", "metrics_collected": ["Readiness state distribution", "per-domain readiness scores", "BLOCKED/REMEDIATE/READY/CERTIFY counts"]},
+          {"script": "scripts/modernization_tracker.js", "metrics_collected": ["Certified pool size", "per-domain certification percentages", "remaining items"]},
+          {"script": "scripts/delta_ledger_builder.js", "metrics_collected": ["Change classifications", "skip rate", "re-review ratio"]}
+        ]
+      },
+      "manual": {
+        "description": "Session arbiter records manual metrics in GOVERNANCE_REPORT",
+        "metrics": ["Agent spawn count per role", "Agent utilization per role", "Session duration", "Board utilization per board"]
+      },
+      "derived": {
+        "description": "Computed from automated + manual metrics using the formulas in this document",
+        "metrics": ["TH-001 through TH-011 — all computed by SESSION_THROUGHPUT_REPORT generator (future)"]
+      }
+    },
+    "storage": {
+      "per_session": "Session GOVERNANCE_REPORT includes throughput section with all 11 TH metrics",
+      "per_wave": "Wave summary aggregates across sessions",
+      "per_phase": "Phase summary in S350_FRAMEWORK_V2_SCORECARD.json (Board K)",
+      "cumulative": "Rolling totals tracked in DELTA_LEDGER.json throughput section"
+    }
+  },
+
+  "reporting_standard": {
+    "label": "Throughput Reporting Standard",
+    "description": "Every session GOVERNANCE_REPORT and every phase-gate readiness assessment must include the throughput section formatted as below.",
+    "template": {
+      "throughput_section": {
+        "measurement_checkpoint": "T0 | Tmid | Tend",
+        "session_id": "<SESSION_ID>",
+        "items_in_scope": 0,
+        "items_newly_certified": 0,
+        "items_certified_delta": 0,
+        "agent_spawns_total": 0,
+        "agent_spawns_wasted": 0,
+        "core_metrics": {
+          "TH-001_items_per_hour": 0,
+          "TH-002_items_per_session": 0,
+          "TH-003_cycle_time": 0,
+          "TH-004_board_utilization": {},
+          "TH-005_agent_utilization": 0
+        },
+        "efficiency_ratios": {
+          "TH-006_duplication_ratio": 0,
+          "TH-007_re_review_ratio": 0,
+          "TH-008_skip_rate_pct": 0
+        },
+        "throughput_and_cost": {
+          "TH-009_throughput_multiplier": 0,
+          "TH-010_cost_per_item": 0,
+          "TH-011_waste_ratio_pct": 0
+        },
+        "phase_target_comparison": {
+          "current_phase": "P1 | P2 | P3",
+          "metrics_at_target": 0,
+          "metrics_total": 11,
+          "blocking_gaps": []
+        }
+      }
+    }
+  },
+
+  "cross_references": {
+    "parent": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_READINESS_SCORECARD.json",
+      "reports/SESSION350_SCAN_PERFORMANCE.json",
+      "reports/SESSION350_DELTA_REVIEW_SCORECARD.json",
+      "reports/SESSION350_BOARD_EFFICIENCY_MODEL.json",
+      "reports/SESSION350_REPORTING_SCORECARD.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/SESSION202_THROUGHPUT_MODEL.json",
+      "reports/SESSION203_THROUGHPUT_VALIDATION.json"
+    ]
+  }
+}

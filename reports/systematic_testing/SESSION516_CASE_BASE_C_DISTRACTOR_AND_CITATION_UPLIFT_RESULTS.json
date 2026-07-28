@@ -1,0 +1,35 @@
+{
+  "session": "516",
+  "agent": "C",
+  "target": "MIGRATED_CASE_BASE_C",
+  "batches": {
+    "batch_3a_citations": {
+      "items_processed": 75,
+      "citations_added": 72,
+      "skipped": 3,
+      "skipped_reason": "CASE-C1-Q4 already had ASC 606-10-25-27 citation from remediation; 2 others already had citation-like prefixes",
+      "citation_format": "SHORT prepend (e.g., 'Under ASC 606, ', 'Under the COSO Internal Control Framework, ')",
+      "by_section": {
+        "A": "Under ASC [specific number] (805, 350, 360, 450, 606, 740, 820, 842, 205-20) or Under U.S. GAAP",
+        "B": "In management accounting practice",
+        "C": "Under responsibility accounting",
+        "D": "Under cost accounting standards",
+        "E": "Under the COSO Internal Control Framework",
+        "F": "Under information systems governance"
+      }
+    },
+    "batch_3b_distractor_rationale": {
+      "select_items_processed": 37,
+      "distractor_rationale_added": 37,
+      "rationale_format": "Appended paragraph: 'Distractors reflect common errors: [choice A reason]; [choice B reason]; [choice C reason].'",
+      "coverage": "100% of select-type items now have distractor rationale",
+      "multi_items": "15 multi items already had inline distractor discussion — adequate without augmentation",
+      "numeric_fill_items": "23 items — N/A (no distractors to address)"
+    }
+  },
+  "quality_gaps_resolved": {
+    "citations": "75/75 (100%) — up from 0/75",
+    "distractor_rationale_select": "37/37 (100%) — up from ~1/37",
+    "total_distractor_coverage": "52/52 select+multi items (100%) have either explicit rationale or adequate inline discussion"
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "session": "S831",
+  "agent": "C",
+  "phase": "Discovery",
+  "timestamp": "2026-07-27T00:00:00Z",
+  "methodology": {
+    "section_counts": "Direct grep (Select-String) per pack file for '\"Section\": \"([A-F])\"' — verified 2026-07-27",
+    "difficulty_by_pack": "Provided by S831 coordinator from known pack-level data",
+    "per_section_difficulty": "Estimated by proportional split (template-generated rotation groups distribute difficulty evenly across sections within each pack)",
+    "limitations": "Per-item Section+Difficulty cross-tab would require boundary-aware object parsing (DL-020 risk). Proportional estimate is reliable given rotation-group templating."
+  },
+  "section_inventory_verified": {
+    "scan_method": "Select-String regex per pack file",
+    "scan_timestamp": "2026-07-27",
+    "pack_a": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 75, "F": 75, "total": 500},
+    "pack_b": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 75, "F": 75, "total": 500},
+    "pack_c": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 75, "F": 75, "total": 500},
+    "pack_d": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 75, "F": 74, "total_by_questionid": 500, "note": "Section regex matched 499; 1 item has Section field that did not match standard pattern (line-split artifact). QuestionID count confirms 500."},
+    "pack_e": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 115, "F": 75, "total": 540},
+    "pool_totals": {
+      "A": {"items": 375, "pct": 14.77, "blueprint_target_pct": 15, "delta_pp": -0.23},
+      "B": {"items": 500, "pct": 19.69, "blueprint_target_pct": 20, "delta_pp": -0.31},
+      "C": {"items": 500, "pct": 19.69, "blueprint_target_pct": 20, "delta_pp": -0.31},
+      "D": {"items": 375, "pct": 14.77, "blueprint_target_pct": 15, "delta_pp": -0.23},
+      "E": {"items": 415, "pct": 16.34, "blueprint_target_pct": 15, "delta_pp": 1.34},
+      "F": {"items": 374, "pct": 14.73, "blueprint_target_pct": 15, "delta_pp": -0.27}
+    },
+    "grand_total": 2539
+  },
+  "pool_difficulty_actual_vs_target": {
+    "actual": {
+      "Easy_1": 536,
+      "ModerateEasy_2": 693,
+      "Moderate_3": 1226,
+      "Difficult_4": 85,
+      "VeryDifficult_5": 0,
+      "total": 2540
+    },
+    "actual_pct": {
+      "Easy_1": 21.1,
+      "ModerateEasy_2": 27.3,
+      "Moderate_3": 48.3,
+      "Difficult_4": 3.3,
+      "VeryDifficult_5": 0.0
+    },
+    "caqs_target_pct": {
+      "Easy_1": 15,
+      "ModerateEasy_2": 20,
+      "Moderate_3": 30,
+      "Difficult_4": 25,
+      "VeryDifficult_5": 10
+    },
+    "delta_pct": {
+      "Easy_1": 6.1,
+      "ModerateEasy_2": 7.3,
+      "Moderate_3": 18.3,
+      "Difficult_4": -21.7,
+      "VeryDifficult_5": -10.0
+    },
+    "summary": "Pool is severely compressed toward the lower half of the difficulty scale. Moderate (48.3%) is the dominant label — 18pp above target. Difficult+VD combined = 3.3% vs 35% target. The 'missing' 31.7pp is distributed across Easy (+6.1), ME (+7.3), and Moderate (+18.3)."
+  },
+  "section_difficulty_estimate": {
+    "description": "Per-section difficulty estimated by applying each pack's difficulty proportions to the section's item count within that pack. Rotation-group templating distributes difficulty labels evenly across sections within a pack, making the proportional estimate reliable.",
+    "pack_difficulty_proportions": {
+      "pack_a": {"Easy": 0.196, "ME": 0.438, "Mod": 0.366, "Diff": 0.000, "VD": 0.000},
+      "pack_b": {"Easy": 0.264, "ME": 0.186, "Mod": 0.492, "Diff": 0.058, "VD": 0.000},
+      "pack_c": {"Easy": 0.198, "ME": 0.216, "Mod": 0.558, "Diff": 0.028, "VD": 0.000},
+      "pack_d": {"Easy": 0.196, "ME": 0.196, "Mod": 0.568, "Diff": 0.040, "VD": 0.000},
+      "pack_e": {"Easy": 0.202, "ME": 0.324, "Mod": 0.433, "Diff": 0.041, "VD": 0.000}
+    },
+    "per_section_estimates": {
+      "A": {
+        "items": 375,
+        "estimated": {
+          "Easy_1": 79,
+          "ModerateEasy_2": 102,
+          "Moderate_3": 181,
+          "Difficult_4": 13,
+          "VeryDifficult_5": 0
+        },
+        "caqs_target": {
+          "Easy_1": 56,
+          "ModerateEasy_2": 75,
+          "Moderate_3": 113,
+          "Difficult_4": 94,
+          "VeryDifficult_5": 38
+        },
+        "delta": {
+          "Easy_1": 23,
+          "ModerateEasy_2": 27,
+          "Moderate_3": 68,
+          "Difficult_4": -81,
+          "VeryDifficult_5": -38
+        },
+        "assessment": "Section A requires calculation proficiency (financial ratios, cash flow indirect method, revenue recognition journal entries). Estimated only 13 Difficult items (3.4%) vs 94 needed (25%). Pack A contributes 0 Difficult; all 13 come from Packs B/C/D/E. Pack A Section A has zero items above Moderate."
+      },
+      "B": {
+        "items": 500,
+        "estimated": {
+          "Easy_1": 106,
+          "ModerateEasy_2": 136,
+          "Moderate_3": 242,
+          "Difficult_4": 17,
+          "VeryDifficult_5": 0
+        },
+        "caqs_target": {
+          "Easy_1": 75,
+          "ModerateEasy_2": 100,
+          "Moderate_3": 150,
+          "Difficult_4": 125,
+          "VeryDifficult_5": 50
+        },
+        "delta": {
+          "Easy_1": 31,
+          "ModerateEasy_2": 36,
+          "Moderate_3": 92,
+          "Difficult_4": -108,
+          "VeryDifficult_5": -50
+        },
+        "assessment": "Largest section (500 items). Most calculation-intensive domain (master budget, cash budget, variance forecasting, learning curves). Should have the HIGHEST Difficult and VD counts. Estimated 17 Difficult (3.4%) — 108 short of target. This is the single biggest difficulty gap in the repository. Pack B Section B has ~6 Difficult; Pack A has 0."
+      },
+      "C": {
+        "items": 500,
+        "estimated": {
+          "Easy_1": 106,
+          "ModerateEasy_2": 136,
+          "Moderate_3": 242,
+          "Difficult_4": 17,
+          "VeryDifficult_5": 0
+        },
+        "caqs_target": {
+          "Easy_1": 75,
+          "ModerateEasy_2": 100,
+          "Moderate_3": 150,
+          "Difficult_4": 125,
+          "VeryDifficult_5": 50
+        },
+        "delta": {
+          "Easy_1": 31,
+          "ModerateEasy_2": 36,
+          "Moderate_3": 92,
+          "Difficult_4": -108,
+          "VeryDifficult_5": -50
+        },
+        "assessment": "Mirrors Section B profile (same item count, same pack-level rotation). Performance management items (variance analysis, ROI/RI, balanced scorecard) require multi-step analysis. 17 Difficult items is inadequate."
+      },
+      "D": {
+        "items": 375,
+        "estimated": {
+          "Easy_1": 79,
+          "ModerateEasy_2": 102,
+          "Moderate_3": 181,
+          "Difficult_4": 13,
+          "VeryDifficult_5": 0
+        },
+        "caqs_target": {
+          "Easy_1": 56,
+          "ModerateEasy_2": 75,
+          "Moderate_3": 113,
+          "Difficult_4": 94,
+          "VeryDifficult_5": 38
+        },
+        "delta": {
+          "Easy_1": 23,
+          "ModerateEasy_2": 27,
+          "Moderate_3": 68,
+          "Difficult_4": -81,
+          "VeryDifficult_5": -38
+        },
+        "assessment": "Cost management domain (job costing, process costing, ABC, joint costs, CVP). Mixed calculation/conceptual. Profile mirrors Section A. DL-012 clone groups in Packs C/D Section D inflate the item count with rotation artifacts — difficulty labels within these groups are template-assigned, not calibrated."
+      },
+      "E": {
+        "items": 415,
+        "estimated": {
+          "Easy_1": 87,
+          "ModerateEasy_2": 115,
+          "Moderate_3": 199,
+          "Difficult_4": 14,
+          "VeryDifficult_5": 0
+        },
+        "caqs_target": {
+          "Easy_1": 62,
+          "ModerateEasy_2": 83,
+          "Moderate_3": 125,
+          "Difficult_4": 104,
+          "VeryDifficult_5": 42
+        },
+        "delta": {
+          "Easy_1": 25,
+          "ModerateEasy_2": 32,
+          "Moderate_3": 74,
+          "Difficult_4": -90,
+          "VeryDifficult_5": -42
+        },
+        "assessment": "Largest section (415 items). Predominantly conceptual (COSO, governance, fraud, ethics). Understand predominance is partially appropriate — but evaluation-level items (fraud risk assessment, control deficiency judgment) should be Difficult. Pack E Section E (115 items) is 77% Understand — the most extreme cognitive skew in the repository. DL-016 (metadata-block shift) additionally affects Section E items in Pack A."
+      },
+      "F": {
+        "items": 374,
+        "estimated": {
+          "Easy_1": 79,
+          "ModerateEasy_2": 102,
+          "Moderate_3": 181,
+          "Difficult_4": 13,
+          "VeryDifficult_5": 0
+        },
+        "caqs_target": {
+          "Easy_1": 56,
+          "ModerateEasy_2": 75,
+          "Moderate_3": 112,
+          "Difficult_4": 94,
+          "VeryDifficult_5": 37
+        },
+        "delta": {
+          "Easy_1": 23,
+          "ModerateEasy_2": 27,
+          "Moderate_3": 69,
+          "Difficult_4": -81,
+          "VeryDifficult_5": -37
+        },
+        "assessment": "Newest domain (technology, analytics, ERP, cybersecurity, AI/automation). Highest DL-031 risk — definitional items ('ERP stands for...') labeled Moderate(3). Estimated 79 Easy items may be an undercount if DL-031 is systematically inflating definitions to Moderate. DL-035 affects 39 Certified Domain F items with empty distractor EW slots. DL-036 found 40-item regex mismatch in Pack E R-series within this domain area."
+      }
+    }
+  },
+  "systemic_vs_pack_specific": {
+    "systemic": {
+      "applies_to_all_packs_and_sections": [
+        "ZERO Very Difficult items (Difficulty 5) — 0 of 2540 items. CAQS target is 10% (254 items). This is a content-authoring gap, not a calibration error — no template module ever generated VD-level items.",
+        "Moderate (3) overweight in all sections — pool-wide 48.3% vs 30% target (+18.3pp). Every section is ~20-25pp over on Moderate.",
+        "Difficult (4) severe underweight in all sections — pool-wide 3.3% vs 25% target (-21.7pp). Every section is ~20pp under.",
+        "Understand cognitive over-reliance — 3 of 5 packs (A, C, E) are Understand-dominant. Pack E is 77% Understand.",
+        "Template-rotation difficulty assignment (not cognitive calibration) is the root cause — difficulty labels were assigned by position in 5-item groups, not by analyzing cognitive demand."
+      ]
+    },
+    "pack_specific": {
+      "pack_a": {
+        "items": 500,
+        "unique_issues": [
+          "ZERO Difficult items (the only pack with this deficit)",
+          "Highest Moderate-Easy proportion (43.8%) — items that should be Moderate are ME, items that should be Difficult are Moderate",
+          "Sections A, D, E fully Certified with zero Difficult items — learner pool has no Difficult questions from Pack A",
+          "Cognitive: Understand=215 (43%), Apply=281 (56%), Remember=3 (<1%), Analyze=1 (<1%)"
+        ]
+      },
+      "pack_b": {
+        "items": 500,
+        "unique_issues": [
+          "ONLY pack with Remember items (41) — likely a different template configuration",
+          "Best difficulty spread: 29 Difficult items (5.8%) — but still 23pp below CAQS target",
+          "Strongest Apply ratio (65.2%) — Pack B is the benchmark for cognitive calibration",
+          "100% Certified — learner pool's best-calibrated pack",
+          "DL-030 affected 4 Pack B items (answer-key errors: P1B-B-119, P1B-F-084/116/121)"
+        ]
+      },
+      "pack_c": {
+        "items": 500,
+        "unique_issues": [
+          "Highest Moderate proportion (55.8%) — the most compressed pack",
+          "DL-012 clone groups in Section D/E inflate item counts with rotation artifacts",
+          "DL-013 boilerplate distractor explanations prevalent in Sections D/E/F",
+          "DL-035: 28 Certified Domain F items have empty distractor EW slots"
+        ]
+      },
+      "pack_d": {
+        "items": 500,
+        "unique_issues": [
+          "Highest Moderate proportion (56.8%) alongside Pack C",
+          "Section F: 74 items (1 less than expected — structure anomaly)",
+          "DL-012 clones + DL-013 boilerplate in Sections D/E/F",
+          "DL-035: 11 Certified Domain F items with empty distractor EW slots",
+          "DL-016 dual-block architecture causes scan methodology issues"
+        ]
+      },
+      "pack_e": {
+        "items": 540,
+        "unique_issues": [
+          "77% Understand cognitive skew — most extreme in repository",
+          "Section E over-represented (115 items vs 75 in other packs) — 40 R-series supplements",
+          "100% Certified — but cognitive profile is Understand-dominant",
+          "DL-021: Section C missing all distractor EW fields (300 fields, now resolved)",
+          "DL-030: P1E-E-037 answer-key error (COSO Principle 15)",
+          "DL-036: P1-E-R01 through R40 regex mismatch in Candidate Engine"
+        ]
+      }
+    }
+  },
+  "section_specific_calibration_issues": {
+    "B_highest_priority": {
+      "why": "Largest section (500 items). Most calculation-intensive domain. Should have the most Difficult and VD items by topic nature — yet has only ~17 Difficult (3.4%). 108 Difficult items short of target.",
+      "specific_gaps": [
+        "Master budget sequencing: multi-department budget preparation should be Difficult",
+        "Cash budget with borrowing constraints: multi-step calculation with conditional logic",
+        "Learning curve applications: P1B-B-119 had a wrong answer — systemic formula risk in this area",
+        "Flexible budget + variance reconciliation: integrated analysis shouldn't be Moderate",
+        "Sensitivity analysis / what-if: evaluation-level, should be Difficult or VD"
+      ]
+    },
+    "E_F_dl031_vulnerability": {
+      "why": "Section E (conceptual: COSO, governance) and Section F (definitional: technology terms) are most vulnerable to DL-031 — definition-match items labeled Moderate(3) that should be Easy(1).",
+      "indicators": [
+        "Section E: 415 items, conceptual domain, 48% Moderate — likely inflated",
+        "Section F: 374 items, newer domain, many definitional stems",
+        "Pack E: 77% Understand — definition-match pattern thrives in Understand items",
+        "Session 700 Layer 2: 6 of 7 sampled difficulty miscalibrations followed the definition-match pattern",
+        "DL-031 estimated scope: ~500 items pool-wide; Sections E and F likely over-represented"
+      ],
+      "recommendation": "Target Sections E and F for DL-031 recalibration first — highest ROI per item recalibrated."
+    },
+    "A_D_calculation_gap": {
+      "why": "Sections A and D require calculation proficiency (financial statements, cost allocation) but have the same estimated Difficult count (13) as the conceptual sections. Calculation-heavy items at Moderate misrepresent their cognitive demand.",
+      "specific_gaps": [
+        "Cash flow indirect method: multi-step with judgment calls — should be Difficult",
+        "Revenue recognition (ASC 606): 5-step model with performance obligations — should span Difficult",
+        "Job/process costing with WIP: multi-step with equivalent units — should be Difficult",
+        "Joint cost allocation (NRV, physical units): multi-method comparison — should be Difficult"
+      ]
+    },
+    "cross_pack_inequality": {
+      "why": "A student answering Pack A gets zero Difficult items. A student answering Pack B gets 29 (5.8%). Same section topics, different difficulty exposure. This violates the CAQS principle of balanced assessment across equivalent forms.",
+      "impact": "Learner experience varies significantly by pack — not by section. This is a delivery-pool composition risk, not just a calibration defect."
+    }
+  },
+  "findings": [
+    {
+      "id": "F-C01",
+      "severity": "Critical",
+      "finding": "Pool-wide zero Very Difficult items. CAQS target is 10% (254 items). This is a content-authorship gap — no template module generated VD-level questions. The entire top tier of cognitive challenge is absent from the repository.",
+      "remediation": "Author ~254 new items at Difficulty 5, or recalibrate ~254 existing Difficult/Moderate items upward with enhanced distractor engineering."
+    },
+    {
+      "id": "F-C02",
+      "severity": "Critical",
+      "finding": "Difficult items severely underweight. Pool-wide 85 items (3.3%) vs 25% target (635). Shortfall: 550 items. This affects all sections proportionally, but sections B and C have the largest absolute gaps (108 items short each).",
+      "remediation": "Recalibrate ~550 Moderate items upward where cognitive demand warrants it (multi-step calculations, evaluation/judgment items). Target Sections B and C first due to calculation intensity."
+    },
+    {
+      "id": "F-C03",
+      "severity": "High",
+      "finding": "Blueprint item-count balance is excellent — all sections within 1.5pp of IMA CSO weight. Section E slight over (16.3% vs 15% target) is driven by Pack E's 40 R-series supplements. Pack D Section F has 74 items (1 short).",
+      "no_remediation_needed": true
+    },
+    {
+      "id": "F-C04",
+      "severity": "High",
+      "finding": "Pack A has ZERO Difficult items (unique deficit). 225 Pack A items are Certified — meaning the learner pool has no Difficult exposure from Pack A across any section. Combined with Pack A's 43.8% Moderate-Easy proportion, Pack A is the weakest pack for exam-realism.",
+      "remediation": "Recalibrate ~50-75 Pack A items from Moderate/M-Easy to Difficult. Target calculation-heavy items in Sections A, B, C, D first."
+    },
+    {
+      "id": "F-C05",
+      "severity": "High",
+      "finding": "Section B has the largest absolute difficulty gap: ~17 Difficult vs 125 target (108 short). As the most calculation-intensive domain (budgeting, forecasting, learning curves), this misrepresents the domain's actual cognitive demand on the real CMA exam.",
+      "impact": "Candidates may be underprepared for the computational complexity of the actual CMA Part 1 Section B questions."
+    },
+    {
+      "id": "F-C06",
+      "severity": "Medium",
+      "finding": "DL-031 (definition-match inflation) is likely concentrated in Sections E and F. Items where the stem defines a term and the correct answer is the term are systematically labeled Moderate(3). Section F especially — as the newest domain with many definitional items — may have 30-50% of its Moderate items mislabeled.",
+      "verification": "Requires per-item lexical overlap analysis (stem vs correct choice) on Sections E and F across all packs."
+    },
+    {
+      "id": "F-C07",
+      "severity": "Medium",
+      "finding": "Pack B is the benchmark pack for difficulty calibration — it has the best spread (26% Easy, 19% ME, 49% Mod, 6% Diff), strongest Apply ratio (65%), and only Remember items (41). Use Pack B's distribution as the recalibration target for other packs.",
+      "recommendation": "Study Pack B's item characteristics to understand what template configuration produced its superior calibration."
+    },
+    {
+      "id": "F-C08",
+      "severity": "Medium",
+      "finding": "Cross-pack difficulty inequality creates uneven learner experience. A student taking a Pack A-heavy session sees 0 Difficult items; a Pack B-heavy session sees 29. This violates equivalent-forms fairness. The delivery engine should randomize across packs to mitigate, but the underlying calibration defect should be fixed.",
+      "recommendation": "Implement delivery-pool difficulty stratification to ensure each session draws Difficult items proportionally across packs."
+    },
+    {
+      "id": "F-C09",
+      "severity": "Low",
+      "finding": "Pack E cognitive skew (77% Understand) is appropriate for Sections E and F content but not for Sections A-D. Pack E's Section A-D items share the same 77% Understand profile as Sections E-F — suggesting the cognitive label was assigned by pack template, not by per-item cognitive assessment.",
+      "remediation": "Verify that Pack E Sections A-D Apply items haven't been mislabeled as Understand."
+    },
+    {
+      "id": "F-C10",
+      "severity": "Low",
+      "finding": "Pack D Section F has 74 Section-field matches vs 75 expected. The 75th item exists (500 QuestionIDs confirmed, difficulty counts sum to 500) but its Section field doesn't match the standard regex pattern — likely a line-split or formatting artifact. Investigation deferred.",
+      "action": "Identify the 75th Section F item in Pack D via boundary-aware object parsing."
+    }
+  ],
+  "recalibration_recommendations": {
+    "priority_order": [
+      {
+        "rank": 1,
+        "action": "Recalibrate Pack A items upward",
+        "target": "Move ~50-75 items from ME/Moderate to Difficult, targeting calculation-intensive items across all sections",
+        "impact": "Closes the Pack A zero-Difficult gap; improves learner-pool balance"
+      },
+      {
+        "rank": 2,
+        "action": "Section B and C Moderate→Difficult recalibration",
+        "target": "Identify ~100 Moderate items across Sections B and C that have multi-step calculations or evaluation-level prompts; recalibrate to Difficult",
+        "impact": "Addresses the two largest absolute gaps; most impactful for CMA exam realism"
+      },
+      {
+        "rank": 3,
+        "action": "DL-031 definition-match sweep on Sections E and F",
+        "target": "Identify and recalibrate definitional items mislabeled as Moderate → Easy",
+        "impact": "Likely the highest-volumes recalibration; moves items downward to correct Easy target"
+      },
+      {
+        "rank": 4,
+        "action": "Author or up-label Very Difficult items",
+        "target": "Create ~50 VD items by enhancing existing Difficult-caliber items with additional distractor sophistication and multi-step integration",
+        "impact": "Starts closing the zero-VD gap; full 254-item target requires new item authoring"
+      },
+      {
+        "rank": 5,
+        "action": "Pack E cognitive label audit",
+        "target": "Verify that Sections A-D items labeled Understand are genuinely recall/comprehension, not mislabeled Apply items",
+        "impact": "Corrects potential cross-domain cognitive mislabeling in the fully-Certified pack"
+      }
+    ],
+    "execution_constraints": [
+      "Per-item recalibration requires reading stem + choices + CorrectChoice — automated lexical overlap scan can identify DL-031 candidates but cannot replace cognitive judgment",
+      "Batch cap: 30 items per change-set per governance-guard Rule 5",
+      "Backup-before-write mandatory per BACKUP_PROTOCOL.md",
+      "question_state: 'Certified' items must not have their CorrectChoice or ExplanationCorrect modified during difficulty recalibration"
+    ]
+  }
+}

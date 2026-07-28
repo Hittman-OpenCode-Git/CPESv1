@@ -1,0 +1,403 @@
+{
+  "document": "SESSION350_V1_BASELINE",
+  "session": "S350",
+  "title": "Framework v1 Authoritative Baseline — Frozen & Immutable",
+  "board": "A — Baseline Preservation Authority",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Baseline — READ-ONLY Authority",
+  "authority": "PROJECT_CONSTITUTION.md; S200 10-agent certification architecture assessment; S201 10-board consolidation study; S202 Throughput & Economics Model; S203 Engineering Specifications; SESSION_STATUS_2026-07-24.md",
+  "purpose": "Establish the single authoritative Framework v1 measurement baseline. All Framework v2 success validation will compare against these frozen values. No future session may modify any value in this document.",
+  "governance_note": "IMMUTABLE — This baseline is frozen by S350 authority. Any modification requires an S350-BOARD-A-AMENDMENT session with explicit Governance Board authorization and a new REVISION_HISTORY.md entry documenting the change rationale. The original values are preserved here in perpetuity as the Framework v1 measurement reference.",
+
+  "frozen_date": "2026-07-27",
+  "frozen_by": "Session 350 — Board A (Baseline Preservation Authority)",
+
+  "baselines": {
+    "section_1_bf_metrics": {
+      "label": "BF Metrics — 10 Key Performance Indicators (S202 sec4)",
+      "source": "SESSION202_THROUGHPUT_MODEL.json §sec4",
+      "verified_by": "SESSION203_THROUGHPUT_VALIDATION.json — all 10 BF metrics cross-checked against S203 engineering specifications, zero discrepancies confirmed",
+
+      "values": [
+        {
+          "id": "BF-001",
+          "metric": "agents_per_session",
+          "v1_value": "19 (range 15-28, peak 28 S809)",
+          "v1_value_numeric": 19,
+          "direction": "↓",
+          "unit": "agent-spawns per certification session",
+          "method": "S200 Agent C: 72 unique agent types catalogued across 14 certification sessions",
+          "verified": true
+        },
+        {
+          "id": "BF-002",
+          "metric": "boards_per_session",
+          "v1_value": "8.5 (range 8-9)",
+          "v1_value_numeric": 8.5,
+          "direction": "↓",
+          "unit": "boards convened per certification session",
+          "method": "14-wave board participation logs. 6 content boards (Technical,DQS,EQS,LearnerSafety,QA,Readiness) + 2 meta (Launch,Archival)",
+          "verified": true
+        },
+        {
+          "id": "BF-003",
+          "metric": "reports_per_session",
+          "v1_value": "9 (range 7-17, peak 29 S726)",
+          "v1_value_numeric": 9,
+          "direction": "↓",
+          "unit": "report files generated per session",
+          "method": "S200 Agent G: 1,212 files catalogued. S201 Board 5: updated to 1,227. Consumption audit cross-ref vs REVISION_HISTORY.md",
+          "verified": true
+        },
+        {
+          "id": "BF-004",
+          "metric": "readiness_failure_rate",
+          "v1_value": "89.5%",
+          "v1_value_numeric": 89.5,
+          "direction": "↓",
+          "unit": "percent of items arriving at certification with undetected defects",
+          "method": "S201 Board 2: 43 leakage events documented across 14 waves. 34 of 38 Domain E seeds arrived with 2+ concurrent defects. 38/38 zero-scanned. 91.5% of leakage events classified as preventable via pre-flight gating. S200: 89.5% readiness failure rate confirmed on Domain E seed sample.",
+          "verified": true
+        },
+        {
+          "id": "BF-005",
+          "metric": "duplicate_review_cycles",
+          "v1_value": "2.5:1 (peak 6.2:1 on S809 chain)",
+          "v1_value_numeric": 2.5,
+          "direction": "↓",
+          "unit": "ratio of review passes performed vs. genuinely needed",
+          "method": "S201 Board 3 field_touch_map. For every genuinely needed review pass, 2.5 passes are performed. S809 chain: 56 agent-spawns over 4 sessions on 38 seeds, 0 pack-file writes, 1 novel finding (CC discrepancy on 5 seeds)",
+          "verified": true
+        },
+        {
+          "id": "BF-006",
+          "metric": "re_review_rate",
+          "v1_value": "80%",
+          "v1_value_numeric": 80,
+          "direction": "↓",
+          "unit": "percent of items re-audited from scratch between waves despite being unchanged",
+          "method": "S200 Agent I delta review feasibility assessment. 80% of items are unchanged between waves but all 500 are re-examined. DR-002: 3-4 duplicate EC analyses per session. Items re-reviewed per wave: ~500 (all items)",
+          "verified": true
+        },
+        {
+          "id": "BF-007",
+          "metric": "identity_ambiguity",
+          "v1_value": "PRESENT",
+          "v1_value_numeric": "binary_fail",
+          "direction": "binary",
+          "unit": "presence of item-identity failures causing wrong-target remediation",
+          "method": "S201 Board 4 per-pack CC-placement analysis. 8 identity disputes documented, ~12 phantom QIDs, S320 remediation failures (targeted wrong variants), DL-029 ~75% false-positive rate from QID-only forward-scan. Pack B: CC field appears BEFORE QID — all forward-scan tools produce 100% false positives",
+          "verified": true
+        },
+        {
+          "id": "BF-008",
+          "metric": "cycle_time",
+          "v1_value": "4-5 sessions per certification wave",
+          "v1_value_numeric": 4.5,
+          "direction": "↓",
+          "unit": "sessions from wave initiation to all items certified",
+          "method": "REVISION_HISTORY.md session-chain enumeration. S809: 4 sessions (S809.1, S809.2, S810.1, S810.2) for 38 seed items",
+          "verified": true
+        },
+        {
+          "id": "BF-009",
+          "metric": "defect_timing",
+          "v1_value": "0% pre-flight / 89% board-review / 2.5% post-certification",
+          "v1_value_numeric": { "pre_flight_pct": 0, "board_review_pct": 89, "post_certification_pct": 2.5 },
+          "direction": "shift_left",
+          "unit": "percentage of defects detected at each pipeline stage",
+          "method": "S200 Agent A defect-detection-stage classification. Zero automated pre-board scanning. 89% of defects found during manual board review. 2.5% found post-certification (DL-008 in pool)",
+          "verified": true
+        },
+        {
+          "id": "BF-010",
+          "metric": "report_consumption_rate",
+          "v1_value": "35% (432 of 1,227 files referenced)",
+          "v1_value_numeric": 35,
+          "direction": "↑",
+          "unit": "percent of generated report files consumed by downstream sessions",
+          "method": "S201 Board 5 cross-reference audit: every report file checked against REVISION_HISTORY.md and SESSION_SUMMARY.md for downstream consumption. 65% of files classified as one-off/unconsumed",
+          "verified": true
+        }
+      ]
+    },
+
+    "section_2_operational_metrics": {
+      "label": "Operational Metrics — Agent, Scan, and Session Workload",
+      "source": "SESSION202_THROUGHPUT_MODEL.json §sec1; SESSION201_FRAMEWORK_V2_VISION.json §current_state",
+      "values": [
+        {
+          "id": "OP-001",
+          "metric": "agents_per_certification_wave",
+          "v1_value": "15-28 (average 19, peak 28 on S809)",
+          "method": "S200 Agent C: 72 unique agent types catalogued, 14 sessions analyzed",
+          "verified": true
+        },
+        {
+          "id": "OP-002",
+          "metric": "boards_operating",
+          "v1_value": 8,
+          "composition": ["Technical Review Board (80% unique scope)", "DQS — Distractor Quality Score (55% unique scope)", "EQS — Explanation Quality Score (45% unique scope)", "UIQS — User Interface Quality Score (95% unique scope)", "Learner Safety Review (20% unique scope)", "QA Review Board (75% unique scope)", "Certification Board (85% unique scope)", "Readiness Review Board (90% unique scope)"],
+          "method": "S200 Agent B workflow map; S201 Board 6 consolidation study",
+          "verified": true
+        },
+        {
+          "id": "OP-003",
+          "metric": "ew_field_re_examinations_per_session",
+          "v1_value": "4-7 agents re-examining same ExplanationWrong fields per session, reaching identical conclusions 95%+ of the time",
+          "method": "S200 Agent D: EW duplication analysis — EW is worst duplication category",
+          "verified": true
+        },
+        {
+          "id": "OP-004",
+          "metric": "dl008_scans_total",
+          "v1_value": "22 scan events across 6 sessions, ~80-110 individual examinations",
+          "method": "REVISION_HISTORY.md + DEFECT_LIBRARY.md DL-008 timeline analysis",
+          "verified": true
+        },
+        {
+          "id": "OP-005",
+          "metric": "sessions_per_wave",
+          "v1_value": "4-5 sessions (S809 chain: 4 sessions, 60 agents, 47 reports, 0 pack-file writes)",
+          "method": "REVISION_HISTORY.md session-chain enumeration",
+          "verified": true
+        },
+        {
+          "id": "OP-006",
+          "metric": "total_agent_spawns",
+          "v1_value": "~620 (±70). ~50% classified as waste (duplicate, phantom, or template-remediation). Estimated ~310 genuinely productive certification spawns",
+          "method": "Per-session spawn estimates from SESSION_SUMMARY.md. Single-source — precise enumeration recommended before S830.",
+          "verified": false,
+          "note": "Single-source estimate. Precision enumeration needed before S830 authorization gate."
+        },
+        {
+          "id": "OP-007",
+          "metric": "sessions_wasted",
+          "v1_value": "~33 sessions (~8 phantom-investigation + ~25 template-remediation)",
+          "method": "Session classification audit — sessions classified as phantom-investigation (pursuing non-existent defects from DL-029 false positives) or template-remediation (DL-013 boilerplate waves)",
+          "verified": true
+        },
+        {
+          "id": "OP-008",
+          "metric": "concurrent_overwrite_events",
+          "v1_value": "2 confirmed (DL-019: 432 items lost; DL-028: ~200 empty distractor slots)",
+          "method": "Backup diff + timeline cross-reference. No file-lock or session coordination in Framework v1",
+          "verified": true
+        }
+      ]
+    },
+
+    "section_3_content_quality_metrics": {
+      "label": "Content Quality — Defect Prevalence and Answer Accuracy",
+      "source": "SESSION202_THROUGHPUT_MODEL.json §sec1; SESSION_STATUS_2026-07-24.md; DEFECT_LIBRARY.md",
+      "values": [
+        {
+          "id": "CQ-001",
+          "metric": "certified_pool_at_s202_baseline",
+          "v1_value": "2,031 of 2,500 (81.2%)",
+          "by_pack": { "Pack A": "481/500 (96.2%)", "Pack B": "500/500 (100%)", "Pack C": "250/500 (50.0%)", "Pack D": "300/500 (60.0%)", "Pack E": "500/500 (100%)" },
+          "method": "Direct raw-file grep: Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"'. Count stable across 2 independent scans.",
+          "verified": true
+        },
+        {
+          "id": "CQ-002",
+          "metric": "certified_pool_at_s322_snapshot",
+          "v1_value": "2,221 of 2,540 (87.4%) — note: 2,540 includes scored_cases items",
+          "by_pack_post_s322": { "Pack A": "481/500", "Pack B": "500/500", "Pack C": "350/500", "Pack D": "350/500", "Pack E": "500/500" },
+          "method": "S322 modernization_tracker.js live scan. CURRENT_BASELINES.md §2 updated post-S726 and post-S530.",
+          "verified": true,
+          "note": "2,031 was the S202 baseline snapshot. Certified pool grew to 2,221 by S322 through certification waves and defect remediation."
+        },
+        {
+          "id": "CQ-003",
+          "metric": "answer_key_errors",
+          "v1_value": "5 confirmed (B-119, F-84, F-116, F-121, E-37). All resolved in Phase 0B",
+          "method": "Phase 0B CorrectChoice ground-truth audit + 20% independent re-derivation",
+          "verified": true
+        },
+        {
+          "id": "CQ-004",
+          "metric": "difficulty_inflation",
+          "v1_value": "~500 items labeled Moderate that should be Easy (definition-match items with stem-CC overlap >50%)",
+          "method": "Session 700 Layer 2 sample audit. DL-031 tracked in DEFECT_LIBRARY.md. Partially remediated in S530 (ENHANCED_CASE_BASE) + S716-S718 recalibration sweeps",
+          "verified": true
+        },
+        {
+          "id": "CQ-005",
+          "metric": "scan_redundancy",
+          "v1_value": "22 DL-008 scan events, 18 DL-026 events, 12 DL-013 events, 25+ certified count verifications. 3-12x redundancy per defect class",
+          "method": "DEFECT_LIBRARY.md defect timeline cross-reference",
+          "verified": true
+        }
+      ]
+    },
+
+    "section_4_reporting_burden": {
+      "label": "Reporting Burden — File Generation and Consumption",
+      "source": "SESSION201_REPORTING_BURDEN.json; SESSION202_THROUGHPUT_MODEL.json §sec1",
+      "values": [
+        {
+          "id": "RB-001",
+          "metric": "total_report_files",
+          "v1_value": "1,227 files (843 JSON, 372 MD, 4 CSV, 6 TXT, 2 BAK)",
+          "total_size_kb": 39724.83,
+          "method": "S201 Board 5 comprehensive file inventory",
+          "verified": true
+        },
+        {
+          "id": "RB-002",
+          "metric": "reports_per_session_average",
+          "v1_value": "6.9 across all sessions; 11.2 post-S300 sessions",
+          "by_series": { "100-series": 2.7, "300-series": 13.2, "500-series": 3.7, "600-series": 10.4, "700-series": 9.9, "800-series": 11.7 },
+          "trend": "INCREASING from ~3 to ~12 files/session over project lifetime",
+          "method": "Per-session file count analysis",
+          "verified": true
+        },
+        {
+          "id": "RB-003",
+          "metric": "report_consumption_rate_detailed",
+          "v1_value": "35.0% (432 of 1,229 cross-referenced from governance documents)",
+          "unconsumed": "492 files never referenced in any governance document (40.1%)",
+          "broadly_mentioned": "725 files mentioned in REVISION_HISTORY.md (59.6%)",
+          "method": "Cross-reference every report file against REVISION_HISTORY.md and SESSION_SUMMARY.md",
+          "verified": true
+        },
+        {
+          "id": "RB-004",
+          "metric": "reporting_peak",
+          "v1_value": "29 files in S726 (highest single-session output)",
+          "method": "Per-session file count",
+          "verified": true
+        },
+        {
+          "id": "RB-005",
+          "metric": "duplicated_content",
+          "v1_value": "Certified item count appears in ~8 files per reporting session (~450 total appearances). Governance guard result appears in ~3 files (~120 total appearances). 15 core metrics spread across average 5.3 files each.",
+          "method": "S201 Board 5 content-based deduplication analysis",
+          "verified": true
+        }
+      ]
+    },
+
+    "section_5_defect_landscape": {
+      "label": "Defect Landscape — Known Structural and Content Defects at v1 Baseline",
+      "source": "SESSION_STATUS_2026-07-24.md §3; CURRENT_BASELINES.md §3; DEFECT_LIBRARY.md",
+      "values": [
+        {
+          "id": "DL-001",
+          "metric": "DL-008 — ExplanationWrong[CorrectChoice] non-empty",
+          "v1_prevalence_peak": "539 occurrences across all packs (historical peak)",
+          "v1_current": "0 verified — Function constructor parse across all 2,500 items confirms zero active DL-008 (S722A + S802 + S726)",
+          "learner_pool_exposure": "67 Certified items were identified with DL-008 at S202 baseline — since remediated and verified RESOLVED",
+          "verified": true
+        },
+        {
+          "id": "DL-002",
+          "metric": "DL-026 — Empty non-CorrectChoice distractor slots",
+          "v1_prevalence_peak": "1,005 items (historical peak)",
+          "v1_current": "~27 residual items across Packs A/C (non-Certified, non-learner-pool). S322 scan: 274 items flagged at Gate 1",
+          "verified": true
+        },
+        {
+          "id": "DL-003",
+          "metric": "DL-013 — Template boilerplate in explanations",
+          "v1_prevalence_peak": "2,587 fields (historical peak)",
+          "v1_current": "~163 fields across non-Certified Pack C/D Sections E/F only (S723 Closure Baseline). ~688 fields cleared by certification waves and autonomous runs",
+          "verified": true
+        },
+        {
+          "id": "DL-004",
+          "metric": "DL-016 — Metadata-block ChoiceA-D +1 offset",
+          "v1_current": "58 Pack A Section E Certified items + all Pack A sections. Likely Pack C/D dual-block sections affected",
+          "learner_pool_exposure": "ExplanationWrong fields describe wrong item's distractors. Severity HIGH",
+          "verified": true
+        },
+        {
+          "id": "DL-005",
+          "metric": "DL-021 — Pack E Section C absent distractor ExplanationWrong slots",
+          "v1_current": "95 Certified items with absent EW slots. Active learner-pool exposure — degraded educational feedback",
+          "verified": true
+        }
+      ]
+    },
+
+    "section_6_throughput_and_economics": {
+      "label": "Throughput and Economics — Cost and Velocity",
+      "source": "SESSION202_THROUGHPUT_MODEL.json §sec6, §sec7",
+      "values": [
+        {
+          "id": "TE-001",
+          "metric": "items_per_session",
+          "v1_value": "30-50 (average 42) net — after subtracting scanning/governance overhead from ~145 nominal",
+          "method": "S202 sec6 throughput forecast",
+          "verified": true
+        },
+        {
+          "id": "TE-002",
+          "metric": "items_per_hour",
+          "v1_value": "3-5 items per session-hour",
+          "method": "S202 sec6: items_per_session ÷ agent_hours",
+          "verified": true
+        },
+        {
+          "id": "TE-003",
+          "metric": "agent_spawns_per_item",
+          "v1_value": 0.305,
+          "method": "Total agent-spawns (~620) ÷ total items processed (~2,031 certified at baseline). Includes waste.",
+          "verified": true
+        },
+        {
+          "id": "TE-004",
+          "metric": "cost_per_certified_item",
+          "v1_value": "0.305 agent-spawns per item. Waste percentage: 50%. Productive spawns per item: ~0.153",
+          "method": "S202 sec7 cost model",
+          "verified": true
+        },
+        {
+          "id": "TE-005",
+          "metric": "remaining_uncertified",
+          "v1_value": "469 uncertified (A:19, C:250, D:200) at S202 baseline. Reduced to 319 by S322 (A:19, C:150, D:150, E:0)",
+          "method": "Direct count from CURRENT_BASELINES.md §2",
+          "verified": true
+        }
+      ]
+    }
+  },
+
+  "validation_hierarchy": {
+    "primary_source": "SESSION202_THROUGHPUT_MODEL.json — Architecture-level baselines and targets (S202 Board F)",
+    "cross_validation": "SESSION203_THROUGHPUT_VALIDATION.json — Engineering-level confirmation that all BF metrics preserved",
+    "operational_snapshot": "SESSION_STATUS_2026-07-24.md — Certified pool snapshot at S202 baseline (2,031)",
+    "current_snapshot": "CURRENT_BASELINES.md §2 — Most recent certified pool (2,221 at S322)",
+    "historical": "SESSION201_FRAMEWORK_V2_VISION.json — Root problems identified, 72 agents catalogued",
+    "reporting": "SESSION201_REPORTING_BURDEN.json — 1,227 file inventory with consumption analysis",
+    "defect": "DEFECT_LIBRARY.md — Complete defect catalog DL-001 through DL-033"
+  },
+
+  "immutability_clause": "This document is the single authoritative source for Framework v1 baseline values. All Framework v2 success measurement will compare against the values recorded here. The governance note at the top of this document establishes that modification requires explicit S350-BOARD-A-AMENDMENT authorization. Any session that modifies a value in this document without such authorization is in violation of the measurement framework and its comparison data is invalid.",
+
+  "cross_references": {
+    "parent_specifications": [
+      "reports/SESSION202_THROUGHPUT_MODEL.json",
+      "reports/SESSION203_THROUGHPUT_VALIDATION.json",
+      "reports/SESSION201_FRAMEWORK_V2_VISION.json",
+      "reports/SESSION201_REPORTING_BURDEN.json",
+      "reports/session_status/SESSION_STATUS_2026-07-24.md",
+      "knowledge/CURRENT_BASELINES.md",
+      "knowledge/DEFECT_LIBRARY.md"
+    ],
+    "sibling_s350_deliverables": [
+      "reports/SESSION350_THROUGHPUT_METRICS.json",
+      "reports/SESSION350_READINESS_SCORECARD.json",
+      "reports/SESSION350_IDENTITY_SCORECARD.json",
+      "reports/SESSION350_SCAN_PERFORMANCE.json",
+      "reports/SESSION350_DELTA_REVIEW_SCORECARD.json",
+      "reports/SESSION350_BOARD_EFFICIENCY_MODEL.json",
+      "reports/SESSION350_REPORTING_SCORECARD.json",
+      "reports/SESSION350_RECOMMENDATION_ANALYTICS.json",
+      "reports/SESSION350_ADMIN_METRICS_FRAMEWORK.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ]
+  }
+}

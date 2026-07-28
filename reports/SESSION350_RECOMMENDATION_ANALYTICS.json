@@ -1,0 +1,203 @@
+{
+  "document": "SESSION350_RECOMMENDATION_ANALYTICS",
+  "session": "S350",
+  "title": "Recommendation Flow Analytics — Lifecycle Tracking from Finding to Closure",
+  "board": "I — Recommendation Flow Metrics",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Scorecard — Recommendation Analytics",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION203_RECOMMENDATION_PIPELINE.json; scripts/output/recommendation_registry.json (S322 operational snapshot)",
+  "purpose": "Measure the effectiveness of the recommendation pipeline — the Framework v2 mechanism that converts defect findings into actionable recommendations with tracked lifecycle. Framework v1 had no formal recommendation pipeline (findings were buried in agent reports with no closure tracking). Framework v2 makes recommendations first-class objects with full lifecycle management.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "recommendation_flow": {
+    "description": "Framework v2 recommendation flow: defect Finding → formal Recommendation → session Assignment → agent Execution → verification Closure. Each recommendation is a first-class object with a unique REC-ID, tracked lifecycle, and cross-referenced session assignment.",
+    "flow_stages": [
+      {
+        "stage": 1,
+        "name": "Finding",
+        "description": "A defect is detected by an automated scan (Gate 1/2/4) or by human review (Quality Board). The finding includes defect class, QID list, severity, and source gate.",
+        "output": "Defect flag in CERTIFICATION_SCAN_ARTIFACT",
+        "v1_problem": "Findings existed only in agent reports. No structured detection log. Same defects found and re-found across sessions.",
+        "v2_fix": "All findings are structured in scan artifact. Each finding has a defect class, QID list, severity, and detection timestamp."
+      },
+      {
+        "stage": 2,
+        "name": "Recommendation",
+        "description": "A formal REC-ID is generated for a group of findings. The recommendation specifies: type (REMEDIATE/REVIEW/ESCALATE/HOLD), target session, severity, and scope.",
+        "output": "REC-XXXXXXXX entry in recommendation registry",
+        "v1_problem": "No formal recommendations existed. Remediation was ad-hoc — agents decided what to fix without documented recommendations.",
+        "v2_fix": "Every remediation action is backed by a REC-ID. The recommendation registry tracks all open recommendations."
+      },
+      {
+        "stage": 3,
+        "name": "Assignment",
+        "description": "The recommendation is assigned to a target session. Session arbiter incorporates the recommendation into the session plan. The recommendation transitions from OPEN to ASSIGNED.",
+        "output": "Session plan entry with linked REC-ID",
+        "v1_problem": "No session assignment mechanism. Remediation happened whenever an agent decided to work on it — no scheduling, no tracking.",
+        "v2_fix": "Every recommendation has a targetSession. Session planning includes pending recommendations."
+      },
+      {
+        "stage": 4,
+        "name": "Execution",
+        "description": "The recommendation is executed by agents in the target session. Work is performed. Results are verified. The recommendation transitions from ASSIGNED to IN_PROGRESS to VERIFIED.",
+        "output": "Remediation evidence, verified scan results",
+        "v1_problem": "Execution was unrecorded. No way to know who fixed what, when, or whether verification was performed.",
+        "v2_fix": "Every execution step is logged. Evidence is attached to the recommendation. Verification re-runs affected gates."
+      },
+      {
+        "stage": 5,
+        "name": "Closure",
+        "description": "The recommendation is closed after verification confirms all defects are resolved. The recommendation transitions from VERIFIED to CLOSED. Closure evidence (scan re-run results) is attached.",
+        "output": "CLOSED recommendation entry, updated defect library",
+        "v1_problem": "No closure tracking. Defects were 'fixed' but there was no formal verification or closure record. Same defects re-appeared in later scans because closure was never confirmed.",
+        "v2_fix": "Formal closure with verification evidence. Closed recommendations are immutable historical records."
+      }
+    ]
+  },
+
+  "recommendation_lifecycle": {
+    "authority": "SESSION203_RECOMMENDATION_PIPELINE.json",
+    "states": ["OPEN", "ASSIGNED", "IN_PROGRESS", "VERIFIED", "CLOSED"],
+    "transitions": [
+      {"from": "OPEN", "to": "ASSIGNED", "trigger": "Session arbiter assigns REC-ID to target session"},
+      {"from": "ASSIGNED", "to": "IN_PROGRESS", "trigger": "Agent begins remediation work in target session"},
+      {"from": "IN_PROGRESS", "to": "VERIFIED", "trigger": "Remediation complete. Post-remediation scan confirms defect resolved."},
+      {"from": "VERIFIED", "to": "CLOSED", "trigger": "Governance Board authorizes closure. DEFECT_LIBRARY.md updated."},
+      {"from": "VERIFIED", "to": "OPEN", "trigger": "Post-closure scan detects recurrence — re-opened (emergency re-open path)"}
+    ],
+    "forbidden_transitions": [
+      "OPEN → CLOSED (bypasses verification)",
+      "OPEN → IN_PROGRESS (bypasses assignment)",
+      "IN_PROGRESS → CLOSED (bypasses verification)",
+      "CLOSED → ASSIGNED (closed recommendations must re-open first)"
+    ]
+  },
+
+  "recommendation_types": {
+    "REMEDIATE": "Structural defect remediation — clear DL-008, fill DL-026, align DL-016. Most common type.",
+    "REVIEW": "Content quality review — address DL-013 boilerplate, improve EV3 citations, recalibrate DL-031 difficulty",
+    "ESCALATE": "Governance escalation — item requires governance-level decision before action (DL-030, identity collision)",
+    "HOLD": "Deferral — item structurally clean but awaiting dependent resolution (template family sibling, cross-pack dependency)"
+  },
+
+  "recommendation_metrics": {
+    "RC-001_backlog_age": {
+      "metric": "Recommendation Backlog Age",
+      "description": "Age of the oldest open recommendation. Measures whether recommendations are accumulating faster than they are being resolved.",
+      "formula": "backlog_age = oldest_recommendation_opened_date to current_date",
+      "by_severity_breakdown": ["CRITICAL: target <1 session old", "HIGH: target <3 sessions old", "MEDIUM: target <5 sessions old", "LOW: target <10 sessions old"],
+      "v2_target": "Zero CRITICAL recommendations older than 1 session. Zero HIGH older than 3 sessions.",
+      "current_s322": "4 recommendations created S322. All Open. Age: <1 session."
+    },
+    "RC-002_closure_rate": {
+      "metric": "Recommendation Closure Rate",
+      "description": "Rate at which recommendations are closed within their target timeframe.",
+      "formula": "closure_rate = recommendations_closed_on_time / total_recommendations_created × 100",
+      "measurement_window": "Per wave. Rolling 3-wave average.",
+      "v2_target": ">90% of recommendations closed within 1 session of target."
+    },
+    "RC-003_execution_lag": {
+      "metric": "Recommendation Execution Lag",
+      "description": "Time from recommendation creation to first execution action. Measures how quickly recommendations are picked up.",
+      "formula": "execution_lag = sessions_elapsed between recommendation_created and first_execution_action",
+      "v2_target": "<1 session for CRITICAL/HIGH. <2 sessions for MEDIUM. <5 sessions for LOW."
+    },
+    "RC-004_recurrence_rate": {
+      "metric": "Defect Recurrence Rate",
+      "description": "Rate at which closed defects re-appear in subsequent scans. Recurrence indicates incomplete remediation or unverified closure.",
+      "formula": "recurrence_rate = reopened_recommendations / total_closed_recommendations × 100",
+      "v2_target": "0% — verified closure should prevent recurrence",
+      "v1_problem": "DL-008 was 'fixed' in 22 separate scan events across 6 sessions — the same fix repeated because closure was never verified."
+    },
+    "RC-005_recommendations_per_scan": {
+      "metric": "Recommendations Generated per Scan",
+      "description": "Number of new REC-IDs created per pre-flight scan. High numbers indicate many defects. Trending downward over waves indicates quality improvement.",
+      "formula": "new_recommendations = count of REC-IDs created from this session's scan findings",
+      "v2_target": "Trending downward over time as defect pool shrinks",
+      "current_s322": "4 recommendations generated from S322 live scan"
+    }
+  },
+
+  "current_operational_snapshot_s322": {
+    "source": "scripts/output/recommendation_registry.json",
+    "total_recommendations": 4,
+    "by_type": {
+      "REMEDIATE": 2,
+      "REVIEW": 2,
+      "ESCALATE": 0,
+      "HOLD": 0
+    },
+    "by_severity": {
+      "CRITICAL": 1,
+      "HIGH": 1,
+      "MEDIUM": 1,
+      "LOW": 1
+    },
+    "recommendations": [
+      {
+        "id": "REC-61966733",
+        "type": "REMEDIATE",
+        "source": "DL-008",
+        "count": 3,
+        "severity": "CRITICAL",
+        "questions": ["P1-ED-057", "P1-ED-063", "P1-ED-065"],
+        "target_session": "S811",
+        "status": "Open",
+        "description": "EW[CC] slot non-empty — DL-008 remediation required"
+      },
+      {
+        "id": "REC-5B1E489D",
+        "type": "REMEDIATE",
+        "source": "DL-026",
+        "count": 274,
+        "severity": "HIGH",
+        "target_session": "S811",
+        "status": "Open",
+        "description": "Empty non-CC ExplanationWrong slots — distractor explanation authoring required"
+      },
+      {
+        "id": "REC-9A2F1C7E",
+        "type": "REVIEW",
+        "source": "DL-013",
+        "count": 31,
+        "severity": "MEDIUM",
+        "target_session": "S812",
+        "status": "Open",
+        "description": "Template boilerplate in ExplanationWrong fields — editorial review required"
+      },
+      {
+        "id": "REC-3D8B6E4A",
+        "type": "REVIEW",
+        "source": "EV3",
+        "count": 2074,
+        "severity": "LOW",
+        "target_session": "S900",
+        "status": "Open",
+        "description": "Missing accounting principle citations in ExplanationCorrect — large-scale content improvement deferred to Phase 2"
+      }
+    ],
+    "analysis": "S322 scan pipeline found 4 defect categories requiring recommendations. The EV3 citation gap (2,074 items) is the largest but lowest severity — deferred to Phase 2. DL-008 (3 items, CRITICAL) requires immediate action pre-S811. DL-026 (274 items, HIGH) is the largest volume structural defect."
+  },
+
+  "trend_tracking": {
+    "label": "Recommendation Flow Trend",
+    "measurements": [
+      {"session": "S322", "phase": "P0", "open_recommendations": 4, "closed": 0, "backlog_age": "<1 session", "notes": "First recommendation registry built. All 4 REC-IDs Open."},
+      {"session": "S350", "phase": "P0", "open_recommendations": 4, "closed": 0, "backlog_age": "<1 session", "notes": "Recommendation metrics baseline established. Same 4 REC-IDs still Open — no remedial action between S322 and S350."}
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_READINESS_SCORECARD.json",
+      "reports/SESSION350_SCAN_PERFORMANCE.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/SESSION203_RECOMMENDATION_PIPELINE.json"
+    ],
+    "operational_data": "scripts/output/recommendation_registry.json"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "audit_id": "SESSION318_CROSS_PACK_AUDIT",
+  "timestamp": "2026-07-26T22:00:00",
+  "scope": "Cross-pack consistency audit for Domain E items across all 5 packs",
+  "cross_pack_verdict": "CLEAN",
+  "per_pack_audit": {
+    "pack_a": {
+      "file": "pack_a_corrected.js",
+      "status": "CLEAN",
+      "domain_e_items_found": {
+        "type": "P1-E-xxx (original Domain E items, NOT replacements)",
+        "qid_range": "P1-E-001 through P1-E-084 (gapped)",
+        "count": 68,
+        "question_state": "Certified",
+        "notes": "These are the original P1-E-xxx QIDs (e.g., P1-E-001, P1-E-002), not the replacement P1-E-R## QIDs. No P1-E-R## contamination detected. Also no P1-EC-xxx or P1-ED-xxx clone contamination."
+      },
+      "p1_e_r_contamination": "None — zero P1-E-R## matches",
+      "clone_contamination": "None — zero P1-EC-xxx or P1-ED-xxx matches"
+    },
+    "pack_b": {
+      "file": "pack_b_corrected.js",
+      "status": "CLEAN",
+      "domain_e_items_found": "None",
+      "notes": "No Domain E references, no P1-E- prefix QIDs, no P1-EC-xxx, no P1-ED-xxx, no P1-E-R##. Pack B has zero Domain E contamination or drift."
+    },
+    "pack_c": {
+      "file": "pack_c_corrected.js",
+      "status": "CLEAN",
+      "domain_e_items_found": {
+        "type": "P1-EC-xxx (Domain E clone items, Pack C variant)",
+        "qid_range": "P1-EC-001 through P1-EC-075",
+        "count": 75,
+        "question_states": "Mixed: 'Archived' and 'Unprocessed'. No 'Certified' states among clone items. Non-clone items (preceding section) are all 'Certified'.",
+        "notes": "Clone items properly preserved in their original states (Archived/Unprocessed). No P1-E-R## replacement contamination. No state transitions detected for clone items."
+      },
+      "p1_e_r_contamination": "None",
+      "unauthorized_state_changes": "None"
+    },
+    "pack_d": {
+      "file": "pack_d_corrected.js",
+      "status": "CLEAN",
+      "domain_e_items_found": {
+        "type": "P1-ED-xxx (Domain E clone items, Pack D variant)",
+        "qid_range": "P1-ED-001 through P1-ED-075",
+        "count": 75,
+        "question_states": "Mixed: 'Archived' and 'Unprocessed'. No 'Certified' states among clone items. Non-clone items (preceding section) are all 'Certified'.",
+        "notes": "Clone items properly preserved in their original states (Archived/Unprocessed). No P1-E-R## replacement contamination. No state transitions detected for clone items."
+      },
+      "p1_e_r_contamination": "None",
+      "unauthorized_state_changes": "None"
+    },
+    "pack_e": {
+      "file": "pack_e_corrected.js",
+      "status": "CLEAN",
+      "domain_e_items_found": {
+        "original_items": {
+          "type": "P1E-E-xxx (original Pack E Domain E items)",
+          "qid_range": "P1E-E-001 through P1E-E-075",
+          "count": 75,
+          "question_state": "All Certified",
+          "notes": "Original items appear in three blocks: P1E-E-001 through P1E-E-030 (lines ~11258-12710), P1E-E-031 through P1E-E-065 (lines ~18509-20212), P1E-E-066 through P1E-E-075 (lines ~24215-24666). All have question_state 'Certified'. No corruption from R-item insertions detected."
+        },
+        "replacement_items": {
+          "type": "P1-E-R## (replacement items for archived clone groups)",
+          "qid_range": "P1-E-R01 through P1-E-R40",
+          "count": 40,
+          "question_state": "All Certified",
+          "notes": "Replacement items span lines ~25267-26996. Some R-IDs appear out of numeric order (e.g., R26, R27, R29 appear after R36; R12, R13, R18, R21-R25, R28, R33 appear after R40) but all 40 expected R-IDs are present. Each includes a SourceDescription referencing which archived clone group it replaces."
+        }
+      },
+      "clone_qid_presence": "P1-EC-xxx and P1-ED-xxx appear ONLY in SourceDescription strings as references (e.g., 'replacing archived P1-EC-001 through P1-EC-005 clone rotation group'), NOT as actual QuestionID values. Zero clone QIDs as QuestionID in pack E."
+    }
+  },
+  "replacement_qid_isolation": {
+    "verdict": "confirmed",
+    "detail": "All 40 P1-E-R## QIDs (P1-E-R01 through P1-E-R40) exist exclusively in pack_e_corrected.js. Zero instances found in pack_a, pack_b, pack_c, or pack_d. Isolation is clean.",
+    "r_qids_in_pack_e": ["P1-E-R01","P1-E-R02","P1-E-R03","P1-E-R04","P1-E-R05","P1-E-R06","P1-E-R07","P1-E-R08","P1-E-R09","P1-E-R10","P1-E-R11","P1-E-R12","P1-E-R13","P1-E-R14","P1-E-R15","P1-E-R16","P1-E-R17","P1-E-R18","P1-E-R19","P1-E-R20","P1-E-R21","P1-E-R22","P1-E-R23","P1-E-R24","P1-E-R25","P1-E-R26","P1-E-R27","P1-E-R28","P1-E-R29","P1-E-R30","P1-E-R31","P1-E-R32","P1-E-R33","P1-E-R34","P1-E-R35","P1-E-R36","P1-E-R37","P1-E-R38","P1-E-R39","P1-E-R40"],
+    "r_qids_in_other_packs": []
+  },
+  "clone_qid_archival": {
+    "verdict": "confirmed",
+    "detail": "P1-EC-xxx clone QIDs (001-075) exist only in pack_c_corrected.js. P1-ED-xxx clone QIDs (001-075) exist only in pack_d_corrected.js. Neither appears as an actual QuestionID in pack_e_corrected.js, pack_a_corrected.js, or pack_b_corrected.js. Clone QIDs appear in pack_e_corrected.js only inside SourceDescription strings as historical references (documenting which archive group each replacement item replaces).",
+    "ec_in_pack_c_count": 75,
+    "ed_in_pack_d_count": 75,
+    "clone_qids_in_pack_e_as_questionid": 0,
+    "clone_qids_in_pack_a_as_questionid": 0,
+    "clone_qids_in_pack_b_as_questionid": 0
+  },
+  "original_item_preservation": {
+    "verdict": "confirmed",
+    "detail": {
+      "pack_e_p1e_e_items": "All 75 P1E-E-xxx items (001-075) are intact with question_state 'Certified'. Items span three contiguous blocks (001-030, 031-065, 066-075) with no corruption, no altered fields, no unexpected state changes.",
+      "pack_a_p1_e_items": "All 68 P1-E-xxx original Domain E items (001-084 gapped) are intact with question_state 'Certified'. These are the original (non-replacement) P1-E items distinct from P1-E-R## replacements.",
+      "pack_c_clone_items": "All 75 P1-EC-xxx clone items preserved with correct question_state values (Archived or Unprocessed). No state transitions.",
+      "pack_d_clone_items": "All 75 P1-ED-xxx clone items preserved with correct question_state values (Archived or Unprocessed). No state transitions."
+    }
+  },
+  "unauthorized_question_state_changes": "None",
+  "additional_observations": {
+    "pack_a_domain_e_items": "Pack A contains original P1-E-xxx QIDs (P1-E-001 through P1-E-084 with gaps), all marked 'Certified'. These are distinct from the P1-E-R## replacements in Pack E. The P1-E-xxx naming convention predates the replacement scheme and represents the originally distributed Domain E items across packs.",
+    "pack_b_domain_e_absence": "Pack B has zero Domain E items of any kind — no P1-E-xxx, no P1-E-R##, no P1-EC-xxx, no P1-ED-xxx. This is expected if Domain E items were distributed only to packs A, C, D, and E.",
+    "r_item_ordering": "In pack_e_corrected.js, R-items R01-R11 are in ascending order at the start, then R14-R17, R19-R20, R30-R32, R34-R36 appear, then R26-R27, R29, R37-R40 appear before R12-R13, R18, R21-R25, R28, R33 appear at the end. All 40 items are present; the non-sequential ordering may reflect insertion batch grouping.",
+    "source_description_consistency": "Each P1-E-R## item includes a SourceDescription field documenting which archived P1-EC-xxx or P1-ED-xxx clone rotation group it replaces (e.g., 'replacing archived P1-EC-001 through P1-EC-005 clone rotation group'). Only 9 of the 40 items reference P1-ED groups; the rest reference P1-EC groups."
+  }
+}

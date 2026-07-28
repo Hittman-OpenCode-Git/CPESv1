@@ -1,0 +1,154 @@
+{
+  "document": "SESSION203_MIGRATION_EXECUTION_PLAN",
+  "session": "S203",
+  "title": "Migration Execution Plan — Framework v1 → Framework v2",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION202_FRAMEWORK_V2_ARCHITECTURE.json (Phase plan)",
+  "purpose": "Defines the staged migration from Framework v1 to Framework v2 with specific session assignments, authorization gates, rollback criteria, success metrics, and the hybrid/shadow mode operational plan.",
+
+  "migration_stages": {
+    "stage_1_hybrid_mode": {
+      "label": "Hybrid Mode — Framework v1 + v2 Coexist",
+      "sessions": "S202-S207",
+      "description": "Framework v2 engines are built alongside v1. Both operate simultaneously. v2 produces artifacts that v1 boards consume. No v1 tool is turned off.",
+      "key_deliverables": ["Identity Engine (S204)", "Scan Engine (S204-S206)", "Readiness Engine (S205)", "Delta Engine (S206)", "CANONICAL_REGISTRY.json baseline (S204)", "DELTA_LEDGER.json baseline (S204)"],
+      "v1_status": "Fully operational. QID-only tools continue functioning via backward-compat shim.",
+      "v2_status": "Engines implemented, tested, producing artifacts. Artifacts consumed by v2 boards in parallel with v1 boards. v2 boards operate in advisory mode — recommendations not blocking.",
+      "exit_criteria": [
+        "All 5 identity engines operational with test suite passing",
+        "CANONICAL_REGISTRY.json contains all 2,500 items with stable identity_keys",
+        "Scan Engine produces stable results across 2 consecutive runs",
+        "Governance guard Rules 6-10 deployed and passing",
+        "Pre-flight pipeline operational: Gates -1 through 4 produce classifications"
+      ]
+    },
+    "stage_2_shadow_mode": {
+      "label": "Shadow Mode — v2 Runs Authoritatively, v1 in Parallel",
+      "sessions": "S208-S215",
+      "description": "Framework v2 runs as the primary certification pipeline. v1 boards continue in parallel for validation. All certifications must go through v2. v1 serves as the verification baseline — any divergence between v1 and v2 decisions triggers investigation.",
+      "key_deliverables": ["Board consolidation (S208-S210)", "Gate 4 calculation validation (S211-S213)", "Delta review activation (S214-S215)", "4-report model enforcement (S216)", "v1 board retirement schedule execution"],
+      "v1_status": "Operational in verification mode only. v1 boards retain read access but lose write authority. Certification decisions flow through v2 exclusively.",
+      "v2_status": "Authoritative certification pipeline. All boards (Registry, Quality, Governance, Certification) operational. Delta review skips 80% of items.",
+      "exit_criteria": [
+        "v2 certification decisions consistent with v1 on ≥95% of items",
+        "Readiness failure rate < 44.7% (50% improvement from v1 baseline)",
+        "Identity ambiguity eliminated (0 disputes, 0 phantoms)",
+        "Duplicate review cycles < 1.25 (50% improvement)",
+        "Reports per session ≤ 6",
+        "All 10 BF metrics ≥ 20% improved"
+      ]
+    },
+    "stage_3_framework_v2": {
+      "label": "Framework v2 — Full Operation",
+      "sessions": "S216-S222",
+      "description": "Framework v2 is the sole certification pipeline. v1 tools fully retired. All operations through compound-key identity. All 4 reports per session.",
+      "key_deliverables": ["Reporting reduction to ≤4 per session (S216-S218)", "Certification Board refocus from re-verification to governance-sufficiency (S219-S220)", "Continuous improvement cycle (S221-S222)", "S311 EW Factory standard mandatory for new content"],
+      "v1_status": "Fully retired. v1 boards, reports, and QID-only tools decommissioned. Legacy artifacts archived.",
+      "v2_status": "Sole operational pipeline. 5 boards. 4 reports/session. ≤7 agents/session. 3.8× throughput.",
+      "exit_criteria": [
+        "Readiness failure < 10%",
+        "Duplicate review < 1.3:1",
+        "Re-review rate < 25%",
+        "Sessions per certification wave ≤ 2",
+        "Reports per session ≤ 4 (hard cap)",
+        "Consumption rate > 90%",
+        "All BF metrics at v2 targets"
+      ]
+    },
+    "stage_4_legacy_retirement": {
+      "label": "Legacy Retirement — v1 Artifacts Archived",
+      "sessions": "S910 onward",
+      "description": "All v1 artifacts (reports, board outputs, QID-only tools) moved to reports/legacy/. No v1 code path remains in the active repository.",
+      "key_deliverables": ["~800 legacy reports moved to reports/legacy/", "v1 board modules archived", "QID-only backward-compat shim removed from Navigation Registry", "Governance guard Rules 9-10 are the sole enforcement path"]
+    }
+  },
+
+  "authorization_gates": {
+    "S830_phase_2_activation": {
+      "checkpoint": "End of Hybrid Mode → authorization to enter Shadow Mode",
+      "conditions": [
+        {"metric": "BF-004 Readiness failure", "threshold": "<44.7% (≥50% improvement)", "block": "HARD_BLOCK"},
+        {"metric": "BF-007 Identity ambiguity", "threshold": "ELIMINATED", "block": "HARD_BLOCK"},
+        {"metric": "BF-005 Duplicate review", "threshold": "<1.25 (≥50% improvement)", "block": "HARD_BLOCK"},
+        {"metric": "BF-003 Reports/session", "threshold": "≤6", "block": "HARD_BLOCK"},
+        {"metric": "BF-010 Consumption rate", "threshold": ">50%", "block": "SOFT_BLOCK"},
+        {"metric": "All BF metrics", "threshold": "≥20% improved from v1 baseline", "block": "HARD_BLOCK"}
+      ],
+      "authorization": "Session arbiter + Governance Board joint sign-off. All HARD_BLOCK conditions must PASS."
+    },
+    "S900_phase_3_activation": {
+      "checkpoint": "End of Shadow Mode → authorization to enter Framework v2",
+      "conditions": [
+        {"metric": "BF-004 Readiness failure", "threshold": "<10%", "block": "HARD_BLOCK"},
+        {"metric": "BF-005 Duplicate review", "threshold": "<1.3:1", "block": "HARD_BLOCK"},
+        {"metric": "BF-006 Re-review rate", "threshold": "<25%", "block": "HARD_BLOCK"},
+        {"metric": "BF-008 Sessions/wave", "threshold": "≤2", "block": "SOFT_BLOCK"}
+      ],
+      "authorization": "Session arbiter + Governance Board. All HARD_BLOCK conditions must PASS."
+    },
+    "S910_cap_enforcement": {
+      "checkpoint": "Hard cap enforcement",
+      "conditions": [
+        {"metric": "BF-003 Reports/session", "threshold": "≤4. HARD_BLOCK if >8.", "block": "HARD_BLOCK"},
+        {"metric": "BF-010 Consumption rate", "threshold": ">90%", "block": "HARD_BLOCK"}
+      ]
+    }
+  },
+
+  "rollback_criteria": {
+    "description": "Conditions that trigger immediate rollback to the previous migration stage.",
+    "triggers": [
+      "v2 certification decisions diverge from v1 on >10% of items (Shadow Mode)",
+      "Identity key instability: >5 items produce different identity_keys across 2 consecutive AM-1 extractions",
+      "Registry integrity failure: entry count ≠ grep count at any checkpoint",
+      "Pre-flight pipeline produces unstable readiness classifications across 2 consecutive runs",
+      "New defect class discovered that v1 would have caught but v2 did not (defect escape rate >5%)",
+      "Governance guard Rule 9 or Rule 10 produces HARD_BLOCK that cannot be resolved within 1 session"
+    ],
+    "rollback_procedure": [
+      "1. Halt all v2 engines and boards",
+      "2. Revert to v1 certification pipeline for all active items",
+      "3. Investigate root cause",
+      "4. Fix v2 engine + add regression test",
+      "5. Re-enter Hybrid Mode after fix validation",
+      "6. Re-run migration verification on all 2,500 items"
+    ]
+  },
+
+  "success_metrics": {
+    "measured_at": ["S830", "S900", "S910"],
+    "metrics": [
+      {"id": "SM-001", "metric": "Identity stability", "target": "0 identity_key changes across independent extractions"},
+      {"id": "SM-002", "metric": "Scan reproduction", "target": "Identical defect counts across 2 consecutive scan runs"},
+      {"id": "SM-003", "metric": "Registry integrity", "target": "Entry count = grep count at all checkpoints"},
+      {"id": "SM-004", "metric": "Readiness accuracy", "target": "0 Certified items with DL-008 after Gate 1 deployment"},
+      {"id": "SM-005", "metric": "Delta accuracy", "target": "0 false-positive content_hash changes (hash stable across sessions)"},
+      {"id": "SM-006", "metric": "Board consistency", "target": "≥95% v2-v1 certification decision consistency (Shadow Mode)"},
+      {"id": "SM-007", "metric": "Report reduction", "target": "S830: ≤6. S900: ≤5. S910: ≤4."},
+      {"id": "SM-008", "metric": "Throughput", "target": "S900: ≥8 items/session-hour. S910: ≥12 items/session-hour."}
+    ]
+  },
+
+  "shadow_mode_operational_plan": {
+    "description": "During Shadow Mode (S208-S215), both v1 and v2 operate simultaneously. v2 is authoritative for certification; v1 serves as verification baseline.",
+    "daily_operations": {
+      "t0": "Both pipelines initiate simultaneously. v2 pre-flight runs (~51s). v1 boards initialize.",
+      "t_mid": "v2 certification decisions flow to v1 boards for validation. v1 boards compare v2 decisions against their own assessments. Discrepancies logged as SHADOW_DISCREPANCY events.",
+      "t_end": "Governance Board reconciles v1-v2 discrepancies. Resolution documented. If discrepancies > 5% → escalate to governance."
+    },
+    "discrepancy_handling": {
+      "v1_certifies_v2_holds": "Investigate: v2 gate caught a defect v1 missed? Or v2 false positive? Resolution documented.",
+      "v2_certifies_v1_holds": "Investigate: v2 delta review inherited incorrectly? Or v1 was overly conservative? Resolution documented.",
+      "v1_v2_agree": "Default case (target ≥95%). No investigation needed. Certification decision accepted."
+    },
+    "exit_checklist": [
+      "v1-v2 agreement ≥95% for 3 consecutive certification waves",
+      "Zero identity-related discrepancies across 3 consecutive waves",
+      "Zero Delta Review false-positive inheritance across 3 consecutive waves",
+      "BF-004, BF-005, BF-007 all at v2 threshold or better",
+      "Governance Board sign-off for Shadow Mode exit"
+    ]
+  }
+}

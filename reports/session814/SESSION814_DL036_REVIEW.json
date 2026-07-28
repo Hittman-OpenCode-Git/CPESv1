@@ -1,0 +1,78 @@
+{
+  "session": "S814",
+  "board": "Agent Group I-L — DL-036 Investigation",
+  "condition": "C4 — Log DL-036 to DEFECT_LIBRARY.md",
+  "timestamp": "2026-07-27T11:35:00Z",
+  "status": "LOGGED",
+
+  "formalization": {
+    "defect_id": "DL-036",
+    "title": "Pipeline Artifact Reuse Gap (40-Item Readiness Routing Divergence)",
+    "class": "Process / Methodology",
+    "severity": "MEDIUM",
+    "defect_library_entry_location": "knowledge/DEFECT_LIBRARY.md, before Template for New Entries",
+    "status_in_library": "Open — root cause documented, correction pending (C2: S819-S820)"
+  },
+
+  "divergence_analysis": {
+    "tool_a": {
+      "name": "Readiness Scorer",
+      "session": "S322",
+      "file": "scripts/output/readiness_scoring.json",
+      "timestamp": "2026-07-27T13:46:35Z",
+      "total_blocked": 242,
+      "per_pack_blocked": {
+        "pack_a": 19, "pack_b": 0, "pack_c": 112, "pack_d": 111, "pack_e": 0
+      },
+      "pack_e_qid_regex": "Correctly matches P1-E-R## format",
+      "verdict": "Authoritative — matches ground truth (540/540 Pack E Certified)"
+    },
+    "tool_b": {
+      "name": "Candidate Engine",
+      "session": "SESSION850",
+      "file": "scripts/output/certification_candidates.json",
+      "timestamp": "2026-07-27T14:59:56Z",
+      "total_blocked": 282,
+      "per_pack_blocked": {
+        "pack_a": 19, "pack_b": 0, "pack_c": 112, "pack_d": 111, "pack_e": 40
+      },
+      "pack_e_qid_regex": "/^P1E-[A-F]-\\d{3}$/ — does NOT match P1-E-R##",
+      "verdict": "Inflated — 40 false positives from regex mismatch"
+    },
+    "delta": 40,
+    "divergence_isolated_to": "Pack E R-series items (P1-E-R01 through P1-E-R40)",
+    "authoritative_count": 242
+  },
+
+  "pack_e_r_series": {
+    "count": 40,
+    "qid_format": "P1-E-R##",
+    "insertion_session": "S808",
+    "question_state": "All Certified",
+    "learner_pool_impact": "None — items correctly Certified. Divergence is classification error only."
+  },
+
+  "root_cause": {
+    "primary": "Zero artifact reuse between pipeline stages. Each tool independently re-scans from source with its own parsing rules.",
+    "secondary": "Candidate Engine's Pack E QID regex not updated when 40 R-series items inserted via S808.",
+    "manifestation": "S204 Gate -1 identity validation first documented P1-E-R## regex gap. S812 repeatability review quantified the operational impact at 40 items."
+  },
+
+  "correction_path": {
+    "short_term": "Update Candidate Engine's Pack E QID regex to accept P1-E-R\\d{2}$ format",
+    "long_term_c2": "Connect pipeline stages via artifact consumption — Candidate Engine consumes Readiness Scorer output, eliminating regex-divergence class",
+    "target_sessions": "S819-S820"
+  },
+
+  "cross_references": {
+    "S812_repeatability_review": "Board A-F — 40-item divergence discovered",
+    "S813_condition_C2": "Pipeline artifact reuse enforcement",
+    "S204_gate_neg1": "P1-E-R## regex gap documented",
+    "S808": "Pack E R-series insertion (500→540 items)",
+    "readiness_scoring": "scripts/output/readiness_scoring.json (S322)",
+    "certification_candidates": "scripts/output/certification_candidates.json (SESSION850)"
+  },
+
+  "verdict": "PASS — DL-036 formalized. Root cause identified. Correction path defined.",
+  "recommendation": "APPROVE C4-B (DL-036 logged). Long-term fix pending C2 artifact reuse (S819-S820)."
+}

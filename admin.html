@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>May Admin — Investigation Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root {
+  --admin-header: #1a1a2e;
+  --tab-active: #e94560;
+  --tab-bg: #16213e;
+  --health-green: #27ae60;
+  --health-yellow: #f39c12;
+  --health-orange: #e67e22;
+  --health-red: #c0392b;
+  --badge-cert: #27ae60;
+  --badge-audit: #f39c12;
+  --badge-archived: #7f8c8d;
+  --badge-unprocessed: #95a5a6;
+  --severity-critical: #c0392b;
+  --severity-high: #e67e22;
+  --severity-medium: #f39c12;
+  --severity-low: #3498db;
+  --border-color: #2a2a4a;
+}
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg, #0f0f23); color: var(--text, #e0e0e0); }
+.admin-header {
+  background: var(--admin-header, #1a1a2e);
+  border-bottom: 2px solid var(--tab-active, #e94560);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.admin-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #e94560;
+  font-weight: 700;
+}
+.admin-header .subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-left: 12px;
+}
+.metrics-bar {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.metric-pill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-color, #2a2a4a);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.metric-pill .val { font-weight: 700; color: #fff; }
+.metric-pill .lbl { color: #888; margin-left: 4px; font-size: 11px; }
+.tab-nav {
+  display: flex;
+  background: var(--tab-bg, #16213e);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 24px;
+}
+.tab-btn {
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: #ccc; }
+.tab-btn.active {
+  color: var(--tab-active, #e94560);
+  border-bottom-color: var(--tab-active, #e94560);
+}
+.tab-content { display: none; padding: 24px; }
+.tab-content.active { display: block; }
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.controls input, .controls select {
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 13px;
+}
+.controls input { width: 280px; }
+.controls select { min-width: 140px; }
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.data-table th {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--border-color);
+  color: #888;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  user-select: none;
+}
+.data-table th:hover { color: #ccc; }
+.data-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.data-table tr { cursor: pointer; }
+.data-table tr:hover { background: rgba(255,255,255,0.03); }
+.data-table tr.expanded { background: rgba(255,255,255,0.05); }
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.badge-cert { background: rgba(39,174,96,0.2); color: #27ae60; }
+.badge-audit { background: rgba(243,156,18,0.2); color: #f39c12; }
+.badge-archived { background: rgba(127,140,141,0.2); color: #7f8c8d; }
+.badge-unprocessed { background: rgba(149,165,166,0.2); color: #95a5a6; }
+.health-bar {
+  display: inline-block;
+  height: 6px;
+  border-radius: 3px;
+  background: #333;
+  min-width: 60px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.health-bar-inner {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+.health-green .health-bar-inner { background: #27ae60; }
+.health-yellow .health-bar-inner { background: #f39c12; }
+.health-orange .health-bar-inner { background: #e67e22; }
+.health-red .health-bar-inner { background: #c0392b; }
+.health-healthy { color: #27ae60; }
+.health-fair { color: #f39c12; }
+.health-needs-attention { color: #e67e22; }
+.health-critical { color: #c0392b; }
+.severity-critical { color: #c0392b; font-weight: 700; }
+.severity-high { color: #e67e22; font-weight: 600; }
+.severity-medium { color: #f39c12; }
+.severity-low { color: #3498db; }
+.detail-card {
+  display: none;
+  margin: 12px 0;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+.detail-card.visible { display: block; }
+.detail-card h3 { margin: 0 0 12px 0; font-size: 15px; color: #e94560; }
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.detail-item { font-size: 12px; }
+.detail-item .key { color: #888; display: block; font-size: 10px; text-transform: uppercase; }
+.detail-item .val { color: #e0e0e0; font-weight: 500; }
+.linked-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  font-size: 12px;
+}
+.linked-list li {
+  padding: 3px 0;
+  color: #888;
+}
+.linked-list li a {
+  color: var(--tab-active);
+  cursor: pointer;
+  text-decoration: none;
+}
+.linked-list li a:hover { text-decoration: underline; }
+.summary-box {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+.summary-box strong { color: #e94560; }
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 14px;
+}
+.count-badge {
+  display: inline-block;
+  background: rgba(233,69,96,0.15);
+  color: #e94560;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 11px;
+  margin-left: 6px;
+}
+.defect-tag {
+  display: inline-block;
+  background: rgba(192,57,43,0.2);
+  color: #e74c3c;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 1px;
+}
+.stage-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.stage-dot.created { background: #3498db; }
+.stage-dot.resolved { background: #27ae60; }
+.stage-dot.open { background: #f39c12; }
+.stage-dot.closed { background: #7f8c8d; }
+</style>
+</head>
+<body>
+
+<header class="admin-header">
+  <div style="display:flex;align-items:center;">
+    <h1>May Admin</h1>
+    <span class="subtitle">Investigation Dashboard — Phase 1</span>
+  </div>
+  <div class="metrics-bar" id="metricsBar">Loading…</div>
+</header>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="questions">Questions</button>
+  <button class="tab-btn" data-tab="challenges">Challenges</button>
+  <button class="tab-btn" data-tab="sessions">Sessions</button>
+  <button class="tab-btn" data-tab="recommendations">Recommendations</button>
+</nav>
+
+<!-- Questions Tab -->
+<section class="tab-content active" id="tab-questions">
+  <div class="controls">
+    <input type="text" id="qSearch" placeholder="Search by QID, topic, or section…" oninput="renderQuestions()">
+    <select id="qSectionFilter" onchange="renderQuestions()">
+      <option value="">All Sections</option>
+      <option value="A">A — External Financial Reporting</option>
+      <option value="B">B — Planning, Budgeting & Forecasting</option>
+      <option value="C">C — Performance Management</option>
+      <option value="D">D — Cost Management</option>
+      <option value="E">E — Internal Controls</option>
+      <option value="F">F — Technology & Analytics</option>
+    </select>
+    <select id="qHealthFilter" onchange="renderQuestions()">
+      <option value="">All Health Tiers</option>
+      <option value="CRITICAL">CRITICAL</option>
+      <option value="NEEDS ATTENTION">NEEDS ATTENTION</option>
+      <option value="FAIR">FAIR</option>
+      <option value="HEALTHY">HEALTHY</option>
+    </select>
+    <span style="color:#888;font-size:12px;" id="qCount"></span>
+  </div>
+  <div style="max-height:70vh;overflow-y:auto;">
+    <table class="data-table" id="qTable">
+      <thead>
+        <tr>
+          <th data-sort="qid">QID</th>
+          <th data-sort="section">Sec</th>
+          <th data-sort="topic">Topic</th>
+          <th data-sort="state">State</th>
+          <th data-sort="health">Health</th>
+          <th data-sort="defects">Defects</th>
+          <th>Investigations</th>
+        </tr>
+      </thead>
+      <tbody id="qBody"></tbody>
+    </table>
+  </div>
+  <div class="detail-card" id="qDetail"></div>
+</section>
+
+<!-- Challenges Tab -->
+<section class="tab-content" id="tab-challenges">
+  <div class="controls">
+    <input type="text" id="chSearch" placeholder="Search challenges…" oninput="renderChallenges()">
+    <select id="chStatusFilter" onchange="renderChallenges()">
+      <option value="">All Statuses</option>
+      <option value="OPEN">OPEN</option>
+      <option value="INVESTIGATING">INVESTIGATING</option>
+      <option value="RESOLVED">RESOLVED</option>
+      <option value="CLOSED">CLOSED</option>
+      <option value="DISMISSED">DISMISSED</option>
+    </select>
+    <span style="color:#888;font-size:12px;" id="chCount"></span>
+  </div>
+  <div style="max-height:70vh;overflow-y:auto;">
+    <table class="data-table" id="chTable">
+      <thead>
+        <tr>
+          <th>Challenge ID</th>
+          <th>Type</th>
+          <th>Question</th>
+          <th>Triage</th>
+          <th>Status</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody id="chBody"></tbody>
+    </table>
+  </div>
+  <div class="detail-card" id="chDetail"></div>
+</section>
+
+<!-- Sessions Tab -->
+<section class="tab-content" id="tab-sessions">
+  <div class="controls">
+    <input type="text" id="sSearch" placeholder="Search sessions…" oninput="renderSessions()">
+    <span style="color:#888;font-size:12px;" id="sCount"></span>
+  </div>
+  <div style="max-height:70vh;overflow-y:auto;">
+    <table class="data-table" id="sTable">
+      <thead>
+        <tr>
+          <th>Session</th>
+          <th>Title</th>
+          <th>Mode</th>
+          <th>Questions</th>
+          <th>Certified %</th>
+          <th>Outcomes</th>
+        </tr>
+      </thead>
+      <tbody id="sBody"></tbody>
+    </table>
+  </div>
+  <div class="detail-card" id="sDetail"></div>
+</section>
+
+<!-- Recommendations Tab -->
+<section class="tab-content" id="tab-recommendations">
+  <div class="controls">
+    <input type="text" id="rSearch" placeholder="Search recommendations…" oninput="renderRecommendations()">
+    <span style="color:#888;font-size:12px;" id="rCount"></span>
+  </div>
+  <div style="max-height:70vh;overflow-y:auto;">
+    <table class="data-table" id="rTable">
+      <thead>
+        <tr>
+          <th>REC-ID</th>
+          <th>Type</th>
+          <th>Severity</th>
+          <th>Status</th>
+          <th>Target QIDs</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody id="rBody"></tbody>
+    </table>
+  </div>
+  <div class="detail-card" id="rDetail"></div>
+</section>
+
+<script src="scripts/output/admin_dashboard_data.js"></script>
+<script>
+(function() {
+  'use strict';
+  var D = window.__ADMIN_DATA__;
+  if (!D) { document.body.innerHTML = '<div style="padding:40px;color:#e74c3c;">ERROR: admin_dashboard_data.js not loaded. Run: node scripts/admin_service_layer.js --build-dashboard</div>'; return; }
+
+  // ── Tab navigation ──────────────────────────────────────────
+  document.querySelectorAll('.tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+      btn.classList.add('active');
+      var tabId = 'tab-' + btn.dataset.tab;
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+
+  // ── Metrics bar ─────────────────────────────────────────────
+  function updateMetricsBar() {
+    var m = D.metadata;
+    var h = D.healthDistribution;
+    document.getElementById('metricsBar').innerHTML =
+      '<div class="metric-pill"><span class="val">' + m.certifiedCount + '</span><span class="lbl">Certified</span></div>' +
+      '<div class="metric-pill"><span class="val">' + m.totalQids + '</span><span class="lbl">Total</span></div>' +
+      '<div class="metric-pill"><span class="val">' + (m.certifiedRatio * 100).toFixed(1) + '%</span><span class="lbl">Ratio</span></div>' +
+      '<div class="metric-pill"><span class="val">' + h.mean + '</span><span class="lbl">Health</span></div>' +
+      '<div class="metric-pill"><span class="val">' + D.investigationSummary.total + '</span><span class="lbl">Investigations</span></div>' +
+      '<div class="metric-pill"><span class="val">' + Object.keys(D.challenges).length + '</span><span class="lbl">Challenges</span></div>' +
+      '<div class="metric-pill"><span class="val">' + m.governanceGuardStatus + '</span><span class="lbl">Governance</span></div>';
+  }
+
+  // ── Helpers ──────────────────────────────────────────────────
+  function stateBadge(state) {
+    var cls = 'badge-archived';
+    if (state === 'Certified') cls = 'badge-cert';
+    else if (state === 'In Audit') cls = 'badge-audit';
+    else if (state === 'Unprocessed') cls = 'badge-unprocessed';
+    return '<span class="badge ' + cls + '">' + (state || '?') + '</span>';
+  }
+
+  function healthDisplay(score, tier) {
+    if (score == null) return '<span style="color:#666;">N/A</span>';
+    var pct = score + '%';
+    var cls = 'health-green';
+    if (tier === 'FAIR') cls = 'health-yellow';
+    else if (tier === 'NEEDS ATTENTION') cls = 'health-orange';
+    else if (tier === 'CRITICAL') cls = 'health-red';
+    return '<span class="health-bar ' + cls + '"><span class="health-bar-inner" style="width:' + pct + ';"></span></span>' +
+      '<span class="health-' + tier.toLowerCase().replace(' ','-') + '">' + score + '</span>';
+  }
+
+  function severityCls(sev) {
+    if (sev === 'CRITICAL') return 'severity-critical';
+    if (sev === 'HIGH') return 'severity-high';
+    if (sev === 'MEDIUM') return 'severity-medium';
+    if (sev === 'LOW') return 'severity-low';
+    return '';
+  }
+
+  function defectTags(codes) {
+    if (!codes || !codes.length) return '<span style="color:#666;">—</span>';
+    return codes.map(function(c) { return '<span class="defect-tag">' + c + '</span>'; }).join('');
+  }
+
+  // ── Questions ────────────────────────────────────────────────
+  var qSortField = 'health';
+  var qSortAsc = true;
+
+  function getQuestionList() {
+    var list = [];
+    var idx = D.questionIndex;
+    for (var qid in idx) { list.push(idx[qid]); }
+    list.sort(function(a, b) {
+      var va, vb;
+      if (qSortField === 'health') { va = a.healthScore || 100; vb = b.healthScore || 100; }
+      else if (qSortField === 'qid') { va = a.questionId; vb = b.questionId; }
+      else if (qSortField === 'section') { va = a.section; vb = b.section; }
+      else if (qSortField === 'topic') { va = a.topic; vb = b.topic; }
+      else if (qSortField === 'state') { va = a.questionState; vb = b.questionState; }
+      else if (qSortField === 'defects') { va = (a.activeDefectCodes||[]).length; vb = (b.activeDefectCodes||[]).length; }
+      else { va = a.healthScore || 100; vb = b.healthScore || 100; }
+      if (va < vb) return qSortAsc ? -1 : 1;
+      if (va > vb) return qSortAsc ? 1 : -1;
+      return 0;
+    });
+    return list;
+  }
+
+  document.querySelectorAll('#qTable th[data-sort]').forEach(function(th) {
+    th.addEventListener('click', function() {
+      var f = th.dataset.sort;
+      if (qSortField === f) { qSortAsc = !qSortAsc; }
+      else { qSortField = f; qSortAsc = (f === 'health'); }
+      renderQuestions();
+    });
+  });
+
+  window.renderQuestions = function() {
+    var search = (document.getElementById('qSearch').value || '').toLowerCase();
+    var secFilter = document.getElementById('qSectionFilter').value;
+    var healthFilter = document.getElementById('qHealthFilter').value;
+    var list = getQuestionList();
+    var filtered = list.filter(function(q) {
+      if (secFilter && q.section !== secFilter) return false;
+      if (healthFilter && q.healthTier !== healthFilter) return false;
+      if (search) {
+        var qid = q.questionId.toLowerCase();
+        var topic = (q.topic || '').toLowerCase();
+        if (qid.indexOf(search) === -1 && topic.indexOf(search) === -1) return false;
+      }
+      return true;
+    });
+    document.getElementById('qCount').textContent = filtered.length + ' / ' + list.length + ' questions';
+
+    var tbody = document.getElementById('qBody');
+    tbody.innerHTML = filtered.map(function(q) {
+      return '<tr onclick="showQuestionDetail(\'' + q.questionId + '\')" id="qrow-' + q.questionId + '">' +
+        '<td><strong>' + q.questionId + '</strong></td>' +
+        '<td>' + q.section + '</td>' +
+        '<td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + (q.topic||'') + '">' + (q.topic||'—') + '</td>' +
+        '<td>' + stateBadge(q.questionState) + '</td>' +
+        '<td>' + healthDisplay(q.healthScore, q.healthTier) + '</td>' +
+        '<td>' + defectTags(q.activeDefectCodes) + '</td>' +
+        '<td>' + (q.investigationCount > 0 ? '<span class="severity-high">' + q.investigationCount + '</span>' : '—') + '</td>' +
+        '</tr>';
+    }).join('');
+  };
+
+  window.showQuestionDetail = function(qid) {
+    var q = D.questionIndex[qid];
+    if (!q) return;
+    var invs = D.investigations;
+    var linkedInvs = [];
+    for (var iv in invs) {
+      if (invs[iv].linkedQids && invs[iv].linkedQids.indexOf(qid) >= 0) linkedInvs.push(invs[iv]);
+    }
+    var chs = D.challenges;
+    var linkedChs = [];
+    for (var ch in chs) {
+      if (chs[ch].questionId === qid) linkedChs.push(chs[ch]);
+    }
+    var detail = document.getElementById('qDetail');
+    detail.innerHTML =
+      '<h3>' + qid + ' — ' + (q.sectionName || '') + '</h3>' +
+      '<div class="detail-grid">' +
+      '<div class="detail-item"><span class="key">Pack</span><span class="val">' + q.pack + '</span></div>' +
+      '<div class="detail-item"><span class="key">Section</span><span class="val">' + q.section + ' — ' + (q.sectionName||'') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Difficulty</span><span class="val">' + q.difficulty + ' (' + (q.difficultyScore||'?') + ')</span></div>' +
+      '<div class="detail-item"><span class="key">Cognitive Level</span><span class="val">' + (q.cognitiveLevel||'?') + '</span></div>' +
+      '<div class="detail-item"><span class="key">State</span><span class="val">' + stateBadge(q.questionState) + '</span></div>' +
+      '<div class="detail-item"><span class="key">Health</span><span class="val">' + healthDisplay(q.healthScore, q.healthTier) + '</span></div>' +
+      '<div class="detail-item"><span class="key">Defects</span><span class="val">' + defectTags(q.activeDefectCodes) + '</span></div>' +
+      '<div class="detail-item"><span class="key">Investigations</span><span class="val">' + linkedInvs.length + '</span></div>' +
+      '<div class="detail-item"><span class="key">Challenges</span><span class="val">' + (q.challengeCount||0) + '</span></div>' +
+      '<div class="detail-item"><span class="key">Recommendations</span><span class="val">' + (q.recommendationCount||0) + '</span></div>' +
+      '</div>' +
+      (linkedChs.length > 0 ? '<div style="margin-top:8px;font-size:12px;"><strong>Linked Challenges:</strong>' +
+        linkedChs.map(function(c) { return '<div style="margin:2px 0;">ID: <span class="severity-high">' + c.challengeId + '</span> | Type: ' + c.type + ' | Status: ' + c.status + ' | Triage: ' + (c.triageCategory||'Untriaged') + '</div>'; }).join('') + '</div>' : '') +
+      (linkedInvs.length > 0 ? '<div style="margin-top:8px;font-size:12px;"><strong>Linked Investigations:</strong>' +
+        linkedInvs.map(function(i) { return '<div style="margin:2px 0;">ID: <span class="severity-high">' + i.investigationId + '</span> | Type: ' + i.type + ' | Status: ' + i.status + '</div>'; }).join('') + '</div>' : '') +
+      '<div style="margin-top:12px;font-size:11px;color:#888;">CLI: <code>node scripts/admin_service_layer.js --lookup=QID:' + qid + '</code></div>';
+    detail.classList.add('visible');
+  };
+
+  // ── Challenges ──────────────────────────────────────────────
+  window.renderChallenges = function() {
+    var search = (document.getElementById('chSearch').value || '').toLowerCase();
+    var statusFilter = document.getElementById('chStatusFilter').value;
+    var list = [];
+    var chs = D.challenges;
+    for (var ch in chs) { list.push(chs[ch]); }
+    var filtered = list.filter(function(c) {
+      if (statusFilter && c.status !== statusFilter) return false;
+      if (search) {
+        if (c.challengeId.toLowerCase().indexOf(search) === -1 && (c.questionId||'').toLowerCase().indexOf(search) === -1 && (c.type||'').toLowerCase().indexOf(search) === -1) return false;
+      }
+      return true;
+    });
+    document.getElementById('chCount').textContent = filtered.length + ' / ' + list.length + ' challenges';
+    document.getElementById('chBody').innerHTML = filtered.map(function(c) {
+      return '<tr onclick="showChallengeDetail(\'' + c.challengeId + '\')" id="crow-' + c.challengeId + '">' +
+        '<td><strong>' + c.challengeId + '</strong></td>' +
+        '<td>' + (c.type||'?') + '</td>' +
+        '<td style="color:#e94560;">' + (c.questionId||'?') + '</td>' +
+        '<td>' + (c.triageCategory || '<span style="color:#888;">Untriaged</span>') + '</td>' +
+        '<td>' + stateBadge(c.status) + '</td>' +
+        '<td>' + (c.priorityScore ? '<span class="' + severityCls(c.priorityScore > 70 ? 'CRITICAL' : c.priorityScore > 40 ? 'HIGH' : 'MEDIUM') + '">' + c.priorityScore + '</span>' : '—') + '</td>' +
+        '</tr>';
+    }).join('');
+  };
+
+  window.showChallengeDetail = function(cid) {
+    var c = D.challenges[cid];
+    if (!c) return;
+    var q = c.questionId ? D.questionIndex[c.questionId] : null;
+    var detail = document.getElementById('chDetail');
+    detail.innerHTML =
+      '<h3>' + cid + ' — ' + (c.type||'?') + '</h3>' +
+      '<div class="detail-grid">' +
+      '<div class="detail-item"><span class="key">Question</span><span class="val" style="color:#e94560;cursor:pointer;" onclick="showQuestionDetail(\'' + (c.questionId||'') + '\');document.querySelector(\'.tab-btn[data-tab=questions]\').click();">' + (c.questionId||'?') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Status</span><span class="val">' + stateBadge(c.status) + '</span></div>' +
+      '<div class="detail-item"><span class="key">Triage</span><span class="val">' + (c.triageCategory||'Untriaged') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Priority</span><span class="val">' + (c.priorityScore||'—') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Confidence</span><span class="val">' + (c.confidence != null ? Math.round(c.confidence * 100) + '%' : '—') + '</span></div>' +
+      '</div>' +
+      '<div style="margin-top:12px;font-size:12px;">' +
+      '<strong>Linked Investigations:</strong> ' + (c.linkedInvestigations && c.linkedInvestigations.length ? c.linkedInvestigations.join(', ') : 'None') + '<br>' +
+      '<strong>Linked Recommendations:</strong> ' + (c.linkedRecommendations && c.linkedRecommendations.length ? c.linkedRecommendations.join(', ') : 'None') + '<br>' +
+      '<strong>Linked Sessions:</strong> ' + (c.linkedSessions && c.linkedSessions.length ? c.linkedSessions.join(', ') : 'None') +
+      '</div>' +
+      (q ? '<div style="margin-top:12px;font-size:12px;"><strong>Question Health:</strong> ' + healthDisplay(q.healthScore, q.healthTier) + ' | Defects: ' + defectTags(q.activeDefectCodes) + '</div>' : '');
+    detail.classList.add('visible');
+  };
+
+  // ── Sessions ────────────────────────────────────────────────
+  window.renderSessions = function() {
+    var search = (document.getElementById('sSearch').value || '').toLowerCase();
+    var list = [];
+    var sess = D.sessions;
+    for (var s in sess) { list.push(sess[s]); }
+    var filtered = list.filter(function(s) {
+      if (search) {
+        if (s.sessionId.toLowerCase().indexOf(search) === -1 && (s.title||'').toLowerCase().indexOf(search) === -1 && (s.series||'').toLowerCase().indexOf(search) === -1) return false;
+      }
+      return true;
+    });
+    document.getElementById('sCount').textContent = filtered.length + ' / ' + list.length + ' sessions';
+    document.getElementById('sBody').innerHTML = filtered.map(function(s) {
+      var certPct = (s.certifiedRatio * 100).toFixed(1);
+      return '<tr onclick="showSessionDetail(\'' + s.sessionId + '\')">' +
+        '<td><strong>' + s.sessionId + '</strong></td>' +
+        '<td style="max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="' + (s.title||'') + '">' + (s.title||'—') + '</td>' +
+        '<td>' + (s.mode||'—') + '</td>' +
+        '<td>' + (s.totalQuestions||0) + '</td>' +
+        '<td>' + certPct + '%</td>' +
+        '<td>' +
+          (s.challengeIds && s.challengeIds.length ? '<span style="color:#e94560;">' + s.challengeIds.length + ' ch</span> ' : '') +
+          (s.recommendationIds && s.recommendationIds.length ? '<span style="color:#f39c12;">' + s.recommendationIds.length + ' rec</span> ' : '') +
+          (s.investigationIds && s.investigationIds.length ? '<span style="color:#e67e22;">' + s.investigationIds.length + ' inv</span>' : '') +
+        '</td>' +
+        '</tr>';
+    }).join('');
+  };
+
+  window.showSessionDetail = function(sid) {
+    var s = D.sessions[sid];
+    if (!s) return;
+    var detail = document.getElementById('sDetail');
+    detail.innerHTML =
+      '<h3>Session ' + sid + ' — ' + (s.title||'No title') + '</h3>' +
+      '<div class="detail-grid">' +
+      '<div class="detail-item"><span class="key">Series</span><span class="val">' + (s.series||'—') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Date</span><span class="val">' + (s.date||'—') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Mode</span><span class="val">' + (s.mode||'—') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Questions</span><span class="val">' + s.totalQuestions + ' (' + s.certifiedCount + ' certified, ' + (s.certifiedRatio*100).toFixed(1) + '%)</span></div>' +
+      '</div>' +
+      '<div style="margin-top:12px;font-size:12px;">' +
+      '<strong>QIDs (' + (s.uniqueQids||[]).length + '):</strong> ' + (s.uniqueQids||[]).slice(0, 30).join(', ') + ((s.uniqueQids||[]).length > 30 ? ' …' : '') + '<br>' +
+      (s.challengeIds && s.challengeIds.length ? '<strong>Challenges:</strong> ' + s.challengeIds.join(', ') + '<br>' : '') +
+      (s.recommendationIds && s.recommendationIds.length ? '<strong>Recommendations:</strong> ' + s.recommendationIds.join(', ') + '<br>' : '') +
+      (s.investigationIds && s.investigationIds.length ? '<strong>Investigations:</strong> ' + s.investigationIds.join(', ') + '<br>' : '') +
+      '</div>';
+    detail.classList.add('visible');
+  };
+
+  // ── Recommendations ──────────────────────────────────────────
+  window.renderRecommendations = function() {
+    var search = (document.getElementById('rSearch').value || '').toLowerCase();
+    var list = [];
+    var recs = D.recommendations;
+    for (var r in recs) { list.push(recs[r]); }
+    var filtered = list.filter(function(r) {
+      if (search) {
+        if (r.recommendationId.toLowerCase().indexOf(search) === -1 && (r.type||'').toLowerCase().indexOf(search) === -1 && (r.sourceScan||'').toLowerCase().indexOf(search) === -1) return false;
+      }
+      return true;
+    });
+    document.getElementById('rCount').textContent = filtered.length + ' / ' + list.length + ' recommendations';
+    document.getElementById('rBody').innerHTML = filtered.map(function(r) {
+      return '<tr onclick="showRecDetail(\'' + r.recommendationId + '\')">' +
+        '<td><strong>' + r.recommendationId + '</strong></td>' +
+        '<td>' + (r.type||'?') + '</td>' +
+        '<td class="' + severityCls(r.severity) + '">' + (r.severity||'?') + '</td>' +
+        '<td>' + stateBadge(r.status) + '</td>' +
+        '<td>' + (r.count||0) + ' QIDs</td>' +
+        '<td>' + (r.sourceScan||'?') + '</td>' +
+        '</tr>';
+    }).join('');
+  };
+
+  window.showRecDetail = function(rid) {
+    var r = D.recommendations[rid];
+    if (!r) return;
+    var detail = document.getElementById('rDetail');
+    var qids = r.questionIds || [];
+    detail.innerHTML =
+      '<h3>' + rid + ' — ' + (r.type||'?') + '</h3>' +
+      '<div class="detail-grid">' +
+      '<div class="detail-item"><span class="key">Type</span><span class="val">' + (r.type||'?') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Severity</span><span class="val ' + severityCls(r.severity) + '">' + (r.severity||'?') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Status</span><span class="val">' + stateBadge(r.status) + '</span></div>' +
+      '<div class="detail-item"><span class="key">Target QIDs</span><span class="val">' + (r.count||0) + '</span></div>' +
+      '<div class="detail-item"><span class="key">Source Scan</span><span class="val">' + (r.sourceScan||'?') + '</span></div>' +
+      '<div class="detail-item"><span class="key">Created</span><span class="val">' + (r.createdSession||'?') + ' / ' + (r.createdTimestamp||'') + '</span></div>' +
+      '</div>' +
+      '<div style="margin-top:12px;">' +
+      '<div style="font-size:12px;color:#888;margin-bottom:4px;">Description:</div>' +
+      '<div style="font-size:13px;">' + (r.description||'—') + '</div>' +
+      '</div>' +
+      (qids.length > 0 ? '<div style="margin-top:12px;font-size:12px;"><strong>QIDs:</strong> ' + qids.slice(0, 30).join(', ') + (qids.length > 30 ? ' …' : '') + '</div>' : '') +
+      (r.targetSession ? '<div style="margin-top:8px;font-size:12px;"><strong>Target Session:</strong> ' + r.targetSession + '</div>' : '') +
+      (r.resolutionSession ? '<div style="margin-top:8px;font-size:12px;"><strong>Resolved:</strong> ' + r.resolutionSession + ' at ' + (r.resolutionTimestamp||'?') + '</div>' : '') +
+      (r.linkedInvestigations && r.linkedInvestigations.length ? '<div style="margin-top:8px;font-size:12px;"><strong>Linked Investigations:</strong> ' + r.linkedInvestigations.join(', ') + '</div>' : '');
+    detail.classList.add('visible');
+  };
+
+  // ── Initial render ──────────────────────────────────────────
+  updateMetricsBar();
+  renderQuestions();
+  renderChallenges();
+  renderSessions();
+  renderRecommendations();
+})();
+</script>
+
+</body>
+</html>

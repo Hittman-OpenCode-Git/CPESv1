@@ -1,0 +1,189 @@
+{
+  "document": "SESSION350_IDENTITY_SCORECARD",
+  "session": "S350",
+  "title": "Identity Validation Scorecard — Resolution, Targeting, and S320-Class Prevention",
+  "board": "D — Identity Validation Metrics",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Scorecard — Identity Tracking",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION321_IDENTITY_SCHEMA_V2.json; SESSION201_IDENTITY_ARCHITECTURE.json; scripts/output/identity_validation_report.json (S322 operational snapshot)",
+  "purpose": "Measure identity resolution effectiveness. The v1 QID-only model caused DL-029 phantom defects (~75% false-positive rate), S320 wrong-variant remediation, and ~12 phantom QIDs. The v2 compound-key model must eliminate identity ambiguity entirely — validated through these metrics.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "identity_model": {
+    "v1_model": {
+      "label": "Framework v1 — QID-Only Identity",
+      "description": "Items identified solely by QuestionID string (e.g., 'P1-AD-001'). This model fails because one QID represents a template group, not a unique item. Rotations within the group (A→B→C→D→A) have different CorrectChoice values but share the same QID.",
+      "failures": [
+        {"failure": "DL-029 Phantom Defects", "impact": "Forward-scan tools used QID to locate CC — in Pack B, CC appears BEFORE QID, producing 100% false-positive defect reports. 257 Pack B DL-008 false positives. ~8 sessions wasted on phantom investigation."},
+        {"failure": "S320 Wrong-Variant Remediation", "impact": "S320 attempted to remediate template rotation items but targeted wrong variants because QID-first-match doesn't guarantee matching the canonical seed."},
+        {"failure": "Cross-Pack Ambiguity", "impact": "Same QID suffix (e.g., 'A.001') appears across Packs A, C, D. QID-only tools cannot distinguish which pack's item is being referenced."},
+        {"failure": "Phantom QIDs", "impact": "~12 phantom QIDs documented — items that don't actually exist but were referenced in defect reports due to parsing errors."},
+        {"failure": "Wrong-CC Attribution", "impact": "DL-016 metadata offset: ExplanationWrong fields describe the wrong choice because the choice-to-explanation mapping shifted by +1 in certain blocks."}
+      ],
+      "disputes": 8,
+      "phantoms": "~12"
+    },
+    "v2_model": {
+      "label": "Framework v2 — 6-Field Compound Key Identity",
+      "authority": "SESSION321_IDENTITY_SCHEMA_V2.json",
+      "fields": [
+        {"field": "QID", "type": "String", "purpose": "Base template group identifier. Not globally unique."},
+        {"field": "CorrectChoice", "type": "String (A|B|C|D)", "purpose": "Distinguishes rotation positions within a template group."},
+        {"field": "EWPattern", "type": "4-bit binary (e.g., '0110')", "purpose": "Binary fingerprint of distractor slot emptiness. Most reliable structural identifier."},
+        {"field": "TemplateFamily", "type": "String", "purpose": "Rotation group identifier — items sharing same stem skeleton + choice texts."},
+        {"field": "FilePath", "type": "String", "purpose": "Source pack file path. Resolves cross-pack QID collisions."},
+        {"field": "VersionID", "type": "String", "purpose": "Content hash truncated. Tracks revision history."}
+      ],
+      "extraction_methodology": "AM-1 Within-Object Function Constructor Parse ONLY. Forward-scan from QID is FORBIDDEN (produces DL-029 artifacts). Governance guard Rules 9-10 enforce at HARD_BLOCK level (FM-001 through FM-008 forbidden methodologies).",
+      "key_format": "QID|CC|EWP|TF|FP|VID — pipe-delimited compound string"
+    }
+  },
+
+  "identity_metrics": {
+    "IM-001_identity_resolution_rate": {
+      "metric": "Identity Resolution Rate",
+      "description": "Percentage of items for which a valid, unique compound key can be computed from within-object extracted fields.",
+      "formula": "resolution_rate = items_with_valid_compound_key / total_items × 100",
+      "valid_compound_key_conditions": [
+        "All 6 fields present and non-null",
+        "QID matches pack-specific regex",
+        "CorrectChoice ∈ {A, B, C, D}",
+        "EWPattern is a valid 4-bit binary string where CC bit = 0",
+        "TemplateFamily resolves to an existing family or is classified as UNGROUPED",
+        "FilePath is a valid pack file path",
+        "VersionID is a valid content hash prefix"
+      ],
+      "v1_baseline": "0% (compound key did not exist)",
+      "v2_target": "100% (every item must have a valid compound key)",
+      "current_s322": "2,539 of 2,540 (99.96%) — 1 item in Pack D with empty CorrectChoice could not resolve"
+    },
+    "IM-002_variant_resolution_rate": {
+      "metric": "Variant Resolution Rate",
+      "description": "Percentage of rotation-group variants correctly disambiguated. Two items with same QID but different CC should be recognized as distinct items, not the same item.",
+      "formula": "variant_resolution_rate = correctly_disambiguated_variants / total_rotation_variants × 100",
+      "correct_disambiguation": "Compound key mechanism: QID+CC uniquely identifies every rotation variant within a TemplateFamily. Two items with same QID+CC across different files are still distinct via FilePath field.",
+      "v1_baseline": "~0% (QID-only model treated all variants as single item — the root cause of S320 wrong-variant remediation)",
+      "v2_target": "100% (every rotation variant must have a unique compound key)",
+      "current_s322": "Not yet measured — requires TemplateFamily computation on all 2,540 items"
+    },
+    "IM-003_targeting_accuracy": {
+      "metric": "Targeting Accuracy",
+      "description": "Percentage of remediation/defect operations that target the correct item. In v1, DL-029 false positives meant agents were 'fixing' the wrong item's CC because QID-forward-scan grabbed the neighbor's value.",
+      "formula": "targeting_accuracy = correctly_targeted_operations / total_operations × 100",
+      "verification_method": "Post-operation: verify the item's compound key matches the target key. Any mismatch = targeting failure.",
+      "v1_baseline": "~25% (DL-029 ~75% false-positive rate on Pack B CC-before-QID scans)",
+      "v2_target": "100% (compound key + AM-1 within-object extraction eliminates forward-scan targeting errors)",
+      "protections": [
+        "FM-001: Forward-scan from QID FORBIDDEN — governance guard Rule 9 HARD_BLOCK",
+        "FM-004: QID-only resolution FORBIDDEN — governance guard Rule 10 HARD_BLOCK",
+        "AM-1: Function Constructor Parse is the ONLY approved extraction method",
+        "Gate -1 GV-N1-08: Pack B CC extraction verified — CC field location validated before any downstream operation"
+      ]
+    },
+    "IM-004_false_identification_rate": {
+      "metric": "False Identification Rate",
+      "description": "Rate at which identity operations misidentify an item — e.g., reading QID 'P1-AD-001' but extracting CC from a different object in the file (forward-scan artifact).",
+      "formula": "false_id_rate = operations_with_misidentified_item / total_identity_operations × 100",
+      "v1_baseline": "~75% on Pack B scans (DL-029: CC-before-QID ordering produced 100% false positives on all Pack B forward-scan tools)",
+      "v2_target": "0% (AM-1 within-object extraction guarantees CC belongs to its co-resident QID)",
+      "current_s322": "0 false identifications from AM-1 parse — all 2,539 passing items have internally consistent QID+CC pairing"
+    },
+    "IM-005_cross_pack_collision_rate": {
+      "metric": "Cross-Pack QID Collision Rate",
+      "description": "Rate at which QID-only identity would confuse items from different packs. The compound key resolves this via FilePath field.",
+      "formula": "collision_rate = cross_pack_duplicate_qids / total_unique_qids × 100",
+      "known_collisions": [
+        "Suffix 'A.001' through 'A.100' appear in Packs A, C, D",
+        "Suffix 'B.001' through 'B.100' appear in Packs A, C, D",
+        "Suffix 'E.001' through 'E.100' appear in Packs A, C, D"
+      ],
+      "v1_baseline": "UNMEASURED (QID-only tools had no mechanism to detect or resolve collisions)",
+      "v2_target": "0 unidentified collisions — FilePath field in compound key eliminates all ambiguity"
+    },
+    "IM-006_compound_key_stability": {
+      "metric": "Compound Key Stability",
+      "description": "Percentage of compound keys that remain stable (unchanged) across independent AM-1 passes on the same pack file. Key instability indicates non-deterministic extraction.",
+      "formula": "stability_rate = items_with_identical_key_across_passes / total_items × 100",
+      "v2_target": "100% (same pack file, same AM-1 parse, same compound key — every time)",
+      "verification": "Run identity_validator.js twice on the same pack files. Compare compound keys. Any difference = extraction bug."
+    }
+  },
+
+  "gate_neg1_checks": {
+    "authority": "SESSION321_GATE_NEG1_SPEC.json",
+    "description": "Gate -1 is the identity validation gate in the Framework v2 pre-flight pipeline. Items that fail Gate -1 are BLOCKED — they cannot proceed to any further gate.",
+    "checks": [
+      {"id": "GV-N1-01", "name": "Compound Key Completeness", "description": "All 6 compound key fields present and non-null"},
+      {"id": "GV-N1-02", "name": "QID Format", "description": "QID matches pack-specific regex (P1-{Section}-{NNN}, P1B-{Section}-{NNN}, etc.)"},
+      {"id": "GV-N1-03", "name": "CC Extraction Source", "description": "CorrectChoice extracted via within-object parse, not forward-scan"},
+      {"id": "GV-N1-04", "name": "EWPattern CC Bit", "description": "EWPattern CorrectChoice bit = 0 (EV8/DL-008 enforcement)"},
+      {"id": "GV-N1-05", "name": "Key Uniqueness", "description": "No two items share the same compound key (global uniqueness)"},
+      {"id": "GV-N1-06", "name": "Cross-Pack Collision", "description": "QID-only collision resolved via FilePath differentiation"},
+      {"id": "GV-N1-07", "name": "TemplateFamily Consistency", "description": "All items in a declared TemplateFamily share consistent stem+choice structure"},
+      {"id": "GV-N1-08", "name": "Pack B CC Extraction", "description": "Pack B CC field location verified — CC appears before QID in source, but key treats CC as logical field"}
+    ],
+    "current_s322_results": {
+      "total_checked": 2540,
+      "passed": 2539,
+      "blocked": 1,
+      "blocked_item": "Pack D item with empty CorrectChoice",
+      "pass_rate": "99.96%",
+      "runtime": "0.2s"
+    }
+  },
+
+  "s320_class_prevention": {
+    "label": "S320-Class Failure Prevention",
+    "description": "S320 attempted remediation of template rotation items but targeted wrong variants because QID-first-match doesn't guarantee matching the canonical seed. Framework v2 prevents this class of failure through three mechanisms.",
+    "prevention_mechanisms": [
+      {
+        "mechanism": "Compound Key Targeting",
+        "description": "Every remediation operation targets items by compound key (QID|CC|EWP|TF|FP|VID), not by QID alone. The compound key uniquely identifies the exact item variant — no wrong-variant risk."
+      },
+      {
+        "mechanism": "Gate -1 Identity Validation",
+        "description": "Every item's compound key is validated before any downstream operation. Wrong-variant items would be flagged at Gate -1 with IDENTITY_BLOCKED."
+      },
+      {
+        "mechanism": "AM-1 Within-Object Extraction",
+        "description": "All item fields are extracted via Function Constructor parse on the item's own question object. No forward-scan, no regex-window, no QID-first-match. The CC field is guaranteed to belong to its co-resident QID."
+      }
+    ],
+    "forbidden_methodologies": [
+      "FM-001: Forward scan from QID (positional scan outward from regex match) — HARD_BLOCK Rule 9",
+      "FM-002: Regex-window extraction (regex capture group without within-object parse) — HARD_BLOCK Rule 9",
+      "FM-003: QID-first-match (find first QID match, assume adjacent CC belongs to it) — HARD_BLOCK Rule 10",
+      "FM-004: QID-only item resolution (resolve item identity without compound key) — HARD_BLOCK Rule 10",
+      "FM-005: Cross-object field assumption (assume field X from object N belongs to object N+1) — HARD_BLOCK Rule 9",
+      "FM-006: Line-number-based extraction (extract by line number, not by within-object parse) — HARD_BLOCK Rule 9",
+      "FM-007: String-index offset extraction (indexOf QID + offset to find CC) — HARD_BLOCK Rule 9",
+      "FM-008: Non-Function-Constructor parse (JSON.parse, eval, regex-based) — HARD_BLOCK Rule 9"
+    ]
+  },
+
+  "trend_tracking": {
+    "metric": "identity_resolution_rate",
+    "baseline_v1": "0% compound key resolution (did not exist); ~25% targeting accuracy on QID-only model",
+    "measurements": [
+      {"session": "S322", "phase": "P0", "resolution_rate": "99.96%", "notes": "Gate -1: 2,539/2,540 PASS. 1 Pack D item with empty CorrectChoice. 8/9 GV checks operational."},
+      {"session": "S350", "phase": "P0", "resolution_rate": "99.96% (same as S322 — no new scan)", "notes": "Identity baseline established. No new scan since S322."},
+      {"session": "S830", "phase": "P1 Exit", "target": "100% resolution rate, 100% targeting accuracy, 0 false identifications", "notes": "HARD_BLOCK — identity ambiguity must be ELIMINATED before Phase 2"}
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_READINESS_SCORECARD.json",
+      "reports/SESSION350_SCAN_PERFORMANCE.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/framework_v2/s321/SESSION321_IDENTITY_SCHEMA_V2.json",
+      "reports/framework_v2/s321/SESSION321_GATE_NEG1_SPEC.json",
+      "reports/SESSION201_IDENTITY_ARCHITECTURE.json"
+    ],
+    "operational_data": "scripts/output/identity_validation_report.json"
+  }
+}

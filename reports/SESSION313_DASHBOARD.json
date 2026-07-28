@@ -1,0 +1,62 @@
+{
+  "title": "SESSION313_DASHBOARD",
+  "session": "313",
+  "generated": "2026-07-27",
+  "sections": {
+    "domain_e_certification_dashboard": {
+      "total_items": 375,
+      "certified": 218,
+      "certified_pct": "58.1%",
+      "archived": 119,
+      "unprocessed": 38,
+      "replacement_groups_total": 33,
+      "replacement_groups_completed": 10,
+      "replacement_groups_remaining": 23,
+      "wave_1_status": "COMPLETE — 10/10 CERTIFY",
+      "wave_2_status": "PENDING — S314 authorization required",
+      "uiqs_current": "77.1 (B) → 81.3 (A-) for Wave 1 candidates",
+      "uiqs_target": "80+ (A-) post-full-modernization"
+    },
+    "certification_dashboard": {
+      "total_portfolio": 2500,
+      "certified_current": 2191,
+      "certified_pct": "87.6%",
+      "delta_vs_prior": "+10",
+      "next_milestone": "2,200 (9 items remaining)",
+      "target_2250": "59 items remaining",
+      "target_2500": "309 items remaining",
+      "blocked_items": {
+        "dl008_certified": 67,
+        "dl026_in_audit": 50,
+        "dl013_remaining_fields": "~851"
+      }
+    },
+    "modernization_dashboard": {
+      "program": "800-Series — MCQ Certification & Quality Modernization",
+      "phase": "Domain E Replacement",
+      "sessions_completed": ["S311 (Planning)", "S312 (Wave 1 Authoring)", "S313 (Wave 1 Certification)"],
+      "sessions_upcoming": ["S314 (Wave 2 Authoring + Scale-Up)", "S315 (Wave 2 Certification)", "S316 (Wave 3)", "S317 (Domain E Closeout)"],
+      "domain_e_progress": "23% of replacement phase complete",
+      "quality_validation": "S311 Authoring Quality Gate methodology VALIDATED — produces certification-ready content at scale",
+      "key_metrics": {
+        "items_authored": 10,
+        "items_certified": 10,
+        "clone_groups_cleared": 10,
+        "archived_items_replaced": 50,
+        "ew_coverage": "100%",
+        "quality_gate_pass_rate": "100% (after S313 Gate 4 adjudication)",
+        "uiqs_candidate": "81.3 (A-)",
+        "learner_safety": "LOW RISK"
+      }
+    },
+    "quality_validation_summary": {
+      "gate_1_draft": "10/10 PASS",
+      "gate_2_technical": "10/10 PASS (DL-008/026/013/010 clean)",
+      "gate_3_blueprint": "10/10 PASS",
+      "gate_4_qa": "10/10 PASS (29 scanner observations adjudicated false positives)",
+      "ew_integrity": "100% coverage, DL-008/DL-026/DL-013 clean",
+      "technical_accuracy": "100% (0 conceptual errors, 0 terminology errors, 0 CMA misalignment)",
+      "learner_safety": "LOW RISK (0 ambiguity, 0 misleading, 0 incorrect coaching)"
+    }
+  }
+}

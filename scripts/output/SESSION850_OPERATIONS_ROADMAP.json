@@ -1,0 +1,136 @@
+{
+  "specId": "SESSION850_OPERATIONS_ROADMAP",
+  "board": "J",
+  "title": "Modernization Operations Roadmap",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Consolidated roadmap answering: which workflows are automated, how waves are generated, how remediation is prioritized, how Domain E is tracked, and how Domain F is prepared.",
+  "outputFile": "scripts/output/SESSION850_OPERATIONS_ROADMAP.json",
+  "automationStatus": {
+    "certificationCandidateSelection": {
+      "status": "AUTOMATED",
+      "script": "scripts/certification_candidate_engine.js",
+      "description": "Scans all 5 packs, evaluates structural/identity/governance gates, outputs READY/REMEDIATE/BLOCKED classifications"
+    },
+    "remediationQueueManagement": {
+      "status": "AUTOMATED",
+      "script": "scripts/remediation_queue_manager.js",
+      "description": "Groups items by defect type, assigns tiers (T0 Critical–T3 Low), splits into <=28-item batches"
+    },
+    "wavePlanning": {
+      "status": "AUTOMATED",
+      "script": "scripts/wave_planner.js",
+      "description": "Builds domain-balanced waves A/B/C with workload, complexity, and coverage considerations"
+    },
+    "domainProgressTracking": {
+      "status": "AUTOMATED",
+      "script": "scripts/domain_progress_engine.js",
+      "description": "Per-domain/per-pack/per-section Certified/READY/REMEDIATE/BLOCKED breakdown"
+    },
+    "replacementLineageTracking": {
+      "status": "AUTOMATED",
+      "script": "scripts/replacement_lineage_tracker.js",
+      "description": "Tracks original→replacement→certification lineage via template families"
+    },
+    "seedOperationsManagement": {
+      "status": "AUTOMATED",
+      "script": "scripts/seed_operations_manager.js",
+      "description": "Identifies seed items in DL-012 clone groups, tracks readiness and certification"
+    },
+    "dashboardRendering": {
+      "status": "DEFINED",
+      "spec": "scripts/output/SESSION850_MODERNIZATION_DASHBOARD.json",
+      "description": "8-panel dashboard configuration defined; rendering layer pending"
+    },
+    "domainFReadinessAssessment": {
+      "status": "DEFINED",
+      "spec": "scripts/output/SESSION850_DOMAIN_F_READINESS.json",
+      "description": "Assessment framework defined; Domain F activation pending modernization trigger"
+    },
+    "throughputAnalytics": {
+      "status": "DEFINED",
+      "spec": "scripts/output/SESSION850_MODERNIZATION_ANALYTICS.json",
+      "description": "7-metric throughput framework defined; data collection via REVISION_HISTORY.md"
+    }
+  },
+  "certificationWaveGeneration": {
+    "process": [
+      "1. Run certification_candidate_engine.js → identifies READY items",
+      "2. Run remediation_queue_manager.js → prioritizes defective items",
+      "3. Run wave_planner.js → builds domain-balanced waves A/B/C",
+      "4. Waves are presented for human approval per CAQS §1.7.2",
+      "5. Approved waves executed via certification scripts",
+      "6. REVISION_HISTORY.md updated with wave completion"
+    ],
+    "waveTiers": {
+      "WAVE_A": "Priority domains with <85% coverage",
+      "WAVE_B": "Expansion — fill domain gaps toward 95%",
+      "WAVE_C": "Completion — remaining items to 100%"
+    }
+  },
+  "remediationPrioritization": {
+    "tier0": "DL-030 (answer-key errors on Certified items) — immediate",
+    "tier1": "DL-008, DL-025, DL-026 (structural defects) — before certification",
+    "tier2": "DL-013 (boilerplate) — during certification waves",
+    "tier3": "DL-031, DL-032 (difficulty calibration) — quality pass",
+    "batchRules": "≤28 items per batch (governance-guard Rule 5), backup mandatory"
+  },
+  "domainETracking": {
+    "currentCoverage": "From domain_progress.json — Domain E coverage pct",
+    "keyMetrics": ["certifiedItems", "readyItems", "remediateItems", "blockedItems"],
+    "openDefects": "DL-008, DL-013 in Domain E sections",
+    "seedStatus": "From seed_operations.json — Domain E seed groups",
+    "nextAction": "Certify READY Domain E items via wave planner"
+  },
+  "domainFPreparation": {
+    "status": "ASSESSMENT_PENDING",
+    "actions": [
+      "1. Run domain_f_readiness assessment",
+      "2. Inventory audit — count all Domain F items across packs",
+      "3. Blueprint mapping — verify every item has CSO topic alignment",
+      "4. Structural audit — run identity validation + DL-008/026 scan",
+      "5. Build Domain F certification wave per wave planner",
+      "6. Execute certification"
+    ],
+    "blockers": "None identified — Domain F is the next unscoped domain after E",
+    "estimatedSessions": "3-5 sessions for full Domain F activation"
+  },
+  "operationalWorkflow": {
+    "perSession": [
+      "T0: Run all 6 engines → generate current state",
+      "Tmid: Review dashboard metrics → identify highest-priority action",
+      "Tend: Execute remediation/certification → update REVISION_HISTORY.md",
+      "Post-session: Re-run engines → confirm state change"
+    ],
+    "perWave": [
+      "Pre-wave: Run candidate engine + wave planner → generate wave manifest",
+      "Wave execution: Certify items via authorized certification scripts",
+      "Post-wave: Run domain progress engine → confirm coverage gain",
+      "Closeout: Log to REVISION_HISTORY.md"
+    ]
+  },
+  "successCriteria": {
+    "automated": [
+      "Certification candidate selection",
+      "Remediation queue management",
+      "Wave planning",
+      "Domain progress tracking",
+      "Replacement lineage tracking",
+      "Seed operations"
+    ],
+    "defined": [
+      "Modernization dashboard",
+      "Domain F readiness model",
+      "Throughput analytics"
+    ],
+    "pending": [
+      "Dashboard rendering layer",
+      "Real-time analytics pipeline",
+      "Domain F activation execution"
+    ]
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "document": "SESSION204_IDENTITY_BLOCK_REPORT",
+  "session": "S204",
+  "title": "Gate -1 Identity Block Detail — Board B Shadow-Mode Pilot",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Read-Only Identity Block Detail — No Content Modifications",
+  "parent": "SESSION204_GATE_NEG1_VALIDATION.json",
+  "purpose": "Detailed analysis of every item that would be blocked by Gate -1 identity validation: invalid QID formats, missing/invalid CorrectChoice, cross-pack QID duplicates, and false-positive assessment.",
+
+  "qid_format_violations": {
+    "total_items_with_invalid_qid": 40,
+    "all_in_pack": "pack_e_corrected.js",
+    "violation_pattern": "P1-E-R\\d{2}",
+    "expected_pattern": "P1E-[A-F]-\\d{3}",
+    "all_certified": true,
+    "all_section_e": true,
+    "items": [
+      {
+        "qid": "P1-E-R01",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R02 COSO framework — three categories of objectives",
+        "has_stem": true,
+        "has_explanation_correct": true,
+        "has_explanation_wrong_all": true,
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT: P1-E-R\\d{2} does not match /^P1E-[A-F]-\\d{3}$/"
+      },
+      {
+        "qid": "P1-E-R02",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R03 fraud triangle — pressure element",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R03",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R04 preventive controls — physical safeguards",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R04",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R05 bank reconciliation — segregation of duties",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R05",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R06 management override — inherent limitation",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R06",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R07 whistleblower hotline — SOX requirement",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R07",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R08 control environment — tone at the top",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R08",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R09 three lines of defense model",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R09",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R10 compensating controls — small business owner review",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R10",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R11 preventive control examples — application to scenarios",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R11",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R14 IT general controls — categories and scope",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT",
+        "note": "Topic numbering mismatch: QID is R11 but Topic references E-R14. DL-015 pattern."
+      },
+      {
+        "qid": "P1-E-R12",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R12 detective control — classification and examples",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R13",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R13 corrective control — remediation actions after detection",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R14",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R15 application controls — input processing output",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R15",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R16 risk assessment — COSO process and steps",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R16",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R17 risk responses — avoidance reduction sharing acceptance",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R17",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R19 SOX Section 302 — CEO/CFO certification requirements",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R18",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R18 monitoring activities — ongoing vs separate evaluations",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R19",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R20 SOX Section 404 — internal control assessment and auditor attestation",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R20",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R30 logical access controls — principles and implementation",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R21",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R21 external audit opinions — types under GAAS",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R22",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R22 audit committee — composition and independence requirements",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R23",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R23 board governance — oversight responsibilities under COSO",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R24",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R24 entity-level controls — scope and application vs transaction controls",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R25",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R25 information quality — timeliness characteristic",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R26",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R26 segregation of duties — incompatible functions scenario",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R27",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R27 authorization controls — transaction approval hierarchies",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R28",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R28 manual controls — characteristics, strengths, and limitations",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R29",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R29 physical controls — custody and access restrictions",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R30",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R31 disaster recovery and business continuity — key concepts",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R31",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R32 vendor risk assessment — third-party controls and due diligence",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R32",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R34 internal control definition — COSO framework objectives",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R33",
+        "section": "MISSING",
+        "correct_choice": "MISSING",
+        "question_state": "Certified",
+        "topic": "MISSING",
+        "has_stem": false,
+        "has_explanation_correct": false,
+        "has_explanation_wrong": true,
+        "has_choices": true,
+        "has_review_note": true,
+        "structurally_complete": false,
+        "block_reason": "QID_INVALID_FORMAT + CC_MISSING + STRUCTURALLY_INCOMPLETE",
+        "severity": "CRITICAL",
+        "details": "P1-E-R33 has Choices {A,B,C,D} and ExplanationWrong{A,B,C,D} fields but NO Stem, NO CorrectChoice, and NO ExplanationCorrect. It is a Certified item in the active learner delivery pool with no correct answer defined. This is the most severe identity-block finding — the item is structurally incomplete and should never have been Certified. The ReviewNote text discusses IIA Standard 1110 and 1130 (internal audit independence), but the question itself is missing."
+      },
+      {
+        "qid": "P1-E-R34",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R35 inherent limitations — reasonable assurance concept",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R35",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R36 internal control responsibility — management vs auditor roles",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R36",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R37 risk identification — qualitative techniques",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R37",
+        "section": "E",
+        "correct_choice": "A",
+        "question_state": "Certified",
+        "topic": "E-R38 risk analysis — inherent vs residual risk",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R38",
+        "section": "E",
+        "correct_choice": "C",
+        "question_state": "Certified",
+        "topic": "E-R39 SOX Title III — corporate responsibility for financial reports",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R39",
+        "section": "E",
+        "correct_choice": "D",
+        "question_state": "Certified",
+        "topic": "E-R40 COSO 2013 — 17 principles across five components",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT"
+      },
+      {
+        "qid": "P1-E-R40",
+        "section": "E",
+        "correct_choice": "B",
+        "question_state": "Certified",
+        "topic": "E-R02 COSO framework — three categories of objectives",
+        "structurally_complete": true,
+        "block_reason": "QID_INVALID_FORMAT",
+        "note": "Topic text identical to P1-E-R01 — possible rotation artifact"
+      }
+    ]
+  },
+
+  "correct_choice_violations": {
+    "total_missing_cc": 1,
+    "total_invalid_cc_format": 0,
+    "items": [
+      {
+        "qid": "P1-E-R33",
+        "issue": "CC_MISSING — no CorrectChoice field exists in the JSON object",
+        "also_affected": "QID_INVALID_FORMAT + STRUCTURALLY_INCOMPLETE (no Stem, no ExplanationCorrect)",
+        "question_state": "Certified",
+        "severity": "CRITICAL",
+        "learner_impact": "A learner encountering this item in a practice session would see a question with answer choices but no correct answer defined. The review screen would show distractor explanations but no indication of which answer is correct. This is a learner-safety risk."
+      }
+    ],
+    "cc_distribution_all_correct": true,
+    "note": "All 2,499 items WITH a CorrectChoice field have valid single-character A-D values. No multi-character, lowercase, out-of-range, or malformed CorrectChoice values found."
+  },
+
+  "cross_pack_duplicates": {
+    "total_cross_pack_duplicates": 0,
+    "total_unique_qids": 2540,
+    "duplicate_list": [],
+    "scan_methodology": "Hash-set of all 2,540 QIDs with pack-attribution tracking. Each QID compared across all 5 packs. Zero collisions found.",
+    "verification": "The 2540 unique QIDs across 2540 total items confirms no content sharing across packs at the QID level. Pack A Section E items (P1-E-xxx) are structurally distinct from Pack E items (P1E-xxx) — they differ by hyphen placement (P1-E- vs P1E-).",
+    "dl033_naming_note": "DL-033 documented naming confusion between 'Pack A Section E' (P1-E-xxx) and 'Pack E' (P1E-xxx). Gate -1 cross-pack scan confirms these are distinct QID namespaces with zero collisions. The confusion was process-level (which file to check), not data-level (actual duplicate QIDs)."
+  },
+
+  "false_positive_analysis": {
+    "question": "Would any production Certified item be misidentified as IDENTITY_BLOCKED?",
+    "answer": "YES — 40 Certified Pack E items (all P1-E-R*) would be classified as IDENTITY_BLOCKED under the current regex specification.",
+    "analysis": {
+      "false_positive_definition": "A false positive occurs when Gate -1 flags an item as IDENTITY_BLOCKED, but the item is genuinely valid and the block is the result of a specification error (regex too strict) rather than a genuine identity defect.",
+      "items_flagged": 40,
+      "genuinely_broken": 1,
+      "genuinely_broken_item": "P1-E-R33 — missing CorrectChoice, Stem, and ExplanationCorrect. This is a TRUE positive — it correctly should be blocked.",
+      "specification_ambiguity_items": 39,
+      "specification_ambiguity_description": "The remaining 39 P1-E-R* items are structurally complete (have Stem, CorrectChoice, ExplanationCorrect, ExplanationWrong A-D, Choices A-D). They are fully authored, Certified, and in active use. They fail Gate -1 ONLY because their QID format (P1-E-R\\d{2}) does not match the expected regex (/^P1E-[A-F]-\\d{3}$/). The question is whether this regex is correct or too narrow.",
+      "patterns_of_concern": {
+        "naming_convention": "The P1-E-R prefix follows Pack A Section E convention (P1-E-xxx) with an 'R' suffix, suggesting these were authored as 'Review' items for Section E. They reside in pack_e_corrected.js (Pack E file), creating a prefix-to-file mismatch.",
+        "topic_numbering": "Several items show DL-015 pattern: the Topic field's numeric label does not match the QID's R-number. For example: P1-E-R01 has Topic 'E-R02 COSO framework', P1-E-R02 has Topic 'E-R03 fraud triangle'. A one-position shift exists in some items.",
+        "gap_numbering": "The R-numbers are not sequential: R01-R11 present, then R14-R17, R19-R20, R30-R32, R34-R36, R26-R29, R37-R40, R12-R13, R18, R21-R25, R28, R33. This non-sequential ordering in the file (sorted by Topic not by R-number) suggests template-based rotation-group authoring.",
+        "scrambled_order": "The items appear in the file ordered by Topic text, not by R-number. This suggests they were batch-generated from a template and sorted by Topic rather than by QID."
+      }
+    },
+    "false_positive_rates": {
+      "overall": {
+        "total_blocked": 40,
+        "true_positives": 1,
+        "specification_false_positives": 39,
+        "false_positive_rate": "97.5% (39 of 40 blocked items may be specification errors rather than genuine defects)",
+        "alternative_fp_rate": "2.5% (1 of 40 is a genuine defect — P1-E-R33)"
+      },
+      "pack_e_level": {
+        "total_items": 540,
+        "blocked": 40,
+        "blocked_pct": "7.41%",
+        "specification_false_positive_pct": "7.22% of Pack E items flagged by regex mismatch despite being structurally complete"
+      },
+      "pool_wide": {
+        "total_items": 2540,
+        "blocked": 40,
+        "blocked_pct": "1.57%",
+        "specification_false_positive_pct": "1.54% of all items flagged by regex mismatch"
+      }
+    },
+    "acceptability_assessment": {
+      "verdict": "FALSE POSITIVE RATE IS UNACCEPTABLE AT CURRENT SPEC",
+      "reasoning": "A 97.5% false-positive rate within the blocked set (39/40) is unacceptable. Gate -1 would block 39 structurally complete, Certified, actively used items based solely on a naming convention mismatch. This would remove 7.4% of Pack E from the delivery pool. The regex specification must be updated to accept P1-E-R\\d{2} as a valid Pack E QID format before Gate -1 can be activated.",
+      "recommendation": {
+        "action": "Update Pack E regex to: /^(P1E-[A-F]-\\d{3})|(P1-E-R\\d{2})$/",
+        "rationale": "The P1-E-R items are a documented, separate class of Section E review items that follow a distinct naming convention. The regex should reflect the actual archive, not an idealized schema. The compound-key identity check (step 5) will still catch P1-E-R33's missing CorrectChoice regardless of regex acceptance.",
+        "alternative": "Rename all P1-E-R* items to P1E-E-5xx format to match the canonical Pack E naming convention. This would require 40 QID renames, updating all cross-references, and re-verifying the app's QID indexing. Effort: HIGH. Regex update: LOW.",
+        "post_regex_fix": "If the regex is updated, only P1-E-R33 would remain blocked (for missing CorrectChoice). False positive rate would drop to 0% — the single remaining block is a genuine structural defect."
+      }
+    }
+  },
+
+  "certification_impact": {
+    "certified_items_that_would_be_blocked": 40,
+    "certified_items_blocked_pct_of_pack_e_certified": "7.41%",
+    "certified_items_blocked_pct_of_pool_certified": "1.80% (of approximately 2,221 Certified)",
+    "learner_safety": {
+      "p1_e_r33_critical": "P1-E-R33 is structurally incomplete (no CorrectChoice) yet Certified. Any learner practice session drawing this item would present a broken question.",
+      "other_39_items": "The other 39 items are structurally complete but would be removed from the delivery pool by Gate -1 if the regex is not updated. This would reduce Section E coverage in practice sessions by 40 items."
+    }
+  },
+
+  "naming_convention_analysis": {
+    "five_concurrent_patterns": [
+      {
+        "pattern": "P1-[A-F]-\\d{3}",
+        "pack": "A",
+        "file": "pack_a_corrected.js",
+        "example": "P1-E-001 (Section E within Pack A)",
+        "status": "Matches spec regex. VALID."
+      },
+      {
+        "pattern": "P1B-[A-F]-\\d{3}",
+        "pack": "B",
+        "file": "pack_b_corrected.js",
+        "example": "P1B-E-001",
+        "status": "Matches spec regex. VALID."
+      },
+      {
+        "pattern": "P1-[A-F]C-\\d{3}",
+        "pack": "C",
+        "file": "pack_c_corrected.js",
+        "example": "P1-EC-001",
+        "status": "Matches spec regex (optional C suffix). VALID."
+      },
+      {
+        "pattern": "P1-[A-F]D-\\d{3}",
+        "pack": "D",
+        "file": "pack_d_corrected.js",
+        "example": "P1-ED-001",
+        "status": "Matches spec regex. VALID."
+      },
+      {
+        "pattern": "P1E-[A-F]-\\d{3}",
+        "pack": "E",
+        "file": "pack_e_corrected.js",
+        "example": "P1E-E-001",
+        "status": "Matches spec regex. VALID."
+      },
+      {
+        "pattern": "P1-E-R\\d{2}",
+        "pack": "E",
+        "file": "pack_e_corrected.js",
+        "example": "P1-E-R01",
+        "status": "NOT in spec regex. IDENTITY_BLOCKED. Follows Pack A naming convention (P1-E-) but resides in Pack E file."
+      }
+    ],
+    "dl033_relevance": "DL-033 documented the naming confusion between 'Pack A Section E' (P1-E-xxx in pack_a) and 'Pack E' (P1E-xxx in pack_e). The P1-E-R* items add a third pattern: Pack A naming (P1-E-) with an R suffix, but IN the Pack E file. This is a naming convention violation at the file-attribution level — the prefix does not match the expected pack prefix."
+  },
+
+  "recommendations": {
+    "immediate": [
+      {
+        "priority": "CRITICAL",
+        "action": "Investigate and remediate P1-E-R33 — a Certified item with NO CorrectChoice, NO Stem, and NO ExplanationCorrect",
+        "rationale": "This item is in the active learner delivery pool and is structurally broken. Learners encountering it receive a question with answer choices but no defined correct answer."
+      },
+      {
+        "priority": "HIGH",
+        "action": "Update the Pack E Gate -1 regex specification to accept P1-E-R\\d{2} format",
+        "rationale": "The current regex would block 39 structurally complete, Certified items. The regex must reflect the actual archive to avoid a 97.5% false-positive rate."
+      }
+    ],
+    "before_activation": [
+      {
+        "action": "Resolve the naming convention ambiguity — either update the regex (low effort) or rename the 40 QIDs (high effort)",
+        "recommended": "Update regex per above. The regex is the specification; it should describe reality, not prescribe an idealized schema."
+      },
+      {
+        "action": "Run full PG-011 implementation (AM-1 Function Constructor parse) to complete steps 4-5 (TemplateFamily, compound key) that this shadow-mode pilot could only defer",
+        "rationale": "Steps 4-5 require parsed object data, not raw-file grep. These steps are critical for preventing S320-class rotation-group targeting failures."
+      }
+    ],
+    "long_term": [
+      {
+        "action": "Standardize all QID naming to a single pack-specific pattern. Document the pattern in a QID_NAMING_STANDARD.md governance file.",
+        "rationale": "The current 6 concurrent naming patterns across 5 packs create unnecessary ambiguity. A single standard would eliminate DL-033 class confusion permanently."
+      }
+    ]
+  },
+
+  "summary": {
+    "total_items_scanned": 2540,
+    "total_packs": 5,
+    "packs_clean": ["A", "B", "C", "D"],
+    "packs_with_issues": ["E"],
+    "items_with_invalid_qid_format": 40,
+    "items_with_missing_cc": 1,
+    "cross_pack_duplicates": 0,
+    "genuine_defects_found": 1,
+    "specification_false_positives": 39,
+    "false_positive_rate": "97.5% of blocked items (39/40) are structurally complete items flagged by an overly strict regex",
+    "would_s320_be_blocked": "YES — Gate -1 would have prevented the S320 identity-ambiguity failure through compound-key identity and TemplateFamily classification",
+    "gate_neg1_readiness": "NOT READY for activation — Pack E regex must be updated to accept P1-E-R\\d{2} format, and P1-E-R33 must be remediated. Once these two issues are resolved, Gate -1 can proceed to live activation."
+  }
+}

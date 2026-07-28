@@ -1,0 +1,13 @@
+{
+  "reportId": "SESSION254_CROSS_ENGINE_CONSISTENCY",
+  "verdict": "PASS",
+  "consistencyScore": 95,
+  "registriesValidated": 7,
+  "findings": {
+    "qidFormatConsistency": "PASS",
+    "packAssignmentConsistency": "PASS",
+    "stateConsistency": "PASS — 1 anomaly (P1-EC-004)",
+    "defectCodeConsistency": "PASS",
+    "crossReferenceIntegrity": "PASS"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "session": "S875",
+  "date": "2026-07-28",
+  "program": "800-Series Content Review & Replacement Restart",
+  "phase": "Rule 9 Semantic Validation Sweep",
+  "execution_mode": "Read-Only Validation",
+  "source": "SESSION874_PRECISION_REPLACEMENTS.json",
+  "validation_results": {
+    "rule_9_logic_inversions": {
+      "scanned_items": 2540,
+      "inversions_detected": 0,
+      "note": "None of the 3 S874 replacements introduced Yes/No lead-in choices. P1-B-037 and P1-B-098 have no binary lead-ins at all. P1E-B-068 had a stem fix only (no choice changes)."
+    },
+    "dl008_exposure": {
+      "pre_remediation": 0,
+      "post_remediation": 0,
+      "new_exposures": 0,
+      "items_checked": ["P1-B-037 (EW_A='')", "P1-B-098 (EW_B='')", "P1E-B-068 (EW_C='' — unchanged)"]
+    },
+    "dl026_exposure": {
+      "pre_remediation": 0,
+      "post_remediation": 0,
+      "new_exposures": 0,
+      "items_checked": [
+        "P1-B-037 (EW_B=346, EW_C=368, EW_D=360 — all ≥50 chars)",
+        "P1-B-098 (EW_A=187, EW_C=363, EW_D=319 — all ≥50 chars)"
+      ]
+    },
+    "governance_guard": {
+      "test_suite": "51/51 PASS",
+      "rule_2_dl008": "BLOCK active, 0 violations",
+      "rule_6_dl026": "BLOCK active, 0 violations",
+      "rule_9_logic_inversions": "BLOCK active, 0 violations"
+    },
+    "certified_pool": {
+      "pre_remediation": 2298,
+      "post_remediation": 2298,
+      "drift": 0
+    },
+    "parse_verification": {
+      "pack_a": "PASS — 500 items, 481 Certified",
+      "pack_e": "PASS — 540 items, 540 Certified"
+    }
+  },
+  "all_halt_conditions": {
+    "governance_guard_ge_46_pass": true,
+    "rule_9_semantic_violations_gt_0": false,
+    "new_content_dl_008_exposure_gt_0": false,
+    "certified_pool_drift_ne_0": false,
+    "overall": "ALL CHECKS PASS"
+  }
+}

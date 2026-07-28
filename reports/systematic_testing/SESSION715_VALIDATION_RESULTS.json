@@ -1,0 +1,39 @@
+{
+  "session": "715",
+  "timestamp": "2026-07-26T03:00:00",
+  "type": "Validation results",
+  "test_results": {
+    "governance_guard": "20/0 PASS",
+    "session_recovery": "12/0 PASS",
+    "core_total": "32/32 PASS"
+  },
+  "pack_integrity": {
+    "pack_a": { "parse": "OK", "qids": 500, "certified": 481 },
+    "pack_b": { "parse": "OK", "qids": 500, "certified": 500 },
+    "pack_c": { "parse": "OK", "qids": 500, "certified": 350 },
+    "pack_d": { "parse": "OK", "qids": 500, "certified": 350 },
+    "pack_e": { "parse": "OK", "qids": 500, "certified": 500 }
+  },
+  "drift_verification": {
+    "sample_size": 10,
+    "correct_choice_match": "10/10",
+    "stem_match": "10/10",
+    "question_state_match": "10/10",
+    "only_diff_diffscore_changed": true
+  },
+  "post_flight_distribution": {
+    "easy": 622,
+    "moderate_easy": 339,
+    "moderate": 1041,
+    "difficult": 179,
+    "very_difficult": 0,
+    "total_certified": 2181
+  },
+  "backups": [
+    "backups/pack_a_corrected.js.bak-20260726S715",
+    "backups/pack_b_corrected.js.bak-20260726S715",
+    "backups/pack_c_corrected.js.bak-20260726S715",
+    "backups/pack_d_corrected.js.bak-20260726S715",
+    "backups/pack_e_corrected.js.bak-20260726S715"
+  ]
+}

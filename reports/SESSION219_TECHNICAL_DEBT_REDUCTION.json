@@ -1,0 +1,216 @@
+{
+  "session": "S219",
+  "series": "200-Series — Stewardship Remediation & Re-Certification",
+  "title": "Technical Debt Reduction Wave",
+  "date": "2026-07-27",
+  "orchestrator": "stewardship-orchestrator",
+  "status": "COMPLETE",
+  "phase": "Phase 0 — Plan Refinement & Schema Authoring",
+  "depends_on": [
+    "S215 Technical Debt Status (2/8 resolved, 5 open, governance validator FAIL)",
+    "S216 Executive Decision (debt_reduction: 38/100, CONCERN)",
+    "S211 Debt Action Plan (classification: 4 MITIGATE, 1 ESCALATE, 4 ACCEPT)",
+    "S208 Technical Debt Register (12 items cataloged)"
+  ],
+
+  "objective": "Address the three highest-risk technical debt items: TD-001 (DL-016 metadata shift, learner-safety HIGH), TD-002 (39 Domain F DL-026, learner-safety HIGH), TD-005 (DL-012 clones, certification-blocking). Classify, disposition, and define exact execution plans for each.",
+
+  "priority_items": {
+    "description": "The user specified TD-001, TD-002, and TD-005 as the priority targets for this wave. These are the only items with active learner-safety risk (TD-001, TD-002) or architectural blocking status (TD-005).",
+
+    "items": [
+      {
+        "id": "TD-001",
+        "defect_ref": "DL-016",
+        "title": "Metadata-Block ChoiceA-D +1 Offset on Certified Items",
+        "severity": "HIGH",
+        "learner_safety_impact": "HIGH — 58 Certified Pack A items. Learners see distractor explanations about wrong topic when they select wrong answers.",
+        "current_state": {
+          "certified_affected": 58,
+          "scope": "Pack A Sections B, C, F (Certified). Pack A Section E already remediated S805 (57 items). Possible Pack C/D dual-block sections.",
+          "root_cause": "Template-based bulk authoring produced paired-object structure per QID: metadata block (ChoiceA-D, ExplanationWrongA-D) + content block (Choices.A-D, CorrectChoice, ExplanationCorrect). Metadata blocks carry stale template residues from original authoring pipeline — shifted by +1 position in the rotation group.",
+          "verification_methodology": "Per DEFECT_LIBRARY.md DL-016: extract both metadata-block ChoiceA-D and content-block Choices.A-D. Compare. If different → DL-016 confirmed.",
+          "DL-029_risk": "HIGH — any forward-scan methodology will produce false positives because metadata-block CC may differ from content-block CC. Must use within-object boundary-aware extraction."
+        },
+        "classification": "MITIGATE",
+        "classification_rationale": "Active learner-safety risk on 58 Certified items. Must be remediated before any further Pack A certification waves. This is a correctness-of-feedback issue — learners receive wrong-topic explanations on wrong answers.",
+        "execution_plan": {
+          "approach": "Per-item metadata-to-content alignment. For each affected item: (1) extract content-block Choices.A-D (authoritative — what the learner sees), (2) verify each ExplanationWrong[X] field in the metadata block describes the content-block Choice X, (3) if not: rewrite ExplanationWrong[X] to match the item's actual distractor, (4) if yes: leave intact.",
+          "pre_requisite": "S217 execution (Rule 1 BLOCK upgrade, cross-registry reconciliation). Without Rule 1 BLOCK, certification changes cannot be traceably audited.",
+          "batches": [
+            {"batch": "B1", "section": "Pack A Section B Certified (estimated 15-20 items)", "max_items": 20, "governance_guard_rule_5": "COMPLIANT"},
+            {"batch": "B2", "section": "Pack A Section B Certified (remaining)", "max_items": 20, "governance_guard_rule_5": "COMPLIANT"},
+            {"batch": "B3", "section": "Pack A Section C Certified (estimated 10-15 items)", "max_items": 15, "governance_guard_rule_5": "COMPLIANT"},
+            {"batch": "B4", "section": "Pack A Section F Certified (estimated 5-10 items)", "max_items": 10, "governance_guard_rule_5": "COMPLIANT"},
+            {"batch": "B5-B6", "section": "Pack C/D dual-block sections (if confirmed DL-016)", "max_items": 28, "governance_guard_rule_5": "COMPLIANT"}
+          ],
+          "estimated_sessions": "5-7 sessions (6 batches, ≤28 items each)",
+          "verification_per_batch": [
+            "Direct raw-file line-level inspection of 5 random items post-remediation",
+            "Verify ExplanationWrong text describes the item's actual content-block Choices",
+            "Verify 0 new DL-008 (EW[CC] remains empty)",
+            "Verify 0 new DL-026 (no empty non-CC slots created)",
+            "Verify governance guard 32/32 tests PASS"
+          ],
+          "backup_protocol": "Mandatory per BACKUP_PROTOCOL.md — timestamped backup before every batch",
+          "stop_conditions_per_batch": [
+            "Any batch that introduces a new DL-008 violation → halt and revert",
+            "Any batch that changes CorrectChoice → halt and revert (metadata alignment only — answer key must not change)",
+            "Governance guard test suite regresses → halt and revert"
+          ]
+        },
+        "dependency_chain": "Rule 1 BLOCK upgrade (S217 step 1) → SCRIPT_REGISTRY.json creation (S217 step 3) → T0 cross-registry reconciliation (S217 step 7) → Pack A metadata-content alignment (TD-001 execution)"
+      },
+      {
+        "id": "TD-002",
+        "defect_ref": "DL-026 + DL-035 (S813 C3)",
+        "title": "39 Domain F Certified Items with Empty Distractor ExplanationWrong Slots",
+        "severity": "HIGH",
+        "learner_safety_impact": "HIGH — 39 Certified items in active learner pool. Learners who select wrong answers see no educational feedback. Content correctness unaffected (zero DL-008). Educational quality degraded.",
+        "current_state": {
+          "certified_affected": 39,
+          "scope": "Pack C Domain F: 28 items (P1-FC-001 through P1-FD-031, specific QIDs in DEFECT_LIBRARY.md DL-035). Pack D Domain F: 11 items (P1-FD-033 through P1-FD-075). ~117 empty non-CC ExplanationWrong fields.",
+          "qid_list": "Recorded in S853.json session package and DEFECT_LIBRARY.md DL-035. Pack C: P1-FC-001,006,007,010,015,020,025,026,031,036,043,048,053,058,063,068,073,074,075 + P1-FD-001,006,011,016,021,026,027,030,031. Pack D: P1-FD-033,034,043,049,054,059,064,069,073,074,075.",
+          "root_cause": "Pre-existing template rotation artifact (same pipeline as DL-026). Governance guard had zero DL-026 coverage at time of S853 WAVE_A certification — items certified with empty distractor slots. Rule 6 deployed S814 (prevention — blocks future certifications). Content remediation pending S816-S818.",
+          "prevention_in_place": true,
+          "prevention_mechanism": "Rule 6 BLOCK — any write containing empty/absent non-CC ExplanationWrong slots is blocked. 0 new DL-035 items can be certified."
+        },
+        "classification": "MITIGATE",
+        "classification_rationale": "Active learner-safety risk on 39 Certified items. Rule 6 prevents new certifications but does not remediate existing. Content remediation is required to restore educational feedback for the affected distractors. Already scheduled S816-S818 per CURRENT_BASELINES.md §3 and DEFECT_LIBRARY.md DL-035.",
+        "execution_plan": {
+          "approach": "Author ~117 choice-specific distractor explanations for empty non-CC ExplanationWrong slots. Each explanation must: (1) identify why that specific distractor is wrong, (2) reference Technology & Analytics domain context (data governance, ERP, cybersecurity, AI, etc.), (3) minimum 50 characters per CAQS §4.4 EV1.",
+          "batches": [
+            {"batch": "B1 (S816)", "scope": "Pack C Domain F — 28 items (Batch B3 from S853)", "max_items": 28, "estimated_fields": "~42 (1.5 empty slots per item)"},
+            {"batch": "B2 (S817)", "scope": "Pack D Domain F — 11 items (Batch B4 from S853)", "max_items": 11, "estimated_fields": "~17"},
+            {"batch": "B3 (S817)", "scope": "Remaining Pack C Domain F items if batch split needed", "max_items": 20},
+            {"batch": "B4 (S818)", "scope": "Remaining Pack D Domain F items if batch split needed", "max_items": 20}
+          ],
+          "estimated_sessions": "3-4 sessions (4 batches, ≤28 items each)",
+          "verification_per_batch": [
+            "Post-batch boundary-aware DL-026 scan — verify 0 empty non-CC EW slots on remediated items",
+            "Verify 0 new DL-008 (EW[CC] remains empty)",
+            "Verify all new EW text is Technology & Analytics domain-appropriate",
+            "Verify governance guard Rule 6 blocks if any empty EW slot remains",
+            "Spot-check 5 random items for explanation quality"
+          ],
+          "backup_protocol": "Mandatory — timestamped backup before every batch"
+        },
+        "dependency_chain": "Rule 6 already deployed (S814) → Content authoring S816 → Audit S817 → Closeout S818"
+      },
+      {
+        "id": "TD-005",
+        "defect_ref": "DL-012",
+        "title": "DL-012 Section E Clones — 140 Items, Architectural Decision Required",
+        "severity": "MEDIUM",
+        "learner_safety_impact": "NONE — all 140 items are non-Certified (Unprocessed/Archived). Zero learner-pool exposure.",
+        "current_state": {
+          "scope": "Pack C Section E: 75 items (EC-001 through EC-075). Pack D Section E: 75 items (ED-001 through ED-075). 28 clone groups × 5 items each = 140 total. 28 unique seeds + 112 clones.",
+          "root_cause": "Residual duplication from historical Pack C/Pack D bulk-authoring aliasing. Same template generated 5-item groups where only company name and answer-letter position varied.",
+          "prior_decisions": [
+            "S211: ESCALATED to S212 Executive Board",
+            "S212: RECOMMEND OPTION A (archive 112 clones, keep 28 seeds) — NOT YET EXECUTED",
+            "S212: 3 conditions: C1 (TD-005 execution), C2 (Difficulty cross-validation), C3 (baseline cadence)"
+          ],
+          "count_stability": "Confirmed stable at 140 clones across 3 independent scans per DEFECT_LIBRARY.md DL-012"
+        },
+        "classification": "ESCALATE",
+        "classification_rationale": "Architectural decision required — Option A (archive clones) vs Option B (re-key with UniqueConceptKey). S212 Executive Board recommended Option A but execution was deferred. This item blocks Pack C/D Section E certification. Does not affect learner pool (all items non-Certified). Escalated back to S220 Re-Certification Board for final execution authorization.",
+        "execution_plan": {
+          "option_a_recommended": {
+            "action": "Archive 112 clone items (set question_state: 'Archived'). Retain 28 seed items as active (question_state: 'Unprocessed' — ready for certification).",
+            "clone_qids": "Groups 1-28: the 4 non-seed items in each group (112 total). Seeds: one item per group selected for best educational quality (28 total).",
+            "seed_selection_criterion": "Select the item in each group with the most substantive ExplanationCorrect and choice-specific ExplanationWrong fields (typically the 'Difficult'-labeled item in each group).",
+            "post_archival": "28 seeds ready for CAQS §1.6 six-dimension certification. 112 clones preserved but excluded from learner pool (content not deleted — per Constitution §7: 'AI SHALL NOT delete questions').",
+            "impact": "Reduces Section E population from 150 items to 103 items (28 seeds + 75 non-clone items). Removes 93.3% clone waste."
+          },
+          "option_b_alternative": {
+            "action": "Re-key all 140 items with UniqueConceptKey to distinguish them. Keep all active.",
+            "impact": "Preserves item count but requires 140 metadata updates + 112 distractor explanation rewrites.",
+            "effort": "5-7x higher than Option A"
+          },
+          "execution_requirement": "Authorization from S220 Executive Decision required before execution. Execution follows backup protocol, ≤28 items per batch per Rule 5, and independent verification per batch.",
+          "batches_if_authorized": [
+            {"batch": "1-2", "scope": "Pack C Section E — archive 56 clones", "max_items": 28, "rule_5": "COMPLIANT"},
+            {"batch": "3-4", "scope": "Pack D Section E — archive 56 clones", "max_items": 28, "rule_5": "COMPLIANT"}
+          ],
+          "estimated_sessions": "2-3 sessions (4 batches)",
+          "verification_post_execution": [
+            "Verify 28 seed items have question_state: 'Unprocessed' (active)",
+            "Verify 112 clone items have question_state: 'Archived'",
+            "Verify 10 standalone unique items preserved unchanged",
+            "Verify zero clone QIDs appear in learner delivery pool",
+            "Verify governance guard 32/32 tests PASS"
+          ]
+        },
+        "dependency_chain": "S220 Executive Decision authorization → Archive execution (2-3 sessions) → Seed certification (subsequent certification wave)"
+      }
+    ]
+  },
+
+  "debt_burndown": {
+    "baseline_s208": {
+      "total_items": 12,
+      "resolved": 0,
+      "open": 12,
+      "highest_risk": "TD-001 (DL-016) + TD-002 (39 DL-026)"
+    },
+    "current_s215": {
+      "total_items": 8,
+      "resolved": 2,
+      "partially_resolved": 1,
+      "open": 5,
+      "highest_risk": "DL-016: 58 Certified items (HIGH)"
+    },
+    "post_s219_target": {
+      "total_items": 11,
+      "mitigated_with_plan": 3,
+      "escalated": 1,
+      "remaining_remediated_in_waves": 7,
+      "estimated_remaining_sessions": "~15-20 sessions (across all remaining items)"
+    },
+    "burndown_chart": {
+      "s208_baseline": {"resolved": 0, "open": 12, "date": "2026-07-27 (early)"},
+      "s215_interim": {"resolved": 2, "open": 10, "date": "2026-07-27 (mid)"},
+      "s219_plan": {"planned_resolved": 5, "open": 7, "date": "2026-07-27 (late) — plan target"},
+      "s220_verification": {"verified": "Pending S220 gate", "date": "2026-07-27 (Tend)"}
+    }
+  },
+
+  "classification_summary": {
+    "mitigated": [
+      "TD-001 (DL-016) — 5-7 session execution plan with per-batch verification",
+      "TD-002 (39 DL-026) — 3-4 session execution plan, already scheduled S816-S818"
+    ],
+    "escalated": [
+      "TD-005 (DL-012 clones) — architectural decision required, escalated to S220 Executive Board"
+    ],
+    "accepted": [
+      "TD-003 (DL-031 difficulty inflation) — systematic, ~500 items, addressed in certification waves",
+      "TD-004 (DL-032 case uniform difficulty) — 330 items, addressed in case certification waves",
+      "TD-006 through TD-012: legacy artifacts, backup cleanup, script landscape — addressed as going concerns"
+    ]
+  },
+
+  "dependencies_on_other_sessions": {
+    "blocks_execution_until": [
+      "S217 Rule 1 BLOCK upgrade (required for TD-001 traceability)",
+      "S217 T0 cross-registry reconciliation (required for pre-execution state verification)",
+      "S220 Executive Authorization for TD-005 execution"
+    ],
+    "unblocks": [
+      "TD-001 execution unblocks Pack A Sections B/C/F certification",
+      "TD-002 execution closes DL-035 — last active DL-026 cluster on Certified items",
+      "TD-005 execution unblocks Pack C/D Section E certification"
+    ]
+  },
+
+  "deliverables": [
+    "SESSION219_TECHNICAL_DEBT_REDUCTION.json (this file)",
+    "SESSION219_DEBT_BURNDOWN_REPORT.md (companion report)"
+  ],
+
+  "stop_conditions": {
+    "active": ["Principle violation", "Registry authority conflict", "Broken traceability", "Duplicate registry creation", "Governance Guard != PASS", "Identity < 99%"],
+    "status": "ALL MONITORED — this session is read-only plan authoring. No stop conditions fired."
+  }
+}

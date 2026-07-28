@@ -1,0 +1,242 @@
+{
+  "document": "SESSION321_MIGRATION_PLAN",
+  "session": "S321",
+  "board": "I — Migration Roadmap",
+  "phase": "6 — Migration Planning",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+  "depends_on": "All S321 specifications. S201 Framework v2 Vision §transition_state.",
+
+  "purpose": "Define the migration roadmap from Framework v1 to Framework v2 across four operational modes, three phases, and 20-22 sessions. Existing certifications survive the transition — 0 mass re-certification. Every phase is independently reversible.",
+
+  "guiding_principles": [
+    "Existing certifications survive transition — no mass re-certification. The 2,181 currently Certified items remain Certified throughout.",
+    "Each phase independently reversible — can roll back any phase without losing the other two.",
+    "All phases NO-OP in read-only sessions — agents detect 'nothing to do' and return immediately.",
+    "Series boundaries respected — Phase closeouts at S330, S340, S350 decision checkpoints.",
+    "Every phase includes pre/post metrics comparison gate."
+  ],
+
+  "migration_modes": {
+    "description": "Four operational modes describing the relationship between Framework v1 and Framework v2 at each stage of the migration.",
+
+    "mode_1_v1_dominant": {
+      "label": "Framework v1 (Current — Pre-S321)",
+      "description": "The current operational state. 8 boards, 72 agents cataloged, 15-28 agents per certification wave. 1,227 reports. 89.5% readiness failure. No compound-key identity. No pre-flight gate. No delta review.",
+      "active_components": ["All 8 Framework v1 boards", "Governance guard Rules 1-5", "Current report architecture (11+ files/session)"],
+      "exit_criteria": "S322 begins Phase 1 implementation. Framework v2 infrastructure artifacts begin being generated in read-only mode alongside v1 operations."
+    },
+
+    "mode_2_hybrid": {
+      "label": "Hybrid Mode — Framework v1 + v2 Infrastructure (S322–S329)",
+      "description": "Framework v2 infrastructure artifacts (Registry, Scan Artifact, Delta Ledger, 4 reports) are generated at every session boundary — but Framework v1 boards continue to operate unchanged. v2 artifacts are read-only and advisory. Agents reference v2 data for better decisions but are not required to use it. Governance guard Rules 6-8 are in shadow mode (log, don't block).",
+      "active_components": [
+        "Framework v1: All 8 boards still authoritative",
+        "Framework v2: Registry (auto-generated T0/Tend), Scan Pipeline (runs at T0), Delta Engine (T0 classification, advisory only), 4 Reports (generated alongside v1 reports)"
+      ],
+      "v2_artifacts_generated": [
+        "CANONICAL_ITEM_REGISTRY.json — auto-generated at session boundaries",
+        "CERTIFICATION_SCAN_ARTIFACT — produced by pre-flight pipeline",
+        "DELTA_LEDGER.json — advisory delta classifications",
+        "4 standard v2 reports (DASHBOARD, SUMMARY, QUALITY_VERDICT, CERTIFICATION_RESULTS)"
+      ],
+      "v1_integrity": "Zero impact on Framework v1 operations. v2 infrastructure operates purely in read-only append mode — it reads pack files, generates artifacts, writes to new report files. No existing workflow is modified.",
+      "duration": "8 sessions (S322–S329)",
+      "decision_checkpoint": "S330: Independent audit confirms: (a) Registry compound keys resolve to correct items (0 discrepancies vs. within-object extraction), (b) pre-flight scan pipeline catches all known defect classes with <5% false-positive rate, (c) delta ledger hash stability confirmed across 2+ sessions. If ALL PASS → authorize Phase 2 (mode transition)."
+    },
+
+    "mode_3_shadow": {
+      "label": "Shadow Mode — Framework v2 Parallel (S331–S339)",
+      "description": "Framework v2 boards begin operating in parallel with Framework v1 boards. Quality Board runs 3-agent unified review alongside the 6 existing review boards. Governance Board runs shadow decisions (reads both v1 and v2 outputs, produces decisions, does not block current flow). Certification Board runs governance-sufficiency review (does not overrule v1 Certification Board). Delta review routes items to boards (advisory routing — v1 boards still review all items).",
+      "active_components": [
+        "Framework v1: All 8 boards still authoritative for certification decisions",
+        "Framework v2: Quality Board (3 agents, advisory verdict), Governance Board (shadow mode only), Certification Board (governance-sufficiency review, advisory only), Delta Engine (advisory routing, v1 boards override)"
+      ],
+      "validation_gate": "Dual-run validation: 3 certification waves where Quality Board runs in parallel with existing boards. Same items, same agents, comparison of findings. Must achieve >95% agreement. If Quality Board misses any DL-008/DL-030 class defect that current boards catch → fix prompts and re-validate.",
+      "governance_integration": "Governance guard Rules 6-8 go LIVE in WARN mode (log violations, don't block writes). Shadow deployment for 3 waves before rules become authoritative HARD_BLOCK.",
+      "duration": "9 sessions (S331–S339)",
+      "decision_checkpoint": "S340: Independent audit confirms: (a) Quality Board verdicts match current multi-board verdicts >95%, (b) delta review correctly classifies items (0 false-negative 'no_change' on genuinely changed items), (c) Governance Board shadow decisions match current gates 100%, (d) governance guard Rules 6-8 false-positive rate <5%. If ALL PASS → activate Framework v2 as authoritative."
+    },
+
+    "mode_4_v2_active": {
+      "label": "Framework v2 Active (S341+)",
+      "description": "Framework v2 is the authoritative certification architecture. Framework v1 boards are retired. 4-board model is active. Readiness Gate Engine mediates all state transitions. Delta review is authoritative — unchanged items skip review. 4 reports per session. Governance guard Rules 6-8 are HARD_BLOCK.",
+      "active_components": [
+        "Framework v2: Registry Board (auto-generated), Quality Board (3 agents), Governance Board (1 agent, authoritative), Certification Board (1 agent, governance-sufficiency review)",
+        "Framework v1: Retired — boards 1-8 deactivated. Legacy reports archived."
+      ],
+      "transition_actions": [
+        "Retire Framework v1 boards 1-8 (Technical, DQS, EQS, UIQS, Learner Safety, QA Review, Readiness Review, Launch Board)",
+        "Activate Governance guard Rules 6-8 as HARD_BLOCK",
+        "Enforce 4-report-per-session standard (soft cap 8 → hard cap 6)",
+        "Activate session-exclusive file lock protocol (prevent DL-019 concurrent writes)",
+        "Enter continuous improvement cycle (Phase 3: metrics tracking, false-positive monitoring, methodology refinement)"
+      ],
+      "post_transition": "S350: Full operational validation across 5 certification waves. Confirm: (a) defect escape rate <1%, (b) FP hash mismatch rate <2%, (c) agents per wave ≤7, (d) reports per session ≤6, (e) 0 items incorrectly classified NO_CHANGE, (f) delivery pool 0 known-defective QIDs."
+    }
+  },
+
+  "phase_milestones": {
+    "description": "Concrete milestones tied to the S201 Framework v2 Vision transition phases.",
+
+    "phase_1_foundation": {
+      "sessions": "S322–S329 (8 sessions)",
+      "deliverables": [
+        {
+          "milestone": "P1.1 — Compound-Key Registry Implementation",
+          "sessions": "S322–S324 (3 sessions)",
+          "description": "Build MASTER_QUESTION_REGISTRY.md with within-object Function constructor parse. Generate template family map for all 2,500 items. Implement compound key field schema. Validate: certified count matches dual-verified count (0 discrepancy), registry hash stable across 2 passes.",
+          "depends_on": "S321 IDENTITY_SCHEMA_V2 + CANONICAL_REGISTRY_SPEC"
+        },
+        {
+          "milestone": "P1.2 — Pre-Flight Gate Implementation (Gates 0–2)",
+          "sessions": "S325–S327 (3 sessions)",
+          "description": "Implement Gate 0 JSON Integrity (parse all packs, field presence, corruption detection). Implement Gate 1 Structural Scan (DL-008, DL-026, DL-016 automated detection). Implement Gate 2 Content Scan (DL-013 boilerplate, EV3 principle citation). Add governance guard Rules 6 and 7.",
+          "depends_on": "S321 GATE_NEG1_SPEC + SCAN_PIPELINE_SPEC"
+        },
+        {
+          "milestone": "P1.3 — Delta Ledger Implementation",
+          "sessions": "S328–S329 (2 sessions)",
+          "description": "Implement SHA-256 content hashing on canonical JSON serialization. Generate initial DELTA_LEDGER.json for all 2,500 items. Re-extract and re-hash all 2,500 items via independent second pass — 0 mismatches required. Cross-validate 5% sample with manual field extraction.",
+          "depends_on": "S321 DELTA_ENGINE_SPEC"
+        }
+      ],
+      "closeout_session": "S330 — Phase 1 Closeout Audit",
+      "closeout_criteria": [
+        "Registry compound keys resolve to correct items with 0 discrepancy",
+        "Pre-flight gate catches all known defect classes with <5% false-positive rate",
+        "Delta ledger hash stability confirmed across 2+ independent passes",
+        "All v2 artifacts are read-only — 0 certification actions, 0 content modifications, 0 pack-file writes"
+      ]
+    },
+
+    "phase_2_consolidation": {
+      "sessions": "S331–S339 (9 sessions)",
+      "deliverables": [
+        {
+          "milestone": "P2.1 — Quality Board Consolidation",
+          "sessions": "S331–S336 (6 sessions)",
+          "description": "Merge Technical + DQS + EQS + Learner Safety (content) + QA (structural) into 3-agent Quality Board. Run 3 dual-run certification waves: Quality Board in parallel with existing boards. Verify agreement >95%. Adjudicate discrepancies. Retire boards 1-6 after 3 successful waves.",
+          "depends_on": "S321 READINESS_ENGINE_SPEC + S201 Quality Board design"
+        },
+        {
+          "milestone": "P2.2 — Delta Review Activation",
+          "sessions": "S333–S336 (parallel with P2.1)",
+          "description": "Integrate delta pre-flight into session startup protocol (AGENTS.md §9 updated). Classify items at session T0. Quality Board only reviews items routed to non-skip change types. Dry-run alongside full review on 1 certification wave — compare findings.",
+          "depends_on": "S321 DELTA_ENGINE_SPEC + Phase 1 Delta Ledger"
+        },
+        {
+          "milestone": "P2.3 — Governance Board Shadow Mode + Rules 6-8 Shadow Deployment",
+          "sessions": "S337–S339 (3 sessions)",
+          "description": "Implement GOV-AUTO-01 through GOV-AUTO-10 automated checks. Run Governance Board in shadow mode for 3 sessions. Validate decisions match current Readiness + Launch board decisions 100%. Deploy governance guard Rules 6-8 in WARN mode.",
+          "depends_on": "S321 READINESS_ENGINE_SPEC + SCAN_PIPELINE_SPEC"
+        }
+      ],
+      "closeout_session": "S340 — Phase 2 Closeout Audit + Authorization Decision",
+      "closeout_criteria": [
+        "Quality Board verdicts match current multi-board verdicts >95%",
+        "Delta review correctly classifies items (0 false-negative NO_CHANGE on genuinely changed items)",
+        "Governance Board shadow decisions match current gates 100%",
+        "Governance guard Rules 6-8 false-positive rate <5%"
+      ]
+    },
+
+    "phase_3_optimization": {
+      "sessions": "S341–S350 (10 sessions + continuous improvement)",
+      "deliverables": [
+        {
+          "milestone": "P3.1 — Reporting Consolidation",
+          "sessions": "S341–S343 (3 sessions)",
+          "description": "Merge all dashboard variants into single DASHBOARD.json per session. Eliminate agent-standalone outputs (embed into Quality Board verdict). Standardize file naming to SESSIONXXX_ prefix. Target: ≤4 files per non-certification session, ≤6 per certification session.",
+          "depends_on": "S321 REPORTING_V2_SPEC"
+        },
+        {
+          "milestone": "P3.2 — Advanced Pre-Flight Gates 3–4",
+          "sessions": "S344–S347 (4 sessions)",
+          "description": "Implement Gate 3 Identity Reconciliation + Gate 4 Calculation Validation (full DL-030 Tier 1 + Tier 3 + DL-031).",
+          "depends_on": "S321 SCAN_PIPELINE_SPEC"
+        },
+        {
+          "milestone": "P3.3 — Certification Board Refocus + Rule 8 + Session Lock Protocol",
+          "sessions": "S348–S350 (3 sessions)",
+          "description": "Refocus Certification Board to governance-sufficiency review. Add governance guard Rule 8 (Template Boilerplate Prohibition). Implement session-exclusive file lock protocol.",
+          "depends_on": "S321 READINESS_ENGINE_SPEC + S201 MR-03"
+        }
+      ],
+      "closeout_session": "S350 — Full Operational Validation",
+      "closeout_criteria": [
+        "Defect escape rate <1% across 5 certification waves",
+        "FP hash mismatch rate <2%",
+        "Agents per certification wave ≤7",
+        "Reports per session ≤6",
+        "Wall clock per wave ≤8 hours",
+        "0 items incorrectly classified NO_CHANGE after 3 waves"
+      ]
+    }
+  },
+
+  "reversibility_plan": {
+    "phase_1_rollback": {
+      "trigger": "Compound key registry has >0 discrepancies vs. within-object extraction, OR pre-flight gate false-positive rate >5%, OR delta ledger hash instability across passes.",
+      "action": "Disable v2 artifact generation. Framework v1 continues operating unchanged. v2 infrastructure scripts archived. Root cause analysis. Fix methodology. Re-run Phase 1 deliverables.",
+      "impact_on_certifications": "Zero. No question_state changes during Phase 1. All v2 artifacts were read-only."
+    },
+    "phase_2_rollback": {
+      "trigger": "Quality Board agreement rate <95% after 3 dual-run waves with prompt fixes, OR delta review false-negative detected, OR Governance Board shadow decisions diverge from current gates.",
+      "action": "Deactivate Quality Board, Governance Board, and Delta Review routing. Reinstate all 8 Framework v1 boards as authoritative. Investigate failure mode. Fix methodology. Re-run dual-run validation before re-attempting transition.",
+      "impact_on_certifications": "Items certified by Framework v1 boards during Phase 2 remain Certified. v2 Quality Board verdicts were advisory only — no certification decisions were made by v2 boards. Rollback: zero impact on certified pool."
+    },
+    "phase_3_rollback": {
+      "trigger": "Reporting consolidation loses critical information, OR Gate 3-4 false-positive rate >5%, OR Certification Board governance-sufficiency review misses defects that full re-verification would have caught.",
+      "action": "Reporting: reinstate tracked metric files as-needed (legacy reports archived, not deleted). Gates 3-4: toggle to WARN-only (do not block certification). Certification Board: roll back to full evidence re-verification.",
+      "impact_on_certifications": "Items certified under Phase 3 were verified by Quality Board (same CAQS standard). Certification Board methodology change is procedural, not quality-standard. Rollback: re-verify the batch under the old methodology — if any defects found, remediate per standard workflow."
+    }
+  },
+
+  "migration_risks": {
+    "references": "SEE SESSION201_FRAMEWORK_V2_VISION.json §migration_risks — MR-01 through MR-06 are the authoritative risk catalog. This plan inherits all 6 risks and their mitigations.",
+    "additional_risks": [
+      {
+        "risk_id": "MR-07",
+        "title": "S321 specifications are insufficiently detailed for implementation — S322 agents cannot code from specs alone",
+        "severity": "MEDIUM",
+        "mitigation": "S321 specs are explicitly tagged 'implementable' in their success criteria. Each spec includes: field schemas, algorithms, integration points, performance estimates, and script references. S322 should verify spec-completeness at T0 before beginning implementation."
+      },
+      {
+        "risk_id": "MR-08",
+        "title": "Hybrid mode (S322-S329) creates confusion — agents reference v2 advisory data alongside v1 authoritative data and make conflicting decisions",
+        "severity": "LOW",
+        "mitigation": "v2 artifacts are clearly labeled as ADVISORY ONLY during Hybrid mode. Governance guard enforces: if v1 and v2 data conflict, v1 is authoritative. v2 data is informational enrichment, not decision override."
+      }
+    ]
+  },
+
+  "session_sequence_summary": {
+    "total_sessions": "20-22 (excluding S321 — this is the design session)",
+    "sessions_by_phase": {
+      "S321": "THIS SESSION — Framework v2 Foundation Design (9 JSON specs + 1 MD summary)",
+      "S322-S329": "Phase 1 Implementation — Registry, Pre-Flight Gates, Delta Ledger",
+      "S330": "Phase 1 Closeout Audit — Go/No-Go for Phase 2",
+      "S331-S339": "Phase 2 Implementation — Board Consolidation, Delta Review Activation, Governance Shadow",
+      "S340": "Phase 2 Closeout Audit — Go/No-Go for Phase 3",
+      "S341-S350": "Phase 3 Implementation — Reporting Reduction, Advanced Gates, Certification Refocus",
+      "S350+": "Continuous Improvement Cycle"
+    }
+  },
+
+  "success_criteria": {
+    "SC-BI-01": "Four operational modes defined: v1 (current), Hybrid, Shadow, v2 Active.",
+    "SC-BI-02": "Each mode has explicit active components, v1 integrity statement, and exit criteria.",
+    "SC-BI-03": "Three-phase milestone plan aligned with S201 Framework v2 Vision.",
+    "SC-BI-04": "Phase 1 (S322-S329): Foundation implementation — Registry, Pre-Flight, Delta Ledger.",
+    "SC-BI-05": "Phase 2 (S331-S339): Consolidation — Board merge, Delta review activation, Governance shadow.",
+    "SC-BI-06": "Phase 3 (S341-S350): Optimization — Reporting reduction, Advanced gates, Certification refocus.",
+    "SC-BI-07": "Decision checkpoints at S330, S340, S350 with explicit PASS/FAIL criteria.",
+    "SC-BI-08": "Full reversibility plan — each phase independently reversible, zero impact on existing certifications.",
+    "SC-BI-09": "All 6 S201 migration risks (MR-01 through MR-06) inherited and acknowledged.",
+    "SC-BI-10": "20-22 session roadmap with concrete milestones per phase.",
+    "SC-BI-11": "Specification is implementable — S322 can begin Phase 1 from this roadmap.",
+    "SC-BI-12": "0 certification actions, 0 content modifications, 0 pack-file writes."
+  }
+}

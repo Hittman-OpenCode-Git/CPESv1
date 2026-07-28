@@ -1,0 +1,62 @@
+{
+  "session": "725",
+  "agent": "L",
+  "task": "Certification Protection Audit",
+  "scope": "Read-only verification of certified pool integrity",
+  "timestamp": "2026-07-26T23:50:00Z",
+  "certified_count": 2181,
+  "certified_verified": true,
+  "certified_percentage": "87.2%",
+  "per_pack_counts": {
+    "pack_a": { "total": 500, "certified": 481, "non_certified": 19 },
+    "pack_b": { "total": 500, "certified": 500, "non_certified": 0 },
+    "pack_c": { "total": 500, "certified": 350, "non_certified": 150 },
+    "pack_d": { "total": 500, "certified": 350, "non_certified": 150 },
+    "pack_e": { "total": 500, "certified": 500, "non_certified": 0 }
+  },
+  "total_qid_count": 2500,
+  "total_qid_per_pack_verified": {
+    "pack_a": 500,
+    "pack_b": 500,
+    "pack_c": 500,
+    "pack_d": 500,
+    "pack_e": 500
+  },
+  "state_distribution": {
+    "Certified": 2181,
+    "Unprocessed": 227,
+    "Archived": 92,
+    "In_Audit": 0,
+    "Editorial_Queue": 0
+  },
+  "question_state_values_found": [
+    "Certified",
+    "Unprocessed",
+    "Archived"
+  ],
+  "unexpected_states_found": [],
+  "duplicate_qids_found": [],
+  "baselines_match": true,
+  "baselines_source": "knowledge/CURRENT_BASELINES.md §2",
+  "baselines_expected": 2181,
+  "certification_drift_detected": false,
+  "drift_details": null,
+  "verdict": "PROTECTED",
+  "verdict_rationale": "Certified count 2,181 stable across all 5 packs. All packs at 500 QIDs. Zero duplicate QuestionIDs. All question_state values are valid (Certified, Unprocessed, Archived). Per-pack breakdown matches CURRENT_BASELINES.md §2 exactly. No certification drift detected.",
+  "open_risks_from_baselines": [
+    "DL-008: 55 Pack C Certified items + 10 Pack D + 2 Pack A = 67 Certified items with non-empty EW[CC]",
+    "DL-026: 50 Pack D Section C In Audit items with empty distractor slots",
+    "DL-021: 95 Pack E Section C non-Certified items with absent distractor slots",
+    "DL-013: ~851 boilerplate fields across Packs A/C/D",
+    "DL-031: ~500 items with difficulty inflation",
+    "DL-032: 420 case items with uniform Moderate difficulty"
+  ],
+  "checks_performed": [
+    "Certified count via Select-String across all packs → 2181",
+    "Per-pack certified breakdown → matches baselines",
+    "Total QuestionID per pack → all 500",
+    "question_state value audit → only valid values present",
+    "Duplicate QuestionID scan across packs → none found",
+    "CURRENT_BASELINES.md §2 comparison → exact match"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "session": "S132",
+  "before": {
+    "sectionNameMaps": 6,
+    "patternNameMaps": 7,
+    "totalDuplicatedLines": 152,
+    "independentClassificationImplementations": { "weak": 4, "strong": 4, "improving": 5, "declining": 3 }
+  },
+  "after": {
+    "sectionNameMaps": 1,
+    "patternNameMaps": 1,
+    "remainingInlineDuplications": { "sectionNameMap": 0, "patternNameMap": 0 },
+    "unifiedClassificationThresholds": {
+      "weak": ">=5 attempts AND <60% accuracy",
+      "strong": ">=3 attempts AND >=85% accuracy",
+      "improving": ">=4 attempts AND delta >= 10",
+      "declining": ">=4 attempts AND delta <= -10"
+    }
+  },
+  "verification": {
+    "method": "Source grep confirmed via ripgrep on may-core.js",
+    "sectionNameMapSingleSource": {
+      "status": "PASS",
+      "detail": "May.SECTION_NAMES defined once at line 8-9. All 6 sections (A-F) present. Used throughout via May.SECTION_NAMES[section]. Zero remaining inline 'sectionNames = {' definitions found."
+    },
+    "patternNameMapSingleSource": {
+      "status": "PASS",
+      "detail": "May.PATTERN_NAMES defined once at lines 11-19. All 8 patterns present. Used throughout via May.PATTERN_NAMES[pattern]. Zero remaining inline 'patternNames = {' definitions found."
+    },
+    "externalFinancialReportingCount": {
+      "expected": 1,
+      "found": 1,
+      "location": "line 8 in May.SECTION_NAMES definition"
+    },
+    "classificationErrorsCount": {
+      "expected": 1,
+      "found": 1,
+      "location": "line 12 in May.PATTERN_NAMES definition"
+    },
+    "unusedInlineDuplications": 0
+  },
+  "thresholdsVerification": {
+    ">=85_accuracy_strong": {
+      "count": 7,
+      "locations": [
+        "line 1203: _generateNextBestStep — strong topic 'advance' action (>=85% AND >=3 attempts)",
+        "line 1295: _identifyLearningPatterns — topic_strength observation (>=85% AND >=3 attempts)",
+        "line 1461: _suggestFocusAreas — topic strength → maintain/extend (>=85% AND >=3 attempts)",
+        "line 3023: _generateSessionRecap — case_stretch recommendation (session-level >=85%)",
+        "line 3105: _generateWeeklyDigest — strongest topics filter (>=85% AND >=3 attempts)",
+        "line 3148: _generateWeeklyDigest — learning momentum check (>=85% AND >=3 attempts)",
+        "line 3238: _generateStudyStrategy — strongTopics filter (>=85% AND >=3 attempts)"
+      ],
+      "consistent": true,
+      "note": "Lines 3023 uses session-level mcqPct contextually; all others use unified topic-level threshold"
+    },
+    "<60_accuracy_weak": {
+      "count": 8,
+      "locations": [
+        "line 997: _greetingForQuestion — tricky topic greeting (<60%)",
+        "line 1262: _appendNextBestStep — contextual reinforcement note (<60% AND >=3 attempts)",
+        "line 1304: _identifyLearningPatterns — persistent_weakness observation (>=5 attempts AND <60%)",
+        "line 1422: _suggestFocusAreas — persistent weakness focus (>=5 attempts AND <60%)",
+        "line 3120: _generateWeeklyDigest — topics needing attention (>=5 attempts AND <60%)",
+        "line 3160: _generateWeeklyDigest — recommended weekly focus (>=5 attempts AND <60%)",
+        "line 3237: _generateStudyStrategy — weakTopics filter (>=5 attempts AND <60%)",
+        "line 6013: _hasPersistentWeakEvidence — canonical evidence gate (>=5 attempts AND <60%)"
+      ],
+      "consistent": true
+    },
+    "delta>=10_improving": {
+      "count": 6,
+      "locations": [
+        "line 1313: _identifyLearningPatterns — improving observation (>=4 attempts AND delta >=10)",
+        "line 1493: _suggestFocusAreas — improving trend suggestion (>=4 attempts AND delta >=10)",
+        "line 3004: _generateSessionRecap — progress trend 'Up' (delta >=10)",
+        "line 3089: _generateWeeklyDigest — accuracy trend 'Improving' (delta >=10)",
+        "line 3146: _generateWeeklyDigest — learning momentum (delta >=10)",
+        "line 3660: _summarizeSession — cross-session improvement note (delta >=10)"
+      ],
+      "consistent": true
+    },
+    "delta<=-10_declining": {
+      "count": 3,
+      "locations": [
+        "line 3006: _generateSessionRecap — progress trend 'Down' (delta <= -10)",
+        "line 3091: _generateWeeklyDigest — accuracy trend 'Declining' (delta <= -10)",
+        "line 3662: _summarizeSession — cross-session decline note (delta <= -10)"
+      ],
+      "consistent": true,
+      "note": "Evidence-gate level uses more conservative delta <= -15 (lines 6017-6021, _hasDecliningEvidence) per S106 §4.2"
+    }
+  },
+  "testResults": { "total": 190, "pass": 190, "fail": 0 }
+}

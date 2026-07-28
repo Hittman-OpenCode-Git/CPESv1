@@ -1,0 +1,97 @@
+{
+  "session": "706",
+  "timestamp": "2026-07-25T00:00:00Z",
+  "agent": "Agent B",
+  "item": {
+    "qid": "P1-B-001",
+    "pack": "pack_a_corrected.js",
+    "lines_content_block": "3820-3849",
+    "lines_metadata_block": "3853-3867",
+    "topic": "B.001 mission to tactical planning linkage",
+    "stem": "Riverview is translating a five-year strategy into next-quarter departmental plans. Which response is most appropriate?",
+    "choices": {
+      "A": "Eliminate nonfinancial goals from planning",
+      "B": "Use only last year actual spending as the strategic plan",
+      "C": "Prepare departmental budgets without reference to strategy",
+      "D": "Align tactical plans and budgets with strategic objectives and measurable performance targets"
+    },
+    "correct_choice": "D",
+    "explanation_correct": "Planning connects long-term strategy to operational budgets, responsibility assignments, and measurable targets.",
+    "state_before": "Editorial Queue"
+  },
+  "correct_choice_verification": {
+    "stored_correct_choice": "D",
+    "independent_verdict": "ALL_AGREE",
+    "rationale": "Choice D describes the cascade from strategy to tactical plans and budgets with measurable targets, which is the correct linkage under planning frameworks. Choices A, B, and C each describe a broken or absent strategy-to-operations connection."
+  },
+  "explanation_wrong_field_status": {
+    "A": {
+      "present": true,
+      "empty": false,
+      "content_summary": "Explains why eliminating nonfinancial goals is wrong — quality, customer satisfaction, and employee development are essential components of a balanced strategic performance framework.",
+      "topic_aligned": true,
+      "alignment_note": "Describes P1-B-001's own topic (mission to tactical planning linkage), not a shifted topic."
+    },
+    "B": {
+      "present": true,
+      "empty": true,
+      "content_summary": "EMPTY — distractor slot for Choice B is present but empty (\"\"). CorrectChoice is D, so EW_B is a non-CC distractor position.",
+      "topic_aligned": "N/A",
+      "alignment_note": "DL-026 pattern: empty distractor ExplanationWrong field at a non-CorrectChoice position. This is a pedagogical quality item for future remediation but not a certification blocker per current governance rules (QUESTION_METADATA_STANDARD.md §9.4).",
+      "distractor_choice": "B — 'Use only last year actual spending as the strategic plan'"
+    },
+    "C": {
+      "present": true,
+      "empty": false,
+      "content_summary": "Explains why preparing departmental budgets without reference to strategy is wrong — severs link between long-term objectives and short-term resource allocation. Departments may optimize locally at expense of enterprise-wide goals.",
+      "topic_aligned": true,
+      "alignment_note": "Describes P1-B-001's own topic. Choice-specific and pedagogically sound."
+    },
+    "D": {
+      "present": true,
+      "empty": true,
+      "content_summary": "EMPTY — CorrectChoice slot. Per EV8 (CAQS_v1.0.md §4.4), this slot must be empty.",
+      "topic_aligned": "N/A",
+      "alignment_note": "DL-008 CLEAN — ExplanationWrong[CorrectChoice] is empty as required."
+    }
+  },
+  "dl008_status": {
+    "status": "CLEAN",
+    "detail": "CorrectChoice is D. ExplanationWrongD is present and empty (\"\"). No DL-008 violation."
+  },
+  "dl016_shift_check": {
+    "status": "CLEAN",
+    "detail": "No DL-016 shift remains. ExplanationWrong fields (A and C) now describe P1-B-001's own topic (mission to tactical planning linkage), not P1-B-002's (top-down budgeting). Dual-block (metadata vs. content) choices and explanations are consistent with this item's own topic."
+  },
+  "dl026_empty_distractor_slot": {
+    "status": "PRESENT",
+    "slot": "ExplanationWrongB",
+    "severity": "Medium (pedagogical quality)",
+    "certification_impact": "NOT A BLOCKER",
+    "note": "EW_B is empty at a distractor position (CorrectChoice is D). This is a DL-026 quality pattern — learners who select Choice B receive no educational feedback. However, per QUESTION_METADATA_STANDARD.md §9.4 certification-blocking conditions, empty distractor slots at non-CC positions are NOT an explicit certification blocker. Only topic-mismatch and dual-block divergence block certification. This should be scheduled for future pedagogical remediation.",
+    "choice_b_text": "Use only last year actual spending as the strategic plan"
+  },
+  "topic_alignment_verification": {
+    "status": "PASS",
+    "detail": "Topic 'B.001 mission to tactical planning linkage' is consistent with stem (translating strategy into departmental plans), correct answer (align tactical plans with strategic objectives), and ExplanationWrong content (references to strategy-to-operations cascade, nonfinancial/financial balance, departmental alignment). No cross-item contamination detected."
+  },
+  "overall_certification_decision": {
+    "decision": "RECERTIFY_ALLOWED",
+    "state_before": "Editorial Queue",
+    "state_after": "Certified",
+    "rationale": [
+      "CorrectChoice = D verified by independent derivation — ALL_AGREE",
+      "DL-008 CLEAN — ExplanationWrong[CorrectChoice] is empty",
+      "DL-016 shift RESOLVED — all EW fields describe P1-B-001's own topic",
+      "Topic alignment PASS — stem, choices, CC, and explanations are internally consistent",
+      "No answer-key uncertainty",
+      "No stem/choice/explanation conflict",
+      "No governance blocker per QUESTION_METADATA_STANDARD.md §9.4"
+    ],
+    "notes": [
+      "EW_B is empty at a distractor position (DL-026 pattern). This is a pedagogical quality item for future remediation — learners who select Choice B see no feedback. However, this is NOT a certification blocker per current governance rules (§9.4). Recommend scheduling EW_B authoring in a future DL-026 remediation wave.",
+      "EW_A and EW_C are choice-specific, substantive, and topic-aligned — strong pedagogical quality for the populated distractor slots.",
+      "ExplanationCorrect is present but brief (1 sentence). It names the concept (planning linkage) but does not cite a specific framework (e.g., COSO strategic objective-setting). Per CAQS §4.3 EV3, a standard reference would strengthen the explanation but is not a hard certification blocker for this item — the concept is clearly articulated."
+    ]
+  }
+}

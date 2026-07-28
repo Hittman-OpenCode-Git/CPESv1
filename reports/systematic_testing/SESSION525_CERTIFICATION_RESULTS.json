@@ -1,0 +1,68 @@
+{
+  "session": "525",
+  "type": "CERTIFICATION_RESULTS",
+  "timestamp": "2026-07-26T14:00:00Z",
+  "wave": 3,
+  "target": "MIGRATED_CASE_BASE_D / scored_cases4.js / CASE-D7 through CASE-D9",
+  "results": {
+    "items_certified": 15,
+    "items_total": 15,
+    "cases_certified": 3,
+    "cases_total": 3,
+    "certification_rate": "100%"
+  },
+  "caqs_dimensions": {
+    "D1_answer_key_accuracy": {
+      "status": "PASS",
+      "details": "2 numeric items independently recalculated (D8-Q2: 18,000+3,000-2,500=18,500 ✓; D9-Q3: 520,000-(0.11×4,000,000)=80,000 ✓). All 13 conceptual items verified against authoritative standards (ASC 321, ASC 606, ASC 320, ASC 855, ASC 323, IMA CMA Part 1 Sections B and C)."
+    },
+    "D2_explanation_sufficiency": {
+      "status": "PASS",
+      "details": "All 15 explanations expanded from thin (104-239 chars) to comprehensive (1,148-1,552 chars). Each includes: accounting principle or framework named by specific ASC/cost accounting citation, formula/derivation shown step by step, business interpretation in scenario context, common CMA exam trap identified."
+    },
+    "D3_distractor_rationale": {
+      "status": "PASS",
+      "details": "All 9 select/multi items received choice-specific distractor explanations identifying specific misconceptions and contrasting each wrong choice with the correct approach."
+    },
+    "D4_reference_alignment": {
+      "status": "PASS",
+      "details": "Domain-appropriate citations: ASC 321/606/320/855/323 for Section A financial reporting (D7); IMA CMA Section B framework, master budget sequence, time series/forecasting standards (D8); IMA CMA Section C, responsibility accounting, residual income formula, segment reporting, TQM framework (D9)."
+    },
+    "D5_case_realism": {
+      "status": "PASS",
+      "details": "Named companies with plausible business contexts: Granville Instruments (financial instruments), Hawkridge Home Goods (retail forecasting), Inglewood Precision Tools (manufacturing TQM). Scenarios describe realistic management accountant situations."
+    },
+    "D6_metadata_readiness": {
+      "status": "PASS",
+      "details": "CognitiveLevel added to all 15 items (Understand: 8, Apply: 2, Analyze: 1, Remember: 4). Difficulty recalibrated per Wave 2 standard (select/fill → Moderate-Easy/2; numeric → Moderate/3). ProductionStatus → Production. Confidence → 95. RevisionHistory updated."
+    }
+  },
+  "independent_validation": {
+    "D8-Q2": {"formula": "18000+3000-2500", "result": 18500, "stored": "18500", "match": true},
+    "D9-Q3": {"formula": "520000-(0.11*4000000)", "result": 80000, "stored": "80000", "match": true}
+  },
+  "cross_wave_consistency": {
+    "explanation_range": "1,148-1,552 chars (consistent with Wave 2: 804-1,394 chars)",
+    "difficulty_pattern": "Select/Fill → Moderate-Easy (2); Numeric/Apply → Moderate (3) — matches Wave 2 standard",
+    "cognitive_level_pattern": "Apply for numeric, Understand for select/multi, Remember for definition-fill — matches Wave 2",
+    "citation_quality": "Consistent authoritative citation density across all three waves",
+    "drift_detected": "NONE"
+  },
+  "governance": {
+    "pre_flight": "20/20 PASS",
+    "post_flight": "20/20 PASS",
+    "protected_file_hashes": "UNCHANGED (12/12 non-target files verified at T0 and Tend)",
+    "non_target_files_modified": 0,
+    "scoring_drift": "NONE",
+    "answer_key_drift": "NONE — all 15 Correct values verified unchanged",
+    "exhibit_changes": "NONE",
+    "prompt_changes": "NONE",
+    "choices_changes": "NONE",
+    "backup": "scored_cases4.js.bak-20260726135005 (463,603 bytes)"
+  },
+  "migrated_case_base_d_progress": {
+    "before": "30/75 (40%)",
+    "after": "45/75 (60%)",
+    "remaining": "30/75 — D10 through D15"
+  }
+}

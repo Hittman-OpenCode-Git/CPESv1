@@ -1,0 +1,105 @@
+{
+  "session": "53",
+  "title": "Case Certification Framework Reconciliation",
+  "date": "2026-07-28",
+  "premise": "Session 52 found two contradictory truths: 400/400 items Certified (existing governance) vs 0/75 cases Certified (Session 52 rubric). This session determines whether the Session 52 framework should become the governing standard.",
+  "frameworks_evaluated": {
+    "framework_1_existing_governance": {
+      "name": "Existing Governance — question_state gate",
+      "source": "CAQS_v1.0.md §1.7.1, governance-guard.js Rules 1-9",
+      "gate": "question_state === 'Certified'",
+      "result_for_75_cases": "400/400 items PASS — 100% Certified",
+      "what_it_checks": "Structural defects (DL-008, DL-021, DL-025/026), answer-key correctness (DL-030), explanation presence",
+      "what_it_does_not_check": "Difficulty calibration, exhibit count, cognitive progression, metadata completeness beyond required fields, scenario quality",
+      "enforcement": "Automated (governance-guard.js Rules 1-9 + ExplanationValidator.js)"
+    },
+    "framework_2_certification_rubrics": {
+      "name": "CERTIFICATION_RUBRICS.md Case-Study Rubric (§2)",
+      "source": "knowledge/CERTIFICATION_RUBRICS.md §2 (Session 64, 2026-07-24)",
+      "gate": "D1≥5 + D5≥4 + D2/D3/D4/D6≥4 + total≥24/30",
+      "result_for_75_cases": "Not yet evaluated against this rubric — requires per-case dimension scoring",
+      "what_it_checks": "Calculation accuracy (D1), scenario quality (D2), rubric clarity (D3), metadata (D4), explanation quality (D5), integration readiness (D6)",
+      "what_it_does_not_check": "CAQS 100-point rubric (separate quality instrument), Gold Standard Checklist (aspirational), difficulty distribution targets (CAQS §6.1)",
+      "enforcement": "Manual — rubric applied by auditor during certification sessions. Defect-class gates map to dimension caps."
+    },
+    "framework_3_session52_quality": {
+      "name": "Session 52 6-Dimension Quality Scorecard",
+      "source": "Session 52 audit criteria (this session, 2026-07-28)",
+      "gate": "Average Score ≥ 85/100 across 6 dimensions + No Critical Issues + No Data Errors",
+      "result_for_75_cases": "0/75 CERTIFIED, 75 CONDITIONAL",
+      "what_it_checks": "Blueprint alignment (BP), data accuracy (DA), difficulty calibration (DC), quality & realism (QR), section applicability (SA), analyze/evaluate validity (AV)",
+      "what_it_does_not_check": "Defect gates (DL-008, DL-021, etc.) — assumes those are already resolved",
+      "enforcement": "Manual — not implemented in any tool or guard"
+    }
+  },
+  "reconciliation_findings": [
+    {
+      "finding": "question_state is the sole authoritative gate for learner-pool entry",
+      "evidence": "CAQS §1.7.1: 'Learner-pool eligibility is gated by question_state = Certified. Only Certified questions are available for learner practice sessions. All other states are excluded.' Governance-guard.js Rule 1 enforces question_state changes are tracked.",
+      "implication": "Any additional gate must either operate through question_state or coexist as a quality metric. The existing governance framework does not recognize a separate case-level certification state."
+    },
+    {
+      "finding": "CERTIFICATION_RUBRICS.md IS the authoritative certification gating instrument",
+      "evidence": "Same document (v1.0, 2026-07-24), same authority (PROJECT_CONSTITUTION.md), same purpose statement as the operational MCQ rubric. The two rubrics (MCQ §1 + Case-Study §2) form a single certification standard.",
+      "implication": "Session 52's self-designed 6-dimension scorecard is NOT the authoritative gating instrument. CERTIFICATION_RUBRICS.md §2 is."
+    },
+    {
+      "finding": "The rubric and Session 52 scorecard gate on DIFFERENT THINGS",
+      "evidence": "CERTIFICATION_RUBRICS.md D4 difficulty gate checks field PRESENCE ('DifficultyScore present at case level') — not calibration accuracy. Session 52 checked difficulty CALIBRATION (53.5% Difficult vs. 25% target). The rubric's D4 minimum is 4; Session 52's DC minimum was 85/100. These are measuring different dimensions.",
+      "implication": "Session 52's calibrated-difficulty criterion is a RECOMMENDED quality improvement — not a rubric-enforced certification blocker."
+    },
+    {
+      "finding": "CAQS §1.8 'Exam-Ready' is a higher bar than certification",
+      "evidence": "CAQS §1.8 requires 90/100 on the full CAQS rubric + Gold Standard Checklist + zero errors + independent review. CERTIFICATION_RUBRICS.md certification requires 24/30 (80%) on a simpler 6-dimension scale. They are different instruments.",
+      "implication": "Session 52's ≥85/100 threshold is closer to 'Exam-Ready' than to 'Certified.' Cases can be Certified (rubric: 24/30) without being Exam-Ready (CAQS rubric: 90/100)."
+    },
+    {
+      "finding": "The most impactful rubric-gated blockers are cognitive progression and stakeholder naming",
+      "evidence": "48 cases have unordered cognitive progression (D6=3, below minimum 4). 21 cases have 'Management' as stakeholder (D2=3, below minimum 4). Some subset of 27 items have thin explanations (D5=3, below minimum 4 for containing cases). Zero cases have D1 issues (all calculations verified).",
+      "implication": "Under CERTIFICATION_RUBRICS.md, a substantial number of cases WOULD fail certification — but not because of the issues Session 52 weighted most heavily (difficulty calibration, exhibit count, metadata completeness)."
+    },
+    {
+      "finding": "Several Session 52 'failures' are rubric-irrelevant",
+      "evidence": "Standards board analysis of 8 Session 52 failure categories: 3 BLOCK under rubric (cognitive progression, generic stakeholders, thin explanations), 5 WARN (Missing CompanyName, Draft ProductionStatus, ExhibitCount<2, uniform difficulty, CompanyName D4). Difficulty distribution, exhibit count, and metadata completeness — Session 52's heaviest-weighted dimensions — do not cap any rubric dimension below the certification minimum.",
+      "implication": "Session 52's scorecard scored cases on dimensions the rubric doesn't gate. The 0/75 result is an artifact of the scoring instrument, not a reflection of rubric-measured quality."
+    }
+  ],
+  "reconciled_inventory_estimate": {
+    "under_current_governance_question_state": {
+      "certified": 75,
+      "conditional": 0,
+      "failed": 0,
+      "note": "All 400 items carry question_state: 'Certified' — all 75 cases in learner pool"
+    },
+    "under_certification_rubric_case_study": {
+      "certified_estimate": "Unknown — requires per-case dimension scoring. Likely clusters: ~25-35 cases would CERTIFY (31 Production cases with proper progression + named stakeholders), ~40-50 would NEED REVISION (1-2 dimension gaps), ~0 would RETIRE/HOLD (no D1/D3=1 findings)",
+      "conditional_estimate": "Remaining cases (those with D6=3 or D2=3 or D5=3)",
+      "failed_estimate": 0,
+      "note": "No case has D1=1 (wrong answer) or D3=1 (unscorable). Zero cases would be rejected. The gap is revision-eligible, not rejection-worthy."
+    },
+    "under_session52_quality_scorecard": {
+      "certified": 0,
+      "conditional": 75,
+      "failed": 0,
+      "note": "The ≥85/100 threshold + 6-dimension scoring measured calibration/quality dimensions the rubric doesn't gate"
+    }
+  },
+  "recommendation": {
+    "choice": "OPTION C — Hybrid Approach",
+    "primary_gate": "CERTIFICATION_RUBRICS.md Case-Study Rubric (§2) — authoritative gating instrument for learner-pool entry",
+    "quality_framework": "Session 52 6-dimension quality scorecard — complementary quality improvement guidance",
+    "rationale": [
+      "CERTIFICATION_RUBRICS.md is already the documented standard (v1.0, Session 64, same authority as the MCQ rubric that governs all 2,317 Certified MCQs). It gates on substantively meaningful dimensions (correctness, scenario quality, explanation quality, integration) with clear thresholds.",
+      "Session 52's scorecard gates on dimensions the rubric doesn't (difficulty distribution, exhibit count minimums, metadata completeness beyond required fields). These are quality improvements, not learner-safety gates. Scoring cases as CONDITIONAL for calibration issues conflates pedagogical refinement with certification readiness.",
+      "The rubric's D6 (cognitive progression) and D2 (named stakeholder) gates DO catch structural quality issues that Session 52 also found. These are the right operational gates. The rubric's D4 (metadata) and difficulty-handling is appropriately calibrated — it checks field presence, not target-distribution alignment.",
+      "This hybrid aligns with the existing architecture: governance-guard.js enforces structural rules (DL-008, DL-026, etc.), CERTIFICATION_RUBRICS.md enforces certification dimensions, and CAQS §6.1-6.2 provide quality targets for improvement sweeps."
+    ],
+    "implementation": {
+      "step_1": "Acknowledge CERTIFICATION_RUBRICS.md §2 as the authoritative case-study certification gating instrument",
+      "step_2": "Reclassify all 75 cases under the rubric — not the Session 52 scorecard",
+      "step_3": "Fix rubric-blocking defects: cognitive progression (48 cases → re-order items), generic stakeholders (21 cases → name specific role), thin explanations (<capacity-dependent cases → expand)",
+      "step_4": "Treat Session 52 findings on difficulty calibration, exhibit count, and metadata completeness as QUALITY IMPROVEMENT TARGETS — not certification blockers",
+      "step_5": "Deploy governance-guard Rule monitoring for rubric dimension violations where possible (D1 correctness, D5 explanation presence)"
+    }
+  }
+}

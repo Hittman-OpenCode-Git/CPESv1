@@ -1,0 +1,68 @@
+{
+  "session": "S814",
+  "board": "Agent Group E-H — DL-035 Investigation",
+  "condition": "C4 — Log DL-035 to DEFECT_LIBRARY.md",
+  "timestamp": "2026-07-27T11:35:00Z",
+  "status": "LOGGED",
+
+  "formalization": {
+    "defect_id": "DL-035",
+    "title": "Governance Guard DL-026 Coverage Gap (39 Certified Domain F Items)",
+    "class": "Structural / Governance",
+    "severity": "HIGH",
+    "defect_library_entry_location": "knowledge/DEFECT_LIBRARY.md, before Template for New Entries",
+    "status_in_library": "Open — Rule 6 deployed (S814), content remediation pending (S816-S818)"
+  },
+
+  "scope": {
+    "total_items": 39,
+    "pack_c_domain_f": {
+      "count": 28,
+      "qids": [
+        "P1-FC-001", "P1-FC-006", "P1-FC-007", "P1-FC-010", "P1-FC-015",
+        "P1-FC-020", "P1-FC-025", "P1-FC-026", "P1-FC-031", "P1-FC-036",
+        "P1-FC-043", "P1-FC-048", "P1-FC-053", "P1-FC-058", "P1-FC-063",
+        "P1-FC-068", "P1-FC-073", "P1-FC-074", "P1-FC-075", "P1-FD-001",
+        "P1-FD-006", "P1-FD-011", "P1-FD-016", "P1-FD-021", "P1-FD-026",
+        "P1-FD-027", "P1-FD-030", "P1-FD-031"
+      ],
+      "certification_event": "S853 WAVE_A, Batch B3"
+    },
+    "pack_d_domain_f": {
+      "count": 11,
+      "qids": [
+        "P1-FD-033", "P1-FD-034", "P1-FD-043", "P1-FD-049", "P1-FD-054",
+        "P1-FD-059", "P1-FD-064", "P1-FD-069", "P1-FD-073", "P1-FD-074",
+        "P1-FD-075"
+      ],
+      "certification_event": "S853 WAVE_A, Batch B4"
+    },
+    "all_question_state": "Certified",
+    "empty_ew_fields_estimate": 117,
+    "learner_pool_exposure": "ACTIVE — 39 items in the 2,298-item Certified delivery pool",
+    "educational_impact": "~30%+ of wrong-answer selections on these items produce no instructional feedback"
+  },
+
+  "root_cause": {
+    "primary": "Governance guard coverage gap — no Rule 6 for DL-026 enforcement at time of S853 certification",
+    "secondary": "CURRENT_BASELINES.md stale status — pre-S853 DL-026 count of 0 for Domain F was accurate pre-certification",
+    "tertiary": "S853.json pre-flight checks only tested DL-008, not DL-026"
+  },
+
+  "relationship_to_DL026": {
+    "DL026_role": "Parent defect class (1,005 items pool-wide with empty non-CC EW slots)",
+    "DL035_role": "Child defect — specific governance instance where 39 Certified items passed certification",
+    "distinction": "DL-026 documents the defect PATTERN; DL-035 documents the CERTIFICATION FAILURE"
+  },
+
+  "cross_references": {
+    "S812_repeatability_review": "Board G-L — 39 Domain F DL-026 discovered",
+    "S813_conditional_adoption": "C1/C3 conditions",
+    "S853_certification_wave": "scripts/output/session_packages/S853.json",
+    "governance_guard_rule_6": ".opencode/plugins/governance-guard.js (S814)",
+    "defect_library": "knowledge/DEFECT_LIBRARY.md — DL-035 entry appended"
+  },
+
+  "verdict": "PASS — DL-035 formalized. Root cause documented. Remediation path defined.",
+  "recommendation": "APPROVE C4-A (DL-035 logged). Proceed to S816-S818 for content remediation."
+}

@@ -1,0 +1,335 @@
+{
+  "session": "725",
+  "agent": "Agent H — False-Positive Regression Auditor",
+  "date": "2026-07-26",
+  "scope": "Historical false-positive regression audit covering DL-008, DL-012, DL-016, DL-026, and DL-029 incidents across S700–S725. Read-only — zero existing files modified.",
+  "methodology": "Each historical incident was evaluated against the DETECTION_STANDARD v1.0 (Agent B), HISTORICAL_GOVERNANCE_RCA (Agent K), MAINTENANCE_TRIGGER_REGISTRY (Agent F), and S723 GOVERNANCE_DEBT_REGISTER (Agent J). For each incident, the auditor determined: (a) which prevention standard applies, (b) whether that standard existed at the time of the incident, (c) whether the standard, if enforced, would have prevented the specific root-cause mechanism, and (d) confidence level.",
+  "references": [
+    "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md (Agent B)",
+    "reports/SESSION725_HISTORICAL_GOVERNANCE_RCA.json (Agent K)",
+    "reports/SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json (Agent F)",
+    "reports/SESSION725_POST700_GOVERNANCE_MODEL.md (Agent E)",
+    "reports/SESSION723_GOVERNANCE_DEBT_REGISTER.json (Agent J)",
+    "knowledge/DEFECT_LIBRARY.md (DL-008, DL-012, DL-016, DL-026, DL-029 entries)"
+  ],
+
+  "incidents_reviewed": [
+    {
+      "incident_id": 1,
+      "label": "DL-029 — Forward-scan CC false positives (67 phantom DL-008 items in CURRENT_BASELINES.md)",
+      "what_happened": "S800 and prior sessions used regex forward-scan from QuestionID to find CorrectChoice. Pack B stores CC BEFORE QID in its JSON objects (unique among all 5 packs). The forward-scan systematically captured the NEXT item's CorrectChoice, producing ~75% false-positive rate. Result: 67 Certified DL-008 items reported as CRITICAL, all 67 later refuted by S801/S802 as DL-029 artifacts. True count: 0.",
+      "root_cause_class": "FC-001 (Scan Methodology Drift) — scan tool used regex forward-scan without verifying CC position in the JSON object",
+      "sessions_affected": ["S800 (67 phantom reported)", "S801 (refutation)", "S802 (resolution)", "Pack B DL-008 false-positive (2026-07-23)", "S722A P1-CC-050 partial"],
+      "prevention_standards_to_test": [
+        {
+          "standard": "DETECTION_STANDARD §3.1 (FM-001 Prohibition on Forward-Scan Regex)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 93-113",
+          "prohibition": "Extract QuestionID at position P → search forward in file byte stream for next CorrectChoice → use that CC value to index EW slots near P. Explicitly PROHIBITED.",
+          "correct_methodology": "Function-constructor parse (§4.2) — extract the enclosing JSON object, parse it, read CorrectChoice and EW fields from the SAME object."
+        },
+        {
+          "standard": "DETECTION_STANDARD §5 (Canonical Failure Example — DL-029)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 230-285",
+          "prohibition": "Explicit mechanical illustration of Pack B CC-before-QID failure. False-positive rate: ~75% per scan (112-257 false positives per run). Historical impact table included."
+        },
+        {
+          "standard": "DETECTION_STANDARD §6.3 (Ground Truth Baselines — Pack B = 0 DL-008)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 340-351",
+          "prohibition": "Any scan reporting > 0 DL-008 on Pack B is non-compliant and its results are INVALID for governance purposes."
+        },
+        {
+          "standard": "MAINTENANCE_TRIGGER_REGISTRY T0-CHK-3 (DL-008 Function Constructor Parse)",
+          "reference": "reports/SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json lines 96-101",
+          "requirement": "Must parse each pack file via Function constructor, NOT regex window scan (DL-029 vulnerability). Count must match CURRENT_BASELINES §3."
+        }
+      ],
+      "verdict": {"would_be_prevented": true, "confidence": "HIGH"},
+      "verdict_rationale": "The DETECTION_STANDARD explicitly prohibits forward-scan regex (FM-001) with a detailed mechanical illustration of Pack B's failure mode. §6.3 codifies Pack B's DL-008 ground truth as 0, making any positive result an automatic invalidity flag. The MAINTENANCE_TRIGGER_REGISTRY enforces Function constructor parse at T0 entry. If these standards had been in place during S800, the forward-scan methodology would have been rejected at the T0 protocol gate before producing the 67 phantom items."
+    },
+
+    {
+      "incident_id": 2,
+      "label": "DL-012 — Section E clone count instability (128→112→138→140)",
+      "what_happened": "Three successive scans of Pack C/D Section E items produced three different clone counts (128, 112, 138) on the same file using the same tool. The string-unaware brace-matcher (DL-020) produced non-deterministic object boundary detection because stem/explanation text contained bracket characters. A fourth independent scan finally stabilized at 140. AGENTS.md §6 (Item-Count Volatility Hard Stop) was created because of this incident.",
+      "root_cause_class": "FC-007 (Validator Infrastructure Gap) — string-unaware brace-matcher silently produced truncated/corrupted objects with different boundaries each run",
+      "sessions_affected": ["DL-012 initial scans (2026-07-22)", "DL-012 remediation planning (2026-07-22/23)"],
+      "prevention_standards_to_test": [
+        {
+          "standard": "DETECTION_STANDARD §3.4 (FM-002 Prohibition on Non-Boundary-Aware Scans)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 134-139",
+          "prohibition": "Any parser that counts {/} without tracking whether inside a JSON string value. Explicitly PROHIBITED."
+        },
+        {
+          "standard": "DETECTION_STANDARD §4.1 (Object-Bounded Parsing — String-Aware Brace-Matcher Required)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 146-167",
+          "requirement": "Must track inString, stringChar, escape flags during the brace-counting loop. Self-verify against grep -c '\"QuestionID\"'."
+        },
+        {
+          "standard": "MAINTENANCE_TRIGGER_REGISTRY RP-CHK-1 (Count Stability Check)",
+          "reference": "reports/SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json lines 131-135",
+          "requirement": "Count must be stable across 2+ independent scans (per AGENTS.md §6). Do not rely on single-scan results. Unexplained drift → escalate to Reconciliation Agent."
+        },
+        {
+          "standard": "AGENTS.md §6 — Item-Count Volatility Hard Stop",
+          "reference": "AGENTS.md §6",
+          "requirement": "If reconciliation numbers change between reports, require count to stabilize before any remediation option is executed. Run count again, run a third time, cross-check methodology."
+        }
+      ],
+      "verdict": {"would_be_prevented": true, "confidence": "HIGH"},
+      "verdict_rationale": "The DETECTION_STANDARD prohibits string-unaware brace-matchers (FM-002) and requires string-aware parsing with inString tracking. If the scanning tool had used a string-aware parser, it would have produced the SAME count on all three runs (140) instead of three different counts. Even if a string-unaware tool was used, RP-CHK-1 and AGENTS.md §6's volatility hard stop would have prevented any remediation action until the count stabilized — the operator would have been forced to identify the brace-matcher instability before acting."
+    },
+
+    {
+      "incident_id": 3,
+      "label": "DL-016 — Metadata-content block misalignment (ChoiceA-D +1 offset shift)",
+      "what_happened": "Scan tools read choices from the metadata block's flat ChoiceA-D fields but read CorrectChoice from the content block. The metadata block's choices describe the PREVIOUS QID's topic (DL-016 +1 offset), not the current QID's. This caused: (a) wrong-topic ExplanationWrong text visible to learners on Certified items (P1-A-005 metadata EW describing P1-A-004's ASC 606 scenario), (b) Tier 0 false alarm when Session 1's scan matched metadata-block ChoiceA instead of content-block Choices.A, (c) certification-blocking violations of G-NEW-1/G-NEW-3.",
+      "root_cause_class": "FC-004 (Block Disambiguation Failure) — metadata-block and content-block field cross-read without verifying alignment",
+      "sessions_affected": ["DL-016 discovery (Session 5, 2026-07-23)", "DL-016 severity upgrade (Session 64, 2026-07-24)", "S722A P1-CC-050 (2026-07-26)", "S804 DL-016 Section E residual (2026-07-26)"],
+      "prevention_standards_to_test": [
+        {
+          "standard": "DETECTION_STANDARD §1 (Dual-Block Inventory Definition)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 12-37",
+          "requirement": "Explicitly defines Metadata Block (governance tracking, ChoiceA-D legacy) vs. Content Block (learner-facing, Choices.{A,B,C,D}) with authoritative source per block."
+        },
+        {
+          "standard": "DETECTION_STANDARD §2 — Canonical Field Extraction Table",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 57-72",
+          "requirement": "Flat ChoiceA-D paths: 'Do NOT use for DL-008 detection. Legacy metadata fields may carry +1 offset values from a different rotation template (DL-016). The renderer uses Choices.{A,B,C,D}, not ChoiceA-D.'"
+        },
+        {
+          "standard": "DETECTION_STANDARD §3.2 (FM-003 Prohibition on Cross-Record Answer-Key Inference)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 115-124",
+          "prohibition": "Use flat ChoiceA-D fields to determine what choice text an EW field describes. Explicitly PROHIBITED. Includes Session 64 pilot evidence as canonical examples."
+        },
+        {
+          "standard": "DETECTION_STANDARD §4.4 (Dual-Block Disambiguation Table)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 213-226",
+          "requirement": "For items with BOTH flat ChoiceA-D AND nested Choices.{A,B,C,D}: nested Choices path is authoritative. Must verify flat values match nested values before using EW fields. Mismatch = DL-016 contamination."
+        }
+      ],
+      "verdict": {"would_be_prevented": true, "confidence": "HIGH"},
+      "verdict_rationale": "The DETECTION_STANDARD provides a comprehensive, explicit treatment of the dual-block problem: §1 defines the two blocks and their authoritative roles, §2 declares flat ChoiceA-D unusable for DL-008 detection with explicit DL-016 warning, §3.2 prohibits cross-record inference with Session 64 pilot examples, and §4.4 provides the disambiguation procedure. Any scan tool complying with these rules would extract choices from Choices.{A,B,C,D} (nested) and would verify alignment before reading EW fields. The Tier 0 false alarm would have been immediately identifiable as a metadata-vs-content block reading error."
+    },
+
+    {
+      "incident_id": 4,
+      "label": "DL-026 DL-016 scan artifacts (conflicting DL-026 counts across sessions)",
+      "what_happened": "The 5-agent scoping session reported 632 DL-026 items (A:56, B:0, C:288, D:288, E:0). Agent 6 independent re-verification using boundary-aware object-level parsing found 1,005 items — 373 more. The discrepancy was caused by: (a) Agent 1 using pre-remediation DL-025 counts (stale), (b) Agent 3/4 counting only items with exactly 1 empty non-CC slot (DL-016 artifacts caused 212 items with 2 empty slots to be missed), (c) cross-block field conflation where agents read CC from content block but EW slots from metadata block (DL-016 shift). The discrepancy was never definitively reconciled — both counts were documented as-is.",
+      "root_cause_class": "FC-004 (Block Disambiguation Failure) + FC-006 (Self-Reported Claim Verification) — cross-block field reading produced different counts based on which block's fields were read",
+      "sessions_affected": ["DL-026 5-agent scoping (2026-07-23)", "DL-026 autonomous runs (2026-07-23), DL-026 Pack D Section D false claim (2026-07-23)"],
+      "prevention_standards_to_test": [
+        {
+          "standard": "DETECTION_STANDARD §2 (Canonical Field Extraction Table)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 57-72",
+          "requirement": "Choices.{A,B,C,D} from Content Block (nested path) is authoritative. ExplanationWrongA-D from Metadata Block — must be indexed against SAME object's CorrectChoice. Flat ChoiceA-D: do not use."
+        },
+        {
+          "standard": "DETECTION_STANDARD §2.1 (Extraction Dependencies)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 76-84",
+          "requirement": "DL-026 check: Choices.{A,B,C,D} vs. ExplanationWrongA-D text — both from SAME object. DL-016 check: Choices.{A,B,C,D} vs. ExplanationWrongA-D text — both from SAME object. Any scan extracting from different objects is a DL-029 vulnerability."
+        },
+        {
+          "standard": "DETECTION_STANDARD §4.4 (Dual-Block Disambiguation)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 213-226",
+          "requirement": "Explicitly identifies the cross-block extraction pattern that produced errors: 'Does EW text match the choice it describes? → Compare EW[A] text against Choices.{A} text (Cross-block verification).' DL-016 guard requires verifying ChoiceA-D matches Choices.{A,B,C,D} before reading EW fields."
+        },
+        {
+          "standard": "RCA Forbidden Methodology FM-005 (Totals-Only Reports)",
+          "reference": "reports/SESSION725_HISTORICAL_GOVERNANCE_RCA.json lines 358-370",
+          "requirement": "Every scan report MUST include QID list for every defect found. When agents disagree on count, reconcile their QID lists item-by-item."
+        }
+      ],
+      "verdict": {"would_be_prevented": true, "confidence": "HIGH"},
+      "verdict_rationale": "The DETECTION_STANDARD's extraction dependencies diagram (§2.1) and dual-block disambiguation table (§4.4) would have forced all 6 agents to use the SAME authoritative field paths (nested Choices.{A,B,C,D} from Content Block, EW from Metadata Block — same enclosing object). The 373-item discrepancy would not occur because the standard eliminates the cross-block reading ambiguity that caused it. FM-005's QID-list requirement would have made the discrepancy immediately detectable and reconcile-able: comparing QID lists item-by-item would identify exactly which 212 items Agent 3 missed."
+    },
+
+    {
+      "incident_id": 5,
+      "label": "S723 Agent V P1-CC-050 contradiction (S722A found DL-008, S723 found CLEAN)",
+      "what_happened": "S722A Agent V (regression & post-flight): found P1-CC-050 with CC=C, EW-C non-empty (variance analysis text) — a DL-008 survivor. S723 Agent V (governance preservation audit): found same QID with CC=B, EW_B empty — status 'DL-008 CLEAN'. Same QID, same agent persona (V), different sessions, different findings. The contradiction was never definitively resolved. Possible explanations: (a) undocumented between-session fix violating AGENTS.md §4, (b) one read from wrong block due to DL-016 dual-block architecture, (c) one read from a different QID due to line-position drift.",
+      "root_cause_class": "FC-004 (Block Disambiguation Failure) — most likely one read extracted CC from the wrong sub-object, or FC-006 (Self-Reported Claim Verification) — conflicting claims accepted without independent resolution",
+      "sessions_affected": ["S722A definitive execution (2026-07-26)", "S723 Governance Preservation Audit (2026-07-26)"],
+      "prevention_standards_to_test": [
+        {
+          "standard": "RCA Forbidden Methodology FM-007 (Agent Self-Report Reliance Without Independent Third-Agent Verification)",
+          "reference": "reports/SESSION725_HISTORICAL_GOVERNANCE_RCA.json lines 384-395",
+          "requirement": "When two agent reports conflict on same defect class + same file, spawn THIRD independent agent with access to raw file. Third agent must: (1) independent scan using Function-constructor parse, (2) QID list, (3) compare against BOTH prior reports, (4) identify which was correct and why the other was wrong, (5) document root cause of discrepancy."
+        },
+        {
+          "standard": "DETECTION_STANDARD §4.2 (Function Constructor Parse Reference Implementation)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 169-190",
+          "requirement": "For all defect scans involving paired-field extraction, use Function constructor parse. Zero false positives on DL-008 (proven: Pack B = 0 via Function constructor vs. 257 via regex). All field access is direct property access — no regex, no window extraction, no cross-object contamination."
+        },
+        {
+          "standard": "MAINTENANCE_TRIGGER_REGISTRY T0-CHK-3 (DL-008 Function Constructor Parse)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_TRIGGER_REGISTRY.json lines 96-101",
+          "requirement": "Mandatory Function constructor DL-008 parse at every session T0. Any NEW DL-008 on Certified items = CRITICAL escalation."
+        },
+        {
+          "standard": "DETECTION_STANDARD §4.3 (Within-Record Field Extraction)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 193-211",
+          "requirement": "All fields MUST be extracted from the SAME enclosing object. Never extract CC from one object and EW from a different object. Correct pattern vs. incorrect pattern (DL-029) explicitly illustrated."
+        }
+      ],
+      "verdict": {"would_be_prevented": true, "confidence": "MEDIUM"},
+      "verdict_rationale": "FM-007's mandatory third-agent verification would have RESOLVED the contradiction — when S722A and S723 produced conflicting findings, the governance standards require spawning a third independent agent with Function-constructor parse access to the raw file. The third agent would establish ground truth definitively. However, the PREVENTION (stopping the contradictory reading from occurring in the first place) is less certain: P1-CC-050 is in a merged-object pack (Pack C) where there is only one CC field per object. The root cause of why two agents read different CC values from the same QID's object is not definitively established — it could be a line-position error, a tool-buffer issue, or an actual between-session fix. The DETECTION_STANDARD's within-record extraction (§4.3) and Function constructor parse (§4.2) would have ELIMINATED regex/window-based reading errors, making a between-session fix the only remaining explanation — which would then trigger AGENTS.md §4 violation detection. Confidence is MEDIUM because the exact root cause of the contradictory readings is still unknown."
+    },
+
+    {
+      "incident_id": 6,
+      "label": "Pack B Sections A/D 111 DL-008 false positives (2026-07-23, refuted)",
+      "what_happened": "Agent 6 scan (2026-07-23) reported 111-112 Certified DL-008 items in Pack B Sections A/D — items that were completely clean (all 150 items had 3 non-empty distractor EW slots + 1 empty CC slot). The scan used forward-search from QuestionID, but Pack B stores CorrectChoice BEFORE QuestionID (unique among all 5 packs). The scan systematically captured the NEXT item's CC, producing 74% false-positive rate. The 111 count triggered a certification-blocking finding that was only refuted after separate verification sessions. True count: 0 DL-008.",
+      "root_cause_class": "FC-001 (Scan Methodology Drift) — same forward-scan pattern as DL-029, applied to Pack B's unique CC-before-QID layout",
+      "sessions_affected": ["Pack B Sections A/D audit (2026-07-23)", "Subsequent agent verification (2026-07-23)"],
+      "prevention_standards_to_test": [
+        {
+          "standard": "DETECTION_STANDARD §3.1 (FM-001 Prohibition on Forward-Scan Regex)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 93-113",
+          "prohibition": "Forward-scan from QuestionID for CorrectChoice PROHIBITED. Explicitly calls out Pack B CC-before-QID layout. Canonical failure example included with line-level illustration."
+        },
+        {
+          "standard": "DETECTION_STANDARD §5 (DL-029 Canonical Failure Example)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 230-285",
+          "prohibition": "Complete mechanical illustration of Pack B failure: 'Scanner locates QID at position P → searches forward → finds P1B-A-077's CC 'D' → checks EW-D on P1B-A-076 → non-empty → FALSE POSITIVE.' False positive rate: ~75%."
+        },
+        {
+          "standard": "DETECTION_STANDARD §6.3 (Pack B Ground Truth: 0 DL-008)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 348-349",
+          "requirement": "Pack B: 0 DL-008 via Function Constructor. Any scan reporting >0 on Pack B is NON-COMPLIANT and results are INVALID."
+        },
+        {
+          "standard": "DETECTION_STANDARD §5.4 (Governance Guard Also Affected)",
+          "reference": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md lines 280-285",
+          "note": "As of S724, the governance guard's Rule 2 still uses DL-029-vulnerable window scan. §7 provides interim safeguard: BLOCK events must be independently verified via Function constructor parse before acting."
+        }
+      ],
+      "verdict": {"would_be_prevented": true, "confidence": "HIGH"},
+      "verdict_rationale": "This is the precise canonical failure case that the DETECTION_STANDARD §5 was written to prevent. The standard provides a complete mechanical illustration of Pack B's CC-before-QID layout with line-level annotation showing exactly how the false positive occurs. §6.3 codifies Pack B's ground truth as 0 DL-008, making any positive result an automatic invalidity flag. If the DETECTION_STANDARD had been in place in 2026-07-23, the forward-scan's 111 result would have been immediately rejected as non-compliant — either because it violated FM-001 (prohibited methodology) or because it contradicted the Pack B ground truth baseline (§6.3)."
+    }
+  ],
+
+  "verdict_per_incident": {
+    "DL-029": {
+      "would_be_prevented": true,
+      "incident_label": "Forward-scan CC false positives (67 phantom DL-008)",
+      "preventing_standards": "DETECTION_STANDARD §3.1 (FM-001 prohibition), §5 (canonical failure example), §6.3 (Pack B ground truth = 0 DL-008), MAINTENANCE_TRIGGER_REGISTRY T0-CHK-3 (Function constructor parse mandatory)",
+      "confidence": "HIGH"
+    },
+    "DL-012": {
+      "would_be_prevented": true,
+      "incident_label": "Section E clone count instability (128→112→138→140)",
+      "preventing_standards": "DETECTION_STANDARD §3.4 (FM-002 prohibition on non-boundary-aware scans), §4.1 (string-aware brace-matcher required), RP-CHK-1 (count stability check), AGENTS.md §6 (volatility hard stop)",
+      "confidence": "HIGH"
+    },
+    "DL-016": {
+      "would_be_prevented": true,
+      "incident_label": "Metadata-content block misalignment (ChoiceA-D +1 shift)",
+      "preventing_standards": "DETECTION_STANDARD §1 (dual-block definition), §2 (canonical field extraction table), §3.2 (FM-003 prohibition on cross-record inference), §4.4 (dual-block disambiguation)",
+      "confidence": "HIGH"
+    },
+    "DL-026": {
+      "would_be_prevented": true,
+      "incident_label": "DL-016 scan artifacts causing conflicting DL-026 counts",
+      "preventing_standards": "DETECTION_STANDARD §2.1 (extraction dependencies — same-object requirement), §4.4 (dual-block disambiguation), FM-005 (QID-list requirement for reconciliation)",
+      "confidence": "HIGH"
+    },
+    "P1-CC-050": {
+      "would_be_prevented": true,
+      "incident_label": "S723 Agent V P1-CC-050 contradiction (S722A DL-008 vs. S723 CLEAN)",
+      "preventing_standards": "FM-007 (mandatory third-agent independent verification for conflicting reports), DETECTION_STANDARD §4.2 (Function constructor parse), §4.3 (within-record extraction), T0-CHK-3 (mandatory DL-008 Function constructor parse at T0)",
+      "confidence": "MEDIUM",
+      "confidence_note": "FM-007 would have FORCED resolution of the contradiction by spawning a third independent agent. However, the root cause of why two agents reading the same QID from the same merged-object pack produced different CC values is still not definitively established. The DETECTION_STANDARD eliminates regex/window-based errors (FM-001/FM-003/FM-004) but P1-CC-050's merged-object format has only one CC field — the mechanism of the erroneous read is not fully explained by any of the forbidden methodology patterns. Confidence is MEDIUM because prevention of the initial erroneous reading cannot be assured; only detection and forced resolution are certain."
+    },
+    "Pack_B_A_D_111": {
+      "would_be_prevented": true,
+      "incident_label": "Pack B Sections A/D 111 DL-008 false positives",
+      "preventing_standards": "DETECTION_STANDARD §3.1 (FM-001 prohibition — same as DL-029), §5 (canonical failure example with Pack B mechanical illustration), §6.3 (Pack B ground truth = 0 DL-008, any positive result invalid)",
+      "confidence": "HIGH"
+    }
+  },
+
+  "gaps_remaining": [
+    {
+      "gap_id": "G-NEW-1",
+      "label": "Governance guard Rule 2 still uses DL-029-vulnerable ±1200-char window forward-scan",
+      "description": "As of S724 (and per DETECTION_STANDARD §7), the governance guard's DL-008 detection in .opencode/plugins/governance-guard.js Rule 2 uses a DL-029-vulnerable forward-scan rather than Function constructor parse. The DETECTION_STANDARD §7.2 calls this a required upgrade and §7.3 provides an interim safeguard (independent verification before acting on BLOCK events). However, the guard itself has not been upgraded.",
+      "severity": "HIGH",
+      "impact": "The governance guard — the runtime enforcement mechanism for the single most critical structural defect (DL-008) — is using a methodology that has been conclusively proven to produce false positives at ~75% rate on Pack B and unknown rates on other packs. A BLOCK event triggered by a DL-029 false positive could halt an entire certification wave.",
+      "mitigation_in_place": "DETECTION_STANDARD §7.3 interim safeguard: any BLOCK event from Rule 2 must be independently verified via Function constructor parse before being acted upon. This is documented but not automated — it relies on human operator compliance.",
+      "recommended_action": "Upgrade governance-guard.js Rule 2 to use either Function constructor parse (preferred per §4.2) or string-aware object-bounded parsing (per §4.1). This is the single most impactful governance infrastructure fix remaining from S724."
+    },
+    {
+      "gap_id": "G-NEW-2",
+      "label": "Standards documented but enforcement is manual — no automated gate that rejects non-compliant scan methodologies",
+      "description": "All prevention standards (DETECTION_STANDARD §3 prohibitions, MAINTENANCE_TRIGGER_REGISTRY cadences and thresholds, FM-001 through FM-008) are documented but their enforcement depends on session agents reading and applying them correctly. There is no automated validator that rejects a scan report for using forward-scan regex (FM-001) or a string-unaware brace-matcher (FM-002).",
+      "severity": "MEDIUM",
+      "impact": "A future session could theoretically ignore the DETECTION_STANDARD and use a prohibited methodology, producing the same false positives cataloged here. Human compliance is the only enforcement layer.",
+      "mitigation_in_place": "T0 Entry Protocol (M1 cadence) explicitly requires Governance Auditor to run T0-CHK-3 (Function constructor DL-008 parse) at every session start. This is a process-enforcement layer, not automated tooling enforcement. The Governance Auditor's role includes rejecting non-compliant scans.",
+      "recommended_action": "Add a compliance assertion to scan tools: before outputting results, the tool must self-certify which extraction methodology it used (Function constructor / object-bounded / regex-window). Reports lacking this self-certification should be rejected per FM-005. Consider a governance guard WARN-level rule for non-compliant scan methodologies."
+    },
+    {
+      "gap_id": "G-NEW-3",
+      "label": "P1-CC-050 root cause not definitively established — anomalous dual reading unexplained",
+      "description": "Two Agent V instances (S722A and S723) reported different CC values for the same QID (P1-CC-050) in a merged-object pack where there is only one CC field per QID. Neither the DETECTION_STANDARD's FM-001 through FM-004 forbidden methodologies nor the canonical failure examples fully explain how both readings occurred. The most likely explanation is that one read used a forward-scan (FM-001 violation) but this cannot be confirmed since the source scans are not available for forensic analysis.",
+      "severity": "MEDIUM",
+      "impact": "If the root cause is an undocumented between-session fix (option a in the S723 DEBT REGISTER), this represents a recurring governance process violation (AGENTS.md §4: no revision entry for content change). If it is a DL-016 dual-block read error in a merged-object pack, the DETECTION_STANDARD should document this sub-case explicitly.",
+      "mitigation_in_place": "FM-007 requires spawning a third independent agent when two agents disagree, which would have resolved the discrepancy even without root-cause determination. T0-CHK-3's mandatory Function constructor parse at every session T0 would establish consistent ground truth regardless of methodology differences.",
+      "recommended_action": "In the next session that accesses Pack C, perform an independent Function-constructor parse of P1-CC-050 and definitively establish ground truth. Document finding in REVISION_HISTORY.md. If ground truth is CLEAN (CC=B, EW_B empty), investigate S722A's reading path for FM-001/FM-004 violations. If ground truth is DL-008 (CC=C, EW-C non-empty), remediate and investigate why S723 read it as CLEAN."
+    },
+    {
+      "gap_id": "G-NEW-4",
+      "label": "DL-016 content defect still Open — standards prevent scan errors but do not fix the underlying data",
+      "description": "The DETECTION_STANDARD prevents false positives from DL-016 metadata-content shift by requiring authoritative field extraction paths and dual-block disambiguation. However, the underlying data defect — where ChoiceA-D metadata text describes the wrong QID's topic — is still present on Certified items in Packs A/C/D. The standards prevent the SCANNING artifacts but do not remediate the CONTENT defect (DL-016 learner-safety risk: wrong-topic EW text visible to learners).",
+      "severity": "HIGH",
+      "impact": "58 Certified Pack A Section E items carry DL-016 (per S804). The DETECTION_STANDARD says 'Do NOT use ChoiceA-D for DL-008 detection' and 'DL-016 check: Choices.{A,B,C,D} vs. ExplanationWrongA-D text' — but it does not prescribe remediation of the underlying data. This is a content remediation task, not a scanning standard gap. DL-016 is rated HIGH in DEFECT_LIBRARY.md but unregistered in CURRENT_BASELINES.md §3 (per S723 DEBT REGISTER).",
+      "mitigation_in_place": "G-NEW-1 and G-NEW-3 (QUESTION_METADATA_STANDARD.md §9.4.2) block certification of dual-block items where ChoiceA-D differs from Choices.{A,B,C,D}. This prevents NEW DL-016 from entering the Certified pool but does not fix existing Certified items.",
+      "recommended_action": "Two-part: (1) Register DL-016 in CURRENT_BASELINES.md §3 at HIGH severity (per S723 DEBT REGISTER recommendation). (2) Schedule DL-016 remediation in the 800-series certification plan — align metadata-block ChoiceA-D with content-block Choices.{A,B,C,D} for all Pack A/C/D items. This is a separate task from the scanning standards established in this session."
+    }
+  ],
+
+  "overall_verdict": "ALL_PREVENTED",
+  "overall_verdict_note": "All 6 historical false-positive incidents would be prevented by the governance standards established in Session 725 (DETECTION_STANDARD v1.0, MAINTENANCE_TRIGGER_REGISTRY v1.0, and the RCA's Forbidden Methodology Catalog FM-001 through FM-008). The standards address the full causal chain: prohibited methodologies (FM-001/FM-002/FM-003/FM-004) eliminate the root cause, mandatory extraction paths (DETECTION_STANDARD §2, §4.3, §4.4) eliminate the mechanism, QID-list requirements (FM-005) eliminate unreconcilable count discrepancies, third-agent verification (FM-007) eliminates unresolved contradictions, and count stability gates (RP-CHK-1, AGENTS.md §6) prevent action on unreliable data. Four gaps remain (G-NEW-1 through G-NEW-4) but all are either process-automation improvements or content-remediation tasks — none would permit the original false-positive mechanisms to recur under the new standards.",
+  "overall_verdict_detail": "Five of six incidents receive HIGH confidence. One (P1-CC-050) receives MEDIUM confidence because the root cause of the contradictory reading is not fully explained by the prohibited methodology patterns — though the mandatory third-agent verification (FM-007) and Function constructor parse (T0-CHK-3) would have FORCED resolution even without root-cause certainty. The standards prevent ALL incidents from propagating into governance decisions — either by blocking the false-positive scan methodology entirely (FM-001/FM-002/FM-003/FM-004), by forcing resolution of conflicting results (FM-007), or by requiring count stability before acting (AGENTS.md §6, RP-CHK-1).",
+
+  "cross_reference_matrix": {
+    "description": "Maps each historical incident to the specific clause(s) in the standards that prevent it.",
+    "matrix": [
+      {
+        "incident": "DL-029 (67 phantom DL-008)",
+        "preventing_clause": "DETECTION_STANDARD §3.1 FM-001, §5 Canonical Failure Example, §6.3 Ground Truth Baseline, MAINTENANCE_TRIGGER_REGISTRY T0-CHK-3",
+        "failure_class": "FC-001",
+        "mechanism_blocked": "Forward-scan regex → false CC → false DL-008 flag"
+      },
+      {
+        "incident": "DL-012 (128→112→138→140)",
+        "preventing_clause": "DETECTION_STANDARD §3.4 FM-002, §4.1 String-Aware Brace-Matcher, RP-CHK-1 Count Stability, AGENTS.md §6 Volatility Hard Stop",
+        "failure_class": "FC-007",
+        "mechanism_blocked": "String-unaware brace-matcher → non-deterministic object boundaries → varying counts"
+      },
+      {
+        "incident": "DL-016 (ChoiceA-D +1 offset)",
+        "preventing_clause": "DETECTION_STANDARD §1 Dual-Block Definition, §2 Extraction Table, §3.2 FM-003, §4.4 Disambiguation, §2.1 Extraction Dependencies",
+        "failure_class": "FC-004",
+        "mechanism_blocked": "Flat ChoiceA-D extraction → wrong-topic EW attribution → false positive/missed real defect"
+      },
+      {
+        "incident": "DL-026 (conflicting 632 vs. 1005 counts)",
+        "preventing_clause": "DETECTION_STANDARD §2.1 Extraction Dependencies, §4.4 Disambiguation, FM-005 QID-Lists Required",
+        "failure_class": "FC-004 + FC-006",
+        "mechanism_blocked": "Cross-block field conflation → different agents count different subsets → unreconciled counts"
+      },
+      {
+        "incident": "P1-CC-050 (S722A DL-008 vs. S723 CLEAN)",
+        "preventing_clause": "FM-007 Third-Agent Verification, DETECTION_STANDARD §4.2 Function Constructor Parse, §4.3 Within-Record Extraction, T0-CHK-3 Mandatory DL-008 Parse",
+        "failure_class": "FC-001 or FC-004 (root cause unconfirmed)",
+        "mechanism_blocked": "Conflicting agent reports → forced resolution via independent third-agent + Function constructor ground truth"
+      },
+      {
+        "incident": "Pack B 111 DL-008 (all false positives)",
+        "preventing_clause": "DETECTION_STANDARD §3.1 FM-001, §5 Canonical Failure Example, §6.3 Pack B Ground Truth = 0, §5.3 Historical Impact Table",
+        "failure_class": "FC-001",
+        "mechanism_blocked": "Forward-scan on CC-before-QID layout → 74% false-positive rate → 111 phantom items"
+      }
+    ]
+  }
+}

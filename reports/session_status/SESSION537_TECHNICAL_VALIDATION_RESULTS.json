@@ -1,0 +1,210 @@
+{
+  "agent": "Agent C — Numerical Validation Team",
+  "session": "537",
+  "timestamp": "2026-07-26T00:00:00Z",
+  "methodology": "Independent recalculation from exhibits; answer-key blind until after own solution derived",
+  "files_audited": [
+    "scored_cases.js"
+  ],
+  "cases_audited": 7,
+  "numerical_items_audited": 15,
+  "summary": {
+    "VERIFIED": 15,
+    "DISCREPANCY": 0,
+    "UNCERTAIN": 0
+  },
+  "items": [
+    {
+      "case": "CBQ-C2",
+      "company": "Juniper Appliances",
+      "item_id": "CBQ-C2-Q1",
+      "prompt": "Enter Motor Division residual income.",
+      "concept": "Residual Income = Operating Income - (Required Rate × Average Operating Assets)",
+      "recalculation": "420,000 - (2,800,000 × 0.12) = 420,000 - 336,000 = 84,000",
+      "computed_value": "84000",
+      "stored_value": "84000",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-C2",
+      "company": "Juniper Appliances",
+      "item_id": "CBQ-C2-Q2",
+      "prompt": "Enter Motor Division ROI percentage as a whole number.",
+      "concept": "ROI = Operating Income / Average Operating Assets",
+      "recalculation": "420,000 / 2,800,000 = 0.15 = 15%",
+      "computed_value": "15",
+      "stored_value": "15",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Percentage, exact integer match"
+    },
+    {
+      "case": "CBQ-D2",
+      "company": "Keystone Bikes",
+      "item_id": "CBQ-D2-Q1",
+      "prompt": "Enter equivalent units for conversion costs using weighted-average.",
+      "concept": "Equivalent Units = Completed Units + (Ending WIP × Completion %)",
+      "recalculation": "18,000 + (4,000 × 0.60) = 18,000 + 2,400 = 20,400",
+      "computed_value": "20400",
+      "stored_value": "20400",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Integer count, exact match (tolerance 0)"
+    },
+    {
+      "case": "CBQ-D2",
+      "company": "Keystone Bikes",
+      "item_id": "CBQ-D2-Q2",
+      "prompt": "Enter conversion cost per equivalent unit.",
+      "concept": "Cost per EU = Total Conversion Cost / Equivalent Units",
+      "recalculation": "255,000 / 20,400 = 12.50",
+      "computed_value": "12.5",
+      "stored_value": "12.5",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Per-unit cost, exact match"
+    },
+    {
+      "case": "CBQ-E2",
+      "company": "Vector Labs",
+      "item_id": "CBQ-E2-Q2",
+      "prompt": "Enter the terminated-user exception rate as a percentage rounded to one decimal place.",
+      "concept": "Exception Rate = Exceptions / Total Population",
+      "recalculation": "12 / 340 = 0.035294... → 3.5% (rounded to 1 decimal)",
+      "computed_value": "3.5",
+      "stored_value": "3.5",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Percentage, rounded to 1 decimal; exact match"
+    },
+    {
+      "case": "CBQ-A3",
+      "company": "Orion Components",
+      "item_id": "CBQ-A3-Q1",
+      "prompt": "Enter the inventory write-down required under lower of cost and NRV.",
+      "concept": "Lower of Cost or NRV: Write-down = Cost - NRV when NRV < Cost",
+      "recalculation": "410,000 - 386,000 = 24,000",
+      "computed_value": "24000",
+      "stored_value": "24000",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-A3",
+      "company": "Orion Components",
+      "item_id": "CBQ-A3-Q2",
+      "prompt": "Enter the amount added to the asset cost for the asset retirement obligation at initial recognition.",
+      "concept": "ARO present value is capitalized as part of the related asset cost (ASC 410-20)",
+      "recalculation": "Present value = 75,000 (directly from exhibit)",
+      "computed_value": "75000",
+      "stored_value": "75000",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-A3",
+      "company": "Orion Components",
+      "item_id": "CBQ-A3-Q5",
+      "prompt": "Enter operating cash flow using the listed cash-flow data before separately adjusting for the inventory write-down.",
+      "concept": "Indirect method: NI + Depreciation - Increase in Inventory + Increase in Accrued Liabilities",
+      "recalculation": "620,000 + 86,000 - 34,000 + 19,000 = 691,000",
+      "computed_value": "691000",
+      "stored_value": "691000",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-B3",
+      "company": "Lakeside Instruments",
+      "item_id": "CBQ-B3-Q1",
+      "prompt": "Enter expected unit sales.",
+      "concept": "Expected Value = Σ(Probability × Outcome)",
+      "recalculation": "14,000×0.30 + 11,000×0.50 + 8,000×0.20 = 4,200 + 5,500 + 1,600 = 11,300",
+      "computed_value": "11300",
+      "stored_value": "11300",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Integer count, exact match (tolerance 0)"
+    },
+    {
+      "case": "CBQ-B3",
+      "company": "Lakeside Instruments",
+      "item_id": "CBQ-B3-Q2",
+      "prompt": "Enter expected sales dollars.",
+      "concept": "Sales Dollars = Expected Units × Selling Price",
+      "recalculation": "11,300 × $80 = $904,000",
+      "computed_value": "904000",
+      "stored_value": "904000",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-B3",
+      "company": "Lakeside Instruments",
+      "item_id": "CBQ-B3-Q3",
+      "prompt": "Enter expected current-month cash collections from current-month sales.",
+      "concept": "Cash Collections = Expected Sales × Current-Month Collection %",
+      "recalculation": "904,000 × 0.40 = 361,600",
+      "computed_value": "361600",
+      "stored_value": "361600",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-B3",
+      "company": "Lakeside Instruments",
+      "item_id": "CBQ-B3-Q4",
+      "prompt": "Enter total cash available before disbursements.",
+      "concept": "Cash Budget: Beginning Cash + Current Collections + Prior-Month Collections",
+      "recalculation": "95,000 + 361,600 + (720,000 × 0.55) = 95,000 + 361,600 + 396,000 = 852,600",
+      "computed_value": "852600",
+      "stored_value": "852600",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-C3",
+      "company": "MetroMed Devices",
+      "item_id": "CBQ-C3-Q1",
+      "prompt": "Enter the unfavorable operating income variance as a positive amount.",
+      "concept": "Variance = Target - Actual (positive = unfavorable shortfall)",
+      "recalculation": "900,000 - 840,000 = 60,000",
+      "computed_value": "60000",
+      "stored_value": "60000",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Dollar amount, exact match within $1 tolerance"
+    },
+    {
+      "case": "CBQ-C3",
+      "company": "MetroMed Devices",
+      "item_id": "CBQ-C3-Q2",
+      "prompt": "Enter the on-time delivery shortfall in percentage points.",
+      "concept": "Shortfall = Target % - Actual %",
+      "recalculation": "96 - 91 = 5 percentage points",
+      "computed_value": "5",
+      "stored_value": "5",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Percentage points, exact integer match"
+    },
+    {
+      "case": "CBQ-F2",
+      "company": "NexGen Components",
+      "item_id": "CBQ-F2-Q1",
+      "prompt": "Enter monthly labor hours saved by RPA.",
+      "concept": "Hours Saved = (Before - After) minutes / 60",
+      "recalculation": "Before: 9,000×12 = 108,000 min. After: 9,000×3 = 27,000 min. Savings: (108,000-27,000)/60 = 1,350 hours",
+      "computed_value": "1350",
+      "stored_value": "1350",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Integer hours, exact match"
+    },
+    {
+      "case": "CBQ-F2",
+      "company": "NexGen Components",
+      "item_id": "CBQ-F2-Q2",
+      "prompt": "Enter the number of invoices routed to exception handling each month.",
+      "concept": "Exception Invoices = Total Invoices × Exception Rate",
+      "recalculation": "9,000 × 0.07 = 630",
+      "computed_value": "630",
+      "stored_value": "630",
+      "verdict": "VERIFIED",
+      "tolerance_check": "Integer count, exact match (tolerance 0)"
+    }
+  ]
+}

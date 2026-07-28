@@ -1,0 +1,58 @@
+{
+  "session": "526",
+  "type": "DEEP_INVENTORY",
+  "timestamp": "2026-07-26T14:10:00Z",
+  "target": {
+    "array": "MIGRATED_CASE_BASE_D",
+    "file": "scored_cases4.js",
+    "cases": ["CASE-D10", "CASE-D11", "CASE-D12"],
+    "wave": 4,
+    "items": 15
+  },
+  "pre_state": {
+    "case_level": "3 cases, all question_state: Unprocessed, ProductionStatus: Draft",
+    "item_level": "15 items, all question_state: Unprocessed, ProductionStatus: Draft",
+    "total_certified_before": "45/75 (D1-D9)"
+  },
+  "inventory": {
+    "CASE-D10": {
+      "title": "Process Costing and Cost-Volume-Profit Analysis",
+      "section": "D — Cost Management",
+      "items": [
+        {"id": "CASE-D10-Q1", "type": "select", "correct": "It keeps beginning work in process costs separate from current period costs", "cognitive_assigned": "Understand", "expl_before_chars": 147, "expl_after_chars": 1262},
+        {"id": "CASE-D10-Q2", "type": "numeric", "correct": "180000", "cognitive_assigned": "Apply", "expl_before_chars": 83, "expl_after_chars": 1235},
+        {"id": "CASE-D10-Q3", "type": "select", "correct": "A higher degree of operating leverage, meaning profit is more sensitive to sales volume changes", "cognitive_assigned": "Understand", "expl_before_chars": 156, "expl_after_chars": 1454},
+        {"id": "CASE-D10-Q4", "type": "multi", "correct": ["constant sales mix", "contribution margin data", "total fixed costs"], "cognitive_assigned": "Understand", "expl_before_chars": 177, "expl_after_chars": 1482},
+        {"id": "CASE-D10-Q5", "type": "fill", "correct": "kaizen", "cognitive_assigned": "Remember", "expl_before_chars": 105, "expl_after_chars": 1236}
+      ]
+    },
+    "CASE-D11": {
+      "title": "Vendor Fraud Prevention and Audit Oversight",
+      "section": "E — Internal Controls",
+      "items": [
+        {"id": "CASE-D11-Q1", "type": "select", "correct": "The risk of fictitious vendor fraud or unauthorized changes to payment details", "cognitive_assigned": "Understand", "expl_before_chars": 155, "expl_after_chars": 1442},
+        {"id": "CASE-D11-Q2", "type": "select", "correct": "To provide independent oversight of financial reporting integrity and internal control effectiveness", "cognitive_assigned": "Understand", "expl_before_chars": 150, "expl_after_chars": 1442},
+        {"id": "CASE-D11-Q3", "type": "select", "correct": "To reduce the risk of unauthorized access to financial systems and data", "cognitive_assigned": "Understand", "expl_before_chars": 119, "expl_after_chars": 1513},
+        {"id": "CASE-D11-Q4", "type": "multi", "correct": ["independent review", "automated duplicate detection", "segregation of vendor setup"], "cognitive_assigned": "Understand", "expl_before_chars": 189, "expl_after_chars": 1414},
+        {"id": "CASE-D11-Q5", "type": "fill", "correct": "remediation", "cognitive_assigned": "Remember", "expl_before_chars": 122, "expl_after_chars": 1424}
+      ]
+    },
+    "CASE-D12": {
+      "title": "Cybersecurity and Predictive Analytics Program",
+      "section": "F — Technology and Analytics",
+      "items": [
+        {"id": "CASE-D12-Q1", "type": "select", "correct": "Predictive analytics", "cognitive_assigned": "Understand", "expl_before_chars": 107, "expl_after_chars": 1420},
+        {"id": "CASE-D12-Q2", "type": "select", "correct": "Confidentiality, by protecting data from unauthorized access or interception", "cognitive_assigned": "Understand", "expl_before_chars": 134, "expl_after_chars": 1414},
+        {"id": "CASE-D12-Q3", "type": "select", "correct": "To enable a timely, coordinated response that limits damage and meets legal notification obligations", "cognitive_assigned": "Understand", "expl_before_chars": 140, "expl_after_chars": 1540},
+        {"id": "CASE-D12-Q4", "type": "multi", "correct": ["Volume", "Velocity", "Variety"], "cognitive_assigned": "Understand", "expl_before_chars": 117, "expl_after_chars": 1391},
+        {"id": "CASE-D12-Q5", "type": "fill", "correct": "overfitting", "cognitive_assigned": "Remember", "expl_before_chars": 122, "expl_after_chars": 1440}
+      ]
+    }
+  },
+  "post_state": {
+    "case_level": "3 cases, all question_state: Certified, ProductionStatus: Production, Version: 1.1",
+    "item_level": "15 items, all question_state: Certified, ProductionStatus: Production",
+    "total_certified_after": "60/75 (80%)",
+    "cognitive_level_coverage": "15/15 = 100%"
+  }
+}

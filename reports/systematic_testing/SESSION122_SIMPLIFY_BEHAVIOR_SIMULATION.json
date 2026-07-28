@@ -1,0 +1,63 @@
+{
+  "session": 122,
+  "title": "S122 Simplify Behavior Simulation",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "methodology": "Structural analysis of output patterns by question type and learner context. Compares old behavior (one-line core-sentence echo) to new behavior (4-section plain-language coaching).",
+  "scenarios": [
+    {
+      "type": "conceptual MCQ — active unanswered",
+      "context": "Learner clicks Simplify before answering",
+      "oldBehavior": "Revealed correct answer + 'This question is testing whether you understand [topic]' — NO GATE",
+      "newBehavior": "Concept-only coaching: What this concept is about, Why it matters, How to recognize on exam day, Quick rule. No answer letter, no choice text. Prompts learner to submit first.",
+      "coachingInsightAdded": "Yes — 4-section structural coaching even before answering",
+      "meaningPreserved": "Yes — no answer distortion risk",
+      "answerGatingHeld": "YES — correct answer not revealed"
+    },
+    {
+      "type": "conceptual MCQ — post-answer, selected correctly",
+      "context": "Learner answered A (correct), wants plain-language reinforcement",
+      "oldBehavior": "One-line core sentence + 'This question tests [topic]. The key is knowing the answer is [A]'",
+      "newBehavior": "Full 4-section: What this means (plain language translation), Why it matters (section-aligned significance), How to recognize (recognition tips), Quick rule (memory hook). Correct answer confirmed.",
+      "coachingInsightAdded": "Yes — plain-language translation, significance framing, recognition tips, memory hook",
+      "meaningPreserved": "Yes — bank ExplanationCorrect embedded via _plainLanguageTranslation"
+    },
+    {
+      "type": "conceptual MCQ — post-answer, selected incorrectly",
+      "context": "Learner selected B (wrong), correct is C",
+      "oldBehavior": "Same one-line output regardless of learner choice",
+      "newBehavior": "Full 4-section + 'You chose B — that option reflects a common trap' with Wrong Choices referral. Correct answer C revealed.",
+      "coachingInsightAdded": "Yes — wrong-answer awareness + referral pathway",
+      "meaningPreserved": "Yes"
+    },
+    {
+      "type": "calculation MCQ — post-answer",
+      "context": "Learner has answered, calculation item with $ in stem",
+      "oldBehavior": "Same flat structure, number-based core sentence picked from ExplanationCorrect",
+      "newBehavior": "Calculation-aware translation: 'you are using numbers from a business scenario to compute a specific value.' Formula detection in Quick Rule. Recognition tips tailored to calculation patterns.",
+      "coachingInsightAdded": "Yes — calc-specific plain-language, formula detection, step-by-step recognition",
+      "meaningPreserved": "Yes"
+    },
+    {
+      "type": "thin-explanation item — review mode",
+      "context": "ExplanationCorrect is empty, learner in review mode",
+      "oldBehavior": "'The short answer is [cc]: [choice]. This is about [topic]. If you'd like... tap Explain answer.'",
+      "newBehavior": "Concept framing without fabrication: 'This question tests your understanding of [topic]. In everyday terms: [calc/conceptual framing].' Why it matters and recognition use section-aligned fallbacks. Quick rule uses section-aligned memory hook.",
+      "coachingInsightAdded": "Yes — structural coaching preserved even with thin content, no fabrication",
+      "meaningPreserved": "Yes — no invented facts"
+    },
+    {
+      "type": "completed-session review item",
+      "context": "Session completed, learner reviewing, wants plain-language reminder",
+      "oldBehavior": "Same flat output — no review-mode awareness",
+      "newBehavior": "Full 4-section with review framing: 'Let's break this down in plain language so the concept sticks.' Plain-language translation, significance, recognition, quick rule. Confirms correct answer. Refers to Explain answer for full detail.",
+      "coachingInsightAdded": "Yes — review-mode framing, plain-language depth, Explain referral",
+      "meaningPreserved": "Yes"
+    }
+  ],
+  "safetyAssessment": {
+    "antiLeakage": { "unansweredGate": "CONFIRMED — active unanswered questions receive concept-only coaching without answer reveal" },
+    "antiFabrication": { "thinExplanation": "CONFIRMED — no ASC/FASB/COSO on thin", "plainLanguageTranslation": "CONFIRMED — parenthetical form preserves original alongside plain equivalent" },
+    "safetyGatesPreserved": { "_guardedSpeak": "CONFIRMED", "predictionLanguage": "CONFIRMED — none detected" },
+    "meaningDistortion": "CONFIRMED — all replacements use parenthetical form (original + plain), never drop original meaning, core concept words preserved in all test cases"
+  }
+}

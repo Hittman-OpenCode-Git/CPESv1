@@ -1,0 +1,64 @@
+{
+  "session": "S815",
+  "board": "Agent Groups E-H — Duplicate Scan Detection",
+  "timestamp": "2026-07-27T11:37:00Z",
+  "status": "CONFIRMED",
+
+  "scan_duplication_analysis": {
+    "source_files_scanned": [
+      "pack_a_corrected.js (1,827,160 bytes, 500 QIDs)",
+      "pack_b_corrected.js (1,386,746 bytes, 500 QIDs)",
+      "pack_c_corrected.js (1,716,807 bytes, 500 QIDs)",
+      "pack_d_corrected.js (1,764,100 bytes, 500 QIDs)",
+      "pack_e_corrected.js (1,391,661 bytes, 540 QIDs)",
+      "scored_cases.js through scored_cases5.js (5 files, 420 items)"
+    ],
+
+    "scanners_by_stage": [
+      {
+        "stage": "Readiness Scorer (S322)",
+        "files_scanned": ["pack_a", "pack_b", "pack_c", "pack_d", "pack_e"],
+        "extraction_count": 2540,
+        "is_necessary": true,
+        "notes": "Authoritative scan. Must scan to discover QIDs and compute structural flags."
+      },
+      {
+        "stage": "Delta Ledger (S322)",
+        "files_scanned": ["pack_a", "pack_b", "pack_c", "pack_d", "pack_e"],
+        "extraction_count": 2540,
+        "is_necessary": "PARTIALLY — content hashing requires source access but QID list could come from readiness_scoring artifact",
+        "notes": "Delta ledger stores per-item content/metadata/identity hashes. Content hash computation requires reading source fields. But the QID list (which items to hash) could come from readiness_scoring.json instead of re-discovering."
+      },
+      {
+        "stage": "Candidate Engine (SESSION850)",
+        "files_scanned": ["pack_a", "pack_b", "pack_c", "pack_d", "pack_e"],
+        "extraction_count": 2540,
+        "is_necessary": false,
+        "notes": "REDUNDANT — Candidate Engine re-discovers all QIDs, re-computes structural flags, and re-classifies readiness. All of this data already exists in readiness_scoring.json. This was the direct cause of DL-036: re-scanning with stale regex produced 40 false-positive BLOCKED items."
+      },
+      {
+        "stage": "Identity Validator",
+        "files_scanned": ["pack_a", "pack_b", "pack_c", "pack_d", "pack_e"],
+        "extraction_count": "Unknown — may scan all 2,540 or filter to candidate subset",
+        "is_necessary": "PARTIALLY — identity validation requires source access but QID list could come from certification_candidates.json candidate list",
+        "notes": "If identity validator scans all 2,540 items, this is a 4th redundant full extraction. Should only validate candidate subset (282 BLOCKED items)."
+      }
+    ],
+
+    "redundant_extraction_total": {
+      "minimum_sufficient_extractions": "1 (Readiness Scorer) = 2,540 items",
+      "current_extractions": "3-4 (Readiness Scorer + Delta Ledger + Candidate Engine + possibly Identity Validator) = 7,620-10,160 items",
+      "redundancy_factor": "3× to 4× (67% to 75% of scan operations are redundant)",
+      "waste": "Candidate Engine re-extraction is 100% redundant. Delta Ledger and Identity Validator each have partial redundancy (QID list, not hashing)."
+    }
+  },
+
+  "unauthorized_duplicate_scan_verdict": "CONFIRMED — Candidate Engine (SESSION850) performed an unauthorized duplicate scan of all 5 pack files when it should have consumed the readiness_scoring.json S322 artifact. This directly caused the DL-036 40-item BLOCKED count inflation.",
+
+  "detection_rule": {
+    "description": "Check if any downstream pipeline file's timestamp is newer than its upstream artifact's timestamp AND its content was independently computed rather than derived from the upstream artifact.",
+    "implementation": "Compare certification_candidates.json.generatedTimestamp (14:59) with readiness_scoring.json.timestamp (13:46). If downstream scan is >60 seconds after upstream, audit for artifact consumption vs. re-scan."
+  },
+
+  "verdict": "DUPLICATE SCANS DETECTED — Candidate Engine (SESSION850) duplicates Readiness Scorer (S322) scan. Delta Ledger and Identity Validator have partial redundancy."
+}

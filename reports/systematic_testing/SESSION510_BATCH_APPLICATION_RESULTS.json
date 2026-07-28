@@ -1,0 +1,45 @@
+{
+  "session": "510",
+  "date": "2026-07-25",
+  "status": "Complete",
+  "scope": "scored_cases2.js — MIGRATED_CASE_BASE_B (15 cases, 75 items)",
+  "case_range": "CASE-B12 through CASE-B26",
+  "pre_flight": { "governance_guard": "20/20 PASS", "session_recovery": "12/12 PASS" },
+  "post_flight": { "governance_guard": "20/20 PASS", "session_recovery": "12/12 PASS" },
+  "summary": {
+    "explanations_applied": 67,
+    "explanations_skipped": 0,
+    "holdbacks": 1,
+    "total_batches": 8,
+    "answer_keys_changed": 0,
+    "prompts_changed": 0,
+    "choices_changed": 0,
+    "exhibits_changed": 0,
+    "question_state_changed": 0
+  },
+  "batches": [
+    {"id": "1a", "cases": ["CASE-B13"], "items": "Q4-Q5", "count": 2, "status": "Applied"},
+    {"id": "1b", "cases": ["CASE-B14", "CASE-B15"], "items": "B14-Q1-Q5, B15-Q1-Q2", "count": 7, "status": "Applied"},
+    {"id": "1c", "cases": ["CASE-B15", "CASE-B16"], "items": "B15-Q3-Q5, B16-Q1-Q5", "count": 8, "status": "Applied"},
+    {"id": "1d", "cases": ["CASE-B17", "CASE-B18"], "items": "Q1-Q5", "count": 10, "status": "Applied"},
+    {"id": "2a", "cases": ["CASE-B19", "CASE-B20"], "items": "Q1-Q5", "count": 10, "status": "Applied"},
+    {"id": "2b", "cases": ["CASE-B21", "CASE-B22"], "items": "Q1-Q5", "count": 10, "status": "Applied"},
+    {"id": "3a", "cases": ["CASE-B23", "CASE-B24"], "items": "Q1-Q5", "count": 10, "status": "Applied"},
+    {"id": "3b", "cases": ["CASE-B25", "CASE-B26"], "items": "Q1-Q5", "count": 10, "status": "Applied"}
+  ],
+  "previously_uplifted_s509": [
+    "CASE-B12-Q1", "CASE-B12-Q2", "CASE-B12-Q3", "CASE-B12-Q4", "CASE-B12-Q5",
+    "CASE-B13-Q1", "CASE-B13-Q2", "CASE-B13-Q3"
+  ],
+  "holdbacks": [
+    {"item": "CASE-B12-Q4", "reason": "Arithmetic discrepancy: stored $21,750 vs recalculated $20,143 from ($159,000 - $18,000) / 7", "status": "Open - S511 audit required"}
+  ],
+  "g_new4_status": {
+    "G5.3_case_explanation_sufficiency": "PASS — all 75 items have multi-sentence explanations",
+    "G5.4_distractor_rationale": "PASS — all 74 select items have distractor rationale",
+    "G5.5_authoritative_citations": "PASS — 150+ ASC/IFRS/COSO/IAS/IIA/GDPR references added"
+  },
+  "files_modified": ["scored_cases2.js", "knowledge/REVISION_HISTORY.md"],
+  "backups": ["backups/scored_cases2.js.bak-20260725180000"],
+  "recommended_next_session": "S511 — Arithmetic/answer-key verification for CASE-B12-Q4"
+}

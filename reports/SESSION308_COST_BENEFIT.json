@@ -1,0 +1,71 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "activities": [
+    {
+      "activity": "DL-008 Remediation",
+      "sessions": 3,
+      "cost": "LOW",
+      "benefit": "CRITICAL",
+      "ratio": "BEST — maximum safety for minimum effort",
+      "priority": 1
+    },
+    {
+      "activity": "Domain E Certification",
+      "sessions": 8,
+      "cost": "HIGH",
+      "benefit": "CRITICAL",
+      "ratio": "EXCELLENT — 178 items + 29 P0 + full EW",
+      "priority": 2
+    },
+    {
+      "activity": "Domain F Certification",
+      "sessions": 7,
+      "cost": "HIGH",
+      "benefit": "HIGH",
+      "ratio": "HIGH — 150 items + 8 P0 + full EW",
+      "priority": 3
+    },
+    {
+      "activity": "Case-bank EW (certified)",
+      "sessions": 8,
+      "cost": "HIGH",
+      "benefit": "HIGH",
+      "ratio": "HIGH — transforms case practice from zero feedback",
+      "priority": 4
+    },
+    {
+      "activity": "MCQ EW closure",
+      "sessions": 6,
+      "cost": "MEDIUM",
+      "benefit": "MEDIUM",
+      "ratio": "MEDIUM — diminishing returns after Top 100",
+      "priority": 5
+    },
+    {
+      "activity": "Pack A closeout",
+      "sessions": 2,
+      "cost": "LOW",
+      "benefit": "MEDIUM",
+      "ratio": "GOOD — 19 items to 100% pack",
+      "priority": 6
+    },
+    {
+      "activity": "Modernization (clone/DL-013/DL-031)",
+      "sessions": 5,
+      "cost": "MEDIUM",
+      "benefit": "MEDIUM",
+      "ratio": "MODERATE — quality polish",
+      "priority": 7
+    },
+    {
+      "activity": "Pack E EC uplift",
+      "sessions": 3,
+      "cost": "MEDIUM",
+      "benefit": "MEDIUM",
+      "ratio": "MODERATE — 500 items, 108→400+ chars mean",
+      "priority": 8
+    }
+  ],
+  "totalBenefitScore": "UIQS 68.8 → 82.5 (+13.7). 100% certification. EW 60% → 88%. DL-008=0. All P0 resolved.",
+  "totalCost": "30 sessions (optimized). ~45 hours estimated."
+}

@@ -1,0 +1,100 @@
+{
+  "generatedAt": "2026-07-25T23:15:00.000Z",
+  "session": "S118",
+  "type": "UI/Accessibility Polish Review",
+
+  "reviewMethod": "Source-code inspection + simulation output review. No browser rendering or screen-reader testing performed — all findings from code-level analysis.",
+
+  "onboardingUI": {
+    "greeting": {
+      "text": "Hi, I'm May — your CMA Part 1 practice coach.",
+      "visible": true,
+      "friendly": true,
+      "inviting": true,
+      "toneCheck": "Professional but warm. No patronizing language. Sets clear expectations."
+    },
+    "primaryActions": {
+      "chooseFromRoll": {
+        "buttonText": "Yes — choose my name from the roll",
+        "clear": true,
+        "actionable": true
+      },
+      "enrollNew": {
+        "buttonText": "No — enroll me as a new student",
+        "clear": true,
+        "actionable": true
+      },
+      "rating": "PASS — both actions clearly labeled and mutually exclusive"
+    },
+    "studentRoll": {
+      "maskingActive": true,
+      "maskingFunction": "maskStudentName() — A***y P***t pattern",
+      "maskingWorks": "Verified via simulation: all 8 synthetic students masked in roll UI",
+      "fullNamesBeforeSelection": false,
+      "fullNamesAfterSelection": true,
+      "rating": "PASS — privacy-safe roll rendering"
+    }
+  },
+
+  "accessibilityReview": {
+    "buttonLabels": {
+      "status": "PASS",
+      "notes": "All onboarding and tutoring buttons use descriptive text labels. Exam onboarding buttons state clear choices ('Yes — I have an exam scheduled' etc.). No icon-only buttons found.",
+      "improvementsSuggested": "Consider aria-label attributes on student-row divs for screen-reader identification."
+    },
+    "keyboardNavigation": {
+      "status": "PARTIAL",
+      "notes": "Student selection uses onclick on divs without tabIndex or onkeydown handlers. Keyboard-only users cannot select from the roll. All other buttons are native <button> elements and are keyboard-reachable.",
+      "improvementsSuggested": "Add tabIndex='0' and onkeydown (Enter/Space) handlers to .may-student-row divs."
+    },
+    "focusOrder": {
+      "status": "PASS",
+      "notes": "Logical DOM-based focus order: greeting → student roll → tutoring buttons → chat input. Onboarding buttons appear before main content."
+    },
+    "colorContrast": {
+      "status": "NOT TESTED",
+      "notes": "Color contrast ratios not verified in this review. Band colors (green/red/amber) on readiness cards should be checked against WCAG AA (4.5:1 for normal text)."
+    },
+    "screenReader": {
+      "status": "NOT TESTED",
+      "notes": "No screen-reader testing performed. aria-live regions not present for May's dynamic chat updates."
+    }
+  },
+
+  "welcomeBackOverview": {
+    "readable": true,
+    "structure": "Personalized welcome → Positive trend detection → Strengths + opportunities → Next best action → Pre-production disclaimer",
+    "visualSeparation": "Each section rendered as separate paragraphs. Trends use emoji markers (📈).",
+    "evidenceBased": true,
+    "sparseDataFallback": "Safe fallback message when insufficient data: 'Keep building your practice history — I'll have more insights after a few more sessions.'"
+  },
+
+  "examPlanUI": {
+    "clarity": "PASS",
+    "promptText": "Do you already have a CMA exam scheduled?",
+    "stressLevel": "LOW — offers 'No' and 'Planning' paths. Uses encouraging tone regardless of answer.",
+    "daysUntilExamMessage": "Encouraging, time-appropriate. No urgency or pressure language.",
+    "predictionLanguage": false
+  },
+
+  "noPredictionLanguage": {
+    "examReady": false,
+    "guaranteedToPass": false,
+    "willPass": false,
+    "definitelyPass": false,
+    "sureToPass": false,
+    "rating": "PASS — all banned phrases absent from UI and chat output"
+  },
+
+  "changesMade": "NONE — UI/accessibility review passed at current state. Narrow polish deferred to S119 if needed.",
+
+  "recommendations": {
+    "keyboardNavigation": "Add tabIndex and onkeydown to student-row divs (low effort, high impact)",
+    "ariaLabels": "Add aria-label to onboarding buttons and student rows (low effort, medium impact)",
+    "colorContrast": "Verify readiness badge colors against WCAG AA (low effort, medium impact)",
+    "mobileResponsive": "Test on 320px viewport for student roll layout (renders inline via CSS flex, likely OK)",
+    "severityDistribution": "NO CRITICAL BLOCKERS — all findings are polish-level"
+  },
+
+  "verdict": "UI/ACCESSIBILITY PASS — May onboarding is clear, privacy-safe, and inviting. Keyboard navigation on student rows is the primary gap; non-blocking polish item for S119."
+}

@@ -1,0 +1,563 @@
+{
+  "_file_metadata": {
+    "session": "725",
+    "agent": "I",
+    "task": "Governance Hardening & Post-700 Ownership Transition — Tooling Review",
+    "date": "2026-07-26",
+    "type": "read-only audit",
+    "authority": "PROJECT_CONSTITUTION.md, SESSION725_GOVERNANCE_DETECTION_STANDARD.md",
+    "methodology": "Line-level source inspection of 6 tool files + 1 manifest + scanning scripts. Cross-referenced against S725 Governance Detection Standard v1.0 mandatory prohibitions (section 3) and required methodologies (section 4)."
+  },
+  "session": "725",
+  "overall_compatibility_score": "PARTIAL",
+  "overall_summary": "3 of 6 reviewed tools have at least one forbidden methodology instance. The governance guard itself is non-compliant (DL-029-vulnerable +/-1200 char window forward-scan). Two scan scripts use QuestionID-split forward-scan. The ExplanationValidator and two modern scan scripts (s710r, s805) are compliant. The DEFECT_MANIFEST uses mixed methodologies with substantial DL-029 contamination for Packs D/E. Build registry is partially compliant (string-aware but uses eval not Function constructor for cases).",
+  "tools_reviewed": [
+    {
+      "tool": "governance-guard.js",
+      "path": ".opencode/plugins/governance-guard.js",
+      "line_count": 217,
+      "checks": [
+        {
+          "check": "Rule 2 DL-008 detection methodology",
+          "finding": "USES FORBIDDEN METHODOLOGY",
+          "detail": "findDL008Violations() (lines 42-61) uses global regex to find non-empty ExplanationWrong[A-D], then searches a +/-1200 character window around the match for CorrectChoice. This is the exact DL-029-vulnerable pattern prohibited by S725 Detection Standard sections 3.1 and 3.3. For Pack B (CC before QID within object), the window captures the adjacent item CC. S724 explicitly identified this gap.",
+          "line_numbers": "42-61",
+          "severity": "CRITICAL"
+        },
+        {
+          "check": "Forbidden methodology F1 (forward-scan regex) present?",
+          "finding": "YES",
+          "detail": "Global regex iterates all non-empty EW fields. For each match, searches within +/-1200 char window for corresponding CorrectChoice. In Pack B where CC appears ~3-40 lines before QID and EW fields appear after, the window may straddle two objects. S724 explicitly identified this gap (line 284 of Detection Standard).",
+          "line_numbers": "45, 52-56",
+          "severity": "CRITICAL"
+        },
+        {
+          "check": "Forbidden methodology F3 (window-based extraction) present?",
+          "finding": "YES — +/-1200 character window extraction (lines 53-55)",
+          "detail": "winStart = Math.max(0, pos - 1200); winEnd = Math.min(text.length, pos + 1200); This fixed window either truncates fields in large question objects or spans adjacent items. Results are window-parameter-dependent (violates C6).",
+          "line_numbers": "53-55",
+          "severity": "HIGH"
+        },
+        {
+          "check": "Forbidden methodology F4 (string-unaware parsing) present?",
+          "finding": "NOT APPLICABLE",
+          "detail": "Guard does not use brace-matching; it operates on raw text via regex. This avoids DL-020 (string-unaware brace counter) but introduces DL-029 (cross-object field attribution) instead.",
+          "severity": "INFO"
+        },
+        {
+          "check": "Dual-block architecture handling",
+          "finding": "NONE",
+          "detail": "No distinction between metadata-block ChoiceA-D and content-block Choices.{A,B,C,D}. The regex captures flat ExplanationWrong[A-D] and searches for flat CorrectChoice. Cannot detect DL-016 (Choice mismatch between blocks) because it operates on raw text without object parsing.",
+          "severity": "MEDIUM"
+        },
+        {
+          "check": "Within-record field extraction",
+          "finding": "NO",
+          "detail": "CorrectChoice and ExplanationWrong are matched via independent regex captures within a character window, not extracted from a bounded object. Pairing is by character-proximity (window), not object membership. This is exactly the Incorrect pattern described in Detection Standard section 4.3.",
+          "severity": "CRITICAL"
+        }
+      ],
+      "compatible_with_detection_standard": false,
+      "compatible_with_scan_standard": false,
+      "gaps_found": [
+        "GAP-R2-01: DL-008 detection uses regex window-based forward-scan (DL-029 vulnerable)",
+        "GAP-R2-02: No Function constructor parse or object-bounded extraction",
+        "GAP-R2-03: Window size hardcoded at 1200 — not invariant under parameter change (C6 violation)",
+        "GAP-R2-04: No dual-block disambiguation (DL-016 vulnerable)",
+        "GAP-R2-05: CorrectChoice source block is ambiguous — cannot distinguish metadata vs. content block CC",
+        "GAP-R2-06: Produces BLOCK enforcement decisions based on potentially phantom DL-008 flags — learner-safety risk if false negatives + P0 risk if false positives trigger unnecessary remediation"
+      ],
+      "remediation_required": [
+        "UPGRADE-R2-01: Replace findDL008Violations() with Function constructor parse (per Detection Standard section 4.2 reference implementation). The governance guard that BLOCKs certification must use DL-029-immune methodology.",
+        "UPGRADE-R2-02: After parsing, extract CorrectChoice and ExplanationWrong[N] from the SAME enclosed object (within-record field extraction per section 4.3).",
+        "UPGRADE-R2-03: Add dual-block awareness: when object has both ChoiceA-D (flat, metadata) and Choices.{A,B,C,D} (nested, content), use the nested path for learner-facing verification.",
+        "UPGRADE-R2-04: Must pass compliance checks C1-C6 (Detection Standard section 6.1). Specifically, C5: must report 0 DL-008 on Pack B (Function constructor ground truth = 0)."
+      ]
+    },
+    {
+      "tool": "ExplanationValidator.js",
+      "path": "scripts/validators/ExplanationValidator.js",
+      "line_count": 239,
+      "checks": [
+        {
+          "check": "String-aware brace matching (DL-020 fix applied?)",
+          "finding": "YES — DL-020 fix confirmed applied",
+          "detail": "extractQuestions() lines 119-129 and extractCases() lines 151-161 both implement the canonical string-aware state machine: inString, stringChar, and escape flags tracked during brace counting. This matches the required state machine in Detection Standard section 4.1.",
+          "line_numbers": "119-129, 151-161",
+          "severity": "PASS"
+        },
+        {
+          "check": "Within-record field extraction?",
+          "finding": "YES — validateQuestion() accesses fields on the parsed question object q",
+          "detail": "Line 207-208: val.length > 0 && letter === q.CorrectChoice — extracts CC and EW from the same parsed object. This is the approved within-record methodology. No forward-scan, no window, no regex proximity pairing.",
+          "line_numbers": "207-208",
+          "severity": "PASS"
+        },
+        {
+          "check": "DL-008 detection methodology",
+          "finding": "CORRECT — uses within-object field comparison",
+          "detail": "Line 207-208: if (val.length > 0 && letter === q.CorrectChoice) { this.addError(...) } — CC and EW from same parsed object. Approved within-record methodology per section 4.3.",
+          "line_numbers": "207-208",
+          "severity": "PASS"
+        },
+        {
+          "check": "Function constructor fallback",
+          "finding": "YES — falls back to new Function() if JSON.parse() fails",
+          "detail": "extractQuestions() line 140: const fn = new Function('return (' + jsStr + ')'); return fn(); — this is the preferred methodology per section 4.2.",
+          "line_numbers": "140-141",
+          "severity": "PASS"
+        },
+        {
+          "check": "Dual-block handling",
+          "finding": "PARTIAL — validates flat fields only, does not check DL-016 mismatch",
+          "detail": "The validator accesses ExplanationWrongA-D and CorrectChoice from the co-located object. It does NOT compare ChoiceA-D (flat metadata) vs Choices.{A,B,C,D} (nested content) to detect DL-016 contamination. If both exist and differ, the validator EW-vs-CC check is correct but the EW text may describe the wrong topic distractor (DL-016).",
+          "severity": "LOW"
+        },
+        {
+          "check": "Field absence handling",
+          "finding": "CORRECT — skips undefined/null fields, correctly flags empty and non-empty states",
+          "detail": "Line 199: if (q[field] !== undefined && q[field] !== null) skips absent fields (DL-018). Line 206: skips empty CC slot as correct. Lines 207-208: flag non-empty CC slot as DL-008 error. Correctly handles absent, empty, and non-empty field states.",
+          "line_numbers": "199, 206-208",
+          "severity": "PASS"
+        }
+      ],
+      "compatible_with_detection_standard": true,
+      "compatible_with_scan_standard": true,
+      "gaps_found": [
+        "GAP-EV-01: Does not detect DL-016 (metadata-block ChoiceA-D vs content-block Choices.{A,B,C,D} divergence). EW text may be topically correct for one set of choices but semantically describe a different item distractors.",
+        "GAP-EV-02: Does not detect DL-021 pattern (absent non-CC ExplanationWrong fields). Line 199 skips undefined fields without flagging — acceptable for DL-008 but misses DL-021 detection.",
+        "GAP-EV-03: Brace-matcher parses entire array in one pass. Object-bounded per-item extraction is not implemented but not required since Function constructor fallback correctly handles all items at once."
+      ],
+      "remediation_required": [
+        "ENHANCE-EV-01 (optional): Add DL-016 detection — when object has both ChoiceA-D (flat) and Choices.{A,B,C,D} (nested), compare them and warn if they differ.",
+        "ENHANCE-EV-02 (optional): Add DL-021 detection — flag when non-CC ExplanationWrong fields are absent (undefined) rather than empty string."
+      ]
+    },
+    {
+      "tool": "test_governance_guard.js",
+      "path": "scripts/test_governance_guard.js",
+      "line_count": 245,
+      "test_count": 20,
+      "checks": [
+        {
+          "check": "DL-008 detection tests verify within-object field attribution?",
+          "finding": "NO — all test fixtures use co-located CorrectChoice and ExplanationWrong within small inline JSON strings (~200 chars)",
+          "detail": "Tests 1-5 (lines 80-125) all test findDL008Violations() with compact JSON where CC and EW are within the same 200-character string. No test verifies behavior when CC appears before QID in the object (Pack B format), or when CC is in a different block than EW, or when the window spans two objects.",
+          "severity": "HIGH"
+        },
+        {
+          "check": "Tests for dual-block (DL-016) handling?",
+          "finding": "NO — zero tests for metadata vs. content block field disambiguation",
+          "detail": "No test fixture contains BOTH ChoiceA-D (flat metadata fields) AND Choices.{A,B,C,D} (nested content fields). No test verifies that EW text correctly targets the learner-facing choice text.",
+          "severity": "MEDIUM"
+        },
+        {
+          "check": "Tests for Pack B CC-before-QID layout (DL-029 mitigation)?",
+          "finding": "NO — zero test fixtures simulate Pack B CorrectChoice-before-QuestionID serialization order",
+          "detail": "Detection Standard section 3.1 identifies this as the canonical DL-029 trigger. Without a test for it, the guard cannot verify that its DL-008 detection handles CC-before-QID correctly.",
+          "severity": "HIGH"
+        },
+        {
+          "check": "Tests for string-aware parsing issues?",
+          "finding": "Not applicable — guard uses regex, not brace-matching",
+          "severity": "INFO"
+        },
+        {
+          "check": "Cross-check against Function constructor parse ground truth?",
+          "finding": "NO — zero tests compare regex-scan DL-008 results against Function constructor parse",
+          "detail": "Detection Standard C4-C5 require cross-checking against Function constructor parse. Pack B ground truth is 0 DL-008 (per section 6.3). No test verifies findDL008Violations() returns 0 on Pack B.",
+          "severity": "HIGH"
+        },
+        {
+          "check": "Window-size invariance (C6)?",
+          "finding": "NO — no test varies the +/-1200 window size to verify result stability",
+          "detail": "The guard uses a hardcoded 1200-character window. Changing this parameter could produce different results — invariance is not verified.",
+          "severity": "MEDIUM"
+        },
+        {
+          "check": "Test count and coverage baseline",
+          "finding": "20 PASS, 0 FAIL — but coverage is methodologically blind to DL-029/016/020",
+          "detail": "All 20 tests pass because they test the CURRENT algorithm (which has known vulnerabilities). The tests validate the guard does what it claims, not whether what it claims is correct per the Detection Standard.",
+          "severity": "INFO"
+        }
+      ],
+      "compatible_with_detection_standard": false,
+      "compatible_with_scan_standard": false,
+      "gaps_found": [
+        "GAP-TG-01: No Pack B CC-before-QID test fixture (DL-029 blind spot)",
+        "GAP-TG-02: No dual-block (DL-016) test fixture",
+        "GAP-TG-03: No cross-check against Function constructor parse ground truth (C4-C5)",
+        "GAP-TG-04: No window-size invariance test (C6)",
+        "GAP-TG-05: Tests validate algorithmic correctness (does it detect what it looks for?) but not methodological correctness (does it look for the right thing in the right place?)",
+        "GAP-TG-06: No regression test for the S725 upgrade — after guard is upgraded to Function constructor parse, existing tests will break because they test the regex-window methodology"
+      ],
+      "remediation_required": [
+        "UPGRADE-TG-01: After governance guard is upgraded to Function constructor parse, rewrite test suite to test the new methodology.",
+        "UPGRADE-TG-02: Add a Pack B simulation test fixture where CorrectChoice appears before QuestionID. Verify 0 DL-008 where EW-N slot is empty for CC=N (C5).",
+        "UPGRADE-TG-03: Add a dual-block test fixture with both flat ChoiceA-D and nested Choices.{A,B,C,D}. Verify DL-016 detection when they diverge.",
+        "UPGRADE-TG-04: Add a cross-check test: parse a lightweight pack subset via Function constructor then compare DL-008 results against the guard scan (C4).",
+        "UPGRADE-TG-05: Add compliance reports for C1-C6 (Detection Standard section 6.1)."
+      ]
+    },
+    {
+      "tool": "build_master_registry.js",
+      "path": "scripts/build_master_registry.js",
+      "line_count": 634,
+      "checks": [
+        {
+          "check": "MCQ extraction: string-aware brace matching?",
+          "finding": "YES — parseMCQPack() uses inString/stringChar tracking (lines 92-101)",
+          "detail": "Character-by-character loop tracks inString, stringChar, and escape states during brace counting for per-object extraction. This is string-aware. Compliant with Detection Standard section 4.1.",
+          "line_numbers": "90-175",
+          "severity": "PASS"
+        },
+        {
+          "check": "MCQ extraction: object-bounded?",
+          "finding": "YES — per-object JSON.parse within brace-matched object boundaries",
+          "detail": "braceCount tracks {}. When braceCount returns to 0, the object string is JSON.parsed. Each question object is extracted within its own brace boundaries. This avoids the DL-029 cross-object contamination.",
+          "line_numbers": "102-174",
+          "severity": "PASS"
+        },
+        {
+          "check": "Case file extraction: string-aware?",
+          "finding": "YES — evalCaseData() uses inString/strChar tracking (lines 208-252)",
+          "line_numbers": "208-252",
+          "severity": "PASS"
+        },
+        {
+          "check": "Case file extraction: Function constructor or eval()?",
+          "finding": "USES eval() (line 231-232), NOT new Function()",
+          "detail": "evalCaseData() uses eval(evalScript) where evalScript = globalThis.__tmpArray__ = ... This is NOT the Function constructor (new Function). While eval() works for these files, it is a less safe parsing method and not the Detection Standard preferred approach (section 4.2). The extraction step (finding array boundaries) is string-aware; only the final parse step uses eval().",
+          "line_numbers": "231-232",
+          "severity": "LOW"
+        },
+        {
+          "check": "Uses forward-scan or window-based extraction?",
+          "finding": "NO — uses character-position object-boundary extraction, not forward-scan regex",
+          "severity": "PASS"
+        },
+        {
+          "check": "QuestionID count verification?",
+          "finding": "YES — reports per-file question counts in console output for cross-check against grep",
+          "severity": "PASS"
+        }
+      ],
+      "compatible_with_detection_standard": true,
+      "compatible_with_scan_standard": true,
+      "gaps_found": [
+        "GAP-BR-01: Case file extraction uses eval() instead of Function constructor. Low severity — eval() works on current files but Function constructor is preferred per section 4.2.",
+        "GAP-BR-02: No DL-008/DL-016/DL-026 detection built in — registry builder extracts metadata only, does not scan for defects.",
+        "GAP-BR-03: Does not cross-validate QuestionID count against Function constructor parse ground truth."
+      ],
+      "remediation_required": [
+        "ENHANCE-BR-01 (optional): Replace eval() with Function constructor for case file parsing (template: new Function(content + '; return ENHANCED_CASE_BASE;'))."
+      ]
+    },
+    {
+      "tool": "session86_dl8_scan.js + session86_dl026_scan.js (representative scan scripts)",
+      "path": "scripts/session86_dl8_scan.js, scripts/session86_dl026_scan.js",
+      "line_count": 33,
+      "checks": [
+        {
+          "check": "Uses QuestionID-split forward-scan (F1)?",
+          "finding": "YES — uses content.split('\"QuestionID\"') to segment blocks, then regex forward-scan within each block for CorrectChoice",
+          "detail": "Line 9: const blocks = content.split('\"QuestionID\"'); This splits the file by QID occurrences, then each block is regex-scanned for CorrectChoice. For Pack B (CC before QID), each block STARTS with the item own fields AFTER QID, meaning CorrectChoice from the enclosing object is lost — the forward-scan finds the NEXT item CC at the top of the next block. This produces ~75% false positive rate on Pack B.",
+          "line_numbers": "9, 18",
+          "severity": "CRITICAL"
+        },
+        {
+          "check": "String-aware?",
+          "finding": "NO — raw text split and regex, no string tracking at all",
+          "severity": "HIGH"
+        },
+        {
+          "check": "Within-record extraction?",
+          "finding": "NO — splits by QuestionID delimiter (losing the enclosing object boundary), then regex-scans within text blocks",
+          "detail": "The split removes \"QuestionID\" from the file and regroups text between QIDs. If QID appears AFTER CC in the original JSON, the block does not include its own CC — it includes the next item CC. This is a structural impossibility to get correct for Pack B.",
+          "severity": "CRITICAL"
+        }
+      ],
+      "compatible_with_detection_standard": false,
+      "compatible_with_scan_standard": false,
+      "gaps_found": [
+        "GAP-S86-01: QuestionID-split loses object boundaries — CC from different item attributed to current QID (DL-029)",
+        "GAP-S86-02: No string-awareness — bracket characters inside string values break block boundaries",
+        "GAP-S86-03: Results for Pack B are structurally invalid (~75% false positive rate)",
+        "GAP-S86-04: session86_dl026_scan.js additionally uses a second regex match for question_state within the same split block — same vulnerability"
+      ],
+      "remediation_required": [
+        "REPLACE-S86-01: These scripts should be replaced by the Function constructor scan (reference implementation in Detection Standard section 6.2). The scan_s710r_dl026.js is the approved replacement for dl026_scan.",
+        "REPLACE-S86-02: Any report generated from these scripts should be tagged as DL-029 contaminated — results invalid per S725 Detection Standard section 3.1."
+      ]
+    },
+    {
+      "tool": "scan_s710r_dl026.js",
+      "path": "scripts/scan_s710r_dl026.js",
+      "line_count": 86,
+      "checks": [
+        {
+          "check": "Uses Function constructor parse?",
+          "finding": "YES — line 15: new Function(source + ';\\nreturn ' + varName + ';')",
+          "detail": "This is the approved methodology per Detection Standard section 4.2. The entire array is parsed via Function constructor, then each item is accessed via direct property access on the parsed object.",
+          "line_numbers": "15-16",
+          "severity": "PASS"
+        },
+        {
+          "check": "Within-record field extraction?",
+          "finding": "YES — items are iterated as native objects; all field access is within the same object",
+          "detail": "For each item, cc = item.CorrectChoice; ewSlot = 'ExplanationWrong' + cc; item[ewSlot]. All from the SAME parsed object. No cross-object attribution possible.",
+          "line_numbers": "31, 36-37",
+          "severity": "PASS"
+        },
+        {
+          "check": "DL-008 co-detection?",
+          "finding": "YES — checks for both DL-008 (non-empty EW[CC]) and DL-026 (empty EW[non-CC]) in the same scan pass",
+          "detail": "Lines 34-39 check DL-008, lines 42-50 check DL-026. Both use within-object field extraction.",
+          "severity": "PASS"
+        },
+        {
+          "check": "Dual-block handling?",
+          "finding": "PARTIAL — accesses ExplanationWrong fields as direct properties of the merged object; does not separately validate against content-block choices",
+          "detail": "Packs A/C/D use merged single-object format where both metadata and content fields are co-located. The scan accesses EW fields directly on the parsed object — this is correct for the merged format. However, the scan does not verify that EW text aligns with content-block Choices.{A,B,C,D} (DL-016 guard).",
+          "severity": "LOW"
+        },
+        {
+          "check": "Pack coverage",
+          "finding": "Packs A, C, D only — Pack B and E not included",
+          "detail": "Line 6: PACKS = ['a', 'c', 'd']; Packs B and E are not scanned. Pack B is known clean (0 DL-008 per Function constructor parse). Pack E has DL-021 (absent fields) rather than DL-026 (empty string fields) — different defect category.",
+          "severity": "INFO"
+        }
+      ],
+      "compatible_with_detection_standard": true,
+      "compatible_with_scan_standard": true,
+      "gaps_found": [
+        "GAP-S710-01: Does not scan Pack B or Pack E. Pack B = 0 DL-008/DL-026 per ground truth — could be added for completeness. Pack E has DL-021 (absent fields) which this scan would flag correctly (undefined = EMPTY_STRING).",
+        "GAP-S710-02: Outputs QID lists — good. Each finding includes QID, section, CC, empty slots with details. Compliant with AGENTS.md section 5 (no totals-only reporting)."
+      ],
+      "remediation_required": []
+    },
+    {
+      "tool": "s805_dl016_inventory.js",
+      "path": "scripts/s805_dl016_inventory.js",
+      "line_count": 204,
+      "checks": [
+        {
+          "check": "Uses Function constructor parse?",
+          "finding": "YES — line 14: new Function(raw + '; return MCQ_BANK_A;')",
+          "detail": "Approved methodology per Detection Standard section 4.2.",
+          "severity": "PASS"
+        },
+        {
+          "check": "Dual-block disambiguation?",
+          "finding": "YES — explicitly separates metadata blocks (ExplanationWrong fields) from content blocks (Section + Stem + Choices)",
+          "detail": "Lines 32-39: distinguishes metadata blocks by presence of ExplanationWrongA fields. Lines 36-38: identifies content blocks by Section + Stem. Lines 64-86: pairs both blocks by QID and records block-level field provenance. This is the canonical dual-block approach described in Detection Standard section 4.4.",
+          "severity": "PASS"
+        },
+        {
+          "check": "DL-016 detection?",
+          "finding": "YES — topical alignment analysis between EW text and choice text",
+          "detail": "Lines 114-152: computes keyword overlap ratio between ExplanationWrong[X] text and Choices[X] text. Flags generic/template patterns (line 124-132). Classifies items as DL016_ALL_MISALIGNED, DL016_PARTIAL, DL016_GENERIC, DL026_EMPTY_SLOTS, or CLEAN. This is a sophisticated DL-016 detection implementation.",
+          "severity": "PASS"
+        },
+        {
+          "check": "Uses QID lists (not totals-only)?",
+          "finding": "YES — outputs full per-item JSON inventory with scores",
+          "detail": "Lines 190: console.log full JSON inventory. Lines 193-203: writes to SESSION805_DL016_INVENTORY.json with per-item details.",
+          "severity": "PASS"
+        }
+      ],
+      "compatible_with_detection_standard": true,
+      "compatible_with_scan_standard": true,
+      "gaps_found": [
+        "GAP-S805-01: Scope limited to Pack A Section E — the most DL-016-affected section, but Packs C and D also have dual-block architecture issues."
+      ],
+      "remediation_required": []
+    }
+  ],
+  "forbidden_methodology_instances_found": [
+    {
+      "id": "FM-001",
+      "tool": "governance-guard.js",
+      "methodology": "F1 — Forward-scan regex (DL-029)",
+      "location": ".opencode/plugins/governance-guard.js:42-61",
+      "detail": "findDL008Violations() uses global regex to iterate all non-empty ExplanationWrong[A-D], then searches a +/-1200 character window for CorrectChoice. Produces enforcement decisions (BLOCK) based on potentially phantom findings.",
+      "severity": "CRITICAL",
+      "s725_ref": "SESSION725_GOVERNANCE_DETECTION_STANDARD.md section 3.1, 5.4"
+    },
+    {
+      "id": "FM-002",
+      "tool": "governance-guard.js",
+      "methodology": "F3 — Window-based extraction (+/-N chars around match)",
+      "location": ".opencode/plugins/governance-guard.js:53-55",
+      "detail": "Hardcoded +/-1200 character window around each EW match to locate CorrectChoice. Violates C6 (window-parameter invariance).",
+      "severity": "HIGH",
+      "s725_ref": "SESSION725_GOVERNANCE_DETECTION_STANDARD.md section 3.3"
+    },
+    {
+      "id": "FM-003",
+      "tool": "session86_dl8_scan.js",
+      "methodology": "F1 — Forward-scan regex (DL-029)",
+      "location": "scripts/session86_dl8_scan.js:9,18",
+      "detail": "content.split('\"QuestionID\"') segments text by QID occurrences. For Pack B (CC before QID), each block loses its own CorrectChoice. Regex forward-scan within each block finds the NEXT item CC. ~75% false positive rate on Pack B.",
+      "severity": "CRITICAL",
+      "s725_ref": "SESSION725_GOVERNANCE_DETECTION_STANDARD.md section 3.1"
+    },
+    {
+      "id": "FM-004",
+      "tool": "session86_dl026_scan.js",
+      "methodology": "F1 — Forward-scan regex (DL-029)",
+      "location": "scripts/session86_dl026_scan.js:6,15",
+      "detail": "Same QuestionID-split methodology as dl8_scan. Also uses a second regex match for question_state within the same corrupted block boundaries.",
+      "severity": "CRITICAL",
+      "s725_ref": "SESSION725_GOVERNANCE_DETECTION_STANDARD.md section 3.1"
+    },
+    {
+      "id": "FM-005",
+      "tool": "DEFECT_MANIFEST_DL008_DL026.json",
+      "methodology": "F1 — Mixed methodology (regex question-boundary scan for Packs D-E)",
+      "location": "governance/DEFECT_MANIFEST_DL008_DL026.json — _metadata.methodology",
+      "detail": "Metadata reports: 'regex question-boundary scan for Packs D-E (sample verified: 5/5 Pack D, 6/6 Pack E confirmed genuine)'. The 371 Pack E DL-008 entries are from this regex scan — contradicted by S725 ground truth: Pack E is approx 1 DL-008. The 5/5 and 6/6 confirmation samples are too small to validate a methodology known to produce ~75% false positives.",
+      "severity": "CRITICAL",
+      "s725_ref": "SESSION725_GOVERNANCE_DETECTION_STANDARD.md section 6.3, 5.3"
+    }
+  ],
+  "governance_manifest_review": {
+    "file": "governance/DEFECT_MANIFEST_DL008_DL026.json",
+    "path": "governance/DEFECT_MANIFEST_DL008_DL026.json",
+    "size_lines": 7424,
+    "session_created": 92,
+    "date": "2026-07-25",
+    "items_in_manifest": {
+      "dl008": 301,
+      "dl026": 50,
+      "dl008_pack_e": "371 (not yet enumerated into main list per metadata)",
+      "blocked": 351
+    },
+    "checks": [
+      {
+        "check": "Methodology used for source data",
+        "finding": "MIXED — Node.js eval() for Packs A-C; regex question-boundary scan for Packs D-E",
+        "detail": "The eval()-based Packs A-C counts are potentially valid. The regex-scanned Packs D-E counts are DL-029-contaminated. The manifest DL-008 count of 301 and DL-026 count of 50 may include false positives from Packs D-E.",
+        "severity": "HIGH"
+      },
+      {
+        "check": "Consistency with S725 ground truth baselines (section 6.3)",
+        "finding": "CONTAMINATED — Pack E claim of 371 DL-008 contradicts ground truth of ~1",
+        "detail": "S725 Detection Standard section 6.3 establishes: Pack B = 0 DL-008 (confirmed), Pack E is approx 1 DL-008 (confirmed). The manifest dl008_pack_e array (371 entries, not yet enumerated per metadata) is a DL-029 artifact. These 371 items should be re-verified via Function constructor parse before any delivery block is enforced.",
+        "severity": "CRITICAL"
+      },
+      {
+        "check": "Uses QID lists (not totals-only)?",
+        "finding": "YES — each entry in dl008, dl026, and blocked arrays has a qid field with specific QuestionID",
+        "detail": "Compliant with AGENTS.md section 5. The blocked array (351 entries) has per-QID details with defect_code, state, correctChoice, and notes.",
+        "severity": "PASS"
+      },
+      {
+        "check": "Up-to-date with S722A/S802 findings?",
+        "finding": "NO — predates both S722A (cross-pack consistency audit) and S802 (8 Permanent Prevention Rules / DL-029 closure)",
+        "detail": "Session 92 manifest (2026-07-25) predates S722A Agent Q cross-pack consistency audit and S802 8 Permanent Prevention Rules. The manifest methodology section still references Session 86/92 data. S722A found systematic Pack E under-calibration; the manifest Pack E DL-008 claims are separate concerns but both reflect pre-standard era data.",
+        "severity": "MEDIUM"
+      },
+      {
+        "check": "Downstream consumers: delivery_blocklist.js and defect_manifest.js",
+        "finding": "Both downstream consumers are generated FROM this manifest and inherit its DL-029 contamination for Packs D-E blocklisted items",
+        "detail": "delivery_blocklist.js: 'Regenerate with: node scripts/build_blocklist.js'. defect_manifest.js: generated 2026-07-24 from the same manifest. Both block items from delivery based on potentially phantom DL-008 flags. Any item blocklisted solely from Pack D/E regex-scan data should be re-verified before delivery exclusion.",
+        "severity": "HIGH"
+      }
+    ],
+    "remediation_required": [
+      "MANIFEST-01: Regenerate the manifest using Function constructor parse (per Detection Standard section 4.2 reference implementation) for ALL 5 packs, replacing any regex-scan-derived data.",
+      "MANIFEST-02: Re-run dl8Scan() reference implementation on Packs D and E specifically. Compare against current manifest DL-008 entries.",
+      "MANIFEST-03: After regeneration, remove any Pack E DL-008 entries that do not pass the Function constructor parse verification.",
+      "MANIFEST-04: Rebuild delivery_blocklist.js and defect_manifest.js from the regenerated manifest.",
+      "MANIFEST-05: Add a '_s725_verified' field to the manifest metadata recording the Function constructor parse verification date and results."
+    ]
+  },
+  "remediation_priority": [
+    {
+      "priority": "P0",
+      "tool": "governance-guard.js",
+      "gap": "Rule 2 DL-008 detection uses DL-029-vulnerable +/-1200 char forward-scan, producing enforcement decisions (BLOCK) based on potentially phantom findings",
+      "fix": "Replace findDL008Violations() with Function constructor parse (reference implementation in Detection Standard section 6.2). Per S724 finding: 'The governance guard BLOCK rule is producing its enforcement decisions based on potentially incorrect field attribution.' This is the single highest-priority gap — the enforcement mechanism itself is methodologically flawed.",
+      "effort": "HIGH — requires plugin redesign to access pack file content at runtime",
+      "s725_ref": "section 5.4, 7.2"
+    },
+    {
+      "priority": "P0",
+      "tool": "DEFECT_MANIFEST_DL008_DL026.json",
+      "gap": "Pack E DL-008 entries (371 claimed) are DL-029 contaminated — contradict S725 ground truth of ~1. Delivery blocklist and defect manifest downstream consumers inherit this contamination.",
+      "fix": "Regenerate full manifest via Function constructor parse for all 5 packs. Rebuild delivery_blocklist.js and defect_manifest.js from regenerated manifest.",
+      "effort": "MEDIUM — Function constructor scan exists (reference implementation in section 6.2); needs execution and downstream rebuild",
+      "s725_ref": "section 6.3"
+    },
+    {
+      "priority": "P1",
+      "tool": "session86_dl8_scan.js + session86_dl026_scan.js",
+      "gap": "Both use QuestionID-split forward-scan (DL-029 vulnerable). Results from these scripts have been ingested into session reports and defect tracking.",
+      "fix": "Replace with Function constructor parse scans. Tag all prior results from these scripts as DL-029 contaminated.",
+      "effort": "LOW — replacement scan (scan_s710r_dl026.js) already exists and is compliant",
+      "s725_ref": "section 3.1"
+    },
+    {
+      "priority": "P1",
+      "tool": "test_governance_guard.js",
+      "gap": "No DL-029 (Pack B layout), DL-016 (dual-block), or Function-constructor cross-check tests. Will break after P0 guard upgrade.",
+      "fix": "After governance guard is upgraded to Function constructor parse, rewrite test suite with Pack B simulation, dual-block fixtures, and C1-C6 compliance verification.",
+      "effort": "MEDIUM — ~6 new test fixtures needed plus compliance check infrastructure",
+      "s725_ref": "section 6.1"
+    },
+    {
+      "priority": "P2",
+      "tool": "ExplanationValidator.js",
+      "gap": "No DL-016 detection (metadata vs. content block Choice divergence). No DL-021 detection (absent non-CC EW fields).",
+      "fix": "Add DL-016 check: compare flat ChoiceA-D against nested Choices.{A,B,C,D}, warn on divergence. Add DL-021: flag absent non-CC EW fields separately from empty.",
+      "effort": "LOW — ~15 lines of code in validateQuestion()",
+      "s725_ref": "section 4.4"
+    },
+    {
+      "priority": "P2",
+      "tool": "build_master_registry.js",
+      "gap": "Case file extraction uses eval() instead of Function constructor. No DL-008/DL-016/DL-026 scanning built in.",
+      "fix": "Replace eval() with new Function() for case array evaluation. Not blocking — current eval() works on all 5 case files.",
+      "effort": "TRIVIAL — single-line rewrite in evalCaseData()",
+      "s725_ref": "section 4.2"
+    },
+    {
+      "priority": "P3",
+      "tool": "scan_s710r_dl026.js + s805_dl016_inventory.js",
+      "gap": "Fully compliant tools with minor scope limitations.",
+      "fix": "Extend s710r to scan Packs B and E for completeness. Extend s805 to inventory Packs C/D dual-block sections.",
+      "effort": "LOW — add pack letters to existing scan loops",
+      "s725_ref": "N/A — enhancement"
+    }
+  ],
+  "methodology_compliance_summary": {
+    "compliant_tools": [
+      "ExplanationValidator.js — string-aware brace-matcher, within-record field extraction, Function constructor fallback",
+      "scan_s710r_dl026.js — Function constructor parse, within-record field extraction, QID-list output",
+      "s805_dl016_inventory.js — Function constructor parse, dual-block disambiguation, QID-list output",
+      "build_master_registry.js — string-aware brace-matcher, object-bounded per-QID extraction (minor: eval not Function for cases)"
+    ],
+    "noncompliant_tools": [
+      "governance-guard.js — DL-029-vulnerable +/-1200 char forward-scan (CRITICAL: produces enforcement decisions)",
+      "session86_dl8_scan.js — QuestionID-split forward-scan (CRITICAL: CC misattribution on Pack B)",
+      "session86_dl026_scan.js — QuestionID-split forward-scan (CRITICAL: same vulnerability)",
+      "test_governance_guard.js — tests validate wrong methodology; no DL-029/016/020 coverage"
+    ],
+    "contaminated_artifacts": [
+      "DEFECT_MANIFEST_DL008_DL026.json — Mixed eval/regex methodology; 371 Pack E DL-008 entries contravene ground truth",
+      "governance/delivery_blocklist.js — Inherits contaminated manifest data",
+      "governance/defect_manifest.js — Inherits contaminated manifest data"
+    ]
+  },
+  "_cross_references": {
+    "s725_detection_standard": "reports/SESSION725_GOVERNANCE_DETECTION_STANDARD.md",
+    "s725_portfolio_framework": "reports/SESSION725_PORTFOLIO_STEWARDSHIP_FRAMEWORK.md",
+    "s724_finding_ref": "reports/SESSION724_SESSION_SUMMARY.md lines 96-97 (governance guard DL-029 gap)",
+    "s722a_audit": "reports/crosspack_consistency_audit_S722A.md",
+    "s802_rules": "8 Permanent DL-029 Prevention Rules (referenced in Detection Standard section 5.4)",
+    "governance_guard": ".opencode/plugins/governance-guard.js",
+    "validator_fix_dl020": "scripts/validators/ExplanationValidator.js lines 119-129 (string-aware state machine)",
+    "reference_implementation": "SESSION725_GOVERNANCE_DETECTION_STANDARD.md section 6.2 (Function constructor DL-008 scan)"
+  }
+}

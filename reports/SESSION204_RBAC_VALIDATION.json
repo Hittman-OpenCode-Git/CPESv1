@@ -1,0 +1,469 @@
+{
+  "document": "SESSION204_RBAC_VALIDATION",
+  "session": "S204",
+  "board": "H",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "title": "RBAC Validation — May Administration Portal",
+  "date": "2026-07-27",
+  "type": "Read-Only RBAC Audit",
+  "status": "PASS — 5 enforcement-gap recommendations, 2 HIGH-priority design gaps",
+  "authority": "S203 ADMIN_PLATFORM_SPEC + S203 ROLE_MODEL",
+
+  "permission_catalog_by_role": {
+    "description": "Enumerated from S203_ADMIN_PLATFORM_SPEC §roles + S203_ROLE_MODEL §permission_catalog. Permissions are inherited hierarchically (higher levels include all lower-level permissions).",
+    "Student": {
+      "level": 1,
+      "explicit_permissions": [
+        "view_tests",
+        "take_tests",
+        "view_own_results",
+        "view_own_reviews",
+        "view_own_recommendations"
+      ],
+      "inherited_permissions": [],
+      "total_permission_count": 5,
+      "data_scope": "Own data only (student ID scoped)"
+    },
+    "Content_Administrator": {
+      "level": 2,
+      "explicit_permissions": [
+        "view_question_inventory",
+        "search_registry",
+        "view_recommendations",
+        "view_remediation_queues",
+        "edit_unprocessed_content"
+      ],
+      "inherited_from_student": [
+        "view_tests",
+        "take_tests",
+        "view_own_results",
+        "view_own_reviews",
+        "view_own_recommendations"
+      ],
+      "total_permission_count": 10,
+      "data_scope": "All questions (read), Unprocessed questions (write), own student data"
+    },
+    "Certification_Reviewer": {
+      "level": 3,
+      "explicit_permissions": [
+        "view_certification_queues",
+        "review_READY_items",
+        "hold_items",
+        "escalate_items",
+        "certify_items",
+        "view_quality_scores"
+      ],
+      "inherited_from_lower": [
+        "view_question_inventory",
+        "search_registry",
+        "view_recommendations",
+        "view_remediation_queues",
+        "edit_unprocessed_content",
+        "view_tests",
+        "take_tests",
+        "view_own_results",
+        "view_own_reviews",
+        "view_own_recommendations"
+      ],
+      "total_permission_count": 16,
+      "data_scope": "All questions (read + certify/hold/escalate), certification queues, quality scores"
+    },
+    "Governance_Administrator": {
+      "level": 4,
+      "explicit_permissions": [
+        "view_governance_guard",
+        "manage_audit_reports",
+        "verify_registry_integrity",
+        "manage_framework_controls",
+        "authorize_state_transitions"
+      ],
+      "inherited_from_lower": [
+        "view_certification_queues",
+        "review_READY_items",
+        "hold_items",
+        "escalate_items",
+        "certify_items",
+        "view_quality_scores",
+        "view_question_inventory",
+        "search_registry",
+        "view_recommendations",
+        "view_remediation_queues",
+        "edit_unprocessed_content",
+        "view_tests",
+        "take_tests",
+        "view_own_results",
+        "view_own_reviews",
+        "view_own_recommendations"
+      ],
+      "total_permission_count": 21,
+      "data_scope": "All content + governance guard rules + audit reports + registry integrity"
+    },
+    "System_Administrator": {
+      "level": 5,
+      "explicit_permissions": [
+        "manage_users",
+        "manage_roles",
+        "system_configuration",
+        "data_export",
+        "platform_maintenance"
+      ],
+      "inherited_from_lower": [
+        "view_governance_guard",
+        "manage_audit_reports",
+        "verify_registry_integrity",
+        "manage_framework_controls",
+        "authorize_state_transitions",
+        "view_certification_queues",
+        "review_READY_items",
+        "hold_items",
+        "escalate_items",
+        "certify_items",
+        "view_quality_scores",
+        "view_question_inventory",
+        "search_registry",
+        "view_recommendations",
+        "view_remediation_queues",
+        "edit_unprocessed_content",
+        "view_tests",
+        "take_tests",
+        "view_own_results",
+        "view_own_reviews",
+        "view_own_recommendations"
+      ],
+      "total_permission_count": 26,
+      "data_scope": "Unrestricted (all data, all users, all configuration)"
+    }
+  },
+
+  "module_access_matrix": {
+    "description": "Expanded from S203_ROLE_MODEL §module_access_matrix. Maps each role to its access level per module (NONE, VIEW_OWN, VIEW_ALL, CREATE, MANAGE, FULL).",
+    "columns": ["Student_Management", "Test_Results", "Question_Management", "Recommendation_Registry", "Session_Registry", "Certification_Ops", "Modernization_Dashboard"],
+    "matrix": {
+      "Student": {
+        "Student_Management": "NONE",
+        "Test_Results": "VIEW_OWN",
+        "Question_Management": "NONE",
+        "Recommendation_Registry": "VIEW_OWN",
+        "Session_Registry": "NONE",
+        "Certification_Ops": "NONE",
+        "Modernization_Dashboard": "NONE"
+      },
+      "Content_Administrator": {
+        "Student_Management": "VIEW_ALL",
+        "Test_Results": "VIEW_ALL",
+        "Question_Management": "VIEW_ALL + EDIT_UNPROCESSED",
+        "Recommendation_Registry": "VIEW_ALL + CREATE",
+        "Session_Registry": "VIEW_ALL",
+        "Certification_Ops": "NONE",
+        "Modernization_Dashboard": "VIEW_ALL"
+      },
+      "Certification_Reviewer": {
+        "Student_Management": "VIEW_ALL",
+        "Test_Results": "VIEW_ALL + ANALYTICS",
+        "Question_Management": "VIEW_ALL + EDIT_UNPROCESSED",
+        "Recommendation_Registry": "VIEW_ALL + CREATE + MANAGE",
+        "Session_Registry": "VIEW_ALL",
+        "Certification_Ops": "FULL (review, certify, hold, escalate)",
+        "Modernization_Dashboard": "VIEW_ALL"
+      },
+      "Governance_Administrator": {
+        "Student_Management": "VIEW_ALL",
+        "Test_Results": "VIEW_ALL + ANALYTICS",
+        "Question_Management": "VIEW_ALL + EDIT_UNPROCESSED",
+        "Recommendation_Registry": "VIEW_ALL + CREATE + MANAGE + CLOSE",
+        "Session_Registry": "VIEW_ALL",
+        "Certification_Ops": "FULL (review, certify, hold, escalate, authorize transitions)",
+        "Modernization_Dashboard": "VIEW_ALL"
+      },
+      "System_Administrator": {
+        "Student_Management": "FULL (CRUD, assign roles)",
+        "Test_Results": "VIEW_ALL + ANALYTICS + EXPORT",
+        "Question_Management": "VIEW_ALL + EDIT_UNPROCESSED",
+        "Recommendation_Registry": "FULL (all operations)",
+        "Session_Registry": "VIEW_ALL + EXPORT",
+        "Certification_Ops": "FULL (all operations)",
+        "Modernization_Dashboard": "VIEW_ALL + EXPORT"
+      }
+    },
+    "access_level_legend": {
+      "NONE": "Module not visible to this role",
+      "VIEW_OWN": "Can view only records scoped to own identity",
+      "VIEW_ALL": "Can view all records in this module",
+      "CREATE": "Can create new records",
+      "MANAGE": "Can update and assign records",
+      "FULL": "Unrestricted access including export, configuration, and user management",
+      "ANALYTICS": "Can view aggregated statistics and dashboards",
+      "EDIT_UNPROCESSED": "Can edit content only for question_state: 'Unprocessed'",
+      "CLOSE": "Can close recommendations with evidence",
+      "EXPORT": "Can export data from this module"
+    }
+  },
+
+  "state_transition_authorization": {
+    "description": "Maps each question_state transition to the minimum role level required to authorize it. Derived from S203 specs + QUESTION_METADATA_STANDARD §9.2 + governance-guard rules.",
+    "transitions": {
+      "Unprocessed_to_In_Audit": {
+        "authorized_by": "Content_Administrator (Level 2+)",
+        "trigger": "Entry into a sub-batch for AI verification",
+        "audit_log": "REVISION_HISTORY.md — batch entry",
+        "governance_check": "None — entry gate only"
+      },
+      "In_Audit_to_Certified": {
+        "authorized_by": "Certification_Reviewer (Level 3+)",
+        "trigger": "HIGH-confidence AI verification across all 6 CAQS dimensions + user approval",
+        "pre_conditions": [
+          "All 6 CAQS §1.6 verification dimensions at HIGH confidence",
+          "Zero DL-008 (ExplanationWrong[CorrectChoice] must be empty — governance-guard Rule 2)",
+          "Distractor tier map (A/B/C/D) recorded",
+          "User approval documented in REVISION_HISTORY.md"
+        ],
+        "audit_log": "REVISION_HISTORY.md — certification entry with QID list + before/after counts",
+        "governance_check": "governance-guard Rule 2 (BLOCK) — non-empty EW[CC] blocks certify"
+      },
+      "In_Audit_to_Editorial_Queue": {
+        "authorized_by": "Certification_Reviewer (Level 3+)",
+        "trigger": "Structural or content revision required — item not ready for certification",
+        "audit_log": "REVISION_HISTORY.md — hold/escalate entry",
+        "governance_check": "None"
+      },
+      "Any_to_Archived": {
+        "authorized_by": "Certification_Reviewer (Level 3+) — see gap G-204-01",
+        "trigger": "Consolidation or removal from active pool",
+        "audit_log": "REVISION_HISTORY.md — archival entry",
+        "governance_check": "Content preserved; only state field changes",
+        "note": "Gap G-204-01: archive permission not explicitly assigned in role model. Inferred from Certification Reviewer scope."
+      },
+      "Certified_to_In_Audit": {
+        "authorized_by": "Certification_Reviewer (Level 3+) — see gap G-204-03",
+        "trigger": "Explicit re-verification request (e.g., correctness defect discovered in Certified item)",
+        "pre_conditions": [
+          "Documented re-verification request",
+          "Specific defect identified (e.g., DL-030 answer-key error)"
+        ],
+        "audit_log": "REVISION_HISTORY.md — re-verification entry",
+        "governance_check": "QUESTION_METADATA_STANDARD §9.2: Certified→In Audit requires explicit re-verification request",
+        "note": "Gap G-204-03: no explicit 'reopen_certified' permission exists. This is the most critical gap — without it, correctness defects in certified items cannot be formally remediated through the admin portal workflow."
+      },
+      "Editorial_Queue_to_In_Audit": {
+        "authorized_by": "Content_Administrator (Level 2+)",
+        "trigger": "Revision complete, ready for re-verification",
+        "audit_log": "REVISION_HISTORY.md — re-entry entry",
+        "governance_check": "None"
+      }
+    },
+    "governance_override_transitions": {
+      "description": "Governance Admin (Level 4+) may authorize state transitions for governance-enforcement reasons only (not content-quality overrides).",
+      "authorized": [
+        "Certified → Archived (quarantine — structural defect discovered post-certification, e.g., DL-008 re-contamination)",
+        "Any state → Archived (emergency pool exclusion)",
+        "Archived → In Audit (reinstatement after remediation)"
+      ],
+      "not_authorized": [
+        "In Audit → Certified (content-quality decision — Certification Reviewer domain)",
+        "Certified → In Audit (content-quality decision — requires re-verification by Certification Reviewer, not unilateral governance action)"
+      ],
+      "audit_requirement": "All governance-override transitions must log: {role: 'Governance_Administrator', reason_code, affected_qids[], timestamp, governance_approval_ref}"
+    }
+  },
+
+  "security_boundaries": {
+    "description": "What each role CANNOT do even with a modified client. These are server-side enforcement points that must be implemented at the data layer, not the frontend layer.",
+    "student_boundaries": {
+      "summary": "5 enforcement points — Student is the most restricted role",
+      "enforcement_points": [
+        {
+          "point": "SB-01",
+          "cannot": "View other students' test results, reviews, or recommendations",
+          "enforcement": "All data queries must filter by authenticated student ID. No 'list all students' endpoint accessible to Level 1.",
+          "implementation": "Data-layer query parameter: WHERE student_id = :authenticated_student_id"
+        },
+        {
+          "point": "SB-02",
+          "cannot": "Access Question Management module",
+          "enforcement": "Module visibility gated at entry. Level 1 sees only student-facing UI (index_updated.html). Admin portal (admin.html) not served to Level 1 sessions.",
+          "implementation": "Route-level guard: admin.html returns 403 for Level 1 tokens"
+        },
+        {
+          "point": "SB-03",
+          "cannot": "Modify any question content or metadata",
+          "enforcement": "Write operations on question objects require Level 2+. The edit endpoint must reject Level 1 tokens regardless of request body.",
+          "implementation": "Permission check at write gate: if role_level < 2 → 403"
+        },
+        {
+          "point": "SB-04",
+          "cannot": "View certification queues or trigger state transitions",
+          "enforcement": "Certification Operations Console not accessible. State transition API endpoints reject Level 1 tokens.",
+          "implementation": "Permission check at transition endpoint: if role_level < 3 → 403"
+        },
+        {
+          "point": "SB-05",
+          "cannot": "Access governance guard rules, audit reports, or registry integrity tools",
+          "enforcement": "Governance module not accessible. Governance API endpoints reject Level 1 tokens.",
+          "implementation": "Permission check at governance endpoint: if role_level < 4 → 403"
+        }
+      ]
+    },
+    "content_admin_boundaries": {
+      "summary": "4 enforcement points — Content Admin can view everything but write is heavily restricted",
+      "enforcement_points": [
+        {
+          "point": "SB-06",
+          "cannot": "Edit Certified, In Audit, Editorial Queue, or Archived questions",
+          "enforcement": "Write gate checks question_state before allowing edit. Only question_state: 'Unprocessed' permits Content Admin edits.",
+          "implementation": "At write: if question.question_state !== 'Unprocessed' → 403. Log attempt."
+        },
+        {
+          "point": "SB-07",
+          "cannot": "Certify, hold, or escalate items",
+          "enforcement": "Certification Operations Console not accessible. State transition endpoints reject Level 2 for certify/hold/escalate.",
+          "implementation": "Permission check at transition endpoint: if role_level < 3 → 403"
+        },
+        {
+          "point": "SB-08",
+          "cannot": "Close recommendations",
+          "enforcement": "Recommendation close operation requires Level 4+. Level 2 can only create and view.",
+          "implementation": "Permission check at close endpoint: if role_level < 4 → 403"
+        },
+        {
+          "point": "SB-09",
+          "cannot": "Modify student accounts or role assignments",
+          "enforcement": "Student Management write operations require Level 5.",
+          "implementation": "Permission check at user management endpoint: if role_level < 5 → 403"
+        }
+      ]
+    },
+    "certification_reviewer_boundaries": {
+      "summary": "3 enforcement points — Certification Reviewer is the content-quality authority but limited in governance and system operations",
+      "enforcement_points": [
+        {
+          "point": "SB-10",
+          "cannot": "Delete questions",
+          "enforcement": "No delete endpoint exists for any role below Level 5. Even Level 5 delete should be soft (state change to Archived, not data destruction).",
+          "implementation": "Delete operation: if role_level < 5 → 403. At Level 5: soft-delete only (question_state → 'Archived')."
+        },
+        {
+          "point": "SB-11",
+          "cannot": "Modify governance guard rules or audit reports",
+          "enforcement": "Governance module write operations require Level 4+.",
+          "implementation": "Permission check at governance write endpoint: if role_level < 4 → 403"
+        },
+        {
+          "point": "SB-12",
+          "cannot": "Manage system configuration or export registry data",
+          "enforcement": "System administration endpoints require Level 5.",
+          "implementation": "Permission check at system endpoint: if role_level < 5 → 403"
+        }
+      ]
+    },
+    "governance_admin_boundaries": {
+      "summary": "2 enforcement points — Governance Admin is powerful but restricted from content-quality decisions and system operations",
+      "enforcement_points": [
+        {
+          "point": "SB-13",
+          "cannot": "Certify items on content-quality grounds (override Certification Reviewer)",
+          "enforcement": "Certify transition for content-quality purposes must be initiated by Certification Reviewer. Governance Admin certify operations must carry a governance reason code and must not override a Certification Reviewer's hold/escalate decision.",
+          "implementation": "At certify: check if item has active Certification Reviewer hold/escalate. If yes → reject governance certify unless reason_code is governance_quarantine."
+        },
+        {
+          "point": "SB-14",
+          "cannot": "Manage user accounts or role assignments",
+          "enforcement": "System administration endpoints require Level 5.",
+          "implementation": "Permission check at user management endpoint: if role_level < 5 → 403"
+        }
+      ]
+    },
+    "system_admin_boundaries": {
+      "summary": "2 enforcement points — System Admin has full access but governance-guard modification requires dual authorization",
+      "enforcement_points": [
+        {
+          "point": "SB-15",
+          "cannot": "Modify governance-guard rules without Governance Admin approval",
+          "enforcement": "This is F-204-02 (HIGH). Governance-guard rule modification must require dual-authorization: System Admin initiates change, Governance Admin approves. This must be enforced at the file-write level, not only at the RBAC level.",
+          "implementation": "Dual-authorization gate: (1) System Admin submits change proposal, (2) Governance Admin approves, (3) write executes. Write gate: if modifying governance-guard.js AND !governance_approval_present → 403."
+        },
+        {
+          "point": "SB-16",
+          "cannot": "Delete questions (hard delete)",
+          "enforcement": "Even Level 5 cannot hard-delete questions. Per PROJECT_CONSTITUTION §7: 'AI SHALL NOT delete questions.' This applies to System Admin as well. Only soft-archive (state → Archived) is permitted.",
+          "implementation": "Hard-delete operation: always 403 regardless of role. Soft-archive: role_level >= 3 with audit log."
+        }
+      ]
+    }
+  },
+
+  "enforcement_point_summary": {
+    "total": 16,
+    "by_role": {
+      "Student": 5,
+      "Content_Administrator": 4,
+      "Certification_Reviewer": 3,
+      "Governance_Administrator": 2,
+      "System_Administrator": 2
+    },
+    "gates_required": {
+      "route_level": "Module routing — deny access to admin.html for Level 1",
+      "permission_level": "Action authorization — check role level before every write/read operation",
+      "data_scope_level": "Query scoping — filter results by authenticated user's data scope",
+      "dual_authorization_level": "Governance-guard modification — requires 2-role approval"
+    }
+  },
+
+  "implementation_recommendations": {
+    "priority_HIGH": [
+      {
+        "rec": "R-204-01",
+        "description": "Implement role-precedence for certify/hold/escalate between Certification Reviewer and Governance Admin. Certification Reviewer decisions on content quality are final; Governance Admin transitions require a governance reason code. Enforce at SB-13.",
+        "target_gate": "S830"
+      },
+      {
+        "rec": "R-204-02",
+        "description": "Implement dual-authorization gate for governance-guard.js modification. System Admin initiates, Governance Admin approves. Enforce at SB-15.",
+        "target_gate": "S910"
+      }
+    ],
+    "priority_MEDIUM": [
+      {
+        "rec": "R-204-03",
+        "description": "Add explicit 'archive_items' permission to Certification Reviewer role (gap G-204-01).",
+        "target_gate": "S830"
+      },
+      {
+        "rec": "R-204-04",
+        "description": "Add explicit 'reopen_certified' permission to Certification Reviewer role for Certified→In Audit transitions (gap G-204-03).",
+        "target_gate": "S830"
+      },
+      {
+        "rec": "R-204-05",
+        "description": "Add structured audit fields to REVISION_HISTORY.md state-transition entries: {role, timestamp, qids[], reason_code, before_state, after_state}.",
+        "target_gate": "S830"
+      }
+    ],
+    "priority_LOW": [
+      {
+        "rec": "R-204-06",
+        "description": "Document recommendation deletion as intentionally unsupported (gap G-204-02). Recommendations are audit artifacts; CLOSE status is the terminal state.",
+        "target_gate": "S900"
+      },
+      {
+        "rec": "R-204-07",
+        "description": "Clarify case-item (CBQ*-*) scope in Question Management module (gap M-204-01). Decide whether CANONICAL_REGISTRY includes case items and document.",
+        "target_gate": "S830"
+      }
+    ]
+  },
+
+  "pilot_readiness_assessment": {
+    "can_proceed_to_shadow_mode": true,
+    "shadow_mode_scope": "All 7 modules spec'd. Admin Auth + 4 P0 modules (Question Management, Recommendation Registry, Session Registry, Certification Operations Console) are design-complete for shadow-mode mock UI. 3 P1 modules (Student Management, Test Results, Modernization Dashboard) are deferred.",
+    "pre_conditions_for_live_pilot": [
+      "R-204-01 (role-precedence for certify) — MUST RESOLVE before live pilot",
+      "R-204-03 (archive permission) — SHOULD RESOLVE before live pilot",
+      "R-204-04 (reopen_certified permission) — SHOULD RESOLVE before live pilot",
+      "R-204-05 (structured audit fields) — SHOULD RESOLVE before live pilot"
+    ],
+    "pre_conditions_for_production": [
+      "R-204-02 (dual-authorization for governance-guard) — MUST RESOLVE before production",
+      "All 16 security-boundary enforcement points implemented and tested"
+    ]
+  }
+}

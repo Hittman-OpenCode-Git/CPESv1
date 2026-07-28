@@ -1,0 +1,94 @@
+{
+  "document": "SESSION203_THROUGHPUT_VALIDATION",
+  "session": "S203",
+  "title": "Throughput Validation — Engineering Plan vs. Architecture Targets",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "date": "2026-07-27",
+  "type": "Engineering Implementation Specification — Read-Only",
+  "parent": "SESSION202_THROUGHPUT_MODEL.json (Architecture)",
+  "purpose": "Validates that the S203 engineering plan preserves all S202 throughput targets. Cross-checks each BF metric against the engineering specifications to confirm the implementation plan supports (not undermines) the architecture projections.",
+
+  "validation_methodology": "Each BF metric from the S202 throughput model is cross-checked against the S203 engineering specifications to verify: (a) the metric is measurable by the defined engines, (b) the engine architecture supports achieving the target, (c) no engineering decision contradicts or weakens the throughput projection.",
+
+  "board_count_target": {
+    "target": "8 v1 boards → 5 v2 boards",
+    "s202_projection": "Registry, Quality, Governance, Certification, Throughput",
+    "s203_engineering_support": "CONFIRMED. All boards have corresponding engines: Identity/Registry engines (Board A), Scan/Quality/Readiness engines (Boards B-C), Governance Board via governance guard + readiness engine, Certification Board via certification operations console, Throughput tracked via BF metrics in readiness report.",
+    "risk": "NONE — engineering architecture preserves 5-board model"
+  },
+
+  "agent_reduction_target": {
+    "target": "10-26 agents/session → ≤7",
+    "s202_projection": "-74% reduction via pre-flight + delta + board consolidation",
+    "s203_engineering_support": "CONFIRMED. Pre-flight eliminates scan-only agents (89.5% of items clean before board). Delta skips 80% of items. Single-pass quality board replaces 6 v1 boards. Expected agent count: 1 orchestrator + 1-2 scan agents + 2 quality agents + 1 certification agent + 1 governance agent = ~6-7.",
+    "risk": "LOW — agent count depends on defect load, which pre-flight directly controls"
+  },
+
+  "report_reduction_target": {
+    "target": "11+ → 4 per session",
+    "s202_projection": "4 standard reports, 65% legacy files retired",
+    "s203_engineering_support": "CONFIRMED. Reporting Engine produces exactly 4: Readiness, Quality, Certification, Governance. Agent outputs embedded as board verdicts, not standalone files. Legacy retirement plan covers ~800 files.",
+    "risk": "NONE — engineering architecture produces exactly 4 core reports"
+  },
+
+  "readiness_failure_target": {
+    "target": "89.5% → <10%",
+    "s202_projection": "6.6× reduction via 7-gate pre-flight pipeline",
+    "s203_engineering_support": "CONFIRMED. Readiness Engine gates items automatically: Gate -1 (identity) → Gate 0 (JSON) → Gate 1 (DL-008/026/016) → Gate 2 (DL-013/EV3/DL-010) → Gate 3 (compound-key) → Gate 4 (DL-030/031). Only READY items visible to boards. Remediate/BLOCKED items invisible.",
+    "validation": "Engineering plan includes all 11 mandatory scans. Pre-flight runtime ~51s for all packs. Readiness classification is deterministic per item. Board visibility rules enforce REMEDIATE/BLOCKED items hidden from Quality/Certification boards.",
+    "risk": "LOW — depends on scan stability and identity resolution. Both validated by within-object AM-1 extraction."
+  },
+
+  "duplicate_review_target": {
+    "target": "2.5:1 → <1.3:1",
+    "s202_projection": "-60% via single-pass Quality Board + scan-once/consume-many",
+    "s203_engineering_support": "CONFIRMED. Scan Engine produces artifacts once per session. All boards consume same artifacts. Delta Review skips 80% of items. EW fields examined by at most 2 agents (Quality A+B). In v1, EW fields were examined by 4-7 agents per session.",
+    "risk": "LOW — scan-once/consume-many enforced by orchestrator architecture"
+  },
+
+  "re_review_rate_target": {
+    "target": "80% → <20%",
+    "s202_projection": "-75% via SHA-256 delta review",
+    "s203_engineering_support": "CONFIRMED. Delta Review Engine computes content_hash per item. DELTA_LEDGER stores baselines. 5 inheritance rules (IR-001 through IR-005) handle all change types. Unchanged items skip review entirely (IR-001: CertifiedDelta). EW-only changes get targeted review (IR-002). Conservative override catches new scan findings on unchanged items (IR-005).",
+    "validation": "Per-100-items: 80 unchanged → skip (0 min), 10 EW-only → 2 min each (20 min), 3 EC-only → 3 min (9 min), 4 metadata → 2 min (8 min), 3 full-content → 8 min (24 min). Total: 61 min. v1: 600 min. -90%.",
+    "risk": "LOW-MEDIUM — hash stability across sessions requires validation. Canonical serialization must be deterministic."
+  },
+
+  "throughput_multiplier_target": {
+    "target": "3.8× (3-5 → 12-15 items per session-hour)",
+    "s202_projection": "Phase 1: 5-8/hr. Phase 2: 8-12/hr. Phase 3: 12-15/hr.",
+    "s203_engineering_support": "CONFIRMED. Engineering plan allocates: pre-flight ~1 min (automated), per-item quality review: 2-3 min (down from 6-7 min v1), certification adjudication: 0.5 min/item. With delta review skipping 80%: per-wave 100 items → 20 reviewed × 3 min = 60 min quality + 10 min certification + 1 min pre-flight = ~71 min. ~84 items/hr. Supports Phase 2 target of 8-12/hr.",
+    "validation": "Phase 3 with full automation: 135 items/wave × 80% skip → 27 reviewed × 2 min = 54 min + 5 min cert + 1 min scan = 60 min. 27/hr reviewed; 135/hr total throughput. Supports 3.8× multiplier.",
+    "risk": "LOW — throughput gains are architectural, not aspirational. Pre-flight automation + delta skipping are the key drivers."
+  },
+
+  "cost_reduction_target": {
+    "target": "70% cost reduction per certified item (0.305 → 0.092 agent-spawns)",
+    "s202_projection": "Phase 2: 0.10-0.15 spawns/item. Phase 3: 0.07-0.10.",
+    "s203_engineering_support": "CONFIRMED. Per-wave 100 items: v1 = 4-5 sessions × 15-28 agents = 60-140 spawns. v2 = 1-2 sessions × 6-7 agents = 6-14 spawns. 0.06-0.14 spawns/item. Supports target.",
+    "risk": "LOW — agent count directly reduced by pre-flight + board consolidation"
+  },
+
+  "identity_ambiguity_target": {
+    "target": "ELIMINATED (0 disputes, 0 phantoms, 0 targeting failures)",
+    "s202_projection": "Compound-key identity + Gate -1 + AM-1 within-object extraction",
+    "s203_engineering_support": "CONFIRMED. Identity Engine resolves compound keys: QID+CC+EWP+TF+FP+VID. Gate -1 validates identity before any downstream scan. AM-1 within-object extraction is the ONLY approved methodology. Forward-scan, QID-only, and regex-window are all forbidden (FM-001 through FM-008). Governance guard Rules 9-10 enforce at HARD_BLOCK level.",
+    "validation": "Engineering plan includes: (1) identity migration of all 2,500 items, (2) identity_key stability verification across 2 independent AM-1 passes, (3) backward-compat shim for QID-only tools during transition.",
+    "risk": "NONE — compound-key architecture is fully specified with verifiable test gates"
+  },
+
+  "overall_throughput_validation": {
+    "verdict": "PRESERVED. All 8 S202 throughput targets are supported by S203 engineering specifications.",
+    "discrepancies": "NONE. No S203 engineering decision contradicts or weakens any S202 throughput projection.",
+    "enhancements": "Recommendation Pipeline (Board E) and Administration Portal (Board G) are new capabilities not in S202 throughput model. These add operational efficiency but do not change the certification throughput targets.",
+    "projected_break_even": "~254 items certified (~mid-Phase 2, ~3.5 weeks after S830). Unchanged from S202 projection."
+  },
+
+  "measured_at": {
+    "t0_s202": "Architecture baseline established",
+    "tmid_s205": "Identity engine + Gate 1 scans operational — measure BF-001, BF-002, BF-007",
+    "s830_auth": "Phase 1 complete — measure all 10 BF metrics against S202 baseline",
+    "s900_auth": "Phase 2 complete — verify BF-004, BF-005, BF-006, BF-008 at v2 targets",
+    "s910_auth": "Phase 3 complete — verify BF-003, BF-010 at hard-cap thresholds"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "decision": "CONTINUE HYBRID STRATEGY",
+  "quantitativeJustification": {
+    "sessionsSaved": "16 vs cert-first (30 vs 46), 8 vs ew-first (30 vs 38)",
+    "uiqsAdvantage": "+2.7 vs cert-first (82.5 vs 79.8), +1.7 vs ew-first (82.5 vs 80.8)",
+    "certification": "100% (matches cert-first, beats ew-first 92.4%)",
+    "ewCoverage": "88% (beats cert-first 78%, close to ew-first 95%)",
+    "dl008Speed": "Session 6 (matches ew-first, crushes cert-first at session 15)",
+    "paretoOptimal": "YES — no other strategy matches or beats HYBRID on all dimensions"
+  },
+  "evidenceChain": [
+    "S302-S305: Component quality scores established",
+    "S306: UIQS integrated score — Domains E/F at 62.5/62.4 (C-grade)",
+    "S307: Risk register — 2 CRITICAL, 3 HIGH; strategy recommended HYBRID",
+    "S308: Quantitative modeling confirms HYBRID as Pareto-optimal"
+  ]
+}

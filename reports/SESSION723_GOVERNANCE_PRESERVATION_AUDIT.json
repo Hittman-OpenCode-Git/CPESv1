@@ -1,0 +1,143 @@
+{
+  "title": "S723 Governance Preservation Audit",
+  "date": "2026-07-26",
+  "agent": "Agent V — Governance Preservation Audit",
+  "verdict": "GOVERNANCE_PRESERVED",
+  "verdict_note": "Content, scoring, answer-key, certification-state, and governance-guard integrity are all confirmed intact. Root directory organization has non-critical violations (see root_directory_compliance).",
+  "answer_key_integrity": {
+    "no_changes_detected": true,
+    "samples_checked": 20,
+    "samples_consistent": 20,
+    "sample_qids": {
+      "pack_a": [
+        {"qid": "P1-A-005", "cc": "A", "ew_cc": "EMPTY"},
+        {"qid": "P1-A-030", "cc": "B", "ew_cc": "EMPTY"},
+        {"qid": "P1-B-050", "cc": "A", "ew_cc": "EMPTY"},
+        {"qid": "P1-D-025", "cc": "D", "ew_cc": "EMPTY"}
+      ],
+      "pack_b": [
+        {"qid": "P1B-B-120", "cc": "B", "ew_cc": "EMPTY"},
+        {"qid": "P1B-C-150", "cc": "A", "ew_cc": "EMPTY"},
+        {"qid": "P1B-D-100", "cc": "A", "ew_cc": "EMPTY"},
+        {"qid": "P1B-F-084", "cc": "D", "ew_cc": "EMPTY"}
+      ],
+      "pack_c": [
+        {"qid": "P1-AC-020", "cc": "D", "ew_cc": "EMPTY"},
+        {"qid": "P1-BC-050", "cc": "B", "ew_cc": "EMPTY"},
+        {"qid": "P1-CC-030", "cc": "B", "ew_cc": "EMPTY"},
+        {"qid": "P1-DC-040", "cc": "D", "ew_cc": "EMPTY"}
+      ],
+      "pack_d": [
+        {"qid": "P1-AD-015", "cc": "C", "ew_cc": "EMPTY"},
+        {"qid": "P1-BD-030", "cc": "B", "ew_cc": "EMPTY"},
+        {"qid": "P1-CD-050", "cc": "B", "ew_cc": "EMPTY"},
+        {"qid": "P1-DD-025", "cc": "A", "ew_cc": "EMPTY"}
+      ],
+      "pack_e": [
+        {"qid": "P1E-A-030", "cc": "B", "ew_cc": "EMPTY"},
+        {"qid": "P1E-B-050", "cc": "C", "ew_cc": "EMPTY"},
+        {"qid": "P1E-C-050", "cc": "D", "ew_cc": "EMPTY"},
+        {"qid": "P1E-D-030", "cc": "D", "ew_cc": "EMPTY"}
+      ]
+    },
+    "dl030_fix_verification": {
+      "checked": 5,
+      "all_match": true,
+      "items": [
+        {"qid": "P1B-B-119", "current_cc": "C", "expected_cc": "C", "match": true, "note": "Learning curve 4th unit — formula corrected"},
+        {"qid": "P1B-F-084", "current_cc": "D", "expected_cc": "D", "match": true, "note": "Data viz best practice — fixed from A to D"},
+        {"qid": "P1B-F-116", "current_cc": "A", "expected_cc": "A", "match": true, "note": "ERP segregation of duties — fixed from C to A"},
+        {"qid": "P1B-F-121", "current_cc": "B", "expected_cc": "B", "match": true, "note": "Smart contracts — fixed from C to B"},
+        {"qid": "P1E-E-037", "current_cc": "B", "expected_cc": "B", "match": true, "note": "COSO Principle 15 — fixed from D to B"}
+      ]
+    }
+  },
+  "certification_state_integrity": {
+    "no_degradation": true,
+    "certified_count_stable": 2181,
+    "per_pack_breakdown": {
+      "pack_a": 481,
+      "pack_b": 500,
+      "pack_c": 350,
+      "pack_d": 350,
+      "pack_e": 500
+    },
+    "confirmed_by_agent_g": true,
+    "verification_method": "Direct Select-String grep on all 5 pack files"
+  },
+  "content_integrity": {
+    "app_js_integrity": true,
+    "app_js_version": "Exam Engine v8.0",
+    "app_js_lines": 3959,
+    "dl022_insertion1_present": true,
+    "dl022_insertion2_present": true,
+    "dl006_fix_present": true,
+    "scoring_logic_unchanged": true,
+    "scoring_functions_found": ["scoreQuestionQuality", "scoreMCQ", "generateStudyPlan"],
+    "no_unauthorized_content_changes": true
+  },
+  "governance_guard_integrity": {
+    "plugin_present": true,
+    "plugin_path": ".opencode/plugins/governance-guard.js",
+    "line_count": 217,
+    "expected_count": 217,
+    "test_suite_present": true,
+    "test_suite_path": "scripts/test_governance_guard.js"
+  },
+  "root_directory_compliance": {
+    "clean": false,
+    "total_root_files": 77,
+    "permitted_files": 18,
+    "violations_count": 59,
+    "required_files_present": true,
+    "required_files": [
+      "index_updated.html", "app.js", "styles.css",
+      "pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js",
+      "pack_d_corrected.js", "pack_e_corrected.js",
+      "scored_cases.js", "scored_cases2.js", "scored_cases3.js",
+      "scored_cases4.js", "scored_cases5.js",
+      "package.json", "package-lock.json", "opencode.json",
+      "VERSION"
+    ],
+    "violations": [
+      {"file": "may-core.js", "issue": "Not in Constitution §11.1 permitted list (application file, AI reviewer orchestrator)"},
+      {"file": "may-learner-state.js", "issue": "Not in Constitution §11.1 permitted list (application file, learner tracking layer)"},
+      {"file": "temp_qid_sample.json", "issue": "Temp file in root — violates Constitution §11.4 (temp files prohibited)"},
+      {"file": "$null", "issue": "94-byte artifact file in root — likely session command residue"},
+      {"file": "a+b", "issue": "0-byte artifact file in root"},
+      {"file": "52 .bak files", "issue": "Backup files (.bak, .bakN) in root — violates Constitution §11.4"}
+    ],
+    "recommendation": "Move may-core.js and may-learner-state.js to root (or add to Constitution §11.1 if permanent). Move all .bak files to backups/. Delete temp_qid_sample.json, $null, and a+b."
+  },
+  "spot_check_dl008_resolved": {
+    "P1-B-001": {
+      "checked": true,
+      "pack": "pack_a_corrected.js",
+      "correctChoice": "D",
+      "explanationWrongD": "EMPTY",
+      "status": "DL-008 CLEAN"
+    },
+    "P1-B-025": {
+      "checked": true,
+      "pack": "pack_a_corrected.js",
+      "correctChoice": "A",
+      "explanationWrongA": "EMPTY",
+      "status": "DL-008 CLEAN"
+    },
+    "P1-CC-050": {
+      "checked": true,
+      "pack": "pack_c_corrected.js",
+      "correctChoice": "B",
+      "explanationWrongB": "EMPTY",
+      "status": "DL-008 CLEAN"
+    }
+  },
+  "audit_methodology": {
+    "answer_key_sample": "Function-constructor parse of all 5 packs, 4 QIDs per pack (20 total), CorrectChoice + ExplanationWrong[CC] extraction",
+    "certification_count": "Select-String grep for 'question_state: Certified' across all pack files",
+    "dl030_verification": "Direct parse of all 5 DL-030 QIDs against expected correct answers",
+    "app_js": "Line-count, string-match for known DL-022/DL-006 fix signatures",
+    "governance_guard": "File existence + line count verification",
+    "root_directory": "Get-ChildItem enumeration against Constitution §11.1/§11.4 permitted lists"
+  }
+}

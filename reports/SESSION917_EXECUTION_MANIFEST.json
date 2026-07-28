@@ -1,0 +1,80 @@
+{
+  "session": "SESSION917",
+  "timestamp": "2026-07-28T16:19:00.000Z",
+  "program": "CASE_PACK_3X25_CONSOLIDATION_AND_2026_SEAL",
+  "execution_status": "COMPLETE",
+  "halt_conditions": {
+    "total_case_count_75": "PASS",
+    "cases_per_pack_25": "PASS",
+    "governance_guard_51_PASS": "PASS (51/51)",
+    "ui_catalog_alias_failure_false": "PASS"
+  },
+  "artifacts_created": [
+    {
+      "file": "case_pack_1_corrected.js",
+      "cases": 25,
+      "items": 141,
+      "sections": {"A":4,"B":4,"C":5,"D":5,"E":4,"F":3},
+      "sha256": "D07102D22B42AC63CD0A29DEC807B45490DA98100DF6AACAED28BAD52CD08BFE",
+      "size_bytes": 547647,
+      "variable": "CASE_PACK_1",
+      "aliases": ["CASE_BANK_A", "MIGRATED_CASE_BASE_A"]
+    },
+    {
+      "file": "case_pack_2_corrected.js",
+      "cases": 25,
+      "items": 132,
+      "sections": {"A":4,"B":4,"C":5,"D":5,"E":4,"F":3},
+      "sha256": "85F20B990211B8A52A1A75F68F6E96F35F061293D382F540A74D9C9AFA4D294B",
+      "size_bytes": 389274,
+      "variable": "CASE_PACK_2",
+      "aliases": ["CASE_BANK_B", "MIGRATED_CASE_BASE_B"]
+    },
+    {
+      "file": "case_pack_3_corrected.js",
+      "cases": 25,
+      "items": 127,
+      "sections": {"A":3,"B":4,"C":4,"D":4,"E":5,"F":5},
+      "sha256": "5C3560F61DCD392A7D2D4AAE2229703636BB712050382F751735391B176CC512",
+      "size_bytes": 458444,
+      "variable": "CASE_PACK_3",
+      "aliases": ["CASE_BANK_C", "MIGRATED_CASE_BASE_C"]
+    }
+  ],
+  "artifacts_modified": [
+    {
+      "file": "index_updated.html",
+      "action": "Replaced 5 scored_cases.js script tags with 3 case_pack_*_corrected.js tags",
+      "sha256": "E0B7BBAAE2B6B4C3892FCF3E316DC3D88E21AB6618A05A8567B33AB66335D7D3",
+      "size_bytes": 6033
+    },
+    {
+      "file": "knowledge/CURRENT_BASELINES.md",
+      "action": "Updated case file section from 5 legacy scored_cases to 3 case_pack + archived section",
+      "method": "scripts/rebuild_baselines_s916.js"
+    },
+    {
+      "file": "knowledge/REVISION_HISTORY.md",
+      "action": "Appended S916-S918 reconsolidation entry"
+    }
+  ],
+  "backups": [
+    "backups/scored_cases.js.bak-s916-2026-07-28T1619 (457,390 bytes)",
+    "backups/scored_cases2.js.bak-s916-2026-07-28T1619 (438,676 bytes)",
+    "backups/scored_cases3.js.bak-s916-2026-07-28T1619 (444,754 bytes)",
+    "backups/scored_cases4.js.bak-s916-2026-07-28T1619 (534,846 bytes)",
+    "backups/scored_cases5.js.bak-s916-2026-07-28T1619 (333,161 bytes)"
+  ],
+  "legacy_files_archived": [
+    "scored_cases.js",
+    "scored_cases2.js",
+    "scored_cases3.js",
+    "scored_cases4.js",
+    "scored_cases5.js"
+  ],
+  "case_count_total": 75,
+  "item_count_total": 400,
+  "certification": "100% (all 400 items Certified)",
+  "governance_guard": "51/51 PASS",
+  "root_cause_resolved": "VARIABLE_ALIAS_MISMATCH — CASE_BANK_A/E undefined. Fixed by injecting CASE_BANK_A/B/C + MIGRATED_CASE_BASE_A/B/C in case_pack files."
+}

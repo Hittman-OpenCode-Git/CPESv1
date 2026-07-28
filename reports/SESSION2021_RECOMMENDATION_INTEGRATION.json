@@ -1,0 +1,243 @@
+{
+  "document": "SESSION2021_RECOMMENDATION_INTEGRATION",
+  "session": "S202.1",
+  "title": "Recommendation Integration — Finding → Artifact → Recommendation → Session → Closure",
+  "series": "200-Series — Framework v2 Architecture Addendum",
+  "date": "2026-07-27",
+  "type": "Integration Specification — Read-Only",
+  "parent": "SESSION203_RECOMMENDATION_PIPELINE.json + SESSION2021_SCAN_ARTIFACT_SCHEMA.json (Board A)",
+  "purpose": "Defines the full integration chain from artifact-level finding to recommendation creation, session assignment, execution, verification, and closure. This specification closes the S809.1/S809.2 gap where recommendations existed as report-only artifacts without executable linkage. With this integration, a defect in the scan artifact becomes a traceable, executable recommendation with a full lifecycle.",
+  "constraints": ["No content changes", "No certification actions", "No governance changes", "Read-only specification"],
+
+  "integration_model_version": "1.0.0",
+
+  "integration_chain": {
+    "description": "The complete end-to-end flow from defect detection to closure. Each stage is linked to the next via identifiable IDs — every entity in the chain is traceable.",
+    "stages": [
+      {
+        "stage": 1,
+        "name": "Finding",
+        "source": "Session scan artifact — section 5 (defectInventory) and section 4 (perItemResults.defectFlags)",
+        "output": "Raw defect data: defectId, qidList, severity, blockingStatus, certifiedCount",
+        "example": "DL-008 detected on 3 items in Pack D Section E, 0 Certified → severity HIGH, blocking HARD_BLOCK"
+      },
+      {
+        "stage": 2,
+        "name": "Artifact",
+        "source": "Certification Scan Artifact (artifact_id)",
+        "output": "Immutable reference to the exact artifact that detected the finding. Used for reproducibility and audit.",
+        "example": "Artifact: CSA-S811-2026-08-01T12-00-00-000Z, section 5.byDefect[DL-008]"
+      },
+      {
+        "stage": 3,
+        "name": "Recommendation",
+        "source": "Recommendation Pipeline engine — createRecommendation(finding) from artifact defectInventory",
+        "output": "First-class recommendation object with RecommendationId, full lifecycle state, linked questions, assigned session.",
+        "example": "REC-0811-001: DL-008 remediation on 3 Pack D items, target S812, status OPEN"
+      },
+      {
+        "stage": 4,
+        "name": "Session",
+        "source": "Recommendation assigned to target session via assignToSession(recommendationId, sessionId)",
+        "output": "Session receives recommendation in its work queue. Recommendation status → ASSIGNED.",
+        "example": "Session S812 assigned REC-0811-001 as P0 work item"
+      },
+      {
+        "stage": 5,
+        "name": "Closure",
+        "source": "closeRecommendation(recommendationId, authorizerId) — triggers closureEvidence verification",
+        "output": "Recommendation status → CLOSED. ClosureEvidence file referenced. registry defectFlags updated to Resolved.",
+        "example": "REC-0811-001 closed by Governance Board. 3 Pack D items verified DL-008 clean. ClosureEvidence: reports/S812/verification_report.json"
+      }
+    ]
+  },
+
+  "finding_to_recommendation_mapping": {
+    "description": "How defect findings in the scan artifact map to recommendation objects. Not every finding creates a recommendation — only findings that require remediation.",
+    "mapping_rules": [
+      {
+        "finding": "Any HARD_BLOCK defect (DL-008, DL-026, DL-016 SEVERE, DL-030 CONFIRMED)",
+        "creates_recommendation": true,
+        "priority": "P0 if Certified items affected, P1 otherwise",
+        "recommendation_type": "REMEDIATION",
+        "automated": false,
+        "reason": "HARD_BLOCK defects block certification. Must be remediated before items can enter review pipeline."
+      },
+      {
+        "finding": "SOFT_BLOCK defect (DL-013, DL-010 suspected, DL-031 inflated)",
+        "creates_recommendation": true,
+        "priority": "P2 (editorial quality)",
+        "recommendation_type": "EDITORIAL",
+        "automated": false,
+        "reason": "SOFT_BLOCK defects can be deferred. Create recommendation for tracking but not blocking certification."
+      },
+      {
+        "finding": "WARN_ONLY defect (EV3 on Apply+ items)",
+        "creates_recommendation": false,
+        "priority": "P3 (acknowledge only)",
+        "recommendation_type": "NONE",
+        "reason": "WARN_ONLY does not require discrete action. Tracked in aggregate statistics. Individual recommendations would create noise."
+      },
+      {
+        "finding": "Defect with count = 0 (previously resolved, re-confirmed clean)",
+        "creates_recommendation": false,
+        "priority": "N/A",
+        "reason": "No finding to act on. Confirmation-only — update registry defectFlags to Resolved if not already."
+      }
+    ],
+    "finding_consolidation": {
+      "description": "Multiple findings of the same defect class are consolidated into a single recommendation, not one recommendation per QID.",
+      "rule": "One recommendation per defect-class per pack-section combination.",
+      "example": "DL-026 on 73 items in Pack D Section A → 1 recommendation (REC-0811-001), not 73 recommendations."
+    }
+  },
+
+  "recommendation_to_session_assignment": {
+    "description": "How recommendations are assigned to sessions. Assignment is based on priority, pack ownership, and session capacity.",
+    "assignment_rules": [
+      {
+        "rule": "RSA-001 — Priority Assignment",
+        "description": "P0 recommendations (CRITICAL learner-pool exposure) are assigned to the current session. Cannot be deferred.",
+        "assignTo": "Current session immediately. Blocks session close until remediated or acknowledged."
+      },
+      {
+        "rule": "RSA-002 — Batch Cap Compliance",
+        "description": "A session receives at most 30 items per batch (governance-guard Rule 5). Recommendation-linked item count must not exceed batch cap.",
+        "assignTo": "If recommendation's linked question count > 30, split into multiple sessions."
+      },
+      {
+        "rule": "RSA-003 — Pack Ownership",
+        "description": "Recommendations for the same pack file should target the same session to avoid concurrent-write risk (DL-019).",
+        "assignTo": "Group recommendations by pack file. Assign all same-pack recommendations to a single session."
+      },
+      {
+        "rule": "RSA-004 — Dependency Resolution",
+        "description": "If a recommendation is blocked by another recommendation (e.g., DL-016 alignment must happen before DL-026 fill), the blocked recommendation is not assigned until the blocker is resolved.",
+        "assignTo": "Check BlockedBy array. If non-empty, defer assignment until all blockers are CLOSED."
+      }
+    ],
+    "session_capacity_model": {
+      "max_items_per_session": "150 (5 batches × 30 items per Rule 5)",
+      "max_recommendations_per_session": "10 (recommendations grouped by defect class + pack)",
+      "target_duration_per_session": "~60 minutes"
+    }
+  },
+
+  "session_to_execution_contract": {
+    "description": "When a session receives a recommendation, it enters a binding execution contract. The session must remediate, verify, and report.",
+    "contract_terms": [
+      {
+        "term": "C-001 — Pre-Execution Backup",
+        "description": "Before any remediation write: backup all target pack files per BACKUP_PROTOCOL.md. Confirm non-zero size.",
+        "verification": "Governance Board verifies backup exists before authorizing writes."
+      },
+      {
+        "term": "C-002 — Batch Adherence",
+        "description": "Remediate items in batches ≤ 30 per governance-guard Rule 5. Each batch independently verified before next batch begins.",
+        "verification": "Governance guard Rule 5 enforcement + batch verification agent."
+      },
+      {
+        "term": "C-003 — CorrectChoice Immutability",
+        "description": "CorrectChoice MUST NOT change during remediation (for non-DL-030 recommendations). ExplanationWrong field changes only.",
+        "verification": "Post-batch diff: CorrectChoice before == CorrectChoice after. Any change → batch rejected."
+      },
+      {
+        "term": "C-004 — DL-008 Non-Introduction",
+        "description": "Remediation must not introduce new DL-008 violations. Re-scan Gate 1 after each batch.",
+        "verification": "PG-001 re-scan on remediated items. 0 new DL-008 flags."
+      },
+      {
+        "term": "C-005 — Independent Verification",
+        "description": "A second agent (not the remediation agent) must independently verify at least 20% of remediated items.",
+        "verification": "Verification agent produces spot-check report with raw-source evidence."
+      },
+      {
+        "term": "C-006 — Closure Evidence",
+        "description": "Upon completion: produce ClosureEvidence file (verification report) referenced in recommendation closure.",
+        "verification": "ClosureEvidence file must exist, be non-zero, and contain per-item before/after raw evidence."
+      }
+    ]
+  },
+
+  "closure_protocol": {
+    "description": "The formal closure process that transitions a recommendation from VERIFIED to CLOSED.",
+    "steps": [
+      {
+        "step": 1,
+        "actor": "Remediation Agent",
+        "action": "Complete all batches. Produce verification report.",
+        "output": "reports/{sessionId}/verification_report.json"
+      },
+      {
+        "step": 2,
+        "actor": "Independent Verification Agent",
+        "action": "20% spot-check. Confirm all C-001 through C-006 satisfied.",
+        "output": "reports/{sessionId}/independent_verification.json"
+      },
+      {
+        "step": 3,
+        "actor": "Recommendation Pipeline",
+        "action": "submitForVerification(recommendationId, evidencePath). Status → VERIFIED.",
+        "output": "Recommendation status updated in RECOMMENDATION_REGISTRY.json"
+      },
+      {
+        "step": 4,
+        "actor": "Governance Board",
+        "action": "Review closure evidence. Confirm defect flags updated in CANONICAL_REGISTRY.json. Approve closure.",
+        "output": "Governance sign-off recorded in GOVERNANCE_REPORT.md"
+      },
+      {
+        "step": 5,
+        "actor": "Recommendation Pipeline",
+        "action": "closeRecommendation(recommendationId, governanceBoardId). Status → CLOSED. ClosedDate set. Registry entry locked.",
+        "output": "Recommendation permanently CLOSED in RECOMMENDATION_REGISTRY.json"
+      },
+      {
+        "step": 6,
+        "actor": "Registry Board",
+        "action": "Update CANONICAL_REGISTRY.json defectFlags for all linked questions: status → Resolved, resolvedSession set.",
+        "output": "Registry entries updated. Delta ledger records RECERTIFY entry."
+      }
+    ],
+    "closure_evidence_requirements": {
+      "required_fields": ["per_item_before_after", "spot_check_results", "scan_reconfirmation", "governance_sign_off"],
+      "per_item_before_after": "For each remediated QID: before and after raw text of affected ExplanationWrong fields",
+      "spot_check_results": "20% sample verified by independent agent. Per-item verdict: MATCH / MISMATCH / ESCALATED",
+      "scan_reconfirmation": "Re-run of the detecting scan module on remediated items. Defect count: before → after.",
+      "governance_sign_off": "Session ID, timestamp, governance agent ID, decision (APPROVE / REJECT / HOLD)"
+    }
+  },
+
+  "s809_chain_prevention": {
+    "description": "How this integration prevents recurrence of the S809 chain pattern where 4 sessions produced 60 agent-spawns on 38 items with 1 genuinely novel finding.",
+    "prevention_mechanisms": [
+      {
+        "mechanism": "Single-Recommendation-Per-Defect-Class",
+        "how": "DL-026 on Pack D Section A creates exactly one recommendation (REC-0811-001), not one per item or one per agent.",
+        "prevents": "Multiple agents re-examining the same finding in parallel."
+      },
+      {
+        "mechanism": "Delta Review Block",
+        "how": "If a recommendation targets items whose content_hash hasn't changed since the last scan, and the prior recommendation for this defect class was CLOSED, the Delta Review Engine blocks re-creation.",
+        "prevents": "The same finding being re-discovered, re-created, and re-assigned in a new session."
+      },
+      {
+        "mechanism": "Closure-Required-Before-Re-Assignment",
+        "how": "A recommendation that is CLOSED cannot be re-opened. A new finding on the same defect class creates a new recommendation but the prior closure evidence is referenced.",
+        "prevents": "Cyclical re-review of previously resolved defects."
+      },
+      {
+        "mechanism": "Scan-Once/Consume-Many on Defect Inventory",
+        "how": "The defect inventory in the scan artifact (section 5) is the single source of truth for all defects. All recommendations are derived from this inventory. No board performs independent defect scans.",
+        "prevents": "Different boards producing conflicting finding reports."
+      }
+    ]
+  },
+
+  "implementation_reference": {
+    "recommendation_pipeline": "scripts/engine/recommendation/recommendation_pipeline.js",
+    "recommendation_registry": "knowledge/RECOMMENDATION_REGISTRY.json",
+    "artifact_consumer": "scripts/engine/scan/artifact_reader.js → extractDefectInventory() → route to Recommendation Pipeline",
+    "navigation_model": "SESSION203_NAVIGATION_MODEL.json — bidirectional linking between Recommendation ↔ Question ↔ Session"
+  }
+}

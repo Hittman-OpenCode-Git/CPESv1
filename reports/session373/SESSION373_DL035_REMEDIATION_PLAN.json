@@ -1,0 +1,64 @@
+{
+  "session": "S373",
+  "type": "dl035_quality_closure",
+  "timestamp": "2026-07-28T14:00:00Z",
+  "scope": {
+    "items": 39,
+    "estimated_gaps": 117,
+    "domains": ["F"],
+    "all_certified": true,
+    "pack_c": { "count": 28, "pattern": "P1-FC-xxx" },
+    "pack_d": { "count": 11, "pattern": "P1-FD-xxx" }
+  },
+  "approaches": {
+    "A_manual": {
+      "hours": 6.2,
+      "risk": "LOW",
+      "quality_gain": "HIGH — custom-authored explanations with domain-appropriate framework references",
+      "breakdown": {
+        "authoring": { "fields": 117, "minutes_per_field": 2.5, "total_minutes": 292.5 },
+        "verification": { "minutes_per_field": 0.3, "total_minutes": 35.1 },
+        "batch_qc": { "batches": 2, "minutes_per_batch": 20, "total_minutes": 40 }
+      }
+    },
+    "B_template_assisted": {
+      "hours": 4.5,
+      "risk": "MEDIUM",
+      "quality_gain": "MEDIUM-HIGH — template library accelerates but introduces DL-013 generic-text risk",
+      "breakdown": {
+        "authoring": { "minutes_per_field": 1.7, "total_minutes": 198.9 },
+        "verification": { "minutes_per_field": 0.3, "total_minutes": 35.1 },
+        "batch_qc": { "minutes": 40 }
+      }
+    },
+    "C_automation_assisted": {
+      "hours": 3.5,
+      "risk": "MEDIUM-HIGH",
+      "quality_gain": "MEDIUM — Component 3 auto-drafts require human review on every field",
+      "notes": "Component 3 not yet built. Dev cost ~2.0h makes total 5.7h — exceeds template-assisted. Negative ROI for single-use tool."
+    }
+  },
+  "priority_ranking": {
+    "vs_dl031": { "dl035_rank": 1, "rationale": "DL-035 is DIRECT learner impact (missing feedback). DL-031 is INDIRECT (analytics distortion). DL-035 first." },
+    "vs_cognitive_gap": { "dl035_rank": 1, "rationale": "Remediation of broken content always takes priority over building new content." },
+    "vs_dl021": { "dl035_rank": 1, "rationale": "DL-021 is RESOLVED (S71). DL-035 is the sole remaining HIGH Certified-pool defect." }
+  },
+  "quality_gain_per_hour": {
+    "manual": { "fields_per_hour": 18.9, "caqs_rubric_points_per_hour": "~75 — highest marginal learner-experience gain in the repository" },
+    "template_assisted": { "fields_per_hour": 25.7, "caqs_rubric_points_per_hour": "~68 (lower due to template generic-text scoring penalties)" },
+    "automation_assisted": { "fields_per_hour": 31.7, "caqs_rubric_points_per_hour": "~56 (lowest effective quality density)" }
+  },
+  "recommendation": {
+    "approach": "A_manual",
+    "estimated_hours": 6.2,
+    "batch_waves": 2,
+    "batch_plan": {
+      "batch_1": { "items": 20, "pack": "C", "fields": 60 },
+      "batch_2": { "items": 19, "packs": "C (8) + D (11)", "fields": 57 }
+    },
+    "can_parallel_with_cognitive_upgrades": true,
+    "should_do_before_expansion": true,
+    "parallelization_rationale": "DL-035 targets FC/FD (Domain F). Clone replacement targets EC/ED (Domain E). Different sections, no QID overlap, no write-conflict risk.",
+    "dl016_risk": "2-4 items may have metadata-content choice mismatch. Pre-flight boundary-aware inventory required before authoring."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "session": 122,
+  "title": "S122 Simplify Test Results",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "suites": {
+    "stageC": { "file": "scripts/test_may_stagec.js", "preFlight": "119/119 PASS", "postFlight": "119/119 PASS", "testsUpdated": 0, "testsPreserved": 119 },
+    "tutoringSafety": {
+      "file": "scripts/test_tutoring_safety.js",
+      "preFlight": "98/98 PASS",
+      "postFlight": "110/110 PASS",
+      "newTests": 12,
+      "newTestsList": [
+        "S122-01: _buildSimplifyCoaching returns structured object with 4 sections",
+        "S122-02: _buildSimplifyCoaching handles thin ExplanationCorrect gracefully",
+        "S122-03: _plainLanguageTranslation adds plain-language interpretation to technical text",
+        "S122-04: _simplifyAccountingLanguage replaces accounting jargon with plain equivalents",
+        "S122-05: _simplifyExplanation gates unanswered active question with concept-only coaching",
+        "S122-06: _simplifyExplanation reveals full coaching in review mode",
+        "S122-07: simplify coaching contains no fabrication of standards on thin explanations",
+        "S122-08: simplify output contains no prediction language",
+        "S122-09: _simplifyExplanation routes through _guardedSpeak in pilot mode",
+        "S122-10: _buildSimplifyCoaching handles null question gracefully",
+        "S122-11: _simplifyAccountingLanguage preserves meaning — does not distort accounting facts",
+        "S122-12: S120-S121 regression — existing explain and wrong-choice tests still pass"
+      ]
+    },
+    "governanceGuard": { "file": "scripts/test_governance_guard.js", "result": "20/20 PASS (unchanged)" }
+  },
+  "totalPostFlight": "249/249 PASS (119 Stage C + 110 tutoring safety + 20 governance guard)",
+  "thresholdVerification": { "accuracyHigh": 80, "accuracyGood": 75, "stabilityHigh": 75, "stabilityGood": 60, "unchanged": true },
+  "modelVersion": "S111-1.0 (unchanged)"
+}

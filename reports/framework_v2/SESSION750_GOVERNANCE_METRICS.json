@@ -1,0 +1,184 @@
+{
+  "deliverable": "SESSION750_GOVERNANCE_METRICS.json",
+  "session": 750,
+  "board": "H",
+  "title": "Governance Metrics Framework",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "description": "Defines the governance metrics framework: what to measure, how to measure it, targets, and reporting cadence. All metrics are designed to be computable from existing data (governance_event_registry.json, REVISION_HISTORY.md, governance_guard_engine.js output).",
+  "metricCategories": [
+    {
+      "category": "VIOLATIONS",
+      "description": "Measures the volume and severity of governance violations",
+      "metrics": [
+        {
+          "id": "GV-001",
+          "name": "Total Violations (Current)",
+          "definition": "Count of OPEN VIOLATION events in governance_event_registry.json",
+          "unit": "count",
+          "target": 0,
+          "alertThreshold": 5,
+          "source": "governance_event_registry.js --list --type VIOLATION --status OPEN",
+          "cadence": "Per session"
+        },
+        {
+          "id": "GV-002",
+          "name": "New Violations (Last 30 Days)",
+          "definition": "Count of VIOLATION events created in the last 30 days",
+          "unit": "count",
+          "target": 0,
+          "alertThreshold": 5,
+          "source": "governance_event_registry.js — filter by created date",
+          "cadence": "Weekly"
+        },
+        {
+          "id": "GV-003",
+          "name": "Repeat Violations Rate",
+          "definition": "Percentage of VIOLATION events where the same QID+Rule combination appears more than once",
+          "unit": "percentage",
+          "target": "0%",
+          "alertThreshold": "5%",
+          "source": "Cross-reference governance_event_registry.json by QID+Rule",
+          "cadence": "Monthly"
+        }
+      ]
+    },
+    {
+      "category": "DETECTION_TIME",
+      "description": "Measures how quickly governance violations are detected",
+      "metrics": [
+        {
+          "id": "GD-001",
+          "name": "Mean Time to Detect (MTTD)",
+          "definition": "Average time between violation introduction and detection by governance guard engine or policy drift detector",
+          "unit": "hours",
+          "target": "< 1 hour",
+          "alertThreshold": "> 24 hours",
+          "source": "Delta between event.created and the session that introduced the violation (from REVISION_HISTORY.md)",
+          "cadence": "Monthly"
+        },
+        {
+          "id": "GD-002",
+          "name": "Detection Coverage",
+          "definition": "Percentage of defect classes (DL-IDs) covered by automated detection",
+          "unit": "percentage",
+          "target": "90%",
+          "alertThreshold": "< 70%",
+          "source": "Cross-reference DEFECT_LIBRARY.md DL-IDs against governance_guard_engine.js and policy_drift_detector.js rules",
+          "cadence": "Monthly"
+        }
+      ]
+    },
+    {
+      "category": "RESOLUTION_TIME",
+      "description": "Measures how quickly violations are resolved",
+      "metrics": [
+        {
+          "id": "GR-001",
+          "name": "Mean Time to Resolve (MTTR)",
+          "definition": "Average time between VIOLATION event creation and CLOSED status",
+          "unit": "hours",
+          "target": "< 48 hours",
+          "alertThreshold": "> 7 days",
+          "source": "governance_event_registry.js — compute created-to-closed delta for CLOSED events",
+          "cadence": "Monthly"
+        },
+        {
+          "id": "GR-002",
+          "name": "Aged Violations (>30 Days)",
+          "definition": "Count of VIOLATION events still OPEN after 30 days",
+          "unit": "count",
+          "target": 0,
+          "alertThreshold": 1,
+          "source": "governance_event_registry.js --list --type VIOLATION --status OPEN (filter age > 30d)",
+          "cadence": "Weekly"
+        },
+        {
+          "id": "GR-003",
+          "name": "Resolution Rate (30-Day)",
+          "definition": "Percentage of VIOLATION events created in last 30 days that have been CLOSED",
+          "unit": "percentage",
+          "target": "95%",
+          "alertThreshold": "< 75%",
+          "source": "governance_event_registry.js — compute closed/created ratio over 30d window",
+          "cadence": "Monthly"
+        }
+      ]
+    },
+    {
+      "category": "EXCEPTION_VOLUME",
+      "description": "Measures exception and waiver activity",
+      "metrics": [
+        {
+          "id": "GE-001",
+          "name": "Active Exceptions",
+          "definition": "Count of APPROVED EXCEPTION events",
+          "unit": "count",
+          "target": "< 5",
+          "alertThreshold": 10,
+          "source": "governance_event_registry.js --list --type EXCEPTION --status APPROVED",
+          "cadence": "Monthly"
+        },
+        {
+          "id": "GE-002",
+          "name": "Active Waivers",
+          "definition": "Count of APPROVED WAIVER events",
+          "unit": "count",
+          "target": "< 3",
+          "alertThreshold": 5,
+          "source": "governance_event_registry.js --list --type WAIVER --status APPROVED",
+          "cadence": "Monthly"
+        },
+        {
+          "id": "GE-003",
+          "name": "Exception-to-Violation Ratio",
+          "definition": "Ratio of EXCEPTION events to total VIOLATION events over 30 days",
+          "unit": "ratio",
+          "target": "< 0.10",
+          "alertThreshold": 0.25,
+          "source": "governance_event_registry.js aggregate",
+          "cadence": "Monthly"
+        }
+      ]
+    },
+    {
+      "category": "AUDIT_HEALTH",
+      "description": "Measures certification audit coverage and quality",
+      "metrics": [
+        {
+          "id": "GA-001",
+          "name": "Audit Chain Coverage",
+          "definition": "Percentage of questions that have at least one certification audit chain entry",
+          "unit": "percentage",
+          "target": "100%",
+          "alertThreshold": "< 90%",
+          "source": "certification_audit_builder.js — chains with session count > 0 / total QIDs",
+          "cadence": "Per certification wave"
+        },
+        {
+          "id": "GA-002",
+          "name": "Certification Reversion Rate",
+          "definition": "Percentage of Certified items that were decertified (Certified → In Audit) in the last 30 days",
+          "unit": "percentage",
+          "target": "0%",
+          "alertThreshold": "> 2%",
+          "source": "REVISION_HISTORY.md — count Certified→In Audit transitions / total Certified",
+          "cadence": "Monthly"
+        }
+      ]
+    }
+  ],
+  "reportingCadence": {
+    "perSession": ["GV-001", "GR-002"],
+    "weekly": ["GV-002", "GR-002"],
+    "monthly": ["GV-003", "GD-001", "GD-002", "GR-001", "GR-003", "GE-001", "GE-002", "GE-003", "GA-001", "GA-002"],
+    "perCertificationWave": ["GA-001"]
+  },
+  "targets": {
+    "violationCount": 0,
+    "detectionTime": "< 1 hour",
+    "resolutionTime": "< 48 hours",
+    "repeatRate": "0%",
+    "exceptionVolume": "< 5 active"
+  }
+}

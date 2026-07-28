@@ -1,0 +1,560 @@
+{
+  "session": "724",
+  "title": "600-Series Strategy Evaluation — Five-Agent Read-Only Governance",
+  "generated": "2026-07-26",
+  "type": "Read-Only Governance Strategy",
+  "predecessor": "S309 (Bottleneck Analysis — DEFER 600-series, 17-session expected)",
+  "baseline": {
+    "certified": 2182,
+    "total": 2500,
+    "pct": 87.3,
+    "verified": "Direct grep — Select-String on pack_*_corrected.js",
+    "s308Baseline": 30,
+    "s309Expected": 17,
+    "s309Conservative": 22,
+    "s309Optimistic": 14,
+    "dl008Actual": 0,
+    "bindingConstraint": "AUTHOR CAPACITY — human time to write EW, not infrastructure"
+  },
+
+  "agent_h_integration_design": {
+    "title": "300→600→800 Integration Architecture",
+    "premise": "300 (analytics) → 600 (authoring) → 800 (certification) pipeline design",
+    "pipeline": {
+      "description": "Strictly acyclic three-stage pipeline. Each stage consumes upstream outputs, never produces them. 300 is read-only; 600 is authoring-only; 800 certifies and writes.",
+      "acyclicVerification": "CONFIRMED — no reverse edges, no circular ownership, no chicken-and-egg"
+    },
+
+    "dataFlows": {
+      "300_to_600": [
+        {
+          "analytic": "UIQS (Unified Item Quality Score) — S306",
+          "signal": "Composite 0-100 score per item across 6 dimensions",
+          "useBy600": "Rank items by quality deficit. Author EW starting with lowest-UIQS items. Target grade C/D/F items (1,299 items at UIQS <70) for EW enrichment.",
+          "priorityWeight": "High — direct prioritization signal"
+        },
+        {
+          "analytic": "DQS (Distractor Quality Score) — S302",
+          "signal": "EW fill rate, distractor overlap %, non-discriminating distractor count, duplicate-distractor pairs",
+          "useBy600": "Identify items where distractors are identical/near-identical (DL-005 findings). Target items with 100% identical distractor pairs first. Select distractor patterns for template library.",
+          "priorityWeight": "High — identifies worst-authoring-quality items"
+        },
+        {
+          "analytic": "EQS (Explanation Quality Score) — S303",
+          "signal": "EC length, EC content richness (references, formula, trap), rewrite candidate flag, learning value score",
+          "useBy600": "Flag items with EC < 100 chars for EC expansion. Flag items with no ASC/COSO reference (EV3 violation). Cert-reject items with EC < 50 chars.",
+          "priorityWeight": "Medium — EC quality gap, not safety-critical"
+        },
+        {
+          "analytic": "BQS (Blueprint Quality Score) — S304",
+          "signal": "Domain alignment, section alignment, LOS mapping completeness, blueprint coverage gaps",
+          "useBy600": "Identify blueprint gaps for new-item authoring (Domain F 149 greenfield items). Prioritize undersampled LOS areas.",
+          "priorityWeight": "Medium — guides greenfield authoring, not existing-item repair"
+        },
+        {
+          "analytic": "ExQS (Exhibit Quality Score) — S305",
+          "signal": "Case-bank exhibit quality, cognitive load audit, learning friction register, exhibit dependency audit",
+          "useBy600": "Target case items with missing exhibit references or decorative data. Build EW templates for case-bank items (310 items at 3.9% EW fill).",
+          "priorityWeight": "Medium — case-bank specific"
+        },
+        {
+          "analytic": "UIQS Rankings (P0/P1/P2) — S306",
+          "signal": "46 P0 items (immediate learner-safety risk), 583 P1 items (high priority), remaining P2 (medium/low)",
+          "useBy600": "Strict priority queue: P0 items author EW first (within 2 sessions), then P1, then P2. P0 items with EW debt get factory-pipeline priority.",
+          "priorityWeight": "Critical — blocks certification and learner safety"
+        }
+      ],
+
+      "600_to_800": [
+        {
+          "artifact": "Certification Candidate",
+          "description": "Item with all 3 non-CC ExplanationWrong slots filled with choice-specific text (≥50 chars, no boilerplate, references domain concept), ExplanationCorrect ≥150 chars with principle reference, metadata complete per QUESTION_METADATA_STANDARD.md",
+          "preCertQAGate": "Automated: DL-008 scan (EW[CC] empty), EW non-empty check (all 3 non-CC slots), EW uniqueness check (no identical EW across slots), EW minimum-length check (≥50 chars), boilerplate detection (DL-013 pattern scan), EC length audit, parse validity, certified count stability",
+          "passCriterion": "All pre-cert QA gates PASS before handoff to 800. Items failing any gate return to 600 for re-author."
+        }
+      ],
+
+      "300_to_800": {
+        "status": "ALREADY OPERATIONAL — S802/S803 use S302-S309 analytics for certification priority. No new integration needed.",
+        "existingSignals": ["UIQS domain rankings", "P0/P1 risk flags", "Domain E/F bottleneck analysis", "Certification readiness overlay from S306"],
+        "gap": "None. 300→800 data flow is complete and proven."
+      }
+    },
+
+    "qualitySignalsProducedBy300": {
+      "structural": [
+        "DL-008 status (EW[CC] empty/non-empty)",
+        "EW fill rate per item/section/pack",
+        "EC length distribution",
+        "DL-013 boilerplate presence",
+        "DL-031 difficulty calibration discrepancy",
+        "Missing-field detection (DL-018, DL-021)"
+      ],
+      "content": [
+        "Distractor overlap percentage",
+        "Non-discriminating distractor count",
+        "Misconception mapping gaps",
+        "EC principle reference presence (EV3 check)",
+        "EW choice-specificity (EV4 check)",
+        "Answer-key correctness flag (DL-030)",
+        "Explanation-topic mismatch (DL-010, DL-016)"
+      ],
+      "pedagogical": [
+        "Cognitive level vs. difficulty mismatch",
+        "Absolute language flags (DL-003)",
+        "Ambiguity flags (DL-004)",
+        "Learning value score",
+        "Blueprint alignment score"
+      ]
+    },
+
+    "rejectionFeedbackLoop": {
+      "description": "800 rejects → 600 re-authors → re-submits through pre-cert QA gate",
+      "cycleTime": "~0.3-0.5 sessions per rejection round",
+      "expectedRejectionRate": "5-10% for first-wave items, 2-5% for subsequent waves",
+      "totalRejectionOverhead": "~0.5-1.5 sessions across the full program",
+      "rejectionReasons": [
+        "CAQS §1.6 audit fails (correctness, precision, difficulty, distractor, blueprint, relevance)",
+        "Pre-cert QA gate fails (structural: EW empty, duplicate, too short)",
+        "Governance guard blocks (Rule 2: EW[CC] non-empty)"
+      ],
+      "mitigation": "Pre-cert QA gate catches structural issues before 800 human review, reducing rejection rate. Content issues (CAQS §1.6) can only be caught at 800."
+    },
+
+    "circularDependencyCheck": {
+      "result": "NO CYCLES DETECTED",
+      "edges": [
+        { "from": "300", "to": "600", "type": "Data — analytics informs authoring priorities", "reverse": false },
+        { "from": "600", "to": "800", "type": "Content — pre-authored items delivered for certification", "reverse": false },
+        { "from": "300", "to": "800", "type": "Data — analytics informs certification priorities", "reverse": false },
+        { "from": "800", "to": "600", "type": "Rejection — items fail certification, return for re-author", "reverse": true, "cycleRisk": "None — this is a feedback loop, not a dependency cycle. Same item re-enters 600, gets re-authored, re-enters 800. No analytics flow backward." }
+      ],
+      "boundaryEnforcement": "300 reads pack files, never writes. 600 writes ExplanationWrong/ExplanationCorrect fields, never produces analytics. 800 writes question_state and certifies. No stage can perform another stage's function.",
+      "chickenEggGaps": "None. All 300-series analytics (S302-S306) already exist and are complete. 600 would have full analytic coverage from Day 1. No analytic gap to fill before 600 can begin."
+    },
+
+    "recommendation": "Integration architecture is sound on paper: acyclic, well-defined handoffs, clear QA gates. However, it DOES NOT resolve the binding constraint (author capacity) — the pipeline is a handoff mechanism, not a capacity multiplier. DEFER consistent with S309 analysis."
+  },
+
+  "agent_i_throughput_model": {
+    "title": "Portfolio Throughput Modeling — Option A (No 600) vs. Option B (600 Active)",
+    "methodology": "S308 forecast engine baseline (30 sessions) → S309 bottleneck analysis (17 sessions) → 600-series impact overlay from S309_600_SERIES_FEASIBILITY.json. All counts verified against direct pack-file parse.",
+    "commonAssumptions": {
+      "certVelocity": "12-15 items/session for MCQ, 4-5 items/session for case items",
+      "ewVelocity": "39 items/session (ad-hoc, embedded in cert waves), 50 items/session (factory model)",
+      "governanceOverhead": "~0.6 sessions per certification wave (~3 sessions per 5-wave program)",
+      "modernizationDeferred": true,
+      "dl008Removed": true,
+      "bindingConstraint": "AUTHOR CAPACITY — human time to create EW text per CAQS §4 requirements"
+    },
+
+    "optionA_no600": {
+      "description": "800-series continues as-is. Certification + embedded EW authoring. No separate authoring infrastructure.",
+      "startupCost": 0,
+      "totalSessionsTo100pct": {
+        "expected": 17,
+        "conservative": 22,
+        "optimistic": 14,
+        "source": "S309 Session Reduction Study — Scenario: Expected (17)"
+      },
+      "ewFillAtCompletion": {
+        "mcq": "88% — per S308 HYBRID strategy forecast",
+        "caseBank": "80% — per S308 forecast",
+        "totalSlotsFilled": "~5,700 of ~6,500 slots (projected from 2,403 gap closure)",
+        "remainingGap": "~800 slots — DL-013 boilerplate, thin-EW items, case-bank items not reached"
+      },
+      "throughputRate": {
+        "certItemsPerSession": 15,
+        "ewItemsPerSession": 39,
+        "blendedItemsPerSession": "~10 (mixed cert + EW sessions)",
+        "explanation": "Certification velocity is bottleneck (15 items/session for CAQS §1.6 audit). EW authoring is faster (39 items/session). When co-located, cert velocity dominates."
+      },
+      "domainCompletionTimeline": {
+        "domainE": "Sessions 3-9 (7 sessions — 167 items including 129 archived clones, 38 unprocessed seeds)",
+        "domainF": "Sessions 5-11 (7 sessions — 149 greenfield items, partially parallel with E after session 5)",
+        "packA_closeout": "Sessions 12-14 (3 sessions — 19 items + cross-section EW)",
+        "governance_closure": "Sessions 15-16 (2 sessions — 700-series attestation)",
+        "modernization": "Post-certification (sessions 18-27, 10 sessions deferred)"
+      },
+      "netSessions": 17,
+      "scheduling": "Sequential with parallel tracks. 2-3 concurrent tracks after session 4."
+    },
+
+    "optionB_600active": {
+      "description": "600-series infrastructure built (3-4 sessions), then produces pre-authored EW content asynchronously. 800 certifies items with EW already prepared.",
+      "startupCost": {
+        "sessions": 4,
+        "breakdown": {
+          "infrastructure": "1 session — authoring tools, EW template library, QA automation scripts",
+          "processDesign": "1 session — Draft→Review→QA→Candidate pipeline design, batch tracking, manifest system",
+          "pilotValidation": "1 session — 1 batch (25 items) to validate cycle time and quality",
+          "governanceIntegration": "1 session — 600→800 handoff protocol, pre-cert QA gate automation, governance guard updates"
+        }
+      },
+      "throughputGainFrom600": {
+        "ewVelocityAcceleration": "39 → 50 items/session (28% improvement from factory model per Agent O/S309)",
+        "certVelocityAcceleration": "15 → 15 items/session (NO improvement — CAQS §1.6 audit is the certification bottleneck, not EW readiness)",
+        "sessionsSavedFrom800Series": 3,
+        "explanation": "600 pre-authors EW for cert-blocked items, removing the EW-authoring phase from certification waves. But the CAQS §1.6 six-dimension audit gate is unchanged — that's the real certification bottleneck, not EW authoring speed."
+      },
+      "totalSessionsTo100pct": {
+        "startup": 4,
+        "certAndEW": "17 - 3 = 14 sessions (800-series with EW pre-authored)",
+        "total": 18,
+        "explanation": "4 startup + 14 cert = 18. Net +1 session vs. Option A. Worse because startup cost (4) exceeds savings (3).",
+        "conservativeEstimate": 24,
+        "conservativeExplanation": "If 600 infrastructure takes longer to stabilize (5 sessions startup), and parallel overhead from three-lane execution adds 2 sessions: 5 + (14+2) = 21. With moderate rework: 24."
+      },
+      "ewFillAtCompletion": {
+        "mcq": "~92% — factory model reaches more items per session, potential to close additional ~200 slots",
+        "caseBank": "~85% — factory pipeline can sustain higher velocity for case-bank items",
+        "remainingGap": "~500 slots — smaller than Option A due to higher EW throughput"
+      },
+      "throughputRate": {
+        "certItemsPerSession": 15,
+        "ewItemsPerSession": 50,
+        "blendedItemsPerSession": "~11 (slightly better EW component, same cert component)",
+        "explanation": "600 improves EW velocity (28%) but cert velocity is unchanged. Blended throughput improvement is marginal (~10%) because certification is the bottleneck."
+      },
+      "domainCompletionTimeline": {
+        "600Startup": "Sessions 1-4 (4 sessions — infrastructure + pilot + governance)",
+        "domainE_600PreAuthored": "600 authors EW for 167 Domain E items during sessions 1-5 (parallel with cert waves)",
+        "domainF_600PreAuthored": "600 authors EW for 149 Domain F items during sessions 4-8 (parallel)",
+        "domainE_cert": "Sessions 5-11 (7 sessions — EW already authored, cert-only)",
+        "domainF_cert": "Sessions 7-13 (7 sessions — parallel with E after methodology baseline)",
+        "packA_closeout": "Sessions 14-16 (3 sessions)",
+        "governance_closure": "Sessions 17-18 (2 sessions)"
+      },
+      "netSessions": 18,
+      "netDifferenceFromOptionA": "+1 (600 costs more than it saves)"
+    },
+
+    "comparativeAnalysis": {
+      "certificationCompletion": {
+        "optionA": 17,
+        "optionB": 18,
+        "delta": "+1 — Option B is SLOWER"
+      },
+      "ewFillAtCompletion": {
+        "optionA": "88% MCQ, 80% case",
+        "optionB": "92% MCQ, 85% case",
+        "delta": "+4-5% — Option B produces better explanations at completion"
+      },
+      "throughputRate": {
+        "optionA": "10 blended items/session",
+        "optionB": "11 blended items/session",
+        "delta": "+10% — marginal improvement"
+      },
+      "modernizationCompletion": {
+        "optionA": "Starts session 18 (post-cert)",
+        "optionB": "Starts session 19 (post-cert, delayed by 1 session)",
+        "delta": "Same total timeline, 1 session later start"
+      },
+      "governanceComplexity": {
+        "optionA": "2 lanes (300 analytics + 800 certification)",
+        "optionB": "3 lanes (300 analytics + 600 authoring + 800 certification)",
+        "delta": "+50% governance overhead — each handoff requires attestation"
+      },
+      "riskOfRework": {
+        "optionA": "Low — EW authored inline during cert review",
+        "optionB": "Medium — pre-authored EW may need rewriting if cert reviewer disagrees with distractor design",
+        "delta": "Higher rework risk from handoff misalignment"
+      }
+    },
+
+    "conclusion": "Option A (No 600-series) is the Pareto-optimal choice. Option B adds 1 session (+5.9%) to certification timeline, adds governance complexity (+50%), introduces handoff rework risk, and only improves EW fill by 4-5%. The binding constraint (AUTHOR CAPACITY) is not addressed by infrastructure — tools cannot write explanations. S309's DEFER recommendation is confirmed."
+  },
+
+  "agent_n_dependency_review": {
+    "title": "Dependency Chain Validation — 300 / 600 / 800 Series",
+    "methodology": "Dependency-graph analysis with cycle detection, ownership boundary verification, and chicken-and-egg gap audit. Validated against AGENTS.md §2 (read-only by default), PROJECT_CONSTITUTION.md, and COLLABORATION_MATRIX.md.",
+    "dependencyGraph": {
+      "nodes": {
+        "300_series": {
+          "description": "Read-only analytics pipeline (S302-S310). Produces DQS, EQS, BQS, ExQS, UIQS models.",
+          "reads": ["pack_*_corrected.js", "scored_cases*.js", "knowledge/*.md", "reports/*.json"],
+          "writes": ["reports/SESSION30*.json"],
+          "neverWrites": ["pack_*_corrected.js", "scored_cases*.js", "question_state", "CorrectChoice", "ExplanationCorrect", "ExplanationWrong*"],
+          "ownership": "QUALITY ANALYTICS — read-only"
+        },
+        "600_series": {
+          "description": "Content authoring infrastructure. Produces pre-authored EW/EC content, QA-gated certification candidates.",
+          "reads": ["reports/SESSION30*.json (analytics)", "pack_*_corrected.js (source items)", "knowledge/CAQS_v1.0.md (quality standard)", "knowledge/QUESTION_METADATA_STANDARD.md (metadata schema)"],
+          "writes": ["ExplanationWrongA-D (distractor explanations)", "ExplanationCorrect (correct-answer explanation)", "pre-cert QA gate artifacts"],
+          "neverWrites": ["question_state", "CorrectChoice", "pack_state", "reports/SESSION30*.json (analytics)"],
+          "ownership": "CONTENT AUTHORING"
+        },
+        "800_series": {
+          "description": "Certification pipeline. Certifies items via CAQS §1.6 six-dimension audit.",
+          "reads": ["pack_*_corrected.js (items with pre-authored EW)", "reports/SESSION30*.json (priority rankings)", "knowledge/CAQS_v1.0.md (certification standard)"],
+          "writes": ["question_state: 'Certified'", "Certification records in REVISION_HISTORY.md"],
+          "neverWrites": ["ExplanationWrong* (already authored by 600 or inline)", "reports/SESSION30*.json (analytics)"],
+          "ownership": "CERTIFICATION"
+        }
+      },
+
+      "edges": [
+        {
+          "from": "300",
+          "to": "600",
+          "type": "DATA FORWARD",
+          "description": "DQS/EQS/BQS/ExQS/UIQS models inform 600's authoring priority queue. 600 never produces analytics consumed by 300.",
+          "direction": "one-way",
+          "status": "READY — all S302-S306 analytics exist. 600 would receive complete coverage from Day 1."
+        },
+        {
+          "from": "600",
+          "to": "800",
+          "type": "CONTENT FORWARD",
+          "description": "Pre-authored items with QA-gated EW/EC delivered for certification. 800 certifies; 800 never authors into 600.",
+          "direction": "one-way",
+          "status": "DESIGN — handoff protocol defined (pre-cert QA gate). No existing implementation."
+        },
+        {
+          "from": "300",
+          "to": "800",
+          "type": "DATA FORWARD (EXISTING)",
+          "description": "UIQS rankings, P0/P1 risk flags, bottleneck analysis inform 800's certification priority. Already operational per S802/S803.",
+          "direction": "one-way",
+          "status": "OPERATIONAL — S802 consumed S302-S306 analytics for Wave 1 priority."
+        },
+        {
+          "from": "800",
+          "to": "600",
+          "type": "REJECTION FEEDBACK (not a dependency)",
+          "description": "Items failing CAQS §1.6 audit return to 600 for re-author. This is a content-loop, not a dependency — 600 does not depend on 800 rejecting items to function.",
+          "direction": "conditional — only on rejection",
+          "status": "DESIGN — rejection protocol defined. ~5-10% expected rejection rate."
+        }
+      ]
+    },
+
+    "ownershipBoundaryValidation": {
+      "result": "PASS — no ownership conflicts",
+      "rules": [
+        { "rule": "300 never touches question content", "status": "VERIFIED — 300 is read-only by constitution" },
+        { "rule": "600 never sets question_state or CorrectChoice", "status": "VERIFIED — 600 is authoring-only" },
+        { "rule": "800 never produces analytics", "status": "VERIFIED — 800 writes certification state only" },
+        { "rule": "No stage can perform another stage's exclusive function", "status": "VERIFIED — clear function separation" },
+        { "rule": "Only 800 can write question_state: 'Certified'", "status": "VERIFIED — certification authority is sole at 800" },
+        { "rule": "Only 800 can change CorrectChoice", "status": "VERIFIED — answer-key authority is sole at 800 (per DL-030 precedent)" }
+      ]
+    },
+
+    "chickenEggGapAudit": {
+      "result": "NO GAPS FOUND",
+      "scenariosChecked": [
+        {
+          "scenario": "600 needs analytics to prioritize, but 300 hasn't produced them yet",
+          "status": "NOT A GAP — all S302-S306 analytics are complete and available. UIQS, DQS, EQS, BQS, ExQS models exist for all 2,500 MCQ and 400 case items. 600 would start with full analytic coverage."
+        },
+        {
+          "scenario": "800 needs pre-authored EW from 600, but 600 hasn't built infrastructure yet",
+          "status": "NOT A GAP — this is the 600 startup cost (4 sessions), not a circular dependency. 800 can still certify items without pre-authored EW (current model). 600 output is additive, not prerequisite."
+        },
+        {
+          "scenario": "300 needs 600-authored items for analytics, but 600 hasn't produced any yet",
+          "status": "NOT A GAP — 300 operates on existing pack-file content, not 600 output. No reverse dependency exists."
+        },
+        {
+          "scenario": "600 needs 800 certification to know which items to author for",
+          "status": "NOT A GAP — 300's analytics already identify which items need EW authoring regardless of certification state. The UIQS P0/P1 priority queue is independent of certification."
+        }
+      ]
+    },
+
+    "circularOwnershipCheck": {
+      "result": "NO CIRCULAR OWNERSHIP",
+      "graphVerification": "Directed acyclic graph confirmed. Edges: 300→600, 600→800, 300→800, 800→600 (conditional rejection only, not ownership). No path creates a cycle because: (1) 300 never writes to pack files, (2) 600 never writes to analytics, (3) 800 never writes to analytics or EW fields. The 800→600 rejection edge returns the SAME item for re-author, not a new dependency. Re-entry does not create a cycle — it's linear re-processing of a single item."
+    },
+
+    "conclusion": "Dependency architecture is sound — acyclic, well-bounded, no gaps. The integration model works on paper. However, sound architecture does not equal net benefit. The DEFER recommendation stands because architecture quality does not overcome the near-zero throughput gain."
+  },
+
+  "agent_q_roadmap_adjustment": {
+    "title": "Roadmap Adjustment Analysis — If 600-Series Launches",
+    "baselinePlan": "S309 execution plan: 17 sessions expected (14-22 range). Tracks: 300 closeout → Domain E/F cert + Case-bank EW → Pack A closeout → Governance closure. Modernization deferred to post-cert (10 sessions).",
+
+    "changesToS803PlusCertificationWaves": {
+      "speedChange": "MARGINALLY FASTER — pre-authored EW removes the EW-authoring phase from certification sessions. Cert reviewers only perform CAQS §1.6 audit, not EW authoring.",
+      "quantification": {
+        "certSessionDuration": "Reduced from ~18 items/session (cert + EW) to ~15 items/session (cert-only, but without EW blocking)",
+        "netEffect": "Certification sessions become ~20% faster in wall-clock per session, but cert velocity (items/session) is unchanged because CAQS §1.6 audit per item is invariant.",
+        "sessionsSaved": "2-3 sessions saved from 800-series (EW pre-authored, no authoring bottleneck in cert sessions)."
+      },
+      "risk": "Pre-authored EW may not match cert reviewer's expectations — handoff rework risk. CAQS §1.6 audit is unchanged; certification quality is unchanged."
+    },
+
+    "changesToModernizationRoadmap": {
+      "dl013Boilerplate": {
+        "status": "DEFERRED (no change) — DL-013 ~851 fields remain deferred to post-cert in both scenarios. 600 does not accelerate DL-013 because boilerplate removal is batch find-replace, not explanation authoring.",
+        "acceleration": "None. DL-013 and 600 address different defect categories."
+      },
+      "dl031DifficultyInflation": {
+        "status": "DEFERRED (no change) — DL-031 ~500 items remain deferred. Difficulty recalibration requires per-item cognitive assessment, not EW authoring.",
+        "acceleration": "None."
+      },
+      "dl032CaseCalibration": {
+        "status": "DEFERRED (no change) — Case-bank uniform Moderate labeling is pedagogical, not safety-critical.",
+        "acceleration": "None."
+      },
+      "ecNormalization": {
+        "status": "DEFERRED (no change) — Cross-pack EC normalization is quality polish.",
+        "acceleration": "None."
+      },
+      "netEffect": "Zero modernization acceleration. 600 addresses EW authoring (distractor explanations), not modernization (boilerplate removal, difficulty calibration, EC normalization). Different defect domains."
+    },
+
+    "changesToEWRoadmap": {
+      "description": "2,403-slot gap (per S307: case-bank EW at 3.9% fill, MCQ EW debt of 539 items). 600 factory model could accelerate EW production.",
+      "acceleration": {
+        "ewVelocity": "39 → 50 items/session (28% improvement per S309 EW Factory Model Agent O)",
+        "gapClosureTimeline": {
+          "without600": "~18 sessions to fill 2,403 slots at 39 items/session (including cert-embedded authoring)",
+          "with600": "~14 sessions to fill 2,403 slots at 50 items/session (dedicated factory pipeline)",
+          "shorterBy": "~4 sessions in EW authoring time"
+        },
+        "caveat": "EW authoring is NOT on the critical path. The critical path is certification (CAQS §1.6 audit). Faster EW authoring doesn't accelerate certification completion because cert reviewers cannot review faster than ~15 items/session regardless of EW readiness. The EW gap closure is a parallel track, not critical-path work."
+      },
+      "largestImpact": "Case-bank EW (310 items at 3.9% fill). Dedicated factory pipeline could close this in ~6 sessions (50 items/session) vs. ~8 sessions (39 items/session)."
+    },
+
+    "changesToS309ExecutionPlan": {
+      "s309Plan": "17 sessions expected (14-22 range). Tracks: 300 closeout (2) → Domain E/F cert + EW (10) → Pack A closeout (3) → Governance (2).",
+      "with600": {
+        "startup": "Add 4 sessions at beginning for 600 infrastructure build + pilot",
+        "certPhase": "Reduce by 3 sessions (EW pre-authored removes inline authoring)",
+        "parallelOverhead": "Add 1-2 sessions for 600→800 handoff coordination",
+        "net": "17 + 4 - 3 + 1.5 = 19.5 → 19-20 sessions",
+        "worseBy": "+2-3 sessions vs. S309 plan"
+      },
+      "criticalPathChange": {
+        "before": "300 closeout → Domain E/F cert → Pack A closeout → Governance",
+        "after": "300 closeout → 600 startup (4 sessions) → Domain E/F cert (with pre-authored EW) → Pack A closeout → Governance",
+        "criticalPathElongated": "4 sessions added to critical path during startup phase. Reduced by 3 during cert phase. Net: +1 session on critical path."
+      }
+    },
+
+    "conclusion": "600-series activation would not accelerate the portfolio roadmap. It adds 4 sessions of startup to the critical path, saves 2-3 sessions during certification, nets +1-3 sessions worse. Modernization is unaffected (different defect domains). EW gap closes ~4 sessions faster but EW is not on the critical path. S309's DEFER recommendation is confirmed."
+  },
+
+  "agent_r_session_reduction": {
+    "title": "Session Reduction Forecast — S308 Baseline vs. S309 Optimized vs. 600-Enabled",
+    "methodology": "S308 forecast engine baseline (30 sessions). S309 expected scenario (17 sessions). 600-overlay from S309_600_SERIES_FEASIBILITY.json and agent_i_throughput_model above.",
+
+    "scenarios": {
+      "s308_baseline": {
+        "sessions": 30,
+        "date": "2026-07-26 (S308)",
+        "description": "Original 7-phase forecast: 300 closeout → DL-008 remediation → Structural remediation → Domain E/F cert → Pack A closeout → Calibration → Governance. Included DL-008 (3 sessions), modernization (10 sessions), sequential E→F execution.",
+        "status": "SUPERSEDED by S309 — contains DL-008 false positive, includes deferred modernization"
+      },
+      "s309_optimistic": {
+        "sessions": 14,
+        "description": "Best-case: all levers confirmed, 3-track parallel, sustained 15 items/session, no rework, replace-vs-repair + factory model boost.",
+        "reductionFromS308": "-16",
+        "reductionPct": "53%",
+        "status": "STRETCH GOAL — requires ideal execution"
+      },
+      "s309_expected": {
+        "sessions": 17,
+        "description": "Realistic: DL-008 removed, modernization deferred, E/F partially parallelized, governance batched. Standard execution cadence.",
+        "reductionFromS308": "-13",
+        "reductionPct": "43%",
+        "status": "BASELINE FOR COMPARISON"
+      },
+      "s309_conservative": {
+        "sessions": 22,
+        "description": "Safe: DL-008 removed, modernization deferred. No parallelization. Sequential E then F.",
+        "reductionFromS308": "-8",
+        "reductionPct": "27%",
+        "status": "FLOOR — achievable with simple sequential execution"
+      },
+      "with600_optimistic": {
+        "sessions": 15,
+        "description": "600 pre-authors EW for all cert-blocked items. Factory model at maximum velocity (50 items/session). Startup compressed to 3 sessions. Zero handoff rework. All parallel tracks successful.",
+        "reductionFromS309": "-2",
+        "reductionFromS308": "-15",
+        "reductionPct": "50%",
+        "status": "STRETCH — requires 600 startup compression + maximum velocity + zero rework. Achievable only if 600 outperforms its projected savings."
+      },
+      "with600_expected": {
+        "sessions": 18,
+        "description": "600 startup (4 sessions) + cert with pre-authored EW (14 sessions). Factory model at 50 items/session. Standard handoff overhead. Some rework from cert/author misalignment.",
+        "reductionFromS309": "+1",
+        "reductionFromS308": "-12",
+        "reductionPct": "40%",
+        "status": "WORSE THAN S309 — 600 costs more than it saves"
+      },
+      "with600_conservative": {
+        "sessions": 24,
+        "description": "600 startup (5 sessions) + cert (16 sessions). Factory model at 39 items/session (no throughput gain). Handoff rework adds 2-3 sessions. Parallel overhead from 3-lane coordination.",
+        "reductionFromS309": "+7",
+        "reductionFromS308": "-6",
+        "reductionPct": "20%",
+        "status": "SIGNIFICANTLY WORSE — infrastructure overhead overwhelms savings"
+      }
+    },
+
+    "reductionLeversQuantified": {
+      "confirmed": [
+        { "lever": "DL-008 removal", "sessionsSaved": 3, "appliesTo": "both scenarios", "status": "ALREADY APPLIED IN S309" },
+        { "lever": "Modernization deferral", "sessionsSaved": 10, "appliesTo": "both scenarios", "status": "ALREADY APPLIED IN S309" }
+      ],
+      "s309Only": [
+        { "lever": "E/F parallelization", "sessionsSaved": 4, "appliesTo": "S309, partially to 600-enabled", "status": "HIGH CONFIDENCE" },
+        { "lever": "Governance batching", "sessionsSaved": 2, "appliesTo": "S309, partially to 600-enabled (+1 from batch, -1 from 3-lane overhead)", "status": "HIGH CONFIDENCE" }
+      ],
+      "600Specific": [
+        { "lever": "EW pre-authoring removes inline EW from cert sessions", "sessionsSaved": 3, "appliesTo": "600-enabled only", "status": "MEDIUM-HIGH — depends on 600 pre-authoring velocity" },
+        { "lever": "EW factory model throughput boost", "sessionsSaved": 2, "appliesTo": "600-enabled only", "status": "MEDIUM — 39→50 items/session is 28% improvement but EW is not critical path" }
+      ],
+      "600SpecificCosts": [
+        { "cost": "600 infrastructure build + pilot", "sessionsAdded": 4, "appliesTo": "600-enabled only", "status": "CONFIRMED — minimum 3, expected 4, worst-case 5" },
+        { "cost": "3-lane governance overhead", "sessionsAdded": 2, "appliesTo": "600-enabled only", "status": "MEDIUM-HIGH — each handoff adds attestation" },
+        { "cost": "Handoff rework (600 authors, 800 rejects)", "sessionsAdded": 1, "appliesTo": "600-enabled only", "status": "MEDIUM — 5-10% rejection rate × ~300 items" }
+      ]
+    },
+
+    "netSessionDifference": {
+      "fromS308Baseline": {
+        "s309Expected": "30 → 17 = -13 sessions (43% reduction)",
+        "with600Expected": "30 → 18 = -12 sessions (40% reduction)",
+        "600vsS309": "+1 session (600 is WORSE)"
+      },
+      "fromS309Expected": {
+        "with600Optimistic": "17 → 15 = -2 sessions (600 SAVES 2 at best)",
+        "with600Expected": "17 → 18 = +1 session (600 ADDS 1)",
+        "with600Conservative": "17 → 24 = +7 sessions (600 ADDS 7 at worst)"
+      },
+      "expectedOutcome": "600 adds 1 session to the certification timeline with ±3 session variance depending on execution quality. Range: -2 (optimistic) to +7 (conservative). Central estimate: +1 (slightly worse than S309)."
+    },
+
+    "whenDoes600BecomeBeneficial": {
+      "breakevenCondition": "If 600 startup cost ≤ 2 sessions AND EW factory velocity ≥ 60 items/session AND 600→800 handoff rework rate ≤ 2%",
+      "currentFeasibility": "NONE of these conditions are met. Startup is 4 sessions. Factory velocity upper bound is ~50 items/session. Rejection rate is 5-10% per historical patterns.",
+      "triggerForReevaluation": [
+        "EW authoring becomes the binding constraint on certification throughput (currently: certification audit is the constraint, not EW)",
+        "Portfolio grows to 5,000+ items making dedicated authoring infrastructure cost-effective",
+        "Observed cert velocity drops below 10 items/session due to EW-blocked items",
+        "Post-S309 execution shows EW authoring is the actual bottleneck (not just predicted)"
+      ]
+    },
+
+    "conclusion": "S309's 17-session expected forecast is the best available estimate. Adding 600-series infrastructure changes that to 18 sessions expected (range 15-24). The expected case is WORSE by 1 session. The optimistic case saves 2 sessions. The conservative case adds 7 sessions. Expected value analysis: DEFER 600-series. The 300→800 direct path (S309 model) is the optimal execution strategy."
+  },
+
+  "consolidated_recommendation": {
+    "decision": "DEFER 600-SERIES — REAFFIRMED",
+    "basis": "Five-agent independent analysis (H, I, N, Q, R) converges on the same conclusion as S309 single-agent K: the 600-series adds a handoff layer without resolving the binding constraint (author capacity). Integration architecture is sound on paper (Agent H/N) but net throughput impact is -1 to +1 sessions (Agent I/R). Modernization roadmap is unaffected (Agent Q). S309's 17-session expected plan remains the optimal path.",
+    "dissentingOpinions": "None. All five agents converge.",
+    "recommendedAction": "Proceed with S310 (Portfolio Operations Dashboard — 300-series final session). Execute S309's 17-session plan without 600-series. Re-evaluate 600-series feasibility after 800-series Waves 2-3 if authoring velocity empirically proves to be the bottleneck.",
+    "governance": {
+      "preFlight": "Governance guard 20/20 PASS",
+      "postFlight": "Governance guard 20/20 PASS",
+      "certifiedCountStable": true,
+      "noPackContentChanges": true,
+      "readOnly": true
+    }
+  }
+}

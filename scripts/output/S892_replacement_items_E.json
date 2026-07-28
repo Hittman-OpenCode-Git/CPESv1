@@ -1,0 +1,267 @@
+[
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.050 fraud risk identification incentive pressure analysis",
+    "MicroTopic": "COSO Principle 8 — fraud risk assessment",
+    "UniqueConceptKey": "E-050-fraud-risk-identification",
+    "LOSTag": "E.2 Fraud risk management",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Meridian Manufacturing's plant manager bonus is 30% of base salary if annual production cost per unit stays below $42.50. The plant manager has earned the maximum bonus for three consecutive years. During the most recent year, the following changes occurred: (1) the quality assurance supervisor position was eliminated, (2) the inventory control specialist role was consolidated into the plant manager's direct reports, and (3) all purchase orders now require only the plant manager's approval after the accounts payable reviewer position was left unfilled. A recent internal audit noted $175,000 in inventory write-offs traced to a raw material supplier owned by the plant manager's brother-in-law. The plant controller resigned two weeks after refusing to approve the write-off, stating in an exit interview that 'the pressure to keep costs down made honest reporting impossible.' Under COSO Principle 8, which fraud triangle component is most prominently indicated by these facts?",
+    "Choices": {
+      "A": "Rationalization — the plant manager's belief that using a family member's supplier is justified because the materials meet quality specifications at below-market prices.",
+      "B": "Opportunity — the removal of segregation of duties through the elimination of the QA supervisor and AP reviewer positions, combined with the plant manager's unilateral approval authority over purchases and inventory adjustments.",
+      "C": "Pressure/Incentive — the bonus structure that pays 30% of base salary for meeting cost targets, combined with a three-year pattern of achieving maximum bonuses and the controller's exit interview statement explicitly identifying cost pressure as the reason for resignation.",
+      "D": "Capability — the plant manager's position and authority level, which provides the technical knowledge and organizational influence necessary to direct purchasing toward a related-party supplier without detection."
+    },
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "Under COSO Principle 8 (Fraud Risk Assessment), organizations must assess the three fraud triangle components: pressure/incentive, opportunity, and rationalization. In this scenario, the pressure/incentive component is most prominent because the bonus structure (30% of base salary) creates a direct, recurring financial incentive to suppress costs. The three-year pattern of achieving maximum bonuses establishes that the plant manager has a track record to protect — the cost of missing the target in year four is not just a lost bonus but the collapse of an established earnings pattern maintained over multiple years. The controller's exit interview statement ('the pressure to keep costs down made honest reporting impossible') is explicit, first-person confirmation that the pressure component overwhelmed internal controls. While opportunity (eliminated oversight roles) and rationalization (family supplier justification) are present, the controller's resignation — a professional sacrificing their employment rather than participating in misstatement — signals that pressure was the dominant and corrosive force. COSO emphasizes that pressure is often the initiating fraud triangle component because it creates the motivation that seeks out opportunity and generates rationalization. The internal auditor evaluating fraud risk under Principle 8 should recognize that the bonus structure is the root driver; without it, the other components would not have been activated.",
+    "StudyLinks": [
+      {
+        "label": "COSO Internal Control — Integrated Framework (2013)",
+        "url": "https://www.coso.org"
+      },
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-E-050",
+    "question_state": "Certified",
+    "certification_date": "2026-07-28",
+    "certification_batch": "Pack A Final Closure — S892",
+    "upgrade_note": "Pack A Final Closure - S892 [Analyze] replacement for archived P1-E-050",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "While the plant manager may be rationalizing the use of a family supplier as cost-effective procurement, rationalization is a secondary fraud triangle component that typically follows — rather than initiates — fraudulent behavior. Under COSO Principle 8, rationalization is the mechanism by which an individual reconciles dishonest conduct with their self-image after the behavior has begun; it is not generally the primary driver. The rationalization presented ('materials meet quality specs at below-market prices') would not have arisen absent the underlying pressure to reduce costs. The controller's exit interview statement focused on pressure as the cause, not on how the plant manager justified a specific supplier selection. In fraud risk assessment, rationalization is the hardest component to observe externally because it occurs in the individual's mind — making it a weaker signal than the documented pressure (compensation structure) and the controller's explicit testimony about that pressure.",
+    "ExplanationWrongB": "The elimination of oversight positions and the consolidation of approval authority under the plant manager do represent a significant breakdown in segregation of duties, which is a control deficiency under COSO Principle 11. However, under Principle 8's fraud risk assessment framework, opportunity alone does not cause fraud — it enables fraud when combined with pressure and rationalization. The question asks which component is most prominent, and the evidence points to pressure as the initiating force. The controller did not resign because segregation of duties was weak; the controller resigned because 'the pressure to keep costs down made honest reporting impossible.' Furthermore, the related-party transaction with the brother-in-law's supplier existed before the oversight reductions — suggesting the plant manager actively sought opportunity to facilitate a scheme that pressure had already motivated. The elimination of oversight roles may have been a consequence of the same cost-cutting pressure, further demonstrating that pressure is the root cause driving the entire fact pattern.",
+    "ExplanationWrongC": "",
+    "ExplanationWrongD": "Capability refers to the individual's position, intelligence, and technical skills that permit them to commit and conceal fraud. While the plant manager's authority level provides capability — the organizational power to direct purchasing toward a related-party supplier and override inventory adjustments — COSO's fraud risk assessment framework treats capability as an extension of opportunity rather than a separate, standalone fraud triangle component in the traditional model. More importantly, the scenario's strongest signals all point to the pressure/incentive component: the bonus incentive structure, the three-year pattern of meeting targets, and the controller's explicit statement about pressure making honest reporting impossible. The controller — who presumably had equal capability to participate — chose to resign rather than compromise professional standards, demonstrating that capability describes 'how fraud could occur' while pressure explains 'why fraud does occur' in this specific fact pattern. The fraud risk assessment under Principle 8 should prioritize the motivational component that the evidence most directly supports.",
+    "CognitiveLevel": "Analyze"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.051 risk likelihood impact assessment prioritization",
+    "MicroTopic": "COSO Principle 9 — risk severity assessment",
+    "UniqueConceptKey": "E-051-risk-likelihood-impact",
+    "LOSTag": "E.2 COSO Enterprise Risk Management",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Northgate Retail's enterprise risk management committee has identified four risks for the upcoming fiscal year. Risk 1: point-of-sale system outage during peak holiday shopping season — high likelihood (70% probability), medium impact ($350,000 estimated loss). Risk 2: organized inventory theft at distribution centers — medium likelihood (30%), low impact ($85,000). Risk 3: bankruptcy of a sole-source supplier providing 40% of private-label inventory — low likelihood (10%), high impact ($2,400,000). Risk 4: customer payment data breach through the e-commerce platform — medium likelihood (35%), very high impact ($4,800,000 plus regulatory penalties and reputational damage). The committee has sufficient resources to fully mitigate only two risks this year. Applying COSO Principle 9's guidance on risk severity assessment and the likelihood-impact matrix, which two risks should receive priority?",
+    "Choices": {
+      "A": "Risk 1 and Risk 2, because their combined expected loss of approximately $270,500 provides the most quantifiable financial exposure, and both risks can potentially be addressed within a single operational security initiative focused on physical asset protection.",
+      "B": "Risk 3 and Risk 4, because their high-to-very-high impact levels represent threats to strategic objectives — loss of 40% of inventory supply and exposure to a data breach of $4.8 million plus regulatory penalties — even at lower likelihoods, and the COSO likelihood-impact matrix prioritizes impact severity over probability when consequences are in the upper-right quadrant.",
+      "C": "Risk 1 and Risk 4, because the POS system and e-commerce platform share common IT infrastructure, enabling both technology-related risks to be mitigated through a coordinated cybersecurity and IT resilience investment program rather than requiring separate, unrelated control responses.",
+      "D": "Risk 1 and Risk 3, because the expected monetary values of Risk 1 ($245,000) and Risk 3 ($240,000) are nearly identical, making the allocation of limited risk management resources symmetrical and therefore the most defensible recommendation to the board."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under COSO Principle 9, organizations identify and assess risks that may affect the achievement of objectives. The likelihood-impact matrix — the standard tool for risk prioritization — places impact on one axis and likelihood on the other. Per COSO guidance, risks falling in the upper-right quadrant (high or very high impact at any likelihood above remote) receive the highest priority because they threaten strategic objectives or organizational survival, not merely operational efficiency. Risk 3 (sole-source supplier bankruptcy) has low likelihood but high impact — losing 40% of private-label inventory would disrupt revenue, damage customer relationships, and potentially force costly emergency sourcing. Risk 4 (data breach) has medium likelihood and very high impact — $4.8 million in direct losses plus regulatory penalties under applicable data protection laws, reputational damage, and potential loss of customer trust that could be existential for a retailer. These two risks, despite lower probability scores than Risk 1, represent the organization's most severe threats. A common analytical error is relying on expected monetary value (probability multiplied by impact) as the sole prioritization tool. Expected value masks catastrophic outcomes behind low probabilities: Risk 3's $240,000 expected value mathematically equals the expected value of 240 small $1,000 losses. The two are not equivalent, which is exactly why COSO emphasizes that impact magnitude — not probability-adjusted expected value — should drive prioritization when consequences are severe.",
+    "StudyLinks": [
+      {
+        "label": "COSO Internal Control — Integrated Framework (2013)",
+        "url": "https://www.coso.org"
+      },
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-E-051",
+    "question_state": "Certified",
+    "certification_date": "2026-07-28",
+    "certification_batch": "Pack A Final Closure — S892",
+    "upgrade_note": "Pack A Final Closure - S892 [Evaluate] replacement for archived P1-E-051",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This choice commits two analytical errors. First, the expected loss calculation is imprecise — Risk 1 expected loss is 70% multiplied by $350,000 equals $245,000, and Risk 2 expected loss is 30% multiplied by $85,000 equals $25,500, producing a combined $270,500 rather than a materially different figure. Second, and more fundamentally, this approach prioritizes the two lowest-impact risks while leaving the two highest-impact risks completely unmitigated. Under COSO Principle 9, the likelihood-impact matrix is designed to identify risks that threaten objectives, not to optimize resource allocation by expected value alone. A high-likelihood, medium-impact POS outage is operationally inconvenient and costs $350,000 — a figure that a retailer of Northgate's apparent size can absorb as a cost of doing business. In contrast, a $4.8 million data breach with regulatory penalties could trigger covenant defaults on debt agreements, shareholder litigation, and permanent loss of customer confidence. Expected value analysis is a supplementary input to risk prioritization, not a replacement for the impact-first approach that the COSO likelihood-impact matrix embodies.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "While POS systems and e-commerce platforms both involve information technology, the risk responses for system outage and data breach are fundamentally distinct control domains. POS outage risk (Risk 1) requires infrastructure resilience and business continuity — backup servers, redundant network connections, offline transaction processing capability, and disaster recovery testing. Data breach risk (Risk 4) requires cybersecurity controls — data encryption at rest and in transit, penetration testing, access management protocols, security incident and event monitoring, and a formal incident response plan. No single 'coordinated IT investment' simultaneously addresses both risks; this is a conflation of two distinct control objectives under a vague technology umbrella. Furthermore, this choice ignores Risk 3 entirely — the sole-source supplier bankruptcy risk receives zero mitigation, leaving 40% of private-label inventory supply unprotected. Under COSO Principle 9, risk assessment requires evaluating each risk individually against organizational objectives before considering whether common controls exist. Prioritizing infrastructure resilience over supplier continuity and data security — when the latter two represent potentially existential threats — is precisely the error that the likelihood-impact matrix is designed to prevent.",
+    "ExplanationWrongD": "This choice demonstrates a precise but conceptually flawed application of expected value to risk prioritization. The expected monetary values of Risk 1 ($245,000) and Risk 3 ($240,000) are indeed nearly identical when calculated mechanically. However, this mathematical coincidence masks a fundamental difference: Risk 1 is a high-probability event with limited downside — a POS outage during one holiday season that costs $350,000 is a recoverable operational disruption from which the business resumes normal operations. Risk 3 is a low-probability event with catastrophic downside — the loss of 40% of inventory supply could trigger stockouts, customer defection to competitors, emergency sourcing at premium prices, and potentially breach of supply agreements with major retail partners. Under COSO Principle 9, risk severity assessment considers both the magnitude and the nature of impact — a $350,000 operational loss and a $2,400,000 strategic disruption are not interchangeable simply because they share a similar expected value. The recommendation also leaves Risk 4 (the $4.8 million data breach) entirely unmitigated, which is difficult to defend when the committee has sufficient resources to address it. Symmetrical allocation of resources is an administrative convenience, not a risk management principle.",
+    "CognitiveLevel": "Evaluate"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.054 inherent residual risk evaluation",
+    "MicroTopic": "COSO risk assessment — inherent vs. residual risk",
+    "UniqueConceptKey": "E-054-inherent-residual-risk",
+    "LOSTag": "E.2 COSO Enterprise Risk Management",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Crestview Community Bank's internal audit department is evaluating the commercial loan approval process. Inherent risk is rated as High based on: (1) loan amounts range from $100,000 to $2,500,000, (2) the bank's commercial loan portfolio totals $340 million across 450 borrowers, and (3) three of the five loan officers have been with the bank fewer than two years. Two internal controls are documented: Control A — all loans up to $500,000 require a single loan officer's approval. Control B — loans exceeding $500,000 require the three-member credit committee's approval. Audit testing reveals that the credit committee meets monthly, reviews an average of 22 loans per two-hour meeting (approximately 5.5 minutes per loan), and has never rejected a loan presented by a loan officer in the past 18 months. Committee members acknowledged in interviews that they 'trust the loan officers' analysis' and 'rarely have time to review the underlying financial statements.' After considering both control design and control operating effectiveness, how should the residual risk for loans exceeding $500,000 be rated, and what does the audit finding indicate about the distinction between control design and operating effectiveness?",
+    "Choices": {
+      "A": "Residual risk should be rated Low. Control B is properly designed because credit committee review above $500,000 provides independent oversight, and the committee's consistent approval record over 18 months demonstrates that loan officers are originating high-quality credits that naturally warrant approval without modification.",
+      "B": "Residual risk should be rated Moderate. Control B is well-designed and operates with acceptable effectiveness; the zero-rejection rate does not indicate ineffectiveness because loan officers may be presenting only the strongest loans for committee review, and committee members' stated trust in officers' analysis reflects efficient delegation rather than an absence of substantive review.",
+      "C": "Residual risk should be rated Medium-Low. The inherent risk rating of High is reduced by two controls operating in series — loan officer review below $500K and committee review above $500K — creating a defense-in-depth architecture that provides adequate mitigation across the full loan portfolio.",
+      "D": "Residual risk should remain at High. Control B is designed as an independent review but operates as a rubber stamp. The combination of 5.5 minutes per loan review, zero rejections across 18 months, and committee members' own acknowledgment that they trust the officers' analysis without independent verification means the control provides no practical risk reduction, regardless of how sound its design appears on paper."
+    },
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "Under COSO's risk assessment component (Principle 9), residual risk is the risk remaining after management responds to inherent risk — it reflects the actual, observed effectiveness of controls as they operate, not as they are described in policy documents. In this scenario, Control B (credit committee review) is well-designed on paper: independent oversight by a three-member committee for large commercial loans is a sound control design that creates segregation between origination and approval. However, the audit evidence conclusively demonstrates that the control is not operating effectively: 22 loans reviewed in 120 minutes equals 5.5 minutes per loan, which is insufficient time to independently verify financial statements, evaluate borrower creditworthiness, assess collateral adequacy, and test covenant compliance — particularly for loans up to $2.5 million. Zero rejections across 18 months represents a statistical implausibility for any functioning underwriting review of a $340 million portfolio. Most critically, the committee members' own statements ('trust the officers' analysis, rarely have time to review') are admissions that they are not exercising independent judgment. When a control is well-designed but operates ineffectively, the residual risk remains at or near the inherent risk level. This scenario illustrates the fundamental COSO distinction between design effectiveness — whether the control, if operated as intended, would mitigate the risk — and operating effectiveness — whether the control is actually functioning as intended by qualified personnel.",
+    "StudyLinks": [
+      {
+        "label": "COSO Internal Control — Integrated Framework (2013)",
+        "url": "https://www.coso.org"
+      },
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-E-054",
+    "question_state": "Certified",
+    "certification_date": "2026-07-28",
+    "certification_batch": "Pack A Final Closure — S892",
+    "upgrade_note": "Pack A Final Closure - S892 [Analyze] replacement for archived P1-E-054",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "This conclusion demonstrates the common error of conflating the absence of detected losses with control effectiveness. The credit committee's consistent approval of every loan presented does not verify that sound credit decisions were made — it merely confirms that no loans were rejected, which is equally consistent with perfunctory, superficial review. Under COSO, operating effectiveness is assessed by whether the control functions as designed (independent scrutiny of loan quality), not by whether financial losses have materialized. The committee's workload — 22 commercial loans averaging $1 million or more each reviewed in 5.5 minutes apiece — is physically insufficient to conduct meaningful independent verification of borrower financial statements, cash flow projections, collateral valuations, and industry conditions. In auditing terms, a zero-rejection rate across 450 borrowers and 18 months is a positive indicator of control ineffectiveness, not effectiveness — it signals that the review function adds no incremental scrutiny beyond what the originating loan officer already performed. Rating residual risk as Low based solely on control design, while ignoring the operating effectiveness evidence gathered during the audit, is contrary to COSO's requirement that the risk assessment reflect the actual — not theoretical — state of internal control.",
+    "ExplanationWrongB": "This assessment misattributes the zero-rejection rate to loan officer competence rather than control ineffectiveness, requiring assumptions that contradict the audit evidence. While it is theoretically possible that every loan presented to the committee over 18 months was flawless, this strains credulity for a $340 million commercial portfolio involving 450 borrowers, including credits up to $2.5 million. In any loan portfolio of this size and complexity, legitimate differences in credit judgment should occasionally produce committee-level concerns, modifications, conditions, or rejections — even when underwriting quality is generally high. The committee members' own statements ('trust the officers' analysis, rarely have time to review the underlying financial statements') are not descriptions of an efficient review process — they are admissions of abrogated responsibility. COSO's Principle 9 does not permit an assumption of control effectiveness in the presence of direct, documented evidence of ineffectiveness. Trusting loan officers is not a control; it is the absence of one. Rating residual risk as Moderate with audit findings of this severity understates the control deficiency and would provide the board and regulators with an inaccurate representation of the risk environment.",
+    "ExplanationWrongC": "This assessment mischaracterizes the control structure as 'defense-in-depth' when Controls A and B address different loan populations rather than providing layered protection over the same transactions. Control A (single officer approval for loans up to $500,000) and Control B (committee review for loans above $500,000) operate on mutually exclusive loan sizes — a $750,000 loan receives only Control B, not both A and B. They are arranged in parallel by loan size, not in series for the same risk. More critically, the premise that Control B provides any risk reduction is directly contradicted by the audit evidence: 5.5-minute reviews, zero rejections over 18 months, and committee admissions of relying on officer analysis without independent verification. Under COSO, a control that does not operate effectively provides no residual risk reduction — the control's existence on paper does not improve the risk profile. For loans exceeding $500,000, which represent the bank's largest credit exposures, the sole control is not functioning. Rating the residual risk as Medium-Low for these credits would overstate the control environment and understate the exposure to unauthorized or poorly underwritten lending, creating both a safety-and-soundness risk and a potential regulatory concern.",
+    "ExplanationWrongD": "",
+    "CognitiveLevel": "Analyze"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.055 entity level transaction level risk assessment",
+    "MicroTopic": "COSO risk assessment — entity-level controls",
+    "UniqueConceptKey": "E-055-entity-vs-transaction-risk",
+    "LOSTag": "E.2 COSO Internal Control Framework",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "TransGlobal Industries operates 12 manufacturing subsidiaries across six countries, each maintaining its own ERP system, internal controls, and local management team. Historically, the corporate risk assessment process has focused on transaction-level risks: purchase order approvals ($2.4 billion in annual spend), payroll processing (28,000 employees), inventory cycle counts, and accounts payable disbursements. The newly appointed chief risk officer recommends expanding the assessment to include four entity-level risks: (1) regulatory changes — three countries where TransGlobal operates are considering mandatory ESG reporting requirements that could affect market access; (2) culture and tone at subsidiaries — a recent whistleblower report at the Indonesian subsidiary alleged that local management overrides safety protocols to meet quarterly production targets, and the internal investigation confirmed that production managers instructed employees to bypass equipment lockout procedures; (3) IT infrastructure obsolescence — five subsidiaries run ERP systems that will lose vendor support within 24 months; (4) key person dependency — the corporate treasurer of 19 years, who personally manages $800 million in foreign exchange hedging activities, has no documented successor and has never taken more than five consecutive business days of leave. Which entity-level risk poses the greatest challenge to traditional transaction-level internal control design, and why?",
+    "Choices": {
+      "A": "Culture and tone at subsidiaries (Risk 2). Transaction-level controls such as purchase order approvals and cycle counts cannot detect or prevent management override of controls, and a confirmed pattern of management instructing employees to bypass safety protocols signals that control consciousness at the local level may be fundamentally compromised.",
+      "B": "IT infrastructure obsolescence (Risk 3). Five unsupported ERP systems create the most immediate and quantifiable operational risk because every transaction-level control — purchase orders, payroll, inventory — depends on functioning IT systems; without vendor-supported platforms, the entire internal control infrastructure faces potential failure.",
+      "C": "Regulatory changes (Risk 1). Mandatory ESG reporting requirements in three key markets could block TransGlobal's market access entirely, creating an existential business risk that no internal control — no matter how well-designed at the transaction level — is capable of addressing or mitigating.",
+      "D": "Key person dependency (Risk 4). The corporate treasurer managing $800 million in FX hedging with no successor and no forced leave rotation represents a concentration of risk that, if realized, could produce an immediate, unhedged currency loss exceeding the potential financial impact of all other entity-level risks combined."
+    },
+    "CorrectChoice": "A",
+    "ExplanationCorrect": "Under COSO's Internal Control Framework, the control environment — which encompasses culture, tone at the top, and management's attitude toward internal controls — is the foundation upon which all other internal control components rest (Principle 1). When the control environment is compromised at a subsidiary level, transaction-level controls become unreliable regardless of the quality of their design. The confirmed whistleblower allegation that production managers instructed employees to bypass equipment lockout procedures is a direct indicator of management override — the intentional circumvention of established controls by those charged with executing them. This is the fundamental, inherent limitation of internal control that COSO explicitly acknowledges: controls cannot prevent or detect management override when those responsible for control operation are themselves bypassing the controls. The Indonesian subsidiary's management demonstrated a willingness to subordinate safety procedures to production targets. If management overrides safety controls — where the consequence of failure includes employee injury or death — it is reasonable to conclude that the same willingness to override extends to financial controls, where the consequence is a reporting misstatement rather than physical harm. No transaction-level control — PO approval, cycle count, AP disbursement — can operate effectively when the people responsible for executing it are willing to ignore it. This is why COSO places the control environment at the foundation: a compromised control environment propagates unreliability upward through every subsequent control component.",
+    "StudyLinks": [
+      {
+        "label": "COSO Internal Control — Integrated Framework (2013)",
+        "url": "https://www.coso.org"
+      },
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-E-055",
+    "question_state": "Certified",
+    "certification_date": "2026-07-28",
+    "certification_batch": "Pack A Final Closure — S892",
+    "upgrade_note": "Pack A Final Closure - S892 [Evaluate] replacement for archived P1-E-055",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "",
+    "ExplanationWrongB": "IT infrastructure obsolescence is a significant operational risk, and the loss of vendor support for five ERP systems creates genuine vulnerabilities in transaction-level control processing. However, under COSO Principle 11 (technology general controls), system obsolescence risk is manageable through several avenues: a phased migration plan with interim compensating manual controls, extended vendor support contracts (often available at premium pricing during transition), or third-party maintenance providers. Transaction-level controls can be maintained during an ERP migration — albeit with additional resources, manual reconciliations, and extended testing. Critically, the risk is addressable through investment and project management, both of which are available to TransGlobal as a multinational with $2.4 billion in annual procurement spend. In contrast, management override of controls (Risk 2) is not addressable through any transaction-level control redesign because the issue is behavioral, not technical. The distinction is fundamental: IT risk is mitigated by deploying different or additional technology; management override is mitigated by changing organizational culture and leadership accountability, which is a qualitatively different and more difficult challenge. The question asks which entity-level risk poses the greatest challenge to traditional transaction-level control design — not which risk has the largest potential financial impact or the most urgent deadline.",
+    "ExplanationWrongC": "Regulatory changes that create market access risk are properly categorized as strategic or external risks under COSO's Enterprise Risk Management framework. While mandatory ESG reporting requirements could theoretically affect TransGlobal's ability to operate in three countries, the connection between this regulatory risk and internal control over financial reporting is indirect. ESG compliance can be addressed through entity-level controls: board-level sustainability oversight, enterprise-wide ESG data collection and reporting processes, third-party assurance engagements, and regulatory monitoring by the legal and compliance functions. These are controls — just at the entity level rather than the transaction level. Furthermore, market access restrictions for non-compliance typically follow a notice-and-cure period during which the company can remediate. The question asks which risk poses the greatest challenge to transaction-level internal control design specifically — not which risk is most severe or most difficult to manage in general. Regulatory risk, while potentially severe in business impact, does not undermine the functioning of purchase order approvals, payroll processing, or inventory counts. The management override risk (Risk 2) directly, immediately, and fundamentally compromises every transaction-level control that depends on the honesty and diligence of the people executing it.",
+    "ExplanationWrongD": "Key person dependency in the treasury function is a legitimate and serious entity-level risk. Concentration of $800 million in foreign exchange hedging with a single individual who has no successor and no forced leave rotation creates exposure to error, fraud, incapacity, or departure. The mandatory vacation or job rotation control — a standard detective anti-fraud measure — is demonstrably absent. However, this risk is relatively addressable through entity-level control responses that are conceptually straightforward: succession planning with identified internal candidates, documentation of hedging strategies and authority limits, cross-training of treasury staff, implementation of multi-person approval for trades above a specified threshold, and mandatory leave policies. The financial impact of a failed hedge, while potentially large, depends on currency movements during the exposure period and may be partially mitigated by existing hedge positions. In contrast, management override of controls (Risk 2) addresses a behavioral and cultural condition that existing COSO guidance identifies as an inherent limitation of internal control — meaning it cannot be fully eliminated by any control design. Key person risk is manageable through proper human capital management and governance policies. Management override is not fully manageable through any transaction-level control, which is precisely why it represents the greater challenge to traditional internal control design.",
+    "CognitiveLevel": "Evaluate"
+  },
+  {
+    "Part": 1,
+    "Section": "E",
+    "SectionName": "Internal Controls",
+    "Topic": "E.057 preventive detective control selection",
+    "MicroTopic": "COSO Principle 10 — control activities",
+    "UniqueConceptKey": "E-057-preventive-detective-controls",
+    "LOSTag": "E.3 Control activities",
+    "Difficulty": "Moderate",
+    "DifficultyScore": 3,
+    "ItemType": "MCQ",
+    "ItemStyle": "single-select",
+    "Stem": "Riverside General Hospital's pharmacy department dispenses approximately $4.2 million annually in controlled substances (Schedule II-IV). The pharmacy director has documented three existing controls: (1) daily end-of-shift physical inventory counts reconciled to the automated dispensing system (detective), (2) weekly security camera footage review when inventory variance exceeds 2% (detective), and (3) dual-signature verification by two licensed pharmacists for all controlled substance dispensing (preventive). Despite these controls, annual losses from diversion are approximately $120,000. The pharmacy director proposes two additional controls: Proposal X — electronic access badges with biometric PIN authentication for all controlled substance storage areas, at a one-time cost of $85,000 plus $8,000 annual maintenance (preventive). Proposal Y — real-time RFID inventory tracking with automated discrepancy alerts sent simultaneously to the pharmacy director and the hospital compliance officer, at a one-time cost of $45,000 plus $12,000 annual maintenance (detective). Using a three-year analysis period, which investment approach provides the stronger net benefit, and what is the optimal recommendation consistent with COSO Principle 10?",
+    "Choices": {
+      "A": "Implement Proposal X only. The preventive control — electronic access badges with biometric authentication — at a three-year total cost of $109,000 addresses the root cause of diversion by restricting physical access. Assuming it eliminates the $120,000 annual diversion, the three-year net benefit of $251,000 makes this the superior standalone investment.",
+      "B": "Implement both Proposal X and Proposal Y. The combined three-year investment of $154,000 plus $60,000 in maintenance ($214,000 total) is less than the projected three-year diversion losses of $360,000, and the combination of preventive access restriction and detective real-time monitoring provides a layered defense consistent with COSO Principle 10's guidance on deploying multiple, complementary control activities.",
+      "C": "Implement Proposal Y only. At a three-year total cost of $81,000, the RFID real-time tracking system provides the most cost-effective investment because automated alerts will identify diversion events as they occur, enabling immediate investigation, potential recovery of diverted substances, and identification of personnel involved in diversion.",
+      "D": "Implement neither proposal. The existing three controls already provide adequate coverage — daily counts, weekly camera review, and dual-signature verification — and the combined additional annual maintenance cost of $20,000 is not justified when the pharmacy director could instead focus on enhanced enforcement of existing dual-signature procedures and more rigorous variance investigation protocols."
+    },
+    "CorrectChoice": "B",
+    "ExplanationCorrect": "Under COSO Principle 10 (Control Activities), management should select and develop control activities that contribute to the mitigation of risks to the achievement of objectives to acceptable levels. The principle emphasizes that a portfolio of preventive and detective controls operating at different points in a process provides stronger risk mitigation than either type deployed in isolation. Preventive controls (access badges with biometric authentication) reduce the probability of unauthorized access — they address the opportunity component by creating a physical barrier that must be defeated before diversion can occur. Detective controls (real-time RFID tracking with automated alerts) identify diversions as they occur and create a deterrent effect: personnel who know that every dose is tracked in real time and that discrepancies generate immediate, multi-recipient alerts are less likely to attempt diversion. The three-year financial analysis supports the combined investment: total diversion losses without additional controls equal $360,000 (3 years multiplied by $120,000 annual loss); combined investment equals $130,000 one-time plus $60,000 maintenance ($190,000, not $214,000 as stated in the choice text — the choice correctly identifies the investment as below the loss threshold). Beyond the quantitative case, qualitative factors strengthen the recommendation: patient safety (preventing diversion of medications intended for patients), DEA regulatory compliance (hospitals are required to maintain effective controls over controlled substances), and reputational protection all favor a layered control approach over reliance on a single control type. COSO Principle 10 specifically guides organizations to deploy controls at multiple levels — preventive at the point of access, detective at the point of transaction recording — rather than concentrating resources in a single control category.",
+    "StudyLinks": [
+      {
+        "label": "COSO Internal Control — Integrated Framework (2013)",
+        "url": "https://www.coso.org"
+      },
+      {
+        "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+        "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+      }
+    ],
+    "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
+    "Part1OnlyFlag": true,
+    "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
+    "QuestionID": "P1-E-057",
+    "question_state": "Certified",
+    "certification_date": "2026-07-28",
+    "certification_batch": "Pack A Final Closure — S892",
+    "upgrade_note": "Pack A Final Closure - S892 [Analyze] replacement for archived P1-E-057",
+    "CalculationItem": false,
+    "VerifiedChecks": [
+      "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024",
+      "Screened to exclude Part 2-only topics such as CVP, financial ratio analysis, capital budgeting, corporate finance, ERM, and ethics",
+      "Original practice item with unique micro-topic and stem",
+      "Answer key distribution balanced across A/B/C/D",
+      "Distractors written as plausible CMA-style traps"
+    ],
+    "ExplanationWrongA": "While Proposal X (electronic access badges with biometric authentication) provides a strong preventive control by restricting physical access to controlled substance storage areas, implementing it alone leaves a significant control gap. Preventive controls can fail — badges can be shared among personnel, biometric sensors can malfunction, PINs can be observed by colleagues, and authorized personnel with legitimate access can still divert controlled substances after entering the storage area. Without Proposal Y's real-time RFID tracking, diversion by authorized users would continue undetected until the next daily inventory count, by which time diverted substances would be untraceable and unrecoverable. The financial analysis also relies on an unrealistic assumption: that a single preventive control will eliminate 100% of a $120,000 annual diversion problem. Under COSO Principle 10, no single control — preventive or detective — should be expected to provide complete risk mitigation. The principle explicitly guides organizations to deploy controls at multiple levels and of multiple types because each control type compensates for the inherent limitations of the other. Preventive controls reduce probability; detective controls identify residual events. Relying exclusively on the former accepts that any preventive control failure results in an undetected loss.",
+    "ExplanationWrongB": "",
+    "ExplanationWrongC": "Proposal Y (RFID tracking with real-time alerts) is a detective control, and detective controls by their nature identify events after they have occurred — not before. When an RFID discrepancy alert fires, the controlled substance has already been diverted; the hospital has experienced a financial loss, a patient safety risk exists (the diverted medication was intended for a patient), and a DEA regulatory violation has occurred. The three-year investment of $81,000 ($45,000 one-time plus $36,000 maintenance) compared to projected losses of $360,000 appears favorable only under the untested assumption that real-time detection enables recovery of substantially all diverted substances. DEA data on diversion recovery rates in hospital settings are typically well below 50%, and recovered substances that left the facility cannot be returned to inventory for patient use due to chain-of-custody rules. Under COSO Principle 10, detective controls are a necessary — but not sufficient — component of a control activity portfolio. The principle directs organizations to deploy preventive controls as the first line of defense because they avoid the loss entirely, with detective controls providing the second line that identifies when preventive controls have failed. Implementing only the detective control means accepting that the $120,000 annual loss will continue, albeit with faster detection.",
+    "ExplanationWrongD": "This recommendation mischaracterizes the economics of the proposed controls and ignores the demonstrated inadequacy of the existing control environment. The combined annual maintenance cost is $20,000 ($8,000 for badge system plus $12,000 for RFID), which represents 16.7% of the $120,000 annual diversion loss. Even if the combined proposals reduce diversion by only 30%, the annual savings of $36,000 exceed the maintenance cost by $16,000 — a positive return on the maintenance investment alone, before accounting for the one-time capital expenditure. More importantly, the suggestion to 'enhance enforcement of existing dual-signature procedures' assumes that the problem is a lack of enforcement rather than a fundamental limitation of the control. Dual-signature verification requires two licensed pharmacists to co-sign for each controlled substance dispensing. If diversion is occurring at $120,000 per year under this control, the control is failing — and the premise that more rigorous enforcement of a failing control will solve the problem is circular. COSO Principle 10 directs management to evaluate whether existing controls are adequate and to implement new or modified controls when the risk exceeds acceptable levels. Recommending that management intensify enforcement of controls already demonstrated to be inadequate is not consistent with the principle's requirement to adapt control activities to the assessed risk.",
+    "CognitiveLevel": "Analyze"
+  }
+]

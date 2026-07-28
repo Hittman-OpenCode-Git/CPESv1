@@ -1,0 +1,63 @@
+{
+  "title": "SESSION314_DASHBOARD",
+  "session": "314",
+  "generated": "2026-07-27",
+  "sections": {
+    "production_insertion_dashboard": {
+      "status": "COMPLETE",
+      "itemsInserted": 10,
+      "targetPack": "pack_e_corrected.js",
+      "preFlight": "500 items → 510 items (+10)",
+      "certifiedDelta": "2,181 → 2,191 (+10)",
+      "dl008Status": "10/10 CLEAN",
+      "parseCheck": "PASS",
+      "backup": "pack_e_corrected.js.bak-20260726203321"
+    },
+    "domain_e_dashboard": {
+      "certifiedBefore": 208,
+      "certifiedAfter": 218,
+      "certificationRate": "58.1% → 60.7% +2.6pp",
+      "cloneGroupsCleared": "10/33 (30.3%)",
+      "archivedItemsReplaced": 50,
+      "wave1Status": "COMPLETE — Production",
+      "wave2Status": "AUTHORED — 10 items in SESSION314_AUTHORING_BATCH_FULL.json",
+      "wave2TargetLOs": ["E.1.d Risk Assessment (3)", "E.1.h SOX (2)", "E.1.j Systems Controls (4)", "E.1.e Control Activities (1)"],
+      "remainingGroups": 23,
+      "remainingSeeds": 38
+    },
+    "registry_dashboard": {
+      "masterRegistry": "2,985 (+10)",
+      "partitionedRegistry": "registry/ created with packs/, domains/, cases/",
+      "packRegistries": 10,
+      "domainRegistries": 7,
+      "caseRegistries": 5,
+      "indexFile": "registry/QUESTION_REGISTRY_INDEX.md",
+      "similarityLedger": "registry/QUESTION_SIMILARITY_LEDGER.json (20 entries)",
+      "duplicatePrevention": "registry/DUPLICATE_PREVENTION_REPORT.json",
+      "gate0": "ACTIVE"
+    },
+    "wave2_authoring_dashboard": {
+      "status": "COMPLETE",
+      "itemsAuthored": 10,
+      "qualityGate1": "COMPLETE — Draft",
+      "qualityGates2_4": "PENDING — S315 certification review",
+      "ewCompliance": {
+        "dl008": "VERIFIED — all EW[CC] = ''",
+        "dl026": "VERIFIED — all non-CC EW filled",
+        "dl013": "VERIFIED — no boilerplate detected"
+      },
+      "blueprintCoverage": {
+        "E.1.d Risk Assessment": 3,
+        "E.1.h SOX": 2,
+        "E.1.j Systems Controls": 4,
+        "E.1.e Control Activities": 1
+      }
+    },
+    "governance_baseline": {
+      "governanceGuard": "27/27 PASS",
+      "preFlightHash": "9F9B1381128184F92558A9F916DE6C99",
+      "postFlightHash": "CHANGED (expected — 10 items inserted)",
+      "unchangedFiles": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "scored_cases.js", "scored_cases2-5.js", "app.js", "may-core.js", "may-learner-state.js", "index_updated.html", "styles.css"]
+    }
+  }
+}

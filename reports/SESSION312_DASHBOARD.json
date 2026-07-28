@@ -1,0 +1,44 @@
+{
+  "title": "SESSION312_DASHBOARD",
+  "session": "312",
+  "generated": "2026-07-27T00:04:03.182Z",
+  "programStatus": {
+    "program": "Domain E Replacement Program (Wave 1)",
+    "status": "IN PROGRESS",
+    "progress": "10/43 items authored (23%)",
+    "qualityGates": {
+      "gate1_draft": "10/10 PASS",
+      "gate2_technical": "10/10 PASS (DL-008/DL-026/DL-013 clean)",
+      "gate3_blueprint": "10/10 PASS (LOSTag/CL/Difficulty aligned)",
+      "gate4_qa": "10/10 PENDING (human review required for EC reasoning and EW specificity)"
+    }
+  },
+  "domainEHealth": {
+    "beforeSession": {
+      "certified": 208,
+      "archived": 129,
+      "unprocessed": 38,
+      "uiqs": "62.5 (C)"
+    },
+    "afterFullCompletion": {
+      "certified": 289,
+      "archived": 0,
+      "unprocessed": 0,
+      "uiqs": "77.1 (B)"
+    },
+    "currentDelta": "10 replacement items authored — 23% of target"
+  },
+  "portfolioProjection": {
+    "preProgram": "2,181 certified (87.2%)",
+    "postDomainE": "2,262 certified (90.5%)",
+    "postDomainF": "2,490 certified (99.6%)",
+    "remainingWork": "33 replacement items + 38 seed certifications + 76 Domain F items"
+  },
+  "qualityMetrics": {
+    "ewCoverage": "100% (30/30 non-CC EW slots filled)",
+    "dl008Clean": "100% (10/10 EW[CC] empty)",
+    "dl013Clean": "100% (0 template boilerplate)",
+    "ecMeanLength": "1117 chars",
+    "ewMeanLength": "513 chars"
+  }
+}

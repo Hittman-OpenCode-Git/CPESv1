@@ -1,0 +1,42 @@
+{
+  "session": "S361",
+  "board": "Ground Truth Reconciliation",
+  "timestamp": "2026-07-27T13:15:00Z",
+  "discovery": "S361 Readiness Board DL-008 claim of 8 Certified items found INACCURATE via direct raw-file line inspection. DL-029 window-scan bug confirmed as root cause of false positives.",
+  
+  "dl008_verification": {
+    "s361_rb_claim": 8,
+    "verified_true": 1,
+    "verified_false": 7,
+    "true_items": [
+      {
+        "qid": "P1-FC-001",
+        "pack": "pack_c",
+        "section": "F",
+        "cc": "A",
+        "ew_cc_non_empty": true,
+        "ew_cc_content": "Choice A is incorrect because data visualization presents information graphically...",
+        "state": "Certified",
+        "note": "EW[A] contains distractor explanation text for Choice D (data visualization). The item's CC is A (data governance), making this a genuine DL-008."
+      }
+    ],
+    "false_items": [
+      { "qid": "P1-FD-043", "pack": "pack_d", "section": "F", "cc": "C", "ew_cc": "empty", "note": "EW[C]=\\\"\\\" — clean" },
+      { "qid": "P1-FD-049", "pack": "pack_d", "section": "F", "cc": "A", "ew_cc": "empty", "note": "EW[A]=\\\"\\\" — clean" },
+      { "qid": "P1-FD-054", "pack": "pack_d", "section": "F", "cc": "B", "ew_cc": "empty", "note": "EW[B]=\\\"\\\" — clean" },
+      { "qid": "P1-FD-059", "pack": "pack_d", "section": "F", "cc": "C", "ew_cc": "empty", "note": "EW[C]=\\\"\\\" — clean" },
+      { "qid": "P1-FD-064", "pack": "pack_d", "section": "F", "cc": "D", "ew_cc": "empty", "note": "EW[D]=\\\"\\\" — clean" },
+      { "qid": "P1-FD-069", "pack": "pack_d", "section": "F", "cc": "A", "ew_cc": "empty", "note": "EW[A]=\\\"\\\" — clean" },
+      { "qid": "P1-FD-073", "pack": "pack_d", "section": "F", "cc": "A", "ew_cc": "empty", "note": "EW[A]=\\\"\\\" — clean" }
+    ],
+    "root_cause": "S361 Readiness Board used Function-constructor parse that picked up an adjacent item's EW field due to CC-before-QID Pack D format. Same DL-029 pattern that caused the 0→3 shift in S852's first manifest."
+  },
+
+  "action_taken": {
+    "pack_c_syntax_fix": "Fixed 2 missing commas at lines 21757 and 21805 that caused Function constructor parse failure. Backup: pack_c_corrected.js.bak-20260727130223.",
+    "dl008_not_remediated": "Of the 8 claimed S361 DL-008 items, only P1-FC-001 requires clearance. The other 7 are clean. No pack_d edits needed for DL-008.",
+    "p1_fc_001_status": "Not yet cleared — awaiting S364 formal execution."
+  },
+
+  "impact_on_s364_s368_plan": "Scope reduced from 8 DL-008 to 1 DL-008 (P1-FC-001). DL-026 scope remains at 37 items/56 slots per S821 queue. S364-S366 write counts unchanged for DL-026, but S364 DL-008 operation is now a single-item fix."
+}

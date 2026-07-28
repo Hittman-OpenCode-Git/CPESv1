@@ -1,0 +1,56 @@
+{
+  "session": "S206",
+  "board": "B",
+  "title": "Gate -1 Operational Certification Results",
+  "date": "2026-07-27",
+  "spec": "PG-011",
+  "scanTimestamp": "2026-07-27T06:16:12.853Z",
+  "results": {
+    "totalScanned": 2540,
+    "passed": 2539,
+    "blocked": 1,
+    "passRate": "0.9996"
+  },
+  "byPack": {
+    "pack_a": {
+      "passed": 500,
+      "blocked": 0
+    },
+    "pack_b": {
+      "passed": 500,
+      "blocked": 0
+    },
+    "pack_c": {
+      "passed": 500,
+      "blocked": 0
+    },
+    "pack_d": {
+      "passed": 499,
+      "blocked": 1
+    },
+    "pack_e": {
+      "passed": 540,
+      "blocked": 0
+    }
+  },
+  "checks": {
+    "PRE-N1": "CLEAR",
+    "PRE-N2": "CLEAR",
+    "GV-N1-01": "CLEAR",
+    "GV-N1-04": "CLEAR",
+    "PRE-N3": "CLEAR",
+    "GV-N1-05": "CLEAR",
+    "GV-N1-06": "CLEAR",
+    "GV-N1-07": "CLEAR",
+    "GV-N1-08": "CLEAR"
+  },
+  "blockedItems": [
+    {
+      "qid": "Pack D empty-CC item",
+      "pack": "pack_d",
+      "reason": "Empty CorrectChoice field — PG-011 Step 2 IDENTITY_BLOCKED"
+    }
+  ],
+  "productionBaseline": "0.9996 (2,539/2,540) — established 2026-07-27",
+  "verdict": "PASS — Gate -1 operational with 99.96% identity resolution"
+}

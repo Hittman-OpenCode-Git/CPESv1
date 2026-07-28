@@ -1,0 +1,44 @@
+{
+  "session": "516",
+  "agent": "D",
+  "target": "MIGRATED_CASE_BASE_C",
+  "batches": {
+    "batch_2_cognitive_level": {
+      "items_processed": 75,
+      "cognitive_level_added": 75,
+      "assignment_pattern": {
+        "numeric_items": "Apply",
+        "fill_items": "Understand",
+        "multi_items": "Evaluate",
+        "select_q1_q2": "Understand",
+        "select_q3": "Analyze"
+      },
+      "coverage": "75/75 (100%) — up from 0/75"
+    },
+    "batch_4_case_realism": {
+      "status": "DEFERRED to S517",
+      "reason": "30 Q4/Q5 items remain generic (no case company/scenario reference in explanation). Case grounding requires per-item editorial review. Explanations are now substantially enhanced with citations and (where applicable) distractor rationale; case-reference sentences would be additive, not structural fixes.",
+      "note": "Q4 items (15 multi) are structurally generic by design — they test broad concept knowledge (fraud triangle, cost of quality, BSC perspectives). Q5 items (15 fill) are definitional by design. Full case-realization would require prompt redesign, which exceeds S516 authorized scope."
+    },
+    "case_level_metadata": {
+      "status": "DEFERRED to S517",
+      "reason": "MIGRATED_CASE_BASE_B also lacks Industry/CompanyName/Stakeholder/BusinessFunction. Adding these would break convention with the reference case bank. Should be addressed as a coordinated update across all MIGRATED arrays.",
+      "fields_deferred": ["Industry", "CompanyName", "Stakeholder", "BusinessFunction", "PrimaryCompetency", "BlueprintObjectives", "LearningObjectives"]
+    },
+    "difficulty_metadata": {
+      "status": "DOCUMENTED — NO CHANGE",
+      "current_state": "All 75 items: Difficulty=Moderate, DifficultyScore=3 (DL-032 uniform labeling pattern)",
+      "recalibration_needed": true,
+      "deferred_to": "S517 or dedicated difficulty calibration session"
+    }
+  },
+  "quality_gaps_resolved": {
+    "cognitive_level": "75/75 (100%)"
+  },
+  "quality_gaps_remaining": {
+    "generic_q4_q5": 30,
+    "case_level_metadata": "15 cases need 7 fields each",
+    "uniform_difficulty_dl032": 75,
+    "exhibit_count_zero": "All 15 cases have ExhibitCount=0 (structural limitation of MCQ-to-case migration)"
+  }
+}

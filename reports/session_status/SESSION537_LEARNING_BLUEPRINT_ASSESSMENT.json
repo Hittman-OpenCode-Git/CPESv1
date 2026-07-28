@@ -1,0 +1,493 @@
+{
+  "BLOCK-AUTHORIZED": "Session 537 Agent K+L report — JSON report file, not question content. No pack/scored_case files modified.",
+  "report": "SESSION537_LEARNING_BLUEPRINT_ASSESSMENT",
+  "version": "1.0",
+  "date": "2026-07-26",
+  "scope": {
+    "file": "scored_cases.js",
+    "cases_evaluated": 7,
+    "total_items_evaluated": 42,
+    "cases": ["CBQ-C2", "CBQ-D2", "CBQ-E2", "CBQ-F2", "CBQ-A3", "CBQ-B3", "CBQ-C3"]
+  },
+
+  "agent_K_learning_value_assessment": {
+    "methodology": "Each item scored 1–5 on four dimensions. Unprocessed cases have minimal explanations (1–2 line ExplanationCorrect, brief distractor texts). Certified cases (not in this batch) have expanded explanations.",
+    "scoring_scale": {
+      "1": "Minimal — single sentence, no concept teaching",
+      "2": "Below par — states answer but lacks depth",
+      "3": "Adequate — teaches concept at basic level",
+      "4": "Good — teaches concept with reasoning and traps",
+      "5": "Excellent — mini-lesson with standard references, worked examples, and remediation"
+    },
+    "cases": [
+      {
+        "caseID": "CBQ-C2",
+        "title": "Investment Center Performance and Transfer Pricing",
+        "section": "C",
+        "productionStatus": "Draft",
+        "state": "Unprocessed",
+        "items": [
+          {
+            "itemID": "CBQ-C2-Q1", "topic": "Residual income", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line Explanation. No distractor explanations (numeric). Tests RI formula — high CMA relevance but lacks any teaching content."
+          },
+          {
+            "itemID": "CBQ-C2-Q2", "topic": "ROI", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line Explanation. ROI is core CMA Part 1. Has CommonTrapReference (Trap 13: ROI vs ROE) but not used in explanation."
+          },
+          {
+            "itemID": "CBQ-C2-Q3", "topic": "Transfer pricing", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 5,
+            "notes": "ExplanationCorrect is 1 sentence BUT distractor explanations (B, C, D) are excellent — each 200+ chars, explaining why full cost/market price/outside purchase price are wrong. Transfer pricing with idle capacity = high-frequency CMA topic. Strong remediation despite weak correct explanation."
+          },
+          {
+            "itemID": "CBQ-C2-Q4", "topic": "Performance measurement", "type": "multi",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 2, "examPrepValue": 4,
+            "notes": "1-sentence correct explanation. Distractor C has good remediation. Other correct choices have empty EW slots. Tests RI vs ROI goal congruence — important concept."
+          },
+          {
+            "itemID": "CBQ-C2-Q5", "topic": "Transfer pricing", "type": "fill",
+            "explanationUsefulness": 1, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 2,
+            "notes": "1-line Explanation. Fill-in-blank for 'congruence' — low cognitive demand. Not a high-value CMA question."
+          },
+          {
+            "itemID": "CBQ-C2-Q6", "topic": "Performance management", "type": "match",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line Explanation. Match exercise connecting ROI/RI/transfer price/market price to descriptions. Good synthesis but zero teaching value in explanation."
+          }
+        ],
+        "case_learning_score_avg": { "explanationUsefulness": 2.0, "coachingQuality": 1.2, "remediationQuality": 1.7, "examPrepValue": 3.7 }
+      },
+      {
+        "caseID": "CBQ-D2",
+        "title": "Process Costing, Lean Waste, and Bottleneck Analysis",
+        "section": "D",
+        "productionStatus": "Draft",
+        "state": "Unprocessed",
+        "items": [
+          {
+            "itemID": "CBQ-D2-Q1", "topic": "Process costing", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line EU calculation. No teaching beyond formula substitution. EU is a CMA staple."
+          },
+          {
+            "itemID": "CBQ-D2-Q2", "topic": "Process costing", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line cost-per-EU. Follows Q1 sequentially — good exam design, minimal explanation."
+          },
+          {
+            "itemID": "CBQ-D2-Q3", "topic": "Theory of constraints", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 4,
+            "notes": "1-sentence correct explanation. Distractors (B, C, D) are strong — each explains why cutting/painting/no-bottleneck are wrong with TOC reasoning. Bottleneck ID is key CMA concept."
+          },
+          {
+            "itemID": "CBQ-D2-Q4", "topic": "Lean operations", "type": "multi",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 2, "examPrepValue": 4,
+            "notes": "Brief correct explanation. Only distractor B (batch queues) has remediation. Lean thinking is important but explanation is thin."
+          },
+          {
+            "itemID": "CBQ-D2-Q5", "topic": "Process costing", "type": "fill",
+            "explanationUsefulness": 1, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 2,
+            "notes": "1-line. Fill-in for 'complete'. Low cognitive demand."
+          },
+          {
+            "itemID": "CBQ-D2-Q6", "topic": "Cost management", "type": "match",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line. Match of WIP/bottleneck/waste/homogeneous output to EU/TOC/lean/process costing tools."
+          }
+        ],
+        "case_learning_score_avg": { "explanationUsefulness": 2.0, "coachingQuality": 1.2, "remediationQuality": 1.7, "examPrepValue": 3.5 }
+      },
+      {
+        "caseID": "CBQ-E2",
+        "title": "IT General Controls, Change Management, and Access Review",
+        "section": "E,F",
+        "productionStatus": "Draft",
+        "state": "Unprocessed",
+        "items": [
+          {
+            "itemID": "CBQ-E2-Q1", "topic": "Access controls", "type": "select",
+            "explanationUsefulness": 2, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 5,
+            "notes": "1-sentence correct explanation. Distractors (B, C, D) are excellent — each 150+ chars explaining why shared IDs/password rotation/disabling logs are wrong. Shared admin IDs is a SOC/ITGC core topic."
+          },
+          {
+            "itemID": "CBQ-E2-Q2", "topic": "Access review", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line percentage calc. Tests access review metrics — Section F crossover."
+          },
+          {
+            "itemID": "CBQ-E2-Q3", "topic": "IT controls", "type": "multi",
+            "explanationUsefulness": 2, "coachingQuality": 2, "remediationQuality": 2, "examPrepValue": 4,
+            "notes": "Moderate explanation distinguishing ITGCs from performance analytics. Distractor D has good remediation."
+          },
+          {
+            "itemID": "CBQ-E2-Q4", "topic": "Change management", "type": "fill",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line. Fill-in for 'approval'. Tests IT change management basics."
+          },
+          {
+            "itemID": "CBQ-E2-Q5", "topic": "ITGC risk", "type": "match",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line. Good mapping: shared IDs→accountability, terminated users→unauthorized access, unapproved changes→erroneous logic, failed interface→data transfer."
+          },
+          {
+            "itemID": "CBQ-E2-Q6", "topic": "Monitoring", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 4,
+            "notes": "Good correct explanation citing COSO Principle 16. All three distractors have strong remediation. Log retention is a realistic IT audit finding."
+          }
+        ],
+        "case_learning_score_avg": { "explanationUsefulness": 2.2, "coachingQuality": 1.5, "remediationQuality": 2.2, "examPrepValue": 3.8 }
+      },
+      {
+        "caseID": "CBQ-F2",
+        "title": "Cybersecurity, RPA, and Finance Automation Governance",
+        "section": "E,F",
+        "productionStatus": "Draft",
+        "state": "Unprocessed",
+        "items": [
+          {
+            "itemID": "CBQ-F2-Q1", "topic": "RPA benefits", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "2-line calculation showing labor hours saved by RPA. Clear but no teaching context."
+          },
+          {
+            "itemID": "CBQ-F2-Q2", "topic": "Exception analytics", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line percentage of exception invoices. Minimal learning value."
+          },
+          {
+            "itemID": "CBQ-F2-Q3", "topic": "Cybersecurity controls", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 5,
+            "notes": "Strong distractor explanations. COSO traceability is high-value. Shared credentials accountability risk is core IT audit concept."
+          },
+          {
+            "itemID": "CBQ-F2-Q4", "topic": "Automation governance", "type": "multi",
+            "explanationUsefulness": 2, "coachingQuality": 2, "remediationQuality": 2, "examPrepValue": 4,
+            "notes": "Brief correct explanation. Distractor D (disable audit logs) has good remediation citing COSO monitoring. Unique credentials/change control/master-data are correct choices with empty EW slots."
+          },
+          {
+            "itemID": "CBQ-F2-Q5", "topic": "Analytics governance", "type": "fill",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line. Fill-in for 'monitoring'. Tests model governance terminology."
+          },
+          {
+            "itemID": "CBQ-F2-Q6", "topic": "Technology controls", "type": "match",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line. Match: shared bot→credentials, unapproved rules→change mgmt, duplicate IDs→data governance, no FP review→model monitoring."
+          }
+        ],
+        "case_learning_score_avg": { "explanationUsefulness": 2.2, "coachingQuality": 1.3, "remediationQuality": 1.7, "examPrepValue": 3.8 }
+      },
+      {
+        "caseID": "CBQ-A3",
+        "title": "Inventory, ARO, Subsequent Events, and Cash Classification",
+        "section": "A",
+        "productionStatus": "Draft",
+        "state": "Unprocessed",
+        "items": [
+          {
+            "itemID": "CBQ-A3-Q1", "topic": "Inventory measurement", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line LCM/NRV write-down. Core CMA A-domain concept. States rule but doesn't teach ASC 330."
+          },
+          {
+            "itemID": "CBQ-A3-Q2", "topic": "Asset retirement obligations", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line ARO PV. States rule but doesn't teach ASC 410."
+          },
+          {
+            "itemID": "CBQ-A3-Q3", "topic": "Subsequent events", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 5,
+            "notes": "Excellent distractor explanations citing ASC 855 Type I vs Type II. B, C, D each have 150+ char remediation. Strong exam prep for subsequent events."
+          },
+          {
+            "itemID": "CBQ-A3-Q4", "topic": "Cash classification", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 5,
+            "notes": "Strong distractor explanations citing ASC 305/310/330. Each explains why inventory/receivable/long-term are wrong. Cash equivalents is high-frequency CMA topic."
+          },
+          {
+            "itemID": "CBQ-A3-Q5", "topic": "Statement of cash flows", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line indirect method operating cash flow. Core CMA. No teaching beyond numbers."
+          },
+          {
+            "itemID": "CBQ-A3-Q6", "topic": "External reporting", "type": "match",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line. Match: LCM→write-down, ARO→liability+asset, T-bill→cash equivalent, equipment→investing. Good synthesis, zero teaching."
+          }
+        ],
+        "case_learning_score_avg": { "explanationUsefulness": 2.3, "coachingQuality": 1.3, "remediationQuality": 2.0, "examPrepValue": 4.3 }
+      },
+      {
+        "caseID": "CBQ-B3",
+        "title": "Scenario Forecast, Expected Value, and Working Capital Plan",
+        "section": "B",
+        "productionStatus": "Draft",
+        "state": "Unprocessed",
+        "items": [
+          {
+            "itemID": "CBQ-B3-Q1", "topic": "Expected value", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line probability-weighting. Clear formula but no concept teaching."
+          },
+          {
+            "itemID": "CBQ-B3-Q2", "topic": "Forecasting", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line follows Q1. Simple multiplication. Sequential — good design, minimal explanation."
+          },
+          {
+            "itemID": "CBQ-B3-Q3", "topic": "Cash collections", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line collections pattern. FormulaReference and DecisionTreeReference exist but unused in explanation."
+          },
+          {
+            "itemID": "CBQ-B3-Q4", "topic": "Cash budget", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line multi-component cash budget. Good complexity, minimal teaching."
+          },
+          {
+            "itemID": "CBQ-B3-Q5", "topic": "Cash budget", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 5,
+            "notes": "Excellent distractor explanations — each choice-specific. B explains why 'no borrowing' is wrong (72,600 < 75,000 minimum), C explains 75,000 confusion, D explains 780,000 error. Cash budget with minimum balance is classic CMA."
+          },
+          {
+            "itemID": "CBQ-B3-Q6", "topic": "Forecast assumptions", "type": "multi",
+            "explanationUsefulness": 2, "coachingQuality": 2, "remediationQuality": 2, "examPrepValue": 4,
+            "notes": "Brief correct explanation. Distractor D (prior-year dividend) has good remediation explaining sunk cost vs. forward-looking assumptions."
+          }
+        ],
+        "case_learning_score_avg": { "explanationUsefulness": 2.2, "coachingQuality": 1.3, "remediationQuality": 1.7, "examPrepValue": 4.0 }
+      },
+      {
+        "caseID": "CBQ-C3",
+        "title": "Balanced Scorecard and Operating Performance Review",
+        "section": "C",
+        "productionStatus": "Draft",
+        "state": "Unprocessed",
+        "items": [
+          {
+            "itemID": "CBQ-C3-Q1", "topic": "Performance variance", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line operating income variance. Simple subtraction. Only item in scope scored Easy/1."
+          },
+          {
+            "itemID": "CBQ-C3-Q2", "topic": "Nonfinancial measures", "type": "numeric",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 3,
+            "notes": "1-line delivery shortfall. Simple subtraction."
+          },
+          {
+            "itemID": "CBQ-C3-Q3", "topic": "Balanced scorecard", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 5,
+            "notes": "Strong distractor explanations citing Kaplan & Norton BSC framework. Each explains why Op income (financial), delivery (internal process), defect rate (internal process) are not L&G."
+          },
+          {
+            "itemID": "CBQ-C3-Q4", "topic": "Leading indicators", "type": "multi",
+            "explanationUsefulness": 2, "coachingQuality": 2, "remediationQuality": 2, "examPrepValue": 4,
+            "notes": "Good explanation distinguishing leading vs. lagging indicators. Distractor D has good remediation."
+          },
+          {
+            "itemID": "CBQ-C3-Q5", "topic": "Balanced scorecard", "type": "match",
+            "explanationUsefulness": 2, "coachingQuality": 1, "remediationQuality": 1, "examPrepValue": 4,
+            "notes": "1-line. Match BSC perspectives to metrics. Good synthesis, zero teaching."
+          },
+          {
+            "itemID": "CBQ-C3-Q6", "topic": "Responsibility accounting", "type": "select",
+            "explanationUsefulness": 3, "coachingQuality": 2, "remediationQuality": 4, "examPrepValue": 4,
+            "notes": "Strong distractor explanations citing responsibility accounting. Each explains why supplier/sales/dividends are outside production's span of control."
+          }
+        ],
+        "case_learning_score_avg": { "explanationUsefulness": 2.3, "coachingQuality": 1.5, "remediationQuality": 2.2, "examPrepValue": 3.8 }
+      }
+    ],
+    "cross_case_analysis": {
+      "overall_learning_score_avg": {
+        "explanationUsefulness": 2.2,
+        "coachingQuality": 1.3,
+        "remediationQuality": 1.9,
+        "examPrepValue": 3.9
+      },
+      "pattern_identified": "BIMODAL QUALITY — Unprocessed cases have a consistent structural pattern: (a) select-type items have strong distractor explanations (scoring 4 on remediation) while correct-answer explanations remain 1–2 lines; (b) numeric/fill/match items have minimal 1-line explanations with zero teaching content; (c) multi-select items typically only explain the WRONG choice, leaving correct choices with empty ExplanationWrong slots. This is the signature of template-based draft authoring before certification-grade explanation expansion.",
+      "high_value_items": [
+        "CBQ-C2-Q3 (transfer pricing — excellent distractors, high CMA relevance)",
+        "CBQ-D2-Q3 (TOC bottleneck — strong distractors, core concept)",
+        "CBQ-E2-Q1 (shared admin IDs — strong distractors, ITGC relevance)",
+        "CBQ-E2-Q6 (log retention — COSO citation, good distractors)",
+        "CBQ-A3-Q3 (subsequent events — ASC 855, excellent remediation)",
+        "CBQ-A3-Q4 (cash equivalents — ASC 305/310/330, excellent remediation)",
+        "CBQ-B3-Q5 (cash budget borrowing — excellent distractors, classic CMA)",
+        "CBQ-C3-Q3 (BSC perspectives — Kaplan & Norton, strong remediation)",
+        "CBQ-C3-Q6 (responsibility accounting — strong distractors)",
+        "CBQ-F2-Q3 (cybersecurity accountability — strong distractors, COSO)"
+      ],
+      "certification_readiness": "NONE of these 42 items are certification-ready. All have state: 'Unprocessed'. To certify: select items need expanded ExplanationCorrect; numeric/fill/match items need full explanations (concept + worked solution + business interpretation + exam trap); multi-select items need ExplanationWrong text for ALL non-correct choices, not just the one wrong choice. Compare against CBQ-E1 and CBQ-F1 (Certified in same file) which have 500–1000+ char explanations with ASC/COSO citations, worked examples, and business context."
+    }
+  },
+
+  "agent_L_blueprint_coverage_audit": {
+    "methodology": "Each item mapped to CMA Part 1 blueprint domain and LOS. Cross-tagged cases (E2, F2) items individually assigned to primary domain. Aggregate coverage assessed against all 15 cases in scored_cases.js.",
+    "item_mapping": [
+      {"itemID": "CBQ-C2-Q1", "domain": "C", "topic": "Residual income", "los": "C.1: Residual income, ROI"},
+      {"itemID": "CBQ-C2-Q2", "domain": "C", "topic": "ROI", "los": "C.1: Return on investment"},
+      {"itemID": "CBQ-C2-Q3", "domain": "C", "topic": "Transfer pricing", "los": "C.2: Minimum transfer price, idle capacity"},
+      {"itemID": "CBQ-C2-Q4", "domain": "C", "topic": "Performance measurement", "los": "C.1: RI vs ROI — goal congruence advantages"},
+      {"itemID": "CBQ-C2-Q5", "domain": "C", "topic": "Transfer pricing", "los": "C.2: Transfer pricing — goal congruence principle"},
+      {"itemID": "CBQ-C2-Q6", "domain": "C", "topic": "Performance management", "los": "C.1–C.2: ROI, RI, transfer price, market price"},
+      {"itemID": "CBQ-D2-Q1", "domain": "D", "topic": "Process costing", "los": "D.1: Equivalent units (weighted-average)"},
+      {"itemID": "CBQ-D2-Q2", "domain": "D", "topic": "Process costing", "los": "D.1: Cost per equivalent unit"},
+      {"itemID": "CBQ-D2-Q3", "domain": "D", "topic": "Theory of constraints", "los": "D.3: Bottleneck identification"},
+      {"itemID": "CBQ-D2-Q4", "domain": "D", "topic": "Lean operations", "los": "D.3: Lean manufacturing — waste reduction, continuous flow"},
+      {"itemID": "CBQ-D2-Q5", "domain": "D", "topic": "Process costing", "los": "D.1: Equivalent units concept"},
+      {"itemID": "CBQ-D2-Q6", "domain": "D", "topic": "Cost management", "los": "D.1–D.3: EU, TOC, lean, process costing — tool matching"},
+      {"itemID": "CBQ-E2-Q1", "domain": "E", "topic": "Access controls", "los": "E.2: IT general controls — privileged access, unique IDs, MFA"},
+      {"itemID": "CBQ-E2-Q2", "domain": "E", "topic": "Access review", "los": "E.2: Access controls — terminated user monitoring"},
+      {"itemID": "CBQ-E2-Q3", "domain": "F", "topic": "IT controls", "los": "F.1: IT governance — ITGCs vs. application controls"},
+      {"itemID": "CBQ-E2-Q4", "domain": "E", "topic": "Change management", "los": "E.2: ITGC — change management, post-implementation review"},
+      {"itemID": "CBQ-E2-Q5", "domain": "E", "topic": "ITGC risk", "los": "E.2: ITGC — accountability, access, change, data transfer risks"},
+      {"itemID": "CBQ-E2-Q6", "domain": "E", "topic": "Monitoring", "los": "E.1: COSO monitoring — log retention, control evidence"},
+      {"itemID": "CBQ-F2-Q1", "domain": "F", "topic": "RPA benefits", "los": "F.3: Automation — RPA, labor savings"},
+      {"itemID": "CBQ-F2-Q2", "domain": "F", "topic": "Exception analytics", "los": "F.2: Data analytics — exception reporting"},
+      {"itemID": "CBQ-F2-Q3", "domain": "E", "topic": "Cybersecurity controls", "los": "E.2: IT controls — accountability, shared credentials risk"},
+      {"itemID": "CBQ-F2-Q4", "domain": "E", "topic": "Automation governance", "los": "E.2: ITGC — bot credentials, change approval, master data"},
+      {"itemID": "CBQ-F2-Q5", "domain": "F", "topic": "Analytics governance", "los": "F.2: Analytics governance — model monitoring"},
+      {"itemID": "CBQ-F2-Q6", "domain": "F", "topic": "Technology controls", "los": "F.1–F.3: Control responses for automation risks"},
+      {"itemID": "CBQ-A3-Q1", "domain": "A", "topic": "Inventory measurement", "los": "A.2: Inventory — lower of cost or NRV"},
+      {"itemID": "CBQ-A3-Q2", "domain": "A", "topic": "Asset retirement obligations", "los": "A.3: Long-lived assets — ARO capitalization"},
+      {"itemID": "CBQ-A3-Q3", "domain": "A", "topic": "Subsequent events", "los": "A.1: ASC 855 — Type I vs Type II subsequent events"},
+      {"itemID": "CBQ-A3-Q4", "domain": "A", "topic": "Cash classification", "los": "A.1: Cash and cash equivalents — ASC 305"},
+      {"itemID": "CBQ-A3-Q5", "domain": "A", "topic": "Statement of cash flows", "los": "A.4: SCF — indirect method, operating activities"},
+      {"itemID": "CBQ-A3-Q6", "domain": "A", "topic": "External reporting", "los": "A.1–A.4: LCM, ARO, cash equivalents, investing cash flows"},
+      {"itemID": "CBQ-B3-Q1", "domain": "B", "topic": "Expected value", "los": "B.1: Forecasting techniques — expected value"},
+      {"itemID": "CBQ-B3-Q2", "domain": "B", "topic": "Forecasting", "los": "B.1: Sales forecasting — expected sales dollars"},
+      {"itemID": "CBQ-B3-Q3", "domain": "B", "topic": "Cash collections", "los": "B.2: Cash budgeting — collections pattern"},
+      {"itemID": "CBQ-B3-Q4", "domain": "B", "topic": "Cash budget", "los": "B.2: Cash budget — total cash available"},
+      {"itemID": "CBQ-B3-Q5", "domain": "B", "topic": "Cash budget", "los": "B.2: Cash budget — borrowing, minimum cash balance"},
+      {"itemID": "CBQ-B3-Q6", "domain": "B", "topic": "Forecast assumptions", "los": "B.1: Forecast assumptions — probabilities, collections %, cash policy"},
+      {"itemID": "CBQ-C3-Q1", "domain": "C", "topic": "Performance variance", "los": "C.1: Variance analysis — operating income variance"},
+      {"itemID": "CBQ-C3-Q2", "domain": "C", "topic": "Nonfinancial measures", "los": "C.3: Nonfinancial measures — on-time delivery"},
+      {"itemID": "CBQ-C3-Q3", "domain": "C", "topic": "Balanced scorecard", "los": "C.3: Balanced scorecard — learning and growth perspective"},
+      {"itemID": "CBQ-C3-Q4", "domain": "C", "topic": "Leading indicators", "los": "C.3: Performance — leading vs. lagging indicators"},
+      {"itemID": "CBQ-C3-Q5", "domain": "C", "topic": "Balanced scorecard", "los": "C.3: BSC — four perspectives, metric mapping"},
+      {"itemID": "CBQ-C3-Q6", "domain": "C", "topic": "Responsibility accounting", "los": "C.1: Responsibility accounting — span of control"}
+    ],
+    "domain_distribution_7cases": {
+      "A_ExternalFinancialReporting": 6,
+      "B_PlanningBudgetingForecasting": 6,
+      "C_PerformanceManagement": 12,
+      "D_CostManagement": 6,
+      "E_InternalControls": 7,
+      "F_TechnologyAnalytics": 5
+    },
+    "overall_blueprint_coverage": {
+      "total_cases_in_file": 15,
+      "all_caseIDs": [
+        {"id": "CBQ-A1", "section": "A", "title": "Revenue Recognition and Financial Statement Classification", "state": "Certified"},
+        {"id": "CBQ-A2", "section": "A", "title": "Lease Accounting, Bond Issuance, and EPS Reporting", "state": "Certified"},
+        {"id": "CBQ-A3", "section": "A", "title": "Inventory, ARO, Subsequent Events, and Cash Classification", "state": "Unprocessed"},
+        {"id": "CBQ-B1", "section": "B", "title": "Master Budget and Cash Flow Planning", "state": "Certified"},
+        {"id": "CBQ-B2", "section": "B", "title": "Cash Budgeting and Forecasting", "state": "Certified"},
+        {"id": "CBQ-B3", "section": "B", "title": "Scenario Forecast, Expected Value, and Working Capital Plan", "state": "Unprocessed"},
+        {"id": "CBQ-C1", "section": "C", "title": "(not evaluated — outside scope)", "state": "unknown"},
+        {"id": "CBQ-C2", "section": "C", "title": "Investment Center Performance and Transfer Pricing", "state": "Unprocessed"},
+        {"id": "CBQ-C3", "section": "C", "title": "Balanced Scorecard and Operating Performance Review", "state": "Unprocessed"},
+        {"id": "CBQ-D1", "section": "D", "title": "ABC, Quality Costs, and Process Improvement", "state": "Certified"},
+        {"id": "CBQ-D2", "section": "D", "title": "Process Costing, Lean Waste, and Bottleneck Analysis", "state": "Unprocessed"},
+        {"id": "CBQ-E1", "section": "E", "title": "Accounts Payable Controls and SOX Evaluation", "state": "Certified"},
+        {"id": "CBQ-E2", "section": "E,F", "title": "IT General Controls, Change Management, and Access Review", "state": "Unprocessed"},
+        {"id": "CBQ-F1", "section": "F", "title": "Data Governance and Warranty Analytics Dashboard", "state": "Certified"},
+        {"id": "CBQ-F2", "section": "E,F", "title": "Cybersecurity, RPA, and Finance Automation Governance", "state": "Unprocessed"}
+      ],
+      "domain_case_count": {
+        "A": {"cases": 3, "items": 18, "certified_cases": 2, "states": "A1(Certified), A2(Certified), A3(Unprocessed)"},
+        "B": {"cases": 3, "items": 18, "certified_cases": 2, "states": "B1(Certified), B2(Certified), B3(Unprocessed)"},
+        "C": {"cases": 3, "items": 18, "certified_cases": 0, "states": "C1(unknown), C2(Unprocessed), C3(Unprocessed)"},
+        "D": {"cases": 2, "items": 12, "certified_cases": 1, "states": "D1(Certified), D2(Unprocessed)"},
+        "E": {"cases": 2, "items": 12, "certified_cases": 1, "states": "E1(Certified), E2(Unprocessed). Note: E2 also tagged F; F2 also tagged E"},
+        "F": {"cases": 2, "items": 12, "certified_cases": 1, "states": "F1(Certified), F2(Unprocessed). Note: F2 also tagged E; E2 also tagged F"}
+      },
+      "gaps": [
+        {
+          "id": "GAP-1",
+          "title": "Domain D underrepresentation",
+          "severity": "Medium",
+          "detail": "Only 2 Domain D cases (12 items) vs. 3 for A/B/C (18 each). No CBQ-D3 exists. Cost Management is ~20% of CMA Part 1 but has only 13% of case items. Missing topics: joint costing, by-product accounting, spoilage/rework, CVP under uncertainty."
+        },
+        {
+          "id": "GAP-2",
+          "title": "Domain E underrepresentation",
+          "severity": "Medium",
+          "detail": "Only 2 pure Domain E cases (E1, E2 = 12 items). Internal Controls is ~15% of CMA Part 1 but case coverage is thin. E2 and F2 are cross-tagged mitigating this somewhat. Missing: COSO ERM framework depth, fraud risk assessment, specific control testing procedures."
+        },
+        {
+          "id": "GAP-3",
+          "title": "Domain F underrepresentation",
+          "severity": "Medium",
+          "detail": "Only 2 pure Domain F cases (F1, F2 = 12 items). Technology & Analytics is growing on the exam. E2 and F2 cross-tagging helps. Missing: blockchain, AI governance, data visualization interpretation, emerging tech ethics."
+        },
+        {
+          "id": "GAP-4",
+          "title": "No Domain E or F '3' cases",
+          "severity": "Low",
+          "detail": "Domains A, B, C each have three cases (ending in 1, 2, 3). Domains D, E, F have only two cases each (ending in 1, 2). The case numbering scheme reveals an incomplete set — the file was likely designed for 18 cases (3 per domain) but only 15 were authored."
+        },
+        {
+          "id": "GAP-5",
+          "title": "Domain C certification gap — CRITICAL",
+          "severity": "High",
+          "detail": "ZERO Domain C cases are Certified in scored_cases.js. C1 state is unknown (not read), C2 and C3 are both Unprocessed. Performance Management — a major CMA Part 1 section (~20% weighting) — has 0 certified case items available for learner delivery. This is the highest-priority gap in the entire case bank."
+        },
+        {
+          "id": "GAP-6",
+          "title": "Cross-domain items need clearer tagging",
+          "severity": "Low",
+          "detail": "E2 and F2 are dual-tagged [E,F]. Items within them primarily map to one domain but the SectionTags don't distinguish. Risk of double-counting in coverage reports."
+        }
+      ],
+      "well_covered_domains": [
+        {
+          "domain": "A — External Financial Reporting Decisions",
+          "assessment": "Strong coverage. 3 cases (18 items), 2 Certified. Topics span revenue recognition, leases, bonds, EPS, inventory LCM, ARO, subsequent events, cash equivalents, SCF indirect method. Good breadth across A.1–A.4 LOS areas."
+        },
+        {
+          "domain": "B — Planning, Budgeting, and Forecasting",
+          "assessment": "Strong coverage. 3 cases (18 items), 2 Certified. Topics span master budget, cash budget, collections, expected value, scenario forecasting, borrowing requirements. Good breadth across B.1–B.2 LOS areas."
+        },
+        {
+          "domain": "C — Performance Management",
+          "assessment": "Good breadth, ZERO certification. 3 cases (18 items), 0 Certified. Topics span ROI/RI, transfer pricing, balanced scorecard, leading/lagging indicators, responsibility accounting. Content quality is adequate but none are learner-eligible. HIGHEST PRIORITY FOR CERTIFICATION."
+        }
+      ]
+    }
+  },
+
+  "combined_findings": {
+    "F1": "BIMODAL EXPLANATION QUALITY — Unprocessed cases consistently have excellent distractor explanations for select-type items (averaging 4/5 on remediation quality) but 1–2 line explanations for everything else. The template is: select items get full distractor text at authoring time, but correct-answer explanations and numeric/fill/match items get only formula substitution. This is the draft-authoring signature, not a defect — these cases were designed for certification-grade expansion.",
+    "F2": "CERTIFICATION URGENCY — 28 of the 42 evaluated items (67%) have select or multi items with strong exam-prep value (averaging 4.0+/5.0). With certification-grade explanation expansion (following the CBQ-E1/CBQ-F1 template), these 42 items could reach learner-pool eligibility quickly. Domain C is the critical priority — zero Certified case items exist for Performance Management.",
+    "F3": "DOMAIN D/E/F UNDERREPRESENTATION — scored_cases.js has only 2 cases each for Domains D, E, F vs. 3 each for A, B, C. Three cases (CBQ-D3, CBQ-E3, CBQ-F3) are missing from the expected 18-case design. scored_cases3/4/5 files (in other packs) may provide supplementary coverage. Cross-file blueprint audit recommended.",
+    "F4": "CROSS-TAGGING VALUE — E2 and F2 carry dual SectionTags [E,F], providing natural IT audit crossover that mirrors the real CMA exam's increasing integration of technology and controls. This is good exam design but requires careful item-level domain attribution."
+  },
+
+  "recommended_actions": [
+    "PRIORITY 1: Certify CBQ-C2 and CBQ-C3 (12 items, Domain C) — zero Certified C-domain case items exist. Expand all explanations to match CBQ-E1/F1 standard: 500+ char ExplanationCorrect with ASC/COSO citation + worked solution + business interpretation + exam trap for every item.",
+    "PRIORITY 2: Certify CBQ-A3 (6 items, Domain A) — highest exam-prep value scores in batch (4.3 avg). A3 fills LCM/ARO/subsequent events coverage gaps not in A1/A2.",
+    "PRIORITY 3: Certify CBQ-B3 (6 items, Domain B) — expected value/scenario forecasting not covered in B1/B2. Strong select items already.",
+    "PRIORITY 4: Certify CBQ-D2 (6 items, Domain D) — process costing/bottleneck/lean coverage for D-domain. High exam relevance.",
+    "PRIORITY 5: Certify CBQ-E2 and CBQ-F2 (12 items, Domains E/F) — ITGC/cybersecurity/RPA coverage is unique and high-value.",
+    "LONG-TERM: Author CBQ-D3, CBQ-E3, CBQ-F3 to balance case distribution to 3 per domain for all 6 domains."
+  ],
+
+  "agent_signatures": {
+    "Agent_K": "Learning Value Assessment — complete. 42 items scored across 4 dimensions. Pattern: bimodal Unprocessed quality (select explanations good, rest minimal).",
+    "Agent_L": "Blueprint Coverage Closure Audit — complete. 42 items mapped to LOS. 6 gaps identified. Domain C certification gap flagged as HIGH severity. D/E/F underrepresented at 2 cases each vs. 3 for A/B/C."
+  },
+
+  "revision_history": [
+    {
+      "date": "2026-07-26",
+      "version": "1.0",
+      "author": "Agent K+L (Session 537 Combined)",
+      "summary": "Initial learning value and blueprint coverage assessment for 7 cases / 42 items in scored_cases.js"
+    }
+  ]
+}

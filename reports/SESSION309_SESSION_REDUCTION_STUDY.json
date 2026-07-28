@@ -1,0 +1,56 @@
+{
+  "session": "309",
+  "agent": "S",
+  "title": "Session Reduction Study",
+  "generated": "2026-07-26",
+  "s308Baseline": 30,
+
+  "reductionLevers": {
+    "confirmed": [
+      { "lever": "DL-008 removal", "sessionsSaved": 3, "confidence": "CONFIRMED", "status": "IMMEDIATE" },
+      { "lever": "Modernization deferral", "sessionsSaved": 10, "confidence": "HIGH", "status": "RECOMMENDED — post-cert program" }
+    ],
+    "highConfidence": [
+      { "lever": "E/F parallelization (different files)", "sessionsSaved": 4, "confidence": "HIGH", "status": "RECOMMENDED" },
+      { "lever": "Governance batching", "sessionsSaved": 2, "confidence": "HIGH", "status": "RECOMMENDED" }
+    ],
+    "mediumConfidence": [
+      { "lever": "Replace-vs-repair clone acceleration", "sessionsSaved": 2, "confidence": "MEDIUM", "status": "OPTIONAL" },
+      { "lever": "EW factory model throughput boost", "sessionsSaved": 2, "confidence": "MEDIUM", "status": "OPTIONAL" }
+    ],
+    "notRecommended": [
+      { "lever": "Skip EW authoring entirely", "sessionsSaved": 14, "confidence": "LOW — quality impact too severe", "status": "REJECTED" }
+    ]
+  },
+
+  "scenarios": {
+    "optimistic": {
+      "sessions": 14,
+      "description": "All levers confirmed + all high-confidence applied. 3-track parallel (E+F+EW). Replace-vs-repair + factory model boost.",
+      "achievable": "Plausible with ideal execution, no rework, sustained 15 items/session"
+    },
+    "expected": {
+      "sessions": 17,
+      "description": "DL-008 removed, modernization deferred, E/F partially parallelized, governance batched.",
+      "achievable": "Realistic target. Assumes standard execution cadence."
+    },
+    "conservative": {
+      "sessions": 22,
+      "description": "DL-008 removed, modernization deferred. No parallelization. Sequential E then F.",
+      "achievable": "Safe floor. Can be achieved with simple sequential execution."
+    }
+  },
+
+  "recommended": "Plan for EXPECTED (17 sessions). Reserve capacity for CONSERVATIVE (22 sessions). Celebrate if OPTIMISTIC (14 sessions).",
+
+  "comparisonToS308": {
+    "s308Optimistic": 24,
+    "s308Expected": 30,
+    "s308Conservative": 38,
+    "s309Optimistic": 14,
+    "s309Expected": 17,
+    "s309Conservative": 22,
+    "difference_expected": "13 sessions saved (43% reduction from S308 baseline)",
+    "primaryDrivers": "DL-008 removal (3), modernization deferral (10), E/F parallelization (4), governance batching (2) offset by -6 from concurrent overhead"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "generatedAt": "2026-07-25T23:00:00.000Z",
+  "session": "S118",
+  "type": "Pre-Flight Concurrency and May State Audit",
+
+  "preflightTests": {
+    "totalTests": 248,
+    "totalPass": 248,
+    "totalFail": 0,
+    "breakdown": {
+      "test_readiness.js": { "tests": 37, "pass": 37, "fail": 0 },
+      "test_calibration.js": { "tests": 18, "pass": 18, "fail": 0 },
+      "test_tutoring_safety.js": { "tests": 74, "pass": 74, "fail": 0 },
+      "test_may_stagec.js": { "tests": 119, "pass": 119, "fail": 0 }
+    }
+  },
+
+  "thresholdsConfirmed": {
+    "stabilityHigh": 75,
+    "accuracyGood": 75,
+    "accuracyHigh": 80,
+    "accuracyLow": 60,
+    "stabilityGood": 60,
+    "stabilityLow": 50,
+    "recentPctHigh": 80,
+    "recentPctGood": 70,
+    "minAttemptsReady": 6,
+    "minAttemptsApproaching": 4,
+    "minAttemptsTopic": 3,
+    "caseBurdenDegradeMisses": 4,
+    "modelVersion": "S111-1.0"
+  },
+
+  "mayStateCheck": {
+    "modelVersion": "S111-1.0",
+    "exportMayPilotDataExists": true,
+    "_guardedSpeakWired": true,
+    "_guardedRecommendWired": true,
+    "evidenceValidatorsCount": 7,
+    "evidenceValidatorNames": [
+      "_hasImprovingEvidence",
+      "_hasPersistentWeakEvidence",
+      "_hasDecliningEvidence",
+      "_hasUnstableEvidence",
+      "_hasHintDependentEvidence",
+      "_hasDifficultySensitiveEvidence",
+      "_hasConfidenceEvidence"
+    ],
+    "safetyVocabInitialized": true,
+    "bannedPhrases": ["exam ready", "exam-ready", "ready for the exam", "guaranteed to pass", "will pass", "definitely pass", "sure to pass"],
+    "trace": "S111 guarded-speak + S112 recommendation gates + S113 evidence validators + S115 student-roll and telemetry harness + S117 privacy masking, seeded history, exam onboarding, and positive-trend messaging ALL INTACT"
+  },
+
+  "syntheticStudentState": {
+    "totalStudents": 8,
+    "allSeeded": true,
+    "seededHistoryStatus": {
+      "synth-avery": { "sessions": 2, "historySynthetic": true },
+      "synth-jordan": { "sessions": 8, "historySynthetic": true },
+      "synth-morgan": { "sessions": 6, "historySynthetic": true },
+      "synth-riley": { "sessions": 5, "historySynthetic": true },
+      "synth-taylor": { "sessions": 7, "historySynthetic": true },
+      "synth-casey": { "sessions": 4, "historySynthetic": true },
+      "synth-quinn": { "sessions": 6, "historySynthetic": true },
+      "synth-parker": { "sessions": 10, "historySynthetic": true }
+    }
+  },
+
+  "localStorageKeys": [
+    "cmaMayLearnerState",
+    "cmaMayStudentRoll",
+    "cmaMaySelectedLearnerId",
+    "cmaMayPilotUsageLog",
+    "cmaMaySafetyLog",
+    "cmaMayGateLog",
+    "cmaMaySessionTelemetry"
+  ],
+
+  "concurrencyGuard": {
+    "packAHash": "3A092453E32E7C1D4DAAB6B85D1D9E4E",
+    "packBHash": "2DAB932DA55A11B50BE1F2AFD29ED7C9",
+    "packCHash": "ADC846FB01F11211850DE2741B23CD88",
+    "packDHash": "22CB6C9FB347B0D0F6E9AF295ACD6894",
+    "packEHash": "934B6FE817C2C8AA2F63E0C7A6F2E88A",
+    "scoredCases1Hash": "B8277120A65D7DD820D642D5267A17A8",
+    "scoredCases2Hash": "963595E90996F4710410D8A0E3687778",
+    "scoredCases3Hash": "45A2B090136804B8074C9F781733327A",
+    "scoredCases4Hash": "B1424FA18842234276A7DA862D5685F3",
+    "scoredCases5Hash": "6868ED05D2FDDE67E9EEEA1AB5E7031F",
+    "certifiedCount": 2181,
+    "packsVerified": 5,
+    "caseFilesVerified": 5,
+    "no500SeriesDiff": true,
+    "no700SeriesDiff": true,
+    "noPackChanges": true,
+    "noCaseBankChanges": true,
+    "noScoringLogicChanges": true,
+    "noCertificationStateChanges": true,
+    "attestation": "PASS — all pack/case/scoring files confirmed unchanged"
+  },
+
+  "uiSurfaceReview": {
+    "greetingVisibleAndInviting": true,
+    "greetingText": "Hi, I'm May — your CMA Part 1 practice coach.",
+    "twoPrimaryActionsClear": true,
+    "rollButtonText": "Yes — choose my name from the roll",
+    "enrollButtonText": "No — enroll me as a new student",
+    "maskedRollFunction": "maskStudentName() — A***y P***t pattern",
+    "fullNamesBeforeSelection": false,
+    "buttonsHaveAccessibleLabels": "PASS — descriptive button text, no aria-label gaps noted for polish",
+    "keyboardNavigation": "NOT TESTED IN SIM — buttons use onclick handlers, tabIndex not explicitly set",
+    "focusOrder": "LOGICAL — greeting → student roll → chat",
+    "welcomeBackOverviewReadable": true,
+    "positiveTrendsVisuallySeparated": true,
+    "examDatePromptClear": true,
+    "examDatePromptText": "Do you already have a CMA exam scheduled?",
+    "noPredictionLanguage": true,
+    "smallScreenLayout": "NOT TESTED IN SIM — styles.css has responsive media queries",
+    "accessibilityRecommendations": [
+      "Consider adding tabIndex=0 and onkeydown handlers for keyboard navigation on student rows",
+      "Add aria-label to onboarding buttons for screen readers",
+      "Verify color contrast ratios on welcome-back overview badges"
+    ]
+  },
+
+  "exportPayloadStructure": {
+    "fields": [
+      "generatedAt", "environment", "syntheticData", "selectedLearnerId",
+      "studentRoll", "pilotUsageLog", "safetyLog", "gateLog",
+      "sessionTelemetry", "calibrationExport", "thresholdSnapshot",
+      "modelVersion", "learnerState"
+    ],
+    "allFieldsPresent": true,
+    "malformedPayloads": 0
+  }
+}

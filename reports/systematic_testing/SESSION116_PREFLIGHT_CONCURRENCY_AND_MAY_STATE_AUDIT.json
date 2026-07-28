@@ -1,0 +1,92 @@
+{
+  "session": "S116",
+  "type": "PreflightConcurrencyAndMayStateAudit",
+  "timestamp": "2026-07-25T20:16:00.000Z",
+  "preflight": {
+    "testResults": {
+      "readiness": "37/37 PASS",
+      "calibration": "18/18 PASS",
+      "tutoringSafety": "74/74 PASS",
+      "stageC": "89/89 PASS",
+      "total": "218/218 PASS"
+    },
+    "modelVersion": "S111-1.0",
+    "thresholds": {
+      "accuracyHigh": 80,
+      "accuracyGood": 75,
+      "accuracyLow": 60,
+      "stabilityHigh": 75,
+      "stabilityGood": 60,
+      "stabilityLow": 50,
+      "recentPctHigh": 80,
+      "recentPctGood": 70,
+      "minAttemptsReady": 6,
+      "minAttemptsApproaching": 4,
+      "minAttemptsTopic": 3,
+      "caseBurdenDegradeMisses": 4
+    },
+    "allThresholdsUnchanged": true,
+    "stabilityHighConfirmed": 75,
+    "accuracyGoodConfirmed": 75
+  },
+  "concurrencyGuard": {
+    "packAHash": "0FAD86A408BCC1FA6931858A39A26F02",
+    "packBHash": "2DAB932DA55A11B50BE1F2AFD29ED7C9",
+    "packCHash": "D758BDF656CF56CAAB2689A16D771C16",
+    "packDHash": "9F9DBF7A2889762A28133D005E522FA5",
+    "packEHash": "3B06740FA8DAB814E9AE9C219A60B5D8",
+    "scoredCasesHash": "B8277120A65D7DD820D642D5267A17A8",
+    "scoredCases2Hash": "CD8C4E53BD85FFBC095CF72426DB1617",
+    "scoredCases3Hash": "ACC1C22E4AC80BF71E281B6A604FAF1C",
+    "scoredCases4Hash": "B1424FA18842234276A7DA862D5685F3",
+    "scoredCases5Hash": "6868ED05D2FDDE67E9EEEA1AB5E7031F",
+    "packFilesInScope": false,
+    "caseFilesInScope": false,
+    "scoringFilesInScope": false,
+    "certificationFilesInScope": false,
+    "no500SeriesChanges": true,
+    "no700SeriesChanges": true,
+    "workingDiffClean": true
+  },
+  "mayStateVerification": {
+    "exportMayPilotDataExists": true,
+    "exportMayPilotDataLocation": "may-core.js:3372",
+    "clearPilotDataExists": true,
+    "clearPilotDataLocation": "may-core.js:3407",
+    "syntheticStudentRollCount": 8,
+    "allSyntheticMarked": true,
+    "allPreProductionMarked": true,
+    "greetingStateMachineIntact": true,
+    "sessionTelemetryWired": true,
+    "logPersistenceWired": true,
+    "s111GuardedSpeakIntact": true,
+    "s112RecommendationGatesIntact": true,
+    "s113EvidenceValidatorsIntact": true,
+    "s114PilotOnlyPosturePreserved": true,
+    "s115StudentRollAndTelemetryIntact": true,
+    "localStorageKeysPresent": [
+      "cmaMayStudentRoll",
+      "cmaMaySelectedLearnerId",
+      "cmaMayPilotUsageLog",
+      "cmaMaySafetyLog",
+      "cmaMayGateLog",
+      "cmaMaySessionTelemetry"
+    ]
+  },
+  "stopConditionsChecked": {
+    "preflightTestsPass": true,
+    "no500SeriesDiffs": true,
+    "no700SeriesDiffs": true,
+    "syntheticStudentRollLoads": true,
+    "exportMayPilotDataFound": true,
+    "clearPilotDataFound": true,
+    "cmaMayPilotWorksInTestHarness": true,
+    "noRealLearnerData": true,
+    "noExternalTelemetryEndpoint": true,
+    "noThresholdChanges": true,
+    "noPackFileDiffs": true,
+    "noCaseFileDiffs": true,
+    "noScoringFileDiffs": true,
+    "noCertificationStateChanges": true
+  }
+}

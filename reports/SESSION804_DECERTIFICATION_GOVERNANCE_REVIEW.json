@@ -1,0 +1,60 @@
+{
+  "session": "804",
+  "agent": "L",
+  "role": "De-Certification Governance Board",
+  "review_date": "2026-07-26",
+  "subject": "Proposed de-certification of ~37 Certified Pack A Section E clone items (Certified \u2192 Archived)",
+
+  "governance_analysis": {
+    "framework_references": [
+      "QUESTION_METADATA_STANDARD.md \u00a79.2 — State Transition Rules",
+      "AGENTS.md \u00a72 — Read-Only by Default (question_state)",
+      "governance-guard.js Rule 1 — question_state \u2192 REVISION_HISTORY.md pairing",
+      "governance-guard.js Rule 5 — \u226430 question objects per change-set",
+      "BACKUP_PROTOCOL.md — mandatory backup before pack-file edit",
+      "CAQS_v1.0.md \u00a71.7.1 — learner-pool eligibility gated by question_state==\"Certified\""
+    ],
+
+    "transition_path": "Certified \u2192 Archived",
+    "direct_certified_to_archived_permitted": true,
+    "required_intermediate_state": "none",
+
+    "legal_basis": "\u00a79.2 state transition rules list 'Any State \u2014\u2192 Archived: consolidation or removal from active pool' as an explicit, permitted transition. 'Any State' includes 'Certified' — no exclusion or qualifier exists for the Certified state. The separate rule 'Certified \u2192 In Audit: only via explicit re-verification request' applies ONLY when the destination is In Audit; it does not restrict transitions to Archived.",
+
+    "rule_3_safeguard": "\u00a79.2 Rule 3: 'Archival preserves content. Archived questions retain full question text and metadata. Only the state field changes. Rollback logs are maintained in reports/.' This means de-certification is reversible — items can be re-certified by changing question_state back to 'Certified' (via the In Audit pipeline).",
+
+    "distinction_from_unprocessed_to_archived": "S803 handled Unprocessed \u2192 Archived (non-learner-pool items). S804 handles Certified \u2192 Archived (items currently in the learner delivery pool). The governance difference: Unprocessed items have no learner-pool impact; Certified items are immediately removed from the learner pool upon archival. This is the intended consequence and the purpose of the de-certification."
+  },
+
+  "governance_requirements": {
+    "user_authorization_required": true,
+    "user_authorization_basis": "AGENTS.md \u00a72: 'No modification of question_state values' without explicit authorization. De-certification is a question_state change.",
+    "revision_history_required": true,
+    "revision_history_basis": "governance-guard.js Rule 1 (WARN): question_state changes must pair with REVISION_HISTORY.md updates.",
+    "batch_cap": 30,
+    "effective_batch_cap": 28,
+    "batch_cap_basis": "governance-guard.js Rule 5 (BLOCK): \u226430 question objects per change-set without BLOCK-AUTHORIZED marker. Practical headroom of \u226428 recommended per DL-026 remediation precedent.",
+    "seed_preservation_required": true,
+    "seed_preservation_basis": "DL-012 remediation proposal: 28 seeds retained as active (Unprocessed or Certified), 112 clones Archived. Same principle applies here — unique seed items representing each topic must remain in the active pool to preserve Domain E coverage.",
+    "backup_required": true,
+    "backup_basis": "BACKUP_PROTOCOL.md: mandatory before every pack-file edit."
+  },
+
+  "batch_plan": {
+    "total_items": "~37 (exact count TBD — requires precise QID identification before execution)",
+    "batches": 2,
+    "batch_breakdown": ["Batch 1: 28 items (max per Rule 5)", "Batch 2: ~9 items (residual)"],
+    "pre_execution_checks": [
+      "Verify exact QID list of clone items vs. seed items",
+      "Confirm which items are the unique seeds that must remain Certified",
+      "Verify no item being de-certified is the sole Domain E representative for its LOS",
+      "Confirm backup exists before each batch write"
+    ]
+  },
+
+  "verdict": "PROCEED — REQUIRES USER AUTHORIZATION",
+  "verdict_rationale": "The transition Certified \u2192 Archived is directly permitted by \u00a79.2 ('Any State \u2192 Archived'). No intermediate state is required. All governance safeguards (archival preserves content, rollback possible, batch cap, backup) apply. The only blocker is user authorization per AGENTS.md \u00a72.",
+
+  "user_authorization_prompt": "De-certify ~37 Certified Section E clone items (Certified \u2192 Archived). Seeds retained as Certified. Domain E coverage preserved through unique seed items. No answer-key changes. Only question_state field modified. Content fully preserved per \u00a79.2 Rule 3. Rollback: set question_state back to \"Certified\"."
+
+}

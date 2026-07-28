@@ -1,0 +1,637 @@
+{
+  "session": "S833",
+  "agent": "C",
+  "phase": "Discovery",
+  "task": "Expansion backlog synthesis — master plan for content growth",
+  "timestamp": "2026-07-27T23:00:00Z",
+  "input_sources": {
+    "agent_a_tiered_backlog": "scripts/output/S833_agent_a_tiered_backlog.json",
+    "agent_b_creation_targets": "scripts/output/S833_agent_b_creation_targets.json",
+    "s832_gap_register": "knowledge/DEFECT_LIBRARY.md §DL-031, §DL-016, §DL-021, §DL-026, §DL-032, §DL-035",
+    "baselines": "knowledge/CURRENT_BASELINES.md",
+    "certified_pool_state": "SESSION_STATUS_2026-07-24.md §certified-count (2,031)"
+  },
+
+  "expansion_backlog_master": {
+    "total_items_to_process": "~3,300 operations (recalibrations + new content + quality fixes + certifications + metadata updates)",
+    "total_estimated_hours": "~300-400 hours (nominal 322 hours estimated across 4 sprints)",
+    "total_calendar_span": "12 weeks (Sprint 1: 1 wk + Sprint 2: 2 wks + Sprint 3: 3 wks + Sprint 4: 6 wks)",
+    "sequencing_principle": "Fix structure → Recalibrate metadata → Fill quality gaps → Create new content → Certify",
+    "sequencing_rationale": [
+      "Structural fixes (DL-016, DL-021) must precede recalibration — recalibrating broken items wastes effort",
+      "Recalibration (PH1, DL-031, VDiff bridge) must precede content creation — you cannot author to target distributions if the baseline distribution is wrong",
+      "Quality gaps (DL-026, DL-035) are certification-blockers — must be resolved before new content enters the certification pipeline",
+      "Content creation (VDiff, Evaluate, Analyze, topic fills) can begin after recalibration establishes the target distribution",
+      "Certification is the final gate — all structural, quality, and calibration checks must pass before Certification"
+    ],
+    "breakdown_by_operation_type": {
+      "RECALIBRATE": { "count": "~1,800 items", "hours": "~50", "description": "Difficulty/Bloom's recalibration across MCQ banks and case banks" },
+      "AUTHOR": { "count": "~830 fields/items", "hours": "~212", "description": "New distractor EW fields, new VDiff/Evaluate/Analyze items, topic gap fills" },
+      "STRUCTURAL": { "count": "~350 fixes", "hours": "~20", "description": "DL-016 metadata alignment, DL-021 absent-field remediation, DL-026 empty-slot fills" },
+      "CERTIFY": { "count": "~300 items", "hours": "~40", "description": "Section F, case study, and new-content certification passes" }
+    },
+    "pack_section_touch_matrix": {
+      "pack_a": ["Section A (DL-016)", "Section B (DL-031)", "Section C (DL-031)", "Section D (DL-031)", "Section E (DL-016, PH1)", "Section F (PH1)"],
+      "pack_b": ["Section A (PH1, DL-031)", "Section B (PH1, DL-031)", "Section C (PH1, DL-031)", "Section D (PH1, DL-031)", "Section E (PH1)", "Section F (certification)"],
+      "pack_c": ["Section A (PH1, certification)", "Section B (PH1, certification)", "Section C (DL-031)", "Section D (DL-031)", "Section E (new content)", "Section F (new content, DL-035)"],
+      "pack_d": ["Section A (PH1)", "Section B (PH1)", "Section C (DL-031)", "Section D (DL-031)", "Section E (new content)", "Section F (new content, DL-035)"],
+      "pack_e": ["Section A (PH1)", "Section B (PH1)", "Section C (DL-021, PH1)", "Section D (PH1)", "Section E (new content)", "Section F (new content)"],
+      "scored_cases2_5": ["Cases B2-E5 (DL-032 difficulty calibration)", "Cases A1-F5 (Sprint 4 certification)"]
+    }
+  },
+
+  "execution_roadmap": {
+    "sprint_1_immediate_week1": {
+      "duration": "1 week (calendar days 1–7)",
+      "theme": "Structural repair + foundational recalibration",
+      "preconditions": [
+        "S831 PH1 QID list finalized and approved",
+        "DL-021 target item list confirmed (100 items, 285 fields)",
+        "DL-016 affected items confirmed (58 items in Pack A Section E)",
+        "Backup protocol executed for pack_a_corrected.js, pack_e_corrected.js",
+        "Governance guard Rule 5 acknowledged — batch cap ≤30 items per write"
+      ],
+      "postconditions": [
+        "Pack E Section C: 0 DL-021 remaining (all 285 distractor EW fields authored)",
+        "Pack A Section E: 0 DL-016 metadata-content mismatch (58 items aligned)",
+        "Moderate→Difficult recalibration: 423 items across 10 pack-sections, Difficult band ≥20% of pool",
+        "REVISION_HISTORY.md updated for all 3 workstreams",
+        "Zero regressions on governance guard test suite (12/12 PASS)"
+      ],
+      "items": [
+        {
+          "id": "S831-PH1",
+          "name": "Moderate→Difficult recalibration (423 items)",
+          "type": "RECALIBRATE",
+          "source": "Agent A — Tier 1, Item 1",
+          "hours": 4,
+          "pack_sections": [
+            {"pack": "A", "sections": ["B", "C", "D", "E", "F"], "count": 100},
+            {"pack": "B", "sections": ["A", "B", "C", "D", "E"], "count": 125},
+            {"pack": "C", "sections": ["A", "B"], "count": 50},
+            {"pack": "D", "sections": ["A", "B"], "count": 50},
+            {"pack": "E", "sections": ["A", "B", "C", "D"], "count": 98}
+          ],
+          "dependency": "None — no upstream dependencies",
+          "description": "Batch-recalibrate items with DifficultyScore: 3 (Moderate) that are Bloom's: Apply or higher and have multi-step calculations or judgment requirements. Change Difficulty: 'Moderate' → 'Difficult', DifficultyScore: 3 → 4.",
+          "methodology": "Script-assisted batch update with 10% random sample manual audit",
+          "governance_note": "Per-item REVISION_HISTORY entry required; batch cap ≤30 items per write (15 batches for 423 items)"
+        },
+        {
+          "id": "S833-DL021",
+          "name": "DL-021 Pack E Section C distractor EW authoring (285 fields)",
+          "type": "AUTHOR",
+          "source": "Agent A — Tier 1, Item 2 / DEFECT_LIBRARY.md §DL-021",
+          "hours": 8,
+          "pack_sections": [
+            {"pack": "E", "sections": ["C"], "count": 100}
+          ],
+          "dependency": "None — independent of recalibration (different file, different operation type)",
+          "description": "Author 285 choice-specific distractor ExplanationWrong fields for all 100 Pack E Section C items. Each item has 3 absent EW fields (non-CorrectChoice slots). Fields must be: ≥50 chars, choice-specific, identify misconception, contrast with correct approach, reference governing accounting principle for conceptual items.",
+          "methodology": "Batch authoring (10 batches of ~10 items, 2–3 fields per item). Per-item correctness verification before batch commit.",
+          "governance_note": "All 100 items are currently 'Unprocessed'. Post-remediation, items remain Unprocessed (certification is a separate pass). EW[CC] must remain empty (DL-008 compliance).",
+          "quality_gate": "Post-authoring scan: 0 absent EW fields in Pack E Section C (all 4 EW slots present, CC slot empty, 3 distractor slots non-empty)"
+        },
+        {
+          "id": "S833-DL016",
+          "name": "DL-016 metadata structural fix (58 items)",
+          "type": "STRUCTURAL",
+          "source": "Agent A — Tier 1, Item 3 / DEFECT_LIBRARY.md §DL-016",
+          "hours": 3,
+          "pack_sections": [
+            {"pack": "A", "sections": ["E"], "count": 58}
+          ],
+          "dependency": "None — independent of recalibration and DL-021 (different file)",
+          "description": "Align metadata-block ChoiceA–D text with content-block Choices.A–D text for 58 Pack A Section E items. Current state: metadata choices are shifted by +1 position due to rotation-group template residue. Learner-facing content is correct; metadata is stale. Fix: copy content-block Choices into metadata-block ChoiceA–D.",
+          "methodology": "Per-item field comparison (metadata ChoiceA–D vs. content Choices.A–D). For mismatched items, overwrite metadata-block values with content-block values. Batch: 2 batches of ~29 items.",
+          "governance_note": "ExplanationWrong fields in metadata block will also shift alignment — must be verified post-fix. Any EW field that describes a different choice after alignment must be corrected (potential DL-010 spillover).",
+          "quality_gate": "Post-fix scan: 0 metadata-content Choice mismatches in Pack A Section E"
+        }
+      ],
+      "total_hours": 15,
+      "hours_breakdown": {"S831-PH1": 4, "S833-DL021": 8, "S833-DL016": 3},
+      "deliverables": [
+        "Pack E Section C fully remediated — 100 items with complete distractor EW coverage",
+        "58 Pack A Section E items structurally aligned — metadata-content consistency restored",
+        "Difficult band at ~20% of certified pool (up from ~10%)",
+        "Governance guard 12/12 PASS on all modified files",
+        "REVISION_HISTORY.md entries for all operations"
+      ]
+    },
+
+    "sprint_2_near_term_week2_3": {
+      "duration": "2 weeks (calendar days 8–21)",
+      "theme": "Difficulty recalibration sweep + Section F certification + content pilots",
+      "preconditions": [
+        "Sprint 1 complete with all quality gates passed",
+        "DL-031 QID classification complete (800–1,000 items identified by definition-match pattern)",
+        "Section F certification QID list confirmed (124 items across Packs B, C, D, E — Section F sections)",
+        "VDiff emergency bridge QID list confirmed (22 items from S832 gap register)",
+        "Topic gap authoring briefs drafted (ASC 842, ASC 740, data analytics depth — 60 items)"
+      ],
+      "postconditions": [
+        "DL-031 items classified and recalibrated: Moderate→Easy for definition-match items",
+        "Section F: 100% certified across all 5 packs with relevant Section F content",
+        "VDiff bridge: 22 Very Difficult items in learner pool",
+        "ASC 842 Leases, ASC 740 Income Taxes, and advanced analytics items authored (60 items)",
+        "Easy band at ~15% of pool (up from estimated <5%)"
+      ],
+      "items": [
+        {
+          "id": "S831-DL031",
+          "name": "DL-031 coordinated difficulty recalibration sweep (800–1,000 items)",
+          "type": "RECALIBRATE",
+          "source": "Agent A — Tier 1, Item 4 / DEFECT_LIBRARY.md §DL-031",
+          "hours": 6,
+          "pack_sections": [
+            {"pack": "A", "sections": ["A", "B", "C", "D", "E", "F"], "count": "~160"},
+            {"pack": "B", "sections": ["A", "B", "C", "D", "E", "F"], "count": "~250"},
+            {"pack": "C", "sections": ["A", "B", "C", "D", "E", "F"], "count": "~200"},
+            {"pack": "D", "sections": ["A", "B", "C", "D", "E", "F"], "count": "~200"},
+            {"pack": "E", "sections": ["A", "B", "C", "D", "E", "F"], "count": "~190"}
+          ],
+          "dependency": "S831-PH1 (Sprint 1) — recalibration methodology validated in Sprint 1; DL-031 is the same operation type at larger scale",
+          "description": "Systematic recalibration of items where the stem contains a textbook definition and the correct answer is the defined term. These items test Bloom's Remember/Understand but are labeled Moderate (3). Change: Difficulty: 'Moderate' → 'Easy', DifficultyScore: 3 → 1. Each item must pass the definition-match check: lexical overlap ≥50% between stem keywords and correct-answer choice text, AND distractors do not require Apply-level discernment.",
+          "methodology": "Phase 1 — Automated scan: regex-based definition-match detection across all 5 packs. Phase 2 — Manual verification: random sample audit (10%) to confirm no false positives. Phase 3 — Batch recalibration: ≤30 items per write, per-pack parallelization.",
+          "governance_note": "Critical path item — DL-031 resolution re-sizes all downstream difficulty distribution targets. The current pool has <5% Easy items; target is 15%. Without DL-031, content authoring targets are wrong (authoring to incorrect baseline).",
+          "quality_gate": "Post-recalibration: Easy band ~15% (target: 15% per CAQS §6.1). Random sample audit: ≥95% accuracy on recalibrated items."
+        },
+        {
+          "id": "S833-SECF",
+          "name": "Section F certification (124 items)",
+          "type": "CERTIFY",
+          "source": "Agent A — Tier 2, Item 1 / Agent B content targets",
+          "hours": 6,
+          "pack_sections": [
+            {"pack": "B", "sections": ["F"], "count": 50},
+            {"pack": "C", "sections": ["F"], "count": 74},
+            {"pack": "D", "sections": ["F"], "count": 0},
+            {"pack": "E", "sections": ["F"], "count": 0}
+          ],
+          "dependency": "DL-035 remediation (39 Pack C Section F items with empty EW slots) must precede certification. Pack B Section F is structurally clean — certify immediately.",
+          "description": "Complete certification pass for all Section F (Technology and Analytics) items. Verify six-dimension CAQS compliance: correctness, precision, difficulty calibration, distractor engineering, blueprint alignment, CMA Part 1 relevance. All items transition from Unprocessed → In Audit → Certified.",
+          "methodology": "Pack B Section F (50 items) — direct certification (structurally clean). Pack C Section F (74 items) — resolve DL-035 first (author ~117 empty distractor EW slots), then certify. Per-item verification at HIGH confidence across all six dimensions.",
+          "governance_note": "DL-035 items must not be certified with empty non-CC EW slots (governance guard Rule 6 BLOCK). Certification = question_state: 'Certified' — triggers learner-pool inclusion. REVISION_HISTORY entry per certification wave."
+        },
+        {
+          "id": "S833-VDIFF1",
+          "name": "VDiff emergency bridge (22 items)",
+          "type": "RECALIBRATE",
+          "source": "Agent A — Tier 2, Item 2 / S832 Gap Register CAL-002",
+          "hours": 3,
+          "pack_sections": [
+            {"pack": "A", "sections": ["E"], "count": 5},
+            {"pack": "B", "sections": ["E", "F"], "count": 7},
+            {"pack": "C", "sections": ["F"], "count": 5},
+            {"pack": "D", "sections": ["F"], "count": 5}
+          ],
+          "dependency": "S831-PH1 + S831-DL031 — VDiff classification is only meaningful after the Moderate and Easy bands are correctly calibrated",
+          "description": "Identify 22 items across Packs A–D that genuinely test at DifficultyScore: 5 (Very Difficult) — multi-step calculation, judgment, and analysis combined. These items currently exist but are labeled Moderate or Difficult. Recalibrate: Difficulty: → 'Very Difficult', DifficultyScore: → 5.",
+          "methodology": "Manual selection by content specialist. Criteria: (1) ≥3 calculation steps, (2) requires professional judgment, (3) distractor deceptiveness is high, (4) Bloom's: Evaluate or Analyze. Batch: single batch of 22 items.",
+          "quality_gate": "Independent verification: 22/22 items pass DifficultyScore: 5 audit (tested against CAQS §6.1 criteria)"
+        },
+        {
+          "id": "S833-TOPIC",
+          "name": "Topic gap fills — ASC 842, ASC 740, advanced analytics (60 items)",
+          "type": "AUTHOR",
+          "source": "Agent B — Content Creation Targets / S832 Gap Register CON-002, CON-005, CON-006",
+          "hours": 24,
+          "pack_sections": [
+            {"pack": "A", "sections": ["A"], "count": 15, "topic": "ASC 842 Leases"},
+            {"pack": "A", "sections": ["A"], "count": 15, "topic": "ASC 740 Income Taxes"},
+            {"pack": "B", "sections": ["F"], "count": 10, "topic": "Data governance frameworks"},
+            {"pack": "C", "sections": ["F"], "count": 10, "topic": "Advanced analytics techniques"},
+            {"pack": "D", "sections": ["F"], "count": 10, "topic": "Cybersecurity frameworks"}
+          ],
+          "dependency": "Section F certification (S833-SECF) — new items should be authored into the Unprocessed pool and certified through the same pipeline established in SECF",
+          "description": "Author 60 new items to fill topic gaps identified in the S832 Gap Register. ASC 842 (Leases): capital vs. operating lease classification, ROU asset measurement, lease liability present value. ASC 740 (Income Taxes): deferred tax assets/liabilities, valuation allowance, uncertain tax positions. Analytics: data governance maturity models, advanced visualization selection, cybersecurity frameworks (NIST, ISO 27001).",
+          "methodology": "Author 15 items at a time (pilot batch first). Each item must pass: accounting accuracy check, distractor quality check, difficulty calibration, Bloom's alignment. 0.4 hours per item (24 hours / 60 items). Three pilot batches of 5 items each before full production.",
+          "governance_note": "New items enter as 'Unprocessed'. Do not self-certify — route through the standard certification pipeline. Batch cap ≤30 items per write. New QuestionIDs must follow P1{Pack}-{Section}-{NNN} format and be unique across all packs.",
+          "quality_gate": "Pilot batch audit: 15/15 items pass CAQS six-dimension verification at ≥HIGH confidence"
+        }
+      ],
+      "total_hours": 39,
+      "hours_breakdown": {"S831-DL031": 6, "S833-SECF": 6, "S833-VDIFF1": 3, "S833-TOPIC": 24},
+      "deliverables": [
+        "DL-031: 800–1,000 items recalibrated Moderate→Easy",
+        "Section F: 100% certified across all packs (124 items in learner pool)",
+        "VDiff emergency bridge: 22 Very Difficult items in learner pool",
+        "Topic gaps: 60 new Unprocessed items authored (ASC 842, ASC 740, analytics)",
+        "Easy band: ~15% of pool (CAQS §6.1 target achieved)",
+        "Section F: ~124 certified items (previously ~0)"
+      ]
+    },
+
+    "sprint_3_medium_term_week4_6": {
+      "duration": "3 weeks (calendar days 22–42)",
+      "theme": "Content creation wave 1 — VDiff, Evaluate, Analyze items + case calibration",
+      "preconditions": [
+        "Sprint 2 complete with all quality gates passed",
+        "Difficulty baseline stable (Easy ~15%, Moderate ~30%, Difficult ~20%, VDiff ≥0%)",
+        "Content authoring pipeline established and validated (pilot batches from Sprint 2)",
+        "New-item QuestionID registry updated (no ID collisions)",
+        "Case study DL-032 QID list confirmed (330 items across scored_cases2–5)"
+      ],
+      "postconditions": [
+        "VDiff pool: ~5% of total (up from <1%)",
+        "Evaluate items: first 40 items in pool across Sections E and F",
+        "Analyze items: first 100 items in pool across Sections D, E, F",
+        "Case difficulty: diversified from 100% Moderate to multi-tier distribution",
+        "Total certified pool: ≥2,300 items"
+      ],
+      "items": [
+        {
+          "id": "S833-VDIFF2",
+          "name": "New VDiff items — Sections B, C (50 items)",
+          "type": "AUTHOR",
+          "source": "Agent A — Tier 2, Item 3 / Agent B content targets",
+          "hours": 20,
+          "pack_sections": [
+            {"pack": "B", "sections": ["B", "C"], "count": 25},
+            {"pack": "C", "sections": ["B", "C"], "count": 25}
+          ],
+          "dependency": "S833-VDIFF1 (emergency bridge) — VDiff authoring standards validated on 22 existing items before authoring 50 new items",
+          "description": "Author 50 new Very Difficult items for Sections B (Planning, Budgeting, Forecasting) and C (Performance Management). VDiff criteria: ≥3 calculation steps, professional judgment required, distractor deceptiveness high, Bloom's: Evaluate. Topics: master budget reconciliation, flexible budget variance chains, transfer pricing with capacity constraints, ROI vs. RI comparison with multiple adjustments.",
+          "methodology": "Author in 10 batches of 5 items. Each item: complete scenario, 4 choices, ExplanationCorrect, 3 distractor ExplanationWrong fields. Per-item independent calculation verification. DifficultyScore: 5 verified by second reviewer.",
+          "governance_note": "VDiff items are the most expensive to author (0.4 hours/item). Quality must not be sacrificed for throughput. Each item must independently verify as VDiff — no template-inflated difficulty."
+        },
+        {
+          "id": "S833-EVAL1",
+          "name": "New Evaluate items — Sections E, F (40 items)",
+          "type": "AUTHOR",
+          "source": "Agent A — Tier 2, Item 4 / Agent B content targets",
+          "hours": 16,
+          "pack_sections": [
+            {"pack": "E", "sections": ["E", "F"], "count": 20},
+            {"pack": "C", "sections": ["E", "F"], "count": 12},
+            {"pack": "D", "sections": ["E", "F"], "count": 8}
+          ],
+          "dependency": "Section F certification (S833-SECF) — items authored into Sections E/F should target Evaluate level to fill the worst Bloom's calibration gaps",
+          "description": "Author 40 new Evaluate-level items targeting Sections E (Internal Controls) and F (Technology and Analytics). Evaluate = professional judgment: assess control environment, recommend risk responses, evaluate system implementation alternatives recommend cybersecurity posture, assess data governance maturity. No defined-formula items — judgment-based with scenario context.",
+          "methodology": "0.4 hours/item. 2 batches of 20 items. Two-phase authoring: Phase 1 — write scenario and stem (0.2h), Phase 2 — craft distractors and explanations (0.2h). Each item scenario must include: named company, stakeholder role, business trigger, decision context.",
+          "governance_note": "Evaluate items are the hardest to author correctly. Risk: items may collapse to 'Analyze' level without realizing it. Mitigation: independent Bloom's audit on 100% of Evaluate items before certification."
+        },
+        {
+          "id": "S833-ANALYZE1",
+          "name": "New Analyze items — Sections D, E, F (100 items)",
+          "type": "AUTHOR",
+          "source": "Agent B — Content Creation Targets / S832 Gap Register CAL-004",
+          "hours": 40,
+          "pack_sections": [
+            {"pack": "A", "sections": ["D"], "count": 25},
+            {"pack": "B", "sections": ["E", "F"], "count": 25},
+            {"pack": "C", "sections": ["E", "F"], "count": 25},
+            {"pack": "D", "sections": ["E", "F"], "count": 25}
+          ],
+          "dependency": "DL-031 recalibration (Sprint 2) — Analyze items must be calibrated against the corrected difficulty baseline",
+          "description": "Author 100 new Analyze-level items across Sections D (Cost Management), E (Internal Controls), and F (Technology and Analytics). Analyze = interpret data, identify patterns, compare alternatives. Topics: variance analysis interpretation, cost behavior pattern identification, control deficiency classification, data trend interpretation, ERP module integration analysis.",
+          "methodology": "0.4 hours/item. 4 batches of 25 items across 4 packs. Section D (25): cost drivers, CVP multi-product, relevant cost scenarios. Section E (25): control deficiency severity, COSO component assessment, fraud risk factor analysis. Section F (50): data visualization selection, system integration analysis, analytics tool appropriateness.",
+          "governance_note": "This is the largest single content creation batch in the S833 plan. Risk: quality dilution at volume. Mitigation: per-batch quality gates — batch N+1 cannot start until batch N passes audit."
+        },
+        {
+          "id": "S833-DL032",
+          "name": "Case difficulty calibration (330 items, scored_cases2–5)",
+          "type": "RECALIBRATE",
+          "source": "Agent A — Tier 3, Item 1 / DEFECT_LIBRARY.md §DL-032",
+          "hours": 8,
+          "pack_sections": [
+            {"pack": "scored_cases2", "sections": ["A", "B", "C", "D", "E", "F"], "count": 90, "cases": 15},
+            {"pack": "scored_cases3", "sections": ["A", "B", "C", "D", "E", "F"], "count": 90, "cases": 15},
+            {"pack": "scored_cases4", "sections": ["A", "B", "C", "D", "E", "F"], "count": 90, "cases": 15},
+            {"pack": "scored_cases5", "sections": ["A", "B", "C", "D", "E", "F"], "count": 60, "cases": 10}
+          ],
+          "dependency": "None technically — case files are independent of MCQ pack files and can be calibrated in parallel with other Sprint 3 items",
+          "description": "All 330 case items across 55 cases (scored_cases2–5) are labeled 'Moderate' with zero variance. Recalibrate to CAQS §6.1 target distribution: Easy ~15%, Moderate-Easy ~20%, Moderate ~30%, Difficult ~25%, VDiff ~10%. Calibration criteria: (1) position in case (items 1-2 Easier, items 5-6 Harder), (2) cognitive level, (3) calculation complexity, (4) number of exhibits referenced.",
+          "methodology": "Case-by-case calibration. Items 1-2 per case → Easy to Moderate-Easy (foundational calculation/recall). Items 3-4 → Moderate to Difficult (analysis/interpretation). Items 5-6 → Difficult to VDiff (judgment/synthesis). Batch: 4 batches of ~15 cases. Batch-cap adjustment: scored_cases files use case-level objects (5-6 items per case), so 15 cases = ~80 items = within 30-item governance limit per individual item write.",
+          "governance_note": "Case item calibration does not change content — only Difficulty and DifficultyScore fields. No ExplanationWrong, CorrectChoice, or Stem modifications. REVISION_HISTORY entry per case file.",
+          "quality_gate": "Post-calibration: 0 items labeled 'Moderate' that should be in another tier. Case difficulty progression maintained (items 1-2 easier than items 5-6)."
+        }
+      ],
+      "total_hours": 84,
+      "hours_breakdown": {"S833-VDIFF2": 20, "S833-EVAL1": 16, "S833-ANALYZE1": 40, "S833-DL032": 8},
+      "deliverables": [
+        "VDiff pool: ~5% of certified items (up from <1%)",
+        "Evaluate items: 40 new items in learner pool",
+        "Analyze items: 100 new items in learner pool",
+        "Case difficulty: diversified across all 5 tiers (no longer 100% Moderate)",
+        "Analyze band: ~4% of pool (up from estimated <2%)",
+        "Total certified pool: ≥2,300 items"
+      ]
+    },
+
+    "sprint_4_long_term_week7_12": {
+      "duration": "6 weeks (calendar days 43–84)",
+      "theme": "Content creation wave 2 + full case certification",
+      "preconditions": [
+        "Sprint 3 complete with all quality gates passed",
+        "Content authoring pipeline mature — 190 items authored across Sprints 2-3 without quality regression",
+        "Case difficulty calibration complete (DL-032) — cases are ready for certification",
+        "Governance guard Rule 6 (DL-026 BLOCK) active — no new certifications with empty distractor EW slots",
+        "Baseline difficulty distribution near CAQS §6.1 targets"
+      ],
+      "postconditions": [
+        "Evaluate band: ~10% of pool (CAQS §6.2 target)",
+        "Analyze band: ~15-20% of pool (approaching CAQS §6.2 target of 25%)",
+        "VDiff band: ~10% of pool (CAQS §6.1 target)",
+        "Full case study certification: 420 total case items certified",
+        "Total pool: 3,280+ items (2,031 current + 740 new + ~500 recalibrated into new tiers)",
+        "Bloom's distribution within 5% of CAQS §6.2 targets",
+        "Difficulty distribution within 5% of CAQS §6.1 targets"
+      ],
+      "items": [
+        {
+          "id": "S833-EVAL2",
+          "name": "Evaluate items Phase 2 — Sections A, B, C, D (110 items)",
+          "type": "AUTHOR",
+          "source": "Agent A — Tier 3, Item 2 / Agent B content targets",
+          "hours": 44,
+          "pack_sections": [
+            {"pack": "A", "sections": ["A"], "count": 25, "topic": "Financial statement judgment"},
+            {"pack": "A", "sections": ["B"], "count": 25, "topic": "Budget decision-making"},
+            {"pack": "B", "sections": ["C"], "count": 20, "topic": "Performance evaluation"},
+            {"pack": "B", "sections": ["D"], "count": 20, "topic": "Cost management decisions"},
+            {"pack": "C", "sections": ["A", "B", "C", "D"], "count": 20, "topic": "Cross-domain evaluation"}
+          ],
+          "dependency": "S833-EVAL1 (Sprint 3) — Evaluate authoring methodology validated on 40 items; Phase 2 scales to 110 items using the same pipeline",
+          "description": "Phase 2 of Evaluate item creation, covering the remaining sections (A-D). Phase 1 covered E-F; Phase 2 brings Evaluate coverage to full cross-domain. Items must be judgment-based with no single correct formula path — candidates must weigh alternatives and recommend."
+        },
+        {
+          "id": "S833-ANALYZE2",
+          "name": "Analyze items Phase 2 — Sections A, B, C (100 items)",
+          "type": "AUTHOR",
+          "source": "Agent B — Content Creation Targets / S832 Gap Register CAL-004",
+          "hours": 40,
+          "pack_sections": [
+            {"pack": "A", "sections": ["A", "B", "C"], "count": 40},
+            {"pack": "B", "sections": ["A", "B", "C"], "count": 30},
+            {"pack": "C", "sections": ["A", "B", "C"], "count": 30}
+          ],
+          "dependency": "S833-ANALYZE1 (Sprint 3) — Phase 2 fills Sections A-C after Phase 1 covered D-F",
+          "description": "Phase 2 of Analyze item creation, covering Sections A-C. Topics: financial statement analysis interpretation, ratio trend analysis, budget variance root cause analysis, performance metric interpretation, standard costing analysis."
+        },
+        {
+          "id": "S833-VDIFF3",
+          "name": "VDiff Phase 3 content (150 items)",
+          "type": "AUTHOR",
+          "source": "Agent A — Tier 3, Item 3 / Agent B content targets",
+          "hours": 60,
+          "pack_sections": [
+            {"pack": "A", "sections": ["A", "B", "C", "D"], "count": 50},
+            {"pack": "B", "sections": ["A", "B", "C", "D", "E", "F"], "count": 30},
+            {"pack": "C", "sections": ["A", "B", "C", "D", "E", "F"], "count": 30},
+            {"pack": "D", "sections": ["A", "B", "C", "D", "E", "F"], "count": 20},
+            {"pack": "E", "sections": ["A", "B", "C", "D", "E", "F"], "count": 20}
+          ],
+          "dependency": "S833-VDIFF2 (Sprint 3) — Phase 3 is the largest VDiff push, covering all packs and sections",
+          "description": "Full-scale VDiff item creation — 150 items across all 6 domains. VDiff criteria: multi-step, multi-concept, judgment-based, Bloom's Evaluate. Target: VDiff at 10% of pool (CAQS §6.1 target). This is the most expensive and highest-risk content creation batch."
+        },
+        {
+          "id": "S833-CASE",
+          "name": "Full case study certification (300 items, scored_cases2–5)",
+          "type": "CERTIFY",
+          "source": "Agent A — Tier 3, Item 4",
+          "hours": 40,
+          "pack_sections": [
+            {"pack": "scored_cases2", "count": 90, "cases": 15},
+            {"pack": "scored_cases3", "count": 90, "cases": 15},
+            {"pack": "scored_cases4", "count": 90, "cases": 15},
+            {"pack": "scored_cases5", "count": 30, "cases": 5}
+          ],
+          "dependency": "S833-DL032 (Sprint 3) — case difficulty must be calibrated before certification. DL-023 (exhibit headers) must be resolved for scored_cases3/4/5 (17 exhibits, 9 cases) — resolved 2026-07-23.",
+          "description": "Certify all 300 case items across 50 cases. Six-dimension CAQS verification per case: (1) accounting correctness, (2) precision, (3) difficulty calibration, (4) distractor engineering, (5) blueprint alignment, (6) CMA Part 1 relevance. Each case must pass: cognitive progression (items 1-6 progress from Apply → Evaluate), exhibit data consumption (all exhibit data referenced by ≥1 item), independent answerability (no item requires correct answer to prior item).",
+          "methodology": "50 cases × 0.8 hours/case = 40 hours. Per-case verification: solve all items independently, verify exhibit data consistency, audit cognitive progression, confirm blueprint alignment. Cases with defects are routed to Editorial Queue; clean cases transition to Certified.",
+          "governance_note": "Case certification is the longest pole in Sprint 4. Start earliest. If resources constrained, prioritize cases in Sections E and F (highest Bloom's calibration need)."
+        }
+      ],
+      "total_hours": 184,
+      "hours_breakdown": {"S833-EVAL2": 44, "S833-ANALYZE2": 40, "S833-VDIFF3": 60, "S833-CASE": 40},
+      "deliverables": [
+        "Evaluate band: ~10% of certified pool",
+        "Analyze band: ~15-20% of certified pool",
+        "VDiff band: ~10% of certified pool",
+        "Full case study certification: all 420 case items (75 cases) certified",
+        "Total certified pool: 3,280+ items",
+        "Bloom's distribution within 5% of CAQS §6.2 targets",
+        "Difficulty distribution within 5% of CAQS §6.1 targets",
+        "All 6 blueprint domains covered with certified content"
+      ]
+    }
+  },
+
+  "critical_path": {
+    "path_a_primary": [
+      "S831-PH1 (Sprint 1 — recalibration → establishes Difficulty baseline)",
+      "→ S831-DL031 (Sprint 2 — DL-031 sweep → establishes Easy baseline)",
+      "→ S833-VDIFF1 (Sprint 2 — VDiff bridge → establishes VDiff baseline)",
+      "→ S833-VDIFF2 (Sprint 3 — VDiff expansion → only possible with corrected baseline)",
+      "→ S833-VDIFF3 (Sprint 4 — VDiff full-scale → only possible with validated authoring pipeline)"
+    ],
+    "path_b_quality": [
+      "S833-DL021 (Sprint 1) + S833-DL016 (Sprint 1) → execute in parallel with Path A",
+      "→ S833-SECF (Sprint 2 — Section F certification → blocked until DL-035 resolved)",
+      "→ S833-EVAL1 (Sprint 3) → S833-EVAL2 (Sprint 4)",
+      "→ S833-ANALYZE1 (Sprint 3) → S833-ANALYZE2 (Sprint 4)"
+    ],
+    "path_c_content": [
+      "S833-TOPIC (Sprint 2 — pilot content authoring → validates pipeline)",
+      "→ S833-EVAL1 + S833-ANALYZE1 (Sprint 3 — scale-up)",
+      "→ S833-EVAL2 + S833-ANALYZE2 (Sprint 4 — full production)"
+    ],
+    "path_d_cases": [
+      "S833-DL032 (Sprint 3 — case calibration)",
+      "→ S833-CASE (Sprint 4 — case certification)"
+    ],
+    "longest_pole": "S833-VDIFF3 (60 hours) + S833-CASE (40 hours) = Sprint 4 has the most content-hours. Sprint 4 drives the 12-week total calendar span."
+  },
+
+  "parallelization_opportunities": [
+    {
+      "opportunity": "Sprint 1 three-way parallel",
+      "strands": ["S831-PH1 (pack files A/B/C/D/E)", "S833-DL021 (pack_e_corrected.js only)", "S833-DL016 (pack_a_corrected.js only)"],
+      "rationale": "Different files, different sections — zero write-conflict risk",
+      "estimated_throughput_gain": "15 hours of work completes in 5-8 calendar hours"
+    },
+    {
+      "opportunity": "Sprint 2 two-way parallel",
+      "strands": ["S831-DL031 (all 5 packs — recalibration)", "S833-TOPIC (new content authoring — separate QID space)"],
+      "rationale": "DL-031 changes existing metadata; TOPIC creates new items. No overlap in QID space.",
+      "estimated_throughput_gain": "30 hours of work completes in ~15 calendar hours"
+    },
+    {
+      "opportunity": "Sprint 3 four-way parallel",
+      "strands": [
+        "S833-VDIFF2 (Pack B/C Sections B/C)",
+        "S833-EVAL1 (Pack C/D/E Sections E/F)",
+        "S833-ANALYZE1 (Pack A/B/C/D Sections D/E/F)",
+        "S833-DL032 (scored_cases2–5 — independent files)"
+      ],
+      "rationale": "Different packs, different sections, different file types. Pack D used by ANALYZE1 only. Pack E used by EVAL1 only. No conflict.",
+      "estimated_throughput_gain": "84 hours of work completes in ~25 calendar hours"
+    },
+    {
+      "opportunity": "Sprint 4 four-way parallel",
+      "strands": [
+        "S833-EVAL2 (Pack A/B/C — all sections)",
+        "S833-ANALYZE2 (Pack A/B/C — all sections)",
+        "S833-VDIFF3 (all 5 packs — all sections)",
+        "S833-CASE (scored_cases files — independent files)"
+      ],
+      "rationale": "Most aggressive parallelization. VDIFF3 touches Pack D; ANALYZE2 touches Pack A/B/C. EVAL2 touches Pack A/B/C. Overlap on Pack A/B/C requires write sequencing.",
+      "risk": "Pack A/B/C shared across EVAL2, ANALYZE2, and VDIFF3. Mitigation: sequence Pack A/B/C writes (VDIFF3 → ANALYZE2 → EVAL2) within each section. Or assign each workstream a different section subset."
+    }
+  ],
+
+  "risk_register": [
+    {
+      "risk_id": "RISK-001",
+      "risk": "Recalibration without per-item review may mislabel items (DL-031 pattern: definition-match items incorrectly classified as Easy)",
+      "severity": "HIGH",
+      "probability": "MEDIUM",
+      "impact": "~50-100 items wrongly calibrated — requires re-remediation pass, pushes schedule by 1 week",
+      "trigger": "Post-recalibration audit finds >5% error rate in sample",
+      "mitigation": "Sample audit 10% of recalibrated items per batch. Publish QID lists for independent verification. Halt recalibration if error rate >5%.",
+      "contingency": "Revert from backup, refine detection rule, re-execute"
+    },
+    {
+      "risk_id": "RISK-002",
+      "risk": "Content authoring pipeline not yet established for 740 new items — quality may degrade at volume",
+      "severity": "HIGH",
+      "probability": "HIGH",
+      "impact": "New items require re-authoring or extensive revision; delays content expansion by 4-6 weeks",
+      "trigger": "Pilot batch audit finds <70% of items pass CAQS at ≥HIGH confidence",
+      "mitigation": "Start with pilot batch of 25 items (5 per type). Establish authoring templates, review checklists, QA pipeline before scaling. Require independent verification for all new items. Do not proceed to Sprint 3 authoring until pilot passes.",
+      "contingency": "Reduce scope (fewer new items). Focus on quality over quantity. Extend Sprint 4 timeline."
+    },
+    {
+      "risk_id": "RISK-003",
+      "risk": "Governance guard batch limits (≤30 items per write) constrain throughput — 300+ batches needed for full plan",
+      "severity": "MEDIUM",
+      "probability": "CERTAIN",
+      "impact": "~75 hours of batch overhead across full plan. May extend calendar time if batches must be serial.",
+      "trigger": "Per-batch REVISION_HISTORY entry, backup, write, verify cycle takes >25 minutes average",
+      "mitigation": "Automate REVISION_HISTORY generation. Parallelize batches where packs differ. Pre-compute batch QID lists. Use task agents for per-batch execution.",
+      "contingency": "Request BLOCK-AUTHORIZED marker for high-confidence mechanical operations (recalibration, not content authoring)"
+    },
+    {
+      "risk_id": "RISK-004",
+      "risk": "Certified item changes require REVISION_HISTORY entries for all ~2,000+ operations",
+      "severity": "MEDIUM",
+      "probability": "CERTAIN",
+      "impact": "Manual REVISION_HISTORY entry overhead unsustainable at scale",
+      "trigger": "REVISION_HISTORY.md grows by >500 lines per sprint (manual writing bottleneck)",
+      "mitigation": "Automate REVISION_HISTORY generation. Batch-level entries (one entry per batch) rather than per-item entries for recalibration operations. Reserve per-item entries for content changes (answer, explanation, distractor).",
+      "contingency": "Use session-summary entries that list QID ranges and operation types"
+    },
+    {
+      "risk_id": "RISK-005",
+      "risk": "Pack A/B/C write conflicts in Sprint 4 parallel execution (EVAL2 + ANALYZE2 + VDIFF3 all touch Pack A/B/C)",
+      "severity": "HIGH",
+      "probability": "MEDIUM",
+      "impact": "DL-019 concurrent-write data loss — one agent's work silently overwrites another's",
+      "trigger": "Two agents write to the same pack file within the same calendar day",
+      "mitigation": "Per-pack write sequencing: each pack has a single owner agent per calendar day. Section-level assignment: VDIFF3 = Pack A Sections A/D, ANALYZE2 = Pack A Sections B/C, EVAL2 = Pack A Sections empty. Or: sequential execution — one workstream completes Pack A before next starts.",
+      "contingency": "Immediate halt, restore from backup, re-execute lost writes. Implement file-lock protocol."
+    },
+    {
+      "risk_id": "RISK-006",
+      "risk": "DL-035 (39 Certified Domain F items with empty EW slots) blocks Section F certification",
+      "severity": "HIGH",
+      "probability": "CERTAIN",
+      "impact": "Section F certification (S833-SECF, Sprint 2) cannot proceed until DL-035 is resolved",
+      "trigger": "Governance guard Rule 6 BLOCKs certification attempt on items with empty non-CC EW slots",
+      "mitigation": "Resolve DL-035 in Sprint 1 or early Sprint 2 (author ~117 distractor EW fields for 39 items). This is a prerequisite for S833-SECF.",
+      "contingency": "Certify Pack B Section F first (0 DL-035). Certify Pack C Section F after DL-035 remediation."
+    },
+    {
+      "risk_id": "RISK-007",
+      "risk": "Baseline drift between sprints — recalibration in Sprint 1 changes counts that Sprint 2-4 plans depend on",
+      "severity": "MEDIUM",
+      "probability": "HIGH",
+      "impact": "Content authoring targets are wrong because the baseline moved post-recalibration",
+      "trigger": "Post-Baseline.5 certified count differs from pre-Baseline.4 by >50 items",
+      "mitigation": "Re-run CURRENT_BASELINES.md update after each sprint. Compare certified counts, difficulty distribution, and Bloom's distribution against Sprint N targets. Adjust Sprint N+1 targets if baseline drifts.",
+      "contingency": "Flexible scope: if actual numbers are lower, reduce authoring volume. If higher, accelerate."
+    },
+    {
+      "risk_id": "RISK-008",
+      "risk": "Case certification (S833-CASE) requires accounting expertise for 50 cases across 6 domains — single-agent bottleneck",
+      "severity": "MEDIUM",
+      "probability": "MEDIUM",
+      "impact": "Case certification extends beyond Sprint 4 (6 weeks → 8-10 weeks)",
+      "trigger": "Case certification velocity <10 cases per week",
+      "mitigation": "Start case certification in Sprint 3 (not Sprint 4). Parallelize: assign different agents to different case files. Pre-certify structurally clean cases first.",
+      "contingency": "Reduce case certification scope: certify Sections E/F cases first (highest need), defer Sections A-D cases."
+    }
+  ],
+
+  "dependencies_graph": {
+    "S831-PH1": {"depends_on": [], "blocks": ["S831-DL031", "S833-VDIFF1"], "type": "hard"},
+    "S833-DL021": {"depends_on": [], "blocks": [], "type": "independent"},
+    "S833-DL016": {"depends_on": [], "blocks": [], "type": "independent"},
+    "S831-DL031": {"depends_on": ["S831-PH1"], "blocks": ["S833-VDIFF1", "S833-VDIFF2"], "type": "hard"},
+    "S833-SECF": {"depends_on": ["DL-035 resolution"], "blocks": ["S833-EVAL1", "S833-ANALYZE1"], "type": "soft"},
+    "S833-VDIFF1": {"depends_on": ["S831-PH1", "S831-DL031"], "blocks": ["S833-VDIFF2"], "type": "hard"},
+    "S833-TOPIC": {"depends_on": ["content pipeline establishment"], "blocks": ["S833-ANALYZE1"], "type": "soft"},
+    "S833-VDIFF2": {"depends_on": ["S833-VDIFF1"], "blocks": ["S833-VDIFF3"], "type": "hard"},
+    "S833-EVAL1": {"depends_on": ["content pipeline establishment"], "blocks": ["S833-EVAL2"], "type": "hard"},
+    "S833-ANALYZE1": {"depends_on": ["content pipeline establishment"], "blocks": ["S833-ANALYZE2"], "type": "hard"},
+    "S833-DL032": {"depends_on": [], "blocks": ["S833-CASE"], "type": "soft"},
+    "S833-EVAL2": {"depends_on": ["S833-EVAL1"], "blocks": [], "type": "hard"},
+    "S833-ANALYZE2": {"depends_on": ["S833-ANALYZE1"], "blocks": [], "type": "hard"},
+    "S833-VDIFF3": {"depends_on": ["S833-VDIFF2"], "blocks": [], "type": "hard"},
+    "S833-CASE": {"depends_on": ["S833-DL032"], "blocks": [], "type": "soft"}
+  },
+
+  "governance_compliance": {
+    "rule1_question_state_changes": "Every question_state change (RECALIBRATE operations modify Difficulty/DifficultyScore — these are metadata changes, not question_state changes. CERTIFY operations change question_state and require paired REVISION_HISTORY entries.",
+    "rule2_dl008_block": "All AUTHOR operations must verify ExplanationWrong[CorrectChoice] is empty after authoring. Governance guard Rule 2 BLOCK applies to all pack-file writes.",
+    "rule3_registry_no_hand_edit": "MASTER_QUESTION_REGISTRY.md must be regenerated after each sprint — no manual edits.",
+    "rule5_batch_cap": "≤30 items per write operation. Recalibration: 423 items = 15 batches. DL-031: 800-1000 items = 28-34 batches. New content: ≤30 items per batch. Request BLOCK-AUTHORIZED marker for mechanical recalibration operations to lift batch cap.",
+    "rule6_dl026_block": "Active as of S814. All CERTIFY operations must verify 0 empty non-CC EW slots. This is enforced by governance guard pre-write gate.",
+    "backup_protocol": "Mandatory timestamped backup before every pack-file write. Expected ~100 backup files generated across 4 sprints."
+  },
+
+  "success_metrics": {
+    "end_of_sprint_1": {
+      "Pack E Section C": "0 DL-021 (absent EW fields)",
+      "Pack A Section E": "0 DL-016 (metadata-content mismatch)",
+      "Difficult band": "≥20% of pool",
+      "Zero regressions": "Governance guard 12/12 PASS"
+    },
+    "end_of_sprint_2": {
+      "Easy band": "≥15% of pool",
+      "Section F certified": "≥124 items",
+      "VDiff band": "≥1% of pool",
+      "Topic gaps filled": "60 new Unprocessed items",
+      "DL-031 remaining": "0 (all definition-match items recalibrated)",
+      "Section F DL-035": "0 (all empty EW slots filled)"
+    },
+    "end_of_sprint_3": {
+      "Analyze band": "≥4% of pool",
+      "Evaluate band": "≥2% of pool",
+      "VDiff band": "≥5% of pool",
+      "Case difficulty diversity": "0 items with 100% Moderate",
+      "New content authored": "190 items (VDiff 50 + Evaluate 40 + Analyze 100)",
+      "Content pipeline maturity": "≥90% new items pass CAQS at HIGH confidence"
+    },
+    "end_of_sprint_4": {
+      "Analyze band": "≥15% of pool",
+      "Evaluate band": "≥10% of pool",
+      "VDiff band": "≥10% of pool",
+      "Case certification": "420 items certified (100%)",
+      "Total pool": "≥3,280 certified items",
+      "Bloom's distribution": "Within 5% of CAQS §6.2 targets",
+      "Difficulty distribution": "Within 5% of CAQS §6.1 targets",
+      "Blueprint coverage": "All 6 domains with ≥100 certified items each"
+    }
+  },
+
+  "decision": {
+    "recommendation": "ACCEPT",
+    "rationale": "The expansion backlog addresses all 19 gaps from the S832 Gap Register (8 Content, 6 Quality, 5 Calibration) in priority order: structural fixes first, then recalibration, then quality, then content creation, then certification. The critical path is well-understood. Risks are identified with mitigations. Parallelization opportunities exist to compress calendar time. The 12-week timeline is achievable with dedicated resources.",
+    "immediate_next_action": "Begin Sprint 1 immediately — execute S831-PH1 (calibration), S833-DL021 (Pack E), S833-DL016 (Pack A Section E) in parallel. Sprint 2-4 decisions are pending Sprint 1 completion and baseline re-measurement.",
+    "blockers": "None for Sprint 1. Sprint 2 blocker: DL-035 resolution must precede Section F certification (39 items, ~117 EW fields). Sprint 3-4 blockers: content authoring pipeline must be validated before scaling.",
+    "escalation_required": "Request BLOCK-AUTHORIZED marker for mechanical recalibration operations (S831-PH1, S831-DL031) to lift the 30-item batch cap for operations that do not modify content (only metadata fields: Difficulty, DifficultyScore).",
+    "governance_signoff": "Pending user review and acceptance of the expansion backlog. RECOMMENDED: review Sprint 1-2 scope for immediate execution; defer Sprint 3-4 scope decisions until Sprint 1 baseline is stable."
+  }
+}

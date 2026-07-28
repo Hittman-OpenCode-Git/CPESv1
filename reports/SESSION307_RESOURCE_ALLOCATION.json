@@ -1,0 +1,71 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "totalEstimatedSessions": 41,
+  "categories": {
+    "certification": {
+      "description": "Certifying uncertified items per CAQS §1.6",
+      "items": 358,
+      "sessions": 18,
+      "itemsPerSession": "~20",
+      "breakdown": [
+        {
+          "scope": "Domain E certification",
+          "items": 178,
+          "sessions": 8
+        },
+        {
+          "scope": "Domain F certification",
+          "items": 150,
+          "sessions": 7
+        },
+        {
+          "scope": "Remaining (Pack A/C/D/E small blocks)",
+          "items": 30,
+          "sessions": 3
+        }
+      ]
+    },
+    "ewRemediation": {
+      "description": "Authoring ExplanationWrong for items with <30% EW fill",
+      "items": 539,
+      "sessions": 12,
+      "itemsPerSession": "~45",
+      "breakdown": [
+        {
+          "scope": "Case-bank EW authoring",
+          "items": "~310",
+          "sessions": 8,
+          "note": "Most labor-intensive: zero existing EW"
+        },
+        {
+          "scope": "MCQ EW gap closure",
+          "items": "~229",
+          "sessions": 4,
+          "note": "Partial EW exists; author missing slots"
+        }
+      ]
+    },
+    "dl008Remediation": {
+      "description": "Clearing 67 Certified DL-008 items",
+      "items": 67,
+      "sessions": 3,
+      "itemsPerSession": "~22"
+    },
+    "modernization": {
+      "description": "Clone rotation cleanup, DL-013 boilerplate, DL-031 difficulty",
+      "items": "~500",
+      "sessions": 5
+    },
+    "governance": {
+      "description": "REVISION_HISTORY, baselines, attestation, validation",
+      "sessions": 3
+    }
+  },
+  "recommendedAllocation": {
+    "certification": "45% (18/41 sessions) — highest ROI: closes quality gaps AND adds EW",
+    "ewRemediation": "30% (12/41 sessions) — high ROI: direct learner feedback improvement",
+    "dl008": "7% (3/41 sessions) — urgent: learner pool safety",
+    "modernization": "12% (5/41 sessions) — medium ROI: structural quality",
+    "governance": "7% (3/41 sessions) — mandatory: attestation and validation"
+  }
+}

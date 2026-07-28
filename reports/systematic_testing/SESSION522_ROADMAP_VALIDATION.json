@@ -1,0 +1,38 @@
+{
+  "session": "522",
+  "timestamp": "2026-07-26T11:40:00Z",
+  "purpose": "Corrected roadmap — validating S518–S521 chain and establishing authoritative baseline",
+
+  "s518_inventory_errors_corrected": [
+    {
+      "error": "S518 reported ENHANCED_CASE_BASE3/MIGRATED_CASE_BASE_C as 79 items with CBQ3-A1 holdback",
+      "correction": "MIGRATED_CASE_BASE_C uses CASE-C* CaseIDs, 75/75 Certified. CBQ3-A1 is in ENHANCED_CASE_BASE3 (different array). Both arrays now 100% Certified.",
+      "resolved_by": "S519"
+    },
+    {
+      "error": "S518 reported MIGRATED_CASE_BASE_D as 63/78 Certified with CBQ4-A1/A2/C1 holdbacks",
+      "correction": "MIGRATED_CASE_BASE_D uses CASE-D* CaseIDs, 0/75 Certified (wholly unprocessed). CBQ4-A1/A2/C1 are in ENHANCED_CASE_BASE4 (78/78 Certified). Two completely different arrays.",
+      "resolved_by": "S520 (CBQ4-A1/A2/C1); MIGRATED_CASE_BASE_D still unprocessed"
+    }
+  ],
+
+  "verified_completion_chain": {
+    "S518_CBQ2_A3": "5/5 Certified. ENHANCED_CASE_BASE2 → 78/78 (100%). VERIFIED.",
+    "S519_CBQ3_A1": "5/5 Certified. ENHANCED_CASE_BASE3 → 79/79 (100%). VERIFIED.",
+    "S520_CBQ4_A1_A2_C1": "15/15 Certified. ENHANCED_CASE_BASE4 → 78/78 (100%). VERIFIED.",
+    "S521_CBQ5_B2": "5/5 Certified. ENHANCED_CASE_BASE5 → 75/75 (100%). VERIFIED."
+  },
+
+  "authoritative_certification_totals": {
+    "certified_items_total": 680,
+    "uncertified_items_total": 165,
+    "arrays_fully_certified": "7 of 9",
+    "arrays_wholly_unprocessed": "2 of 9"
+  },
+
+  "recommended_sequence": {
+    "S523": "MIGRATED_CASE_BASE_D first CAQS wave (CASE-D1 through CASE-D3 = 15 items, 3 cases). Has Difficulty metadata. Structurally clean.",
+    "S524-526": "MIGRATED_CASE_BASE_D remaining 60 items (12 cases)",
+    "S527-530": "ENHANCED_CASE_BASE full CAQS review (90 items, 15 cases)"
+  }
+}

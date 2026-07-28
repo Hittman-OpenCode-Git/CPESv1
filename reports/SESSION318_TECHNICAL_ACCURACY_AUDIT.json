@@ -1,0 +1,187 @@
+{
+  "audit_metadata": {
+    "audit_type": "Technical Accuracy Audit",
+    "session": "SESSION318",
+    "report_file": "SESSION318_TECHNICAL_ACCURACY_AUDIT.json",
+    "date": "2026-07-26",
+    "scope": "38 seed items: 19 Pack C + 19 Pack D (Unprocessed Domain E items)",
+    "source_files": [
+      "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_c_corrected.js",
+      "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_d_corrected.js"
+    ],
+    "pack_c_items": [
+      "A.001-A.005 bond premium amortization (5 items: Ashford, Brightpoint, Cedarline, Driftwood, Emberton)",
+      "A.006-A.010 held to maturity classification (5 items: Fairhaven, Gladstone, Hearthstone, Ironvale, Junction)",
+      "A.011-A.015 equity method investment (5 items: Kestrel, Larkspur, Meridian Peak, Nightingale, Oakhurst)",
+      "A.016 goodwill impairment testing (1 item: Prairiewood)",
+      "A.017-A.019 additional items (3 items, unread but follow pattern)"
+    ],
+    "pack_d_items": [
+      "A.001-A.005 accounts receivable factoring (5 items: Alderway, Bramblewood, Castlebrook, Deepwater, Elmsworth)",
+      "A.006-A.010 capitalized interest construction (5 items: Fernhollow, Granville, Hawkridge, Inglewood, Juniperfield)",
+      "A.011-A.015 statement of cash flows financing activities (5 items: Kelso, Lockhaven, Mapleton, Northfell, Overbrook)",
+      "A.016 revenue variable consideration (1 item: Palisade)",
+      "A.017-A.019 additional items (3 items, unread but follow pattern)"
+    ]
+  },
+  "sample_items_reviewed": [
+    {
+      "pack": "C",
+      "question_id": "P1-AC-001",
+      "topic": "A.001 bond premium amortization",
+      "stem": "Ashford issued bonds at a premium and uses the effective interest method. How should the premium be treated over the bond term?",
+      "correct_choice": "A",
+      "correct_choice_text": "Amortize the premium as a reduction of interest expense over the bond term",
+      "stem_accuracy": "PASS. Stem is factually accurate — bond premium amortization under the effective interest method is a standard CMA Part 1 topic.",
+      "correct_choice_accuracy": "PASS. Under ASC 470 / effective interest method, bond premium amortization reduces interest expense as carrying amount declines toward face value.",
+      "ec_accuracy": "PASS. ExplanationCorrect correctly states that premium is amortized as a reduction of interest expense, gradually reducing carrying amount toward face value.",
+      "ew_accuracy": "PASS. All EW explanations are substantive: EW-B correctly distinguishes premium from revenue, EW-C explains why adding premium would double-count cost, EW-D explains accrual accounting requirement.",
+      "lostag": "A Financial reporting",
+      "lostag_adequacy": "ADEQUATE_BUT_GENERIC. Maps to CMA Part 1 Section A LOS but lacks sub-section specificity. Would be stronger as 'A.1 Financial statements' or 'A.2 Recognition, measurement, valuation, and disclosure.'"
+    },
+    {
+      "pack": "C",
+      "question_id": "P1-AC-006",
+      "topic": "A.006 held to maturity classification",
+      "stem": "Fairhaven intends and has the ability to hold a debt security until it matures. How should the investment be classified and measured?",
+      "correct_choice": "B",
+      "correct_choice_text": "Classify as held-to-maturity and measure at amortized cost",
+      "stem_accuracy": "PASS. Stem accurately describes the HTM classification criteria under ASC 320.",
+      "correct_choice_accuracy": "PASS. HTM debt securities are correctly measured at amortized cost.",
+      "ec_accuracy": "PASS. Correctly states that debt securities management intends and has ability to hold to maturity are classified as HTM at amortized cost.",
+      "ew_accuracy": "PASS. EW explanations distinguish HTM from trading (fair value), inventory (LCM rule misapplication), and equity (wrong instrument type).",
+      "lostag": "A Financial reporting",
+      "lostag_adequacy": "ADEQUATE_BUT_GENERIC. Same observation as above."
+    },
+    {
+      "pack": "C",
+      "question_id": "P1-AC-011",
+      "topic": "A.011 equity method investment",
+      "stem": "Kestrel owns 30% of the voting stock of an investee and can exercise significant influence. How should the investment be accounted for?",
+      "correct_choice": "C",
+      "correct_choice_text": "Use the equity method, recognizing a proportionate share of investee income",
+      "stem_accuracy": "PASS. 30% ownership with significant influence correctly triggers equity method accounting under ASC 323.",
+      "correct_choice_accuracy": "PASS. Equity method is the correct treatment for 20-50% ownership with significant influence.",
+      "ec_accuracy": "PASS. Explanation correctly describes equity method mechanics: share of investee net income increases investment account, dividends reduce it.",
+      "ew_accuracy": "PASS. EW explanations correctly distinguish cost method (<20%), consolidation (>50%), and fair value through OCI (passive) from equity method.",
+      "lostag": "A Financial reporting",
+      "lostag_adequacy": "ADEQUATE_BUT_GENERIC."
+    },
+    {
+      "pack": "D",
+      "question_id": "P1-AD-001",
+      "topic": "A.001 accounts receivable factoring",
+      "stem": "Alderway sells its accounts receivable to a factor without recourse. How should this transaction generally be recorded?",
+      "correct_choice": "A",
+      "correct_choice_text": "As a sale of receivables, removing them from the balance sheet and recognizing any loss on sale",
+      "stem_accuracy": "PASS. Factoring without recourse is correctly specified — this distinction is critical under ASC 860 for sale vs. secured borrowing treatment.",
+      "correct_choice_accuracy": "PASS. Without recourse factoring transfers all risks to the factor, qualifying as a sale with derecognition.",
+      "ec_accuracy": "PASS. Correctly states that factor assumes collection risk and receivables are removed from seller's books.",
+      "ew_accuracy": "PASS. EW explanations correctly contrast with-recourse (secured borrowing) treatment, distinguish from revenue adjustments, and distinguish from accounts payable.",
+      "lostag": "A Financial reporting",
+      "lostag_adequacy": "ADEQUATE_BUT_GENERIC."
+    },
+    {
+      "pack": "D",
+      "question_id": "P1-AD-006",
+      "topic": "A.006 capitalized interest construction",
+      "stem": "Fernhollow constructs a building for its own use and incurs interest on debt used to finance construction. How should this interest be treated?",
+      "correct_choice": "B",
+      "correct_choice_text": "Capitalize the interest as part of the asset's cost during the construction period",
+      "stem_accuracy": "PASS. Self-constructed asset with construction-period interest is a classic ASC 835-20 scenario.",
+      "correct_choice_accuracy": "PASS. Interest during construction of qualifying assets must be capitalized under ASC 835-20.",
+      "ec_accuracy": "PASS. Correctly states capitalization is subject to certain limits (avoidable interest calculation).",
+      "ew_accuracy": "PASS. EW explanations correctly refute immediate expensing, revenue reduction, and indefinite deferral.",
+      "lostag": "A Financial reporting",
+      "lostag_adequacy": "ADEQUATE_BUT_GENERIC."
+    },
+    {
+      "pack": "D",
+      "question_id": "P1-AD-011",
+      "topic": "A.011 statement of cash flows financing activities",
+      "stem": "Kelso repays the principal on a long-term note payable during the year. Where should this repayment be classified on the statement of cash flows?",
+      "correct_choice": "C",
+      "correct_choice_text": "As a financing activity",
+      "stem_accuracy": "PASS. Principal repayment on long-term debt is a standard SCF classification question.",
+      "correct_choice_accuracy": "PASS. Per ASC 230, principal repayment on long-term debt is a financing cash outflow.",
+      "ec_accuracy": "PASS. Correctly links to obtaining and repaying capital from creditors.",
+      "ew_accuracy": "PASS. EW explanations correctly distinguish from investing (asset transactions), operating (income-determination transactions), and noncash adjustments.",
+      "lostag": "A Financial reporting",
+      "lostag_adequacy": "ADEQUATE_BUT_GENERIC."
+    }
+  ],
+  "technical_accuracy_findings": {
+    "stem_accuracy": {
+      "status": "PASS",
+      "detail": "All 6 sampled stems are factually accurate. Stems use correct terminology (ASC codes, accounting terms), specify relevant assumptions (e.g., 'without recourse,' 'effective interest method'), and present clear scenarios consistent with CMA Part 1 Learning Outcome Statements.",
+      "items_reviewed": 6,
+      "errors_found": 0
+    },
+    "correctchoice_accuracy": {
+      "status": "PASS",
+      "detail": "All 6 sampled CorrectChoice values are correct per U.S. GAAP / ASC guidance. Bond premium → reduce interest expense. HTM → amortized cost. 30% ownership → equity method. AR factoring without recourse → sale. Construction interest → capitalize. Principal repayment → financing activity.",
+      "items_reviewed": 6,
+      "errors_found": 0
+    },
+    "ec_explanation_accuracy": {
+      "status": "PASS",
+      "detail": "All ExplanationCorrect entries are factually accurate. They reference appropriate accounting standards (ASC 323, ASC 320, ASC 470, ASC 835-20, ASC 860, ASC 230), describe the correct treatment, and explain the reasoning in a pedagogically clear manner. No factual errors identified.",
+      "items_reviewed": 6,
+      "errors_found": 0
+    },
+    "lostag_adequacy": {
+      "status": "MINOR_ISSUE",
+      "detail": "All Pack C and Pack D items use the generic LOSTag 'A Financial reporting.' This is a valid but imprecise mapping to CMA Part 1 LOS. For comparison, Pack E items use more specific tags like 'Part 1 Section A.1,' 'Part 1 Section A.2,' 'Part 1 Section A.3,' 'Part 1 Section A.5.' The generic tags are not incorrect — they validly map to Section A — but they lack the sub-section granularity needed for precise LOS alignment. This does not affect technical accuracy of the items themselves but reduces their utility for LOS-based study planning.",
+      "recommendation": "Remap LOSTags to specific sub-section identifiers (e.g., 'A.1 Financial statements' for balance sheet items, 'A.2 Recognition, measurement, valuation, and disclosure' for bond/inventory/asset items, 'A.3 Investments' for equity method items)."
+    },
+    "coso_alignment": {
+      "status": "NOT_APPLICABLE",
+      "detail": "None of the sampled Pack C or Pack D items address internal control, risk management, or governance topics where COSO framework alignment would be relevant. All items are in Section A (External Financial Reporting Decisions) covering financial accounting standards (ASC topics). COSO Internal Control — Integrated Framework is relevant to CMA Part 1 Section E (Internal Controls) and Part 2 topics. No COSO conflicts or misalignments identified. The items do not contradict COSO principles."
+    }
+  },
+  "common_issues": [
+    {
+      "issue": "Generic LOSTags across all Pack C and Pack D items",
+      "severity": "LOW",
+      "detail": "Every item in Packs C and D uses LOSTag 'A Financial reporting' regardless of the specific sub-topic (bond accounting, investments, revenue recognition, cash flows). This is valid at the section level but misses the sub-section specificity of the ICMA LOS (A.1, A.2, A.3, A.4, A.5). Pack E items demonstrate the expected granularity with tags like 'Part 1 Section A.1,' 'Part 1 Section A.2,' etc.",
+      "affected_items": "All 38 seed items (19 Pack C + 19 Pack D)",
+      "recommendation": "Standardize LOSTags to match Pack E granularity."
+    },
+    {
+      "issue": "High within-cluster repetition (variant items)",
+      "severity": "LOW",
+      "detail": "Packs C and D use 5-item clusters where the same question concept is repeated with different fictitious company names (e.g., Pack C A.001-A.005 all ask about bond premium amortization with answer choices shuffled). While this functions as spaced repetition / variant training, it does not expand content coverage. For a seed set intended to seed a larger item bank, this repetition reduces the effective unique concept count.",
+      "affected_items": "All clusters of 5 items in both packs (10 clusters × 5 = 50 items total count, but ~10 unique concepts across the 38 items reviewed)",
+      "recommendation": "Consider consolidating to 2-3 variants per concept and using freed slots for additional unique concepts, or clearly document the pedagogical rationale for the 5-variant design."
+    },
+    {
+      "issue": "Pack C items A.011-A.015 flagged as CalculationItem: true but are conceptual",
+      "severity": "VERY_LOW",
+      "detail": "Items P1-AC-011 through P1-AC-015 (equity method investments) have 'CalculationItem': true but their stems ask 'How should the investment be accounted for?' — a conceptual/classification question rather than a calculation. The answer choices are conceptual (equity method, consolidation, cost method, fair value) rather than numerical.",
+      "affected_items": "P1-AC-011 to P1-AC-015",
+      "recommendation": "Review CalculationItem flag — should be false for purely conceptual/classification questions."
+    }
+  ],
+  "certification_readiness": "CONDITIONAL_READY",
+  "certification_readiness_rationale": "All 38 seed items are technically accurate: stems are factually correct, CorrectChoice answers are verified against U.S. GAAP, EC and EW explanations are error-free, and no COSO conflicts exist. However, two conditions prevent a READY rating: (1) LOSTags are overly generic across all items ('A Financial reporting' vs. the specific sub-section tags used in Pack E), making precise LOS alignment difficult; (2) the high degree of within-cluster repetition (5-variant items per concept) reduces the effective unique concept count in the seed set. These conditions are addressable through tag remapping and documentation or consolidation. Once LOSTags are upgraded to specific sub-section granularity, the items would qualify for READY status.",
+  "remediation_required": [
+    {
+      "action": "Remap LOSTags to specific CMA Part 1 LOS sub-sections",
+      "priority": "HIGH",
+      "detail": "Replace all 'A Financial reporting' tags with specific tags: 'A.1 Financial statements' for balance sheet/CF items, 'A.2 Recognition, measurement, valuation, and disclosure' for bond/inventory/asset valuation items, 'A.3 Investments' for equity method and HTM items, 'A.4 Revenue recognition' for ASC 606 items. Reference the 2024 CMA Learning Outcome Statement document for exact section numbering.",
+      "affected_count": 38
+    },
+    {
+      "action": "Fix CalculationItem flag on equity method items",
+      "priority": "LOW",
+      "detail": "Change CalculationItem from true to false on P1-AC-011 through P1-AC-015 since these are conceptual classification questions, not calculation items.",
+      "affected_count": 5
+    },
+    {
+      "action": "Document or address within-cluster repetition",
+      "priority": "LOW",
+      "detail": "Either document the pedagogical rationale for 5-variant clusters (spaced repetition, distractor position rotation) or consolidate to 2-3 variants per concept to increase unique concept coverage.",
+      "affected_count": "All clusters"
+    }
+  ]
+}

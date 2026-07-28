@@ -1,0 +1,179 @@
+﻿{
+    "governanceAttestation":  {
+                                  "noMaySourceChanged":  true,
+                                  "noCaseBankFilesChanged":  true,
+                                  "noCertificationStateChanged":  true,
+                                  "cleanupWasDryRun":  false,
+                                  "noScoringRuntimeChanged":  true,
+                                  "docsUpdated":  true,
+                                  "noPackFilesChanged":  true
+                              },
+    "protectedFilesChecked":  [
+                                  "app.js",
+                                  "index.html",
+                                  "index_updated.html",
+                                  "styles.css",
+                                  "package.json",
+                                  "package-lock.json",
+                                  "may-core.js",
+                                  "may-learner-state.js",
+                                  "pack_a_corrected.js",
+                                  "pack_b_corrected.js",
+                                  "pack_c_corrected.js",
+                                  "pack_d_corrected.js",
+                                  "pack_e_corrected.js",
+                                  "scored_cases.js",
+                                  "scored_cases2.js",
+                                  "scored_cases3.js",
+                                  "scored_cases4.js",
+                                  "scored_cases5.js"
+                              ],
+    "testCommand":  {
+                        "exitCode":  null,
+                        "command":  "",
+                        "skipped":  true
+                    },
+    "projectRoot":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026",
+    "writtenDocs":  [
+                        "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\docs\\operations\\PROJECT_PAUSE_STATUS.md",
+                        "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\docs\\governance\\GOVERNANCE_HANDOFF.md",
+                        "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\docs\\operations\\RESTART_POINTS.md"
+                    ],
+    "generatedAt":  "2026-07-25 21:58:15",
+    "applied":  true,
+    "movedFiles":  [
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-core.js.bak-20260725143840",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-core.js.bak-20260725143840",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-core.js.bak-20260725145741",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-core.js.bak-20260725145741",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-core.js.bak-20260725152049",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-core.js.bak-20260725152049",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-core.js.bak-20260725153057",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-core.js.bak-20260725153057",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-core.js.bak-20260725153731",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-core.js.bak-20260725153731",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-core.js.bak-20260725231400",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-core.js.bak-20260725231400",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-learner-state.js.bak-20260725145741",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-learner-state.js.bak-20260725145741",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-learner-state.js.bak-20260725152049",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-learner-state.js.bak-20260725152049",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\may-learner-state.js.bak-20260725231400",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\may-learner-state.js.bak-20260725231400",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_c_corrected.js.bak-20260725151143",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_c_corrected.js.bak-20260725151143",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_c_corrected.js.bak-20260725151721",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_c_corrected.js.bak-20260725151721",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_c_corrected.js.bak-20260725154704",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_c_corrected.js.bak-20260725154704",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_c_corrected.js.bak-20260725231400",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_c_corrected.js.bak-20260725231400",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_d_corrected.js.bak-20260725135519",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_d_corrected.js.bak-20260725135519",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_d_corrected.js.bak-20260725160121",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_d_corrected.js.bak-20260725160121",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_d_corrected.js.bak-20260725160132",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_d_corrected.js.bak-20260725160132",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_d_corrected.js.bak-20260725160147",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_d_corrected.js.bak-20260725160147",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_e_corrected.js.bak-20260725151143",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_e_corrected.js.bak-20260725151143",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\pack_e_corrected.js.bak-20260725151721",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\pack_e_corrected.js.bak-20260725151721",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\scored_cases2.js.bak-20260725152440",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\scored_cases2.js.bak-20260725152440",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\scored_cases2.js.bak-20260725154119",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\scored_cases2.js.bak-20260725154119",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\scored_cases2.js.bak-20260725154128",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\scored_cases2.js.bak-20260725154128",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\scored_cases2.js.bak-20260725154259",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\scored_cases2.js.bak-20260725154259",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\scored_cases2.js.bak-20260725154332",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\scored_cases2.js.bak-20260725154332",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\scored_cases2.js.bak-20260725154542",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\scored_cases2.js.bak-20260725154542",
+                           "applied":  true
+                       },
+                       {
+                           "destination":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\backups\\manual_and_session_backups\\scored_cases2.js.bak-20260725154743",
+                           "source":  "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\scored_cases2.js.bak-20260725154743",
+                           "applied":  true
+                       }
+                   ],
+    "protectedHashDrift":  [
+
+                           ]
+}

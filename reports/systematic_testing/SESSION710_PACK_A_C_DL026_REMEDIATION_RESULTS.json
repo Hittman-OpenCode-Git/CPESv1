@@ -1,0 +1,59 @@
+{
+  "session": "710",
+  "agent": "B — Pack A and Pack C DL-026 Remediation",
+  "timestamp": "2026-07-25T21:16:00",
+  "packs_processed": ["A", "C"],
+  "total_targets": 3,
+  "targets": [
+    {
+      "qid": "P1-B-001",
+      "pack": "A",
+      "topic": "B.001 mission to tactical planning linkage",
+      "correct_choice": "D",
+      "missing_field": "ExplanationWrongB",
+      "before_value": "",
+      "after_value": "Basing the strategic plan solely on last year's actual spending ignores changes in strategic direction, market conditions, and organizational priorities. This incremental approach merely extrapolates the past rather than translating long-term strategy into forward-looking departmental plans. Tactical planning should cascade strategic objectives into measurable performance targets, not perpetuate historical spending patterns.",
+      "rationale": "Choice B suggests using only last year's actual spending as the strategic plan, which ignores strategic direction, market conditions, and organizational priorities. The explanation contrasts incremental vs. strategic planning approaches.",
+      "validation_status": "PASS",
+      "dl008_check": "EW_D = '' (correct CC slot, DL-008 clean)",
+      "non_target_fields_preserved": true
+    },
+    {
+      "qid": "P1-BC-094",
+      "pack": "C",
+      "topic": "B.094 what if sensitivity analysis budgeting",
+      "correct_choice": "B",
+      "missing_field": "ExplanationWrongD",
+      "before_value": "",
+      "after_value": "Responsibility accounting assigns cost accountability to organizational units and managers, establishing a framework for performance evaluation based on controllable costs. It does not model how budgeted outcomes change under different assumptions. Sensitivity (what-if) analysis serves a fundamentally different purpose — it systematically varies key input assumptions such as sales volume and material cost to explore how outcomes shift under varying conditions. Confusing these two concepts conflates an accountability framework with a risk-assessment and scenario-modeling technique.",
+      "rationale": "Choice D suggests responsibility accounting, which assigns cost accountability to managers, not multiple-scenario modeling. The explanation distinguishes between an accountability framework and a scenario-modeling technique.",
+      "validation_status": "PASS",
+      "dl008_check": "EW_B = '' (correct CC slot, DL-008 clean)",
+      "non_target_fields_preserved": true,
+      "note": "EW_A carries cross-topic contamination from P1-BC-095 (budget slack text). Not in S710 scope. Documented for future DL-010 session."
+    },
+    {
+      "qid": "P1-DC-019",
+      "pack": "C",
+      "topic": "D.019 joint cost allocation method",
+      "correct_choice": "C",
+      "missing_field": "ExplanationWrongD",
+      "before_value": "",
+      "after_value": "The physical units method allocates joint costs based on a common physical measure such as weight or volume, not on the products' relative sales value. Under the physical units method, a high-volume low-value product would receive the same joint cost allocation per unit as a low-volume high-value product, distorting product profitability. The sales value at split-off method, by contrast, allocates joint costs in proportion to each product's market value at the point of separation, providing a more economically meaningful allocation.",
+      "rationale": "Choice D suggests the physical units method, which allocates based on physical measures rather than relative sales value. The explanation contrasts the two allocation bases and highlights the economic distortion risk.",
+      "validation_status": "PASS",
+      "dl008_check": "EW_C = '' (correct CC slot, DL-008 clean)",
+      "non_target_fields_preserved": true
+    }
+  ],
+  "governance": {
+    "no_answer_keys_changed": true,
+    "no_stems_changed": true,
+    "no_choices_changed": true,
+    "no_explanation_correct_changed": true,
+    "no_question_state_changed": true,
+    "no_certification_state_changed": true,
+    "no_non_target_ew_fields_changed": true,
+    "no_dl008_introduced": true
+  }
+}

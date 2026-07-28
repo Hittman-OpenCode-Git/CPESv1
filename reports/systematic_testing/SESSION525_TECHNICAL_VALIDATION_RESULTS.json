@@ -1,0 +1,46 @@
+{
+  "session": "525",
+  "type": "TECHNICAL_VALIDATION",
+  "timestamp": "2026-07-26T14:00:00Z",
+  "target": "MIGRATED_CASE_BASE_D / CASE-D7, CASE-D8, CASE-D9",
+  "items_validated": 15,
+  "results": {
+    "ALL_AGREE": 15,
+    "DISCREPANCY": 0,
+    "HOLD": 0,
+    "ESCALATED": 0
+  },
+  "numeric_items": [
+    {
+      "id": "CASE-D8-Q2",
+      "prompt": "Hawkridge needs 18,000 units of a component for production, wants ending inventory of 3,000 units, and has beginning inventory of 2,500 units. How many units should be purchased?",
+      "stored": "18500",
+      "independent_calculation": "Purchases = 18,000 + 3,000 - 2,500 = 18,500",
+      "verdict": "ALL_AGREE"
+    },
+    {
+      "id": "CASE-D9-Q3",
+      "prompt": "Inglewood has operating income of 520,000, average operating assets of 4,000,000, and a required rate of return of 11%. What is residual income?",
+      "stored": "80000",
+      "independent_calculation": "Residual income = 520,000 - (0.11 × 4,000,000) = 520,000 - 440,000 = 80,000",
+      "verdict": "ALL_AGREE"
+    }
+  ],
+  "conceptual_items": [
+    {"id": "CASE-D7-Q1", "topic": "Trading securities fair value", "standard": "ASC 321", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D7-Q2", "topic": "Revenue with right of return", "standard": "ASC 606", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D7-Q3", "topic": "AFS debt OCI treatment", "standard": "ASC 320", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D7-Q4", "topic": "Type I subsequent events", "standard": "ASC 855", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D7-Q5", "topic": "Equity method criteria", "standard": "ASC 323", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D8-Q1", "topic": "Activity-based budgeting", "standard": "IMA CMA Section B", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D8-Q3", "topic": "Forecast error measurement", "standard": "IMA CMA Section B", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D8-Q4", "topic": "Capital expenditure budget", "standard": "IMA CMA Section B", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D8-Q5", "topic": "Moving average", "standard": "IMA CMA Section B", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D9-Q1", "topic": "Total Quality Management", "standard": "IMA CMA Section C", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D9-Q2", "topic": "Segment margin purpose", "standard": "IMA CMA Section C", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D9-Q4", "topic": "Segmented income statement", "standard": "IMA CMA Section C", "verdict": "ALL_AGREE"},
+    {"id": "CASE-D9-Q5", "topic": "Customer profitability analysis", "standard": "IMA CMA Section C", "verdict": "ALL_AGREE"}
+  ],
+  "independent_verification_method": "All numeric items recalculated independently from stem data without consulting stored answer. All conceptual items verified against authoritative accounting standards (ASC, IMA CMA Content Specification Outline). Distractors evaluated for plausibility and distinctness.",
+  "confidence": "HIGH — 100% agreement between independent calculation and stored answer across all 15 items."
+}

@@ -1,0 +1,186 @@
+{
+  "$schema": "SESSION804 Risk Register Update v1.0",
+  "session": "S804",
+  "date": "2026-07-26",
+  "type": "Risk Register Update — Post-S804 Execution",
+  "predecessor_risk_baseline": "SESSION_STATUS_2026-07-24.md §6 (Open Risks) + S802 governance correction",
+
+  "risk_register_summary": {
+    "total_open_risks": 7,
+    "critical_risks": 0,
+    "high_risks": 2,
+    "medium_risks": 3,
+    "low_risks": 2,
+    "risks_resolved_this_cycle": [
+      "S800 67 Certified DL-008 → DL-029 false positive (0 real)",
+      "S800 FD-045 missing content → structurally complete",
+      "S800 FD-075 missing content → structurally complete",
+      "S800 3 P0 blockers → all refuted (DL-029 forward-scan artifacts)"
+    ],
+    "risks_escalated_this_session": [
+      "DL-016 Pack A Section E: Upgraded from Low (cosmetic metadata) to HIGH (learner-safety risk on 58 Certified items)"
+    ]
+  },
+
+  "active_risks": {
+    "RSK-001": {
+      "risk_id": "RSK-001",
+      "defect_ref": "DL-016",
+      "title": "DL-016 Metadata-Block Shift — Pack A Section E (58 Certified)",
+      "severity": "HIGH",
+      "severity_rationale": "Learner-safety risk. Certified items in active delivery pool. Metadata-block ExplanationWrong fields describe a DIFFERENT item's choices than the content block the learner sees. Learners who select wrong answers receive feedback about a completely unrelated topic.",
+      "category": "Learner Pool — Active Misinformation",
+      "status": "OPEN — not addressed by S804 clone archival",
+      "detected_by": "Build-Time AI Verification (Session 5, expanded Session 64, re-confirmed S803/S804)",
+      "date_opened": "2026-07-23",
+      "date_last_confirmed": "2026-07-26 (S804)",
+
+      "affected_items": {
+        "pack": "A",
+        "section": "E",
+        "section_total": 75,
+        "certified_affected": 58,
+        "archived_affected": 17,
+        "archived_note": "17 items Archived — including some with DL-016 shift. Since Archived, no learner impact. P1-E-055 (Archived) confirmed DL-016: CC=D is actually B, EC describes access recertification not inventory counts.",
+        "qid_range": "P1-E-001 through P1-E-075",
+        "dual_block_architecture": true,
+        "shift_pattern": "Metadata-block ChoiceA-D text advertises previous QID's topic (systematic +1 offset in 5-item rotation groups)"
+      },
+
+      "learner_impact": {
+        "mechanism": "When a learner selects a wrong answer on an affected item, the rendering engine reads ExplanationWrong from the metadata block (Block 1), which carries stale +1-offset text from the previous rotation-group neighbor. The learner sees: 'Why you got this wrong' text that describes a completely different topic.",
+        "example": "P1-E-055 metadata EW fields describe access recertification (P1-E-056's topic), but the learner answered P1-E-055 about physical inventory counts. Feedback is semantically unrelated.",
+        "discovery_mechanism": "The content block (learner-facing stem + choices) is internally consistent. The metadata block (learner-facing explanations) is +1 shifted. The gap is invisible during MCQ-only review because stems/choices look correct — it manifests only when a learner submits a wrong answer and reads the distractor explanation.",
+        "certified_count_exposed": 58,
+        "pct_of_section": "77.3% of Pack A Section E Certified items",
+        "pct_of_pack_a_certified": "12.1% of Pack A Certified items",
+        "pct_of_total_certified": "2.7% of total Certified pool"
+      },
+
+      "S804_relationship": {
+        "what_S804_did": "De-certified 1 additional Section E clone (Certified → Archived) — clone rationalization, not DL-016 remediation.",
+        "why_risk_remains": "DL-016 is a metadata-content architecture defect affecting ALL dual-block items regardless of clone status. Archiving clones reduces Section E from 75→58 Certified items, but does NOT fix the ExplanationWrong shift on the 58 remaining items. The clone archival protects learners from redundant clone items but does not address the misinformation risk on the 58 seeds and unique items still Certified.",
+        "risk_change": "Risk surface REDUCED (75→58) but root cause UNCHANGED. Severity remains HIGH.",
+        "P1-E-056_status": "REPAIRED in S803 — metadata block re-aligned with content block. Correctly carries CC=D with access-recertification ExplanationWrong fields. This is the only Section E item fully remediated for DL-016. Serves as repair template for remaining 58."
+      },
+
+      "remediation_required": {
+        "scope": "58 Pack A Section E Certified items (P1-E-001 through P1-E-075, excluding 17 Archived and P1-E-056 already repaired)",
+        "action": "Align metadata-block ChoiceA-D and ExplanationWrongA-D text with content-block Choices.A-D for all 58 items. Each metadata block must describe the item's OWN distractors, not the +1 neighbor's.",
+        "approach": "Per-item: extract content-block Choices + CorrectChoice → author substantive, choice-specific ExplanationWrong text for each non-CC slot → clear ExplanationWrong[CC] to '' → verify 0 DL-008, 0 DL-016, 0 DL-026",
+        "reference_template": "P1-E-056 repair (S803) — full metadata-block rewrite with correct topic alignment",
+        "estimated_batches": "3 batches (28+28+2) per governance guard Rule 5",
+        "estimated_session": "1 dedicated session (~2–3 hours)",
+        "recommended_session": "S805",
+        "blocked_by": "None — P1-E-056 provides complete repair template and validation methodology"
+      },
+
+      "escalation": {
+        "previous_severity": "Low (cosmetic metadata, filed DL-015/DL-016 as informational)",
+        "current_severity": "HIGH (learner-safety risk — active misinformation in Certified delivery pool)",
+        "escalation_date": "2026-07-26 (S804)",
+        "escalation_trigger": "S803 P1-E-056 repair confirmed the DL-016 shift produces real learner-facing misinformation on Certified items, not merely cosmetic metadata offset. S804 clone archival did not address the root cause on remaining items."
+      }
+    },
+
+    "RSK-002": {
+      "risk_id": "RSK-002",
+      "defect_ref": "DL-026 / DL-025",
+      "title": "Empty Non-CorrectChoice ExplanationWrong Slots — Cross-Pool Residual",
+      "severity": "HIGH",
+      "severity_rationale": "Educational quality — learners get no distractor feedback for empty slots. ~423 Certified items affected pool-wide per DL-026 authoritative scan. Post-DL-025 WAVE 1 and S803 autonomous runs, remaining Certified surface is ~6 items (Pack C Sections A+B).",
+      "category": "Learner Pool — Degraded Feedback",
+      "status": "OPEN — substantially remediated, ~6 residual",
+      "detected_by": "Build-Time AI Verification (5-agent scoping + Agent 6 boundary-aware re-verification, 2026-07-23)",
+      "affected_packs": ["A (0 remaining)", "C (~3 residual: BC-030, BC-060, AC-030)", "D (0 remaining)"],
+      "remaining_certified": "~3 items",
+      "recommended_session": "S807-S809 (DL-026 fill + DL-013 sweep wave)",
+      "note": "All 58 Pack A Section E Certified DL-016 items may also have DL-026 empty slots — the dual-block architecture makes it difficult to verify DL-026 independently of DL-016 alignment. Full EW remediation (S805) will resolve both simultaneously."
+    },
+
+    "RSK-003": {
+      "risk_id": "RSK-003",
+      "defect_ref": "DL-013",
+      "title": "Template Boilerplate Distractor Explanations — ~851 Fields Remaining",
+      "severity": "MEDIUM",
+      "severity_rationale": "Non-blocking — zero Certified items affected. All 851 fields in Unprocessed items. Learners never see boilerplate text currently. Blocks certification of affected items.",
+      "category": "Certification Blocker — No Learner Impact",
+      "status": "OPEN — deferred to certification waves",
+      "detected_by": "Build-Time AI Verification (DL-007 segmentation scan, 2026-07-22)",
+      "remaining_fields": 851,
+      "packs_affected": ["A (238 fields)", "C (357 fields)", "D (256 fields)"],
+      "recommended_session": "S807-S809 (DL-026 fill + DL-013 sweep wave)"
+    },
+
+    "RSK-004": {
+      "risk_id": "RSK-004",
+      "defect_ref": "DL-021",
+      "title": "Pack E Section C — Missing Distractor ExplanationWrong Fields (5 Certified + 95 Non-Certified)",
+      "severity": "MEDIUM",
+      "severity_rationale": "5 Certified items in learner pool with zero distractor explanations (learners get no feedback on wrong answers). 95 non-Certified items blocked from certification.",
+      "category": "Learner Pool — Degraded Feedback + Certification Blocker",
+      "status": "OPEN — 5 Certified items remediated (Autonomous Run Part 4), 95 non-Certified remaining",
+      "recommended_session": "S810-S812 (Pack E enhancement wave)"
+    },
+
+    "RSK-005": {
+      "risk_id": "RSK-005",
+      "defect_ref": "DL-031 / DL-032",
+      "title": "Systematic Difficulty Calibration Defects — ~500 MCQ + 420 Case Items",
+      "severity": "MEDIUM",
+      "severity_rationale": "Template-based difficulty labeling without cognitive assessment. MCQ: ~500 items labeled Moderate that test Bloom's Remember/Understand (should be Easy). Cases: 100% Moderate (zero variance across 420 item pool). Does not affect scoring or content accuracy, but distorts adaptive-learning and diagnostic analytics.",
+      "category": "Psychometric — No Learner Safety Impact",
+      "status": "OPEN — scoped (Session 700), not remediated",
+      "recommended_session": "S810-S812 (difficulty recalibration wave)"
+    },
+
+    "RSK-006": {
+      "risk_id": "RSK-006",
+      "defect_ref": "DL-014",
+      "title": "Sibling Null Guard Missing — app.js Line 1187 (s.mcqs.length)",
+      "severity": "LOW",
+      "severity_rationale": "Defensive hardening — no crash reported for MCQ path. Line 1188 fix (s.cases) already handles known crash vector.",
+      "category": "Application — Defensive",
+      "status": "OPEN — documented, low priority",
+      "recommended_session": "Any maintenance session"
+    },
+
+    "RSK-007": {
+      "risk_id": "RSK-007",
+      "defect_ref": "DL-015",
+      "title": "Metadata Topic Numbering Shift — P1-E-040 through P1-E-042 (Cosmetic)",
+      "severity": "LOW",
+      "severity_rationale": "Topic descriptions are correct; only numeric labels offset by +1. Zero learner impact. Fix during next Section E certification wave.",
+      "category": "Informational — Cosmetic",
+      "status": "OPEN — fix during next certification wave",
+      "recommended_session": "S805 (DL-016 EW remediation — same section)"
+    }
+  },
+
+  "s805_recommendation": {
+    "priority": "RSK-001 (DL-016 Pack A Section E — 58 Certified items)",
+    "rationale": "Highest-priority open risk: 58 Certified items in active learner delivery pool with DL-016 metadata-content shift causing learners to see feedback about completely wrong topics. This is the only HIGH learner-safety risk that can be remediated in a single dedicated session.",
+    "scope": "58 items, 3 batches (28+28+2), ~174 ExplanationWrong fields to author (3 per item × 58, less slots already substantive)",
+    "template": "P1-E-056 repair methodology (S803) — metadata-block reprogramming with content-block-aligned choices and explanations",
+    "secondary_targets": "RSK-007 (DL-015 cosmetic topic number fix — same section, zero incremental cost)",
+    "blocked_by": "None. P1-E-056 provides complete repair template. S804 clone archival has reduced surface from 75→58, making S805 scope smaller.",
+    "estimated_duration": "~2–3 hours",
+    "position_in_roadmap": "First session after S804, ahead of C/D Sections E/F certification (S804-S806 original plan)"
+  },
+
+  "roadmap_revision": {
+    "original_S802_plan": "S804-S806: C/D Sections E/F certification; S807-S809: DL-026 fill + DL-013 sweep + cross-pack EW audit",
+    "S804_finding": "DL-016 Pack A Section E is a HIGH learner-safety risk that was previously classified Low (cosmetic). S803 P1-E-056 repair confirmed the DL-016 shift produces real misinformation, not merely cosmetic offset.",
+    "revised_priority": "Insert S805 (DL-016 EW remediation) before C/D Sections E/F certification. Shift S804-S806 → S805-S807. Net +1 session.",
+    "impact": "Roadmap expands from 12→13 sessions (S803-S815). Acceptable — learner safety over schedule."
+  },
+
+  "verification": {
+    "direct_grep_certified": "Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' | Measure-Object → 2,181",
+    "pack_a_section_e_total": 75,
+    "pack_a_section_e_certified_verified": 58,
+    "pack_a_section_e_archived_verified": 17,
+    "58_plus_17": 75,
+    "verified_by": "Agent P+Q (S804) — direct raw-file grep + Pack A Section E count, 2026-07-26"
+  }
+}

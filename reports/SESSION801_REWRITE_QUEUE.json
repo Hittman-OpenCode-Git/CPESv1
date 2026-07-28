@@ -1,0 +1,83 @@
+{
+  "session": "S801",
+  "date": "2026-07-26",
+  "title": "800-Series Rewrite Queue — Prioritized P0-P6 Tiers",
+  "queue": [
+    {
+      "tier": "P0",
+      "label": "Governance Cleanup",
+      "sessions": ["S802"],
+      "items_touched": 0,
+      "description": "Correct SESSION_STATUS_2026-07-24.md, CURRENT_BASELINES.md, and REVISION_HISTORY.md to reflect refuted S800 P0 blockers: DL-008=0, FD-045/FD-075 structurally complete. Update Pack C/D certified counts (250→350, 300→350).",
+      "pre_launch": true,
+      "risk": "None"
+    },
+    {
+      "tier": "P1",
+      "label": "Pack A Closeout",
+      "sessions": ["S802-S803"],
+      "items_touched": 19,
+      "batches": 1,
+      "description": "Certify remaining 19 Pack A items. P1-A-044 and P1-A-064 (Section A) need individual assessment. P1-E-046 through E-074 (Section E) are confirmed DL-012 clones — keep Archived. Effective result: 500/500 active Pack A items.",
+      "pre_launch": true,
+      "risk": "LOW — state-change pass"
+    },
+    {
+      "tier": "P2",
+      "label": "Clone Archival (Sections E/F only)",
+      "sessions": ["S803-S805"],
+      "items_touched": 127,
+      "batches": 7,
+      "description": "Archive known template clones in Packs C/D Sections E/F. All targeted items are Unprocessed — zero learner pool exposure. Sections A-D deferred (Certified — requires de-certification).",
+      "pre_launch": "partial",
+      "risk": "LOW (zero learner pool)"
+    },
+    {
+      "tier": "P3",
+      "label": "Distractor Modernization",
+      "sessions": ["S805-S809"],
+      "items_touched": 153,
+      "batches": 7,
+      "description": "Eliminate DL-013 boilerplate (184 fields: 97 Certified + 87 Non-Certified) and fill DL-026 empty slots (50 In Audit). Prioritize Certified items (learner-facing).",
+      "pre_launch": true,
+      "risk": "HIGH — editing Certified items"
+    },
+    {
+      "tier": "P4",
+      "label": "Explanation Enhancement",
+      "sessions": ["S809-S813"],
+      "items_touched": 819,
+      "batches": 31,
+      "description": "Pack E pedagogical uplift: add ASC/COSO citations, expand EC from median 67→200+ chars, add business scenarios. Plus Pack A/C/D remaining sections.",
+      "pre_launch": "boundary",
+      "risk": "MEDIUM — throughput risk (31 batches in 5 sessions is aggressive)"
+    },
+    {
+      "tier": "P5",
+      "label": "Difficulty Calibration",
+      "sessions": ["S813-S816"],
+      "items_touched": 944,
+      "batches": 35,
+      "description": "Fix DL-031 systematic difficulty inflation (~500 items). DL-032 case uniform difficulty (420 items). Metadata-only edits — no content changes.",
+      "pre_launch": false,
+      "risk": "LOW — field-level edits only"
+    },
+    {
+      "tier": "P6",
+      "label": "Fresh-Authored Replacements",
+      "sessions": ["S816-S819"],
+      "items_touched": 197,
+      "batches": 20,
+      "description": "Replace archived clones with genuinely distinct items. Full authoring pipeline: stem, choices, distractors, explanations, metadata. Pack B benchmark as quality gate.",
+      "pre_launch": false,
+      "risk": "HIGH — full authoring at speed risks introducing new defects"
+    }
+  ],
+  "totals": {
+    "items_touched": 2259,
+    "batches": 101,
+    "sessions": 19,
+    "sessions_range": "S802-S819 (19 sessions, assuming S802 launches immediately after S801)"
+  },
+  "dependency_graph": "P0 → P1 → P3 → P4 → P6. P2 parallel with P1. P5 semi-independent (can overlap with P4)."
+}

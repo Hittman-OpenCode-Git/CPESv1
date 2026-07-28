@@ -1,0 +1,64 @@
+{
+  "session": "S367",
+  "board": "Baseline Integrity Recapture",
+  "timestamp": "2026-07-27T13:25:00Z",
+  "predecessor": "S361 Ground Truth + S364 DL-008 Clearance",
+
+  "hash_baselines": {
+    "pack_a": { "sha256": "E237FEAC9DCFC432640633906539DD88CCA52BF028C5720CEF27FF629A3E5F85", "size": 1721131, "match_s811": true },
+    "pack_b": { "sha256": "8A641309BBF0DE8B5D1D4C747AE092C2EF514D8EB0A8A3374D96C3056204DB3B", "size": 1386746, "match_s811": true },
+    "pack_c": { "sha256": "1A75400A6F32CB6250C17232D0F0EDEEA5584A8CC2E209B4916A845DCD2A92EE", "size": 1751148, "match_s811": false, "cause": "S364 DL-008 clearance (P1-FC-001 EW[A] cleared + 2 comma fixes)" },
+    "pack_d": { "sha256": "B2ED626038572CE679797AE5B1A78A5C8F8875AB564E75328B3A0E23EB1EF3EB", "size": 1793143, "match_s811": false, "cause": "No S364 writes to pack_d — drift from prior session(s)" },
+    "pack_e": { "sha256": "A98B27B15D99CC4AB261E78A011D4194BCBEEA78CDC6CE10A6B226EDF660DAED", "size": 1603012, "match_s811": true },
+    "app_js": { "sha256": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A", "size": 209937, "match_s811": true },
+    "index_updated_html": { "sha256": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755", "size": 6090, "match_s811": true },
+    "styles_css": { "sha256": "F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6", "size": 68696, "match_s811": true },
+    "may_core_js": { "sha256": "183D2E6BECBEF3103DA42FB7B1B0B7E0610DE94E4E36FDE80B77122B89B0DD13", "size": 344883, "match_s811": true },
+    "may_learner_state_js": { "sha256": "BEE72B86A97D88CC5C98805EC41D37DCC89795044817ECEADC29A95328841EBC", "size": 110240, "match_s811": true },
+    "scored_cases": { "sha256": "3997284429CA4B8DA6A3577441F3B74AEEDD80839EB360E4387932D2428C0EEA", "size": 457390, "match_s811": true },
+    "scored_cases2": { "sha256": "C32F25808D9F64309A7EFAFEAD55F19CC2C4F4F01A3AADDB604EE695BB491110", "size": 438676, "match_s811": true },
+    "scored_cases3": { "sha256": "EB5B28D9BB370C29EF3B9DA20EEB332452DAD93C29106879C028A8ACA924EE62", "size": 444754, "match_s811": true },
+    "scored_cases4": { "sha256": "158CBEFC43F16148CD961E58AB32ED856EE46005E199F375B419F9F6F2F2D3B3", "size": 534846, "match_s811": true },
+    "scored_cases5": { "sha256": "6F70E589B21A1FAC5D2F1A5B3E8799616962192405BF8498D2100BB57D71E307", "size": 333161, "match_s811": true }
+  },
+
+  "hash_summary": {
+    "total_files": 15,
+    "match_s811": 13,
+    "drifted_from_s811": 2,
+    "drifted_files": ["pack_c", "pack_d"],
+    "drift_explanation": "pack_c: S364 edits (DL-008 + commas). pack_d: prior-session drift (no S364-S367 writes)."
+  },
+
+  "certified_pool": {
+    "total": 2298,
+    "method": "Direct grep on pack_*_corrected.js for '\"question_state\": \"Certified\"'",
+    "per_pack": {
+      "pack_a": 481,
+      "pack_b": 500,
+      "pack_c": 388,
+      "pack_d": 389,
+      "pack_e": 540
+    },
+    "total_items": 2540,
+    "coverage_pct": 90.5
+  },
+
+  "defect_status_post_s364": {
+    "dl008_certified": 0,
+    "dl008_note": "Previous S361 RB claim of 8 was inflated by DL-029 scan bug. Only P1-FC-001 was genuine — cleared S364. 7 Pack D claims verified as false positives via raw-file line inspection.",
+    "dl026_certified": "UNVERIFIED",
+    "dl026_note": "S821/S822 claims of 37-77 items not independently re-verified this session. DL-029 bug pattern suggests inflation risk. Must verify via raw-file inspection before claiming 0 or any specific count.",
+    "dl029_status": "CONFIRMED ACTIVE — caused false positives in S361 RB (DL-008: 8→1) and likely S821/S822 (DL-026: 77→?). The ExplanationWrong field search using context windows captures adjacent-item fields when QID order differs.",
+    "pack_c_structural": "Pre-existing missing commas discovered. Full comma audit deferred."
+  },
+
+  "governance_guard": {
+    "test_suite": "32/32 PASS",
+    "rules_active": 6,
+    "rule_2_dl008": "ACTIVE — zero Certified DL-008",
+    "rule_6_dl026": "ACTIVE — prevents new DL-026 introductions"
+  },
+
+  "key_finding": "The S369-S373 adoption restoration chain is partially unblocked. DL-008 is resolved (0 Certified). The DL-026 and baseline drift remediation (S365-S366) requires independent scope verification before authoring — the existing S821 queue may be inflated by the same DL-029 bug that inflated S361 RB's DL-008 claim from 1→8."
+}

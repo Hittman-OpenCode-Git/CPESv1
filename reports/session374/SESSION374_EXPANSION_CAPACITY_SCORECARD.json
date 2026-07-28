@@ -1,0 +1,74 @@
+{
+  "session": "S374",
+  "type": "expansion_capacity_scorecard",
+  "timestamp": "2026-07-28T14:00:00Z",
+  "inputs": {
+    "s370_sustainability": { "decision": "SUSTAINABLE_WITH_RISKS", "score": 60, "confidence": 88 },
+    "s371_cognitive_gap": { "verdict": "NOT_CLOSABLE_WITHOUT_INCREASE", "total_hours": 296 },
+    "s372_dl031": { "recommendation": "WAVE_PAIRED", "immediate_hours": 23, "deferred_hours": 132.5 },
+    "s373_dl035": { "recommendation": "MANUAL", "hours": 6.2, "priority_rank": 1 }
+  },
+  "capacity_model": {
+    "content_production": {
+      "wave_per_week": 1,
+      "analyze_per_wave": 25,
+      "evaluate_per_wave": 6,
+      "bottleneck": "Evaluate — 381 needed, 0 certified, 5-7 per phase. Content DESIGN is irreducible."
+    },
+    "automation_support": {
+      "overhead_reduction_pct": 30,
+      "ceiling": "Clerical-only — cannot design Evaluate items or write distractor explanations."
+    },
+    "review_burden": {
+      "sessions_needed": 19,
+      "hours_per_session": 2.5,
+      "fatigue_risk": "HIGH over 41-week program"
+    }
+  },
+  "readiness_decomposition": {
+    "current_score": 75,
+    "target_score": 80,
+    "component_scores": {
+      "dl035_remediated": { "hours": 6.2, "contribution_points": 2, "feasible_at_current_throughput": true },
+      "dl031_foundational": { "hours": 23, "contribution_points": 3, "feasible_at_current_throughput": true, "paired_constraint": true },
+      "cognitive_gap_programmed": { "hours": 0, "contribution_points": 2, "feasible_at_current_throughput": true },
+      "automation_implemented": { "hours": 10, "contribution_points": 1, "feasible_at_current_throughput": true },
+      "review_pipeline_established": { "hours": 5, "contribution_points": 1, "feasible_at_current_throughput": true }
+    },
+    "composite_readiness_after_minimum_actions": 82,
+    "risk_adjusted": "79-82 (DL-031 paired constraint risk)"
+  },
+  "s370_conditions": {
+    "condition_1_dl035": { "status": "MET after S373 execution", "hours": 6.2, "calendar_waves": 1 },
+    "condition_2_cognitive_gap": { "status": "MET — S371 defined complete 966-item model", "hours": 0 },
+    "condition_3_expansion_readiness": { "status": "MET after minimum actions (projected 82)", "hours": 44.2, "calendar_waves": 6 },
+    "condition_4_automation": { "status": "MET after deployment", "hours": 10, "calendar_waves": 2 }
+  },
+  "final_question": {
+    "reachable_without_throughput_increase": true,
+    "caveat": "Expansion AUTHORIZATION reachable at 1 wave/week in ~6-8 weeks. Expansion EXECUTION (41-wave cognitive gap closure) NOT viable at 1 wave/week. Authorization must be conditioned on throughput ramp.",
+    "minimum_throughput_increase": { "waves_per_week_from": 1, "waves_per_week_to": 3, "pct_increase": 200 },
+    "calendar_time_to_expansion_ready": {
+      "at_current_velocity": "6-8 weeks to authorization (~mid-September 2026)",
+      "at_recommended_velocity": "2-3 weeks to authorization; ~14-18 weeks to full cognitive gap closure (~November 2026)"
+    },
+    "blockers": [
+      { "blocker": "DL-031 paired constraint", "severity": "HIGH", "mitigation": "Run Simple Relabel as batch automation; acknowledge temporary Easy inflation" },
+      { "blocker": "Evaluate throughput", "severity": "CRITICAL", "mitigation": "Increase wave frequency to 3/week + dedicated Evaluate workstream" },
+      { "blocker": "Reviewer fatigue", "severity": "MEDIUM", "mitigation": "Two-tier certification + domain rotation + 14-week compressed program" }
+    ]
+  },
+  "executive_decision": {
+    "verdict": "EXPANSION FEASIBLE",
+    "rationale": "Authorization achievable at 1 wave/week in 6-8 weeks. Quality floor secure (DL-008=0, DL-026=0 Certified). Foundational calibration (DL-031) scoped at 23h with acknowledged paired-constraint risk. Execution requires mandated throughput increase to 3 waves/week before Phase 2 begins.",
+    "conditions_if_feasible": [
+      "CONDITION A: DL-035 remediated before further certifications (6.2h, 1 wave)",
+      "CONDITION B: DL-031 Simple Relabel + Calibration executed (23h, 3 waves, paired constraint)",
+      "CONDITION C: Automation package deployed concurrently (10h, 1-2 waves)",
+      "CONDITION D: Throughput ramp to 2-3 waves/week authorized before Phase 2",
+      "CONDITION E: Cognitive Gap Phase 1 initiated within 1 wave of DL-031 completion",
+      "CONDITION F: Evaluate design workstream launched as dedicated parallel track"
+    ],
+    "next_action": "S375 — 3-wave authorization sprint: W1=DL-035, W2=DL-031 Simple Relabel + Automation, W3=DL-031 Calibration + Cognitive Gap Phase 1 kickoff. Gate S376 for final Go/No-Go."
+  }
+}

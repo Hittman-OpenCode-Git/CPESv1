@@ -1,0 +1,41 @@
+{
+  "session": "713",
+  "timestamp": "2026-07-26T02:00:00",
+  "type": "DL-031 calibration results",
+  "total_items_recalibrated": 186,
+  "recalibration_rules": {
+    "short_stem_3_to_2": "Items with stem <=100 chars, Moderate/3 → Moderate-Easy/2",
+    "short_stem_4_to_2": "Items with stem <=100 chars, Difficult/4 → Moderate-Easy/2 (Pack E over-inflated items)",
+    "medium_stem_3_to_2": "Items with stem 101-150 chars, clear definitional language, Moderate/3 → Moderate-Easy/2"
+  },
+  "pack_breakdown": {
+    "pack_a": { "items": 3, "before": "3 × Moderate/3", "after": "3 × Moderate-Easy/2" },
+    "pack_b": { "items": 34, "before": "34 × Moderate/3", "after": "34 × Moderate-Easy/2" },
+    "pack_c": { "items": 46, "before": "46 × Moderate/3", "after": "46 × Moderate-Easy/2" },
+    "pack_d": { "items": 13, "before": "13 × Moderate/3", "after": "13 × Moderate-Easy/2" },
+    "pack_e": { "items": 90, "before": "54 × Moderate/3 + 36 × Difficult/4", "after": "90 × Moderate-Easy/2" }
+  },
+  "distribution_impact": {
+    "moderate_easy_before": 29,
+    "moderate_easy_after": 215,
+    "moderate_easy_gain": 186,
+    "moderate_before": 1403,
+    "moderate_after": 1253,
+    "moderate_loss": 150,
+    "difficult_before": 244,
+    "difficult_after": 208,
+    "difficult_loss": 36,
+    "easy_unchanged": 823,
+    "very_difficult_unchanged": 0
+  },
+  "fields_preserved": {
+    "answer_keys_unchanged": true,
+    "stems_unchanged": true,
+    "choices_unchanged": true,
+    "explanations_unchanged": true,
+    "certification_states_unchanged": true,
+    "only_difficulty_and_difficultyscore_modified": true
+  },
+  "method": "parse-modify-write via Function constructor + JSON.stringify",
+  "remaining_gap_note": "823 Easy items (32.9%) and 0 Very Difficult items are pre-existing content-creation gaps, not calibration errors. S713 addressed definition-match inflation only."
+}

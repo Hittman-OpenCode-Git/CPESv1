@@ -1,0 +1,61 @@
+{
+  "title": "SESSION313_PORTFOLIO_IMPACT_ANALYSIS",
+  "session": "313",
+  "generated": "2026-07-27",
+  "methodology": "Portfolio-level impact estimation of Wave 1 Domain E certification. Computes: certified count delta, Domain E improvement, UIQS gain, progress toward 2,500 target. Based on S312 inventory data (375 Domain E items: 208 certified, 129 archived, 38 unprocessed) and S313 certification decisions (10 CERTIFY).",
+  "current_state": {
+    "total_items_portfolio": 2500,
+    "certified_before_s313": 2181,
+    "certified_pct_before": "87.2%",
+    "domain_e_items": 375,
+    "domain_e_certified_before": 208,
+    "domain_e_archived": 129,
+    "domain_e_unprocessed": 38
+  },
+  "s313_impact": {
+    "items_certified_this_session": 10,
+    "archive_items_replaced": 50,
+    "certified_after_s313": 2191,
+    "certified_pct_after": "87.6%",
+    "delta_certified": "+10",
+    "delta_pct": "+0.4%"
+  },
+  "domain_e_impact": {
+    "domain_e_certified_before": 208,
+    "domain_e_certified_after": 218,
+    "domain_e_certified_pct": "58.1%",
+    "domain_e_archived_remaining": 119,
+    "domain_e_unprocessed_remaining": 38,
+    "domain_e_remaining": 157,
+    "domain_e_progress": "Wave 1 (10/43 replacement groups) = 23% of replacement phase"
+  },
+  "uiqs_impact": {
+    "candidate_uiqs": 81.3,
+    "grade": "A-",
+    "existing_domain_e_benchmark": 77.1,
+    "delta_vs_benchmark": "+4.2",
+    "projected_full_domain_e_uiqs": "79.5-82.0",
+    "trend": "Rising — modernization content is higher quality than legacy certified pool"
+  },
+  "projections": {
+    "completion_scenario": {
+      "description": "All 43 replacement groups + 38 certification candidates completed (S314-S317)",
+      "target_certified": 2262,
+      "target_pct": "90.5%",
+      "domain_e_certified": 291,
+      "domain_e_pct": "77.6%",
+      "remaining_to_2500": 238,
+      "remaining_gap_description": "Gap to 2,500 driven by: Pack C Sections C-F (150 items), Pack A Sections B/C/F (19 items), Pack D Section C (50 DL-026 items), Pack C Section B (54 DL-008 items)"
+    }
+  },
+  "modernization_progress": {
+    "phase": "800-Series — Domain E Modernization",
+    "wave": 1,
+    "total_replacement_groups": 33,
+    "groups_completed": 10,
+    "groups_remaining": 23,
+    "progress_pct": "30.3%",
+    "completed_sessions": ["S312 (Authoring)", "S313 (Certification Review)"],
+    "upcoming_sessions": ["S314 (Wave 2 Authoring + Scale-Up)", "S315 (Wave 2 Certification)", "S316 (Wave 3)", "S317 (Domain E Closeout)"]
+  }
+}

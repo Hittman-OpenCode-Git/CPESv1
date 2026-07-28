@@ -1,0 +1,423 @@
+{
+  "planning_package_id": "SESSION319_PLANNING_PACKAGE",
+  "title": "Session 319 — Domain E Seed Certification Pipeline Authorization & Replacement Gap Closure",
+  "session": "319",
+  "program": "CMA Part 1 — Domain E Modernization (Clone Group Replacement + Seed Certification)",
+  "planning_date": "2026-07-27",
+  "predecessor_session": "S318",
+  "predecessor_dashboard": "SESSION318_DASHBOARD.json",
+  "document_type": "Planning Package — Agent Assignments, Gates, Deliverables, Decision Tree",
+  "s808_correction_note": "THIS FILE HAS BEEN CORRECTED. The original S319 planning package incorrectly assumed Wave 2b insertion was a blocking condition requiring recovery. S808 has already executed Wave 2b insertion — all 10 Wave 2b items (R12,R13,R18,R21,R22,R23,R24,R25,R28,R33) are in production. S319 scope has been revised to reflect the actual remaining work: seed certification pipeline authorization (PRIMARY) and remaining 3 replacement group authoring (SECONDARY).",
+
+  "1_EXECUTIVE_SUMMARY": {
+    "s319_purpose": "S319 is the Domain E Seed Certification Program launch session. Its primary objective is formal authorization of the 38-seed certification pipeline for Pack C/D Domain E seeds. Its secondary objective is authoring the 3 remaining replacement groups to complete all 43 Domain E replacement items. The Wave 2b insertion blocker has been resolved by S808 — all 40 currently authored replacement items are in production.",
+    "critical_context": "S808 executed Wave 2b insertion. 40 of 43 replacement items are now authored and in production within pack_e_corrected.js. 33/33 clone groups have production replacements. Portfolio stands at 2,221 certified. The remaining work is: (a) authorize the seed certification pipeline for 38 Pack C/D seeds, and (b) author the final 3 replacement groups. Registry synchronization (20 missing ledger entries, MQR gaps) is a supporting task for Agent D.",
+    "s318_baseline_post_s808": {
+      "domain_e_certified": 238,
+      "domain_e_denominator": 359,
+      "domain_e_cert_rate_pct": 66.3,
+      "portfolio_certified": 2221,
+      "portfolio_target": 2500,
+      "portfolio_cert_rate_pct": 88.4,
+      "modernization_progress": "40/81 (49.4%)",
+      "pack_e_size": 540,
+      "clone_groups_production": "33/33 (100.0%)",
+      "clone_groups_certified": "33/33 (100.0%)",
+      "wave_2b_status": "INSERTED_BY_S808",
+      "seed_status": "0/38 certified — all Unprocessed, awaiting pipeline authorization",
+      "replacement_groups_remaining": 3,
+      "replacement_groups_authored": 40
+    }
+  },
+
+  "2_AGENT_STAFFING": {
+    "total_agents": 4,
+    "governance_note": "All agents operate under the 4-agent governance model established in SESSION724_FOUR_AGENT_GOVERNANCE_STRATEGY.json. Agent roles are non-overlapping; each agent owns one deliverable lane. Cross-agent dependencies are explicitly declared.",
+
+    "agent_a": {
+      "id": "Agent A",
+      "role": "STARTUP GOVERNANCE — Session Initialization & S318 Baseline Verification",
+      "responsibilities": [
+        "Verify S318 post-S808 baseline: 2,221 certified items, 33/33 clone groups in production, 40/81 modernization, pack_e_corrected.js at 540 items",
+        "Confirm all 40 production replacement items present with ProductionStatus='Production'",
+        "Verify Wave 2b insertion record: SESSION808_AUTHORING_BATCH_WAVE2B.json confirms all 10 items inserted",
+        "Audit registry state: QUESTION_SIMILARITY_LEDGER at 20 entries, MASTER_QUESTION_REGISTRY gaps documented",
+        "Establish S319 session baseline: write SESSION319_BASELINE.json capturing pre-session state",
+        "Verify no file locks or conflicting sessions on pack_e_corrected.js or registry files",
+        "Report: SESSION319_AGENT_A_STARTUP.json"
+      ],
+      "deliverables": [
+        "SESSION319_AGENT_A_STARTUP.json — session baseline verification with S318 post-S808 state confirmation",
+        "S319 startup gate PASS/FAIL declaration"
+      ],
+      "dependencies": [],
+      "estimated_duration": "First 25% of session"
+    },
+
+    "agent_b": {
+      "id": "Agent B",
+      "role": "SEED PIPELINE AUTHORIZATION — Audit 38 Seeds, Authorize Certification Phases",
+      "responsibilities": [
+        "Load and audit all 38 seed items from Packs C and D Domain E Unprocessed inventory",
+        "Assess each seed against CAQS §1.6 six-dimension standard: EC adequacy, EW completeness, stem quality, distractor quality, LOSTag precision, metadata calibration",
+        "Cross-reference seeds against existing pack_e items to confirm no duplicate stems or UniqueConceptKey collisions",
+        "Define phased certification pipeline: Phase 1 (quality triage), Phase 2 (EW gap fill), Phase 3 (EC expansion), Phase 4 (stem/distractor rewrite), Phase 5 (LOSTag + metadata calibration), Phase 6 (CAQS §1.6 final certification)",
+        "Produce seed certification authorization board with go/no-go for each phase",
+        "Estimate session budget per phase based on seed quality assessment",
+        "Report: SESSION319_AGENT_B_SEED_AUTHORIZATION.json"
+      ],
+      "deliverables": [
+        "SESSION319_AGENT_B_SEED_AUTHORIZATION.json — seed audit results, pipeline authorization, phase schedule",
+        "Seed inventory quality matrix — per-seed scores across 6 CAQS dimensions",
+        "Pipeline phase schedule: S320 (cross-ref audit), S321-S323 (EW gap fill), S324-S326 (EC expansion), S327-S329 (stem/distractor), S330 (LOSTag+metadata), S331-S332 (CAQS §1.6 cert)"
+      ],
+      "dependencies": ["Agent A — S319 baseline verification must complete before seed pipeline audit begins"],
+      "estimated_duration": "Second 25% of session"
+    },
+
+    "agent_c": {
+      "id": "Agent C",
+      "role": "REPLACEMENT GAP CLOSURE — Author Remaining 3 Replacement Items",
+      "responsibilities": [
+        "Identify the 3 remaining un-authored replacement groups from the Domain E replacement specification",
+        "Author complete replacement items for each group: Stems (≥100 chars), 4 answer choices, ExplanationCorrect (≥400 chars), 3 EW slots (≥100 chars each), LOSTags, metadata",
+        "Ensure DL-008 compliance: EW[CorrectChoice] = '' for all 3 items",
+        "Ensure DL-026 compliance: all non-CC EW slots populated",
+        "Insert 3 new replacement items into pack_e_corrected.js (540→543 items)",
+        "Cross-validate QID uniqueness against existing 40 replacement QIDs",
+        "Report: SESSION319_AGENT_C_REPLACEMENT_GAP_CLOSURE.json"
+      ],
+      "deliverables": [
+        "SESSION319_AGENT_C_REPLACEMENT_GAP_CLOSURE.json — gap closure report with authored item details",
+        "3 new replacement items authored with full content and metadata",
+        "Updated pack_e_corrected.js (540→543 items)",
+        "Replacement gap closure attestation: all 43 replacement items now authored"
+      ],
+      "dependencies": ["Agent B — seed pipeline audit should not block replacement authoring; these are independent work streams"],
+      "estimated_duration": "Third 25% of session"
+    },
+
+    "agent_d": {
+      "id": "Agent D",
+      "role": "REGISTRY REBUILD — Atomic Registry Synchronization & Dashboard Compilation",
+      "responsibilities": [
+        "Update QUESTION_SIMILARITY_LEDGER.json: add 20 missing entries for R12,R13,R18,R21,R22,R23,R24,R25,R26,R27,R28,R29,R33,R34,R35,R36,R37,R38,R39,R40",
+        "Plus 3 new entries for the replacement items authored by Agent C",
+        "Update all 20 existing REPLACEMENT_PENDING entries to REPLACEMENT status with populated ReplacedQIDs",
+        "Update MASTER_QUESTION_REGISTRY.md: add missing replacement QID rows (currently 4,285 per S808; add at least 20 replacement rows plus Agent C items)",
+        "Re-verify DUPLICATE_PREVENTION_REPORT.json: Gate 0 collision scan across all replacement QIDs",
+        "Update Domain E registry: add all 43 replacement QIDs (currently only R01-R10 present)",
+        "Cross-registry consistency audit: MQR, QSL, DPR, and Domain E registry all agree",
+        "Compile SESSION319_DASHBOARD.json with unified session summary",
+        "Report: SESSION319_AGENT_D_REGISTRY_REBUILD.json"
+      ],
+      "deliverables": [
+        "SESSION319_AGENT_D_REGISTRY_REBUILD.json — registry synchronization report",
+        "Updated QUESTION_SIMILARITY_LEDGER.json (43 entries — 40 existing + 3 new)",
+        "Updated MASTER_QUESTION_REGISTRY.md",
+        "Updated DUPLICATE_PREVENTION_REPORT.json",
+        "Updated Domain E registry",
+        "SESSION319_DASHBOARD.json — unified session dashboard"
+      ],
+      "dependencies": [
+        "Agent A — baseline verification",
+        "Agent C — replacement gap closure (for 3 new QIDs to register)",
+        "Agent B — seed pipeline authorization (for dashboard compilation)"
+      ],
+      "estimated_duration": "Final 25% of session"
+    }
+  },
+
+  "3_EXPECTED_DELIVERABLES": {
+    "title": "S319 Deliverable Inventory — 8 Expected Artifacts",
+    "primary_deliverables": [
+      {
+        "id": "D01",
+        "file": "SESSION319_AGENT_A_STARTUP.json",
+        "description": "Session baseline verification: confirms S318 post-S808 state (2,221 certified, 33/33 clones, 40/81 modernization, pack_e at 540 items)",
+        "owner": "Agent A",
+        "format": "JSON",
+        "required_for_gate": "G-A1"
+      },
+      {
+        "id": "D02",
+        "file": "SESSION319_AGENT_B_SEED_AUTHORIZATION.json",
+        "description": "Seed pipeline authorization: 38-seed audit results, CAQS §1.6 quality matrix, phased certification pipeline schedule, go/no-go decisions per phase",
+        "owner": "Agent B",
+        "format": "JSON",
+        "required_for_gate": "G-B1"
+      },
+      {
+        "id": "D03",
+        "file": "SESSION319_AGENT_C_REPLACEMENT_GAP_CLOSURE.json",
+        "description": "Replacement gap closure report: 3 authored items with full content, DL-008/DL-026 compliance verification, insertion confirmation",
+        "owner": "Agent C",
+        "format": "JSON",
+        "required_for_gate": "G-C1"
+      },
+      {
+        "id": "D04",
+        "file": "pack_e_corrected.js (updated)",
+        "description": "Updated from 540 to 543 items with 3 new replacement items inserted by Agent C",
+        "owner": "Agent C",
+        "format": "JavaScript source file",
+        "required_for_gate": "G-C1"
+      },
+      {
+        "id": "D05",
+        "file": "SESSION319_AGENT_D_REGISTRY_REBUILD.json",
+        "description": "Registry synchronization report: QSL updates (43 entries), MQR updates, DPR re-verification, Domain E registry update, cross-registry consistency audit",
+        "owner": "Agent D",
+        "format": "JSON",
+        "required_for_gate": "G-D1"
+      },
+      {
+        "id": "D06",
+        "file": "QUESTION_SIMILARITY_LEDGER.json (updated)",
+        "description": "Updated from 20 to 43 entries. All entries marked REPLACEMENT with populated ReplacedQIDs. Missing 20 entries (R12,R13,R18,R21-R29,R33-R40) added plus 3 new entries from Agent C.",
+        "owner": "Agent D",
+        "format": "JSON (registry file)",
+        "required_for_gate": "G-D1"
+      },
+      {
+        "id": "D07",
+        "file": "MASTER_QUESTION_REGISTRY.md (updated)",
+        "description": "Updated with all 43 replacement QIDs. Currently at 4,285 entries per S808; missing at least 20 replacement item rows plus Domain E registry gap of 30 items.",
+        "owner": "Agent D",
+        "format": "Markdown (registry file)",
+        "required_for_gate": "G-D1"
+      },
+      {
+        "id": "D08",
+        "file": "SESSION319_DASHBOARD.json",
+        "description": "S319 session dashboard: unified summary, gate statuses, Domain E modernization state, forward plan to S320",
+        "owner": "Agent D (compilation) / All agents (input)",
+        "format": "JSON",
+        "required_for_gate": "Session close"
+      }
+    ],
+    "registry_updates_required": [
+      "QUESTION_SIMILARITY_LEDGER.json: +20 missing entries (R12,R13,R18,R21-R29,R33-R40) + 3 new entries (Agent C items) = 43 total",
+      "MASTER_QUESTION_REGISTRY.md: +23 replacement rows minimum (20 missing + 3 new)",
+      "DUPLICATE_PREVENTION_REPORT.json: Re-verify Gate 0 for all 43 replacement QIDs; 20 currently unregistered items need collision scan",
+      "Domain E registry: +33 replacement QIDs (currently only R01-R10 present; missing 30 existing + 3 new)"
+    ]
+  },
+
+  "4_GATE_REQUIREMENTS": {
+    "title": "S319 Gate Requirements — 4 Gates, One Per Agent Lane",
+
+    "gate_a1_session_baseline": {
+      "gate": "G-A1",
+      "owner": "Agent A",
+      "description": "S319 session baseline verified against S318 post-S808 state",
+      "criteria": [
+        "Portfolio certified count confirmed at 2,221",
+        "Clone groups confirmed at 33/33 production (100%)",
+        "Modernization confirmed at 40/81 (49.4%)",
+        "pack_e_corrected.js confirmed at 540 items, syntactically valid",
+        "All 40 production replacement items confirmed present",
+        "Wave 2b insertion confirmed (SESSION808_AUTHORING_BATCH_WAVE2B.json record)",
+        "Registry state captured: QSL at 20 entries, MQR gaps documented",
+        "No file locks on pack_e_corrected.js or registry files",
+        "SESSION319_AGENT_A_STARTUP.json written"
+      ],
+      "pass_action": "Agents B and C authorized to begin (independent work streams)",
+      "fail_action": "Session halt. Reconcile S318 state before proceeding."
+    },
+
+    "gate_b1_seed_authorization": {
+      "gate": "G-B1",
+      "owner": "Agent B",
+      "description": "Seed certification pipeline formally authorized",
+      "criteria": [
+        "All 38 seeds audited for CAQS §1.6 readiness (6-dimension quality matrix)",
+        "Cross-pack deduplication check: no seed duplicates existing pack_e items",
+        "Phased pipeline schedule published: S320-S332",
+        "Per-phase go/no-go criteria defined",
+        "Session budget estimated per phase",
+        "Risk register updated with seed remediation effort calibration",
+        "SESSION319_AGENT_B_SEED_AUTHORIZATION.json written"
+      ],
+      "pass_action": "Seed pipeline activation decision documented; Agent D incorporates into dashboard",
+      "fail_action": "Document blocking conditions. Pipeline held until blockers resolved."
+    },
+
+    "gate_c1_gap_closure": {
+      "gate": "G-C1",
+      "owner": "Agent C",
+      "description": "Remaining 3 replacement groups authored and inserted",
+      "criteria": [
+        "3 new replacement items authored with full content (Stems ≥100 chars, EC ≥400 chars, EW slots ≥100 chars)",
+        "DL-008 compliance: EW[CorrectChoice] = '' for all 3 items",
+        "DL-026 compliance: all non-CC EW slots populated",
+        "QID uniqueness verified against existing 40 replacement QIDs",
+        "pack_e_corrected.js updated: 540→543 items, parse test PASS",
+        "All 43 replacement items now authored (100% replacement gap closure)",
+        "SESSION319_AGENT_C_REPLACEMENT_GAP_CLOSURE.json written"
+      ],
+      "pass_action": "Agent D authorized to incorporate 3 new QIDs into registry rebuild",
+      "fail_action": "Partial closure documented. Un-authored groups deferred to S320."
+    },
+
+    "gate_d1_registry_rebuild": {
+      "gate": "G-D1",
+      "owner": "Agent D",
+      "description": "Full atomic registry rebuild complete",
+      "criteria": [
+        "QUESTION_SIMILARITY_LEDGER: 43 entries, all REPLACEMENT status, all ReplacedQIDs populated",
+        "MASTER_QUESTION_REGISTRY: all 43 replacement QIDs present in Domain E section",
+        "DUPLICATE_PREVENTION_REPORT: Gate 0 PASS for all 43 replacement QIDs",
+        "Domain E registry: all 43 replacement QIDs listed",
+        "Cross-registry consistency: QSL entry count = MQR replacement row count = DPR Gate 0 QID count",
+        "SESSION319_AGENT_D_REGISTRY_REBUILD.json written",
+        "SESSION319_DASHBOARD.json compiled with unified session summary"
+      ],
+      "pass_action": "S319 closes. All deliverables complete. S320 ready for seed cross-reference audit.",
+      "fail_action": "Rollback registry changes. Document inconsistency. Re-attempt rebuild."
+    }
+  },
+
+  "5_SUCCESS_CRITERIA": {
+    "title": "S319 Success Criteria — Minimum Viable Session Outcomes",
+    "primary_success": {
+      "criterion": "Seed certification pipeline formally authorized with phased schedule",
+      "measurement": "SESSION319_AGENT_B_SEED_AUTHORIZATION.json published. 38 seeds audited. Pipeline phases defined. Go/no-go criteria established.",
+      "threshold": "MUST achieve for session to be considered successful"
+    },
+    "secondary_success": {
+      "criterion": "Remaining 3 replacement groups authored and inserted into pack_e_corrected.js",
+      "measurement": "pack_e_corrected.js at 543 items. All 43 replacement items now authored. 3 new items pass DL-008/DL-026. Parse test PASS.",
+      "threshold": "SHOULD achieve — can slip to S320 if seed pipeline audit consumes full session"
+    },
+    "tertiary_success": {
+      "criterion": "Full atomic registry rebuild with 43 ledger entries, updated MQR, and re-verified DPR",
+      "measurement": "QSL at 43 entries. MQR updated. DPR Gate 0 PASS. Domain E registry complete. Cross-registry consistency verified.",
+      "threshold": "SHOULD achieve — registry rebuild must happen before S320 seed cross-reference audit begins"
+    },
+    "session_failure_conditions": [
+      "S319 closes without seed pipeline authorization",
+      "pack_e_corrected.js is modified but parse test fails",
+      "Registry updates are partial (some registries updated, others not)",
+      "Wave 2b insertion is rolled back (should not happen — S808 insertion is permanent)",
+      "No S320 handoff package exists"
+    ]
+  },
+
+  "6_S320_HANDOFF": {
+    "title": "Handoff to Session 320 — Seed Cross-Reference Audit",
+    "target_session": "S320",
+    "s320_primary_objective": "Pack C/D Seed Cross-Reference Audit — determine if Pack C and Pack D Domain E seeds are symmetric clones (same concept, different company name, different CC letter)",
+    "s320_rationale": "Before expending 9-12 sessions on 38 individual seed certifications, verify that Pack C seeds and Pack D seeds do not duplicate each other. The clone-group rotation pattern is symmetric across packs. If confirmed, consolidate to ~19 unique seeds (one per topic across both packs), reducing seed certification workload by ~50%.",
+    "s320_agent_staffing": {
+      "agent_a": { "role": "Pack C Seed Extraction — extract all P1-EC-XXX items with full metadata+content from pack_c_corrected.js" },
+      "agent_b": { "role": "Pack D Seed Extraction — extract all P1-ED-XXX items with full metadata+content from pack_d_corrected.js" },
+      "agent_c": { "role": "Cross-Reference Engine — match Pack C seeds to Pack D seeds by Topic/MicroTopic/UniqueConceptKey" },
+      "agent_d": { "role": "Consolidation Recommendation — produce deduplicated seed list and revised pipeline schedule" }
+    },
+    "s320_inputs_from_s319": [
+      "SESSION319_DASHBOARD.json — Domain E modernization state (43/81 if gap closed, 40/81 otherwise)",
+      "SESSION319_AGENT_B_SEED_AUTHORIZATION.json — seed pipeline authorization and phase schedule",
+      "pack_e_corrected.js — at 543 items (if gap closed) or 540 items (if deferred)",
+      "Updated registry files — QSL at 43 entries, MQR updated, DPR re-verified"
+    ]
+  },
+
+  "7_RISK_REGISTER": {
+    "title": "S319 Session Risk Register",
+    "risks": [
+      {
+        "id": "RISK-S319-001",
+        "risk": "Seed Quality Degradation — 38 seeds may require more remediation than estimated",
+        "severity": "MODERATE",
+        "probability": "MODERATE",
+        "description": "The 38 Pack C/D seeds currently score 1-3/10 across CAQS dimensions. If remediation effort is higher than estimated, the pipeline phase schedule may slip.",
+        "mitigation": "Agent B performs per-seed quality triage to calibrate effort estimates. Pilot first 5 seeds to validate remediation effort model.",
+        "contingency": "Extend pipeline phases. Prioritize highest-quality seeds first for early wins."
+      },
+      {
+        "id": "RISK-S319-002",
+        "risk": "Replacement Group Specification Ambiguity",
+        "severity": "MODERATE",
+        "probability": "LOW",
+        "description": "The 3 remaining replacement groups may have incomplete or ambiguous specifications, requiring Agent C to make authoring decisions without full spec coverage.",
+        "mitigation": "Agent C references SESSION311_DOMAIN_E_REPLACEMENT_SPEC.json and existing 40 replacement items as templates.",
+        "contingency": "Document assumptions. Flag ambiguous specs for governance review."
+      },
+      {
+        "id": "RISK-S319-003",
+        "risk": "pack_e_corrected.js Parse Failure After Gap Insertion",
+        "severity": "HIGH",
+        "probability": "LOW",
+        "description": "Inserting 3 items could introduce syntax errors.",
+        "mitigation": "Agent C runs full parse test after insertion. Pre-insertion backup of pack_e_corrected.js.",
+        "contingency": "Rollback to pre-insertion backup. Debug and re-attempt."
+      },
+      {
+        "id": "RISK-S319-004",
+        "risk": "Registry Update Inconsistency",
+        "severity": "MODERATE",
+        "probability": "LOW",
+        "description": "MQR, QSL, DPR, and Domain E registry may end up with inconsistent counts.",
+        "mitigation": "Agent D performs cross-registry consistency audit after all updates.",
+        "contingency": "Re-run registry updates from consistent state."
+      },
+      {
+        "id": "RISK-S319-005",
+        "risk": "Agent Lane Dependency Stall",
+        "severity": "LOW",
+        "probability": "LOW",
+        "description": "Agent D depends on Agent C (gap closure) and Agent B (seed authorization). If either is delayed, Agent D's registry rebuild is delayed.",
+        "mitigation": "Agents B and C work in parallel (independent streams). Agent D can begin QSL updates for known QIDs before Agent C completes.",
+        "contingency": "Delegate partial registry updates to S320 if S319 time is exhausted."
+      }
+    ]
+  },
+
+  "8_ASSUMPTIONS": {
+    "assumptions": [
+      "S808 Wave 2b insertion is complete and permanent — all 10 Wave 2b items are in production with full content.",
+      "pack_e_corrected.js is at 540 items as of S318 post-S808 close and is syntactically valid.",
+      "The 38 Pack C/D seeds are accessible from pack_c_corrected.js and pack_d_corrected.js with full item JSON.",
+      "The 3 remaining replacement groups are identifiable from SESSION311_DOMAIN_E_REPLACEMENT_SPEC.json.",
+      "No other session is modifying pack_e_corrected.js or registry files concurrently with S319.",
+      "The 4-agent governance model from SESSION724 is the operating framework.",
+      "Pack B Section E remains the stable quality benchmark. CAQS §1.6 and S311 Authoring Quality Gate thresholds are unchanged.",
+      "Session numbering is contiguous. S319 is followed by S320.",
+      "The 20 missing QUESTION_SIMILARITY_LEDGER entries were verified by reading the actual ledger file (confirmed: exactly 20 entries for R01-R11,R14-R17,R19-R20,R30-R32).",
+      "MASTER_QUESTION_REGISTRY.md is at 4,285 entries per S808 verification."
+    ]
+  },
+
+  "9_CROSS_REFERENCES": {
+    "source_artifacts": [
+      "SESSION318_DASHBOARD.json — comprehensive S318 baseline",
+      "SESSION318_READINESS_BOARD.json — S808-corrected readiness board (READY FOR S319, no conditions)",
+      "SESSION318_REGISTRY_SYNC.json — S808-corrected registry gap analysis",
+      "SESSION318_SEED_INVENTORY.json — 38-seed inventory with readiness assessment",
+      "SESSION318_CLONE_GROUP_CLOSURE_AUDIT.json — 33/33 certified, 33/33 production",
+      "SESSION808_AUTHORING_BATCH_WAVE2B.json — Wave 2b insertion record (already executed)",
+      "SESSION724_FOUR_AGENT_GOVERNANCE_STRATEGY.json — 4-agent governance model",
+      "SESSION311_DOMAIN_E_REPLACEMENT_SPEC.json — replacement item specifications",
+      "CAQS §1.6 — six-dimension certification standard",
+      "S311 Authoring Quality Gate v1.0 — EC >=400 chars, EW >=100 chars per slot"
+    ],
+    "registry_files": {
+      "QUESTION_SIMILARITY_LEDGER": "registry/QUESTION_SIMILARITY_LEDGER.json — 20 entries, needs 23 more (20 missing + 3 new)",
+      "MASTER_QUESTION_REGISTRY": "knowledge/MASTER_QUESTION_REGISTRY.md — 4,285 entries per S808, missing at least 20 replacement rows",
+      "DUPLICATE_PREVENTION_REPORT": "registry/DUPLICATE_PREVENTION_REPORT.json — needs re-verification for 20 unregistered items",
+      "DOMAIN_E_REGISTRY": "registry/domains/domain_e_registry.md — only R01-R10 present, missing 30 replacement items"
+    },
+    "production_files": [
+      "pack_e_corrected.js — 540 items, 40 replacement items in production"
+    ]
+  },
+
+  "notes": {
+    "s808_correction": "This planning package has been corrected to reflect S808's completed Wave 2b insertion. The original incorrectly treated Wave 2b as a blocking condition requiring Agent B recovery. Wave 2b insertion is DONE. Agent B's role is now seed pipeline authorization, not Wave 2b recovery.",
+    "seed_pipeline_readiness": "The 38 Pack C/D Domain E seeds are NOT ready for certification — they score 1-3/10 across EC adequacy, EW completeness, stem quality, distractor quality, and LOSTag precision. All 38 seeds require full remediation before entering the CAQS §1.6 pipeline. S319 authorizes the pipeline but does not begin seed remediation — that starts in S321 after the S320 cross-reference audit.",
+    "clone_group_closure": "All 33 clone groups have production replacements in pack_e (thanks to S808 Wave 2b insertion). The remaining 3 replacement groups are not clone-group replacements but address LO coverage holes.",
+    "replacement_count_trajectory": "40 authored (S318 post-S808) → 43 authored (S319 gap closure) → 43 in registry (S319 registry rebuild)",
+    "registry_sync_context": "QUESTION_SIMILARITY_LEDGER verified at 20 entries via direct file read. Missing entries: R12,R13,R18,R21,R22,R23,R24,R25,R26,R27,R28,R29,R33,R34,R35,R36,R37,R38,R39,R40 (20 missing). MASTER_QUESTION_REGISTRY.md verified at 4,285 entries per S808."
+  }
+}

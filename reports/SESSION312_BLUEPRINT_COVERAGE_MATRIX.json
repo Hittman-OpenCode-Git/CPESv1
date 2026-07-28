@@ -1,0 +1,159 @@
+﻿{
+  "title": "SESSION312_BLUEPRINT_COVERAGE_MATRIX",
+  "session": "312",
+  "generated": "2026-07-26T23:58:14.157Z",
+  "csoBlueprint": {
+    "section": "E — Internal Controls",
+    "topics": [
+      "E.1.a Corporate Governance",
+      "E.1.b Internal Control Framework (COSO 2013)",
+      "E.1.c Control Environment",
+      "E.1.d Risk Assessment",
+      "E.1.e Control Activities",
+      "E.1.f Information & Communication",
+      "E.1.g Monitoring",
+      "E.1.h Sarbanes-Oxley Act (SOX)",
+      "E.1.i External Auditing",
+      "E.1.j Systems Controls"
+    ]
+  },
+  "coverageMatrix": {
+    "Corporate Governance": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 0,
+      "clone_items_requiring_replacement": 0,
+      "clone_groups": 0,
+      "cloneTopicList": []
+    },
+    "Internal Control Framework (COSO 2013)": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 10,
+      "clone_items_requiring_replacement": 5,
+      "clone_groups": 1,
+      "cloneTopicList": [
+        "coso internal control framework"
+      ]
+    },
+    "Control Environment": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 1,
+      "clone_items_requiring_replacement": 15,
+      "clone_groups": 3,
+      "cloneTopicList": [
+        "fraud triangle elements",
+        "management override risk",
+        "control environment tone at top"
+      ]
+    },
+    "Risk Assessment": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 0,
+      "clone_items_requiring_replacement": 15,
+      "clone_groups": 3,
+      "cloneTopicList": [
+        "erm risk appetite",
+        "inherent risk vs control risk",
+        "risk assessment likelihood impact"
+      ]
+    },
+    "Control Activities": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 10,
+      "clone_items_requiring_replacement": 30,
+      "clone_groups": 6,
+      "cloneTopicList": [
+        "segregation of duties design",
+        "physical controls over assets",
+        "bank reconciliation control",
+        "compensating control small business",
+        "segregation cash custody recording",
+        "control activities authorization"
+      ]
+    },
+    "Information & Communication": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 3,
+      "clone_items_requiring_replacement": 5,
+      "clone_groups": 1,
+      "cloneTopicList": [
+        "whistleblower hotline purpose"
+      ]
+    },
+    "Monitoring": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 6,
+      "clone_items_requiring_replacement": 15,
+      "clone_groups": 3,
+      "cloneTopicList": [
+        "remediation of control deficiency",
+        "three lines of defense model",
+        "monitoring ongoing evaluations"
+      ]
+    },
+    "Sarbanes-Oxley Act (SOX)": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 6,
+      "clone_items_requiring_replacement": 0,
+      "clone_groups": 0,
+      "cloneTopicList": []
+    },
+    "External Auditing": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 0,
+      "clone_items_requiring_replacement": 0,
+      "clone_groups": 0,
+      "cloneTopicList": []
+    },
+    "Systems Controls": {
+      "coverage": "COVERED",
+      "packB_benchmark_items": 10,
+      "clone_items_requiring_replacement": 5,
+      "clone_groups": 1,
+      "cloneTopicList": [
+        "it general controls access"
+      ]
+    }
+  },
+  "packB_benchmark": {
+    "totalSectionE": 75,
+    "allCertified": true,
+    "hasDL008": 0,
+    "topicsCovered": [
+      "Internal Control Framework (COSO 2013)",
+      "Control Activities",
+      "Monitoring",
+      "Internal Controls (General)",
+      "Information & Communication",
+      "Systems Controls",
+      "Sarbanes-Oxley Act (SOX)",
+      "Control Environment"
+    ],
+    "difficultyDist": {
+      "Moderate": 35,
+      "Easy": 31,
+      "Moderate-Easy": 9
+    },
+    "clDist": {
+      "Understand": 34,
+      "Apply": 39,
+      "Remember": 1,
+      "Analyze": 1
+    }
+  },
+  "replacementCoverageGaps": [
+    "Corporate Governance",
+    "Risk Assessment",
+    "External Auditing"
+  ],
+  "summary": {
+    "totalCategories": 10,
+    "coveredByPackB": 7,
+    "gaps": [
+      "Corporate Governance",
+      "Risk Assessment",
+      "External Auditing"
+    ],
+    "totalCloneItemsNeedingReplacement": 140,
+    "uniqueCloneTopics": 28
+  }
+}

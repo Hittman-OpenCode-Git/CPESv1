@@ -1,0 +1,65 @@
+{
+  "session": "710R",
+  "timestamp": "2026-07-25T18:00:00",
+  "type": "Pre-flight and concurrency audit — analysis-only",
+  "pre_flight_tests": {
+    "governance_guard": "20/20 PASS",
+    "session_recovery": "12/12 PASS",
+    "readiness": "37/37 PASS",
+    "calibration": "18/18 PASS",
+    "tutoring_safety": "74/74 PASS",
+    "may_stagec": "119/119 PASS",
+    "may_renderer": "62/62 PASS",
+    "may_regression_r2": "42/42 PASS",
+    "may_load_check": "PASS",
+    "total": "384/0 PASS"
+  },
+  "parse_status": {
+    "pack_a": { "qid_count": 500, "parse_ok": true, "method": "Function constructor" },
+    "pack_b": { "qid_count": 500, "parse_ok": true, "method": "Function constructor" },
+    "pack_c": { "qid_count": 500, "parse_ok": true, "method": "Function constructor" },
+    "pack_d": { "qid_count": 500, "parse_ok": true, "method": "Function constructor", "missing_cc": 1 },
+    "pack_e": { "qid_count": 500, "parse_ok": true, "method": "Function constructor" }
+  },
+  "state_counts": {
+    "pack_a": { "qid_count": 500, "certified": 481, "archived": 19, "unprocessed": 0, "editorial_queue": 0 },
+    "pack_b": { "qid_count": 500, "certified": 500, "archived": 0, "unprocessed": 0, "editorial_queue": 0 },
+    "pack_c": { "qid_count": 500, "certified": 350, "archived": 56, "unprocessed": 94, "editorial_queue": 0 },
+    "pack_d": { "qid_count": 500, "certified": 350, "archived": 56, "unprocessed": 93, "editorial_queue": 0, "missing_cc": 1 },
+    "pack_e": { "qid_count": 500, "certified": 500, "archived": 0, "unprocessed": 0, "editorial_queue": 0 },
+    "cross_pack": { "total_qid": 2500, "total_certified": 2181, "total_archived": 131, "total_unprocessed": 187, "total_editorial": 0, "total_missing_cc": 1 }
+  },
+  "residual_defects": {
+    "dl008": 0,
+    "dl016": 0,
+    "dl025": 0,
+    "dl026_certified": 13,
+    "dl026_non_certified": 299
+  },
+  "concurrent_lane_check": {
+    "100_series_may": {
+      "may_core_js": "7/25/2026 4:38:34 PM — NOT modified by S710R",
+      "may_learner_state_js": "7/25/2026 4:34:47 PM — NOT modified by S710R",
+      "status": "CLEAN — concurrent 100-series activity present, S710R read-only"
+    },
+    "500_series_case": {
+      "scored_cases_js": "7/24/2026 6:46:09 PM — NOT modified by S710R",
+      "scored_cases2_js": "7/25/2026 4:20:43 PM — NOT modified by S710R",
+      "scored_cases3_js": "7/25/2026 5:02:53 PM — NOT modified by S710R",
+      "scored_cases4_js": "7/24/2026 9:52:06 PM — NOT modified by S710R",
+      "scored_cases5_js": "7/24/2026 9:50:01 PM — NOT modified by S710R",
+      "status": "CLEAN — concurrent 500-series activity present, S710R read-only"
+    },
+    "scoring_runtime": {
+      "app_js": "7/25/2026 4:43:53 PM — NOT modified by S710R",
+      "index_updated_html": "7/25/2026 4:44:53 PM — NOT modified by S710R",
+      "styles_css": "7/25/2026 1:19:59 PM — NOT modified by S710R",
+      "status": "CLEAN"
+    },
+    "pack_files": {
+      "status": "READ-ONLY. Zero writes. Timestamps unchanged from pre-session state."
+    },
+    "git_status": "Git not available on this system. File timestamps used for diff detection."
+  },
+  "no_conflict_attestation": "All concurrent-lane files have pre-existing timestamps. No S710R writes to any pack, case, May, or scoring/runtime file. Analysis-only session."
+}

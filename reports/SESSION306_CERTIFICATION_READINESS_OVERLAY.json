@@ -1,0 +1,62 @@
+{
+  "A": {
+    "totalItems": 433,
+    "certified": 425,
+    "certRate": 98.2,
+    "avgUiqsCertified": 70.9,
+    "avgUiqsUncertified": 38,
+    "avgUiqsOverall": 70.3,
+    "riskLevel": "Low",
+    "remainingEffortEstimate": 8
+  },
+  "B": {
+    "totalItems": 568,
+    "certified": 562,
+    "certRate": 98.9,
+    "avgUiqsCertified": 71.4,
+    "avgUiqsUncertified": 61.8,
+    "avgUiqsOverall": 71.3,
+    "riskLevel": "Low",
+    "remainingEffortEstimate": 6
+  },
+  "C": {
+    "totalItems": 574,
+    "certified": 564,
+    "certRate": 98.3,
+    "avgUiqsCertified": 74.7,
+    "avgUiqsUncertified": 36.9,
+    "avgUiqsOverall": 74.1,
+    "riskLevel": "Low",
+    "remainingEffortEstimate": 10
+  },
+  "D": {
+    "totalItems": 451,
+    "certified": 445,
+    "certRate": 98.7,
+    "avgUiqsCertified": 70.6,
+    "avgUiqsUncertified": 33,
+    "avgUiqsOverall": 70.1,
+    "riskLevel": "Low",
+    "remainingEffortEstimate": 6
+  },
+  "E": {
+    "totalItems": 442,
+    "certified": 264,
+    "certRate": 59.7,
+    "avgUiqsCertified": 76.4,
+    "avgUiqsUncertified": 41.9,
+    "avgUiqsOverall": 62.5,
+    "riskLevel": "High",
+    "remainingEffortEstimate": 178
+  },
+  "F": {
+    "totalItems": 431,
+    "certified": 281,
+    "certRate": 65.2,
+    "avgUiqsCertified": 72.6,
+    "avgUiqsUncertified": 43.2,
+    "avgUiqsOverall": 62.4,
+    "riskLevel": "High",
+    "remainingEffortEstimate": 150
+  }
+}

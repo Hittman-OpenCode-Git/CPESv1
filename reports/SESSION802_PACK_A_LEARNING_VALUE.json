@@ -1,0 +1,313 @@
+{
+  "session": "802",
+  "agent": "G",
+  "title": "Pack A Learning-Value Assessment",
+  "date": "2026-07-26",
+  "executive_summary": {
+    "pack_a_total": 500,
+    "certified": 481,
+    "archived": 19,
+    "sections_b_c_status": "Sections B and C are 100% Certified — no uncertified items remain. The 19 non-Certified items are all Archived (2 in Section A, 17 in Section E — DL-012 clone group).",
+    "key_finding": "Pack A Sections B and C have structurally sound explanations (0 DL-008, 0 DL-026) with substantive distractor feedback. Average EC length is adequate (B: 180 chars, C: 194 chars). Main improvement area: business interpretation (LS4) is present in only ~10% of explanations.",
+    "certification_readiness": "Both sections are already Certified and structurally clean. Educational quality is adequate (Grade C) — ready for learner delivery but could benefit from enrichment of business context and longer explanatory content."
+  },
+  "section_b": {
+    "total": 100,
+    "certified": 100,
+    "avg_ec_length": 180,
+    "median_ec_length": 186,
+    "ec_distribution": {
+      "short": 1,
+      "medium": 24,
+      "good": 74,
+      "excellent": 1
+    },
+    "avg_distractor_quality": "mixed",
+    "pct_distractors_50plus": 100,
+    "pct_distractors_100plus": 68,
+    "pct_distractors_150plus": 63,
+    "dl013_remaining": 0,
+    "dl008_count": 0,
+    "dl026_count": 0,
+    "ls1_principle_named_pct": 50,
+    "ls1_note": "For budgeting/performance domains, LS1 detects domain-specific concepts like 'flexible budget', 'standard cost', 'variance analysis'. Generic LS1 detects ASC/GAAP/COSO/IFRS references.",
+    "ls2_substantive_distractors_pct": 64,
+    "ls3_intermediate_steps_pct": 56,
+    "ls4_business_interpretation_pct": 13,
+    "grade": "B",
+    "grade_score": 18,
+    "samples": [
+      {
+        "qid": "P1-B-001",
+        "topic": "B.001 mission to tactical planning linkage",
+        "ec_length": 112,
+        "ec_preview": "Planning connects long-term strategy to operational budgets, responsibility assignments, and measurable targets.",
+        "cc": "D",
+        "ew_lengths": {
+          "EW_A": 422,
+          "EW_B": 428,
+          "EW_C": 443,
+          "EW_D": 0
+        }
+      },
+      {
+        "qid": "P1-B-002",
+        "topic": "B.002 top-down budgeting limitation",
+        "ec_length": 96,
+        "ec_preview": "Top-down budgeting can be efficient but may lack participation and detailed operational insight.",
+        "cc": "B",
+        "ew_lengths": {
+          "EW_A": 406,
+          "EW_B": 0,
+          "EW_C": 454,
+          "EW_D": 464
+        }
+      },
+      {
+        "qid": "P1-B-003",
+        "topic": "B.003 participative budgeting slack risk",
+        "ec_length": 125,
+        "ec_preview": "Participative budgeting improves information and commitment but can create budgetary slack if incentives are poorly designed.",
+        "cc": "B",
+        "ew_lengths": {
+          "EW_A": 472,
+          "EW_B": 0,
+          "EW_C": 442,
+          "EW_D": 410
+        }
+      },
+      {
+        "qid": "P1-B-004",
+        "topic": "B.004 rolling budget horizon",
+        "ec_length": 87,
+        "ec_preview": "A rolling budget continuously updates by adding a new period as the latest period ends.",
+        "cc": "B",
+        "ew_lengths": {
+          "EW_A": 520,
+          "EW_B": 0,
+          "EW_C": 468,
+          "EW_D": 445
+        }
+      },
+      {
+        "qid": "P1-B-005",
+        "topic": "B.005 zero-based budgeting review",
+        "ec_length": 97,
+        "ec_preview": "Zero-based budgeting requires justification of activities and spending levels from the ground up.",
+        "cc": "C",
+        "ew_lengths": {
+          "EW_A": 438,
+          "EW_B": 468,
+          "EW_C": 0,
+          "EW_D": 408
+        }
+      }
+    ]
+  },
+  "section_c": {
+    "total": 100,
+    "certified": 100,
+    "avg_ec_length": 194,
+    "median_ec_length": 218,
+    "ec_distribution": {
+      "short": 14,
+      "medium": 16,
+      "good": 66,
+      "excellent": 4
+    },
+    "avg_distractor_quality": "mixed",
+    "pct_distractors_50plus": 100,
+    "pct_distractors_100plus": 54,
+    "pct_distractors_150plus": 40,
+    "dl013_remaining": 0,
+    "dl008_count": 0,
+    "dl026_count": 0,
+    "ls1_principle_named_pct": 80,
+    "ls1_note": "For budgeting/performance domains, LS1 detects domain-specific concepts like 'flexible budget', 'standard cost', 'variance analysis'. Generic LS1 detects ASC/GAAP/COSO/IFRS references.",
+    "ls2_substantive_distractors_pct": 46,
+    "ls3_intermediate_steps_pct": 62,
+    "ls4_business_interpretation_pct": 8,
+    "grade": "B",
+    "grade_score": 18,
+    "samples": [
+      {
+        "qid": "P1-C-001",
+        "topic": "C.001 standard cost system purpose",
+        "ec_length": 460,
+        "ec_preview": "Standard costs are predetermined cost benchmarks for direct materials, direct labor, and overhead. They serve multiple purposes: they facilitate planning and budgeting by providing expected costs; the",
+        "cc": "A",
+        "ew_lengths": {
+          "EW_A": 0,
+          "EW_B": 208,
+          "EW_C": 208,
+          "EW_D": 174
+        }
+      },
+      {
+        "qid": "P1-C-002",
+        "topic": "C.002 management by exception",
+        "ec_length": 69,
+        "ec_preview": "Management by exception prioritizes variances that warrant attention.",
+        "cc": "B",
+        "ew_lengths": {
+          "EW_A": 347,
+          "EW_B": 0,
+          "EW_C": 305,
+          "EW_D": 306
+        }
+      },
+      {
+        "qid": "P1-C-003",
+        "topic": "C.003 controllable cost performance",
+        "ec_length": 73,
+        "ec_preview": "Responsibility accounting evaluates managers based on controllable items.",
+        "cc": "C",
+        "ew_lengths": {
+          "EW_A": 330,
+          "EW_B": 297,
+          "EW_C": 0,
+          "EW_D": 327
+        }
+      },
+      {
+        "qid": "P1-C-004",
+        "topic": "C.004 cost center evaluation",
+        "ec_length": 76,
+        "ec_preview": "Cost centers are evaluated on cost control and service measures, not profit.",
+        "cc": "C",
+        "ew_lengths": {
+          "EW_A": 327,
+          "EW_B": 316,
+          "EW_C": 0,
+          "EW_D": 346
+        }
+      },
+      {
+        "qid": "P1-C-005",
+        "topic": "C.005 profit center evaluation",
+        "ec_length": 59,
+        "ec_preview": "Profit centers are responsible for both revenues and costs.",
+        "cc": "B",
+        "ew_lengths": {
+          "EW_A": 277,
+          "EW_B": 0,
+          "EW_C": 323,
+          "EW_D": 328
+        }
+      }
+    ]
+  },
+  "section_f": {
+    "total": 75,
+    "certified": 75,
+    "avg_ec_length": 227,
+    "distractor_quality": "mixed",
+    "grade": "C",
+    "note": "Section F has partial certification with some items at different states."
+  },
+  "cross_section_summary": {
+    "A": {
+      "total": 75,
+      "certified": 73,
+      "avgEC": 408,
+      "grade": "B",
+      "distractor": "mixed"
+    },
+    "B": {
+      "total": 100,
+      "certified": 100,
+      "avgEC": 180,
+      "grade": "B",
+      "distractor": "mixed"
+    },
+    "C": {
+      "total": 100,
+      "certified": 100,
+      "avgEC": 194,
+      "grade": "B",
+      "distractor": "mixed"
+    },
+    "D": {
+      "total": 75,
+      "certified": 75,
+      "avgEC": 181,
+      "grade": "B",
+      "distractor": "mixed"
+    },
+    "E": {
+      "total": 75,
+      "certified": 58,
+      "avgEC": 986,
+      "grade": "A",
+      "distractor": "excellent"
+    },
+    "F": {
+      "total": 75,
+      "certified": 75,
+      "avgEC": 227,
+      "grade": "C",
+      "distractor": "mixed"
+    }
+  },
+  "comparison": {
+    "vs_pack_b_gold": {
+      "pack_a_b": {
+        "avgEC": 180,
+        "distr": "mixed",
+        "ls1": "50%",
+        "ls3": "56%",
+        "grade": "B"
+      },
+      "pack_b_b": {
+        "avgEC": 148,
+        "distr": "good",
+        "grade": "B"
+      },
+      "pack_a_c": {
+        "avgEC": 194,
+        "distr": "mixed",
+        "ls1": "80%",
+        "ls3": "62%",
+        "grade": "B"
+      },
+      "pack_b_c": {
+        "avgEC": 297,
+        "distr": "good",
+        "grade": "A"
+      },
+      "verdict": "Pack A Section B (avg EC 180) vs Pack B Section B (avg EC 148): Pack A has longer explanations. Pack A Section C (avg EC 194) vs Pack B Section C (avg EC 297): Pack B leads in Section C. "
+    },
+    "vs_pack_e_silver": {
+      "pack_e_b": {
+        "avgEC": 100,
+        "distr": "mixed",
+        "grade": "C"
+      },
+      "pack_e_c": {
+        "avgEC": 146,
+        "distr": "good",
+        "grade": "B"
+      },
+      "verdict": "Pack A Section B (avg EC 180) vs Pack E Section B (avg EC 100): Pack A significantly stronger. Pack A Section C (avg EC 194) vs Pack E Section C (avg EC 146): Pack A stronger."
+    }
+  },
+  "certification_readiness": {
+    "section_b": {
+      "ready": true,
+      "blockers": [],
+      "recommendation": "Already Certified. Educational quality is adequate for delivery. Recommended enrichment: add business context to more explanations (LS4 currently ~10%), increase EC depth for conceptual items (<80 chars: 1 items)."
+    },
+    "section_c": {
+      "ready": true,
+      "blockers": [],
+      "recommendation": "Already Certified. Section C has wider EC variance (69-460 chars). Short explanations on conceptual items (e.g., P1-C-002 at 69 chars) should be enriched. Distractor quality is excellent across all items."
+    }
+  },
+  "methodological_notes": {
+    "ls1": "Domain-adaptive principle detection. For Sections B (Budgeting) and C (Performance Management), detects domain-specific concepts (flexible budget, standard cost, variance, balanced scorecard) rather than only ASC/GASB citations.",
+    "ls2": "Measures substantive distractor analysis: EW >80 chars, non-boilerplate, textually connected to choice. This captures the actual educational quality — Pack A's distractors are rich (300-400+ chars typical) but don't use 'misconception' keywords.",
+    "ls3": "Detects calculation-oriented items via formula language, math operators, financial terms, and step-by-step language.",
+    "ls4": "Checks for business terminology (company/management/controller/CFO/board/stakeholder/decision impact) in explanations.",
+    "grade_formula": "Weighted: EC depth(5) + distractor quality(5) + LS1(3) + LS2(3) + LS3(3) + LS4(2) + structural cleanliness(4) = max 25"
+  }
+}

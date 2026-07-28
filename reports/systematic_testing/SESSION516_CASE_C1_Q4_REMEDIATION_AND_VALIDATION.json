@@ -1,0 +1,33 @@
+{
+  "session": "516",
+  "agent": "B",
+  "target": "CASE-C1-Q4 (CASE-C1, MIGRATED_CASE_BASE_C)",
+  "defect": {
+    "description": "Multi-select choice text 'The asset has an alternative use and the entity has a right to payment for performance completed to date' is factually opposite of GAAP",
+    "asc_reference": "ASC 606-10-25-27(c): The asset does NOT have an alternative use to the entity and the entity has an enforceable right to payment for performance completed to date",
+    "affected_fields": ["Choices[2]", "Correct[2]"],
+    "before": "The asset has an alternative use and the entity has a right to payment for performance completed to date",
+    "after": "The asset does NOT have an alternative use and the entity has an enforceable right to payment for performance completed to date"
+  },
+  "remediation": {
+    "choice_fix": "Applied to both Choices[2] and Correct[2]",
+    "explanation_enhancement": "Updated to full ASC 606-10-25-27 description with distractor rationale",
+    "explanation_before_length": 323,
+    "explanation_after_length": 648
+  },
+  "focused_caqs_validation": {
+    "D1_answer_key": "PASS — choice text now says 'does NOT have an alternative use', aligning with ASC 606",
+    "D2_explanation": "PASS — names ASC 606-10-25-27, explains all three criteria, discusses wrong choice",
+    "D3_distractor": "PASS — explains why 'always recognized over time' is incorrect",
+    "D4_references": "PASS — ASC 606-10-25-27 citation present and accurate",
+    "D5_realism": "PASS — revenue recognition criteria within case context",
+    "D6_metadata": "PASS — all required fields present"
+  },
+  "certification_action": {
+    "CASE-C1-Q4": "Unprocessed → Certified",
+    "CASE-C1_case_level": "Unprocessed → Certified (all 5 items now Certified)"
+  },
+  "final_state": {
+    "MIGRATED_CASE_BASE_C": "75/75 items Certified, 15/15 cases Certified"
+  }
+}

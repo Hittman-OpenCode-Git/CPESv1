@@ -1,0 +1,36 @@
+{
+  "agent": "I",
+  "session": "S301",
+  "phase": 3,
+  "domain": "Section-Level Readiness Aggregation",
+  "aggregation_rules": {
+    "section_score": "weighted arithmetic mean of item readiness scores within section",
+    "minimum_gate": "Every item in section must score >= 60 AND no item with critical defect (DL-030, DL-001)",
+    "section_classification": {
+      "Ready": "Section score >= 85 AND all items >= 70 AND 0 critical defects AND 0 DL-008 items",
+      "NearReady": "Section score >= 70 AND all items >= 60 AND 0 critical defects",
+      "NeedsWork": "Section score >= 50 OR items with DL-008/DL-013 present",
+      "Blocked": "Section score < 50 OR critical defect(s) present"
+    }
+  },
+  "current_section_readiness": {
+    "fully_certified_sections": {
+      "B_all": "Ready (all items already Certified — score = 100)",
+      "E_all": "Ready (all items already Certified — score = 100)",
+      "A_B": "Ready", "A_C": "Ready", "A_D": "Ready", "A_F": "Ready",
+      "C_A": "Ready", "C_B": "Ready", "C_C": "Ready", "C_D": "Ready",
+      "D_A": "Ready", "D_B": "Ready", "D_C": "Ready", "D_D": "Ready"
+    },
+    "near_ready_sections": {
+      "C_F": { "items": 75, "status": "Unprocessed", "estimated_readiness": 60, "blockers": ["DL-013 template boilerplate"], "effort": "Medium — batch editorial remediation" }
+    },
+    "blocked_sections": {
+      "A_A": { "items": 75, "certified": 73, "archived": 2, "blockers": ["DL-016 content-metadata offset"], "effort": "Low — 2 archived items only" },
+      "A_E": { "items": 75, "certified": 58, "archived": 17, "blockers": ["DL-016 offset + 17 clone-archived items"], "effort": "Medium" },
+      "C_E": { "items": 75, "certified": 0, "unprocessed": 19, "archived": 56, "blockers": ["DL-012: 56 clone items", "DL-008 CC-rotation artifacts"], "effort": "High" },
+      "D_E": { "items": 75, "certified": 0, "unprocessed": 19, "archived": 56, "blockers": ["DL-012: 56 clone items"], "effort": "High" },
+      "D_F": { "items": 74, "certified": 0, "unprocessed": 74, "blockers": ["DL-008 residual", "DL-013 (~118 fields)"], "effort": "Medium-High" },
+      "D_C": { "items": 100, "certified": 100, "blockers": ["DL-026: 50 items with empty non-CC EW slots within Certified section"], "effort": "Medium — items already Certified but have residual DL-026" }
+    }
+  }
+}

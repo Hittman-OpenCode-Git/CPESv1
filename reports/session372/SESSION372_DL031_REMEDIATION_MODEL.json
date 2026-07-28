@@ -1,0 +1,75 @@
+{
+  "session": "S372",
+  "type": "dl031_backlog_economics",
+  "timestamp": "2026-07-28T12:00:00Z",
+  "scope": {
+    "estimated_total": 850,
+    "estimate_range": "800-1,000",
+    "confidence": "MEDIUM — precise count requires automated Jaccard scan execution",
+    "certified_affected": 723,
+    "certified_pct": "85% of affected",
+    "pool_certified_total": 2317
+  },
+  "current_difficulty_distribution": {
+    "easy_1": { "count": 536, "pct": 21.1, "target": 381 },
+    "moderate_easy_2": { "count": 693, "pct": 27.3, "target": 508 },
+    "moderate_3": { "count": 1226, "pct": 48.3, "target": 762 },
+    "difficult_4": { "count": 85, "pct": 3.3, "target": 635 },
+    "very_difficult_5": { "count": 0, "pct": 0.0, "target": 254 }
+  },
+  "classification": {
+    "simple_relabel": {
+      "count": 595, "pct": 70.0,
+      "description": "Pure definition-match: stem IS definition, answer IS term. Jaccard >0.50 + definitional pattern + Bloom's Understand.",
+      "action": "DifficultyScore 3→1, Difficulty Moderate→Easy, CognitiveLevel Understand→Remember. Metadata-only. 100% safe.",
+      "hours_per_item": 0.02, "total_hours": 11.9,
+      "automation_level": "FULLY_AUTOMATABLE"
+    },
+    "calibration_adjustment": {
+      "count": 110, "pct": 13.0,
+      "description": "Borderline: Jaccard 0.35-0.50 OR definitional stem but sophisticated distractors.",
+      "action": "Per-item distractor quality review. Downgrade if weak; keep if genuinely Moderate.",
+      "hours_per_item": 0.1, "total_hours": 11.0,
+      "automation_level": "PARTIALLY_AUTOMATABLE"
+    },
+    "rewrite_required": {
+      "count": 85, "pct": 10.0,
+      "description": "Concept COULD support Apply/Analyze but current stem is definitional.",
+      "action": "Rewrite stem as application scenario. DEFERRED — pairs with S371 cognitive upgrades.",
+      "hours_per_item": 0.5, "total_hours": 42.5,
+      "automation_level": "MANUAL_ONLY"
+    },
+    "replace_required": {
+      "count": 60, "pct": 7.0,
+      "description": "Fundamentally definitional. Overlaps S371 Bucket 3. Replace entirely with new Analyze/Evaluate item.",
+      "action": "DEFERRED — when new item authored, old: Moderate→Easy→Archived.",
+      "hours_per_item": 1.5, "total_hours": 90.0,
+      "automation_level": "MANUAL_ONLY"
+    }
+  },
+  "classification_summary": {
+    "total_items": 850,
+    "total_hours_all_categories": 155.4,
+    "hours_recommended_execution": 22.9,
+    "hours_deferred": 132.5,
+    "pct_deferred": 85.3
+  },
+  "strategy_options": {
+    "A_full_remediation": { "hours": 155.4, "risk": "HIGH", "impact": "Complete resolution but massive opportunity cost" },
+    "B_certified_only": { "hours": 131.9, "risk": "MEDIUM", "impact": "Protects learner pool; non-certified left mislabeled" },
+    "C_wave_paired": { "hours": 22.9, "risk": "LOW", "impact": "23h unlocks all downstream planning. 132.5h redirected to cognitive upgrades." },
+    "D_defer": { "hours": 0, "risk": "MEDIUM-LOW", "impact": "Zero cost now. All downstream planning remains ±30% estimates." }
+  },
+  "recommendation": {
+    "primary_strategy": "C — Wave-Paired (Simple Relabel + Calibration Adjustment executed immediately)",
+    "estimated_hours": 22.9,
+    "rationale": "DL-031 is CAL-001 foundational blocker. 23h resolves it. 132.5h deferred hours produce ~285 Analyze/Evaluate/VDiff items instead of 145 dead-end fixes. Per-hour value: cognitive upgrades are 5-10x more valuable than DL-031 rewrites.",
+    "critical_constraint": "Must pair with upward recalibrations — Easy at 21.1%→54.6% if downgrades run alone. Ratio: ≥3 downgrades : ≥2 upward recalibrations per batch."
+  },
+  "opportunity_cost": {
+    "dl031_rewrite_hour": "0.5h produces item at SAME cognitive level",
+    "new_analyze_hour": "0.5h produces Analyze item (one-tier cognitive upgrade)",
+    "new_evaluate_hour": "0.33h produces Evaluate item (highest-tier creation)",
+    "verdict": "DL-031 rewrite hours are 5-10x less valuable than cognitive upgrade hours"
+  }
+}

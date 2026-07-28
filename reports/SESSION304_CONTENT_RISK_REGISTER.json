@@ -1,0 +1,337 @@
+{
+  "generated": "2026-07-26T21:42:16.564Z",
+  "session": "S304",
+  "register": {
+    "A - External Financial Reporting": {
+      "domainLetter": "A",
+      "bqs": "A",
+      "bqsScore": 85,
+      "totalItems": 433,
+      "certifiedPct": "98.2",
+      "avgECLength": 291,
+      "avgDQS": 80,
+      "avgEWFillRate": "87.4",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "250 rewrite candidates, ~14 sessions",
+          "rewriteCandidates": 250
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "domainLetter": "B",
+      "bqs": "B",
+      "bqsScore": 80,
+      "totalItems": 568,
+      "certifiedPct": "98.9",
+      "avgECLength": 229,
+      "avgDQS": 80,
+      "avgEWFillRate": "88.4",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "286 rewrite candidates, ~16 sessions",
+          "rewriteCandidates": 286
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    },
+    "C - Performance Management": {
+      "domainLetter": "C",
+      "bqs": "A",
+      "bqsScore": 85,
+      "totalItems": 798,
+      "certifiedPct": "98.5",
+      "avgECLength": 431,
+      "avgDQS": 58,
+      "avgEWFillRate": "63.5",
+      "weightingStatus": "OVERREPRESENTED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "454 rewrite candidates, ~26 sessions",
+          "rewriteCandidates": 454
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 63.5%"
+        },
+        {
+          "risk": "Blueprint Weighting Drift",
+          "severity": "MEDIUM",
+          "detail": "OVERREPRESENTED: actual 25.5% vs expected 20% (delta 5.5pp)"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    "D - Cost Management": {
+      "domainLetter": "D",
+      "bqs": "B",
+      "bqsScore": 75,
+      "totalItems": 452,
+      "certifiedPct": "98.7",
+      "avgECLength": 243,
+      "avgDQS": 75,
+      "avgEWFillRate": "84.1",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "192 rewrite candidates, ~11 sessions",
+          "rewriteCandidates": 192
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    },
+    "E - Internal Controls": {
+      "domainLetter": "E",
+      "bqs": "B",
+      "bqsScore": 75,
+      "totalItems": 443,
+      "certifiedPct": "59.6",
+      "avgECLength": 393,
+      "avgDQS": 66,
+      "avgEWFillRate": "69.0",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Certification Debt",
+          "severity": "HIGH",
+          "detail": "179 items uncertified (59.6% certified)",
+          "uncertifiedItems": 179
+        },
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "238 rewrite candidates, ~14 sessions",
+          "rewriteCandidates": 238
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 69.0%"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    "F - Technology & Analytics": {
+      "domainLetter": "F",
+      "bqs": "B",
+      "bqsScore": 71,
+      "totalItems": 430,
+      "certifiedPct": "65.3",
+      "avgECLength": 276,
+      "avgDQS": 64,
+      "avgEWFillRate": "70.9",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Certification Debt",
+          "severity": "HIGH",
+          "detail": "149 items uncertified (65.3% certified)",
+          "uncertifiedItems": 149
+        },
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "211 rewrite candidates, ~12 sessions",
+          "rewriteCandidates": 211
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 70.9%"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    }
+  },
+  "domainRanking": [
+    {
+      "rank": 1,
+      "domain": "F - Technology & Analytics",
+      "domainLetter": "F",
+      "bqs": "B",
+      "bqsScore": 71,
+      "totalItems": 430,
+      "certifiedPct": "65.3",
+      "avgECLength": 276,
+      "avgDQS": 64,
+      "avgEWFillRate": "70.9",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Certification Debt",
+          "severity": "HIGH",
+          "detail": "149 items uncertified (65.3% certified)",
+          "uncertifiedItems": 149
+        },
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "211 rewrite candidates, ~12 sessions",
+          "rewriteCandidates": 211
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 70.9%"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 2,
+      "domain": "E - Internal Controls",
+      "domainLetter": "E",
+      "bqs": "B",
+      "bqsScore": 75,
+      "totalItems": 443,
+      "certifiedPct": "59.6",
+      "avgECLength": 393,
+      "avgDQS": 66,
+      "avgEWFillRate": "69.0",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Certification Debt",
+          "severity": "HIGH",
+          "detail": "179 items uncertified (59.6% certified)",
+          "uncertifiedItems": 179
+        },
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "238 rewrite candidates, ~14 sessions",
+          "rewriteCandidates": 238
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 69.0%"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 3,
+      "domain": "C - Performance Management",
+      "domainLetter": "C",
+      "bqs": "A",
+      "bqsScore": 85,
+      "totalItems": 798,
+      "certifiedPct": "98.5",
+      "avgECLength": 431,
+      "avgDQS": 58,
+      "avgEWFillRate": "63.5",
+      "weightingStatus": "OVERREPRESENTED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "454 rewrite candidates, ~26 sessions",
+          "rewriteCandidates": 454
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 63.5%"
+        },
+        {
+          "risk": "Blueprint Weighting Drift",
+          "severity": "MEDIUM",
+          "detail": "OVERREPRESENTED: actual 25.5% vs expected 20% (delta 5.5pp)"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 4,
+      "domain": "D - Cost Management",
+      "domainLetter": "D",
+      "bqs": "B",
+      "bqsScore": 75,
+      "totalItems": 452,
+      "certifiedPct": "98.7",
+      "avgECLength": 243,
+      "avgDQS": 75,
+      "avgEWFillRate": "84.1",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "192 rewrite candidates, ~11 sessions",
+          "rewriteCandidates": 192
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 5,
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "domainLetter": "B",
+      "bqs": "B",
+      "bqsScore": 80,
+      "totalItems": 568,
+      "certifiedPct": "98.9",
+      "avgECLength": 229,
+      "avgDQS": 80,
+      "avgEWFillRate": "88.4",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "286 rewrite candidates, ~16 sessions",
+          "rewriteCandidates": 286
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 6,
+      "domain": "A - External Financial Reporting",
+      "domainLetter": "A",
+      "bqs": "A",
+      "bqsScore": 85,
+      "totalItems": 433,
+      "certifiedPct": "98.2",
+      "avgECLength": 291,
+      "avgDQS": 80,
+      "avgEWFillRate": "87.4",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "250 rewrite candidates, ~14 sessions",
+          "rewriteCandidates": 250
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    }
+  ],
+  "readinessVerdict": "ADDITIONAL ANALYSIS REQUIRED — High remediation burden across 6 domains"
+}

@@ -1,0 +1,152 @@
+{
+  "session": "518",
+  "timestamp": "2026-07-25T23:55:00Z",
+  "purpose": "Full case-bank inventory refresh across all 5 scored_cases files, 10 arrays, 75 cases, 400 items",
+
+  "files": {
+    "scored_cases.js": {
+      "size_bytes": 381373,
+      "parse_status": "OK",
+      "arrays": {
+        "ENHANCED_CASE_BASE": {
+          "cases": 15,
+          "items": 90,
+          "certified_items": 0,
+          "certified_cases": 0,
+          "production_status": "15 Draft",
+          "case_difficulty": "4 Moderate, 11 Difficult",
+          "item_difficulty": "90 MISSING (100%)",
+          "short_explanations_lt100": 66,
+          "cognitive_levels": {"Apply":38,"Evaluate":19,"Analyze":25,"Understand":8},
+          "item_types": {"numeric":37,"select":19,"multi":14,"match":12,"fill":8},
+          "status": "WHOLLY_UNPROCESSED"
+        },
+        "MIGRATED_CASE_BASE_A": "aliased to ENHANCED_CASE_BASE — same data, same CaseIDs"
+      }
+    },
+    "scored_cases2.js": {
+      "size_bytes": 424048,
+      "parse_status": "OK",
+      "arrays": {
+        "ENHANCED_CASE_BASE2": {
+          "cases": 15,
+          "items": 78,
+          "certified_items": 78,
+          "certified_cases": 15,
+          "production_status": "15 Draft",
+          "case_difficulty": "11 Moderate, 1 Easy, 3 Difficult",
+          "item_difficulty": "5 present (CBQ2-A3 only via S518), 73 MISSING",
+          "short_explanations_lt100": 10,
+          "cognitive_levels": {"Apply":29,"Evaluate":22,"Analyze":23,"Understand":4},
+          "item_types": {"numeric":25,"multi":14,"select":18,"fill":7,"match":14},
+          "status": "FULLY_CERTIFIED"
+        },
+        "MIGRATED_CASE_BASE_B": "aliased to ENHANCED_CASE_BASE2 — same data"
+      }
+    },
+    "scored_cases3.js": {
+      "size_bytes": 411383,
+      "parse_status": "OK",
+      "arrays": {
+        "ENHANCED_CASE_BASE3": {
+          "cases": 15,
+          "items": 79,
+          "certified_items": 74,
+          "certified_cases": 14,
+          "unprocessed_items": 5,
+          "unprocessed_cases": 1,
+          "production_status": "15 Draft",
+          "case_difficulty": "10 Moderate, 4 Difficult, 1 Easy",
+          "item_difficulty": "79 MISSING (100%)",
+          "short_explanations_lt100": 9,
+          "cognitive_levels": {"Apply":19,"Analyze":32,"Understand":7,"Evaluate":21},
+          "item_types": {"numeric":17,"select":18,"fill":9,"multi":15,"match":20},
+          "holdbacks": ["CBQ3-A1 (5 items — Defect C1-Q4: ASC 606 choice text error)"],
+          "status": "PARTIALLY_CERTIFIED_WITH_HOLDBACK"
+        },
+        "MIGRATED_CASE_BASE_C": "aliased to ENHANCED_CASE_BASE3 — same data"
+      }
+    },
+    "scored_cases4.js": {
+      "size_bytes": 398618,
+      "parse_status": "OK",
+      "arrays": {
+        "ENHANCED_CASE_BASE4": {
+          "cases": 15,
+          "items": 78,
+          "certified_items": 63,
+          "certified_cases": 12,
+          "unprocessed_items": 15,
+          "unprocessed_cases": 3,
+          "production_status": "15 Draft",
+          "case_difficulty": "11 Moderate, 2 Easy, 2 Difficult",
+          "item_difficulty": "78 MISSING (100%)",
+          "short_explanations_lt100": 12,
+          "cognitive_levels": {"Apply":25,"Analyze":27,"Evaluate":19,"Understand":7},
+          "item_types": {"numeric":20,"match":17,"multi":12,"select":26,"fill":3},
+          "holdbacks": ["CBQ4-A1, CBQ4-A2, CBQ4-C1 (15 items Unprocessed)"],
+          "status": "PARTIALLY_CERTIFIED_WITH_HOLDBACK"
+        },
+        "MIGRATED_CASE_BASE_D": "aliased to ENHANCED_CASE_BASE4 — same data"
+      }
+    },
+    "scored_cases5.js": {
+      "size_bytes": 323501,
+      "parse_status": "OK",
+      "arrays": {
+        "ENHANCED_CASE_BASE5": {
+          "cases": 15,
+          "items": 75,
+          "certified_items": 70,
+          "certified_cases": 14,
+          "unprocessed_items": 5,
+          "unprocessed_cases": 1,
+          "production_status": "15 Draft",
+          "case_difficulty": "Mostly Moderate",
+          "item_difficulty": "75 MISSING (100%)",
+          "short_explanations_lt100": 9,
+          "cognitive_levels": {"Apply":27,"Analyze":18,"Evaluate":18,"Understand":11,"Remember":1},
+          "item_types": {"numeric":18,"select":23,"multi":12,"match":20,"fill":2},
+          "holdbacks": ["CBQ5-B2 (5 items Unprocessed)"],
+          "status": "PARTIALLY_CERTIFIED_WITH_HOLDBACK"
+        }
+      }
+    }
+  },
+
+  "grand_totals": {
+    "total_files": 5,
+    "total_arrays": 10,
+    "unique_cases": 75,
+    "total_items": 400,
+    "certified_items": 290,
+    "certified_cases_case_level": 56,
+    "unprocessed_items": 110,
+    "unprocessed_cases": 19,
+    "items_with_per_item_difficulty": 5,
+    "items_missing_difficulty": 395,
+    "items_with_explanation_lt100_chars": 106,
+    "structural_defects": "0 (DL-023 resolved)"
+  },
+
+  "session_518_changes": {
+    "cbq2_a3_items_certified": 5,
+    "cbq2_a3_case_level_certified": true,
+    "cbq2_a3_production_file": "scored_cases2.js",
+    "explanation_expansions": 5,
+    "per_item_difficulty_added": 5,
+    "distractor_rationale_added": "Q3 (multi) and Q4 (select)",
+    "citations_added": "ASC 606, ASC 326, ASC 606-10-25-19",
+    "answer_keys_changed": 0,
+    "prompts_changed": 0,
+    "exhibits_changed": 0,
+    "choices_changed": 0
+  },
+
+  "concurrent_lane_protection": {
+    "100_series_may_in_scope": false,
+    "700_series_mcq_in_scope": false,
+    "scoring_runtime_in_scope": false,
+    "pre_flight_core": "32/32 PASS"
+  }
+}

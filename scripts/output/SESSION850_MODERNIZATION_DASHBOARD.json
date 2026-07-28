@@ -1,0 +1,89 @@
+{
+  "specId": "SESSION850_MODERNIZATION_DASHBOARD",
+  "board": "G",
+  "title": "Modernization Dashboard",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Display modernization progress across Domain E, Domain F, replacement progress, certification progress, and blocked inventory in a single unified dashboard configuration.",
+  "outputFile": "scripts/output/modernization_dashboard.json",
+  "dataSources": {
+    "domainProgress": "scripts/output/domain_progress.json",
+    "certificationCandidates": "scripts/output/certification_candidates.json",
+    "remediationQueue": "scripts/output/remediation_queue.json",
+    "certificationWaves": "scripts/output/certification_waves.json",
+    "seedOperations": "scripts/output/seed_operations.json",
+    "replacementLineage": "scripts/output/replacement_lineage.json"
+  },
+  "panels": {
+    "panel1_overallProgress": {
+      "title": "Overall Modernization Progress",
+      "metrics": ["totalItems", "certified", "certifiedPct", "ready", "remediate", "blocked", "archived"],
+      "source": "domainProgress",
+      "type": "gauge + bar"
+    },
+    "panel2_domainCoverage": {
+      "title": "Domain Certification Coverage",
+      "metrics": ["domain", "certified", "total", "coveragePct", "remainingToCertify"],
+      "source": "domainProgress",
+      "type": "stacked-bar",
+      "domains": ["A", "B", "C", "D", "E", "F"],
+      "colors": {
+        "A": "#2196F3", "B": "#4CAF50", "C": "#FF9800", "D": "#9C27B0", "E": "#F44336", "F": "#00BCD4"
+      }
+    },
+    "panel3_certificationCandidates": {
+      "title": "Certification Candidates",
+      "metrics": ["totalReady", "byDomain", "byPack"],
+      "source": "certificationCandidates",
+      "type": "heatmap + table"
+    },
+    "panel4_remediationBacklog": {
+      "title": "Remediation Backlog",
+      "metrics": ["byTier", "byDefectType", "totalQueues", "certifiedAffected"],
+      "source": "remediationQueue",
+      "type": "tree-map + priority-list"
+    },
+    "panel5_waveSchedule": {
+      "title": "Certification Wave Schedule",
+      "metrics": ["totalWaves", "wavesByTier", "totalItemsPlanned", "domainDistribution"],
+      "source": "certificationWaves",
+      "type": "gantt + domain-grid"
+    },
+    "panel6_seedInventory": {
+      "title": "Seed Operations",
+      "metrics": ["totalSeedGroups", "seedsReady", "seedsCertified", "totalClones", "clonesArchived"],
+      "source": "seedOperations",
+      "type": "sankey + table"
+    },
+    "panel7_replacementTracking": {
+      "title": "Replacement Lineage",
+      "metrics": ["totalLineages", "totalSeeds", "certifiedReplacements", "pendingReplacements"],
+      "source": "replacementLineage",
+      "type": "flow + timeline"
+    },
+    "panel8_blockedInventory": {
+      "title": "Blocked Inventory",
+      "metrics": ["blockedQIDs", "blockReasons", "byDomain", "byDefectType"],
+      "source": "certificationCandidates",
+      "type": "critical-list + drill-down"
+    }
+  },
+  "refreshInterval": "onDemand",
+  "layout": "responsive-8-panel-grid",
+  "exportFormats": ["JSON", "CSV", "Markdown"],
+  "usage": "Load data sources via scripts, then render dashboard panels.",
+  "dependencies": {
+    "scripts": [
+      "scripts/certification_candidate_engine.js",
+      "scripts/remediation_queue_manager.js",
+      "scripts/wave_planner.js",
+      "scripts/domain_progress_engine.js",
+      "scripts/seed_operations_manager.js",
+      "scripts/replacement_lineage_tracker.js"
+    ]
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "document": "SESSION321_CANONICAL_REGISTRY_SPEC",
+  "session": "S321",
+  "board": "B — Canonical Registry Specification",
+  "phase": "1 — Identity Layer",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+  "depends_on": ["SESSION321_IDENTITY_SCHEMA_V2.json"],
+
+  "purpose": "Define the CANONICAL_ITEM_REGISTRY — the single source of truth for all item identity, delivery pool eligibility, and provenance tracking. This registry replaces the fragmented inventory management currently performed independently by every board. It is rotation-aware, remaster-aware, and delta-review aware.",
+
+  "motivation": {
+    "v1_problem": "No single canonical inventory exists. MASTER_QUESTION_REGISTRY.md is manually maintained. Each board independently scans packs for its own inventory snapshot. Certified count is re-verified 25+ times across sessions. 3-12x scan redundancy across defect sweeps. No unified view of which items are delivery-pool-eligible.",
+    "target": "One auto-generated registry consumed by all 4 Framework v2 boards. Regenerated at session T0 from pack files. Never hand-edited (governance guard Rule 3). Post-session re-generation at Tend for drift detection."
+  },
+
+  "registry_schema": {
+    "file_name": "CANONICAL_ITEM_REGISTRY.json",
+    "storage_location": "knowledge/CANONICAL_ITEM_REGISTRY.json",
+    "generation_method": "Auto-generated via within-object Function Constructor Parse (AM-1) of all 5 pack files. Never hand-edited.",
+    "regeneration_frequency": "At session T0 (startup), after any pack-file write (mid-session), and at session Tend (closeout).",
+
+    "registry_entry_schema": {
+      "description": "Each entry represents one unique item instance as defined by the v2 compound key identity model.",
+      "fields": {
+        "registry_id": {
+          "type": "String",
+          "format": "REG-{8-digit-hex}",
+          "description": "Permanent, stable identifier assigned at first registration. Survives content changes (keyed by stable sort position, not content hash). Never reassigned.",
+          "example": "REG-1A2B3C4D"
+        },
+        "compound_key": {
+          "type": "String",
+          "format": "SEE SESSION321_IDENTITY_SCHEMA_V2.json §composite_key_format",
+          "description": "Canonical composite key: QID|CorrectChoice|EWPattern|TemplateFamily|FilePath|VersionID",
+          "example": "P1-AD-001|B|0110|TF-PackA-D-001|pack_a_corrected.js::Section D|1.2.0"
+        },
+        "qid": {
+          "type": "String",
+          "description": "Base template group identifier (from Identity Schema)"
+        },
+        "correct_choice": {
+          "type": "String",
+          "enum": ["A", "B", "C", "D"],
+          "description": "Stored CorrectChoice value (from within-object extraction)"
+        },
+        "ew_pattern": {
+          "type": "String",
+          "format": "4-bit binary: e.g., '0110'",
+          "description": "EWPattern fingerprint (CC bit ALWAYS 0)"
+        },
+        "template_family": {
+          "type": "String",
+          "description": "Rotation group identifier"
+        },
+        "file_path": {
+          "type": "String",
+          "description": "Pack file + section source"
+        },
+        "version_id": {
+          "type": "String",
+          "format": "{MAJOR}.{MINOR}.{PATCH}",
+          "description": "Content version. Default '1.0.0' if unversioned."
+        },
+
+        "content_hash": {
+          "type": "String",
+          "format": "SHA-256 hex",
+          "description": "SHA-256 hash of canonical serialization of learner-facing fields (Stem + Choices + CC + EC + EW[A-D]). Used for delta review — if hash matches prior baseline, item has not changed. Computed at registration time and updated on each content modification.",
+          "extraction_rule": "JSON.stringify the fields object with sorted keys, then SHA-256. Fields: { Stem, Choices: [A, B, C, D], CorrectChoice, ExplanationCorrect, ExplanationWrong: { A, B, C, D } }. All fields trimmed and whitespace-normalized before hashing."
+        },
+        "metadata_hash": {
+          "type": "String",
+          "format": "SHA-256 hex",
+          "description": "SHA-256 hash of non-content metadata fields (Difficulty, DifficultyScore, CognitiveLevel, LOSTag, Topic, Subtopic, BlueprintDomain, etc.). Changes here do NOT require full Quality Board review — only psychometric calibration check."
+        },
+
+        "question_state": {
+          "type": "String",
+          "enum": ["Unprocessed", "In Audit", "Editorial Queue", "Certified", "Archived"],
+          "description": "Current governance state. Per CAQS §1.7.1. Only 'Certified' items are delivery-pool-eligible."
+        },
+        "certification_date": {
+          "type": "String (ISO 8601)",
+          "description": "Date of most recent certification. null if never certified."
+        },
+        "certification_session": {
+          "type": "String",
+          "description": "Session ID of most recent certification. null if never certified."
+        },
+
+        "delivery_pool_eligible": {
+          "type": "Boolean",
+          "description": "Computed: true IF question_state === 'Certified' AND is_known_defective === false AND is_delivery_blocked === false."
+        },
+        "is_known_defective": {
+          "type": "Boolean",
+          "description": "True if item has an open defect in DEFECT_LIBRARY.md with Status 'Open' and Severity ≥ High. Blocks delivery pool eligibility."
+        },
+        "is_delivery_blocked": {
+          "type": "Boolean",
+          "description": "True if item is in May's defect manifest as blocked (governance/DEFECT_MANIFEST_DL008_DL026.json). Blocks delivery pool eligibility."
+        },
+        "known_defects": {
+          "type": "Array of Strings",
+          "description": "Applicable DL-IDs from DEFECT_LIBRARY.md. Example: ['DL-008', 'DL-016']. Empty array if no known defects."
+        },
+
+        "rotation_position": {
+          "type": "String",
+          "enum": ["canonical_seed", "variant_b", "variant_c", "variant_d"],
+          "description": "Position within the TemplateFamily rotation group. canonical_seed = lowest CC value (typically A). All other positions are rotation variants."
+        },
+        "canonical_seed_registry_id": {
+          "type": "String",
+          "description": "RegistryID of the canonical seed for this TemplateFamily. Self-referencing for the canonical seed itself."
+        },
+        "rotation_variants": {
+          "type": "Array of Strings",
+          "description": "RegistryIDs of all rotation variants in this TemplateFamily (including self if canonical seed)."
+        },
+
+        "last_content_change_session": {
+          "type": "String",
+          "description": "Session ID of most recent content modification (Stem, Choices, CC, EC, EW change)."
+        },
+        "last_metadata_change_session": {
+          "type": "String",
+          "description": "Session ID of most recent metadata modification (Difficulty, CognitiveLevel, etc.)."
+        },
+        "last_registry_update": {
+          "type": "String (ISO 8601)",
+          "description": "Timestamp of most recent registry entry update."
+        },
+
+        "pack_section": {
+          "type": "String",
+          "description": "Pack file + section letter. Example: 'Pack A / Section D'."
+        },
+        "domain": {
+          "type": "String",
+          "enum": ["A", "B", "C", "D", "E", "F"],
+          "description": "CMA Part 1 domain. Extracted from QID format or Section metadata."
+        },
+        "domain_label": {
+          "type": "String",
+          "description": "Human-readable domain name. Example: 'External Financial Reporting Decisions'."
+        }
+      }
+    }
+  },
+
+  "registry_indexes": {
+    "description": "The registry file includes pre-computed indexes for fast lookup. These are embedded in the JSON structure, not separate files.",
+    "indexes": [
+      {
+        "name": "by_qid",
+        "type": "Map<String, Array<RegistryID>>",
+        "description": "QID → list of RegistryIDs (all rotation variants for that QID)."
+      },
+      {
+        "name": "by_template_family",
+        "type": "Map<String, Array<RegistryID>>",
+        "description": "TemplateFamily → list of RegistryIDs (all members of the rotation group)."
+      },
+      {
+        "name": "by_pack_section",
+        "type": "Map<String, Array<RegistryID>>",
+        "description": "Pack+Section → list of RegistryIDs (all items in that pack section)."
+      },
+      {
+        "name": "by_question_state",
+        "type": "Map<String, Array<RegistryID>>",
+        "description": "question_state → list of RegistryIDs. Key index for delivery pool filtering."
+      },
+      {
+        "name": "by_content_hash",
+        "type": "Map<String, Array<RegistryID>>",
+        "description": "SHA-256 content hash → list of RegistryIDs. Used for delta review — same hash across sessions means unchanged content."
+      },
+      {
+        "name": "defect_cross_reference",
+        "type": "Map<String, Array<RegistryID>>",
+        "description": "DL-ID → list of RegistryIDs affected. Built from known_defects fields."
+      }
+    ]
+  },
+
+  "delivery_pool_safety_integration": {
+    "description": "The registry is the authoritative source for delivery pool eligibility. Before any live simulation test, the delivery mechanism queries the registry for all items where delivery_pool_eligible === true.",
+    "rules": [
+      {
+        "rule": "CERTIFIED_ONLY",
+        "action": "Only items with question_state === 'Certified' may be included in the delivery pool.",
+        "reference": "CAQS §1.7.1, AGENTS.md §7"
+      },
+      {
+        "rule": "KNOWN_DEFECTIVE_EXCLUSION",
+        "action": "Any item with is_known_defective === true is EXCLUDED from the delivery pool regardless of question_state.",
+        "reference": "AGENTS.md §7 — standing safety check, not a one-off ask"
+      },
+      {
+        "rule": "DELIVERY_BLOCKED_EXCLUSION",
+        "action": "Any item with is_delivery_blocked === true is EXCLUDED — this covers May's defect manifest entries that haven't yet been formally classified as DL defects.",
+        "reference": "governance/DEFECT_MANIFEST_DL008_DL026.json"
+      },
+      {
+        "rule": "PRE_DELIVERY_SAFETY_CHECK",
+        "action": "Before live simulation: run pre-delivery-safety-check skill. Cross-reference delivery pool against known-defective QID list. Flag any defective QID still present.",
+        "reference": "AGENTS.md §7, skills/pre-delivery-safety-check.md"
+      }
+    ]
+  },
+
+  "rotation_awareness": {
+    "description": "The registry is rotation-aware. When the delivery pool draws from a template family, it selects the canonical seed or a specific variant — not whichever item QID-first-match returns.",
+    "template_family_operations": [
+      {
+        "operation": "GetCanonicalSeed",
+        "input": "Any RegistryID or QID",
+        "output": "RegistryID of the canonical seed for that TemplateFamily.",
+        "use_case": "When a template family must be represented in the delivery pool exactly once."
+      },
+      {
+        "operation": "GetAllVariants",
+        "input": "Any RegistryID or QID",
+        "output": "Array of all RegistryIDs in the TemplateFamily rotation group.",
+        "use_case": "When all rotation variants must be inspected (e.g., defect sweep, full audit)."
+      },
+      {
+        "operation": "GetRotationPosition",
+        "input": "RegistryID",
+        "output": "Rotation position label (canonical_seed, variant_b, variant_c, variant_d).",
+        "use_case": "When the delivery pool needs exactly one item per TemplateFamily and must know which variant is canonical."
+      }
+    ]
+  },
+
+  "remaster_awareness": {
+    "description": "The registry is remaster-aware. When content is revised (VersionID incremented), the registry preserves the identity lineage.",
+    "remaster_operations": [
+      {
+        "operation": "DetectRemaster",
+        "detection": "Same RegistryID, same QID, same CorrectChoice, same FilePath, but VersionID differs. Content hash differs from prior baseline.",
+        "action": "Log remaster event. Previous version's content_hash is preserved in a content_history array. Delta review: item is classified as content_change → full Quality Board review required."
+      },
+      {
+        "operation": "DetectMetadataUpdate",
+        "detection": "Same RegistryID, same content_hash, but metadata_hash differs.",
+        "action": "Log metadata update event. Previous metadata_hash preserved. Delta review: item is classified as metadata_change → psychometric calibration check only."
+      },
+      {
+        "operation": "DetectNoChange",
+        "detection": "Same RegistryID, same content_hash, same metadata_hash as prior baseline.",
+        "action": "Item is classified as no_change → skip review entirely, inherit prior certification verdict."
+      }
+    ]
+  },
+
+  "delta_review_awareness": {
+    "description": "The registry is the source of truth for delta review classification. At session T0, the current registry is compared against the prior session's baseline registry to classify every item.",
+    "delta_classification_flow": {
+      "step_1": "Load current registry (generated at current session T0 from pack files).",
+      "step_2": "Load baseline registry (saved at prior session Tend as knowledge/CANONICAL_ITEM_REGISTRY_BASELINE.json).",
+      "step_3": "Join on RegistryID. For each item:",
+      "classifications": {
+        "content_change": {
+          "condition": "content_hash_current ≠ content_hash_baseline",
+          "pct_of_wave": "~2%",
+          "review_required": "Full Quality Board (3 agents) + Certification Board",
+          "action": "Full 10-dimension CAQS review. New certification decision required."
+        },
+        "metadata_change": {
+          "condition": "content_hash_current = content_hash_baseline AND metadata_hash_current ≠ metadata_hash_baseline",
+          "pct_of_wave": "~8%",
+          "review_required": "Psychometric/Difficulty Calibration (1 agent) + Certification Board",
+          "action": "Verify Difficulty is consistent with actual question content. Re-certify metadata rating."
+        },
+        "structural_fix": {
+          "condition": "EWPattern_current ≠ EWPattern_baseline OR known_defects changed",
+          "pct_of_wave": "~10%",
+          "review_required": "Automated pre-flight scanner only (0 agents) + spot-check verification",
+          "action": "Re-run pre-flight Gate 1 (Structural) and Gate 2 (Content). If clean, update defect status. No human review."
+        },
+        "no_change": {
+          "condition": "content_hash_current = content_hash_baseline AND metadata_hash_current = metadata_hash_baseline AND EWPattern_current = EWPattern_baseline",
+          "pct_of_wave": "~80%",
+          "review_required": "None — skip entirely",
+          "action": "Inherit prior certification verdict. No board review. No agent invoked."
+        },
+        "new_item": {
+          "condition": "RegistryID not present in baseline registry",
+          "pct_of_wave": "Variable (0% for existing items)",
+          "review_required": "Full Quality Board (3 agents) + Certification Board",
+          "action": "First-time certification. Full 10-dimension CAQS review."
+        },
+        "removed_item": {
+          "condition": "RegistryID present in baseline but not in current registry",
+          "pct_of_wave": "~0% (should be rare)",
+          "review_required": "Governance Board investigation",
+          "action": "Flag as anomaly — items should not silently disappear. Check for concurrent-write overwrite (DL-019)."
+        }
+      }
+    }
+  },
+
+  "registry_integrity_guarantees": {
+    "guarantee_1": "Registry is a DERIVED artifact — pack files are canonical. If registry-packs mismatch: re-generate registry from packs (Rollback per S201 MR-05).",
+    "guarantee_2": "RegistryID is STABLE — once assigned, never changed. Content changes (VersionID increment) do not change RegistryID.",
+    "guarantee_3": "Registry generation is IDEMPOTENT — re-generating from the same pack files produces the same registry (stable sort, deterministic hashing).",
+    "guarantee_4": "Registry is NEVER hand-edited (governance guard Rule 3). All updates come from auto-generation from pack files or automated defect cross-reference updates.",
+    "guarantee_5": "Registry content_hash computation is DETERMINISTIC — same item content → same hash across all runs, sessions, and machines. Normalization rules: trim whitespace from all text fields; sort JSON keys alphabetically before serialization; use UTF-8 encoding; use SHA-256."
+  },
+
+  "implementation_notes": {
+    "generation_script": "Node.js script: scripts/generate_canonical_registry.js. Input: pack_a_e_corrected.js. Output: knowledge/CANONICAL_ITEM_REGISTRY.json + knowledge/CANONICAL_ITEM_REGISTRY_BASELINE.json (copy).",
+    "performance": "~8 seconds for 2,500 items (AM-1 Function constructor parse + SHA-256 hashing + index generation). Fast enough for T0, Tmid, Tend checkpoints.",
+    "integration": [
+      "Registry consumed by: Gate -1 Identity Validation (Board C), Readiness Gate Engine (Board D), Scan Artifact (Board E), Delta Engine (Board G), Governance Board (S201 4-board model)",
+      "Registry generated by: Registry Board (auto-generation agent, 0 active agents per wave)"
+    ],
+    "backup": "Always copy knowledge/CANONICAL_ITEM_REGISTRY.json to a timestamped backup before regeneration (per AGENTS.md §3 backup protocol)."
+  },
+
+  "success_criteria": {
+    "SC-BB-01": "Registry schema includes all 25+ fields specified in registry_entry_schema.",
+    "SC-BB-02": "Registry includes pre-computed indexes: by_qid, by_template_family, by_pack_section, by_question_state, by_content_hash, defect_cross_reference.",
+    "SC-BB-03": "Delivery pool eligibility computed correctly (Certified AND not known_defective AND not delivery_blocked).",
+    "SC-BB-04": "Rotation-awareness operations (GetCanonicalSeed, GetAllVariants, GetRotationPosition) formally defined.",
+    "SC-BB-05": "Remaster-awareness operations (DetectRemaster, DetectMetadataUpdate, DetectNoChange) formally defined.",
+    "SC-BB-06": "Delta review classification flow (6 change types: content_change, metadata_change, structural_fix, no_change, new_item, removed_item) formally defined.",
+    "SC-BB-07": "Registry integrity guarantees (derived artifact, stable RegistryID, idempotent generation, never hand-edited, deterministic hashing) stated.",
+    "SC-BB-08": "Registry IDEMPOTENT — re-generation from same packs produces identical output.",
+    "SC-BB-09": "Specification is implementable — S322 can code the registry generator from this document alone.",
+    "SC-BB-10": "0 certification actions, 0 content modifications, 0 pack-file writes (S321 infrastructure-only constraint)."
+  }
+}

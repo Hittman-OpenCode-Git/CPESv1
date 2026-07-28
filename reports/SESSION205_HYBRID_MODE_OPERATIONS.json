@@ -1,0 +1,114 @@
+{
+  "document": "SESSION205_HYBRID_MODE_OPERATIONS",
+  "session": "S205",
+  "board": "D — Hybrid Mode Operations Certification",
+  "program": "Framework v2 Deployment Authorization",
+  "date": "2026-07-27",
+  "type": "Read-Only Operations Certification",
+  "status": "CERTIFIED",
+
+  "purpose": "Certify the coexistence model for Framework v1 (authoritative) and Framework v2 (advisory) during Hybrid Mode. Define authority boundaries, rollback paths, escalation paths, and shadow-mode interaction rules.",
+
+  "hybrid_mode_definition": {
+    "phase": "Hybrid Mode (S202-S207)",
+    "v1_role": "Authoritative — all certification decisions, content modifications, and learner delivery pool are governed by v1 processes",
+    "v2_role": "Advisory — Framework v2 pipeline runs alongside v1, producing scan artifacts, readiness classifications, delta reviews, and recommendations without modifying content or certification state",
+    "coexistence": "Both frameworks operate on the same pack files. v2 reads files (scan artifacts). v1 writes files (certification actions, content modifications). No conflict — v2 is strictly read-only.",
+    "trigger_for_shadow_mode": "S208 — after 3 successful certification waves under v2 advisement (S206, S207, S208 pre-shadow), v2 becomes authoritative and v1 becomes verification-only."
+  },
+
+  "authority_boundaries": {
+    "v1_exclusive_authority": [
+      "Modifying question_state (Certified/Unprocessed/Archived/etc.)",
+      "Modifying CorrectChoice or any answer-key field",
+      "Modifying Stem, Choices, ExplanationCorrect, ExplanationWrong fields",
+      "Deploying items to the learner delivery pool",
+      "Executing backup protocol writes to pack files",
+      "Updating DEFECT_LIBRARY.md with new defect entries",
+      "Updating REVISION_HISTORY.md with certification entries"
+    ],
+    "v2_exclusive_authority": [
+      "Producing Certification Scan Artifacts",
+      "Classifying readiness per 5-state machine",
+      "Generating delta review inheritance decisions",
+      "Producing recommendations (REC-IDs) from scan findings",
+      "Generating session reports (4-report model)",
+      "Operating Gate -1 through Gate 5 pipeline"
+    ],
+    "shared_authority_none": "No operation has split authority. v1 is always authoritative for content and certification. v2 is always authoritative for scan, readiness, delta, and recommendation artifacts. The scan artifact references v1 content — it does not modify it."
+  },
+
+  "rollback_paths": {
+    "v2_to_v1_rollback": {
+      "trigger": "Framework v2 scan orchestrator produces inconsistent results (e.g., non-deterministic delta hashes, readiness classification drift between runs)",
+      "procedure": [
+        "Halt all v2 pipeline execution.",
+        "Compare conflicting scan artifacts using delta_ledger.js (S322 Script 2) to isolate the non-deterministic component.",
+        "Fix S322 infrastructure script causing non-determinism.",
+        "Re-run scan orchestrator — verify deterministic output.",
+        "Re-authorize v2 operations via Governance Board.",
+        "During halt: v1 continues authoritative operation. No certification waves are impacted."
+      ],
+      "rollback_duration": "~1 hour (typically a script fix, not an architecture change)",
+      "pack_file_impact": "ZERO — v2 is read-only. No pack file rollback needed."
+    },
+    "v1_content_rollback": {
+      "trigger": "Certification action produces an incorrect question_state or content change",
+      "procedure": [
+        "Restore from backup per BACKUP_PROTOCOL.md.",
+        "Re-run v2 scan orchestrator: Gate -1 through Gate 4 on the restored file.",
+        "Compare scan artifact against pre-action artifact: verify the rollback restored correct state.",
+        "Update REVISION_HISTORY.md with rollback entry."
+      ],
+      "v2_assistance": "v2 scan artifact provides immediate before/after comparison — the delta review engine identifies exactly which items changed between the action and the rollback."
+    }
+  },
+
+  "escalation_paths": {
+    "hash_mismatch": {
+      "severity": "CRITICAL",
+      "trigger": "Pack file SHA-256 does not match delta_ledger.json baseline at session T0",
+      "response": "Halt all agents. Spawn governance agent. Execute G1-G5 reconciliation runbook (Session 31). Attribute drift → isolate source → classify as authorized-change or corruption → adopt-or-quarantine."
+    },
+    "scan_artifact_corruption": {
+      "severity": "HIGH",
+      "trigger": "Scan artifact fails S202.1 validation (10 rules) — missing section, invalid field type, schema mismatch",
+      "response": "Re-generate artifact via scan_orchestrator.js --force. If regeneration also fails, escalate to infrastructure audit (Board E)."
+    },
+    "readiness_disagreement": {
+      "severity": "MEDIUM",
+      "trigger": "Readiness classification from v2 disagrees with v1 human reviewer's assessment",
+      "response": "v1 reviewer documents the disagreement. v2 classification is advisory — v1 may proceed with certification. The disagreement is logged to readiness_disagreement_log.json. After 5+ disagreements on the same defect class, the readiness classification rules are reviewed."
+    },
+    "recommendation_conflict": {
+      "severity": "LOW",
+      "trigger": "v2 recommendation (REC-ID) suggests a remediation action that v1 reviewer disagrees with",
+      "response": "v1 reviewer closes the recommendation with status REJECTED and reason. The recommendation registry tracks closure evidence. After 10+ rejections on the same recommendation type, the recommendation template is reviewed."
+    }
+  },
+
+  "shadow_mode_interactions": {
+    "scan_artifact_consumption": "During Hybrid Mode, v2 scan artifacts are produced but not enforced. Governance Rules 6-8 are ACTIVE in v2 but advisory — v1 certification boards may review v2 readiness classifications but are not bound by them.",
+    "delta_review_advisement": "v2 delta review produces inheritance recommendations (IR-001 through IR-005). v1 certification boards may adopt or ignore these recommendations. Adoption rate is tracked as a v2 effectiveness metric.",
+    "recommendation_pipeline": "v2 produces REC-ID recommendations. v1 determines whether to execute, defer, or reject them. All REC-ID lifecycle transitions (OPEN→IN_PROGRESS→CLOSED/REJECTED) are tracked in RECOMMENDATION_REGISTRY.json.",
+    "reporting": "v2 produces 4 reports (Registry, Quality, Governance, Throughput). v1 produces ad-hoc reports as needed. After Hybrid Mode, v1 ad-hoc reports are retired per S203 migration plan."
+  },
+
+  "certification_verdict": {
+    "verdict": "CERTIFIED — Hybrid Mode operations model is complete and conflict-free",
+    "conditions": [
+      "PRE-205-01 (DL-034 P1-E-R33 archive) must be completed before 800-Series full-pack Gate -1 pass",
+      "S206 must execute as the first session under active Rules 6-8 governance",
+      "v2 readiness classifications remain advisory until S208 (Shadow Mode transition)"
+    ],
+    "confidence": "HIGH — all 4 pilot sessions (S204, S322, S202.1, S205) confirmed v1+v2 coexistence without conflict"
+  },
+
+  "cross_references": {
+    "s203_migration": "SESSION203_MIGRATION_EXECUTION_PLAN.json",
+    "s204_hybrid_validation": "SESSION204_EXECUTIVE_SUMMARY.md",
+    "rules_6_8": ["SESSION205_RULE6_DEPLOYMENT.json", "SESSION205_RULE7_DEPLOYMENT.json", "SESSION205_RULE8_DEPLOYMENT.json"],
+    "deployment_decision": "SESSION205_DEPLOYMENT_DECISION.md",
+    "s322_infrastructure": "SESSION205_INFRASTRUCTURE_VERIFICATION.json"
+  }
+}

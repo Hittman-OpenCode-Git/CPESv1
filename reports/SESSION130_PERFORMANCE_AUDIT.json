@@ -1,0 +1,530 @@
+{
+  "session": "S130",
+  "codeMetrics": {
+    "mayCoreLines": 6284,
+    "mayLearnerStateLines": 1501,
+    "totalAnalyzedLines": 7785,
+    "linesBySubsystem": {
+      "S120_explain_tutor": 273,
+      "S121_wrong_choices": 294,
+      "S122_hints_mcq": 142,
+      "S123_next_best_step_shared": 168,
+      "S124_learning_patterns_shared": 132,
+      "S125_focus_areas_shared": 145,
+      "S126_session_recap": 112,
+      "S127_weekly_digest": 209,
+      "S128_study_strategy": 155,
+      "S129_strategy_effectiveness": 168,
+      "simplify_coaching": 373,
+      "my_mistake": 89,
+      "progress_insight": 100,
+      "weakness_insight": 117,
+      "session_summary_core": 121,
+      "similar_next_recovery": 208,
+      "challenge_handling": 90,
+      "freeform_chat": 143,
+      "case_hints_S94": 272,
+      "mini_panel_feedback": 220,
+      "welcome_onboarding_S115_S117": 722,
+      "student_roll_synthetic": 416,
+      "pre_exam_context": 122
+    },
+    "sharedInfrastructureLines": 2126,
+    "sharedInfrastructureComponents": [
+      "dispatch_core: handleAction + _actionLabel + _addMessage + _speak (~87 lines)",
+      "render_view: renderView + all _render* cards + _formatMessage (~334 lines)",
+      "append_chain_S123_S124_S125: _generateNextBestStep + _appendNextBestStep + _identifyLearningPatterns + _appendLearningPatterns + _suggestFocusAreas + _appendFocusAreas + _recordRecommendation (~445 lines)",
+      "bank_index: _findSimilarQuestions + _ensureTopicIndex + _loadDefectManifest + _isBlockedByDefectManifest (~73 lines)",
+      "safety_pilot: _guardedSpeak + _guardedRecommend + _guardedTutoringContext + safety_vocab + _initSafetyVocab (~240 lines)",
+      "logging_persistence: _restorePersistedLogs + _persist* + _logSessionTelemetry + _logPilotUsage (~208 lines)",
+      "evidence_validators: _has*Evidence + _assessInsightEvidence (~95 lines)",
+      "case_utilities: _normalizeCaseItem + _caseExhibitsSummary + _getRelevantExhibits + _caseExhibitRefsHtml (~50 lines)",
+      "companion_launcher: _injectMayCompanionCard + _hideMayCompanionCard + dismissMayCompanionCard + _injectMayLauncher + _updateMayLauncherState + openMayFromLauncher + _pulseLauncherReview (~157 lines)",
+      "session_management: startSessionReview + next/prevReviewQuestion + recordLiveAttempt + handoffCompletedSession + clearContext + export/importProgress (~318 lines)",
+      "bootstrap: config + isPilotEnvironment + context + init + _fetchDefectManifest + _updateDisplayName (~119 lines)"
+    ]
+  },
+  "callGraph": {
+    "dispatch": {
+      "handleAction": {
+        "explain": "_explainAnswer → _buildTutorExplanation → _interpretExplanation, _inferCommonTrap, _inferPatternRecognition, _inferReviewFocus",
+        "wrong-choices": "_explainWrongChoices → _buildWrongChoiceCoaching → _inferWhyTempting, _inferWhyWrongFallback, _inferMisconception, _inferAvoidNextTime",
+        "hint": "_provideHint → _metacognitiveHint | _conceptHint | _strategyHint | _eliminationHint (or case variants)",
+        "simplify": "_simplifyExplanation → _buildSimplifyCoaching → _plainLanguageTranslation, _simplifyAccountingLanguage, _inferWhyItMatters, _inferHowToRecognize, _inferQuickRuleToRemember",
+        "mymistake": "_explainYourMistake",
+        "progress": "_getProgressInsight",
+        "weakness": "_getWeaknessInsight",
+        "summary": "_summarizeSession → _generateSessionRecap",
+        "similar": "_recommendSimilar → _findSimilarQuestions → _ensureTopicIndex → _guardedRecommend",
+        "next": "_recommendNext → _findSimilarQuestions → _guardedRecommend",
+        "recovery": "_generateRecoverySet → _findSimilarQuestions → _guardedRecommend",
+        "digest": "_showWeeklyDigest → _generateWeeklyDigest",
+        "strategy": "_showStudyStrategy → _generateStudyStrategy",
+        "effectiveness": "_showStrategyEffectiveness → _generateStrategyEffectiveness",
+        "chat": "_handleFreeform → [routes to 13 coaching paths or _handleChallenge]"
+      }
+    },
+    "fullChain": [
+      "handleAction('explain')",
+      "  → _explainAnswer()",
+      "    → _buildTutorExplanation(q) [S120]",
+      "      → _interpretExplanation()",
+      "      → _inferCommonTrap()",
+      "      → _inferPatternRecognition()",
+      "      → _inferReviewFocus() → MayLearnerState.getTopicProgress() → load()",
+      "    → MayLearnerState.getTopicProgress() → load()",
+      "    → _caseWhatMattered() [if case item]",
+      "    → _caseApproachNote() [if case item]",
+      "    → _appendNextBestStep(lines, q, ctx) [S123]",
+      "      → _generateNextBestStep(q, ctx) → MayLearnerState.getTopicProgress() → load()",
+      "      → _recordRecommendation('next_best_step', ...) → MayLearnerState.recordRecommendationDelivery() → load() + save()",
+      "    → _appendLearningPatterns(lines, q, ctx) [S124]",
+      "      → _identifyLearningPatterns(q, ctx) → MayLearnerState.getTopicProgress() → load() + MayLearnerState.load()",
+      "    → _appendFocusAreas(lines, q, ctx) [S125]",
+      "      → _suggestFocusAreas(q, ctx) → MayLearnerState.getTopicProgress() → load() + MayLearnerState.load()",
+      "      → _recordRecommendation('focus_area', ...) [per suggestion] → MayLearnerState.recordRecommendationDelivery() → load() + save()",
+      "    → _guardedSpeak() or _speak()",
+      "",
+      "handleAction('wrong-choices')",
+      "  → _explainWrongChoices()",
+      "    → _buildWrongChoiceCoaching(q, ctx) [per distractor]",
+      "      → _inferWhyTempting()",
+      "      → _inferWhyWrongFallback()",
+      "      → _inferMisconception()",
+      "      → _inferAvoidNextTime()",
+      "    → _appendNextBestStep(lines, q, ctx) [S123 — same cascade]",
+      "    → _appendLearningPatterns(lines, q, ctx) [S124 — same cascade]",
+      "    → _appendFocusAreas(lines, q, ctx) [S125 — same cascade]",
+      "    → _guardedSpeak() or _speak()",
+      "",
+      "handleAction('simplify')",
+      "  → _simplifyExplanation()",
+      "    → _buildSimplifyCoaching(q, ctx)",
+      "      → _plainLanguageTranslation() → _simplifyAccountingLanguage()",
+      "      → _inferWhyItMatters()",
+      "      → _inferHowToRecognize()",
+      "      → _inferQuickRuleToRemember()",
+      "    → _appendNextBestStep(lines, q, ctx) [S123 — same cascade]",
+      "    → _appendLearningPatterns(lines, q, ctx) [S124 — same cascade]",
+      "    → _appendFocusAreas(lines, q, ctx) [S125 — same cascade]",
+      "    → _guardedSpeak() or _speak()",
+      "",
+      "handleAction('summary')",
+      "  → _summarizeSession()",
+      "    → _generateSessionRecap(sessionObj, topicEntries, data) [S126]",
+      "      → MayLearnerState.load() [again]",
+      "    → _guardedSpeak() or _speak()",
+      "",
+      "handleAction('digest')",
+      "  → _showWeeklyDigest()",
+      "    → _generateWeeklyDigest() [S127]",
+      "      → MayLearnerState.load()",
+      "      → MayLearnerState.getTopicProgress() → load()",
+      "    → _recordRecommendation('weekly_digest', ...) [per weak topic]",
+      "",
+      "handleAction('strategy')",
+      "  → _showStudyStrategy()",
+      "    → _generateStudyStrategy() [S128]",
+      "      → MayLearnerState.load()",
+      "      → MayLearnerState.getTopicProgress() → load()",
+      "    → _recordRecommendation('study_strategy', ...) [per weak topic]",
+      "",
+      "handleAction('effectiveness')",
+      "  → _showStrategyEffectiveness()",
+      "    → _generateStrategyEffectiveness() [S129]",
+      "      → MayLearnerState.getOutcomeSummary() → load()",
+      "      → MayLearnerState.load()",
+      "      → MayLearnerState.getRecommendationRecurrence() → load()",
+      "      → MayLearnerState.getLongitudinalAnalytics() → load()"
+    ],
+    "sharedAppendChain": {
+      "description": "S123-S125 append chain runs identically in _explainAnswer, _explainWrongChoices, and _simplifyExplanation",
+      "subsystemsUsing": ["explain (line 1784-1792)", "wrong-choices (line 2085-2092)", "simplify (line 2608-2615)"],
+      "perInvocationLoadCalls": "~6-7 MayLearnerState.load() calls (each from localStorage) — via getTopicProgress in S123/S124/S125 generators + direct load() calls + _recordRecommendation → load()+save()",
+      "totalLoadCallsInExplainChain": "~7-8 load() + ~3 save() calls for a single 'explain' action"
+    }
+  },
+  "duplicatedComputations": [
+    {
+      "computation": "Topic progress (accuracy, attempt counts) retrieved via MayLearnerState.getTopicProgress()",
+      "computedIn": [
+        "S124:_identifyLearningPatterns ~line 1253",
+        "S125:_suggestFocusAreas ~line 1388",
+        "S120:_inferReviewFocus ~line 1701",
+        "S123:_generateNextBestStep ~line 1099",
+        "_explainAnswer ~line 1757",
+        "_greetingForQuestion ~line 952",
+        "renderMiniPanel ~line 5370",
+        "showPostAnswerFeedback ~line 5424"
+      ],
+      "estimatedSavingsLines": 0,
+      "unificationStrategy": "Compute topicProgress once at the top of each coaching entry point (_explainAnswer, _explainWrongChoices, _simplifyExplanation) and pass it down as a parameter to all callees. In a single _explainAnswer call, getTopicProgress() is called 5 independent times, each re-reading localStorage and rebuilding the full topic map."
+    },
+    {
+      "computation": "Section name map {A:'External Financial Reporting', B:'Planning...', C:'Performance...', D:'Cost...', E:'Internal Controls', F:'Technology & Analytics'}",
+      "computedIn": [
+        "_greetingForQuestion ~line 945-947",
+        "_generateNextBestStep ~line 1093-1095",
+        "_buildTutorExplanation ~line 1545-1547",
+        "_suggestFocusAreas ~line 1446-1447",
+        "_buildWrongChoiceCoaching ~line 1822-1824",
+        "_buildSimplifyCoaching ~line 2269-2271"
+      ],
+      "estimatedSavingsLines": 30,
+      "unificationStrategy": "Define a single May.config.sectionNames or May._sectionNames constant and reference it everywhere. Eliminates 6 copies of the same 6-line object literal (~30 duplicated lines)."
+    },
+    {
+      "computation": "Misconception pattern name map {misclassification:'classification errors', variance_sign_confusion:'variance sign confusion', budget_component_error:'budget component selection', ...}",
+      "computedIn": [
+        "S124:_identifyLearningPatterns ~lines 1295-1303",
+        "S125:_suggestFocusAreas ~lines 1423-1432",
+        "_explainYourMistake ~lines 2699-2707",
+        "_getWeaknessInsight ~lines 2904-2913",
+        "S126:_generateSessionRecap ~lines 2995-3003",
+        "S127:_generateWeeklyDigest ~lines 3143-3151",
+        "S128:_generateStudyStrategy ~lines 3258-3262"
+      ],
+      "estimatedSavingsLines": 48,
+      "unificationStrategy": "Define a single shared pattern name map (May._patternNames or MayLearnerState._patternNames). Eliminates 7 identical copies of an 8-entry object (~48 duplicated lines)."
+    },
+    {
+      "computation": "Weak-topic identification — which topics are below threshold and need attention",
+      "computedIn": [
+        "S125:_suggestFocusAreas ~line 1396 (persistentWeak check)",
+        "S126:_generateSessionRecap ~line 3039-3048 (weakestTopic from session)",
+        "S127:_generateWeeklyDigest ~lines 3127-3138 (Topics needing attention)",
+        "S128:_generateStudyStrategy ~line 3255 (weakTopics filter)",
+        "_recommendNext ~line 3758 (prioritizes persistentWeak/declining/unstable)",
+        "_generateRecoverySet ~line 3840 (builds targets from clusters)",
+        "_getWeaknessInsight ~line 2838 (persistentWeak)"
+      ],
+      "estimatedSavingsLines": 50,
+      "unificationStrategy": "All seven subsystems independently identify the 'weakest topics.' MayLearnerState.getWeaknessClusters() already provides the pre-computed list. All subsystems should consume that single source of truth instead of re-deriving weak-topic lists from raw session data. Standardize on clusters.persistentWeak, clusters.declining, clusters.unstable as canonical weak-topic sources."
+    },
+    {
+      "computation": "Hint level dispatch — switch on hintLevel (metacognitive→concept→strategy→elimination)",
+      "computedIn": [
+        "_provideHint ~lines 2125-2166 (MCQ + case branch)",
+        "miniHint ~lines 5493-5499 (MCQ only, no case branch)"
+      ],
+      "estimatedSavingsLines": 15,
+      "unificationStrategy": "Extract a shared _dispatchHint(q, level, caseObj) function that both _provideHint and miniHint call. Currently miniHint duplicates the MCQ switch but lacks case support, creating a consistency risk."
+    },
+    {
+      "computation": "Cross-session accuracy trend (recent vs. prior session comparison)",
+      "computedIn": [
+        "S126:_generateSessionRecap ~lines 3016-3037",
+        "_summarizeSession ~lines 3672-3691",
+        "S127:_generateWeeklyDigest ~lines 3090-3106 (first/last session in lookback)"
+      ],
+      "estimatedSavingsLines": 25,
+      "unificationStrategy": "Extract a _computeSessionTrend(sessions, windowSize) utility. All three compute essentially the same metric (recent accuracy delta) but with slightly different windows."
+    },
+    {
+      "computation": "Misconception pattern scan for current topic from learnerState data",
+      "computedIn": [
+        "S124:_identifyLearningPatterns ~line 1290 (filter data.misconceptionPatterns by topic)",
+        "S125:_suggestFocusAreas ~line 1417 (same filter)",
+        "_explainYourMistake ~line 2696 (same filter)"
+      ],
+      "estimatedSavingsLines": 10,
+      "unificationStrategy": "Compute once at the entry point. All three do: data = MayLearnerState.load(); patterns = data.misconceptionPatterns.filter(p => p._topics.includes(topic) && p.count >= 2). Pass as parameter."
+    },
+    {
+      "computation": "Session topic classification — building {topic: {n, c}} maps from session attempts",
+      "computedIn": [
+        "_summarizeSession ~lines 3642-3653",
+        "S126:_generateSessionRecap ~lines 2962-2989 (receives pre-computed entries but may iterate again)",
+        "S127:_generateWeeklyDigest ~lines 3066-3076",
+        "S128:_generateStudyStrategy ~lines 3234-3242"
+      ],
+      "estimatedSavingsLines": 20,
+      "unificationStrategy": "MayLearnerState could expose a getSessionTopicSummary(sessionId) that returns pre-aggregated topic counts from a cached store. Currently each function independently iterates session.attempts[]."
+    }
+  ],
+  "redundantScans": [
+    {
+      "dataQueried": "MayLearnerState.load() — reads full learner state from localStorage and parses JSON",
+      "queriedBy": [
+        "May.init ~51",
+        "May.getWelcomeMessage ~126",
+        "May.trySetName ~183",
+        "May._selectStudentFromRoll ~242",
+        "May._buildWelcomeOverview ~280",
+        "May._detectPositiveTrend ~321",
+        "May.preExamBriefing ~848",
+        "May._greetingForQuestion → getTopicProgress() ~952",
+        "May._generateNextBestStep → getTopicProgress() ~1099",
+        "May._identifyLearningPatterns → getTopicProgress() + load() ~1253, ~1290",
+        "May._suggestFocusAreas → getTopicProgress() + load() ~1388, ~1391",
+        "May._inferReviewFocus → getTopicProgress() ~1701",
+        "May._explainAnswer → getTopicProgress() ~1757",
+        "May._explainYourMistake ~2695",
+        "May._getProgressInsight ~2724",
+        "May._getWeaknessInsight ~2827, ~2901",
+        "May._generateSessionRecap ~2992",
+        "May._generateWeeklyDigest ~3057",
+        "May._generateStudyStrategy ~3224",
+        "May._generateStrategyEffectiveness ~3388",
+        "May._summarizeSession ~3590",
+        "May._generateRecoverySet ~3832",
+        "May.renderView ~4320, ~4386",
+        "May._renderInsightCards ~4596",
+        "May.renderSetupGreeting ~5606, ~6138",
+        "May.miniInsight ~5558",
+        "May.exportProgress ~5301",
+        "May._scoreRecommendationQuality ~3573",
+        "May._assessInsightEvidence ~6088",
+        "MayLearnerState.getTopicProgress() [called independently from many May.* functions]",
+        "MayLearnerState.getTrends() [called from _getProgressInsight, _getWeaknessInsight, _recommendNext, _generateRecoverySet, _renderInsightCards, getWeaknessClusters, getReadinessSummary, classifyPendingOutcomes]",
+        "MayLearnerState.getWeaknessClusters() [called from 10+ locations]",
+        "MayLearnerState.getReadinessSummary() [called from _renderReadinessSnapshot, _renderReadinessProvenance, _renderSectionReadiness, getSectionReadinessSummary, logReadinessMetrics, getThresholdSnapshot]",
+        "MayLearnerState.getConfidenceCalibration() [called from _getProgressInsight, _assessInsightEvidence, logReadinessMetrics, exportCalibrationData]",
+        "MayLearnerState.getCasePatternSummary() [called from _renderCasePatternInsights, _renderCasePracticeGuidance, getReadinessSummary, getAdaptivePracticeMix]",
+        "MayLearnerState.getCasePatternTrends() [called from _renderCasePatternInsights, _renderCasePracticeGuidance, getReadinessSummary, getAdaptivePracticeMix]",
+        "MayLearnerState.getAdaptivePracticeMix() [called from _renderAdaptivePracticeMix]",
+        "MayLearnerState.getRecentlySeenByOutcome() [called from _recommendNext, _generateRecoverySet]",
+        "MayLearnerState.getOutcomeSummary() [called from _generateStrategyEffectiveness]",
+        "MayLearnerState.getRecommendationRecurrence() [called from _generateStrategyEffectiveness]",
+        "MayLearnerState.getLongitudinalAnalytics() [called from _generateStrategyEffectiveness]",
+        "MayLearnerState.classifyPendingOutcomes() [called from handoffCompletedSession]"
+      ],
+      "scanCount": 42,
+      "worstCaseSingleAction": "In a single _explainAnswer invocation, MayLearnerState.load() is called 7-8 times indirectly (via getTopicProgress in S123, S124, S125 generators + direct load() in S124/S125 + _inferReviewFocus + _recordRecommendation × 2-3). In a single renderView(), load() is called 15-20 times through cascading getTrends/getWeaknessClusters/getReadinessSummary/getTopicProgress/getCasePatternSummary chains."
+    },
+    {
+      "dataQueried": "Session history iteration — scanning all sessions/attempts arrays",
+      "queriedBy": [
+        "May.getWelcomeMessage ~128 (sessions.reduce)",
+        "May._buildWelcomeOverview ~281 (sessions.length)",
+        "May._detectPositiveTrend ~321-328 (sessions.slice(-3), iterate attempts)",
+        "May.preExamBriefing ~849 (sessions.length)",
+        "May._identifyLearningPatterns ~1324-1333 (iterate session results)",
+        "May._getProgressInsight ~2733 (sessions.reduce)",
+        "May._generateSessionRecap ~3015-3037 (access sessions[-1], sessions[-2])",
+        "May._generateWeeklyDigest ~3067-3076 (iterate 7 sessions)",
+        "May._generateStudyStrategy ~3234-3242 (iterate 7 sessions)",
+        "May._summarizeSession ~3672-3691 (access sessions[-1], sessions[-2])",
+        "MayLearnerState.getTrends() — iterates all topicPerformance",
+        "MayLearnerState.getWeaknessClusters() — calls getTrends() + iterates difficultyDistribution",
+        "MayLearnerState.getReadinessSummary() — massive iteration through trends, topicProgress, casePatternSummary",
+        "MayLearnerState.getConfidenceCalibration() — iterates all sessions.attempts",
+        "MayLearnerState.getCasePatternSummary() — iterates all sessions",
+        "MayLearnerState.getCasePatternTrends() — iterates sessions.slice(-4)",
+        "MayLearnerState.getRecentlySeenByOutcome() — iterates 3 sessions",
+        "MayLearnerState.getAdaptivePracticeMix() — multiple iteration cascades",
+        "MayLearnerState.getSectionReadinessSummary() — calls getReadinessSummary + getTopicProgress",
+        "MayLearnerState.getLongitudinalAnalytics() — iterates sessions filtered by 3 time windows",
+        "MayLearnerState.classifyPendingOutcomes() — iterates recommendationOutcomes"
+      ],
+      "scanCount": 21
+    },
+    {
+      "dataQueried": "MayLearnerState.getTopicProgress() — rebuilds full topic map from localStorage on every call",
+      "queriedBy": [
+        "_greetingForQuestion ~952",
+        "_generateNextBestStep ~1099",
+        "_identifyLearningPatterns ~1253",
+        "_suggestFocusAreas ~1388",
+        "_inferReviewFocus ~1701",
+        "_explainAnswer ~1757",
+        "renderMiniPanel ~5370",
+        "showPostAnswerFeedback ~5424",
+        "_generateWeeklyDigest ~3060",
+        "_generateStudyStrategy ~3227",
+        "getReadinessSummary (may-learner-state.js ~595)",
+        "getSectionReadinessSummary (may-learner-state.js ~837)",
+        "getAdaptivePracticeMix (may-learner-state.js ~461)",
+        "classifyPendingOutcomes (may-learner-state.js ~1253)"
+      ],
+      "scanCount": 14
+    }
+  ],
+  "redundantRecommendations": [
+    {
+      "recommendation": "\"Focus on / practice more on weak topic X\"",
+      "generatedBy": [
+        "S125:_suggestFocusAreas (focus area, priority 'high', ~line 1396)",
+        "S126:_generateSessionRecap (recommended next step, ~line 3043)",
+        "S127:_generateWeeklyDigest (recommended weekly focus, ~line 3181)",
+        "S128:_generateStudyStrategy (next session plan, ~line 3270)",
+        "_recommendNext (~line 3804)",
+        "_generateRecoverySet (~line 3889)"
+      ],
+      "canUnify": true,
+      "unificationStrategy": "All six identify the same data (weakest topic) and generate the same core message. Route through a single _recommendFocusTopic(topic, context) that varies framing by context (next-session vs. weekly vs. recovery-set)."
+    },
+    {
+      "recommendation": "\"Watch for / review misconception pattern Y\"",
+      "generatedBy": [
+        "S124:_identifyLearningPatterns (Patterns I'm noticing, ~line 1308)",
+        "S125:_suggestFocusAreas (focus area, priority 'medium', ~line 1437)",
+        "_explainYourMistake (pattern note, ~line 2711)",
+        "_getWeaknessInsight (recurring traps, ~line 2920)",
+        "S126:_generateSessionRecap (key misconceptions, ~line 3006)",
+        "S127:_generateWeeklyDigest (most common misconceptions, ~line 3157)",
+        "S128:_generateStudyStrategy (pattern watch, ~line 3273)"
+      ],
+      "canUnify": true,
+      "unificationStrategy": "Seven subsystems independently surface misconception patterns using nearly identical code (load → filter data.misconceptionPatterns → sort by count → map pattern name → format). Extract a _formatMisconceptionInsight(patterns, style) that takes pre-filtered patterns and a display style ('coaching', 'digest', 'strategy')."
+    },
+    {
+      "recommendation": "\"Practice calculations with formula-first approach\"",
+      "generatedBy": [
+        "S123:_generateNextBestStep (action plan for calculation/ formula errors, ~lines 1131, 1135)",
+        "S125:_suggestFocusAreas (calculation practice, ~line 1409)",
+        "_inferCommonTrap (calculation trap text, ~lines 1654-1658)",
+        "_strategyHint (calculation strategy, ~line 2218)",
+        "_inferHowToRecognize (calculation tips, ~lines 2445-2450)",
+        "S128:_generateStudyStrategy (work 5-6 items mixing concept and calculation, ~line 3270)"
+      ],
+      "canUnify": true,
+      "unificationStrategy": "Centralize formula-first coaching language in a shared _getCalculationCoaching(topic, context) that returns the appropriate message variant (hint, trap, action plan, strategy) from one canonical source."
+    },
+    {
+      "recommendation": "\"Maintain / review strong topic to prevent decay\"",
+      "generatedBy": [
+        "S125:_suggestFocusAreas (topic strength → maintain, ~line 1462)",
+        "_getProgressInsight (well-established topics, ~line 2773)",
+        "S127:_generateWeeklyDigest (strongest topics, ~line 3117)",
+        "S128:_generateStudyStrategy (maintain strong topics, ~line 3300)"
+      ],
+      "canUnify": true,
+      "unificationStrategy": "Four subsystems independently detect and surface strong topics. Route through a single MayLearnerState.getStrongTopics() that returns the canonical list, and format display from one location."
+    },
+    {
+      "recommendation": "\"Try a case study / mix modes\"",
+      "generatedBy": [
+        "S126:_generateSessionRecap (~line 3044: 'consider mixing in a case study')",
+        "S128:_generateStudyStrategy (~line 3277: 'switch to a case study')",
+        "_recommendNext (~line 3777: 'try a full mixed simulation')",
+        "MayLearnerState.getAdaptivePracticeMix() (Mixed Reinforcement mode)",
+        "_summarizeSession (~line 3697: 'mixing in a case study')"
+      ],
+      "canUnify": true,
+      "unificationStrategy": "getAdaptivePracticeMix() already determines the optimal practice mode. All coaching paths should consume that single decision rather than independently re-deriving case-study recommendations."
+    }
+  ],
+  "memoryGrowthRisks": [
+    {
+      "dataStructure": "MayLearnerState data.sessions[].attempts[]",
+      "location": "may-learner-state.js ~line 125",
+      "cap": "Sessions capped at 50, but attempts per session are unbounded",
+      "risk": "medium",
+      "detail": "Each session's attempts array grows without a per-session cap. A single session with 200+ MCQ attempts would store 200 objects. The 50-session cap limits total sessions but not per-session bloat.",
+      "mitigation": "Add per-session attempt cap (e.g., 100) or cap total attempts across all sessions."
+    },
+    {
+      "dataStructure": "MayLearnerState data.misconceptionPatterns[].questionIds[]",
+      "location": "may-learner-state.js ~line 214",
+      "cap": "None",
+      "risk": "medium",
+      "detail": "Each misconception pattern entry accumulates questionIds indefinitely: existing.questionIds.push(qid). No cap, no deduplication beyond Set conversion at push-time. A pattern with 200+ occurrences stores 200 question IDs.",
+      "mitigation": "Cap questionIds at 50 per pattern or track count only."
+    },
+    {
+      "dataStructure": "May._topicIndex (in-memory cache of all certified bank questions)",
+      "location": "may-core.js ~line 3948",
+      "cap": "Bounded by bank size, never cleared",
+      "risk": "low",
+      "detail": "Built lazily on first _findSimilarQuestions call. Lives for page lifetime. With 5 banks × ~300 questions each ≈ 1500 question objects. Acceptable for now but could grow with bank expansion.",
+      "mitigation": "Consider weak-ref caching or LRU eviction if bank count grows beyond 10."
+    },
+    {
+      "dataStructure": "May.context.chatHistory",
+      "location": "may-core.js ~line 34, 1060",
+      "cap": "Capped at 40 by maxChatMessages",
+      "risk": "low",
+      "detail": "Properly capped. Reset per-question in setQuestionContext."
+    },
+    {
+      "dataStructure": "May.context._sessionTelemetry",
+      "location": "may-core.js ~line 42, 5828",
+      "cap": "100 entries, persisted to localStorage",
+      "risk": "low",
+      "detail": "Properly capped and persisted."
+    },
+    {
+      "dataStructure": "May.context._pilotUsageLog",
+      "location": "may-core.js ~5906",
+      "cap": "200 entries",
+      "risk": "low"
+    },
+    {
+      "dataStructure": "MayLearnerState data.recommendationOutcomes",
+      "location": "may-learner-state.js ~1241",
+      "cap": "200 entries",
+      "risk": "low"
+    },
+    {
+      "dataStructure": "MayLearnerState data.recommendationLog",
+      "location": "may-learner-state.js ~1452",
+      "cap": "200 entries",
+      "risk": "low"
+    },
+    {
+      "dataStructure": "MayLearnerState data.challengedQids",
+      "location": "may-learner-state.js ~318",
+      "cap": "100 entries",
+      "risk": "low"
+    },
+    {
+      "dataStructure": "MayLearnerState._calibrationMetrics + _liveCalibrationSessions",
+      "location": "may-learner-state.js ~1058, ~1167",
+      "cap": "100 and 500 entries respectively",
+      "risk": "low"
+    }
+  ],
+  "optimizationRecommendations": [
+    {
+      "priority": "high",
+      "change": "Implement a per-action compute-once pattern: load learner state once at the entry point of each high-level coaching action (_explainAnswer, _explainWrongChoices, _simplifyExplanation, renderView) and pass the loaded data + pre-computed topicProgress/weaknessClusters as parameters to all callees.",
+      "impact": "Reduces localStorage reads from ~7-8 per _explainAnswer to 1. Reduces getTopicProgress() calls from 5 to 1 per explain chain. Eliminates ~80% of redundant getTrends()/getWeaknessClusters() calls in renderView(). Estimated 60-70% reduction in total load() calls across all coaching paths."
+    },
+    {
+      "priority": "high",
+      "change": "Extract duplicated constant maps into shared module-level constants: May._sectionNames, May._patternNames. Define once, reference everywhere.",
+      "impact": "Eliminates 6 copies of sectionNames (30 lines) and 7 copies of patternNames (48 lines). Reduces maintenance burden — a single change updates all subsystems. Prevents drift between copies."
+    },
+    {
+      "priority": "high",
+      "change": "Consolidate weak-topic recommendation generation: route all 'focus on topic X' recommendations through a single _recommendFocusTopic(topic, context) function. Have S125, S126, S127, S128, _recommendNext, and _generateRecoverySet all call this shared function with different context flags (next-session, weekly, recovery-set).",
+      "impact": "Eliminates 6 independent implementations of the same logic. Ensures consistent messaging. Reduces ~50 lines of duplicated topic-prioritization code."
+    },
+    {
+      "priority": "high",
+      "change": "Create a MayLearnerState.getCachedLearnerSnapshot() that returns {data, topicProgress, trends, weaknessClusters, caseSummary} in a single localStorage read. Use this as the entry point for renderView(), _getProgressInsight(), _getWeaknessInsight(), and _generateWeeklyDigest().",
+      "impact": "renderView() currently triggers 15-20 independent load() calls through cascade chains. A single snapshot would reduce this to ~3 calls (snapshot + a few specialized queries). Eliminates N+1 query pattern in the render path."
+    },
+    {
+      "priority": "medium",
+      "change": "Consolidate S126-S127-S128 into a single longitudinal analytics pipeline. All three independently iterate session history, compute topic accuracy, identify weak/strong topics, scan misconception patterns, and generate recommendations. They differ only in time window (single session vs. 7 sessions) and output framing.",
+      "impact": "Reduces ~476 lines across three subsystems to ~200 lines in a unified pipeline with window-parameterized output. Eliminates duplication in session scanning, topic classification, pattern detection, and recommendation generation."
+    },
+    {
+      "priority": "medium",
+      "change": "Implement a lightweight in-memory cache for MayLearnerState.load() with a session-scoped TTL. Cache the parsed learner state object for the duration of a single user action + render cycle, then invalidate.",
+      "impact": "Without changing any function signatures, reduces localStorage reads by 80% for cascading calls. A simple lastLoadTimestamp + cachedData check in load() would short-circuit repeated deserialization of the same data."
+    },
+    {
+      "priority": "medium",
+      "change": "Add per-session attempt caps in MayLearnerState.recordAttempt(): if session.attempts.length > 100, trim oldest. Also cap misconceptionPatterns[].questionIds at 50.",
+      "impact": "Prevents unbounded growth in the two remaining uncapped data structures. Ensures localStorage quota is never exceeded even with heavy usage."
+    },
+    {
+      "priority": "low",
+      "change": "De-duplicate hint dispatch between _provideHint() and miniHint() by extracting a shared _dispatchHint(q, level, caseObj) function.",
+      "impact": "Ensures miniHint() gains case-item support (currently missing). Eliminates ~15 lines of duplicated switch statement. Prevents divergence between full-panel and mini-panel hint behavior."
+    },
+    {
+      "priority": "low",
+      "change": "Extract cross-session trend computation into MayLearnerState.getSessionTrend(windowSize) to serve S126, _summarizeSession, and S127 from one implementation.",
+      "impact": "Eliminates 3 independent implementations of 'compare recent session accuracy to prior session.' Reduces ~25 lines of duplicated computation."
+    },
+    {
+      "priority": "low",
+      "change": "Add a MayLearnerState.getTopicSnapshot(topic) that returns {accuracy, recentPct, attempts, patterns} in one call. Use it to replace the pattern of: getTopicProgress() + load() + filter misconceptionPatterns.",
+      "impact": "Reduces 3-call patterns to 1. Used in S124, S125, _explainYourMistake which all do the same 3-step dance."
+    }
+  ]
+}

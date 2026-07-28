@@ -1,0 +1,14 @@
+{
+  "agent": "O",
+  "session": "S301",
+  "phase": 5,
+  "domain": "Content Risk Factors",
+  "risks": [
+    { "id": "CR-01", "name": "DL-030 CorrectChoice Answer-Key Errors", "scope": "4 Pack B items (resolved)", "severity": "Critical", "current_status": "Resolved in Pack B. Unknown risk in uncertified Pack C/D/F items.", "mitigation": "Independent verification of all uncertified items' CorrectChoice before certification" },
+    { "id": "CR-02", "name": "DL-001 Semantic Accuracy Defects", "scope": "1 Pack B item (resolved)", "severity": "Critical", "current_status": "Resolved. Pattern: 'variance equals standard cost' vs 'zero variance'. Risk exists in similar variance-calculation items.", "mitigation": "Proactive scan for DL-001 pattern in remaining uncertified items" },
+    { "id": "CR-03", "name": "DL-009 Incorrect Authority Citations", "scope": "483 ASC citations across all packs (473 verified correct)", "severity": "High", "current_status": "10 corrected in Pack C. Pack D has 171 citations — highest density.", "mitigation": "Complete ASC citation audit for Pack D Section E/F before certification" },
+    { "id": "CR-04", "name": "DL-010 Misassigned Choice Explanations", "scope": "Known: P1-A-029. Unknown broader scope.", "severity": "High", "current_status": "Cannot be detected automatically — requires semantic AI/human review.", "mitigation": "Sample-based audit of randomly selected items across uncertified sections" },
+    { "id": "CR-05", "name": "Calculation Integrity in Unprocessed Sections", "scope": "Pack C Section F (75 items), Pack D Section F (74 items)", "severity": "High", "current_status": "No verification performed on these sections yet.", "mitigation": "Pre-certification independent recalculation of all numeric items" },
+    { "id": "CR-06", "name": "Part 2 Scope Creep", "scope": "Unknown in uncertified sections", "severity": "Medium", "current_status": "No systematic scan performed. DL-001 mentions Part 2 NVP/WACC risks.", "mitigation": "CAQS D2 blueprint alignment audit before certification" }
+  ]
+}

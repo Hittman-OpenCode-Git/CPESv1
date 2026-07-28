@@ -1,0 +1,37 @@
+{
+  "session": "309",
+  "agent": "K",
+  "title": "600-Series Feasibility Analysis",
+  "generated": "2026-07-26",
+  "decision": "DEFER 600-SERIES",
+
+  "proposal": {
+    "what": "600-series — Content Operations & Authoring Infrastructure",
+    "purpose": "Dedicated operational lane for content authoring, distractor engineering, and EC expansion",
+    "status": "Pure proposal — no files, sessions, or artifacts exist"
+  },
+
+  "analysis": {
+    "expectedThroughputGain": "15-20% improvement in authoring velocity (items/session) through dedicated tools/infrastructure",
+    "expectedSessionSavings": "3-4 sessions saved from 800-series certification waves",
+    "startupCost": "3-4 sessions to build 600-series infrastructure (authoring tools, quality gates, template systems)",
+    "breakeven": "Session 7+ — startup investment equals savings by session 7-8",
+    "netImpact": "NEUTRAL to SLIGHTLY POSITIVE (0-1 session net saving)"
+  },
+
+  "whyDefer": [
+    "Startup cost (3-4 sessions) nearly equals projected savings (3-4 sessions) — near-zero net benefit",
+    "800-series certification methodology already embeds EW authoring — 600-series would add a handoff layer, not eliminate one",
+    "The binding constraint is AUTHOR CAPACITY (human time to write explanations), not infrastructure. Tools can't write explanations — they can only accelerate review of what's written",
+    "Domain E/F certification (316 items) would need to wait for 600-series infrastructure to be built before receiving benefit — delaying the critical path",
+    "Portfolio already has a proven toolchain: governance guard, validation scripts, parse checks. A new lane adds governance overhead without proportional throughput gain"
+  ],
+
+  "whatWouldJustify600series": [
+    "If EW authoring velocity were observed to be the binding constraint and tooling could demonstrably accelerate it by >40%",
+    "If we discovered systematic distractor quality issues requiring specialized analysis tools that don't exist",
+    "If content operations volume were 3x current (e.g., 5,000+ items needing full EC/EW)"
+  ],
+
+  "recommendation": "DEFER. Re-evaluate after 800-series Waves 2-3 if authoring velocity proves to be the actual bottleneck. The current constraint analysis (Agents E/F) shows the bottleneck is item readiness (archived clones, greenfield authoring), not tooling inadequacy."
+}

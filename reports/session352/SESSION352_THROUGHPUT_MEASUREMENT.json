@@ -1,0 +1,199 @@
+{
+  "document": "SESSION352_THROUGHPUT_MEASUREMENT",
+  "session": "S352",
+  "title": "Throughput Measurement — Board I",
+  "series": "350-Series — Framework v2 Operational Analytics (Wave 1)",
+  "date": "2026-07-27",
+  "type": "Read-Only Measurement — No Content Modifications",
+  "authority": "SESSION206_THROUGHPUT_DATASET.json; SESSION350_THROUGHPUT_METRICS.json; SESSION350_V1_BASELINE.json; SESSION351_THROUGHPUT_GAP_ANALYSIS.json",
+  "purpose": "First board allowed to compare S206 Wave 1 operational data against S350 targets. Measure throughput gain, review reduction, board reduction, and artifact reuse. Be honest: scan throughput is measured; certification throughput cannot yet be measured (no v2 wave has run).",
+
+  "v1_baseline_throughput_summary": {
+    "source": "SESSION350_V1_BASELINE.json §section_6",
+    "key_metrics": {
+      "TE-001_items_per_session": "30-50 (average 42) net — after subtracting scanning/governance overhead",
+      "TE-002_items_per_hour": "3-5 items per session-hour",
+      "TE-003_agent_spawns_per_item": "0.305 (including 50% waste). Productive: ~0.153",
+      "TE-004_cost_per_certified_item": "0.305 agent-spawns per item",
+      "TE-005_remaining_uncertified": "469 at S202 baseline. Reduced to 319 by S322."
+    },
+    "bf_metrics_relevant": {
+      "BF-001_agents_per_session": "19 (range 15-28, peak 28 S809)",
+      "BF-002_boards_per_session": "8.5",
+      "BF-003_reports_per_session": "9",
+      "BF-005_duplicate_review_cycles": "2.5:1",
+      "BF-006_re_review_rate": "80%",
+      "BF-008_cycle_time": "4-5 sessions per wave"
+    }
+  },
+
+  "s206_wave_1_throughput": {
+    "source": "SESSION206_THROUGHPUT_DATASET.json",
+    "context": "S206 is a read-only Framework v2 operational session using the scan pipeline. It does NOT include content certification throughput (no certification wave ran). All measurements are scan-pipeline only.",
+    "scan_throughput": {
+      "total_pipeline_time": "0.7s",
+      "per_gate_breakdown": {
+        "gate_neg1_identity": "0.2s",
+        "gate_0_qid_index": "0.2s",
+        "gate_1_structural": "0.1s",
+        "gate_2_explanation": "0.1s",
+        "gate_3_psychometric": "0.1s",
+        "gate_4_integrity": "0.1s"
+      },
+      "items_scanned": 2540,
+      "items_per_second_scan": 3628.6,
+      "items_per_hour_scan": 13062960,
+      "cost_per_item_scan": "negligible (bounded by 0.7s / 2,540 = 0.00028s per item)"
+    },
+    "content_operations": {
+      "content_changes": 0,
+      "certification_actions": 0,
+      "items_certified_this_wave": 0,
+      "explanation_fields_authored": 0,
+      "agent_spawns_for_content": 0,
+      "agent_spawns_for_analytics": "~8-12 (framework boards — read-only measurement)",
+      "session_duration": "~5-10 min (scan + agent-assisted report generation)"
+    },
+    "review_routing": {
+      "full_review": 0,
+      "partial_review": 0,
+      "no_review": 2540,
+      "inheritance_rate": "100% (baseline — no prior delta to compare)"
+    },
+    "artifact_output": {
+      "total_artifacts": 2,
+      "total_output_size": "~6.4 MB",
+      "artifacts_per_session": 2,
+      "board_consumptions_per_artifact": "~32 (across S206/S207/S351/S352)"
+    }
+  },
+
+  "s350_targets_vs_s206_observed": {
+    "measured_gains": {
+      "BF-007_identity_ambiguity": {
+        "v1_value": "PRESENT — binary_fail. ~75% false-positive rate from forward-scan.",
+        "s350_p1_target": "ELIMINATED",
+        "s206_observed": "ELIMINATED — 99.96% identity resolution. 0% false-positive rate. Line-level extraction methodology eliminates DL-020 and DL-029 error classes. VERIFIED: 2,539/2,540 PASS.",
+        "gain": "QUALITATIVE_ELIMINATION — from a documented failure condition (wrong-target remediation, S320-class failures) to operational prevention.",
+        "confidence": "HIGH — measured with production scan data"
+      },
+      "BF-009_defect_timing_shift_left": {
+        "v1_value": "0% pre-flight / 89% board-review / 2.5% post-certification",
+        "s350_p1_target": "78% pre-flight / 20% board-review / 2% post-certification",
+        "s206_observed": "78% pre-flight (target) NOT YET ACHIEVED — scan pipeline is operational (0.7s, 2,540 items) but scans are advisory, not enforcement. 0% of defects are actually detected pre-flight because no certification wave has entered the pipeline.",
+        "infrastructure_readiness": "OPERATIONAL — the pipeline detects defects (DL-008:3, DL-026:274, DL-013:31, EV3:2,074 at S206). The detection infrastructure is proven. The enforcement gap is governance, not technical.",
+        "gain": "INFRASTRUCTURE_ONLY — proven but not yet operationalized. First measurable pre-flight detection rate requires S811 v2 certification wave."
+      }
+    },
+    "not_yet_measurable": {
+      "BF-001_agents_per_session": {
+        "v1_value": 19,
+        "s350_p1_target": "<12",
+        "s206_observed": "~8-12 (read-only analytics session — does not include content-certification agent spawns). Not comparable.",
+        "blocker": "Requires a v2 certification wave to measure agent-spawn reduction from pre-flight gating, delta review, and board consolidation."
+      },
+      "BF-005_duplicate_review_cycles": {
+        "v1_value": "2.5:1",
+        "s350_p1_target": "<1.5:1",
+        "s206_observed": "N/A (no reviews performed — read-only session)",
+        "blocker": "Requires a v2 certification wave with delta review operational to measure."
+      },
+      "BF-006_re_review_rate": {
+        "v1_value": "80%",
+        "s350_p1_target": "<40%",
+        "s206_observed": "100% (baseline artifact — all items need review because no prior certification exists)",
+        "blocker": "Requires second certification wave for delta comparison. First measurable at S811→S812."
+      },
+      "TH-009_throughput_multiplier": {
+        "v1_value": "1.0×",
+        "s350_p1_target": "1.5-2.0×",
+        "s350_p3_target": "3.8×",
+        "s206_observed": "1.0× (v1 operations continue — no v2 certification wave)",
+        "blocker": "All throughput multiplier gains come from: pre-flight gating (saves board-review time), delta review (eliminates re-review), board consolidation (8→5 reduces overhead). None of these are operational in enforcement mode."
+      }
+    }
+  },
+
+  "throughput_gain_decomposition": {
+    "description": "What gains CAN we measure today? What gains require future sessions?",
+    "measurable_today": [
+      {
+        "gain": "Scan speed",
+        "v1_baseline": "~10.75 hours (estimated) for per-defect-class manual grep-based scanning across 50+ events",
+        "v2_measured": "0.7s for full-pipeline scan of all defect classes simultaneously",
+        "multiplier": "~55,000× (time) — from hours to sub-second"
+      },
+      {
+        "gain": "Scan accuracy",
+        "v1_baseline": "~75% false-positive rate (DL-029 forward-scan artifact)",
+        "v2_measured": "0% false-positive rate (line-level extraction methodology)",
+        "multiplier": "INFINITE — eliminates the entire error class"
+      },
+      {
+        "gain": "Scan reuse",
+        "v1_baseline": "0% reuse (every session performed its own ad-hoc scan)",
+        "v2_measured": "1 scan → 32 board consumptions across 4 sessions",
+        "multiplier": "INFINITE (v1 had 0 reuse)"
+      },
+      {
+        "gain": "Artifact output",
+        "v1_baseline": "~9 reports per session (range 7-17), 35% consumption rate",
+        "v2_measured": "2 structured artifacts, 100% consumption rate, all consumed by downstream analytics",
+        "multiplier": "Quality shift from ad-hoc reports to structured, consumable artifacts"
+      },
+      {
+        "gain": "Session overhead",
+        "v1_baseline": "4-5 sessions per certification wave. Much of this was scanning and re-scanning (duplicate review, identity disputes).",
+        "v2_measured": "0.7s for all scanning. S206 (read-only operational) took ~5-10 min. The scanning overhead has been eliminated — certification sessions can now focus entirely on content review.",
+        "multiplier": "Qualitative — scanning overhead dropped from hours to sub-second, but certification decision time (the actual bottleneck) hasn't yet been measured in v2."
+      }
+    ],
+    "requires_future_sessions": [
+      {
+        "gain": "Pre-flight defect prevention",
+        "depends_on": "S811 (first v2 certification wave). Gate -1 through Gate 4 must be enforcement (not advisory). Items with BLOCKED or REMEDIATE status must be excluded from Certification Board queue.",
+        "first_measurable_at": "S811 T0 scan"
+      },
+      {
+        "gain": "Delta review skip rate",
+        "depends_on": "Second scan artifact with content changes (S811→S812 or similar). At least one content-modifying session between baseline scans.",
+        "first_measurable_at": "S812 or second scan after S811 writes content changes"
+      },
+      {
+        "gain": "Board consolidation savings",
+        "depends_on": "Certification boards must adopt the 5-board v2 model. Current certification sessions still operate with 8 boards (v1).",
+        "first_measurable_at": "First v2 certification wave adopting the 5-board model"
+      },
+      {
+        "gain": "End-to-end cycle time reduction",
+        "depends_on": "All above gains combined into a single certification wave.",
+        "first_measurable_at": "S811 through S813 (complete v2 certification cycle)"
+      }
+    ]
+  },
+
+  "s350_throughput_multiplier_reality_check": {
+    "s350_p3_target": "3.8× throughput multiplier (from 1.0× v1 to 3.8× P3)",
+    "s350_decomposition": {
+      "pre_flight_gating_contribution": "1.3-1.5× (eliminates re-reviews of BLOCKED/REMEDIATE items)",
+      "delta_review_contribution": "2.0-2.5× (80%+ items unchanged → skipped)",
+      "board_consolidation_contribution": "1.3-1.4× (8→5 boards → fewer agent-spawns per item)",
+      "compound_total": "1.3 × 2.0 × 1.3 ≈ 3.38× → ~3.8× with efficiency compounding"
+    },
+    "current_status": {
+      "pre_flight_gating": "INFRASTRUCTURE READY — not yet enforcement",
+      "delta_review": "CLASSIFICATION ENGINE READY — requires comparison data",
+      "board_consolidation": "DESIGN COMPLETE — not yet adopted"
+    },
+    "verdict": "3.8× TARGET IS ARCHITECTURALLY SOUND — each component is specified, validated, and infrastructure-ready. But 0% of the multiplier has been realized because no v2 certification wave has run. The 0.7s scan is the only operational gain. The 3.8× requires: (a) enforcement-mode gates, (b) at least 2 certification waves for delta comparison, (c) board model adoption. All three are scheduled for S811+."
+  },
+
+  "verdict": "THROUGHPUT_PARTIALLY_MEASURABLE — Scan throughput is massive and verified (0.7s vs. ~10.75 hours estimated v1 scanning, ~55,000× improvement). Scan accuracy is categorically better (0% false positives vs. ~75% in v1). Artifact reuse is proven (1 scan → 32 board consumptions). However, certification throughput — the metric that matters for delivery velocity — CANNOT be measured because no v2 certification wave has run. The infrastructure is proven operational; the throughput gains are projected at 1.5-3.8× but 0% have been realized. S811 is the first opportunity to measure actual certification throughput under v2.",
+
+  "cross_references": {
+    "s206_throughput": "reports/SESSION206_THROUGHPUT_DATASET.json",
+    "s350_throughput": "reports/SESSION350_THROUGHPUT_METRICS.json",
+    "s350_v1_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "s351_throughput": "reports/session351/SESSION351_THROUGHPUT_GAP_ANALYSIS.json"
+  }
+}

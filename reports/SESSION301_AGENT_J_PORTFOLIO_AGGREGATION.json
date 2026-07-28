@@ -1,0 +1,32 @@
+{
+  "agent": "J",
+  "session": "S301",
+  "phase": 3,
+  "domain": "Portfolio-Level Readiness Aggregation",
+  "portfolio_score": 87.2,
+  "portfolio_tier": "Near-Ready (pending 319 remaining items)",
+  "certified_pool": {
+    "total": 2181,
+    "percentage": 87.2,
+    "fully_certified_packs": ["B (500/500)", "E (500/500)"],
+    "partially_certified_packs": ["A (481/500)", "C (350/500)", "D (350/500)"]
+  },
+  "remaining_item_breakdown": {
+    "by_pack": {
+      "A": { "remaining": 19, "pct_complete": 96.2, "all_archived": true, "blocker": "DL-016" },
+      "C": { "remaining": 150, "pct_complete": 70.0, "archived": 56, "unprocessed": 94, "blockers": ["DL-008", "DL-012", "DL-013"] },
+      "D": { "remaining": 150, "pct_complete": 70.0, "archived": 57, "unprocessed": 93, "blockers": ["DL-008", "DL-012", "DL-013", "DL-026"] }
+    },
+    "by_type": {
+      "unprocessed": 187,
+      "archived": 132
+    }
+  },
+  "certification_wave_priority": [
+    { "rank": 1, "target": "Pack A Sections A+E (19 archived items)", "effort": "Low", "reason": "96.2% already complete — just resolve DL-016 for 19 archived items" },
+    { "rank": 2, "target": "Pack C Section F (75 unprocessed)", "effort": "Medium", "reason": "Largest single block; DL-013 template remediation needed" },
+    { "rank": 3, "target": "Pack D Section F (74 unprocessed)", "effort": "Medium", "reason": "Second largest block; DL-008 + DL-013 remediation" },
+    { "rank": 4, "target": "Pack C/D Section E (112 clone-archived items)", "effort": "High", "reason": "DL-012 clone groups need CC audit + individual review" },
+    { "rank": 5, "target": "Pack C remaining DL-008 cluster", "effort": "High", "reason": "CC-rotation artifact requires audit before EW[CC] remediation" }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "session": "S833",
+  "title": "Content Expansion Candidate Program — Expansion Backlog",
+  "generated": "2026-07-27",
+  "agents_contributing": ["A", "B", "C"],
+  "status": "COMPLETE",
+
+  "executive_summary": {
+    "total_new_items_needed": 740,
+    "total_recalibrations_needed": "~800",
+    "total_quality_fixes": "~160 items",
+    "total_estimated_hours": "~300-400",
+    "timeframe": "12-16 weeks across 4 sprints"
+  },
+
+  "execution_roadmap": {
+    "sprint_1_immediate_week1": {
+      "duration": "1 week",
+      "items": [
+        {"id": "S831-PH1", "name": "Moderate→Difficult recalibration", "items": 423, "hours": 4, "type": "RECALIBRATE"},
+        {"id": "S833-DL021", "name": "DL-021 Pack E Section C EW authoring", "fields": 285, "hours": 8, "type": "AUTHOR"},
+        {"id": "S833-DL016", "name": "DL-016 metadata structural fix", "items": 58, "hours": 3, "type": "STRUCTURAL"}
+      ],
+      "deliverables": "Difficult band ~20%. Pack E Section C fully remediated. Pack A Section E metadata fixed."
+    },
+    "sprint_2_near_term_weeks2_3": {
+      "duration": "2 weeks",
+      "items": [
+        {"id": "S831-DL031", "name": "DL-031 coordinated downgrade + upgrade sweep", "items": "800-1000", "hours": 6, "type": "RECALIBRATE"},
+        {"id": "S833-SECF", "name": "Section F certification completion", "items": 124, "hours": 6, "type": "CERTIFY"},
+        {"id": "S833-VDIFF1", "name": "VDiff emergency bridge", "items": 22, "hours": 3, "type": "RECALIBRATE"},
+        {"id": "S833-TOPIC", "name": "Topic gap fills — ASC 842/740 + analytics depth", "items": 60, "hours": 24, "type": "AUTHOR"}
+      ],
+      "deliverables": "DL-031 resolved. Section F 100% certified. First VDiff items. ASC 842 and analytics depth added."
+    },
+    "sprint_3_medium_term_weeks4_6": {
+      "duration": "3 weeks",
+      "items": [
+        {"id": "S833-VDIFF2", "name": "New VDiff items Sections B, C", "items": 50, "hours": 20, "type": "AUTHOR"},
+        {"id": "S833-EVAL1", "name": "New Evaluate items Sections E, F", "items": 40, "hours": 16, "type": "AUTHOR"},
+        {"id": "S833-ANALYZE1", "name": "New Analyze items Sections D, E, F", "items": 100, "hours": 40, "type": "AUTHOR"},
+        {"id": "S833-DL032", "name": "Case difficulty calibration", "items": 330, "hours": 8, "type": "RECALIBRATE"}
+      ],
+      "deliverables": "VDiff ~5%. First Evaluate items. Analyze ~4%. Case difficulty diversified."
+    },
+    "sprint_4_long_term_weeks7_12": {
+      "duration": "6 weeks",
+      "items": [
+        {"id": "S833-EVAL2", "name": "Evaluate items Phase 2 Sections A, B, C, D", "items": 110, "hours": 44, "type": "AUTHOR"},
+        {"id": "S833-ANALYZE2", "name": "Analyze items Phase 2 Sections A, B, C", "items": 100, "hours": 40, "type": "AUTHOR"},
+        {"id": "S833-VDIFF3", "name": "VDiff Phase 3 content", "items": 150, "hours": 60, "type": "AUTHOR"},
+        {"id": "S833-CASE", "name": "Full case study certification sweep", "items": 300, "hours": 40, "type": "CERTIFY"}
+      ],
+      "deliverables": "Evaluate ~10%. Analyze ~15-20%. VDiff ~10%. Full case certification. Pool at 3,280+ items."
+    }
+  },
+
+  "section_content_targets": {
+    "A": {"new_items": 100, "analyze": 40, "evaluate": 20, "difficult": 30, "vdiff": 10},
+    "B": {"new_items": 150, "analyze": 60, "evaluate": 30, "difficult": 45, "vdiff": 15},
+    "C": {"new_items": 150, "analyze": 60, "evaluate": 30, "difficult": 45, "vdiff": 15},
+    "D": {"new_items": 100, "analyze": 40, "evaluate": 20, "difficult": 30, "vdiff": 10},
+    "E": {"new_items": 120, "analyze": 48, "evaluate": 24, "difficult": 36, "vdiff": 12},
+    "F": {"new_items": 120, "analyze": 48, "evaluate": 24, "difficult": 36, "vdiff": 12}
+  },
+
+  "post_expansion_projection": {
+    "pool_size": "~3,280 items (2,540 + 740 new)",
+    "difficulty": {"Easy": "~16%", "ModerateEasy": "~20%", "Moderate": "~28%", "Difficult": "~26%", "VeryDifficult": "~10%"},
+    "blooms": {"Remember": "~5%", "Understand": "~28%", "Apply": "~37%", "Analyze": "~20%", "Evaluate": "~10%"}
+  },
+
+  "critical_risks": [
+    {"risk": "Content authoring pipeline not yet established for 740 new items", "mitigation": "Pilot batch of 25 items in Sprint 2 before scaling to 190 in Sprint 3", "severity": "HIGH"},
+    {"risk": "DL-031 false positives may inflate scope", "mitigation": "Human review of 10% sample before executing full sweep", "severity": "HIGH"},
+    {"risk": "Governance guard batch limits (≤30) constrain throughput", "mitigation": "~300 batches required across all sprints", "severity": "MEDIUM"},
+    {"risk": "Concurrent-write data loss between sprints (DL-019)", "mitigation": "File-lock protocol, backup-before-every-write", "severity": "MEDIUM"},
+    {"risk": "Certified item changes require REVISION_HISTORY entries for ~2,000+ operations", "mitigation": "Automate REVISION_HISTORY generation", "severity": "MEDIUM"}
+  ],
+
+  "decision": "RECOMMEND ACCEPT — Begin Sprint 1 immediately. Sprint 2-4 pending Sprint 1 completion and baseline re-measurement."
+}

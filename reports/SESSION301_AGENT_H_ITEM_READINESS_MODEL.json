@@ -1,0 +1,48 @@
+{
+  "agent": "H",
+  "session": "S301",
+  "phase": 3,
+  "domain": "Item Readiness Score Model",
+  "model_version": "S301-1.0",
+  "score_computation": {
+    "formula": "readiness_score = (base_caqs_score − defect_penalties) × confidence_factor",
+    "base_caqs_score": "Weighted sum of 10 CAQS dimensions (Section 2.2): Blueprint(20%) + Cognitive(15%) + Technical(15%) + Distractor(15%) + Realism(10%) + Numerical(10%) + Explanation(10%) + Clarity(5%) + Accessibility(5%) + Metadata(5%) = 100 max",
+    "range": "0–100",
+    "floor": 0,
+    "auto_fail_conditions": ["D3 (Technical Accuracy) = 0", "D6 (Numerical Integrity) = 0"]
+  },
+  "defect_penalties": {
+    "DL-030": { "severity": "Critical", "penalty": 100, "auto_zero": true, "description": "CorrectChoice answer-key error" },
+    "DL-001": { "severity": "Critical", "penalty": 100, "auto_zero": true, "description": "Semantic accuracy defect (answer/explanation mismatch)" },
+    "DL-008": { "severity": "High", "penalty": 25, "certification_blocking": true, "description": "Non-empty ExplanationWrong[CorrectChoice]" },
+    "DL-010": { "severity": "High", "penalty": 15, "description": "Misassigned choice explanations" },
+    "DL-009": { "severity": "High", "penalty": 10, "description": "Incorrect authority citation" },
+    "DL-013": { "severity": "Medium", "penalty": 5, "description": "Template boilerplate in explanations" },
+    "DL-026": { "severity": "Medium", "penalty": 5, "description": "Empty non-CC ExplanationWrong slots" },
+    "DL-005": { "severity": "Medium", "penalty": 8, "description": "High distractor similarity (>70% Jaccard)" },
+    "DL-003": { "severity": "Medium", "penalty": 3, "description": "Absolute language in choices" },
+    "DL-004": { "severity": "Medium", "penalty": 3, "description": "Ambiguous qualifiers" }
+  },
+  "certification_precondition_gates": [
+    "Gate 1: DL-030 absent (CorrectChoice verified correct)",
+    "Gate 2: DL-008 absent (EW[CC] empty)",
+    "Gate 3: D1 (Content Accuracy) >= 5",
+    "Gate 4: D2 (Blueprint Alignment) >= 4",
+    "Gate 5: D3 (Numerical Integrity) >= 5 (if calculation item)",
+    "Gate 6: D4 (Distractor Quality) >= 3",
+    "Gate 7: All 6 CAQS dimensions at HIGH confidence",
+    "Gate 8: Independent verification complete"
+  ],
+  "readiness_tiers": {
+    "Tier_1_CertificationReady": { "range": "85−100", "action": "Pass to 500-series for certification decision" },
+    "Tier_2_NearReady": { "range": "70−84", "action": "Targeted revision needed — 300-series remediation plan" },
+    "Tier_3_NeedsWork": { "range": "50−69", "action": "Substantial revision — requires editorial session" },
+    "Tier_4_Blocked": { "range": "0−49", "action": "Critical defect present — cannot proceed until resolved" }
+  },
+  "confidence_factor": {
+    "high_confidence": 1.0,
+    "medium_confidence": 0.85,
+    "low_confidence": 0.7,
+    "unverified": 0.6
+  }
+}

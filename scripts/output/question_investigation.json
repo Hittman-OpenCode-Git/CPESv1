@@ -1,0 +1,148 @@
+{
+  "investigationId": "INV-20260727T191322-P1-A-001",
+  "timestamp": "2026-07-27T19:13:22.108Z",
+  "requestedQid": "P1-A-001",
+  "sourcesUsed": [
+    "question_history.json",
+    "pack_a_corrected.js",
+    "recommendation_registry.json",
+    "challenge_registry.json",
+    "session_registry.json",
+    "readiness_scoring.json",
+    "work_queue.json",
+    "certification_waves.json"
+  ],
+  "sections": {
+    "1_identity": {
+      "questionId": "P1-A-001",
+      "part": 1,
+      "section": "A",
+      "sectionName": "External Financial Reporting Decisions",
+      "pack": "pack_a",
+      "topic": "A.001 balance sheet current classification",
+      "microTopic": "balance sheet current classification",
+      "difficulty": "Easy",
+      "difficultyScore": 1,
+      "cognitiveLevel": "Remember",
+      "questionState": "Certified",
+      "certificationDate": "2026-07-22",
+      "certificationBatch": "Section A Block 1",
+      "losTag": "A.1 Financial statements",
+      "itemType": "MCQ",
+      "itemStyle": "single-select",
+      "calculationItem": false,
+      "uniqueConceptKey": "A-001-balance-sheet-current-classification"
+    },
+    "2_content": {
+      "stem": "Quartz is preparing a classified balance sheet for a supplier financing arrangement due in nine months. Which response is most appropriate?",
+      "choices": {
+        "A": "Omit it if the invoice has not been paid",
+        "B": "Classify it as noncurrent solely because management expects renewal",
+        "C": "Classify the obligation as current unless a qualifying long-term refinancing or settlement right exists at the reporting date",
+        "D": "Report it as equity because suppliers are involved"
+      },
+      "correctChoice": "C",
+      "explanationCorrectFull": "Under ASC 210-10-45, a liability is classified as current when it is expected to be settled within the entity's operating cycle or one year, whichever is longer. The key exception is when the entity has an unconditional right to defer settlement for at least twelve months after the reporting date. For supplier financing arrangements with a nine-month term, the obligation is current by default. Classification as noncurrent requires a qualifying long-term refinancing agreement or settlement right that exists at the balance sheet date. Mere management intent or expectation to renew does not satisfy this condition. The obligating event has already occurred, creating a present obligation that must be classified as current unless the specific refinancing criteria in ASC 210-10-45 are met at the reporting date.",
+      "explanationCorrectSummary": "Under ASC 210-10-45, a liability is classified as current when it is expected to be settled within the entity's operating cycle or one year, whichever is longer. The key exception is when the entity h",
+      "distractorExplanations": {
+        "A": "Option A (Omit it if the invoice has not been paid) is incorrect. Under ASC 210 (Balance Sheet), the correct treatment requires classify the obligation as current unless a qualifying long-term refinancing or settlement right exists at the reporting date.",
+        "B": "Option B (Classify it as noncurrent solely because management expects renewal) is incorrect because ASC 210-10-45 requires current classification for obligations due within one year unless a qualifying refinancing right exists at the reporting date. Management intent or expectation of renewal alone does not reclassify a current obligation as noncurrent. A short-term obligation remains current even if management plans to refinance or renew it, unless a binding refinancing agreement is in place before the financial statements are issued.",
+        "C": "",
+        "D": "Option D (Report it as equity because suppliers are involved) is incorrect because supplier financing arrangements create a liability, not an equity interest. The identity of the counterparty (supplier) does not affect the balance sheet classification. Amounts owed to suppliers for goods or services received represent obligations to transfer economic benefits, meeting the definition of a liability under the FASB Conceptual Framework. Equity represents residual ownership interests, not obligations to pay specific parties."
+      }
+    },
+    "3_defects": {
+      "totalDefects": 1,
+      "defectHistory": [
+        {
+          "defectId": "DL-027",
+          "severity": "Low",
+          "status": "Unknown",
+          "class": null,
+          "domain": null,
+          "description": null
+        }
+      ],
+      "defectFlags": [],
+      "blockedByDefects": false
+    },
+    "4_recommendations": {
+      "totalRecommendations": 0,
+      "recommendations": []
+    },
+    "5_sessions": {
+      "totalSessions": 1,
+      "sessions": [
+        {
+          "sessionId": "S89B",
+          "date": "",
+          "mode": "IMPLEMENTATION",
+          "title": "Pool-Wide Difficulty Distribution (Post-S89B + S89C)",
+          "series": "Early Content Audit",
+          "activity": "Pool-Wide Difficulty Distribution (Post-S89B + S89C)"
+        }
+      ]
+    },
+    "6_challenges": {
+      "totalChallenges": 1,
+      "challenges": [
+        {
+          "challengeId": "CH-7BEEBD1E",
+          "status": "OPEN",
+          "type": "AMBIGUITY",
+          "priority": "MEDIUM",
+          "studentDescription": "The difficulty label doesn't match the question complexity.",
+          "reportedDate": "2026-05-21",
+          "resolution": null,
+          "linkedDefects": []
+        }
+      ]
+    },
+    "7_certificationHistory": {
+      "totalCertifications": 1,
+      "certifications": [
+        {
+          "sessionId": "3",
+          "type": "IMPLEMENTATION",
+          "date": "",
+          "title": "Critical Certified Defects Repaired"
+        }
+      ],
+      "stateTransitions": [
+        "Unprocessed",
+        "Certified"
+      ]
+    },
+    "8_readiness": {
+      "readinessState": "CERTIFY",
+      "blockReason": "",
+      "transitionPath": "Already Certified",
+      "eligibleForCertification": false,
+      "domainReadiness": {
+        "domain": "A",
+        "readinessScore": "0.9947",
+        "totalInDomain": 375,
+        "readyInDomain": 373
+      },
+      "waveAssignment": null,
+      "workQueue": {
+        "lane": "CERTIFY",
+        "reason": "Readiness state: CERTIFY — awaiting Quality Board"
+      }
+    },
+    "9_healthSummary": {
+      "verdict": "NEEDS_REVIEW",
+      "verdictReason": "1 open challenge(s)",
+      "signals": {
+        "certified": true,
+        "activeDefects": 0,
+        "criticalDefects": 0,
+        "openChallenges": 1,
+        "pendingRecommendations": 0,
+        "blockedReadiness": false,
+        "inCertificationWave": false,
+        "explanationQuality": "COMPLETE"
+      }
+    }
+  }
+}

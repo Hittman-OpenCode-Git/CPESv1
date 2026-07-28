@@ -1,0 +1,96 @@
+{
+  "session": "S809.1",
+  "title": "Learner Safety Precheck — Domain E Seed Delivery Pool Assessment",
+  "generated_by": "Agent H — Safety Auditor",
+  "date": "2026-07-26",
+  "safety_tier_distribution": {
+    "LOW": { "count": 27, "description": "No active learner harm — EW text is generic but not factually wrong" },
+    "MEDIUM": { "count": 8, "description": "Learner may see boilerplate feedback for incorrect answer; not harmful but degraded" },
+    "HIGH": { "count": 3, "description": "Learner may see incorrect or topic-unrelated EW text due to DL-016 rotation artifact" }
+  },
+  "systemic_concerns": [
+    {
+      "id": "DL-016_EW_ROTATION",
+      "severity": "HIGH",
+      "affected": "All 38 seeds",
+      "description": "All 38 Domain E seeds are affected by the DL-016 ExplanationWrong rotation offset. The metadata block's ExplanationWrong fields describe the +1 neighbor's choices, not the current item's choices. A learner who answers incorrectly may see feedback about a completely different internal control topic.",
+      "mitigation": "All EW remediation in S810 must be authored against the learner-facing content-block choices (Choices.A-D), NOT the metadata-block ChoiceA-D values.",
+      "blocking": "None — offset is consistent (always +1), remediators are aware"
+    },
+    {
+      "id": "EMPTY_EW_SLOTS",
+      "severity": "MEDIUM",
+      "affected": "45 of 114 distractor EW slots (39.5%)",
+      "description": "45 empty distractor ExplanationWrong slots across 38 seeds. When a learner selects the distractor whose slot is empty, no educational feedback is displayed. 8 of these are DL-013 boilerplate (generic text); 37 are genuinely empty.",
+      "mitigation": "S810 Wave A+B targets 32 of 45 empty slots in 22 seeds.",
+      "blocking": "None — empty is technically better than DL-013 boilerplate (no misinformation)"
+    },
+    {
+      "id": "DL013_BOILERPLATE",
+      "severity": "LOW",
+      "affected": "8 slots across 4 seeds (ED-016, ED-036, ED-046, ED-075)",
+      "description": "8 ExplanationWrong slots contain generic template text ('does not align with COSO... represents a plausible misconception'). Learners receive non-instructional feedback.",
+      "mitigation": "S810 Wave C+D replaces all 8 boilerplate slots with choice-specific explanations.",
+      "blocking": "None"
+    },
+    {
+      "id": "COSO_REFERENCE_GAP",
+      "severity": "LOW",
+      "affected": "All 38 seeds",
+      "description": "Only 2.6% of seeds reference a COSO principle by number in ExplanationCorrect. Remediation should include explicit COSO principle citations.",
+      "mitigation": "S810 remediation standard: each EW slot must reference the appropriate COSO principle.",
+      "blocking": "None"
+    }
+  ],
+  "top5_concerns": [
+    {
+      "rank": 1,
+      "QID": "P1-EC-024",
+      "topic": "app input control",
+      "severity": "MEDIUM",
+      "issue": "High-priority seed (score 78) with DL-016 EW rotation. The learner may see feedback about EC-025's preventive/detective topic when answering EC-024. EW remediation must be authored against EC-024's content-block choices.",
+      "recommended_action": "Verify EC-024's learner-facing choices before authoring EW. Wave A, Batch A1 first item."
+    },
+    {
+      "rank": 2,
+      "QID": "P1-ED-072",
+      "topic": "fraud purchasing",
+      "severity": "MEDIUM",
+      "issue": "CONCEPT_OVERLAP with EC-014 (fraud triangle). The DL-016 offset may cause EW text from either ED-071 (change management) or ED-073 (monitoring exceptions) to appear on ED-072's answer choices.",
+      "recommended_action": "Cross-check EC-014 stem vs. ED-072 stem to confirm they test distinct fraud concepts before joint certification."
+    },
+    {
+      "rank": 3,
+      "QID": "P1-EC-028",
+      "topic": "bank reconciliation",
+      "severity": "MEDIUM",
+      "issue": "CC-discrepant seed (Step 0), MEDIUM safety tier, and cross-pack near-duplicate with ED-074. If CC is wrong, the learner has been seeing incorrect answer-key validation.",
+      "recommended_action": "Step 0 CC audit must resolve P1-EC-028 before any EW remediation. Independent recalculation required."
+    },
+    {
+      "rank": 4,
+      "QID": "P1-ED-036",
+      "topic": "change management",
+      "severity": "MEDIUM",
+      "issue": "DL-013 boilerplate (1 slot) + 2 empty slots + Moderate-Easy difficulty. Lowest quality EC in the pool (184 chars). Learners receive boilerplate or blank feedback for 3 of 4 answer choices.",
+      "recommended_action": "Wave D priority. Consider whether ED-071 (same topic, better quality) should replace ED-036 as the seed."
+    },
+    {
+      "rank": 5,
+      "QID": "P1-ED-046",
+      "topic": "code of conduct ethics",
+      "severity": "LOW",
+      "issue": "Only UNIQUE seed (no cross-pack duplicate). DL-013 boilerplate + 2 empty slots. The unique topic gives it outsize value despite low score (50).",
+      "recommended_action": "Prioritize ED-046 over lower-score items with duplicate topics. Wave D, Batch D1."
+    }
+  ],
+  "certified_pool_impact": {
+    "all_38_Certified": true,
+    "exposure": "All 38 seeds are currently in the learner delivery pool with Certified status",
+    "empty_distractor_EW_slots": 45,
+    "dl013_boilerplate_slots": 8,
+    "dl016_affected": 38,
+    "immediate_harm_assessment": "No factual errors confirmed in current EW text, but: (a) 45 empty slots = no feedback for those answer choices, (b) 8 boilerplate slots = generic feedback, (c) DL-016 means feedback text may describe a different topic than the question being answered",
+    "recommended_precautions": "Until S810 remediation is complete, Domain E seeds should be flagged in the delivery mechanism as 'under review' with EW remediation pending. Learners should not be prevented from answering, but should see a note that enhanced explanations are in development."
+  }
+}

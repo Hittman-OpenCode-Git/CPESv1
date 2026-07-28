@@ -1,0 +1,59 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "domain": "E — Internal Controls",
+  "baseline": {
+    "items": 442,
+    "certified": 264,
+    "uncertified": 178,
+    "p0Count": 29,
+    "avgUiqs": 62.5,
+    "ewDebtCount": 141
+  },
+  "forecast": {
+    "totalSessions": 11,
+    "phases": [
+      {
+        "name": "Phase 1: Bulk certification + EW",
+        "sessions": 8,
+        "items": 178,
+        "uiqsGain": "+12.5 (62.5 → 75.0)",
+        "certGain": "+178 (264 → 442 = 100%)",
+        "ewGain": "+178 items with full EW",
+        "sessionsDetail": "S804-S811 or parallel with 800-series Wave 2/3"
+      },
+      {
+        "name": "Phase 2: EW gap closure (certified)",
+        "sessions": 2,
+        "items": 50,
+        "uiqsGain": "+3.0",
+        "ewGain": "+50 items"
+      },
+      {
+        "name": "Phase 3: Quality sweep",
+        "sessions": 1,
+        "items": 264,
+        "uiqsGain": "+1.5",
+        "certGain": "Governance attestation"
+      }
+    ],
+    "cumulativeImpact": {
+      "after6Sessions": {
+        "certified": 320,
+        "uiqs": "~71",
+        "ewComplete": "~120 items"
+      },
+      "after11Sessions": {
+        "certified": 442,
+        "uiqs": "~79.0 (B+)",
+        "ewComplete": "~228 items",
+        "p0Resolved": 29
+      }
+    }
+  },
+  "sessionVelocity": "~16 items/session (includes EW authoring, EC expansion, metadata)",
+  "dependencies": [
+    "DL-008 remediation complete",
+    "800-series certification methodology",
+    "CAQS §1.6"
+  ]
+}

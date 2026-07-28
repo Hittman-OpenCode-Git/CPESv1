@@ -1,0 +1,261 @@
+{
+  "agent": "J",
+  "role": "Remediation Batch Planner",
+  "session": "S810.1",
+  "date": "2026-07-26",
+  "total_seeds": 38,
+  "governance_limit_per_batch": 28,
+  "design_principles": [
+    "Effort-tiered batching: lightest items first for early wins and momentum",
+    "Risk severity balanced within each batch for consistent throughput",
+    "Topic grouping within batches for pedagogically consistent distractor authoring",
+    "Governance-guard Rule 5: maximum 28 items per batch",
+    "Pack C and Pack D can execute in parallel (different source files)",
+    "BACKUP_PROTOCOL.md: backup-before-every-edit mandatory",
+    "Independent post-batch verification required after each batch",
+    "CorrectChoice lock required before Batch A begins (Pre-Flight §1)"
+  ],
+  "pre_flight_requirements": [
+    "CC AUDIT — Resolve 5 cross-agent CC discrepancies (P1-EC-008, P1-EC-014, P1-EC-066, P1-EC-031, P1-EC-072) per SESSION8092_AGENT_B_DEFECT_MANIFEST.json §cross_agent_discrepancy",
+    "CC AUDIT — Verify all 38 seeds have authoritative CC values via boundary-aware object extraction",
+    "BACKUP — Create timestamped backups of pack_c_corrected.js and pack_d_corrected.js",
+    "GOVERNANCE — Run governance-guard test suite, confirm 0 FAIL"
+  ],
+  "batches": [
+    {
+      "batch_id": "A",
+      "name": "Quick Wins — Single-Slot Low-Effort Items",
+      "qids": [
+        "P1-EC-004", "P1-EC-008", "P1-EC-021", "P1-EC-024",
+        "P1-EC-025", "P1-EC-028", "P1-EC-040", "P1-EC-041",
+        "P1-EC-049", "P1-EC-052", "P1-EC-060", "P1-EC-061",
+        "P1-EC-072",
+        "P1-ED-001", "P1-ED-025", "P1-ED-028", "P1-ED-064",
+        "P1-ED-072", "P1-ED-073"
+      ],
+      "item_count": 19,
+      "pack": "MIXED (13 Pack C + 6 Pack D)",
+      "primary_work": "Fill 19 empty non-CC ExplanationWrong slots with choice-specific, COSO-principled distractor explanations. Enrich 5 EC fields with explicit COSO/IIA/IMA-standard citations and business-context framing.",
+      "estimated_writes": 24,
+      "writes_breakdown": {
+        "ew_slots_to_fill": 19,
+        "ec_enrichments": 5,
+        "dl013_boilerplate_replacements": 0,
+        "dl010_misalignment_fixes": 0,
+        "difficulty_metadata": "DEFERRED to metadata pass (S810.2)"
+      },
+      "topics": [
+        "COSO Framework (control environment, inherent vs control risk, remediation)",
+        "Segregation of Duties (design principles, vendor setup, compensating controls)",
+        "Control Activities (preventive vs detective, bank reconciliation, authorization)",
+        "IT General Controls (access review, application input validation)",
+        "Whistleblower / I&C (hotline purpose)",
+        "Internal Control Limitations (management override)",
+        "Monitoring (exception report review)",
+        "Three Lines of Defense",
+        "Fraud Risk (purchasing conflict of interest)",
+        "Vendor Master File Controls",
+        "Audit Committee Oversight"
+      ],
+      "current_risk_level": "LOW (aggregate — all items have intact EC, no DL-013 contamination, no DL-010 misalignment, CC-to-EW mapping straightforward)",
+      "post_batch_certifiable": 17,
+      "post_batch_certifiable_note": "17 of 19 items will have full 3-distractor coverage + adequate EC. 2 items (EC-004, EC-049) need metadata calibration deferred to S810.2.",
+      "execution_order": 1,
+      "rationale": "These items represent the lowest per-item remediation effort (1 EW slot each). Completing them first establishes the COSO framework vocabulary the S810 executor will reuse across all subsequent batches. Early momentum: 19 items → 24 write operations → ~17 certifiable in one batch. Pack C (13 items) and Pack D (6 items) can execute in parallel sub-batches for time efficiency.",
+      "pack_c_sub_batch": {
+        "qids": ["P1-EC-004", "P1-EC-008", "P1-EC-021", "P1-EC-024", "P1-EC-025", "P1-EC-028", "P1-EC-040", "P1-EC-041", "P1-EC-049", "P1-EC-052", "P1-EC-060", "P1-EC-061", "P1-EC-072"],
+        "estimated_writes": 18,
+        "topics_focus": "COSO Framework + Control Activities + COSO Component Distinctions"
+      },
+      "pack_d_sub_batch": {
+        "qids": ["P1-ED-001", "P1-ED-025", "P1-ED-028", "P1-ED-064", "P1-ED-072", "P1-ED-073"],
+        "estimated_writes": 6,
+        "topics_focus": "Governance Structures + Authorization + Monitoring + Vendor Controls"
+      }
+    },
+    {
+      "batch_id": "B",
+      "name": "Standard Dual-Slot Fill — IT Controls + Control Activities + Monitoring",
+      "qids": [
+        "P1-EC-022", "P1-EC-023", "P1-EC-031", "P1-EC-066",
+        "P1-ED-010", "P1-ED-014", "P1-ED-035", "P1-ED-042",
+        "P1-ED-058", "P1-ED-066", "P1-ED-071", "P1-ED-074"
+      ],
+      "item_count": 12,
+      "pack": "MIXED (4 Pack C + 8 Pack D)",
+      "primary_work": "Fill 24 empty non-CC ExplanationWrong slots with choice-specific distractor explanations. Enrich 8 EC fields. No DL-013 boilerplate or DL-010 misalignment in this batch.",
+      "estimated_writes": 32,
+      "writes_breakdown": {
+        "ew_slots_to_fill": 24,
+        "ec_enrichments": 8,
+        "dl013_boilerplate_replacements": 0,
+        "dl010_misalignment_fixes": 0,
+        "difficulty_metadata": "DEFERRED to metadata pass (S810.2)"
+      },
+      "topics": [
+        "Preventive vs Detective IT Controls (duplicate payment)",
+        "IT Access Deprovisioning (terminated employee access)",
+        "ERM Risk Appetite (COSO ERM 2017)",
+        "Segregation of Duties — Cash Custody",
+        "Least Privilege Access Control",
+        "Independent Verification (inventory recount)",
+        "Data Backup / Disaster Recovery",
+        "Risk Assessment (likelihood × impact)",
+        "Internal Control Cost-Benefit Limitation",
+        "Audit Committee Oversight (SOX/SEC governance)",
+        "Change Management — Production Database",
+        "Incompatible Duties — EFT + Bank Reconciliation"
+      ],
+      "current_risk_level": "MEDIUM (aggregate — 2 empty slots per item requires sustained authoring focus; no DL-013 contamination but broader topic diversity increases per-item context-switching cost)",
+      "post_batch_certifiable": 10,
+      "post_batch_certifiable_note": "10 of 12 items will reach full distractor coverage. 2 items (ED-010, ED-014) need metadata recalibration (Difficulty inflation) deferred to S810.2. Cumulative: 29 of 38 certifiable after Batches A+B.",
+      "execution_order": 2,
+      "rationale": "These items have 2 empty EW slots each and no boilerplate contamination — standard authoring effort. Placed second because they extend the conceptual framework established in Batch A into IT-specific and monitoring topics. The 8 Pack D items can run in parallel with the 4 Pack C items. EC-031 (ERM risk appetite) bridges from Wave 1 COSO framework into the Batch C ERM items.",
+      "pack_c_sub_batch": {
+        "qids": ["P1-EC-022", "P1-EC-023", "P1-EC-031", "P1-EC-066"],
+        "estimated_writes": 12,
+        "topics_focus": "IT Preventive/Detective Controls + ERM + Cash Custody SoD"
+      },
+      "pack_d_sub_batch": {
+        "qids": ["P1-ED-010", "P1-ED-014", "P1-ED-035", "P1-ED-042", "P1-ED-058", "P1-ED-066", "P1-ED-071", "P1-ED-074"],
+        "estimated_writes": 20,
+        "topics_focus": "Least Privilege + Independent Verification + DR/Backup + Risk Assessment + Limitations + Change Management + SoD"
+      }
+    },
+    {
+      "batch_id": "C",
+      "name": "Complex Remediation — DL-013 Boilerplate + DL-010 Misalignment + Weak EC",
+      "qids": [
+        "P1-EC-014", "P1-EC-020",
+        "P1-ED-016", "P1-ED-036", "P1-ED-046", "P1-ED-051", "P1-ED-075"
+      ],
+      "item_count": 7,
+      "pack": "MIXED (2 Pack C + 5 Pack D)",
+      "primary_work": "Replace 8 DL-013 boilerplate EW slots with genuine choice-specific distractor explanations. Fix 2 DL-010 misaligned EW slots (EC-020: EWB, EWC). Fill 6 remaining empty non-CC EW slots. Rewrite 3 critically weak ECs (EC-014: fraud triangle, ED-036: change management, ED-075: segregation approval/reconciliation). Enrich 4 marginal ECs.",
+      "estimated_writes": 27,
+      "writes_breakdown": {
+        "ew_slots_to_fill": 10,
+        "dl013_boilerplate_replacements": 8,
+        "dl010_misalignment_fixes": 2,
+        "ec_enrichments": 4,
+        "ec_rewrites": 3,
+        "difficulty_metadata": "DEFERRED to metadata pass (S810.2)"
+      },
+      "per_item_remediation_detail": {
+        "P1-EC-014": {
+          "issue": "2 empty EW (A, B per cert results), EC is bare definition (150 chars, score 4/10). Fraud triangle is a foundational concept.",
+          "remediation": "Fill both empty EW slots. Substantially rewrite EC — add ACFE/COSO P8 citation, business interpretation (Oakhurst scenario), fraud detection implications, exam-trap guidance on distinguishing fraud triangle from COSO ERM framework.",
+          "writes": 3
+        },
+        "P1-EC-020": {
+          "issue": "DL-010 CRITICAL. EWB and EWC describe physical access controls from a different question (not the Emberton vendor-setup/payment scenario). EWD is empty. All 3 distractor slots are broken — zero usable learner feedback. This is the single highest-priority DL-010 item in the audit.",
+          "remediation": "Full re-authoring of all 3 distractor EW slots to match the Emberton physical-control-over-assets stem (locked warehouse, badge access). EC needs minor COSO control-activity mapping addition.",
+          "writes": 4
+        },
+        "P1-ED-016": {
+          "issue": "1 empty EW (A). EWB and EWC are classic DL-013 boilerplate 'This option reflects a misunderstanding of erm risk response strategies...' EC is brief (152 chars, score 5/10) — no business interpretation, no COSO ERM citation.",
+          "remediation": "Replace EWB and EWC with genuine choice-specific distractor explanations (distinguish risk avoidance, acceptance, mitigation, transfer). Fill EW_A. Enrich EC with COSO ERM (2017) citation, risk response taxonomy, Quintwood business-context interpretation.",
+          "writes": 4
+        },
+        "P1-ED-036": {
+          "issue": "1 empty EW (A). EWB and EWC are DL-013 boilerplate. EC is the weakest in the entire audit (144 chars, score 3/10) — bare statement 'Change management controls... are a category of IT general controls.' No explanation of WHY testing/approval/documentation matter.",
+          "remediation": "Replace EWB and EWC with genuine choice-specific explanations (distinguish change management from application controls, physical controls). Fill EW_A. Substantially rewrite EC — explain testing/approval/documentation lifecycle, business risk of unauthorized changes causing financial statement errors, COSO control-activity linkage.",
+          "writes": 4
+        },
+        "P1-ED-046": {
+          "issue": "2 empty EW (A, C). EWD is DL-013 boilerplate with truncated text ('effectiven'). EC is brief (158 chars, score 5/10) — definition-only, no COSO P1 reference.",
+          "remediation": "Replace EWD with genuine choice-specific explanation. Fill EW_A and EW_C. Enrich EC with COSO P1 citation (integrity and ethical values), control environment linkage, code-of-conduct role in fraud prevention.",
+          "writes": 4
+        },
+        "P1-ED-051": {
+          "issue": "2 empty EW (A, D). EWB is DL-013 boilerplate with text-to-slot mismatch (references 'balanced scorecard metrics' but assigned to slot B about 'replace segregation of duties'). Additionally flagged as DL-010 (MEDIUM). EC is brief (167 chars, score 6/10).",
+          "remediation": "Replace EWB with genuine explanation for 'replace segregation of duties' distractor. Fill EW_A and EW_D. Enrich EC with MFA vs. single-factor contrast, defense-in-depth concept, COSO ITGC linkage.",
+          "writes": 4
+        },
+        "P1-ED-075": {
+          "issue": "1 empty EW (A). EWB and EWD are DL-013 boilerplate. EC is brief (153 chars, score 4/10) — definition-only, no COSO reference. This is the single worst-covered item in the pool (all 3 distractor slots are either empty or boilerplate).",
+          "remediation": "Replace EWB and EWD with genuine choice-specific explanations (distinguish approval-reconciliation separation from revenue recognition issues, cash discounts). Fill EW_A. Substantially rewrite EC — explain why separating approval from reconciliation provides independent check, identify specific errors it detects, Alderway scenario application.",
+          "writes": 4
+        }
+      },
+      "topics": [
+        "Fraud Triangle (pressure, opportunity, rationalization)",
+        "Physical Controls over Assets",
+        "ERM Risk Response Strategies (avoid/accept/mitigate/transfer)",
+        "IT Change Management (testing, approval, documentation lifecycle)",
+        "Code of Conduct / Ethics Program (control environment)",
+        "Multi-Factor Authentication / Password Access Control",
+        "Segregation of Approval and Reconciliation"
+      ],
+      "current_risk_level": "HIGH (aggregate — every item has at least 2 of: DL-013 boilerplate, DL-010 misalignment, critically weak EC, or 2+ empty EW slots. Authoring quality must meet CAQS §4.2 minimum for learner delivery.)",
+      "post_batch_certifiable": 5,
+      "post_batch_certifiable_note": "5 of 7 items will be certifiable. EC-020 (DL-010 full re-authoring) and ED-051 (DL-010 + DL-013) need extra care and may warrant secondary review before certification. Cumulative: 35-37 of 38 certifiable after all 3 batches. Remaining items need metadata calibration pass (S810.2) only.",
+      "execution_order": 3,
+      "rationale": "Highest-risk, highest-effort batch placed last. Executor benefits from the COSO vocabulary and EW authoring patterns established in Batches A and B before tackling these items. Each complex item requires 4 write operations (vs. 1-2 in Batch A), so this 7-item batch has comparable total write volume to the 19-item Batch A. Pack C (EC-014, EC-020) and Pack D (ED-016, ED-036, ED-046, ED-051, ED-075) can run in parallel. EC-020 should be tackled first within this batch — its DL-010 misalignment is the most severe defect in the entire 38-seed pool.",
+      "pack_c_sub_batch": {
+        "qids": ["P1-EC-014", "P1-EC-020"],
+        "estimated_writes": 7,
+        "topics_focus": "Fraud Triangle + Physical Controls (DL-010 critical fix)",
+        "execution_note": "EC-020 must be addressed first — it is the single worst defect item. Requires complete re-authoring of all 3 EW slots."
+      },
+      "pack_d_sub_batch": {
+        "qids": ["P1-ED-016", "P1-ED-036", "P1-ED-046", "P1-ED-051", "P1-ED-075"],
+        "estimated_writes": 20,
+        "topics_focus": "ERM Risk Response + IT Change Management + Ethics + MFA + SoD Approval",
+        "execution_note": "ED-075 is the worst-covered item — all 3 distractor slots need work. ED-036 has the weakest EC (144 chars). ED-051 has cross-contamination (DL-010 + DL-013)."
+      }
+    }
+  ],
+  "post_remediation_metadata_pass": {
+    "session": "S810.2 (proposed)",
+    "scope": "DL-031 difficulty recalibration + CognitiveLevel alignment + DifficultyScore/Difficulty label resolution",
+    "estimated_items": "~30 of 38 seeds",
+    "note": "Metadata changes only (field value changes, no content authoring). Can be batched as a single pass or as sub-batches within S810.1 if session time permits."
+  },
+  "estimated_total_writes_across_all_batches": 83,
+  "estimated_session_time": "5-7 hours (assuming 3-5 min per EW slot + 8-12 min per EC enrichment + 15-25 min per full EC rewrite + 15-25 min per DL-013/DL-010 replacement). Parallel Pack C/D sub-batches reduce wall-clock time. Independent verification adds ~15-20 min per batch.",
+  "critical_path": "Batch C → EC-020 (DL-010 full re-authoring) is the riskiest single item. Batch A is the largest (19 items) and longest in wall-clock time despite lowest per-item effort.",
+  "parallel_opportunities": "Within every batch, Pack C and Pack D sub-batches can execute in parallel (different pack files). Batch A: 13 Pack C items (~80 min) || 6 Pack D items (~35 min). Batch B: 4 Pack C items (~30 min) || 8 Pack D items (~60 min). Batch C: 2 Pack C items (~40 min) || 5 Pack D items (~90 min).",
+  "execution_sequencing_recommendation": [
+    "1. PRE-FLIGHT: Complete CC audit for 5 discrepant seeds + 38-item backup",
+    "2. BATCH A PACK C + PACK D (parallel): 19 items, 24 writes",
+    "3. INDEPENDENT VERIFICATION: Spot-check 5+ items across both packs",
+    "4. BATCH B PACK C + PACK D (parallel): 12 items, 32 writes",
+    "5. INDEPENDENT VERIFICATION: Spot-check 5+ items, confirm 0 DL-026 regression",
+    "6. BATCH C PACK C + PACK D (parallel): 7 items, 27 writes",
+    "7. INDEPENDENT VERIFICATION: Spot-check all 7 complex items, confirm DL-013/DL-010 resolved",
+    "8. FINAL: Run full governance-guard test suite, confirm 0 FAIL. Run DL-026 scan — target 0 empty non-CC slots across all 38 seeds.",
+    "9. METADATA PASS (if time permits): DL-031 recalibration, Difficulty label/score resolution, CognitiveLevel alignment"
+  ],
+  "verification_checkpoints": {
+    "post_batch_a": "Spot-check ≥5 items across Pack C+D. Verify: new EW text ≥50 chars, choice-specific, no generic placeholder text. Confirm 0 DL-008 regression (CC slot still empty).",
+    "post_batch_b": "Spot-check ≥5 items. Verify: new EW text references actual distractor concept, not template. Confirm cumulative DL-026 count ≤12 (only Batch C items remaining).",
+    "post_batch_c": "Spot-check all 7 items. Verify: 0 DL-013 boilerplate remaining (grep for 'This option reflects a misunderstanding'). Verify: EC-020 misaligned EW slots now describe the Emberton physical-control scenario. Verify: cumulative DL-026 = 0.",
+    "final": "Run Select-String scan for DL-013 pattern. Run boundary-aware DL-026 scan — confirm 0 empty non-CC EW slots. Run governance-guard test suite — confirm 0 FAIL."
+  },
+  "risk_mitigation": {
+    "cc_discrepancy": "5 seeds have cross-agent CC mismatch (P1-EC-008, P1-EC-014, P1-EC-066, P1-EC-031, P1-EC-072). Pre-flight CC audit using boundary-aware object extraction is MANDATORY before any EW write. A wrong CC assignment cascades into DL-008 violations on every EW slot.",
+    "ec_020_priority": "P1-EC-020 is the single most degraded item — all 3 distractor slots are broken (2 DL-010 + 1 empty). Tackle this first within Batch C. If session time is constrained, at minimum complete EC-020 remediation.",
+    "dl008_regression": "Governance-guard Rule 2 BLOCK is active. After every item remediation, verify the CC-slot EW field remains empty (''). Do not accidentally populate the CC slot during distractor authoring.",
+    "backup_protocol": "Backup before every pack-file edit per BACKUP_PROTOCOL.md. Suggested backup pattern: pack_X_corrected.js.bak-S8101BatchY-YYYYMMDDHHMMSS",
+    "session_duration": "Long-session governance (AGENTS.md §13) applies if session exceeds 30 minutes. Run Tmid governance checkpoint after Batch B completion."
+  },
+  "cross_reference": {
+    "source_plan": "Agent H's 4-wave plan at reports/session_status/SESSION8092_AGENT_H_BATCH_OPTIMIZATION.json — conceptually grouped by topic, 4 waves with 7 sub-batches",
+    "optimization_changes": "Agent J's plan re-organizes from 4 topic-based waves into 3 effort-tiered batches: (1) Single-slot quick wins → (2) Dual-slot standard fill → (3) Complex boilerplate+DL-010. This front-loads the 19 low-effort items for early momentum rather than Agent H's distribution of light items across all 4 waves.",
+    "certification_data": "reports/SESSION809_CERTIFICATION_RESULTS.json — Agent F/P Certification Board decisions",
+    "ew_assessment": "reports/S809.2/agent_c_ew_assessment.json — Agent C per-slot EW quality assessment (authoritative slot-level data)",
+    "defect_manifest": "reports/session_status/SESSION8092_AGENT_B_DEFECT_MANIFEST.json — Agent B compiled defect manifest",
+    "seed_inventory": "reports/SESSION809_SEED_INVENTORY.json — authoritative QID list, CC values, dw (empty slot) arrays",
+    "governance_baseline": "reports/S810.1/agent_a_governance.json — Agent A T0 governance baseline"
+  },
+  "notes": [
+    "This plan is a re-optimization of Agent H's 4-wave/7-sub-batch plan. Agent H's topic grouping was retained as the organizational principle within each effort-tiered batch, preserving the COSO framework → Control Activities → IT Controls → Capstone conceptual progression.",
+    "Batch A has 19 items (largest batch) — all are 1-EW-slot items with minimal per-item effort. Governance Rule 5 (≤28) is satisfied.",
+    "Batch C has only 7 items but comparable write volume (~27) to Batch A (~24) due to boilerplate replacements and EC rewrites requiring more complex authoring per slot.",
+    "The 5 cross-agent CC discrepancies (Agent C vs. Agent D) documented in AGENT_B_DEFECT_MANIFEST.json must be resolved before any write operations. The CC value determines which slot is CorrectChoice and therefore which EW slots are distractor slots requiring content.",
+    "EC-020 (DL-010 CRITICAL) is the single most urgent item — all 3 distractor slots provide wrong-topic or no feedback to learners. It should be tackled first within Batch C.",
+    "Metadata recalibration (DL-031 difficulty inflation, CognitiveLevel alignment, Difficulty label/score resolution) is deferred to a separate pass (S810.2) to keep S810.1 focused on content authoring.",
+    "All 38 seeds are currently question_state: 'Unprocessed'. After full remediation (Batches A+B+C), all 38 can be promoted to 'Certified' via CAQS §1.7 verification, gaining +38 certified for Domain E (228 → 266, 63.5% → 74.1%)."
+  ]
+}

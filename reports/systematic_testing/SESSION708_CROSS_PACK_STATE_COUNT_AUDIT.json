@@ -1,0 +1,58 @@
+{
+  "session": "708",
+  "timestamp": "2026-07-25",
+  "analysis_only": true,
+  "methodology": "G-NEW-3 within-object extraction via Function constructor parse",
+  "pack_state_counts": {
+    "pack_a": {
+      "total_qids": 500,
+      "certified": 481,
+      "editorial": 0,
+      "archived": 19,
+      "unprocessed": 0,
+      "hold": 0
+    },
+    "pack_b": {
+      "total_qids": 500,
+      "certified": 500,
+      "editorial": 0,
+      "archived": 0,
+      "unprocessed": 0,
+      "hold": 0
+    },
+    "pack_c": {
+      "total_qids": 500,
+      "certified": 350,
+      "editorial": 0,
+      "archived": 56,
+      "unprocessed": 94,
+      "hold": 0
+    },
+    "pack_d": {
+      "total_qids": 500,
+      "certified": 350,
+      "editorial": 0,
+      "archived": 57,
+      "unprocessed": 93,
+      "hold": 0
+    },
+    "pack_e": {
+      "total_qids": 500,
+      "certified": 500,
+      "editorial": 0,
+      "archived": 0,
+      "unprocessed": 0,
+      "hold": 0
+    }
+  },
+  "cross_pack_totals": {
+    "total_qids": 2500,
+    "total_certified": 2181,
+    "total_editorial": 0,
+    "total_archived": 132,
+    "total_unprocessed": 187,
+    "total_hold": 0
+  },
+  "reconciliation": "2181 + 0 + 132 + 187 = 2500 PASS",
+  "drift_flags": []
+}

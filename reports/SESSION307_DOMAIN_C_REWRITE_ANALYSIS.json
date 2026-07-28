@@ -1,0 +1,54 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "domain": "C — Performance Management",
+  "validation": "S304 findings CONFIRMED",
+  "currentState": {
+    "items": 574,
+    "certified": 564,
+    "avgUiqs": 74.1,
+    "grade": "B",
+    "p0Count": 4,
+    "ewDebtCount": 70
+  },
+  "rootCauses": [
+    {
+      "cause": "Case-bank EW gap",
+      "detail": "298 case-study items in Domain C have 3.9% EW fill rate. This drags domain EW metrics.",
+      "severity": "HIGH"
+    },
+    {
+      "cause": "Volume-driven debt",
+      "detail": "Domain C has the most items (574/930 portfolio-adjusted). Absolute EW debt count is high even though fill rate is average.",
+      "severity": "MEDIUM"
+    },
+    {
+      "cause": "Clone rotation artifacts (Pack C Sections E/F)",
+      "detail": "~87 items with rotation-group clone patterns — structurally identical distractors.",
+      "severity": "MEDIUM"
+    }
+  ],
+  "certificationImpact": "MINIMAL — 98.3% certified. 10 uncertified items are small-scope.",
+  "rewriteBurden": 218,
+  "remediationSequence": [
+    {
+      "step": 1,
+      "action": "Case-bank EW authoring for Domain C cases",
+      "items": "~74",
+      "sessions": "3-4"
+    },
+    {
+      "step": 2,
+      "action": "Clone rotation audit for Pack C Sections E/F",
+      "items": "~87",
+      "sessions": "2"
+    },
+    {
+      "step": 3,
+      "action": "Remaining 10 uncertified items certification",
+      "items": 10,
+      "sessions": "1"
+    }
+  ],
+  "totalEstimatedSessions": 7,
+  "priority": "THIRD — after Domains E and F certification"
+}

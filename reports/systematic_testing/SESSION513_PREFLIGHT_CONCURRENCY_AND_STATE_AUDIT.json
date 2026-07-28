@@ -1,0 +1,51 @@
+{
+  "session": "513",
+  "agent": "A",
+  "type": "preflight_concurrency_and_state_audit",
+  "timestamp": "2026-07-25",
+  "target": "MIGRATED_CASE_BASE_B",
+  "target_file": "scored_cases2.js",
+  "preflight_test_result": {
+    "governance_guard": "20/20 PASS",
+    "session_recovery": "12/12 PASS",
+    "total": "32/32 PASS"
+  },
+  "preflight_state": {
+    "cases": 15,
+    "items": 75,
+    "items_certified": 73,
+    "items_held_back": 2,
+    "cases_certified": 13,
+    "cases_held_back": 2,
+    "unprocessed_items": 2,
+    "unprocessed_cases": 2,
+    "held_back_items": ["CASE-B13-Q3", "CASE-B18-Q4"],
+    "held_back_cases": ["CASE-B13", "CASE-B18"]
+  },
+  "concurrency_checks": {
+    "may_core_js": "not in scope — no changes detected",
+    "may_learner_state_js": "not in scope — no changes detected",
+    "pack_a_corrected_js": "not in scope — no changes detected",
+    "pack_b_corrected_js": "not in scope — no changes detected",
+    "pack_c_corrected_js": "not in scope — no changes detected",
+    "pack_d_corrected_js": "not in scope — no changes detected",
+    "pack_e_corrected_js": "not in scope — no changes detected",
+    "scored_cases_js": "not in scope",
+    "scored_cases3_js": "not in scope",
+    "scored_cases4_js": "not in scope",
+    "scored_cases5_js": "not in scope",
+    "app_js": "not in scope — no changes detected",
+    "scoring_runtime": "not in scope — no changes detected",
+    "concurrent_lane_attestation": "PASS — no 100-series or 700-series files affected"
+  },
+  "structural_integrity": {
+    "scored_cases2_parse_status": "OK",
+    "case_count": 15,
+    "item_count": 75,
+    "item_ids_unique": true,
+    "targets_located_exactly_once": {
+      "CASE-B13-Q3": true,
+      "CASE-B18-Q4": true
+    }
+  }
+}

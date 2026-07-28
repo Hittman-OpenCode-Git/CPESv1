@@ -1,0 +1,560 @@
+{
+  "session": "514",
+  "agent": "D",
+  "timestamp": "2026-07-25T23:30:00Z",
+  "purpose": "Select the next 500-series case-bank certification target after S513 completed MIGRATED_CASE_BASE_B to 75/75 (100%) Certified",
+  "references": {
+    "agent_a_preflight": "reports/systematic_testing/SESSION514_PREFLIGHT_CONCURRENCY_AND_STATE_AUDIT.json",
+    "agent_b_inventory": "reports/systematic_testing/SESSION514_CASE_BANK_INVENTORY.json",
+    "agent_c_triage": "reports/systematic_testing/SESSION514_CASE_BANK_READINESS_TRIAGE.json",
+    "template": "reports/systematic_testing/SESSION512_CASE_BASE_B_CAQS_DECISION_TABLE.json",
+    "prior_pipeline": "S509 → S510 → S511 → S512 → S513 (5 sessions, MIGRATED_CASE_BASE_B: 0 → 75 Certified)"
+  },
+  "context": {
+    "last_completed": "S513 — MIGRATED_CASE_BASE_B 75/75 Certified (100%). Two S512 G5.4 holdbacks resolved (CASE-B13-Q3, CASE-B18-Q4).",
+    "current_state": {
+      "total_case_arrays": 9,
+      "total_cases": 135,
+      "total_items": 745,
+      "total_certified_items": 475,
+      "already_fully_certified_arrays": ["MIGRATED_CASE_BASE_A (120/120)", "MIGRATED_CASE_BASE_B (75/75)"],
+      "candidate_arrays_for_certification": [
+        "ENHANCED_CASE_BASE (0/90 Certified, 15 Unprocessed)",
+        "ENHANCED_CASE_BASE2 (73/78 Certified, 5 Unprocessed)",
+        "ENHANCED_CASE_BASE3 (74/79 Certified, 5 Unprocessed)",
+        "ENHANCED_CASE_BASE4 (63/78 Certified, 15 Unprocessed)",
+        "ENHANCED_CASE_BASE5 (70/75 Certified, 5 Unprocessed)",
+        "MIGRATED_CASE_BASE_C (0/75 Certified, 75 Unprocessed)",
+        "MIGRATED_CASE_BASE_D (0/75 Certified, 75 Unprocessed)"
+      ]
+    },
+    "established_pipeline": {
+      "pattern": "S509-S513",
+      "sessions": [
+        { "session": 509, "name": "Explanation Uplift", "description": "Author multi-sentence explanations with ASC/COSO/IFRS citations; draft distractor rationale; apply G-NEW-4 standards." },
+        { "session": 510, "name": "Batch Application", "description": "Apply drafted explanation uplifts to all remaining items in the target array." },
+        { "session": 511, "name": "Answer-Key Arithmetic Audit", "description": "Independently recompute every numeric item; verify stored Correct against recalculated result; log discrepancies." },
+        { "session": 512, "name": "CAQS §1.6 Six-Dimension Certification Review", "description": "Formal D1-D6 validation: answer-key accuracy, explanation sufficiency, distractor rationale, authoritative references, case realism, metadata readiness." },
+        { "session": 513, "name": "Holdback Remediation + Final Certification", "description": "Resolve D3/D4 holdback items; promote all remaining to Certified." }
+      ],
+      "total_sessions": 5,
+      "estimated_effort_per_session": "MEDIUM-HIGH",
+      "applicable_formats": "MIGRATED format (0-exhibit, predominantly select/numeric items, 75-120 items per array). ENHANCED format likely requires +1-2 sessions for exhibit validation and per-item Difficulty metadata."
+    },
+    "cross_cutting_findings": [
+      {
+        "id": "XF-001_NO_EXPLANATION_WRONG",
+        "severity": "Medium",
+        "description": "ZERO ExplanationWrong fields exist across ALL 400 case items in ALL 75 cases. Case format uses single Explanation field per item — no wrong-choice analysis at all.",
+        "implication": "CAQS §1.6 D3 (Distractor Rationale) cannot pass for ANY case item in current schema. This is a schema-level gap, not a per-array issue."
+      },
+      {
+        "id": "XF-003_CITATION_DESERT",
+        "severity": "High",
+        "description": "Only 8 total citations to authoritative standards (ASC, COSO, IFRS, IAS, IMA) across 400 case items. ENHANCED_CASE_BASE and ENHANCED_CASE_BASE5 have ZERO.",
+        "implication": "CAQS §4.1 EV3 violation — all case explanations need citation injection. Violates Gold Standard Checklist ('Explanation names governing standard')."
+      },
+      {
+        "id": "XF-005_PRODUCTION_STATUS_MISMATCH",
+        "severity": "Medium",
+        "description": "37 of 54 Certified cases (68.5%) across Base2-Base5 have question_state: 'Certified' but ProductionStatus: 'Draft'.",
+        "implication": "Existing ENHANCED certifications are not CAQS §1.6 compliant. Re-verification needed before learner-pool eligibility."
+      }
+    ]
+  },
+
+  "decision_matrix": {
+    "option_a_title": "Option A: Next Case Bank Ready for CAQS Review",
+    "option_a_description": "Select the next case-bank array to enter the S509-S513 uplift/review/certify pipeline, or fast-track arrays with minimal remaining Unprocessed items.",
+    "option_a_sub_options": [
+      {
+        "id": "A1",
+        "name": "Fast-Track Completion: ENHANCED_CASE_BASE2/3/5 (1 Unprocessed case each)",
+        "targets": ["ENHANCED_CASE_BASE2 (73/78 Certified → 5 Unprocessed)", "ENHANCED_CASE_BASE3 (74/79 Certified → 5 Unprocessed)", "ENHANCED_CASE_BASE5 (70/75 Certified → 5 Unprocessed)"],
+        "scope": {
+          "total_arrays": 3,
+          "total_cases": 45,
+          "total_items": 232,
+          "items_to_certify": 15,
+          "cases_to_certify": 3,
+          "items_already_certified": 217,
+          "certification_gap_pct": "6.5%"
+        },
+        "evidence_required": [
+          "CAQS §1.6 six-dimension review for 3 Unprocessed cases (15 items)",
+          "Re-verification of 217 existing Certified items against CAQS §1.6 (XF-005 concern)",
+          "Citation injection across all 232 items (currently 2 total citations across 3 arrays)",
+          "Per-item Difficulty/DifficultyScore metadata for all 232 items (currently absent per XF-002)",
+          "ProductionStatus correction for 37 Certified-but-Draft cases (XF-005)"
+        ],
+        "evidence_found": {
+          "explanation_quality": "ADEQUATE (avg 341-433 chars, 81-89% multi-sentence) — minimal uplift needed",
+          "citations": "WEAK-ABSENT (0-1 citations per array across 232 items) — MAJOR gap",
+          "numeric_items": "60 total (25+17+18) — moderate arithmetic audit burden",
+          "structurally_clean": true,
+          "certification_basis_concern": "HIGH — 217 items Certified without CAQS §1.6 six-dimension evidence"
+        },
+        "risk_level": "MEDIUM",
+        "risk_factors": [
+          "XF-005: Existing certification not CAQS §1.6 compliant — may need to demote and re-certify",
+          "Citation desert: 2 total citations across 232 items is the worst gap after ENHANCED_CASE_BASE",
+          "Mixing re-verification with new certification complicates the pipeline",
+          "Each array has different schema nuances (exhibit counts vary 5-11)"
+        ],
+        "implementation_effort": "LOW-MEDIUM",
+        "effort_rationale": "Only 15 items to actually certify. But re-verification of 217 items + citation injection + difficulty metadata on all 232 items inflates effort beyond the certification count.",
+        "conflict_100_series_lane": "LOW — 100-series modifies may-core.js, may-learner-state.js, test files. Case banks untouched.",
+        "conflict_700_series_lane": "LOW — 700-series modifies pack_d_corrected.js + FD-046. No case bank overlap.",
+        "expected_sessions": 3,
+        "session_sequence": ["S515: Citation injection + ProductionStatus fix across 3 arrays", "S516: CAQS §1.6 re-verification of 217 Certified + certification of 15 Unprocessed", "S517: Holdback remediation"],
+        "recommended_next_session": 515
+      },
+      {
+        "id": "A2",
+        "name": "Mid-Sized Wave: ENHANCED_CASE_BASE4 (3 Unprocessed cases, highest remaining)",
+        "targets": ["ENHANCED_CASE_BASE4 (63/78 Certified → 15 Unprocessed, 3 cases)"],
+        "scope": {
+          "total_arrays": 1,
+          "total_cases": 15,
+          "total_items": 78,
+          "items_to_certify": 15,
+          "items_already_certified": 63,
+          "certification_gap_pct": "19.2%"
+        },
+        "evidence_required": [
+          "CAQS §1.6 six-dimension review for 3 Unprocessed cases (15 items)",
+          "Re-verification of 63 existing Certified items",
+          "Citation injection (currently 6 citations, best of all arrays — but still only 7.7% coverage)",
+          "Fix 5 DL-023 exhibit issues (Body-instead-of-Headers/Rows)",
+          "Add CompanyName/Stakeholder to Unprocessed CBQ4-A1/A2 cases",
+          "Per-item Difficulty/DifficultyScore metadata"
+        ],
+        "evidence_found": {
+          "explanation_quality": "ADEQUATE (avg 333 chars, 81% multi-sentence)",
+          "citations": "MODERATE (6 total — 1 ASC + 5 COSO) — best among all arrays but still WEAK",
+          "numeric_items": 20,
+          "structurally_clean": "PARTIAL — 5 DL-023 exhibit issues",
+          "certification_basis_concern": "HIGH — 63 items Certified without CAQS §1.6 evidence"
+        },
+        "risk_level": "MEDIUM",
+        "risk_factors": [
+          "5 DL-023 exhibit issues need schema repair before certification",
+          "XF-005: 7 of 12 Certified cases have ProductionStatus: 'Draft'",
+          "12 Certified cases need full re-verification — potentially demoted if CAQS §1.6 not met",
+          "Reasonable balance of effort vs. impact (largest Unprocessed block in ENHANCED arrays)"
+        ],
+        "implementation_effort": "MEDIUM",
+        "effort_rationale": "3 Unprocessed cases (15 items) is a manageable certification block. DL-023 fixes are mechanical (field renaming). Citation injection across 78 items is moderate effort.",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": 3,
+        "session_sequence": ["S515: DL-023 fixes + citation injection + metadata completion on Base4", "S516: CAQS §1.6 review + certification of 15 Unprocessed + re-verify 63", "S517: Holdback remediation"],
+        "recommended_next_session": 515
+      },
+      {
+        "id": "A3",
+        "name": "Greenfield: MIGRATED_CASE_BASE_C (75 items, 0 Certified, S509-S513 pattern)",
+        "targets": ["MIGRATED_CASE_BASE_C (0/75 Certified in scored_cases3.js)"],
+        "scope": {
+          "total_arrays": 1,
+          "total_cases": 15,
+          "total_items": 75,
+          "items_to_certify": 75,
+          "items_already_certified": 0,
+          "certification_gap_pct": "100%"
+        },
+        "evidence_required": [
+          "Full S509-S513 pipeline: explanation uplift → batch apply → arithmetic audit → CAQS §1.6 review → holdback remediation",
+          "Answer-key verification for 8 numeric items",
+          "Distractor rationale authoring for 74 select-type items",
+          "ASC/COSO/IFRS citation injection",
+          "Per-item Difficulty/DifficultyScore metadata"
+        ],
+        "evidence_found": {
+          "format": "MIGRATED — 0 exhibits per case, predominantly select (37/75) + 8 numeric + 15 multi + 15 fill",
+          "structural_cleanliness": "TRUE — Agent C confirmed structurally clean, Unprocessed, ready for certification",
+          "item_type_profile": "Similar to MIGRATED_CASE_BASE_B (74 select + 1 numeric → 75/75 Certified in 5 sessions)",
+          "explanation_quality": "NOT ASSESSED (Agent C skipped MIGRATED arrays as 'out of scope' for triage)",
+          "citations": "NOT ASSESSED (likely 0 — same MIGRATED pipeline as Base_B pre-S509)"
+        },
+        "risk_level": "LOW",
+        "risk_factors": [
+          "PROVEN PIPELINE: MIGRATED_CASE_BASE_B went 0→75 Certified in exactly 5 sessions (S509-S513). Same format, same file structure.",
+          "Structurally clean — no DL-023/017/018 overhead",
+          "0-exhibit format simplifies certification (no exhibit validation needed)",
+          "Unknown explanation quality — may need significant uplift (assume comparable to Base_B pre-S509: 0 citations, short explanations)",
+          "Greenfield = no re-verification of questionable prior certifications (unlike ENHANCED arrays)"
+        ],
+        "implementation_effort": "MEDIUM-HIGH",
+        "effort_rationale": "75 items is the full greenfield certification load. Established S509-S513 pipeline means effort is well-scoped and predictable. ~5 sessions as proven.",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": 5,
+        "session_sequence": ["S515: Explanation uplift (S509 equivalent)", "S516: Batch application (S510 equivalent)", "S517: Answer-key arithmetic audit (S511 equivalent)", "S518: CAQS §1.6 six-dimension review (S512 equivalent)", "S519: Holdback remediation + final certification (S513 equivalent)"],
+        "recommended_next_session": 515
+      },
+      {
+        "id": "A4",
+        "name": "Greenfield: MIGRATED_CASE_BASE_D (75 items, 0 Certified, S509-S513 pattern)",
+        "targets": ["MIGRATED_CASE_BASE_D (0/75 Certified in scored_cases4.js)"],
+        "scope": {
+          "total_arrays": 1,
+          "total_cases": 15,
+          "total_items": 75,
+          "items_to_certify": 75,
+          "items_already_certified": 0,
+          "certification_gap_pct": "100%"
+        },
+        "evidence_required": [
+          "Full S509-S513 pipeline",
+          "Answer-key verification for 11 numeric items",
+          "Distractor rationale for 35 select + 14 multi + 15 fill items",
+          "ASC/COSO/IFRS citation injection",
+          "Per-item Difficulty/DifficultyScore metadata"
+        ],
+        "evidence_found": {
+          "format": "MIGRATED — 0 exhibits per case, 35 select + 11 numeric + 14 multi + 15 fill",
+          "structural_cleanliness": "TRUE",
+          "item_type_profile": "Higher numeric count (11 vs 8 in Base_C, 1 in Base_B) — slightly more arithmetic audit burden",
+          "explanation_quality": "NOT ASSESSED",
+          "citations": "NOT ASSESSED"
+        },
+        "risk_level": "LOW",
+        "risk_factors": [
+          "PROVEN PIPELINE. Same format as Base_B which went 0→75 in 5 sessions.",
+          "11 numeric items (vs 1 in Base_B) increases arithmetic audit scope",
+          "Structurally clean, Unprocessed, greenfield",
+          "No re-verification burden"
+        ],
+        "implementation_effort": "MEDIUM-HIGH",
+        "effort_rationale": "Same as Base_C — 75 items, 5-session pipeline. 11 numeric items slightly more arithmetic work than Base_B (which had only 1 numeric + 74 select).",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": 5,
+        "session_sequence": ["S520: Explanation uplift", "S521: Batch application", "S522: Answer-key arithmetic audit", "S523: CAQS §1.6 six-dimension review", "S524: Holdback remediation + final certification"],
+        "recommended_next_session": 520
+      }
+    ],
+    "option_a_recommendation": "A3 (MIGRATED_CASE_BASE_C) at S515. Rationale: (1) Clean greenfield — no XF-005 re-verification burden that plagues ENHANCED arrays. (2) Proven S509-S513 pipeline with identical MIGRATED format. (3) Lower risk than ENHANCED arrays which may need certification demotion. (4) 75-item scope matches Base_B exactly. A1/A2 should follow after Base_C and Base_D are fully Certified, when the remaining ENHANCED arrays' 'Certified' items can be systematically re-verified under CAQS §1.6.",
+
+    "option_b_title": "Option B: Explanation Uplift for ENHANCED_CASE_BASE (Worst Quality)",
+    "option_b_description": "Target the case bank with the weakest explanation quality first — ENHANCED_CASE_BASE in scored_cases.js — before other certification candidates.",
+    "option_b_sub_options": [
+      {
+        "id": "B1",
+        "name": "Full Uplift: ENHANCED_CASE_BASE (90 items, 0 Certified, worst explanations)",
+        "targets": ["ENHANCED_CASE_BASE (scored_cases.js, 90 items, 15 cases, 0 Certified)"],
+        "scope": {
+          "total_items": 90,
+          "items_to_uplift": 90,
+          "numeric_items_needing_audit": 37,
+          "items_with_thin_explanations": "66 (73%)",
+          "g_new_4_violations": 58,
+          "citation_deficit": "ZERO citations across all 90 items"
+        },
+        "evidence_required": [
+          "Author multi-sentence explanations for all 90 items (currently avg 80 chars)",
+          "Inject ASC/COSO/IFRS citations (currently 0)",
+          "Write distractor rationale for 53 select/multi items (currently 0 ExplanationWrong fields — XF-001)",
+          "Per-item Difficulty/DifficultyScore metadata (currently ABSENT per XF-002)",
+          "Answer-key arithmetic audit for 37 numeric items (highest numeric density at 41%)",
+          "Populate Exhibit ReferencedBy arrays (currently 0/15 cases have refs — XF-004)",
+          "Add CompanyName/Stakeholder to CBQ-A1 (missing)"
+        ],
+        "evidence_found": {
+          "explanation_quality": "INSUFFICIENT — 73% thin (<100 chars), 80% single-sentence, avg 80 chars",
+          "answer_key_risk": "HIGH — 37 numeric items with thin explanations make independent verification difficult",
+          "case_realism": "MODERATE — all cases have exhibits but 0/15 have ReferencedBy populated",
+          "schema_stability": "GOOD — parseable, 0 exhibit issues, 0 missing case fields",
+          "question_state": "All Unprocessed, all ProductionStatus: 'Draft' — clean slate, consistent"
+        },
+        "risk_level": "MEDIUM-HIGH",
+        "risk_factors": [
+          "Largest item count (90) of any array — highest uplift effort",
+          "37 numeric items = highest arithmetic audit burden",
+          "XF-001 (no ExplanationWrong fields) is a schema-level gap — adding them requires extending the case JSON schema, which may need app.js review",
+          "XF-003 (0 citations) means starting from absolute zero",
+          "The S509-S513 pipeline was proven on 75 items (MIGRATED format); 90 items with exhibits increases scope by ~20% + exhibit validation",
+          "UPLIFT-ONLY option: could do uplift without certification — defers the CAQS §1.6 gate to a later session"
+        ],
+        "implementation_effort": "HIGH",
+        "effort_rationale": "90 items need full explanation rewriting, 37 numeric items need audit, 0 citations to start from. Estimated 6-8 sessions for a full uplift+certify pipeline on an ENHANCED-format array with exhibits. If uplift-only (no certification), 3-4 sessions.",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": "6-8 (full pipeline); 3-4 (uplift-only)",
+        "session_sequence_full": ["S515: Explanation uplift draft (90 items, ~30 items/session = 3 sessions)", "S516: Batch apply drafted uplifts", "S517: Citation injection wave", "S518: Numeric answer-key audit (37 items)", "S519: CAQS §1.6 six-dimension review", "S520: Holdback remediation + certification"],
+        "session_sequence_uplift_only": ["S515-S517: Explanation uplift + citation injection (3 sessions)", "Defer certification to future wave"],
+        "recommended_next_session": 515
+      }
+    ],
+    "option_b_recommendation": "B1 uplift-only as a parallel track. ENHANCED_CASE_BASE needs the MOST work and produces the HIGHEST marginal quality improvement (from worst to certified). However, its 90-item scope + 0 citations + exhibit complexities make it a longer commitment than MIGRATED_CASE_BASE_C/D. Best strategy: uplift in parallel with Base_C certification — draft explanations while Base_C moves through S509-S513 gates. This avoids blocking the certification pipeline while addressing the worst-quality bank.",
+
+    "option_c_title": "Option C: Arithmetic/Answer-Key Audit Wave",
+    "option_c_description": "Execute a systematic arithmetic audit across all arrays with numeric items, independent of full certification pipeline.",
+    "option_c_sub_options": [
+      {
+        "id": "C1",
+        "name": "Cross-Array Numeric Audit (Read-Only Discovery)",
+        "targets": "All 7 uncertified arrays with numeric items",
+        "scope": {
+          "total_numeric_items": 136,
+          "by_array": {
+            "ENHANCED_CASE_BASE": { "numeric": 37, "risk": "HIGH — 73% thin explanations, 0 citations to anchor methodology" },
+            "ENHANCED_CASE_BASE2": { "numeric": 25, "risk": "LOW — explanations adequate but citations weak" },
+            "ENHANCED_CASE_BASE3": { "numeric": 17, "risk": "LOW — well-explained calculations" },
+            "ENHANCED_CASE_BASE4": { "numeric": 20, "risk": "LOW — best citation coverage, clear formulas" },
+            "ENHANCED_CASE_BASE5": { "numeric": 18, "risk": "LOW — well-explained but 0 citations" },
+            "MIGRATED_CASE_BASE_C": { "numeric": 8, "risk": "UNKNOWN — not triaged by Agent C" },
+            "MIGRATED_CASE_BASE_D": { "numeric": 11, "risk": "UNKNOWN — not triaged by Agent C" }
+          }
+        },
+        "evidence_required": [
+          "Independent recomputation of every numeric item's Correct value",
+          "Formula validation: does the explanation formula match the exhibit inputs?",
+          "Rounding policy check (CAQS §5.2)",
+          "Tolerance verification (CAQS §5.3)",
+          "Cross-reference exhibit values used in calculations"
+        ],
+        "evidence_found": {
+          "spot_checks_completed": 10,
+          "spot_check_verdicts": "8 PLAUSIBLE/CORRECT, 2 CONCERN (CBQ-C1-Q1: too thin to verify; CBQ3-A1-Q1: PV factor not identified)",
+          "known_prior_defect": "CASE-B12-Q4 (S511): stored $21,750 vs. recalculated $20,143 — formula error confirmed and remediated",
+          "methodology_gap": "Non-MIGRATED arrays (ENHANCED_CASE_BASE) have exhibits — verification requires cross-referencing exhibit data, which is complex without a parse tool"
+        },
+        "risk_level": "LOW",
+        "risk_factors": [
+          "Read-only discovery — no risk of answer-key corruption",
+          "Prior S511 found 1 formula error in 75 items (1.3%). Extrapolating: ~2-3 errors expected across 136 items.",
+          "ENHANCED_CASE_BASE (37 numeric) is the highest-risk target but also requires the most exhibit cross-referencing effort",
+          "MIGRATED arrays (0 exhibits) are simpler to audit — S511 methodology is directly reusable"
+        ],
+        "implementation_effort": "MEDIUM",
+        "effort_rationale": "136 numeric items to independently recompute. ENHANCED arrays require exhibit cross-referencing (additional complexity). MIGRATED arrays (19 items total) are straightforward. 1-2 sessions for read-only audit log.",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": 1,
+        "session_sequence": ["S515: Cross-array numeric audit — read-only discovery log"],
+        "recommended_next_session": 515
+      }
+    ],
+    "option_c_recommendation": "C1 as a read-only discovery preceding whichever certification target is chosen. Execute S515 as a cross-array numeric audit BEFORE any write operations. The S511 CASE-B12-Q4 discovery (formula error caught before certification) proves this step prevents certifying items with wrong answers. Prioritize MIGRATED_CASE_BASE_C/D numeric items (19 total, 0 exhibits = fastest to audit) if A3/A4 is chosen, or ENHANCED_CASE_BASE (37 items) if B1 is chosen.",
+
+    "option_d_title": "Option D: Optional Enhancement Wave for MIGRATED_CASE_BASE_B",
+    "option_d_description": "Apply post-certification enhancements to the already-fully-certified MIGRATED_CASE_BASE_B (75/75 Certified).",
+    "option_d_sub_options": [
+      {
+        "id": "D1",
+        "name": "Citation Uplift (G5.5)",
+        "targets": ["MIGRATED_CASE_BASE_B (75 items, all Certified, scored_cases2.js)"],
+        "scope": {
+          "items": 75,
+          "current_citations": "34 (added during S509 uplift)",
+          "citation_coverage_pct": "45.3%",
+          "target_coverage": "≥ 50% (CAQS §14.2 Gold Standard: 'Explanation names governing standard')",
+          "items_needing_citations": "~38 items currently uncited"
+        },
+        "evidence_required": [
+          "Identify items lacking ASC/COSO/IFRS citations",
+          "Determine correct authoritative standard for each item's topic",
+          "Inject citation inline in Explanation field",
+          "Verify no incorrect or fabricated citations (DL-009 pattern)"
+        ],
+        "risk_level": "LOW",
+        "risk_factors": [
+          "Items are already Certified — changes to Explanation fields don't risk answer-key integrity",
+          "34 existing citations are verified real and correct by S512 D4 — same methodology applies",
+          "No schema changes needed — inline text addition only"
+        ],
+        "implementation_effort": "LOW",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": 1,
+        "recommended_next_session": 525
+      },
+      {
+        "id": "D2",
+        "name": "Difficulty Calibration",
+        "targets": ["MIGRATED_CASE_BASE_B (75 items, all Certified)"],
+        "scope": {
+          "items": 75,
+          "current_state": "All 75 items labeled Moderate/DifficultyScore 3. All 15 cases labeled Moderate. No per-item calibration exists (DL-032 pattern).",
+          "target": "CAQS §6.1 distribution: Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10%"
+        },
+        "evidence_required": [
+          "Per-item cognitive demand assessment (Bloom's level × calculation complexity × concept depth)",
+          "Recalibration to break the uniform Moderate labeling",
+          "Per-item DifficultyScore 1-5 assignment"
+        ],
+        "risk_level": "LOW",
+        "risk_factors": [
+          "Items are Certified — Difficulty recalibration doesn't affect answer correctness",
+          "Subjective assessment — needs clear rubric to avoid inconsistent labeling",
+          "Base_B has 74 select + 1 numeric — nearly all items are qualitative concept-testing, making difficulty assessment more nuanced than calculation items"
+        ],
+        "implementation_effort": "LOW-MEDIUM",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": 1,
+        "recommended_next_session": 526
+      },
+      {
+        "id": "D3",
+        "name": "Case Realism Enhancement",
+        "targets": ["MIGRATED_CASE_BASE_B (15 cases, all Certified)"],
+        "scope": {
+          "cases": 15,
+          "current_state": "Templated ScenarioText, 0 exhibits per case, no named stakeholders with business trigger events (S512 D5 finding)",
+          "target": "CAQS §3.1: named company, named stakeholder, business trigger, clear task. §3.4: exhibits with defined purpose."
+        },
+        "evidence_required": [
+          "Rewrite ScenarioText for all 15 cases with named stakeholders and business triggers",
+          "Add exhibits (0→1-2 per case) — significant schema extension",
+          "Verify exhibit data is internally consistent and consumed by items"
+        ],
+        "risk_level": "MEDIUM",
+        "risk_factors": [
+          "Adding exhibits to cases changes the case schema — items currently reference no exhibits",
+          "Items would need re-verification if exhibits are added (do the items still make sense with exhibits?)",
+          "15 cases × 1-2 exhibits = 15-30 new data objects — substantial content authoring",
+          "S512 D5 noted this as a 'design-level limitation' — not a certification blocker"
+        ],
+        "implementation_effort": "HIGH",
+        "effort_rationale": "Full scenario rewrite + exhibit authoring for 15 cases. This is CASE AUTHORING work, not enhancement. Approximates creating 15 new mini-cases.",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": "3-5",
+        "recommended_next_session": "Defer to post-greenfield-certification phase"
+      },
+      {
+        "id": "D4",
+        "name": "Confidence and ProductionStatus Alignment",
+        "targets": ["MIGRATED_CASE_BASE_B (75 items, 15 cases)"],
+        "scope": {
+          "items": 75,
+          "cases": 15,
+          "current_state": "All Confidence=100 (template-assigned). All ProductionStatus='Draft' (XF-005 pattern).",
+          "target": "ProductionStatus → 'Production' for all Certified cases. Confidence reflects actual CAQS §1.6 verification completeness."
+        },
+        "evidence_required": [
+          "Update ProductionStatus from 'Draft' → 'Production' for all 15 cases + 75 items",
+          "Adjust Confidence from template 100 to verification-based values (S512 D1-D6 evidence)"
+        ],
+        "risk_level": "LOW",
+        "risk_factors": [
+          "Purely metadata change — no content impact",
+          "ProductionStatus has no runtime effect but matters for governance/compliance",
+          "Confidence 100 is inaccurate (templated) but not harmful"
+        ],
+        "implementation_effort": "LOW",
+        "conflict_100_series_lane": "LOW",
+        "conflict_700_series_lane": "LOW",
+        "expected_sessions": 1,
+        "recommended_next_session": 525
+      }
+    ],
+    "option_d_recommendation": "D1 + D4 as a combined single session (S525 or later). G5.5 citation uplift + ProductionStatus alignment are low-effort, low-risk enhancements to a fully Certified bank. Defer to after the next certification target is complete. D2 (difficulty calibration) should follow D1 as a subsequent session. D3 (case realism enhancement) is a major undertaking — treat as a separate Case Authoring project, not an enhancement wave."
+  },
+
+  "recommendation": {
+    "primary": {
+      "option": "A3",
+      "target": "MIGRATED_CASE_BASE_C",
+      "next_session": 515,
+      "rationale": [
+        "CLEAN GREENFIELD: 0 Certified, 0 re-verification burden. No XF-005 ProductionStatus mess or questionable prior certifications to untangle.",
+        "PROVEN PIPELINE: MIGRATED_CASE_BASE_B went 0→75 Certified in exactly 5 sessions (S509-S513). Base_C is the same format, same file (scored_cases3.js), same 0-exhibit structure.",
+        "LOWEST RISK: ENHANCED arrays (A1/A2) require re-verifying 217-63 'Certified' items that were not CAQS §1.6 verified — potential demotion risk. Greenfield has no such baggage.",
+        "STRUCTURALLY CLEAN: Agent C confirmed MIGRATED arrays are structurally clean. No DL-023/017/018 issues.",
+        "SEQUENTIAL LOGIC: Base_A (120/120) and Base_B (75/75) are already 100% Certified. Base_C and Base_D are the logical next MIGRATED targets. Completing the MIGRATED series gives 4 fully certified arrays (390 items) before tackling the more complex ENHANCED arrays.",
+        "PREDICTABLE EFFORT: 5 sessions at MEDIUM-HIGH effort — well-understood scope."
+      ]
+    },
+    "secondary": {
+      "option": "C1",
+      "target": "Cross-Array Numeric Audit (Read-Only)",
+      "next_session": 515,
+      "rationale": [
+        "Execute BEFORE write operations on any new certification target.",
+        "Prioritize MIGRATED_CASE_BASE_C/D (19 numeric items, 0 exhibits = fastest to audit) — directly feeds into A3.",
+        "The S511 CASE-B12-Q4 discovery proved this step catches formula errors BEFORE they're certified.",
+        "Read-only — zero risk of file corruption, no backup protocol needed."
+      ]
+    },
+    "deferred": {
+      "options": ["A4 (MIGRATED_CASE_BASE_D)", "B1 (ENHANCED_CASE_BASE uplift)", "D1+D4 (Base_B post-certification enhancements)"],
+      "rationale": [
+        "A4: Follows naturally after A3 completes. Same format, same pipeline.",
+        "B1: ENHANCED_CASE_BASE is the highest-impact uplift but also the highest-effort. Run its explanation uplift in PARALLEL with Base_C certification (draft explanations while Base_C moves through gates). Don't block the certification pipeline.",
+        "D1+D4: Low-effort polish on already-Certified Base_B. Can be squeezed into any session with spare capacity.",
+        "A1/A2 (ENHANCED array completion): Requires first resolving XF-005 (Certified-but-Draft) — systematic re-verification of all existing ENHANCED certifications against CAQS §1.6. Best done as a dedicated wave after the MIGRATED series is complete."
+      ]
+    }
+  },
+
+  "risk_register": {
+    "xf005_remediation_burden": {
+      "description": "37 of 54 Certified ENHANCED cases have question_state: 'Certified' but ProductionStatus: 'Draft'. All were certified without CAQS §1.6 evidence.",
+      "mitigation": "Avoid ENHANCED arrays (A1/A2) until a systematic CAQS §1.6 re-verification pass is designed. Focus on greenfield MIGRATED arrays.",
+      "status": "UNMITIGATED — deferred"
+    },
+    "xf001_explanation_wrong_schema_gap": {
+      "description": "ZERO ExplanationWrong fields across all 400 case items. S512 D3 (Distractor Rationale) cannot pass under current schema.",
+      "mitigation": "For MIGRATED arrays, follow the Base_B pattern: embed distractor rationale in the single Explanation field (inline, not separate slots). This passed S512 D3 for 72/74 select items.",
+      "status": "MITIGATED — Base_B methodology proven"
+    },
+    "xf003_citation_desert": {
+      "description": "8 total citations across 400 case items. S509 added 34 citations to Base_B from 0.",
+      "mitigation": "Include citation injection in every S509-equivalent uplift session. Target ≥50% of items cited.",
+      "status": "MITIGATED — S509 methodology proven"
+    },
+    "concurrent_session_overlap": {
+      "description": "500-series (case certification), 100-series (May tutoring), and 700-series (Pack D repair) operate on different files. No lane conflict.",
+      "mitigation": "Continue concurrent development. Verify file targets don't overlap before each write session.",
+      "status": "LOW RISK — lanes are file-isolated"
+    },
+    "schema_extension_risk": {
+      "description": "Adding ExplanationWrong fields to case items (to fix XF-001 structurally) would require app.js changes — the rendering engine must know to display them.",
+      "mitigation": "Use inline distractor rationale in the Explanation field (Base_B pattern). Don't extend the schema.",
+      "status": "MITIGATED — inline approach preferred"
+    }
+  },
+
+  "certified_pool_trajectory": {
+    "current": {
+      "mcq_certified": 2181,
+      "case_certified_items": 475,
+      "case_certified_cases": 30,
+      "total_certified_items": 2656
+    },
+    "after_a3_complete": {
+      "mcq_certified": 2181,
+      "case_certified_items": 550,
+      "case_certified_cases": 45,
+      "total_certified_items": 2731,
+      "case_coverage": "3 of 5 MIGRATED arrays fully certified (Base_A/B/C)"
+    },
+    "after_a4_complete": {
+      "mcq_certified": 2181,
+      "case_certified_items": 625,
+      "case_certified_cases": 60,
+      "total_certified_items": 2806,
+      "case_coverage": "4 of 5 MIGRATED arrays fully certified (Base_A/B/C/D)"
+    },
+    "full_case_certification_target": {
+      "description": "All 5 MIGRATED arrays + all 5 ENHANCED arrays = 745 case items + 2,500 MCQ items = 3,245 total certified",
+      "remaining_after_a4": "ENHANCED_CASE_BASE (90), ENHANCED_CASE_BASE2 (5), ENHANCED_CASE_BASE3 (5), ENHANCED_CASE_BASE4 (15), ENHANCED_CASE_BASE5 (5) = 120 remaining items"
+    }
+  },
+
+  "execution_order": [
+    { "rank": 1, "session": "S515", "action": "Option C1: Cross-array numeric audit (read-only). Prioritize MIGRATED_CASE_BASE_C/D numeric items.", "lane": "500-series", "file_scope": "scored_cases3.js, scored_cases4.js (READ-ONLY)" },
+    { "rank": 2, "session": "S516", "action": "Option A3 Phase 1: Explanation uplift for MIGRATED_CASE_BASE_C (S509 equivalent). Author multi-sentence explanations with citations.", "lane": "500-series", "file_scope": "scored_cases3.js (WRITE)" },
+    { "rank": 3, "session": "S517", "action": "Option A3 Phase 2: Batch apply drafted uplifts (S510 equivalent).", "lane": "500-series", "file_scope": "scored_cases3.js (WRITE)" },
+    { "rank": 4, "session": "S518", "action": "Option A3 Phase 3: Answer-key arithmetic audit — independently recompute all 8 numeric items (S511 equivalent).", "lane": "500-series", "file_scope": "scored_cases3.js (READ-ONLY + potential WRITE if errors found)" },
+    { "rank": 5, "session": "S519", "action": "Option A3 Phase 4: CAQS §1.6 six-dimension certification review (S512 equivalent).", "lane": "500-series", "file_scope": "scored_cases3.js (READ-ONLY verification + WRITE for certification)" },
+    { "rank": 6, "session": "S520", "action": "Option A3 Phase 5: Holdback remediation + final certification (S513 equivalent). MIGRATED_CASE_BASE_C → 75/75 Certified.", "lane": "500-series", "file_scope": "scored_cases3.js (WRITE)" },
+    { "rank": 7, "session": "S521+", "action": "Option A4: Repeat S516-S520 pipeline for MIGRATED_CASE_BASE_D.", "lane": "500-series", "file_scope": "scored_cases4.js" },
+    { "rank": "PARALLEL", "session": "S516-S520", "action": "Option B1: Draft ENHANCED_CASE_BASE explanations in parallel with Base_C certification. Don't block pipeline.", "lane": "500-series (read-only drafting)", "file_scope": "scored_cases.js (READ-ONLY drafting, no writes until Base_C certified)" },
+    { "rank": "ANY", "session": "S525+", "action": "Option D1+D4: Post-certification enhancements for Base_B (citation uplift + ProductionStatus alignment).", "lane": "500-series", "file_scope": "scored_cases2.js (WRITE — minor)" }
+  ]
+}

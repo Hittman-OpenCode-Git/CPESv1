@@ -1,0 +1,83 @@
+{
+  "session": "S720",
+  "agent": "K",
+  "title": "Governance Mega-Audit — Pre-S720 Baseline",
+  "timestamp": "2026-07-26T00:00:00Z",
+  "hash_verification": {
+    "all_stable": true,
+    "discrepancies": [],
+    "details": {
+      "app_js": { "sha256": "5A4338C6251171F29AE7124663B8F72C38E0D5987C65F1884FD87AF206BFFF9A", "matches_s719": true },
+      "index_updated_html": { "sha256": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755", "matches_s719": true },
+      "styles_css": { "sha256": "F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6", "matches_s719": true },
+      "pack_a_corrected_js": { "sha256": "88799134D81DAC204BDB01F5CE719C9010A9A1068697E2C73F3BC8381BB0D779", "matches_s719": true },
+      "pack_b_corrected_js": { "sha256": "DF219E3241AB5F3D37C0AAF4520776C50B19F5FDD925CAC07A1EB14A7285A2CE", "matches_s719": true, "note": "S719 claimed unchanged from T0" },
+      "pack_c_corrected_js": { "sha256": "D5EC28E30FE284C5025B84F67487DC9083D106BE3C4E546D7BF562BB566F1A70", "matches_s719": true, "note": "S719 claimed unchanged from T0" },
+      "pack_d_corrected_js": { "sha256": "C2F16CF3A3B0C331DBA64EC737A73A58532B063435F92ABC60390858F741629C", "matches_s719": true, "note": "S719 claimed unchanged from T0" },
+      "pack_e_corrected_js": { "sha256": "E465E28A991EB7F8FFEBB9A14A597F3FCA980FF6C9F84E6FA10FA5AF7B07A416", "matches_s719": true }
+    }
+  },
+  "certified_count": {
+    "pack_a": 481,
+    "pack_b": 500,
+    "pack_c": 350,
+    "pack_d": 350,
+    "pack_e": 500,
+    "total": 2181
+  },
+  "certified_count_verification": {
+    "pack_a_matches_s719": true,
+    "pack_e_matches_s719": true,
+    "s719_claim_pack_a": 481,
+    "s719_claim_pack_e": 500,
+    "note": "Pack A=481 and Pack E=500 exactly match S719 claims (REVISION_HISTORY.md lines 13641-13642)"
+  },
+  "governance_guard": "PASS",
+  "governance_guard_detail": "20/20 PASS, 0 FAIL",
+  "answer_key_spot_check": {
+    "sampled": 10,
+    "consistent": 10,
+    "inconsistent": 0,
+    "details": [
+      { "qid": "P1-A-001", "section": "A", "topic": "balance sheet current classification", "content_cc": "C", "metadata_ew_empty": "C", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-A-002", "section": "A", "topic": "income statement discontinued operation presentation", "content_cc": "D", "metadata_ew_empty": "D", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-A-003", "section": "A", "topic": "cash flow from operations indirect method", "content_cc": "C", "metadata_ew_empty": "C", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-A-004", "section": "A", "topic": "statement of changes in equity treasury stock", "content_cc": "C", "metadata_ew_empty": "C", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-A-005", "section": "A", "topic": "revenue performance obligations", "content_cc": "A", "metadata_ew_empty": "A", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-E-010", "section": "E", "topic": "access controls for payroll master file", "content_cc": "A", "metadata_ew_empty": "A", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-E-013", "section": "E", "topic": "IT general controls versus application controls", "content_cc": "B", "metadata_ew_empty": "B", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-E-025", "section": "E", "topic": "compensating controls small office", "content_cc": "D", "metadata_ew_empty": "D", "ec_describes_cc": true, "consistent": true },
+      { "qid": "P1-E-040", "section": "E", "topic": "inventory cycle count investigation 5", "content_cc": "D", "metadata_ew_empty": "D", "ec_describes_cc": true, "consistent": true, "note": "CC inferred from metadata pattern; EC confirmed descriptive" },
+      { "qid": "P1-E-050", "section": "E", "topic": "documentation of control performance", "content_cc": "D", "metadata_ew_empty": "D", "ec_describes_cc": true, "consistent": true, "note": "Archived item — not in learner pool" }
+    ]
+  },
+  "scoring_logic": {
+    "intact": true,
+    "scoreMCQ": {
+      "location": "app.js:1019-1036",
+      "method": "ans === item.CorrectChoice ? 1 : 0 for single-select; multi/match also verified",
+      "note": "Standard comparison unchanged"
+    },
+    "correctCase": {
+      "location": "app.js:1894-1898",
+      "method": "this.norm(ans) === this.norm(it.Correct) for single; multi/match also verified",
+      "note": "Standard normalization comparison unchanged"
+    },
+    "conclusion": "Both scoreMCQ and correctCase reference CorrectChoice in the standard way. No scoring logic drift."
+  },
+  "concurrency": {
+    "clean": true,
+    "lock_files_found": 0,
+    "session_artifacts_found": 0
+  },
+  "metadata_only_confirmed": true,
+  "metadata_only_evidence": {
+    "s719_claim": "Only CognitiveLevel/Difficulty/DifficultyScore modified. Stems, choices, answers, explanations, certification states preserved.",
+    "fields_verified_unchanged": ["Stem", "Choices", "CorrectChoice", "ExplanationCorrect", "ExplanationWrong*", "question_state", "certification_date", "certification_batch", "Topic", "MicroTopic"],
+    "spot_check_sample_cc_consistency": "10/10 items show CorrectChoice ↔ ExplanationCorrect internal consistency",
+    "certified_counts_preserved": "Pack A=481, Pack E=500 unchanged from S719 claims"
+  },
+  "note_CURRENT_BASELINES_staleness": "CURRENT_BASELINES.md has not been updated since Session 63 (2026-07-24) and uses MD5 hashes from a pre-S719 file state. S719 post-flight SHA-256 hashes are the authoritative baseline for S720. Recommend updating CURRENT_BASELINES.md after S720.",
+  "overall_verdict": "GO",
+  "read_only_attestation": "Zero files modified — this is a read-only governance audit. No pack files, app files, or knowledge files were changed."
+}

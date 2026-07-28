@@ -1,0 +1,39 @@
+{
+  "agent": "C",
+  "role": "Economic Trend Audit",
+  "s724_net_benefit": -1.0,
+  "s602_net_benefit": -2.5,
+  "s603_net_benefit": -2.5,
+  "s604_net_benefit": -2.5,
+  "s605_net_benefit": -2.5,
+  "trend_direction": "DETERIORATING",
+  "ever_positive": false,
+  "certified_pool_current": 2221,
+  "remaining_workload_current": 279,
+  "amortization_surface_trend": "SHRINKING",
+  "breakeven_sessions": 36,
+  "program_horizon_sessions": 20,
+  "breakeven_reachable": false,
+  "workload_needed_for_net_zero": 675,
+  "workload_feasible": false,
+  "all_scenarios_net_negative": true,
+  "scenario_breakdown": {
+    "best_case": { "net_benefit": -1.0, "startup": 4.0, "savings": 3.0 },
+    "central_case": { "net_benefit": -2.5, "startup": 4.5, "savings": 2.0 },
+    "worst_case": { "net_benefit": -4.0, "startup": 5.0, "savings": 1.0 }
+  },
+  "economic_gate_assumptions": {
+    "startup_cost_sessions": 4.5,
+    "forecast_savings_sessions": 2.0,
+    "per_item_savings_rate": 0.00664,
+    "certified_pool_trajectory": [2100, 2201, 2201, 2211, 2221],
+    "remaining_workload_trajectory": [400, 299, 299, 289, 279]
+  },
+  "evidence": {
+    "s724_original": "SESSION724_600_SERIES_FEASIBILITY.json — 5-agent assessment, net -1.0, 26/26 unanimous deferral",
+    "s602_revalidation": "SESSION602_ECONOMIC_GATE_REVALIDATION.json — net -2.5, breakeven 36 sessions at 299 items",
+    "s603_lock": "SESSION603_ECONOMIC_GATE_LOCK.json — all 5 assumptions frozen, all 3 scenarios net-negative",
+    "s604_reassessment": "SESSION604_ECONOMIC_REASSESSMENT.json — certified +30 to 2,211, remaining -10 to 289, amortization surface -3.3% smaller"
+  },
+  "verdict": "ECONOMIC_GATE_LOCKED_STRONGER"
+}

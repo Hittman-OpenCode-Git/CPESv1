@@ -1,0 +1,243 @@
+{
+  "session": "S810.1",
+  "title": "Domain E Seed Remediation — EW Authorship + Certification Preparation",
+  "agent": "J",
+  "role": "Batch Planner",
+  "date": "2026-07-26",
+  "status": "READY_FOR_EXECUTION",
+  "governance_preflight": {
+    "t0_baseline_verified": false,
+    "cc_audit_complete": false,
+    "backups_created": false,
+    "governance_guard_test_suite": false,
+    "note": "Executor must complete all 4 pre-flight checks before any write operations"
+  },
+  "overview": {
+    "total_seeds": 38,
+    "pack_c_seeds": 19,
+    "pack_d_seeds": 19,
+    "current_certified": 0,
+    "target_certified": 38,
+    "domain_e_impact": "228 → 266 certified (63.5% → 74.1%)",
+    "total_batches": 3,
+    "total_estimated_writes": 83,
+    "parallel_execution": true,
+    "estimated_wall_clock": "4-6 hours (with parallel Pack C/D sub-batches)"
+  },
+  "pre_flight_sequence": [
+    {
+      "step": 1,
+      "name": "CorrectChoice Audit",
+      "description": "Run boundary-aware object extraction on all 38 seeds to determine authoritative CorrectChoice values. Resolve 5 cross-agent discrepancies (P1-EC-008, P1-EC-014, P1-EC-066, P1-EC-031, P1-EC-072). Use within-object CC extraction (not forward-scan regex — see DL-029).",
+      "blocking": true,
+      "estimated_minutes": 15
+    },
+    {
+      "step": 2,
+      "name": "Backup Creation",
+      "description": "Create timestamped backups of pack_c_corrected.js and pack_d_corrected.js per BACKUP_PROTOCOL.md.",
+      "blocking": true,
+      "estimated_minutes": 2
+    },
+    {
+      "step": 3,
+      "name": "Governance Guard Baseline",
+      "description": "Run governance-guard test suite. Record T0 counts: certified items, DL-008 count, DL-026 count.",
+      "blocking": true,
+      "estimated_minutes": 5
+    },
+    {
+      "step": 4,
+      "name": "T0 Runtime Governance Checkpoint",
+      "description": "Per AGENTS.md §13.1: verify all 13 runtime hashes vs knowledge/CURRENT_BASELINES.md. Record T0 state.",
+      "blocking": true,
+      "estimated_minutes": 5
+    }
+  ],
+  "batch_execution_sequence": [
+    {
+      "step": 5,
+      "name": "BATCH A — Quick Wins (19 items, 24 writes)",
+      "sub_batches_parallel": [
+        {
+          "id": "A-C",
+          "pack": "C",
+          "qids": ["P1-EC-004", "P1-EC-008", "P1-EC-021", "P1-EC-024", "P1-EC-025", "P1-EC-028", "P1-EC-040", "P1-EC-041", "P1-EC-049", "P1-EC-052", "P1-EC-060", "P1-EC-061", "P1-EC-072"],
+          "writes": 18,
+          "estimated_minutes": 80
+        },
+        {
+          "id": "A-D",
+          "pack": "D",
+          "qids": ["P1-ED-001", "P1-ED-025", "P1-ED-028", "P1-ED-064", "P1-ED-072", "P1-ED-073"],
+          "writes": 6,
+          "estimated_minutes": 35
+        }
+      ],
+      "verification": "Spot-check ≥5 items. Verify: 0 DL-008 regression, new EW text ≥50 chars and choice-specific."
+    },
+    {
+      "step": 6,
+      "name": "Tmid Runtime Governance Checkpoint",
+      "description": "Per AGENTS.md §13.1: verify Pack C and Pack D hashes, parse-counts, FD-045/FD-046, AD-075. Check app.js hash. If any drift detected, halt and execute G1-G5 reconciliation.",
+      "blocking": true,
+      "estimated_minutes": 5
+    },
+    {
+      "step": 7,
+      "name": "BATCH B — Dual-Slot Standard Fill (12 items, 32 writes)",
+      "sub_batches_parallel": [
+        {
+          "id": "B-C",
+          "pack": "C",
+          "qids": ["P1-EC-022", "P1-EC-023", "P1-EC-031", "P1-EC-066"],
+          "writes": 12,
+          "estimated_minutes": 30
+        },
+        {
+          "id": "B-D",
+          "pack": "D",
+          "qids": ["P1-ED-010", "P1-ED-014", "P1-ED-035", "P1-ED-042", "P1-ED-058", "P1-ED-066", "P1-ED-071", "P1-ED-074"],
+          "writes": 20,
+          "estimated_minutes": 60
+        }
+      ],
+      "verification": "Spot-check ≥5 items. Verify: 0 DL-013 regression, cumulative DL-026 count ≤12 (Batch C items only)."
+    },
+    {
+      "step": 8,
+      "name": "BATCH C — Complex Remediation (7 items, 27 writes)",
+      "sub_batches_parallel": [
+        {
+          "id": "C-C",
+          "pack": "C",
+          "qids": ["P1-EC-014", "P1-EC-020"],
+          "writes": 7,
+          "estimated_minutes": 40,
+          "note": "EC-020 (DL-010 CRITICAL) must be addressed first — all 3 distractor slots are broken."
+        },
+        {
+          "id": "C-D",
+          "pack": "D",
+          "qids": ["P1-ED-016", "P1-ED-036", "P1-ED-046", "P1-ED-051", "P1-ED-075"],
+          "writes": 20,
+          "estimated_minutes": 90,
+          "note": "ED-075 is worst-covered (all 3 slots need work). ED-036 has weakest EC (144 chars). ED-051 has DL-010 + DL-013 cross-contamination."
+        }
+      ],
+      "verification": "Spot-check all 7 items. Verify: 0 DL-013 boilerplate remaining (grep for 'This option reflects a misunderstanding'), 0 DL-010 misalignment, cumulative DL-026 = 0."
+    }
+  ],
+  "post_execution_sequence": [
+    {
+      "step": 9,
+      "name": "Final Verification Scan",
+      "description": "Run boundary-aware DL-026 scan on both packs — confirm 0 empty non-CC EW slots. Run DL-013 scan — confirm 0 boilerplate. Run DL-008 scan — confirm 0 non-empty CC slots.",
+      "estimated_minutes": 10
+    },
+    {
+      "step": 10,
+      "name": "Governance Guard Final",
+      "description": "Run governance-guard test suite. Confirm 0 FAIL across all 5 rules.",
+      "estimated_minutes": 5
+    },
+    {
+      "step": 11,
+      "name": "Tend Runtime Governance Checkpoint",
+      "description": "Per AGENTS.md §13.1: verify all 13 runtime hashes vs T0 baselines. Execute G1-G5 reconciliation if drift detected.",
+      "estimated_minutes": 5
+    },
+    {
+      "step": 12,
+      "name": "REVISION_HISTORY.md Entry",
+      "description": "Write S810.1 entry documenting all 38 item remediations. Per AGENTS.md §4 — must pair with every question_state change.",
+      "estimated_minutes": 15
+    },
+    {
+      "step": 13,
+      "name": "DEFECT_LIBRARY.md Update",
+      "description": "Update DL-026 status from Open → Resolved (if 0 remaining). Update DL-013 status for Domain E. Log any new defects discovered.",
+      "estimated_minutes": 10
+    }
+  ],
+  "conditional_metadata_pass": {
+    "session": "S810.2 (trigger if S810.1 time permits)",
+    "scope": "DL-031 difficulty recalibration + CognitiveLevel alignment + DifficultyScore/Difficulty label resolution",
+    "estimated_items": "~30 of 38 seeds",
+    "step_if_executed": "Insert between steps 9 and 10. Modify question_state to 'Certified' after metadata is calibrated."
+  },
+  "risk_register": [
+    {
+      "risk": "CC discrepancy causes wrong EW slot authoring",
+      "probability": "MEDIUM",
+      "impact": "CRITICAL — creates DL-008 on certified items",
+      "mitigation": "Pre-flight step 1 (CC audit) is MANDATORY. Zero writes until CC is locked."
+    },
+    {
+      "risk": "Session timeout / context loss on large batches",
+      "probability": "MEDIUM",
+      "impact": "HIGH — partial remediation left in inconsistent state",
+      "mitigation": "Tmid checkpoint at step 6. Backup after every batch. Three independent verification passes."
+    },
+    {
+      "risk": "EC-020 DL-010 fix is insufficient",
+      "probability": "LOW",
+      "impact": "HIGH — learners see wrong-topic feedback on a certified item",
+      "mitigation": "EC-020 is the first item in Batch C. Spot-check with fresh-agent review after remediation."
+    },
+    {
+      "risk": "DL-013 boilerplate pattern persists in rewritten text",
+      "probability": "LOW",
+      "impact": "MEDIUM — generic feedback degrades educational quality",
+      "mitigation": "Final verification step 9 includes grep for DL-013 signature text."
+    },
+    {
+      "risk": "Concurrent-write data loss (DL-019)",
+      "probability": "LOW",
+      "impact": "CRITICAL — all remediation silently overwritten",
+      "mitigation": "This is the sole write session for Pack C/D Domain E. No concurrent sessions operating on same pack files. Backup created before first write."
+    }
+  ],
+  "success_criteria": [
+    "DL-026: 0 empty non-CC EW slots across all 38 seeds",
+    "DL-013: 0 boilerplate EW slots (confirmed by grep)",
+    "DL-010: 0 misaligned EW slots (confirmed by spot-check on EC-020, ED-010, ED-051)",
+    "DL-008: 0 non-empty CC EW slots (confirmed by governance guard Rule 2)",
+    "All 38 seeds: 3 choice-specific distractor explanations per item (minimum 50 chars each)",
+    "All 38 seeds: ExplanationCorrect meets CAQS §4.2 mini-lesson standard (principle + solution + business interpretation)",
+    "Governance guard: 5/5 rules PASS, 0 FAIL",
+    "Validator suite: 0 new errors introduced",
+    "REVISION_HISTORY.md: S810.1 entry written",
+    "DEFECT_LIBRARY.md: DL-026/DL-013/DL-010 status updated",
+    "Optional: 38 seeds promoted to question_state: 'Certified' (if metadata pass complete)"
+  ],
+  "authoring_standards": {
+    "ew_minimum_length": 50,
+    "ew_required_elements": [
+      "Specific error identification — what is wrong about this choice",
+      "Misconception targeted — what the candidate likely misunderstood",
+      "Correct approach contrast — how the correct answer differs"
+    ],
+    "ec_required_elements": [
+      "Accounting principle by name (COSO, IIA, IMA, ASC, SOX)",
+      "Solution steps / reasoning chain",
+      "Business interpretation in scenario context",
+      "Common exam trap (recommended)"
+    ],
+    "coso_component_mapping": {
+      "control_environment": "COSO Principle 1 — Integrity and Ethical Values",
+      "risk_assessment": "COSO Principles 6-9 — Risk Assessment",
+      "control_activities": "COSO Principles 10-12 — Control Activities",
+      "information_communication": "COSO Principles 13-15 — Information & Communication",
+      "monitoring": "COSO Principles 16-17 — Monitoring Activities"
+    },
+    "prohibited_patterns": [
+      "This option reflects a misunderstanding",
+      "A candidate may select this option by misapplying",
+      "is inconsistent with the correct treatment under CMA Part 1 guidelines",
+      "Review the applicable costing standard or framework",
+      "represents a plausible misconception",
+      "does not align with the governing standard"
+    ]
+  }
+}

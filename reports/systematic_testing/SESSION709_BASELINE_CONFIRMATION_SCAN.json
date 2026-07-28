@@ -1,0 +1,115 @@
+{
+  "session": "S709",
+  "title": "Baseline Confirmation Scan",
+  "date": "2026-07-25",
+  "agent": "Agent B",
+  "methodology": "Direct Select-String grep on all five pack files, cross-verified with Function-constructor scan tool (tools/qc/analyze_s708_cross_pack_residuals.js)",
+  "source": "S708 cross-pack residual defect ledger + current pack files",
+  "scan_tool": "tools/qc/analyze_s708_cross_pack_residuals.js (G-NEW-3 compliant: within-object CorrectChoice extraction, no forward-scan)",
+  "pack_level_state_counts": {
+    "pack_a": {
+      "qid_count": 500,
+      "certified": 481,
+      "editorial_queue": 0,
+      "archived": 19,
+      "unprocessed": 0,
+      "in_audit": 0,
+      "reconciliation": "481+0+19+0+0=500 — MATCH"
+    },
+    "pack_b": {
+      "qid_count": 500,
+      "certified": 500,
+      "editorial_queue": 0,
+      "archived": 0,
+      "unprocessed": 0,
+      "in_audit": 0,
+      "reconciliation": "500+0+0+0+0=500 — MATCH"
+    },
+    "pack_c": {
+      "qid_count": 500,
+      "certified": 350,
+      "editorial_queue": 0,
+      "archived": 56,
+      "unprocessed": 94,
+      "in_audit": 0,
+      "reconciliation": "350+0+56+94+0=500 — MATCH"
+    },
+    "pack_d": {
+      "qid_count": 500,
+      "certified": 350,
+      "editorial_queue": 0,
+      "archived": 57,
+      "unprocessed": 93,
+      "in_audit": 0,
+      "reconciliation": "350+0+57+93+0=500 — MATCH"
+    },
+    "pack_e": {
+      "qid_count": 500,
+      "certified": 500,
+      "editorial_queue": 0,
+      "archived": 0,
+      "unprocessed": 0,
+      "in_audit": 0,
+      "reconciliation": "500+0+0+0+0=500 — MATCH"
+    }
+  },
+  "cross_pack_totals": {
+    "total_qids": 2500,
+    "total_certified": 2181,
+    "total_editorial_queue": 0,
+    "total_archived": 132,
+    "total_unprocessed": 187,
+    "total_in_audit": 0,
+    "reconciliation": "2181+0+132+187+0=2500 — MATCH"
+  },
+  "s708_comparison": {
+    "total_qids_match": true,
+    "total_certified_match": true,
+    "total_editorial_queue_match": true,
+    "total_archived_match": true,
+    "total_unprocessed_match": true,
+    "pack_c_pack_d_minor_rebalance": "Pack D: +1 Archived/-1 Unprocessed vs. S708 per-pack snapshot (net zero cross-pack). Totals confirmed: 132 Archived, 187 Unprocessed.",
+    "stability": "All cross-pack totals match S708. Per-pack minor rebalance in Pack C/D is net-zero."
+  },
+  "residual_defect_confirmation": {
+    "dl008": {
+      "total": 0,
+      "certified": 0,
+      "verification": "Scan tool confirms 0 across all 5 packs. Remediation wave (S703-S707) effective.",
+      "matches_s708": true
+    },
+    "dl016": {
+      "status": "Resolved",
+      "verification": "All Pack A Section B rotation group 1 rewrites applied in S705/S707. Metadata-content mismatch eliminated.",
+      "matches_s708": true
+    },
+    "dl025": {
+      "total": 0,
+      "certified": 0,
+      "verification": "Zero absent ExplanationWrong fields at distractor positions across all 5 packs. Scan tool confirms total_absent_slots=0 for all packs.",
+      "matches_s708": true
+    },
+    "dl026_certified": {
+      "total": 13,
+      "pack_a": { "count": 1, "qids": ["P1-B-001"] },
+      "pack_b": { "count": 0, "qids": [] },
+      "pack_c": { "count": 2, "qids": ["P1-AC-001", "P1-AC-002"] },
+      "pack_d": { "count": 10, "qids": ["P1-AD-047", "P1-AD-048", "P1-AD-054", "P1-AD-055", "P1-CD-002", "P1-CD-003", "P1-CD-006", "P1-CD-022", "P1-CD-023", "P1-CD-034"] },
+      "pack_e": { "count": 0, "qids": [] },
+      "verification": "Scan tool confirms 13 Certified items with one empty distractor ExplanationWrong slot each. All items DL-008 clean. S708 classification upheld: minor pedagogical quality gap, not a certification blocker.",
+      "matches_s708": true
+    },
+    "dl026_non_certified": {
+      "total": 299,
+      "verification": "Non-Certified DL-026 items span Unprocessed and Archived pools. Outside the learner delivery pool. Block certification of affected items until remediated."
+    }
+  },
+  "pack_parse_status": {
+    "pack_a": "PASS — Function constructor parse succeeds, 500 items",
+    "pack_b": "PASS — Function constructor parse succeeds, 500 items",
+    "pack_c": "PASS — Function constructor parse succeeds, 500 items",
+    "pack_d": "PASS — Function constructor parse succeeds, 500 items",
+    "pack_e": "PASS — Function constructor parse succeeds, 500 items"
+  },
+  "verdict": "CONFIRMED — All S708 counts reproduced. Certification-blocking residuals DL-008, DL-016, DL-025 are zero. DL-026 Certified count is 13. Baseline is stable."
+}

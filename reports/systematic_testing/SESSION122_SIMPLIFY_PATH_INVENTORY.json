@@ -1,0 +1,46 @@
+{
+  "session": 122,
+  "title": "May Simplify Path Inventory",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "scope": "100-series May lane only",
+  "preFlightTestResult": "237/237 PASS (119 Stage C + 98 tutoring safety + 20 governance guard)",
+  "inventory": {
+    "primaryTarget": {
+      "name": "_simplifyExplanation",
+      "file": "may-core.js",
+      "lines": "1763-1790 (pre-S122)",
+      "description": "Simplifies the correct-answer explanation to a one-line summary. Pre-S122 behavior: picks a 'core' sentence from ExplanationCorrect or outputs a short answer + topic line."
+    },
+    "currentBehavior": [
+      "If ExplanationCorrect > 100 chars: finds a 'core' sentence with signal words (includes cc, correct, therefore, =) and outputs 'In simple terms: [core]. This question is testing whether you understand [topic]. The key is knowing the answer is [cc]: [choice].'",
+      "If ExplanationCorrect <= 100 chars or missing: outputs 'The short answer is [cc]: [choice]. This is about [topic]. If you'd like me to walk through the reasoning step by step, tap Explain answer.'",
+      "NO answer gating — reveals correct answer letter and choice text in ALL contexts, including unanswered active questions",
+      "NO review-mode awareness",
+      "NO selected-answer awareness",
+      "NO plain-language translation of accounting jargon",
+      "NO concept framing beyond topic name",
+      "Routes through _guardedSpeak in pilot mode"
+    ],
+    "callers": [
+      { "source": "handleAction('simplify')", "line": "993-994", "gating": "Exam mode blocked by isFullTabBlocked() at handleAction entry" },
+      { "source": "freeform chat ('simple'/'simpler'/'break it down'/'easier')", "line": "2542-2543", "gating": "No exam-mode check in freeform path" }
+    ],
+    "gaps": [
+      "No answer-gating — reveals correct answer before learner attempts question",
+      "No plain-language translation of accounting terminology",
+      "No conceptual framing (what the concept means, why it matters)",
+      "No exam-day recognition advice",
+      "No memory hooks / quick rules",
+      "No selected-answer awareness (post-wrong-answer could tailor output)",
+      "No review-mode distinction",
+      "Repeats bank text verbatim rather than translating it",
+      "Thin explanation path provides almost nothing"
+    ],
+    "existingTests": "ZERO — no simplify tests exist in either test_may_stagec.js or test_tutoring_safety.js"
+  },
+  "implementationPlan": {
+    "newHelpers": ["_buildSimplifyCoaching", "_plainLanguageTranslation", "_simplifyAccountingLanguage", "_inferWhyItMatters", "_inferHowToRecognize", "_inferQuickRuleToRemember"],
+    "outputStructure": ["What this means", "Why it matters", "How to recognize it on exam day", "Quick rule to remember"],
+    "answerGating": "Active unanswered → concept-only coaching (no answer reveal); post-answer → full 4-section with answer; review → full with bonus framing"
+  }
+}

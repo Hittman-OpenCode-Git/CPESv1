@@ -1,0 +1,65 @@
+{
+  "deliverable": "SESSION750_EVENT_REGISTRY_SPEC.json",
+  "session": 750,
+  "board": "D",
+  "title": "Governance Event Registry",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "status": "DEPLOYED",
+  "description": "Persistent registry for governance events: Rule Violations, Exceptions, Waivers, and Escalations. Supports full lifecycle tracking from OPEN through CLOSED.",
+  "sourceFile": "scripts/governance_event_registry.js",
+  "storageFile": "scripts/output/governance_event_registry.json",
+  "eventModel": {
+    "fields": {
+      "id": "GE-NNNN — auto-incrementing unique identifier",
+      "type": "VIOLATION | EXCEPTION | WAIVER | ESCALATION",
+      "summary": "Human-readable summary of the event",
+      "sourceFile": "The pack file, script, or report that triggered this event",
+      "severity": "CRITICAL | HIGH | MEDIUM | LOW | INFORMATIONAL",
+      "linkedRule": "RULE N — the governance rule this event relates to",
+      "status": "OPEN | UNDER_REVIEW | APPROVED | CLOSED",
+      "created": "ISO 8601 creation timestamp",
+      "updated": "ISO 8601 last-update timestamp",
+      "resolution": "Closure note (populated when status → CLOSED)"
+    }
+  },
+  "lifecycle": {
+    "OPEN": "Event created — pending review",
+    "UNDER_REVIEW": "Governance Admin evaluating",
+    "APPROVED": "Exception/waiver granted by Release Manager",
+    "CLOSED": "Resolved — either fixed (violation) or expired (exception/waiver)"
+  },
+  "validTransitions": [
+    "OPEN → UNDER_REVIEW → APPROVED → CLOSED",
+    "OPEN → UNDER_REVIEW → CLOSED",
+    "OPEN → CLOSED (auto-resolved)"
+  ],
+  "autoIngestion": {
+    "source": "governance_guard_engine.js output",
+    "description": "Rule 2 violations auto-create VIOLATION events. Duplicate QID+Type events are deduplicated.",
+    "trigger": "ingestFromGuardEngine(engineResults)"
+  },
+  "CLI": {
+    "usage": "node scripts/governance_event_registry.js [--list] [--add <type>:<summary>] [--resolve <id> <status>] [--summary]",
+    "options": {
+      "--list": "List all events (optionally filtered by --type, --status)",
+      "--add <type>:<summary>": "Create a new governance event",
+      "--resolve <id> <status>": "Transition an event to a new status",
+      "--summary": "Show aggregate counts by type, status, and severity",
+      "--type <type>": "Filter by event type",
+      "--status <status>": "Filter by event status"
+    }
+  },
+  "integrationPoints": [
+    "Governance Guard Engine (Board A): auto-ingest of DL-008 violations",
+    "Governance Dashboard (Board E): displays open events by type/severity",
+    "Rule Enforcement Matrix (Board F): links events to specific rules",
+    "Executive Review (Board J): reports event volume trends"
+  ],
+  "futureEnhancements": [
+    "Audit trail — append-only log of all status transitions",
+    "Linked events — parent/child relationships for cascading defects",
+    "Age-based escalation — events OPEN > 30 days auto-escalate",
+    "Export to DEFECT_LIBRARY.md format for cross-referencing"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "SESSION312_EW_COVERAGE_AUDIT",
+  "session": "312",
+  "generated": "2026-07-27T00:04:03.157Z",
+  "methodology": "All 10 exemplar items audited for EW[A-D] field presence and quality",
+  "itemsAudited": 10,
+  "coverage": {
+    "ewSlotsTotal": 40,
+    "ewSlotsFilled": 40,
+    "ewSlotsEmpty": 0,
+    "coveragePercent": "100%"
+  },
+  "byExpectedState": {
+    "ewAtCorrectChoice": {
+      "slots": 10,
+      "empty": 10,
+      "compliance": "100% — all 10 EW[CC] fields are empty (DL-008 compliant)"
+    },
+    "ewAtNonCorrectChoice": {
+      "slots": 30,
+      "filled": 30,
+      "empty": 0,
+      "compliance": "100% — all 30 non-CC EW fields have content (DL-026 compliant)"
+    }
+  },
+  "ewQualityMetrics": {
+    "meanEwLength": 513,
+    "minEwLength": 356,
+    "maxEwLength": 605,
+    "allMeetMinimum": true
+  }
+}

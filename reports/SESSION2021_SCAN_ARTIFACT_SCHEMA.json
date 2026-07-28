@@ -1,0 +1,565 @@
+{
+  "document": "SESSION2021_SCAN_ARTIFACT_SCHEMA",
+  "session": "S202.1",
+  "title": "Certification Scan Artifact v1 — Canonical Schema",
+  "series": "200-Series — Framework v2 Architecture Addendum",
+  "date": "2026-07-27",
+  "type": "Data Contract Specification — Read-Only",
+  "parent": "SESSION202_SCANNING_ARCHITECTURE.json + SESSION203_SCAN_ENGINE_SPEC.json",
+  "artifact_producer": "scripts/engine/scan/scan_orchestrator.js",
+  "artifact_runtime": "S322 (2026-07-27) — demonstrated 0.7s for 2,540 items across all 5 packs",
+  "purpose": "Defines the canonical JSON schema for the Certification Scan Artifact — the single source of truth consumed by all Framework v2 boards. This artifact is the technical centerpiece of the 'Scan Once, Consume Many' architecture. Every board, recommendation, session, investigation, and future May Administration feature operates from this immutable artifact rather than performing redundant scans and analysis.",
+  "constraints": ["No content changes", "No certification actions", "No governance changes", "Read-only specification"],
+
+  "artifact_identity": {
+    "artifact_id_pattern": "CSA-{SourceSession}-{ISO8601Timestamp}",
+    "example": "CSA-S322-2026-07-27T05-45-08-670Z",
+    "naming_rules": [
+      "CSA prefix = Certification Scan Artifact",
+      "SourceSession = the S-session that ran the scan (S322, S410, etc.)",
+      "Timestamp = ISO 8601 UTC with millisecond precision",
+      "Globally unique — no two artifacts share the same artifact_id"
+    ],
+    "file_path": "scripts/output/certification_scan_artifact.json",
+    "lifecycle": "Immutable once produced. Not updated during a session. Replaced by a new artifact each session."
+  },
+
+  "schema_version": "1.0.0",
+  "schema_governance": [
+    "Schema version incremented on any breaking change to the artifact structure",
+    "All board consumers declare their minimum artifact_version in the consumption matrix",
+    "Backward-compatible additions (new optional fields) do not require a version bump",
+    "Breaking changes (removal, rename, type change) require a major version bump"
+  ],
+
+  "root_object": {
+    "required_fields": [
+      "artifactId", "timestamp", "sourceSession", "schemaVersion",
+      "scanContext", "packFileHashes", "aggregateStatistics",
+      "perItemResults", "lineage"
+    ],
+    "optional_fields": [
+      "pipelineRuntime", "governanceAttestation",
+      "reconciliationNotes", "consumerDigest"
+    ],
+
+    "properties": {
+      "artifactId": {
+        "type": "string",
+        "pattern": "^CSA-S\\d{3}(\\.\\d)?-\\d{4}-\\d{2}-\\d{2}T\\d{2}-\\d{2}-\\d{2}-\\d{3}Z$",
+        "description": "Globally unique artifact identifier. Used as the canonical reference in all consumed-by references."
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "ISO 8601 timestamp of artifact generation. Used for staleness checks and supersession ordering."
+      },
+      "sourceSession": {
+        "type": "string",
+        "pattern": "^S\\d{3}(\\.\\d)?$",
+        "description": "The session that produced this artifact. Matches the session_registry.json entry."
+      },
+      "schemaVersion": {
+        "type": "string",
+        "const": "1.0.0",
+        "description": "Schema version this artifact conforms to. Board consumers check this field to determine compatibility."
+      }
+    }
+  },
+
+  "section_1_scanContext": {
+    "description": "Documents the scan pipeline configuration, runtime, and environment. Consumed by Registry Board (lineage), Throughput Board (runtime metrics), and Governance Board (audit trail).",
+    "required_fields": ["preFlightGates", "scanModules", "extractionMethod", "packsScanned", "configuration"],
+    "scan_context_schema": {
+      "preFlightGates": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "gateId": {"type": "string", "enum": ["gate_neg1", "gate_0", "gate_1", "gate_2", "gate_3", "gate_4"]},
+            "gateLabel": {"type": "string", "examples": ["Identity Validation", "JSON Integrity", "Structural Scan", "Content Scan", "Compound-Key Reconciliation", "Calculation Validation"]},
+            "gateClass": {"type": "string", "enum": ["HARD_BLOCK", "SOFT_BLOCK"]},
+            "status": {"type": "string", "enum": ["COMPLETED", "FAILED", "SKIPPED"]},
+            "scans": {"type": "array", "items": {"type": "string", "pattern": "^PG-\\d{3}$", "description": "Scan module IDs that ran in this gate"}},
+            "runtimeSeconds": {"type": "number", "minimum": 0}
+          },
+          "required": ["gateId", "gateLabel", "gateClass", "status", "scans"]
+        }
+      },
+      "scanModules": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "scanId": {"type": "string", "pattern": "^PG-(\\d{3}|AN-\\d{2})$"},
+            "scanLabel": {"type": "string"},
+            "defectClassesTargeted": {"type": "array", "items": {"type": "string"}},
+            "version": {"type": "string"},
+            "extractionMethod": {"type": "string", "enum": ["AM-1", "AM-2"], "description": "AM-1 = Function Constructor Parse (within-object), AM-2 = String-Aware Brace-Matched Parser (fallback)"}
+          }
+        }
+      },
+      "extractionMethod": {
+        "type": "string",
+        "enum": ["AM-1", "AM-2"],
+        "description": "Primary extraction method used for this run. AM-1 is the only approved methodology post-S830. AM-2 is a validated fallback for diagnostic purposes only."
+      },
+      "packsScanned": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "packFile": {"type": "string", "pattern": "^pack_[a-e]_corrected\\.js$"},
+            "parseable": {"type": "boolean"},
+            "itemCount": {"type": "integer", "minimum": 0},
+            "hashBeforeScan": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        }
+      },
+      "configuration": {
+        "type": "object",
+        "properties": {
+          "parallelism": {"type": "string", "enum": ["within_gate", "none", "full"], "description": "Parallelism strategy. 'within_gate' = scans within a gate run in parallel, gates run sequentially."},
+          "maxBatchSize": {"type": "integer", "default": 500},
+          "governanceGuardActive": {"type": "boolean", "default": true},
+          "governanceGuardRules": {"type": "array", "items": {"type": "integer"}},
+          "tolerances": {
+            "type": "object",
+            "properties": {
+              "countTolerance": {"type": "integer", "description": "Maximum allowed discrepancy between parse count and grep count. Default: 0."}
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "section_2_packFileHashes": {
+    "description": "SHA-256 hashes of each pack file at scan time. Consumed by Delta Review Engine (baseline comparison), Registry Board (integrity verification), and Governance Board (drift detection). Paired with the DELTA_LEDGER.json baseline for content_hash comparison.",
+    "schema": {
+      "type": "object",
+      "patternProperties": {
+        "^pack_pack_[a-e]_corrected\\.js$": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "minProperties": 5,
+      "maxProperties": 5
+    },
+    "governance_rule": "Pack file hashes must be identical to the hashes stored in CURRENT_BASELINES.md at session T0. Any mismatch triggers the Sync Anomaly Playbook (Session 52)."
+  },
+
+  "section_3_aggregateStatistics": {
+    "description": "Cross-pack, cross-gate summary statistics. Consumed by Throughput Board (BF metrics), Governance Board (portfolio snapshot), and Quality Board (defect density). The primary dashboard for session-level decision-making.",
+    "required_fields": ["totalScanned", "totalPassed", "totalBlocked", "byGate", "byDefectClass", "byReadinessClass", "byPack", "byDomain"],
+    "statistics_schema": {
+      "totalScanned": {"type": "integer", "description": "Total items scanned across all packs."},
+      "totalPassed": {"type": "integer", "description": "Items where overallVerdict is not BLOCKED."},
+      "totalBlocked": {"type": "integer", "description": "Items where overallVerdict is BLOCKED. Sum of IDENTITY_BLOCKED + JSON_FAIL + HARD_FAIL."},
+      "byGate": {
+        "type": "object",
+        "properties": {
+          "gate_neg1": {"$ref": "#/definitions/gateSummary"},
+          "gate_0": {"$ref": "#/definitions/gateSummary"},
+          "gate_1": {"$ref": "#/definitions/gateSummary"},
+          "gate_2": {"$ref": "#/definitions/gateSummary"},
+          "gate_3": {"$ref": "#/definitions/gateSummary"},
+          "gate_4": {"$ref": "#/definitions/gateSummary"}
+        }
+      },
+      "byDefectClass": {
+        "type": "object",
+        "description": "Count of items flagged for each defect class. Keys are defect IDs (DL-008, DL-026, EV3, etc.). Aggregated from per-item defectFlags.",
+        "additionalProperties": {"type": "integer"}
+      },
+      "byReadinessClass": {
+        "type": "object",
+        "properties": {
+          "BLOCKED": {"type": "integer"},
+          "REMEDIATE": {"type": "integer"},
+          "MINOR_FIX": {"type": "integer"},
+          "READY": {"type": "integer"},
+          "CERTIFIED": {"type": "integer", "description": "Items already Certified that passed all gates (may become CERTIFIED_DELTA via delta review)."}
+        }
+      },
+      "byPack": {
+        "type": "object",
+        "description": "Per-pack breakdown of readiness classifications.",
+        "properties": {
+          "pack_a": {"$ref": "#/definitions/packSummary"},
+          "pack_b": {"$ref": "#/definitions/packSummary"},
+          "pack_c": {"$ref": "#/definitions/packSummary"},
+          "pack_d": {"$ref": "#/definitions/packSummary"},
+          "pack_e": {"$ref": "#/definitions/packSummary"}
+        }
+      },
+      "byDomain": {
+        "type": "object",
+        "description": "Per-domain readiness score. Used by Throughput Board (BF-009) and by Certification Board for coverage planning.",
+        "properties": {
+          "A": {"type": "number", "minimum": 0, "maximum": 1, "description": "External Financial Reporting Decisions readiness"},
+          "B": {"type": "number", "minimum": 0, "maximum": 1, "description": "Planning, Budgeting, and Forecasting readiness"},
+          "C": {"type": "number", "minimum": 0, "maximum": 1, "description": "Performance Management readiness"},
+          "D": {"type": "number", "minimum": 0, "maximum": 1, "description": "Cost Management readiness"},
+          "E": {"type": "number", "minimum": 0, "maximum": 1, "description": "Internal Controls readiness"},
+          "F": {"type": "number", "minimum": 0, "maximum": 1, "description": "Technology and Analytics readiness"}
+        }
+      },
+      "learnerPoolExposure": {
+        "type": "object",
+        "description": "Critical safety metric. Count of Certified items flagged with defects at each severity level. Consumed by Governance Board for P0 alerting.",
+        "properties": {
+          "critical": {"type": "integer", "description": "DL-008 + Certified or DL-030 CONFIRMED + Certified"},
+          "high": {"type": "integer", "description": "DL-026 + Certified or DL-016 SEVERE + Certified"},
+          "medium": {"type": "integer", "description": "DL-013 on Certified item"},
+          "none": {"type": "integer", "description": "Certified items with zero defects"}
+        }
+      }
+    }
+  },
+
+  "section_4_perItemResults": {
+    "description": "The core data payload — one entry per scanned item. This is the section consumed by all boards for per-item decision-making. Each entry is a complete snapshot of the item's scan result at artifact-generation time.",
+    "required_fields": ["qid", "pack", "gateResults", "defectFlags", "readinessClass", "overallVerdict"],
+    "per_item_schema": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "qid": {
+            "type": "string",
+            "pattern": "^P1[A-E]?-[A-F][CD]?-\\d{3}$",
+            "description": "Question identifier. Pack-specific formats per CANONICAL_REGISTRY_SCHEMA."
+          },
+          "compoundKey": {
+            "type": "string",
+            "description": "Full compound key: QID::CC::EW_Pattern::Template_Family::File_Path::VersionID. Generated by IdentityKeyResolver during Gate -1."
+          },
+          "identityKey": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 of identity hashable string. Primary lookup key for registry cross-reference."
+          },
+          "pack": {
+            "type": "string",
+            "enum": ["pack_a", "pack_b", "pack_c", "pack_d", "pack_e"]
+          },
+          "section": {
+            "type": "string",
+            "enum": ["A", "B", "C", "D", "E", "F", ""],
+            "description": "Blueprint section. Empty string if section could not be determined."
+          },
+          "questionState": {
+            "type": "string",
+            "enum": ["Unprocessed", "In Audit", "Editorial Queue", "Certified", "Archived"],
+            "description": "question_state at scan time. From pack file or CANONICAL_REGISTRY."
+          },
+          "gateResults": {
+            "type": "object",
+            "properties": {
+              "gate_neg1": {"type": "string", "enum": ["PASS", "IDENTITY_BLOCKED", "WARN"]},
+              "gate_0": {"type": "string", "enum": ["PASS", "FAIL"]},
+              "gate_1": {"type": "string", "enum": ["PASS", "HARD_FAIL"]},
+              "gate_2": {"type": "string", "enum": ["PASS", "SOFT_FAIL", "WARN"]},
+              "gate_3": {"type": "string", "enum": ["PASS", "HARD_FAIL"]},
+              "gate_4": {"type": "string", "enum": ["PASS", "SOFT_FAIL", "WARN"]}
+            }
+          },
+          "gateDetails": {
+            "type": "object",
+            "description": "Per-gate detailed findings. Null for clean items.",
+            "properties": {
+              "gate_neg1": {"type": "object", "properties": {"qid_present": {"type": "boolean"}, "cc_present": {"type": "boolean"}, "cc_valid": {"type": "boolean"}, "pack_attribution_confirmed": {"type": "boolean"}, "template_family_constructible": {"type": "boolean"}, "compound_key_built": {"type": "boolean"}, "block_reason": {"type": ["string", "null"]}}},
+              "gate_1": {"type": "object", "description": "Structural defect details. Present when HARD_FAIL.", "properties": {"ew_profile": {"type": "string", "pattern": "^[01]{4}$"}, "dl008_present": {"type": "boolean"}, "dl026_present": {"type": "boolean"}, "dl016_severity": {"type": ["string", "null"], "enum": [null, "NONE", "MODERATE", "SEVERE"]}, "dl021_present": {"type": "boolean"}, "empty_non_cc_slots": {"type": "array", "items": {"type": "string", "enum": ["A", "B", "C", "D"]}}}},
+              "gate_2": {"type": "object", "description": "Content quality details. Present when SOFT_FAIL or WARN.", "properties": {"dl013_count": {"type": "integer"}, "ev3_missing": {"type": "boolean"}, "dl010_suspect": {"type": "boolean"}, "boilerplate_slots": {"type": "array", "items": {"type": "string", "enum": ["A", "B", "C", "D"]}}}},
+              "gate_4": {"type": "object", "description": "Calculation validation details. Present when SOFT_FAIL or WARN.", "properties": {"dl030_verdict": {"type": ["string", "null"], "enum": [null, "ALL_AGREE", "CONFIRMED_MISMATCH", "SUSPECT"]}, "dl031_inflated": {"type": "boolean"}}}
+            }
+          },
+          "defectFlags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "defectId": {"type": "string", "pattern": "^(DL-\\d{3}|EV\\d)$"},
+                "severity": {"type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "WARN"]},
+                "blockingStatus": {"type": "string", "enum": ["HARD_BLOCK", "SOFT_BLOCK", "WARN_ONLY"]},
+                "sourceGate": {"type": "string", "enum": ["gate_neg1", "gate_0", "gate_1", "gate_2", "gate_3", "gate_4"]},
+                "detail": {"type": "string", "description": "Human-readable defect description"}
+              }
+            }
+          },
+          "readinessClass": {
+            "type": "string",
+            "enum": ["BLOCKED", "REMEDIATE", "MINOR_FIX", "READY"],
+            "description": "Computed readiness classification per SESSION2021_READINESS_OBJECT.json."
+          },
+          "readinessScore": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Numeric readiness score per S203 readiness engine algorithm. 0 = BLOCKED, 90-100 = READY."
+          },
+          "deltaClassification": {
+            "type": "string",
+            "enum": ["UNCLASSIFIED", "NEW_ITEM", "UNCHANGED", "CONTENT_CHANGED", "METADATA_CHANGED", "EW_ONLY", "STRUCTURE_ONLY"],
+            "description": "Delta review classification from DELTA_LEDGER.json comparison. UNCLASSIFIED = no baseline exists (first scan)."
+          },
+          "contentHash": {
+            "type": ["string", "null"],
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "SHA-256 of canonical content fields. Null if hash computation failed."
+          },
+          "overallVerdict": {
+            "type": "string",
+            "enum": ["BLOCKED", "REMEDIATE", "MINOR_FIX", "CLEAR"],
+            "description": "Aggregate verdict. CLEAR items are board-visible (READY or MINOR_FIX). BLOCKED/REMEDIATE items are hidden from Quality/Certification boards."
+          },
+          "lastKnownDefects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "defectId": {"type": "string"},
+                "status": {"type": "string", "enum": ["Open", "Resolved", "False Positive"]},
+                "detectedSession": {"type": "string"},
+                "resolvedSession": {"type": ["string", "null"]}
+              }
+            },
+            "description": "Defect history from CANONICAL_REGISTRY.json. Includes resolved defects for context."
+          }
+        },
+        "required": ["qid", "pack", "gateResults", "defectFlags", "readinessClass", "overallVerdict"]
+      }
+    }
+  },
+
+  "section_5_defectInventory": {
+    "description": "Consolidated defect inventory grouped by defect class with QID lists. This is the definitive defect manifest for the current session — consumed by Certification Board (blocking assessment), Governance Board (learner-pool safety), and Recommendation Registry (finding creation).",
+    "required_fields": ["byDefect", "blockingSummary", "certifiedExposure"],
+    "defect_inventory_schema": {
+      "byDefect": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "defectId": {"type": "string"},
+            "count": {"type": "integer"},
+            "certifiedCount": {"type": "integer"},
+            "severity": {"type": "string", "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "WARN"]},
+            "blockingStatus": {"type": "string", "enum": ["HARD_BLOCK", "SOFT_BLOCK", "WARN_ONLY"]},
+            "qidList": {"type": "array", "items": {"type": "string"}},
+            "gateSource": {"type": "string"},
+            "remediationOwner": {"type": "string", "enum": ["Automated Script", "Editorial Session", "Accounting Review", "Structural Repair", "N/A"]}
+          }
+        }
+      },
+      "blockingSummary": {
+        "type": "object",
+        "properties": {
+          "hardBlockCount": {"type": "integer", "description": "Sum of all items with at least one HARD_BLOCK defect."},
+          "softBlockCount": {"type": "integer", "description": "Sum of all items with SOFT_BLOCK defects (no HARD_BLOCK)."},
+          "warnOnlyCount": {"type": "integer", "description": "Sum of all items with only WARN defects."}
+        }
+      },
+      "certifiedExposure": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "defectId": {"type": "string"},
+            "count": {"type": "integer"},
+            "qidList": {"type": "array", "items": {"type": "string"}},
+            "escalation": {"type": "string", "enum": ["P0_IMMEDIATE", "P1_URGENT", "P2_SCHEDULED"]}
+          }
+        }
+      }
+    }
+  },
+
+  "section_6_readiness": {
+    "description": "Portfolio-level readiness assessment. Consumed by Readiness Engine (session plan generation), Governance Board (Go/No-Go decision), and Throughput Board (BF-004 readiness failure rate).",
+    "required_fields": ["portfolioReadinessScore", "byReadinessClass", "byDomain", "sessionPlan"],
+    "readiness_schema": {
+      "portfolioReadinessScore": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "description": "Weighted portfolio readiness score. Computed as sum(READY items) / total items, adjusted by domain weights."
+      },
+      "byReadinessClass": {
+        "type": "object",
+        "properties": {
+          "BLOCKED": {"type": "integer"},
+          "REMEDIATE": {"type": "integer"},
+          "MINOR_FIX": {"type": "integer"},
+          "READY": {"type": "integer"}
+        }
+      },
+      "byDomain": {
+        "type": "object",
+        "description": "Per-domain readiness scores (0-1 scale).",
+        "properties": {
+          "A": {"type": "number"},
+          "B": {"type": "number"},
+          "C": {"type": "number"},
+          "D": {"type": "number"},
+          "E": {"type": "number"},
+          "F": {"type": "number"}
+        }
+      },
+      "sessionPlan": {
+        "type": "object",
+        "description": "Prioritized work plan computed from readiness classifications. Consumed by Certification Board for session scoping.",
+        "properties": {
+          "estimatedBatches": {"type": "integer"},
+          "estimatedItems": {"type": "integer"},
+          "priorityOrder": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "priority": {"type": "string", "enum": ["P0", "P1", "P2", "P3", "P4"]},
+                "description": {"type": "string"},
+                "itemCount": {"type": "integer"},
+                "batchCount": {"type": "integer"}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "section_7_lineage": {
+    "description": "Provenance chain linking this artifact to prior artifacts, the session that produced it, and the pack file baselines it scanned. Consumed by Registry Board (version chain verification) and Governance Board (audit trail).",
+    "required_fields": ["artifactVersionChain", "packFileBaseSnapshots", "priorArtifacts"],
+    "lineage_schema": {
+      "artifactVersionChain": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "artifactId": {"type": "string"},
+            "session": {"type": "string"},
+            "timestamp": {"type": "string", "format": "date-time"},
+            "relationship": {"type": "string", "enum": ["SUPERSEDES", "CONTINUES", "REBASELINES"]}
+          }
+        }
+      },
+      "packFileBaseSnapshots": {
+        "type": "object",
+        "description": "SHA-256 hash of each pack file at scan time. Paired with the session's T0 baseline check.",
+        "patternProperties": {
+          "^pack_[a-e]_corrected\\.js$": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      },
+      "priorArtifacts": {
+        "type": "array",
+        "items": {"type": "string"}
+      }
+    }
+  },
+
+  "section_8_governanceAttestation": {
+    "description": "Optional section present when governance attestation was performed during the scan. Documents that the artifact was produced under governance-guard compliance.",
+    "governance_schema": {
+      "guardVersion": {"type": "string", "description": "governance-guard.js version at scan time."},
+      "rulesActive": {"type": "array", "items": {"type": "integer"}},
+      "rulesTriggered": {"type": "array", "items": {"type": "integer"}},
+      "blockCount": {"type": "integer", "description": "Number of BLOCK-level triggers."},
+      "warnCount": {"type": "integer", "description": "Number of WARN-level triggers."},
+      "allRulesPassed": {"type": "boolean"},
+      "attestedBy": {"type": "string"},
+      "attestedAt": {"type": "string", "format": "date-time"}
+    }
+  },
+
+  "section_9_consumerDigest": {
+    "description": "Machine-readable section consumed by the Scan Orchestrator's consumer registry to verify that all required sections are present and valid. Each board has a declared manifest of required sections — the consumerDigest provides the fast-fail check.",
+    "digest_schema": {
+      "sectionsPresent": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "sectionsValid": {
+        "type": "array",
+        "items": {"type": "string"}
+      },
+      "hashOfArtifact": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$",
+        "description": "SHA-256 of the complete artifact as a single JSON string. Used for artifact-level integrity verification."
+      },
+      "consumerCompatibility": {
+        "type": "object",
+        "description": "Each board's minimum artifact_version satisfied by this artifact.",
+        "properties": {
+          "RegistryBoard": {"type": "boolean"},
+          "QualityBoard": {"type": "boolean"},
+          "GovernanceBoard": {"type": "boolean"},
+          "CertificationBoard": {"type": "boolean"},
+          "ThroughputBoard": {"type": "boolean"}
+        }
+      }
+    }
+  },
+
+  "definitions": {
+    "gateSummary": {
+      "type": "object",
+      "properties": {
+        "passed": {"type": "integer"},
+        "blocked": {"type": "integer"},
+        "warned": {"type": "integer"},
+        "checked": {"type": "integer"}
+      }
+    },
+    "packSummary": {
+      "type": "object",
+      "properties": {
+        "total": {"type": "integer"},
+        "BLOCKED": {"type": "integer"},
+        "REMEDIATE": {"type": "integer"},
+        "MINOR_FIX": {"type": "integer"},
+        "READY": {"type": "integer"},
+        "CERTIFIED": {"type": "integer"}
+      }
+    }
+  },
+
+  "board_consumption_reference": "$ref SESSION2021_BOARD_CONSUMPTION_MATRIX.json",
+
+  "validation_rules": [
+    "ART-001: artifactId must be globally unique — check session_registry.json for prior artifacts from same session",
+    "ART-002: perItemResults.length must equal sum of all pack item counts (2,500 standard + supplementals)",
+    "ART-003: packFileHashes must match T0 baseline in CURRENT_BASELINES.md",
+    "ART-004: aggregateStatistics.byDefectClass must reconcile with perItemResults.defectFlags aggregation",
+    "ART-005: aggregateStatistics.byReadinessClass must reconcile with perItemResults.readinessClass aggregation",
+    "ART-006: aggregateStatistics.learnerPoolExposure must be verified by Governance Board before any certification action",
+    "ART-007: No perItemResults entry may have overallVerdict: CLEAR if any gate_1 result is HARD_FAIL",
+    "ART-008: Every qid in perItemResults must exist in CANONICAL_REGISTRY.json (if registry exists — if not, this artifact IS the seeding run)",
+    "ART-009: Artifact must pass governance-guard Rule 10 (Registry Integrity) at T0, Tmid, and Tend",
+    "ART-010: Two successive independent AM-1 parses must produce identical artifact_id → if not, pipeline halts for reconciliation"
+  ],
+
+  "supersession_protocol": {
+    "description": "When a new artifact is produced (e.g., S410 after S322), the prior artifact is superseded. The new artifact carries the prior artifact's artifactId in its lineage.priorArtifacts array.",
+    "rules": [
+      "New artifact carries prior artifact's artifactId in section 7 (lineage)",
+      "Artifact files are preserved in scripts/output/ — never deleted",
+      "Artifact expiration is based on session lifecycle, not time-based staleness",
+      "An artifact is valid for the session that produced it and stale for all subsequent sessions",
+      "Cross-session comparison uses artifact lineage to reconstruct the full scan history"
+    ]
+  },
+
+  "s322_runtime_validation": {
+    "description": "The S322 pre-flight pipeline (2026-07-27) produced a valid certification_scan_artifact.json conforming to this schema v1.0.0. Key metrics from that run:",
+    "runtime": "0.7s total (Gates -1 through 4) for 2,540 items across all 5 packs",
+    "extraction_method": "AM-1 Function Constructor Parse",
+    "scan_modules": "11 mandatory scans (PG-011 through PG-011 + PG-AN diagnostics)",
+    "items_scanned": 2540,
+    "items_passed": 2539,
+    "items_blocked": 1,
+    "defects_found": {"DL-008": 3, "DL-026": 274, "DL-013": 31, "EV3": 2074},
+    "verification": "This schema was retro-fitted to the S322 artifact — the S322 artifact serves as the reference implementation proving the schema is realizable."
+  }
+}

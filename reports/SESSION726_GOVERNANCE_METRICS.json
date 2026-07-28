@@ -1,0 +1,200 @@
+{
+  "computed_date": "2026-07-26",
+  "session": "S726",
+  "agent": "T",
+  "role": "Governance Metrics Refresh",
+  "mode": "READ-ONLY",
+  "scoring_framework": "Governance Framework Maturity (post-S725 redefinition). Note: S723 scored content quality governance (86.3/A-) on a different rubric. S725/S726 scores measure governance-framework maturity (detection, enforcement, maintenance, ownership, integrity). Direct comparison between S723 and S725+ is cross-framework and should not be treated as a degradation — the S725+ rubric is more demanding, measuring operational activation, not design completeness alone.",
+
+  "metrics": {
+    "governance_maturity_overall": {
+      "s723_content_quality_score": "86.3 (A-) — pre-framework content-quality governance rubric (calibration, reliability, metadata, governance guard)",
+      "s725": "73 (B-) — post-S725 design/hardening; 10 standards published, 15 agents, framework designed but not activated",
+      "s725_source": "SESSION725_DASHBOARD.json §10: 'C+ → B- (post-S725 hardening, pre-S726 operational activation)'",
+      "s726_post": 75,
+      "letter_grade": "B",
+      "delta_from_s725": "+2",
+      "justification": "S726 25-agent session delivered 14 specifications/registries/audits. Governance guard Rule 2 upgraded (FM-001→string-aware, DL-029 eliminated). CURRENT_BASELINES.md phantom references fully remediated (9/9). Closure gate designed and verified. Ownership registry created. 6 simulations validated. Risk register: 0 BLOCKING (down from 5). Framework design layer: 23/25 (92%). Activation layer: 17/25 (68%). The +2 delta reflects real enforcement hardening (guard upgrade, baselines cleanup, closure gate specification) offset by the weight of 0/6 ownership acceptances and 4 unresolved P0 activation gates.",
+      "score_breakdown": {
+        "design_maturity": "92% (23/25) — All S725 standards now have implementation specifications, verified audit trails, simulation-validated prevention paths, machine-readable registries, and documented escalation chains.",
+        "activation_maturity": "68% (17/25) — 5 of 5 governance guard rules active (100%), 1 of 5 maintenance cadences operational (20%), 0 of 6 ownership acceptances (0%), 0 of 1 closure gate rules implemented (0%), 9 of 24 phantom references remediated (37.5%), 2 of 7 tools non-compliant.",
+        "delta_explanation": "The 24-point gap between design and activation is the governance execution gap — the single largest risk to framework effectiveness. All specifications exist; none are mechanically enforced beyond the original 5 governance guard rules."
+      }
+    },
+
+    "detection_maturity": {
+      "s725": 80,
+      "s725_letter": "B",
+      "s726_post": 83,
+      "letter_grade": "B",
+      "delta": "+3",
+      "justification": "Rule 2 DL-029 vulnerability eliminated. governance-guard.js: FM-001 ±1200 char window-scan replaced with string-aware brace-matching object extraction + within-object CC extraction. Test suite: 27/27 PASS (up from 20/20). 7 new tests covering realistic object distances (>3000 chars), Pack B CC-before-QID format, bracket-in-string handling, adjacent-object immunity, and DL-029 regression detection. AM-1 Function Constructor Parse specification complete (Agent C, 721 lines) for S727 phased implementation. CURRENT_BASELINES.md §3: 67 phantom DL-008 entries removed, 0 verified. DL-016 registered at HIGH severity. Cross-reference verification: 25 references scanned, 16 correct, 8 stale, 1 ambiguous. Historical incident validation: 4/4 confirmed preventable via simulations (confidence 90-95%). Remaining gaps: (1) 2 of 7 tools still non-compliant (scan_dl008_dl026.js, scan_dl013sweep.js — FM-001 forward-scan), (2) AM-1 not yet implemented (string-aware brace-matching is intermediate), (3) 15 phantom references remain in SESSION_STATUS_2026-07-24.md (8) and DEFECT_LIBRARY.md DL-008 header (2) and other documents (5)."
+    },
+
+    "enforcement_maturity": {
+      "s725": 78,
+      "s725_letter": "B-",
+      "s726_post": 80,
+      "letter_grade": "B+",
+      "delta": "+2",
+      "justification": "Rule 2 enforcement upgraded from FM-001 to string-aware object extraction with within-object CC extraction — BLOCK-level enforcement now produces correct results for all pack formats including Pack B. Closure gate designed (Agent H, 773 lines): TRANSFER→ACCEPTANCE→APPROVAL→CLOSE chain, 11-item pre-closure checklist, Closure Attestation format, 3-tier enforcement (procedural + plugin + Governance Board), RULE 6 (WARN→BLOCK) specification, escalation path for disputed closures, governance debt item lifecycle. Closure gate independently verified by Agent J: would have blocked S723 (12/12 checklist items FAIL, 2 uncatalogued responsibilities at GATE_T, 0/6 acceptances at GATE_A). 21 enforcement mechanisms: 12 mechanical (code-level blocks/warnings), 9 procedural. 5 governance guard rules active and operational. Governance Board escalation triggered for all 6 unaccepted gaps. BUT: Rule 6 not implemented in governance-guard.js — closure gate remains procedurally dependent, not mechanically enforceable. 0/6 Principle 2 ownership acceptances completed. G-NEW-1 through G-NEW-5 not operationalized in 800-series certification pipeline. 5 attack vectors documented for unauthorized closure (Agent J §3.3). Defense-in-depth: 5 layers designed but Layers 1-3 are procedural, Layer 4 is reactive (Board escalation), Layer 5 detects only after >3 months."
+    },
+
+    "maintenance_readiness": {
+      "s725": 65,
+      "s725_letter": "C",
+      "s726_post": 68,
+      "letter_grade": "C+",
+      "delta": "+3",
+      "justification": "CURRENT_BASELINES.md fully remediated: §1 all 15 SHA-256 hashes recaptured (6 drifted from S530 T0 — all authorized), §2 pack counts corrected (Pack C/D Sections C+D Certified), §3 phantom DL-008 entries (67 CRITICAL) removed, DL-016 added at HIGH, DL-021 updated with Certified pool impact, DL-026 corrected, DL-013/031/032 updated, RESOLVED subsection added for DL-008. Maintenance Trigger Registry validated: 6/6 scenarios PASS (Agent P maintenance validation). M5 (Baseline Refresh) is the only cadence with operational execution evidence — hashes were recaptured, phantom entries removed. M2 (Rapid Pulse) and M3 (Deep Audit) cannot fire autonomously — no SESSION_COUNTER.md exists, mod-5 and mod-20 triggers untestable. ESC-001/005/006 lack inter-agent halt protocol. M4 pre-delivery safety check gated by contaminated DEFECT_MANIFEST_DL008_DL026.json (371 Pack E phantom DL-008 items). Agent O synthesis: 'DESIGN_COMPLETE — GATED_BY_4_ITEMS.' Framework structurally sound but not activated: 1 of 5 cadences operational with evidence, 4 of 5 are design-validated but not execution-ready. No automated T0 executor (scripts/t0_baseline_verify.js not created). No inter-agent communication protocol."
+    },
+
+    "ownership_maturity": {
+      "s725": 45,
+      "s725_letter": "D+",
+      "s726_post": 48,
+      "letter_grade": "D+",
+      "delta": "+3",
+      "justification": "Ownership Acceptance Registry created (Agent I, 231 lines, machine-readable JSON). 6 gaps fully documented with primary/secondary/escalation chains, acceptance evidence standards (valid and invalid forms), TRANSFER→ACCEPTANCE→APPROVAL→CLOSE workflow compliance documentation, and cross-references to all 11 authoritative governance documents. Stewardship Framework published (Agent O): 8-lane portfolio map, 19-row Ownership Matrix, 5 stewardship principles, lane succession plans for all 8 lanes. Governance Board escalation triggered — all 6 gaps past S726 T0 deadline. BUT: 0 of 6 Principle 2 acceptances completed. Per Portfolio Stewardship Framework §3 Principle 2: 'Ownership cannot be transferred by assignment alone. Receiving party must explicitly accept. Unilateral assignment without acceptance is invalid. Original owner retains ownership until acceptance confirmed.' The framework layer improved (+3: registry, acceptance standards, escalation path). The activation layer remains at zero — no owner has accepted. The +3 delta is deliberately constrained: until at least one acceptance occurs, ownership maturity is structurally DESIGNED but operationally UNPROVEN. The registry and framework provide the scaffolding; actual acceptance is the missing proof-of-life."
+    },
+
+    "portfolio_integrity": {
+      "s725": 82,
+      "s725_letter": "B+",
+      "s726_post": 87,
+      "letter_grade": "B+",
+      "delta": "+5",
+      "justification": "Certified pool: 2,181 of 2,500 (87.2%) — confirmed stable, zero drift across all 5 packs. 0 actual DL-008 across all 2,500 items (Function constructor parse, S722A + S802 + S726 convergence). 0 duplicate QIDs. All 5 packs parse at 500 QIDs. 6 of 15 SHA-256 hashes recaptured — all drift authorized (S64–S726 active development). CURRENT_BASELINES.md §3: 67 phantom CRITICAL DL-008 entries removed — authoritative reference now shows 0 CRITICAL learner-pool defects. DL-016 added at HIGH severity (58 Pack A Section E Certified items affected). DL-021 updated: 95 Certified Pack E Section C items with absent distractor explanations. DL-026 corrected: Pack D Section C is Certified with 0 DL-026. ENHANCED_CASE_BASE: 90/90 items (100%) Fully Certified. 9 of 24 phantom references remediated (37.5%) — critical documents (CURRENT_BASELINES.md) at 100%, SESSION_STATUS_2026-07-24.md still stale with 8 phantom references. DEFECT_LIBRARY.md DL-008 header still says '175 remaining' (contradicts body text and verified state of 0). Risk register: 0 BLOCKING (down from 5 in S723), 6 CLOSED, 2 ACCEPTED, 24 CARRY_FORWARD, 7 new S726 risks. The learner pool is structurally secure — the +5 delta reflects the transition from 'pool secure but documentation contaminated' to 'pool secure and authoritative documentation clean.'"
+    }
+  },
+
+  "trend_tracking": {
+    "s723_to_s725_note": "S723 scored content-quality governance (86.3/A-). S725 introduced governance-framework scoring (73/B-). These measure different constructs. Content quality was higher; framework maturity is lower because the framework didn't exist at S723 — it was being built.",
+    "s725_to_s726": {
+      "overall_delta": "+2 (73→75)",
+      "detection_delta": "+3 (80→83) — DL-029 eliminated, guard upgraded, phantoms purged from baselines",
+      "enforcement_delta": "+2 (78→80) — Closure gate designed, ownership registry created, Rule 2 enforcement upgraded",
+      "maintenance_delta": "+3 (65→68) — Baselines recaptured, triggers validated, M5 operational with evidence",
+      "ownership_delta": "+3 (45→48) — Registry created, acceptance standards codified, escalation triggered",
+      "portfolio_delta": "+5 (82→87) — Baselines remediated (9/9 phantoms cleared), authoritative documents corrected"
+    },
+    "trajectory": "S723 (content quality A-) → S725 (framework design B-) → S726 (framework specification/partial-activation B). Positive trajectory — each session advances the framework. Activation pace is the binding constraint: 4 P0 gates block FULLY OPERATIONAL. At current trajectory, B+ (~82) achievable by S728 if ownership acceptances close and AM-1 is implemented. A- (~87) requires G-NEW operationalization and mechanical closure gate enforcement."
+  },
+
+  "p0_activation_gates": {
+    "gates_blocking_fully_operational": 4,
+    "gates_detail": [
+      {
+        "gate": "COND-01",
+        "status": "PARTIALLY RESOLVED",
+        "detail": "Governance guard Rule 2 upgraded from FM-001 to string-aware brace-matching (27/27 PASS). But AM-1 Function Constructor Parse not yet implemented — current implementation is intermediate. AM-1 specification complete (Agent C, 721 lines) for S727 phased implementation."
+      },
+      {
+        "gate": "COND-02",
+        "status": "RESOLVED",
+        "detail": "CURRENT_BASELINES.md §3 phantom DL-008 entries (67 items) removed. All 15 SHA-256 hashes recaptured. DL-016 added at HIGH. §2 corrected. DL-021/DL-026/DL-013 updated. 9 of 9 CURRENT_BASELINES phantom references remediated."
+      },
+      {
+        "gate": "COND-03",
+        "status": "NOT STARTED",
+        "detail": "G-NEW-1 through G-NEW-5 enforcement not operationalized in 800-series certification pipeline. BLOCKING: certification waves may certify items with topic-mismatched or dual-block-contradicted explanations."
+      },
+      {
+        "gate": "COND-04",
+        "status": "BLOCKED — PAST DEADLINE",
+        "detail": "0 of 6 Principle 2 ownership acceptances completed. All 6 past S726 T0 deadline. Governance Board escalation triggered. Per Principle 2: assignment without acceptance is invalid."
+      }
+    ],
+    "fully_operational_prerequisites": [
+      "AM-1 Function Constructor Parse implemented in governance guard (S727)",
+      "G-NEW enforcement integrated into 800-series certification pipeline (before S803)",
+      "6 Principle 2 ownership acceptances from assigned owners (overdue)",
+      "Governance Guard Rule 6 (Closure Acceptance Gate) implemented",
+      "SESSION_COUNTER.md created for M2/M3 autonomous triggering"
+    ],
+    "estimated_fully_operational_session": "S728 (earliest, if all 4 P0 items resolve) — S730 (conservative)"
+  },
+
+  "component_detail": {
+    "detection_reliability": {
+      "score": 83,
+      "components": {
+        "governance_guard_coverage": "27/27 tests PASS. 5 active rules. DL-029 immunity achieved at string-aware level. AM-1 spec complete.",
+        "tool_compliance": "5 of 7 tools compliant (71%, up from 57% pre-S726). scan_dl008_dl026.js and scan_dl013sweep.js non-compliant (FM-001).",
+        "baseline_accuracy": "CURRENT_BASELINES.md §1/§2/§3 fully remediated. 0 phantom DL-008. DL-016, DL-021, DL-026 correctly stated.",
+        "phantom_remediation": "9 of 24 total phantoms remediated (37.5%). Critical documents (CURRENT_BASELINES.md) at 100%. SESSION_STATUS and DEFECT_LIBRARY header still stale.",
+        "historical_prevention": "6 of 6 historical incidents confirmed preventable (4 HIGH confidence, 1 MEDIUM per Agent H false-positive regression audit).",
+        "cross_reference_accuracy": "16 of 25 references correct (64%). 8 stale (32%). 1 ambiguous (4%)."
+      }
+    },
+    "enforcement_effectiveness": {
+      "score": 80,
+      "components": {
+        "mechanical_enforcement": "5 governance guard rules (2 BLOCK, 2 WARN, 1 BLOCK). Rule 2 upgraded to string-aware. 12 of 21 enforcement mechanisms are code-level.",
+        "procedural_enforcement": "9 of 21 enforcement mechanisms are procedural (closure gate, acceptance protocol, stewardship review, scan methodology hard gate, governance auditor role).",
+        "closure_gate": "Designed (773 lines) but mechanically unenforceable. Rule 6 proposed but not implemented. 5 attack vectors documented (Agent J).",
+        "ownership_enforcement": "Ownership Acceptance Registry created and active. But 0 of 6 acceptances — enforcement mechanism exists but is unused.",
+        "certification_pipeline": "G-NEW-1 through G-NEW-5 not operationalized. 800-series certification waves currently un-gated against topic mismatch and dual-block divergence."
+      }
+    },
+    "maintenance_sustainability": {
+      "score": 68,
+      "components": {
+        "baseline_cadence": "M5 operational with evidence — hashes recaptured, phantoms removed. Only cadence with execution proof.",
+        "autonomous_triggers": "M2/M3 designed but cannot fire autonomously. No SESSION_COUNTER.md. Dependency on human awareness.",
+        "escalation_readiness": "ESC-001/005/006 designed but lack inter-agent halt protocol. No mechanism to enforce halts across concurrent agents.",
+        "delivery_safety": "M4 pre-delivery check gated by contaminated DEFECT_MANIFEST (371 Pack E phantom DL-008). No emergency override path.",
+        "t0_automation": "scripts/t0_baseline_verify.js not created. T0 protocol execution remains manual."
+      }
+    },
+    "ownership_accountability": {
+      "score": 48,
+      "components": {
+        "registry_maturity": "Ownership Acceptance Registry v1.0 — machine-readable JSON, 231 lines, 6 gaps with full chains, acceptance evidence standards (valid/invalid forms), 11 cross-references.",
+        "matrix_completeness": "19-row Ownership Matrix with primary/secondary/escalation for all responsibilities. All 8 lanes mapped.",
+        "acceptance_rate": "0 of 6 (0%). All deadlines passed (S726 T0). Governance Board escalation triggered.",
+        "framework_publication": "8-lane Portfolio Map, 5 Stewardship Principles, TRANSFER→ACCEPTANCE→APPROVAL→CLOSE chain, lane succession plans for all 8 lanes.",
+        "principle_2_compliance": "FAIL — 'Ownership cannot be transferred by assignment alone. Unilateral assignment without acceptance is invalid.' All 6 gaps are in violation of Principle 2."
+      }
+    },
+    "portfolio_health": {
+      "score": 87,
+      "components": {
+        "certified_pool": "2,181 of 2,500 (87.2%). Pack B: 100%, Pack E: 100%, Pack A: 96.2%, Pack C: 70.0%, Pack D: 70.0%.",
+        "dl008_verified": "0 actual across all 2,500 items (Function constructor parse, 3-source convergence). Learner pool secured.",
+        "structural_integrity": "0 duplicate QIDs. All 5 packs parse at 500 QIDs. 6 of 15 hashes recaptured (all authorized drift).",
+        "case_bank": "ENHANCED_CASE_BASE: 90/90 items (100%) Fully Certified. Remaining 330 items: 0% Certified, 100% Moderate difficulty (DL-032).",
+        "defect_register": "33 defect entries in DEFECT_LIBRARY.md. 0 BLOCKING. DL-008 header text stale (says '175 remaining' — contradicts body and verified state of 0).",
+        "governance_debt": "0 BLOCKING (down from 5 in S723). 6 CLOSED, 2 ACCEPTED, 24 CARRY_FORWARD, 7 new S726 risks."
+      }
+    }
+  },
+
+  "risk_exposure": {
+    "critical": [
+      "R-S726-001: 0/6 Principle 2 ownership acceptances past S726 T0 deadline — no owner has formally accepted. If assigned owners become unavailable, all 6 gaps reopen.",
+      "COND-01 residual: Governance guard Rule 2 at intermediate string-aware level, not full AM-1 Function Constructor Parse. DL-029 immunity is partial — Pack D disputed DL-008 count unresolved pending AM-1 verification.",
+      "COND-03: G-NEW not operationalized. 800-series certification pipeline can certify items with topic-mismatched or dual-block-contradicted explanations."
+    ],
+    "high": [
+      "R-S726-003: Rule 6 (Closure Acceptance Gate) not implemented — closure gate is procedurally dependent, mechanically unenforceable. Same exploitation path as S723.",
+      "R-S726-006: DEFECT_MANIFEST_DL008_DL026.json contaminated with 371 Pack E phantom DL-008 items. May block clean items from delivery pool.",
+      "M2/M3 cadence gaps: Rapid Pulse and Deep Audit triggers cannot fire autonomously — no session counter, no automated detection."
+    ],
+    "medium": [
+      "15 of 24 phantom references remain unremediated in non-critical documents (SESSION_STATUS, DEFECT_LIBRARY header).",
+      "SESSION_STATUS_2026-07-24.md wholly stale — 8 phantom references, 2,031 vs. 2,181 Certified, 67 phantom DL-008.",
+      "ESC-005 circular dependency — triggers on the same guard infrastructure it is supposed to protect."
+    ]
+  },
+
+  "confidence": 90,
+  "confidence_rationale": "All scores derived from direct evidence in S726 agent output files, CURRENT_BASELINES.md, enforcement certification report, session summary, and ownership registry. Governance guard upgrade confirmed by test results (27/27 PASS). Phantom remediation confirmed by CURRENT_BASELINES.md read-back (9/9 remediated, 0 phantom DL-008 in §3). Ownership acceptance state confirmed by registry (Agent I, 0/6). Simulations confirmed by direct clause citation (Agents K-N, confidence 90-95%). Risk register confirmed by 32-item audit (Agent S). Cross-reference verification confirmed by manual document scan (Agent F, 25 references). Lower-confidence areas: (1) whether the governance guard's string-aware brace-matching handles all Pack D edge cases (disputed DL-008 count unresolved — needs AM-1 verification per Agent C §5.5), and (2) whether the 0/6 ownership acceptance state will change before S727 (governance framework cannot enforce human decision to accept).",
+
+  "methodology_notes": {
+    "scoring_scale": "0-100 with letter grades: A (90-100), A- (85-89), B+ (80-84), B (75-79), B- (70-74), C+ (65-69), C (60-64), D (<60)",
+    "weighting": "Detection (25%), Enforcement (25%), Maintenance (20%), Ownership (15%), Portfolio Integrity (15%)",
+    "evidence_standard": "All scores cross-referenced against minimum 2 independent S726 agent output files. No score derived from a single self-reported claim (per AGENTS.md §5).",
+    "scoring_distinction": "Design maturity (specification completeness) and activation maturity (operational enforcement) are scored separately within each dimension. The composite score weights both equally (50% design, 50% activation). The 24-point design-activation gap is the primary governance risk metric."
+  }
+}

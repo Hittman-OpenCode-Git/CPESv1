@@ -1,0 +1,981 @@
+{
+  "generatedAt": "2026-07-25T21:20:12.174Z",
+  "session": "S118",
+  "description": "Seeded-history simulation — all 8 synthetic students with tutoring behaviors",
+  "preflightTests": "248/248 PASS",
+  "syntheticQuestion": "P1-A-001",
+  "pilotModeActive": true,
+  "studentCount": 8,
+  "behaviorsPerStudent": 10,
+  "totalBehaviorsExercised": 80,
+  "results": [
+    {
+      "studentId": "synth-avery",
+      "displayName": "Avery Pilot",
+      "archetype": "Sparse data, early stage",
+      "sessionCount": 2,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-avery.json",
+      "exportSize": 157763,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    },
+    {
+      "studentId": "synth-jordan",
+      "displayName": "Jordan Sample",
+      "archetype": "Improving trend, 8 sessions",
+      "sessionCount": 8,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-jordan.json",
+      "exportSize": 175395,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    },
+    {
+      "studentId": "synth-morgan",
+      "displayName": "Morgan Demo",
+      "archetype": "Persistent weakness in budgeting",
+      "sessionCount": 6,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-morgan.json",
+      "exportSize": 170049,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    },
+    {
+      "studentId": "synth-riley",
+      "displayName": "Riley Practice",
+      "archetype": "Hint-dependent, difficulty-sensitive",
+      "sessionCount": 5,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-riley.json",
+      "exportSize": 167619,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    },
+    {
+      "studentId": "synth-taylor",
+      "displayName": "Taylor Sandbox",
+      "archetype": "Asymmetric, strong controls/weak tech",
+      "sessionCount": 7,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-taylor.json",
+      "exportSize": 170874,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    },
+    {
+      "studentId": "synth-casey",
+      "displayName": "Casey Trial",
+      "archetype": "Increasing hint dependency",
+      "sessionCount": 4,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-casey.json",
+      "exportSize": 163426,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    },
+    {
+      "studentId": "synth-quinn",
+      "displayName": "Quinn Sim",
+      "archetype": "Unstable performance",
+      "sessionCount": 6,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-quinn.json",
+      "exportSize": 169621,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    },
+    {
+      "studentId": "synth-parker",
+      "displayName": "Parker Test",
+      "archetype": "Strong MCQ, sparse cases",
+      "sessionCount": 10,
+      "historySynthetic": true,
+      "hasHistory": true,
+      "behaviors": {
+        "explain": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "wrong-choices": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "hint": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "simplify": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": false,
+          "gateQidCount": 0
+        },
+        "similar": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "next": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "recovery": {
+          "spoke": true,
+          "safetySafe": null,
+          "safetyViolations": [
+            "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+          ],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "progress": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "weakness": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        },
+        "summary": {
+          "spoke": true,
+          "safetySafe": true,
+          "safetyViolations": [],
+          "gateEntry": true,
+          "gateQidCount": 1,
+          "gateDefectSafe": true,
+          "gateCertSafe": true
+        }
+      },
+      "exportPath": "C:\\users\\user\\onedrive\\desktop\\cma_part_1_2026\\reports\\systematic_testing\\SESSION118_EXPORTS\\s118_pilot_synth-parker.json",
+      "exportSize": 175105,
+      "exportFields": [
+        "generatedAt",
+        "environment",
+        "syntheticData",
+        "selectedLearnerId",
+        "studentRoll",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "sessionTelemetry",
+        "calibrationExport",
+        "thresholdSnapshot",
+        "modelVersion",
+        "learnerState"
+      ]
+    }
+  ]
+}

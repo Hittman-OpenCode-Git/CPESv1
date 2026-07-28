@@ -1,0 +1,43 @@
+{
+  "reportId": "SESSION259_QUERY_VALIDATION",
+  "generatedTimestamp": "2026-07-27T19:16:47.853Z",
+  "certifiedTotal": 2222,
+  "questionValidation": {
+    "total": 27,
+    "passed": 27,
+    "notFound": 0,
+    "notFoundList": [],
+    "isolatedCount": 13
+  },
+  "sessionValidation": {
+    "total": 40,
+    "passed": 40,
+    "orphanQids": 0,
+    "orphanQidList": []
+  },
+  "challengeValidation": {
+    "total": 35,
+    "passed": 35,
+    "orphanQids": 0,
+    "orphanSessions": 0,
+    "triageComplete": 35,
+    "triageTotal": 35
+  },
+  "recommendationValidation": {
+    "total": 5,
+    "totalLinks": 2482,
+    "orphanQids": 0,
+    "orphanQidList": []
+  },
+  "findingSummary": [],
+  "summary": {
+    "questionRetrievalPct": 100,
+    "sessionRetrievalPct": 100,
+    "challengeRetrievalPct": 100,
+    "triageCoveragePct": 100,
+    "totalRecLinks": 2482,
+    "totalOrphanQidsAcrossAll": 0,
+    "certifiedTotal": 2222,
+    "verdict": "PASS"
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "document": "SESSION350_FRAMEWORK_V2_SCORECARD",
+  "session": "S350",
+  "title": "Framework v2 Executive Validation Dashboard — Is v2 Faster, Cheaper, More Accurate, More Governable?",
+  "board": "K — Executive Validation Dashboard",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Executive Dashboard — Measurement Authority",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); all S350 Board B-J scorecards; S202-S203 engineering specifications",
+  "purpose": "Single authoritative dashboard answering the six key Framework v2 validation questions. Every Board B-J metric rolls up into this dashboard. This is the document that future sessions (S322, S323, S324, S325, S830, S900, S910) will reference to determine whether Framework v2 succeeds.",
+  "depends_on": [
+    "reports/SESSION350_V1_BASELINE.json",
+    "reports/SESSION350_THROUGHPUT_METRICS.json",
+    "reports/SESSION350_READINESS_SCORECARD.json",
+    "reports/SESSION350_IDENTITY_SCORECARD.json",
+    "reports/SESSION350_SCAN_PERFORMANCE.json",
+    "reports/SESSION350_DELTA_REVIEW_SCORECARD.json",
+    "reports/SESSION350_BOARD_EFFICIENCY_MODEL.json",
+    "reports/SESSION350_REPORTING_SCORECARD.json",
+    "reports/SESSION350_RECOMMENDATION_ANALYTICS.json",
+    "reports/SESSION350_ADMIN_METRICS_FRAMEWORK.json"
+  ],
+
+  "status": "BASELINE_ESTABLISHED — Measurement model is defined. Awaiting operational data from Framework v2 rollout phases. Current v2 components (S322 scripts) are Hybrid Mode, advisory only.",
+
+  "six_key_questions": {
+    "Q1_is_v2_faster": {
+      "question": "Is Framework v2 faster than Framework v1?",
+      "answer_current": "NOT_YET_MEASURABLE — Framework v2 is in P0 (pre-Hybrid). S322 scripts operate in advisory mode. No certification waves have run under v2.",
+      "metrics": [
+        {
+          "id": "BF-001",
+          "metric": "Agents per Session",
+          "v1_baseline": "19 (range 15-28, peak 28 S809)",
+          "v2_target": "≤7 (Phase 3: ≤6)",
+          "pct_improvement_target": "-68%",
+          "current": "NOT_MEASURED — v2 boards not yet operational",
+          "measurement_method": "Per-session agent-spawn count. Tracked in SESSION350_THROUGHPUT_METRICS.json §TH-001.",
+          "phase_gate": "HARD_BLOCK if >10 agents/session at S830"
+        },
+        {
+          "id": "BF-008",
+          "metric": "Cycle Time (sessions per wave)",
+          "v1_baseline": "4-5 sessions",
+          "v2_target": "1-2 sessions",
+          "pct_improvement_target": "-67%",
+          "current": "NOT_MEASURED — no v2 certification waves completed",
+          "measurement_method": "Per-wave session count. Tracked in SESSION350_THROUGHPUT_METRICS.json §TH-003.",
+          "phase_gate": "≤2 sessions at S900"
+        },
+        {
+          "id": "BF-009",
+          "metric": "Defect Timing Shift (pre-flight vs. board)",
+          "v1_baseline": "0% pre-flight / 89% board / 2.5% post",
+          "v2_target": "78% pre-flight / <20% board / 0% post",
+          "pct_shift": "78% of defects caught before any human review",
+          "current": "NOT_MEASURED — pre-flight pipeline has lightweight stubs at S322",
+          "measurement_method": "Defect detection stage classification per scan artifact vs. board review findings.",
+          "phase_gate": "Pre-board detection >50% at S830"
+        },
+        {
+          "id": "TH-009",
+          "metric": "Throughput Multiplier",
+          "v1_baseline": "1.0×",
+          "v2_target": "3.8×",
+          "current": "1.0× (v1 operations continue)",
+          "measurement_method": "items_certified_per_session_hour_v2 / items_certified_per_session_hour_v1"
+        }
+      ],
+      "verdict": "PENDING — Awaiting Phase 1 operational data (S830 checkpoint)"
+    },
+
+    "Q2_is_v2_cheaper": {
+      "question": "Is Framework v2 cheaper than Framework v1?",
+      "answer_current": "NOT_YET_MEASURABLE — v2 has not run any certification waves. Cost reduction is architectural, not yet operational.",
+      "metrics": [
+        {
+          "id": "TH-010",
+          "metric": "Agent-Spawns per Certified Item",
+          "v1_baseline": "0.305 (50% waste-adjusted productive: 0.153)",
+          "v2_target": "<0.07 (Phase 3)",
+          "pct_reduction_target": "-77%",
+          "current": "0.305 (v1 continues — no v2 certification)",
+          "measurement_method": "Total agent spawns / newly certified items. Tracked in SESSION350_THROUGHPUT_METRICS.json §TH-010."
+        },
+        {
+          "id": "TH-011",
+          "metric": "Waste Ratio",
+          "v1_baseline": "50% (half of agent-spawns were duplicate, phantom, or non-productive)",
+          "v2_target": "<10% (Phase 3)",
+          "current": "50% (v1 continues)",
+          "measurement_method": "Wasted spawns / total spawns. Wasted = duplicate + phantom + template-remediation + governance-only."
+        },
+        {
+          "id": "BF-001",
+          "metric": "Total Agent Spawns per Wave",
+          "v1_baseline": "~60-140 per wave (4-5 sessions × 15-28 agents)",
+          "v2_target": "6-14 per wave (1-2 sessions × 6-7 agents)",
+          "pct_reduction_target": "-90%",
+          "current": "~60-140 (v1 continues)",
+          "measurement_method": "Sum of agent-spawns across session chain for a certification wave."
+        }
+      ],
+      "verdict": "PENDING — Awaiting Phase 1 operational data (S830 checkpoint)"
+    },
+
+    "Q3_is_v2_more_accurate": {
+      "question": "Is Framework v2 more accurate than Framework v1?",
+      "answer_current": "INFRASTRUCTURE_BUILT — Pre-flight gating, compound-key identity, and AM-1 within-object extraction are operational. These eliminate the root causes of v1 inaccuracy (forward-scan false positives, wrong-variant targeting, unscanned certifications). Accuracy validation awaits operational data.",
+      "metrics": [
+        {
+          "id": "BF-007",
+          "metric": "Identity Ambiguity",
+          "v1_baseline": "PRESENT — 8 disputes, ~12 phantoms, ~75% false-positive rate on Pack B, S320 wrong-variant failures",
+          "v2_target": "ELIMINATED — 0 disputes, 0 phantoms, 0 targeting failures",
+          "current": "COMPOUND_KEY_OPERATIONAL — Gate -1: 2,539/2,540 PASS (99.96%). 1 Pack D item with empty CC. 0 disputes, 0 phantoms detected in S322 scan.",
+          "measurement_method": "Gate -1 pass rate. Compound-key uniqueness across all 5 packs.",
+          "phase_gate": "HARD_BLOCK at S830 if identity ambiguity not ELIMINATED"
+        },
+        {
+          "id": "BF-009",
+          "metric": "Defect Detection Timing",
+          "v1_baseline": "0% pre-flight detection. 89.5% of items reached certification with undetected defects.",
+          "v2_target": "78% pre-flight detection. <10% readiness leakage.",
+          "current": "SCAN_PIPELINE_OPERATIONAL — S322: 2,539/2,540 Gate -1 PASS, 2,266/2,540 Gate 1 PASS, 465/2,540 Gate 2 PASS. Accuracy validation (false positive/negative rates) not yet measured.",
+          "measurement_method": "Readiness leakage rate (Certified items that fail retrospective scan). Per SESSION350_READINESS_SCORECARD.json."
+        },
+        {
+          "id": "IM-003",
+          "metric": "Targeting Accuracy",
+          "v1_baseline": "~25% on Pack B (DL-029: ~75% false-positive from forward-scan)",
+          "v2_target": "100% (AM-1 within-object extraction + compound key)",
+          "current": "AM-1_METHODOLOGY_ENFORCED — FM-001 through FM-008 forbidden. All 2,539 passing items have internally consistent QID+CC pairing.",
+          "measurement_method": "Post-operation compound-key verification. Per SESSION350_IDENTITY_SCORECARD.json §IM-003."
+        }
+      ],
+      "verdict": "ARCHITECTURALLY_SOUND — The root causes of v1 inaccuracy are eliminated by design. Operational validation awaits Phase 1 data (S830)."
+    },
+
+    "Q4_is_v2_reducing_readiness_leakage": {
+      "question": "Is Framework v2 reducing readiness leakage?",
+      "answer_current": "ARCHITECTURALLY_DESIGNED_TO — Board visibility rules hide REMEDIATE and BLOCKED items from Quality and Certification boards. S322 scan shows 242 BLOCKED + 77 REMEDIATE items that would be invisible to certification boards if v2 were active. But v2 is NOT active — v1 operations continue.",
+      "metrics": [
+        {
+          "id": "BF-004",
+          "metric": "Readiness Failure Rate",
+          "v1_baseline": "89.5% (34/38 Domain E seeds with 2+ defects; 38/38 zero-scanned)",
+          "v2_target": "<10%",
+          "pct_reduction_target": "-89%",
+          "current": "V1_OPERATIONS_CONTINUE — 89.5% baseline still applicable. S322 readiness score: 87.44% portfolio readiness, but this measures certification progress, not leakage.",
+          "measurement_method": "Re-run Gates -1 through 4 against Certified pool. Count leakage events. Per SESSION350_READINESS_SCORECARD.json.",
+          "phase_gate": "HARD_BLOCK if >44.7% at S830 (Phase 2 activation). HARD_BLOCK if >10% at S900."
+        },
+        {
+          "id": "RC-BV",
+          "metric": "Board Visibility Enforcement",
+          "v1_baseline": "0% — all items visible to all boards. Defective items reviewed and certified.",
+          "v2_target": "100% — REMEDIATE and BLOCKED items hidden from Quality and Certification boards.",
+          "current": "NOT_YET_ACTIVE — v2 board visibility rules defined but v1 boards still operate.",
+          "measurement_method": "Verify no REMEDIATE/BLOCKED items appear in Quality or Certification board queues."
+        },
+        {
+          "id": "DL_active",
+          "metric": "Active Defects in Certified Pool",
+          "v1_baseline": "DL-008: 539 peak → 0 now. DL-026: 1,005 peak → 27 residual non-Certified. DL-021: 95 Certified items with absent EW slots. DL-016: 58 Certified items with metadata offset.",
+          "v2_target": "0 HARD_FAIL defects in Certified pool",
+          "current": "DL-008: 0 (resolved). DL-021: 95 Certified (OPEN). DL-016: 58 Certified (OPEN). These are the v1 leakage legacy.",
+          "measurement_method": "Per-session T0 re-scan of Certified pool. Newly detected defects = active leakage."
+        }
+      ],
+      "verdict": "DESIGNED_FOR_SUCCESS — Pre-flight + board visibility rules should reduce leakage from 89.5% to <10%. The v1 leakage legacy (DL-021, DL-016 on Certified items) must be remediated before Phase 2. The 242 BLOCKED + 77 REMEDIATE items at S322 demonstrate how many items the v2 gates would have caught before certification."
+    },
+
+    "Q5_is_v2_reducing_governance_workload": {
+      "question": "Is Framework v2 reducing governance workload?",
+      "answer_current": "DESIGNED_FOR_REDUCTION — Board consolidation (8→5), pre-flight automation (replaces 22 DL-008 scans with 1 pipeline run), formal escalation paths (replaces ad-hoc agent escalation), and delta review (80% of items skip re-review) should dramatically reduce governance overhead.",
+      "metrics": [
+        {
+          "id": "BF-005",
+          "metric": "Duplicate Review Cycles",
+          "v1_baseline": "2.5:1 average, 6.2:1 peak (S809: 56 spawns, 0 writes, 1 novel finding)",
+          "v2_target": "<1.3:1",
+          "current": "2.5:1 (v1 operations continue)",
+          "measurement_method": "Total review passes / unique items reviewed. Per SESSION350_THROUGHPUT_METRICS.json §TH-006.",
+          "phase_gate": "HARD_BLOCK if >1.25 at S830"
+        },
+        {
+          "id": "BF-006",
+          "metric": "Unchanged Re-Review Rate",
+          "v1_baseline": "80% (80% of items unchanged but re-reviewed from scratch)",
+          "v2_target": "<20% (delta review skips 80%)",
+          "current": "80% (v1 continues — delta ledger has first baseline but no comparison data yet)",
+          "measurement_method": "Items with NO_CHANGE delta classification that still received full review. Per SESSION350_DELTA_REVIEW_SCORECARD.json §DR-003.",
+          "phase_gate": ">50% improved at S900 (<40% re-review)"
+        },
+        {
+          "id": "OP-007",
+          "metric": "Sessions Wasted",
+          "v1_baseline": "~33 sessions (~8 phantom + ~25 template remediation)",
+          "v2_target": "<5 sessions wasted per equivalent v2 operation span",
+          "current": "~33 sessions wasted in v1 history. V2 has not yet run enough to measure.",
+          "measurement_method": "Session classification audit per phase."
+        },
+        {
+          "id": "BE-003",
+          "metric": "Escalation Rate",
+          "v1_baseline": "~15-20% of items escalated between boards 2-3 times before certification",
+          "v2_target": "<5% (pre-flight catches issues before board review; Quality Board single-pass)",
+          "current": "~15-20% (v1 operations continue)",
+          "measurement_method": "Items escalated / items processed. Per SESSION350_BOARD_EFFICIENCY_MODEL.json §BE-003."
+        }
+      ],
+      "verdict": "ARCHITECTURALLY_SOUND — The 2.5:1 duplication ratio, 80% re-review rate, and ~33 wasted sessions are eliminated by design. Operational validation awaits Phase 1 data."
+    },
+
+    "Q6_is_v2_improving_certification_throughput": {
+      "question": "Is Framework v2 improving certification throughput?",
+      "answer_current": "DESIGNED_FOR_3.8x_IMPROVEMENT — S203 engineering validation confirmed all throughput targets are preserved by the implementation architecture. But v2 has not yet processed a single certification wave. The S322 scripts are advisory, not authoritative.",
+      "metrics": [
+        {
+          "id": "BF-003",
+          "metric": "Reports per Session",
+          "v1_baseline": "9 average (7-17 range, 29 peak S726)",
+          "v2_target": "≤4 (hard cap at S910)",
+          "current": "~9 (v1 operations continue. S350 itself produces 12 deliverables — measurement baseline establishment.)",
+          "measurement_method": "Per-session file count. Per SESSION350_REPORTING_SCORECARD.json §RP-001.",
+          "phase_gate": "≤6 at S830, ≤4 at S910 (HARD_BLOCK if >4 at S910)"
+        },
+        {
+          "id": "TH-001",
+          "metric": "Items per Session-Hour",
+          "v1_baseline": "3-5",
+          "v2_target": "5-8 (P1), 8-12 (P2), 12-15 (P3)",
+          "current": "3-5 (v1 operations continue)",
+          "measurement_method": "Items reviewed / agent-hours. Per SESSION350_THROUGHPUT_METRICS.json §TH-001."
+        },
+        {
+          "id": "TH-002",
+          "metric": "Items Certified per Session",
+          "v1_baseline": "42 average (30-50 range)",
+          "v2_target": "63 (P1), 95 (P2), 135 (P3)",
+          "current": "42 (v1 operations continue)",
+          "measurement_method": "Newly Certified items per session. Per SESSION350_THROUGHPUT_METRICS.json §TH-002."
+        },
+        {
+          "id": "TH-008",
+          "metric": "Delta Review Skip Rate",
+          "v1_baseline": "0% (no delta review existed)",
+          "v2_target": ">50% (P1), >75% (P2), >80% (P3)",
+          "current": "0% (first delta baseline established at S322 — no comparison data yet)",
+          "measurement_method": "Items with NO_CHANGE that received CertifiedDelta verdict / total items in scope."
+        },
+        {
+          "id": "BF-010",
+          "metric": "Report Consumption Rate",
+          "v1_baseline": "35% (432 of 1,229 files consumed)",
+          "v2_target": ">90%",
+          "current": "35% (v1 operations continue)",
+          "measurement_method": "Referenced reports / total reports. Per SESSION350_REPORTING_SCORECARD.json §RP-002.",
+          "phase_gate": ">80% at S910"
+        }
+      ],
+      "verdict": "DESIGNED_FOR_3.8x — S203 engineering validation confirmed all 8 throughput targets are supported by the implementation architecture. 70% cost reduction, 77% workload reduction, 90% delta review reduction. Operational validation at S830/S900/S910."
+    }
+  },
+
+  "bf_metric_summary": {
+    "label": "All 10 BF Metrics — Current Status vs. Targets",
+    "source": "SESSION202_THROUGHPUT_MODEL.json §sec4; SESSION350_V1_BASELINE.json §section_1",
+    "metrics": [
+      {"id": "BF-001", "metric": "Agents/Session", "v1": 19, "v2_target": "≤7", "direction": "↓", "current": "19 (v1 active)", "status": "PENDING"},
+      {"id": "BF-002", "metric": "Boards/Session", "v1": 8.5, "v2_target": "≤5", "direction": "↓", "current": "8.5 (v1 active)", "status": "PENDING"},
+      {"id": "BF-003", "metric": "Reports/Session", "v1": 9, "v2_target": "≤4", "direction": "↓", "current": "9 (v1 active)", "status": "PENDING"},
+      {"id": "BF-004", "metric": "Readiness Failure", "v1": "89.5%", "v2_target": "<10%", "direction": "↓", "current": "89.5% (v1 active)", "status": "PENDING"},
+      {"id": "BF-005", "metric": "Dup Review Cycles", "v1": "2.5:1", "v2_target": "<1.3:1", "direction": "↓", "current": "2.5:1 (v1 active)", "status": "PENDING"},
+      {"id": "BF-006", "metric": "Re-Review Rate", "v1": "80%", "v2_target": "<20%", "direction": "↓", "current": "80% (v1 active)", "status": "PENDING"},
+      {"id": "BF-007", "metric": "Identity Ambiguity", "v1": "PRESENT", "v2_target": "ELIMINATED", "direction": "binary", "current": "IN_PROGRESS (Gate -1: 99.96% pass)", "status": "PARTIAL"},
+      {"id": "BF-008", "metric": "Cycle Time", "v1": "4-5 sessions", "v2_target": "1-2 sessions", "direction": "↓", "current": "4-5 (v1 active)", "status": "PENDING"},
+      {"id": "BF-009", "metric": "Defect Timing", "v1": "0% pre / 89% board / 2.5% post", "v2_target": "78% pre / <20% board / 0% post", "direction": "shift_left", "current": "0/89/2.5 (v1 active)", "status": "PENDING"},
+      {"id": "BF-010", "metric": "Consumption Rate", "v1": "35%", "v2_target": ">90%", "direction": "↑", "current": "35% (v1 active)", "status": "PENDING"}
+    ],
+    "summary": "1 of 10 BF metrics shows partial improvement (BF-007 — compound-key identity operational at 99.96%). 9 of 10 BF metrics are PENDING — awaiting v2 operational data. This is expected at P0 — the measurement framework must exist before the improvements are measured."
+  },
+
+  "phase_gate_readiness": {
+    "S830_checklist": {
+      "label": "S830 — Phase 2 Authorization Gate (Shadow Mode)",
+      "description": "All conditions must PASS before Phase 2 can begin. This is the first major measurement checkpoint.",
+      "conditions": [
+        {"condition": "BF-004 Readiness Failure <44.7%", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "BF-007 Identity Ambiguity ELIMINATED", "block": "HARD_BLOCK", "status": "PARTIAL — Gate -1: 99.96%, 1 item blocked"},
+        {"condition": "BF-005 Duplicate Review <1.25", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "BF-003 Reports/Session ≤6", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "BF-010 Consumption Rate >50%", "block": "SOFT_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "All 10 BF metrics ≥20% improved from v1 baseline", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"}
+      ],
+      "verdict": "NOT_READY — 0 of 6 conditions measured. This is expected — S350 establishes the measurement model. S322-S325 build the infrastructure. S830 is the first measurement checkpoint."
+    },
+    "S900_checklist": {
+      "label": "S900 — Phase 3 Authorization Gate (Framework v2 Full Operation)",
+      "conditions": [
+        {"condition": "BF-004 Readiness Failure <10%", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "BF-005 Duplicate Review <1.3:1", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "BF-006 Re-Review Rate <25%", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "BF-008 Cycle Time ≤2 sessions", "block": "SOFT", "status": "NOT_YET_MEASURED"}
+      ],
+      "verdict": "NOT_READY — Awaiting S830 checkpoint passage first."
+    },
+    "S910_checklist": {
+      "label": "S910 — Legacy Retirement Gate",
+      "conditions": [
+        {"condition": "BF-003 Reports/Session ≤4 (hard cap)", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"},
+        {"condition": "BF-010 Consumption Rate >90%", "block": "HARD_BLOCK", "status": "NOT_YET_MEASURED"}
+      ],
+      "verdict": "NOT_READY — Awaiting S900 checkpoint passage first."
+    }
+  },
+
+  "overall_verdict": {
+    "status": "MEASUREMENT_AUTHORITY_ESTABLISHED",
+    "summary": "Session 350 has established the authoritative measurement baseline for Framework v2 validation. All 11 scorecards are defined. All v1 baselines are frozen. All v2 targets are specified. All measurement formulas are documented. The infrastructure to collect operational data exists (S322 scripts). Framework v2 has not yet processed a certification wave — all metrics show v1 operational values. This is the expected state at P0 (pre-Hybrid). The measurement model will produce its first real validation data at the S830 checkpoint when Phase 1 (Hybrid Mode) has completed.",
+    "next_measurement_checkpoint": "S830 — Phase 2 Authorization Gate. All 10 BF metrics must be measured and ≥20% improved from v1 baseline before Phase 2 can begin.",
+    "blocking_items": [
+      "DL-021: 95 Certified items in Pack E Section C with absent EW slots — must be remediated before readiness leakage can reach <10% target",
+      "DL-016: 58 Pack A Certified items with metadata offset — EW describes wrong item's distractors",
+      "Gate -1: 1 Pack D item with empty CorrectChoice — must be resolved before BF-007 can reach ELIMINATED",
+      "S322 scripts are lightweight stubs — full Gate 1-4 implementations needed in S332",
+      "Delta ledger has no historical comparison data — needs at least one certification wave to establish change baseline"
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "all_board_deliverables": [
+      "reports/SESSION350_V1_BASELINE.json (Board A)",
+      "reports/SESSION350_THROUGHPUT_METRICS.json (Board B)",
+      "reports/SESSION350_READINESS_SCORECARD.json (Board C)",
+      "reports/SESSION350_IDENTITY_SCORECARD.json (Board D)",
+      "reports/SESSION350_SCAN_PERFORMANCE.json (Board E)",
+      "reports/SESSION350_DELTA_REVIEW_SCORECARD.json (Board F)",
+      "reports/SESSION350_BOARD_EFFICIENCY_MODEL.json (Board G)",
+      "reports/SESSION350_REPORTING_SCORECARD.json (Board H)",
+      "reports/SESSION350_RECOMMENDATION_ANALYTICS.json (Board I)",
+      "reports/SESSION350_ADMIN_METRICS_FRAMEWORK.json (Board J)"
+    ],
+    "specifications": [
+      "reports/SESSION202_THROUGHPUT_MODEL.json",
+      "reports/SESSION203_THROUGHPUT_VALIDATION.json",
+      "reports/SESSION203_MIGRATION_EXECUTION_PLAN.json"
+    ]
+  }
+}

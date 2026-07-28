@@ -1,0 +1,436 @@
+﻿{
+  "audit_id": "S365-AUTOMATION-2026-07-28",
+  "audit_type": "Automation Effectiveness Review",
+  "prior_rating": { "session": "S362", "score": 48, "status": "AT RISK" },
+  "target_score": 55,
+  "status": "AT RISK",
+  
+  "scripts_landscape": {
+    "top_level_entries": 246,
+    "total_files_recursive": 1176,
+    "subdirectories": ["engine", "lib", "output", "reports", "s719_batches", "validators"],
+    "categorized": {
+      "governance_guard_and_enforcement": {
+        "count": 4,
+        "scripts": [
+          "test_governance_guard.js",
+          "governance_guard_engine.js",
+          "governance_event_registry.js",
+          "validate.js"
+        ],
+        "assessment": "HIGH quality, fully automated execution, 51/51 PASS"
+      },
+      "validator_framework": {
+        "count": 16,
+        "location": "scripts/validators/",
+        "modules": [
+          "ExplanationValidator.js",
+          "CaseIntegrityValidator.js",
+          "DifficultyValidator.js",
+          "BlueprintValidator.js",
+          "MetadataValidator.js",
+          "PsychometricValidator.js",
+          "ReferenceValidator.js",
+          "MathematicalValidator.js",
+          "DistractorSimilarityValidator.js",
+          "AmbiguityValidator.js",
+          "AbsoluteLanguageValidator.js",
+          "ExplanationConsistencyValidator.js",
+          "extractor.js",
+          "Validator.js",
+          "taxonomy.js"
+        ],
+        "assessment": "MODERATE quality. DL-020 brace-matcher fixed (S726). ExplanationValidator line-180 gap fixed. Some validators still use outdated extraction."
+      },
+      "registry_baselines_generation": {
+        "count": 8,
+        "scripts": [
+          "build_master_registry.js",
+          "generate_registry.js",
+          "rebuild_baselines_s916.js",
+          "rebuild_baselines_s923.js",
+          "file_state_reconciliation.js",
+          "build_dashboard.js",
+          "session_registry_gen.js",
+          "modernization_tracker.js"
+        ],
+        "assessment": "EXISTS BUT FRAGILE. Registry is manual-invoke only, stale (2 days). rebuild_baselines is regex-replace not full regeneration. No CI/CD trigger."
+      },
+      "defect_scanning": {
+        "count": 15,
+        "scripts": [
+          "scan_dl008_boundary.js",
+          "scan_dl008_fn.js",
+          "scan_dl021_s828.js",
+          "scan_dl021_s828b.js",
+          "scan_logic_inversions.js",
+          "scan_orchestrator.js",
+          "scan_s710r_dl026.js",
+          "session86_dl026_scan.js",
+          "session86_dl8_scan.js",
+          "session86_packd_sectionc.js",
+          "verify_dl008_spotcheck.js",
+          "verify_s710r_targets.js",
+          "s861_pool_scan.js",
+          "s862_scan.js",
+          "s862_scan2.js"
+        ],
+        "assessment": "MODERATE quality. Most use Function constructor (CC-position-aware, DL-029 resolved). Some older forward-scan scripts remain. All require MANUAL invocation."
+      },
+      "certification_pipeline": {
+        "count": 24,
+        "scripts": [
+          "certification_candidate_engine.js",
+          "certification_audit_builder.js",
+          "readiness_scorer.js",
+          "identity_validator.js",
+          "delta_ledger_builder.js",
+          "domain_progress_engine.js",
+          "question_history_builder.js",
+          "question_health_engine.js",
+          "investigation_registry.js",
+          "challenge_registry.js",
+          "challenge_triage_engine.js",
+          "recommendation_registry.js",
+          "recommendation_auto_router.js",
+          "replacement_lineage_tracker.js",
+          "seed_operations_manager.js",
+          "wave_planner.js",
+          "remediation_queue_manager.js",
+          "work_queue_manager.js",
+          "pipeline_orchestrator.js",
+          "student_exposure_index.js",
+          "question_investigation_api.js",
+          "report_reducer.js",
+          "session_generator.js",
+          "session_intelligence_engine.js"
+        ],
+        "assessment": "FRAMEWORK EXISTS but MANUAL orchestration. Each gate requires human/agent invocation. No end-to-end automated pipeline."
+      },
+      "testing": {
+        "count": 12,
+        "scripts": [
+          "test_governance_guard.js",
+          "test_may_stagec.js",
+          "test_may_renderer.js",
+          "test_may_regression_r2.js",
+          "test_load_may.js",
+          "test_session_recovery.js",
+          "test_calibration.js",
+          "test_readiness.js",
+          "test_tutoring_safety.js",
+          "verify_case_packs.js",
+          "validate_integrity.js",
+          "validate_s892_items.js"
+        ],
+        "assessment": "MODERATE coverage. Governance guard tests are comprehensive (51/51). May layer and session recovery tests exist but not integrated into a CI suite."
+      },
+      "session_one_off_tools": {
+        "count_estimated": 75,
+        "description": "Session-scoped scripts for specific remediation waves, audits, or content operations (S4, S50, S75, S110, S118, S301-S320, S537, S703, S718-S722A, S803, S805, S809, S852-S899, S886-S899, session315, session316, session529, session537, session718, session719, session916).",
+        "assessment": "LOW ongoing value. Most are one-off execution tools. ~22 flagged as candidate_archive by SESSION950. 109 already archived in previous sweep."
+      },
+      "uncategorized_sprawl": {
+        "count_estimated": 67,
+        "description": "Debug scripts, ad-hoc checks, utility fragments, abandoned prototypes, agent-named utilities with no clear function, underscore-prefixed abandoned files.",
+        "examples": [
+          "debug_brace.js, debug_bounds.js, debug_positions.js (5 debug variants)",
+          "check_ew.js, check_packc.js, check_variants.js (ad-hoc field checks)",
+          "_s809_enhance_report.js, _s809_explanation_review.js (underscore-prefixed abandoned)",
+          "agent_b_case_schema_audit.js, agent_b_deep_check.js (uncertain purpose)",
+          "s50_debug_qid.js, s50_integrate_replacements.js (S50 leftovers)"
+        ],
+        "assessment": "Operational noise. No structured purpose. Inflates script count by 53.1% (119/224). SESSION950 cataloged 22 as uncertain; many more are unexamined."
+      }
+    },
+    "uncategorized_count": 119,
+    "categorized_count": 105,
+    "uncategorized_percentage": 53.1
+  },
+  
+  "governance_guard_assessment": {
+    "rules": 9,
+    "all_block_level": true,
+    "test_suite_passing": "51/51",
+    "parser_quality": "STRING_AWARE_BRACE_MATCHING",
+    "dl029_status": "RESOLVED",
+    "rules_detail": {
+      "RULE_1": "question_state changes must pair with REVISION_HISTORY.md updates (BLOCK at session idle)",
+      "RULE_2": "ExplanationWrong[CorrectChoice] must be empty — DL-008 enforcement (BLOCK at write time)",
+      "RULE_3": "MASTER_QUESTION_REGISTRY.md is generated, never hand-edited (BLOCK at file target)",
+      "RULE_4": "answer-key changes must include recomputed verification note (BLOCK at session idle)",
+      "RULE_5": "<=30 question objects per change-set without authorization marker (BLOCK at write time)",
+      "RULE_6": "non-CorrectChoice ExplanationWrong slots must be non-empty — DL-026 enforcement (BLOCK at write time)",
+      "RULE_7": "Derived registries must not be hand-edited (BLOCK at file target)",
+      "RULE_8": "Session packages must be registered (BLOCK at file target)",
+      "RULE_9": "Choice binary lead-in polarity mismatch — DL-037 enforcement (BLOCK at write time)"
+    },
+    "fully_automated": true,
+    "manual_steps_remaining": [
+      "Rules 1 and 4 enforcement is at session idle — writes are allowed but flagged at end. The pairing (REVISION_HISTORY update + recomputed note) is still manually authored.",
+      "The guard cannot verify that REVISION_HISTORY entries are contemporaneous — it only checks that the file was touched.",
+      "No automated cross-verification that recomputed notes are mathematically correct."
+    ],
+    "is_only_reliable_component": true,
+    "reliability_rating": "HIGH"
+  },
+  
+  "registry_pipeline_assessment": {
+    "MASTER_QUESTION_REGISTRY_md_last_modified": "2026-07-26 21:04:06",
+    "days_stale": 2,
+    "generation_trigger": "MANUAL — npm run build-registry or node scripts/generate_registry.js",
+    "depends_on": ["build_master_registry.js (produces CSV)", "generate_registry.js (produces .md)"],
+    "issues": [
+      "SECTION CATEGORIZATION BROKEN: Registry shows sections I, P, T, U instead of A-F — pull-parsing defect or stale source",
+      "COUNT DRIFT: Registry says 2,975 questions; actual should be ~2,940 (2,540 MCQ + ~400 case items)",
+      "MANUAL APPEND present: S316 Wave 2 entries were manually appended with 'RULE 3 exception' annotation — indicates automation was not trusted",
+      "STALE: 2 days behind. Any pack change since 2026-07-26 21:04 is not reflected.",
+      "NO AUTOMATIC TRIGGER: No file watcher, no post-write hook, no CI pipeline step"
+    ],
+    "consumed_by_automated_tool": false,
+    "consumed_by": ["Manual human/agent lookup during certification planning"]
+  },
+  
+  "baselines_management_assessment": {
+    "CURRENT_BASELINES_md": "knowledge/CURRENT_BASELINES.md",
+    "update_method": "MANUAL — ad-hoc rebuild_baselines_s*.js scripts run after pack modifications",
+    "hash_capture": "PowerShell Get-FileHash -Algorithm SHA256 → manual insertion into .md",
+    "t0_tmid_tend_sequence": "MANUAL — agent reads AGENTS.md §13.1 and runs checks manually. No automated checkpoint system.",
+    "auto_regeneration": false,
+    "fragility": "rebuild_baselines scripts are regex-based text replacements on the .md file — not full regeneration from source",
+    "drift_detection": "MANUAL — session startup reads CURRENT_BASELINES.md, runs hashes, compares. No automated drift alert."
+  },
+  
+  "defect_detection_automation": {
+    "DL_008": {
+      "scan_automated": false,
+      "scan_method": "scan_dl008_fn.js (Function constructor, CC-position-aware, HIGH quality)",
+      "block_automated": true,
+      "block_method": "governance-guard Rule 2 (BLOCK at write time)",
+      "false_positive_rate": "0% (string-aware brace matching, S726 fix)"
+    },
+    "DL_026": {
+      "scan_automated": false,
+      "scan_method": "scan_s710r_dl026.js (Function constructor, HIGH quality)",
+      "block_automated": true,
+      "block_method": "governance-guard Rule 6 (BLOCK at write time, S814)",
+      "false_positive_rate": "0% (Function constructor parse)"
+    },
+    "DL_021": {
+      "scan_automated": false,
+      "scan_method": "scan_dl021_s828.js (Function constructor, MEDIUM quality)",
+      "block_automated": false,
+      "block_method": "None — DL-021 (absent EW fields) has no governance guard rule",
+      "false_positive_rate": "Low"
+    },
+    "DL_037": {
+      "scan_automated": false,
+      "scan_method": "scan_logic_inversions.js (string-aware extraction, HIGH quality)",
+      "block_automated": true,
+      "block_method": "governance-guard Rule 9 (BLOCK at write time, S913)",
+      "false_positive_rate": "Low"
+    },
+    "DL_010": {
+      "scan_automated": false,
+      "scan_method": "None — no automated scanner exists",
+      "block_automated": false,
+      "block_method": "None",
+      "note": "Semantic misassignment requires NLP — not automatable with current tooling"
+    },
+    "dl029_methodology_gap_status": "MOSTLY RESOLVED. Governance guard, scan_dl008_fn, scan_s710r_dl026, scan_logic_inversions all use CC-position-aware parsing. Some older scripts (check_ew.js, session86_*_scan.js) still use forward-scan regex — marked candidate_archive."
+  },
+  
+  "workflow_automation_ratios": {
+    "certifying_a_batch": {
+      "automated_steps": 3,
+      "manual_steps": 6,
+      "ratio": "33% automated",
+      "details": {
+        "automated": [
+          "1. Run identity_validator.js (Gate -1)",
+          "2. Run scan_orchestrator.js (Gates 0-4)",
+          "3. Governance guard blocks structural defects at write time"
+        ],
+        "manual": [
+          "1. Identify candidate items (readiness_scorer — manual invocation required)",
+          "2. Run certification_candidate_engine.js (manual invocation)",
+          "3. Content verification (CAQS 6-dimension — requires human/agent judgment)",
+          "4. Batch preparation and packaging",
+          "5. REVISION_HISTORY.md update (must be manually authored)",
+          "6. CURRENT_BASELINES.md update (must be manually invoked)"
+        ]
+      }
+    },
+    "running_dl008_scan": {
+      "automated_steps": 2,
+      "manual_steps": 1,
+      "ratio": "67% automated",
+      "details": {
+        "automated": ["1. scan_dl008_fn.js parses via Function constructor", "2. Results extraction"],
+        "manual": ["1. Invoke script with correct pack parameters"]
+      }
+    },
+    "regenerating_registry": {
+      "automated_steps": 2,
+      "manual_steps": 2,
+      "ratio": "50% automated",
+      "details": {
+        "automated": ["1. build_master_registry.js → CSV", "2. generate_registry.js → .md"],
+        "manual": ["1. Invoke both scripts", "2. Verify no drift vs pack sources"]
+      }
+    },
+    "updating_baselines": {
+      "automated_steps": 1,
+      "manual_steps": 4,
+      "ratio": "20% automated",
+      "details": {
+        "automated": ["1. Get-FileHash -Algorithm SHA256 (PowerShell command, quick)"],
+        "manual": [
+          "1. Run hashes on all files manually",
+          "2. Edit/update CURRENT_BASELINES.md with new hashes",
+          "3. Update provenance notes for each changed file",
+          "4. Verify certified pool counts and defect status sections"
+        ]
+      }
+    },
+    "running_governance_tests": {
+      "automated_steps": 1,
+      "manual_steps": 0,
+      "ratio": "100% automated",
+      "details": { "automated": ["node scripts/test_governance_guard.js — single command"] }
+    },
+    "pre_delivery_safety_check": {
+      "automated_steps": 0,
+      "manual_steps": 5,
+      "ratio": "0% automated",
+      "details": {
+        "manual": [
+          "1. Grep for Certified-only filter in app.js",
+          "2. Count Certified items across all packs",
+          "3. Extract all Certified QIDs",
+          "4. Cross-reference against DEFECT_LIBRARY defective QIDs",
+          "5. Verify known-defective QIDs excluded from delivery pool"
+        ]
+      }
+    }
+  },
+  
+  "tool_quality_assessment": {
+    "high_quality_cc_position_aware": [
+      "governance-guard.js (string-aware brace matching)",
+      "test_governance_guard.js (same extractor)",
+      "scan_dl008_fn.js (Function constructor)",
+      "scan_s710r_dl026.js (Function constructor)",
+      "scan_dl021_s828.js (Function constructor)",
+      "scan_logic_inversions.js (string-aware extraction)"
+    ],
+    "moderate_quality": [
+      "validate.js → ValidatorRunner → validators/* (DL-020 brace-matcher fixed, but some validators still use older extraction)",
+      "scan_orchestrator.js (uses pack_reader engine — Function constructor)",
+      "certification_candidate_engine.js (uses pack_reader engine)"
+    ],
+    "low_quality_forward_scan": [
+      "check_ew.js (forward-scan regex from QID, DL-029 susceptible)",
+      "session86_dl8_scan.js (marked candidate_archive)",
+      "session86_dl026_scan.js (marked candidate_archive)"
+    ],
+    "dl028_tooling_regression_status": "UNFIXED. DL-013 remediation short-form rewrite script left empty rotation-template slots. Root cause documented (DEFECT_LIBRARY.md DL-028). No tooling fix applied.",
+    "overall_tool_quality_rating": "MODERATE. Active tools are high-quality. Legacy sprawl contains unreliable forward-scan scripts. 53.1% of scripts are uncategorized/unreliable."
+  },
+  
+  "ci_cd_assessment": {
+    "exists": false,
+    "github_actions": false,
+    ".github_directory": false,
+    "npm_test_script": false,
+    "package_json_scripts": {
+      "validate": "node scripts/validate.js",
+      "registry": "node scripts/build_master_registry.js",
+      "audit": "node scripts/section_a_validation_batch.js",
+      "dashboard": "node scripts/build_dashboard.js",
+      "build-registry": "node scripts/build_master_registry.js && node scripts/generate_registry.js",
+      "generate-registry": "node scripts/generate_registry.js"
+    },
+    "note": "No CI/CD pipeline. All scripts are manual-invoke only. No pre-commit hooks, no automated regression on push, no artifact publishing."
+  },
+  
+  "automation_score": {
+    "score": 48,
+    "status": "AT RISK",
+    "target": 55,
+    "gap": 7,
+    "component_scores": {
+      "governance_guard_automation": { "score": 19, "max": 20, "notes": "9 BLOCK rules, 51/51 tests, string-aware parsing. Strongest component." },
+      "validator_automation": { "score": 8, "max": 15, "notes": "11 validators exist but manual invocation. No CI integration. Some older extraction methods." },
+      "defect_scanning_automation": { "score": 5, "max": 15, "notes": "Scanners exist for DL-008/026/021/037 but all require manual invocation. DL-010 has no scanner." },
+      "registry_automation": { "score": 3, "max": 10, "notes": "Generation scripts exist but stale (2 days), broken section categorization, manual-only invocation." },
+      "baselines_automation": { "score": 2, "max": 10, "notes": "rebuild_baselines scripts are regex-replace hacks. Hash capture is manual. No auto-regeneration." },
+      "ci_cd_automation": { "score": 0, "max": 10, "notes": "No CI/CD pipeline, no automated testing, no pre-commit hooks." },
+      "pre_delivery_automation": { "score": 1, "max": 10, "notes": "Pre-delivery safety check is 100% manual. No automated delivery-pool verification." },
+      "script_hygiene": { "score": 4, "max": 10, "notes": "53.1% scripts uncategorized. ~67 sprawl scripts. No structured categorization system." }
+    }
+  },
+  
+  "key_gaps_preventing_55": [
+    {
+      "gap": "No CI/CD pipeline",
+      "impact": "Every script runs manually. No automated regression on file change. No pre-commit gate.",
+      "fix_gain": "+5 points",
+      "effort": "HIGH — requires CI infrastructure setup (GitHub Actions or equivalent), test runner integration, artifact publishing"
+    },
+    {
+      "gap": "No automated pre-delivery safety check",
+      "impact": "Learner-pool safety depends entirely on manual grepping. Standing safety checks are manual.",
+      "fix_gain": "+3 points",
+      "effort": "MEDIUM — write a single script that: (1) verifies question_state filter in app.js, (2) counts Certified items, (3) extracts QIDs, (4) cross-references DEFECT_LIBRARY"
+    },
+    {
+      "gap": "Registry stale and broken",
+      "impact": "MASTER_QUESTION_REGISTRY.md is 2 days stale with broken section categorization. Not consumed by any tool.",
+      "fix_gain": "+2 points",
+      "effort": "LOW — fix generate_registry.js section extraction (broken I/P/T/U → A-F mapping). Add to npm scripts. Re-run."
+    },
+    {
+      "gap": "Baselines fully manual",
+      "impact": "After every pack modification, human/agent must manually hash all files and update CURRENT_BASELINES.md.",
+      "fix_gain": "+2 points",
+      "effort": "MEDIUM — write a rebuild_baselines_full.js that: hashes all runtime files via crypto.createHash('sha256'), reads CURRENT_BASELINES.md, diffs, and updates only changed entries"
+    },
+    {
+      "gap": "DL-028 tooling regression unfixed",
+      "impact": "DL-013 remediation tool short-form rewrite pattern is known to create empty distractor slots. No fix applied.",
+      "fix_gain": "+1 point",
+      "effort": "LOW — add post-processing step to DL-013 remediation scripts: verify all 3 non-CC EW slots are non-empty after rewrite"
+    },
+    {
+      "gap": "Script cataloging and sprawl reduction",
+      "impact": "53.1% of scripts are uncategorized. 67+ are ad-hoc sprawl. No structured taxonomy for the scripts directory.",
+      "fix_gain": "+1 point",
+      "effort": "MEDIUM — (1) tag each script with category, (2) archive confirmed one-offs, (3) delete duplicates, (4) create scripts/README.md with taxonomy"
+    }
+  ],
+  
+  "recommendation_roadmap_to_55": {
+    "phase_1_quick_wins_1_2_points": [
+      "Fix generate_registry.js section extraction → re-run to refresh MASTER_QUESTION_REGISTRY.md",
+      "Write pre-delivery-safety-check.js → single-command delivery pool verification",
+      "Write rebuild_baselines_full.js → single-command hash capture + CURRENT_BASELINES.md update",
+      "Add DL-028 post-processing verification to DL-013 remediation template"
+    ],
+    "phase_2_structural_2_4_points": [
+      "Set up GitHub Actions CI: on push → run validate.js + test_governance_guard.js + pre-delivery-safety-check.js",
+      "Add npm run ci script that chains all three checks",
+      "Catalog and archive scripts/: create taxonomy, move confirmed one-offs to archive/scripts/"
+    ],
+    "phase_3_integration_1_2_points": [
+      "Wire pre-delivery-safety-check.js as gate before any learner session launch",
+      "Auto-generate registry on pack file write (governance guard post-write hook or file watcher)",
+      "Auto-update CURRENT_BASELINES.md on pack file hash change"
+    ],
+    "projected_score_after_phase_1_only": 53,
+    "projected_score_after_all_phases": 58
+  },
+  
+  "governance_guard_only_reliable_component": true,
+  "verdict": "The governance guard plugin is the only fully automated, high-quality, self-testing automation component in the entire repository. All 9 BLOCK rules, 51/51 tests, and string-aware CC-position-aware parsing make it production-grade. Everything else — defect scanning, registry generation, baselines management, certification pipeline, pre-delivery safety check — requires manual invocation by a human or agent. The S362 score of 48/100 is ACCURATE and the 53.1% uncategorized script rate confirms the sprawl problem."
+}

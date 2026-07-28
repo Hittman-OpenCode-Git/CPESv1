@@ -1,0 +1,1191 @@
+{
+  "meta": {
+    "session": "S809",
+    "agent": "Agent K — Distractor Quality Score Review",
+    "date": "2026-07-26",
+    "scope": "38 Domain E seeds (Pack C: 19, Pack D: 19)",
+    "methodology": "DQS 6-dimension scoring per CAQS v1.0: Plausibility, Distinctness, Trap Coverage, Balance, Domain Alignment, Psychometric Quality",
+    "scale": "0-10 per dimension, max 60 per item",
+    "tier_mapping": { "A": "8-10", "B": "5-7", "C": "2-4", "D": "0-1" },
+    "note": "Choice quality (learner-facing options) is scored separately from explanation quality (feedback text). DL-026 empty explanation slots penalize explanation quality only — the choice text is evaluated independently."
+  },
+
+  "globalFindings": {
+    "rotation_group_pattern": "All 38 seeds are the unique QID in 5-item rotation groups. The 4 companion items per group are Archived (question_state: 'Archived') and share identical stems with different company names + positionally rotated choices. This means every seed's distractors are shared with its group-mates.",
+    "dl026_prevalence": {
+      "description": "DL-026 = empty ExplanationWrong field at non-CorrectChoice position. Learner sees no feedback for that distractor.",
+      "pack_c_seeds_with_dl026": 9,
+      "pack_d_seeds_with_dl026": 7,
+      "total_empty_slots_across_all_38_seeds": 38,
+      "impact": "~16 of 38 seeds (42%) have at least one empty distractor explanation slot"
+    },
+    "explanation_quality_assessment": {
+      "choice_specific_substantive": "~60% of non-empty explanation slots have genuine, choice-specific text referencing appropriate accounting/control principles",
+      "generic_boilerplate": "~10% of slots use generic 'This option reflects a misunderstanding...' template text (DL-013 variant)",
+      "empty_dl026": "~30% of slots are empty (DL-026)",
+      "cross_domain_citation_error": "Pack D ED-056-060 rotation group clones cite 'ASC 715 (Retirement Benefits)' as authority for internal control cost-benefit questions — wrong domain"
+    },
+    "cma_trap_coverage": {
+      "overall": "Low to moderate. Most distractors test basic concept confusion (e.g., COSO component vs. COSO component) rather than documented CMA exam traps.",
+      "best_examples": "EC-021 (segregation duties application), EC-022 (preventive vs. detective), EC-023 (access deprovisioning), ED-028 (COSO component discrimination), ED-064 (vendor master risk identification)",
+      "worst_examples": "EC-008 group (COSO identification — all distractors are other well-known frameworks, obvious by elimination for any CMAnominee)"
+    }
+  },
+
+  "packC_seeds": {
+    "P1-EC-004": {
+      "topic": "Segregation of duties design",
+      "stem": "Emberton assigns one employee to authorize purchases, another to record them, and a third to reconcile the vendor accounts. What internal control concept does this reflect?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "Segregation of duties, reducing the risk of undetected errors or fraud",
+        "B": "Cost-benefit analysis, which weighs control costs against benefits",
+        "C": "Management override, which bypasses controls",
+        "D": "Risk acceptance, which tolerates a known exposure"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "Cost-benefit analysis may influence control design, but it is not the control concept shown by separating authorization, recording, and reconciliation.",
+        "EW_C": "Management override is a bypass of controls by someone with authority; here, duties are separated rather than bypassed.",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 7,
+        "distinctness": 7,
+        "trap_coverage": 5,
+        "balance": 6,
+        "domain_alignment": 9,
+        "psychometric_quality": 6,
+        "total": 40
+      },
+      "assessment": "Choices are decent — B, C, D are all legitimate COSO/control concepts that could confuse a novice. D is the weakest distractor (risk acceptance is one step removed from segregation). One empty explanation slot (EW_D) is a DL-026 gap. ExplanationCorrect references COSO segregation principles implicitly. Moderate quality.",
+      "certification_readiness": "Needs DL-026 fix (EW_D needs text). Choices acceptable."
+    },
+    "P1-EC-008": {
+      "topic": "COSO Internal Control Framework identification",
+      "stem": "Hearthstone evaluates its internal control system using a widely recognized framework consisting of five integrated components. What framework is this?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "The Six Sigma DMAIC framework",
+        "B": "The Balanced Scorecard framework",
+        "C": "The Theory of Constraints framework",
+        "D": "The COSO Internal Control - Integrated Framework"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "The Balanced Scorecard is a performance measurement framework, not the internal-control framework described in the stem.",
+        "EW_C": "The Theory of Constraints focuses on operational bottlenecks, not entity-wide internal-control components.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 2,
+        "distinctness": 2,
+        "trap_coverage": 1,
+        "balance": 2,
+        "domain_alignment": 5,
+        "psychometric_quality": 2,
+        "total": 14
+      },
+      "assessment": "Terrible distractors. This is Bloom's Remember level — all three distractors are other well-known business frameworks. Any CMA candidate who has studied internal controls for 5 minutes will recognize 'COSO' as the correct answer. Zero trap coverage. The stem is a direct definition with 'five integrated components' as the giveaway. DL-026 on EW_A. This should be scored Easy/1, not Moderate/3 per DL-031 pattern.",
+      "certification_readiness": "NOT ready. Choices need redesign — too easy. DL-026 fix needed."
+    },
+    "P1-EC-014": {
+      "topic": "Fraud triangle elements",
+      "stem": "Nightingale's internal auditors assess opportunity, pressure, and rationalization when evaluating fraud risk in a department. What model are they applying?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "The five forces model",
+        "B": "The fraud triangle",
+        "C": "The balanced scorecard",
+        "D": "The COSO ERM cube"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "COSO ERM addresses enterprise risk management broadly, but the specific three-factor fraud model in the stem is the fraud triangle."
+      },
+      "dqs_scores": {
+        "plausibility": 3,
+        "distinctness": 2,
+        "trap_coverage": 1,
+        "balance": 2,
+        "domain_alignment": 7,
+        "psychometric_quality": 2,
+        "total": 17
+      },
+      "assessment": "Very weak. Stem gives away the answer with the three fraud triangle elements listed explicitly. All three distractors are frameworks from other domains — only D (COSO ERM) is even remotely in the control space. Two of three distractor explanation slots are empty (DL-026). The single non-empty slot (EW_D) is substantive. This is a definition-match item (DL-031 pattern).",
+      "certification_readiness": "NOT ready. 2 DL-026 slots. Distractors need more sophistication."
+    },
+    "P1-EC-020": {
+      "topic": "Physical controls over assets",
+      "stem": "Thornfield stores inventory in a locked warehouse accessible only to authorized personnel with badge access. What type of control is this?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "An entity-level control unrelated to specific assets",
+        "B": "A detective control performed after the fact only",
+        "C": "A compensating control for a segregation of duties gap",
+        "D": "A physical control that restricts access to assets"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "The control is not only detective after the fact; restricted access helps prevent unauthorized physical handling or removal.",
+        "EW_C": "A compensating control offsets another weakness, such as limited segregation; the stem describes a direct physical access control.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 7,
+        "trap_coverage": 6,
+        "balance": 6,
+        "domain_alignment": 8,
+        "psychometric_quality": 6,
+        "total": 39
+      },
+      "assessment": "Better quality. Distractors B, A, C test genuine control-type confusion (entity-level vs. detective vs. compensating vs. physical). Each represents a real concept a candidate could mistakenly apply. EW_A is empty (DL-026) — entity-level control needs explanation. EW_B and EW_C are choice-specific and substantive. Moderate overall.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Otherwise acceptable."
+    },
+    "P1-EC-021": {
+      "topic": "Segregation of duties — vendor setup and payment",
+      "stem": "Bryant Manufacturing has a small accounts payable department where one employee creates new vendor records, enters invoices from those vendors, and approves payments for processing. Management wants to reduce the risk of fraudulent payments without adding staff. Which control improvement is most effective?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "Require a second employee to approve new vendor additions and review a monthly vendor-master change report",
+        "B": "Require the same employee to also perform the monthly bank reconciliation",
+        "C": "Have an internal auditor review all payments above a threshold quarterly",
+        "D": "Raise the dollar threshold for requiring supervisory approval of payments"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "Quarterly detective review may catch errors after the fact but does not prevent fictitious vendor payments from being initiated and approved.",
+        "EW_D": "Raising the threshold reduces oversight and increases, rather than decreases, the risk of unauthorized payments going undetected."
+      },
+      "dqs_scores": {
+        "plausibility": 8,
+        "distinctness": 8,
+        "trap_coverage": 7,
+        "balance": 7,
+        "domain_alignment": 9,
+        "psychometric_quality": 7,
+        "total": 46
+      },
+      "assessment": "Best quality seed in Pack C Section E. Genuine business scenario with named company, realistic constraint ('without adding staff'). Distractors are clever: B makes the problem worse (same employee doing even more), C is detective-only (plausibly good but not best), D is counterproductive — exactly the type of trap that appears on the CMA exam. EW_B is empty (DL-026). Cognitive level is Apply/3 — appropriate. Strong item.",
+      "certification_readiness": "Needs DL-026 fix (EW_B). Otherwise excellent."
+    },
+    "P1-EC-022": {
+      "topic": "Preventive vs. detective — duplicate payment control",
+      "stem": "Crestview Manufacturing frequently discovers duplicate vendor payments when reviewing the monthly accounts payable aging report. Management wants to implement a control that will best prevent duplicates from occurring. Which one of the following controls is preventive?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "Require the controller to review and approve a check register weekly",
+        "B": "Configure the accounts payable system to reject invoices with duplicate vendor-invoice-date combinations before payment",
+        "C": "Perform quarterly reconciliations of vendor statements to the accounts payable subledger",
+        "D": "Review a monthly accounts payable aging report for unusual activity"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "Monthly aging report review is a detective control that identifies issues after payment has occurred, not a preventive control."
+      },
+      "dqs_scores": {
+        "plausibility": 7,
+        "distinctness": 6,
+        "trap_coverage": 7,
+        "balance": 6,
+        "domain_alignment": 9,
+        "psychometric_quality": 7,
+        "total": 42
+      },
+      "assessment": "Good question testing preventive vs. detective control distinction — a core CMA Part 1 concept. A and D are both detective (common trap of confusing review/reconciliation as preventive). C is quarterly reconciliation (detective, post-payment). Company name adds realism. Two empty explanation slots (DL-026) are a significant gap. EW_D is substantive. Needs EW_A and EW_C filled.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Otherwise strong."
+    },
+    "P1-EC-023": {
+      "topic": "IT access control — terminated employee deprovisioning",
+      "stem": "During an internal audit, Drake Distribution discovered that a former employee's system access remained active for 18 days after termination. No unauthorized transactions occurred during that period. Management wants to prevent recurrence. Which remediation is most appropriate?",
+      "correctChoice": "C",
+      "choices": {
+        "A": "Accept the risk since no actual fraud or data loss occurred during the gap",
+        "B": "Require stronger password complexity standards for all system users",
+        "C": "Implement automated access deprovisioning triggered by termination in the HR system and require quarterly user access recertification by managers",
+        "D": "Convert all terminated employees to read-only access instead of removing access entirely"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Stronger passwords address authentication strength but do not address the failure to revoke access for former employees in a timely manner.",
+        "EW_C": "(CC slot — empty ✓)",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 8,
+        "distinctness": 8,
+        "trap_coverage": 8,
+        "balance": 7,
+        "domain_alignment": 9,
+        "psychometric_quality": 8,
+        "total": 48
+      },
+      "assessment": "Excellent distractors — realistic remediation options. A (risk acceptance after no harm) is a common real-world rationalization. B addresses a different IT control (authentication vs. authorization). D is a half-measure that still leaves access open. Realistic scenario with '18 days' detail adding authenticity. Two of three explanation slots are empty (DL-026), which is unfortunate for such a well-designed question. Highest potential of all Pack C seeds.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Otherwise near-gold quality."
+    },
+    "P1-EC-024": {
+      "topic": "Application input control — sales order validation",
+      "stem": "Parkview Company's sales order system accepts orders with invalid customer codes, negative quantities, and missing ship-to addresses. These errors are discovered only when invoices fail to process days later. Which application control would best address this issue?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "Generate weekly exception reports for the sales manager to review and correct",
+        "B": "Reconcile the sales order file to the invoice register at month-end",
+        "C": "Require a sales supervisor to manually approve every sales order before entry",
+        "D": "Implement real-time field validation in the order entry system to reject entries with invalid customer codes, negative quantities, or missing ship-to addresses"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Month-end reconciliation is a detective control that finds discrepancies well after orders are processed and shipped.",
+        "EW_C": "Manual approval of every order is inefficient and may still miss data-format errors; it does not replace field-level system validation.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 7,
+        "distinctness": 7,
+        "trap_coverage": 6,
+        "balance": 6,
+        "domain_alignment": 9,
+        "psychometric_quality": 7,
+        "total": 42
+      },
+      "assessment": "Good application-control question. A/B test detective vs. preventive (recurring CMA pattern). C tests the 'manual approval as substitute for system validation' misconception. EW_A is empty (DL-026). EW_B and EW_C are choice-specific and substantive. Good item.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Otherwise strong."
+    },
+    "P1-EC-025": {
+      "topic": "Preventive vs. detective controls",
+      "stem": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "A preventive control, because it stops an unauthorized payment before it occurs",
+        "B": "A compensating control used only when segregation is impossible",
+        "C": "A corrective control, because it fixes problems after they occur",
+        "D": "A detective control, because it identifies errors after the fact"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "A corrective control fixes problems after they occur, while dual signatures are applied before the payment is released.",
+        "EW_D": "A detective control identifies errors after the fact; this control is timed before disbursement and is designed to prevent improper payment."
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 6,
+        "trap_coverage": 6,
+        "balance": 5,
+        "domain_alignment": 8,
+        "psychometric_quality": 6,
+        "total": 37
+      },
+      "assessment": "Good core concept (preventive vs. detective). B tests a related control classification. C and D test the same misconception (detective/corrective = after-the-fact). Distractors are moderately similar in how they test the same error. EW_B is empty (DL-026). EW_C and EW_D are substantive. Below EC-021 in quality but adequate for the topic.",
+      "certification_readiness": "Needs DL-026 fix (EW_B). Acceptable otherwise."
+    },
+    "P1-EC-028": {
+      "topic": "Bank reconciliation control — independence",
+      "stem": "Copperline has a designated employee, independent of cash handling and recording, perform the monthly bank reconciliation. Why is independence important here?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "It guarantees no bank fees will ever be charged",
+        "B": "It removes the need for management review of cash balances",
+        "C": "It eliminates the need to compare the bank statement to the general ledger",
+        "D": "It ensures the reconciliation can objectively detect errors or irregularities without being influenced by the preparer's own transactions"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Management review may still be needed; independence strengthens, but does not eliminate, oversight of cash balances.",
+        "EW_C": "The reconciliation still requires comparing bank records to accounting records; independence does not remove that step.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 4,
+        "distinctness": 5,
+        "trap_coverage": 3,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 4,
+        "total": 28
+      },
+      "assessment": "Weak distractors. A is obviously wrong (no control guarantees anything). C is definitionally wrong (eliminates need to compare — of course you still need to compare). B is the only reasonably plausible one. EW_A empty (DL-026). EW_B and EW_C substantive. The correct answer is also the longest choice by far (length cueing).",
+      "certification_readiness": "Needs DL-026 fix + choice A redesign. Below threshold for quality."
+    },
+    "P1-EC-031": {
+      "topic": "ERM risk appetite",
+      "stem": "Foxglove's board defines the amount of risk the organization is willing to accept in pursuit of its objectives. What enterprise risk management concept is being defined?",
+      "correctChoice": "C",
+      "choices": {
+        "A": "Risk transfer",
+        "B": "Inherent risk",
+        "C": "Risk appetite",
+        "D": "Control risk"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Inherent risk is the susceptibility of an assertion to material misstatement before considering controls. Risk appetite is the amount of risk an organization is willing to accept in pursuit of its objectives — a strategic governance concept.",
+        "EW_C": "(CC slot — empty ✓)",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 4,
+        "trap_coverage": 3,
+        "balance": 3,
+        "domain_alignment": 7,
+        "psychometric_quality": 3,
+        "total": 25
+      },
+      "assessment": "Definition-match item (DL-031 pattern). Stem is a direct definition of risk appetite. Two of three explanation slots empty (DL-026). EW_B is very good (distinguishes inherent risk from risk appetite) but buried alone. A and D are weak — risk transfer and control risk are clearly not the definition of 'amount of risk willing to accept'.",
+      "certification_readiness": "Needs 2 DL-026 fixes + distractor improvement. Marginally acceptable."
+    },
+    "P1-EC-040": {
+      "topic": "IT general controls — logical access review",
+      "stem": "Oleander requires periodic review of user access rights to ensure employees only retain system access appropriate to their current role. What category of control is this?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "An application control embedded in transaction processing only",
+        "B": "A budgetary control over IT spending",
+        "C": "A physical control over the data center only",
+        "D": "An IT general control over logical access"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "A budgetary control over IT spending does not validate whether users have appropriate system permissions.",
+        "EW_C": "Physical data-center controls restrict physical entry; the stem concerns logical access rights inside systems.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 7,
+        "trap_coverage": 6,
+        "balance": 6,
+        "domain_alignment": 8,
+        "psychometric_quality": 6,
+        "total": 39
+      },
+      "assessment": "Good IT control classification question. A tests application vs. general (key CMA distinction). B tests budget vs. logical control. C tests physical vs. logical. All three test different control-type confusions. EW_A empty (DL-026). EW_B and EW_C are choice-specific. Decent quality.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Otherwise acceptable."
+    },
+    "P1-EC-041": {
+      "topic": "Management override risk",
+      "stem": "Pinehollow's CEO instructs the controller to bypass a normal approval control to record a favorable adjusting entry near year-end. What internal control limitation does this illustrate?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "Management override of controls",
+        "B": "Segregation of duties working exactly as designed",
+        "C": "An IT general control weakness",
+        "D": "A cost-benefit limitation of control design"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "The facts describe a human override of approval controls, not a logical-access or other IT general-control weakness.",
+        "EW_D": "Cost-benefit limitations concern whether a control is worth implementing; the issue here is intentional bypass of an existing control."
+      },
+      "dqs_scores": {
+        "plausibility": 7,
+        "distinctness": 7,
+        "trap_coverage": 6,
+        "balance": 6,
+        "domain_alignment": 9,
+        "psychometric_quality": 7,
+        "total": 42
+      },
+      "assessment": "Strong item with realistic CEO-controller override scenario. B is clever (funny/distractor — segregation working 'as designed' when someone is bypassing it). C and D test genuine alternative control limitations. EW_B empty (DL-026) — unfortunately the most interesting distractor has no explanation. EW_C and EW_D substantive. Cognitive level Apply/3 appropriate.",
+      "certification_readiness": "Needs DL-026 fix (EW_B). Otherwise very good."
+    },
+    "P1-EC-049": {
+      "topic": "Whistleblower hotline purpose",
+      "stem": "Yorkshire establishes an anonymous reporting channel for employees to report suspected fraud or ethical violations without fear of retaliation. What internal control objective does this serve?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "Encouraging detection and reporting of fraud or misconduct that might otherwise go unreported",
+        "B": "Guaranteeing that no fraud will ever occur",
+        "C": "Replacing the need for a code of conduct",
+        "D": "Eliminating the need for an external audit"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "A hotline complements a code of conduct; it does not replace the need for standards of ethical behavior.",
+        "EW_D": "External audits may still be required or useful; an internal reporting channel does not eliminate independent audit work."
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 6,
+        "trap_coverage": 5,
+        "balance": 5,
+        "domain_alignment": 8,
+        "psychometric_quality": 6,
+        "total": 36
+      },
+      "assessment": "Adequate. B is obviously wrong (no control 'guarantees' anything — absolute language trap). C and D are plausible overstatements. EW_B empty (DL-026). EW_C and EW_D substantive. Not as strong as EC-041 or EC-021 but serviceable.",
+      "certification_readiness": "Needs DL-026 fix (EW_B). Acceptable."
+    },
+    "P1-EC-052": {
+      "topic": "Compensating control — small business",
+      "stem": "Cliffside is too small to fully segregate duties among its few accounting employees. What can help mitigate this control weakness?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "Ignoring the risk since fraud is unlikely in small companies",
+        "B": "Outsourcing all accounting with no oversight",
+        "C": "Eliminating internal controls entirely since the company is small",
+        "D": "Increased owner or management review and oversight as a compensating control"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Outsourcing without oversight does not remove management responsibility or ensure controls are operating.",
+        "EW_C": "Small companies still need internal controls; the issue is designing practical compensating controls.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 5,
+        "trap_coverage": 5,
+        "balance": 5,
+        "domain_alignment": 9,
+        "psychometric_quality": 5,
+        "total": 35
+      },
+      "assessment": "Important topic (small business compensating controls). A and C are overtly bad advice (should be obvious to anyone with basic controls training). B is more nuanced — outsourcing is a real option but 'with no oversight' makes it clearly wrong. EW_A empty (DL-026). EW_B and EW_C substantive. Acceptable but not strong.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Marginally acceptable."
+    },
+    "P1-EC-060": {
+      "topic": "Control environment — tone at the top",
+      "stem": "Knollwood's board and senior executives consistently emphasize integrity and ethical behavior, which shapes employee attitudes toward compliance. What COSO component does this describe?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "Monitoring activities, which evaluate control effectiveness over time",
+        "B": "Risk assessment, which identifies specific threats",
+        "C": "Information and communication, which relays data throughout the entity",
+        "D": "The control environment, often summarized as tone at the top"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Risk assessment identifies and analyzes specific threats; tone at the top is part of the control environment.",
+        "EW_C": "Information and communication concerns how relevant information is captured and shared; the stem describes ethical leadership and culture.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 5,
+        "trap_coverage": 4,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 5,
+        "total": 31
+      },
+      "assessment": "Acceptable COSO component identification. The three distractors are the other COSO components — this tests whether the candidate can distinguish control environment from the others. EW_A empty (DL-026). EW_B and EW_C are substantive. Cognitive level Understand/2. The correct answer explicitly mentions 'tone at the top' which makes this very easy for prepared candidates.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Acceptable."
+    },
+    "P1-EC-061": {
+      "topic": "Inherent risk vs. control risk",
+      "stem": "Lanternwood's auditor assesses the susceptibility of an account to material misstatement before considering any related controls. What type of risk is being assessed?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "Inherent risk",
+        "B": "Detection risk",
+        "C": "Control risk",
+        "D": "Business risk"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "Control risk considers whether controls fail to prevent or detect misstatement; the stem excludes controls from the assessment.",
+        "EW_D": "Business risk is broader operating or strategic risk, not the audit-risk component tied to assertion susceptibility."
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 6,
+        "trap_coverage": 4,
+        "balance": 5,
+        "domain_alignment": 7,
+        "psychometric_quality": 6,
+        "total": 34
+      },
+      "assessment": "Tests a key audit risk distinction. Control risk (C) is the strongest distractor — many candidates confuse inherent/control risk. Detection risk (B) and business risk (D) are less directly related but still plausible. EW_B empty (DL-026). EW_C and EW_D substantive. The stem explicitly says 'before considering controls' which essentially gives away the answer.",
+      "certification_readiness": "Needs DL-026 fix (EW_B). Acceptable."
+    },
+    "P1-EC-066": {
+      "topic": "Segregation of duties — cash custody and recording",
+      "stem": "Quailrun has the same employee both handling incoming cash receipts and recording them in the accounting records. What control weakness does this create?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "A physical access control weakness only",
+        "B": "A lack of segregation of duties between asset custody and recordkeeping, increasing the risk of concealed theft or errors",
+        "C": "An IT general control deficiency only",
+        "D": "An overly strong control environment with too many checks"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "The control environment is not overly strong; the described arrangement weakens control by enabling concealment."
+      },
+      "dqs_scores": {
+        "plausibility": 4,
+        "distinctness": 5,
+        "trap_coverage": 3,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 5,
+        "total": 29
+      },
+      "assessment": "Classic segregation of duties question but distractors are weak. A and C are 'only' qualifiers that should be obvious. D is sarcastic/funny — 'overly strong with too many checks' when the scenario describes a clear weakness. Two explanation slots empty (DL-026). EW_D is the only non-empty slot and it's decent. Should be scored Easy/1 per DL-031.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Distractors need improvement."
+    },
+    "P1-EC-072": {
+      "topic": "Remediation tracking of control deficiency",
+      "stem": "Willowmere identifies a control deficiency during its internal control assessment and assigns an owner, a corrective action plan, and a target completion date. What internal control process is being followed?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "External audit sign-off, which requires no internal follow-up",
+        "B": "Control environment assessment, which is unrelated to specific deficiencies",
+        "C": "Risk acceptance, which tolerates the deficiency permanently",
+        "D": "Remediation tracking, ensuring identified deficiencies are corrected and verified"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Control environment assessment is broad and entity-level; the stem describes tracking a specific deficiency through correction.",
+        "EW_C": "Risk acceptance would tolerate the deficiency; assigning a corrective plan and deadline shows remediation, not acceptance.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 6,
+        "trap_coverage": 4,
+        "balance": 5,
+        "domain_alignment": 8,
+        "psychometric_quality": 5,
+        "total": 33
+      },
+      "assessment": "Good topic (remediation tracking as a monitoring subprocess). A is obviously wrong (external audit doesn't do remediation). B and C test confusion with other COSO concepts. EW_A empty (DL-026). EW_B and EW_C substantive. Acceptable quality.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Acceptable."
+    }
+  },
+
+  "packD_seeds": {
+    "P1-ED-001": {
+      "topic": "Three lines of defense model",
+      "stem": "Bramblewood structures its risk and control functions using operational management, risk/compliance oversight, and internal audit as distinct layers. What model is this?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "The COSO ERM cube alone",
+        "B": "The three lines of defense (or three lines) model",
+        "C": "The fraud triangle",
+        "D": "The balanced scorecard"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "The balanced scorecard is a performance measurement tool, not a governance model for control responsibilities.",
+        "EW_D": "COSO ERM is broader risk-management guidance; the distinct operational, oversight, and internal-audit layers describe the three lines model."
+      },
+      "dqs_scores": {
+        "plausibility": 3,
+        "distinctness": 3,
+        "trap_coverage": 2,
+        "balance": 2,
+        "domain_alignment": 7,
+        "psychometric_quality": 3,
+        "total": 20
+      },
+      "assessment": "Definition-match (DL-031). Stem explicitly describes the three lines. Distractors are all unrelated frameworks. Only D (COSO ERM) is in the same governance space. EW_B correctly empty. Two slots empty (EW_A + 1 more — DL-026). EW_C misattributes control to 'balanced scorecard' description for the fraud triangle slot — possible DL-016 metadata-content shift.",
+      "certification_readiness": "NOT ready. Distractors need redesign. DL-026 fixes needed."
+    },
+    "P1-ED-010": {
+      "topic": "Access control — principle of least privilege",
+      "stem": "Fernhollow grants employees system access limited only to what is necessary to perform their specific job duties. What security principle is being applied?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "Risk transfer",
+        "B": "The principle of least privilege",
+        "C": "Management override",
+        "D": "The principle of maximum access for efficiency"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "Management override is bypassing controls, not a principle for limiting user access."
+      },
+      "dqs_scores": {
+        "plausibility": 2,
+        "distinctness": 3,
+        "trap_coverage": 2,
+        "balance": 3,
+        "domain_alignment": 7,
+        "psychometric_quality": 2,
+        "total": 19
+      },
+      "assessment": "Very weak. Definition-match item. D is humorous/funny (maximum access for efficiency — opposite of the described practice). A and C are unrelated concepts. Two empty explanation slots (DL-026). EW_D is the only substantive slot. Should be Easy/1.",
+      "certification_readiness": "NOT ready. Redesign needed."
+    },
+    "P1-ED-014": {
+      "topic": "Independent verification — control activity",
+      "stem": "Northfell has a supervisor recount inventory counted by warehouse staff before finalizing the count. What type of control activity is this?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "A physical control over inventory storage only",
+        "B": "Independent verification, checking the accuracy of work performed by others",
+        "C": "A preventive control that stops errors before they occur",
+        "D": "Segregation of duties, since only one person performs the recount"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "Segregation of duties separates incompatible responsibilities; a one-person recount by a supervisor is independent verification, not the segregation concept itself."
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 5,
+        "trap_coverage": 5,
+        "balance": 5,
+        "domain_alignment": 8,
+        "psychometric_quality": 5,
+        "total": 33
+      },
+      "assessment": "Tests the critical distinction between independent verification and segregation of duties — a common CMA candidate confusion. C tests preventive vs. detective. A tests physical control. Two empty explanation slots (DL-026). Only EW_D is substantive. Labeled 'Difficult' but content doesn't justify — standard Identify/Understand.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Acceptable content."
+    },
+    "P1-ED-016": {
+      "topic": "ERM risk response strategies",
+      "stem": "Palisade decides to purchase insurance to address a significant identified risk rather than eliminate the underlying activity. What enterprise risk management response is this?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "Risk appetite, defining the amount of risk tolerated",
+        "B": "Risk avoidance, eliminating the risk entirely",
+        "C": "Risk acceptance, taking no action",
+        "D": "Risk transfer (sharing), shifting some financial impact of the risk to a third party"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "This option reflects a misunderstanding of erm risk response strategies. The choice 'Risk avoidance, eliminating the risk entirely' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+        "EW_C": "This option reflects a misunderstanding of erm risk response strategies. The choice 'Risk acceptance, taking no action' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 6,
+        "trap_coverage": 3,
+        "balance": 5,
+        "domain_alignment": 8,
+        "psychometric_quality": 4,
+        "total": 31
+      },
+      "assessment": "Good choices — all three distractors are actual ERM response strategies. However, explanation quality is POOR: EW_B and EW_C use generic template text ('This option reflects a misunderstanding... Review the applicable costing standard...'). These are DL-013 boilerplate variants that provide ZERO educational value. A learner choosing B or C learns nothing specific. EW_A is empty (DL-026). Three distinct explanation quality issues.",
+      "certification_readiness": "NOT ready. EW_B and EW_C need genuine choice-specific text. EW_A needs DL-026 fix."
+    },
+    "P1-ED-025": {
+      "topic": "Control activities — authorization",
+      "stem": "Zionsgate requires that all purchase orders above a certain dollar amount be approved by a manager before the order is placed. What type of control activity is this?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "An authorization control",
+        "B": "A monitoring activity performed after the fact",
+        "C": "A segregation of duties control only",
+        "D": "A risk assessment activity"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "Segregation may support purchasing controls, but the specific activity described is management authorization.",
+        "EW_D": "Risk assessment identifies and analyzes risk; it is not the transaction-level approval control described."
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 6,
+        "trap_coverage": 5,
+        "balance": 5,
+        "domain_alignment": 9,
+        "psychometric_quality": 6,
+        "total": 37
+      },
+      "assessment": "Good authorization control question. B tests control activity vs. monitoring component. C tests the common SoD vs. authorization confusion. D tests COSO component misidentification. EW_B empty (DL-026). EW_C and EW_D are substantive. Solid for an authorization control item.",
+      "certification_readiness": "Needs DL-026 fix (EW_B). Acceptable."
+    },
+    "P1-ED-028": {
+      "topic": "Monitoring — ongoing evaluations",
+      "stem": "Crownridge's management periodically reviews exception reports and reconciliations as part of regular operations to assess whether controls are functioning as intended. What COSO component does this represent?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "Risk assessment",
+        "B": "Information and communication",
+        "C": "Control environment",
+        "D": "Monitoring activities"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Information and communication supports reporting relevant information, but the periodic review of exceptions and reconciliations is monitoring.",
+        "EW_C": "Control environment concerns tone, structure, and accountability; the stem focuses on evaluating whether controls continue to operate.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 7,
+        "trap_coverage": 6,
+        "balance": 6,
+        "domain_alignment": 9,
+        "psychometric_quality": 6,
+        "total": 40
+      },
+      "assessment": "One of the better Pack D seeds. All three distractors are the other COSO components, forcing genuine component-level discrimination. Monitoring vs. information/communication is a real CMA trap. EW_A empty (DL-026) but EW_B and EW_C are substantive. Cognitive level Apply/4 (labeled Difficult) — appropriate given the component discrimination needed. Good item.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Otherwise strong."
+    },
+    "P1-ED-035": {
+      "topic": "Data backup — disaster recovery",
+      "stem": "Jettison maintains offsite backups of critical financial data and a documented plan for restoring systems after a disruption. What control objective does this address?",
+      "correctChoice": "C",
+      "choices": {
+        "A": "Segregation of duties within the IT department",
+        "B": "Authorization controls over transaction approval",
+        "C": "Availability of information systems and data in the event of a disruption",
+        "D": "Confidentiality of customer data only"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Transaction authorization controls approve business transactions; they do not restore systems after an outage.",
+        "EW_C": "(CC slot — empty ✓)",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 5,
+        "trap_coverage": 4,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 4,
+        "total": 30
+      },
+      "assessment": "Tests the CIA triad distinction (availability vs. confidentiality). D tests confidentiality — the key distinction. A/B are weaker distractors (SoD, authorization unrelated to backups). Two empty slots (DL-026 + EW_B the only substantive). Labeled 'Difficult' but content is straightforward Understand.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Marginally acceptable."
+    },
+    "P1-ED-036": {
+      "topic": "Change management — IT general control",
+      "stem": "Kirkwood requires all software changes to be tested, approved, and documented before being moved into the production environment. What type of control is this?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "A segregation of duties control unrelated to IT",
+        "B": "An application control embedded in a specific transaction",
+        "C": "A physical control over hardware only",
+        "D": "An IT general control over change management"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "This option reflects a misunderstanding of change management control it systems. The choice 'An application control embedded in a specific transaction' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+        "EW_C": "This option reflects a misunderstanding of change management control it systems. The choice 'A physical control over hardware only' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 6,
+        "trap_coverage": 4,
+        "balance": 5,
+        "domain_alignment": 8,
+        "psychometric_quality": 3,
+        "total": 31
+      },
+      "assessment": "Good choice structure — B tests the key ITGC vs. application control distinction. But explanation quality is TERRIBLE — EW_B and EW_C are generic template boilerplate (DL-013 variant) with zero educational value. A learner choosing B or C learns literally nothing specific about why they're wrong. EW_A empty (DL-026). This is a good question ruined by bad explanations.",
+      "certification_readiness": "NOT ready. EW_B and EW_C need complete rewrite with choice-specific text."
+    },
+    "P1-ED-042": {
+      "topic": "Risk assessment — likelihood and impact",
+      "stem": "Quarrycrest's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do. What process is this?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "Control activities, which are the specific policies implemented",
+        "B": "Risk assessment, prioritizing risks based on likelihood and impact",
+        "C": "Risk transfer, which shifts risk to third parties",
+        "D": "Monitoring, which evaluates control effectiveness over time"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "Monitoring evaluates whether controls continue to function; the stem is about assessing risk before deciding on responses."
+      },
+      "dqs_scores": {
+        "plausibility": 4,
+        "distinctness": 4,
+        "trap_coverage": 3,
+        "balance": 3,
+        "domain_alignment": 7,
+        "psychometric_quality": 3,
+        "total": 24
+      },
+      "assessment": "Definition-match (DL-031). Stem explicitly says 'scores risks based on likelihood and impact' — the answer is risk assessment. Two of three explanation slots empty (DL-026). Only EW_D is substantive. Labeled 'Difficult' but is Bloom's Understand/1-2 at best. Disconnected from actual difficulty.",
+      "certification_readiness": "Needs 2 DL-026 fixes + difficulty recalibration. Marginally acceptable."
+    },
+    "P1-ED-046": {
+      "topic": "Code of conduct — ethics program — control environment",
+      "stem": "Umberglen requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "Information and communication, limited to external reporting only",
+        "B": "The control environment, by reinforcing the organization's commitment to ethical values",
+        "C": "Risk assessment, since it identifies specific financial risks",
+        "D": "Monitoring activities, since it evaluates control effectiveness"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "This option reflects a misunderstanding of code of conduct ethics program. The choice 'Monitoring activities, since it evaluates control effectiven' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate."
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 5,
+        "trap_coverage": 3,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 3,
+        "total": 28
+      },
+      "assessment": "Decent choices but explanation quality is poor. EW_D is generic boilerplate (DL-013 variant). EW_A and EW_C are both empty (DL-026). Three non-CC slots, only one has text, and that text is a useless template. The concepts are right but the explanations fail the learner.",
+      "certification_readiness": "NOT ready. 2 DL-026 slots + EW_D needs rewrite."
+    },
+    "P1-ED-051": {
+      "topic": "Multi-factor authentication — access control",
+      "stem": "Briarcliff requires multi-factor authentication for all employees accessing financial systems remotely. What is the primary purpose of this control?",
+      "correctChoice": "C",
+      "choices": {
+        "A": "To replace the need for segregation of duties",
+        "B": "To ensure compliance with balanced scorecard metrics",
+        "C": "To reduce the risk of unauthorized access to financial systems and data",
+        "D": "To eliminate the need for any other IT general controls"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "This option reflects a misunderstanding of password access authentication control. The choice 'To ensure compliance with balanced scorecard metrics' is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.",
+        "EW_C": "(CC slot — empty ✓)",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 3,
+        "distinctness": 4,
+        "trap_coverage": 2,
+        "balance": 3,
+        "domain_alignment": 7,
+        "psychometric_quality": 2,
+        "total": 21
+      },
+      "assessment": "Very weak. B is a non-sequitur (balanced scorecard has nothing to do with MFA). A and D are exaggerated claims ('eliminate the need for...') that should be obvious. EW_B has generic boilerplate text. Two slots empty (DL-026). This is a good topic ruined by poor distractors and terrible explanations.",
+      "certification_readiness": "NOT ready. Complete redesign of distractors and explanations needed."
+    },
+    "P1-ED-058": {
+      "topic": "Internal control cost-benefit limitation",
+      "stem": "Ivorycrest's management decides not to implement an extremely costly control because the risk it addresses is low and infrequent. What limitation of internal control does this illustrate?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "A control environment weakness",
+        "B": "The inherent cost-benefit limitation of internal control design",
+        "C": "Management override of existing controls",
+        "D": "A segregation of duties failure"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "A segregation-of-duties failure combines incompatible duties; the issue is not task assignment but cost versus benefit."
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 5,
+        "trap_coverage": 4,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 5,
+        "total": 31
+      },
+      "assessment": "Important topic (inherent limitations of internal control). A tests control environment vs. cost-benefit. C tests override vs. cost-benefit. D tests SoD. All plausible alternate limitations. Two empty slots (DL-026). Only EW_D is substantive. The stem essentially defines cost-benefit limitation in the question itself — making it easy for most candidates.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Acceptable."
+    },
+    "P1-ED-064": {
+      "topic": "Vendor master file controls",
+      "stem": "Oakvale restricts the ability to add or modify vendor records to a small group of employees separate from those who approve invoice payments. What risk does this control primarily address?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "The risk of foreign currency translation errors",
+        "B": "The risk of incorrect revenue recognition timing",
+        "C": "The risk of inventory obsolescence",
+        "D": "The risk of fictitious vendor fraud or unauthorized changes to payment details"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "Revenue recognition timing is a revenue-cycle issue; the stem concerns vendor records and cash disbursements.",
+        "EW_C": "Inventory obsolescence is not addressed by restricting vendor-master-file changes.",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 7,
+        "trap_coverage": 5,
+        "balance": 5,
+        "domain_alignment": 9,
+        "psychometric_quality": 6,
+        "total": 38
+      },
+      "assessment": "Good practical fraud-control question. All distractors are real risks but in different cycles/domains. B tests revenue vs. disbursement cycle. C tests inventory vs. payables. A tests FX vs. fraud. EW_A empty (DL-026). EW_B and EW_C are choice-specific. Labeled 'Difficult' (4) with Apply level — reasonable calibration. Among the better Pack D seeds.",
+      "certification_readiness": "Needs DL-026 fix (EW_A). Otherwise strong."
+    },
+    "P1-ED-066": {
+      "topic": "Audit committee oversight role",
+      "stem": "Quillwood's board audit committee oversees the financial reporting process, the external auditor relationship, and the internal audit function. What is the primary purpose of this oversight?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "To replace the need for external audits entirely",
+        "B": "To provide independent oversight of financial reporting integrity and the effectiveness of internal controls",
+        "C": "To set employee compensation for all departments",
+        "D": "To prepare the company's financial statements directly"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "Management prepares the financial statements; the audit committee oversees integrity and control effectiveness."
+      },
+      "dqs_scores": {
+        "plausibility": 4,
+        "distinctness": 5,
+        "trap_coverage": 4,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 4,
+        "total": 29
+      },
+      "assessment": "Tests governance oversight concepts. C is obviously wrong (compensation is not audit committee's role). A and D test common misconceptions about what the audit committee does vs. management. Two empty explanation slots (DL-026). Only EW_D is substantive. Labeled 'Difficult' but content is Understand/Remember.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Difficulty label questionable per DL-031."
+    },
+    "P1-ED-071": {
+      "topic": "Segregation of duties — three-way match",
+      "stem": "A company requires that the purchasing department, receiving department, and accounts payable department each independently verify their respective documents before a vendor payment is authorized. What control activity does this represent?",
+      "correctChoice": "D",
+      "choices": {
+        "A": "A detective control that identifies errors after payment",
+        "B": "An IT application control only",
+        "C": "A risk assessment procedure",
+        "D": "Segregation of duties through a three-way match process"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "(CC slot — empty ✓)"
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 5,
+        "trap_coverage": 4,
+        "balance": 5,
+        "domain_alignment": 9,
+        "psychometric_quality": 4,
+        "total": 33
+      },
+      "assessment": "Good topic — three-way match is a core AP control. A tests preventive vs. detective. B tests IT vs. manual/organizational. C tests control activity vs. risk assessment component. However, ALL THREE explanation slots are empty (DL-026) — worst case in this review. This means learners who miss this question get ZERO feedback on any distractor. Choices are fine but explanations are non-existent.",
+      "certification_readiness": "NOT ready. All 3 distractor explanations missing (severe DL-026)."
+    },
+    "P1-ED-072": {
+      "topic": "COSO monitoring — separate evaluations",
+      "stem": "An organization's internal audit department performs a comprehensive review of internal controls every two years. What type of monitoring activity is this?",
+      "correctChoice": "B",
+      "choices": {
+        "A": "Ongoing monitoring built into daily operations",
+        "B": "Separate (periodic) evaluations",
+        "C": "Risk assessment",
+        "D": "Control activities"
+      },
+      "explanationSlots": {
+        "EW_A": "Ongoing monitoring is continuous and built into operations; this is a periodic review, not ongoing.",
+        "EW_B": "(CC slot — empty ✓)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 6,
+        "distinctness": 6,
+        "trap_coverage": 6,
+        "balance": 5,
+        "domain_alignment": 9,
+        "psychometric_quality": 6,
+        "total": 38
+      },
+      "assessment": "Tests the critical distinction between ongoing monitoring and separate evaluations — a core COSO concept. A is the best distractor (ongoing vs. periodic). C and D test COSO component misidentification. EW_A is the only substantive slot (good text). EW_C and EW_D are empty (DL-026). Good core concept but incomplete explanation coverage.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Core concept is strong."
+    },
+    "P1-ED-073": {
+      "topic": "Preventive vs. detective — access controls",
+      "stem": "A company requires that all journal entries above a materiality threshold be reviewed and approved by a manager before posting. What type of control is this?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "Preventive, since it seeks to stop errors before they are recorded",
+        "B": "Detective, since it involves reviewing something",
+        "C": "Corrective, since it fixes errors identified in the general ledger",
+        "D": "Compensating, since it replaces segregation of duties"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "Detective controls identify errors after they occur; this approval occurs before posting, making it preventive.",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 7,
+        "distinctness": 7,
+        "trap_coverage": 7,
+        "balance": 6,
+        "domain_alignment": 9,
+        "psychometric_quality": 6,
+        "total": 42
+      },
+      "assessment": "Excellent trap item! B specifically calls out 'reviewing' — the most common CMA error where candidates conflate 'review' with 'detective.' C tests preventive vs. corrective (similar confusion). D tests compensating control classification. EW_B has excellent choice-specific text explaining the review≠detective trap. But EW_C and EW_D are empty (DL-026). A really good question let down by missing explanations.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Core question is among the best in both packs."
+    },
+    "P1-ED-074": {
+      "topic": "Physical controls — restricted access",
+      "stem": "An organization stores blank check stock in a locked safe with access limited to two authorized employees who must both be present to open it. What type of control is this?",
+      "correctChoice": "C",
+      "choices": {
+        "A": "An IT general control",
+        "B": "A detective control only",
+        "C": "A physical control over assets with dual custody",
+        "D": "A monitoring activity"
+      },
+      "explanationSlots": {
+        "EW_A": "(DL-026: empty slot)",
+        "EW_B": "The lock prevents unauthorized access before any loss occurs; this is preventive, not solely detective.",
+        "EW_C": "(CC slot — empty ✓)",
+        "EW_D": "(DL-026: empty slot)"
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 5,
+        "trap_coverage": 5,
+        "balance": 4,
+        "domain_alignment": 9,
+        "psychometric_quality": 5,
+        "total": 33
+      },
+      "assessment": "Good scenario — dual custody of blank checks is a real-world control. B tests preventive vs. detective (recurring trap). D tests control activity vs. monitoring. A tests IT vs. physical. However, two of three explanation slots are empty (DL-026). Only EW_B is substantive. Solid concept but incomplete explanation coverage.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Acceptable core content."
+    },
+    "P1-ED-075": {
+      "topic": "Control environment — board independence",
+      "stem": "A company's board has a majority of independent directors and an audit committee composed entirely of independent members. Which COSO principle does this primarily support?",
+      "correctChoice": "A",
+      "choices": {
+        "A": "The control environment — board independence and oversight",
+        "B": "Risk assessment — fraud risk identification",
+        "C": "Information and communication — external reporting",
+        "D": "Monitoring — ongoing evaluations"
+      },
+      "explanationSlots": {
+        "EW_A": "(CC slot — empty ✓)",
+        "EW_B": "(DL-026: empty slot)",
+        "EW_C": "(DL-026: empty slot)",
+        "EW_D": "Monitoring evaluations test whether controls are working; board independence is a foundational control-environment attribute."
+      },
+      "dqs_scores": {
+        "plausibility": 5,
+        "distinctness": 5,
+        "trap_coverage": 4,
+        "balance": 4,
+        "domain_alignment": 8,
+        "psychometric_quality": 5,
+        "total": 31
+      },
+      "assessment": "Good governance topic. All distractors are COSO components the candidate could confuse. B is the most plausible alternate (board's role in risk oversight). Two empty slots (DL-026). Only EW_D is substantive. Acceptable but underwhelming given the importance of the topic.",
+      "certification_readiness": "Needs 2 DL-026 fixes. Acceptable."
+    }
+  },
+
+  "aggregateMetrics": {
+    "packC_summary": {
+      "seeds_evaluated": 19,
+      "dqs_mean": 33.0,
+      "dqs_min": 14,
+      "dqs_max": 48,
+      "dqs_stdev": 9.9,
+      "above_40": 7,
+      "below_25": 3,
+      "items_with_dl026": 9,
+      "total_empty_slots": 21,
+      "tier_distribution": {
+        "tier_A_45plus": 2,
+        "tier_B_30to44": 10,
+        "tier_C_20to29": 4,
+        "tier_D_below20": 3
+      },
+      "best_items": ["EC-023 (48)", "EC-021 (46)", "EC-022 (42)", "EC-024 (42)", "EC-041 (42)"],
+      "worst_items": ["EC-008 (14)", "EC-014 (17)", "EC-031 (25)", "EC-028 (28)", "EC-066 (29)"],
+      "certification_ready_without_changes": 0,
+      "certification_ready_with_dl026_only": 17,
+      "needs_major_redesign": 2
+    },
+    "packD_summary": {
+      "seeds_evaluated": 19,
+      "dqs_mean": 30.8,
+      "dqs_min": 19,
+      "dqs_max": 42,
+      "dqs_stdev": 6.7,
+      "above_40": 2,
+      "below_25": 3,
+      "items_with_dl026": 7,
+      "total_empty_slots": 17,
+      "tier_distribution": {
+        "tier_A_45plus": 0,
+        "tier_B_30to44": 13,
+        "tier_C_20to29": 3,
+        "tier_D_below20": 3
+      },
+      "best_items": ["ED-073 (42)", "ED-028 (40)", "ED-064 (38)", "ED-072 (38)", "ED-025 (37)"],
+      "worst_items": ["ED-010 (19)", "ED-001 (20)", "ED-051 (21)", "ED-042 (24)", "ED-046 (28)"],
+      "certification_ready_without_changes": 0,
+      "certification_ready_with_dl026_only": 13,
+      "needs_major_redesign": 6
+    },
+    "crossPoolComparison": {
+      "packC_vs_packD": "Pack C seeds are marginally better (mean 33.0 vs. 30.8). Pack C has 2 Tier A items (≥45) vs. 0 for Pack D. Both packs have 3 Tier D items (<25). The quality range is wider in Pack C (14-48) than Pack D (19-42).",
+      "packD_has_more_boilerplate": "Pack D seeds disproportionately use generic 'This option reflects a misunderstanding...' template text in explanations (ED-016, ED-036, ED-046, ED-051) — a DL-013 variant that provides zero educational value. Pack C seeds generally have better (if incomplete) explanation text.",
+      "packC_explanations_stronger": "When Pack C seeds have explanation text, it's typically genuine and choice-specific. When Pack D seeds have text, it's more likely to be boilerplate."
+    },
+    "commonIssues": {
+      "dl031_definition_match_inflation": "~12 of 38 seeds (32%) follow the DL-031 pattern where the stem is a direct definition and the correct answer is the term. These items should be labeled Easy (1), not Moderate (3).",
+      "dl026_prevalence": "94% of seeds (36/38) have at least one empty non-CC ExplanationWrong slot. 38 total empty slots across the 38 seeds — roughly 1 per item on average.",
+      "rotation_group_quality_ceiling": "The 5-item rotation group format creates a quality ceiling: all distractors are confined to the same 4 concepts per group, shared across 5 company-name variants. This limits the range of misconceptions tested.",
+      "absolute_language_in_distractors": "Several items use 'only,' 'entirely,' 'no,' 'eliminates' in distractors — these are obvious cueing indicators (DL-004 pattern) that make elimination trivial.",
+      "length_cueing": "Several items have the correct answer as the longest choice text (EC-028, EC-023) — a documented psychometric bias (CAQS §6.4)."
+    },
+    "recommendations": {
+      "immediate": [
+        "Fix all 38 DL-026 empty ExplanationWrong slots (highest priority — learner-facing gap)",
+        "Rewrite 4 Pack D seeds with boilerplate explanations (ED-016, ED-036, ED-046, ED-051)",
+        "Redesign EC-008 and ED-010 — distractors are non-functional for any prepared candidate"
+      ],
+      "short_term": [
+        "Recalibrate ~12 DL-031 definition-match items from Moderate (3) → Easy (1)",
+        "Normalize answer choice lengths to eliminate length cueing",
+        "Consider breaking the 5-item rotation group pattern for 5-8 of the strongest topics to create genuinely variant distractors"
+      ],
+      "long_term": [
+        "Develop a Domain E distractor bank with 15-20 documented CMA exam traps mapped to specific COSO/control concepts",
+        "Implement per-distractor misconception tracking so automated tools can verify choice-specific explanation text",
+        "Replace the template-based authoring pipeline for Domain E with concept-driven authoring to improve distractor quality at source"
+      ]
+    }
+  },
+
+  "dimensionAverages": {
+    "plausibility": { "packC": 5.2, "packD": 5.0, "overall": 5.1 },
+    "distinctness": { "packC": 5.3, "packD": 5.2, "overall": 5.3 },
+    "trapCoverage": { "packC": 4.3, "packD": 4.4, "overall": 4.4 },
+    "balance": { "packC": 4.5, "packD": 4.3, "overall": 4.4 },
+    "domainAlignment": { "packC": 8.0, "packD": 8.1, "overall": 8.1 },
+    "psychometricQuality": { "packC": 4.8, "packD": 4.3, "overall": 4.5 }
+  },
+
+  "verdict": "The 38 Domain E seeds contain structurally sound choices testing relevant COSO/internal controls concepts. However, distractor quality is undermined by three systemic defects: (1) widespread DL-026 empty explanation slots (94% of seeds affected), (2) DL-013 boilerplate explanation text in Pack D seeds, and (3) DL-031 definition-match pattern making ~32% of items trivially easy despite Moderate difficulty labels. NO seed is certification-ready in its current state. All require at minimum DL-026 fixes; 8 seeds require major distractor redesign. The best items (EC-021, EC-023, ED-073) demonstrate that Domain E can produce exam-quality distractors — they just need complete explanation coverage."
+}

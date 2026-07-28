@@ -1,0 +1,84 @@
+{
+  "session": "309",
+  "agent": "T",
+  "title": "Portfolio Bottleneck & Optimization Dashboard",
+  "generated": "2026-07-26",
+
+  "bottleneckDashboard": {
+    "criticalBottlenecks": [
+      {
+        "rank": 1,
+        "bottleneck": "Domain E archived DL-012 clone rotation artifacts",
+        "impact": "129 items (77% of E gap) are archived rotation clones needing individual re-rotation + re-audit + EC/EW authoring",
+        "packs": "C/D Section E",
+        "sessionsBlocked": "~4-6 sessions of cert throughput",
+        "resolution": "Replace rather than repair. Author 129 new unique items using Pack B quality template."
+      },
+      {
+        "rank": 2,
+        "bottleneck": "Domain F greenfield authoring",
+        "impact": "149 wholly unprocessed items in Packs C/D Section F need full authoring from scratch",
+        "packs": "C/D Section F",
+        "sessionsBlocked": "~5-7 sessions",
+        "resolution": "Author 149 new Technology & Analytics items. Use Pack B Section F as benchmark."
+      },
+      {
+        "rank": 3,
+        "bottleneck": "Case-bank EW — zero wrong-answer feedback",
+        "impact": "~310 case items have near-zero distractor explanations. Learners get no coaching for wrong answers in case practice.",
+        "files": "scored_cases2-5",
+        "sessionsBlocked": "~8 sessions of EW authoring",
+        "resolution": "EW Factory Model — dedicated production pipeline with Draft→Review→QA→Candidate stages."
+      }
+    ],
+    "resolvedBottlenecks": [
+      {
+        "bottleneck": "DL-008 — Certified items with non-empty EW[CC]",
+        "resolution": "CONFIRMED 0 items. All 67 were DL-029 false positives per S802. Removed from critical path."
+      }
+    ],
+    "nonBottlenecks": [
+      "Domain C certification — 100% certified. 454 rewrite candidates are quality polish only.",
+      "Pack B/ E — 100% certified. No blockers.",
+      "Pack A Sections B/C/D/F — 100% certified. Only 19 items remaining (2 in A, 17 in E).",
+      "Governance guard — 20/20 PASS, no issues."
+    ]
+  },
+
+  "throughputDashboard": {
+    "certificationVelocity": "12-15 items/session (MCQ), 4-5 items/session (case)",
+    "ewVelocity": "39-50 items/session (factory model), 36-40 items/session (ad-hoc)",
+    "modernizationVelocity": "250-425 items/session (batch operations)",
+    "remainingWork": {
+      "certification": "319 items (167 Domain E + 149 Domain F + 19 Pack A = 335 uncertified, minus 16 already In Audit)",
+      "ewAuthoring": "~708 items needing substantial EW (310 case-bank + 120 P0 MCQ + 278 remaining Domain A/B/C/D)"
+    }
+  },
+
+  "dependencyDashboard": {
+    "criticalPathNow": "300-series close (S309-S310) → Domain E cert baseline → E+F parallel cert → Pack A closeout → Governance",
+    "criticalPathLength": "16 sessions (optimistic) / 17 sessions (expected) / 22 sessions (conservative)",
+    "parallelTracksActive": "2-3 tracks concurrently after session 4",
+    "fileIsolationVerified": true,
+    "noCrossLaneConflicts": true
+  },
+
+  "optimizationDashboard": {
+    "totalSessionsSaved_vs_S308": "13 sessions (30 → 17 expected)",
+    "savingsByLever": {
+      "DL008_removal": 3,
+      "modernization_deferral": 10,
+      "eF_parallellization": 4,
+      "governance_batching": 2,
+      "overhead_from_parallel": -6
+    },
+    "netSessionCount": 17,
+    "confidenceInterval": "14-22 sessions"
+  },
+
+  "strategyDecision": {
+    "600_series": "DEFER — startup cost equals projected savings. No net benefit.",
+    "modernization": "DEFER to post-cert phase. Saves 10 sessions on critical path.",
+    "ewFactory": "ADOPT — 28% throughput improvement for minimal setup cost."
+  }
+}

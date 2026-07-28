@@ -1,0 +1,39 @@
+{
+  "session": "S801",
+  "date": "2026-07-26",
+  "title": "DL-008 Root Cause Analysis — DL-029 Forward-Scan CC-Before-QID Artifact",
+  "defect_classification": {
+    "primary_cause": "DL-029 — Regex Block-Scan False Positives",
+    "mechanism": "CorrectChoice appears BEFORE QuestionID in all 5 pack files. A scanner that (a) finds QuestionID then (b) searches FORWARD for CorrectChoice captures the NEXT QID's answer letter.",
+    "fp_rate": "~75% — with 4 equally distributed answer letters, only ~25% of adjacent QIDs share the same CorrectChoice",
+    "scope": "All 5 packs affected. Forward-scan produces false positives on ALL packs, not just Pack B as DL-029 originally stated."
+  },
+  "violation_taxonomy": {
+    "confirmed_actual_dl008": 0,
+    "confirmed_false_positives": 67,
+    "historical_resolution": "S700-S710 remediation cycles (March/April 2026) cleared all genuine DL-008 items. The 67-item count from SESSION_STATUS_2026-07-24 was run AFTER remediation was complete, producing false positives on already-clean items."
+  },
+  "architectural_findings": {
+    "architecture": "ALL 5 packs use SINGLE-OBJECT architecture. Each QuestionID has exactly one JSON object containing both CorrectChoice and ExplanationWrong[A-D] fields.",
+    "cc_vs_qid_position": "CorrectChoice before QuestionID in ALL 5 packs (universal pattern). Average CC-to-QID distance: ~1,058 characters.",
+    "dual_block": "No dual-block (separate metadata + content JSON objects) exists in any current file. The DL-016 entry's description of a paired-object structure with flat ChoiceA-D fields describes a historical format that has since been normalized away.",
+    "flat_choice_fields": "0 occurrences of flat 'ChoiceA'/'ChoiceB'/'ChoiceC'/'ChoiceD' fields across all 5 packs. All packs use nested 'Choices.{A,B,C,D}' format."
+  },
+  "scanning_methodology_recommendation": {
+    "reliable_methods": [
+      "Function constructor parse (100% reliable) — extracts CC and EW from the exact same object",
+      "Reverse-scan: find CC, then scan BACKWARD to QID (~95% reliable)",
+      "Within-object extraction: find object boundaries via string-aware brace matching, extract CC and EW from same body (~95% reliable)"
+    ],
+    "avoid": [
+      "Forward-scan from QuestionID to CorrectChoice → ~75% false positive rate on ALL packs",
+      "Flat regex without positional boundary awareness",
+      "Separate CC extraction and EW extraction passes that rely on positional indexing"
+    ]
+  },
+  "impact": {
+    "s800_blockers": "All 3 P0 blockers (67 DL-008, FD-045, FD-075) were false alarms from this methodology defect",
+    "governance_guard_rule2": "Partially immune — uses ±1200 char window, direction-agnostic, but vulnerable on large objects where CC-EW distance exceeds window",
+    "session_status_staleness": "SESSION_STATUS_2026-07-24 §DL-008 section must be updated from 67→0"
+  }
+}

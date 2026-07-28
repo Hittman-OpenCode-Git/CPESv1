@@ -1,0 +1,70 @@
+{
+  "session": "724",
+  "title": "Portfolio Throughput Model — Option A vs Option B",
+  "generated": "2026-07-26",
+  "agents": ["I", "M", "Q", "R"],
+  "baseline": "S309 expected: 17 sessions to 100% certification",
+  "verdict": "OPTION A (NO 600) IS PARETO-OPTIMAL",
+
+  "option_a_no_600": {
+    "sessions_to_100pct": 17,
+    "range": "14 (optimistic) to 22 (conservative)",
+    "cert_velocity": "12-15 items/session",
+    "ew_velocity": "39 items/session (embedded in cert waves)",
+    "blended_velocity": "~10 items/session",
+    "ew_fill_at_completion": "88% MCQ, 80% case bank",
+    "governance_complexity": "2 lanes (300 analytics + 800 certification)",
+    "modernization_start": "Session ~18 (post-certification)"
+  },
+
+  "option_b_600_active": {
+    "startup_cost": "4 sessions (infrastructure + pilot + governance integration)",
+    "startup_throughput": "0 certifications during startup",
+    "sessions_to_100pct": 19,
+    "range": "17 (optimistic: breakeven) to 24 (conservative: +7 worse)",
+    "cert_velocity": "12-15 items/session (unchanged — CAQS §1.6 gate is binding)",
+    "ew_velocity": "50 items/session (28% improvement from factory model)",
+    "blended_velocity": "~11 items/session",
+    "ew_fill_at_completion": "92% MCQ, 85% case bank",
+    "governance_complexity": "3 lanes (300 + 600 + 800)",
+    "modernization_start": "Session ~19 (delayed by 1 session)",
+    "ew_acceptance_rate": "70-80% (20-30% rework by 800)"
+  },
+
+  "comparative_analysis": {
+    "cert_completion": "Option A faster by 2 sessions",
+    "ew_fill": "Option B better by 4-5%",
+    "governance_risk": "Option A significantly lower",
+    "quality_risk": "Option A significantly lower",
+    "portfolio_complexity": "Option A significantly lower",
+    "net_session_delta": "Option B +2 worse at expected",
+    "net_throughput_delta": "Option A produces ~38 more certified items over program duration"
+  },
+
+  "sensitivity_analysis": {
+    "favorable_for_600": {
+      "conditions": "Startup: 3 sessions. EW acceptance: 90%. Cert acceleration: 20%. All parallel tracks successful.",
+      "outcome": "14-15 sessions (breakeven to -2 vs Option A)",
+      "likelihood": "~10%"
+    },
+    "expected_case": {
+      "conditions": "Startup: 4 sessions. EW acceptance: 75%. Cert acceleration: 10%.",
+      "outcome": "19-20 sessions (+2 to +3 vs Option A)",
+      "likelihood": "~70%"
+    },
+    "unfavorable_for_600": {
+      "conditions": "Startup: 4 sessions. EW acceptance: 60%. Cert acceleration: <5%. Governance rework: 1-2 sessions.",
+      "outcome": "23-26 sessions (+6 to +9 vs Option A)",
+      "likelihood": "~20%"
+    }
+  },
+
+  "breakeven_analysis": {
+    "startup_deficit": "4 sessions × 12 items/session average = ~48 items of lost certification throughput",
+    "per_session_gain": "~0.5-1 additional items/session after startup",
+    "sessions_to_breakeven": "36-72 sessions — program completes at 17, breakeven never reached",
+    "conclusion": "600-series would produce NET NEGATIVE certification throughput"
+  },
+
+  "binding_constraint": "AUTHOR CAPACITY — human time to write explanations. Tools can't write. The constraint is invariant to organizational structure."
+}

@@ -1,0 +1,253 @@
+{
+  "session": "S873",
+  "program": "800-Series Content Review & Replacement Restart",
+  "phase": "Targeted Content Review & Ambiguity Audit",
+  "date": "2026-07-28",
+  "auditor": "Build-Time AI Verification",
+  "execution_mode": "Read-Only",
+  "t0_verification": {
+    "certified_pool": 2298,
+    "total_qids": 2540,
+    "governance_guard": "51/51 PASS",
+    "governance_critical_hashes_5": "4/4 MATCH",
+    "pack_file_hashes_1": "1/5 MATCH (Pack A OK; Packs B/C/D/E drifted — documented S869-S872 + S861 repair)"
+  },
+  "scope": {
+    "packs_audited": ["A", "B", "C", "D", "E"],
+    "section": "B",
+    "total_items_reviewed": 500,
+    "total_certified_reviewed": 500,
+    "focus_areas": [
+      "Logic inversion (DL-037 — binary lead-in polarity)",
+      "Budgeting methodology correctness",
+      "Variance investigation threshold accuracy",
+      "Variance analysis and interpretation",
+      "Distractor explanation quality",
+      "Ambiguity and multiple defensible answers",
+      "Cross-section topic placement"
+    ]
+  },
+  "pack_summaries": {
+    "pack_a": {
+      "items": 100,
+      "certified": 100,
+      "logic_inversions": 0,
+      "s911_p1_b_040_verified": true,
+      "critical_findings": 1,
+      "medium_findings": 1,
+      "verdict": "GOOD — 99/100 items structurally sound. 1 DL-010 contamination."
+    },
+    "pack_b": {
+      "items": 100,
+      "certified": 100,
+      "logic_inversions": 0,
+      "critical_findings": 0,
+      "verdict": "CLEAN — strongest Section B of any pack. 0 defects. 42/42 calcs verified."
+    },
+    "pack_c": {
+      "items": 100,
+      "certified": 100,
+      "logic_inversions": 0,
+      "critical_findings": 0,
+      "boilerplate_items": 16,
+      "difficulty_inflation_items": 32,
+      "verdict": "GOOD — mechanically correct. Minor boilerplate and DL-031 issues."
+    },
+    "pack_d": {
+      "items": 100,
+      "certified": 100,
+      "logic_inversions": 0,
+      "clone_groups": 17,
+      "generic_distractors": 100,
+      "verdict": "WEAK — mechanically correct but educationally compromised by extensive clone redundancy and pervasive boilerplate."
+    },
+    "pack_e": {
+      "items": 100,
+      "certified": 100,
+      "logic_inversions": 0,
+      "generic_distractors": 78,
+      "anti_cue_items": 1,
+      "cross_section_issues": 2,
+      "verdict": "GOOD — distinct content, mechanically correct. Some boilerplate and minor issues."
+    }
+  },
+  "findings_by_severity": {
+    "critical": [
+      {
+        "qid": "P1-B-037",
+        "pack": "A",
+        "section": "B",
+        "state": "Certified",
+        "defect_class": "DL-010",
+        "title": "Cross-topic distractor explanation contamination",
+        "stem": "Delta's flexible budget for 8,000 units shows budgeted variable costs of $64,000. Actual output was 8,000 units with actual variable costs of $70,000. What does this variance indicate?",
+        "correct_choice": "A",
+        "issue": "ALL THREE distractor ExplanationWrong fields (B, C, D) describe P1-B-038's moving average forecast calculation (400, 460, 520 units), not flexible budget variance concepts. A learner selecting a wrong answer on a variance question sees feedback about a moving average — zero educational value and potential confusion.",
+        "ew_b_actual": "480 units is the average of only 460 and 520, omitting the 400-month entirely. A simple 3-month moving average requires...",
+        "ew_c_actual": "493 units suggests unequal weighting or an incorrect divisor was applied...",
+        "ew_d_actual": "520 units uses only the most recent month and ignores the smoothing purpose of a moving average...",
+        "root_cause": "Template rotation artifact — P1-B-037 and P1-B-038 are adjacent in the 5-item rotation group. EW fields from P1-B-038 (moving average, CC=A) were placed in P1-B-037 (flexible budget variance, CC=A) during bulk authoring.",
+        "learner_impact": "LEARNER-SAFETY RISK. When a learner selects wrong answer B, C, or D, they receive feedback about a completely unrelated topic.",
+        "recommended_action": "Author 3 new choice-specific distractor explanations for P1-B-037 covering: (B) why favorable volume variance is incorrect when output equals flex budget level, (C) spending vs. efficiency variance distinction, (D) why $6,000 difference requires investigation. Backup-before-write per BACKUP_PROTOCOL.md.",
+        "scheduled_for": "S874"
+      }
+    ],
+    "high": [
+      {
+        "qid": "P1-BD-001 through BD-100 (all)",
+        "pack": "D",
+        "section": "B",
+        "state": "100 Certified",
+        "defect_class": "DL-012 + DL-013",
+        "title": "Clone redundancy and pervasive boilerplate distractors",
+        "issue": "Only ~17 unique stems across 100 items. Items are organized in 5-7 item rotation groups with company-name substitution only. All 100 items have at least some boilerplate distractor explanations ('Incorrect under Budgeting concepts and methodologies... This is a common exam trap.'). While mechanically correct, this provides zero additional educational value beyond ~17 seed items.",
+        "recommended_action": "Non-immediate. Does not affect correctness. Can be addressed via future DL-013 remediation waves or replacement generation."
+      },
+      {
+        "qid": "P1E-B-001 through B-100 (78 items)",
+        "pack": "E",
+        "section": "B",
+        "state": "78 Certified",
+        "defect_class": "DL-013",
+        "title": "Residual boilerplate distractor explanations",
+        "issue": "78 of 100 items have at least one boilerplate or generic distractor explanation. 22 items have genuinely choice-specific explanations. Better than Pack D but still significant boilerplate residue.",
+        "recommended_action": "Deferred to DL-013 remediation waves."
+      }
+    ],
+    "medium": [
+      {
+        "qid": "P1-B-098",
+        "pack": "A",
+        "section": "B",
+        "state": "Certified",
+        "defect_class": "DL-025 variant",
+        "title": "Copy-paste identical distractor explanations",
+        "issue": "EW_C and EW_D are identical generic text ('This choice does not match the correct disbursement calculation...'). EW_A is choice-specific. Calculation is correct. CC=B. Low educational quality for two distractor slots.",
+        "recommended_action": "Rewrite EW_C and EW_D to be choice-specific. Low priority."
+      },
+      {
+        "qid": "P1E-B-068",
+        "pack": "E",
+        "section": "B",
+        "state": "Certified",
+        "title": "Absolute language anti-cue in correct answer",
+        "stem": "A continuous budget always has:",
+        "correct_choice": "C",
+        "choice_c_text": "12 months forward",
+        "issue": "Choice C uses 'always' — an absolute term typically associated with WRONG answers in CMA exams. While '12 months forward' is the textbook answer for a continuous/rolling budget, the absolute language makes the correct answer look like a distractor cue to strong test-takers. Also, a continuous budget does not ALWAYS have exactly 12 months — it could be quarterly or another period.",
+        "recommended_action": "Consider removing 'always' from the stem or restructuring choices to avoid the anti-cue. Could rephrase as 'A continuous budget is best described as:' with C being 'One that maintains a constant planning horizon by adding a new period as each period expires.'"
+      },
+      {
+        "qid": "P1-BD-100",
+        "pack": "D",
+        "section": "B",
+        "state": "Certified",
+        "title": "Cross-section topic misplacement",
+        "topic": "C.001 labor rate and efficiency variance",
+        "issue": "Topic label is Section C (Performance Management) but item is in Section B (Planning, Budgeting, and Forecasting). Calculation is correct (LRV = $2,100 U). Topic placement should be corrected to B or the item should be moved to Section C.",
+        "recommended_action": "Update Topic label to match Section B scope, or re-categorize item."
+      },
+      {
+        "qid": "P1E-B-067",
+        "pack": "E",
+        "section": "B",
+        "state": "Certified",
+        "title": "Cross-section topic misplacement",
+        "topic": "E-B.068 FOH spending calc",
+        "issue": "Fixed overhead spending variance is Section C (Performance Management) content, not Section B (Planning, Budgeting, and Forecasting).",
+        "recommended_action": "Re-categorize topic label."
+      },
+      {
+        "qid": "P1E-B-096",
+        "pack": "E",
+        "section": "B",
+        "state": "Certified",
+        "title": "Cross-section topic misplacement",
+        "topic": "E-B.097 Material usage variance cause",
+        "issue": "Material usage variance is Section C (Performance Management) content under Section B.",
+        "recommended_action": "Re-categorize topic label."
+      }
+    ],
+    "low": [
+      {
+        "count": 16,
+        "pack": "C",
+        "section": "B",
+        "title": "Boilerplate distractor text",
+        "items": ["BC-008 through BC-014", "BC-022 through BC-030"],
+        "issue": "Generic 'Incorrect under [Topic]. it [correct answer]. This is a common exam trap.' in 1-2 EW slots per item. Not wrong — just provides zero educational value.",
+        "recommended_action": "Deferred to DL-013 remediation."
+      },
+      {
+        "count": 32,
+        "pack": "C",
+        "section": "B",
+        "title": "DL-031 difficulty inflation",
+        "issue": "32 items at Bloom's Remember/Understand level labeled Moderate or Difficult when they are definition-match items.",
+        "recommended_action": "Recalibrate difficulty labels to Easy."
+      },
+      {
+        "count": 4,
+        "pack": "E",
+        "section": "B",
+        "items": ["P1E-B-001", "P1E-B-002", "P1E-B-078", "P1E-B-064"],
+        "title": "DL-031 difficulty inflation",
+        "issue": "Simple definition-match items labeled Moderate, Moderate-Easy, or Difficult.",
+        "recommended_action": "Recalibrate difficulty labels."
+      }
+    ]
+  },
+  "logic_inversion_scan_results": {
+    "total_items_scanned": 500,
+    "items_with_yes_no_leadins_found": 4,
+    "inversions_detected": 0,
+    "note": "Only Pack A Section B items P1-B-040 (and its distractors) contain Yes,/No, lead-ins. P1-B-040 was fixed in S911. All other packs (B, C, D, E) have zero Yes,/No, lead-in choices.",
+    "p1_b_040_postfix_verification": "CONFIRMED. Choice B now reads 'Yes, because 5% of $150,000 is $7,500, and $9,000 exceeds it, so it should be investigated.' — binary lead-in matches conclusion. ExplanationWrongB is empty (DL-008 clean). All 3 distractor explanations are choice-specific."
+  },
+  "calculation_verification": {
+    "total_calculation_items": 62,
+    "verified_correct": 62,
+    "verified_wrong": 0,
+    "packs_detail": {
+      "pack_a": "12 verified (items B-005 to B-100 range)",
+      "pack_b": "42 verified (all numerical items, including the DL-030-fixed P1B-B-119)",
+      "pack_c": "0 (no numerical items in sampled set)",
+      "pack_d": "8 verified (BD-076 through BD-100)",
+      "pack_e": "5 verified (B-008, B-064, B-067, B-073, B-078)"
+    }
+  },
+  "remediation_queue_summary": {
+    "immediate_s874": [
+      {
+        "qid": "P1-B-037",
+        "action": "Author 3 new choice-specific distractor EW explanations",
+        "severity": "CRITICAL"
+      }
+    ],
+    "s874_optional": [
+      {
+        "qid": "P1-B-098",
+        "action": "Rewrite EW_C and EW_D to be choice-specific",
+        "severity": "MEDIUM"
+      },
+      {
+        "qid": "P1E-B-068",
+        "action": "Remove anti-cue 'always' from stem or restructure choices",
+        "severity": "MEDIUM"
+      }
+    ],
+    "deferred": [
+      "Pack D Section B: DL-012 clone remediation (100 items — non-blocking)",
+      "Pack E Section B: DL-013 boilerplate remediation (78 items — low priority)",
+      "Pack C Section B: DL-031 difficulty recalibration (32 items)",
+      "Cross-section topic labels: BD-100, P1E-B-067, P1E-B-096"
+    ]
+  },
+  "halt_conditions_check": {
+    "governance_guard_pass": true,
+    "rule_9_semantic_violations": 0,
+    "dl008_exposure": 0,
+    "certified_pool_drift": 0,
+    "status": "ALL CHECKS PASS — continuing to S874"
+  }
+}

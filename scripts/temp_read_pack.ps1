@@ -1,0 +1,1 @@
+(Get-Content -LiteralPath "pack_c_corrected.js.bak-20260728123520")[0..2] -join "`n"

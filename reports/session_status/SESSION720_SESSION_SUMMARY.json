@@ -1,0 +1,240 @@
+{
+  "session": "S720",
+  "agent": "O",
+  "title": "Session 720 Consolidated Summary — Reporting Package",
+  "date": "2026-07-26",
+  "type": "Read-Only Audit, Reconciliation, and Governance Consolidation",
+  "agents_deployed": "A, B, C, D, E, F, H, I, J, K, M (11 read-only agents); G/L not found",
+  "files_modified": 0,
+  "output_files": 13,
+
+  "key_findings": [
+    { "id": 1, "severity": "HIGH", "title": "S719 internal reporting inconsistent", "detail": "Analytics claims 554 items modified; actual = 542. 12 B/C/D changes projected but never executed. Agent A." },
+    { "id": 2, "severity": "REPORTING", "title": "72% agreement is algorithmic, not human", "detail": "Actual human agreement = 84.6% (39 items, full context). Agent A." },
+    { "id": 3, "severity": "CRITICAL", "title": "Analyze gap is structural", "detail": "72.7% labeled Analyze are clones. Only ~33 genuine (1.32%). Gap = 592 items. Agent J." },
+    { "id": 4, "severity": "HIGH", "title": "Pack A vs Pack E Section E disparity", "detail": "33 Pack E Section E items at Understand/Moderate — DS inflated by +1. Agent E." },
+    { "id": 5, "severity": "HIGH", "title": "267 severe DCS §3 gaps remain", "detail": "184 Apply@Easy, 38 Understand@Difficult, others. Agent I." },
+    { "id": 6, "severity": "CRITICAL", "title": "Automated classifier unreliable", "detail": "Agent B flagged 70; Agent C confirmed 7. ~90% false positives. Agents B/C." },
+    { "id": 7, "severity": "HIGH", "title": "Pack A Section E: 12 severe gaps", "detail": "6 reclassification recommendations drafted. Agent E." },
+    { "id": 8, "severity": "MEDIUM", "title": "Reliability improving: 73.7%", "detail": "Trend S717:71%→S719:72%→S720:73.7%. Apply→Understand dominant hotspot. Agent F." },
+    { "id": 9, "severity": "HIGH", "title": "Cross-pack CL consistency LOW", "detail": "Pack A Evaluate vs Pack E Remember for same definition-match pattern. Agent H." },
+    { "id": 10, "severity": "INFO", "title": "Governance baseline established", "detail": "All hashes stable. 2,181 Certified. Guard 20/20. Agent K." }
+  ],
+
+  "reconciliation": {
+    "agent": "A",
+    "claims_verified": 9,
+    "discrepancies": 7,
+    "overall_verdict": "DISCREPANCIES_FOUND",
+    "core_execution": "SOUND — 542 items correctly modified in Packs A+E",
+    "reporting_issues": "S719 analytics and summary contain 7 systematic errors (12-item B/C/D phantom, 554-vs-542, algorithmic-vs-human agreement)"
+  },
+
+  "pack_e_restoration": {
+    "agent_b_candidates": 70,
+    "agent_c_confirmed_remember": 7,
+    "agent_c_retain_understand": 60,
+    "agent_c_upgrade_to_apply": 2,
+    "agent_c_escalate": 1,
+    "classifier_verdict": "AUTOMATED CLASSIFIER UNRELIABLE — ~90% false positive rate",
+    "confirmed_remember_qids": [
+      "P1E-A-074", "P1E-B-028", "P1E-B-032", "P1E-B-033",
+      "P1E-E-001", "P1E-E-049", "P1E-E-031"
+    ]
+  },
+
+  "pack_a_section_e": {
+    "agent": "E",
+    "active_items": 58,
+    "certified": 58,
+    "archived": 17,
+    "cl_distribution": { "Remember": 0, "Understand": 46, "Apply": 12, "Analyze": 0, "Evaluate": 0 },
+    "diff_distribution": { "Easy": 19, "Moderate-Easy": 36, "Moderate": 3, "Difficult": 0 },
+    "severe_dcs_gaps": 12,
+    "reclassification_recommendations": 6,
+    "structural_defects": { "dl_008": 0, "dl_013": 0, "dl_026": 0, "dl_027": 0 },
+    "ev3_audit": "ALL_PASS"
+  },
+
+  "cross_pack_consistency": {
+    "agent": "H",
+    "items_analyzed": 2425,
+    "definition_match_consistency": "LOW",
+    "calculation_consistency": "HIGH",
+    "standard_application_consistency": "OK",
+    "critical_pattern": "Pack A labels definition-match as Evaluate (156 items) while Pack E labels same pattern as Remember (127 items) — 3+ CL level divergence"
+  },
+
+  "analyze_gap": {
+    "agent": "J",
+    "verdict": "MIXED — Classification + Structural",
+    "analyze_labeled": 66,
+    "pct_labeled": 2.64,
+    "clones": 48,
+    "genuine_analyze_estimate": 33,
+    "pct_genuine": 1.32,
+    "caqs_target_pct": 25,
+    "caqs_gap_count": 592,
+    "confirmed_misclassifications": 5,
+    "computational_understand_to_apply": 47
+  },
+
+  "reliability": {
+    "agent": "F",
+    "overall_agreement": 73.7,
+    "pack_e_agreement": 81.5,
+    "pack_a_agreement": 86.4,
+    "controls_agreement": 47.0,
+    "trend": "UP (S717:71% → S719:72% → S720:73.7%)",
+    "per_cl_agreement": {
+      "Understand": 99.2,
+      "Apply": 33.6,
+      "Remember": 0.0,
+      "Analyze": 0.0,
+      "Evaluate": 0.0
+    },
+    "dominant_hotspot": "BOUNDARY_AMBIGUOUS Apply→Understand (88/102 disagreements)"
+  },
+
+  "alignment_matrix": {
+    "agent": "I",
+    "total_items": 2500,
+    "dcs_compliance_rate": 89.3,
+    "compliant_items": 2233,
+    "severe_misalignments": 267,
+    "s719_eliminated": 232,
+    "s719_residual": 12,
+    "evaluate_at_easy_eliminated": "92.9% (168→12)",
+    "remember_at_difficult_eliminated": "100% (76→0)"
+  },
+
+  "dcs_v1_1": {
+    "agent": "D",
+    "status": "DRAFT — Pending Approval",
+    "lines": 678,
+    "key_additions": [
+      "§1.3 Expanded forbidden triggers with DL-012 clone pattern",
+      "§2 Boundary decision trees for all 4 CL zones",
+      "§8 Disagreement resolution process",
+      "§9 Example library (exemplars + counter-examples)",
+      "§10 Reviewer quick-reference decision trees",
+      "§11 Confidence gate protocol",
+      "§12 Drift detection process",
+      "§13 Cross-pack consistency rule"
+    ]
+  },
+
+  "governance_audit": {
+    "agent": "K",
+    "overall_verdict": "GO",
+    "hash_stability": "ALL PASS (8/8 files)",
+    "certified_count": 2181,
+    "governance_guard": "20/20 PASS",
+    "answer_key_spot_check": "10/10 clean",
+    "scoring_logic": "Intact",
+    "concurrency": "Clean",
+    "note_baselines": "CURRENT_BASELINES.md stale — recommend update with S719 SHA-256 hashes"
+  },
+
+  "metadata_execution": {
+    "agent_g": "Not found — no execution log or file modifications detected",
+    "agent_l": "Not found — analytics generated by other agents (I, F, H)",
+    "items_modified": 0
+  },
+
+  "maintenance_framework": {
+    "agent": "M",
+    "lines": 593,
+    "sections": [
+      "§11 Audit Cadence (N=5 waves trigger)",
+      "§12 Drift Detection Triggers (T1–T8)",
+      "§13 Reviewer Certification Checklist",
+      "§14 Escalation Workflow",
+      "§15 Calibration Health Dashboard (K1–K14)",
+      "§16 Pre-Certification Calibration Gate (G-CAL-1 to G-CAL-7)",
+      "§17 Interaction with Existing Governance",
+      "§18 Baseline — Post-S719 Pool State"
+    ]
+  },
+
+  "post_flight_state": {
+    "cl_distribution": {
+      "Remember": 50,
+      "Understand": 1156,
+      "Apply": 1161,
+      "Analyze": 66,
+      "Evaluate": 67
+    },
+    "difficulty_distribution": {
+      "Easy_1": 543,
+      "ModerateEasy_2": 571,
+      "Moderate_3": 1253,
+      "Difficult_4": 132,
+      "VeryDifficult_5": 0
+    },
+    "certified_by_pack": {
+      "pack_a": 481,
+      "pack_b": 500,
+      "pack_c": 350,
+      "pack_d": 350,
+      "pack_e": 500
+    },
+    "total_certified": 2181,
+    "total_uncertified": 319,
+    "total_items": 2500
+  },
+
+  "remaining_gaps": [
+    { "gap": "12 B/C/D unexecuted S719 projections", "action": "Execute or document out-of-scope" },
+    { "gap": "S719 internal reporting errors (7 discrepancies)", "action": "Correct analytics and summaries" },
+    { "gap": "48 Analyze clones → Understand reclassification", "action": "Batch CL recalibration" },
+    { "gap": "47 computational Understand → Apply reclassification", "action": "Batch CL recalibration" },
+    { "gap": "Pack E Section E 33 Understand@Moderate", "action": "DS downgrade to ME/2" },
+    { "gap": "Pack E 7 Remember items to restore", "action": "Restore CL; review borderline items" },
+    { "gap": "Pack A Section E 12 severe DCS gaps", "action": "Per-item recalibration" },
+    { "gap": "267 DCS §3 severe misalignments pool-wide", "action": "Multi-session remediation" },
+    { "gap": "592 Analyze items needed", "action": "Content authoring program" },
+    { "gap": "CURRENT_BASELINES.md staleness", "action": "Update with S719 SHA-256 hashes" },
+    { "gap": "Automated domain classifier unreliable", "action": "Redesign with content-based detection" },
+    { "gap": "DCS v1.1 pending approval", "action": "Human sign-off" },
+    { "gap": "Governance guard Rules 6-8 deferred", "action": "Implementation S727" }
+  ],
+
+  "s721_recommendations": {
+    "priority_1_mandatory": [
+      "Resolve S719 554-vs-542 discrepancy",
+      "Clarify 72% reviewer agreement labeling",
+      "Execute B/C/D 12-item changes or document out-of-scope",
+      "Run fresh pool-wide census with direct grep"
+    ],
+    "priority_2_calibration": [
+      "Restore 7 confirmed Pack E Remember items",
+      "Fix 12 Pack A Section E DCS gaps",
+      "Reclassify 48 Analyze clones → Understand",
+      "Reclassify 47 computational Understand → Apply",
+      "Downgrade 33 Pack E Section E Understand/Moderate → ME/2"
+    ],
+    "priority_3_governance": [
+      "Update CURRENT_BASELINES.md",
+      "Approve and append DCS v1.1",
+      "Append Agent M's extension to ALIGNMENT_MAINTENANCE_GUIDE.md"
+    ],
+    "priority_4_structural": [
+      "Begin Analyze content authoring (592 items)",
+      "Fix template-based labeling pipeline"
+    ]
+  },
+
+  "governance_attestation": {
+    "guard_20_20": "PASS",
+    "hash_stable": "ALL 5 PACKS UNCHANGED",
+    "certified_preserved": "2,181",
+    "answer_key_intact": "10/10 spot-check clean",
+    "scoring_intact": "scoreMCQ + correctCase unchanged",
+    "concurrency_clean": "0 artifacts",
+    "all_read_only": true,
+    "zero_file_modifications": true,
+    "no_new_defects": true,
+    "revision_history_appended": true
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "document": "SESSION352_INVESTIGATION_CAPABILITY_ANALYSIS",
+  "session": "S352",
+  "title": "Investigation Capability Validation — Board H",
+  "series": "350-Series — Framework v2 Operational Analytics (Wave 1)",
+  "date": "2026-07-27",
+  "type": "Read-Only Measurement — No Content Modifications",
+  "authority": "SESSION351_INVESTIGATION_INFRASTRUCTURE_AUDIT.json; SESSION206_CHALLENGE_WORKFLOW_PILOT.json; SESSION207_INVESTIGATION_READINESS.json; scripts/output/challenge_registry.json; scripts/output/question_history.json",
+  "purpose": "Use Challenge Registry, Question History, and Session Links to measure how close current infrastructure is to the target May Investigation Workbench. Map capability maturity across 5 levels.",
+
+  "current_investigation_infrastructure": {
+    "engines_operational": {
+      "challenge_registry": {
+        "status": "OPERATIONAL",
+        "description": "35 challenges across 6 types (CONTENT_ERROR, TECHNICAL_ISSUE, ANSWER_DISPUTE, EXPLANATION_ISSUE, AMBIGUITY, OTHER). 19 sessions linked. 2 REC-IDs linked. Stored in scripts/output/challenge_registry.json.",
+        "linkage_artifacts": [
+          "challenge_to_question.json — 35/35 links validated (S206 Board F)",
+          "challenge_to_session.json — 35/35 links to 19 sessions validated",
+          "challenge_to_recommendation.json — 35/35 links to 2 REC-IDs validated"
+        ]
+      },
+      "question_history": {
+        "status": "OPERATIONAL",
+        "description": "2,540 items indexed. 564 items have session links (defect, certification, or challenge history). Stored in scripts/output/question_history.json.",
+        "index_artifacts": [
+          "session_to_question_index.json",
+          "question_to_session_index.json"
+        ],
+        "coverage": "2,540/2,540 items indexed. 564/2,540 (22.2%) have recorded history — primarily Certified or defect-affected items. Non-Certified items may have zero recorded history."
+      },
+      "session_registry": {
+        "status": "OPERATIONAL",
+        "description": "Session registry indexing sessions with their associated QIDs. Stored in scripts/output/session_registry.json.",
+        "index_artifacts": ["session_to_question_index.json"]
+      }
+    }
+  },
+
+  "challenge_workflow_operational_metrics": {
+    "challenge_distribution": {
+      "total_challenges": 35,
+      "by_status": {
+        "OPEN": 12,
+        "INVESTIGATING": 8,
+        "RESOLVED": 6,
+        "CLOSED": 6,
+        "DISMISSED": 3
+      },
+      "by_type": {
+        "CONTENT_ERROR": 6,
+        "TECHNICAL_ISSUE": 6,
+        "ANSWER_DISPUTE": 6,
+        "EXPLANATION_ISSUE": 6,
+        "AMBIGUITY": 6,
+        "OTHER": 5
+      }
+    },
+    "workflow_completeness": {
+      "challenge_to_question": "100% (35/35 links operational)",
+      "challenge_to_session": "100% (35/35 links operational)",
+      "challenge_to_recommendation": "100% (35/35 links operational)",
+      "question_to_history": "100% (35/35 indexed in question_history.json)",
+      "question_to_session": "100% (question_to_session_index.json operational)",
+      "verdict": "FULLY_LINKED — All 5 link types validated operational by S206 Board F. The Challenge→Recommendation→Session→Resolution chain is architecturally complete."
+    }
+  },
+
+  "investigation_capability_maturity_model": {
+    "description": "5-level maturity model for investigation infrastructure, culminating in the May Investigation Workbench (Level 5).",
+    "levels": {
+      "level_1_ad_hoc": {
+        "description": "No structured investigation support. Defects found manually. Investigation is grep-based narrative searching.",
+        "achieved": true,
+        "achieved_at": "Project inception (v1 baseline)",
+        "evidence": "All defect detection in v1 was manual — 22+ DL-008 scan events, each ad-hoc grep-based with ~75% false-positive rate."
+      },
+      "level_2_structured_index": {
+        "description": "Structured indices exist. QID→Session, Session→QID, Challenge→Question linkages are queryable (manually or semi-automatically).",
+        "achieved": true,
+        "achieved_at": "S206 (2026-07-27)",
+        "evidence": "Challenge Registry, Question History, Session Registry operational. All 5 link types validated. 35 challenges, 2,540 indexed items, 564 items with history.",
+        "current_capability": "Data is structured but queries are not programmatic — investigation requires reading JSON files and cross-referencing manually. No investigation UI or query interface exists."
+      },
+      "level_3_queryable_investigation": {
+        "description": "Programmatic queries across all indices. Can answer: 'Which sessions touched QID X?', 'What defects does QID X have?', 'What is the certification path of QID X?'",
+        "achieved": false,
+        "gap": "No query interface exists. IQ-001 through IQ-009 are partially supported (grep-based). Full programmatic support requires a query layer (e.g., a script that accepts QID as input and returns all linked data).",
+        "iq_support_status": {
+          "IQ-001_find_defects_by_qid": "PARTIAL (grep DEFECT_LIBRARY.md)",
+          "IQ-002_find_sessions_by_qid": "PARTIAL (grep REVISION_HISTORY.md + session_registry.json)",
+          "IQ-003_find_recommendations_by_session": "PARTIAL (read recommendation_registry.json)",
+          "IQ-004_trace_certification_path": "NOT_SUPPORTED (no per-item gate history)",
+          "IQ-005_find_unresolved_recs_by_domain": "PARTIAL (cross-reference DEFECT_LIBRARY.md with domain tags)",
+          "IQ-006_find_duplicate_reviews": "NOT_SUPPORTED (no delta review operational)",
+          "IQ-007_find_certified_items_with_defects": "PARTIAL (cross-reference scan artifact + DEFECT_LIBRARY.md)"
+        }
+      },
+      "level_4_investigation_workbench": {
+        "description": "May Investigation Workbench (backend): Student→Challenge→Question→Session→Recommendation→Resolution chain fully automated. Admin can accept/reject challenges, assign reviewers, track remediation progress.",
+        "achieved": false,
+        "gap": "Student data feed not yet operational. Real student challenges are synthetic data. May Administration Portal at placeholder status. 5 escalation paths (ESC-001 through ESC-005) are NOT_BUILT. RBAC specified but not operational.",
+        "escalation_path_readiness": {
+          "ESC-001_learner_flags_item": "NOT_BUILT (requires May Coaching Layer + Admin Portal)",
+          "ESC-002_admin_reviews_challenge": "NOT_BUILT (requires Admin Portal Workbench)",
+          "ESC-003_reviewer_assigned": "NOT_BUILT (requires RBAC)",
+          "ESC-004_finding_remediation": "NOT_BUILT (remediation assignment defined but not integrated)",
+          "ESC-005_closed_and_attested": "NOT_BUILT (requires full lifecycle)"
+        }
+      },
+      "level_5_fully_integrated": {
+        "description": "May Investigation Workbench (full): Integrated with live exam engine. Real student challenges flow from learner→May→Admin→remediation→verification→closure. Adaptive learning adjustments based on challenge outcomes. Analytics dashboard for question performance.",
+        "achieved": false,
+        "gap": "Requires Level 4 completion + live exam engine integration + real student data + adaptive learning infrastructure. This is a post-800-series target."
+      }
+    },
+    "current_maturity": "LEVEL 2 (Structured Index) — All indices are built and data-linked, but investigation is manual (read JSON files, cross-reference by QID). Transition to Level 3 requires a programmatic query layer (QID→aggregate-all-data script).",
+    "distance_to_target_level_5": "3 levels remaining. Level 3 (queryable) requires a single investigation query script. Level 4 (workbench) requires the May Administration Portal. Level 5 (integrated) requires live exam engine integration and real student data."
+  },
+
+  "s207_investigation_readiness_validation": {
+    "s207_finding": "Investigation infrastructure OPERATIONAL. Student→Challenge→Question→Session→Recommendation→Resolution chain architecturally complete. Backend ready for May Administration Portal. Student data feed and UI pending 800-Series Phase 3.",
+    "s352_re_verification": "INFRASTRUCTURE_STABLE — No changes between S207 and S352 (both read-only). All indices, links, and registries unchanged. Challenge count (35), QID count (2,540), link counts all identical.",
+    "alignment": "S207 and S352 investigations converge: infrastructure is at Level 2 maturity (structured, indexed, but not programmatically queryable). The path to Level 3 is low-cost (one query script). Level 4-5 require the May Admin Portal and live student data."
+  },
+
+  "investigation_workbench_gap_analysis": {
+    "critical_gaps": [
+      {
+        "gap": "No programmatic query interface",
+        "severity": "MEDIUM",
+        "remediation": "Write a single investigation_query.js script that accepts QID and returns aggregated defect, session, recommendation, and challenge data from all registries. Estimated: ~100 lines, 1 session."
+      },
+      {
+        "gap": "No per-item gate history",
+        "severity": "MEDIUM",
+        "remediation": "Delta ledger must track per-item gate transitions (Unprocessed→Gate -1→Gate 0→...→Certified). Requires gate-history logging in scan artifact, not just current state."
+      },
+      {
+        "gap": "May Admin Portal placeholder",
+        "severity": "LOW (premature — 800-Series scope)",
+        "remediation": "800-Series Phase 3: build admin portal with Challenge Workbench, reviewer assignment, remediation tracking. Not scoped for 350-Series."
+      },
+      {
+        "gap": "Student challenge data synthetic",
+        "severity": "LOW (premature — requires live exam engine)",
+        "remediation": "All 35 current challenges are synthetic (author-generated). Real student challenges require live deployment with exam engine → May Coaching Layer → Challenge button integration."
+      }
+    ],
+    "low_cost_quick_wins": [
+      {
+        "action": "Build investigation_query.js — QID→aggregate-all-data",
+        "effort": "~1 session",
+        "impact": "Transitions from Level 2 to Level 3 maturity",
+        "output": "Single command: node scripts/investigation_query.js P1E-C-054 → returns all defects, sessions, recs, challenges"
+      }
+    ]
+  },
+
+  "verdict": "INVESTIGATION_CAPABILITY_LEVEL_2 — All indices operational (Challenge Registry, Question History, Session Registry). All 5 link types validated (Challenge→Question, Challenge→Session, Challenge→Recommendation, Question→History, Question→Session). 35 challenges tracked across 6 types with 5 statuses. Distance to target Level 5 (May Investigation Workbench): 3 levels. Lowest-cost next step: programmatic query layer (1 session, ~100 lines) → Level 3 (Queryable Investigation). Level 4-5 require 800-Series May Portal development.",
+
+  "cross_references": {
+    "s351_investigation": "reports/session351/SESSION351_INVESTIGATION_INFRASTRUCTURE_AUDIT.json",
+    "s206_challenge": "reports/SESSION206_CHALLENGE_WORKFLOW_PILOT.json",
+    "s207_investigation": "reports/SESSION207_INVESTIGATION_READINESS.json",
+    "challenge_registry": "scripts/output/challenge_registry.json",
+    "question_history": "scripts/output/question_history.json",
+    "session_registry": "scripts/output/session_registry.json"
+  }
+}

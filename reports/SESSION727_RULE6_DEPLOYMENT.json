@@ -1,0 +1,40 @@
+{
+  "report_metadata": {
+    "session": "S727",
+    "date": "2026-07-26",
+    "agent": "Agent G — Rule 6 Deployment",
+    "closure_gate_spec": "reports/SESSION726_SERIES_CLOSURE_GATE.md",
+    "attack_vector_report": "reports/SESSION726_UNAUTHORIZED_CLOSURE_PREVENTION_REPORT.md"
+  },
+  "rule_6_deployment_plan": {
+    "description": "Closure Acceptance Gate — blocks writes containing closure language when Ownership Acceptance Registry has closure_gate: FAIL entries",
+    "enforcement_level": "WARN (minimum) / BLOCK (recommended)",
+    "plugin_hook": "tool.execute.before (for BLOCK interception) + session.idle (for WARN detection)",
+    "code_lines_needed": "~40 lines of JavaScript",
+    "spec_completeness": "COMPLETE — 773-line specification per Agent H §7",
+    "detection_patterns": [
+      "CLOSED declaration in REVISION_HISTORY.md",
+      "closure certificate language",
+      "PROGRAM CLOSED declarations"
+    ]
+  },
+  "deployment_status": {
+    "specification": "COMPLETE (S726 Agent H)",
+    "code_implementation": "NOT DEPLOYED — 0 lines in governance-guard.js",
+    "test_coverage": "NOT CREATED — needs 26 new test cases (defined but not implemented)",
+    "current_prevention": "NONE — all 5 attack vectors from Agent J §3.3 remain exploitable"
+  },
+  "attack_vectors_currently_open": {
+    "v1_closure_without_check": "Agent writes CLOSED to REVISION_HISTORY.md without checking acceptance — NO BLOCK",
+    "v2_bypass_registry": "Agent declares CLOSED without reading the ownership registry — NO BLOCK",
+    "v3_fake_acceptance": "Agent writes fake acceptance records — NO VERIFICATION",
+    "v4_partial_acceptance": "Agent declares CLOSED with 3/6 acceptances — NO THRESHOLD CHECK",
+    "v5_stale_registry": "Agent uses old registry snapshot — NO FRESHNESS CHECK"
+  },
+  "readonly_deployment_feasibility": {
+    "standalone_script": "FEASIBLE — scripts/verify_closure_acceptance.js can audit REVISION_HISTORY.md + registry for compliance violations",
+    "agents_md_amendment": "FEASIBLE — AGENTS.md §9 extension requiring manual verification before closure",
+    "mechanical_enforcement": "NOT FEASIBLE in read-only — requires modifying governance-guard.js"
+  },
+  "verdict": "Rule 6 specification is complete and 40-line code change is well-defined. Mechanical deployment requires governance-guard.js modification (blocked in read-only session). Standalone verification script is feasible as compensating procedural control."
+}

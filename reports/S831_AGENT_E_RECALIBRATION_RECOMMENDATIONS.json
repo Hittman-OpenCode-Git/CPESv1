@@ -1,0 +1,350 @@
+{
+  "session": "S831",
+  "agent": "E",
+  "phase": "Analysis",
+  "task": "Moderate→Difficult recalibration recommendations",
+  "timestamp": "2026-07-27",
+  "sources_consulted": [
+    "reports/S831_AGENT_A_DISCOVERY.json — full-pool difficulty distribution, band analysis, certified pool estimate",
+    "reports/session_status/S831_AGENT_C_DISCOVERY.json — section inventory, per-section difficulty estimates, cognitive skew analysis, recalibration priority ordering",
+    "reports/SESSION831_AGENT_D_DIFFICULTY_CALIBRATION_DISCOVERY.json — certified pool profile, case study calibration benchmark, combined pool estimate",
+    "reports/S810.1/agent_f_difficulty_matrix.json — Domain E seed calibration matrix (38 items), DL-031 pattern confirmation, overstated/understated verdicts",
+    "pack_b_corrected.js lines 280-339, 3915-3974, 7195-7254 — existing Difficult items sampled for benchmark characteristics",
+    "knowledge/DEFECT_LIBRARY.md DL-031 — definition-match difficulty inflation pattern",
+    "knowledge/CAQS_v1.0.md §6.1-6.2 — target difficulty and Bloom's distributions",
+    "knowledge/TAXONOMY_REGISTRY.md — Difficulty values (1-5) and CognitiveLevel enumerations"
+  ],
+  "recalibration_criteria": {
+    "description": "Criteria for determining which Moderate (DifficultyScore=3) items warrant recalibration to Difficult (DifficultyScore=4). These criteria are ordered by diagnostic weight — an item meeting criteria 1 AND (2 OR 3) is a strong candidate. An item meeting only criterion 7 (e.g., long EC text on a definition-match item) is NOT a candidate.",
+    "must_have": [
+      {
+        "id": "C1",
+        "criterion": "CalculationItem is true AND requires 3+ distinct arithmetic operations",
+        "weight": "HIGH",
+        "rationale": "Multi-step calculations are the clearest driver of genuine difficulty. Items requiring chained arithmetic (e.g., learning curve → cumulative average → total labor hours) test procedural mastery and working memory — hallmarks of CMA Difficult items. Pack B benchmark: all 3 sampled Difficult items (P1B-A-083, P1B-B-119, P1B-B-200) have DifficultyScore=4, CognitiveLevel=Apply, and require 3+ calculation steps.",
+        "examples_from_benchmark": [
+          "P1B-B-119: 4th-unit learning curve time = 100 × 4^(-0.32193) = 64 — requires understanding of the learning curve exponent, proper substitution, and logarithmic application",
+          "P1B-B-200: 8-unit cumulative average = 1,000 × 0.9³ = 729 × 8 = 5,832 total hours — requires chaining cumulative averages across 3 doublings"
+        ],
+        "pack_b_difficult_distribution": "29 Difficult items in Pack B, 25 of 29 (86%) are in Sections B and C. Pack B Difficult items cluster in calculation-heavy micro-topics: learning curves, cash budget with borrowing constraints, direct materials purchases, variance reconciliation."
+      },
+      {
+        "id": "C2",
+        "criterion": "CognitiveLevel is Apply AND Section is A, B, C, or D",
+        "weight": "HIGH",
+        "rationale": "Apply is the minimum cognitive level for Difficult-caliber items in calculation domains. Remember/Understand items — even in Sections A-D — are predominantly recognition tasks that do not warrant Difficult. Agent F's S810.1 analysis confirmed: zero of 38 Domain E/D seeds scored above Apply, and zero justified Difficult. The Bloom's→Difficulty bridge is: Apply → Moderate(3) or Difficult(4); Analyze → Difficult(4) or Very Difficult(5); Evaluate → Very Difficult(5).",
+        "section_exclusion": "Sections E and F are excluded from the upward recalibration pool. Agent F's matrix showed 23 of 38 Domain E seeds (60.5%) are OVERSTATED — the current Difficult-labeled items are inflated. Sections E/F items should be recalibrated DOWNWARD (Moderate→Easy/Moderate-Easy per DL-031), not upward. This reallocates the ~464 surplus Moderate count toward the downward direction for conceptual domains.",
+        "cognitive_constraint": "Only 5 items pool-wide have CognitiveLevel=Analyze; zero have Evaluate. This severely limits the pool of items that can defensibly reach Difficult(4) or Very Difficult(5) at this time."
+      },
+      {
+        "id": "C3",
+        "criterion": "Tests subtle conceptual distinctions or framework comparisons",
+        "weight": "MEDIUM",
+        "rationale": "Items that require distinguishing between similar-but-opposite concepts (e.g., principal vs. agent under ASC 606, operating vs. finance lease criteria, net present value vs. internal rate of return decision rules) test higher-order understanding. These are frequently missed on the CMA exam and warrant Difficult labeling even without multi-step calculation.",
+        "examples": "P1B-A-083: principal vs. agent analysis under ASC 606 — requires parsing whether the entity controls goods before transfer. Distractors test gross-vs-net recognition errors. DifficultyScore=4 is appropriate despite being conceptual because the conceptual distinction is subtle and the distractors are sophisticated."
+      },
+      {
+        "id": "C4",
+        "criterion": "Requires interpreting exhibits or financial statements embedded in the stem",
+        "weight": "MEDIUM",
+        "rationale": "Items where the candidate must extract data from an exhibit before performing a calculation test integrated reasoning — a hallmark of Difficult CMA items. The exhibit adds a cognitive decode step before the calculation begins.",
+        "notes": "Most stand-alone MCQ items do not have embedded exhibits (exhibits are case-study features). This criterion primarily applies to case-study items, which already have better Difficult calibration (35.7% Difficult in case pool vs. 3.3% in MCQ pool). A small number of MCQ items embed mini-tables in the stem text."
+      },
+      {
+        "id": "C5",
+        "criterion": "Integrates 2+ distinct CMA Part 1 concepts",
+        "weight": "MEDIUM",
+        "rationale": "Items that require simultaneous knowledge from two different topic areas (e.g., cash budget + learning curve, variance analysis + flexible budget, CVP + tax effects) demand cognitive integration beyond single-topic application. These items test the candidate's ability to synthesize — even if the individual operations are Apply-level, the synthesis component elevates difficulty.",
+        "examples": "A cash budget item requiring both (a) collections forecasting from Section B AND (b) cost behavior analysis from Section D is a Difficult-level integration task."
+      },
+      {
+        "id": "C6",
+        "criterion": "Has proven to be difficult for candidates (analytics-backed)",
+        "weight": "LOW",
+        "rationale": "If historical analytics data exists showing an item's correct-answer rate below 50% among prepared candidates, it is empirically Difficult regardless of surface characteristics. However, no learner analytics data currently exists in this repository (all CorrectPercentage fields are unpopulated). This criterion is forward-looking — once analytics are active, it will be the most reliable recalibration signal.",
+        "current_status": "Not applicable — no analytics data exists. All recalibration must rely on structural analysis (criteria C1-C5)."
+      }
+    ],
+    "exclusion_criteria": [
+      {
+        "id": "X1",
+        "criterion": "DL-031 pattern: stem is a textbook definition and correct answer is the term being defined",
+        "action": "Recalibrate DOWNWARD (Moderate→Easy or Moderate-Easy), never upward",
+        "rationale": "Agent F confirmed 12 of 38 Domain E seeds (31.6%) follow DL-031. Agent C estimated ~500 pool-wide. These items should be Easy(1), not Moderate(3) or Difficult(4). Recalibrating DL-031 items upward compounds the inflation error."
+      },
+      {
+        "id": "X2",
+        "criterion": "CognitiveLevel is Remember or Understand in Sections E or F",
+        "action": "Recalibrate DOWNWARD only — these are definitional/conceptual items mislabeled as Moderate",
+        "rationale": "Sections E (COSO, governance, ethics) and F (technology, ERP, analytics) are predominantly conceptual. The cognitive ceiling for most Section E/F items is Understand. Labeling them Moderate(3) is inflation; labeling them Difficult(4) would be double inflation."
+      },
+      {
+        "id": "X3",
+        "criterion": "Single-step calculation without conceptual complexity",
+        "action": "Remain Moderate(3) or move to Moderate-Easy(2)",
+        "rationale": "A single arithmetic operation (e.g., break-even units = fixed costs / CM per unit) tests Apply but at a routinized level. These belong at Moderate(3) or Moderate-Easy(2), not Difficult(4). Pack B's benchmark has such items at Moderate(3) — e.g., most Section B budget-sequencing items."
+      },
+      {
+        "id": "X4",
+        "criterion": "ExplanationCorrect text < 150 characters",
+        "action": "Review — likely a simple item mislabeled as Moderate. Not a Difficult candidate.",
+        "rationale": "Complex items require complex explanations. A very short EC text suggests the item is more straightforward than its Moderate label implies. These should be audited for DL-031 or single-step simplicity."
+      }
+    ]
+  },
+  "phase_1_targets": {
+    "description": "Phase 1 targets 15% Difficult per pack as an intermediate calibration goal. The full CAQS target is 25%, but reaching that requires authoring new content (Phase 2) — recalibrating existing items alone cannot close the full gap.",
+    "methodology": "15% target selected as the midpoint between current state (3.3% pool-wide) and CAQS target (25%). Reaching 15% requires ~296 recalibrations from Moderate→Difficult across all packs. This is achievable through recalibration alone without requiring new item authoring. The remaining 10% gap (15%→25%) requires Phase 2 content expansion.",
+    "targets": [
+      {
+        "pack": "A",
+        "total_items": 500,
+        "current_difficult": 0,
+        "current_moderate": 183,
+        "target_difficult": 75,
+        "recalibrate_from_moderate": 75,
+        "resulting_moderate": 108,
+        "resulting_moderate_pct": 21.6,
+        "section_priorities": [
+          {"section": "B", "items": 100, "target_from_this_section": 30, "rationale": "Highest calculation density — master budget, cash budget, learning curves. Best candidates per criteria C1-C2."},
+          {"section": "C", "items": 100, "target_from_this_section": 20, "rationale": "Variance analysis, ROI/RI, transfer pricing — multi-step calculations with judgment."},
+          {"section": "D", "items": 75, "target_from_this_section": 15, "rationale": "Job/process costing, ABC, joint cost allocation — calculation-intensive."},
+          {"section": "A", "items": 75, "target_from_this_section": 10, "rationale": "Cash flow indirect method, revenue recognition journal entries — limited Apply items."},
+          {"section": "E", "items": 75, "target_from_this_section": 0, "rationale": "COSO/internal controls — predominantly Understand. DL-031 risk. Do NOT recalibrate upward."},
+          {"section": "F", "items": 75, "target_from_this_section": 0, "rationale": "Technology/analytics — definitional. DL-031 risk. Do NOT recalibrate upward."}
+        ],
+        "notes": "Pack A has 281 Apply items (56%) but 43.8% Moderate-Easy. Many items may be double-mislabeled — should be Moderate instead of Moderate-Easy, then are candidates for Difficult. Requires two-pass calibration: Moderate-Easy→Moderate, then Moderate→Difficult for the top tier."
+      },
+      {
+        "pack": "B",
+        "total_items": 500,
+        "current_difficult": 29,
+        "current_moderate": 246,
+        "target_difficult": 75,
+        "recalibrate_from_moderate": 46,
+        "resulting_moderate": 200,
+        "resulting_moderate_pct": 40.0,
+        "section_priorities": [
+          {"section": "B", "items": 100, "target_from_this_section": 18, "rationale": "Already has some Difficult items (~6 in Section B). Target the remaining high-calculation items."},
+          {"section": "C", "items": 100, "target_from_this_section": 15, "rationale": "Performance management — variance reconciliation, ROI/RI integrated analysis."},
+          {"section": "A", "items": 75, "target_from_this_section": 8, "rationale": "Financial reporting calculations — cash flow indirect method, ratio analysis."},
+          {"section": "D", "items": 75, "target_from_this_section": 5, "rationale": "Cost management calculations — CVP with tax, joint costs."},
+          {"section": "E", "items": 75, "target_from_this_section": 0, "rationale": "COSO — conceptual. DL-031 risk."},
+          {"section": "F", "items": 75, "target_from_this_section": 0, "rationale": "Technology — definitional. Many items should go DOWN per DL-031."}
+        ],
+        "notes": "Pack B has the best calibration (29 Difficult, 65.2% Apply). It is the benchmark pack. Only 46 additional Difficult items needed — less aggressive recalibration required. Pack B's existing Difficult items should be preserved and used as templates for what Difficult looks like in other packs."
+      },
+      {
+        "pack": "C",
+        "total_items": 500,
+        "current_difficult": 14,
+        "current_moderate": 279,
+        "target_difficult": 75,
+        "recalibrate_from_moderate": 61,
+        "resulting_moderate": 218,
+        "resulting_moderate_pct": 43.6,
+        "section_priorities": [
+          {"section": "B", "items": 100, "target_from_this_section": 25, "rationale": "Highest calculation density. 55.8% overall Moderate rate suggests many genuinely Apply-level items mislabeled."},
+          {"section": "C", "items": 100, "target_from_this_section": 18, "rationale": "Performance management — variance analysis, flexible budgets."},
+          {"section": "D", "items": 75, "target_from_this_section": 10, "rationale": "Cost management — ABC, process costing, joint costs. DL-012 clone groups in Section D may limit unique candidates."},
+          {"section": "A", "items": 75, "target_from_this_section": 8, "rationale": "Financial reporting calculations."},
+          {"section": "E", "items": 75, "target_from_this_section": 0, "rationale": "DL-012 clone groups inflate Section E. Items are template-rotation artifacts — not genuine candidates."},
+          {"section": "F", "items": 75, "target_from_this_section": 0, "rationale": "DL-031 risk. DL-035: 28 Certified Domain F items have DL-026 — prioritize DL-026 remediation over difficulty recalibration."}
+        ],
+        "notes": "Pack C has the highest Moderate proportion (55.8%). Many of these are genuinely Moderate items that should stay Moderate — only the top tier (multi-step calculations, Apply-level in Sections B/C/D) should move up. Sections D/E/F are heavily affected by DL-012 clone groups and DL-013 boilerplate — the unique item count for recalibration candidates may be lower than the headline 279 suggests."
+      },
+      {
+        "pack": "D",
+        "total_items": 500,
+        "current_difficult": 20,
+        "current_moderate": 284,
+        "target_difficult": 75,
+        "recalibrate_from_moderate": 55,
+        "resulting_moderate": 229,
+        "resulting_moderate_pct": 45.8,
+        "section_priorities": [
+          {"section": "B", "items": 100, "target_from_this_section": 22, "rationale": "Budgeting/forecasting — highest calculation density."},
+          {"section": "C", "items": 100, "target_from_this_section": 16, "rationale": "Performance management calculations."},
+          {"section": "D", "items": 75, "target_from_this_section": 10, "rationale": "Cost management calculations. DL-026 affects Section C (50 items) — those should not be recalibrated until DL-026 is resolved."},
+          {"section": "A", "items": 75, "target_from_this_section": 7, "rationale": "Financial reporting calculations. DL-008 affects 4 Section A items — resolve DL-008 first."},
+          {"section": "E", "items": 75, "target_from_this_section": 0, "rationale": "DL-012 clone groups. All 10 'Difficult'-labeled Domain E/D items were OVERSTATED per Agent F."},
+          {"section": "F", "items": 74, "target_from_this_section": 0, "rationale": "DL-031 risk. 1 item has Section field anomaly (C-F10). DL-035: 11 Certified Domain F items have DL-026."}
+        ],
+        "notes": "Pack D has the highest Moderate count (284). Large portions of Sections D/E/F are DL-012 clone group artifacts — the effective unique item pool for upward recalibration is smaller than the headline count. Existing Difficult items (20) should be verified — Agent F found ALL 10 Domain E/D 'Difficult' items were overstated. Some Pack D Difficult items in Sections B/C/D may also be inflated."
+      },
+      {
+        "pack": "E",
+        "total_items": 540,
+        "current_difficult": 22,
+        "current_moderate": 234,
+        "target_difficult": 81,
+        "recalibrate_from_moderate": 59,
+        "resulting_moderate": 175,
+        "resulting_moderate_pct": 32.4,
+        "section_priorities": [
+          {"section": "B", "items": 100, "target_from_this_section": 20, "rationale": "Budgeting calculations — best candidates in Pack E despite overall 77% Understand skew."},
+          {"section": "C", "items": 100, "target_from_this_section": 18, "rationale": "Performance management — variance analysis, even within Understand-dominant pack."},
+          {"section": "D", "items": 75, "target_from_this_section": 12, "rationale": "Cost management calculations."},
+          {"section": "A", "items": 75, "target_from_this_section": 9, "rationale": "Financial reporting calculations."},
+          {"section": "E", "items": 115, "target_from_this_section": 0, "rationale": "40 R-series supplements inflate Section E. 77% Understand cognitive skew is most extreme here. Conceptual only."},
+          {"section": "F", "items": 75, "target_from_this_section": 0, "rationale": "Technology definitional. DL-031 risk. Conceptual only."}
+        ],
+        "notes": "Pack E is the most challenging pack for upward recalibration. With 77% Understand items, the pool of Apply-level items eligible for Moderate→Difficult is limited. Finding 59 items may require reaching into borderline cases (e.g., Apply items with 2-step calculations). If fewer than 59 are found, the shortfall must be addressed in Phase 2 content expansion. Existing Difficult items (22) should be audited — P1E-E-037 had a DL-030 answer-key error (COSO Principle 15 vs 14 confusion). Pack E's labeling pattern may have similar COSO-adjacent errors in its Difficult items."
+      }
+    ],
+    "phase_1_totals": {
+      "total_recalibrations": 296,
+      "pool_difficult_before": 85,
+      "pool_difficult_after": 381,
+      "pool_difficult_pct_before": 3.3,
+      "pool_difficult_pct_after": 15.0,
+      "pool_moderate_before": 1226,
+      "pool_moderate_after": 930,
+      "pool_moderate_pct_before": 48.3,
+      "pool_moderate_pct_after": 36.6,
+      "remaining_gap_to_25pct_target": 254,
+      "remaining_gap_phase_2": "254 additional Difficult items needed via content expansion (new item authoring)"
+    }
+  },
+  "selection_methodology": {
+    "description": "How to select which specific Moderate items to recalibrate to Difficult within each pack and section",
+    "step_1": "Filter by section: limit to Sections A, B, C, D only. Exclude Sections E and F entirely — per Agent C F-C06, Agent F domain analysis, and DL-031 concentration in conceptual domains.",
+    "step_2": "Filter by cognitive demand: require CognitiveLevel === 'Apply'. Pool-wide, only ~1,200 items are Apply-level. Of the ~900 Moderate items in Sections A-D, approximately 550-650 are Apply. This is the candidate pool.",
+    "step_3": "Filter by calculation: require CalculationItem === true OR stem contains multi-part business scenario (>150 characters). Exclude single-sentence definitional stems (DL-031 pattern).",
+    "step_4": "Filter by explanation complexity: require ExplanationCorrect.length > 200 characters. Complex items have complex explanations. Short EC text indicates a conceptually simple item.",
+    "step_5": "Prioritize by distractor sophistication: prefer items where at least 2 of 3 distractor ExplanationWrong fields are >= 100 characters with choice-specific text. Boilerplate 'does not align with...' text suggests the distractors are not engineered for difficulty.",
+    "step_6": "Section B first, then C, then D, then A. Within each section, prioritize items with higher Topic sequence numbers (later in the section = generally more advanced concepts within the rotation group pattern).",
+    "step_7": "Exclude items with open structural defects: DL-008, DL-026, DL-013 (full boilerplate). Difficulty recalibration should not be performed on items with known content defects — fix the defect first, then recalibrate.",
+    "estimated_candidate_pool": {
+      "pack_a_candidates": "~110 Apply items in Sections A-D with multi-step calculations or complex stems",
+      "pack_b_candidates": "~130 Apply items in Sections A-D — largest Apply pool (65.2% of pack), best candidate density",
+      "pack_c_candidates": "~90 Apply items in Sections A-D after excluding DL-012 clone groups and DL-013 boilerplate items",
+      "pack_d_candidates": "~85 Apply items in Sections A-D after excluding DL-012 clone groups and DL-013 boilerplate items",
+      "pack_e_candidates": "~60 Apply items in Sections A-D — limited by 77% Understand skew. Some may need to reach.",
+      "total_candidate_pool": "~475 items — sufficient to cover the 296 needed (62% hit rate on candidates)"
+    }
+  },
+  "risks": [
+    {
+      "id": "R1",
+      "description": "Recalibration without per-item review may label items as Difficult that do not warrant it",
+      "impact": "HIGH — learners encounter items labeled Difficult that feel Moderate, reducing trust in the simulator's difficulty calibration",
+      "mitigation": "Every recalibrated item must pass per-item review verifying it meets at least criteria C1 AND C2 (calculation with Apply level in Sections A-D). Batch size ≤30 per governance-guard Rule 5. Pre-recalibration backup mandatory. Recalibrated items should be independently spot-checked at 20% sampling rate."
+    },
+    {
+      "id": "R2",
+      "description": "Difficulty label alone does not change the item's actual cognitive demand",
+      "impact": "MEDIUM — relabeling an Apply-level single-step calculation from Moderate(3) to Difficult(4) makes the distribution look better on paper but does not prepare learners for genuinely Difficult CMA exam items",
+      "mitigation": "Phase 1 recalibration should target the genuinely most demanding items using the multi-step calculation filter (C1). Items meeting only 'borderline' criteria should be deferred to Phase 2 content enhancement (add a calculation step, not just a label change). The criteria are intentionally strict to avoid label inflation."
+    },
+    {
+      "id": "R3",
+      "description": "Pack E may lack enough Apply items in Sections A-D to reach its 59-item target",
+      "impact": "MEDIUM — Pack E's 77% Understand skew means the candidate pool may be 40-50 items, not 59. Forcing recalibration on Understand-level items would produce fraudulent Difficult labels.",
+      "mitigation": "Accept a lower Phase 1 target for Pack E (e.g., 12% Difficult = 65 items → 43 recalibrations) if the candidate pool proves insufficient. The shortfall transfers to Phase 2 content expansion. Do not force recalibration on Understand-level items."
+    },
+    {
+      "id": "R4",
+      "description": "DL-016 (metadata-content block misalignment) may cause scan tools to misidentify Moderate items that are structurally non-Moderate",
+      "impact": "MEDIUM — items where metadata-block Difficulty differs from what the renderer uses would be missed or incorrectly targeted",
+      "mitigation": "For Packs A/C/D (dual-block architecture), read DifficultyScore from the content block (where Stem/Choices live), not from the metadata block. Per AGENTS.md §5: cross-check any scan claims against raw file/line evidence."
+    },
+    {
+      "id": "R5",
+      "description": "Existing 85 Difficult items may themselves be inflated and should not serve as recalibration benchmarks",
+      "impact": "LOW — if current Difficult items are incorrectly labeled, they model the wrong standard for new Difficult items",
+      "mitigation": "Agent F's S810.1 analysis of Domain E/D seeds found all 10 'Difficult'-labeled items were overstated. Before using Pack B items as benchmarks, audit 10% of existing Difficult items across all packs for label accuracy. P1E-E-037 was a confirmed DL-030 error. If the audit finds >20% inflation, existing Difficult items should be recalibrated downward in a separate corrective pass, not used as calibration targets."
+    },
+    {
+      "id": "R6",
+      "description": "Sections E and F Moderate items need DOWNWARD recalibration (DL-031), which may affect Phase 1 Moderate→Difficult targets",
+      "impact": "LOW — downward recalibration of ~200 Section E/F Moderate items to Easy/Moderate-Easy reduces the Moderate pool, but the Phase 1 calculations already exclude Sections E and F. The remaining Moderate→Difficult pool in Sections A-D is unaffected.",
+      "mitigation": "Run the DL-031 downward recalibration in parallel (Agent G's scope). The two recalibration directions do not intersect — they operate on disjoint sections."
+    }
+  ],
+  "recommended_approach": {
+    "strategy": "PHASED — Phase 1 (recalibration) + Phase 2 (content expansion)",
+    "phase_1": {
+      "description": "Recalibrate ~296 Moderate items to Difficult across all 5 packs using criteria C1-C6 and exclusion filters X1-X4",
+      "timeline": "Can begin immediately after per-item candidate list is generated. Execution: 10-12 batches of ≤30 items. Estimated 3-4 sessions at current throughput.",
+      "preconditions": [
+        "Generate per-pack candidate item lists (QID-level) using the selection methodology above",
+        "Verify each candidate against raw file line evidence (AGENTS.md §5)",
+        "For Packs A/C/D: confirm DifficultyScore is read from the content block, not metadata block",
+        "Resolve any open DL-008/DL-026/DL-013 on candidates before recalibration",
+        "Backup all pack files before first write batch"
+      ],
+      "execution_order": [
+        {"wave": "W1", "pack": "B", "items": 46, "rationale": "Best-calibrated pack — establishes the baseline for what Difficult looks like across other packs"},
+        {"wave": "W2", "pack": "A", "items": 75, "rationale": "Pack with zero Difficult items — highest learner-pool impact from calibration improvement"},
+        {"wave": "W3", "pack": "C", "items": 61, "rationale": "Second-highest Moderate proportion — significant impact"},
+        {"wave": "W4", "pack": "D", "items": 55, "rationale": "Highest absolute Moderate count — but Sections D/E/F have clone artifacts reducing unique candidates"},
+        {"wave": "W5", "pack": "E", "items": 59, "rationale": "Hardest pack to fill — may accept lower target if candidate pool proves insufficient"}
+      ],
+      "post_phase_1_verification": [
+        "Re-run full-pool difficulty distribution scan (match S831 Agent A methodology)",
+        "Verify Difficult band reaches ≥14% pool-wide (allowing 1% tolerance below 15%)",
+        "Verify no section exceeds 40% Moderate post-recalibration",
+        "20% independent spot-check on recalibrated items: verify each meets at minimum criteria C1 AND C2",
+        "Re-run governance guard test suite — verify no Rule 2 violations introduced"
+      ]
+    },
+    "phase_2": {
+      "description": "Author new Difficult and Very Difficult items through content expansion to bridge the remaining gap from 15% to 25% Difficult and 0% to 10% Very Difficult",
+      "estimated_effort": "~254 new Difficult items + ~254 new Very Difficult items = ~508 new items. At current certification pipeline capacity (~200 items per wave), this requires 3-4 certification waves across 8-12 sessions.",
+      "target_sections": "Prioritize Sections B and C (highest calculation density, largest absolute gaps). Then Sections A and D. Sections E and F need content that goes beyond definitions (e.g., fraud investigation scenarios for Section E, data analytics interpretation for Section F).",
+      "leverage_case_study_pool": "The case study pool has 266 Difficult items (35.7%) — study these items for templates of what Difficult calibration looks like. The case study scenarios (multi-exhibit, integrated) naturally produce Difficult-caliber cognitive demand.",
+      "blocked_by": "Phase 2 requires the authoring pipeline to be active (not currently operational). No launch date committed."
+    }
+  },
+  "section_specific_insights": {
+    "section_b_priority": {
+      "why_highest_priority": "Largest section (500 items), most calculation-intensive domain, largest absolute Difficult gap (108 items short of 25% target). The real CMA Part 1 exam has Section B items that require multi-step budget preparation, learning curve applications, and cash forecasting with borrowing constraints — all of which are naturally Difficult-level tasks.",
+      "specific_item_types_to_target": [
+        "Learning curve: cumulative average time calculations with 3+ doublings (like P1B-B-200 benchmark)",
+        "Cash budget with borrowing: multi-step collections + disbursements + minimum balance constraint",
+        "Flexible budget + variance reconciliation: integrated analysis across 2+ variance types",
+        "Master budget sequencing: multi-department budget dependencies (not 'which comes first?' — that is DL-031 definition-match)",
+        "Sensitivity analysis: what-if scenarios requiring recalculation under changed assumptions"
+      ]
+    },
+    "section_c_priority": {
+      "why_second_highest": "Performance management items test variance analysis, ROI/RI, balanced scorecard, transfer pricing — all require multi-step calculations with judgment. Same item count and same delta as Section B (500 items, 108 Difficult short).",
+      "specific_item_types_to_target": [
+        "Four-variance analysis (spending + efficiency + budget + volume) — requires understanding all 4 components simultaneously",
+        "ROI vs. RI comparison with investment base changes — dual-metric analysis",
+        "Transfer pricing with capacity constraints — multi-party optimization",
+        "Flexible budget performance report: actual vs. flexible budget vs. master budget reconciliation"
+      ]
+    },
+    "sections_a_d": {
+      "priority": "Third tier. Sections A (375 items) and D (375 items) require calculation proficiency but have fewer items. Combined 162 Difficult target. Calculation-heavy topics (cash flow indirect method, process costing with equivalent units, joint cost allocation with NRV) are natural Difficult candidates.",
+      "constraint": "Pack A Section A has zero Difficult items — the worst per-section calibration in the pool. Even reaching 15% (11 items) is a significant upgrade. Pack D Section D has DL-012 clone artifacts that reduce unique candidates."
+    },
+    "sections_e_f": {
+      "priority": "NOT candidates for upward recalibration. These sections are predominantly conceptual. Agent F's S810.1 analysis of 38 Domain E seeds found 60.5% overstated and 0% that justified Difficult. The existing 'Difficult' labels in Pack D Section E (10 items) are all inflated by 1-3 score points and should be recalibrated DOWNWARD.",
+      "recommended_action": "Run DL-031 downward recalibration on Sections E and F first. This will reduce the Moderate count and correct the Easy deficit simultaneously. Once the conceptual foundation is calibrated correctly, Phase 2 content expansion can add genuinely Difficult items (fraud investigation scenarios, data analytics interpretation tasks, COSO ERM multi-component assessments) that go beyond definition-matching."
+    }
+  },
+  "decision": "RECOMMEND ACCEPT WITH CONDITIONS",
+  "conditions": [
+    "1. Per-item review required: no bulk recalibration without verifying each item against criteria C1-C6. Batch size ≤30 per governance-guard Rule 5.",
+    "2. Pack E target may need downward adjustment: if fewer than 59 Apply-level Moderate items in Sections A-D are found, accept 12% Difficult (65 items, 43 recalibrations) as an interim target.",
+    "3. Sections E and F excluded from upward recalibration entirely: zero Moderate→Difficult items from Sections E/F. Agent F evidence is dispositive.",
+    "4. Existing Difficult items must be audited before serving as benchmarks: 10% sample audit across all packs. If >20% inflation rate found, existing Difficult items require corrective recalibration first.",
+    "5. Pre-existing defects (DL-008, DL-026, DL-013) must be resolved on candidates before difficulty recalibration.",
+    "6. DifficultyScore must match Difficulty label: any label/score mismatch (e.g., label='Difficult' but score=2, found in 14 of 38 Agent F reviewed items) must be corrected in the same pass.",
+    "7. REVISION_HISTORY.md entry required: document every recalibration batch with before/after counts, list of QIDs, and governing criteria applied.",
+    "8. governance-guard.js must be updated to enforce Difficulty label ↔ DifficultyScore consistency (new Rule 7 or extension of existing rule). 36.8% of Domain E seeds had label/score mismatches — this is a systematic defect needing automated enforcement."
+  ],
+  "cross_references": {
+    "agents_a_d": "Discovery reports (distribution, band analysis, certified pool estimate)",
+    "agent_c": "Section inventory, recalibration priority ordering, per-section difficulty estimates",
+    "agent_f": "Domain E seed calibration matrix — 38-item evidence that Sections E/F are not upward recalibration candidates",
+    "pack_b_benchmark": "29 Difficult items — the only properly calibrated upper tier in the pool. Study these for calibration patterns.",
+    "dl031": "Definition-match inflation — must be addressed downward before or in parallel with upward recalibration",
+    "dl008_dl026_dl013": "Open structural defects that block per-item recalibration readiness",
+    "cqs_61_62": "Target difficulty distribution (25% Difficult) and Bloom's distribution (25% Analyze, 15% Evaluate)",
+    "governance_guard": "Rule 5 (30-item batch cap enforced), proposed Rule 7 (Difficulty label↔score consistency)"
+  }
+}

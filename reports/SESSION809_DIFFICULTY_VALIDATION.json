@@ -1,0 +1,1293 @@
+{
+  "report": "S809_DIFFICULTY_VALIDATION",
+  "generated": "2026-07-27T02:32:07.377Z",
+  "scope": "38 Domain E seed items (Pack C: 19, Pack D: 19)",
+  "methodology": {
+    "checks": [
+      "1. DifficultyScore matches Difficulty string (1=Easy, 2=Moderate-Easy, 3=Moderate, 4=Difficult, 5=Very Difficult)",
+      "2. DL-031 check: if stem is a textbook definition and correct answer is the defined term, flag as potential difficulty inflation",
+      "3. CognitiveLevel alignment with difficulty (Remember/Understand → Easy/Moderate-Easy, Apply → Moderate, Analyze → Moderate/Difficult, Evaluate → Difficult/Very Difficult)",
+      "4. Pack B Domain E benchmark for calibration reference"
+    ]
+  },
+  "summary": {
+    "totalItems": 38,
+    "pass": 9,
+    "flag": 29,
+    "passRate": "23.7%",
+    "seedDifficultyDistribution": {
+      "Moderate": 28,
+      "Easy": 5,
+      "Moderate-Easy": 5
+    },
+    "dl031Flagged": 12,
+    "scoreMismatches": 14,
+    "cognitiveLevelMismatches": 18,
+    "recalibrationRecommended": 21,
+    "byPack": {
+      "pack_c": {
+        "total": 19,
+        "pass": 3,
+        "flag": 16,
+        "distribution": {
+          "Moderate": 16,
+          "Easy": 3
+        }
+      },
+      "pack_d": {
+        "total": 19,
+        "pass": 6,
+        "flag": 13,
+        "distribution": {
+          "Moderate-Easy": 5,
+          "Moderate": 12,
+          "Easy": 2
+        }
+      }
+    }
+  },
+  "packB_benchmark": {
+    "total": 75,
+    "distribution": {
+      "Moderate": 34,
+      "Easy": 32,
+      "Moderate-Easy": 9
+    },
+    "percentage": {
+      "Easy": "42.7%",
+      "ModerateEasy": "12.0%",
+      "Moderate": "45.3%"
+    },
+    "note": "Pack B is calibrated via certification pass. Easy: 42.7%, Moderate-Easy: 12.0%, Moderate: 45.3%. Pack C/D seeds should trend similarly."
+  },
+  "dl031Findings": [
+    {
+      "qid": "P1-EC-004",
+      "file": "pack_c",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.005 segregation of duties design",
+      "note": "Definition-match item labeled \"Moderate\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-EC-014",
+      "file": "pack_c",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.015 fraud triangle elements",
+      "note": "Definition-match item labeled \"Moderate\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-EC-040",
+      "file": "pack_c",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.041 management override risk",
+      "note": "Definition-match item labeled \"Moderate\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-EC-041",
+      "file": "pack_c",
+      "currentDifficulty": "Easy",
+      "currentScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.042 management override risk",
+      "note": "Definition-match item labeled \"Easy\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-EC-061",
+      "file": "pack_c",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.062 inherent risk vs control risk",
+      "note": "Definition-match item labeled \"Moderate\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-EC-072",
+      "file": "pack_c",
+      "currentDifficulty": "Easy",
+      "currentScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.073 remediation of control deficiency",
+      "note": "Definition-match item labeled \"Easy\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-ED-028",
+      "file": "pack_d",
+      "currentDifficulty": "Moderate",
+      "currentScore": 4,
+      "cognitiveLevel": "Apply",
+      "topic": "E.029 monitoring ongoing evaluations",
+      "note": "Definition-match item labeled \"Moderate\" (score 4). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-ED-036",
+      "file": "pack_d",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.037 change management control it systems",
+      "note": "Definition-match item labeled \"Moderate\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-ED-051",
+      "file": "pack_d",
+      "currentDifficulty": "Easy",
+      "currentScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.052 password access authentication control",
+      "note": "Definition-match item labeled \"Easy\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-ED-064",
+      "file": "pack_d",
+      "currentDifficulty": "Moderate",
+      "currentScore": 4,
+      "cognitiveLevel": "Apply",
+      "topic": "E.065 vendor master file controls",
+      "note": "Definition-match item labeled \"Moderate\" (score 4). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-ED-066",
+      "file": "pack_d",
+      "currentDifficulty": "Easy",
+      "currentScore": 4,
+      "cognitiveLevel": "Apply",
+      "topic": "E.067 audit committee oversight role",
+      "note": "Definition-match item labeled \"Easy\" (score 4). Should be Easy (1) or Moderate-Easy (2)."
+    },
+    {
+      "qid": "P1-ED-074",
+      "file": "pack_d",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.075 segregation approval reconciliation",
+      "note": "Definition-match item labeled \"Moderate\" (score 3). Should be Easy (1) or Moderate-Easy (2)."
+    }
+  ],
+  "scoreLabelMismatches": [
+    {
+      "qid": "P1-EC-008",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "note": "Label \"Moderate\" expects score 3, got 2"
+    },
+    {
+      "qid": "P1-EC-041",
+      "file": "pack_c",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 3,
+      "note": "Label \"Easy\" expects score 1, got 3"
+    },
+    {
+      "qid": "P1-EC-049",
+      "file": "pack_c",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 2,
+      "note": "Label \"Easy\" expects score 1, got 2"
+    },
+    {
+      "qid": "P1-EC-060",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "note": "Label \"Moderate\" expects score 3, got 2"
+    },
+    {
+      "qid": "P1-EC-066",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 1,
+      "note": "Label \"Moderate\" expects score 3, got 1"
+    },
+    {
+      "qid": "P1-EC-072",
+      "file": "pack_c",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 3,
+      "note": "Label \"Easy\" expects score 1, got 3"
+    },
+    {
+      "qid": "P1-ED-016",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "note": "Label \"Moderate\" expects score 3, got 2"
+    },
+    {
+      "qid": "P1-ED-028",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 4,
+      "note": "Label \"Moderate\" expects score 3, got 4"
+    },
+    {
+      "qid": "P1-ED-042",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "note": "Label \"Moderate\" expects score 3, got 2"
+    },
+    {
+      "qid": "P1-ED-046",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "note": "Label \"Moderate\" expects score 3, got 2"
+    },
+    {
+      "qid": "P1-ED-051",
+      "file": "pack_d",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 3,
+      "note": "Label \"Easy\" expects score 1, got 3"
+    },
+    {
+      "qid": "P1-ED-058",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "note": "Label \"Moderate\" expects score 3, got 2"
+    },
+    {
+      "qid": "P1-ED-064",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 4,
+      "note": "Label \"Moderate\" expects score 3, got 4"
+    },
+    {
+      "qid": "P1-ED-066",
+      "file": "pack_d",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 4,
+      "note": "Label \"Easy\" expects score 1, got 4"
+    }
+  ],
+  "cognitiveLevelMismatches": [
+    {
+      "qid": "P1-EC-014",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-020",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-022",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-023",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-024",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-031",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-040",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-052",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-061",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-EC-072",
+      "file": "pack_c",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-ED-028",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 4,
+      "cognitiveLevel": "Apply",
+      "note": "CognitiveLevel \"Apply\" expects score 2-3, got 4"
+    },
+    {
+      "qid": "P1-ED-036",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-ED-064",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 4,
+      "cognitiveLevel": "Apply",
+      "note": "CognitiveLevel \"Apply\" expects score 2-3, got 4"
+    },
+    {
+      "qid": "P1-ED-066",
+      "file": "pack_d",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 4,
+      "cognitiveLevel": "Apply",
+      "note": "CognitiveLevel \"Apply\" expects score 2-3, got 4"
+    },
+    {
+      "qid": "P1-ED-071",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-ED-072",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-ED-074",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    },
+    {
+      "qid": "P1-ED-075",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "note": "CognitiveLevel \"Understand\" expects score 1-2, got 3"
+    }
+  ],
+  "recalibrationRecommendations": [
+    {
+      "qid": "P1-EC-004",
+      "file": "pack_c",
+      "topic": "E.005 segregation of duties design",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-EC-014",
+      "file": "pack_c",
+      "topic": "E.015 fraud triangle elements",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Easy",
+      "recommendedScore": 1,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-EC-020",
+      "file": "pack_c",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-EC-022",
+      "file": "pack_c",
+      "topic": "E.023 IT access control terminated employee deprovisioning",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-EC-023",
+      "file": "pack_c",
+      "topic": "E.024 application input control sales order validation",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-EC-024",
+      "file": "pack_c",
+      "topic": "E.025 preventive vs detective controls",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-EC-031",
+      "file": "pack_c",
+      "topic": "E.032 erm risk appetite",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-EC-040",
+      "file": "pack_c",
+      "topic": "E.041 management override risk",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Easy",
+      "recommendedScore": 1,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-EC-041",
+      "file": "pack_c",
+      "topic": "E.042 management override risk",
+      "currentDifficulty": "Easy",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-EC-052",
+      "file": "pack_c",
+      "topic": "E.053 compensating control small business",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-EC-061",
+      "file": "pack_c",
+      "topic": "E.062 inherent risk vs control risk",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Easy",
+      "recommendedScore": 1,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-EC-072",
+      "file": "pack_c",
+      "topic": "E.073 remediation of control deficiency",
+      "currentDifficulty": "Easy",
+      "currentScore": 3,
+      "recommendedDifficulty": "Easy",
+      "recommendedScore": 1,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-ED-028",
+      "file": "pack_d",
+      "topic": "E.029 monitoring ongoing evaluations",
+      "currentDifficulty": "Moderate",
+      "currentScore": 4,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-ED-036",
+      "file": "pack_d",
+      "topic": "E.037 change management control it systems",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Easy",
+      "recommendedScore": 1,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-ED-051",
+      "file": "pack_d",
+      "topic": "E.052 password access authentication control",
+      "currentDifficulty": "Easy",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-ED-064",
+      "file": "pack_d",
+      "topic": "E.065 vendor master file controls",
+      "currentDifficulty": "Moderate",
+      "currentScore": 4,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-ED-066",
+      "file": "pack_d",
+      "topic": "E.067 audit committee oversight role",
+      "currentDifficulty": "Easy",
+      "currentScore": 4,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-ED-071",
+      "file": "pack_d",
+      "topic": "E.072 fraud risk purchasing conflict of interest",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-ED-072",
+      "file": "pack_d",
+      "topic": "E.073 monitoring exception reports not reviewed",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    },
+    {
+      "qid": "P1-ED-074",
+      "file": "pack_d",
+      "topic": "E.075 segregation approval reconciliation",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Easy",
+      "recommendedScore": 1,
+      "reason": "DL-031: definition-match item inflated"
+    },
+    {
+      "qid": "P1-ED-075",
+      "file": "pack_d",
+      "topic": "F.001 api integration systems",
+      "currentDifficulty": "Moderate",
+      "currentScore": 3,
+      "recommendedDifficulty": "Moderate-Easy",
+      "recommendedScore": 2,
+      "reason": "Difficulty 3 exceeds max 2 for Understand"
+    }
+  ],
+  "perItemVerdicts": [
+    {
+      "qid": "P1-EC-004",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.005 segregation of duties design",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": true,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-EC-008",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.009 coso internal control framework",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-EC-014",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.015 fraud triangle elements",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Easy",
+        "recommendedScore": 1,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-EC-020",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-EC-021",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.022 preventive vs detective duplicate payment control",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-EC-022",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.023 IT access control terminated employee deprovisioning",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-EC-023",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.024 application input control sales order validation",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-EC-024",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.025 preventive vs detective controls",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-EC-025",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.026 bank reconciliation control",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-EC-028",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.029 bank reconciliation control",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-EC-031",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.032 erm risk appetite",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-EC-040",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.041 management override risk",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Easy",
+        "recommendedScore": 1,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-EC-041",
+      "file": "pack_c",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.042 management override risk",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": true,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": {
+        "currentDifficulty": "Easy",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-EC-049",
+      "file": "pack_c",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.050 whistleblower hotline purpose",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-EC-052",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.053 compensating control small business",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-EC-060",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.061 inherent risk vs control risk",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-EC-061",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.062 inherent risk vs control risk",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Easy",
+        "recommendedScore": 1,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-EC-066",
+      "file": "pack_c",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 1,
+      "cognitiveLevel": "Understand",
+      "topic": "E.067 segregation cash custody recording",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-EC-072",
+      "file": "pack_c",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.073 remediation of control deficiency",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Easy",
+        "currentScore": 3,
+        "recommendedDifficulty": "Easy",
+        "recommendedScore": 1,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-ED-001",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate-Easy",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.002 three lines of defense model",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-010",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate-Easy",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.011 independent verification control activity",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-014",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate-Easy",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.015 independent verification control activity",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-016",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.017 erm risk response strategies",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-025",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate-Easy",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.026 monitoring ongoing evaluations",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-028",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 4,
+      "cognitiveLevel": "Apply",
+      "topic": "E.029 monitoring ongoing evaluations",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 4,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-ED-035",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate-Easy",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.036 change management control it systems",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-036",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.037 change management control it systems",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Easy",
+        "recommendedScore": 1,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-ED-042",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.043 risk assessment likelihood impact",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-046",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.047 code of conduct ethics program",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-051",
+      "file": "pack_d",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.052 password access authentication control",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": true,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": {
+        "currentDifficulty": "Easy",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-ED-058",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 2,
+      "cognitiveLevel": "Understand",
+      "topic": "E.059 internal control cost benefit limitation",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": false,
+        "cognitiveLevelMismatch": false
+      },
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-064",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 4,
+      "cognitiveLevel": "Apply",
+      "topic": "E.065 vendor master file controls",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 4,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-ED-066",
+      "file": "pack_d",
+      "difficultyLabel": "Easy",
+      "difficultyScore": 4,
+      "cognitiveLevel": "Apply",
+      "topic": "E.067 audit committee oversight role",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": true,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Easy",
+        "currentScore": 4,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-ED-071",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.072 fraud risk purchasing conflict of interest",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-ED-072",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.073 monitoring exception reports not reviewed",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    },
+    {
+      "qid": "P1-ED-073",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Apply",
+      "topic": "E.074 reconciliation incompatible duties EFT and bank rec",
+      "verdict": "PASS",
+      "issues": null,
+      "recalibration": null
+    },
+    {
+      "qid": "P1-ED-074",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "E.075 segregation approval reconciliation",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": true,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Easy",
+        "recommendedScore": 1,
+        "reason": "DL-031: definition-match item inflated"
+      }
+    },
+    {
+      "qid": "P1-ED-075",
+      "file": "pack_d",
+      "difficultyLabel": "Moderate",
+      "difficultyScore": 3,
+      "cognitiveLevel": "Understand",
+      "topic": "F.001 api integration systems",
+      "verdict": "FLAG",
+      "issues": {
+        "scoreMismatch": false,
+        "dl031": false,
+        "cognitiveLevelMismatch": true
+      },
+      "recalibration": {
+        "currentDifficulty": "Moderate",
+        "currentScore": 3,
+        "recommendedDifficulty": "Moderate-Easy",
+        "recommendedScore": 2,
+        "reason": "Difficulty 3 exceeds max 2 for Understand"
+      }
+    }
+  ]
+}

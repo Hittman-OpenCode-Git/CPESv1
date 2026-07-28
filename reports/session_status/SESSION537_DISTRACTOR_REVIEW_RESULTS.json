@@ -1,0 +1,1601 @@
+{
+  "summary": {
+    "auditType": "Session 537 — Agent G+H Combined Audit v3",
+    "timestamp": "2026-07-26T22:00:44.374Z",
+    "file": "scored_cases.js",
+    "targetCases": [
+      "CBQ-C2",
+      "CBQ-D2",
+      "CBQ-E2",
+      "CBQ-F2",
+      "CBQ-A3",
+      "CBQ-B3",
+      "CBQ-C3"
+    ],
+    "totals": {
+      "casesAudited": 7,
+      "itemsTotal": 42,
+      "selectItems": 10,
+      "multiItems": 6,
+      "ewSlotsChecked": 64
+    },
+    "structuralFindings": {
+      "DL008_CC_nonempty": 0,
+      "DL018_CC_absent": 0,
+      "DL021_distractor_absent": 0,
+      "DL02526_distractor_empty": 0,
+      "DL013_boilerplate": 0
+    },
+    "perCase": {
+      "CBQ-C2": {
+        "CaseID": "CBQ-C2",
+        "Title": "Investment Center Performance and Transfer Pricing",
+        "Section": "C",
+        "Domain": "Performance Management",
+        "itemCount": 6,
+        "selectCount": 1,
+        "multiCount": 1,
+        "numericCount": 2,
+        "fillCount": 1,
+        "matchCount": 1,
+        "itemsWithEWFindings": 1,
+        "itemsWithMetaIssues": 0,
+        "totalEWFindings": 1,
+        "totalMetaIssues": 0,
+        "caseMetaIssues": 0,
+        "caseMetaDetail": [],
+        "ewQualityDistribution": {
+          "EXCELLENT": 1,
+          "GOOD": 3,
+          "ADEQUATE": 0,
+          "SHALLOW": 0,
+          "INSUFFICIENT": 0,
+          "CC_SLOT": 0,
+          "CORRECT_SLOT": 0,
+          "CC_SLOT (correctly empty)": 1,
+          "CORRECT_SLOT (correctly empty)": 3
+        },
+        "structuralPass": true,
+        "dl008_pass": true,
+        "dl02526_pass": true,
+        "dl013_pass": true
+      },
+      "CBQ-D2": {
+        "CaseID": "CBQ-D2",
+        "Title": "Process Costing, Lean Waste, and Bottleneck Analysis",
+        "Section": "D",
+        "Domain": "Cost Management",
+        "itemCount": 6,
+        "selectCount": 1,
+        "multiCount": 1,
+        "numericCount": 2,
+        "fillCount": 1,
+        "matchCount": 1,
+        "itemsWithEWFindings": 1,
+        "itemsWithMetaIssues": 1,
+        "totalEWFindings": 1,
+        "totalMetaIssues": 1,
+        "caseMetaIssues": 0,
+        "caseMetaDetail": [],
+        "ewQualityDistribution": {
+          "EXCELLENT": 2,
+          "GOOD": 1,
+          "ADEQUATE": 1,
+          "SHALLOW": 0,
+          "INSUFFICIENT": 0,
+          "CC_SLOT": 0,
+          "CORRECT_SLOT": 0,
+          "CC_SLOT (correctly empty)": 1,
+          "CORRECT_SLOT (correctly empty)": 3
+        },
+        "structuralPass": true,
+        "dl008_pass": true,
+        "dl02526_pass": true,
+        "dl013_pass": true
+      },
+      "CBQ-E2": {
+        "CaseID": "CBQ-E2",
+        "Title": "IT General Controls, Change Management, and Access Review",
+        "Section": "E,F",
+        "Domain": "Internal Controls",
+        "itemCount": 6,
+        "selectCount": 2,
+        "multiCount": 1,
+        "numericCount": 1,
+        "fillCount": 1,
+        "matchCount": 1,
+        "itemsWithEWFindings": 2,
+        "itemsWithMetaIssues": 0,
+        "totalEWFindings": 4,
+        "totalMetaIssues": 0,
+        "caseMetaIssues": 0,
+        "caseMetaDetail": [],
+        "ewQualityDistribution": {
+          "EXCELLENT": 1,
+          "GOOD": 2,
+          "ADEQUATE": 2,
+          "SHALLOW": 2,
+          "INSUFFICIENT": 0,
+          "CC_SLOT": 0,
+          "CORRECT_SLOT": 0,
+          "CC_SLOT (correctly empty)": 2,
+          "CORRECT_SLOT (correctly empty)": 3
+        },
+        "structuralPass": true,
+        "dl008_pass": true,
+        "dl02526_pass": true,
+        "dl013_pass": true
+      },
+      "CBQ-F2": {
+        "CaseID": "CBQ-F2",
+        "Title": "Cybersecurity, RPA, and Finance Automation Governance",
+        "Section": "E,F",
+        "Domain": "Internal Controls",
+        "itemCount": 6,
+        "selectCount": 1,
+        "multiCount": 1,
+        "numericCount": 2,
+        "fillCount": 1,
+        "matchCount": 1,
+        "itemsWithEWFindings": 0,
+        "itemsWithMetaIssues": 4,
+        "totalEWFindings": 0,
+        "totalMetaIssues": 4,
+        "caseMetaIssues": 0,
+        "caseMetaDetail": [],
+        "ewQualityDistribution": {
+          "EXCELLENT": 0,
+          "GOOD": 4,
+          "ADEQUATE": 0,
+          "SHALLOW": 0,
+          "INSUFFICIENT": 0,
+          "CC_SLOT": 0,
+          "CORRECT_SLOT": 0,
+          "CC_SLOT (correctly empty)": 1,
+          "CORRECT_SLOT (correctly empty)": 3
+        },
+        "structuralPass": true,
+        "dl008_pass": true,
+        "dl02526_pass": true,
+        "dl013_pass": true
+      },
+      "CBQ-A3": {
+        "CaseID": "CBQ-A3",
+        "Title": "Inventory, ARO, Subsequent Events, and Cash Classification",
+        "Section": "A",
+        "Domain": "External Financial Reporting Decisions",
+        "itemCount": 6,
+        "selectCount": 2,
+        "multiCount": 0,
+        "numericCount": 3,
+        "fillCount": 0,
+        "matchCount": 1,
+        "itemsWithEWFindings": 2,
+        "itemsWithMetaIssues": 0,
+        "totalEWFindings": 2,
+        "totalMetaIssues": 0,
+        "caseMetaIssues": 0,
+        "caseMetaDetail": [],
+        "ewQualityDistribution": {
+          "EXCELLENT": 2,
+          "GOOD": 3,
+          "ADEQUATE": 1,
+          "SHALLOW": 0,
+          "INSUFFICIENT": 0,
+          "CC_SLOT": 0,
+          "CORRECT_SLOT": 0,
+          "CC_SLOT (correctly empty)": 2
+        },
+        "structuralPass": true,
+        "dl008_pass": true,
+        "dl02526_pass": true,
+        "dl013_pass": true
+      },
+      "CBQ-B3": {
+        "CaseID": "CBQ-B3",
+        "Title": "Scenario Forecast, Expected Value, and Working Capital Plan",
+        "Section": "B",
+        "Domain": "Planning, Budgeting, and Forecasting",
+        "itemCount": 6,
+        "selectCount": 1,
+        "multiCount": 1,
+        "numericCount": 4,
+        "fillCount": 0,
+        "matchCount": 0,
+        "itemsWithEWFindings": 1,
+        "itemsWithMetaIssues": 0,
+        "totalEWFindings": 1,
+        "totalMetaIssues": 0,
+        "caseMetaIssues": 0,
+        "caseMetaDetail": [],
+        "ewQualityDistribution": {
+          "EXCELLENT": 1,
+          "GOOD": 3,
+          "ADEQUATE": 0,
+          "SHALLOW": 0,
+          "INSUFFICIENT": 0,
+          "CC_SLOT": 0,
+          "CORRECT_SLOT": 0,
+          "CC_SLOT (correctly empty)": 1,
+          "CORRECT_SLOT (correctly empty)": 3
+        },
+        "structuralPass": true,
+        "dl008_pass": true,
+        "dl02526_pass": true,
+        "dl013_pass": true
+      },
+      "CBQ-C3": {
+        "CaseID": "CBQ-C3",
+        "Title": "Balanced Scorecard and Operating Performance Review",
+        "Section": "C",
+        "Domain": "Performance Management",
+        "itemCount": 6,
+        "selectCount": 2,
+        "multiCount": 1,
+        "numericCount": 2,
+        "fillCount": 0,
+        "matchCount": 1,
+        "itemsWithEWFindings": 2,
+        "itemsWithMetaIssues": 2,
+        "totalEWFindings": 3,
+        "totalMetaIssues": 2,
+        "caseMetaIssues": 0,
+        "caseMetaDetail": [],
+        "ewQualityDistribution": {
+          "EXCELLENT": 0,
+          "GOOD": 3,
+          "ADEQUATE": 3,
+          "SHALLOW": 1,
+          "INSUFFICIENT": 0,
+          "CC_SLOT": 0,
+          "CORRECT_SLOT": 0,
+          "CC_SLOT (correctly empty)": 2,
+          "CORRECT_SLOT (correctly empty)": 3
+        },
+        "structuralPass": true,
+        "dl008_pass": true,
+        "dl02526_pass": true,
+        "dl013_pass": true
+      }
+    },
+    "poolWideEWQuality": {
+      "EXCELLENT": 7,
+      "GOOD": 19,
+      "ADEQUATE": 7,
+      "SHALLOW": 3,
+      "INSUFFICIENT": 0,
+      "CC_SLOT": 0,
+      "CORRECT_SLOT": 0,
+      "CC_SLOT (correctly empty)": 10,
+      "CORRECT_SLOT (correctly empty)": 18
+    },
+    "poolWideMetaIssues": {
+      "missingFields": 0,
+      "invalidCL": 0,
+      "diffMismatch": 0,
+      "topicAlign": 7,
+      "caseMetaIssues": 0
+    }
+  },
+  "detail": {
+    "CBQ-C2": {
+      "CaseID": "CBQ-C2",
+      "Title": "Investment Center Performance and Transfer Pricing",
+      "SectionTags": [
+        "C"
+      ],
+      "BlueprintDomain": "Performance Management",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "question_state": "Unprocessed",
+      "RevisionHistory": "1 entries",
+      "Items": [
+        {
+          "idx": 0,
+          "ItemID": "CBQ-C2-Q1",
+          "Type": "numeric",
+          "Prompt": "Enter Motor Division residual income.",
+          "Topic": "Residual income",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 1,
+          "ItemID": "CBQ-C2-Q2",
+          "Type": "numeric",
+          "Prompt": "Enter Motor Division ROI percentage as a whole number.",
+          "Topic": "ROI",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 2,
+          "ItemID": "CBQ-C2-Q3",
+          "Type": "select",
+          "Prompt": "With idle capacity and no opportunity cost, what is the minimum transfer price from the company perspective?",
+          "Topic": "Transfer pricing",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: EXCELLENT, GOOD, GOOD"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 448,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 8,
+              "rating": "EXCELLENT"
+            },
+            "C": {
+              "length": 412,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": true,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            },
+            "D": {
+              "length": 376,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": false,
+              "contrastsWithCorrect": true,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 7,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 3,
+          "ItemID": "CBQ-C2-Q4",
+          "Type": "multi",
+          "Prompt": "Select reasons residual income may improve goal congruence compared with ROI.",
+          "Topic": "Performance measurement",
+          "CognitiveLevel": "Evaluate",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "B": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "C": {
+              "length": 472,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            },
+            "D": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            }
+          },
+          "CorrectChoices_derived": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        {
+          "idx": 4,
+          "ItemID": "CBQ-C2-Q5",
+          "Type": "fill",
+          "Prompt": "Fill in the blank: A transfer price should promote goal _____ so divisional decisions support overall company interests.",
+          "Topic": "Transfer pricing",
+          "CognitiveLevel": "Understand",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 5,
+          "ItemID": "CBQ-C2-Q6",
+          "Type": "match",
+          "Prompt": "Match each measure to the best description.",
+          "Topic": "Performance management",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        }
+      ],
+      "caseMetaIssues": []
+    },
+    "CBQ-D2": {
+      "CaseID": "CBQ-D2",
+      "Title": "Process Costing, Lean Waste, and Bottleneck Analysis",
+      "SectionTags": [
+        "D"
+      ],
+      "BlueprintDomain": "Cost Management",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "question_state": "Unprocessed",
+      "RevisionHistory": "1 entries",
+      "Items": [
+        {
+          "idx": 0,
+          "ItemID": "CBQ-D2-Q1",
+          "Type": "numeric",
+          "Prompt": "Enter equivalent units for conversion costs using weighted-average.",
+          "Topic": "Process costing",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 1,
+          "ItemID": "CBQ-D2-Q2",
+          "Type": "numeric",
+          "Prompt": "Enter conversion cost per equivalent unit.",
+          "Topic": "Process costing",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 2,
+          "ItemID": "CBQ-D2-Q3",
+          "Type": "select",
+          "Prompt": "Which operation is the bottleneck?",
+          "Topic": "Theory of constraints",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [
+            "Topic \"Theory of constraints\" may not align with Section D (Cost Management)"
+          ],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: EXCELLENT, EXCELLENT, GOOD"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 437,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 8,
+              "rating": "EXCELLENT"
+            },
+            "C": {
+              "length": 402,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": true,
+              "contrastsWithCorrect": true,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 10,
+              "rating": "EXCELLENT"
+            },
+            "D": {
+              "length": 496,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": false,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 3,
+          "ItemID": "CBQ-D2-Q4",
+          "Type": "multi",
+          "Prompt": "Select actions consistent with lean thinking.",
+          "Topic": "Lean operations",
+          "CognitiveLevel": "Evaluate",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 469,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 5,
+              "rating": "ADEQUATE"
+            },
+            "C": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "D": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            }
+          },
+          "CorrectChoices_derived": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "idx": 4,
+          "ItemID": "CBQ-D2-Q5",
+          "Type": "fill",
+          "Prompt": "Fill in the blank: Equivalent units combine completed units and partially completed work expressed as _____ units.",
+          "Topic": "Process costing",
+          "CognitiveLevel": "Understand",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 5,
+          "ItemID": "CBQ-D2-Q6",
+          "Type": "match",
+          "Prompt": "Match each issue to the best tool.",
+          "Topic": "Cost management",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        }
+      ],
+      "caseMetaIssues": []
+    },
+    "CBQ-E2": {
+      "CaseID": "CBQ-E2",
+      "Title": "IT General Controls, Change Management, and Access Review",
+      "SectionTags": [
+        "E",
+        "F"
+      ],
+      "BlueprintDomain": "Internal Controls",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "question_state": "Unprocessed",
+      "RevisionHistory": "1 entries",
+      "Items": [
+        {
+          "idx": 0,
+          "ItemID": "CBQ-E2-Q1",
+          "Type": "select",
+          "Prompt": "Which response best addresses shared administrator IDs?",
+          "Topic": "Access controls",
+          "CognitiveLevel": "Evaluate",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: GOOD, GOOD, ADEQUATE"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 469,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": false,
+              "identifiesError": true,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            },
+            "C": {
+              "length": 430,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            },
+            "D": {
+              "length": 432,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 5,
+              "rating": "ADEQUATE"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 1,
+          "ItemID": "CBQ-E2-Q2",
+          "Type": "numeric",
+          "Prompt": "Enter the terminated-user exception rate as a percentage rounded to one decimal place.",
+          "Topic": "Access review",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 2,
+          "ItemID": "CBQ-E2-Q3",
+          "Type": "multi",
+          "Prompt": "Select ITGCs relevant to the exceptions.",
+          "Topic": "IT controls",
+          "CognitiveLevel": "Evaluate",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "B": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "C": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "D": {
+              "length": 505,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": true,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 8,
+              "rating": "EXCELLENT"
+            }
+          },
+          "CorrectChoices_derived": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "idx": 3,
+          "ItemID": "CBQ-E2-Q4",
+          "Type": "fill",
+          "Prompt": "Fill in the blank: Emergency changes should receive timely post-implementation review and _____.",
+          "Topic": "Change management",
+          "CognitiveLevel": "Understand",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 4,
+          "ItemID": "CBQ-E2-Q5",
+          "Type": "match",
+          "Prompt": "Match each exception to the primary risk.",
+          "Topic": "ITGC risk",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 5,
+          "ItemID": "CBQ-E2-Q6",
+          "Type": "select",
+          "Prompt": "Why is 14-day log retention a concern?",
+          "Topic": "Monitoring",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "ExplanationWrongB: SHALLOW quality (score=2, len=317)",
+              "field": "ExplanationWrongB"
+            },
+            {
+              "severity": "LOW",
+              "issue": "ExplanationWrongC: SHALLOW quality (score=3, len=339)",
+              "field": "ExplanationWrongC"
+            },
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: SHALLOW, SHALLOW, ADEQUATE"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 317,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": false,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 2,
+              "rating": "SHALLOW"
+            },
+            "C": {
+              "length": 339,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 3,
+              "rating": "SHALLOW"
+            },
+            "D": {
+              "length": 366,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": true,
+              "qualityScore": 4,
+              "rating": "ADEQUATE"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        }
+      ],
+      "caseMetaIssues": []
+    },
+    "CBQ-A3": {
+      "CaseID": "CBQ-A3",
+      "Title": "Inventory, ARO, Subsequent Events, and Cash Classification",
+      "SectionTags": [
+        "A"
+      ],
+      "BlueprintDomain": "External Financial Reporting Decisions",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "question_state": "Unprocessed",
+      "RevisionHistory": "1 entries",
+      "Items": [
+        {
+          "idx": 0,
+          "ItemID": "CBQ-A3-Q1",
+          "Type": "numeric",
+          "Prompt": "Enter the inventory write-down required under lower of cost and NRV.",
+          "Topic": "Inventory measurement",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 1,
+          "ItemID": "CBQ-A3-Q2",
+          "Type": "numeric",
+          "Prompt": "Enter the amount added to the asset cost for the asset retirement obligation at initial recognition.",
+          "Topic": "Asset retirement obligations",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 2,
+          "ItemID": "CBQ-A3-Q3",
+          "Type": "select",
+          "Prompt": "How should the customer bankruptcy be treated?",
+          "Topic": "Subsequent events",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: EXCELLENT, EXCELLENT, GOOD"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 431,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 8,
+              "rating": "EXCELLENT"
+            },
+            "C": {
+              "length": 464,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": true,
+              "contrastsWithCorrect": true,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 10,
+              "rating": "EXCELLENT"
+            },
+            "D": {
+              "length": 447,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": true,
+              "qualityScore": 7,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 3,
+          "ItemID": "CBQ-A3-Q4",
+          "Type": "select",
+          "Prompt": "How should the 88-day Treasury bill normally be classified?",
+          "Topic": "Cash classification",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: GOOD, ADEQUATE, GOOD"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 409,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            },
+            "C": {
+              "length": 396,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 5,
+              "rating": "ADEQUATE"
+            },
+            "D": {
+              "length": 446,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 4,
+          "ItemID": "CBQ-A3-Q5",
+          "Type": "numeric",
+          "Prompt": "Enter operating cash flow using the listed cash-flow data before separately adjusting for the inventory write-down.",
+          "Topic": "Statement of cash flows",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 5,
+          "ItemID": "CBQ-A3-Q6",
+          "Type": "match",
+          "Prompt": "Match each item to its reporting treatment.",
+          "Topic": "External reporting",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        }
+      ],
+      "caseMetaIssues": []
+    },
+    "CBQ-B3": {
+      "CaseID": "CBQ-B3",
+      "Title": "Scenario Forecast, Expected Value, and Working Capital Plan",
+      "SectionTags": [
+        "B"
+      ],
+      "BlueprintDomain": "Planning, Budgeting, and Forecasting",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "question_state": "Unprocessed",
+      "RevisionHistory": "1 entries",
+      "Items": [
+        {
+          "idx": 0,
+          "ItemID": "CBQ-B3-Q1",
+          "Type": "numeric",
+          "Prompt": "Enter expected unit sales.",
+          "Topic": "Expected value",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 1,
+          "ItemID": "CBQ-B3-Q2",
+          "Type": "numeric",
+          "Prompt": "Enter expected sales dollars.",
+          "Topic": "Forecasting",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 2,
+          "ItemID": "CBQ-B3-Q3",
+          "Type": "numeric",
+          "Prompt": "Enter expected current-month cash collections from current-month sales.",
+          "Topic": "Cash collections",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 3,
+          "ItemID": "CBQ-B3-Q4",
+          "Type": "numeric",
+          "Prompt": "Enter total cash available before disbursements.",
+          "Topic": "Cash budget",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 4,
+          "ItemID": "CBQ-B3-Q5",
+          "Type": "select",
+          "Prompt": "Is borrowing required after planned disbursements and minimum cash?",
+          "Topic": "Cash budget",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: EXCELLENT, GOOD, GOOD"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 437,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": true,
+              "contrastsWithCorrect": true,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 10,
+              "rating": "EXCELLENT"
+            },
+            "C": {
+              "length": 435,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": true,
+              "specificToChoice": true,
+              "identifiesError": true,
+              "qualityScore": 7,
+              "rating": "GOOD"
+            },
+            "D": {
+              "length": 440,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": true,
+              "qualityScore": 7,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 5,
+          "ItemID": "CBQ-B3-Q6",
+          "Type": "multi",
+          "Prompt": "Select assumptions that most directly affect the borrowing result.",
+          "Topic": "Forecast assumptions",
+          "CognitiveLevel": "Evaluate",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "B": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "C": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "D": {
+              "length": 556,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoices_derived": [
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      ],
+      "caseMetaIssues": []
+    },
+    "CBQ-C3": {
+      "CaseID": "CBQ-C3",
+      "Title": "Balanced Scorecard and Operating Performance Review",
+      "SectionTags": [
+        "C"
+      ],
+      "BlueprintDomain": "Performance Management",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "question_state": "Unprocessed",
+      "RevisionHistory": "1 entries",
+      "Items": [
+        {
+          "idx": 0,
+          "ItemID": "CBQ-C3-Q1",
+          "Type": "numeric",
+          "Prompt": "Enter the unfavorable operating income variance as a positive amount.",
+          "Topic": "Performance variance",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Easy",
+          "DifficultyScore": 1,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 1,
+          "ItemID": "CBQ-C3-Q2",
+          "Type": "numeric",
+          "Prompt": "Enter the on-time delivery shortfall in percentage points.",
+          "Topic": "Nonfinancial measures",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Easy",
+          "DifficultyScore": 1,
+          "question_state": "Unprocessed",
+          "metaIssues": [
+            "Topic \"Nonfinancial measures\" may not align with Section C (Performance Management)"
+          ],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 2,
+          "ItemID": "CBQ-C3-Q3",
+          "Type": "select",
+          "Prompt": "Which metric is most clearly a learning and growth measure?",
+          "Topic": "Balanced scorecard",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: GOOD, ADEQUATE, ADEQUATE"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 474,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            },
+            "C": {
+              "length": 459,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": true,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 5,
+              "rating": "ADEQUATE"
+            },
+            "D": {
+              "length": 453,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 4,
+              "rating": "ADEQUATE"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 3,
+          "ItemID": "CBQ-C3-Q4",
+          "Type": "multi",
+          "Prompt": "Select likely leading indicators of future financial performance.",
+          "Topic": "Leading indicators",
+          "CognitiveLevel": "Evaluate",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [
+            "Topic \"Leading indicators\" may not align with Section C (Performance Management)"
+          ],
+          "ewFindings": [],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "B": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "C": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "D": {
+              "length": 504,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoices_derived": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "idx": 4,
+          "ItemID": "CBQ-C3-Q5",
+          "Type": "match",
+          "Prompt": "Match each scorecard perspective to the best metric.",
+          "Topic": "Balanced scorecard",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 5,
+          "ItemID": "CBQ-C3-Q6",
+          "Type": "select",
+          "Prompt": "Which issue should production investigate first?",
+          "Topic": "Responsibility accounting",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [
+            {
+              "severity": "LOW",
+              "issue": "ExplanationWrongB: SHALLOW quality (score=2, len=373)",
+              "field": "ExplanationWrongB"
+            },
+            {
+              "severity": "LOW",
+              "issue": "INCONSISTENT quality across distractors: SHALLOW, ADEQUATE, GOOD"
+            }
+          ],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 373,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": false,
+              "contrastsWithCorrect": false,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 2,
+              "rating": "SHALLOW"
+            },
+            "C": {
+              "length": 296,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 4,
+              "rating": "ADEQUATE"
+            },
+            "D": {
+              "length": 359,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": true,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        }
+      ],
+      "caseMetaIssues": []
+    },
+    "CBQ-F2": {
+      "CaseID": "CBQ-F2",
+      "Title": "Cybersecurity, RPA, and Finance Automation Governance",
+      "SectionTags": [
+        "E",
+        "F"
+      ],
+      "BlueprintDomain": "Internal Controls",
+      "Difficulty": "Difficult",
+      "DifficultyScore": 4,
+      "ProductionStatus": "Draft",
+      "Version": "1.0",
+      "question_state": "Unprocessed",
+      "RevisionHistory": "1 entries",
+      "Items": [
+        {
+          "idx": 0,
+          "ItemID": "CBQ-F2-Q1",
+          "Type": "numeric",
+          "Prompt": "Enter monthly labor hours saved by RPA.",
+          "Topic": "RPA benefits",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [
+            "Topic \"RPA benefits\" may not align with Section E (Internal Controls)"
+          ],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 1,
+          "ItemID": "CBQ-F2-Q2",
+          "Type": "numeric",
+          "Prompt": "Enter the number of invoices routed to exception handling each month.",
+          "Topic": "Exception analytics",
+          "CognitiveLevel": "Apply",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [
+            "Topic \"Exception analytics\" may not align with Section E (Internal Controls)"
+          ],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 2,
+          "ItemID": "CBQ-F2-Q3",
+          "Type": "select",
+          "Prompt": "Which governance finding creates the clearest accountability risk?",
+          "Topic": "Cybersecurity controls",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CC_SLOT (correctly empty)"
+            },
+            "B": {
+              "length": 498,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": true,
+              "qualityScore": 7,
+              "rating": "GOOD"
+            },
+            "C": {
+              "length": 484,
+              "hasBoilerplate": false,
+              "explainsWhy": true,
+              "referencesConcept": false,
+              "contrastsWithCorrect": true,
+              "specificToChoice": false,
+              "identifiesError": false,
+              "qualityScore": 7,
+              "rating": "GOOD"
+            },
+            "D": {
+              "length": 459,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": false,
+              "identifiesError": true,
+              "qualityScore": 6,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoice_derived": "A"
+        },
+        {
+          "idx": 3,
+          "ItemID": "CBQ-F2-Q4",
+          "Type": "multi",
+          "Prompt": "Select controls that should be added before expanding automation.",
+          "Topic": "Automation governance",
+          "CognitiveLevel": "Evaluate",
+          "Difficulty": "Difficult",
+          "DifficultyScore": 4,
+          "question_state": "Unprocessed",
+          "metaIssues": [
+            "Topic \"Automation governance\" may not align with Section E (Internal Controls)"
+          ],
+          "ewFindings": [],
+          "ewQualitySummary": {
+            "A": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "B": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "C": {
+              "rating": "CORRECT_SLOT (correctly empty)"
+            },
+            "D": {
+              "length": 521,
+              "hasBoilerplate": false,
+              "explainsWhy": false,
+              "referencesConcept": true,
+              "contrastsWithCorrect": false,
+              "specificToChoice": true,
+              "identifiesError": true,
+              "qualityScore": 7,
+              "rating": "GOOD"
+            }
+          },
+          "CorrectChoices_derived": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "idx": 4,
+          "ItemID": "CBQ-F2-Q5",
+          "Type": "fill",
+          "Prompt": "Fill in the blank: Periodic review of false positives and missed exceptions is model _____.",
+          "Topic": "Analytics governance",
+          "CognitiveLevel": "Understand",
+          "Difficulty": "Moderate-Easy",
+          "DifficultyScore": 2,
+          "question_state": "Unprocessed",
+          "metaIssues": [
+            "Topic \"Analytics governance\" may not align with Section E (Internal Controls)"
+          ],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        },
+        {
+          "idx": 5,
+          "ItemID": "CBQ-F2-Q6",
+          "Type": "match",
+          "Prompt": "Match each finding to the main control response.",
+          "Topic": "Technology controls",
+          "CognitiveLevel": "Analyze",
+          "Difficulty": "Moderate",
+          "DifficultyScore": 3,
+          "question_state": "Unprocessed",
+          "metaIssues": [],
+          "ewFindings": [],
+          "ewQualitySummary": null
+        }
+      ],
+      "caseMetaIssues": []
+    }
+  }
+}

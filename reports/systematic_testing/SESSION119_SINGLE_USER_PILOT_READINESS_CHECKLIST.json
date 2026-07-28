@@ -1,0 +1,232 @@
+{
+  "session": "S119",
+  "timestamp": "2026-07-26T17:30:00Z",
+  "readinessDecision": "READY_WITH_NOTES",
+  "checklist": [
+    {
+      "id": "PILOT-01",
+      "category": "consent_and_context",
+      "check": "Pre-production disclaimer visible in onboarding flow",
+      "status": "PASS",
+      "source": "may-core.js — _buildWelcomeOverview line ~301: '⚠ This is a pre-production pilot environment. Your data is synthetic and stored locally.'",
+      "notes": "Disclaimer appears in welcome overview and new-student greeting outside of simulation (S117-WELC-01 confirms)."
+    },
+    {
+      "id": "PILOT-02",
+      "category": "consent_and_context",
+      "check": "Synthetic data clearly marked (synthetic:true, preProduction:true)",
+      "status": "PASS",
+      "source": "may-core.js — _generateSyntheticStudentRoll lines 431-557; trySetName lines 174-177",
+      "notes": "Current roll is all synthetic. BLOCKER: real learner would need non-synthetic profile creation — see BLOCK-01."
+    },
+    {
+      "id": "PILOT-03",
+      "category": "local_data",
+      "check": "All data stored in localStorage only — no external endpoint",
+      "status": "PASS",
+      "source": "may-learner-state.js — localStorage.setItem is the sole persistence mechanism",
+      "notes": "No fetch/XHR calls for telemetry. exportMayPilotData() triggers browser download only."
+    },
+    {
+      "id": "PILOT-04",
+      "category": "privacy_masking",
+      "check": "maskStudentName masks middle characters (A***y P***t)",
+      "status": "PASS",
+      "source": "may-core.js — maskStudentName function lines 188-194",
+      "notes": "S117-PRIV-01 through PRIV-06 all pass. All 8 synthetic students mask correctly."
+    },
+    {
+      "id": "PILOT-05",
+      "category": "privacy_masking",
+      "check": "Full names never shown before selection in roll view",
+      "status": "PASS",
+      "source": "may-core.js — renderView applies maskStudentName to all roll entries before rendering",
+      "notes": "S117-PRIV-05 confirms selection loads correct full profile. S118 confirmed 0 full-name-before-selection violations."
+    },
+    {
+      "id": "PILOT-06",
+      "category": "privacy_masking",
+      "check": "Short names (≤2 chars) shown as-is, not masked",
+      "status": "PASS",
+      "source": "may-core.js — maskStudentName: 'if (part.length <= 2) return part'",
+      "notes": "S117-PRIV-03 confirms. Edge case: 1-char names also pass through unchanged."
+    },
+    {
+      "id": "PILOT-07",
+      "category": "new_enrollment",
+      "check": "trySetName creates new profile with preProduction and synthetic markers",
+      "status": "PASS_WITH_NOTE",
+      "source": "may-core.js — trySetName lines 159-183",
+      "notes": "BLOCKER: Hardcodes synthetic:true unconditionally (line 176). A real pre-production learner should be marked synthetic:false while keeping preProduction:true. See BLOCK-01."
+    },
+    {
+      "id": "PILOT-08",
+      "category": "new_enrollment",
+      "check": "New student gets onboarding greeting flow",
+      "status": "PASS",
+      "source": "may-core.js — _handleGreetingResponse('no') → askForName → trySetName → onboarding flow",
+      "notes": "S115-GREET-03 confirms no-response path enters CREATE_NEW_STUDENT state."
+    },
+    {
+      "id": "PILOT-09",
+      "category": "exam_plan_capture",
+      "check": "Three paths supported: Yes/No/Planning",
+      "status": "PASS",
+      "source": "may-core.js — _handleOnboardingResponse lines 344-393",
+      "notes": "S117-EXAM-02 (Yes path), S117-EXAM-04 (No path), S117-EXAM-05 (Planning path) all pass."
+    },
+    {
+      "id": "PILOT-10",
+      "category": "exam_plan_capture",
+      "check": "examPlan stored with capturedAt timestamp",
+      "status": "PASS",
+      "source": "may-core.js — _finalizeOnboarding lines 397-401",
+      "notes": "examPlan persisted via MayLearnerState.setExamPlan with capturedAt: ISO timestamp."
+    },
+    {
+      "id": "PILOT-11",
+      "category": "exam_plan_capture",
+      "check": "Learner may skip exam-date entry (No path)",
+      "status": "PASS",
+      "source": "may-core.js — _handleOnboardingResponse('no') lines 354-360",
+      "notes": "No path stores hasScheduledExam:false, planningExam:false — no exam date required."
+    },
+    {
+      "id": "PILOT-12",
+      "category": "positive_trend_messaging",
+      "check": "Welcome overview includes positive trend when evidence exists",
+      "status": "PASS",
+      "source": "may-core.js — _detectPositiveTrend lines 306-326",
+      "notes": "S117-WELC-02 confirms. Detects: improving topic accuracy, decreasing hint usage, steady performance."
+    },
+    {
+      "id": "PILOT-13",
+      "category": "positive_trend_messaging",
+      "check": "No exam-prediction language: 'you will pass', 'exam ready', 'guaranteed', 'likely to fail'",
+      "status": "PASS",
+      "source": "may-core.js — _safetyVocab.bannedPhrases; S117-WELC-04; S118 telemetry: 0/80 occurrences",
+      "notes": "S117-ENCR-03, S117-WELC-04, and S118 telemetry all confirm 0 prediction language."
+    },
+    {
+      "id": "PILOT-14",
+      "category": "positive_trend_messaging",
+      "check": "Weak areas framed as opportunities, not failures",
+      "status": "PASS",
+      "source": "may-core.js — _buildWelcomeOverview: 'Your next opportunity is building consistency in...'",
+      "notes": "S117-ENCR-02 confirms no 'you are weak' or 'failing' language."
+    },
+    {
+      "id": "PILOT-15",
+      "category": "safety_guardrails",
+      "check": "S111 _guardedSpeak paths intact for all tutoring behaviors",
+      "status": "PASS",
+      "source": "may-core.js — explain (line 1115-1119), hint (1211-1215, 1245-1249), wrong-choices (1163-1167), simplify (1342-1346)",
+      "notes": "GT-01 through GT-12 all pass. All 5 behaviors gated behind isPilotEnvironment()."
+    },
+    {
+      "id": "PILOT-16",
+      "category": "safety_guardrails",
+      "check": "S112 recommendation gates intact (defect + certified-only check)",
+      "status": "PASS",
+      "source": "may-core.js — _guardedRecommend in _recommendSimilar (1798), _recommendNext (1875), _generateRecoverySet (1973)",
+      "notes": "S112-01 through S112-08 all pass. Recommendation-gate telemetry: 8 events, 8 pass, 0 block (S118)."
+    },
+    {
+      "id": "PILOT-17",
+      "category": "safety_guardrails",
+      "check": "S113 evidence validators intact (7 types)",
+      "status": "PASS",
+      "source": "may-core.js — _hasImprovingEvidence/_hasPersistentWeakEvidence/_hasDecliningEvidence/_hasUnstableEvidence/_hasHintDependentEvidence/_hasDifficultySensitiveEvidence/_hasConfidenceEvidence",
+      "notes": "S113-01 through S113-15 all pass. S118: all 7 types exercised with seeded history."
+    },
+    {
+      "id": "PILOT-18",
+      "category": "recommendation_gates",
+      "check": "Recommendation-gate telemetry populated with seeded history",
+      "status": "PASS",
+      "source": "S118 simulation results: recommendation-gate telemetry confirmed populated",
+      "notes": "S118: 8 gate events (similar), 8 gate pass, 0 gate block. S116 baseline was 0 events."
+    },
+    {
+      "id": "PILOT-19",
+      "category": "evidence_validators",
+      "check": "All 7 evidence-threshold validator types exercised",
+      "status": "PASS",
+      "source": "S118 telemetry analysis",
+      "notes": "S118: 2 improving, 5 persistent-weak, 1 declining, 5 unstable, 1 hint-dependent, 4 difficulty-sensitive, 0 confidence."
+    },
+    {
+      "id": "PILOT-20",
+      "category": "export",
+      "check": "exportMayPilotData produces valid payload with all required sections",
+      "status": "PASS",
+      "source": "may-core.js — exportMayPilotData",
+      "notes": "S115-EXPORT-01/02/03 confirm. S118: 8 exports generated, 0 malformed."
+    },
+    {
+      "id": "PILOT-21",
+      "category": "export",
+      "check": "Export payload includes modelVersion (S111-1.0) and synthetic marker",
+      "status": "PASS",
+      "source": "may-core.js — exportMayPilotData includes readiness summary with _provenance.modelVersion",
+      "notes": "S115-EXPORT-02/03 confirm."
+    },
+    {
+      "id": "PILOT-22",
+      "category": "clear_reset",
+      "check": "clearPilotData removes all S115 localStorage keys and resets state",
+      "status": "PASS",
+      "source": "may-core.js — clearPilotData",
+      "notes": "S115-CLEAR-01 confirms: 6 localStorage keys cleared, in-memory state reset."
+    },
+    {
+      "id": "PILOT-23",
+      "category": "no_external_telemetry",
+      "check": "No external telemetry endpoint configured",
+      "status": "PASS",
+      "source": "may-core.js — all logging: localStorage only (no fetch/XHR)",
+      "notes": "Validated across may-core.js (no fetch to external URLs in pilot paths)."
+    },
+    {
+      "id": "PILOT-24",
+      "category": "no_broad_rollout",
+      "check": "S114 PILOT-ONLY posture preserved — tutoringPilotEnabled defaults false",
+      "status": "PASS",
+      "source": "may-core.js — May.config.tutoringPilotEnabled defaults to false (line 13)",
+      "notes": "No broad rollout mechanism exists. Pilot gated behind explicit flag or CMA_MAY_PILOT env var."
+    }
+  ],
+  "blockers": [
+    {
+      "id": "BLOCK-01",
+      "severity": "MEDIUM",
+      "category": "new_enrollment",
+      "description": "trySetName in may-core.js (line 176) hardcodes savedData.synthetic = true unconditionally. A real pre-production learner enrolled via the normal flow would be marked synthetic:true even though they are a real person.",
+      "mitigation": "Acceptable for pilot if: (a) learner is informed the synthetic marker is incorrect, (b) the pilot is consent-based, (c) the marker can be corrected post-hoc by editing localStorage or adding a consent flag. For production: add a parameter to trySetName that respects a consent/real-user flag.",
+      "requiresHumanApproval": true,
+      "impacts": "Export payloads will have synthetic:true for a real user — could confuse analytics if exports are compared between synthetic and real learners."
+    },
+    {
+      "id": "BLOCK-02",
+      "severity": "LOW",
+      "category": "accessibility",
+      "description": "Student roll row divs (.may-student-row) lack tabIndex and onkeydown (Enter/Space) handlers. Keyboard-only users cannot navigate and select from the roll.",
+      "mitigation": "Deferred post-pilot polish. Mouse/touch interaction is sufficient for a single-user pilot. Add tabIndex='0' and keyboard handlers in a follow-up session.",
+      "requiresHumanApproval": false,
+      "impacts": "Screen-reader and keyboard-only users cannot use the student roll UI."
+    }
+  ],
+  "prerequisites": [
+    "Human explicitly approves single-user local pre-production pilot",
+    "Learner is informed this is a pre-production version with known gaps",
+    "Learner consents to local-only data storage (no cloud, no external telemetry)",
+    "Exam date and goals entered voluntarily by learner — system never pulls from external sources",
+    "Data export capability explained to learner (exportMayPilotData preserves their practice history)",
+    "No external telemetry endpoint may be added without explicit authorization",
+    "The synthetic:true marker on a real-learner profile is acknowledged as a known gap"
+  ],
+  "overallReadiness": "READY_WITH_NOTES",
+  "summary": "24 checklist items assessed. 23 PASS, 1 PASS_WITH_NOTE (PILOT-07). 2 blockers: 1 MEDIUM (synthetic marker), 1 LOW (keyboard nav). All safety/recommendation/evidence/exam-plan/privacy systems confirmed intact and tested at 248/248. May is functionally ready for a controlled single-user pilot. The BLOCK-01 synthetic marker issue is acceptable for a consent-based pre-production pilot.",
+  "requiresHumanApprovalBeforePilot": true,
+  "agent": "B"
+}

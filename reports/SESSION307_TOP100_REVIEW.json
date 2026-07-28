@@ -1,0 +1,23 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "summary": {
+    "totalTargets": 100,
+    "domainDistribution": {
+      "?": 1,
+      "D": 6,
+      "A": 4,
+      "E": 54,
+      "C": 5,
+      "F": 30
+    },
+    "typeDistribution": {
+      "MCQ": 76,
+      "Case": 24
+    },
+    "avgUiqs": "34.7",
+    "p0Count": 38,
+    "p1Count": 62
+  },
+  "validation": "VALID — ranking confirmed by S306 UIQS engine. Re-ranking not required.",
+  "reRankingRationale": "P0 items (UIQS < 35) correctly clustered in uncertified case-bank and Pack D/E/F items. P1 items (UIQS 35-45) correctly prioritize EW-deficient items. No material ranking errors detected."
+}

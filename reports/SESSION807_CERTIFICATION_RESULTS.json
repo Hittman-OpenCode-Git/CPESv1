@@ -1,0 +1,188 @@
+{
+  "session": "S807",
+  "title": "Domain E Wave 3 Certification Review — Wave 2b Replacement Items",
+  "date": "2026-07-26",
+  "review_type": "Certification Review",
+  "scope": "10 Wave 2b Domain E replacement items (R12–R33)",
+  "overall_verdict": "ALL CERTIFY",
+  "summary": {
+    "total_reviewed": 10,
+    "certify": 10,
+    "hold": 0,
+    "escalate": 0,
+    "ready_as_is": 3,
+    "with_difficulty_notes": 7
+  },
+  "items": [
+    {
+      "qid": "P1-E-R12",
+      "topic": "Detective control classification",
+      "los": "E.1.e",
+      "correct_choice": "B",
+      "standards_cited": ["COSO P12"],
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "verdict": "CERTIFY",
+      "notes": "Ready. No recalibration needed.",
+      "difficulty_recalibration": null
+    },
+    {
+      "qid": "P1-E-R13",
+      "topic": "Corrective control remediation",
+      "los": "E.1.e",
+      "correct_choice": "B",
+      "standards_cited": ["COSO P12"],
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "verdict": "CERTIFY",
+      "notes": "Ready. No recalibration needed.",
+      "difficulty_recalibration": null
+    },
+    {
+      "qid": "P1-E-R18",
+      "topic": "Ongoing vs separate evaluations",
+      "los": "E.1.g",
+      "correct_choice": "C",
+      "standards_cited": ["COSO P16"],
+      "difficulty": "Easy",
+      "difficulty_score": 1,
+      "cognitive_level": "Understand",
+      "verdict": "CERTIFY",
+      "notes": "CERTIFY. Difficulty recalibrated from Moderate(3) to Easy(1). CL: Understand. Non-blocking DL-031 correction — apply in S808.",
+      "difficulty_recalibration": {
+        "from": { "difficulty": "Moderate", "difficulty_score": 3 },
+        "to": { "difficulty": "Easy", "difficulty_score": 1 },
+        "reason": "Definition-match pattern — stem describes concept, correct answer is the term. Tests Bloom's Understand, not Apply. Anti-DL-031 per S311."
+      }
+    },
+    {
+      "qid": "P1-E-R21",
+      "topic": "External audit opinions (GAAS)",
+      "los": "E.1.i",
+      "correct_choice": "D",
+      "standards_cited": ["AU-C 705"],
+      "difficulty": "Easy",
+      "difficulty_score": 1,
+      "cognitive_level": "Remember",
+      "verdict": "CERTIFY",
+      "notes": "CERTIFY. Difficulty recalibrated from Moderate(3) to Easy(1). CL: Remember. Non-blocking DL-031 correction — apply in S808.",
+      "difficulty_recalibration": {
+        "from": { "difficulty": "Moderate", "difficulty_score": 3 },
+        "to": { "difficulty": "Easy", "difficulty_score": 1 },
+        "reason": "Tests recall of GAAS audit opinion types. Bloom's Remember level. Anti-DL-031 per S311."
+      }
+    },
+    {
+      "qid": "P1-E-R22",
+      "topic": "Audit committee composition",
+      "los": "E.1.i",
+      "correct_choice": "D",
+      "standards_cited": ["SOX 301/407", "SEC 10A-3", "NYSE 303A.02"],
+      "difficulty": "Moderate-Easy",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "verdict": "CERTIFY",
+      "notes": "CERTIFY. Difficulty recalibrated from Moderate(3) to Moderate-Easy(2). CL: Understand. Non-blocking DL-031 correction — apply in S808.",
+      "difficulty_recalibration": {
+        "from": { "difficulty": "Moderate", "difficulty_score": 3 },
+        "to": { "difficulty": "Moderate-Easy", "difficulty_score": 2 },
+        "reason": "Tests knowledge of SOX/SEC/NYSE audit committee requirements. Bloom's Understand. Anti-DL-031 per S311."
+      }
+    },
+    {
+      "qid": "P1-E-R23",
+      "topic": "Board governance responsibilities",
+      "los": "E.1.a",
+      "correct_choice": "C",
+      "standards_cited": ["COSO P2", "SOX"],
+      "difficulty": "Moderate-Easy",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "verdict": "CERTIFY",
+      "notes": "CERTIFY. Difficulty recalibrated from Moderate(3) to Moderate-Easy(2). CL: Understand. Non-blocking DL-031 correction — apply in S808.",
+      "difficulty_recalibration": {
+        "from": { "difficulty": "Moderate", "difficulty_score": 3 },
+        "to": { "difficulty": "Moderate-Easy", "difficulty_score": 2 },
+        "reason": "Tests understanding of board governance under COSO P2 and SOX. Anti-DL-031 per S311."
+      }
+    },
+    {
+      "qid": "P1-E-R24",
+      "topic": "Entity-level vs transaction controls",
+      "los": "E.1.c",
+      "correct_choice": "A",
+      "standards_cited": ["COSO P2"],
+      "difficulty": "Easy",
+      "difficulty_score": 1,
+      "cognitive_level": "Understand",
+      "verdict": "CERTIFY",
+      "notes": "CERTIFY. Difficulty recalibrated from Moderate(3) to Easy(1). CL: Understand. Non-blocking DL-031 correction — apply in S808.",
+      "difficulty_recalibration": {
+        "from": { "difficulty": "Moderate", "difficulty_score": 3 },
+        "to": { "difficulty": "Easy", "difficulty_score": 1 },
+        "reason": "Definition-match — entity-level vs transaction control distinction is a foundational concept. Anti-DL-031 per S311."
+      }
+    },
+    {
+      "qid": "P1-E-R25",
+      "topic": "Information quality — timeliness",
+      "los": "E.1.f",
+      "correct_choice": "D",
+      "standards_cited": ["COSO P13"],
+      "difficulty": "Easy",
+      "difficulty_score": 1,
+      "cognitive_level": "Remember",
+      "verdict": "CERTIFY",
+      "notes": "CERTIFY. Difficulty recalibrated from Moderate(3) to Easy(1). CL: Remember. Non-blocking DL-031 correction — apply in S808.",
+      "difficulty_recalibration": {
+        "from": { "difficulty": "Moderate", "difficulty_score": 3 },
+        "to": { "difficulty": "Easy", "difficulty_score": 1 },
+        "reason": "Tests recall of COSO P13 information quality characteristics. Bloom's Remember. Anti-DL-031 per S311."
+      }
+    },
+    {
+      "qid": "P1-E-R28",
+      "topic": "Manual vs automated controls",
+      "los": "E.1.e",
+      "correct_choice": "B",
+      "standards_cited": ["COSO P12", "COSO P16"],
+      "difficulty": "Moderate",
+      "difficulty_score": 3,
+      "cognitive_level": "Apply",
+      "verdict": "CERTIFY",
+      "notes": "Ready. No recalibration needed.",
+      "difficulty_recalibration": null
+    },
+    {
+      "qid": "P1-E-R33",
+      "topic": "Internal audit reporting structure",
+      "los": "E.1.g",
+      "correct_choice": "D",
+      "standards_cited": ["IIA 1110", "IIA 1110.A1", "IIA 1130"],
+      "difficulty": "Moderate-Easy",
+      "difficulty_score": 2,
+      "cognitive_level": "Understand",
+      "verdict": "CERTIFY",
+      "notes": "CERTIFY. Difficulty recalibrated from Moderate(3) to Moderate-Easy(2). CL: Understand. Non-blocking DL-031 correction — apply in S808.",
+      "difficulty_recalibration": {
+        "from": { "difficulty": "Moderate", "difficulty_score": 3 },
+        "to": { "difficulty": "Moderate-Easy", "difficulty_score": 2 },
+        "reason": "Tests understanding of IIA reporting structure standards. Bloom's Understand. Anti-DL-031 per S311."
+      }
+    }
+  ],
+  "certification_conditions": {
+    "pre_insertion_gate_2_verification": "Full item JSON must be independently verified for DL-008/026/013/010 and answer-key correctness before writing to pack_e",
+    "difficulty_cl_recalibration": "Should be applied during S808 production insertion",
+    "governance_guard_rule_2": "Mandatory compliance before any write to pack_e"
+  },
+  "los_coverage": ["E.1.a", "E.1.c", "E.1.e", "E.1.f", "E.1.g", "E.1.i"],
+  "agents_involved": ["P", "W", "X", "H (S806)", "G (S806)"],
+  "review_agents": {
+    "agent_p": "Certification review — answer-key verification, standards citation audit",
+    "agent_w": "Difficulty calibration review — DL-031 anti-inflation assessment (S311 protocol)",
+    "agent_x": "EW integrity and structural compliance audit"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "document": "SESSION351_INVESTIGATION_INFRASTRUCTURE_AUDIT",
+  "session": "S351",
+  "title": "Investigation Infrastructure Audit — Board H",
+  "series": "350-Series — Framework v2 Validation Readiness",
+  "date": "2026-07-27",
+  "type": "Read-Only Infrastructure Audit — No Content Modifications",
+  "authority": "S204 Investigation Workbench Spec; S204 Navigation Validation (Board G); S205 Admin Readiness (Board F); S205 Challenge Workbench Requirements",
+  "purpose": "Assess current-state support for Question ↔ Session ↔ Recommendation ↔ Challenge linkage. Produce future-state gap analysis versus May Admin Portal requirements.",
+
+  "current_state_assessment": {
+    "question_identity": {
+      "status": "PARTIALLY_OPERATIONAL",
+      "mechanism": "QID string identity (v1). Compound-key identity spec exists (v2) but not yet populated for all 2,540 items.",
+      "gap": "QID-only identity does not support unique item resolution across rotation groups. Compound-key identity (PG-011 steps 4-5) is deferred to S206. Until populated, Question→Session linkage relies on QID string matching which has known S320-class failure modes."
+    },
+    "question_to_session_linkage": {
+      "status": "MANUAL",
+      "mechanism": "REVISION_HISTORY.md and DEFECT_LIBRARY.md contain session references but they are free-text narrative, not structured machine-readable references.",
+      "gap": "Cannot programmatically answer 'Which sessions touched QID P1E-C-054?' without parsing narrative text. No QID→Session index exists."
+    },
+    "session_to_recommendation_linkage": {
+      "status": "SPECIFIED — NOT OPERATIONAL",
+      "mechanism": "S202.1 Recommendation Integration model defines REC-ID format and 5-state transition model. S322 recommendation_registry.js is operational but contains no production data.",
+      "gap": "No structured Recommendation Registry exists with production entries. Recommendations live in narrative session reports and DEFECT_LIBRARY.md, not in a queryable registry."
+    },
+    "recommendation_to_challenge_linkage": {
+      "status": "NOT_BUILT",
+      "mechanism": "May Administration Portal 'Challenge Workbench' is a future feature. Requirements defined in S205 (7 IQ queries, 5 escalation paths). Not yet implemented.",
+      "gap": "No Challenge entity exists. No workbench. May Admin Portal is at placeholder status (per S350 Admin Metrics Framework Board J)."
+    },
+    "challenge_back_to_question": {
+      "status": "NOT_BUILT",
+      "mechanism": "S205 Challenge Workbench defines the workflow: learner flags question → admin reviews → challenge resolved/rejected → question updated in registry. Not yet operational.",
+      "gap": "Full challenge lifecycle requires the Admin Portal to be operational."
+    }
+  },
+
+  "nine_investigation_queries": {
+    "source": "S204 Investigation Workbench Spec §IQ-001 through IQ-009",
+    "assessment": {
+      "IQ-001_find_defects_by_qid": {
+        "description": "For a given QID, return all known defects and their status.",
+        "current_state": "PARTIALLY_SUPPORTED — grep DEFECT_LIBRARY.md for QID mentions. Manual. Not queryable.",
+        "v2_target": "Programmatic — query perItemResults in scan artifact + DEFECT_LIBRARY.md defect inventory."
+      },
+      "IQ-002_find_sessions_by_qid": {
+        "description": "For a given QID, return all sessions that reviewed or modified it.",
+        "current_state": "NOT_SUPPORTED — no QID→Session index exists. Must parse REVISION_HISTORY.md narrative text.",
+        "v2_target": "Programmatic — query RecommendationRegistry and session_registry.json by compound key."
+      },
+      "IQ-003_find_recommendations_by_session": {
+        "description": "For a given session, return all recommendations generated.",
+        "current_state": "NOT_SUPPORTED — recommendations exist only in narrative session reports.",
+        "v2_target": "Programmatic — query RecommendationRegistry by sourceSession field."
+      },
+      "IQ-004_trace_item_certification_path": {
+        "description": "Trace an item from Unprocessed through All Gates to Certified.",
+        "current_state": "NOT_SUPPORTED — no per-item gate history exists. question_state is a single field with no transition log.",
+        "v2_target": "Programmatic — query scan artifact lineage + delta ledger content_hash history."
+      },
+      "IQ-005_find_unresolved_recs_by_domain": {
+        "description": "Find all open recommendations for a blueprint domain.",
+        "current_state": "PARTIALLY_SUPPORTED — DEFECT_LIBRARY.md entries grouped by defect, not domain. Manual cross-reference required.",
+        "v2_target": "Programmatic — RecommendationRegistry filtered by section/domain metadata from scan artifact."
+      },
+      "IQ-006_find_duplicate_reviews": {
+        "description": "Find items that were reviewed multiple times without change.",
+        "current_state": "NOT_SUPPORTED — no delta review data exists yet.",
+        "v2_target": "Programmatic — delta ledger UNCHANGED classification + agent utilization tracking."
+      },
+      "IQ-007_find_certified_items_with_defects": {
+        "description": "Find all Certified items where a defect was subsequently discovered.",
+        "current_state": "PARTIALLY_SUPPORTED — S350/S351 Board E analysis manually identifies 154 Certified items with known defects. Not queryable.",
+        "v2_target": "Programmatic — cross-reference scan artifact perItemResults[questionState=CERTIFIED] ∩ defectInventory.byDefect."
+      }
+    }
+  },
+
+  "five_escalation_paths": {
+    "source": "S205 Challenge Workbench Requirements §escalation",
+    "assessment": {
+      "ESC-001_learner_flags_item": "NOT_BUILT — requires May Coaching Layer challenge button + Admin Portal queue.",
+      "ESC-002_admin_reviews_challenge": "NOT_BUILT — requires Admin Portal Challenge Workbench + Registry lookup.",
+      "ESC-003_reviewer_assigned": "NOT_BUILT — requires RBAC (specified in S204, not operational).",
+      "ESC-004_finding_remediation": "NOT_BUILT — remediation assignment defined in S202.1 but not integrated with Challenge flow.",
+      "ESC-005_closed_and_attested": "NOT_BUILT — closure attestation requires full challenge lifecycle."
+    }
+  },
+
+  "future_state_gap_analysis": {
+    "may_admin_portal_requirements": {
+      "source": "S204 Admin Pilot Results (Board H); S205 Admin Readiness (Board F)",
+      "portal_status": "PLACEHOLDER — per S350 Admin Metrics Framework Board J: 'Forward-looking admin platform metrics. Portal not yet operational.'",
+      "modules_specified": 7,
+      "roles_specified": 5,
+      "rbac_specified": true,
+      "security_enforcement_points": 16
+    },
+    "gaps": {
+      "gap_1_canonical_registry": {
+        "description": "CANONICAL_REGISTRY.json — single source of truth for every question's identity, content hash, certification status, and defect history. Not yet seeded.",
+        "impact": "Without the registry, no Admin Portal module can perform QID-based lookups. This is the foundational dependency.",
+        "estimated_resolution": "S206 T0 — seed CANONICAL_REGISTRY.json from S322 scan artifact perItemResults."
+      },
+      "gap_2_recommendation_registry_historical_population": {
+        "description": "RecommendationRegistry exists as infrastructure but contains no entries. Historical recommendations from DEFECT_LIBRARY.md and REVISION_HISTORY.md have not been back-populated.",
+        "impact": "IQ-003, IQ-005, and the full traceability chain require populated recommendations.",
+        "estimated_resolution": "Post-S207 — historical back-population is a one-time effort."
+      },
+      "gap_3_session_registry_historical_population": {
+        "description": "session_registry.json (S322 infrastructure) captures new sessions. Historical sessions (S1 through S321) have no structured entries.",
+        "impact": "IQ-002 (find sessions by QID) cannot cover pre-S322 history without back-population.",
+        "estimated_resolution": "Post-S207 — historical back-population. Optional for Phase 1."
+      },
+      "gap_4_admin_portal_implementation": {
+        "description": "May Administration Portal is a future development project. 7 modules, 5 roles, 16 security enforcement points are specified but not built.",
+        "impact": "All Challenge+Investigation workflows (IQ-001 through IQ-007, ESC-001 through ESC-005) are blocked until the portal is operational.",
+        "estimated_resolution": "May-focused development track. Not a 350-Series deliverable. Earliest: post-S910 (Legacy Retirement)."
+      },
+      "gap_5_per_item_gate_history": {
+        "description": "No per-item gate transition history exists. question_state is a single field with no audit trail of state transitions.",
+        "impact": "IQ-004 (trace certification path) cannot be answered without gate history.",
+        "estimated_resolution": "Per-item gate history must be added to scan artifact schema v2.0.0. Deferred."
+      }
+    },
+    "critical_path": "CANONICAL_REGISTRY.json seeding (S206) → Recommendation + Session registry population (post-S207) → Admin Portal build (May track). Blocked until the registry and portal are operational."
+  },
+
+  "verdict": "INVESTIGATION_INFRASTRUCTURE_SPECIFIED — The S202.1 Investigation Linkage model (7 IQ queries, 5 escalation paths) provides a comprehensive specification. The underlying data infrastructure (CANONICAL_REGISTRY, RecommendationRegistry, session_registry) exists in S322 but is unpopulated. The May Admin Portal (required for Challenge workflows) is at placeholder status. Investigation infrastructure is architecturally sound but not yet operational for production use."
+
+}

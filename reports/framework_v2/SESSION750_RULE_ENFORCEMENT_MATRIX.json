@@ -1,0 +1,122 @@
+{
+  "deliverable": "SESSION750_RULE_ENFORCEMENT_MATRIX.json",
+  "session": 750,
+  "board": "F",
+  "title": "Rule Enforcement Matrix",
+  "version": "1.0",
+  "date": "2026-07-27",
+  "description": "Maps Governance Rules 1-8 to their automation level, enforcement mechanism, and human review requirements. Defines enforcement actions for each rule violation scenario.",
+  "rules": [
+    {
+      "id": "RULE_1",
+      "name": "question_state changes must pair with REVISION_HISTORY.md updates",
+      "level": "WARN",
+      "automated": true,
+      "mechanism": "Session-idle warning from governance-guard.js; tracked by governance_guard_engine.js",
+      "humanReviewRequired": "ESCALATION",
+      "enforcementAction": "Flag at session close; warn if question_state changes exist without REVISION_HISTORY.md update",
+      "violationScore": 1,
+      "automatedResponse": "Log warning; prevent session from closing silently",
+      "escalationRule": "If >10 question_state changes without revision entry → escalate to Governance Admin"
+    },
+    {
+      "id": "RULE_2",
+      "name": "ExplanationWrong[CorrectChoice] must be empty (DL-008)",
+      "level": "BLOCK",
+      "automated": true,
+      "mechanism": "Pre-write BLOCK from governance-guard.js; pre-commit detection from governance_guard_engine.js",
+      "humanReviewRequired": "ESCALATION",
+      "enforcementAction": "Block the write/edit operation; report QID and slot letter",
+      "violationScore": 5,
+      "automatedResponse": "Throw BLOCKED error; prevent file write",
+      "escalationRule": "Any Certified DL-008 → immediate escalation to Tier 1 structural repair"
+    },
+    {
+      "id": "RULE_3",
+      "name": "MASTER_QUESTION_REGISTRY.md is generated — never hand-edited",
+      "level": "BLOCK",
+      "automated": true,
+      "mechanism": "Filename-based BLOCK from governance-guard.js",
+      "humanReviewRequired": "NONE",
+      "enforcementAction": "Block any write to MASTER_QUESTION_REGISTRY.md",
+      "violationScore": 5,
+      "automatedResponse": "Throw BLOCKED error; direct user to npm run build-registry",
+      "escalationRule": "N/A — BLOCK is absolute"
+    },
+    {
+      "id": "RULE_4",
+      "name": "CorrectChoice changes must include recomputed/verified note",
+      "level": "WARN",
+      "automated": true,
+      "mechanism": "Session-idle warning from governance-guard.js; tracked by governance_guard_engine.js",
+      "humanReviewRequired": "ESCALATION",
+      "enforcementAction": "Flag at session close; warn if CorrectChoice changes exist without recomputed note",
+      "violationScore": 3,
+      "automatedResponse": "Log warning",
+      "escalationRule": "Any CorrectChoice change without note → escalate to Certification Reviewer"
+    },
+    {
+      "id": "RULE_5",
+      "name": "Max 30 question objects per change-set without BLOCK-AUTHORIZED marker",
+      "level": "BLOCK",
+      "automated": true,
+      "mechanism": "Pre-write object-count BLOCK from governance-guard.js",
+      "humanReviewRequired": "ESCALATION",
+      "enforcementAction": "Block writes touching >30 QuestionID/ItemID markers without authorization",
+      "violationScore": 3,
+      "automatedResponse": "Throw BLOCKED error; advise splitting into ≤30-item batches",
+      "escalationRule": "Can be overridden by BLOCK-AUTHORIZED marker in content"
+    },
+    {
+      "id": "RULE_6",
+      "name": "Identity Validation — QuestionID uniqueness, CorrectChoice validity, Stem presence",
+      "level": "WARN",
+      "automated": true,
+      "mechanism": "Per-session scan from governance_guard_engine.js; Gate -1 (PG-011)",
+      "humanReviewRequired": "ESCALATION",
+      "enforcementAction": "Report duplicate IDs, missing stems, invalid CorrectChoice values",
+      "violationScore": 4,
+      "automatedResponse": "Flag in session startup check",
+      "escalationRule": "Any duplicate QuestionID → escalate to Content Admin"
+    },
+    {
+      "id": "RULE_7",
+      "name": "Certification Pool Census — only Certified items in learner delivery pool",
+      "level": "WARN",
+      "automated": true,
+      "mechanism": "Per-session count from governance_guard_engine.js; pre-delivery safety check (AGENTS.md §7)",
+      "humanReviewRequired": "ESCALATION",
+      "enforcementAction": "Report Certified count; flag if it drifts from CURRENT_BASELINES.md",
+      "violationScore": 2,
+      "automatedResponse": "Warn on certified-count delta from baseline",
+      "escalationRule": "Certified count drift >0 → escalate to Governance Admin for reconciliation"
+    },
+    {
+      "id": "RULE_8",
+      "name": "Structural Readiness — parse-gap between markers and extracted objects",
+      "level": "WARN",
+      "automated": true,
+      "mechanism": "Per-session structural check from governance_guard_engine.js",
+      "humanReviewRequired": "ESCALATION",
+      "enforcementAction": "Report parse-gap; flag any file where QuestionID count ≠ extracted object count",
+      "violationScore": 4,
+      "automatedResponse": "Flag structurally incomplete files",
+      "escalationRule": "Parse-gap >0 → escalate to Content Admin for structural repair"
+    }
+  ],
+  "summary": {
+    "totalRules": 8,
+    "fullyAutomated": 8,
+    "blockLevelRules": 3,
+    "warnLevelRules": 5,
+    "rulesRequiringHumanEscalation": 6,
+    "rulesWithNoHumanReview": 1,
+    "violationScoreScale": {
+      "1": "Informational — no learner impact",
+      "2": "Low — potential drift detection",
+      "3": "Medium — process violation or answer-key concern",
+      "4": "High — structural integrity issue",
+      "5": "Critical — learner-safety risk"
+    }
+  }
+}

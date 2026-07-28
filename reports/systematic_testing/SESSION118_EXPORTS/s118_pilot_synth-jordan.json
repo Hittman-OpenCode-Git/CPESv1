@@ -1,0 +1,5773 @@
+{
+  "generatedAt": "2026-07-25T21:20:12.010Z",
+  "environment": "pre-production",
+  "syntheticData": true,
+  "selectedLearnerId": "synth-jordan",
+  "studentRoll": [
+    {
+      "learnerId": "synth-avery",
+      "displayName": "Avery Pilot",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-03T00:00:00.000Z",
+      "profileSummary": "First-time CMA candidate. Early study stage — 2 short sessions completed. Still exploring the exam structure and building baseline topic coverage.",
+      "sessions": 2,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 55,
+          "attempts": 4
+        },
+        "Planning and budgeting": {
+          "accuracy": 60,
+          "attempts": 3
+        }
+      },
+      "readinessSnapshot": "Not enough data",
+      "weakAreas": [
+        "Financial statement classification",
+        "Budget components"
+      ],
+      "progressSignals": [
+        "First session completed"
+      ],
+      "recentTutoringInteractions": [],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-avery",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-avery-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 7,
+            "correctCount": 4,
+            "scaledScore": 286,
+            "mcqPct": 57,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-avery-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 3,
+            "correctCount": 2,
+            "scaledScore": 333,
+            "mcqPct": 67,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Financial statements": {
+            "correctCount": 3,
+            "totalAttempts": 6,
+            "hintCount": 5,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 18,
+              "total": 6
+            },
+            "difficultyDistribution": {
+              "Moderate": 2,
+              "Easy": 2,
+              "Difficult": 2
+            },
+            "sectionsSeen": [
+              "A"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-02T04:00:00.000Z"
+          },
+          "Planning and budgeting": {
+            "correctCount": 3,
+            "totalAttempts": 4,
+            "hintCount": 4,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 12,
+              "total": 4
+            },
+            "difficultyDistribution": {
+              "Moderate": 3,
+              "Easy": 1
+            },
+            "sectionsSeen": [
+              "B"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-02T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:11.990Z"
+      },
+      "notes": "Archetype: first-time candidate, early study stage. Low data volume — tests May's \"not enough data\" gating."
+    },
+    {
+      "learnerId": "synth-jordan",
+      "displayName": "Jordan Sample",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-09T00:00:00.000Z",
+      "profileSummary": "Returning CMA candidate with 8 sessions. Showing steady improvement across 3 topics. Accuracy trending upward from 65% to 78%.",
+      "sessions": 8,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 78,
+          "attempts": 12
+        },
+        "Variance analysis": {
+          "accuracy": 82,
+          "attempts": 10
+        },
+        "Cost behavior": {
+          "accuracy": 76,
+          "attempts": 8
+        },
+        "Internal controls": {
+          "accuracy": 70,
+          "attempts": 7
+        }
+      },
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": [
+        "Internal controls — COSO components"
+      ],
+      "progressSignals": [
+        "Improving on variance analysis (+15%)",
+        "Improving on cost behavior (+12%)",
+        "Stable on financial statements"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1A-FS-003-Q8",
+          "topic": "Financial statements",
+          "action": "explain",
+          "timestamp": "2026-06-08T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-jordan",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-jordan-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 6,
+            "correctCount": 3,
+            "scaledScore": 250,
+            "mcqPct": 50,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-jordan-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-jordan-3",
+            "date": "2026-06-03T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 3,
+            "scaledScore": 375,
+            "mcqPct": 75,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-jordan-4",
+            "date": "2026-06-04T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 5,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-jordan-5",
+            "date": "2026-06-05T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 6,
+            "correctCount": 5,
+            "scaledScore": 417,
+            "mcqPct": 83,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-jordan-6",
+            "date": "2026-06-06T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 4,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-jordan-7",
+            "date": "2026-06-07T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 5,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-jordan-8",
+            "date": "2026-06-08T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Financial statements": {
+            "correctCount": 13,
+            "totalAttempts": 15,
+            "hintCount": 4,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 45,
+              "total": 15
+            },
+            "difficultyDistribution": {
+              "Moderate": 8,
+              "Easy": 6,
+              "Difficult": 1
+            },
+            "sectionsSeen": [
+              "A"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          },
+          "Variance analysis": {
+            "correctCount": 10,
+            "totalAttempts": 11,
+            "hintCount": 2,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 33,
+              "total": 11
+            },
+            "difficultyDistribution": {
+              "Moderate": 8,
+              "Difficult": 1,
+              "Easy": 2
+            },
+            "sectionsSeen": [
+              "C"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          },
+          "Cost behavior": {
+            "correctCount": 5,
+            "totalAttempts": 6,
+            "hintCount": 4,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 18,
+              "total": 6
+            },
+            "difficultyDistribution": {
+              "Easy": 3,
+              "Moderate": 3
+            },
+            "sectionsSeen": [
+              "D"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-03T04:00:00.000Z"
+          },
+          "Internal controls": {
+            "correctCount": 5,
+            "totalAttempts": 8,
+            "hintCount": 3,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 24,
+              "total": 8
+            },
+            "difficultyDistribution": {
+              "Moderate": 4,
+              "Difficult": 3,
+              "Easy": 1
+            },
+            "sectionsSeen": [
+              "E"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:11.992Z"
+      },
+      "notes": "Archetype: returning candidate with stable improvement. Tests May's improvement-insight and recommendation logic."
+    },
+    {
+      "learnerId": "synth-morgan",
+      "displayName": "Morgan Demo",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-11T00:00:00.000Z",
+      "profileSummary": "6 sessions completed. Strong performance on cost management and financial reporting, but persistent weakness in budgeting topics (45% accuracy).",
+      "sessions": 6,
+      "topicStats": {
+        "Planning and budgeting": {
+          "accuracy": 45,
+          "attempts": 14
+        },
+        "Cost behavior": {
+          "accuracy": 82,
+          "attempts": 10
+        },
+        "Financial statements": {
+          "accuracy": 80,
+          "attempts": 8
+        }
+      },
+      "readinessSnapshot": "Developing",
+      "weakAreas": [
+        "Budget preparation order",
+        "Flexible budget calculations",
+        "Cash budget components"
+      ],
+      "progressSignals": [
+        "Persistent weakness on budgeting (-5% recent trend)",
+        "Strong on cost behavior"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1B-BG-005-Q2",
+          "topic": "Planning and budgeting",
+          "action": "recovery",
+          "timestamp": "2026-06-10T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-morgan",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-morgan-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 6,
+            "correctCount": 3,
+            "scaledScore": 250,
+            "mcqPct": 50,
+            "attempts": [
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-morgan-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 3,
+            "scaledScore": 300,
+            "mcqPct": 60,
+            "attempts": [
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-morgan-3",
+            "date": "2026-06-03T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 6,
+            "correctCount": 3,
+            "scaledScore": 250,
+            "mcqPct": 50,
+            "attempts": [
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-morgan-4",
+            "date": "2026-06-04T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-morgan-5",
+            "date": "2026-06-05T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 3,
+            "scaledScore": 300,
+            "mcqPct": 60,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-morgan-6",
+            "date": "2026-06-06T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 6,
+            "correctCount": 3,
+            "scaledScore": 250,
+            "mcqPct": 50,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Planning and budgeting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-06T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Planning and budgeting": {
+            "correctCount": 4,
+            "totalAttempts": 18,
+            "hintCount": 15,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 54,
+              "total": 18
+            },
+            "difficultyDistribution": {
+              "Moderate": 9,
+              "Difficult": 6,
+              "Easy": 3
+            },
+            "sectionsSeen": [
+              "B"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          },
+          "Cost behavior": {
+            "correctCount": 9,
+            "totalAttempts": 9,
+            "hintCount": 0,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 27,
+              "total": 9
+            },
+            "difficultyDistribution": {
+              "Easy": 5,
+              "Moderate": 4
+            },
+            "sectionsSeen": [
+              "D"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-06T04:00:00.000Z"
+          },
+          "Financial statements": {
+            "correctCount": 6,
+            "totalAttempts": 6,
+            "hintCount": 1,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 18,
+              "total": 6
+            },
+            "difficultyDistribution": {
+              "Moderate": 2,
+              "Easy": 4
+            },
+            "sectionsSeen": [
+              "A"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-03T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:11.993Z"
+      },
+      "notes": "Archetype: candidate with persistent weakness in budgeting. Tests May's recovery-set generation and weakness insight."
+    },
+    {
+      "learnerId": "synth-riley",
+      "displayName": "Riley Practice",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-13T00:00:00.000Z",
+      "profileSummary": "5 sessions. Struggles with cost management topics when difficulty increases. High hint usage (avg 2.3 hints per question). Easy questions: 80%; difficult questions: 45%.",
+      "sessions": 5,
+      "topicStats": {
+        "Cost behavior": {
+          "accuracy": 62,
+          "attempts": 15
+        },
+        "Standard costing": {
+          "accuracy": 55,
+          "attempts": 10
+        }
+      },
+      "readinessSnapshot": "Developing",
+      "weakAreas": [
+        "Variance analysis at high difficulty",
+        "Standard costing methods"
+      ],
+      "progressSignals": [
+        "Hint-dependent on cost topics",
+        "Difficulty-sensitive (30% gap)"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1D-CM-002-Q2",
+          "topic": "Cost behavior",
+          "action": "hint",
+          "timestamp": "2026-06-12T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-riley",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-riley-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 3,
+            "scaledScore": 300,
+            "mcqPct": 60,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-riley-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 6,
+            "correctCount": 3,
+            "scaledScore": 250,
+            "mcqPct": 50,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 3,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-riley-3",
+            "date": "2026-06-03T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 3,
+            "scaledScore": 300,
+            "mcqPct": 60,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-riley-4",
+            "date": "2026-06-04T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 2,
+            "scaledScore": 200,
+            "mcqPct": 40,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-riley-5",
+            "date": "2026-06-05T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 2,
+            "scaledScore": 200,
+            "mcqPct": 40,
+            "attempts": [
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Standard costing",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Cost behavior": {
+            "correctCount": 9,
+            "totalAttempts": 16,
+            "hintCount": 30,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Difficult"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 48,
+              "total": 16
+            },
+            "difficultyDistribution": {
+              "Easy": 6,
+              "Moderate": 3,
+              "Difficult": 7
+            },
+            "sectionsSeen": [
+              "D"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          },
+          "Standard costing": {
+            "correctCount": 4,
+            "totalAttempts": 10,
+            "hintCount": 16,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 30,
+              "total": 10
+            },
+            "difficultyDistribution": {
+              "Difficult": 2,
+              "Moderate": 5,
+              "Easy": 3
+            },
+            "sectionsSeen": [
+              "D"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:11.995Z"
+      },
+      "notes": "Archetype: cost-management difficulty sensitivity, hint-dependent. Tests S113 difficulty-sensitivity and hint-dependency evidence validators."
+    },
+    {
+      "learnerId": "synth-taylor",
+      "displayName": "Taylor Sandbox",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-16T00:00:00.000Z",
+      "profileSummary": "7 sessions. Strong performance on Internal Controls (85% accuracy across COSO, SOX, internal audit topics). Weak on Technology & Analytics (50%). Asymmetric topic profile.",
+      "sessions": 7,
+      "topicStats": {
+        "Internal controls": {
+          "accuracy": 85,
+          "attempts": 12
+        },
+        "COSO framework": {
+          "accuracy": 88,
+          "attempts": 8
+        },
+        "Technology and analytics": {
+          "accuracy": 50,
+          "attempts": 10
+        }
+      },
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": [
+        "Data governance",
+        "IT general controls",
+        "Emerging technology in accounting"
+      ],
+      "progressSignals": [
+        "Section E at 85% — near Ready",
+        "Section F declining (-12%)"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1E-IC-005-Q4",
+          "topic": "Internal controls",
+          "action": "progress",
+          "timestamp": "2026-06-15T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-taylor",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-taylor-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 6,
+            "correctCount": 3,
+            "scaledScore": 250,
+            "mcqPct": 50,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-taylor-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-taylor-3",
+            "date": "2026-06-03T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-taylor-4",
+            "date": "2026-06-04T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 3,
+            "scaledScore": 300,
+            "mcqPct": 60,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-taylor-5",
+            "date": "2026-06-05T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 4,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-taylor-6",
+            "date": "2026-06-06T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 3,
+            "scaledScore": 300,
+            "mcqPct": 60,
+            "attempts": [
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-taylor-7",
+            "date": "2026-06-07T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 3,
+            "scaledScore": 375,
+            "mcqPct": 75,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "COSO framework",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Technology and analytics",
+                "section": "F",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Internal controls": {
+            "correctCount": 14,
+            "totalAttempts": 14,
+            "hintCount": 0,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 42,
+              "total": 14
+            },
+            "difficultyDistribution": {
+              "Easy": 10,
+              "Moderate": 4
+            },
+            "sectionsSeen": [
+              "E"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          },
+          "Technology and analytics": {
+            "correctCount": 2,
+            "totalAttempts": 12,
+            "hintCount": 12,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 36,
+              "total": 12
+            },
+            "difficultyDistribution": {
+              "Moderate": 7,
+              "Difficult": 4,
+              "Easy": 1
+            },
+            "sectionsSeen": [
+              "F"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          },
+          "COSO framework": {
+            "correctCount": 8,
+            "totalAttempts": 8,
+            "hintCount": 0,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 24,
+              "total": 8
+            },
+            "difficultyDistribution": {
+              "Moderate": 5,
+              "Easy": 3
+            },
+            "sectionsSeen": [
+              "E"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-03T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:11.996Z"
+      },
+      "notes": "Archetype: controls strength, analytics weakness. Tests section-level readiness differentiation and asymmetric topic recommendations."
+    },
+    {
+      "learnerId": "synth-casey",
+      "displayName": "Casey Trial",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-07T00:00:00.000Z",
+      "profileSummary": "4 sessions. Overall accuracy 75% but hint usage is rapidly increasing (from 20% to 70% of attempts). May be developing over-reliance on hints.",
+      "sessions": 4,
+      "topicStats": {
+        "Performance management": {
+          "accuracy": 75,
+          "attempts": 10
+        },
+        "Forecasting": {
+          "accuracy": 72,
+          "attempts": 6
+        }
+      },
+      "readinessSnapshot": "Developing",
+      "weakAreas": [
+        "Forecasting techniques — regression"
+      ],
+      "progressSignals": [
+        "Hint use increasing (20% → 70%)",
+        "Accuracy stable at 75%"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1C-PM-004-Q6",
+          "topic": "Performance management",
+          "action": "hint",
+          "timestamp": "2026-06-06T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-casey",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-casey-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 3,
+            "correctCount": 2,
+            "scaledScore": 333,
+            "mcqPct": 67,
+            "attempts": [
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Forecasting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-casey-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 3,
+            "scaledScore": 375,
+            "mcqPct": 75,
+            "attempts": [
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Forecasting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-casey-3",
+            "date": "2026-06-03T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 3,
+            "scaledScore": 300,
+            "mcqPct": 60,
+            "attempts": [
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 3,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Forecasting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": false,
+                "hintsUsed": 4,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Forecasting",
+                "section": "B",
+                "correct": false,
+                "hintsUsed": 3,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-casey-4",
+            "date": "2026-06-04T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 3,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": false,
+                "hintsUsed": 4,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Forecasting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Performance management",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 3,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Forecasting",
+                "section": "B",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Performance management": {
+            "correctCount": 8,
+            "totalAttempts": 11,
+            "hintCount": 27,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 3,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 4,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 3,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 4,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 3,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 33,
+              "total": 11
+            },
+            "difficultyDistribution": {
+              "Easy": 3,
+              "Moderate": 5,
+              "Difficult": 3
+            },
+            "sectionsSeen": [
+              "C"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          },
+          "Forecasting": {
+            "correctCount": 4,
+            "totalAttempts": 6,
+            "hintCount": 11,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 3,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 18,
+              "total": 6
+            },
+            "difficultyDistribution": {
+              "Moderate": 4,
+              "Easy": 2
+            },
+            "sectionsSeen": [
+              "B"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:11.997Z"
+      },
+      "notes": "Archetype: hint-dependent behavior. Tests S113 hint-dependency evidence validator and recommendation-gate behavior for hint-heavy profiles."
+    },
+    {
+      "learnerId": "synth-quinn",
+      "displayName": "Quinn Sim",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-15T00:00:00.000Z",
+      "profileSummary": "6 sessions. Very unstable performance — accuracy swings from 40% to 85% between sessions. Stability score of 35%. Inconsistent study pattern.",
+      "sessions": 6,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 62,
+          "attempts": 12
+        },
+        "Cost behavior": {
+          "accuracy": 58,
+          "attempts": 10
+        },
+        "Internal controls": {
+          "accuracy": 68,
+          "attempts": 8
+        }
+      },
+      "readinessSnapshot": "Recovery needed",
+      "weakAreas": [
+        "Cost behavior (unstable)",
+        "Financial statement classification"
+      ],
+      "progressSignals": [
+        "Unstable performance (stability 35%)",
+        "Wide accuracy swings (40%-85%)"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1A-FS-003-Q2",
+          "topic": "Financial statements",
+          "action": "summary",
+          "timestamp": "2026-06-14T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-quinn",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-quinn-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 2,
+            "scaledScore": 250,
+            "mcqPct": 50,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-quinn-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 2,
+            "scaledScore": 200,
+            "mcqPct": 40,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-quinn-3",
+            "date": "2026-06-03T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-quinn-4",
+            "date": "2026-06-04T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 2,
+            "scaledScore": 200,
+            "mcqPct": 40,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 2,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-quinn-5",
+            "date": "2026-06-05T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-quinn-6",
+            "date": "2026-06-06T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 2,
+            "scaledScore": 200,
+            "mcqPct": 40,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Financial statements": {
+            "correctCount": 6,
+            "totalAttempts": 13,
+            "hintCount": 6,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 2,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 39,
+              "total": 13
+            },
+            "difficultyDistribution": {
+              "Easy": 5,
+              "Difficult": 5,
+              "Moderate": 3
+            },
+            "sectionsSeen": [
+              "A"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          },
+          "Cost behavior": {
+            "correctCount": 4,
+            "totalAttempts": 9,
+            "hintCount": 5,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 27,
+              "total": 9
+            },
+            "difficultyDistribution": {
+              "Moderate": 4,
+              "Easy": 4,
+              "Difficult": 1
+            },
+            "sectionsSeen": [
+              "D"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          },
+          "Internal controls": {
+            "correctCount": 6,
+            "totalAttempts": 7,
+            "hintCount": 1,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 21,
+              "total": 7
+            },
+            "difficultyDistribution": {
+              "Moderate": 5,
+              "Easy": 2
+            },
+            "sectionsSeen": [
+              "E"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:11.998Z"
+      },
+      "notes": "Archetype: unstable recent performance. Tests S113 instability evidence validator and readiness provenance for unstable profiles."
+    },
+    {
+      "learnerId": "synth-parker",
+      "displayName": "Parker Test",
+      "synthetic": true,
+      "preProduction": true,
+      "lastActiveAt": "2026-06-21T00:00:00.000Z",
+      "profileSummary": "10 sessions — most experienced synthetic student. 3 topics at Ready level but only 2 case practice sessions. Strong MCQ readiness, sparse case experience.",
+      "sessions": 10,
+      "topicStats": {
+        "Financial statements": {
+          "accuracy": 85,
+          "attempts": 18
+        },
+        "Variance analysis": {
+          "accuracy": 82,
+          "attempts": 15
+        },
+        "Internal controls": {
+          "accuracy": 84,
+          "attempts": 14
+        },
+        "Cost behavior": {
+          "accuracy": 78,
+          "attempts": 12
+        }
+      },
+      "readinessSnapshot": "Approaching review-ready",
+      "weakAreas": [
+        "Case-based practice (only 2 sessions)"
+      ],
+      "progressSignals": [
+        "3 topics at Ready",
+        "Sparse case practice — degradation risk"
+      ],
+      "recentTutoringInteractions": [
+        {
+          "qid": "P1A-FS-003-Q5",
+          "topic": "Financial statements",
+          "action": "similar",
+          "timestamp": "2026-06-20T00:00:00.000Z"
+        }
+      ],
+      "pilotUsageLog": [],
+      "safetyLog": [],
+      "gateLog": [],
+      "_learnerState": {
+        "learnerId": "synth-parker",
+        "userName": null,
+        "firstVisit": "2026-06-01T04:00:00.000Z",
+        "historySynthetic": true,
+        "synthetic": true,
+        "preProduction": true,
+        "sessions": [
+          {
+            "sessionId": "synth-session-parker-1",
+            "date": "2026-06-01T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 3,
+            "scaledScore": 375,
+            "mcqPct": 75,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": false,
+                "hintsUsed": 2,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-2",
+            "date": "2026-06-02T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 3,
+            "correctCount": 3,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-3",
+            "date": "2026-06-03T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 3,
+            "scaledScore": 375,
+            "mcqPct": 75,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": false,
+                "hintsUsed": 1,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-4",
+            "date": "2026-06-04T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 3,
+            "correctCount": 3,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-5",
+            "date": "2026-06-05T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 3,
+            "scaledScore": 375,
+            "mcqPct": 75,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-6",
+            "date": "2026-06-06T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 3,
+            "correctCount": 3,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-7",
+            "date": "2026-06-07T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 4,
+            "correctCount": 4,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-8",
+            "date": "2026-06-08T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 5,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 1,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-9",
+            "date": "2026-06-09T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 3,
+            "correctCount": 3,
+            "scaledScore": 500,
+            "mcqPct": 100,
+            "attempts": [
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              }
+            ]
+          },
+          {
+            "sessionId": "synth-session-parker-10",
+            "date": "2026-06-10T04:00:00.000Z",
+            "mode": "practice",
+            "totalQuestions": 5,
+            "correctCount": 4,
+            "scaledScore": 400,
+            "mcqPct": 80,
+            "attempts": [
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-01T04:00:00.000Z"
+              },
+              {
+                "topic": "Cost behavior",
+                "section": "D",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-02T04:00:00.000Z"
+              },
+              {
+                "topic": "Internal controls",
+                "section": "E",
+                "correct": false,
+                "hintsUsed": 0,
+                "difficulty": "Difficult",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-03T04:00:00.000Z"
+              },
+              {
+                "topic": "Variance analysis",
+                "section": "C",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Moderate",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-04T04:00:00.000Z"
+              },
+              {
+                "topic": "Financial statements",
+                "section": "A",
+                "correct": true,
+                "hintsUsed": 0,
+                "difficulty": "Easy",
+                "difficultyScore": 3,
+                "timestamp": "2026-06-05T04:00:00.000Z"
+              }
+            ]
+          }
+        ],
+        "topicPerformance": {
+          "Financial statements": {
+            "correctCount": 12,
+            "totalAttempts": 13,
+            "hintCount": 1,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 39,
+              "total": 13
+            },
+            "difficultyDistribution": {
+              "Easy": 7,
+              "Moderate": 5,
+              "Difficult": 1
+            },
+            "sectionsSeen": [
+              "A"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-05T04:00:00.000Z"
+          },
+          "Variance analysis": {
+            "correctCount": 9,
+            "totalAttempts": 10,
+            "hintCount": 0,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 30,
+              "total": 10
+            },
+            "difficultyDistribution": {
+              "Moderate": 7,
+              "Easy": 2,
+              "Difficult": 1
+            },
+            "sectionsSeen": [
+              "C"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          },
+          "Internal controls": {
+            "correctCount": 7,
+            "totalAttempts": 8,
+            "hintCount": 1,
+            "recentAttempts": [
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": false,
+                "hints": 0,
+                "difficulty": "Difficult"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 24,
+              "total": 8
+            },
+            "difficultyDistribution": {
+              "Easy": 4,
+              "Moderate": 3,
+              "Difficult": 1
+            },
+            "sectionsSeen": [
+              "E"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          },
+          "Cost behavior": {
+            "correctCount": 6,
+            "totalAttempts": 7,
+            "hintCount": 4,
+            "recentAttempts": [
+              {
+                "correct": false,
+                "hints": 2,
+                "difficulty": "Difficult"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Moderate"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 1,
+                "difficulty": "Easy"
+              },
+              {
+                "correct": true,
+                "hints": 0,
+                "difficulty": "Easy"
+              }
+            ],
+            "difficultyWeights": {
+              "sum": 21,
+              "total": 7
+            },
+            "difficultyDistribution": {
+              "Difficult": 1,
+              "Easy": 4,
+              "Moderate": 2
+            },
+            "sectionsSeen": [
+              "D"
+            ],
+            "firstSeen": "2026-06-01T04:00:00.000Z",
+            "lastSeen": "2026-06-04T04:00:00.000Z"
+          }
+        },
+        "subtopicPerformance": {},
+        "misconceptionPatterns": [],
+        "recommendationLog": [],
+        "sessionSummaries": [],
+        "lastUpdated": "2026-07-25T21:20:12.000Z"
+      },
+      "notes": "Archetype: strong readiness, sparse case practice. Tests May's case-burden degradation logic and practice-mix recommendations."
+    }
+  ],
+  "pilotUsageLog": [
+    {
+      "timestamp": "2026-07-25T21:20:12.002Z",
+      "sourceLabel": "explain",
+      "section": "A",
+      "topic": "A.001 balance sheet current classification",
+      "qid": "P1-A-001",
+      "pilotActive": true,
+      "safetySafe": false,
+      "safetyViolations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+      ],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.003Z",
+      "sourceLabel": "wrong-choices",
+      "section": "A",
+      "topic": "A.001 balance sheet current classification",
+      "qid": "P1-A-001",
+      "pilotActive": true,
+      "safetySafe": false,
+      "safetyViolations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+      ],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.003Z",
+      "sourceLabel": "hint",
+      "section": "A",
+      "topic": "A.001 balance sheet current classification",
+      "qid": "P1-A-001",
+      "pilotActive": true,
+      "safetySafe": true,
+      "safetyViolations": [],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.003Z",
+      "sourceLabel": "simplify",
+      "section": "A",
+      "topic": "A.001 balance sheet current classification",
+      "qid": "P1-A-001",
+      "pilotActive": true,
+      "safetySafe": false,
+      "safetyViolations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+      ],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.008Z",
+      "sourceLabel": "progress",
+      "section": "A",
+      "topic": "A.001 balance sheet current classification",
+      "qid": "P1-A-001",
+      "pilotActive": true,
+      "safetySafe": true,
+      "safetyViolations": [],
+      "gateSafe": null
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.009Z",
+      "sourceLabel": "weakness",
+      "section": "A",
+      "topic": "A.001 balance sheet current classification",
+      "qid": "P1-A-001",
+      "pilotActive": true,
+      "safetySafe": true,
+      "safetyViolations": [],
+      "gateSafe": null
+    }
+  ],
+  "safetyLog": [
+    {
+      "timestamp": "2026-07-25T21:20:12.002Z",
+      "sourceLabel": "explain",
+      "textLength": 973,
+      "safe": false,
+      "violations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+      ],
+      "hintLevel": 0,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.003Z",
+      "sourceLabel": "wrong-choices",
+      "textLength": 1537,
+      "safe": false,
+      "violations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+      ],
+      "hintLevel": 0,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.003Z",
+      "sourceLabel": "hint",
+      "textLength": 268,
+      "safe": true,
+      "violations": [],
+      "hintLevel": 1,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.003Z",
+      "sourceLabel": "simplify",
+      "textLength": 486,
+      "safe": false,
+      "violations": [
+        "ANSWER_LEAKAGE_HINT: hint level 0 reveals correct choice C"
+      ],
+      "hintLevel": 0,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.008Z",
+      "sourceLabel": "progress",
+      "textLength": 697,
+      "safe": true,
+      "violations": [],
+      "hintLevel": 0,
+      "examMode": false,
+      "pilotActive": true
+    },
+    {
+      "timestamp": "2026-07-25T21:20:12.009Z",
+      "sourceLabel": "weakness",
+      "textLength": 328,
+      "safe": true,
+      "violations": [],
+      "hintLevel": 0,
+      "examMode": false,
+      "pilotActive": true
+    }
+  ],
+  "gateLog": [
+    {
+      "timestamp": "2026-07-25T21:20:12.005Z",
+      "sourceLabel": "similar",
+      "qidCount": 1,
+      "defectSafe": true,
+      "blockedQids": [],
+      "certSafe": true,
+      "nonCertifiedQids": []
+    }
+  ],
+  "sessionTelemetry": [
+    {
+      "event": "student_selected",
+      "timestamp": "2026-07-25T21:20:12.001Z",
+      "learnerId": "synth-jordan",
+      "data": {
+        "learnerId": "synth-jordan",
+        "displayName": "Jordan Sample"
+      }
+    }
+  ],
+  "calibrationExport": {
+    "thresholdSnapshot": {
+      "accuracyHigh": 80,
+      "accuracyGood": 75,
+      "accuracyLow": 60,
+      "stabilityHigh": 75,
+      "stabilityGood": 60,
+      "stabilityLow": 50,
+      "recentPctHigh": 80,
+      "recentPctGood": 70,
+      "minAttemptsReady": 6,
+      "minAttemptsApproaching": 4,
+      "minAttemptsTopic": 3,
+      "caseBurdenDegradeMisses": 4,
+      "modelVersion": "S111-1.0",
+      "dataContext": {
+        "sessionCount": 8,
+        "topicsWithData": 4,
+        "recoveryCount": 1,
+        "readyCount": 3,
+        "caseSessions": 0,
+        "caseMissesTotal": 0
+      }
+    },
+    "readinessSummary": {
+      "overall": {
+        "band": "Developing",
+        "rationale": "Mixed signals — some areas ready but others need work.",
+        "signals": [
+          "mixed_readiness"
+        ],
+        "confidence": "moderate"
+      },
+      "topics": [
+        {
+          "topic": "Financial statements",
+          "band": "Ready for focused review",
+          "rationale": "Strong, consistent performance: 87% accuracy, 100% stability over 15 attempts.",
+          "signals": [
+            "high_accuracy",
+            "high_recent",
+            "high_stability",
+            "sufficient_attempts"
+          ],
+          "attempts": 15,
+          "accuracy": 87,
+          "recentPct": 100,
+          "direction": "slightly_improving",
+          "stability": 100
+        },
+        {
+          "topic": "Variance analysis",
+          "band": "Ready for focused review",
+          "rationale": "Strong, consistent performance: 91% accuracy, 78% stability over 11 attempts.",
+          "signals": [
+            "high_accuracy",
+            "high_recent",
+            "high_stability",
+            "sufficient_attempts"
+          ],
+          "attempts": 11,
+          "accuracy": 91,
+          "recentPct": 100,
+          "direction": "slightly_improving",
+          "stability": 78
+        },
+        {
+          "topic": "Cost behavior",
+          "band": "Ready for focused review",
+          "rationale": "Strong, consistent performance: 83% accuracy, 80% stability over 6 attempts.",
+          "signals": [
+            "high_accuracy",
+            "high_recent",
+            "high_stability",
+            "sufficient_attempts"
+          ],
+          "attempts": 6,
+          "accuracy": 83,
+          "recentPct": 100,
+          "direction": "improving",
+          "stability": 80
+        },
+        {
+          "topic": "Internal controls",
+          "band": "Recovery needed",
+          "rationale": "Needs attention — unstable (29% stability).",
+          "signals": [
+            "unstable"
+          ],
+          "attempts": 8,
+          "accuracy": 63,
+          "recentPct": 60,
+          "direction": "stable",
+          "stability": 29
+        }
+      ],
+      "caseReadiness": {
+        "band": "Not enough data",
+        "rationale": "No case miss data yet — complete at least one case session.",
+        "signals": [
+          "no_case_data"
+        ],
+        "dominantPattern": null,
+        "dominantTrend": null,
+        "totalCaseMisses": 0,
+        "sessionsWithCases": 0
+      },
+      "hasEnoughData": true,
+      "dataNote": "",
+      "_provenance": {
+        "modelVersion": "S111-1.0",
+        "computedAt": "2026-07-25T21:20:12.011Z",
+        "triggerSignals": [
+          "mixed_readiness"
+        ],
+        "decisiveFactors": [
+          "Recovery + Ready mix"
+        ],
+        "thresholdsApplied": {
+          "minAttemptsReady": 6,
+          "minAttemptsApproaching": 4,
+          "minAttemptsTopic": 3,
+          "accuracyHigh": 80,
+          "accuracyGood": 75,
+          "accuracyLow": 60,
+          "stabilityHigh": 75,
+          "stabilityGood": 60,
+          "stabilityLow": 50,
+          "recentPctHigh": 80,
+          "recentPctGood": 70,
+          "caseBurdenDegrade": false
+        },
+        "dataContext": {
+          "sessionCount": 8,
+          "topicsWithData": 4,
+          "recoveryCount": 1,
+          "readyCount": 3,
+          "caseSessions": 0,
+          "caseMissesTotal": 0
+        }
+      }
+    },
+    "sectionReadiness": {
+      "sections": {
+        "A": {
+          "section": "A",
+          "label": "External Financial Reporting",
+          "band": "Approaching review-ready",
+          "rationale": "All 1 topics with data are at or near review-ready.",
+          "topicCount": 1,
+          "worstTopic": null,
+          "signals": [
+            "section_approaching_uniform"
+          ],
+          "confidence": "moderate",
+          "_topics": [
+            {
+              "topic": "Financial statements",
+              "band": "Ready for focused review",
+              "accuracy": 87,
+              "direction": "slightly_improving"
+            }
+          ]
+        },
+        "B": {
+          "section": "B",
+          "label": "Planning, Budgeting & Forecasting",
+          "band": "Not enough data",
+          "rationale": "No topic data in this section yet.",
+          "topicCount": 0,
+          "worstTopic": null,
+          "signals": [
+            "no_section_data"
+          ],
+          "confidence": "high",
+          "_topics": []
+        },
+        "C": {
+          "section": "C",
+          "label": "Performance Management",
+          "band": "Approaching review-ready",
+          "rationale": "All 1 topics with data are at or near review-ready.",
+          "topicCount": 1,
+          "worstTopic": null,
+          "signals": [
+            "section_approaching_uniform"
+          ],
+          "confidence": "moderate",
+          "_topics": [
+            {
+              "topic": "Variance analysis",
+              "band": "Ready for focused review",
+              "accuracy": 91,
+              "direction": "slightly_improving"
+            }
+          ]
+        },
+        "D": {
+          "section": "D",
+          "label": "Cost Management",
+          "band": "Approaching review-ready",
+          "rationale": "All 1 topics with data are at or near review-ready.",
+          "topicCount": 1,
+          "worstTopic": null,
+          "signals": [
+            "section_approaching_uniform"
+          ],
+          "confidence": "moderate",
+          "_topics": [
+            {
+              "topic": "Cost behavior",
+              "band": "Ready for focused review",
+              "accuracy": 83,
+              "direction": "improving"
+            }
+          ]
+        },
+        "E": {
+          "section": "E",
+          "label": "Internal Controls",
+          "band": "Developing",
+          "rationale": "One topic (Internal controls) needs recovery; rest are progressing.",
+          "topicCount": 1,
+          "worstTopic": "Internal controls",
+          "signals": [
+            "single_recovery_topic",
+            "section_mixed"
+          ],
+          "confidence": "moderate",
+          "_topics": [
+            {
+              "topic": "Internal controls",
+              "band": "Recovery needed",
+              "accuracy": 63,
+              "direction": "stable"
+            }
+          ]
+        },
+        "F": {
+          "section": "F",
+          "label": "Technology & Analytics",
+          "band": "Not enough data",
+          "rationale": "No topic data in this section yet.",
+          "topicCount": 0,
+          "worstTopic": null,
+          "signals": [
+            "no_section_data"
+          ],
+          "confidence": "high",
+          "_topics": []
+        }
+      },
+      "modelVersion": "S111-1.0",
+      "computedAt": "2026-07-25T21:20:12.012Z"
+    },
+    "trends": [
+      {
+        "topic": "Internal controls",
+        "accuracy": 63,
+        "recentPct": 60,
+        "delta": -3,
+        "direction": "stable",
+        "stability": 29,
+        "hintTrend": "increasing",
+        "totalAttempts": 8,
+        "avgDifficulty": 3
+      },
+      {
+        "topic": "Cost behavior",
+        "accuracy": 83,
+        "recentPct": 100,
+        "delta": 17,
+        "direction": "improving",
+        "stability": 80,
+        "hintTrend": "stable",
+        "totalAttempts": 6,
+        "avgDifficulty": 3
+      },
+      {
+        "topic": "Financial statements",
+        "accuracy": 87,
+        "recentPct": 100,
+        "delta": 13,
+        "direction": "slightly_improving",
+        "stability": 100,
+        "hintTrend": "stable",
+        "totalAttempts": 15,
+        "avgDifficulty": 3
+      },
+      {
+        "topic": "Variance analysis",
+        "accuracy": 91,
+        "recentPct": 100,
+        "delta": 9,
+        "direction": "slightly_improving",
+        "stability": 78,
+        "hintTrend": "decreasing",
+        "totalAttempts": 11,
+        "avgDifficulty": 3
+      }
+    ],
+    "clusters": {
+      "persistentWeak": [],
+      "improving": [
+        {
+          "topic": "Cost behavior",
+          "accuracy": 83,
+          "recentPct": 100,
+          "delta": 17,
+          "direction": "improving",
+          "stability": 80,
+          "hintTrend": "stable",
+          "totalAttempts": 6,
+          "avgDifficulty": 3
+        }
+      ],
+      "declining": [],
+      "unstable": [
+        {
+          "topic": "Internal controls",
+          "accuracy": 63,
+          "recentPct": 60,
+          "delta": -3,
+          "direction": "stable",
+          "stability": 29,
+          "hintTrend": "increasing",
+          "totalAttempts": 8,
+          "avgDifficulty": 3
+        }
+      ],
+      "hintDependent": [],
+      "difficultySensitive": []
+    },
+    "calibration": {},
+    "calibrationMetrics": [],
+    "casePatternSummary": null,
+    "casePatternTrends": [],
+    "adaptivePracticeMix": {
+      "mode": "Mixed Reinforcement",
+      "reason": "Your recent sessions do not show a clear weakness pattern — and that is a good sign. Your best move now is variety: alternate modes so neither skill gets stale.",
+      "howTo": "Pick a topic you have not practiced recently. Do 10 timed MCQs, then find a case in the same domain and work through it untimed. Compare: does the same concept feel different across formats?",
+      "badge": "MIXED"
+    },
+    "exportedAt": "2026-07-25T21:20:12.014Z"
+  },
+  "thresholdSnapshot": {
+    "accuracyHigh": 80,
+    "accuracyGood": 75,
+    "accuracyLow": 60,
+    "stabilityHigh": 75,
+    "stabilityGood": 60,
+    "stabilityLow": 50,
+    "recentPctHigh": 80,
+    "recentPctGood": 70,
+    "minAttemptsReady": 6,
+    "minAttemptsApproaching": 4,
+    "minAttemptsTopic": 3,
+    "caseBurdenDegradeMisses": 4,
+    "modelVersion": "S111-1.0",
+    "dataContext": {
+      "sessionCount": 8,
+      "topicsWithData": 4,
+      "recoveryCount": 1,
+      "readyCount": 3,
+      "caseSessions": 0,
+      "caseMissesTotal": 0
+    }
+  },
+  "modelVersion": "S111-1.0",
+  "learnerState": {
+    "learnerId": "synth-jordan",
+    "userName": "Jordan Sample",
+    "firstVisit": "2026-06-01T04:00:00.000Z",
+    "historySynthetic": true,
+    "synthetic": true,
+    "preProduction": true,
+    "sessions": [
+      {
+        "sessionId": "synth-session-jordan-1",
+        "date": "2026-06-01T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 6,
+        "correctCount": 3,
+        "scaledScore": 250,
+        "mcqPct": 50,
+        "attempts": [
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": false,
+            "hintsUsed": 2,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": false,
+            "hintsUsed": 1,
+            "difficulty": "Difficult",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 1,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Cost behavior",
+            "section": "D",
+            "correct": false,
+            "hintsUsed": 2,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "sessionId": "synth-session-jordan-2",
+        "date": "2026-06-02T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 5,
+        "correctCount": 4,
+        "scaledScore": 400,
+        "mcqPct": 80,
+        "attempts": [
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 1,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": false,
+            "hintsUsed": 1,
+            "difficulty": "Difficult",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Cost behavior",
+            "section": "D",
+            "correct": true,
+            "hintsUsed": 1,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "sessionId": "synth-session-jordan-3",
+        "date": "2026-06-03T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 4,
+        "correctCount": 3,
+        "scaledScore": 375,
+        "mcqPct": 75,
+        "attempts": [
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": true,
+            "hintsUsed": 1,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-03T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": false,
+            "hintsUsed": 0,
+            "difficulty": "Difficult",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-03T04:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "sessionId": "synth-session-jordan-4",
+        "date": "2026-06-04T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 5,
+        "correctCount": 5,
+        "scaledScore": 500,
+        "mcqPct": 100,
+        "attempts": [
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Cost behavior",
+            "section": "D",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-03T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": true,
+            "hintsUsed": 1,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-04T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-04T04:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "sessionId": "synth-session-jordan-5",
+        "date": "2026-06-05T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 6,
+        "correctCount": 5,
+        "scaledScore": 417,
+        "mcqPct": 83,
+        "attempts": [
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Cost behavior",
+            "section": "D",
+            "correct": true,
+            "hintsUsed": 1,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-03T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": false,
+            "hintsUsed": 0,
+            "difficulty": "Difficult",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-04T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-05T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-05T04:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "sessionId": "synth-session-jordan-6",
+        "date": "2026-06-06T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 4,
+        "correctCount": 4,
+        "scaledScore": 500,
+        "mcqPct": 100,
+        "attempts": [
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Cost behavior",
+            "section": "D",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-03T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": true,
+            "hintsUsed": 1,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-04T04:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "sessionId": "synth-session-jordan-7",
+        "date": "2026-06-07T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 5,
+        "correctCount": 5,
+        "scaledScore": 500,
+        "mcqPct": 100,
+        "attempts": [
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-03T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-04T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-05T04:00:00.000Z"
+          }
+        ]
+      },
+      {
+        "sessionId": "synth-session-jordan-8",
+        "date": "2026-06-08T04:00:00.000Z",
+        "mode": "practice",
+        "totalQuestions": 5,
+        "correctCount": 4,
+        "scaledScore": 400,
+        "mcqPct": 80,
+        "attempts": [
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Easy",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-01T04:00:00.000Z"
+          },
+          {
+            "topic": "Variance analysis",
+            "section": "C",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-02T04:00:00.000Z"
+          },
+          {
+            "topic": "Cost behavior",
+            "section": "D",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-03T04:00:00.000Z"
+          },
+          {
+            "topic": "Internal controls",
+            "section": "E",
+            "correct": false,
+            "hintsUsed": 0,
+            "difficulty": "Difficult",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-04T04:00:00.000Z"
+          },
+          {
+            "topic": "Financial statements",
+            "section": "A",
+            "correct": true,
+            "hintsUsed": 0,
+            "difficulty": "Moderate",
+            "difficultyScore": 3,
+            "timestamp": "2026-06-05T04:00:00.000Z"
+          }
+        ]
+      }
+    ],
+    "topicPerformance": {
+      "Financial statements": {
+        "correctCount": 13,
+        "totalAttempts": 15,
+        "hintCount": 4,
+        "recentAttempts": [
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          }
+        ],
+        "difficultyWeights": {
+          "sum": 45,
+          "total": 15
+        },
+        "difficultyDistribution": {
+          "Moderate": 8,
+          "Easy": 6,
+          "Difficult": 1
+        },
+        "sectionsSeen": [
+          "A"
+        ],
+        "firstSeen": "2026-06-01T04:00:00.000Z",
+        "lastSeen": "2026-06-05T04:00:00.000Z"
+      },
+      "Variance analysis": {
+        "correctCount": 10,
+        "totalAttempts": 11,
+        "hintCount": 2,
+        "recentAttempts": [
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": false,
+            "hints": 1,
+            "difficulty": "Difficult"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          }
+        ],
+        "difficultyWeights": {
+          "sum": 33,
+          "total": 11
+        },
+        "difficultyDistribution": {
+          "Moderate": 8,
+          "Difficult": 1,
+          "Easy": 2
+        },
+        "sectionsSeen": [
+          "C"
+        ],
+        "firstSeen": "2026-06-01T04:00:00.000Z",
+        "lastSeen": "2026-06-05T04:00:00.000Z"
+      },
+      "Cost behavior": {
+        "correctCount": 5,
+        "totalAttempts": 6,
+        "hintCount": 4,
+        "recentAttempts": [
+          {
+            "correct": false,
+            "hints": 2,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 1,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": true,
+            "hints": 1,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          }
+        ],
+        "difficultyWeights": {
+          "sum": 18,
+          "total": 6
+        },
+        "difficultyDistribution": {
+          "Easy": 3,
+          "Moderate": 3
+        },
+        "sectionsSeen": [
+          "D"
+        ],
+        "firstSeen": "2026-06-01T04:00:00.000Z",
+        "lastSeen": "2026-06-03T04:00:00.000Z"
+      },
+      "Internal controls": {
+        "correctCount": 5,
+        "totalAttempts": 8,
+        "hintCount": 3,
+        "recentAttempts": [
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 1,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": false,
+            "hints": 0,
+            "difficulty": "Difficult"
+          },
+          {
+            "correct": true,
+            "hints": 1,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": false,
+            "hints": 0,
+            "difficulty": "Difficult"
+          },
+          {
+            "correct": true,
+            "hints": 1,
+            "difficulty": "Moderate"
+          },
+          {
+            "correct": true,
+            "hints": 0,
+            "difficulty": "Easy"
+          },
+          {
+            "correct": false,
+            "hints": 0,
+            "difficulty": "Difficult"
+          }
+        ],
+        "difficultyWeights": {
+          "sum": 24,
+          "total": 8
+        },
+        "difficultyDistribution": {
+          "Moderate": 4,
+          "Difficult": 3,
+          "Easy": 1
+        },
+        "sectionsSeen": [
+          "E"
+        ],
+        "firstSeen": "2026-06-01T04:00:00.000Z",
+        "lastSeen": "2026-06-05T04:00:00.000Z"
+      }
+    },
+    "subtopicPerformance": {},
+    "misconceptionPatterns": [],
+    "recommendationLog": [
+      {
+        "timestamp": "2026-07-25T21:20:12.005Z",
+        "sourceTopic": "balance sheet current classification",
+        "sourceDomain": "A",
+        "reasonType": "similar_question",
+        "recommendedQids": [
+          "P1-A-001"
+        ],
+        "packPool": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "excludedByDefect": [],
+        "excludedByContested": [],
+        "excludedByState": [],
+        "activeSessionId": null,
+        "activeExamMode": false
+      }
+    ],
+    "sessionSummaries": [],
+    "lastUpdated": "2026-07-25T21:20:12.005Z"
+  }
+}

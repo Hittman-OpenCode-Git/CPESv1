@@ -1,0 +1,34 @@
+{
+  "session": "524",
+  "type": "CERTIFICATION_RESULTS",
+  "timestamp": "2026-07-26T12:15:00Z",
+  "wave": 2,
+  "target": "MIGRATED_CASE_BASE_D / scored_cases4.js / CASE-D4 through CASE-D6",
+  "results": {
+    "items_certified": 15,
+    "items_total": 15,
+    "cases_certified": 3,
+    "cases_total": 3,
+    "certification_rate": "100%"
+  },
+  "caqs_dimensions": {
+    "D1_answer_key_accuracy": {"status": "PASS", "details": "2 numeric items independently recalculated (D4-Q1: 14250 ✓, D4-Q3: 4000 ✓). All 13 conceptual items verified against authoritative standards."},
+    "D2_explanation_sufficiency": {"status": "PASS", "details": "All 15 explanations expanded from thin (83-197 chars) to comprehensive (600-850 chars). Each includes: accounting principle named, formula/derivation shown, business interpretation, common exam trap."},
+    "D3_distractor_rationale": {"status": "PASS", "details": "All 12 select/multi items received choice-specific distractor explanations identifying specific misconceptions and contrasting with the correct approach."},
+    "D4_reference_alignment": {"status": "PASS", "details": "Domain-appropriate citations: ASC/cost accounting (D4), COSO IC/ERM/IIA (D5), NIST CSF/cloud models/MDM (D6)."},
+    "D5_case_realism": {"status": "PASS", "details": "Named companies with plausible business contexts. Scenarios describe realistic management accountant situations (ABC implementation, IT governance, cloud migration)."},
+    "D6_metadata_readiness": {"status": "PASS", "details": "CognitiveLevel added to all 15 items. Difficulty preserved. ProductionStatus → Production. Confidence → 95. RevisionHistory updated."}
+  },
+  "independent_validation": {
+    "D4-Q1": {"formula": "210000/1400*95", "result": 14250, "stored": "14250", "match": true},
+    "D4-Q3": {"formula": "100000/(60-35)", "result": 4000, "stored": "4000", "match": true}
+  },
+  "governance": {
+    "pre_flight": "32/32 PASS",
+    "post_flight": "32/32 PASS",
+    "protected_file_hashes": "UNCHANGED (app.js: 5A4338C6..., index_updated.html: 586396F9...)",
+    "non_target_files_modified": 0,
+    "scoring_drift": "NONE",
+    "answer_key_drift": "NONE"
+  }
+}

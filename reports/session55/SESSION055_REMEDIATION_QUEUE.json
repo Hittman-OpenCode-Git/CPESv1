@@ -1,0 +1,75 @@
+{
+  "session": 55,
+  "title": "Session 55 — Case Study Certification Remediation Wave 1 — Execution Queue",
+  "date": "2026-07-28",
+  "status": "COMPLETED",
+  "source": "SESSION054_REMEDIATION_TARGETS.json",
+  "total_targets": 20,
+  "total_remediated": 20,
+  "remediation_by_type": {
+    "d2_stakeholder": {
+      "cases": 16,
+      "effort": "TRIVIAL — single-field text replacement",
+      "targets": [
+        {"CaseID": "CBQ2-A2", "File": "scored_cases2.js", "From": "Management", "To": "Controller"},
+        {"CaseID": "CBQ5-C1", "File": "scored_cases5.js", "From": "Management", "To": "Controller"},
+        {"CaseID": "CBQ5-A2", "File": "scored_cases5.js", "From": "Management", "To": "Chief Information Officer"},
+        {"CaseID": "CBQ-A2", "File": "scored_cases.js", "From": "Management", "To": "Controller"},
+        {"CaseID": "CBQ-C2", "File": "scored_cases.js", "From": "Management", "To": "CFO"},
+        {"CaseID": "CBQ-C3", "File": "scored_cases.js", "From": "Management", "To": "CFO"},
+        {"CaseID": "CBQ3-C2", "File": "scored_cases3.js", "From": "Management", "To": "CFO"},
+        {"CaseID": "CBQ3-C3", "File": "scored_cases3.js", "From": "Management", "To": "CFO"},
+        {"CaseID": "CBQ3-E2", "File": "scored_cases3.js", "From": "Management", "To": "Chief Information Officer"},
+        {"CaseID": "CBQ3-F2", "File": "scored_cases3.js", "From": "Management", "To": "Chief Information Officer"},
+        {"CaseID": "CBQ4-A2", "File": "scored_cases4.js", "From": "Management", "To": "Chief Information Officer"},
+        {"CaseID": "CBQ4-C1", "File": "scored_cases4.js", "From": "Management", "To": "Operations Manager"},
+        {"CaseID": "CBQ4-D3", "File": "scored_cases4.js", "From": "Management", "To": "Chief Information Officer"},
+        {"CaseID": "CBQ4-E2", "File": "scored_cases4.js", "From": "Management", "To": "Director of Internal Audit"},
+        {"CaseID": "CBQ4-E3", "File": "scored_cases4.js", "From": "Management", "To": "Director of Internal Audit"},
+        {"CaseID": "CBQ4-F1", "File": "scored_cases4.js", "From": "Management", "To": "Chief Information Officer"}
+      ]
+    },
+    "d5_explanation": {
+      "cases": 2,
+      "items": 7,
+      "effort": "MEDIUM — editorial expansion",
+      "targets": [
+        {"CaseID": "CBQ2-A2", "File": "scored_cases2.js", "Items": ["Q1", "Q2", "Q3", "Q4", "Q5"]},
+        {"CaseID": "CBQ5-C1", "File": "scored_cases5.js", "Items": ["Q2", "Q3"]}
+      ]
+    },
+    "d6_progression": {
+      "cases": 13,
+      "effort": "LOW — array reorder (no content change)",
+      "targets": [
+        {"CaseID": "CBQ2-A2", "File": "scored_cases2.js", "Reorder": [2,3,1,4,5], "Levels": ["Analyze","Apply","Apply","Analyze","Evaluate"], "After": [2,3,1,4,5], "AfterLevels": ["Apply","Apply","Analyze","Analyze","Evaluate"]},
+        {"CaseID": "CBQ2-A3", "File": "scored_cases2.js", "Reorder": [5,1,2,4,3], "Levels": ["Apply","Apply","Evaluate","Analyze","Understand"], "After": [5,1,2,4,3], "AfterLevels": ["Understand","Apply","Apply","Analyze","Evaluate"]},
+        {"CaseID": "CBQ5-A2", "File": "scored_cases5.js", "Reorder": [5,1,3,4,2], "Levels": ["Apply","Evaluate","Apply","Analyze","Understand"], "After": [5,1,3,4,2], "AfterLevels": ["Understand","Apply","Apply","Analyze","Evaluate"]},
+        {"CaseID": "CBQ-A2", "File": "scored_cases.js", "Reorder": [1,2,3,4,6,5], "Levels": ["Apply","Apply","Apply","Analyze","Evaluate","Analyze"], "After": [1,2,3,4,6,5], "AfterLevels": ["Apply","Apply","Apply","Analyze","Analyze","Evaluate"]},
+        {"CaseID": "CBQ-C2", "File": "scored_cases.js", "Reorder": [5,1,2,3,6,4], "Levels": ["Apply","Apply","Analyze","Evaluate","Understand","Analyze"], "After": [5,1,2,3,6,4], "AfterLevels": ["Understand","Apply","Apply","Analyze","Analyze","Evaluate"]},
+        {"CaseID": "CBQ-C3", "File": "scored_cases.js", "Reorder": [1,2,3,5,6,4], "Levels": ["Apply","Apply","Analyze","Evaluate","Analyze","Analyze"], "After": [1,2,3,5,6,4], "AfterLevels": ["Apply","Apply","Analyze","Analyze","Analyze","Evaluate"]},
+        {"CaseID": "CBQ3-A1", "File": "scored_cases3.js", "Reorder": [3,1,4,2,5], "Levels": ["Apply","Analyze","Understand","Apply","Evaluate"], "After": [3,1,4,2,5], "AfterLevels": ["Understand","Apply","Apply","Analyze","Evaluate"]},
+        {"CaseID": "CBQ3-C2", "File": "scored_cases3.js", "Reorder": [2,3,1,4,5], "Levels": ["Evaluate","Analyze","Analyze","Evaluate","Evaluate"], "After": [2,3,1,4,5], "AfterLevels": ["Analyze","Analyze","Evaluate","Evaluate","Evaluate"]},
+        {"CaseID": "CBQ3-E2", "File": "scored_cases3.js", "Reorder": [2,3,1,4,5], "Levels": ["Evaluate","Analyze","Analyze","Evaluate","Evaluate"], "After": [2,3,1,4,5], "AfterLevels": ["Analyze","Analyze","Evaluate","Evaluate","Evaluate"]},
+        {"CaseID": "CBQ3-F2", "File": "scored_cases3.js", "Reorder": [1,2,4,3,5], "Levels": ["Analyze","Analyze","Evaluate","Analyze","Evaluate"], "After": [1,2,4,3,5], "AfterLevels": ["Analyze","Analyze","Analyze","Evaluate","Evaluate"]},
+        {"CaseID": "CBQ4-A1", "File": "scored_cases4.js", "Reorder": [1,2,3,5,4], "Levels": ["Apply","Apply","Analyze","Evaluate","Analyze"], "After": [1,2,3,5,4], "AfterLevels": ["Apply","Apply","Analyze","Analyze","Evaluate"]},
+        {"CaseID": "CBQ4-A2", "File": "scored_cases4.js", "Reorder": [5,1,2,3,4], "Levels": ["Apply","Apply","Apply","Analyze","Understand"], "After": [5,1,2,3,4], "AfterLevels": ["Understand","Apply","Apply","Apply","Analyze"]},
+        {"CaseID": "CBQ4-D3", "File": "scored_cases4.js", "Reorder": [2,3,1,4,5], "Levels": ["Evaluate","Apply","Analyze","Evaluate","Evaluate"], "After": [2,3,1,4,5], "AfterLevels": ["Apply","Analyze","Evaluate","Evaluate","Evaluate"]}
+      ]
+    }
+  },
+  "cases_certifiable_after_wave1": 16,
+  "cases_still_blocked_after_wave1": ["CBQ2-A3", "CBQ3-A1", "CBQ4-A1", "CBQ5-B2"],
+  "blocked_reasons": [
+    {"CaseID": "CBQ2-A3", "D2": 2, "Reason": "Missing Stakeholder field (not renameable)"},
+    {"CaseID": "CBQ3-A1", "D2": 2, "Reason": "Missing Stakeholder field (not renameable)"},
+    {"CaseID": "CBQ4-A1", "D2": 2, "Reason": "Missing Stakeholder field (not renameable)"},
+    {"CaseID": "CBQ5-B2", "D2": 2, "Reason": "Missing Stakeholder field (not renameable) + no D5/D6 issues"}
+  ],
+  "forecast_after_wave1": {
+    "certified_count": 55,
+    "certified_pct": 73.3,
+    "improvement": "+16 cases",
+    "note": "4 cases remain blocked by missing Stakeholder field (D2=2). Session 54 forecast of 69/75 assumed additional cases not in remediation targets would also benefit. The execution scope of 20 targets yields 16 certifiable cases."
+  }
+}

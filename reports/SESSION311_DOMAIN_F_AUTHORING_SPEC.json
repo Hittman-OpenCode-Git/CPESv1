@@ -1,0 +1,116 @@
+{
+  "spec_version": "DOMAIN_F_AUTHORING_SPEC_v1.0",
+  "session": "311",
+  "agent": "F",
+  "title": "Domain F Authoring Specification — Section F Technology & Analytics",
+  "generated": "2026-07-26",
+  "status": "Spec Only — Implementation in S808+",
+
+  "quantity": {
+    "replacements": 37,
+    "description": "Consolidate 110 archived Section F clone items into 37 unique replacement items (1 per clone group). Each replacement item replaces ~3 template-rotated clones.",
+    "certifications": 39,
+    "description": "39 retained seeds (19 Pack C + 20 Pack D) — full CAQS §1.6 certification pipeline.",
+    "totalItems": 76
+  },
+
+  "topicMix": {
+    "topics": [
+      "Information systems concepts and architecture",
+      "Data governance, quality, and strategy",
+      "Technology-enabled finance transformation",
+      "Data analytics methods and visualization",
+      "Cybersecurity frameworks and controls",
+      "Emerging technologies (AI/ML, blockchain, RPA)",
+      "System development lifecycle (SDLC) and methodologies",
+      "IT general controls and application controls",
+      "Business continuity planning and disaster recovery",
+      "Technology risk assessment and management"
+    ],
+    "coverageTarget": "Even distribution across all 10 topic areas. No single topic should exceed 15% of total items. Pack B Section F topic distribution serves as the target distribution."
+  },
+
+  "blueprintTargets": {
+    "losMapping": "Each item must map to a specific LOS in the IMA CMA Part 1 Content Specification Outline — Section F (Technology & Analytics)",
+    "losPrecision": "LOSTag must be CSO-precise (e.g., 'F.1.b Data governance frameworks') not generic ('F. Technology & Analytics')",
+    "verification": "Blueprint Review gate confirms LOSTag against current IMA CSO before Certification Candidate status"
+  },
+
+  "difficultyTargets": {
+    "distribution": {
+      "Easy": "~20% (15 items)",
+      "Moderate": "~50% (38 items)",
+      "Difficult": "~25% (19 items)",
+      "Hard": "~5% (4 items)"
+    },
+    "antiInflation": "Definition-recall items (e.g., 'What is blockchain?') = Easy. Single-step application (e.g., identify appropriate IT control) = Moderate. Multi-step analysis (e.g., evaluate cybersecurity risk scenario) = Difficult."
+  },
+
+  "cognitiveLevelTargets": {
+    "distribution": {
+      "Remembering": "~15% (11 items)",
+      "Understanding": "~40% (31 items)",
+      "Application": "~30% (23 items)",
+      "Analysis": "~15% (11 items)"
+    }
+  },
+
+  "qualityStandards": {
+    "explanationCorrect": {
+      "minimumLength": 400,
+      "requiredElements": [
+        "Framework or principle citation (COSO IT, COBIT, NIST, ISO 27001, etc.)",
+        "Why the correct answer is correct with substantive reasoning",
+        "Common exam trap or misconception identified and countered",
+        "Real-world business context where applicable"
+      ]
+    },
+    "explanationWrong": {
+      "perDistractor": {
+        "minimumLength": 100,
+        "requirement": "Choice-specific. Explains WHY this specific choice is wrong. References the specific concept, framework, or misconception that would lead a learner to select this distractor."
+      },
+      "dl008Compliance": "EW[CorrectChoice] must be empty string — verified at Technical Review gate."
+    },
+    "distractors": {
+      "plausibility": "Must represent genuine practitioner errors or misconceptions in Technology & Analytics",
+      "specificity": "Must be topic-specific — no generic 'none of the above' or obviously wrong choices",
+      "misconceptionBasis": "Derived from common IT audit findings, cybersecurity incident patterns, or technology implementation failures"
+    },
+    "stem": {
+      "clarity": "Unambiguous. Contains all technical data needed. No undefined acronyms.",
+      "completeness": "All values and scenario details explicitly stated.",
+      "fairness": "Tests Technology & Analytics knowledge, not obscure IT terminology or vendor-specific knowledge"
+    },
+    "metadata": {
+      "difficultyScore": "Realistic — no DL-031 inflation",
+      "cognitiveLevel": "Accurate — matches actual cognitive demand",
+      "topics": "Precise CSO LOS reference",
+      "losTag": "CSO-formatted (e.g., 'F.2.a')",
+      "productionStatus": "Draft → Technical Review → Blueprint Review → QA Review → Certification Candidate"
+    }
+  },
+
+  "instructionalStandards": {
+    "applicationFocus": "Items should teach Technology & Analytics concepts through practical business scenarios, not just definition recall. Each item should simulate a real-world finance/IT professional decision.",
+    "scenarioBased": "Where applicable, present mini-case scenarios: 'A company is implementing a new ERP system. The CFO asks about IT general controls. Which control...'",
+    "distractorQuality": "Distractors should reflect common practitioner mistakes — e.g., confusing IT general controls with application controls, misunderstanding data governance roles, mixing up cybersecurity frameworks.",
+    "realism": "Business context must be realistic for a CMA candidate — manufacturing, service, healthcare, financial services organizations of varying sizes."
+  },
+
+  "benchmark": {
+    "source": "Pack B Section F",
+    "items": 75,
+    "reason": "100% certified. Gold standard for Section F. All items have substantive EC (400+ chars), choice-specific EW, precise LOSTags, and realistic business scenarios."
+  },
+
+  "governanceCompliance": {
+    "dl008": "EW[CorrectChoice] = empty",
+    "dl013": "No template boilerplate in any field",
+    "dl026": "All non-CC EW slots non-empty",
+    "dl031": "DifficultyScore realistic — definition recall = Easy",
+    "caqs16": "Six-dimension verification: Correctness, Precision, Difficulty Calibration, Distractor Engineering, Blueprint Alignment, CMA Part 1 Relevance"
+  },
+
+  "implementationSessions": "S808-S810 (Phase 3 of 800-series execution roadmap)"
+}

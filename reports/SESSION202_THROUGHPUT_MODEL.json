@@ -1,0 +1,125 @@
+{
+  "session": "S202",
+  "title": "Throughput & Economics Model — v1 Baseline vs v2 Projection",
+  "authority": "S202 Amendment 2 — Board F",
+  "date": "2026-07-27",
+  "sources": ["S200 10-agent research", "S201 9-board analysis", "SESSION_STATUS_2026-07-24.md", "DEFECT_LIBRARY.md"],
+
+  "sec1_v1_baseline": [
+    {"metric":"agents_per_certification_wave","v1":"15-28 (avg 19, peak 28 S809)","method":"S200 Agent C: 72 types, 14 sessions","verified":true},
+    {"metric":"boards_operating","v1":8,"composition":"6 content (Technical,DQS,EQS,LearnerSafety,QA,Readiness)+2 meta (Launch,Archival)","method":"S200 Agent B workflow map","verified":true},
+    {"metric":"boards_per_session","v1":"8-9 (avg 8.5)","method":"14-wave board participation logs","verified":true},
+    {"metric":"readiness_failure_rate","v1":"89.5% (34/38 seeds with 2+ defects; 38/38 zero-scanned)","method":"S201 Board 2: 43 leakage events, 91.5% preventable","verified":true},
+    {"metric":"duplicate_review_cycles","v1":"2.5:1 avg, 6.2:1 peak (S809: 56 spawns on 38 items, 1 novel finding)","method":"S201 Board 3 field_touch_map","verified":true},
+    {"metric":"unchanged_re_review_rate","v1":"80% re-audited without change","method":"S200 Agent I delta review feasibility","verified":true},
+    {"metric":"ew_field_re_examinations_persession","v1":"4-7 agents","method":"S200 Agent D: EW worst duplication category","verified":true},
+    {"metric":"dl008_scans_total","v1":"22 scans, 6 sessions, ~80-110 examinations","method":"REVISION_HISTORY.md + DEFECT_LIBRARY.md DL-008 timeline","verified":true},
+    {"metric":"reports_per_session","v1":"7-17 (avg 9, peak 29 S726)","method":"S200 Agent G: 1,212 files; S201 Board 5: updated 1,227","verified":true},
+    {"metric":"report_consumption_rate","v1":"35% (432/1,227 referenced)","method":"Cross-ref each report vs REVISION_HISTORY.md & SESSION_SUMMARY.md","verified":true},
+    {"metric":"sessions_per_wave","v1":"4-5 (S809: 4 sessions, 60 agents, 47 reports, 0 writes)","method":"REVISION_HISTORY.md session-chain enumeration","verified":true},
+    {"metric":"identity_ambiguity","v1":"PRESENT — 8 disputes, ~12 phantoms, S320 failures, DL-029 ~75% false-positive","method":"S201 Board 4 per-pack CC-placement analysis","verified":true},
+    {"metric":"concurrent_overwrites","v1":"2 (DL-019: 432 items; DL-028: ~200 slots)","method":"Backup diff + timeline cross-reference","verified":true},
+    {"metric":"sessions_wasted","v1":"~33 (~8 phantom + ~25 template remediation)","method":"Session classification audit","verified":true},
+    {"metric":"certified_pool","v1":"2,031/2,500 (81.2%). A:481 B:500 C:250 D:300 E:500","method":"Select-String grep, 2 independent scans","verified":true},
+    {"metric":"answer_key_errors","v1":"5 (B-119,F-84/116/121,E-37). Resolved Phase 0B","method":"Phase 0B CC ground-truth audit + 20% re-derivation","verified":true},
+    {"metric":"difficulty_inflation","v1":"~500 Moderate-labeled, should be Easy (definition-match, stem-CC overlap >50%)","method":"Session 700 Layer 2 sample audit","verified":true},
+    {"metric":"total_agent_spawns","v1":"~620 (±70). ~50% waste (cert only: ~310)","method":"Per-session spawn estimates from SESSION_SUMMARY.md","verified":false,"note":"Single-source. Precise enumeration needed before S830."}
+  ],
+
+  "sec2_v2_targets": [
+    {"metric":"agents_per_wave","v2":"7-8","pct":-61,"enabler":"5-board consolidation + pre-flight eliminates scan-only + delta removes re-verifiers","gate":"S830"},
+    {"metric":"boards_operating","v2":"5 (Registry,Quality,Governance,Certification,Throughput)","pct":-38,"enabler":"6 content boards→Quality; Readiness+Launch→Governance","gate":"S830"},
+    {"metric":"boards_per_session","v2":"4-5","pct":-47,"enabler":"Not all boards convene every session","gate":"S830"},
+    {"metric":"readiness_failure","v2":"<10%","pct":-89,"enabler":"Gates -1..4: 11 scans in ~8.5min. 78.3% leakage automatable. Gate -1 eliminates wrong-target.","gate":"S900"},
+    {"metric":"duplicate_review","v2":"<1.3:1","pct":-60,"enabler":"Quality Board single-pass. Scan-once/consume-many. Delta skips 80%.","gate":"S900"},
+    {"metric":"re_review_rate","v2":"<20%","pct":-75,"enabler":"SHA-256 hashes. Delta ledger: no_change→inherit, content_change→full, metadata→partial, fix→verify.","gate":"S900"},
+    {"metric":"ew_examinations","v2":"2 agents (Quality A+B only)","pct":-71,"enabler":"Single board pass. Gate 1 catches structural EW defects first.","gate":"S830"},
+    {"metric":"dl008_scans","v2":"1 automated PF-001","pct":-95,"enabler":"One scan per wave. All boards consume single output. AM-1 within-object.","gate":"S830"},
+    {"metric":"reports_per_session","v2":"4-6 (soft 4, hard 8)","pct":-56,"enabler":"4 standard files. Agent outputs→board verdicts. Meta-reports eliminated.","gate":"S910"},
+    {"metric":"consumption_rate","v2":">90%","pct":157,"enabler":"65% unconsumed eliminated. Every file has defined downstream consumer.","gate":"S910"},
+    {"metric":"sessions_per_wave","v2":"1-2","pct":-67,"enabler":"Pre-flight catches pre-board. Delta eliminates re-audits. Compound-key eliminates phantom investigations.","gate":"S900"},
+    {"metric":"identity_ambiguity","v2":"ELIMINATED","pct":-100,"enabler":"Compound-key (QID+CC+EW+Template+Path) + Gate -1 + AM-1 forbid forward-scan","gate":"S830"},
+    {"metric":"overwrites","v2":"0","pct":-100,"enabler":"File-lock protocol + pre/post hash reconciliation","gate":"S830"},
+    {"metric":"answer_errors","v2":"0","pct":-100,"enabler":"Gate 4 PF-005 CC ground-truth before certification","gate":"S900"}
+  ],
+
+  "sec3_expected_savings": {
+    "per_wave": {"sessions":"2-3 fewer (4-5→1-2)","agent_spawns":"8-20 fewer (15-28→7-8)","reports":"4 fewer (9→5 avg)","items_skipping_re_review":"~300/500 (80%→20%)"},
+    "s809_chain":"60→10 spawns (83% reduction, 50 saved)",
+    "cumulative_remaining_3_4_waves": {"sessions_saved":"6-12","spawns_saved":"~30-80","reports_saved":"~16-20 files","items_avoiding_re_review":"~900-1,200"},
+    "throughput_multiplier":"3.8× (3-5→15-19 items per session-hour)",
+    "annual_report_impact":"~100 fewer files (180→80); ~800 historical unconsumed files permanently eliminated"
+  },
+
+  "sec4_tracked_metrics_board_f": {
+    "measure_at": ["T0:S202","Tmid:S830","Tend:S910"],
+    "metrics": [
+      {"id":"BF-001","metric":"agents/session","v1":"19","v2":"8","dir":"↓","gate":"≤10 S830, ≤8 S900"},
+      {"id":"BF-002","metric":"boards/session","v1":"8.5","v2":"4.5","dir":"↓","gate":"≤6 S830, ≤5 S900"},
+      {"id":"BF-003","metric":"reports/session","v1":"9","v2":"5","dir":"↓","gate":"≤6 S830, ≤4 S910; HB if >8"},
+      {"id":"BF-004","metric":"readiness failure","v1":"89.5%","v2":"<10%","dir":"↓","gate":"HB Phase2 if <50% improved S830 (<44.7%)"},
+      {"id":"BF-005","metric":"dup review cycles","v1":"2.5","v2":"<1.3","dir":"↓","gate":"HB Phase2 if <50% improved S900 (<1.25)"},
+      {"id":"BF-006","metric":"re-review rate","v1":"80%","v2":"<20%","dir":"↓","gate":">50% improved S900 (<40%)"},
+      {"id":"BF-007","metric":"identity ambiguity","v1":"PRESENT","v2":"ELIMINATED","dir":"binary","gate":"HB Phase2 if not eliminated S830"},
+      {"id":"BF-008","metric":"cycle time","v1":"4-5 sessions","v2":"1-2 sessions","dir":"↓","gate":"≤2 sessions S900"},
+      {"id":"BF-009","metric":"defect timing","v1":"0% pre /89% board/2.5% post","v2":"78% pre/<20% board/0% post","dir":"← shift","gate":"Pre-board >50% S830"},
+      {"id":"BF-010","metric":"consumption rate","v1":"35%","v2":">90%","dir":"↑","gate":">80% S910"}
+    ]
+  },
+
+  "sec5_phase_gates": {
+    "S830_phase_2_activation": [
+      {"metric":"readiness_failure","threshold":"<44.7% (≥50% improvement)","block":"HB","why":"Pre-flight is largest opportunity; if it can't halve rate, Phase 2 cannot proceed"},
+      {"metric":"identity_ambiguity","threshold":"0 disputes, 0 phantoms, 0 targeting failures","block":"HB","why":"Compound-key + Gate -1 prerequisite for all downstream features"},
+      {"metric":"duplicate_review","threshold":"<1.25 (≥50% improvement)","block":"HB","why":"Board merge assumes Phase 1 reduced duplication; if ratio stays >1.25, merge just rebrands"},
+      {"metric":"reports_per_session","threshold":"<4.5 (≥50% improvement)","block":"HB","why":"Consolidation expects consolidated reporting; >4.5 means reduction pillar failed"},
+      {"metric":"any_metric_floor","threshold":"All 10 BF metrics ≥20% improved","block":"HB","why":"Phase 2 assumes Phase 1 gains are real and stable across all dimensions"}
+    ],
+    "S900_phase_3_activation": [
+      {"metric":"readiness_failure","threshold":"<10%","block":"HB"},
+      {"metric":"duplicate_review","threshold":"<1.3:1","block":"HB"},
+      {"metric":"re_review_rate","threshold":"<25%","block":"HB"},
+      {"metric":"sessions_per_wave","threshold":"≤2","block":"SOFT"}
+    ]
+  },
+
+  "sec6_throughput_forecast": {
+    "remaining": "469 uncertified (A:19 C:250 D:200)",
+    "phases": [
+      {"phase":"v1","items_per_session":"30-50 (42 avg)","items_per_hour":"3-5","agents":"15-28 (19 avg)","note":"~42 net after subtracting scanning/governance overhead from ~145 nominal"},
+      {"phase":"P1 Foundation","sessions":"S202-S207→S830","items_per_session":"50-75 (63)","items_per_hour":"5-8","agents":"7-10 (9)","note":"Pre-flight catches defects pre-board"},
+      {"phase":"P2 Consolidation","sessions":"S208-S215→S900","items_per_session":"75-120 (95)","items_per_hour":"8-12","agents":"5-8 (7)","note":"Delta review skips 80%"},
+      {"phase":"P3 Optimization","sessions":"S216-S222→S910","items_per_session":"120-150 (135)","items_per_hour":"12-15","agents":"5-7 (6)","note":"Full automation + S311 EW Factory"}
+    ],
+    "completion":"~8 sessions total: P1~3 + P2~3 + P3~2"
+  },
+
+  "sec7_cost_model": {
+    "v1": {"spawns_per_item":0.305,"waste_pct":50,"items_per_spawn":3.3},
+    "v2_projected": {"blended_cost":0.092,"reduction":70,"items_per_spawn":10.9},
+    "per_wave_100_items": {
+      "sessions":    {"v1":"4-5","p2":"1-2","p3":"1"},
+      "spawns":      {"v1":"60-80","p2":"10-15","p3":"7-10"},
+      "spawns_item": {"v1":"0.60-0.80","p2":"0.10-0.15","p3":"0.07-0.10"},
+      "reports":     {"v1":"36-68","p2":"8-12","p3":"4-6"},
+      "duplication": {"v1":"2.5","p2":"1.2","p3":"1.0"}
+    },
+    "phase_1_investment":"6 sessions, ~54 spawns, ~200 items throughput foregone",
+    "break_even":"~254 items certified (~mid-Phase 2, ~3.5 weeks). Savings per item = 0.213 spawns. 54/0.213 ≈ 254."
+  },
+
+  "sec8_risks": [
+    {"risk":"New defect classes in Pack C/D Sections C-F (unaudited)","prob":"MED","impact":"Pre-flight extended 2-3 sessions; throughput -15%","mitigation":"Phase 0B pre-audit before Phase 1 cert runs"},
+    {"risk":"Delta hash stability failure (cross-session formatting drift)","prob":"LOW-MED","impact":"False hash changes → Phase 2 throughput drops near Phase 1","mitigation":"Validate on 5% sample; conservative scanner override"},
+    {"risk":"Operational fires consume Phase 1 agent capacity","prob":"MED","impact":"Phase 1 extends 6→8-10 sessions; break-even shifts","mitigation":"D-06 file-lock quarantines non-Phase-1 files"},
+    {"risk":"Agent-spawn estimate uncertainty (±70)","impact":"v1 cost range 0.271-0.340. Cost reduction 66-73% range. Break-even ±50 items.","mitigation":"Precise enumeration before S830 Phase 2 authorization"}
+  ],
+
+  "sec9_verification": {
+    "T0_S202":"Confirm v1 metrics within ±5%. Enumerate precise agent-spawn total.",
+    "Tmid_S205":"Measure BF-001..010 vs v1. Verify pre-flight operational.",
+    "S830":"PGC-001..005 assessment. All PASS→authorize Phase 2. Any HB→escalate.",
+    "S900":"Phase 3 criteria + throughput vs forecast (±20% allowed deviation).",
+    "S910":"Final: v2 cumulative ≤0.12 spawns/item. All BF metrics at v2 targets."
+  }
+}

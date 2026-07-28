@@ -1,0 +1,33 @@
+{
+  "session": "Pre-Session-0",
+  "date": "2026-07-27",
+  "program": "200-Series Phase 1",
+  "file": "pack_c_corrected.js",
+  "restored_from": "pack_c_corrected.js.bak-20260727S829",
+  "parse_status": {
+    "parseable": true,
+    "total_items": 500,
+    "question_states": {
+      "Certified": 388,
+      "Archived": 112
+    },
+    "first_qid": "P1-AC-001",
+    "last_qid": "P1-CF-100",
+    "file_size_bytes": 1738119
+  },
+  "certified_pool_total": 2298,
+  "governance_guard": "45_PASS_0_FAIL",
+  "delta_gate": {
+    "certified_pool_degradation": false,
+    "guard_passing_decrease": false,
+    "new_dl_008": false,
+    "new_dl_026": false,
+    "summary": "NO_DEGRADATION"
+  },
+  "corruption_analysis": {
+    "xxxmarker_count_original": 0,
+    "xxxmarker_count_known_good": 0,
+    "corruption_introduced_between": "S853_and_S364",
+    "resolution": "restored_from_last_known_good_S829"
+  }
+}

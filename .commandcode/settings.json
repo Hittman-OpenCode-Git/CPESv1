@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(node -e \" const fs = require('fs'); const files = ['scored_cases.js','scored_cases2.js','scored_cases3.js','scored_cases4.js','scored_cases5.js']; const results = []; for (const f of files) { const content = fs.readFileSync(f, 'utf8'); const prodCount = (content.match(/\\\"ProductionStatus\\\": \\\"Production\\\"/g) || []).length; const draftCount = (content.match(/\\\"ProductionStatus\\\": \\\"Draft\\\"/g) || []).length; const qsCount = (content.match(/\\\"question_state\\\"/g) || []).length; const prodLines = []; const lines = content.split('\\n'); lines.forEach((l,i) => { if (l.includes('\\\"ProductionStatus\\\": \\\"Production\\\"')) prodLines.push(i+1 + ': ' + l.trim()); }); results.push({ file: f, prod: prodCount, draft: draftCount, qs: qsCount, prodLines: prodLines.slice(0,5) }); } results.forEach(r => console.log(JSON.stringify(r, null, 2))); \")",
+      "powershell",
+      "Shell(node scripts/session65_fix_case_governance.js)",
+      "Shell(node scripts/session65_fix_case_governance2.js)",
+      "Shell(python -c \"with open('knowledge/REVISION_HISTORY.md','r',encoding='utf-8') as f: lines=f.readlines(); print(f'Total lines: {len(lines)}'); print(''.join(lines[-10:]))\")",
+      "Shell(node -e \"const fs=require('fs'); const lines=fs.readFileSync('knowledge/REVISION_HISTORY.md','utf8').split('\\n'); console.log('Total lines:', lines.length); console.log('---Last 5 lines---'); lines.slice(-5).forEach((l,i) => console.log((lines.length-5+i+1)+':', l));\")",
+      "Shell(node -e \" const fs = require('fs'); const files = ['scored_cases.js','scored_cases2.js','scored_cases3.js','scored_cases4.js','scored_cases5.js']; for (const f of files) { try { const c = fs.readFileSync(f,'utf8'); const m = c.match(/const\\s+(\\w+)\\s*=\\s*\\[/); if (!m) { console.log(f+': CANNOT FIND ARRAY'); continue; } const name = m[1]; const execStr = c + '; ' + name + ';'; const arr = eval(execStr); console.log(f + ': ' + arr.length + ' cases parsed, array name=' + name); } catch(e) { console.log(f + ': PARSE FAILED - ' + e.message.slice(0,80)); } } \")",
+      "Shell(node -e \" const fs=require('fs'); const packs=['pack_a_corrected.js','pack_b_corrected.js','pack_c_corrected.js','pack_d_corrected.js','pack_e_corrected.js']; for(const f of packs){ try{ const c=fs.readFileSync(f,'utf8'); const qsCount=(c.match(/question_state/g)||[]).length; const certCount=(c.match(/'Certified'/g)||[]).length; const unpCount=(c.match(/'Unprocessed'/g)||[]).length; const archCount=(c.match(/'Archived'/g)||[]).length; const holdCount=(c.match(/'Hold'/g)||[]).length; const editCount=(c.match(/'Editorial Queue'/g)||[]).length; const auditCount=(c.match(/'In Audit'/g)||[]).length; const missing=500-(certCount+unpCount+archCount+holdCount+editCount+auditCount); console.log(f+': qs='+qsCount+' cert='+certCount+' unp='+unpCount+' arch='+archCount+' hold='+holdCount+' eq='+editCount+' audit='+auditCount+' missing='+missing); }catch(e){console.log(f+': ERROR '+e.message);} } \")",
+      "Shell(node scripts/session67_certify_case_a.js)",
+      "Shell(node -e \" const fs=require('fs'); let c=fs.readFileSync('scored_cases.js','utf8'); const ids=['CASE-A1','CASE-A-C1','CASE-A-D1','CASE-A2','CASE-A-C4','CASE-A-D5','CASE-A-C9','CASE-A-D10']; let n=0; for(const cid of ids){ const re=new RegExp('(ItemID\\\\\\\\\\\":\\\\\\\\s*\\\\\\\\\\\"'+cid+'-Q\\\\\\\\d+\\\\\\\\\\\",[\\\\\\\\s\\\\\\\\S]{0,200}?)\\\\\\\\\\\"question_state\\\\\\\\\\\":\\\\\\\\s*\\\\\\\\\\\"Unprocessed\\\\\\\\\\\"','g'); c=c.replace(re,(m,p)=>{n++;return p+'\\\\\\\\\\\"question_state\\\\\\\\\\\": \\\\\\\\\\\"Certified\\\\\\\\\\\"'}); process.stdout.write(cid+' '); } console.log(); console.log('Item-level changes: '+n); fs.writeFileSync('scored_cases.js',c,'utf8'); console.log('Done'); \")",
+      "Shell(node \"$env:COMMANDCODE_SCRATCHPAD/fix_items.js\" \"scored_cases.js\")",
+      "Shell(node \"C:\\Users\\User\\AppData\\Local\\Temp\\commandcode\\C--users-user-onedrive-desktop-cma-part-1-2026\\dd989b7f-7210-4678-b196-47599cc44aed\\scratchpad\\fix_items.js\" \"scored_cases.js\")",
+      "Shell(node \"C:\\Users\\User\\AppData\\Local\\Temp\\commandcode\\C--users-user-onedrive-desktop-cma-part-1-2026\\dd989b7f-7210-4678-b196-47599cc44aed\\scratchpad\\s67a_final.js\" \"scored_cases.js\")",
+      "Shell(node \"C:\\Users\\User\\AppData\\Local\\Temp\\commandcode\\C--users-user-onedrive-desktop-cma-part-1-2026\\dd989b7f-7210-4678-b196-47599cc44aed\\scratchpad\\s67a_v2.js\")",
+      "Shell(node \"$env:COMMANDCODE_SCRATCHPAD\\certify_sections.js\" \"pack_b_corrected.js\" \"A,D\")",
+      "Shell(node \"C:\\Users\\User\\AppData\\Local\\Temp\\commandcode\\C--users-user-onedrive-desktop-cma-part-1-2026\\dd989b7f-7210-4678-b196-47599cc44aed\\scratchpad\\certify_sections.js\" \"pack_b_corrected.js\" \"A,D\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

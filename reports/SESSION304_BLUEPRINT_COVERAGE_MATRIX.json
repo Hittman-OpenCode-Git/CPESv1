@@ -1,0 +1,346 @@
+{
+  "generated": "2026-07-26T21:42:16.540Z",
+  "session": "S304",
+  "version": "1.0",
+  "summary": {
+    "totalItems": 3125,
+    "mcqItems": 2500,
+    "caseItems": 625,
+    "domainsMapped": 7
+  },
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "total": 433,
+      "mcq": 375,
+      "caseCount": 58,
+      "certified": 425,
+      "uncertified": 8,
+      "archived": 0,
+      "difficulties": {
+        "Easy": 69,
+        "Moderate-Easy": 167,
+        "Moderate": 171,
+        "Difficult": 26
+      },
+      "cogLevels": {
+        "Remember": 17,
+        "Understand": 180,
+        "Apply": 211,
+        "Evaluate": 8,
+        "Analyze": 17
+      },
+      "packDistribution": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 18,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 10,
+        "scored_cases5": 10
+      },
+      "avgECLength": 291,
+      "avgEWFillRate": "87.4",
+      "avgDQS": 80,
+      "certificationRate": "98.2",
+      "blueprintWeight": 15
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "total": 568,
+      "mcq": 500,
+      "caseCount": 68,
+      "certified": 562,
+      "uncertified": 6,
+      "archived": 0,
+      "difficulties": {
+        "Moderate-Easy": 133,
+        "Easy": 82,
+        "Moderate": 294,
+        "Difficult": 59
+      },
+      "cogLevels": {
+        "Understand": 138,
+        "Apply": 368,
+        "Remember": 25,
+        "Evaluate": 20,
+        "Analyze": 17
+      },
+      "packDistribution": {
+        "Pack A": 100,
+        "Pack B": 100,
+        "Pack C": 100,
+        "Pack D": 100,
+        "Pack E": 100,
+        "scored_cases": 18,
+        "scored_cases2": 17,
+        "scored_cases3": 17,
+        "scored_cases4": 11,
+        "scored_cases5": 5
+      },
+      "avgECLength": 229,
+      "avgEWFillRate": "88.4",
+      "avgDQS": 80,
+      "certificationRate": "98.9",
+      "blueprintWeight": 20
+    },
+    "C - Performance Management": {
+      "total": 798,
+      "mcq": 500,
+      "caseCount": 298,
+      "certified": 786,
+      "uncertified": 12,
+      "archived": 0,
+      "difficulties": {
+        "Moderate-Easy": 186,
+        "Easy": 95,
+        "Moderate": 398,
+        "Difficult": 119
+      },
+      "cogLevels": {
+        "Understand": 281,
+        "Apply": 326,
+        "Evaluate": 49,
+        "Remember": 20,
+        "Analyze": 47,
+        "?": 75
+      },
+      "packDistribution": {
+        "Pack A": 100,
+        "Pack B": 100,
+        "Pack C": 100,
+        "Pack D": 100,
+        "Pack E": 100,
+        "scored_cases": 18,
+        "scored_cases2": 90,
+        "scored_cases3": 90,
+        "scored_cases4": 85,
+        "scored_cases5": 15
+      },
+      "avgECLength": 431,
+      "avgEWFillRate": "63.5",
+      "avgDQS": 58,
+      "certificationRate": "98.5",
+      "blueprintWeight": 20
+    },
+    "D - Cost Management": {
+      "total": 452,
+      "mcq": 375,
+      "caseCount": 77,
+      "certified": 446,
+      "uncertified": 6,
+      "archived": 0,
+      "difficulties": {
+        "Moderate-Easy": 90,
+        "Easy": 64,
+        "Moderate": 238,
+        "Difficult": 60
+      },
+      "cogLevels": {
+        "Understand": 155,
+        "Apply": 244,
+        "Remember": 2,
+        "Analyze": 27,
+        "Evaluate": 24
+      },
+      "packDistribution": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 12,
+        "scored_cases2": 16,
+        "scored_cases3": 17,
+        "scored_cases4": 17,
+        "scored_cases5": 15
+      },
+      "avgECLength": 243,
+      "avgEWFillRate": "84.1",
+      "avgDQS": 75,
+      "certificationRate": "98.7",
+      "blueprintWeight": 15
+    },
+    "E - Internal Controls": {
+      "total": 443,
+      "mcq": 375,
+      "caseCount": 68,
+      "certified": 264,
+      "uncertified": 179,
+      "archived": 0,
+      "difficulties": {
+        "Moderate-Easy": 103,
+        "Easy": 97,
+        "Moderate": 185,
+        "Difficult": 58
+      },
+      "cogLevels": {
+        "Understand": 251,
+        "Apply": 101,
+        "Remember": 5,
+        "Analyze": 27,
+        "Evaluate": 59
+      },
+      "packDistribution": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 18,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 15,
+        "scored_cases5": 15
+      },
+      "avgECLength": 393,
+      "avgEWFillRate": "69.0",
+      "avgDQS": 66,
+      "certificationRate": "59.6",
+      "blueprintWeight": 15
+    },
+    "F - Technology & Analytics": {
+      "total": 430,
+      "mcq": 374,
+      "caseCount": 56,
+      "certified": 281,
+      "uncertified": 149,
+      "archived": 0,
+      "difficulties": {
+        "Easy": 129,
+        "Moderate-Easy": 91,
+        "Moderate": 161,
+        "Difficult": 49
+      },
+      "cogLevels": {
+        "Understand": 321,
+        "Apply": 68,
+        "Analyze": 18,
+        "Remember": 1,
+        "Evaluate": 22
+      },
+      "packDistribution": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 74,
+        "Pack E": 75,
+        "scored_cases": 6,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 15,
+        "scored_cases5": 15
+      },
+      "avgECLength": 276,
+      "avgEWFillRate": "70.9",
+      "avgDQS": 64,
+      "certificationRate": "65.3",
+      "blueprintWeight": 15
+    },
+    "Unknown": {
+      "total": 1,
+      "mcq": 1,
+      "caseCount": 0,
+      "certified": 0,
+      "uncertified": 1,
+      "archived": 0,
+      "difficulties": {
+        "?": 1
+      },
+      "cogLevels": {
+        "Remember": 1
+      },
+      "packDistribution": {
+        "Pack D": 1
+      },
+      "avgECLength": 0,
+      "avgEWFillRate": "25.0",
+      "avgDQS": 45,
+      "certificationRate": "0.0",
+      "blueprintWeight": 0
+    }
+  },
+  "bySection": {
+    "?": {
+      "itemCount": 1,
+      "domainName": "Unknown",
+      "cmaWeight": 0
+    },
+    "A": {
+      "itemCount": 433,
+      "domainName": "A - External Financial Reporting",
+      "cmaWeight": 15
+    },
+    "B": {
+      "itemCount": 568,
+      "domainName": "B - Planning, Budgeting & Forecasting",
+      "cmaWeight": 20
+    },
+    "C": {
+      "itemCount": 798,
+      "domainName": "C - Performance Management",
+      "cmaWeight": 20
+    },
+    "D": {
+      "itemCount": 452,
+      "domainName": "D - Cost Management",
+      "cmaWeight": 15
+    },
+    "E": {
+      "itemCount": 443,
+      "domainName": "E - Internal Controls",
+      "cmaWeight": 15
+    },
+    "F": {
+      "itemCount": 430,
+      "domainName": "F - Technology & Analytics",
+      "cmaWeight": 15
+    }
+  },
+  "byPack": {
+    "Pack A": 500,
+    "Pack B": 500,
+    "Pack C": 500,
+    "Pack D": 500,
+    "Pack E": 500,
+    "scored_cases": 90,
+    "scored_cases2": 153,
+    "scored_cases3": 154,
+    "scored_cases4": 153,
+    "scored_cases5": 75
+  },
+  "censusRaw": {
+    "total": 3125,
+    "mcq": 2500,
+    "caseCount": 625,
+    "byPack": {
+      "Pack A": 500,
+      "Pack B": 500,
+      "Pack C": 500,
+      "Pack D": 500,
+      "Pack E": 500,
+      "scored_cases": 90,
+      "scored_cases2": 153,
+      "scored_cases3": 154,
+      "scored_cases4": 153,
+      "scored_cases5": 75
+    },
+    "bySection": {
+      "A": 433,
+      "B": 568,
+      "C": 798,
+      "D": 452,
+      "E": 443,
+      "F": 430,
+      "?": 1
+    },
+    "certified": 2764,
+    "uncertified": 361,
+    "byState": {
+      "Certified": 2764,
+      "Archived": 132,
+      "Unprocessed": 229
+    }
+  }
+}

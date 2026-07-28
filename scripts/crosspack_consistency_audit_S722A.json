@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-07-26T22:11:26.779Z",
+  "poolStats": {
+    "totalItems": 2500,
+    "poolCLMean": 2.5184,
+    "poolDSMean": 2.3644,
+    "poolCLFreq": {
+      "Remember": 57,
+      "Understand": 1214,
+      "Apply": 1162,
+      "Evaluate": 57,
+      "Analyze": 10
+    },
+    "poolDSFreq": {
+      "1": 523,
+      "2": 634,
+      "3": 1252,
+      "4": 91
+    }
+  },
+  "packProfiles": {
+    "A": {
+      "clMean": 2.568,
+      "dsMean": 2.168,
+      "freq": {
+        "Remember": 3,
+        "Understand": 215,
+        "Apply": 279,
+        "Evaluate": 2,
+        "Analyze": 1
+      }
+    },
+    "B": {
+      "clMean": 2.582,
+      "dsMean": 2.344,
+      "freq": {
+        "Apply": 326,
+        "Understand": 130,
+        "Remember": 41,
+        "Analyze": 3
+      }
+    },
+    "C": {
+      "clMean": 2.588,
+      "dsMean": 2.476,
+      "freq": {
+        "Apply": 230,
+        "Remember": 5,
+        "Understand": 241,
+        "Analyze": 3,
+        "Evaluate": 21
+      }
+    },
+    "D": {
+      "clMean": 2.68,
+      "dsMean": 2.538,
+      "freq": {
+        "Apply": 233,
+        "Understand": 229,
+        "Analyze": 3,
+        "Evaluate": 34,
+        "Remember": 1
+      }
+    },
+    "E": {
+      "clMean": 2.174,
+      "dsMean": 2.296,
+      "freq": {
+        "Understand": 399,
+        "Apply": 94,
+        "Remember": 7
+      }
+    }
+  },
+  "sectionCLMeans": {
+    "A": {
+      "A": 2.8,
+      "B": 2.79,
+      "C": 2.66,
+      "D": 2.6933333333333334,
+      "E": 2.1733333333333333,
+      "F": 2.1866666666666665
+    },
+    "B": {
+      "A": 2.5866666666666664,
+      "B": 2.42,
+      "C": 2.73,
+      "D": 2.933333333333333,
+      "E": 2.533333333333333,
+      "F": 2.2933333333333334
+    },
+    "C": {
+      "A": 2.466666666666667,
+      "B": 2.7,
+      "C": 2.72,
+      "D": 2.493333333333333,
+      "E": 2.8666666666666667,
+      "F": 2.2
+    },
+    "D": {
+      "A": 2.24,
+      "B": 3,
+      "C": 2.61,
+      "D": 2.76,
+      "E": 3.08,
+      "F": 2.324324324324324
+    },
+    "E": {
+      "A": 2.1333333333333333,
+      "B": 2.34,
+      "C": 2.32,
+      "D": 2.1866666666666665,
+      "E": 1.96,
+      "F": 2
+    }
+  },
+  "deviants": [],
+  "topicDeviants": [
+    {
+      "topic": "management override risk",
+      "range": 1,
+      "deviantPack": "A",
+      "packMeans": {
+        "A": {
+          "cl": 2,
+          "ds": 2
+        },
+        "C": {
+          "cl": 3,
+          "ds": 1.8
+        }
+      }
+    }
+  ],
+  "grade": "A",
+  "gradeDesc": "Excellent — minimal cross-pack CL drift",
+  "deviantSections": 0,
+  "totalSections": 6,
+  "deviantSectionDetails": []
+}

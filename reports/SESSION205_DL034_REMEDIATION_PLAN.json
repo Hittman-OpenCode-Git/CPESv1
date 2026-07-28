@@ -1,0 +1,86 @@
+{
+  "document": "SESSION205_DL034_REMEDIATION_PLAN",
+  "session": "S205",
+  "board": "C — DL-034 Remediation Plan",
+  "program": "Framework v2 Deployment Authorization",
+  "date": "2026-07-27",
+  "type": "Read-Only Remediation Plan — No Content Modifications",
+  "parent": "SESSION205_DL034_ANALYSIS.json",
+
+  "remediation_objective": "Resolve P1-E-R33 before 800-Series reactivation. The item must either be made structurally complete or removed from the active pool.",
+
+  "option_a_archive": {
+    "action": "Set question_state from 'Certified' to 'Archived'",
+    "rationale": "P1-E-R33 has never been renderable — no Stem, no CorrectChoice. No learner has ever seen this item. There is no content to preserve because the item lacks its defining content fields. Archiving preserves the Choices and EW fields for future investigation but removes the item from the learner delivery pool.",
+    "pros": [
+      "Immediate — single-field change, 0 risk to companion items",
+      "Preserves content for future investigation (Choices + 3 EW fields intact)",
+      "Safe — cannot introduce new defects",
+      "Gate -1: Item no longer blocks — archived items are excluded from identity validation"
+    ],
+    "cons": [
+      "Pack E certified count decreases: 540 → 539",
+      "Loss of one item from the supplemental Section E pool",
+      "Template relationship permanently lost if companion items are later modified"
+    ],
+    "effort": "1 minute — single question_state edit",
+    "risk": "LOW",
+    "governance": "Per BACKUP_PROTOCOL.md: backup pack_e_corrected.js before edit. Per governance-guard Rule 1: update REVISION_HISTORY.md with archive action. Per governance-guard Rule 5: single item (≪30 cap)."
+  },
+
+  "option_b_template_restoration": {
+    "action": "Restore Stem, CorrectChoice, ExplanationCorrect, and ExplanationWrong[CC] from the original template",
+    "rationale": "The Choies (A/B/C/D) text provides the topic (segregation of duties). The 3 existing EW fields (A/C/D) provide distractor explanations. The Stem and CorrectChoice can be reconstructed by matching the Choices text against the 5-item rotation group template (Items R31-R35). The restored item would be renderable and structurally complete.",
+    "pros": [
+      "Preserves the item in the Certified pool (540 count maintained)",
+      "Template family relationship is restored — companion items match the restored template",
+      "Educationally useful — segregation of duties is a core COSO concept"
+    ],
+    "cons": [
+      "Restoration requires inferring the original Stem — the exact wording from the authoring template must be determined",
+      "Risk of incorrect restoration — if the wrong template variant is used, the item will have a wrong answer key (DL-030 class error)",
+      "Requires CAQS §1.6 six-dimension verification after restoration",
+      "GW[CC] must be cleared (DL-008 compliance) after restoration",
+      "Higher effort than archive"
+    ],
+    "effort": "~30 minutes — template matching + field restoration + independent verification + governance compliance",
+    "risk": "MEDIUM — template mismatch risk",
+    "governance": "Per BACKUP_PROTOCOL.md: backup before edits. Per governance-guard Rules 1, 2, 5: REVISION_HISTORY.md entry, EW[CC] empty, single item within 30-item cap. Per CAQS §1.6: six-dimension verification before re-certification if question_state changes from Archived back to Certified."
+  },
+
+  "recommendation": {
+    "preferred": "OPTION A — Archive",
+    "rationale": "P1-E-R33 has zero learner exposure (never renderable). The item is a template-generation artifact with no pedagogical content. Restoring it adds one structurally-sound but unverified item to a pool that already has 539 structurally-sound Section E items. The 800-Series reactivation should not be delayed for a single-item restoration that provides marginal educational value.",
+    "fallback": "If the template origin can be definitively determined (e.g., P1-E-R33 matches R31-R35's rotation position 3 exactly), Option B is viable but should be executed in a separate session after 800-Series reactivation, not as a blocking pre-condition.",
+    "immediate_action": "S206 (or a pre-S206 remediation session) should archive P1-E-R33. This clears the Gate -1 block and allows full Pack E identity validation to pass for 800-Series operations."
+  },
+
+  "execution_checklist": {
+    "pre_archive": [
+      "Backup pack_e_corrected.js per BACKUP_PROTOCOL.md",
+      "Verify P1-E-R33 is the only item with missing Stem/CC/EC in Pack E (confirmed — all 39 companions verified in S204)",
+      "Confirm no other pack files contain P1-E-R33 (confirmed — cross-pack collision check PASS in S204)"
+    ],
+    "archive_action": [
+      "Set question_state from 'Certified' to 'Archived' on P1-E-R33",
+      "Add 'ArchivalReason' field or note: 'DL-034: Missing Stem, CorrectChoice, ExplanationCorrect. Template-rotation omission. Never renderable.'",
+      "Verify pack_e_corrected.js still has 540 QuestionID entries",
+      "Re-run Gate -1 identity validation: expect 2,540/2,540 PASS (or 2,539/2,539 if item excluded)"
+    ],
+    "post_archive": [
+      "Update REVISION_HISTORY.md with archive entry",
+      "Update DEFECT_LIBRARY.md DL-034 status to 'Resolved'",
+      "Re-verify certified pool count: 2,221 → 2,220 (or adjust if other certifications accrued)",
+      "Confirm 800-Series Gate -1 pass on full Pack E"
+    ]
+  },
+
+  "cross_references": {
+    "analysis": "SESSION205_DL034_ANALYSIS.json",
+    "defect_library": "DEFECT_LIBRARY.md DL-034",
+    "deployment_decision": "SESSION205_DEPLOYMENT_DECISION.md PRE-205-01",
+    "backup_protocol": "knowledge/BACKUP_PROTOCOL.md",
+    "governance_guard": ".opencode/plugins/governance-guard.js",
+    "caqs": "knowledge/CAQS_v1.0.md §1.6"
+  }
+}

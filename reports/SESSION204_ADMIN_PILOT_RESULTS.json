@@ -1,0 +1,246 @@
+{
+  "document": "SESSION204_ADMIN_PILOT_RESULTS",
+  "session": "S204",
+  "board": "H",
+  "series": "200-Series Process Engineering & Certification Architecture",
+  "title": "May Admin Portal Pilot — Architecture Validation Results",
+  "date": "2026-07-27",
+  "type": "Read-Only Architecture Audit",
+  "status": "PASS — 2 findings requiring design resolution, 0 blockers",
+  "authority": "S203 ADMIN_PLATFORM_SPEC + S203 ROLE_MODEL",
+
+  "role_architecture_validation": {
+    "summary": "5-role hierarchical RBAC model is internally consistent. Roles escalate cleanly Level 1→5 with inheritance documented in both spec files. Two permission conflicts identified (System Admin vs. governance-guard rules, Governance Admin vs. Certification Reviewer override).",
+    "verdict": "PASS_WITH_FINDINGS",
+
+    "roles_audited": {
+      "Student": {
+        "level": 1,
+        "permissions": ["view_tests", "take_tests", "view_own_results", "view_own_reviews", "view_own_recommendations"],
+        "inheritance": [],
+        "status": "CLEAN"
+      },
+      "Content_Administrator": {
+        "level": 2,
+        "permissions": ["all_student_permissions", "view_question_inventory", "search_registry", "view_recommendations", "view_remediation_queues", "edit_unprocessed_content"],
+        "inheritance": ["Student"],
+        "status": "CLEAN"
+      },
+      "Certification_Reviewer": {
+        "level": 3,
+        "permissions": ["all_content_admin_permissions", "view_certification_queues", "review_READY_items", "hold_items", "escalate_items", "certify_items", "view_quality_scores"],
+        "inheritance": ["Content_Administrator", "Student"],
+        "status": "CLEAN"
+      },
+      "Governance_Administrator": {
+        "level": 4,
+        "permissions": ["all_certification_permissions", "view_governance_guard", "manage_audit_reports", "verify_registry_integrity", "manage_framework_controls", "authorize_state_transitions"],
+        "inheritance": ["Certification_Reviewer", "Content_Administrator", "Student"],
+        "status": "FINDING — see §permission_overlap_analysis.governance_admin"
+      },
+      "System_Administrator": {
+        "level": 5,
+        "permissions": ["all_permissions", "manage_users", "manage_roles", "system_configuration", "data_export", "platform_maintenance"],
+        "inheritance": ["Governance_Administrator", "Certification_Reviewer", "Content_Administrator", "Student"],
+        "status": "FINDING — see §permission_conflicts.system_admin_vs_governance"
+      }
+    },
+
+    "permission_overlap_analysis": {
+      "hierarchical_inheritance": {
+        "design": "Correct by design. Higher roles inherit all lower-role permissions. This is explicitly stated in both S203_ADMIN_PLATFORM_SPEC (authentication.mechanism) and S203_ROLE_MODEL (role_hierarchy.description).",
+        "verdict": "PASS"
+      },
+      "governance_admin": {
+        "finding": "F-204-01",
+        "severity": "MEDIUM",
+        "description": "Governance Admin inherits Certification Reviewer permissions including certify/hold/escalate. The spec states Governance Admin 'cannot override Certification Reviewer decisions'. However, hierarchical inheritance means Governance Admin has the same certify/hold/escalate capabilities as a Certification Reviewer — creating an ambiguous boundary. If two people with different roles both have certify permission, which one's decision binds?",
+        "recommendation": "The authorization layer should implement a role-precedence rule: Certification Reviewer decisions on certify/hold/escalate are final for content quality; Governance Admin may only trigger these transitions for governance-enforcement reasons (e.g., quarantining a certified item with a newly discovered structural defect). The audit log must record which role initiated each state transition.",
+        "resolution_required": "Before S830 Phase 1 gate"
+      },
+      "content_admin_governance_overlap": {
+        "design": "Correct. Content Admin → Certification Reviewer → Governance Admin is an intentional escalation chain. Governance Admin should have Content Admin permissions because they need full inventory visibility to perform registry integrity checks and framework control management.",
+        "verdict": "PASS"
+      }
+    },
+
+    "permission_gaps": {
+      "summary": "3 gaps identified. None are blockers for P0 but require P1/P2 resolution.",
+      "gaps": [
+        {
+          "gap_id": "G-204-01",
+          "severity": "LOW",
+          "action": "archive_question",
+          "description": "No role has explicit permission to archive a question (question_state → 'Archived'). The Certification Reviewer can certify/hold/escalate but archive is not listed. The governance model defines 'Archived' as a valid state but no role is assigned the transition authority.",
+          "recommendation": "Add 'archive_items' to Certification Reviewer permissions in the role model.",
+          "current_workaround": "Governance Admin 'authorize_state_transitions' may implicitly cover this."
+        },
+        {
+          "gap_id": "G-204-02",
+          "severity": "LOW",
+          "action": "delete_recommendation",
+          "description": "No role has explicit permission to delete a recommendation. The Recommendation Registry module supports CRUD lifecycle (OPEN→ASSIGNED→IN_PROGRESS→CLOSED) but not deletion. This may be by design — recommendations are audit artifacts.",
+          "recommendation": "If deletion is not intended, document this as a design decision. If it is intended, assign to Governance Admin (Level 4+).",
+          "current_workaround": "CLOSE status effectively retires a recommendation without deletion."
+        },
+        {
+          "gap_id": "G-204-03",
+          "severity": "MEDIUM",
+          "action": "modify_certified_content",
+          "description": "No role has permission to edit Certified questions. Content Admin can only 'edit_unprocessed_content'. If a correctness defect (e.g., DL-030 answer-key error) is found in a Certified item, no role can directly fix it. The item must be transitioned back to In Audit first — but no role has explicit permission for Certified→In Audit re-verification transitions.",
+          "recommendation": "Certification Reviewer should have explicit 'reopen_certified' permission to transition Certified→In Audit for re-verification (consistent with QUESTION_METADATA_STANDARD §9.2).",
+          "current_workaround": "Governance Admin 'authorize_state_transitions' covers this implicitly but lacks the CAQS review expertise expected for re-verification."
+        }
+      ]
+    },
+
+    "permission_conflicts": {
+      "system_admin_vs_governance": {
+        "finding": "F-204-02",
+        "severity": "HIGH",
+        "description": "System Admin has 'all_permissions' (Level 5). The spec states System Admin 'cannot modify governance-guard rules without Governance Admin approval'. However, 'all_permissions' is unbounded — there is no mechanism defined to carve out governance-guard modification from System Admin scope. With Level 5 access, System Admin could directly edit `.opencode/plugins/governance-guard.js` (or the audit log at `knowledge/REVISION_HISTORY.md`) since all admin modules share the same data layer (architecture_notes.data_layer).",
+        "enforcement_requirement": "This constraint cannot be enforced by RBAC alone — it requires a write-gate at the governance-guard file level. The governance-guard plugin (Rules 2/3/5 BLOCK, Rules 1/4 WARN) operates at the OpenCode tooling layer, not at the admin portal frontend layer. The admin portal must implement an independent governance-guard modification gate that requires dual-role authorization (System Admin initiates, Governance Admin approves).",
+        "resolution_required": "Before S910 Phase 2 gate — the governance-guard.js file-level write-gate must be implemented independently of the admin portal RBAC."
+      }
+    }
+  },
+
+  "module_architecture_validation": {
+    "summary": "7 modules spec'd, 5 P0 + 3 P1. Architecture is coherent. One gap identified: case bank items are not explicitly scoped in Question Management module, and the data-source chain for certification queues may have staleness windows.",
+    "verdict": "PASS_WITH_FINDINGS",
+
+    "modules_audited": {
+      "Question_Management": {
+        "priority": "P0",
+        "design_review": "Comprehensive search by 7+ dimensions (QuestionID, identity key, domain, pack, section, state, defect class). View detail, certification history, linked sessions, linked recommendations.",
+        "scope_coverage": {
+          "mcq_items": "All 2,500 items across 5 packs (pack_*_corrected.js) — covered via CANONICAL_REGISTRY.json + AM-1 extraction.",
+          "case_bank_items": "FINDING M-204-01 (MEDIUM): The 420 case items across 75 cases (scored_cases*.js) are not explicitly scoped. The data_source field mentions CANONICAL_REGISTRY.json but does not clarify whether this includes case items. Case items use CBQ*-* IDs, not P1*-* IDs. The QuestionID search (compound-key resolved) should resolve both MCQ and case-item IDs.",
+          "recommendation": "Clarify in the Question Management module spec whether case-item IDs (CBQ*-*) are searchable. If yes, the CANONICAL_REGISTRY must include case items."
+        },
+        "status": "DESIGN_PASS"
+      },
+      "Recommendation_Registry": {
+        "priority": "P0",
+        "design_review": "Full lifecycle: OPEN → ASSIGNED → IN_PROGRESS → CLOSED. Features cover status filtering, assignment, update, linkage to questions/sessions, closure evidence, creation from findings.",
+        "search_capability": "The spec lists REC-ID search implicitly (filter by status implies lookup by ID). Add explicit 'Search by REC-ID' to the feature list for completeness.",
+        "status": "DESIGN_PASS"
+      },
+      "Session_Registry": {
+        "priority": "P0",
+        "design_review": "Search by session ID. View type, status, findings, deliverables, linked questions, linked recommendations, produced reports. Data source: NAVIGATION_REGISTRY.json + session report files.",
+        "completeness": "The link between sessions→recommendations and sessions→questions is the key architecture value. This enables traceability from any defect fix back to the session that identified it.",
+        "status": "DESIGN_PASS"
+      },
+      "Certification_Operations_Console": {
+        "priority": "P0",
+        "design_review": "5 board queues (READY, MINOR_FIX, REMEDIATE, BLOCKED, CERTIFIED). Per-item CAQS 10-dimension review. Batch operations. Queue filtering by pack/section/defect class/priority.",
+        "queue_definitions_validated": {
+          "READY": "Items that passed all pre-flight gates. Maps to question_state: 'In Audit' with all 6-dimension AI verifications at HIGH confidence.",
+          "MINOR_FIX": "SOFT_BLOCK warnings. Maps to items with DL-013 boilerplate or cosmetic metadata issues — not certification-blocking.",
+          "REMEDIATE": "Items requiring defect remediation. Maps to items with DL-008, DL-026, or other structural defects.",
+          "BLOCKED": "Items with structural impairments. Maps to items that cannot be parsed or have fundamental field-level corruption.",
+          "CERTIFIED": "Items in learner delivery pool. Maps to question_state: 'Certified'."
+        },
+        "data_freshness": "FINDING M-204-02 (LOW): CANONICAL_REGISTRY.json is generated at session T0 (architecture_notes.data_layer). If certification operations occur mid-session, the registry may be stale until the next session's T0. The Readiness Engine classification must either regenerate on-demand or the admin portal must document the staleness window.",
+        "status": "DESIGN_PASS"
+      },
+      "Admin_Auth": {
+        "priority": "P0",
+        "design_review": "5-layer RBAC with access tokens managed via app.js session mechanism. Separate login for admin vs. student (admin.html vs. index_updated.html).",
+        "enforcement_points": "Every module must check role at entry. Every write action must check permission at execution. Governance hooks write to REVISION_HISTORY.md on state transitions.",
+        "status": "DESIGN_PASS"
+      },
+      "Student_Management": {
+        "priority": "P1",
+        "design_review": "CRUD, enrollment management, permission assignment, progress tracking, study plan generation. Data source: Student database (future feature).",
+        "status": "DEFERRED_P1 — no design concerns"
+      },
+      "Test_Results": {
+        "priority": "P1",
+        "design_review": "Search by student/date/exam/question. Score distribution analytics. Per-question performance stats. Data source: app.js localStorage / future server-side storage.",
+        "concern": "localStorage is client-side only — no centralized results database exists. Until server-side storage is implemented, results analytics will only show data from the local browser.",
+        "status": "DESIGN_PASS — gated by server-side storage implementation"
+      },
+      "Modernization_Dashboard": {
+        "priority": "P1",
+        "design_review": "Domain E/F modernization, seed inventory, clone archival, replacement tracking, certification by section, defect escape rate, throughput metrics (BF-001 through BF-010), phase gate status (S830/S900/S910).",
+        "data_sources_validated": "CANONICAL_REGISTRY.json + DELTA_LEDGER.json + scan artifacts + throughput metrics. All sources exist or are spec'd for generation at session T0.",
+        "status": "DESIGN_PASS"
+      }
+    }
+  },
+
+  "permission_boundary_validation": {
+    "summary": "All 5 roles have verified boundaries. 2 findings on enforcement mechanisms.",
+    "verdict": "PASS",
+
+    "boundaries_verified": {
+      "Student": {
+        "rule": "View only own data",
+        "enforcement": "Session-scoped query. app.js session object contains only the authenticated student's data. Test results, reviews, and recommendations are filtered by student ID at query time.",
+        "verdict": "PASS"
+      },
+      "Content_Admin": {
+        "rule": "Can view all questions but only edit Unprocessed content",
+        "enforcement": "Read: all question_states visible. Write: edit_unprocessed_content permission gates writes to question_state !== 'Unprocessed'. The ROLE_MODEL permission_catalog confirms edit_unprocessed is restricted to Unprocessed state.",
+        "edge_case": "If a Content Admin attempts to edit a Certified item: the write gate must reject the operation and log the attempt. Currently no explicit mechanism defined for this gate — it relies on the question_state field check at the data layer.",
+        "verdict": "PASS"
+      },
+      "Certification_Reviewer": {
+        "rule": "Can certify/hold/escalate but not delete questions",
+        "enforcement": "Certification Reviewer has certify/hold/escalate permissions (permission_catalog.certification). No delete permission exists in the catalog for any role below Level 5. The deletion prohibition is enforced by permission absence, which is the correct RBAC pattern.",
+        "verdict": "PASS"
+      },
+      "Governance_Admin": {
+        "rule": "Can manage rules but not override Certification Reviewer decisions",
+        "enforcement": "This is the F-204-01 finding. Governance Admin inherits certify/hold/escalate via hierarchy, creating ambiguity. Resolution: implement a role-precedence rule where Certification Reviewer decisions on content quality are final. Governance Admin transitions must carry a distinct audit reason code.",
+        "verdict": "PASS_WITH_CONDITION — enforcement mechanism must be designed before S830"
+      },
+      "System_Admin": {
+        "rule": "Full access but cannot modify governance-guard rules without Governance Admin approval",
+        "enforcement": "This is the F-204-02 finding. RBAC alone cannot enforce this — requires a dual-authorization gate at the governance-guard file level. Until implemented, System Admin has de facto governance-guard modification capability.",
+        "verdict": "PASS_WITH_CONDITION — enforcement mechanism must be designed before S910"
+      }
+    }
+  },
+
+  "findings_summary": {
+    "total": 5,
+    "by_severity": {
+      "HIGH": 1,
+      "MEDIUM": 2,
+      "LOW": 2
+    },
+    "blockers_for_S830_P0_gate": 0,
+    "require_design_resolution": [
+      "F-204-01 (Governance Admin vs. Certification Reviewer override — MEDIUM)",
+      "F-204-02 (System Admin vs. governance-guard rules — HIGH)",
+      "M-204-01 (Case bank items in Question Management — MEDIUM)"
+    ]
+  },
+
+  "governance_alignment": {
+    "governance_guard_rules": {
+      "total": 5,
+      "block_rules": ["Rule 2 (DL-008)", "Rule 3 (Registry generation)", "Rule 5 (≤30 batch cap)"],
+      "warn_rules": ["Rule 1 (REVISION_HISTORY pairing)", "Rule 4 (answer-key verification)"],
+      "admin_portal_integration": "Certification Operations Console must enforce Rule 2 (BLOCK) at certify time — no item with non-empty ExplanationWrong[CorrectChoice] may transition to Certified. The console's write hooks to REVISION_HISTORY.md satisfy Rule 1 (WARN) pairing requirement."
+    },
+    "state_transition_logging": {
+      "mechanism": "Certification Operations Console writes to REVISION_HISTORY.md on state transitions (architecture_notes.governance_hooks).",
+      "completeness": "The hook covers state transitions. It should also log: (a) role that initiated the transition, (b) timestamp, (c) affected QIDs, (d) reason code.",
+      "recommendation": "Add structured fields to REVISION_HISTORY entries: {role, timestamp, qids[], reason_code, before_state, after_state}."
+    }
+  },
+
+  "pre_existing_state_reference": {
+    "certified_pool": "2,031 of 2,500 items Certified (81.2%) — source: SESSION_STATUS_2026-07-24.md §1",
+    "open_defects": {
+      "DL-008": "67 Certified items with non-empty EW[CC] — highest learner-safety priority",
+      "DL-026": "50 In Audit items with empty distractor slots",
+      "DL-013": "~851 boilerplate fields remaining (0 Certified affected)"
+    },
+    "implication_for_admin_portal": "The BLOCKED queue in Certification Operations Console must pre-populate with these 67 DL-008 items. The REMEDIATE queue must include the 50 DL-026 items. Both queues must reference the defect manifest at governance/DEFECT_MANIFEST_DL008_DL026.json."
+  }
+}

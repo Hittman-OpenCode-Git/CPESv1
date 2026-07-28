@@ -1,0 +1,1402 @@
+[
+  {
+    "qid": "P1-A-001",
+    "pack": "A",
+    "section": "A",
+    "stem": "Quartz is preparing a classified balance sheet for a supplier financing arrangement due in nine months. Which response is most appropriate?",
+    "stemLen": 139,
+    "blooms": "Not set",
+    "topic": "A.001 balance sheet current classification",
+    "cc": "C",
+    "correctText": "Classify the obligation as current unless a qualifying long-term refinancing or settlement right exi",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Omit it if the invoice has not been paid"
+      },
+      {
+        "letter": "B",
+        "text": "Classify it as noncurrent solely because management expects "
+      },
+      {
+        "letter": "D",
+        "text": "Report it as equity because suppliers are involved"
+      }
+    ],
+    "explLen": 815,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-A-018",
+    "pack": "A",
+    "section": "A",
+    "stem": "Iris owns 80% of a consolidated subsidiary. Which response is most appropriate?",
+    "stemLen": 79,
+    "blooms": "Not set",
+    "topic": "A.018 noncontrolling interest presentation",
+    "cc": "C",
+    "correctText": "Present the 20% noncontrolling interest within equity, separate from parent equity",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Report noncontrolling interest as revenue"
+      },
+      {
+        "letter": "B",
+        "text": "Report noncontrolling interest as a current liability"
+      },
+      {
+        "letter": "D",
+        "text": "Exclude 20% of subsidiary assets and liabilities from consol"
+      }
+    ],
+    "explLen": 853,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-A-033",
+    "pack": "A",
+    "section": "A",
+    "stem": "Iris recorded gross sales of $244,000, sales returns of $10,600, and sales allowances of $4,300. What net sales should be reported?",
+    "stemLen": 131,
+    "blooms": "Not set",
+    "topic": "A.033 net sales after returns and allowances 8",
+    "cc": "B",
+    "correctText": "$229,100",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "$244,000"
+      },
+      {
+        "letter": "C",
+        "text": "$250,300"
+      },
+      {
+        "letter": "D",
+        "text": "$233,400"
+      }
+    ],
+    "explLen": 239,
+    "isCalc": true,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-A-049",
+    "pack": "A",
+    "section": "A",
+    "stem": "Zephyr bought equipment for $156,800, estimates salvage value of $12,000, and a 5-year useful life. What is annual straight-line depreciation?",
+    "stemLen": 142,
+    "blooms": "Not set",
+    "topic": "A.049 straight-line depreciation expense 24",
+    "cc": "A",
+    "correctText": "$28,960",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "$30,960"
+      },
+      {
+        "letter": "C",
+        "text": "$31,360"
+      },
+      {
+        "letter": "D",
+        "text": "$144,800"
+      }
+    ],
+    "explLen": 644,
+    "isCalc": true,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-A-066",
+    "pack": "A",
+    "section": "A",
+    "stem": "Quartz reports total assets of $496,300 and total liabilities of $211,100. What total equity should be reported?",
+    "stemLen": 112,
+    "blooms": "Not set",
+    "topic": "A.066 accounting equation equity calculation 41",
+    "cc": "C",
+    "correctText": "$285,200",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "$211,100"
+      },
+      {
+        "letter": "B",
+        "text": "$707,400"
+      },
+      {
+        "letter": "D",
+        "text": "$300,200"
+      }
+    ],
+    "explLen": 200,
+    "isCalc": true,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-B-006",
+    "pack": "A",
+    "section": "B",
+    "stem": "Willow wants budgeted resource needs tied to expected activities. Which response is most appropriate?",
+    "stemLen": 101,
+    "blooms": "Not set",
+    "topic": "B.006 activity-based budgeting drivers",
+    "cc": "C",
+    "correctText": "Budget costs by estimating activity demand and the resources required to perform those activities",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Use only direct labor hours for every cost pool"
+      },
+      {
+        "letter": "B",
+        "text": "Ignore cost drivers because they are used only in financial "
+      },
+      {
+        "letter": "D",
+        "text": "Budget by multiplying last year total cost by the sales grow"
+      }
+    ],
+    "explLen": 85,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-B-028",
+    "pack": "A",
+    "section": "B",
+    "stem": "Titan faces a sudden supplier capacity constraint after the master budget was approved. Which response is most appropriate?",
+    "stemLen": 123,
+    "blooms": "Not set",
+    "topic": "B.028 continuous planning update trigger 12",
+    "cc": "C",
+    "correctText": "Update forecasts and consider budget revisions when assumptions materially change",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Record the supplier constraint as revenue"
+      },
+      {
+        "letter": "B",
+        "text": "Ignore operational constraints unless year-end financial sta"
+      },
+      {
+        "letter": "D",
+        "text": "Keep all original assumptions because budgets can never chan"
+      }
+    ],
+    "explLen": 128,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-B-097",
+    "pack": "A",
+    "section": "B",
+    "stem": "Timberline's actual results have diverged significantly from budget for three consecutive months due to a major shift in raw material prices. What is the most appropriate response?",
+    "stemLen": 180,
+    "blooms": "Not set",
+    "topic": "B.097 budget review and revision timing",
+    "cc": "B",
+    "correctText": "Formally revise the budget to reflect the new cost environment",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Continue using the original budget without changes for consi"
+      },
+      {
+        "letter": "C",
+        "text": "Wait until year-end to make any adjustments"
+      },
+      {
+        "letter": "D",
+        "text": "Replace the budget entirely with a strategic plan"
+      }
+    ],
+    "explLen": 182,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-C-012",
+    "pack": "A",
+    "section": "C",
+    "stem": "Evergreen worries ROI discourages managers from accepting profitable projects above the required return but below current ROI. Which response is most appropriate?",
+    "stemLen": 162,
+    "blooms": "Not set",
+    "topic": "C.012 residual income advantage",
+    "cc": "B",
+    "correctText": "Use residual income to reduce the incentive to reject value-adding investments",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Lower the cost of capital to zero for all projects"
+      },
+      {
+        "letter": "C",
+        "text": "Evaluate only sales volume"
+      },
+      {
+        "letter": "D",
+        "text": "Use gross margin percentage as the only investment center me"
+      }
+    ],
+    "explLen": 111,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-C-051",
+    "pack": "A",
+    "section": "C",
+    "stem": "Summit needs a policy for deciding which variances to investigate. Which response is most appropriate?",
+    "stemLen": 102,
+    "blooms": "Not set",
+    "topic": "C.051 variance investigation threshold 36",
+    "cc": "D",
+    "correctText": "Consider size, recurrence, controllability, cost of investigation, and operational significance",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Investigate based only on whether the variance is caused by "
+      },
+      {
+        "letter": "B",
+        "text": "Ignore recurring small variances because they are always imm"
+      },
+      {
+        "letter": "C",
+        "text": "Investigate only favorable variances"
+      }
+    ],
+    "explLen": 85,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-D-002",
+    "pack": "A",
+    "section": "D",
+    "stem": "Umbra produces a homogeneous chemical in a continuous process. Which response is most appropriate?",
+    "stemLen": 98,
+    "blooms": "Not set",
+    "topic": "D.002 process costing use case",
+    "cc": "D",
+    "correctText": "Use process costing to accumulate costs by department or process and assign them to equivalent units",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Avoid equivalent units because units are homogeneous"
+      },
+      {
+        "letter": "B",
+        "text": "Assign all conversion costs to the first unit produced"
+      },
+      {
+        "letter": "C",
+        "text": "Use job order costing for each identical gallon"
+      }
+    ],
+    "explLen": 71,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-D-018",
+    "pack": "A",
+    "section": "D",
+    "stem": "Lumen pays warranty claims after customers receive defective units. Which response is most appropriate?",
+    "stemLen": 103,
+    "blooms": "Not set",
+    "topic": "D.018 external failure cost",
+    "cc": "B",
+    "correctText": "Classify warranty claims and returns as external failure costs",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Classify them as capital expenditures"
+      },
+      {
+        "letter": "C",
+        "text": "Classify them as appraisal costs"
+      },
+      {
+        "letter": "D",
+        "text": "Classify them as direct material purchases"
+      }
+    ],
+    "explLen": 67,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-E-003",
+    "pack": "A",
+    "section": "E",
+    "stem": "Willow's purchasing policy requires a second manager's approval for purchase orders over $10,000. An internal audit finds that a purchasing manager split a $25,000 order into three invoices under $10,000 to avoid the approval requirement. What control weakness does this reveal?",
+    "stemLen": 278,
+    "blooms": "Not set",
+    "topic": "E.003 purchase order splitting control weakness",
+    "cc": "C",
+    "correctText": "The system does not prevent order splitting and does not flag transactions near the threshold",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "The purchasing manager should have unlimited spending author"
+      },
+      {
+        "letter": "B",
+        "text": "The company should eliminate the approval threshold entirely"
+      },
+      {
+        "letter": "D",
+        "text": "The second manager should also be allowed to split purchase "
+      }
+    ],
+    "explLen": 1130,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-E-018",
+    "pack": "A",
+    "section": "E",
+    "stem": "Meridian is reviewing internal controls related to customer credit approval. Which response is most appropriate?",
+    "stemLen": 112,
+    "blooms": "Not set",
+    "topic": "E.018 customer credit approval",
+    "cc": "A",
+    "correctText": "Approve credit before shipment to reduce collectibility and revenue-cycle risk",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "Rely on trust and remove documentation to speed processing"
+      },
+      {
+        "letter": "C",
+        "text": "Classify the issue as a Part 2 capital budgeting matter"
+      },
+      {
+        "letter": "D",
+        "text": "Wait for the external audit before designing any internal co"
+      }
+    ],
+    "explLen": 1043,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-E-032",
+    "pack": "A",
+    "section": "E",
+    "stem": "Beacon is reviewing internal controls related to privacy access restriction. Which response is most appropriate?",
+    "stemLen": 112,
+    "blooms": "Not set",
+    "topic": "E.032 privacy access restriction",
+    "cc": "C",
+    "correctText": "Limit access to personal data based on business need and applicable policy",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Classify the issue as a Part 2 capital budgeting matter"
+      },
+      {
+        "letter": "B",
+        "text": "Wait for the external audit before designing any internal co"
+      },
+      {
+        "letter": "D",
+        "text": "Rely on trust and remove documentation to speed processing"
+      }
+    ],
+    "explLen": 1248,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-E-048",
+    "pack": "A",
+    "section": "E",
+    "stem": "A company switches from a periodic inventory system to a perpetual inventory system with real-time tracking. What is the primary internal control benefit of this change?",
+    "stemLen": 169,
+    "blooms": "Not set",
+    "topic": "E.048 perpetual vs periodic inventory control",
+    "cc": "B",
+    "correctText": "It allows discrepancies between recorded and actual inventory to be identified and investigated soon",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "It eliminates the need for any physical inventory counts"
+      },
+      {
+        "letter": "C",
+        "text": "It automatically prevents all inventory theft"
+      },
+      {
+        "letter": "D",
+        "text": "It removes the need for inventory reconciliation entirely"
+      }
+    ],
+    "explLen": 1081,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-F-004",
+    "pack": "A",
+    "section": "F",
+    "stem": "Zephyr is standardizing customer, vendor, and item records before connecting procurement, sales, and general ledger systems. Which practice best reflects master data governance?",
+    "stemLen": 177,
+    "blooms": "Not set",
+    "topic": "F.004 master data governance",
+    "cc": "B",
+    "correctText": "Assign ownership, definitions, approval rules, and maintenance standards for shared master records",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Allow each department to define vendor names and IDs indepen"
+      },
+      {
+        "letter": "C",
+        "text": "Correct duplicate vendor records only when a payment error i"
+      },
+      {
+        "letter": "D",
+        "text": "Load every legacy field into the new system without validati"
+      }
+    ],
+    "explLen": 155,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-F-018",
+    "pack": "A",
+    "section": "F",
+    "stem": "Northstar finds that contribution margin declined despite higher sales volume. Finance analyzes price changes, sales mix, discounting, and input-cost trends to identify the cause. Which analytics category is being used?",
+    "stemLen": 219,
+    "blooms": "Not set",
+    "topic": "F.018 diagnostic analytics root cause",
+    "cc": "B",
+    "correctText": "Diagnostic analytics, because it investigates why results occurred",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Descriptive analytics, because it reports the decline in con"
+      },
+      {
+        "letter": "C",
+        "text": "Predictive analytics, because it forecasts next period contr"
+      },
+      {
+        "letter": "D",
+        "text": "Prescriptive analytics, because it automatically selects the"
+      }
+    ],
+    "explLen": 231,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-F-032",
+    "pack": "A",
+    "section": "F",
+    "stem": "Crescent is evaluating cybersecurity phishing control in a finance transformation project. Which response is most appropriate?",
+    "stemLen": 126,
+    "blooms": "Not set",
+    "topic": "F.032 cybersecurity phishing control",
+    "cc": "C",
+    "correctText": "Training, filtering, MFA, and reporting processes help reduce phishing risk",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "It is primarily a Part 2 capital budgeting calculation"
+      },
+      {
+        "letter": "B",
+        "text": "It should be documented only after an audit exception occurs"
+      },
+      {
+        "letter": "D",
+        "text": "It eliminates the need for controls because technology is au"
+      }
+    ],
+    "explLen": 214,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-F-046",
+    "pack": "A",
+    "section": "F",
+    "stem": "Quartz is evaluating retention policy legal hold in a finance transformation project. Which response is most appropriate?",
+    "stemLen": 121,
+    "blooms": "Not set",
+    "topic": "F.046 retention policy legal hold",
+    "cc": "B",
+    "correctText": "Legal hold requirements can override normal retention and disposal schedules",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "It eliminates the need for controls because technology is au"
+      },
+      {
+        "letter": "C",
+        "text": "It is primarily a Part 2 capital budgeting calculation"
+      },
+      {
+        "letter": "D",
+        "text": "It should be documented only after an audit exception occurs"
+      }
+    ],
+    "explLen": 246,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-F-060",
+    "pack": "A",
+    "section": "F",
+    "stem": "Frontier is evaluating third-party vendor cyber risk in a finance transformation project. Which response is most appropriate?",
+    "stemLen": 125,
+    "blooms": "Not set",
+    "topic": "F.060 third-party vendor cyber risk",
+    "cc": "A",
+    "correctText": "Vendor cyber risk management assesses controls over outsourced systems and data",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "It is primarily a Part 2 capital budgeting calculation"
+      },
+      {
+        "letter": "C",
+        "text": "It should be documented only after an audit exception occurs"
+      },
+      {
+        "letter": "D",
+        "text": "It eliminates the need for controls because technology is au"
+      }
+    ],
+    "explLen": 233,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-F-074",
+    "pack": "A",
+    "section": "F",
+    "stem": "Titan is evaluating workflow automation approval in a finance transformation project. Which response is most appropriate?",
+    "stemLen": 121,
+    "blooms": "Not set",
+    "topic": "F.074 workflow automation approval",
+    "cc": "C",
+    "correctText": "Workflow automation routes approvals and captures evidence according to rules",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "It is primarily a Part 2 capital budgeting calculation"
+      },
+      {
+        "letter": "B",
+        "text": "It should be documented only after an audit exception occurs"
+      },
+      {
+        "letter": "D",
+        "text": "It eliminates the need for controls because technology is au"
+      }
+    ],
+    "explLen": 247,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-A-106",
+    "pack": "B",
+    "section": "A",
+    "stem": "Under ASC 842, which criterion classifies a lease as a finance lease for the lessee?",
+    "stemLen": 84,
+    "blooms": "Not set",
+    "topic": "B-A.106 lease classification criteria",
+    "cc": "B",
+    "correctText": "PV of lease payments equals or exceeds 90% of fair value of the asset",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Lessor retains risks and rewards of ownership"
+      },
+      {
+        "letter": "C",
+        "text": "Lease term is 50% or more of economic life"
+      },
+      {
+        "letter": "D",
+        "text": "Lessee has option to renew at fair market value"
+      }
+    ],
+    "explLen": 273,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-B-135",
+    "pack": "B",
+    "section": "B",
+    "stem": "Which of the following is considered a financial budget?",
+    "stemLen": 56,
+    "blooms": "Not set",
+    "topic": "B-B.135 financial budgets components",
+    "cc": "C",
+    "correctText": "Capital expenditure budget",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Selling expense budget"
+      },
+      {
+        "letter": "B",
+        "text": "Production budget"
+      },
+      {
+        "letter": "D",
+        "text": "Direct labor budget"
+      }
+    ],
+    "explLen": 202,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-C-128",
+    "pack": "B",
+    "section": "C",
+    "stem": "Summit Industries has a consumer products division where the manager is responsible for both revenues and costs, including manufacturing, marketing, and distribution expenses. The manager is evaluated based on the division's operating income. This division is best classified as a:",
+    "stemLen": 281,
+    "blooms": "Not set",
+    "topic": "B-C.128 responsibility centers",
+    "cc": "D",
+    "correctText": "Profit center",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Cost center"
+      },
+      {
+        "letter": "B",
+        "text": "Revenue center"
+      },
+      {
+        "letter": "C",
+        "text": "Investment center"
+      }
+    ],
+    "explLen": 294,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-C-161",
+    "pack": "B",
+    "section": "C",
+    "stem": "In the balanced scorecard framework, which statement best describes the relationship between leading and lagging indicators?",
+    "stemLen": 124,
+    "blooms": "Not set",
+    "topic": "B-C.161 balanced scorecard",
+    "cc": "C",
+    "correctText": "Leading indicators drive future performance and are often found in the learning and growth and inter",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Lagging indicators are always financial measures and leading"
+      },
+      {
+        "letter": "B",
+        "text": "Lagging indicators predict future performance, while leading"
+      },
+      {
+        "letter": "D",
+        "text": "The balanced scorecard only uses lagging indicators"
+      }
+    ],
+    "explLen": 405,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-C-189",
+    "pack": "B",
+    "section": "C",
+    "stem": "Which of the following is an advantage of standard costing over actual costing?",
+    "stemLen": 79,
+    "blooms": "Not set",
+    "topic": "B-C.189 standard costing",
+    "cc": "C",
+    "correctText": "Standard costing allows for timely variance analysis and performance evaluation",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Standard costing is simpler to implement than actual costing"
+      },
+      {
+        "letter": "B",
+        "text": "Standard costing uses only actual costs, eliminating estimat"
+      },
+      {
+        "letter": "D",
+        "text": "Standard costing provides more accurate product costs for ex"
+      }
+    ],
+    "explLen": 292,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-D-084",
+    "pack": "B",
+    "section": "D",
+    "stem": "Hampton Inc. sells a product for $120 with variable costs of $78. What is the contribution margin ratio?",
+    "stemLen": 104,
+    "blooms": "Not set",
+    "topic": "B-D.084 contribution margin",
+    "cc": "C",
+    "correctText": "35%",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "45%"
+      },
+      {
+        "letter": "B",
+        "text": "65%"
+      },
+      {
+        "letter": "D",
+        "text": "55%"
+      }
+    ],
+    "explLen": 195,
+    "isCalc": true,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-D-131",
+    "pack": "B",
+    "section": "D",
+    "stem": "Xavier Manufacturing uses throughput costing. Per-unit costs are: materials $20, labor $15, variable overhead $10, fixed overhead $12. What is the per-unit inventoriable cost under throughput costing?",
+    "stemLen": 200,
+    "blooms": "Not set",
+    "topic": "B-D.131 variable vs absorption costing",
+    "cc": "C",
+    "correctText": "$20",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "$45"
+      },
+      {
+        "letter": "B",
+        "text": "$35"
+      },
+      {
+        "letter": "D",
+        "text": "$57"
+      }
+    ],
+    "explLen": 256,
+    "isCalc": true,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-E-088",
+    "pack": "B",
+    "section": "E",
+    "stem": "Summit Energy has a policy that all capital expenditures exceeding ,000 require approval from the chief financial officer, while expenditures between ,000 and ,000 require approval from the department head. This is an example of what type of control activity?",
+    "stemLen": 259,
+    "blooms": "Understand",
+    "topic": "B-E.088 control activities",
+    "cc": "B",
+    "correctText": "Authorization controls",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Physical controls"
+      },
+      {
+        "letter": "C",
+        "text": "Segregation of duties"
+      },
+      {
+        "letter": "D",
+        "text": "Independent verification"
+      }
+    ],
+    "explLen": 307,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-E-114",
+    "pack": "B",
+    "section": "E",
+    "stem": "Titan Global is a publicly traded company required to comply with Section 404 of the Sarbanes-Oxley Act. Which of the following is a key requirement of Section 404?",
+    "stemLen": 164,
+    "blooms": "Understand",
+    "topic": "B-E.114 Sarbanes-Oxley Act",
+    "cc": "B",
+    "correctText": "Management must assess and report on the effectiveness of internal control over financial reporting,",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "The CEO and CFO must certify the financial statements"
+      },
+      {
+        "letter": "C",
+        "text": "The company must establish a whistleblower hotline"
+      },
+      {
+        "letter": "D",
+        "text": "The company must rotate its external audit firm every five y"
+      }
+    ],
+    "explLen": 354,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-E-139",
+    "pack": "B",
+    "section": "E",
+    "stem": "Under the COSO 2013 framework, one of the 17 principles states: The organization demonstrates a commitment to attract, develop, and retain competent individuals in alignment with objectives. This principle relates to which component of internal control?",
+    "stemLen": 253,
+    "blooms": "Analyze",
+    "topic": "B-E.139 COSO Internal Control",
+    "cc": "C",
+    "correctText": "Control Environment",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Risk Assessment"
+      },
+      {
+        "letter": "B",
+        "text": "Monitoring"
+      },
+      {
+        "letter": "D",
+        "text": "Control Activities"
+      }
+    ],
+    "explLen": 328,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-F-086",
+    "pack": "B",
+    "section": "F",
+    "stem": "Quantum Enterprises is implementing an AI system that can examine large volumes of supplier invoices, identify patterns indicative of potential fraud, and improve its detection accuracy over time as it processes more data. This is an example of:",
+    "stemLen": 245,
+    "blooms": "Not set",
+    "topic": "B-F.086 AI and machine learning",
+    "cc": "A",
+    "correctText": "Machine learning",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "Blockchain technology"
+      },
+      {
+        "letter": "C",
+        "text": "Robotic process automation (RPA)"
+      },
+      {
+        "letter": "D",
+        "text": "Cloud computing"
+      }
+    ],
+    "explLen": 268,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-F-107",
+    "pack": "B",
+    "section": "F",
+    "stem": "Emerald Corp uses an AI system that can read and interpret the text in supplier contracts to identify key terms such as payment due dates, automatic renewal clauses, and penalty provisions. This technology is an example of:",
+    "stemLen": 223,
+    "blooms": "Not set",
+    "topic": "B-F.107 AI and machine learning",
+    "cc": "B",
+    "correctText": "Natural language processing (NLP)",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Blockchain"
+      },
+      {
+        "letter": "C",
+        "text": "Robotic process automation"
+      },
+      {
+        "letter": "D",
+        "text": "Predictive analytics"
+      }
+    ],
+    "explLen": 254,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1B-F-133",
+    "pack": "B",
+    "section": "F",
+    "stem": "When designing a database for accounts payable, the database designer splits data into separate tables (Vendors, Invoices, Payments) linked by keys to minimize data redundancy and avoid update anomalies. This design process is known as:",
+    "stemLen": 236,
+    "blooms": "Not set",
+    "topic": "B-F.133 database management",
+    "cc": "C",
+    "correctText": "Data normalization",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Data warehousing"
+      },
+      {
+        "letter": "B",
+        "text": "Data mining"
+      },
+      {
+        "letter": "D",
+        "text": "Data encryption"
+      }
+    ],
+    "explLen": 283,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-AC-011",
+    "pack": "C",
+    "section": "A",
+    "stem": "Kestrel owns 30% of the voting stock of an investee and can exercise significant influence. How should the investment be accounted for?",
+    "stemLen": 135,
+    "blooms": "Not set",
+    "topic": "A.011 equity method investment",
+    "cc": "C",
+    "correctText": "Use the equity method, recognizing a proportionate share of investee income",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Use the cost method and recognize dividends only"
+      },
+      {
+        "letter": "B",
+        "text": "Consolidate the investee's financial statements fully"
+      },
+      {
+        "letter": "D",
+        "text": "Record the investment at fair value with all gains in OCI"
+      }
+    ],
+    "explLen": 334,
+    "isCalc": true,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-AC-050",
+    "pack": "C",
+    "section": "A",
+    "stem": "Amberfield classifies a long-lived asset as held for sale. How should it be measured?",
+    "stemLen": 85,
+    "blooms": "Not set",
+    "topic": "A.050 held for sale asset measurement",
+    "cc": "B",
+    "correctText": "At the lower of its carrying amount or fair value less costs to sell",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "At historical cost with no further adjustment"
+      },
+      {
+        "letter": "C",
+        "text": "At fair value with gains recognized immediately"
+      },
+      {
+        "letter": "D",
+        "text": "At replacement cost regardless of fair value"
+      }
+    ],
+    "explLen": 124,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-BC-033",
+    "pack": "C",
+    "section": "B",
+    "stem": "Hollowell begins its annual master budget process. Which budget is typically prepared first because other budgets depend on it?",
+    "stemLen": 127,
+    "blooms": "Not set",
+    "topic": "B.033 sales budget starting point",
+    "cc": "A",
+    "correctText": "The sales budget",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "The selling and administrative expense budget"
+      },
+      {
+        "letter": "C",
+        "text": "The direct labor budget"
+      },
+      {
+        "letter": "D",
+        "text": "The capital expenditures budget"
+      }
+    ],
+    "explLen": 153,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-BC-096",
+    "pack": "C",
+    "section": "B",
+    "stem": "Underwood's controller notices a department consistently beats its budget by a wide margin every period. What should the controller investigate?",
+    "stemLen": 144,
+    "blooms": "Not set",
+    "topic": "B.096 budget slack detection",
+    "cc": "D",
+    "correctText": "Whether the department has built budgetary slack into its targets to make them easier to achieve",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Whether the company should receive a lower sales price"
+      },
+      {
+        "letter": "B",
+        "text": "Whether the company should discontinue budgeting entirely"
+      },
+      {
+        "letter": "C",
+        "text": "Whether external auditors approved the budget"
+      }
+    ],
+    "explLen": 140,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-CC-051",
+    "pack": "C",
+    "section": "C",
+    "stem": "Bellwood compares its processes and performance metrics against those of best-in-class organizations to identify improvement opportunities. What technique is being used?",
+    "stemLen": 169,
+    "blooms": "Not set",
+    "topic": "C.051 benchmarking best practices",
+    "cc": "C",
+    "correctText": "Benchmarking",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Standard costing"
+      },
+      {
+        "letter": "B",
+        "text": "Zero-based budgeting"
+      },
+      {
+        "letter": "D",
+        "text": "Variance analysis"
+      }
+    ],
+    "explLen": 183,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-DC-026",
+    "pack": "C",
+    "section": "D",
+    "stem": "Ashgrove's fixed costs are expected to remain constant only within a specified band of activity. What term describes this range?",
+    "stemLen": 128,
+    "blooms": "Not set",
+    "topic": "D.026 relevant range cost behavior",
+    "cc": "B",
+    "correctText": "The relevant range",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "The margin of safety"
+      },
+      {
+        "letter": "C",
+        "text": "The contribution margin ratio"
+      },
+      {
+        "letter": "D",
+        "text": "The break-even point"
+      }
+    ],
+    "explLen": 166,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-AD-017",
+    "pack": "D",
+    "section": "A",
+    "stem": "Quintwood sells products with a right of return and estimates that some sales will be returned. How should this be reflected in revenue recognition?",
+    "stemLen": 148,
+    "blooms": "Not set",
+    "topic": "A.017 revenue variable consideration",
+    "cc": "A",
+    "correctText": "Recognize revenue for the amount expected to be entitled to, net of an estimated returns allowance",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "Recognize the full sales amount with no adjustment for expec"
+      },
+      {
+        "letter": "C",
+        "text": "Defer all revenue recognition until the return period expire"
+      },
+      {
+        "letter": "D",
+        "text": "Recognize revenue only for units definitely not returned"
+      }
+    ],
+    "explLen": 162,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-BD-001",
+    "pack": "D",
+    "section": "B",
+    "stem": "Alderway compares its flexible budget for actual output to actual costs incurred. What does a favorable flexible budget variance indicate?",
+    "stemLen": 138,
+    "blooms": "Not set",
+    "topic": "B.001 flexible budget variance analysis",
+    "cc": "A",
+    "correctText": "Actual costs were lower than what the flexible budget predicted for the actual level of activity",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "Sales volume was higher than budgeted"
+      },
+      {
+        "letter": "C",
+        "text": "Actual output exceeded the original static budget target"
+      },
+      {
+        "letter": "D",
+        "text": "Fixed costs were entirely eliminated during the period"
+      }
+    ],
+    "explLen": 158,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-BD-043",
+    "pack": "D",
+    "section": "B",
+    "stem": "Ridgewell analyzes historical sales data and identifies a recurring pattern that repeats every four quarters. What time series component does this represent?",
+    "stemLen": 157,
+    "blooms": "Not set",
+    "topic": "B.043 time series forecasting components",
+    "cc": "C",
+    "correctText": "Seasonality",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "A random or irregular component"
+      },
+      {
+        "letter": "B",
+        "text": "A one-time outlier event"
+      },
+      {
+        "letter": "D",
+        "text": "A permanent structural break"
+      }
+    ],
+    "explLen": 134,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-CD-049",
+    "pack": "D",
+    "section": "C",
+    "stem": "Yorkhaven analyzes profitability by individual customer account rather than by product line, discovering that some large customers are actually unprofitable due to service costs. What technique is being used?",
+    "stemLen": 208,
+    "blooms": "Not set",
+    "topic": "C.049 customer profitability analysis",
+    "cc": "A",
+    "correctText": "Customer profitability analysis",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "Standard costing"
+      },
+      {
+        "letter": "C",
+        "text": "Sales mix variance analysis"
+      },
+      {
+        "letter": "D",
+        "text": "Zero-based budgeting"
+      }
+    ],
+    "explLen": 186,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-DD-013",
+    "pack": "D",
+    "section": "D",
+    "stem": "Mapleton applies more manufacturing overhead to production than it actually incurs during the year, resulting in overapplied overhead. If the amount is immaterial, how should it typically be treated?",
+    "stemLen": 199,
+    "blooms": "Not set",
+    "topic": "D.013 overapplied overhead disposition",
+    "cc": "A",
+    "correctText": "Closed to cost of goods sold, reducing the amount reported",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "Recorded as additional revenue for the period"
+      },
+      {
+        "letter": "C",
+        "text": "Prorated only to raw materials inventory"
+      },
+      {
+        "letter": "D",
+        "text": "Left on the balance sheet indefinitely as a liability"
+      }
+    ],
+    "explLen": 162,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1-DD-053",
+    "pack": "D",
+    "section": "D",
+    "stem": "Duskgrove sold 7,500 units for $44 per unit. Variable manufacturing cost was $18 per unit and variable selling/admin cost was $6 per unit. What total contribution margin should appear on the contribution-format income statement?",
+    "stemLen": 228,
+    "blooms": "Not set",
+    "topic": "D.053 contribution margin income statement format",
+    "cc": "A",
+    "correctText": "$150,000",
+    "distractors": [
+      {
+        "letter": "B",
+        "text": "$195,000"
+      },
+      {
+        "letter": "C",
+        "text": "$285,000"
+      },
+      {
+        "letter": "D",
+        "text": "$330,000"
+      }
+    ],
+    "explLen": 163,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1E-B-020",
+    "pack": "E",
+    "section": "B",
+    "stem": "Exponential smoothing uses which parameter?",
+    "stemLen": 43,
+    "blooms": "Not set",
+    "topic": "E-B.020 Exponential smoothing alpha",
+    "cc": "B",
+    "correctText": "Alpha",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Beta"
+      },
+      {
+        "letter": "C",
+        "text": "Delta"
+      },
+      {
+        "letter": "D",
+        "text": "Gamma"
+      }
+    ],
+    "explLen": 57,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1E-C-019",
+    "pack": "E",
+    "section": "C",
+    "stem": "The financial perspective of BSC asks:",
+    "stemLen": 38,
+    "blooms": "Not set",
+    "topic": "E-C.019 Financial perspective BSC",
+    "cc": "D",
+    "correctText": "How do we look to shareholders?",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "What must we excel at?"
+      },
+      {
+        "letter": "B",
+        "text": "Can we continue to improve?"
+      },
+      {
+        "letter": "C",
+        "text": "How do customers see us?"
+      }
+    ],
+    "explLen": 80,
+    "isCalc": false,
+    "itemType": "MCQ"
+  },
+  {
+    "qid": "P1E-C-096",
+    "pack": "E",
+    "section": "C",
+    "stem": "Ideal standards are also called:",
+    "stemLen": 32,
+    "blooms": "Not set",
+    "topic": "E-C.096 Ideal standards term",
+    "cc": "B",
+    "correctText": "Theoretical standards",
+    "distractors": [
+      {
+        "letter": "A",
+        "text": "Currently attainable standards"
+      },
+      {
+        "letter": "C",
+        "text": "Normal standards"
+      },
+      {
+        "letter": "D",
+        "text": "Practical standards"
+      }
+    ],
+    "explLen": 62,
+    "isCalc": false,
+    "itemType": "MCQ"
+  }
+]

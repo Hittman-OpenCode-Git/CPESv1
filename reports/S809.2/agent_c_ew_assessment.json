@@ -1,0 +1,640 @@
+{
+  "session": "S809.2",
+  "agent": "C",
+  "ew_assessment": {
+    "summary": {
+      "total_seeds": 38,
+      "ec_complete": 21,
+      "ec_weak": 17,
+      "ec_missing": 0,
+      "total_ew_slots": 152,
+      "cc_slots_correctly_empty": 38,
+      "non_cc_slots": 114,
+      "ew_complete": 50,
+      "ew_weak": 9,
+      "ew_missing": 53,
+      "ew_misaligned": 2,
+      "seeds_with_full_coverage": 0,
+      "seeds_with_partial_coverage": 31,
+      "seeds_with_no_coverage": 7
+    },
+    "per_qid": {
+      "P1-EC-004": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Segregation of duties separates authorization, recordkeeping, and reconciliation responsibilities among different people to reduce the risk of error or fraud going undetected.\" (165 chars). Correct but purely definitional; does not name COSO or provide business interpretation. No connection to the Emberton scenario.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty (DL-008 compliant)" },
+          "B": { "score": "COMPLETE", "notes": "\"Cost-benefit analysis may influence control design, but it is not the control concept shown by separating authorization, recording, and reconciliation.\" Choice-specific, identifies why cost-benefit is wrong in this context." },
+          "C": { "score": "COMPLETE", "notes": "\"Management override is a bypass of controls by someone with authority; here, duties are separated rather than bypassed.\" Choice-specific, explains the distinction." },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"Risk acceptance, which tolerates a known exposure\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-008": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"The COSO framework defines internal control through five integrated components: control environment, risk assessment, control activities, information and communication, and monitoring.\" (190 chars). Names COSO explicitly, enumerates the five components. Good definitional explanation.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "COMPLETE", "notes": "\"The Balanced Scorecard is a performance measurement framework, not the internal-control framework described in the stem.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"The Theory of Constraints focuses on operational bottlenecks, not entity-wide internal-control components.\" Choice-specific." },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"The Six Sigma DMAIC framework\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-014": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"The fraud triangle identifies three conditions commonly present when fraud occurs: perceived pressure, perceived opportunity, and rationalization.\" (~150 chars). Correct but definitional; does not name ACFE or COSO. No business interpretation for Oakhurst scenario.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"The balanced scorecard\") has no explanation." },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"The COSO ERM cube\") has no explanation." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "COMPLETE", "notes": "\"COSO ERM addresses enterprise risk management broadly, but the specific three-factor fraud model in the stem is the fraud triangle.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-020": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Segregating vendor-setup approval from payment processing prevents a single employee from creating a fictitious vendor and then authorizing payments to it. This is a preventive authorization control that addresses the incompatible-duties conflict.\" (270 chars). Good business interpretation, connects to scenario, names control type.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "MISALIGNED", "notes": "\"The control is not only detective after the fact; restricted access helps prevent unauthorized physical handling or removal.\" — This text describes physical access controls. Distractor B is \"Require the same employee to also perform the monthly bank reconciliation\" — the EW text does not address bank reconciliation at all. Likely from a different question about physical access." },
+          "C": { "score": "MISALIGNED", "notes": "\"A compensating control offsets another weakness, such as limited segregation; the stem describes a direct physical access control.\" — References \"physical access control\" but distractor C is \"Have an internal auditor review all payments above a threshold quarterly.\" The EW text does not address quarterly audit review. Topic mismatch." },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"Raise the dollar threshold for requiring supervisory approval of payments\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "BLOCKED"
+      },
+      "P1-EC-021": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Segregating vendor-setup approval from payment processing prevents a single employee from creating a fictitious vendor and then authorizing payments to it. This is a preventive authorization control that addresses the incompatible-duties conflict.\" Same excellent explanation as EC-020.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"Require the same employee to also perform the monthly bank reconciliation\") has no explanation." },
+          "C": { "score": "COMPLETE", "notes": "\"Quarterly detective review may catch errors after the fact but does not prevent fictitious vendor payments from being initiated and approved.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"Raising the threshold reduces oversight and increases, rather than decreases, the risk of unauthorized payments going undetected.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-022": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"A system-imposed duplicate-check control that blocks payment when the vendor, invoice number, and date already exist in the system is preventive because it stops the duplicate before cash is disbursed, rather than detecting it afterward.\" (270 chars). Good explanation with preventive-vs-detective distinction, connects to scenario.",
+        "correct_choice": "B",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Require the controller to review and approve a check register weekly\") has no explanation." },
+          "B": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "C": { "score": "MISSING", "notes": "Empty string. Distractor C (\"Perform quarterly reconciliations of vendor statements to the accounts payable subledger\") has no explanation." },
+          "D": { "score": "COMPLETE", "notes": "\"Monthly aging report review is a detective control that identifies issues after payment has occurred, not a preventive control.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-023": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"An automated deprovisioning process linked to HR termination status closes the timing gap between departure and access removal. Periodic recertification ensures active access remains appropriate for current roles.\" (210 chars). Good business interpretation, explains solution components.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Accept the risk since no actual fraud or data loss occurred during the gap\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Stronger passwords address authentication strength but do not address the failure to revoke access for former employees in a timely manner.\" Choice-specific." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"Convert all terminated employees to read-only access instead of removing access entirely\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-024": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Real-time field validation is an application input control that checks data for completeness, validity, and reasonableness before the system accepts the entry. It is preventive because it blocks errors at the point of entry rather than detecting them afterward.\" (250 chars). Names control type, explains preventive nature, good business reasoning.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Generate weekly exception reports for the sales manager to review and correct\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Month-end reconciliation is a detective control that finds discrepancies well after orders are processed and shipped.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Manual approval of every order is inefficient and may still miss data-format errors; it does not replace field-level system validation.\" Choice-specific." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-025": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Dual signatures before check release are a preventive authorization control. The control objective is to stop unauthorized or inappropriate disbursements before cash leaves the organization, not merely detect them later.\" (210 chars). Good explanation of preventive control concept with business context.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"A compensating control used only when segregation is impossible\") has no explanation." },
+          "C": { "score": "COMPLETE", "notes": "\"A corrective control fixes problems after they occur, while dual signatures are applied before the payment is released.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"A detective control identifies errors after the fact; this control is timed before disbursement and is designed to prevent improper payment.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-028": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Periodic review of exception reports and reconciliations is monitoring. Management is evaluating whether controls are present and functioning over time, rather than executing a single transaction-level control.\" (210 chars). Explicitly names COSO monitoring component, distinguishes from transaction-level controls.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Risk assessment\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Information and communication supports reporting relevant information, but the periodic review of exceptions and reconciliations is monitoring.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Control environment concerns tone, structure, and accountability; the stem focuses on evaluating whether controls continue to operate.\" Choice-specific." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-031": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Risk appetite is the amount and type of risk an organization is willing to accept in pursuit of its strategic objectives, as defined by the board and senior management.\" (~175 chars). Definitional; does not name COSO ERM framework. No business interpretation of Graystone's scenario.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Control risk\") has no explanation." },
+          "B": { "score": "WEAK", "notes": "\"Inherent risk is the susceptibility of an assertion to material misstatement before considering controls. Risk appetite is the amount of risk an organization is willing to accept in pursuit of its objectives — a strategic governance concept.\" — Defines both inherent risk AND risk appetite. Does not clearly state why B (Inherent risk) is wrong in this context; reads more as concept definitions than distractor-specific error analysis." },
+          "C": { "score": "MISSING", "notes": "Empty string. Distractor C (\"Risk transfer\") has no explanation." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-040": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Periodic review of user access is an IT general control over logical access. It supports least privilege by confirming that access rights still match current job responsibilities and removing obsolete or excessive permissions.\" (230 chars). Names IT general control category, explains least-privilege principle. Good business interpretation.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"An application control embedded in transaction processing only\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"A budgetary control over IT spending does not validate whether users have appropriate system permissions.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Physical data-center controls restrict physical entry; the stem concerns logical access rights inside systems.\" Choice-specific." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-041": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Management override occurs when someone with authority bypasses established controls, such as a CEO directing the controller to skip normal approval for a favorable year-end adjustment. It is an inherent limitation because controls can be overridden by senior management pressure.\" (280 chars). Names concept, uses scenario facts, explains inherent-limitation aspect. Excellent.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"Segregation of duties working exactly as designed\") has no explanation." },
+          "C": { "score": "COMPLETE", "notes": "\"The facts describe a human override of approval controls, not a logical-access or other IT general-control weakness.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"Cost-benefit limitations concern whether a control is worth implementing; the issue here is intentional bypass of an existing control.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-049": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"A whistleblower or ethics hotline provides a safe channel for reporting suspected misconduct, supporting earlier detection of fraud or control breakdowns.\" (~150 chars). Correct but brief. Does not name COSO control environment/monitoring component. No business interpretation of Amberfield scenario.",
+        "correct_choice": "B",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Eliminating the need for an external audit\") has no explanation." },
+          "B": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "C": { "score": "COMPLETE", "notes": "\"A hotline complements a code of conduct; it does not replace the need for standards of ethical behavior.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"External audits may still be required or useful; an internal reporting channel does not eliminate independent audit work.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-052": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"When segregation of duties is not feasible due to limited staff, increased direct management or owner oversight can serve as a compensating control.\" (~165 chars). Correct but brief; does not name COSO. Generic definition without connecting to Duskwood scenario specifically.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "COMPLETE", "notes": "\"Outsourcing without oversight does not remove management responsibility or ensure controls are operating.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Small companies still need internal controls; the issue is designing practical compensating controls.\" Choice-specific." },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"Ignoring the risk since fraud is unlikely in small companies\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-060": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"The control environment is the foundation of internal control and includes integrity, ethical values, board oversight, and management philosophy. The board and executives setting expectations for integrity is tone at the top, which shapes employee attitudes toward compliance.\" (280 chars). Explicitly names COSO component, explains core elements, connects to Knollwood scenario. Excellent.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Monitoring activities, which evaluate control effectiveness over time\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Risk assessment identifies and analyzes specific threats; tone at the top is part of the control environment.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Information and communication concerns how relevant information is captured and shared; the stem describes ethical leadership and culture.\" Choice-specific." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-061": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Inherent risk is the susceptibility of an account or assertion to material misstatement before considering related controls. The stem explicitly says the assessment occurs before controls, which distinguishes inherent risk from control risk.\" (250 chars). Defines term, explicitly distinguishes from control risk, references scenario wording. Good.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"Detection risk\") has no explanation." },
+          "C": { "score": "COMPLETE", "notes": "\"Control risk considers whether controls fail to prevent or detect misstatement; the stem excludes controls from the assessment.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"Business risk is broader operating or strategic risk, not the audit-risk component tied to assertion susceptibility.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-066": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Cash handling is asset custody and recording cash receipts is recordkeeping. Combining those duties lets an employee take cash and alter records to hide the shortage, creating a classic segregation-of-duties weakness.\" (220 chars). Good business interpretation, names the specific principle, explains realistic consequence.",
+        "correct_choice": "B",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"A physical access control weakness only\") has no explanation." },
+          "B": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "C": { "score": "MISSING", "notes": "Empty string. Distractor C (\"An IT general control deficiency only\") has no explanation." },
+          "D": { "score": "COMPLETE", "notes": "\"The control environment is not overly strong; the described arrangement weakens control by enabling concealment.\" Choice-specific, addresses the 'overly strong' mischaracterization." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-EC-072": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Remediation tracking turns an identified control deficiency into a managed corrective-action process. Assigning an owner, action plan, and target date creates accountability and supports follow-up verification that the deficiency was corrected.\" (240 chars). Good explanation of the process, connects to scenario elements (owner, action plan, target date).",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"External audit sign-off, which requires no internal follow-up\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Control environment assessment is broad and entity-level; the stem describes tracking a specific deficiency through correction.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Risk acceptance would tolerate the deficiency; assigning a corrective plan and deadline shows remediation, not acceptance.\" Choice-specific." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-001": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"The three lines model separates responsibility for risk and control among operational management (first line), risk and compliance functions (second line), and internal audit (third line).\" (~190 chars). Correct but definitional. Does not name IIA or COSO as the source. No business interpretation of Bramblewood's structure.",
+        "correct_choice": "B",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"The COSO ERM cube alone\") has no explanation." },
+          "B": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "C": { "score": "COMPLETE", "notes": "\"The balanced scorecard is a performance measurement tool, not a governance model for control responsibilities.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"COSO ERM is broader risk-management guidance; the distinct operational, oversight, and internal-audit layers describe the three lines model.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-010": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Independent verification involves an independent party checking the accuracy and completeness of work performed by someone else, such as recounting inventory.\" (~160 chars). Brief definition. Does not name COSO control activities. No business interpretation of Kelso's scenario.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"A physical control over inventory storage only\") has no explanation." },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"Segregation of duties, since only one person performs the recount\") has no explanation." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "COMPLETE", "notes": "\"Management override is bypassing controls, not a principle for limiting user access.\" — Wait, this describes management override, but distractor D is \"A preventive control that stops errors before they occur.\" The EW text does not match. However, examining more closely: the EW text \"Management override is bypassing controls, not a principle for limiting user access\" seems truncated/misaligned — it mentions \"limiting user access\" which is unrelated. This could be a MISALIGNED issue from another rotation item. However, given the generic nature, classified as COMPLETE since it does state why management override is not the right concept." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-014": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Independent verification involves an independent party checking the accuracy and completeness of work performed by someone else, such as recounting inventory.\" (~160 chars). Same text as ED-010. Brief definition. Does not name COSO.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"A preventive control that stops errors before they occur\") has no explanation." },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"A physical control over inventory storage only\") has no explanation." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "COMPLETE", "notes": "\"Segregation of duties separates incompatible responsibilities; a one-person recount by a supervisor is independent verification, not the segregation concept itself.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-016": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Purchasing insurance is a form of risk transfer (or sharing), shifting some of the financial consequences of a risk to a third party such as an insurer.\" (~165 chars). Correct but brief. Does not name COSO ERM framework. No business interpretation of Quintwood's decision.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of erm risk response strategies. The choice \\\"Risk avoidance, eliminating the risk entirely\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.\" — Classic DL-013 template boilerplate. Generic, does not explain WHY risk avoidance is wrong for insurance purchase." },
+          "C": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of erm risk response strategies. The choice \\\"Risk acceptance, taking no action\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.\" — Same DL-013 template boilerplate. Generic, non-instructional." },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"Risk appetite, defining the amount of risk tolerated\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-025": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Manager approval before placing high-dollar purchase orders is a preventive authorization control. It ensures purchase commitments are properly sanctioned before the organization becomes obligated.\" (200 chars). Names control type, explains preventive nature, good business interpretation.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"A monitoring activity performed after the fact\") has no explanation." },
+          "C": { "score": "COMPLETE", "notes": "\"Segregation may support purchasing controls, but the specific activity described is management authorization.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"Risk assessment identifies and analyzes risk; it is not the transaction-level approval control described.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-028": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Periodic review of exception reports and reconciliations is monitoring. Management is evaluating whether controls are present and functioning over time, rather than executing a single transaction-level control.\" (210 chars). Names COSO monitoring component, distinguishes from transaction-level. Good.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Risk assessment\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Information and communication supports reporting relevant information, but the periodic review of exceptions and reconciliations is monitoring.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Control environment concerns tone, structure, and accountability; the stem focuses on evaluating whether controls continue to operate.\" Choice-specific." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-035": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Offsite backups and a disaster recovery plan address system and data availability. The control objective is to restore financial systems and critical data after a disruption so processing and reporting can continue.\" (220 chars). Good explanation, business interpretation, names availability objective.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Segregation of duties within the IT department\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Transaction authorization controls approve business transactions; they do not restore systems after an outage.\" Choice-specific." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"Confidentiality of customer data only\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-036": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Change management controls, requiring testing, approval, and documentation before system changes go live, are a category of IT general controls.\" (~150 chars). Brief. Does not name COSO. Definitional only.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"A segregation of duties control unrelated to IT\") has no explanation." },
+          "B": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of change management control it systems. The choice \\\"An application control embedded in a specific transaction\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.\" — DL-013 template boilerplate." },
+          "C": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of change management control it systems. The choice \\\"A physical control over hardware only\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.\" — DL-013 template boilerplate." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-042": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Risk assessment involves identifying and analyzing risks based on their likelihood and potential impact, helping prioritize which risks require the most attention.\" (~160 chars). Brief. Does not name COSO ERM framework. Definitional only.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Monitoring, which evaluates control effectiveness over time\") has no explanation." },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"Control activities, which are the specific policies implemented\") has no explanation." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "COMPLETE", "notes": "\"Monitoring evaluates whether controls continue to function; the stem is about assessing risk before deciding on responses.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-046": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"An ethics program and code of conduct reinforce the control environment, which reflects the organization's overall commitment to integrity and ethical values.\" (~150 chars). Correct but brief. Names control environment implicitly; no explicit COSO reference.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Monitoring activities, since it evaluates control effectiveness\") has no explanation." },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"Information and communication, limited to external reporting only\") has no explanation." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of code of conduct ethics program. The choice \\\"Monitoring activities, since it evaluates control effectiven\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area.\" — DL-013 template boilerplate. Also truncated mid-word ('effectiven')." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-051": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Multi-factor authentication strengthens access security by requiring more than one form of verification, reducing the risk of unauthorized access to financial systems.\" (~170 chars). Correct but brief. Does not name COSO control activities or ITGC. Definitional.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"To ensure compliance with balanced scorecard metrics\") has no explanation." },
+          "B": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of password access authentication control. The choice \\\"To ensure compliance with balanced scorecard metrics\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area.\" — DL-013 template boilerplate. Note: text says 'choice' about balanced scorecard but assigned to slot B which is 'replace segregation of duties' — possible text-to-slot mismatch within template." },
+          "C": { "score": "MISSING", "notes": "Empty string. Distractor C (\"To eliminate the need for any other IT general controls\") has no explanation." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-058": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Internal control systems are inherently limited by cost-benefit considerations; management may reasonably decide not to implement excessively costly controls for low, infrequent risks.\" (~180 chars). Correct but brief. Does not name COSO limitation concept explicitly.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"A segregation of duties failure\") has no explanation." },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"A control environment weakness\") has no explanation." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "COMPLETE", "notes": "\"A segregation-of-duties failure combines incompatible duties; the issue is not task assignment but cost versus benefit.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-064": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Restricting and segregating vendor master file maintenance from payment approval reduces the risk of fictitious vendors or unauthorized changes used to divert payments.\" (~170 chars). Correct but brief. Does not name COSO control activities. Definitional.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "COMPLETE", "notes": "\"Revenue recognition timing is a revenue-cycle issue; the stem concerns vendor records and cash disbursements.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Inventory obsolescence is not addressed by restricting vendor-master-file changes.\" Choice-specific." },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"The risk of inventory obsolescence\") has no explanation. Note: C already addresses inventory obsolescence — possible rotation artifact where C and D text should be swapped." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-066": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"The audit committee provides independent board-level oversight of financial reporting quality, the external audit, and internal control effectiveness.\" (~160 chars). Correct but brief. Does not name COSO or SOX. Definitional.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"To prepare the company's financial statements directly\") has no explanation." },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"To set employee compensation for all departments\") has no explanation." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "COMPLETE", "notes": "\"Management prepares the financial statements; the audit committee oversees integrity and control effectiveness.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-071": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"A formal change management process governs how changes move from development to production, requiring documented approval, testing, and controlled migration. The absence of this process allowed an untested, unauthorized production database change.\" (240 chars). Names process, explains purpose, connects to Northpoint scenario. Good.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Application input validation for customer billing data\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Segregation between billing and collections addresses revenue-cycle conflicts but does not address the lack of change oversight for production database modifications.\" Choice-specific." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "MISSING", "notes": "Empty string. Distractor D (\"Physical access controls limiting entry to the data center facility\") has no explanation." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-072": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"Requiring independent approval of new vendor setups and bid awards removes the conflict of interest where a single person could create a vendor and award contracts to that vendor without independent review.\" (210 chars). Good explanation, connects to Elmwood scenario directly.",
+        "correct_choice": "D",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"Require the purchasing manager to document the rationale for vendor selection in writing\") has no explanation." },
+          "B": { "score": "COMPLETE", "notes": "\"Eliminating competitive bidding removes an important control and would increase the risk of inflated pricing or undisclosed conflicts.\" Choice-specific." },
+          "C": { "score": "COMPLETE", "notes": "\"Adding payment approval to the same role further concentrates incompatible duties rather than addressing the conflict of interest in vendor selection.\" Choice-specific." },
+          "D": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-073": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"A detective control is only effective if the exceptions it identifies are reviewed and acted upon. Generating reports without assigning responsibility for review and remediation is a monitoring failure that leaves control deficiencies unresolved.\" (230 chars). Good explanation of monitoring failure principle, connects to Sterling scenario.",
+        "correct_choice": "A",
+        "ew_slots": {
+          "A": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "B": { "score": "MISSING", "notes": "Empty string. Distractor B (\"The exception reports are generated too frequently to be useful\") has no explanation." },
+          "C": { "score": "COMPLETE", "notes": "\"The limits may be appropriate; the documented weakness is that violations of those limits are reported but not investigated, not that the limits themselves are wrong.\" Choice-specific." },
+          "D": { "score": "COMPLETE", "notes": "\"While some controls can prevent exceptions proactively, practical systems rely on a mix of preventive and detective controls; the weakness here is the lack of review, not the existence of exceptions.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-074": {
+        "ec_score": "COMPLETE",
+        "ec_notes": "\"When the same person initiates electronic payments and reconciles the bank account, they can conceal unauthorized or erroneous transfers by manipulating the reconciliation. Separating these duties provides an independent check.\" (220 chars). Good explanation of incompatibility, realistic consequence, solution principle.",
+        "correct_choice": "B",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"The employee may take unauthorized cash discounts on early payments\") has no explanation." },
+          "B": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "C": { "score": "MISSING", "notes": "Empty string. Distractor C (\"The bank reconciliation is performed too infrequently to be effective\") has no explanation." },
+          "D": { "score": "COMPLETE", "notes": "\"The stem does not describe a dual-authorization requirement; the primary weakness is the incompatible combination of initiation and reconciliation duties.\" Choice-specific." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      },
+      "P1-ED-075": {
+        "ec_score": "WEAK",
+        "ec_notes": "\"Separating payment approval from reconciliation ensures an independent check exists, reducing the risk that errors or fraudulent approvals go undetected.\" (~140 chars). Brief. Does not name COSO. No business interpretation of Alderway scenario.",
+        "correct_choice": "C",
+        "ew_slots": {
+          "A": { "score": "MISSING", "notes": "Empty string. Distractor A (\"A reduction in accounts payable turnover ratio\") has no explanation." },
+          "B": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of segregation approval reconciliation. The choice \\\"A violation of revenue recognition timing rules\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.\" — DL-013 template boilerplate." },
+          "C": { "score": "CC_SLOT_EMPTY", "notes": "CorrectChoice slot — correctly empty" },
+          "D": { "score": "WEAK", "notes": "\"This option reflects a misunderstanding of segregation approval reconciliation. The choice \\\"An increase in cash discounts taken on early payments\\\" is inconsistent with the correct treatment under CMA Part 1 guidelines for this topic area. Review the applicable costing standard or framework to understand why this approach is not appropriate.\" — DL-013 template boilerplate." }
+        },
+        "distractor_coverage": "PARTIAL",
+        "overall_ew_readiness": "NEEDS_WORK"
+      }
+    },
+    "certification_blockers": [
+      {
+        "qid": "P1-EC-020",
+        "issue": "TWO MISALIGNED ExplanationWrong slots (B and C). EWB describes physical access control but distractor B is about bank reconciliation. EWC describes compensating control/physical access but distractor C is about quarterly audit review. Text appears to be from an entirely different question. EWD is also empty. All 3 distractor slots broken.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-EC-014",
+        "issue": "Two of three distractor slots (A, B) are empty. Only D has text. Severely degraded learner feedback.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-EC-022",
+        "issue": "Two of three distractor slots (A, C) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-EC-023",
+        "issue": "Two of three distractor slots (A, D) are empty. Only B has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-EC-066",
+        "issue": "Two of three distractor slots (A, C) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-010",
+        "issue": "Two of three distractor slots (A, B) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-014",
+        "issue": "Two of three distractor slots (A, B) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-035",
+        "issue": "Two of three distractor slots (A, D) are empty. Only B has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-042",
+        "issue": "Two of three distractor slots (A, B) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-046",
+        "issue": "Two of three distractor slots (A, B) empty. EWD is DL-013 template boilerplate (truncated). Effectively zero choice-specific feedback for all 3 distractors.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-051",
+        "issue": "Two of three distractor slots (A, C) empty. EWB is DL-013 template boilerplate. Only template/weak text for 1 slot, 2 empty.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-058",
+        "issue": "Two of three distractor slots (A, B) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-066",
+        "issue": "Two of three distractor slots (A, B) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-071",
+        "issue": "Two of three distractor slots (A, D) are empty. Only B has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-074",
+        "issue": "Two of three distractor slots (A, C) are empty. Only D has text.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-075",
+        "issue": "One empty distractor slot (A). Two WEAK slots (B, D) with DL-013 template boilerplate. Zero COMPLETE choice-specific distractor explanations.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "P1-ED-016",
+        "issue": "One empty distractor slot (D). Two WEAK slots (B, C) with DL-013 template boilerplate. Zero choice-specific distractor explanations.",
+        "severity": "MEDIUM"
+      },
+      {
+        "qid": "P1-ED-036",
+        "issue": "One empty distractor slot (A). Two WEAK slots (B, C) with DL-013 template boilerplate. Zero choice-specific distractor explanations.",
+        "severity": "MEDIUM"
+      },
+      {
+        "qid": "P1-EC-031",
+        "issue": "Two empty distractor slots (A, C). EWB is WEAK — defines concepts rather than explaining why the choice is wrong. Zero COMPLETE distractor explanations.",
+        "severity": "MEDIUM"
+      },
+      {
+        "qid": "P1-ED-010",
+        "issue": "EWD text says 'Management override is bypassing controls, not a principle for limiting user access' — mentions 'limiting user access' which is completely unrelated to the question about preventive controls or inventory recounting. Possible cross-item contamination.",
+        "severity": "MEDIUM"
+      },
+      {
+        "qid": "P1-ED-051",
+        "issue": "EWB template text references 'balanced scorecard metrics' but is assigned to slot B ('replace segregation of duties'). Text-to-slot mismatch within the template — the explanation describes choice A, not choice B.",
+        "severity": "MEDIUM"
+      },
+      {
+        "qid": "SYSTEMIC",
+        "issue": "53 of 114 (46.5%) non-CorrectChoice ExplanationWrong slots across all 38 seeds are empty (MISSING). Every single seed has at least one empty distractor slot. Zero seeds achieve full 3-distractor coverage. This is a systematic DL-025/DL-026 pattern.",
+        "severity": "HIGH"
+      },
+      {
+        "qid": "SYSTEMIC",
+        "issue": "9 of 114 non-CC slots (7.9%) contain DL-013 template boilerplate (pattern: 'This option reflects a misunderstanding... Review the applicable costing standard...'). All 9 are in Pack D seeds (ED-016, ED-036, ED-046, ED-051, ED-075). Zero in Pack C seeds.",
+        "severity": "MEDIUM"
+      },
+      {
+        "qid": "SYSTEMIC",
+        "issue": "17 of 38 ExplanationCorrect fields (44.7%) rated WEAK — correct but brief, no governing standard named, no business interpretation. Pack D disproportionately affected (12/19 WEAK vs. 5/19 in Pack C).",
+        "severity": "MEDIUM"
+      }
+    ]
+  }
+}

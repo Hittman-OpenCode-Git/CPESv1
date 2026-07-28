@@ -1,0 +1,82 @@
+{
+  "session": "523",
+  "type": "CAQS_CERTIFICATION_WAVE",
+  "prepared_by": "S522 Post-Audit",
+  "timestamp": "2026-07-26T11:55:00Z",
+  "purpose": "Ready-to-execute S523 work package for MIGRATED_CASE_BASE_D Wave 1",
+
+  "target": {
+    "array": "MIGRATED_CASE_BASE_D",
+    "file": "scored_cases4.js",
+    "cases": ["CASE-D1", "CASE-D2", "CASE-D3"],
+    "items": 15,
+    "case_ids_confirm": "CASE-D1 through CASE-D15 (15 cases total across entire array)",
+    "pre_state": "0/75 Certified, all 15 cases Unprocessed",
+    "has_difficulty": true
+  },
+
+  "scope": {
+    "authorized_edits": [
+      "Expand thin explanations if < 100 chars or insufficient for cognitive level",
+      "Add safe authoritative citations (ASC, COSO, standard costing principles)",
+      "Add distractor rationale for select/multi/match items",
+      "Certify items that pass CAQS §1.6",
+      "Certify case-level state if all 5 child items pass"
+    ],
+    "unauthorized": [
+      "Answer keys", "Prompts", "Exhibits", "Choices",
+      "Scoring logic", "May files", "MCQ pack files",
+      "Non-target cases", "Other arrays"
+    ]
+  },
+
+  "caqs_dimensions_required": [
+    "D1 — Answer-key accuracy (independent recalculation of all numeric items)",
+    "D2 — Explanation sufficiency (name principle, show work, business interpretation)",
+    "D3 — Distractor rationale (select/multi items)",
+    "D4 — Reference alignment (safe citations, no fabricated paragraphs)",
+    "D5 — Case realism and exhibit use",
+    "D6 — Metadata readiness"
+  ],
+
+  "batch_discipline": {
+    "batch_1": "CASE-D1 (5 items) — audit + uplift + certify",
+    "batch_2": "CASE-D2 (5 items) — audit + uplift + certify",
+    "batch_3": "CASE-D3 (5 items) — audit + uplift + certify"
+  },
+
+  "stop_conditions": [
+    "Pre-flight tests fail",
+    "scored_cases4.js cannot be parsed",
+    "MIGRATED_CASE_BASE_D not found",
+    "Target case item count != 5",
+    "Any answer key appears wrong or uncertain",
+    "Any item requires prompt/exhibit/choice repair",
+    "Post-flight tests fail",
+    "May/700-series/scoring files change"
+  ],
+
+  "validation_commands": [
+    "node scripts/test_governance_guard.js",
+    "node scripts/test_session_recovery.js",
+    "Function constructor parse of scored_cases4.js → MIGRATED_CASE_BASE_D"
+  ],
+
+  "governance_checks": [
+    "Pre-flight: 32/32 PASS minimum",
+    "Post-flight: 32/32 PASS minimum",
+    "No May files changed",
+    "No 700-series pack files changed",
+    "No scoring/runtime files changed",
+    "REVISION_HISTORY.md updated"
+  ],
+
+  "estimated_effort": {
+    "items": 15,
+    "sessions": 1,
+    "difficulty_metadata": "ALREADY PRESENT — no Difficulty additions needed",
+    "explanation_uplift": "TBD — depends on current quality"
+  },
+
+  "note": "MIGRATED_CASE_BASE_D items already have Difficulty metadata per S522 audit. Unlike ENHANCED arrays, no per-item Difficulty work is needed. Focus is on CAQS review and certification only."
+}

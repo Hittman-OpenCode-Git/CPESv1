@@ -1,0 +1,410 @@
+{
+  "session": "SESSION537",
+  "timestamp": "2026-07-26T18:15:00Z",
+  "totalItems": 42,
+  "cases": [
+    {
+      "CaseID": "CBQ-C2",
+      "Title": "Investment Center Performance and Transfer Pricing",
+      "items": [
+        {
+          "ItemID": "CBQ-C2-Q1",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1494,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q2",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1564,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q3",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1593,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q4",
+          "Type": "multi",
+          "expBefore": null,
+          "expAfter": 1777,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q5",
+          "Type": "fill",
+          "expBefore": null,
+          "expAfter": 1479,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C2-Q6",
+          "Type": "match",
+          "expBefore": null,
+          "expAfter": 1640,
+          "uplift": null,
+          "upliftPct": null
+        }
+      ],
+      "caseAvgBefore": 0,
+      "caseAvgAfter": 1591
+    },
+    {
+      "CaseID": "CBQ-D2",
+      "Title": "Process Costing, Lean Waste, and Bottleneck Analysis",
+      "items": [
+        {
+          "ItemID": "CBQ-D2-Q1",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1292,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q2",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1373,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q3",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1385,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q4",
+          "Type": "multi",
+          "expBefore": null,
+          "expAfter": 1356,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q5",
+          "Type": "fill",
+          "expBefore": null,
+          "expAfter": 1050,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-D2-Q6",
+          "Type": "match",
+          "expBefore": null,
+          "expAfter": 1332,
+          "uplift": null,
+          "upliftPct": null
+        }
+      ],
+      "caseAvgBefore": 0,
+      "caseAvgAfter": 1298
+    },
+    {
+      "CaseID": "CBQ-E2",
+      "Title": "IT General Controls, Change Management, and Access Review",
+      "items": [
+        {
+          "ItemID": "CBQ-E2-Q1",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1305,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q2",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1032,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q3",
+          "Type": "multi",
+          "expBefore": null,
+          "expAfter": 1319,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q4",
+          "Type": "fill",
+          "expBefore": null,
+          "expAfter": 1245,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q5",
+          "Type": "match",
+          "expBefore": null,
+          "expAfter": 1138,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-E2-Q6",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1360,
+          "uplift": null,
+          "upliftPct": null
+        }
+      ],
+      "caseAvgBefore": 0,
+      "caseAvgAfter": 1233
+    },
+    {
+      "CaseID": "CBQ-A3",
+      "Title": "Inventory, ARO, Subsequent Events, and Cash Classification",
+      "items": [
+        {
+          "ItemID": "CBQ-A3-Q1",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1131,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q2",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1224,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q3",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1345,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q4",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1098,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q5",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1273,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-A3-Q6",
+          "Type": "match",
+          "expBefore": null,
+          "expAfter": 1227,
+          "uplift": null,
+          "upliftPct": null
+        }
+      ],
+      "caseAvgBefore": 0,
+      "caseAvgAfter": 1216
+    },
+    {
+      "CaseID": "CBQ-B3",
+      "Title": "Scenario Forecast, Expected Value, and Working Capital Plan",
+      "items": [
+        {
+          "ItemID": "CBQ-B3-Q1",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1162,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q2",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1078,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q3",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1124,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q4",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1042,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q5",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1044,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-B3-Q6",
+          "Type": "multi",
+          "expBefore": null,
+          "expAfter": 1176,
+          "uplift": null,
+          "upliftPct": null
+        }
+      ],
+      "caseAvgBefore": 0,
+      "caseAvgAfter": 1104
+    },
+    {
+      "CaseID": "CBQ-C3",
+      "Title": "Balanced Scorecard and Operating Performance Review",
+      "items": [
+        {
+          "ItemID": "CBQ-C3-Q1",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1120,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q2",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1147,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q3",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1223,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q4",
+          "Type": "multi",
+          "expBefore": null,
+          "expAfter": 1234,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q5",
+          "Type": "match",
+          "expBefore": null,
+          "expAfter": 1289,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-C3-Q6",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1399,
+          "uplift": null,
+          "upliftPct": null
+        }
+      ],
+      "caseAvgBefore": 0,
+      "caseAvgAfter": 1235
+    },
+    {
+      "CaseID": "CBQ-F2",
+      "Title": "Cybersecurity, RPA, and Finance Automation Governance",
+      "items": [
+        {
+          "ItemID": "CBQ-F2-Q1",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1035,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q2",
+          "Type": "numeric",
+          "expBefore": null,
+          "expAfter": 1135,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q3",
+          "Type": "select",
+          "expBefore": null,
+          "expAfter": 1130,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q4",
+          "Type": "multi",
+          "expBefore": null,
+          "expAfter": 1219,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q5",
+          "Type": "fill",
+          "expBefore": null,
+          "expAfter": 1050,
+          "uplift": null,
+          "upliftPct": null
+        },
+        {
+          "ItemID": "CBQ-F2-Q6",
+          "Type": "match",
+          "expBefore": null,
+          "expAfter": 1191,
+          "uplift": null,
+          "upliftPct": null
+        }
+      ],
+      "caseAvgBefore": 0,
+      "caseAvgAfter": 1127
+    }
+  ],
+  "summary": {
+    "beforeAvg": 805,
+    "afterAvg": 2092,
+    "beforeMin": 24,
+    "afterMin": 1034,
+    "beforeMax": 3530,
+    "afterMax": 5186,
+    "avgUplift": 1287,
+    "avgUpliftPct": 160,
+    "note": "Before/after comparison uses aggregate explanation lengths extracted via regex from pre-S537 backup scored_cases.js.bak-20260726172400 (327KB) vs current file (456KB). Covers all 90 items across all cases. Uplift is primarily from prior S537 wave work; this session's contribution was removing 7 duplicate RevisionHistory entries per case."
+  }
+}

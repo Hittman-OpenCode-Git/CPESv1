@@ -1,0 +1,26 @@
+{
+  "generated": "2026-07-26",
+  "session": "S302",
+  "title": "Non-Discriminating Distractor Audit",
+  "summary": {
+    "total_non_discriminating": 839,
+    "by_category": {
+      "empty_explanation_wrong": { "count": 839, "severity": "Medium-High", "impact": "Learner receives no feedback when selecting this distractor. Does not discriminate between misconception-holders and guessers." },
+      "boilerplate_ew": { "count": 184, "severity": "Medium", "impact": "Generic template text does not teach the specific misconception. Discrimination value near zero." },
+      "very_short_choice": { "count": 2667, "severity": "Low", "impact": "Short choice texts (< 20 chars) may be overly telegraphic but do not necessarily reduce discrimination. Numbers and single terms can be effective." }
+    }
+  },
+  "severity_ranking": [
+    { "rank": 1, "severity": "Critical", "category": "Case bank completely empty EW (384 of 390 slots)", "affected_items": 318, "remediation": "Author all EW fields for enhanced case banks. Highest priority." },
+    { "rank": 2, "severity": "Critical", "category": "DL-005 100% identical distractors", "affected_items": 28, "remediation": "Rewrite identical distractors to target different misconceptions." },
+    { "rank": 3, "severity": "High", "category": "Absolutist language as distractor giveaway", "affected_items": 12, "remediation": "Replace 'always'/'never'/'in all cases' with nuanced alternatives per S90 rewrite proposals." },
+    { "rank": 4, "severity": "Medium", "category": "Pack C/D Sections E-F empty EW slots (447 slots)", "affected_items": 150, "remediation": "Fill empty EW for unprocessed sections as part of certification preparation." },
+    { "rank": 5, "severity": "Medium", "category": "DL-013 boilerplate (184 EW fields)", "affected_items": 97, "remediation": "Replace template text with choice-specific explanations. Batch-able editorial work." }
+  ],
+  "discrimination_effectiveness": {
+    "highly_discriminating": "57.2% of distractors (Strong tier) — require content knowledge to eliminate",
+    "moderately_discriminating": "27.6% (Acceptable tier) — some test-taking strategies can help",
+    "weakly_discriminating": "11.6% (Weak tier) — eliminable by surface-level strategies",
+    "non_discriminating": "3.5% (Rewrite Needed) — no content knowledge required to eliminate"
+  }
+}

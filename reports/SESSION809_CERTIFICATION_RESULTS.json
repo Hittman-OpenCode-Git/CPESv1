@@ -1,0 +1,392 @@
+{
+  "session": "S809",
+  "role": "Agent F + Agent P — Certification Board",
+  "date": "2026-07-26",
+  "scope": {
+    "total_seeds": 38,
+    "pack_c": 19,
+    "pack_d": 19
+  },
+  "certification_standard": "CAQS v1.0 §1.7 — Six-dimension verification at HIGH confidence + user approval",
+  "overall_decision": "ALL 38 SEEDS — HOLD. Certification blocked by Gate 2 FAIL (53 empty EW slots, 8 DL-013 boilerplate slots, 12 weak ECs).",
+
+  "certification_summary": {
+    "CERTIFY": 0,
+    "HOLD": 38,
+    "ESCALATE": 0,
+    "blocking_reason": "Gate 2 — Explanation Quality & EW Integrity FAIL: all 38 seeds lack sufficient distractor explanations for direct learner delivery"
+  },
+
+  "items": [
+    {
+      "qid": "P1-EC-004",
+      "pack": "C",
+      "topic": "E.004 segregation of duties design",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Technically correct (Agent C PASS). 2 of 3 non-CC EW slots empty (B, D). EW_A and EW_C have adequate text. EC score 5/10 — needs COSO reference and business interpretation.",
+      "remediation": "Fill EW_B and EW_D with choice-specific distractor explanations. Enrich EC with COSO P10-P12 citation and business-context framing."
+    },
+    {
+      "qid": "P1-EC-008",
+      "pack": "C",
+      "topic": "E.008 coso internal control framework",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Technically correct. Exemplary EC (312 chars, 9/10). 2 of 3 non-CC EW slots empty (A, D). EW_B and EW_C are already excellent.",
+      "remediation": "Fill EW_A and EW_D. Metadata: resolve Difficulty='Moderate'/DiffScore=2 contradiction. Agent H recommends CL: Understand→Remember."
+    },
+    {
+      "qid": "P1-EC-014",
+      "pack": "C",
+      "topic": "E.014 fraud triangle elements",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Worst-covered seed. 2 of 3 non-CC EW slots empty (A, B). Only EW_D has text. EC is bare definition (150 chars, 4/10) — no business interpretation, no exam trap. DL-031 inflation: Moderate→Easy. CL: Understand→Remember.",
+      "remediation": "Fill EW_A and EW_B. Enrich EC substantially (add business context, fraud detection implications, COSO P8 linkage). Metadata recalibration: Easy(1), Remember."
+    },
+    {
+      "qid": "P1-EC-020",
+      "pack": "C",
+      "topic": "E.020 physical controls over assets",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Technically correct. Good EC (269 chars, 7/10). 2 of 3 non-CC EW slots empty (A, D). EW_B and EW_C already good.",
+      "remediation": "Fill EW_A and EW_D. Add explicit COSO control-activity mapping to EC."
+    },
+    {
+      "qid": "P1-EC-021",
+      "pack": "C",
+      "topic": "E.021 segregation of duties vendor setup and payment",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Strong scenario item (Apply level, correctly calibrated). Good EC (247 chars, 8/10). 1 of 3 non-CC EW slots empty (B). EW_C and EW_D are substantively correct.",
+      "remediation": "Fill EW_B only. Minor EC enrichment: add COSO component reference."
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "C",
+      "topic": "E.022 preventive vs detective duplicate payment control",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Good EC (237 chars, 7/10). 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. Agent H: CL Understand→Apply (understated).",
+      "remediation": "Fill EW_A and EW_C. Metadata: CL→Apply. EC: add COSO P10-P12 control-activity reference."
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "C",
+      "topic": "E.023 IT access control terminated employee deprovisioning",
+      "cc": "C",
+      "decision": "HOLD",
+      "rationale": "Realistic IT control scenario. Good EC (213 chars, 7/10). 2 of 3 non-CC EW slots empty (A, D). Only EW_B has text. Agent H: CL Understand→Apply (understated).",
+      "remediation": "Fill EW_A and EW_D. Metadata: CL→Apply. EC: add COSO component mapping."
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "C",
+      "topic": "E.024 application input control sales order validation",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Strong EC (261 chars, 8/10). 1 of 3 non-CC EW slots empty (A). EW_B and EW_C are well done. Agent H: CL Understand→Apply (understated).",
+      "remediation": "Fill EW_A only. Metadata: CL→Apply. Lowest remediation effort in pool."
+    },
+    {
+      "qid": "P1-EC-025",
+      "pack": "C",
+      "topic": "E.025 preventive vs detective controls",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Well-calibrated Apply-level item. Good EC (220 chars, 7/10). 1 of 3 non-CC EW slots empty (B). EW_C and EW_D have good distinction text.",
+      "remediation": "Fill EW_B only. EC: add explicit COSO preventive control classification."
+    },
+    {
+      "qid": "P1-EC-028",
+      "pack": "C",
+      "topic": "E.028 bank reconciliation control",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Strong EC (280 chars, 8/10). 1 of 3 non-CC EW slots empty (A). EW_B and EW_C are good. Agent H: CL Apply→Understand (overstated).",
+      "remediation": "Fill EW_A only. Metadata: CL→Understand."
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "C",
+      "topic": "E.031 erm risk appetite",
+      "cc": "C",
+      "decision": "HOLD",
+      "rationale": "Definition-only EC (168 chars, 5/10). 2 of 3 non-CC EW slots empty (A, D). Only EW_B has text. EC lacks business context and ERM framework depth. Agent H: CL Understand→Remember.",
+      "remediation": "Fill EW_A and EW_D. Enrich EC with COSO ERM (2017) citation, risk tolerance distinction, and business interpretation. Metadata: CL→Remember. Note: minor StudyLinks citation issue (COSO IC vs COSO ERM)."
+    },
+    {
+      "qid": "P1-EC-040",
+      "pack": "C",
+      "topic": "E.040 it general controls access",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Good EC (226 chars, 7/10). 1 of 3 non-CC EW slots empty (A). EW_B and EW_C good quality.",
+      "remediation": "Fill EW_A only. DL-031 flag (Moderate→Easy recommended)."
+    },
+    {
+      "qid": "P1-EC-041",
+      "pack": "C",
+      "topic": "E.041 management override risk",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Strong scenario-grounded EC (280 chars, 8/10). 1 of 3 non-CC EW slots empty (B). Agent H: CL Apply→Understand (overstated — concept recognition, not procedure execution). Metadata: Difficulty='Easy' with Score=3 mismatch.",
+      "remediation": "Fill EW_B only. Metadata: CL→Understand, resolve Easy/3 mismatch (recommend Moderate-Easy/2)."
+    },
+    {
+      "qid": "P1-EC-049",
+      "pack": "C",
+      "topic": "E.049 whistleblower hotline purpose",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Good EC (266 chars, 7/10). 1 of 3 non-CC EW slots empty (B). EW_C and EW_D strong. DL-031: Moderate→Easy recommended (obvious distractors). Metadata: Easy/2 mismatch.",
+      "remediation": "Fill EW_B only. Metadata: resolve Easy/DiffScore=2 (recommend Easy/1)."
+    },
+    {
+      "qid": "P1-EC-052",
+      "pack": "C",
+      "topic": "E.052 compensating control small business",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Strong practical EC (270 chars, 8/10). 1 of 3 non-CC EW slots empty (A). Agent H: CL Understand→Apply (understated).",
+      "remediation": "Fill EW_A only. Metadata: CL→Apply."
+    },
+    {
+      "qid": "P1-EC-060",
+      "pack": "C",
+      "topic": "E.060 control environment tone at top",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Strong EC (276 chars, 8/10). 1 of 3 non-CC EW slots empty (A). Agent H: CL Understand→Remember. Metadata: Moderate/2 mismatch.",
+      "remediation": "Fill EW_A only. Metadata: CL→Remember, resolve Moderate/DiffScore=2 (recommend Moderate/3 or re-label to Moderate-Easy/2)."
+    },
+    {
+      "qid": "P1-EC-061",
+      "pack": "C",
+      "topic": "E.061 inherent risk vs control risk",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Strong EC (241 chars, 8/10). 1 of 3 non-CC EW slots empty (B). Good pedagogical approach (teaches stem-reading clues). Agent H: CL Understand→Remember.",
+      "remediation": "Fill EW_B only. Metadata: CL→Remember."
+    },
+    {
+      "qid": "P1-EC-066",
+      "pack": "C",
+      "topic": "E.066 segregation cash custody recording",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Adequate EC (217 chars, 6/10). 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. Correctly labeled Easy (1) — one of few accurately calibrated items. Metadata: Moderate label with Score=1 — score is correct but label is wrong.",
+      "remediation": "Fill EW_A and EW_C. EC enrichment: add COSO control-activity reference and concealment-risk elaboration. Metadata: fix Moderate→Easy label to match Score=1."
+    },
+    {
+      "qid": "P1-EC-072",
+      "pack": "C",
+      "topic": "E.072 remediation of control deficiency",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Strong EC (244 chars, 8/10). 1 of 3 non-CC EW slots empty (A). Agent H: CL Understand→Remember. Metadata: Easy/3 mismatch.",
+      "remediation": "Fill EW_A only. Metadata: CL→Remember, resolve Easy/DiffScore=3 (recommend Easy/1)."
+    },
+    {
+      "qid": "P1-ED-001",
+      "pack": "D",
+      "topic": "E.001 three lines of defense model",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Good EC (237 chars, 7/10). 1 of 3 non-CC EW slots empty (B). CRITICAL METADATA: Difficulty='Difficult' but DiffScore=2 (Moderate-Easy) — internal label/score contradiction. DL-031: definition-match → Easy. Agent H: CL Understand→Remember.",
+      "remediation": "Fill EW_B only. Metadata: resolve Difficult/2 → recommended Easy/1, CL→Remember. EC: add IIA Three Lines Model citation."
+    },
+    {
+      "qid": "P1-ED-010",
+      "pack": "D",
+      "topic": "E.010 access control least privilege",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Good EC (208 chars, 7/10). 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. DL-031: Difficult→Easy. Agent H: CL Understand→Remember.",
+      "remediation": "Fill EW_A and EW_C. Metadata: Difficulty Difficult→Easy(1), CL→Remember."
+    },
+    {
+      "qid": "P1-ED-014",
+      "pack": "D",
+      "topic": "E.014 independent verification control activity",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Good EC (225 chars, 7/10). 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. Difficulty Difficult→Moderate recommended.",
+      "remediation": "Fill EW_A and EW_C. Metadata: Difficulty Difficult→Moderate(3)."
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "D",
+      "topic": "E.016 erm risk response strategies",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "DOUBLE-BLOCKER. (1) EWB and EWC contain truncated DL-013 boilerplate: 'This option reflects a misunderstanding of erm risk response strategies. The choice \\\"' — text cut off mid-sentence. (2) EC is brief (152 chars, 5/10) — definition-only, no business context. (3) EW_A empty. Metadata: Moderate/2 mismatch. Agent H: CL Understand→Remember.",
+      "remediation": "REWRITE EWB and EWC with genuine choice-specific distractor explanations. Fill EW_A. Enrich EC with COSO ERM citation, risk response taxonomy (avoid/accept/mitigate/transfer). Metadata: CL→Remember, Easy(1)."
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "D",
+      "topic": "E.025 control activities authorization",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Adequate EC (197 chars, 6/10) — short, no exam-trap. 1 of 3 non-CC EW slots empty (B). EW_C and EW_D are choice-specific.",
+      "remediation": "Fill EW_B. Enrich EC with authorization vs. other control activity distinction and COSO P10-P12 reference."
+    },
+    {
+      "qid": "P1-ED-028",
+      "pack": "D",
+      "topic": "E.028 monitoring ongoing evaluations",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Good EC (210 chars, 7/10). 1 of 3 non-CC EW slots empty (A). CRITICAL METADATA: Difficulty='Moderate' but DiffScore=4 (Difficult) — label/score mismatch. DL-031 flag. Agent H: CL Apply→Understand.",
+      "remediation": "Fill EW_A. Metadata: resolve Moderate/4 → recommended Moderate-Easy/2, CL→Understand."
+    },
+    {
+      "qid": "P1-ED-035",
+      "pack": "D",
+      "topic": "E.035 data backup disaster recovery",
+      "cc": "C",
+      "decision": "HOLD",
+      "rationale": "Good EC (215 chars, 7/10). 2 of 3 non-CC EW slots empty (A, D). Only EW_B has text. DL-031: Difficult→Moderate recommended. Agent H: CL Understand→Remember.",
+      "remediation": "Fill EW_A and EW_D. Metadata: Difficulty Difficult→Moderate(3), CL→Remember."
+    },
+    {
+      "qid": "P1-ED-036",
+      "pack": "D",
+      "topic": "E.036 change management control it systems",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "TRIPLE-BLOCKER. (1) EC is the weakest in the audit (144 chars, 3/10) — bare statement identifying change management as ITGC, no explanation of WHY testing/approval/documentation matter, no business risk context. (2) EWB and EWC contain truncated DL-013 boilerplate. (3) EW_A empty. DL-031: definition-match → Easy. Agent H: CL Understand→Remember.",
+      "remediation": "REWRITE EWB and EWC with genuine choice-specific explanations. Fill EW_A. Substantially rewrite EC — explain testing/approval/documentation as change management lifecycle, add business risk context (unauthorized changes causing financial statement errors). Metadata: CL→Remember, Easy(1) or Moderate-Easy(2)."
+    },
+    {
+      "qid": "P1-ED-042",
+      "pack": "D",
+      "topic": "E.042 risk assessment likelihood impact",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Good EC (238 chars, 7/10). 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. Metadata: Moderate/2 mismatch. Agent H: CL Understand→Remember.",
+      "remediation": "Fill EW_A and EW_C. Metadata: CL→Remember, resolve label/score (recommend Moderate-Easy/2)."
+    },
+    {
+      "qid": "P1-ED-046",
+      "pack": "D",
+      "topic": "E.046 code of conduct ethics program",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "DOUBLE-BLOCKER. (1) EWD contains truncated DL-013 boilerplate. (2) EC is brief (158 chars, 5/10) — definition-only, no scenario connection. (3) EW_A and EW_C empty. Metadata: Moderate/2 mismatch.",
+      "remediation": "REWRITE EWD with genuine choice-specific explanation. Fill EW_A and EW_C. Enrich EC with COSO P1 reference (integrity and ethical values), code-of-conduct role in control environment. Metadata: resolve Moderate/2 (recommend Moderate-Easy/2)."
+    },
+    {
+      "qid": "P1-ED-051",
+      "pack": "D",
+      "topic": "E.051 password access authentication control",
+      "cc": "C",
+      "decision": "HOLD",
+      "rationale": "DOUBLE-BLOCKER. (1) EWB contains DL-013 boilerplate. (2) EC is adequate (167 chars, 6/10) but brief — no contrast with single-factor auth, no exam-trap. (3) EW_A and EW_D empty. Agent H: CL Apply→Understand. Metadata: Easy/3 mismatch.",
+      "remediation": "REWRITE EWB with genuine choice-specific explanation. Fill EW_A and EW_D. Enrich EC with MFA vs. single-factor contrast, defense-in-depth concept. Metadata: CL→Understand, resolve Easy/3 (recommend Moderate-Easy/2)."
+    },
+    {
+      "qid": "P1-ED-058",
+      "pack": "D",
+      "topic": "E.058 internal control cost benefit limitation",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Strong EC (273 chars, 8/10) — one of the best in the pool. 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. Metadata: Moderate/2 mismatch.",
+      "remediation": "Fill EW_A and EW_C. Metadata: resolve label match (recommend Moderate-Easy/2)."
+    },
+    {
+      "qid": "P1-ED-064",
+      "pack": "D",
+      "topic": "E.064 vendor master file controls",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Strong practical EC (280 chars, 8/10). 1 of 3 non-CC EW slots empty (A). Agent H: CL Apply→Understand. Metadata: Moderate/4 mismatch.",
+      "remediation": "Fill EW_A. Metadata: CL→Understand, resolve Moderate/DiffScore=4 (recommend Moderate/3)."
+    },
+    {
+      "qid": "P1-ED-066",
+      "pack": "D",
+      "topic": "E.066 audit committee oversight role",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Good EC (265 chars, 7/10). 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. Agent H: CL Apply→Understand. Metadata: Easy/4 mismatch.",
+      "remediation": "Fill EW_A and EW_C. Metadata: CL→Understand, resolve Easy/DiffScore=4 (highly anomalous — recommend Moderate-Easy/2 or Moderate/3). EC: add SOX/SEC governance context."
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "D",
+      "topic": "E.071 change management control direct production change",
+      "cc": "C",
+      "decision": "HOLD",
+      "rationale": "Strong scenario-grounded EC (247 chars, 8/10). 2 of 3 non-CC EW slots empty (A, D). Only EW_B has text. Agent H: CL Understand→Apply (understated).",
+      "remediation": "Fill EW_A and EW_D. Metadata: CL→Apply."
+    },
+    {
+      "qid": "P1-ED-072",
+      "pack": "D",
+      "topic": "E.072 fraud risk purchasing conflict of interest",
+      "cc": "D",
+      "decision": "HOLD",
+      "rationale": "Good EC (206 chars, 7/10). 1 of 3 non-CC EW slots empty (A). EW_B and EW_C are good. Agent H: CL Understand→Apply (understated).",
+      "remediation": "Fill EW_A. Metadata: CL→Apply."
+    },
+    {
+      "qid": "P1-ED-073",
+      "pack": "D",
+      "topic": "E.073 monitoring exception reports not reviewed",
+      "cc": "A",
+      "decision": "HOLD",
+      "rationale": "Strong EC (246 chars, 8/10) — well-calibrated Apply item. 1 of 3 non-CC EW slots empty (B). EW_C and EW_D have excellent pedagogical text. No metadata issues. One of the best items in the pool.",
+      "remediation": "Fill EW_B only. Lowest remediation effort: 1 EW slot on an otherwise certification-ready item."
+    },
+    {
+      "qid": "P1-ED-074",
+      "pack": "D",
+      "topic": "E.074 reconciliation incompatible duties EFT and bank rec",
+      "cc": "B",
+      "decision": "HOLD",
+      "rationale": "Good EC (227 chars, 7/10). 2 of 3 non-CC EW slots empty (A, C). Only EW_D has text. Agent H: CL Understand→Apply (understated).",
+      "remediation": "Fill EW_A and EW_C. Metadata: CL→Apply."
+    },
+    {
+      "qid": "P1-ED-075",
+      "pack": "D",
+      "topic": "E.075 segregation approval reconciliation",
+      "cc": "C",
+      "decision": "HOLD",
+      "rationale": "TRIPLE-BLOCKER. (1) EWB and EWD contain DL-013 boilerplate. (2) EC is brief (153 chars, 4/10) — definition-only. (3) EW_A empty. All non-CC slots are either empty or boilerplate. This is the single worst-covered item in the pool.",
+      "remediation": "REWRITE EWB and EWD with genuine choice-specific explanations. Fill EW_A. Substantially rewrite EC — explain why separating approval from reconciliation provides independent check, identify specific errors it detects. Metadata: CL→Understand (correctly calibrated, one of few)."
+    }
+  ],
+
+  "certification_pathway": {
+    "current_state": "38 HOLD — all blocked by Gate 2",
+    "remediation_pass_1": {
+      "description": "DL-026 + DL-013 + EC enrichment combined pass",
+      "batches": "3 batches (≤28 per batch per governance-guard Rule 5)",
+      "batch_1": { "qids": "14 Pack C seeds (EC-004 through EC-052) — lowest EW-slots-per-item", "fields": "~22 EW + 5 EC enriched" },
+      "batch_2": { "qids": "14 Pack C/D seeds (EC-060 through ED-028) — mixed load", "fields": "~18 EW + 3 EC enriched" },
+      "batch_3": { "qids": "10 Pack D seeds (ED-035 through ED-075) — DL-013 contaminated", "fields": "~13 EW + 8 DL-013 rewrite + 4 EC enriched" },
+      "post_pass_1_state": "38 → CERTIFY (Gate 2 resolved: 0 empty EW, 0 DL-013, all EC meet CAQS §4 minimum)"
+    },
+    "remediation_pass_2": {
+      "description": "Metadata calibration: Difficulty score/label resolution + CognitiveLevel recalibration + DL-031 difficulty re-labeling",
+      "batches": "1-2 batches (metadata-only pass, no content changes beyond field values)",
+      "post_pass_2_state": "38 → CERTIFY with fully calibrated metadata"
+    },
+    "expected_certification_gain": "+38 Certified (Domain E 228→266)",
+    "estimated_total_batches": "4-5 batches across 2 passes"
+  },
+
+  "cross_reference": {
+    "dl008": "0 violations — all 38 CC EW slots clean (gate governance-guard Rule 2)",
+    "dl026": "53 empty non-CC slots — primary certification blocker",
+    "dl013_template": "8 boilerplate slots across 5 Pack D seeds — secondary blocker",
+    "dl010_misassignment": "0 findings in non-empty EW slots (all 61 existing non-empty slots are choice-specific)",
+    "dl031_difficulty_inflation": "12 items flagged — recalibration deferred to Pass 2 (non-blocking)",
+    "dl016_metadata_shift": "0 risk — Pack C/D seeds verified with content-block CC extraction, not metadata-block"
+  }
+}

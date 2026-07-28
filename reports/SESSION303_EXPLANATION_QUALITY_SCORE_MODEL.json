@@ -1,0 +1,123 @@
+{
+  "packEQS": {
+    "Pack A": {
+      "avgEQS": 30,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 6,
+        "C": 66,
+        "D": 50,
+        "F": 378
+      }
+    },
+    "Pack B": {
+      "avgEQS": 27,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 85,
+        "F": 414
+      }
+    },
+    "Pack C": {
+      "avgEQS": 22,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 22,
+        "F": 478
+      }
+    },
+    "Pack D": {
+      "avgEQS": 23,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 24,
+        "F": 476
+      }
+    },
+    "Pack E": {
+      "avgEQS": 17,
+      "count": 500,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 2,
+        "C": 11,
+        "D": 25,
+        "F": 462
+      }
+    },
+    "scored_cases": {
+      "avgEQS": 41,
+      "count": 90,
+      "gradeDistribution": {
+        "A": 3,
+        "B": 27,
+        "C": 6,
+        "D": 1,
+        "F": 53
+      }
+    },
+    "scored_cases2": {
+      "avgEQS": 49,
+      "count": 153,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 6,
+        "C": 55,
+        "D": 64,
+        "F": 28
+      }
+    },
+    "scored_cases3": {
+      "avgEQS": 35,
+      "count": 154,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 2,
+        "C": 11,
+        "D": 57,
+        "F": 84
+      }
+    },
+    "scored_cases4": {
+      "avgEQS": 52,
+      "count": 153,
+      "gradeDistribution": {
+        "A": 2,
+        "B": 28,
+        "C": 50,
+        "D": 46,
+        "F": 27
+      }
+    },
+    "scored_cases5": {
+      "avgEQS": 42,
+      "count": 75,
+      "gradeDistribution": {
+        "A": 0,
+        "B": 3,
+        "C": 13,
+        "D": 37,
+        "F": 22
+      }
+    }
+  },
+  "modelVersion": "S303-1.0",
+  "dimensions": {
+    "instructionalValue": "25%",
+    "reasoningDepth": "20%",
+    "calculationSupport": "15%",
+    "standardsIntegration": "15%",
+    "learningEffectiveness": "15%",
+    "structure": "10%"
+  }
+}

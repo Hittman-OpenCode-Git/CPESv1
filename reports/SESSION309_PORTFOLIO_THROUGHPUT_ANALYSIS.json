@@ -1,0 +1,48 @@
+{
+  "session": "309",
+  "agent": "B",
+  "title": "Portfolio Throughput Analysis",
+  "generated": "2026-07-26",
+  "methodology": "Direct pack-file parse via Function constructor. S307/S308 artifacts consumed. REVISION_HISTORY session velocity analysis.",
+
+  "throughputByTrack": {
+    "certification": {
+      "velocityItemsPerSession": {
+        "500-series_ENHANCED": "7 cases (42 items) per session — ~16 items/session including review",
+        "800-series_Wave1": "BLOCKED — DL-008 confirmed 0 actual items. No Wave 1 needed.",
+        "800-series_Wave2+": "Estimated ~18 items/session per S308 capacity model"
+      },
+      "limitingFactor": "Structural readiness — items must pass CAQS §1.6 audit before certification. 167 Domain E items are 77% archived clones (need re-audit). Domain F 149 items are wholly unprocessed (never seen audit).",
+      "sessionSavingsIfResolved": "DL-008 resolution alone saves 3 sessions. Domain E parallelization with F could save 3-5 more."
+    },
+    "ewAuthoring": {
+      "velocityItemsPerSession": "~39 for case-bank items (S308 estimate). ~36-40 for MCQ items.",
+      "limitingFactor": "Case-bank EW starting from near-zero (3.9% fill). No factory model — authoring is ad-hoc per-certification-wave. 2,403 total missing slots.",
+      "sessionSavingsIfResolved": "EW factory model (Agent O) could double velocity. Pre-built EW templates for clone rotation items could reduce 2 sessions."
+    },
+    "governance": {
+      "velocityItemsPerSession": "Attestation: 1 session per certification wave. REVISION_HISTORY: 1 entry per session (~0.2 sessions equivalent).",
+      "limitingFactor": "Serial attestation process. Each wave requires separate governance gate.",
+      "sessionSavingsIfResolved": "Merged attestation (batch governance across waves) could save 1-2 sessions."
+    },
+    "modernization": {
+      "velocityItemsPerSession": "Clone reduction: ~382 items/session. DL-013: ~425 items/session. DL-031: ~250 items/session.",
+      "limitingFactor": "All 129 archived Domain E items are DL-012 rotation-artifacts. Re-auditing them is high-friction (must re-derive CC, verify distractors, re-author EC). Clone rotation audit for Pack C/D Section E/F is the primary modernization volume.",
+      "sessionSavingsIfResolved": "Deferring all modernization (DL-013, DL-031, EC normalization) to post-cert saves 10 sessions with ~6.5 UIQS point deferred quality gain."
+    }
+  },
+
+  "biggestLimitingFactor": "DOMAIN E ARCHIVED CLONES — 129 of 167 Domain E gap (77%) are DL-012 archived rotation clones. These cannot be batch-processed because each requires independent CC re-derivation, distractor audit, and EC authoring. They gate Domain F (149 unprocessed items in same packs/sections). Total bottleneck: 316 items across Packs C/D Sections E/F.",
+
+  "constraintRemovalImpact": {
+    "DL008_resolved": { "sessionsSaved": 3, "confidence": "HIGH — confirmed 0 actual items" },
+    "DomainE_parallelize_with_F": { "sessionsSaved": 4, "confidence": "MEDIUM — requires file-scope discipline" },
+    "EW_factory_model": { "sessionsSaved": 3, "confidence": "MEDIUM — requires upfront process design" },
+    "defer_modernization": { "sessionsSaved": 10, "confidence": "HIGH — modernization is quality polish, not safety" },
+    "merged_governance": { "sessionsSaved": 2, "confidence": "HIGH" },
+    "totalTheoreticalSavings": 22,
+    "realisticSavings": "10-13 sessions (30-session forecast → 17-20 sessions)"
+  },
+
+  "recommendedPriority": "1) Drop DL-008 phase entirely (save 3 sessions). 2) Front-load Domain E Section E certification (Packs C/D — 167 items). 3) Run Domain F certification in parallel with later Domain E stages. 4) Defer all modernization to post-certification. 5) Adopt EW factory model for case-bank."
+}

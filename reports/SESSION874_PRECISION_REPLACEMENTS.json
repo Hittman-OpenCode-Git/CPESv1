@@ -1,0 +1,98 @@
+{
+  "session": "S874",
+  "date": "2026-07-28",
+  "program": "800-Series Content Review & Replacement Restart",
+  "phase": "Precision Replacement Generation",
+  "execution_mode": "Write",
+  "source": "AMBIGUITY_QUEUE.md (S873)",
+  "replacements_generated": 3,
+  "items_modified": 3,
+  "replacements": [
+    {
+      "qid": "P1-B-037",
+      "pack": "A",
+      "section": "B",
+      "severity": "CRITICAL",
+      "defect_class": "DL-010",
+      "defect": "Cross-topic distractor explanation contamination — all 3 EW fields described P1-B-038's moving average topic",
+      "fields_modified": [
+        {
+          "field": "ExplanationWrongB",
+          "old_description": "Moving average: 480 units calculation",
+          "new_description": "Volume variance vs. spending variance at equal activity levels",
+          "char_count": 346
+        },
+        {
+          "field": "ExplanationWrongC",
+          "old_description": "Moving average: 493 units weighted calculation",
+          "new_description": "Efficiency variance vs. spending variance distinction",
+          "char_count": 368
+        },
+        {
+          "field": "ExplanationWrongD",
+          "old_description": "Moving average: 520 units latest month only",
+          "new_description": "Why $6,000 is a real spending variance, not 'no variance'",
+          "char_count": 360
+        }
+      ],
+      "preserved": ["CorrectChoice=A", "question_state=Certified", "ExplanationWrongA=\"\" (DL-008 clean)", "ExplanationCorrect (unchanged)"],
+      "verification": "DL-008: 0, DL-026: 0, CC unchanged, question_state unchanged"
+    },
+    {
+      "qid": "P1-B-098",
+      "pack": "A",
+      "section": "B",
+      "severity": "MEDIUM",
+      "defect_class": "DL-025 variant",
+      "defect": "EW_C and EW_D were copy-paste identical generic text ('This choice does not match the correct disbursement calculation...')",
+      "fields_modified": [
+        {
+          "field": "ExplanationWrongC",
+          "old_description": "Generic: 'This choice does not match the correct disbursement calculation...'",
+          "new_description": "Choice-specific: reversed disbursement schedule (Feb 60%/Mar 40%) producing ~$86,000",
+          "char_count": 363
+        },
+        {
+          "field": "ExplanationWrongD",
+          "old_description": "Generic: 'This choice does not match the correct disbursement calculation...' (identical to EW_C)",
+          "new_description": "Choice-specific: overcount explanation — 60% Mar + 40% near-$85K",
+          "char_count": 319
+        }
+      ],
+      "preserved": ["CorrectChoice=B", "question_state=Certified", "ExplanationWrongB=\"\" (DL-008 clean)"],
+      "verification": "DL-008: 0, DL-026: 0, CC unchanged, question_state unchanged"
+    },
+    {
+      "qid": "P1E-B-068",
+      "pack": "E",
+      "section": "B",
+      "severity": "MEDIUM",
+      "defect_class": "Anti-cue",
+      "defect": "Stem 'A continuous budget always has:' used absolute 'always' — makes the correct answer (C: '12 months forward') look like a distractor cue to strong test-takers",
+      "fields_modified": [
+        {
+          "field": "Stem",
+          "old": "A continuous budget always has:",
+          "new": "A continuous budget maintains:"
+        }
+      ],
+      "preserved": ["CorrectChoice=C", "question_state=Certified", "ExplanationWrongC=\"\"", "Choices unchanged", "ExplanationCorrect unchanged"],
+      "verification": "Anti-cue removed. Stem no longer uses absolute 'always'."
+    }
+  ],
+  "post_remediation_state": {
+    "pack_a": {
+      "items": 500,
+      "certified": 481,
+      "dl008_violations": 0,
+      "dl010_cross_topic": "0 (P1-B-037 resolved)"
+    },
+    "pack_e": {
+      "items": 540,
+      "certified": 540,
+      "dl008_violations": 0
+    },
+    "governance_guard": "51/51 PASS",
+    "certified_pool": 2298
+  }
+}

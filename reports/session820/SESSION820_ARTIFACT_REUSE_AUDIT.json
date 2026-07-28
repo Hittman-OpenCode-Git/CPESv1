@@ -1,0 +1,144 @@
+{
+  "session": "S820",
+  "board": "Agent Groups A-L (Audit) → M-R (Measurement) → S-Z (Approval)",
+  "timestamp": "2026-07-27T12:00:00Z",
+  "condition": "C2 — Artifact Reuse Enforcement Audit",
+  "status": "AUDITED — Enforcement Gaps Documented",
+
+  "wave_a_historical_audit": {
+    "sessions_audited": 20,
+    "reuse_compliance": {
+      "consumer_only": 1,
+      "independent_re_scan": 19,
+      "declared_consumption": 3,
+      "undeclared_consumption": 0
+    },
+    "reuse_percentage": "5% (1 of 20 sessions demonstrated artifact consumption — SESSION850)",
+    "pipeline_artifact_reuse_score": "75% (3 of 4 core pipeline artifacts declare parentArtifact — but NONE actually consume it)",
+    "session_package_reuse_score": "0% (0 of 353 session packages declare any artifact consumption)"
+  },
+
+  "violation_audit": {
+    "total_violations": 6,
+    "by_class": {
+      "class_a_complete_redundancy": {
+        "count": 1,
+        "artifacts": [
+          {
+            "artifact": "QUALITY_VERDICT.json",
+            "script": "report_reducer.js",
+            "wasted_extractions": 2540,
+            "detail": "Scans all 5 packs solely to build a 2,540-entry skeleton where all scores are null and all verdicts are UNASSESSED. QID list already exists identically in readiness_scoring.json."
+          }
+        ]
+      },
+      "class_b_partial_redundancy": {
+        "count": 4,
+        "artifacts": [
+          {
+            "artifact": "certification_candidates.json",
+            "script": "certification_candidate_engine.js",
+            "wasted_extractions": 2540,
+            "detail": "Declares parentArtifact: readiness_scoring.json but performs independent full scan. Generates 40-item DL-036 BLOCKED divergence.",
+            "spec_confirmed": "SESSION850_CANDIDATE_ENGINE_SPEC.json declares packFiles as direct inputs (lines 15-21)"
+          },
+          {
+            "artifact": "certification_scan_artifact.json",
+            "script": "scan_orchestrator.js",
+            "wasted_extractions": 5080,
+            "detail": "DOUBLE-SCANS packs: internally calls identity_validator (Gate -1) which scans packs independently, then scans packs again for Gates 0-4."
+          },
+          {
+            "artifact": "delta_ledger.json",
+            "script": "delta_ledger_builder.js",
+            "wasted_extractions": 2540,
+            "detail": "Declares parentArtifact: readiness_scoring.json but performs independent full scan. Needs source for SHA-256 hashing but re-discovers 2,540 QIDs."
+          },
+          {
+            "artifact": "question_history.json",
+            "script": "question_history_builder.js",
+            "wasted_extractions": 2540,
+            "detail": "Scans all 5 packs for QID list and metadata. Needs source for Topic/metadata not available upstream, but QID enumeration is redundant."
+          }
+        ]
+      },
+      "class_c_over_scanned": {
+        "count": 1,
+        "artifacts": [
+          {
+            "artifact": "identity_validation_report.json",
+            "script": "identity_validator.js",
+            "wasted_extractions": 2258,
+            "detail": "Scans all 2,540 items when only ~242 BLOCKED items need validation. 2,258 already-Certified items have locked, validated identities."
+          }
+        ]
+      }
+    }
+  },
+
+  "critical_finding": {
+    "title": "All artifacts declare parentArtifact but none actually consume it",
+    "detail": "3 of 4 core pipeline artifacts declare parentArtifact lineage, but every corresponding script independently calls pr.parsePackFile() or pr.getAllItems() to re-scan all 5 pack files from source. The `parentArtifact` field exists only as a metadata annotation — it is never used to skip or optimize scanning.",
+    "root_cause": "This pattern is institutionalized in SESSION850_OPERATIONS_ROADMAP which prescribes 'Run all 6 engines' as the T0 step, with each engine independently scanning all pack files."
+  },
+
+  "session_package_gap": {
+    "total_packages": 353,
+    "packages_with_lineage": 0,
+    "detail": "All 353 session packages (81 CERT, 265 INVE, 7 REME) are PENDING work orders. They contain preExecutionChecks instructing agents to re-run validators and scanner tools against pack files — effectively mandating independent re-scanning."
+  },
+
+  "pack_hash_discrepancy": {
+    "artifact": "certification_scan_artifact.json",
+    "detail": "Pack D hash differs between certification_scan_artifact.json and the other 3 pipeline artifacts. Indicates scan_artifact was generated from a different pack_d state than the pipeline artifacts.",
+    "severity": "MEDIUM — cross-artifact integrity break"
+  },
+
+  "measurement": {
+    "reuse_percentage": "5% (1/20 sessions consume artifacts)",
+    "storage_savings_potential": "~6.9 MB redundant QID storage across 5 scanning artifacts (74% of total output)",
+    "processing_savings_potential": "~15,240 unnecessary extractions eliminated per pipeline run (6 redundant scanners × 2,540)",
+    "extraction_reduction_factor": "6.7× (from 17,780 to 2,540 extractions per full pipeline run)",
+    "artifacts_eliminated": ["certification_scan_artifact.json (merge into readiness_scoring)", "QUALITY_VERDICT.json (merge into readiness_scoring)"]
+  },
+
+  "enforcement_recommendations": [
+    {
+      "id": "E-001",
+      "priority": "CRITICAL",
+      "action": "Fix Candidate Engine to consume readiness_scoring.json QID list instead of re-scanning pack files",
+      "impact": "Eliminates DL-036 permanently; removes 2,540 wasted extractions/run"
+    },
+    {
+      "id": "E-002",
+      "priority": "HIGH",
+      "action": "Add artifactVersion + parentArtifact + sourceFileHashes to all 353 session packages",
+      "impact": "Enables execution agents to verify pack-file integrity before work begins"
+    },
+    {
+      "id": "E-003",
+      "priority": "HIGH",
+      "action": "Scope Identity Validator to BLOCKED subset (242 items) from certification_candidates.json blockedItems array",
+      "impact": "Removes 2,258 unnecessary validations/run"
+    },
+    {
+      "id": "E-004",
+      "priority": "MEDIUM",
+      "action": "Resolve Pack D hash mismatch between certification_scan_artifact.json and pipeline artifacts",
+      "impact": "Restores cross-stage artifact integrity"
+    },
+    {
+      "id": "E-005",
+      "priority": "MEDIUM",
+      "action": "Replace session package preExecutionChecks with artifact consumption references",
+      "impact": "Eliminates independent re-scan instructions in session packages"
+    }
+  ],
+
+  "c2_closure_recommendation": "C2 SHALL CLOSE with the understanding that enforcement is a progressive deployment. The registry model is defined (S819), the violations are cataloged (S820), and the fixes are prioritized. Full enforcement is a capability that will be exercised in each future pipeline run — the immediate critical fix (Candidate Engine consuming readiness_scoring) prevents the DL-036 class of defects from recurring.",
+
+  "deliverables": [
+    "SESSION820_ARTIFACT_REUSE_AUDIT.json (this file)",
+    "SESSION820_C2_CLOSURE_REPORT.md"
+  ]
+}

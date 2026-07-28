@@ -1,0 +1,194 @@
+{
+  "document": "SESSION321_REPORTING_V2_SPEC",
+  "session": "S321",
+  "board": "H — Reporting Model Simplification",
+  "phase": "5 — Reporting Simplification",
+  "generated": "2026-07-27",
+  "mode": "READ-ONLY — design specification only",
+  "status": "SPECIFICATION",
+
+  "purpose": "Reduce Framework v1's runaway reporting from 11 files/session (peak 29) to 4 standardized files per session. Every report must serve a specific downstream governance purpose — no 'report about reports.' Eliminates the 65% non-consumption rate and 3.5:1 metric duplication ratio.",
+
+  "motivation": {
+    "v1_crisis": "1,227 files across 178 sessions. 843 JSON + 372 MD. 65% never consumed by any downstream governance process. 7 files per session redundantly report certified count. 5 files report Domain E count. 6 files report EW integrity metrics. Core 15 metrics spread across 5.3 files each. S809 chain: 47 report files for items with 0 writes. Reporting overhead is itself a defect — it consumes agent time, clutters the file system, and makes it harder to find what matters.",
+    "target": "4 files per session. Standardized naming (SESSIONXXX_ prefix). All metrics in one dashboard. All decisions in one summary. All quality results in one verdict. All certification results in one record."
+  },
+
+  "report_files": [
+    {
+      "file": "SESSION{N}_DASHBOARD.json",
+      "role": "Single source of truth for all portfolio-level metrics",
+      "consumed_by": ["Governance Board", "Readiness Board", "Delivery Pool Safety Gate"],
+      "replaces": "7 redundant dashboard variants per session",
+      "content": {
+        "certified_pool": {
+          "total_certified": "Integer — from CANONICAL_ITEM_REGISTRY (auto-generated)",
+          "total_items": "Integer — 2,500",
+          "certification_pct": "Float — percentage certified",
+          "by_pack": "Object — per-pack certified counts (Pack A-E)",
+          "by_domain": "Object — per-domain certified counts (A-F)",
+          "certified_this_session": "Integer — items newly certified in this session"
+        },
+        "defect_status": {
+          "total_open_defects": "Integer",
+          "by_defect_class": "Object — defect class → count (auto-generated from scan artifact)",
+          "by_severity": "Object — severity → count",
+          "learner_pool_risk": {
+            "certified_defective": "Integer — Certified items with open HIGH+ defects",
+            "delivery_blocked": "Integer — items in defect manifest"
+          }
+        },
+        "readiness": {
+          "readiness_score": "Float (0.0-1.0) — from Readiness Gate Engine",
+          "readiness_status": "String — READY | IN_PROGRESS | NEEDS_WORK | BLOCKED",
+          "items_by_state": "Object — state → count (BLOCKED, REMEDIATE, READY, CERTIFY)",
+          "scan_pass_rate": "Float — from scan artifact aggregate statistics"
+        },
+        "delta_review": {
+          "items_content_change": "Integer",
+          "items_metadata_change": "Integer",
+          "items_no_change": "Integer",
+          "items_skipped_pct": "Float",
+          "items_reviewed": "Integer",
+          "agents_consumed": "Integer"
+        },
+        "governance": {
+          "governance_guard_status": "Object — rule → status (PASS/FAIL/WARN)",
+          "p0_blockers": "Integer",
+          "p1_blockers": "Integer",
+          "session_ready": "Boolean",
+          "backup_protocol_status": "String"
+        },
+        "portfolio_health": {
+          "health_index": "Float (0-100) — composite score from defect density + certification coverage + readiness",
+          "trend": "String — IMPROVING | STABLE | DECLINING",
+          "key_risks": "Array of strings — top 3 risks"
+        }
+      }
+    },
+    {
+      "file": "SESSION{N}_SESSION_SUMMARY.md",
+      "role": "Executive narrative of everything that happened in the session",
+      "consumed_by": ["All boards", "Next session startup (AGENTS.md §9)", "REVISION_HISTORY.md"],
+      "replaces": "Multiple per-agent session summaries + meta-reporting packages",
+      "content": {
+        "sections": [
+          "1. Session Overview — session ID, date, mode (read-only vs. execution), purpose, scope (what was in/out)",
+          "2. Pre-Flight Results — scan pipeline summary, items scanned/passed/blocked, key defect findings",
+          "3. Board Decisions — per-board: items processed, decisions rendered (CERTIFY/HOLD/ESCALATE), consensus status",
+          "4. Certification Actions — items certified this session, before/after counts, batch size verification",
+          "5. Defects Discovered — any new defects found during review, logged to DEFECT_LIBRARY.md status",
+          "6. Open Items — what was NOT completed, deferred decisions, next-session preconditions",
+          "7. Session Closeout — Tend hash verification, backup protocol status, governance attestation, REVISION_HISTORY.md entry logged",
+          "8. Readiness Board Verdict — READY or BLOCKED for next session, with blocker list if BLOCKED"
+        ]
+      }
+    },
+    {
+      "file": "SESSION{N}_QUALITY_VERDICT.json",
+      "role": "Per-item quality assessment with 10-dimension CAQS rubric scores",
+      "consumed_by": ["Certification Board", "Governance Board"],
+      "replaces": "120+ individual agent output files",
+      "content": {
+        "session_id": "String",
+        "board": "Quality Board",
+        "agents": ["Agent 1 — Technical & Numerical", "Agent 2 — Psychometric & Instructional", "Agent 3 — Structural & Safety"],
+        "consensus_model": "ALL_AGREE (≥2 of 3 must agree on CERTIFIABLE)",
+        "items_reviewed": "Integer — only items routed for review (content_change, metadata_change, new items)",
+        "verdicts": [
+          {
+            "registry_id": "String",
+            "qid": "String",
+            "compound_key": "String",
+            "delta_classification": "String",
+            "caqs_scores": {
+              "agent_1_scores": "Object — dimensions 3, 5, 6 scores + comments",
+              "agent_2_scores": "Object — dimensions 1, 2, 4, 7, 8 scores + comments",
+              "agent_3_scores": "Object — dimensions 9, 10 scores + structural compliance + comments"
+            },
+            "aggregate_score": "Float (0-100)",
+            "quality_tier": "String — 1 (Exam-Ready) through 4 (Reject)",
+            "consensus": "String — ALL_AGREE | SPLIT | SINGLE_DISAGREE",
+            "verdict": "String — CERTIFIABLE | HOLD | REJECT",
+            "hold_reason": "String — if HOLD, which dimension(s) and what resolution is needed",
+            "recommendation": "String — free-text recommendation from Quality Board to Certification Board"
+          }
+        ],
+        "summary": {
+          "total_reviewed": "Integer",
+          "certifiable": "Integer",
+          "held": "Integer",
+          "rejected": "Integer",
+          "certifiable_rate": "Float",
+          "most_common_hold_reasons": "Array of strings"
+        }
+      }
+    },
+    {
+      "file": "SESSION{N}_CERTIFICATION_RESULTS.json",
+      "role": "Final per-item certification decisions + REVISION_HISTORY.md entry data",
+      "consumed_by": ["Registry Board (for registry updates)", "Governance Board (for session closeout)", "REVISION_HISTORY.md (for certification records)"],
+      "replaces": "Scattered certification record files + REVISION_HISTORY.md draft entries",
+      "content": {
+        "session_id": "String",
+        "board": "Certification Board",
+        "total_certified_this_session": "Integer",
+        "certification_actions": [
+          {
+            "registry_id": "String",
+            "qid": "String",
+            "compound_key": "String",
+            "action": "String — CERTIFIED | DECERTIFIED | ARCHIVED",
+            "previous_state": "String",
+            "new_state": "String",
+            "quality_verdict_ref": "String — reference to Quality Verdict item entry",
+            "certification_board_rationale": "String",
+            "distractor_tier_map": "Object — {A: tier_label, B: tier_label, C: tier_label, D: tier_label}",
+            "version_id_after": "String",
+            "content_hash_after": "String",
+            "revision_history_entry": "String — pre-formatted REVISION_HISTORY.md entry text"
+          }
+        ],
+        "revision_history_batch": {
+          "description": "Complete REVISION_HISTORY.md entry for this session — ready to append",
+          "entry_text": "String — markdown formatted entry covering all certification actions"
+        }
+      }
+    }
+  ],
+
+  "legacy_report_archive_plan": {
+    "description": "Existing 1,227 legacy report files are not deleted. They are archived for historical reference.",
+    "archive_location": "reports/archive/v1/",
+    "index": "reports/archive/v1/REPORT_INDEX.json — maps session ID → list of legacy report files with descriptions",
+    "retention": "Indefinite — zero cost to retain. Legacy reports may be re-consumed during Framework v2 Phase 2 validation (dual-run comparison against Quality Board verdicts)."
+  },
+
+  "naming_standard": {
+    "prefix": "SESSION{N}_ — where N is the 3-digit session number (e.g., SESSION321_, SESSION322_)",
+    "format": "Dash-separated snake_case for multi-word names within the filename body",
+    "examples": ["SESSION321_IDENTITY_SCHEMA_V2.json", "SESSION322_DASHBOARD.json", "SESSION322_CERTIFICATION_RESULTS.json"],
+    "deprecated_patterns": ["S809.2_AGENT_*.json", "s116_pilot_*.md", "AGENT_*_REPORT.json", "BOARD_*_OUTPUT.json"]
+  },
+
+  "enforcement": {
+    "soft_cap": "8 files per session (per S201 D-05, approved decision). Exceeding 8 requires BLOCK-AUTHORIZED marker.",
+    "target": "4 files per regular session (DASHBOARD + SESSION_SUMMARY + QUALITY_VERDICT + CERTIFICATION_RESULTS).",
+    "exception": "Sessions with specialized board activities may produce up to 2 additional domain-specific report files (total ≤ 6). These must be justified in the SESSION_SUMMARY.md.",
+    "governance_guard_integration": "Governance guard Rule 5 (30-item cap) can be extended with a reporting cap rule in Phase 3 if the 8-file soft cap is insufficient."
+  },
+
+  "success_criteria": {
+    "SC-BH-01": "4 report files per session: DASHBOARD.json, SESSION_SUMMARY.md, QUALITY_VERDICT.json, CERTIFICATION_RESULTS.json.",
+    "SC-BH-02": "DASHBOARD.json replaces all redundant dashboard variants — single source of truth for portfolio metrics.",
+    "SC-BH-03": "SESSION_SUMMARY.md standardizes the 8-section executive narrative format.",
+    "SC-BH-04": "QUALITY_VERDICT.json embeds all 3 Quality Board agent outputs (replaces 120+ individual agent output files).",
+    "SC-BH-05": "CERTIFICATION_RESULTS.json pre-formats REVISION_HISTORY.md entries (eliminates hand-written entries).",
+    "SC-BH-06": "Naming standard: SESSION{N}_ prefix, no legacy agent/board naming variants.",
+    "SC-BH-07": "Soft cap of 8 files with BLOCK-AUTHORIZED marker; target of 4 with 2 additional domain-specific exceptions.",
+    "SC-BH-08": "Legacy report archive plan defined — 1,227 files indexed and preserved, not deleted.",
+    "SC-BH-09": "Every report serves a specific downstream governance purpose — no 'reports about reports.'",
+    "SC-BH-10": "Specification is implementable — S322 can begin using these report formats.",
+    "SC-BH-11": "0 certification actions, 0 content modifications, 0 pack-file writes."
+  }
+}

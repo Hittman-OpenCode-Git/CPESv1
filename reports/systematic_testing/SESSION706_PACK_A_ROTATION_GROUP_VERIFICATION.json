@@ -1,0 +1,188 @@
+{
+  "session": "Session 706",
+  "timestamp": "2026-07-25T00:00:00Z",
+  "agent": "Agent C — Rotation Group Verification",
+  "scope": "Pack A Section B rotation group items P1-B-002 through P1-B-005 plus P1-B-025",
+  "methodology": "Direct line-level inspection within each item's single JSON object boundary (no forward-scan or window-based extraction)",
+  "source_file": "pack_a_corrected.js",
+  "items": [
+    {
+      "qid": "P1-B-002",
+      "lines": "3869-3917",
+      "state": "Certified",
+      "topic": "B.002 top-down budgeting limitation",
+      "stem_summary": "Summit uses executive-imposed targets with little manager input",
+      "CC": "B",
+      "CC_unchanged_from_S702": true,
+      "EW_A": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes why top-down budgeting is not merely forecasting — topically matches own stem and choices"
+      },
+      "EW_B_CC_slot": {
+        "status": "empty",
+        "DL-008": "CLEAN"
+      },
+      "EW_C": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes top-down budgeting legitimacy under CMA Part 1 — topically matches own topic"
+      },
+      "EW_D": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes why top-down budgeting does not eliminate slack — topically matches own topic"
+      },
+      "DL-008_status": "CLEAN",
+      "DL-016_shift_check": "NO_SHIFT — all EW fields describe P1-B-002's own top-down budgeting topic, not the next item (P1-B-003 participative budgeting)",
+      "verdict": "CLEAN"
+    },
+    {
+      "qid": "P1-B-003",
+      "lines": "3918-3966",
+      "state": "Certified",
+      "topic": "B.003 participative budgeting slack risk",
+      "stem_summary": "Titan asks department managers to propose their own budget targets",
+      "CC": "B",
+      "CC_unchanged_from_S702": true,
+      "EW_A": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes why relying on prior-year actuals discards participative budgeting purpose — topically matches own topic"
+      },
+      "EW_B_CC_slot": {
+        "status": "empty",
+        "DL-008": "CLEAN"
+      },
+      "EW_C": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes that participative budgeting does not inherently create fraud — topically matches own topic"
+      },
+      "EW_D": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes manager bias in participative budgeting slack — topically matches own topic"
+      },
+      "DL-008_status": "CLEAN",
+      "DL-016_shift_check": "NO_SHIFT — all EW fields describe P1-B-003's own participative budgeting topic, not the next item (P1-B-004 rolling budget)",
+      "verdict": "CLEAN"
+    },
+    {
+      "qid": "P1-B-004",
+      "lines": "3967-4015",
+      "state": "Certified",
+      "topic": "B.004 rolling budget horizon",
+      "stem_summary": "Umbra wants to maintain a constant 12-month planning horizon",
+      "CC": "B",
+      "CC_unchanged_from_S702": true,
+      "EW_A": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes that rolling budgets are not restricted to capital projects — topically matches own topic"
+      },
+      "EW_B_CC_slot": {
+        "status": "empty",
+        "DL-008": "CLEAN"
+      },
+      "EW_C": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes rolling budget periodic update schedule — topically matches own topic"
+      },
+      "EW_D": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes why freezing contradicts rolling budget principles — topically matches own topic"
+      },
+      "DL-008_status": "CLEAN",
+      "DL-016_shift_check": "NO_SHIFT — all EW fields describe P1-B-004's own rolling budget topic, not the next item (P1-B-005 ZBB)",
+      "verdict": "CLEAN",
+      "special_note": "P1-B-004 explicitly requested: confirmed unchanged and clean on all dimensions."
+    },
+    {
+      "qid": "P1-B-005",
+      "lines": "4016-4064",
+      "state": "Certified",
+      "topic": "B.005 zero-based budgeting review",
+      "stem_summary": "Vantage requires managers to justify activities from a zero base",
+      "CC": "C",
+      "CC_unchanged_from_S702": true,
+      "EW_A": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes why ZBB requires justifying all costs, not ignoring fixed costs — topically matches own topic"
+      },
+      "EW_B": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes why inflation-only increases defeat ZBB purpose — topically matches own topic"
+      },
+      "EW_C_CC_slot": {
+        "status": "empty",
+        "DL-008": "CLEAN"
+      },
+      "EW_D": {
+        "status": "non-empty",
+        "topic_alignment": "ALIGNED",
+        "topic_alignment_note": "Describes why ZBB is not defined by sales level — topically matches own topic"
+      },
+      "DL-008_status": "CLEAN",
+      "DL-016_shift_check": "NO_SHIFT — all EW fields describe P1-B-005's own ZBB topic, not the next item (P1-B-006 activity-based budgeting)",
+      "verdict": "CLEAN"
+    },
+    {
+      "qid": "P1-B-025",
+      "lines": "4996-5044",
+      "state": "Certified",
+      "topic": "B.025 budgetary slack incentive design",
+      "stem_summary": "Quartz links bonuses to easily achieved budget targets and notices managers consistently understate capacity",
+      "CC": "A",
+      "CC_unchanged_from_S702": true,
+      "EW_A_CC_slot": {
+        "status": "non-empty",
+        "DL-008": "DEFECT — CC slot contains text",
+        "content": "\"Abandoning forecasting because actual results differ from forecasts misunderstands the fundamental purpose of forecasting in management accounting... The correct response (D) channels observed errors into model improvement rather than abandoning the forecasting function.\"",
+        "topic_alignment": "MISALIGNED — describes P1-B-026's forecast error analysis topic, not P1-B-025's budgetary slack topic"
+      },
+      "EW_B": {
+        "status": "non-empty",
+        "content": "\"Not every forecast error indicates fraud. Errors arise from many legitimate sources...\"",
+        "topic_alignment": "MISALIGNED — describes P1-B-026's Choice B (fraud indicator), not P1-B-025's topic"
+      },
+      "EW_C": {
+        "status": "non-empty",
+        "content": "\"Selecting only the best-performing month discards the other 11 months of data...\"",
+        "topic_alignment": "MISALIGNED — describes P1-B-026's Choice C (best month only), not P1-B-025's topic"
+      },
+      "EW_D": {
+        "status": "empty at distractor position",
+        "DL-025": "DEFECT — EW_D is empty but D is a distractor (CC=A); should contain choice-specific text"
+      },
+      "DL-008_status": "DEFECT_CONFIRMED — EW_A is non-empty at CorrectChoice slot (A)",
+      "DL-016_shift_check": "SHIFT_CONFIRMED — all three non-empty EW fields (A, B, C) describe P1-B-026's forecast error analysis choices, not P1-B-025's own budgetary slack choices",
+      "DL-016_detail": "P1-B-025 EW_A/B/C text maps to P1-B-026 Choices A/B/C respectively. P1-B-026 topic is 'B.026 forecast error analysis' with stem 'Riverview compares forecasted demand with actual demand over the past 12 months.'",
+      "DL-025_status": "DEFECT_CONFIRMED — EW_D is empty at a distractor position",
+      "next_item_reference": "P1-B-026 (lines 5045-5089, Topic: B.026 forecast error analysis, CC=D, all EW fields clean for own topic)",
+      "adjacent_item_check": "P1-B-024 (lines 4947-4995, cash budget borrowing need, CC=A, EW_B/C/D all topically aligned to own cash budget topic) is CLEAN — shift is isolated to P1-B-025",
+      "verdict": "DEFECT_CONFIRMED — DL-008 (EW_A non-empty at CC slot), DL-016 (+1 offset: EW_A/B/C describe next-item P1-B-026's topic), DL-025 (EW_D empty at distractor position)"
+    }
+  ],
+  "summary": {
+    "total_items_verified": 5,
+    "clean": 4,
+    "defect_confirmed": 1,
+    "needs_review": 0,
+    "clean_items": ["P1-B-002", "P1-B-003", "P1-B-004", "P1-B-005"],
+    "defective_items": ["P1-B-025"],
+    "defects_found": {
+      "DL-008": 1,
+      "DL-016": 1,
+      "DL-025": 1
+    },
+    "p1_b_004_special": "CONFIRMED: unchanged and clean on all dimensions. CC=B, EW_B=\"\", all other EW fields topically aligned to rolling budget topic.",
+    "p1_b_025_special": "CONFIRMED: Certified but DEFECTIVE. Carries DL-008 (EW_A non-empty at CC slot A), DL-016 (+1 offset: EW_A/B/C describe P1-B-026's forecast error analysis, not own budgetary slack), DL-025 (EW_D empty at distractor position D).",
+    "rotation_group_1_verdict": "P1-B-002 through P1-B-005: fully clean. No DL-016 shift within the rotation group (B-002→B-005). All EW fields topically aligned to their own items.",
+    "rotation_group_5_verdict": "P1-B-025: DL-016 shift confirmed. EW fields present the +1 offset pattern — text belongs to P1-B-026. P1-B-024 (preceding item) is clean."
+  }
+}

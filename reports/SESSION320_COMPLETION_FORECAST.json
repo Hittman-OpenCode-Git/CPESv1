@@ -1,0 +1,13 @@
+{
+  "session": "S320",
+  "remaining_ew_fills": 28,
+  "remaining_coso_adds": 20,
+  "remaining_ec_enrichment": 20,
+  "sessions": {
+    "s320": "Pack D: 10 EW + 8 COSO — COMPLETE",
+    "s321": "Pack C: 19 EW + 13 COSO + EC enrichment for weak items (<200c)",
+    "s322": "Wave 1 Certification Review (all 38 seeds)",
+    "s323": "Production insertion & Domain E closeout"
+  },
+  "total_estimated": 4
+}

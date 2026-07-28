@@ -1,0 +1,325 @@
+
+========== P1-F-013 [pack_a_corrected.js] ==========
+Level: Analyze | Difficulty: 1 (Easy)
+Topic: F.014 ETL process controls | State: Certified
+CC: A
+STEM: Juniper is loading sales and inventory data from operating systems into a finance data warehouse. Which control best supports completeness and accuracy during the ETL process?
+CHOICES: 
+      "A": "Reconcile extracted, transformed, and loaded records to source totals and approved validation rules",
+      "B": "Review dashboard colors and labels after users begin relying on the report",
+      "C": "Let analysts manually adjust warehouse totals outside change control when reports appear unusual",
+      "D": "Limit review to whether final reports open successfully in the reporting tool"
+    
+EXPLANATION: ETL controls help ensure data extracted from sources, transformed by rules, and loaded into reporting systems remains complete and accurate. Reconciliations to source totals and validation rules are key controls.
+
+========== P1-B-024 [pack_a_corrected.js] ==========
+Level: Apply | Difficulty: 3 (Easy)
+Topic: B.025 budgetary slack incentive design 9 | State: Certified
+CC: A
+STEM: Quartz links bonuses to easily achieved budget targets and notices managers consistently understate capacity. Which response is most appropriate?
+CHOICES: 
+      "A": "Revise incentives and review assumptions to discourage slack while preserving accountability",
+      "B": "Eliminate all variance analysis from the budget process",
+      "C": "Classify slack as a cash equivalent",
+      "D": "Reward only managers who submit the lowest sales forecasts"
+    
+EXPLANATION: Budgetary slack is often an incentive and information problem; better review and incentive design reduce it.
+
+========== P1-B-039 [pack_a_corrected.js] ==========
+Level: Apply | Difficulty: 3 (Moderate)
+Topic: B.040 standard costing variance investigation threshold | State: Certified
+CC: B
+STEM: Eastwood investigates any budget variance exceeding 5% of budgeted cost or $10,000, whichever is smaller. A department shows a $9,000 unfavorable variance on a $150,000 budget. Should this be investigated?
+CHOICES: 
+      "A": "Yes, because $9,000 exceeds the $10,000 threshold",
+      "B": "No, because 5% of $150,000 is $7,500 and $9,000 exceeds that, so it should be investigated",
+      "C": "No, because the variance is favorable",
+      "D": "Yes, but only if it recurs for two consecutive periods"
+    
+EXPLANATION: 5% of $150,000 = $7,500, which is smaller than the $10,000 cap, so $7,500 is the threshold. Since $9,000 exceeds $7,500, the variance should be investigated.
+
+========== P1-B-048 [pack_a_corrected.js] ==========
+Level: Apply | Difficulty: 3 (Moderate-Easy)
+Topic: B.049 sales budget seasonality adjustment | State: Certified
+CC: B
+STEM: Cascade's sales are highly seasonal, with 40% of annual volume occurring in Q4. When building the annual sales budget, what should Cascade do to avoid understating working capital needs earlier in the year?
+CHOICES: 
+      "A": "Ignore seasonality and divide the annual total evenly across quarters",
+      "B": "Budget each quarter based on its historical share of annual sales",
+      "C": "Budget the entire year's sales in Q4 only",
+      "D": "Use only the prior year's Q4 actuals to set the full annual budget"
+    
+EXPLANATION: Budgets should reflect known seasonal patterns; allocating sales based on each quarter's historical share produces a more realistic profile of cash flow and working capital needs than an even quarterly split.
+
+========== P1B-C-143 [pack_b_corrected.js] ==========
+Level: Analyze | Difficulty: 4 (Moderate)
+Topic: B-C.144 ROI and residual income | State: Certified
+CC: D
+STEM: A division manager at Parkview Industries is considering a project earning $40,000 on $250,000 of assets. Required rate is 14%. Division current ROI is 18%. Which performance measure would create goal congruence?
+CHOICES: 
+            "A": "$47,000",
+            "B": "$18,000",
+            "C": "$25,000",
+            "D": "$32,000"
+        
+EXPLANATION: The project's ROI = $40,000 / $250,000 = 16%. Current division ROI is 18%, so under ROI the manager would reject it. However, 16% > 14% required rate, so residual income would increase by $40,000 - ($250,000 x 14%) = $5,000. Residual income creates goal congruence by encouraging projects earning above the cost of capital.
+
+========== P1B-E-116 [pack_b_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: B-E.117 ICFR | State: Certified
+CC: B
+STEM: During the ICFR assessment at Nexus Manufacturing, management needs to determine whether a control is operating effectively. The control requires that all credit sales over ,000 be approved by the credit manager. The control is performed approximately 50 times per month. Which testing approach would provide the most persuasive evidence?
+CHOICES: 
+            "A": "A minor deficiency",
+            "B": "A significant deficiency",
+            "C": "A control deficiency",
+            "D": "A material weakness"
+        
+EXPLANATION: A combination of inquiry, observation, and reperformance provides stronger evidence than any single procedure. Reperforming a sample of transactions provides direct evidence that the control operated as designed. Inquiry alone is generally the least persuasive form of evidence for testing control effectiveness.
+
+========== P1-EC-020 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: E.021 segregation of duties vendor setup and payment | State: Certified
+CC: A
+STEM: Bryant Manufacturing has a small accounts payable department where one employee creates new vendor records, enters invoices from those vendors, and approves payments for processing. Management wants to reduce the risk of fraudulent payments without adding staff. Which control improvement is most effective?
+CHOICES: 
+            "A": "Require a second employee to approve new vendor additions and review a monthly vendor-master change report",
+            "B": "Require the same employee to also perform the monthly bank reconciliation",
+            "C": "Have an internal auditor review all payments above a threshold quarterly",
+            "D": "Raise the dollar threshold for requiring supervisory approval of payments"
+        
+EXPLANATION: Under the COSO Internal Control—Integrated Framework, the Control Activities component (Principles 10–12) requires segregation of duties (SoD) to prevent one person from controlling all aspects of a transaction, thereby reducing the opportunity for errors and fraud. Analysis of the control breakdown: Bryant's single employee performs three incompatible duties — vendor record creation (authorization), invoice entry (recording), and payment approval (custody). This creates a risk that a fictitious
+
+========== P1-EC-021 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: E.022 preventive vs detective duplicate payment control | State: Certified
+CC: B
+STEM: Crestview Manufacturing frequently discovers duplicate vendor payments when reviewing the monthly accounts payable aging report. Management wants to implement a control that will best prevent duplicates from occurring. Which one of the following controls is preventive?
+CHOICES: 
+            "A": "Require the controller to review and approve a check register weekly",
+            "B": "Configure the accounts payable system to reject invoices with duplicate vendor-invoice-date combinations before payment",
+            "C": "Perform quarterly reconciliations of vendor statements to the accounts payable subledger",
+            "D": "Review a monthly accounts payable aging report for unusual activity"
+        
+EXPLANATION: Under the COSO Internal Control—Integrated Framework, the Control Activities component (Principles 10–12) requires control activities that mitigate risks. Preventive controls are designed to stop errors BEFORE they occur; detective controls identify them AFTER. Analysis of Crestview's four options against the preventive-detective framework evaluating timing and intervention point: Option B (system-imposed duplicate-check blocking at invoice entry) prevents the duplicate from entering the payment
+
+========== P1-EC-022 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: E.023 IT access control terminated employee deprovisioning | State: Certified
+CC: C
+STEM: During an internal audit, Drake Distribution discovered that a former employee's system access remained active for 18 days after termination. No unauthorized transactions occurred during that period. Management wants to prevent recurrence. Which remediation is most appropriate?
+CHOICES: 
+            "A": "Accept the risk since no actual fraud or data loss occurred during the gap",
+            "B": "Require stronger password complexity standards for all system users",
+            "C": "Implement automated access deprovisioning triggered by termination in the HR system and require quarterly user access recertification by managers",
+            "D": "Convert all terminated employees to read-only access instead of removing access entirely"
+        
+EXPLANATION: Under the COSO Information and Communication component (Principles 13–14), timely and reliable information flows — including HR-to-IT communication of termination events — are essential for effective internal control. Analysis of the control breakdown: Drake Distribution had no automated linkage between HR termination records and IT access management. The 18-day access gap represents a systemic process-design deficiency — the absence of automated deprovisioning means every future termination wil
+
+========== P1-EC-023 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: E.024 application input control sales order validation | State: Certified
+CC: D
+STEM: Parkview Company's sales order system accepts orders with invalid customer codes, negative quantities, and missing ship-to addresses. These errors are discovered only when invoices fail to process days later. Which application control would best address this issue?
+CHOICES: 
+            "A": "Generate weekly exception reports for the sales manager to review and correct",
+            "B": "Reconcile the sales order file to the invoice register at month-end",
+            "C": "Require a sales supervisor to manually approve every sales order before entry",
+            "D": "Implement real-time field validation in the order entry system to reject entries with invalid customer codes, negative quantities, or missing ship-to addresses"
+        
+EXPLANATION: Under the COSO Control Activities component, application controls include input controls that validate data for accuracy, completeness, and authorization at the point of entry. Real-time field validation is an application input control that checks data for completeness, validity, and reasonableness before the system accepts the entry. It is preventive because it blocks errors at the point of entry rather than detecting them afterward.
+
+========== P1-EC-024 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate-Easy)
+Topic: E.025 preventive vs detective controls | State: Certified
+CC: A
+STEM: Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?
+CHOICES: 
+            "A": "A preventive control, because it stops an unauthorized payment before it occurs",
+            "B": "A compensating control used only when segregation is impossible",
+            "C": "A corrective control, because it fixes problems after they occur",
+            "D": "A detective control, because it identifies errors after the fact"
+        
+EXPLANATION: Under the COSO Control Activities component, preventive authorization controls like dual signatures are applied before a transaction is completed to ensure proper approval. Dual signatures before check release are a preventive authorization control. The control objective is to stop unauthorized or inappropriate disbursements before cash leaves the organization, not merely detect them later.
+
+========== P1-EC-025 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 2 (Moderate)
+Topic: E.026 bank reconciliation control | State: Certified
+CC: B
+STEM: Ashgrove has a designated employee, independent of cash handling and recording, perform the monthly bank reconciliation. Why is independence important here?
+CHOICES: 
+            "A": "It guarantees no bank fees will ever be charged",
+            "B": "It ensures the reconciliation can objectively detect errors or irregularities without being influenced by the preparer's own transactions",
+            "C": "It eliminates the need to compare the bank statement to the general ledger",
+            "D": "It removes the need for management review of cash balances"
+        
+EXPLANATION: An independent reconciler who does not handle or record cash transactions can objectively identify discrepancies rather than concealing self-caused errors.
+
+========== P1-CC-064 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 4 (Easy)
+Topic: C.065 controllability principle | State: Certified
+CC: A
+STEM: Poplarwood's regional manager is charged with a corporate overhead allocation over which the manager has no control or influence. What performance evaluation principle is being violated?
+CHOICES: 
+            "A": "The controllability principle, which holds managers accountable only for items they can influence",
+            "B": "The materiality principle, which governs disclosure thresholds",
+            "C": "The going concern principle, which assumes continued operations",
+            "D": "The matching principle, which pairs revenue and expense in the same period"
+        
+EXPLANATION: The controllability principle holds that managers should be evaluated ONLY on items within their span of control — revenues they can influence, costs they can manage, and assets they can deploy. Charging a manager with uncontrollable corporate overhead allocations violates this principle for three reasons: (1) it distorts performance signals — the manager's reported results reflect decisions made by others, not their own effort; (2) it undermines motivation — managers disengage when evaluated on
+
+========== P1-CC-071 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 4 (Moderate)
+Topic: C.072 gross margin variance analysis | State: Certified
+CC: D
+STEM: Willowmere's gross margin declined even though sales volume increased. Management wants to separate the effects of sales price, volume, and cost changes. What analytical approach should be used?
+CHOICES: 
+            "A": "A break-even analysis in isolation",
+            "B": "A capital budgeting NPV analysis",
+            "C": "A single cash flow statement review",
+            "D": "Gross margin (profit) variance analysis, decomposing the change into price, volume, and cost components"
+        
+EXPLANATION: Gross margin variance analysis decomposes the change in gross margin into sales price, sales volume, and cost variances to identify root causes of performance changes.
+
+========== P1-EC-028 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: E.029 bank reconciliation control | State: Certified
+CC: A
+STEM: Dovetail has a designated employee, independent of cash handling and recording, perform the monthly bank reconciliation. Why is independence important here?
+CHOICES: 
+            "A": "It ensures the reconciliation can objectively detect errors or irregularities without being influenced by the preparer's own transactions",
+            "B": "It eliminates the need to compare the bank statement to the general ledger",
+            "C": "It guarantees no bank fees will ever be charged",
+            "D": "It removes the need for management review of cash balances"
+        
+EXPLANATION: An independent reconciler who does not handle or record cash transactions can objectively identify discrepancies rather than concealing self-caused errors.
+
+========== P1-DC-030 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: D.031 target costing approach | State: Certified
+CC: C
+STEM: Foxglove determines the price customers are willing to pay for a new product, subtracts a desired profit margin, and designs the product to meet the resulting cost figure. What costing approach is this?
+CHOICES: 
+            "A": "Job order costing",
+            "B": "Standard costing",
+            "C": "Target costing",
+            "D": "Absorption costing"
+        
+EXPLANATION: Target costing starts with a market-based target price, subtracts desired profit to determine an allowable cost, and drives product design to meet that cost target.
+
+========== P1-DC-035 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: D.036 theory of constraints throughput | State: Certified
+CC: D
+STEM: Kingfisher identifies a bottleneck machine that limits overall factory output and focuses improvement efforts there first. What costing philosophy is being applied?
+CHOICES: 
+            "A": "Absorption costing, which allocates all fixed overhead to products",
+            "B": "Standard costing, which sets a single predetermined cost per unit",
+            "C": "Zero-based budgeting, which resets every account to zero",
+            "D": "The theory of constraints, which focuses on maximizing throughput at the identified bottleneck"
+        
+EXPLANATION: The theory of constraints identifies and manages the bottleneck (constraint) that limits system throughput, focusing improvement efforts to maximize output through that constraint.
+
+========== P1-DC-040 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 4 (Moderate)
+Topic: D.041 cost of quality external failure | State: Certified
+CC: A
+STEM: Pinehollow incurs significant costs for warranty repairs and product recalls after products have been shipped to customers. How are these costs classified in a cost of quality report?
+CHOICES: 
+            "A": "External failure costs",
+            "B": "Prevention costs",
+            "C": "Appraisal costs",
+            "D": "Internal failure costs"
+        
+EXPLANATION: External failure costs arise when defects are discovered after the product has reached the customer, such as warranty claims, returns, and recalls.
+
+========== P1-DC-045 [pack_c_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate-Easy)
+Topic: D.046 byproduct accounting treatment | State: Certified
+CC: B
+STEM: Umberfield produces a minor byproduct alongside its main products from a joint process. How is the byproduct's net realizable value typically treated?
+CHOICES: 
+            "A": "As a separate line item on the income statement equal to its full sales value",
+            "B": "As a reduction of the joint cost allocated to the main products",
+            "C": "As a deferred asset with no income statement impact",
+            "D": "As an increase to the cost of the main products"
+        
+EXPLANATION: The net realizable value of a byproduct is typically treated as a reduction of the joint costs allocated to the main products, rather than recognized as separate revenue.
+
+========== P1-ED-016 [pack_d_corrected.js] ==========
+Level: Analyze | Difficulty: 1 (Easy)
+Topic: E.017 erm risk response strategies | State: Certified
+CC: A
+STEM: Quintwood decides to purchase insurance to address a significant identified risk rather than eliminate the underlying activity. What enterprise risk management response is this?
+CHOICES: 
+            "A": "Risk transfer (sharing), shifting some financial impact of the risk to a third party",
+            "B": "Risk avoidance, eliminating the risk entirely",
+            "C": "Risk acceptance, taking no action",
+            "D": "Risk appetite, defining the amount of risk tolerated"
+        
+EXPLANATION: Under the COSO Enterprise Risk Management—Integrating with Strategy and Performance (2017) framework, risk responses include acceptance, avoidance, reduction, and sharing (transfer). Purchasing insurance is a form of risk transfer (or sharing), shifting some of the financial consequences of a risk to a third party such as an insurer. A common exam trap is confusing risk transfer (which shifts impact) with risk avoidance (which eliminates the underlying activity entirely).
+
+========== P1-ED-042 [pack_d_corrected.js] ==========
+Level: Analyze | Difficulty: 2 (Easy)
+Topic: E.043 risk assessment likelihood impact | State: Certified
+CC: C
+STEM: Ridgewell's risk management team scores identified risks based on their likelihood of occurring and the potential impact if they do. What process is this?
+CHOICES: 
+            "A": "Monitoring, which evaluates control effectiveness over time",
+            "B": "Control activities, which are the specific policies implemented",
+            "C": "Risk assessment, prioritizing risks based on likelihood and impact",
+            "D": "Risk transfer, which shifts risk to third parties"
+        
+EXPLANATION: Under the COSO Risk Assessment component (Principles 6–9), organizations identify and analyze risks to determine how they should be managed. Risk assessment involves identifying and analyzing risks based on their likelihood and potential impact, helping prioritize which risks require the most attention.
+
+========== P1-ED-046 [pack_d_corrected.js] ==========
+Level: Analyze | Difficulty: 2 (Moderate-Easy)
+Topic: E.047 code of conduct ethics program | State: Certified
+CC: C
+STEM: Vaultbrook requires all employees to complete annual ethics training and sign an acknowledgment of the company's code of conduct. What internal control component does this primarily support?
+CHOICES: 
+            "A": "Monitoring activities, since it evaluates control effectiveness",
+            "B": "Information and communication, limited to external reporting only",
+            "C": "The control environment, by reinforcing the organization's commitment to ethical values",
+            "D": "Risk assessment, since it identifies specific financial risks"
+        
+EXPLANATION: Under the COSO Internal Control—Integrated Framework, the Control Environment (Principles 1–5) is the foundation of internal control. An ethics program and code of conduct demonstrate the organization's commitment to integrity and ethical values, which sets the tone at the top and influences the control consciousness of all employees.
+
+========== P1-BD-049 [pack_d_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: B.050 direct materials purchases budget | State: Certified
+CC: B
+STEM: Ambervale needs 25,000 pounds of material for production, wants ending inventory of 4,000 pounds, and has beginning inventory of 3,000 pounds. How many pounds should be purchased?
+CHOICES: 
+            "A": "22,000 pounds",
+            "B": "26,000 pounds",
+            "C": "25,000 pounds",
+            "D": "28,000 pounds"
+        
+EXPLANATION: The direct materials purchases budget determines the quantity of materials to buy. Production needs are 25,000 lbs. The company desires 4,000 lbs of ending inventory to start the next period, but has 3,000 lbs already in beginning inventory. Purchases = Production needs (25,000) + Desired ending (4,000) - Beginning (3,000) = 26,000 pounds.
+
+========== P1-CD-017 [pack_d_corrected.js] ==========
+Level: Analyze | Difficulty: 3 (Moderate)
+Topic: C.018 sales mix variance calculation | State: Certified
+CC: B
+STEM: A company budgets a sales mix of 60% Product A and 40% Product B. Standard contribution margins are $12 for A and $20 for B. Actual total sales were 10,000 units, split 5,000 units of A and 5,000 units of B. What is the total sales mix variance?
+CHOICES: 
+            "A": "$8,000 unfavorable",
+            "B": "$8,000 favorable",
+            "C": "$20,000 favorable",
+            "D": "$0"
+        
+EXPLANATION: At the budgeted mix for 10,000 actual units, A would be 6,000 units and B would be 4,000 units. Actual mix shifted 1,000 units away from A and 1,000 units toward higher-margin B: (-1,000 x $12) + (1,000 x $20) = $8,000 favorable.
+
+========== P1-DD-031 [pack_d_corrected.js] ==========
+Level: Analyze | Difficulty: 1 (Easy)
+Topic: D.032 degree of operating leverage | State: Certified
+CC: D
+STEM: Greybridge has a high proportion of fixed costs relative to variable costs in its cost structure. What effect does this have on the degree of operating leverage?
+CHOICES: 
+            "A": "No effect on operating leverage since it depends only on sales price",
+            "B": "A guarantee that the company will always be profitable",
+            "C": "A lower degree of operating leverage with less sensitivity to volume changes",
+            "D": "A higher degree of operating leverage, meaning profit is more sensitive to changes in sales volume"
+        
+EXPLANATION: A cost structure weighted toward fixed costs produces a higher degree of operating leverage, meaning operating income is more sensitive to changes in sales volume.

@@ -1,0 +1,65 @@
+{
+  "session": 120,
+  "title": "S120 Explain Behavior Simulation",
+  "generatedAt": "2026-07-26T00:00:00Z",
+  "methodology": "Review of structured output patterns by question type using representative Pack A items. Each scenario compares old behavior (verbatim explanation) to new behavior (layered tutor explanation).",
+  "scenarios": [
+    {
+      "type": "conceptual MCQ",
+      "example": "P1A-FS-001 (External Financial Reporting, Section A)",
+      "oldBehavior": "Displayed correct answer + verbatim ExplanationCorrect block + topic progress note",
+      "newBehavior": "6-section structured output: short answer → what this tests → why it works (includes bank explanation + interpretation) → common trap → pattern recognition → review focus → topic progress note",
+      "insightAdded": "Yes — trap awareness and pattern recognition added",
+      "sourceGrounded": "Yes — ExplanationCorrect included in 'Why the answer works' section",
+      "safetyHeld": "Yes — no ASC/FASB/COSO fabrication, no prediction language"
+    },
+    {
+      "type": "calculation MCQ",
+      "example": "P1A-FS-025 (Section A, $ stem)",
+      "oldBehavior": "Displayed correct answer + verbatim explanation + formula detection",
+      "newBehavior": "6-section output with calculation-specific trap ('Using the wrong formula or plugging numbers into the wrong position') and calculation-aware pattern recognition",
+      "insightAdded": "Yes — calculation-specific trap language and step-by-step pattern advice",
+      "sourceGrounded": "Yes — bank explanation preserved",
+      "safetyHeld": "Yes"
+    },
+    {
+      "type": "thin-explanation item",
+      "example": "Mock QID MOCK-001 (ExplanationCorrect: empty, Section A)",
+      "oldBehavior": "Displayed 'This question tests mock topic from Section A' only",
+      "newBehavior": "6-section output with safe fallback: 'The bank explanation is brief, so I'll keep this grounded in the topic, choices, and correct answer without inventing extra facts.' Generic traps and review focus provided but no invented standards.",
+      "insightAdded": "Yes — structural framing even with thin content, no fabrication",
+      "sourceGrounded": "Yes — explicitly says bank explanation is brief",
+      "safetyHeld": "Yes — no ASC/FASB/COSO in thin-path output"
+    },
+    {
+      "type": "answered-wrong item",
+      "example": "Any Pack A item in review mode with wrong learner answer",
+      "oldBehavior": "_explainYourMistake handles wrong-answer coaching separately from _explainAnswer",
+      "newBehavior": "_explainAnswer unchanged in wrong-answer flow — it shows correct answer explanation. _explainYourMistake remains separate for 'where did I go wrong?' coaching. Both now benefit from tutor layer in _explainAnswer.",
+      "insightAdded": "Yes — _explainAnswer for wrong items now includes trap analysis that may help learner see what they fell for",
+      "sourceGrounded": "Yes",
+      "safetyHeld": "Yes — wrong-answer coaching path unchanged"
+    },
+    {
+      "type": "completed-session review item",
+      "example": "An item viewed after session completion via review queue",
+      "oldBehavior": "Full _explainAnswer with answer reveal + bank explanation + case coaching notes",
+      "newBehavior": "Full 6-section tutor-layer output + case coaching notes (whatMattered, approachNote) + topic progress. Review mode is the richest explain path.",
+      "insightAdded": "Yes — trap, pattern, and review focus sections add value in review context where learner is studying, not testing",
+      "sourceGrounded": "Yes",
+      "safetyHeld": "Yes — review mode intentionally permits full explanation"
+    }
+  ],
+  "miniExplain": {
+    "oldBehavior": "Answer letter + choice text + ExplanationCorrect snippet (250 char truncated)",
+    "newBehavior": "Answer letter + choice text + ExplanationCorrect snippet + common trap note (concise, inline)",
+    "oldGate": "Blocks before attempt → 'Try answering first' — PRESERVED",
+    "reviewGate": "Full reveal in review mode — PRESERVED"
+  },
+  "assessment": {
+    "primaryGoal": "Add tutoring value beyond bank explanation repetition — ACHIEVED",
+    "sourceGrounding": "ExplanationCorrect preserved in all paths — CONFIRMED",
+    "safetyGating": "No answer leakage, no fabrication, no prediction — CONFIRMED",
+    "testCoverage": "12 new tests, 205 total passing — CONFIRMED"
+  }
+}

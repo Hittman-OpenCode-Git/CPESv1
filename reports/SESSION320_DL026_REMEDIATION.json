@@ -1,0 +1,57 @@
+{
+  "session": "S320",
+  "defect": "DL-026",
+  "description": "Empty non-CorrectChoice ExplanationWrong slots",
+  "before_total": 34,
+  "after_total": 25,
+  "remediated": 9,
+  "packs": {
+    "pack_c": {
+      "before": 19,
+      "remediated": 0,
+      "after": 19
+    },
+    "pack_d": {
+      "before": 19,
+      "remediated": 10,
+      "after": 9
+    }
+  },
+  "details": [
+    {
+      "qid": "P1-ED-028",
+      "cc": "A",
+      "slots_filled": "A"
+    },
+    {
+      "qid": "P1-ED-042",
+      "cc": "C",
+      "slots_filled": "A,C"
+    },
+    {
+      "qid": "P1-ED-046",
+      "cc": "C",
+      "slots_filled": "C"
+    },
+    {
+      "qid": "P1-ED-051",
+      "cc": "D",
+      "slots_filled": "D"
+    },
+    {
+      "qid": "P1-ED-058",
+      "cc": "C",
+      "slots_filled": "A"
+    },
+    {
+      "qid": "P1-ED-064",
+      "cc": "A",
+      "slots_filled": "A"
+    },
+    {
+      "qid": "P1-ED-066",
+      "cc": "C",
+      "slots_filled": "A,C"
+    }
+  ]
+}

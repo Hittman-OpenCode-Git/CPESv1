@@ -1,0 +1,199 @@
+{
+  "title": "SESSION317_CERTIFICATION_RESULTS",
+  "session": "317",
+  "generated": "2026-07-27",
+  "board": "S317 Certification Board (Agent P)",
+  "prerequisite_reviews_consumed": [
+    "SESSION317_TECHNICAL_REVIEW.json — 10/10 PASS",
+    "SESSION317_EW_INTEGRITY_AUDIT.json — 100% EW coverage, 0 DL-008 violations",
+    "SESSION317_QUALITY_GATE_CERTIFICATION.json — All 4 gates PASS",
+    "SESSION317_UIQS_VALIDATION.json — Overall score in output"
+  ],
+  "summary": {
+    "certify": 10,
+    "hold": 0,
+    "escalate": 0
+  },
+  "decisions": [
+    {
+      "QuestionID": "P1-E-R34",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "Difficulty": "Easy",
+      "CognitiveLevel": "Understand",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.a Internal Control Definition, Understand, Easy",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[C]='' (CC), EW[A,B,D] substantive",
+        "uiqs_contribution": "90/100"
+      },
+      "rationale": "Solid foundational knowledge item. Tests COSO three objective categories with clear correct answer and plausible distractors from ERM, control types, and scope hierarchy. EC provides comprehensive explanation including 2013 vs 1992 Framework update. All three non-CC EW entries target specific learner misconceptions."
+    },
+    {
+      "QuestionID": "P1-E-R35",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "Difficulty": "Easy",
+      "CognitiveLevel": "Understand",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.a Internal Control Definition, Understand, Easy",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[A]='' (CC), EW[B,C,D] substantive",
+        "uiqs_contribution": "88/100"
+      },
+      "rationale": "Core concept item on reasonable assurance. CorrectChoice A clearly states the inherent limitations (human judgment, collusion, management override). Distractors address misconceptions about auditor-designed controls, control-type limitations, and COSO mandate status. EC thoroughly explains all four inherent limitations."
+    },
+    {
+      "QuestionID": "P1-E-R36",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.a Internal Control Definition, Apply, Moderate",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[D]='' (CC), EW[A,B,C] substantive",
+        "uiqs_contribution": "91/100"
+      },
+      "rationale": "Strong scenario-based application item. CFO's misunderstanding creates authentic assessment context. CorrectChoice D unambiguously states management's retained responsibility. Distractors test shared responsibility misconception, audit-type dependency, and SOX 404 misinterpretation — all common learner errors."
+    },
+    {
+      "QuestionID": "P1-E-R26",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.i Safeguarding Controls, Apply, Moderate",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[B]='' (CC), EW[A,C,D] substantive",
+        "uiqs_contribution": "92/100"
+      },
+      "rationale": "Excellent segregation of duties application. Scenario embeds recording + custody + reconciliation in a single clerk role — the classic incompatible combination. EC names all four incompatible function categories. Distractors test confusion with management override, independent verification, and supervision-as-substitute fallacies."
+    },
+    {
+      "QuestionID": "P1-E-R27",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.i Safeguarding Controls, Apply, Moderate",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[A]='' (CC), EW[B,C,D] substantive",
+        "uiqs_contribution": "89/100"
+      },
+      "rationale": "Effective authorization controls classification item. Multi-tiered procurement policy correctly identified as combining general and specific authorization. EC clearly distinguishes authorization (preventive) from detective controls and entity-level scope. All three EW distractors correct specific learner misconceptions."
+    },
+    {
+      "QuestionID": "P1-E-R29",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "Difficulty": "Easy",
+      "CognitiveLevel": "Understand",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.i Safeguarding Controls, Understand, Easy",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[C]='' (CC), EW[A,B,D] substantive",
+        "uiqs_contribution": "88/100"
+      },
+      "rationale": "Strong 'strongest protection' item requiring synthesis of control layers. CorrectChoice C correctly combines physical access + independent verification + structural segregation. Distractors each present incomplete control combinations that a learner might incorrectly accept as sufficient. EC's three-layer explanation is pedagogically sound."
+    },
+    {
+      "QuestionID": "P1-E-R37",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.d Risk Assessment",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.d Risk Assessment, Apply, Moderate",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[B]='' (CC), EW[A,C,D] substantive",
+        "uiqs_contribution": "93/100"
+      },
+      "rationale": "High-quality risk identification technique item. Delphi method characteristics (anonymous, iterative, expert-driven) correctly distinguished from brainstorming, SWOT, and scenario analysis. Scenario context (cryptocurrency + dispersed experts) makes Delphi the natural choice. EC provides comprehensive technique comparison."
+    },
+    {
+      "QuestionID": "P1-E-R38",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.d Risk Assessment",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.d Risk Assessment, Apply, Moderate",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[A]='' (CC), EW[B,C,D] substantive",
+        "uiqs_contribution": "93/100"
+      },
+      "rationale": "Precise numerical application of inherent vs residual risk. $2.5M before controls = inherent risk, $400K after = residual risk. Distractors test common inversions (residual vs inherent), risk appetite confusion, and auditing concept (control risk) intrusion — all educationally valuable misdirections."
+    },
+    {
+      "QuestionID": "P1-E-R39",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Apply",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.h Sarbanes-Oxley Act (SOX), Apply, Moderate",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[C]='' (CC), EW[A,B,D] substantive",
+        "uiqs_contribution": "90/100"
+      },
+      "rationale": "High-value SOX comparison item. Tests specific Section 302 vs 906 distinction that appears on CMA exam. CorrectChoice C's ICFR responsibility/evaluation language is uniquely Section 302. EC includes legal citations. Distractors correctly position Section 906-specific and shared requirements."
+    },
+    {
+      "QuestionID": "P1-E-R40",
+      "decision": "CERTIFY",
+      "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+      "Difficulty": "Moderate",
+      "CognitiveLevel": "Understand",
+      "evidence": {
+        "technical": "PASS — accurate conceptual coverage",
+        "explanations": "PASS — substantive EC with coaching depth, choice-specific EW targeting learner misconceptions",
+        "gate1_draft": "PASS",
+        "gate2_technical": "PASS — DL-008/026/013/010 clean",
+        "gate3_blueprint": "PASS — E.1.b Internal Control Framework (COSO 2013), Understand, Moderate",
+        "gate4_qa": "PASS — no scanner observations requiring adjudication",
+        "ew_integrity": "PASS — EW[D]='' (CC), EW[A,B,C] substantive",
+        "uiqs_contribution": "89/100"
+      },
+      "rationale": "Effective principle-to-component mapping item. All four distractors represent genuine mapping errors learners commonly make (Principle 9→RA not CE, Principle 4→CE not RA, Principle 15→I&C not CA). EC states all 17 principles by component. Strong cross-referencing item for COSO 2013 mastery."
+    }
+  ]
+}

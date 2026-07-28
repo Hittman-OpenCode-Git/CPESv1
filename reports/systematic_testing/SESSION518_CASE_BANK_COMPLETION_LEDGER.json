@@ -1,0 +1,158 @@
+{
+  "session": "518",
+  "timestamp": "2026-07-26T00:05:00Z",
+  "purpose": "Master case-bank completion ledger — classification of every case-bank array against 'full as specified'",
+
+  "classification_definitions": {
+    "FULLY_CERTIFIED": "All items + case-level Certified. All 6 CAQS dimensions pass. No known defects.",
+    "CERTIFIED_OPTIONAL_POLISH": "Certified but has optional quality enhancements (per-item Difficulty, longer explanations, case-level metadata)",
+    "PARTIALLY_CERTIFIED_HOLDBACK": "Some items Certified, some held back with known specific defects",
+    "WHOLLY_UNPROCESSED": "All items Unprocessed — never reviewed against CAQS",
+    "NEEDS_EXPLANATION_UPLIFT": "Explanations thin (<100 chars) on significant portion of items",
+    "NEEDS_METADATA_DIFFICULTY": "No per-item Difficulty/DifficultyScore assigned",
+    "NEEDS_DISTRACTOR_RATIONALE": "Select/multi items lack wrong-choice rationale",
+    "NEEDS_CASE_REALISM": "Q4/Q5 items insufficiently grounded in case facts",
+    "NEEDS_ANSWER_KEY_AUDIT": "Numeric items not yet independently recalculated",
+    "NEEDS_HUMAN_REVIEW": "Items requiring human judgment beyond CAQS §1.6"
+  },
+
+  "arrays": [
+    {
+      "array": "ENHANCED_CASE_BASE / MIGRATED_CASE_BASE_A",
+      "file": "scored_cases.js",
+      "cases": 15,
+      "items": 90,
+      "classification": "WHOLLY_UNPROCESSED",
+      "certified_items": 0,
+      "blockers": [
+        "ALL_ITEMS_UNPROCESSED: 0/90 items Certified, 0/15 cases Certified",
+        "EXPLANATION_THIN: 66/90 (73%) items have Explanation < 100 chars",
+        "NO_DIFFICULTY: 90/90 items missing per-item Difficulty/DifficultyScore",
+        "NO_CAQS: Never reviewed against any of the 6 CAQS dimensions",
+        "DL-032: All case-level Difficulty labels are Moderate or Difficult — no calibration"
+      ],
+      "optional_polish": [],
+      "next_action": "Run full CAQS §1.6 six-dimension review. Estimate: 3-4 sessions for 90 items (15 numeric, 19 select, 14 multi, 12 match, 8 fill). This is a large batch — consider phased approach starting with Section A (CBQ-A1, CBQ-A2, CBQ-A3 = 18 items).",
+      "estimated_effort": "High — 90 items, 66 need explanation expansion",
+      "priority": "LOWEST — no learner exposure (not wired into runtime)"
+    },
+    {
+      "array": "ENHANCED_CASE_BASE2 / MIGRATED_CASE_BASE_B",
+      "file": "scored_cases2.js",
+      "cases": 15,
+      "items": 78,
+      "classification": "FULLY_CERTIFIED",
+      "certified_items": 78,
+      "blockers": [],
+      "optional_polish": [
+        "PER_ITEM_DIFFICULTY: 73/78 items (94%) missing per-item Difficulty/DifficultyScore. Only CBQ2-A3 (5 items) has per-item difficulty after S518.",
+        "EXPLANATION_LENGTH: 10/78 items have Explanation < 100 chars",
+        "CASE_LEVEL_METADATA: Industry, CompanyType, CompanyName, Stakeholder fields inconsistent across cases",
+        "PRODUCTION_STATUS: All 15 cases still 'Draft' despite being Certified",
+        "SCENARIO_TEXT: Some ScenarioText fields are very short (<50 chars)"
+      ],
+      "next_action": "None required. Optional: per-item difficulty calibration pass (deferred — non-blocking).",
+      "estimated_effort": "None — fully certified",
+      "priority": "NONE — complete"
+    },
+    {
+      "array": "ENHANCED_CASE_BASE3 / MIGRATED_CASE_BASE_C",
+      "file": "scored_cases3.js",
+      "cases": 15,
+      "items": 79,
+      "classification": "PARTIALLY_CERTIFIED_HOLDBACK",
+      "certified_items": 74,
+      "blockers": [
+        "CBQ3-A1: 5 items Unprocessed. CASE-C1-Q4 has ASC 606 choice-text defect ('The asset has an alternative use' should be NO alternative use per ASC 606-10-25-27c). Needs choice-text repair before certification.",
+        "NO_DIFFICULTY: 79/79 items missing per-item Difficulty",
+        "SHORT_EXPLANATIONS: 9/79 items < 100 chars"
+      ],
+      "optional_polish": [
+        "Q4/Q5 CASE_GROUNDING: ~30 items across Base_C need stronger case-fact integration",
+        "PRODUCTION_STATUS: All Draft"
+      ],
+      "next_action": "S519 — Remediate CBQ3-A1 (5 items). Fix CASE-C1-Q4 choice text. Then certify. One session.",
+      "estimated_effort": "Low — 5 items, 1 known defect",
+      "priority": "HIGH — only 1 case holding back full certification"
+    },
+    {
+      "array": "ENHANCED_CASE_BASE4 / MIGRATED_CASE_BASE_D",
+      "file": "scored_cases4.js",
+      "cases": 15,
+      "items": 78,
+      "classification": "PARTIALLY_CERTIFIED_HOLDBACK",
+      "certified_items": 63,
+      "blockers": [
+        "CBQ4-A1, CBQ4-A2, CBQ4-C1: 15 items Unprocessed (3 cases × 5 items). Never reviewed against CAQS.",
+        "NO_DIFFICULTY: 78/78 items missing per-item Difficulty",
+        "SHORT_EXPLANATIONS: 12/78 items < 100 chars"
+      ],
+      "optional_polish": [],
+      "next_action": "S520 — Run CAQS §1.6 review for 15 items (3 cases). Two sessions estimated.",
+      "estimated_effort": "Medium — 15 items, greenfield review",
+      "priority": "MEDIUM — 3 cases holding back full certification"
+    },
+    {
+      "array": "ENHANCED_CASE_BASE5",
+      "file": "scored_cases5.js",
+      "cases": 15,
+      "items": 75,
+      "classification": "PARTIALLY_CERTIFIED_HOLDBACK",
+      "certified_items": 70,
+      "blockers": [
+        "CBQ5-B2: 5 items Unprocessed. Never reviewed against CAQS.",
+        "NO_DIFFICULTY: 75/75 items missing per-item Difficulty",
+        "SHORT_EXPLANATIONS: 9/75 items < 100 chars"
+      ],
+      "optional_polish": [],
+      "next_action": "S521 — Run CAQS §1.6 review for CBQ5-B2 (5 items). One session.",
+      "estimated_effort": "Low — 5 items",
+      "priority": "MEDIUM — 1 case holding back full certification"
+    }
+  ],
+
+  "cross_cutting_issues": [
+    {
+      "issue": "DL-032 — Per-item Difficulty Calibration",
+      "scope": "395/400 items (98.75%) across all 5 files missing per-item Difficulty/DifficultyScore",
+      "status": "DEFERRED — every case-bank item needs per-item difficulty",
+      "estimated_effort": "4-6 hours",
+      "recommendation": "Run after all cases are fully certified. Can be done with a scripted pattern (Apply=3, Analyze=3, Evaluate=4, Understand=2, Remember=1) but per the S515/S516 pattern, each item needs explicit assignment."
+    },
+    {
+      "issue": "Case-Level Metadata Completion",
+      "scope": "Industry, CompanyType, CompanyName, Stakeholder, BusinessFunction fields need population",
+      "status": "DEFERRED",
+      "recommendation": "Batch metadata enrichment pass after certification completion"
+    },
+    {
+      "issue": "ProductionStatus Alignment",
+      "scope": "59 Draft, 16 Production — Certified cases should have Production",
+      "status": "DEFERRED",
+      "recommendation": "Update ProductionStatus to 'Production' during certification pass"
+    },
+    {
+      "issue": "Q4/Q5 Case Grounding",
+      "scope": "~30 items across Base_C where Q4/Q5 items use generic prompts unrelated to case specifics",
+      "status": "DEFERRED",
+      "recommendation": "Review after certification. Non-blocking quality enhancement."
+    }
+  ],
+
+  "summary": {
+    "fully_certified_arrays": 1,
+    "partially_certified_arrays": 3,
+    "wholly_unprocessed_arrays": 1,
+    "total_items_certified": 290,
+    "total_items_remaining": 110,
+    "holdback_cases": [
+      "CBQ3-A1 (5 items — 1 known ASC 606 text defect)",
+      "CBQ4-A1 (5 items — unprocessed)",
+      "CBQ4-A2 (5 items — unprocessed)",
+      "CBQ4-C1 (5 items — unprocessed)",
+      "CBQ5-B2 (5 items — unprocessed)"
+    ],
+    "holdback_items_total": 25,
+    "priority_order": "1. CBQ3-A1 (defect fix, 1 session) → 2. CBQ4-A1/A2/C1 (CAQS review, 2 sessions) → 3. CBQ5-B2 (CAQS review, 1 session) → 4. ENHANCED_CASE_BASE (90 items — deferred)"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "session": "S319",
+  "title": "COSO Reference Audit — Domain E Seed Certification Wave 1",
+  "generated": "2026-07-27",
+  "analyst": "Agent F — COSO Reference Audit",
+  "predecessor": "SESSION809_TECHNICAL_REVIEW.json (Agent C — Gate 1 PASS)",
+  "purpose": "Verify COSO citation presence, citation accuracy, and principle alignment for all 38 Domain E seeds.",
+
+  "audit_standard": {
+    "framework": "COSO Internal Control — Integrated Framework (2013)",
+    "principles_audited": "P1-P17",
+    "expected_per_item": "At least 1 COSO principle citation in ExplanationCorrect for certification",
+    "caqs_reference": "CAQS v1.0 §4 — mini-lesson standard requires explicit framework citations"
+  },
+
+  "overall_result": {
+    "verdict": "CONDITIONAL_PASS",
+    "rationale": "Zero citation accuracy errors found. However, 12 of 38 seeds have EC text without explicit COSO principle citations — these need enrichment before certification. All stems and choices are COSO-aligned (no framework misattributions).",
+    "total_audited": 38,
+    "accurate_citations": 0,
+    "items_with_citations": 26,
+    "items_without_citations": 12,
+    "citation_errors": 0,
+    "framework_misattributions": 0,
+    "ec031_coso_erm_note": "P1-EC-031 (risk appetite) references COSO IC-IF but concept belongs to COSO ERM (2017). Not an error — risk appetite appears in both frameworks — but citation should specify COSO ERM for precision."
+  },
+
+  "principle_coverage": {
+    "P1": {"label": "Integrity & Ethical Values", "seeds": ["P1-ED-046"], "count": 1},
+    "P3": {"label": "Board Oversight", "seeds": ["P1-ED-066"], "count": 1},
+    "P7": {"label": "Risk Identification", "seeds": ["P1-EC-031", "P1-ED-016", "P1-ED-042"], "count": 3},
+    "P8": {"label": "Fraud Risk", "seeds": ["P1-EC-014", "P1-EC-041"], "count": 2},
+    "P10": {"label": "Control Activities — Selection & Development", "seeds": ["P1-EC-004", "P1-EC-020", "P1-EC-022", "P1-EC-025", "P1-EC-052", "P1-ED-014", "P1-ED-025"], "count": 7},
+    "P11": {"label": "Control Activities — Technology", "seeds": ["P1-EC-023", "P1-EC-024", "P1-EC-040", "P1-ED-036", "P1-ED-051", "P1-ED-071"], "count": 6},
+    "P12": {"label": "Control Activities — Policies & Procedures", "seeds": ["P1-EC-008", "P1-EC-028", "P1-EC-060", "P1-ED-058", "P1-ED-064", "P1-ED-072", "P1-ED-074", "P1-ED-075"], "count": 8},
+    "P13": {"label": "Information Quality", "seeds": ["P1-EC-023"], "count": 1},
+    "P14": {"label": "Internal Communication", "seeds": ["P1-EC-049"], "count": 1},
+    "P16": {"label": "Ongoing Evaluations", "seeds": ["P1-ED-028", "P1-ED-073"], "count": 2},
+    "P17": {"label": "Deficiency Communication", "seeds": ["P1-EC-072"], "count": 1}
+  },
+
+  "gaps": [
+    {"principle": "P2", "label": "Independence", "note": "No seeds cover board/audit committee independence explicitly"},
+    {"principle": "P4", "label": "Commitment to Competence", "note": "Not directly covered by seed inventory"},
+    {"principle": "P5", "label": "Accountability", "note": "No seed coverage — structural gap"},
+    {"principle": "P6", "label": "Suitable Objectives", "note": "Not directly covered"},
+    {"principle": "P9", "label": "Risk Response", "seeds": ["P1-ED-016"], "note": "Only 1 seed (ERM risk response) — thin coverage"},
+    {"principle": "P15", "label": "External Communication", "note": "No seed coverage"}
+  ],
+
+  "remediation_required": {
+    "items_needing_citation": ["P1-EC-004", "P1-EC-014", "P1-EC-020", "P1-EC-022", "P1-EC-023", "P1-EC-025", "P1-EC-031", "P1-EC-066", "P1-ED-016", "P1-ED-036", "P1-ED-046", "P1-ED-075"],
+    "action": "Add explicit COSO principle citation to ExplanationCorrect for each item — format: 'COSO Principle [N]: [label] — [connection to item concept].'",
+    "ec031_special": "P1-EC-031: use COSO ERM (2017) citation instead of COSO IC-IF"
+  },
+
+  "certification_pathway": {
+    "pre_certification": "All 12 citation-deficient items must have COSO/ERM citations added to EC text",
+    "post_certification": "All 38 items meet CAQS §4 mini-lesson standard for framework citations",
+    "blocking": false,
+    "blocking_note": "Citation enrichment is bundled into Wave 1-3 EW fill passes — not a separate certification blocker"
+  }
+}

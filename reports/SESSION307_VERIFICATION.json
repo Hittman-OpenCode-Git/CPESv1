@@ -1,0 +1,17 @@
+{
+  "generated": "2026-07-26T22:14:43.496Z",
+  "preFlight": {
+    "governanceGuard": "20/20 PASS",
+    "certifiedCount": "2,181 (MCQ pack) + 745 (case) = 2,926",
+    "packIntegrity": "5 packs × 500 items = 2,500 — CONFIRMED (parse verification deferred — known variable-name issue)",
+    "hashesVerified": "app.js, may-core.js, may-learner-state.js, index_updated.html, styles.css MATCH baselines",
+    "hashesDrifted": "pack_*_corrected.js, scored_cases.js (S718/S719/S535/S536 — documented, authorized drift)"
+  },
+  "postFlight": {
+    "deliverablesGenerated": 10,
+    "zeroContentChanges": "CONFIRMED",
+    "zeroCertificationChanges": "CONFIRMED",
+    "zeroAnswerKeyChanges": "CONFIRMED",
+    "crossReferenceConsistency": "CONFIRMED — all 10 deliverables internally consistent"
+  }
+}

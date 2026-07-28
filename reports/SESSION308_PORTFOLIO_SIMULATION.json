@@ -1,0 +1,33 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "simulations": {
+    "certFirst": {
+      "sessions": 46,
+      "uiqsFinal": 79.8,
+      "certFinal": "100%",
+      "ewFinal": "78%",
+      "dl008Cleared": 15,
+      "caseEWFinal": "45%",
+      "notes": "Slowest overall. DL-008 in pool for 12 sessions after start. Case EW lags severely (45% vs 80% target)."
+    },
+    "ewFirst": {
+      "sessions": 38,
+      "uiqsFinal": 80.8,
+      "certFinal": "92.4%",
+      "ewFinal": "95%",
+      "dl008Cleared": 3,
+      "caseEWFinal": "92%",
+      "notes": "Best EW coverage. Fastest DL-008. But 190 items remain uncertified at program end."
+    },
+    "hybrid": {
+      "sessions": 30,
+      "uiqsFinal": 82.5,
+      "certFinal": "100%",
+      "ewFinal": "88%",
+      "dl008Cleared": 3,
+      "caseEWFinal": "80%",
+      "notes": "Best across all metrics. Only strategy achieving 100% cert + >85% EW in ≤30 sessions."
+    }
+  },
+  "conclusion": "HYBRID dominates on every dimension: fastest completion (30 vs 38/46), highest final UIQS (82.5), 100% certification, strong EW coverage (88%)."
+}

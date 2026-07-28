@@ -1,0 +1,545 @@
+{
+  "specId": "SESSION252_STUDENT_EXPOSURE_SPEC",
+  "board": "B",
+  "session": "S252",
+  "version": "1.0.0",
+  "generatedTimestamp": "2026-07-27T22:00:00.000Z",
+  "description": "Data contract for the Student Exposure Index — a cross-session analytics system that measures which questions, topics, and blueprint domains a student has been exposed to, their performance patterns, risk signals, and the impact of recommendations.",
+  "inputSources": {
+    "learnerStateExport": {
+      "description": "JSON export of localStorage cmaMayLearnerState (or equivalent synthetic/imported learner profile)",
+      "storageKey": "cmaMayLearnerState",
+      "schema": {
+        "learnerId": { "type": "string", "required": true },
+        "userName": { "type": "string", "required": false },
+        "firstVisit": { "type": "string", "format": "ISO 8601", "required": false },
+        "sessions": {
+          "type": "array",
+          "items": {
+            "sessionId": { "type": "string" },
+            "mode": { "type": "string", "enum": ["Practice", "Exam", "Review"] },
+            "startedAt": { "type": "string", "format": "ISO 8601" },
+            "completedAt": { "type": "string", "format": "ISO 8601" },
+            "mcqs": { "type": "array", "items": { "type": "object" } },
+            "answers": { "type": "object" },
+            "cases": { "type": "array" },
+            "caseAnswers": { "type": "object" },
+            "attempts": { "type": "array", "items": { "type": "object" } }
+          }
+        },
+        "topicPerformance": {
+          "type": "object",
+          "description": "Per-topic aggregate performance: topicName → { correctCount, totalAttempts, recentAttempts[], hintCount, lastAttemptAt, section }"
+        },
+        "subtopicPerformance": {
+          "type": "object",
+          "description": "Like topicPerformance but keyed by subtopic/MicroTopic"
+        },
+        "misconceptionPatterns": {
+          "type": "array",
+          "items": {
+            "pattern": { "type": "string" },
+            "count": { "type": "integer" },
+            "questionIds": { "type": "array<string>" },
+            "_topics": { "type": "array<string>" },
+            "firstSeen": { "type": "string", "format": "ISO 8601" },
+            "lastSeen": { "type": "string", "format": "ISO 8601" }
+          }
+        },
+        "recommendationLog": {
+          "type": "array",
+          "items": {
+            "timestamp": { "type": "string" },
+            "sourceTopic": { "type": "string" },
+            "sourceDomain": { "type": "string" },
+            "reasonType": { "type": "string" },
+            "recommendedQids": { "type": "array<string>" },
+            "packPool": { "type": "array<string>" },
+            "activeSessionId": { "type": "string" }
+          }
+        },
+        "recommendationOutcomes": {
+          "type": "array",
+          "items": {
+            "recId": { "type": "string" },
+            "topic": { "type": "string" },
+            "deliveredAt": { "type": "string" },
+            "outcome": { "type": "string", "enum": ["positive", "neutral", "negative", "contradictory", "insufficient"] },
+            "outcomeEvidence": { "type": "object" },
+            "beforeAccuracy": { "type": "number" },
+            "afterAccuracy": { "type": "number" }
+          }
+        },
+        "sessionSummaries": { "type": "array" },
+        "examPlan": { "type": "object", "nullable": true },
+        "lastUpdated": { "type": "string", "format": "ISO 8601" }
+      }
+    },
+    "questionHistory": {
+      "file": "scripts/output/question_history.json",
+      "schemaVersion": "2.0",
+      "description": "Per-question timeline spanning all 2,540 items. Source of truth for topic, difficulty, cognitiveLevel, and certification status."
+    },
+    "challengeRegistry": {
+      "file": "scripts/output/challenge_registry.json",
+      "description": "35 student-filed challenges with status, QID links, and resolution data."
+    },
+    "readinessScoring": {
+      "file": "scripts/output/readiness_scoring.json",
+      "description": "Per-QID readiness state (CERTIFY / BLOCKED / REMEDIATE / READY)."
+    }
+  },
+  "blueprintDomains": {
+    "A": "External Financial Reporting Decisions",
+    "B": "Planning, Budgeting, and Forecasting",
+    "C": "Performance Management",
+    "D": "Cost Management",
+    "E": "Internal Controls",
+    "F": "Technology and Analytics"
+  },
+  "runModes": {
+    "singleStudent": {
+      "args": "--student=<learnerId>",
+      "description": "Look up a student from the synthetic student roll file (scripts/output/student_roll.json) if available, or from an export file.",
+      "output": "scripts/output/student_exposure.json (single-student report)"
+    },
+    "exportFile": {
+      "args": "--export=path/to/learner_state_export.json",
+      "description": "Read a JSON file exported from the browser's localStorage cmaMayLearnerState key.",
+      "output": "scripts/output/student_exposure.json (single-student report)"
+    },
+    "summaryAll": {
+      "args": "(none)",
+      "description": "If scripts/output/student_roll.json and scripts/output/student_exports/ exist, generate a summary of all students.",
+      "output": "scripts/output/student_exposure.json (multi-student summary)"
+    },
+    "outputFile": "scripts/output/student_exposure.json"
+  },
+  "outputSchema": {
+    "$schema": "Output root object for the Student Exposure Index report.",
+    "reportId": { "type": "string", "format": "SE-{timestamp}", "description": "Unique report identifier" },
+    "generatedTimestamp": { "type": "string", "format": "ISO 8601" },
+    "runMode": { "type": "string", "enum": ["single", "summary"] },
+    "totalStudentsAnalyzed": { "type": "integer" },
+    "students": {
+      "type": "array",
+      "description": "One entry per student. For single-student mode, array length = 1.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "1_studentProfile": {
+            "type": "object",
+            "description": "Section 1 — Student identity and usage summary.",
+            "properties": {
+              "learnerId": { "type": "string" },
+              "userName": { "type": "string" },
+              "firstVisit": { "type": "string", "format": "ISO 8601" },
+              "lastActivity": { "type": "string", "format": "ISO 8601" },
+              "totalSessions": { "type": "integer", "description": "Count of practice/exam sessions recorded" },
+              "sessionList": {
+                "type": "array",
+                "items": {
+                  "sessionId": { "type": "string" },
+                  "mode": { "type": "string" },
+                  "date": { "type": "string", "format": "ISO 8601" },
+                  "questionsAttempted": { "type": "integer" },
+                  "accuracy": { "type": "number", "minimum": 0, "maximum": 100 },
+                  "scaledScore": { "type": "number", "nullable": true },
+                  "durationMinutes": { "type": "number" }
+                }
+              },
+              "examPlan": { "type": "object", "nullable": true }
+            }
+          },
+          "2_questionExposureMatrix": {
+            "type": "object",
+            "description": "Section 2 — Every QID the student has encountered, with performance data.",
+            "properties": {
+              "totalUniqueQidsSeen": { "type": "integer" },
+              "totalAttempts": { "type": "integer" },
+              "overallAccuracy": { "type": "number" },
+              "questions": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "qid": { "type": "string" },
+                    "section": { "type": "string" },
+                    "sectionName": { "type": "string" },
+                    "topic": { "type": "string" },
+                    "difficulty": { "type": "string" },
+                    "difficultyScore": { "type": "integer" },
+                    "cognitiveLevel": { "type": "string" },
+                    "timesAttempted": { "type": "integer" },
+                    "timesCorrect": { "type": "integer" },
+                    "timesIncorrect": { "type": "integer" },
+                    "accuracy": { "type": "number" },
+                    "firstAttemptDate": { "type": "string" },
+                    "lastAttemptDate": { "type": "string" },
+                    "confidenceScores": {
+                      "type": "array<number|null>",
+                      "description": "Self-reported confidence per attempt (1-5 scale or null)"
+                    },
+                    "hintUsage": { "type": "integer", "description": "Total hints used across all attempts" },
+                    "explanationRequests": { "type": "integer", "description": "Times student viewed explanation" },
+                    "itemState": { "type": "string", "description": "question_state from the pack file" },
+                    "isCertified": { "type": "boolean" },
+                    "readinessState": { "type": "string", "nullable": true }
+                  }
+                }
+              }
+            }
+          },
+          "3_topicPerformance": {
+            "type": "object",
+            "description": "Section 3 — Per-topic accuracy, weak areas, improvement trends.",
+            "properties": {
+              "topics": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "topic": { "type": "string" },
+                    "section": { "type": "string" },
+                    "sectionName": { "type": "string" },
+                    "totalAttempts": { "type": "integer" },
+                    "correctCount": { "type": "integer" },
+                    "accuracy": { "type": "number" },
+                    "hintCount": { "type": "integer" },
+                    "firstAttemptAt": { "type": "string" },
+                    "lastAttemptAt": { "type": "string" },
+                    "weakArea": { "type": "boolean", "description": "True if accuracy < 60% with >= 3 attempts" },
+                    "improvementTrend": {
+                      "type": "string",
+                      "enum": ["improving", "declining", "stable", "volatile", "insufficient_data"],
+                      "description": "Derived from recentAttempts[] slope"
+                    },
+                    "trendSlope": { "type": "number", "description": "Linear slope of recent accuracy over attempts" },
+                    "recentAccuracy": { "type": "number", "description": "Accuracy over the most recent 5 attempts" },
+                    "byDifficulty": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "correct": { "type": "integer" },
+                        "total": { "type": "integer" }
+                      },
+                      "description": "Performance breakdown by difficulty level"
+                    }
+                  }
+                }
+              },
+              "weakestTopics": {
+                "type": "array<string>",
+                "description": "Top 5 lowest-accuracy topics (among those with >= 3 attempts)"
+              },
+              "strongestTopics": {
+                "type": "array<string>",
+                "description": "Top 5 highest-accuracy topics"
+              }
+            }
+          },
+          "4_challengeHistory": {
+            "type": "object",
+            "description": "Section 4 — All challenges filed by this student against specific questions.",
+            "properties": {
+              "totalChallengesFiled": { "type": "integer" },
+              "challenges": {
+                "type": "array",
+                "items": {
+                  "challengeId": { "type": "string", "pattern": "^CH-[A-F0-9]{8}$" },
+                  "questionId": { "type": "string" },
+                  "type": { "type": "string", "enum": ["CONTENT_ERROR","TECHNICAL_ISSUE","ANSWER_DISPUTE","EXPLANATION_ISSUE","AMBIGUITY","OTHER"] },
+                  "status": { "type": "string", "enum": ["OPEN","INVESTIGATING","RESOLVED","CLOSED","DISMISSED"] },
+                  "reportedDate": { "type": "string" },
+                  "description": { "type": "string" },
+                  "priority": { "type": "string", "enum": ["HIGH","MEDIUM","LOW"] },
+                  "resolution": { "type": "string", "nullable": true },
+                  "linkedDefects": { "type": "array<string>" },
+                  "qidTopic": { "type": "string", "nullable": true },
+                  "qidSection": { "type": "string", "nullable": true }
+                }
+              },
+              "byStatus": {
+                "open": { "type": "integer" },
+                "investigating": { "type": "integer" },
+                "resolved": { "type": "integer" },
+                "closed": { "type": "integer" },
+                "dismissed": { "type": "integer" }
+              },
+              "byType": {
+                "contentError": { "type": "integer" },
+                "answerDispute": { "type": "integer" },
+                "explanationIssue": { "type": "integer" },
+                "ambiguity": { "type": "integer" },
+                "technicalIssue": { "type": "integer" },
+                "other": { "type": "integer" }
+              }
+            }
+          },
+          "5_recommendationImpact": {
+            "type": "object",
+            "description": "Section 5 — Recommendations shown to this student and subsequent performance change.",
+            "properties": {
+              "totalRecommendationsDelivered": { "type": "integer" },
+              "recommendationLog": {
+                "type": "array",
+                "items": {
+                  "timestamp": { "type": "string" },
+                  "sourceTopic": { "type": "string" },
+                  "sourceDomain": { "type": "string" },
+                  "reasonType": { "type": "string" },
+                  "qidCount": { "type": "integer" },
+                  "activeSessionId": { "type": "string" }
+                }
+              },
+              "outcomes": {
+                "type": "array",
+                "items": {
+                  "recId": { "type": "string" },
+                  "topic": { "type": "string" },
+                  "deliveredAt": { "type": "string" },
+                  "outcome": { "type": "string", "enum": ["positive","neutral","negative","contradictory","insufficient","pending"] },
+                  "beforeAccuracy": { "type": "number" },
+                  "afterAccuracy": { "type": "number" },
+                  "accuracyDelta": { "type": "number" },
+                  "sessionsBefore": { "type": "integer" },
+                  "sessionsAfter": { "type": "integer" },
+                  "outcomeLabel": {
+                    "type": "string",
+                    "enum": ["IMPROVED","WORSENED","NO_CHANGE","INSUFFICIENT_DATA","CONTRADICTORY"],
+                    "description": "Human-readable outcome classification"
+                  }
+                }
+              },
+              "impactSummary": {
+                "totalOutcomes": { "type": "integer" },
+                "positiveOutcomes": { "type": "integer" },
+                "neutralOutcomes": { "type": "integer" },
+                "negativeOutcomes": { "type": "integer" },
+                "insufficientOutcomes": { "type": "integer" },
+                "positiveRate": { "type": "number", "description": "positive / (positive + negative + neutral)" },
+                "avgAccuracyDelta": { "type": "number" }
+              }
+            }
+          },
+          "6_exposureGaps": {
+            "type": "object",
+            "description": "Section 6 — Blueprint sections, topics, and cognitive levels the student has NOT been tested on.",
+            "properties": {
+              "byDomain": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "properties": {
+                    "domainName": { "type": "string" },
+                    "totalAvailable": { "type": "integer" },
+                    "seenByStudent": { "type": "integer" },
+                    "notSeenByStudent": { "type": "integer" },
+                    "coveragePct": { "type": "number" }
+                  }
+                }
+              },
+              "byDifficulty": {
+                "type": "object",
+                "additionalProperties": {
+                  "totalAvailable": { "type": "integer" },
+                  "seenByStudent": { "type": "integer" }
+                },
+                "description": "Difficulty levels the student has vs. has not encountered"
+              },
+              "byCognitiveLevel": {
+                "type": "object",
+                "additionalProperties": {
+                  "totalAvailable": { "type": "integer" },
+                  "seenByStudent": { "type": "integer" }
+                },
+                "description": "Bloom's levels the student has vs. has not encountered"
+              },
+              "untouchedTopics": {
+                "type": "array<string>",
+                "description": "Topic names from the question bank that the student has never seen"
+              },
+              "untouchedDomainSummary": {
+                "type": "string",
+                "description": "Concise summary of the biggest coverage gaps"
+              }
+            }
+          },
+          "7_riskSignals": {
+            "type": "object",
+            "description": "Section 7 — Patterns suggesting the student may be struggling.",
+            "properties": {
+              "overallRiskLevel": {
+                "type": "string",
+                "enum": ["LOW", "MODERATE", "HIGH", "CRITICAL"],
+                "description": "Aggregated risk assessment"
+              },
+              "signals": {
+                "type": "array",
+                "items": {
+                  "signalId": { "type": "string" },
+                  "signalType": {
+                    "type": "string",
+                    "enum": [
+                      "DECLINING_SCORES",
+                      "REPEATED_WRONG_SAME_TOPIC",
+                      "PLATEAUED_ACCURACY",
+                      "LOW_DIFFICULTY_STRUGGLE",
+                      "HIGH_CONFIDENCE_WRONG_ANSWER",
+                      "EXCESSIVE_HINT_USAGE",
+                      "SESSION_ABANDONMENT",
+                      "CONCEPTUAL_GAP_CLUSTER",
+                      "CERTIFIED_POOL_ONLY_EXPOSURE",
+                      "MISCONCEPTION_PERSISTENCE",
+                      "SKIPPED_EXPLANATIONS",
+                      "UNBALANCED_DOMAIN_EXPOSURE",
+                      "EXAM_UNDERPERFORMANCE",
+                      "RAPID_GUESSING",
+                      "TIME_PRESSURE_PATTERN"
+                    ]
+                  },
+                  "severity": { "type": "string", "enum": ["LOW","MEDIUM","HIGH","CRITICAL"] },
+                  "description": { "type": "string" },
+                  "evidence": { "type": "object", "description": "Quantitative evidence supporting the signal" },
+                  "recommendedAction": { "type": "string", "description": "Suggested remediation or intervention" }
+                }
+              },
+              "signalCounts": {
+                "critical": { "type": "integer" },
+                "high": { "type": "integer" },
+                "medium": { "type": "integer" },
+                "low": { "type": "integer" }
+              },
+              "sessionTrend": {
+                "type": "object",
+                "properties": {
+                  "trendDirection": { "type": "string", "enum": ["improving","declining","stable","volatile"] },
+                  "recentAccuracySlope": { "type": "number" },
+                  "accuracyAtFirstSession": { "type": "number" },
+                  "accuracyAtLastSession": { "type": "number" },
+                  "sessionAccuracyHistory": {
+                    "type": "array",
+                    "items": {
+                      "sessionDate": { "type": "string" },
+                      "accuracy": { "type": "number" }
+                    }
+                  }
+                }
+              },
+              "misconceptionPatterns": {
+                "type": "array",
+                "items": {
+                  "pattern": { "type": "string" },
+                  "count": { "type": "integer" },
+                  "topics": { "type": "array<string>" },
+                  "persistent": { "type": "boolean", "description": "True if pattern has recurred >= 3 times" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "riskSignalDefinitions": {
+    "DECLINING_SCORES": {
+      "description": "Last 3 sessions show decreasing accuracy trend.",
+      "threshold": "Accuracy drop > 10 percentage points across 3+ sessions",
+      "severity": "HIGH"
+    },
+    "REPEATED_WRONG_SAME_TOPIC": {
+      "description": "Same QID or same-topic QIDs answered incorrectly 3+ times.",
+      "threshold": ">= 3 incorrect attempts on the same QID or >= 5 incorrect on same topic with < 40% accuracy",
+      "severity": "HIGH"
+    },
+    "PLATEAUED_ACCURACY": {
+      "description": "Accuracy has stayed within a 5-point band for 5+ sessions despite additional practice.",
+      "threshold": "5+ sessions, accuracy range <= 5 points, overall accuracy < 70%",
+      "severity": "MEDIUM"
+    },
+    "LOW_DIFFICULTY_STRUGGLE": {
+      "description": "Student is missing Easy or Moderate-Easy difficulty questions.",
+      "threshold": "Accuracy < 70% on Easy (difficultyScore=1) or Moderate-Easy (score=2) items with >= 5 attempts",
+      "severity": "HIGH"
+    },
+    "HIGH_CONFIDENCE_WRONG_ANSWER": {
+      "description": "Student self-reported high confidence (4-5) but answered incorrectly.",
+      "threshold": ">= 3 instances where confidence >= 4 and answer was wrong",
+      "severity": "MEDIUM"
+    },
+    "EXCESSIVE_HINT_USAGE": {
+      "description": "Student is using hints on > 50% of question attempts.",
+      "threshold": "Hint rate > 50% across >= 10 attempts",
+      "severity": "MEDIUM"
+    },
+    "SESSION_ABANDONMENT": {
+      "description": "Student has sessions with < 50% completion rate or very short duration.",
+      "threshold": ">= 2 sessions with < 5 questions attempted or < 3 minutes duration",
+      "severity": "LOW"
+    },
+    "CONCEPTUAL_GAP_CLUSTER": {
+      "description": "Student's incorrect answers cluster on conceptual (non-calculation) items in a specific domain.",
+      "threshold": ">= 3 incorrect conceptual items in the same domain with < 40% accuracy",
+      "severity": "HIGH"
+    },
+    "CERTIFIED_POOL_ONLY_EXPOSURE": {
+      "description": "Student has only seen items from a single section/domain; no cross-domain exposure.",
+      "threshold": ">= 15 questions seen, only 1 domain represented",
+      "severity": "LOW"
+    },
+    "MISCONCEPTION_PERSISTENCE": {
+      "description": "A misconception pattern has recurred and is not resolving.",
+      "threshold": "Pattern count >= 3 and most recent occurrence < 7 days old",
+      "severity": "HIGH"
+    },
+    "SKIPPED_EXPLANATIONS": {
+      "description": "Student never or rarely views explanations after incorrect answers.",
+      "threshold": "explanationRequested rate < 25% on incorrect answers with >= 10 incorrect attempts",
+      "severity": "MEDIUM"
+    },
+    "UNBALANCED_DOMAIN_EXPOSURE": {
+      "description": "One domain accounts for > 60% of all attempts; others nearly untouched.",
+      "threshold": "Single domain > 60% of total attempts, at least 2 domains with 0 attempts",
+      "severity": "LOW"
+    },
+    "EXAM_UNDERPERFORMANCE": {
+      "description": "Student's exam-mode sessions show significantly lower accuracy than practice-mode sessions.",
+      "threshold": "Exam-mode accuracy is > 15 points lower than practice-mode accuracy (both with >= 20 attempts)",
+      "severity": "HIGH"
+    },
+    "RAPID_GUESSING": {
+      "description": "Student is answering very quickly with low accuracy, suggesting guessing rather than solving.",
+      "threshold": ">= 5 attempts with elapsedMs < 15,000ms AND accuracy < 40%",
+      "severity": "MEDIUM"
+    },
+    "TIME_PRESSURE_PATTERN": {
+      "description": "Late questions in a session have markedly lower accuracy than early questions.",
+      "threshold": "Last 25% of questions in a session have accuracy >= 20 points lower than first 25% (session with >= 20 questions)",
+      "severity": "MEDIUM"
+    }
+  },
+  "cliInterface": {
+    "signature": "node scripts/student_exposure_index.js [--student=<learnerId>] [--export=<path>] [--output=<path>]",
+    "examples": [
+      "node scripts/student_exposure_index.js --student=learner-m5k8x7n2",
+      "node scripts/student_exposure_index.js --export=./learner_state_export.json",
+      "node scripts/student_exposure_index.js --student=learner-m5k8x7n2 --output=./my_report.json",
+      "node scripts/student_exposure_index.js"
+    ],
+    "defaultOutputPath": "scripts/output/student_exposure.json",
+    "exitCodes": {
+      "0": "Success — report generated",
+      "1": "STUDENT_NOT_FOUND — learnerId not in student roll or export",
+      "2": "INVALID_ARGUMENT — unrecognized CLI argument",
+      "3": "FILE_NOT_FOUND — --export path does not exist",
+      "4": "NO_DATA — no student data available (summary mode)"
+    }
+  },
+  "statisticalNotes": {
+    "accuracy": "All accuracy values are 0-100 percentages (not 0-1 fractions).",
+    "attemptCounting": "A single question viewed multiple times counts as multiple attempts (not deduplicated unless specified).",
+    "topicMapping": "Topics are normalized to lowercase, trimmed, and deduplicated before aggregation.",
+    "certifiedOnly": "The certified-pool-only signal only considers Certified (question_state='Certified') items in the exposure matrix.",
+    "confidenceScores": "Null values in confidenceScores indicate the student did not provide a self-assessment for that attempt.",
+    "timeRanges": "All timestamps use ISO 8601 format. Dates only (2026-07-27) are converted to midnight UTC."
+  }
+}

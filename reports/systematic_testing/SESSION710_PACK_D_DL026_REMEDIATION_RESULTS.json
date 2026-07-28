@@ -1,0 +1,112 @@
+{
+  "session": "710",
+  "agent": "C — Pack D DL-026 Remediation",
+  "timestamp": "2026-07-25T21:16:00",
+  "pack_processed": "D",
+  "total_targets": 10,
+  "targets": [
+    {
+      "qid": "P1-AD-047",
+      "topic": "A.047 inventory consignment",
+      "correct_choice": "C",
+      "missing_field": "ExplanationWrongD",
+      "before_value": "",
+      "after_value": "Under ASC 330, inventory ownership cannot be split between two parties for the same goods. Consignment arrangements transfer physical possession to the consignee but legal title remains with the consignor until the end customer purchases the goods. Splitting inventory equally between both parties would overstate one party's assets and understate the other's, defeating the purpose of inventory accounting which is to identify which entity bears the risks and rewards of ownership.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-AD-048",
+      "topic": "A.048 inventory consignment",
+      "correct_choice": "D",
+      "missing_field": "ExplanationWrongA",
+      "before_value": "",
+      "after_value": "Under ASC 330, consigned goods must be included in the inventory of one of the parties. They cannot simply be excluded from all inventory records, as that would understate total reported assets. The consignor retains legal title and the risks and rewards of ownership until the goods are sold to the end customer, and therefore continues to recognize the goods in its own inventory.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-AD-054",
+      "topic": "A.054 basic EPS calculation preferred dividends",
+      "correct_choice": "B",
+      "missing_field": "ExplanationWrongC",
+      "before_value": "",
+      "after_value": "This figure results from incorrectly adding preferred dividends to net income rather than subtracting them: ($500,000 + $50,000) / 200,000 = $2.75. Basic EPS measures income available to common shareholders, so preferred dividends must be deducted from net income before dividing by weighted-average common shares. The correct calculation is ($500,000 - $50,000) / 200,000 = $2.25.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-AD-055",
+      "topic": "A.055 diluted EPS calculation convertible",
+      "correct_choice": "C",
+      "missing_field": "ExplanationWrongD",
+      "before_value": "",
+      "after_value": "This results from applying the basic EPS numerator (net income minus preferred dividends) to the diluted share count: ($600,000 - $60,000) / 300,000 = $1.80. Under the if-converted method, preferred dividends are added back to net income because the convertible shares are assumed to have been converted to common shares at the beginning of the period. The correct calculation is $600,000 / 300,000 = $2.00.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-CD-002",
+      "topic": "C.002 labor rate and efficiency variance",
+      "correct_choice": "B",
+      "missing_field": "ExplanationWrongC",
+      "before_value": "",
+      "after_value": "This is the labor efficiency variance computed as $18 x (2,100 - 2,000) = $1,800, with the sign incorrectly classified as favorable. When actual hours (2,100) exceed standard hours (2,000), the efficiency variance is unfavorable — more labor was used than planned. The labor rate variance, which is a separate analysis, is computed as actual hours x (actual rate minus standard rate): 2,100 x ($19 - $18) = $2,100 unfavorable.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-CD-003",
+      "topic": "C.003 labor rate and efficiency variance",
+      "correct_choice": "C",
+      "missing_field": "ExplanationWrongD",
+      "before_value": "",
+      "after_value": "This reflects the labor efficiency variance ($18 x (2,100 - 2,000) = $1,800) labeled as favorable. When actual hours exceed the standard allowance, the efficiency variance is unfavorable. The rate variance is computed independently as actual hours multiplied by the rate difference: 2,100 x ($19 - $18) = $2,100 unfavorable. Selecting this option confuses the efficiency variance with the rate variance and misclassifies its direction.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-CD-006",
+      "topic": "C.006 labor rate and efficiency variance",
+      "correct_choice": "B",
+      "missing_field": "ExplanationWrongC",
+      "before_value": "",
+      "after_value": "This results from applying the $1 rate difference to the standard hours instead of actual hours: 2,000 x $1 = $2,000. The labor rate variance measures the wage impact for the hours actually worked, so actual hours must be used: 2,100 x ($19 - $18) = $2,100 unfavorable. Using standard hours ignores the fact that 100 additional hours were worked at the higher rate, understating the true rate variance.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-CD-022",
+      "topic": "C.022 profit center evaluation appropriateness",
+      "correct_choice": "B",
+      "missing_field": "ExplanationWrongC",
+      "before_value": "",
+      "after_value": "A revenue center evaluates performance based solely on sales generation, ignoring the cost side of operations. Since this manager controls both pricing decisions and cost management, evaluating only sales revenue would provide an incomplete picture of performance. A profit center, evaluated on operating income, captures the manager's full span of control over both revenues and costs.",
+      "validation_status": "PASS",
+      "note": "EW_A/EW_D apparent swap (DL-010 pattern). Not in S710 scope. Documented for future session."
+    },
+    {
+      "qid": "P1-CD-023",
+      "topic": "C.023 profit center evaluation appropriateness",
+      "correct_choice": "C",
+      "missing_field": "ExplanationWrongD",
+      "before_value": "",
+      "after_value": "A cost center evaluates performance based solely on cost control, ignoring the manager's authority over pricing decisions. Since this manager controls both pricing and costs, evaluating only cost variances fails to capture the revenue side of performance. A profit center based on operating income provides a complete evaluation by holding the manager accountable for both revenue generation and cost management.",
+      "validation_status": "PASS"
+    },
+    {
+      "qid": "P1-CD-034",
+      "topic": "C.034 dual rate transfer pricing",
+      "correct_choice": "B",
+      "missing_field": "ExplanationWrongC",
+      "before_value": "",
+      "after_value": "A dual-rate transfer pricing system does not eliminate transfer pricing — it is itself a transfer pricing policy. Rather than removing the need for a transfer price, it establishes two separate prices: variable cost for the buying division (encouraging economically efficient internal transfers) and variable cost plus a fixed fee for the selling division (compensating it for capacity costs). Far from eliminating transfer pricing, dual-rate pricing is a deliberate policy choice to balance the competing objectives of different divisions.",
+      "validation_status": "PASS"
+    }
+  ],
+  "governance": {
+    "no_answer_keys_changed": true,
+    "no_stems_changed": true,
+    "no_choices_changed": true,
+    "no_explanation_correct_changed": true,
+    "no_question_state_changed": true,
+    "no_certification_state_changed": true,
+    "no_non_target_ew_fields_changed": true,
+    "no_dl008_introduced": true,
+    "fd_046": "unchanged",
+    "bd_095": "parse boundary preserved"
+  }
+}

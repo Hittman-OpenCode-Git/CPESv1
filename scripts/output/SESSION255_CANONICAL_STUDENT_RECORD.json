@@ -1,0 +1,10 @@
+{
+  "reportId": "SESSION255_CANONICAL_STUDENT_RECORD",
+  "schemaVersion": "1.0.0",
+  "levels": ["Student", "Attempt", "QuestionExposure", "Result", "Challenge"],
+  "foreignKeysToRegistries": {
+    "qid": "question_history.json",
+    "sessionId": "session_registry.json",
+    "challengeId": "challenge_registry.json"
+  }
+}

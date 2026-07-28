@@ -1,0 +1,66 @@
+{
+  "session": "803",
+  "agent": "L",
+  "title": "Metadata Integrity Audit",
+  "date": "2026-07-26",
+  "p1e056_metadata": {
+    "question_state": "Archived",
+    "question_state_change": "Archived → Certified (proposed)",
+    "transition_valid": false,
+    "transition_note": "§9.2 lists only 'In Audit → Certified' as the path to Certified. Archived → Certified is not a listed transition. Item must follow: Archived → In Audit → Certified. However, this item was previously Certified (certification_date: 2026-07-22, certification_batch: 'Section E Block 1') and was mistakenly archived per DL-033 finding — this is a restoration, not a new certification.",
+    "difficulty": { "stored": "Moderate-Easy", "valid": true },
+    "difficulty_score": { "stored": 1, "valid": false, "issue": "DifficultyScore=1 maps to 'Easy', but content-block Difficulty='Moderate-Easy' maps to DifficultyScore=2. Dual-block inconsistency." },
+    "cognitive_level": { "stored": "Understand", "valid": true },
+    "lostag": { "stored": "E Internal controls", "valid": true, "maps_to_section": "E" },
+    "section_correct": true,
+    "topic_valid": true,
+    "topic": "E.057 user access recertification 22",
+    "dl016_topic_mismatch": {
+      "found": true,
+      "detail": "Metadata-block ExplanationWrongA describes physical inventory control ('Operational knowledge does not eliminate the segregation risk created when the custodian counts without oversight') — this is inventory/custodian topic text, NOT user access recertification. Content-block stem is about 'Beacon finds employees retain access after changing departments.' This is a cross-item contamination (DL-016).",
+      "certification_blocked_by_942": true,
+      "standard_ref": "§9.4.1 — Explanation Relevance Topic Mismatch BLOCK",
+      "standard_ref_2": "§9.4.2 — Dual-Block Source-of-Truth BLOCK"
+    },
+    "all_metadata_ready": false,
+    "blocking_issues": [
+      "DifficultyScore=1 vs Difficulty='Moderate-Easy' (dual-block difficulty inconsistency)",
+      "ExplanationWrongA is topically unrelated to the learner-facing choices (DL-016 topic mismatch per §9.4.1)",
+      "Metadata-block CorrectChoice implied = B (EW_B empty), content-block CorrectChoice = D (dual-block CC mismatch per §9.4.2)",
+      "Archived → Certified is not a listed transition in §9.2"
+    ]
+  },
+  "section_f_archives": {
+    "total_section_f_items": {
+      "pack_a": { "count": 75, "state": "Certified", "to_archive": 0 },
+      "pack_c": { "count": 75, "state": "Unprocessed", "to_archive": 75 },
+      "pack_d": { "count": 75, "state": "74 Unprocessed + 1 Archived", "to_archive": 36 },
+      "total": 225,
+      "to_archive_total": 111
+    },
+    "sample_metadata_ok": true,
+    "sample_items_checked": ["P1-FC-001", "P1-FC-025"],
+    "metadata_fields_present": ["Difficulty", "DifficultyScore", "CognitiveLevel", "LOSTag", "Topic", "Section", "MicroTopic", "UniqueConceptKey", "ItemType", "ItemStyle", "CalculationItem", "VerifiedChecks", "ExplanationWrongA-D", "ExplanationCorrect", "CorrectChoice", "StudyLinks", "SourceDescription", "Part1OnlyFlag", "ReviewNote"],
+    "sample_issues": {
+      "dual_block_difficulty_inconsistency": "P1-FC-025: metadata DifficultyScore=1 (Easy) vs content Difficulty='Moderate'",
+      "dl026_empty_non_cc_slots": "P1-FC-001 and P1-FC-025 both have empty non-CorrectChoice ExplanationWrong slots (DL-026 pattern)"
+    },
+    "uniform_difficulty_pattern": "Template-assigned; varies across items but dual-block inconsistencies present",
+    "no_metadata_loss": "Confirmed per §9.2 Rule 3: 'Archival preserves content. Archived questions retain full question text and metadata. Only the state field changes.'"
+  },
+  "state_transitions": {
+    "unprocessed_to_archived": {
+      "valid": true,
+      "rule": "Any State → Archived per §9.2",
+      "applies_to": "75 Pack C Section F + 36 Pack D Section F = 111 items",
+      "note": "These items have no question_state field or are 'Unprocessed'. Transition is clean."
+    },
+    "archived_to_certified": {
+      "valid": false,
+      "rule": "§9.2 lists no path from Archived to Certified. The only path to Certified is In Audit → Certified.",
+      "restoration_context": "P1-E-056 was previously Certified (2026-07-22) and mistakenly archived per DL-033 finding. The proposed 'recertification' is semantically a restoration of mistaken archival, not a new certification. However, §9.2 does not define a 'restore' transition. Minimum path: Archived → Unprocessed → In Audit → Certified, OR a documented exception in REVISION_HISTORY.md treating the archival as void and restoring the prior Certified state.",
+      "recommendation": "Either (a) restore to Certified with a documented REVISION_HISTORY.md entry noting mistaken archival rectification and re-verify all 6 CAQS dimensions at HIGH confidence, OR (b) route through In Audit → Certified per §9.2 strict reading."
+    }
+  },
+  "verdict": "ISSUES FOUND — P1-E-056 NOT metadata-ready for recertification; Section F archives are metadata-safe"
+}

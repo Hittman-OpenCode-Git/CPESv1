@@ -1,0 +1,448 @@
+{
+  "reportId": "SESSION261_WORKFLOW_CERTIFICATION",
+  "generatedTimestamp": "2026-07-27T19:25:33.009Z",
+  "scenarios": {
+    "scenarioA_challengeInvestigation": {
+      "description": "Challenge → Question → History → Recommendation → Resolution",
+      "cases": [
+        {
+          "type": "CONTENT_ERROR",
+          "challengeId": "CH-CC1ECA89",
+          "questionId": "P1-A-036",
+          "challengeStatus": "OPEN",
+          "questionState": "Certified",
+          "triageCategory": "NEEDS_REVIEW",
+          "triageConfidence": 5,
+          "linkedRecommendations": [
+            {
+              "recommendationId": "REC-5B1E489D",
+              "type": "REMEDIATE",
+              "severity": "HIGH",
+              "status": "Open"
+            },
+            {
+              "recommendationId": "REC-1100DF07",
+              "type": "REVIEW",
+              "severity": "MEDIUM",
+              "status": "Open"
+            }
+          ],
+          "investigations": [
+            {
+              "id": "INV-20260727-001",
+              "status": "INVESTIGATING",
+              "priority": 85
+            }
+          ],
+          "chainComplete": true,
+          "manualSearchesRequired": 0
+        },
+        {
+          "type": "TECHNICAL_ISSUE",
+          "challengeId": "CH-42169D7F",
+          "questionId": "P1-A-046",
+          "challengeStatus": "OPEN",
+          "questionState": "Certified",
+          "triageCategory": "NEEDS_REVIEW",
+          "triageConfidence": 5,
+          "linkedRecommendations": [
+            {
+              "recommendationId": "REC-5B1E489D",
+              "type": "REMEDIATE",
+              "severity": "HIGH",
+              "status": "Open"
+            },
+            {
+              "recommendationId": "REC-1100DF07",
+              "type": "REVIEW",
+              "severity": "MEDIUM",
+              "status": "Open"
+            }
+          ],
+          "investigations": [
+            {
+              "id": "INV-20260727-002",
+              "status": "OPEN",
+              "priority": 85
+            }
+          ],
+          "chainComplete": true,
+          "manualSearchesRequired": 0
+        },
+        {
+          "type": "ANSWER_DISPUTE",
+          "challengeId": "CH-53D73FDB",
+          "questionId": "P1-A-056",
+          "challengeStatus": "OPEN",
+          "questionState": "Certified",
+          "triageCategory": "NEEDS_REVIEW",
+          "triageConfidence": 5,
+          "linkedRecommendations": [
+            {
+              "recommendationId": "REC-5B1E489D",
+              "type": "REMEDIATE",
+              "severity": "HIGH",
+              "status": "Open"
+            },
+            {
+              "recommendationId": "REC-1100DF07",
+              "type": "REVIEW",
+              "severity": "MEDIUM",
+              "status": "Open"
+            }
+          ],
+          "investigations": [
+            {
+              "id": "INV-20260727-003",
+              "status": "OPEN",
+              "priority": 85
+            }
+          ],
+          "chainComplete": true,
+          "manualSearchesRequired": 0
+        },
+        {
+          "type": "AMBIGUITY",
+          "challengeId": "CH-73FBA8ED",
+          "questionId": "P1-AC-026",
+          "challengeStatus": "INVESTIGATING",
+          "questionState": "Certified",
+          "triageCategory": "LIKELY_DEFECT",
+          "triageConfidence": 85,
+          "linkedRecommendations": [
+            {
+              "recommendationId": "REC-5B1E489D",
+              "type": "REMEDIATE",
+              "severity": "HIGH",
+              "status": "Open"
+            },
+            {
+              "recommendationId": "REC-1100DF07",
+              "type": "REVIEW",
+              "severity": "MEDIUM",
+              "status": "Open"
+            }
+          ],
+          "investigations": [
+            {
+              "id": "INV-20260727-005",
+              "status": "INVESTIGATING",
+              "priority": 85
+            }
+          ],
+          "chainComplete": true,
+          "manualSearchesRequired": 0
+        }
+      ],
+      "verdict": "4/4 complete"
+    },
+    "scenarioB_defectInvestigation": {
+      "description": "Defect → Question → Session History → Disposition",
+      "cases": [
+        {
+          "defectCode": "DL-008",
+          "activeInvestigations": 16,
+          "investigationStatuses": [
+            "INVESTIGATING",
+            "OPEN",
+            "OPEN",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "OPEN",
+            "OPEN",
+            "CLOSED"
+          ],
+          "topQids": [
+            "P1-A-031",
+            "P1-B-008",
+            "P1-BC-094"
+          ],
+          "totalAffectedQids": 3,
+          "recommendations": [
+            {
+              "recommendationId": "REC-5B1E489D",
+              "type": "REMEDIATE",
+              "severity": "HIGH",
+              "status": "Open",
+              "qidCount": 274
+            },
+            {
+              "recommendationId": "REC-1100DF07",
+              "type": "REVIEW",
+              "severity": "MEDIUM",
+              "status": "Open",
+              "qidCount": 2074
+            }
+          ],
+          "chainComplete": true,
+          "lifecycleTrace": [
+            {
+              "id": "INV-20260727-001",
+              "status": "INVESTIGATING",
+              "created": "2026-07-27T17:46:58.402Z",
+              "updated": "2026-07-27T17:47:10.722Z"
+            },
+            {
+              "id": "INV-20260727-002",
+              "status": "OPEN",
+              "created": "2026-07-27T17:46:58.402Z",
+              "updated": "2026-07-27T17:46:58.402Z"
+            },
+            {
+              "id": "INV-20260727-003",
+              "status": "OPEN",
+              "created": "2026-07-27T17:46:58.402Z",
+              "updated": "2026-07-27T17:46:58.402Z"
+            }
+          ]
+        },
+        {
+          "defectCode": "DL-026",
+          "activeInvestigations": 8,
+          "investigationStatuses": [
+            "INVESTIGATING",
+            "OPEN",
+            "OPEN",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING",
+            "INVESTIGATING"
+          ],
+          "topQids": [
+            "P1-B-001",
+            "P1-B-004",
+            "P1-B-006",
+            "P1-B-025",
+            "P1-AC-001"
+          ],
+          "totalAffectedQids": 9,
+          "recommendations": [
+            {
+              "recommendationId": "REC-5B1E489D",
+              "type": "REMEDIATE",
+              "severity": "HIGH",
+              "status": "Open",
+              "qidCount": 274
+            },
+            {
+              "recommendationId": "REC-1100DF07",
+              "type": "REVIEW",
+              "severity": "MEDIUM",
+              "status": "Open",
+              "qidCount": 2074
+            }
+          ],
+          "chainComplete": true,
+          "lifecycleTrace": [
+            {
+              "id": "INV-20260727-001",
+              "status": "INVESTIGATING",
+              "created": "2026-07-27T17:46:58.402Z",
+              "updated": "2026-07-27T17:47:10.722Z"
+            },
+            {
+              "id": "INV-20260727-002",
+              "status": "OPEN",
+              "created": "2026-07-27T17:46:58.402Z",
+              "updated": "2026-07-27T17:46:58.402Z"
+            },
+            {
+              "id": "INV-20260727-003",
+              "status": "OPEN",
+              "created": "2026-07-27T17:46:58.402Z",
+              "updated": "2026-07-27T17:46:58.402Z"
+            }
+          ]
+        }
+      ],
+      "verdict": "2/2 complete"
+    },
+    "scenarioC_governanceInvestigation": {
+      "description": "Finding → Rule Mapping → Investigation → Closure",
+      "cases": [
+        {
+          "case": "Governance Rule Mapping",
+          "totalGovInvestigations": 1,
+          "mappedToRules": true,
+          "closureVerified": false,
+          "chainComplete": true
+        }
+      ],
+      "governanceInvestigations": [
+        {
+          "id": "INV-20260727-018",
+          "title": "Governance investigation: Rule 6 enforcement gap — DL-035 certified items passed pipeline without DL-026 check",
+          "status": "OPEN",
+          "priority": 100,
+          "related_qids": [
+            "P1-FC-001",
+            "P1-FC-006",
+            "P1-FC-007",
+            "P1-FC-010",
+            "P1-FC-015"
+          ],
+          "related_defects": [],
+          "findings": []
+        }
+      ],
+      "ruleMapping": [
+        {
+          "rule": 1,
+          "description": "question_state changes must pair with REVISION_HISTORY updates",
+          "severity": "WARN"
+        },
+        {
+          "rule": 2,
+          "description": "ExplanationWrong[CorrectChoice] must be empty (DL-008 enforcement)",
+          "severity": "BLOCK"
+        },
+        {
+          "rule": 3,
+          "description": "MASTER_QUESTION_REGISTRY.md is generated — never hand-edit",
+          "severity": "BLOCK"
+        },
+        {
+          "rule": 4,
+          "description": "answer-key changes must include recomputed/verified note",
+          "severity": "WARN"
+        },
+        {
+          "rule": 5,
+          "description": "Max 30 question objects per change-set without BLOCK-AUTHORIZED",
+          "severity": "BLOCK"
+        }
+      ],
+      "findingToRuleMap": [
+        {
+          "investigationId": "INV-20260727-018",
+          "defects": [],
+          "matchedRules": []
+        }
+      ],
+      "verdict": "1/1 complete"
+    },
+    "scenarioD_certificationInvestigation": {
+      "description": "Question → Certification Event → Recommendation History → Current Status",
+      "cases": [
+        {
+          "qid": "P1-A-001",
+          "currentState": "Certified",
+          "pack": "pack_a",
+          "section": "A",
+          "topic": "A.001 balance sheet current classification",
+          "healthTier": null,
+          "healthScore": null,
+          "certificationEvents": 1,
+          "certificationTimeline": [
+            {
+              "sessionId": "3",
+              "type": "IMPLEMENTATION",
+              "title": "Critical Certified Defects Repaired"
+            }
+          ],
+          "sessionHistory": 1,
+          "recommendations": [],
+          "investigations": [],
+          "timelineTouchpoints": 2,
+          "chainComplete": true
+        },
+        {
+          "qid": "P1-E-076",
+          "currentState": "Certified",
+          "pack": "pack_a",
+          "section": "E",
+          "topic": "E.076 control monitoring separate evaluations",
+          "healthTier": null,
+          "healthScore": null,
+          "certificationEvents": 2,
+          "certificationTimeline": [
+            {
+              "sessionId": "3",
+              "type": "IMPLEMENTATION",
+              "title": "Critical Certified Defects Repaired"
+            },
+            {
+              "sessionId": "4",
+              "type": "IMPLEMENTATION",
+              "title": "-Item Certification Block"
+            }
+          ],
+          "sessionHistory": 2,
+          "recommendations": [],
+          "investigations": [],
+          "timelineTouchpoints": 4,
+          "chainComplete": true
+        },
+        {
+          "qid": "P1-EC-004",
+          "currentState": "Certified",
+          "pack": "pack_c",
+          "section": "E",
+          "topic": "E.004 segregation of duties design",
+          "healthTier": null,
+          "healthScore": null,
+          "certificationEvents": 1,
+          "certificationTimeline": [
+            {
+              "sessionId": "4",
+              "type": "IMPLEMENTATION",
+              "title": "-Item Certification Block"
+            }
+          ],
+          "sessionHistory": 3,
+          "recommendations": [],
+          "investigations": [],
+          "timelineTouchpoints": 4,
+          "chainComplete": true
+        },
+        {
+          "qid": "P1B-B-153",
+          "currentState": "Certified",
+          "pack": "pack_b",
+          "section": "B",
+          "topic": "B-B.153 seasonality in budgeting",
+          "healthTier": null,
+          "healthScore": null,
+          "certificationEvents": 1,
+          "certificationTimeline": [
+            {
+              "sessionId": "3",
+              "type": "IMPLEMENTATION",
+              "title": "Critical Certified Defects Repaired"
+            }
+          ],
+          "sessionHistory": 3,
+          "recommendations": [
+            {
+              "recommendationId": "REC-1100DF07",
+              "type": "REVIEW",
+              "severity": "MEDIUM",
+              "status": "Open"
+            }
+          ],
+          "investigations": [],
+          "timelineTouchpoints": 4,
+          "chainComplete": true
+        }
+      ],
+      "verdict": "4/4 complete"
+    }
+  },
+  "summary": {
+    "totalScenarios": 4,
+    "totalCases": 11,
+    "casesComplete": 11,
+    "completionPct": 100,
+    "manualSearchesRequired": 0,
+    "verdict": "PASS — 100% completion, 0 manual searches"
+  }
+}

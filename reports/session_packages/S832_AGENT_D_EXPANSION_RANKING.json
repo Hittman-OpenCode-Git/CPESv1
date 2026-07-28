@@ -1,0 +1,257 @@
+{
+  "session": "S832",
+  "agent": "D",
+  "phase": "Discovery",
+  "task": "Expansion candidate ranking",
+  "ranking_methodology": "Rank Score = Impact × Feasibility. Impact: 1-10 (how much does this improve learner experience?). Feasibility: 1-10 (how easy is this to execute with current tooling/pipeline?).",
+  "pool_snapshot": {
+    "total_pool": 3285,
+    "mcq_total": 2540,
+    "case_total": 745,
+    "certified_mcq": 2298,
+    "certified_case": "~400",
+    "certified_total": "~2700",
+    "largest_gaps": {
+      "difficulty": {
+        "very_difficult_shortfall": 254,
+        "difficult_shortfall": 550
+      },
+      "cognitive_level": {
+        "evaluate_shortfall": 380,
+        "analyze_shortfall": 625
+      }
+    },
+    "best_calibrated_pack": "Pack B (29 Difficult items, best Apply ratio)",
+    "worst_calibrated_pack": "Pack A (0 Difficult, 43.8% Moderate-Easy)",
+    "least_certified_section": "Section F (~67% certified)",
+    "most_under_covered_topics": [
+      "ASC 842 (Leases)",
+      "ASC 740 (Income Taxes)",
+      "Predictive analytics",
+      "COSO ERM depth",
+      "Target costing"
+    ]
+  },
+  "expansion_backlog": [
+    {
+      "rank": 1,
+      "id": "EXP-001",
+      "name": "Moderate→Difficult recalibration sweep",
+      "category": "RECALIBRATION",
+      "sections": "ALL",
+      "items_affected": 423,
+      "impact": 9,
+      "feasibility": 9,
+      "rank_score": 81,
+      "rationale": "Metadata-only change. No content authoring. Dramatically improves difficulty distribution (~3%→~20% Difficult). Highest ROI action in the entire program.",
+      "effort_estimate": "1-2 sessions (scripted scan + batch metadata update)",
+      "risk_level": "LOW",
+      "dependencies": ["None — standalone"],
+      "success_metric": "Difficult items move from ~75→~498; CAQS §6.1 target (25%) achievable"
+    },
+    {
+      "rank": 2,
+      "id": "EXP-002",
+      "name": "DL-021 Pack E Section C distractor explanations",
+      "category": "QUALITY_FIX",
+      "sections": "E:C",
+      "items_affected": 95,
+      "impact": 8,
+      "feasibility": 8,
+      "rank_score": 64,
+      "rationale": "95 Certified items in learner pool with NO distractor explanations. 285 EW fields to author — substantial but well-understood work. High learner impact: immediate educational quality improvement.",
+      "effort_estimate": "3-4 sessions (285 fields × ~3 min/field = ~14 hours authoring)",
+      "risk_level": "MEDIUM",
+      "dependencies": ["DL-021 entry in DEFECT_LIBRARY.md lists 5 previously remediated items — verify current state first"],
+      "success_metric": "0 DL-021 remaining in Pack E Section C; all 285 distractor EW fields ≥50 chars"
+    },
+    {
+      "rank": 3,
+      "id": "EXP-003",
+      "name": "DL-016 metadata-block structural fix",
+      "category": "QUALITY_FIX",
+      "sections": "A:E",
+      "items_affected": 58,
+      "impact": 8,
+      "feasibility": 8,
+      "rank_score": 64,
+      "rationale": "58 Certified items with wrong-topic distractor text (learners see explanations about different questions). High safety/correctness impact. Dual-block architecture well-understood — fix is mechanical alignment.",
+      "effort_estimate": "1-2 sessions (metadata alignment per QuestionID boundary)",
+      "risk_level": "MEDIUM",
+      "dependencies": ["DL-016 dual-block scan must be CC-offset aware (Pack B format learned from DL-029)"],
+      "success_metric": "0 DL-016 items; metadata ChoiceA-D matches content Choices.A-D for all 58 items"
+    },
+    {
+      "rank": 4,
+      "id": "EXP-006",
+      "name": "Section F certification completion",
+      "category": "CERTIFICATION",
+      "sections": "F",
+      "items_affected": "~124",
+      "impact": 7,
+      "feasibility": 7,
+      "rank_score": 49,
+      "rationale": "Boosts Section F certified rate from 67%→100%. Newest domain (Technology & Analytics), high learner demand. Items already exist — just need certification pass. Closes the largest section certification gap.",
+      "effort_estimate": "2-3 sessions (CAQS §1.6 six-dimension verification per item)",
+      "risk_level": "MEDIUM",
+      "dependencies": ["Section F items may carry DL-013 boilerplate — verify before certification"],
+      "success_metric": "Section F certified rate hits 100%; total certified pool grows by ~124"
+    },
+    {
+      "rank": 5,
+      "id": "EXP-004",
+      "name": "DL-031 coordinated downgrade + upgrade sweep",
+      "category": "RECALIBRATION",
+      "sections": "ALL",
+      "items_affected": "~800-1000",
+      "impact": 7,
+      "feasibility": 6,
+      "rank_score": 42,
+      "rationale": "Large-scale but well-defined. Requires automated detection (stem-correct choice lexical overlap >50%) + per-item classification. Must be paired with upward recalibrations (EXP-001) so Easy pool doesn't balloon. Zero content changes — metadata only.",
+      "effort_estimate": "3-5 sessions (automated scan + batch verification + coordinated rollback plan)",
+      "risk_level": "MEDIUM-HIGH",
+      "dependencies": ["EXP-001 must execute first or in parallel", "Automated detection script needed", "CAQS §6.1 target distribution must be the constraint"],
+      "success_metric": "Definition-match items recalibrated to Easy (1); overall difficulty distribution within 5% of CAQS targets"
+    },
+    {
+      "rank": 6,
+      "id": "EXP-005",
+      "name": "Very Difficult emergency bridge (50 items)",
+      "category": "RECALIBRATION",
+      "sections": "ALL",
+      "items_affected": 50,
+      "impact": 7,
+      "feasibility": 6,
+      "rank_score": 42,
+      "rationale": "Moves pool from 0%→2% VDiff. Requires careful selection of genuinely complex items from existing pool (multi-step calculations, deep judgment). Limited by existing item quality — cannot invent complexity.",
+      "effort_estimate": "1-2 sessions (manual review + metadata update)",
+      "risk_level": "MEDIUM",
+      "dependencies": ["Must not pull items that are just long/difficult to read; genuine cognitive complexity required"],
+      "success_metric": "Pool has ≥50 items at DifficultyScore=5; CAQS §6.1 VDiff target (10%) partially bridged"
+    },
+    {
+      "rank": 7,
+      "id": "EXP-007",
+      "name": "New Very Difficult items — Sections B, C",
+      "category": "NEW_CONTENT",
+      "sections": "B, C",
+      "items_affected": 50,
+      "impact": 8,
+      "feasibility": 5,
+      "rank_score": 40,
+      "rationale": "High impact (builds VDiff pool). Medium feasibility: requires new item authoring with full CAQS compliance. Best target sections: B (master budget, cash budget, flexible budget) and C (multi-variance analysis, transfer pricing) — calculation-heavy domains naturally suited for VDiff.",
+      "effort_estimate": "5-8 sessions (authoring + accounting review + psychometric review + certification)",
+      "risk_level": "HIGH",
+      "dependencies": ["EXP-005 (VDiff bridge) should complete first to gauge existing item viability", "Requires Accountant + Psychometrician persona workflow"],
+      "success_metric": "50 new VDiff items in Sections B and C; all six CSO §1.6 dimensions at HIGH confidence"
+    },
+    {
+      "rank": 8,
+      "id": "EXP-008",
+      "name": "New Evaluate items — scenario-based judgment",
+      "category": "NEW_CONTENT",
+      "sections": "ALL",
+      "items_affected": 75,
+      "impact": 9,
+      "feasibility": 4,
+      "rank_score": 36,
+      "rationale": "Highest cognitive tier (Bloom's Evaluate), zero existing items. Critical for exam realism — CMA Part 1 tests professional judgment. But designing 4-plausible-distractor judgment items is the hardest authoring task in the program.",
+      "effort_estimate": "8-12 sessions (authoring + iterative distractor engineering + expert review + pilot testing)",
+      "risk_level": "HIGH",
+      "dependencies": ["EXP-007 should complete first (VDiff authoring builds Evaluate authoring skill)", "Requires full CAQS workflow", "Distractor engineering is the bottleneck"],
+      "success_metric": "75 new Evaluate items; pool achieves CAQS §6.2 target (15% Evaluate)"
+    },
+    {
+      "rank": 9,
+      "id": "EXP-009",
+      "name": "Topic gap fill — ASC 842/740, predictive analytics, COSO ERM depth",
+      "category": "NEW_CONTENT",
+      "sections": "A, E, F",
+      "items_affected": 60,
+      "impact": 6,
+      "feasibility": 5,
+      "rank_score": 30,
+      "rationale": "Fills specific topic gaps identified in blueprint coverage audit. ASC 842 (Leases) and ASC 740 (Income Taxes) are major FASB topics underrepresented. Medium priority because core topics already have good coverage — these are depth items.",
+      "effort_estimate": "4-6 sessions (topic research + authoring + review)",
+      "risk_level": "MEDIUM",
+      "dependencies": ["Requires ASC 842/740 expert review — these are complex standards with frequent updates"],
+      "success_metric": "60 new items across gap topics; blueprint coverage audit shows zero major topic gaps"
+    },
+    {
+      "rank": 10,
+      "id": "EXP-010",
+      "name": "Case study full certification sweep",
+      "category": "CERTIFICATION",
+      "sections": "ALL",
+      "items_affected": 300,
+      "impact": 7,
+      "feasibility": 4,
+      "rank_score": 28,
+      "rationale": "~300 case items need certification (36% of case pool). Large undertaking — each case requires exhibit validation, dependency-chain verification, and per-item review. Case studies already have better difficulty calibration than MCQs (all Moderate). Certification provides governance rigor but less incremental quality lift than other items at this rank.",
+      "effort_estimate": "10-15 sessions (6 items/case × 50 cases × full review workflow)",
+      "risk_level": "MEDIUM",
+      "dependencies": ["DL-023 (exhibit Headers) already resolved — no blockers", "DL-032 (uniform Moderate difficulty) — recalibration needed during certification"],
+      "success_metric": "300 case items move to question_state: Certified; case pool at 100% certified"
+    }
+  ],
+  "execution_sequence_recommendation": {
+    "wave_1_immediate": [
+      "EXP-001 (Moderate→Difficult recalibration)",
+      "EXP-002 (DL-021 Pack E Section C)",
+      "EXP-003 (DL-016 metadata fix)"
+    ],
+    "wave_1_rationale": "Highest Rank Scores (81, 64, 64). All are either metadata-only changes or authoring on well-understood items. Zero new content. Immediate learner impact.",
+    "wave_2_short_term": [
+      "EXP-006 (Section F certification)",
+      "EXP-004 (DL-031 coordinated sweep)",
+      "EXP-005 (VDiff emergency bridge)"
+    ],
+    "wave_2_rationale": "Rank Scores 49-42. Certification and recalibration work. DL-031 depends on EXP-001 completing first. Section F certification can run in parallel.",
+    "wave_3_medium_term": [
+      "EXP-007 (New VDiff items B, C)",
+      "EXP-008 (New Evaluate items)"
+    ],
+    "wave_3_rationale": "Rank Scores 40-36. New content authoring. Build on recalibrated difficulty baselines from Waves 1-2. VDiff authoring builds skill for Evaluate authoring.",
+    "wave_4_long_term": [
+      "EXP-009 (Topic gaps)",
+      "EXP-010 (Case cert sweep)"
+    ],
+    "wave_4_rationale": "Rank Scores 30-28. Lower urgency. Topic gaps fill remaining blueprint holes. Case certification is large but lower incremental impact since cases are already well-calibrated."
+  },
+  "total_estimated_items_by_wave": {
+    "wave_1": "~576 items (recalibration: 423 + quality fixes: 95 + 58)",
+    "wave_2": "~1,174 items (Section F cert: 124 + DL-031 sweep: ~1,000 + VDiff bridge: 50)",
+    "wave_3": "~125 new items authored",
+    "wave_4": "~360 items (topic gaps: 60 + case cert: 300)"
+  },
+  "dependency_graph": {
+    "EXP-001": {"depends_on": [], "blocks": ["EXP-004", "EXP-005"]},
+    "EXP-002": {"depends_on": [], "blocks": []},
+    "EXP-003": {"depends_on": [], "blocks": []},
+    "EXP-006": {"depends_on": [], "blocks": []},
+    "EXP-004": {"depends_on": ["EXP-001"], "blocks": []},
+    "EXP-005": {"depends_on": ["EXP-001"], "blocks": ["EXP-007"]},
+    "EXP-007": {"depends_on": ["EXP-005"], "blocks": ["EXP-008"]},
+    "EXP-008": {"depends_on": ["EXP-007"], "blocks": []},
+    "EXP-009": {"depends_on": [], "blocks": []},
+    "EXP-010": {"depends_on": [], "blocks": []}
+  },
+  "key_assumptions": [
+    "Pool snapshot represents post-S824 state (2,298 Certified MCQ)",
+    "Moderate→Difficult recalibration (EXP-001) is genuinely metadata-only — items labelled Moderate that test at Apply/Analyze with multi-step calculations",
+    "DL-021 scope of 95 items is correct (100 Section C items minus 5 already remediated in Autonomous Run)",
+    "DL-016 scope of 58 items per DEFECT_LIBRARY.md (Pack A Section E seeds P1-E-038–042 plus other affected sections)",
+    "New content authoring at 15-20 min/item for simple items; 45-60 min/item for Evaluate items with distractor engineering",
+    "Current tooling (governance-guard, ExplanationValidator, boundary-aware parser) is functional for all recalibration and certification waves"
+  ],
+  "risks_and_mitigations": {
+    "risk_1": "EXP-004 (DL-031) at scale 1,000 items: false positives may inflate Easy pool if detection threshold is wrong",
+    "mitigation_1": "Use Jaccard similarity with calibrated threshold; sample-verify 10% of flagged items before batch write",
+    "risk_2": "EXP-007/008 new content authoring: quality regression risk if rushed",
+    "mitigation_2": "Gate each batch through full CAQS §1.6 workflow; never batch-certify >28 items (governance-guard Rule 5)",
+    "risk_3": "EXP-001 recalibration: aggressive upgrade may move items to Difficult that are actually Moderate-Easy + long",
+    "mitigation_3": "Dual-criterion filter: (cognitive demand ≥ Apply/Analyze) AND (CalculationComplexity ≥ Moderate OR DecisionComplexity ≥ Medium)",
+    "risk_4": "Concurrent-write data loss (DL-019): Waves 1-2 will write to pack files that other sessions may touch",
+    "mitigation_4": "Backup-before-write mandatory per BACKUP_PROTOCOL.md; verify hash stability post-write; exclusive session windows"
+  }
+}

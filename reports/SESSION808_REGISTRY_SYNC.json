@@ -1,0 +1,56 @@
+{
+  "title": "SESSION808_REGISTRY_SYNC",
+  "session": "808",
+  "date": "2026-07-26",
+  "registry_files": {
+    "MASTER_QUESTION_REGISTRY": {
+      "file": "knowledge/MASTER_QUESTION_REGISTRY.md",
+      "current_entry_count": 4285,
+      "description": "Comprehensive registry of all items across packs and case files",
+      "manual_edit_blocked_by": "governance-guard.js Rule 3 (BLOCK) — generated file, never hand-edit",
+      "update_method": "regenerate via scripts/build_master_registry.js"
+    },
+    "QUESTION_REGISTRY_INDEX": {
+      "file": "knowledge/QUESTION_REGISTRY_INDEX.md",
+      "status": "NOT FOUND — file does not exist at expected path",
+      "update_required": true,
+      "update_method": "Generate from MASTER_QUESTION_REGISTRY.md via indexing script"
+    }
+  },
+  "sync_state": {
+    "prior_registry_entry_count": 2995,
+    "s317_deferred_delta": 10,
+    "expected_pre_s808_count": 3005,
+    "s808_new_items": 10,
+    "expected_post_s808_count": 3015,
+    "detailed_breakdown": {
+      "s317_deferred": {
+        "description": "10 entries deferred from S317 bulk certification wave, never synced to registry",
+        "items": "Certified items from prior sub-batch not yet registered",
+        "status": "Known gap — see SESSION_STATUS_2026-07-24.md"
+      },
+      "s808_wave2b": {
+        "description": "10 new Domain E replacement items added in S808",
+        "items": ["P1-E-R12", "P1-E-R13", "P1-E-R18", "P1-E-R21", "P1-E-R22", "P1-E-R23", "P1-E-R24", "P1-E-R25", "P1-E-R28", "P1-E-R33"],
+        "status": "Inserted into pack_e_corrected.js, question_state: Certified"
+      },
+      "total_registry_lag": 20,
+      "note": "2,995 → 3,005 (S317 deferred) → 3,015 (S808 new items). Registry not yet regenerated."
+    }
+  },
+  "action_required": {
+    "priority": "HIGH",
+    "action": "Run scripts/build_master_registry.js to regenerate MASTER_QUESTION_REGISTRY.md with all 4,285 current entries including S317 and S808 additions",
+    "blocked_by": "Agent must be authorized for writes beyond REVISION_HISTORY.md update",
+    "workaround": "Registry files NOT modified in S808 — governance guard Rule 3 blocks direct editing",
+    "risk": "Registry-count mismatch with actual file state persists. Cross-reference remediation counts against registry will be inaccurate until regenerated.",
+    "resolution_session": "Defer to next registry-regeneration session"
+  },
+  "verification": {
+    "registry_entries_current": "MASTER_QUESTION_REGISTRY.md scan shows ~4,285 entries (line-based count includes header rows)",
+    "pack_file_item_count": 2540,
+    "case_file_item_count": 420,
+    "total_theoretical_entries": 2960,
+    "note": "Registry count may include metadata/summary rows. Direct entry count vs line count may differ. Full reconciliation requires registry rebuild."
+  }
+}

@@ -1,0 +1,581 @@
+{
+  "dashboard": "SESSION800_CONSOLIDATED_QUALITY_DASHBOARD",
+  "generated": "2026-07-26",
+  "session": "S800",
+  "agent": "Agent T — Quality Dashboard",
+  "mode": "READ-ONLY",
+  "scope": "Portfolio-wide consolidation of Wave 1-3 findings from Agents A-R plus cross-referenced source-file verification",
+  "data_sources": [
+    "SESSION301_AGENT_S_PORTFOLIO_DASHBOARD.json",
+    "SESSION301_AGENT_Y_READINESS_BOARD.json",
+    "SESSION301_AGENT_F_EXPLANATION_QUALITY.json",
+    "SESSION301_AGENT_G_BLUEPRINT_METADATA.json",
+    "SESSION301_AGENT_H_ITEM_READINESS_MODEL.json",
+    "SESSION302_DASHBOARD.json",
+    "SESSION800_REWRITE_FORECAST_AGENT_R.json",
+    "SESSION700_GLOBAL_CERTIFICATION_REVIEW_SUMMARY.md",
+    "SESSION_STATUS_2026-07-24.md",
+    "DEFECT_LIBRARY.md (DL-001 through DL-033)",
+    "REVISION_HISTORY.md (Sessions 700-717, 301-302)",
+    "Direct raw-file grep verification (2026-07-26)"
+  ],
+
+  "1_readiness_dashboard": {
+    "title": "Portfolio Certification Readiness",
+    "portfolio_summary": {
+      "total_items": 2500,
+      "total_certified": 2181,
+      "pct_certified": 87.2,
+      "remaining_uncertified": 319,
+      "fully_certified_packs": ["B (500/500 — 100%)", "E (500/500 — 100%)"],
+      "partially_certified_packs": ["A (481/500 — 96.2%)", "C (350/500 — 70.0%)", "D (350/500 — 70.0%)"],
+      "verification": "Select-String '\"question_state\": \"Certified\"' across all 5 pack files — 2,181 matches. Independent count stable across 2 consecutive scans."
+    },
+
+    "per_pack_breakdown": {
+      "pack_A": {
+        "items": 500,
+        "certified": 481,
+        "pct_certified": 96.2,
+        "archived": 19,
+        "uncertified": 0,
+        "tier": "Tier 1 — Near-Complete",
+        "sections": {
+          "A": {"items": 75, "certified": 73, "pct": 97.3, "notes": "2 uncertified residual; 5 DL-013 fields"},
+          "B": {"items": 100, "certified": 85, "pct": 85.0, "notes": "CC B-bias 33.4%; DL-008 on B-001/B-025; 111 DL-013 fields"},
+          "C": {"items": 100, "certified": 80, "pct": 80.0, "notes": "94 DL-013 fields; 8 clone groups"},
+          "D": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Certified clean; CC B-bias residue (31/75=41.3% CC=B)"},
+          "E": {"items": 75, "certified": 75, "pct": 100.0, "notes": "17 archived clones; DL-016 metadata shift; 28 DL-013 fields"},
+          "F": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Clean"}
+        },
+        "top_risks": ["DL-008 on B-001/B-025 (learner pool)", "CC B-bias 33.4% (>28% CAQS target)", "DL-016 metadata-content shift on all 500 items"]
+      },
+      "pack_B": {
+        "items": 500,
+        "certified": 500,
+        "pct_certified": 100,
+        "archived": 0,
+        "uncertified": 0,
+        "tier": "Tier 0 — Gold Standard",
+        "sections": {
+          "A": {"items": 75, "certified": 75, "pct": 100.0, "notes": "0 DL-008/DL-013/DL-026. DQS=85 (Grade: A)"},
+          "B": {"items": 100, "certified": 100, "pct": 100.0, "notes": "Gold standard distractor engineering"},
+          "C": {"items": 100, "certified": 100, "pct": 100.0, "notes": "Gold standard"},
+          "D": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Gold standard"},
+          "E": {"items": 75, "certified": 75, "pct": 100.0, "notes": "5-item clone group; 1 seed + 4 re-archivable"},
+          "F": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Gold standard"}
+        },
+        "top_risks": ["~200 items need difficulty recalibration (Moderate→Easy for definition-match items)", "1 clone group of 5 items — re-archivable"]
+      },
+      "pack_C": {
+        "items": 500,
+        "certified": 350,
+        "pct_certified": 70.0,
+        "archived": 56,
+        "uncertified": 94,
+        "tier": "Tier 2 — Needs Work",
+        "clone_density": 90.4,
+        "sections": {
+          "A": {"items": 75, "certified": 75, "pct": 100.0, "notes": "DL-008 on AC-001; CC audit needed"},
+          "B": {"items": 100, "certified": 100, "pct": 100.0, "notes": "54 items w/ DL-008 — densest cluster pool-wide"},
+          "C": {"items": 100, "certified": 100, "pct": 100.0, "notes": "Certified clean post-S76"},
+          "D": {"items": 75, "certified": 75, "pct": 100.0, "notes": "131 DL-013 fields; partial boilerplate"},
+          "E": {"items": 75, "certified": 0, "pct": 0.0, "notes": "56 archived clones; 19 uncertified seeds; 125 DL-013 fields"},
+          "F": {"items": 75, "certified": 0, "pct": 0.0, "notes": "0% certified — largest uncertified block in pack; 101 DL-013 fields; 75 Unprocessed"}
+        },
+        "top_risks": ["54 Certified DL-008 items in Section B (learner safety)", "Section F completely unprocessed", "90.4% clone density across 82 groups (452 clone items)"]
+      },
+      "pack_D": {
+        "items": 500,
+        "certified": 350,
+        "pct_certified": 70.0,
+        "archived": 57,
+        "uncertified": 93,
+        "tier": "Tier 2 — Needs Work",
+        "clone_density": 86.4,
+        "sections": {
+          "A": {"items": 75, "certified": 73, "pct": 97.3, "notes": "4 DL-008 (AD-047/048/054/055)"},
+          "B": {"items": 100, "certified": 100, "pct": 100.0, "notes": "5 DL-008 (BD-017/021-024)"},
+          "C": {"items": 100, "certified": 0, "pct": 0.0, "notes": "All 100 In Audit; 50 DL-026 items; 2 items missing content blocks"},
+          "D": {"items": 75, "certified": 75, "pct": 100.0, "notes": "1 DL-008 (DD-028/029)"},
+          "E": {"items": 75, "certified": 0, "pct": 0.0, "notes": "57 archived clones; 18 uncertified seeds; 138 DL-013 fields"},
+          "F": {"items": 75, "certified": 0, "pct": 0.0, "notes": "0% cert; 74 Unprocessed; 118 DL-013 fields; 2 items missing content blocks (FD-045/075)"}
+        },
+        "top_risks": ["50 DL-026 In Audit items blocking Section C certification", "FD-045 and FD-075 missing content blocks (structural defect)", "86.4% clone density across 77 groups (432 clone items)"]
+      },
+      "pack_E": {
+        "items": 500,
+        "certified": 500,
+        "pct_certified": 100,
+        "archived": 0,
+        "uncertified": 0,
+        "tier": "Tier 0 — Structurally Certified (Educationally Thin)",
+        "sections": {
+          "A": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Glossary-level stems; EC ~80-150 chars; terse distractors (mean 19.3 chars)"},
+          "B": {"items": 100, "certified": 100, "pct": 100.0, "notes": "Glossary-level; needs full stem+EC rewrite"},
+          "C": {"items": 100, "certified": 100, "pct": 100.0, "notes": "Worst EC brevity in pack; several under 50 chars; DL-021: 300 missing distractor EW fields"},
+          "D": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Terse distractors; EC under 200 chars"},
+          "E": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Relatively better; but still glossary-level stems"},
+          "F": {"items": 75, "certified": 75, "pct": 100.0, "notes": "Best in Pack E; EC adequate but not exam-quality"}
+        },
+        "top_risks": ["500 items Certified but educationally thin — learners see dictionary definitions, not exam-quality explanations", "EC mean 108 chars (pool-wide mean: 213 chars)", "0% business-scenario stems — all definition-match format", "DL-021: 300 missing distractor EW fields in Section C"]
+      }
+    },
+
+    "tier_distribution": {
+      "tier_1_certification_ready_85_100": {"count": 791, "pct": 31.6, "description": "Items scoring 85-100 on CAQS rubric. No blocking defects. Ready for production."},
+      "tier_2_upgrade_needed_50_84": {"count": 1574, "pct": 63.0, "description": "Items needing explanation upgrades, distractor strengthening, or stem enrichment. Not blocking certification."},
+      "tier_3_major_rewrite_0_49": {"count": 135, "pct": 5.4, "description": "Items requiring full content rewrite. Major structural or educational defects."}
+    },
+
+    "certification_gap_analysis": {
+      "items_to_close_all_packs": 319,
+      "largest_blocks": [
+        {"block": "Pack C Section F", "items": 75, "status": "Unprocessed — 0% certified"},
+        {"block": "Pack D Section F", "items": 74, "status": "Unprocessed — 0% certified"},
+        {"block": "Pack D Section C", "items": 100, "status": "In Audit — 50 DL-026 items blocking"},
+        {"block": "Pack C Section E seeds", "items": 19, "status": "Unprocessed — after 56 archived clones"},
+        {"block": "Pack D Section E seeds", "items": 18, "status": "Unprocessed — after 57 archived clones"},
+        {"block": "Pack A Section A residual", "items": 2, "status": "Uncertified — blocking Pack A 100%"}
+      ]
+    }
+  },
+
+  "2_issue_dashboard": {
+    "title": "Top 10 Defects by Severity-Impact — Cross-Portfolio",
+    "generated_from": "DEFECT_LIBRARY.md, REVISION_HISTORY.md, S701-S717 closeout reports, S800 Agent A-R scans",
+    "top_10": [
+      {
+        "rank": 1,
+        "defect": "DL-008 — Non-Empty ExplanationWrong[CorrectChoice]",
+        "severity": "HIGH",
+        "severity_explanation": "Learner-safety risk — learners see misplaced or wrong-topic text in correct-answer slot",
+        "certified_items_affected": 67,
+        "items_total": 67,
+        "packs_affected": "A (2), C (55), D (10)",
+        "densest_cluster": "Pack C Section B — 54 items (BC-001 through BC-100)",
+        "learner_pool_exposure": "67 Certified items actively delivered to learners",
+        "blocked_by": "CorrectChoice rotation artifact — CC audit required before mechanical EW[CC] clear",
+        "root_cause": "Template-authoring pipeline: EW fields populated for all 4 slots; CC slot not filtered",
+        "state_post_S717": "All 67 items still carry DL-008. Pack C Section B cluster unremediated.",
+        "remediation_priority": "P0 — Must clear before any further certification waves",
+        "estimated_sessions": 2,
+        "remediation_type": "Mechanical EW[CC] clears + per-item CC audit on rotation groups"
+      },
+      {
+        "rank": 2,
+        "defect": "DL-030 — CorrectChoice Answer-Key Errors",
+        "severity": "CRITICAL (RESOLVED 2026-07-24)",
+        "severity_explanation": "Wrong answer marked correct — highest learner-safety risk category",
+        "certified_items_affected": 5,
+        "items_total": 5,
+        "items_fixed": "P1B-B-119, P1B-F-084/116/121, P1E-E-037",
+        "root_cause": "Formula error (B-119: 8^(-0.3219) used instead of 4^(-0.3219)); rotation template CC assignment error (4 items)",
+        "state_post_S717": "0 remaining — all 5 fixed in S68/Phase 6",
+        "remediation_priority": "CLOSED — no further action"
+      },
+      {
+        "rank": 3,
+        "defect": "DL-026 — Empty Non-CorrectChoice ExplanationWrong Slots",
+        "severity": "HIGH",
+        "severity_explanation": "Learners who select wrong answers on affected distractors receive zero educational feedback",
+        "certified_items_affected": 13,
+        "items_total": "~300 (post-S710 remediation)",
+        "packs_affected": "A (1: P1-B-001), C (2: BC-094, DC-019), D (10: AD-047/048/054/055, CD-002/003/006/022/023/034)",
+        "largest_cluster": "Pack D Section C — 50 In Audit items (not yet Certified, blocking certification)",
+        "learner_pool_exposure": "13 Certified items (authoritative S710R queue)",
+        "state_post_S717": "Certified DL-026: 13 items remaining. Pack D Sec C: 50 In Audit items (blocked from learner pool).",
+        "remediation_priority": "P0 for Certified (13 items, 1 session). P1 for Pack D Sec C (50 items, 4 sessions).",
+        "estimated_sessions": 5,
+        "remediation_type": "Author choice-specific distractor text for empty slots"
+      },
+      {
+        "rank": 4,
+        "defect": "DL-012 — Section E Clonal Redundancy (Pack C/D)",
+        "severity": "MEDIUM",
+        "severity_explanation": "140 clone items across 28 groups provide zero additional pedagogical value beyond 28 seeds. Dilutes Section E metrics.",
+        "certified_items_affected": 0,
+        "items_total": 140,
+        "packs_affected": "C (EC-001 through EC-075, 70 clones), D (ED-001 through ED-075, 70 clones)",
+        "learner_pool_exposure": "None — all clones are Archived or Unprocessed",
+        "root_cause": "Bulk-authoring pipeline: 5-item rotation groups with company-name substitution + answer-letter rotation only",
+        "state_post_S717": "Pack C: 56 archived; Pack D: 57 archived. Remaining clones: Pack C 14, Pack D 13. Section F clones also present.",
+        "remediation_priority": "P1 — Archive remaining clones to clean section composition",
+        "estimated_sessions": "Part of 6-session clone archival program (765 clones total across all packs)",
+        "remediation_type": "Mechanical archival — preserve 1 seed per group, archive siblings"
+      },
+      {
+        "rank": 5,
+        "defect": "Pack E ExplanationCorrect Thinness (Quality, not structural)",
+        "severity": "HIGH",
+        "severity_explanation": "500 Certified items with EC averaging 108 chars (pool mean: 213 chars). Learners receive dictionary definitions instead of exam-quality explanations with principle citations, step-by-step solutions, business interpretation, and exam traps.",
+        "certified_items_affected": 500,
+        "items_total": 500,
+        "packs_affected": "E (all 500 items, all 6 sections)",
+        "learner_pool_exposure": "All 500 Certified Pack E items — degraded educational feedback for every interaction",
+        "detail": {
+          "ec_mean_chars": 108,
+          "pool_mean_chars": 213,
+          "stem_format": "100% glossary-level ('X is defined as...' → answer selection)",
+          "distractor_quality": "Terse single-phrase distractors (mean 19.3 chars pool-wide)",
+          "standard_citations": "Minimal — few ASC/COSO/IAS references",
+          "DL-021_gap": "Section C has 300 missing distractor EW fields (structurally absent)"
+        },
+        "state_post_S717": "Unchanged. All 500 items educationally thin. No structural defects — this is content quality, not file integrity.",
+        "remediation_priority": "P1 — Full rewrite: stems + EC + distractor expansion (14 sessions, 500 items)",
+        "estimated_sessions": 14,
+        "remediation_type": "Full pedagogical uplift — stems to business scenarios, EC to CAQS §4 standard, distractors expanded"
+      },
+      {
+        "rank": 6,
+        "defect": "DL-031 — Definition-Match Difficulty Inflation (Systematic)",
+        "severity": "MEDIUM (PARTIALLY RESOLVED)",
+        "severity_explanation": "~500 items systematically labeled Moderate/3 that test Bloom's Remember/Understand at Easy/1 level. Definition-match pattern: stem = textbook definition, answer = correct term.",
+        "certified_items_affected": "~300 (post-S713/S715 recalibration)",
+        "items_total": "~500 identified; 310 recalibrated (S713: 186, S715: 124)",
+        "distribution_post_S717": {
+          "easy": "622 items (24.9%) — incl. 84% correctly labeled per S714A",
+          "moderate_easy": "339 items (13.6%) — recalibrated from Easy/Easy-Moderate",
+          "moderate": "1041 items (41.6%) — reduced from 56.1% by S713+S715",
+          "difficult": "130 items (5.2%)",
+          "very_difficult": "0 items (0.0%) — content-creation gap, not calibration error"
+        },
+        "learner_pool_exposure": "Residual Moderate-labeled items with Easy cognitive demand — inaccurate difficulty signaling to adaptive systems",
+        "state_post_S717": "S713+S715 recalibrated 310 items. ~190 Moderate-labeled definition-match items remain. 0 Very Difficult is a content-composition gap.",
+        "remediation_priority": "P3 — Remaining ~190 items can be recalibrated in 1-2 sessions (label-only changes)",
+        "estimated_sessions": 2
+      },
+      {
+        "rank": 7,
+        "defect": "DL-013 — Template Boilerplate Distractor Explanations",
+        "severity": "MEDIUM",
+        "severity_explanation": "'Option X represents a plausible misconception...' template text in distractor EW slots. Provides zero instructional value.",
+        "certified_items_affected": 97,
+        "items_total": "366 QIDs, 184 remaining boilerplate fields in Certified items",
+        "packs_affected": "A (238 fields: A-5, B-111, C-94, E-28), C (357 fields: D-131, E-125, F-101), D (256 fields: E-138, F-118)",
+        "learner_pool_exposure": "97 Certified items with 184 boilerplate fields — learners see generic template text for wrong-answer feedback",
+        "remediation_progress": "2,587 originally → 851 remaining. 67.1% cleared. Packs C/D Sections A, B, C fully remediated.",
+        "state_post_S717": "851 fields across 366 QIDs. All in Unprocessed items (0 Certified DL-013). After clone archival, ~200 fields remain in seed items.",
+        "remediation_priority": "P2 — Rewrite boilerplate to choice-specific text. Certified items (184 fields) are P1.",
+        "estimated_sessions": 3
+      },
+      {
+        "rank": 8,
+        "defect": "Pack A CorrectChoice B-Bias (33.4%)",
+        "severity": "MEDIUM",
+        "severity_explanation": "33.4% of Pack A correct answers are position B — exceeds CAQS §6.5 target of 22-28%. Statistical cueing risk for savvy test-takers.",
+        "certified_items_affected": "~161 items (33.4% of 481 Certified)",
+        "items_total": 167,
+        "packs_affected": "A (Section D: 31/75 CC=B = 41.3% — worst concentration)",
+        "learner_pool_exposure": "Active — learners may detect pattern and exploit position-guessing on Pack A items",
+        "root_cause": "Template rotation artifact — 5-item CC rotation pattern (A→B→C→D→A) produced by authoring template",
+        "state_post_S717": "Unchanged. CC B-bias persists across Pack A. Pack C/D suspected A-bias (~47.6% inferred) — needs direct parse verification.",
+        "remediation_priority": "P2 — Shift ~20-30 CC values from B to other positions to rebalance within CAQS tolerance",
+        "estimated_sessions": 2
+      },
+      {
+        "rank": 9,
+        "defect": "DL-021 — Missing Distractor ExplanationWrong Fields (Pack E Section C)",
+        "severity": "HIGH",
+        "severity_explanation": "All 100 Pack E Section C items are missing 3 distractor EW fields each (300 total). Learners selecting wrong answers see zero feedback.",
+        "certified_items_affected": 100,
+        "items_total": 100,
+        "packs_affected": "E (Section C: P1E-C-001 through P1E-C-100)",
+        "remediation_progress": "5 Certified items fixed (P1E-C-013/054/055/074/083) in Autonomous Run Part 4. 95 Certified items remain.",
+        "learner_pool_exposure": "95 Certified items with zero distractor feedback — learners cannot learn from wrong answers",
+        "state_post_S717": "95 Certified items unremediated. Fields structurally absent (not empty — distinct from DL-026).",
+        "remediation_priority": "P1 — Author 300 choice-specific distractor explanations",
+        "estimated_sessions": 4
+      },
+      {
+        "rank": 10,
+        "defect": "Case Bank Distractor Gap — Zero EW Coverage",
+        "severity": "HIGH",
+        "severity_explanation": "Enhanced case banks (scored_cases2-5) have 0.0% EW fill rate across 310 items. Legacy cases (scored_cases.js) have 8.9%. Learners receive no distractor feedback on case-study wrong answers.",
+        "certified_items_affected": "~300 (all enhanced + legacy case items)",
+        "items_total": 390,
+        "packs_affected": "All 5 scored_cases files",
+        "learner_pool_exposure": "Active — single largest educational-quality gap in portfolio",
+        "dqs_score": 5,
+        "grade": "F",
+        "state_post_S717": "Unchanged. Zero EW fields in enhanced cases. Legacy cases: 8.9% fill rate.",
+        "remediation_priority": "P0 — Largest educational gap. Author 390 choice-specific distractor EW fields.",
+        "estimated_sessions": 6,
+        "remediation_type": "Full authorship from scratch — requires case-scenario context awareness"
+      }
+    ],
+    "cross_cutting_issues": [
+      {
+        "issue": "DL-016 — Metadata-Content Choice Shift (Pack A)",
+        "severity": "LOW (for content) → HIGH (for scan reliability)",
+        "affected_items": 500,
+        "description": "Metadata-block ChoiceA-D values lag +1 position behind content-block Choices.A-D. Causes scan false positives across ALL DL-008/DL-026/DL-010 scans. Every scan tool that reads from metadata block reports wrong defect counts.",
+        "scan_impact": "DL-029 (regex block-scan false positives) partially caused by DL-016 + dual-block architecture",
+        "state_post_S717": "Unfixed. Structural alignment needed as pre-requisite for reliable defect scanning."
+      },
+      {
+        "issue": "Dual-Block Architecture Complexity (Packs B/C/D/E)",
+        "severity": "MEDIUM (for tooling)",
+        "affected_items": "2,000 (Packs B/C/D/E all use paired metadata+content objects)",
+        "description": "Metadata block stores QuestionID/ChoiceA-D/ExplanationWrongA-D; content block stores Stem/Choices{}/CorrectChoice/ExplanationCorrect. Any tool that reads from wrong block produces false results. DL-020 (validator brace-matcher) and DL-029 (scan false positives) are direct consequences.",
+        "scan_impact": "Pack B: CC-before-QID format (unique); Packs C/D: metadata-first; Pack E: content-first (reversed). Each requires different parsing methodology."
+      },
+      {
+        "issue": "Root Directory Cleanup — ~43 .bak Files",
+        "severity": "LOW (policy violation, no functional impact)",
+        "description": "43 backup files (.bak*) remain in root directory. Per PROJECT_CONSTITUTION.md §11.4, all backups must be in backups/ subfolder. Policy violation — no learner impact.",
+        "authorized_exception": "scored_cases.js hash drift authorized per S533 — documented in governance register"
+      }
+    ]
+  },
+
+  "3_blueprint_dashboard": {
+    "title": "Blueprint Coverage vs. IMA CMA Part 1 Content Specification Outline",
+    "reference": "CMA Part 1 CSO — 6 domains: A(15%), B(20%), C(20%), D(20%), E(15%), F(10%) per IMA exam weighting",
+
+    "section_distribution": {
+      "overview": {
+        "section_A_external_financial_reporting": {"items": 375, "pct": 15.0, "target_pct": 15, "variance": "MATCH — exactly at IMA weighting"},
+        "section_B_planning_budgeting_forecasting": {"items": 500, "pct": 20.0, "target_pct": 20, "variance": "MATCH"},
+        "section_C_performance_management": {"items": 500, "pct": 20.0, "target_pct": 20, "variance": "MATCH"},
+        "section_D_cost_management": {"items": 375, "pct": 15.0, "target_pct": 20, "variance": "UNDER-REPRESENTED (−5%) — IMA weights Cost Management at 20%. Current pool under-represents by ~125 items."},
+        "section_E_internal_controls": {"items": 375, "pct": 15.0, "target_pct": 15, "variance": "MATCH"},
+        "section_F_technology_analytics": {"items": 374, "pct": 15.0, "target_pct": 10, "variance": "OVER-REPRESENTED (+5%) — IMA weights Technology/Analytics at 10%. Current pool over-represents by ~125 items."}
+      },
+      "note": "Section D is the most heavily tested domain on the actual CMA Part 1 exam (20% weighting). The pool's 15% allocation under-represents Cost Management topics. Section F is overweight but the IMA CSO (effective Sept 2024) did increase Technology/Analytics emphasis — some over-representation may be forward-looking."
+    },
+
+    "certification_gaps_by_section": {
+      "section_A": {
+        "total_items": 375,
+        "certified": 371,
+        "pct_certified": 98.9,
+        "remaining": 4,
+        "gaps": ["Pack A: 2 uncertified (A-A residual)", "Pack D: 2 uncertified (AD chunk)"],
+        "status": "NEAR-COMPLETE"
+      },
+      "section_B": {
+        "total_items": 500,
+        "certified": 485,
+        "pct_certified": 97.0,
+        "remaining": 15,
+        "gaps": ["Pack A: 15 uncertified (B-A partial cert block)"],
+        "status": "NEAR-COMPLETE"
+      },
+      "section_C": {
+        "total_items": 500,
+        "certified": 380,
+        "pct_certified": 76.0,
+        "remaining": 120,
+        "gaps": ["Pack A: 20 uncertified", "Pack D: 100 In Audit (50 DL-026 blocked)"],
+        "status": "NEEDS WORK — single largest uncertified section block is Pack D Sec C (100)"
+      },
+      "section_D": {
+        "total_items": 375,
+        "certified": 375,
+        "pct_certified": 100.0,
+        "remaining": 0,
+        "gaps": [],
+        "status": "FULLY CERTIFIED — but pool under-represented at 15% vs 20% IMA target"
+      },
+      "section_E": {
+        "total_items": 375,
+        "certified": 208,
+        "pct_certified": 55.5,
+        "remaining": 167,
+        "gaps": [
+          "Pack A: 17 archived (Section E clones)",
+          "Pack C: 75 (56 archived + 19 unprocessed seeds)",
+          "Pack D: 75 (57 archived + 18 unprocessed seeds)"
+        ],
+        "status": "LOWEST CERTIFICATION — 55.5% due to widespread DL-012 clone archival in Packs C/D"
+      },
+      "section_F": {
+        "total_items": 374,
+        "certified": 225,
+        "pct_certified": 60.2,
+        "remaining": 149,
+        "gaps": [
+          "Pack C: 75 (all Unprocessed)",
+          "Pack D: 74 (all Unprocessed + 2 missing content blocks)",
+          "1 item miscounted (FD-045/075 parsing gap)"
+        ],
+        "status": "LOW CERTIFICATION — 149 Unprocessed items, 0% certified in 2 of 4 packs"
+      }
+    },
+
+    "domain_quality_scores": {
+      "domain_A_external_financial_reporting": {
+        "dqs": 74,
+        "grade": "B",
+        "strength": "Calculation-based distractors map to common errors (asset impairment, revenue recognition)",
+        "weakness": "DL-016 metadata-content offset in Pack A — DQS may be understated",
+        "topics_well_covered": ["Revenue recognition (ASC 606)", "Lease accounting (ASC 842)", "Statement of cash flows"],
+        "topics_thin": ["Interim reporting", "Segment reporting"]
+      },
+      "domain_B_planning_budgeting": {
+        "dqs": 71,
+        "grade": "B-",
+        "strength": "Budgeting framework provides natural distinct alternatives for distractor engineering",
+        "weakness": "Conceptual distractors sometimes too similar; CC B-bias in Pack A (33.4%)",
+        "topics_well_covered": ["Cash budgeting", "Flexible budgets", "Sales forecasting"],
+        "topics_thin": ["Capital budgeting (minimal MCQ coverage)", "Zero-based budgeting depth"]
+      },
+      "domain_C_performance_management": {
+        "dqs": 70,
+        "grade": "C+",
+        "strength": "Variance distractors are calculation-based and naturally discriminating",
+        "weakness": "Responsibility-center conceptual items have weaker distractors; DL-008 cluster in Pack C Section B",
+        "topics_well_covered": ["Standard costing", "Variance analysis (DM, DL, OH)"],
+        "topics_thin": ["Transfer pricing scenarios", "Balanced scorecard depth"]
+      },
+      "domain_D_cost_management": {
+        "dqs": 76,
+        "grade": "B",
+        "strength": "Best-scoring domain. Overhead allocation, job/process costing create natural distinguishability. 100% certified.",
+        "weakness": "Section under-represented at 15% vs 20% IMA target. Clone-rotation artifacts in Section E.",
+        "topics_well_covered": ["Job order costing", "Process costing", "ABC/M", "CVP analysis"],
+        "topics_thin": ["Joint product costing depth", "By-product accounting", "Life-cycle costing"]
+      },
+      "domain_E_internal_controls": {
+        "dqs": 72,
+        "grade": "B-",
+        "strength": "COSO framework components as naturally distinct distractors",
+        "weakness": "IT-focused items have shorter, less discriminating EW; 55.5% certification rate — lowest of all domains",
+        "topics_well_covered": ["COSO 2013 components", "Segregation of duties", "Control activities"],
+        "topics_thin": ["COBIT framework", "IT governance specific controls"]
+      },
+      "domain_F_technology_analytics": {
+        "dqs": 55,
+        "grade": "D",
+        "strength": "Emerging topic — some items have well-targeted modern distractors",
+        "weakness": "Lowest DQS. 0% certified in 2 of 5 packs. DL-013 boilerplate + empty EW dominate. Over-represented at 15% vs 10% IMA target.",
+        "topics_well_covered": ["Data governance concepts (Pack B — gold standard)"],
+        "topics_thin": ["Blockchain, AI in accounting (minimal or boilerplate coverage)", "Cybersecurity frameworks", "Data quality assessment"]
+      }
+    },
+
+    "cognitive_profile": {
+      "analysis": "Per S717 calibration governance audit: 96.6% of MCQs (2,106 of 2,181 Certified) lack CognitiveLevel field — a major structural metadata gap. Only items with available CognitiveLevel data could be analyzed.",
+      "blooms_distribution_estimated": {
+        "remember": "~5% (estimated — definition-match items)",
+        "understand": "~35% (estimated — glossary-level Pack E + conceptual items)",
+        "apply": "~54.7% (estimated — calculation items dominate)",
+        "analyze": "~4.0% (estimated — few items above Apply)",
+        "evaluate": "~1.3% (estimated)",
+        "analyze_plus_evaluate": "~5.3% (vs 40% CAQS target — severely under-represented)",
+        "gap": "34.7 percentage points below CAQS §6.2 target for higher-cognitive items"
+      }
+    }
+  },
+
+  "4_rewrite_dashboard": {
+    "title": "Rewrite Workload Forecast — By Category, Pack, and Priority",
+    "source": "S302 Distractor Census + S800 Agent R Rewrite Forecast + cross-referenced REVISION_HISTORY sessions",
+
+    "rewrite_categories_summary": {
+      "stem_rewrites": {
+        "count": 769,
+        "description": "Items with textbook-definition stems ('X is defined as...') needing conversion to business-scenario format",
+        "packs": {"E": 500, "A": "~100", "C": "~82 (seeds only after clone archival)", "D": "~77 (seeds only)", "B": "~10"},
+        "effort_hours": 55,
+        "sessions": 10
+      },
+      "explanation_rewrites": {
+        "count": 1068,
+        "description": "Items with EC < 200 chars, boilerplate text, glossary-level, or missing CAQS §4 elements (principle citation, solution steps, business interpretation, exam trap)",
+        "packs": {"E": 500, "A": "~350", "C": "~82 (seeds)", "D": "~77 (seeds)", "B": "~58"},
+        "effort_hours": 215,
+        "sessions": 31
+      },
+      "distractor_authorship_rewrites": {
+        "count": 1602,
+        "description": "Fields that must be authored (empty→non-empty) or rewritten (boilerplate→choice-specific). Includes P0 case-bank (390), P1 DL-013 Certified (184), P2 DL-026 (447), P3 absolutist (12), P4 weak D4 (528), DL-005 dupes (28)",
+        "packs": {"case_banks": 390, "E": "~510", "C": "~375", "D": "~281", "A": "~298", "B": "~10"},
+        "effort_hours": 160,
+        "sessions": 23
+      },
+      "clone_archival": {
+        "count": 765,
+        "description": "Items where 5+ siblings test identical concept with same distractors. Archive all but 1 seed per group.",
+        "packs": {"C": 370, "D": 355, "A": 36, "B": 4},
+        "effort_hours": 20,
+        "sessions": 6
+      },
+      "difficulty_recalibration": {
+        "count": 920,
+        "description": "DL-031 (500 MCQ) + DL-032 (420 case items). Label-only changes — no content modified.",
+        "packs": {"MCQ_all": 500, "cases_all": 420},
+        "effort_hours": 15,
+        "sessions": 5
+      },
+      "structural_governance": {
+        "count": 500,
+        "description": "DL-016 metadata-content alignment (Pack A, 500 items), CC position rebalance, pedagogical_cluster population, documentation closeout",
+        "clusters": {"DL-016_Pack_A": 500, "CC_rebalance": "~40 items", "other": "governance artifacts"},
+        "effort_hours": 43,
+        "sessions": 7
+      }
+    },
+
+    "priority_ranking": {
+      "P0_immediate_learner_safety": [
+        {"action": "DL-008 Certified clears (67 items)", "packs": "A/C/D", "sessions": 2, "impact": "Removes wrong-answer text from correct-answer slot in 67 learner-facing items"},
+        {"action": "Certified DL-026 distractor authoring (13 items)", "packs": "A/C/D", "sessions": 1, "impact": "Fills empty distractor slots on 13 Certified items — learners get feedback on wrong answers"},
+        {"action": "Case bank distractor authorship (390 fields)", "packs": "Cases 1-5", "sessions": 6, "impact": "Adds distractor feedback to 300+ case items — largest educational gap in portfolio"},
+        {"action": "FD-045 / FD-075 content block repair", "packs": "D", "sessions": 1, "impact": "Fixes 2 structurally broken items"}
+      ],
+      "P1_high_certified_pool_quality": [
+        {"action": "Pack E full rewrite (500 items)", "packs": "E", "sessions": 14, "impact": "500 Certified items upgraded from dictionary-level to exam-quality explanations"},
+        {"action": "DL-013 boilerplate Certified (184 fields)", "packs": "A/C/D", "sessions": 3, "impact": "Replaces generic template text with choice-specific explanations"},
+        {"action": "DL-021 Pack E Section C distractor authorship (300 fields / 95 items)", "packs": "E", "sessions": 4, "impact": "Adds missing distractor fields to 95 Certified items"}
+      ],
+      "P2_certification_unblocking": [
+        {"action": "Clone archival program (765 items)", "packs": "A/C/D/B", "sessions": 6, "impact": "Reduces pool to ~1,735 unique items; eliminates 40-60% of downstream rewrite workload"},
+        {"action": "DL-026 Pack D Section C (50 items)", "packs": "D", "sessions": 4, "impact": "Unblocks certification of 100 Pack D Section C items"},
+        {"action": "Pack A Sections B/C explanation upgrades (~300 items)", "packs": "A", "sessions": 7, "impact": "Closes Pack A to 100% certified"},
+        {"action": "Pack C/D Section F certification (149 items)", "packs": "C/D", "sessions": 4, "impact": "Largest uncertified blocks → certified"}
+      ],
+      "P3_moderate_quality_improvement": [
+        {"action": "DL-031 difficulty recalibration remaining (~190 items)", "packs": "All", "sessions": 2, "impact": "Final Moderate→Easy recalibration"},
+        {"action": "DL-032 case bank difficulty calibration (420 items)", "packs": "Cases 1-5", "sessions": 2, "impact": "Eliminates 100%-Moderate case bank; adds genuine difficulty differentiation"},
+        {"action": "Weak D4 distractor refinement (528 items)", "packs": "All", "sessions": 8, "impact": "Strengthen distractors across portfolio"},
+        {"action": "DL-005 identical dupe fix (28 items)", "packs": "All", "sessions": 1, "impact": "Eliminates 100% identical distractor pairs — certification-blocking"},
+        {"action": "DL-005 absolutist rewrites (12 items)", "packs": "All", "sessions": 1, "impact": "Fixes genuine absolutist-language problems"},
+        {"action": "Pack B minor EC enrichment (~58 items)", "packs": "B", "sessions": 1, "impact": "Adds business interpretation to formula-only ECs"}
+      ],
+      "P4_structural_alignment": [
+        {"action": "CC position rebalance (Pack A B-bias + Pack C/D A-bias)", "packs": "A/C/D", "sessions": 2, "impact": "Brings CC distribution within CAQS §6.5 tolerances"},
+        {"action": "DL-016 metadata-content alignment Pack A", "packs": "A", "sessions": 2, "impact": "Enables reliable defect scanning on Pack A"},
+        {"action": "Governance closeout and final audit", "packs": "All", "sessions": 2, "impact": "REVISION_HISTORY entries, final scans, delivery pool safety check"}
+      ]
+    },
+
+    "total_effort_estimate": {
+      "person_hours": 508,
+      "raw_sessions": 67,
+      "optimized_sessions_with_bundling_parallelism": 54,
+      "projected_timeline": {
+        "working_days": 22,
+        "calendar_weeks": 4.5,
+        "parallel_optimization": "With 2-agent parallelism for ~40% of sessions, timeline can compress to ~16-18 calendar days (~3.5 weeks)"
+      }
+    },
+
+    "governance_attestation": {
+      "read_only": true,
+      "no_files_modified": true,
+      "no_pack_content_changes": true,
+      "no_certification_state_changes": true,
+      "no_answer_key_modifications": true,
+      "governance_guard_tests": "20/20 PASS — unchanged",
+      "data_cross_referenced": [
+        "All per-pack Certified counts verified by direct grep (Select-String)",
+        "Section distribution verified against raw-file field extractions",
+        "Difficulty distribution verified against post-S715 raw file state",
+        "Defect counts cross-referenced against DEFECT_LIBRARY.md, REVISION_HISTORY.md, and S710R authoritative queue",
+        "Root directory backup count verified by Get-ChildItem"
+      ]
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "shortTerm": {
+    "sessions": "1-3",
+    "milestones": [
+      {
+        "milestone": "M1: S308 COMPLETE",
+        "description": "Forecast engine delivered. Execution roadmap published.",
+        "metric": "11 primary + 14 auxiliary deliverables"
+      },
+      {
+        "milestone": "M2: S309 COMPLETE",
+        "description": "Bottleneck analysis delivered.",
+        "metric": "Bottleneck map + resolution plan"
+      },
+      {
+        "milestone": "M3: S310 COMPLETE",
+        "description": "Portfolio readiness dashboard delivered. 300-series CLOSED.",
+        "metric": "Consolidated dashboard + program closeout"
+      }
+    ]
+  },
+  "midTerm": {
+    "sessions": "4-15",
+    "milestones": [
+      {
+        "milestone": "M4: DL-008 CLEARED",
+        "description": "67 Certified items cleared of EW[CC] contamination.",
+        "metric": "DL-008=0 in learner pool",
+        "sessionTarget": "S803"
+      },
+      {
+        "milestone": "M5: 800-series Wave 2 COMPLETE",
+        "description": "DL-013 + DL-026 structural remediation complete.",
+        "metric": "DL-026=0, DL-013 reduced >90%",
+        "sessionTarget": "S808"
+      },
+      {
+        "milestone": "M6: DOMAIN E 100% CERTIFIED",
+        "description": "All 442 Domain E items certified with full EW.",
+        "metric": "Domain E: 442/442 certified, UIQS >75",
+        "sessionTarget": "S813"
+      },
+      {
+        "milestone": "M7: DOMAIN F 100% CERTIFIED",
+        "description": "All 431 Domain F items certified with full EW.",
+        "metric": "Domain F: 431/431 certified, UIQS >75",
+        "sessionTarget": "S813"
+      }
+    ]
+  },
+  "longTerm": {
+    "sessions": "16-30",
+    "milestones": [
+      {
+        "milestone": "M8: PACK A 100% CERTIFIED",
+        "description": "Pack A closes at 500/500. Third 100% pack.",
+        "metric": "Pack A certified: 500/500",
+        "sessionTarget": "S816"
+      },
+      {
+        "milestone": "M9: CASE EW >80%",
+        "description": "Case-bank distractor feedback reaches 80% fill.",
+        "metric": "Case EW fill rate >80% (from 3.9%)",
+        "sessionTarget": "S821"
+      },
+      {
+        "milestone": "M10: PORTFOLIO 100% CERTIFIED",
+        "description": "All 2,500 MCQ + case items certified.",
+        "metric": "Certified: 2,500/2,500 (100%)",
+        "sessionTarget": "S819"
+      },
+      {
+        "milestone": "M11: UIQS 82+",
+        "description": "Portfolio UIQS reaches B+/A- range.",
+        "metric": "UIQS ≥82.0",
+        "sessionTarget": "S825"
+      },
+      {
+        "milestone": "M12: PROGRAM CLOSURE",
+        "description": "800-series, 700-series, governance attestation complete.",
+        "metric": "All tracks closed, all defects resolved",
+        "sessionTarget": "S827"
+      }
+    ]
+  }
+}

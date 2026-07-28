@@ -1,0 +1,331 @@
+{
+  "title": "SESSION317_CANDIDATE_INVENTORY",
+  "session": "317",
+  "generated": "2026-07-27",
+  "wave": 3,
+  "totalCandidates": 10,
+  "items": [
+    {
+      "QuestionID": "P1-E-R34",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "BlueprintCode": "E.1.a",
+      "Topic": "E-R34 internal control definition — COSO framework objectives",
+      "Difficulty": "Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "CorrectChoice": "C",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 1111,
+      "EW_coverage": [
+        {
+          "letter": "A",
+          "chars": 360
+        },
+        {
+          "letter": "B",
+          "chars": 335
+        },
+        {
+          "letter": "D",
+          "chars": 444
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R35",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "BlueprintCode": "E.1.a",
+      "Topic": "E-R35 inherent limitations — reasonable assurance concept",
+      "Difficulty": "Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "CorrectChoice": "A",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 947,
+      "EW_coverage": [
+        {
+          "letter": "B",
+          "chars": 485
+        },
+        {
+          "letter": "C",
+          "chars": 516
+        },
+        {
+          "letter": "D",
+          "chars": 404
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R36",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "BlueprintCode": "E.1.a",
+      "Topic": "E-R36 internal control responsibility — management vs auditor roles",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "CorrectChoice": "D",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 993,
+      "EW_coverage": [
+        {
+          "letter": "A",
+          "chars": 395
+        },
+        {
+          "letter": "B",
+          "chars": 423
+        },
+        {
+          "letter": "C",
+          "chars": 453
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R26",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "BlueprintCode": "E.1.i",
+      "Topic": "E-R26 segregation of duties — incompatible functions scenario",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "CorrectChoice": "B",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 989,
+      "EW_coverage": [
+        {
+          "letter": "A",
+          "chars": 383
+        },
+        {
+          "letter": "C",
+          "chars": 582
+        },
+        {
+          "letter": "D",
+          "chars": 433
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R27",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "BlueprintCode": "E.1.i",
+      "Topic": "E-R27 authorization controls — transaction approval hierarchies",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "CorrectChoice": "A",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 1061,
+      "EW_coverage": [
+        {
+          "letter": "B",
+          "chars": 423
+        },
+        {
+          "letter": "C",
+          "chars": 419
+        },
+        {
+          "letter": "D",
+          "chars": 469
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R29",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "BlueprintCode": "E.1.i",
+      "Topic": "E-R29 physical controls — custody and access restrictions",
+      "Difficulty": "Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "CorrectChoice": "C",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 1085,
+      "EW_coverage": [
+        {
+          "letter": "A",
+          "chars": 534
+        },
+        {
+          "letter": "B",
+          "chars": 419
+        },
+        {
+          "letter": "D",
+          "chars": 452
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R37",
+      "LOSTag": "E.1.d Risk Assessment",
+      "BlueprintCode": "E.1.d",
+      "Topic": "E-R37 risk identification — qualitative techniques",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "CorrectChoice": "B",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 1319,
+      "EW_coverage": [
+        {
+          "letter": "A",
+          "chars": 557
+        },
+        {
+          "letter": "C",
+          "chars": 501
+        },
+        {
+          "letter": "D",
+          "chars": 434
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R38",
+      "LOSTag": "E.1.d Risk Assessment",
+      "BlueprintCode": "E.1.d",
+      "Topic": "E-R38 risk analysis — inherent vs residual risk",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "CorrectChoice": "A",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 938,
+      "EW_coverage": [
+        {
+          "letter": "B",
+          "chars": 296
+        },
+        {
+          "letter": "C",
+          "chars": 416
+        },
+        {
+          "letter": "D",
+          "chars": 415
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R39",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+      "BlueprintCode": "E.1.h",
+      "Topic": "E-R39 SOX Title III — corporate responsibility for financial reports",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "CorrectChoice": "C",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 1137,
+      "EW_coverage": [
+        {
+          "letter": "A",
+          "chars": 463
+        },
+        {
+          "letter": "B",
+          "chars": 363
+        },
+        {
+          "letter": "D",
+          "chars": 369
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    },
+    {
+      "QuestionID": "P1-E-R40",
+      "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+      "BlueprintCode": "E.1.b",
+      "Topic": "E-R40 COSO 2013 — 17 principles across five components",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "CorrectChoice": "D",
+      "ProductionStatus": "Production",
+      "question_state": "Certified",
+      "EC_chars": 1450,
+      "EW_coverage": [
+        {
+          "letter": "A",
+          "chars": 428
+        },
+        {
+          "letter": "B",
+          "chars": 478
+        },
+        {
+          "letter": "C",
+          "chars": 403
+        }
+      ],
+      "certification_date": "2026-07-27",
+      "certification_session": "S317"
+    }
+  ],
+  "blueprintDistribution": {
+    "E.1.a": 3,
+    "E.1.i": 3,
+    "E.1.d": 2,
+    "E.1.h": 1,
+    "E.1.b": 1,
+    "E.1.j": 0
+  },
+  "difficultyDistribution": {
+    "Easy": 3,
+    "Moderate": 7,
+    "Difficult": 0,
+    "Hard": 0
+  },
+  "clDistribution": {
+    "Remembering": 0,
+    "Understanding": 0,
+    "Application": 0,
+    "Analysis": 0,
+    "Understand": 4,
+    "Apply": 6
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "session": "802",
+  "agent": "F",
+  "title": "Pack A Closeout Review",
+  "date": "2026-07-26",
+  "status": "READ-ONLY ANALYSIS COMPLETE",
+  "category_counts": {
+    "certified": 481,
+    "archived": 19,
+    "unprocessed": 0,
+    "in_audit": 0,
+    "editorial_queue": 0,
+    "total": 500
+  },
+  "verification_note": "Select-String confirmed: 0 Unprocessed, 0 In Audit, 0 Editorial Queue. All 500 items accounted for as 481 Certified + 19 Archived.",
+  "section_breakdown": {
+    "A": { "total": 75, "certified": 73, "archived": 2, "archived_qids": ["P1-A-044", "P1-A-064"] },
+    "B": { "total": 100, "certified": 100, "archived": 0 },
+    "C": { "total": 100, "certified": 100, "archived": 0 },
+    "D": { "total": 75, "certified": 75, "archived": 0 },
+    "E": { "total": 75, "certified": 58, "archived": 17, "archived_qids": ["P1-E-046","P1-E-047","P1-E-049","P1-E-050","P1-E-054","P1-E-055","P1-E-056","P1-E-057","P1-E-058","P1-E-062","P1-E-063","P1-E-065","P1-E-066","P1-E-070","P1-E-071","P1-E-073","P1-E-074"] },
+    "F": { "total": 75, "certified": 75, "archived": 0 }
+  },
+  "non_certified_non_archived": [],
+  "section_b_status": { "total": 100, "certified": 100, "uncertified": 0 },
+  "section_c_status": { "total": 100, "certified": 100, "uncertified": 0 },
+  "b_001_b_025_dl008": {
+    "p1_b_001": {
+      "correct_choice": "B",
+      "ew_b_non_empty": true,
+      "ew_b_text_preview": "Basing the strategic plan solely on last year's actual spending ignores changes in strategic direction...",
+      "ew_d_empty": true,
+      "dl008_structural": true,
+      "dl016_contamination": "SUSPECTED — EW-B text describes incremental budgeting approach, not exactly any of P1-B-001's four choices (A=forecasting, B=top-down buy-in (CORRECT), C=prohibited, D=eliminate slack). EW-D is the empty slot, but CC=B.",
+      "learner_impact": "Learner selecting correct answer B sees EW-B text about incremental budgeting — not describing why B is correct but rather describing a DIFFERENT budgeting limitation. Moderate learner confusion risk.",
+      "verdict": "DL-008 confirmed at structural level. DL-016 shift makes text topic-mismatched. Remediation needed before true certification."
+    },
+    "p1_b_025": {
+      "correct_choice": "D",
+      "ew_d_non_empty": true,
+      "ew_d_text_preview": "Rewarding only the most pessimistic forecast creates perverse incentives...",
+      "ew_a_empty": true,
+      "dl008_structural": true,
+      "dl016_contamination": "CONFIRMED — Metadata EW fields describe variance analysis for detecting budgetary slack, while content block (Topic: B.026 forecast error analysis) has Stem about comparing forecasted vs actual demand. EW texts are topically related to 'budgeting' but describe a DIFFERENT sub-topic (slack detection) than the content block (forecast error analysis).",
+      "learner_impact": "Learner selecting correct answer D sees EW-D text about perverse incentive design — partially related (both in budgeting domain) but from a different micro-topic. Moderate confusion risk.",
+      "verdict": "DL-008 confirmed at structural level + DL-016 topic shift. Remediation needed."
+    }
+  },
+  "archived_items_assessment": {
+    "section_a": [
+      {
+        "qid": "P1-A-044",
+        "topic_content_block": "A.045 basic EPS weighted-average shares 20",
+        "topic_ew": "ASC 450 warranty contingency",
+        "dl016_shift": "CONFIRMED — EW fields describe loss contingency accounting, content block is basic EPS calculation. Complete topic mismatch.",
+        "recommendation": "KEEP ARCHIVED. DL-016 contamination makes EW fields unuseable. Would need full metadata-block rewrite to unarchive."
+      },
+      {
+        "qid": "P1-A-064",
+        "topic_content_block": "A.065 basic EPS weighted-average shares 40",
+        "topic_ew": "ASC 450 warranty contingency",
+        "dl016_shift": "CONFIRMED — Same pattern as A-044. EW about contingencies, content about EPS.",
+        "recommendation": "KEEP ARCHIVED. Same DL-016 contamination."
+      }
+    ],
+    "section_e": {
+      "total_archived": 17,
+      "dl012_clone_seeds_confirmed": "16 of 17 are genuine DL-012 rotation-group clones (P1-E-046 through P1-E-074, except 056). KEEP ARCHIVED.",
+      "p1_e_056_special_case": {
+        "qid": "P1-E-056",
+        "agent_e_claim": "ARCHIVED IN ERROR — independent topic, COSO Principle 10 citation, 700-char EC",
+        "agent_f_finding": {
+          "metadata_ew_topic": "Inventory cycle count / physical inventory controls (segregation of duties, custodian oversight)",
+          "content_block_topic": "E.057 user access recertification 22",
+          "content_stem": "Beacon finds employees retain access after changing departments. Which response is most appropriate?",
+          "content_choices": ["Share administrator accounts", "Disable logs", "Permit access to remain", "Perform periodic access recertification"],
+          "content_cc": "D",
+          "content_ec": "Periodic access recertification compares current user access rights against current job responsibilities...",
+          "explanation_correct_length": 451,
+          "dl016_shift": "CONFIRMED — metadata EW text describes inventory cycle count controls, content block is access recertification.",
+          "dl008_structural": true,
+          "has_certification_fields": true,
+          "certification_date": "2026-07-22",
+          "certification_batch": "Section E Block 1",
+          "is_unique_topic": true,
+          "is_not_a_clone": true,
+          "agent_e_partially_correct": "Content block IS an independent topic (user access recertification) not a DL-012 clone. Metadata block (EW fields) are contaminated by DL-016 shift."
+        },
+        "recommendation": "UNARCHIVE + REPAIR. Content block is a valid unique seed. Metadata block needs ExplanationWrong fields rewritten to match content block choices. After repair, can certify. This is the ONE archived item that should be rescued."
+      }
+    }
+  },
+  "closeout_recommendations": {
+    "items_to_certify_now": 0,
+    "items_to_certify_after_dl016_repair": "All 481 currently-Certified items carry DL-016 metadata-content shift. The Certification is structural (question_state='Certified') but the learner experience is degraded when ExplanationWrong fields describe different items' topics. However, this affects all 5 packs — not Pack A specific.",
+    "items_to_archive": 18,
+    "items_to_unarchive_and_repair": 1,
+    "items_requiring_rewrite": 0,
+    "note_on_p1_e_056": "P1-E-056 is the only archived item warranting rescue. 16 other Section E archives are genuine DL-012 clones. 2 Section A archives (A-044, A-064) have severe DL-016 shift (warranty EW on EPS content) and should stay archived."
+  },
+  "pack_a_100pct_feasibility": {
+    "verdict": "Yes — Pack A is ALREADY effectively at 500/500",
+    "rationale": "All 500 items have a valid governance state. 481 are Certified (eligible for learner pool). 19 are Archived (excluded from delivery). Zero items are in intermediate states (Unprocessed/In Audit/Editorial Queue). The 'closeout' is already achieved — the only remaining question is whether P1-E-056 should be unarchived+repaired.",
+    "what_blocks_true_500_certified": "DL-016 metadata-content shift affects ALL 481 Certified items (and all other packs). Fixing this is a cross-pool systemic remediation, not a Pack A closeout blocker. The 2 Section A archived items (A-044, A-064) and 16 Section E archive clones can stay archived. P1-E-056 is the only salvageable archived item.",
+    "effective_state": "Pack A is the cleanest pack in the repository. 96.2% Certified, no intermediate-state items, no uncertified items needing audit. Sections B, C, D, F are fully Certified. Only cleanup items are the DL-016 systemic issue and the P1-E-056 rescue opportunity.",
+    "next_action": "If P1-E-056 is unarchived and its metadata EW fields are repaired (rewrite 3 distractor explanations to match content block choices), Pack A reaches 482 Certified with 18 Archived. The remaining gap to 500 certified would require DL-016 repair across all 481+ items — a cross-pool project."
+  }
+}

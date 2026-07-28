@@ -1,0 +1,26 @@
+{
+  "session": "511",
+  "date": "2026-07-25",
+  "item": "CASE-B12-Q4",
+  "final_classification": "ANSWER_KEY_CORRECTION_REQUIRED — RESOLVED",
+  "fields_audited": {
+    "Correct": {"before": "$21,750", "after": "$20,143", "verified": true},
+    "Choices[3]": {"before": "$21,750", "after": "$20,143", "verified": true},
+    "Choices[2]": {"before": "$19,500", "after": "$19,286", "verified": true, "reason": "Exact distractor value for ($159,000 - $24,000) / 7 = $19,286"},
+    "Explanation": {"before": "stated $21,750", "after": "stated $20,143 with independently recomputed note", "verified": true},
+    "Prompt": {"unchanged": true},
+    "Topic": {"unchanged": true},
+    "Type": {"unchanged": true},
+    "ItemID": {"unchanged": true},
+    "question_state": {"unchanged": true}
+  },
+  "classification_options_considered": [
+    {"option": "ANSWER_KEY_CONFIRMED", "ruled_out": "$21,750 cannot be derived from prompt facts"},
+    {"option": "ANSWER_KEY_CORRECTION_REQUIRED", "selected": "Stored answer wrong; correct value is $20,143"},
+    {"option": "CHOICE_TEXT_CORRECTION_REQUIRED", "applied": "Choice D and Choice C both corrected"},
+    {"option": "PROMPT_OR_EXHIBIT_AMBIGUITY", "ruled_out": "Prompt facts are unambiguous"},
+    {"option": "FORMULA_AMBIGUITY", "ruled_out": "ASC 360 prospective treatment is clear"},
+    {"option": "HUMAN_REVIEW_REQUIRED", "ruled_out": "Arithmetic conclusion is conclusive at 100% confidence"}
+  ],
+  "confidence": 100
+}

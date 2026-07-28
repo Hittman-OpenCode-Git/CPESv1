@@ -1,0 +1,96 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-background-agents",
+    "opencode-goal-plugin",
+    "opencode-supermemory",
+    "opencode-vibeguard",
+    "opencode-conductor",
+    "opencode-websearch-cited",
+    "governance-guard"
+  ],
+  "lsp": true,
+  "formatter": true,
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 10000
+  },
+  "watcher": {
+    "ignore": ["*.bak", "reports/**", "scripts/reports/**", "scripts/output/**", "node_modules/**"]
+  },
+  "instructions": [
+    "AGENTS.md",
+    "knowledge/00_PROJECT_CONSTITUTION.md",
+    "knowledge/CAQS_v1.0.md",
+    "knowledge/QUESTION_METADATA_STANDARD.md",
+    "knowledge/DEFECT_LIBRARY.md",
+    "knowledge/TAXONOMY_REGISTRY.md",
+    "ai/COLLABORATION_MATRIX.md",
+    "ai/WORKFLOWS.md"
+  ],
+  "agent": {
+    "stewardship-orchestrator": {
+      "mode": "primary",
+      "description": "Executive Architecture Board for the 200-Series. Delegates S213-S216 investigation to specialist subagents, synthesizes findings, writes deliverables, enforces stop conditions.",
+      "prompt": "{file:./.opencode/agent/stewardship-orchestrator.md}",
+      "permission": {
+        "edit": "allow",
+        "bash": "deny",
+        "task": {
+          "*": "deny",
+          "stewardship-inspector": "allow",
+          "registry-integrity": "allow",
+          "drift-detector": "allow",
+          "governance-validator": "allow"
+        }
+      }
+    },
+    "stewardship-inspector": {
+      "mode": "subagent",
+      "description": "Audits real (non-synthetic) artifacts against S208 controls: the 6 drift categories, technical debt items, learner-safety impact. Use for S213 category review and S215 debt verification.",
+      "prompt": "{file:./.opencode/agent/stewardship-inspector.md}",
+      "permission": { "edit": "deny", "bash": "deny", "webfetch": "deny" }
+    },
+    "registry-integrity": {
+      "mode": "subagent",
+      "description": "Validates single-source-of-truth and searches for duplicate ownership paths across all six registries. Use for S214 and the registry-integrity check in S216.",
+      "prompt": "{file:./.opencode/agent/registry-integrity.md}",
+      "permission": { "edit": "deny", "bash": "deny" }
+    },
+    "drift-detector": {
+      "mode": "subagent",
+      "description": "Constructs controlled drift scenarios and scores detection, severity assignment, and response quality against the S208 Drift Detection Model. Use for S213 and drift-prevention checks in S216.",
+      "prompt": "{file:./.opencode/agent/drift-detector.md}",
+      "permission": { "edit": "deny", "bash": "ask" }
+    },
+    "governance-validator": {
+      "mode": "subagent",
+      "description": "Reviews mitigation effectiveness, scalability, sustainability, operational resilience, and stop-condition compliance. Use for S215 mitigation review and S216 recertification scoring.",
+      "prompt": "{file:./.opencode/agent/governance-validator.md}",
+      "permission": { "edit": "deny", "bash": "deny" }
+    }
+  },
+  "command": {
+    "validate": {
+      "template": "Run the validation pipeline: node scripts/validate.js. Report all errors, warnings, and failures grouped by section and defect type. Prioritize critical and high-severity findings.",
+      "description": "Run full validation pipeline",
+      "agent": "build"
+    },
+    "audit-section": {
+      "template": "Audit all questions in section $ARGUMENTS using the CAQS v1.0 standard (knowledge/CAQS_v1.0.md). Follow the audit workflow defined in ai/WORKFLOWS.md. Produce a per-question audit report with PASS/WARN/FAIL classifications and a change report for corrections needed.",
+      "description": "Audit a question section against CAQS standards",
+      "agent": "build"
+    },
+    "review-batch": {
+      "template": "Review the audit findings for batch $ARGUMENTS. Cross-reference each finding against knowledge/DEFECT_LIBRARY.md. For every FAIL, determine the exact field correction with before/after values. Output a CHANGE_REPORT.md with all corrections listed.",
+      "description": "Generate change report from audit findings",
+      "agent": "build"
+    },
+    "goal": {
+      "template": "$ARGUMENTS",
+      "description": "Set a session-scoped goal with auto-continue until complete",
+      "agent": "build"
+    }
+  }
+}

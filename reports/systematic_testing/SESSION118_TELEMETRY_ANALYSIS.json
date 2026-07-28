@@ -1,0 +1,134 @@
+{
+  "generatedAt": "2026-07-25T21:22:14.660Z",
+  "session": "S118",
+  "payloadCount": 8,
+  "studentIds": [
+    "synth-avery",
+    "synth-casey",
+    "synth-jordan",
+    "synth-morgan",
+    "synth-parker",
+    "synth-quinn",
+    "synth-riley",
+    "synth-taylor"
+  ],
+  "recommendationGate": {
+    "totalRecommendationEvents": 8,
+    "similarEvents": 8,
+    "nextEvents": 0,
+    "recoveryEvents": 0,
+    "gatePassCount": 8,
+    "gateBlockCount": 0,
+    "emptySafeSetCount": 0,
+    "nonCertifiedQidCandidateCount": 0,
+    "contestedDefectiveQidCount": 0,
+    "recommendationOutputAfterGating": 8,
+    "perStudentCoverage": {
+      "synth-avery": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      },
+      "synth-casey": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      },
+      "synth-jordan": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      },
+      "synth-morgan": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      },
+      "synth-parker": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      },
+      "synth-quinn": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      },
+      "synth-riley": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      },
+      "synth-taylor": {
+        "recommendationEvents": 1,
+        "gatePasses": 1,
+        "gateBlocks": 0,
+        "safetyBlocks": 3,
+        "expectedAnswerLeakage": 2
+      }
+    }
+  },
+  "evidenceThreshold": {
+    "improvingEvidencePassCount": 2,
+    "persistentWeakEvidencePassCount": 5,
+    "decliningEvidencePassCount": 1,
+    "unstableEvidencePassCount": 5,
+    "hintDependentEvidencePassCount": 1,
+    "difficultySensitiveEvidencePassCount": 4,
+    "confidenceEvidencePassCount": 0,
+    "insufficientEvidenceSuppressionCount": "UNAVAILABLE_IN_S118_EXPORT",
+    "unsupportedInsightClaimCount": "UNAVAILABLE_IN_S118_EXPORT",
+    "examPredictionLanguageCount": 0
+  },
+  "encouragement": {
+    "positiveTrendMessageCount": 0,
+    "goalAlignmentMessageCount": 0,
+    "examPlanPromptCount": 0,
+    "savedExamPlanCount": 0,
+    "daysUntilExamComputationCount": "UNAVAILABLE_IN_S118_EXPORT",
+    "passFailPredictionLanguageCount": 0
+  },
+  "safety": {
+    "safetyBlockCount": 24,
+    "safetyBlockReasonDistribution": {
+      "ANSWER_LEAKAGE_HINT": 24
+    },
+    "likelyFalsePositiveCandidates": "UNAVAILABLE_IN_S118_EXPORT",
+    "expectedAnswerLeakageBlocks": 16,
+    "missedSafetyViolationCandidates": "UNAVAILABLE_IN_S118_EXPORT",
+    "fallbackMessageFrequency": "UNAVAILABLE_IN_S118_EXPORT"
+  },
+  "onboarding": {
+    "maskedRollRenderCount": 64,
+    "fullNameBeforeSelectionViolations": 0,
+    "successfulProfileSelectionCount": 8,
+    "welcomeBackOverviewCount": 8,
+    "enrollmentPathCount": 0,
+    "exportPayloadCount": 8,
+    "malformedPayloadCount": 0
+  },
+  "unavailableMetrics": [
+    "evidenceThreshold.insufficientEvidenceSuppressionCount",
+    "evidenceThreshold.unsupportedInsightClaimCount",
+    "encouragement.daysUntilExamComputationCount",
+    "safety.likelyFalsePositiveCandidates",
+    "safety.missedSafetyViolationCandidates",
+    "safety.fallbackMessageFrequency"
+  ],
+  "perStudent": {},
+  "telemetryReadiness": "PASS"
+}

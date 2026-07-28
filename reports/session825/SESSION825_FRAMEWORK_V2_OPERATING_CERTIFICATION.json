@@ -1,0 +1,9 @@
+{
+  "session": "S825",
+  "title": "Framework v2 Operating Certification",
+  "status": "DEFERRED",
+  "reason": "Requires S823 (Operating Model Promotion) which requires S822 (FULLY ADOPTED). Chain dependency. Framework v2 remains CONDITIONALLY ADOPTED (96/100) pending: C3 Domain F remediation (37 items), Domain E DL-026 verification (38 items), DL-021 (95 items), DL-016 (58+ items).",
+  "activation_condition": "S823 COMPLETE + S824 COMPLETE",
+  "determination_options": ["NOT CERTIFIED", "CONDITIONALLY CERTIFIED", "FULLY CERTIFIED OPERATING MODEL"],
+  "current_determination": "CONDITIONALLY CERTIFIED (current effective state)"
+}

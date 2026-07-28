@@ -1,0 +1,102 @@
+{
+  "generated": "2026-07-26T22:23:53.575Z",
+  "models": {
+    "singleLane": {
+      "description": "Execute all work sequentially — one track at a time",
+      "sequence": "300-series (S308-S310) → 800-series Wave 1 (DL-008, 3) → 800-series Wave 2 (5) → 800-series Wave 3 (E/F cert, 5) → 800-series Wave 4 (3) → 800-series Wave 5 (3) → 500-series (7) → EW remediation (14) → governance (3)",
+      "totalSessions": 46,
+      "completionTimeline": "46 sessions",
+      "advantages": "Simplest coordination, no parallel-write conflicts",
+      "disadvantages": "Slowest — learner pool has DL-008 for 3 sessions, EW gaps for 25+ sessions"
+    },
+    "parallel": {
+      "description": "Execute independent tracks concurrently",
+      "parallelGroups": [
+        {
+          "group": "A",
+          "tracks": "800-series Wave 1 (DL-008) + 300-series S308-S310",
+          "sessions": 3,
+          "note": "No file overlap between tracks"
+        },
+        {
+          "group": "B",
+          "tracks": "800-series Wave 2 (structural) + 500-series ENHANCED cases",
+          "sessions": 5,
+          "note": "500-series touches scored_cases.js only; 800-series touches pack files"
+        },
+        {
+          "group": "C",
+          "tracks": "800-series Wave 3 (E/F cert) + EW remediation Phase 1 (case-bank)",
+          "sessions": 8,
+          "note": "Certification builds EW into E/F items; case-bank EW for certified cases runs parallel"
+        },
+        {
+          "group": "D",
+          "tracks": "800-series Wave 4 (Pack A) + EW Phase 2 (MCQ)",
+          "sessions": 3
+        },
+        {
+          "group": "E",
+          "tracks": "800-series Wave 5 (calibration) + 500-series MIGRATED_BASE_D",
+          "sessions": 5
+        },
+        {
+          "group": "F",
+          "tracks": "700-series closure + governance",
+          "sessions": 4
+        }
+      ],
+      "totalSessions": 28,
+      "completionTimeline": "28 sessions",
+      "advantages": "Fastest — DL-008 resolved by session 3, EW gains start immediately",
+      "disadvantages": "Requires coordination across 2-3 active tracks per group",
+      "risk": "MEDIUM — concurrent writes needed only in Group B/C where file scopes are disjoint"
+    },
+    "hybrid": {
+      "description": "Prioritized parallel — DL-008 first solo, then parallel cert + EW",
+      "sequence": [
+        {
+          "phase": "P1",
+          "sessions": "S308-S310",
+          "tracks": "300-series closure (3 sessions, solo)",
+          "items": 0
+        },
+        {
+          "phase": "P2",
+          "sessions": "S801-S803",
+          "tracks": "DL-008 Emergency (3 sessions, solo)",
+          "items": 67
+        },
+        {
+          "phase": "P3",
+          "sessions": "4 sessions",
+          "tracks": "800-series Wave 2 || 500-series ENHANCED",
+          "items": "~200 + 42"
+        },
+        {
+          "phase": "P4",
+          "sessions": "8 sessions",
+          "tracks": "Domain E/F certification || Case-bank EW Phase 1",
+          "items": "328 + 310"
+        },
+        {
+          "phase": "P5",
+          "sessions": "5 sessions",
+          "tracks": "Pack A closeout + modernization || EW Phase 2",
+          "items": "19 + 120"
+        },
+        {
+          "phase": "P6",
+          "sessions": "4 sessions",
+          "tracks": "800-series Wave 5 || 500-series MIGRATED || governance",
+          "items": "~500 + 75"
+        }
+      ],
+      "totalSessions": 27,
+      "completionTimeline": "27 sessions",
+      "advantages": "Safety-first (DL-008 solo) + efficient parallelism for remaining work",
+      "disadvantages": "Requires Phase 3-6 coordination"
+    }
+  },
+  "recommendation": "HYBRID CAPACITY — DL-008 solo for learner safety, then maximize parallel throughput for certification + EW work with strict lane-discipline for file isolation"
+}

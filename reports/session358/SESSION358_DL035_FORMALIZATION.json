@@ -1,0 +1,22 @@
+{
+  "session": "S358",
+  "board": "Agent Groups A-D — DL-035 Re-Verification",
+  "timestamp": "2026-07-27T15:58:00Z",
+  "status": "PASS — DL-035 FORMALIZED",
+
+  "verification": {
+    "defect_entry_location": "knowledge/DEFECT_LIBRARY.md, DL-035 section",
+    "entry_status": "Verified present and complete",
+    "formalization_dimensions": {
+      "detection": "DEFINED — Object-boundary DL-026 scan filtered to question_state: Certified. Pre-S814 certification pipeline did not enforce DL-026. Rule 6 now prevents recurrence.",
+      "severity": "HIGH — 39 Certified items with empty distractor ExplanationWrong slots (~117 empty fields). Approximately 30% of wrong-answer selections produce no learner feedback.",
+      "ownership": "Governance Guard (automated enforcement Rule 6) + S357 remediation pipeline (content authoring)",
+      "remediation": "DEFINED — Content authoring task: fill ~117 empty ExplanationWrong fields. Batched ≤28 items per Rule 5. Pipeline certified in S357 PoC."
+    },
+    "qid_inventory_match": "CONFIRMED — 39 QIDs match S814_DL035_REVIEW.json (28 Pack C Domain F + 11 Pack D Domain F)",
+    "relationship_to_dl026": "CORRECT — DL-026 is parent defect class; DL-035 is the specific certification-governance failure instance",
+    "cross_reference_s814": "Consistent — S814 Q-Z Board already confirmed DL-035 formalization in SESSION814_GOVERNANCE_APPROVAL.md"
+  },
+
+  "verdict": "PASS — DL-035 is fully formalized with detection, severity, ownership, and remediation. 350-series confirms S814 evidence."
+}

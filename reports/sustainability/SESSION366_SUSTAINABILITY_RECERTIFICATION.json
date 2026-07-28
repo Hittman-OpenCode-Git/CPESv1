@@ -1,0 +1,226 @@
+{
+  "session": "S366",
+  "title": "Sustainability Recertification Board — Gate/Aggregation",
+  "timestamp": "2026-07-28T20:30:00Z",
+  "status": "COMPLETE",
+  "mode": "READ-ONLY — synthesis of S363/S364/S365 findings",
+  "predecessor_sessions": {
+    "S362": "Expansion Program Economics Board (baseline — SUSTAINABLE WITH RISKS, 51/100)",
+    "S363": "Certified Pool Integrity Audit (FD-075 refutation, blank-Certified scan, DL-021 preliminary)",
+    "S364": "DL-021 Truth Determination (per-item boundary-aware scan of Pack E Section C)",
+    "S365": "Automation Effectiveness Review (48/100 confirmed, gap analysis, roadmap to 55)"
+  },
+
+  "s362_risk_reassessment": {
+    "risk_1_fd075": {
+      "s362_severity": "CRITICAL",
+      "s362_description": "P1-FD-075: Certified item in active learner pool with zero renderable content (missing Stem, CorrectChoice, ExplanationCorrect, Choices)",
+      "s363_finding": "REFUTED — item structurally complete. Stem (182 chars), Choices {A,B,C,D}, CorrectChoice=C, ExplanationCorrect (141 chars), all 4 EW fields present (EW_A=639, EW_B=498, EW_C='' (CC-slot, DL-008 compliant), EW_D=734)",
+      "s364_finding": "Not investigated — S363 was definitive",
+      "s365_finding": "Not investigated",
+      "s366_status": "REFUTED",
+      "s366_root_cause_of_s362_claim": "DL-029 forward-scan artifact — identical to S800/S801/S802 pattern. Scanner extracted CorrectChoice from wrong position in dual-block JSON.",
+      "impact_on_verdict": "Removes the single CRITICAL item from the risk register. The '1 broken / 2,540' structural completeness claim was wrong — 100% of Certified items are structurally complete."
+    },
+    "risk_2_dl021": {
+      "s362_severity": "HIGH",
+      "s362_description": "DL-021: 95 Certified Pack E Section C items with absent distractor ExplanationWrong fields. Documentation conflict between CURRENT_BASELINES.md (OPEN) and DEFECT_LIBRARY.md (RESOLVED). Learner pool safety could not be confirmed.",
+      "s363_finding": "PRELIMINARY RESOLVED — 0 items with absent/empty distractor EW. All 100 Certified items populated.",
+      "s364_finding": "CONFIRMED — per-item boundary-aware Function-constructor scan. 100/100 items: all 300 distractor EW fields present (avg 165 chars, min 110, max 435). 0 absent fields. 0 empty non-CC fields. 100 empty CC slots (DL-008 compliant). DEFECT_LIBRARY.md 'Resolved' status verified as CORRECT. CURRENT_BASELINES.md §3 claim of '95 Certified items with absent distractor EW' is STALE (accurate pre-S71 on 2026-07-23, false for 4 days at time of S364).",
+      "s365_finding": "Not investigated — scan tool quality noted (scan_dl021_s828.js uses Function constructor, MEDIUM quality)",
+      "s366_status": "RESOLVED — documentation conflict closed in favor of DEFECT_LIBRARY.md.",
+      "impact_on_verdict": "Removes a HIGH-severity risk with 100-item scope. Learner pool safety CONFIRMED for Pack E Section C. Documentation uncertainty eliminated."
+    },
+    "risk_3_dl035": {
+      "s362_severity": "HIGH",
+      "s362_description": "DL-035: 39 Certified Domain F items (28 Pack C + 11 Pack D) with ~117 empty distractor ExplanationWrong slots. Rule 6 deployed (prevention) but content remediation not yet executed.",
+      "s363_finding": "Not investigated — S363 was structural completeness + FD-075 + DL-021",
+      "s364_finding": "Not investigated — S364 was Pack E Section C only",
+      "s365_finding": "Confirmed OPEN — DL-026 scanner (scan_s710r_dl026.js) is Function-constructor based and CC-position-aware (HIGH quality). Scan results reliable. But content remediation not executed.",
+      "s366_status": "ACTIVE — 39 items, ~117 empty distractor EW slots. All Certified. In learner pool with degraded educational feedback. No progress since S362.",
+      "impact_on_verdict": "Single largest remaining learner-facing defect by scope. Not correctness risk (EW[CC] slots are empty = DL-008 clean). Educational quality risk only."
+    },
+    "risk_4_dl031": {
+      "s362_severity": "HIGH",
+      "s362_description": "DL-031: ~500 items with inflated difficulty labels (labeled Moderate, testing Remember/Understand)",
+      "s363_finding": "Not investigated",
+      "s364_finding": "Not investigated",
+      "s365_finding": "Not investigated — no automated difficulty calibration scanner exists",
+      "s366_status": "ACTIVE — unchanged since S362. ~500 items, 19.7% of pool. Distorts difficulty distribution, analytics, adaptive testing readiness.",
+      "impact_on_verdict": "Systemic but non-urgent. No learner-safety impact. Blocks certification of difficulty distribution as CAQS-compliant."
+    },
+    "risk_5_registry_staleness": {
+      "s362_severity": "HIGH",
+      "s362_description": "MASTER_QUESTION_REGISTRY.md: 36.6h stale, 1,245 entries missing, no Certified column, references obsolete scored_cases*.js architecture.",
+      "s363_finding": "Certified count drift identified: baseline says 2,317, actual is 2,337 (+20). Registry would produce incorrect reports.",
+      "s364_finding": "DL-021 section of CURRENT_BASELINES.md confirmed STALE (OPEN→RESOLVED misalignment)",
+      "s365_finding": "CONFIRMED CRITICALLY BROKEN: 2 days stale (last modified 2026-07-26 21:04). Section categorization broken (showing I/P/T/U instead of A-F). Count shows 2,975 instead of ~2,940. Manual append present (S316 Wave 2 'RULE 3 exception'). No file watcher, no CI trigger, no automated regeneration.",
+      "s366_status": "ACTIVE AND WORSENING — now 2 days stale (was 36.6h). Section categorization broken beyond staleness. Count drift unknown magnitude.",
+      "impact_on_verdict": "Any tool consuming the registry produces incorrect data. The registry is unreliable as a source of truth."
+    },
+    "risk_6_dl010_dl009": {
+      "s362_severity": "HIGH",
+      "s362_description": "DL-010: Misassigned choice explanations (P1-A-029 prototype, full-pool scan not completed). DL-009: Incorrect ASC authority citations (P1-A-012, P1-BC-065 area).",
+      "s363_finding": "Not investigated",
+      "s364_finding": "Not investigated",
+      "s365_finding": "DL-010: No automated scanner exists (semantic misassignment requires NLP). DL-009: No automated scanner exists (ASC citation verification requires cross-referencing).",
+      "s366_status": "ACTIVE — no progress since S362. Scope unknown for DL-010. Scope partially known for DL-009 (10 Pack C items resolved, Packs A/B/D/E unknown).",
+      "impact_on_verdict": "Educational quality risk. Learners may receive wrong-topic distractor explanations (DL-010) or learn wrong ASC authorities (DL-009)."
+    },
+    "risk_7_cognitive_gap": {
+      "s362_severity": "HIGH",
+      "s362_description": "Cognitive distribution: 5.8% Analyze+Evaluate vs 40% CAQS target. 866-item deficit. 91% of pool at Understand/Apply vs 55% target.",
+      "s363_finding": "Not investigated",
+      "s364_finding": "Not investigated",
+      "s365_finding": "Not investigated — no automated cognitive distribution scanner exists",
+      "s366_status": "ACTIVE — unchanged since S362. Structural limitation of the pool. Cannot be fixed with label changes — requires new item authoring.",
+      "impact_on_verdict": "Fundamental blueprint non-compliance. The pool is not exam-authentic in its cognitive demands. This is a content authoring problem, not a remediation problem."
+    }
+  },
+
+  "updated_scorecard": {
+    "areas": {
+      "content_production_rate": {
+        "s362_score": 55,
+        "s366_score": 55,
+        "delta": 0,
+        "weight": 25,
+        "weighted": 13.75,
+        "assessment": "Needs Attention",
+        "rationale": "Unchanged. S363-S365 were read-only audits — no content was produced. Throughput plateau at 7.5 items/session, 5.6 net-new/day. Label-change pipeline exhausted. S899 model proven but not sustained."
+      },
+      "quality": {
+        "s362_score": 38,
+        "s366_score": 55,
+        "delta": "+17",
+        "weight": 25,
+        "weighted": 13.75,
+        "assessment": "Needs Attention (improved from At Risk)",
+        "rationale": "FD-075 (CRITICAL) refuted — item is structurally complete. DL-021 (HIGH, 95 items) resolved and confirmed — all 100 Pack E Section C items have distractor EW. 100% structural completeness on Certified items (0/2,337 blank — was reported as 1/2,540 broken). But DL-035 (39 items), DL-031 (~500 items), DL-010, DL-009, and the catastrophic cognitive gap (5.8% vs 40% target) remain open. No CRITICAL-severity defects in Certified pool."
+      },
+      "maturity_velocity": {
+        "s362_score": 52,
+        "s366_score": 58,
+        "delta": "+6",
+        "weight": 15,
+        "weighted": 8.70,
+        "assessment": "Needs Attention (improved)",
+        "rationale": "S362→S366 cycle demonstrates rapid risk investigation capability: two HIGH-severity risks (FD-075, DL-021) fully investigated and resolved/refuted across 3 audit sessions in <24 hours. Cross-session verification chain (S362 claim → S363 scan → S364 per-item confirmation → S366 board synthesis) demonstrates governance maturity. Documentation conflict resolved (DL-021: DEFECT_LIBRARY.md confirmed correct). Certified count drift identified (2,317→2,337). However, readiness score still stalled at 75. Defect detection still outpaces resolution for non-urgent items. DL-035, DL-031, DL-010, DL-009 have zero progress."
+      },
+      "administration": {
+        "s362_score": 58,
+        "s366_score": 65,
+        "delta": "+7",
+        "weight": 15,
+        "weighted": 9.75,
+        "assessment": "Needs Attention (improved)",
+        "rationale": "DL-021 documentation conflict RESOLVED — single largest administrative uncertainty eliminated. FD-075 claim corrected — S362 board was operating on stale data. Certified pool count drift quantified (+20). S363/S364 reports provide authoritative ground-truth evidence for future boards. However: registry still stale (2 days, broken section categorization), baselines still have drift (Pack C certified 388→398, Pack D 389→399), CURRENT_BASELINES.md §3 DL-021 still says OPEN, 0 of 2,500 Packs A-D items carry certification_session metadata. Governance guard test suite remains 51/51 PASS."
+      },
+      "automation": {
+        "s362_score": 48,
+        "s366_score": 48,
+        "delta": 0,
+        "weight": 10,
+        "weighted": 4.80,
+        "assessment": "At Risk",
+        "rationale": "Unchanged. S365 confirmed all S362 automation findings. Governance guard is the only fully automated, self-testing component. 53.1% of scripts uncategorized. No CI/CD pipeline. Pre-delivery safety check 100% manual. Registry and baselines fully manual. DL-028 tooling regression unfixed. Path to 55 requires Phase 1 quick wins (fix registry + automate pre-delivery + automate baselines → 53) + Phase 2 structural (CI/CD + script cataloging → 56)."
+      },
+      "expansion_capacity": {
+        "s362_score": 60,
+        "s366_score": 60,
+        "delta": 0,
+        "weight": 10,
+        "weighted": 6.00,
+        "assessment": "Needs Attention",
+        "rationale": "Unchanged. 203 archived clone slots available. 4 sections below 50% certified (Pack C EC/FC, Pack D ED/FD). Case pool fully certified. S899 model proven. No new content authored since S362."
+      }
+    },
+    "overall_score": 57,
+    "overall_weighted": 56.75,
+    "s362_baseline": 51,
+    "delta": "+6",
+    "score_context": "S362 measured expansion economics with 2 CRITICAL/HIGH risks (FD-075 blank item, DL-021 documentation conflict) and a Quality score anchored at 38 due to the CRITICAL defect. S366 re-measures with both risks removed (FD-075 refuted, DL-021 resolved) — Quality improves from 38→55 (+17), Maturity from 52→58 (+6), Administration from 58→65 (+7). The 6-point overall improvement reflects the removal of the two most severe S362 findings."
+  },
+
+  "updated_top_5_risks": [
+    {
+      "rank": 1,
+      "risk": "DL-035 — 39 Certified Domain F items with empty distractor EW slots (~117 fields)",
+      "severity": "HIGH",
+      "scope": "39 items (1.7% of Certified MCQ pool)",
+      "category": "Educational quality degradation — no wrong-answer feedback on affected items",
+      "since_s362": "No progress. Rule 6 blocks new instances. Content remediation not started.",
+      "cost_of_delay": "Every learner who selects a wrong answer on one of 39 items sees no educational feedback."
+    },
+    {
+      "rank": 2,
+      "risk": "DL-031 — ~500 items with inflated difficulty labels (19.7% of pool)",
+      "severity": "HIGH",
+      "scope": "~500 items — systemic across all packs",
+      "category": "Difficulty distribution distortion — blocks CAQS §6.1 compliance",
+      "since_s362": "No progress. Label-only fix (~17 hours of work). Requires per-item verification.",
+      "cost_of_delay": "Analytics misleading. Adaptive testing would mis-rank candidates. Blueprint coverage reports inaccurate."
+    },
+    {
+      "rank": 3,
+      "risk": "Cognitive Distribution Gap — 5.8% Analyze+Evaluate vs 40% CAQS target (866-item deficit)",
+      "severity": "HIGH",
+      "scope": "Systemic — entire 2,540-item pool",
+      "category": "Blueprint non-compliance — pool is not exam-authentic in cognitive demands",
+      "since_s362": "No progress. Cannot be fixed with label changes — requires new item authoring.",
+      "cost_of_delay": "Platform produces recall/comprehension-skewed practice — does not prepare candidates for actual CMA exam cognitive demands."
+    },
+    {
+      "rank": 4,
+      "risk": "Automation Infrastructure Gap — 48/100, AT RISK",
+      "severity": "HIGH",
+      "scope": "Systemic — affects all operational workflows",
+      "category": "Operational scalability — no CI/CD, manual baselines, broken registry, manual pre-delivery",
+      "since_s362": "No progress. S365 confirmed all findings. Governance guard remains the only reliable component.",
+      "cost_of_delay": "Every content change requires manual verification steps. Registry stale and broken. No automated safety net beyond governance guard."
+    },
+    {
+      "rank": 5,
+      "risk": "MASTER_QUESTION_REGISTRY.md — 2 days stale, broken section categorization",
+      "severity": "MEDIUM",
+      "scope": "All tools consuming registry (certification planning, coverage analysis)",
+      "category": "Administrative — derived registry is unreliable as source of truth",
+      "since_s362": "WORSENED — now 2 days stale (was 36.6h). Section categorization broken (I/P/T/U instead of A-F). Count shows 2,975 instead of ~2,940.",
+      "cost_of_delay": "Any agent or tool using registry for analysis produces incorrect results. Fix is ~15 minutes of work."
+    }
+  ],
+
+  "conditions_for_upgrade_to_sustainable": {
+    "s362_conditions": [
+      {"id": 1, "condition": "FD-075 resolved — zero CRITICAL learner-facing defects", "status": "MET", "evidence": "S363: item structurally complete. DL-029 false alarm. 0 CRITICAL items in Certified pool."},
+      {"id": 2, "condition": "DL-021 resolved — independent scan confirms Pack E Section C status", "status": "MET", "evidence": "S364: per-item scan. 100/100 items have all distractor EW fields. DEFECT_LIBRARY.md correct."},
+      {"id": 3, "condition": "DL-035 remediated — ~117 distractor explanations authored", "status": "NOT MET", "evidence": "0 progress. 39 items, ~117 fields remain. S816-S818 already scheduled per S362 backlog."},
+      {"id": 4, "condition": "DL-031 recalibration begun — difficulty corrections in progress", "status": "NOT MET", "evidence": "0 progress. ~500 items, ~17 hours of label-only work. No sessions scheduled."},
+      {"id": 5, "condition": "Registry regenerated — within 24h staleness, case_pack architecture", "status": "NOT MET — WORSENED", "evidence": "S365: 2 days stale. Section categorization broken (I/P/T/U). Manual update 2026-07-26 21:04."},
+      {"id": 6, "condition": "Baselines reconciled — no hash drift, no count drift", "status": "PARTIALLY MET", "evidence": "DL-021 conflict resolved. Drift QUANTIFIED but not corrected. Pack C certified: 398 (not 388). Pack D: 399 (not 389). CURRENT_BASELINES.md §3 DL-021 still says OPEN. index_updated.html hash still stale."},
+      {"id": 7, "condition": "Scan methodology fixed — all scripts use CC-position-aware parsing", "status": "PARTIALLY MET", "evidence": "Governance guard + key scanners (scan_dl008_fn, scan_s710r_dl026, scan_logic_inversions) use Function constructor/string-aware parsing. But legacy scripts (check_ew.js, session86_*_scan.js) still use forward-scan — marked candidate_archive. 53.1% of scripts uncategorized."},
+      {"id": 8, "condition": "Authoring throughput sustained — 2+ sessions at S899 rate (15+ items, zero defects)", "status": "NOT MET", "evidence": "No authoring sessions since S362. Read-only audit sessions (S363-S365)."}
+    ],
+    "newly_met": [1, 2],
+    "newly_partially_met": [6, 7],
+    "still_not_met": [3, 4, 5, 8],
+    "conditions_met_count": "2 of 8 fully met, 2 partially met, 4 not met"
+  },
+
+  "binding_constraint_reassessment": {
+    "s362_binding_constraint": "Content design throughput — governance and infrastructure are adequate; the platform cannot produce new Analyze/Evaluate content at sufficient rate",
+    "s366_constraint_shift": "The binding constraint has bifurcated. Content throughput remains the PRIMARY constraint for closing the cognitive gap and DL-031 labels (both require authoring, not mechanical fixes). However, AUTOMATION INFRASTRUCTURE has emerged as a CO-EQUAL binding constraint — the 48/100 automation score means every remediation action (DL-035, DL-031, registry, baselines) requires expensive manual orchestration. Improving automation would accelerate ALL remaining workstreams.",
+    "primary_constraint": "Content design throughput (unchanged from S362 — same 5.6 net-new items/day, same 75 readiness plateau)",
+    "co_equal_constraint": "Automation infrastructure (new finding — S365 confirmed every operational workflow requires manual invocation, creating costly friction on all remediation work)",
+    "interaction": "These constraints compound: low throughput means remediation takes longer; low automation means each remediation session has higher overhead. Improving either would accelerate the other."
+  },
+
+  "sources": [
+    "S362 — Expansion Program Economics Board (baseline decision, 51/100, SUSTAINABLE WITH RISKS)",
+    "S363 — Certified Pool Integrity Audit (FD-075 refutation, blank-Certified scan = 0, DL-021 preliminary, count drift +20)",
+    "S364 — DL-021 Truth Determination (per-item boundary-aware scan, 100/100 confirmed, doc conflict resolved)",
+    "S365 — Automation Effectiveness Review (48/100 confirmed, gap analysis, roadmap to 55, 53.1% sprawl)"
+  ],
+
+  "methodology_note": "All S366 scores derived by re-evaluating S362's 6-area framework against evidence from S363/S364/S365. Areas with positive new evidence (Quality, Maturity, Administration) were re-scored upward. Areas with no new evidence (Content Production, Automation, Expansion) retained S362 scores. The FD-075 refutation removed a CRITICAL anchor dragging Quality from a plausible ~55 to 38. The DL-021 resolution removed a HIGH-severity risk and eliminated a major documentation uncertainty dragging Administration from ~65 to 58."
+}

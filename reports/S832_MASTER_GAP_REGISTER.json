@@ -1,0 +1,611 @@
+{
+  "session": "S832",
+  "agent": "C",
+  "phase": "Discovery",
+  "task": "Comprehensive gap identification, classification, and priority ranking across all six dimensions",
+  "baseline_metrics": {
+    "total_mcq_items": 2540,
+    "total_certified_mcq": 2298,
+    "certification_rate_pct": 90.5,
+    "pack_breakdown": {
+      "pack_a": { "total": 500, "certified": 481, "rate_pct": 96.2, "uncertified": 19 },
+      "pack_b": { "total": 500, "certified": 500, "rate_pct": 100.0, "uncertified": 0 },
+      "pack_c": { "total": 500, "certified": 388, "rate_pct": 77.6, "uncertified": 112 },
+      "pack_d": { "total": 500, "certified": 389, "rate_pct": 77.8, "uncertified": 111 },
+      "pack_e": { "total": 540, "certified": 540, "rate_pct": 100.0, "uncertified": 0 }
+    },
+    "total_case_items": 625,
+    "total_certified_case_entries": 745,
+    "caqs_targets": {
+      "difficulty": {
+        "easy": { "target_pct": 15, "target_items": 381 },
+        "moderate_easy": { "target_pct": 20, "target_items": 508 },
+        "moderate": { "target_pct": 30, "target_items": 762 },
+        "difficult": { "target_pct": 25, "target_items": 635 },
+        "very_difficult": { "target_pct": 10, "target_items": 254 }
+      },
+      "blooms": {
+        "remember": { "target_pct": 5, "target_items": 127 },
+        "understand": { "target_pct": 15, "target_items": 381 },
+        "apply": { "target_pct": 40, "target_items": 1016 },
+        "analyze": { "target_pct": 25, "target_items": 635 },
+        "evaluate": { "target_pct": 15, "target_items": 381 }
+      }
+    }
+  },
+  "master_gap_register": {
+    "content_gaps": [
+      {
+        "id": "CNT-001",
+        "category": "Content Gap",
+        "dimension": "Difficulty",
+        "section": "ALL",
+        "gap": "Zero Very Difficult items (0% vs CAQS 10% target)",
+        "severity": "CRITICAL",
+        "severity_rationale": "VDiff items test advanced competence and professional judgment. Complete absence means practice sessions cannot prepare candidates for the hardest exam questions.",
+        "current_count": 0,
+        "target_count": 254,
+        "estimated_shortfall": 254,
+        "fix_type": "NEW_CONTENT",
+        "cannot_recalibrate": true,
+        "reason_cannot_recalibrate": "No existing item base to draw from. VDiff items require multi-step analysis, judgment under uncertainty, and synthesis across topics — definition-match items cannot be recalibrated to VDiff.",
+        "section_targets": {
+          "A": 38, "B": 51, "C": 51, "D": 51, "E": 38, "F": 25
+        }
+      },
+      {
+        "id": "CNT-002",
+        "category": "Content Gap",
+        "dimension": "Difficulty",
+        "section": "ALL",
+        "gap": "Difficult items 85 current vs 635 target (13.4% of target)",
+        "severity": "CRITICAL",
+        "severity_rationale": "Difficult items form the backbone of exam discrimination. A 550-item shortfall means practice sessions disproportionately test at low-to-moderate demand.",
+        "current_count": 85,
+        "target_count": 635,
+        "estimated_shortfall": 550,
+        "fix_type": "RECALIBRATE_PLUS_NEW",
+        "split_estimate": {
+          "from_recalibration": "~200-300 items currently labeled Moderate that genuinely test at Difficult cognitive demand (post-DL-031 reclassification)",
+          "from_new_content": "~250-350 new items needed even after recalibration"
+        },
+        "blocker": "DL-031 must be resolved first — current Moderate pool likely inflated by ~800-1000 Easy items. True recalibration surface only knowable after DL-031 fix.",
+        "section_targets": {
+          "A": 95, "B": 127, "C": 127, "D": 127, "E": 95, "F": 64
+        }
+      },
+      {
+        "id": "CNT-003",
+        "category": "Content Gap",
+        "dimension": "Bloom's Taxonomy",
+        "section": "ALL",
+        "gap": "Zero Evaluate items (0% vs CAQS 15% target)",
+        "severity": "CRITICAL",
+        "severity_rationale": "Evaluate = professional judgment, recommendation, and decision-making. These are the highest-value skills tested on the CMA exam. Complete absence means candidates never practice evaluative reasoning.",
+        "current_count": 0,
+        "target_count": 381,
+        "estimated_shortfall": 381,
+        "fix_type": "NEW_CONTENT",
+        "cannot_recalibrate": true,
+        "reason_cannot_recalibrate": "Evaluate items require scenario-based professional judgment (compare alternatives, make recommendations, assess trade-offs). Definition-match or calculation-only items cannot be recalibrated upward to Evaluate. Every Evaluate item must be newly authored.",
+        "section_targets": {
+          "A": 57, "B": 76, "C": 76, "D": 76, "E": 57, "F": 38
+        }
+      },
+      {
+        "id": "CNT-004",
+        "category": "Content Gap",
+        "dimension": "Bloom's Taxonomy",
+        "section": "ALL",
+        "gap": "Analyze items 10 current vs 635 target (1.6% of target)",
+        "severity": "CRITICAL",
+        "severity_rationale": "Analyze covers data interpretation, variance analysis, trend identification — core management accounting activities. Severe under-representation distorts practice session realism.",
+        "current_count": 10,
+        "target_count": 635,
+        "estimated_shortfall": 625,
+        "fix_type": "NEW_CONTENT_PLUS_RECALIBRATE",
+        "split_estimate": {
+          "from_recalibration": "~150-250 items currently labeled Apply/Understand that genuinely test at Analyze level (multi-step reasoning from exhibits, pattern identification)",
+          "from_new_content": "~375-475 new items needed"
+        },
+        "note": "Some Analyze items can be created by adding exhibit-dependency to existing Apply-level calculation items (same numbers, require extraction from exhibits rather than direct fact-pattern). This reduces the pure-new-content burden.",
+        "section_targets": {
+          "A": 95, "B": 127, "C": 127, "D": 127, "E": 95, "F": 64
+        }
+      },
+      {
+        "id": "CNT-005",
+        "category": "Content Gap",
+        "dimension": "Topic Coverage",
+        "section": "A",
+        "subsection": "Advanced Financial Reporting",
+        "gap": "Under-coverage of ASC 842 (leases), ASC 740 (income taxes), ASC 805 (business combinations)",
+        "severity": "HIGH",
+        "severity_rationale": "These are tested on the CMA Part 1 exam and represent high-weight topics within Section A. Under-coverage creates blueprint alignment risk.",
+        "estimated_shortfall": "~20-30 items across the three topics",
+        "fix_type": "NEW_CONTENT",
+        "sub_topics": [
+          "ASC 842: Lessee operating vs. finance lease classification and measurement",
+          "ASC 740: Deferred tax assets/liabilities, valuation allowance, effective tax rate reconciliation",
+          "ASC 805: Acquisition method, goodwill calculation, bargain purchase"
+        ],
+        "target_blooms": "Mix of Apply (calculations) and Analyze (interpretation), minimum 2 Evaluate items per topic"
+      },
+      {
+        "id": "CNT-006",
+        "category": "Content Gap",
+        "dimension": "Topic Coverage",
+        "section": "F",
+        "subsection": "Advanced Analytics & Emerging Tech",
+        "gap": "Predictive/prescriptive analytics depth, blockchain applications, AI governance, robotic process automation",
+        "severity": "HIGH",
+        "severity_rationale": "Section F is the fastest-evolving CMA domain. Current items appear definitional only. Candidates need application-level items for analytics methods and evaluative items for technology selection decisions.",
+        "estimated_shortfall": "~30-50 items",
+        "fix_type": "NEW_CONTENT",
+        "sub_topics": [
+          "Predictive analytics: regression interpretation, time-series forecasting, classification models",
+          "Prescriptive analytics: optimization, simulation, decision trees",
+          "Blockchain: triple-entry accounting, smart contract audit implications",
+          "AI governance: model risk management, bias detection, explainability requirements",
+          "RPA: process selection criteria, control implications, exception handling"
+        ],
+        "target_blooms": "Mix of Apply (tool selection, method application), Analyze (output interpretation), and Evaluate (technology adoption recommendations)"
+      },
+      {
+        "id": "CNT-007",
+        "category": "Content Gap",
+        "dimension": "Topic Coverage",
+        "section": "E",
+        "subsection": "COSO ERM Application Depth",
+        "gap": "COSO ERM items test framework recall but not application to risk-response decisions",
+        "severity": "HIGH",
+        "severity_rationale": "The CMA exam tests ERM application (selecting appropriate risk responses, integrating ERM with strategy), not just framework memorization. Current items likely definitional.",
+        "estimated_shortfall": "~20-30 items",
+        "fix_type": "NEW_CONTENT",
+        "sub_topics": [
+          "Risk appetite vs. risk tolerance scenario application",
+          "Risk response selection (avoid/accept/reduce/share) for given business scenarios",
+          "ERM-strategy integration judgment (Evaluate level)",
+          "Entity-level vs. process-level risk assessment differentiation"
+        ],
+        "target_blooms": "Minimum 5 Evaluate items for risk-response selection scenarios"
+      },
+      {
+        "id": "CNT-008",
+        "category": "Content Gap",
+        "dimension": "Case Study Certification",
+        "section": "ALL (scored_cases2-5)",
+        "gap": "60 cases (~330 items) lack full certification across scored_cases2-5",
+        "severity": "HIGH",
+        "severity_rationale": "Case studies test integrated reasoning — the highest-value CMA preparation format. Uncertified cases cannot enter the learner delivery pool.",
+        "estimated_effort": "~330 item-level certification passes",
+        "fix_type": "CERTIFICATION_WAVE",
+        "current_state": {
+          "scored_cases.js": "Fully certified (15 cases, ~90 items)",
+          "scored_cases2.js": "Not fully certified (15 cases, ~120 items)",
+          "scored_cases3.js": "Not fully certified (15 cases, ~120 items)",
+          "scored_cases4.js": "Not fully certified (15 cases, ~120 items)",
+          "scored_cases5.js": "Not fully certified (15 cases, ~120 items)"
+        },
+        "note": "Case certification requires 6-dimension AI verification per CAQS §1.6 plus exhibit data-consistency verification. Higher per-item effort than standalone MCQ certification.",
+        "blockers": ["DL-032 (uniform difficulty labeling must be resolved before or during certification)"]
+      }
+    ],
+    "quality_gaps": [
+      {
+        "id": "QLT-001",
+        "category": "Quality Gap",
+        "dimension": "Distractor Quality",
+        "section": "E:C",
+        "defect_id": "DL-021",
+        "gap": "95 Certified Pack E Section C items have structurally absent distractor ExplanationWrong fields (3 per item = 285 fields)",
+        "severity": "CRITICAL",
+        "severity_rationale": "Learners see zero educational feedback on incorrect choices for 95 Certified items in the active delivery pool. High learner-safety impact.",
+        "affected_items_certified": 95,
+        "affected_items_total": 95,
+        "fields_to_author": 285,
+        "fix_type": "CONTENT_AUTHORING",
+        "authoring_target_per_field": "≥50 chars, choice-specific, references accounting principle, explains misconception",
+        "recommended_batch_size": 28,
+        "estimated_batches": 4,
+        "status": "Open — scoped, authoring not yet executed"
+      },
+      {
+        "id": "QLT-002",
+        "category": "Quality Gap",
+        "dimension": "Distractor Quality",
+        "section": "A:E",
+        "defect_id": "DL-016",
+        "gap": "Metadata-block ChoiceA-D shift causing wrong-topic distractor ExplanationWrong text on 58 Certified items (Pack A Section E)",
+        "severity": "CRITICAL",
+        "severity_rationale": "Learners who select wrong answers see feedback about a completely different topic. Active learner-safety risk — misleading educational feedback on Certified items.",
+        "affected_items_certified": 58,
+        "affected_items_total": 58,
+        "fields_to_author": "~171 ExplanationWrong fields require choice-specific, topic-accurate distractor text",
+        "fix_type": "STRUCTURAL_FIX_PLUS_CONTENT_AUTHORING",
+        "root_cause": "Dual-block architecture: metadata block stores stale template choices from rotation group; content block (rendered to learner) has correct choices. ExplanationWrong fields are indexed to metadata choices, producing wrong-topic text.",
+        "methodology_note": "Must use within-object extraction (not forward-scan regex) to avoid DL-029 false positives. Content-block Choices.A-D is the authoritative source of truth.",
+        "status": "Resolved for Section E items per DL-016 entry (S805, 2026-07-26). Confirm scope: remaining items in Sections A/D of Pack A/C/D with dual-block architecture.",
+        "verification_needed": true,
+        "verification_action": "Re-confirm current DL-016 scope across Packs A/C/D before authoring any content."
+      },
+      {
+        "id": "QLT-003",
+        "category": "Quality Gap",
+        "dimension": "Distractor Quality",
+        "section": "C/D:E/F",
+        "defect_id": "DL-013",
+        "gap": "Template boilerplate distractor explanations remaining in non-Certified sections of Packs C and D, Sections E and F",
+        "severity": "MEDIUM",
+        "severity_rationale": "Blocks certification for the affected items but has zero learner-pool impact (all affected items are non-Certified). Becomes HIGH if certified without remediation.",
+        "estimated_fields_remaining": 163,
+        "estimated_items_affected": "~55 items (3 fields per item average)",
+        "fix_type": "CONTENT_AUTHORING",
+        "pattern": "\"Option X ... represents a plausible misconception. A candidate may select this option by misapplying a related but distinct concept.\"",
+        "status": "Open — lower priority than QLT-001 and QLT-002. Author during certification wave for these sections."
+      },
+      {
+        "id": "QLT-004",
+        "category": "Quality Gap",
+        "dimension": "Distractor Quality",
+        "section": "A:B",
+        "defect_id": "DL-025",
+        "gap": "5 non-Certified Section B items with empty distractor ExplanationWrong slots (deferred from DL-025 WAVE 1)",
+        "severity": "MEDIUM",
+        "severity_rationale": "Non-Certified items — zero learner impact currently. Blocks certification.",
+        "affected_items": 5,
+        "qids": "P1-B-001, P1-B-004, P1-B-006, P1-B-025 + 1 Section D non-Certified (P1-D-070)",
+        "fix_type": "CONTENT_AUTHORING",
+        "status": "Deferred from DL-025 WAVE 1 (2026-07-23 autonomous run). Requires hand-authoring — P1-B-001 and P1-B-025 have additional DL-010 misattribution component."
+      },
+      {
+        "id": "QLT-005",
+        "category": "Quality Gap",
+        "dimension": "Distractor Quality",
+        "section": "C/D",
+        "defect_id": "DL-026",
+        "gap": "Residual empty non-CorrectChoice ExplanationWrong slots in non-Certified sections of Packs C and D",
+        "severity": "LOW",
+        "severity_rationale": "All remaining DL-026 items are non-Certified — zero learner impact. Should be resolved during certification wave for these sections.",
+        "estimated_items": "~27 items (post-Autonomous Run Parts 2 and 3)",
+        "fix_type": "CONTENT_AUTHORING",
+        "status": "Open — remediation during certification wave. Certified DL-026 items (Pack D Sections A/B/D, Pack C Sections A/B) remediated in Autonomous Runs."
+      },
+      {
+        "id": "QLT-006",
+        "category": "Quality Gap",
+        "dimension": "Case Study Quality",
+        "section": "ALL (scored_cases2-5)",
+        "defect_id": "DL-032",
+        "gap": "330 case items uniformly labeled Moderate with no cognitive calibration",
+        "severity": "MEDIUM",
+        "severity_rationale": "Uniform difficulty prevents adaptive session composition from selecting appropriately challenging case items. Zero learner-facing content defect (content is correct, just mislabeled).",
+        "affected_items": 330,
+        "fix_type": "RECALIBRATE_DIFFICULTY_PER_ITEM",
+        "methodology": "Assign genuine difficulty labels based on: (1) Bloom's cognitive level, (2) calculation complexity, (3) exhibit dependency count, (4) distractor deceptiveness, (5) required professional judgment level.",
+        "target_distribution": "Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10% across case pool",
+        "status": "Open — recalibration needed pre- or during-case certification"
+      }
+    ],
+    "calibration_gaps": [
+      {
+        "id": "CAL-001",
+        "category": "Calibration Gap",
+        "dimension": "Difficulty",
+        "section": "ALL",
+        "defect_id": "DL-031",
+        "gap": "Systematic difficulty inflation: ~800-1,000 definition-match items labeled Moderate (score 3) that test at Easy (score 1) cognitive demand",
+        "severity": "CRITICAL",
+        "severity_rationale": "This is the root cause of the Moderate pool being 465 items over target. Practice sessions composed from the current pool over-represent Moderate difficulty, skewing candidate experience away from real exam difficulty distribution. Also masks the true Difficult and VDiff shortfalls — until DL-031 is resolved, recalibration from Moderate→Difficult is a guess.",
+        "affected_items_estimated": "800-1000",
+        "current_label": "Moderate (score 3, 48.3% of pool)",
+        "correct_label_estimate": "Easy (score 1)",
+        "fix_type": "RECALIBRATE_DIFFICULTY",
+        "pattern": "Stem contains textbook definition of concept X; correct answer is the term for concept X; lexical overlap between stem keywords and correct choice >50%. No application, analysis, or judgment required.",
+        "methodology": "Algorithmic scan: compute Jaccard similarity between stem tokens and correct-answer choice tokens. Items exceeding threshold AND having DifficultyScore ≥ 3 are flagged for human review → recalibrate to Easy (1) or Moderate-Easy (2).",
+        "impact_on_other_gaps": {
+          "resolving_dl031_enables": [
+            "True Moderate pool size becomes visible (~300-500 items vs. current 1,226)",
+            "Difficult recalibration surface becomes accurate (which Moderate items are genuinely Difficult?)",
+            "VDiff and Difficult new-content shortfalls become precise (not 254+550, likely higher after DL-031)"
+          ]
+        },
+        "status": "Open — must be resolved before any Difficulty recalibration or new-content sizing"
+      },
+      {
+        "id": "CAL-002",
+        "category": "Calibration Gap",
+        "dimension": "Bloom's Taxonomy",
+        "section": "ALL",
+        "gap": "Bloom's misclassification: ~600-800 items labeled Understand that test at Remember level (definition recall, not concept explanation)",
+        "severity": "MEDIUM",
+        "severity_rationale": "Same root cause as DL-031 — template-based labeling without cognitive assessment. Bloated Understand pool (1,276 = 50.2% vs. 15% target) masks the true distribution. After recalibration, the Remember pool will grow and the Understand pool will shrink to something closer to target.",
+        "affected_items_estimated": "600-800",
+        "current_label": "Understand (50.2% of pool)",
+        "correct_label_estimate": "Remember",
+        "fix_type": "RECALIBRATE_BLOOMS",
+        "pattern": "Definition-match items — stem defines a term, correct answer is the term name. Tests recall, not comprehension. Same items as DL-031 (near-perfect overlap between difficulty-inflated and Bloom's-inflated items).",
+        "synergy": "CAL-001 and CAL-002 should be executed together — the same items need both Difficulty and Bloom's recalibration.",
+        "status": "Open — lower priority than CAL-001 because Bloom's labels are not currently used for session composition, unlike Difficulty labels"
+      },
+      {
+        "id": "CAL-003",
+        "category": "Calibration Gap",
+        "dimension": "Difficulty",
+        "section": "A:D",
+        "gap": "Pack A Section D: zero Difficult items despite 96.2% pack certification rate. ~100 Moderate items are calibration candidates.",
+        "severity": "HIGH",
+        "severity_rationale": "Section D (Cost Management) is calculation-heavy — this is precisely where Difficult and VDiff items should concentrate. Complete absence of Difficult items in the most calculation-intensive section is a significant content-quality gap.",
+        "affected_items_estimated": "~100 Moderate items potentially under-calibrated",
+        "fix_type": "RECALIBRATE_DIFFICULTY",
+        "methodology": "Per-item audit of Pack A Section D Moderate items: identify items with multi-step calculations, judgment calls, or exhibit interpretation that warrant Difficult (4) or VDiff (5). Recalibrate upward.",
+        "note": "CAL-003 is blocked by CAL-001 — cannot reliably identify which Moderate items are genuinely Difficult until DL-031 definition-match items are reclassified downward.",
+        "status": "Open — blocked by CAL-001"
+      },
+      {
+        "id": "CAL-004",
+        "category": "Calibration Gap",
+        "dimension": "Difficulty",
+        "section": "ALL",
+        "gap": "Moderate pool excess: 1,226 items (48.3%) vs. 30% target of 762 = 464 excess, even before DL-031 reclassification",
+        "severity": "MEDIUM",
+        "severity_rationale": "The Moderate pool is the largest single difficulty tier. Most excess will resolve via DL-031/CAL-001 reclassification to Easy. The residual (post-reclassification) should be evaluated for upward recalibration to Difficult or Moderate-Easy.",
+        "current_count": 1226,
+        "post_dl031_estimate": "~300-500 (after ~800-1000 reclassified to Easy)",
+        "target_count": 762,
+        "fix_type": "RECALIBRATE_DIFFICULTY",
+        "sub_step": "After CAL-001 resolution, audit remaining Moderate items: identify candidates for Moderate-Easy (score 2) vs. Difficult (score 4) based on actual cognitive demand.",
+        "status": "Open — blocked by CAL-001"
+      },
+      {
+        "id": "CAL-005",
+        "category": "Calibration Gap",
+        "dimension": "Difficulty",
+        "section": "ALL (scored_cases2-5)",
+        "defect_id": "DL-032",
+        "gap": "330 case items uniformly labeled Moderate across scored_cases2-5",
+        "severity": "MEDIUM",
+        "severity_rationale": "Zero difficulty differentiation in the case pool prevents adaptive session composition. Items within a single case span Easy through VDiff — the uniform labeling is a template artifact, not a reflection of actual cognitive demand.",
+        "affected_items": 330,
+        "fix_type": "RECALIBRATE_DIFFICULTY_PER_ITEM",
+        "methodology": "Per-item difficulty assignment based on: Bloom's level (numeric → Apply=3, select → Analyze=4, multi → Evaluate=5), calculation complexity, exhibit dependencies, and judgment requirements. Case-level difficulty should be within ±1 of mean item difficulty (per CAQS §5.2 CF4).",
+        "status": "Open"
+      }
+    ]
+  },
+  "cross_cutting_analysis": {
+    "calibration_dependency_chain": {
+      "description": "CAL-001 (DL-031 difficulty inflation) is the foundational blocker. Until resolved, all other Difficulty recalibration efforts and new-content sizing are speculative.",
+      "execution_order": [
+        "1. CAL-001: DL-031 reclassification (800-1000 Moderate → Easy)",
+        "2. CAL-002: Simultaneous Bloom's recalibration (same items)",
+        "3. CAL-003 + CAL-004: Re-evaluate residual Moderate pool for Diff/VDiff candidates",
+        "4. CNT-002 + CNT-001: Determine true Difficult and VDiff new-content shortfall",
+        "5. CNT-003 + CNT-004: Size Evaluate and Analyze new-content programs"
+      ],
+      "timeline_impact": "CAL-001 is a mechanical scan + batch recalibration (~500-1000 items at 30/batch = 17-34 batches). Once resolved, all other gaps become precisely measurable."
+    },
+    "content_authoring_sequencing": {
+      "priority_order": [
+        "1. QLT-001: DL-021 Pack E Section C distractor authoring (95 items, learner-facing CRITICAL)",
+        "2. QLT-002: DL-016 metadata-shift fix (58 items, learner-facing CRITICAL — verify current scope first)",
+        "3. CNT-003: Evaluate items (381 needed — start with 50-75 across sections A/D/E that lend themselves to judgment scenarios)",
+        "4. CNT-001 + CNT-002: VDiff + Difficult items (sized after CAL-001 resolution)",
+        "5. CNT-005/006/007: Topic gap items for Sections A, F, E",
+        "6. CNT-008: Case certification wave"
+      ]
+    },
+    "overlap_and_synergy": {
+      "dl031_cal001_cal002_overlap": "DL-031 deficit-match items, CAL-001 Moderate→Easy items, and CAL-002 Understand→Remember items are the same population (~800-1000 items). Fix them once, fix all three gaps.",
+      "critique_counterintuitive": "The pool has 1,226 'Moderate, Understand' items but after DL-031/CAL-001/CAL-002, the real distribution shifts to ~800-1000 'Easy, Remember' items. This means the pool is actually easier and more definitional than the labels suggest — not harder.",
+      "moderate_shortage_possible": "After DL-031 reclassification, the pool may actually have fewer than 762 genuinely Moderate items. Some Moderate-Easy items with 2-step calculations might be recalibrated upward to Moderate. The net effect is unknown until CAL-001 completes."
+    },
+    "certified_pool_risk_assessment": {
+      "total_certified": 2298,
+      "dl021_risk": "95 Certified items — absent distractor explanations (CRITICAL)",
+      "dl016_risk": "58 Certified items — wrong-topic distractor text (CRITICAL — verify that S805 resolved Section E; scope may be Packs C/D only)",
+      "dl031_risk": "~700-900 Certified definition-match items labeled Moderate — difficulty label is wrong but content is correct (MEDIUM — label correction does not affect item correctness)",
+      "dl032_risk": "Certified case items in scored_cases.js — correctly labeled (scored_cases.js has proper difficulty differentiation)",
+      "learner_facing_critical_count": 153,
+      "learner_facing_medium_count": "~700-900",
+      "total_learner_pool_risk_ratio": "~6.7% CRITICAL (153/2298), ~35% MEDIUM calibration risk"
+    }
+  },
+  "priority_matrix": {
+    "tier_1_immediate_critical": {
+      "description": "Learner-facing defects in the active delivery pool AND foundational calibration gaps that block all downstream planning",
+      "items": [
+        {
+          "rank": 1,
+          "id": "CAL-001",
+          "action": "Resolve DL-031: scan and recalibrate ~800-1000 definition-match items from Moderate→Easy (and Understand→Remember)",
+          "rationale": "Foundational — blocks all Difficulty and Bloom's planning. DL-031 resolution makes every other gap precisely measurable instead of estimated."
+        },
+        {
+          "rank": 2,
+          "id": "QLT-001",
+          "action": "Author 285 distractor explanations for 95 Pack E Section C Certified items (DL-021)",
+          "rationale": "Learner-facing CRITICAL — 95 Certified items provide zero feedback on incorrect choices."
+        },
+        {
+          "rank": 3,
+          "id": "QLT-002",
+          "action": "Verify DL-016 scope post-S805; remediate remaining metadata-shift items producing wrong-topic distractor text",
+          "rationale": "Learner-facing CRITICAL — wrong-topic feedback misleads candidates reviewing incorrect answers. Confirm S805 resolved Section E; scope may be Packs C/D dual-block items only."
+        },
+        {
+          "rank": 4,
+          "id": "CNT-003",
+          "action": "Begin Evaluate item design: focus on Sections A (ASC 842/740 judgments), D (make-or-buy, CVP scenario decisions), E (ERM risk-response selection)",
+          "rationale": "Evaluate = zero items. These are the hardest items to design well — start early, prototype 50-75 items."
+        }
+      ]
+    },
+    "tier_2_near_term_high": {
+      "description": "Quality improvements that become critical once learner-facing defects are resolved; topic gaps that affect blueprint alignment",
+      "items": [
+        {
+          "rank": 5,
+          "id": "CNT-001",
+          "action": "Size VDiff new-content program after CAL-001 resolution; design VDiff item templates",
+          "rationale": "VDiff = 0 items vs. 254 target. Requires multi-step synthesis + judgment items. Design reusable templates (e.g., 'budget variance cascade + recommendation', 'ratio analysis + trend evaluation')."
+        },
+        {
+          "rank": 6,
+          "id": "CNT-002",
+          "action": "Size Difficult new-content program after CAL-001; identify recalibration candidates from residual Moderate pool",
+          "rationale": "Difficult = 85 items vs. 635 target. Recalibration from Moderate can provide ~200-300; new content needed for ~250-350."
+        },
+        {
+          "rank": 7,
+          "id": "CNT-005",
+          "action": "Design 20-30 items for ASC 842/740/805 topic gaps in Section A",
+          "rationale": "Blueprint alignment risk — these are high-weight exam topics."
+        },
+        {
+          "rank": 8,
+          "id": "CNT-006",
+          "action": "Design 30-50 items for Section F analytics depth and emerging tech",
+          "rationale": "Section F has lowest certification rate (~67% for Pack C/D) and definitional-only items. Needs application and evaluation depth."
+        },
+        {
+          "rank": 9,
+          "id": "CNT-008",
+          "action": "Begin case certification wave for scored_cases2 (15 cases, ~120 items)",
+          "rationale": "Cases are the highest-value practice format. Resolve DL-032 difficulty labeling during certification pass."
+        }
+      ]
+    },
+    "tier_3_future_medium": {
+      "description": "Quality improvements and recalibrations that improve the platform but have no learner-facing urgency",
+      "items": [
+        {
+          "rank": 10,
+          "id": "CAL-003",
+          "action": "Audit Pack A Section D Moderate items for Difficult/VDiff recalibration candidates (post-CAL-001)",
+          "rationale": "Section D is calculation-heavy — should concentrate Difficult items. Recalibration blocked by CAL-001."
+        },
+        {
+          "rank": 11,
+          "id": "CNT-007",
+          "action": "Design 20-30 COSO ERM application-depth items for Section E",
+          "rationale": "ERM is tested at application level on the exam. Current items likely definitional."
+        },
+        {
+          "rank": 12,
+          "id": "CNT-004",
+          "action": "Size Analyze new-content program after CAL-001/CAL-002 resolution",
+          "rationale": "Analyze = 10 items vs. 635 target. Some will come from Bloom's recalibration (Apply→Analyze), but bulk requires new items with exhibit interpretation demands."
+        },
+        {
+          "rank": 13,
+          "id": "QLT-003",
+          "action": "Author ~163 DL-013 distractor explanations for Packs C/D Sections E/F during certification wave",
+          "rationale": "Non-Certified items — no learner impact. Resolve during certification to avoid certifying boilerplate."
+        },
+        {
+          "rank": 14,
+          "id": "QLT-004",
+          "action": "Author distractor explanations for 5 remaining DL-025 items",
+          "rationale": "Non-Certified — resolve before certification."
+        },
+        {
+          "rank": 15,
+          "id": "QLT-005",
+          "action": "Resolve ~27 residual DL-026 items during certification",
+          "rationale": "Non-Certified — low priority."
+        }
+      ]
+    },
+    "tier_4_long_term_low": {
+      "description": "Ongoing quality maintenance, non-urgent recalibrations",
+      "items": [
+        {
+          "rank": 16,
+          "id": "CAL-005",
+          "action": "Calibrate 330 case item difficulties per CASE_STUDY_GOLD_STANDARD.md (DL-032)",
+          "rationale": "Separate from case certification wave. After case items are certified, re-label with genuine difficulty scores."
+        },
+        {
+          "rank": 17,
+          "id": "CAL-002",
+          "action": "Recalibrate ~600-800 Bloom's labels from Understand→Remember (paired with CAL-001)",
+          "rationale": "Lower priority than Difficulty recalibration — Bloom's labels don't currently drive session composition. Execute alongside CAL-001 for efficiency."
+        }
+      ]
+    }
+  },
+  "total_estimated_effort": {
+    "description": "Estimates are pre-CAL-001 and carry significant uncertainty. DL-031 resolution will sharpen all numbers.",
+    "by_category": {
+      "new_content_items": {
+        "estimate": "500-800",
+        "breakdown": {
+          "evaluate_items_cn003": "381 (all new — cannot recalibrate)",
+          "vdiff_items_cnt001": "150-200 (after some Difficult→VDiff recalibration becomes possible post-CAL-001)",
+          "difficult_items_cnt002": "250-350 (after ~200-300 recalibrated from Moderate post-CAL-001)",
+          "analyze_items_cnt004": "375-475 (after ~150-250 recalibrated from Apply/Understand)",
+          "topic_gaps_cnt005_006_007": "70-110 (ASC 842/740, analytics depth, ERM application)"
+        },
+        "note": "Significant overlap possible — a new Evaluate item for ASC 842 also counts as a VDiff item and fills a topic gap. Net new items likely 500-800, not the sum of all shortfalls."
+      },
+      "quality_fixes_items": {
+        "estimate": "~160 items, ~480 fields",
+        "breakdown": {
+          "dl021_ew_authoring_qlt001": "95 items, 285 fields",
+          "dl016_metadata_fix_qlt002": "~58 items, ~170 fields (verify scope post-S805)",
+          "dl013_residual_qlt003": "~55 items, ~163 fields",
+          "dl025_residual_qlt004": "5 items, ~5 fields",
+          "dl026_non_certified_qlt005": "~27 items, ~30 fields (low-priority)"
+        }
+      },
+      "recalibration_items": {
+        "estimate": "860-1,370",
+        "breakdown": {
+          "dl031_moderate_to_easy_cal001": "800-1000 items (foundational — blocks all other recalibration)",
+          "dl031_blooms_understand_to_remember_cal002": "600-800 items (paired with CAL-001 — same item population)",
+          "residual_moderate_to_difficult_cal003": "~100-200 items (post-CAL-001 — audit Pack A Section D + other sections)",
+          "case_difficulty_calibration_cal005": "330 items (scored_cases2-5)"
+        },
+        "net_items_touched": "~1,000-1,200 unique items (CAL-001 and CAL-002 affect the same items; CAL-003 and CAL-005 affect different populations)"
+      },
+      "case_certification": {
+        "estimate": "~330 items across 60 cases",
+        "breakdown": {
+          "per_case_effort": "~5-7 items per case × 6-dimension verification per CAQS §1.6",
+          "exhibit_verification": "Data consistency, row/column consumption, internal arithmetic checks — additional per-case effort beyond item verification",
+          "dl032_recalibration": "Included in recalibration estimate above"
+        }
+      }
+    },
+    "grand_total_item_operations": {
+      "estimate": "~1,500-2,200",
+      "note": "This is the number of item-level operations (author, recalibrate, fix, certify), not unique items. Some items receive multiple operations. Unique items touched: ~1,500-1,800 of 3,165 total (2,540 MCQs + 625 case items).",
+      "confidence": "LOW (pre-CAL-001). DL-031 resolution may shift estimates by ±30%."
+    }
+  },
+  "session_baseline_verification": {
+    "per_agents_md_rule_5": {
+      "certified_count_direct_grep": 2298,
+      "pack_totals": { "A": 500, "B": 500, "C": 500, "D": 500, "E": 540 },
+      "grep_method": "Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"'",
+      "verified_at": "2026-07-27 S832 Agent C baseline"
+    },
+    "case_certification_count": {
+      "raw_grep_count": 745,
+      "note": "Count exceeds total case items (625) — likely includes case-level 'ProductionStatus' or other non-item certified entries. Item-level certification needs boundary-aware parse for precise count.",
+      "verified_at": "2026-07-27 S832 Agent C baseline"
+    }
+  },
+  "recommendations_for_s833": {
+    "s833_focus": "Expansion planning — translate this gap register into executable work packages",
+    "top_priority_inputs": [
+      "1. CAL-001 implementation plan: DL-031 scan methodology, batch sizes, verification protocol",
+      "2. QLT-001 authoring plan: 285 distractor explanations for 95 Pack E Section C items, 4 batches of ≤28",
+      "3. QLT-002 scope verification: Confirm current DL-016 state across Packs A/C/D post-S805",
+      "4. CNT-003 design sprint: Prototype 10 Evaluate items across Sections A, D, E — establish template",
+      "5. CAL-001 post-resolution re-analysis: Re-run Difficulty and Bloom's distribution after DL-031 fix"
+    ],
+    "message_to_s833": "This register prioritizes learner safety (DL-021, DL-016) and foundational accuracy (DL-031). The Difficulty and Bloom's shortfall numbers are pre-CAL-001 estimates and will sharpen significantly after the definition-match reclassification. Do not commit to specific new-content item counts for CNT-001/CNT-002/CNT-004 until CAL-001 completes — the true Moderate pool size (and thus true Difficult shortfall) is currently unknown."
+  }
+}

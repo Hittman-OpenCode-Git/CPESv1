@@ -1,0 +1,206 @@
+{
+  "session": "S359",
+  "title": "Content Sustainability Analysis",
+  "timestamp": "2026-07-28T00:00:00Z",
+  "status": "COMPLETE",
+  "data_sources": [
+    "pack_a_corrected.js through pack_e_corrected.js (raw file grep/Select-String)",
+    "knowledge/REVISION_HISTORY.md (455 entries, 18,851 lines)",
+    "knowledge/DEFECT_LIBRARY.md (38 DL entries)",
+    "reports/session861/SESSION861_AUTHORING_METRICS.md",
+    "reports/S899_PHASE1_COMPLETION.json",
+    "reports/session868/SESSION868_EXPANSION_PROGRAM_SCORECARD.json",
+    "reports/session856/SESSION856_COHORT_B_SCORECARD.json",
+    "reports/session864/SESSION864_EXPANSION_SCORECARD.json",
+    "reports/session853/SESSION853_CONTENT_VALIDATION.md"
+  ],
+
+  "throughput": {
+    "items_per_session": 7.5,
+    "sessions_analyzed": 12,
+    "session_ids": ["S853", "S854", "S855", "S856", "S861", "S862", "S863", "S864", "S865", "S866", "S867", "S868", "S899"],
+    "yield_rate": 1.0,
+    "yield_rate_note": "100% — zero defects introduced across all analyzed content-editing sessions. Self-introduced DL-008 on P1-EC-008 caught and fixed same session.",
+    "analyze_items_per_hour": "~4 (authoring batch, per S856)",
+    "evaluate_items_per_hour": "~1 (requires stem redesign, per S856)",
+    "calibration_items_per_hour": "~3",
+    "total_content_edits_observed": 113,
+    "cohort_b_items": 25,
+    "cohort_c_items": 30,
+    "s899_phase1_items": 20,
+    "s899_slots_remaining": "~203 archived items (103 Pack C + 100 Pack D)",
+    "bottleneck": "Content availability — label-change upgrades exhausted in Sections C/D. Remaining Understand items (1,248) are predominantly definition-match (DL-031).",
+    "pipeline_status": "PLATEAUED — readiness score flat at 75 since S864. S868 confirms no improvement in latest wave.",
+    "estimated_stem_rewrite_sessions": "~160 sessions to close Analyze+Evaluate gap at current throughput"
+  },
+
+  "growth": {
+    "pool_total_items": 2540,
+    "pool_certified_items": 2320,
+    "pool_certified_pct": 91.3,
+    "per_pack": [
+      {
+        "pack": "A",
+        "file": "pack_a_corrected.js",
+        "total_items": 500,
+        "certified_count": 500,
+        "certified_pct": 100,
+        "sections": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 75, "F": 75},
+        "sections_closed": 6,
+        "sections_open": 0,
+        "explanation_wrong_fields": 2000,
+        "explanation_correct_count": 500,
+        "ec_chars": {"min": 53, "avg": 417, "max": 2117},
+        "ew_per_item": 4.0
+      },
+      {
+        "pack": "B",
+        "file": "pack_b_corrected.js",
+        "total_items": 500,
+        "certified_count": 500,
+        "certified_pct": 100,
+        "sections": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 75, "F": 75},
+        "sections_closed": 6,
+        "sections_open": 0,
+        "explanation_wrong_fields": 2000,
+        "explanation_correct_count": 500,
+        "ec_chars": {"min": 67, "avg": 262, "max": 1444},
+        "ew_per_item": 4.0
+      },
+      {
+        "pack": "C",
+        "file": "pack_c_corrected.js",
+        "total_items": 500,
+        "certified_count": 388,
+        "archived_count": 103,
+        "other_count": 9,
+        "certified_pct": 77.6,
+        "sections_closed": 4,
+        "sections_open": 2,
+        "section_details": {
+          "A (P1-AC)": {"total": 75, "certified": 75, "archived": 0, "other": 0, "closed": true},
+          "B (P1-BC)": {"total": 100, "certified": 100, "archived": 0, "other": 0, "closed": true},
+          "C (P1-CC)": {"total": 100, "certified": 100, "archived": 0, "other": 0, "closed": true},
+          "D (P1-DC)": {"total": 75, "certified": 75, "archived": 0, "other": 0, "closed": true},
+          "E (P1-EC)": {"total": 75, "certified": 19, "archived": 51, "other": 5, "closed": false},
+          "F (P1-FC)": {"total": 75, "certified": 19, "archived": 52, "other": 4, "closed": false}
+        },
+        "explanation_wrong_fields": 2000,
+        "explanation_correct_count": 500,
+        "ec_chars": {"min": 92, "avg": 235, "max": 2054},
+        "ew_per_item": 4.0,
+        "note": "Sections E+F have staggered dual-block architecture. 15 items in Section F are structurally unparseable. 42 XXXMARKER artifacts. 103 archived = DL-012 clones awaiting replacement."
+      },
+      {
+        "pack": "D",
+        "file": "pack_d_corrected.js",
+        "total_items": 500,
+        "certified_count": 392,
+        "archived_count": 97,
+        "other_count": 11,
+        "certified_pct": 78.4,
+        "sections_closed": 4,
+        "sections_open": 2,
+        "section_details": {
+          "A (P1-AD)": {"total": 75, "certified": 75, "archived": 0, "other": 0, "closed": true},
+          "B (P1-BD)": {"total": 100, "certified": 100, "archived": 0, "other": 0, "closed": true},
+          "C (P1-CD)": {"total": 100, "certified": 100, "archived": 0, "other": 0, "closed": true},
+          "D (P1-DD)": {"total": 75, "certified": 75, "archived": 0, "other": 0, "closed": true},
+          "E (P1-ED)": {"total": 75, "certified": 19, "archived": 51, "other": 5, "closed": false},
+          "F (P1-FD)": {"total": 75, "certified": 25, "archived": 44, "other": 6, "closed": false}
+        },
+        "explanation_wrong_fields": 2000,
+        "explanation_correct_count": 499,
+        "ec_chars": {"min": 105, "avg": 284, "max": 2182},
+        "ew_per_item": 4.0,
+        "note": "Sections E+F have staggered dual-block architecture. 97 archived = DL-012 clones awaiting replacement. 1 item missing ExplanationCorrect."
+      },
+      {
+        "pack": "E",
+        "file": "pack_e_corrected.js",
+        "total_items": 540,
+        "certified_count": 540,
+        "certified_pct": 100,
+        "sections": {"A": 75, "B": 100, "C": 100, "D": 75, "E": 115, "F": 75},
+        "sections_closed": 6,
+        "sections_open": 0,
+        "explanation_wrong_fields": 2160,
+        "explanation_correct_count": 540,
+        "ec_chars": {"min": 30, "avg": 192, "max": 1635},
+        "ew_per_item": 4.0,
+        "note": "Section E has 115 items (75 standard + 40 R-series). No DL-012 clone issues — different authoring pipeline."
+      }
+    ],
+    "growth_timeline": {
+      "2026-07-20": "Initial pool created (template-based bulk authoring)",
+      "2026-07-21": "First defect (DL-001) detected and fixed",
+      "2026-07-22": "CAQS standard established; certification begun",
+      "2026-07-23": "Heaviest remediation day — DL-008 full-pool sweep, DL-013 boilerplate cleanup, DL-017 corruption fix, DL-018/DL-021 field gaps",
+      "2026-07-24": "DL-025/026 remediation, DL-030 answer-key corrections, DL-021 Section C authoring",
+      "2026-07-25": "Session 700 global certification review; DL-031/032 difficulty calibration defects identified",
+      "2026-07-26": "DL-016/S805 Pack A Section E remediation; S808 Pack E R-series; governance guard expansion",
+      "2026-07-27": "Framework v2 deployment; Cohort B+C expansion (S853-S868); DL-035/036 pipeline gaps; S899 Phase 1 item authoring",
+      "2026-07-28": "S889-S892 Pack A final closure; S899 Phase 1 completion; DL-037 choice lead-in fix; S359 sustainability analysis"
+    }
+  },
+
+  "review_burden": {
+    "revision_history_entries": 455,
+    "revision_history_lines": 18851,
+    "revision_history_chars": 1670474,
+    "entries_per_day_active": [
+      {"date": "2026-07-20", "mentions": 5},
+      {"date": "2026-07-21", "mentions": 1},
+      {"date": "2026-07-22", "mentions": 54},
+      {"date": "2026-07-23", "mentions": 176},
+      {"date": "2026-07-24", "mentions": 113},
+      {"date": "2026-07-25", "mentions": 76},
+      {"date": "2026-07-26", "mentions": 127},
+      {"date": "2026-07-27", "mentions": 110},
+      {"date": "2026-07-28", "mentions": 28}
+    ],
+    "avg_entries_per_day_active_period": 70.6,
+    "peak_day": "2026-07-23 (176 mentions — DL-008/DL-013/DL-017 orchestrated remediation)",
+    "avg_passes_to_certification": 2.5,
+    "avg_passes_note": "Items typically undergo 2-4 review passes: initial audit (1), remediation (2), re-verification (3). DL-008/026 items required 3-5 passes.",
+    "defect_library_stats": {
+      "total_entries": 38,
+      "open_defects": 12,
+      "resolved_defects": 14,
+      "in_progress_defects": 1,
+      "informational_notes": 11,
+      "resolution_velocity_days": "~7.1 days avg from detection to resolution",
+      "active_open": ["DL-009", "DL-012", "DL-014", "DL-015", "DL-026", "DL-028", "DL-029", "DL-031", "DL-032", "DL-035", "DL-036", "DL-037"],
+      "critical_learner_pool_risks": "DL-035 (39 Certified Domain F items with empty distractor EW slots)"
+    }
+  },
+
+  "rework": {
+    "rework_percentage": 10.1,
+    "rework_note": "DL-028 tooling regression created ~175 empty slots during DL-013 remediation (~1,736 fields). ~10.1% of DL-013 remediation work was rework induced by the DL-028 regression.",
+    "remediation_induced_defects": [
+      {"id": "DL-019", "description": "Concurrent-write data loss — DL-008 remediation silently overwritten by DL-013 certification wave", "severity": "High", "status": "Resolved"},
+      {"id": "DL-028", "description": "DL-013 remediation tooling regression — short-form rewrite template left rotation-artifact slots empty", "severity": "Medium", "status": "Open"},
+      {"id": "DL-026 RC2", "description": "Pack D remediation artifact — DL-013 rewrites introduced ~175 distractor empty slots", "severity": "High", "status": "Partially Resolved"},
+      {"id": "DL-029", "description": "Regex block-scan false positives from CC-offset in block-window extraction", "severity": "High", "status": "Open"},
+      {"id": "DL-033", "description": "Wave 4 Pack E archival discrepancy from naming confusion", "severity": "Informational", "status": "Resolved"}
+    ],
+    "total_remediation_actions_estimated": 60,
+    "total_content_edit_batches": "~40 (DL-008: 6, DL-013: 8, DL-025: 2, DL-026: 12, DL-021: 1, DL-030: 1, S853-S856: 4, S861-S864: 4, S899: 4)",
+    "governance_guard_coverage": "Rules expanded from 5 to 9 during active period. Rule 6 (DL-026 block) and Rule 9 (binary lead-in polarity) added to prevent recurrence."
+  },
+
+  "raw_data": {
+    "revision_history_entries": 455,
+    "defect_library_entries": 38,
+    "open_defects": 12,
+    "resolved_defects": 14,
+    "in_progress_defects": 1,
+    "total_items_pool": 2540,
+    "total_certified_pool": 2320,
+    "total_explanation_wrong_fields": 10160,
+    "total_explanation_correct_fields": 2539,
+    "pool_analyze_evaluate_items": 148,
+    "pool_analyze_evaluate_pct": 5.83
+  }
+}

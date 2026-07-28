@@ -1,0 +1,485 @@
+{
+  "title": "SESSION316_WAVE3_AUTHORING",
+  "session": "316",
+  "generated": "2026-07-27",
+  "batchDescription": "Wave 3 Domain E replacement items — 10 items targeting E.1.a Internal Control Definition (3), E.1.i Safeguarding Controls (3), E.1.d Risk Assessment expansion (2), E.1.h SOX expansion (1), E.1.b COSO 2013 expansion (1)",
+  "qualityStandard": "S311 Authoring Quality Gate v1.0 — EC 400+ chars, EW[A-D] choice-specific 100+ chars, DL-008/026/013/010 compliant",
+  "batches": {
+    "batchA": {
+      "agent": "F",
+      "title": "E.1.a Internal Control Definition",
+      "items": [
+        "P1-E-R34",
+        "P1-E-R35",
+        "P1-E-R36"
+      ],
+      "count": 3
+    },
+    "batchB": {
+      "agent": "G",
+      "title": "E.1.i Safeguarding Controls",
+      "items": [
+        "P1-E-R26",
+        "P1-E-R27",
+        "P1-E-R29"
+      ],
+      "count": 3
+    },
+    "batchC": {
+      "agent": "H",
+      "title": "Risk Assessment, SOX, and COSO 2013 Expansion",
+      "items": [
+        "P1-E-R37",
+        "P1-E-R38",
+        "P1-E-R39",
+        "P1-E-R40"
+      ],
+      "count": 4
+    }
+  },
+  "items": [
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R34 internal control definition — COSO framework objectives",
+      "MicroTopic": "internal control objectives operations reporting compliance",
+      "UniqueConceptKey": "E-R34-internal-control-objectives",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "Difficulty": "Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "According to the COSO Internal Control—Integrated Framework, the three categories of objectives that internal control is designed to provide reasonable assurance regarding are:",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The COSO Internal Control—Integrated Framework (2013) identifies three categories of objectives that internal control helps an entity achieve: (1) operations objectives — relating to effectiveness and efficiency of the entity's operations, including operational and financial performance goals and safeguarding assets against loss; (2) reporting objectives — relating to internal and external financial and non-financial reporting, encompassing reliability, timeliness, transparency, and other terms established by regulators, standard setters, or the entity's policies; and (3) compliance objectives — relating to adherence to laws and regulations to which the entity is subject. These three categories are distinct but overlapping — a single control can serve more than one objective category. The CMA exam frequently tests this fundamental COSO concept as it establishes the scope and purpose of all subsequent internal control discussion. Note that safeguarding of assets falls under operations objectives in the 2013 Framework, which was a key update from the 1992 version where it was a separate category.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for internal control definition coverage.",
+      "QuestionID": "P1-E-R34",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the three COSO objective categories and how the 2013 Framework updated the treatment of asset safeguarding.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Strategic, operational, and financial reporting objectives",
+        "B": "Preventive, detective, and corrective control objectives",
+        "C": "Operations, reporting, and compliance objectives",
+        "D": "Entity-level, process-level, and transaction-level objectives"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.a Internal Control Definition — COSO objective categories",
+        "Distractors test common confusions including strategic objectives (ERM domain), control type classification, and scope hierarchy"
+      ],
+      "ExplanationWrongA": "Strategic objectives are part of the COSO Enterprise Risk Management (ERM) framework, not the Internal Control—Integrated Framework. While operational and financial reporting are correct COSO internal control categories, 'strategic' replaces 'compliance' incorrectly. A candidate selecting this option may be conflating the ERM and internal control frameworks.",
+      "ExplanationWrongB": "Preventive, detective, and corrective are classifications of individual controls based on when they act relative to an error or irregularity — not categories of organizational objectives. This is a common terminology trap: control categories (preventive/detective/corrective) vs. objective categories (operations/reporting/compliance).",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Entity-level, process-level, and transaction-level describe the scope or coverage of controls within an organization, not the categories of objectives that controls are designed to achieve. Entity-level controls affect the entire organization (e.g., tone at the top), while process-level and transaction-level controls are progressively more granular. These are useful classification dimensions but do not represent COSO's objective categories."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R35 inherent limitations — reasonable assurance concept",
+      "MicroTopic": "internal control limitations reasonable assurance",
+      "UniqueConceptKey": "E-R35-reasonable-assurance-limitations",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "Difficulty": "Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Internal control, no matter how well designed and operated, can provide only reasonable assurance — not absolute assurance — regarding achievement of an entity's objectives. Which of the following is the primary reason for this inherent limitation?",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "Internal control can only provide reasonable assurance because of several inherent limitations that cannot be eliminated regardless of control design quality. The most fundamental limitations are: (1) human judgment can be faulty, and controls can break down due to simple error or mistake; (2) controls can be circumvented by collusion — two or more individuals acting together to override segregation of duties; and (3) management has the ability to override internal controls. Additionally, the cost of a control should not exceed its expected benefit, creating a cost-benefit constraint on control implementation. These are not defects in control design — they are intrinsic to any system that involves human decision-making. The 'reasonable assurance' concept appears throughout the CMA exam framework and is important because it sets realistic expectations: internal controls reduce but do not eliminate the risk of not achieving objectives.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R35",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the inherent limitations of internal control: human error, collusion, management override, and cost-benefit constraint.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Human judgment can be faulty, controls can be circumvented through collusion, and management can override controls",
+        "B": "Internal controls are designed by external auditors who lack deep knowledge of company operations",
+        "C": "Most internal controls are detective rather than preventive, so errors can still occur before detection",
+        "D": "The COSO framework is voluntary guidance that organizations are not required to implement fully"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.a Internal Control Definition — reasonable assurance and inherent limitations",
+        "Distractors test misconceptions about auditor-designed controls, control-type limitations, and COSO mandate status"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Internal controls are designed by management, not by external auditors. External auditors evaluate the design and operating effectiveness of controls during an audit, but management is responsible for establishing and maintaining internal control. Additionally, the reason controls provide only reasonable assurance is not related to the identity of the designer — it relates to fundamental human and organizational limitations that would exist regardless of who designed the controls.",
+      "ExplanationWrongC": "While it is true that detective controls identify errors after they occur (as opposed to preventing them before they occur), this is not the primary reason for the 'reasonable assurance' concept. Even purely preventive control systems cannot provide absolute assurance because all controls — preventive or detective — are subject to human error, collusion, and management override. A candidate selecting this option may be conflating timing-based control limitations with the broader concept of inherent limitations.",
+      "ExplanationWrongD": "COSO is indeed a voluntary framework, but this is not the reason internal controls provide only reasonable assurance. Even if an organization implements every COSO principle to the fullest extent, the inherent limitations (human error, collusion, management override) still prevent absolute assurance. The voluntary nature of COSO is unrelated to the intrinsic limitations of any internal control system."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R36 internal control responsibility — management vs auditor roles",
+      "MicroTopic": "management responsibility internal control",
+      "UniqueConceptKey": "E-R36-management-responsibility-internal-control",
+      "LOSTag": "E.1.a Internal Control Definition",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Lakeland Industries recently completed its annual external audit. During the audit closing meeting, the CFO stated, 'The external auditors confirmed our internal controls are effective, so responsibility for maintaining those controls now shifts to them for the coming year.' Which of the following statements is correct regarding the CFO's assertion?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "Under both the COSO framework and professional auditing standards (including PCAOB AS 2201 and AICPA AU-C 940), management — not the external auditor — retains primary responsibility for establishing, maintaining, and monitoring internal control over financial reporting. The external auditor's role is to express an independent opinion on the effectiveness of those controls, but auditor involvement does not transfer or share the responsibility. Key points: (1) Section 404 of SOX explicitly requires management to assess and report on the effectiveness of internal control over financial reporting; (2) the external auditor audits management's assessment and independently evaluates the controls, but this is a verification role, not an assumption of responsibility; (3) management cannot delegate its control responsibility to auditors, consultants, or any third party. The CFO's statement reflects a fundamental misunderstanding of the management-auditor relationship in internal control.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R36",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between management's responsibility (design, implement, monitor) and the auditor's role (evaluate, opine) regarding internal control.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The CFO is correct — once auditors confirm effectiveness, they assume shared responsibility for the control environment",
+        "B": "Auditor responsibility depends on whether the audit is integrated or financial-statement-only; integrated audits shift partial control responsibility to the auditor",
+        "C": "Responsibility is shared equally between management and auditors under Section 404 of the Sarbanes-Oxley Act",
+        "D": "The CFO is incorrect — management retains primary responsibility for internal control regardless of auditor involvement or findings"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.a Internal Control Definition — management vs auditor responsibility",
+        "Distractors test misconceptions about shared responsibility, audit-type dependency, and SOX 404 misinterpretation"
+      ],
+      "ExplanationWrongA": "The CFO is incorrect. An external auditor's confirmation of control effectiveness does not transfer any control responsibility to the auditor. The auditor provides an independent opinion; management designed, implemented, and maintained the controls being audited. This distinction is fundamental to the audit profession: independence requires that the auditor does not assume a management role.",
+      "ExplanationWrongB": "The type of audit (integrated vs. financial-statement-only) affects the scope of auditor testing and reporting requirements but does not change who bears responsibility for internal control. In an integrated audit under PCAOB AS 2201, the auditor expresses an opinion on ICFR effectiveness, but this is an attestation — not an assumption of responsibility. Management's responsibility is unchanged regardless of audit type.",
+      "ExplanationWrongC": "Section 404 of SOX requires management to assess and report on internal control effectiveness (Section 404(a)) and requires the external auditor to attest to and report on management's assessment (Section 404(b) for accelerated filers). These are separate responsibilities — not a shared one. Management is responsible for the controls; the auditor is responsible for the opinion on those controls. There is no 'equal sharing' of control responsibility.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R26 segregation of duties — incompatible functions scenario",
+      "MicroTopic": "segregation of duties incompatible functions application",
+      "UniqueConceptKey": "E-R26-segregation-incompatible-functions",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Westlake Supply Company is restructuring its accounts payable department. The department manager proposes assigning each clerk full responsibility for a specific vendor set — including receiving vendor invoices, entering invoices into the system, preparing checks for those invoices, and reconciling the related vendor statements. Which internal control principle does this assignment violate?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "This assignment violates segregation of duties, which is a foundational preventive control. The principle requires that incompatible functions — specifically authorization, custody, recording, and reconciliation — be divided among different individuals to reduce the risk of error or fraud. In this scenario, a single clerk would: (1) record the transaction (enter invoice), (2) have custody of assets (prepare checks), and (3) perform reconciliation (reconcile vendor statements). This combination creates an opportunity for an employee to record fictitious invoices, prepare corresponding payments, and conceal the fraud through the reconciliation process. The classic incompatible pairing is recording and custody — if one person both records a transaction and controls the related asset, misappropriation risk substantially increases. The CMA exam frequently tests the ability to identify which specific duties are incompatible in a given scenario and why the combination creates risk.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces prior clone rotation group for segregation of duties application.",
+      "QuestionID": "P1-E-R26",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the four categories of incompatible functions: authorization, custody, recording, and reconciliation. No single person should control more than one category for a given transaction cycle.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "The assignment violates the principle of management override because the clerk could bypass approval controls",
+        "B": "The assignment violates segregation of duties because it combines recording, custody, and reconciliation functions in one role",
+        "C": "The assignment violates the principle of independent verification because only one person reviews each vendor account",
+        "D": "The assignment does not violate any internal control principle if each clerk's work is supervised by the department manager"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.i Safeguarding Controls — segregation of duties",
+        "Distractors test confusion with management override, independent verification, and supervision-as-substitute"
+      ],
+      "ExplanationWrongA": "Management override refers to management's ability to disregard prescribed controls — this is an inherent limitation of internal control, not a segregation of duties issue. The scenario describes a structural assignment of duties at the clerk level, not a manager bypassing controls. The violation is the combination of incompatible functions, not the presence of override authority.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "While the assignment does eliminate independent verification (since the same person enters, pays, and reconciles), the primary internal control principle violated is segregation of duties — the combination of incompatible functions. Independent verification (or independent checks) is a separate control principle that involves review by someone not involved in the original transaction processing. The root cause here is that incompatible duties have been combined; independent verification is the missing compensating control, but the initial violation is the lack of segregation.",
+      "ExplanationWrongD": "Supervision by the department manager does not compensate for the lack of segregation of duties. A supervisor can review work but cannot prevent an employee with combined recording and custody responsibilities from committing and concealing fraud — especially when that same employee controls the reconciliation process. Segregation of duties requires structural separation of incompatible functions, not just hierarchical oversight."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R27 authorization controls — transaction approval hierarchies",
+      "MicroTopic": "authorization controls general vs specific",
+      "UniqueConceptKey": "E-R27-authorization-general-specific",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Meridian Healthcare's procurement policy states: (1) department heads may approve purchases up to $5,000 within their approved budget, (2) purchases between $5,001 and $50,000 require the purchasing director's approval, (3) purchases over $50,000 require approval from the CFO and a vice president. This multi-tiered approval structure is an example of:",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "This multi-tiered approval structure is an example of authorization controls, which are a fundamental category of preventive controls within the safeguarding controls domain. Authorization controls ensure that transactions are executed only in accordance with management's general or specific approval. Two types exist: (1) general authorization — management establishes policies and guidelines (e.g., 'department heads may approve routine purchases up to $5,000 within budget'), and the organization follows these policies without case-by-case approval; and (2) specific authorization — management approves individual transactions on a case-by-case basis (e.g., the CFO and VP must each sign off on purchases over $50,000). Meridian's policy uses both types: general authorization for routine purchases under $5,000 and specific authorization for purchases above that threshold, with escalating approval requirements for larger amounts. This tiered approach is a standard internal control practice that balances operational efficiency with financial oversight.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R27",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between general authorization (policy-based, no individual sign-off) and specific authorization (case-by-case approval) as types of authorization controls.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Authorization controls, combining both general authorization (routine purchases within limits) and specific authorization (large purchases requiring individual approval)",
+        "B": "Segregation of duties, because different individuals are involved at each dollar threshold level",
+        "C": "Detective controls, because the approval process allows the organization to detect unauthorized purchases before payment",
+        "D": "Entity-level controls, because the policy applies across all departments rather than to a specific transaction type"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.i Safeguarding Controls — authorization controls",
+        "Distractors test confusion with segregation of duties, control timing classification, and entity-level scope"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Segregation of duties involves dividing incompatible functions (authorization, custody, recording, reconciliation) among different people to prevent any one person from controlling an entire transaction. While different people are involved at each threshold, they are all performing the authorization function — not different incompatible functions. This is an example of authorization hierarchy, not segregation of duties.",
+      "ExplanationWrongC": "Authorization controls are preventive, not detective. They stop unauthorized transactions before they occur by requiring approval. Detective controls identify errors after they have occurred (e.g., exception reports, reconciliations, physical inventory counts). While approvals can incidentally 'detect' an improper request, their primary purpose is to prevent it from being executed — making them preventive in nature.",
+      "ExplanationWrongD": "Entity-level controls are broad controls that affect the entire organization, such as the code of conduct, board oversight, and human resources policies. While a procurement authorization policy can apply broadly, it is specifically a transaction-level control on the purchasing cycle. The 'applies across all departments' characteristic does not automatically make it an entity-level control — what matters is the nature of the control, not its breadth of application."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R29 physical controls — custody and access restrictions",
+      "MicroTopic": "physical controls custody safeguarding assets",
+      "UniqueConceptKey": "E-R29-physical-controls-custody",
+      "LOSTag": "E.1.i Safeguarding Controls",
+      "Difficulty": "Easy",
+      "DifficultyScore": 2,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Which of the following combinations of safeguarding controls provides the strongest protection against misappropriation of physical inventory?",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "The strongest protection against inventory misappropriation combines: (1) physical access controls — locked storage areas, badge-access requirements, and surveillance cameras create barriers to unauthorized physical contact with inventory; (2) periodic independent counts — cycle counting or full physical counts performed by personnel independent of custody and recording functions detect discrepancies between recorded and actual inventory quantities; and (3) segregation of custody and recording — the person who has physical access to inventory should not also be responsible for maintaining the inventory records, as separating these functions prevents an employee from both stealing inventory and covering the theft by adjusting records. This three-layer approach addresses prevention (physical barriers), detection (independent counts), and structural integrity (segregation), creating a system where no single control failure results in undetected loss. The CMA exam emphasizes that physical controls alone are insufficient — they must be paired with accountability mechanisms.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R29",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the layering of safeguarding controls: physical access restrictions, periodic independent counts, and segregation of custody from recording.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Surveillance cameras covering all inventory areas and requiring employee badges for building entry",
+        "B": "Annual external audit of inventory by the company's independent accounting firm",
+        "C": "Locked storage with restricted access, periodic independent cycle counts, and segregation of custody from recording",
+        "D": "Requiring all inventory movements to be documented in the perpetual inventory system in real time"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.i Safeguarding Controls — physical controls and custody",
+        "Distractors test incomplete control combinations that lack structural separation or independent verification"
+      ],
+      "ExplanationWrongA": "Surveillance cameras and badge access are physical security measures, but they lack two critical elements: (1) periodic independent verification of inventory quantities against records, and (2) structural segregation of custody from recording. Cameras may deter theft but cannot confirm that recorded quantities are accurate. Without independent counts, inventory can shrink gradually over time without detection. A candidate selecting this option may be over-focusing on access restriction while missing the accountability dimension.",
+      "ExplanationWrongB": "An annual external audit provides only a point-in-time verification of inventory and typically covers only a sample of items. Fraud or theft can occur throughout the year and may not be detected by a once-yearly review. External audits complement — but do not replace — internal safeguarding controls. This option also lacks the segregation-of-duties dimension and the continuous protection of physical access controls.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Real-time documentation of inventory movements is an important recording control, but it does not prevent physical misappropriation or detect it if the records are falsified. Without physical access restrictions, an employee could remove inventory without documentation. Without independent counts, the recording system could show inventory that no longer exists. Real-time recording is a necessary part of a control system but insufficient on its own."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R37 risk identification — qualitative techniques",
+      "MicroTopic": "risk identification brainstorming Delphi SWOT",
+      "UniqueConceptKey": "E-R37-risk-identification-techniques",
+      "LOSTag": "E.1.d Risk Assessment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Omega Financial Services is conducting its annual risk assessment. The risk management team wants to identify emerging risks related to a new cryptocurrency custody product the company plans to launch. Because no team member has significant cryptocurrency experience, the team decides to survey external experts anonymously over multiple rounds, with each round's aggregated results shared before the next round. This technique is best described as:",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "The technique described is the Delphi method, a structured group communication process used for risk identification when expert input is needed but subject-matter experts are geographically dispersed, anonymous input is desired to prevent dominance by strong personalities, or the topic involves significant uncertainty. Key characteristics of the Delphi method include: (1) anonymous participation — experts respond independently without knowing who else is participating; (2) multiple iterative rounds — after each round, aggregated (not individual) responses are shared, and participants can revise their responses based on the group's collective input; (3) facilitation by a coordinator who designs the questionnaires and compiles responses between rounds; and (4) convergence toward consensus over successive rounds. The Delphi method is particularly useful for emerging-technology risk assessment because it surfaces perspectives that might be suppressed in face-to-face meetings where junior participants defer to senior colleagues. The CMA exam tests the ability to distinguish Delphi from other risk identification techniques such as brainstorming (unstructured, interactive, single session), SWOT analysis (internal/external framework), and scenario analysis (narrative-based exploration of possible futures).",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R37",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review qualitative risk identification techniques: Delphi method (anonymous, iterative, expert-driven), brainstorming (interactive group session), SWOT analysis (internal/external framework), and scenario analysis (narrative what-if exploration).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Brainstorming, because the team is generating ideas about potential risks in a new product area",
+        "B": "The Delphi method, because the team is using anonymous, multi-round expert surveys to converge toward consensus",
+        "C": "SWOT analysis, because the team is identifying both internal weaknesses (lack of experience) and external threats (emerging product risks)",
+        "D": "Scenario analysis, because the team is exploring possible future states related to a new product launch"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — risk identification techniques",
+        "Distractors test differentiation of Delphi from brainstorming, SWOT, and scenario analysis"
+      ],
+      "ExplanationWrongA": "Brainstorming is typically conducted as an interactive group session where participants generate ideas freely and build on each other's suggestions in real time. The scenario describes anonymous, multi-round surveys distributed to external experts, which is the defining characteristic of the Delphi method. While both techniques are used for risk identification, the Delphi method's anonymous, iterative structure is specifically designed to eliminate the groupthink, dominant-personality, and status-differential effects that can compromise brainstorming.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "SWOT analysis evaluates an organization's internal Strengths and Weaknesses together with external Opportunities and Threats using a structured 2×2 framework. While the scenario does mention 'new product' (which could be an opportunity) and 'no team experience' (which could be a weakness), the technique being used — anonymous expert surveys over multiple rounds — is the Delphi method, not SWOT analysis. SWOT is an analytical framework; Delphi is a data collection and consensus-building technique.",
+      "ExplanationWrongD": "Scenario analysis develops narrative descriptions of possible future states to explore how risks might manifest under different conditions. It typically involves constructing detailed what-if stories rather than iterative anonymous surveys. While both scenario analysis and the Delphi method could be applied to new-product risk assessment, the specific technique described (anonymous multi-round expert surveys) is the Delphi method."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R38 risk analysis — inherent vs residual risk",
+      "MicroTopic": "inherent risk residual risk risk response",
+      "UniqueConceptKey": "E-R38-inherent-residual-risk",
+      "LOSTag": "E.1.d Risk Assessment",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "Pacific Rim Trading Company assessed its foreign exchange (FX) risk and determined that without any controls, potential FX losses could reach $2.5 million annually. After implementing a hedging program and dual-approval requirements for foreign currency transactions, management estimates that residual FX exposure is approximately $400,000 annually. The $2.5 million figure represents:",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "The $2.5 million represents inherent risk — the risk to the entity in the absence of any management actions to alter either the risk's likelihood or its impact. Inherent risk is the raw, untreated exposure before controls are applied. The $400,000 is the residual risk — the risk that remains after management implements risk responses (in this case, hedging and dual-approval controls). The risk assessment process follows a logical flow: (1) identify risks → (2) assess inherent risk (magnitude without controls) → (3) evaluate existing or planned controls → (4) determine residual risk (remaining exposure after controls) → (5) decide whether residual risk is within the organization's risk appetite or requires additional response. The distinction between inherent and residual risk is fundamental to the COSO risk assessment component and is tested on the CMA exam because it connects risk identification to control design decisions.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R38",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between inherent risk (before controls), residual risk (after controls), and risk appetite (acceptable level of residual risk).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Inherent risk — the exposure before any management actions to mitigate or control the risk",
+        "B": "Residual risk — the risk that remains after the implemented controls reduce the exposure",
+        "C": "Risk appetite — the amount of risk the organization is willing to accept in pursuit of its objectives",
+        "D": "Control risk — the risk that internal controls will fail to prevent or detect a material misstatement"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.d Risk Assessment — inherent vs residual risk",
+        "Distractors test confusion between inherent risk and residual risk, risk appetite, and control risk (auditing concept)"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "The $400,000 figure (not the $2.5 million) represents residual risk — the exposure remaining after controls are implemented. The $2.5 million is the inherent risk because it is assessed before controls. A candidate selecting this option has reversed the definitions of inherent and residual risk.",
+      "ExplanationWrongC": "Risk appetite is the amount of risk, at a broad level, that an organization is willing to accept in pursuit of its objectives — it is a threshold or boundary, not a measured exposure amount. While the $400,000 residual risk should be compared to the organization's risk appetite, the $2.5 million figure is a risk assessment magnitude (specifically, inherent risk), not the organization's willingness to accept risk.",
+      "ExplanationWrongD": "Control risk is an auditing concept from the audit risk model (Audit Risk = Inherent Risk × Control Risk × Detection Risk). It refers to the risk that a misstatement could occur and not be prevented or detected by internal controls. While related to internal control effectiveness, it is not synonymous with inherent risk. The $2.5 million is an enterprise risk management assessment, not an audit risk model input."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R39 SOX Title III — corporate responsibility for financial reports",
+      "MicroTopic": "SOX 302 certification requirements CEO CFO",
+      "UniqueConceptKey": "E-R39-SOX-302-906-comparison",
+      "LOSTag": "E.1.h Sarbanes-Oxley Act (SOX)",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "During the preparation of its quarterly Form 10-Q filing, the CEO and CFO of Delta Manufacturing must certify several items. One certification required by Section 302 of the Sarbanes-Oxley Act that is NOT explicitly required by the separate Section 906 criminal certification is:",
+      "CorrectChoice": "C",
+      "ExplanationCorrect": "SOX Section 302 (codified at 15 U.S.C. § 7241) requires the CEO and CFO to certify, among other things, that they are responsible for establishing and maintaining disclosure controls and procedures and internal control over financial reporting, and that they have evaluated the effectiveness of those disclosure controls and procedures within 90 days before the report. Section 906 (18 U.S.C. § 1350) is a separate criminal certification that the periodic report fully complies with SEC requirements and fairly presents the financial condition and results of operations — it carries criminal penalties (up to $5 million fine and/or 20 years imprisonment for knowing violations). The key distinction tested: Section 302 requires certification about the officers' responsibility for and evaluation of internal controls; Section 906 focuses on the accuracy and fairness of the report itself. Both sections' certifications must accompany periodic filings (Forms 10-K and 10-Q), but the content and legal consequences differ. The CMA exam tests SOX provisions because they fundamentally changed management accountability for internal control.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R39",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review SOX Section 302 (disclosure controls certification + ICFR responsibility) vs. Section 906 (criminal certification of report accuracy) vs. Section 404 (management assessment of ICFR + auditor attestation).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "That the report does not contain any untrue statement of material fact",
+        "B": "That the financial statements fairly present, in all material respects, the financial condition of the issuer",
+        "C": "That the officers are responsible for establishing and maintaining internal control over financial reporting and have evaluated its effectiveness",
+        "D": "That the report fully complies with the requirements of the Securities Exchange Act of 1934"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.h SOX — Sections 302 and 906 certification requirements",
+        "Distractors test distinguishing Section 302 (controls responsibility) from Section 906 (fair presentation/compliance)"
+      ],
+      "ExplanationWrongA": "Both Sections 302 and 906 require certification that the report does not contain untrue statements of material fact. Section 302 requires that 'based on the officer's knowledge, the report does not contain any untrue statement of a material fact,' and Section 906 requires that the report 'fully complies' with SEC requirements and 'fairly presents' the financial condition — which implicitly includes no material misstatements. This is not unique to Section 302.",
+      "ExplanationWrongB": "The 'fairly presents' language is associated with Section 906 (the criminal certification), which requires certification that 'information contained in the periodic report fairly presents, in all material respects, the financial condition and results of operations of the issuer.' This is an explicitly Section 906 requirement — not the answer we are looking for.",
+      "ExplanationWrongC": "",
+      "ExplanationWrongD": "Full compliance with the Exchange Act is a Section 906 requirement (the report 'fully complies with the requirements of Section 13(a) or 15(d) of the Securities Exchange Act of 1934'). While Section 302 indirectly addresses compliance, the explicit 'fully complies' language is characteristic of the Section 906 certification. This is not the unique-to-302 requirement."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R40 COSO 2013 — 17 principles across five components",
+      "MicroTopic": "COSO 2013 principles control environment risk assessment",
+      "UniqueConceptKey": "E-R40-COSO-2013-principles",
+      "LOSTag": "E.1.b Internal Control Framework (COSO 2013)",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "ProductionStatus": "Draft",
+      "Stem": "The COSO 2013 Internal Control—Integrated Framework expanded the original 1992 framework by articulating 17 principles distributed across the five components of internal control. Which of the following correctly pairs a COSO component with one of its supporting principles?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "The 2013 COSO Framework expanded the five components from the 1992 Framework by articulating 17 principles that represent fundamental concepts associated with each component: (1) Control Environment (5 principles) — includes demonstrating commitment to integrity and ethical values, exercising board oversight responsibility, establishing structure/authority/responsibility, demonstrating commitment to competence, and enforcing accountability; (2) Risk Assessment (4 principles) — includes specifying suitable objectives, identifying and analyzing risks, assessing fraud risk, and identifying and analyzing significant change; (3) Control Activities (3 principles) — includes selecting and developing control activities, selecting and developing general controls over technology, and deploying through policies and procedures; (4) Information and Communication (3 principles) — includes using relevant information, communicating internally, and communicating externally; and (5) Monitoring Activities (2 principles) — includes conducting ongoing and/or separate evaluations, and evaluating and communicating deficiencies. The pair 'Monitoring Activities — Evaluating and communicating control deficiencies' is correct because Principle 17 (the final principle) requires management to evaluate identified control deficiencies and communicate them to parties responsible for corrective action, including senior management and the board as appropriate.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples.",
+      "QuestionID": "P1-E-R40",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the 17 COSO 2013 principles organized by the five components: Control Environment (5), Risk Assessment (4), Control Activities (3), Information & Communication (3), Monitoring (2).",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Control Environment — Identifying and analyzing changes that could significantly affect the system of internal control",
+        "B": "Risk Assessment — Demonstrating commitment to attract, develop, and retain competent individuals",
+        "C": "Control Activities — Communicating relevant internal control matters to external parties",
+        "D": "Monitoring Activities — Evaluating and communicating internal control deficiencies to those responsible for corrective action"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.b COSO 2013 Framework — 17 principles",
+        "Distractors misalign principles with incorrect COSO components — tests principle-to-component mapping"
+      ],
+      "ExplanationWrongA": "Identifying and analyzing changes that could significantly affect internal control is Principle 9 — part of the Risk Assessment component, not the Control Environment. The Control Environment's principles focus on integrity, ethics, board oversight, structure, competence, and accountability. A candidate selecting this option may have memorized that 'assessment' and 'change' go together but assigned it to the wrong component.",
+      "ExplanationWrongB": "Demonstrating commitment to competence (attracting, developing, and retaining competent individuals) is Principle 4 — part of the Control Environment component, not Risk Assessment. The Risk Assessment component's principles address objective-setting, risk identification/analysis, fraud risk assessment, and change identification. A candidate may be confused because 'risk' can involve assessment of competence gaps, but the principle itself belongs to the Control Environment.",
+      "ExplanationWrongC": "Communicating with external parties about internal control matters is Principle 15 — part of the Information and Communication component, not Control Activities. Control Activities principles cover selecting/developing controls, technology general controls, and deploying controls through policies and procedures. External communication about internal controls falls under Information and Communication.",
+      "ExplanationWrongD": ""
+    }
+  ],
+  "gate0Status": "DUPLICATE_PREVENTION_PASS",
+  "gate1Status": "COMPLETE",
+  "gates2through4": "DEFERRED_TO_S317_CERTIFICATION_REVIEW"
+}

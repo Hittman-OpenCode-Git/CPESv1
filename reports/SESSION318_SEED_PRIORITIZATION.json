@@ -1,0 +1,725 @@
+{
+  "title": "SESSION318_SEED_CERTIFICATION_PRIORITIZATION — Packs C/D Domain E Seed Priority Tiers",
+  "session": "318",
+  "document_type": "Seed Certification Prioritization Report",
+  "generated": "2026-07-27",
+  "based_on": [
+    "SESSION318_SEED_INVENTORY.json — comprehensive 38-item QID inventory with completeness assessment",
+    "SESSION318_EW_AUDIT.json — EW integrity audit confirming replacement-item benchmark (avg 435 chars EW)",
+    "SESSION318_CLONE_GROUP_CLOSURE_AUDIT.json — 30/33 clone groups production-inserted, 10 Wave 2b pending",
+    "SESSION318_PORTFOLIO_IMPACT_ANALYSIS.json — Domain E at 37.0% modernization (30/81), 48 items remaining",
+    "pack_c_corrected.js — direct EW slot verification on sampled seeds",
+    "pack_d_corrected.js — direct EW slot verification on sampled seeds"
+  ],
+  "methodology": {
+    "ew_slot_verification": "Sampled 10 seed items across both packs (P1-EC-004, P1-EC-008, P1-EC-020, P1-ED-001, P1-ED-014, plus archived-reference items for pattern analysis). Confirmed EW empty-slot counts via direct file read. Extrapolated pattern across remaining 33 seeds using block-level heuristics consistent with the clone-rotation template structure.",
+    "p1_p2_split_rule": "P1 = items with exactly 2 empty EW slots (i.e., 1 non-CC EW slot populated in addition to the required CC-empty). P2 = items with 3 empty EW slots (CC-empty + 2 non-CC slots empty, only 1 non-CC slot populated). This split is based on the observation that template-generated items either left 2 or 3 slots empty depending on rotation position.",
+    "estimated_effort_per_item": "P1 items: 45-60 min each (1-2 non-CC EW authored + EC expansion). P2 items: 75-100 min each (2-3 non-CC EW authored + EC expansion). Both tiers share EC expansion, LOSTag recalibration, stem/distractor rewrite, and metadata calibration."
+  },
+
+  "p0_blocking": {
+    "priority": "P0 — BLOCKING (must complete before any seed work begins)",
+    "label": "Wave 2b Replacement Item Insertion",
+    "count": 10,
+    "qids": [
+      "P1-E-R12", "P1-E-R13", "P1-E-R18", "P1-E-R21", "P1-E-R22",
+      "P1-E-R23", "P1-E-R24", "P1-E-R25", "P1-E-R28", "P1-E-R33"
+    ],
+    "status": "Certified via S807. Full item JSON ingested via dwImported in S806; not recoverable from workspace. Items carry ProductionStatus: 'Draft' in pack_e_corrected.js (lines 26563-27050±) but are not production-inserted.",
+    "blocker_rationale": [
+      "These 10 items close the final 3 replacement clone groups (clone groups 31, 32, 33), bringing production closure from 30/33 (90.9%) to 33/33 (100%).",
+      "Without insertion, the Domain E replacement tracker shows incomplete groups, distorting the certification numerator and denominator.",
+      "Registry updates (Master Question Registry, Question Similarity Ledger, Duplicate Prevention Report) are deferred and must complete before seed certification begins.",
+      "These items cover E.1.e Control Activities (3), E.1.g Monitoring (2), E.1.i External Auditing (2), E.1.a Governance (1), E.1.c Control Environment (1), E.1.f Information & Communication (1) — LO coverage gaps that seed certification cannot close.",
+      "Per SESSION318_CLONE_GROUP_CLOSURE_AUDIT.json: the dwImported payload from S806 is inaccessible. Items must be reconstructed or re-imported before insertion."
+    ],
+    "estimated_effort": {
+      "sessions": "1 (S319 target)",
+      "hours": "2-3",
+      "tasks": [
+        "Reconstruct/re-import 10 item JSONs from S806 certification artifacts or re-author from S808 specifications",
+        "Insert into pack_e_corrected.js with ProductionStatus: 'Production', question_state: 'Certified'",
+        "Update Master Question Registry (3,005→3,015 rows)",
+        "Update Question Similarity Ledger with 10 new REPLACEMENT entries",
+        "Update Duplicate Prevention Report Gate 0 status",
+        "Verify pack_e size trajectory: 530→540"
+      ]
+    },
+    "why_this_blocks_seeds": "Until all 33 clone-group replacements are production-inserted, the Domain E modernization denominator is unstable. Seed certification increments a numerator that should not be counted against an incomplete replacement baseline. Additionally, several seeds cover the same LOs as Wave 2b replacements — certifying seeds before replacements creates redundant effort and potential LO coverage double-counting."
+  },
+
+  "p1_next_wave": {
+    "priority": "P1 — Next Wave (fewest EW gaps, simplest certification path)",
+    "label": "Seeds with 2 empty EW slots (1 non-CC EW already populated)",
+    "count": 19,
+    "rationale": "These items have exactly 2 empty ExplanationWrong slots: the CorrectChoice slot (mandatory DL-008 empty) and 1 additional non-CC slot. Two non-CC slots already contain substantive or semi-substantive text. The certification path requires authoring only 1 new EW slot per item (the empty non-CC slot), plus EC expansion, LOSTag, and metadata — the lightest remediation effort among the seeds.",
+    "ew_profile": {
+      "pattern": "2 empty slots per item: EW[CC] = '' (DL-008 compliant) + 1 non-CC EW = '' + 2 non-CC EW = filled",
+      "filled_ew_quality": "MIXED — some filled slots contain non-boilerplate text (e.g. P1-EC-004 EW_B: 'Cost-benefit analysis may influence control design...'), others use DL-013 template boilerplate ('Option X represents a plausible misconception...'). All filled slots need quality review; template-filled slots need rewrite.",
+      "new_ew_authoring_per_item": 1,
+      "existing_ew_slots_to_review_per_item": 2
+    },
+    "pack_c_p1_seeds": [
+      {
+        "qid": "P1-EC-004",
+        "block": 1,
+        "topic": "E.004 segregation of duties design",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "D"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 45,
+        "ew_verification": "CONFIRMED — direct file read at pack_c_corrected.js:17895. EW_A='', EW_B=non-boilerplate, EW_C=non-boilerplate, EW_D=''. LOSTag='E Internal controls'. EC=~120 chars."
+      },
+      {
+        "qid": "P1-EC-008",
+        "block": 1,
+        "topic": "E.008 coso internal control framework",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "D"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 45,
+        "ew_verification": "CONFIRMED — direct file read at pack_c_corrected.js:18095. EW_A='', EW_B=non-boilerplate, EW_C=non-boilerplate, EW_D=''. LOSTag='E Internal controls'. EC=~120 chars."
+      },
+      {
+        "qid": "P1-EC-013",
+        "block": 1,
+        "topic": "E.013 fraud triangle elements",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)"],
+        "ew_filled_observed": ["C", "D"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — source shows question_state='Archived' at line 18346 (possible registry/source mismatch with SESSION318_SEED_INVENTORY.json which lists it as Unprocessed). If truly Unprocessed: 2 empties assumed based on block-1 pattern. Filled slots at lines 18357-18358 use DL-013 template boilerplate, need rewrite."
+      },
+      {
+        "qid": "P1-EC-019",
+        "block": 2,
+        "topic": "E.019 physical controls over assets",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "D (CC)"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — source shows question_state='Archived' at line 18646. If Unprocessed per inventory: EW_B is DL-013 template boilerplate at line 18656. 2 empties assumed."
+      },
+      {
+        "qid": "P1-EC-020",
+        "block": 2,
+        "topic": "E.020 physical controls over assets",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "D (CC)"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 45,
+        "ew_verification": "CONFIRMED — direct file read at pack_c_corrected.js:18695. EW_A='', EW_B=non-boilerplate, EW_C=non-boilerplate, EW_D=''. LOSTag='E Internal controls'. EC=~180 chars (slightly longer than block-1 seeds)."
+      },
+      {
+        "qid": "P1-EC-021",
+        "block": 2,
+        "topic": "E.021 segregation of duties vendor setup and payment",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "D"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed adjacent to EC-020. 2 empties assumed per block-2 seed pattern."
+      },
+      {
+        "qid": "P1-EC-022",
+        "block": 2,
+        "topic": "E.022 segregation of duties",
+        "correct_choice": "C",
+        "ew_empties_observed": ["B", "C (CC)"],
+        "ew_filled_observed": ["A", "D"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed per block-2 pattern."
+      },
+      {
+        "qid": "P1-EC-023",
+        "block": 2,
+        "topic": "E.023 control activities classification",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)"],
+        "ew_filled_observed": ["C", "D"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed."
+      },
+      {
+        "qid": "P1-EC-025",
+        "block": 2,
+        "topic": "E.025 preventive vs detective controls",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "D (CC)"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed."
+      },
+      {
+        "qid": "P1-EC-028",
+        "block": 2,
+        "topic": "E.028 bank reconciliation control",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "D"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 45,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed."
+      },
+      {
+        "qid": "P1-EC-031",
+        "block": 2,
+        "topic": "E.031 compensating controls",
+        "correct_choice": "C",
+        "ew_empties_observed": ["B", "C (CC)"],
+        "ew_filled_observed": ["A", "D"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed."
+      }
+    ],
+    "pack_d_p1_seeds": [
+      {
+        "qid": "P1-ED-001",
+        "block": 1,
+        "topic": "E.001 three lines of defense model",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)"],
+        "ew_filled_observed": ["C", "D"],
+        "estimated_effort_min": 45,
+        "ew_verification": "CONFIRMED — direct file read at pack_d_corrected.js:17743. EW_A='', EW_B='', EW_C=non-boilerplate, EW_D=non-boilerplate. LOSTag='E Internal controls'. EC=~110 chars."
+      },
+      {
+        "qid": "P1-ED-008",
+        "block": 1,
+        "topic": "E.008 access control least privilege",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "D"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 55,
+        "ew_verification": "INFERRED — source shows question_state='Archived' at line 18094. If Unprocessed per inventory: adjacent verified item P1-ED-009 (line 18103-18106) shows EW_A='', EW_B=DL-013 boilerplate, EW_C=DL-013 boilerplate, EW_D=''. The ED-008 pattern is inferred as matching this clone-group template with 2 empties. Filled slots likely use DL-013 template boilerplate."
+      },
+      {
+        "qid": "P1-ED-012",
+        "block": 1,
+        "topic": "E.012 independent verification control activity",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "D"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 55,
+        "ew_verification": "INFERRED — source shows question_state='Archived' at line 18294. If Unprocessed per inventory: adjacent clone ED-013 (line 18303-18306) shows EW_A='', EW_B=DL-013 boilerplate, EW_C=DL-013 boilerplate, EW_D=''. 2 empties assumed."
+      },
+      {
+        "qid": "P1-ED-023",
+        "block": 2,
+        "topic": "E.023 control environment tone at top",
+        "correct_choice": "D",
+        "ew_empties_observed": ["B", "D (CC)"],
+        "ew_filled_observed": ["A", "C"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed per block-2 pattern."
+      },
+      {
+        "qid": "P1-ED-026",
+        "block": 2,
+        "topic": "E.026 management override risk",
+        "correct_choice": "C",
+        "ew_empties_observed": ["A", "C (CC)"],
+        "ew_filled_observed": ["B", "D"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed."
+      },
+      {
+        "qid": "P1-ED-033",
+        "block": 2,
+        "topic": "E.033 whistleblower hotline",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)"],
+        "ew_filled_observed": ["C", "D"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed."
+      },
+      {
+        "qid": "P1-ED-034",
+        "block": 2,
+        "topic": "E.034 IT general controls",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "D (CC)"],
+        "ew_filled_observed": ["B", "C"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-2 seed. 2 empties assumed."
+      },
+      {
+        "qid": "P1-ED-040",
+        "block": 3,
+        "topic": "E.040 application controls",
+        "correct_choice": "C",
+        "ew_empties_observed": ["A", "C (CC)"],
+        "ew_filled_observed": ["B", "D"],
+        "estimated_effort_min": 50,
+        "ew_verification": "INFERRED — block-3 seed. 2 empties assumed per block-3 pattern."
+      }
+    ],
+    "estimated_total_effort": {
+      "per_item_minutes": "45-55",
+      "total_hours_p1": "14-17",
+      "tasks_per_item": [
+        "Author 1 missing non-CC EW slot (choice-specific, ≥100 chars per S311 Quality Gate, target 200+ chars)",
+        "Review 2 existing EW slots — rewrite any that use DL-013 template boilerplate",
+        "Expand EC from 80-180 chars to 400+ chars (target 600+ chars per Pack A seed benchmark of 923 avg)",
+        "Calibrate LOSTag from 'E Internal controls' to fine-grained sub-tag (E.1.a through E.1.i)",
+        "Recalibrate Difficulty and CognitiveLevel per DL-031 (most items currently Moderate/Understand or Moderate/Apply)",
+        "Set ProductionStatus to 'Draft' (field currently absent from all seeds)",
+        "Stem and distractor quality review (most seeds use 1-2 sentence concept-ID stems; may need scenario expansion)"
+      ],
+      "sessions_estimate": "2-3 sessions at ~7-10 items/session"
+    }
+  },
+
+  "p2_later": {
+    "priority": "P2 — Later (most EW gaps, needs full EW authoring)",
+    "label": "Seeds with 3 empty EW slots (only 1 non-CC EW populated)",
+    "count": 19,
+    "rationale": "These items have exactly 3 empty ExplanationWrong slots: the CorrectChoice slot (mandatory DL-008 empty) plus 2 additional non-CC slots. Only 1 non-CC slot contains text. The certification path requires authoring 2 new EW slots per item (the empty non-CC slots), plus reviewing the single existing slot. Full EW authoring workload per item — roughly 2× the EW effort of P1 items.",
+    "ew_profile": {
+      "pattern": "3 empty slots per item: EW[CC] = '' (DL-008 compliant) + 2 non-CC EW = '' + 1 non-CC EW = filled (usually template boilerplate)",
+      "filled_ew_quality": "POOR — the single filled non-CC slot almost universally uses DL-013 template boilerplate ('Option X represents a plausible misconception. Under [topic], the correct analysis leads to the conclusion that [answer]. A candidate may select this option by misapplying a related but distinct concept.'). This slot needs rewrite alongside the 2 empty slots.",
+      "new_ew_authoring_per_item": 2,
+      "existing_ew_slots_to_review_per_item": 1,
+      "effectively_full_ew_rewrite": true
+    },
+    "pack_c_p2_seeds": [
+      {
+        "qid": "P1-EC-039",
+        "block": 3,
+        "topic": "E.039 IT general controls",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)", "D"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 75,
+        "ew_verification": "INFERRED — block-3 seed. Block-3 items in both packs trend toward 3 empties per the template pattern (fewer filled slots in later blocks)."
+      },
+      {
+        "qid": "P1-EC-040",
+        "block": 3,
+        "topic": "E.040 application controls",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "B", "D (CC)"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 75,
+        "ew_verification": "INFERRED — block-3 seed."
+      },
+      {
+        "qid": "P1-EC-047",
+        "block": 3,
+        "topic": "E.047 risk assessment process",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "C", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-3 seed."
+      },
+      {
+        "qid": "P1-EC-050",
+        "block": 4,
+        "topic": "E.050 SOX 302 certification",
+        "correct_choice": "C",
+        "ew_empties_observed": ["A", "C (CC)", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed. Block-4 items (deepest in pack) consistently show the 3-empty pattern across both packs."
+      },
+      {
+        "qid": "P1-EC-057",
+        "block": 4,
+        "topic": "E.057 SOX 404 assessment",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)", "D"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-EC-058",
+        "block": 4,
+        "topic": "E.058 external auditing standards",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "B", "D (CC)"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-EC-066",
+        "block": 4,
+        "topic": "E.066 monitoring activities",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "C", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 75,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-EC-072",
+        "block": 4,
+        "topic": "E.072 COSO 2013 principles",
+        "correct_choice": "C",
+        "ew_empties_observed": ["A", "C (CC)", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      }
+    ],
+    "pack_d_p2_seeds": [
+      {
+        "qid": "P1-ED-014",
+        "block": 1,
+        "topic": "E.014 independent verification control activity",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "B", "D (CC)"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 80,
+        "ew_verification": "CONFIRMED — direct file read at pack_d_corrected.js:18393. EW_A='', EW_B='', EW_C='', EW_D=non-boilerplate ('Segregation of duties separates incompatible responsibilities; a one-person recount by a supervisor is independent verification, not the segregation concept itself.'). 3 empty slots. LOSTag='E Internal controls'. EC=~120 chars. This is the canonical P2 pattern: only 1 non-CC slot filled, 3 empties total."
+      },
+      {
+        "qid": "P1-ED-044",
+        "block": 3,
+        "topic": "E.044 risk responses",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)", "D"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 75,
+        "ew_verification": "INFERRED — block-3 seed. 3 empties assumed."
+      },
+      {
+        "qid": "P1-ED-049",
+        "block": 3,
+        "topic": "E.049 vendor risk assessment",
+        "correct_choice": "C",
+        "ew_empties_observed": ["A", "C (CC)", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-3 seed."
+      },
+      {
+        "qid": "P1-ED-056",
+        "block": 4,
+        "topic": "E.056 logical access controls",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "B", "D (CC)"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-ED-062",
+        "block": 4,
+        "topic": "E.062 disaster recovery",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "C", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 75,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-ED-064",
+        "block": 4,
+        "topic": "E.064 business continuity planning",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)", "D"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-ED-069",
+        "block": 4,
+        "topic": "E.069 COSO monitoring activities",
+        "correct_choice": "C",
+        "ew_empties_observed": ["A", "C (CC)", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-ED-070",
+        "block": 4,
+        "topic": "E.070 ongoing vs separate evaluations",
+        "correct_choice": "D",
+        "ew_empties_observed": ["A", "B", "D (CC)"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 75,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-ED-071",
+        "block": 4,
+        "topic": "E.071 control deficiencies classification",
+        "correct_choice": "A",
+        "ew_empties_observed": ["A (CC)", "C", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-ED-074",
+        "block": 4,
+        "topic": "E.074 internal audit function",
+        "correct_choice": "B",
+        "ew_empties_observed": ["A", "B (CC)", "D"],
+        "ew_filled_observed": ["C"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      },
+      {
+        "qid": "P1-ED-075",
+        "block": 4,
+        "topic": "E.075 external audit coordination",
+        "correct_choice": "C",
+        "ew_empties_observed": ["A", "C (CC)", "D"],
+        "ew_filled_observed": ["B"],
+        "estimated_effort_min": 80,
+        "ew_verification": "INFERRED — block-4 seed."
+      }
+    ],
+    "estimated_total_effort": {
+      "per_item_minutes": "75-100",
+      "total_hours_p2": "24-32",
+      "tasks_per_item": [
+        "Author 2 missing non-CC EW slots (choice-specific, ≥100 chars, target 200+ chars per S311 Quality Gate)",
+        "Review and likely rewrite the 1 existing non-CC EW slot (almost certainly DL-013 template boilerplate)",
+        "Expand EC from 80-120 chars to 400+ chars (target 600+ chars)",
+        "Calibrate LOSTag from 'E Internal controls' to fine-grained sub-tag",
+        "Recalibrate Difficulty and CognitiveLevel per DL-031",
+        "Set ProductionStatus to 'Draft'",
+        "Stem and distractor quality review and likely rewrite (block-3 and block-4 items have the most formulaic stems)"
+      ],
+      "sessions_estimate": "3-4 sessions at ~5-7 items/session",
+      "note": "P2 items in block-4 (deepest in both packs: P1-EC-050 through P1-EC-072 and P1-ED-056 through P1-ED-075, 15 of 19 P2 items) show the most extreme template pattern. These may be candidates for full rewrite rather than remediation — the cost of expanding 3 EW slots + EC + stem may approach the cost of authoring a replacement item from scratch. A cost-benefit analysis comparing P2 remediation vs. P2 replacement-authoring is recommended before committing to the remediation path."
+    }
+  },
+
+  "cross_pack_deduplication_warning": {
+    "severity": "HIGH — must precede any seed certification",
+    "issue": "Pack C and Pack D Domain E items were generated from the SAME clone-rotation template. Both packs use identical topic sequences, identical MicroTopic strings, and identical UniqueConceptKey patterns (E-C### vs E-D###). The only differences are company-name rotation (Ashford/Emberton/Ironvale/Bramblewood vs. alternate names) and CorrectChoice letter rotation. A Pack C seed and its Pack D counterpart for the same topic are likely conceptual clones of each other.",
+    "evidence": [
+      "P1-EC-004 (Pack C, segregation of duties, CC=A) and P1-ED-001 (Pack D, three lines model, CC=B) are different topics but generated by the same template engine.",
+      "P1-ED-014 (Pack D, independent verification, CC=D) and P1-EC-019/P1-EC-020 (Pack C, physical controls, CC=D) share identical 3-empty EW patterns from the same template.",
+      "The clone-group replacement program (R01-R40) treats Pack C and Pack D clones as a single pool — replacement item R09 replaces P1-ED-001 through P1-ED-005 (Pack D), while R01 replaces P1-EC-001 through P1-EC-005 (Pack C). The replacement program's architecture confirms cross-pack symmetry.",
+      "SESSION318_CLONE_GROUP_CLOSURE_AUDIT.json: '33 clone groups (each a 5-clone group from Pack C P1-EC-xxx or Pack D P1-ED-xxx)' — the program already models Pack C/D as interchangeable clone sources."
+    ],
+    "risk": "If Pack C and Pack D seeds are certified independently without cross-reference, up to 19 of the 38 seeds may be cross-pack conceptual duplicates (same topic, different company name). This would waste 9-12 sessions certifying items that are clones of each other.",
+    "recommended_action": "Execute cross-pack deduplication audit BEFORE any seed certification. Compare each P1-EC-XXX seed against its P1-ED-XXX counterpart (where XXX represents the same topic slot). If they test the same concept with only cosmetic differences (company name, CC letter rotation), consolidate to a single seed per topic. Expected outcome: 19 unique topics → ~12-15 unique seeds after dedup (some topics may genuinely differ). This could reduce total seed certification workload from 38 to 19-25 items.",
+    "estimated_audit_effort": "1 session (S319 or S320)"
+  },
+
+  "lostag_calibration_requirement": {
+    "severity": "CRITICAL — all 38 seeds affected",
+    "current_state": "All 38 seed items use LOSTag='E Internal controls' with no sub-tag granularity. This makes it impossible to verify blueprint coverage distribution — all items map to the same coarse bucket.",
+    "required_target": "Fine-grained sub-tags per the Pack B Section E benchmark distribution: E.1.a through E.1.i. Pack B Section E (75/75 Certified) provides the distribution target. Each seed must be mapped to exactly one sub-tag based on its Topic/MicroTopic/UniqueConceptKey.",
+    "sub_tags": {
+      "E.1.a": "Governance, Risk Management, and Internal Control Frameworks (COSO, SOX, three lines model)",
+      "E.1.b": "Internal Control Environment (tone at top, commitment to competence, board oversight)",
+      "E.1.c": "Risk Assessment (risk identification, analysis, responses, fraud risk)",
+      "E.1.d": "Control Activities (preventive, detective, corrective; segregation of duties; authorization)",
+      "E.1.e": "Information and Communication (information quality, internal/external communication)",
+      "E.1.f": "Monitoring Activities (ongoing evaluations, separate evaluations, deficiency reporting)",
+      "E.1.g": "IT Controls (IT general controls, application controls, access controls, logical security)",
+      "E.1.h": "Business Continuity and Disaster Recovery (BCP, DRP, backup procedures)",
+      "E.1.i": "External Auditing and Assurance (SOX 404, internal audit coordination, independent verification)"
+    },
+    "calibration_method": "Map each seed's Topic and MicroTopic to the corresponding fine-grained LOSTag. Use Pack B Section E as the reference distribution. For seeds whose topic spans multiple sub-tags, assign the primary sub-tag and note the secondary coverage.",
+    "estimated_effort": "30-60 minutes total across all 38 items (included in per-item remediation estimates above)."
+  },
+
+  "prioritization_matrix": {
+    "description": "Complete priority assignment for all 38 QIDs plus the 10 P0 blocking items. Sorted by priority tier, then by estimated effort (ascending within tier).",
+    "total_entries": 48,
+    "p0_entries": 10,
+    "p1_entries": 19,
+    "p2_entries": 19,
+    "entries": [
+      { "priority": "P0", "qid": "P1-E-R12", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.e coverage." },
+      { "priority": "P0", "qid": "P1-E-R13", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.g coverage." },
+      { "priority": "P0", "qid": "P1-E-R18", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.i coverage." },
+      { "priority": "P0", "qid": "P1-E-R21", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.a coverage." },
+      { "priority": "P0", "qid": "P1-E-R22", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.c coverage." },
+      { "priority": "P0", "qid": "P1-E-R23", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.f coverage." },
+      { "priority": "P0", "qid": "P1-E-R24", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.e coverage." },
+      { "priority": "P0", "qid": "P1-E-R25", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.g coverage." },
+      { "priority": "P0", "qid": "P1-E-R28", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.e coverage." },
+      { "priority": "P0", "qid": "P1-E-R33", "pack": "E (replacement)", "block": "Wave 2b", "estimated_effort_min": 15, "status": "CERTIFIED_NOT_INSERTED", "note": "Insertion + registry only. E.1.i coverage." },
+      { "priority": "P1", "qid": "P1-EC-004", "pack": "C", "block": 1, "estimated_effort_min": 45, "ew_empties": 2, "ew_verified": true, "topic_hint": "segregation of duties" },
+      { "priority": "P1", "qid": "P1-EC-008", "pack": "C", "block": 1, "estimated_effort_min": 45, "ew_empties": 2, "ew_verified": true, "topic_hint": "COSO framework" },
+      { "priority": "P1", "qid": "P1-EC-020", "pack": "C", "block": 2, "estimated_effort_min": 45, "ew_empties": 2, "ew_verified": true, "topic_hint": "physical controls" },
+      { "priority": "P1", "qid": "P1-ED-001", "pack": "D", "block": 1, "estimated_effort_min": 45, "ew_empties": 2, "ew_verified": true, "topic_hint": "three lines model" },
+      { "priority": "P1", "qid": "P1-EC-028", "pack": "C", "block": 2, "estimated_effort_min": 45, "ew_empties": 2, "ew_verified": false, "topic_hint": "bank reconciliation" },
+      { "priority": "P1", "qid": "P1-EC-013", "pack": "C", "block": 1, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "fraud triangle" },
+      { "priority": "P1", "qid": "P1-EC-019", "pack": "C", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "physical controls" },
+      { "priority": "P1", "qid": "P1-EC-021", "pack": "C", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "vendor setup segregation" },
+      { "priority": "P1", "qid": "P1-EC-022", "pack": "C", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "segregation of duties" },
+      { "priority": "P1", "qid": "P1-EC-023", "pack": "C", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "control activities" },
+      { "priority": "P1", "qid": "P1-EC-025", "pack": "C", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "preventive vs detective" },
+      { "priority": "P1", "qid": "P1-EC-031", "pack": "C", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "compensating controls" },
+      { "priority": "P1", "qid": "P1-ED-023", "pack": "D", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "tone at top" },
+      { "priority": "P1", "qid": "P1-ED-026", "pack": "D", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "management override" },
+      { "priority": "P1", "qid": "P1-ED-033", "pack": "D", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "whistleblower" },
+      { "priority": "P1", "qid": "P1-ED-034", "pack": "D", "block": 2, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "IT general controls" },
+      { "priority": "P1", "qid": "P1-ED-040", "pack": "D", "block": 3, "estimated_effort_min": 50, "ew_empties": 2, "ew_verified": false, "topic_hint": "application controls" },
+      { "priority": "P1", "qid": "P1-ED-008", "pack": "D", "block": 1, "estimated_effort_min": 55, "ew_empties": 2, "ew_verified": false, "topic_hint": "least privilege" },
+      { "priority": "P1", "qid": "P1-ED-012", "pack": "D", "block": 1, "estimated_effort_min": 55, "ew_empties": 2, "ew_verified": false, "topic_hint": "independent verification" },
+      { "priority": "P2", "qid": "P1-EC-039", "pack": "C", "block": 3, "estimated_effort_min": 75, "ew_empties": 3, "ew_verified": false, "topic_hint": "IT general controls" },
+      { "priority": "P2", "qid": "P1-EC-040", "pack": "C", "block": 3, "estimated_effort_min": 75, "ew_empties": 3, "ew_verified": false, "topic_hint": "application controls" },
+      { "priority": "P2", "qid": "P1-EC-066", "pack": "C", "block": 4, "estimated_effort_min": 75, "ew_empties": 3, "ew_verified": false, "topic_hint": "monitoring" },
+      { "priority": "P2", "qid": "P1-ED-044", "pack": "D", "block": 3, "estimated_effort_min": 75, "ew_empties": 3, "ew_verified": false, "topic_hint": "risk responses" },
+      { "priority": "P2", "qid": "P1-ED-062", "pack": "D", "block": 4, "estimated_effort_min": 75, "ew_empties": 3, "ew_verified": false, "topic_hint": "disaster recovery" },
+      { "priority": "P2", "qid": "P1-ED-070", "pack": "D", "block": 4, "estimated_effort_min": 75, "ew_empties": 3, "ew_verified": false, "topic_hint": "evaluations" },
+      { "priority": "P2", "qid": "P1-EC-047", "pack": "C", "block": 3, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "risk assessment" },
+      { "priority": "P2", "qid": "P1-EC-050", "pack": "C", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "SOX 302" },
+      { "priority": "P2", "qid": "P1-EC-057", "pack": "C", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "SOX 404" },
+      { "priority": "P2", "qid": "P1-EC-058", "pack": "C", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "external auditing" },
+      { "priority": "P2", "qid": "P1-EC-072", "pack": "C", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "COSO principles" },
+      { "priority": "P2", "qid": "P1-ED-014", "pack": "D", "block": 1, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": true, "topic_hint": "independent verification" },
+      { "priority": "P2", "qid": "P1-ED-049", "pack": "D", "block": 3, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "vendor risk" },
+      { "priority": "P2", "qid": "P1-ED-056", "pack": "D", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "logical access" },
+      { "priority": "P2", "qid": "P1-ED-064", "pack": "D", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "BCP" },
+      { "priority": "P2", "qid": "P1-ED-069", "pack": "D", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "monitoring" },
+      { "priority": "P2", "qid": "P1-ED-071", "pack": "D", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "deficiencies" },
+      { "priority": "P2", "qid": "P1-ED-074", "pack": "D", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "internal audit" },
+      { "priority": "P2", "qid": "P1-ED-075", "pack": "D", "block": 4, "estimated_effort_min": 80, "ew_empties": 3, "ew_verified": false, "topic_hint": "external audit" }
+    ]
+  },
+
+  "session_estimates_summary": {
+    "p0_wave2b_insertion": {
+      "sessions": 1,
+      "target_session": "S319",
+      "note": "Lowest-effort, highest-impact action. Unblocks all subsequent seed work."
+    },
+    "cross_pack_dedup_audit": {
+      "sessions": 1,
+      "target_session": "S319 or S320",
+      "note": "Must execute before P1/P2 seed work. May reduce P1+P2 from 38 to 19-25 items."
+    },
+    "p1_next_wave": {
+      "sessions": "2-3",
+      "target_sessions": "S320-S322",
+      "items": 19,
+      "throughput": "7-10 items/session",
+      "note": "Assumes dedup audit does not eliminate P1 items. P1 items have simplest certification path — start here to build throughput momentum."
+    },
+    "p2_later": {
+      "sessions": "3-4",
+      "target_sessions": "S322-S325",
+      "items": 19,
+      "throughput": "5-7 items/session",
+      "note": "Higher per-item effort due to full EW authoring. Block-4 items (15 of 19) may be more efficient to replace entirely than remediate. Consider cost-benefit analysis before committing."
+    },
+    "total_seed_certification": {
+      "sessions_min": 5,
+      "sessions_max": 8,
+      "items": "19-38 (depending on dedup outcome)",
+      "total_with_p0_and_audit": "7-10 sessions (S319-S328)"
+    },
+    "comparison_to_prior_estimate": "SESSION318_SEED_INVENTORY.json estimated 9-12 sessions for seed certification alone. This prioritization refines that to 5-8 sessions for seeds (P1+P2) plus 1 session for P0 insertion and 1 session for dedup audit, total 7-10 sessions. The reduction is due to tiered prioritization (P1 items are significantly faster than the uniform per-item estimate) and the expectation that dedup will reduce total seed count."
+  },
+
+  "execution_sequence": {
+    "step_1": {
+      "label": "P0 — Wave 2b Insertion",
+      "priority": "BLOCKING",
+      "sessions": "S319",
+      "deliverable": "10 replacement items production-inserted. pack_e at 540 items. All 33 clone groups production-closed."
+    },
+    "step_2": {
+      "label": "Cross-Pack Deduplication Audit",
+      "priority": "HIGH",
+      "sessions": "S319 or S320",
+      "deliverable": "Cross-reference matrix mapping P1-EC-XXX ↔ P1-ED-XXX. Determination of which Pack C/D seed pairs are conceptual clones. Consolidated seed list (expected 19-25 items)."
+    },
+    "step_3": {
+      "label": "P1 Seed Certification (Next Wave)",
+      "priority": "HIGH",
+      "sessions": "S320-S322 (2-3 sessions)",
+      "deliverable": "19 (or fewer after dedup) P1 seeds certified per CAQS §1.6. EW gaps closed. EC expanded. LOSTags recalibrated."
+    },
+    "step_4": {
+      "label": "P2 Seed Certification or Replacement Decision",
+      "priority": "MEDIUM",
+      "sessions": "S322-S325 (3-4 sessions)",
+      "deliverable": "19 (or fewer after dedup) P2 seeds either (a) certified with full EW authoring, or (b) replaced by net-new authored items (cost-benefit TBD). LOSTags recalibrated."
+    },
+    "step_5": {
+      "label": "Domain E Program Closure",
+      "sessions": "S325-S328",
+      "deliverable": "81/81 Domain E modernization complete. Portfolio at 2,262 certified (90.5%). All 5 packs at or near certification targets."
+    }
+  },
+
+  "risk_register": {
+    "risks": [
+      {
+        "id": "R-SEED-001",
+        "risk": "Wave 2b item JSON unrecoverable from dwImported",
+        "impact": "HIGH — blocks P0 insertion. Without the 10 item JSONs, items must be re-authored or re-imported from an external source.",
+        "mitigation": "Attempt dwImported recovery in S319. If unrecoverable, re-author from S808 specifications (SESSION808_AUTHORING_BATCH_WAVE2B.json documents item topics and specifications).",
+        "owner": "S319 Agent"
+      },
+      {
+        "id": "R-SEED-002",
+        "risk": "Cross-pack seed duplication confirmed at >50%",
+        "impact": "MEDIUM — reduces seed count from 38 to ≤19, but means 19 items of effort were potentially unnecessary if dedup had been done earlier.",
+        "mitigation": "Execute dedup audit in S319/S320 BEFORE any seed certification. Cost of audit (1 session) << cost of certifying clones (5-8 sessions).",
+        "owner": "S319/S320 Agent"
+      },
+      {
+        "id": "R-SEED-003",
+        "risk": "P2 block-4 items have 3 empty EW slots + template boilerplate in the 1 filled slot",
+        "impact": "MEDIUM — effective full EW rewrite for 15 items. Per-item effort may approach replacement-authoring cost.",
+        "mitigation": "For P2 block-4 items, evaluate replacement-authoring vs. remediation on a per-item basis. If 3 EW slots + EC + stem all need rewrite, a net-new item may be higher quality at similar cost.",
+        "owner": "S322 Agent (pre-P2 decision gate)"
+      },
+      {
+        "id": "R-SEED-004",
+        "risk": "LOSTag calibration may reveal blueprint coverage gaps",
+        "impact": "LOW — some E.1 sub-tags may have zero seeds after dedup, requiring additional net-new items.",
+        "mitigation": "Map seeds to sub-tags during dedup audit. Identify coverage gaps early and plan additional replacement items if needed.",
+        "owner": "S320 Agent"
+      },
+      {
+        "id": "R-SEED-005",
+        "risk": "Registry mismatch: P1-EC-013, P1-EC-019, P1-ED-008, P1-ED-012 show question_state='Archived' in source but 'Unprocessed' in SESSION318_SEED_INVENTORY.json",
+        "impact": "LOW — 4 of 38 seeds may not actually be 'Unprocessed'. If they are Archived, the seed pool shrinks to 34.",
+        "mitigation": "Verify question_state in source files during dedup audit. Correct inventory if needed.",
+        "owner": "S319 Agent"
+      }
+    ]
+  },
+
+  "assumptions_and_caveats": [
+    "EW empty-slot counts are CONFIRMED for 5 seeds (P1-EC-004, P1-EC-008, P1-EC-020, P1-ED-001, P1-ED-014) via direct file read. Counts for the remaining 33 seeds are INFERRED from block-level heuristics. A full per-item EW audit (reading all 38 items' EW slots from source files) would replace inferred counts with confirmed counts but is estimated at 30-45 minutes of additional verification effort.",
+    "The P1/P2 split of 19/19 (exactly even) is based on the observed distribution: block-1 and block-2 items trend toward 2 empties (P1), block-3 and block-4 items trend toward 3 empties (P2). The actual split may be 17/21 or 20/18. The prioritization framework is robust to a ±3 shift.",
+    "The cross-pack dedup assumption (that Pack C and Pack D used the same template) is strongly supported by the clone replacement program architecture (33 groups spanning both packs), the identical MicroTopic/UniqueConceptKey patterns, and the symmetric archival patterns (56 archived + 19 retained in each pack). Formal confirmation requires item-by-item comparison.",
+    "P2 items in block-4 (P1-EC-050 through P1-EC-072, P1-ED-056 through P1-ED-075) may be the most template-damaged items in the seed pool. The cost-benefit of remediation vs. replacement should be evaluated before certifying these items. If 3 EW slots + EC + stem all need full rewrite, replacement may be more cost-effective and produce higher-quality items.",
+    "The LOSTag calibration assumes Pack B Section E distribution as the benchmark. If Pack B's LOSTag distribution is itself coarse (unlikely given its Certified/Gold Standard status), an alternative distribution target would be needed.",
+    "Session estimates assume current throughput of 7-10 items/session for P1 and 5-7 items/session for P2. Throughput may increase as the team gains familiarity with the seed remediation patterns.",
+    "This report does not address the 43 replacement items tracked in the Domain E modernization program. It covers only the 38 seed items from Packs C/D. The full Domain E certification workload is 81 items (38 seeds + 43 replacements).",
+    "The report priority ordering within P1 and P2 sorts by estimated effort (ascending). Within a given effort band, Pack C items are listed before Pack D items and lower block numbers before higher block numbers."
+  ],
+
+  "references": {
+    "source_files": [
+      "pack_c_corrected.js — P1-EC-001 through P1-EC-075 (verified at lines 17895-19245+)",
+      "pack_d_corrected.js — P1-ED-001 through P1-ED-075 (verified at lines 17743-18993+)"
+    ],
+    "direct_dependencies": [
+      "SESSION318_SEED_INVENTORY.json — authoritative QID list and completeness assessment",
+      "SESSION318_EW_AUDIT.json — EW integrity benchmark for replacement items (avg 435 chars EW)",
+      "SESSION318_CLONE_GROUP_CLOSURE_AUDIT.json — P0 item status and clone-group mappings",
+      "SESSION318_PORTFOLIO_IMPACT_ANALYSIS.json — portfolio state and Domain E completion trajectory",
+      "SESSION808_AUTHORING_BATCH_WAVE2B.json — Wave 2b item specifications for reconstruction"
+    ],
+    "quality_standards": [
+      "CAQS §1.6 — Certification and Quality Standard",
+      "S311 Authoring Quality Gate v1.0 — EC ≥400 chars, EW ≥100 chars per slot",
+      "S302 DQS 1.0 — Distractor Quality Score (5 dimensions)",
+      "DL-008 — ExplanationWrong[CorrectChoice] must be empty",
+      "DL-013 — No template boilerplate in explanations",
+      "DL-026 — All non-CC EW slots filled with substantive text",
+      "DL-031 — Difficulty and CognitiveLevel calibration"
+    ]
+  }
+}

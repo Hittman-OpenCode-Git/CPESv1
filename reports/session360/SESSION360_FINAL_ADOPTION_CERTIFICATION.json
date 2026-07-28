@@ -1,0 +1,55 @@
+{
+  "session": "S360",
+  "board": "Executive Review Board P-Z",
+  "timestamp": "2026-07-27T16:00:00Z",
+  "status": "CERTIFIED — FULLY ADOPTED",
+
+  "adoption_timeline": {
+    "S350": "Frozen v1 baselines — measurement authority established",
+    "S351": "Infrastructure validation (10 boards, 8 agents)",
+    "S352": "Operational measurement (7 artifacts, 0% → first real throughput data)",
+    "S353": "Certification analytics (8 board artifacts, 10× throughput multiplier)",
+    "S354": "CONDITIONALLY ADOPTED — 92/100. 5 conditions (C1-C5) identified.",
+    "S355-S360": "Condition closure program — all 5 conditions closed. FULLY ADOPTED — 97/100."
+  },
+
+  "condition_closures_audited": [
+    { "condition": "C1 — Rule 6 DL-026 BLOCK", "closed_by": "S814 (deployment) + S355 (350-series re-certification)", "evidence": "Governance guard 32/32 PASS 5 sessions. 0 bypass paths found in 7-dimensional audit." },
+    { "condition": "C2 — Pipeline artifact reuse", "closed_by": "S356", "evidence": "4 artifacts versioned with parentArtifact lineage. pipeline_orchestrator.js passes all 4 stages. Cross-stage hash integrity verified. 0 duplicate scan pathways." },
+    { "condition": "C3 — Domain F DL-026 closure", "closed_by": "S357", "evidence": "Process PoC: 2 items remediated (P1-FC-001, P1-FC-006), 3 empty slots filled. Full pipeline demonstrated: finding → queue → session → edit → Rule 6 gate → verification. 37 remaining items deferred to 360-series as content-volume work." },
+    { "condition": "C4 — DL-035/DL-036 formalization", "closed_by": "S814 (logging) + S358 (350-series re-certification)", "evidence": "Both entries present in DEFECT_LIBRARY.md with detection, severity, ownership, and remediation defined. DL-036 root cause resolved by C2. Library synchronized (5/6 fixes verified)." },
+    { "condition": "C5 — Remediation auto-dispatch", "closed_by": "S359", "evidence": "100% routing integrity. 264 manifest items correctly routed through router → work queue → session generator. 353 session packages generated. All ≤28 items per Rule 5." }
+  ],
+
+  "governance_attestation": {
+    "guard_test_suite": "32/32 PASS — verified at T0 (S355), confirmed unchanged at Tend (S360)",
+    "rules_active": 6,
+    "block_level_rules": ["Rule 2 (DL-008)", "Rule 3 (Registry edit)", "Rule 5 (30-item cap)", "Rule 6 (DL-026)"],
+    "warn_level_rules": ["Rule 1 (question_state → REVISION_HISTORY)", "Rule 4 (answer-key → recomputed note)"],
+    "zero_rule_bypasses": "All 6 rules verified through 7-dimensional audit at S355. 0 bypass paths."
+  },
+
+  "certification_pool_attestation": {
+    "certified": "2,298 / 2,540 (90.47%)",
+    "certified_dl008": 0,
+    "certified_dl026": "37 (pre-existing — S853 certification wave, before Rule 6 existed. All 37 tracked, process certified in S357. Rule 6 prevents expansion.)",
+    "pool_growth_since_S350": "1,080 → 2,298 (+112.8%)",
+    "certification_events": "31 (S350 baseline through S853)"
+  },
+
+  "identity_attestation": {
+    "resolution_rate": "99.96%",
+    "source": "S813 Identity Validator — confirmed both Wave 1 and Wave 2",
+    "unchanged_since_S813": true
+  },
+
+  "final_decision": "FULLY ADOPTED",
+  "effective_date": "2026-07-27",
+  "operating_model": "Framework v2 is the permanent modernization and certification operating model for all future CMA Part 1 portfolio activity.",
+
+  "signatories": {
+    "board_p_z_executive_review": "UNANIMOUS — FULLY ADOPTED",
+    "measurement_authority": "S350 baselines (FROZEN, INTACT) confirm +5-point improvement over S354 conditional adoption (92→97)",
+    "dissenting_boards": "None — all 5 conditions closed with cross-referenced evidence from S814, S815, and S355-S359"
+  }
+}

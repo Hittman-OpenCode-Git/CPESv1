@@ -1,0 +1,623 @@
+{
+  "generated": "2026-07-26T21:49:14.794Z",
+  "session": "S305",
+  "domain": "C - Performance Management",
+  "caseCount": 14,
+  "itemCount": 73,
+  "certifiedCount": 61,
+  "uncertifiedCount": 12,
+  "avgExhibitCount": "1.4",
+  "avgExhibitRealismScore": 74,
+  "avgUsabilityScore": 73,
+  "cognitiveLoadDistribution": {
+    "High": 4,
+    "Excessive": 8,
+    "Moderate": 2
+  },
+  "ewFeedbackGap": 265,
+  "totalFrictions": 27,
+  "topFrictions": [
+    {
+      "type": "Severe distractor-feedback gap",
+      "count": 13
+    },
+    {
+      "type": "Excessive exhibit complexity",
+      "count": 3
+    },
+    {
+      "type": "Unrealistic or incomplete exhibit",
+      "count": 3
+    },
+    {
+      "type": "Poor exhibit usability",
+      "count": 3
+    },
+    {
+      "type": "Thin explanations across all items",
+      "count": 2
+    }
+  ],
+  "exhibitIssues": [
+    {
+      "caseID": "CBQ2-C1",
+      "exhibitID": "CBQ2-C1-E1",
+      "issue": "Excessive load"
+    },
+    {
+      "caseID": "CBQ3-C2",
+      "exhibitID": "CBQ3-C2-E2",
+      "issue": "Excessive load"
+    },
+    {
+      "caseID": "CBQ4-C1",
+      "exhibitID": "CBQ4-C1-E1",
+      "issue": "Needs rewrite"
+    },
+    {
+      "caseID": "CBQ4-C2",
+      "exhibitID": "CBQ4-C2-E1",
+      "issue": "Excessive load"
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "exhibitID": "CBQ5-C1-E1",
+      "issue": "Needs rewrite"
+    },
+    {
+      "caseID": "CBQ5-C3",
+      "exhibitID": "CBQ5-C3-E2",
+      "issue": "Needs rewrite"
+    }
+  ],
+  "rootCauseAssessment": [
+    "High distractor-feedback gap",
+    "Exhibit quality deficiencies",
+    "Cognitive overload in some cases"
+  ],
+  "caseList": [
+    {
+      "caseID": "CBQ-C1",
+      "source": "scored_cases.js",
+      "state": "Certified",
+      "items": 6,
+      "certified": 6,
+      "exhibitCount": 1,
+      "cognitiveLoad": "High",
+      "frictionCount": 1,
+      "ewMissing": 8
+    },
+    {
+      "caseID": "CBQ-C2",
+      "source": "scored_cases.js",
+      "state": "Unprocessed",
+      "items": 6,
+      "certified": 0,
+      "exhibitCount": 2,
+      "cognitiveLoad": "High",
+      "frictionCount": 2,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ-C3",
+      "source": "scored_cases.js",
+      "state": "Unprocessed",
+      "items": 6,
+      "certified": 0,
+      "exhibitCount": 2,
+      "cognitiveLoad": "High",
+      "frictionCount": 1,
+      "ewMissing": 17
+    },
+    {
+      "caseID": "CBQ2-C1",
+      "source": "scored_cases2.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 2,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ2-C2",
+      "source": "scored_cases2.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 1,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ2-C3",
+      "source": "scored_cases2.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 1,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ3-C1",
+      "source": "scored_cases3.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 1,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ3-C2",
+      "source": "scored_cases3.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 2,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 2,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ3-C3",
+      "source": "scored_cases3.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 2,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 1,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ4-C1",
+      "source": "scored_cases4.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Moderate",
+      "frictionCount": 4,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ4-C2",
+      "source": "scored_cases4.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 2,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "source": "scored_cases5.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Moderate",
+      "frictionCount": 5,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ5-C2",
+      "source": "scored_cases5.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 1,
+      "cognitiveLoad": "Excessive",
+      "frictionCount": 1,
+      "ewMissing": 20
+    },
+    {
+      "caseID": "CBQ5-C3",
+      "source": "scored_cases5.js",
+      "state": "Certified",
+      "items": 5,
+      "certified": 5,
+      "exhibitCount": 2,
+      "cognitiveLoad": "High",
+      "frictionCount": 3,
+      "ewMissing": 20
+    }
+  ],
+  "domainE": {
+    "domain": "E - Internal Controls",
+    "caseCount": 13,
+    "itemCount": 68,
+    "certifiedCount": 56,
+    "uncertifiedCount": 12,
+    "avgExhibitCount": "1.5",
+    "avgExhibitRealismScore": 83,
+    "avgUsabilityScore": 85,
+    "cognitiveLoadDistribution": {
+      "High": 4,
+      "Excessive": 9
+    },
+    "ewFeedbackGap": 254,
+    "totalFrictions": 16,
+    "topFrictions": [
+      {
+        "type": "Severe distractor-feedback gap",
+        "count": 13
+      },
+      {
+        "type": "Thin explanations across all items",
+        "count": 1
+      },
+      {
+        "type": "Excessive exhibit complexity",
+        "count": 1
+      },
+      {
+        "type": "Overly long scenario text",
+        "count": 1
+      }
+    ],
+    "exhibitIssues": [
+      {
+        "caseID": "CBQ4-E2",
+        "exhibitID": "CBQ4-E2-E1",
+        "issue": "Excessive load"
+      },
+      {
+        "caseID": "CBQ5-E1",
+        "exhibitID": "CBQ5-E1-E2",
+        "issue": "Weak realism"
+      },
+      {
+        "caseID": "CBQ5-E2",
+        "exhibitID": "CBQ5-E2-E2",
+        "issue": "Weak realism"
+      }
+    ],
+    "rootCauseAssessment": [
+      "High distractor-feedback gap",
+      "Cognitive overload in some cases"
+    ],
+    "caseList": [
+      {
+        "caseID": "CBQ-E1",
+        "source": "scored_cases.js",
+        "state": "Certified",
+        "items": 6,
+        "certified": 6,
+        "exhibitCount": 2,
+        "cognitiveLoad": "High",
+        "frictionCount": 1,
+        "ewMissing": 17
+      },
+      {
+        "caseID": "CBQ-E2",
+        "source": "scored_cases.js",
+        "state": "Unprocessed",
+        "items": 6,
+        "certified": 0,
+        "exhibitCount": 1,
+        "cognitiveLoad": "High",
+        "frictionCount": 1,
+        "ewMissing": 17
+      },
+      {
+        "caseID": "CBQ-F2",
+        "source": "scored_cases.js",
+        "state": "Unprocessed",
+        "items": 6,
+        "certified": 0,
+        "exhibitCount": 2,
+        "cognitiveLoad": "High",
+        "frictionCount": 2,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ2-E1",
+        "source": "scored_cases2.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ2-E2",
+        "source": "scored_cases2.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ3-E1",
+        "source": "scored_cases3.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ3-E2",
+        "source": "scored_cases3.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ4-E1",
+        "source": "scored_cases4.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ4-E2",
+        "source": "scored_cases4.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 2,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ4-E3",
+        "source": "scored_cases4.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ5-E1",
+        "source": "scored_cases5.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "High",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ5-E2",
+        "source": "scored_cases5.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 2,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ5-E3",
+        "source": "scored_cases5.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      }
+    ]
+  },
+  "domainF": {
+    "domain": "F - Technology & Analytics",
+    "caseCount": 11,
+    "itemCount": 56,
+    "certifiedCount": 56,
+    "uncertifiedCount": 0,
+    "avgExhibitCount": "1.7",
+    "avgExhibitRealismScore": 75,
+    "avgUsabilityScore": 78,
+    "cognitiveLoadDistribution": {
+      "High": 3,
+      "Excessive": 8
+    },
+    "ewFeedbackGap": 217,
+    "totalFrictions": 15,
+    "topFrictions": [
+      {
+        "type": "Severe distractor-feedback gap",
+        "count": 11
+      },
+      {
+        "type": "Overly long scenario text",
+        "count": 3
+      },
+      {
+        "type": "Excessive exhibit complexity",
+        "count": 1
+      }
+    ],
+    "exhibitIssues": [
+      {
+        "caseID": "CBQ4-F2",
+        "exhibitID": "CBQ4-F2-E2",
+        "issue": "Weak realism"
+      },
+      {
+        "caseID": "CBQ4-F3",
+        "exhibitID": "CBQ4-F3-E2",
+        "issue": "Weak realism"
+      },
+      {
+        "caseID": "CBQ5-F1",
+        "exhibitID": "CBQ5-F1-E2",
+        "issue": "Weak realism"
+      },
+      {
+        "caseID": "CBQ5-F2",
+        "exhibitID": "CBQ5-F2-E1",
+        "issue": "Excessive load"
+      },
+      {
+        "caseID": "CBQ5-F2",
+        "exhibitID": "CBQ5-F2-E2",
+        "issue": "Weak realism"
+      },
+      {
+        "caseID": "CBQ5-F3",
+        "exhibitID": "CBQ5-F3-E2",
+        "issue": "Weak realism"
+      }
+    ],
+    "rootCauseAssessment": [
+      "High distractor-feedback gap",
+      "Cognitive overload in some cases"
+    ],
+    "caseList": [
+      {
+        "caseID": "CBQ-F1",
+        "source": "scored_cases.js",
+        "state": "Certified",
+        "items": 6,
+        "certified": 6,
+        "exhibitCount": 2,
+        "cognitiveLoad": "High",
+        "frictionCount": 1,
+        "ewMissing": 17
+      },
+      {
+        "caseID": "CBQ2-F1",
+        "source": "scored_cases2.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ2-F2",
+        "source": "scored_cases2.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ3-F1",
+        "source": "scored_cases3.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 1,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ3-F2",
+        "source": "scored_cases3.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ4-F1",
+        "source": "scored_cases4.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ4-F2",
+        "source": "scored_cases4.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "High",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ4-F3",
+        "source": "scored_cases4.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "High",
+        "frictionCount": 1,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ5-F1",
+        "source": "scored_cases5.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 2,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ5-F2",
+        "source": "scored_cases5.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 3,
+        "ewMissing": 20
+      },
+      {
+        "caseID": "CBQ5-F3",
+        "source": "scored_cases5.js",
+        "state": "Certified",
+        "items": 5,
+        "certified": 5,
+        "exhibitCount": 2,
+        "cognitiveLoad": "Excessive",
+        "frictionCount": 2,
+        "ewMissing": 20
+      }
+    ]
+  }
+}

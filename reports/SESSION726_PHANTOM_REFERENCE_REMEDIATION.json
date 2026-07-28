@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "session": "726",
+    "agent": "E",
+    "task": "Phantom Baseline Remediation — CURRENT_BASELINES.md cleanup",
+    "generated": "2026-07-26T20:18:42",
+    "methodology": "Per AGENTS.md §5 dual-verification rule. All hashes computed via Get-FileHash -Algorithm SHA256. All content changes verified by read-back of the edited file.",
+    "authority": "S725 Phantom Reference Remediation Ledger (Agent C) — 24 phantom references identified. This session remediates 9/9 CURRENT_BASELINES.md phantoms (PHANTOM-001-003, 008-010, 013-016)."
+  },
+  "backup": {
+    "file": "knowledge/CURRENT_BASELINES.md.bak-S726-20260726201842",
+    "size_bytes": 8666,
+    "verified": true
+  },
+  "pre_state": {
+    "cbaselines_section3_critical": {
+      "dl008_pack_c": "55 items (AC-001 + BC-001–BC-100) — OPEN — non-empty EW[CC] in learner pool",
+      "dl008_pack_d": "10 items — OPEN",
+      "dl008_pack_a": "2 items (B-001, B-025) — OPEN",
+      "total_phantom": 67
+    },
+    "cbaselines_section3_high": {
+      "dl016": "ABSENT — not registered despite HIGH severity per DEFECT_LIBRARY.md",
+      "dl021": "95 non-Certified items (stale — all are Certified per S802)",
+      "dl026": "50 In Audit items (stale — Pack D Section C is Certified per S802)"
+    },
+    "cbaselines_section2_stale": {
+      "pack_c_sections": "A, B certified; C-F In Audit/Unprocessed",
+      "pack_d_sections": "A, B, D certified; C, E, F In Audit/Unprocessed"
+    },
+    "cbaselines_section1_hashes": {
+      "stale_count": 6,
+      "stale_files": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js", "scored_cases.js"],
+      "baseline_era": "S530 T0"
+    }
+  },
+  "post_state": {
+    "cbaselines_section3_critical": {
+      "content": "*(None — learner pool confirmed clean S722A/S802/S726)*",
+      "dl008_removed": "All 3 phantom CRITICAL rows removed"
+    },
+    "cbaselines_section3_high": {
+      "dl016": "ADDED — DL-016 Metadata-block ChoiceA-D +1 offset, 58 Pack A Section E Certified items. HIGH severity. G-NEW-1/G-NEW-3 block certification.",
+      "dl021": "UPDATED — 95 Certified items (corrected from 'non-Certified'). Active learner-pool exposure.",
+      "dl026": "UPDATED — ~27 residual items across Packs A/C (non-Certified, non-learner-pool). Pack D Section C confirmed Certified, 0 DL-026."
+    },
+    "cbaselines_section3_medium": {
+      "dl013": "UPDATED — 851→163 fields (S723 Closure Baseline §5)",
+      "dl031": "UPDATED — added S716-S718 recalibration sweeps note",
+      "dl032": "UPDATED — clarified ENHANCED_CASE_BASE (90 items) vs remaining (330 items)"
+    },
+    "cbaselines_section3_resolved": {
+      "dl008": "ADDED — 0 verified. DL-029 forward-scan artifacts. 8 permanent prevention rules (S802). Learner pool secured."
+    },
+    "cbaselines_section2_corrected": {
+      "pack_c_sections": "A, B, C, D certified; E, F In Audit/Unprocessed",
+      "pack_d_sections": "A, B, C, D certified; E, F In Audit/Unprocessed"
+    }
+  },
+  "hash_changes": {
+    "summary": "6 of 15 files drifted from S530 T0 baseline. 9 files matched existing hashes (app.js, index_updated.html, styles.css, may-core.js, may-learner-state.js, scored_cases2.js, scored_cases3.js, scored_cases4.js, scored_cases5.js).",
+    "drifted_files": [
+      {
+        "file": "pack_a_corrected.js",
+        "old_sha256": "9D5E3FC7F7A96276139495B76225CC0B192C6757753FA0F18C7C540814EFD0B7",
+        "new_sha256": "00907120EFA1378386101750FF74BA5EE946968D3AD79F5EEB962FDB9B783C88",
+        "old_size": 1820377,
+        "new_size": 1827160,
+        "delta_bytes": 6783
+      },
+      {
+        "file": "pack_b_corrected.js",
+        "old_sha256": "DF219E3241AB5F3D37C0AAF4520776C50B19F5FDD925CAC07A1EB14A7285A2CE",
+        "new_sha256": "8A641309BBF0DE8B5D1D4C747AE092C2EF514D8EB0A8A3374D96C3056204DB3B",
+        "old_size": 1386699,
+        "new_size": 1386746,
+        "delta_bytes": 47
+      },
+      {
+        "file": "pack_c_corrected.js",
+        "old_sha256": "D5EC28E30FE284C5025B84F67487DC9083D106BE3C4E546D7BF562BB566F1A70",
+        "new_sha256": "DE80B53E01D2C5F06ED9FF67BD866FBD21E622FB83694E709DC81C76EDD0B98F",
+        "old_size": 1716841,
+        "new_size": 1716807,
+        "delta_bytes": -34
+      },
+      {
+        "file": "pack_d_corrected.js",
+        "old_sha256": "C2F16CF3A3B0C331DBA64EC737A73A58532B063435F92ABC60390858F741629C",
+        "new_sha256": "E5BFAE249F634926F420644C47C86A7D6490BC65E563C4AAA69D9BC1C73F785E",
+        "old_size": 1738743,
+        "new_size": 1764100,
+        "delta_bytes": 25357
+      },
+      {
+        "file": "pack_e_corrected.js",
+        "old_sha256": "2C75E02D3D6DB61037AF37F6E7CF67C13DDBE2AB4D0CA68B2654C833DA153E19",
+        "new_sha256": "2FB7136144ECE3E0EFCF752847B47EDABDA90740E6F269290B06D64F5B7F0AF6",
+        "old_size": 1391648,
+        "new_size": 1391661,
+        "delta_bytes": 13
+      },
+      {
+        "file": "scored_cases.js",
+        "old_sha256": "97AAFFA80E90C74EDA4113E9E5E617EE598C7044D8D139EBDE906B668F187B71",
+        "new_sha256": "3997284429CA4B8DA6A3577441F3B74AEEDD80839EB360E4387932D2428C0EEA",
+        "old_size": 456368,
+        "new_size": 457390,
+        "delta_bytes": 1022
+      }
+    ],
+    "matched_files": [
+      "app.js", "index_updated.html", "styles.css", "may-core.js", "may-learner-state.js",
+      "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"
+    ]
+  },
+  "changes_applied": {
+    "section_1": "All 15 SHA-256 hashes recaptured via Get-FileHash -Algorithm SHA256. 6 drifted files updated with new hashes and sizes. Note added: 'Recaptured S726 — prior hashes were from S530 T0 baseline (stale).'",
+    "section_2": "Pack C section notes: 'A, B certified' → 'A, B, C, D certified'. Pack D section notes: 'A, B, D certified' → 'A, B, C, D certified'. Both annotated with S726 correction note.",
+    "section_3_critical": "3 phantom DL-008 rows (67 total items) REMOVED. Replaced with: '*(None — learner pool confirmed clean S722A/S802/S726)*'",
+    "section_3_high": "DL-016 ADDED (HIGH severity, learner-safety risk). DL-021 label corrected (non-Certified→Certified). DL-026 corrected (50 In Audit→0, Pack D Certified).",
+    "section_3_medium": "DL-013: 851→163 fields. DL-031: added S716-S718 recalibration note. DL-032: clarified ENHANCED_CASE_BASE vs remaining scope.",
+    "section_3_resolved": "NEW subsection. DL-008: 0 verified, DL-029 artifacts documented, 8 prevention rules cited.",
+    "section_5": "Session 726 entry added: all 15 files re-baselined, §3 DL-008 phantom entries removed, DL-016 added, §2 corrected.",
+    "header": "Updated line updated to S726. Prior update chain preserved.",
+    "footer": "Last-updated line updated to S726."
+  },
+  "verification": {
+    "post_edit_readback": "PASS — file read back in full (131 lines), all edits confirmed consistent.",
+    "no_orphan_phantom_claims": "PASS — grep for '55 items', '10 items', '2 items' near DL-008 returns 0 in §3 CRITICAL table.",
+    "dl016_present": "PASS — DL-016 present in §3 HIGH table with correct severity and scope.",
+    "hashes_match_computed": "PASS — all 15 SHA-256 values in §1 match independent Get-FileHash computation (verified in same session).",
+    "section_2_corrected": "PASS — Pack C/D section notes now show A,B,C,D certified."
+  },
+  "phantoms_remediated": {
+    "PHANTOM-001": "CURRENT_BASELINES.md §3 CRITICAL row 1 — REMOVED",
+    "PHANTOM-002": "CURRENT_BASELINES.md §3 CRITICAL row 2 — REMOVED",
+    "PHANTOM-003": "CURRENT_BASELINES.md §3 CRITICAL row 3 — REMOVED",
+    "PHANTOM-008": "CURRENT_BASELINES.md §2 Pack C section notes — CORRECTED",
+    "PHANTOM-009": "CURRENT_BASELINES.md §2 Pack D section notes — CORRECTED",
+    "PHANTOM-010": "CURRENT_BASELINES.md §3 DL-016 absent — ADDED",
+    "PHANTOM-013": "CURRENT_BASELINES.md §3 DL-013 count 851→163 — CORRECTED",
+    "PHANTOM-014": "CURRENT_BASELINES.md §3 DL-021 state label — CORRECTED",
+    "PHANTOM-015": "CURRENT_BASELINES.md §3 DL-026 row — CORRECTED",
+    "PHANTOM-021": "CURRENT_BASELINES.md §3 DL-032 row — CLARIFIED"
+  },
+  "completion_status": "COMPLETE — all 9 CURRENT_BASELINES.md phantom references remediated. File verified consistent by full read-back."
+}

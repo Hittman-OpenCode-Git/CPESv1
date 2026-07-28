@@ -1,0 +1,237 @@
+{
+  "audit_metadata": {
+    "agent": "Agent J — Governance Preservation Audit",
+    "session": "529",
+    "timestamp": "2026-07-26T15:08:00",
+    "target": "ENHANCED_CASE_BASE certification program",
+    "target_file": "scored_cases.js",
+    "status": "COMPLETE — 3 blocking conditions, 2 warnings"
+  },
+  "checks": {
+    "1_unverified_changes": {
+      "pass": false,
+      "severity": "CRITICAL",
+      "detail": "All 10 runtime-critical files (pack A-E, scored_cases 1-5) have MD5 mismatches vs. CURRENT_BASELINES.md (S63, 2026-07-24). All 3 core files (app.js, index_updated.html, styles.css) have SHA-256 mismatches vs. S63 baselines.",
+      "hash_comparison": {
+        "core_files": {
+          "app.js": {
+            "baseline_md5": "F03CD7AE232F7F4CDBCA8C6FD23B33E2",
+            "current_md5": "49EADD2D4EAD83264871CC7FF42D2625",
+            "match": false,
+            "baseline_size": 195260,
+            "current_size": 209937,
+            "delta_bytes": "+14,677",
+            "last_modified": "2026-07-25T22:17:12"
+          },
+          "index_updated.html": {
+            "baseline_sha256": "294E3080C9BDF08502B9C8B93349374D08A29E6CFA96E9A54900BF203CE779D6",
+            "current_sha256": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755",
+            "match": false,
+            "baseline_size": 6015,
+            "current_size": 6090,
+            "delta_bytes": "+75",
+            "last_modified": "2026-07-25T16:44:53"
+          },
+          "styles.css": {
+            "baseline_sha256": "A9E9548DE0B65DDD650453ECFBF8AE56383C1872BBCDE482B0D86A6957D255C5",
+            "current_sha256": "F0C4DFCED01065417E56AA7F1057911A2271C6A697927A0A757D5EC9D88AC2D6",
+            "match": false,
+            "baseline_size": 38370,
+            "current_size": 68696,
+            "delta_bytes": "+30,326",
+            "last_modified": "2026-07-25T22:14:00"
+          }
+        },
+        "mcq_packs": {
+          "pack_a_corrected.js": {
+            "baseline_md5": "2A6716145D96A2277D67C7686271EC96",
+            "current_md5": "ADF1C37D844484B9ED0E8F50F2D144E8",
+            "match": false,
+            "qid_count": 500,
+            "certified_count": 481,
+            "baseline_certified": 204,
+            "delta_certified": "+277",
+            "last_modified": "2026-07-26T15:04:22"
+          },
+          "pack_b_corrected.js": {
+            "baseline_md5": "E4830A01EDF8C362ACA81C9FEC6C290F",
+            "current_md5": "200D0C1CB4A2B42F9E6442F25B7C2BD8",
+            "match": false,
+            "qid_count": 500,
+            "certified_count": 500,
+            "baseline_certified": 350,
+            "delta_certified": "+150",
+            "last_modified": "2026-07-26T14:11:02"
+          },
+          "pack_c_corrected.js": {
+            "baseline_md5": "FEC1C71B9305B86C892A8D04E901020C",
+            "current_md5": "F7E1111E4907C7E22715B13A768EDC61",
+            "match": false,
+            "qid_count": 500,
+            "certified_count": 350,
+            "baseline_certified": 175,
+            "delta_certified": "+175",
+            "last_modified": "2026-07-26T14:11:02"
+          },
+          "pack_d_corrected.js": {
+            "baseline_md5": "9D27D5C3710A8337568269D70BA008D7",
+            "current_md5": "36683C47F58A757B92675F81BC5F10DB",
+            "match": false,
+            "qid_count": 500,
+            "certified_count": 350,
+            "baseline_certified": 248,
+            "delta_certified": "+102",
+            "last_modified": "2026-07-26T14:11:02"
+          },
+          "pack_e_corrected.js": {
+            "baseline_md5": "ECD52DCEDD46C056B7A5AFD5AE87E291",
+            "current_md5": "28561FD6334788B7F6511D0D3A7BBA58",
+            "match": false,
+            "qid_count": 500,
+            "certified_count": 500,
+            "baseline_certified": 101,
+            "delta_certified": "+399",
+            "last_modified": "2026-07-26T15:06:23"
+          }
+        },
+        "scored_cases": {
+          "scored_cases.js": {
+            "baseline_md5": "3C11F0838B0DFE2FFCC9620EA60AAF69",
+            "current_md5": "C3E4B01ACC70BDEE98F11E31C3CC9F8A",
+            "match": false,
+            "t0_md5": "C3E4B01ACC70BDEE98F11E31C3CC9F8A",
+            "cases": 30,
+            "cbq_count": 15,
+            "case_count": 15,
+            "item_count": 210,
+            "production_status": "All Draft — certification NOT yet applied",
+            "last_modified": "2026-07-26T12:05:25"
+          },
+          "scored_cases2.js": {
+            "baseline_md5": "D51EFC4B2F2D2F360630CDCF4478E28D",
+            "current_md5": "7D02B1CDD75909FF2B5CDC90653128DA",
+            "match": false,
+            "last_modified": "2026-07-26T12:05:25"
+          },
+          "scored_cases3.js": {
+            "baseline_md5": "2D18DC99DC6FB34544CAADC0EC709644",
+            "current_md5": "06DF8C8559A9BB34BA0EB45B559443DE",
+            "match": false,
+            "last_modified": "2026-07-26T12:05:25"
+          },
+          "scored_cases4.js": {
+            "baseline_md5": "A5DBC18DF4638EDCC1823A51E8996264",
+            "current_md5": "DA2B22144522E99EEB4A761EB6266ACE",
+            "match": false,
+            "last_modified": "2026-07-26T14:26:49",
+            "time_anomaly": "Modified 141 minutes after other case files — potential concurrent-write signal"
+          },
+          "scored_cases5.js": {
+            "baseline_md5": "05F0AAA7622B785C61CFCC28D62458F8",
+            "current_md5": "4FF458F549FCA3B69F4773E56342473F",
+            "match": false,
+            "last_modified": "2026-07-26T12:05:25"
+          }
+        }
+      }
+    },
+    "2_backup_protocol": {
+      "pass": true,
+      "detail": "Backup directory exists at backups/ with 358 files. Protocol infrastructure verified operational."
+    },
+    "3_governance_guard_active": {
+      "pass": true,
+      "detail": "20/20 PASS, 0 FAIL. All 5 rules verified: Rule 2 (DL-008 BLOCK), Rule 3 (registry BLOCK), Rule 5 (30-item cap BLOCK), Rule 1 (question_state WARN), Rule 4 (answer-key WARN). All read-only passthrough confirmed."
+    },
+    "4_concurrency_guard": {
+      "pass": true,
+      "detail": "No project-level lock files detected. One OpenCode internal lock found (.opencode/goals/state.json.lock) — expected, not a project concern. No active session markers. No concurrent-write risk identified for current session start."
+    },
+    "5_protected_hashes": {
+      "pass": false,
+      "severity": "CRITICAL",
+      "detail": "All 13 runtime-critical files have hash mismatches vs. CURRENT_BASELINES.md (S63, 2026-07-24). Per AGENTS.md §13.5, this triggers immediate governance intervention: Halt all agents; spawn governance agent; run G1–G5.",
+      "resolution_required": "Cross-reference current hashes against the most recent session's Tend checkpoint. If the drift was authorized by prior sessions (S64–S528), document and update CURRENT_BASELINES.md. If any drift is unexplained, escalate to TIER 1."
+    },
+    "6_scoring_preservation": {
+      "pass": true,
+      "detail": "App.js scoring remains intact: scoreMCQ() at line 1019, correctCase() present, 75/25 weighting at lines 2008–2010, Math.round(calibrated * 500 + preset.scaleOffset) at line 2020. No structural changes to scoring logic detected. The ENHANCED_CASE_BASE certification work targets scored_cases.js (answer keys, exhibit data, ProductionStatus) — no app.js modification is required for case certification. Scoring will remain unchanged.",
+      "confirmation": "app.js was last modified 2026-07-25 (yesterday), 28+ hours before this session — not part of the ENHANCED_CASE_BASE certification program."
+    },
+    "7_pre_audit_checklist": {
+      "pass": true,
+      "detail": "scored_cases.js T0 baselines captured before any ENHANCED_CASE_BASE write operations.",
+      "t0_md5": "C3E4B01ACC70BDEE98F11E31C3CC9F8A",
+      "t0_size": 397461,
+      "t0_last_modified": "2026-07-26T12:05:25",
+      "current_md5": "C3E4B01ACC70BDEE98F11E31C3CC9F8A",
+      "confirmed_no_modification": true,
+      "cases": {
+        "total": 30,
+        "enhanced_cbq": 15,
+        "migrated_case": 15,
+        "items": 210,
+        "production_status": "ALL Draft"
+      }
+    }
+  },
+  "blocking_conditions": [
+    {
+      "id": "BC-001",
+      "severity": "CRITICAL",
+      "condition": "All 13 runtime-critical file hashes have drifted from S63 baselines",
+      "reference": "AGENTS.md §13.5 Drift-Detection Signals",
+      "required_action": "Execute G1–G5 reconciliation before proceeding with ENHANCED_CASE_BASE certification. Verify that all hash changes are authorized by prior sessions S64–S528. Update CURRENT_BASELINES.md to the verified state.",
+      "impact": "Cannot certify ENHANCED_CASE_BASE until baseline integrity is re-established."
+    },
+    {
+      "id": "BC-002",
+      "severity": "CRITICAL",
+      "condition": "scored_cases4.js modified 141 minutes after the other case files (14:26 vs 12:05)",
+      "reference": "AGENTS.md §13.5 — concurrent-write signal; DL-019 precedent",
+      "required_action": "Determine whether scored_cases4.js modification is an authorized out-of-band write or a DL-019 concurrent-write incident. Compare with pre-session backup if available. Verify scored_cases4.js ContentID list is intact (no data loss).",
+      "impact": "May indicate data-loss scenario (DL-019 pattern). Certifying scored_cases.js while scored_cases4.js has an unexplained time-anomaly creates governance risk."
+    },
+    {
+      "id": "BC-003",
+      "severity": "HIGH",
+      "condition": "Two undocumented files in repository root: may-core.js (347KB) and may-learner-state.js (84KB)",
+      "reference": "00_PROJECT_CONSTITUTION.md §11.3 and §11.4 — Prohibited Root-Level Files",
+      "required_action": "Identify provenance of may-core.js and may-learner-state.js. Either move to appropriate subdirectory or document as authorized exception. These files are not in CURRENT_BASELINES.md and represent unknown code in the runtime environment.",
+      "impact": "Constitution violation. Unknown code in root directory poses app.js integration and runtime integrity risk."
+    }
+  ],
+  "warnings": [
+    {
+      "id": "WARN-001",
+      "severity": "HIGH",
+      "condition": "Certified pool has grown from 1,078 (S63) to 2,181 (+1,103) — Pack B and Pack E now fully certified (500/500 each). This is the largest certification wave in project history.",
+      "detail": "Per-pack certified: A=481 (+277), B=500 (+150), C=350 (+175), D=350 (+102), E=500 (+399). Total 2,181 out of 2,500 (87.2% certified).",
+      "verification_note": "Cannot verify that all +1,103 newly Certified items passed 6-dimension CAQS §1.6 verification at HIGH confidence. This is a cross-check requirement (AGENTS.md §5)."
+    },
+    {
+      "id": "WARN-002",
+      "severity": "MEDIUM",
+      "condition": "All 30 cases in scored_cases.js have ProductionStatus: 'Draft' — 0 items are Certified or In Audit. The baseline shows the ENHANCED_CASE_BASE certification program has not yet been applied.",
+      "detail": "This is expected for T0 baseline capture. After certification, verify ProductionStatus transitions and DEFECT_LIBRARY.md / REVISION_HISTORY.md updates."
+    }
+  ],
+  "certified_pool_summary": {
+    "pack_a": 481,
+    "pack_b": 500,
+    "pack_c": 350,
+    "pack_d": 350,
+    "pack_e": 500,
+    "total_certified": 2181,
+    "total_questions": 2500,
+    "pct_certified": "87.2%"
+  },
+  "t0_baseline": {
+    "scored_cases_js_md5": "C3E4B01ACC70BDEE98F11E31C3CC9F8A",
+    "scored_cases_js_size": 397461,
+    "app_js_md5": "49EADD2D4EAD83264871CC7FF42D2625",
+    "scoring_invariants_verified": true,
+    "governance_guard_tests": "20/20 PASS"
+  },
+  "governance_baseline_state": "FAIL — 3 blocking conditions prevent ENHANCED_CASE_BASE certification from proceeding until resolved. scored_cases.js T0 MD5 captured and verified unchanged since session start."
+}

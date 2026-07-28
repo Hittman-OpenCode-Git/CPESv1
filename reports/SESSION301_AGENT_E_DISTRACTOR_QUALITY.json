@@ -1,0 +1,21 @@
+{
+  "agent": "E",
+  "session": "S301",
+  "phase": 2,
+  "domain": "Distractor Quality",
+  "defect_classes": {
+    "DL-003_AbsoluteLanguage": { "hits": 958, "priority_fix": 118, "details": "824 'only' (mostly legitimate), 79 'always', 39 'never' — prioritize always/never first (118 items)", "effort_tier": "medium" },
+    "DL-004_Ambiguity": { "hits": 410, "details": "Vague qualifiers ('usually', 'normally', 'generally', 'often', 'typically') — flag for review, not auto-fix", "effort_tier": "low" },
+    "DL-005_Similarity": { "hits": 450, "details": "Jaccard similarity >70% between distractors. Pack E has highest concentration. Some 100% identical distractors found.", "effort_tier": "high" },
+    "DL-013_Boilerplate": { "hits": 851, "remaining": 851, "affected_packs": "A: 238 fields, C: 357 fields, D: 256 fields", "notes": "Zero Certified items affected. Non-blocking for learner pool.", "effort_tier": "medium" }
+  },
+  "certification_rubrics_alignment": {
+    "D4_minimum": "Score >= 4 for certification",
+    "blocking_defects": ["DL-005 identical distractors (score < 3)", "DL-003 always/never in Certified items"]
+  },
+  "section_readiness_impact": {
+    "pack_a_sections": { "B": "DL-013 residual (111 fields)", "C": "DL-013 (94 fields)", "E": "DL-013 (28 fields), DL-005 concentration" },
+    "pack_c_sections": { "D": "DL-013 (131 fields) + DL-005", "E": "DL-013 (125 fields) + DL-005 (clone items)", "F": "DL-013 (101 fields), DL-005" },
+    "pack_d_sections": { "E": "DL-013 (138 fields)", "F": "DL-013 (118 fields)" }
+  }
+}

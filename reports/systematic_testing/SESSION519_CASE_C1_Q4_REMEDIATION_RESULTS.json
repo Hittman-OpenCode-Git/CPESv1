@@ -1,0 +1,21 @@
+{
+  "session": "519",
+  "timestamp": "2026-07-26T01:00:00",
+  "type": "CASE-C1-Q4 remediation — verification only",
+  "finding": "Defect already resolved. No remediation needed.",
+  "qid": "CASE-C1-Q4",
+  "case": "CASE-C1",
+  "array": "MIGRATED_CASE_BASE_C",
+  "claimed_defect": "ASC 606 choice text 'The asset has an alternative use' should be 'NO alternative use'",
+  "actual_choice_text": "The asset does NOT have an alternative use and the entity has an enforceable right to payment for performance completed to date",
+  "verdict": "ALREADY CORRECT — choice text includes 'does NOT have an alternative use'. Proper ASC 606-10-25-27 citation in explanation. No change needed.",
+  "fields_verified": {
+    "choice_text_correct": true,
+    "explanation_correct": true,
+    "asc_606_citation_present": true,
+    "question_state": "Certified",
+    "difficulty": "Moderate/3",
+    "cognitive_level": "Evaluate"
+  },
+  "remediation_action": "NONE — already resolved by prior session (likely S515/S516)"
+}

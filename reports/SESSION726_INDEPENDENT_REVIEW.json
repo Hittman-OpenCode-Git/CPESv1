@@ -1,0 +1,238 @@
+{
+  "review_verdict": "PARTIAL_GAPS_REMAIN",
+  "review_metadata": {
+    "agent": "U",
+    "role": "Independent Review Board",
+    "session": "726",
+    "date": "2026-07-26",
+    "mode": "READ-ONLY",
+    "sources_reviewed": [
+      "reports/SESSION726_RULE2_ENFORCEMENT_UPGRADE.md (Agent D — 950+ lines)",
+      "reports/SESSION726_RULE2_AUDIT.json (Agent D — audit claims)",
+      "reports/SESSION726_RULE2_PARSE_SPEC.md (Agent C — 721 lines)",
+      "reports/SESSION726_SERIES_CLOSURE_GATE.md (Agent H — 773 lines)",
+      "reports/SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json (Agent I — 231 lines)",
+      "reports/SESSION726_UNAUTHORIZED_CLOSURE_PREVENTION_REPORT.md (Agent J — 311 lines)",
+      "reports/SESSION726_GATE_VERIFICATION_AGENT_J.json (Agent J — 242 lines)",
+      "reports/SESSION726_GOVERNANCE_SIMULATION_RESULTS.json (Agents K-L-M-N)",
+      "reports/SESSION726_GOVERNANCE_OPERATIONS_5_AGENT_REPORT.json (Agents O-P-Q-R-S — 653 lines)",
+      "reports/SESSION726_PHANTOM_REFERENCE_REMEDIATION.json (Agent E)",
+      "reports/SESSION726_CROSS_REFERENCE_VERIFICATION.json (Agent F)",
+      ".opencode/plugins/governance-guard.js (raw file — 247 lines)",
+      "scripts/test_governance_guard.js (raw file — 373 lines, 27 tests)",
+      "knowledge/CURRENT_BASELINES.md (raw file — confirmed remediated)",
+      "knowledge/REVISION_HISTORY.md (head entries verified)"
+    ],
+    "raw_evidence_checks": [
+      "governance-guard.js: 247 lines (was 217). SHA-256: 676DB85E5061DB670F9643361900DD25DCB9FDA6B3AE2A19DCC31B48E348E0FB. Contains new extractObjectsFromText() (lines 41-76) and upgraded findDL008Violations() (lines 78-92).",
+      "test_governance_guard.js: 373 lines (was 245). 27 tests total (was 20). Backup found: test_governance_guard.js.bak-S726-20260726201956",
+      "governance-guard.js backup: NOT FOUND on disk despite claim in audit JSON",
+      "CURRENT_BASELINES.md §3: DL-008 phantom entries removed. Line 97 reads '0 verified'. Line 118 confirms S726 remediation. Phantom claim VERIFIED.",
+      "REVISION_HISTORY.md: S726 entry exists for Agent H's closure gate spec only. No entry for governance-guard change — GAP per AGENTS.md §12.",
+      "SESSION_STATUS_2026-07-24.md: 8 stale phantom refs confirmed (Agent F cross-ref verification matches my grep).",
+      "Ownership Registry: 6 gaps, all PENDING, 0 ACCEPTED, all past S726 T0 deadline."
+    ]
+  },
+
+  "enforcement_controls_reviewed": [
+    {
+      "control": "Rule 2 DL-029 vulnerability migration",
+      "status": "PARTIALLY_VERIFIED",
+      "detail": "INCOMPLETE — Implemented at intermediate tier, not at target AM-1 level.",
+      "evidence": {
+        "design_completeness": "HIGH. Agent C (Parse Spec, 721 lines) and Agent D (Enforcement Upgrade, 950+ lines) produced a comprehensive migration architecture defining AM-1 (Function Constructor Parse) as the target, with FM-001 prohibition, AM-2 fallback, pre/post diff logic, file-read from disk, and QID-level reporting.",
+        "implementation_reality": "The governance guard WAS modified (217→247 lines, +30). The new findDL008Violations() uses extractObjectsFromText() — a string-aware brace-matcher that extracts complete JSON objects before checking EW[CC] against CorrectChoice within the SAME object. This is AM-2-style (object-bounded extraction), NOT AM-1 (Function Constructor Parse on full file).",
+        "what_was_fixed": [
+          "VM-001 (fixed 1200-char window): ELIMINATED — extractObjectsFromText() has no distance limit",
+          "VM-002 (DL-029 Pack B CC-before-QID): ELIMINATED — CC and EW are extracted from the SAME parsed object",
+          "VM-003 (no object-boundary awareness): ELIMINATED — string-aware brace-matcher tracks inString/stringChar/escape"
+        ],
+        "what_was_NOT_fixed": [
+          "AM-1 parse NOT implemented: Uses brace-matching per-object instead of Function constructor on full array",
+          "No pre/post diff: Still operates on newContent (change snippet) only, not full file vs. comparison",
+          "No QID-level reporting: Violations still reported as {letter, snippet}, not {questionID, correctChoice} as specified",
+          "No full-file read from disk: The fs/path requires were NOT added; no disk I/O",
+          "No pre-existing violation awareness: Edits to files with pre-existing DL-008 on unrelated QIDs are blocked by the newContent-only scan if those QIDs appear in the edit fragment"
+        ],
+        "test_suite": "373 lines, 27 tests confirmed by raw file inspection. Tests 1-10 cover the upgraded extractObjectsFromText() approach. Tests 26-27 are DL-029 cross-validation proving the old window-scan fails. 27/27 PASS claimed (not independently re-run).",
+        "backup_protocol": "FAILED — governance-guard.js.bak-S726-20260726201956 claimed in audit JSON but file NOT FOUND on disk. test_governance_guard.js.bak-S726-20260726201956 EXISTS (36,839 bytes).",
+        "revision_history": "MISSING — No REVISION_HISTORY.md entry for the governance-guard change. Only Agent H's closure gate spec is recorded. Violates AGENTS.md §12.",
+        "design_vs_implementation_discrepancy": "Agent D's Enforcement Upgrade doc says 'Read-Only Design — implementation NOT authorized' at header. But Agent D's Audit JSON says the implementation WAS executed (backup protocol followed, test suite 27/27, checkText changed to newContent-only). These are contradictory: either the design was not authorized and the implementation should not have happened, or the header claim is stale."
+      }
+    },
+    {
+      "control": "Closure gate design (TRANSFER→ACCEPT→APPROVE→CLOSE)",
+      "status": "VERIFIED_DESIGN — NOT_ENFORCED",
+      "evidence": {
+        "design_completeness": "HIGH. Agent H produced SESSION726_SERIES_CLOSURE_GATE.md (773 lines). Defines: 4-step chain, 11-item Pre-Closure Checklist, Closure Attestation format (3 signatures required), 3-tier enforcement (Procedural/Plugin/Board), RULE 6 WARN proposal, dispute process, governance debt items with 5-session max age. Historical S723 compliance check: would have failed 12/12 checklist items — VERIFIED as correct per S724 gap discovery evidence.",
+        "enforcement_reality": "The gate is PROCEDURALLY DEPENDENT. The proposed RULE 6 is WARN-level, NOT BLOCK. The governance guard currently has NO Rule 6 — it is a specification proposal only. No code was written. The primary enforcement is Governance Auditor diligence + checklist verification, not automated blocking.",
+        "agent_j_contradiction": "AGENT J ERROR — SESSION726_UNAUTHORIZED_CLOSURE_PREVENTION_REPORT.md (line 25) claims 'Agent H's closure gate specification (SESSION726_SERIES_CLOSURE_GATE.md) does not exist in the repository.' This is FACTUALLY FALSE — the file exists at 773 lines and was consulted by this review. Agent J's second report (SESSION726_GATE_VERIFICATION_AGENT_J.json) CORRECTLY references the closure gate. The initial report is unreliable due to this factual error.",
+        "cross_references_valid": true,
+        "historical_check_verified": true
+      }
+    },
+    {
+      "control": "Ownership acceptance registry",
+      "status": "VERIFIED_DESIGN — ZERO_ACCEPTANCES",
+      "evidence": {
+        "design_completeness": "HIGH. Agent I produced SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json (231 lines). Documents all 6 S724 carry-forward ownership gaps with full primary/secondary/escalation owner chains, acceptance evidence standards per Agent E §4.2-4.3, invalid acceptance forms, valid acceptance criteria, and accurate cross-references to all 5 S725 governance standards.",
+        "operational_reality": "0 of 6 acceptances completed. All 6 gaps are PENDING status. All 6 have passed their S726 T0 deadline. Per Agent O Stewardship Principle 2, assignment without acceptance is invalid — the original 700-series owners retain ownership. The registry accurately reflects this gap.",
+        "self_awareness": "The registry explicitly documents its own incompleteness: line 182-191 shows 'total_gaps: 6, accepted: 0, pending: 6, deadline_passed: 6, governance_board_escalation_triggered: false'. The accuracy of this self-report is VERIFIED.",
+        "acceptance_evidence_standards": "Clear and enforceable. 4 valid forms, 6 invalid forms. No ambiguity.",
+        "cross_references_valid": true
+      }
+    },
+    {
+      "control": "Phantom reference remediation (CURRENT_BASELINES.md)",
+      "status": "VERIFIED",
+      "evidence": {
+        "execution_confirmed": "Agent E's SESSION726_PHANTOM_REFERENCE_REMEDIATION.json reports 9/9 CURRENT_BASELINES.md phantom references remediated. Verified by direct grep: CURRENT_BASELINES.md §3 CRITICAL table now reads '*(None — learner pool confirmed clean)*' and 'DL-008 — 0 verified' instead of the prior 67 phantom entries. §2 section notes corrected for Packs C/D/E. §3 HIGH table now includes DL-016.",
+        "hash_changes": "6 of 15 files drifted from S530 T0 baseline — verified as authorized drift from S64-S726 development. All 15 SHA-256 hashes recaptured via Get-FileHash.",
+        "backup_confirmed": "CURRENT_BASELINES.md.bak-S726-20260726201842 exists (8,666 bytes).",
+        "verification_readback": "Agent E reports 'PASS — file read back in full (131 lines), all edits confirmed consistent'. Plausible.",
+        "remaining_phantoms": "15 phantom references remain in other documents (SESSION_STATUS: 8, DEFECT_LIBRARY DL-008 header: 2, other: 5). These were out of scope per Agent E's tasking.",
+        "cross_references_valid": true
+      }
+    },
+    {
+      "control": "Cross-reference verification",
+      "status": "VERIFIED",
+      "evidence": {
+        "execution_confirmed": "Agent F's SESSION726_CROSS_REFERENCE_VERIFICATION.json reports 25 references found across 5 documents: 16 correct, 8 stale, 1 ambiguous. Phantom ledger tracking: 9 of 24 remediated, 15 remaining. The identification of SESSION_STATUS_2026-07-24.md as 'wholly stale' is consistent with all other evidence.",
+        "most_critical_finding": "SESSION_STATUS_2026-07-24.md — the primary handoff document — reports 67 Certified DL-008 as CRITICAL (0 actual), undercounts Certified pool by 150 items, understates DL-016 as LOW/Cosmetic (should be HIGH), and recommends DL-008 remediation as #1 next step (non-existent task).",
+        "defect_library_contradiction": "DEFECT_LIBRARY.md DL-008 header (line 359) says 'Open — 175 remaining' while the body (line 362-368) correctly says '539 identified — 539 resolved = 0 remaining'. Internal contradiction within the same entry.",
+        "cross_references_valid": true
+      }
+    }
+  ],
+
+  "remaining_gaps": [
+    {
+      "gap_id": "S726-GAP-01",
+      "severity": "CRITICAL",
+      "description": "Governance guard Rule 2 NOT upgraded to AM-1 (Function Constructor Parse). Current implementation uses AM-2-style object extraction — an intermediate improvement that fixes DL-029 for object boundaries but does NOT read full pack files from disk, does NOT perform pre/post diff, and does NOT report QID-level violations. The S725 Board COND-01 required AM-1 upgrade 'before S803 launch' — this has not been met.",
+      "evidence": "Raw governance-guard.js inspection: no fs/path requires, no MCQ_BANK variable extraction, no new Function() parse of full file, no preContent comparison. Test suite uses synthetic objects, not real pack files."
+    },
+    {
+      "gap_id": "S726-GAP-02",
+      "severity": "CRITICAL",
+      "description": "0 of 6 Principle 2 ownership acceptances completed. All 6 gaps past S726 T0 deadline. Per Agent O Stewardship Principle 2, assignment without acceptance is invalid. The original 700-series owners retain unconfirmed ownership of all 6 transferred responsibilities.",
+      "evidence": "SESSION726_OWNERSHIP_ACCEPTANCE_REGISTRY.json line 182-191: 'accepted: 0, pending: 6, deadline_passed: 6'."
+    },
+    {
+      "gap_id": "S726-GAP-03",
+      "severity": "HIGH",
+      "description": "Closure gate has NO mechanical BLOCK enforcement. The proposed RULE 6 is WARN-level and NOT YET IMPLEMENTED. Any agent can declare a series CLOSED without verifying ownership acceptance, and no tool will block the write. This is the same exploitation path that S723 used.",
+      "evidence": "Governance-guard.js has 5 rules only (Rules 1-5). No Rule 6 exists. Agent H's spec §5.2 proposes Rule 6 as WARN, not BLOCK. Agent J's report §5 identifies 5 attack vectors (V1-V5) with 'Nothing' blocking them."
+    },
+    {
+      "gap_id": "S726-GAP-04",
+      "severity": "HIGH",
+      "description": "Governance guard backup file NOT FOUND on disk. SESSION726_RULE2_AUDIT.json claims governance-guard.js.bak-S726-20260726201956 was created, but glob search returns 'No files found'. Violates AGENTS.md §3 backup protocol. Test backup (test_governance_guard.js.bak-S726-20260726201956) WAS found — backup protocol partially followed.",
+      "evidence": "Glob '.opencode/plugins/governance-guard.js.bak*' → 'No files found'. Test backup at 'scripts/test_governance_guard.js.bak-S726-20260726201956' → EXISTS (confirmed)."
+    },
+    {
+      "gap_id": "S726-GAP-05",
+      "severity": "HIGH",
+      "description": "No REVISION_HISTORY.md entry for governance-guard.js modification. The governance guard was modified (217→247 lines, new extractObjectsFromText + upgraded findDL008Violations, test suite 20→27) but REVISION_HISTORY.md records only Agent H's closure gate spec creation. Violates AGENTS.md §12: 'Every content change must pair with a knowledge/REVISION_HISTORY.md entry.'",
+      "evidence": "REVISION_HISTORY.md lines 1-49: Only Session 726 entry is Agent H's closure gate spec. No mention of governance-guard changes."
+    },
+    {
+      "gap_id": "S726-GAP-06",
+      "severity": "HIGH",
+      "description": "Agent J produced a factually false claim in SESSION726_UNAUTHORIZED_CLOSURE_PREVENTION_REPORT.md: 'Agent H's closure gate specification (SESSION726_SERIES_CLOSURE_GATE.md) does not exist in the repository' (line 25). The file exists at 773 lines. This error undermines the reliability of the closure prevention report. Agent J's second report (GATE_VERIFICATION JSON) corrected this but the initial report's finding of 4 documentation gaps relies on this error.",
+      "evidence": "SESSION726_SERIES_CLOSURE_GATE.md: 773 lines, verified by direct read. Agent J line 25: explicit claim of non-existence."
+    },
+    {
+      "gap_id": "S726-GAP-07",
+      "severity": "MEDIUM",
+      "description": "No inter-agent halt communication protocol exists. ESC-001 and ESC-006 prescribe 'broadcast halt to all agents' but this is a documentation promise, not an operational mechanism. Identified as CRITICAL risk R-002 in the 5-agent synthesis but not registered as a Board condition.",
+      "evidence": "SESSION726_GOVERNANCE_OPERATIONS_5_AGENT_REPORT.json: Agent O §escalation_gaps: ESC-001 gap = 'No inter-agent halt communication protocol exists'."
+    },
+    {
+      "gap_id": "S726-GAP-08",
+      "severity": "MEDIUM",
+      "description": "No session counter exists. M2 Rapid Pulse (every 5 sessions) and M3 Deep Audit (every 20 sessions) triggers cannot fire autonomously. Both cadences are effectively manual-only.",
+      "evidence": "5-agent synthesis report: Agent O §M2_RAPID_PULSE trigger_gap: 'No SESSION_COUNTER.md exists.' Agent S risk R-S726-005 confirms."
+    },
+    {
+      "gap_id": "S726-GAP-09",
+      "severity": "MEDIUM",
+      "description": "DEFECT_MANIFEST_DL008_DL026.json still contaminated with 371 Pack E phantom DL-008 entries. Downstream delivery_blocklist.js and defect_manifest.js inherit contaminated data. May coaching layer may block clean Pack E items from delivery.",
+      "evidence": "Agent S risk R-S726-006. S725 Agent I tooling review originally identified this. S725 Dashboard P1-03 scheduled regeneration, not executed."
+    },
+    {
+      "gap_id": "S726-GAP-10",
+      "severity": "MEDIUM",
+      "description": "SESSION_STATUS_2026-07-24.md is wholly stale — 8 phantom references, wrong certified count (2,031 vs. 2,181), DL-016 severity understated (LOW instead of HIGH), recommends non-existent DL-008 remediation as #1 priority. AGENTS.md §9 directs sessions to read this file first, guaranteeing they operate on incorrect data.",
+      "evidence": "Agent F cross-reference verification confirms 8 stale references in SESSION_STATUS. AGENTS.md §9: 'Read reports/session_status/SESSION_STATUS_2026-07-24.md for open risks.'"
+    },
+    {
+      "gap_id": "S726-GAP-11",
+      "severity": "LOW",
+      "description": "Agent D's Enforcement Upgrade doc header says 'Read-Only Design — implementation NOT authorized' but Agent D's Audit JSON claims the implementation WAS executed. These two documents from the same agent are contradictory. Either the header is stale, or the implementation was unauthorized.",
+      "evidence": "SESSION726_RULE2_ENFORCEMENT_UPGRADE.md line 4: 'Read-Only Design (implementation NOT authorized)'. SESSION726_RULE2_AUDIT.json lines 18-19: 'lines_added: 42-92 (+50 lines)' — claims execution."
+    }
+  ],
+
+  "cross_agent_contradictions": [
+    {
+      "contradiction_id": "S726-CONTRA-01",
+      "severity": "HIGH",
+      "description": "Agent D's two documents contradict each other: the Enforcement Upgrade design doc says 'implementation NOT authorized'; the Audit JSON says implementation WAS executed (backup followed, test suite 27/27, checkText changed). Both documents are from Agent D.",
+      "documents": ["SESSION726_RULE2_ENFORCEMENT_UPGRADE.md", "SESSION726_RULE2_AUDIT.json"]
+    },
+    {
+      "contradiction_id": "S726-CONTRA-02",
+      "severity": "HIGH",
+      "description": "Agent J claims Agent H's closure gate spec doesn't exist (line 25 of Unauthorized Closure Prevention Report) but it does (773 lines, verified by direct read). Agent J's second report (Gate Verification JSON) correctly references the spec, indicating the first report was based on a stale or incomplete file listing.",
+      "documents": ["SESSION726_UNAUTHORIZED_CLOSURE_PREVENTION_REPORT.md", "SESSION726_SERIES_CLOSURE_GATE.md"]
+    },
+    {
+      "contradiction_id": "S726-CONTRA-03",
+      "severity": "MEDIUM",
+      "description": "The Audit JSON claims governance guard backup was created (governance-guard.js.bak-S726-20260726201956) but the file does not exist on disk. Test backup was found, confirming the backup protocol was partially followed.",
+      "documents": ["SESSION726_RULE2_AUDIT.json", "filesystem glob"]
+    }
+  ],
+
+  "evidence_quality_assessment": "MEDIUM",
+  "evidence_quality_detail": {
+    "design_documents": "HIGH — Agent C, Agent D's Enforcement Upgrade, Agent H's Closure Gate, and Agent I's Registry are all thorough, well-structured, cross-referenced, and internally consistent at the design layer.",
+    "implementation_claims": "MEDIUM — Agent D's Audit JSON claims execution where the companion doc says 'not authorized.' The governance guard was demonstrably modified but with an intermediate (not AM-1) approach. The backup claim is unverifiable (file missing). No REVISION_HISTORY entry for the code change.",
+    "cross_references": "HIGH — Agent F's cross-reference verification is rigorous and its findings are independently confirmable. The phantom ledger tracking is accurate.",
+    "simulation_analysis": "HIGH — Agent K/L/M/N's governance simulations are well-reasoned with specific clause citations. Historical incident analysis matches known ground truth.",
+    "agent_j_reliability": "LOW — Agent J's initial report contains a major factual error (claiming non-existence of a file that exists). The second report corrects this but demonstrates that Agent J was operating with incomplete information.",
+    "operational_readiness": "LOW — The 5-agent synthesis (O-P-Q-R-S) correctly identifies that the governance framework is DESIGN_COMPLETE but NOT OPERATIONAL. This finding is corroborated by all other evidence."
+  },
+
+  "p0_gap_status": {
+    "p0_gap_1": {
+      "name": "Governance Guard Rule 2 is DL-029 vulnerable",
+      "s725_source": "S725 Governance Board COND-01",
+      "s726_status": "PARTIALLY_ADDRESSED",
+      "detail": "The governance guard was upgraded from FM-001 (±1200 char forward-scan regex) to AM-2-style (string-aware object-bounded extraction). This eliminates the three most critical vulnerability classes (fixed window, cross-object CC contamination, string-unawareness). However, the implementation is NOT AM-1 (Function Constructor Parse on full file). Key AM-1 capabilities still missing: (1) full-file pre/post diff to distinguish new violations from pre-existing, (2) QID-level violation reporting, (3) Pack B gold-standard compliance test with real files. The guard still operates on change-text only and does not read from disk.",
+      "recommendation": "Accept the current AM-2-style implementation as a P0 interim fix (it eliminates the proven DL-029 failure modes). Schedule AM-1 full-file parse upgrade for S727 or S728 as initially planned. The AM-2 approach is sufficient for P0 because it eliminates cross-object contamination and fixed-window truncation — the two documented failure modes that produced 885+ false positives historically."
+    },
+    "p0_gap_2": {
+      "name": "Transfer→Accept→Approve→Close lacks enforcement gate",
+      "s725_source": "S723→S724 ownership gap (6 gaps discovered post-closure)",
+      "s726_status": "DESIGN_COMPLETE — ENFORCEMENT_PENDING",
+      "detail": "Agent H's Series Closure Gate v1.0 (773 lines) defines a complete, comprehensive gate specification. The design would have blocked S723 (12/12 checklist items would have failed). However: (1) Rule 6 is proposed as WARN, not BLOCK; (2) the rule has NOT been implemented in governance-guard.js; (3) the gate is procedurally dependent on Governance Auditor diligence; (4) key steps (genuineness of acceptance, board approval authenticity) cannot be mechanically verified.",
+      "recommendation": "Accept the procedural gate as valid for current governance maturity. Implement Rule 6 as WARN (as designed) in governance-guard.js for session S727. Add to AGENTS.md §9 the closure governance section proposed by Agent H. Acknowledge that mechanical BLOCK of closure is infeasible — the procedural + plugin-WARN + board-escalation tiered model is the correct architecture."
+    }
+  },
+
+  "most_critical_immediate_actions": [
+    "1. EXECUTE 6 OWNERSHIP ACCEPTANCES — All past S726 T0 deadline. The Governance Board must resolve per Agent O Stewardship Framework §4.",
+    "2. WRITE REVISION_HISTORY entry for governance-guard.js changes — per AGENTS.md §12 mandate. Document what was changed and why.",
+    "3. CREATE governance-guard.js backup — the current file has no rollback point. Copy now.",
+    "4. SUPERSEDE SESSION_STATUS_2026-07-24.md — it reports phantom DL-008 as CRITICAL and recommends non-existent remediation. Generate fresh SESSION_STATUS_2026-07-26.md.",
+    "5. DOCUMENT the governance guard migration status — confirm whether the AM-2-style implementation is the intended final state or whether AM-1 full-file parse is still planned for S727."
+  ],
+
+  "recommendation": "CONDITIONAL_PASS",
+  "recommendation_detail": "The S726 governance hardening is substantively correct and well-designed. All enforcement control designs are complete, coherent, and evidence-backed. However, the implementation layer has 4 critical gaps (no ownership acceptances, intermediate Rule 2 upgrade not AM-1, no backup for governance guard change, no REVISION_HISTORY entry for code change) that prevent unconditional PASS. The design work is strong enough to proceed to S727 with these gaps acknowledged and prioritized for closure at next session T0.",
+
+  "confidence": 90
+}

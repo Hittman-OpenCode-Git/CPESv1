@@ -1,0 +1,396 @@
+{
+  "specId": "SESSION252_CHALLENGE_TRIAGE",
+  "board": "C",
+  "version": "1.0.0",
+  "createdTimestamp": "2026-07-27T06:30:00.000Z",
+  "purpose": "Automated challenge triage engine specification — defines decision tree, categories, keyword patterns, and scoring algorithms for classifying student-reported challenges",
+  "inputSources": [
+    "scripts/output/challenge_registry.json",
+    "scripts/output/question_history.json",
+    "scripts/output/challenge_to_question.json",
+    "scripts/output/challenge_to_session.json",
+    "scripts/output/challenge_to_recommendation.json",
+    "scripts/output/readiness_scoring.json",
+    "scripts/output/work_queue.json"
+  ],
+  "outputArtifact": "scripts/output/challenge_triage.json",
+
+  "triageCategories": {
+    "LIKELY_DEFECT": {
+      "code": "LIKELY_DEFECT",
+      "description": "Challenge maps to a known defect code (DL-XXX), AND the QID has that defect flagged in readiness_scoring or question_history. OR the challenge description contains keywords matching known defect patterns.",
+      "icon": "BUG",
+      "defaultPriority": 85,
+      "defaultConfidence": 80
+    },
+    "LIKELY_USER_ERROR": {
+      "code": "LIKELY_USER_ERROR",
+      "description": "Challenge describes a misunderstanding of an accounting concept (not a structural defect). Keywords: 'I thought', 'I calculated', 'shouldn't it be', 'I got'. AND no matching defect codes.",
+      "icon": "USER",
+      "defaultPriority": 25,
+      "defaultConfidence": 75
+    },
+    "NEEDS_REVIEW": {
+      "code": "NEEDS_REVIEW",
+      "description": "Insufficient data to auto-classify. Mixed signals. First-time challenge for this QID. No matching defect but plausible complaint.",
+      "icon": "EYE",
+      "defaultPriority": 50,
+      "defaultConfidence": 40
+    },
+    "GOVERNANCE_ESCALATION": {
+      "code": "GOVERNANCE_ESCALATION",
+      "description": "Challenge involves a Certified item with a Critical/High severity defect. OR challenge touches a governance-blocked QID. OR challenge reveals a systematic issue (3+ challenges on same QID or topic cluster).",
+      "icon": "FLAG",
+      "defaultPriority": 100,
+      "defaultConfidence": 90
+    }
+  },
+
+  "decisionTree": {
+    "rootNode": "GATE_1",
+    "nodes": {
+      "GATE_1": {
+        "name": "Systematic Issue Detection",
+        "description": "Check if this QID or topic cluster has 3+ OPEN/INVESTIGATING challenges",
+        "conditions": [
+          {
+            "test": "challenge_count_per_qid >= 3 AND all status IN (OPEN, INVESTIGATING)",
+            "result": "GOVERNANCE_ESCALATION",
+            "reason": "Systematic issue — 3+ open challenges on same QID"
+          },
+          {
+            "test": "challenge_count_per_topic >= 3 AND same defect codes across all",
+            "result": "GOVERNANCE_ESCALATION",
+            "reason": "Systematic issue — topic cluster with repeated defect pattern"
+          }
+        ],
+        "fallthrough": "GATE_2"
+      },
+      "GATE_2": {
+        "name": "Blocked QID Check",
+        "description": "Check if the QID is in BLOCKED state in readiness_scoring.json",
+        "conditions": [
+          {
+            "test": "readiness_state == 'BLOCKED' AND challenge.status == 'OPEN'",
+            "result": "GOVERNANCE_ESCALATION",
+            "reason": "QID is governance-blocked — challenge is already known"
+          },
+          {
+            "test": "readiness_state == 'CERTIFY' AND has_critical_defect_flag (DL-030 or DL-008 on Certified)",
+            "result": "GOVERNANCE_ESCALATION",
+            "reason": "Certified item with critical defect — learner-safety risk"
+          }
+        ],
+        "fallthrough": "GATE_3"
+      },
+      "GATE_3": {
+        "name": "Known Defect Match",
+        "description": "Check if challenge maps to a known defect code via linkedDefects or keyword matching",
+        "conditions": [
+          {
+            "test": "linkedDefects ∩ readiness_defect_flags ≠ ∅",
+            "result": "LIKELY_DEFECT",
+            "reason": "Challenge's linked defect matches readiness_scoring defect flag",
+            "confidence": 90
+          },
+          {
+            "test": "linkedDefects ∩ question_history_defects ≠ ∅ AND defect severity IN (Critical, High)",
+            "result": "LIKELY_DEFECT",
+            "reason": "Challenge's linked defect matches known defect history with high severity",
+            "confidence": 85
+          },
+          {
+            "test": "linkedDefects ∩ question_history_defects ≠ ∅",
+            "result": "LIKELY_DEFECT",
+            "reason": "Challenge's linked defect matches known defect history",
+            "confidence": 75
+          },
+          {
+            "test": "description_keywords_match_defect_patterns",
+            "result": "LIKELY_DEFECT",
+            "reason": "Challenge description matches known defect keyword pattern",
+            "confidence": 70
+          }
+        ],
+        "fallthrough": "GATE_4"
+      },
+      "GATE_4": {
+        "name": "User Error Detection",
+        "description": "Check if the challenge description uses language suggesting user misunderstanding of the concept",
+        "conditions": [
+          {
+            "test": "matches_user_error_keywords AND linkedDefects.length == 0 AND readiness_defect_flags.length == 0",
+            "result": "LIKELY_USER_ERROR",
+            "reason": "Description uses student rationale language with no matching structural defects",
+            "confidence": 80
+          },
+          {
+            "test": "matches_user_error_keywords AND has_minor_defect_only (DL-031, Low severity)",
+            "result": "LIKELY_USER_ERROR",
+            "reason": "User conceptual misunderstanding paired with cosmetic defect only",
+            "confidence": 65
+          }
+        ],
+        "fallthrough": "GATE_5"
+      },
+      "GATE_5": {
+        "name": "Insufficient Data / First-Time Detection",
+        "description": "Catch-all for challenges with insufficient data or conflicting signals",
+        "conditions": [
+          {
+            "test": "challenge_count_for_qid == 1 AND linkedDefects.length == 0 AND readiness_defect_flags.length == 0",
+            "result": "NEEDS_REVIEW",
+            "reason": "First-time challenge — no existing defect data to cross-reference",
+            "confidence": 30
+          },
+          {
+            "test": "linkedDefects.length > 0 AND readiness_defect_flags.length == 0 AND question_history_defects.length == 0",
+            "result": "NEEDS_REVIEW",
+            "reason": "Challenge claims defect codes not confirmed by any registry — possible misclassification",
+            "confidence": 35
+          },
+          {
+            "test": "challenge.type == 'OTHER' AND linkedDefects.length == 0",
+            "result": "NEEDS_REVIEW",
+            "reason": "Unclassified challenge type with no defect linkage — manual investigation required",
+            "confidence": 25
+          }
+        ],
+        "fallthrough": "NEEDS_REVIEW",
+        "fallthroughReason": "Insufficient data to auto-classify"
+      }
+    }
+  },
+
+  "keywordPatterns": {
+    "defect_keywords": {
+      "DL-008": {
+        "displayName": "DL-008: ExplanationWrong[CorrectChoice] non-empty",
+        "patterns": [
+          "wrong explanation.*correct.*answer",
+          "correct answer.*wrong.*explanation",
+          "explanation.*(?:shown|displayed).*correct",
+          "showing.*wrong.*(?:text|explanation|feedback)"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-013": {
+        "displayName": "DL-013: Template boilerplate distractor explanations",
+        "patterns": [
+          "plausible misconception",
+          "misapply.*related.*concept",
+          "generic explanation",
+          "same explanation.*every.*choice",
+          "copy.*paste.*explanation",
+          "identical.*feedback"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-016": {
+        "displayName": "DL-016: Metadata-block topic-numbering shift",
+        "patterns": [
+          "explanation.*(?:describes|refers to).*(?:different|wrong).*(?:question|topic|choice)",
+          "distractor.*wrong.*topic",
+          "explanation.*unrelated",
+          "feedback.*different.*question"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-026": {
+        "displayName": "DL-026: Empty non-CorrectChoice ExplanationWrong slots",
+        "patterns": [
+          "missing.*explanation",
+          "no.*(?:feedback|explanation).*(?:shown|displayed)",
+          "blank.*(?:explanation|feedback)",
+          "empty.*(?:explanation|feedback|slot)",
+          "distractor.*(?:no|without).*explanation",
+          "distractor explanations.*missing"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-030": {
+        "displayName": "DL-030: CorrectChoice answer-key errors",
+        "patterns": [
+          "wrong.*answer.*marked.*correct",
+          "correct.*answer.*(?:is|should be).*(?:but|however)",
+          "answer.*(?:key|shown).*wrong",
+          "answer doesn't match",
+          "calculated.*(?:differently|different)",
+          "shouldn't.*(?:be|the answer be)",
+          "my calculation.*different",
+          "answer should be"
+        ],
+        "severity": "CRITICAL"
+      },
+      "DL-031": {
+        "displayName": "DL-031: Difficulty inflation (definition-match)",
+        "patterns": [
+          "difficulty.*(?:too high|wrong|doesn't match|inaccurate)",
+          "too easy.*marked.*moderate",
+          "difficulty.*label.*doesn't match",
+          "should be easy.*but.*marked"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-035": {
+        "displayName": "DL-035: Governance guard coverage gap",
+        "patterns": [
+          "certified.*(?:but|yet).*defect",
+          "governance.*missed",
+          "certification.*(?:error|mistake|wrong)"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-010": {
+        "displayName": "DL-010: Misassigned choice explanations",
+        "patterns": [
+          "explanation.*describes.*wrong.*choice",
+          "distractor.*text.*wrong.*option",
+          "explanation.*belongs to.*different",
+          "wrong.*explanation.*for.*choice",
+          "describes.*(?:different|wrong).*choice"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-009": {
+        "displayName": "DL-009: Incorrect authority citation",
+        "patterns": [
+          "ASC.*(?:standard|reference).*(?:wrong|incorrect|doesn't apply)",
+          "wrong.*(?:ASC|standard|IFRS|GAAP).*reference",
+          "citation.*(?:wrong|incorrect)",
+          "standard.*doesn't apply"
+        ],
+        "severity": "HIGH"
+      },
+      "DL-017": {
+        "displayName": "DL-017: File corruption artifact",
+        "patterns": [
+          "app.*crash",
+          "application.*crash",
+          "submit.*crash",
+          "error.*when.*submit",
+          "page.*(?:crash|broke|error)"
+        ],
+        "severity": "HIGH"
+      }
+    },
+    "user_error_keywords": [
+      "I thought",
+      "I calculated",
+      "shouldn't it be",
+      "I got",
+      "my answer",
+      "I think",
+      "maybe I'm wrong"
+    ],
+    "governance_escalation_keywords": [
+      "certified.*wrong",
+      "defect.*certified",
+      "governance.*failure",
+      "systematic.*(?:error|issue|problem)"
+    ]
+  },
+
+  "scoringAlgorithm": {
+    "priority": {
+      "description": "Priority score 1-100. Higher = more urgent. Based on severity, Certified status, challenge count, and age.",
+      "formula": "base = severity_weight + certified_bonus + cluster_bonus + age_bonus",
+      "weights": {
+        "severity_weight": {
+          "CRITICAL": 60,
+          "HIGH": 45,
+          "MEDIUM": 25,
+          "LOW": 10
+        },
+        "certified_bonus": "20 if QID is Certified",
+        "cluster_bonus": "15 if 3+ challenges on same QID or topic",
+        "age_bonus": "5 if created > 30 days ago"
+      },
+      "cap": 100,
+      "floor": 5
+    },
+    "confidence": {
+      "description": "Confidence in the triage category assignment. 0-100.",
+      "factors": {
+        "defect_flag_match": "+25 per matching defect flag in readiness_scoring",
+        "linked_defect_match": "+20 per matching linked defect also in question_history",
+        "keyword_match": "+15 per matching keyword pattern",
+        "description_resemblance": "+10 if description closely matches known pattern",
+        "contradictory_signals": "-20 per contradictory signal",
+        "first_time_challenge": "-25 base confidence"
+      },
+      "cap": 100,
+      "floor": 5
+    }
+  },
+
+  "defectSeverityMap": {
+    "DL-008": "HIGH",
+    "DL-009": "HIGH",
+    "DL-010": "HIGH",
+    "DL-013": "HIGH",
+    "DL-016": "HIGH",
+    "DL-017": "HIGH",
+    "DL-026": "HIGH",
+    "DL-027": "LOW",
+    "DL-030": "CRITICAL",
+    "DL-031": "MEDIUM",
+    "DL-035": "HIGH"
+  },
+
+  "qidPackMap": {
+    "description": "Maps QID format patterns to pack files",
+    "patterns": {
+      "P1-[A-F]-\\d+": { "pack": "pack_a", "type": "standard" },
+      "P1B-[A-F]-\\d+": { "pack": "pack_b", "type": "standard" },
+      "P1-[A-F]C-\\d+": { "pack": "pack_c", "type": "standard" },
+      "P1-[A-F]D-\\d+": { "pack": "pack_d", "type": "standard" },
+      "P1E-[A-F]-\\d+": { "pack": "pack_e", "type": "standard" },
+      "P1-[A-F]-R\\d+": { "pack": "pack_e", "type": "supplemental" }
+    }
+  },
+
+  "outputSchema": {
+    "triageResult": {
+      "challengeId": "string — CH-XXXXXXXX",
+      "challengeDescription": "string — student-reported description",
+      "questionId": "string — QID from challenge",
+      "challengeType": "string — CONTENT_ERROR | TECHNICAL_ISSUE | ANSWER_DISPUTE | EXPLANATION_ISSUE | AMBIGUITY | OTHER",
+      "challengeStatus": "string — source challenge status",
+      "assignedCategory": "string — LIKELY_DEFECT | LIKELY_USER_ERROR | NEEDS_REVIEW | GOVERNANCE_ESCALATION",
+      "confidence": "integer — 0-100 confidence in the assigned category",
+      "reasoning": "string — why this category was chosen",
+      "recommendedAction": "string — first step for investigator",
+      "relatedDefectCodes": "array[string] — DL-XXX codes",
+      "relatedQIDs": "array[string] — QIDs in same topic cluster (for systematic issues)",
+      "priorityScore": "integer — 1-100, higher = more urgent",
+      "qidState": "string — Certified | Unprocessed | Archived",
+      "qidPack": "string — pack filename",
+      "qidSection": "string — A-F section",
+      "triageTimestamp": "string — ISO 8601"
+    },
+    "summary": {
+      "totalTriaged": "integer",
+      "byCategory": {
+        "LIKELY_DEFECT": "integer",
+        "LIKELY_USER_ERROR": "integer",
+        "NEEDS_REVIEW": "integer",
+        "GOVERNANCE_ESCALATION": "integer"
+      },
+      "bySeverity": {
+        "CRITICAL": "integer",
+        "HIGH": "integer",
+        "MEDIUM": "integer",
+        "LOW": "integer"
+      },
+      "systematicIssues": "array — topic clusters with 3+ challenges"
+    }
+  },
+
+  "recommendedActions": {
+    "LIKELY_DEFECT": "Verify defect in source file. If confirmed, add to remediation queue and link to REVISION_HISTORY.md.",
+    "LIKELY_USER_ERROR": "Check if question is correct. If so, close with CONFIRMED_VALID resolution and provide student feedback.",
+    "NEEDS_REVIEW": "Assign to next available reviewer for manual investigation. Check source file, answer key, and explanations.",
+    "GOVERNANCE_ESCALATION": "Flag to governance board. Do not auto-close. Initiate cross-session defect tracking. Update DEFECT_LIBRARY.md."
+  }
+}

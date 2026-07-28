@@ -1,0 +1,75 @@
+{
+  "generated": "2026-07-26T22:05:28.404Z",
+  "modelVersion": "S306-UIQS-1.0",
+  "strategies": {
+    "certificationFirst": {
+      "description": "Certify E/F blocks first (~328 items)",
+      "uncertifiedItems": 358,
+      "risk": "May certify items with EW gaps"
+    },
+    "rewriteFirst": {
+      "description": "Target 46 P0 items first",
+      "p0Items": 46,
+      "risk": "Rewrite may need re-audit after certification"
+    },
+    "hybrid": {
+      "description": "P0 items + E/F certification simultaneously",
+      "p0Items": 46,
+      "uncertifiedItems": 358,
+      "risk": "Largest scope"
+    }
+  },
+  "recommendation": {
+    "strategy": "HYBRID",
+    "rationale": "46 P0 items concentrated in uncertified E/F blocks. Certifying E/F involves EW authoring — same work. Hybrid: parallel EW authoring for certified DL-008 items + certification with EW authoring for E/F blocks.",
+    "roiByDomain": {
+      "A": {
+        "p0Count": 3,
+        "rewriteBurden": 182,
+        "avgUiqs": 70.3,
+        "certGap": 8,
+        "priority": "P3"
+      },
+      "B": {
+        "p0Count": 0,
+        "rewriteBurden": 204,
+        "avgUiqs": 71.3,
+        "certGap": 6,
+        "priority": "P3"
+      },
+      "C": {
+        "p0Count": 4,
+        "rewriteBurden": 218,
+        "avgUiqs": 74.1,
+        "certGap": 10,
+        "priority": "P3"
+      },
+      "D": {
+        "p0Count": 2,
+        "rewriteBurden": 220,
+        "avgUiqs": 70.1,
+        "certGap": 6,
+        "priority": "P3"
+      },
+      "E": {
+        "p0Count": 29,
+        "rewriteBurden": 669,
+        "avgUiqs": 62.5,
+        "certGap": 178,
+        "priority": "P0"
+      },
+      "F": {
+        "p0Count": 8,
+        "rewriteBurden": 566,
+        "avgUiqs": 62.4,
+        "certGap": 150,
+        "priority": "P1"
+      }
+    },
+    "sequencing": {
+      "wave1": "Domain E certification + Pack C EW remediation",
+      "wave2": "Domain F certification + Pack A EW remediation",
+      "wave3": "Pack D certification + remaining EW debt"
+    }
+  }
+}

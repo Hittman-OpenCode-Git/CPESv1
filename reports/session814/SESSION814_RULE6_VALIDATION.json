@@ -1,0 +1,70 @@
+{
+  "session": "S814",
+  "board": "Agent Group A-D — Rule 6 Enforcement Validation",
+  "condition": "C1 — Governance Guard Rule 6 (DL-026 BLOCK)",
+  "timestamp": "2026-07-27T11:35:00Z",
+  "status": "DEPLOYED",
+
+  "implementation_summary": {
+    "rule_id": "RULE 6",
+    "rule_level": "BLOCK",
+    "rule_description": "Non-CorrectChoice ExplanationWrong slots must be non-empty for any question object certification",
+    "defects_enforced": ["DL-026", "DL-035"],
+    "defect_pattern": "Empty or absent ExplanationWrong[letter] field at any non-CorrectChoice position (3 distractor slots)",
+
+    "function_added": "findDL026Violations(text)",
+    "function_location": "governance-guard.js, insert after findDL008Violations (line ~92)",
+    "function_method": "Extracts brace-matched objects via extractObjectsFromText; for each, checks non-CorrectChoice ExplanationWrong slots for empty string or absent property",
+
+    "rule_location": "tool.execute.before hook, after RULE 2 block and before RULE 5",
+    "rule_message": "GOVERNANCE RULE 6 — BLOCKED (DL-026 empty distractor slot)\nPer CAQS_v1.0.md §4.4: every distractor ExplanationWrong slot must contain choice-specific explanatory text.",
+
+    "header_comment_updated": true,
+    "file_path": ".opencode/plugins/governance-guard.js",
+    "new_line_count": 287
+  },
+
+  "test_suite": {
+    "file": "scripts/test_governance_guard.js",
+    "version": "v2.1 (S814)",
+    "tests_added": 5,
+    "total_tests": 32,
+    "results": "32 PASS, 0 FAIL",
+    "new_tests": [
+      "Detect single DL-026: CC=A, ExplanationWrongB empty",
+      "Detect DL-026: CC=D, ExplanationWrongA absent",
+      "Detect multiple empty non-CC slots: CC=D, both A and C empty",
+      "No false positive: all 3 non-CC slots are non-empty",
+      "Skip text fragments without complete objects gracefully"
+    ],
+    "regression_check": "All 27 prior tests remain PASS (Rules 2, 3, 4, 5, DL-029 unchanged)",
+    "test_coverage": {
+      "empty_string_detection": true,
+      "absent_field_detection": true,
+      "multiple_violation_detection": true,
+      "false_positive_immunity": true,
+      "fragment_graceful_degradation": true
+    }
+  },
+
+  "design_parity_with_rule2": {
+    "uses_same_parser": "extractObjectsFromText (string-aware brace-matching)",
+    "uses_same_hook": "tool.execute.before",
+    "same_scoping": "Checks newContent only (avoids false positives from removed code)",
+    "same_object_selector": "Objects with CorrectChoice AND complete JSON boundaries",
+    "different_check": "DL-008 checks non-EMPTY CC slot; DL-026 checks EMPTY non-CC slots"
+  },
+
+  "enforcement_scope": {
+    "applies_to": ["edit tool", "write tool"],
+    "file_types": "All (not restricted to pack files — applies to any question JSON)",
+    "prevented_regressions": [
+      "DL-035 recurrence: future certifications with empty distractor slots",
+      "DL-026 expansion: any new items authored with empty non-CC EW slots",
+      "DL-013 remediation tooling gap: DL-013 rewrites that leave empty slots (DL-028)"
+    ]
+  },
+
+  "verdict": "PASS — Rule 6 deployed and validated. 32/32 tests pass. DL-026 enforcement active.",
+  "recommendation": "APPROVE C1 CLOSURE"
+}

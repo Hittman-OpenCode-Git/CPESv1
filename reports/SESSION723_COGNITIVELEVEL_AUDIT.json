@@ -1,0 +1,22 @@
+{
+  "session": "723",
+  "agent": "E",
+  "title": "CognitiveLevel Coverage Audit",
+  "verdict": "INTACT — 100% coverage preserved",
+  "coverage": { "total_qids": 2500, "with_cognitivelevel": 2500, "pct": 100, "missing": 0, "gaps": 0 },
+  "distribution": { "Remember": 57, "Understand": 1269, "Apply": 1164, "Analyze": 10, "Evaluate": 0 },
+  "per_pack": {
+    "A": { "Remember": 3, "Understand": 215, "Apply": 281, "Analyze": 1, "Evaluate": 0 },
+    "B": { "Remember": 41, "Understand": 130, "Apply": 326, "Analyze": 3, "Evaluate": 0 },
+    "C": { "Remember": 5, "Understand": 262, "Apply": 230, "Analyze": 3, "Evaluate": 0 },
+    "D": { "Remember": 1, "Understand": 263, "Apply": 233, "Analyze": 3, "Evaluate": 0 },
+    "E": { "Remember": 7, "Understand": 399, "Apply": 94, "Analyze": 0, "Evaluate": 0 }
+  },
+  "invalid_values": 0,
+  "secondary_findings": [
+    "CAQS §6.2 gap: Evaluate=0 (target 15%), Analyze=10/0.4% (target 25%)",
+    "1,106 items (44.2%) DifficultyScore/label mismatch",
+    "Pack E: 399 Understand vs 94 Apply (4.2:1 ratio — extreme imbalance)",
+    "Pack B: 41 of 57 Remember items in Pack B (DL-031 template pattern)"
+  ]
+}

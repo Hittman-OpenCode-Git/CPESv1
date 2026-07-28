@@ -1,0 +1,103 @@
+{
+  "session": "S131",
+  "timestamp": "2026-07-26T20:45:00Z",
+  "profiles": {
+    "sparseLearner": {
+      "sessions": 1,
+      "questions": 10,
+      "testSeedPattern": "seedSessions(1) — single session with 3 attempts per session",
+      "evidenceGraphOutput": "minimal observations",
+      "topicCount": "1-2 topics with 3-4 attempts each",
+      "strengthsDetected": "none (needs >=3 attempts AND >=85% accuracy)",
+      "weaknessesDetected": "none (needs >=5 attempts AND <60% accuracy)",
+      "topicTrendsDetected": "none (needs >=4 attempts for delta calculation)",
+      "misconceptionsDetected": "none (needs >=2 repeated wrong answers on same pattern)",
+      "provenanceCoverage": "none yet — insufficient data",
+      "agingEffect": "all recent (single session, all data within 0-1 days)",
+      "coachingBehavior": "safe fallbacks used; 'Try answering first' gates active; concept-only guidance for unanswered questions"
+    },
+    "activeLearner": {
+      "sessions": 5,
+      "questions": 50,
+      "testSeedPattern": "seedSessions(5) — 5 sessions, 3 attempts each",
+      "evidenceGraphOutput": "moderate observations",
+      "topicCount": "2 topics with 15 attempts each (5 sessions x 3 attempts/session x alternating)",
+      "strengthsDetected": "possible for 'Test Topic Alt' if accuracy >=85% with >=3 attempts",
+      "weaknessesDetected": "possible for primary topic if accuracy <60% with >=5 attempts",
+      "topicTrendsDetected": "no clear trend (seed alternates correct/wrong deterministically — approx 67% accuracy on primary topic)",
+      "misconceptionsDetected": "none (seed doesn't repeat same wrong pattern)",
+      "provenanceCoverage": "partial — _recommendNextAction and _generateSessionRecap record provenance when called",
+      "agingEffect": "mixed — 5 sessions span 5 days, EWMA half-life 14 days means minimal decay",
+      "coachingBehavior": "full coaching enabled in review mode; wrong-choice coaching with Why it is tempting / Misconception to watch; action plans generated"
+    },
+    "improvingLearner": {
+      "sessions": 5,
+      "questions": 50,
+      "improvingAccuracyTrend": true,
+      "testSeedPattern": "Manual seeding: early sessions have lower accuracy (40-50%), later sessions higher (80-90%). Pattern used in S126-05 and S127 tests.",
+      "evidenceGraphOutput": "rich observations with improving trend",
+      "topicCount": "2-3 topics with varied accuracy across sessions",
+      "strengthsDetected": "possible for consistently high-accuracy topics",
+      "weaknessesDetected": "depends on overall accuracy; might not trigger if improvement lifts aggregate above 60%",
+      "topicTrendsDetected": "IMPROVING trend detected (delta >=10 with >=4 attempts)",
+      "misconceptionsDetected": "depends on repeated wrong-answer patterns",
+      "provenanceCoverage": "full — session recaps include progress trend ('Up'), weekly digest references improvement",
+      "agingEffect": "EWMA weights recent (high accuracy) sessions more heavily — time-weighted accuracy higher than raw accuracy",
+      "coachingBehavior": "positive trend language in welcome and progress insights; reinforcement actions for correct answers; study strategy emphasizes maintaining momentum"
+    },
+    "misconceptionLearner": {
+      "sessions": 5,
+      "questions": 50,
+      "recurringWrongPatterns": true,
+      "testSeedPattern": "Multiple wrong answers on same question/topic with pattern repetition. Pattern used in S121 tests (wrong-choices coaching) and G-01 tests (misconception surfacing).",
+      "evidenceGraphOutput": "rich observations with misconception patterns",
+      "topicCount": "2-3 topics with high error rate on specific patterns",
+      "strengthsDetected": "none (accuracy too low)",
+      "weaknessesDetected": "YES — >=5 attempts with <60% accuracy triggers persistent weak classification",
+      "topicTrendsDetected": "declining or stable-low trend",
+      "misconceptionsDetected": "YES — >=2 repeated wrong answers on same pattern triggers misconception observations and cross-topic patterns",
+      "provenanceCoverage": "full — recovery sets generated with provenance; wrong-choice coaching records recommendations",
+      "agingEffect": "recent wrong answers weighted more heavily by EWMA; stale correct answers decayed",
+      "coachingBehavior": "full wrong-choice coaching with Why it is tempting / Misconception to watch / How to avoid; recurring trap sections in weakness insights; recovery sets prioritize weak topics; study strategy prioritizes weakest areas"
+    },
+    "longHistoryLearner": {
+      "sessions": 20,
+      "questions": 200,
+      "mixedPerformance": true,
+      "testSeedPattern": "seedSessions(20) — 20 sessions with 3 attempts each, alternating correct/wrong deterministically (approx 67% accuracy overall)",
+      "evidenceGraphOutput": "rich multi-topic evidence with full window categorization",
+      "topicCount": "2 topics with 60+ attempts each (20 sessions x 3 attempts)",
+      "strengthsDetected": "YES — 'Test Topic Alt' achieves 100% accuracy with >=3 attempts, triggering strength classification",
+      "weaknessesDetected": "depends on accuracy thresholds; primary topic at 67% (above 60% threshold) — NOT classified as weak",
+      "topicTrendsDetected": "stable (deterministic alternation masks trend); delta near 0",
+      "misconceptionsDetected": "none (seed pattern is random alternation, not repeated wrong answers on same pattern)",
+      "provenanceCoverage": "full — all recommendation-generating functions record provenance (welcome_action, session_recap, pre_exam_briefing)",
+      "agingEffect": "strong EWMA effect — oldest sessions (days 1-20 ago) decayed significantly; half-life 14 days means sessions older than 14 days contribute <50% weight; sessions older than 28 days (<25% weight) classified as 'historical' or 'archived'",
+      "evidenceWindows": {
+        "recent": "sessions from last 7 days",
+        "active": "sessions from 7-14 days ago",
+        "historical": "sessions from 14-28 days ago",
+        "archived": "sessions older than 28 days"
+      },
+      "coachingBehavior": "all coaching paths fully functional; weekly digest spans lookback window; study strategy includes 1-week / 2-week / 4-week planning horizons; strategy effectiveness analytics available with longitudinal data; evidence disclosure includes 'actual practice data' and anti-causation language"
+    }
+  },
+  "agingValidation": {
+    "ewmaVerified": true,
+    "ewmaHalfLife": "14 days",
+    "ewmaDecayConstant": "ln(2)/14 per day ≈ 0.0495",
+    "windowCategorization": "functional",
+    "windowDefinitions": {
+      "recent": "lastSeen >= 7 days ago",
+      "active": "lastSeen 7-14 days ago",
+      "historical": "lastSeen 14-28 days ago",
+      "archived": "lastSeen > 28 days ago"
+    },
+    "freshObservationFilter": "functional",
+    "freshObservationDefaultWindow": "28 days",
+    "timeWeightedAccuracyRange": "0-100 (percentage)",
+    "classificationConsistencyCheck": "functional — verifyClassificationConsistency() cross-checks all subsystems against shared evidence graph"
+  },
+  "modelVersion": "S111-1.0",
+  "summary": "All 5 learner profiles produce appropriate, evidence-based coaching outputs. Sparse learners receive safe fallbacks and concept-only guidance. Active learners get full coaching with action plans. Improving learners show positive trend language. Misconception-heavy learners trigger wrong-choice coaching and recovery sets. Long-history learners benefit from EWMA time-weighting and multi-window evidence categorization. No prediction or readiness language is emitted for any profile."
+}

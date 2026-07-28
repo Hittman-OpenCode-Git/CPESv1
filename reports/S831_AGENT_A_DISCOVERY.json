@@ -1,0 +1,285 @@
+{
+  "session": "S831",
+  "agent": "A",
+  "phase": "Discovery",
+  "timestamp": "2026-07-27",
+  "overall_analysis": {
+    "total_items": 2540,
+    "total_certified": 2298,
+    "certified_pct": 90.5,
+    "bands": [
+      {
+        "label": "Easy",
+        "score": 1,
+        "count": 536,
+        "pct": 21.1,
+        "target_pct": 15,
+        "delta_pp": 6.1,
+        "severity": "MEDIUM",
+        "status": "OVER"
+      },
+      {
+        "label": "Moderate-Easy",
+        "score": 2,
+        "count": 693,
+        "pct": 27.3,
+        "target_pct": 20,
+        "delta_pp": 7.3,
+        "severity": "MEDIUM",
+        "status": "OVER"
+      },
+      {
+        "label": "Moderate",
+        "score": 3,
+        "count": 1226,
+        "pct": 48.3,
+        "target_pct": 30,
+        "delta_pp": 18.3,
+        "severity": "CRITICAL",
+        "status": "OVER"
+      },
+      {
+        "label": "Difficult",
+        "score": 4,
+        "count": 85,
+        "pct": 3.3,
+        "target_pct": 25,
+        "delta_pp": -21.7,
+        "severity": "CRITICAL",
+        "status": "UNDER"
+      },
+      {
+        "label": "Very Difficult",
+        "score": 5,
+        "count": 0,
+        "pct": 0.0,
+        "target_pct": 10,
+        "delta_pp": -10.0,
+        "severity": "HIGH",
+        "status": "UNDER"
+      }
+    ],
+    "summary": "The overall difficulty distribution is severely skewed toward the lower-middle range. 48.3% of all MCQ items are Moderate (vs 30% target), while only 3.3% are Difficult (vs 25% target) and zero items are Very Difficult (vs 10% target). The Easy and Moderate-Easy bands are moderately overweight, but the primary defect is the near-total absence of higher-difficulty items.",
+    "skew_direction": "LEFT (lower-difficulty bias)"
+  },
+  "per_pack_analysis": [
+    {
+      "pack": "A",
+      "total": 500,
+      "certified": 481,
+      "certified_pct": 96.2,
+      "bands": [
+        {"score": 1, "label": "Easy", "count": 98, "pct": 19.6, "target_pct": 15.0, "delta_pp": 4.6, "severity": "LOW", "status": "OVER"},
+        {"score": 2, "label": "Moderate-Easy", "count": 219, "pct": 43.8, "target_pct": 20.0, "delta_pp": 23.8, "severity": "CRITICAL", "status": "OVER"},
+        {"score": 3, "label": "Moderate", "count": 183, "pct": 36.6, "target_pct": 30.0, "delta_pp": 6.6, "severity": "MEDIUM", "status": "OVER"},
+        {"score": 4, "label": "Difficult", "count": 0, "pct": 0.0, "target_pct": 25.0, "delta_pp": -25.0, "severity": "CRITICAL", "status": "UNDER"},
+        {"score": 5, "label": "Very Difficult", "count": 0, "pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "severity": "CRITICAL", "status": "UNDER"}
+      ],
+      "pack_flags": [
+        "CRITICAL: Zero Difficult items (0.0% vs 25.0% target)",
+        "CRITICAL: Zero Very Difficult items (0.0% vs 10.0% target)",
+        "CRITICAL: Moderate-Easy heavily overrepresented (43.8% vs 20.0% target)",
+        "MEDIUM: Moderate overrepresented (36.6% vs 30.0% target)",
+        "Pack has the BEST certification rate (96.2%) but worst difficulty calibration"
+      ]
+    },
+    {
+      "pack": "B",
+      "total": 500,
+      "certified": 500,
+      "certified_pct": 100.0,
+      "bands": [
+        {"score": 1, "label": "Easy", "count": 132, "pct": 26.4, "target_pct": 15.0, "delta_pp": 11.4, "severity": "HIGH", "status": "OVER"},
+        {"score": 2, "label": "Moderate-Easy", "count": 93, "pct": 18.6, "target_pct": 20.0, "delta_pp": -1.4, "severity": "LOW", "status": "UNDER"},
+        {"score": 3, "label": "Moderate", "count": 246, "pct": 49.2, "target_pct": 30.0, "delta_pp": 19.2, "severity": "CRITICAL", "status": "OVER"},
+        {"score": 4, "label": "Difficult", "count": 29, "pct": 5.8, "target_pct": 25.0, "delta_pp": -19.2, "severity": "CRITICAL", "status": "UNDER"},
+        {"score": 5, "label": "Very Difficult", "count": 0, "pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "severity": "CRITICAL", "status": "UNDER"}
+      ],
+      "pack_flags": [
+        "CRITICAL: Moderate overrepresented (49.2% vs 30.0% target)",
+        "CRITICAL: Difficult severely underrepresented (5.8% vs 25.0% target)",
+        "CRITICAL: Zero Very Difficult items",
+        "HIGH: Easy overrepresented (26.4% vs 15.0% target)",
+        "Has the most Difficult items (29) of any pack — still only 5.8%",
+        "Only pack at 100% certification — entire pack is learner-facing"
+      ]
+    },
+    {
+      "pack": "C",
+      "total": 500,
+      "certified": 388,
+      "certified_pct": 77.6,
+      "bands": [
+        {"score": 1, "label": "Easy", "count": 99, "pct": 19.8, "target_pct": 15.0, "delta_pp": 4.8, "severity": "LOW", "status": "OVER"},
+        {"score": 2, "label": "Moderate-Easy", "count": 108, "pct": 21.6, "target_pct": 20.0, "delta_pp": 1.6, "severity": "LOW", "status": "OVER"},
+        {"score": 3, "label": "Moderate", "count": 279, "pct": 55.8, "target_pct": 30.0, "delta_pp": 25.8, "severity": "CRITICAL", "status": "OVER"},
+        {"score": 4, "label": "Difficult", "count": 14, "pct": 2.8, "target_pct": 25.0, "delta_pp": -22.2, "severity": "CRITICAL", "status": "UNDER"},
+        {"score": 5, "label": "Very Difficult", "count": 0, "pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "severity": "CRITICAL", "status": "UNDER"}
+      ],
+      "pack_flags": [
+        "CRITICAL: Moderate heavily overrepresented (55.8% vs 30.0% — worst of all packs)",
+        "CRITICAL: Difficult severely underrepresented (2.8% vs 25.0% target)",
+        "CRITICAL: Zero Very Difficult items",
+        "112 non-Certified items (22.4%) provide some remediation headroom",
+        "Worst Moderate inflation of all 5 packs"
+      ]
+    },
+    {
+      "pack": "D",
+      "total": 500,
+      "certified": 389,
+      "certified_pct": 77.8,
+      "bands": [
+        {"score": 1, "label": "Easy", "count": 98, "pct": 19.6, "target_pct": 15.0, "delta_pp": 4.6, "severity": "LOW", "status": "OVER"},
+        {"score": 2, "label": "Moderate-Easy", "count": 98, "pct": 19.6, "target_pct": 20.0, "delta_pp": -0.4, "severity": "LOW", "status": "UNDER"},
+        {"score": 3, "label": "Moderate", "count": 284, "pct": 56.8, "target_pct": 30.0, "delta_pp": 26.8, "severity": "CRITICAL", "status": "OVER"},
+        {"score": 4, "label": "Difficult", "count": 20, "pct": 4.0, "target_pct": 25.0, "delta_pp": -21.0, "severity": "CRITICAL", "status": "UNDER"},
+        {"score": 5, "label": "Very Difficult", "count": 0, "pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "severity": "CRITICAL", "status": "UNDER"}
+      ],
+      "pack_flags": [
+        "CRITICAL: Moderate heavily overrepresented (56.8% vs 30.0% — highest absolute count: 284)",
+        "CRITICAL: Difficult severely underrepresented (4.0% vs 25.0% target)",
+        "CRITICAL: Zero Very Difficult items",
+        "111 non-Certified items (22.2%) provide some remediation headroom",
+        "Moderate-Easy is the only band within 5pp of target"
+      ]
+    },
+    {
+      "pack": "E",
+      "total": 540,
+      "certified": 540,
+      "certified_pct": 100.0,
+      "bands": [
+        {"score": 1, "label": "Easy", "count": 109, "pct": 20.2, "target_pct": 15.0, "delta_pp": 5.2, "severity": "MEDIUM", "status": "OVER"},
+        {"score": 2, "label": "Moderate-Easy", "count": 175, "pct": 32.4, "target_pct": 20.0, "delta_pp": 12.4, "severity": "HIGH", "status": "OVER"},
+        {"score": 3, "label": "Moderate", "count": 234, "pct": 43.3, "target_pct": 30.0, "delta_pp": 13.3, "severity": "HIGH", "status": "OVER"},
+        {"score": 4, "label": "Difficult", "count": 22, "pct": 4.1, "target_pct": 25.0, "delta_pp": -20.9, "severity": "CRITICAL", "status": "UNDER"},
+        {"score": 5, "label": "Very Difficult", "count": 0, "pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "severity": "CRITICAL", "status": "UNDER"}
+      ],
+      "pack_flags": [
+        "CRITICAL: Difficult severely underrepresented (4.1% vs 25.0% target)",
+        "CRITICAL: Zero Very Difficult items",
+        "HIGH: Moderate-Easy overrepresented (32.4% vs 20.0% target)",
+        "HIGH: Moderate overrepresented (43.3% vs 30.0% target)",
+        "Most balanced pack overall — no CRITICAL inflation bands (only shortages)",
+        "100% certified — entire pack is learner-facing, zero remediation headroom",
+        "Largest pack (540 items) due to R-series supplements"
+      ]
+    }
+  ],
+  "pack_comparison_insights": {
+    "most_calibrated": "Pack B (Moderate-Easy within 1.4pp of target; only pack with meaningful Difficult count at 29)",
+    "least_calibrated": "Pack D (Moderate 56.8% / +26.8pp; worst single-band deviation of any pack)",
+    "worst_difficult_shortfall": "Pack A (0 Difficult items, 0.0%)",
+    "best_certification_but_poorest_calibration": "Pack A (96.2% certified, but zero items at Difficulty 4-5)",
+    "no_remediation_headroom": "Packs B and E (100% certified — all difficulty changes require direct content modification of learner-facing items)",
+    "some_headroom": "Packs C (22.4% non-certified) and D (22.2% non-certified)"
+  },
+  "certified_pool_analysis": {
+    "total_certified": 2298,
+    "total_full_pool": 2540,
+    "pct_of_pool": 90.5,
+    "methodology": "Estimated proportionally per-pack (assuming difficulty distribution within each pack is roughly proportional between certified and non-certified items)",
+    "estimate": {
+      "pack_a_certified_breakdown": {"factor": 0.962, "score_1": 94, "score_2": 211, "score_3": 176, "score_4": 0, "score_5": 0},
+      "pack_b_certified_breakdown": {"factor": 1.000, "score_1": 132, "score_2": 93, "score_3": 246, "score_4": 29, "score_5": 0},
+      "pack_c_certified_breakdown": {"factor": 0.776, "score_1": 77, "score_2": 84, "score_3": 217, "score_4": 11, "score_5": 0},
+      "pack_d_certified_breakdown": {"factor": 0.778, "score_1": 76, "score_2": 76, "score_3": 221, "score_4": 16, "score_5": 0},
+      "pack_e_certified_breakdown": {"factor": 1.000, "score_1": 109, "score_2": 175, "score_3": 234, "score_4": 22, "score_5": 0},
+      "totals": {"score_1": 488, "score_2": 639, "score_3": 1094, "score_4": 78, "score_5": 0}
+    },
+    "certified_bands": [
+      {"label": "Easy", "score": 1, "estimated_count": 488, "estimated_pct": 21.2, "target_pct": 15.0, "delta_pp": 6.2, "severity": "MEDIUM", "status": "OVER"},
+      {"label": "Moderate-Easy", "score": 2, "estimated_count": 639, "estimated_pct": 27.8, "target_pct": 20.0, "delta_pp": 7.8, "severity": "MEDIUM", "status": "OVER"},
+      {"label": "Moderate", "score": 3, "estimated_count": 1094, "estimated_pct": 47.6, "target_pct": 30.0, "delta_pp": 17.6, "severity": "CRITICAL", "status": "OVER"},
+      {"label": "Difficult", "score": 4, "estimated_count": 78, "estimated_pct": 3.4, "target_pct": 25.0, "delta_pp": -21.6, "severity": "CRITICAL", "status": "UNDER"},
+      {"label": "Very Difficult", "score": 5, "estimated_count": 0, "estimated_pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "severity": "HIGH", "status": "UNDER"}
+    ],
+    "learner_impact_summary": "The certified (learner-facing) pool of 2,298 items carries nearly identical difficulty skew as the full pool. Learners experience: (1) ~47.6% of tested questions at Moderate difficulty — 17.6pp above the CAQS target, creating a perception of a 'flat' exam with insufficient cognitive challenge; (2) only ~3.4% at Difficult level — learners are not being prepared for the upper cognitive tiers present in the actual CMA exam; (3) zero Very Difficult items — the top difficulty tier is completely absent from the learner experience."
+  },
+  "case_study_analysis": {
+    "total_items": 745,
+    "files": ["scored_cases.js", "scored_cases2.js", "scored_cases3.js", "scored_cases4.js", "scored_cases5.js"],
+    "bands": [
+      {"label": "Easy", "score": 1, "count": 7, "pct": 0.9, "target_pct": 15.0, "delta_pp": -14.1, "severity": "HIGH", "status": "UNDER"},
+      {"label": "Moderate-Easy", "score": 2, "count": 164, "pct": 22.0, "target_pct": 20.0, "delta_pp": 2.0, "severity": "LOW", "status": "OVER"},
+      {"label": "Moderate", "score": 3, "count": 308, "pct": 41.3, "target_pct": 30.0, "delta_pp": 11.3, "severity": "HIGH", "status": "OVER"},
+      {"label": "Difficult", "score": 4, "count": 266, "pct": 35.7, "target_pct": 25.0, "delta_pp": 10.7, "severity": "HIGH", "status": "OVER"},
+      {"label": "Very Difficult", "score": 5, "count": 0, "pct": 0.0, "target_pct": 10.0, "delta_pp": -10.0, "severity": "HIGH", "status": "UNDER"}
+    ],
+    "key_findings": [
+      "Case studies have dramatically better Difficult representation (35.7%) than the MCQ pool (3.3%) — a 32.4pp difference",
+      "Case studies are missing Easy items almost entirely (0.9% vs 15.0% target)",
+      "Zero Very Difficult case items — same gap as the MCQ pool",
+      "The case-study difficulty profile is right-shifted compared to the left-shifted MCQ profile",
+      "Case-study Moderate-Easy is the best-calibrated single band (22.0% vs 20.0% target)"
+    ],
+    "comparison_to_mcq": {
+      "difficult_gap": "Case studies have 10.7x more Difficult items than MCQ pool proportionally (35.7% vs 3.3%)",
+      "easy_gap": "Case studies have 23x fewer Easy items proportionally (0.9% vs 21.1%)",
+      "combined_pool_calibration": "When case studies and MCQs are combined (3,285 items), the Difficult band would be (266+85)/(745+2540) = 351/3285 = 10.7% — still well below the 25% target but substantially better than the MCQ-only 3.3%",
+      "note": "Case studies may be a source of 'recalibration templates' — items currently labeled Difficult that could inform what a well-calibrated Difficult MCQ looks like"
+    }
+  },
+  "severity_summary_table": {
+    "critical_findings_count": 15,
+    "high_findings_count": 8,
+    "medium_findings_count": 5,
+    "low_findings_count": 8,
+    "critical_findings": [
+      "FULL POOL: Moderate overrepresented by +18.3pp (48.3% vs 30.0%)",
+      "FULL POOL: Difficult underrepresented by -21.7pp (3.3% vs 25.0%)",
+      "CERTIFIED POOL: Moderate overrepresented by +17.6pp (47.6% vs 30.0%)",
+      "CERTIFIED POOL: Difficult underrepresented by -21.6pp (3.4% vs 25.0%)",
+      "PACK A: Moderate-Easy +23.8pp over (43.8% vs 20.0%)",
+      "PACK A: Difficult -25.0pp under (0.0% vs 25.0%) — zero items",
+      "PACK A: Very Difficult -10.0pp under (0.0% vs 10.0%) — zero items",
+      "PACK B: Moderate +19.2pp over (49.2% vs 30.0%)",
+      "PACK B: Difficult -19.2pp under (5.8% vs 25.0%)",
+      "PACK B: Very Difficult -10.0pp under (0.0% vs 10.0%)",
+      "PACK C: Moderate +25.8pp over (55.8% vs 30.0%) — single worst band",
+      "PACK C: Difficult -22.2pp under (2.8% vs 25.0%)",
+      "PACK D: Moderate +26.8pp over (56.8% vs 30.0%) — worst absolute delta",
+      "PACK D: Difficult -21.0pp under (4.0% vs 25.0%)",
+      "PACK E: Difficult -20.9pp under (4.1% vs 25.0%)"
+    ],
+    "high_findings": [
+      "FULL POOL: Very Difficult -10.0pp under (0.0% vs 10.0%)",
+      "CERTIFIED POOL: Very Difficult -10.0pp under (0.0% vs 10.0%)",
+      "PACK B: Easy +11.4pp over (26.4% vs 15.0%)",
+      "PACK E: Moderate-Easy +12.4pp over (32.4% vs 20.0%)",
+      "PACK E: Moderate +13.3pp over (43.3% vs 30.0%)",
+      "CASE STUDY: Easy -14.1pp under (0.9% vs 15.0%)",
+      "CASE STUDY: Moderate +11.3pp over (41.3% vs 30.0%)",
+      "CASE STUDY: Difficult +10.7pp over (35.7% vs 25.0%)"
+    ]
+  },
+  "critical_findings": [
+    "ZERO Very Difficult items across entire 2,540-item MCQ inventory (0/2540 vs 10% CAQS target = 254 expected)",
+    "Only 85 Difficult MCQ items (3.3% vs 25% CAQS target = 635 expected) — a shortage of 550 items",
+    "Moderate band over-represented by 18.3pp (1,226 items vs 762 expected) — 464 items beyond target",
+    "All 5 packs share the same structural pattern: Moderate inflation + Difficult/Very Difficult vacuum",
+    "Pack A has zero items at Difficulty 4 or 5 despite 96.2% certification — fully learner-facing with no upper-tier challenge",
+    "The 'certified' learner pool mirrors the same skew: 47.6% Moderate, 3.4% Difficult, 0% Very Difficult",
+    "All 5 packs are structurally identical to DL-031/DL-032 findings: template-assigned difficulty labels with no cognitive calibration"
+  ],
+  "remediation_magnitude": {
+    "difficult_shortfall": "Need 550 additional Difficult items (score 4) to reach 25% target",
+    "very_difficult_shortfall": "Need 254 additional Very Difficult items (score 5) to reach 10% target",
+    "moderate_surplus": "464 Moderate items (score 3) exceed target — candidates for recalibration upward",
+    "total_recalibration_candidates": "Approximately 464 Moderate items are candidates for Difficulty 4-5 recalibration (assuming difficulty is recalibrated, not rewritten)",
+    "realistic_approach": "Given zero Very Difficult items exist, full 10% target is infeasible through recalibration alone. Target for S831: move to ≥5% Difficult and ≥2% Very Difficult via recalibration of existing Moderate items. True content creation to reach 25%/10% is a longer-term pipeline effort.",
+    "estimated_recalibration_effort": {
+      "to_reach_15pct_difficult": "Recalibrate ~297 Moderate items to Difficult (score 3→4) across all packs",
+      "to_reach_5pct_very_difficult": "Recalibrate ~127 Moderate items to Very Difficult (score 3→5) across all packs",
+      "total_items_to_recalibrate": "~424 items (color-tag Moderate→Difficult/Very Difficult)"
+    }
+  },
+  "recommendations_forwarded_to": "Agents E-H (remediation execution)",
+  "next_phase_input": {
+    "for_agent_e": "Recalibrate Moderate→Difficult items: identify highest-cognitive-demand Moderate items that should be Difficult",
+    "for_agent_f": "Recalibrate Moderate→Very Difficult items: identify genuinely challenging items with multi-step analysis",
+    "for_agent_g": "Audit Very Difficult gap: design new Very Difficult items to bridge the 0%→≥5% gap",
+    "for_agent_h": "Pack-specific recalibration plans: per-pack difficulty redistribution targets"
+  }
+}

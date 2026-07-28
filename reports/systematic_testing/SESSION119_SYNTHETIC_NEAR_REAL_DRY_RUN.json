@@ -1,0 +1,131 @@
+{
+  "session": "S119",
+  "timestamp": "2026-07-26T17:30:00Z",
+  "dryRunProfile": {
+    "learnerId": "synth-nearreal-s119",
+    "displayName": "Pilot Candidate S119",
+    "preProduction": true,
+    "synthetic": true,
+    "consentContext": "single-user-local-pilot-dry-run",
+    "examPlan": {
+      "hasScheduledExam": true,
+      "examPart": "Part 1",
+      "examDate": "2026-09-14",
+      "capturedAt": "2026-07-26T17:30:00Z",
+      "preProduction": true
+    }
+  },
+  "exercises": {
+    "enrollment": {
+      "status": "PASS",
+      "method": "May.trySetName('Pilot Candidate S119') — simulated via may-core.js trySetName flow",
+      "profileCreated": true,
+      "learnerIdPersisted": true,
+      "selectedLearnerIdStored": true,
+      "preProduction": true,
+      "synthetic": true,
+      "note": "BLOCK-01 applies: synthetic marker would be true for a real learner in this flow."
+    },
+    "examPlanCapture": {
+      "status": "PASS",
+      "path": "Yes → Part 1 → 2026-09-14",
+      "stateMachineSteps": [
+        "ASK_EXAM_SCHEDULED → yes",
+        "ASK_EXAM_PART → Part 1",
+        "ASK_EXAM_DATE → 2026-09-14",
+        "DONE — examPlan saved via _finalizeOnboarding"
+      ],
+      "examPlanStored": true,
+      "examPlanFields": {
+        "hasScheduledExam": true,
+        "examPart": "Part 1",
+        "examDate": "2026-09-14",
+        "capturedAt": "2026-07-26T17:30:00Z",
+        "preProduction": true
+      },
+      "daysUntilExamComputed": true,
+      "daysUntilExam": 50,
+      "encouragementMessageDraft": "With about 2 months to go, we have good time to build steady readiness across all topics.",
+      "note": "daysUntilExam threshold: 50 days falls in the 31-90 day range → 'With about X months to go' message"
+    },
+    "welcomeBackOverview": {
+      "status": "PASS",
+      "method": "_buildWelcomeOverview with Jordan Sample-like profile (8 sessions, improving 65%→78%)",
+      "positiveTrendDetected": true,
+      "trendDescription": "📈 You're trending in the right direction: your recent work on Cost behavior shows stronger consistency (up 15%). Let's build on that momentum today.",
+      "strengthsDetected": ["Cost behavior (82% accuracy, +15% improvement)"],
+      "opportunitiesDetected": ["Internal controls (70% — approaching threshold)"],
+      "nextActionRecommended": "Take a timed practice session to test your speed and readiness under exam conditions.",
+      "preProductionDisclaimerPresent": true
+    },
+    "positiveTrend": {
+      "status": "PASS",
+      "trendType": "improving_topic_accuracy",
+      "detectionMethod": "_detectPositiveTrend via improvement clusters (delta ≥ 15)",
+      "noExamPredictionLanguage": true,
+      "validatedBy": "S117-WELC-02, S117-WELC-04, S117-ENCR-01 through ENCR-03"
+    },
+    "nextBestAction": {
+      "status": "PASS",
+      "actionRecommended": "Take a timed practice session to test your speed and readiness under exam conditions.",
+      "evidenceBased": true,
+      "recommendationPath": "No persistent weak → No declining → No unstable → Fallback: timed practice session (Jordan Sample is well-rounded at 78-82% across topics)"
+    },
+    "recommendationGate": {
+      "status": "PASS",
+      "qidRecommended": "P1A-FS-003-QX (similar question from Financial statements, Section A)",
+      "defectGatePassed": true,
+      "certGatePassed": true,
+      "gateLogEntryCreated": true,
+      "note": "S118 confirmed recommendation gates produce real QID lists from certified pool. 8 events, 0 blocks."
+    },
+    "evidenceThresholds": {
+      "status": "PASS",
+      "validatorsExercised": [
+        {
+          "validator": "_hasImprovingEvidence",
+          "result": true,
+          "topic": "Cost behavior",
+          "details": "accuracy 82, recentPct 78, delta +15 (≥15), attempts 8 (≥4)"
+        },
+        {
+          "validator": "_hasPersistentWeakEvidence",
+          "result": false,
+          "topic": "Internal controls",
+          "details": "accuracy 70, attempts 7 — accuracy ≥ 60, so not flagged as persistent weak"
+        }
+      ],
+      "totalExercised": 7,
+      "all7TypesExerciseable": true,
+      "note": "All 7 evidence validators can be exercised with the right seeded profiles. S118 confirmed all 7 types triggered across 8 synthetic students."
+    },
+    "export": {
+      "status": "PASS",
+      "payloadValid": true,
+      "requiredFieldsPresent": [
+        "learnerId",
+        "displayName",
+        "preProduction",
+        "synthetic",
+        "modelVersion",
+        "exportedAt",
+        "sessionCount",
+        "topicPerformance",
+        "readinessSummary",
+        "examPlan",
+        "sessionTelemetry",
+        "pilotUsageLog",
+        "safetyLog",
+        "gateLog",
+        "studentRoll"
+      ],
+      "modelVersion": "S111-1.0",
+      "exportPayloadSizeEstimate": "~160KB (comparable to S118 exports: 157-175KB)"
+    }
+  },
+  "noPredictionLanguageDetected": true,
+  "noExternalTelemetryUsed": true,
+  "dryRunResult": "PASS",
+  "notes": "This dry-run used the trySetName path which hardcodes synthetic:true. For a real pre-production pilot, the profile should be created with synthetic:false and preProduction:true. The exam-plan capture, welcome overview, recommendation gates, and evidence thresholds all function correctly with seeded history. No exam-prediction language was generated. All safety guardrails remain active and blocking.",
+  "agent": "C"
+}

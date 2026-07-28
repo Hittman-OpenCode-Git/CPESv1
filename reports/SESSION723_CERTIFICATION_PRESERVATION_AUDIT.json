@@ -1,0 +1,55 @@
+{
+  "title": "S723 Certification Preservation Audit",
+  "date": "2026-07-26",
+  "verified": true,
+  "certified_pool": {
+    "total_items": 2500,
+    "certified": 2181,
+    "by_pack": {"A": 481, "B": 500, "C": 350, "D": 350, "E": 500}
+  },
+  "state_distribution": {
+    "Certified": 2181,
+    "Unprocessed": 187,
+    "In Audit": 0,
+    "Editorial Queue": 0,
+    "Archived": 132,
+    "missing_question_state": 0,
+    "total_with_state": 2500
+  },
+  "questionid_count": 2500,
+  "drift_detected": false,
+  "corruption_detected": false,
+  "contamination_detected": false,
+  "spot_check": {
+    "sampled": 10,
+    "verified": 10,
+    "failed": [],
+    "details": {
+      "P1-A-001": {"pack": "A", "line": 36, "state": "Certified", "verified": true},
+      "P1-A-050": {"pack": "A", "line": 2579, "state": "Certified", "verified": true},
+      "P1B-B-101": {"pack": "B", "line": 3172, "state": "Certified", "verified": true},
+      "P1B-F-084": {"pack": "B", "line": 19032, "state": "Certified", "verified": true},
+      "P1-AC-030": {"pack": "C", "line": 1544, "state": "Certified", "verified": true},
+      "P1-BC-050": {"pack": "C", "line": 6445, "state": "Certified (metadata block)", "verified": true, "note": "Dual-block architecture; question_state in metadata block above QuestionID content block"},
+      "P1-AD-030": {"pack": "D", "line": 1544, "state": "Certified", "verified": true},
+      "P1-BD-050": {"pack": "D", "line": 6443, "state": "Certified (metadata block)", "verified": true, "note": "Dual-block architecture; question_state in metadata block above QuestionID content block"},
+      "P1E-A-001": {"pack": "E", "line": 48, "state": "Certified", "verified": true},
+      "P1E-F-050": {"pack": "E", "line": 20861, "state": "Certified", "verified": true, "note": "Verified via per-pack count: Pack E = 500 Certified"}
+    }
+  },
+  "scored_cases_audit": {
+    "total_certified_entries": 745,
+    "non_certified_entries": 0,
+    "anomalies_detected": false
+  },
+  "cross_check": {
+    "state_sum": "2181 + 187 + 0 + 0 + 132 = 2500",
+    "state_sum_matches_questionid_count": true,
+    "per_pack_sum_matches_total": "481 + 500 + 350 + 350 + 500 = 2181",
+    "per_pack_sum_matches_total_certified": true,
+    "prior_session_status_certified": 2031,
+    "current_certified": 2181,
+    "delta": "+150 (Pack C: +100, Pack D: +50) — expected certification progress, not drift"
+  },
+  "verdict": "PRESERVED"
+}

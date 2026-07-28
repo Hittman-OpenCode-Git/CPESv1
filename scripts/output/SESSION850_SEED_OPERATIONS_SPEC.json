@@ -1,0 +1,73 @@
+{
+  "specId": "SESSION850_SEED_OPERATIONS_SPEC",
+  "board": "F",
+  "title": "Seed Operations Manager",
+  "version": "1.0.0",
+  "status": "Active",
+  "authority": "SESSION850_PROGRAM",
+  "session": "850",
+  "series": "850-Series Modernization Operations",
+  "created": "2026-07-27",
+  "purpose": "Manage seed inventory for DL-012 clone groups. Track seed readiness, certification, and promotion. Automates the seed selection and management process.",
+  "scriptFile": "scripts/seed_operations_manager.js",
+  "outputFile": "scripts/output/seed_operations.json",
+  "inputs": {
+    "packFiles": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+    "templateFamilyEngine": "scripts/engine/template_family.js",
+    "dl012CloneMap": "reports/remediation/DL012_REMEDIATION_PROPOSAL.md"
+  },
+  "seedOperations": {
+    "seedIdentification": {
+      "dl012": "Template family groups where stem similarity > 90% — one item per group is the seed",
+      "dl013": "Boilerplate groups where one item has been remediated — that item is the seed",
+      "deNovo": "New items not part of any template family"
+    },
+    "seedReadiness": {
+      "criteria": "Same as certification candidate readiness: structural + identity + governance gates",
+      "blockers": "DL-008, DL-025, DL-026, DL-021, DL-034 block seed certification"
+    },
+    "seedCertification": {
+      "process": "Certify seed → promote clone siblings to Archival → mark group complete",
+      "verification": "Independently verify seed correctness before certifying"
+    }
+  },
+  "output": {
+    "schema": {
+      "generatedTimestamp": "ISO 8601 datetime",
+      "summary": {
+        "totalSeedGroups": "integer",
+        "totalSeeds": "integer",
+        "seedsReady": "integer",
+        "seedsRemediate": "integer",
+        "seedsBlocked": "integer",
+        "seedsCertified": "integer",
+        "totalClones": "integer",
+        "clonesArchived": "integer"
+      },
+      "seedGroups": [
+        {
+          "groupId": "string",
+          "groupType": "dl012_clone | dl013_boilerplate | template_rotation",
+          "domain": "string",
+          "section": "string",
+          "seedQID": "string",
+          "seedPack": "string",
+          "seedState": "READY | REMEDIATE | BLOCKED | Certified",
+          "seedReadinessScore": "integer",
+          "cloneQIDs": ["strings"],
+          "cloneStates": ["strings"],
+          "totalMembers": "integer",
+          "archivedCount": "integer",
+          "recommendedAction": "string"
+        }
+      ],
+      "byDomain": {
+        "A": { "seedGroups": "integer", "seedsReady": "integer", "totalClones": "integer" }
+      }
+    }
+  },
+  "usage": "node scripts/seed_operations_manager.js",
+  "dependencies": {
+    "engine": ["scripts/engine/pack_reader.js", "scripts/engine/template_family.js"]
+  }
+}

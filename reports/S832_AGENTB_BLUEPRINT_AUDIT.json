@@ -1,0 +1,433 @@
+{
+  "session": "S832",
+  "agent": "B",
+  "phase": "Discovery",
+  "task": "Blueprint mapping audit",
+  "methodology": "Cross-pack topic extraction via QuestionID-block splitting (2,534 items parsed). Topic normalization (strip section-number prefix). Unique topic root counts exclude rotation-group label variations. Cognitive level extracted directly from item metadata. Specific-topic coverage verified via regex against topic field + stem text.",
+  "item_totals": {
+    "A": 370,
+    "B": 500,
+    "C": 500,
+    "D": 375,
+    "E": 415,
+    "F": 374,
+    "total": 2534
+  },
+  "topic_coverage_by_section": {
+    "A": {
+      "items": 370,
+      "unique_topic_roots": 220,
+      "well_covered": [
+        "Lease accounting — ASC 842 (14 items, 9 unique topics)",
+        "Earnings per share (16 items, 9 unique topics)",
+        "Fair value measurement (15 items, 4 unique topics)",
+        "Revenue recognition — ASC 606 (broad, multi-item rotation groups)",
+        "Cash flow classification — indirect method",
+        "Inventory valuation — LIFO, LCM, lower of cost and NRV",
+        "Depreciation — straight-line, impairment triggers",
+        "Financial ratios and statement analysis",
+        "Business combinations — measurement, goodwill, NCI (11 items)",
+        "Income tax accounting — ASC 740 deferred tax (11 items, 5 unique topics)",
+        "Stock-based compensation (5 items)",
+        "Foreign currency translation (6 items)",
+        "Pension accounting (5 items)",
+        "Nonmonetary exchanges (5 items)",
+        "Asset retirement obligations (5 items)"
+      ],
+      "under_covered": [
+        "Derivatives and hedging — 0 items across all packs",
+        "Software costs (ASC 985-20) — 0 items across all packs",
+        "Segment reporting depth (2 items, 2 unique topics)",
+        "Interim reporting is present (5 items) but all at one rotation-group depth",
+        "Consolidation — only control principle and intercompany eliminations visible; lack VIE/fair value option depth"
+      ],
+      "cognitive_distribution": {
+        "Remember": "4.6%",
+        "Understand": "47.0%",
+        "Apply": "48.4%",
+        "Analyze": "0.0%",
+        "Evaluate": "0.0%"
+      },
+      "assessment": "Section A has strong coverage of core financial reporting topics with a reasonable 48/47 Apply/Understand split. Lease accounting (ASC 842), income taxes (ASC 740), and business combinations each have at least one full 5-item rotation group — better than initially assumed. However, derivatives/hedging and software costs are completely absent. The 0% Analyze/Evaluate rate across all 370 items means no items require data interpretation or professional judgment — candidates drill procedure execution but never face the 'what does this ratio mean' or 'which accounting treatment is most appropriate' questions that appear on the actual CMA exam."
+    },
+    "B": {
+      "items": 500,
+      "unique_topic_roots": 285,
+      "well_covered": [
+        "Direct materials purchases budget (16 items — most-dense single topic in any section)",
+        "Cash budget and borrowing (8+8 items across two rotation groups)",
+        "Production budget (8 items)",
+        "Cash collections schedule (8 items)",
+        "Flexible budgets and variance analysis (7+7 items)",
+        "Regression analysis (22 items, 9 unique topics)",
+        "Learning curves — cumulative average and incremental unit (15 items, 10 unique topics)",
+        "Expected value analysis (12 items, 5 unique topics)",
+        "Time series forecasting (10 items, 4 unique topics)",
+        "Rolling forecasts (13 items, 7 unique topics)",
+        "Zero-based budgeting (11 items, 5 unique topics)",
+        "Participative budgeting (12 items, 7 unique topics)",
+        "Kaizen budgeting (9 items, 3 unique topics)",
+        "Budget slack (9 items, 4 unique topics)",
+        "Strategic planning — SWOT, Porter, PEST, mission/vision (17 items, 6 unique topics)",
+        "Sensitivity analysis (adequate coverage)",
+        "Capital expenditure budget"
+      ],
+      "under_covered": [
+        "Monte Carlo simulation — 1 item only, likely definitional",
+        "Probability-based forecasting — 4 items, 2 unique topics; thin for the forecasting techniques CSO requirement",
+        "Exponential smoothing — 4 items, 3 unique topics; exists but light",
+        "Activity-based budgeting — 5 items but spread across 4 unique topics; fragmented, no depth",
+        "Pro forma financial statements budget — appears as a single item"
+      ],
+      "cognitive_distribution": {
+        "Remember": "5.0%",
+        "Understand": "29.2%",
+        "Apply": "65.6%",
+        "Analyze": "0.2%",
+        "Evaluate": "0.0%"
+      },
+      "assessment": "Section B is the best-covered section by every metric — highest item count (500), strongest Apply rate (65.6%), and broadest topic coverage with 285 unique topic roots. Forecasting techniques (regression, learning curves, expected value, time series) are genuinely well represented. However, budget mechanics (DM purchases budget at 16 items, cash budget at 16+ items) crowd out strategic planning and advanced forecasting. Monte Carlo is token coverage at 1 item. The 0% Evaluate rate is a concern — no budget-decision or forecast-selection judgment items."
+    },
+    "C": {
+      "items": 500,
+      "unique_topic_roots": 180,
+      "well_covered": [
+        "Variance analysis — material price/quantity, labor rate/efficiency (15 items generic + 7+7+7 specific variants)",
+        "Standard costing (11 items)",
+        "Sales/revenue variance analysis (10+12 items)",
+        "ROI and residual income (10+7+7 items — multi-group coverage)",
+        "Transfer pricing — market-based, negotiated, cost-based (10+7 items)",
+        "Balanced scorecard perspectives (8+8 items — two heavy groups)",
+        "EVA / Economic Value Added (12 items across two rotation groups)",
+        "Responsibility centers — cost, profit, investment (10 items)",
+        "Customer profitability analysis (10 items)",
+        "KPIs and benchmarking (12 items, 4 unique topics)",
+        "Segmented reporting (17 keyword hits, 4 unique topic roots)",
+        "Mix and yield variances (9 items, 4 unique topics)"
+      ],
+      "under_covered": [
+        "Productivity measures — 1 item only; effectively absent",
+        "Contribution reporting / segmented contribution margin — 0 unique topic roots; exists only via keyword match (6 items) but no dedicated rotation group",
+        "Revenue variances are present (12 items) but appear as blended 'sales variance analysis' labels without separate price/volume/mix decomposition",
+        "Management by exception and variance investigation thresholds are covered but at the Understand level"
+      ],
+      "cognitive_distribution": {
+        "Remember": "1.4%",
+        "Understand": "41.0%",
+        "Apply": "56.8%",
+        "Analyze": "0.8%",
+        "Evaluate": "0.0%"
+      },
+      "assessment": "Section C has solid variance and performance measurement coverage. EVA, previously assumed under-covered, has 12 items (2 rotation groups) — adequate. The main blind spot is productivity measures (1 item). The 56.8% Apply rate is healthy. However, variance analysis labels are extremely generic ('variance analysis' at 15 items, 'sales variance analysis' at 10 items) — suggesting the rotation-group template generates mechanically-varied items without clear topic specialization. The 0.8% Analyze rate means almost no items require interpreting variance patterns or diagnosing root causes."
+    },
+    "D": {
+      "items": 375,
+      "unique_topic_roots": 168,
+      "well_covered": [
+        "Overhead allocation — plant-wide, departmental, under/over-applied (10 items + 6+6 variants)",
+        "Process costing — equivalent units, weighted average (8 items + 6+6 variants)",
+        "Activity-based costing — activity rates, cost drivers (8 items + 6 variants)",
+        "CVP analysis — break-even, target profit, margin of safety (8 items)",
+        "Cost behavior — fixed/variable/mixed, relevant range (7 items)",
+        "Job order costing (7 items)",
+        "Variable vs absorption costing (7 items)",
+        "Relevant costing — make-or-buy, special order (7 items)",
+        "Service department allocation — direct, step, reciprocal (21 items, 8 unique topics) — STRONG coverage",
+        "Target costing (12 items, 4 unique topics)",
+        "Theory of Constraints (11 items, 4 unique topics)",
+        "Joint product costing — NRV, physical units, sell-or-process-further (5+5 items)"
+      ],
+      "under_covered": [
+        "TQM / Total Quality Management — 1 item only, effectively absent beyond definition",
+        "Business process reengineering (BPR) — 0 items; completely absent",
+        "Life-cycle costing — 2 items, token coverage",
+        "Lean accounting — 9 items keyword-matched but only 3 unique topic roots; JIT/lean at the definitional level, no lean accounting application items",
+        "Capacity management — 3 items, 3 unique topics; very thin",
+        "Cost of quality — 7 items but 3 unique topic roots; prevention/appraisal/internal failure/external failure classification may be tested at Understand only"
+      ],
+      "cognitive_distribution": {
+        "Remember": "0.5%",
+        "Understand": "38.9%",
+        "Apply": "60.0%",
+        "Analyze": "0.5%",
+        "Evaluate": "0.0%"
+      },
+      "assessment": "Core cost accounting (job/process/ABC/overhead allocation) is well covered with 60% Apply rate — the second-best Apply ratio after Section B. Service department allocation is unexpectedly strong at 21 items. Gaps concentrate in modern cost management: TQM (1 item), BPR (0 items), life-cycle costing (2 items), and lean accounting (definitional only). These are CMA Part 1 tested topics that need more than definitional coverage. The 0% Evaluate rate again means no judgment-level cost management decisions."
+    },
+    "E": {
+      "items": 415,
+      "unique_topic_roots": 206,
+      "well_covered": [
+        "COSO Internal Control framework — all 5 components, principle-level coverage (16 items labeled 'COSO principle' + 10 items 'internal control framework')",
+        "Control activities — preventive/detective/corrective, segregation of duties (10 items + 5 items each for specific controls)",
+        "COSO ERM — 21 items, 7 unique topics; decent application coverage",
+        "SOX requirements — 15 items, 7 unique topics",
+        "IT general controls — access controls, change management (15 items, 4 unique topics)",
+        "Fraud triangle elements and fraud prevention (7+3 items)",
+        "Business continuity and disaster recovery (14 items, 5 unique topics)",
+        "Whistleblower programs (10 items, 4 unique topics)",
+        "IMA ethics (10 items)",
+        "Internal audit function (6 items)",
+        "Audit committee (appears as distinct topic)",
+        "Application controls — input validation, edit checks (7 items, 4 unique topics)"
+      ],
+      "under_covered": [
+        "Fraud detection techniques — 1 keyword hit, 0 unique topic roots; fraud prevention is covered but detection is not",
+        "Corporate governance structures — 3 items, 1 unique topic; board composition, audit committee independence, governance codes are very thin",
+        "Control environment 'tone at the top' is present but may be principle-level definitional — lacks scenario-based application depth",
+        "Three lines of defense model — not visible as a distinct topic",
+        "COSO Principle 13-15 (Information & Communication) may be underrepresented relative to Principles 1-5 (Control Environment)"
+      ],
+      "cognitive_distribution": {
+        "Remember": "4.6%",
+        "Understand": "68.7%",
+        "Apply": "26.3%",
+        "Analyze": "0.5%",
+        "Evaluate": "0.0%"
+      },
+      "assessment": "Section E has the broadest range of topics at 206 unique topic roots (boosted by 40 R-series items in Pack E). However, the cognitive distribution is alarmingly skewed: 68.7% Understand vs. only 26.3% Apply. This means nearly 7 in 10 items test recall/recognition of definitions rather than application of control frameworks to scenarios. For a section where the CMA exam heavily tests scenario-based control assessment and risk evaluation, this is a serious depth gap. COSO ERM coverage at 21 items is a positive finding. Fraud prevention is covered but fraud detection is absent. The 415-item total (vs 370-375 in other sections) partially offsets the shallow cognitive profile."
+    },
+    "F": {
+      "items": 374,
+      "unique_topic_roots": 200,
+      "well_covered": [
+        "AI and machine learning — 91 keyword hits, 12 unique topics; appears in many 'Company X is evaluating Y' stems, broad token coverage",
+        "Cybersecurity — CIA triad, phishing, encryption, MFA (38 items, 10 unique topics) — strongest subsection",
+        "Cloud computing — SaaS/IaaS/PaaS, service models (22 items, 10 unique topics)",
+        "ERP systems — integration, modules, benefits (18 items, 5 unique topics)",
+        "Data visualization — dashboards, BI tools (16 items, 8 unique topics)",
+        "RPA / robotic process automation (12 items, 4 unique topics)",
+        "Blockchain / distributed ledger (12 items, 5 unique topics)",
+        "Big data — 3Vs (volume, velocity, variety) (10 items, 6 unique topics)",
+        "Predictive analytics — models, overfitting (11 items, 4 unique topics)",
+        "Continuous auditing / monitoring (10 items, 4 unique topics)",
+        "Data mining — pattern discovery (8 items, 3 unique topics)",
+        "IoT / Internet of Things (8 items, 3 unique topics)"
+      ],
+      "under_covered": [
+        "Prescriptive analytics — 2 items, 2 unique topics; near-total gap",
+        "Data governance — keyword hits at 6 items but only 5 unique topic roots; fragmented",
+        "Privacy regulations (GDPR, CCPA) — 7 items, 3 unique topics; exists but shallow",
+        "Information systems lifecycle (SDLC) — present but thin",
+        "AI ethics / AI governance / model risk — not visible as distinct topics; AI coverage is definition-focused",
+        "Emerging tech depth — blockchain is 'what is it' level, not smart contract auditing or crypto accounting"
+      ],
+      "cognitive_distribution": {
+        "Remember": "0.5%",
+        "Understand": "84.5%",
+        "Apply": "14.7%",
+        "Analyze": "0.3%",
+        "Evaluate": "0.0%"
+      },
+      "assessment": "Section F has the widest topic scope (200 unique topic roots) but the shallowest cognitive profile of any section: 84.5% Understand, 14.7% Apply. Only 1 item in the entire section is labeled 'Analyze'. The template-based authoring produces 'Company X is evaluating Y in a finance transformation project. Which response is most appropriate?' stems that test recognition, not application. Every emerging technology (blockchain, AI, RPA, cloud, IoT) has a presence — but at the definitional level only. The 374 items provide token coverage of modern topics without the simulation-level practice (scenario-based data governance decisions, analytics method selection, security control design) that the CMA exam increasingly demands."
+    }
+  },
+  "topic_density_concerns": [
+    {
+      "section": "B",
+      "topic": "Direct materials purchases budget",
+      "count": 16,
+      "concern": "Highest-density single topic in the entire question bank. 16 items on one budget schedule is excessive — candidates get 16x more practice on DM purchasing than on Monte Carlo simulation (1 item).",
+      "severity": "MEDIUM"
+    },
+    {
+      "section": "E",
+      "topic": "COSO principle-level items",
+      "count": 16,
+      "concern": "COSO Principle labels at 16 items likely represent two rotation groups of the same template pattern. While core to the CMA exam, this density at the Understand level crowds out control scenario application.",
+      "severity": "LOW"
+    },
+    {
+      "section": "D",
+      "topic": "Service department allocation",
+      "count": 21,
+      "concern": "21 items on service dept allocation (direct/step/reciprocal) is the highest density in Section D. While a tested topic, this may be disproportionate for a 15% section — candidates spend disproportionate practice time on allocation mechanics vs. modern cost management.",
+      "severity": "MEDIUM"
+    },
+    {
+      "section": "C",
+      "topic": "Generic 'variance analysis'",
+      "count": 15,
+      "concern": "15 items labeled simply 'variance analysis' with no topic specialization. The rotation-group template produces mechanically-varied items without specific variance-type focus, diluting educational value compared to labeled material/labor/OH variance items.",
+      "severity": "LOW"
+    },
+    {
+      "section": "F",
+      "topic": "AI/ML definitional items",
+      "count": 91,
+      "concern": "91 keyword hits for AI/ML — but nearly all follow the 'Company X is evaluating Y in a finance transformation project' template at Understand level. High token count masks low cognitive depth. Candidates may memorize AI definitions across 91 items without ever applying which analytics method fits a given business problem.",
+      "severity": "HIGH"
+    },
+    {
+      "section": "F",
+      "topic": "Understand-level dominance",
+      "count": "84.5%",
+      "concern": "Section F is 84.5% Understand level — nearly a pure definition-matching section. 14.7% Apply and 0.3% Analyze is catastrophically low for a section that the CMA exam increasingly tests at the application and analysis level.",
+      "severity": "CRITICAL"
+    },
+    {
+      "section": "E",
+      "topic": "Understand-level dominance",
+      "count": "68.7%",
+      "concern": "Section E is 68.7% Understand — nearly 7 in 10 items test recall rather than application. The CMA exam heavily tests internal control scenario assessment, which requires Apply/Analyze items. The current pool is definition-heavy.",
+      "severity": "HIGH"
+    }
+  ],
+  "cognitive_level_crisis": {
+    "summary": "Across all 2,534 items in the question bank, Analyze coverage is effectively zero (0.0% to 0.8% per section). Evaluate coverage is 0.0% across all sections. The CAQS v1.0 target distribution is 40% Apply, 25% Analyze, 15% Evaluate. The current distribution is fundamentally incompatible with this target.",
+    "by_section": {
+      "A": "48% Apply, 47% Understand — closest to healthy balance but missing Analyze entirely",
+      "B": "66% Apply, 29% Understand — best Apply ratio, but 0.2% Analyze is functionally zero",
+      "C": "57% Apply, 41% Understand — healthy Apply ratio but Analyze at 0.8%",
+      "D": "60% Apply, 39% Understand — healthy Apply ratio but Analyze at 0.5%",
+      "E": "26% Apply, 69% Understand — inverted ratio, definition-dominant",
+      "F": "15% Apply, 85% Understand — catastrophically inverted, definition-dominant"
+    },
+    "root_cause": "The 5-item rotation-group template engine assigns cognitive level by position in the rotation group (pos 1=Remember, pos 2-3=Understand, pos 4-5=Apply) without assessing the actual cognitive demand of the item. This produces mechanically-labeled items that are often at the wrong cognitive level. Additionally, the template format ('Company X is evaluating Y. Which response is most appropriate?') intrinsically favors recognition over application."
+  },
+  "gap_classification": {
+    "coverage_gaps": [
+      {"section": "A", "topic": "Derivatives and hedging", "items": 0},
+      {"section": "A", "topic": "Software costs (ASC 985-20)", "items": 0},
+      {"section": "D", "topic": "Business process reengineering (BPR)", "items": 0},
+      {"section": "E", "topic": "Fraud detection techniques", "items": 0, "unique_topic_roots": 0},
+      {"section": "E", "topic": "Three lines of defense model", "items": 0},
+      {"section": "C", "topic": "Productivity measures (substantive)", "items": 1, "unique_topic_roots": 1},
+      {"section": "D", "topic": "TQM / Total Quality Management", "items": 1, "unique_topic_roots": 1}
+    ],
+    "density_gaps": [
+      {"section": "B", "topic": "Monte Carlo simulation", "items": 1, "threshold": "<3 items"},
+      {"section": "F", "topic": "Prescriptive analytics", "items": 2, "threshold": "<3 items"},
+      {"section": "D", "topic": "Life-cycle costing", "items": 2, "threshold": "<3 items"},
+      {"section": "A", "topic": "Segment reporting", "items": 2, "threshold": "<3 items"},
+      {"section": "E", "topic": "Corporate governance structures", "items": 3, "threshold": "<5 items"},
+      {"section": "D", "topic": "Capacity management", "items": 3, "threshold": "<5 items"},
+      {"section": "B", "topic": "Probability-based forecasting", "items": 4, "threshold": "<5 items"},
+      {"section": "B", "topic": "Exponential smoothing", "items": 4, "threshold": "<5 items"}
+    ],
+    "depth_gaps": [
+      {"section": "F", "topic": "All topics", "concern": "84.5% Understand level — entire section is definitional. Almost no scenario-based application of analytics methods, security controls, or technology decisions.", "remediation": "Requires wholesale re-authoring of ~150 items to Apply/Analyze level"},
+      {"section": "E", "topic": "All topics", "concern": "68.7% Understand level — internal controls is tested via definitions rather than scenario assessment.", "remediation": "Requires ~150 items upgraded from definition-match to control-failure scenarios"},
+      {"section": "F", "topic": "Emerging technologies", "concern": "Blockchain, AI, RPA, cloud, IoT all have token coverage at definitional level. No Apply items testing which technology fits which business problem.", "remediation": "Requires applied items (e.g., 'Which technology should the controller recommend for...')"},
+      {"section": "A", "topic": "Financial statement analysis", "concern": "Ratios are tested at calculation level. Missing: interpretation (e.g., 'What does a declining inventory turnover combined with rising gross margin suggest?')", "remediation": "Require Analyze-level items linking ratio trends to business diagnosis"}
+    ]
+  },
+  "expansion_candidates": [
+    {
+      "section": "A",
+      "topic": "Derivatives and hedging (ASC 815)",
+      "priority": "HIGH",
+      "current_items": 0,
+      "reason": "Complete coverage gap. Fair value hedges, cash flow hedges, and hedge effectiveness are CMA Part 1 tested topics with a dedicated CSO section.",
+      "target_items": "10-15 Apply-level items"
+    },
+    {
+      "section": "A",
+      "topic": "Software costs (ASC 985-20)",
+      "priority": "MEDIUM",
+      "current_items": 0,
+      "reason": "Complete gap. Companies increasingly capitalize software development costs; tested on CMA Part 1.",
+      "target_items": "5-10 Apply-level items"
+    },
+    {
+      "section": "F",
+      "topic": "Predictive & prescriptive analytics (applied)",
+      "priority": "CRITICAL",
+      "current_items": "11 predictive (Understand), 2 prescriptive (Understand)",
+      "reason": "CMA exam increasingly tests analytics method selection. Current items are definitional only. Need scenario-based items: 'Which analytics method should the controller use to forecast next quarter sales?'",
+      "target_items": "15-20 Apply/Analyze-level items"
+    },
+    {
+      "section": "F",
+      "topic": "AI governance and model risk",
+      "priority": "HIGH",
+      "current_items": "0 as distinct topic",
+      "reason": "Emerging CMA exam emphasis. AI ethics, model validation, algorithmic bias, model risk management are tested areas.",
+      "target_items": "10-15 Apply/Analyze-level items"
+    },
+    {
+      "section": "E",
+      "topic": "Fraud detection techniques and data analytics for fraud",
+      "priority": "HIGH",
+      "current_items": 0,
+      "unique_topic_roots": 0,
+      "reason": "Fraud prevention is covered but detection is absent. CMA exam tests detection (Benford's Law, ratio analysis for fraud indicators, anomaly detection).",
+      "target_items": "10-15 Apply/Analyze-level items"
+    },
+    {
+      "section": "E",
+      "topic": "COSO control scenario application items",
+      "priority": "HIGH",
+      "current_items": "Many at Understand level (COSO principle definitions)",
+      "reason": "68.7% Understand rate means candidates can recite COSO principles but cannot diagnose control failures in scenarios. Need scenario-based items: 'Given this control breakdown, which COSO principle is most directly violated?'",
+      "target_items": "25-30 Apply/Analyze-level upgrades to existing items"
+    },
+    {
+      "section": "D",
+      "topic": "TQM and lean accounting (applied)",
+      "priority": "MEDIUM",
+      "current_items": "1 (TQM), 9 keyword hits for lean (definitional)",
+      "reason": "CMA Part 1 tests TQM costs (prevention/appraisal/failure) and lean accounting concepts beyond definitions. Lean accounting (value stream costing, box score) is a distinct CMA topic.",
+      "target_items": "10-15 Apply/Analyze-level items"
+    },
+    {
+      "section": "D",
+      "topic": "Life-cycle costing and target costing (depth)",
+      "priority": "MEDIUM",
+      "current_items": 2,
+      "reason": "Both are CMA Part 1 tested topics. Current coverage exists but at 2 items — insufficient for meaningful practice.",
+      "target_items": "8-10 Apply-level items"
+    },
+    {
+      "section": "B",
+      "topic": "Monte Carlo simulation (applied)",
+      "priority": "MEDIUM",
+      "current_items": 1,
+      "reason": "Token coverage. CMA Part 1 includes simulation-based forecasting. Need at least 5 items for meaningful practice.",
+      "target_items": "5-8 Apply-level items"
+    },
+    {
+      "section": "C",
+      "topic": "Productivity measures and operational performance",
+      "priority": "HIGH",
+      "current_items": 1,
+      "reason": "Effectively absent. CMA Part 1 tests productivity ratios, partial and total factor productivity, and operational performance measurement.",
+      "target_items": "10-15 Apply/Analyze-level items"
+    },
+    {
+      "section": "C",
+      "topic": "Variance analysis interpretation (Analyze level)",
+      "priority": "HIGH",
+      "current_items": "0.8% Analyze — functionally zero",
+      "reason": "Variance calculation is well covered (56.8% Apply) but interpretation is absent. Need items requiring diagnosis: 'What is the most likely cause of a favorable material price variance combined with an unfavorable material quantity variance?'",
+      "target_items": "15-20 Analyze-level items across material, labor, OH, and revenue variances"
+    }
+  ],
+  "structural_observations": [
+    {
+      "finding": "5-item rotation group template produces broad but shallow coverage",
+      "detail": "Every topic area gets exactly one 5-item rotation group (or occasionally two). This ensures baseline exposure to every topic but prevents depth. Advanced topics (derivatives, prescriptive analytics, fraud detection) that didn't make it into the rotation template get 0 items.",
+      "impact": "Topic coverage is broad at the topic-root level (180-285 unique topics per section) but thin at the per-topic level (most topics have exactly 5 items — one rotation group)"
+    },
+    {
+      "finding": "Topic labeling is rotation-group variant, not cognitive scaffold",
+      "detail": "Section C: 'variance analysis' repeated 15 times with no sub-topic distinction. Section A: 'accounting equation equity calculation 1' through 'accounting equation equity calculation 20' — the numeric suffix indicates rotation position, not pedagogical sequencing.",
+      "impact": "Makes blueprint coverage audit difficult — labels don't distinguish between items that test different aspects of the same topic"
+    },
+    {
+      "finding": "Section E has 415 items (40 extra via Pack E R-series)",
+      "detail": "Pack E Section E contains 115 items vs. standard 75 — includes P1-E-R01 through P1-E-R40 supplemented items. These boost total Section E to 415 vs. 370-375 in other sections.",
+      "impact": "R-series items partially offset Section E's shallow cognitive profile but their quality and consistency with main-section items needs verification"
+    },
+    {
+      "finding": "Pack D Section F has 74 items (vs. 75 in other sections)",
+      "detail": "Confirmed 1 item missing in Pack D Section F relative to the standard 75-item section template.",
+      "impact": "Minor — 1 item does not materially affect Section F coverage. Likely a template-rotation omission."
+    },
+    {
+      "finding": "Zero Evaluate-level items across all 2,534 items",
+      "detail": "Not a single item in any section is labeled 'Evaluate' — the highest Bloom's level that requires professional judgment, recommendation formulation, and decision-making under uncertainty.",
+      "impact": "The question bank cannot prepare candidates for the CMA exam's most challenging items. Evaluate items are typically the differentiators between passing and failing candidates."
+    }
+  ]
+}

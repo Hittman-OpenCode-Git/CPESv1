@@ -1,0 +1,22 @@
+{
+  "agent": "M",
+  "session": "S301",
+  "phase": 4,
+  "domain": "Remediation Priority Scoring",
+  "priority_factors": {
+    "learner_safety_impact": "weight=40 — Does this defect affect items in the learner delivery pool?",
+    "certification_roadblock": "weight=30 — Does this defect prevent certification of otherwise-ready items?",
+    "remediation_effort": "weight=20 — How many sessions/agents needed? (inverse — lower effort = higher priority)",
+    "dependency_chain": "weight=10 — Does resolving this unblock other work?"
+  },
+  "ranked_targets": [
+    { "rank": 1, "target": "Pack A Section A+E (19 archived)", "priority_score": 92, "rationale": "96.2% of Pack A certified. Resolving last 19 achieves 100% for a third pack. Low effort (2 sessions). No learner pool exposure (archived)." },
+    { "rank": 2, "target": "Pack D Sections A/B/D DL-008 (10 items)", "priority_score": 85, "rationale": "Already Certified but carry DL-008 — learner pool exposure. Mechanical clear (RC-01). 1 session." },
+    { "rank": 3, "target": "Pack C Section F (75 unprocessed)", "priority_score": 80, "rationale": "Largest single unprocessed block. DL-013 remediable via batch editorial. Unblocks 75 items for certification." },
+    { "rank": 4, "target": "Pack D Section F (74 unprocessed)", "priority_score": 78, "rationale": "Second largest block. Similar to C-F. DL-008 + DL-013 remediation needed." },
+    { "rank": 5, "target": "Pack C Sections A/B DL-008 CC audit (174 cluster)", "priority_score": 75, "rationale": "174 already-Certified items with DL-008 AND CC-rotation artifact — learner pool exposure. CC audit is prerequisite. High effort but high learner safety impact." },
+    { "rank": 6, "target": "Pack D Section C DL-026 (50 items)", "priority_score": 70, "rationale": "In Audit items — not in learner pool. Must fill empty EW slots before certification. Medium effort." },
+    { "rank": 7, "target": "Pack C Section E DL-012 clones (56 archived)", "priority_score": 60, "rationale": "Archived — no learner pool exposure. High effort (clone group audit). Low dependency (can be done last)." },
+    { "rank": 8, "target": "Pack D Section E DL-012 clones (56 archived)", "priority_score": 58, "rationale": "Same as C-E. Lower priority because Pack D has more non-clone remaining items." }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "generated": "2026-07-26T22:05:28.440Z",
+  "modelVersion": "S306-UIQS-1.0",
+  "title": "Unified Item Quality Score v1.0",
+  "purpose": "Single composite quality score integrating DQS/EQS/BQS/ExQS into a unified portfolio-ranking framework.",
+  "dimensions": {
+    "certificationMaturity": {
+      "weight": 0.25,
+      "source": "BQS",
+      "desc": "100=Certified, 50=In Audit, 25=Unprocessed"
+    },
+    "explanationQuality": {
+      "weight": 0.25,
+      "source": "EQS",
+      "desc": "EC length 0-100 + content bonus (refs+15, formula+10, trap+10)"
+    },
+    "distractorQuality": {
+      "weight": 0.2,
+      "source": "DQS",
+      "desc": "EW fill 60% + non-CC EW fill 40%; neutral 50 for no-distractor items"
+    },
+    "blueprintImportance": {
+      "weight": 0.1,
+      "source": "BQS",
+      "desc": "Domain CMA weight normalization"
+    },
+    "exhibitQuality": {
+      "weight": 0.1,
+      "source": "ExQS",
+      "desc": "Domain ExQS for case items; 50 for MCQ"
+    },
+    "learningValue": {
+      "weight": 0.1,
+      "source": "Composite",
+      "desc": "EC richness 60% + EW fill 40%"
+    }
+  },
+  "formula": "UIQS = 0.25×CM + 0.25×EQ + 0.20×DQ + 0.10×BP + 0.10×EX + 0.10×LV",
+  "gradingScale": {
+    "A": "85-100",
+    "B": "70-84",
+    "C": "55-69",
+    "D": "35-54",
+    "F": "0-34"
+  },
+  "qualityRequirements": [
+    "auditable",
+    "explainable",
+    "deterministic",
+    "reproducible"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "generated": "2026-07-26T21:49:14.801Z",
+  "session": "S305",
+  "ewDependency": {
+    "totalEWSlots": 1875,
+    "missingEWSlots": 2404,
+    "casesWithEWGaps": 120,
+    "casesWithoutEWGaps": 0,
+    "ewGapRate": "128.2%",
+    "correlationWithExhibits": "Cases with exhibits have 75 of 75 with EW gaps",
+    "byDomain": {
+      "A - External Financial Reporting": {
+        "cases": 11,
+        "ewMissing": 218,
+        "ewGapRate": "125.3%"
+      },
+      "B - Planning, Budgeting & Forecasting": {
+        "cases": 12,
+        "ewMissing": 263,
+        "ewGapRate": "128.9%"
+      },
+      "C - Performance Management": {
+        "cases": 14,
+        "ewMissing": 265,
+        "ewGapRate": "121.0%"
+      },
+      "D - Cost Management": {
+        "cases": 14,
+        "ewMissing": 287,
+        "ewGapRate": "124.2%"
+      },
+      "E - Internal Controls": {
+        "cases": 13,
+        "ewMissing": 254,
+        "ewGapRate": "124.5%"
+      },
+      "F - Technology & Analytics": {
+        "cases": 11,
+        "ewMissing": 217,
+        "ewGapRate": "129.2%"
+      },
+      "Unknown": {
+        "cases": 45,
+        "ewMissing": 900,
+        "ewGapRate": "133.3%"
+      }
+    }
+  },
+  "certImpact": {
+    "A - External Financial Reporting": {
+      "totalCases": 11,
+      "totalItems": 58,
+      "uncertifiedItems": 6,
+      "casesNeedingExhibitUpgrade": 5,
+      "casesWithCognitiveLoadConcern": 6,
+      "casesNeedingDistractorFeedback": 11,
+      "exhibitUpgradeBurden": "MODERATE",
+      "cognitiveLoadBurden": "HIGH",
+      "feedbackGapBurden": "HIGH",
+      "estimatedExhibitSessions": 2,
+      "estimatedFeedbackSessions": 4
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "totalCases": 12,
+      "totalItems": 68,
+      "uncertifiedItems": 6,
+      "casesNeedingExhibitUpgrade": 1,
+      "casesWithCognitiveLoadConcern": 11,
+      "casesNeedingDistractorFeedback": 12,
+      "exhibitUpgradeBurden": "MODERATE",
+      "cognitiveLoadBurden": "HIGH",
+      "feedbackGapBurden": "HIGH",
+      "estimatedExhibitSessions": 1,
+      "estimatedFeedbackSessions": 5
+    },
+    "C - Performance Management": {
+      "totalCases": 14,
+      "totalItems": 73,
+      "uncertifiedItems": 12,
+      "casesNeedingExhibitUpgrade": 3,
+      "casesWithCognitiveLoadConcern": 12,
+      "casesNeedingDistractorFeedback": 14,
+      "exhibitUpgradeBurden": "MODERATE",
+      "cognitiveLoadBurden": "HIGH",
+      "feedbackGapBurden": "HIGH",
+      "estimatedExhibitSessions": 1,
+      "estimatedFeedbackSessions": 5
+    },
+    "D - Cost Management": {
+      "totalCases": 14,
+      "totalItems": 77,
+      "uncertifiedItems": 6,
+      "casesNeedingExhibitUpgrade": 2,
+      "casesWithCognitiveLoadConcern": 14,
+      "casesNeedingDistractorFeedback": 14,
+      "exhibitUpgradeBurden": "MODERATE",
+      "cognitiveLoadBurden": "HIGH",
+      "feedbackGapBurden": "HIGH",
+      "estimatedExhibitSessions": 1,
+      "estimatedFeedbackSessions": 5
+    },
+    "E - Internal Controls": {
+      "totalCases": 13,
+      "totalItems": 68,
+      "uncertifiedItems": 12,
+      "casesNeedingExhibitUpgrade": 2,
+      "casesWithCognitiveLoadConcern": 13,
+      "casesNeedingDistractorFeedback": 13,
+      "exhibitUpgradeBurden": "MODERATE",
+      "cognitiveLoadBurden": "HIGH",
+      "feedbackGapBurden": "HIGH",
+      "estimatedExhibitSessions": 1,
+      "estimatedFeedbackSessions": 5
+    },
+    "F - Technology & Analytics": {
+      "totalCases": 11,
+      "totalItems": 56,
+      "uncertifiedItems": 0,
+      "casesNeedingExhibitUpgrade": 5,
+      "casesWithCognitiveLoadConcern": 11,
+      "casesNeedingDistractorFeedback": 11,
+      "exhibitUpgradeBurden": "MODERATE",
+      "cognitiveLoadBurden": "HIGH",
+      "feedbackGapBurden": "HIGH",
+      "estimatedExhibitSessions": 2,
+      "estimatedFeedbackSessions": 4
+    },
+    "Unknown": {
+      "totalCases": 45,
+      "totalItems": 225,
+      "uncertifiedItems": 0,
+      "casesNeedingExhibitUpgrade": 0,
+      "casesWithCognitiveLoadConcern": 0,
+      "casesNeedingDistractorFeedback": 45,
+      "exhibitUpgradeBurden": "LOW",
+      "cognitiveLoadBurden": "MODERATE",
+      "feedbackGapBurden": "HIGH",
+      "estimatedExhibitSessions": 1,
+      "estimatedFeedbackSessions": 15
+    }
+  }
+}

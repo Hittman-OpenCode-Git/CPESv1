@@ -1,0 +1,66 @@
+{
+  "session": "708",
+  "timestamp": "2026-07-25",
+  "type": "Cross-pack residual defect ledger — post S703-S707 remediation wave",
+  "methodology": "G-NEW-3 within-object CorrectChoice extraction. All 2,500 items parsed.",
+  "preflight_tests": "20/20 GOVERNANCE GUARD PASS",
+  "postflight_tests": "20/20 GOVERNANCE GUARD PASS",
+  "state_summary": {
+    "total_qids": 2500,
+    "total_certified": 2181,
+    "total_editorial": 0,
+    "total_archived": 132,
+    "total_unprocessed": 187,
+    "total_hold": 0
+  },
+  "defect_summary": {
+    "dl008": {
+      "total": 0,
+      "certified": 0,
+      "status": "CLEAN"
+    },
+    "dl016": {
+      "pack_a_section_b": 0,
+      "pack_c": 0,
+      "status": "CLEAN"
+    },
+    "dl025_dl026": {
+      "total": 312,
+      "certified": 13,
+      "by_pack": {
+        "pack_a": {
+          "total": 1,
+          "certified": 1
+        },
+        "pack_b": {
+          "total": 0,
+          "certified": 0
+        },
+        "pack_c": {
+          "total": 152,
+          "certified": 2
+        },
+        "pack_d": {
+          "total": 159,
+          "certified": 10
+        },
+        "pack_e": {
+          "total": 0,
+          "certified": 0
+        }
+      }
+    }
+  },
+  "lane_isolation": {
+    "100_series_may": "NOT MODIFIED. Hash drift from concurrent lane (pre-existing).",
+    "500_series_case": "NOT MODIFIED.",
+    "scoring_runtime": "NOT MODIFIED.",
+    "pack_files": "READ-ONLY. Zero writes.",
+    "certification_states": "UNCHANGED."
+  },
+  "recommendations": {
+    "s709_dl026": "Remediate 13 Certified DL-026 items: author distractor text for empty slots. Single batch (13 items < 30 cap).",
+    "s709_certification_freeze": "DL-008 and DL-016 are zero. The 700-series lane is structurally clean for certification. 13 DL-026 items are pedagogical quality gaps.",
+    "s709_dl031_dl032": "Optional difficulty recalibration can proceed independently."
+  }
+}

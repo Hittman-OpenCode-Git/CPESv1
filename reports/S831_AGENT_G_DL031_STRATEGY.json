@@ -1,0 +1,283 @@
+{
+  "session": "S831",
+  "agent": "G",
+  "phase": "Analysis",
+  "task": "DL-031 detection and remediation strategy",
+  "status": "COMPLETE",
+  "timestamp": "2026-07-27T00:00:00Z",
+
+  "baseline_data_verified": {
+    "total_items": 2540,
+    "difficulty_distribution": {
+      "Easy_1": { "count": 536, "pct": 21.1, "target": 381, "target_pct": 15.0 },
+      "ModerateEasy_2": { "count": 693, "pct": 27.3, "target": 508, "target_pct": 20.0 },
+      "Moderate_3": { "count": 1226, "pct": 48.3, "target": 762, "target_pct": 30.0 },
+      "Difficult_4": { "count": 85, "pct": 3.3, "target": 635, "target_pct": 25.0 },
+      "VeryDifficult_5": { "count": 0, "pct": 0.0, "target": 254, "target_pct": 10.0 }
+    },
+    "blooms_distribution": {
+      "Remember": { "count": 72, "pct": 2.8 },
+      "Understand": { "count": 1276, "pct": 50.2 },
+      "Apply": { "count": 1182, "pct": 46.5 },
+      "Analyze": { "count": 10, "pct": 0.4 },
+      "Evaluate": { "count": 0, "pct": 0.0 }
+    },
+    "key_insight_Understand_vs_Easy_gap": "1,276 items at Understand level but only 536 labeled Easy. At least 740 Understand items are labeled Moderate-Easy or Moderate — these are the primary DL-031 candidates.",
+    "key_insight_Moderate_excess": "1,226 items at Moderate (target 762) — excess of 464. DL-031 downgrades alone would reduce this but still leave 826 with no offsetting upgrades elsewhere.",
+    "key_insight_Difficult_VeryDifficult_deficit": "85 Difficult + 0 Very Difficult vs. targets of 635 + 254. Deficit of 804 items in the upper tiers."
+  },
+
+  "detection_methodology": {
+    "primary_approach": "Automated Jaccard similarity between stem text and correct answer choice text",
+    "jaccard_threshold": ">0.50 = high probability DL-031; >0.35 = moderate; <0.35 = unlikely",
+    "stem_tokenization": "Lowercase, strip punctuation, remove stop words, extract significant words (len > 2)",
+    "correct_choice_tokenization": "Same tokenization applied to the correct answer choice text only",
+    "jaccard_formula": "J(stem, correct) = |common_tokens| / |stem_tokens ∪ correct_tokens|",
+
+    "secondary_patterns": [
+      {
+        "pattern": "stem_is_single_definitional_sentence",
+        "indicators": [
+          "Stem is one sentence ending in '?': 'What is...', 'Which of the following...', 'Under GAAP,...'",
+          "Stem contains no scenario (no company name, no dollar amounts, no dates, no person role)",
+          "Stem asks 'What is X?' or 'Which is Y?' where X/Y is an accounting concept",
+          "Correct answer is a single term or short phrase (5 words or fewer)"
+        ],
+        "confidence": "HIGH — strongest DL-031 signal"
+      },
+      {
+        "pattern": "definitional_connector_phrases",
+        "phrases": [
+          "is defined as",
+          "refers to",
+          "is known as",
+          "is called",
+          "is the term for",
+          "is the process of",
+          "is a measure of",
+          "is a method of",
+          "is the amount of",
+          "represents the",
+          "is classified as",
+          "is reported as",
+          "is measured at",
+          "means",
+          "are:",
+          "includes:"
+        ],
+        "scan_result": "~96 raw hits across explicit connective phrases (grep scan). True DL-031 scope is far larger — most definitional stems use implicit definitional framing without explicit connectives."
+      },
+      {
+        "pattern": "pack_E_definitional_density",
+        "finding": "Pack E Section A (items 1-50) has ~60-70% textbook-definition stems: 'What is the primary purpose of the balance sheet?', 'Under U.S. GAAP, inventory is reported at:', 'The effective interest method results in:', etc.",
+        "confidence": "HIGH — visually confirmed by stem sampling. Pack E is the highest-density DL-031 pack."
+      },
+      {
+        "pattern": "understand_level_moderate_label_mismatch",
+        "logic": "Items with CognitiveLevel=Understand AND DifficultyScore=3 (Moderate) are DL-031 candidates unless the stem is an application scenario. If stem is a definition, Bloom's Understand + Moderate label is a difficulty inflation.",
+        "estimated_scan_hits": "~740 items (1,276 Understand - 536 Easy)"
+      }
+    ],
+
+    "composite_detection_algorithm": {
+      "step1": "For each item, extract stem text and correct answer choice text",
+      "step2": "Compute Jaccard similarity J(stem, correct_choice)",
+      "step3": "Check for definitional stem patterns (single-sentence, no scenario data, connective phrases)",
+      "step4": "Cross-reference CognitiveLevel (Understand/Remember = DL-031 candidate; Apply/Analyze/Evaluate = unlikely DL-031)",
+      "step5": "Scoring rule: if (J > 0.50 AND stem is definitional AND CognitiveLevel is Understand/Remember) → HIGH; if (J > 0.35 AND CognitiveLevel is Understand/Remember) → MEDIUM; else → LOW",
+      "confidence": "MEDIUM — NLP-based detection requires human (or build-time AI) review for borderline cases. Jaccard alone has false positives on numeric stems (where correct answer is a number and stem contains formula terms)."
+    },
+
+    "false_positive_risks": [
+      "Numeric calculation stems: stem describes calculation method (high term overlap with answer if answer is a concept name, not a number)",
+      "Reverse-definition questions: answer choices are the definitions and stem asks 'which concept', making correct choice text long and overlapping with stem terminology",
+      "Multi-select items: correct answer is an array, not a single choice — Jaccard comparison breaks down"
+    ],
+
+    "implementation_note": "Detection script should be a standalone Node.js script in scripts/ that reads pack files via Function constructor, extracts stem + correct choice, computes Jaccard, and outputs QID → score → classification."
+  },
+
+  "estimated_scope": {
+    "total_affected": "800-1,000 items",
+    "methodology_for_estimate": "1,276 Understand items minus 536 Easy items = 740 minimal bound. Add ~60-260 from Remember-level items and borderline Understand items with high Jaccard but borderline definitional pattern. Range: 740-1,000.",
+    "pack_distribution_estimate": {
+      "Pack A": "~80 (mostly Section E definitional items + scattered conceptual items)",
+      "Pack B": "~150 (Sections B/C/F have conceptual/definitional items)",
+      "Pack C": "~200 (large Unprocessed pool with template-generated conceptual items)",
+      "Pack D": "~200 (mirrors Pack C structure)",
+      "Pack E": "~300 (highest density — 60-70% of Section A, significant portions of other sections)"
+    },
+    "confidence": "MEDIUM — precise count requires automated scan execution"
+  },
+
+  "classification_matrix": {
+    "downgrade_to_easy": {
+      "count": "~600 (75% of affected)",
+      "profile": "Pure definition-match. Stem IS a textbook definition. Answer IS the term/definition. No calculation, no scenario, no application required. Candidate matches term to definition.",
+      "examples": [
+        "P1E-A-001: 'What is the primary purpose of the balance sheet?' → Answer: balance sheet definition",
+        "P1E-A-013: 'The LIFO reserve represents:' → Answer: definition of LIFO reserve",
+        "P1E-A-041: 'The effective interest method results in:' → Answer: constant rate description"
+      ],
+      "action": "Set DifficultyScore=1, Difficulty='Easy'. Zero content change. 100% safe — no learner-visible difference beyond difficulty label.",
+      "governance_note": "Difficulty-only metadata change. No question_state impact. No certification-blocking properties. No DL-008/DL-026/DL-013 implications."
+    },
+    "upgrade_stem": {
+      "count": "~150 (19% of affected)",
+      "profile": "Stem defines a concept but COULD be rewritten as an application scenario. Concept is testable at Apply level. Current stem is definitional but the underlying concept is complex enough to warrant a higher difficulty if framed differently.",
+      "examples": [
+        "'Which cost flow assumption results in the lowest net income during rising prices?' → Could become: 'Harbor Manufacturing reports rising raw material costs for Q3. The controller needs to minimize Q3 taxable income. Which inventory method should Harbor use?'",
+        "'Under ASC 842, a lessee classifies a lease as finance if:' → Could become: 'Northstar signed a 7-year equipment lease. The PV of lease payments equals 92% of the equipment's fair value, and the lease includes a bargain purchase option. How should Northstar classify this lease?'"
+      ],
+      "action": "Rewrite stem as application scenario. Keep current difficulty label (Moderate, score 3). Content change requires backup per BACKUP_PROTOCOL.md, full six-dimension re-verification.",
+      "risk": "Content change — requires accounting accuracy review, distractor consistency check, explanation alignment. Higher effort per item."
+    },
+    "keep_current": {
+      "count": "~50 (6% of affected)",
+      "profile": "Definition-match format but distractor subtlety genuinely makes it Moderate. Rare cases where distractors are so well-engineered that even a definition-recognition question discriminates effectively. Also: borderlines where Jaccard is high but stem has enough context to argue for Moderate.",
+      "examples": [
+        "Multi-part definitional stems where the correct answer is 'all of the above' and each sub-definition must be verified",
+        "Stems where ALL four choices are plausible definitions and only precise standard language distinguishes them"
+      ],
+      "action": "No change. Documented as reviewed-and-kept in DL-031 remediation ledger.",
+      "risk": "None — no file modification."
+    }
+  },
+
+  "impact_analysis": {
+    "scenario_isolation_downgrade_only": {
+      "description": "If all 600 downgrade-to-Easy items are executed without offsetting upgrades",
+      "post_easy_count": "536 + 600 = 1,136",
+      "post_easy_pct": 44.7,
+      "post_moderate_count": "1,226 - 600 = 626 (removing Easy-bound items only)",
+      "post_moderate_pct": 24.6,
+      "verdict": "Easy explodes from 21.1% to 44.7% (target 15%). Moderate drops from 48.3% to 24.6%. Distribution is still wrong — now left-skewed with Easy overrepresentation.",
+      "severity": "HIGH — executing DL-031 downgrades in isolation makes the difficulty distribution WORSE, not better."
+    },
+    "scenario_coordinated_rebalance": {
+      "description": "DL-031 downgrades paired with Moderate→Difficult and Moderate-Easy→Moderate upgrades",
+      "step_dl031_downgrades": {
+        "items_moved_to_easy": 600,
+        "source_tiers": "~400 from Moderate (3), ~150 from Moderate-Easy (2), ~50 from other"
+      },
+      "step_upward_recalibration": {
+        "moderate_to_difficult": 450,
+        "moderate_easy_to_moderate": 200,
+        "easy_to_moderate_easy": 100,
+        "description": "Upgrade items that genuinely require Apply/Analyze/Eval. Agents E/F recommendations target items currently under-labeled."
+      },
+      "post_rebalance_distribution": {
+        "Easy_1": { "count": 1036, "pct": "~20%", "note": "Still slightly over 15% target. Formula: 536 (current) + 600 (DL-031 downgrades) - 100 (Easy→Mod-Easy upgrades)" },
+        "ModerateEasy_2": { "count": 443, "pct": "~17%", "note": "Close to 20% target. Formula: 693 - 150 + 100 - 200" },
+        "Moderate_3": { "count": 826, "pct": "~32.5%", "note": "Close to 30% target. Formula: 1226 - 400 - 200 + 200" },
+        "Difficult_4": { "count": 535, "pct": "~21%", "note": "Approaching 25% target. Formula: 85 + 450" },
+        "VeryDifficult_5": { "count": 55, "pct": "~2%", "note": "Still well below 10% target — needs dedicated Very Difficult authoring" }
+      },
+      "verdict": "Acceptable. Distribution improves significantly toward CAQS §6.1 targets. Very Difficult remains a gap requiring new question authoring."
+    },
+    "critical_conclusion": "DL-031 remediation CANNOT be executed in isolation. The Easy tier is ALREADY over target (21.1% vs 15%). Adding 600 more Easy items would produce a 45% Easy pool — nearly 3x the target. DL-031 must be bundled with upward recalibration in a single coordinated sweep."
+  },
+
+  "integrated_strategy": {
+    "philosophy": "DL-031 is correct in its diagnosis (difficulty inflation on definition-match items) but its remediation creates a distribution problem. The solution is to treat DL-031 as ONE component of a broader difficulty rebalancing initiative, not a standalone defect fix.",
+
+    "step_1_detect": {
+      "action": "Run automated DL-031 detection scan across all 5 packs",
+      "method": "Jaccard similarity + definitional pattern matching + CognitiveLevel cross-reference",
+      "output": "QID list with classification (downgrade/upgrade_stem/keep) and confidence score",
+      "estimated_runtime": "~30 minutes automated scan"
+    },
+
+    "step_2_classify": {
+      "action": "Build-time AI verification of each flagged item (sample-based for >90% confidence; full review for borderline)",
+      "classification_rules": {
+        "downgrade_to_easy": "Pure definition-match, no scenario, no calculation, 1-sentence stem, answer is term name",
+        "upgrade_stem": "Concept could support Apply/Analyze framing but current stem is definitional. Stem rewrite would add educational value.",
+        "keep_current": "Distractors create genuine Moderate difficulty despite definitional format, OR borderline case with <0.60 Jaccard"
+      },
+      "estimated_runtime": "~2-3 hours for 800-1,000 items"
+    },
+
+    "step_3_prepare_rebalance_bundle": {
+      "action": "Combine DL-031 downgrade list with Agent E upward recalibration list",
+      "coordination_rule": "For every ~3 items downgraded Moderate→Easy, upgrade ~2 items Moderate→Difficult and ~1 item Moderate-Easy→Moderate",
+      "net_effect_per_batch": "Easy +0 (net), Moderate -2, Difficult +1.5, Moderate-Easy -0.5",
+      "batch_size": "≤30 items per governance-guard Rule 5"
+    },
+
+    "step_4_execute_coordinated_sweep": {
+      "action": "Execute difficulty recalibration in batches that combine DL-031 downgrades with upward recalibrations",
+      "execution_order": [
+        "1. Batch 1: 10 DL-031 downgrades + 15 Moderate→Difficult + 5 other upgrades (≤30 items total)",
+        "2. Batch 2-20: Continue paired batches until DL-031 backlog cleared",
+        "3. Final batch: residual items + distribution audit"
+      ],
+      "governance_compliance": "All batches ≤30 items (Rule 5). Backup before each batch (BACKUP_PROTOCOL.md). Difficulty-only changes to downgrade items (no question_state, CorrectChoice, or content changes). REVISION_HISTORY.md entry per batch.",
+      "estimated_total_batches": "~20-25 batches for ~600 DL-031 downgrades + ~400 upward recalibrations"
+    },
+
+    "step_5_verify_distribution": {
+      "action": "Post-sweep difficulty distribution audit",
+      "checks": [
+        "Easy count near 15% target (±3%)",
+        "Moderate count near 30% target (±5%)",
+        "Difficult count ≥ 20% (up from 3.3%)",
+        "Very Difficult count > 0 (gap partially closed)",
+        "Bloom's distribution aligns with new difficulty labels"
+      ],
+      "success_criteria": "All tiers within 5% of CAQS §6.1 targets, OR documented explanation for deviation"
+    },
+
+    "very_difficult_gap": {
+      "finding": "Even with full upward recalibration, Very Difficult (score 5) will remain at ~2-3% vs. 10% target. The pool simply lacks enough items with Evaluate-level cognitive demand.",
+      "recommendation": "Dedicated Very Difficult authoring pass required — ~200 new items or stem rewrites for existing Apply items to elevate them to Evaluate. This is a separate initiative from DL-031 remediation.",
+      "defer_to": "Future content-authoring sprint, not S831 scope"
+    }
+  },
+
+  "recommendation": "RECOMMEND DEFER AS STANDALONE — DL-031 remediation should NOT be executed in isolation. It must be part of a coordinated difficulty rebalancing sweep (S832 or S833) that pairs ~600 downgrades (Moderate→Easy) with ~450 upward recalibrations (Moderate→Difficult, Moderate-Easy→Moderate). Execute in ≤30-item batches per governance-guard Rule 5. The standalone DL-031 scan (Step 1 detection) CAN be run now as read-only to produce the QID classification list for the coordinated sweep.",
+
+  "decision": "DEFER — DL-031 detection scan (read-only) authorized for S831. DL-031 remediation (writes) deferred to coordinated S832/S833 sweep.",
+
+  "risks_and_mitigations": {
+    "risk_1": {
+      "risk": "Execution of DL-031 downgrades without upward recalibration makes distribution worse",
+      "mitigation": "Hard gate: difficulty write script must verify bundle composition (≥2 upward recalibrations per 3 downgrades) before executing any batch",
+      "severity": "CRITICAL"
+    },
+    "risk_2": {
+      "risk": "Jaccard false positives on numeric calculation stems with concept-name answers",
+      "mitigation": "Filter by CognitiveLevel — items at Apply/Analyze are excluded from DL-031 scan regardless of Jaccard score",
+      "severity": "MEDIUM"
+    },
+    "risk_3": {
+      "risk": "Pack C/D dual-block architecture causes scan to read wrong choice text for Jaccard comparison",
+      "mitigation": "Use boundary-aware object parsing (Function constructor), not forward-scan regex. Extract CorrectChoice from the same JSON object as Stem/Choices.",
+      "severity": "HIGH"
+    },
+    "risk_4": {
+      "risk": "Batch size violations — difficulty-only changes on 600+ items exceeds governance guard",
+      "mitigation": "Batches of ≤30 items per Rule 5. 20-25 batches across multiple sessions if needed.",
+      "severity": "MEDIUM"
+    }
+  },
+
+  "output_artifacts": {
+    "detection_scan": "scripts/S831_dl031_detect.js — automated Jaccard + pattern scan (read-only, to be written)",
+    "classification_ledger": "reports/S831_dl031_classification.json — QID → classification (downgrade/upgrade_stem/keep) + confidence",
+    "rebalance_bundle": "reports/S832_rebalance_bundle.json — combined DL-031 + upward recalibration batch plan",
+    "revision_history": "knowledge/REVISION_HISTORY.md — per-batch entries during S832/S833 execution"
+  },
+
+  "cross_references": {
+    "DL-031": "knowledge/DEFECT_LIBRARY.md — difficulty inflation defect definition",
+    "CAQS_6.1": "knowledge/CAQS_v1.0.md §6.1 — target difficulty distribution",
+    "CAQS_6.2": "knowledge/CAQS_v1.0.md §6.2 — Bloom's taxonomy distribution targets",
+    "Agent_E": "S831 Agent E — upward recalibration analysis (Moderate→Difficult recommendations)",
+    "Agent_F": "S831 Agent F — Bloom's/Difficulty alignment analysis",
+    "governance_guard_Rule_5": ".opencode/plugins/governance-guard.js — 30-item batch cap",
+    "BACKUP_PROTOCOL": "knowledge/BACKUP_PROTOCOL.md — mandatory backup before writes",
+    "DL-029": "knowledge/DEFECT_LIBRARY.md — regex block-scan false positives (CC-offset methodology risk)",
+    "DL-016": "knowledge/DEFECT_LIBRARY.md — metadata-content block mismatch (scan reliability risk for Pack C/D)"
+  }
+}

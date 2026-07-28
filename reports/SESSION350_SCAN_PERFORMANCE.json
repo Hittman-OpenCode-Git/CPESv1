@@ -1,0 +1,264 @@
+{
+  "document": "SESSION350_SCAN_PERFORMANCE",
+  "session": "S350",
+  "title": "Scan Performance Metrics — Pipeline Throughput, Accuracy, and Artifact Reuse",
+  "board": "E — Scan Performance Metrics",
+  "series": "350-Series — Framework v2 Measurement & Validation",
+  "date": "2026-07-27",
+  "type": "Measurement Scorecard — Scan Performance Tracking",
+  "authority": "SESSION350_V1_BASELINE.json (Board A); SESSION321_SCAN_PIPELINE_SPEC.json; scripts/output/certification_scan_artifact.json (S322 live pipeline run)",
+  "purpose": "Measure the performance of the Framework v2 scan pipeline — the core 'scan once, consume many' architecture. Tracks pipeline runtime, defect detection accuracy (false positives/negatives), cross-board artifact reuse, and per-gate effectiveness.",
+  "depends_on": "SESSION350_V1_BASELINE.json",
+
+  "scan_pipeline_architecture": {
+    "authority": "SESSION321_SCAN_PIPELINE_SPEC.json",
+    "description": "7-gate deterministic linear pipeline: Gate -1 → Gate 0 → Gate 1 → Gate 2 → Gate 3 → Gate 4 → Gate 5. Each gate depends on the previous gate's output. The final output is the CERTIFICATION_SCAN_ARTIFACT consumed by all Framework v2 boards.",
+    "gates": [
+      {
+        "gate": "Gate -1",
+        "name": "Identity Validation",
+        "position": 0,
+        "depends_on": [],
+        "blocking": "HARD_BLOCK",
+        "checks": 8,
+        "v2_runtime_target": "3s",
+        "current_s322_runtime": "0.2s",
+        "description": "Validates that every item has a valid, unique compound-key identity. Items that fail are BLOCKED."
+      },
+      {
+        "gate": "Gate 0",
+        "name": "JSON Integrity",
+        "position": 1,
+        "depends_on": ["Gate -1"],
+        "blocking": "HARD_BLOCK",
+        "checks": 4,
+        "v2_runtime_target": "5s",
+        "current_s322_runtime": "0.2s",
+        "description": "Ensures all question objects parse correctly with required fields present."
+      },
+      {
+        "gate": "Gate 1",
+        "name": "Structural Scan",
+        "position": 2,
+        "depends_on": ["Gate 0"],
+        "blocking": "HARD_BLOCK",
+        "checks": 5,
+        "v2_runtime_target": "10s",
+        "current_s322_runtime": "0.1s",
+        "defect_classes": ["DL-008", "DL-026", "DL-016", "DL-018", "DL-021"],
+        "description": "Scans for structural defects: EW[CC] non-empty, empty non-CC slots, metadata offsets."
+      },
+      {
+        "gate": "Gate 2",
+        "name": "Content Scan",
+        "position": 3,
+        "depends_on": ["Gate 1"],
+        "blocking": "SOFT_FAIL",
+        "checks": 4,
+        "v2_runtime_target": "12s",
+        "current_s322_runtime": "0.1s",
+        "defect_classes": ["DL-013", "EV3", "DL-010", "DL-031"],
+        "description": "Scans for content-quality issues: boilerplate, missing citations, difficulty inflation."
+      },
+      {
+        "gate": "Gate 3",
+        "name": "Identity Reconciliation",
+        "position": 4,
+        "depends_on": ["Gate 1"],
+        "blocking": "HARD_BLOCK",
+        "checks": 2,
+        "v2_runtime_target": "20s",
+        "current_s322_runtime": "0.1s",
+        "description": "Validates cross-pack compound-key uniqueness. Detects identity collisions."
+      },
+      {
+        "gate": "Gate 4",
+        "name": "Calculation Validation",
+        "position": 5,
+        "depends_on": ["Gate 2"],
+        "blocking": "SOFT_FAIL",
+        "checks": 3,
+        "v2_runtime_target": "50s",
+        "current_s322_runtime": "0.1s",
+        "defect_classes": ["DL-030"],
+        "description": "Validates CorrectChoice against explanation content. Full calculation validation deferred to S332."
+      },
+      {
+        "gate": "Gate 5",
+        "name": "Certification Readiness",
+        "position": 6,
+        "depends_on": ["Gate 3", "Gate 4"],
+        "blocking": "SOFT_FAIL",
+        "checks": 3,
+        "v2_runtime_target": "15s",
+        "current_s322_runtime": "NOT_IMPLEMENTED",
+        "description": "Aggregates all gate results. Produces final CERTIFICATION_SCAN_ARTIFACT. Deferred to S332."
+      }
+    ],
+    "total_pipeline_target_runtime": "~51s for all 5 packs (S203 engineering estimate)",
+    "current_s322_pipeline_runtime": "0.7s (Gates -1 through 4 only; lightweight stub implementations)"
+  },
+
+  "scan_performance_metrics": {
+    "SP-001_pipeline_runtime": {
+      "metric": "Total Pipeline Runtime",
+      "description": "Wall-clock time from pipeline initiation to CERTIFICATION_SCAN_ARTIFACT generation. Measured per gate and aggregated.",
+      "formula": "pipeline_runtime = Σ gate_runtime for all operational gates",
+      "v2_target": "<60s for all 5 packs (2,500+ items)",
+      "current_s322": "0.7s (lightweight stubs — will increase as full gate implementations deploy in S332)",
+      "gate_breakdown_s322": {
+        "gate_neg1": "0.2s",
+        "gate_0": "0.2s",
+        "gate_1": "0.1s",
+        "gate_2": "0.1s",
+        "gate_3": "0.1s",
+        "gate_4": "0.1s"
+      }
+    },
+    "SP-002_items_scanned_per_second": {
+      "metric": "Items Scanned per Second",
+      "description": "Throughput of the scan pipeline in items per second.",
+      "formula": "items_per_second = total_items_scanned / pipeline_runtime_seconds",
+      "current_s322": "2,540 items / 0.7s = 3,629 items/second (stub implementation — not representative of full gate performance)",
+      "v2_target": "2,540 items / 60s = 42 items/second (full gate implementations)"
+    },
+    "SP-003_false_positive_rate": {
+      "metric": "False Positive Rate per Defect Class",
+      "description": "Rate at which defect scanners flag non-defects. A false positive is a scan-triggered defect that manual verification confirms does not exist.",
+      "formula": "false_positive_rate = false_positives / (false_positives + true_positives) × 100",
+      "by_defect_class_s322": {
+        "DL-008": { "flagged": 3, "confirmed": "TBD by manual verification", "false_positive_rate": "TBD" },
+        "DL-026": { "flagged": 274, "confirmed": "TBD by manual verification", "false_positive_rate": "TBD" },
+        "DL-016": { "flagged": 0, "confirmed": "N/A (none flagged)", "false_positive_rate": "N/A" },
+        "DL-013": { "flagged": 31, "confirmed": "TBD by manual verification", "false_positive_rate": "TBD" },
+        "EV3": { "flagged": 2074, "confirmed": "TBD by manual verification", "false_positive_rate": "TBD" }
+      },
+      "historical_v1_false_positive_rate": {
+        "DL-008_scans": "~75% on Pack B (DL-029 forward-scan artifacts produced false positives on every Pack B item with CC-before-QID ordering). 257 Pack B false positives documented.",
+        "root_cause": "QID-forward-scan methodology (now FORBIDDEN under FM-001 through FM-008)"
+      },
+      "v2_target": "<5% false positive rate per defect class",
+      "verification_method": "For each defect class flagged by scan: manual review of a 10% random sample to confirm true/false positive ratio."
+    },
+    "SP-004_false_negative_rate": {
+      "metric": "False Negative Rate per Defect Class",
+      "description": "Rate at which defect scanners miss real defects. A false negative is a real defect that the scan failed to detect.",
+      "formula": "false_negative_rate = false_negatives / (false_negatives + true_positives) × 100",
+      "verification_method": "For Certified items: retroactive scan to detect previously missed defects (leakage events). For known-defect items: verify scan catches all known instances.",
+      "v2_target": "<1% false negative rate per defect class (must catch all structural defects in Certified pool)",
+      "notes": "False negatives on Certified items are readiness leakage events — the most critical scan failure mode."
+    },
+    "SP-005_artifact_reuse_rate": {
+      "metric": "Artifact Reuse Rate",
+      "description": "Measure of 'scan once, consume many' effectiveness. How many boards consume the same scan artifact vs. running their own scans?",
+      "formula": "reuse_rate = boards_consuming_artifact / total_boards × 100",
+      "target_consumers": ["Registry Board", "Quality Board", "Governance Board", "Certification Board", "Throughput Board"],
+      "v1_baseline": "0% reuse — each board ran its own independent scans on the same items (2.5:1 duplication ratio)",
+      "v2_target": "100% reuse — all 5 boards consume the same CERTIFICATION_SCAN_ARTIFACT"
+    },
+    "SP-006_scan_redundancy_ratio": {
+      "metric": "Scan Redundancy Ratio",
+      "description": "How many times the same defect class is scanned per wave. v1: DL-008 was scanned 22 times across 6 sessions. v2: DL-008 is scanned once per pipeline run.",
+      "formula": "redundancy_ratio = total_scan_events_for_defect / waves_completed",
+      "v1_baseline": {
+        "DL-008": "22 scans / ~14 waves = 1.57 scans per wave (some waves scanned DL-008 3-4 times)",
+        "DL-026": "18 scans / ~14 waves = 1.29",
+        "DL-013": "12 scans / ~14 waves = 0.86",
+        "certified_count": "25+ verifications / ~14 waves = 1.79"
+      },
+      "v2_target": "1.0 per wave for every defect class — scanned once, results consumed by all boards"
+    }
+  },
+
+  "scan_once_consume_many": {
+    "label": "Scan Once, Consume Many — Architecture and Verification",
+    "description": "The CERTIFICATION_SCAN_ARTIFACT is generated once per session (at T0). All 5 Framework v2 boards consume this single artifact. No board runs its own independent scans.",
+    "architecture": {
+      "producer": "Scan Orchestrator (scripts/scan_orchestrator.js)",
+      "artifact": "scripts/output/certification_scan_artifact.json",
+      "consumers": [
+        {"board": "Quality Board", "consumes": "Per-item gate results (Gate 1, Gate 2). Filters to READY and MINOR_FIX items only."},
+        {"board": "Certification Board", "consumes": "Aggregate certification readiness from Gate 5. Per-item CAQS scores."},
+        {"board": "Governance Board", "consumes": "Full defect inventory. BLOCKED/REMEDIATE item lists for triage."},
+        {"board": "Registry Board", "consumes": "Identity validation results from Gate -1. Compound key registry updates."},
+        {"board": "Throughput Board", "consumes": "Aggregate statistics for throughput measurement."}
+      ]
+    },
+    "drift_detection": {
+      "description": "If pack files change mid-session (e.g., content remediation), the artifact must be regenerated.",
+      "mechanism": "Drift detection compares pack file hashes at T0 and Tmid. If hash change detected, re-run affected gates and regenerate CERTIFICATION_SCAN_ARTIFACT. All boards are notified of the artifact version change.",
+      "current_s322_hashes": {
+        "pack_a_corrected.js": "e237feac9dcfc432640633906539dd88cca52bf028c5720cef27ff629a3e5f85",
+        "pack_b_corrected.js": "8a641309bbf0de8b5d1d4c747ae092c2ef514d8eb0a8a3374d96c3056204db3b",
+        "pack_c_corrected.js": "9e3a954eff9e39ff13f2719596c65f56b9510abd1daad3a22604c54dacda6c0b",
+        "pack_d_corrected.js": "a0618314b2ee83a67e26ed785a7c9b40b4dcfafc6831b99241dad6fbde9e1322",
+        "pack_e_corrected.js": "a98b27b15d99cc4ab261e78a011d4194bcbeea78cdc6ce10a6b226edf660daed"
+      }
+    }
+  },
+
+  "current_operational_snapshot_s322": {
+    "artifact_id": "CSA-S322-2026-07-27T05-45-08-670Z",
+    "timestamp": "2026-07-27T05:45:08.670Z",
+    "aggregate_statistics": {
+      "total_scanned": 2540,
+      "total_passed": 2539,
+      "total_blocked": 1,
+      "by_gate": {
+        "gate_neg1": { "passed": 2539, "blocked": 1 },
+        "gate_0": { "passed": 2539, "blocked": 1 },
+        "gate_1": { "passed": 2266, "blocked": 274 },
+        "gate_2": { "passed": 465, "warned": 2075 },
+        "gate_3": { "passed": 2540, "blocked": 0 },
+        "gate_4": { "passed": 2540, "blocked": 0 }
+      },
+      "by_defect_class": {
+        "DL-008": 3,
+        "DL-026": 274,
+        "DL-016": 0,
+        "DL-018": 0,
+        "DL-013": 31,
+        "EV3": 2074,
+        "DL-010": 0,
+        "DL-031": 0
+      }
+    },
+    "analysis": "Gate 1 is the primary bottleneck: 274 items blocked (all DL-026 — empty non-CC EW slots). Gate 2 issues widespread warnings (2,075 EV3 — missing accounting principle citations). These are soft-fail, not hard-fail — they don't block certification but should be acknowledged. Gate -1: 1 item blocked (Pack D, empty CorrectChoice). The scan pipeline at S322 is operational with lightweight stubs — total runtime 0.7s demonstrates the orchestration layer works."
+  },
+
+  "trend_tracking": {
+    "label": "Scan Performance Trend",
+    "description": "Pipeline runtime, detection accuracy, and artifact reuse tracked across Framework v2 rollout phases.",
+    "measurements": [
+      {
+        "session": "S322",
+        "pipeline_runtime": "0.7s",
+        "artifact_reuse": "NOT_MEASURED (boards not yet operational)",
+        "false_positive_validation": "NOT_MEASURED",
+        "false_negative_validation": "NOT_MEASURED",
+        "notes": "Lightweight stub implementation. Full gate scanners deferred to S332."
+      },
+      {
+        "session": "S350",
+        "pipeline_runtime": "Same as S322 (no new scan run)",
+        "notes": "Measurement baseline established. Full scan performance tracking begins when Gate 1-4 implementations deploy in S332."
+      }
+    ]
+  },
+
+  "cross_references": {
+    "parent_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "sibling_s350": [
+      "reports/SESSION350_READINESS_SCORECARD.json",
+      "reports/SESSION350_IDENTITY_SCORECARD.json",
+      "reports/SESSION350_DELTA_REVIEW_SCORECARD.json",
+      "reports/SESSION350_FRAMEWORK_V2_SCORECARD.json"
+    ],
+    "specifications": [
+      "reports/framework_v2/s321/SESSION321_SCAN_PIPELINE_SPEC.json",
+      "reports/framework_v2/s321/SESSION321_SCAN_ARTIFACT_SPEC.json",
+      "reports/SESSION203_SCAN_ENGINE_SPEC.json"
+    ],
+    "operational_data": "scripts/output/certification_scan_artifact.json"
+  }
+}

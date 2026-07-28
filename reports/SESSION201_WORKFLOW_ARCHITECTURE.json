@@ -1,0 +1,1107 @@
+{
+  "metadata": {
+    "document": "SESSION201_WORKFLOW_ARCHITECTURE.json",
+    "description": "Board 1: Workflow Architecture — actual and documented certification workflow for the CMA Part 1 Exam Simulator",
+    "session": "S201",
+    "agent": "Agent B",
+    "type": "Read-Only Current-State Analysis",
+    "date": "2026-07-26",
+    "precedes": "S200 found 72 agents, 8 gates + 6 boards, 89.5% readiness failure rate, 8 duplicate review categories"
+  },
+
+  "executive_summary": {
+    "documented_gates": 7,
+    "documented_pipeline_roles": 7,
+    "operational_gates_actual": 6,
+    "actual_boards_observed": 6,
+    "additional_infrastructure_gates": 5,
+    "additional_blocking_rules": 5,
+    "total_gate_systems": 3,
+    "critical_gap": "The documented CAQS 7-step sequential pipeline (Accountant → Editor → Psychometrician → Validator → Release Manager) has NEVER been executed as designed. Actual certification uses parallel 10+ agent boards with duplicated review categories. 89.5% of items arrive at boards with 3-5 concurrent defects, requiring 2-3 additional remediation sessions per wave."
+  },
+
+  "gate_systems": {
+    "system_1_documented_content_quality": {
+      "label": "CAQS §8-§9 Documented Quality Gates (G1-G7)",
+      "source": "knowledge/CAQS_v1.0.md §8.1, §9.1",
+      "status": "DOCUMENTED — NOT OPERATIONALLY FOLLOWED",
+      "description": "Sequential 7-gate pipeline from content creation to production release. Each gate requires a minimum rubric score and a specific persona reviewer.",
+      "gates": [
+        {
+          "id": "G1_DOC",
+          "name": "Technical Review",
+          "reviewer": "Accountant",
+          "entry_criteria": [
+            "Question has complete stem, choices, and metadata",
+            "Assigned to a sub-batch for review"
+          ],
+          "exit_criteria": [
+            "Accounting accuracy verified against GAAP/COSO/IMA standards",
+            "Standard references correctly cited (ASC, IFRS, COSO)",
+            "All formulas independently verified",
+            "Rubric score ≥ 90/100",
+            "Score Dimensions 2 (Cognitive), 3 (Technical), 5 (Realism) output"
+          ],
+          "dependencies": ["Item must exist in a pack file with QuestionID"],
+          "handoffs_to": ["G2_DOC — Psychometric Review"],
+          "handoffs_from": ["Author / Case Author"],
+          "automated_checks": [
+            "EV3 — Correct answer explanation references accounting principle by name",
+            "DL-009 — ASC citation cross-check against known-good topic→standard mapping",
+            "DL-030 — CorrectChoice vs independently derived answer"
+          ],
+          "human_decisions": [
+            "Is the accounting treatment correct under current standards?",
+            "Does the formula correctly test the intended concept?",
+            "Are standard references precise enough (e.g., ASC 450-20-25 not just ASC 450)?"
+          ],
+          "typical_duration": "Undocumented — never measured in practice",
+          "failure_modes": [
+            "Accounting error → rejected without further scoring",
+            "Missing or wrong standard citation",
+            "Formula does not match question stem data"
+          ]
+        },
+        {
+          "id": "G2_DOC",
+          "name": "Psychometric Review",
+          "reviewer": "Psychometrician",
+          "entry_criteria": [
+            "G1 Technical Review PASS"
+          ],
+          "exit_criteria": [
+            "Difficulty assignment verified against CAQS §6.1 targets",
+            "Bloom's cognitive level verified",
+            "Distractor quality evaluated (plausibility, distinctness, trap coverage)",
+            "Cueing and bias checks passed (§6.4)",
+            "Rubric score ≥ 90/100",
+            "Score Dimensions 1 (Blueprint), 4 (Distractor), 9 (Accessibility) output"
+          ],
+          "dependencies": ["G1_DOC — Technical Review must PASS first"],
+          "handoffs_to": ["G3_DOC — Numerical Validation"],
+          "handoffs_from": ["G1_DOC — Technical Review"],
+          "automated_checks": [
+            "DL-003 — Absolute language scan (always/never/must)",
+            "DL-004 — Ambiguity scan (usually/normally/generally)",
+            "DL-005 — Distractor similarity (Jaccard > 70% between distractor pairs)",
+            "DL-031 — Definition-match difficulty inflation detection",
+            "DL-032 — Uniform difficulty labeling detection",
+            "Answer pattern analysis — no runs > 4 same position",
+            "Position balance — 22-28% per A/B/C/D"
+          ],
+          "human_decisions": [
+            "Is the difficulty label appropriate for the cognitive demand?",
+            "Do distractors represent documented exam traps?",
+            "Is the question free of cueing and bias?",
+            "Does the question genuinely test at the assigned Bloom's level?"
+          ],
+          "typical_duration": "Undocumented",
+          "failure_modes": [
+            "Difficulty inflation (Moderate labeled for Remember/Understand items — DL-031)",
+            "Uniform difficulty across entire case bank (DL-032)",
+            "Overlapping distractors testing same misconception",
+            "Grammatical or length cueing pointing to correct answer"
+          ]
+        },
+        {
+          "id": "G3_DOC",
+          "name": "Numerical Validation",
+          "reviewer": "Validator",
+          "entry_criteria": [
+            "G2 Psychometric Review PASS",
+            "Item requires calculation (CalculationRequired: true)"
+          ],
+          "exit_criteria": [
+            "Independent recalculation matches stored Correct value",
+            "Rounding policy verified (CAQS §5.2)",
+            "Tolerance within accepted limits (CAQS §5.3)",
+            "Formula verification checklist complete (CAQS §5.4)",
+            "Score Dimension 6 (Numerical Integrity) output"
+          ],
+          "dependencies": ["G2_DOC — Psychometric Review must PASS first"],
+          "handoffs_to": ["G4_DOC — Instructional Review"],
+          "handoffs_from": ["G2_DOC — Psychometric Review"],
+          "automated_checks": [
+            "EV5 — Formula numbers in explanation match exhibit values",
+            "EV6 — Arithmetic result in explanation matches Correct value",
+            "Rounding within accepted tolerance",
+            "Units consistent throughout calculation"
+          ],
+          "human_decisions": [
+            "Is the formula correct for the concept being tested?",
+            "Was the reviewer truly independent (did not see stored answer)?",
+            "Are non-cash items treated correctly?"
+          ],
+          "typical_duration": "Undocumented",
+          "failure_modes": [
+            "Numerical error → auto-fail, rejected without further scoring",
+            "Independent answer disagrees with stored Correct value",
+            "Rounding applied at wrong step",
+            "Time period mismatch (annual vs. monthly)"
+          ]
+        },
+        {
+          "id": "G4_DOC",
+          "name": "Instructional Review",
+          "reviewer": "Editor",
+          "entry_criteria": [
+            "G3 Numerical Validation PASS (or CalculationRequired: false)"
+          ],
+          "exit_criteria": [
+            "Explanation complies with CAQS §4 (all required elements present)",
+            "Writing clarity and professional tone verified",
+            "Explanation validation rules EV1-EV8 satisfied",
+            "Learning science elements present (LS1-LS4)",
+            "Rubric score ≥ 90/100",
+            "Score Dimensions 7 (Explanation), 8 (Clarity) output"
+          ],
+          "dependencies": ["G3_DOC — Numerical Validation must PASS first"],
+          "handoffs_to": ["G5_DOC — Metadata Review"],
+          "handoffs_from": ["G3_DOC — Numerical Validation"],
+          "automated_checks": [
+            "EV1 — Minimum 50 characters per explanation field",
+            "EV2 — No placeholder phrases",
+            "EV4 — Distractor explanations choice-specific (not identical)",
+            "EV7 — No uncertain language",
+            "EV8 — ExplanationWrong[CorrectChoice] must be empty"
+          ],
+          "human_decisions": [
+            "Does the explanation function as a mini-lesson?",
+            "Is the business interpretation meaningful in context?",
+            "Are distractor explanations genuinely educational?",
+            "Does the explanation identify a specific exam trap?"
+          ],
+          "typical_duration": "Undocumented",
+          "failure_modes": [
+            "Generic distractor explanations (DL-013 boilerplate)",
+            "Missing accounting principle reference (EV3)",
+            "Explanation describes wrong choice (DL-010)",
+            "One-sentence explanation for Apply/Analyze/Evaluate items (G-NEW-4)"
+          ]
+        },
+        {
+          "id": "G5_DOC",
+          "name": "Metadata Review",
+          "reviewer": "Validator",
+          "entry_criteria": [
+            "G4 Instructional Review PASS"
+          ],
+          "exit_criteria": [
+            "All required metadata fields present (QUESTION_METADATA_STANDARD.md Part 8)",
+            "Field types and values valid",
+            "Cross-references resolve correctly",
+            "Score Dimension 10 (Metadata Completeness) output"
+          ],
+          "dependencies": ["G4_DOC — Instructional Review must PASS first"],
+          "handoffs_to": ["G6_DOC — Final Validation"],
+          "handoffs_from": ["G4_DOC — Instructional Review"],
+          "automated_checks": [
+            "CF1 — Every referenced ExhibitID exists",
+            "CF2 — Topic within scope of BlueprintDomain",
+            "CF3 — SectionTags align with BlueprintDomain",
+            "CF4 — Case difficulty within ±1 of mean item difficulty",
+            "CF5 — EstimatedMinutes within range"
+          ],
+          "human_decisions": [
+            "Are optional but recommended fields populated?",
+            "Are formula references correct?"
+          ],
+          "typical_duration": "Undocumented",
+          "failure_modes": [
+            "Metadata failure → rejected without further scoring",
+            "Missing required fields that would break application",
+            "Cross-reference to non-existent exhibit or formula"
+          ]
+        },
+        {
+          "id": "G6_DOC",
+          "name": "Final Validation",
+          "reviewer": "Validator",
+          "entry_criteria": [
+            "G5 Metadata Review PASS"
+          ],
+          "exit_criteria": [
+            "Automated validation suite passes with ZERO errors",
+            "No new warnings introduced",
+            "Before/after metrics compared",
+            "Overall quality score computed",
+            "All Gold Standard Checklist items satisfied"
+          ],
+          "dependencies": ["G5_DOC — Metadata Review must PASS first"],
+          "handoffs_to": ["G7_DOC — Approval"],
+          "handoffs_from": ["G5_DOC — Metadata Review"],
+          "automated_checks": [
+            "Full validation suite (all validators in scripts/validators/)",
+            "governance-guard.js: 5 rules, 27/27 test suite",
+            "Zero duplicate QuestionIDs",
+            "QuestionID count unchanged",
+            "app.js test suite: 186 tests all PASS",
+            "All 13 runtime file hashes match CURRENT_BASELINES.md"
+          ],
+          "human_decisions": [
+            "Compare before/after metrics for regressions",
+            "Verify no unintended pack-file corruption"
+          ],
+          "typical_duration": "Undocumented",
+          "failure_modes": [
+            "New validation errors introduced by remediation",
+            "Hash drift from concurrent sessions",
+            "QuestionID count change (items lost or duplicated)"
+          ]
+        },
+        {
+          "id": "G7_DOC",
+          "name": "Approval",
+          "reviewer": "Release Manager",
+          "entry_criteria": [
+            "All 6 prior gates PASS",
+            "Gold Standard Checklist complete",
+            "All quality gates passed"
+          ],
+          "exit_criteria": [
+            "All gate results reviewed",
+            "Gold Standard Checklist verified",
+            "Sign-off for production",
+            "ProductionStatus → 'Production'",
+            "REVISION_HISTORY.md entry recorded"
+          ],
+          "dependencies": ["G6_DOC — Final Validation must PASS first"],
+          "handoffs_to": ["Registry Sync — MASTER_QUESTION_REGISTRY.md rebuild"],
+          "handoffs_from": ["G6_DOC — Final Validation"],
+          "automated_checks": [
+            "All prior gate PASS records verified",
+            "governance-guard.js: Rule 2 (DL-008 BLOCK), Rule 5 (≤30 items/batch)"
+          ],
+          "human_decisions": [
+            "Are all findings communicated?",
+            "Is the item ready for learner delivery?",
+            "Are exception requests documented with remediation plans?"
+          ],
+          "typical_duration": "Undocumented",
+          "failure_modes": [
+            "Gate results self-reported without verification (violates AGENTS.md §5)",
+            "Certification without REVISION_HISTORY.md entry",
+            "ProductionStatus changed without all gates actually passing"
+          ]
+        }
+      ]
+    },
+
+    "system_2_operational_certification_gates": {
+      "label": "Operational Certification Gates (Gates 0-5) — As Actually Practiced",
+      "source": "REVISION_HISTORY.md patterns: S807, S808, S809, S319, S200",
+      "status": "ACTIVE — The actual gate system used in certification sessions",
+      "description": "This is the gate system that emerged organically from 14 certification sessions (S301-S809). It diverges significantly from the documented CAQS pipeline. Gates are executed in parallel by 10+ agents rather than sequentially. The system includes 6 additional review boards.",
+      "gates": [
+        {
+          "id": "GATE0_OP",
+          "name": "Gate 0 — Duplicate Prevention & Registry Check",
+          "reviewer": "Collision Audit Agent",
+          "entry_criteria": [
+            "QuestionIDs are assigned or batch is defined",
+            "Target pack file identified"
+          ],
+          "exit_criteria": [
+            "All QIDs confirmed collision-free across ALL 10 pack/case files",
+            "SIMILARITY_LEDGER checked for dual-presence conflicts",
+            "MASTER_QUESTION_REGISTRY.md cross-referenced",
+            "No duplicate QuestionIDs found",
+            "governance-guard.js: 27/27 PASS"
+          ],
+          "dependencies": ["Registry must be up to date"],
+          "handoffs_to": ["Gate 1 — Draft/Content Completeness", "Readiness Board"],
+          "handoffs_from": ["Sub-batch selection / pool selection"],
+          "automated_checks": [
+            "Select-String all pack/case files for QID presence",
+            "SIMILARITY_LEDGER.json lookup",
+            "QuestionID count verification",
+            "governance-guard.js pre-flight"
+          ],
+          "human_decisions": [
+            "Dual-presence: is this a clone, replacement, or genuine duplicate?",
+            "Does pending replacement risk block certification?"
+          ],
+          "typical_duration": "~5 minutes per batch",
+          "failure_modes": [
+            "Dual-presence conflict with Certified replacement items",
+            "Registry stale — QID exists but not in current index",
+            "Template rotation creates 5+ copies of same QID (variant confusion)"
+          ]
+        },
+        {
+          "id": "GATE1_OP",
+          "name": "Gate 1 — Draft / Content Completeness",
+          "reviewer": "Inventory/Structural Agent",
+          "entry_criteria": [
+            "Gate 0 PASS",
+            "Items identified with QuestionIDs and line numbers"
+          ],
+          "exit_criteria": [
+            "All items confirmed present in pack file at correct line numbers",
+            "All have: stem, 4 choices, CorrectChoice, ExplanationCorrect, ExplanationWrong[A-D]",
+            "Metadata block present (question_state, ChoiceA-D, etc.)",
+            "Content block present (Choices.{A,B,C,D}, CorrectChoice, ExplanationCorrect)",
+            "question_state correctly set (Unprocessed / In Audit / Certified / Archived)",
+            "Difficulty and DifficultyScore fields present",
+            "CognitiveLevel field present"
+          ],
+          "dependencies": ["Gate 0 PASS"],
+          "handoffs_to": ["Gate 2 — Technical Review / EW Audit"],
+          "handoffs_from": ["Gate 0 — Duplicate Prevention"],
+          "automated_checks": [
+            "Select-String -Pattern '\"QuestionID\"' — verify presence",
+            "Select-String -Pattern '\"CorrectChoice\"' — verify presence",
+            "Select-String -Pattern '\"ExplanationCorrect\"' — verify non-empty",
+            "Select-String -Pattern '\"ExplanationWrong[A-D]\"' — verify 4 slots present",
+            "Select-String -Pattern '\"question_state\"' — verify governance state",
+            "Select-String -Pattern '\"Difficulty\"' — verify difficulty label"
+          ],
+          "human_decisions": [
+            "Is question_state consistent with claimed certification status?",
+            "Is the item using single-object or dual-block architecture?",
+            "Are content-block and metadata-block choices consistent? (DL-016 check)"
+          ],
+          "typical_duration": "~10 minutes per batch",
+          "failure_modes": [
+            "question_state missing entirely (DL-024 — 1,101 of 2,500 items pre-S18)",
+            "Wrong question_state for certification status (e.g., 'Certified' with DL-008)",
+            "Dual-block architecture with metadata-content divergence (DL-016)",
+            "Line-number targeting failure (template rotation: same QID at multiple offsets)"
+          ]
+        },
+        {
+          "id": "GATE2_OP",
+          "name": "Gate 2 — Technical Review / Structural EW Audit",
+          "reviewer": "EW Audit Agent / Technical Accuracy Agent",
+          "entry_criteria": [
+            "Gate 1 PASS",
+            "DW (data-warehouse) Import or direct file scan completed"
+          ],
+          "exit_criteria": [
+            "DL-008: ExplanationWrong[CorrectChoice] is empty for all items",
+            "DL-010: ExplanationWrong fields describe their designated choices (not offset)",
+            "DL-013: Zero template boilerplate ('represents a plausible misconception')",
+            "DL-026: All non-CorrectChoice ExplanationWrong slots non-empty",
+            "DL-021: All distractor ExplanationWrong fields structurally present",
+            "ExplanationCorrect ≥ minimum quality threshold (per item type)",
+            "ExplanationCorrect references COSO/ASC/GAAP standard by name",
+            "All answer keys independently verified (stored CC = derived CC)",
+            "Zero accounting errors in stems or choices"
+          ],
+          "dependencies": ["Gate 1 PASS"],
+          "handoffs_to": ["Gate 3 — Blueprint Review", "QA Board"],
+          "handoffs_from": ["Gate 1 — Draft/Content Completeness"],
+          "automated_checks": [
+            "DL-008 scan: non-empty EW[CC] detection",
+            "DL-013 scan: boilerplate pattern match ('represents a plausible misconception')",
+            "DL-026 scan: empty non-CC EW slot detection",
+            "DL-021 scan: absent EW field detection",
+            "DL-010 scan: EW text vs designated choice semantic alignment",
+            "EW length check: ≥ 50 characters minimum",
+            "EC length check: ≥ 200 characters minimum (case items: depth-appropriate)",
+            "COSO/ASC citation presence scan"
+          ],
+          "human_decisions": [
+            "Is the EW text choice-specific or boilerplate?",
+            "Is the EW text topically relevant? (G-NEW-2 — certification BLOCK if not)",
+            "Does the EC provide sufficient depth for the cognitive level? (G-NEW-4)",
+            "Template rotation artifact: is the empty slot a CC slot or a distractor slot?",
+            "Does the dual-block architecture require within-object verification? (G-NEW-3)"
+          ],
+          "typical_duration": "~20-30 minutes per batch of 28 items",
+          "failure_modes": [
+            "DL-008 — non-empty EW[CC] (most common structural defect, still OPEN for 174 Pack C items)",
+            "DL-026 — empty non-CC EW slots (rotation artifact, 53 empty in Domain E seeds)",
+            "DL-013 — template boilerplate in EW fields (~851 fields remaining)",
+            "DL-016 — metadata-block shift causes EW scan false positives",
+            "DL-010 — EW text assigned to wrong choice due to rotation offset",
+            "DL-021 — missing EW fields entirely (Pack E Section C: 100 items)",
+            "G-NEW-2 — EW text topically unrelated to item (blocks certification)"
+          ]
+        },
+        {
+          "id": "GATE3_OP",
+          "name": "Gate 3 — Blueprint Alignment Review",
+          "reviewer": "Blueprint Mapping Agent",
+          "entry_criteria": [
+            "Gate 2 PASS or CONDITIONAL_PASS"
+          ],
+          "exit_criteria": [
+            "LOSTag mapped to precise CSO subsection (not just domain-level 'E Internal controls')",
+            "Blueprint domain coverage assessed against IMA CSO",
+            "LOS coverage gaps identified and documented",
+            "Topic-stereotype pairing verified appropriate",
+            "All 6 blueprint domains audited for coverage balance"
+          ],
+          "dependencies": ["Gate 2 PASS"],
+          "handoffs_to": ["Gate 4 — QA Review / Cognitive Calibration"],
+          "handoffs_from": ["Gate 2 — Technical Review"],
+          "automated_checks": [
+            "LOSTag format validation",
+            "Domain coverage percentage calculation",
+            "Topic over-concentration detection",
+            "Blueprint gap analysis"
+          ],
+          "human_decisions": [
+            "Is the LOSTag precise enough (e.g., 'E.1.e Control Activities' not just 'E Internal controls')?",
+            "Is there over-concentration in any single LOS area?",
+            "Are LOS gaps acceptable or do they need new items?",
+            "Does the item genuinely test the claimed learning outcome?"
+          ],
+          "typical_duration": "~10 minutes per batch",
+          "failure_modes": [
+            "Coarse LOSTags ('E Internal controls' — too generic for certification)",
+            "Over-concentration (e.g., SoD items at 21% vs. target ~8%)",
+            "LOS gaps with zero seeds (e.g., E.1.h SOX had 0 seeds)",
+            "Topic misalignment: item tests different LOS than LOSTag claims"
+          ]
+        },
+        {
+          "id": "GATE4_OP",
+          "name": "Gate 4 — QA Review (Cognitive Calibration + Difficulty)",
+          "reviewer": "CognitiveLevel Agent / Difficulty Agent / Learner Safety Agent",
+          "entry_criteria": [
+            "Gate 3 PASS or PASS_WITH_NOTES"
+          ],
+          "exit_criteria": [
+            "CognitiveLevel verified against Bloom's taxonomy requirements",
+            "Difficulty and DifficultyScore consistent with CAQS §6.1 targets",
+            "DL-031: No definition-match items labeled above Easy",
+            "DL-032: Not all items uniformly labeled (zero variance detection)",
+            "Cueing and bias checks: no grammatical/length/position cues",
+            "Learner safety: no known-defective QIDs in delivery pool",
+            "Psychometric standards met per CAQS §6"
+          ],
+          "dependencies": ["Gate 3 PASS"],
+          "handoffs_to": ["Gate 5 — Certification Candidate / Readiness Scoring"],
+          "handoffs_from": ["Gate 3 — Blueprint Review"],
+          "automated_checks": [
+            "DL-031: lexical overlap between stem and correct answer > 50% with difficulty ≥ Moderate",
+            "DL-032: difficulty label distribution (flag if single label ≥ 90%)",
+            "DL-003: absolute language scan",
+            "DL-004: ambiguity scan",
+            "Answer position balance: 22-28% per A/B/C/D",
+            "CognitiveLevel progression validation (for case items)",
+            "Pre-delivery-safety-check skill"
+          ],
+          "human_decisions": [
+            "Does the cognitive level match the actual cognitive demand?",
+            "Is this a definition-match item that should be Easy (1) not Moderate (3)?",
+            "Are distractors genuinely deceptive at the claimed difficulty level?",
+            "Is the DifficultyScore consistent with the Difficulty label?"
+          ],
+          "typical_duration": "~15 minutes per batch",
+          "failure_modes": [
+            "DL-031: Systematic difficulty inflation (~500 items estimated)",
+            "DL-032: Case bank — 100% Moderate, zero variance (420 items)",
+            "CognitiveLevel assigned by rotation position, not item content (19/38 seeds overstated)",
+            "DifficultyScore/Label mismatch (e.g., 'Easy' with DifficultyScore: 3)"
+          ]
+        },
+        {
+          "id": "GATE5_OP",
+          "name": "Gate 5 — Certification Candidate / Final Adjudication",
+          "reviewer": "Certification Board (multiple convergent agents)",
+          "entry_criteria": [
+            "Gates 0-4 COMPLETE",
+            "All blocking defects resolved",
+            "Non-blocking defects documented with remediation plans"
+          ],
+          "exit_criteria": [
+            "Per-item verdict: CERTIFY / HOLD / ESCALATE",
+            "All HOLD items have specific remediation assignments",
+            "All CERTIFY items have question_state → 'Certified' transition authorized",
+            "Distractor tier map (A/B/C/D) recorded",
+            "REVISION_HISTORY.md entry generated",
+            "QA Board: ALL_AGREE (all agent tracks convergent)",
+            "Governance guard: 27/27 PASS"
+          ],
+          "dependencies": ["Gates 0-4 ALL COMPLETE"],
+          "handoffs_to": ["Production — question_state: 'Certified'", "Registry Sync"],
+          "handoffs_from": ["Gate 4 — QA Review"],
+          "automated_checks": [
+            "governance-guard.js Rule 2: EW[CC] must be empty (BLOCK)",
+            "governance-guard.js Rule 5: ≤ 30 items per batch (BLOCK)",
+            "Certified count verification: Select-String \"question_state\": \"Certified\"",
+            "CURRENT_BASELINES.md hash verification",
+            "All 13 runtime file hashes vs T0 baseline"
+          ],
+          "human_decisions": [
+            "Does this item meet CAQS §1.7.2 certification requirements?",
+            "Are all 6 verification dimensions at HIGH confidence?",
+            "Is user approval documented?",
+            "Are any pre-S508 items flagged for G-NEW-2/3/4 violations?"
+          ],
+          "typical_duration": "~15 minutes per batch",
+          "failure_modes": [
+            "Items arrive with 3-5 concurrent defects (89.5% readiness failure rate)",
+            "Certification board agents disagree — no ALL_AGREE convergence",
+            "Certification without REVISION_HISTORY.md entry",
+            "question_state changed without gate authorization",
+            "Pre-S508 certified items have G-NEW violations (remain Certified but flagged)",
+            "Certified count instability between scans (violates AGENTS.md §6)",
+            "Totals-only reports without QID lists accepted (violates AGENTS.md §5)"
+          ]
+        }
+      ],
+      "boards": [
+        {
+          "id": "BOARD_READINESS",
+          "name": "Readiness Board",
+          "function": "Pre-board scoring and classification. Rates items as READY / MINOR_FIX / HOLD / ESCALATE based on defect inventory and remediation effort. Assigns waves (A/B/C/D) and batches.",
+          "agents": "Scoring Agent, Batch Planning Agent, Readiness Assessment Agent",
+          "handoffs_to": ["Certification Board"],
+          "handoffs_from": ["Gate 0-4 results", "EW Readiness Audit"]
+        },
+        {
+          "id": "BOARD_QA",
+          "name": "QA Board",
+          "function": "Convergence verification. Checks that all agent tracks independently agree on item status, defects, and recommendations. Flags dissenting opinions. Validates ALL_AGREE status.",
+          "agents": "Independent Governance Agent, Verification Agent",
+          "handoffs_to": ["Certification Board"],
+          "handoffs_from": ["Individual gate reports"]
+        },
+        {
+          "id": "BOARD_CERTIFICATION",
+          "name": "Certification Board",
+          "function": "Final adjudication. Issues CERTIFY / HOLD / ESCALATE verdicts. Authorizes question_state transitions. Requires ALL_AGREE from QA Board.",
+          "agents": "Certification Agent, Portfolio Impact Agent, Forecast Agent",
+          "handoffs_to": ["Production"],
+          "handoffs_from": ["Readiness Board", "QA Board", "Gate 0-4 results"]
+        },
+        {
+          "id": "BOARD_GOVERNANCE",
+          "name": "Governance Board",
+          "function": "Runtime governance verification. Hash audits, CAPA checks, certified denominator reconciliation, governance-guard compliance.",
+          "agents": "Startup Governance Agent, Baseline & CAPA Auditor, Ledger Reconciliation Agent",
+          "handoffs_to": ["All other boards"],
+          "handoffs_from": ["Session start (T0 baseline)"]
+        },
+        {
+          "id": "BOARD_CLOSURE",
+          "name": "Closure Board",
+          "function": "End-of-session governance closeout. REVISION_HISTORY.md write, governance guard re-verification, certified count confirmation, Tend hash audit.",
+          "agents": "Closure Agent, Dashboard Update Agent",
+          "handoffs_to": ["Next session handoff"],
+          "handoffs_from": ["All boards complete"]
+        },
+        {
+          "id": "BOARD_SAFETY",
+          "name": "Learner Safety Board",
+          "function": "Pre-delivery safety check. Confirms delivery pool only pulls 'Certified' items. Cross-references known-defective QID list. Flags any defective QID still in delivery pool.",
+          "agents": "Safety Agent, Pre-Delivery Audit Agent",
+          "handoffs_to": ["Certification Board (if issues found)"],
+          "handoffs_from": ["Gate 4 results", "DEFECT_LIBRARY.md"]
+        }
+      ]
+    },
+
+    "system_3_infrastructure_reconciliation": {
+      "label": "Session 31 Reconciliation Gates (G1-G5) — Runtime Infrastructure Governance",
+      "source": "reports/SESSION31_RECONCILIATION_EXECUTION.md",
+      "status": "ACTIVE — Executed once (Session 31); standard pattern for all future baseline drift detection",
+      "description": "These gates verify that all RUNTIME ARTIFACTS (pack files, app.js, HTML, governance docs) agree about the current state of the simulator. They are infrastructure gates — they don't assess content quality.",
+      "gates": [
+        {
+          "id": "G1_RECON",
+          "name": "Pack Structural Gate",
+          "entry_criteria": ["Reconciliation session triggered (per §8 Reconciliation Schedule)"],
+          "exit_criteria": [
+            "All packs parse 500/500 objects via Function constructor",
+            "Parse count == grep QuestionID count",
+            "FD-045/FD-046 boundary intact (Pack D specific)",
+            "AD-075 Certified state confirmed (Pack D specific)"
+          ],
+          "dependencies": ["CURRENT_BASELINES.md hash reference"],
+          "handoffs_to": ["G2_RECON — Certified Ledger Gate"],
+          "handoffs_from": ["T0 baseline capture"],
+          "automated_checks": ["Function constructor parse", "Select-String QuestionID count", "SHA-256 hash verification"],
+          "human_decisions": ["If parse count < 500: TIER 1 structural repair required", "If hash mismatch: attribute drift source"],
+          "typical_duration": "~5 minutes per pack",
+          "failure_modes": ["DL-017 file corruption (Pack B backtick-newline)", "DL-020 brace-matcher undercount", "T1-006 FD-045 parse gap (CLOSED)"]
+        },
+        {
+          "id": "G2_RECON",
+          "name": "Certified Ledger Gate",
+          "entry_criteria": ["G1_RECON PASS"],
+          "exit_criteria": [
+            "Certified count verified per pack via parsed objects",
+            "Cross-checked against GOV_RISK_REGISTER §1",
+            "direct grep confirms unique QID count",
+            "Zero duplicate QIDs detected"
+          ],
+          "dependencies": ["G1_RECON PASS"],
+          "handoffs_to": ["G3_RECON — APPJS Provenance Gate"],
+          "handoffs_from": ["G1_RECON — Pack Structural Gate"],
+          "automated_checks": ["Function constructor parse + filter 'Certified'", "Select-String grep cross-check", "Duplicate QID detection"],
+          "human_decisions": ["Grep count vs unique QID count discrepancy resolution"],
+          "typical_duration": "~3 minutes",
+          "failure_modes": ["Stale session status reports (1,080 vs 2,031)", "Duplicate state artifacts inflating count", "Count instability between scans"]
+        },
+        {
+          "id": "G3_RECON",
+          "name": "APPJS Provenance Gate",
+          "entry_criteria": ["G2_RECON VERIFIED"],
+          "exit_criteria": [
+            "app.js hash matches CURRENT_BASELINES.md",
+            "All 4 scoring functions byte-identical to S17B baseline",
+            "Analytics layer intact",
+            "Readiness layer intact",
+            "Defensive fixes confirmed present (DL-022 Insertions 1+2)",
+            "Governance guard test suite: 27/27 PASS"
+          ],
+          "dependencies": ["G2_RECON VERIFIED"],
+          "handoffs_to": ["G4_RECON — index_updated.html Provenance Gate"],
+          "handoffs_from": ["G2_RECON — Certified Ledger Gate"],
+          "automated_checks": ["SHA-256 hash verification", "Function byte-comparison to S17B", "Governance guard test suite"],
+          "human_decisions": ["If hash mismatch: run Sync Anomaly Playbook", "Classify drift as benign or content-significant"],
+          "typical_duration": "~10 minutes",
+          "failure_modes": ["OneDrive sync drift (+13 bytes S25→current)", "Unauthorized scoring function modification", "Missing defensive fixes"]
+        },
+        {
+          "id": "G4_RECON",
+          "name": "index_updated.html Provenance Gate",
+          "entry_criteria": ["G3_RECON ADOPT"],
+          "exit_criteria": [
+            "index_updated.html hash matches CURRENT_BASELINES.md",
+            "Pack A Script tag present (S26)",
+            "Policy B confirmed: Pack A unchecked by default",
+            "Default BCDE runtime unchanged"
+          ],
+          "dependencies": ["G3_RECON ADOPT"],
+          "handoffs_to": ["G5_RECON — Governance Documentation Gate"],
+          "handoffs_from": ["G3_RECON — APPJS Provenance Gate"],
+          "automated_checks": ["SHA-256 hash verification", "Script tag audit", "Checkbox state verification"],
+          "human_decisions": ["Adopt current as baseline if delta is authorized and documented"],
+          "typical_duration": "~5 minutes",
+          "failure_modes": ["Missing Pack A script tag", "Policy B checkbox state wrong"]
+        },
+        {
+          "id": "G5_RECON",
+          "name": "Governance Documentation Gate",
+          "entry_criteria": ["G4_RECON ADOPT"],
+          "exit_criteria": [
+            "CURRENT_BASELINES.md matches on-disk hashes (all 13 files)",
+            "GOV_RISK_REGISTER matches DEFECT_LIBRARY.md",
+            "SESSION_STATUS matches REVISION_HISTORY.md",
+            "All stale entries resolved",
+            "Cross-document agreement confirmed"
+          ],
+          "dependencies": ["G4_RECON ADOPT"],
+          "handoffs_to": ["Session close — Tend hash audit"],
+          "handoffs_from": ["G4_RECON — index_updated.html Gate"],
+          "automated_checks": ["Get-FileHash -Algorithm SHA256 × 13", "Document cross-reference verification"],
+          "human_decisions": ["Resolve stale entries", "Update register if count confirmed stable"],
+          "typical_duration": "~10 minutes",
+          "failure_modes": ["Stale governance register entries", "Document inconsistency between sources", "SESSION_STATUS count mismatch with reality"]
+        }
+      ]
+    },
+
+    "system_4_certification_blocking_rules": {
+      "label": "G-NEW Certification Blocking Rules (Session 508, 2026-07-25)",
+      "source": "QUESTION_METADATA_STANDARD.md §9.4, GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md §9",
+      "status": "ACTIVE — effective 2026-07-25. Pre-existing certified items grandfathered but flagged.",
+      "description": "Additional certification-blocking conditions discovered during Session 700 global certification review. These close governance gaps where structurally non-empty but semantically wrong ExplanationWrong fields passed certification.",
+      "rules": [
+        {
+          "id": "G_NEW_1",
+          "name": "Learner-Facing Choice Authority",
+          "type": "BLOCK",
+          "description": "Content-block Choices.{A,B,C,D} are authoritative. Metadata-block ChoiceA-D may not override learner-facing content when a conflict exists.",
+          "blocked_by": "DL-016 metadata-content mismatch",
+          "verification": "Compare metadata-block ChoiceA-D vs content-block Choices.{A,B,C,D}. If differ → BLOCK."
+        },
+        {
+          "id": "G_NEW_2",
+          "name": "Explanation Relevance Certification Block",
+          "type": "BLOCK",
+          "description": "Any EW field with text belonging to a different question, different topic, different template instance, or otherwise semantically unrelated to the learner-facing distractor → certification BLOCKED.",
+          "blocked_by": "Cross-item contamination, template rotation artifacts",
+          "verification": "Semantic relevance check: does EW text describe this item's actual choices? Non-empty ≠ sufficient."
+        },
+        {
+          "id": "G_NEW_3",
+          "name": "Dual-Block Verification Requirement",
+          "type": "BLOCK",
+          "description": "CorrectChoice must be extracted from the same enclosing JSON object as the EW fields being evaluated. Forward-scan or regex-window scanning is NOT sufficient.",
+          "blocked_by": "DL-029 scan methodology defects, DL-016 offset in dual-block packs",
+          "verification": "Within-object CC extraction (Function constructor parse or brace-matched JSON). Packs A/C/D require this."
+        },
+        {
+          "id": "G_NEW_4",
+          "name": "Case Explanation Minimum Standard",
+          "type": "BLOCK",
+          "description": "One-sentence explanations for Apply/Analyze/Evaluate items blocked. Select/multi/match items without distractor rationale blocked. Missing authoritative standard citation blocked.",
+          "blocked_by": "Insufficient explanation depth, missing COSO/ASC/G AAP citations",
+          "verification": "EC length < 200 chars for Apply+ items, missing standard citation, no distractor guidance."
+        },
+        {
+          "id": "G_NEW_5",
+          "name": "Updated Certification Checklist",
+          "type": "CHECKLIST",
+          "description": "5 new certification gate checks: G5.1 (topic relevance), G5.2 (source-of-truth for dual-block), G5.3 (case explanation sufficiency), G5.4 (case distractor rationale), G5.5 (authoritative standard citation).",
+          "blocked_by": "Any G5.x check failing",
+          "verification": "Per-item checklist execution."
+        }
+      ]
+    }
+  },
+
+  "workflow_sequence": {
+    "documented_sequence": [
+      "Registry / Question Bank",
+      "→ Sub-batch selection (question_state: Unprocessed → In Audit)",
+      "→ G1 Technical Review (Accountant)",
+      "→ G2 Psychometric Review (Psychometrician)",
+      "→ G3 Numerical Validation (Validator)",
+      "→ G4 Instructional Review (Editor)",
+      "→ G5 Metadata Review (Validator)",
+      "→ G6 Final Validation (Validator)",
+      "→ G7 Approval (Release Manager)",
+      "→ question_state: Certified",
+      "→ Production (eligible for learner delivery pool)",
+      "→ MASTER_QUESTION_REGISTRY.md rebuild"
+    ],
+    "actual_sequence_observed": [
+      "Registry / Question Bank",
+      "→ Gate 0: Duplicate Prevention & Registry Check (Collision Audit Agent)",
+      "→ Gate 1: Draft / Content Completeness (Inventory/Structural Agent)",
+      "→ Gate 2: Technical Review / EW Structural Audit (EW Audit + Technical Accuracy Agents)",
+      "    ├── Gate 2a: Rotational pattern analysis",
+      "    └── Gate 2b: Per-item EW + EC quality audit",
+      "→ Gate 3: Blueprint Alignment Review (Blueprint Mapping Agent)",
+      "→ Gate 4: QA Review — CognitiveLevel + Difficulty + Safety (CL Agent, Difficulty Agent, Safety Agent)",
+      "    ├── Gate 4a: CognitiveLevel calibration",
+      "    └── Gate 4b: Difficulty + Blueprint validation",
+      "→ Readiness Board: Scoring, Batching, Wave Assignment",
+      "→ Gate 5: Certification Candidate Adjudication (Certification Board)",
+      "→ QA Board: ALL_AGREE convergence check",
+      "→ [If BLOCKED]: Remediation (S320-S325 pattern — 2-3 additional sessions)",
+      "→ [If CLEAR]: question_state → 'Certified'",
+      "→ Production (eligible for learner delivery pool)",
+      "→ Closure Board: REVISION_HISTORY.md, governance guard re-verify",
+      "→ Registry Sync: MASTER_QUESTION_REGISTRY.md rebuild"
+    ],
+    "remediation_sequence": [
+      "Item blocked at Gate 2-4 (typically DL-026/DL-013/DL-008/DL-016)",
+      "→ DEFECT_LIBRARY.md: Defect logged (next available DL-ID)",
+      "→ Remediation Proposal: Batch plan ≤ 30 items (Rule 5 cap)",
+      "→ Pre-remediation Backup: pack_X_corrected.js.bak-YYYYMMDDHHMMSS",
+      "→ Subagent execution: EW authoring, CC clear, boilerplate removal",
+      "→ Independent verification: 2 separate agents verify via raw-source evidence",
+      "→ Post-remediation scan: all defect categories re-scanned",
+      "→ REVISION_HISTORY.md: Entry with before/after counts",
+      "→ Return to original gate for re-evaluation",
+      "→ [If still blocked]: Additional remediation session (2-3 total per wave)",
+      "→ [If clear]: Proceed to Gate 5"
+    ],
+    "runtime_governance_sequence": [
+      "T0 (Session Start):",
+      "  → All 13 runtime hashes vs CURRENT_BASELINES.md",
+      "  → Pack D CAPA: hash, parse-count, FD-045, FD-046, AD-075 Certified",
+      "  → Governance guard: 27/27 PASS",
+      "",
+      "Tmid (Mid-Session, ~30 min or after 2+ agents complete):",
+      "  → G1 (Pack Structural) + G2 (Certified Ledger) partial",
+      "  → Pack D + app.js hash and parse count",
+      "  → If any FAIL: halt all write agents, spawn governance agent, G1-G5 full",
+      "",
+      "Tend (Session Close, before REVISION_HISTORY.md write):",
+      "  → G1-G5 full reconciliation",
+      "  → All 13 hashes vs T0 — confirm zero drift",
+      "  → Certified count stable across 2+ independent scans",
+      "  → Governance guard: 27/27 PASS"
+    ]
+  },
+
+  "metrics": {
+    "documented_system_1": {
+      "total_documented_gates": 7,
+      "total_documented_personas": 5,
+      "documented_handoffs": 6,
+      "sequential_pipeline": true,
+      "estimated_automated_percentage": 40,
+      "estimated_human_decision_percentage": 60
+    },
+    "operational_system_2": {
+      "total_operational_gates": 6,
+      "total_boards": 6,
+      "total_parallel_agents_typical": 10,
+      "total_handoffs_per_session": 15,
+      "sequential_pipeline": false,
+      "parallel_board_execution": true,
+      "duplicate_review_categories": 8,
+      "ew_field_review_redundancy": "4-7 times per session",
+      "readiness_failure_rate": "89.5%",
+      "average_defects_per_item_at_board_arrival": "3-5",
+      "additional_remediation_sessions_per_wave": "2-3",
+      "estimated_automated_percentage": 25,
+      "estimated_human_decision_percentage": 75
+    },
+    "infrastructure_system_3": {
+      "total_reconciliation_gates": 5,
+      "execution_frequency": "Once every 10 sessions or 7 days",
+      "estimated_automated_percentage": 65,
+      "estimated_human_decision_percentage": 35
+    },
+    "blocking_rules_system_4": {
+      "total_blocking_rules": 4,
+      "total_checklist_items": 1,
+      "effective_date": "2026-07-25",
+      "grandfathered_items": "Pre-existing certified items remain Certified but flagged"
+    },
+    "reporting_bloat": {
+      "total_reports_generated": 1212,
+      "json_reports": 829,
+      "markdown_reports": 371,
+      "one_off_never_consumed": "65%",
+      "reports_per_session_trend": "2.7 → 11.7 (early → recent sessions)",
+      "average_reports_per_certification_session": 9
+    },
+    "agent_metrics": {
+      "total_agents_cataloged": 72,
+      "certification_sessions": 14,
+      "pack_write_agents": 0,
+      "read_only_analysis_agents": 72,
+      "parallel_tracks_per_session": 10
+    }
+  },
+
+  "handoff_map": {
+    "gate_0_to_gate_1": {
+      "from": "Collision Audit Agent",
+      "to": "Inventory/Structural Agent",
+      "artifact": "Duplicate Prevention Report (.json)",
+      "frequency": "Every certification batch"
+    },
+    "gate_1_to_gate_2": {
+      "from": "Inventory/Structural Agent",
+      "to": "EW Audit + Technical Accuracy Agents",
+      "artifact": "Seed Inventory / Item Manifest (.json)",
+      "frequency": "Every certification batch"
+    },
+    "gate_2_to_gate_3": {
+      "from": "EW Audit + Technical Accuracy Agents",
+      "to": "Blueprint Mapping Agent",
+      "artifact": "EW Readiness Audit + Technical Accuracy Report (.json)",
+      "frequency": "Every certification batch"
+    },
+    "gate_3_to_gate_4": {
+      "from": "Blueprint Mapping Agent",
+      "to": "CL Agent + Difficulty Agent + Safety Agent",
+      "artifact": "Blueprint Coverage Map (.json)",
+      "frequency": "Every certification batch"
+    },
+    "gate_4_to_readiness_board": {
+      "from": "CL + Difficulty + Safety Agents",
+      "to": "Readiness Board (Scoring + Batch Planning)",
+      "artifact": "Quality Gate Audit (.json)",
+      "frequency": "Every certification batch"
+    },
+    "readiness_board_to_gate_5": {
+      "from": "Readiness Board",
+      "to": "Certification Board",
+      "artifact": "Certification Priority Queue + Batch Plan (.json)",
+      "frequency": "Every certification batch"
+    },
+    "gate_5_to_production": {
+      "from": "Certification Board",
+      "to": "Production (question_state update)",
+      "artifact": "Certification Results (.json) + REVISION_HISTORY.md entry",
+      "frequency": "On CERTIFY verdict"
+    },
+    "blocked_to_remediation": {
+      "from": "Any gate",
+      "to": "Remediation Subagents (2-3 sessions)",
+      "artifact": "Defect entry in DEFECT_LIBRARY.md + Remediation Proposal",
+      "frequency": "89.5% of items"
+    },
+    "governance_board_to_all": {
+      "from": "Governance Board",
+      "to": "All other boards (T0 → Tmid → Tend)",
+      "artifact": "Baseline hash audit + CAPA verification",
+      "frequency": "Every session"
+    },
+    "closure_board_to_next_session": {
+      "from": "Closure Board",
+      "to": "Next session handoff",
+      "artifact": "SESSION_STATUS + REVISION_HISTORY.md + Updated CURRENT_BASELINES.md",
+      "frequency": "Every session close"
+    }
+  },
+
+  "gap_analysis": {
+    "critical_gaps": [
+      {
+        "gap_id": "GAP_001",
+        "title": "Documented Sequential Pipeline vs. Actual Parallel Board Execution",
+        "severity": "CRITICAL",
+        "description": "CAQS §9.1 documents a sequential 7-step pipeline where each gate must PASS before the next begins (Accountant → Editor → Psychometrician → Validator → Release Manager). The actual system uses 10+ parallel agents across 6 boards with no sequential dependency. This means the documented authority matrix (COLLABORATION_MATRIX.md) is never exercised — Accountant does not review before Editor, Psychometrician does not wait for Accountant.",
+        "sources": ["CAQS_v1.0.md §9.1", "COLLABORATION_MATRIX.md", "REVISION_HISTORY.md (S319, S809 patterns)"],
+        "recommendation": "Either update CAQS to reflect actual parallel board architecture, or redesign the actual workflow to enforce documented sequential review."
+      },
+      {
+        "gap_id": "GAP_002",
+        "title": "No Pre-Board Structural Scan — 100% Domain E Readiness Failure",
+        "severity": "CRITICAL",
+        "description": "38 Domain E seeds reached S809 certification with zero pre-board structural scans. Every single one was blocked at Gate 2 (53 empty EW slots, 8 DL-013 boilerplate slots). No automated detection ran before the certification board was assembled. All 38 items had known DL-026 and DL-016 defects that could have been detected by automated pre-flight scans.",
+        "sources": ["SESSION_STATUS_2026-07-24.md §3-4", "REVISION_HISTORY.md S809.1, S809, S319"],
+        "recommendation": "Add mandatory automated pre-flight scans (DL-008, DL-013, DL-026, DL-016, DL-010, DL-021, DL-031) BEFORE any certification board convenes. Items that fail pre-flights should not enter Gate 2."
+      },
+      {
+        "gap_id": "GAP_003",
+        "title": "EW Field Duplicate Review — 4-7 Agents Re-Examine Same Fields",
+        "severity": "HIGH",
+        "description": "S200 found 8 duplicate review categories, with ExplanationWrong fields being the worst case: 4-7 separate agents independently re-examine the same EW fields per session. Each agent produces a separate report — many of which are never consumed (65% one-off rate). This is the primary driver of the 1,212 report bloat.",
+        "sources": ["SESSION200_WORKFLOW_MAP.json (Agent B)", "SESSION200_OVERLAP_ANALYSIS.json (Agent D)"],
+        "recommendation": "Consolidate EW field auditing into a single agent pass with comprehensive output. Eliminate redundant re-examination. Implement delta review: only re-audit items that changed between sessions."
+      },
+      {
+        "gap_id": "GAP_004",
+        "title": "No Delta Review — 80% Unchanged Items Re-Audited Every Session",
+        "severity": "HIGH",
+        "description": "S200 found that 80% of items are unchanged between certification waves, yet all items are re-audited from scratch each session. The Certification Framework v2 proposes SHA-256 content hashes for delta inheritance. Implementing delta review could save ~77% of time per session.",
+        "sources": ["SESSION200_DELTA_REVIEW_STUDY.json (Agent I)"],
+        "recommendation": "Implement per-item SHA-256 content hashing. Store hashes in a delta ledger. Only re-audit items whose hash changed from the last certification wave."
+      },
+      {
+        "gap_id": "GAP_005",
+        "title": "Dual-Block Architecture vs. Scan Tools — Persistent False Positives",
+        "severity": "HIGH",
+        "description": "Packs A, C, and D use dual-block architecture (metadata block + content block). Scan tools that use forward-scan or regex-window methodology (not within-object CC extraction) systematically produce false positives. Session 501 found 39 Pack D Section C items falsely flagged as DL-008/DL-026 due to cross-object CC reading. Pack B DL-008 was falsely counted at 111 (actual: 0) due to CC-before-QuestionID object ordering.",
+        "sources": ["DEFECT_LIBRARY.md DL-016, DL-029", "GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md §9.3"],
+        "recommendation": "All scan tools must use within-object extraction (Function constructor parse or string-aware brace-matching). Totals-only reports without QID lists must be rejected per AGENTS.md §5. Forward-scan/regex-window methodology must be deprecated."
+      },
+      {
+        "gap_id": "GAP_006",
+        "title": "89.5% Readiness Failure Rate — Items Arrive at Boards with 3-5 Defects",
+        "severity": "CRITICAL",
+        "description": "The fundamental certification workflow problem: items reach the certification board in a state that guarantees they will be blocked. Each item carries 3-5 concurrent defects (typically DL-026 empty EW slots + DL-013 boilerplate + DL-016 offset + DL-031 difficulty inflation). Remediation then requires 2-3 additional sessions (S320-S325 pattern). The certification board becomes a defect-discovery session, not an approval session.",
+        "sources": ["SESSION200_READINESS_ANALYSIS.json (Agent F)", "REVISION_HISTORY.md S319, S809 patterns"],
+        "recommendation": "Implement a 'pre-board readiness gate' that runs automated defect scans before items enter the certification pipeline. Items must achieve 'pre-board ready' status (all known defect categories scanned, all blocking defects resolved) before entering Gate 0."
+      },
+      {
+        "gap_id": "GAP_007",
+        "title": "Case Study Items: Zero Difficulty Calibration (DL-032)",
+        "severity": "MEDIUM",
+        "description": "All 420 case items across 75 cases are labeled Difficulty: 'Moderate'. Zero are Easy, Difficult, or Very Difficult. This is statistically impossible for a real exam pool. The documented CAQS §9.2 review process was never applied to case items — they were generated with template defaults and never calibrated.",
+        "sources": ["CAQS_v1.0.md §6.1", "DEFECT_LIBRARY.md DL-032"],
+        "recommendation": "Recalibrate all 420 case items using the CAQS §6.1 target distribution (Easy 15%, Moderate 30%, Difficult 25%, Very Difficult 10%)."
+      },
+      {
+        "gap_id": "GAP_008",
+        "title": "CAQS G3 Numerical Validation Never Executed as Separate Gate",
+        "severity": "MEDIUM",
+        "description": "The documented G3 (Numerical Validation by Validator — independent recalculation) has never been observed in actual certification sessions. Numerical validation is subsumed into Gate 2 (Technical Review) where the Technical Accuracy Agent verifies stored CorrectChoice = independently derived answer. The formal independent recalculation pipeline (solve blind → compare → reconcile) from CAQS §5.1 is not followed.",
+        "sources": ["CAQS_v1.0.md §5.1, §9.1 (Step 3)", "REVISION_HISTORY.md certification patterns"],
+        "recommendation": "Either fold G3 into Gate 2 officially, or formalize the blind independent recalculation as a distinct step."
+      },
+      {
+        "gap_id": "GAP_009",
+        "title": "No Release Manager Role in Practice",
+        "severity": "MEDIUM",
+        "description": "The documented G7 gate (Approval by Release Manager — final sign-off for production) does not exist in the actual workflow. Certification decisions are made by the Certification Board (convergent multi-agent adjudication). The Release Manager persona from COLLABORATION_MATRIX.md has no operational equivalent in observed sessions.",
+        "sources": ["CAQS_v1.0.md §8.1 (G7)", "COLLABORATION_MATRIX.md", "REVISION_HISTORY.md"],
+        "recommendation": "Either retire the Release Manager role from documentation, or instantiate it as the final adjudication step after Certification Board convergence."
+      },
+      {
+        "gap_id": "GAP_010",
+        "title": "Reporting Bloat: 65% of 1,212 Reports Never Consumed",
+        "severity": "HIGH",
+        "description": "The report generation pattern has grown from 2.7 files/session (early) to 11.7 files/session (recent). 829 JSON reports and 371 markdown reports exist. 65% are one-off artifacts that are never referenced again. S200 Certification Framework v2 proposes 4 reports/session.",
+        "sources": ["SESSION200_REPORTING_ANALYSIS.json (Agent G)"],
+        "recommendation": "Standardize to 4 reports per session (Session Summary, Certification Results, Defect Ledger Update, Handoff Manifest). Eliminate per-agent one-off reports."
+      },
+      {
+        "gap_id": "GAP_011",
+        "title": "Session 508 G-NEW Rules Not Integrated Into Gate Automation",
+        "severity": "HIGH",
+        "description": "The G-NEW-1 through G-NEW-5 rules (effective 2026-07-25) add critical certification-blocking conditions but have not been integrated into automated gate checks. G-NEW-2 (topic relevance) requires semantic analysis that no existing tool performs. G-NEW-3 (within-object CC extraction) is documented but not enforced by scan scripts.",
+        "sources": ["QUESTION_METADATA_STANDARD.md §9.4", "GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md §9"],
+        "recommendation": "Implement G-NEW automated checks: (1) topic-relevance scoring for EW fields, (2) within-object CC extraction mandate in all scan tools, (3) case explanation depth validator for G-NEW-4."
+      },
+      {
+        "gap_id": "GAP_012",
+        "title": "Template Rotation — Persistent Source of Multiple Defect Classes",
+        "severity": "CRITICAL",
+        "description": "The 5-item template rotation engine is the root cause of DL-008, DL-010, DL-016, DL-026, DL-012, DL-015, and DL-031. Seven distinct defect classes trace to a single authoring pattern: items generated in 5-item groups with rotational CC assignments and positional field population. This is a design-level defect in the content authoring pipeline, not a per-item defect.",
+        "sources": ["DEFECT_LIBRARY.md DL-008, DL-010, DL-012, DL-015, DL-016, DL-026, DL-031"],
+        "recommendation": "Deprecate the rotation template engine. If new items are authored, use a single-item pipeline with per-item field verification. For existing items, remediation must be systematic (fix the rotation group, not individual items in isolation)."
+      }
+    ],
+    "framework_v2_gaps_closed": [
+      {
+        "initiative": "4 boards (from 9 existing)",
+        "current_state": "6 boards operating: Readiness, QA, Certification, Governance, Closure, Safety",
+        "target": "4 boards: Readiness, Technical, Certification, Governance",
+        "status": "Not yet implemented"
+      },
+      {
+        "initiative": "7 agents/session (from 10-15)",
+        "current_state": "Typical 10 agent tracks per certification session",
+        "target": "7 agents with clear non-overlapping responsibilities",
+        "status": "Not yet implemented"
+      },
+      {
+        "initiative": "4 reports/session (from 9+ average)",
+        "current_state": "Average 9 reports per session, 65% never consumed",
+        "target": "4 standardized reports: Summary, Certification Results, Defect Ledger, Handoff Manifest",
+        "status": "Not yet implemented"
+      },
+      {
+        "initiative": "8 automated pre-flight scans",
+        "current_state": "0 pre-flight scans — items reach boards with unknown defect status",
+        "target": "DL-008, DL-013, DL-026, DL-016, DL-010, DL-021, DL-031, DL-030 pre-flight",
+        "status": "Not yet implemented"
+      },
+      {
+        "initiative": "Delta review via SHA-256 content hashes",
+        "current_state": "80% of items unchanged but re-audited every session",
+        "target": "78% of items skip re-audit; 77% time savings per session",
+        "status": "Not yet implemented"
+      }
+    ]
+  },
+
+  "current_certified_state": {
+    "total_mcq_items": 2500,
+    "total_certified_mcq": 2221,
+    "certified_percentage": "88.8%",
+    "case_items": 420,
+    "certified_case_items": 0,
+    "case_certification": "0% — all 420 items Moderate with zero difficulty variance",
+    "by_pack": {
+      "pack_a": {"total": 500, "certified": 481, "percent": "96.2%", "sections_certified": ["A", "D", "E"], "sections_partial": ["B", "C", "F"]},
+      "pack_b": {"total": 500, "certified": 500, "percent": "100.0%", "sections_certified": ["A", "B", "C", "D", "E", "F"]},
+      "pack_c": {"total": 500, "certified": 250, "percent": "50.0%", "sections_certified": ["A", "B"], "sections_open": ["C", "D", "E", "F"]},
+      "pack_d": {"total": 500, "certified": 300, "percent": "60.0%", "sections_certified": ["A", "B", "D"], "sections_open": ["C", "E", "F"]},
+      "pack_e": {"total": 540, "certified": 540, "percent": "100.0%", "notes": "Includes 40 replacement items (R01-R40) inserted in S806/S808"}
+    },
+    "open_learner_safety_issues": {
+      "dl008_certified": "67 items (2 Pack A, 55 Pack C, 10 Pack D)",
+      "dl026_certified": "~6 items residual",
+      "tier0_critical": "P1E-E-048 (stem-choice mismatch — answer key may be incorrect)",
+      "governance_guard": "27/27 PASS"
+    }
+  },
+
+  "references": {
+    "primary_sources": [
+      "knowledge/CAQS_v1.0.md — §1.7 Certification Standard, §8 Acceptance Criteria (G1-G7), §9 Audit Workflow",
+      "knowledge/QUESTION_METADATA_STANDARD.md — §9 Governance State Fields, §9.4 Certification-Blocking Conditions",
+      "ai/WORKFLOWS.md — 8 standard workflows (Question Audit through Blueprint Coverage Review)",
+      "ai/COLLABORATION_MATRIX.md — Persona authority matrix, collaboration workflow, override rules",
+      "reports/GOVERNANCE_AND_RISK_REGISTER_CONSOLIDATED.md — §1 Certified Pool, §5 Runtime Architecture, §8 Reconciliation Schedule, §9 Certification Governance Rules"
+    ],
+    "session_reports": [
+      "reports/session_status/SESSION_STATUS_2026-07-24.md — Current end-of-cycle state (2,031 → 2,221 certified)",
+      "reports/SESSION31_RECONCILIATION_EXECUTION.md — Canonical G1-G5 reconciliation gates",
+      "reports/SESSION53_LONGRUN_GOVERNANCE_EXECUTION.md — Runtime governance checkpoints and drift signals",
+      "knowledge/REVISION_HISTORY.md — Actual workflow patterns from 212 sessions (S200-S809)"
+    ],
+    "defect_library": [
+      "knowledge/DEFECT_LIBRARY.md — DL-001 through DL-033, all defect classes and remediation status"
+    ]
+  }
+}

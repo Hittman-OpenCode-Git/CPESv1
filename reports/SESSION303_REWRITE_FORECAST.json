@@ -1,0 +1,24 @@
+{
+  "p0Critical": {
+    "count": 1,
+    "sessions": 1,
+    "description": "Missing/empty ExplanationCorrect"
+  },
+  "p1High": {
+    "count": 285,
+    "sessions": 19,
+    "description": "Placeholder/thin EC or 2+ empty EW slots"
+  },
+  "p2Medium": {
+    "count": 2407,
+    "sessions": 81,
+    "description": "Thin EC or 1 empty EW slot or grade F instructional quality"
+  },
+  "p3Low": {
+    "count": 314,
+    "sessions": 7,
+    "description": "Grade D instructional quality"
+  },
+  "totalCandidates": 3007,
+  "totalSessions": 108
+}

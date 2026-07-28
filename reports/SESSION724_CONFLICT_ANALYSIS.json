@@ -1,0 +1,81 @@
+{
+  "session": "724",
+  "title": "600-Series Conflict Analysis",
+  "generated": "2026-07-26",
+  "agents": ["E", "J", "V", "S"],
+  "verdict": "NO HARD CONFLICTS — 600-series boundaries are architecturally clean. Two MEDIUM conflicts identified, both manageable with explicit protocols.",
+
+  "conflicts": [
+    {
+      "id": "C-001",
+      "overlap_with": "800 (Certification)",
+      "type": "HANDOFF FRICTION",
+      "severity": "MEDIUM",
+      "description": "600→800 handoff creates a pipeline stage that doesn't exist today. Currently, 800 authors + certifies in one pass. 600 would separate authoring from certification, introducing: throughput mismatch (600 authors faster than 800 certifies), anchoring bias (pre-authored content assumed correct), handoff latency (context-switch between lanes)."
+    },
+    {
+      "id": "C-002", 
+      "overlap_with": "Governance",
+      "type": "AUTHORITY DRIFT",
+      "severity": "MEDIUM",
+      "description": "600 is an active production lane while 700 (governance) is in passive maintenance mode. Active lanes naturally accrue authority over dormant ones. Risk: 600 makes de facto governance decisions about content standards that 700 should own."
+    },
+    {
+      "id": "C-003",
+      "overlap_with": "300 (Analytics)",
+      "type": "QUALITY JUDGMENT BOUNDARY",
+      "severity": "LOW",
+      "description": "If 600 starts assigning difficulty scores, producing quality ratings, or flagging items as 'ready' — this duplicates 300's analytics function. Mitigated by explicit MAY NOT boundaries."
+    }
+  ],
+
+  "boundary_rules_validated": {
+    "600_may": [
+      "Draft ExplanationWrong content — PASS (governance guard Rule 2 gates writes)",
+      "Author distractor explanations — PASS (batch cap enforced by Rule 5)",
+      "Prepare items for certification review — PASS (question_state changes blocked by Rule 1)",
+      "Create template systems and standards libraries — PASS (non-pack artifacts)",
+      "Expand ExplanationCorrect text — PASS (governance guard Rules 2+5 apply)"
+    ],
+    "600_may_not": [
+      "Certify items (question_state changes) — PASS (800-series sole certifier)",
+      "Recalibrate difficulty scores — PASS (DCS v1.1 is sole authority)",
+      "Govern (change rules, defect library) — PASS (700-series sole governance authority)",
+      "Modify answer keys (CorrectChoice) — PASS (Rule 4 WARN)",
+      "Run CAQS §1.6 verification — PASS (800-series core function)",
+      "Publish to learner pool — PASS (gated by question_state)",
+      "Modify pack file question_state — PASS (800-series exclusive)"
+    ]
+  },
+
+  "boundary_ambiguities": [
+    {
+      "id": "BA-1",
+      "ambiguity": "Does 'prepare items' include assigning provisional difficulty/CL/topic labels?",
+      "resolution": "No. 600-prepared items carry 'prepared_by_600: true' but no provisional labels. Labels are 800's domain."
+    },
+    {
+      "id": "BA-2",
+      "ambiguity": "600-authored templates vs. DCS v1.1 / CAQS v1.0 authority",
+      "resolution": "600 templates must include CAQS/DCS preamble. 800 verifies against CAQS/DCS, not against 600 templates."
+    },
+    {
+      "id": "BA-3",
+      "ambiguity": "Does 600 write to pack files or produce detached artifacts?",
+      "resolution": "600 MUST produce detached artifacts. Only 800 writes to pack files. Preserves single-write-owner discipline."
+    },
+    {
+      "id": "BA-4",
+      "ambiguity": "600-authored EC that changes implied reasoning vs. 800's CC authority",
+      "resolution": "800 must run EC-CC consistency check on any 600-expanded EC during certification review."
+    }
+  ],
+
+  "governance_preservation": {
+    "governance_independence": "PRESERVED — 700 remains sole governance authority",
+    "certification_independence": "PRESERVED WITH CONDITION — 800 must independently re-derive CC for 600-prepared items",
+    "analytics_independence": "PRESERVED — 300 remains sole quality analyst",
+    "guard_integrity": "PRESERVED — all 5 rules apply lane-agnostically",
+    "dcs_integrity": "PRESERVED — DCS v1.1 scope should be updated to include 600-series if launched"
+  }
+}

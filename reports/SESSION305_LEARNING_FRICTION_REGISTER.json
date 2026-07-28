@@ -1,0 +1,1438 @@
+{
+  "generated": "2026-07-26T21:49:14.803Z",
+  "session": "S305",
+  "totalFrictions": 169,
+  "uniqueFrictionTypes": 8,
+  "byType": {
+    "Severe distractor-feedback gap": 118,
+    "Partial distractor-feedback gap": 2,
+    "Thin explanations across all items": 12,
+    "Unrealistic or incomplete exhibit": 9,
+    "Poor exhibit usability": 9,
+    "Calculation items without supporting tables": 7,
+    "Excessive exhibit complexity": 8,
+    "Overly long scenario text": 4
+  },
+  "byDomain": {
+    "A - External Financial Reporting": {
+      "frictionCount": 27,
+      "types": {
+        "Severe distractor-feedback gap": 11,
+        "Thin explanations across all items": 4,
+        "Unrealistic or incomplete exhibit": 4,
+        "Poor exhibit usability": 4,
+        "Calculation items without supporting tables": 4
+      }
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "frictionCount": 19,
+      "types": {
+        "Severe distractor-feedback gap": 12,
+        "Thin explanations across all items": 4,
+        "Unrealistic or incomplete exhibit": 1,
+        "Poor exhibit usability": 1,
+        "Calculation items without supporting tables": 1
+      }
+    },
+    "C - Performance Management": {
+      "frictionCount": 27,
+      "types": {
+        "Partial distractor-feedback gap": 1,
+        "Severe distractor-feedback gap": 13,
+        "Thin explanations across all items": 2,
+        "Excessive exhibit complexity": 3,
+        "Unrealistic or incomplete exhibit": 3,
+        "Poor exhibit usability": 3,
+        "Calculation items without supporting tables": 2
+      }
+    },
+    "D - Cost Management": {
+      "frictionCount": 20,
+      "types": {
+        "Partial distractor-feedback gap": 1,
+        "Severe distractor-feedback gap": 13,
+        "Thin explanations across all items": 1,
+        "Excessive exhibit complexity": 3,
+        "Unrealistic or incomplete exhibit": 1,
+        "Poor exhibit usability": 1
+      }
+    },
+    "E - Internal Controls": {
+      "frictionCount": 16,
+      "types": {
+        "Severe distractor-feedback gap": 13,
+        "Thin explanations across all items": 1,
+        "Excessive exhibit complexity": 1,
+        "Overly long scenario text": 1
+      }
+    },
+    "F - Technology & Analytics": {
+      "frictionCount": 15,
+      "types": {
+        "Severe distractor-feedback gap": 11,
+        "Overly long scenario text": 3,
+        "Excessive exhibit complexity": 1
+      }
+    },
+    "Unknown": {
+      "frictionCount": 45,
+      "types": {
+        "Severe distractor-feedback gap": 45
+      }
+    }
+  },
+  "details": [
+    {
+      "caseID": "CBQ-A1",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-B2",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Partial distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-D1",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Partial distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-E1",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-E2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-F1",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-A3",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-A3",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-B3",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-B3",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-C3",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-F2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ-F2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases.js"
+    },
+    {
+      "caseID": "CBQ2-A3",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Calculation items without supporting tables",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-B2",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-B3",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-C3",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-D1",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-D1",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-D3",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-E1",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-E2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-F1",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ2-F2",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B12",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B13",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B14",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B15",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B16",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B17",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B18",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B19",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B20",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B21",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B22",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B23",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B24",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B25",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CASE-B26",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases2.js"
+    },
+    {
+      "caseID": "CBQ3-A1",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Calculation items without supporting tables",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-B2",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-B3",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-C3",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-D1",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-D3",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-E1",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-E2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-F1",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ3-F2",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C1",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C2",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C3",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C4",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C5",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C6",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C7",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C8",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C9",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C10",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C11",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C12",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C13",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C14",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CASE-C15",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases3.js"
+    },
+    {
+      "caseID": "CBQ4-A1",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-A1",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-A1",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-A1",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Calculation items without supporting tables",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Calculation items without supporting tables",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Calculation items without supporting tables",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-D1",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-D3",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-D3",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-E1",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-E2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-E2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-E3",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-F1",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-F2",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-F3",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ4-B2",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D1",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D2",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D3",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D4",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D5",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D6",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D7",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D8",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D9",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D10",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D11",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D12",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D13",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D14",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CASE-D15",
+      "domain": "Unknown",
+      "section": "",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Low",
+      "sourceFile": "scored_cases4.js"
+    },
+    {
+      "caseID": "CBQ5-B2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-B2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-B2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-A2",
+      "domain": "A - External Financial Reporting",
+      "section": "A",
+      "frictionType": "Calculation items without supporting tables",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-B1",
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "section": "B",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Thin explanations across all items",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C1",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Calculation items without supporting tables",
+      "cognitiveLoad": "Moderate",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C2",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-D1",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-D1",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-D2",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-D3",
+      "domain": "D - Cost Management",
+      "section": "D",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-E1",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-E2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Overly long scenario text",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-E2",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-E3",
+      "domain": "E - Internal Controls",
+      "section": "E",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-F1",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Overly long scenario text",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-F1",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-F2",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Excessive exhibit complexity",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-F2",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Overly long scenario text",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-F2",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-F3",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Overly long scenario text",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-F3",
+      "domain": "F - Technology & Analytics",
+      "section": "F",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "Excessive",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C3",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Unrealistic or incomplete exhibit",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C3",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Poor exhibit usability",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases5.js"
+    },
+    {
+      "caseID": "CBQ5-C3",
+      "domain": "C - Performance Management",
+      "section": "C",
+      "frictionType": "Severe distractor-feedback gap",
+      "cognitiveLoad": "High",
+      "sourceFile": "scored_cases5.js"
+    }
+  ]
+}

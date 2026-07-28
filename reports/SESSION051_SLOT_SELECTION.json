@@ -1,0 +1,123 @@
+{
+  "session": "SESSION051",
+  "phase": 3,
+  "description": "Phase 3 Item Authoring — Packs C+D Sections E only (HC-1 adjustment: FC/FD have 0 archived items — all MISSING state)",
+  "total_slots": 20,
+  "packs_affected": ["pack_c_corrected.js", "pack_d_corrected.js"],
+  "sections_affected": ["E"],
+  "domains_covered": ["COSO Internal Controls"],
+  "bloom_target": {"Analyze": 10, "Evaluate": 10},
+  "difficulty_target": {"Difficult": 14, "Very_Difficult": 6},
+  "question_state": "Active",
+  "hc1_note": "HC-1 triggered: Slot ledger claimed 183 remaining (EC:51 FC:52 ED:51 FD:49) but actual archived inventory is 92 (EC:46 ED:46, FC:0 FD:0). User authorized: proceed with 10 EC + 10 ED only. FC/FD sections are MISSING (no question_state), not Archived.",
+  "slots": [
+    {
+      "index": 41, "qid": "P1-EC-002", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 6 — risk identification — emergent risk from third-party vendor concentration"
+    },
+    {
+      "index": 42, "qid": "P1-EC-006", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 4 — board expertise and independence — evaluating audit committee composition"
+    },
+    {
+      "index": 43, "qid": "P1-EC-007", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO ERM — risk culture — tone at the top and whistleblower retaliation patterns"
+    },
+    {
+      "index": 44, "qid": "P1-EC-011", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 7 — risk severity — inherent vs. residual risk after control failure"
+    },
+    {
+      "index": 45, "qid": "P1-EC-012", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 1,
+      "topic_tba": "COSO Principle 3 — organizational structure — decentralized operations and control consistency"
+    },
+    {
+      "index": 46, "qid": "P1-EC-013", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO Principle 17 — monitoring — continuous vs. periodic evaluation after ERP migration"
+    },
+    {
+      "index": 47, "qid": "P1-EC-015", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO Principle 14 — internal communication — control deficiency escalation to board"
+    },
+    {
+      "index": 48, "qid": "P1-EC-016", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO Principle 13 — information quality — data integrity after system integration"
+    },
+    {
+      "index": 49, "qid": "P1-EC-017", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO ERM — risk response — evaluating accept vs. transfer for cyber insurance gap"
+    },
+    {
+      "index": 50, "qid": "P1-EC-018", "pack": "C", "section": "E", "domain": "COSO",
+      "batch": 2,
+      "topic_tba": "COSO Principle 9 — fraud risk — override of controls by senior management"
+    },
+    {
+      "index": 51, "qid": "P1-ED-003", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "Three Lines of Defense — evaluating fourth-line (external assurance) reliance gaps"
+    },
+    {
+      "index": 52, "qid": "P1-ED-004", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 5 — accountability — evaluating performance measure alignment with controls"
+    },
+    {
+      "index": 53, "qid": "P1-ED-006", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 16 — monitoring — evaluating monitoring frequency against risk velocity"
+    },
+    {
+      "index": 54, "qid": "P1-ED-007", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO ERM — strategy and objective-setting — evaluating risk to M&A integration"
+    },
+    {
+      "index": 55, "qid": "P1-ED-008", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 3,
+      "topic_tba": "COSO Principle 10 — control activities — evaluating compensating controls after layoff"
+    },
+    {
+      "index": 56, "qid": "P1-ED-011", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 1 — integrity and ethics — evaluating code of conduct enforcement gaps"
+    },
+    {
+      "index": 57, "qid": "P1-ED-012", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 15 — external communication — evaluating SOC 2 Type II scope adequacy"
+    },
+    {
+      "index": 58, "qid": "P1-ED-013", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 12 — control activities — evaluating IT-dependent manual control reliability"
+    },
+    {
+      "index": 59, "qid": "P1-ED-017", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 8 — fraud risk — pressure/incentive assessment in sales commission structure"
+    },
+    {
+      "index": 60, "qid": "P1-ED-018", "pack": "D", "section": "E", "domain": "COSO",
+      "batch": 4,
+      "topic_tba": "COSO Principle 2 — board independence — assessing audit committee financial expert qualification"
+    }
+  ],
+  "batch_plan": [
+    {"batch": 1, "qids": ["P1-EC-002","P1-EC-006","P1-EC-007","P1-EC-011","P1-EC-012"], "pack": "C", "section": "E"},
+    {"batch": 2, "qids": ["P1-EC-013","P1-EC-015","P1-EC-016","P1-EC-017","P1-EC-018"], "pack": "C", "section": "E"},
+    {"batch": 3, "qids": ["P1-ED-003","P1-ED-004","P1-ED-006","P1-ED-007","P1-ED-008"], "pack": "D", "section": "E"},
+    {"batch": 4, "qids": ["P1-ED-011","P1-ED-012","P1-ED-013","P1-ED-017","P1-ED-018"], "pack": "D", "section": "E"}
+  ],
+  "created": "2026-07-28",
+  "session": "SESSION051"
+}

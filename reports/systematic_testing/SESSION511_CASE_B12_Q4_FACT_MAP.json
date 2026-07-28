@@ -1,0 +1,26 @@
+{
+  "session": "511",
+  "date": "2026-07-25",
+  "item": "CASE-B12-Q4",
+  "file": "scored_cases2.js",
+  "prompt": "Alpine Manufacturing purchased equipment for $240,000 with an estimated 8-year useful life and residual value of $24,000 using straight-line depreciation. After 3 years, the useful life was revised to 10 total years with residual value of $18,000. What is the annual depreciation in year 4?",
+  "facts": {
+    "cost": {"value": "$240,000", "source": "prompt", "role": "original cost of equipment"},
+    "orig_useful_life": {"value": "8 years", "source": "prompt", "role": "original estimated useful life"},
+    "orig_residual": {"value": "$24,000", "source": "prompt", "role": "original estimated residual value"},
+    "depreciation_method": {"value": "straight-line", "source": "prompt", "role": "depreciation method"},
+    "years_elapsed": {"value": "3", "source": "prompt", "role": "years before revision"},
+    "new_useful_life": {"value": "10 total years", "source": "prompt", "role": "revised total useful life"},
+    "new_residual": {"value": "$18,000", "source": "prompt", "role": "revised residual value"},
+    "governing_standard": {"value": "ASC 360 (U.S. GAAP)", "source": "explanation", "role": "accounting standard for estimate changes"}
+  },
+  "arithmetic_path": {
+    "step_1": {"label": "Original annual depreciation", "formula": "($240,000 - $24,000) / 8", "result": "$27,000"},
+    "step_2": {"label": "Accumulated depreciation after 3 years", "formula": "$27,000 x 3", "result": "$81,000"},
+    "step_3": {"label": "Book value at year 3", "formula": "$240,000 - $81,000", "result": "$159,000"},
+    "step_4": {"label": "Remaining life after revision", "formula": "10 - 3", "result": "7 years"},
+    "step_5": {"label": "Revised annual depreciation (ASC 360 prospective)", "formula": "($159,000 - $18,000) / 7 = $141,000 / 7", "result_exact": "$20,142.857...", "result_rounded": "$20,143"}
+  },
+  "classification": "ANSWER_KEY_CORRECTION_REQUIRED",
+  "confidence": 100
+}

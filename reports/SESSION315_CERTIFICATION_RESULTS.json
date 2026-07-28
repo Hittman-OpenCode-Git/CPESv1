@@ -1,0 +1,372 @@
+{
+  "title": "SESSION315_CERTIFICATION_RESULTS",
+  "session": "315",
+  "agent": "P",
+  "board": "Independent Certification Board",
+  "generated": "2026-07-27",
+  "prerequisiteReviews": [
+    "SESSION315_TECHNICAL_REVIEW.json",
+    "SESSION315_EW_INTEGRITY_AUDIT.json",
+    "SESSION315_QUALITY_GATE_AUDIT.json",
+    "SESSION315_UIQS_VALIDATION.json"
+  ],
+  "decisions": [
+    {
+      "QuestionID": "P1-E-R11",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_COMPLIANT",
+          "detail": ""
+        },
+        {
+          "category": "UIQS",
+          "result": "A (93)"
+        }
+      ],
+      "rationale": "All gates PASS. Technical review clean. EW integrity confirmed.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R14",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_COMPLIANT",
+          "detail": ""
+        },
+        {
+          "category": "UIQS",
+          "result": "A (91)"
+        }
+      ],
+      "rationale": "All gates PASS. Technical review clean. EW integrity confirmed. Minor observation: Common Exam Trap/Misconception. Does not affect certification.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R15",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_COMPLIANT",
+          "detail": ""
+        },
+        {
+          "category": "UIQS",
+          "result": "A (91)"
+        }
+      ],
+      "rationale": "All gates PASS. Technical review clean. EW integrity confirmed. Minor observation: Common Exam Trap/Misconception. Does not affect certification.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R16",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_FLAGGED",
+          "detail": "S311-FLAGGED: Understand/definition-recall at Moderate — consider Easy per anti-inflation rule"
+        },
+        {
+          "category": "UIQS",
+          "result": "A- (88)"
+        }
+      ],
+      "rationale": "Meets certification criteria. All substantive checks PASS.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R17",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_COMPLIANT",
+          "detail": ""
+        },
+        {
+          "category": "UIQS",
+          "result": "A (92)"
+        }
+      ],
+      "rationale": "All gates PASS. Technical review clean. EW integrity confirmed.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R19",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_COMPLIANT",
+          "detail": ""
+        },
+        {
+          "category": "UIQS",
+          "result": "A- (88)"
+        }
+      ],
+      "rationale": "All gates PASS. Technical review clean. EW integrity confirmed. Minor observation: Common Exam Trap/Misconception. Does not affect certification.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R20",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_FLAGGED",
+          "detail": "S311-FLAGGED: Understand/definition-recall at Moderate — consider Easy per anti-inflation rule"
+        },
+        {
+          "category": "UIQS",
+          "result": "A- (88)"
+        }
+      ],
+      "rationale": "Meets certification criteria. All substantive checks PASS.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R30",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_COMPLIANT",
+          "detail": ""
+        },
+        {
+          "category": "UIQS",
+          "result": "A (92)"
+        }
+      ],
+      "rationale": "All gates PASS. Technical review clean. EW integrity confirmed.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R31",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_FLAGGED",
+          "detail": "S311-FLAGGED: Understand/definition-recall at Moderate — consider Easy per anti-inflation rule"
+        },
+        {
+          "category": "UIQS",
+          "result": "A- (89)"
+        }
+      ],
+      "rationale": "Meets certification criteria. All substantive checks PASS.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    },
+    {
+      "QuestionID": "P1-E-R32",
+      "decision": "CERTIFY",
+      "evidence": [
+        {
+          "category": "Technical",
+          "result": "PASS"
+        },
+        {
+          "category": "Explanations",
+          "result": "PASS"
+        },
+        {
+          "category": "EW Integrity",
+          "result": "PASS"
+        },
+        {
+          "category": "Quality Gates",
+          "result": "ALL_GATES_PASS"
+        },
+        {
+          "category": "Difficulty",
+          "result": "S311_COMPLIANT",
+          "detail": ""
+        },
+        {
+          "category": "UIQS",
+          "result": "A (93)"
+        }
+      ],
+      "rationale": "All gates PASS. Technical review clean. EW integrity confirmed.",
+      "certificationConditions": [
+        "S316 Production Insertion ready"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "certify": 10,
+    "hold": 0,
+    "escalate": 0,
+    "certificationRate": "100%"
+  }
+}

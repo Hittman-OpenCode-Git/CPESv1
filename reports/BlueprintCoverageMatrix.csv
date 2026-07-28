@@ -1,0 +1,8 @@
+Domain,TotalQuestions,MCQCount,CaseItemCount,BloomRemember,BloomUnderstand,BloomApply,BloomAnalyze,BloomEvaluate,BloomUnassigned,DifficultyEasy,DifficultyModerate,DifficultyDifficult,DifficultyUnassigned
+External Financial Reporting Decisions,358,300,0,16,165,149,17,11,0,63,181,13,0
+"Planning, Budgeting, and Forecasting",468,400,0,25,126,289,16,12,0,77,222,63,0
+Performance Management,373,300,0,6,117,186,44,20,0,74,186,65,0
+Cost Management,302,225,0,2,89,149,35,27,0,40,145,66,0
+Internal Controls,333,265,0,8,178,84,36,27,0,84,179,20,0
+Technology and Analytics,280,224,0,0,207,39,17,17,0,94,117,26,0
+Unknown,1,1,0,1,0,0,0,0,0,0,0,0,1

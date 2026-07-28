@@ -1,0 +1,1428 @@
+{
+  "reportId": "SESSION252_DEEP_LINK_VALIDATION",
+  "board": "G",
+  "session": "252",
+  "title": "Deep-Link Validation Report",
+  "generatedTimestamp": "2026-07-27T17:59:00.488Z",
+  "sourcesScanned": {
+    "question_history_json": {
+      "path": "scripts/output/question_history.json",
+      "totalQuestions": 2540
+    },
+    "session_registry_json": {
+      "path": "scripts/output/session_registry.json",
+      "totalSessions": 98
+    },
+    "challenge_registry_json": {
+      "path": "scripts/output/challenge_registry.json",
+      "totalChallenges": 35
+    },
+    "recommendation_registry_json": {
+      "path": "scripts/output/recommendation_registry.json",
+      "totalRecommendations": 4
+    },
+    "certification_waves_json": {
+      "path": "scripts/output/certification_waves.json",
+      "totalWaves": 1
+    },
+    "challenge_to_question_json": {
+      "path": "scripts/output/challenge_to_question.json"
+    },
+    "challenge_to_session_json": {
+      "path": "scripts/output/challenge_to_session.json"
+    },
+    "challenge_to_recommendation_json": {
+      "path": "scripts/output/challenge_to_recommendation.json"
+    },
+    "readiness_scoring_json": {
+      "path": "scripts/output/readiness_scoring.json",
+      "state": "CONSULTED"
+    }
+  },
+  "overallVerdict": "FAIL",
+  "summary": {
+    "totalEntitiesChecked": 214,
+    "totalLinksValidated": 3226,
+    "criticalCount": 2,
+    "warningCount": 181,
+    "infoCount": 0,
+    "passFailBreakdown": {
+      "check1_QS_totalLinks": 732,
+      "check1_QS_validLinks": 731,
+      "check1_QS_missingQIDs": 1,
+      "check1_QS_invalidFormats": 0,
+      "check1_QS_duplicateSessions": 63,
+      "check2_QR_totalLinks": 2382,
+      "check2_QR_validLinks": 2382,
+      "check2_QR_missingQIDs": 0,
+      "check2_QR_stale": 0,
+      "check3_QC_total": 35,
+      "check3_QC_missingQIDs": 0,
+      "check3_QC_bidirectionalFails": 0,
+      "check4_QCert_total": 77,
+      "check4_QCert_missingQIDs": 0,
+      "check4_QCert_stateMismatch": 0,
+      "check4_QCert_noHistory": 67
+    }
+  },
+  "findings": {
+    "critical": [
+      {
+        "type": "MISSING_QID",
+        "severity": "CRITICAL",
+        "sessionId": "3",
+        "qid": "P1-E-059",
+        "detail": "QID 'P1-E-059' referenced by session 3 but not found in question_history.json"
+      },
+      {
+        "type": "MISSING_UBIQUITOUS_SESSION",
+        "severity": "CRITICAL",
+        "detail": "Session 'S89B' is referenced by all 35 challenges in challenge_registry.json and challenge_to_session.json but does not exist in session_registry.json"
+      }
+    ],
+    "warning": [
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "6",
+        "detail": "Session ID '6' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2026",
+        "detail": "Session ID '2026' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2026",
+        "detail": "Session ID '2026' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "5",
+        "detail": "Session ID '5' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "1.",
+        "detail": "Session ID '1.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2.",
+        "detail": "Session ID '2.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "3.",
+        "detail": "Session ID '3.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "4.",
+        "detail": "Session ID '4.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "5.",
+        "detail": "Session ID '5.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "1.",
+        "detail": "Session ID '1.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2.",
+        "detail": "Session ID '2.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "3.",
+        "detail": "Session ID '3.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "1.",
+        "detail": "Session ID '1.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2.",
+        "detail": "Session ID '2.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "3.",
+        "detail": "Session ID '3.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "4.",
+        "detail": "Session ID '4.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "5.",
+        "detail": "Session ID '5.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "6.",
+        "detail": "Session ID '6.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "7.",
+        "detail": "Session ID '7.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2026",
+        "detail": "Session ID '2026' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2026",
+        "detail": "Session ID '2026' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "1.",
+        "detail": "Session ID '1.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2.",
+        "detail": "Session ID '2.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "3.",
+        "detail": "Session ID '3.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "4.",
+        "detail": "Session ID '4.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "5.",
+        "detail": "Session ID '5.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "6.",
+        "detail": "Session ID '6.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "7.",
+        "detail": "Session ID '7.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "8.",
+        "detail": "Session ID '8.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "9.",
+        "detail": "Session ID '9.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "10.",
+        "detail": "Session ID '10.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "1.",
+        "detail": "Session ID '1.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2.",
+        "detail": "Session ID '2.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "3.",
+        "detail": "Session ID '3.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "4.",
+        "detail": "Session ID '4.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "5.",
+        "detail": "Session ID '5.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "6.",
+        "detail": "Session ID '6.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "7.",
+        "detail": "Session ID '7.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "8.",
+        "detail": "Session ID '8.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "1.",
+        "detail": "Session ID '1.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2.",
+        "detail": "Session ID '2.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "3.",
+        "detail": "Session ID '3.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "4.",
+        "detail": "Session ID '4.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "5.",
+        "detail": "Session ID '5.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "6.",
+        "detail": "Session ID '6.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "7.",
+        "detail": "Session ID '7.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "8.",
+        "detail": "Session ID '8.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "1.",
+        "detail": "Session ID '1.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2.",
+        "detail": "Session ID '2.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "3.",
+        "detail": "Session ID '3.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "4.",
+        "detail": "Session ID '4.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "5.",
+        "detail": "Session ID '5.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "6.",
+        "detail": "Session ID '6.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "7.",
+        "detail": "Session ID '7.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "8.",
+        "detail": "Session ID '8.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "9.",
+        "detail": "Session ID '9.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "10.",
+        "detail": "Session ID '10.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "11.",
+        "detail": "Session ID '11.' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "S723",
+        "detail": "Session ID 'S723' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "S723",
+        "detail": "Session ID 'S723' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "S723",
+        "detail": "Session ID 'S723' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "S726",
+        "detail": "Session ID 'S726' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "DUPLICATE_SESSION_ID",
+        "severity": "WARNING",
+        "sessionId": "2026",
+        "detail": "Session ID '2026' appears multiple times in session_registry.json"
+      },
+      {
+        "type": "ORPHAN_SESSION_QID",
+        "severity": "WARNING",
+        "count": 21,
+        "sample": [
+          {
+            "qid": "P1-AC-002",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-AD-052",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-BD-014",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-BD-042",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-BD-047",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-CD-012",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-DD-006",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-E-R01",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R10",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-E-R11",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-E-R26",
+            "sessionCount": 1
+          },
+          {
+            "qid": "P1-E-R12",
+            "sessionCount": 3
+          },
+          {
+            "qid": "P1-E-R13",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R18",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R21",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R22",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R23",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R24",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R25",
+            "sessionCount": 2
+          },
+          {
+            "qid": "P1-E-R28",
+            "sessionCount": 2
+          }
+        ],
+        "detail": "21 QIDs in question_history have session references but are not in any session_registry session"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-CC1ECA89",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-CC1ECA89 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-42169D7F",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-42169D7F links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-53D73FDB",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-53D73FDB links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-5DEDA52E",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-5DEDA52E links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-73FBA8ED",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-73FBA8ED links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-F9057C5F",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-F9057C5F links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-22602334",
+        "sessionId": "S104",
+        "detail": "Challenge CH-22602334 links to session S104 which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-22602334",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-22602334 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-5F402774",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-5F402774 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-27CB2741",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-27CB2741 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-DD6AC127",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-DD6AC127 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-4A405E18",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-4A405E18 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-DEB509EA",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-DEB509EA links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-DCB4A848",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-DCB4A848 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-4A14030D",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-4A14030D links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-E129E08E",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-E129E08E links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-BC03C877",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-BC03C877 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-9FD50300",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-9FD50300 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-83CAEBA3",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-83CAEBA3 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-B330A24E",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-B330A24E links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-BDF0C60D",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-BDF0C60D links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-2A63A075",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-2A63A075 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-6044F487",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-6044F487 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-7BEEBD1E",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-7BEEBD1E links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-F3E8B19D",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-F3E8B19D links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-07EF5B50",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-07EF5B50 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-F94FB072",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-F94FB072 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-F94FB072",
+        "sessionId": "S17B",
+        "detail": "Challenge CH-F94FB072 links to session S17B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-3B28168D",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-3B28168D links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-3B28168D",
+        "sessionId": "S17B",
+        "detail": "Challenge CH-3B28168D links to session S17B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-0AA70362",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-0AA70362 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-0AA70362",
+        "sessionId": "S722A",
+        "detail": "Challenge CH-0AA70362 links to session S722A which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-7D9EF3BC",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-7D9EF3BC links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-EE8FC06C",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-EE8FC06C links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-EE8FC06C",
+        "sessionId": "S537",
+        "detail": "Challenge CH-EE8FC06C links to session S537 which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-DDAE4F96",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-DDAE4F96 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-DDAE4F96",
+        "sessionId": "S537",
+        "detail": "Challenge CH-DDAE4F96 links to session S537 which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-B5680FAC",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-B5680FAC links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-EACB8C9D",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-EACB8C9D links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-8B19A949",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-8B19A949 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_LINKED_SESSION_MISSING",
+        "severity": "WARNING",
+        "challengeId": "CH-90E9CA51",
+        "sessionId": "S89B",
+        "detail": "Challenge CH-90E9CA51 links to session S89B which does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_SESSION_MAPPING_ORPHAN",
+        "severity": "WARNING",
+        "sessionId": "S89B",
+        "challengeCount": 35,
+        "detail": "challenge_to_session.json maps session S89B -> 35 challenges, but session S89B does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_SESSION_MAPPING_ORPHAN",
+        "severity": "WARNING",
+        "sessionId": "S104",
+        "challengeCount": 1,
+        "detail": "challenge_to_session.json maps session S104 -> 1 challenges, but session S104 does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_SESSION_MAPPING_ORPHAN",
+        "severity": "WARNING",
+        "sessionId": "S17B",
+        "challengeCount": 2,
+        "detail": "challenge_to_session.json maps session S17B -> 2 challenges, but session S17B does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_SESSION_MAPPING_ORPHAN",
+        "severity": "WARNING",
+        "sessionId": "S722A",
+        "challengeCount": 1,
+        "detail": "challenge_to_session.json maps session S722A -> 1 challenges, but session S722A does not exist in session_registry.json"
+      },
+      {
+        "type": "CHALLENGE_SESSION_MAPPING_ORPHAN",
+        "severity": "WARNING",
+        "sessionId": "S537",
+        "challengeCount": 2,
+        "detail": "challenge_to_session.json maps session S537 -> 2 challenges, but session S537 does not exist in session_registry.json"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-021",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-021' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-022",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-022' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-023",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-023' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-024",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-024' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-025",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-025' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-041",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-041' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-049",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-049' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-052",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-052' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-060",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-060' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-061",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-061' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-066",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-066' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-EC-072",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-EC-072' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-010",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-010' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-014",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-014' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-016",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-016' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-025",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-025' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-028",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-028' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-035",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-035' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-036",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-036' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-042",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-042' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-046",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-046' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-051",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-051' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-058",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-058' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-066",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-066' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-071",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-071' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-072",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-072' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-073",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-073' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-074",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-074' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-ED-075",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-ED-075' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-006",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-006' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-007",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-007' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-010",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-010' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-015",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-015' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-020",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-020' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-025",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-025' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-026",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-026' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-031",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-031' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-036",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-036' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-043",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-043' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-048",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-048' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-053",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-053' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-058",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-058' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-063",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-063' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-068",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-068' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-073",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-073' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-074",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-074' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FC-075",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FC-075' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-001",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-001' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-006",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-006' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-011",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-011' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-016",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-016' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-021",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-021' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-026",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-026' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-027",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-027' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-030",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-030' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-031",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-031' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-033",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-033' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-034",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-034' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-043",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-043' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-049",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-049' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-054",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-054' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-059",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-059' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-064",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-064' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-069",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-069' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-073",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-073' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-074",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-074' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "CERT_NO_HISTORY",
+        "severity": "WARNING",
+        "waveId": "WAVE-WAVE_A-01",
+        "qid": "P1-FD-075",
+        "detail": "Wave WAVE-WAVE_A-01 includes QID 'P1-FD-075' with state 'Unprocessed' and no certification history"
+      },
+      {
+        "type": "C2S_ORPHAN_SESSION",
+        "severity": "WARNING",
+        "sessionId": "S104",
+        "detail": "challenge_to_session.json references session S104 which does not exist in session_registry.json"
+      },
+      {
+        "type": "C2S_ORPHAN_SESSION",
+        "severity": "WARNING",
+        "sessionId": "S17B",
+        "detail": "challenge_to_session.json references session S17B which does not exist in session_registry.json"
+      },
+      {
+        "type": "C2S_ORPHAN_SESSION",
+        "severity": "WARNING",
+        "sessionId": "S722A",
+        "detail": "challenge_to_session.json references session S722A which does not exist in session_registry.json"
+      },
+      {
+        "type": "C2S_ORPHAN_SESSION",
+        "severity": "WARNING",
+        "sessionId": "S537",
+        "detail": "challenge_to_session.json references session S537 which does not exist in session_registry.json"
+      }
+    ],
+    "info": []
+  },
+  "relationshipDetails": {
+    "check1_questionToSession": {
+      "description": "Question ↔ Session (Q→S)",
+      "methodology": "For each session in session_registry.json, verify every QID exists in question_history.json",
+      "totalSessionsScanned": 98,
+      "totalSessionsWithQIDs": 34,
+      "totalLinks": 732,
+      "validLinks": 731,
+      "invaliLinks": 1,
+      "missingQIDs": 1,
+      "invalidFormats": 0,
+      "duplicateSessionIDs": 63,
+      "uniqueQIDsReferenced": 544,
+      "uniqueQIDsInMaster": 2540,
+      "orphanSessionQIDs": 21
+    },
+    "check2_questionToRecommendation": {
+      "description": "Question ↔ Recommendation (Q→R)",
+      "methodology": "For each recommendation in recommendation_registry.json, verify every target QID exists",
+      "totalRecommendations": 4,
+      "totalLinks": 2382,
+      "validLinks": 2382,
+      "invalidLinks": 0,
+      "missingQIDs": 0,
+      "staleRecommendations": 0
+    },
+    "check3_questionToChallenge": {
+      "description": "Question ↔ Challenge (Q→C)",
+      "methodology": "For each challenge, verify QID exists and bidirectional mappings are consistent",
+      "totalChallenges": 35,
+      "missingQIDs": 0,
+      "bidirectionalFails": 0
+    },
+    "check4_questionToCertification": {
+      "description": "Question ↔ Certification Event (Q→Cert)",
+      "methodology": "For each certification wave, verify every planned QID exists in question_history.json",
+      "totalWaves": 1,
+      "totalItemsPlanned": 77,
+      "missingQIDs": 0,
+      "stateMismatches": 0,
+      "missingCertDates": 67
+    }
+  },
+  "additionalObservations": {
+    "masterIndexQIDCount": 2540,
+    "masterStates": {
+      "Certified": 2221,
+      "Archived": 242,
+      "Unprocessed": 77
+    },
+    "masterPacks": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 500,
+      "pack_d": 500,
+      "pack_e": 540
+    },
+    "s89bStatus": "MISSING — referenced by all 35 challenges but not in session_registry.json",
+    "note": "Challenge registry self-identifies as synthetic seed data: 'This registry contains synthetic seed data for development and testing. Real student challenge data will replace this in production.'"
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "session": "S809.1",
+  "title": "Seed Collision Audit — Domain E Cross-Pack Redundancy Analysis",
+  "generated_by": "Agent AA — Collision Auditor",
+  "date": "2026-07-26",
+  "summary": {
+    "total_seeds": 38,
+    "UNIQUE": 1,
+    "NEAR_DUPLICATE": 28,
+    "CONCEPT_OVERLAP": 9,
+    "DUAL_PRESENCE_conflicts": 10,
+    "cross_pack_symmetry_pairs": 5
+  },
+  "collision_classifications": {
+    "UNIQUE": [
+      {
+        "QID": "P1-ED-046",
+        "Topic": "code of conduct ethics",
+        "Rationale": "Only seed testing ethics/code of conduct; no counterpart in either pack"
+      }
+    ],
+    "NEAR_DUPLICATE": [
+      "P1-EC-004",
+      "P1-EC-008",
+      "P1-EC-014",
+      "P1-EC-020",
+      "P1-EC-021",
+      "P1-EC-023",
+      "P1-EC-024",
+      "P1-EC-028",
+      "P1-EC-031",
+      "P1-EC-040",
+      "P1-EC-041",
+      "P1-EC-049",
+      "P1-EC-052",
+      "P1-EC-060",
+      "P1-EC-061",
+      "P1-EC-066",
+      "P1-EC-072",
+      "P1-ED-001",
+      "P1-ED-010",
+      "P1-ED-014",
+      "P1-ED-025",
+      "P1-ED-028",
+      "P1-ED-035",
+      "P1-ED-042",
+      "P1-ED-058",
+      "P1-ED-064",
+      "P1-ED-066",
+      "P1-ED-073"
+    ],
+    "CONCEPT_OVERLAP": [
+      "P1-EC-022",
+      "P1-EC-025",
+      "P1-ED-016",
+      "P1-ED-036",
+      "P1-ED-051",
+      "P1-ED-071",
+      "P1-ED-072",
+      "P1-ED-074",
+      "P1-ED-075"
+    ]
+  },
+  "dual_presence_conflicts": [
+    {
+      "pair": 1,
+      "PackC_seed": "P1-EC-004",
+      "PackC_topic": "SoD design",
+      "PackD_seed": "P1-ED-074",
+      "PackD_topic": "reconciliation SoD",
+      "conflict_type": "both test segregation of duties application",
+      "recommended_replacement": "P1-EC-004"
+    },
+    {
+      "pair": 2,
+      "PackC_seed": "P1-EC-008",
+      "PackC_topic": "COSO framework",
+      "PackD_seed": "P1-ED-001",
+      "PackD_topic": "three lines defense",
+      "conflict_type": "both test COSO governance structure",
+      "recommended_replacement": "P1-ED-001"
+    },
+    {
+      "pair": 3,
+      "PackC_seed": "P1-EC-021",
+      "PackC_topic": "vendor SoD",
+      "PackD_seed": "P1-ED-064",
+      "PackD_topic": "vendor master file",
+      "conflict_type": "both test vendor-related controls",
+      "recommended_replacement": "P1-ED-064"
+    },
+    {
+      "pair": 4,
+      "PackC_seed": "P1-EC-023",
+      "PackC_topic": "IT access deprovisioning",
+      "PackD_seed": "P1-ED-010",
+      "PackD_topic": "least privilege",
+      "conflict_type": "both test IT access control principles",
+      "recommended_replacement": "P1-ED-010"
+    },
+    {
+      "pair": 5,
+      "PackC_seed": "P1-EC-024",
+      "PackC_topic": "app input control",
+      "PackD_seed": "P1-ED-051",
+      "PackD_topic": "password auth",
+      "conflict_type": "both test application-level IT controls",
+      "recommended_replacement": "P1-EC-024"
+    },
+    {
+      "pair": 6,
+      "PackC_seed": "P1-EC-028",
+      "PackC_topic": "bank reconciliation",
+      "PackD_seed": "P1-ED-074",
+      "PackD_topic": "reconciliation SoD",
+      "conflict_type": "both test reconciliation controls",
+      "recommended_replacement": "P1-EC-028"
+    },
+    {
+      "pair": 7,
+      "PackC_seed": "P1-EC-031",
+      "PackC_topic": "ERM risk appetite",
+      "PackD_seed": "P1-ED-016",
+      "PackD_topic": "ERM risk response",
+      "conflict_type": "both test COSO ERM framework",
+      "recommended_replacement": "P1-ED-016"
+    },
+    {
+      "pair": 8,
+      "PackC_seed": "P1-EC-040",
+      "PackC_topic": "IT general controls",
+      "PackD_seed": "P1-ED-035",
+      "PackD_topic": "data backup DR",
+      "conflict_type": "both test IT general control concepts",
+      "recommended_replacement": "P1-ED-035"
+    },
+    {
+      "pair": 9,
+      "PackC_seed": "P1-EC-041",
+      "PackC_topic": "management override",
+      "PackD_seed": "P1-ED-058",
+      "PackD_topic": "cost benefit",
+      "conflict_type": "both test internal control limitations",
+      "recommended_replacement": "P1-ED-058"
+    },
+    {
+      "pair": 10,
+      "PackC_seed": "P1-EC-060",
+      "PackC_topic": "tone at top",
+      "PackD_seed": "P1-ED-046",
+      "PackD_topic": "code of conduct ethics",
+      "conflict_type": "both test control environment principles",
+      "recommended_replacement": "P1-ED-046"
+    }
+  ],
+  "topic_frequency": {
+    "segregation_of_duties": {
+      "count": 4,
+      "QIDs": ["P1-EC-004", "P1-EC-021", "P1-EC-066", "P1-ED-075"]
+    },
+    "preventive_detective": {
+      "count": 2,
+      "QIDs": ["P1-EC-022", "P1-EC-025"]
+    },
+    "change_management": {
+      "count": 2,
+      "QIDs": ["P1-ED-036", "P1-ED-071"]
+    },
+    "monitoring": {
+      "count": 2,
+      "QIDs": ["P1-ED-028", "P1-ED-073"]
+    },
+    "fraud": {
+      "count": 2,
+      "QIDs": ["P1-EC-014", "P1-ED-072"]
+    },
+    "risk_erm": {
+      "count": 5,
+      "QIDs": ["P1-EC-031", "P1-ED-016", "P1-ED-042", "P1-EC-061", "P1-EC-041"]
+    },
+    "it_access": {
+      "count": 5,
+      "QIDs": ["P1-EC-023", "P1-EC-024", "P1-EC-040", "P1-ED-010", "P1-ED-035"]
+    },
+    "vendor_master": {
+      "count": 2,
+      "QIDs": ["P1-EC-021", "P1-ED-064"]
+    },
+    "bank_reconciliation": {
+      "count": 2,
+      "QIDs": ["P1-EC-028", "P1-ED-074"]
+    }
+  },
+  "cross_pack_symmetry": {
+    "count": 5,
+    "matched_pairs": [
+      {
+        "pair": 1,
+        "PackC_QID": "P1-EC-024",
+        "PackC_topic": "app input control",
+        "PackD_QID": "P1-ED-051",
+        "PackD_topic": "password auth",
+        "shared_topic_area": "IT application controls",
+        "stem_similarity": "high"
+      },
+      {
+        "pair": 2,
+        "PackC_QID": "P1-EC-028",
+        "PackC_topic": "bank reconciliation",
+        "PackD_QID": "P1-ED-074",
+        "PackD_topic": "reconciliation SoD",
+        "shared_topic_area": "bank reconciliation controls",
+        "stem_similarity": "high"
+      },
+      {
+        "pair": 3,
+        "PackC_QID": "P1-EC-031",
+        "PackC_topic": "ERM risk appetite",
+        "PackD_QID": "P1-ED-016",
+        "PackD_topic": "ERM risk response",
+        "shared_topic_area": "COSO ERM framework",
+        "stem_similarity": "high"
+      },
+      {
+        "pair": 4,
+        "PackC_QID": "P1-EC-041",
+        "PackC_topic": "management override",
+        "PackD_QID": "P1-ED-058",
+        "PackD_topic": "cost benefit",
+        "shared_topic_area": "internal control limitations",
+        "stem_similarity": "moderate"
+      },
+      {
+        "pair": 5,
+        "PackC_QID": "P1-EC-060",
+        "PackC_topic": "tone at top",
+        "PackD_QID": "P1-ED-046",
+        "PackD_topic": "code of conduct ethics",
+        "shared_topic_area": "control environment",
+        "stem_similarity": "moderate"
+      }
+    ]
+  }
+}

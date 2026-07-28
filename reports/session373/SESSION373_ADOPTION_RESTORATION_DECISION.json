@@ -1,0 +1,27 @@
+{
+  "session": "S373",
+  "board": "Adoption Restoration Board",
+  "timestamp": "2026-07-27T18:00:00Z",
+  "predecessors": ["S369 DL-026 Ground Truth", "S370 Queue Reconciliation", "S371 Remediation Execution", "S372 Governance Re-Certification"],
+
+  "executive_decision": "FULLY ADOPTED (RESTORED)",
+
+  "stop_conditions": {
+    "1_governance_guard": {"expected": "PASS", "actual": "32/32 PASS", "verdict": "PASS"},
+    "2_identity": {"expected": ">99%", "actual": "99.96%", "verdict": "PASS"},
+    "3_certification_drift": {"expected": "0 (authorized only)", "actual": "1 authorized drift: pack_c (S371 remediation)", "verdict": "PASS"},
+    "4_certified_dl008": {"expected": "0", "actual": "0", "verdict": "PASS"},
+    "5_certified_dl026": {"expected": "0", "actual": "0 (3 items remediated S371)", "verdict": "PASS"},
+    "6_baseline_inconsistency": {"expected": "None", "actual": "None — all 15 hashes recaptured S372", "verdict": "PASS"}
+  },
+
+  "dl029_postmortem": {
+    "discovery": "S368 found the S821 DL-026 queue of 37 items/56 slots was overwhelmingly DL-029 false positives",
+    "s369_ground_truth": "Direct line-level inspection of all 37 S821-claimed items proved 92% (34/37) were clean. Only 3 Certified items carried genuine DL-026, with 1 empty non-CC field each.",
+    "s821_comparison": "37 claimed → 3 genuine (8%). 34 items (92%) were DL-029 artifacts from the CC-before-QID window-scan bug.",
+    "impact": "DL-029 inflated the DL-026 inventory by more than 12×. The S821 'remediation queue' contained 34 authoring operations that would have targeted already-filled slots.",
+    "resolution": "3 genuine items remediated S371. 0 Certified DL-026 remaining. DL-029 documented as confirmed methodology defect."
+  },
+
+  "adoption_restoration_rationale": "The DL-026 blocker that prevented Framework v2 full adoption (per S822) was based on a 77-item claim inherited from DL-029-contaminated scans. Ground truth: 3 items (3 fields). All resolved. DL-008 resolved (S364). Governance guard 32/32 PASS. Certified pool 2,298 stable. Framework v2 is FIXED — the remaining content quality work (DL-013, DL-031, DL-032, Analyze/Evaluate gap) is non-blocking maturity work, not adoption-blocking defects."
+}

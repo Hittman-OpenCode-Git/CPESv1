@@ -1,0 +1,178 @@
+{
+  "session": "S114",
+  "timestamp": "2026-07-25",
+  "s111_guarded_speak": {
+    "intact": true,
+    "paths": {
+      "explain": {
+        "wired": true,
+        "source_label": "explain",
+        "location": "_explainAnswer() lines 438-442",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(lines, 'explain') : _speak(lines.join('\\n'))"
+      },
+      "wrong_choices": {
+        "wired": true,
+        "source_label": "wrong-choices",
+        "location": "_explainWrongChoices() lines 486-490",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(parts, 'wrong-choices') : _speak(parts.join('\\n'))"
+      },
+      "hint_case": {
+        "wired": true,
+        "source_label": "hint",
+        "location": "_provideHint() case path lines 534-539",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(caseHintText, 'hint') : _speak(caseHintText)"
+      },
+      "hint_mcq": {
+        "wired": true,
+        "source_label": "hint",
+        "location": "_provideHint() MCQ path lines 568-572",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(mcqHintText, 'hint') : _speak(mcqHintText)"
+      },
+      "simplify": {
+        "wired": true,
+        "source_label": "simplify",
+        "location": "_simplifyExplanation() lines 665-669",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(simplified, 'simplify') : _speak(simplified)"
+      },
+      "progress": {
+        "wired": true,
+        "source_label": "progress",
+        "location": "_getProgressInsight() lines 861-865",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(progressText, 'progress') : _speak(progressText)"
+      },
+      "weakness": {
+        "wired": true,
+        "source_label": "weakness",
+        "location": "_getWeaknessInsight() lines 981-985",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(weaknessText, 'weakness') : _speak(weaknessText)"
+      },
+      "summary": {
+        "wired": true,
+        "source_label": "summary",
+        "location": "_summarizeSession() lines 1095-1099",
+        "pattern": "isPilotEnvironment() ? _guardedSpeak(summaryText, 'summary') : _speak(summaryText)"
+      }
+    },
+    "pilot_gating": "isPilotEnvironment()",
+    "non_pilot_behavior_preserved": true
+  },
+  "s112_recommendation_gates": {
+    "intact": true,
+    "paths": {
+      "similar": {
+        "wired": true,
+        "source_label": "similar",
+        "location": "_recommendSimilar() line 1121",
+        "call": "_guardedRecommend([pick.QuestionID], 'similar')"
+      },
+      "next": {
+        "wired": true,
+        "source_label": "next",
+        "location": "_recommendNext() line 1198",
+        "call": "_guardedRecommend([pick.QuestionID], 'next')"
+      },
+      "recovery": {
+        "wired": true,
+        "source_label": "recovery",
+        "location": "_generateRecoverySet() line 1296",
+        "call": "_guardedRecommend(recoveryQids, 'recovery')"
+      }
+    },
+    "audit_only": true,
+    "audit_only_notes": "_guardedRecommend is called UNCONDITIONALLY (not gated by isPilotEnvironment). When pilot is off, it silently validates defect/certified gates and logs to _gateLog without user-visible output. When pilot is on, it additionally speaks blocking notes.",
+    "non_pilot_behavior_preserved": true
+  },
+  "s113_evidence_thresholds": {
+    "intact": true,
+    "validators": {
+      "_hasImprovingEvidence": {
+        "present": true,
+        "logic_correct": true,
+        "location": "line 3174",
+        "logic": "totalAttempts >= 4, (recentPct - accuracy) >= 15"
+      },
+      "_hasPersistentWeakEvidence": {
+        "present": true,
+        "logic_correct": true,
+        "location": "line 3181",
+        "logic": "totalAttempts >= 5, accuracy < 60"
+      },
+      "_hasDecliningEvidence": {
+        "present": true,
+        "logic_correct": true,
+        "location": "line 3186",
+        "logic": "totalAttempts >= 4, (recentPct - accuracy) <= -15"
+      },
+      "_hasUnstableEvidence": {
+        "present": true,
+        "logic_correct": true,
+        "location": "line 3193",
+        "logic": "totalAttempts >= 4, stability < 50"
+      },
+      "_hasHintDependentEvidence": {
+        "present": true,
+        "logic_correct": true,
+        "location": "line 3199",
+        "logic": "totalAttempts >= 4, hintTrend === 'increasing', accuracy >= 70"
+      },
+      "_hasDifficultySensitiveEvidence": {
+        "present": true,
+        "logic_correct": true,
+        "location": "line 3206",
+        "logic": ">=2 Easy, >=2 Difficult, gap >= 30%"
+      },
+      "_hasConfidenceEvidence": {
+        "present": true,
+        "logic_correct": true,
+        "location": "line 3222",
+        "logic": "total >= 4"
+      },
+      "_assessInsightEvidence": {
+        "present": true,
+        "aggregate": true,
+        "location": "line 3229",
+        "returns": "Object with 8 boolean flags (hasImproving, hasPersistentWeak, hasDeclining, hasUnstable, hasHintDependent, hasDifficultySensitive, hasConfidence, hasCrossSession) + sessionCount"
+      }
+    }
+  },
+  "safety_logs": {
+    "_safetyLog_present": true,
+    "_safetyLog_location": "_guardedSpeak() lines 3099-3101, read via _getSafetyLog() line 3152",
+    "_gateLog_present": true,
+    "_gateLog_location": "_guardedRecommend() lines 3134-3136, read via _getGateLog() line 3157",
+    "_logPilotUsage_present": true,
+    "_logPilotUsage_location": "line 3040-3057, captures sourceLabel, section, topic, qid, pilotActive, safetySafe, safetyViolations, gateSafe",
+    "_clearSafetyLogs_location": "line 3162 (clears both _safetyLog and _gateLog)",
+    "_clearPilotUsageLog_location": "line 3065"
+  },
+  "isPilotEnvironment_gating": {
+    "config_flag_checked": true,
+    "config_flag_name": "May.config.tutoringPilotEnabled",
+    "config_flag_default": false,
+    "config_flag_location": "line 13",
+    "env_var_checked": true,
+    "env_var_name": "CMA_MAY_PILOT",
+    "env_var_value_trigger": "'1'",
+    "env_var_location": "line 22",
+    "function_location": "lines 19-25",
+    "priority": "config flag checked first (short-circuits), then process.env"
+  },
+  "tutoring_safety_tests": {
+    "total": 74,
+    "pass": 74,
+    "fail": 0,
+    "result": "PASS",
+    "categories": {
+      "tutoring_guardrails": "10/10",
+      "hallucination_detection": "12/12",
+      "answer_leakage_detection": "8/8",
+      "S108_guarded_wiring": "12/12",
+      "S109_pilot_gating_logging": "9/9",
+      "S112_recommendation_gates": "8/8",
+      "S113_evidence_thresholds": "15/15"
+    }
+  },
+  "regression_found": false,
+  "overall_assessment": "PASS",
+  "summary": "All S111 (8 guarded-speak paths), S112 (3 guarded-recommend paths), and S113 (8 evidence-threshold validators) safety protections remain intact with zero regressions. isPilotEnvironment() gating is confirmed: tutoringPilotEnabled defaults to false (line 13), checks CMA_MAY_PILOT env var (line 22). Safety logging infrastructure (_safetyLog, _gateLog, _logPilotUsage) is fully wired. All 74 tutoring safety tests pass, covering: tutoring guardrails, hallucination detection, answer leakage detection, S108 guarded wiring, S109 pilot gating/logging, S112 recommendation gates, and S113 evidence thresholds."
+}

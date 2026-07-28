@@ -1,0 +1,41 @@
+{
+  "generated": "2026-07-26T22:05:28.440Z",
+  "modelVersion": "S306-UIQS-1.0",
+  "risks": [
+    {
+      "id": "UIQS-R1",
+      "category": "Certification",
+      "severity": "CRITICAL",
+      "description": "Domain E: 178 uncertified (59.7%)",
+      "mitigation": "Prioritize Domain E certification with EW authoring."
+    },
+    {
+      "id": "UIQS-R2",
+      "category": "Certification",
+      "severity": "HIGH",
+      "description": "Domain F: 150 uncertified (65.2%)",
+      "mitigation": "Second-priority after Domain E."
+    },
+    {
+      "id": "UIQS-R3",
+      "category": "Quality",
+      "severity": "HIGH",
+      "description": "46 P0 items (UIQS<35, uncertified)",
+      "mitigation": "Top 100 list provides exact sequencing."
+    },
+    {
+      "id": "UIQS-R4",
+      "category": "Quality",
+      "severity": "MEDIUM",
+      "description": "MCQ avg 68.7 vs Case avg 69.7",
+      "mitigation": "Case-bank EW authoring per S305."
+    },
+    {
+      "id": "UIQS-R5",
+      "category": "Instructional",
+      "severity": "MEDIUM",
+      "description": "539 items with EW<30%",
+      "mitigation": "EW authoring pipeline for sub-30% items."
+    }
+  ]
+}

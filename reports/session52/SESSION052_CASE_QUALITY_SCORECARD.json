@@ -1,0 +1,133 @@
+{
+  "session": "52",
+  "title": "Case Study Quality Scorecard",
+  "date": "2026-07-28",
+  "scoring_framework": {
+    "dimensions": [
+      { "id": 1, "name": "2026 CMA Alignment", "weight": "20%", "max": 100 },
+      { "id": 2, "name": "Data Accuracy", "weight": "20%", "max": 100 },
+      { "id": 3, "name": "Difficulty Calibration", "weight": "10%", "max": 100 },
+      { "id": 4, "name": "Quality & Realism", "weight": "20%", "max": 100 },
+      { "id": 5, "name": "Section Applicability", "weight": "15%", "max": 100 },
+      { "id": 6, "name": "Analyze/Evaluate Validity", "weight": "15%", "max": 100 }
+    ],
+    "certification_thresholds": {
+      "CERTIFIED": "No Critical Issues + Average Score >= 85 + No Data Errors",
+      "CONDITIONAL": "Average Score 70-84 + Minor Issues Only",
+      "FAILED": "Critical Data Error OR Major Misalignment OR Severe Difficulty Error"
+    }
+  },
+  "pack_scores": {
+    "CASE_PACK_1": {
+      "cases": 25,
+      "overall_average": 78,
+      "dimension_averages": {
+        "Blueprint_Alignment": 88,
+        "Data_Accuracy": 95,
+        "Difficulty_Calibration": 65,
+        "Quality_Realism": 82,
+        "Section_Applicability": 90,
+        "Analyze_Evaluate_Validity": 68
+      },
+      "CERTIFIED_count": 0,
+      "CONDITIONAL_count": 25,
+      "FAILED_count": 0,
+      "strongest_area": "Data Accuracy — zero arithmetic errors in all spot-checked calculations; ASC standards correctly applied",
+      "weakest_area": "Difficulty Calibration — 12/25 cases templated; cognitive progression out of order in many"
+    },
+    "CASE_PACK_2": {
+      "cases": 25,
+      "overall_average": 72,
+      "dimension_averages": {
+        "Blueprint_Alignment": 83,
+        "Data_Accuracy": 92,
+        "Difficulty_Calibration": 62,
+        "Quality_Realism": 72,
+        "Section_Applicability": 90,
+        "Analyze_Evaluate_Validity": 60
+      },
+      "CERTIFIED_count": 0,
+      "CONDITIONAL_count": 25,
+      "FAILED_count": 0,
+      "strongest_area": "Data Accuracy — no calculation errors found in spot-checks",
+      "weakest_area": "Quality & Realism — 16/25 cases Draft with missing metadata; many generic 'Management' stakeholders"
+    },
+    "CASE_PACK_3": {
+      "cases": 25,
+      "overall_average": 68,
+      "dimension_averages": {
+        "Blueprint_Alignment": 83,
+        "Data_Accuracy": 92,
+        "Difficulty_Calibration": 58,
+        "Quality_Realism": 65,
+        "Section_Applicability": 90,
+        "Analyze_Evaluate_Validity": 55
+      },
+      "CERTIFIED_count": 0,
+      "CONDITIONAL_count": 25,
+      "FAILED_count": 0,
+      "strongest_area": "Data Accuracy — no arithmetic errors; ASC standards correctly applied",
+      "weakest_area": "Quality & Realism — 21/25 cases Draft; CBQ4-A2 CompanyName corrupted; missing metadata widespread"
+    }
+  },
+  "cross_pack_summary": {
+    "total_cases": 75,
+    "CERTIFIED": 0,
+    "CONDITIONAL": 75,
+    "FAILED": 0,
+    "overall_average": 73,
+    "dimension_averages": {
+      "Blueprint_Alignment": 85,
+      "Data_Accuracy": 93,
+      "Difficulty_Calibration": 62,
+      "Quality_Realism": 73,
+      "Section_Applicability": 90,
+      "Analyze_Evaluate_Validity": 61
+    },
+    "critical_findings": 2,
+    "high_severity_findings": 5,
+    "medium_severity_findings": 12
+  },
+  "positive_highlights": [
+    "Zero arithmetic errors in any spot-checked numerical question across all 3 packs",
+    "Zero missing CognitiveLevel fields — all 400 items classified",
+    "31 Production cases at or near Gold Standard quality with 2,000+ character explanations",
+    "All 6 blueprint domains (A-F) have 11-14 cases each — balanced coverage",
+    "Strong business realism in Production cases (named companies, specific scenarios, proper ASC citations)",
+    "ASC 606, ASC 842, ASC 350, ASC 450, ASC 460, ASC 740, ASC 805 all correctly applied",
+    "All SectionTags correctly map to content domain — zero cross-domain contamination",
+    "All 400 items carry question_state: 'Certified' — learner delivery pool is structurally valid"
+  ],
+  "primary_issues_blocking_certification": [
+    {
+      "issue": "Uniform difficulty (DL-032)",
+      "impact": "214/400 items (53.5%) labeled 'Difficult' vs. 25% CAQS target. Only 3 items (0.8%) 'Easy' vs. 15% target.",
+      "affected_cases": 17,
+      "remediation": "Recalibrate per CAQS §6.1 difficulty distribution"
+    },
+    {
+      "issue": "Missing metadata fields",
+      "impact": "44/75 cases have ProductionStatus: 'Draft'. CompanyName, Industry, CompanyType missing from 4 cases.",
+      "affected_cases": 44,
+      "remediation": "Populate from scenario text during certification pass"
+    },
+    {
+      "issue": "ExhibitCount < 2",
+      "impact": "Violates CASE_STUDY_GOLD_STANDARD.md §3.4 minimum exhibit requirement.",
+      "affected_cases": 34,
+      "remediation": "Add second exhibit or reclassify"
+    },
+    {
+      "issue": "Cognitive progression violations",
+      "impact": "Items not sequenced Apply→Analyze→Evaluate. Template artifact, not content defect.",
+      "affected_cases": 48,
+      "remediation": "Re-order items within case"
+    },
+    {
+      "issue": "Generic stakeholders",
+      "impact": "21 cases use 'Management' instead of named stakeholder with specific role.",
+      "affected_cases": 21,
+      "remediation": "Assign named stakeholder roles from scenario text"
+    }
+  ]
+}

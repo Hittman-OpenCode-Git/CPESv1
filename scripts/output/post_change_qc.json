@@ -1,0 +1,69 @@
+{
+  "post_change_qc": {
+    "governance_guard": {
+      "pass": true,
+      "test_count": 51,
+      "fail_count": 0
+    },
+    "parse_validation": {
+      "pass": true,
+      "failures": []
+    },
+    "qid_counts": [
+      {
+        "pack": "pack_a",
+        "expected": 500,
+        "actual": 500,
+        "pass": true
+      },
+      {
+        "pack": "pack_b",
+        "expected": 500,
+        "actual": 500,
+        "pass": true
+      },
+      {
+        "pack": "pack_c",
+        "expected": 500,
+        "actual": 500,
+        "pass": true
+      },
+      {
+        "pack": "pack_d",
+        "expected": 500,
+        "actual": 500,
+        "pass": true
+      },
+      {
+        "pack": "pack_e",
+        "expected": 540,
+        "actual": 540,
+        "pass": true
+      }
+    ],
+    "certified_counts": [
+      {
+        "pack": "pack_a",
+        "count": 500
+      },
+      {
+        "pack": "pack_b",
+        "count": 500
+      },
+      {
+        "pack": "pack_c",
+        "count": 423
+      },
+      {
+        "pack": "pack_d",
+        "count": 423
+      },
+      {
+        "pack": "pack_e",
+        "count": 540
+      }
+    ],
+    "timestamp": "2026-07-28T18:34:50.612Z",
+    "overall": "PASS"
+  }
+}

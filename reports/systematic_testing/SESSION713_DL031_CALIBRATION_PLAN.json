@@ -1,0 +1,1046 @@
+[
+  {
+    "qid": "P1B-A-099",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which cash flow is classified as an operating activity under GAAP?"
+  },
+  {
+    "qid": "P1B-A-105",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under GAAP, how are dividends received and interest paid classified on the cash flow statement?"
+  },
+  {
+    "qid": "P1B-A-115",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which creates a permanent difference between book and taxable income?"
+  },
+  {
+    "qid": "P1B-A-118",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under ASC 280, which quantitative threshold requires an operating segment to be separately reported?"
+  },
+  {
+    "qid": "P1B-A-119",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which transaction would require related party disclosure?"
+  },
+  {
+    "qid": "P1B-A-134",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under ASC 280, which condition permits aggregation of two operating segments?"
+  },
+  {
+    "qid": "P1B-A-142",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under GAAP, how are research and development costs generally treated?"
+  },
+  {
+    "qid": "P1B-B-101",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which is typically the first budget prepared in a master budget?"
+  },
+  {
+    "qid": "P1B-B-102",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which is an operating budget?"
+  },
+  {
+    "qid": "P1B-B-116",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "In regression analysis, R-squared measures:"
+  },
+  {
+    "qid": "P1B-B-120",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which time series component represents long-term direction in data?"
+  },
+  {
+    "qid": "P1B-B-127",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Budget slack occurs when managers:"
+  },
+  {
+    "qid": "P1B-B-133",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Continuous budgeting means:"
+  },
+  {
+    "qid": "P1B-B-142",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A cost that changes in total in proportion to changes in activity level is a:"
+  },
+  {
+    "qid": "P1B-B-149",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Management by exception means managers:"
+  },
+  {
+    "qid": "P1B-B-152",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which sales forecasting method relies on expert judgment rather than quantitative data?"
+  },
+  {
+    "qid": "P1B-B-155",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A correlation coefficient of -0.90 between two variables indicates:"
+  },
+  {
+    "qid": "P1B-B-164",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "In regression analysis, the standard error of the estimate measures:"
+  },
+  {
+    "qid": "P1B-B-170",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which is an example of a quantitative forecasting method?"
+  },
+  {
+    "qid": "P1B-B-173",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "When setting budget standards, which approach best balances motivation and achievability?"
+  },
+  {
+    "qid": "P1B-B-192",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "When deciding whether to investigate a variance, management should consider:"
+  },
+  {
+    "qid": "P1B-B-193",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "In regression analysis, a t-statistic greater than 2 for a coefficient indicates:"
+  },
+  {
+    "qid": "P1B-B-198",
+    "pack": "B",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "When preparing a cash budget, a company with a cash deficiency should first consider:"
+  },
+  {
+    "qid": "P1-AC-047",
+    "pack": "C",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Violethill classifies a long-lived asset as held for sale. How should it be measured?"
+  },
+  {
+    "qid": "P1-AC-048",
+    "pack": "C",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Waverly classifies a long-lived asset as held for sale. How should it be measured?"
+  },
+  {
+    "qid": "P1-AD-036",
+    "pack": "D",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Kirkwood incurs debt issuance costs when issuing bonds payable. How should these costs be presented?"
+  },
+  {
+    "qid": "P1E-A-001",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "What is the primary purpose of the balance sheet?"
+  },
+  {
+    "qid": "P1E-A-002",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Under U.S. GAAP, which is NOT a current asset?"
+  },
+  {
+    "qid": "P1E-A-004",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Revenue is recognized under ASC 606 when:"
+  },
+  {
+    "qid": "P1E-A-006",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Which cost flow assumption results in the lowest net income during rising prices?"
+  },
+  {
+    "qid": "P1E-A-009",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Which of the following is a cash flow from investing activities?"
+  },
+  {
+    "qid": "P1E-A-012",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A contingent liability is recognized when:"
+  },
+  {
+    "qid": "P1E-A-013",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "The LIFO reserve represents:"
+  },
+  {
+    "qid": "P1E-A-015",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Available-for-sale debt securities are measured at:"
+  },
+  {
+    "qid": "P1E-A-016",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Held-to-maturity securities are measured at:"
+  },
+  {
+    "qid": "P1E-A-017",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Equity method is used when the investor has:"
+  },
+  {
+    "qid": "P1E-A-019",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Cash dividends reduce which equity account?"
+  },
+  {
+    "qid": "P1E-A-021",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Cumulative preferred stock means:"
+  },
+  {
+    "qid": "P1E-A-025",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A deferred tax liability arises when:"
+  },
+  {
+    "qid": "P1E-A-026",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A deferred tax asset is reduced by a valuation allowance when:"
+  },
+  {
+    "qid": "P1E-A-033",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under the accrual basis, expenses are recognized when:"
+  },
+  {
+    "qid": "P1E-A-039",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under U.S. GAAP, bond issue costs are:"
+  },
+  {
+    "qid": "P1E-A-044",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Equity securities with readily determinable fair values are measured at:"
+  },
+  {
+    "qid": "P1E-A-046",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Unrealized holding gains on available-for-sale debt securities are reported in:"
+  },
+  {
+    "qid": "P1E-A-047",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under U.S. GAAP, software development costs are capitalized:"
+  },
+  {
+    "qid": "P1E-A-056",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under U.S. GAAP, short-term obligations expected to be refinanced are classified as:"
+  },
+  {
+    "qid": "P1E-A-058",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under U.S. GAAP, a restructuring liability is recognized when:"
+  },
+  {
+    "qid": "P1E-A-060",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Additional paid-in capital represents:"
+  },
+  {
+    "qid": "P1E-A-064",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which characteristic enhances relevance of financial information?"
+  },
+  {
+    "qid": "P1E-A-070",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Under IFRS, inventory write-downs can be reversed when:"
+  },
+  {
+    "qid": "P1E-A-074",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "ASC 820 establishes a fair value hierarchy with how many levels?"
+  },
+  {
+    "qid": "P1E-A-075",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Level 1 fair value inputs are:"
+  },
+  {
+    "qid": "P1E-A-076",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A contract asset under ASC 606 is recognized when:"
+  },
+  {
+    "qid": "P1E-A-077",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "A contract liability under ASC 606 is recognized when:"
+  },
+  {
+    "qid": "P1E-B-003",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which cost changes in total proportionally with activity?"
+  },
+  {
+    "qid": "P1E-B-015",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Budgetary slack occurs when managers:"
+  },
+  {
+    "qid": "P1E-B-016",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "What is the core focus of Kaizen budgeting?"
+  },
+  {
+    "qid": "P1E-B-017",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Rolling budgets are also called:"
+  },
+  {
+    "qid": "P1E-B-023",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "The coefficient of determination (R-squared) measures:"
+  },
+  {
+    "qid": "P1E-B-024",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Mean absolute deviation measures:"
+  },
+  {
+    "qid": "P1E-B-032",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Controllable costs are:"
+  },
+  {
+    "qid": "P1E-B-034",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Common costs are:"
+  },
+  {
+    "qid": "P1E-B-037",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "When excess capacity exists, the optimal transfer price is:"
+  },
+  {
+    "qid": "P1E-B-046",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A low R-squared in regression indicates:"
+  },
+  {
+    "qid": "P1E-B-047",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "The high-low method uses which two data points?"
+  },
+  {
+    "qid": "P1E-B-051",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "What is the primary limitation of a static budget?"
+  },
+  {
+    "qid": "P1E-C-001",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Standard costs are:"
+  },
+  {
+    "qid": "P1E-C-008",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Fixed overhead volume variance measures:"
+  },
+  {
+    "qid": "P1E-C-018",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "The balanced scorecard includes which perspectives?"
+  },
+  {
+    "qid": "P1E-C-020",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Customer perspective measures include:"
+  },
+  {
+    "qid": "P1E-C-041",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A favorable labor efficiency variance indicates:"
+  },
+  {
+    "qid": "P1E-D-012",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Departmental overhead rates are:"
+  },
+  {
+    "qid": "P1E-D-015",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Unit-level activities are performed:"
+  },
+  {
+    "qid": "P1E-D-023",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Joint costs are allocated to:"
+  },
+  {
+    "qid": "P1E-D-026",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Relevant costs are:"
+  },
+  {
+    "qid": "P1E-D-027",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Sunk costs are:"
+  },
+  {
+    "qid": "P1E-D-033",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A product should be processed further when:"
+  },
+  {
+    "qid": "P1E-E-008",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "COSO ERM adds which objective?"
+  },
+  {
+    "qid": "P1E-E-014",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which is a detective control?"
+  },
+  {
+    "qid": "P1E-E-015",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Tone at the top refers to:"
+  },
+  {
+    "qid": "P1E-E-018",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "An internal control deficiency occurs when:"
+  },
+  {
+    "qid": "P1E-E-022",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "A firewall is a:"
+  },
+  {
+    "qid": "P1E-F-005",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Big data volume refers to:"
+  },
+  {
+    "qid": "P1E-F-007",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Big data variety refers to:"
+  },
+  {
+    "qid": "P1E-F-023",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "The NIST Cybersecurity Framework core functions are:"
+  },
+  {
+    "qid": "P1E-F-027",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "COBIT is a framework for:"
+  },
+  {
+    "qid": "P1E-B-066",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "The sales mix variance measures the effect of:"
+  },
+  {
+    "qid": "P1E-B-071",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A coefficient of determination (R-squared) of 0.85 means:"
+  },
+  {
+    "qid": "P1E-B-082",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Standard error of the estimate measures:"
+  },
+  {
+    "qid": "P1E-B-089",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which is a quantitative forecasting method?"
+  },
+  {
+    "qid": "P1E-B-092",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Which lever controls divisional behavior in decentralized organizations?"
+  },
+  {
+    "qid": "P1E-B-098",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Which budget is NOT an operating budget?"
+  },
+  {
+    "qid": "P1E-C-046",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "The balanced scorecard internal process perspective measures:"
+  },
+  {
+    "qid": "P1E-C-057",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Mix variance arises when:"
+  },
+  {
+    "qid": "P1E-C-058",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Yield variance measures:"
+  },
+  {
+    "qid": "P1E-C-064",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Nonfinancial performance measures are important because:"
+  },
+  {
+    "qid": "P1E-D-047",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "In process costing, transferred-in costs are:"
+  },
+  {
+    "qid": "P1E-D-051",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "When practical capacity is used for overhead rate:"
+  },
+  {
+    "qid": "P1E-D-059",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Activity driver in ABC measures:"
+  },
+  {
+    "qid": "P1E-E-040",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Physical controls over assets are:"
+  },
+  {
+    "qid": "P1E-E-049",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "COSO ERM has how many components?"
+  },
+  {
+    "qid": "P1E-F-069",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Smart contracts are:"
+  },
+  {
+    "qid": "P1E-C-066",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "A strategy map visually represents:"
+  },
+  {
+    "qid": "P1E-C-079",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Leading indicators in BSC are also called:"
+  },
+  {
+    "qid": "P1E-C-080",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Lagging indicators in BSC are also called:"
+  },
+  {
+    "qid": "P1E-C-083",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Cycle time is a:"
+  },
+  {
+    "qid": "P1E-C-084",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "First-pass yield is a:"
+  },
+  {
+    "qid": "P1E-C-086",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Variance analysis is part of which BSC perspective?"
+  },
+  {
+    "qid": "P1E-C-088",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Target costing is most effective when applied:"
+  },
+  {
+    "qid": "P1E-D-063",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Traditional costing typically uses which cost driver?"
+  },
+  {
+    "qid": "P1E-D-064",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "ABC is more accurate than traditional costing when:"
+  },
+  {
+    "qid": "P1E-D-066",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Kanban is a:"
+  },
+  {
+    "qid": "P1E-D-071",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Engineering estimates of costs are based on:"
+  },
+  {
+    "qid": "P1E-D-073",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Prime costs are:"
+  },
+  {
+    "qid": "P1E-E-075",
+    "pack": "E",
+    "oldDiff": "Moderate",
+    "oldScore": 3,
+    "newDiff": "Moderate-Easy",
+    "newScore": 2,
+    "stem": "Mandatory vacations are a:"
+  },
+  {
+    "qid": "P1E-C-099",
+    "pack": "E",
+    "oldDiff": "Difficult",
+    "oldScore": 4,
+    "newDiff": "Moderate",
+    "newScore": 3,
+    "stem": "Revenue variance is favorable when:"
+  }
+]

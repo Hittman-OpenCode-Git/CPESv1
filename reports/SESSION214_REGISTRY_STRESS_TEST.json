@@ -1,0 +1,111 @@
+{
+  "session": "S214",
+  "title": "Registry Authority Stress Test",
+  "date": "2026-07-27",
+  "orchestrator": "stewardship-orchestrator",
+  "status": "HALTED",
+  "stop_condition": "Registry authority conflict + Duplicate registry creation",
+  "stop_conditions_fired": [
+    {
+      "condition": "Registry authority conflict",
+      "detected_in": "5 of 6 registries have duplicate ownership paths",
+      "severity": "HIGH"
+    },
+    {
+      "condition": "Duplicate registry creation",
+      "detected_in": "Question Registry: 4+ competing sources; Session Registry: 7 parallel tracking systems",
+      "severity": "HIGH"
+    }
+  ],
+  "registries": [
+    {
+      "registry": "Question Registry",
+      "authoritative_source": "pack_*_corrected.js (source); MASTER_QUESTION_REGISTRY.md (generated)",
+      "single_source_confirmed": false,
+      "duplicate_paths_found": true,
+      "duplicate_evidence": [
+        "MASTER_QUESTION_REGISTRY.md: 2,995/2,975 entries (self-contradictory)",
+        "registry/QUESTION_REGISTRY_INDEX.md: 2,884 entries",
+        "CURRENT_BASELINES.md: 2,540 entries (2,298 certified)",
+        "registry/packs/*.md: 10 per-pack registries",
+        "registry/domains/*.md: 7 per-domain registries",
+        "scripts/output/question_health.json",
+        "scripts/output/question_history.json",
+        "reports/MasterQuestionRegistry.csv: 885KB CSV copy"
+      ],
+      "notes": "Highest duplication in workspace. Count discrepancy spans 1,300 items across generations."
+    },
+    {
+      "registry": "Session Registry",
+      "authoritative_source": "scripts/output/session_registry.json",
+      "single_source_confirmed": false,
+      "duplicate_paths_found": true,
+      "duplicate_evidence": [
+        "scripts/output/session_registry.json: 40 sessions",
+        "scripts/output/session_packages/: 729 JSON package files",
+        "reports/session_status/: 184 MD report files",
+        "knowledge/REVISION_HISTORY.md: chronological entries",
+        "scripts/output/session_package_index.json",
+        "scripts/output/session_intelligence.json"
+      ],
+      "notes": "Three independent parallel tracking systems. No cross-consistency validation between JSON, packages, and MD reports."
+    },
+    {
+      "registry": "Challenge Registry",
+      "authoritative_source": "scripts/output/challenge_registry.json",
+      "single_source_confirmed": false,
+      "duplicate_paths_found": true,
+      "duplicate_evidence": [
+        "scripts/output/challenge_registry.json: 35 CH- entries",
+        "knowledge/DEFECT_LIBRARY.md: 36 DL- entries + 2 tracked notes",
+        "Different ID namespaces (CH- vs DL-) for same entity class",
+        "Different status models and storage formats",
+        "Not 1:1 mapped"
+      ],
+      "notes": "DEFECT_LIBRARY and challenge_registry track the same entity class (content issues) with different namespaces."
+    },
+    {
+      "registry": "Recommendation Registry",
+      "authoritative_source": "scripts/output/recommendation_registry.json",
+      "single_source_confirmed": true,
+      "duplicate_paths_found": false,
+      "duplicate_evidence": [],
+      "notes": "Cleanest registry. 5 REC-IDs. routing.json is derived, not competing. But thin — only 5 records for 180+ sessions."
+    },
+    {
+      "registry": "Investigation Registry",
+      "authoritative_source": "scripts/output/investigation_registry.json",
+      "single_source_confirmed": false,
+      "duplicate_paths_found": true,
+      "duplicate_evidence": [
+        "scripts/output/investigation_registry.json: 19 INV- entries",
+        "reports/defect_sweeps/: 30 formal investigation reports",
+        "reports/systematic_testing/: 221 investigation-level artifact files",
+        "scripts/output/question_investigation.json"
+      ],
+      "notes": "19 registered investigations vs 251 actual investigation reports on disk. Severe undercount."
+    },
+    {
+      "registry": "Certification Registry",
+      "authoritative_source": "pack_*_corrected.js — question_state: \"Certified\" field",
+      "single_source_confirmed": false,
+      "duplicate_paths_found": true,
+      "duplicate_evidence": [
+        "Direct pack file grep: 2,298 Certified (authoritative)",
+        "CURRENT_BASELINES.md §2: 2,298 (matches)",
+        "SESSION_STATUS_2026-07-24.md: 2,031 (stale — 267 behind)",
+        "certification_candidates.json: 282 BLOCKED (40 false positives per DL-036)",
+        "readiness_scoring.json: 242 BLOCKED (authoritative per DL-036)",
+        "MASTER_QUESTION_REGISTRY.md: 2,270 (stale — 3 days behind)"
+      ],
+      "notes": "Most active authority conflict. DL-036: 40-item pipeline divergence. SESSION_STATUS 267 items behind. Pack files are the ultimate authority but no automated reconciliation."
+    }
+  ],
+  "summary": {
+    "registries_with_single_source": 1,
+    "registries_with_duplicate_ownership": 5,
+    "registries_total": 6,
+    "active_conflicts_documented": 4,
+    "overall_registry_integrity": "CONCERN"
+  }
+}

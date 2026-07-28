@@ -1,0 +1,69 @@
+{
+  "session": "711",
+  "timestamp": "2026-07-25T22:00:00",
+  "type": "Optional 700-series future issue register",
+  "purpose": "Document issues that may be addressed in future sessions without remediating them now",
+  "total_items": 5,
+  "items": [
+    {
+      "id": "ISSUE-001",
+      "qid": "P1-BC-094",
+      "field": "ExplanationWrongA",
+      "issue_type": "Cross-topic contamination (DL-010 / DL-016)",
+      "description": "EW_A text describes budgetary slack (P1-BC-095 topic) instead of explaining why standard costing is wrong for a sensitivity (what-if) analysis question. Text: 'A department consistently beating its budget by a wide margin suggests budget targets are set too low...'",
+      "source_session": "S710 (extraction phase, not remediated)",
+      "learner_pool_impact": "Medium — learners selecting Choice A on this Certified item see feedback about an unrelated topic",
+      "certification_blocking": "No per current rules (G-NEW-2 applies but was added S508)",
+      "recommended_future_session": "DL-010/DL-016 targeted cleanup session",
+      "priority": "Medium",
+      "deferral_reason": "Not in S710 scope (targeted Certified DL-026 uplift only). Remediating EW_A would modify a non-target field with text already present. Requires careful rewrite to match item's actual topic."
+    },
+    {
+      "id": "ISSUE-002",
+      "qid": "P1-CD-022",
+      "field": "ExplanationWrongA, ExplanationWrongD",
+      "issue_type": "Explanation slot swap (DL-010)",
+      "description": "EW_A describes why an investment center is wrong (matching Choice D's text), and EW_D describes why a cost center is wrong (matching Choice A's text). The texts are substantively correct but attributed to the wrong choice letters.",
+      "source_session": "S710 (extraction phase, not remediated)",
+      "learner_pool_impact": "Medium — learners selecting Choice A see feedback about Choice D and vice versa",
+      "certification_blocking": "No per current rules, but pedagogically confusing",
+      "recommended_future_session": "DL-010 targeted cleanup",
+      "priority": "Medium",
+      "deferral_reason": "Not in S710 scope. Requires swapping two EW fields and possibly revising lead-in text to reference the correct choice."
+    },
+    {
+      "id": "ISSUE-003",
+      "issue_type": "DL-031 Difficulty recalibration — systematic difficulty inflation",
+      "description": "Estimated ~500 items across all 5 packs labeled Moderate (3) that test Bloom's Remember/Understand level. Pattern: Stem is a textbook definition, answer is the defined term. Should be Easy (1).",
+      "source_session": "S700 Layer 2 Difficulty Specialist",
+      "learner_pool_impact": "Low — difficulty labels affect session composition but not content correctness",
+      "certification_blocking": "No",
+      "recommended_future_session": "S712 — DL-031/DL-032 difficulty recalibration (after freeze confirmed)",
+      "priority": "Low",
+      "deferral_reason": "Non-blocking. 2,181 items are pedagogically sound. Difficulty labels are cosmetic metadata improvements."
+    },
+    {
+      "id": "ISSUE-004",
+      "issue_type": "DL-032 Case bank uniform difficulty — zero variance",
+      "description": "All 420 case items across 75 cases labeled Moderate with no differentiation. Statistically implausible. CAQS §6.1 targets Easy 15%, Moderate-Easy 20%, Moderate 30%, Difficult 25%, Very Difficult 10%.",
+      "source_session": "S700 Layer 1 Case Files Scan",
+      "learner_pool_impact": "Low — difficulty labels affect session composition",
+      "certification_blocking": "No",
+      "recommended_future_session": "S712 — DL-031/DL-032 difficulty recalibration",
+      "priority": "Low",
+      "deferral_reason": "Non-blocking. Same class as ISSUE-003. Case bank content is correct; difficulty labels need calibration."
+    },
+    {
+      "id": "ISSUE-005",
+      "issue_type": "Non-Certified DL-026 pool — 299 items with empty distractor slots",
+      "description": "299 non-Certified items (Archived/Unprocessed) have at least one empty non-CC ExplanationWrong slot. Outside the learner pool — not urgent.",
+      "source_session": "S708 cross-pack audit",
+      "learner_pool_impact": "None — all non-Certified items excluded from delivery",
+      "certification_blocking": "Yes — blocks certification of these items if promoted",
+      "recommended_future_session": "Future certification preparation wave before promoting Unprocessed→Certified",
+      "priority": "Low",
+      "deferral_reason": "Not in learner pool. Should be addressed when these items enter the certification pipeline."
+    }
+  ],
+  "summary": "5 optional issues documented. None are certification-blocking for the current learner pool. ISSUE-001 and ISSUE-002 are the most impactful (both affect Certified items with wrong-topic or swapped feedback). ISSUE-003 and ISSUE-004 are cosmetic difficulty calibrations. ISSUE-005 is a pre-certification preparation task."
+}

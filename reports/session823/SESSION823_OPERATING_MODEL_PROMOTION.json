@@ -1,0 +1,8 @@
+{
+  "session": "S823",
+  "title": "Operating Model Promotion",
+  "status": "DEFERRED",
+  "reason": "S822 did not pass — Framework v2 not promoted to FULLY ADOPTED. Automatic stop condition triggered: Certified DL-026 exists (77 items across Domain E+F).",
+  "activation_condition": "S822 FULLY ADOPTED decision",
+  "promotion_path": "Framework v2 → Default Operating Model (requires all 5 conditions CLOSED + all stop conditions PASS)"
+}

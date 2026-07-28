@@ -1,0 +1,546 @@
+{
+  "session": "S833",
+  "agent": "A",
+  "phase": "Discovery",
+  "task": "Weak coverage area review and expansion backlog foundation",
+  "sources_consumed": [
+    "S832_AGENTA_BLUEPRINT_BALANCE.json — sectional coverage, certification rates, cross-pack isomorphism",
+    "S832_AGENTB_BLUEPRINT_AUDIT.json — topic density, cognitive distribution, structural observations",
+    "S832_MASTER_GAP_REGISTER.json — 6 content gaps (CNT), 6 quality gaps (QLT), 5 calibration gaps (CAL)",
+    "S832_AGENT_D_EXPANSION_RANKING.json — impact/feasibility scores, dependency graph, 4-wave sequence"
+  ],
+  "baseline_state": {
+    "total_mcq_items": 2540,
+    "total_certified_mcq": 2298,
+    "certification_rate_pct": 90.5,
+    "non_certified_items": 242,
+    "non_certified_concentration": "Packs C (112) + D (111) + A (19), all in Sections E and F",
+    "sections_fully_certified": ["A", "B", "C", "D"],
+    "sections_partially_certified": ["E (88.2% certified)", "F (91.7% certified)"],
+    "packs_fully_certified": ["B (500/500)", "E (540/540)"],
+    "total_case_items": 625,
+    "certified_case_items": "~90 (scored_cases.js only — 15 cases fully certified)",
+    "uncertified_case_items": "~330 (scored_cases2-5, 60 cases)",
+    "difficulty_distribution": {
+      "easy": "0 items (0.0% vs. CAQS 15% target)",
+      "moderate_easy": "~1,200 items (47.2% vs. CAQS 20% target)",
+      "moderate": "1,226 items (48.3% vs. CAQS 30% target — 464 excess, likely 800-1,000 inflated)",
+      "difficult": "85 items (3.3% vs. CAQS 25% target — 550 shortfall)",
+      "very_difficult": "0 items (0.0% vs. CAQS 10% target — 254 shortfall)"
+    },
+    "blooms_distribution": {
+      "remember": "~127 items (5.0% vs. CAQS 5% target — likely under-represented due to Understand inflation)",
+      "understand": "~1,276 items (50.2% vs. CAQS 15% target — massively inflated by definition-match items)",
+      "apply": "~1,127 items (44.4% vs. CAQS 40% target — healthy but inflated)",
+      "analyze": "10 items (0.4% vs. CAQS 25% target — 625 shortfall)",
+      "evaluate": "0 items (0.0% vs. CAQS 15% target — 380 shortfall)"
+    },
+    "critical_quality_gaps": {
+      "dl021_pack_e_section_c": "95 Certified items — absent distractor ExplanationWrong fields (285 fields). Learner-facing CRITICAL — zero educational feedback on incorrect choices.",
+      "dl016_metadata_shift": "58 Certified items — wrong-topic distractor ExplanationWrong text due to dual-block +1 offset. Learner-facing CRITICAL — misleading feedback.",
+      "dl031_difficulty_inflation": "~800-1,000 items labeled Moderate that test Easy definition-match. Foundational calibration blocker — resolution unlocks precise sizing of all other gaps."
+    }
+  },
+  "expansion_backlog": {
+    "tier_1_immediate": [
+      {
+        "id": "EXP-001",
+        "rank_score": 81,
+        "name": "Moderate→Difficult recalibration sweep — post-DL-031 residual audit",
+        "type": "RECALIBRATE",
+        "category": "Difficulty Calibration",
+        "sections": "ALL",
+        "priority_sections": ["A:D (Cost Management — calculation-heavy, 0 Difficult items despite 96.2% certification, ~100 Moderate candidates)", "B (best Apply ratio at 65.6%, ~50 candidates)", "C (56.8% Apply, multi-variance items, ~50 candidates)"],
+        "item_count": 423,
+        "item_count_rationale": "After DL-031 removes ~800-1,000 inflated Easy items from the Moderate pool, the residual ~300-500 Moderates will be audited for genuine Difficult candidates. 423 is the pre-CAL-001 estimate. True surface will be 200-350 items post-DL-031.",
+        "pre_dl031_estimate": 423,
+        "post_dl031_estimate": "200-350",
+        "est_hours": 4,
+        "effort_breakdown": {
+          "per_item_audit": "~0.3 min/item (automated scan + dual-criterion filter)",
+          "batch_write": "~2 hours (423 items at 30/batch = 15 batches, metadata-only)",
+          "verification": "~1 hour (post-write distribution check)"
+        },
+        "methodology": "Dual-criterion filter: (Bloom's CognitiveLevel ≥ Apply) AND (CalculationComplexity ≥ Moderate OR DecisionComplexity ≥ Medium). Exclude definition-match items (DL-031 pattern). Reclassify Difficulty: 3→4, DifficultyScore: 3→4.",
+        "quality_gate": "Each batch verified: (1) CorrectChoice unchanged, (2) ExplanationCorrect unchanged, (3) Stem unchanged, (4) question_state unchanged, (5) governance-guard Rule 2 PASS. Metadata-only change — Difficulty + DifficultyScore fields.",
+        "dependencies": "CAL-001 / EXP-004 (DL-031 downgrade) must complete first — cannot reliably identify which Moderate items are genuinely Difficult until definition-match items are reclassified to Easy.",
+        "dependency_chain": {
+          "prerequisite": "EXP-004 (DL-031 definition-match → Easy)",
+          "blocks": ["EXP-006 (Section F certification — difficulty labels must be settled)", "EXP-007 (DL-031 coordinated sweep needs post-recalibration baseline)"]
+        },
+        "value_proposition": "Moves Difficult from 3.3% (85 items) to ~20% (~500 items). The single highest-ROI difficulty repair: 423 metadata writes produce 15+ percentage points of distribution improvement. Pack A Section D is the highest-priority target — currently 0 Difficult items in the most calculation-intensive section.",
+        "risk_level": "LOW (metadata-only, no content changes, dual-criterion filter prevents inappropriate upgrades)",
+        "risk_mitigation": "Dual-criterion filter prevents upgrading Moderate-Easy + long-stem items to Difficult. 10% spot-check sample before batch write.",
+        "success_metric": "Difficult items ≥ 450 across all packs. Pack A Section D has ≥ 25 Difficult items."
+      },
+      {
+        "id": "EXP-002",
+        "rank_score": 64,
+        "name": "DL-021 Pack E Section C distractor ExplanationWrong authoring",
+        "type": "AUTHOR",
+        "category": "Quality Fix — Learner Safety",
+        "sections": "E:C",
+        "item_count": 95,
+        "fields": 285,
+        "est_hours": 8,
+        "effort_breakdown": {
+          "pre_flight_state_verification": "~0.5 hour — confirm 95 items with absent EW fields (S828 verified 0 DL-021 on 100 items post-S71, but CURRENT_BASELINES.md §3 still shows OPEN — resolve discrepancy)",
+          "per_field_authoring": "~1.5 min/field (285 fields × 1.5 min = 7.1 hours)",
+          "batch_write": "~0.4 hour (4 batches of 24-28 items per governance-guard Rule 5)",
+          "post_write_verification": "~0.5 hour (boundary-aware DL-021 scan + governance guard)"
+        },
+        "authoring_standard": "Each field must: (1) reference the item's actual Choices (not metadata-block ChoiceA-D — avoids DL-016), (2) identify the specific error in that choice, (3) explain the misconception behind selecting it, (4) contrast with the correct approach, (5) minimum 50 characters, (6) Section C topics = Cost Management (process costing, ABC, joint products, CVP, relevant costing, variable vs. absorption), (7) cite appropriate accounting principle (ASC 330, ASC 350-40, COSO, etc.)",
+        "recommended_batch_size": 28,
+        "estimated_batches": 4,
+        "dependencies": "None (structurally independent of all recalibration work). Pre-flight: verify current DL-021 state — S828 claims 0 DL-021 (all 100 items remediated by S71), but CURRENT_BASELINES.md §3 still shows OPEN. If S828 is correct and 0 remain, this becomes a documentation-only closeout (0.5 hour). If 95 fields remain (stale CURRENT_BASELINES.md was correct), execute full 8-hour authoring.",
+        "value_proposition": "95 Certified items in active learner delivery pool currently show zero educational feedback on incorrect choices. Resolution secures the largest learner-facing quality gap in the pool. If S828 is authoritative (0 remaining), this item closes immediately as a documentation reconciliation — no authoring needed.",
+        "risk_level": "LOW (conditional — verify current state first). Content authoring risk is MEDIUM if 285 fields are genuinely needed.",
+        "success_metric": "0 DL-021 across all 100 Pack E Section C items. All 300 ExplanationWrong fields present and ≥ 50 chars (3 distractor fields × 100 items)."
+      },
+      {
+        "id": "EXP-003",
+        "rank_score": 64,
+        "name": "DL-016 metadata-block structural fix — scope verification + remediation",
+        "type": "STRUCTURAL_FIX",
+        "category": "Quality Fix — Learner Safety",
+        "sections": "A:E (primary), extend to Packs C/D dual-block sections if confirmed",
+        "item_count": 58,
+        "item_count_rationale": "DEFECT_LIBRARY.md DL-016 lists 58 Pack A Section E items. Post-S805 (2026-07-26): S805 resolved Pack A Section E. Remaining scope: Packs C/D dual-block architecture items. S832 QLT-002 notes 'Verification needed: re-confirm current DL-016 scope across Packs A/C/D before authoring any content.' The 58-item count is pre-S805 and stale. Phase 0 of this item: re-scan to determine current scope.",
+        "fields_to_remediate": "~171 ExplanationWrong fields (pre-S805 estimate). Post-S805: scope reduced. S829 (2026-07-27) remediated 99 fields across 57 items in Pack C/D Section F. Remaining DL-016 scope across other sections is TBD.",
+        "est_hours": 3,
+        "effort_breakdown": {
+          "phase_0_scope_verification": "~1 hour — boundary-aware within-object scan across Packs A/C/D for metadata ChoiceA-D vs. content Choices.A-D divergence. Must use within-object extraction (not forward-scan regex — avoids DL-029 false positives).",
+          "phase_1_remediation": "~1.5 hours — per-item metadata alignment. Content-block Choices.A-D is authoritative. Align metadata-block ChoiceA-D + ExplanationWrongA-D to match.",
+          "phase_2_verification": "~0.5 hour — governance guard + post-fix DL-016 scan."
+        },
+        "methodology": "Within-object extraction: extract both metadata-object and content-object per QuestionID boundary. Compare ChoiceA-D (metadata) to Choices.A-D (content). If mismatched → metadata ChoiceA-D is stale template residue. Author or align ExplanationWrong text to match content-block choices (the learner-facing text).",
+        "split_dual_block_care": "Pack A/C/D use dual-block architecture (metadata block + content block). Pack B uses single-object. Pack E uses single-object. When reading ExplanationWrong fields, always extract CorrectChoice from the SAME object as the EW fields — never from the other block.",
+        "dependencies": "None (structurally independent). Phase 0 scope verification must complete first — 58-item count is from pre-S805 era and confirmed stale by S829 Section F remediation.",
+        "value_proposition": "Certified items with wrong-topic distractor explanations — a learner who selects a wrong answer sees feedback about a completely different accounting topic. Fixing this restores correct educational feedback. Post-S805 and S829, remaining scope is likely Packs C/D Section E only (~50 items), dramatically reducing the effort from the initial 58-item estimate.",
+        "risk_level": "MEDIUM (dual-block architecture increases complexity — within-object extraction is mandatory).",
+        "success_metric": "0 DL-016 items across all packs. Metadata ChoiceA-D matches content Choices.A-D for all Certified items."
+      },
+      {
+        "id": "EXP-004",
+        "rank_score": 42,
+        "name": "DL-031 definition-match downgrade — foundational calibration sweep",
+        "type": "RECALIBRATE",
+        "category": "Calibration — Foundational Blocker",
+        "sections": "ALL — concentrated in Sections E (68.7% Understand) and F (84.5% Understand)",
+        "item_count": "800-1,000",
+        "item_count_rationale": "DL-031 pattern: stem contains textbook definition of concept X, correct answer is the term for concept X, lexical overlap between stem keywords and correct choice >50%. No application, analysis, or judgment required. 800-1,000 = the estimated population across all 5 packs. This is the same population as CAL-001 (Moderate→Easy) and CAL-002 (Understand→Remember) — one scan, one fix.",
+        "est_hours": 6,
+        "effort_breakdown": {
+          "detection_script": "~1 hour — Jaccard similarity scan: tokenize stem and correct-answer choice text, compute overlap. Flag items exceeding threshold (TBD, ~50%) AND having DifficultyScore ≥ 3.",
+          "sample_verification": "~1 hour — human review of 10% sample (80-100 flagged items) to calibrate threshold and confirm false-positive rate.",
+          "batch_write": "~3 hours — 800-1,000 items at 30/batch = 27-34 batches. Metadata-only: Difficulty→Easy, DifficultyScore→1, CognitiveLevel→Remember.",
+          "post_write_distribution_analysis": "~1 hour — re-compute Difficulty and Bloom's distributions, verify CAQS §6.1 targets now achievable."
+        },
+        "recalibration_actions": {
+          "difficulty": "Moderate (3) → Easy (1) for all confirmed definition-match items",
+          "difficulty_score": "3 → 1",
+          "cognitive_level": "Understand → Remember for all confirmed definition-match items (CAL-002 — same population, execute simultaneously)"
+        },
+        "detection_methodology": "Automated: tokenize stem text, tokenize correct-answer choice text, compute Jaccard similarity = |intersection| / |union|. If >50% overlap AND item has DifficultyScore ≥ 3 AND Bloom's level ≥ Understand → flag. Human review: verify the item genuinely tests recall (not application) before recalibrating. Batch verify 10% of flagged items to calibrate threshold.",
+        "impact_on_other_gaps": {
+          "unlocks": [
+            "TRUE Moderate pool size becomes visible (~300-500 vs. current 1,226)",
+            "TRUE Difficult shortfall becomes precise (not 550, likely 400-500 post-DL-031 + recalibration)",
+            "TRUE VDiff shortfall becomes precise (remains ~254 — zero existing VDiff, unaffected by DL-031)",
+            "TRUE Understand pool shrinks from 50.2% toward 15% target (same items as DL-031)",
+            "TRUE Remember pool grows from ~5% toward ~25-35% (matching the Easy-item population)"
+          ],
+          "downstream_effects": "Post-DL-031, the Moderate pool may shrink so much that there are FEWER than 762 genuinely Moderate items. Some Moderate-Easy items (2-step calculations) may need upward recalibration to Moderate to fill the vacuum. CAL-001 is not a one-way operation — it may trigger bidirectional recalibration."
+        },
+        "dependencies": "None (standalone). This is the FIRST operation in the calibration dependency chain per S832 CAL-001. All other Difficulty and Bloom's recalibration depends on DL-031 completing first.",
+        "dependency_chain": {
+          "prerequisite": "None (independent)",
+          "blocks": ["EXP-001 (Moderate→Difficult — needs true Moderate pool size)", "EXP-007 (DL-031 coordinated sweep — needs post-DL-031 baseline)", "CNT-002 sizing (Difficult new-content count sharpenable only post-DL-031)"]
+        },
+        "value_proposition": "Foundational calibration correction. The pool currently has 1,226 items labeled 'Moderate, Understand' when ~800-1,000 of them are actually 'Easy, Remember.' Fixing this makes every other Difficulty and Bloom's target achievable. Without DL-031, all new-content sizing is ±30% speculative. The counterintuitive insight: the pool is actually EASIER than the labels suggest — not harder.",
+        "risk_level": "MEDIUM-HIGH (large scale, automated detection risk). 800-1,000 items is the largest metadata operation ever executed on this repo.",
+        "risk_mitigation": "10% sample verification before batch writes. Calibrated Jaccard threshold via sample audit. Batch cap enforced (30/batch per Rule 5). Rollback plan: pre-write backup of all pack files. Post-write distribution verification.",
+        "success_metric": "Easy items ≥ 15% of pool (≥381). Moderate items ≤ 35% of pool (≤889). Definition-match items with DifficultyScore ≥ 3: 0."
+      }
+    ],
+    "tier_2_near_term": [
+      {
+        "id": "EXP-005",
+        "rank_score": 49,
+        "name": "Section F certification completion — close E/F certification gap",
+        "type": "CERTIFY",
+        "category": "Certification Wave",
+        "sections": "F (primary), E (secondary — Pack C Section E residual)",
+        "item_count": "~124 (Section F) + ~118 (Section E residual in Packs C/D) = ~242",
+        "item_count_rationale": "S832 Agent A: 242 non-certified items across Packs C (112), D (111), A (19). All in Sections E and F. Sections A-D are 100% certified across all 5 packs. Section F is 91.7% certified; Section E is 88.2% certified. Priority: Pack C/D Sections F first (highest % uncertified areas), then Pack C/D Sections E, then Pack A residual.",
+        "est_hours": 6,
+        "effort_breakdown": {
+          "per_item_certification": "~1-2 min/item (CAQS §1.6 six-dimension verification)",
+          "batch_write": "~2 hours (242 items at 28/batch = 9 batches)",
+          "governance_gate": "~0.5 hour (Rule 2 DL-008 check, Rule 6 DL-026 check for empty non-CC slots)"
+        },
+        "certification_requirements": {
+          "pre_cert_check": "All 6 dimensions per CAQS §1.6 at HIGH confidence: (1) Correctness — answer key verified, (2) Precision — unambiguous fact pattern, (3) Difficulty Calibration — post-EXP-001/EXP-004 labels settled, (4) Distractor Engineering — each distractor targets a real misconception, (5) Blueprint Alignment — maps to specific CSO LOS, (6) CMA Part 1 Relevance — in scope, not Part 2",
+          "governance_rule_2": "DL-008: ExplanationWrong[CorrectChoice] must be empty — ENFORCED by governance-guard.js Rule 2 BLOCK",
+          "governance_rule_6": "DL-026: non-CorrectChoice ExplanationWrong slots must be non-empty — ENFORCED by governance-guard.js Rule 6 BLOCK (S814)",
+          "blocking_defects": [
+            "DL-013 boilerplate (~163 fields in Pack C/D Sections E/F): must be authored before certification per QLT-003",
+            "DL-026 empty non-CC slots (~27 residual): must be filled before certification",
+            "DL-008: governance guard Rule 2 blocks certification if present — 0 verified by S722A/S802 Function constructor parse"
+          ]
+        },
+        "section_f_context": "Section F is the newest blueprint domain, 84.5% Understand level, 14.7% Apply, 0.3% Analyze. Certification will place definitional items into the learner pool (no quality regression — items are already correct, just untested for cognitive depth). The cognitive depth problem (definitional dominance) is addressed by EXP-010 (new Analyze items) and EXP-008 (topic gaps). Certification does not fix depth — it gates correctness.",
+        "dependencies": "EXP-001 (Moderate→Difficult) should complete first — difficulty labels must be settled before certifying. EXP-004 (DL-031) is a dependency of EXP-001, so Section F cert dependency chain is: EXP-004 → EXP-001 → EXP-005.",
+        "value_proposition": "Closes the 242-item certification gap. Brings all 5 packs to 100% certified (2,540/2,540). Section F — the fastest-evolving CMA domain — enters the learner pool. Combined with EXP-002 (DL-021) and EXP-003 (DL-016), the learner pool achieves zero critical quality defects.",
+        "risk_level": "MEDIUM (certifying items with DL-013 boilerplate or DL-026 empty slots would be a quality regression — pre-cert scan mandatory).",
+        "success_metric": "2,540/2,540 items Certified. All 5 packs at 100% certification. Section F certified rate: 100%. Governance guard: 27/27 PASS post-certification."
+      },
+      {
+        "id": "EXP-006",
+        "rank_score": 36,
+        "name": "New Evaluate items — scenario-based professional judgment (Phase 1: 75 items)",
+        "type": "AUTHOR",
+        "category": "New Content — Highest Cognitive Tier",
+        "sections": "A (ASC 842/740 judgment scenarios), D (make-or-buy, CVP decisions, pricing), E (ERM risk-response selection, control failure diagnosis), F (technology adoption recommendations)",
+        "item_count": 75,
+        "item_count_rationale": "Phase 1 of 380. Target highest-impact sections first. Evaluate = professional judgment, recommendation, and decision-making under uncertainty. These are the hardest items to design — each requires: (1) a scenario with competing alternatives, (2) four plausible distractors each targeting a distinct judgment error, (3) explanation that teaches the decision framework, not just the answer. 75 items is 20% of the 380 total — Phase 1 proves the template before scaling.",
+        "per_section_allocation": {
+          "A_asc_842_740_judgments": "15 items — Given a lease scenario with classification indicators, select the most appropriate accounting treatment. Given a deferred tax position with uncertainty, recommend the valuation allowance assessment.",
+          "D_cost_management_decisions": "20 items — Make-or-buy with qualitative factors (supplier reliability, capacity utilization, strategic fit). CVP scenario with multiple constraints (capacity, market, resource) — recommend optimal product mix.",
+          "E_erm_risk_response": "20 items — Given a risk assessment (likelihood × impact matrix), select the appropriate risk response (avoid/accept/reduce/share). Control failure diagnosis: given audit findings, recommend the most effective remedial control.",
+          "F_technology_adoption": "20 items — Given business requirements (cost, scalability, compliance, data sensitivity), recommend the appropriate technology (cloud vs. on-premise, RPA vs. full automation, specific analytics method)."
+        },
+        "est_hours": 30,
+        "effort_breakdown": {
+          "template_design": "~3 hours — prototype 5 Evaluate items across sections, establish the 4-plausible-distractor pattern for judgment items. Test with single-item certification pass.",
+          "per_item_authoring": "~20 min/item average (75 items × 20 min = 25 hours). Higher than Apply items (10-15 min) due to distractor engineering complexity. Each distractor must represent a distinct, realistic judgment error.",
+          "per_item_review": "Already included in authoring time — accounting review + psychometric review integrated per CAQS workflow",
+          "certification": "~2 hours (6-dimension verification per CAQS §1.6 across 75 items)"
+        },
+        "quality_requirements": {
+          "distractor_engineering": "Each Evaluate item needs 4 distractors that test different dimensions of judgment — not different calculation paths. Example targets: (D1) wrong decision framework applied, (D2) correct framework but wrong weighting of factors, (D3) ignores qualitative factors, (D4) selects technically correct but suboptimal recommendation.",
+          "explanation_standard": "Must teach the decision framework, not just state the answer. 'Why A is correct' = trace the full decision logic. 'Why B/C/D are wrong' = identify the specific judgment error in each.",
+          "cognitive_authenticity": "Items should feel like a controller presenting options to the CFO — not like a textbook asking 'which is correct?'"
+        },
+        "dependencies": "None (structurally independent of recalibration work). However, Agent D recommends completing VDiff authoring (EXP-009) first to build Evaluate authoring skill. Evaluate is VDiff + judgment — harder than VDiff alone.",
+        "value_proposition": "Evaluate is the highest-value cognitive tier — these items differentiate passing from failing CMA candidates. Current state: 0 Evaluate items across all 2,540. Phase 1 targets the sections where judgment scenarios are most natural (A/D/E/F). Phase 2 (remaining 305 items) follows once the Evaluate template is proven.",
+        "risk_level": "HIGH — hardest authoring task in the entire program. Distractor engineering for judgment items is qualitatively different from distractor engineering for calculation items.",
+        "success_metric": "75 Evaluate items in pool. All pass CAQS §1.6 six-dimension verification at HIGH confidence. Distractor quality: each distractor targets a distinct judgment error."
+      },
+      {
+        "id": "EXP-007",
+        "rank_score": 40,
+        "name": "New Very Difficult items — Sections B, C (Phase 1: 50 items)",
+        "type": "AUTHOR",
+        "category": "New Content — Difficulty Gap",
+        "sections": "B (master budget cascade, cash budget with constraints, flexible budget variance interpretation), C (multi-variance analysis, transfer pricing with tax, ROI/RI/EVA integration)",
+        "item_count": 50,
+        "item_count_rationale": "Phase 1 of 254. Sections B and C are the most calculation-intensive sections — natural fit for VDiff items requiring multi-step synthesis. 50 items = 20% of the 254 VDiff target. Phased approach: Phase 1 proves the VDiff template → Phase 2 (150 items, Tier 3) and Phase 3 (54 items) complete the VDiff pool.",
+        "per_section_allocation": {
+          "B_planning_budgeting_forecasting": "25 items — Master budget cascade with constraint (e.g., DM purchases limited by supplier capacity, DL hours limited by union contract). Cash budget with multiple borrowing/lending tranches. Flexible budget variance analysis requiring diagnosis of multiple interacting variances. Learning curve + pricing + capacity interaction.",
+          "C_performance_management": "25 items — Multi-variance decomposition (material price × quantity, labor rate × efficiency, OH spending × efficiency × volume) with interpretation. Transfer pricing with tax rate differentials and capacity constraints. ROI > residual income > EVA chain requiring calculation of all three from common data. Balanced scorecard KPI selection with contradictory indicators."
+        },
+        "est_hours": 20,
+        "effort_breakdown": {
+          "template_design": "~2 hours — design VDiff item templates: (1) 'cascade' template (solve A then use A to solve B then use B to solve C), (2) 'diagnosis' template (given variance pattern, identify most likely cause), (3) 'integration' template (calculate metric X, compare to benchmark Y, recommend action Z)",
+          "per_item_authoring": "~18 min/item (50 items × 18 min = 15 hours). VDiff items require multi-step derivations with internal consistency verification.",
+          "numerical_verification": "~2 hours — independent recalculation of all 50 items per CAQS §5.1",
+          "certification": "~1 hour (6-dimension verification)"
+        },
+        "vdiff_item_characteristics": {
+          "multi_step": "≥3 distinct calculation steps required before reaching the answer",
+          "synthesis": "Item requires combining 2+ distinct concepts (e.g., learning curve + budget + CVP)",
+          "judgment_element": "May include 'which interpretation is most appropriate' sub-component",
+          "distractor_engineering": "Distractors result from specific multi-step errors (wrong intermediate result, wrong formula variant, wrong rounding point)",
+          "time_expectation": "3-5 minutes per item (matching CMA exam VDiff item pacing)"
+        },
+        "dependencies": "EXP-001 (Moderate→Difficult) must complete first — VDiff recalibration from existing Difficult items provides candidate templates and benchmarks. EXP-004 (DL-031) is upstream of EXP-001, making the full dependency chain: CAL-001 → EXP-001 → EXP-005 (VDiff bridge) → EXP-009 (Phase 1 VDiff authoring).",
+        "value_proposition": "Creates the first genuine Very Difficult items in the question bank. Current state: 0 VDiff items. These 50 items provide candidates their first exposure to the hardest CMA exam questions. Sections B and C are where VDiff items naturally concentrate — budget interpretation and variance diagnosis are multi-step by nature.",
+        "risk_level": "MEDIUM (well-understood item type — calculation-heavy VDiff is easier to design than judgment-heavy Evaluate).",
+        "success_metric": "50 VDiff items in Sections B and C. All independently recalculated. DifficultyScore=5 confirmed. CAQS §6.1 VDiff target (10%) now at 2% (50/2,540)."
+      },
+      {
+        "id": "EXP-008",
+        "rank_score": 30,
+        "name": "Topic gap fill — ASC 842/740, predictive analytics, COSO ERM application depth",
+        "type": "AUTHOR",
+        "category": "New Content — Blueprint Alignment",
+        "sections": "A (ASC 842 leases, ASC 740 income taxes), F (predictive/prescriptive analytics depth), E (COSO ERM risk-response application)",
+        "item_count": 60,
+        "item_count_rationale": "20 items per gap area. These are high-ROI topic gaps: (1) ASC 842/740 are major FASB topics tested on CMA Part 1 — under-coverage creates blueprint alignment risk, (2) predictive analytics is increasingly tested — current 11 items are all Understand-level definitional, (3) COSO ERM has 21 items but all test framework recall, not risk-response application.",
+        "per_gap_allocation": {
+          "asc_842_leases": "10 items — Lessee classification (operating vs. finance), ROU asset and lease liability measurement, lease expense recognition patterns, short-term lease exemption, sale-leaseback. Mix: 5 Apply (calculation), 3 Analyze (interpretation), 2 Evaluate (classification judgment given borderline indicators).",
+          "asc_740_income_taxes": "10 items — Deferred tax assets/liabilities from temporary differences, valuation allowance assessment, effective tax rate reconciliation, uncertain tax positions (ASC 740-10), intraperiod tax allocation. Mix: 5 Apply, 3 Analyze, 2 Evaluate.",
+          "predictive_prescriptive_analytics": "20 items — Regression interpretation (coefficient meaning, R-squared), time-series forecasting (moving average vs. exponential smoothing selection), classification model evaluation (confusion matrix, precision/recall), simulation methods (Monte Carlo inputs/outputs), optimization (what-if analysis, goal seek). Mix: 10 Apply (method selection), 7 Analyze (output interpretation), 3 Evaluate (method recommendation given business problem).",
+          "coso_erm_application": "20 items — Risk appetite vs. risk tolerance scenario application, risk response selection (avoid/accept/reduce/share) for given business scenarios, ERM-strategy integration judgment, entity-level vs. process-level risk assessment, risk heat map interpretation and prioritization. Mix: 10 Apply, 5 Analyze, 5 Evaluate."
+        },
+        "est_hours": 24,
+        "effort_breakdown": {
+          "topic_research": "~4 hours — ASC 842/740 are complex standards with recent updates. Predictive analytics methods need current CMA exam emphasis verification.",
+          "per_item_authoring": "~17 min/item average (60 items × 17 min = 17 hours). Mix of Apply (10-15 min), Analyze (15-20 min), Evaluate (20-25 min).",
+          "expert_review": "~3 hours — ASC 842/740 items require accountant review for standard compliance. Analytics items require technology-domain review."
+        },
+        "dependencies": "None (independent of recalibration work). However, Evaluate items within this batch contribute to EXP-006 Evaluate target — synergy.",
+        "value_proposition": "Fills specific CSO topic gaps identified by Agent B's blueprint audit. ASC 842/740 and predictive analytics are current CMA exam emphasis areas. These 60 items close 4 of the 7 topic density gaps and 3 of the 4 depth gaps in the S832 blueprint audit.",
+        "risk_level": "MEDIUM (ASC 842/740 are complex standards — expert review required for correctness).",
+        "success_metric": "Blueprint audit shows zero major topic gaps. ASC 842, ASC 740, predictive analytics, and COSO ERM application each have ≥10 items with ≥2 at Analyze or Evaluate level."
+      }
+    ],
+    "tier_3_future": [
+      {
+        "id": "EXP-009",
+        "rank_score": 28,
+        "name": "Full case study certification sweep — scored_cases2-5",
+        "type": "CERTIFY",
+        "category": "Certification Wave — Large Scale",
+        "sections": "ALL (60 cases, ~330 items across scored_cases2-5)",
+        "item_count": 330,
+        "est_hours": 40,
+        "effort_breakdown": {
+          "per_case_certification": "~40 min/case (60 cases × 40 min = 40 hours). Each case requires: (1) exhibit data-consistency verification (row/column arithmetic, cross-exhibit consistency), (2) per-item 6-dimension verification per CAQS §1.6, (3) dependency-chain verification (items build on prior results correctly), (4) cognitive progression verification (numeric→select→multi→fill→match, Apply→Analyze→Evaluate)",
+          "dl032_recalibration_inline": "Difficulty labels assigned per-item during certification pass (not a separate pass). Saves ~10 hours vs. separate DL-032 recalibration.",
+          "exhibit_validation": "~0.5 case — ~30 hours total. Each exhibit's Headers + Rows must be internally consistent, numbers must trace to scenario text, no decorative data."
+        },
+        "per_file_plan": {
+          "scored_cases2.js": "15 cases, ~120 items. Estimated: 10 hours.",
+          "scored_cases3.js": "15 cases, ~120 items. Estimated: 10 hours.",
+          "scored_cases4.js": "15 cases, ~120 items. Estimated: 10 hours.",
+          "scored_cases5.js": "15 cases, ~75 items. Estimated: 6 hours."
+        },
+        "certification_adds": "~330 items to learner pool — increases total certified items from 2,298 MCQ + 90 case → 2,298 MCQ + 420 case. Cases are the highest-value practice format (integrated reasoning, realistic business scenarios). This is the single largest certification operation in the program.",
+        "dependencies": "EXP-004 (DL-031) and EXP-001 (Moderate→Difficult) for difficulty calibration context. DL-032 (case uniform difficulty) must be resolved during or before certification — currently all 330 case items are labeled Moderate with zero differentiation. Certification pass should assign genuine difficulty scores per-item inline.",
+        "value_proposition": "Certifies 60 cases (330 items) — the highest-value CMA preparation format. Cases test integrated reasoning across exhibits, much closer to the real CMA exam experience than standalone MCQs. Currently, only scored_cases.js (15 cases, 90 items) is in the learner pool. This sweep adds 4× the case content.",
+        "risk_level": "MEDIUM (large scale — 60 cases × 5-7 items each × full 6-dimension verification. Per-case exhibit validation is the bottleneck).",
+        "success_metric": "All 75 cases (15 + 60) Certified. Case pool at 100% certification. 420 case items in learner pool."
+      },
+      {
+        "id": "EXP-010",
+        "rank_score": 25,
+        "name": "New Analyze items — exhibit-based data interpretation (Phase 1: 150 items)",
+        "type": "AUTHOR",
+        "category": "New Content — Cognitive Depth",
+        "sections": "A (financial statement analysis, ratio interpretation), D (cost behavior diagnosis, variance pattern analysis), E (control failure scenario assessment), F (analytics output interpretation)",
+        "item_count": 150,
+        "item_count_rationale": "Phase 1 of 625. Analyze covers data interpretation, variance analysis, trend identification — core management accounting activities. Current: 10 Analyze items (0.4%). Strategy: some Analyze items can be created by adding exhibit dependency to existing Apply-level items (same numbers, require extraction from exhibits rather than direct fact-pattern). This reduces pure-new-content burden. 150 items = ~24% of the 625 shortfall. Phase 2 (remaining 475 items) in Tier 3+.",
+        "per_section_allocation": {
+          "A_financial_statement_analysis": "35 items — Given a set of financial statements (income statement, balance sheet, cash flow), calculate ratios AND interpret trends. 'What does a declining inventory turnover combined with rising gross margin suggest?' Multi-period ratio analysis requiring pattern recognition.",
+          "D_cost_management_diagnosis": "40 items — Given actual vs. budget cost reports, diagnose likely causes of cost behavior changes. Given a CVP graph or contribution margin report, identify which assumptions have changed. Given production volume and cost data over multiple periods, classify costs as fixed/variable/mixed using high-low method.",
+          "E_control_failure_scenarios": "35 items — Given a control narrative (description of a process with control points), identify which control is weakest. Given an audit finding, analyze which COSO component/principle is most directly implicated. Given a fraud risk assessment, analyze which controls would most effectively mitigate the identified risks.",
+          "F_analytics_output_interpretation": "40 items — Given regression output (coefficients, p-values, R-squared), interpret the model. Given a classification confusion matrix, calculate precision/recall and interpret model performance. Given a data visualization (described in text), identify the insight it communicates. Given multiple analytics outputs, analyze which method produced the most useful information."
+        },
+        "est_hours": 60,
+        "effort_breakdown": {
+          "exhibit_design": "~10 hours — Analyze items require exhibits (financial statements, cost reports, regression outputs, control narratives). Same item numbers but embedded in exhibits rather than direct text.",
+          "per_item_authoring": "~18 min/item (150 items × 18 min = 45 hours). 80 items adapted from existing Apply items (add exhibit dependency), 70 items newly authored.",
+          "cross_verification": "~5 hours — exhibit data consistency, answer key verification against exhibits"
+        },
+        "strategy": "Adapt ~80 items from existing pool: take Apply-level calculation items, embed the numerical inputs into an exhibit (table, financial statement, chart description), update the prompt to require finding the right numbers in the exhibit. This changes the cognitive demand from 'recall formula and plug numbers' to 'identify relevant data, select formula, calculate, interpret' — a genuine Apply → Analyze upgrade. The remaining 70 items are newly authored with designed exhibits.",
+        "dependencies": "None (independent of recalibration work). However, EXP-004 (DL-031) resolution helps identify which existing Apply items are good Analyze adaptation candidates (those with multi-step calculations, not definition-match).",
+        "value_proposition": "Builds the Analyze tier from 0.4% toward 25% target. Analyze is the most practical cognitive tier for management accountants — it's what controllers and FP&A professionals do daily. The 150 Phase 1 items provide the first meaningful exposure to data interpretation and pattern recognition in the question bank.",
+        "risk_level": "MEDIUM-HIGH (exhibit design is complex — each Analyze exhibit must be internally consistent, drawable from realistic business data, and support all 4 distractors).",
+        "success_metric": "Analyze items grow from 10 → 160. All 150 new items verified: exhibit data consistent, answer key matches exhibit-derived calculation, distractors target realistic interpretation errors."
+      },
+      {
+        "id": "EXP-011",
+        "rank_score": 24,
+        "name": "Very Difficult Phase 2 content creation — full 10% CAQS target",
+        "type": "AUTHOR",
+        "category": "New Content — VDiff Completion",
+        "sections": "ALL",
+        "item_count": 150,
+        "item_count_rationale": "Phase 2 of VDiff. After Phase 1 (EXP-009, 50 items in B/C), Phase 2 scales to sections A, D, E, F. Brings VDiff from 2.0% (50 items) to ~8% (200 items). Phase 3 (remaining 54 items) fills any residual gaps. VDiff = 254 total target per CAQS §6.1 (10% of 2,540).",
+        "per_section_allocation": {
+          "A_external_financial_reporting": "30 items — ASC 606 revenue recognition with multiple performance obligations and variable consideration. Statement of cash flows preparation from comparative balance sheets and income statement. Comprehensive financial ratio analysis requiring cross-statement integration. Pension accounting with corridor amortization.",
+          "D_cost_management": "40 items — Joint product costing with multiple split-off points and sell-or-process-further decisions. Service department allocation via reciprocal method. Comprehensive CVP with multiple products, capacity constraints, and tax effects. ABC with multiple cost pools, activity drivers, and unused capacity analysis.",
+          "E_internal_controls": "40 items — COSO-based control deficiency assessment requiring ranking of multiple findings by severity. Fraud risk assessment integrating the fraud triangle with specific control weaknesses. ERM risk-response selection where multiple risks interact. Internal audit finding prioritization given resource constraints.",
+          "F_technology_analytics": "40 items — Comprehensive analytics method selection: given business problem, data characteristics, and constraints, recommend the full analytics workflow (data preparation → method → validation → deployment). IT control assessment in a complex system architecture. Data governance framework design given regulatory requirements."
+        },
+        "est_hours": 60,
+        "effort_breakdown": {
+          "per_item_authoring": "~22 min/item (150 items × 22 min = 55 hours). VDiff items require careful multi-step derivations with internal consistency checks.",
+          "numerical_verification": "~3 hours — independent recalculation of all calculation items",
+          "certification": "~2 hours"
+        },
+        "dependencies": "EXP-009 (VDiff Phase 1) learnings on VDiff template design. EXP-001 and EXP-004 (difficulty calibration) for baseline context. EXP-006 (Evaluate items) design learnings — Evaluate and VDiff share some design patterns (multi-step, judgment-adjacent).",
+        "value_proposition": "Completes the VDiff tier from 0% → ~8% (200 items total across both phases). Phase 3 adds the final 54 items to reach the full 10% CAQS §6.1 target (254 items). Provides candidates comprehensive exposure to the hardest exam questions across all 6 blueprint domains.",
+        "risk_level": "MEDIUM (larger scale than Phase 1 but methodology proven).",
+        "success_metric": "VDiff items ≥ 200. All sections have VDiff items proportional to blueprint weight (A: 38, B: 51, C: 51, D: 51, E: 38, F: 25)."
+      }
+    ]
+  },
+  "effort_summary": {
+    "tier_1_immediate": {
+      "items_affected": "~1,576 (423 recalibrated + 95 quality fix + 58 structural fix + 800-1,000 recalibrated)",
+      "fields_authored": "~456 (285 DL-021 + 171 DL-016 — may reduce to 0 if S805/S828 resolved)",
+      "hours": 21,
+      "hours_breakdown": {
+        "EXP-001_recalibrate": 4,
+        "EXP-002_dl021": "8 (or 0.5 if S828 already resolved this)",
+        "EXP-003_dl016": 3,
+        "EXP-004_dl031": 6
+      },
+      "note": "EXP-002 and EXP-003 may reduce significantly if S805 (DL-016 Pack A Section E) and S828 (DL-021 closure) are authoritative. Best case: Tier 1 = 13 hours (EXP-001 + EXP-004 only)."
+    },
+    "tier_2_near_term": {
+      "items_affected": "~427 (242 certified + 75 new Evaluate + 50 new VDiff + 60 new topic fill)",
+      "fields_authored": "~300 distractor + 215 explanation fields across new items",
+      "hours": 80,
+      "hours_breakdown": {
+        "EXP-005_section_f_cert": 6,
+        "EXP-006_evaluate_phase1": 30,
+        "EXP-007_vdiff_phase1": 20,
+        "EXP-008_topic_gaps": 24
+      }
+    },
+    "tier_3_future": {
+      "items_affected": "~630 (330 case certified + 150 Analyze + 150 VDiff)",
+      "fields_authored": "~900 distractor + 480 explanation fields across new items",
+      "hours": 160,
+      "hours_breakdown": {
+        "EXP-009_case_cert_sweep": 40,
+        "EXP-010_analyze_phase1": 60,
+        "EXP-011_vdiff_phase2": 60
+      }
+    },
+    "total_program": {
+      "total_hours": 261,
+      "total_hours_range": "253 (best case, DL-021/016 resolved) to 261 (worst case, full 8h + 3h authoring)",
+      "total_item_operations": "~2,630 unique operations (recalibrations + authoring + certifications + structural fixes)",
+      "total_new_items_authored": 335,
+      "new_items_breakdown": "75 Evaluate + 50 VDiff Phase 1 + 60 Topic Gaps + 150 Analyze + 150 VDiff Phase 2 = 485. Overlap factored: some Evaluate items also fill topic gaps (synergy). Net new unique items: ~335.",
+      "total_certified_added": "~572 (242 Section E/F + 330 case items)",
+      "post_program_certified_pool": "~2,870 (2,298 current + 242 E/F cert + 330 case + 0-? subtract mergers — new items also become certified)",
+      "post_program_difficulty_distribution": {
+        "easy": "15-20% (post-DL-031, 800-1,000 items reclassified from Moderate)",
+        "moderate_easy": "~20% (target: 20%)",
+        "moderate": "~25% (target: 30% — possible shortage post-DL-031)",
+        "difficult": "~22% (target: 25% — EXP-001 423 recalibration + new content)",
+        "very_difficult": "~5-8% (target: 10% — EXP-009 Phase 1 + EXP-011 Phase 2 = 200 items)"
+      },
+      "post_program_blooms_distribution": {
+        "remember": "~25-35% (post-DL-031, 600-800 items reclassified from Understand)",
+        "understand": "~15-20% (target: 15% — shrinks from 50.2% to target range)",
+        "apply": "~30-35% (target: 40% — healthy)",
+        "analyze": "~6% (target: 25% — EXP-010 150 items, still 475 short)",
+        "evaluate": "~3% (target: 15% — EXP-006 75 items, still 305 short)"
+      }
+    }
+  },
+  "dependency_graph": {
+    "critical_path": [
+      "EXP-004 (DL-031 foundational downgrade)",
+      "EXP-001 (Moderate→Difficult recalibration, depends on EXP-004)",
+      "EXP-005 (VDiff bridge from existing items, depends on EXP-001)",
+      "EXP-007 (VDiff Phase 1 authoring, depends on EXP-005 for template design)",
+      "EXP-006 (Evaluate Phase 1, depends on EXP-007 for authoring skill)",
+      "EXP-011 (VDiff Phase 2, depends on EXP-007 learnings)"
+    ],
+    "parallel_streams": [
+      {
+        "stream_alpha": "EXP-004 → EXP-001 → EXP-005 (VDiff bridge) → EXP-007 (VDiff Phase 1)",
+        "stream_beta": "EXP-002 (DL-021) || EXP-003 (DL-016) — both independent, can run in parallel with Stream Alpha",
+        "stream_gamma": "EXP-008 (Topic gaps) || EXP-006 (Evaluate Phase 1, after EXP-007 completes)",
+        "stream_delta": "EXP-009 (Case cert sweep) || EXP-010 (Analyze Phase 1) || EXP-011 (VDiff Phase 2)"
+      }
+    ],
+    "blocker_dependency_matrix": {
+      "EXP-004": {"depends_on": [], "blocks": ["EXP-001", "EXP-005", "EXP-007"], "rationale": "All Difficulty recalibration depends on knowing the true Moderate pool size"},
+      "EXP-001": {"depends_on": ["EXP-004"], "blocks": ["EXP-005", "EXP-007"], "rationale": "VDiff recalibration and new VDiff authoring need settled difficulty baselines"},
+      "EXP-005": {"depends_on": ["EXP-001"], "blocks": ["EXP-007"], "rationale": "VDiff bridge proves template feasibility for Phase 1 authoring"},
+      "EXP-007": {"depends_on": ["EXP-005"], "blocks": ["EXP-006", "EXP-011"], "rationale": "VDiff authoring skill builds Evaluate authoring skill; Phase 1 learnings inform Phase 2"},
+      "EXP-002": {"depends_on": [], "blocks": [], "note": "Independent — resolved to documentation-only if S828 is authoritative"},
+      "EXP-003": {"depends_on": [], "blocks": [], "note": "Independent — scope significantly reduced by S805/S829"},
+      "EXP-006": {"depends_on": ["EXP-007"], "blocks": [], "note": "Can start in parallel with EXP-008/EXP-009 but benefits from VDiff template experience"},
+      "EXP-008": {"depends_on": [], "blocks": [], "note": "Fully independent — ASC 842/740 and predictive analytics authoring can start immediately"},
+      "EXP-009": {"depends_on": ["EXP-004"], "blocks": [], "note": "Case certification should wait for DL-032 difficulty calibration context"},
+      "EXP-010": {"depends_on": [], "blocks": [], "note": "Independent — Analyze item authoring can start immediately"},
+      "EXP-011": {"depends_on": ["EXP-007"], "blocks": [], "note": "Depends on Phase 1 learnings for template refinement"}
+    }
+  },
+  "execution_sequence_recommendation": {
+    "wave_0_pre_flight": [
+      "1. Resolve DL-021 state discrepancy: S828 says 0 DL-021 in Pack E Section C, CURRENT_BASELINES.md §3 says OPEN. Verify current file state. If S828 is correct, close EXP-002 as documentation-only (0.5h). If OPEN, proceed with full authoring.",
+      "2. Resolve DL-016 state discrepancy: S805 says Pack A Section E resolved, S829 says Pack C/D Section F resolved. Re-scan Packs A/C/D for remaining DL-016 scope. Adjust EXP-003 estimate accordingly.",
+      "3. Verify DL-008 certified count: SESSION_STATUS_2026-07-24 says 67, S722A/S802 verified 0 via Function constructor parse. Resolve before any certification waves proceed."
+    ],
+    "wave_1_immediate": [
+      "1. EXP-004 (DL-031 definition-match downgrade) — THE foundational blocker. Execute first. All downstream calibration depends on it.",
+      "2. EXP-002 + EXP-003 (DL-021 + DL-016 quality fixes) — execute in parallel with Stream Alpha if scope confirmed non-zero. Close as documentation-only if already resolved.",
+      "3. EXP-001 (Moderate→Difficult recalibration) — execute immediately after EXP-004 completes. The gap between EXP-004 completion and EXP-001 start should be ~1 session (for post-DL-031 distribution analysis)."
+    ],
+    "wave_2_short_term": [
+      "4. EXP-005 (Section F certification) — execute after EXP-001. Difficulty labels must be settled before certification.",
+      "5. EXP-008 (Topic gap fills) — execute in parallel with EXP-005. Independent of calibration work.",
+      "6. EXP-005 (VDiff bridge) — execute after EXP-001. Identify 50 existing Difficult+ items that genuinely test at VDiff complexity."
+    ],
+    "wave_3_medium_term": [
+      "7. EXP-007 (VDiff Phase 1 authoring — 50 items) — execute after VDiff bridge proves templates.",
+      "8. EXP-010 (Analyze Phase 1 authoring — 150 items) — execute in parallel with EXP-007. Independent workstream.",
+      "9. EXP-006 (Evaluate Phase 1 authoring — 75 items) — execute after EXP-007 completes. VDiff authoring builds Evaluate design skill."
+    ],
+    "wave_4_long_term": [
+      "10. EXP-009 (Case certification sweep — 330 items) — execute after difficulty baselines are settled.",
+      "11. EXP-011 (VDiff Phase 2 — 150 items) — execute after Phase 1 template refinement."
+    ]
+  },
+  "critical_risks_and_mitigations": {
+    "risk_1_dl031_false_positives": {
+      "risk": "EXP-004 Jaccard similarity scan at threshold >50% may produce false positives — marking genuinely Moderate items as Easy.",
+      "severity": "HIGH (inflates Easy pool, deflates Moderate pool, distorts downstream planning)",
+      "mitigation": "10% sample verification before batch write (80-100 items). Calibrate threshold on sample. If false-positive rate >5%, raise threshold to >60% or add secondary criterion (no multi-step calculation)."
+    },
+    "risk_2_concurrent_write_data_loss": {
+      "risk": "Multiple Wave 1-2 operations write to the same pack files. DL-019 (concurrent-write data loss) can silently overwrite remediation.",
+      "severity": "CRITICAL (lost remediation = learner pool risk)",
+      "mitigation": "Backup-before-write mandatory per BACKUP_PROTOCOL.md. Verify hash stability post-write. Exclusive session windows — no two agents writing to same pack file simultaneously. Write-lock protocol for all Tier 1-2 operations."
+    },
+    "risk_3_evaluate_distractor_engineering": {
+      "risk": "EXP-006 Evaluate items require 4 distractors targeting distinct judgment errors. Template-based authoring cannot produce these — each distractor must be pedagogically engineered.",
+      "severity": "HIGH (poor distractors = psychometrically weak items that don't discriminate)",
+      "mitigation": "Prototype 5 Evaluate items with expert review before scaling. Establish distractor design patterns (D1=wrong framework, D2=wrong weighting, D3=misses qualitative factor, D4=correct but suboptimal). Gate each batch through CAQS §1.6 at HIGH confidence."
+    },
+    "risk_4_case_exhibit_validation_bottleneck": {
+      "risk": "EXP-009 requires per-case exhibit data-consistency verification. 60 cases × ~3 exhibits each = ~180 exhibits. Each exhibit must be internally consistent (subtotals → totals, section references correct, no decorative data).",
+      "severity": "MEDIUM (time-consuming but well-understood work)",
+      "mitigation": "Batch cases by file (scored_cases2 → 3 → 4 → 5). Reuse DL-023 exhibit normalization methodology. Automate row/column checks where possible."
+    },
+    "risk_5_post_dl031_moderate_shortage": {
+      "risk": "After DL-031 reclassifies 800-1,000 Moderate items to Easy, the Moderate pool may shrink BELOW the 762 target (30%). Some of those 'Moderate' items were genuinely Moderate (multi-step calculations) — the net effect is unclear until DL-031 completes.",
+      "severity": "MEDIUM (distribution imbalance, not a learner-facing defect)",
+      "mitigation": "Post-DL-031, audit Moderate-Easy items for upward recalibration to Moderate. Items with 2-step calculations or one-step with distractors targeting common computation errors are Moderate-Easy→Moderate candidates. CAQS §6.1 target is aspirational — within 5pp of target is acceptable."
+    }
+  },
+  "s832_input_cross_validation": {
+    "content_gap_severity_alignment": {
+      "cnt001_vdiff_zero": "CRITICAL — confirmed by Agent B (0 VDiff across 2,534 items), Agent C (254 shortfall), Agent D (expansion candidate rank 1)",
+      "cnt002_difficult_shortfall": "CRITICAL — 85 current vs. 635 target. Partially addressable via EXP-001 recalibration (423 items). Remainder via new content.",
+      "cnt003_evaluate_zero": "CRITICAL — 0 Evaluate items. Cannot recalibrate (Evaluate tests judgment, not procedural knowledge). Requires new content.",
+      "cnt004_analyze_shortfall": "CRITICAL — 10 Analyze items vs. 635 target. Partially addressable via exhibit dependency adaptation (EXP-010). Remainder requires new content.",
+      "cnt005_asc842_740": "HIGH — Agent B found 14 lease accounting and 11 income tax items present (better than assumed). Gap is depth, not presence. Target 10-15 new items each.",
+      "cnt006_analytics_depth": "HIGH — Agent B found 91 AI/ML tokens but 84.5% Understand level. Gap is cognitive depth, not coverage. Target 20-30 Apply/Analyze items.",
+      "cnt007_erm_application": "HIGH — Agent B found 21 COSO ERM items but all test framework recall. Gap is application/Evaluate depth. Target 20 items with risk-response scenarios."
+    },
+    "quality_gap_state_verification": {
+      "qlt001_dl021_pack_e_section_c": "PENDING VERIFICATION — S828 says resolved (0 DL-021, S71 authored 264 fields). CURRENT_BASELINES.md §3 says OPEN. Wave 0 pre-flight must resolve.",
+      "qlt002_dl016_metadata_shift": "PENDING VERIFICATION — S805 says Pack A Section E resolved. S829 says Pack C/D Section F resolved. Remaining scope across Packs C/D Section E is TBD. Wave 0 pre-flight must re-scan.",
+      "qlt003_dl013_boilerplate": "CONFIRMED — 163 fields in Pack C/D Sections E/F. Blocks certification (EXP-005). Author during certification wave.",
+      "qlt004_dl025_residual": "CONFIRMED — 5 non-Certified items (P1-B-001/004/006/025 + D-070). Blocks certification. Author before certifying those items.",
+      "qlt005_dl026_non_certified": "CONFIRMED — ~27 residual non-Certified items. Fix during certification wave.",
+      "qlt006_dl032_case_difficulty": "CONFIRMED — 330 case items uniformly Moderate. Fix inline during EXP-009 case certification pass."
+    },
+    "calibration_gap_foundational_role": {
+      "cal001_dl031_foundational": "THE blocker. S832 Agent C: 'CAL-001 is the foundational blocker. Until resolved, all other Difficulty recalibration efforts and new-content sizing are speculative.' EXP-004 must execute first. No calibration or new-content sizing is reliable until DL-031 completes.",
+      "cal002_blooms_recalibration": "Same population as CAL-001 (600-800 items). Execute simultaneously with EXP-004. Bloom's labels not currently used for session composition (lower urgency than Difficulty).",
+      "cal003_pack_a_section_d_zero_difficult": "Resolved by EXP-001 (Moderate→Difficult sweep). Pack A Section D is the highest-priority target — currently 0 Difficult in the most calculation-intensive section.",
+      "cal005_case_difficulty_uniform": "Resolved inline during EXP-009 (case certification). Assign genuine difficulty labels per item based on cognitive demand analysis."
+    }
+  },
+  "key_metrics_post_program": {
+    "certification": "100% MCQ certified (2,540/2,540). 100% case certified (75/75 cases, ~420 items). Combined learner pool: ~2,960 items.",
+    "difficulty": "Easy: ≥15%. Moderate-Easy: ~20%. Moderate: ~25%. Difficult: ~20-25%. Very Difficult: ≥5%. Acceptable range: within 5pp of CAQS §6.1 targets.",
+    "blooms": "Remember: ≥5%. Understand: ≤20%. Apply: ≥30%. Analyze: ≥5% (target 25% — long tail). Evaluate: ≥2% (target 15% — long tail). Evaluate and Analyze are the hardest tiers to build — full CAQS targets require Phase 2+3 beyond this program.",
+    "quality": "0 DL-008, 0 DL-021, 0 DL-016, 0 DL-026 in Certified items. All distractor ExplanationWrong fields ≥50 chars and choice-specific. Zero learner-facing quality defects.",
+    "governance": "Governance guard 27/27 PASS. All 6 rules active (R2: DL-008 BLOCK, R3: Registry BLOCK, R5: 30-item cap BLOCK, R6: DL-026 BLOCK, R1: question_state WARN, R4: answer-key WARN)."
+  },
+  "message_to_s833_agent_b": "This backlog is pre-CAL-001 and carries significant uncertainty on Difficulty and Bloom's sizing. The critical path starts with EXP-004 (DL-031) — everything downstream depends on it. EXP-002 and EXP-003 may reduce to documentation-only if S805/S828/S829 are authoritative. Wave 0 pre-flight verification (3 state discrepancies) must complete before any writes proceed. Do not commit to specific item counts for CNT-001/CNT-002/CNT-004 until DL-031 completes — all post-DL-031 numbers are ±30% estimates."
+}

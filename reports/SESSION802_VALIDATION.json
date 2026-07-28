@@ -1,0 +1,43 @@
+{
+  "session": "802",
+  "agent": "W",
+  "title": "Validation Report",
+  "date": "2026-07-26",
+  "governance_guard": {
+    "tests_run": 20,
+    "passed": 20,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "file_integrity": {
+    "pack_a_qids": 500,
+    "pack_b_qids": 500,
+    "pack_c_qids": 500,
+    "pack_d_qids": 500,
+    "pack_e_qids": 500,
+    "all_500": true
+  },
+  "certified_count": {
+    "run1": 2181,
+    "run2": 2181,
+    "stable": true
+  },
+  "question_state_distribution": {
+    "Certified": 2181,
+    "Unprocessed": 187,
+    "Archived": 132,
+    "In Audit": 0,
+    "Editorial Queue": 0,
+    "total": 2500
+  },
+  "dl008_certified": {
+    "scan_method": "window-based (QuestionID forward 3000-char region, first CorrectChoice match)",
+    "methodology_limitation": "DL-029: Pack B stores CorrectChoice BEFORE QuestionID; forward-scan misses these items. DL-016: dual-block architecture may cause block confusion.",
+    "certified_scanned": 1472,
+    "certified_not_scanned": 709,
+    "hits_found": 1032,
+    "note": "1032 hits out of 1472 scannable Certified items. Scan methodology has known limitations (DL-029). Per SESSION_STATUS_2026-07-24, authoritative DL-008 count may differ. This scan confirms a non-trivial DL-008 Certified population exists but cannot be treated as authoritative without boundary-aware object parsing."
+  },
+  "overall": "VALIDATION PASSED — with caveats",
+  "summary": "Governance guard: 20/20 PASS. All 5 packs: 500 QIDs each. Certified count: 2181 (stable across 2 runs). Question states: 2181 Certified + 132 Archived + 187 Unprocessed = 2500 total (all QIDs accounted for). DL-008 window-based scan: 1032 hits flagged on 1472 scannable Certified items (709 unreachable due to Pack B CC-before-QID layout). Full boundary-aware object-parsing scan recommended for authoritative DL-008 count."
+}

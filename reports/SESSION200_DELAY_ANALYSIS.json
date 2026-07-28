@@ -1,0 +1,173 @@
+{
+  "session": "S200",
+  "agent": "E",
+  "title": "Certification Delay Analysis — Top Causes of Hold Decisions, Rework, and Late-Stage Discoveries",
+  "hold_causes": [
+    {
+      "cause": "DL-026: Empty distractor ExplanationWrong slots — no learner feedback for wrong answers",
+      "frequency": 5,
+      "sessions": ["S320", "S809", "S809.1", "S810.1", "S801"],
+      "resolution_time_estimate": "1-2 dedicated remediation sessions per section",
+      "preventability": "HARD_TO_PREVENT",
+      "detail": "Template rotation engine treated one distractor slot as CC slot, leaving it empty. 53 empty EW slots across 38 Domain E seeds alone. 1,005 items pool-wide. Rotation artifact from original authoring pipeline — not detectable without per-item field audit."
+    },
+    {
+      "cause": "Missing COSO citations (AccountingPrinciple field) — blocks CAQS §1.6.3 certification",
+      "frequency": 4,
+      "sessions": ["S320", "S809", "S809.1", "S810.1"],
+      "resolution_time_estimate": "~30 min per batch of 10 items (insertion-only)",
+      "preventability": "PREVENTABLE",
+      "detail": "All 38 Domain E seeds had no AccountingPrinciple field — cert-blocking. 37/38 needed COSO citation. Template pipeline did not populate this field during original authoring. Should have been added during CAQS metadata review gate (G5), not discovered at certification board readiness."
+    },
+    {
+      "cause": "Template rotation variant identification failure — CC values stale in seed inventory",
+      "frequency": 3,
+      "sessions": ["S320", "S319", "S809.1"],
+      "resolution_time_estimate": "2-3 sessions to rebuild ground-truth per section",
+      "preventability": "PREVENTABLE",
+      "detail": "S319 seed inventory listed stale CC values. Template rotation engine shifted CC assignments since inventory compilation. S320 remediation script applied fills to wrong variant copies → restored from backup → 0 progress. Required explicit line-number + QID + CC + slot-pattern triple-match. Remediation halted for one full session (S320) while ground-truth was re-established."
+    },
+    {
+      "cause": "DL-016: Metadata-block ChoiceA-D shifted +1 from content-block Choices.A-D",
+      "frequency": 2,
+      "sessions": ["S809.1", "S810.1"],
+      "resolution_time_estimate": "Requires per-item object-level parse + alignment before any EW authorship",
+      "preventability": "HARD_TO_PREVENT",
+      "detail": "Affects ALL 38 Domain E seeds per S809.1 Agent H. EW fields describe previous QID's choices (template +1 offset). Cannot author distractor explanations until metadata-content alignment is verified. Pack C P1-BC-094 has object merger issue (dual-block architecture) — identity absorbed into neighbor."
+    },
+    {
+      "cause": "DL-031: Difficulty Calibration Inflation — items labeled Moderate/Difficult that test Remember/Understand",
+      "frequency": 3,
+      "sessions": ["S809.1", "S810.1", "S801"],
+      "resolution_time_estimate": "Per-item review (~5 min each); ~500 items pool-wide",
+      "preventability": "PREVENTABLE",
+      "detail": "23/38 Domain E seeds (60.5%) overstated. 26 definition-match items (68%) at wrong difficulty. Template assigned difficulty by rotation position, not cognitive demand. All 10 Pack D 'Difficult' items inflated by 1-3 score points. Systematically invisible until S719 CL recalibration audit."
+    },
+    {
+      "cause": "CognitiveLevel over-assignment — Analyze/Evaluate labels on Understand/Apply items",
+      "frequency": 2,
+      "sessions": ["S809.1", "S810.1"],
+      "resolution_time_estimate": "Session-level recalibration (~1 session for 38 seeds)",
+      "preventability": "PREVENTABLE",
+      "detail": "19/38 seeds overstated (50%). 12 definition-match items should be Remember. Rotation pattern confirmed: CL assigned by template position, not cognitive demand. 48 of 58 items labeled Analyze are template clones (83%). Pool-wide: 1,604/2,425 items (66%) structurally misaligned."
+    },
+    {
+      "cause": "Cross-agent CorrectChoice discrepancies — 5 seeds with conflicting CC values",
+      "frequency": 2,
+      "sessions": ["S809.1", "S810.1"],
+      "resolution_time_estimate": "Pre-flight CC audit: 1 hour for 5 items",
+      "preventability": "HARD_TO_PREVENT",
+      "detail": "5 seeds (EC-008, EC-014, EC-066, EC-031, EC-072) had conflicting CorrectChoice values across agents. Resolution was MANDATORY before any EW authorship — writing distractor text against wrong CC nullifies all work. BLOCKED S809→S810 transition."
+    },
+    {
+      "cause": "DL-008: Non-empty ExplanationWrong[CorrectChoice] — governance guard Rule 2 BLOCK",
+      "frequency": 5,
+      "sessions": ["S320", "S809", "S801", "S805", "S506"],
+      "resolution_time_estimate": "Per-item: 10-15 min for mechanical clears, 20-30 min for editorial relocation",
+      "preventability": "PREVENTABLE",
+      "detail": "67 Certified items blocked from learner pool (May defect manifest). Pack C Section B densest cluster (54 items). Systematic CC rotation artifact with ~75% CC-offset. EW[CC] non-empty blocks governance-guard Rule 2 certification gate. Interacts with DL-029: scan false-positives inflated the count, but genuine items remain."
+    },
+    {
+      "cause": "DL-013: Template boilerplate distractor explanations — no educational value",
+      "frequency": 3,
+      "sessions": ["S320", "S809.1", "S810.1"],
+      "resolution_time_estimate": "~5 min per field (authoring + review); ~851 fields remaining",
+      "preventability": "PREVENTABLE",
+      "detail": "8 boilerplate slots in 5 Pack D seeds (Domain E). Pattern: 'represents a plausible misconception... A candidate may select this option by misapplying...' Zero educational value. Blocks D5 (Explanation Quality) certification dimension. ~851 fields remaining pool-wide in non-Certified items."
+    },
+    {
+      "cause": "EC length below threshold — explanations too short for certification standard",
+      "frequency": 2,
+      "sessions": ["S320", "S810.1"],
+      "resolution_time_estimate": "~15 min per enrichment (add formula + business interpretation)",
+      "preventability": "PREVENTABLE",
+      "detail": "12 Pack C seeds have EC < 200 chars. Template pipeline produced terse explanations. CAQS §4.2 requires formula with substitution + business interpretation. Discovered at readiness scoring, not during initial authoring."
+    }
+  ],
+  "late_stage_discoveries": [
+    {
+      "defect": "DL-030: CorrectChoice answer-key errors in 5 Certified items",
+      "discovered_at_stage": "Phase 0B CorrectChoice Ground-Truth Audit (2026-07-23/24) — after items reached Certified state in prior certification waves",
+      "should_have_been_caught_at_stage": "G1 Accounting Review — independent answer derivation before certification",
+      "impact": "5 Certified items in active learner delivery pool with wrong answer marked correct. P1B-B-119: arithmetic error (exponent applied wrong). P1B-F-084/116/121, P1E-E-037: conceptual design errors — CC pointed to wrong choice in rotation group. 93.4% of active Certified MCQs still have no independent answer derivation."
+    },
+    {
+      "defect": "DL-029: All prior DL-008 counts (885 total) invalidated — 100% false-positive rate on Pack B",
+      "discovered_at_stage": "Phase 0B DL-029 Root-Cause Reproduction (2026-07-23) — after multiple certification waves used these counts for quarantine decisions",
+      "should_have_been_caught_at_stage": "G6 Final Validation — scan methodology should have been verified before scaling",
+      "impact": "All prior DL-008 counts below SESSION_STATUS_2026-07-24 are INVALIDATED. Pack B had 111-257 reported DL-008, actual: 0. All 5 packs store CorrectChoice BEFORE QuestionID — forward-scan always grabs NEXT item's CC (~75% false-positive rate). Led to unnecessary quarantine of Pack B, wasted investigation cycles across multiple sessions."
+    },
+    {
+      "defect": "DL-019: 175 Pack C DL-008 items re-contaminated after '0 remaining' claim",
+      "discovered_at_stage": "Tier 0 corrective session (2026-07-23) — after 6-agent orchestration claimed complete remediation",
+      "should_have_been_caught_at_stage": "Post-remediation independent re-verification (AGENTS.md §5 cross-check) before accepting 'resolved' status",
+      "impact": "DL-013/certification wave wrote Pack C from a pre-DL-008-remediation disk snapshot, silently overwriting 74 cleared items + re-introducing 101 more. Required full re-remediation of 432 items (Pack C: 243, Pack D: 189) across 16 batches. Loss of ~2-3 sessions of equivalent work."
+    },
+    {
+      "defect": "P1-BC-094 structural corruption — JavaScript parser merges duplicate keys (object merger)",
+      "discovered_at_stage": "Phase 0B Pack C DL-016 scope phase — items had already been Certified and in learner pool",
+      "should_have_been_caught_at_stage": "G5 Metadata Review — should have been detected when object couldn't parse cleanly",
+      "impact": "BC-094's identity absorbed into BC-095 by JS last-write-wins rule. Most severe DL-016 paired-object instance found. Item is MISSING from question_state scans. Quarantined TIER 1 (OBJECT MERGER / STRUCTURAL CORRUPTION)."
+    },
+    {
+      "defect": "S319 Seed Inventory Staleness — CC values rotated since inventory compilation",
+      "discovered_at_stage": "S320 Ground-Truth Audit (2026-07-27) — mid-remediation, after remediation script executed against wrong variants",
+      "should_have_been_caught_at_stage": "Pre-remediation T0 baseline check — verify seed inventory against live files",
+      "impact": "All remediation applied to wrong variant copies. Both packs restored from backup. 0 effective progress despite full session. Required re-establishing ground-truth for all 38 seeds. Estimated 2-session delay (S320→S321→S322)."
+    },
+    {
+      "defect": "DL-028: DL-013 remediation tooling created ADDITIONAL empty EW slots instead of filling them",
+      "discovered_at_stage": "Phase 0 of Autonomous Run Part 2 (2026-07-23) — post-remediation system audit",
+      "should_have_been_caught_at_stage": "Pre-deployment testing of DL-013 remediation script — verify all non-CC slots filled",
+      "impact": "DL-013 short-form rewrite template left rotation slot empty. Pre-remediation: 1 empty slot per item. Post-remediation: 1.5 empty slots per item. Increased DL-026 from 56→75 items per section. Remediation script increased defect surface instead of reducing it."
+    },
+    {
+      "defect": "DL-008 introduced during S810 remediation — 3 CC slots filled accidentally",
+      "discovered_at_stage": "S810 post-remediation verification (2026-07-26) — after 54 EW fills completed",
+      "should_have_been_caught_at_stage": "Within-remediation verification — check CC slot after each fill",
+      "impact": "ED-028 EW_D, ED-042 EW_B, ED-046 EW_B were non-empty CC slots (DL-008). Required immediate fix within same session. 'First-agent CC slot duplication' — agent filled CC slot as if it were a distractor slot."
+    }
+  ],
+  "rework_loops": [
+    {
+      "pattern": "DL-019: DL-008 remediation silently overwritten by concurrent DL-013 wave",
+      "sessions_involved": ["S_6agent_orchestration (clear)", "S_DL013_certification_wave (overwrite)", "S_Tier0 (rediscovery)", "S_432_remediation (re-fix)"],
+      "items_affected": 432,
+      "detail": "Pack C: 74 cleared → overwritten → 243 found (re-remediated). Pack D: 75 cleared → overwritten → 189 found (re-remediated). Root cause: concurrent sessions operated on different disk snapshots without write-lock coordination."
+    },
+    {
+      "pattern": "DL-008 Pack C: claimed-resolved → found-residual → re-scanned → count continued shifting",
+      "sessions_involved": ["S_agent4_clear (claim 0)", "S_Tier0_corrective (found 175)", "S_Tier1_quarantine (hold)", "S_full_depth_audit (incomplete)"],
+      "items_affected": 175,
+      "detail": "Prior '74 clears' claim refuted. CC-rotation artifact discovered: CC ≠ EC best match for 74.1% of affected items — simple EW[CC] clear unsafe. Items quarantined TIER 1 pending CorrectChoice audit that has still not been completed per Phase 0B report §D."
+    },
+    {
+      "pattern": "S320: remediation executed → applied to wrong variant copies → restored from backup → 0 net progress",
+      "sessions_involved": ["S319 (seed inventory)", "S320 (failed remediation)"],
+      "items_affected": 38,
+      "detail": "S319 inventory listed stale CC values. Brace-aware extraction matched first QID occurrence — not the canonical seed. Template rotation creates 5+ copies of each QID. All fills applied to wrong copies. Both packs restored. 0 effective remediation across a full session."
+    },
+    {
+      "pattern": "S810: 54 EW fills + 8 DL-013 rewrites → 3 DL-008 introduced → fixed in same session",
+      "sessions_involved": ["S809.1 (intel)", "S810 (execution)"],
+      "items_affected": 3,
+      "detail": "ED-028 EW_D, ED-042 EW_B, ED-046 EW_B accidentally filled (CC slot duplication). Caught and fixed in same session. Demonstrated need for automated slot-position verification during remediation."
+    },
+    {
+      "pattern": "DL-025 → DL-026 escalation: narrow Pack A finding expanded to 1,005 items cross-pool",
+      "sessions_involved": ["S_DL025_autonomous_run (51 cleared)", "S_DL026_scoping (632 found)", "S_agent6_boundary_aware_reverify (1005 found)"],
+      "items_affected": 1005,
+      "detail": "Originally scoped as 56 Pack A items (DL-025 WAVE 1). Expanded to 632 items. Then 1,005 items. Each scan methodology revision increased the scope. 5-agent scoping session undercounted by 373 items vs. authoritative boundary-aware parser. Remediation required multiple waves (Part 2, Part 3, enforced-depth) spanning multiple sessions."
+    }
+  ],
+  "readiness_failure_rate": {
+    "overall": "~89.5% of items reaching readiness boards are non-certifiable (HOLD) on first assessment",
+    "session_320": "34 HOLD / 38 total = 89.5% non-certifiable",
+    "session_809": "0 READY, 38 HOLD = 100% non-certifiable at Gate 2",
+    "session_809_1": "0 certifiable without DL-016 + DL-026 resolution",
+    "session_810_1": "After intelligence gathering: 28 READY, 10 MINOR_REVIEW = 73.7% potentially certifiable post-remediation",
+    "session_801_wave1": "Rankings 17-26 (Pack E Sections A-F, Pack C/D Sections E/F): all at Bronze/Thin/Archive tier (25-77/100) — non-certifiable without pedagogical enhancement",
+    "detail": "Items reach readiness boards carrying 3-5 concurrent defects (DL-026 + missing COSO + DL-016 + EC too short + difficulty inflation). No single fix makes them certifiable — each requires 5-7 workstream remediation. S810 required 7 parallel workstreams to convert 38 seeds from HOLD to READY."
+  },
+  "summary": "Certification delays are NOT caused by a single dominant defect. They cascade from the original template-based bulk-authoring pipeline, which created three latent defect classes: (1) empty distractor EW slots from rotation position assignment (DL-025/026), (2) metadata-content misalignment from dual-block architecture (DL-016), and (3) difficulty/CL calibration by template position rather than cognitive demand (DL-031). These latent defects were invisible during initial certification waves because scanning tools had methodology defects (DL-029 forward-scan false positives, DL-020 string-unaware parsing). When the scanner methodology was corrected (Phase 0B boundary-aware parsing), the true defect surface was revealed to be an order of magnitude larger than reported. Remediation then created its own problems: DL-019 concurrent-write overwrites, DL-028 tooling regression, and S320 variant misidentification. The largest time sinks are: (a) error discovery — defects found 2-4 sessions after certification (DL-030, DL-019, S319 staleness), (b) re-discovery — remediated items found contaminated again requiring full re-work (DL-019: 432 items, 16 batches), and (c) variant hunting — template rotation makes finding the correct canonical copy a multi-session task. The net effect: ~89.5% of items reaching readiness boards return HOLD, requiring an average of 2-3 additional sessions before reaching READY."
+}

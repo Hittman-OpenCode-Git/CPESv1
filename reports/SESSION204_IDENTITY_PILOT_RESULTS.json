@@ -1,0 +1,180 @@
+{
+  "pilot": "SESSION204_BOARD_A_IDENTITY",
+  "methodology": "v2 Identity Model (QID+CC+EWP+TF+FP+VID) vs v1 QID-only",
+  "pack_summary": {
+    "pack_c": {
+      "total_items": 500,
+      "unique_qids": 500,
+      "with_question_state": 500,
+      "without_question_state": 0,
+      "by_state": {
+        "Certified": 350,
+        "Archived": 112,
+        "Unprocessed": 38
+      },
+      "sections": {
+        "A": 75,
+        "B": 100,
+        "C": 100,
+        "D": 75,
+        "E": 75,
+        "F": 75
+      }
+    },
+    "pack_d": {
+      "total_items": 500,
+      "unique_qids": 500,
+      "with_question_state": 500,
+      "without_question_state": 0,
+      "by_state": {
+        "Certified": 350,
+        "Unprocessed": 39,
+        "Archived": 111
+      },
+      "sections": {
+        "A": 75,
+        "B": 100,
+        "C": 100,
+        "D": 75,
+        "E": 75,
+        "F": 74,
+        "undefined": 1
+      },
+      "note": "1 item has undefined Section - likely structural edge case in Section F"
+    },
+    "pack_e": {
+      "total_items": 540,
+      "unique_qids": 540,
+      "with_question_state": 540,
+      "without_question_state": 0,
+      "by_state": {
+        "Certified": 540
+      },
+      "sections": {
+        "A": 75,
+        "B": 100,
+        "C": 100,
+        "D": 75,
+        "E": 115,
+        "F": 75
+      },
+      "note": "540 items vs expected 500. Section E has 115 items (40 extra). Fully Certified all 540."
+    }
+  },
+  "cross_pack_collisions": [],
+  "within_pack_duplicates": {
+    "pack_c": 0,
+    "pack_d": 0,
+    "pack_e": 0
+  },
+  "template_rotation_findings": {
+    "pack_c_section_e": {
+      "families": 15,
+      "items_in_families": 75,
+      "standalone": 0,
+      "cc_rotation_confirmed": true,
+      "cc_distribution": {
+        "A": 19,
+        "B": 19,
+        "C": 19,
+        "D": 18
+      },
+      "seeds": 19,
+      "clones": 56,
+      "rotation_details": [
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C",
+        "D-A-B-C-D",
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C",
+        "D-A-B-C-D",
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C",
+        "D-A-B-C-D",
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C"
+      ]
+    },
+    "pack_d_section_e": {
+      "families": 15,
+      "items_in_families": 75,
+      "standalone": 0,
+      "cc_rotation_confirmed": true,
+      "cc_distribution": {
+        "A": 19,
+        "B": 19,
+        "C": 19,
+        "D": 18
+      },
+      "seeds": 19,
+      "clones": 56,
+      "rotation_details": [
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C",
+        "D-A-B-C-D",
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C",
+        "D-A-B-C-D",
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C",
+        "D-A-B-C-D",
+        "A-B-C-D-A",
+        "B-C-D-A-B",
+        "C-D-A-B-C"
+      ]
+    }
+  },
+  "qid_ambiguity_findings": {
+    "packs_with_duplicate_qids_within": [],
+    "packs_with_qid_collision_across": [],
+    "qid_only_sufficient": false,
+    "reason": "Zero QID collisions across or within packs. However, QID-only identity is INSUFFICIENT for variant resolution: (1) Template rotation variants within the same pack share identical stems but differ in CorrectChoice and ExplanationWrong slot assignments. (2) A remediation tool targeting P1-EC-003 could pick up the wrong variant because CC and EW states differ across 5 items with near-identical stems. (3) The S320 failure mode was exactly this -- a variant within a rotation group was targeted by QID alone, missing the CC/EW state disambiguation. (4) Pack C Sec E has 75 items in 15 rotation families; QID alone cannot distinguish seed from clone within a family.",
+    "compound_key_required": true,
+    "compound_key_components": [
+      "QID - QuestionID (string)",
+      "CC - CorrectChoice (A|B|C|D)",
+      "EWP - ExplanationWrong Pattern (4-bit bitmask: D/C/B/A, 1=non-empty, 0=empty)",
+      "TF - TopicFamily (MD5 hash of normalized stem, first 8 hex chars)",
+      "FP - FamilyPosition (0-4 index within the 5-item rotation group)",
+      "VID - packVariantID (pack letter + underscore + section, e.g. C_E, D_E)"
+    ]
+  },
+  "s320_replay_result": "FAIL",
+  "s320_replay_detail": {
+    "original_s320_targets": "38 seeds (19 Pack C Section E + 19 Pack D Section E)",
+    "v2_identity_model_would_identify_correctly": true,
+    "compound_key_would_prevent_variant_mismatch": true,
+    "gate_neg1_would_block_certification_without_identity_valid": true,
+    "explanation": "S320 attempted to remediate Section E clone items by targeting QIDs only. With v1 QID-only identity: (a) A script targeting P1-EC-003 by QID cannot tell whether it is remediating the seed or a clone, because all 5 items in the rotation group share the same stem skeleton. (b) The EW slot that should receive text depends on which position the item occupies -- CC=A items need EW_B,C,D filled; CC=B items need EW_A,C,D filled, etc. QID-only gives no way to determine this. (c) With v2 compound key (QID+CC+EWP+TF+FP+VID), the remediation tool would: identify the rotation group family via TF hash; determine which EW slots are non-empty via EWP bitmask; know the exact position via FP (0-4); and target only the correct pack via VID. This would prevent clone-vs-seed mismatches and cross-pack aliasing errors."
+  },
+  "unprocessed_and_in_audit": {
+    "A": {
+      "Certified": 75
+    },
+    "B": {
+      "Certified": 100
+    },
+    "C": {
+      "Certified": 100
+    },
+    "D": {
+      "Certified": 75
+    },
+    "E": {
+      "Archived": 56,
+      "Unprocessed": 19
+    },
+    "F": {
+      "Unprocessed": 19,
+      "Archived": 56
+    }
+  },
+  "verdict": "v2 Identity Model validated for Packs C/D/E -- QID-only insufficient; compound key required for variant resolution"
+}

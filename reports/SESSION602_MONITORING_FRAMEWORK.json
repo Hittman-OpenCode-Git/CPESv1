@@ -1,0 +1,134 @@
+{
+  "session": "S602",
+  "agent": "H",
+  "role": "Monitoring Framework — 600-Series Review Criteria",
+  "generated": "2026-07-26",
+  "type": "Governance Framework — Operational Monitoring for Dormant Lane",
+  "purpose": "Define the review criteria and monitoring triggers for future 600-series reassessment. This framework governs how the dormant lane is monitored over time without accidental activation or governance drift.",
+  "authority": "S600 Charter §9 (Charter Governance), S725 Row 16 (annual reactivation criteria review), S724 Agent V Governance Preservation",
+
+  "monitoring_philosophy": "A dormant lane is not monitored for activity (there is none). It is monitored for RELEVANCE — whether the conditions that justified the deferral have changed. Monitoring is a governance function, not a 600-series function. It is performed by the Governance Auditor (700-series maintenance mode) at standard cadences.",
+
+  "cadences": {
+    "t0_per_session": {
+      "label": "T0 Session Startup Check",
+      "frequency": "Every session (per AGENTS.md §9 — Session Startup Protocol)",
+      "scope": "Passive — confirm 600-series artifacts unchanged since last session",
+      "checks": [
+        "Confirm S600 Charter hash unchanged (SESSION600_CONTENT_OPERATIONS_RESERVE_CHARTER.md)",
+        "Confirm S601 activation board decision has not been modified",
+        "Confirm S725 Lane 600 definition has not been altered",
+        "Confirm zero new 600-attributed artifacts in reports/ directory",
+        "Confirm Certified count has not been modified by 600-authority (800-series changes only)"
+      ],
+      "action_on_violation": "ESCALATE to Governance Auditor. If charter has been modified without authorization, trigger G1-G5 reconciliation per AGENTS.md §13.4."
+    },
+    "rapid_pulse_5_sessions": {
+      "label": "Rapid Pulse Audit",
+      "frequency": "Every 5 sessions (per S725 Lane 700 maintenance mode cadence)",
+      "scope": "Active — cross-reference 600-state against activation trigger registry",
+      "checks": [
+        "Re-run Activation Trigger Registry (SESSION602_ACTIVATION_TRIGGER_REGISTRY.json) against current portfolio state",
+        "Verify all 4 mandatory gates remain FAIL (any PASS triggers an alert to Governance Board)",
+        "Verify zero drift in S600 Charter or S725 Lane 600 definition",
+        "Verify economic gate: recalculate startup cost vs. savings with current portfolio data",
+        "Verify no cross-lane boundary violations (600 artifacts in 300/700/800 spaces)"
+      ],
+      "action_on_violation": "If any mandatory gate flips to PASS, ESCALATE to Governance Board for activation re-evaluation. If boundary violation detected (e.g., unauthorized 600 artifacts), HALT and spawn ownership-reconciliation agent."
+    },
+    "deep_audit_20_sessions": {
+      "label": "Deep Audit — 600-Series Relevance Assessment",
+      "frequency": "Every 20 sessions (per S723 Maintenance Framework cadence for deferred lanes)",
+      "scope": "Comprehensive — full re-evaluation of deferral justification",
+      "checks": [
+        "Full economic gate re-evaluation with current empirical data (800-series throughput, EW authoring velocity, acceptance rates)",
+        "Binding constraint analysis: has author capacity vs. tooling shifted?",
+        "S724 Agent V 5 criteria re-evaluation (AV_1 through AV_5)",
+        "Portfolio growth assessment: has item count justified dedicated infrastructure?",
+        "S725 Ownership Matrix gaps assessment: has GAP-3 been resolved? Have new gaps emerged?",
+        "Cross-series dependency impact: have 300/700/800 series changes affected 600 relevance?",
+        "Governance guard integrity: has Rule 2 (DL-008) been upgraded to AM-1 per S725 standards?",
+        "Stewardship acceptance status: has Governance Board accepted S725 Row 16?"
+      ],
+      "output": "SESSION6XX_DEEP_AUDIT_600_RELEVANCE.md — comprehensive report with: (a) current state assessment, (b) gate-by-gate status, (c) recommendation (CONTINUE DORMANCY / FLAG FOR BOARD REVIEW / RECOMMEND ACTIVATION REVIEW)",
+      "action_on_violation": "If recommendation is 'RECOMMEND ACTIVATION REVIEW,' the Governance Board must schedule a formal activation review session (not S601/S602 — a new session with full A-Z agent deployment per S724 model)."
+    },
+    "annual_stewardship_review": {
+      "label": "Annual Stewardship Review — Lane 600",
+      "frequency": "Every 12 months from S725 (next: 2027-07-26)",
+      "scope": "Governance — charter relevance and governance debt assessment",
+      "checks": [
+        "Is the S600 Charter still the correct operating model for a future 600 activation? (or has the portfolio evolved beyond the charter's assumptions?)",
+        "Are the activation conditions still appropriate? (or have new governance standards changed what 'ready' means?)",
+        "Is GAP-3 still PENDING? (if yes, escalate to Governance Board for resolution)",
+        "Does the S725 Ownership Matrix need amendment for Lane 600?",
+        "Are all 5 stewardship principles satisfied for the deferred lane?",
+        "Should the charter be version-bumped? (reflect any governance lessons from 800-series operations)"
+      ],
+      "output": "SESSION6XX_ANNUAL_LANE600_STEWARDSHIP_REVIEW.md — recommendation: (a) CONTINUE DORMANCY — no changes, (b) CHARTER AMENDMENT RECOMMENDED, (c) CLOSE LANE — portfolio has evolved beyond need for 600-series",
+      "action_on_violation": "Charter amendment requires Executive Board vote per S600 Charter §9.1. Lane closure requires Governance Board authorization per S726 Closure Gate."
+    }
+  },
+
+  "drift_detection_signals": {
+    "description": "The following signals indicate potential governance drift in the 600-series dormant lane. Any of these triggers at any cadence automatically escalates to the Governance Auditor.",
+    "signals": [
+      {
+        "id": "DRIFT_001",
+        "signal": "New artifact in reports/ or knowledge/ with '600-series' or 'SESSION6**' attribution",
+        "severity": "CRITICAL",
+        "interpretation": "Possible stealth activation — a session produced 600-series work without authorization.",
+        "action": "HALT all active agents. Spawn governance audit agent. Trace artifact to producing session. If unauthorized, quarantine artifact and escalate to Executive Board."
+      },
+      {
+        "id": "DRIFT_002",
+        "signal": "Any mandatory gate transitions from FAIL to PASS",
+        "severity": "HIGH",
+        "interpretation": "Activation conditions are improving — the dormant lane may be approaching relevance.",
+        "action": "Governance Auditor triggers Deep Audit (not Rapid Pulse) at next session boundary. Do not automatically activate — a gate transition is a review trigger, not an activation trigger."
+      },
+      {
+        "id": "DRIFT_003",
+        "signal": "S600 Charter file modified without REVISION_HISTORY.md entry",
+        "severity": "CRITICAL",
+        "interpretation": "Charter tampering — the governing document for 600 activation has been changed outside governance process.",
+        "action": "HALT. Revert from backup. Trace modification. Escalate to Governance Board."
+      },
+      {
+        "id": "DRIFT_004",
+        "signal": "New REVISION_HISTORY.md entry attributing work to 600-series",
+        "severity": "CRITICAL",
+        "interpretation": "A session has claimed 600-series authority. This is either authorized (activation) or unauthorized (governance violation).",
+        "action": "Cross-reference against Executive Board vote records. If no vote exists, the entry is unauthorized — revert and escalate."
+      },
+      {
+        "id": "DRIFT_005",
+        "signal": "GAP-3 resolution: Governance Board accepts S725 Row 16 ownership",
+        "severity": "LOW (positive signal)",
+        "interpretation": "The ownership gap is closing — governance hygiene is improving. Does not affect activation status.",
+        "action": "Update S602 Ownership Conflict Review (C-005 → RESOLVED). Update S725 Ownership Acceptance Registry."
+      },
+      {
+        "id": "DRIFT_006",
+        "signal": "800-series certification completes (100% Certified across all packs)",
+        "severity": "MEDIUM",
+        "interpretation": "The 800-series pipeline reaches its endpoint. The 'post-certification modernization phase' (S724 Agent V criterion AV_4) begins.",
+        "action": "Re-evaluate AV_4: is batch DL-013/DL-031 ops becoming the bottleneck? If yes, flag for Governance Board discussion. Does not automatically trigger activation."
+      }
+    ]
+  },
+
+  "review_ownership": {
+    "primary_reviewer": "Governance Auditor (700-series Maintenance Mode) — responsible for executing all cadenced checks on schedule",
+    "secondary_reviewer": "Baseline Maintainer — responsible for hash verification of S600 Charter at T0",
+    "escalation_recipient": "Governance Board (collective) — receives all ESCALATE signals",
+    "decision_authority": "Executive Board (300 + 700 + 800 leads) — only entity authorized to vote on 600-series activation"
+  },
+
+  "framework_version": "1.0",
+  "framework_established": "S602 (2026-07-26)",
+  "next_scheduled_check": "T0 at start of S603 (next session boundary)",
+  "next_rapid_pulse": "Session 605 (5 sessions from S600)",
+  "next_deep_audit": "Session 620 (20 sessions from S600, est. 2026-08)",
+  "next_annual_review": "2027-07-26"
+}

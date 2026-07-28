@@ -1,0 +1,242 @@
+{
+  "session": "S866",
+  "phase": "CANDIDATE_SCOUTING",
+  "timestamp": "2026-07-27T10:30:00",
+  "current_state": {
+    "total_evaluate": 5,
+    "pool_total": 2540,
+    "pool_percentage": 0.20,
+    "target_percentage": 15.0,
+    "target_count": 381,
+    "existing_evaluate_qids": [
+      "P1-CC-065",
+      "P1-FD-031",
+      "P1-FD-033",
+      "P1-FD-034",
+      "P1-E-R09"
+    ],
+    "existing_analyze": 50,
+    "packs_analyze": {
+      "A": 1,
+      "B": 7,
+      "C": 29,
+      "D": 13,
+      "E": 0
+    }
+  },
+  "candidates": [
+    {
+      "qid": "P1-EC-020",
+      "pack": "C",
+      "section": "E",
+      "current_level": "Analyze",
+      "current_difficulty": 3,
+      "stem_preview": "Bryant Manufacturing has a small accounts payable department where one employee creates new vendor records, enters invoices from those vendors, and approves payments for processing. Management wants to reduce the risk of fraudulent payments without adding staff. Which control improvement is most effective?",
+      "topic": "segregation of duties vendor setup and payment",
+      "judgment_type": "control-evaluation",
+      "rationale": "Presents a real three-way SOD violation (vendor creation + invoice entry + payment approval by one employee) with a resource constraint (no additional staff). Candidate must evaluate four competing remedies and select the most effective one given the staffing limitation. Requires professional judgment about control design trade-offs — not a formulaic answer. Choices test discrimination between genuine SOD remedies (independent approval of vendor additions) vs. insufficient alternatives (raising thresholds, after-the-fact review, adding incompatible duties).",
+      "confidence": "HIGH",
+      "note": "Currently at Analyze — upgrade to Evaluate"
+    },
+    {
+      "qid": "P1-EC-022",
+      "pack": "C",
+      "section": "E",
+      "current_level": "Analyze",
+      "current_difficulty": 3,
+      "stem_preview": "During an internal audit, Drake Distribution discovered that a former employee's system access remained active for 18 days after termination. No unauthorized transactions occurred during that period. Management wants to prevent recurrence. Which remediation is most appropriate?",
+      "topic": "IT access control terminated employee deprovisioning",
+      "judgment_type": "risk-assessment",
+      "rationale": "Real audit finding scenario: 18-day access gap post-termination. Candidate must evaluate: (A) accept risk since no loss occurred, (B) implement unrelated password controls, (C) automated deprovisioning + quarterly recertification, (D) convert to read-only access. Tests ability to distinguish between risk acceptance, compensating controls, and systemic process fixes. The correct answer (C) requires recognizing that this is a systemic process-design deficiency requiring automated HR-to-IT integration. Requires professional judgment about root cause vs. symptom treatment.",
+      "confidence": "HIGH",
+      "note": "Currently at Analyze — upgrade to Evaluate"
+    },
+    {
+      "qid": "P1B-C-143",
+      "pack": "B",
+      "section": "C",
+      "current_level": "Analyze",
+      "current_difficulty": 4,
+      "stem_preview": "A division manager at Parkview Industries is considering a project earning $40,000 on $250,000 of assets. Required rate is 14%. Division current ROI is 18%. Which performance measure would create goal congruence?",
+      "topic": "ROI and residual income",
+      "judgment_type": "decision-prioritization",
+      "rationale": "Tests the behavioral dimension of performance measurement — not just calculating ROI or RI, but understanding which measure creates goal congruence when a manager's personal incentive (ROI-based evaluation at 18%) conflicts with organizational benefit (project returns 16% > 14% cost of capital). Candidate must evaluate that ROI would cause the manager to reject a value-creating project (dysfunctional behavior), while residual income aligns incentives. Requires judgment about management control system design, not just numerical computation. The calculation (16% ROI, $5,000 RI increase) is secondary to the conceptual judgment about which measure promotes the right decision.",
+      "confidence": "HIGH",
+      "note": "Currently at Analyze — upgrade to Evaluate. Currently D4 (Difficult) — appropriate for Evaluate."
+    },
+    {
+      "qid": "P1-B-024",
+      "pack": "A",
+      "section": "B",
+      "current_level": "Apply",
+      "current_difficulty": 3,
+      "stem_preview": "Quartz links bonuses to easily achieved budget targets and notices managers consistently understate capacity. Which response is most appropriate?",
+      "topic": "budgetary slack incentive design",
+      "judgment_type": "trade-off",
+      "rationale": "Addresses the classic budgeting behavioral problem: managers understating capacity when bonuses are tied to easily-achieved targets. Candidate must evaluate four organizational policy responses: (A) revise incentives and review assumptions — the correct systemic fix, (B) eliminate variance analysis entirely — overreaction that removes a useful tool, (C) classify slack as cash equivalent — nonsensical accounting treatment, (D) reward only lowest forecasts — perverse incentive that would worsen the problem. Requires judgment about incentive system design and organizational behavior — this is not a calculation or definition question. The candidate must assess which response addresses root cause rather than symptoms.",
+      "confidence": "HIGH",
+      "note": "Currently at Apply (D3). Strongest candidate for upgrade from Apply to Evaluate."
+    },
+    {
+      "qid": "P1B-E-116",
+      "pack": "B",
+      "section": "E",
+      "current_level": "Analyze",
+      "current_difficulty": 3,
+      "stem_preview": "During the ICFR assessment at Nexus Manufacturing, management needs to determine whether a control is operating effectively. The control requires that all credit sales over $[threshold] be approved by the credit manager. The control is performed approximately 50 times per month. Which testing approach would provide the most persuasive evidence?",
+      "topic": "ICFR control testing methodology",
+      "judgment_type": "method-recommendation",
+      "rationale": "Audit testing methodology evaluation: candidate must assess which combination of procedures (inquiry, observation, reperformance, inspection) provides the most persuasive evidence for a specific control (credit sales approval, 50x/month). Requires understanding the evidential hierarchy in ICFR testing and selecting the approach that best matches the control's frequency and nature. Tests professional judgment about audit evidence quality, not just recall of audit standards. The explanation references PCAOB standards and distinguishes between evidence types.",
+      "confidence": "HIGH",
+      "note": "Currently at Analyze — upgrade to Evaluate."
+    },
+    {
+      "qid": "P1-EC-023",
+      "pack": "C",
+      "section": "E",
+      "current_level": "Analyze",
+      "current_difficulty": 3,
+      "stem_preview": "Parkview Company's sales order system accepts orders with invalid customer codes, negative quantities, and missing ship-to addresses. These errors are discovered only when invoices fail to process days later. Which application control would best address this issue?",
+      "topic": "application input control sales order validation",
+      "judgment_type": "control-evaluation",
+      "rationale": "IT application control selection: candidate must evaluate four competing controls for a real data quality problem (invalid codes, negative quantities, missing addresses in sales orders). Choices span preventive vs. detective, automated vs. manual, real-time vs. periodic: (A) weekly exception reports (detective, delayed), (B) month-end reconciliation (detective, too late), (C) manual supervisor approval (preventive but inefficient at scale), (D) real-time field validation (preventive, automated, at point of entry). Requires evaluation of control timing (preventive vs. detective), intervention point (point of entry vs. post-hoc), and scalability. Judgment about which control architecture best fits the problem description.",
+      "confidence": "MEDIUM-HIGH",
+      "note": "Currently at Analyze — upgrade to Evaluate."
+    },
+    {
+      "qid": "P1-EC-021",
+      "pack": "C",
+      "section": "E",
+      "current_level": "Analyze",
+      "current_difficulty": 3,
+      "stem_preview": "Crestview Manufacturing frequently discovers duplicate vendor payments when reviewing the monthly accounts payable aging report. Management wants to implement a control that will best prevent duplicates from occurring. Which one of the following controls is preventive?",
+      "topic": "preventive vs detective duplicate payment control",
+      "judgment_type": "control-evaluation",
+      "rationale": "Candidate must evaluate four controls and classify them as preventive vs. detective, but more importantly, identify which one is actually preventive. The nuance is that all four options are legitimate controls, but only one prevents duplicates BEFORE they occur: (A) weekly controller review of check register (detective — after payment), (B) system rejection of duplicate vendor-invoice-date at entry (preventive), (C) quarterly vendor statement reconciliation (detective — after the fact), (D) monthly AP aging review (detective). Requires judgment about timing and intervention point of each control. Not a simple definition recall — all options are plausible controls. Distinguishes between detection after payment and prevention at entry.",
+      "confidence": "MEDIUM",
+      "note": "Currently at Analyze — upgrade to Evaluate. Stronger than pure definition, less judgment-intensive than EC-020/EC-022."
+    },
+    {
+      "qid": "P1-EC-024",
+      "pack": "C",
+      "section": "E",
+      "current_level": "Analyze",
+      "current_difficulty": 3,
+      "stem_preview": "Zenith Bay requires dual signatures on checks above a threshold before payment is released. Is this a preventive or detective control, and why?",
+      "topic": "preventive vs detective controls",
+      "judgment_type": "control-evaluation",
+      "rationale": "Tests classification of a specific control with an explicit 'and why' reasoning requirement. Candidate must evaluate the dual-signature control's timing (before payment → preventive) and distinguish from competing classifications: (A) preventive — stops unauthorized payment before it occurs (correct), (B) compensating — used only when segregation impossible (partially true but not the classification asked), (C) corrective — fixes problems after (wrong timing), (D) detective — identifies errors after the fact (wrong timing). The 'and why' component elevates this above definition matching — candidate must evaluate control purpose, timing, and mechanism. Tests ability to reason about control design intent.",
+      "confidence": "MEDIUM",
+      "note": "Currently at Analyze — upgrade to Evaluate."
+    },
+    {
+      "qid": "P1-CC-071",
+      "pack": "C",
+      "section": "C",
+      "current_level": "Analyze",
+      "current_difficulty": 4,
+      "stem_preview": "Willowmere's gross margin declined even though sales volume increased. Management wants to separate the effects of sales price, volume, and cost changes. What analytical approach should be used?",
+      "topic": "gross margin variance analysis",
+      "judgment_type": "method-recommendation",
+      "rationale": "Presents a counterintuitive business scenario (volume up but margin down) requiring diagnostic analysis. Candidate must select the appropriate analytical methodology from competing alternatives: (A) break-even analysis (different purpose — cost-volume relationships, not margin decomposition), (B) NPV analysis (capital budgeting, wrong domain), (C) cash flow statement review (different financial statement), (D) gross margin variance analysis decomposing into price, volume, and cost components (correct — directly addresses management's need). Requires evaluating which analytical tool matches the diagnostic question, not just knowing what each tool does. Tests judgment about analytical methodology selection for a specific business problem.",
+      "confidence": "MEDIUM",
+      "note": "Currently at Analyze — upgrade to Evaluate. Only Section C candidate besides P1B-C-143."
+    },
+    {
+      "qid": "P1-ED-071",
+      "pack": "D",
+      "section": "E",
+      "current_level": "Apply",
+      "current_difficulty": 3,
+      "stem_preview": "At Elmwood Manufacturing, the purchasing manager is authorized to add new vendors to the approved vendor master file and also selects the winning bidder for contract awards. Which control would best address the conflict-of-interest risk in this arrangement?",
+      "topic": "fraud risk purchasing conflict of interest",
+      "judgment_type": "control-evaluation",
+      "rationale": "Real purchasing SOD violation: manager can both add vendors AND select bid winners — classic incompatible duties creating conflict-of-interest risk. Candidate evaluates: (A) require documented rationale (detective, after the fact — does not prevent), (B) eliminate competitive bidding (worsens the problem), (C) also allow payment approval (adds a third incompatible duty), (D) independent manager/committee approval of vendor additions and bid awards (correct — introduces segregation). Requires judgment about which control design actually mitigates the specific risk (self-dealing in vendor selection), not just generic SOD. Tests ability to distinguish genuine remediation from insufficient or counterproductive alternatives.",
+      "confidence": "MEDIUM-HIGH",
+      "note": "Currently at Apply (D3) — upgrade to Evaluate. Second candidate for Apply→Evaluate upgrade."
+    }
+  ],
+  "recommended_selection": {
+    "target_count": 10,
+    "qid_list": [
+      "P1-EC-020",
+      "P1-EC-022",
+      "P1B-C-143",
+      "P1-B-024",
+      "P1B-E-116",
+      "P1-EC-023",
+      "P1-EC-021",
+      "P1-EC-024",
+      "P1-CC-071",
+      "P1-ED-071"
+    ],
+    "domain_distribution": {
+      "C (Performance Management)": 2,
+      "E (Internal Controls)": 7,
+      "B (Planning, Budgeting, Forecasting)": 1
+    },
+    "level_transitions": {
+      "Analyze→Evaluate": 8,
+      "Apply→Evaluate": 2
+    },
+    "difficulty_distribution": {
+      "D3 (Moderate)": 8,
+      "D4 (Difficult)": 2
+    },
+    "certified_pool_impact": 10,
+    "post_transition_evaluate_count": 15,
+    "post_transition_pool_percentage": 0.59
+  },
+  "rejected_candidates": [
+    {
+      "qid": "P1-CC-064",
+      "reason": "Nearly identical stem to existing Evaluate item P1-CC-065 (rotation artifact). The Analyze/Evaluate split here is a template rotation artifact, not a genuine level difference."
+    },
+    {
+      "qid": "P1B-D-144",
+      "reason": "Sell-or-process-further decision is purely formula-derived (incremental revenue $20 vs. incremental cost $15 = $5 profit → process further). No genuine judgment — the formula determines the answer."
+    },
+    {
+      "qid": "P1-DC-030",
+      "reason": "Stem describes target costing by textbook definition ('price customers are willing to pay, subtracts profit margin, designs to meet cost'). Answer is identifying the named approach from its definition — definition recall, not judgment."
+    },
+    {
+      "qid": "P1-DC-035",
+      "reason": "Same pattern as DC-030: stem describes TOC by textbook definition ('bottleneck machine, focuses improvement there first'). Answer is naming the philosophy — definition recall."
+    },
+    {
+      "qid": "P1-F-013",
+      "reason": "Good stem ('Which control best supports...') but Difficulty 1 and choices are obviously distinguishable. The correct answer (reconcile to source totals) is the clear ETL best practice; distractors are weak (review dashboard colors, let analysts manually adjust, only check if reports open). Insufficient discrimination for Evaluate level."
+    },
+    {
+      "qid": "P1-B-039",
+      "reason": "Variance investigation threshold question requires applying a formula (5% × $150,000 = $7,500 < $9,000 → investigate). While phrased as 'should this be investigated?', the answer is mechanically derived from the stated policy, not a professional judgment."
+    },
+    {
+      "qid": "P1-B-048",
+      "reason": "Seasonal budget planning: the correct answer ('budget each quarter based on historical share') is straightforward best practice. Distractors are obvious non-solutions (ignore seasonality, budget all in Q4, use only Q4 actuals). Good business scenario but insufficient discrimination for Evaluate."
+    },
+    {
+      "qid": "P1-EC-025",
+      "reason": "Bank reconciliation independence: 'Why is independence important?' is a conceptual analysis question. The answer ('objectively detect errors without being influenced by preparer's own transactions') is standard internal control rationale. Not a judgment/decision question."
+    },
+    {
+      "qid": "P1-EC-028",
+      "reason": "Clone of P1-EC-025 (same stem, different company name). Rotation artifact. If EC-025 isn't Evaluate, its clone shouldn't be either."
+    }
+  ],
+  "methodology_notes": {
+    "scan_method": "QuestionID-anchored block extraction from all 5 pack files using boundary-aware parsing (QuestionID → next QuestionID window)",
+    "analyze_items_reviewed": 50,
+    "apply_judgment_items_scanned": 270,
+    "selection_criteria": [
+      "Stem requires evaluating competing alternatives (not a single correct calculation path)",
+      "Choices present plausible but distinguishable options requiring professional judgment",
+      "Correct answer is not derivable by formula alone",
+      "Distractors represent genuine competing approaches or misconceptions, not throwaways",
+      "Business scenario is realistic and decision-oriented (not a textbook abstraction)"
+    ],
+    "difficulty_note": "Most candidates are currently D3 (Moderate). This is appropriate — Evaluate items should be at least Moderate difficulty. The two D4 candidates (P1B-C-143 and P1-CC-071) are strong. No D5 (Very Difficult) candidates were found — the existing Evaluate items are also D2-D4.",
+    "domain_concentration_note": "Section E (Internal Controls) dominates (7/10 candidates). This is expected because control evaluation, remediation selection, and SOD assessment are inherently judgment-based. Other sections are predominantly calculation (B: budgets, C: variances, D: costing) or definition (F: technology concepts). Section A (financial reporting) had 0 Analyze items and 0 promising Apply candidates."
+  }
+}

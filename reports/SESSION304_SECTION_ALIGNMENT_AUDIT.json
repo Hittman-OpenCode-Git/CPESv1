@@ -1,0 +1,175 @@
+{
+  "generated": "2026-07-26T21:42:16.548Z",
+  "session": "S304",
+  "misalignments": 0,
+  "misalignmentDetail": [],
+  "ambiguousItems": 1,
+  "ambiguousDetail": [
+    {
+      "qid": "P1-FD-046",
+      "pack": "Pack D",
+      "domain": "Unknown"
+    }
+  ],
+  "sectionDistribution": {
+    "A": {
+      "total": 433,
+      "byPack": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 18,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 10,
+        "scored_cases5": 10
+      }
+    },
+    "B": {
+      "total": 568,
+      "byPack": {
+        "Pack A": 100,
+        "Pack B": 100,
+        "Pack C": 100,
+        "Pack D": 100,
+        "Pack E": 100,
+        "scored_cases": 18,
+        "scored_cases2": 17,
+        "scored_cases3": 17,
+        "scored_cases4": 11,
+        "scored_cases5": 5
+      }
+    },
+    "C": {
+      "total": 798,
+      "byPack": {
+        "Pack A": 100,
+        "Pack B": 100,
+        "Pack C": 100,
+        "Pack D": 100,
+        "Pack E": 100,
+        "scored_cases": 18,
+        "scored_cases2": 90,
+        "scored_cases3": 90,
+        "scored_cases4": 85,
+        "scored_cases5": 15
+      }
+    },
+    "D": {
+      "total": 452,
+      "byPack": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 12,
+        "scored_cases2": 16,
+        "scored_cases3": 17,
+        "scored_cases4": 17,
+        "scored_cases5": 15
+      }
+    },
+    "E": {
+      "total": 443,
+      "byPack": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 75,
+        "Pack E": 75,
+        "scored_cases": 18,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 15,
+        "scored_cases5": 15
+      }
+    },
+    "F": {
+      "total": 430,
+      "byPack": {
+        "Pack A": 75,
+        "Pack B": 75,
+        "Pack C": 75,
+        "Pack D": 74,
+        "Pack E": 75,
+        "scored_cases": 6,
+        "scored_cases2": 10,
+        "scored_cases3": 10,
+        "scored_cases4": 15,
+        "scored_cases5": 15
+      }
+    },
+    "?": {
+      "total": 1,
+      "byPack": {
+        "Pack D": 1
+      }
+    }
+  },
+  "sectionConsistency": {
+    "Pack A|A": 75,
+    "Pack A|B": 100,
+    "Pack A|C": 100,
+    "Pack A|D": 75,
+    "Pack A|E": 75,
+    "Pack A|F": 75,
+    "Pack B|A": 75,
+    "Pack B|B": 100,
+    "Pack B|C": 100,
+    "Pack B|D": 75,
+    "Pack B|E": 75,
+    "Pack B|F": 75,
+    "Pack C|A": 75,
+    "Pack C|B": 100,
+    "Pack C|C": 100,
+    "Pack C|D": 75,
+    "Pack C|E": 75,
+    "Pack C|F": 75,
+    "Pack D|A": 75,
+    "Pack D|B": 100,
+    "Pack D|C": 100,
+    "Pack D|D": 75,
+    "Pack D|E": 75,
+    "Pack D|F": 74,
+    "Pack D|?": 1,
+    "Pack E|A": 75,
+    "Pack E|B": 100,
+    "Pack E|C": 100,
+    "Pack E|D": 75,
+    "Pack E|E": 75,
+    "Pack E|F": 75,
+    "scored_cases|A": 18,
+    "scored_cases|B": 18,
+    "scored_cases|C": 18,
+    "scored_cases|D": 12,
+    "scored_cases|E": 18,
+    "scored_cases|F": 6,
+    "scored_cases2|A": 10,
+    "scored_cases2|B": 17,
+    "scored_cases2|C": 90,
+    "scored_cases2|D": 16,
+    "scored_cases2|E": 10,
+    "scored_cases2|F": 10,
+    "scored_cases3|A": 10,
+    "scored_cases3|B": 17,
+    "scored_cases3|C": 90,
+    "scored_cases3|D": 17,
+    "scored_cases3|E": 10,
+    "scored_cases3|F": 10,
+    "scored_cases4|A": 10,
+    "scored_cases4|B": 11,
+    "scored_cases4|C": 85,
+    "scored_cases4|D": 17,
+    "scored_cases4|E": 15,
+    "scored_cases4|F": 15,
+    "scored_cases5|A": 10,
+    "scored_cases5|B": 5,
+    "scored_cases5|C": 15,
+    "scored_cases5|D": 15,
+    "scored_cases5|E": 15,
+    "scored_cases5|F": 15
+  }
+}

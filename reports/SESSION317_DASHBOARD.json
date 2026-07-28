@@ -1,0 +1,71 @@
+{
+  "title": "SESSION317_DASHBOARD",
+  "session": "317",
+  "generated": "2026-07-27",
+  "domain_e_replacement_program": {
+    "phase": "Phase 2 — Domain E Modernization",
+    "total_replacements_target": 43,
+    "replacements_completed": 30,
+    "replacements_remaining": 13,
+    "total_seeds": 38,
+    "seeds_certified": 0,
+    "seeds_remaining": 38,
+    "total_certifications_target": 81,
+    "total_certifications_completed": 30,
+    "progress_pct": 37
+  },
+  "wave_summary": {
+    "wave1": {
+      "session_authored": "S312",
+      "session_certified": "S313",
+      "session_inserted": "S314",
+      "items": 10,
+      "qids": "R01-R10",
+      "status": "PRODUCTION"
+    },
+    "wave2": {
+      "session_authored": "S314",
+      "session_certified": "S315",
+      "session_inserted": "S316",
+      "items": 10,
+      "qids": "R11,R14-R17,R19-R20,R30-R32",
+      "status": "PRODUCTION"
+    },
+    "wave3": {
+      "session_authored": "S316",
+      "session_certified": "S317",
+      "session_inserted": "S317",
+      "items": 10,
+      "qids": "R26,R27,R29,R34-R40",
+      "status": "PRODUCTION"
+    },
+    "wave4": {
+      "remaining": "13 replacement groups + 38 seeds",
+      "qids": "R12,R13,R18,R21-R25,R28,R33 + seed certifications",
+      "status": "PENDING_S318_PLANNING"
+    }
+  },
+  "certified_pool": {
+    "total": 2211,
+    "pack_a": 481,
+    "pack_b": 500,
+    "pack_c": 350,
+    "pack_d": 350,
+    "pack_e": 530,
+    "certified_rate_pct": 88.4
+  },
+  "clone_groups": {
+    "total": 33,
+    "cleared": 30,
+    "cleared_pct": 90.9,
+    "remaining": 3
+  },
+  "quality_metrics": {
+    "uiqs_overall": 90,
+    "uiqs_grade": "A-",
+    "ew_coverage_pct": 100,
+    "dl008_violations": 0,
+    "governance_guard": "27/27 PASS",
+    "gates_passed": "4/4"
+  }
+}

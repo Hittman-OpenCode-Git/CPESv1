@@ -1,0 +1,181 @@
+{
+  "title": "SESSION806_AUTHORING_BATCH_A",
+  "session": "806",
+  "generated": "2026-07-26",
+  "batch": "A",
+  "itemsAuthored": 3,
+  "agent": "D",
+  "qualityGateValidation": {
+    "gate1_draft": {
+      "status": "COMPLETE",
+      "note": "All 3 items have stem, 4 choices, CorrectChoice, EC, EW[A-D], metadata"
+    },
+    "gate2_technical": {
+      "status": "PENDING",
+      "note": "Requires DL-008/DL-026/DL-013/DL-010/field completeness scan"
+    },
+    "gate3_blueprint": {
+      "status": "PENDING",
+      "note": "Requires topic/LO/CL/difficulty accuracy verification against CSO"
+    },
+    "gate4_qa": {
+      "status": "PENDING",
+      "note": "Requires stem clarity, distractor plausibility, EC quality, EW specificity review"
+    }
+  },
+  "ewCompliance": {
+    "dl008": "VERIFIED — all 3 items have empty EW[CorrectChoice] (field at CC index is '')",
+    "dl026": "VERIFIED — all non-CC EW fields have content >= 100 chars",
+    "dl013": "VERIFIED — no template boilerplate detected in any EC or EW field",
+    "dl010": "PENDING — cross-contamination check requires human review"
+  },
+  "items": [
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R11 preventive controls — classification and examples",
+      "MicroTopic": "preventive controls classification examples",
+      "UniqueConceptKey": "E-R11-preventive-controls-classification",
+      "LOSTag": "E.1.e Control Activities — preventive vs. detective vs. corrective controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Cascade Technologies recently implemented several control activities: (1) a manager must approve all purchase orders exceeding $5,000 before they are issued to vendors, (2) the accounts payable system automatically matches each vendor invoice to the corresponding purchase order and receiving report before payment is processed, and (3) a monthly reconciliation of the accounts payable subsidiary ledger to the general ledger control account is performed by a staff accountant who does not process payables. Which of the following correctly classifies these three controls?",
+      "CorrectChoice": "A",
+      "ExplanationCorrect": "Internal controls are classified into three categories based on when they act relative to an error or irregularity: preventive controls deter errors or fraud before they occur by stopping undesirable events from happening; detective controls identify errors or fraud after they have occurred by discovering undesirable events that have already happened; corrective controls remedy errors or irregularities that have been detected by restoring the system to an acceptable state and addressing the root cause. In this scenario, control (1) — management approval of purchase orders over $5,000 — is a preventive control because it stops unauthorized purchases before they are initiated. Control (2) — the automated three-way match of invoice, purchase order, and receiving report — is a preventive control because it prevents payment for goods not ordered or not received before payment is processed. Control (3) — the monthly AP subsidiary-to-general-ledger reconciliation — is a detective control because it identifies discrepancies between the detailed records and the control account after transactions have been recorded. The reconciliation may trigger corrective action (such as adjusting entries), but the reconciliation itself is detective — it discovers errors that have already occurred. The three-way match is one of the most frequently tested preventive controls on the CMA exam, and candidates should recognize that automated matching prevents errors before they result in incorrect payments.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces clone group for preventive control classification.",
+      "QuestionID": "P1-E-R11",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the classification of internal controls as preventive, detective, or corrective and practice distinguishing them in scenario-based questions with multiple controls.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Controls (1) and (2) are preventive; control (3) is detective",
+        "B": "All three controls are preventive because each is designed to stop errors before financial statements are issued",
+        "C": "Controls (1) and (3) are preventive; control (2) is detective because it identifies discrepancies in vendor invoices",
+        "D": "Control (1) is preventive; control (2) is detective; control (3) is corrective"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework (Control Activities)",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.e Control Activities — preventive vs. detective vs. corrective controls",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template",
+        "Distractors written as plausible CMA-style traps based on common classification errors"
+      ],
+      "ExplanationWrongA": "",
+      "ExplanationWrongB": "Not all three controls are preventive. The monthly reconciliation (control 3) compares subsidiary ledger balances to general ledger control balances — it discovers discrepancies that have already occurred in the accounting records. A preventive control stops an error or fraud before it happens; a reconciliation identifies errors after the fact. Additionally, the timing distinction matters: a control that operates after transactions are recorded is detective, not preventive. A candidate selecting this option may be overgeneralizing, assuming that any control present in a well-designed system must be preventive in nature.",
+      "ExplanationWrongC": "The three-way match (control 2) is a preventive control — it prevents an incorrect payment from being made by verifying that the goods were ordered (purchase order), received (receiving report), and invoiced correctly (vendor invoice) before payment is authorized. It does not 'identify discrepancies in vendor invoices' after payment; it stops incorrect payments before they occur. The reconciliation (control 3) is detective, not preventive, because it identifies discrepancies between detailed records and control accounts after transactions are recorded. A candidate selecting this option may be confusing the timing of the three-way match with the timing of a reconciliation.",
+      "ExplanationWrongD": "The three-way match (control 2) is a preventive control, not a detective control. It prevents incorrect payments rather than detecting errors after the fact. The monthly reconciliation (control 3) is detective, not corrective — it identifies discrepancies but does not by itself correct them. A corrective control would be something like an adjusting journal entry procedure that fixes the root cause of the reconciliation difference. While reconciliations may lead to corrective actions, the reconciliation activity itself is classified as detective. A candidate selecting this option may be conflating the detective function of a reconciliation with the corrective actions that follow from it."
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R14 IT general controls — categories and scope",
+      "MicroTopic": "IT general controls categories scope",
+      "UniqueConceptKey": "E-R14-it-general-controls-categories",
+      "LOSTag": "E.1.j Systems Controls & IT Governance — IT general controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Understand",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Atlas Financial Services relies heavily on its core banking system for transaction processing, customer account management, and regulatory reporting. The IT audit team is categorizing controls that support the reliability of application processing across the entire IT environment, including controls over program development, program changes, computer operations, and access to programs and data. Which category of IT controls do these represent?",
+      "CorrectChoice": "D",
+      "ExplanationCorrect": "IT controls are classified into two broad categories: IT general controls (ITGC) and application controls. IT general controls apply to the overall IT environment and support the effective functioning of application controls by ensuring the continued proper operation of information systems. ITGCs encompass four primary domains: (1) program development controls — ensuring that new systems and modifications are authorized, tested, and approved before implementation; (2) program change controls — ensuring that changes to existing programs are authorized, tested, and documented to maintain system integrity over time; (3) computer operations controls — ensuring that scheduled processing (batch jobs, backups, system monitoring) is performed consistently and that deviations are detected and resolved; and (4) access to programs and data controls — ensuring that only authorized individuals can access or modify systems, programs, and data files. In contrast, application controls are specific to individual application programs and focus on the completeness, accuracy, authorization, and validity of data input, processing, and output. In this scenario, the controls described span the entire IT environment rather than a single application — they are IT general controls. ITGCs are foundational; if they are weak, application controls cannot be relied upon regardless of how well they are designed.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces archived P1-EC-036 through P1-EC-040 clone rotation group.",
+      "QuestionID": "P1-E-R14",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the distinction between IT general controls (ITGC) and application controls, and memorize the four ITGC domains.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "Application controls, because they ensure the completeness and accuracy of transaction processing within the banking system",
+        "B": "Entity-level controls, because they establish the overall control environment for the organization's IT function",
+        "C": "Business process controls, because they are embedded within the transaction processing cycle and operate at the process level",
+        "D": "IT general controls, because they apply across the entire IT environment and support the reliability of all application processing"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "COSO Internal Control — Integrated Framework (Technology Controls)",
+          "url": "https://www.coso.org/guidance-on-ic"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls & IT Governance — ITGCs",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — replaces 5-clone P1-EC-036 to P1-EC-040 group",
+        "Distractors test common misclassifications of IT control types"
+      ],
+      "ExplanationWrongA": "Application controls are specific to individual application programs — they handle data input, processing, and output within a particular system. The controls described in the question (program development, program changes, computer operations, and access to programs and data) apply across the entire IT environment, not to a specific application. Application controls depend on IT general controls; if ITGCs are weak, application controls may be overridden or bypassed. A candidate selecting this option may be focusing on the phrase 'application processing' in the stem rather than on the scope of the controls described.",
+      "ExplanationWrongB": "Entity-level controls operate at the organizational level and include the control environment, risk assessment philosophy, and governance structures — they are broader than IT-specific controls. While entity-level controls do influence the IT control environment, the controls described (program development, change management, computer operations, access management) are specifically IT general controls. Entity-level controls set the tone for the entire organization, not just for IT systems. A candidate selecting this option may be confusing the COSO control environment (which is entity-wide) with IT-specific governance controls.",
+      "ExplanationWrongC": "Business process controls are embedded within specific business processes (such as the procure-to-pay cycle, order-to-cash cycle, or payroll processing) and operate at the transaction level within individual processes. The controls described apply across the IT environment supporting all business processes — they are infrastructure-level controls, not process-level controls. Business process controls include things like three-way matching in accounts payable or credit approval in order entry, not program change management or computer operations controls.",
+      "ExplanationWrongD": ""
+    },
+    {
+      "Part": 1,
+      "Section": "E",
+      "SectionName": "Internal Controls",
+      "Topic": "E-R15 application controls — input processing output",
+      "MicroTopic": "application controls input processing output ipo",
+      "UniqueConceptKey": "E-R15-application-controls-ipo",
+      "LOSTag": "E.1.j Systems Controls & IT Governance — application controls",
+      "Difficulty": "Moderate",
+      "DifficultyScore": 3,
+      "CognitiveLevel": "Apply",
+      "ItemType": "MCQ",
+      "ItemStyle": "single-select",
+      "Stem": "Northpoint Distribution uses an order entry system in which sales representatives enter customer orders directly. The system performs the following procedures: (1) the customer number is checked against the approved customer master file before the order is accepted, (2) the system calculates the order total by multiplying quantity by unit price and displays the total for the representative to confirm, and (3) after the order is saved, a confirmation report listing all orders entered during the shift is printed and compared to the physical picking tickets by the shift supervisor. Under the input-processing-output (IPO) classification of application controls, which of the following correctly categorizes these procedures?",
+      "CorrectChoice": "B",
+      "ExplanationCorrect": "Application controls are classified under the input-processing-output (IPO) model: input controls ensure that data entering the system is authorized, complete, and accurate before processing begins; processing controls ensure that data is processed correctly as intended, including calculations, file updates, and data transformations; output controls ensure that processed data is complete, accurate, and distributed only to authorized recipients. In this scenario, procedure (1) — validation of the customer number against the approved customer master file — is an input control because it verifies that the data being entered (the customer identifier) is valid and authorized before the order is processed. Procedure (2) — automatic calculation of the order total with confirmation by the representative — is a processing control because it ensures the arithmetic calculation is performed correctly and that the user reviews the computed result before the transaction is finalized. Procedure (3) — comparison of the system-generated confirmation report to physical picking tickets by the supervisor — is an output control because it verifies the accuracy of the system's output (the order confirmation) against an independent source (the physical documents) after processing. The IPO framework is fundamental to evaluating application controls, and the CMA exam frequently tests a candidate's ability to classify controls into the correct IPO category based on when they operate in the transaction flow.",
+      "SourceDescription": "Original CMA Part 1 exam-style practice item. Not real CMA exam content and not copied from official samples. Replaces clone group for application controls IPO classification.",
+      "QuestionID": "P1-E-R15",
+      "question_state": "Unprocessed",
+      "Part1OnlyFlag": true,
+      "ReviewNote": "If missed, review the IPO classification of application controls and practice identifying input, processing, and output controls in transaction processing scenarios.",
+      "CalculationItem": false,
+      "Choices": {
+        "A": "All three procedures are input controls because each verifies data before it is permanently recorded in the system",
+        "B": "Procedure (1) is an input control; procedure (2) is a processing control; procedure (3) is an output control",
+        "C": "Procedure (1) is an output control because it checks the customer file; procedure (2) is an input control; procedure (3) is a processing control",
+        "D": "Procedure (1) is a processing control because it involves file matching; procedure (2) is an input control; procedure (3) is an input control because it uses physical documents"
+      },
+      "StudyLinks": [
+        {
+          "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
+          "url": "https://prodcm.imanet.org/-/media/IMA/Files/Home/IMA-Certifications/CMA-Certification/2024-CMA-Learning-Outcome-Statement-Final.ashx"
+        },
+        {
+          "label": "ISACA: Application Controls Overview",
+          "url": "https://www.isaca.org/resources/glossary"
+        }
+      ],
+      "VerifiedChecks": [
+        "Mapped to CMA Part 1 CSO E.1.j Systems Controls — application controls IPO classification",
+        "Screened to exclude Part 2-only topics",
+        "Original replacement item — not derived from clone rotation template",
+        "Distractors written as plausible CMA-style traps based on IPO classification errors"
+      ],
+      "ExplanationWrongA": "Not all three procedures are input controls. Procedure (1) operates at data entry — it is an input control. But procedure (2) (calculation of the order total) operates during processing, not input — the calculation happens after data is entered, which is a processing control. Procedure (3) (supervisor comparison of report to picking tickets) operates after processing is complete — it is an output control that verifies the system's output. A candidate selecting this option may be incorrectly assuming that any control operating before the order is 'permanently recorded' is an input control, without distinguishing between the data entry, data processing, and data output stages.",
+      "ExplanationWrongB": "",
+      "ExplanationWrongC": "This classification reverses all three procedures. Procedure (1) — checking the customer number against the master file — is an input control because it validates data as it enters the system, not after output. Procedure (2) — automatic calculation of the order total — is a processing control because the computation occurs during data processing, not during data entry. Procedure (3) — comparing the confirmation report to picking tickets — is an output control because it reviews the system's output after processing, not during processing. A candidate selecting this option may be confusing the purpose of each control (what it checks) with the timing of when the check occurs in the transaction flow.",
+      "ExplanationWrongD": "Procedure (1) — customer number validation against the master file — is an input control because it validates data upon entry, not a processing control. File matching as a category is not automatically 'processing' — it depends on when the match occurs. A validation check at data entry is an input control. Procedure (3) — supervisor comparison of reports to picking tickets — is an output control because it reviews the system's output, not an input control. The use of physical documents does not determine the control classification; the timing of the control relative to the transaction flow determines whether it is input, processing, or output."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "session": "S206",
+  "board": "H",
+  "title": "Throughput Seed Dataset \u2014 First Operational Measurements",
+  "purpose": "Capture baseline throughput measurements without claiming gains. Feeds S352-S354 analytics.",
+  "measurements": {
+    "scanRuntime": {
+      "totalPipeline": "0.7s",
+      "perGate": {
+        "gate_neg1": "0.2s",
+        "gate_0": "0.2s",
+        "gate_1": "0.1s",
+        "gate_2": "0.1s",
+        "gate_3": "0.1s",
+        "gate_4": "0.1s"
+      },
+      "itemsPerSecond": "3,628.6"
+    },
+    "reviewRouting": {
+      "fullReview": 0,
+      "partialReview": 0,
+      "noReview": 2540,
+      "inheritanceRate": "100% (baseline \u2014 no prior delta to compare)"
+    },
+    "readinessCounts": {
+      "BLOCKED": 242,
+      "REMEDIATE": 77,
+      "READY": 0,
+      "CERTIFY": 2221,
+      "portfolioReadiness": "0.8744"
+    },
+    "artifactGeneration": {
+      "identityReport": "38,660 lines (~1.8 MB)",
+      "scanArtifact": "42,661 lines (~1.5 MB)",
+      "deltaLedger": "33,041 lines (~2.0 MB)",
+      "readinessScoring": "28,051 lines (~1.0 MB)",
+      "recommendationRegistry": "2,460 lines (~90 KB)",
+      "totalOutputSize": "~6.4 MB"
+    },
+    "sessionDuration": {
+      "scanPhase": "< 1s",
+      "reportPhase": "~15-30s (agent-assisted generation)",
+      "totalSession": "~5-10 min (read-only with parallel agents)"
+    }
+  },
+  "s352Inputs": {
+    "TH-001_itemsPerHour": "13,062,960 (scan only)",
+    "TH-002_itemsPerSession": "2,540 (full-pool scan)",
+    "TH-003_cycleTime": "0.00028s per item (scan)",
+    "TH-008_costPerItem": "negligible (automated scan pipeline)"
+  },
+  "s353Inputs": {
+    "deltaSkipRate": "N/A \u2014 baseline session, no prior comparison",
+    "reviewReduction": "N/A \u2014 requires change baseline from second certification wave"
+  },
+  "note": "All measurements are scan-pipeline only. Content authoring/certification throughput requires first v2 certification wave. S352/S353/S354 remain BLOCKED for throughput claims until S811 operational data.",
+  "verdict": "SEED_CAPTURED \u2014 First throughput dataset generated for S352-S354 consumption"
+}

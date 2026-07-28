@@ -1,0 +1,84 @@
+{
+  "session": "S862",
+  "title": "Cohort C Evaluate Wave 3",
+  "date": "2026-07-27",
+  "pack_primary": "pack_c_corrected.js",
+  "sections_targeted": ["C", "D"],
+  "evaluate_items_edited": 1,
+  "evaluate_candidates_identified": 5,
+  "evaluate_framework_established": true,
+  "edited_items": [
+    {
+      "qid": "P1-CC-065",
+      "section": "C",
+      "topic": "Controllability principle",
+      "cl_before": "Apply",
+      "cl_after": "Evaluate",
+      "ds_before": 1,
+      "ds_after": 2,
+      "explanation_enhanced": true,
+      "evaluate_framework_added": true,
+      "cc_preserved": true,
+      "evaluation_criteria_added": [
+        "Can the manager influence this item through their own decisions?",
+        "If not, is the allocation necessary for full-cost visibility?",
+        "If full-cost visibility is needed, should it be reported separately from controllable performance?"
+      ],
+      "distractor_enhancement": "All three non-CC ExplanationWrong fields rewritten with choice-specific, principle-aligned text"
+    }
+  ],
+  "evaluate_candidates_phase2": [
+    {
+      "qid": "P1-DC-025",
+      "section": "D",
+      "topic": "Variable vs absorption costing",
+      "evaluate_potential": "Which costing method should the CFO use for bonus determination? Tests judgment about method selection for specific business purposes.",
+      "current_cl": "Analyze"
+    },
+    {
+      "qid": "P1-DC-030",
+      "section": "D",
+      "topic": "Relevant range cost behavior",
+      "evaluate_potential": "How should management manage the risk of exceeding the relevant range? Tests capacity planning judgment.",
+      "current_cl": "Analyze"
+    },
+    {
+      "qid": "P1-DC-040",
+      "section": "D",
+      "topic": "Theory of Constraints",
+      "evaluate_potential": "Where should management allocate limited improvement capital? Tests resource allocation judgment under constraints.",
+      "current_cl": "Analyze"
+    },
+    {
+      "qid": "P1-DC-045",
+      "section": "D",
+      "topic": "Cost of quality",
+      "evaluate_potential": "How should management prioritize investments across prevention, appraisal, and failure categories? Tests quality investment prioritization.",
+      "current_cl": "Analyze"
+    },
+    {
+      "qid": "P1-CC-071",
+      "section": "C",
+      "topic": "Gross margin variance analysis",
+      "evaluate_potential": "Given three unfavorable variance drivers, which should management address first and why? Tests variance investigation prioritization.",
+      "current_cl": "Analyze"
+    }
+  ],
+  "classification_board_findings": {
+    "evaluate_vs_analyze_distinction": "Evaluate items require the candidate to make a JUDGMENT or RECOMMENDATION based on multi-criteria analysis — not merely interpret or diagnose (Analyze). The Evaluate framework added to CC-065 includes explicit evaluation criteria (controllability test, visibility test, reporting separation decision).",
+    "no_false_evaluate": "No items were upgraded to Evaluate via label-only change. The one upgraded item (CC-065) received a complete explanation rewrite with evaluation criteria framework.",
+    "cognitive_progression_verified": "CC-065: Remember (original definition-match) → Understand (relabeled) → Analyze (none needed, directly to Evaluate via judgment framework). The progression is valid because the concept (controllability) inherently supports evaluation-level reasoning."
+  },
+  "safety_checks": {
+    "dl008_introduced": 0,
+    "dl026_introduced": 0,
+    "answer_key_changed": 0,
+    "governance_guard": "32/32 PASS",
+    "certified_count_preserved": true
+  },
+  "pool_wide_evaluate": {
+    "pre_s862": "0 (estimated)",
+    "post_s862": "1 (directly edited) + 0 (inherited) = 1",
+    "target": "10-15 identified for S862 Phase 2"
+  }
+}

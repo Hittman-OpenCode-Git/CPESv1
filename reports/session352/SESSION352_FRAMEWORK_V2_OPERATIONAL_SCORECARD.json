@@ -1,0 +1,230 @@
+{
+  "document": "SESSION352_FRAMEWORK_V2_OPERATIONAL_SCORECARD",
+  "session": "S352",
+  "title": "Framework v2 Operational Scorecard — Board J",
+  "series": "350-Series — Framework v2 Operational Analytics (Wave 1)",
+  "date": "2026-07-27",
+  "type": "Read-Only Synthesis — No Content Modifications",
+  "authority": "All S352 Boards A–I. SESSION350_V1_BASELINE.json. SESSION206_V2_ACTIVATION_REPORT.json.",
+  "purpose": "Synthesis scorecard answering the five strategic questions. Did v2 improve operations? Produce the S352 Executive Decision Record.",
+
+  "executive_dashboard": {
+    "certified_pool": "2,221 / 2,540 (87.44% — stable)",
+    "governance_guard": "27/27 PASS (stable)",
+    "baseline_continuity": "15/15 file hashes match S351 (100% continuity)",
+    "identity_resolution": "2,539/2,540 PASS (99.96%)",
+    "gate_neg1_pass_rate": "99.96%",
+    "readiness_portfolio": "87.44%",
+    "certified_defect_leakage": "154 items (6.93%)",
+    "delta_engine_reliability": "100% determinism, 2,540/2,540 correctly classified",
+    "recommendations_open": 4,
+    "recommendations_closed": 0,
+    "scan_artifact_reuse": "1 scan → 32 board consumptions",
+    "scan_speed_vs_v1": "0.7s vs. est. 10.75 hours (~55,000×)"
+  },
+
+  "five_questions_answered": {
+    "question_1_is_v2_delivering_measurable_gains": {
+      "answer": "YES — in scanning. NO — in certification.",
+      "detail": "Framework v2 is delivering massive gains in the area where it is operationally active: automated scanning. The 0.7s full-pipeline scan replaces ~10.75 hours of estimated v1 manual grep-based per-defect-class scanning — a ~55,000× improvement in time and a categorical improvement in accuracy (0% false positives vs. ~75% in v1). Artifact reuse is proven at 32 board consumptions per scan. However, the gains that matter for delivery velocity — pre-flight defect prevention, delta review, board consolidation — have produced ZERO realized gain because no v2 certification wave has run. The infrastructure is operationally proven but the enforcement is not yet active.",
+      "confidence": "HIGH (scan data). MEDIUM (certification projection — depends on unexecuted v2 wave).",
+      "supporting_boards": ["Board B (Identity)", "Board C (Gate -1)", "Board E (Scan Artifacts)", "Board I (Throughput)"]
+    },
+    "question_2_is_readiness_leakage_falling": {
+      "answer": "YES — but not from v2. From manual remediation.",
+      "detail": "Readiness failure rate dropped from 89.5% (v1 baseline) to 6.93% certified pool defect leakage. This -82% reduction came from ~200 sessions of manual remediation (DL-008 sweeps, DL-013 remediation, DL-025/026 distractor authoring, certification waves). Framework v2 pre-flight gates have contributed zero to this reduction because they operate in advisory mode — no certification wave has been blocked or flagged by v2 gates. The remaining 154 leakage items (DL-021: 95, DL-016: 58, DL-034: 1 resolved) would all be caught by v2 enforcement gates IF enforcement were active, but enforcement is not active.",
+      "confidence": "HIGH (leakage counts are verified). MEDIUM (whether v2 gates will actually prevent leakage — depends on enforcement activation).",
+      "supporting_boards": ["Board D (Readiness Leakage)"]
+    },
+    "question_3_is_delta_review_working": {
+      "answer": "ENGINE VERIFIED — NOT YET APPLIED.",
+      "detail": "The delta review classification engine correctly classified all 2,540 items as NO_CHANGE (100% determinism, zero false classifications). SHA-256 content hashing is reliable and metadata-immune. All 5 inheritance rules (IR-001 through IR-005) are logically specified and unambiguous. However, delta review has zero operational application because: (a) the baseline scan (S206) is from a read-only session — no content changes to review, (b) all 2,540 items are NO_CHANGE (expected for a session with zero content modifications), (c) no certification wave has produced content changes that would trigger IR-002 through IR-005 routing. The engine is ready. The data to prove it is deferred to S811+.",
+      "confidence": "HIGH (engine verification). LOW (inheritance routing — has never been applied to real content changes).",
+      "supporting_boards": ["Board F (Delta Effectiveness)"]
+    },
+    "question_4_is_scan_reuse_working": {
+      "answer": "YES.",
+      "detail": "The S322 scan artifact has been consumed by 4 sessions (S206, S207, S351, S352) across 32 board analyses. Artifact creation cost: 0.7s. Reuse factor: 32 consumptions from 1 scan. This validates the 'Scan Once, Consume Many' architectural pattern. In v1, every session performed independent ad-hoc scans (0 reuse). In v2, scans are produced once and consumed downstream. Artifact consumption contracts (5 boards consuming specific artifact fields) are validated. Scan redundancy (50+ v1 events) is eliminated.",
+      "confidence": "HIGH (proven operationally across 4 sessions).",
+      "supporting_boards": ["Board E (Scan Artifacts)", "Board A (Baseline Continuity)"]
+    },
+    "question_5_is_hybrid_deployment_performing_as_expected": {
+      "answer": "YES — EXCEEDING EXPECTATIONS.",
+      "detail": "Hybrid Mode (v1 authoritative, v2 advisory) has been operating since S206 without a single conflict, drift event, or governance violation. Zero certification changes (all 2,221 Certified items retain their state). Zero governance changes (governance-guard 27/27 PASS stable). Zero content changes (all pack file hashes match S351 baseline). Zero S320-class identity failures. The v2 pipeline produces measurement data consumed by analytics sessions; the v1 pipeline continues normal operation. The coexistence model is proven stable. Transition to enforcement mode (S830 P1 exit gate) requires only governance rule activation — no technical changes needed.",
+      "confidence": "HIGH (proven across S206, S207, S351, S352 — 4 read-only sessions with zero conflicts).",
+      "supporting_boards": ["Board A (Baseline)", "Board B (Identity)", "Board C (Gate -1)", "Board J (this scorecard)"]
+    }
+  },
+
+  "bf_metrics_operational_scorecard": {
+    "description": "Track each S350 BF metric against Wave 1 operational reality.",
+    "metrics": [
+      {
+        "id": "BF-001",
+        "metric": "agents_per_session",
+        "v1_value": 19,
+        "wave_1_observed": "~8-12 (read-only analytics sessions). v2 certification agent count: NOT YET MEASURED.",
+        "trajectory": "HOLDING — v2 analytics sessions use fewer agents but this is a function of read-only scope, not Framework v2 efficiency."
+      },
+      {
+        "id": "BF-002",
+        "metric": "boards_per_session",
+        "v1_value": 8.5,
+        "wave_1_observed": "10 (all S352 boards A-J). Framework measurement sessions use 10 boards; content certification sessions remain at 8 (v1).",
+        "trajectory": "HOLDING — v2 board model (5 boards) not yet adopted by certification sessions."
+      },
+      {
+        "id": "BF-003",
+        "metric": "reports_per_session",
+        "v1_value": 9,
+        "wave_1_observed": "10 (this session). S206: 10. S207: 13. S351: 10.",
+        "trajectory": "STABLE — Framework measurement sessions produce 10-13 structured JSON artifacts. These are fully consumed by downstream analytics, unlike v1's 35% consumption rate."
+      },
+      {
+        "id": "BF-004",
+        "metric": "readiness_failure_rate",
+        "v1_value": "89.5%",
+        "wave_1_observed": "6.93% (certified pool defect leakage). Portfolio readiness: 87.44%.",
+        "trajectory": "IMPROVING — but improvement is from manual remediation, not v2 gate enforcement. 154 items remain in certified pool with known defects."
+      },
+      {
+        "id": "BF-005",
+        "metric": "duplicate_review_cycles",
+        "v1_value": "2.5:1",
+        "wave_1_observed": "N/A (no certification reviews in read-only sessions)",
+        "trajectory": "WAITING — requires v2 certification wave with delta review operational."
+      },
+      {
+        "id": "BF-006",
+        "metric": "re_review_rate",
+        "v1_value": "80%",
+        "wave_1_observed": "100% baseline artifact (all items need review — no prior certification exists). Delta engine projects 3.7% if 96.3% of items are unchanged between waves.",
+        "trajectory": "WAITING — requires second scan artifact after first v2 certification wave."
+      },
+      {
+        "id": "BF-007",
+        "metric": "identity_ambiguity",
+        "v1_value": "PRESENT (binary_fail)",
+        "wave_1_observed": "ELIMINATED — 99.96% resolution. 0% false positives. No S320-class failures since v2 activation.",
+        "trajectory": "RESOLVED — Identity ambiguity, the root cause of wrong-target remediation, has been eliminated. This is the single confirmed operational gain attributable to Framework v2."
+      },
+      {
+        "id": "BF-008",
+        "metric": "cycle_time",
+        "v1_value": "4-5 sessions/wave",
+        "wave_1_observed": "N/A (no v2 certification wave)",
+        "trajectory": "WAITING — requires v2 certification wave measurement."
+      },
+      {
+        "id": "BF-009",
+        "metric": "defect_timing",
+        "v1_value": "0% pre-flight / 89% board-review / 2.5% post-cert",
+        "wave_1_observed": "Infrastructure ready (0.7s scan) but 0% pre-flight detection (advisory mode). Target: 78% pre-flight when enforcement activated.",
+        "trajectory": "INFRASTRUCTURE ONLY — proven but not yet applied."
+      },
+      {
+        "id": "BF-010",
+        "metric": "report_consumption_rate",
+        "v1_value": "35% (432 of 1,227 referenced)",
+        "wave_1_observed": "100% — 2 scan artifacts consumed by 32 board analyses across 4 sessions. 0 stale artifacts.",
+        "trajectory": "IMPROVED — v2 artifacts are structured and fully consumed. The v1 problem (65% one-off/unconsumed reports) is resolved for scan artifacts."
+      }
+    ]
+  },
+
+  "executive_decisions": {
+    "decision_1_baseline_preservation": {
+      "question": "Is the S350 baseline preserved and continuous through S352?",
+      "answer": "YES. All 15 hashes match S351. S350_V1_BASELINE.json has not been modified. All 38 frozen metrics intact.",
+      "board": "A",
+      "unanimous": true
+    },
+    "decision_2_identity_operational": {
+      "question": "Is identity resolution operationally effective at Wave 1?",
+      "answer": "YES. 99.96% resolution rate. 0% false positives. 0 S320-class failures since activation. This is the single confirmed operational gain of Framework v2.",
+      "board": "B",
+      "unanimous": true
+    },
+    "decision_3_gate_neg1_operational": {
+      "question": "Is Gate -1 performing as specified at Wave 1?",
+      "answer": "YES — within scope. Steps 1-3 fully operational (QID format, CC presence, pack attribution). Steps 4-5 deferred per design. 99.96% pass rate. Zero certified-pool items blocked.",
+      "board": "C",
+      "unanimous": true
+    },
+    "decision_4_readiness_leakage": {
+      "question": "Is readiness leakage measurable at Wave 1?",
+      "answer": "YES — but not yet actionable. 154 items (6.93%) in certified pool with known defects. Reduction from 89.5% is from manual remediation. v2 gates have prevented zero leakage because they are advisory. Domains E (59.76%) and F (60.16%) are the primary readiness drag.",
+      "board": "D",
+      "unanimous": true
+    },
+    "decision_5_scan_artifact_proven": {
+      "question": "Is the 'Scan Once, Consume Many' pattern working?",
+      "answer": "YES — proven operationally. 1 artifact → 32 board consumptions across 4 sessions. 100% consumption rate. Elimination of v1's 50+ scan redundancy.",
+      "board": "E",
+      "unanimous": true
+    },
+    "decision_6_delta_engine_ready": {
+      "question": "Is the delta ledger engine reliable?",
+      "answer": "YES. 100% determinism. 2,540/2,540 correctly classified. But effectiveness cannot yet be measured — no certification wave has produced content changes between comparison baselines. First actionable delta: S811+.",
+      "board": "F",
+      "unanimous": true
+    },
+    "decision_7_recommendation_pipeline": {
+      "question": "Is the recommendation pipeline operational?",
+      "answer": "YES — infrastructure operational with 4 REC-IDs, 2,105 QIDs linked. But pipeline velocity is zero: 0 assigned, 0 in progress, 0 closed. All await S811 assignment.",
+      "board": "G",
+      "unanimous": true
+    },
+    "decision_8_investigation_capability": {
+      "question": "What is the current investigation capability maturity?",
+      "answer": "LEVEL 2 (Structured Index) — 5 link types operational, 35 challenges, 2,540 indexed items. Distance to target Level 5: 3 levels. Lowest-cost next step: programmatic query layer → Level 3 (1 session, ~100 lines).",
+      "board": "H",
+      "unanimous": true
+    },
+    "decision_9_throughput_claim_restraint": {
+      "question": "Should S352 claim throughput gains?",
+      "answer": "PARTIALLY. Scan throughput gains (~55,000×) are measured and verified. Certification throughput gains (1.5-3.8× target) are NOT measured — 0% realized. The 0.7s scan is real; the 3.8× certification multiplier is architectural projection. S352 must not claim what it cannot measure.",
+      "board": "I",
+      "unanimous": true
+    },
+    "decision_10_hybrid_mode_certified": {
+      "question": "Is Hybrid Mode (v1 authoritative, v2 advisory) performing as expected?",
+      "answer": "YES — EXCEEDING EXPECTATIONS. 4 read-only sessions (S206, S207, S351, S352) with zero conflicts, zero drift, zero governance violations. v1 continues normal operations. v2 produces measurement data. Coexistence model is stable and proven.",
+      "board": "J",
+      "unanimous": true
+    }
+  },
+
+  "session_352_verdict": "FRAMEWORK_V2_WAVE_1_MEASUREMENT_COMPLETE — Infrastructure is operationally proven across all 6 engines. Scan throughput is massive and verified. Identity ambiguity (v1's most damaging defect) is eliminated. Artifact reuse is proven. Hybrid Mode is stable. BUT: certification throughput — the metric that matters — is 0% measured because no v2 certification wave has run. The 3.8× multiplier, 80% skip rate, 78% pre-flight detection — all are infrastructure-ready but operationally unrealized. S352 has measured what CAN be measured. S353 and S354 (after S811) will measure what MUST be measured.",
+
+  "next_session_dependency_chain": {
+    "s352_dependencies_satisfied": [
+      "S350 measurement authority — CONSUMED",
+      "S351 validation readiness — CONSUMED",
+      "S206 operational dataset — CONSUMED",
+      "S322 running infrastructure — CONSUMED",
+      "First throughput dataset — CONSUMED",
+      "Established delta baseline — CONSUMED"
+    ],
+    "s353_requires": "Second Framework v2 certification wave — first content-modifying session under v2 pipeline. Provides: first cert-wave throughput data, first delta comparison (not baseline), first measurable re-review rate.",
+    "s354_requires": "S830 P1 exit gate — Framework v2 transitions from advisory to authoritative. Provides: enforcement-mode gate data, board consolidation measurements, full-cycle throughput metrics.",
+    "blocker_s352_s353": "S811 (first v2 certification wave) is the critical-path dependency. Until S811 executes, S352-S354 can measure infrastructure but not certification throughput."
+  },
+
+  "cross_references": {
+    "s352_boards": [
+      "reports/session352/SESSION352_BASELINE_CONTINUITY_AUDIT.json",
+      "reports/session352/SESSION352_IDENTITY_EFFECTIVENESS.json",
+      "reports/session352/SESSION352_GATE_NEG1_ANALYTICS.json",
+      "reports/session352/SESSION352_READINESS_LEAKAGE_ANALYSIS.json",
+      "reports/session352/SESSION352_SCAN_ARTIFACT_METRICS.json",
+      "reports/session352/SESSION352_DELTA_EFFECTIVENESS.json",
+      "reports/session352/SESSION352_RECOMMENDATION_OPERATIONS.json",
+      "reports/session352/SESSION352_INVESTIGATION_CAPABILITY_ANALYSIS.json",
+      "reports/session352/SESSION352_THROUGHPUT_MEASUREMENT.json"
+    ],
+    "s350_v1_baseline": "reports/SESSION350_V1_BASELINE.json",
+    "s206_v2_activation": "reports/SESSION206_V2_ACTIVATION_REPORT.json",
+    "s207_executive_summary": "reports/SESSION207_EXECUTIVE_SUMMARY.md"
+  }
+}

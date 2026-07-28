@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "session": "S361",
+    "title": "Operational Sustainability Audit",
+    "date": "2026-07-28",
+    "auditor": "Build-Time AI Verification",
+    "mode": "READ-ONLY",
+    "repository_root": "C:/Users/User/OneDrive/Desktop/CMA_Part_1_2026"
+  },
+
+  "governance": {
+    "rules_active": 9,
+    "rules_block": 9,
+    "rules_warn": 0,
+    "rule_detail": {
+      "Rule 1": { "level": "BLOCK", "description": "question_state changes must pair with REVISION_HISTORY.md updates" },
+      "Rule 2": { "level": "BLOCK", "description": "ExplanationWrong[CorrectChoice] must be empty (DL-008)" },
+      "Rule 3": { "level": "BLOCK", "description": "MASTER_QUESTION_REGISTRY.md is generated, never edited" },
+      "Rule 4": { "level": "BLOCK", "description": "answer-key changes must include recomputed verification note" },
+      "Rule 5": { "level": "BLOCK", "description": "<= 30 question objects per change-set without block-authorization" },
+      "Rule 6": { "level": "BLOCK", "description": "non-CorrectChoice EW slots must be non-empty (DL-026)" },
+      "Rule 7": { "level": "BLOCK", "description": "DERIVED_REGISTRY_NOT_AUTHORITATIVE" },
+      "Rule 8": { "level": "BLOCK", "description": "UNTRACKED_ARTIFACT" },
+      "Rule 9": { "level": "BLOCK", "description": "Choice binary lead-in polarity mismatch (DL-037)" }
+    },
+    "test_suite": {
+      "passing": 51,
+      "failing": 0,
+      "total": 51,
+      "last_verified": "2026-07-28 S361",
+      "test_file_hash_match_baseline": true
+    },
+    "plugin_file_hash_match_baseline": true,
+    "governance_coverage_gaps": [
+      "No rule for ExplanationWrong field ABSENCE (DL-018/DL-021 pattern) — Rule 6 catches empty strings but not undefined fields",
+      "No rule for dual-block metadata vs content mismatch (DL-016 residual)",
+      "No rule for definition-match difficulty inflation (DL-031 pattern)"
+    ]
+  },
+
+  "registries": {
+    "master_question_registry": {
+      "file": "knowledge/MASTER_QUESTION_REGISTRY.md",
+      "status": "STALE",
+      "last_generated": "2026-07-27T00:35:00",
+      "staleness_hours": 36.6,
+      "staleness_flag": true,
+      "registry_total_questions": 2995,
+      "registry_pack_entries_in_table": 1295,
+      "actual_pack_questionid_count": 2540,
+      "registry_pack_delta": -1245,
+      "certified_count_in_registry": "NOT AVAILABLE",
+      "raw_file_certified_count": 2320,
+      "notes": [
+        "Registry is >24h stale — flagged per AGENTS.md §9 item 6",
+        "Registry references old scored_cases*.js files, not new case_pack_*_corrected.js",
+        "No Certified column in registry table — certification data not tracked",
+        "Registry has 1295 pack entries in table vs actual 2540 QIDs across packs",
+        "Total of 2995 includes scored case items but the case bank has been reconsolidated into 3 case_pack files"
+      ]
+    },
+    "certified_pool_raw_counts": {
+      "pack_a": { "total_qid": 500, "certified": 500, "pct": 100.0 },
+      "pack_b": { "total_qid": 500, "certified": 500, "pct": 100.0 },
+      "pack_c": { "total_qid": 500, "certified": 388, "pct": 77.6 },
+      "pack_d": { "total_qid": 500, "certified": 392, "pct": 78.4 },
+      "pack_e": { "total_qid": 540, "certified": 540, "pct": 100.0 },
+      "grand_total_qid": 2540,
+      "grand_total_certified": 2320,
+      "grand_pct_certified": 91.3,
+      "case_pack_certified_items": {
+        "case_pack_1": { "items": 141, "question_state_fields": 166 },
+        "case_pack_2": { "items": 132, "question_state_fields": 157 },
+        "case_pack_3": { "items": 127, "question_state_fields": 152 },
+        "total_items": 400,
+        "total_cases": 75,
+        "all_certified": true
+      }
+    },
+    "baseline_proliferation_issue": {
+      "description": "CURRENT_BASELINES.md §1 Application Core table contains stale hash for index_updated.html",
+      "baseline_table_hash": "586396F940099B007D07276A1D159E964F298E2126D890A50449CA3378418755",
+      "actual_file_hash": "E0B7BBAAE2B6B4C3892FCF3E316DC3D88E21AB6618A05A8567B33AB66335D7D3",
+      "verification_log_hash": "E0B7BBAAE2B6B4C3892FCF3E316DC3D88E21AB6618A05A8567B33AB66335D7D3",
+      "root_cause": "S916-S918 reconsolidation updated the verification log but §1 Application Core table was never refreshed",
+      "severity": "Medium — documentation drift, no file corruption"
+    },
+    "pack_d_certified_discrepancy": {
+      "baseline_claims": 389,
+      "raw_file_grep_count": 392,
+      "delta": 3,
+      "severity": "Medium — 3-item count discrepancy between CURRENT_BASELINES.md §2 and raw file"
+    }
+  },
+
+  "certification": {
+    "recent_batches_summary": {
+      "sessions_reporting_certification": "S355-S358 (350-series Operational Value Realization)",
+      "recent_throughput": {
+        "net_new_items_authored": 39,
+        "cognitive_level_upgrades": "~80",
+        "certified_pool_growth": "2,298 -> 2,317 (+19 Pack A closure)",
+        "readiness_score_trajectory": "54 -> 72 -> 75"
+      },
+      "authoring_rate": "21.9 items/hour with zero structural defects"
+    },
+    "certification_session_field_coverage": {
+      "pack_a": 0,
+      "pack_b": 0,
+      "pack_c": 0,
+      "pack_d": 0,
+      "pack_e": 40,
+      "notes": "Only Pack E carries certification_session fields (P1-E-R series via S313). 0 of 2540 MCQ items in packs A-D have certification_session metadata — certification provenance for 2500 items is REVISION_HISTORY.md only."
+    },
+    "stalled_items": {
+      "editorial_queue_mentions": 38,
+      "items_in_queue_over_7_days": "UNKNOWN — no tracking mechanism for Editorial Queue duration",
+      "notes": "REVISION_HISTORY.md has 38 'Editorial Queue' mentions but no timestamp-tracking of entry-to-exit duration"
+    },
+    "revision_history_stats": {
+      "total_lines": 25581,
+      "certified_mentions": 104,
+      "session_references": 3109
+    },
+    "documentation_conflicts": {
+      "dl_021": {
+        "current_baselines_claim": "OPEN — learner-safety gap (95 Certified items)",
+        "defect_library_claim": "Resolved — S71 authored 264 explanations, S828 confirmed 0 DL-021 remaining",
+        "resolution": "DEFECT_LIBRARY.md is authoritative (later update). CURRENT_BASELINES.md §3 HIGH table is stale.",
+        "severity": "High — stale defect status in operational document misrepresents learner pool safety"
+      }
+    }
+  },
+
+  "technical_debt": {
+    "open_defects_by_class": {
+      "structural": {
+        "count": 5,
+        "ids": ["DL-012", "DL-014", "DL-015", "DL-026", "DL-035"],
+        "highest_severity_id": "DL-026 (High)",
+        "notes": "DL-026 is the largest structural liability — 1,005 items pool-wide per original scan, partially remediated"
+      },
+      "content": {
+        "count": 2,
+        "ids": ["DL-009", "DL-010"],
+        "highest_severity_id": "DL-009 (High), DL-010 (High)"
+      },
+      "pedagogical": {
+        "count": 2,
+        "ids": ["DL-031", "DL-032"],
+        "highest_severity_id": "DL-031 (High — ~500 items systemically miscalibrated)"
+      },
+      "process_methodology": {
+        "count": 3,
+        "ids": ["DL-028", "DL-029", "DL-036"],
+        "highest_severity_id": "DL-029 (High — scan methodology causing false positives)"
+      },
+      "total_open": 12,
+      "total_resolved": 14,
+      "total_overall": 37
+    },
+    "open_defects_by_severity": {
+      "critical": 0,
+      "high": 6,
+      "medium": 4,
+      "low": 2,
+      "informational": 0
+    },
+    "high_severity_risk_summary": [
+      "DL-009: Incorrect ASC authority citations (content defect — learners learn wrong authorities)",
+      "DL-010: Misassigned choice explanations (learners see wrong feedback text)",
+      "DL-026: Empty non-CC ExplanationWrong slots — ~1,005 items pool-wide",
+      "DL-029: Regex scan methodology causing DL-008 false positives across sessions",
+      "DL-031: ~500 items with systematic difficulty inflation (Moderate labeled as Easy-eligible)",
+      "DL-035: 39 Certified Domain F items with empty distractor EW slots in active learner pool"
+    ],
+    "unresolved_drift": [
+      {
+        "file": "index_updated.html",
+        "type": "documentation drift",
+        "description": "CURRENT_BASELINES.md §1 table has stale hash. Verification log has correct hash (S916-S918). Internal inconsistency within CURRENT_BASELINES.md.",
+        "severity": "Low"
+      },
+      {
+        "file": "pack_d_corrected.js",
+        "type": "count discrepancy",
+        "description": "CURRENT_BASELINES.md §2 claims 389 Certified; raw file grep shows 392. Delta=+3.",
+        "severity": "Medium"
+      }
+    ],
+    "tooling_regressions": [
+      "DL-028: DL-013 remediation script created empty distractor slots (tooling fix not implemented)",
+      "DL-029: Regex block-window scans produced ~75% false-positive rate on DL-008 (methodology gap)"
+    ]
+  },
+
+  "automation": {
+    "scripts_in_root": 224,
+    "scripts_total": 252,
+    "categorization": {
+      "validation": 8,
+      "scan": 12,
+      "remediation": 14,
+      "audit": 15,
+      "build": 15,
+      "test": 11,
+      "utility": 30,
+      "other_uncategorized": 119
+    },
+    "estimated_automation_pct": 55,
+    "manual_intervention_points": [
+      "Authoring new items (S899 Phase 1: 4 batches, all manual per-item design)",
+      "Distractor explanation authoring (DL-026, DL-035 remediation: ~3.5 fields/hour)",
+      "Difficulty recalibration (DL-031: ~500 items need per-item cognitive review)",
+      "ASC authority citation verification (DL-009: ~483 citations across all packs)",
+      "Certification decision (human-authorized per CAQS §1.7.2)",
+      "CURRENT_BASELINES.md maintenance (requires manual update after every hash change)",
+      "Registry regeneration (build_master_registry.js — requires manual invocation, not in CI)",
+      "Governance guard test expansion (each new rule requires manual test authoring)",
+      "Cross-document consistency checks (e.g., DL-021 status mismatch between CBL and DEFECT_LIBRARY)"
+    ],
+    "notes": "119 uncategorized scripts represent significant operational overhead — likely includes one-off utilities, deprecated tools, and ad-hoc investigation scripts. Governance runs via a plugin (governance-guard.js) which fires on tool.execute.before — this is automated. The test suite (test_governance_guard.js) is automated. But content authoring, defect remediation, difficulty calibration, and documentation sync are all manual."
+  },
+
+  "application_core": {
+    "index_updated_html": {
+      "exists": true,
+      "hash_match_baseline_table": false,
+      "hash_match_verification_log": true,
+      "references_all_expected_packs": true,
+      "expected_packs": ["pack_a_corrected.js", "pack_b_corrected.js", "pack_c_corrected.js", "pack_d_corrected.js", "pack_e_corrected.js"],
+      "references_all_expected_case_packs": true,
+      "expected_case_packs": ["case_pack_1_corrected.js", "case_pack_2_corrected.js", "case_pack_3_corrected.js"],
+      "references_may_coaching_layer": true,
+      "references_governance_blocklist": true,
+      "references_styles_css": true,
+      "references_app_js": true
+    },
+    "may_coaching_layer": {
+      "may_core_js_exists": true,
+      "may_core_js_hash_match": true,
+      "may_learner_state_js_exists": true,
+      "may_learner_state_js_hash_match": true
+    },
+    "styles_css": {
+      "exists": true,
+      "hash_match": true,
+      "size_bytes": 68696
+    },
+    "app_js": {
+      "hash_match": true,
+      "size_bytes": 209937
+    },
+    "governance_blocklist": {
+      "exists": true,
+      "size_bytes": 2647
+    }
+  }
+}

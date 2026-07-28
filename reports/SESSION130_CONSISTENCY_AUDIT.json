@@ -1,0 +1,370 @@
+{
+  "session": "S130",
+  "auditTimestamp": "2026-07-15T00:00:00.000Z",
+  "auditScope": "Subsystems S124–S129 consistency verification across may-core.js and may-learner-state.js",
+  "assumptions": [
+    "MayLearnerState.getWeaknessClusters(), getTrends(), getTopicProgress() are the foundational classification functions shared via MayLearnerState.",
+    "S124–S129 each call MayLearnerState functions but some ALSO scan sessions/topic data independently, creating duplicate interpretation paths.",
+    "Thresholds in this audit are read directly from source code; any runtime configuration overrides are not considered.",
+    "The audit focuses on classification logic, not on rendering/output formatting differences."
+  ],
+
+  "classificationConflicts": [
+    {
+      "concept": "weak_topic_classification",
+      "subsystems": ["S124", "S125", "S126", "S127", "S128", "MayLearnerState.getWeaknessClusters"],
+      "independentImplementations": 4,
+      "canDisagree": true,
+      "disagreementScenario": "S124 (may-core.js ~1268) and S125 (may-core.js ~1396) both use getTopicProgress() with threshold >=5 attempts / <60% accuracy — ALIGNED. However S127 (may-core.js ~3128) scans last 7 sessions independently with threshold >=3 attempts / <60% — a topic with 4 attempts at 55% this week would be flagged weak by S127 but NOT by S124/S125. S128 (may-core.js ~3255) also scans last 7 sessions independently with >=3 attempts / <60%. The canonical getWeaknessClusters() (may-learner-state.js ~263) uses >=5 attempts / <60%.",
+      "severity": "HIGH",
+      "detailedScenario": "Topic X has 4 attempts at 55% accuracy in the last 7 sessions but only 4 total attempts lifetime. S127 weekly digest flags it as 'Topics needing attention'. S124 patterns says nothing (needs >=5). S125 focus areas says nothing (needs >=5). S128 study strategy PRIORITIZES it as highest-priority 'Focus session'. The learner sees conflicting signals: digest says fix it, patterns say nothing, strategy says it's urgent. getWeaknessClusters() also says nothing because it requires >=5 attempts."
+    },
+    {
+      "concept": "strong_topic_classification",
+      "subsystems": ["S124", "S125", "S127", "S128"],
+      "independentImplementations": 4,
+      "canDisagree": true,
+      "disagreementScenario": "S124 (may-core.js ~1259) classifies strong as >=3 attempts / >=85% accuracy. S125 (may-core.js ~1445) uses >=3 attempts / >=85% — ALIGNED. S127 digest (may-core.js ~3113) classifies strong as >=3 attempts / >=70% from weekly scan. S128 strategy (may-core.js ~3256) classifies strong as >=3 attempts / >=70% from weekly scan. A topic at 75% accuracy with 4 attempts this week would be 'strong' per S127/S128 but NOT per S124/S125 (needs >=85%).",
+      "severity": "MEDIUM",
+      "detailedScenario": "Topic Y has 5 attempts at 78% in the last 7 sessions. S127 digest reports it as 'Strongest topic' (>=70%). S124 patterns does NOT emit a 'topic_strength' observation (needs >=85%). S125 focus areas may or may not emit a strength suggestion depending on whether there's a weaker adjacent topic. S128 strategy lists it as a strong topic. The learner gets inconsistent reinforcement about whether this is truly a strength."
+    },
+    {
+      "concept": "improving_trend_detection",
+      "subsystems": ["S124", "S125", "S126", "S127", "MayLearnerState.getTrends", "S129"],
+      "independentImplementations": 5,
+      "canDisagree": true,
+      "disagreementScenario": "MayLearnerState.getTrends (may-learner-state.js ~252) uses delta >= 15% for 'improving'. S124 (may-core.js ~1277) uses delta >= 10% AND recentPct >= 75%. S125 (may-core.js ~1478) uses delta >= 10% AND recentPct >= 75%. S126 recap (may-core.js ~3027) uses session-to-session delta >= 10%. S127 digest (may-core.js ~3097) uses first-vs-last session delta >= 10%. S129 outcome classification (may-learner-state.js ~1270) uses delta >= 5% AND accuracy >= 60%. A topic with delta=12% and recentPct=72% would be 'improving' per S124/S125 but NOT per getTrends() (needs >=15%). S129 would classify it positive at delta=12% if accuracy >= 60%.",
+      "severity": "HIGH",
+      "detailedScenario": "Topic Z has overall accuracy 60%, recent accuracy 72% (delta=12%), 6 attempts. getTrends(): 'slightly_improving' (delta < 15). S124 patterns: emits 'improving' observation (delta >= 10, recentPct >= 75 — wait, 72% < 75%, so NOT emitted). S125 focus areas: does NOT emit improving suggestion (recentPct 72% < 75%). S126 recap: may show session-level improvement if last session was strong. S127 digest: shows 'Improving' if first-vs-last delta >= 10%. S129: positive outcome if delta >= 5 and accuracy >= 60%. Multiple conflicting signals across subsystems."
+    },
+    {
+      "concept": "declining_trend_detection",
+      "subsystems": ["MayLearnerState.getTrends", "S126", "S127"],
+      "independentImplementations": 3,
+      "canDisagree": true,
+      "disagreementScenario": "getTrends() uses delta <= -15% for 'declining'. S126 recap uses session-to-session delta <= -10%. S127 digest uses first-vs-last session delta <= -10%. A topic with delta=-12% would be declining per S126/S127 but only 'slightly_declining' per getTrends().",
+      "severity": "MEDIUM"
+    },
+    {
+      "concept": "misconception_detection",
+      "subsystems": ["S124", "S125", "S126", "S127", "S128"],
+      "independentImplementations": 5,
+      "canDisagree": false,
+      "disagreementScenario": "All five subsystems read from the same data source: data.misconceptionPatterns from MayLearnerState.load(). All filter by count >= 2. All use the same patternNames mapping (duplicated 5 times). They CANNOT disagree on which misconceptions exist, but the PATTERN NAMES MAP is duplicated in 5 locations (may-core.js lines 1295-1304, 1423-1432, 2699-2708, 2995-3004, 3143-3152, 3258-3263) creating a maintenance risk.",
+      "severity": "LOW",
+      "detailedScenario": "If a new misconception pattern is added, it must be updated in 6 separate locations. Missing one location could cause S126 (for example) to display a raw pattern key like 'variance_sign_confusion' instead of the human-readable 'variance sign confusion'. Not a logical disagreement risk but a DRY violation."
+    },
+    {
+      "concept": "topic_priority_for_study",
+      "subsystems": ["S125", "S127", "S128"],
+      "independentImplementations": 3,
+      "canDisagree": true,
+      "disagreementScenario": "S125 (may-core.js ~1396) prioritizes based on getTopicProgress() — all history, >=5 attempts/<60%. S127 digest (may-core.js ~3178) recommends from weekly scan with <65% threshold. S128 strategy (may-core.js ~3268) prioritizes from weekly scan with <60%. S127 uses a DIFFERENT threshold (65%) than S125 and S128 (60%). A topic at 63% with 6 attempts this week would be recommended by S127 but NOT by S125 or S128.",
+      "severity": "MEDIUM",
+      "detailedScenario": "Topic A: 63% accuracy, 6 attempts this week. S127 weekly digest: 'Recommended weekly focus' (threshold <65%). S125 focus areas: NOT flagged as persistent weakness (>=5 attempts but accuracy 63% >= 60%). S128 strategy: NOT listed as weak topic (<60% only). The digest tells the learner to focus on this topic, but patterns and strategy don't flag it. Conflicting prioritization."
+    },
+    {
+      "concept": "cross_session_trend_comparison",
+      "subsystems": ["S126", "S127"],
+      "independentImplementations": 2,
+      "canDisagree": true,
+      "disagreementScenario": "S126 recap compares the most recent completed session to the immediately prior session in the full sessions array (may-core.js ~3018-3019). S127 digest compares the FIRST session in the weekly lookback window to the LAST session in that window (may-core.js ~3090-3093). If the learner had 5 sessions this week and session 3 was an outlier, S126 would compare session 5 to session 4, while S127 would compare session 5 to session 1. Different baselines = different deltas.",
+      "severity": "MEDIUM",
+      "detailedScenario": "Week sessions: S1=50%, S2=65%, S3=80%, S4=55%, S5=68%. S126 compares S5(68%) vs S4(55%) = +13% ('Up'). S127 compares S5(68%) vs S1(50%) = +18% ('Improving'). Different magnitude, same direction — but if S1 had been 75%, S126 says +13% improving while S127 says -7% declining."
+    }
+  ],
+
+  "duplicatedPaths": [
+    {
+      "computation": "scan session history for attempts",
+      "implementedIn": [
+        "MayLearnerState.getTopicProgress() ~line 228 (scans topicPerformance aggregates)",
+        "MayLearnerState.getConfidenceCalibration() ~line 300 (scans data.sessions[].attempts)",
+        "MayLearnerState.getRecentlySeenByOutcome() ~line 287 (scans data.sessions[].attempts)",
+        "MayLearnerState.getCasePatternSummary() ~line 339 (scans data.sessions[].casePatterns)",
+        "MayLearnerState.getCasePatternTrends() ~line 354 (scans data.sessions[].casePatterns)",
+        "MayLearnerState.getLongitudinalAnalytics() ~line 1408 (scans data.sessions filtered by date)",
+        "May._generateWeeklyDigest() ~line 3067 (scans sessions.slice(-7)[].attempts — INDEPENDENT of getTopicProgress)",
+        "May._generateStudyStrategy() ~line 3234 (scans sessions.slice(-7)[].attempts — INDEPENDENT of getTopicProgress)",
+        "May._generateSessionRecap() ~line 2947 (scans sessionObj.mcqs — per-session)",
+        "May._summarizeSession() ~line 3643 (scans state.session.mcqs — per-session)",
+        "May._identifyLearningPatterns() ~line 1325 (scans data._learnerState.sessions — edge case path)",
+        "May._getProgressInsight() ~line 2733 (reduces sessions[].attempts.length for total count)"
+      ],
+      "count": 12
+    },
+    {
+      "computation": "per-topic accuracy",
+      "implementedIn": [
+        "MayLearnerState.getTopicProgress() ~line 229 (canonical: agg.correctCount / agg.totalAttempts * 100)",
+        "May._generateWeeklyDigest() ~line 3119 (weekly: Math.round(v.c / v.n * 100) — independent scan)",
+        "May._generateStudyStrategy() ~line 3270 (weekly: Math.round(v.c / v.n * 100) — independent scan)",
+        "May._generateSessionRecap() ~line 2969 (per-session: Math.round(v.c / v.n * 100))",
+        "May._summarizeSession() ~line 3652 (per-session: v.c / Math.max(1, v.n))",
+        "May._identifyLearningPatterns() ~line 1259 (delegates to getTopicProgress().accuracy)",
+        "May._suggestFocusAreas() ~line 1397 (delegates to getTopicProgress().accuracy)"
+      ],
+      "count": 7,
+      "note": "4 independent computation paths; 3 delegate to canonical getTopicProgress()"
+    },
+    {
+      "computation": "classify topic as weak (below threshold)",
+      "implementedIn": [
+        "MayLearnerState.getWeaknessClusters() ~line 263 (>=5 attempts, <60% — CANONICAL for persistentWeak)",
+        "May._identifyLearningPatterns() S124 ~line 1268 (>=5 attempts, <60% — delegates to getTopicProgress)",
+        "May._suggestFocusAreas() S125 ~line 1396 (>=5 attempts, <60% — delegates to getTopicProgress)",
+        "May._generateSessionRecap() S126 ~line 2978 (session-level: n>0, c/n<0.6 — INDEPENDENT)",
+        "May._generateWeeklyDigest() S127 ~line 3128 (weekly: n>=3, c/n<60% — INDEPENDENT)",
+        "May._generateStudyStrategy() S128 ~line 3255 (weekly: n>=3, c/n<60% — INDEPENDENT)",
+        "May._summarizeSession() ~line 3694 (session-level: c/n<0.6 — INDEPENDENT)",
+        "May._suggestFocusAreas() S125 ~line 1406 (calculation miss — conditional on current answer)"
+      ],
+      "count": 8,
+      "thresholdsUsed": {
+        "getWeaknessClusters_persistentWeak": ">=5 attempts AND <60%",
+        "S124_persistent_weakness": ">=5 attempts AND <60%",
+        "S125_persistent_weakness": ">=5 attempts AND <60%",
+        "S126_session_weak": "<60% per-session (any n>0)",
+        "S127_weekly_weak": ">=3 attempts AND <60% (weekly window)",
+        "S128_weekly_weak": ">=3 attempts AND <60% (weekly window)",
+        "S127_recommended_focus": "<65% (different from 'weak' at <60%)"
+      }
+    },
+    {
+      "computation": "classify topic as strong (above threshold)",
+      "implementedIn": [
+        "May._identifyLearningPatterns() S124 ~line 1259 (>=3 attempts, >=85% — delegates to getTopicProgress)",
+        "May._suggestFocusAreas() S125 ~line 1445 (>=3 attempts, >=85% — delegates to getTopicProgress)",
+        "May._generateWeeklyDigest() S127 ~line 3113 (>=3 attempts, >=70% — INDEPENDENT weekly scan)",
+        "May._generateStudyStrategy() S128 ~line 3256 (>=3 attempts, >=70% — INDEPENDENT weekly scan)",
+        "May._generateSessionRecap() S126 ~line 2965 (top-2 by pct, any n>0 — INDEPENDENT)",
+        "May._getProgressInsight() ~line 2770 (stability >= 80 AND accuracy >= 70 — via getTrends)"
+      ],
+      "count": 6,
+      "thresholdsUsed": {
+        "S124_topic_strength": ">=3 attempts AND >=85%",
+        "S125_topic_strength": ">=3 attempts AND >=85%",
+        "S127_strongest": ">=3 attempts AND >=70%",
+        "S128_strong": ">=3 attempts AND >=70%",
+        "S126_strongest_areas": "top-2 by session pct (any n)",
+        "progress_stable": "stability >= 80 AND accuracy >= 70"
+      }
+    },
+    {
+      "computation": "detect improvement trend",
+      "implementedIn": [
+        "MayLearnerState.getTrends() ~line 252 (delta >= 15% → 'improving')",
+        "May._identifyLearningPatterns() S124 ~line 1277 (delta >= 10% AND recentPct >= 75%)",
+        "May._suggestFocusAreas() S125 ~line 1478 (delta >= 10% AND recentPct >= 75%)",
+        "May._generateSessionRecap() S126 ~line 3027 (session-session delta >= 10%)",
+        "May._generateWeeklyDigest() S127 ~line 3097 (first-vs-last session delta >= 10%)",
+        "MayLearnerState.classifyPendingOutcomes() S129 ~line 1270 (delta >= 5% AND accuracy >= 60% AND direction improving)",
+        "May._detectPositiveTrend() ~line 315 (uses clusters.improving OR hint decrease OR stability)"
+      ],
+      "count": 7,
+      "deltaThresholdsUsed": {
+        "getTrends_improving": 15,
+        "S124_improving": 10,
+        "S125_improving": 10,
+        "S126_session_trend": 10,
+        "S127_weekly_trend": 10,
+        "S129_positive_outcome": 5,
+        "detectPositiveTrend": "uses clusters.improving (inherits 15 from getTrends)"
+      }
+    },
+    {
+      "computation": "misconception pattern name lookup",
+      "implementedIn": [
+        "May._identifyLearningPatterns() S124 ~line 1295-1304",
+        "May._suggestFocusAreas() S125 ~line 1423-1432",
+        "May._explainYourMistake() ~line 2699-2708",
+        "May._generateSessionRecap() S126 ~line 2995-3004",
+        "May._generateWeeklyDigest() S127 ~line 3143-3152",
+        "May._generateStudyStrategy() S128 ~line 3258-3263",
+        "May._getWeaknessInsight() ~line 2903-2913 (slightly different labels)"
+      ],
+      "count": 7,
+      "note": "Identical pattern name mapping duplicated 7 times across the codebase. All read from the same data.misconceptionPatterns source so they cannot logically disagree, but maintenance risk is HIGH — adding a new pattern requires 7 edits."
+    },
+    {
+      "computation": "recommend next study action",
+      "implementedIn": [
+        "May._recommendNextAction() S117 ~line 338 (uses clusters.persistentWeak, .declining)",
+        "May._generateSessionRecap() S126 ~line 3041 (uses weakest topic from session)",
+        "May._generateWeeklyDigest() S127 ~line 3174 (uses weekly weak topics + patterns)",
+        "May._generateStudyStrategy() S128 ~line 3266 (uses weekly weak/strong topics)",
+        "May._recommendNext() ~line 3746 (uses clusters: persistentWeak > declining > unstable)",
+        "May._summarizeSession() ~line 3693 (uses session's weakest topic)"
+      ],
+      "count": 6,
+      "note": "Each subsystem arrives at its own 'next action' independently. S126 recommends session-weakest topic. S127 recommends from weekly window with 65% threshold. S128 recommends from weekly window with 60% threshold. _recommendNextAction prioritizes persistentWeak over declining. These can produce 4 different 'next best actions' from the same evidence."
+    }
+  ],
+
+  "disagreementMatrix": {
+    "subsystems": ["S124", "S125", "S126", "S127", "S128", "S129"],
+    "cells": {
+      "S124-S125": {
+        "status": "ALIGNED",
+        "detail": "Both use getTopicProgress() with identical thresholds: >=5 attempts/<60% for weak, >=3 attempts/>=85% for strong, delta>=10% AND recentPct>=75% for improving. S125 extends S124 with calculation-miss and misconception-based priority suggestions."
+      },
+      "S124-S126": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S124 uses cross-session aggregates (getTopicProgress). S126 uses per-session data. A topic with 55% in one session but 65% lifetime would be flagged weak by S126 but not by S124. Different time windows and different thresholds for strong (85% vs top-2).",
+        "conflictScenario": "Session-only weak flag vs lifetime aggregate weak flag"
+      },
+      "S124-S127": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S124 uses all-history getTopicProgress() with >=5 attempts; S127 uses 7-session window with >=3 attempts. Different data windows, different attempt thresholds, different accuracy thresholds (85% vs 70% for strong, 60% vs 60% for weak but different attempt minimums).",
+        "conflictScenario": "4-attempt topic at 55% in weekly window: S127 flags it, S124 does not"
+      },
+      "S124-S128": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "Same conflict as S124-S127. S128 scans weekly window independently with >=3 attempts/<60% for weak, >=3 attempts/>=70% for strong.",
+        "conflictScenario": "Topic at 72% accuracy this week: S128 calls it strong (>=70%), S124 calls it neither strong nor weak"
+      },
+      "S124-S129": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S129 classifyPendingOutcomes uses delta>=5% (vs S124's delta>=10%). S129 can flag 'positive outcome' for topics with delta=7% that S124 does not flag as 'improving'.",
+        "conflictScenario": "Topic at delta=7%, accuracy>=60%: S129 says positive outcome, S124 says no improvement observation"
+      },
+      "S125-S126": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S125 focus areas derived from getTopicProgress() (all history). S126 recap derived from single session. Focus area priority vs session recap recommendation may differ.",
+        "conflictScenario": "S125 says 'Focus on Topic X' (persistent weakness from all history), S126 says 'Focus on Topic Y' (weakest this session, which may be different from persistent weak)"
+      },
+      "S125-S127": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S125 uses all-history topic progress with >=5 attempts; S127 uses 7-session window with >=3 attempts. Different weak-topic lists. S127 recommends with <65% threshold vs S125's <60%.",
+        "conflictScenario": "Topic at 63% in weekly window: S127 recommends focus (threshold <65%), S125 ignores (>=60% is not persistent weak)"
+      },
+      "S125-S128": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "Same window/threshold conflict as S125-S127. S128 uses <60% threshold for weak vs S127's <65%, so S125-S128 is less likely to conflict than S125-S127 on weakness, but S128 strong threshold (70%) differs from S125 (85%).",
+        "conflictScenario": "Topic at 78%, 5 attempts weekly: S128 says strong (>=70%), S125 does not flag as strength (needs >=85%)"
+      },
+      "S125-S129": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S125 focus area high priority uses >=5 attempts/<60%. S129 outcome classification uses delta>=5% for positive with accuracy>=60%. A topic recommended by S125 as high-priority could simultaneously be classified as 'positive outcome' by S129 if accuracy improved above 60%.",
+        "conflictScenario": "Topic went from 40% to 55% (delta=15%): S129 says positive (accuracy now 55% >= 60%? NO — fails accuracy check). But if from 55% to 65%: S129 says positive, S125 still says persistent weak (65% >= 60% so actually NOT persistent weak anymore). So this particular conflict is unlikely but theoretically possible."
+      },
+      "S126-S127": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S126 compares most-recent to immediately-prior session (all history). S127 compares first to last session within 7-session window. Different baselines produce different trend magnitudes and sometimes different directions.",
+        "conflictScenario": "If the immediately-prior session was an outlier (very good or very bad), S126's comparison baseline differs from S127's, producing conflicting trend narratives."
+      },
+      "S126-S128": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S126 recommends next step from session's weakest topic. S128 recommends from weekly window's weakest topic. Different scope, different topic lists.",
+        "conflictScenario": "Session's weakest was Topic X (40% in one session), but weekly weakest is Topic Y (45% across 4 sessions). S126 says focus on X, S128 says focus on Y."
+      },
+      "S126-S129": {
+        "status": "N/A",
+        "detail": "S126 operates on a single session. S129 operates on recommendation outcomes across sessions. They address different questions (what happened this session vs what was the effect of past recommendations). No direct classification overlap."
+      },
+      "S127-S128": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "Both scan the same 7-session window independently. S127 weak threshold for 'Topics needing attention' is <60%, but 'Recommended weekly focus' uses <65%. S128 weak threshold is <60%. S127 and S128 could disagree on what's 'recommended' vs 'prioritized' because of the 60% vs 65% boundary.",
+        "conflictScenario": "Topic at 63% with 4 attempts: S127 'Recommended weekly focus' includes it (<65%), but S128 does NOT include it in weak topics (<60%). Same data, different recommendation."
+      },
+      "S127-S129": {
+        "status": "N/A",
+        "detail": "S127 is a weekly snapshot generator; S129 evaluates past recommendation effectiveness. Different functions, minimal overlap. However, S127's weekly recommendations feed into S129's outcome tracking — the loop exists but direct classification conflict is unlikely."
+      },
+      "S128-S129": {
+        "status": "POTENTIAL_CONFLICT",
+        "detail": "S128 generates strategy from weekly scan. S129 evaluates effectiveness of past strategies. If S128 prioritizes a topic and S129 later classifies it as 'contradictory' (declined despite recommendation), the learner sees conflicting evidence about whether the strategy is working.",
+        "conflictScenario": "S128 says 'Focus session on Topic X'. Two sessions later, S129 says 'Topic X declined despite a Study Strategy recommendation' — but the strategy may not have been followed, or more time is needed."
+      }
+    }
+  },
+
+  "canonicalSourceProposal": {
+    "weakTopics": {
+      "canonicalSource": "MayLearnerState.getWeaknessClusters().persistentWeak",
+      "rationale": "This is the only function that consistently applies the >=5 attempts / <60% threshold across all subsystems that delegate to it (S124, S125, readiness summary). S127 and S128 should be refactored to call getWeaknessClusters() instead of independently scanning sessions with different thresholds.",
+      "currentConsumers": ["S124 (via getTopicProgress)", "S125 (via getTopicProgress)", "S126 (INDEPENDENT — needs refactor)", "S127 (INDEPENDENT — needs refactor)", "S128 (INDEPENDENT — needs refactor)"],
+      "migrationNote": "S127 and S128's weekly-digest and study-strategy functions scan sessions.slice(-7) directly. They should instead call getWeaknessClusters() for persistent-weak and getTopicProgress() for per-topic accuracy. If weekly-window filtering is desired, it should be built INTO getWeaknessClusters() via an optional lookbackDays parameter rather than duplicated."
+    },
+    "strongTopics": {
+      "canonicalSource": "MayLearnerState.getTopicProgress() with S124 threshold (>=3 attempts, >=85%)",
+      "rationale": "S124 and S125 agree on this threshold. S127/S128's lower 70% threshold creates a 'strong' label for topics that are merely 'moderate' per S124/S125. If the intent is to have multiple tiers, the tier definitions should be centralized in one function (e.g., getTopicStrengthTiers()) rather than duplicated.",
+      "currentConsumers": ["S124 (>=85%)", "S125 (>=85%)", "S127 (>=70% — DIFFERS)", "S128 (>=70% — DIFFERS)"],
+      "migrationNote": "Create MayLearnerState.getTopicStrengthTiers() returning {strong: >=85%, solid: 70-84%, developing: 60-69%, weak: <60%} with attempt thresholds. All subsystems call this single function."
+    },
+    "trends": {
+      "canonicalSource": "MayLearnerState.getTrends()",
+      "rationale": "getTrends() already computes delta, direction, stability, and hintTrend. S124 and S125 re-implement trend detection with different delta thresholds (10% vs 15%). S126 and S127 re-implement trend detection comparing session pairs. All trend logic should delegate to getTrends() with consistent thresholds.",
+      "currentConsumers": ["S124 (delta>=10% — DIFFERS)", "S125 (delta>=10% — DIFFERS)", "S126 (session delta>=10% — DIFFERS)", "S127 (first-last delta>=10% — DIFFERS)", "S129 (delta>=5% — DIFFERS)"],
+      "migrationNote": "Standardize on getTrends() delta>=15% for 'improving'/'declining'. If more granular tiers are needed (e.g., slightly_improving at >=5%), add them to getTrends() as additional direction values rather than duplicating logic. S126/S127 session-comparison trends are a different concept (session-over-session vs topic trend) and should remain separate but with consistent thresholds."
+    },
+    "misconceptions": {
+      "canonicalSource": "MayLearnerState data.misconceptionPatterns with a single, centralized MayLearnerState.getMisconceptionLabels()",
+      "rationale": "The pattern name lookup is duplicated 7 times. Create one function MayLearnerState.getMisconceptionLabels() that returns the pattern-name mapping, and have all subsystems call it.",
+      "currentConsumers": ["S124", "S125", "S126", "S127", "S128", "explainYourMistake", "weaknessInsight"],
+      "migrationNote": "Extract the patternNames object into MayLearnerState.getMisconceptionLabels() and replace all 7 inline copies with calls to it."
+    },
+    "recommendations": {
+      "canonicalSource": "MayLearnerState.getWeaknessClusters() for topic prioritization, with May._recommendNextAction() as the single orchestrator",
+      "rationale": "Six different functions produce 'next study action' recommendations using different data windows and thresholds. Consolidate into one function (e.g., May._recommendNextAction() or a new MayLearnerState.getRecommendedActions()) that considers all evidence sources (persistent weak, declining, weekly trends, misconceptions) with consistent prioritization rules.",
+      "currentConsumers": ["_recommendNextAction()", "S126 recap recommendation", "S127 weekly focus", "S128 next session plan", "_recommendNext()", "_summarizeSession() next step"],
+      "migrationNote": "Build MayLearnerState.getRecommendedActions({ horizon: 'session'|'week'|'2weeks' }) that returns ranked action items. Each subsystem calls this with its horizon parameter instead of independently computing recommendations."
+    }
+  },
+
+  "unifiedPathDesign": {
+    "description": "Single interpretation pipeline: all subsystems read from canonical MayLearnerState functions; NO subsystem independently scans sessionHistory or computes per-topic accuracy.",
+    "pipeline": {
+      "dataIngestion": {
+        "entryPoint": "MayLearnerState.recordAttempt()",
+        "outputs": ["topicPerformance aggregates", "sessions array", "misconceptionPatterns aggregates", "recommendationOutcomes"]
+      },
+      "canonicalComputations": {
+        "getTopicProgress": "Computes per-topic accuracy, recentPct, hintRate, avgDifficulty from topicPerformance aggregates. SINGLE SOURCE for all per-topic accuracy queries.",
+        "getTrends": "Computes delta, direction, stability, hintTrend from topicPerformance + recentAttempts. SINGLE SOURCE for all trend queries. Accepts optional {lookbackDays} parameter for weekly windows.",
+        "getWeaknessClusters": "Classifies topics into persistentWeak/improving/declining/unstable/hintDependent/difficultySensitive using getTrends() output. SINGLE SOURCE for all weakness classification. Accepts optional {lookbackDays} for windowed queries.",
+        "getMisconceptionLabels": "Returns the pattern-name mapping. SINGLE SOURCE for misconception label lookups.",
+        "getRecommendedActions": "Returns ranked action items for a given horizon using getWeaknessClusters() + misconceptionPatterns + recommendationOutcomes. SINGLE SOURCE for all study recommendations."
+      },
+      "subsystemConsumption": {
+        "S124_patterns": "Calls getTopicProgress() + getWeaknessClusters() + getMisconceptionLabels(). No independent session scanning.",
+        "S125_focusAreas": "Calls getTopicProgress() + getWeaknessClusters() + getMisconceptionLabels(). No independent session scanning.",
+        "S126_recap": "Calls getTopicProgress() + getRecommendedActions({horizon:'session'}). No independent scanning.",
+        "S127_digest": "Calls getTrends({lookbackDays:7}) + getWeaknessClusters({lookbackDays:7}) + getRecommendedActions({horizon:'week'}). No independent scanning.",
+        "S128_strategy": "Calls getWeaknessClusters({lookbackDays:7}) + getRecommendedActions({horizon:'week'}) + getRecommendedActions({horizon:'2weeks'}). No independent scanning.",
+        "S129_effectiveness": "Calls getOutcomeSummary() + getRecommendationRecurrence() + getLongitudinalAnalytics(). Already delegates to MayLearnerState."
+      }
+    },
+    "thresholdStandardization": {
+      "weakTopic": ">=5 attempts AND <60% (from getWeaknessClusters)",
+      "strongTopic": ">=3 attempts AND >=85%",
+      "solidTopic": ">=3 attempts AND >=70% (new intermediate tier)",
+      "improving": "delta >= 15% (from getTrends)",
+      "slightlyImproving": "delta >= 5% (from getTrends)",
+      "declining": "delta <= -15% (from getTrends)",
+      "slightlyDeclining": "delta <= -5% (from getTrends)",
+      "unstable": "stability < 50% AND >=4 attempts",
+      "hintDependent": "hintTrend='increasing' AND accuracy >= 70% AND >=4 attempts"
+    },
+    "estimatedImpact": {
+      "duplicatedPathsEliminated": "12 → 0 (all session scanning goes through MayLearnerState)",
+      "independentAccuracyComputationsEliminated": "7 → 1 (getTopicProgress only)",
+      "independentWeakClassificationsEliminated": "8 → 1 (getWeaknessClusters only)",
+      "independentTrendComputationsEliminated": "7 → 1 (getTrends only)",
+      "misconceptionLabelDuplicationEliminated": "7 → 1 (getMisconceptionLabels)",
+      "recommendationDuplicationEliminated": "6 → 1 (getRecommendedActions)"
+    }
+  },
+
+  "summary": {
+    "totalConflictsFound": 7,
+    "highSeverityConflicts": 2,
+    "mediumSeverityConflicts": 5,
+    "lowSeverityConflicts": 1,
+    "totalDuplicatedPaths": 35,
+    "uniqueDuplicationCategories": 7,
+    "mostDuplicatedOperation": "misconception pattern name lookup (7 copies of identical mapping object)",
+    "mostRiskyConflict": "weak_topic_classification — S127/S128 use different thresholds and data windows than S124/S125/getWeaknessClusters()",
+    "resolutionEffort": "MEDIUM — requires refactoring S127 (_generateWeeklyDigest) and S128 (_generateStudyStrategy) to delegate to MayLearnerState functions instead of independently scanning sessions, plus extracting duplicated mappings into shared functions."
+  }
+}

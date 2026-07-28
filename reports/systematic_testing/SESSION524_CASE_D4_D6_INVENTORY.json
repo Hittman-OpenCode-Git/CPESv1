@@ -1,0 +1,58 @@
+{
+  "session": "524",
+  "type": "DEEP_INVENTORY",
+  "timestamp": "2026-07-26T12:02:00Z",
+  "target": {
+    "array": "MIGRATED_CASE_BASE_D",
+    "file": "scored_cases4.js",
+    "cases": ["CASE-D4", "CASE-D5", "CASE-D6"],
+    "wave": 2,
+    "items": 15
+  },
+  "pre_state": {
+    "case_level": "3 cases, all question_state: Unprocessed, ProductionStatus: Draft",
+    "item_level": "15 items, all question_state: Unprocessed, ProductionStatus: Draft",
+    "total_certified_before": "15/75 (D1-D3 only)"
+  },
+  "inventory": {
+    "CASE-D4": {
+      "title": "Activity-Based Costing and Service Allocation",
+      "section": "D — Cost Management",
+      "items": [
+        {"id": "CASE-D4-Q1", "type": "numeric", "correct": "14250", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Apply", "expl_before_chars": 97, "expl_after_chars": 680},
+        {"id": "CASE-D4-Q2", "type": "select", "correct": "The reciprocal method", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 107, "expl_after_chars": 795},
+        {"id": "CASE-D4-Q3", "type": "numeric", "correct": "4000", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Apply", "expl_before_chars": 128, "expl_after_chars": 800},
+        {"id": "CASE-D4-Q4", "type": "multi", "correct": ["sequential", "partial reciprocal"], "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 197, "expl_after_chars": 720},
+        {"id": "CASE-D4-Q5", "type": "fill", "correct": "mixed", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Remember", "expl_before_chars": 83, "expl_after_chars": 620}
+      ]
+    },
+    "CASE-D5": {
+      "title": "IT General Controls and Risk Governance",
+      "section": "E — Internal Controls",
+      "items": [
+        {"id": "CASE-D5-Q1", "type": "select", "correct": "The principle of least privilege", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 101, "expl_after_chars": 740},
+        {"id": "CASE-D5-Q2", "type": "select", "correct": "An IT general control over change management", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 126, "expl_after_chars": 785},
+        {"id": "CASE-D5-Q3", "type": "select", "correct": "Risk transfer (sharing)", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 112, "expl_after_chars": 795},
+        {"id": "CASE-D5-Q4", "type": "multi", "correct": ["operational mgmt", "risk/compliance", "internal audit"], "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 169, "expl_after_chars": 705},
+        {"id": "CASE-D5-Q5", "type": "fill", "correct": "independent", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Remember", "expl_before_chars": 98, "expl_after_chars": 600}
+      ]
+    },
+    "CASE-D6": {
+      "title": "Data Governance and Automation Oversight",
+      "section": "F — Technology and Analytics",
+      "items": [
+        {"id": "CASE-D6-Q1", "type": "select", "correct": "The risk of unmonitored or poorly controlled automation introducing errors or control gaps", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 136, "expl_after_chars": 850},
+        {"id": "CASE-D6-Q2", "type": "select", "correct": "The NIST Cybersecurity Framework", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Remember", "expl_before_chars": 99, "expl_after_chars": 720},
+        {"id": "CASE-D6-Q3", "type": "select", "correct": "Software as a Service (SaaS)", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 105, "expl_after_chars": 780},
+        {"id": "CASE-D6-Q4", "type": "multi", "correct": ["no predefined rows/columns", "emails/videos/social", "different techniques"], "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Understand", "expl_before_chars": 185, "expl_after_chars": 740},
+        {"id": "CASE-D6-Q5", "type": "fill", "correct": "master", "difficulty": "Moderate/3", "cognitive_before": "MISSING", "cognitive_assigned": "Remember", "expl_before_chars": 115, "expl_after_chars": 650}
+      ]
+    }
+  },
+  "post_state": {
+    "case_level": "3 cases, all question_state: Certified, ProductionStatus: Production",
+    "item_level": "15 items, all question_state: Certified, ProductionStatus: Production",
+    "total_certified_after": "30/75 (D1-D6)",
+    "cognitive_level_coverage": "15/15 = 100%"
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "session": "725",
+  "agent": "R",
+  "task": "Escalation Procedure Certification — Determinism, Documentation, Repeatability Audit",
+  "timestamp": "2026-07-26",
+  "mode": "READ-ONLY",
+  "authority": "PROJECT_CONSTITUTION.md; Session 723 Maintenance Framework; Session 725 Governance Hardening Mandate",
+  "methodology": "Each procedure evaluated against 6 criteria derived from AGENTS.md governance requirements, cross-referenced against Agent P's 6-scenario simulation and Agent K's 10-class Root Cause Analysis",
+
+  "certification_criteria": {
+    "C1_detection_trigger": "Detection trigger is unambiguous (numeric threshold or boolean condition)",
+    "C2_notification_chain": "Notification chain is complete (who is told, by what mechanism)",
+    "C3_prescribed_actions": "Prescribed actions are specific (not 'investigate' — specific commands)",
+    "C4_clearance_authority": "Clearance authority is named (who can declare the escalation resolved)",
+    "C5_documentation": "Documentation requirement is defined (what must be recorded)",
+    "C6_authorized_references": "The procedure references authorized standards (not 'use your judgment')"
+  },
+
+  "procedures_certified": [
+    {
+      "id": "ESC-001",
+      "name": "DL-008 re-emergence (≥1 Certified)",
+      "source": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json — escalation_procedures[0], trigger T-002",
+      "source_line": "Trigger Registry lines 297-317 (T-002), lines 445-463 (ESC-001 procedure)",
+      "severity": "CRITICAL",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "T-002 threshold: '≥ 1 NEW Certified item with non-empty ExplanationWrong[CorrectChoice]'. Unambiguous numeric threshold. Detection via T0-CHK-3 (Function constructor parse) or RP-CHK-2 (Rapid Pulse re-verify). Boolean outcome: any new DL-008 on Certified → fire."
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "ESC-001 notification_chain: 'Discovering agent → Remediation Agent → Governance Auditor → All pack-write agents (halt broadcast)'. Complete chain from detection to action. Each role identified by agent type, not by person.",
+        "qualifier": "X-GAP-1 documents that the 'halt broadcast' concrete mechanism is not protocolled. The procedure specifies WHO is notified; the HOW (inter-agent communication) is a session-architecture dependency. The procedure is structurally complete; the implementation mechanism is the gap — not the procedure design."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": true,
+        "evidence": "7 specific, numbered actions in T-002 prescribed_actions: (1) halt writes, (2) quarantine QID(s), (3) spawn Remediation Agent with BLOCK-AUTHORIZED, (4) clear EW[CC] to empty string, (5) backup-before-write, (6) independent verification by separate agent with two consecutive scans at 0, (7) re-run governance guard (20/20 PASS). ESC-001 summarizes into 5-step agent-level workflow. No vague instructions. Each step names a specific agent type and specific action.",
+        "qualifier": "S2-GAP-2: step 1 ('Log QID, CorrectChoice, EW[CC] content.') does not specify the log format, location, or required fields. An emergency finding template is recommended (DL008_EMERGENCY_FINDING.json) but its absence does not prevent execution — the discovering agent can log to session context."
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Governance Auditor — sole authority. Clearance explicitly gated: 'after independent verification confirms 0 DL-008 and governance guard 20/20 PASS'. Named agent type, not a person. The Governance Auditor is the named owner in ownership_assignments ($.governance_auditor)."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "REVISION_HISTORY.md entry with: QID list, CorrectChoice for each, EW[CC] before/after, verification scan results, backup filename. DEFECT_LIBRARY.md updated if new pattern discovered. Current session report with findings + resolution."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References governance-guard Rule 2 (BLOCK), BACKUP_PROTOCOL.md, BLOCK-AUTHORIZED marker (governance-guard Rule 5), May's DEFECT_MANIFEST (coaching layer), 20/20 PASS governance guard test. All references resolve to authoritative project documents.",
+        "qualifier": "S2-GAP-1: May DEFECT_MANIFEST reference has orphaned dependency (GAP-1 — May layer ownership unassigned). Fallback: DEFECT_LIBRARY.md DL-008 entry is the authoritative defective QID list until GAP-1 is resolved."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": true,
+      "gaps": [
+        {
+          "gap_id": "ESC001-GAP-1",
+          "severity": "MEDIUM",
+          "cross_reference": "X-GAP-1 + S2-GAP-3",
+          "description": "Halt broadcast mechanism not protocolled. The procedure specifies notification_chain but the inter-agent communication mechanism ('how does Governance Auditor tell all pack-write agents to stop?') is undefined. Agent P recommends governance-guard pre-write check convention as bridging mechanism."
+        },
+        {
+          "gap_id": "ESC001-GAP-2",
+          "severity": "MEDIUM",
+          "cross_reference": "S2-GAP-1",
+          "description": "May DEFECT_MANIFEST quarantine step references orphaned component (May coaching layer ownership GAP-1 unassigned). Until GAP-1 resolved, fall back to DEFECT_LIBRARY.md DL-008 entry as authoritative defective QID source."
+        },
+        {
+          "gap_id": "ESC001-GAP-3",
+          "severity": "LOW",
+          "cross_reference": "S2-GAP-2",
+          "description": "No emergency finding template specified for step 1 log action. Discovering agent logs to session context — format unspecified. Recommended: DL008_EMERGENCY_FINDING.json template."
+        }
+      ],
+      "verdict": "CERTIFIED",
+      "verdict_rationale": "Procedure is deterministic (numeric threshold ≥1, boolean outcome), fully documented in Trigger Registry with specific agent-level workflow steps, and repeatable by any qualified operator. All 6 certification criteria pass. Three gaps are operational implementation refinements (inter-agent communication protocol, orphaned dependency, emergency template) — none are procedural design defects. The procedure would execute correctly in a single-agent session; multi-agent halt broadcast requires the bridging convention recommended by Agent P."
+    },
+
+    {
+      "id": "ESC-002",
+      "name": "New defect class discovery (severity ≥ HIGH)",
+      "source": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json — escalation_procedures[1], trigger T-007",
+      "source_line": "Trigger Registry lines 398-417 (T-007), lines 465-481 (ESC-002 procedure)",
+      "severity": "HIGH",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "T-007 threshold: 'Previously unknown defect pattern discovered that affects ≥ 3 items and is NOT in DEFECT_LIBRARY.md'. Unambiguous boolean conditions: (a) pattern unknown, (b) ≥ 3 items affected, (c) not in DEFECT_LIBRARY.md. Any agent can detect."
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "ESC-002 notification_chain: 'Discovering agent → Defect Sweeper → Governance Auditor'. Three-node chain. If Certified items affected and CRITICAL severity, further escalation to ESC-001 equivalent."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": true,
+        "evidence": "6 specific, numbered actions in T-007: (1) assign next DL-ID (current max: DL-033), (2) classify Structural/Content/Pedagogical + domain + severity + detection method, (3) document in DEFECT_LIBRARY.md using standard template with all required fields, (4) set Status: Open, (5) if CRITICAL/HIGH + ≥1 Certified → trigger T-002/ESC-001, (6) log in REVISION_HISTORY.md (no deferral per AGENTS.md §12). The standard DEFECT_LIBRARY.md template (Defect ID, Class, Domain, Severity, Detected By, Status, Question IDs, File, Stem, Issue, Root Cause, Pattern, Detection Rule, Validator/Source, Correction, Regression Test) is referenced by name."
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Defect Sweeper (for structural defects) OR Certification Auditor (for content/pedagogical defects). Named agent types. The split by defect class is unambiguous — structural goes to Defect Sweeper, content/pedagogical goes to Certification Auditor."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "DEFECT_LIBRARY.md entry (mandatory, full template). REVISION_HISTORY.md entry (mandatory, at session close). If Certified items affected: additional escalation documentation per T-002."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References AGENTS.md §12 (No Staged Findings), DEFECT_LIBRARY.md template for new entries, AGENTS.md §4 (REVISION_HISTORY pairing). All references resolve to authoritative project documents."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": true,
+      "gaps": [],
+      "verdict": "CERTIFIED",
+      "verdict_rationale": "Clean procedure. All 6 criteria pass with zero gaps. The DEFECT_LIBRARY.md template provides a standardized entry format. The classification split (Defect Sweeper vs. Certification Auditor) is unambiguous. The ≥3 items threshold prevents single-instance noise from triggering the full discovery workflow. Documented in both S723 framework and S725 trigger registry."
+    },
+
+    {
+      "id": "ESC-003",
+      "name": "Certified count regression (≥5)",
+      "source": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json — escalation_procedures[2], trigger T-001",
+      "source_line": "Trigger Registry lines 278-296 (T-001), lines 483-499 (ESC-003 procedure)",
+      "severity": "HIGH",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "T-001 threshold: '≥ 5 change in either direction from last confirmed certified count'. Unambiguous numeric threshold. Detection via T0-CHK-2 (raw grep, two scans for stability) or RP-CHK-1 (Rapid Pulse count stability check)."
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "ESC-003 notification_chain: 'Discovering agent → Reconciliation Agent'. Minimal chain — the Reconciliation Agent is the designated owner for count discrepancies. The discovering agent's role is to confirm the delta is real (not scan artifact) before notifying."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": true,
+        "evidence": "5 specific, numbered actions in T-001: (1) re-count via two independent methods (raw grep + Function constructor — both must agree), (2) if decrease: identify QIDs that lost certified status + check for unauthorized question_state changes; if increase: identify QIDs that gained + verify each has REVISION_HISTORY entry + CAQS §1.6 verification, (3) spawn Reconciliation Agent for G1-G2 gates, (4) if ≥10 delta: escalate to full G1-G5 Deep Audit, (5) document root cause. ESC-003 adds: 'If decrease not explained by documented archival → CRITICAL. If increase not explained by documented certification → HIGH.'"
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Reconciliation Agent — sole authority. Consistent between T-001 clearance_authority and ESC-003 clearance field.",
+        "qualifier": "S3-GAP-3: For deltas ≥ 10 (which escalate to full G1-G5 Deep Audit), single clearance by Reconciliation Agent is acceptable but dual clearance (Governance Auditor + Reconciliation Agent, consistent with T-005/ESC-005) is recommended for the higher-severity path."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "REVISION_HISTORY.md entry with: delta direction and magnitude, QID list of changed items, verification method cross-check results, root cause determination."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References G1-G2 gates (SESSION31_RECONCILIATION_EXECUTION.md), G1-G5 full reconciliation for ≥10 delta, CAQS §1.6 six-dimension verification, MASTER_QUESTION_REGISTRY.md. All resolve to authoritative project documents."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": true,
+      "gaps": [
+        {
+          "gap_id": "ESC003-GAP-1",
+          "severity": "MEDIUM",
+          "cross_reference": "S3-GAP-1",
+          "description": "No diff methodology specified for identifying WHICH QIDs changed between two certified-count snapshots. T-001 says 'identify which QIDs lost/gained certified status' but without a before/after snapshot storage mechanism (QID→question_state map), the diff must be reconstructed from REVISION_HISTORY.md alone — which may be incomplete. Recommended: certified_state_snapshot added to M5 baseline refresh."
+        },
+        {
+          "gap_id": "ESC003-GAP-2",
+          "severity": "LOW",
+          "cross_reference": "S3-GAP-2",
+          "description": "G1 gate cross-references MASTER_QUESTION_REGISTRY.md as independent count source, but that file is generated from source files (governance-guard Rule 3). If regenerated at reconciliation time, it always matches parse-count — creating a tautological check. Recommendation: G1 should use raw grep + Function constructor parse + app.js delivery-pool as the three-source check; MASTER_QUESTION_REGISTRY.md relegated to format consistency only."
+        }
+      ],
+      "verdict": "CERTIFIED",
+      "verdict_rationale": "Procedure is deterministic (numeric threshold ≥5), fully documented, and repeatable. Two gaps are operational tooling refinements (QID-level diff methodology, tautological registry cross-check) — neither is a procedural design defect. The core escalation logic (confirm delta → identify cause → reconcile via G1-G2 → escalate to G1-G5 if severe) is structurally sound."
+    },
+
+    {
+      "id": "ESC-004",
+      "name": "Answer-key integrity violation",
+      "source": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json — escalation_procedures[3], trigger T-008",
+      "source_line": "Trigger Registry lines 418-438 (T-008), lines 501-519 (ESC-004 procedure)",
+      "severity": "CRITICAL",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "T-008 threshold: 'Any agent reports that a stored CorrectChoice disagrees with independently derived correct answer (CAQS §1.6 Dimension 1 — Correctness)'. Unambiguous boolean condition. Detection via Certification Auditor (six-dimension verification) or any agent performing independent derivation."
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "ESC-004 notification_chain: 'Discovering agent → Independent Verifier → Certification Auditor → Governance Auditor'. Four-node chain with blind verification step explicitly inserted between discovery and certification decisions."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": true,
+        "evidence": "7 specific, numbered actions in T-008: (1) halt certification of affected item immediately, (2) discovering agent documents: stem, all choices, independently derived answer with formula/steps, stored CC, confidence, (3) spawn independent verification agent with BLIND methodology — agent solves from stem+choices without seeing stored CC, (4) if confirmed: TIER 1 answer-key audit triggered, assign DL-030, (5) Remediation Agent applies fix: update CorrectChoice, clear EW[new_CC], fill EW[old_CC], update EC if needed, (6) re-run six-dimension CAQS §1.6 verification at HIGH confidence before re-certification, (7) log to DEFECT_LIBRARY.md. The BLIND methodology (step 3) is the strongest procedural safeguard in any escalation procedure — it prevents confirmation bias."
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Certification Auditor + Governance Auditor (dual clearance). Explicitly documented as the highest-sensitivity modification requiring two agent types to agree. No single agent can clear an answer-key integrity escalation."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "REVISION_HISTORY.md entry with: QID, stored CC, corrected CC, independent verification result, formula/derivation evidence, remediation applied. DEFECT_LIBRARY.md update (DL-030 entry or new DL-ID if materially different root cause)."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References CAQS §1.6 (six-dimension verification, Dimension 1 — Correctness), CAQS §2.3 (auto-fail rule for Technical Accuracy), SESSION700 DL-030 finding (precedent), governance-guard Rule 4 (answer-key changes require WARN documentation). All resolve to authoritative project documents."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": true,
+      "gaps": [],
+      "verdict": "CERTIFIED",
+      "verdict_rationale": "Exemplary procedure. All 6 criteria pass with zero gaps. The BLIND verification methodology (independent agent solves without seeing stored answer) is the gold-standard safeguard against confirmation bias and is explicitly codified in step 3. Dual clearance (Certification Auditor + Governance Auditor) is the strongest accountability mechanism in any escalation procedure. The procedure correctly distinguishes between the correct-answer derivation (CAQS competence) and the file-modification governance (governance guard compliance). Agent P's 6-scenario simulation did not test this procedure (no S-scenario maps to ESC-004), but the procedure's completeness is evident from structural analysis. Note: ESC-004 is rated the MOST ROBUST of the 8 certified procedures."
+    },
+
+    {
+      "id": "ESC-005",
+      "name": "Unexpected baseline hash change (unattributed write)",
+      "source": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json — escalation_procedures[4], trigger T-005",
+      "source_line": "Trigger Registry lines 358-378 (T-005), lines 521-539 (ESC-005 procedure)",
+      "severity": "CRITICAL",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "T-005 threshold: 'Any of the 15 baseline file hashes differs from CURRENT_BASELINES.md §1 AND the change is NOT attributable to a documented write in REVISION_HISTORY.md'. Unambiguous conditions: (a) hash mismatch, (b) not attributable. Detection via T0-CHK-1 or DA-CHK-4."
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "ESC-005 notification_chain: 'Discovering agent → Governance Auditor → All agents (halt broadcast)'. Three-node chain. Governance Auditor is the designated owner for hash-change incidents."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": false,
+        "evidence": "T-005 prescribes 8 specific actions and ESC-005 prescribes a workflow. HOWEVER: Step 1 of both T-005 prescribed_actions and ESC-005 actions states: 'Halt all agents immediately. No reads or writes until governance sweep completes.' This instruction is INTERNALLY CONTRADICTORY: the governance sweep (G1-G5 reconciliation, Sync Anomaly Playbook execution, hash comparison, parse-count checks) ALL require READ operations on the affected file. You cannot diagnose a hash mismatch without reading the file. Steps 3 ('Identify which file(s) changed and the precise hash delta'), 4 ('Run Sync Anomaly Playbook'), and 5 ('parse-count check. Compare to backup.') all require reads that the step-1 halt prohibits.",
+        "contradiction_detail": "T-005 item 1 and ESC-005 step 1 say 'No reads or writes' but T-005 items 2-8 and ESC-005 steps 2-7 all require reads. The governance sweep itself is composed of reads. An operator following the instructions literally cannot execute the procedure.",
+        "severity_of_defect": "Procedural design defect — the halt instruction scope is overly broad. It should be 'Halt all WRITE operations. READ operations are permitted for diagnostic purposes only during the governance sweep.' This is the only escalation procedure with an internal logical contradiction."
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Governance Auditor + Reconciliation Agent (dual — the only dual-clearance escalation). Explicitly documented in both T-005 clearance_authority and ESC-005 clearance field.",
+        "qualifier": "S4-GAP-3: Dual clearance protocol for disagreement not defined. If Governance Auditor approves and Reconciliation Agent withholds, no adjudication mechanism exists. Recommended: both must document independently; disagreement escalates to 700-series lead."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "REVISION_HISTORY.md entry with: file(s) affected, old hash, new hash, root cause determination, G1-G5 results, resolution. CURRENT_BASELINES.md updated if change is legitimate."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References G1-G5 reconciliation (Session 31 runbook), Sync Anomaly Playbook (Session 52), CURRENT_BASELINES.md §1, SESSION_STATUS, AGENTS.md §13.5 drift-detection signals."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": false,
+      "gaps": [
+        {
+          "gap_id": "ESC005-GAP-1",
+          "severity": "HIGH",
+          "cross_reference": "S4-GAP-2",
+          "description": "INTERNAL CONTRADICTION: Step 1 prohibits all reads ('No reads or writes until governance sweep completes') but all subsequent steps (2-7) require reads for diagnosis (hash comparison, parse-count check, Sync Anomaly Playbook classification, backup comparison, G1-G5 gate execution). The procedure as written cannot be executed — the halt instruction scope is overly broad and contradicts the diagnosis steps that follow. REQUIRED FIX: Change 'No reads or writes' to 'No writes. Reads permitted for diagnostic purposes only during the governance sweep.'"
+        },
+        {
+          "gap_id": "ESC005-GAP-2",
+          "severity": "MEDIUM",
+          "cross_reference": "S4-GAP-1",
+          "description": "Sync Anomaly Playbook (Session 52) referenced by name only — procedure steps are not inlined. The playbook exists in SESSION52_GOVERNANCE_FOLLOWUP_EXECUTION.md as a cross-document dependency. Recommended: inline the classification algorithm or provide a dedicated reference file."
+        },
+        {
+          "gap_id": "ESC005-GAP-3",
+          "severity": "LOW",
+          "cross_reference": "S4-GAP-3",
+          "description": "Dual clearance (Governance Auditor + Reconciliation Agent) requires two agent types. No protocol defines adjudication when the two agents disagree. Recommended: both must document independently; disagreement escalates to 700-series lead; no override mechanism — both must agree."
+        }
+      ],
+      "verdict": "REVISION_REQUIRED",
+      "verdict_rationale": "FAILS criterion C3 (prescribed actions) — step 1 has an internal logical contradiction that prevents procedure execution. 'No reads or writes' prohibits the diagnostic operations (hash comparison, parse-count, G1-G5) that subsequent steps require. This is the only escalated procedure among all 8 certified that contains a structural procedural defect. The fix is straightforward (scope halt to writes only, permit diagnostic reads) but until applied, any operator following the literal instruction cannot diagnose the hash change. All other criteria (C1, C2, C4, C5, C6) pass."
+    },
+
+    {
+      "id": "ESC-006",
+      "name": "Governance guard failure (any BLOCK-level rule)",
+      "source": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json — escalation_procedures[5], trigger T-003",
+      "source_line": "Trigger Registry lines 319-336 (T-003), lines 541-558 (ESC-006 procedure)",
+      "severity": "CRITICAL",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "T-003 threshold: 'Any governance guard test FAIL (not just 0/20 — any individual test failure)'. Unambiguous boolean condition. Detection via T0-CHK-4 or any session running scripts/test_governance_guard.js."
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "ESC-006 notification_chain: 'Discovering agent → Governance Auditor → All agents (halt broadcast)'. Three-node chain. Governance Auditor is the sole authority for guard failures."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": true,
+        "evidence": "5 specific actions in T-003, with RULE-SPECIFIC branching in ESC-006: (1) halt all pack-file writes, (2) identify violated rule(s), (3a) Rule 2 (DL-008 BLOCK) → treat as ESC-001, (3b) Rule 3 (Registry BLOCK) → MASTER_QUESTION_REGISTRY.md was hand-edited (prohibited), rebuild from source files, (3c) Rule 5 (30-item cap BLOCK) → split batch and add BLOCK-AUTHORIZED marker, (3d) Rule 1/4 (WARN level) → log and proceed, do not block writes, (4) re-run test suite after remediation — must return 20/20 PASS, (5) investigate whether violation was real (file defect) or false positive (guard bug). If guard bug: log but do NOT modify guard without authorization. The rule-specific branching makes this procedure precise and actionable — there is no ambiguity about which fix applies to which guard violation."
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Governance Auditor — sole authority. Explicitly stated: 'no other agent type can clear a governance guard block' (T-003 clearance_authority note). Consistent with ownership_assignments ($.governance_auditor.owned_escalations: 'ESC-006 (sole clearance)')."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "REVISION_HISTORY.md entry with: which rule failed, which items triggered the violation, remediation actions taken, post-remediation test result (20/20 PASS). If BLOCK-level rule failed: DEFECT_LIBRARY.md entry may be required."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References .opencode/plugins/governance-guard.js (all 5 rules), scripts/test_governance_guard.js (20/20 test suite), governance-guard Rule 2 (DL-008 BLOCK), Rule 3 (Registry BLOCK), Rule 5 (30-item cap BLOCK), Rule 1 (question_state WARN), Rule 4 (answer-key WARN). All resolve to source code and project documentation."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": true,
+      "gaps": [],
+      "verdict": "CERTIFIED",
+      "verdict_rationale": "Complete and precise procedure. All 6 criteria pass with zero gaps. The rule-specific branching (Rule 2 → ESC-001, Rule 3 → rebuild registry, Rule 5 → split batch, Rule 1/4 → log and proceed) makes this the most ACTIONABLE escalation procedure — there is no 'investigate' step, only specific remediation paths per rule violation. The false-positive differentiation (real defect vs. guard bug) is explicitly handled at step 5. Sole clearance by Governance Auditor is appropriate given the guard's role as the BLOCK-level enforcement mechanism."
+    },
+
+    {
+      "id": "ESC-007",
+      "name": "Hard Gate auto-escalation — count divergence between two independent scans",
+      "source": "SESSION725_SCAN_METHODOLOGY_STANDARD.md §4 (Agent G)",
+      "source_line": "Scan Methodology Standard lines 244-293 (§4 — The Hard Gate, §4.1-4.5)",
+      "severity": "CRITICAL",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "§4.1: 'If two independent scans (different methods, different agents, or different tool implementations) produce different defect counts for the same defect class on the same pack file → AUTO ESCALATE.' Unambiguous boolean condition. The trigger is the divergence itself — no threshold needed beyond 'different counts.' §4.5 codifies: 'two independent scans must converge on an identical count before any remediation proceeds.'"
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "§4.1: 'spawn an independent governance agent.' §4.3: 'execute the G1–G5 reconciliation runbook (per SESSION31_RECONCILIATION_EXECUTION.md).' The notification is implicit — the discovering scan agent triggers the governance agent spawn. The governance agent then executes G1-G5."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": true,
+        "evidence": "§4.3 Required Resolution Path: 7 specific, numbered steps: (1) halt all write operations on affected pack, (2) identify root cause of discrepancy (methodology difference? DL-016? DL-029? DL-020?), (3) execute AM-1 Function constructor parse as reference methodology, (4) extract full QID list from AM-1 result, (5) compare QID-by-QID against both prior scan results, (6) document which scan was correct, which was wrong, and what methodology error caused the wrong result, (7) update resolution in REVISION_HISTORY.md. §4.2 additionally defines 5 forbidden resolution behaviors (no majority voting, no manual convergence, no deferral to 'more recent' scan, no accepting totals-only). §7.3 mandates resolution documentation with 5 required fields."
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Implicit: the G1-G5 reconciliation runbook (SESSION31_RECONCILIATION_EXECUTION.md) is owned by the Reconciliation Agent. §4.3 step 1 is 'halt all write operations' — writes remain blocked until the divergence is resolved and documented. The resolution itself (step 7: REVISION_HISTORY.md update) does not require explicit clearance beyond the reconciliation being complete and both scans now agreeing.",
+        "qualifier": "The clearance authority is not explicitly named as a single agent type. The G1-G5 runbook has the Reconciliation Agent as owner per ownership_assignments. Formalizing 'Reconciliation Agent' as the named clearance authority would close this minor documentation gap."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "§7.3 (Resolution Documentation): REVISION_HISTORY.md entry with: (a) two conflicting counts and their sources, (b) root cause of divergence, (c) authoritative count via AM-1, (d) QID list of actual findings or confirmation of 0, (e) correction applied or confirmation of no correction needed."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References SESSION31_RECONCILIATION_EXECUTION.md (G1-G5 runbook), AGENTS.md §6 (Count Stability), S802 8 Permanent Prevention Rules, AM-1 Function constructor parse (Scan Methodology Standard §2). All resolve to authoritative project documents."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": true,
+      "gaps": [
+        {
+          "gap_id": "ESC007-GAP-1",
+          "severity": "LOW",
+          "description": "Clearance authority not explicitly named. The procedure references G1-G5 runbook (owned by Reconciliation Agent) but does not state 'Reconciliation Agent clears this escalation.' The resolution is achieved when both scans agree — the clearance is implicit in the technical resolution. Formalizing the named authority would close this gap."
+        }
+      ],
+      "verdict": "CERTIFIED",
+      "verdict_rationale": "Procedure is deterministic, documented, and repeatable. The 7-step resolution path is precise and the 5 forbidden resolution behaviors (no majority voting, no manual convergence, etc.) prevent the most common reconciliation errors. The AM-1 Function constructor parse is specified as the authoritative reference methodology. The sole gap (clearance authority not explicitly named) is minor — the G1-G5 runbook's Reconciliation Agent ownership implicitly defines the clearance path."
+    },
+
+    {
+      "id": "ESC-008",
+      "name": "Maintenance agent type activation (7 agent types)",
+      "source": "SESSION723_MAINTENANCE_FRAMEWORK.json §maintenance_agent_types + SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json §ownership_assignments",
+      "source_line": "S723 Framework line 27-35 (agent types); S725 Trigger Registry lines 562-636 (ownership_assignments)",
+      "severity": "INFORMATIONAL (not an escalation — an activation rule)",
+
+      "criterion_C1_detection_trigger": {
+        "satisfied": true,
+        "evidence": "Each of the 7 agent types has explicit 'required_at' activation conditions defined in ownership_assignments: Governance Auditor at every T0; Defect Sweeper at every 5 sessions or 3h writes; Reconciliation Agent at every 20 sessions or every count discrepancy ≥5; Certification Auditor at every 800-series certification wave; Baseline Maintainer after ≥3-file write sessions; Delivery Safety Inspector before every deployment; Remediation Agent at every DL-008 remediation, answer-key correction, or structural repair. All triggers are deterministic — either session-count-based (mod 5, mod 20), event-based (deployment request, write threshold), or defect-based (DL-008 detection)."
+      },
+      "criterion_C2_notification_chain": {
+        "satisfied": true,
+        "evidence": "Not applicable — agent activation is self-triggered by the session workflow, not a notification chain. The Governance Auditor's T0 protocol is the session-start bootstrap. Other agent types are spawned by cadence triggers (M1-M5) or defect events (T-002, T-008)."
+      },
+      "criterion_C3_prescribed_actions": {
+        "satisfied": true,
+        "evidence": "Each agent type has a mode definition (read-only vs. write), an authority scope, owned cadences/triggers/escalations, required-at conditions, and skill requirements. The scope is exhaustive — every ownership_assignments entry defines: label, authority, mode, owned_cadences, owned_triggers, owned_escalations, required_at, skills. No agent type has ambiguous responsibilities."
+      },
+      "criterion_C4_clearance_authority": {
+        "satisfied": true,
+        "evidence": "Self-referential — agent activation is governed by the cadence/trigger that activates it, not by a separate clearance authority. However, the Governance Auditor is the meta-authority that ensures the correct agent types are active for the current session phase."
+      },
+      "criterion_C5_documentation": {
+        "satisfied": true,
+        "evidence": "REVISION_HISTORY.md entry at session close documents which agent types were active and which cadences were executed. Deep Audit (M3) requires a separate agent output report. Baseline Refresh (M5) updates CURRENT_BASELINES.md."
+      },
+      "criterion_C6_authorized_references": {
+        "satisfied": true,
+        "evidence": "References SESSION723_MAINTENANCE_FRAMEWORK.json (cadences, thresholds, agent types), AGENTS.md §13 (Runtime Governance), SESSION31_RECONCILIATION_EXECUTION.md (G1-G5), CAQS_v1.0.md §1.6 (six-dimension verification). All resolve to authoritative project documents."
+      },
+
+      "deterministic": true,
+      "documented": true,
+      "repeatable": true,
+      "gaps": [
+        {
+          "gap_id": "ESC008-GAP-1",
+          "severity": "HIGH",
+          "cross_reference": "S6-GAP-1 + X-GAP-1",
+          "description": "No session counter tracking mechanism exists. The Deep Audit (M3) triggers at 'session counter mod 20 = 0' but there is no SESSION_COUNTER.md or monotonic increment guarantee. Agents must rely on manual awareness. Until a counter file exists, the mod-20 trigger cannot fire autonomously. Recommended: create SESSION_COUNTER.md, incremented at T0 by Governance Auditor."
+        },
+        {
+          "gap_id": "ESC008-GAP-2",
+          "severity": "MEDIUM",
+          "cross_reference": "X-GAP-1 (inter-agent communication)",
+          "description": "Multi-agent coordination for agent spawning is not protocolled. The ownership model assumes agents can be spawned and coordinated, but the concrete mechanism (how does the Governance Auditor 'spawn' a Reconciliation Agent?) is a session-architecture dependency, not defined in the procedure."
+        }
+      ],
+      "verdict": "CERTIFIED",
+      "verdict_rationale": "Agent activation rules are deterministic, documented, and repeatable. Each of 7 agent types has explicit activation conditions, authority scope, and skill requirements. The activation model is the operational backbone of maintenance-mode governance. Two gaps (no session counter, no spawn protocol) are implementation dependencies, not procedural design defects. These gaps apply to all cadence-triggered procedures (not just agent activation) and are tracked as cross-cutting gaps in Agent P's validation report."
+    }
+  ],
+
+  "summary_statistics": {
+    "total_procedures_evaluated": 8,
+    "certified": 7,
+    "revision_required": 1,
+    "total_gaps_found": 12,
+    "gaps_by_severity": {
+      "HIGH": 2,
+      "MEDIUM": 5,
+      "LOW": 5
+    },
+    "gaps_by_procedure": {
+      "ESC-001": 3,
+      "ESC-002": 0,
+      "ESC-003": 2,
+      "ESC-004": 0,
+      "ESC-005": 3,
+      "ESC-006": 0,
+      "ESC-007": 1,
+      "ESC-008": 2
+    },
+    "criteria_pass_rate": {
+      "C1_detection_trigger": "8/8 (100%)",
+      "C2_notification_chain": "8/8 (100%)",
+      "C3_prescribed_actions": "7/8 (87.5%) — ESC-005 FAIL",
+      "C4_clearance_authority": "8/8 (100%)",
+      "C5_documentation": "8/8 (100%)",
+      "C6_authorized_references": "8/8 (100%)"
+    }
+  },
+
+  "overall_certification": "REVISION_REQUIRED",
+
+  "overall_rationale": "Seven of eight procedures are CERTIFIED — they are deterministic, documented, and repeatable. ESC-005 (Unexpected baseline hash change) is REVISION_REQUIRED due to an internal logical contradiction in step 1: the instruction 'No reads or writes until governance sweep completes' prohibits the diagnostic reads that steps 2-7 require. This is the only structural procedural defect among the 8 procedures. The fix is straightforward (restrict halt to writes only, permit diagnostic reads) but must be applied before ESC-005 can be CERTIFIED.",
+
+  "blocking_fix": {
+    "procedure": "ESC-005",
+    "fix_location": "SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json — T-005 prescribed_actions item 1 AND ESC-005 actions step 1",
+    "current_text": "Halt all agents immediately. No reads or writes until governance sweep completes.",
+    "required_text": "Halt all WRITE operations on the affected file(s). Halt all pack-write agents on all packs. READ operations are permitted for diagnostic purposes only during the governance sweep.",
+    "rationale": "Aligns with ESC-001 halt scope (writes only) and permits the hash comparison, parse-count, Sync Anomaly Playbook classification, backup comparison, and G1-G5 gate execution that the procedure itself requires."
+  },
+
+  "cross_references": {
+    "evaluated_against": [
+      "Agent P — SESSION725_MAINTENANCE_VALIDATION.json (6-scenario simulation, 13 gaps)",
+      "Agent F — SESSION725_MAINTENANCE_TRIGGER_REGISTRY.json (5 cadences, 8 thresholds, 6 escalation procedures, 7 ownership assignments)",
+      "Agent G — SESSION725_SCAN_METHODOLOGY_STANDARD.md (3 approved methodologies, 8 forbidden methodologies, Hard Gate §4)",
+      "S723 — SESSION723_MAINTENANCE_FRAMEWORK.json (cadences, thresholds, agent types, escalation conditions)"
+    ],
+    "gap_sources": [
+      "Agent P validation — per-scenario gaps S1 through S6",
+      "Agent P validation — cross-cutting gaps X-GAP-1 through X-GAP-4",
+      "Agent R independent analysis — ESC-005 internal contradiction (not identified by Agent P as blocking; Agent P noted it as S4-GAP-2 at MEDIUM severity)"
+    ],
+    "severity_upgrade_notes": [
+      "S4-GAP-2 was rated MEDIUM by Agent P. Agent R upgrades to HIGH and BLOCKING because the 'No reads or writes' instruction prevents procedure execution — this is a structural procedural defect, not an operational gap."
+    ]
+  },
+
+  "signed": "Agent R — Session 725 Governance Hardening",
+  "verification_method": "Systematic criteria-based evaluation against 6 certification criteria, cross-referenced against Agent P's 6-scenario simulation, Agent G's Scan Methodology Standard, Agent F's Trigger Registry, and S723 Maintenance Framework. Each procedure's detection trigger verified for unambiguity. Each prescribed action list verified for specificity (no 'investigate' without specific commands). Each clearance authority verified against ownership_assignments. Each documentation requirement verified for completeness."
+}

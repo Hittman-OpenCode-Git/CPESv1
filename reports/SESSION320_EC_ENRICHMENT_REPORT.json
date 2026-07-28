@@ -1,0 +1,126 @@
+{
+  "session": "S320",
+  "type": "EC Enrichment Report",
+  "classification": {
+    "COMPLETE": 12,
+    "NEEDS_ENRICHMENT": 7,
+    "WEAK": 19
+  },
+  "weak_items": [
+    {
+      "qid": "P1-EC-004",
+      "pack": "C",
+      "cc": "A",
+      "ecLen": 175
+    },
+    {
+      "qid": "P1-EC-008",
+      "pack": "C",
+      "cc": "A",
+      "ecLen": 184
+    },
+    {
+      "qid": "P1-EC-014",
+      "pack": "C",
+      "cc": "C",
+      "ecLen": 146
+    },
+    {
+      "qid": "P1-EC-025",
+      "pack": "C",
+      "cc": "B",
+      "ecLen": 155
+    },
+    {
+      "qid": "P1-EC-028",
+      "pack": "C",
+      "cc": "A",
+      "ecLen": 155
+    },
+    {
+      "qid": "P1-EC-031",
+      "pack": "C",
+      "cc": "D",
+      "ecLen": 168
+    },
+    {
+      "qid": "P1-EC-041",
+      "pack": "C",
+      "cc": "B",
+      "ecLen": 144
+    },
+    {
+      "qid": "P1-EC-049",
+      "pack": "C",
+      "cc": "B",
+      "ecLen": 154
+    },
+    {
+      "qid": "P1-EC-052",
+      "pack": "C",
+      "cc": "A",
+      "ecLen": 148
+    },
+    {
+      "qid": "P1-EC-061",
+      "pack": "C",
+      "cc": "B",
+      "ecLen": 135
+    },
+    {
+      "qid": "P1-EC-066",
+      "pack": "C",
+      "cc": "C",
+      "ecLen": 175
+    },
+    {
+      "qid": "P1-EC-072",
+      "pack": "C",
+      "cc": "A",
+      "ecLen": 153
+    },
+    {
+      "qid": "P1-ED-016",
+      "pack": "D",
+      "cc": "A",
+      "ecLen": 152
+    },
+    {
+      "qid": "P1-ED-025",
+      "pack": "D",
+      "cc": "B",
+      "ecLen": 154
+    },
+    {
+      "qid": "P1-ED-036",
+      "pack": "D",
+      "cc": "A",
+      "ecLen": 144
+    },
+    {
+      "qid": "P1-ED-058",
+      "pack": "D",
+      "cc": "C",
+      "ecLen": 184
+    },
+    {
+      "qid": "P1-ED-064",
+      "pack": "D",
+      "cc": "A",
+      "ecLen": 168
+    },
+    {
+      "qid": "P1-ED-066",
+      "pack": "D",
+      "cc": "C",
+      "ecLen": 150
+    },
+    {
+      "qid": "P1-ED-075",
+      "pack": "D",
+      "cc": "A",
+      "ecLen": 159
+    }
+  ],
+  "note": "EC enrichment deferred to S321 — S320 focused on blocking (EW + COSO)"
+}

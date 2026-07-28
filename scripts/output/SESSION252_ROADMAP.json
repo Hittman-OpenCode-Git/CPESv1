@@ -1,0 +1,472 @@
+{
+  "document": {
+    "title": "Session 252 Forward Roadmap — Investigation Platform",
+    "version": "1.0.0",
+    "session": "S252",
+    "board": "J",
+    "generatedTimestamp": "2026-07-27T18:15:00.000Z",
+    "author": "Board J — Operational Intelligence Review",
+    "purpose": "Define the 4-phase forward roadmap from current S252 state to May Admin MVP. Each phase includes sessions, deliverables, dependencies, and success criteria.",
+    "currentState": {
+      "enginesBuilt": 6,
+      "enginesTested": 4,
+      "specsOnly": 5,
+      "totalQuestions": 2540,
+      "certifiedItems": 2221,
+      "totalSessions": 98,
+      "totalChallenges": 35,
+      "deepLinkVerdict": "FAIL — 2 critical findings",
+      "questionHealthMean": 95,
+      "criticalFindings": [
+        "P1-E-059 missing from question_history.json",
+        "S89B phantom session referenced by all 35 challenges",
+        "63 duplicate session IDs",
+        "Student data trapped in localStorage"
+      ]
+    },
+    "targetState": {
+      "goal": "May Admin MVP — full browser-based admin portal",
+      "views": 5,
+      "roles": 5,
+      "apiEndpoints": 42,
+      "readinessCriteria": [
+        "All 6 engines accessible from unified CLI",
+        "Student data bridge operational",
+        "Deep-link validation: 0 critical, <10 warnings",
+        "Investigation workbench: functional UI prototype",
+        "HTTP API layer wrapping all engines",
+        "RBAC authentication implemented",
+        "All learner-pool safety gates automated"
+      ]
+    }
+  },
+
+  "phases": {
+
+    "phase1": {
+      "id": "PHASE_1_HARDENING",
+      "title": "Phase 1 — Hardening",
+      "sessions": "S253–S255 (2–3 sessions)",
+      "status": "NOT_STARTED",
+      "description": "Fix critical validation findings, close data gaps, add essential infrastructure before integration begins.",
+      "deliverables": [
+        {
+          "id": "D1.1",
+          "name": "Deep-Link Critical Fix — P1-E-059",
+          "type": "BUG_FIX",
+          "description": "Resolve the P1-E-059 QID referenced by Session 3 but missing from question_history.json. Either add the QID to question_history or correct session_registry.json's reference.",
+          "blockedBy": [],
+          "estimatedSession": "S253 (first task)",
+          "successCriteria": "Deep-link check Q→S passes with 0 missing QIDs"
+        },
+        {
+          "id": "D1.2",
+          "name": "Deep-Link Critical Fix — S89B Phantom Session",
+          "type": "BUG_FIX",
+          "description": "Resolve the S89B session referenced by all 35 challenges and challenge_to_session.json but absent from session_registry.json. If S89B is a real session, add it to the registry. If it's a test artifact, remove all references and rebuild challenge_to_session.json.",
+          "blockedBy": ["D1.1"],
+          "estimatedSession": "S253",
+          "successCriteria": "0 challenges reference non-existent sessions; S89B either exists in registry or all 35 references resolved"
+        },
+        {
+          "id": "D1.3",
+          "name": "Session Registry Deduplication",
+          "type": "DATA_CLEANUP",
+          "description": "Deduplicate 63 duplicate session IDs in session_registry.json. Determine whether duplicates are genuine duplicates (same session recorded twice) or different sessions with non-unique IDs. If the latter, assign unique IDs.",
+          "blockedBy": [],
+          "estimatedSession": "S253–S254",
+          "successCriteria": "0 duplicate session IDs in session_registry.json; deep-link warning count drops from 181 to <100"
+        },
+        {
+          "id": "D1.4",
+          "name": "Student Data Export Bridge",
+          "type": "NEW_ENGINE",
+          "description": "Build a mechanism to export student data from browser localStorage to a JSON file consumable by Node.js scripts. Two-part: (a) add export button to the simulator UI that serializes cmaMayLearnerState to a downloadable JSON file, (b) create a synthetic student_roll.json with 5-10 realistic learner profiles for development/testing.",
+          "blockedBy": [],
+          "estimatedSession": "S254",
+          "successCriteria": "Student Exposure Index spec (Board B) can be tested with real or synthetic student data. CLI: node scripts/student_exposure_index.js --student=learner-001 works."
+        },
+        {
+          "id": "D1.5",
+          "name": "Implement Student Exposure Engine",
+          "type": "NEW_ENGINE",
+          "description": "Build scripts/student_exposure_index.js per Board B spec. Must handle: single-student mode (from student_roll or export file), summary-all mode, all 7 output sections (profile, exposure matrix, topic performance, challenge history, recommendation impact, exposure gaps, risk signals), all 15 risk signal computations.",
+          "blockedBy": ["D1.4"],
+          "estimatedSession": "S254–S255",
+          "successCriteria": "Engine generates valid student_exposure.json for at least 1 student; all 7 sections populated; risk signals computed with correct thresholds"
+        },
+        {
+          "id": "D1.6",
+          "name": "Implement Investigation Registry Engine",
+          "type": "NEW_ENGINE",
+          "description": "Build scripts/investigation_registry.js per Board D spec. Must handle: --create, --auto-create (from OPEN challenges), --from-challenge, --from-defect, --list (with filters), --get, --update, --close, --summary, --stats. Enforce lifecycle state machine transitions.",
+          "blockedBy": [],
+          "estimatedSession": "S255",
+          "successCriteria": "All 10 CLI operations functional. State machine rejects invalid transitions. Seed data: 12 investigations created from current OPEN challenges."
+        },
+        {
+          "id": "D1.7",
+          "name": "Add Incremental Refresh to Health Engine",
+          "type": "ENHANCEMENT",
+          "description": "Modify scripts/question_health_engine.js to support --qid-only mode (score a single QID without full pool rebuild) and --since=<timestamp> mode (re-score only QIDs whose question_history entries changed).",
+          "blockedBy": [],
+          "estimatedSession": "S255",
+          "successCriteria": "--qid=P1-A-001 runs in <5s (vs. ~30s full pool). --since=2026-07-27 correctly identifies changed QIDs."
+        }
+      ],
+      "dependencies": {},
+      "successCriteria": {
+        "deepLinkVerdict": "PASS or WARN (0 critical)",
+        "studentDataBridge": "Operational — at least 1 synthetic student profile importable",
+        "newEngines": "Student Exposure + Investigation Registry both operational",
+        "refresh": "Health engine supports incremental refresh"
+      }
+    },
+
+    "phase2": {
+      "id": "PHASE_2_INTEGRATION",
+      "title": "Phase 2 — Integration",
+      "sessions": "S256–S259 (3-4 sessions)",
+      "status": "NOT_STARTED",
+      "description": "Wire all engines together, create unified CLI, add caching and watchers so the platform operates as a system, not 6 independent scripts.",
+      "deliverables": [
+        {
+          "id": "D2.1",
+          "name": "Unified CLI — may-admin-cli.js",
+          "type": "NEW_ENGINE",
+          "description": "Create scripts/may-admin-cli.js as the single entry point for all investigation and admin commands. Subcommands: investigate <qid> (Board A), exposure <studentId> (Board B), triage (Board C), registry <cmd> (Board D), health <qid|section|all> (Board E), intelligence <sessionId|summary> (Board F), validate (Board G).",
+          "blockedBy": ["D1.5", "D1.6"],
+          "estimatedSession": "S256",
+          "successCriteria": "All 7 subcommands functional. help text comprehensive. --json flag outputs raw JSON; default outputs formatted summary."
+        },
+        {
+          "id": "D2.2",
+          "name": "Cross-Engine Caching Layer",
+          "type": "INFRASTRUCTURE",
+          "description": "Build a shared cache module (scripts/lib/cache_manager.js) that loads question_history.json, session_registry.json, challenge_registry.json, and pack file data once per session. Each engine reads from cache instead of re-parsing files. TTL-based invalidation: cache expires if source file mtime changes.",
+          "blockedBy": ["D2.1"],
+          "estimatedSession": "S257",
+          "successCriteria": "Full investigation pipeline (Board A dossiser → Board E health → Board F session trace for same QID) runs in <60% of current combined time."
+        },
+        {
+          "id": "D2.3",
+          "name": "Bidirectional Consistency Checks",
+          "type": "ENHANCEMENT",
+          "description": "Extend Board G's deep-link validator to perform bidirectional consistency checks: for every QID in session_registry, verify it exists in question_history AND for every sessionId in question_history sessions, verify it exists in session_registry. Close the orphan gap identified in S252 (21 orphan session QIDs + 5 orphan challenge sessions).",
+          "blockedBy": ["D1.1", "D1.2", "D1.3"],
+          "estimatedSession": "S257",
+          "successCriteria": "Bidirectional check passes: 0 one-way orphans in either direction. Deep-link overall verdict: PASS."
+        },
+        {
+          "id": "D2.4",
+          "name": "Real-Time File Watchers",
+          "type": "INFRASTRUCTURE",
+          "description": "Build scripts/lib/file_watcher.js using Node.js fs.watch. When any pack file (*_corrected.js) changes: (a) trigger backup protocol automatically, (b) invalidate cache for that pack, (c) regenerate question_history.json, (d) push notification to any active investigation workbench.",
+          "blockedBy": ["D2.2"],
+          "estimatedSession": "S258",
+          "successCriteria": "Edit a pack file manually → within 5 seconds, cache invalidates and admin CLI reflects updated data without manual --refresh."
+        },
+        {
+          "id": "D2.5",
+          "name": "Registry Regeneration Pipeline",
+          "type": "INFRASTRUCTURE",
+          "description": "Build scripts/regenerate_all.js that runs all registry builders in dependency order: question_history → readiness_scoring → work_queue → certification_waves → certification_candidates → question_health → session_intelligence → challenge_triage. Accepts --since=<timestamp> for incremental.",
+          "blockedBy": ["D2.2"],
+          "estimatedSession": "S258–S259",
+          "successCriteria": "node scripts/regenerate_all.js completes in < 2 minutes for full pool, < 30 seconds for --since incremental. All downstream outputs consistent."
+        },
+        {
+          "id": "D2.6",
+          "name": "HTTP API Wrapper — Phase 1",
+          "type": "NEW_SERVICE",
+          "description": "Build a minimal Express.js server (scripts/admin_api_server.js) wrapping the 6 engines as REST endpoints. Phase 1 scope: GET /api/admin/v1/questions/:qid/dossier (Board A), GET /api/admin/v1/health/questions/:qid (Board E), GET /api/admin/v1/sessions/:sessionId (Board F), GET /api/admin/v1/challenges/triage (Board C). No auth yet — localhost only.",
+          "blockedBy": ["D2.1"],
+          "estimatedSession": "S259",
+          "successCriteria": "curl http://localhost:3000/api/admin/v1/questions/P1-A-001/dossier returns full 9-section dossier JSON. All 4 endpoints functional."
+        }
+      ],
+      "dependencies": {
+        "requiresPhase1Complete": true
+      },
+      "successCriteria": {
+        "unifiedCLI": "may-admin-cli.js handles all 7 subcommands",
+        "caching": "Cross-engine cache reduces pipeline time by >=40%",
+        "bidirectional": "Deep-link validation: PASS, 0 critical, <10 warnings",
+        "watchers": "File watcher detects pack file changes and invalidates cache",
+        "regeneration": "regenerate_all.js produces consistent outputs",
+        "httpApi": "4 endpoints operational on localhost"
+      }
+    },
+
+    "phase3": {
+      "id": "PHASE_3_UI_FOUNDATION",
+      "title": "Phase 3 — UI Foundation",
+      "sessions": "S260–S265 (5-6 sessions)",
+      "status": "NOT_STARTED",
+      "description": "Build the browser-based investigation dashboard. Implement the workbench state machine in JavaScript. Connect UI to API endpoints. Add role-based access control.",
+      "deliverables": [
+        {
+          "id": "D3.1",
+          "name": "Investigation Dashboard HTML/CSS Prototype",
+          "type": "UI",
+          "description": "Build admin/dashboard.html with CSS (admin/dashboard.css). Implement the 3-column layout from Board I's workbench model: left (challenge triage kanban), center (investigation detail panel + question forensic timeline), right (linked entities graph + finding log). Static prototype — hardcoded sample data.",
+          "blockedBy": [],
+          "estimatedSession": "S260–S261",
+          "successCriteria": "Dashboard renders correctly in Chrome/Firefox/Edge at 1920x1080 and 1366x768. All Board I UI components (kanban, detail-panel, timeline, graph, cluster-chart) have visual placeholders."
+        },
+        {
+          "id": "D3.2",
+          "name": "Workbench State Machine — JavaScript Implementation",
+          "type": "UI_LOGIC",
+          "description": "Build admin/js/workbench_state_machine.js implementing Board I's complete 10-state lifecycle. Must enforce: valid transitions only, precondition checks before each action, SLA tracking with timers, event logging for audit trail. Use a finite state machine library or pure state pattern.",
+          "blockedBy": [],
+          "estimatedSession": "S261–S262",
+          "successCriteria": "All 42 actions from Board I spec implemented. Invalid transitions throw. SLA timers fire on schedule. Internal state always consistent. Unit test suite with 20+ tests covering all states and edge cases."
+        },
+        {
+          "id": "D3.3",
+          "name": "API Client Layer",
+          "type": "UI_LOGIC",
+          "description": "Build admin/js/api_client.js that wraps all Phase 2 HTTP API endpoints with fetch() calls, error handling, loading states, and retry logic. Support both real API (when server running) and mock mode (for standalone UI development).",
+          "blockedBy": ["D2.6"],
+          "estimatedSession": "S262",
+          "successCriteria": "All API calls return typed responses. Mock mode returns Board A/B/C/E/F spec-compliant data. Error states handled gracefully with user-visible messages."
+        },
+        {
+          "id": "D3.4",
+          "name": "Dashboard Live Data Connection",
+          "type": "UI_INTEGRATION",
+          "description": "Wire the dashboard prototype (D3.1) to the API client (D3.3) and state machine (D3.2). Replace hardcoded sample data with live API calls. Implement: challenge queue loading, investigation detail rendering, dossier display, health score visualization, session trace timeline.",
+          "blockedBy": ["D3.1", "D3.2", "D3.3"],
+          "estimatedSession": "S263–S264",
+          "successCriteria": "Opening dashboard.html loads real challenge queue from API. Clicking a challenge loads full investigation detail. Dossier button fetches Board A output and renders all 9 sections. Health score displays with color-coded tier."
+        },
+        {
+          "id": "D3.5",
+          "name": "Role-Based Access Control — Client Side",
+          "type": "AUTH",
+          "description": "Implement client-side RBAC per Board H spec. Build admin/js/auth.js with role definitions (ROLE_SUPPORT through ROLE_SYSADMIN), permission checks (canCreate, canUpdate, canExecuteRemediation, canCertify), and UI gating (hide/disable actions based on role). Local admin API key authentication with 4-hour session.",
+          "blockedBy": [],
+          "estimatedSession": "S264–S265",
+          "successCriteria": "Login with ROLE_SUPPORT key → View 1 visible, all others hidden. Login with ROLE_INVESTIGATOR → Views 1+2, can create investigations, cannot execute remediation. Login with ROLE_SYSADMIN → all 5 views, all actions enabled. Session expires after 4 hours."
+        },
+        {
+          "id": "D3.6",
+          "name": "Content Admin View Prototype",
+          "type": "UI",
+          "description": "Build View 3 (Content Admin) pages per Board H spec: question inventory table (sortable, filterable, paginated), certification progress dashboard (per-domain progress bars), defect heatmap, remediation batch creation form, certification wave planner wizard.",
+          "blockedBy": ["D3.1", "D3.3"],
+          "estimatedSession": "S265",
+          "successCriteria": "Question inventory shows all 2,540 items. Filtering by section/pack/state/health works. Defect heatmap renders with correct counts. Batch creation enforces Rule 5 (max 30 QIDs)."
+        }
+      ],
+      "dependencies": {
+        "requiresPhase2Complete": true,
+        "requiresHTTPApi": "D2.6 must be complete for D3.3-D3.6"
+      },
+      "successCriteria": {
+        "dashboard": "Investigation dashboard renders live data from API",
+        "stateMachine": "Workbench enforces all Board I transitions and SLAs",
+        "auth": "RBAC gates all views and actions correctly",
+        "contentAdmin": "View 3 (Content Admin) functional with inventory, health, and batch management",
+        "crossBrowser": "Tested on Chrome, Firefox, Edge"
+      }
+    },
+
+    "phase4": {
+      "id": "PHASE_4_MAY_ADMIN_MVP",
+      "title": "Phase 4 — May Admin MVP",
+      "sessions": "S270–S280 (10-11 sessions)",
+      "status": "NOT_STARTED",
+      "description": "Complete the full May Administration Portal with all 5 views, student exposure analytics, challenge management workflow, governance compliance dashboard, and release management tools.",
+      "deliverables": [
+        {
+          "id": "D4.1",
+          "name": "View 1 — Student View",
+          "type": "UI",
+          "description": "Complete Student View per Board H §View1: student search, student detail dashboard (profile card, session timeline, topic performance heatmap, question exposure table, domain radar chart, challenge list). Connect to Student Exposure Engine (Board B) for live data.",
+          "blockedBy": ["D3.5", "D1.5"],
+          "estimatedSession": "S270–S271",
+          "successCriteria": "All 7 Board H API endpoints functional. Student search works. Session timeline loads real data. Topic performance heatmap renders. Question exposure table filterable by domain/outcome."
+        },
+        {
+          "id": "D4.2",
+          "name": "View 2 — Investigator View (Complete)",
+          "type": "UI",
+          "description": "Extend Phase 3 investigation dashboard to full Board H §View2 spec: complete challenge triage kanban with drag-and-drop status changes, investigation detail with findings log, question forensic timeline, linked entities graph (force-directed or hierarchical), defect cluster view, finding log with filtering.",
+          "blockedBy": ["D3.2", "D3.4"],
+          "estimatedSession": "S271–S273",
+          "successCriteria": "All 8 View 2 API endpoints functional. Kanban supports drag-and-drop. Entity graph shows QID ↔ challenges ↔ investigations ↔ defects ↔ recommendations. Defect cluster view groups by DL-XXX. Finding log supports filtering by author."
+        },
+        {
+          "id": "D4.3",
+          "name": "View 3 — Content Admin View (Complete)",
+          "type": "UI",
+          "description": "Complete Content Admin View: finish certification wave planner wizard (multi-step: select candidates → validate → preview → execute), difficulty distribution chart (actual vs CAQS §6.1 targets), question diff viewer (before/after comparison for content changes), section health drill-down panels.",
+          "blockedBy": ["D3.6"],
+          "estimatedSession": "S273–S275",
+          "successCriteria": "Certification wave wizard executes waves with governance guard pre-check. Difficulty chart shows DL-031 inflated items. Diff viewer shows field-level before/after. All 11 Board H View 3 endpoints functional."
+        },
+        {
+          "id": "D4.4",
+          "name": "View 4 — Governance View",
+          "type": "UI",
+          "description": "Build Governance View per Board H §View4: governance event feed (chronological, filterable by type), compliance dashboard (per-rule pass/fail counts, guard test results), learner-pool safety monitor (Certified items with open defects, blocked items in pool), certification integrity checker (before/after state verification), baseline file integrity panel (13 runtime hashes vs CURRENT_BASELINES.md), risk register (live DEFECT_LIBRARY.md entries with status badges).",
+          "blockedBy": ["D3.5"],
+          "estimatedSession": "S275–S277",
+          "successCriteria": "All 10 View 4 API endpoints functional. Governance feed shows all events. Learner-pool safety monitor flags Certified items with DL-008/DL-026/DL-030. Baseline integrity panel shows green/red per runtime file. Risk register renders each DL entry with current status."
+        },
+        {
+          "id": "D4.5",
+          "name": "View 5 — System Admin View",
+          "type": "UI",
+          "description": "Build System Admin View per Board H §View5: data integrity panel (file state monitor, pack file parse validation, registry consistency checker), pipeline refresh management (trigger regeneration, view refresh history, force rebuild), audit log (all role mutations with actor + timestamp), system health dashboard (CPU, memory, file I/O metrics for the investigation platform).",
+          "blockedBy": ["D3.5"],
+          "estimatedSession": "S277–S278",
+          "successCriteria": "All 6 View 5 API endpoints functional. Data integrity panel shows live file state. Pipeline refresh triggerable from UI. Audit log captures all authenticated actions."
+        },
+        {
+          "id": "D4.6",
+          "name": "Challenge Management Workflow",
+          "type": "WORKFLOW",
+          "description": "Build end-to-end challenge lifecycle flow: student submits challenge → appears in triage kanban → triaged → investigation created → findings → remediation planned → executed → verified → resolved → closed. Each state transition sends notification to assigned investigator. Implement the complete 10-state workbench path per Board I.",
+          "blockedBy": ["D4.2", "D3.2"],
+          "estimatedSession": "S278–S279",
+          "successCriteria": "End-to-end walkthrough: create synthetic challenge, triage, assign, investigate, add finding, plan remediation, execute (with governance guard), verify, resolve, close. All states enforced. Audit trail complete."
+        },
+        {
+          "id": "D4.7",
+          "name": "Release Management Tools",
+          "type": "WORKFLOW",
+          "description": "Build release management tools: release candidate validator (runs full validator suite + governance guard + explanation validator), pre-release checklist (per CAQS §14 Gold Standard), changelog generator (from REVISION_HISTORY.md), release notes publisher, rollback manager (restore from .bak files with confirmation).",
+          "blockedBy": ["D4.4"],
+          "estimatedSession": "S279–S280",
+          "successCriteria": "Release candidate validator produces pass/fail report. Pre-release checklist gates with 0 errors required. Changelog generated from revision history. Rollback restores from timestamped backup with confirmation."
+        },
+        {
+          "id": "D4.8",
+          "name": "Governance Compliance Dashboard",
+          "type": "UI",
+          "description": "Complete the governance compliance view: CAQS §1.6 six-dimension verification tracker (per-question verification status), certification pipeline health (waves planned/executed/verified), governance guard rule compliance (per-rule violation counts over time), AGENTS.md protocol adherence monitor (backup protocol compliance, batch cap violations, session closeout completeness).",
+          "blockedBy": ["D4.4"],
+          "estimatedSession": "S280",
+          "successCriteria": "All governance compliance metrics visible. CAQS verification tracker shows per-domain progress. Guard rule compliance shows zero violations. Protocol adherence monitor flags any session that skipped backup or breached batch cap."
+        }
+      ],
+      "dependencies": {
+        "requiresPhase3Complete": true,
+        "requiresAllEngines": "All Board A-F engines must be operational and integrated",
+        "requiresDataBridge": "Student data bridge (D1.4) must be production-ready",
+        "requiresDeepLinkClean": "Deep-link validation must be PASS (0 critical findings)"
+      },
+      "successCriteria": {
+        "allViewsFunctional": "All 5 admin views (Student, Investigator, Content Admin, Governance, System Admin) fully functional with live data",
+        "endToEndChallenge": "Complete challenge lifecycle walkthrough succeeds",
+        "releaseTools": "Release candidate validation, changelog, and rollback all functional",
+        "governanceCompliance": "All governance rules monitored in real-time",
+        "authentication": "RBAC enforced across all views and API endpoints",
+        "learnerPoolSafety": "Zero Certified items with open DL-008, DL-026, or DL-030 in delivery pool",
+        "validationPass": "Full validator suite: 0 errors, acceptable warnings per baseline",
+        "deepLinkClean": "Deep-link validation: PASS, 0 critical, all bidirectional links resolved"
+      }
+    }
+  },
+
+  "criticalPath": [
+    "D1.1 (P1-E-059 fix) → D1.2 (S89B fix) → D1.3 (deduplication)",
+    "D1.4 (student data bridge) → D1.5 (student exposure engine) → D2.1 (unified CLI)",
+    "D1.6 (investigation registry engine) → D2.1 (unified CLI)",
+    "D2.1 (unified CLI) → D2.6 (HTTP API) → D3.3 (API client)",
+    "D2.2 (caching) → D2.4 (file watchers)",
+    "D3.1 (dashboard) → D3.4 (live data) → D4.2 (investigator view complete)",
+    "D3.2 (state machine) → D4.6 (challenge workflow)",
+    "D3.5 (RBAC) → D4.1 (student view) → D4.4 (governance view)"
+  ],
+
+  "riskRegister": [
+    {
+      "riskId": "R1",
+      "risk": "Student data remains inaccessible in localStorage",
+      "probability": "HIGH",
+      "impact": "HIGH",
+      "mitigation": "D1.4 (export bridge) + synthetic student_roll.json. If bridge fails, Phase 4 student analytics must operate on synthetic data only.",
+      "blocks": ["D1.5", "D4.1"]
+    },
+    {
+      "riskId": "R2",
+      "risk": "S89B phantom session has no discoverable origin",
+      "probability": "MEDIUM",
+      "impact": "HIGH",
+      "mitigation": "D1.2: if S89B cannot be found, purge all 35 challenge references and rebuild challenge_to_session.json. Accept data loss of challenge-session linkage.",
+      "blocks": ["D1.2", "D2.3"]
+    },
+    {
+      "riskId": "R3",
+      "risk": "63 duplicate session IDs indicate systemic registry corruption",
+      "probability": "MEDIUM",
+      "impact": "MEDIUM",
+      "mitigation": "D1.3: manual investigation of each duplicate. If widespread, session_registry.json may need reconstruction from question_history source data.",
+      "blocks": ["D1.3", "D2.3"]
+    },
+    {
+      "riskId": "R4",
+      "risk": "No real student challenge volume — triage engine accuracy unknown",
+      "probability": "HIGH",
+      "impact": "MEDIUM",
+      "mitigation": "Accept synthetic seed data as development baseline. Triage engine accuracy on real data is deferred to post-MVP monitoring. Document as known limitation.",
+      "blocks": ["D4.6"]
+    },
+    {
+      "riskId": "R5",
+      "risk": "Pack file concurrent-write risk (DL-019) not yet resolved",
+      "probability": "MEDIUM",
+      "impact": "CRITICAL",
+      "mitigation": "Phase 2 file watchers (D2.4) provide file-lock awareness. Phase 4 content admin view (D4.3) enforces write-through with backup protocol. Full solution: .lock file protocol deferred to post-Phase 4.",
+      "blocks": ["D4.3", "D4.6"]
+    },
+    {
+      "riskId": "R6",
+      "risk": "Node.js HTTP server not designed for production deployment",
+      "probability": "HIGH",
+      "impact": "LOW",
+      "mitigation": "Phase 2 HTTP API (D2.6) is for local development only. Production deployment requirements (HTTPS, rate limiting, CORS, load balancing) are out of scope for May MVP. Document as local-only tool.",
+      "blocks": []
+    },
+    {
+      "riskId": "R7",
+      "risk": "Recommendation registry has only 4 entries — insufficient for Board C triage",
+      "probability": "HIGH",
+      "impact": "MEDIUM",
+      "mitigation": "Board C operates without recommendation matching at GATE_3 (falls through to keyword matching). Accept reduced triage accuracy until recommendation registry is populated by certification waves.",
+      "blocks": ["D4.2"]
+    }
+  ],
+
+  "totalEstimatedSessions": {
+    "phase1": "2-3 sessions (S253-S255)",
+    "phase2": "3-4 sessions (S256-S259)",
+    "phase3": "5-6 sessions (S260-S265)",
+    "phase4": "10-11 sessions (S270-S280)",
+    "total": "20-24 sessions from current S252 to May Admin MVP"
+  },
+
+  "nextImmediateAction": {
+    "session": "S253",
+    "title": "Phase 1 Start — Deep-Link Critical Fixes + Session Registry Cleanup",
+    "tasks": [
+      "Resolve P1-E-059 missing from question_history.json",
+      "Resolve S89B phantom session (all 35 challenge references)",
+      "Begin session_registry.json deduplication (63 duplicate IDs)"
+    ],
+    "estimatedDuration": "1 session"
+  },
+
+  "revisionHistory": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-27",
+      "author": "Board J — S252 Operational Intelligence Review",
+      "summary": "Initial 4-phase roadmap from S252 current state to May Admin MVP. 7 deliverables in Phase 1, 6 in Phase 2, 6 in Phase 3, 8 in Phase 4. Total estimated: 20-24 sessions."
+    }
+  ]
+}

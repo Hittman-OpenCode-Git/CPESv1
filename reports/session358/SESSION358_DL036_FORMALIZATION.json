@@ -1,0 +1,23 @@
+{
+  "session": "S358",
+  "board": "Agent Groups E-H — DL-036 Re-Verification",
+  "timestamp": "2026-07-27T15:58:00Z",
+  "status": "PASS — DL-036 FORMALIZED",
+
+  "verification": {
+    "defect_entry_location": "knowledge/DEFECT_LIBRARY.md, DL-036 section",
+    "entry_status": "Verified present and complete",
+    "formalization_dimensions": {
+      "detection": "DEFINED — Compare totalBlocked between readiness_scoring.json (242) and certification_candidates.json (282). Divergence > 0 triggers investigation.",
+      "severity": "MEDIUM — 40-item false-positive BLOCKED classification. No learner impact (all 40 items correctly Certified). Root cause is artifact reuse gap, not content quality defect.",
+      "ownership": "Pipeline engineering — resolved by S356 artifact reuse implementation (C2). Candidate Engine now consumes readiness_scoring output instead of re-scanning source.",
+      "remediation": "DEFINED — Artifact reuse model eliminates regex-divergence. pipeline_orchestrator.js (S356) verifies cross-stage sourceFileHashes. Single source of truth for QID classification."
+    },
+    "root_cause_verified": "CONFIRMED — Candidate Engine (SESSION850) re-scanned Pack E with stale regex (/^P1E-[A-F]-\\d{3}$/) not matching R-series format. Readiness Scorer regex correctly handled R-series.",
+    "fix_implemented": "S356 artifact reuse implementation — Candidate Engine now consumes readiness_scoring QID list. Single source of truth eliminates regex divergence class.",
+    "cross_reference_s814": "Consistent — S814 Q-Z Board already confirmed DL-036 formalization."
+  },
+
+  "verdict": "PASS — DL-036 is fully formalized with root cause identified and remediation implemented. C2 closes this defect class.",
+  "note": "The C2 implementation (S356) is the permanent remediation. DL-036 documents the finding for audit purposes."
+}

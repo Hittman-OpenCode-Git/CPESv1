@@ -1,0 +1,120 @@
+{
+  "session": "517",
+  "agent": "D",
+  "timestamp": "2026-07-26T02:00:00Z",
+  "purpose": "Cross-lane operations restart manifest — clean resume points for all three lanes",
+
+  "restart_decision_tree": {
+    "primary": {
+      "lane": "500-series case bank",
+      "session": "S518",
+      "action": "CBQ2-A3 explanation uplift (5 items in ENHANCED_CASE_BASE2, scored_cases2.js)",
+      "rationale": "Smallest remaining block (5 items). Follows S516's established citation+rationale+CognitiveLevel uplift pattern. 1 session. Unblocks ENHANCED_CASE_BASE2 to 78/78 Certified.",
+      "file_scope": "scored_cases2.js",
+      "estimated_effort": "~30 minutes"
+    },
+    "alternate_a": {
+      "lane": "500-series case bank",
+      "session": "S518",
+      "action": "MIGRATED_CASE_BASE_D first CAQS review (75 items, scored_cases4.js)",
+      "rationale": "Proven S515+S516 pattern. Greenfield — all Unprocessed. 11 numeric items (slightly more than Base_C's 8). Estimated 1-2 sessions for certification.",
+      "file_scope": "scored_cases4.js",
+      "estimated_effort": "~1-2 hours"
+    },
+    "alternate_b": {
+      "lane": "700-series MCQ",
+      "session": "S710",
+      "action": "Certified DL-026 uplift (13 Certified items with empty distractor ExplanationWrong slots)",
+      "rationale": "Closes the last open Certified DL-026 category. 13 items, all Certified — pedagogical uplift only, no answer-key risk.",
+      "file_scope": "Pack C (pack_c_corrected.js), Pack D (pack_d_corrected.js)",
+      "estimated_effort": "~30 minutes"
+    },
+    "alternate_c": {
+      "lane": "100-series May",
+      "session": "S119",
+      "action": "May single-user pilot readiness — onboarding flow, privacy guard, local-only data confirmation",
+      "rationale": "Prepares May for use by one test-taker in a safe, local-only study coach role. No real data until authorized.",
+      "file_scope": "may-core.js, may-learner-state.js, index_updated.html",
+      "estimated_effort": "~1-2 hours"
+    }
+  },
+
+  "lane_manifests": {
+    "100_series_may": {
+      "last_session": "S118 — May Seeded History, Telemetry, and UI Polish",
+      "current_baseline": {
+        "test_load_may": "5 file loads + May API surface OK",
+        "test_may_renderer": "62 PASS, 0 FAIL",
+        "test_may_regression_r2": "42 PASS, 0 FAIL",
+        "test_may_stagec": "89 PASS, 0 FAIL"
+      },
+      "current_thresholds": "Pre-production defaults (not calibrated for real learner data)",
+      "modelVersion": "Current — no drift detected",
+      "pilot_posture": "Single-user only. Local-only data. No external telemetry.",
+      "deferred": ["Keyboard navigation on student rows (S118)"],
+      "recommended_restart": "S119 — May single-user pilot readiness review"
+    },
+    "500_series_case_bank": {
+      "last_session": "S516 — CASE-C1-Q4 Remediation + MIGRATED_CASE_BASE_C Quality Uplift Wave",
+      "certified_arrays": {
+        "MIGRATED_CASE_BASE_A": "120/120 (100%)",
+        "MIGRATED_CASE_BASE_B": "75/75 (100%)",
+        "MIGRATED_CASE_BASE_C": "75/75 (100%)"
+      },
+      "holdbacks": {
+        "CBQ2-A3": "5 items in ENHANCED_CASE_BASE2 — thin explanations"
+      },
+      "next_uncertified": {
+        "MIGRATED_CASE_BASE_D": "0/75 — greenfield, structurally clean"
+      },
+      "deferred_enhancements": [
+        "Difficulty calibration DL-032 (all MIGRATED arrays)",
+        "Q4/Q5 case grounding (Base_C: 30 items)",
+        "Case-level metadata (Industry, CompanyName, Stakeholder)",
+        "ProductionStatus alignment (Draft→Production)"
+      ],
+      "recommended_restart": "S518 — CBQ2-A3 uplift (5 items) OR MIGRATED_CASE_BASE_D CAQS (75 items)"
+    },
+    "700_series_mcq": {
+      "last_session": "S709/S710R — 700-Series Certification State Freeze + DL-026 Target Reconciliation",
+      "certified_pool": "~2,181 Certified items across 2,500 total (87.2%)",
+      "remaining_optional": [
+        {
+          "id": "DL-026_Certified",
+          "scope": "13 Certified items with empty distractor ExplanationWrong slots",
+          "packs": "Pack C/D",
+          "effort": "~30 min",
+          "note": "Pedagogical uplift only. No answer-key risk. Items are already Certified — adding explanation text where currently empty."
+        },
+        {
+          "id": "DL-031_difficulty_inflation",
+          "scope": "~500 items labeled Moderate/3 that test Bloom's Remember/Understand",
+          "packs": "All 5 packs",
+          "effort": "4-6 hours",
+          "note": "Systematic calibration. Definition-match items should be Easy/1, not Moderate/3."
+        },
+        {
+          "id": "DL-032_uniform_difficulty",
+          "scope": "420 case items all labeled Moderate",
+          "packs": "All 5 scored_cases files",
+          "effort": "2-3 hours",
+          "note": "Every case item is Moderate/3 — statistically implausible for a 420-item pool."
+        },
+        {
+          "id": "DL-008_residual",
+          "scope": "1 remaining (P1-B-025 in pack_a_corrected.js)",
+          "note": "Last open DL-008. Non-certified item."  
+        }
+      ],
+      "recommended_restart": "S710 — Certified DL-026 uplift (13 items) if quick; S711+ for DL-031/DL-032"
+    }
+  },
+
+  "pause_decision": {
+    "active_lanes_paused": ["500-series case bank", "700-series MCQ", "100-series May"],
+    "reason": "Wind-down for operations break. All lanes have clean restart points documented.",
+    "stable_state_confirmed": true,
+    "no_open_critical_defects": true,
+    "all_tests_passing": "32/32 across governance guard + session recovery"
+  }
+}

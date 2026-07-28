@@ -1,0 +1,160 @@
+{
+  "session": "802",
+  "agent": "L",
+  "title": "Shared Analytics Consumption Audit",
+  "date": "2026-07-26",
+  "methodology": "Cross-referenced S800 data_sources declaration, glob enumeration of all SESSION30* JSON deliverables, scripts/s3* inventory, and REVISION_HISTORY.md entries for S301-S305",
+  "consumed_sessions": {
+    "S301": {
+      "purpose": "Certification Readiness Framework — portfolio audit, section-level readiness, remediation categories, 26-agent exploration",
+      "deliverables_exist": true,
+      "deliverables_count": 30,
+      "deliverable_types": [
+        "4 primary governance artifacts (CERTIFICATION_READINESS_STANDARD.md, ITEM_READINESS_SCORE_SPEC.md, PORTFOLIO_RISK_REGISTER.json, CERTIFICATION_FORECAST_MODEL.json)",
+        "26 agent JSON files (SESSION301_AGENT_A through Z)"
+      ],
+      "script_available": "scripts/s301_analyze_sections.js (1,462 bytes)",
+      "consumed_by_S800": true,
+      "S800_evidence": "Explicitly listed in SESSION800_DASHBOARD.json data_sources (5 S301 agent files) and SESSION800_SESSION_SUMMARY.md Primary Sources",
+      "consumed_by_S802": true
+    },
+    "S302": {
+      "purpose": "Distractor Quality Score (DQS) — portfolio-wide distractor quality census (7,898 slots across 2,500 MCQ + 625 case items), DQS model v1.0",
+      "deliverables_exist": true,
+      "deliverables_count": 10,
+      "key_deliverables": [
+        "SESSION302_DISTRACTOR_QUALITY_SCORE_MODEL.json — DQS model v1.0 (5-dimension: plausibility 30%, uniqueness 20%, misconception value 20%, instructional quality 20%, discrimination 10%)",
+        "SESSION302_DISTRACTOR_PORTFOLIO_CENSUS.json",
+        "SESSION302_DISTRACTOR_COVERAGE_AUDIT.json",
+        "SESSION302_PLAUSIBILITY_AUDIT.json",
+        "SESSION302_NON_DISCRIMINATING_DISTRACTORS.json",
+        "SESSION302_MISCONCEPTION_MATRIX.json",
+        "SESSION302_DUPLICATE_DISTRACTOR_ANALYSIS.json",
+        "SESSION302_LEARNING_VALUE_ANALYSIS.json",
+        "SESSION302_REWRITE_CANDIDATES.json",
+        "SESSION302_DASHBOARD.json"
+      ],
+      "script_available": false,
+      "consumed_by_S800": true,
+      "S800_evidence": "Explicitly listed in SESSION800_DASHBOARD.json data_sources (SESSION302_DASHBOARD.json) and SESSION800_SESSION_SUMMARY.md Primary Sources. DQS pack scores (B=85/A, C=65/C, D=63/C-, E=78/B+, Case=5/F) used in S800 §5.2.",
+      "consumed_by_S802": true
+    },
+    "S303": {
+      "purpose": "Explanation Quality Score (EQS) — portfolio-wide explanation quality census, instructional value audit, case-bank gap analysis (2,500 MCQ + 625 case items)",
+      "deliverables_exist": true,
+      "deliverables_count": 11,
+      "key_deliverables": [
+        "SESSION303_EXPLANATION_QUALITY_SCORE_MODEL.json — per-pack EQS with grade distribution (A=0, B=6, C=66, D=50, F=378 for Pack A; similar for B/C/D/E)",
+        "SESSION303_EXPLANATION_PORTFOLIO_CENSUS.json",
+        "SESSION303_EXPLANATION_COVERAGE_AUDIT.json",
+        "SESSION303_INSTRUCTIONAL_QUALITY_AUDIT.json",
+        "SESSION303_CERTIFICATION_BENCHMARK_AUDIT.json",
+        "SESSION303_CASEBANK_GAP_ANALYSIS.json",
+        "SESSION303_REWRITE_CANDIDATES.json",
+        "SESSION303_REWRITE_FORECAST.json",
+        "SESSION303_LEARNING_VALUE_MATRIX.json",
+        "SESSION303_DASHBOARD.json",
+        "SESSION303_SESSION_SUMMARY.md"
+      ],
+      "script_available": "scripts/s303_explanation_analysis.js (49,033 bytes)",
+      "consumed_by_S800": false,
+      "S800_evidence": "NOT listed in SESSION800_DASHBOARD.json data_sources. NOT listed in SESSION800_SESSION_SUMMARY.md Primary Sources. S800 Agent D produced independent SESSION800_EXPLANATION_QUALITY_AUDIT.json — duplicating S303 analysis.",
+      "consumed_by_S802": false,
+      "gap": "S800 rebuilt explanation quality analysis instead of consuming S303 EQS model. S802 should consume SESSION303_EXPLANATION_QUALITY_SCORE_MODEL.json and SESSION303_CASEBANK_GAP_ANALYSIS.json."
+    },
+    "S304": {
+      "purpose": "Blueprint Quality Score (BQS) — blueprint coverage, weighting validation, section alignment, certification overlay, domain risk ranking across 3,125 items",
+      "deliverables_exist": true,
+      "deliverables_count": 11,
+      "key_deliverables": [
+        "SESSION304_BLUEPRINT_QUALITY_SCORE_MODEL.json — BQS model v1.0 (5-dimension: certification maturity 25%, explanation quality 25%, distractor quality 20%, metadata quality 10%, learning value 20%)",
+        "SESSION304_BLUEPRINT_COVERAGE_MATRIX.json",
+        "SESSION304_WEIGHTING_AUDIT.json (Domain C at 25.5% vs 20% CMA target)",
+        "SESSION304_SECTION_ALIGNMENT_AUDIT.json (0 misalignments across 3,125 items)",
+        "SESSION304_EXPLANATION_QUALITY_BY_DOMAIN.json",
+        "SESSION304_DISTRACTOR_QUALITY_BY_DOMAIN.json",
+        "SESSION304_CERTIFICATION_OVERLAY.json",
+        "SESSION304_CONTENT_RISK_REGISTER.json",
+        "SESSION304_REWRITE_FORECAST_BY_DOMAIN.json (1,632 candidates, ~94 sessions, ~136 hours)",
+        "SESSION304_DASHBOARD.json",
+        "SESSION304_SESSION_SUMMARY.md"
+      ],
+      "script_available": "scripts/s304_blueprint_analysis.js (60,292 bytes)",
+      "consumed_by_S800": false,
+      "S800_evidence": "NOT listed in SESSION800_DASHBOARD.json data_sources. NOT in S800 Primary Sources. S800 Agent H produced independent SESSION800_BLUEPRINT_COVERAGE_MATRIX.json — duplicating S304 analysis.",
+      "consumed_by_S802": false,
+      "gap": "S800 rebuilt blueprint coverage matrix instead of consuming S304 BQS model. S802 should consume SESSION304_BLUEPRINT_COVERAGE_MATRIX.json and SESSION304_BLUEPRINT_QUALITY_SCORE_MODEL.json."
+    },
+    "S305": {
+      "purpose": "Exhibit Quality Score (ExQS) — exhibit realism, cognitive load, case-bank feedback gap audit (120 cases, 625 items, 117 exhibits), learning friction register",
+      "deliverables_exist": true,
+      "deliverables_count": 10,
+      "key_deliverables": [
+        "SESSION305_EXHIBIT_QUALITY_SCORE_MODEL.json — ExQS model v1.0 (5-dimension: realism 25%, usability 25%, instructional support 20%, cognitive efficiency 15%, business relevance 15%)",
+        "SESSION305_EXHIBIT_CENSUS.json",
+        "SESSION305_EXHIBIT_DEPENDENCY_AUDIT.json",
+        "SESSION305_REALISM_REVIEW.json",
+        "SESSION305_COGNITIVE_LOAD_AUDIT.json (44 Excessive, 23 High, 8 Moderate, 45 Low)",
+        "SESSION305_DOMAIN_C_DEEP_DIVE.json",
+        "SESSION305_CERTIFICATION_IMPACT_ANALYSIS.json",
+        "SESSION305_LEARNING_FRICTION_REGISTER.json (169 frictions across 120 cases)",
+        "SESSION305_DOMAIN_RISK_REGISTER.json",
+        "SESSION305_DASHBOARD.json"
+      ],
+      "script_available": "scripts/s305_exhibit_analysis.js (49,840 bytes)",
+      "consumed_by_S800": false,
+      "S800_evidence": "NOT listed in SESSION800_DASHBOARD.json data_sources. NOT in S800 Primary Sources. S800 §6 covers defect status but does not consume the ExQS model or cognitive load audit.",
+      "consumed_by_S802": false,
+      "gap": "S800 did not consume S305 exhibit quality or cognitive load data. S802 should consume SESSION305_EXHIBIT_QUALITY_SCORE_MODEL.json, SESSION305_COGNITIVE_LOAD_AUDIT.json, and SESSION305_LEARNING_FRICTION_REGISTER.json."
+    }
+  },
+  "available_scripts": [
+    "scripts/s301_analyze_sections.js (1,462 bytes)",
+    "scripts/s303_explanation_analysis.js (49,033 bytes)",
+    "scripts/s304_blueprint_analysis.js (60,292 bytes)",
+    "scripts/s305_exhibit_analysis.js (49,840 bytes)",
+    "scripts/s306_inspect.js (1,908 bytes)",
+    "scripts/s306_inspect_cases.js (1,181 bytes)",
+    "scripts/s306_inspect_cases2.js (1,362 bytes)",
+    "scripts/s306_uiqs_engine.js (31,723 bytes)"
+  ],
+  "s800_actual_data_sources": [
+    "SESSION301_AGENT_S_PORTFOLIO_DASHBOARD.json",
+    "SESSION301_AGENT_Y_READINESS_BOARD.json",
+    "SESSION301_AGENT_F_EXPLANATION_QUALITY.json",
+    "SESSION301_AGENT_G_BLUEPRINT_METADATA.json",
+    "SESSION301_AGENT_H_ITEM_READINESS_MODEL.json",
+    "SESSION302_DASHBOARD.json",
+    "SESSION800_REWRITE_FORECAST_AGENT_R.json",
+    "SESSION700_GLOBAL_CERTIFICATION_REVIEW_SUMMARY.md",
+    "SESSION_STATUS_2026-07-24.md",
+    "DEFECT_LIBRARY.md",
+    "REVISION_HISTORY.md"
+  ],
+  "s800_rebuilt_analytics": {
+    "explanation_quality": "S800 Agent D produced SESSION800_EXPLANATION_QUALITY_AUDIT.json — S303 already has EQS model + 11 deliverables",
+    "distractor_quality": "S800 Agent E produced SESSION800_DISTRACTOR_QUALITY_CENSUS.json — S302 DQS model was consumed (partial), but S800 rebuilt the census",
+    "blueprint_coverage": "S800 Agent H produced SESSION800_BLUEPRINT_COVERAGE_MATRIX.json — S304 already has BQS model + coverage matrix + weighting audit",
+    "exhibit_quality": "S800 has no exhibit quality audit — S305 ExQS model and cognitive load audit were not consumed or rebuilt"
+  },
+  "compliance": {
+    "all_five_analytics_available": true,
+    "all_five_model_files_exist": true,
+    "S301_consumed_by_S800": true,
+    "S302_consumed_by_S800": true,
+    "S303_consumed_by_S800": false,
+    "S304_consumed_by_S800": false,
+    "S305_consumed_by_S800": false,
+    "s802_should_rebuild_nothing": true,
+    "s802_consumption_recommendation": "S802 should consume S303 EQS, S304 BQS, and S305 ExQS directly rather than re-scanning pack/case files. The model JSON files, census data, and domain-level scores already exist. The scripts (s303_explanation_analysis.js, s304_blueprint_analysis.js, s305_exhibit_analysis.js) can be reused if fresh computation is needed, but the JSON deliverables are the primary consumption target.",
+    "gaps": [
+      "S800 consumed only S301 and S302 — not S303, S304, or S305",
+      "S800 rebuilt explanation quality audit (Agent D) — S303 EQS existed",
+      "S800 rebuilt blueprint coverage matrix (Agent H) — S304 BQS existed",
+      "S800 has no exhibit quality analysis — S305 ExQS exists but was not consumed",
+      "No s302 analysis script found in scripts/ — S302 analysis was agent-inline only",
+      "Timing issue: S301-S305 and S800 all executed 2026-07-26 — S303/S304/S305 may have been in-flight during S800 launch"
+    ],
+    "verdict": "ALL_FIVE_ANALYTICS_EXIST_AND_CAN_BE_CONSUMED — S302 DQS and S301 were consumed by S800. S303 EQS, S304 BQS, and S305 ExQS were NOT consumed by S800. S802 must consume these 3 existing analytics rather than rebuilding. The score model JSONs, census JSONs, and domain-level dashboards are all present and structurally complete."
+  }
+}

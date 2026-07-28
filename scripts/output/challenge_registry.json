@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": "2.0",
+  "generatedTimestamp": "2026-07-27T06:28:04.945Z",
+  "challengeSchema": {
+    "challengeId": "CH-XXXXXXXX",
+    "status": "OPEN | INVESTIGATING | RESOLVED | CLOSED | DISMISSED",
+    "type": "CONTENT_ERROR | TECHNICAL_ISSUE | ANSWER_DISPUTE | EXPLANATION_ISSUE | AMBIGUITY | OTHER",
+    "resolutionTypes": "CONFIRMED_DEFECT | CONFIRMED_VALID | INCONCLUSIVE | DUPLICATE | NO_ACTION",
+    "flowStateMachine": {
+      "OPEN →": [
+        "INVESTIGATING",
+        "DISMISSED"
+      ],
+      "INVESTIGATING →": [
+        "RESOLVED",
+        "CLOSED",
+        "DISMISSED"
+      ],
+      "RESOLVED →": [
+        "CLOSED"
+      ],
+      "CLOSED →": [],
+      "DISMISSED →": []
+    }
+  },
+  "summary": {
+    "totalChallenges": 35,
+    "byStatus": {
+      "OPEN": 12,
+      "INVESTIGATING": 8,
+      "RESOLVED": 6,
+      "CLOSED": 6,
+      "DISMISSED": 3
+    },
+    "byType": {
+      "CONTENT_ERROR": 6,
+      "TECHNICAL_ISSUE": 6,
+      "ANSWER_DISPUTE": 6,
+      "EXPLANATION_ISSUE": 6,
+      "AMBIGUITY": 6,
+      "OTHER": 5
+    },
+    "byResolution": {
+      "OPEN": 0,
+      "INVESTIGATING": 0,
+      "RESOLVED": 0,
+      "CLOSED": 0,
+      "DISMISSED": 0
+    },
+    "questionsWithChallenges": 35,
+    "sessionsWithChallenges": 19,
+    "recommendationsWithChallenges": 2,
+    "syntheticDataNote": "This registry contains synthetic seed data for development and testing. Real student challenge data will replace this in production."
+  },
+  "challenges": [
+    {
+      "challengeId": "CH-CC1ECA89",
+      "status": "OPEN",
+      "type": "CONTENT_ERROR",
+      "studentId": "USER-100",
+      "testAttemptId": "ATTEMPT-1000",
+      "questionId": "P1-A-036",
+      "reportedDate": "2026-07-26",
+      "studentDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "2026"
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-07-25",
+      "lastModifiedDate": "2026-07-27"
+    },
+    {
+      "challengeId": "CH-42169D7F",
+      "status": "OPEN",
+      "type": "TECHNICAL_ISSUE",
+      "studentId": "USER-101",
+      "testAttemptId": "ATTEMPT-1001",
+      "questionId": "P1-A-046",
+      "reportedDate": "2026-07-23",
+      "studentDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "7."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-07-20",
+      "lastModifiedDate": "2026-07-28"
+    },
+    {
+      "challengeId": "CH-53D73FDB",
+      "status": "OPEN",
+      "type": "ANSWER_DISPUTE",
+      "studentId": "USER-102",
+      "testAttemptId": "ATTEMPT-1002",
+      "questionId": "P1-A-056",
+      "reportedDate": "2026-07-20",
+      "studentDescription": "The question stem has a typo — the numbers don't add up.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "4"
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-07-15",
+      "lastModifiedDate": "2026-07-29"
+    },
+    {
+      "challengeId": "CH-5DEDA52E",
+      "status": "INVESTIGATING",
+      "type": "EXPLANATION_ISSUE",
+      "studentId": "USER-103",
+      "testAttemptId": "ATTEMPT-1003",
+      "questionId": "P1-A-066",
+      "reportedDate": "2026-07-17",
+      "studentDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "5."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-4",
+      "investigationNotes": "Investigated by automated scan S803. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-07-10",
+      "lastModifiedDate": "2026-07-30"
+    },
+    {
+      "challengeId": "CH-73FBA8ED",
+      "status": "INVESTIGATING",
+      "type": "AMBIGUITY",
+      "studentId": "USER-104",
+      "testAttemptId": "ATTEMPT-1004",
+      "questionId": "P1-AC-026",
+      "reportedDate": "2026-07-14",
+      "studentDescription": "The difficulty label doesn't match the question complexity.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "1."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-5",
+      "investigationNotes": "Investigated by automated scan S804. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-07-05",
+      "lastModifiedDate": "2026-07-31"
+    },
+    {
+      "challengeId": "CH-F9057C5F",
+      "status": "RESOLVED",
+      "type": "OTHER",
+      "studentId": "USER-105",
+      "testAttemptId": "ATTEMPT-1005",
+      "questionId": "P1-AC-028",
+      "reportedDate": "2026-07-11",
+      "studentDescription": "The application crashed when I submitted this question.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "1."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-1",
+      "investigationNotes": "Investigated by automated scan S805. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "CONFIRMED_DEFECT",
+        "resolvedDate": "2026-08-01",
+        "resolvedBy": "RESOLVER-3",
+        "resolutionSession": "S89B",
+        "detail": "Defect confirmed by independent verification. DL corrective action logged."
+      },
+      "createdDate": "2026-06-30",
+      "lastModifiedDate": "2026-08-01"
+    },
+    {
+      "challengeId": "CH-22602334",
+      "status": "RESOLVED",
+      "type": "CONTENT_ERROR",
+      "studentId": "USER-106",
+      "testAttemptId": "ATTEMPT-1006",
+      "questionId": "P1-EC-001",
+      "reportedDate": "2026-07-08",
+      "studentDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S104",
+        "S89B"
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-2",
+      "investigationNotes": "Investigated by automated scan S806. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "CONFIRMED_VALID",
+        "resolvedDate": "2026-08-02",
+        "resolvedBy": "RESOLVER-1",
+        "resolutionSession": "S104",
+        "detail": "Question reviewed — correct as-is. Student feedback provided."
+      },
+      "createdDate": "2026-06-25",
+      "lastModifiedDate": "2026-08-02"
+    },
+    {
+      "challengeId": "CH-5F402774",
+      "status": "CLOSED",
+      "type": "TECHNICAL_ISSUE",
+      "studentId": "USER-107",
+      "testAttemptId": "ATTEMPT-1007",
+      "questionId": "P1-EC-002",
+      "reportedDate": "2026-07-05",
+      "studentDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "S721A"
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-3",
+      "investigationNotes": "Investigated by automated scan S807. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "INCONCLUSIVE",
+        "resolvedDate": "2026-08-03",
+        "resolvedBy": "RESOLVER-2",
+        "resolutionSession": "S89B",
+        "detail": "Insufficient evidence. Deferred to next certification wave."
+      },
+      "createdDate": "2026-06-20",
+      "lastModifiedDate": "2026-08-03"
+    },
+    {
+      "challengeId": "CH-27CB2741",
+      "status": "CLOSED",
+      "type": "ANSWER_DISPUTE",
+      "studentId": "USER-108",
+      "testAttemptId": "ATTEMPT-1008",
+      "questionId": "P1-EC-003",
+      "reportedDate": "2026-07-02",
+      "studentDescription": "The question stem has a typo — the numbers don't add up.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "1.1"
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-4",
+      "investigationNotes": "Investigated by automated scan S808. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "DUPLICATE",
+        "resolvedDate": "2026-08-04",
+        "resolvedBy": "RESOLVER-3",
+        "resolutionSession": "S89B",
+        "detail": "Duplicate of existing report. Merged."
+      },
+      "createdDate": "2026-06-15",
+      "lastModifiedDate": "2026-08-04"
+    },
+    {
+      "challengeId": "CH-DD6AC127",
+      "status": "DISMISSED",
+      "type": "EXPLANATION_ISSUE",
+      "studentId": "USER-109",
+      "testAttemptId": "ATTEMPT-1009",
+      "questionId": "P1-EC-005",
+      "reportedDate": "2026-06-29",
+      "studentDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "S721A"
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-5",
+      "investigationNotes": "Investigated by automated scan S809. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "NO_ACTION",
+        "resolvedDate": "2026-08-05",
+        "resolvedBy": "RESOLVER-1",
+        "resolutionSession": "S89B",
+        "detail": "No actionable issue. Challenge dismissed."
+      },
+      "createdDate": "2026-06-10",
+      "lastModifiedDate": "2026-08-05"
+    },
+    {
+      "challengeId": "CH-4A405E18",
+      "status": "OPEN",
+      "type": "AMBIGUITY",
+      "studentId": "USER-110",
+      "testAttemptId": "ATTEMPT-1010",
+      "questionId": "P1-EC-006",
+      "reportedDate": "2026-06-26",
+      "studentDescription": "The difficulty label doesn't match the question complexity.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "5."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-06-05",
+      "lastModifiedDate": "2026-08-06"
+    },
+    {
+      "challengeId": "CH-DEB509EA",
+      "status": "OPEN",
+      "type": "OTHER",
+      "studentId": "USER-111",
+      "testAttemptId": "ATTEMPT-1011",
+      "questionId": "P1-EC-007",
+      "reportedDate": "2026-06-23",
+      "studentDescription": "The application crashed when I submitted this question.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "7."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-05-31",
+      "lastModifiedDate": "2026-08-07"
+    },
+    {
+      "challengeId": "CH-DCB4A848",
+      "status": "OPEN",
+      "type": "CONTENT_ERROR",
+      "studentId": "USER-112",
+      "testAttemptId": "ATTEMPT-1012",
+      "questionId": "P1-EC-009",
+      "reportedDate": "2026-06-20",
+      "studentDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "5."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-05-26",
+      "lastModifiedDate": "2026-08-08"
+    },
+    {
+      "challengeId": "CH-4A14030D",
+      "status": "INVESTIGATING",
+      "type": "TECHNICAL_ISSUE",
+      "studentId": "USER-113",
+      "testAttemptId": "ATTEMPT-1013",
+      "questionId": "P1-EC-010",
+      "reportedDate": "2026-06-17",
+      "studentDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "7."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "REVIEWER-4",
+      "investigationNotes": "Investigated by automated scan S813. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-05-21",
+      "lastModifiedDate": "2026-08-09"
+    },
+    {
+      "challengeId": "CH-E129E08E",
+      "status": "INVESTIGATING",
+      "type": "ANSWER_DISPUTE",
+      "studentId": "USER-114",
+      "testAttemptId": "ATTEMPT-1014",
+      "questionId": "P1-EC-011",
+      "reportedDate": "2026-06-14",
+      "studentDescription": "The question stem has a typo — the numbers don't add up.",
+      "source": "Student Report",
+      "priority": "HIGH",
+      "linkedSessions": [
+        "S89B",
+        "2."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-5",
+      "investigationNotes": "Investigated by automated scan S814. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-05-16",
+      "lastModifiedDate": "2026-08-10"
+    },
+    {
+      "challengeId": "CH-BC03C877",
+      "status": "RESOLVED",
+      "type": "EXPLANATION_ISSUE",
+      "studentId": "USER-115",
+      "testAttemptId": "ATTEMPT-1015",
+      "questionId": "P1-EC-012",
+      "reportedDate": "2026-06-11",
+      "studentDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "7."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-1",
+      "investigationNotes": "Investigated by automated scan S815. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "CONFIRMED_DEFECT",
+        "resolvedDate": "2026-08-11",
+        "resolvedBy": "RESOLVER-1",
+        "resolutionSession": "S89B",
+        "detail": "Defect confirmed by independent verification. DL corrective action logged."
+      },
+      "createdDate": "2026-05-11",
+      "lastModifiedDate": "2026-08-11"
+    },
+    {
+      "challengeId": "CH-9FD50300",
+      "status": "RESOLVED",
+      "type": "AMBIGUITY",
+      "studentId": "USER-116",
+      "testAttemptId": "ATTEMPT-1016",
+      "questionId": "P1-EC-013",
+      "reportedDate": "2026-06-08",
+      "studentDescription": "The difficulty label doesn't match the question complexity.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "5."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-2",
+      "investigationNotes": "Investigated by automated scan S816. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "CONFIRMED_VALID",
+        "resolvedDate": "2026-08-12",
+        "resolvedBy": "RESOLVER-2",
+        "resolutionSession": "S89B",
+        "detail": "Question reviewed — correct as-is. Student feedback provided."
+      },
+      "createdDate": "2026-05-06",
+      "lastModifiedDate": "2026-08-12"
+    },
+    {
+      "challengeId": "CH-83CAEBA3",
+      "status": "CLOSED",
+      "type": "OTHER",
+      "studentId": "USER-117",
+      "testAttemptId": "ATTEMPT-1017",
+      "questionId": "P1-EC-015",
+      "reportedDate": "2026-06-05",
+      "studentDescription": "The application crashed when I submitted this question.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "4."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-3",
+      "investigationNotes": "Investigated by automated scan S817. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "INCONCLUSIVE",
+        "resolvedDate": "2026-08-13",
+        "resolvedBy": "RESOLVER-3",
+        "resolutionSession": "S89B",
+        "detail": "Insufficient evidence. Deferred to next certification wave."
+      },
+      "createdDate": "2026-05-01",
+      "lastModifiedDate": "2026-08-13"
+    },
+    {
+      "challengeId": "CH-B330A24E",
+      "status": "CLOSED",
+      "type": "CONTENT_ERROR",
+      "studentId": "USER-118",
+      "testAttemptId": "ATTEMPT-1018",
+      "questionId": "P1-EC-016",
+      "reportedDate": "2026-06-02",
+      "studentDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "38"
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-4",
+      "investigationNotes": "Investigated by automated scan S818. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "DUPLICATE",
+        "resolvedDate": "2026-08-14",
+        "resolvedBy": "RESOLVER-1",
+        "resolutionSession": "S89B",
+        "detail": "Duplicate of existing report. Merged."
+      },
+      "createdDate": "2026-04-26",
+      "lastModifiedDate": "2026-08-14"
+    },
+    {
+      "challengeId": "CH-BDF0C60D",
+      "status": "DISMISSED",
+      "type": "TECHNICAL_ISSUE",
+      "studentId": "USER-119",
+      "testAttemptId": "ATTEMPT-1019",
+      "questionId": "P1-EC-017",
+      "reportedDate": "2026-05-30",
+      "studentDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "6."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "REVIEWER-5",
+      "investigationNotes": "Investigated by automated scan S819. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "NO_ACTION",
+        "resolvedDate": "2026-08-15",
+        "resolvedBy": "RESOLVER-2",
+        "resolutionSession": "S89B",
+        "detail": "No actionable issue. Challenge dismissed."
+      },
+      "createdDate": "2026-04-21",
+      "lastModifiedDate": "2026-08-15"
+    },
+    {
+      "challengeId": "CH-2A63A075",
+      "status": "OPEN",
+      "type": "ANSWER_DISPUTE",
+      "studentId": "USER-120",
+      "testAttemptId": "ATTEMPT-1020",
+      "questionId": "P1-EC-018",
+      "reportedDate": "2026-05-27",
+      "studentDescription": "The question stem has a typo — the numbers don't add up.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "4."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-04-16",
+      "lastModifiedDate": "2026-08-16"
+    },
+    {
+      "challengeId": "CH-6044F487",
+      "status": "OPEN",
+      "type": "EXPLANATION_ISSUE",
+      "studentId": "USER-121",
+      "testAttemptId": "ATTEMPT-1021",
+      "questionId": "P1-EC-019",
+      "reportedDate": "2026-05-24",
+      "studentDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "2."
+      ],
+      "linkedRecommendations": [
+        "REC-5B1E489D",
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008",
+        "DL-026"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-04-11",
+      "lastModifiedDate": "2026-08-17"
+    },
+    {
+      "challengeId": "CH-7BEEBD1E",
+      "status": "OPEN",
+      "type": "AMBIGUITY",
+      "studentId": "USER-122",
+      "testAttemptId": "ATTEMPT-1022",
+      "questionId": "P1-A-001",
+      "reportedDate": "2026-05-21",
+      "studentDescription": "The difficulty label doesn't match the question complexity.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "3."
+      ],
+      "linkedRecommendations": [],
+      "linkedDefects": [],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-04-06",
+      "lastModifiedDate": "2026-08-18"
+    },
+    {
+      "challengeId": "CH-F3E8B19D",
+      "status": "INVESTIGATING",
+      "type": "OTHER",
+      "studentId": "USER-123",
+      "testAttemptId": "ATTEMPT-1023",
+      "questionId": "P1-A-002",
+      "reportedDate": "2026-05-18",
+      "studentDescription": "The application crashed when I submitted this question.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "2."
+      ],
+      "linkedRecommendations": [],
+      "linkedDefects": [],
+      "assignedTo": "REVIEWER-4",
+      "investigationNotes": "Investigated by automated scan S823. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-04-01",
+      "lastModifiedDate": "2026-08-19"
+    },
+    {
+      "challengeId": "CH-07EF5B50",
+      "status": "INVESTIGATING",
+      "type": "CONTENT_ERROR",
+      "studentId": "USER-124",
+      "testAttemptId": "ATTEMPT-1024",
+      "questionId": "P1-A-003",
+      "reportedDate": "2026-05-15",
+      "studentDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "source": "Student Report",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "2."
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "REVIEWER-5",
+      "investigationNotes": "Investigated by automated scan S824. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-03-27",
+      "lastModifiedDate": "2026-08-20"
+    },
+    {
+      "challengeId": "CH-F94FB072",
+      "status": "RESOLVED",
+      "type": "TECHNICAL_ISSUE",
+      "studentId": "USER-125",
+      "testAttemptId": "ATTEMPT-1025",
+      "questionId": "P1-A-004",
+      "reportedDate": "2026-05-12",
+      "studentDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "source": "System Flag",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "S17B"
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "REVIEWER-1",
+      "investigationNotes": "Investigated by automated scan S825. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "CONFIRMED_DEFECT",
+        "resolvedDate": "2026-08-21",
+        "resolvedBy": "RESOLVER-2",
+        "resolutionSession": "S89B",
+        "detail": "Defect confirmed by independent verification. DL corrective action logged."
+      },
+      "createdDate": "2026-03-22",
+      "lastModifiedDate": "2026-08-21"
+    },
+    {
+      "challengeId": "CH-3B28168D",
+      "status": "RESOLVED",
+      "type": "ANSWER_DISPUTE",
+      "studentId": "USER-126",
+      "testAttemptId": "ATTEMPT-1026",
+      "questionId": "P1-A-005",
+      "reportedDate": "2026-05-09",
+      "studentDescription": "The question stem has a typo — the numbers don't add up.",
+      "source": "System Flag",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "S17B"
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "REVIEWER-2",
+      "investigationNotes": "Investigated by automated scan S826. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "CONFIRMED_VALID",
+        "resolvedDate": "2026-08-22",
+        "resolvedBy": "RESOLVER-3",
+        "resolutionSession": "S89B",
+        "detail": "Question reviewed — correct as-is. Student feedback provided."
+      },
+      "createdDate": "2026-03-17",
+      "lastModifiedDate": "2026-08-22"
+    },
+    {
+      "challengeId": "CH-0AA70362",
+      "status": "CLOSED",
+      "type": "EXPLANATION_ISSUE",
+      "studentId": "USER-127",
+      "testAttemptId": "ATTEMPT-1027",
+      "questionId": "P1-A-006",
+      "reportedDate": "2026-05-06",
+      "studentDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "source": "System Flag",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "S722A"
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "REVIEWER-3",
+      "investigationNotes": "Investigated by automated scan S827. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "INCONCLUSIVE",
+        "resolvedDate": "2026-08-23",
+        "resolvedBy": "RESOLVER-1",
+        "resolutionSession": "S89B",
+        "detail": "Insufficient evidence. Deferred to next certification wave."
+      },
+      "createdDate": "2026-03-12",
+      "lastModifiedDate": "2026-08-23"
+    },
+    {
+      "challengeId": "CH-7D9EF3BC",
+      "status": "CLOSED",
+      "type": "AMBIGUITY",
+      "studentId": "USER-128",
+      "testAttemptId": "ATTEMPT-1028",
+      "questionId": "P1-A-007",
+      "reportedDate": "2026-05-03",
+      "studentDescription": "The difficulty label doesn't match the question complexity.",
+      "source": "System Flag",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "S723"
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "REVIEWER-4",
+      "investigationNotes": "Investigated by automated scan S828. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "DUPLICATE",
+        "resolvedDate": "2026-08-24",
+        "resolvedBy": "RESOLVER-2",
+        "resolutionSession": "S89B",
+        "detail": "Duplicate of existing report. Merged."
+      },
+      "createdDate": "2026-03-07",
+      "lastModifiedDate": "2026-08-24"
+    },
+    {
+      "challengeId": "CH-EE8FC06C",
+      "status": "DISMISSED",
+      "type": "OTHER",
+      "studentId": "USER-129",
+      "testAttemptId": "ATTEMPT-1029",
+      "questionId": "P1-A-008",
+      "reportedDate": "2026-04-30",
+      "studentDescription": "The application crashed when I submitted this question.",
+      "source": "System Flag",
+      "priority": "MEDIUM",
+      "linkedSessions": [
+        "S89B",
+        "S537"
+      ],
+      "linkedRecommendations": [],
+      "linkedDefects": [],
+      "assignedTo": "REVIEWER-5",
+      "investigationNotes": "Investigated by automated scan S829. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": {
+        "type": "NO_ACTION",
+        "resolvedDate": "2026-08-25",
+        "resolvedBy": "RESOLVER-3",
+        "resolutionSession": "S89B",
+        "detail": "No actionable issue. Challenge dismissed."
+      },
+      "createdDate": "2026-03-02",
+      "lastModifiedDate": "2026-08-25"
+    },
+    {
+      "challengeId": "CH-DDAE4F96",
+      "status": "OPEN",
+      "type": "CONTENT_ERROR",
+      "studentId": "USER-130",
+      "testAttemptId": "ATTEMPT-1030",
+      "questionId": "P1-A-009",
+      "reportedDate": "2026-04-27",
+      "studentDescription": "The correct answer shown doesn't match what I calculated independently.",
+      "source": "System Flag",
+      "priority": "LOW",
+      "linkedSessions": [
+        "S89B",
+        "S537"
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-02-25",
+      "lastModifiedDate": "2026-08-26"
+    },
+    {
+      "challengeId": "CH-B5680FAC",
+      "status": "OPEN",
+      "type": "TECHNICAL_ISSUE",
+      "studentId": "USER-131",
+      "testAttemptId": "ATTEMPT-1031",
+      "questionId": "P1-A-010",
+      "reportedDate": "2026-04-24",
+      "studentDescription": "One of the distractor explanations appears to describe the wrong choice.",
+      "source": "System Flag",
+      "priority": "LOW",
+      "linkedSessions": [
+        "S89B",
+        "2."
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-02-20",
+      "lastModifiedDate": "2026-08-27"
+    },
+    {
+      "challengeId": "CH-EACB8C9D",
+      "status": "OPEN",
+      "type": "ANSWER_DISPUTE",
+      "studentId": "USER-132",
+      "testAttemptId": "ATTEMPT-1032",
+      "questionId": "P1-A-011",
+      "reportedDate": "2026-04-21",
+      "studentDescription": "The question stem has a typo — the numbers don't add up.",
+      "source": "System Flag",
+      "priority": "LOW",
+      "linkedSessions": [
+        "S89B",
+        "2026"
+      ],
+      "linkedRecommendations": [],
+      "linkedDefects": [],
+      "assignedTo": "",
+      "investigationNotes": "",
+      "resolution": null,
+      "createdDate": "2026-02-15",
+      "lastModifiedDate": "2026-08-28"
+    },
+    {
+      "challengeId": "CH-8B19A949",
+      "status": "INVESTIGATING",
+      "type": "EXPLANATION_ISSUE",
+      "studentId": "USER-133",
+      "testAttemptId": "ATTEMPT-1033",
+      "questionId": "P1-A-012",
+      "reportedDate": "2026-04-18",
+      "studentDescription": "The explanation references an ASC standard that doesn't apply here.",
+      "source": "System Flag",
+      "priority": "LOW",
+      "linkedSessions": [
+        "S89B",
+        "8."
+      ],
+      "linkedRecommendations": [],
+      "linkedDefects": [],
+      "assignedTo": "REVIEWER-4",
+      "investigationNotes": "Investigated by automated scan S833. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-02-10",
+      "lastModifiedDate": "2026-08-29"
+    },
+    {
+      "challengeId": "CH-90E9CA51",
+      "status": "INVESTIGATING",
+      "type": "AMBIGUITY",
+      "studentId": "USER-134",
+      "testAttemptId": "ATTEMPT-1034",
+      "questionId": "P1-A-013",
+      "reportedDate": "2026-04-15",
+      "studentDescription": "The difficulty label doesn't match the question complexity.",
+      "source": "System Flag",
+      "priority": "LOW",
+      "linkedSessions": [
+        "S89B",
+        "2026"
+      ],
+      "linkedRecommendations": [
+        "REC-1100DF07"
+      ],
+      "linkedDefects": [
+        "DL-008"
+      ],
+      "assignedTo": "REVIEWER-5",
+      "investigationNotes": "Investigated by automated scan S834. Cross-referenced with REVISION_HISTORY.md entries.",
+      "resolution": null,
+      "createdDate": "2026-02-05",
+      "lastModifiedDate": "2026-08-30"
+    }
+  ]
+}

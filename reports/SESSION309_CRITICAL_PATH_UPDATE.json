@@ -1,0 +1,48 @@
+{
+  "session": "309",
+  "agent": "R",
+  "title": "Portfolio Critical Path Update",
+  "generated": "2026-07-26",
+  "previousBaseline_s308": "300 → DL-008 (3) → Domain E/F cert (8) → Case-bank EW (8) → Pack A closeout (3) → Modernization (5) → Governance (3) = 30 sessions",
+
+  "criticalPathChanges": [
+    {
+      "change": "DL-008 Wave 1 REMOVED",
+      "reason": "0 actual DL-008 items. All 67 were DL-029 false positives.",
+      "sessionsRemoved": 3,
+      "newSequence": "Start Domain E certification immediately after S310"
+    },
+    {
+      "change": "Domain E/F PARTIALLY PARALLELIZED",
+      "reason": "Pack C Section E and Pack D Section F are in different files — no write conflict. Initial 2 sessions establish methodology, then parallel execution.",
+      "sessionsRemoved": 3,
+      "newSequence": "Sessions 4-5: E/F baseline certification. Sessions 6-8: Parallel E Section E (Pack C) || F Section F (Pack D)."
+    },
+    {
+      "change": "Case-bank EW EARLIER START",
+      "reason": "Case-bank EW touches scored_cases*.js files only — no conflict with pack-file certification. Can run from session 4.",
+      "sessionsRemoved": 2,
+      "newSequence": "Case-bank EW starts session 4, runs parallel to Domain E/F certification"
+    },
+    {
+      "change": "Modernization DEFERRED",
+      "reason": "All modernization (DL-013, DL-031, EC normalization) is quality polish, not safety-critical. Defer to post-certification phase.",
+      "sessionsRemoved": 10,
+      "newSequence": "Modernization becomes a standalone post-cert program"
+    }
+  ],
+
+  "updatedCriticalPath": [
+    { "phase": "S309-S310", "sessions": "1-2", "activity": "300-series closeout", "parallel": "none" },
+    { "phase": "Domain E baseline", "sessions": "3-4", "activity": "Establish E cert methodology (Pack C 19 seeds)", "parallel": "Case-bank EW Phase 1 begins" },
+    { "phase": "Domain E+F parallel", "sessions": "5-8", "activity": "Pack C Section E || Pack D Section F || Case-bank EW", "parallel": "3-track parallel" },
+    { "phase": "Domain F+E completion", "sessions": "9-12", "activity": "Pack D Section E || Pack C Section F || Case-bank EW Phase 2", "parallel": "3-track parallel" },
+    { "phase": "Pack A closeout", "sessions": "13-14", "activity": "19 remaining Pack A items", "parallel": "EW Phase 3" },
+    { "phase": "Governance closure", "sessions": "15-16", "activity": "700-series + attestation + baselines", "parallel": "none" }
+  ],
+
+  "totalSessions": 16,
+  "confidence": "MEDIUM-HIGH — assumes 15 items/session certification velocity and 3-track parallel execution",
+  "conservativeEstimate": 22,
+  "fastestDefensiblePath": "16 sessions to UIQS 82.5, 100% certification, 88% EW fill"
+}

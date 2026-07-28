@@ -1,0 +1,130 @@
+{
+  "session": "S119",
+  "timestamp": "2026-07-26T17:30:00Z",
+  "operationMode": "WIND-DOWN — all lanes paused with restart manifest",
+  "lanes": {
+    "100_series_may": {
+      "lane": "May AI Tutor/Coach — 100-series",
+      "lastCompletedSession": "S118",
+      "lastSessionDate": "2026-07-25",
+      "lastActivity": "Seeded-history telemetry simulation. Recommendation-gate and evidence-threshold telemetry confirmed populated and functioning. 8 synthetic students simulated, 8 export payloads generated, 0 malformed. Recommendation gates: 8 events, 8 pass, 0 block. Evidence validators: all 7 types exercised.",
+      "testBaseline": "248/248 PASS (119 Stage C + 74 tutoring safety + 37 readiness + 18 calibration)",
+      "thresholdTable": {
+        "stabilityHigh": 75,
+        "accuracyGood": 75,
+        "accuracyHigh": 80,
+        "accuracyLow": 60,
+        "stabilityGood": 60,
+        "stabilityLow": 50,
+        "recentPctHigh": 80,
+        "recentPctGood": 70,
+        "minAttemptsReady": 6,
+        "minAttemptsApproaching": 4,
+        "minAttemptsTopic": 3,
+        "caseBurdenDegradeMisses": 4
+      },
+      "modelVersion": "S111-1.0",
+      "posture": "PILOT-ONLY (S114 posture preserved across S115-S119)",
+      "knownPolishItems": [
+        "Student-row keyboard navigation (tabIndex on divs) — low priority"
+      ],
+      "pilotReadinessDecision": "READY_WITH_NOTES — 24/24 checklist PASS, 2 blockers (BLOCK-01: synthetic marker for real users, BLOCK-02: keyboard nav). Requires explicit human approval.",
+      "nextRecommendedSession": "S120 — Real single-user local pre-production pilot (ONLY after explicit human approval), OR pause indefinitely",
+      "restartChecklist": [
+        "1. Run full test suite — confirm 248/248 PASS",
+        "2. Verify thresholds unchanged (stabilityHigh=75, accuracyGood=75)",
+        "3. Verify modelVersion S111-1.0 unchanged",
+        "4. Confirm no pack/case/scoring files modified (12-file MD5 check)",
+        "5. Load student roll — confirm 8 synthetic students available",
+        "6. Verify localStorage clear/reset functions work",
+        "7. Read S119 readiness checklist for BLOCK-01/02 status",
+        "8. Explicit human approval obtained before real learner touches May"
+      ]
+    },
+    "500_series_caseBank": {
+      "lane": "Case Bank Repair — 500-series",
+      "lastCompletedSession": "S513",
+      "lastSessionDate": "2026-07-25",
+      "lastActivity": "MIGRATED_CASE_BASE_B final certification: 2 remaining holdbacks remediated (CASE-B13-Q3 distractor rationale, CASE-B18-Q4 distractor rationale). 75/75 items (100%) Certified; 15/15 cases (100%) Certified. S509-S513 uplift pipeline: 67 explanation uplifts, 1 answer-key correction (CASE-B12-Q4: $21,750→$20,143), 2 final certifications.",
+      "testBaseline": "32/32 PASS (governance guard 20/20, session recovery 12/12)",
+      "currentCertifiedStatus": {
+        "MIGRATED_CASE_BASE_B": "75/75 items, 15/15 cases — COMPLETE (100%)",
+        "otherCaseBanks": "scored_cases.js (4 cases), scored_cases3.js (15 cases), scored_cases4.js (16 cases), scored_cases5.js (25 cases) — not yet uplifted to MIGRATED_CASE_BASE_B standard"
+      },
+      "knownHoldbacks": ["None — MIGRATED_CASE_BASE_B fully certified"],
+      "nextRecommendedSession": "S514 — Extend S509-S513 uplift + review + certify pattern to next case bank (e.g., ENHANCED_CASE_BASE2 in scored_cases3.js), OR pause operations",
+      "restartChecklist": [
+        "1. Run governance guard: 20/20 PASS",
+        "2. Verify scored_cases2.js MD5: 963595E90996F4710410D8A0E3687778",
+        "3. Confirm no answer-key or prompt drift in MIGRATED_CASE_BASE_B",
+        "4. Inventory next case bank for uplift candidates (scored_cases3.js)"
+      ]
+    },
+    "700_series_mcq": {
+      "lane": "MCQ Certification — 700-series",
+      "lastCompletedSession": "S710 / S710R",
+      "lastSessionDate": "2026-07-25",
+      "lastActivity": "S710R: Target Authority Reconciliation resolved stale S708/S709 QID lists — produced authoritative 13-QID Certified DL-026 queue. S710: Remediated all 13 DL-026 targets across Packs A (1), C (2), D (10). Each target: filled 1 empty non-CC ExplanationWrong slot with topic-correct distractor explanation. Zero answer-key/stem/choice/state changes. Residual DL-008=0 across remediated packs.",
+      "testBaseline": "384/0 PASS (8 suites)",
+      "currentCertifiedStatus": {
+        "certifiedDL026Residual": 0,
+        "certifiedDL008Residual": "0 (in Packs A/C/D — S704 cleared)",
+        "certifiedPool": 2181,
+        "packLevels": "A:481, B:500, C:350, D:350, E:500 (each 500 QIDs)"
+      },
+      "residualDefectStatus": {
+        "DL-008": "0 across packs A/C/D",
+        "DL-026": "0 Certified (S710 remediated all 13)",
+        "DL-016": "Not in scope for S710 — documented for future DL-010/016 session",
+        "DL-025": "Not in scope"
+      },
+      "nextRecommendedSession": "S711 — Post-uplift certification freeze confirmation, OR optional DL-031/DL-032 difficulty recalibration, OR pause",
+      "restartChecklist": [
+        "1. Run governance guard: 20/20 PASS",
+        "2. Verify all 5 packs at 500 QIDs each",
+        "3. Verify Certified pool count (grep question_state: \"Certified\")",
+        "4. Confirm DL-008 residual = 0 in packs A/C/D",
+        "5. Confirm S710R authoritative queue fully consumed (13/13 remediated)"
+      ]
+    }
+  },
+  "globalRestartChecklist": [
+    "Run full pre-flight test suite across all suites — confirm S119 baseline",
+    "Verify all 12 file MD5 hashes match S119 baseline",
+    "Confirm no unexpected diffs in any lane files",
+    "Confirm thresholds unchanged (stabilityHigh=75, accuracyGood=75)",
+    "Confirm modelVersion S111-1.0 stable",
+    "Read SESSION119 final report for current state and blockers"
+  ],
+  "decisionTree": {
+    "primary": {
+      "action": "PAUSE",
+      "description": "Wind down all active lanes. No automated restart. Human initiates next session explicitly by session number.",
+      "rationale": "All three lanes at stable stopping points. May is ready for a controlled pilot but requires human approval. Operations wind-down preserves all work safely."
+    },
+    "alternate": {
+      "action": "S120",
+      "description": "Single-user local pre-production pilot using May AI tutor.",
+      "prerequisites": [
+        "Human explicitly approves pilot",
+        "BLOCK-01 (synthetic marker) is acknowledged or mitigated",
+        "Learner informed and consented",
+        "Learner enters exam date/goals voluntarily"
+      ],
+      "rationale": "May is functionally ready (248/248 tests, all gates/validators/safety intact). The synthetic marker issue is acceptable for consent-based pre-production use."
+    },
+    "deferred": [
+      {
+        "session": "S514",
+        "description": "Extend case-bank uplift pattern to next bank (scored_cases3.js)",
+        "rationale": "MIGRATED_CASE_BASE_B is fully certified at 100%. The uplift methodology is proven. Next bank would benefit from same treatment."
+      },
+      {
+        "session": "S711",
+        "description": "Post-uplift certification freeze confirmation for packs A/C/D",
+        "rationale": "S710 completed DL-026 remediation. A freeze confirmation would lock the packs' certified state before any future changes."
+      }
+    ]
+  },
+  "agent": "D"
+}

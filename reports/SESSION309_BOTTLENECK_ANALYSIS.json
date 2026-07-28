@@ -1,0 +1,60 @@
+{
+  "session": "309",
+  "title": "Consolidated Bottleneck Analysis",
+  "generated": "2026-07-26",
+  "agentsConsolidated": "B through I (Portfolio Throughput, Domain E, Domain F, Domain C, Review Cycle, Authoring Capacity)",
+
+  "topFindings": [
+    {
+      "finding": "DL-008 is ZERO. All 67 items were DL-029 false positives. S802 was correct.",
+      "impact": "Saves 3 sessions. Removes a phase from the critical path. Learner pool already clean.",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "finding": "Domain E bottleneck: 129 archived DL-012 clones (77% of gap) — each needs individual re-rotation and audit.",
+      "impact": "Cannot be batch-processed. Each item = 15-20 min of individual attention.",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "finding": "Domain F bottleneck: 149 greenfield items needing full authoring. Not repair — pure creation.",
+      "impact": "Content authoring capacity is the binding constraint, not file-scope or governance.",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "finding": "Domain C is 100% certified. 454 rewrite candidates are quality polish only — not a bottleneck.",
+      "impact": "S307 overstated Domain C urgency. Case-bank EW is the only real Domain C need.",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "finding": "600-series has no net benefit. Startup cost (~3-4 sessions) equals projected savings (~3-4 sessions).",
+      "impact": "DEFER. Re-evaluate if authoring velocity proves to be the binding constraint.",
+      "confidence": "HIGH"
+    },
+    {
+      "finding": "Modernization deferral saves 10 sessions with acceptable quality impact.",
+      "impact": "DL-013, DL-031, EC normalization can run post-cert without affecting certification quality.",
+      "confidence": "HIGH"
+    }
+  ],
+
+  "revisedPortfolioPlan": {
+    "sessions": 17,
+    "range": "14-22",
+    "phases": [
+      { "phase": "300-series closeout", "sessions": "S309-S310 (2)", "track": "300" },
+      { "phase": "Domain E/F certification + Case-bank EW", "sessions": "10 sessions", "track": "800 + EW parallel" },
+      { "phase": "Pack A closeout + remaining EW", "sessions": "3 sessions", "track": "800 + EW parallel" },
+      { "phase": "Governance closure", "sessions": "2 sessions", "track": "700 + Gov" }
+    ],
+    "postCertModernization": "10 sessions (deferred, not on critical path)"
+  },
+
+  "outcomes": {
+    "uiqsTarget": 82.5,
+    "certTarget": "100% (2,500/2,500)",
+    "ewTarget": "88% fill",
+    "caseEWTarget": "80%",
+    "dl008Target": "0 (already achieved)",
+    "reliability": "VERIFIED — all numerical claims cross-checked against live pack parse"
+  }
+}

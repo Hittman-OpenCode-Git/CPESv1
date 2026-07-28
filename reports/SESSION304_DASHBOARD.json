@@ -1,0 +1,582 @@
+{
+  "session": "S304",
+  "type": "Blueprint Coverage, Weighting & Section Alignment Audit",
+  "timestamp": "2026-07-26T21:42:16.532Z",
+  "mode": "READ-ONLY",
+  "scope": "Portfolio-wide blueprint mapping, weighting validation, quality overlay, and risk concentration analysis",
+  "portfolioSummary": {
+    "totalItems": 3125,
+    "mcqItems": 2500,
+    "caseItems": 625,
+    "totalCertified": 2764,
+    "overallCertificationRate": "88.4%"
+  },
+  "blueprintCoverage": {
+    "A - External Financial Reporting": {
+      "total": 433,
+      "mcq": 375,
+      "caseItems": 58,
+      "certified": 425,
+      "certificationRate": "98.2%",
+      "avgECLength": 291,
+      "avgDQS": 80,
+      "avgEWFillRate": "87.4%",
+      "bqs": "A",
+      "bqsScore": 85
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "total": 568,
+      "mcq": 500,
+      "caseItems": 68,
+      "certified": 562,
+      "certificationRate": "98.9%",
+      "avgECLength": 229,
+      "avgDQS": 80,
+      "avgEWFillRate": "88.4%",
+      "bqs": "B",
+      "bqsScore": 80
+    },
+    "C - Performance Management": {
+      "total": 798,
+      "mcq": 500,
+      "caseItems": 298,
+      "certified": 786,
+      "certificationRate": "98.5%",
+      "avgECLength": 431,
+      "avgDQS": 58,
+      "avgEWFillRate": "63.5%",
+      "bqs": "A",
+      "bqsScore": 85
+    },
+    "D - Cost Management": {
+      "total": 452,
+      "mcq": 375,
+      "caseItems": 77,
+      "certified": 446,
+      "certificationRate": "98.7%",
+      "avgECLength": 243,
+      "avgDQS": 75,
+      "avgEWFillRate": "84.1%",
+      "bqs": "B",
+      "bqsScore": 75
+    },
+    "E - Internal Controls": {
+      "total": 443,
+      "mcq": 375,
+      "caseItems": 68,
+      "certified": 264,
+      "certificationRate": "59.6%",
+      "avgECLength": 393,
+      "avgDQS": 66,
+      "avgEWFillRate": "69.0%",
+      "bqs": "B",
+      "bqsScore": 75
+    },
+    "F - Technology & Analytics": {
+      "total": 430,
+      "mcq": 374,
+      "caseItems": 56,
+      "certified": 281,
+      "certificationRate": "65.3%",
+      "avgECLength": 276,
+      "avgDQS": 64,
+      "avgEWFillRate": "70.9%",
+      "bqs": "B",
+      "bqsScore": 71
+    },
+    "Unknown": {
+      "total": 1,
+      "mcq": 1,
+      "caseItems": 0,
+      "certified": 0,
+      "certificationRate": "0.0%",
+      "avgECLength": 0,
+      "avgDQS": 45,
+      "avgEWFillRate": "25.0%",
+      "bqs": "F",
+      "bqsScore": 30
+    }
+  },
+  "weightingAudit": {
+    "A": {
+      "domain": "External Financial Reporting Decisions",
+      "cmaWeight": 15,
+      "actualItems": 433,
+      "actualPct": "13.9",
+      "expectedItems": 469,
+      "delta": -36,
+      "deltaPct": "-1.1",
+      "status": "ALIGNED",
+      "mcqItems": 375,
+      "caseItems": 58
+    },
+    "B": {
+      "domain": "Planning, Budgeting & Forecasting",
+      "cmaWeight": 20,
+      "actualItems": 568,
+      "actualPct": "18.2",
+      "expectedItems": 625,
+      "delta": -57,
+      "deltaPct": "-1.8",
+      "status": "ALIGNED",
+      "mcqItems": 500,
+      "caseItems": 68
+    },
+    "C": {
+      "domain": "Performance Management",
+      "cmaWeight": 20,
+      "actualItems": 798,
+      "actualPct": "25.5",
+      "expectedItems": 625,
+      "delta": 173,
+      "deltaPct": "5.5",
+      "status": "OVERREPRESENTED",
+      "mcqItems": 500,
+      "caseItems": 298
+    },
+    "D": {
+      "domain": "Cost Management",
+      "cmaWeight": 15,
+      "actualItems": 452,
+      "actualPct": "14.5",
+      "expectedItems": 469,
+      "delta": -17,
+      "deltaPct": "-0.5",
+      "status": "ALIGNED",
+      "mcqItems": 375,
+      "caseItems": 77
+    },
+    "E": {
+      "domain": "Internal Controls",
+      "cmaWeight": 15,
+      "actualItems": 443,
+      "actualPct": "14.2",
+      "expectedItems": 469,
+      "delta": -26,
+      "deltaPct": "-0.8",
+      "status": "ALIGNED",
+      "mcqItems": 375,
+      "caseItems": 68
+    },
+    "F": {
+      "domain": "Technology & Analytics",
+      "cmaWeight": 15,
+      "actualItems": 430,
+      "actualPct": "13.8",
+      "expectedItems": 469,
+      "delta": -39,
+      "deltaPct": "-1.2",
+      "status": "ALIGNED",
+      "mcqItems": 374,
+      "caseItems": 56
+    }
+  },
+  "qualityHeatmap": {
+    "A - External Financial Reporting": {
+      "explanationQuality": "FAIR",
+      "distractorQuality": "GOOD",
+      "certificationMaturity": "MATURE",
+      "overall": "A"
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "explanationQuality": "FAIR",
+      "distractorQuality": "GOOD",
+      "certificationMaturity": "MATURE",
+      "overall": "B"
+    },
+    "C - Performance Management": {
+      "explanationQuality": "GOOD",
+      "distractorQuality": "FAIR",
+      "certificationMaturity": "MATURE",
+      "overall": "A"
+    },
+    "D - Cost Management": {
+      "explanationQuality": "FAIR",
+      "distractorQuality": "GOOD",
+      "certificationMaturity": "MATURE",
+      "overall": "B"
+    },
+    "E - Internal Controls": {
+      "explanationQuality": "GOOD",
+      "distractorQuality": "FAIR",
+      "certificationMaturity": "IMMATURE",
+      "overall": "B"
+    },
+    "F - Technology & Analytics": {
+      "explanationQuality": "FAIR",
+      "distractorQuality": "FAIR",
+      "certificationMaturity": "IMMATURE",
+      "overall": "B"
+    },
+    "Unknown": {
+      "explanationQuality": "POOR",
+      "distractorQuality": "POOR",
+      "certificationMaturity": "IMMATURE",
+      "overall": "F"
+    }
+  },
+  "rewriteConcentration": {
+    "A - External Financial Reporting": {
+      "totalItems": 433,
+      "ecThin": 208,
+      "ecPlaceholder": 4,
+      "ecMissing": 0,
+      "ewLowFill": 54,
+      "ewEmpty": 52,
+      "rewriteCandidates": 250,
+      "ecThinPct": "48.0",
+      "ewLowFillPct": "12.5",
+      "estimatedSessions": 14,
+      "estimatedEffort": 20.8
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "totalItems": 568,
+      "ecThin": 243,
+      "ecPlaceholder": 4,
+      "ecMissing": 0,
+      "ewLowFill": 66,
+      "ewEmpty": 63,
+      "rewriteCandidates": 286,
+      "ecThinPct": "42.8",
+      "ewLowFillPct": "11.6",
+      "estimatedSessions": 16,
+      "estimatedEffort": 23.8
+    },
+    "C - Performance Management": {
+      "totalItems": 798,
+      "ecThin": 178,
+      "ecPlaceholder": 10,
+      "ecMissing": 0,
+      "ewLowFill": 290,
+      "ewEmpty": 287,
+      "rewriteCandidates": 454,
+      "ecThinPct": "22.3",
+      "ewLowFillPct": "36.3",
+      "estimatedSessions": 26,
+      "estimatedEffort": 37.8
+    },
+    "D - Cost Management": {
+      "totalItems": 452,
+      "ecThin": 124,
+      "ecPlaceholder": 4,
+      "ecMissing": 0,
+      "ewLowFill": 70,
+      "ewEmpty": 69,
+      "rewriteCandidates": 192,
+      "ecThinPct": "27.4",
+      "ewLowFillPct": "15.5",
+      "estimatedSessions": 11,
+      "estimatedEffort": 16
+    },
+    "E - Internal Controls": {
+      "totalItems": 443,
+      "ecThin": 121,
+      "ecPlaceholder": 5,
+      "ecMissing": 0,
+      "ewLowFill": 136,
+      "ewEmpty": 59,
+      "rewriteCandidates": 238,
+      "ecThinPct": "27.3",
+      "ewLowFillPct": "30.7",
+      "estimatedSessions": 14,
+      "estimatedEffort": 19.8
+    },
+    "F - Technology & Analytics": {
+      "totalItems": 430,
+      "ecThin": 87,
+      "ecPlaceholder": 13,
+      "ecMissing": 0,
+      "ewLowFill": 124,
+      "ewEmpty": 50,
+      "rewriteCandidates": 211,
+      "ecThinPct": "20.2",
+      "ewLowFillPct": "28.8",
+      "estimatedSessions": 12,
+      "estimatedEffort": 17.6
+    },
+    "Unknown": {
+      "totalItems": 1,
+      "ecThin": 0,
+      "ecPlaceholder": 0,
+      "ecMissing": 1,
+      "ewLowFill": 1,
+      "ewEmpty": 0,
+      "rewriteCandidates": 1,
+      "ecThinPct": "0.0",
+      "ewLowFillPct": "100.0",
+      "estimatedSessions": 1,
+      "estimatedEffort": 0.1
+    }
+  },
+  "certificationDebt": {
+    "A - External Financial Reporting": {
+      "uncertified": 8,
+      "certificationRate": "98.2%",
+      "status": "LOW_DEBT"
+    },
+    "B - Planning, Budgeting & Forecasting": {
+      "uncertified": 6,
+      "certificationRate": "98.9%",
+      "status": "LOW_DEBT"
+    },
+    "C - Performance Management": {
+      "uncertified": 12,
+      "certificationRate": "98.5%",
+      "status": "LOW_DEBT"
+    },
+    "D - Cost Management": {
+      "uncertified": 6,
+      "certificationRate": "98.7%",
+      "status": "LOW_DEBT"
+    },
+    "E - Internal Controls": {
+      "uncertified": 179,
+      "certificationRate": "59.6%",
+      "status": "HIGH_DEBT"
+    },
+    "F - Technology & Analytics": {
+      "uncertified": 149,
+      "certificationRate": "65.3%",
+      "status": "HIGH_DEBT"
+    },
+    "Unknown": {
+      "uncertified": 1,
+      "certificationRate": "0.0%",
+      "status": "HIGH_DEBT"
+    }
+  },
+  "riskRanking": [
+    {
+      "rank": 1,
+      "domain": "F - Technology & Analytics",
+      "domainLetter": "F",
+      "bqs": "B",
+      "bqsScore": 71,
+      "totalItems": 430,
+      "certifiedPct": "65.3",
+      "avgECLength": 276,
+      "avgDQS": 64,
+      "avgEWFillRate": "70.9",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Certification Debt",
+          "severity": "HIGH",
+          "detail": "149 items uncertified (65.3% certified)",
+          "uncertifiedItems": 149
+        },
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "211 rewrite candidates, ~12 sessions",
+          "rewriteCandidates": 211
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 70.9%"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 2,
+      "domain": "E - Internal Controls",
+      "domainLetter": "E",
+      "bqs": "B",
+      "bqsScore": 75,
+      "totalItems": 443,
+      "certifiedPct": "59.6",
+      "avgECLength": 393,
+      "avgDQS": 66,
+      "avgEWFillRate": "69.0",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Certification Debt",
+          "severity": "HIGH",
+          "detail": "179 items uncertified (59.6% certified)",
+          "uncertifiedItems": 179
+        },
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "238 rewrite candidates, ~14 sessions",
+          "rewriteCandidates": 238
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 69.0%"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 3,
+      "domain": "C - Performance Management",
+      "domainLetter": "C",
+      "bqs": "A",
+      "bqsScore": 85,
+      "totalItems": 798,
+      "certifiedPct": "98.5",
+      "avgECLength": 431,
+      "avgDQS": 58,
+      "avgEWFillRate": "63.5",
+      "weightingStatus": "OVERREPRESENTED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "454 rewrite candidates, ~26 sessions",
+          "rewriteCandidates": 454
+        },
+        {
+          "risk": "Distractor Debt",
+          "severity": "MEDIUM",
+          "detail": "Average EW fill rate 63.5%"
+        },
+        {
+          "risk": "Blueprint Weighting Drift",
+          "severity": "MEDIUM",
+          "detail": "OVERREPRESENTED: actual 25.5% vs expected 20% (delta 5.5pp)"
+        }
+      ],
+      "riskCount": 3,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 4,
+      "domain": "D - Cost Management",
+      "domainLetter": "D",
+      "bqs": "B",
+      "bqsScore": 75,
+      "totalItems": 452,
+      "certifiedPct": "98.7",
+      "avgECLength": 243,
+      "avgDQS": 75,
+      "avgEWFillRate": "84.1",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "192 rewrite candidates, ~11 sessions",
+          "rewriteCandidates": 192
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 5,
+      "domain": "B - Planning, Budgeting & Forecasting",
+      "domainLetter": "B",
+      "bqs": "B",
+      "bqsScore": 80,
+      "totalItems": 568,
+      "certifiedPct": "98.9",
+      "avgECLength": 229,
+      "avgDQS": 80,
+      "avgEWFillRate": "88.4",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "286 rewrite candidates, ~16 sessions",
+          "rewriteCandidates": 286
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    },
+    {
+      "rank": 6,
+      "domain": "A - External Financial Reporting",
+      "domainLetter": "A",
+      "bqs": "A",
+      "bqsScore": 85,
+      "totalItems": 433,
+      "certifiedPct": "98.2",
+      "avgECLength": 291,
+      "avgDQS": 80,
+      "avgEWFillRate": "87.4",
+      "weightingStatus": "ALIGNED",
+      "risks": [
+        {
+          "risk": "Rewrite Debt",
+          "severity": "HIGH",
+          "detail": "250 rewrite candidates, ~14 sessions",
+          "rewriteCandidates": 250
+        }
+      ],
+      "riskCount": 1,
+      "maxSeverity": "HIGH"
+    }
+  ],
+  "readinessVerdict": "ADDITIONAL ANALYSIS REQUIRED — High remediation burden across 6 domains",
+  "portfolioBalance": {
+    "bySection": {
+      "A": {
+        "total": 433,
+        "pctOfPortfolio": "13.9",
+        "certified": 425,
+        "certRate": "98.2",
+        "mcq": 375,
+        "caseItems": 58,
+        "avgECLen": 291
+      },
+      "B": {
+        "total": 568,
+        "pctOfPortfolio": "18.2",
+        "certified": 562,
+        "certRate": "98.9",
+        "mcq": 500,
+        "caseItems": 68,
+        "avgECLen": 229
+      },
+      "C": {
+        "total": 798,
+        "pctOfPortfolio": "25.5",
+        "certified": 786,
+        "certRate": "98.5",
+        "mcq": 500,
+        "caseItems": 298,
+        "avgECLen": 431
+      },
+      "D": {
+        "total": 452,
+        "pctOfPortfolio": "14.5",
+        "certified": 446,
+        "certRate": "98.7",
+        "mcq": 375,
+        "caseItems": 77,
+        "avgECLen": 243
+      },
+      "E": {
+        "total": 443,
+        "pctOfPortfolio": "14.2",
+        "certified": 264,
+        "certRate": "59.6",
+        "mcq": 375,
+        "caseItems": 68,
+        "avgECLen": 393
+      },
+      "F": {
+        "total": 430,
+        "pctOfPortfolio": "13.8",
+        "certified": 281,
+        "certRate": "65.3",
+        "mcq": 374,
+        "caseItems": 56,
+        "avgECLen": 276
+      }
+    },
+    "imbalanceRatio": "0.707",
+    "balanceScore": "Poor — significant imbalance",
+    "certifiedBalance": "Some sections below certification threshold"
+  }
+}

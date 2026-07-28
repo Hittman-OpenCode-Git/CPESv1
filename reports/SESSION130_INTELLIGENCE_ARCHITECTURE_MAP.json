@@ -1,0 +1,1161 @@
+{
+  "session": "S130",
+  "timestamp": "2026-07-26T00:00:00.000Z",
+  "sourceFiles": [
+    "may-core.js (6284 lines)",
+    "may-learner-state.js (1501 lines)"
+  ],
+  "subsystems": {
+    "S120_explain": {
+      "description": "Full tutor-layer explanation of correct answer, including short answer, tested concept, why it works, common trap, pattern recognition, and review focus.",
+      "functions": [
+        {
+          "name": "_buildTutorExplanation",
+          "file": "may-core.js",
+          "lineRange": [1531, 1607],
+          "description": "Constructs the 6-section tutor explanation object from question data. Extracts short answer, tested concept, why it works, common trap, pattern recognition, and review focus. Always includes official ExplanationCorrect as source grounding."
+        },
+        {
+          "name": "_interpretExplanation",
+          "file": "may-core.js",
+          "lineRange": [1610, 1625],
+          "description": "Extracts a plain-language interpretation from the bank explanation. Finds the sentence with the clearest reasoning signal (because/therefore/thus/since/under/according to). Falls back to first sentence. Capped at 200 chars."
+        },
+        {
+          "name": "_inferCommonTrap",
+          "file": "may-core.js",
+          "lineRange": [1628, 1669],
+          "description": "Infers a common trap from question structure. Uses wrong-answer explanations when available (scanning for trap-signal words: confuse, mistake, overlook, misclassify, etc.). Falls back to section-aligned generic traps (3 calc traps, 4 concept traps randomly selected)."
+        },
+        {
+          "name": "_inferPatternRecognition",
+          "file": "may-core.js",
+          "lineRange": [1672, 1687],
+          "description": "Suggests how to recognize this pattern in future questions. Returns calculation-specific guidance or section-aligned pattern maps (A-F) from a hardcoded lookup."
+        },
+        {
+          "name": "_inferReviewFocus",
+          "file": "may-core.js",
+          "lineRange": [1690, 1709],
+          "description": "Suggests what to review if the learner missed this. Uses section-specific review topics. Appends topic accuracy note if available (≥2 attempts)."
+        },
+        {
+          "name": "_explainAnswer",
+          "file": "may-core.js",
+          "lineRange": [1711, 1800],
+          "description": "Entry point for explain action. Assembles tutor explanation sections into output lines. Determines selected choice from state.session.answers. Appends S123 Next Best Step, S124 Learning Patterns, S125 Focus Areas. Routes through _guardedSpeak in pilot environment, _speak otherwise."
+        },
+        {
+          "name": "_guardedSpeak",
+          "file": "may-core.js",
+          "lineRange": [5935, 5972],
+          "description": "Safety-gated speak: validates output before publishing. Runs ensureSafeTutoringOutput, logs safety result, logs pilot usage. In pilot mode with violations, speaks sanitized version instead. When pilot off, silent validation only."
+        }
+      ],
+      "inputs": [
+        "currentQuestion (May.context.currentQuestion) — the full question object",
+        "question.Choices — choice map",
+        "question.CorrectChoice — correct answer letter",
+        "question.ExplanationCorrect — bank's official explanation (source grounding)",
+        "question.Topic — normalized via MayLearnerState._normalizeTopic",
+        "question.Section — section letter A-F",
+        "question.Difficulty — difficulty label",
+        "question.Stem — question stem text",
+        "question.CalculationItem — whether calc item",
+        "question.ExplanationWrong{X} — wrong-answer explanations (for trap inference)",
+        "state.session.answers — learner's answer for context",
+        "currentCaseItemType — whether case item",
+        "currentCase — parent case object",
+        "reviewQuestions — for case-specific coaching",
+        "MayLearnerState.getTopicProgress() — topic accuracy data"
+      ],
+      "outputs": [
+        "Structured explanation object with fields: shortAnswer, testedConcept, whyItWorks, commonTrap, patternRecognition, reviewFocus, sourceExplanationIncluded",
+        "Markdown-formatted lines array displayed in chat",
+        "Appended S123 next best step action plan",
+        "Appended S124 learning pattern observations",
+        "Appended S125 focus area suggestions",
+        "Safety validation result (when pilot enabled)"
+      ],
+      "thresholds": {
+        "minExplanationLength": 30,
+        "maxKeySentenceLength": 200,
+        "maxTrapTextLength": 250,
+        "minTopicAttemptsForNote": 2,
+        "highAccuracyForGreeting": 80,
+        "lowAccuracyForGreeting": 60,
+        "minAttemptsForGreeting": 3
+      },
+      "evidenceRequirements": [
+        "Question must be set in context (currentQuestion != null)",
+        "ExplanationCorrect length > 30 chars triggers source-grounded path (else safe fallback)",
+        "Topic progress data with ≥2 attempts to show accuracy note",
+        "Case item: requires reviewQuestions entry for whatMattered/approachNote",
+        "Wrong-answer explanations (ExplanationWrong{X}) enable specific trap inference (else generic)"
+      ],
+      "safetyControls": [
+        "Anti-prediction: _guardedSpeak runs ensureSafeTutoringOutput (banned phrases: 'exam ready', 'will pass', 'guaranteed to pass')",
+        "Source grounding: always includes bank's ExplanationCorrect (sourceExplanationIncluded flag)",
+        "Safe fallback for thin explanations: keeps output grounded to topic/section without fabrication",
+        "Generic trap fallback: uses templated traps when wrong-answer explanations unavailable",
+        "Answer leakage check in hint context (ensureSafeTutoringOutput #2)",
+        "Hallucination check: validates pattern names against known vocabulary",
+        "Exam-mode leakage check: rejects output during active exam mode"
+      ],
+      "dependencies": [
+        "MayLearnerState._normalizeTopic",
+        "MayLearnerState.getTopicProgress",
+        "_interpretExplanation (internal)",
+        "_inferCommonTrap (internal)",
+        "_inferPatternRecognition (internal)",
+        "_inferReviewFocus (internal)",
+        "_appendNextBestStep (S123)",
+        "_appendLearningPatterns (S124)",
+        "_appendFocusAreas (S125)",
+        "_caseWhatMattered (Session 94 case coaching)",
+        "_caseApproachNote (Session 94 case coaching)",
+        "_guardedSpeak (S108/S109 pilot safety)",
+        "isPilotEnvironment (S109)",
+        "_speak (base messaging)",
+        "state.session.answers (global exam state)",
+        "context.reviewQuestions"
+      ]
+    },
+    "S121_wrong_choices": {
+      "description": "Structured misconception coaching for each wrong answer choice. Uses official ExplanationWrong as source-ground, adds learner-centered coaching: why tempting, why wrong, misconception, how to avoid.",
+      "functions": [
+        {
+          "name": "_buildWrongChoiceCoaching",
+          "file": "may-core.js",
+          "lineRange": [1809, 1886],
+          "description": "Builds structured coaching for each wrong answer choice. Orders by selected wrong answer first, then alphabetically. For each choice: whyTempting, whyWrong, misconception, avoidNextTime. Tracks sourceExplanationIncluded and safeFallbackUsed."
+        },
+        {
+          "name": "_inferWhyTempting",
+          "file": "may-core.js",
+          "lineRange": [1889, 1921],
+          "description": "Infers why a distractor looks plausible. Checks: stem/choice token overlap (≥2), calculation-looking numbers, common distractor patterns (absolute language, directional intuition, classification terms, COSO boundaries). Falls back to generic topic-anchored explanation."
+        },
+        {
+          "name": "_inferWhyWrongFallback",
+          "file": "may-core.js",
+          "lineRange": [1924, 1928],
+          "description": "Safe fallback for why-wrong when ExplanationWrong is thin. Contrasts with the concept without fabricating details."
+        },
+        {
+          "name": "_inferMisconception",
+          "file": "may-core.js",
+          "lineRange": [1931, 1955],
+          "description": "Infers the conceptual error behind choosing this option. If ExplanationWrong provides a clue, extracts a snippet around signal words (confus, mistake, overlook, misclassif, etc.). Falls back to section-aligned generic misconceptions (A-F)."
+        },
+        {
+          "name": "_inferAvoidNextTime",
+          "file": "may-core.js",
+          "lineRange": [1958, 1973],
+          "description": "Pattern-recognition tip for avoiding this trap next time. Calculation items get formula-first advice. Conceptual items get section-aligned tip maps (A-F)."
+        },
+        {
+          "name": "_explainWrongChoices",
+          "file": "may-core.js",
+          "lineRange": [1975, 2098],
+          "description": "Entry point for wrong-choices action. Gates: if unanswered active question, provides strategy only (no answer reveal). Post-answer/review: full coaching output with sections per choice. Appends S123/S124/S125. Routes through _guardedSpeak in pilot."
+        }
+      ],
+      "inputs": [
+        "currentQuestion — full question object",
+        "question.Choices — choice map",
+        "question.CorrectChoice — correct letter",
+        "question.ExplanationWrong{X} — per-choice wrong explanations",
+        "question.Topic — normalized",
+        "question.Section — A-F",
+        "question.Stem — for calc/concept detection",
+        "state.session.answers — learner's selected choice",
+        "state.session.completed — review mode detection",
+        "context.currentCaseItemType — case detection"
+      ],
+      "outputs": [
+        "Per-choice coaching objects: choiceLabel, choiceText, whyTempting, whyWrong, misconception, avoidNextTime, sourceExplanationIncluded, safeFallbackUsed, isSelectedAnswer",
+        "Markdown output with sections per wrong choice",
+        "Review-mode bonus: 'Pulling it together' synthesis",
+        "Unanswered gate: strategy-only guidance (calc vs conceptual)",
+        "Appended S123/S124/S125 outputs"
+      ],
+      "thresholds": {
+        "minExplanationLength": 10,
+        "maxStemWordLength": 3,
+        "stemChoiceOverlap": 2,
+        "maxMisconceptionSnippetIdx": 120,
+        "minMisconceptionExpLength": 20
+      },
+      "evidenceRequirements": [
+        "Question must have Choices (multiple-choice format)",
+        "Question must be set in context",
+        "For full coaching: hasAttempted=true OR isReviewMode=true",
+        "Source-grounded: ExplanationWrong length > 10 chars enables bank-grounded path",
+        "Selection-safe context: isReviewMode || hasAttempted"
+      ],
+      "safetyControls": [
+        "Unanswered gate: no answer reveal for active questions (strategy only)",
+        "Safe fallback used when ExplanationWrong is thin (safeFallbackUsed flag)",
+        "Ban language check via _guardedSpeak in pilot",
+        "No prediction language in coaching text",
+        "Source-grounded when possible (sourceExplanationIncluded flag)",
+        "AllSelectionSafe flag tracks whether answer context is safe to reveal full coaching"
+      ],
+      "dependencies": [
+        "MayLearnerState._normalizeTopic",
+        "_inferWhyTempting (internal)",
+        "_inferWhyWrongFallback (internal)",
+        "_inferMisconception (internal)",
+        "_inferAvoidNextTime (internal)",
+        "_appendNextBestStep (S123)",
+        "_appendLearningPatterns (S124)",
+        "_appendFocusAreas (S125)",
+        "_guardedSpeak (S108/S109)",
+        "isPilotEnvironment (S109)",
+        "_speak",
+        "state.session.answers",
+        "state.session.completed"
+      ]
+    },
+    "S122_simplify": {
+      "description": "Plain-language coaching breakdown. Translates accounting jargon to everyday language without changing meaning. 4 sections: What this means, Why it matters, How to recognize it on exam day, Quick rule to remember.",
+      "functions": [
+        {
+          "name": "_buildSimplifyCoaching",
+          "file": "may-core.js",
+          "lineRange": [2254, 2298],
+          "description": "Builds 4-section simplified coaching object. Coordinates _plainLanguageTranslation, _inferWhyItMatters, _inferHowToRecognize, _inferQuickRuleToRemember."
+        },
+        {
+          "name": "_plainLanguageTranslation",
+          "file": "may-core.js",
+          "lineRange": [2301, 2343],
+          "description": "Translates technical accounting language into plain English. If explanation is thin (<30 chars), provides concept framing without fabrication. Otherwise finds key sentence with signal words and runs through _simplifyAccountingLanguage. Adds second layer if explanation is rich (>150 chars)."
+        },
+        {
+          "name": "_simplifyAccountingLanguage",
+          "file": "may-core.js",
+          "lineRange": [2346, 2422],
+          "description": "Replaces/clarifies accounting jargon with plain-language parentheticals. ~30+ regex replacements covering: revenue/recognition, expense/cost, classification, valuation/measurement, control, budget/planning, performance, cost management, standard costing/variance, technology terms. Skips replacements where parenthetical already exists."
+        },
+        {
+          "name": "_inferWhyItMatters",
+          "file": "may-core.js",
+          "lineRange": [2425, 2440],
+          "description": "Explains why this concept matters in real terms. Section-aligned significance (A-F). Calculation items get numbers-drive-decisions framing."
+        },
+        {
+          "name": "_inferHowToRecognize",
+          "file": "may-core.js",
+          "lineRange": [2443, 2463],
+          "description": "Practical recognition tips for exam day. Calculation items: 3 rotating tips about formula-first approach. Conceptual: section-aligned recognition maps with keyword signals."
+        },
+        {
+          "name": "_inferQuickRuleToRemember",
+          "file": "may-core.js",
+          "lineRange": [2466, 2496],
+          "description": "Short memory hook. Calculation: tries to detect formula in explanation, falls back to 3 rotating calc rules. Conceptual: section-aligned quick rules (A-F)."
+        },
+        {
+          "name": "_simplifyExplanation",
+          "file": "may-core.js",
+          "lineRange": [2498, 2622],
+          "description": "Entry point for simplify action. Gate: unanswered active question gets concept coaching only (no answer reveal). Post-answer/review: full 4-section simplify with correct answer reveal. Calls out wrong answer gently. Appends S123/S124/S125."
+        }
+      ],
+      "inputs": [
+        "currentQuestion — full question object",
+        "question.Choices — for answer text",
+        "question.CorrectChoice — correct letter",
+        "question.ExplanationCorrect — bank explanation",
+        "question.Topic — normalized",
+        "question.Section — A-F",
+        "question.Stem — for calc detection",
+        "question.CalculationItem — calc flag",
+        "state.session.answers — learner's choice",
+        "state.session.completed — review mode"
+      ],
+      "outputs": [
+        "Structured coaching object: whatItMeans, whyItMatters, howToRecognize, quickRule, correctAnswerLetter, correctAnswerText, topic, sectionName, isCalculation, sourceExplanationIncluded, canRevealAnswer",
+        "Markdown output with 4 coaching sections",
+        "Unanswered gate: concept-only output with no answer reveal",
+        "Post-answer: full output with correct answer reveal",
+        "Wrong-answer callout when learner chose wrong",
+        "Appended S123/S124/S125"
+      ],
+      "thresholds": {
+        "minExplanationLength": 30,
+        "richExplanationThreshold": 150,
+        "minSentenceLength": 10,
+        "minSecondSentenceLength": 20
+      },
+      "evidenceRequirements": [
+        "Question must be set in context",
+        "canRevealAnswer = hasAttempted || isReviewMode",
+        "ExplanationCorrect length > 30 triggers translation path (else concept framing only)",
+        "Source explanation included when explanation is substantial"
+      ],
+      "safetyControls": [
+        "Unanswered gate: no answer reveal (concept coaching only before learner attempts)",
+        "Never invents facts — _simplifyAccountingLanguage adds parentheticals only, never changes meaning",
+        "Replacement skip when parenthetical already present (avoids duplication)",
+        "Identical-text fallback wraps with 'Think of it this way' prefix",
+        "Ban language check via _guardedSpeak in pilot",
+        "Grounded in bank explanation (preserves accounting accuracy)"
+      ],
+      "dependencies": [
+        "MayLearnerState._normalizeTopic",
+        "_plainLanguageTranslation (internal)",
+        "_simplifyAccountingLanguage (internal)",
+        "_inferWhyItMatters (internal)",
+        "_inferHowToRecognize (internal)",
+        "_inferQuickRuleToRemember (internal)",
+        "_appendNextBestStep (S123)",
+        "_appendLearningPatterns (S124)",
+        "_appendFocusAreas (S125)",
+        "_guardedSpeak (S108/S109)",
+        "isPilotEnvironment (S109)",
+        "_speak",
+        "state.session.answers"
+      ]
+    },
+    "S123_next_best_step": {
+      "description": "Generates a safe, evidence-grounded next-best-step action plan. Never predicts pass/fail or estimates readiness. Categorizes errors (calculation, formula, classification, concept confusion, terminology, distractor trap, oversight, correct, unanswered) and maps each to a specific action type.",
+      "functions": [
+        {
+          "name": "_generateNextBestStep",
+          "file": "may-core.js",
+          "lineRange": [1081, 1199],
+          "description": "Generates a structured next-best-step action plan. Infers error category from question data and learner answer. 9 error categories mapped to action types: targeted_practice, formula_review, computation_check, classification_practice, concept_review, terminology_review, trap_awareness, stem_re_read, advance, reinforce, general_guidance."
+        },
+        {
+          "name": "_appendNextBestStep",
+          "file": "may-core.js",
+          "lineRange": [1202, 1238],
+          "description": "Appends Next Best Step section to coaching output lines. Calls _generateNextBestStep. Records recommendation via S129 _recordRecommendation. Adds contextual reinforcement notes for challenging topics. Skips specific action for unanswered items."
+        }
+      ],
+      "inputs": [
+        "question (q) — full question object",
+        "context.selectedChoice — learner's answer",
+        "question.CorrectChoice — correct letter",
+        "question.Topic — normalized",
+        "question.Section — A-F",
+        "question.Stem — for calc detection and error inference",
+        "question.CalculationItem — calc flag",
+        "question.ExplanationWrong{X} — for error category signals",
+        "MayLearnerState.getTopicProgress() — topic accuracy and attempts"
+      ],
+      "outputs": [
+        "Action plan object: actionText, actionType (targeted_practice/formula_review/computation_check/classification_practice/concept_review/terminology_review/trap_awareness/stem_re_read/advance/reinforce/general_guidance), errorCategory, topic, section, isCalculation, isCorrect, isUnanswered, learnerAnswer, topicAccuracy, topicAttempts",
+        "Markdown section appended to parent coaching output",
+        "S129 recommendation delivery record",
+        "Contextual reinforcement notes for low-accuracy topics (accuracy < 60% and ≥3 attempts)"
+      ],
+      "thresholds": {
+        "strongAccuracyForAdvance": 85,
+        "minAttemptsForAdvance": 3,
+        "lowAccuracyForReinforcementNote": 60,
+        "minAttemptsForReinforcementNote": 3
+      },
+      "evidenceRequirements": [
+        "Question must be provided",
+        "Error category inferred from question + answer context",
+        "For advance action type: topicData.accuracy >= 85 AND topicData.totalAttempts >= 3",
+        "For reinforcement note: topicAccuracy < 60 AND topicAttempts >= 3"
+      ],
+      "safetyControls": [
+        "Never predicts pass/fail or estimates readiness (stated in function comment)",
+        "Error categories are observational (calculation, formula, classification, etc.) — not judgments",
+        "Correct answer path: reinforces or advances, never overstates mastery",
+        "Unanswered path: gentle guidance only, no specific action prescribed",
+        "All action text is grounded in question data, topic, and section"
+      ],
+      "dependencies": [
+        "MayLearnerState._normalizeTopic",
+        "MayLearnerState.getTopicProgress",
+        "_recordRecommendation (S129)",
+        "Called by: _explainAnswer (S120), _explainWrongChoices (S121), _simplifyExplanation (S122)"
+      ]
+    },
+    "S124_learning_patterns": {
+      "description": "Identifies safe, evidence-backed learning patterns from learner data. Returns factual observations: topic strength, persistent weakness, improvement trends, recurring misconceptions, repeated calculation misses. Never predicts outcomes.",
+      "functions": [
+        {
+          "name": "_identifyLearningPatterns",
+          "file": "may-core.js",
+          "lineRange": [1243, 1358],
+          "description": "Identifies up to 3 evidence-backed learning pattern observations. Categories: topic_strength (≥85% accuracy, ≥3 attempts), persistent_weakness (≥5 attempts, <60%), improving (≥4 attempts, recent ≥75%, delta ≥10), recurring_misconception (≥2 occurrences from misconceptionPatterns), repeated_calculation (≥3 calc misses in topic). Sorted by relevance order, capped at 3."
+        },
+        {
+          "name": "_appendLearningPatterns",
+          "file": "may-core.js",
+          "lineRange": [1361, 1374],
+          "description": "Appends 'Patterns I'm noticing' section to coaching output. Calls _identifyLearningPatterns. Only outputs when patterns.hasPatterns is true."
+        }
+      ],
+      "inputs": [
+        "question (q) — current question for topic/section context",
+        "context.selectedChoice — learner's answer",
+        "question.Topic — normalized",
+        "question.Section",
+        "question.CorrectChoice",
+        "question.Stem — for calc detection",
+        "question.CalculationItem",
+        "MayLearnerState.getTopicProgress() — topic accuracy metrics",
+        "MayLearnerState.load() — misconception patterns, learner state sessions"
+      ],
+      "outputs": [
+        "Patterns object: observations (array of {category, text, evidence, safe}), count, hasPatterns, dataThresholdMet",
+        "Observation categories: topic_strength, persistent_weakness, improving, recurring_misconception, repeated_calculation",
+        "Each observation: category text, evidence object, safe flag (always true)",
+        "Markdown section appended to parent coaching output",
+        "Max 3 observations, sorted by relevance order"
+      ],
+      "thresholds": {
+        "minAttempts": 3,
+        "topicStrengthAccuracy": 85,
+        "topicStrengthMinAttempts": 3,
+        "persistentWeakAccuracy": 60,
+        "persistentWeakMinAttempts": 5,
+        "improvingRecentPct": 75,
+        "improvingDelta": 10,
+        "improvingMinAttempts": 4,
+        "misconceptionMinCount": 2,
+        "repeatedCalcMinCount": 3,
+        "maxObservations": 3
+      },
+      "evidenceRequirements": [
+        "Minimum 3 attempts before any observation is made (minAttempts)",
+        "Each category has independent evidence thresholds (see thresholds)",
+        "Topic progress data must be available (dataThresholdMet flag)",
+        "Misconception patterns filtered to current topic with count ≥2",
+        "Calc miss count from learner state sessions ≥3"
+      ],
+      "safetyControls": [
+        "All observations tagged safe:true",
+        "Never predicts pass/fail or estimates readiness",
+        "Factual observations only — grounded in learner data fields",
+        "Capped at 3 observations to avoid information overload",
+        "Relevance ordering ensures most critical patterns surface first",
+        "Topic-strength observations use 'confidence anchor' language (not exam prediction)"
+      ],
+      "dependencies": [
+        "MayLearnerState._normalizeTopic",
+        "MayLearnerState.getTopicProgress",
+        "MayLearnerState.load",
+        "Called by: _explainAnswer (S120), _explainWrongChoices (S121), _simplifyExplanation (S122)"
+      ]
+    },
+    "S125_focus_areas": {
+      "description": "Converts observed patterns into actionable study priorities. Every suggestion is tied to evidence. Priority-ranked: high (persistent weakness), medium (calculation errors, misconception patterns), low (topic strength, improving trends). Never predicts outcomes.",
+      "functions": [
+        {
+          "name": "_suggestFocusAreas",
+          "file": "may-core.js",
+          "lineRange": [1379, 1498],
+          "description": "Generates evidence-based focus area suggestions. 5 suggestion types: persistent weakness (high priority, ≥5 attempts, <60%), calculation miss recurrence (medium, from current answer), misconception pattern (medium, ≥2 occurrences), topic strength redirect (low, ≥85% accuracy with weakest adjacent topic <70%), improving trend (low, ≥4 attempts, recent ≥75%, delta ≥10). Capped at 3, sorted by priority."
+        },
+        {
+          "name": "_appendFocusAreas",
+          "file": "may-core.js",
+          "lineRange": [1501, 1523],
+          "description": "Appends 'Suggested focus areas' section to coaching output. Calls _suggestFocusAreas. Records each suggestion via S129 _recordRecommendation. Priority markers: 🔴 high, 🟡 medium, 🟢 low."
+        }
+      ],
+      "inputs": [
+        "question (q) — current question",
+        "context.selectedChoice — learner's answer",
+        "question.Topic — normalized",
+        "question.Section",
+        "question.CorrectChoice",
+        "question.Stem — for calc detection",
+        "question.CalculationItem",
+        "MayLearnerState.getTopicProgress() — topic accuracy",
+        "MayLearnerState.load() — misconception patterns"
+      ],
+      "outputs": [
+        "Suggestions object: suggestions (array of {priority, text, evidence}), count, hasSuggestions, evidenceSources",
+        "Priority levels: high (🔴), medium (🟡), low (🟢)",
+        "Evidence objects per suggestion: accuracy, attempts, threshold used, pattern info",
+        "Markdown section appended to parent coaching output",
+        "S129 recommendation records per suggestion"
+      ],
+      "thresholds": {
+        "persistentWeakAccuracy": 60,
+        "persistentWeakMinAttempts": 5,
+        "topicStrengthAccuracy": 85,
+        "topicStrengthMinAttempts": 3,
+        "weakAdjacentThreshold": 70,
+        "misconceptionMinCount": 2,
+        "improvingRecentPct": 75,
+        "improvingDelta": 10,
+        "improvingMinAttempts": 4,
+        "maxSuggestions": 3
+      },
+      "evidenceRequirements": [
+        "Each suggestion type has independent thresholds",
+        "Persistent weakness: ≥5 attempts, accuracy <60%",
+        "Topic strength: ≥3 attempts, accuracy ≥85%, no existing persistent weakness suggestion",
+        "Adjacent topic: weakest other topic with ≥3 attempts and accuracy <70%",
+        "Improving: ≥4 attempts, recentPct ≥75%, delta ≥10"
+      ],
+      "safetyControls": [
+        "Never predicts outcomes (stated in function comment)",
+        "Every suggestion tied to observable evidence field",
+        "Priority system based on evidence, not speculation",
+        "Capped at 3 suggestions to avoid overwhelming the learner",
+        "Topic strength suggestions redirect to weaker areas (not complacency)",
+        "S129 records each suggestion for outcome tracking"
+      ],
+      "dependencies": [
+        "MayLearnerState._normalizeTopic",
+        "MayLearnerState.getTopicProgress",
+        "MayLearnerState.load",
+        "_recordRecommendation (S129)",
+        "Called by: _explainAnswer (S120), _explainWrongChoices (S121), _simplifyExplanation (S122)"
+      ]
+    },
+    "S126_session_recaps": {
+      "description": "Generates structured study session recap with strongest/weakest areas, misconception patterns, progress trends, and recommended next steps. Used by _summarizeSession to produce post-session breakdowns.",
+      "functions": [
+        {
+          "name": "_generateSessionRecap",
+          "file": "may-core.js",
+          "lineRange": [2941, 3051],
+          "description": "Generates structured session recap from session object and topic entries. Sections: Today's practice (counts/pcts), Strongest areas (top 2), Most frequent mistakes (bottom 2 with <60%), Key misconceptions encountered (≥2 count), Progress trend (vs prior session, delta ≥10 up/down else steady), Recommended next step (weakest topic if <60%, else stretch suggestion)."
+        }
+      ],
+      "inputs": [
+        "sessionObj — session object with mcqs, answers, attempts",
+        "topicEntries — array of [topic, {n, c}] entries from current session",
+        "data — MayLearnerState.load() (optional, defaults to load())",
+        "sessionObj.mcqs — MCQ array",
+        "sessionObj.answers — answer map",
+        "global scoreMCQ function — for correctness scoring",
+        "learnerData.misconceptionPatterns — from learner state"
+      ],
+      "outputs": [
+        "Recap object: { lines: [...], hasData: true, mcqPct, totalAnswered }",
+        "Markdown sections: Today's practice, Strongest areas, Most frequent mistakes, Key misconceptions, Progress trend, Recommended next step",
+        "Null when no MCQs answered (allMcqAnswered === 0)"
+      ],
+      "thresholds": {
+        "minAnsweredForRecap": 1,
+        "weakAreaPct": 60,
+        "strongAreaMinCount": 2,
+        "progressDeltaUp": 10,
+        "progressDeltaDown": -10,
+        "misconceptionMinCount": 2,
+        "stretchAccuracy": 85,
+        "weakestNextStepPct": 60
+      },
+      "evidenceRequirements": [
+        "At least 1 MCQ answered in session",
+        "Topic entries must have n > 0 for weakest detection",
+        "≥2 sessions for progress trend comparison",
+        "≥2 misconception count for pattern display",
+        "Weak area: n > 0 AND (c/n) < 0.6"
+      ],
+      "safetyControls": [
+        "Session-variation disclaimer for declining trend: 'Session variation is normal — focus on the long-term direction'",
+        "No exam-prediction language",
+        "Recommended next step focuses on explanation review, not mastery claims",
+        "Strong areas use 'strongest' not 'mastered' language"
+      ],
+      "dependencies": [
+        "MayLearnerState.load",
+        "MayLearnerState._normalizeTopic (indirect via _summarizeSession)",
+        "global scoreMCQ function",
+        "Called by: _summarizeSession (Session 89)"
+      ]
+    },
+    "S127_weekly_digest": {
+      "description": "Aggregates multi-session data into a longitudinal learning review. 8 sections: Practice summary, Accuracy trend, Strongest topics, Topics needing attention, Most common misconceptions, Learning momentum, Recommended weekly focus, One small win. Every claim backed by evidence. Never predicts outcomes.",
+      "functions": [
+        {
+          "name": "_generateWeeklyDigest",
+          "file": "may-core.js",
+          "lineRange": [3056, 3217],
+          "description": "Generates a comprehensive weekly learning digest from last 7 sessions. Computes: overall accuracy, first-to-last session accuracy trend, strongest topics (≥3 attempts, ≥70%), topics needing attention (≥3 attempts, <60%), common misconception patterns (≥2 count), learning momentum assessment, recommended weekly focus priorities, and one small win."
+        },
+        {
+          "name": "_showWeeklyDigest",
+          "file": "may-core.js",
+          "lineRange": [3332, 3353],
+          "description": "Entry point for digest display. Calls _generateWeeklyDigest. Records S129 recommendations for weak topics. Routes through _guardedSpeak in pilot. Shows data-insufficient message when <2 sessions."
+        }
+      ],
+      "inputs": [
+        "MayLearnerState.load() — all learner state",
+        "sessions — from learner state (last 7)",
+        "session.attempts — per-session attempt records",
+        "MayLearnerState.getTopicProgress() — topic accuracy",
+        "data.misconceptionPatterns — recurring misconceptions"
+      ],
+      "outputs": [
+        "Digest object: { lines, hasData, overallPct, totalAnswered, sessionCount }",
+        "Markdown sections: Weekly practice summary, Accuracy trend, Strongest topics, Topics needing attention, Most common misconceptions, Learning momentum, Recommended weekly focus, One small win",
+        "Null when <2 sessions in lookback window (last 7)",
+        "Null when totalAnswered === 0",
+        "S129 recommendation delivery records for weak topics"
+      ],
+      "thresholds": {
+        "minSessionsForDigest": 2,
+        "lookbackWindow": 7,
+        "strongTopicAccuracy": 70,
+        "strongTopicMinAttempts": 3,
+        "weakTopicAccuracy": 60,
+        "weakTopicMinAttempts": 3,
+        "trendDeltaUp": 10,
+        "trendDeltaDown": -10,
+        "misconceptionMinCount": 2,
+        "misconceptionPriorityCount": 3,
+        "weakFocusThreshold": 65,
+        "smallWinMinAttempts": 2
+      },
+      "evidenceRequirements": [
+        "≥2 sessions in last 7 sessions",
+        "≥1 question answered in lookback window",
+        "Strong topics: ≥3 attempts with ≥70% accuracy",
+        "Weak topics: ≥3 attempts with <60% accuracy",
+        "≥2 misconception pattern occurrences",
+        "First and last session accuracy available for trend"
+      ],
+      "safetyControls": [
+        "Never predicts outcomes (stated in function comment)",
+        "Declining trend: notes 'Session-to-session variation is normal'",
+        "Mixed-performance language: 'this is normal during active learning'",
+        "Momentum section uses observational language ('trending upward', 'building solid foundations') — not prediction",
+        "No exam readiness claims",
+        "S129 outcome tracking for closed-loop learning"
+      ],
+      "dependencies": [
+        "MayLearnerState.load",
+        "MayLearnerState.getTopicProgress",
+        "_recordRecommendation (S129)",
+        "_guardedSpeak (S108/S109)",
+        "isPilotEnvironment (S109)",
+        "_speak"
+      ]
+    },
+    "S128_study_strategy": {
+      "description": "Converts observed patterns into evidence-backed study plans across three horizons: next session, this week, next 2 weeks. Every recommendation requires evidence. Never predicts outcomes.",
+      "functions": [
+        {
+          "name": "_generateStudyStrategy",
+          "file": "may-core.js",
+          "lineRange": [3223, 3330],
+          "description": "Generates a personalized study strategy. Three horizons: Next session (focus on weakest topic if <60%, else stretch strong topic, else varied practice), This week (prioritize 1-2 weak topics, drill misconception patterns, maintain strong areas), Next 2 weeks (target accuracy improvement, address misconception patterns, time-boxed re-evaluation). Evidence disclosure footer."
+        },
+        {
+          "name": "_showStudyStrategy",
+          "file": "may-core.js",
+          "lineRange": [3356, 3377],
+          "description": "Entry point for strategy display. Calls _generateStudyStrategy. Records S129 recommendations for weak topics. Routes through _guardedSpeak in pilot. Shows data-insufficient message when <1 session."
+        }
+      ],
+      "inputs": [
+        "MayLearnerState.load() — all learner state",
+        "sessions (last 7) — for recent data",
+        "session.attempts — per-session data",
+        "MayLearnerState.getTopicProgress() — topic accuracy",
+        "data.misconceptionPatterns — recurring patterns"
+      ],
+      "outputs": [
+        "Strategy object: { lines, hasData, weakTopics, strongTopics, patternCount, sessionCount }",
+        "Three-horizon plan in markdown: ▶ Next study session, 📅 This week, 🗓 Next 2 weeks",
+        "Evidence disclosure footer: 'Every recommendation above is based on your actual practice data'",
+        "Null when <1 session in lookback",
+        "Null when totalAll === 0",
+        "S129 recommendation delivery records"
+      ],
+      "thresholds": {
+        "minSessionsForStrategy": 1,
+        "lookbackWindow": 7,
+        "weakTopicAccuracy": 60,
+        "weakTopicMinAttempts": 3,
+        "strongTopicAccuracy": 70,
+        "strongTopicMinAttempts": 3,
+        "misconceptionMinCount": 2,
+        "misconceptionPriorityCount": 3,
+        "flashCardsCount": 5,
+        "weakSessionItems": "5-6",
+        "stretchItems": "3-4",
+        "variedPracticeItems": "5-8",
+        "targetImprovementAccuracy": 60,
+        "targetImprovementAttempts": 10,
+        "maintenanceReviewItems": "3-4",
+        "weeklyItemsForPriority": 10,
+        "weeklySessions": "2-3"
+      },
+      "evidenceRequirements": [
+        "≥1 session in last 7 sessions",
+        "≥1 question answered",
+        "Weak topics: ≥3 attempts, accuracy <60%",
+        "Strong topics: ≥3 attempts, accuracy ≥70%",
+        "Misconception patterns: ≥2 occurrences for drill recommendation"
+      ],
+      "safetyControls": [
+        "Never predicts outcomes (stated in function comment)",
+        "Evidence disclosure: 'Every recommendation above is based on your actual practice data. No predetermined curriculum'",
+        "Time-boxed re-evaluation: 'After 2 weeks, revisit this strategy'",
+        "Specific item counts are suggestive ('15-20 items per session') not prescriptive",
+        "Conservative language: 'aim for', 'consider', 'try' — not 'must' or 'should'",
+        "No exam readiness or pass/fail language"
+      ],
+      "dependencies": [
+        "MayLearnerState.load",
+        "MayLearnerState.getTopicProgress",
+        "_recordRecommendation (S129)",
+        "_guardedSpeak (S108/S109)",
+        "isPilotEnvironment (S109)",
+        "_speak"
+      ]
+    },
+    "S129_strategy_effectiveness": {
+      "description": "Evaluates which coaching recommendations appear most helpful based on observed evidence. Never makes causal claims. Includes outcome classification, recurrence tracking, longitudinal analytics, and recommendation quality scoring.",
+      "functions": [
+        {
+          "name": "_generateStrategyEffectiveness",
+          "file": "may-core.js",
+          "lineRange": [3386, 3516],
+          "description": "Generates strategy effectiveness analytics. Sections: outcome distribution (positive/neutral/contradictory), recommendations followed by improvement (≥2 positive), recommendations with no clear change (≥2 neutral), contradictory notes (≥1), previously addressed topics (deprioritized recurrence), longitudinal snapshot (1-week window). Evidence disclosure with non-causality statement."
+        },
+        {
+          "name": "_showStrategyEffectiveness",
+          "file": "may-core.js",
+          "lineRange": [3519, 3533],
+          "description": "Entry point for effectiveness display. Calls _generateStrategyEffectiveness. Routes through _guardedSpeak in pilot. Shows data-insufficient message when no recommendations delivered."
+        },
+        {
+          "name": "_recordRecommendation",
+          "file": "may-core.js",
+          "lineRange": [3538, 3548],
+          "description": "Records that a coaching recommendation was delivered. Thin wrapper around MayLearnerState.recordRecommendationDelivery. Hooked into all coaching paths (Next Best Step, Focus Areas, Weekly Digest, Study Strategy)."
+        },
+        {
+          "name": "_scoreRecommendationQuality",
+          "file": "may-core.js",
+          "lineRange": [3551, 3587],
+          "description": "Scores recommendation quality on 5 dimensions: relevance (0-3 based on type/subtype), specificity (0-3: topic + subtype + evidence fields), evidenceStrength (0-3 based on attempt count), recurrenceRate (same-topic count), followThrough (later sessions count, max 3). Composite score (max 15)."
+        }
+      ],
+      "inputs": [
+        "MayLearnerState.getOutcomeSummary() — outcome counts by type",
+        "MayLearnerState.load().recommendationOutcomes — full outcome log",
+        "MayLearnerState.getRecommendationRecurrence() — topic recurrence",
+        "MayLearnerState.getLongitudinalAnalytics() — 1wk/2wk/4wk windows",
+        "For _scoreRecommendationQuality: rec object with type, subType, topic, evidence",
+        "For _recordRecommendation: type, subType, topic, section, text, evidence"
+      ],
+      "outputs": [
+        "Effectiveness object: { hasData, lines, outcomeSummary, recurrence, longitudinal, evidenceSources }",
+        "Markdown sections: outcome distribution, positive/neutral/contradictory breakdowns, recurrence insights, longitudinal snapshot, evidence disclosure",
+        "Null/insufficient when no recommendations delivered",
+        "Quality scores per recommendation: { relevance, specificity, evidenceStrength, recurrenceRate, followThrough, composite, maxComposite }",
+        "Recommendation IDs from _recordRecommendation"
+      ],
+      "thresholds": {
+        "positiveEvidenceThreshold": 2,
+        "neutralEvidenceThreshold": 2,
+        "contradictoryEvidenceThreshold": 1,
+        "recurrenceDeprioritizeLastOutcome": "positive or contradictory",
+        "qualityRelevanceHigh": 3,
+        "qualityRelevanceMedium": 2,
+        "qualityRelevanceLow": 1,
+        "qualityEvidStrengthHigh": 3,
+        "qualityEvidStrengthMedium": 2,
+        "qualityEvidStrengthLow": 1,
+        "qualityMaxComposite": 15
+      },
+      "evidenceRequirements": [
+        "≥1 recommendation delivered (hasData check)",
+        "≥2 positive outcomes for 'improvement' section",
+        "≥2 neutral outcomes for 'no clear change' section",
+        "≥1 contradictory outcome for 'notes' section",
+        "1-week longitudinal window with session data",
+        "Non-causality explicitly stated: 'No conclusion implies causation'"
+      ],
+      "safetyControls": [
+        "Non-causality disclaimer: 'It does NOT mean the recommendation caused the improvement. Other factors may contribute'",
+        "Never makes causal claims",
+        "Never uses prediction/readiness/confidence language",
+        "'Helpful' defined as: improvement observed after recommendation, not caused by it",
+        "Evidence sources explicitly listed",
+        "Contradictory outcomes reported transparently (not suppressed)"
+      ],
+      "dependencies": [
+        "MayLearnerState.getOutcomeSummary",
+        "MayLearnerState.load",
+        "MayLearnerState.getRecommendationRecurrence",
+        "MayLearnerState.getLongitudinalAnalytics",
+        "MayLearnerState.recordRecommendationDelivery",
+        "MayLearnerState.getTopicProgress (via classifyPendingOutcomes)",
+        "MayLearnerState.getTrends (via classifyPendingOutcomes)",
+        "_guardedSpeak (S108/S109)",
+        "isPilotEnvironment (S109)",
+        "_speak",
+        "May.context.sessionId (for recommendation delivery)"
+      ]
+    }
+  },
+  "shared_infrastructure": {
+    "dispatch": {
+      "name": "handleAction",
+      "file": "may-core.js",
+      "lineRange": [970, 1036],
+      "description": "Central action dispatcher. Routes learner actions to coaching subsystems. G6 gate blocks answer-revealing actions during CMA Exam mode. Switch cases: explain, wrong-choices, hint, simplify, similar, progress, weakness, summary, next, mymistake, recovery, digest, strategy, effectiveness, chat. Calls renderView after each action."
+    },
+    "dispatchGates": {
+      "examBlockedActions": ["explain", "wrong-choices", "hint", "simplify", "mymistake", "similar", "next", "recovery"],
+      "blockedMessage": "May is not available during CMA Exam mode. Submit your session first, and I'll break down your results topic by topic."
+    },
+    "learner_state_data_layer": {
+      "description": "MayLearnerState — Cross-session tracking and progress layer. All exports listed below.",
+      "storage": {
+        "key": "cmaMayLearnerState",
+        "medium": "localStorage",
+        "exportFunction": "MayLearnerState.load()",
+        "saveFunction": "MayLearnerState.save(data)"
+      },
+      "schema": {
+        "learnerId": "string (auto-generated)",
+        "userName": "string|null",
+        "firstVisit": "ISO date string|null",
+        "sessions": "Array of session objects (capped at 50)",
+        "topicPerformance": "Object: {topic: {totalAttempts, correctCount, hintCount, recentAttempts[], sectionsSeen[], difficultyDistribution{}, difficultyWeights{sum,total}, firstSeen, lastSeen}}",
+        "subtopicPerformance": "Object (same structure as topicPerformance)",
+        "misconceptionPatterns": "Array of {pattern, count, questionIds[], _topics[], firstSeen, lastSeen}",
+        "recommendationLog": "Array of recommendation event objects (capped at 200)",
+        "recommendationOutcomes": "Array of {recommendationId, deliveredAt, type, subType, topic, section, recommendationText, sourceSessionId, evidenceAtDelivery, status, outcome, outcomeEvidence, outcomeClassifiedAt} (capped at 200)",
+        "sessionSummaries": "Array of session summary objects (capped at 30)",
+        "lastUpdated": "ISO date string",
+        "examPlan": "Object|null (S117 onboarding data)",
+        "challengedQids": "Array of {qid, firstChallenged, lastChallenged, count, status, lastText, resolvedAt} (capped at 100)"
+      },
+      "exports": [
+        {"name": "load", "lineRange": [65, 80], "returns": "Full learner state object"},
+        {"name": "save", "lineRange": [82, 95], "params": "data", "behavior": "Persists to localStorage, auto-trims sessions >20 if quota exceeded"},
+        {"name": "getUserProfile", "lineRange": [28, 36], "returns": "{name, firstVisit, sessionCount, learnerId}"},
+        {"name": "setUserName", "lineRange": [38, 44], "params": "name"},
+        {"name": "isNewUser", "lineRange": [46, 49], "returns": "boolean"},
+        {"name": "getExamPlan", "lineRange": [52, 55], "returns": "examPlan|null"},
+        {"name": "setExamPlan", "lineRange": [57, 62], "params": "plan"},
+        {"name": "recordAttempt", "lineRange": [98, 142], "params": "sessionId, question, answer, isCorrect, hintsUsed, explanationRequested, elapsedMs, confidence"},
+        {"name": "classifyCaseMissPattern", "lineRange": [145, 156], "params": "item", "returns": "pattern string"},
+        {"name": "recordSessionSummary", "lineRange": [159, 176], "params": "sessionId, summary"},
+        {"name": "_updateTopicAggregate", "lineRange": [179, 191], "params": "container, key, correct, hints, difficulty, diffScore, section"},
+        {"name": "_trackMisconception", "lineRange": [194, 217], "params": "data, qid, topic, answer, question"},
+        {"name": "_normalizeTopic", "lineRange": [220, 223], "params": "topic", "returns": "normalized topic string"},
+        {"name": "getTopicProgress", "lineRange": [226, 237], "returns": "Object: {topic: {totalAttempts, correctCount, accuracy, hintRate, avgDifficulty, recentPct, recentTotal, ...}}"},
+        {"name": "getTrends", "lineRange": [240, 256], "returns": "Array of trend objects sorted by accuracy ascending"},
+        {"name": "getWeaknessClusters", "lineRange": [259, 278], "returns": "{persistentWeak[], improving[], declining[], unstable[], hintDependent[], difficultySensitive[]}"},
+        {"name": "getRecentlySeen", "lineRange": [280, 284], "params": "sessionLimit (default 3)"},
+        {"name": "getRecentlySeenByOutcome", "lineRange": [286, 290], "params": "sessionLimit (default 3)"},
+        {"name": "getQuestionExposureCount", "lineRange": [292, 296], "params": "qid"},
+        {"name": "getConfidenceCalibration", "lineRange": [298, 311], "returns": "Object: {topic: {total, avgConfidence, accuracy, calibrationDelta, overconfidentRate, underconfidentRate}}"},
+        {"name": "flagChallengedQID", "lineRange": [313, 320], "params": "qid, studentText"},
+        {"name": "resolveChallenge", "lineRange": [322, 327], "params": "qid, resolution"},
+        {"name": "getChallengedQids", "lineRange": [329, 329]},
+        {"name": "getExcludedQids", "lineRange": [330, 330]},
+        {"name": "isQuestionContested", "lineRange": [331, 331]},
+        {"name": "getCasePatternSummary", "lineRange": [334, 349]},
+        {"name": "getCasePatternTrends", "lineRange": [351, 367]},
+        {"name": "casePatternLabel", "lineRange": [369, 372]},
+        {"name": "casePatternCoachingNote", "lineRange": [374, 383]},
+        {"name": "getCasePatternPracticeGuidance", "lineRange": [386, 447]},
+        {"name": "getAdaptivePracticeMix", "lineRange": [450, 587]},
+        {"name": "getReadinessSummary", "lineRange": [592, 827]},
+        {"name": "getSectionReadinessSummary", "lineRange": [833, 964]},
+        {"name": "logReadinessMetrics", "lineRange": [1017, 1060]},
+        {"name": "_countThresholdBoundaries", "lineRange": [1064, 1097]},
+        {"name": "getCalibrationMetrics", "lineRange": [1100, 1102]},
+        {"name": "clearCalibrationMetrics", "lineRange": [1105, 1107]},
+        {"name": "getThresholdSnapshot", "lineRange": [1111, 1131]},
+        {"name": "exportCalibrationData", "lineRange": [1135, 1149]},
+        {"name": "_commitCalibrationSnapshot", "lineRange": [1155, 1172]},
+        {"name": "enableLiveCalibration", "lineRange": [1175, 1179]},
+        {"name": "disableLiveCalibration", "lineRange": [1182, 1185]},
+        {"name": "getLiveCalibrationData", "lineRange": [1188, 1204]},
+        {"name": "clearLiveCalibration", "lineRange": [1207, 1211]},
+        {"name": "recordRecommendationDelivery", "lineRange": [1220, 1244]},
+        {"name": "classifyPendingOutcomes", "lineRange": [1249, 1328]},
+        {"name": "getOutcomeSummary", "lineRange": [1332, 1357]},
+        {"name": "getRecommendationRecurrence", "lineRange": [1361, 1388]},
+        {"name": "getLongitudinalAnalytics", "lineRange": [1393, 1443]},
+        {"name": "clear", "lineRange": [1446, 1446]},
+        {"name": "logRecommendation", "lineRange": [1449, 1454]},
+        {"name": "getStudentRoll", "lineRange": [1458, 1461]},
+        {"name": "saveStudentRoll", "lineRange": [1464, 1467]},
+        {"name": "updateStudentInRoll", "lineRange": [1470, 1477]},
+        {"name": "seedStudentHistory", "lineRange": [1481, 1500]}
+      ]
+    },
+    "threshold_constants_registry": {
+      "accuracyHigh": {"value": 80, "file": "may-learner-state.js", "line": 804, "context": "getReadinessSummary._provenance"},
+      "accuracyGood": {"value": 75, "file": "may-learner-state.js", "line": 805, "context": "getReadinessSummary._provenance"},
+      "accuracyLow": {"value": 60, "file": "may-learner-state.js", "line": 805, "context": "getReadinessSummary._provenance"},
+      "stabilityHigh": {"value": 75, "file": "may-learner-state.js", "line": 806, "context": "getReadinessSummary._provenance"},
+      "stabilityGood": {"value": 60, "file": "may-learner-state.js", "line": 806, "context": "getReadinessSummary._provenance"},
+      "stabilityLow": {"value": 50, "file": "may-learner-state.js", "line": 806, "context": "getReadinessSummary._provenance"},
+      "recentPctHigh": {"value": 80, "file": "may-learner-state.js", "line": 807, "context": "getReadinessSummary._provenance"},
+      "recentPctGood": {"value": 70, "file": "may-learner-state.js", "line": 807, "context": "getReadinessSummary._provenance"},
+      "minAttemptsReady": {"value": 6, "file": "may-learner-state.js", "line": 802, "context": "getReadinessSummary._provenance (S103: increased from 5)"},
+      "minAttemptsApproaching": {"value": 4, "file": "may-learner-state.js", "line": 803, "context": "getReadinessSummary._provenance (S104: added)"},
+      "minAttemptsTopic": {"value": 3, "file": "may-learner-state.js", "line": 803, "context": "getReadinessSummary._provenance"},
+      "caseBurdenDegradeMisses": {"value": 4, "file": "may-learner-state.js", "line": 1127, "context": "getThresholdSnapshot, getReadinessSummary S103"},
+      "improvingDelta": {"value": 15, "file": "may-learner-state.js", "line": 252, "context": "getTrends direction classification"},
+      "decliningDelta": {"value": -15, "file": "may-learner-state.js", "line": 252, "context": "getTrends direction classification"},
+      "persistentWeakAccuracy": {"value": 60, "file": "may-learner-state.js", "line": 263, "context": "getWeaknessClusters"},
+      "persistentWeakMinAttempts": {"value": 5, "file": "may-learner-state.js", "line": 263, "context": "getWeaknessClusters"},
+      "unstableStability": {"value": 50, "file": "may-learner-state.js", "line": 266, "context": "getWeaknessClusters"},
+      "unstableMinAttempts": {"value": 4, "file": "may-learner-state.js", "line": 266, "context": "getWeaknessClusters"},
+      "difficultySensitivityGap": {"value": 0.3, "file": "may-learner-state.js", "line": 274, "context": "getWeaknessClusters difficultySensitive"},
+      "difficultySensitivityMinEach": {"value": 2, "file": "may-learner-state.js", "line": 274, "context": "getWeaknessClusters difficultySensitive"},
+      "hintIncreasingMinAttempts": {"value": 4, "file": "may-learner-state.js", "line": 267, "context": "getWeaknessClusters hintDependent"},
+      "stabilityMinForCalc": {"value": 4, "file": "may-learner-state.js", "line": 247, "context": "getTrends stability computation"},
+      "caseSummaryMinMisses": {"value": 3, "file": "may-learner-state.js", "line": 346, "context": "getCasePatternSummary"},
+      "caseSummaryMinSessions": {"value": 1, "file": "may-learner-state.js", "line": 346, "context": "getCasePatternSummary"},
+      "recentAttemptsWindow": {"value": 15, "file": "may-learner-state.js", "line": 190, "context": "_updateTopicAggregate"},
+      "recentPctWindow": {"value": 5, "file": "may-learner-state.js", "line": 232, "context": "getTopicProgress recentPct calc"},
+      "sessionCap": {"value": 50, "file": "may-learner-state.js", "line": 123, "context": "recordAttempt"},
+      "sessionTrimOnQuota": {"value": 20, "file": "may-learner-state.js", "line": 89, "context": "save fallback"},
+      "recommendationOutcomesCap": {"value": 200, "file": "may-learner-state.js", "line": 1241, "context": "recordRecommendationDelivery"},
+      "recommendationLogCap": {"value": 200, "file": "may-learner-state.js", "line": 1452, "context": "logRecommendation"},
+      "sessionSummariesCap": {"value": 30, "file": "may-learner-state.js", "line": 173, "context": "recordSessionSummary"},
+      "challengedQidsCap": {"value": 100, "file": "may-learner-state.js", "line": 318, "context": "flagChallengedQID"},
+      "outcomeClassifyMinAttempts": {"value": 5, "file": "may-learner-state.js", "line": 1270, "context": "classifyPendingOutcomes"},
+      "outcomeClassifyAccuracyPositive": {"value": 60, "file": "may-learner-state.js", "line": 1270, "context": "classifyPendingOutcomes"},
+      "outcomeClassifyDeltaPositive": {"value": 5, "file": "may-learner-state.js", "line": 1272, "context": "classifyPendingOutcomes"},
+      "outcomeClassifyAccuracyNegative": {"value": 50, "file": "may-learner-state.js", "line": 1284, "context": "classifyPendingOutcomes"},
+      "calibrationThrottleMs": {"value": 300000, "file": "may-learner-state.js", "line": 1004, "context": "_calibrationThrottleMs (5 min)"},
+      "calibrationThrottleAttempts": {"value": 20, "file": "may-learner-state.js", "line": 1005, "context": "_calibrationThrottleAttempts"},
+      "liveCalibrationSessionCap": {"value": 500, "file": "may-learner-state.js", "line": 1167, "context": "_commitCalibrationSnapshot"},
+      "calibrationMetricsCap": {"value": 100, "file": "may-learner-state.js", "line": 1058, "context": "logReadinessMetrics"},
+      "trendsMinAttempts": {"value": 2, "file": "may-learner-state.js", "line": 243, "context": "getTrends filter"},
+      "recentlySeenDefaultLimit": {"value": 3, "file": "may-learner-state.js", "line": 281, "context": "getRecentlySeen"},
+      "maxChatMessages": {"value": 40, "file": "may-core.js", "line": 10, "context": "config.maxChatMessages"},
+      "hintLevels": {"value": ["metacognitive", "concept", "strategy", "elimination", "full"], "file": "may-core.js", "line": 11, "context": "config.hintLevels"},
+      "maxHintLevel": {"value": 4, "file": "may-core.js", "line": 2117, "context": "_provideHint (level >= 4 triggers full explain)"},
+      "safetyLogCap": {"value": 50, "file": "may-core.js", "line": 5797, "context": "_persistSafetyLog"},
+      "gateLogCap": {"value": 50, "file": "may-core.js", "line": 5805, "context": "_persistGateLog"},
+      "telemetryCap": {"value": 100, "file": "may-core.js", "line": 5813, "context": "_persistSessionTelemetry"},
+      "pilotUsageLogCap": {"value": 200, "file": "may-core.js", "line": 5907, "context": "_logPilotUsage"}
+    },
+    "safety_layer": {
+      "description": "S107/S108/S109 tutoring safety infrastructure",
+      "functions": [
+        {"name": "_initSafetyVocab", "file": "may-core.js", "lineRange": [5675, 5680]},
+        {"name": "ensureSafeTutoringOutput", "file": "may-core.js", "lineRange": [5684, 5731], "description": "4 checks: exam prediction language, answer leakage in hints, hallucinated pattern names, exam-mode leakage"},
+        {"name": "verifyDefectGateCompliance", "file": "may-core.js", "lineRange": [5734, 5744]},
+        {"name": "verifyCertifiedOnlyGate", "file": "may-core.js", "lineRange": [5747, 5760]},
+        {"name": "_guardedSpeak", "file": "may-core.js", "lineRange": [5935, 5972]},
+        {"name": "_guardedRecommend", "file": "may-core.js", "lineRange": [5975, 6004]},
+        {"name": "_guardedTutoringContext", "file": "may-core.js", "lineRange": [5923, 5932]},
+        {"name": "_logPilotUsage", "file": "may-core.js", "lineRange": [5892, 5910]}
+      ],
+      "bannedPhrases": ["exam ready", "exam-ready", "ready for the exam", "guaranteed to pass", "will pass", "definitely pass", "sure to pass"],
+      "knownMisconceptionPatterns": ["misclassification", "variance_sign_confusion", "budget_component_error", "cost_method_confusion", "depreciation_method_error", "cash_flow_classification", "ratio_misapplication", "control_framework_error", "general_error"],
+      "knownSections": ["A", "B", "C", "D", "E", "F"],
+      "knownBands": ["Not enough data", "Recovery needed", "Developing", "Approaching review-ready", "Ready for focused review"]
+    },
+    "evidence_validators": {
+      "description": "S113 evidence-threshold validation for insight claims",
+      "functions": [
+        {"name": "_hasImprovingEvidence", "file": "may-core.js", "lineRange": [6029, 6033], "thresholds": "≥4 attempts, recentPct-accuracy ≥15"},
+        {"name": "_hasPersistentWeakEvidence", "file": "may-core.js", "lineRange": [6036, 6038], "thresholds": "≥5 attempts, accuracy <60%"},
+        {"name": "_hasDecliningEvidence", "file": "may-core.js", "lineRange": [6041, 6045], "thresholds": "≥4 attempts, recentPct-accuracy ≤-15"},
+        {"name": "_hasUnstableEvidence", "file": "may-core.js", "lineRange": [6048, 6051], "thresholds": "≥4 attempts, stability <50%"},
+        {"name": "_hasHintDependentEvidence", "file": "may-core.js", "lineRange": [6054, 6058], "thresholds": "≥4 attempts, hintTrend=increasing, accuracy ≥70%"},
+        {"name": "_hasDifficultySensitiveEvidence", "file": "may-core.js", "lineRange": [6061, 6074], "thresholds": "≥2 Easy, ≥2 Hard, gap ≥30%"},
+        {"name": "_hasConfidenceEvidence", "file": "may-core.js", "lineRange": [6077, 6079], "thresholds": "≥4 confidence-rated attempts"},
+        {"name": "_assessInsightEvidence", "file": "may-core.js", "lineRange": [6084, 6120], "description": "Builds summary of which insight claims have sufficient evidence"}
+      ]
+    }
+  },
+  "cross_subsystem_dependencies": {
+    "matrix": {
+      "S120_explain": {
+      "dependsOn": ["MayLearnerState._normalizeTopic", "MayLearnerState.getTopicProgress", "_appendNextBestStep(S123)", "_appendLearningPatterns(S124)", "_appendFocusAreas(S125)", "_guardedSpeak(S108/S109)"],
+        "dependedOnBy": ["_provideHint (level 4)", "miniExplain"]
+      },
+      "S121_wrong_choices": {
+      "dependsOn": ["MayLearnerState._normalizeTopic", "_appendNextBestStep(S123)", "_appendLearningPatterns(S124)", "_appendFocusAreas(S125)", "_guardedSpeak(S108/S109)"],
+        "dependedOnBy": []
+      },
+      "S122_simplify": {
+      "dependsOn": ["MayLearnerState._normalizeTopic", "_appendNextBestStep(S123)", "_appendLearningPatterns(S124)", "_appendFocusAreas(S125)", "_guardedSpeak(S108/S109)"],
+        "dependedOnBy": []
+      },
+      "S123_next_best_step": {
+      "dependsOn": ["MayLearnerState._normalizeTopic", "MayLearnerState.getTopicProgress", "_recordRecommendation(S129)"],
+        "dependedOnBy": ["S120_explain", "S121_wrong_choices", "S122_simplify"]
+      },
+      "S124_learning_patterns": {
+      "dependsOn": ["MayLearnerState._normalizeTopic", "MayLearnerState.getTopicProgress", "MayLearnerState.load"],
+        "dependedOnBy": ["S120_explain", "S121_wrong_choices", "S122_simplify"]
+      },
+      "S125_focus_areas": {
+      "dependsOn": ["MayLearnerState._normalizeTopic", "MayLearnerState.getTopicProgress", "MayLearnerState.load", "_recordRecommendation(S129)"],
+        "dependedOnBy": ["S120_explain", "S121_wrong_choices", "S122_simplify"]
+      },
+      "S126_session_recaps": {
+      "dependsOn": ["MayLearnerState.load", "global scoreMCQ"],
+        "dependedOnBy": ["_summarizeSession"]
+      },
+      "S127_weekly_digest": {
+      "dependsOn": ["MayLearnerState.load", "MayLearnerState.getTopicProgress", "_recordRecommendation(S129)", "_guardedSpeak(S108/S109)"],
+        "dependedOnBy": []
+      },
+      "S128_study_strategy": {
+      "dependsOn": ["MayLearnerState.load", "MayLearnerState.getTopicProgress", "_recordRecommendation(S129)", "_guardedSpeak(S108/S109)"],
+        "dependedOnBy": []
+      },
+      "S129_strategy_effectiveness": {
+      "dependsOn": ["MayLearnerState.getOutcomeSummary", "MayLearnerState.load", "MayLearnerState.getRecommendationRecurrence", "MayLearnerState.getLongitudinalAnalytics", "_guardedSpeak(S108/S109)"],
+        "dependedOnBy": ["S123_next_best_step (via _recordRecommendation)", "S125_focus_areas (via _recordRecommendation)", "S127_weekly_digest (via _recordRecommendation)", "S128_study_strategy (via _recordRecommendation)"]
+      }
+    },
+    "call_chain": "handleAction → {_explainAnswer|_explainWrongChoices|_simplifyExplanation} → _appendNextBestStep(S123) + _appendLearningPatterns(S124) + _appendFocusAreas(S125) → _guardedSpeak(S108/S109). S129 _recordRecommendation is called from _appendNextBestStep and _appendFocusAreas. S127/S128 are standalone actions (digest/strategy) called directly from handleAction."
+  },
+  "duplicated_logic": [
+    {
+      "name": "Topic normalization",
+      "locations": ["Every subsystem calls MayLearnerState._normalizeTopic(q.Topic)", "MayLearnerState._normalizeTopic is called in: S120 (_buildTutorExplanation, _explainAnswer), S121 (_buildWrongChoiceCoaching, _explainWrongChoices), S122 (_buildSimplifyCoaching, _simplifyExplanation), S123 (_generateNextBestStep), S124 (_identifyLearningPatterns), S125 (_suggestFocusAreas), freeform handler, greeting logic, setup greeting, mini-panel, _summarizeSession"],
+      "risk": "If _normalizeTopic changes, all subsystems affected. Centralized in one function — low duplication risk."
+    },
+    {
+      "name": "Section name lookup",
+      "locations": ["_buildTutorExplanation (line 1545)", "_buildWrongChoiceCoaching (line 1822)", "_buildSimplifyCoaching (line 2269)", "_generateNextBestStep (line 1093)", "_inferReviewFocus (line 1692)", "_inferWhyItMatters (line 2426)", "S125 (line 1446)", "S124 (uses section indirectly)", "getReadinessSummary.getSectionReadinessSummary (line 838)"],
+      "risk": "Hardcoded section name map duplicated in at least 8 locations. Changing section names requires updating all copies.",
+      "remediation": "Extract to a shared SECTION_NAMES constant on May or MayLearnerState."
+    },
+    {
+      "name": "Pattern name lookup (misconception → display name)",
+      "locations": ["_identifyLearningPatterns (line 1295)", "_suggestFocusAreas (line 1423)", "_explainYourMistake (line 2699)", "_generateSessionRecap (line 2995)", "_generateWeeklyDigest (line 3143)", "_generateStudyStrategy (line 3258)", "_getWeaknessInsight (line 2904)"],
+      "risk": "Identical patternNames map duplicated in 7 locations. Adding a new pattern requires updating all.",
+      "remediation": "Extract to a shared constant or MayLearnerState method."
+    },
+    {
+      "name": "Calculation-item detection",
+      "locations": ["_buildTutorExplanation (line 1543)", "_generateNextBestStep (line 1087)", "_buildWrongChoiceCoaching (line 1819)", "_buildSimplifyCoaching (line 2266)", "_identifyLearningPatterns (line 1319)", "_suggestFocusAreas (line 1406)", "_explainAnswer → stem match", "_greetingForQuestion → stem match"],
+      "risk": "Same logic `q.CalculationItem || (stem || '').match(/\\$/)` duplicated in at least 8 locations.",
+      "remediation": "Extract to _isCalculation(q) helper."
+    },
+    {
+      "name": "Selected choice extraction from state.session.answers",
+      "locations": ["_explainAnswer (line 1722)", "_explainWrongChoices (line 1986)", "_simplifyExplanation (line 2503)"],
+      "risk": "Identical try/catch block duplicated 3 times. Changes to state structure require updates in all 3.",
+      "remediation": "Extract to _getCurrentAnswer() helper."
+    },
+    {
+      "name": "Topic progress accuracy note construction",
+      "locations": ["_inferReviewFocus (line 1701)", "_explainAnswer (line 1757)", "_generateNextBestStep (line 1098)", "_greetingForQuestion (line 951)", "renderMiniPanel (line 5370)", "showPostAnswerFeedback (line 5423)"],
+      "risk": "Similar MayLearnerState.getTopicProgress() calls with similar threshold checks in multiple places.",
+      "remediation": "Consider a shared _getTopicAccuracyNote(q) helper."
+    }
+  ],
+  "threshold_registry": {
+    "accuracyHigh": {"value": 80, "file": "may-learner-state.js", "line": 804, "context": "getReadinessSummary._provenance"},
+    "accuracyGood": {"value": 75, "file": "may-learner-state.js", "line": 805, "context": "getReadinessSummary._provenance"},
+    "accuracyLow": {"value": 60, "file": "may-learner-state.js", "line": 805, "context": "getReadinessSummary._provenance"},
+    "stabilityHigh": {"value": 75, "file": "may-learner-state.js", "line": 806, "context": "getReadinessSummary._provenance"},
+    "stabilityGood": {"value": 60, "file": "may-learner-state.js", "line": 806, "context": "getReadinessSummary._provenance"},
+    "stabilityLow": {"value": 50, "file": "may-learner-state.js", "line": 806, "context": "getReadinessSummary._provenance"},
+    "recentPctHigh": {"value": 80, "file": "may-learner-state.js", "line": 807, "context": "getReadinessSummary._provenance"},
+    "recentPctGood": {"value": 70, "file": "may-learner-state.js", "line": 807, "context": "getReadinessSummary._provenance"},
+    "minAttemptsReady": {"value": 6, "file": "may-learner-state.js", "line": 802, "context": "getReadinessSummary._provenance (S103: increased from 5)"},
+    "minAttemptsApproaching": {"value": 4, "file": "may-learner-state.js", "line": 803, "context": "getReadinessSummary._provenance (S104: added)"},
+    "minAttemptsTopic": {"value": 3, "file": "may-learner-state.js", "line": 803, "context": "getReadinessSummary._provenance"},
+    "caseBurdenDegradeMisses": {"value": 4, "file": "may-learner-state.js", "line": 1127, "context": "getThresholdSnapshot, getReadinessSummary S103"},
+    "improvingDelta": {"value": 15, "file": "may-learner-state.js", "line": 252, "context": "getTrends direction classification"},
+    "decliningDelta": {"value": -15, "file": "may-learner-state.js", "line": 252, "context": "getTrends direction classification"},
+    "persistentWeakAccuracy": {"value": 60, "file": "may-learner-state.js", "line": 263, "context": "getWeaknessClusters"},
+    "persistentWeakMinAttempts": {"value": 5, "file": "may-learner-state.js", "line": 263, "context": "getWeaknessClusters"},
+    "unstableStability": {"value": 50, "file": "may-learner-state.js", "line": 266, "context": "getWeaknessClusters"},
+    "unstableMinAttempts": {"value": 4, "file": "may-learner-state.js", "line": 266, "context": "getWeaknessClusters"},
+    "difficultySensitivityGap": {"value": 0.3, "file": "may-learner-state.js", "line": 274, "context": "getWeaknessClusters difficultySensitive"},
+    "difficultySensitivityMinEach": {"value": 2, "file": "may-learner-state.js", "line": 274, "context": "getWeaknessClusters difficultySensitive"},
+    "hintIncreasingMinAttempts": {"value": 4, "file": "may-learner-state.js", "line": 267, "context": "getWeaknessClusters hintDependent"},
+    "stabilityMinForCalc": {"value": 4, "file": "may-learner-state.js", "line": 247, "context": "getTrends stability computation"},
+    "caseSummaryMinMisses": {"value": 3, "file": "may-learner-state.js", "line": 346, "context": "getCasePatternSummary"},
+    "caseSummaryMinSessions": {"value": 1, "file": "may-learner-state.js", "line": 346, "context": "getCasePatternSummary"},
+    "recentAttemptsWindow": {"value": 15, "file": "may-learner-state.js", "line": 190, "context": "_updateTopicAggregate"},
+    "recentPctWindow": {"value": 5, "file": "may-learner-state.js", "line": 232, "context": "getTopicProgress recentPct calc"},
+    "sessionCap": {"value": 50, "file": "may-learner-state.js", "line": 123, "context": "recordAttempt"},
+    "sessionTrimOnQuota": {"value": 20, "file": "may-learner-state.js", "line": 89, "context": "save fallback"},
+    "recommendationOutcomesCap": {"value": 200, "file": "may-learner-state.js", "line": 1241, "context": "recordRecommendationDelivery"},
+    "recommendationLogCap": {"value": 200, "file": "may-learner-state.js", "line": 1452, "context": "logRecommendation"},
+    "sessionSummariesCap": {"value": 30, "file": "may-learner-state.js", "line": 173, "context": "recordSessionSummary"},
+    "challengedQidsCap": {"value": 100, "file": "may-learner-state.js", "line": 318, "context": "flagChallengedQID"},
+    "outcomeClassifyMinAttempts": {"value": 5, "file": "may-learner-state.js", "line": 1270, "context": "classifyPendingOutcomes"},
+    "outcomeClassifyAccuracyPositive": {"value": 60, "file": "may-learner-state.js", "line": 1270, "context": "classifyPendingOutcomes"},
+    "outcomeClassifyDeltaPositive": {"value": 5, "file": "may-learner-state.js", "line": 1272, "context": "classifyPendingOutcomes"},
+    "outcomeClassifyAccuracyNegative": {"value": 50, "file": "may-learner-state.js", "line": 1284, "context": "classifyPendingOutcomes"},
+    "calibrationThrottleMs": {"value": 300000, "file": "may-learner-state.js", "line": 1004, "context": "_calibrationThrottleMs (5 min)"},
+    "calibrationThrottleAttempts": {"value": 20, "file": "may-learner-state.js", "line": 1005, "context": "_calibrationThrottleAttempts"},
+    "liveCalibrationSessionCap": {"value": 500, "file": "may-learner-state.js", "line": 1167, "context": "_commitCalibrationSnapshot"},
+    "calibrationMetricsCap": {"value": 100, "file": "may-learner-state.js", "line": 1058, "context": "logReadinessMetrics"},
+    "trendsMinAttempts": {"value": 2, "file": "may-learner-state.js", "line": 243, "context": "getTrends filter"},
+    "recentlySeenDefaultLimit": {"value": 3, "file": "may-learner-state.js", "line": 281, "context": "getRecentlySeen"},
+    "maxChatMessages": {"value": 40, "file": "may-core.js", "line": 10, "context": "config.maxChatMessages"},
+    "hintLevels": {"value": ["metacognitive", "concept", "strategy", "elimination", "full"], "file": "may-core.js", "line": 11, "context": "config.hintLevels"},
+    "maxHintLevel": {"value": 4, "file": "may-core.js", "line": 2117, "context": "_provideHint (level >= 4 triggers full explain)"},
+    "safetyLogCap": {"value": 50, "file": "may-core.js", "line": 5797, "context": "_persistSafetyLog"},
+    "gateLogCap": {"value": 50, "file": "may-core.js", "line": 5805, "context": "_persistGateLog"},
+    "telemetryCap": {"value": 100, "file": "may-core.js", "line": 5813, "context": "_persistSessionTelemetry"},
+    "pilotUsageLogCap": {"value": 200, "file": "may-core.js", "line": 5907, "context": "_logPilotUsage"}
+  },
+  "learner_state_fields_accessed": {
+    "S120_explain": {
+      "fields": ["topicPerformance (via getTopicProgress)", "sessions (via getTopicProgress)", "userName (via getUserProfile)", "misconceptionPatterns (via S124/S125)"],
+      "methods": ["_normalizeTopic", "getTopicProgress"]
+    },
+    "S121_wrong_choices": {
+      "fields": ["topicPerformance (via S123/S124/S125 deps)", "misconceptionPatterns (via S124/S125)"],
+      "methods": ["_normalizeTopic"]
+    },
+    "S122_simplify": {
+      "fields": ["topicPerformance (via S123/S124/S125 deps)"],
+      "methods": ["_normalizeTopic"]
+    },
+    "S123_next_best_step": {
+      "fields": ["topicPerformance (via getTopicProgress)"],
+      "methods": ["_normalizeTopic", "getTopicProgress"],
+      "s129Fields": ["recommendationOutcomes (via _recordRecommendation → recordRecommendationDelivery)"]
+    },
+    "S124_learning_patterns": {
+      "fields": ["topicPerformance (via getTopicProgress)", "sessions (via load)", "misconceptionPatterns (via load)"],
+      "methods": ["_normalizeTopic", "getTopicProgress", "load"]
+    },
+    "S125_focus_areas": {
+      "fields": ["topicPerformance (via getTopicProgress)", "misconceptionPatterns (via load)"],
+      "methods": ["_normalizeTopic", "getTopicProgress", "load"],
+      "s129Fields": ["recommendationOutcomes (via _recordRecommendation)"]
+    },
+    "S126_session_recaps": {
+      "fields": ["sessions (via load)", "misconceptionPatterns (via load)", "sessionSummaries (via load)"],
+      "methods": ["load"]
+    },
+    "S127_weekly_digest": {
+      "fields": ["sessions (via load)", "topicPerformance (via getTopicProgress)", "misconceptionPatterns (via load)"],
+      "methods": ["load", "getTopicProgress"],
+      "s129Fields": ["recommendationOutcomes (via _recordRecommendation)"]
+    },
+    "S128_study_strategy": {
+      "fields": ["sessions (via load)", "topicPerformance (via getTopicProgress)", "misconceptionPatterns (via load)"],
+      "methods": ["load", "getTopicProgress"],
+      "s129Fields": ["recommendationOutcomes (via _recordRecommendation)"]
+    },
+    "S129_strategy_effectiveness": {
+      "fields": ["recommendationOutcomes (via load, getOutcomeSummary)", "topicPerformance (via getTopicProgress in classifyPendingOutcomes)", "sessions (via load, getLongitudinalAnalytics)"],
+      "methods": ["load", "getOutcomeSummary", "getRecommendationRecurrence", "getLongitudinalAnalytics", "recordRecommendationDelivery", "getTopicProgress", "getTrends"]
+    },
+    "shared_dispatch": {
+      "fields": ["userName (via getUserProfile)", "sessions (via load)", "topicPerformance (via getTopicProgress)"],
+      "methods": ["load", "getUserProfile", "getTopicProgress", "getWeaknessClusters", "getTrends", "getConfidenceCalibration", "getRecentlySeenByOutcome", "isQuestionContested", "getChallengedQids", "flagChallengedQID", "resolveChallenge", "logRecommendation"]
+    }
+  }
+}
